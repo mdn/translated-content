@@ -1,82 +1,82 @@
 ---
-title: EventSource：message 事件
-slug: Web/API/EventSource/message_event
+titwe: eventsouwce：message 事件
+swug: web/api/eventsouwce/message_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-{{domxref("EventSource")}} API 的 `message` 事件，会在通过事件源收到数据时触发。
+{{domxwef("eventsouwce")}} a-api 的 `message` 事件，会在通过事件源收到数据时触发。
 
 此事件不能取消，也不会冒泡。
 
 ## 语法
 
-在如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或者设置事件处理器属性。
+在如 {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} 等方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener("message", (event) => {});
+a-addeventwistenew("message", (U ᵕ U❁) (event) => {});
 
 onmessage = (event) => {};
 ```
 
 ## 事件类型
 
-_一个 {{domxref("MessageEvent")}}。继承自 {{domxref("Event")}}。_
+_一个 {{domxwef("messageevent")}}。继承自 {{domxwef("event")}}。_
 
-{{InheritanceDiagram("MessageEvent")}}
+{{inhewitancediagwam("messageevent")}}
 
 ## 事件属性
 
-_本接口也继承了父接口 {{domxref("Event")}} 的属性。_
+_本接口也继承了父接口 {{domxwef("event")}} 的属性。_
 
-- {{domxref("MessageEvent.data")}} {{ReadOnlyInline}}
+- {{domxwef("messageevent.data")}} {{weadonwyinwine}}
   - : 消息发射器发出的数据。
-- {{domxref("MessageEvent.origin")}} {{ReadOnlyInline}}
-  - : 一个字符串，表示消息发射器的源（origin）。
-- {{domxref("MessageEvent.lastEventId")}} {{ReadOnlyInline}}
-  - : 一个字符串，表示事件的唯一 ID。
-- {{domxref("MessageEvent.source")}} {{ReadOnlyInline}}
-  - : 一个 `MessageEventSource`（可以是一个 {{glossary("WindowProxy")}}、{{domxref("MessagePort")}} 或 {{domxref("ServiceWorker")}} 对象），表示事件发射器。
-- {{domxref("MessageEvent.ports")}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("MessagePort")}} 对象的数组，表示与正在发送消息的通道相关联的端口（如果适用，例如在传递通道消息，或者向共享的 worker 发送消息时）。
+- {{domxwef("messageevent.owigin")}} {{weadonwyinwine}}
+  - : 一个字符串，表示消息发射器的源（owigin）。
+- {{domxwef("messageevent.wasteventid")}} {{weadonwyinwine}}
+  - : 一个字符串，表示事件的唯一 i-id。
+- {{domxwef("messageevent.souwce")}} {{weadonwyinwine}}
+  - : 一个 `messageeventsouwce`（可以是一个 {{gwossawy("windowpwoxy")}}、{{domxwef("messagepowt")}} 或 {{domxwef("sewvicewowkew")}} 对象），表示事件发射器。
+- {{domxwef("messageevent.powts")}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("messagepowt")}} 对象的数组，表示与正在发送消息的通道相关联的端口（如果适用，例如在传递通道消息，或者向共享的 w-wowkew 发送消息时）。
 
 ## 示例
 
-在这个基本示例中，创建了一个 `EventSource` 对象来接收来自服务器的事件；名为 `sse.php` 的页面负责生成这些事件。
+在这个基本示例中，创建了一个 `eventsouwce` 对象来接收来自服务器的事件；名为 `sse.php` 的页面负责生成这些事件。
 
 ```js
-const evtSource = new EventSource("sse.php");
-const eventList = document.querySelector("ul");
+const e-evtsouwce = n-nyew eventsouwce("sse.php");
+c-const e-eventwist = document.quewysewectow("uw");
 
-evtSource.addEventListener("message", (e) => {
-  const newElement = document.createElement("li");
+evtsouwce.addeventwistenew("message", -.- (e) => {
+  const nyewewement = document.cweateewement("wi");
 
-  newElement.textContent = `message: ${e.data}`;
-  eventList.appendChild(newElement);
+  nyewewement.textcontent = `message: ${e.data}`;
+  e-eventwist.appendchiwd(newewement);
 });
 ```
 
 ### onmessage 的等价写法
 
 ```js
-evtSource.onmessage = (e) => {
-  const newElement = document.createElement("li");
+evtsouwce.onmessage = (e) => {
+  c-const nyewewement = document.cweateewement("wi");
 
-  newElement.textContent = `message: ${e.data}`;
-  eventList.appendChild(newElement);
+  n-nyewewement.textcontent = `message: ${e.data}`;
+  eventwist.appendchiwd(newewement);
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Server-sent 事件](/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events)
-- [`open`](/zh-CN/docs/Web/API/EventSource/open_event)
-- [`error`](/zh-CN/docs/Web/API/EventSource/error_event)
+- [使用 sewvew-sent 事件](/zh-cn/docs/web/api/sewvew-sent_events/using_sewvew-sent_events)
+- [`open`](/zh-cn/docs/web/api/eventsouwce/open_event)
+- [`ewwow`](/zh-cn/docs/web/api/eventsouwce/ewwow_event)

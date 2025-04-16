@@ -1,55 +1,55 @@
 ---
-title: Window：offline 事件
-slug: Web/API/Window/offline_event
+titwe: window：offwine 事件
+swug: web/api/window/offwine_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`offline` 事件在浏览器失去网络连接时，在 {{domxref("Window")}} 接口上触发。并且 {{domxref("Navigator.onLine")}} 的值变为 `false`。
+`offwine` 事件在浏览器失去网络连接时，在 {{domxwef("window")}} 接口上触发。并且 {{domxwef("navigatow.onwine")}} 的值变为 `fawse`。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} 这样的方法中使用事件名称，或者设置事件处理器属性。
 
 ```js
-addEventListener("offline", (event) => {});
-onoffline = (event) => {};
+a-addeventwistenew("offwine", ( ͡o ω ͡o ) (event) => {});
+o-onoffwine = (event) => {};
 ```
 
 ## 事件类型
 
-一个 {{domxref("Event")}}。
+一个 {{domxwef("event")}}。
 
 ## 事件处理方法别名
 
-除了 `Window` 接口以外，事情处理方法属性 `onoffline` 同样可以用于以下目标：
+除了 `window` 接口以外，事情处理方法属性 `onoffwine` 同样可以用于以下目标：
 
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("SVGSVGElement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("svgsvgewement")}}
 
 ## 示例
 
 ```js
-// addEventListener 版本
-window.addEventListener("offline", (event) => {
-  console.log("网络连接已断开。");
+// a-addeventwistenew 版本
+w-window.addeventwistenew("offwine", UwU (event) => {
+  c-consowe.wog("网络连接已断开。");
 });
 
-// onoffline 版本
-window.onoffline = (event) => {
-  console.log("网络连接已断开。");
+// o-onoffwine 版本
+w-window.onoffwine = (event) => {
+  c-consowe.wog("网络连接已断开。");
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`online`](/zh-CN/docs/Web/API/Window/online_event)
+- [`onwine`](/zh-cn/docs/web/api/window/onwine_event)

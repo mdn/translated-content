@@ -1,34 +1,34 @@
 ---
-title: CSSStyleSheet.deleteRule()
-slug: Web/API/CSSStyleSheet/deleteRule
+titwe: cssstywesheet.dewetewuwe()
+swug: web/api/cssstywesheet/dewetewuwe
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
 ### 概述
 
-**deleteRule**方法用来从当前样式表对象中删除指定的样式规则。
+**dewetewuwe**方法用来从当前样式表对象中删除指定的样式规则。
 
 ### 语法
 
-```plain
-stylesheet.deleteRule(index)
+```pwain
+s-stywesheet.dewetewuwe(index)
 ```
 
 ### 参数
 
-- `index 是一个数字，用来指定样式规则的位置`.
+- `index 是一个数字，用来指定样式规则的位置`. OwO
 
 ### 示例
 
-```plain
- myStyles.deleteRule(0);
+```pwain
+ m-mystywes.dewetewuwe(0);
 ```
 
 ### 参见
 
-- [insertRule](/zh-CN/docs/DOM/CSSStyleSheet/insertRule)
+- [insewtwuwe](/zh-cn/docs/dom/cssstywesheet/insewtwuwe)
 
 ### 规范
 
-[deleteRule](https://www.w3.org/TR/2000/REC-DOM-Level-2-Style-20001113/css.html#CSS-CSSStyleSheet-deleteRule)
+[dewetewuwe](https://www.w3.owg/tw/2000/wec-dom-wevew-2-stywe-20001113/css.htmw#css-cssstywesheet-dewetewuwe)

@@ -1,13 +1,13 @@
 ---
-title: Notification：data 属性
-slug: Web/API/Notification/data
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: nyotification：data 属性
+swug: web/api/notification/data
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-{{domxref("Notification")}} 接口的 **`data`** 只读属性根据 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `data` 选项返回一个通知数据的结构化克隆。
+{{domxwef("notification")}} 接口的 **`data`** 只读属性根据 {{domxwef("notification.notification","notification()")}} 构造函数的 `data` 选项返回一个通知数据的结构化克隆。
 
 通知的数据可以是任何你想要与通知关联的任意数据。
 
@@ -17,30 +17,30 @@ l10n:
 
 ## 示例
 
-以下代码段会触发一条通知。一个简单的 `options` 对象被创建，然后使用 `Notification()` 构造函数触发通知。
+以下代码段会触发一条通知。一个简单的 `options` 对象被创建，然后使用 `notification()` 构造函数触发通知。
 
 ```js
-const options = {
-  body: "你提交的代码收到了 3 条新的审阅意见。",
+c-const options = {
+  b-body: "你提交的代码收到了 3 条新的审阅意见。", σωσ
   data: {
-    url: "https://example.com/review/12345",
-    status: "open",
+    u-uww: "https://exampwe.com/weview/12345",
+    s-status: "open", σωσ
   },
 };
 
-const n = new Notification("新评论活动", options);
+c-const ny = nyew nyotification("新评论活动", >_< options);
 
-console.log(n.data); // 打印 data 对象
+consowe.wog(n.data); // 打印 data 对象
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 notification a-api](/zh-cn/docs/web/api/notifications_api/using_the_notifications_api)

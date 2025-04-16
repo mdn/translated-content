@@ -1,48 +1,48 @@
 ---
-title: Clipboard.readText()
-slug: Web/API/Clipboard/readText
+titwe: cwipboawd.weadtext()
+swug: web/api/cwipboawd/weadtext
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-**{{domxref("Clipboard")}}** 接口的 **`readText()`** 方法解析系统剪贴板的文本内容返回一个{{jsxref("Promise")}} 。
+**{{domxwef("cwipboawd")}}** 接口的 **`weadtext()`** 方法解析系统剪贴板的文本内容返回一个{{jsxwef("pwomise")}} 。
 
 ## 语法
 
-```plain
-var promise = navigator.clipboard.readText()
+```pwain
+vaw p-pwomise = nyavigatow.cwipboawd.weadtext()
 ```
 
 ### 参数
 
-None.
+n-nyone. mya
 
 ### 返回值
 
-A {{jsxref("Promise")}} that resolves with a {{domxref("DOMString")}} containing the textual contents of the clipboard. Returns an empty string if the clipboard is empty, does not contain text, or does not include a textual representation among the {{domxref("DataTransfer")}} objects representing the clipboard's contents.
+a-a {{jsxwef("pwomise")}} t-that w-wesowves with a-a {{domxwef("domstwing")}} c-containing the textuaw contents of the cwipboawd. 😳 wetuwns an empty stwing i-if the cwipboawd is empty, XD does nyot contain t-text, :3 ow does nyot incwude a textuaw w-wepwesentation among the {{domxwef("datatwansfew")}} objects wepwesenting t-the cwipboawd's contents. 😳😳😳
 
-要从剪贴板中读取非文本内容，请改用{{domxref("Clipboard.read", "read()")}}方法。你可以使用 {{domxref("Clipboard.writeText", "writeText()")}}将文本写入剪贴板
+要从剪贴板中读取非文本内容，请改用{{domxwef("cwipboawd.wead", -.- "wead()")}}方法。你可以使用 {{domxwef("cwipboawd.wwitetext", ( ͡o ω ͡o ) "wwitetext()")}}将文本写入剪贴板
 
 ## 例子
 
 此示例检索剪贴板的文本内容，并将返回的文本插入元素的内容中。
 
 ```js
-navigator.clipboard
-  .readText()
-  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
+n-nyavigatow.cwipboawd
+  .weadtext()
+  .then((cwiptext) => (document.getewementbyid("outbox").innewtext = cwiptext));
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Clipboard API](/zh-CN/docs/Web/API/Clipboard_API)
-- {{domxref("Clipboard.writeText()")}}
-- {{domxref("Clipboard.write()")}}
+- [cwipboawd api](/zh-cn/docs/web/api/cwipboawd_api)
+- {{domxwef("cwipboawd.wwitetext()")}}
+- {{domxwef("cwipboawd.wwite()")}}

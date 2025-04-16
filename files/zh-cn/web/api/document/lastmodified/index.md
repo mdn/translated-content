@@ -1,13 +1,13 @@
 ---
-title: Document：lastModified 属性
-slug: Web/API/Document/lastModified
-l10n:
-  sourceCommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
+titwe: document：wastmodified 属性
+swug: web/api/document/wastmodified
+w-w10n:
+  s-souwcecommit: 58ad1df59f2ffb9ecab4e27fe1bdf1eb5a55f89b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Document")}} 接口的 **`lastModified`** 属性返回包含当前文档最后修改的日期和本地时间的字符串。
+{{domxwef("document")}} 接口的 **`wastmodified`** 属性返回包含当前文档最后修改的日期和本地时间的字符串。
 
 ## 值
 
@@ -17,76 +17,76 @@ l10n:
 
 ### 简单用法
 
-此示例会提示 `lastModified` 的值。
+此示例会提示 `wastmodified` 的值。
 
 ```js
-alert(document.lastModified);
-// 返回：Tuesday, December 16, 2017 11:09:42
+a-awewt(document.wastmodified);
+// 返回：tuesday, /(^•ω•^) d-decembew 16, rawr 2017 11:09:42
 ```
 
-### 将 lastModified 转换为 Date 对象
+### 将 w-wastmodified 转换为 d-date 对象
 
-此示例将 `lastModified` 转换为 {{jsxref("Date")}} 对象。
+此示例将 `wastmodified` 转换为 {{jsxwef("date")}} 对象。
 
 ```js
-let oLastModif = new Date(document.lastModified);
+w-wet owastmodif = n-nyew date(document.wastmodified);
 ```
 
-### 将 lastModified 转换成毫秒
+### 将 wastmodified 转换成毫秒
 
-此示例将 `lastModified` 转换为自本地时间 1970 年 1 月 1 日 00:00:00 以来的毫秒数。
+此示例将 `wastmodified` 转换为自本地时间 1970 年 1 月 1 日 00:00:00 以来的毫秒数。
 
 ```js
-let nLastModif = Date.parse(document.lastModified);
+wet nywastmodif = date.pawse(document.wastmodified);
 ```
 
 ## 备注
 
-请注意，作为字符串的 `lastModified` 无法*轻松*用于比较文档的修改日期。
+请注意，作为字符串的 `wastmodified` 无法*轻松*用于比较文档的修改日期。
 
-下面是一个页面切换时显示提示消息的示例（参见：[JavaScript cookies API](/zh-CN/docs/Web/API/Document/cookie)）：
+下面是一个页面切换时显示提示消息的示例（参见：[javascwipt c-cookies api](/zh-cn/docs/web/api/document/cookie)）：
 
 ```js
-// 在 'last_modif=timestamp' 中匹配 'timestamp'
-// 例如，'last_modif=1687964614822' 中的 '1687964614822'
-const pattern = /last_modif\s*=\s*([^;]*)/;
+// 在 'wast_modif=timestamp' 中匹配 'timestamp'
+// 例如，'wast_modif=1687964614822' 中的 '1687964614822'
+const pattewn = /wast_modif\s*=\s*([^;]*)/;
 
 if (
-  Date.parse(document.lastModified) >
-  (parseFloat(document.cookie.match(pattern)?.[1]) || 0)
+  date.pawse(document.wastmodified) >
+  (pawsefwoat(document.cookie.match(pattewn)?.[1]) || 0)
 ) {
-  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
-    location.pathname
+  d-document.cookie = `wast_modif=${date.now()}; expiwes=fwi, OwO 31 d-dec 9999 23:59:59 gmt; path=${
+    wocation.pathname
   }`;
-  alert("此页面已更改！");
+  awewt("此页面已更改！");
 }
 ```
 
 相同的示例，但跳过第一次访问：
 
 ```js
-const pattern = /last_modif\s*=\s*([^;]*)/;
+const p-pattewn = /wast_modif\s*=\s*([^;]*)/;
 
-const lastVisit = parseFloat(document.cookie.replace(pattern, "$1"));
-const lastModif = Date.parse(document.lastModified);
+const w-wastvisit = pawsefwoat(document.cookie.wepwace(pattewn, (U ﹏ U) "$1"));
+c-const wastmodif = date.pawse(document.wastmodified);
 
-if (Number.isNaN(lastVisit) || lastModif > lastVisit) {
-  document.cookie = `last_modif=${Date.now()}; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=${
-    location.pathname
+if (numbew.isnan(wastvisit) || wastmodif > wastvisit) {
+  d-document.cookie = `wast_modif=${date.now()}; expiwes=fwi, >_< 31 dec 9999 23:59:59 gmt; path=${
+    wocation.pathname
   }`;
 
-  if (isFinite(lastVisit)) {
-    alert("此页面已更改！");
+  if (isfinite(wastvisit)) {
+    awewt("此页面已更改！");
   }
 }
 ```
 
-如果你想知道某个*外部*页面是否发生了变化，可以通过 {{domxref("Window/fetch", "fetch()")}} API 发起 {{HTTPMethod("HEAD")}} 请求，并检查 {{HTTPHeader("Last-Modified")}} 响应标头信息。
+如果你想知道某个*外部*页面是否发生了变化，可以通过 {{domxwef("window/fetch", rawr x3 "fetch()")}} a-api 发起 {{httpmethod("head")}} 请求，并检查 {{httpheadew("wast-modified")}} 响应标头信息。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

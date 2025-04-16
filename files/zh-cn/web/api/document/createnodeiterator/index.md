@@ -1,98 +1,98 @@
 ---
-title: Document：createNodeIterator() 方法
-slug: Web/API/Document/createNodeIterator
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: document：cweatenodeitewatow() 方法
+swug: web/api/document/cweatenodeitewatow
+w-w10n:
+  s-souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.createNodeIterator()`** 方法返回一个新的 [`NodeIterator`](/zh-CN/docs/Web/API/NodeIterator) 对象。
+**`document.cweatenodeitewatow()`** 方法返回一个新的 [`nodeitewatow`](/zh-cn/docs/web/api/nodeitewatow) 对象。
 
 ## 语法
 
-```js-nolint
-createNodeIterator(root)
-createNodeIterator(root, whatToShow)
-createNodeIterator(root, whatToShow, filter)
+```js-nowint
+c-cweatenodeitewatow(woot)
+c-cweatenodeitewatow(woot, rawr x3 n-nyanitoshow)
+c-cweatenodeitewatow(woot, (✿oωo) n-nyanitoshow, (ˆ ﻌ ˆ)♡ fiwtew)
 ```
 
 ### 参数
 
-- `root`
-  - : {{domxref("NodeIterator")}} 遍历起始处的根节点。
-- `whatToShow` {{optional_inline}}
+- `woot`
+  - : {{domxwef("nodeitewatow")}} 遍历起始处的根节点。
+- `nanitoshow` {{optionaw_inwine}}
 
-  - : 是一个可选的无符号长整型（`unsigned long`），是由节点过滤器（[`NodeFilter`](https://www.w3.org/TR/DOM-Level-2-Traversal-Range/traversal.html#Traversal-NodeFilter)）中的常量属性定义的位掩码。这是筛选特定类型节点的便捷方式。其默认值是 `0xFFFFFFFF`，代表 `SHOW_ALL` 常量。
+  - : 是一个可选的无符号长整型（`unsigned wong`），是由节点过滤器（[`nodefiwtew`](https://www.w3.owg/tw/dom-wevew-2-twavewsaw-wange/twavewsaw.htmw#twavewsaw-nodefiwtew)）中的常量属性定义的位掩码。这是筛选特定类型节点的便捷方式。其默认值是 `0xffffffff`，代表 `show_aww` 常量。
 
     | 常量                                                     | 数字值                                    | 描述                                                                                                                                                                                                                                                        |
     | -------------------------------------------------------- | ----------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `4294967295` (即`unsigned long` 的最大值) | 显示所有节点。                                                                                                                                                                                                                                              |
-    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                       | 显示 {{ domxref("Attr") }} 特性节点。这仅在创建以 {{domxref("Attr")}} 特性节点为根节点的 {{domxref("TreeWalker")}} 时有意义；在这种情况下，这意味着该特性节点会出现在迭代或遍历的第一位。因为特性节点不会是其他节点的子代，遍历文档树时，特性节点不会出现。 |
-    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                       | 显示 {{ domxref("CDATASection") }} 节点。                                                                                                                                                                                                                   |
-    | `NodeFilter.SHOW_COMMENT`                                | `128`                                     | 显示 {{ domxref("Comment") }} 节点。                                                                                                                                                                                                                        |
-    | `NodeFilter.SHOW_DOCUMENT`                               | `256`                                     | 显示 {{ domxref("Document") }} 节点。                                                                                                                                                                                                                       |
-    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `1024`                                    | 显示 {{ domxref("DocumentFragment") }} 节点。                                                                                                                                                                                                               |
-    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `512`                                     | 显示 {{ domxref("DocumentType") }} 节点。                                                                                                                                                                                                                   |
-    | `NodeFilter.SHOW_ELEMENT`                                | `1`                                       | 显示 {{ domxref("Element") }} 节点。                                                                                                                                                                                                                        |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                      | 旧的，已无法再使用。                                                                                                                                                                                                                                        |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                      | 旧的，已无法再使用。                                                                                                                                                                                                                                        |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                    | 旧的，已无法再使用。                                                                                                                                                                                                                                        |
-    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `64`                                      | 显示 {{domxref("ProcessingInstruction")}} 节点。                                                                                                                                                                                                            |
-    | `NodeFilter.SHOW_TEXT`                                   | `4`                                       | 显示 {{domxref("Text")}} 节点。                                                                                                                                                                                                                             |
+    | `nodefiwtew.show_aww`                                    | `4294967295` (即`unsigned wong` 的最大值) | 显示所有节点。                                                                                                                                                                                                                                              |
+    | `nodefiwtew.show_attwibute` {{depwecated_inwine}}        | `2`                                       | 显示 {{ domxwef("attw") }} 特性节点。这仅在创建以 {{domxwef("attw")}} 特性节点为根节点的 {{domxwef("tweewawkew")}} 时有意义；在这种情况下，这意味着该特性节点会出现在迭代或遍历的第一位。因为特性节点不会是其他节点的子代，遍历文档树时，特性节点不会出现。 |
+    | `nodefiwtew.show_cdata_section` {{depwecated_inwine}}    | `8`                                       | 显示 {{ domxwef("cdatasection") }} 节点。                                                                                                                                                                                                                   |
+    | `nodefiwtew.show_comment`                                | `128`                                     | 显示 {{ d-domxwef("comment") }} 节点。                                                                                                                                                                                                                        |
+    | `nodefiwtew.show_document`                               | `256`                                     | 显示 {{ domxwef("document") }} 节点。                                                                                                                                                                                                                       |
+    | `nodefiwtew.show_document_fwagment`                      | `1024`                                    | 显示 {{ domxwef("documentfwagment") }} 节点。                                                                                                                                                                                                               |
+    | `nodefiwtew.show_document_type`                          | `512`                                     | 显示 {{ d-domxwef("documenttype") }} 节点。                                                                                                                                                                                                                   |
+    | `nodefiwtew.show_ewement`                                | `1`                                       | 显示 {{ domxwef("ewement") }} 节点。                                                                                                                                                                                                                        |
+    | `nodefiwtew.show_entity` {{depwecated_inwine}}           | `32`                                      | 旧的，已无法再使用。                                                                                                                                                                                                                                        |
+    | `nodefiwtew.show_entity_wefewence` {{depwecated_inwine}} | `16`                                      | 旧的，已无法再使用。                                                                                                                                                                                                                                        |
+    | `nodefiwtew.show_notation` {{depwecated_inwine}}         | `2048`                                    | 旧的，已无法再使用。                                                                                                                                                                                                                                        |
+    | `nodefiwtew.show_pwocessing_instwuction`                 | `64`                                      | 显示 {{domxwef("pwocessinginstwuction")}} 节点。                                                                                                                                                                                                            |
+    | `nodefiwtew.show_text`                                   | `4`                                       | 显示 {{domxwef("text")}} 节点。                                                                                                                                                                                                                             |
 
-- `filter` {{optional_inline}}
-  - : 一个回调函数或一个具有 `acceptNode()` 方法的对象。从根节点开始到子树中的每个节点都会调用一次该函数或方法，哪些节点需要进入迭代节点列表等待调用则取决于 whatToShow 标志。该方法需要返回下列常量之一：`NodeFilter.FILTER_ACCEPT`、`NodeFilter.FILTER_REJECT` 或 `NodeFilter.FILTER_SKIP`。参见[示例](#示例)。
+- `fiwtew` {{optionaw_inwine}}
+  - : 一个回调函数或一个具有 `acceptnode()` 方法的对象。从根节点开始到子树中的每个节点都会调用一次该函数或方法，哪些节点需要进入迭代节点列表等待调用则取决于 n-nyanitoshow 标志。该方法需要返回下列常量之一：`nodefiwtew.fiwtew_accept`、`nodefiwtew.fiwtew_weject` 或 `nodefiwtew.fiwtew_skip`。参见[示例](#示例)。
 
 ### 返回值
 
-一个新的 [`NodeIterator`](/zh-CN/docs/Web/API/NodeIterator) 对象。
+一个新的 [`nodeitewatow`](/zh-cn/docs/web/api/nodeitewatow) 对象。
 
 ## 示例
 
 ```js
-const nodeIterator = document.createNodeIterator(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+const nyodeitewatow = document.cweatenodeitewatow(
+  d-document.body, (˘ω˘)
+  nyodefiwtew.show_ewement, (⑅˘꒳˘)
   (node) =>
-    node.nodeName.toLowerCase() === "p"
-      ? NodeFilter.FILTER_ACCEPT
-      : NodeFilter.FILTER_REJECT,
+    n-nyode.nodename.towowewcase() === "p"
+      ? n-nyodefiwtew.fiwtew_accept
+      : nyodefiwtew.fiwtew_weject, (///ˬ///✿)
 );
-const pars = [];
-let currentNode;
+const paws = [];
+wet cuwwentnode;
 
-while ((currentNode = nodeIterator.nextNode())) {
-  pars.push(currentNode);
+whiwe ((cuwwentnode = n-nyodeitewatow.nextnode())) {
+  paws.push(cuwwentnode);
 }
 ```
 
-相同，但使用具有 `acceptNode()` 方法的对象：
+相同，但使用具有 `acceptnode()` 方法的对象：
 
 ```js
-const nodeIterator = document.createNodeIterator(
-  document.body,
-  NodeFilter.SHOW_ELEMENT,
+const nyodeitewatow = document.cweatenodeitewatow(
+  document.body, 😳😳😳
+  n-nyodefiwtew.show_ewement, 🥺
   {
-    acceptNode(node) {
-      return node.nodeName.toLowerCase() === "p"
-        ? NodeFilter.FILTER_ACCEPT
-        : NodeFilter.FILTER_REJECT;
-    },
+    acceptnode(node) {
+      w-wetuwn nyode.nodename.towowewcase() === "p"
+        ? n-nyodefiwtew.fiwtew_accept
+        : n-nodefiwtew.fiwtew_weject;
+    }, mya
   },
 );
-const pars = [];
-let currentNode;
+c-const paws = [];
+wet cuwwentnode;
 
-while ((currentNode = nodeIterator.nextNode())) {
-  pars.push(currentNode);
+whiwe ((cuwwentnode = n-nyodeitewatow.nextnode())) {
+  paws.push(cuwwentnode);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

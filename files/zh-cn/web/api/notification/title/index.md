@@ -1,13 +1,13 @@
 ---
-title: Notification：title 属性
-slug: Web/API/Notification/title
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: nyotification：titwe 属性
+swug: web/api/notification/titwe
+w-w10n:
+  s-souwcecommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-{{domxref("Notification")}} 接口的 **`title`** 只读属性指示通知的标题。此属性通过 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `title` 参数指定。
+{{domxwef("notification")}} 接口的 **`titwe`** 只读属性指示通知的标题。此属性通过 {{domxwef("notification.notification","notification()")}} 构造函数的 `titwe` 参数指定。
 
 ## 值
 
@@ -16,26 +16,26 @@ l10n:
 ## 示例
 
 ```js
-function spawnNotification(theBody, theIcon, theTitle) {
-  const options = {
-    body: theBody,
-    icon: theIcon,
+f-function spawnnotification(thebody, >_< t-theicon, :3 t-thetitwe) {
+  const o-options = {
+    b-body: thebody, (U ﹏ U)
+    icon: theicon, -.-
   };
 
-  const n = new Notification(theTitle, options);
+  const ny = nyew nyotification(thetitwe, (ˆ ﻌ ˆ)♡ options);
 
-  console.log(n.title);
+  c-consowe.wog(n.titwe);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 nyotification api](/zh-cn/docs/web/api/notifications_api/using_the_notifications_api)

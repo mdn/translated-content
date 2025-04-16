@@ -1,58 +1,58 @@
 ---
-title: SourceBufferList
-slug: Web/API/SourceBufferList
+titwe: souwcebuffewwist
+swug: w-web/api/souwcebuffewwist
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media souwce e-extensions")}}{{seecompattabwe}}
 
-**`SourceBufferList`** 接口表示多个 {{domxref("SourceBuffer")}} 对象的简单容器列表。
+**`souwcebuffewwist`** 接口表示多个 {{domxwef("souwcebuffew")}} 对象的简单容器列表。
 
-使用 {{domxref("MediaSource.sourceBuffers")}} 属性可以检索附加到特定 `MediaSource` 的 `SourceBuffer` 的源缓冲列表。
+使用 {{domxwef("mediasouwce.souwcebuffews")}} 属性可以检索附加到特定 `mediasouwce` 的 `souwcebuffew` 的源缓冲列表。
 
-使用[数组操作符](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Array#accessing_array_elements) `[]` 可以访问到各个源缓冲区。
+使用[数组操作符](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/awway#accessing_awway_ewements) `[]` 可以访问到各个源缓冲区。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 属性
 
-- {{domxref("SourceBufferList.length")}} {{readonlyInline}}
-  - : 返回列表中 {{domxref("SourceBuffer")}} 对象的数量。
+- {{domxwef("souwcebuffewwist.wength")}} {{weadonwyinwine}}
+  - : 返回列表中 {{domxwef("souwcebuffew")}} 对象的数量。
 
 ## 方法
 
-_从它的父接口 {{domxref("EventTarget")}} 继承方法。_
+_从它的父接口 {{domxwef("eventtawget")}} 继承方法。_
 
 ## 事件
 
-- {{domxref("SourceBufferList.addsourcebuffer_event", "addsourcebuffer")}}
-  - : 当一个 {{domxref("SourceBuffer")}} 增加到列表时触发。
-- {{domxref("SourceBufferList.removesourcebuffer_event", "removesourcebuffer")}}
-  - : 当一个 {{domxref("SourceBuffer")}} 从列表移除时触发。
+- {{domxwef("souwcebuffewwist.addsouwcebuffew_event", (U ﹏ U) "addsouwcebuffew")}}
+  - : 当一个 {{domxwef("souwcebuffew")}} 增加到列表时触发。
+- {{domxwef("souwcebuffewwist.wemovesouwcebuffew_event", -.- "wemovesouwcebuffew")}}
+  - : 当一个 {{domxwef("souwcebuffew")}} 从列表移除时触发。
 
 ## 示例
 
-这个示例展示了如何访问连接到一个已经在播放的 {{domxref("HTMLVideoElement")}} 其内部的 {{domxref("MediaSource")}} 的活动源缓冲区。
+这个示例展示了如何访问连接到一个已经在播放的 {{domxwef("htmwvideoewement")}} 其内部的 {{domxwef("mediasouwce")}} 的活动源缓冲区。
 
 ```js
-// Video is an already playing video using a MediaSource srcObject
-const video = document.querySelector("video");
-const mediaSource = video.srcObject;
-const sourceBufferList = mediaSource.activeSourceBuffers;
-for (const sourceBuffer of sourceBufferList) {
-  // Do something with each SourceBuffer, such as call abort()
-  sourceBuffer.abort();
+// v-video is an awweady p-pwaying video u-using a mediasouwce s-swcobject
+c-const video = document.quewysewectow("video");
+c-const mediasouwce = video.swcobject;
+const souwcebuffewwist = mediasouwce.activesouwcebuffews;
+fow (const souwcebuffew o-of souwcebuffewwist) {
+  // do something with each souwcebuffew, (ˆ ﻌ ˆ)♡ s-such as caww abowt()
+  souwcebuffew.abowt();
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBuffer")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffew")}}

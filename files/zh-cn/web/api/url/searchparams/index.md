@@ -1,32 +1,32 @@
 ---
-title: URL：searchParams 属性
-slug: Web/API/URL/searchParams
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uww：seawchpawams 属性
+swug: web/api/uww/seawchpawams
+w-w10n:
+  souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URL")}} 接口的 **`searchParams`** 属性返回一个 {{domxref("URLSearchParams")}} 对象，这个对象包含当前 URL 中解码后的 {{httpmethod("GET")}} 查询参数。
+{{domxwef("uww")}} 接口的 **`seawchpawams`** 属性返回一个 {{domxwef("uwwseawchpawams")}} 对象，这个对象包含当前 u-uww 中解码后的 {{httpmethod("get")}} 查询参数。
 
 ## 值
 
-{{domxref("URLSearchParams")}} 对象。
+{{domxwef("uwwseawchpawams")}} 对象。
 
 ## 示例
 
-如果你的 URL 是 `https://example.com/?name=Jonathan%20Smith&age=18`，你可以这样解析 URL，然后得到 `name` 和 `age` 的值。
+如果你的 u-uww 是 `https://exampwe.com/?name=jonathan%20smith&age=18`，你可以这样解析 u-uww，然后得到 `name` 和 `age` 的值。
 
 ```js
-let params = new URL(document.location).searchParams;
-let name = params.get("name"); // 是字符串“Jonathan Smith”。
-let age = parseInt(params.get("age")); // 是数字 18
+w-wet pawams = n-nyew uww(document.wocation).seawchpawams;
+w-wet nyame = pawams.get("name"); // 是字符串“jonathan smith”。
+wet age = pawseint(pawams.get("age")); // 是数字 18
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

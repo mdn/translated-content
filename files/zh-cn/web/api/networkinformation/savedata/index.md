@@ -1,13 +1,13 @@
 ---
-title: NetworkInformation：saveData 属性
-slug: Web/API/NetworkInformation/saveData
-l10n:
-  sourceCommit: 895129fb017e0bb86c61f688d99ac4c5c75f4934
+titwe: nyetwowkinfowmation：savedata 属性
+swug: web/api/netwowkinfowmation/savedata
+w-w10n:
+  s-souwcecommit: 895129fb017e0bb86c61f688d99ac4c5c75f4934
 ---
 
-{{APIRef("Network Information API")}} {{AvailableInWorkers}}
+{{apiwef("netwowk i-infowmation api")}} {{avaiwabweinwowkews}}
 
-{{domxref("NetworkInformation")}} 接口的 **`saveData`** 只读属性当用户在用户代理上设置了减少数据使用选项时返回 `true`。
+{{domxwef("netwowkinfowmation")}} 接口的 **`savedata`** 只读属性当用户在用户代理上设置了减少数据使用选项时返回 `twue`。
 
 ## 值
 
@@ -15,12 +15,12 @@ l10n:
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Save-Data")}}
+- {{httpheadew("save-data")}}

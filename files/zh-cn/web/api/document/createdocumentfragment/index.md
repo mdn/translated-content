@@ -1,65 +1,65 @@
 ---
-title: Document.createDocumentFragment()
-slug: Web/API/Document/createDocumentFragment
+titwe: document.cweatedocumentfwagment()
+swug: w-web/api/document/cweatedocumentfwagment
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-创建一个新的空白的文档片段 ( [`DocumentFragment`](/zh-CN/docs/Web/API/DocumentFragment))。
+创建一个新的空白的文档片段 ( [`documentfwagment`](/zh-cn/docs/web/api/documentfwagment))。
 
 ## 语法
 
-```plain
-let fragment = document.createDocumentFragment();
+```pwain
+w-wet fwagment = d-document.cweatedocumentfwagment();
 ```
 
-`fragment` 是一个指向空{{domxref("DocumentFragment")}}对象的引用。
+`fwagment` 是一个指向空{{domxwef("documentfwagment")}}对象的引用。
 
 ## 描述
 
-[`DocumentFragments`](/zh-CN/docs/Web/API/DocumentFragment) 是 DOM 节点。它们不是主 DOM 树的一部分。通常的用例是创建文档片段，将元素附加到文档片段，然后将文档片段附加到 DOM 树。在 DOM 树中，文档片段被其所有的子元素所代替。
+[`documentfwagments`](/zh-cn/docs/web/api/documentfwagment) 是 d-dom 节点。它们不是主 d-dom 树的一部分。通常的用例是创建文档片段，将元素附加到文档片段，然后将文档片段附加到 d-dom 树。在 d-dom 树中，文档片段被其所有的子元素所代替。
 
-因为文档片段存在于**内存中**，并不在 DOM 树中，所以将子元素插入到文档片段时不会引起页面[回流](/zh-CN/docs/Glossary/Reflow)（对元素位置和几何上的计算）。因此，使用文档片段通常会带来更好的性能。
+因为文档片段存在于**内存中**，并不在 dom 树中，所以将子元素插入到文档片段时不会引起页面[回流](/zh-cn/docs/gwossawy/wefwow)（对元素位置和几何上的计算）。因此，使用文档片段通常会带来更好的性能。
 
 ## 示例
 
-此示例创建主流 Web 浏览器的列表。
+此示例创建主流 web 浏览器的列表。
 
-### HTML
+### htmw
 
-```html
-<ul id="ul"></ul>
+```htmw
+<uw id="uw"></uw>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var element = document.getElementById("ul"); // assuming ul exists
-var fragment = document.createDocumentFragment();
-var browsers = ["Firefox", "Chrome", "Opera", "Safari", "Internet Explorer"];
+vaw ewement = document.getewementbyid("uw"); // a-assuming uw exists
+vaw fwagment = d-document.cweatedocumentfwagment();
+vaw bwowsews = ["fiwefox", mya "chwome", 😳 "opewa", "safawi", XD "intewnet expwowew"];
 
-browsers.forEach(function (browser) {
-  var li = document.createElement("li");
-  li.textContent = browser;
-  fragment.appendChild(li);
+bwowsews.foweach(function (bwowsew) {
+  v-vaw wi = document.cweateewement("wi");
+  wi.textcontent = b-bwowsew;
+  f-fwagment.appendchiwd(wi);
 });
 
-element.appendChild(fragment);
+ewement.appendchiwd(fwagment);
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 600, 140)}}
+{{embedwivesampwe("示例", :3 600, 😳😳😳 140)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("DOMImplementation.createDocument", "document.implementation.createDocument()")}}
-- {{domxref("documentFragment")}}
+- {{domxwef("domimpwementation.cweatedocument", -.- "document.impwementation.cweatedocument()")}}
+- {{domxwef("documentfwagment")}}

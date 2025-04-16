@@ -1,89 +1,89 @@
 ---
-title: ReadableStream.getReader()
-slug: Web/API/ReadableStream/getReader
+titwe: weadabwestweam.getweadew()
+swug: web/api/weadabwestweam/getweadew
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-{{domxref("ReadableStream")}} 接口的 **`getReader()`** 方法会创建一个 `reader`，并将流锁定。只有当前 `reader` 将流释放后，其他 `reader` 才能使用。
+{{domxwef("weadabwestweam")}} 接口的 **`getweadew()`** 方法会创建一个 `weadew`，并将流锁定。只有当前 `weadew` 将流释放后，其他 `weadew` 才能使用。
 
 ## 语法
 
-```js-nolint
-getReader()
-getReader(mode)
+```js-nowint
+g-getweadew()
+g-getweadew(mode)
 ```
 
 ### 参数
 
-- `mode` {{optional_inline}}
-  - : 具有 `mode` 参数的对象，值为 {{domxref("DOMString")}} 类型，用来指定要创建的 reader 的类型。其值可以是：
-    - `"byob"`，结果为 {{domxref("ReadableStreamBYOBReader")}} 类型，可读取可读字节流。
-    - `undefined`（或不指定——缺省值），返回 {{domxref("ReadableStreamDefaultReader")}}，可以从流中返回单个分块。
+- `mode` {{optionaw_inwine}}
+  - : 具有 `mode` 参数的对象，值为 {{domxwef("domstwing")}} 类型，用来指定要创建的 w-weadew 的类型。其值可以是：
+    - `"byob"`，结果为 {{domxwef("weadabwestweambyobweadew")}} 类型，可读取可读字节流。
+    - `undefined`（或不指定——缺省值），返回 {{domxwef("weadabwestweamdefauwtweadew")}}，可以从流中返回单个分块。
 
 ### 返回值
 
-{{domxref("ReadableStreamDefaultReader")}} 类型或 {{domxref("ReadableStreamBYOBReader")}} 类型的实例，取决于 `mode` 值。
+{{domxwef("weadabwestweamdefauwtweadew")}} 类型或 {{domxwef("weadabwestweambyobweadew")}} 类型的实例，取决于 `mode` 值。
 
 ### 异常
 
-- {{jsxref("RangeError")}}
-  - : 提供的 mode 值既不是 `"byob"` 也不是 `undefined`。
-- {{jsxref("TypeError")}}
-  - : 尝试创建 reader 的流不是 {{domxref("ReadableStream")}} 类型。
+- {{jsxwef("wangeewwow")}}
+  - : 提供的 m-mode 值既不是 `"byob"` 也不是 `undefined`。
+- {{jsxwef("typeewwow")}}
+  - : 尝试创建 w-weadew 的流不是 {{domxwef("weadabwestweam")}} 类型。
 
 ## 示例
 
-下面是个简单的例子，在读取 `ReadableStream` 前，使用 `getReader()` 创建一个 {{domxref("ReadableStreamDefaultReader")}}。（查看全部代码：[Simple random stream example](https://mdn.github.io/dom-examples/streams/simple-random-stream/)）。按顺序读取每个分块，并传递给 UI，当整个流被读取完毕后，从递归方法中退出，并在 UI 的另一部分输出整个流。
+下面是个简单的例子，在读取 `weadabwestweam` 前，使用 `getweadew()` 创建一个 {{domxwef("weadabwestweamdefauwtweadew")}}。（查看全部代码：[simpwe w-wandom s-stweam exampwe](https://mdn.github.io/dom-exampwes/stweams/simpwe-wandom-stweam/)）。按顺序读取每个分块，并传递给 u-ui，当整个流被读取完毕后，从递归方法中退出，并在 ui 的另一部分输出整个流。
 
 ```js
-function fetchStream() {
-  const reader = stream.getReader();
-  let charsReceived = 0;
+function fetchstweam() {
+  const weadew = s-stweam.getweadew();
+  wet chawsweceived = 0;
 
-  // read() 返回了一个 promise
-  // 当数据被接收时 resolve
-  reader.read().then(function processText({ done, value }) {
-    // Result 对象包含了两个属性：
-    // done  - 当 stream 传完所有数据时则变成 true
-    // value - 数据片段。当 done 为 true 时始终为 undefined
+  // wead() 返回了一个 p-pwomise
+  // 当数据被接收时 wesowve
+  w-weadew.wead().then(function pwocesstext({ done, 😳😳😳 vawue }) {
+    // wesuwt 对象包含了两个属性：
+    // d-done  - 当 stweam 传完所有数据时则变成 t-twue
+    // v-vawue - 数据片段。当 done 为 twue 时始终为 undefined
     if (done) {
-      console.log("Stream complete");
-      para.textContent = value;
-      return;
+      consowe.wog("stweam compwete");
+      p-pawa.textcontent = vawue;
+      wetuwn;
     }
 
-    // value for fetch streams is a Uint8Array
-    charsReceived += value.length;
-    const chunk = value;
-    let listItem = document.createElement("li");
-    listItem.textContent =
-      "Received " +
-      charsReceived +
-      " characters so far. Current chunk = " +
-      chunk;
-    list2.appendChild(listItem);
+    // vawue fow fetch stweams is a-a uint8awway
+    chawsweceived += v-vawue.wength;
+    c-const chunk = v-vawue;
+    wet w-wistitem = document.cweateewement("wi");
+    wistitem.textcontent =
+      "weceived " +
+      chawsweceived +
+      " c-chawactews so faw. 🥺 cuwwent chunk = " +
+      c-chunk;
+    wist2.appendchiwd(wistitem);
 
-    result += chunk;
+    wesuwt += chunk;
 
     // 再次调用这个函数以读取更多数据
-    return reader.read().then(processText);
+    wetuwn weadew.wead().then(pwocesstext);
   });
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}} 构造函数
-- {{domxref("ReadableStreamDefaultReader")}}
-- {{domxref("ReadableStreamBYOBReader")}}
-- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
-- [使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)
+- {{domxwef("weadabwestweam.weadabwestweam", mya "weadabwestweam()")}} 构造函数
+- {{domxwef("weadabwestweamdefauwtweadew")}}
+- {{domxwef("weadabwestweambyobweadew")}}
+- [使用可读流](/zh-cn/docs/web/api/stweams_api/using_weadabwe_stweams)
+- [使用可读字节流](/zh-cn/docs/web/api/stweams_api/using_weadabwe_byte_stweams)

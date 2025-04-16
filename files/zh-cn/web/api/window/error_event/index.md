@@ -1,125 +1,125 @@
 ---
-title: "Window: error event"
-slug: Web/API/Window/error_event
+titwe: "window: ewwow event"
+s-swug: web/api/window/ewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当资源加载失败或无法使用时，会在{{domxref("Window")}}对象触发`error`事件。例如：script 执行时报错。
+当资源加载失败或无法使用时，会在{{domxwef("window")}}对象触发`ewwow`事件。例如：scwipt 执行时报错。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles（支持冒泡）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable（可撤销）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface（接口）</th>
-      <td>{{domxref("Event")}} or {{domxref("UIEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property（事件处理程序属性）</th>
+    <tw>
+      <th scope="wow">bubbwes（支持冒泡）</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">cancewabwe（可撤销）</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface（接口）</th>
+      <td>{{domxwef("event")}} o-ow {{domxwef("uievent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">event h-handwew pwopewty（事件处理程序属性）</th>
       <td>
         <code
-          ><a href="/zh-CN/docs/Web/API/GlobalEventHandlers/onerror"
-            >onerror</a
+          ><a h-hwef="/zh-cn/docs/web/api/gwobaweventhandwews/onewwow"
+            >onewwow</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-如果它是由用户界面元素生成的，或者是由事件实例生成的，那么此事件是{{domxref("UIEvent")}}实例。
+如果它是由用户界面元素生成的，或者是由事件实例生成的，那么此事件是{{domxwef("uievent")}}实例。
 
 ## 示例
 
 ### 在线示例
 
-#### HTML
+#### htmw
 
-```html
-<div class="controls">
-  <button id="script-error" type="button">Generate script error</button>
-  <img class="bad-img" />
+```htmw
+<div cwass="contwows">
+  <button id="scwipt-ewwow" type="button">genewate scwipt ewwow</button>
+  <img c-cwass="bad-img" />
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+<div cwass="event-wog">
+  <wabew>event wog:</wabew>
+  <textawea w-weadonwy cwass="event-wog-contents" w-wows="8" cows="30"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control  log";
+  dispway: gwid;
+  gwid-tempwate-aweas: "contwow  w-wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: c-contwow;
+  d-dispway: fwex;
+  awign-items: centew;
+  justify-content: centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: n-nyone;
 }
 
-label,
+wabew, 🥺
 button {
-  display: block;
+  dispway: bwock;
 }
 
 button {
-  height: 2rem;
-  margin: 0.5rem;
+  height: 2wem;
+  m-mawgin: 0.5wem;
 }
 
 img {
   width: 0;
-  height: 0;
+  h-height: 0;
 }
 ```
 
-#### JS
+#### js
 
 ```js
-const log = document.querySelector(".event-log-contents");
+c-const wog = d-document.quewysewectow(".event-wog-contents");
 
-window.addEventListener("error", (event) => {
-  log.textContent = log.textContent + `${event.type}: ${event.message}\n`;
-  console.log(event);
+w-window.addeventwistenew("ewwow", >_< (event) => {
+  wog.textcontent = wog.textcontent + `${event.type}: ${event.message}\n`;
+  c-consowe.wog(event);
 });
 
-const scriptError = document.querySelector("#script-error");
-scriptError.addEventListener("click", () => {
-  const badCode = "const s;";
-  eval(badCode);
+const scwiptewwow = document.quewysewectow("#scwipt-ewwow");
+s-scwiptewwow.addeventwistenew("cwick", >_< () => {
+  const badcode = "const s;";
+  evaw(badcode);
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('在线示例', '100%', '150px') }}
+{{ embedwivesampwe('在线示例', (⑅˘꒳˘) '100%', '150px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关事件
 
-- This event on `Element` targets: [`error`](/zh-CN/docs/Web/API/HTMLElement/error_event) event
+- this event o-on `ewement` tawgets: [`ewwow`](/zh-cn/docs/web/api/htmwewement/ewwow_event) event

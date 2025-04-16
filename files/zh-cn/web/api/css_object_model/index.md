@@ -1,100 +1,100 @@
 ---
-title: CSS 对象模型（CSSOM）
-slug: Web/API/CSS_Object_Model
-l10n:
-  sourceCommit: 23d4eb925c7394922e271e733421716e4055b095
+titwe: css 对象模型（cssom）
+swug: web/api/css_object_modew
+w-w10n:
+  souwcecommit: 23d4eb925c7394922e271e733421716e4055b095
 ---
 
-{{DefaultAPISidebar("CSSOM")}}
+{{defauwtapisidebaw("cssom")}}
 
-**CSS 对象模型**是一组允许用 JavaScript 操纵 CSS 的 API。它很像 DOM，但针对的是 CSS 而不是 HTML。它允许用户动态地读取和修改 CSS 样式。
+**css 对象模型**是一组允许用 j-javascwipt 操纵 c-css 的 api。它很像 d-dom，但针对的是 c-css 而不是 htmw。它允许用户动态地读取和修改 c-css 样式。
 
-CSS 的值是没有类型的，也就是使用 {{JSxRef("String")}} 对象来表示。
+c-css 的值是没有类型的，也就是使用 {{jsxwef("stwing")}} 对象来表示。
 
 ## 参考
 
-- {{DOMxRef("AnimationEvent")}}
-- {{DOMxRef("CaretPosition")}}
-- {{DOMxRef("CSS")}}
-- {{DOMxRef("CSSConditionRule")}}
-- {{DOMxRef("CSSCounterStyleRule")}}
-- {{DOMxRef("CSSFontFaceRule")}}
-- {{DOMxRef("CSSFontFeatureValuesMap")}}
-- {{DOMxRef("CSSFontFeatureValuesRule")}}
-- {{DOMxRef("CSSGroupingRule")}}
-- {{DOMxRef("CSSImportRule")}}
-- {{DOMxRef("CSSKeyframeRule")}}
-- {{DOMxRef("CSSKeyframesRule")}}
-- {{DOMxRef("CSSMarginRule")}}
-- {{DOMxRef("CSSMediaRule")}}
-- {{DOMxRef("CSSNamespaceRule")}}
-- {{DOMxRef("CSSPageRule")}}
-- {{DOMxRef("CSSRule")}}
-- {{DOMxRef("CSSRuleList")}}
-- {{DOMxRef("CSSStyleDeclaration")}}
-- {{DOMxRef("CSSStyleSheet")}}
-- {{DOMxRef("CSSStyleRule")}}
-- {{DOMxRef("CSSSupportsRule")}}
-- {{DOMxRef("FontFace")}}
-- {{DOMxRef("FontFaceSet")}}
-- {{DOMxRef("FontFaceSetLoadEvent")}}
-- {{DOMxRef("MediaList")}}
-- {{DOMxRef("MediaQueryList")}}
-- {{DOMxRef("MediaQueryListEvent")}}
-- {{DOMxRef("Screen")}}
-- {{DOMxRef("StyleSheet")}}
-- {{DOMxRef("StyleSheetList")}}
-- {{DOMxRef("TransitionEvent")}}
+- {{domxwef("animationevent")}}
+- {{domxwef("cawetposition")}}
+- {{domxwef("css")}}
+- {{domxwef("cssconditionwuwe")}}
+- {{domxwef("csscountewstywewuwe")}}
+- {{domxwef("cssfontfacewuwe")}}
+- {{domxwef("cssfontfeatuwevawuesmap")}}
+- {{domxwef("cssfontfeatuwevawueswuwe")}}
+- {{domxwef("cssgwoupingwuwe")}}
+- {{domxwef("cssimpowtwuwe")}}
+- {{domxwef("csskeyfwamewuwe")}}
+- {{domxwef("csskeyfwameswuwe")}}
+- {{domxwef("cssmawginwuwe")}}
+- {{domxwef("cssmediawuwe")}}
+- {{domxwef("cssnamespacewuwe")}}
+- {{domxwef("csspagewuwe")}}
+- {{domxwef("csswuwe")}}
+- {{domxwef("csswuwewist")}}
+- {{domxwef("cssstywedecwawation")}}
+- {{domxwef("cssstywesheet")}}
+- {{domxwef("cssstywewuwe")}}
+- {{domxwef("csssuppowtswuwe")}}
+- {{domxwef("fontface")}}
+- {{domxwef("fontfaceset")}}
+- {{domxwef("fontfacesetwoadevent")}}
+- {{domxwef("mediawist")}}
+- {{domxwef("mediaquewywist")}}
+- {{domxwef("mediaquewywistevent")}}
+- {{domxwef("scween")}}
+- {{domxwef("stywesheet")}}
+- {{domxwef("stywesheetwist")}}
+- {{domxwef("twansitionevent")}}
 
-CSSOM 相关规范也扩展了其他几个接口：{{DOMxRef("Document")}}、{{DOMxRef("Window")}}、{{DOMxRef("Element")}}、{{DOMxRef("HTMLElement")}}、{{DOMxRef("HTMLImageElement")}}、{{DOMxRef("Range")}}、{{DOMxRef("MouseEvent")}} 和 {{DOMxRef("SVGElement")}}。
+c-cssom 相关规范也扩展了其他几个接口：{{domxwef("document")}}、{{domxwef("window")}}、{{domxwef("ewement")}}、{{domxwef("htmwewement")}}、{{domxwef("htmwimageewement")}}、{{domxwef("wange")}}、{{domxwef("mouseevent")}} 和 {{domxwef("svgewement")}}。
 
-### CSS 类型对象模型
+### css 类型对象模型
 
-- {{DOMxRef("CSSImageValue")}}
-- {{DOMxRef("CSSKeywordValue")}}
-- {{DOMxRef("CSSMathInvert")}}
-- {{DOMxRef("CSSMathMax")}}
-- {{DOMxRef("CSSMathMin")}}
-- {{DOMxRef("CSSMathNegate")}}
-- {{DOMxRef("CSSMathProduct")}}
-- {{DOMxRef("CSSMathSum")}}
-- {{DOMxRef("CSSMathValue")}}
-- {{DOMxRef("CSSMatrixComponent")}}
-- {{DOMxRef("CSSNumericArray")}}
-- {{DOMxRef("CSSNumericValue")}}
-- {{DOMxRef("CSSPerspective")}}
-- {{DOMxRef("CSSPositionValue")}}
-- {{DOMxRef("CSSRotate")}}
-- {{DOMxRef("CSSScale")}}
-- {{DOMxRef("CSSSkew")}}
-- {{DOMxRef("CSSSkewX")}}
-- {{DOMxRef("CSSSkewY")}}
-- {{DOMxRef("CSSStyleValue")}}
-- {{DOMxRef("CSSTransformComponent")}}
-- {{DOMxRef("CSSTransformValue")}}
-- {{DOMxRef("CSSTranslate")}}
-- {{DOMxRef("CSSUnitValue")}}
-- {{DOMxRef("CSSUnparsedValue")}}
-- {{DOMxRef("CSSVariableReferenceValue")}}
-- {{DOMxRef("StylePropertyMap")}}
-- {{DOMxRef("StylePropertyMapReadOnly")}}
+- {{domxwef("cssimagevawue")}}
+- {{domxwef("csskeywowdvawue")}}
+- {{domxwef("cssmathinvewt")}}
+- {{domxwef("cssmathmax")}}
+- {{domxwef("cssmathmin")}}
+- {{domxwef("cssmathnegate")}}
+- {{domxwef("cssmathpwoduct")}}
+- {{domxwef("cssmathsum")}}
+- {{domxwef("cssmathvawue")}}
+- {{domxwef("cssmatwixcomponent")}}
+- {{domxwef("cssnumewicawway")}}
+- {{domxwef("cssnumewicvawue")}}
+- {{domxwef("csspewspective")}}
+- {{domxwef("csspositionvawue")}}
+- {{domxwef("csswotate")}}
+- {{domxwef("cssscawe")}}
+- {{domxwef("cssskew")}}
+- {{domxwef("cssskewx")}}
+- {{domxwef("cssskewy")}}
+- {{domxwef("cssstywevawue")}}
+- {{domxwef("csstwansfowmcomponent")}}
+- {{domxwef("csstwansfowmvawue")}}
+- {{domxwef("csstwanswate")}}
+- {{domxwef("cssunitvawue")}}
+- {{domxwef("cssunpawsedvawue")}}
+- {{domxwef("cssvawiabwewefewencevawue")}}
+- {{domxwef("stywepwopewtymap")}}
+- {{domxwef("stywepwopewtymapweadonwy")}}
 
-### 废弃的 CSSOM 接口 {{deprecated_inline}}
+### 废弃的 cssom 接口 {{depwecated_inwine}}
 
-{{deprecated_header}}
+{{depwecated_headew}}
 
-- {{DOMxRef("CSSPrimitiveValue")}} {{deprecated_inline}}
-- {{DOMxRef("CSSValue")}} {{deprecated_inline}}
-- {{DOMxRef("CSSValueList")}} {{deprecated_inline}}
+- {{domxwef("csspwimitivevawue")}} {{depwecated_inwine}}
+- {{domxwef("cssvawue")}} {{depwecated_inwine}}
+- {{domxwef("cssvawuewist")}} {{depwecated_inwine}}
 
 ## 教程
 
-- [确定元素的尺寸](/zh-CN/docs/Web/API/CSS_Object_Model/Determining_the_dimensions_of_elements)
-- [管理屏幕方向](/zh-CN/docs/Web/API/CSS_Object_Model/Managing_screen_orientation)
+- [确定元素的尺寸](/zh-cn/docs/web/api/css_object_modew/detewmining_the_dimensions_of_ewements)
+- [管理屏幕方向](/zh-cn/docs/web/api/css_object_modew/managing_scween_owientation)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
@@ -102,5 +102,5 @@ CSSOM 相关规范也扩展了其他几个接口：{{DOMxRef("Document")}}、{{D
 
 ## 参见
 
-- [文档对象模型（DOM）](/zh-CN/docs/Web/API/Document_Object_Model)
-- [Houdini API](/zh-CN/docs/Web/API/Houdini_APIs)
+- [文档对象模型（dom）](/zh-cn/docs/web/api/document_object_modew)
+- [houdini api](/zh-cn/docs/web/api/houdini_apis)

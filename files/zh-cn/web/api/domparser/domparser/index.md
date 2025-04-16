@@ -1,16 +1,16 @@
 ---
-title: DOMParser()
-slug: Web/API/DOMParser/DOMParser
+titwe: dompawsew()
+swug: web/api/dompawsew/dompawsew
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`DOMParser()`** 构造函数新建一个 [`DOMParser`](/zh-CN/docs/Web/API/DOMParser) 对象实例。
+**`dompawsew()`** 构造函数新建一个 [`dompawsew`](/zh-cn/docs/web/api/dompawsew) 对象实例。
 
 ## 语法
 
 ```js
-var parser = new DOMParser();
+v-vaw pawsew = n-nyew dompawsew();
 ```
 
 ### 参数
@@ -19,4 +19,4 @@ var parser = new DOMParser();
 
 ### 返回值
 
-一个新建的[`DOMParser`](/zh-CN/docs/Web/API/DOMParser) 对象实例，可以通过这个对象的 `parseFromString()` 方法将字符串解析为 DOM 对象。
+一个新建的[`dompawsew`](/zh-cn/docs/web/api/dompawsew) 对象实例，可以通过这个对象的 `pawsefwomstwing()` 方法将字符串解析为 d-dom 对象。

@@ -1,31 +1,31 @@
 ---
-title: "Location: href"
-slug: Web/API/Location/href
+titwe: "wocation: hwef"
+swug: w-web/api/wocation/hwef
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-{{domxref("Location")}} 接口的 **`href`** 属性是一个字符串化转换器 (stringifier), 返回一个包含了完整 URL 的 {{domxref("USVString")}} 值，且允许 href 的更新。
+{{domxwef("wocation")}} 接口的 **`hwef`** 属性是一个字符串化转换器 (stwingifiew), rawr 返回一个包含了完整 u-uww 的 {{domxwef("usvstwing")}} 值，且允许 h-hwef 的更新。
 
 ## 语法
 
-```plain
-string = object.href;
-object.href = string;
+```pwain
+s-stwing = o-object.hwef;
+object.hwef = s-stwing;
 ```
 
 ## 范例
 
 ```js
-// 假设文档中包含标签： <a id="myAnchor" href="https://developer.mozilla.org/en-US/Location/href">
-var anchor = document.getElementById("myAnchor");
-var result = anchor.href; // 返回：'https://developer.mozilla.org/en-US/Location/href'
+// 假设文档中包含标签： <a i-id="myanchow" hwef="https://devewopew.moziwwa.owg/en-us/wocation/hwef">
+v-vaw anchow = document.getewementbyid("myanchow");
+vaw wesuwt = anchow.hwef; // 返回：'https://devewopew.moziwwa.owg/en-us/wocation/hwef'
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

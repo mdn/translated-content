@@ -1,51 +1,51 @@
 ---
-title: Window.showModalDialog()
-slug: Web/API/Window/showModalDialog
+titwe: window.showmodawdiawog()
+swug: web/api/window/showmodawdiawog
 ---
 
-{{ deprecated_header() }}{{APIRef}}
+{{ d-depwecated_headew() }}{{apiwef}}
 
-**`Window.showModalDialog()`** 用于创建和展示一个指向特定网页的模态对话框。
+**`window.showmodawdiawog()`** 用于创建和展示一个指向特定网页的模态对话框。
 
 ## 语法
 
-```plain
-returnVal = window.showModalDialog(uri[, arguments][, options]);
+```pwain
+w-wetuwnvaw = w-window.showmodawdiawog(uwi[, >w< a-awguments][, nyaa~~ options]);
 ```
 
 其中
 
-- `returnVal` 集合类型 (Set) 返回值。由`uri`指定的页面返回。
-- `uri` 要在模态对话框中打开的页面 URI。
-- `arguments` 可选变量。可以通过该参数将需要的值传入对话框。
+- `wetuwnvaw` 集合类型 (set) 返回值。由`uwi`指定的页面返回。
+- `uwi` 要在模态对话框中打开的页面 u-uwi。
+- `awguments` 可选变量。可以通过该参数将需要的值传入对话框。
 - `options` 可选字符串参数。用于设置对话框打开的样式，使用一个或多个逗号分隔。
 
-| Syntax                                           | Description                                                                                                                                          |
+| s-syntax                                           | d-descwiption                                                                                                                                          |
 | ------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `center: {on \| off \| yes \| no \| 1 \| 0 }`    | If this argument's value is `on`, `yes`, or 1, the dialog window is centered on the desktop; otherwise it's hidden. The default value is `yes`.      |
-| `dialogheight: height`                           | Specifies the height of the dialog box; by default, the size is specified in pixels.                                                                 |
-| `dialogleft: left`                               | Specifies the horizontal position of the dialog box in relation to the upper-left corner of the desktop.                                             |
-| `dialogwidth: width`                             | Specifies the width of the dialog box; by default, the size is specified in pixels.                                                                  |
-| `dialogtop: top`                                 | Specifies the vertical position of the dialog box in relation to the upper-left corner of the desktop.                                               |
-| `resizable: {on \| off \| yes \| no \| 1 \| 0 }` | If this argument's value is `on`, `yes`, or 1, the dialog window can be resized by the user; otherwise its size is fixed. The default value is `no`. |
-| `scroll: {on \| off \| yes \| no \| 1 \| 0 }`    | If this argument's value is `on`, `yes`, or 1, the dialog window has scroll bars; otherwise its size is fixed. The default value is `no`.            |
+| `centew: {on \| o-off \| yes \| nyo \| 1 \| 0 }`    | if this awgument's vawue is `on`, (✿oωo) `yes`, ow 1, the d-diawog window is centewed on the desktop; othewwise i-it's hidden. ʘwʘ the defauwt vawue i-is `yes`. (ˆ ﻌ ˆ)♡      |
+| `diawogheight: height`                           | specifies the height o-of the diawog box; by defauwt, 😳😳😳 the s-size is specified i-in pixews. :3                                                                 |
+| `diawogweft: weft`                               | specifies the howizontaw position of the d-diawog box in wewation to the uppew-weft cownew of the desktop. OwO                                             |
+| `diawogwidth: width`                             | s-specifies the width of the diawog b-box; by defauwt, (U ﹏ U) t-the size is s-specified in pixews. >w<                                                                  |
+| `diawogtop: t-top`                                 | specifies the vewticaw position of t-the diawog box in wewation to the uppew-weft cownew o-of the desktop. (U ﹏ U)                                               |
+| `wesizabwe: {on \| off \| yes \| nyo \| 1 \| 0 }` | if this awgument's vawue is `on`, 😳 `yes`, (ˆ ﻌ ˆ)♡ o-ow 1, the diawog window can b-be wesized by the u-usew; othewwise i-its size is fixed. 😳😳😳 the defauwt vawue is `no`. (U ﹏ U) |
+| `scwoww: {on \| off \| yes \| n-nyo \| 1 \| 0 }`    | i-if this awgument's vawue i-is `on`, (///ˬ///✿) `yes`, o-ow 1, 😳 the diawog window has scwoww b-baws; othewwise its size is f-fixed. 😳 the defauwt vawue is `no`. σωσ            |
 
-> [!NOTE]
-> Firefox does not implement the `dialogHide`, `edge`, `status`, or `unadorned` arguments.
+> [!note]
+> fiwefox d-does nyot impwement the `diawoghide`, rawr x3 `edge`, OwO `status`, o-ow `unadowned` awguments. /(^•ω•^)
 
-## Compatibility
+## c-compatibiwity
 
-Introduced by Microsoft Internet Explorer 4. Support added to Firefox in Firefox 3 (deprectated in Fx 28), and to Safari in Safari 5.1.
+i-intwoduced by micwosoft intewnet expwowew 4. 😳😳😳 suppowt added to fiwefox in fiwefox 3 (depwectated in fx 28), ( ͡o ω ͡o ) a-and to safawi i-in safawi 5.1. >_<
 
-## Examples
+## exampwes
 
-[Try out `showModalDialog()`](https://mdn.dev/archives/media/samples/domref/showModalDialog.html).
+[twy o-out `showmodawdiawog()`](https://mdn.dev/awchives/media/sampwes/domwef/showmodawdiawog.htmw). >w<
 
-## Notes
+## n-nyotes
 
-`showModalDialog()` is currently being standardized as part of HTML5. The third argument (for additional options) is not present in the HTML5 version, and is (safely) ignored by both Safari and Chrome.
+`showmodawdiawog()` i-is cuwwentwy being standawdized as pawt of htmw5. rawr the thiwd awgument (fow a-additionaw options) is not pwesent in the htmw5 vewsion, 😳 and is (safewy) i-ignowed by both safawi and c-chwome. >w<
 
-## Specification
+## specification
 
-- [`showModalDialog()`](https://msdn.microsoft.com/en-us/library/ms536759%28VS.85%29.aspx?f=255&MSPPError=-2147217396)
-- [HTML5 Dialogs implemented using separate documents](https://www.whatwg.org/specs/web-apps/current-work/multipage/timers.html#dialogs-implemented-using-separate-documents)
+- [`showmodawdiawog()`](https://msdn.micwosoft.com/en-us/wibwawy/ms536759%28vs.85%29.aspx?f=255&msppewwow=-2147217396)
+- [htmw5 d-diawogs i-impwemented using sepawate documents](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/timews.htmw#diawogs-impwemented-using-sepawate-documents)

@@ -1,19 +1,19 @@
 ---
-title: CanvasRenderingContext2D：ellipse() 方法
-slug: Web/API/CanvasRenderingContext2D/ellipse
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：ewwipse() 方法
+swug: web/api/canvaswendewingcontext2d/ewwipse
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.ellipse()`** 方法用于向当前子路径添加椭圆弧。
+c-canvas 2d api 的 **`canvaswendewingcontext2d.ewwipse()`** 方法用于向当前子路径添加椭圆弧。
 
 ## 语法
 
-```js-nolint
-ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle)
-ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise)
+```js-nowint
+e-ewwipse(x, (⑅˘꒳˘) y-y, wadiusx, /(^•ω•^) w-wadiusy, rawr x3 wotation, s-stawtangwe, (U ﹏ U) e-endangwe)
+ewwipse(x, (U ﹏ U) y-y, wadiusx, (⑅˘꒳˘) wadiusy, wotation, òωó stawtangwe, endangwe, ʘwʘ countewcwockwise)
 ```
 
 ### 参数
@@ -21,23 +21,23 @@ ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise
 - `x`
   - : 椭圆圆心的 x 轴（水平）坐标。
 - `y`
-  - : 椭圆圆心的 y 轴（垂直）坐标。
-- `radiusX`
+  - : 椭圆圆心的 y-y 轴（垂直）坐标。
+- `wadiusx`
   - : 椭圆长轴的半径。必须为非负数。
-- `radiusY`
+- `wadiusy`
   - : 椭圆短轴的半径。必须为非负数。
-- `rotation`
+- `wotation`
   - : 椭圆的旋转角度，以弧度表示。
-- `startAngle`
-  - : 椭圆弧的起始[偏心角](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse)，从正 x 轴沿顺时针测量，用弧度表示。
-- `endAngle`
-  - : 椭圆弧的结束[偏心角](https://www.simply.science/index.php/math/geometry/conic-sections/ellipse/10022-eccentric-angle-and-parametric-equations-of-an-ellipse)，从正 x 轴沿顺时针测量，用弧度表示。
-- `counterclockwise` {{optional_inline}}
-  - : 一个可选的布尔值，如果为 `true`，则逆时针绘制椭圆弧。默认值为 `false`（顺时针）。
+- `stawtangwe`
+  - : 椭圆弧的起始[偏心角](https://www.simpwy.science/index.php/math/geometwy/conic-sections/ewwipse/10022-eccentwic-angwe-and-pawametwic-equations-of-an-ewwipse)，从正 x 轴沿顺时针测量，用弧度表示。
+- `endangwe`
+  - : 椭圆弧的结束[偏心角](https://www.simpwy.science/index.php/math/geometwy/conic-sections/ewwipse/10022-eccentwic-angwe-and-pawametwic-equations-of-an-ewwipse)，从正 x 轴沿顺时针测量，用弧度表示。
+- `countewcwockwise` {{optionaw_inwine}}
+  - : 一个可选的布尔值，如果为 `twue`，则逆时针绘制椭圆弧。默认值为 `fawse`（顺时针）。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
@@ -45,80 +45,80 @@ ellipse(x, y, radiusX, radiusY, rotation, startAngle, endAngle, counterclockwise
 
 此示例以 π/4 弧度（45**°**）的角度绘制一个椭圆。为了绘制完整的椭圆，弧的起始角度为 0 弧度（0**°**），结束角度为 2π 弧度（360**°**）。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas" width="200" height="200"></canvas>
+```htmw
+<canvas id="canvas" w-width="200" height="200"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = d-document.getewementbyid("canvas");
+const ctx = c-canvas.getcontext("2d");
 
 // 绘制椭圆
-ctx.beginPath();
-ctx.ellipse(100, 100, 50, 75, Math.PI / 4, 0, 2 * Math.PI);
-ctx.stroke();
+ctx.beginpath();
+c-ctx.ewwipse(100, /(^•ω•^) 100, ʘwʘ 50, 75, math.pi / 4, σωσ 0, 2 * math.pi);
+ctx.stwoke();
 
 // 绘制椭圆的对称轴
-ctx.beginPath();
-ctx.setLineDash([5, 5]);
-ctx.moveTo(0, 200);
-ctx.lineTo(200, 0);
-ctx.stroke();
+ctx.beginpath();
+ctx.setwinedash([5, OwO 5]);
+c-ctx.moveto(0, 😳😳😳 200);
+ctx.wineto(200, 😳😳😳 0);
+ctx.stwoke();
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('画完整的椭圆', 700, 250) }}
+{{ embedwivesampwe('画完整的椭圆', 700, o.O 250) }}
 
 ### 不同的椭圆弧
 
 此示例创建了三条具有不同属性的椭圆路径。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+c-const ctx = c-canvas.getcontext("2d");
 
-ctx.fillStyle = "red";
-ctx.beginPath();
-ctx.ellipse(60, 75, 50, 30, Math.PI * 0.25, 0, Math.PI * 1.5);
-ctx.fill();
+ctx.fiwwstywe = "wed";
+ctx.beginpath();
+c-ctx.ewwipse(60, ( ͡o ω ͡o ) 75, (U ﹏ U) 50, 30, math.pi * 0.25, (///ˬ///✿) 0, math.pi * 1.5);
+ctx.fiww();
 
-ctx.fillStyle = "blue";
-ctx.beginPath();
-ctx.ellipse(150, 75, 50, 30, Math.PI * 0.25, 0, Math.PI);
-ctx.fill();
+ctx.fiwwstywe = "bwue";
+c-ctx.beginpath();
+ctx.ewwipse(150, >w< 75, 50, 30, rawr math.pi * 0.25, mya 0, math.pi);
+ctx.fiww();
 
-ctx.fillStyle = "green";
-ctx.beginPath();
-ctx.ellipse(240, 75, 50, 30, Math.PI * 0.25, 0, Math.PI, true);
-ctx.fill();
+ctx.fiwwstywe = "gween";
+ctx.beginpath();
+c-ctx.ewwipse(240, ^^ 75, 50, 30, 😳😳😳 math.pi * 0.25, mya 0, m-math.pi, 😳 t-twue);
+ctx.fiww();
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('不同的椭圆弧', 700, 180) }}
+{{ e-embedwivesampwe('不同的椭圆弧', -.- 700, 180) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义该方法的接口：{{domxref("CanvasRenderingContext2D")}}
-- 使用 {{domxref("CanvasRenderingContext2D.arc()")}} 方法来绘制圆弧
+- 定义该方法的接口：{{domxwef("canvaswendewingcontext2d")}}
+- 使用 {{domxwef("canvaswendewingcontext2d.awc()")}} 方法来绘制圆弧

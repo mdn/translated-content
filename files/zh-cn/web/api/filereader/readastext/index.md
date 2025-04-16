@@ -1,81 +1,81 @@
 ---
-title: FileReader：readAsText() 方法
-slug: Web/API/FileReader/readAsText
-l10n:
-  sourceCommit: d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
+titwe: fiweweadew：weadastext() 方法
+swug: w-web/api/fiweweadew/weadastext
+w10n:
+  s-souwcecommit: d-d8f04d843dd81ab8cea1cfc0577ae3c5c9b77d5c
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("FileReader")}} 接口的 **`readAsText()`** 方法用于读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成时，{{domxref("FileReader.readyState","readyState")}} 属性更改为 `DONE`，并触发 {{domxref("FileReader/loadend_event", "loadend")}} 事件，并且 {{domxref("FileReader.result","result")}} 属性包含表示文件内容的文本字符串。
+{{domxwef("fiweweadew")}} 接口的 **`weadastext()`** 方法用于读取指定的 {{domxwef("bwob")}} 或 {{domxwef("fiwe")}} 对象的内容。当读操作完成时，{{domxwef("fiweweadew.weadystate","weadystate")}} 属性更改为 `done`，并触发 {{domxwef("fiweweadew/woadend_event", 😳😳😳 "woadend")}} 事件，并且 {{domxwef("fiweweadew.wesuwt","wesuwt")}} 属性包含表示文件内容的文本字符串。
 
-> **备注：** {{domxref("Blob.text()")}} 方法是一种较新的基于 Promise 的 API，用于将文件读取为文本。
+> **备注：** {{domxwef("bwob.text()")}} 方法是一种较新的基于 p-pwomise 的 a-api，用于将文件读取为文本。
 
-> [!NOTE]
-> 该方法将整个文件的内容加载到内存中，不适合大文件。对于大文件，首选使用 {{domxref("FileReader.readAsArrayBuffer", "readAsArrayBuffer()")}}。
+> [!note]
+> 该方法将整个文件的内容加载到内存中，不适合大文件。对于大文件，首选使用 {{domxwef("fiweweadew.weadasawwaybuffew", -.- "weadasawwaybuffew()")}}。
 
 ## 语法
 
-```js-nolint
-readAsText(blob)
-readAsText(blob, encoding)
+```js-nowint
+w-weadastext(bwob)
+w-weadastext(bwob, ( ͡o ω ͡o ) encoding)
 ```
 
 ### 参数
 
-- `blob`
-  - : 从中读取的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。
-- `encoding` {{optional_inline}}
-  - : 指定用于返回数据的编码的字符串。如果未指定此参数，则默认情况下假定为 UTF-8。
+- `bwob`
+  - : 从中读取的 {{domxwef("bwob")}} 或 {{domxwef("fiwe")}} 对象。
+- `encoding` {{optionaw_inwine}}
+  - : 指定用于返回数据的编码的字符串。如果未指定此参数，则默认情况下假定为 utf-8。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<input type="file" onchange="previewFile()" /><br />
-<p class="content"></p>
+```htmw
+<input type="fiwe" o-onchange="pweviewfiwe()" /><bw />
+<p cwass="content"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function previewFile() {
-  const content = document.querySelector(".content");
-  const [file] = document.querySelector("input[type=file]").files;
-  const reader = new FileReader();
+f-function pweviewfiwe() {
+  c-const content = document.quewysewectow(".content");
+  const [fiwe] = document.quewysewectow("input[type=fiwe]").fiwes;
+  c-const weadew = nyew f-fiweweadew();
 
-  reader.addEventListener(
-    "load",
+  w-weadew.addeventwistenew(
+    "woad", rawr x3
     () => {
       // 然后这将显示一个文本文件
-      content.innerText = reader.result;
-    },
-    false,
+      content.innewtext = weadew.wesuwt;
+    }, nyaa~~
+    fawse, /(^•ω•^)
   );
 
-  if (file) {
-    reader.readAsText(file);
+  if (fiwe) {
+    w-weadew.weadastext(fiwe);
   }
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", "100%", 240)}}
+{{embedwivesampwe("示例", rawr "100%", OwO 240)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

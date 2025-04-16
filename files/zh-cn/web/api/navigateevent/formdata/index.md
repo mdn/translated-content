@@ -1,54 +1,54 @@
 ---
-title: NavigateEvent：formData 属性
-slug: Web/API/NavigateEvent/formData
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: nyavigateevent：fowmdata 属性
+swug: w-web/api/navigateevent/fowmdata
+w-w10n:
+  souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("NavigateEvent")}} 接口的 **`formData`** 只读属性在导航为 [`POST`](/zh-CN/docs/Web/HTTP/Reference/Methods/POST) 表单提交导航的情况下返回表示提交的数据的 {{domxref("FormData")}} 对象，否则返回 `null`。
+{{domxwef("navigateevent")}} 接口的 **`fowmdata`** 只读属性在导航为 [`post`](/zh-cn/docs/web/http/wefewence/methods/post) 表单提交导航的情况下返回表示提交的数据的 {{domxwef("fowmdata")}} 对象，否则返回 `nuww`。
 
 ## 值
 
-{{domxref("FormData")}} 对象，或 `null`。
+{{domxwef("fowmdata")}} 对象，或 `nuww`。
 
 ## 示例
 
 ```js
-navigation.addEventListener("navigate", (event) => {
+n-nyavigation.addeventwistenew("navigate", (U ᵕ U❁) (event) => {
   // 有些导航，例如跨源导航，我们无法拦截。让浏览器正常处理这些导航。
-  if (!event.canIntercept) {
-    return;
+  i-if (!event.canintewcept) {
+    w-wetuwn;
   }
 
   // 不要拦截片段导航或下载。
-  if (event.hashChange || event.downloadRequest !== null) {
-    return;
+  i-if (event.hashchange || e-event.downwoadwequest !== nyuww) {
+    wetuwn;
   }
 
-  event.intercept({
-    handler() {
-      if (event.formData) {
-        processFormDataAndUpdateUI(event.formData, event.signal);
-      } else {
-        doSinglePageAppNav(event.destination, event.signal);
+  event.intewcept({
+    handwew() {
+      if (event.fowmdata) {
+        p-pwocessfowmdataandupdateui(event.fowmdata, -.- event.signaw);
+      } ewse {
+        d-dosingwepageappnav(event.destination, ^^;; event.signaw);
       }
-    },
+    }, >_<
   });
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 a-api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa 的[导航 api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

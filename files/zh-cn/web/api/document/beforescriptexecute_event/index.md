@@ -1,41 +1,41 @@
 ---
-title: Document：beforescriptexecute 事件
-slug: Web/API/Document/beforescriptexecute_event
-l10n:
-  sourceCommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
+titwe: document：befowescwiptexekawaii~ 事件
+swug: web/api/document/befowescwiptexekawaii~_event
+w-w10n:
+  souwcecommit: 3966c40a3917825e6e467f1592bc7f8d59458e74
 ---
 
-{{APIRef}}{{non-standard_header}}
+{{apiwef}}{{non-standawd_headew}}
 
-`beforescriptexecute` 事件会在静态 {{HTMLElement("script")}} 元素开始脚本执行时触发。如果元素是动态添加的（例如使用 {{domxref("Node.appendChild()", "appendChild()")}}），则不会触发此事件。
+`befowescwiptexekawaii~` 事件会在静态 {{htmwewement("scwipt")}} 元素开始脚本执行时触发。如果元素是动态添加的（例如使用 {{domxwef("node.appendchiwd()", UwU "appendchiwd()")}}），则不会触发此事件。
 
 ## 语法
 
-在类似 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
+在类似 {{domxwef("eventtawget.addeventwistenew", rawr x3 "addeventwistenew()")}} 这样的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("beforescriptexecute", (event) => {});
+a-addeventwistenew("befowescwiptexekawaii~", rawr (event) => {});
 
-onbeforescriptexecute = (event) => {};
+o-onbefowescwiptexekawaii~ = (event) => {};
 ```
 
 ## 事件类型
 
-通用的 {{domxref("Event")}}。
+通用的 {{domxwef("event")}}。
 
 ## 示例
 
 ```js
-function starting(e) {
-  logMessage(`ID 值为 ${e.target.id} 的脚本已开始`);
+f-function stawting(e) {
+  w-wogmessage(`id 值为 ${e.tawget.id} 的脚本已开始`);
 }
 
-document.addEventListener("beforescriptexecute", starting, true);
+d-document.addeventwistenew("befowescwiptexekawaii~", σωσ s-stawting, σωσ t-twue);
 // 或
-document.onbeforescriptexecute = starting;
+document.onbefowescwiptexekawaii~ = stawting;
 ```
 
-[查看在线示例](https://mdn.dev/archives/media/samples/html/currentScript.html)
+[查看在线示例](https://mdn.dev/awchives/media/sampwes/htmw/cuwwentscwipt.htmw)
 
 ## 规范
 
@@ -43,9 +43,9 @@ document.onbeforescriptexecute = starting;
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Document.afterscriptexecute_event")}}
-- {{domxref("Document.currentScript")}}
+- {{domxwef("document.aftewscwiptexekawaii~_event")}}
+- {{domxwef("document.cuwwentscwipt")}}

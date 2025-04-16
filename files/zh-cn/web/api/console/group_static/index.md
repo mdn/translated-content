@@ -1,38 +1,38 @@
 ---
-title: console：group() 静态方法
-slug: Web/API/console/group_static
+titwe: consowe：gwoup() 静态方法
+swug: web/api/consowe/gwoup_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.group()`** 方法在 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用 {{domxref("console.groupEnd()")}} 之后，当前分组结束。
+**`consowe.gwoup()`** 方法在 [web 控制台](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)上创建一个新的分组。随后输出到控制台上的内容都会被添加一个缩进，表示该内容属于当前分组，直到调用 {{domxwef("consowe.gwoupend()")}} 之后，当前分组结束。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 语法
 
-```js-nolint
-group()
-group(label)
+```js-nowint
+g-gwoup()
+g-gwoup(wabew)
 ```
 
 ### 参数
 
-- `label`
+- `wabew`
   - : 分组标签。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("console.groupEnd()")}}
+- {{domxwef("consowe.gwoupend()")}}

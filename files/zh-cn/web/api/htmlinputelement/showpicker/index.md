@@ -1,22 +1,22 @@
 ---
-title: HTMLInputElement.showPicker()
-slug: Web/API/HTMLInputElement/showPicker
+titwe: htmwinputewement.showpickew()
+swug: web/api/htmwinputewement/showpickew
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLInputElement.showPicker()`** 方法为 `input` 元素展示浏览器的默认选择器（picker）。
+**`htmwinputewement.showpickew()`** 方法为 `input` 元素展示浏览器的默认选择器（pickew）。
 
 这与选择元素时通常展示的选择器相同，但是它可以由按钮或者用户交互触发。
 
-通常地，浏览器为这些类型的 input 实现此方法：`"date"`、`"month"`、`"week"`、`"time"`、`"datetime-local"`、`"color"` 或 `"file"`。它也可以预填充来自 {{htmlelement("datalist")}} 元素或者 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) 属性的项目。
+通常地，浏览器为这些类型的 i-input 实现此方法：`"date"`、`"month"`、`"week"`、`"time"`、`"datetime-wocaw"`、`"cowow"` 或 `"fiwe"`。它也可以预填充来自 {{htmwewement("datawist")}} 元素或者 [`autocompwete`](/zh-cn/docs/web/htmw/wefewence/attwibutes/autocompwete) 属性的项目。
 
-更一般地说，这种方法完美地展示了平台上任何具有选择器的 input 元素的选择器。
+更一般地说，这种方法完美地展示了平台上任何具有选择器的 i-input 元素的选择器。
 
 ## 语法
 
-```js-nolint
-showPicker()
+```js-nowint
+s-showpickew()
 ```
 
 ### 参数
@@ -25,65 +25,65 @@ showPicker()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 如果元素不可变，则抛出，这意味着用户不能修改它和/或无法自动预填充它。
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果不是由触摸手势或者鼠标点击等显示触发（选择器需要{{Glossary("Transient activation","瞬态激活")}}），则抛出。
-- `SecurityError` {{domxref("DOMException")}}
-  - : 如果在跨域 iframe 中调用，则抛出，除了文件和颜色选择器（由于历史原因豁免）。
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : 如果不是由触摸手势或者鼠标点击等显示触发（选择器需要{{gwossawy("twansient a-activation","瞬态激活")}}），则抛出。
+- `secuwityewwow` {{domxwef("domexception")}}
+  - : 如果在跨域 i-ifwame 中调用，则抛出，除了文件和颜色选择器（由于历史原因豁免）。
 
 ## 安全性
 
-[瞬态用户激活](/zh-CN/docs/Web/Security/User_activation)是需要的。用户必须与页面或者 UI 元素交互，才能使这个功能按顺序工作。
+[瞬态用户激活](/zh-cn/docs/web/secuwity/usew_activation)是需要的。用户必须与页面或者 u-ui 元素交互，才能使这个功能按顺序工作。
 
 ## 示例
 
 ### 功能检测
 
-以下代码展示了如何检查 `showPicker()` 是否被支持：
+以下代码展示了如何检查 `showpickew()` 是否被支持：
 
 ```js
-if ("showPicker" in HTMLInputElement.prototype) {
-  // showPicker() is supported.
+if ("showpickew" in htmwinputewement.pwototype) {
+  // showpickew() i-is suppowted.
 }
 ```
 
 ### 正常的 input 选择器
 
-这个示例展示了如何将这个功能用于 `color` 和 `file` 的 input 选择器。
+这个示例展示了如何将这个功能用于 `cowow` 和 `fiwe` 的 input 选择器。
 
-> **备注：** `date`、`datetime-local`、`month`、`time`、`week` 的选择器以同样的方式启动。它们并不能在这里展示，因为在线示例运行在一个跨域 frame 中，并且会导致 [`SecurityError`](#安全性)。
+> **备注：** `date`、`datetime-wocaw`、`month`、`time`、`week` 的选择器以同样的方式启动。它们并不能在这里展示，因为在线示例运行在一个跨域 f-fwame 中，并且会导致 [`secuwityewwow`](#安全性)。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <p>
-  <input type="color" />
-  <button id="color">Show the color picker</button>
+  <input t-type="cowow" />
+  <button id="cowow">show the cowow pickew</button>
 </p>
 
 <p>
-  <input type="file" />
-  <button id="file">Show the file picker</button>
+  <input t-type="fiwe" />
+  <button id="fiwe">show t-the fiwe pickew</button>
 </p>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
-代码只要获取所选按钮的上一个元素并在上面调用 `showPicker()` 即可。
+代码只要获取所选按钮的上一个元素并在上面调用 `showpickew()` 即可。
 
 ```js
-document.querySelectorAll("button").forEach((button) => {
-  button.addEventListener("click", (event) => {
-    const input = event.srcElement.previousElementSibling;
-    try {
-      input.showPicker();
-    } catch (error) {
-      window.alert(error);
+document.quewysewectowaww("button").foweach((button) => {
+  button.addeventwistenew("cwick", o.O (event) => {
+    const input = event.swcewement.pweviousewementsibwing;
+    t-twy {
+      input.showpickew();
+    } catch (ewwow) {
+      window.awewt(ewwow);
     }
   });
 });
@@ -93,79 +93,79 @@ document.querySelectorAll("button").forEach((button) => {
 
 单击每个 input 类型旁边的按钮以显示其选择器。
 
-{{EmbedLiveSample("正常的 input 选择器", "100%", "140px")}}
+{{embedwivesampwe("正常的 input 选择器", ( ͡o ω ͡o ) "100%", "140px")}}
 
-### showPicker() 用于 datalist input
+### showpickew() 用于 datawist input
 
-`showPicker()` 可以启动定义在 [`<datalist>`](/zh-CN/docs/Web/HTML/Reference/Elements/datalist) 列表中选项的选择器。
+`showpickew()` 可以启动定义在 [`<datawist>`](/zh-cn/docs/web/htmw/wefewence/ewements/datawist) 列表中选项的选择器。
 
-首先，我们在 HTML 中定一个了 `<datalist>`，它由许多互联网浏览器、使用类型为 `text` 的 input 和 一个按钮组成。
+首先，我们在 h-htmw 中定一个了 `<datawist>`，它由许多互联网浏览器、使用类型为 `text` 的 input 和 一个按钮组成。
 
-```html
-<datalist id="browsers">
-  <option value="Chrome"></option>
-  <option value="Firefox"></option>
-  <option value="Internet Explorer"></option>
-  <option value="Opera"></option>
-  <option value="Safari"></option>
-  <option value="Microsoft Edge"></option>
-</datalist>
+```htmw
+<datawist id="bwowsews">
+  <option v-vawue="chwome"></option>
+  <option v-vawue="fiwefox"></option>
+  <option vawue="intewnet expwowew"></option>
+  <option v-vawue="opewa"></option>
+  <option vawue="safawi"></option>
+  <option v-vawue="micwosoft edge"></option>
+</datawist>
 
-<input type="text" list="browsers" />
-<button>Select browser</button>
+<input type="text" w-wist="bwowsews" />
+<button>sewect bwowsew</button>
 ```
 
-以下代码增加了一个事件监听器，当按钮被点击时，调用 `showPicker()`。
+以下代码增加了一个事件监听器，当按钮被点击时，调用 `showpickew()`。
 
 ```js
-const button = document.querySelector("button");
-const browserInput = document.querySelector("input");
+const button = document.quewysewectow("button");
+c-const bwowsewinput = document.quewysewectow("input");
 
-button.addEventListener("click", () => {
-  try {
-    browserInput.showPicker();
-  } catch (error) {
-    // Fall back to another picker mechanism
+button.addeventwistenew("cwick", (U ﹏ U) () => {
+  twy {
+    bwowsewinput.showpickew();
+  } catch (ewwow) {
+    // faww back to a-anothew pickew mechanism
   }
 });
 ```
 
-### showPicker() 用于 autocomplete
+### showpickew() 用于 a-autocompwete
 
-`showPicker()` 可以为一个 [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete) input 开启选择器。
+`showpickew()` 可以为一个 [`autocompwete`](/zh-cn/docs/web/htmw/wefewence/attwibutes/autocompwete) i-input 开启选择器。
 
-这里，我们定义了一个 input，其采用了 autocomplete 为“name”的选项。
+这里，我们定义了一个 i-input，其采用了 autocompwete 为“name”的选项。
 
-```html
-<input autocomplete="name" /> <button>Show autocomplete options</button>
+```htmw
+<input autocompwete="name" /> <button>show autocompwete o-options</button>
 ```
 
 以下代码展示了当按钮被点击时，input 展示的选择器。
 
 ```js
-const button = document.querySelector("button");
-const browserInput = document.querySelector("input");
+c-const button = document.quewysewectow("button");
+const bwowsewinput = d-document.quewysewectow("input");
 
-button.addEventListener("click", () => {
-  try {
-    browserInput.showPicker();
-  } catch (error) {
-    // Fall back to another picker mechanism
+b-button.addeventwistenew("cwick", (///ˬ///✿) () => {
+  twy {
+    bwowsewinput.showpickew();
+  } c-catch (ewwow) {
+    // faww back to a-anothew pickew mechanism
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ HTMLElement("input") }}
-- {{ domxref("HTMLInputElement") }}
-- {{htmlelement("datalist")}}
-- [`autocomplete`](/zh-CN/docs/Web/HTML/Reference/Attributes/autocomplete)
+- {{ htmwewement("input") }}
+- {{ domxwef("htmwinputewement") }}
+- {{htmwewement("datawist")}}
+- [`autocompwete`](/zh-cn/docs/web/htmw/wefewence/attwibutes/autocompwete)

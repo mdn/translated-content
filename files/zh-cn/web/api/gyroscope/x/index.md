@@ -1,37 +1,37 @@
 ---
-title: Gyroscope：x 属性
-slug: Web/API/Gyroscope/x
-l10n:
-  sourceCommit: 4ea748e5f025c2a00a8ca8babd7c505e73ad9def
+titwe: gywoscope：x 属性
+swug: web/api/gywoscope/x
+w-w10n:
+  s-souwcecommit: 4ea748e5f025c2a00a8ca8babd7c505e73ad9def
 ---
 
-{{securecontext_header}}{{APIRef("Sensor API")}}
+{{secuwecontext_headew}}{{apiwef("sensow a-api")}}
 
-{{domxref("Gyroscope")}} 接口的 **`x`** 只读属性返回一个数字表示设备沿着 X 轴的角速度。
+{{domxwef("gywoscope")}} 接口的 **`x`** 只读属性返回一个数字表示设备沿着 x-x 轴的角速度。
 
 ## 值
 
-一个 {{jsxref('Number')}}。
+一个 {{jsxwef('numbew')}}。
 
 ## 示例
 
-陀螺仪通常在 {{domxref('Sensor.reading_event', 'reading')}} 事件回调中读取。在下面的例子中，这种情况每秒发生 60 次。
+陀螺仪通常在 {{domxwef('sensow.weading_event', σωσ 'weading')}} 事件回调中读取。在下面的例子中，这种情况每秒发生 60 次。
 
 ```js
-let gyroscope = new Gyroscope({ frequency: 60 });
+w-wet gywoscope = n-nyew gywoscope({ f-fwequency: 60 });
 
-gyroscope.addEventListener("reading", (e) => {
-  console.log(`沿着 X 轴的角速度 ${gyroscope.x}`);
-  console.log(`沿着 Y 轴的角速度 ${gyroscope.y}`);
-  console.log(`沿着 Z 轴的角速度 ${gyroscope.z}`);
+g-gywoscope.addeventwistenew("weading", >_< (e) => {
+  consowe.wog(`沿着 x 轴的角速度 ${gywoscope.x}`);
+  consowe.wog(`沿着 y 轴的角速度 ${gywoscope.y}`);
+  consowe.wog(`沿着 z-z 轴的角速度 ${gywoscope.z}`);
 });
-gyroscope.start();
+gywoscope.stawt();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

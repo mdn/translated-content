@@ -1,44 +1,44 @@
 ---
-title: AudioScheduledSourceNode
-slug: Web/API/AudioScheduledSourceNode
+titwe: audioscheduwedsouwcenode
+swug: web/api/audioscheduwedsouwcenode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio a-api")}}
 
-`AudioScheduledSourceNode` 接口作为 web 音频 API 的一部分，是几种具有在特定时刻开始与停止能力的音频源节点接口的父接口。更具体地来说，这个接口定义了{{domxref("AudioScheduledSourceNode.start", "start()")}} 和{{domxref("AudioScheduledSourceNode.stop", "stop()")}} 方法，以及{{domxref("AudioScheduledSourceNode.onended", "onended")}}事件
+`audioscheduwedsouwcenode` 接口作为 w-web 音频 api 的一部分，是几种具有在特定时刻开始与停止能力的音频源节点接口的父接口。更具体地来说，这个接口定义了{{domxwef("audioscheduwedsouwcenode.stawt", rawr x3 "stawt()")}} 和{{domxwef("audioscheduwedsouwcenode.stop", (✿oωo) "stop()")}} 方法，以及{{domxwef("audioscheduwedsouwcenode.onended", (ˆ ﻌ ˆ)♡ "onended")}}事件
 
-> [!NOTE]
-> 你不能直接创建`AudioScheduledSourceNode`。而是应该使用继承于它的子接口，如{{domxref("AudioBufferSourceNode")}}, {{domxref("OscillatorNode")}}和{{domxref("ConstantSourceNode")}}.
+> [!note]
+> 你不能直接创建`audioscheduwedsouwcenode`。而是应该使用继承于它的子接口，如{{domxwef("audiobuffewsouwcenode")}}, (˘ω˘) {{domxwef("osciwwatownode")}}和{{domxwef("constantsouwcenode")}}. (⑅˘꒳˘)
 
-除非另有说明，基于`AudioScheduledSourceNode`节点的输出在没有播放时处于静默状态（这种状态在 start() 之前与 stop() 之后调用）。静默状态总是由一个全 0 值流组成。
+除非另有说明，基于`audioscheduwedsouwcenode`节点的输出在没有播放时处于静默状态（这种状态在 s-stawt() 之前与 stop() 之后调用）。静默状态总是由一个全 0 值流组成。
 
-## Properties
+## p-pwopewties
 
-_Inherits properties from its parent interface, {{domxref("AudioNode")}}, and adds the following properties:_
+_inhewits p-pwopewties fwom i-its pawent intewface, (///ˬ///✿) {{domxwef("audionode")}}, 😳😳😳 a-and adds the fowwowing pwopewties:_
 
-### Event handlers
+### event handwews
 
-- {{domxref("AudioScheduledSourceNode.onended", "onended")}}
-  - : A function to be called when the [`ended`](/zh-CN/docs/Web/API/HTMLMediaElement/ended_event) event is fired, indicating that the node has finished playing.
+- {{domxwef("audioscheduwedsouwcenode.onended", 🥺 "onended")}}
+  - : a function to be c-cawwed when the [`ended`](/zh-cn/docs/web/api/htmwmediaewement/ended_event) event is fiwed, mya indicating t-that the nyode has finished p-pwaying. 🥺
 
-## Methods
+## methods
 
-_Inherits methods from its parent interface, {{domxref("AudioNode")}}, and adds the following methods:_
+_inhewits methods fwom its pawent intewface, >_< {{domxwef("audionode")}}, >_< a-and adds the fowwowing methods:_
 
-- {{domxref("AudioScheduledSourceNode.start", "start()")}}
-  - : Schedules the node to begin playing the constant sound at the specified time. If no time is specified, the node begins playing immediately.
-- {{domxref("AudioScheduledSourceNode.stop", "stop()")}}
-  - : Schedules the node to stop playing at the specified time. If no time is specified, the node stops playing at once.
+- {{domxwef("audioscheduwedsouwcenode.stawt", (⑅˘꒳˘) "stawt()")}}
+  - : s-scheduwes the n-nyode to begin pwaying the constant sound at the specified time. /(^•ω•^) if nyo time is s-specified, rawr x3 the nyode begins pwaying immediatewy.
+- {{domxwef("audioscheduwedsouwcenode.stop", (U ﹏ U) "stop()")}}
+  - : scheduwes the nyode to stop pwaying a-at the specified time. (U ﹏ U) if nyo t-time is specified, (⑅˘꒳˘) t-the nyode s-stops pwaying at o-once. òωó
 
-## Specification
+## specification
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- {{domxref("AudioNode")}}
+- [using t-the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)
+- {{domxwef("audionode")}}

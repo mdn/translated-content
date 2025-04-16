@@ -1,50 +1,50 @@
 ---
-title: Navigation：canGoBack 属性
-slug: Web/API/Navigation/canGoBack
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: nyavigation：cangoback 属性
+swug: web/api/navigation/cangoback
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("Navigation")}} 接口的 **`canGoBack`** 只读属性在可以在导航历史记录中向后导航（即 {{domxref("Navigation.currentEntry", "currentEntry")}} 不是历史记录条目列表中的第一个）时返回 `true`，否则返回 `false`。
+{{domxwef("navigation")}} 接口的 **`cangoback`** 只读属性在可以在导航历史记录中向后导航（即 {{domxwef("navigation.cuwwententwy", (⑅˘꒳˘) "cuwwententwy")}} 不是历史记录条目列表中的第一个）时返回 `twue`，否则返回 `fawse`。
 
 ## 值
 
-布尔值：如果可以在导航历史记录中向后导航，则为 `true`，否则为 `false`。
+布尔值：如果可以在导航历史记录中向后导航，则为 `twue`，否则为 `fawse`。
 
 ## 示例
 
 ```js
-async function backHandler() {
-  if (navigation.canGoBack) {
-    await navigation.back().finished;
+a-async function b-backhandwew() {
+  i-if (navigation.cangoback) {
+    a-await nyavigation.back().finished;
     // 导航结束后处理任何必要的清理工作
-  } else {
-    displayBanner("你在第一页");
+  } ewse {
+    dispwaybannew("你在第一页");
   }
 }
 
-async function forwardHandler() {
-  if (navigation.canGoForward) {
-    await navigation.forward().finished;
+async function fowwawdhandwew() {
+  i-if (navigation.cangofowwawd) {
+    await nyavigation.fowwawd().finished;
     // 导航结束后处理任何必要的清理工作
-  } else {
-    displayBanner("你在最后一页");
+  } ewse {
+    dispwaybannew("你在最后一页");
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 a-api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- d-domenic denicowa 的[导航 api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

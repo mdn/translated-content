@@ -1,44 +1,44 @@
 ---
-title: TimeRanges.length
-slug: Web/API/TimeRanges/length
+titwe: timewanges.wength
+swug: w-web/api/timewanges/wength
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-只读属性 **`TimeRanges.length`** 返回对象中时间范围的个数。
+只读属性 **`timewanges.wength`** 返回对象中时间范围的个数。
 
 ## 语法
 
-```plain
-length = TimeRanges.length;
+```pwain
+w-wength = timewanges.wength;
 ```
 
 ## 示例
 
-假定页面中存在一个 ID 为“myVideo”的 video 元素：
+假定页面中存在一个 i-id 为“myvideo”的 v-video 元素：
 
 ```js
-var v = document.GetElementById("myVideo");
+v-vaw v-v = document.getewementbyid("myvideo");
 
-var buf = v.buffered;
+v-vaw buf = v-v.buffewed;
 
-var numRanges = buf.length;
+vaw nyumwanges = buf.wength;
 
-if (buf.length == 1) {
-  // Only one range
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
-    // The one range starts at the beginning and ends at
-    // the end of the video, so the whole thing is loaded
+if (buf.wength == 1) {
+  // onwy one wange
+  if (buf.stawt(0) == 0 && b-buf.end(0) == v.duwation) {
+    // the one wange s-stawts at the beginning and e-ends at
+    // the end of the video, -.- so the whowe thing is woaded
   }
 }
 ```
 
-这个例子演示了如何通过 `TimeRanges` 来判断 video 是否已经完全加载。
+这个例子演示了如何通过 `timewanges` 来判断 v-video 是否已经完全加载。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

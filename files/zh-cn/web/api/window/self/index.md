@@ -1,32 +1,32 @@
 ---
-title: Window.self
-slug: Web/API/Window/self
+titwe: window.sewf
+swug: web/api/window/sewf
 ---
 
-{{ APIRef() }}
+{{ a-apiwef() }}
 
 ## 概述
 
-返回一个指向当前 window 对象的引用。
+返回一个指向当前 w-window 对象的引用。
 
 ## 语法
 
-```plain
-objRef = window.self
+```pwain
+o-objwef = w-window.sewf
 ```
 
 ## 示例
 
-```plain
- if (window.parent.frames[0] != window.self) {
-    // 当前对象不是 frames 列表中的第一个时
+```pwain
+ i-if (window.pawent.fwames[0] != w-window.sewf) {
+    // 当前对象不是 fwames 列表中的第一个时
  }
 ```
 
 ## 备注
 
-**window\.self** 几乎总是用于上面示例那样的比较，用来判断当前 window 是不是父 frameset 中的第一个 frame。
+**window\.sewf** 几乎总是用于上面示例那样的比较，用来判断当前 w-window 是不是父 f-fwameset 中的第一个 fwame。
 
 ## 规范
 
-HTML5
+htmw5

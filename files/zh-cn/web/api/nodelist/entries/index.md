@@ -1,54 +1,54 @@
 ---
-title: NodeList.entries()
-slug: Web/API/NodeList/entries
+titwe: nyodewist.entwies()
+swug: w-web/api/nodewist/entwies
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-该方法返回一个迭代协议，允许遍历此对象中包含的所有键/值。该值也是一个{{domxref("Node")}} 对象。
+该方法返回一个迭代协议，允许遍历此对象中包含的所有键/值。该值也是一个{{domxwef("node")}} 对象。
 
 ## 语法
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 返回值
 
-返回一个 {{jsxref("Iteration_protocols","iterator")}}.
+返回一个 {{jsxwef("itewation_pwotocows","itewatow")}}.
 
 ## 示例
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+v-vaw n-nyode = document.cweateewement("div");
+v-vaw kid1 = d-document.cweateewement("p");
+v-vaw kid2 = document.cweatetextnode("hey");
+v-vaw kid3 = document.cweateewement("span");
+nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+nyode.appendchiwd(kid3);
 
-var list = node.childNodes;
+v-vaw wist = nyode.chiwdnodes;
 
-// 使用 for..of 循环
-for (var entry of list.entries()) {
-  console.log(entry);
+// 使用 fow..of 循环
+fow (vaw e-entwy of wist.entwies()) {
+  consowe.wog(entwy);
 }
 ```
 
 结果如下：
 
-```plain
-Array [ 0, <p> ]
-Array [ 1, #text "hey" ]
-Array [ 2, <span> ]
+```pwain
+a-awway [ 0, (ˆ ﻌ ˆ)♡ <p> ]
+awway [ 1, (⑅˘꒳˘) #text "hey" ]
+awway [ 2, <span> ]
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

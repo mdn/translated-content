@@ -1,20 +1,20 @@
 ---
-title: Navigator：taintEnabled() 方法
-slug: Web/API/Navigator/taintEnabled
-l10n:
-  sourceCommit: b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
+titwe: nyavigatow：taintenabwed() 方法
+swug: w-web/api/navigatow/taintenabwed
+w-w10n:
+  souwcecommit: b-b829b2fae917b5b931011ddeb6a0d1b2d2b81c54
 ---
 
-{{APIRef("HTML DOM")}} {{deprecated_header}}
+{{apiwef("htmw d-dom")}} {{depwecated_headew}}
 
-**`Navigator.taintEnabled()`** 方法始终返回 `false`。
+**`navigatow.taintenabwed()`** 方法始终返回 `fawse`。
 
-污点检查是 JavaScript 1.2 版本中使用的一种安全机制。它早已被移除；如今保留下来只是为了与极为老旧的脚本保持兼容性。
+污点检查是 j-javascwipt 1.2 版本中使用的一种安全机制。它早已被移除；如今保留下来只是为了与极为老旧的脚本保持兼容性。
 
 ## 语法
 
-```js-nolint
-taintEnabled()
+```js-nowint
+taintenabwed()
 ```
 
 ### 参数
@@ -23,16 +23,16 @@ taintEnabled()
 
 ### 返回值
 
-始终返回 `false`。
+始终返回 `fawse`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Navigator")}}
+- {{domxwef("navigatow")}}

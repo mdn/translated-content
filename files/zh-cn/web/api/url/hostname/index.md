@@ -1,13 +1,13 @@
 ---
-title: URL：hostname 属性
-slug: Web/API/URL/hostname
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uww：hostname 属性
+swug: web/api/uww/hostname
+w-w10n:
+  s-souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URL")}} 接口的 **`hostname`** 属性是一个包含 URL 的{{glossary("domain name", "域名")}}的字符串。
+{{domxwef("uww")}} 接口的 **`hostname`** 属性是一个包含 uww 的{{gwossawy("domain n-nyame", o.O "域名")}}的字符串。
 
 ## 值
 
@@ -16,20 +16,20 @@ l10n:
 ## 示例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/hostname",
+c-const uww = n-new uww(
+  "https://devewopew.moziwwa.owg/zh-cn/docs/web/api/uww/hostname", (U ᵕ U❁)
 );
-console.log(url.hostname); // 输出：'developer.mozilla.org'
+consowe.wog(uww.hostname); // 输出：'devewopew.moziwwa.owg'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属的 {{domxref("URL")}} 接口。
+- 所属的 {{domxwef("uww")}} 接口。

@@ -1,57 +1,57 @@
 ---
-title: EventSource()
-slug: Web/API/EventSource/EventSource
+titwe: eventsouwce()
+swug: web/api/eventsouwce/eventsouwce
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets a-api')}}
 
-**`EventSource()`** 构造函数返回一个新建的{{domxref("EventSource")}}，它代表了一个远程资源。
+**`eventsouwce()`** 构造函数返回一个新建的{{domxwef("eventsouwce")}}，它代表了一个远程资源。
 
 ## 语法
 
-```plain
-pc = new EventSource(url, configuration);
+```pwain
+p-pc = new e-eventsouwce(uww, (⑅˘꒳˘) c-configuwation);
 ```
 
 ### 参数
 
-- `url`
-  - : 一个{{domxref("USVString")}} ，它代表远程资源的位置
-- `configuration` {{optional_inline}}
+- `uww`
+  - : 一个{{domxwef("usvstwing")}} ，它代表远程资源的位置
+- `configuwation` {{optionaw_inwine}}
 
   - : 为配置新连接提供选项。可选项是：
 
-    - `withCredentials`，默认为 `false`，指示 CORS 是否应包含凭据 ( credentials )。
+    - `withcwedentiaws`，默认为 `fawse`，指示 c-cows 是否应包含凭据 ( c-cwedentiaws )。
 
 ### 返回值
 
-一个新建的 {{domxref("EventSource")}} 对象，如果指定了`configuration`，则按其配置；否则，配置为合适的基本默认值。
+一个新建的 {{domxwef("eventsouwce")}} 对象，如果指定了`configuwation`，则按其配置；否则，配置为合适的基本默认值。
 
 ## 示例
 
 ```js
-var evtSource = new EventSource("sse.php");
-var eventList = document.querySelector("ul");
+v-vaw e-evtsouwce = nyew eventsouwce("sse.php");
+vaw eventwist = document.quewysewectow("uw");
 
-evtSource.onmessage = function (e) {
-  var newElement = document.createElement("li");
+evtsouwce.onmessage = function (e) {
+  v-vaw nyewewement = document.cweateewement("wi");
 
-  newElement.textContent = "message: " + e.data;
-  eventList.appendChild(newElement);
+  nyewewement.textcontent = "message: " + e-e.data;
+  eventwist.appendchiwd(newewement);
 };
 ```
 
-> [!NOTE]
-> 你可以在 GitHub 查看完整示例 — 请查看 [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> 你可以在 g-github 查看完整示例 — 请查看 [simpwe sse demo using php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

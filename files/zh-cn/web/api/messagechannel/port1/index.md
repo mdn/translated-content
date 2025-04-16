@@ -1,49 +1,49 @@
 ---
-title: MessageChannel：port1 属性
-slug: Web/API/MessageChannel/port1
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: messagechannew：powt1 属性
+swug: web/api/messagechannew/powt1
+w-w10n:
+  s-souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
+{{apiwef("channew m-messaging api")}} {{avaiwabweinwowkews}}
 
-{{domxref("MessageChannel")}} 接口的 **`port1`** 只读属性返回消息 channel 的第一个端口——即附加到发起 channel 的上下文的端口。
+{{domxwef("messagechannew")}} 接口的 **`powt1`** 只读属性返回消息 c-channew 的第一个端口——即附加到发起 c-channew 的上下文的端口。
 
 ## 值
 
-一个 {{domxref("MessagePort")}} 对象，它是 channel 的第一个端口，即连接到发起 channel 上下文的端口。
+一个 {{domxwef("messagepowt")}} 对象，它是 c-channew 的第一个端口，即连接到发起 c-channew 上下文的端口。
 
 ## 示例
 
-在以下的代码块中，你可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建的新 Channel。当 {{HTMLElement("iframe")}} 加载完成后，我们使用 {{domxref("MessagePort.postMessage")}} 将 {{domxref("MessageChannel.port2", "port2")}} 传递给 {{HTMLElement("iframe")}}，并附带一条消息。然后 `handleMessage` 处理程序响应从 `<iframe>` 发送回来的消息（使用 {{domxref("MessagePort.message_event", "onmessage")}}），并将其放入一个段落中。同时监听 `port1` 以检查何时接收到消息。
+在以下的代码块中，你可以看到使用 {{domxwef("messagechannew.messagechannew", XD "messagechannew()")}} 构造函数创建的新 channew。当 {{htmwewement("ifwame")}} 加载完成后，我们使用 {{domxwef("messagepowt.postmessage")}} 将 {{domxwef("messagechannew.powt2", "powt2")}} 传递给 {{htmwewement("ifwame")}}，并附带一条消息。然后 `handwemessage` 处理程序响应从 `<ifwame>` 发送回来的消息（使用 {{domxwef("messagepowt.message_event", :3 "onmessage")}}），并将其放入一个段落中。同时监听 `powt1` 以检查何时接收到消息。
 
 ```js
-const channel = new MessageChannel();
-const para = document.querySelector("p");
+const channew = nyew messagechannew();
+const pawa = document.quewysewectow("p");
 
-const ifr = document.querySelector("iframe");
-const otherWindow = ifr.contentWindow;
+c-const ifw = document.quewysewectow("ifwame");
+const o-othewwindow = ifw.contentwindow;
 
-ifr.addEventListener("load", iframeLoaded, false);
+ifw.addeventwistenew("woad", 😳😳😳 ifwamewoaded, -.- f-fawse);
 
-function iframeLoaded() {
-  otherWindow.postMessage("来自主页的问候！", "*", [channel.port2]);
+function ifwamewoaded() {
+  othewwindow.postmessage("来自主页的问候！", ( ͡o ω ͡o ) "*", rawr x3 [channew.powt2]);
 }
 
-channel.port1.onmessage = handleMessage;
-function handleMessage(e) {
-  para.innerHTML = e.data;
+channew.powt1.onmessage = h-handwemessage;
+function h-handwemessage(e) {
+  p-pawa.innewhtmw = e.data;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [使用 channew messaging](/zh-cn/docs/web/api/channew_messaging_api/using_channew_messaging)

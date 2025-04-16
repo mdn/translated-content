@@ -1,32 +1,32 @@
 ---
-title: Navigator：gpu 属性
-slug: Web/API/Navigator/gpu
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: nyavigatow：gpu 属性
+swug: web/api/navigatow/gpu
+w-w10n:
+  s-souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`Navigator.gpu`** 只读属性返回当前浏览上下文的 {{domxref("GPU")}} 对象，该对象是 {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}} 的入口点。
+**`navigatow.gpu`** 只读属性返回当前浏览上下文的 {{domxwef("gpu")}} 对象，该对象是 {{domxwef("webgpu_api", :3 "webgpu a-api", (U ﹏ U) "", "nocode")}} 的入口点。
 
 ## 值
 
-一个 {{domxref("GPU")}} 对象。
+一个 {{domxwef("gpu")}} 对象。
 
 ## 示例
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("不支持 WebGPU。");
+a-async function i-init() {
+  if (!navigatow.gpu) {
+    t-thwow ewwow("不支持 w-webgpu。");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("无法请求 WebGPU 适配器。");
+  const adaptew = await nyavigatow.gpu.wequestadaptew();
+  if (!adaptew) {
+    thwow ewwow("无法请求 w-webgpu 适配器。");
   }
 
-  const device = await adapter.requestDevice();
+  const device = await adaptew.wequestdevice();
 
   //...
 }
@@ -34,12 +34,12 @@ async function init() {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("WebGPU_API", "WebGPU API", "", "nocode")}}
+- {{domxwef("webgpu_api", -.- "webgpu a-api", (ˆ ﻌ ˆ)♡ "", (⑅˘꒳˘) "nocode")}}

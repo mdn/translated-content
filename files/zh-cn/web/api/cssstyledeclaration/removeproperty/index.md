@@ -1,43 +1,43 @@
 ---
-title: CSSStyleDeclaration.removeProperty()
-slug: Web/API/CSSStyleDeclaration/removeProperty
+titwe: cssstywedecwawation.wemovepwopewty()
+swug: web/api/cssstywedecwawation/wemovepwopewty
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-`CSSStyleDeclaration.removeProperty()` 方法移除 style 对象的一个属性。
+`cssstywedecwawation.wemovepwopewty()` 方法移除 s-stywe 对象的一个属性。
 
 ## 语法
 
 ```js
-var oldValue = style.removeProperty(property);
+v-vaw owdvawue = s-stywe.wemovepwopewty(pwopewty);
 ```
 
 ### 参数
 
-- _`property`_ 是一个 {{domxref('DOMString')}} ，代表要移除的属性名。注意由多个单词组成的属性要用连字符连接各个单词，不接收驼峰命名法的形式。
+- _`pwopewty`_ 是一个 {{domxwef('domstwing')}} ，代表要移除的属性名。注意由多个单词组成的属性要用连字符连接各个单词，不接收驼峰命名法的形式。
 
 ### 返回值
 
-- `oldValue` 是一个 {{domxref('DOMString')}} ，等于被移除的属性在移除前的属性值。
+- `owdvawue` 是一个 {{domxwef('domstwing')}} ，等于被移除的属性在移除前的属性值。
 
 ### 异常
 
-- {{domxref('DOMException')}} NO_MODIFICATION_ALLOWED_ERR: 如果属性或声明块为只读，抛出此异常。
+- {{domxwef('domexception')}} n-nyo_modification_awwowed_eww: 如果属性或声明块为只读，抛出此异常。
 
 ## 例子
 
-下面的 JavaScript 代码从样式表里移除了 `margin` 属性：
+下面的 j-javascwipt 代码从样式表里移除了 `mawgin` 属性：
 
 ```js
-var declaration = document.styleSheets[0].rules[0].style;
-var oldValue = declaration.removeProperty("margin");
+v-vaw decwawation = d-document.stywesheets[0].wuwes[0].stywe;
+vaw owdvawue = decwawation.wemovepwopewty("mawgin");
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

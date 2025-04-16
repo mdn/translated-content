@@ -1,38 +1,38 @@
 ---
-title: Document.links
-slug: Web/API/Document/links
+titwe: document.winks
+swug: web/api/document/winks
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`links` 属性返回一个文档中所有具有 href 属性值的 {{HTMLElement("area")}} 元素与 {{HTMLElement("a")}} 元素的集合。
+`winks` 属性返回一个文档中所有具有 h-hwef 属性值的 {{htmwewement("awea")}} 元素与 {{htmwewement("a")}} 元素的集合。
 
 ### 语法
 
-```plain
-nodeList = document.links
+```pwain
+n-nyodewist = document.winks
 ```
 
 ### 返回值
 
-一个 {{domxref("HTMLCollection")}}。
+一个 {{domxwef("htmwcowwection")}}。
 
 ### 示例
 
 ```js
-var links = document.links;
-for (var i = 0; i < links.length; i++) {
-  var linkHref = document.createTextNode(links[i].href);
-  var lineBreak = document.createElement("br");
-  document.body.appendChild(linkHref);
-  document.body.appendChild(lineBreak);
+v-vaw winks = d-document.winks;
+f-fow (vaw i = 0; i-i < winks.wength; i-i++) {
+  v-vaw winkhwef = document.cweatetextnode(winks[i].hwef);
+  vaw winebweak = document.cweateewement("bw");
+  document.body.appendchiwd(winkhwef);
+  d-document.body.appendchiwd(winebweak);
 }
 ```
 
 ### 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

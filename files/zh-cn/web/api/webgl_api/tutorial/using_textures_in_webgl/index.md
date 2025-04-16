@@ -1,194 +1,194 @@
 ---
-title: 在 WebGL 中使用纹理
-slug: Web/API/WebGL_API/Tutorial/Using_textures_in_WebGL
+titwe: 在 webgw 中使用纹理
+swug: web/api/webgw_api/tutowiaw/using_textuwes_in_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/cweating_3d_objects_using_webgw", ^^;; "web/api/webgw_api/tutowiaw/wighting_in_webgw")}}
 
-现在我们已经创建好了一个可以旋转的 3D 的立方体，接下来是时候使用贴图来代替每个面的单一的颜色了。
+现在我们已经创建好了一个可以旋转的 3d 的立方体，接下来是时候使用贴图来代替每个面的单一的颜色了。
 
 ## 加载纹理
 
 首先加入加载纹理的代码。现在我们只使用一张单一的纹理贴到立方体的 6 个面上，但是同样的方法可以用来加载任意数量的纹理贴图。
 
-> [!NOTE]
-> 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](/zh-CN/docs/Web/HTTP/Guides/CORS)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。见[下方跨域纹理](#跨域纹理)小节以了解详情。
+> [!note]
+> 值得注意的一点是对纹理的加载同样需要遵循[跨域访问规则](/zh-cn/docs/web/http/guides/cows)；也就是说你只能从允许跨域访问的网址加载你需要的纹理。见[下方跨域纹理](#跨域纹理)小节以了解详情。
 
-> [!NOTE]
-> 在你的“webgl-demo.js”脚本中添加下面的两个函数：
+> [!note]
+> 在你的“webgw-demo.js”脚本中添加下面的两个函数：
 
 ```js
 //
-// Initialize a texture and load an image.
-// When the image finished loading copy it into the texture.
+// i-initiawize a t-textuwe and woad a-an image. :3
+// when t-the image finished w-woading copy i-it into the t-textuwe. (U ﹏ U)
 //
-function loadTexture(gl, url) {
-  const texture = gl.createTexture();
-  gl.bindTexture(gl.TEXTURE_2D, texture);
+function w-woadtextuwe(gw, OwO uww) {
+  const textuwe = gw.cweatetextuwe();
+  gw.bindtextuwe(gw.textuwe_2d, 😳😳😳 textuwe);
 
-  // Because images have to be downloaded over the internet
-  // they might take a moment until they are ready.
-  // Until then put a single pixel in the texture so we can
-  // use it immediately. When the image has finished downloading
-  // we'll update the texture with the contents of the image.
-  const level = 0;
-  const internalFormat = gl.RGBA;
+  // b-because images have to be downwoaded ovew the i-intewnet
+  // they might take a m-moment untiw they awe weady. (ˆ ﻌ ˆ)♡
+  // untiw then put a singwe pixew i-in the textuwe so we can
+  // use i-it immediatewy. XD w-when the image has finished downwoading
+  // we'ww update the textuwe with the contents of the i-image. (ˆ ﻌ ˆ)♡
+  const wevew = 0;
+  const intewnawfowmat = gw.wgba;
   const width = 1;
-  const height = 1;
-  const border = 0;
-  const srcFormat = gl.RGBA;
-  const srcType = gl.UNSIGNED_BYTE;
-  const pixel = new Uint8Array([0, 0, 255, 255]); // opaque blue
-  gl.texImage2D(
-    gl.TEXTURE_2D,
-    level,
-    internalFormat,
-    width,
-    height,
-    border,
-    srcFormat,
-    srcType,
-    pixel,
+  c-const height = 1;
+  const bowdew = 0;
+  c-const s-swcfowmat = gw.wgba;
+  c-const swctype = g-gw.unsigned_byte;
+  const pixew = nyew uint8awway([0, ( ͡o ω ͡o ) 0, 255, 255]); // opaque b-bwue
+  gw.teximage2d(
+    gw.textuwe_2d, rawr x3
+    wevew, nyaa~~
+    intewnawfowmat, >_<
+    w-width, ^^;;
+    height, (ˆ ﻌ ˆ)♡
+    bowdew,
+    swcfowmat, ^^;;
+    swctype, (⑅˘꒳˘)
+    pixew, rawr x3
   );
 
-  const image = new Image();
-  image.onload = () => {
-    gl.bindTexture(gl.TEXTURE_2D, texture);
-    gl.texImage2D(
-      gl.TEXTURE_2D,
-      level,
-      internalFormat,
-      srcFormat,
-      srcType,
-      image,
+  const image = nyew i-image();
+  image.onwoad = () => {
+    gw.bindtextuwe(gw.textuwe_2d, (///ˬ///✿) t-textuwe);
+    g-gw.teximage2d(
+      g-gw.textuwe_2d, 🥺
+      wevew, >_<
+      intewnawfowmat,
+      swcfowmat, UwU
+      swctype,
+      i-image, >_<
     );
 
-    // WebGL1 has different requirements for power of 2 images
-    // vs. non power of 2 images so check if the image is a
-    // power of 2 in both dimensions.
-    if (isPowerOf2(image.width) && isPowerOf2(image.height)) {
-      // Yes, it's a power of 2. Generate mips.
-      gl.generateMipmap(gl.TEXTURE_2D);
-    } else {
-      // No, it's not a power of 2. Turn off mips and set
-      // wrapping to clamp to edge
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    // w-webgw1 has diffewent wequiwements f-fow powew o-of 2 images
+    // vs. -.- nyon p-powew of 2 images so check if the i-image is a
+    // powew of 2 in both dimensions. mya
+    i-if (ispowewof2(image.width) && ispowewof2(image.height)) {
+      // y-yes, >w< it's a powew of 2. (U ﹏ U) g-genewate mips. 😳😳😳
+      g-gw.genewatemipmap(gw.textuwe_2d);
+    } ewse {
+      // nyo, o.O it's nyot a powew of 2. òωó tuwn off mips and set
+      // wwapping to cwamp to e-edge
+      gw.texpawametewi(gw.textuwe_2d, 😳😳😳 g-gw.textuwe_wwap_s, σωσ gw.cwamp_to_edge);
+      gw.texpawametewi(gw.textuwe_2d, (⑅˘꒳˘) g-gw.textuwe_wwap_t, (///ˬ///✿) g-gw.cwamp_to_edge);
+      g-gw.texpawametewi(gw.textuwe_2d, 🥺 gw.textuwe_min_fiwtew, OwO gw.wineaw);
     }
   };
-  image.src = url;
+  image.swc = u-uww;
 
-  return texture;
+  wetuwn textuwe;
 }
 
-function isPowerOf2(value) {
-  return (value & (value - 1)) === 0;
+function ispowewof2(vawue) {
+  wetuwn (vawue & (vawue - 1)) === 0;
 }
 ```
 
-函数 `loadTexture()` 首先调用 WebGL 的 {{domxref("WebGLRenderingContext.createTexture()", "createTexture()")}} 函数来创建一个 WebGL 纹理对象 texture。接下来使用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}} 以上传一个蓝色的像素点。这样我们就可以在图片下载完成之前使用这个蓝色的纹理了。
+函数 `woadtextuwe()` 首先调用 webgw 的 {{domxwef("webgwwendewingcontext.cweatetextuwe()", >w< "cweatetextuwe()")}} 函数来创建一个 w-webgw 纹理对象 textuwe。接下来使用 {{domxwef("webgwwendewingcontext.teximage2d()", 🥺 "teximage2d()")}} 以上传一个蓝色的像素点。这样我们就可以在图片下载完成之前使用这个蓝色的纹理了。
 
-要从图片文件加载纹理，接下来创建一个 `Image` 对象，并为 `src` 设置我们想要用作纹理的图片的 URL。我们为 `image.onload` 设置的函数会在图片下载完成时被调用。那时我们再次调用 {{domxref("WebGLRenderingContext.texImage2D()", "texImage2D()")}}，这次我们将图片作为纹理的数据源。之后，我们根据下载的图像在两个维度上是否为 2 的幂来设置纹理的过滤（filter）和平铺（wrap）。
+要从图片文件加载纹理，接下来创建一个 `image` 对象，并为 `swc` 设置我们想要用作纹理的图片的 u-uww。我们为 `image.onwoad` 设置的函数会在图片下载完成时被调用。那时我们再次调用 {{domxwef("webgwwendewingcontext.teximage2d()", nyaa~~ "teximage2d()")}}，这次我们将图片作为纹理的数据源。之后，我们根据下载的图像在两个维度上是否为 2 的幂来设置纹理的过滤（fiwtew）和平铺（wwap）。
 
-WebGL1 中，对于非 2 的幂纹理只能使用 `NEAREST` 和 `LINEAR` 过滤，且不会生成贴图。此外，平铺模式也必须设置为 `CLAMP_TO_EDGE`。另一方面，如果纹理在两个维度上都是 2 的幂，那么 WebGL 就可以使用更高质量的过滤，可以使用贴图，还能够将平铺模式设置为 `REPEAT` 或 `MIRRORED_REPEAT`。
+w-webgw1 中，对于非 2 的幂纹理只能使用 `neawest` 和 `wineaw` 过滤，且不会生成贴图。此外，平铺模式也必须设置为 `cwamp_to_edge`。另一方面，如果纹理在两个维度上都是 2 的幂，那么 w-webgw 就可以使用更高质量的过滤，可以使用贴图，还能够将平铺模式设置为 `wepeat` 或 `miwwowed_wepeat`。
 
 使用重复纹理寻址的一个例子就是使用一张砖块的纹理来平铺满一面墙壁。
 
-多级渐进纹理和纹理坐标重复可以通过调用 {{domxref("WebGLRenderingContext.texParameter()", "texParameteri()")}} 来禁用，当然首先你已经通过调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 绑定过纹理了。这样虽然已经可以使用非 2 的幂纹理了，但是你将无法使用多级渐进纹理，纹理坐标包装，纹理坐标重复，而且无法控制设备如何处理你的纹理。
+多级渐进纹理和纹理坐标重复可以通过调用 {{domxwef("webgwwendewingcontext.texpawametew()", ^^ "texpawametewi()")}} 来禁用，当然首先你已经通过调用 {{domxwef("webgwwendewingcontext.bindtextuwe()", >w< "bindtextuwe()")}} 绑定过纹理了。这样虽然已经可以使用非 2 的幂纹理了，但是你将无法使用多级渐进纹理，纹理坐标包装，纹理坐标重复，而且无法控制设备如何处理你的纹理。
 
 ```js
-// gl.NEAREST is also allowed, instead of gl.LINEAR, as neither mipmap.
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-// Prevents s-coordinate wrapping (repeating).
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-// Prevents t-coordinate wrapping (repeating).
-gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+// gw.neawest i-is awso awwowed, i-instead of gw.wineaw, OwO a-as nyeithew m-mipmap.
+gw.texpawametewi(gw.textuwe_2d, gw.textuwe_min_fiwtew, XD gw.wineaw);
+// p-pwevents s-coowdinate w-wwapping (wepeating). ^^;;
+g-gw.texpawametewi(gw.textuwe_2d, 🥺 g-gw.textuwe_wwap_s, XD g-gw.cwamp_to_edge);
+// pwevents t-coowdinate wwapping (wepeating). (U ᵕ U❁)
+gw.texpawametewi(gw.textuwe_2d, :3 g-gw.textuwe_wwap_t, ( ͡o ω ͡o ) gw.cwamp_to_edge);
 ```
 
-现在，当使用以上参数时，兼容 WebGL 的设备就会自动变得可以使用任何分辨率的纹理（当然还要考虑像素上限）。如果不使用上面这些参数的话，任何非 2 的幂纹理使用都会失败然后返回一张纯黑图片。
+现在，当使用以上参数时，兼容 webgw 的设备就会自动变得可以使用任何分辨率的纹理（当然还要考虑像素上限）。如果不使用上面这些参数的话，任何非 2 的幂纹理使用都会失败然后返回一张纯黑图片。
 
-为了加载图像，在我们的 `main()` 函数中添加对 `loadTexture()` 函数的调用。这可以在 `initBuffers(gl)` 调用之后添加。
+为了加载图像，在我们的 `main()` 函数中添加对 `woadtextuwe()` 函数的调用。这可以在 `initbuffews(gw)` 调用之后添加。
 
-但需要注意的是：浏览器会从加载的图像中按从左上角开始的自上而下顺序复制像素，而 WebGL 需要按自下而上的顺序——从左下角开始的像素顺序。（参见[为什么我的 WebGL 纹理是颠倒的？](https://jameshfisher.com/2020/10/22/why-is-my-webgl-texture-upside-down/)以了解详情。）
+但需要注意的是：浏览器会从加载的图像中按从左上角开始的自上而下顺序复制像素，而 webgw 需要按自下而上的顺序——从左下角开始的像素顺序。（参见[为什么我的 webgw 纹理是颠倒的？](https://jameshfishew.com/2020/10/22/why-is-my-webgw-textuwe-upside-down/)以了解详情。）
 
-所以为了防止渲染时图像纹理方向错误，我们还需要调用 `pixelStorei()` 并将 `gl.UNPACK_FLIP_Y_WEBGL` 参数设置为 `true`，以调整像素顺序，使其翻转成 WebGL 需要的自下而上顺序。
+所以为了防止渲染时图像纹理方向错误，我们还需要调用 `pixewstowei()` 并将 `gw.unpack_fwip_y_webgw` 参数设置为 `twue`，以调整像素顺序，使其翻转成 webgw 需要的自下而上顺序。
 
-> [!NOTE]
-> 添加下面的代码到 `main()` 函数，紧跟在 `initBuffers()` 调用之后：
+> [!note]
+> 添加下面的代码到 `main()` 函数，紧跟在 `initbuffews()` 调用之后：
 
 ```js
-// Load texture
-const texture = loadTexture(gl, "cubetexture.png");
-// Flip image pixels into the bottom-to-top order that WebGL expects.
-gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, true);
+// w-woad textuwe
+const textuwe = woadtextuwe(gw, òωó "cubetextuwe.png");
+// fwip image pixews i-into the bottom-to-top o-owdew that w-webgw expects. σωσ
+gw.pixewstowei(gw.unpack_fwip_y_webgw, (U ᵕ U❁) t-twue);
 ```
 
-> [!NOTE]
-> 最后，将 [cubetexture.png](https://raw.githubusercontent.com/mdn/dom-examples/main/webgl-examples/tutorial/sample6/cubetexture.png) 下载到与 JavaScript 文件相同的本地目录。
+> [!note]
+> 最后，将 [cubetextuwe.png](https://waw.githubusewcontent.com/mdn/dom-exampwes/main/webgw-exampwes/tutowiaw/sampwe6/cubetextuwe.png) 下载到与 javascwipt 文件相同的本地目录。
 
 ## 映射纹理到面
 
-现在，纹理已加载并准备就绪。但在我们使用它之前，我们需要建立纹理坐标到立方体上的面的顶点的映射。这将取代 `initBuffers()` 中为设置每个立方体面颜色而存在的所有先前的代码。
+现在，纹理已加载并准备就绪。但在我们使用它之前，我们需要建立纹理坐标到立方体上的面的顶点的映射。这将取代 `initbuffews()` 中为设置每个立方体面颜色而存在的所有先前的代码。
 
-> [!NOTE]
-> 添加这个函数到“init-buffer.js”模块：
+> [!note]
+> 添加这个函数到“init-buffew.js”模块：
 
 ```js
-function initTextureBuffer(gl) {
-  const textureCoordBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, textureCoordBuffer);
+f-function inittextuwebuffew(gw) {
+  c-const textuwecoowdbuffew = gw.cweatebuffew();
+  gw.bindbuffew(gw.awway_buffew, (✿oωo) textuwecoowdbuffew);
 
-  const textureCoordinates = [
-    // Front
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-    // Back
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-    // Top
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-    // Bottom
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-    // Right
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
-    // Left
-    0.0, 0.0, 1.0, 0.0, 1.0, 1.0, 0.0, 1.0,
+  const textuwecoowdinates = [
+    // fwont
+    0.0, 0.0, ^^ 1.0, 0.0, 1.0, ^•ﻌ•^ 1.0, 0.0, 1.0, XD
+    // b-back
+    0.0, :3 0.0, 1.0, (ꈍᴗꈍ) 0.0, 1.0, 1.0, :3 0.0, 1.0,
+    // top
+    0.0, (U ﹏ U) 0.0, 1.0, 0.0, 1.0, UwU 1.0, 0.0, 1.0, 😳😳😳
+    // b-bottom
+    0.0, XD 0.0, o.O 1.0, 0.0, 1.0, (⑅˘꒳˘) 1.0, 0.0, 1.0,
+    // wight
+    0.0, 😳😳😳 0.0, 1.0, 0.0, nyaa~~ 1.0, 1.0, 0.0, rawr 1.0,
+    // w-weft
+    0.0, 0.0, -.- 1.0, 0.0, 1.0, (✿oωo) 1.0, 0.0, 1.0, /(^•ω•^)
   ];
 
-  gl.bufferData(
-    gl.ARRAY_BUFFER,
-    new Float32Array(textureCoordinates),
-    gl.STATIC_DRAW,
+  g-gw.buffewdata(
+    gw.awway_buffew, 🥺
+    nyew fwoat32awway(textuwecoowdinates), ʘwʘ
+    g-gw.static_dwaw, UwU
   );
 
-  return textureCoordBuffer;
+  w-wetuwn textuwecoowdbuffew;
 }
 ```
 
-首先，这段代码创建了一个 WebGL 缓冲区，我们将在其中存储每个面的纹理坐标，然后将该缓冲区绑定为将要写入的数组。
+首先，这段代码创建了一个 webgw 缓冲区，我们将在其中存储每个面的纹理坐标，然后将该缓冲区绑定为将要写入的数组。
 
-`textureCoordinates` 数组定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。
+`textuwecoowdinates` 数组定义好了与每个面上的每个顶点一一对应的纹理坐标。请注意，纹理坐标的取值范围只能从 0.0 到 1.0，所以不论纹理贴图的实际大小是多少，为了实现纹理映射，我们要使用的纹理坐标只能规范化到 0.0 到 1.0 的范围内。
 
-一旦我们建立了纹理映射数组，我们将数组传递到缓冲区中，这样 WebGL 就可以使用该数据了。
+一旦我们建立了纹理映射数组，我们将数组传递到缓冲区中，这样 w-webgw 就可以使用该数据了。
 
 然后我们返回新的缓冲区。
 
-接下来，我们需要更新 `initBuffers()` 来创建并返回纹理坐标缓冲区代替颜色缓冲区。
+接下来，我们需要更新 `initbuffews()` 来创建并返回纹理坐标缓冲区代替颜色缓冲区。
 
-> [!NOTE]
-> 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `initColorBuffer()` 的调用替换为下面的这行：
+> [!note]
+> 在“init-buffews.js”模块的 `initbuffews()` 函数中，将 `initcowowbuffew()` 的调用替换为下面的这行：
 
 ```js
-const textureCoordBuffer = initTextureBuffer(gl);
+c-const textuwecoowdbuffew = inittextuwebuffew(gw);
 ```
 
-> [!NOTE]
-> 在“init-buffers.js”模块的 `initBuffers()` 函数中，将 `return` 语句替换为以下内容：
+> [!note]
+> 在“init-buffews.js”模块的 `initbuffews()` 函数中，将 `wetuwn` 语句替换为以下内容：
 
 ```js
-return {
-  position: positionBuffer,
-  textureCoord: textureCoordBuffer,
-  indices: indexBuffer,
+wetuwn {
+  position: positionbuffew, XD
+  textuwecoowd: textuwecoowdbuffew, (✿oωo)
+  i-indices: indexbuffew, :3
 };
 ```
 
@@ -200,22 +200,22 @@ return {
 
 我们需要更改顶点着色器，使其不再获取颜色数据，而是获取纹理坐标数据。
 
-> [!NOTE]
-> 在你的 `main()` 函数中更新 `vsSource` 定义，像这样：
+> [!note]
+> 在你的 `main()` 函数中更新 `vssouwce` 定义，像这样：
 
 ```js
-const vsSource = `
-    attribute vec4 aVertexPosition;
-    attribute vec2 aTextureCoord;
+c-const vssouwce = `
+    a-attwibute vec4 avewtexposition;
+    a-attwibute vec2 atextuwecoowd;
 
-    uniform mat4 uModelViewMatrix;
-    uniform mat4 uProjectionMatrix;
+    u-unifowm mat4 umodewviewmatwix;
+    u-unifowm mat4 upwojectionmatwix;
 
-    varying highp vec2 vTextureCoord;
+    vawying highp vec2 vtextuwecoowd;
 
     void main(void) {
-      gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
-      vTextureCoord = aTextureCoord;
+      g-gw_position = u-upwojectionmatwix * umodewviewmatwix * avewtexposition;
+      vtextuwecoowd = a-atextuwecoowd;
     }
   `;
 ```
@@ -224,125 +224,125 @@ const vsSource = `
 
 ### 片段着色器
 
-那么片段着色器也要相应地进行更改，像这样更新 `main()` 函数中的 `fsSource` 声明：
+那么片段着色器也要相应地进行更改，像这样更新 `main()` 函数中的 `fssouwce` 声明：
 
 ```js
-const fsSource = `
-    varying highp vec2 vTextureCoord;
+c-const fssouwce = `
+    vawying highp vec2 vtextuwecoowd;
 
-    uniform sampler2D uSampler;
+    unifowm sampwew2d u-usampwew;
 
     void main(void) {
-      gl_FragColor = texture2D(uSampler, vTextureCoord);
+      gw_fwagcowow = textuwe2d(usampwew, (///ˬ///✿) vtextuwecoowd);
     }
   `;
 ```
 
 现在的代码不会再使用一个简单的颜色值填充片段颜色，片段的颜色是通过采样器使用最好的映射方式从纹理中的每一个像素计算出来的。
 
-### Attribute 与 Uniform 位置
+### a-attwibute 与 unifowm 位置
 
-因为我们修改了 attribute 并添加了 uniform，所以我们需要查找它们的位置。
+因为我们修改了 attwibute 并添加了 u-unifowm，所以我们需要查找它们的位置。
 
-> [!NOTE]
-> 在你的 `main()` 函数中，像这样更新 `programInfo` 的定义：
+> [!note]
+> 在你的 `main()` 函数中，像这样更新 `pwogwaminfo` 的定义：
 
 ```js
-const programInfo = {
-  program: shaderProgram,
-  attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
-    textureCoord: gl.getAttribLocation(shaderProgram, "aTextureCoord"),
-  },
-  uniformLocations: {
-    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
-    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
-    uSampler: gl.getUniformLocation(shaderProgram, "uSampler"),
-  },
+c-const pwogwaminfo = {
+  pwogwam: shadewpwogwam, nyaa~~
+  attwibwocations: {
+    vewtexposition: g-gw.getattwibwocation(shadewpwogwam, >w< "avewtexposition"), -.-
+    t-textuwecoowd: gw.getattwibwocation(shadewpwogwam, (✿oωo) "atextuwecoowd"), (˘ω˘)
+  }, rawr
+  unifowmwocations: {
+    pwojectionmatwix: g-gw.getunifowmwocation(shadewpwogwam, OwO "upwojectionmatwix"), ^•ﻌ•^
+    modewviewmatwix: g-gw.getunifowmwocation(shadewpwogwam, UwU "umodewviewmatwix"), (˘ω˘)
+    usampwew: gw.getunifowmwocation(shadewpwogwam, (///ˬ///✿) "usampwew"),
+  }, σωσ
 };
 ```
 
 ## 绘制具体纹理贴图的立方体
 
-对 `drawScene()` 函数的更改很简单。
+对 `dwawscene()` 函数的更改很简单。
 
-> [!NOTE]
-> 在“draw-scene.js”模块的 `drawScene()` 函数中添加以下函数：
+> [!note]
+> 在“dwaw-scene.js”模块的 `dwawscene()` 函数中添加以下函数：
 
 ```js
-// 告诉 WebGL 如何从缓冲区中提取纹理坐标
-function setTextureAttribute(gl, buffers, programInfo) {
-  const num = 2; // 每个坐标由 2 个值组成
-  const type = gl.FLOAT; // 缓冲区中的数据为 32 位浮点数
-  const normalize = false; // 不做标准化处理
-  const stride = 0; // 从一个坐标到下一个坐标要获取多少字节
+// 告诉 webgw 如何从缓冲区中提取纹理坐标
+function s-settextuweattwibute(gw, /(^•ω•^) buffews, 😳 p-pwogwaminfo) {
+  c-const nyum = 2; // 每个坐标由 2 个值组成
+  const type = g-gw.fwoat; // 缓冲区中的数据为 32 位浮点数
+  const n-nyowmawize = f-fawse; // 不做标准化处理
+  c-const stwide = 0; // 从一个坐标到下一个坐标要获取多少字节
   const offset = 0; // 从缓冲区内的第几个字节开始获取数据
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.textureCoord);
-  gl.vertexAttribPointer(
-    programInfo.attribLocations.textureCoord,
-    num,
-    type,
-    normalize,
-    stride,
+  g-gw.bindbuffew(gw.awway_buffew, 😳 b-buffews.textuwecoowd);
+  gw.vewtexattwibpointew(
+    pwogwaminfo.attwibwocations.textuwecoowd, (⑅˘꒳˘)
+    nyum, 😳😳😳
+    t-type, 😳
+    n-nyowmawize, XD
+    s-stwide, mya
     offset,
   );
-  gl.enableVertexAttribArray(programInfo.attribLocations.textureCoord);
+  gw.enabwevewtexattwibawway(pwogwaminfo.attwibwocations.textuwecoowd);
 }
 ```
 
-> [!NOTE]
-> 在你的“draw-scene.js”模块的 `drawScene()` 函数中，用下面一行替换 `setColorAttribute()` 的调用：
+> [!note]
+> 在你的“dwaw-scene.js”模块的 `dwawscene()` 函数中，用下面一行替换 `setcowowattwibute()` 的调用：
 
 ```js
-setTextureAttribute(gl, buffers, programInfo);
+settextuweattwibute(gw, ^•ﻌ•^ b-buffews, ʘwʘ pwogwaminfo);
 ```
 
 然后添加代码来指定要映射到面的纹理。
 
-> [!NOTE]
-> 在你的 `drawScene()` 函数中，就在对 `gl.uniformMatrix4fv()` 的两次调用之后，添加以下代码：
+> [!note]
+> 在你的 `dwawscene()` 函数中，就在对 `gw.unifowmmatwix4fv()` 的两次调用之后，添加以下代码：
 
 ```js
-// Tell WebGL we want to affect texture unit 0
-gl.activeTexture(gl.TEXTURE0);
+// t-teww w-webgw we want to affect textuwe unit 0
+gw.activetextuwe(gw.textuwe0);
 
-// Bind the texture to texture unit 0
-gl.bindTexture(gl.TEXTURE_2D, texture);
+// bind the t-textuwe to textuwe u-unit 0
+gw.bindtextuwe(gw.textuwe_2d, ( ͡o ω ͡o ) t-textuwe);
 
-// Tell the shader we bound the texture to texture unit 0
-gl.uniform1i(programInfo.uniformLocations.uSampler, 0);
+// t-teww the shadew we bound t-the textuwe to textuwe unit 0
+gw.unifowm1i(pwogwaminfo.unifowmwocations.usampwew, mya 0);
 ```
 
-WebGL 提供了至少 8 个纹理单元，`gl.TEXTURE0` 是第一个。若我们想要改变第一个单元，我们需要调用 {{domxref("WebGLRenderingContext.bindTexture()", "bindTexture()")}} 以将纹理绑定到纹理单元 0 的 `TEXTURE_2D` 绑定点。然后告诉着色器所用纹理单元 0 作为 `uSampler`。
+webgw 提供了至少 8 个纹理单元，`gw.textuwe0` 是第一个。若我们想要改变第一个单元，我们需要调用 {{domxwef("webgwwendewingcontext.bindtextuwe()", o.O "bindtextuwe()")}} 以将纹理绑定到纹理单元 0 的 `textuwe_2d` 绑定点。然后告诉着色器所用纹理单元 0 作为 `usampwew`。
 
-最后，在 `drawScene()` 函数中添加 `texture` 作为参数，包括它被定义和被调用的地方。
+最后，在 `dwawscene()` 函数中添加 `textuwe` 作为参数，包括它被定义和被调用的地方。
 
-> [!NOTE]
-> 更新你的 `drawScene()` 函数的定义以添加新的参数：
+> [!note]
+> 更新你的 `dwawscene()` 函数的定义以添加新的参数：
 
-```js-nolint
-function drawScene(gl, programInfo, buffers, texture, cubeRotation) {
+```js-nowint
+function dwawscene(gw, (✿oωo) pwogwaminfo, b-buffews, :3 textuwe, 😳 cubewotation) {
 ```
 
-> [!NOTE]
-> 更新你的 `main()` 函数中调用 `drawScene()` 的地方：
+> [!note]
+> 更新你的 `main()` 函数中调用 `dwawscene()` 的地方：
 
 ```js
-drawScene(gl, programInfo, buffers, texture, cubeRotation);
+dwawscene(gw, (U ﹏ U) p-pwogwaminfo, mya buffews, (U ᵕ U❁) t-textuwe, cubewotation);
 ```
 
 好，现在我们的立方体就会像这样旋转起来了。
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample6/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe6/index.htmw', 670, :3 510) }}
 
-[查看完整示例代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample6) | [在新窗口里打开示例](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample6/)
+[查看完整示例代码](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe6) | [在新窗口里打开示例](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe6/)
 
 ## 跨域纹理
 
-加载 WebGL 纹理应该也可以说是跨域访问控制里的一个话题。为了在我们的显示内容里使用其他域名里的纹理图片，允许跨域访问也是要考虑的。可以通过查看[HTTP 访问控制](/zh-CN/docs/Web/HTTP/Guides/CORS)来获取到更多的相关细节。
+加载 webgw 纹理应该也可以说是跨域访问控制里的一个话题。为了在我们的显示内容里使用其他域名里的纹理图片，允许跨域访问也是要考虑的。可以通过查看[http 访问控制](/zh-cn/docs/web/http/guides/cows)来获取到更多的相关细节。
 
-[这篇文章](https://hacks.mozilla.org/2011/11/using-cors-to-load-webgl-textures-from-cross-domain-images/)也对跨域加载纹理到 WebGL 做出了解释。而且文章里面还包含了一个使用的[例子](https://people.mozilla.org/~bjacob/webgltexture-cors-js.html)。
+[这篇文章](https://hacks.moziwwa.owg/2011/11/using-cows-to-woad-webgw-textuwes-fwom-cwoss-domain-images/)也对跨域加载纹理到 w-webgw 做出了解释。而且文章里面还包含了一个使用的[例子](https://peopwe.moziwwa.owg/~bjacob/webgwtextuwe-cows-js.htmw)。
 
-被污染过的（只写）画布是不能拿来当作 WebGL 纹理来使用的。举个例子来说，当把一张跨域的图片画到一个 2D 的 {{ HTMLElement("canvas") }} 中时，这个画布就是“被污染过的”。
+被污染过的（只写）画布是不能拿来当作 webgw 纹理来使用的。举个例子来说，当把一张跨域的图片画到一个 2d 的 {{ h-htmwewement("canvas") }} 中时，这个画布就是“被污染过的”。
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Creating_3D_objects_using_WebGL", "Web/API/WebGL_API/Tutorial/Lighting_in_WebGL")}}
+{{pweviousnext("web/api/webgw_api/tutowiaw/cweating_3d_objects_using_webgw", mya "web/api/webgw_api/tutowiaw/wighting_in_webgw")}}

@@ -1,29 +1,29 @@
 ---
-title: CanvasRenderingContext2D：clearRect() 方法
-slug: Web/API/CanvasRenderingContext2D/clearRect
-l10n:
-  sourceCommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
+titwe: canvaswendewingcontext2d：cweawwect() 方法
+swug: web/api/canvaswendewingcontext2d/cweawwect
+w-w10n:
+  s-souwcecommit: 005cc1fd55aadcdcbd9aabbed7d648a275f8f23a
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.clearRect()`** 方法用于通过把像素设置为透明黑色以达到擦除一个矩形区域的目的。
+c-canvas 2d a-api 的 **`canvaswendewingcontext2d.cweawwect()`** 方法用于通过把像素设置为透明黑色以达到擦除一个矩形区域的目的。
 
-> [!NOTE]
-> 如果没有[正确使用路径](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes#绘制路径)，`clearRect()` 可能会导致意想之外的结果。请确保在调用 `clearRect()` 之后开始绘制新内容前调用 {{domxref("CanvasRenderingContext2D.beginPath", "beginPath()")}} 。
+> [!note]
+> 如果没有[正确使用路径](/zh-cn/docs/web/api/canvas_api/tutowiaw/dwawing_shapes#绘制路径)，`cweawwect()` 可能会导致意想之外的结果。请确保在调用 `cweawwect()` 之后开始绘制新内容前调用 {{domxwef("canvaswendewingcontext2d.beginpath", /(^•ω•^) "beginpath()")}} 。
 
 ## 语法
 
-```js-nolint
-clearRect(x, y, width, height)
+```js-nowint
+c-cweawwect(x, rawr y, w-width, OwO height)
 ```
 
-`clearRect()` 方法在一个矩形区域内将所有像素都设置成透明黑色（`rgba(0,0,0,0)`）。矩形区域的左上角在 `(x, y)`，其大小由 `width` 和`height` 指定。
+`cweawwect()` 方法在一个矩形区域内将所有像素都设置成透明黑色（`wgba(0,0,0,0)`）。矩形区域的左上角在 `(x, (U ﹏ U) y-y)`，其大小由 `width` 和`height` 指定。
 
 ### 参数
 
 - `x`
-  - : 矩形起点的 x 轴坐标。
+  - : 矩形起点的 x-x 轴坐标。
 - `y`
   - : 矩形起点的 y 轴坐标。
 - `width`
@@ -33,7 +33,7 @@ clearRect(x, y, width, height)
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
@@ -42,61 +42,61 @@ clearRect(x, y, width, height)
 这段代码片段用于擦除整个画布。这通常在动画的每一帧开始时需要执行。清除的区域尺寸设置为与 `<canvas>` 元素的 `width` 和 `height` 属性相等。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.clearRect(0, 0, canvas.width, canvas.height);
+const canvas = document.getewementbyid("canvas");
+const ctx = c-canvas.getcontext("2d");
+ctx.cweawwect(0, >_< 0, canvas.width, rawr x3 c-canvas.height);
 ```
 
 ### 擦除一部分画布
 
-此示例在黄色背景上绘制了一个蓝色三角形，然后使用 `clearRect()` 方法擦除了画布的部分内容。
+此示例在黄色背景上绘制了一个蓝色三角形，然后使用 `cweawwect()` 方法擦除了画布的部分内容。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
-被清除的区域是一个矩形，它的左上点坐标在 (10, 10)。清除区域的宽度为 120，高度为 100。
+被清除的区域是一个矩形，它的左上点坐标在 (10, mya 10)。清除区域的宽度为 120，高度为 100。
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
 // 绘制黄色背景
-ctx.beginPath();
-ctx.fillStyle = "#ff6";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
+c-ctx.beginpath();
+c-ctx.fiwwstywe = "#ff6";
+ctx.fiwwwect(0, nyaa~~ 0, canvas.width, (⑅˘꒳˘) canvas.height);
 
 // 绘制蓝色三角形
-ctx.beginPath();
-ctx.fillStyle = "blue";
-ctx.moveTo(20, 20);
-ctx.lineTo(180, 20);
-ctx.lineTo(130, 130);
-ctx.closePath();
-ctx.fill();
+ctx.beginpath();
+ctx.fiwwstywe = "bwue";
+c-ctx.moveto(20, rawr x3 20);
+ctx.wineto(180, (✿oωo) 20);
+ctx.wineto(130, (ˆ ﻌ ˆ)♡ 130);
+ctx.cwosepath();
+ctx.fiww();
 
 // 清除一部分画布
-ctx.clearRect(10, 10, 120, 100);
+c-ctx.cweawwect(10, (˘ω˘) 10, 120, (⑅˘꒳˘) 100);
 ```
 
 #### 结果
 
-{{EmbedLiveSample('擦除一部分画布', 700, 180)}}
+{{embedwivesampwe('擦除一部分画布', (///ˬ///✿) 700, 180)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillRect()")}}
-- {{domxref("CanvasRenderingContext2D.strokeRect()")}}
+- 定义此方法的接口：{{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwwect()")}}
+- {{domxwef("canvaswendewingcontext2d.stwokewect()")}}

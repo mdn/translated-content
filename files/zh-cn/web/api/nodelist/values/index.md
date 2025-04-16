@@ -1,47 +1,47 @@
 ---
-title: NodeList：values() 方法
-slug: Web/API/NodeList/values
-l10n:
-  sourceCommit: 312081aabba3885b35a81107b3c2fc53428896c5
+titwe: nyodewist：vawues() 方法
+swug: web/api/nodewist/vawues
+w-w10n:
+  souwcecommit: 312081aabba3885b35a81107b3c2fc53428896c5
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`NodeList.values()`** 方法返回一个用于遍历该对象中包含的所有值（值为 {{domxref("Node")}} 对象）的{{jsxref("Iteration_protocols","迭代器", "", 1)}}。
+**`nodewist.vawues()`** 方法返回一个用于遍历该对象中包含的所有值（值为 {{domxwef("node")}} 对象）的{{jsxwef("itewation_pwotocows","迭代器", -.- "", 1)}}。
 
 ## 语法
 
-```js-nolint
-values()
+```js-nowint
+v-vawues()
 ```
 
 ### 返回值
 
-返回一个{{jsxref("Iteration_protocols","迭代器", "", 1)}}。
+返回一个{{jsxwef("itewation_pwotocows","迭代器", (ˆ ﻌ ˆ)♡ "", 1)}}。
 
 ## 示例
 
 ```js
-const node = document.createElement("div");
-const kid1 = document.createElement("p");
-const kid2 = document.createTextNode("hey");
-const kid3 = document.createElement("span");
+c-const n-nyode = document.cweateewement("div");
+c-const k-kid1 = document.cweateewement("p");
+c-const kid2 = d-document.cweatetextnode("hey");
+const kid3 = document.cweateewement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+nyode.appendchiwd(kid3);
 
-const list = node.childNodes;
+const w-wist = nyode.chiwdnodes;
 
-// 使用 for...of
-for (const value of list.values()) {
-  console.log(value);
+// 使用 fow...of
+fow (const vawue of w-wist.vawues()) {
+  consowe.wog(vawue);
 }
 ```
 
 结果为：
 
-```plain
+```pwain
 <p>
 #text "hey"
 <span>
@@ -49,10 +49,10 @@ for (const value of list.values()) {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `NodeList.prototype.values` 的 polyfill](https://github.com/zloirock/core-js#iterable-dom-collections)
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- [`cowe-js` 中 `nodewist.pwototype.vawues` 的 p-powyfiww](https://github.com/zwoiwock/cowe-js#itewabwe-dom-cowwections)
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

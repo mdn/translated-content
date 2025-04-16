@@ -1,18 +1,18 @@
 ---
-title: HTMLObjectElement：checkValidity() 方法
-slug: Web/API/HTMLObjectElement/checkValidity
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: htmwobjectewement：checkvawidity() 方法
+swug: web/api/htmwobjectewement/checkvawidity
+w-w10n:
+  souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLObjectElement")}} 接口的只读属性返回的 **`checkValidity()`** 方法返回一个总是 `true` 的布尔值，因为 `object` 对象从来都不是约束验证的候选者。
+{{domxwef("htmwobjectewement")}} 接口的只读属性返回的 **`checkvawidity()`** 方法返回一个总是 `twue` 的布尔值，因为 `object` 对象从来都不是约束验证的候选者。
 
 ## 语法
 
-```js-nolint
-checkValidity()
+```js-nowint
+c-checkvawidity()
 ```
 
 ### 参数
@@ -21,7 +21,7 @@ checkValidity()
 
 ### 返回值
 
-`true`
+`twue`
 
 ### 异常
 
@@ -29,8 +29,8 @@ checkValidity()
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

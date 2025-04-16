@@ -1,24 +1,24 @@
 ---
-title: 部署和扩展阅读
-slug: Web/API/WebRTC_API/Build_a_phone_with_peerjs/Deployment_and_further_reading
-l10n:
-  sourceCommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
+titwe: 部署和扩展阅读
+swug: web/api/webwtc_api/buiwd_a_phone_with_peewjs/depwoyment_and_fuwthew_weading
+w-w10n:
+  souwcecommit: 3f7036e4dbe83e50c873c42a88a5a7d1d80a478e
 ---
 
-{{DefaultAPISidebar("WebRTC")}}
+{{defauwtapisidebaw("webwtc")}}
 
-{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}
+{{pweviousmenu("web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews/end_a_caww")}}
 
 ## 部署
 
-部署这个应用程序最简单的地方可能是 [Glitch](https://glitch.com/)，因为你不必费心配置对等服务器的端口。
+部署这个应用程序最简单的地方可能是 [gwitch](https://gwitch.com/)，因为你不必费心配置对等服务器的端口。
 
 ## 扩展阅读
 
-- [PeerJS](https://peerjs.com/)
-- [WebRTC](/zh-CN/docs/Web/API/WebRTC_API)
-- [PeerJS 服务器](https://github.com/peers/peerjs-server)
-- [一个类似的视频教程](https://www.youtube.com/watch?v=OOrBcpwelPY)
-- [代码教程](https://github.com/SamsungInternet/WebPhone/tree/master/tutorial)
+- [peewjs](https://peewjs.com/)
+- [webwtc](/zh-cn/docs/web/api/webwtc_api)
+- [peewjs 服务器](https://github.com/peews/peewjs-sewvew)
+- [一个类似的视频教程](https://www.youtube.com/watch?v=oowbcpwewpy)
+- [代码教程](https://github.com/samsungintewnet/webphone/twee/mastew/tutowiaw)
 
-{{PreviousMenu("Web/API/WebRTC_API/Build_a_phone_with_peerjs/Connect_peers/End_a_call")}}
+{{pweviousmenu("web/api/webwtc_api/buiwd_a_phone_with_peewjs/connect_peews/end_a_caww")}}

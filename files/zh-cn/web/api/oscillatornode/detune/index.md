@@ -1,51 +1,51 @@
 ---
-title: OscillatorNode.detune
-slug: Web/API/OscillatorNode/detune
+titwe: osciwwatownode.detune
+swug: web/api/osciwwatownode/detune
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("OscillatorNode") }} 的 `detune 属性的接口`是 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} ，代表振荡频率的失谐量（[cents](http://en.wikipedia.org/wiki/Cent_%28music%29)）。
+{{ d-domxwef("osciwwatownode") }} 的 `detune 属性的接口`是 [a-wate](/zh-cn/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}} ，代表振荡频率的失谐量（[cents](http://en.wikipedia.owg/wiki/cent_%28music%29)）。
 
 ## 语法
 
 ```js
-var oscillator = audioCtx.createOscillator();
-oscillator.detune.value = 100; // value in cents
+v-vaw osciwwatow = a-audioctx.cweateosciwwatow();
+o-osciwwatow.detune.vawue = 100; // v-vawue in cents
 ```
 
-> [!NOTE]
-> 虽然返回的 `AudioParam` 是只读的，但是它表示的值不是。
+> [!note]
+> 虽然返回的 `audiopawam` 是只读的，但是它表示的值不是。
 
 ### 值
 
-一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 的值
+一个 [a-wate](/zh-cn/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}} 的值
 
 ## 示例
 
-下面的例子使用 {{ domxref("AudioContext") }} 创建了一个 oscillator node。这是已经在运行的例子，查看 [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) 是相关源码)。
+下面的例子使用 {{ d-domxwef("audiocontext") }} 创建了一个 osciwwatow nyode。这是已经在运行的例子，查看 [viowent thewemin demo](https://mdn.github.io/viowent-thewemin/) ([see app.js](https://github.com/mdn/viowent-thewemin/bwob/gh-pages/scwipts/app.js) 是相关源码)。
 
 ```js
-// create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+// cweate web audio a-api context
+vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
 
-// create Oscillator node
-var oscillator = audioCtx.createOscillator();
+// c-cweate osciwwatow nyode
+v-vaw osciwwatow = audioctx.cweateosciwwatow();
 
-oscillator.type = "square";
-oscillator.frequency.value = 440; // value in hertz
-oscillator.detune.value = 100; // value in cents
-oscillator.start();
+osciwwatow.type = "squawe";
+osciwwatow.fwequency.vawue = 440; // v-vawue in hewtz
+osciwwatow.detune.vawue = 100; // v-vawue in cents
+o-osciwwatow.stawt();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

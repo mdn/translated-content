@@ -1,13 +1,13 @@
 ---
-title: Notification：body 属性
-slug: Web/API/Notification/body
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: nyotification：body 属性
+swug: web/api/notification/body
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{securecontext_header}} {{AvailableInWorkers}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}} {{avaiwabweinwowkews}}
 
-{{domxref("Notification")}} 接口的 **`body`** 只读属性指示通知的正文字符串，该字符串在 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `body` 选项中指定。
+{{domxwef("notification")}} 接口的 **`body`** 只读属性指示通知的正文字符串，该字符串在 {{domxwef("notification.notification","notification()")}} 构造函数的 `body` 选项中指定。
 
 ## 值
 
@@ -16,25 +16,25 @@ l10n:
 ## 示例
 
 ```js
-function spawnNotification(theBody, theIcon, theTitle) {
-  const options = {
-    body: theBody,
-    icon: theIcon,
+f-function s-spawnnotification(thebody, :3 theicon, (U ﹏ U) t-thetitwe) {
+  c-const options = {
+    b-body: thebody, -.-
+    icon: theicon, (ˆ ﻌ ˆ)♡
   };
-  const n = new Notification(theTitle, options);
+  const ny = nyew nyotification(thetitwe, (⑅˘꒳˘) o-options);
 
-  console.log(n.body);
+  consowe.wog(n.body);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 nyotification a-api](/zh-cn/docs/web/api/notifications_api/using_the_notifications_api)

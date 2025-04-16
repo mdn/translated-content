@@ -1,35 +1,35 @@
 ---
-title: StylePropertyMap
-slug: Web/API/StylePropertyMap
+titwe: stywepwopewtymap
+swug: w-web/api/stywepwopewtymap
 ---
 
-{{APIRef("CSS Typed Object Model API")}} {{SeeCompatTable}}
+{{apiwef("css t-typed o-object modew a-api")}} {{seecompattabwe}}
 
-[CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Object_Model#CSS_Typed_Object_Model) 的 **`StylePropertyMap`** 接口提供了 CSS 声明块的表示，该声明块可以替代 {{DOMxRef("CSSStyleDeclaration")}}。
+[css 类型对象模型 a-api](/zh-cn/docs/web/api/css_object_modew#css_typed_object_modew) 的 **`stywepwopewtymap`** 接口提供了 c-css 声明块的表示，该声明块可以替代 {{domxwef("cssstywedecwawation")}}。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 属性
 
-_从其父级 {{DOMxRef("StylePropertyMapReadOnly")}} 继承属性。_
+_从其父级 {{domxwef("stywepwopewtymapweadonwy")}} 继承属性。_
 
 ## 方法
 
-_从其父级 {{DOMxRef("StylePropertyMapReadOnly")}} 继承方法。_
+_从其父级 {{domxwef("stywepwopewtymapweadonwy")}} 继承方法。_
 
-- {{DOMxRef( "StylePropertyMap.append()")}}
-  - : 使用给定的属性和值向 `StylePropertyMap` 添加新的 CSS 声明。
-- {{DOMxRef( "StylePropertyMap.clear()")}}
-  - : 删除 `StylePropertyMap` 中的所有声明。
-- {{DOMxRef( "StylePropertyMap.delete()")}}
-  - : 使用给定属性删除 CSS 声明。
-- {{DOMxRef( "StylePropertyMap.set()")}}
-  - : 使用给定属性更改 CSS 声明。
+- {{domxwef( "stywepwopewtymap.append()")}}
+  - : 使用给定的属性和值向 `stywepwopewtymap` 添加新的 c-css 声明。
+- {{domxwef( "stywepwopewtymap.cweaw()")}}
+  - : 删除 `stywepwopewtymap` 中的所有声明。
+- {{domxwef( "stywepwopewtymap.dewete()")}}
+  - : 使用给定属性删除 c-css 声明。
+- {{domxwef( "stywepwopewtymap.set()")}}
+  - : 使用给定属性更改 css 声明。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

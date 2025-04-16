@@ -1,13 +1,13 @@
 ---
-title: HTMLIFrameElement：name 属性
-slug: Web/API/HTMLIFrameElement/name
-l10n:
-  sourceCommit: e2b1940639d7b81e1205884532acbd0ee5e7ec34
+titwe: htmwifwameewement：name 属性
+swug: w-web/api/htmwifwameewement/name
+w10n:
+  s-souwcecommit: e-e2b1940639d7b81e1205884532acbd0ee5e7ec34
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`name`** 属性是反映 {{HTMLElement("iframe")}} 元素的 `name` 属性的字符串值，表示 `<iframe>` 元素的特定名称。
+{{domxwef("htmwifwameewement")}} 接口的 **`name`** 属性是反映 {{htmwewement("ifwame")}} 元素的 `name` 属性的字符串值，表示 `<ifwame>` 元素的特定名称。
 
 ## 值
 
@@ -15,19 +15,19 @@ l10n:
 
 ## 示例
 
-```html
-<iframe id="el" name="example"></iframe>
+```htmw
+<ifwame i-id="ew" name="exampwe"></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.name); // 输出：“example”
+c-const ew = document.getewementbyid("ew");
+c-consowe.wog(ew.name); // 输出：“exampwe”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

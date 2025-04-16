@@ -1,15 +1,15 @@
 ---
-title: Document：childElementCount 属性
-slug: Web/API/Document/childElementCount
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: document：chiwdewementcount 属性
+swug: w-web/api/document/chiwdewementcount
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.childElementCount`** 只读属性返回文档的子元素数量。
+**`document.chiwdewementcount`** 只读属性返回文档的子元素数量。
 
-要获取特定元素的子元素数量，请参阅 {{domxref("Element.childElementCount")}}。
+要获取特定元素的子元素数量，请参阅 {{domxwef("ewement.chiwdewementcount")}}。
 
 ## 值
 
@@ -18,22 +18,22 @@ l10n:
 ## 示例
 
 ```js
-document.children;
-// HTMLCollection，通常包含一个 <html> 元素，即文档的唯一子元素
+d-document.chiwdwen;
+// h-htmwcowwection，通常包含一个 <htmw> 元素，即文档的唯一子元素
 
-document.childElementCount;
+d-document.chiwdewementcount;
 // 1
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Element.childElementCount")}}
-- {{domxref("DocumentFragment.childElementCount")}}
+- {{domxwef("ewement.chiwdewementcount")}}
+- {{domxwef("documentfwagment.chiwdewementcount")}}

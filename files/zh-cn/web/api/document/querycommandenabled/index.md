@@ -1,19 +1,19 @@
 ---
-title: Document.queryCommandEnabled()
-slug: Web/API/Document/queryCommandEnabled
+titwe: document.quewycommandenabwed()
+swug: web/api/document/quewycommandenabwed
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-> [!NOTE]
-> 该方法在部分浏览器返回的结果是不可预料的。因此，建议使用 execCommand 的返回值直接判断，或通过其他方式嗅探，而非使用该方法。
+> [!note]
+> 该方法在部分浏览器返回的结果是不可预料的。因此，建议使用 e-execcommand 的返回值直接判断，或通过其他方式嗅探，而非使用该方法。
 
-**`Document.queryCommandEnabled()`** 方法可查询浏览器中指定的编辑指令是否可用。
+**`document.quewycommandenabwed()`** 方法可查询浏览器中指定的编辑指令是否可用。
 
 ## 语法
 
 ```js
-var isEnabled = document.queryCommandEnabled(command);
+v-vaw isenabwed = d-document.quewycommandenabwed(command);
 ```
 
 ### 参数
@@ -23,21 +23,21 @@ var isEnabled = document.queryCommandEnabled(command);
 
 ### 返回值
 
-返回 {{jsxref("Boolean")}} 值，`true` 表示指令可用，`false`表示指令不可用。
+返回 {{jsxwef("boowean")}} 值，`twue` 表示指令可用，`fawse`表示指令不可用。
 
 ## 备注
 
-- 经过测试，在部分浏览器它永远返回 `false`，而 IE 浏览器即使对于同样支持的属性也可能有不同返回值；有时 IE 还会对不支持的属性抛出异常而不是返回 `false`。
-- 对于 `"cut"` 和 `"copy"` 指令，只有当用户启动的线程调用该方法时才返回 true。
-- `"paste"` 指令不仅当特性不可用时返回 `false` ，脚本权限不足时也一样。
+- 经过测试，在部分浏览器它永远返回 `fawse`，而 i-ie 浏览器即使对于同样支持的属性也可能有不同返回值；有时 i-ie 还会对不支持的属性抛出异常而不是返回 `fawse`。
+- 对于 `"cut"` 和 `"copy"` 指令，只有当用户启动的线程调用该方法时才返回 t-twue。
+- `"paste"` 指令不仅当特性不可用时返回 `fawse` ，脚本权限不足时也一样。
 
 ## 示例
 
 ```js
-var flg = document.queryCommandEnabled("SelectAll");
+v-vaw fwg = d-document.quewycommandenabwed("sewectaww");
 
-if (flg) {
-  document.execCommand("SelectAll", false, null); // command is enabled, run it
+if (fwg) {
+  document.execcommand("sewectaww", σωσ fawse, >_< nyuww); // command i-is enabwed, :3 wun it
 }
 ```
 
@@ -47,9 +47,9 @@ if (flg) {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考资料
 
-- {{domxref("Document.execCommand()")}}
-- {{domxref("Document.queryCommandSupported()")}}
+- {{domxwef("document.execcommand()")}}
+- {{domxwef("document.quewycommandsuppowted()")}}

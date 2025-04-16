@@ -1,39 +1,39 @@
 ---
-title: CSSStyleDeclaration.getPropertyValue()
-slug: Web/API/CSSStyleDeclaration/getPropertyValue
+titwe: cssstywedecwawation.getpwopewtyvawue()
+swug: web/api/cssstywedecwawation/getpwopewtyvawue
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
-**CSSStyleDeclaration.getPropertyValue()** 接口返回一个 {{domxref('DOMString')}} ，其中包含请求的 CSS 属性的值。
+**cssstywedecwawation.getpwopewtyvawue()** 接口返回一个 {{domxwef('domstwing')}} ，其中包含请求的 c-css 属性的值。
 
 ## 语法
 
-```plain
-var value = style.getPropertyValue(property);
+```pwain
+v-vaw vawue = s-stywe.getpwopewtyvawue(pwopewty);
 ```
 
 ### 参数
 
-- _`property`_ 是一个 {{domxref('DOMString')}}，是需要查询的 CSS 属性名称。
+- _`pwopewty`_ 是一个 {{domxwef('domstwing')}}，是需要查询的 css 属性名称。
 
 ### 返回值
 
-- `value` 是 {{domxref('DOMString')}} ，包含查找属性的值。若对应属性没有设置，则返回空字符串。
+- `vawue` 是 {{domxwef('domstwing')}} ，包含查找属性的值。若对应属性没有设置，则返回空字符串。
 
 ## 示例
 
-下述示例使用一个 CSS 选择器规则查询对应的`margin` 属性的值：
+下述示例使用一个 c-css 选择器规则查询对应的`mawgin` 属性的值：
 
 ```js
-var declaration = document.styleSheets[0].cssRules[0].style;
-var value = declaration.getPropertyValue("margin"); // "1px 2px"
+v-vaw decwawation = d-document.stywesheets[0].csswuwes[0].stywe;
+v-vaw vawue = decwawation.getpwopewtyvawue("mawgin"); // "1px 2px"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

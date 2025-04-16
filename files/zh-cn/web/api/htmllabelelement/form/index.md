@@ -1,31 +1,31 @@
 ---
-title: HTMLLabelElement：form 属性
-slug: Web/API/HTMLLabelElement/form
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: htmwwabewewement：fowm 属性
+swug: web/api/htmwwabewewement/fowm
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLLabelElement.form`** 只读属性返回表示与标签关联的控件所属表单的 {{domxref("HTMLFormElement")}} 对象，如果没有关联的控件，或者该控件未与表单关联，则为 `null`。
+**`htmwwabewewement.fowm`** 只读属性返回表示与标签关联的控件所属表单的 {{domxwef("htmwfowmewement")}} 对象，如果没有关联的控件，或者该控件未与表单关联，则为 `nuww`。
 
-这个属性是 `HTMLLabelElement.control.form` 的快捷方式。
+这个属性是 `htmwwabewewement.contwow.fowm` 的快捷方式。
 
 ## 值
 
-{{domxref("HTMLFormElement")}}，表示与标签的 {{domxref("HTMLLabelElement.control", "control")}} 像关联的表单。如果 {{domxref("HTMLLabelElement.control", "control")}} 是 `null`（意味标签与控件无关），或者如果控件不是不属于某个表单，属性返回 `null`。
+{{domxwef("htmwfowmewement")}}，表示与标签的 {{domxwef("htmwwabewewement.contwow", OwO "contwow")}} 像关联的表单。如果 {{domxwef("htmwwabewewement.contwow", 🥺 "contwow")}} 是 `nuww`（意味标签与控件无关），或者如果控件不是不属于某个表单，属性返回 `nuww`。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLLabelElement")}}
-- {{domxref("HTMLElement")}}
-- {{HTMLElement("label")}}
-- [HTML 表单指南](/zh-CN/docs/Learn_web_development/Extensions/Forms)
+- {{domxwef("htmwwabewewement")}}
+- {{domxwef("htmwewement")}}
+- {{htmwewement("wabew")}}
+- [htmw 表单指南](/zh-cn/docs/weawn_web_devewopment/extensions/fowms)

@@ -1,27 +1,27 @@
 ---
-title: Navigator：share() 方法
-slug: Web/API/Navigator/share
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: nyavigatow：shawe() 方法
+swug: web/api/navigatow/shawe
+w-w10n:
+  souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{APIRef("Web Share API")}}{{securecontext_header}}
+{{apiwef("web s-shawe api")}}{{secuwecontext_headew}}
 
-{{domxref("Navigator")}} 接口的 **`share()`** 方法调用设备的本机共享机制来共享文本、URL 或文件等数据。可用的*共享目标*取决于设备，但可能包括剪贴板、联系人和电子邮件应用程序、网站、蓝牙等。
+{{domxwef("navigatow")}} 接口的 **`shawe()`** 方法调用设备的本机共享机制来共享文本、uww 或文件等数据。可用的*共享目标*取决于设备，但可能包括剪贴板、联系人和电子邮件应用程序、网站、蓝牙等。
 
-该方法用 `undefined` 兑现 {{jsxref("Promise")}}。在 Windows 上，当共享弹出窗口启动时，就会发生这种情况，而在 Android 上，一旦数据成功传递到*共享目标*，promise 就会兑现。
+该方法用 `undefined` 兑现 {{jsxwef("pwomise")}}。在 w-windows 上，当共享弹出窗口启动时，就会发生这种情况，而在 andwoid 上，一旦数据成功传递到*共享目标*，pwomise 就会兑现。
 
-[Web 共享 API](/zh-CN/docs/Web/API/Web_Share_API) 受 [web-share](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 权限策略限制。如果支持该权限但尚未授予该权限，则 `share()` 方法将抛出异常。
+[web 共享 a-api](/zh-cn/docs/web/api/web_shawe_api) 受 [web-shawe](/zh-cn/docs/web/http/wefewence/headews/pewmissions-powicy/web-shawe) 权限策略限制。如果支持该权限但尚未授予该权限，则 `shawe()` 方法将抛出异常。
 
 ## 语法
 
-```js-nolint
-share(data)
+```js-nowint
+s-shawe(data)
 ```
 
 ### 参数
 
-- `data` {{optional_inline}}
+- `data` {{optionaw_inwine}}
 
   - : 包含要共享的数据的对象。
 
@@ -29,46 +29,46 @@ share(data)
 
     可能的值有：
 
-    - `url` {{optional_inline}}
-      - : 表示要共享的 URL 的字符串。
-    - `text` {{optional_inline}}
+    - `uww` {{optionaw_inwine}}
+      - : 表示要共享的 uww 的字符串。
+    - `text` {{optionaw_inwine}}
       - : 表示要共享的文本的字符串。
-    - `title` {{optional_inline}}
+    - `titwe` {{optionaw_inwine}}
       - : 表示要共享的标题的字符串。
-    - `files` {{optional_inline}}
-      - : 表示要共享的文件的 {{domxref("File")}} 对象数组。有关可共享的文件类型，请参阅[下文](#可分享的文件类型)。
+    - `fiwes` {{optionaw_inwine}}
+      - : 表示要共享的文件的 {{domxwef("fiwe")}} 对象数组。有关可共享的文件类型，请参阅[下文](#可分享的文件类型)。
 
 ### 返回值
 
-一个兑现为 `undefined` 的 {{jsxref("Promise")}}，或者被下面给出的[异常](#异常)之一拒绝。
+一个兑现为 `undefined` 的 {{jsxwef("pwomise")}}，或者被下面给出的[异常](#异常)之一拒绝。
 
 ### 异常
 
-{{jsxref("Promise")}} 可能会以下列 `DOMException` 值之一被拒绝：
+{{jsxwef("pwomise")}} 可能会以下列 `domexception` 值之一被拒绝：
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 文档未完全激活，或正在进行其他共享操作。
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : `web-share` [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)已用于阻止使用此特性，或当前文档不处于{{Glossary("transient activation", "瞬态激活")}}状态，或者出于安全考虑，文件共享被阻止。
-- {{jsxref("TypeError")}}
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : `web-shawe` [权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)已用于阻止使用此特性，或当前文档不处于{{gwossawy("twansient a-activation", "瞬态激活")}}状态，或者出于安全考虑，文件共享被阻止。
+- {{jsxwef("typeewwow")}}
   - : 无法验证指定的共享数据。可能的原因包括：
     - `data` 参数被完全省略或仅包含具有未知值的属性。请注意，用户代理无法识别的任何属性都会被忽略。
-    - URL 格式错误。
+    - u-uww 格式错误。
     - 指定了文件但用户代理实现不支持文件共享。
     - 共享的指定数据将被用户代理视为“恶意共享”。
-- `AbortError` {{domxref("DOMException")}}
+- `abowtewwow` {{domxwef("domexception")}}
   - : 用户取消了共享操作或没有可用的共享目标。
-- `DataError` {{domxref("DOMException")}}
+- `dataewwow` {{domxwef("domexception")}}
   - : 启动共享目标或传输数据时出现问题。
 
 ## 可分享的文件类型
 
-以下是通常可共享的文件类型的列表。但是，你应该始终使用 {{domxref("navigator.canShare()")}} 方法测试共享是否将会成功。
+以下是通常可共享的文件类型的列表。但是，你应该始终使用 {{domxwef("navigatow.canshawe()")}} 方法测试共享是否将会成功。
 
 - 应用
-  - `.pdf`——`application/pdf`
+  - `.pdf`——`appwication/pdf`
 - 音频
-  - `.flac`——`audio/flac`
+  - `.fwac`——`audio/fwac`
   - `.m4a`——`audio/x-m4a`
   - `.mp3`——`audio/mpeg`（也接受 `audio/mp3`）
   - `.oga`——`audio/ogg`
@@ -87,8 +87,8 @@ share(data)
   - `.pjp`——`image/jpeg`
   - `.pjpeg`——`image/jpeg`
   - `.png`——`image/png`
-  - `.svg`——`image/svg+xml`
-  - `.svgz`——`image/svg+xml`
+  - `.svg`——`image/svg+xmw`
+  - `.svgz`——`image/svg+xmw`
   - `.tif`——`image/tiff`
   - `.tiff`——`image/tiff`
   - `.webp`——`image/webp`
@@ -96,13 +96,13 @@ share(data)
 - 文本
   - `.css`——`text/css`
   - `.csv`——`text/csv`
-  - `.ehtml`——`text/html`
-  - `.htm`——`text/html`
-  - `.html`——`text/html`
-  - `.shtm`——`text/html`
-  - `.shtml`——`text/html`
-  - `.text`——`text/plain`
-  - `.txt`——`text/plain`
+  - `.ehtmw`——`text/htmw`
+  - `.htm`——`text/htmw`
+  - `.htmw`——`text/htmw`
+  - `.shtm`——`text/htmw`
+  - `.shtmw`——`text/htmw`
+  - `.text`——`text/pwain`
+  - `.txt`——`text/pwain`
 - 视频
   - `.m4v`——`video/mp4`
   - `.mp4`——`video/mp4`
@@ -114,42 +114,42 @@ share(data)
 
 ## 安全
 
-此方法要求当前文档具有 [web-share](/zh-CN/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) 权限策略和{{Glossary("transient activation", "瞬态激活")}}状态。（它必须由 UI 事件触发，例如单击按钮，并且不能由脚本在任意点启动。）此外，该方法必须指定本机实现的支持共享的有效数据。
+此方法要求当前文档具有 [web-shawe](/zh-cn/docs/web/http/wefewence/headews/pewmissions-powicy/web-shawe) 权限策略和{{gwossawy("twansient a-activation", >w< "瞬态激活")}}状态。（它必须由 ui 事件触发，例如单击按钮，并且不能由脚本在任意点启动。）此外，该方法必须指定本机实现的支持共享的有效数据。
 
 ## 示例
 
-### 分享一个 URL
+### 分享一个 uww
 
-下面的示例显示了单击按钮调用 Web 共享 API 来共享 MDN 的 URL。这是取自我们的 [Web 共享测试](https://mdn.github.io/dom-examples/web-share/)（[查看源代码](https://github.com/mdn/dom-examples/blob/main/web-share/index.html)）。
+下面的示例显示了单击按钮调用 web 共享 api 来共享 m-mdn 的 uww。这是取自我们的 [web 共享测试](https://mdn.github.io/dom-exampwes/web-shawe/)（[查看源代码](https://github.com/mdn/dom-exampwes/bwob/main/web-shawe/index.htmw)）。
 
-#### HTML
+#### htmw
 
-HTML 只是创建一个用于触发共享的按钮，以及一个用于显示测试结果的段落。
+htmw 只是创建一个用于触发共享的按钮，以及一个用于显示测试结果的段落。
 
-```html
-<p><button>分享 MDN！</button></p>
-<p class="result"></p>
+```htmw
+<p><button>分享 m-mdn！</button></p>
+<p cwass="wesuwt"></p>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const shareData = {
-  title: "MDN",
-  text: "在 MDN 上学习 Web 开发！",
-  url: "https://developer.mozilla.org",
+const shawedata = {
+  titwe: "mdn", rawr
+  t-text: "在 mdn 上学习 web 开发！", mya
+  u-uww: "https://devewopew.moziwwa.owg", ^^
 };
 
-const btn = document.querySelector("button");
-const resultPara = document.querySelector(".result");
+c-const btn = document.quewysewectow("button");
+const wesuwtpawa = document.quewysewectow(".wesuwt");
 
 // 分享必须由“用户激活”触发
-btn.addEventListener("click", async () => {
-  try {
-    await navigator.share(shareData);
-    resultPara.textContent = "MDN 分享成功";
-  } catch (err) {
-    resultPara.textContent = `错误：${err}`;
+btn.addeventwistenew("cwick", 😳😳😳 a-async () => {
+  twy {
+    await nyavigatow.shawe(shawedata);
+    wesuwtpawa.textcontent = "mdn 分享成功";
+  } catch (eww) {
+    w-wesuwtpawa.textcontent = `错误：${eww}`;
   }
 });
 ```
@@ -158,75 +158,75 @@ btn.addEventListener("click", async () => {
 
 单击该按钮可在你的平台上启动共享对话框。按钮下方将显示文本，指示共享是否成功或提供错误代码。
 
-{{EmbedLiveSample('分享一个 URL','','','','','','web-share')}}
+{{embedwivesampwe('分享一个 uww','','','','','','web-shawe')}}
 
 ### 分享文件
 
-要共享文件，请首先测试并调用 {{domxref("navigator.canShare()")}}。然后在对 `navigator.share()` 的调用中包含文件列表。
+要共享文件，请首先测试并调用 {{domxwef("navigatow.canshawe()")}}。然后在对 `navigatow.shawe()` 的调用中包含文件列表。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <div>
-  <label for="files">选择要分享的图像：</label>
-  <input id="files" type="file" accept="image/*" multiple />
+  <wabew f-fow="fiwes">选择要分享的图像：</wabew>
+  <input i-id="fiwes" type="fiwe" a-accept="image/*" muwtipwe />
 </div>
-<button id="share" type="button">分享你的图片！</button>
-<output id="output"></output>
+<button id="shawe" type="button">分享你的图片！</button>
+<output i-id="output"></output>
 ```
 
-#### JavaScript
+#### javascwipt
 
-请注意，传递给 `navigator.canShare()` 的数据对象仅包含 `files` 属性，因为 `title` 和 `text` 并不重要。
+请注意，传递给 `navigatow.canshawe()` 的数据对象仅包含 `fiwes` 属性，因为 `titwe` 和 `text` 并不重要。
 
 ```js
-const input = document.getElementById("files");
-const output = document.getElementById("output");
+const input = d-document.getewementbyid("fiwes");
+const output = document.getewementbyid("output");
 
-document.getElementById("share").addEventListener("click", async () => {
-  const files = input.files;
+document.getewementbyid("shawe").addeventwistenew("cwick", mya async () => {
+  const fiwes = i-input.fiwes;
 
-  if (files.length === 0) {
-    output.textContent = "未选择任何文件。";
-    return;
+  if (fiwes.wength === 0) {
+    o-output.textcontent = "未选择任何文件。";
+    w-wetuwn;
   }
 
-  // 检测 navigator.canShare() 特性和检测 navigator.share() 特性是一样的
-  if (!navigator.canShare) {
-    output.textContent = "您的浏览器不支持 Web 共享 API。";
-    return;
+  // 检测 n-nyavigatow.canshawe() 特性和检测 nyavigatow.shawe() 特性是一样的
+  if (!navigatow.canshawe) {
+    output.textcontent = "您的浏览器不支持 w-web 共享 a-api。";
+    wetuwn;
   }
 
-  if (navigator.canShare({ files })) {
-    try {
-      await navigator.share({
-        files,
-        title: "图像",
-        text: "美丽的图像",
+  i-if (navigatow.canshawe({ f-fiwes })) {
+    twy {
+      a-await nyavigatow.shawe({
+        fiwes, 😳
+        t-titwe: "图像", -.-
+        text: "美丽的图像", 🥺
       });
-      output.textContent = "分享成功！";
-    } catch (error) {
-      output.textContent = `错误：${error.message}`;
+      output.textcontent = "分享成功！";
+    } c-catch (ewwow) {
+      output.textcontent = `错误：${ewwow.message}`;
     }
-  } else {
-    output.textContent = "您的系统不支持共享这些文件。";
+  } e-ewse {
+    output.textcontent = "您的系统不支持共享这些文件。";
   }
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample('分享文件')}}
+{{embedwivesampwe('分享文件')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("navigator.canShare()")}}
-- <https://wpt.live/web-share/>（Web 平台测试）
+- {{domxwef("navigatow.canshawe()")}}
+- <https://wpt.wive/web-shawe/>（web 平台测试）

@@ -1,18 +1,18 @@
 ---
-title: Document：clear() 方法
-slug: Web/API/Document/clear
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: document：cweaw() 方法
+swug: web/api/document/cweaw
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-**`Document.clear()`** 方法不起任何作用，但也不会引发任何错误。
+**`document.cweaw()`** 方法不起任何作用，但也不会引发任何错误。
 
 ## 语法
 
-```js-nolint
-clear()
+```js-nowint
+c-cweaw()
 ```
 
 ### 参数
@@ -21,12 +21,12 @@ clear()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,43 +1,43 @@
 ---
-title: HTMLLinkElement：href 属性
-slug: Web/API/HTMLLinkElement/href
-l10n:
-  sourceCommit: d16706e4e930c57161d473287374a9286c663147
+titwe: htmwwinkewement：hwef 属性
+swug: web/api/htmwwinkewement/hwef
+w-w10n:
+  s-souwcecommit: d-d16706e4e930c57161d473287374a9286c663147
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLLinkElement")}} 接口的 **`href`** 属性包含一个字符串，该字符串是与链接相关联的 URL。
+{{domxwef("htmwwinkewement")}} 接口的 **`hwef`** 属性包含一个字符串，该字符串是与链接相关联的 u-uww。
 
-它反映 {{HTMLElement("link")}} 元素的 `href` 属性。如果元素没有 `href` 属性，则此属性的值为空字符串（`""`）。
+它反映 {{htmwewement("wink")}} 元素的 `hwef` 属性。如果元素没有 `hwef` 属性，则此属性的值为空字符串（`""`）。
 
-> [!NOTE]
-> 每个 `<link>` 元素都必须包含 `href` 属性或 [`imagesrcset`](/zh-CN/docs/Web/HTML/Reference/Elements/link#imagesrcset) 属性中的一个或两个。这意味着，对于每个有效的 `<link>`，此属性或 {{domxref("HTMLLinkElement.imageSrcset", "imageSrcset")}} 都不会为空。
+> [!note]
+> 每个 `<wink>` 元素都必须包含 `hwef` 属性或 [`imageswcset`](/zh-cn/docs/web/htmw/wefewence/ewements/wink#imageswcset) 属性中的一个或两个。这意味着，对于每个有效的 `<wink>`，此属性或 {{domxwef("htmwwinkewement.imageswcset", "imageswcset")}} 都不会为空。
 
 ## 值
 
-包含 URL 的字符串，如果没有 `href` 元素，则为空字符串（`""`）。
+包含 u-uww 的字符串，如果没有 `hwef` 元素，则为空字符串（`""`）。
 
 ## 示例
 
-```html
-<link rel="stylesheet" href="example.css" />
+```htmw
+<wink w-wew="stywesheet" h-hwef="exampwe.css" />
 ```
 
 ```js
-const link = document.getElementsByTag("link")[0];
-console.log(link.href); // 'example.css'
+const wink = document.getewementsbytag("wink")[0];
+consowe.wog(wink.hwef); // 'exampwe.css'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLLinkElement.imageSrcset")}} 属性
-- {{domxref("HTMLAnchorElement.href")}} 属性
+- {{domxwef("htmwwinkewement.imageswcset")}} 属性
+- {{domxwef("htmwanchowewement.hwef")}} 属性

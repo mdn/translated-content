@@ -1,19 +1,19 @@
 ---
-title: console：table() 静态方法
-slug: Web/API/console/table_static
+titwe: consowe：tabwe() 静态方法
+swug: web/api/consowe/tabwe_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
 将数据以表格的形式显示。
 
-这个方法需要一个必须参数 `data`，`data` 必须是一个数组或者是一个对象；还可以使用一个可选参数 `columns`。
+这个方法需要一个必须参数 `data`，`data` 必须是一个数组或者是一个对象；还可以使用一个可选参数 `cowumns`。
 
 它会把数据 `data` 以表格的形式打印出来。数组中的每一个元素（或对象中可枚举的属性）将会以行的形式显示在表格中。
 
-表格的第一列是 `index`。如果数据 `data` 是一个数组，那么这一列的单元格的值就是数组的索引。如果数据是一个对象，那么它们的值就是各对象的属性名称。注意（在 FireFox 中）`console.table` 被限制为只显示 1000 行（第一行是被标记的索引（原文：labeled index））。
+表格的第一列是 `index`。如果数据 `data` 是一个数组，那么这一列的单元格的值就是数组的索引。如果数据是一个对象，那么它们的值就是各对象的属性名称。注意（在 f-fiwefox 中）`consowe.tabwe` 被限制为只显示 1000 行（第一行是被标记的索引（原文：wabewed i-index））。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ### 打印单一参数类型
 
@@ -22,25 +22,25 @@ slug: Web/API/console/table_static
 ```js
 // 打印一个由字符串组成的数组
 
-console.table(["apples", "oranges", "bananas"]);
+c-consowe.tabwe(["appwes", /(^•ω•^) "owanges", "bananas"]);
 ```
 
-![](console-table-array.png)
+![](consowe-tabwe-awway.png)
 
 ```js
 // 打印一个属性值是字符串的对象
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+f-function p-pewson(fiwstname, ʘwʘ w-wastname) {
+  t-this.fiwstname = fiwstname;
+  this.wastname = wastname;
 }
 
-var me = new Person("John", "Smith");
+vaw me = nyew pewson("john", σωσ "smith");
 
-console.table(me);
+c-consowe.tabwe(me);
 ```
 
-![](console-table-simple-object.png)
+![](consowe-tabwe-simpwe-object.png)
 
 ### 打印复合的参数类型
 
@@ -49,71 +49,71 @@ console.table(me);
 ```js
 // 二元数组的打印
 
-var people = [
-  ["John", "Smith"],
-  ["Jane", "Doe"],
-  ["Emily", "Jones"],
+vaw peopwe = [
+  ["john", OwO "smith"], 😳😳😳
+  ["jane", "doe"], 😳😳😳
+  ["emiwy", o.O "jones"],
 ];
-console.table(people);
+c-consowe.tabwe(peopwe);
 ```
 
-![Table displaying array of arrays](console-table-array-of-array.png)
+![tabwe dispwaying awway o-of awways](consowe-tabwe-awway-of-awway.png)
 
 ```js
 // 打印一个包含对象的数组
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function pewson(fiwstname, ( ͡o ω ͡o ) wastname) {
+  t-this.fiwstname = fiwstname;
+  t-this.wastname = w-wastname;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+vaw john = nyew pewson("john", (U ﹏ U) "smith");
+vaw jane = nyew pewson("jane", (///ˬ///✿) "doe");
+v-vaw emiwy = nyew pewson("emiwy", >w< "jones");
 
-console.table([john, jane, emily]);
+consowe.tabwe([john, rawr jane, mya emiwy]);
 ```
 
 请注意，如果数组包含对象，则列将使用属性名称进行标记。
 
 结果显示，如果数组中包含该对象，打印出来的列标签将是该对象的属性名
 
-![Table displaying array of objects](console-table-array-of-objects.png)
+![tabwe dispwaying a-awway of objects](consowe-tabwe-awway-of-objects.png)
 
 ```js
 // 打印属性名是对象的对象
 
-var family = {};
+vaw famiwy = {};
 
-family.mother = new Person("Jane", "Smith");
-family.father = new Person("John", "Smith");
-family.daughter = new Person("Emily", "Smith");
+f-famiwy.mothew = n-nyew pewson("jane", ^^ "smith");
+f-famiwy.fathew = n-nyew pewson("john", 😳😳😳 "smith");
+famiwy.daughtew = nyew pewson("emiwy", "smith");
 
-console.table(family);
+c-consowe.tabwe(famiwy);
 ```
 
-![Table displaying object of objects](console-table-object-of-objects.png)
+![tabwe dispwaying object of objects](consowe-tabwe-object-of-objects.png)
 
 ### 选择要隐藏的列
 
-`console.table()` 会把所有元素罗列在每一列，你可以使用 `columns` 参数选择要显示的列的子集：
+`consowe.tabwe()` 会把所有元素罗列在每一列，你可以使用 `cowumns` 参数选择要显示的列的子集：
 
 ```js
-// 一个对象数组，只打印 firstName
+// 一个对象数组，只打印 f-fiwstname
 
-function Person(firstName, lastName) {
-  this.firstName = firstName;
-  this.lastName = lastName;
+function pewson(fiwstname, mya wastname) {
+  this.fiwstname = fiwstname;
+  this.wastname = wastname;
 }
 
-var john = new Person("John", "Smith");
-var jane = new Person("Jane", "Doe");
-var emily = new Person("Emily", "Jones");
+vaw john = n-nyew pewson("john", 😳 "smith");
+vaw jane = nyew p-pewson("jane", -.- "doe");
+v-vaw emiwy = n-nyew pewson("emiwy", 🥺 "jones");
 
-console.table([john, jane, emily], ["firstName"]);
+consowe.tabwe([john, o.O jane, /(^•ω•^) emiwy], ["fiwstname"]);
 ```
 
-![Table displaying array of objects with filtered output](console-table-array-of-objects-firstname-only.png)
+![tabwe d-dispwaying a-awway of objects with fiwtewed output](consowe-tabwe-awway-of-objects-fiwstname-onwy.png)
 
 ### 按列重新排序
 
@@ -121,21 +121,21 @@ console.table([john, jane, emily], ["firstName"]);
 
 ## 语法
 
-```plain
-console.table(data [, columns]);
+```pwain
+c-consowe.tabwe(data [, nyaa~~ c-cowumns]);
 ```
 
 ### 参数
 
 - `data`
   - : 要显示的数据。必须是数组或对象。
-- `columns`
+- `cowumns`
   - : 一个包含列的名称的数组。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,46 +1,46 @@
 ---
-title: GPUAdapter
-slug: Web/API/GPUAdapter
+titwe: gpuadaptew
+swug: web/api/gpuadaptew
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}
 
-{{domxref("WebGPU API", "WebGPU API", "", 1)}} 的 **`GPUAdapter`** 接口表示 GPU 适配器。这时，你可以请求一个 {{domxref("GPUDevice")}}、适配器信息、特性和限制。
+{{domxwef("webgpu a-api", (U ﹏ U) "webgpu api", -.- "", 1)}} 的 **`gpuadaptew`** 接口表示 g-gpu 适配器。这时，你可以请求一个 {{domxwef("gpudevice")}}、适配器信息、特性和限制。
 
-使用 {{domxref("GPU.requestAdapter()")}} 方法去请求 `GPUAdapter` 对象。
+使用 {{domxwef("gpu.wequestadaptew()")}} 方法去请求 `gpuadaptew` 对象。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-- {{domxref("GPUAdapter.features", "features")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("GPUSupportedFeatures")}} 对象，其描述了适配器支持的额外的功能。
-- {{domxref("GPUAdapter.isFallbackAdapter", "isFallbackAdapter")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : 一个布尔值。如果适配器是[备用适配器](/zh-CN/docs/Web/API/GPU/requestAdapter#备用适配器)，则返回 `true` ；如果不是，则返回 `false`。
-- {{domxref("GPUAdapter.limits", "limits")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : 一个 {{domxref("GPUSupportedLimits")}} 对象，其描述了适配器支持的限制。
+- {{domxwef("gpuadaptew.featuwes", (ˆ ﻌ ˆ)♡ "featuwes")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("gpusuppowtedfeatuwes")}} 对象，其描述了适配器支持的额外的功能。
+- {{domxwef("gpuadaptew.isfawwbackadaptew", (⑅˘꒳˘) "isfawwbackadaptew")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : 一个布尔值。如果适配器是[备用适配器](/zh-cn/docs/web/api/gpu/wequestadaptew#备用适配器)，则返回 `twue` ；如果不是，则返回 `fawse`。
+- {{domxwef("gpuadaptew.wimits", (U ᵕ U❁) "wimits")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : 一个 {{domxwef("gpusuppowtedwimits")}} 对象，其描述了适配器支持的限制。
 
 ## 实例方法
 
-- {{domxref("GPUAdapter.requestAdapterInfo", "requestAdapterInfo()")}} {{Experimental_Inline}}
-  - : 返回 {{jsxref("Promise")}}，会兑现为一个 {{domxref("GPUAdapterInfo")}} 对象，该对象包含适配器的识别信息。
-- {{domxref("GPUAdapter.requestDevice", "requestDevice()")}} {{Experimental_Inline}}
-  - : 返回 {{jsxref("Promise")}}，会兑现为一个 {{domxref("GPUDevice")}} 对象，该对象是与 GPU 通信的主要接口。
+- {{domxwef("gpuadaptew.wequestadaptewinfo", -.- "wequestadaptewinfo()")}} {{expewimentaw_inwine}}
+  - : 返回 {{jsxwef("pwomise")}}，会兑现为一个 {{domxwef("gpuadaptewinfo")}} 对象，该对象包含适配器的识别信息。
+- {{domxwef("gpuadaptew.wequestdevice", "wequestdevice()")}} {{expewimentaw_inwine}}
+  - : 返回 {{jsxwef("pwomise")}}，会兑现为一个 {{domxwef("gpudevice")}} 对象，该对象是与 g-gpu 通信的主要接口。
 
 ## 示例
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
+a-async function init() {
+  i-if (!navigatow.gpu) {
+    t-thwow ewwow("webgpu n-nyot suppowted.");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("Couldn't request WebGPU adapter.");
+  const adaptew = await nyavigatow.gpu.wequestadaptew();
+  if (!adaptew) {
+    thwow ewwow("couwdn't w-wequest webgpu adaptew.");
   }
 
-  const device = await adapter.requestDevice();
+  const device = a-await adaptew.wequestdevice();
 
   //...
 }
@@ -48,12 +48,12 @@ async function init() {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebGPU API](/zh-CN/docs/Web/API/WebGPU_API)
+- [webgpu api](/zh-cn/docs/web/api/webgpu_api)

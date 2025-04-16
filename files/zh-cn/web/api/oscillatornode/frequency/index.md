@@ -1,50 +1,50 @@
 ---
-title: OscillatorNode.frequency
-slug: Web/API/OscillatorNode/frequency
+titwe: osciwwatownode.fwequency
+swug: web/api/osciwwatownode/fwequency
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web audio a-api") }}
 
-{{ domxref("OscillatorNode") }} 的 `frequency 属性的接口`是 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}}，表示振荡的频率，单位 HZ（hertz）
+{{ d-domxwef("osciwwatownode") }} 的 `fwequency 属性的接口`是 [a-wate](/zh-cn/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}}，表示振荡的频率，单位 h-hz（hewtz）
 
 ## 语法
 
 ```js
-var oscillator = audioCtx.createOscillator();
-oscillator.frequency.value = 440; // value in hertz
+v-vaw o-osciwwatow = audioctx.cweateosciwwatow();
+o-osciwwatow.fwequency.vawue = 440; // vawue i-in hewtz
 ```
 
-> [!NOTE]
-> 虽然返回的 `AudioParam` 是只读的，但是它表示的值不是。
+> [!note]
+> 虽然返回的 `audiopawam` 是只读的，但是它表示的值不是。
 
 ### 值
 
-一个 [a-rate](/zh-CN/docs/Web/API/AudioParam#a-rate) {{domxref("AudioParam")}} 的值
+一个 [a-wate](/zh-cn/docs/web/api/audiopawam#a-wate) {{domxwef("audiopawam")}} 的值
 
 ## 示例
 
-下列示例使用 {{ domxref("AudioContext") }} 创建了一个 oscillator node. 这是一个用于展示的示例，查看 [Violent Theremin demo](https://mdn.github.io/violent-theremin/) ([see app.js](https://github.com/mdn/violent-theremin/blob/gh-pages/scripts/app.js) 是相关代码).
+下列示例使用 {{ domxwef("audiocontext") }} 创建了一个 osciwwatow nyode. XD 这是一个用于展示的示例，查看 [viowent thewemin demo](https://mdn.github.io/viowent-thewemin/) ([see a-app.js](https://github.com/mdn/viowent-thewemin/bwob/gh-pages/scwipts/app.js) 是相关代码). :3
 
 ```js
-// create web audio api context
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+// cweate web audio api context
+v-vaw audioctx = nyew (window.audiocontext || w-window.webkitaudiocontext)();
 
-// create Oscillator node
-var oscillator = audioCtx.createOscillator();
+// cweate osciwwatow nyode
+vaw osciwwatow = audioctx.cweateosciwwatow();
 
-oscillator.type = "square";
-oscillator.frequency.value = 440; // value in hertz
-oscillator.start();
+o-osciwwatow.type = "squawe";
+osciwwatow.fwequency.vawue = 440; // v-vawue i-in hewtz
+osciwwatow.stawt();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,28 +1,28 @@
 ---
-title: Document：all 属性
-slug: Web/API/Document/all
-l10n:
-  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
+titwe: document：aww 属性
+swug: web/api/document/aww
+w-w10n:
+  s-souwcecommit: e-e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}{{Deprecated_Header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
-{{DOMxRef("Document")}} 接口的 **`all`** 只读属性会返回以文档节点为根的 {{DOMxRef("HTMLAllCollection")}} 集合。
+{{domxwef("document")}} 接口的 **`aww`** 只读属性会返回以文档节点为根的 {{domxwef("htmwawwcowwection")}} 集合。
 
-与其使用 `document.all` 来按文档顺序返回包含所有文档元素的 {{DOMxRef("HTMLAllCollection")}}，不如使用 {{DOMxRef("Document.querySelectorAll")}} 按文档顺序返回包含所有文档元素的 {{DOMxRef("NodeList")}}：
+与其使用 `document.aww` 来按文档顺序返回包含所有文档元素的 {{domxwef("htmwawwcowwection")}}，不如使用 {{domxwef("document.quewysewectowaww")}} 按文档顺序返回包含所有文档元素的 {{domxwef("nodewist")}}：
 
 ```js
-const allElements = document.querySelectorAll("*");
+c-const awwewements = d-document.quewysewectowaww("*");
 ```
 
 ## 值
 
-{{DOMxRef("HTMLAllCollection")}}，其中包含文档中的所有元素。
+{{domxwef("htmwawwcowwection")}}，其中包含文档中的所有元素。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

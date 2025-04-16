@@ -1,46 +1,46 @@
 ---
-title: document.createExpression
-slug: Web/API/Document/createExpression
+titwe: document.cweateexpwession
+swug: web/api/document/cweateexpwession
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-该方法将编译生成一个 {{DOMxRef("XPathExpression")}}，可以于来多次执行。
+该方法将编译生成一个 {{domxwef("xpathexpwession")}}，可以于来多次执行。
 
 你必须在将要运行表达式的同一文档上调用此方法。
 
 ### 语法
 
-```js-nolint
-createExpression(xpathText, namespaceURLMapper)
+```js-nowint
+c-cweateexpwession(xpathtext, >_< n-nyamespaceuwwmappew)
 ```
 
 ### 参数
 
-- `xpathText`
-  - : 一个将被编译的 XPath 字符串表达式。
-- `namespaceURLMapper`
-  - : 将命名空间前缀映射到命名空间 URL 的函数（若不需要，则为 `null`）。
+- `xpathtext`
+  - : 一个将被编译的 x-xpath 字符串表达式。
+- `namespaceuwwmappew`
+  - : 将命名空间前缀映射到命名空间 u-uww 的函数（若不需要，则为 `nuww`）。
 
 ### 返回值
 
-{{DOMxRef("XPathExpression")}}
+{{domxwef("xpathexpwession")}}
 
 ## 示例
 
 ```js
-const xpathExpr = document.createExpression("//div");
-const xpathResult = xpathExpr.evaluate(document); // 返回一个 XPathResult 对象
-const nodeContext = document.querySelector("nav");
-// 重复使用 XPathExpression "xpathExpr"
-const otherResult = xpathExpr.evaluate(nodeContext); // 返回一个 XPathResult 对象
+c-const xpathexpw = d-document.cweateexpwession("//div");
+c-const x-xpathwesuwt = xpathexpw.evawuate(document); // 返回一个 xpathwesuwt 对象
+const nyodecontext = document.quewysewectow("nav");
+// 重复使用 xpathexpwession "xpathexpw"
+c-const othewwesuwt = xpathexpw.evawuate(nodecontext); // 返回一个 xpathwesuwt 对象
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{DOMxRef("Document.evaluate()")}}
-- {{DOMxRef("XPathExpression")}}
+- {{domxwef("document.evawuate()")}}
+- {{domxwef("xpathexpwession")}}

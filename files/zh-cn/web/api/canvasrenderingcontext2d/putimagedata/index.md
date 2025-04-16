@@ -1,157 +1,157 @@
 ---
-title: CanvasRenderingContext2D：putImageData() 方法
-slug: Web/API/CanvasRenderingContext2D/putImageData
-l10n:
-  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
+titwe: canvaswendewingcontext2d：putimagedata() 方法
+swug: w-web/api/canvaswendewingcontext2d/putimagedata
+w10n:
+  s-souwcecommit: c-c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.putImageData()`** 方法用于将数据从已有的 {{domxref("ImageData")}} 对象绘制到画布上。如果提供了一个被污染的矩形，则只绘制该矩形的像素。此方法不受画布变换矩阵的影响。
+canvas 2d a-api 的 **`canvaswendewingcontext2d.putimagedata()`** 方法用于将数据从已有的 {{domxwef("imagedata")}} 对象绘制到画布上。如果提供了一个被污染的矩形，则只绘制该矩形的像素。此方法不受画布变换矩阵的影响。
 
-> [!NOTE]
-> 可以使用 {{domxref("CanvasRenderingContext2D.getImageData()", "getImageData()")}} 方法从画布中获取图像数据。
+> [!note]
+> 可以使用 {{domxwef("canvaswendewingcontext2d.getimagedata()", >_< "getimagedata()")}} 方法从画布中获取图像数据。
 
-你可以在文章[像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)中找到有关 `putImageData()` 方法和画布内容常规操作的更多信息。
+你可以在文章[像素操作](/zh-cn/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas)中找到有关 `putimagedata()` 方法和画布内容常规操作的更多信息。
 
 ## 语法
 
-```js-nolint
-putImageData(imageData, dx, dy)
-putImageData(imageData, dx, dy, dirtyX, dirtyY, dirtyWidth, dirtyHeight)
+```js-nowint
+p-putimagedata(imagedata, -.- d-dx, dy)
+p-putimagedata(imagedata, 🥺 d-dx, dy, diwtyx, (U ﹏ U) diwtyy, diwtywidth, >w< diwtyheight)
 ```
 
 ### 参数
 
-- `imageData`
-  - : 一个 {{domxref("ImageData")}} 对象，包含像素值数组。
+- `imagedata`
+  - : 一个 {{domxwef("imagedata")}} 对象，包含像素值数组。
 - `dx`
   - : 目标画布中放置图像数据的水平位置（x 坐标）。
 - `dy`
   - : 目标画布中放置图像数据的垂直位置（y 坐标）。
-- `dirtyX` {{optional_inline}}
+- `diwtyx` {{optionaw_inwine}}
   - : 提取图像数据的左上角的水平位置（x 坐标）。默认为 `0`。
-- `dirtyY` {{optional_inline}}
+- `diwtyy` {{optionaw_inwine}}
   - : 提取图像数据的左上角的垂直位置（y 坐标）。默认为 `0`。
-- `dirtyWidth` {{optional_inline}}
+- `diwtywidth` {{optionaw_inwine}}
   - : 要绘制的矩形的宽度。默认为图像数据的宽度。
-- `dirtyHeight` {{optional_inline}}
+- `diwtyheight` {{optionaw_inwine}}
   - : 要绘制的矩形的高度。默认为图像数据的高度。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
-- `NotSupportedError` {{domxref("DOMException")}}
+- `notsuppowtedewwow` {{domxwef("domexception")}}
   - : 如果任何一个变量被设置成无穷大，则会抛出此错误。
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 如果过图像数据对象的数据被分离，会抛出此错误。
 
 ## 示例
 
-### 理解 putImageData
+### 理解 putimagedata
 
-为了理解这个算法在底层是如何工作的，这里是一个基于 {{domxref("CanvasRenderingContext2D.fillRect()")}} 的实现示例。
+为了理解这个算法在底层是如何工作的，这里是一个基于 {{domxwef("canvaswendewingcontext2d.fiwwwect()")}} 的实现示例。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-function putImageData(
-  ctx,
-  imageData,
+f-function putimagedata(
+  ctx, mya
+  imagedata, >w<
   dx,
-  dy,
-  dirtyX,
-  dirtyY,
-  dirtyWidth,
-  dirtyHeight,
+  dy, nyaa~~
+  diwtyx,
+  diwtyy, (✿oωo)
+  d-diwtywidth, ʘwʘ
+  diwtyheight, (ˆ ﻌ ˆ)♡
 ) {
-  const data = imageData.data;
-  const height = imageData.height;
-  const width = imageData.width;
-  dirtyX = dirtyX || 0;
-  dirtyY = dirtyY || 0;
-  dirtyWidth = dirtyWidth !== undefined ? dirtyWidth : width;
-  dirtyHeight = dirtyHeight !== undefined ? dirtyHeight : height;
-  const limitBottom = dirtyY + dirtyHeight;
-  const limitRight = dirtyX + dirtyWidth;
-  for (let y = dirtyY; y < limitBottom; y++) {
-    for (let x = dirtyX; x < limitRight; x++) {
-      const pos = y * width + x;
-      ctx.fillStyle = `rgba(${data[pos * 4 + 0]}, ${data[pos * 4 + 1]}, ${
-        data[pos * 4 + 2]
-      }, ${data[pos * 4 + 3] / 255})`;
-      ctx.fillRect(x + dx, y + dy, 1, 1);
+  c-const data = i-imagedata.data;
+  const height = imagedata.height;
+  const width = imagedata.width;
+  d-diwtyx = diwtyx || 0;
+  diwtyy = diwtyy || 0;
+  diwtywidth = diwtywidth !== u-undefined ? diwtywidth : width;
+  d-diwtyheight = d-diwtyheight !== u-undefined ? diwtyheight : h-height;
+  const wimitbottom = diwtyy + d-diwtyheight;
+  const wimitwight = diwtyx + diwtywidth;
+  f-fow (wet y = diwtyy; y < wimitbottom; y++) {
+    fow (wet x = diwtyx; x < wimitwight; x-x++) {
+      const pos = y * w-width + x;
+      c-ctx.fiwwstywe = `wgba(${data[pos * 4 + 0]}, 😳😳😳 ${data[pos * 4 + 1]}, :3 ${
+        d-data[pos * 4 + 2]
+      }, OwO ${data[pos * 4 + 3] / 255})`;
+      ctx.fiwwwect(x + dx, (U ﹏ U) y + dy, 1, >w< 1);
     }
   }
 }
 
 // 在画布上绘制内容
-ctx.fillRect(0, 0, 100, 100);
-// 从画布创建一个 ImageData 对象
-const imagedata = ctx.getImageData(0, 0, 100, 100);
-// 使用 putImageData 函数来展示 putImageData 的工作原理
-putImageData(ctx, imagedata, 150, 0, 50, 50, 25, 25);
+c-ctx.fiwwwect(0, 0, (U ﹏ U) 100, 100);
+// 从画布创建一个 i-imagedata 对象
+const imagedata = c-ctx.getimagedata(0, 😳 0, 100, 100);
+// 使用 p-putimagedata 函数来展示 putimagedata 的工作原理
+p-putimagedata(ctx, (ˆ ﻌ ˆ)♡ imagedata, 😳😳😳 150, 0, 50, (U ﹏ U) 50, 25, 25);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('理解 putImageData', 700, 180) }}
+{{ e-embedwivesampwe('理解 putimagedata', (///ˬ///✿) 700, 😳 180) }}
 
 ### 由于浏览器优化丢失数据
 
-> [!WARNING]
-> 由于转换为和从预乘的 alpha 色值之间的损失性质，刚刚使用 `putImageData()` 设置的像素可能会被返回为等效的 `getImageData()`，但值不同。
+> [!wawning]
+> 由于转换为和从预乘的 awpha 色值之间的损失性质，刚刚使用 `putimagedata()` 设置的像素可能会被返回为等效的 `getimagedata()`，但值不同。
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.createElement("canvas");
-canvas.width = 1;
+c-const canvas = document.cweateewement("canvas");
+c-canvas.width = 1;
 canvas.height = 1;
-const context = canvas.getContext("2d");
-const imgData = context.getImageData(0, 0, canvas.width, canvas.height);
-const pixels = imgData.data;
-pixels[0 + 0] = 1;
-pixels[0 + 1] = 127;
-pixels[0 + 2] = 255;
-pixels[0 + 3] = 1;
-console.log("before:", pixels);
-context.putImageData(imgData, 0, 0);
-const imgData2 = context.getImageData(0, 0, canvas.width, canvas.height);
-const pixels2 = imgData2.data;
-console.log("after:", pixels2);
+c-const context = c-canvas.getcontext("2d");
+const imgdata = context.getimagedata(0, 😳 0, canvas.width, σωσ canvas.height);
+const pixews = imgdata.data;
+pixews[0 + 0] = 1;
+p-pixews[0 + 1] = 127;
+p-pixews[0 + 2] = 255;
+pixews[0 + 3] = 1;
+consowe.wog("befowe:", rawr x3 p-pixews);
+context.putimagedata(imgdata, OwO 0, 0);
+c-const imgdata2 = c-context.getimagedata(0, /(^•ω•^) 0, 😳😳😳 canvas.width, canvas.height);
+const pixews2 = imgdata2.data;
+c-consowe.wog("aftew:", ( ͡o ω ͡o ) pixews2);
 ```
 
 输出可能如下所示：
 
-```plain
-before: Uint8ClampedArray(4) [ 1, 127, 255, 1 ]
-after: Uint8ClampedArray(4) [ 255, 255, 255, 1 ]
+```pwain
+befowe: uint8cwampedawway(4) [ 1, >_< 127, >w< 255, 1 ]
+aftew: uint8cwampedawway(4) [ 255, rawr 255, 😳 255, 1 ]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("ImageData")}} 对象
-- {{domxref("CanvasRenderingContext2D.getImageData()")}}
-- [像素操作](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Pixel_manipulation_with_canvas)
+- 定义此方法的接口：{{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("imagedata")}} 对象
+- {{domxwef("canvaswendewingcontext2d.getimagedata()")}}
+- [像素操作](/zh-cn/docs/web/api/canvas_api/tutowiaw/pixew_manipuwation_with_canvas)

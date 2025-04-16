@@ -1,32 +1,32 @@
 ---
-title: Navigator：scheduling 属性
-slug: Web/API/Navigator/scheduling
-l10n:
-  sourceCommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
+titwe: nyavigatow：scheduwing 属性
+swug: web/api/navigatow/scheduwing
+w-w10n:
+  s-souwcecommit: 4458494807b6f4898d504b6c0af0a45f8031cbf3
 ---
 
-{{SeeCompatTable}}{{APIRef("Prioritized Task Scheduling API")}}
+{{seecompattabwe}}{{apiwef("pwiowitized t-task scheduwing a-api")}}
 
-{{domxref("Navigator")}} 接口的 **`scheduling`** 只读属性返回当前文档的 {{domxref("Scheduling")}} 对象，该对象提供了用于控制调度任务的方法和属性。
+{{domxwef("navigatow")}} 接口的 **`scheduwing`** 只读属性返回当前文档的 {{domxwef("scheduwing")}} 对象，该对象提供了用于控制调度任务的方法和属性。
 
 ## 值
 
-一个 {{domxref("Scheduling")}} 对象。
+一个 {{domxwef("scheduwing")}} 对象。
 
 ## 示例
 
-完整的示例请参阅 {{domxref("Scheduling.isInputPending()")}} 页面。
+完整的示例请参阅 {{domxwef("scheduwing.isinputpending()")}} 页面。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- engineering.fb.com 上的 [Facebook 在 2019 年对浏览器 API 的首次贡献](https://engineering.fb.com/2019/04/22/developer-tools/isinputpending-api/)（2019）
-- developer.chrome.google.cn 上的[使用 isInputPending() 改善 JS 调度](https://developer.chrome.google.cn/docs/capabilities/web-apis/isinputpending)（2020）
-- web.developers.google.cn 上的[优化耗时较长的任务](https://web.developers.google.cn/articles/optimize-long-tasks)（2022）
+- e-engineewing.fb.com 上的 [facebook 在 2019 年对浏览器 a-api 的首次贡献](https://engineewing.fb.com/2019/04/22/devewopew-toows/isinputpending-api/)（2019）
+- d-devewopew.chwome.googwe.cn 上的[使用 i-isinputpending() 改善 js 调度](https://devewopew.chwome.googwe.cn/docs/capabiwities/web-apis/isinputpending)（2020）
+- web.devewopews.googwe.cn 上的[优化耗时较长的任务](https://web.devewopews.googwe.cn/awticwes/optimize-wong-tasks)（2022）

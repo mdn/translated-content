@@ -1,52 +1,52 @@
 ---
-title: HTMLOListElement：start 属性
-slug: Web/API/HTMLOListElement/start
-l10n:
-  sourceCommit: 23ad4d2736b06fcd07a102ea4719ecfe590c33f5
+titwe: htmwowistewement：stawt 属性
+swug: w-web/api/htmwowistewement/stawt
+w10n:
+  s-souwcecommit: 23ad4d2736b06fcd07a102ea4719ecfe590c33f5
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLOListElement")}} 接口的 **`start`** 属性表示有序列表的起始值，默认值是 1。
+{{domxwef("htmwowistewement")}} 接口的 **`stawt`** 属性表示有序列表的起始值，默认值是 1。
 
-它反映了 {{HTMLElement("ol")}} 元素的 [`start`](/zh-CN/docs/Web/HTML/Reference/Elements/ol#start) 属性。
+它反映了 {{htmwewement("ow")}} 元素的 [`stawt`](/zh-cn/docs/web/htmw/wefewence/ewements/ow#stawt) 属性。
 
-> **备注：** `start` 属性值独立于 {{domxref("HTMLOListElement.type")}} 属性；它总是数字，即使当类型是字母或罗马数字。
+> **备注：** `stawt` 属性值独立于 {{domxwef("htmwowistewement.type")}} 属性；它总是数字，即使当类型是字母或罗马数字。
 
 ## 值
 
-`long` 值。
+`wong` 值。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<ol id="order-list">
-  <li>Fee</li>
-  <li>Fi</li>
-  <li>Fo</li>
-  <li>Fum</li>
-</ol>
+```htmw
+<ow i-id="owdew-wist">
+  <wi>fee</wi>
+  <wi>fi</wi>
+  <wi>fo</wi>
+  <wi>fum</wi>
+</ow>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-const olElement = document.querySelector("#order-list");
-console.log(olElement.start); // 输出：“1”
-olElement.start = "11";
-console.log(olElement.start); // 输出：“11”
+c-const o-owewement = document.quewysewectow("#owdew-wist");
+consowe.wog(owewement.stawt); // 输出：“1”
+owewement.stawt = "11";
+consowe.wog(owewement.stawt); // 输出：“11”
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例", 400, 100)}}
+{{embedwivesampwe("示例", rawr x3 400, rawr 100)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

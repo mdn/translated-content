@@ -1,63 +1,63 @@
 ---
-title: CanvasRenderingContext2D：direction 属性
-slug: Web/API/CanvasRenderingContext2D/direction
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：diwection 属性
+swug: web/api/canvaswendewingcontext2d/diwection
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.direction`** 属性用来在绘制文本时，描述当前文本方向。
+c-canvas 2d a-api 的 **`canvaswendewingcontext2d.diwection`** 属性用来在绘制文本时，描述当前文本方向。
 
 ## 值
 
 可能的取值：
 
-- `"ltr"`
+- `"wtw"`
   - : 文字方向为从左到右。
-- `"rtl"`
+- `"wtw"`
   - : 文字方向为从右到左。
-- `"inherit"`
-  - : 文字方向从相应的 {{HTMLElement("canvas")}} 元素或 {{domxref("Document")}} 继承。
+- `"inhewit"`
+  - : 文字方向从相应的 {{htmwewement("canvas")}} 元素或 {{domxwef("document")}} 继承。
 
-默认值为 `"inherit"`。
+默认值为 `"inhewit"`。
 
 ## 示例
 
 ### 改变文字方向
 
-这个示例绘制了两段文字。第一段是从左到右的，第二段是从右到左的。注意在 `ltr` 中的“Hi!”变成了在 `rtl` 中的“!Hi”。
+这个示例绘制了两段文字。第一段是从左到右的，第二段是从右到左的。注意在 `wtw` 中的“hi!”变成了在 `wtw` 中的“!hi”。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-ctx.font = "48px serif";
-ctx.fillText("Hi!", 150, 50);
-ctx.direction = "rtl";
-ctx.fillText("Hi!", 150, 130);
+c-ctx.font = "48px sewif";
+ctx.fiwwtext("hi!", σωσ 150, 50);
+ctx.diwection = "wtw";
+ctx.fiwwtext("hi!", σωσ 150, 130);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('改变文字方向', 700, 180) }}
+{{ e-embedwivesampwe('改变文字方向', >_< 700, 180) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}
+- 定义此属性的接口：{{domxwef("canvaswendewingcontext2d")}}

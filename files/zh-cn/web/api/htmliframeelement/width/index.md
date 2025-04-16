@@ -1,42 +1,42 @@
 ---
-title: HTMLIFrameElement：width 属性
-slug: Web/API/HTMLIFrameElement/width
-l10n:
-  sourceCommit: d8a52569d8d465eb626af3d33600c8c638a7a322
+titwe: htmwifwameewement：width 属性
+swug: w-web/api/htmwifwameewement/width
+w-w10n:
+  souwcecommit: d-d8a52569d8d465eb626af3d33600c8c638a7a322
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`width`** 属性返回一个反映 {{HTMLElement("iframe")}} 元素的 `width` 属性的字符串，表示 iframe 的 CSS 像素宽度。
+{{domxwef("htmwifwameewement")}} 接口的 **`width`** 属性返回一个反映 {{htmwewement("ifwame")}} 元素的 `width` 属性的字符串，表示 i-ifwame 的 c-css 像素宽度。
 
 ## 值
 
-表示 iframe 宽度的字符串（以 CSS 像素为单位）。
+表示 i-ifwame 宽度的字符串（以 c-css 像素为单位）。
 
 ## 示例
 
-```html
-<iframe id="el" width="800" height="600"></iframe>
+```htmw
+<ifwame id="ew" width="800" height="600"></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.width); // 输出：“800”
+const ew = document.getewementbyid("ew");
+consowe.wog(ew.width); // 输出：“800”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLCanvasElement.width")}}
-- {{domxref("HTMLEmbedElement.width")}}
-- {{domxref("HTMLImageElement.width")}}
-- {{domxref("HTMLObjectElement.width")}}
-- {{domxref("HTMLSourceElement.width")}}
-- {{domxref("HTMLVideoElement.width")}}
+- {{domxwef("htmwcanvasewement.width")}}
+- {{domxwef("htmwembedewement.width")}}
+- {{domxwef("htmwimageewement.width")}}
+- {{domxwef("htmwobjectewement.width")}}
+- {{domxwef("htmwsouwceewement.width")}}
+- {{domxwef("htmwvideoewement.width")}}

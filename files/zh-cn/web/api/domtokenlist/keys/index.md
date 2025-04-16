@@ -1,16 +1,16 @@
 ---
-title: DOMTokenList.keys()
-slug: Web/API/DOMTokenList/keys
+titwe: domtokenwist.keys()
+swug: w-web/api/domtokenwist/keys
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("DOMTokenList")}} **的** **`keys()`** 方法返回一个{{jsxref("Iteration_protocols",'iterator')}}, 可以用来遍历这个对象中的所有的键，键的类型是`无符号整型`。
+{{domxwef("domtokenwist")}} **的** **`keys()`** 方法返回一个{{jsxwef("itewation_pwotocows",'itewatow')}}, -.- 可以用来遍历这个对象中的所有的键，键的类型是`无符号整型`。
 
 ## 语法
 
-```plain
-tokenList.keys();
+```pwain
+t-tokenwist.keys();
 ```
 
 ### 参数
@@ -19,38 +19,38 @@ tokenList.keys();
 
 ### 返回值
 
-返回一个 {{jsxref("Iteration_protocols","iterator")}}.
+返回一个 {{jsxwef("itewation_pwotocows","itewatow")}}. (ˆ ﻌ ˆ)♡
 
 ## 示例
 
-在下面的例子中，我们获取了一个使用 {{domxref("Element.classList")}}属性获取了一个 `DOMTokenList` ，在这里它表示了这个 {{htmlelement("span")}} 元素的所有 class 属性值的键（索引）。然后我们使用了它的 `keys()`方法获取了一个 iterator，最后再使用 [for ... of](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环来对所有键（这里是索引）进行遍历，将遍历的每一个结果都写到这个 `<span>` 标签内（使用{{domxref("Node.textContent")}}属性）显示。
+在下面的例子中，我们获取了一个使用 {{domxwef("ewement.cwasswist")}}属性获取了一个 `domtokenwist` ，在这里它表示了这个 {{htmwewement("span")}} 元素的所有 c-cwass 属性值的键（索引）。然后我们使用了它的 `keys()`方法获取了一个 i-itewatow，最后再使用 [fow ... o-of](/zh-cn/docs/web/javascwipt/wefewence/statements/fow...of) 循环来对所有键（这里是索引）进行遍历，将遍历的每一个结果都写到这个 `<span>` 标签内（使用{{domxwef("node.textcontent")}}属性）显示。
 
-首先，例子使用的 HTML 代码为：
+首先，例子使用的 htmw 代码为：
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b c"></span>
 ```
 
-这是 JavaScript 代码：
+这是 j-javascwipt 代码：
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-var iterator = classes.keys();
+v-vaw span = document.quewysewectow("span");
+vaw cwasses = span.cwasswist;
+vaw itewatow = c-cwasses.keys();
 
-for (var value of iterator) {
-  span.textContent += value + " ++ ";
+fow (vaw vawue of itewatow) {
+  s-span.textcontent += vawue + " ++ ";
 }
 ```
 
 输出为：
 
-{{ EmbedLiveSample('示例', '100%', 60) }}
+{{ e-embedwivesampwe('示例', (⑅˘꒳˘) '100%', 60) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

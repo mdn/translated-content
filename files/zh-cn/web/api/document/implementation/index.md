@@ -1,56 +1,56 @@
 ---
-title: document.implementation
-slug: Web/API/Document/implementation
+titwe: document.impwementation
+swug: web/api/document/impwementation
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## 概要
 
-返回一个和当前文档相关联的{{domxref("DOMImplementation")}}对象。
+返回一个和当前文档相关联的{{domxwef("domimpwementation")}}对象。
 
 ## 语法
 
-```plain
-DOMImpObj = document.implementation;
+```pwain
+d-domimpobj = d-document.impwementation;
 ```
 
 ## 示例
 
 ```js
-var modName = "HTML";
-var modVer = "2.0";
-var conformTest = document.implementation.hasFeature(modName, modVer);
+v-vaw modname = "htmw";
+v-vaw modvew = "2.0";
+vaw c-confowmtest = d-document.impwementation.hasfeatuwe(modname, :3 m-modvew);
 
-alert("DOM " + modName + " " + modVer + " supported?: " + conformTest);
+a-awewt("dom " + modname + " " + modvew + " suppowted?: " + confowmtest);
 
-// alerts with: "DOM HTML 2.0 supported?: true" if DOM Level 2 HTML module is supported.
+// a-awewts with: "dom htmw 2.0 suppowted?: twue" i-if dom wevew 2 htmw moduwe is suppowted. 😳😳😳
 ```
 
-可以在[一致性章节](https://www.w3.org/TR/DOM-Level-2-Core/introduction.html#ID-Conformance-h2)中查看可用的一系列 DOM2 级模型名称（例如：Core, HTML, XML 等等）。
+可以在[一致性章节](https://www.w3.owg/tw/dom-wevew-2-cowe/intwoduction.htmw#id-confowmance-h2)中查看可用的一系列 d-dom2 级模型名称（例如：cowe, -.- htmw, ( ͡o ω ͡o ) xmw 等等）。
 
 ## 说明
 
-W3C 的 DOM1 级建议值规定了一种检测浏览器对某个 DOM 模型是否支持的方法——`hasFeature` 方法（请参考上边的例子以及这篇文章 [What does your user agent claim to support?](https://www.w3.org/2003/02/06-dom-support.html)）。如果它可用的话，那么 `DOMImplementation` 接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，`DOMImplementation` 接口包含一个 `createDocumentType` 方法，它可以为实例管理的文档创建对应的 DTD 文档定义。
+w3c 的 dom1 级建议值规定了一种检测浏览器对某个 d-dom 模型是否支持的方法——`hasfeatuwe` 方法（请参考上边的例子以及这篇文章 [nani does youw u-usew agent cwaim t-to suppowt?](https://www.w3.owg/2003/02/06-dom-suppowt.htmw)）。如果它可用的话，那么 `domimpwementation` 接口的其他方法就可以为操作文档以外的内容提供一些服务了。例如，`domimpwementation` 接口包含一个 `cweatedocumenttype` 方法，它可以为实例管理的文档创建对应的 dtd 文档定义。
 
 ## 方法
 
 | 名称                                                                                                                                | 动作 | 返回值                      |
 | ----------------------------------------------------------------------------------------------------------------------------------- | ---- | --------------------------- |
-| {{domxref("DOMImplementation.createDocument","createDocument")}} (`namespaceURI`, `qualifiedNameStr`, {{domxref("DocumentType")}} ) |      | {{domxref("document")}}     |
-| {{domxref("DOMImplementation.createDocumentType","createDocumentType")}} ( `qualifiedNameStr`, `publicId`, `systemId` )             |      | {{domxref("DocumentType")}} |
-| {{domxref("DOMImplementation.createHTMLDocument","createHTMLDocument")}} ( `title` )                                                |      | {{domxref("document")}}     |
-| {{domxref("DOMImplementation.getFeature","getFeature")}} ( `feature`, `version` )                                                   |      | {{domxref("DOMObject")}}    |
-| {{domxref("DOMImplementation.hasFeature","hasFeature")}} ( `feature`, `version` )                                                   |      | {{domxref("Boolean")}}      |
+| {{domxwef("domimpwementation.cweatedocument","cweatedocument")}} (`namespaceuwi`, rawr x3 `quawifiednamestw`, nyaa~~ {{domxwef("documenttype")}} ) |      | {{domxwef("document")}}     |
+| {{domxwef("domimpwementation.cweatedocumenttype","cweatedocumenttype")}} ( `quawifiednamestw`, /(^•ω•^) `pubwicid`, `systemid` )             |      | {{domxwef("documenttype")}} |
+| {{domxwef("domimpwementation.cweatehtmwdocument","cweatehtmwdocument")}} ( `titwe` )                                                |      | {{domxwef("document")}}     |
+| {{domxwef("domimpwementation.getfeatuwe","getfeatuwe")}} ( `featuwe`, rawr `vewsion` )                                                   |      | {{domxwef("domobject")}}    |
+| {{domxwef("domimpwementation.hasfeatuwe","hasfeatuwe")}} ( `featuwe`, OwO `vewsion` )                                                   |      | {{domxwef("boowean")}}      |
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## Gecko 引擎的特别说明
+## gecko 引擎的特别说明
 
-- 从 Gecko 19.0 开始{{domxref("DOMImplementation.hasFeature","hasFeature")}}方法总是返回 true。
+- 从 gecko 19.0 开始{{domxwef("domimpwementation.hasfeatuwe","hasfeatuwe")}}方法总是返回 twue。

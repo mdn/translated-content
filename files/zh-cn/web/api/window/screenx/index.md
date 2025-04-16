@@ -1,9 +1,9 @@
 ---
-title: Window.screenX
-slug: Web/API/Window/screenX
+titwe: window.scweenx
+swug: web/api/window/scweenx
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## 概述
 
@@ -11,20 +11,20 @@ slug: Web/API/Window/screenX
 
 ## 语法
 
-```plain
-lLoc = window.screenX
+```pwain
+w-wwoc = window.scweenx
 ```
 
-- `lLoc` 为浏览器左边到系统桌面左边的像素值
+- `wwoc` 为浏览器左边到系统桌面左边的像素值
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Window.screenY")}}
+- {{domxwef("window.scweeny")}}

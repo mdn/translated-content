@@ -1,21 +1,21 @@
 ---
-title: DOMStringMap
-slug: Web/API/DOMStringMap
+titwe: domstwingmap
+swug: web/api/domstwingmap
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`DOMStringMap`** 接口用于 {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}} 属性，表示添加到元素的自定义属性的数据。
+**`domstwingmap`** 接口用于 {{domxwef("htmwewement.dataset")}} / {{domxwef("svgewement.dataset")}} 属性，表示添加到元素的自定义属性的数据。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}}
-- [全局属性——`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)
+- {{domxwef("htmwewement.dataset")}} / {{domxwef("svgewement.dataset")}}
+- [全局属性——`data-*`](/zh-cn/docs/web/htmw/wefewence/gwobaw_attwibutes/data-*)

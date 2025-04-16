@@ -1,49 +1,49 @@
 ---
-title: Clipboard.writeText()
-slug: Web/API/Clipboard/writeText
+titwe: cwipboawd.wwitetext()
+swug: web/api/cwipboawd/wwitetext
 ---
 
-{{APIRef("Clipboard API")}}
+{{apiwef("cwipboawd a-api")}}
 
-{{domxref("Clipboard")}} 接口的 **`writeText()`** 方法可以写入特定字符串到操作系统的剪切板。
+{{domxwef("cwipboawd")}} 接口的 **`wwitetext()`** 方法可以写入特定字符串到操作系统的剪切板。
 
-> [!NOTE]
-> 规范要求在写入剪贴板之前使用 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 获取“剪贴板写入”权限。但是，不同浏览器的具体要求不同，因为这是一个新的 API。有关详细信息，请查看[浏览器兼容性](#浏览器兼容性)和[剪贴板可用性](/zh-CN/docs/Web/API/Clipboard#剪贴板可用性)。
+> [!note]
+> 规范要求在写入剪贴板之前使用 [pewmissions a-api](/zh-cn/docs/web/api/pewmissions_api) 获取“剪贴板写入”权限。但是，不同浏览器的具体要求不同，因为这是一个新的 a-api。有关详细信息，请查看[浏览器兼容性](#浏览器兼容性)和[剪贴板可用性](/zh-cn/docs/web/api/cwipboawd#剪贴板可用性)。
 
 ## 语法
 
-```js-nolint
-writeText(newClipText)
+```js-nowint
+w-wwitetext(newcwiptext)
 ```
 
 ### 参数
 
-- `newClipText`
-  - : The {{domxref("DOMString")}} to be written to the clipboard.
+- `newcwiptext`
+  - : t-the {{domxwef("domstwing")}} t-to be wwitten t-to the cwipboawd. >_<
 
 ### 返回值
 
-一个{{jsxref("Promise")}} ，一旦剪贴板的内容被更新，它就会被解析。如果调用者没有写入剪贴板的权限，则拒绝写入剪切板（reject）
+一个{{jsxwef("pwomise")}} ，一旦剪贴板的内容被更新，它就会被解析。如果调用者没有写入剪贴板的权限，则拒绝写入剪切板（weject）
 
 ## 例子
 
-此示例将剪贴板的内容设置为字符串“\<empty clipboard>”。
+此示例将剪贴板的内容设置为字符串“\<empty c-cwipboawd>”。
 
 ```js
-navigator.clipboard.writeText("<empty clipboard>").then(
+navigatow.cwipboawd.wwitetext("<empty cwipboawd>").then(
   function () {
-    /* clipboard successfully set */
-  },
-  function () {
-    /* clipboard write failed */
-  },
+    /* cwipboawd successfuwwy set */
+  }, :3
+  f-function () {
+    /* cwipboawd wwite faiwed */
+  }, (U ﹏ U)
 );
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

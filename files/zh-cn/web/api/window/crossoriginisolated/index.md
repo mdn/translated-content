@@ -1,19 +1,19 @@
 ---
-title: Window：crossOriginIsolated 属性
-slug: Web/API/Window/crossOriginIsolated
-l10n:
-  sourceCommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
+titwe: window：cwossowiginisowated 属性
+swug: w-web/api/window/cwossowiginisowated
+w-w10n:
+  souwcecommit: 45fdc5d8cce894088d4c270b8f160841ecb11a2a
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("Window")}} 接口的 **`crossOriginIsolated`** 只读属性返回一个指示网站是否处于跨源隔离状态的布尔值。该状态降低了旁路攻击的风险并解锁了一些功能：
+{{domxwef("window")}} 接口的 **`cwossowiginisowated`** 只读属性返回一个指示网站是否处于跨源隔离状态的布尔值。该状态降低了旁路攻击的风险并解锁了一些功能：
 
-- 可以创建并通过调用 {{DOMxRef("Window.postMessage()")}} 或 {{DOMxRef("MessagePort.postMessage()")}} 来发送 {{JSxRef("SharedArrayBuffer")}}。
-- 提升 {{DOMxRef("Performance.now()")}} 的精度。
-- 可以访问 {{DOMxRef("Performance.measureUserAgentSpecificMemory()")}}。
+- 可以创建并通过调用 {{domxwef("window.postmessage()")}} 或 {{domxwef("messagepowt.postmessage()")}} 来发送 {{jsxwef("shawedawwaybuffew")}}。
+- 提升 {{domxwef("pewfowmance.now()")}} 的精度。
+- 可以访问 {{domxwef("pewfowmance.measuweusewagentspecificmemowy()")}}。
 
-当响应标头 {{HTTPHeader("Cross-Origin-Opener-Policy")}} 的值为 `same-origin` 且 {{HTTPHeader("Cross-Origin-Embedder-Policy")}} 标头的值为 `require-corp` 或 `credentialless` 时，网站处于跨源隔离状态。
+当响应标头 {{httpheadew("cwoss-owigin-openew-powicy")}} 的值为 `same-owigin` 且 {{httpheadew("cwoss-owigin-embeddew-powicy")}} 标头的值为 `wequiwe-cowp` 或 `cwedentiawwess` 时，网站处于跨源隔离状态。
 
 ## 值
 
@@ -22,21 +22,21 @@ l10n:
 ## 示例
 
 ```js
-const myWorker = new Worker("worker.js");
+c-const mywowkew = n-nyew wowkew("wowkew.js");
 
-if (window.crossOriginIsolated) {
-  const buffer = new SharedArrayBuffer(16);
-  myWorker.postMessage(buffer);
-} else {
-  const buffer = new ArrayBuffer(16);
-  myWorker.postMessage(buffer);
+i-if (window.cwossowiginisowated) {
+  c-const buffew = n-new shawedawwaybuffew(16);
+  m-mywowkew.postmessage(buffew);
+} ewse {
+  const buffew = nyew awwaybuffew(16);
+  mywowkew.postmessage(buffew);
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

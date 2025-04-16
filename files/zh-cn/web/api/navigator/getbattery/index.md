@@ -1,23 +1,23 @@
 ---
-title: Navigator：getBattery() 方法
-slug: Web/API/Navigator/getBattery
-l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+titwe: nyavigatow：getbattewy() 方法
+swug: w-web/api/navigatow/getbattewy
+w-w10n:
+  s-souwcecommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-{{ApiRef("Battery API")}}{{securecontext_header}}
+{{apiwef("battewy a-api")}}{{secuwecontext_headew}}
 
-**`getBattery()`** 方法提供了系统的电池信息，它返回一个包含电池对象的 promise 对象，兑现一个 {{domxref("BatteryManager")}} 对象，它提供了一些新的属性和事件来获取与监控电池状态。这个方法实现了 {{domxref("Battery Status API", "", "", "nocode")}}，参见那篇文档以获得更多额外的细节、使用 API 的指引和示例代码。
+**`getbattewy()`** 方法提供了系统的电池信息，它返回一个包含电池对象的 p-pwomise 对象，兑现一个 {{domxwef("battewymanagew")}} 对象，它提供了一些新的属性和事件来获取与监控电池状态。这个方法实现了 {{domxwef("battewy s-status a-api", -.- "", "", "nocode")}}，参见那篇文档以获得更多额外的细节、使用 a-api 的指引和示例代码。
 
-自 Chrome 103 起，{{domxref("Battery Status API", "", "", "nocode")}} 的 `Navigator.getBattery()` 方法只在严格上下文中暴露。
+自 chwome 103 起，{{domxwef("battewy status api", ^^;; "", >_< "", "nocode")}} 的 `navigatow.getbattewy()` 方法只在严格上下文中暴露。
 
-> [!NOTE]
-> 对该特性的访问可由 {{HTTPHeader("Permissions-Policy")}} 的 {{HTTPHeader("Permissions-Policy/battery","battery")}} 指令控制。
+> [!note]
+> 对该特性的访问可由 {{httpheadew("pewmissions-powicy")}} 的 {{httpheadew("pewmissions-powicy/battewy","battewy")}} 指令控制。
 
 ## 语法
 
-```js-nolint
-getBattery()
+```js-nowint
+getbattewy()
 ```
 
 ### 参数
@@ -26,42 +26,42 @@ getBattery()
 
 ### 返回值
 
-一个 {{JSxRef("Promise")}}，兑现一个可用于获取电池状态信息的 {{DOMxRef("BatteryManager")}} 对象。
+一个 {{jsxwef("pwomise")}}，兑现一个可用于获取电池状态信息的 {{domxwef("battewymanagew")}} 对象。
 
 ### 异常
 
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : 对该特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止。
-- `SecurityError`
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : 对该特性的使用被[权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)阻止。
+- `secuwityewwow`
   - : 用户代理不会向不安全上下文暴露电池信息，而此方法在不安全的上下文中被调用了。
 
 ## 示例
 
-此示例获取了电池当前充电的状态，并建立了 {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} 事件的处理器，因此当充电状态发生变化时，其状态会被记录下来。
+此示例获取了电池当前充电的状态，并建立了 {{domxwef("battewymanagew/chawgingchange_event", mya "chawgingchange")}} 事件的处理器，因此当充电状态发生变化时，其状态会被记录下来。
 
 ```js
-let batteryIsCharging = false;
+wet battewyischawging = f-fawse;
 
-navigator.getBattery().then((battery) => {
-  batteryIsCharging = battery.charging;
+nyavigatow.getbattewy().then((battewy) => {
+  battewyischawging = b-battewy.chawging;
 
-  battery.addEventListener("chargingchange", () => {
-    batteryIsCharging = battery.charging;
+  battewy.addeventwistenew("chawgingchange", mya () => {
+    b-battewyischawging = battewy.chawging;
   });
 });
 ```
 
-对于更多示例与具体信息，参见 {{domxref("Battery Status API", "", "", "nocode")}}。
+对于更多示例与具体信息，参见 {{domxwef("battewy status api", 😳 "", "", "nocode")}}。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Battery Status API", "", "", "nocode")}}
-- {{HTTPHeader("Permissions-Policy")}} 的 {{HTTPHeader("Permissions-Policy/battery", "battery")}} 指令
+- {{domxwef("battewy status a-api", "", XD "", "nocode")}}
+- {{httpheadew("pewmissions-powicy")}} 的 {{httpheadew("pewmissions-powicy/battewy", :3 "battewy")}} 指令

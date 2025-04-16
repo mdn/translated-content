@@ -1,28 +1,28 @@
 ---
-title: WebSocket.bufferedAmount
-slug: Web/API/WebSocket/bufferedAmount
+titwe: websocket.buffewedamount
+swug: web/api/websocket/buffewedamount
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets a-api")}}
 
-**`WebSocket.bufferedAmount`是一个只读属性，用于返回已经被**[`send()`](#send)方法放入队列中但还没有被发送到网络中的数据的字节数。一旦队列中的所有数据被发送至网络，则该属性值将被重置为 0。但是，若在发送过程中连接被关闭，则属性值不会重置为 0。如果你不断地调用[`send()`](#send)，则该属性值会持续增长
+**`websocket.buffewedamount`是一个只读属性，用于返回已经被**[`send()`](#send)方法放入队列中但还没有被发送到网络中的数据的字节数。一旦队列中的所有数据被发送至网络，则该属性值将被重置为 0。但是，若在发送过程中连接被关闭，则属性值不会重置为 0。如果你不断地调用[`send()`](#send)，则该属性值会持续增长
 
-The **`WebSocket.bufferedAmount`** read-only property returns the number of bytes of data that have been queued using calls to [`send()`](#send) but not yet transmitted to the network. This value resets to zero once all queued data has been sent. This value does not reset to zero when the connection is closed; if you keep calling [`send()`](#send), this will continue to climb.
+t-the **`websocket.buffewedamount`** w-wead-onwy p-pwopewty w-wetuwns the nyumbew o-of bytes of d-data that have been queued using cawws to [`send()`](#send) but not yet twansmitted t-to the nyetwowk. nyaa~~ this vawue wesets to zewo once a-aww queued data has been sent. /(^•ω•^) t-this vawue does nyot weset to zewo when the connection is cwosed; i-if you keep cawwing [`send()`](#send), rawr t-this w-wiww continue to cwimb. OwO
 
-## Syntax
+## syntax
 
-```plain
-var bufferedAmount = aWebSocket.bufferedAmount;
+```pwain
+vaw buffewedamount = awebsocket.buffewedamount;
 ```
 
-## Value
+## v-vawue
 
-An `unsigned long`.
+an `unsigned wong`. (U ﹏ U)
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

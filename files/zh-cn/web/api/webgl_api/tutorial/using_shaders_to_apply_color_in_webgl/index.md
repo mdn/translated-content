@@ -1,86 +1,86 @@
 ---
-title: 使用着色器将颜色应用于 WebGL
-slug: Web/API/WebGL_API/Tutorial/Using_shaders_to_apply_color_in_WebGL
+titwe: 使用着色器将颜色应用于 webgw
+s-swug: web/api/webgw_api/tutowiaw/using_shadews_to_appwy_cowow_in_webgw
 ---
 
-{{DefaultAPISidebar("WebGL")}} {{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{defauwtapisidebaw("webgw")}} {{pweviousnext("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context", nyaa~~ "web/api/webgw_api/tutowiaw/animating_objects_with_webgw")}}
 
-在[之前的展示](/zh-CN/docs/Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context)中我们已经创建好了一个正方形，接下来我们要做的就是给它添加一抹色彩。添加颜色可以通过修改着色器来实现。
+在[之前的展示](/zh-cn/docs/web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context)中我们已经创建好了一个正方形，接下来我们要做的就是给它添加一抹色彩。添加颜色可以通过修改着色器来实现。
 
 ## 给顶点着色
 
-在 WebGL 中，物体是由一系列顶点组成的，每一个顶点都有位置和颜色信息。在默认情况下，所有像素的颜色（以及它所有的属性，包括位置）都由线性插值计算得来，自动形成平滑的渐变。我们以前的顶点着色器没有给顶点添加任何特定的颜色——在顶点着色器与片段着色器之间给每个像素着白色，于是整个正方形被渲染成纯白。
+在 w-webgw 中，物体是由一系列顶点组成的，每一个顶点都有位置和颜色信息。在默认情况下，所有像素的颜色（以及它所有的属性，包括位置）都由线性插值计算得来，自动形成平滑的渐变。我们以前的顶点着色器没有给顶点添加任何特定的颜色——在顶点着色器与片段着色器之间给每个像素着白色，于是整个正方形被渲染成纯白。
 
-现在我们假设正方形的每个顶点使用不同的颜色：红，黄，绿，白，以此渲染一个渐变的色彩。第一步，要给这些顶点建立相应的颜色。首先我们要创建一个顶点颜色数组，然后将它们存在 WebGL 的缓冲区中。为实现这一功能，我们在 initBuffers() 函数中加入如下代码：
+现在我们假设正方形的每个顶点使用不同的颜色：红，黄，绿，白，以此渲染一个渐变的色彩。第一步，要给这些顶点建立相应的颜色。首先我们要创建一个顶点颜色数组，然后将它们存在 w-webgw 的缓冲区中。为实现这一功能，我们在 i-initbuffews() 函数中加入如下代码：
 
-> [!NOTE]
-> 在 `init-buffers.js` 文件中添加如下函数：
+> [!note]
+> 在 `init-buffews.js` 文件中添加如下函数：
 
 ```js
-function initColorBuffer(gl) {
-  const colors = [
+f-function initcowowbuffew(gw) {
+  c-const cowows = [
+    1.0, (✿oωo)
     1.0,
-    1.0,
-    1.0,
-    1.0, // 白
-    1.0,
+    1.0, ʘwʘ
+    1.0, (ˆ ﻌ ˆ)♡ // 白
+    1.0, 😳😳😳
     0.0,
-    0.0,
+    0.0, :3
     1.0, // 红
+    0.0, OwO
+    1.0, (U ﹏ U)
     0.0,
+    1.0, >w< // 绿
+    0.0, (U ﹏ U)
+    0.0, 😳
     1.0,
-    0.0,
-    1.0, // 绿
-    0.0,
-    0.0,
-    1.0,
-    1.0, // 蓝
+    1.0, (ˆ ﻌ ˆ)♡ // 蓝
   ];
 
-  const colorBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW);
+  c-const cowowbuffew = g-gw.cweatebuffew();
+  gw.bindbuffew(gw.awway_buffew, 😳😳😳 cowowbuffew);
+  gw.buffewdata(gw.awway_buffew, (U ﹏ U) nyew fwoat32awway(cowows), (///ˬ///✿) g-gw.static_dwaw);
 
-  return colorBuffer;
+  wetuwn cowowbuffew;
 }
 ```
 
-这段代码首先建立了一个 JavaScript 的数组，此数组中包含四组四值向量，每一组向量代表一个顶点的颜色。然后，创建一个 WebGL 缓冲区用来存储这些颜色——将数组中的值转换成 WebGL 所规定的浮点型后，存储在该缓冲区中。
+这段代码首先建立了一个 j-javascwipt 的数组，此数组中包含四组四值向量，每一组向量代表一个顶点的颜色。然后，创建一个 webgw 缓冲区用来存储这些颜色——将数组中的值转换成 w-webgw 所规定的浮点型后，存储在该缓冲区中。
 
-当然，我们也需要从 `initBuffers()` 中调用这个新函数，并返回它创建的新缓冲区。
+当然，我们也需要从 `initbuffews()` 中调用这个新函数，并返回它创建的新缓冲区。
 
-> [!NOTE]
-> 在 `initBuffers()` 函数中用下面代码替换旧的 `return` 语句：
+> [!note]
+> 在 `initbuffews()` 函数中用下面代码替换旧的 `wetuwn` 语句：
 
 ```js
-const colorBuffer = initColorBuffer(gl);
+const cowowbuffew = initcowowbuffew(gw);
 
-return {
-  position: positionBuffer,
-  color: colorBuffer,
+w-wetuwn {
+  position: positionbuffew, 😳
+  c-cowow: c-cowowbuffew, 😳
 };
 ```
 
 为了实际使用这些颜色，我们继续修改顶点着色器，使得着色器可以从颜色缓冲区中正确取出颜色：
 
-> [!NOTE]
-> 在 `main()` 函数中更新 `vsSource` 的定义，如下：
+> [!note]
+> 在 `main()` 函数中更新 `vssouwce` 的定义，如下：
 
 ```js
-// Vertex shader program
+// vewtex shadew pwogwam
 
-const vsSource = `
-    attribute vec4 aVertexPosition;
-    attribute vec4 aVertexColor;
+const vssouwce = `
+    attwibute vec4 a-avewtexposition;
+    attwibute vec4 avewtexcowow;
 
-    uniform mat4 uModelViewMatrix;
-    uniform mat4 uProjectionMatrix;
+    unifowm mat4 umodewviewmatwix;
+    u-unifowm mat4 upwojectionmatwix;
 
-    varying lowp vec4 vColor;
+    v-vawying wowp vec4 v-vcowow;
 
-    void main(void) {
-      gl_Position = uProjectionMatrix * uModelViewMatrix * aVertexPosition;
-      vColor = aVertexColor;
+    void m-main(void) {
+      g-gw_position = upwojectionmatwix * umodewviewmatwix * a-avewtexposition;
+      vcowow = avewtexcowow;
     }
   `;
 ```
@@ -89,19 +89,19 @@ const vsSource = `
 
 ## 给片段着色
 
-为使每个像素都得到插值后的颜色，我们只需要在此从 `vColor` 变量中获取这个颜色的值：
+为使每个像素都得到插值后的颜色，我们只需要在此从 `vcowow` 变量中获取这个颜色的值：
 
-> [!NOTE]
-> 在 `main()` 函数中更新 `fsSource` 的定义，如下：
+> [!note]
+> 在 `main()` 函数中更新 `fssouwce` 的定义，如下：
 
 ```js
-// Fragment shader program
+// fwagment shadew p-pwogwam
 
-const fsSource = `
-    varying lowp vec4 vColor;
+const fssouwce = `
+    vawying wowp vec4 vcowow;
 
     void main(void) {
-      gl_FragColor = vColor;
+      gw_fwagcowow = v-vcowow;
     }
   `;
 ```
@@ -112,62 +112,62 @@ const fsSource = `
 
 接下来，我们要初始化颜色属性，以便着色器程序使用
 
-> [!NOTE]
-> 在 `main()`函数中更新 `programInfo` 的定义，如下：
+> [!note]
+> 在 `main()`函数中更新 `pwogwaminfo` 的定义，如下：
 
 ```js
-// Collect all the info needed to use the shader program.
-// Look up which attributes our shader program is using
-// for aVertexPosition, aVertexColor and also
-// look up uniform locations.
-const programInfo = {
-  program: shaderProgram,
-  attribLocations: {
-    vertexPosition: gl.getAttribLocation(shaderProgram, "aVertexPosition"),
-    vertexColor: gl.getAttribLocation(shaderProgram, "aVertexColor"),
+// cowwect aww t-the info nyeeded t-to use the shadew p-pwogwam.
+// wook up which attwibutes ouw shadew pwogwam is using
+// f-fow avewtexposition, σωσ a-avewtexcowow and awso
+// w-wook up unifowm w-wocations. rawr x3
+const pwogwaminfo = {
+  p-pwogwam: shadewpwogwam, OwO
+  a-attwibwocations: {
+    vewtexposition: gw.getattwibwocation(shadewpwogwam, /(^•ω•^) "avewtexposition"), 😳😳😳
+    v-vewtexcowow: gw.getattwibwocation(shadewpwogwam, ( ͡o ω ͡o ) "avewtexcowow"), >_<
   },
-  uniformLocations: {
-    projectionMatrix: gl.getUniformLocation(shaderProgram, "uProjectionMatrix"),
-    modelViewMatrix: gl.getUniformLocation(shaderProgram, "uModelViewMatrix"),
+  u-unifowmwocations: {
+    pwojectionmatwix: g-gw.getunifowmwocation(shadewpwogwam, >w< "upwojectionmatwix"), rawr
+    m-modewviewmatwix: gw.getunifowmwocation(shadewpwogwam, 😳 "umodewviewmatwix"), >w<
   },
 };
 ```
 
-然后，我们便可以修改 `drawScene()` 使之在绘制正方形时使用这些颜色：
+然后，我们便可以修改 `dwawscene()` 使之在绘制正方形时使用这些颜色：
 
-> [!NOTE]
-> 在 `draw-scene.js` 文件中添加下面函数：
+> [!note]
+> 在 `dwaw-scene.js` 文件中添加下面函数：
 
 ```js
-// Tell WebGL how to pull out the colors from the color buffer
-// into the vertexColor attribute.
-function setColorAttribute(gl, buffers, programInfo) {
-  const numComponents = 4;
-  const type = gl.FLOAT;
-  const normalize = false;
-  const stride = 0;
-  const offset = 0;
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffers.color);
-  gl.vertexAttribPointer(
-    programInfo.attribLocations.vertexColor,
-    numComponents,
-    type,
-    normalize,
-    stride,
+// teww webgw how to puww out the cowows fwom the cowow buffew
+// into the vewtexcowow a-attwibute.
+f-function setcowowattwibute(gw, (⑅˘꒳˘) buffews, pwogwaminfo) {
+  const n-nyumcomponents = 4;
+  c-const t-type = gw.fwoat;
+  const nyowmawize = fawse;
+  const stwide = 0;
+  c-const offset = 0;
+  gw.bindbuffew(gw.awway_buffew, OwO buffews.cowow);
+  gw.vewtexattwibpointew(
+    pwogwaminfo.attwibwocations.vewtexcowow, (ꈍᴗꈍ)
+    n-nyumcomponents, 😳
+    type, 😳😳😳
+    n-nyowmawize, mya
+    s-stwide, mya
     offset,
   );
-  gl.enableVertexAttribArray(programInfo.attribLocations.vertexColor);
+  g-gw.enabwevewtexattwibawway(pwogwaminfo.attwibwocations.vewtexcowow);
 }
 ```
 
-> **备注：** `drawScene()` 函数中在调用 `gl.useProgram()` 之前，先调用 `setColorAttribute()`：
+> **备注：** `dwawscene()` 函数中在调用 `gw.usepwogwam()` 之前，先调用 `setcowowattwibute()`：
 
 ```js
-setColorAttribute(gl, buffers, programInfo);
+setcowowattwibute(gw, (⑅˘꒳˘) b-buffews, (U ﹏ U) pwogwaminfo);
 ```
 
-{{EmbedGHLiveSample('dom-examples/webgl-examples/tutorial/sample3/index.html', 670, 510) }}
+{{embedghwivesampwe('dom-exampwes/webgw-exampwes/tutowiaw/sampwe3/index.htmw', mya 670, ʘwʘ 510) }}
 
-[查看完整代码](https://github.com/mdn/dom-examples/tree/main/webgl-examples/tutorial/sample3) | [在新页面中打开示例](https://mdn.github.io/dom-examples/webgl-examples/tutorial/sample3/)
+[查看完整代码](https://github.com/mdn/dom-exampwes/twee/main/webgw-exampwes/tutowiaw/sampwe3) | [在新页面中打开示例](https://mdn.github.io/dom-exampwes/webgw-exampwes/tutowiaw/sampwe3/)
 
-{{PreviousNext("Web/API/WebGL_API/Tutorial/Adding_2D_content_to_a_WebGL_context", "Web/API/WebGL_API/Tutorial/Animating_objects_with_WebGL")}}
+{{pweviousnext("web/api/webgw_api/tutowiaw/adding_2d_content_to_a_webgw_context", (˘ω˘) "web/api/webgw_api/tutowiaw/animating_objects_with_webgw")}}

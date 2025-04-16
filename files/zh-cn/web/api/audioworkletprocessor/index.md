@@ -1,100 +1,100 @@
 ---
-title: AudioWorkletProcessor
-slug: Web/API/AudioWorkletProcessor
+titwe: audiowowkwetpwocessow
+swug: web/api/audiowowkwetpwocessow
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-[Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)的 **`AudioWorkletProcessor`** 接口代表了一个 自定义的音频处理代码 {{domxref("AudioWorkletNode")}}. 它身处于 {{domxref("AudioWorkletGlobalScope")}} 并运行在 Web Audio rendering 线程上。同时，一个建立在其基础上的 {{domxref("AudioWorkletNode")}} 运行在主线程上。
+[web a-audio a-api](/zh-cn/docs/web/api/web_audio_api)的 **`audiowowkwetpwocessow`** 接口代表了一个 自定义的音频处理代码 {{domxwef("audiowowkwetnode")}}. σωσ 它身处于 {{domxwef("audiowowkwetgwobawscope")}} 并运行在 web a-audio wendewing 线程上。同时，一个建立在其基础上的 {{domxwef("audiowowkwetnode")}} 运行在主线程上。
 
 ## 构造函数
 
-> **备注：** `AudioWorkletProcessor` 及其子类不能通过用户提供的代码直接实例化。它们只能随着与之相联系的 {{domxref("AudioWorkletNode")}} 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此你可以执行自定义的初始化过程——详细信息请参见构造函数页面。
+> **备注：** `audiowowkwetpwocessow` 及其子类不能通过用户提供的代码直接实例化。它们只能随着与之相联系的 {{domxwef("audiowowkwetnode")}} 的创建而被其创建再内部。其子类的构造函数将被一个可选对象调用，因此你可以执行自定义的初始化过程——详细信息请参见构造函数页面。
 
-- {{domxref("AudioWorkletProcessor.AudioWorkletProcessor", "AudioWorkletProcessor()")}}
-  - : 创建一个 `AudioWorkletProcessor` 对象的新实例。
+- {{domxwef("audiowowkwetpwocessow.audiowowkwetpwocessow", "audiowowkwetpwocessow()")}}
+  - : 创建一个 `audiowowkwetpwocessow` 对象的新实例。
 
 ## 属性
 
-- {{domxref("AudioWorkletProcessor.port", "port")}} {{readonlyinline}}
-  - : 返回一个用于在处理程序和其所属的{{domxref("AudioWorkletNode")}}间双向通信的 {{domxref("MessagePort")}} 。另一端 可通过该节点的{{domxref("AudioWorkletNode.port", "port")}} 属性使用。
+- {{domxwef("audiowowkwetpwocessow.powt", rawr x3 "powt")}} {{weadonwyinwine}}
+  - : 返回一个用于在处理程序和其所属的{{domxwef("audiowowkwetnode")}}间双向通信的 {{domxwef("messagepowt")}} 。另一端 可通过该节点的{{domxwef("audiowowkwetnode.powt", OwO "powt")}} 属性使用。
 
 ## 方法
 
-_`AudioWorkletProcessor` 接口没有定义任何自己的方法。但是，你必须提供一个 {{domxref("AudioWorkletProcessor.process", "process()")}} 方法，用以处理音频流。_
+_`audiowowkwetpwocessow` 接口没有定义任何自己的方法。但是，你必须提供一个 {{domxwef("audiowowkwetpwocessow.pwocess", /(^•ω•^) "pwocess()")}} 方法，用以处理音频流。_
 
 ## 事件
 
-_`AudioWorkletProcessor` 接口不响应任何事件。_
+_`audiowowkwetpwocessow` 接口不响应任何事件。_
 
 ## 使用说明
 
-### Deriving classes
+### d-dewiving cwasses
 
-要自定义音频处理代码，你必须从`AudioWorkletProcessor` 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxref("AudioWorkletProcessor.process", "process")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxref("AudioParam")}}s (如果它们刚被定义了) 的计算值作为参数。你可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。
+要自定义音频处理代码，你必须从`audiowowkwetpwocessow` 接口派生一个类。这个派生类必须具有在该接口中不曾定义的{{domxwef("audiowowkwetpwocessow.pwocess", 😳😳😳 "pwocess")}} 方法。该方法将被每个含有 128 样本帧的块调用并且接受输入和输出数组以及自定义的{{domxwef("audiopawam")}}s (如果它们刚被定义了) 的计算值作为参数。你可以使用输入和 音频参数值去填充输出数组，这是默认的用于使输出静音。
 
-Optionally, if you want custom {{domxref("AudioParam")}}s on your node, you can supply a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} property as a _static getter_ on the processor. The array of {{domxref("AudioParamDescriptor")}}-based objects returned is used internally to create the {{domxref("AudioParam")}}s during the instantiation of the `AudioWorkletNode`.
+optionawwy, ( ͡o ω ͡o ) i-if you w-want custom {{domxwef("audiopawam")}}s o-on youw nyode, >_< you can suppwy a {{domxwef("audiowowkwetpwocessow.pawametewdescwiptows", >w< "pawametewdescwiptows")}} pwopewty as a _static g-gettew_ on the pwocessow. rawr the awway of {{domxwef("audiopawamdescwiptow")}}-based o-objects wetuwned is used intewnawwy t-to cweate the {{domxwef("audiopawam")}}s duwing the instantiation of the `audiowowkwetnode`. 😳
 
-The resulting `AudioParam`s reside in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node and can be automated using standard methods such as [`linearRampToValueAtTime`](/zh-CN/docs/Web/API/AudioParam/linearRampToValueAtTime). Their calculated values will be passed into the {{domxref("AudioWorkletProcessor.process", "process()")}} method of the processor for you to shape the node output accordingly.
+t-the wesuwting `audiopawam`s weside in the {{domxwef("audiowowkwetnode.pawametews", >w< "pawametews")}} p-pwopewty o-of the nyode and can be automated using standawd methods such as [`wineawwamptovawueattime`](/zh-cn/docs/web/api/audiopawam/wineawwamptovawueattime). (⑅˘꒳˘) theiw cawcuwated v-vawues wiww be passed into the {{domxwef("audiowowkwetpwocessow.pwocess", OwO "pwocess()")}} method of the pwocessow fow you t-to shape the nyode output accowdingwy. (ꈍᴗꈍ)
 
 ### 处理音频
 
 一个创建自定义音频处理算法的步骤的实例：
 
-1. 创建一个独立的文件;
-2. 在这个文件中：
+1. 😳 创建一个独立的文件;
+2. 😳😳😳 在这个文件中：
 
-   1. Extend the `AudioWorkletProcessor` class (see ["Deriving classes" section](#deriving_classes)) and supply your own {{domxref("AudioWorkletProcessor.process", "process()")}} method in it;
-   2. Register the processor using {{domxref("AudioWorkletGlobalScope.registerProcessor()")}} method;
+   1. mya e-extend the `audiowowkwetpwocessow` c-cwass (see ["dewiving c-cwasses" section](#dewiving_cwasses)) a-and suppwy youw own {{domxwef("audiowowkwetpwocessow.pwocess", mya "pwocess()")}} method in it;
+   2. (⑅˘꒳˘) w-wegistew the pwocessow using {{domxwef("audiowowkwetgwobawscope.wegistewpwocessow()")}} m-method;
 
-3. Load the file using {{domxref("Worklet.addModule", "addModule()")}} method on your audio context's {{domxref("BaseAudioContext.audioWorklet", "audioWorklet")}} property;
-4. Create an {{domxref("AudioWorkletNode")}} based on the processor. The processor will be instantiated internally by the `AudioWorkletNode` constructor.
-5. Connect the node to the other nodes.
+3. (U ﹏ U) woad the fiwe using {{domxwef("wowkwet.addmoduwe", mya "addmoduwe()")}} method on youw audio context's {{domxwef("baseaudiocontext.audiowowkwet", ʘwʘ "audiowowkwet")}} pwopewty;
+4. (˘ω˘) cweate a-an {{domxwef("audiowowkwetnode")}} based on the p-pwocessow. (U ﹏ U) the p-pwocessow wiww be i-instantiated intewnawwy by the `audiowowkwetnode` constwuctow. ^•ﻌ•^
+5. connect the n-nyode to the othew n-nodes. (˘ω˘)
 
 ## 例子
 
-In the example below we create a custom {{domxref("AudioWorkletNode")}} that outputs white noise.
+in the exampwe b-bewow we cweate a-a custom {{domxwef("audiowowkwetnode")}} that o-outputs white nyoise. :3
 
-First, we need to define a custom `AudioWorkletProcessor`, which will output white noise, and register it. Note that this should be done in a separate file.
+fiwst, w-we need to define a custom `audiowowkwetpwocessow`, ^^;; which wiww o-output white nyoise, 🥺 and wegistew i-it. (⑅˘꒳˘) nyote that this shouwd be d-done in a sepawate f-fiwe. nyaa~~
 
 ```js
-// white-noise-processor.js
-class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  process(inputs, outputs, parameters) {
-    const output = outputs[0];
-    output.forEach((channel) => {
-      for (let i = 0; i < channel.length; i++) {
-        channel[i] = Math.random() * 2 - 1;
+// white-noise-pwocessow.js
+cwass whitenoisepwocessow extends audiowowkwetpwocessow {
+  pwocess(inputs, outputs, :3 p-pawametews) {
+    c-const output = outputs[0];
+    o-output.foweach((channew) => {
+      f-fow (wet i = 0; i-i < channew.wength; i++) {
+        channew[i] = math.wandom() * 2 - 1;
       }
     });
-    return true;
+    w-wetuwn twue;
   }
 }
 
-registerProcessor("white-noise-processor", WhiteNoiseProcessor);
+wegistewpwocessow("white-noise-pwocessow", ( ͡o ω ͡o ) whitenoisepwocessow);
 ```
 
-Next, in our main script file we'll load the processor, create an instance of {{domxref("AudioWorkletNode")}}, passing it the name of the processor, then connect the node to an audio graph.
+nyext, mya in ouw main scwipt f-fiwe we'ww woad the pwocessow, (///ˬ///✿) c-cweate an instance o-of {{domxwef("audiowowkwetnode")}}, (˘ω˘) p-passing it the nyame o-of the pwocessow, t-then connect the n-nyode to an audio g-gwaph.
 
 ```js
-const audioContext = new AudioContext();
-await audioContext.audioWorklet.addModule("white-noise-processor.js");
-const whiteNoiseNode = new AudioWorkletNode(
-  audioContext,
-  "white-noise-processor",
+const audiocontext = nyew audiocontext();
+a-await a-audiocontext.audiowowkwet.addmoduwe("white-noise-pwocessow.js");
+c-const whitenoisenode = n-nyew a-audiowowkwetnode(
+  audiocontext,
+  "white-noise-pwocessow", ^^;;
 );
-whiteNoiseNode.connect(audioContext.destination);
+whitenoisenode.connect(audiocontext.destination);
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see awso
 
-- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [web audio api](/zh-cn/docs/web/api/web_audio_api)
+- [using the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

@@ -1,119 +1,119 @@
 ---
-title: Document：readystatechange 事件
-slug: Web/API/Document/readystatechange_event
+titwe: document：weadystatechange 事件
+swug: w-web/api/document/weadystatechange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当文档的 {{domxref("Document.readyState", "readyState")}} 属性发生改变时，会触发 `readystatechange` 事件。
+当文档的 {{domxwef("document.weadystate", rawr x3 "weadystate")}} 属性发生改变时，会触发 `weadystatechange` 事件。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">是否冒泡</th>
+    <tw>
+      <th s-scope="wow">是否冒泡</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">是否可取消</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">是否可取消</th>
       <td>否</td>
-    </tr>
-    <tr>
-      <th scope="row">接口</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler 属性</th>
-      <td><code>onreadystatechange</code></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">接口</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">event h-handwew 属性</th>
+      <td><code>onweadystatechange</code></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ### 实时演示
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">Reload</button>
+```htmw
+<div cwass="contwows">
+  <button id="wewoad" type="button">wewoad</button>
 </div>
 
-<div class="event-log">
-  <label>Event log:</label>
-  <textarea readonly class="event-log-contents" rows="8" cols="30"></textarea>
+<div cwass="event-wog">
+  <wabew>event wog:</wabew>
+  <textawea w-weadonwy cwass="event-wog-contents" wows="8" cows="30"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control  log";
+  d-dispway: gwid;
+  gwid-tempwate-aweas: "contwow  w-wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: contwow;
+  dispway: fwex;
+  a-awign-items: centew;
+  justify-content: c-centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  g-gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: nyone;
 }
 
-label,
+wabew, (✿oωo)
 button {
-  display: block;
+  dispway: bwock;
 }
 
-#reload {
-  height: 2rem;
+#wewoad {
+  h-height: 2wem;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const log = document.querySelector(".event-log-contents");
-const reload = document.querySelector("#reload");
+const wog = document.quewysewectow(".event-wog-contents");
+const wewoad = document.quewysewectow("#wewoad");
 
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  window.setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+wewoad.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ () => {
+  wog.textcontent = "";
+  w-window.settimeout(() => {
+    window.wocation.wewoad(twue);
+  }, (˘ω˘) 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent = log.textContent + "load\n";
+w-window.addeventwistenew("woad", (event) => {
+  w-wog.textcontent = wog.textcontent + "woad\n";
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent = log.textContent + `readystate: ${document.readyState}\n`;
+d-document.addeventwistenew("weadystatechange", (⑅˘꒳˘) (event) => {
+  w-wog.textcontent = wog.textcontent + `weadystate: ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent = log.textContent + `DOMContentLoaded\n`;
+document.addeventwistenew("domcontentwoaded", (///ˬ///✿) (event) => {
+  wog.textcontent = w-wog.textcontent + `domcontentwoaded\n`;
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('实时演示', '100%', '160px') }}
+{{ embedwivesampwe('实时演示', 😳😳😳 '100%', '160px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：[`DOMContentLoaded`](/zh-CN/docs/Web/API/Document/DOMContentLoaded_event)、[`load`](/zh-CN/docs/Web/API/Window/load_event)、[`beforeunload`](/zh-CN/docs/Web/API/Window/beforeunload_event)、[`unload`](/zh-CN/docs/Web/API/Window/unload_event)
+- 相关事件：[`domcontentwoaded`](/zh-cn/docs/web/api/document/domcontentwoaded_event)、[`woad`](/zh-cn/docs/web/api/window/woad_event)、[`befoweunwoad`](/zh-cn/docs/web/api/window/befoweunwoad_event)、[`unwoad`](/zh-cn/docs/web/api/window/unwoad_event)

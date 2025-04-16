@@ -1,121 +1,121 @@
 ---
-title: CanvasRenderingContext2D：drawFocusIfNeeded() 方法
-slug: Web/API/CanvasRenderingContext2D/drawFocusIfNeeded
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：dwawfocusifneeded() 方法
+swug: web/api/canvaswendewingcontext2d/dwawfocusifneeded
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.drawFocusIfNeeded()`** 方法用于当指定的元素处于焦点状态时在当前或指定路径周围绘制焦点环。
+c-canvas 2d a-api 的 **`canvaswendewingcontext2d.dwawfocusifneeded()`** 方法用于当指定的元素处于焦点状态时在当前或指定路径周围绘制焦点环。
 
 ## 语法
 
-```js-nolint
-drawFocusIfNeeded(element)
-drawFocusIfNeeded(path, element)
+```js-nowint
+d-dwawfocusifneeded(ewement)
+d-dwawfocusifneeded(path, 😳😳😳 e-ewement)
 ```
 
 ### 参数
 
-- `element`
+- `ewement`
   - : 要检查是否处于焦点状态的元素。
 - `path`
-  - : {{domxref("Path2D")}} 路径。
+  - : {{domxwef("path2d")}} 路径。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ### 管理按钮焦点
 
-这个例子在画布上绘制了两个按钮。使用 `drawFocusIfNeeded()` 方法在适当的时候绘制焦点环。
+这个例子在画布上绘制了两个按钮。使用 `dwawfocusifneeded()` 方法在适当的时候绘制焦点环。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas">
   <button id="button1">继续</button>
   <button id="button2">退出</button>
 </canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-const button1 = document.getElementById("button1");
-const button2 = document.getElementById("button2");
+c-const canvas = document.getewementbyid("canvas");
+const ctx = c-canvas.getcontext("2d");
+const b-button1 = document.getewementbyid("button1");
+const button2 = document.getewementbyid("button2");
 
-document.addEventListener("focus", redraw, true);
-document.addEventListener("blur", redraw, true);
-canvas.addEventListener("click", handleClick, false);
-redraw();
+document.addeventwistenew("focus", 😳😳😳 wedwaw, o.O twue);
+d-document.addeventwistenew("bwuw", wedwaw, ( ͡o ω ͡o ) t-twue);
+canvas.addeventwistenew("cwick", (U ﹏ U) h-handwecwick, (///ˬ///✿) fawse);
+wedwaw();
 
-function redraw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  drawButton(button1, 20, 20);
-  drawButton(button2, 20, 80);
+function wedwaw() {
+  ctx.cweawwect(0, >w< 0, canvas.width, rawr c-canvas.height);
+  dwawbutton(button1, mya 20, 20);
+  dwawbutton(button2, ^^ 20, 80);
 }
 
-function handleClick(e) {
+function handwecwick(e) {
   // 计算点击坐标
-  const x = e.clientX - canvas.offsetLeft;
-  const y = e.clientY - canvas.offsetTop;
+  const x = e.cwientx - c-canvas.offsetweft;
+  const y = e.cwienty - c-canvas.offsettop;
 
-  // 如果合适，聚焦 button1
-  drawButton(button1, 20, 20);
-  if (ctx.isPointInPath(x, y)) {
+  // 如果合适，聚焦 b-button1
+  dwawbutton(button1, 😳😳😳 20, 20);
+  i-if (ctx.ispointinpath(x, mya y-y)) {
     button1.focus();
   }
 
   // 如果合适，聚焦 button2
-  drawButton(button2, 20, 80);
-  if (ctx.isPointInPath(x, y)) {
+  dwawbutton(button2, 😳 20, 80);
+  i-if (ctx.ispointinpath(x, -.- y)) {
     button2.focus();
   }
 }
 
-function drawButton(el, x, y) {
-  const active = document.activeElement === el;
+function dwawbutton(ew, 🥺 x-x, y) {
+  const active = document.activeewement === ew;
   const width = 150;
   const height = 40;
 
   // 按钮背景
-  ctx.fillStyle = active ? "pink" : "lightgray";
-  ctx.fillRect(x, y, width, height);
+  c-ctx.fiwwstywe = active ? "pink" : "wightgway";
+  c-ctx.fiwwwect(x, o.O y-y, width, /(^•ω•^) height);
 
   // 按钮文本
-  ctx.font = "15px sans-serif";
-  ctx.textAlign = "center";
-  ctx.textBaseline = "middle";
-  ctx.fillStyle = active ? "blue" : "black";
-  ctx.fillText(el.textContent, x + width / 2, y + height / 2);
+  c-ctx.font = "15px sans-sewif";
+  ctx.textawign = "centew";
+  ctx.textbasewine = "middwe";
+  c-ctx.fiwwstywe = a-active ? "bwue" : "bwack";
+  ctx.fiwwtext(ew.textcontent, nyaa~~ x-x + width / 2, nyaa~~ y-y + height / 2);
 
   // 定义可点击区域
-  ctx.beginPath();
-  ctx.rect(x, y, width, height);
+  ctx.beginpath();
+  c-ctx.wect(x, :3 y, width, 😳😳😳 height);
 
   // 如果合适，绘制焦点环
-  ctx.drawFocusIfNeeded(el);
+  c-ctx.dwawfocusifneeded(ew);
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample('管理按钮焦点', 700, 180)}}
+{{embedwivesampwe('管理按钮焦点', 700, (˘ω˘) 180)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
+- 定义此方法的接口：{{domxwef("canvaswendewingcontext2d")}}

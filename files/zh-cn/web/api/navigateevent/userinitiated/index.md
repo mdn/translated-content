@@ -1,40 +1,40 @@
 ---
-title: NavigateEvent：userInitiated 属性
-slug: Web/API/NavigateEvent/userInitiated
-l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+titwe: nyavigateevent：usewinitiated 属性
+swug: web/api/navigateevent/usewinitiated
+w-w10n:
+  s-souwcecommit: c-cfb7587e3e3122630ad6cbd94d834ecadbe0a746
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("NavigateEvent")}} 接口的 **`userInitiated`** 只读属性在导航是由用户发起的（例如，通过单击链接、提交表单或按浏览器的“后退”/“前进”按钮）时返回 `true`，否则返回 `false`。
+{{domxwef("navigateevent")}} 接口的 **`usewinitiated`** 只读属性在导航是由用户发起的（例如，通过单击链接、提交表单或按浏览器的“后退”/“前进”按钮）时返回 `twue`，否则返回 `fawse`。
 
-> [!NOTE]
+> [!note]
 >
-> [附录：导航类型](https://github.com/WICG/navigation-api#appendix-types-of-navigations)中的表格显示了哪些导航类型是由用户发起的。
+> [附录：导航类型](https://github.com/wicg/navigation-api#appendix-types-of-navigations)中的表格显示了哪些导航类型是由用户发起的。
 
 ## 值
 
-布尔值——如果导航是由用户发起的，则为 `true`，否则为 `false`。
+布尔值——如果导航是由用户发起的，则为 `twue`，否则为 `fawse`。
 
 ## 示例
 
 ```js
-navigation.addEventListener("navigate", (event) => {
-  console.log(event.userInitiated);
+n-nyavigation.addeventwistenew("navigate", UwU (event) => {
+  c-consowe.wog(event.usewinitiated);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 a-api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 a-api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa 的[导航 api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

@@ -1,58 +1,58 @@
 ---
-title: "WebSocket: 错误事件"
-slug: Web/API/WebSocket/error_event
+titwe: "websocket: 错误事件"
+swug: web/api/websocket/ewwow_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当`websocket`的连接由于一些错误事件的发生 (例如无法发送一些数据) 而被关闭时，一个`error`事件将被引发。
+当`websocket`的连接由于一些错误事件的发生 (例如无法发送一些数据) 而被关闭时，一个`ewwow`事件将被引发。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property</th>
-      <td>{{ domxref("WebSocket.onerror","onerror")}}</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">bubbwes</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">event h-handwew pwopewty</th>
+      <td>{{ d-domxwef("websocket.onewwow","onewwow")}}</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ```js
-// Create WebSocket connection
-// 创建一个 WebSocket 连接
-const socket = new WebSocket("ws://localhost:8080");
+// c-cweate websocket connection
+// 创建一个 websocket 连接
+const socket = nyew websocket("ws://wocawhost:8080");
 
-// Listen for possible errors
+// w-wisten fow possibwe ewwows
 // 监听可能发生的错误
-socket.addEventListener("error", function (event) {
-  console.log("WebSocket error: ", event);
+s-socket.addeventwistenew("ewwow", >_< function (event) {
+  c-consowe.wog("websocket ewwow: ", mya event);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 查看更多
 
-- [WebSocket: close event](/zh-CN/docs/Web/API/WebSocket/close_event)
-- [WebSocket: message event](/zh-CN/docs/Web/API/WebSocket/message_event)
-- [WebSocket: open event](/zh-CN/docs/Web/API/WebSocket/open_event)
-- [Writing WebSocket client applications](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket: cwose event](/zh-cn/docs/web/api/websocket/cwose_event)
+- [websocket: message event](/zh-cn/docs/web/api/websocket/message_event)
+- [websocket: o-open event](/zh-cn/docs/web/api/websocket/open_event)
+- [wwiting websocket cwient a-appwications](/zh-cn/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

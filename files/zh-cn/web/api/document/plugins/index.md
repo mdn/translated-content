@@ -1,25 +1,25 @@
 ---
-title: Document.plugins
-slug: Web/API/Document/plugins
+titwe: document.pwugins
+swug: w-web/api/document/pwugins
 ---
 
-{{APIRef("DOM")}}{{domxref("Document")}}接口的**插件**只读属性返回一个{{domxref("HTMLCollection")}} 对象，该对象包含一个或多个{{domxref("HTMLEmbedElement")}}s 表示当前文档中的{{HTMLElement("embed")}} 元素。
+{{apiwef("dom")}}{{domxwef("document")}}接口的**插件**只读属性返回一个{{domxwef("htmwcowwection")}} 对象，该对象包含一个或多个{{domxwef("htmwembedewement")}}s 表示当前文档中的{{htmwewement("embed")}} 元素。
 
-> [!NOTE]
-> 对于已安装的插件列表，请使用 [NavigatorPlugins.plugins](/zh-CN/docs/Web/API/Navigator/plugins) 插件。
+> [!note]
+> 对于已安装的插件列表，请使用 [navigatowpwugins.pwugins](/zh-cn/docs/web/api/navigatow/pwugins) 插件。
 
 ## 值
 
-一个 {{domxref("HTMLCollection")}}, 如果文档中没有嵌入则为 null。
+一个 {{domxwef("htmwcowwection")}}, OwO 如果文档中没有嵌入则为 n-nyuww。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [MSDN documentation](<https://docs.microsoft.com/en-us/previous-versions/windows/internet-explorer/ie-developer/platform-apis/ms537477(v=vs.85)>)
+- [msdn d-documentation](<https://docs.micwosoft.com/en-us/pwevious-vewsions/windows/intewnet-expwowew/ie-devewopew/pwatfowm-apis/ms537477(v=vs.85)>)

@@ -1,35 +1,35 @@
 ---
-title: GlobalEventHandlers.onselectionchange
-slug: Web/API/HTMLInputElement/selectionchange_event
+titwe: gwobaweventhandwews.onsewectionchange
+swug: web/api/htmwinputewement/sewectionchange_event
 ---
 
-{{ApiRef('DOM')}}{{SeeCompatTable}}
+{{apiwef('dom')}}{{seecompattabwe}}
 
-**`GlobalEventHandlers.onselectionchange`** 属性表示当一个 `selectstart` 事件被触发，比如在页面上选中文字变化时，会执行绑定的事件处理器
+**`gwobaweventhandwews.onsewectionchange`** 属性表示当一个 `sewectstawt` 事件被触发，比如在页面上选中文字变化时，会执行绑定的事件处理器
 
 ## 语法
 
-```plain
-obj.onselectionchange = function;
+```pwain
+o-obj.onsewectionchange = f-function;
 ```
 
 ## 示例
 
 ```js
-var selection;
+v-vaw sewection;
 
-document.onselectionchange = function () {
-  console.log("New selection made");
-  selection = document.getSelection();
+d-document.onsewectionchange = f-function () {
+  c-consowe.wog("new s-sewection m-made");
+  sewection = document.getsewection();
 };
 ```
 
-完整例子请参阅[Key quote generator](https://github.com/chrisdavidmills/selection-api-examples/#key-quote-generator-see-it-running-live) demo.
+完整例子请参阅[key quote genewatow](https://github.com/chwisdavidmiwws/sewection-api-exampwes/#key-quote-genewatow-see-it-wunning-wive) demo. rawr x3
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

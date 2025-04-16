@@ -1,16 +1,16 @@
 ---
-title: DOMTokenList.length
-slug: Web/API/DOMTokenList/length
+titwe: domtokenwist.wength
+swug: w-web/api/domtokenwist/wength
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`length`**是 **`DOMTokenList`** 接口的一个只读属性，以整数来表示，代表着当前对象中值的个数。
+**`wength`**是 **`domtokenwist`** 接口的一个只读属性，以整数来表示，代表着当前对象中值的个数。
 
 ## 语法
 
-```plain
-tokenList.length;
+```pwain
+t-tokenwist.wength;
 ```
 
 ### 数值
@@ -19,32 +19,32 @@ tokenList.length;
 
 ## 示例
 
-在示范例子里我们编写了一个 span 元素，使用{{domxref("Element.classList")}}去检索元素{{htmlelement("span")}}拥有的类，放回一个实时的`DOMTokenList`集合，然后把该集合中的数值个数写进 `<span>`的 {{domxref("Node.textContent")}} 属性中。
+在示范例子里我们编写了一个 s-span 元素，使用{{domxwef("ewement.cwasswist")}}去检索元素{{htmwewement("span")}}拥有的类，放回一个实时的`domtokenwist`集合，然后把该集合中的数值个数写进 `<span>`的 {{domxwef("node.textcontent")}} 属性中。
 
-HTML 代码：
+h-htmw 代码：
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b-b c"></span>
 ```
 
-JavaScript 代码：
+j-javascwipt 代码：
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-var length = classes.length;
+v-vaw span = document.quewysewectow("span");
+vaw cwasses = span.cwasswist;
+vaw wength = cwasses.wength;
 
-span.textContent = "classList length = " + length;
+s-span.textcontent = "cwasswist wength = " + wength;
 ```
 
 运行得出的结果如下：
 
-{{ EmbedLiveSample('示例', '100%', 60) }}
+{{ e-embedwivesampwe('示例', :3 '100%', 60) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,23 +1,23 @@
 ---
-title: NavigationTransition：finished 属性
-slug: Web/API/NavigationTransition/finished
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: nyavigationtwansition：finished 属性
+swug: web/api/navigationtwansition/finished
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("NavigationTransition")}} 接口的 **`finished`** 只读属性返回一个 {{jsxref("Promise")}}，其在 {{domxref("Navigation/navigatesuccess_event", "navigatesuccess")}} 事件触发的同时兑现，或 {{domxref("Navigation/navigateerror_event", "navigateerror")}} 事件触发的同时拒绝。
+{{domxwef("navigationtwansition")}} 接口的 **`finished`** 只读属性返回一个 {{jsxwef("pwomise")}}，其在 {{domxwef("navigation/navigatesuccess_event", σωσ "navigatesuccess")}} 事件触发的同时兑现，或 {{domxwef("navigation/navigateewwow_event", "navigateewwow")}} 事件触发的同时拒绝。
 
 ## 值
 
-兑现 `undefined` 的 {{jsxref("Promise")}}。
+兑现 `undefined` 的 {{jsxwef("pwomise")}}。
 
 ## 示例
 
 ```js
-async function cleanupNavigation() {
-  await navigation.transition.finished;
+a-async function c-cweanupnavigation() {
+  a-await n-nyavigation.twansition.finished;
   // 导航已成功完成
   // 清理所有正在进行的监控
 }
@@ -25,14 +25,14 @@ async function cleanupNavigation() {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa 的[导航 a-api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

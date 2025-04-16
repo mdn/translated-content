@@ -1,18 +1,18 @@
 ---
-title: FileReader：abort() 方法
-slug: Web/API/FileReader/abort
-l10n:
-  sourceCommit: e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
+titwe: fiweweadew：abowt() 方法
+swug: web/api/fiweweadew/abowt
+w-w10n:
+  souwcecommit: e-e43bfd9b4a6c363a4ba7ef6ffa64c09b38fd111b
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("FileReader")}} 接口的 **`abort()`** 方法中止读取操作。返回后，{{domxref("FileReader.readyState","readyState")}} 将为 `DONE`。
+{{domxwef("fiweweadew")}} 接口的 **`abowt()`** 方法中止读取操作。返回后，{{domxwef("fiweweadew.weadystate","weadystate")}} 将为 `done`。
 
 ## 语法
 
-```js-nolint
-abort()
+```js-nowint
+a-abowt()
 ```
 
 ### 参数
@@ -21,16 +21,16 @@ abort()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

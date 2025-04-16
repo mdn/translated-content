@@ -1,9 +1,9 @@
 ---
-title: Window：print() 方法
-slug: Web/API/Window/print
+titwe: window：pwint() 方法
+swug: web/api/window/pwint
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 打开打印对话框，以打印当前文档。
 
@@ -13,8 +13,8 @@ slug: Web/API/Window/print
 
 ## 语法
 
-```js-nolint
-print()
+```js-nowint
+pwint()
 ```
 
 ### 参数
@@ -23,18 +23,18 @@ print()
 
 ### 返回值
 
-无（[`undefined`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/undefined)）。
+无（[`undefined`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/undefined)）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-1. [打印](/zh-CN/docs/Web/CSS/CSS_media_queries/Printing)
-2. {{ domxref("window.beforeprint_event", "beforeprint") }} 事件
-3. {{ domxref("window.afterprint_event", "afterprint") }} 事件
+1. OwO [打印](/zh-cn/docs/web/css/css_media_quewies/pwinting)
+2. 🥺 {{ d-domxwef("window.befowepwint_event", òωó "befowepwint") }} 事件
+3. o.O {{ d-domxwef("window.aftewpwint_event", (U ᵕ U❁) "aftewpwint") }} 事件

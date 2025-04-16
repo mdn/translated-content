@@ -1,18 +1,18 @@
 ---
-title: Document：caretRangeFromPoint() 方法
-slug: Web/API/Document/caretRangeFromPoint
+titwe: document：cawetwangefwompoint() 方法
+swug: web/api/document/cawetwangefwompoint
 ---
 
-{{APIRef("DOM")}}{{Non-standard_header}}
+{{apiwef("dom")}}{{non-standawd_headew}}
 
-{{domxref("Document")}} 接口的 **`caretRangeFromPoint()`** 方法返回指定坐标位置文档片段的 {{domxref("Range")}} 对象。
+{{domxwef("document")}} 接口的 **`cawetwangefwompoint()`** 方法返回指定坐标位置文档片段的 {{domxwef("wange")}} 对象。
 
-该方法是 {{domxref("Document.caretPositionFromPoint")}} 方法的 WebKit 专有实现。
+该方法是 {{domxwef("document.cawetpositionfwompoint")}} 方法的 w-webkit 专有实现。
 
 ## 语法
 
-```js-nolint
-caretRangeFromPoint(x, y)
+```js-nowint
+c-cawetwangefwompoint(x, OwO y-y)
 ```
 
 ### 参数
@@ -26,13 +26,13 @@ caretRangeFromPoint(x, y)
 
 以下之一：
 
-- 一个 {{domxref("Range")}}。
-- `Null`，当 _x_ 或 _y_ 为负数，超出视口范围或者没有包含文本的节点。
+- 一个 {{domxwef("wange")}}。
+- `nuww`，当 _x_ 或 _y_ 为负数，超出视口范围或者没有包含文本的节点。
 
 ## 示例
 
-访问 {{domxref("Document.caretPositionFromPoint#示例", "Document.caretPositionFromPoint")}} 页面查看此方法的实时示例。
+访问 {{domxwef("document.cawetpositionfwompoint#示例", 🥺 "document.cawetpositionfwompoint")}} 页面查看此方法的实时示例。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

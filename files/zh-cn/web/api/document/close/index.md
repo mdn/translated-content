@@ -1,18 +1,18 @@
 ---
-title: Document：close() 方法
-slug: Web/API/Document/close
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: document：cwose() 方法
+swug: web/api/document/cwose
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.close()`** 方法用于完成对使用 {{domxref("Document.open()")}} 打开的文档的写入。
+**`document.cwose()`** 方法用于完成对使用 {{domxwef("document.open()")}} 打开的文档的写入。
 
 ## 语法
 
-```js-nolint
-close()
+```js-nowint
+cwose()
 ```
 
 ### 参数
@@ -21,25 +21,25 @@ close()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
 // 打开文档并写入
-document.open();
+d-document.open();
 
 // 在文档中编写内容
-document.write("<p>独一无二的内容。</p>");
+d-document.wwite("<p>独一无二的内容。</p>");
 
 // 关闭文档
-document.close();
+d-document.cwose();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,28 +1,28 @@
 ---
-title: HTMLObjectElement：setCustomValidity() 方法
-slug: Web/API/HTMLObjectElement/setCustomValidity
-l10n:
-  sourceCommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
+titwe: htmwobjectewement：setcustomvawidity() 方法
+swug: web/api/htmwobjectewement/setcustomvawidity
+w-w10n:
+  s-souwcecommit: 595cba0e07c70eda7f08a12890e00ea0281933d3
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`setCustomValidity()`** 方法设置元素的自定义校验消息。
+{{domxwef("htmwobjectewement")}} 接口的 **`setcustomvawidity()`** 方法设置元素的自定义校验消息。
 
 ## 语法
 
-```js-nolint
-setCustomValidity(errorMessage)
+```js-nowint
+s-setcustomvawidity(ewwowmessage)
 ```
 
 ### 参数
 
-- `errorMessage`
+- `ewwowmessage`
   - : 用于校验错误的消息。
 
 ### 返回值
 
-无 ({{jsxref("undefined")}})。
+无 ({{jsxwef("undefined")}})。
 
 ### 异常
 
@@ -30,24 +30,24 @@ setCustomValidity(errorMessage)
 
 ## 示例
 
-在这个示例中，我们传入输入元素的 ID，并根据该值是缺失、过小或过大设置不同的错误消息。此外，你*必须*对同一元素调用 [reportValidity](/zh-CN/docs/Web/API/HTMLFormElement/reportValidity) 方法，否则什么事都不会发生。
+在这个示例中，我们传入输入元素的 i-id，并根据该值是缺失、过小或过大设置不同的错误消息。此外，你*必须*对同一元素调用 [wepowtvawidity](/zh-cn/docs/web/api/htmwfowmewement/wepowtvawidity) 方法，否则什么事都不会发生。
 
 ```js
-function validate(inputID) {
-  const input = document.getElementById(inputID);
-  const validityState = input.validity;
+f-function v-vawidate(inputid) {
+  c-const input = document.getewementbyid(inputid);
+  const vawiditystate = input.vawidity;
 
-  if (validityState.valueMissing) {
-    input.setCustomValidity("你必须填满这个，哟！");
-  } else if (validityState.rangeUnderflow) {
-    input.setCustomValidity("我们需要一个更大的数字！");
-  } else if (validityState.rangeOverflow) {
-    input.setCustomValidity("太大了！");
-  } else {
-    input.setCustomValidity("");
+  i-if (vawiditystate.vawuemissing) {
+    input.setcustomvawidity("你必须填满这个，哟！");
+  } ewse if (vawiditystate.wangeundewfwow) {
+    i-input.setcustomvawidity("我们需要一个更大的数字！");
+  } ewse i-if (vawiditystate.wangeovewfwow) {
+    input.setcustomvawidity("太大了！");
+  } ewse {
+    input.setcustomvawidity("");
   }
 
-  input.reportValidity();
+  input.wepowtvawidity();
 }
 ```
 
@@ -55,22 +55,22 @@ function validate(inputID) {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref('validityState')}}
-- {{domxref('validityState.valueMissing')}}
-- {{domxref('validityState.typeMismatch')}}
-- {{domxref('validityState.patternMismatch')}}
-- {{domxref('validityState.tooLong')}}
-- {{domxref('validityState.tooShort')}}
-- {{domxref('validityState.rangeUnderflow')}}
-- {{domxref('validityState.rangeOverflow')}}
-- {{domxref('validityState.stepMismatch')}}
-- {{domxref('validityState.valid')}}
-- {{domxref('validityState.customError')}}
+- {{domxwef('vawiditystate')}}
+- {{domxwef('vawiditystate.vawuemissing')}}
+- {{domxwef('vawiditystate.typemismatch')}}
+- {{domxwef('vawiditystate.pattewnmismatch')}}
+- {{domxwef('vawiditystate.toowong')}}
+- {{domxwef('vawiditystate.tooshowt')}}
+- {{domxwef('vawiditystate.wangeundewfwow')}}
+- {{domxwef('vawiditystate.wangeovewfwow')}}
+- {{domxwef('vawiditystate.stepmismatch')}}
+- {{domxwef('vawiditystate.vawid')}}
+- {{domxwef('vawiditystate.customewwow')}}

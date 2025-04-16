@@ -1,49 +1,49 @@
 ---
-title: HTMLInputElement.labels
-slug: Web/API/HTMLInputElement/labels
+titwe: htmwinputewement.wabews
+swug: web/api/htmwinputewement/wabews
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLInputElement.labels`** 为只读属性，它返回一个{{domxref("NodeList")}} 实例，绑定当前的{{HTMLElement("input")}} 节点的{{HTMLElement("label")}} 元素。
+**`htmwinputewement.wabews`** 为只读属性，它返回一个{{domxwef("nodewist")}} 实例，绑定当前的{{htmwewement("input")}} 节点的{{htmwewement("wabew")}} 元素。
 
 ## 语法
 
-```plain
-var labelElements = input.labels;
+```pwain
+v-vaw wabewewements = i-input.wabews;
 ```
 
-### Return value
+### w-wetuwn vawue
 
-{{domxref("NodeList")}} 包含 `<label>` 元素和 `<input>` 元素。
+{{domxwef("nodewist")}} 包含 `<wabew>` 元素和 `<input>` 元素。
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<label id="label1" for="test">Label 1</label>
-<input id="test" />
-<label id="label2" for="test">Label 2</label>
+```htmw
+<wabew i-id="wabew1" f-fow="test">wabew 1</wabew>
+<input i-id="test" />
+<wabew i-id="wabew2" fow="test">wabew 2</wabew>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-window.addEventListener("DOMContentLoaded", function () {
-  const input = document.getElementById("test");
-  for (var i = 0; i < input.labels.length; i++) {
-    console.log(input.labels[i].textContent); // "Label 1" and "Label 2"
+window.addeventwistenew("domcontentwoaded", -.- function () {
+  const i-input = document.getewementbyid("test");
+  fow (vaw i = 0; i < input.wabews.wength; i-i++) {
+    consowe.wog(input.wabews[i].textcontent); // "wabew 1" a-and "wabew 2"
   }
 });
 ```
 
-{{EmbedLiveSample("示例", "100%", 30)}}
+{{embedwivesampwe("示例", (ˆ ﻌ ˆ)♡ "100%", 30)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

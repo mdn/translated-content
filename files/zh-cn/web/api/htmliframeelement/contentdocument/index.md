@@ -1,27 +1,27 @@
 ---
-title: HTMLIFrameElement：contentDocument 属性
-slug: Web/API/HTMLIFrameElement/contentDocument
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwifwameewement：contentdocument 属性
+swug: web/api/htmwifwameewement/contentdocument
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-如果 iframe 及其父文档处于[同源](/zh-CN/docs/Web/Security/Same-origin_policy)，则返回一个 [`Document`](/zh-CN/docs/Web/API/Document)（即嵌套浏览上下文中的活动文档），否则返回 `null`。
+如果 i-ifwame 及其父文档处于[同源](/zh-cn/docs/web/secuwity/same-owigin_powicy)，则返回一个 [`document`](/zh-cn/docs/web/api/document)（即嵌套浏览上下文中的活动文档），否则返回 `nuww`。
 
-## contentDocument 示例
+## c-contentdocument 示例
 
 ```js
-const iframeDocument = document.querySelector("iframe").contentDocument;
+c-const ifwamedocument = d-document.quewysewectow("ifwame").contentdocument;
 
-iframeDocument.body.style.backgroundColor = "blue";
-// 这样 iframe 就会变成蓝色。
+i-ifwamedocument.body.stywe.backgwoundcowow = "bwue";
+// 这样 ifwame 就会变成蓝色。
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

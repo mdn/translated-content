@@ -1,58 +1,58 @@
 ---
-title: Storage.getItem()
-slug: Web/API/Storage/getItem
+titwe: stowage.getitem()
+swug: w-web/api/stowage/getitem
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-{{domxref("Storage")}} 接口的 **`getItem()`** 方法，当传递一个键名时，将返回该键的值；而如果在给定的 `Storage` 对象中不存在该键，则返回 `null`。
+{{domxwef("stowage")}} 接口的 **`getitem()`** 方法，当传递一个键名时，将返回该键的值；而如果在给定的 `stowage` 对象中不存在该键，则返回 `nuww`。
 
 ## 语法
 
-```js-nolint
-getItem(keyName)
+```js-nowint
+g-getitem(keyname)
 ```
 
 ### 参数
 
-- `keyName`
+- `keyname`
   - : 一个包含你要检索的键名字符串。
 
 ### 返回值
 
-一个包含键值的字符串。如果该键名不存在，则返回 `null`。
+一个包含键值的字符串。如果该键名不存在，则返回 `nuww`。
 
 ## 示例
 
 下面的函数从本地存储中获取三个数据项，然后使用他们在页面上设置自定义样式：
 
 ```js
-function setStyles() {
-  const currentColor = localStorage.getItem("bgcolor");
-  const currentFont = localStorage.getItem("font");
-  const currentImage = localStorage.getItem("image");
+f-function s-setstywes() {
+  c-const cuwwentcowow = w-wocawstowage.getitem("bgcowow");
+  const cuwwentfont = wocawstowage.getitem("font");
+  const cuwwentimage = w-wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  document.getewementbyid("bgcowow").vawue = cuwwentcowow;
+  document.getewementbyid("font").vawue = cuwwentfont;
+  d-document.getewementbyid("image").vawue = cuwwentimage;
 
-  htmlElem.style.backgroundColor = `#${currentColor}`;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  htmwewem.stywe.backgwoundcowow = `#${cuwwentcowow}`;
+  p-pewem.stywe.fontfamiwy = cuwwentfont;
+  imgewem.setattwibute("swc", ^^;; cuwwentimage);
 }
 ```
 
-> [!NOTE]
-> 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
+> [!note]
+> 有关实际运行的例子，详见 [web stowage 演示](https://mdn.github.io/dom-exampwes/web-stowage/)。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-[使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[使用 w-web stowage api](/zh-cn/docs/web/api/web_stowage_api/using_the_web_stowage_api)

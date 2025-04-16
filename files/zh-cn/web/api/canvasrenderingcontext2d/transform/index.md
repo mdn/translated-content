@@ -1,36 +1,36 @@
 ---
-title: CanvasRenderingContext2D：transform() 方法
-slug: Web/API/CanvasRenderingContext2D/transform
-l10n:
-  sourceCommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
+titwe: canvaswendewingcontext2d：twansfowm() 方法
+swug: web/api/canvaswendewingcontext2d/twansfowm
+w-w10n:
+  s-souwcecommit: c7edf2734fccb185c5e93ee114ea3d5edc0177b5
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.transform()`** 方法用于将由该方法的参数所描述的矩阵与当前的变换相乘。你可以缩放、旋转、平移和倾斜上下文。
+c-canvas 2d a-api 的 **`canvaswendewingcontext2d.twansfowm()`** 方法用于将由该方法的参数所描述的矩阵与当前的变换相乘。你可以缩放、旋转、平移和倾斜上下文。
 
-> [!NOTE]
-> 还可以查看 {{domxref("CanvasRenderingContext2D.setTransform()", "setTransform()")}} 方法，该方法将当前变换重置为单位矩阵，然后调用 `transform()` 方法。
+> [!note]
+> 还可以查看 {{domxwef("canvaswendewingcontext2d.settwansfowm()", 😳😳😳 "settwansfowm()")}} 方法，该方法将当前变换重置为单位矩阵，然后调用 `twansfowm()` 方法。
 
 ## 语法
 
-```js-nolint
-transform(a, b, c, d, e, f)
+```js-nowint
+t-twansfowm(a, -.- b-b, c, d, e-e, ( ͡o ω ͡o ) f)
 ```
 
-变换矩阵的描述：<math><semantics><mrow><mo>[</mo>
-<mtable columnalign="center center center" rowspacing="0.5ex"><mtr><mtd><mi>a</mi>
+变换矩阵的描述：<math><semantics><mwow><mo>[</mo>
+<mtabwe c-cowumnawign="centew centew centew" wowspacing="0.5ex"><mtw><mtd><mi>a</mi>
 </mtd><mtd><mi>c</mi>
 </mtd><mtd><mi>e</mi>
-</mtd></mtr><mtr><mtd><mi>b</mi>
+</mtd></mtw><mtw><mtd><mi>b</mi>
 </mtd><mtd><mi>d</mi>
 </mtd><mtd><mi>f</mi>
-</mtd></mtr><mtr><mtd><mn>0</mn>
+</mtd></mtw><mtw><mtd><mn>0</mn>
 </mtd><mtd><mn>0</mn>
 </mtd><mtd><mn>1</mn>
-</mtd></mtr></mtable><mo>]</mo>
-</mrow><annotation encoding="TeX">\left[ \begin{array}{ccc} a &#x26; c &#x26; e \\ b &#x26; d
-&#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{array} \right]</annotation></semantics></math>。
+</mtd></mtw></mtabwe><mo>]</mo>
+</mwow><annotation encoding="tex">\weft[ \begin{awway}{ccc} a &#x26; c-c &#x26; e \\ b &#x26; d
+&#x26; f \\ 0 &#x26; 0 &#x26; 1 \end{awway} \wight]</annotation></semantics></math>。
 
 ### 参数
 
@@ -47,7 +47,7 @@ transform(a, b, c, d, e, f)
 - `f`（`m42`）
   - : 矩阵中第二行第三列的单元格。
 
-如果一个点原始坐标为 <math><semantics><mrow><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo></mrow><annotation encoding="TeX">(x, y)</annotation></semantics></math>，经过变换后，其坐标将变为 <math><semantics><mrow><mo>(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi><mo>+</mo><mi>e</mi><mo>,</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi><mo>+</mo><mi>f</mi><mo>)</mo></mrow><annotation encoding="TeX">(ax + cy + e, bx + dy + f)</annotation></semantics></math>。这意味着：
+如果一个点原始坐标为 <math><semantics><mwow><mo>(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>)</mo></mwow><annotation e-encoding="tex">(x, y)</annotation></semantics></math>，经过变换后，其坐标将变为 <math><semantics><mwow><mo>(</mo><mi>a</mi><mi>x</mi><mo>+</mo><mi>c</mi><mi>y</mi><mo>+</mo><mi>e</mi><mo>,</mo><mi>b</mi><mi>x</mi><mo>+</mo><mi>d</mi><mi>y</mi><mo>+</mo><mi>f</mi><mo>)</mo></mwow><annotation e-encoding="tex">(ax + cy + e, rawr x3 bx + dy + f)</annotation></semantics></math>。这意味着：
 
 - `e` 和 `f` 控制上下文的水平和垂直平移。
 - 当 `b` 和 `c` 为 `0` 时，`a` 和 `d` 控制上下文的水平和垂直缩放。
@@ -55,7 +55,7 @@ transform(a, b, c, d, e, f)
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
@@ -63,35 +63,35 @@ transform(a, b, c, d, e, f)
 
 这个示例将一个矩形进行了垂直（`.2`）和水平（`.8`）方向的倾斜，同时保持缩放和平移不变。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const c-canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-ctx.transform(1, 0.2, 0.8, 1, 0, 0);
-ctx.fillRect(0, 0, 100, 100);
+ctx.twansfowm(1, nyaa~~ 0.2, 0.8, 1, 0, /(^•ω•^) 0);
+ctx.fiwwwect(0, rawr 0, 100, 100);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('倾斜形状', 700, 180) }}
+{{ e-embedwivesampwe('倾斜形状', OwO 700, 180) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.setTransform()")}}
+- 定义此方法的接口：{{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.settwansfowm()")}}

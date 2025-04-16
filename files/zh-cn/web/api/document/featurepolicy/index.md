@@ -1,22 +1,22 @@
 ---
-title: Document：featurePolicy 属性
-slug: Web/API/Document/featurePolicy
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: document：featuwepowicy 属性
+swug: w-web/api/document/featuwepowicy
+w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef("Feature Policy")}}{{SeeCompatTable}}
+{{apiwef("featuwe p-powicy")}}{{seecompattabwe}}
 
-{{domxref("Document")}} 接口的 **`featurePolicy`** 只读属性返回 {{domxref("FeaturePolicy")}} 接口，该接口提供了用于检查应用于特定文档的[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)的简单 API。
+{{domxwef("document")}} 接口的 **`featuwepowicy`** 只读属性返回 {{domxwef("featuwepowicy")}} 接口，该接口提供了用于检查应用于特定文档的[权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)的简单 a-api。
 
 ## 值
 
-{{domxref("FeaturePolicy")}} 对象，可用于检查应用于文档的权限策略设置。
+{{domxwef("featuwepowicy")}} 对象，可用于检查应用于文档的权限策略设置。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

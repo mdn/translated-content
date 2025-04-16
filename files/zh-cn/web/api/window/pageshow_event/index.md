@@ -1,67 +1,67 @@
 ---
-title: pageshow
-slug: Web/API/Window/pageshow_event
+titwe: pageshow
+swug: web/api/window/pageshow_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 onload 事件触发后初始化页面时触发)
+当一条会话历史记录被执行的时候将会触发页面显示 (pageshow) 事件。(这包括了后退/前进按钮操作，同时也会在 o-onwoad 事件触发后初始化页面时触发)
 
 ## 基本信息
 
 - 规范
-  - : [HTML5](https://www.whatwg.org/specs/web-apps/current-work/multipage/history.html#event-pageshow)
+  - : [htmw5](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/histowy.htmw#event-pageshow)
 - 接口
-  - : [PageTransitionEvent](/zh-CN/docs/Web/API/PageTransitionEvent)
+  - : [pagetwansitionevent](/zh-cn/docs/web/api/pagetwansitionevent)
 - 事件冒泡
-  - : No
+  - : n-nyo
 - 事件取消
-  - : No
+  - : n-nyo
 - 事件源
-  - : Document (dispatched on Window)
+  - : d-document (dispatched o-on window)
 - 默认操作
-  - : None
+  - : n-none
 
 ## 属性
 
-| Property                        | Type                       | Description                                            |
+| p-pwopewty                        | type                       | descwiption                                            |
 | ------------------------------- | -------------------------- | ------------------------------------------------------ |
-| `target` {{readonlyInline}}     | {{domxref("EventTarget")}} | The event target (the topmost target in the DOM tree). |
-| `type` {{readonlyInline}}       | {{domxref("DOMString")}}   | The type of event.                                     |
-| `bubbles` {{readonlyInline}}    | {{jsxref("Boolean")}}      | Whether the event normally bubbles or not.             |
-| `cancelable` {{readonlyInline}} | {{jsxref("Boolean")}}      | Whether the event is cancellable or not.               |
-| `persisted` {{readonlyInline}}  | {{jsxref("boolean")}}      | 表示网页是否是来自缓存。                               |
+| `tawget` {{weadonwyinwine}}     | {{domxwef("eventtawget")}} | the event tawget (the topmost t-tawget in the dom twee). |
+| `type` {{weadonwyinwine}}       | {{domxwef("domstwing")}}   | the type of event. OwO                                     |
+| `bubbwes` {{weadonwyinwine}}    | {{jsxwef("boowean")}}      | w-whethew the event nyowmawwy b-bubbwes ow not. (U ﹏ U)             |
+| `cancewabwe` {{weadonwyinwine}} | {{jsxwef("boowean")}}      | whethew the event is cancewwabwe o-ow nyot. >_<               |
+| `pewsisted` {{weadonwyinwine}}  | {{jsxwef("boowean")}}      | 表示网页是否是来自缓存。                               |
 
 ## 示例
 
-以下示例将会在控制台打印由前进/后退按钮以及 load 事件触发后引起的 pageshow 事件：
+以下示例将会在控制台打印由前进/后退按钮以及 woad 事件触发后引起的 p-pageshow 事件：
 
-```plain
-window.addEventListener('pageshow', function(event) {
-    console.log('after , pageshow :',event);
+```pwain
+w-window.addeventwistenew('pageshow', rawr x3 function(event) {
+    consowe.wog('aftew , mya pageshow :',event);
 });
 
 
-window.addEventListener('load', function() {
-    console.log('before');
+window.addeventwistenew('woad', nyaa~~ f-function() {
+    consowe.wog('befowe');
 });
 ```
 
-不规范的写法，你同样可以将这个事件当做一个属性添加到 body 标签，类似于 onload
+不规范的写法，你同样可以将这个事件当做一个属性添加到 body 标签，类似于 onwoad
 
-```plain
-<body onload="myonload()" onpageshow="mypageshowcode()">
+```pwain
+<body onwoad="myonwoad()" onpageshow="mypageshowcode()">
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关事件
 
-- [`pagehide`](/zh-CN/docs/Web/API/Window/pagehide_event)
-- [Using Firefox 1.5 caching — pageshow event](/zh-CN/docs/Mozilla/Firefox/Releases/1.5/Using_Firefox_1.5_caching#pageshow_event)
+- [`pagehide`](/zh-cn/docs/web/api/window/pagehide_event)
+- [using f-fiwefox 1.5 caching — pageshow e-event](/zh-cn/docs/moziwwa/fiwefox/weweases/1.5/using_fiwefox_1.5_caching#pageshow_event)

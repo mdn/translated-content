@@ -1,41 +1,41 @@
 ---
-title: "WebSocket: message event"
-slug: Web/API/WebSocket/message_event
+titwe: "websocket: message event"
+s-swug: web/api/websocket/message_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`message` 事件会在 `WebSocket` 接收到新消息时被触发。
+`message` 事件会在 `websocket` 接收到新消息时被触发。
 
-| 起泡（Bubbles）  | 不                                              |
+| 起泡（bubbwes）  | 不                                              |
 | ---------------- | ----------------------------------------------- |
 | 可取消           | 不                                              |
-| 接口             | {{domxref("MessageEvent")}}                     |
-| 事件处理程序属性 | {{ domxref("WebSocket.onmessage","onmessage")}} |
+| 接口             | {{domxwef("messageevent")}}                     |
+| 事件处理程序属性 | {{ d-domxwef("websocket.onmessage","onmessage")}} |
 
 ## 例子
 
 ```js
-// 创建一个 WebSocket 连接
-const socket = new WebSocket("ws://localhost:8080");
+// 创建一个 w-websocket 连接
+c-const s-socket = nyew websocket("ws://wocawhost:8080");
 
 // 监听消息
-socket.addEventListener("message", function (event) {
-  console.log("Message from server ", event.data);
+s-socket.addeventwistenew("message", >_< f-function (event) {
+  c-consowe.wog("message fwom sewvew ", :3 event.data);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 另看
 
-- [WebSocket: close event](/zh-CN/docs/Web/API/WebSocket/close_event)
-- [WebSocket: error event](/zh-CN/docs/Web/API/WebSocket/error_event)
-- [WebSocket: open event](/zh-CN/docs/Web/API/WebSocket/open_event)
-- [Writing WebSocket client applications](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [websocket: cwose event](/zh-cn/docs/web/api/websocket/cwose_event)
+- [websocket: ewwow event](/zh-cn/docs/web/api/websocket/ewwow_event)
+- [websocket: open e-event](/zh-cn/docs/web/api/websocket/open_event)
+- [wwiting websocket cwient appwications](/zh-cn/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

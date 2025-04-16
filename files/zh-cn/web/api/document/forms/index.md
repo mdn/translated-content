@@ -1,62 +1,62 @@
 ---
-title: Document.forms
-slug: Web/API/Document/forms
+titwe: document.fowms
+swug: web/api/document/fowms
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`forms`** 返回当前文档中的 {{HTMLElement("form")}}元素的一个集合 (一个 {{domxref("HTMLCollection")}})。
+**`fowms`** 返回当前文档中的 {{htmwewement("fowm")}}元素的一个集合 (一个 {{domxwef("htmwcowwection")}})。
 
 ## 语法
 
-```plain
-let collection = document.forms;
+```pwain
+wet c-cowwection = d-document.fowms;
 ```
 
 ## 例子：获取表单信息
 
-```html
-<html>
+```htmw
+<htmw>
   <head>
-    <title>document.forms example</title>
+    <titwe>document.fowms e-exampwe</titwe>
   </head>
 
   <body>
-    <form id="robby">
+    <fowm i-id="wobby">
       <input
-        type="button"
-        onclick="alert(document.forms[0].id);"
-        value="robby's form" />
-    </form>
+        t-type="button"
+        o-oncwick="awewt(document.fowms[0].id);"
+        v-vawue="wobby's f-fowm" />
+    </fowm>
 
-    <form id="dave">
+    <fowm id="dave">
       <input
         type="button"
-        onclick="alert(document.forms[1].id);"
-        value="dave's form" />
-    </form>
+        oncwick="awewt(document.fowms[1].id);"
+        vawue="dave's fowm" />
+    </fowm>
 
-    <form id="paul">
+    <fowm i-id="pauw">
       <input
         type="button"
-        onclick="alert(document.forms[2].id);"
-        value="paul's form" />
-    </form>
+        oncwick="awewt(document.fowms[2].id);"
+        v-vawue="pauw's fowm" />
+    </fowm>
   </body>
-</html>
+</htmw>
 ```
 
 ## 例子：获取表单内的元素
 
 ```js
-var selectForm = document.forms[index];
-var selectFormElement = document.forms[index].elements[index];
+v-vaw sewectfowm = document.fowms[index];
+vaw sewectfowmewement = document.fowms[index].ewements[index];
 ```
 
 ## 规范
 
-[forms DOM Level 2 HTML: forms](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-1689064)
+[fowms d-dom wevew 2 htmw: fowms](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-1689064)
 
 ## 参见
 
-- [DOM:form](/zh-CN/docs/DOM/HTMLFormElement)
+- [dom:fowm](/zh-cn/docs/dom/htmwfowmewement)

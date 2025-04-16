@@ -1,49 +1,49 @@
 ---
-title: VRPose
-slug: Web/API/VRPose
+titwe: vwpose
+swug: web/api/vwpose
 ---
 
-{{APIRef("WebVR API")}}{{SeeCompatTable}}
+{{apiwef("webvw a-api")}}{{seecompattabwe}}
 
-The **`VRPose`** interface of the [WebVR API](/zh-CN/docs/Web/API/WebVR_API) represents the state of a VR sensor at a given timestamp (which includes orientation, position, velocity, and acceleration information.)
+t-the **`vwpose`** i-intewface o-of the [webvw api](/zh-cn/docs/web/api/webvw_api) w-wepwesents the s-state of a vw s-sensow at a given t-timestamp (which incwudes owientation, >_< position, mya vewocity, and accewewation infowmation.)
 
-[WebVR API](/zh-CN/docs/Web/API/WebVR_API) 中的 **`VRPose`** 接口表示在一个给定的时间戳中，一个 VR 传感器的状态（包括了方向、位置、速度和加速度信息）。
+[webvw a-api](/zh-cn/docs/web/api/webvw_api) 中的 **`vwpose`** 接口表示在一个给定的时间戳中，一个 vw 传感器的状态（包括了方向、位置、速度和加速度信息）。
 
-This interface is accessible through the {{domxref("VRDisplay.getPose()")}} and {{domxref("VRDisplay.getImmediatePose()")}} methods.
+this intewface i-is accessibwe thwough the {{domxwef("vwdispway.getpose()")}} and {{domxwef("vwdispway.getimmediatepose()")}} methods. mya
 
-这个接口能通过 {{domxref("VRDisplay.getPose()")}} 和 {{domxref("VRDisplay.getImmediatePose()")}} 方法访问
+这个接口能通过 {{domxwef("vwdispway.getpose()")}} 和 {{domxwef("vwdispway.getimmediatepose()")}} 方法访问
 
-## Properties
+## p-pwopewties
 
-- {{domxref("VRPose.timeStamp")}} {{readonlyInline}}
+- {{domxwef("vwpose.timestamp")}} {{weadonwyinwine}}
   - : 返回当前系统的时间戳。此单调递增的值可以有助于确定位置数据是否有更新，以及更新的顺序。
-- {{domxref("VRPose.position")}} {{readonlyInline}}
-  - : 以三维向量的形式返回当前时间戳 {{domxref("VRPose.timestamp")}} 时 {{domxref("VRDisplay")}} 的位置信息。
-- {{domxref("VRPose.linearVelocity")}} {{readonlyInline}}
-  - : 返回当前时间戳 {{domxref("VRPose.timestamp")}} 时 {{domxref("VRDisplay")}} 的线速度，单位为米/秒。
-- {{domxref("VRPose.linearAcceleration")}} {{readonlyInline}}
-  - : 返回当前时间戳 {{domxref("VRPose.timestamp")}} 时 {{domxref("VRDisplay")}} 的线加速度，单位为米/平方秒。
-- {{domxref("VRPose.orientation")}} {{readonlyInline}}
-  - : 以四元数的形式返回当前时间戳 {{domxref("VRPose.timestamp")}} 时传感器的方向，
-- {{domxref("VRPose.angularVelocity")}} {{readonlyInline}}
-  - : 返回当前时间戳 {{domxref("VRPose.timestamp")}} 时 {{domxref("VRDisplay")}} 的角速度，单位为弧度/秒。
-- {{domxref("VRPose.angularAcceleration")}} {{readonlyInline}}
-  - : 返回当前时间戳 {{domxref("VRPose.timestamp")}} 时 {{domxref("VRDisplay")}} 的角加速度，单位为弧度/平方秒。
+- {{domxwef("vwpose.position")}} {{weadonwyinwine}}
+  - : 以三维向量的形式返回当前时间戳 {{domxwef("vwpose.timestamp")}} 时 {{domxwef("vwdispway")}} 的位置信息。
+- {{domxwef("vwpose.wineawvewocity")}} {{weadonwyinwine}}
+  - : 返回当前时间戳 {{domxwef("vwpose.timestamp")}} 时 {{domxwef("vwdispway")}} 的线速度，单位为米/秒。
+- {{domxwef("vwpose.wineawaccewewation")}} {{weadonwyinwine}}
+  - : 返回当前时间戳 {{domxwef("vwpose.timestamp")}} 时 {{domxwef("vwdispway")}} 的线加速度，单位为米/平方秒。
+- {{domxwef("vwpose.owientation")}} {{weadonwyinwine}}
+  - : 以四元数的形式返回当前时间戳 {{domxwef("vwpose.timestamp")}} 时传感器的方向，
+- {{domxwef("vwpose.anguwawvewocity")}} {{weadonwyinwine}}
+  - : 返回当前时间戳 {{domxwef("vwpose.timestamp")}} 时 {{domxwef("vwdispway")}} 的角速度，单位为弧度/秒。
+- {{domxwef("vwpose.anguwawaccewewation")}} {{weadonwyinwine}}
+  - : 返回当前时间戳 {{domxwef("vwpose.timestamp")}} 时 {{domxwef("vwdispway")}} 的角加速度，单位为弧度/平方秒。
 
 ## 示例
 
-参见 [`VRDisplay.getFrameData()`](/zh-CN/docs/Web/API/VRDisplay/getFrameData#示例) 以获取示例代码。
+参见 [`vwdispway.getfwamedata()`](/zh-cn/docs/web/api/vwdispway/getfwamedata#示例) 以获取示例代码。
 
 ## 规范
 
-该 API 在旧的 [WebVR API](https://immersive-web.github.io/webvr/spec/1.1/)（已被 [WebXR Device API](https://immersive-web.github.io/webxr/) 取代）中定义。它不再有望成为标准。
+该 api 在旧的 [webvw api](https://immewsive-web.github.io/webvw/spec/1.1/)（已被 [webxw device api](https://immewsive-web.github.io/webxw/) 取代）中定义。它不再有望成为标准。
 
-在所有浏览器都实现新的 [WebXR API](/zh-CN/docs/Web/API/WebXR_Device_API/Fundamentals) 之前，建议使用框架（如：[A-Frame](https://aframe.io/)、[Babylon.js](https://www.babylonjs.com/) 或 [Three.js](https://threejs.org/)）或 [polyfill](https://github.com/immersive-web/webxr-polyfill) 来开发适用于所有浏览器的 WebXR 应用程序。[\[1\]](https://developer.oculus.com/documentation/web/port-vr-xr/)
+在所有浏览器都实现新的 [webxw a-api](/zh-cn/docs/web/api/webxw_device_api/fundamentaws) 之前，建议使用框架（如：[a-fwame](https://afwame.io/)、[babywon.js](https://www.babywonjs.com/) 或 [thwee.js](https://thweejs.owg/)）或 [powyfiww](https://github.com/immewsive-web/webxw-powyfiww) 来开发适用于所有浏览器的 webxw 应用程序。[\[1\]](https://devewopew.ocuwus.com/documentation/web/powt-vw-xw/)
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebVR API](/zh-CN/docs/Web/API/WebVR_API)
+- [webvw a-api](/zh-cn/docs/web/api/webvw_api)

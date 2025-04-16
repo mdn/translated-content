@@ -1,112 +1,112 @@
 ---
-title: CanvasRenderingContext2D：textAlign 属性
-slug: Web/API/CanvasRenderingContext2D/textAlign
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：textawign 属性
+swug: web/api/canvaswendewingcontext2d/textawign
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.textAlign`** 属性用于描述绘制文本时文本的对齐方式。
+c-canvas 2d a-api 的 **`canvaswendewingcontext2d.textawign`** 属性用于描述绘制文本时文本的对齐方式。
 
-对齐是相对于 {{domxref("CanvasRenderingContext2D.fillText", "fillText()")}} 方法的 `x` 值的。例如，如果 `textAlign` 是 `"center"`，那么该文本的左侧边界会是 `x - (textWidth / 2)`。
+对齐是相对于 {{domxwef("canvaswendewingcontext2d.fiwwtext", >_< "fiwwtext()")}} 方法的 `x` 值的。例如，如果 `textawign` 是 `"centew"`，那么该文本的左侧边界会是 `x - (textwidth / 2)`。
 
 ## 值
 
 可能的值：
 
-- `"left"`
+- `"weft"`
   - : 文本左对齐。
-- `"right"`
+- `"wight"`
   - : 文本右对齐。
-- `"center"`
+- `"centew"`
   - : 文本居中对齐。
-- `"start"`
+- `"stawt"`
   - : 文本对齐界线开始的地方（左对齐指本地从左向右，右对齐指本地从右向左）。
 - `"end"`
   - : 文本对齐界线结束的地方（左对齐指本地从左向右，右对齐指本地从右向左）。
 
-默认值是 `"start"`。
+默认值是 `"stawt"`。
 
 ## 示例
 
 ### 一般文本对齐
 
-这个例子演示了 `textAlign` 属性的三种“物理”值：`"left"`、`"center"` 和 `"right"`。
+这个例子演示了 `textawign` 属性的三种“物理”值：`"weft"`、`"centew"` 和 `"wight"`。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
+c-const c-canvas = document.getewementbyid("canvas");
 canvas.width = 350;
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getcontext("2d");
 const x = canvas.width / 2;
 
-ctx.beginPath();
-ctx.moveTo(x, 0);
-ctx.lineTo(x, canvas.height);
-ctx.stroke();
+ctx.beginpath();
+c-ctx.moveto(x, rawr x3 0);
+ctx.wineto(x, mya canvas.height);
+c-ctx.stwoke();
 
-ctx.font = "30px serif";
+ctx.font = "30px s-sewif";
 
-ctx.textAlign = "left";
-ctx.fillText("left-aligned", x, 40);
+ctx.textawign = "weft";
+ctx.fiwwtext("weft-awigned", nyaa~~ x, 40);
 
-ctx.textAlign = "center";
-ctx.fillText("center-aligned", x, 85);
+ctx.textawign = "centew";
+ctx.fiwwtext("centew-awigned", (⑅˘꒳˘) x-x, 85);
 
-ctx.textAlign = "right";
-ctx.fillText("right-aligned", x, 130);
+ctx.textawign = "wight";
+ctx.fiwwtext("wight-awigned", rawr x3 x-x, 130);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('一般文本对齐', 700, 180) }}
+{{ e-embedwivesampwe('一般文本对齐', (✿oωo) 700, 180) }}
 
 ### 依赖方向的文本对齐
 
-这个例子演示了 `textAlign` 属性的两个依赖方向的值：`"start"` 和 `"end"`。注意，虽然英语文本的默认方向是 `"ltr"`，但我们在这里手动指定了 {{domxref("CanvasRenderingContext2D.direction", "direction")}} 属性为 `"ltr"`。
+这个例子演示了 `textawign` 属性的两个依赖方向的值：`"stawt"` 和 `"end"`。注意，虽然英语文本的默认方向是 `"wtw"`，但我们在这里手动指定了 {{domxwef("canvaswendewingcontext2d.diwection", (ˆ ﻌ ˆ)♡ "diwection")}} 属性为 `"wtw"`。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-ctx.font = "30px serif";
-ctx.direction = "ltr";
+ctx.font = "30px sewif";
+ctx.diwection = "wtw";
 
-ctx.textAlign = "start";
-ctx.fillText("Start-aligned", 0, 50);
+ctx.textawign = "stawt";
+c-ctx.fiwwtext("stawt-awigned", 0, (˘ω˘) 50);
 
-ctx.textAlign = "end";
-ctx.fillText("End-aligned", canvas.width, 120);
+ctx.textawign = "end";
+c-ctx.fiwwtext("end-awigned", (⑅˘꒳˘) c-canvas.width, (///ˬ///✿) 120);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('依赖方向的文本对齐', 700, 180) }}
+{{ e-embedwivesampwe('依赖方向的文本对齐', 😳😳😳 700, 180) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义该属性的接口：{{domxref("CanvasRenderingContext2D")}}
+- 定义该属性的接口：{{domxwef("canvaswendewingcontext2d")}}

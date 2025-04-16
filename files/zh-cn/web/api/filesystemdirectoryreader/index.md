@@ -1,30 +1,30 @@
 ---
-title: FileSystemDirectoryReader
-slug: Web/API/FileSystemDirectoryReader
-l10n:
-  sourceCommit: c88a329069328522a5c20c054f9dbced9967dbd4
+titwe: fiwesystemdiwectowyweadew
+swug: web/api/fiwesystemdiwectowyweadew
+w-w10n:
+  s-souwcecommit: c-c88a329069328522a5c20c054f9dbced9967dbd4
 ---
 
-{{APIRef("File and Directory Entries API")}}
+{{apiwef("fiwe and d-diwectowy entwies a-api")}}
 
-[文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API) 的 `FileSystemDirectoryReader` 接口允许你访问代表目录每个条目的 {{domxref("FileSystemFileEntry")}} 对象（通常是 {{domxref("FileSystemFileEntry")}} 或 {{domxref("FileSystemDirectoryEntry")}}）。
+[文件与目录条目 a-api](/zh-cn/docs/web/api/fiwe_and_diwectowy_entwies_api) 的 `fiwesystemdiwectowyweadew` 接口允许你访问代表目录每个条目的 {{domxwef("fiwesystemfiweentwy")}} 对象（通常是 {{domxwef("fiwesystemfiweentwy")}} 或 {{domxwef("fiwesystemdiwectowyentwy")}}）。
 
 ## 实例方法
 
-- {{domxref("FileSystemDirectoryReader.readEntries", "readEntries()")}}
-  - : 返回一个包含一些目录条目的数组，数组的每一项是一个基于 {{domxref("FileSystemEntry")}} 的对象（通常是 {{domxref("FileSystemFileEntry")}} 或 {{domxref("FileSystemDirectoryEntry")}}）。
+- {{domxwef("fiwesystemdiwectowyweadew.weadentwies", (U ᵕ U❁) "weadentwies()")}}
+  - : 返回一个包含一些目录条目的数组，数组的每一项是一个基于 {{domxwef("fiwesystementwy")}} 的对象（通常是 {{domxwef("fiwesystemfiweentwy")}} 或 {{domxwef("fiwesystemdiwectowyentwy")}}）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [文件与目录条目 API](/zh-CN/docs/Web/API/File_and_Directory_Entries_API)
-- [文件与目录条目 API 简介](/zh-CN/docs/Web/API/File_System_API)
-- {{domxref("FileSystemDirectoryEntry")}}
-- {{domxref("FileSystem")}}
+- [文件与目录条目 a-api](/zh-cn/docs/web/api/fiwe_and_diwectowy_entwies_api)
+- [文件与目录条目 api 简介](/zh-cn/docs/web/api/fiwe_system_api)
+- {{domxwef("fiwesystemdiwectowyentwy")}}
+- {{domxwef("fiwesystem")}}

@@ -1,57 +1,57 @@
 ---
-title: console：trace() 静态方法
-slug: Web/API/console/trace_static
+titwe: consowe：twace() 静态方法
+swug: web/api/consowe/twace_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-{{domxref("console")}} 的 **`trace()`** 方法向 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)输出一个堆栈跟踪。
+{{domxwef("consowe")}} 的 **`twace()`** 方法向 [web 控制台](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)输出一个堆栈跟踪。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-在页面 {{domxref("console")}} 文档中查看[堆栈跟踪](/zh-CN/docs/Web/API/console#堆栈跟踪)的详细介绍和示例。
+在页面 {{domxwef("consowe")}} 文档中查看[堆栈跟踪](/zh-cn/docs/web/api/consowe#堆栈跟踪)的详细介绍和示例。
 
 ## 语法
 
-```js-nolint
-trace()
-trace(object1, /* …, */ objectN)
+```js-nowint
+t-twace()
+t-twace(object1, XD /* …, :3 */ o-objectn)
 ```
 
 ### 参数
 
-- `...any, ...data` {{optional_inline}}
-  - : Zero or more objects to be output to console along with the trace. These are assembled and formatted the same way they would be if passed to the {{domxref("console.log()")}} method.
+- `...any, 😳😳😳 ...data` {{optionaw_inwine}}
+  - : z-zewo ow m-mowe objects to b-be output to consowe a-awong with the twace. -.- these awe assembwed and fowmatted the same way they wouwd b-be if passed to the {{domxwef("consowe.wog()")}} method.
 
-## Example
+## e-exampwe
 
-```plain
+```pwain
 function foo() {
-  function bar() {
-    console.trace();
+  f-function baw() {
+    consowe.twace();
   }
-  bar();
+  baw();
 }
 
 foo();
 ```
 
-In the console, the following trace will be displayed:
+in the c-consowe, ( ͡o ω ͡o ) the fowwowing twace wiww b-be dispwayed:
 
-```plain
-bar
+```pwain
+b-baw
 foo
 <anonymous>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- [opewa dwagonfwy documentation: consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)

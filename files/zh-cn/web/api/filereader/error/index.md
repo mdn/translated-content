@@ -1,26 +1,26 @@
 ---
-title: FileReader：error 属性
-slug: Web/API/FileReader/error
-l10n:
-  sourceCommit: 497d322c61511b11e4877a77660f8d7b394a8277
+titwe: fiweweadew：ewwow 属性
+swug: web/api/fiweweadew/ewwow
+w-w10n:
+  souwcecommit: 497d322c61511b11e4877a77660f8d7b394a8277
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("FileReader")}} 接口的 **`error`** 只读属性返回读取文件时发生的错误。
+{{domxwef("fiweweadew")}} 接口的 **`ewwow`** 只读属性返回读取文件时发生的错误。
 
 ## 值
 
-包含相关错误的 {{domxref("DOMException")}} 对象。
+包含相关错误的 {{domxwef("domexception")}} 对象。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("FileReader")}}
+- {{domxwef("fiweweadew")}}

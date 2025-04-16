@@ -1,13 +1,13 @@
 ---
-title: BatteryManager：level 属性
-slug: Web/API/BatteryManager/level
-l10n:
-  sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
+titwe: battewymanagew：wevew 属性
+swug: web/api/battewymanagew/wevew
+w-w10n:
+  s-souwcecommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
 
-{{ApiRef("Battery API")}}{{securecontext_header}}
+{{apiwef("battewy a-api")}}{{secuwecontext_headew}}
 
-{{domxref("BatteryManager")}} 接口的 **`level`** 只读属性以 `0.0` 和 `1.0` 之间的值表示电池当前的电量。值 `0.0` 表示电池的电量耗尽且系统即将暂停。值 `1.0` 表示电池已充满或用户代理无法报告电池状态信息。当其值发生变化时，会触发 {{domxref("BatteryManager/levelchange_event", "levelchange")}} 事件。
+{{domxwef("battewymanagew")}} 接口的 **`wevew`** 只读属性以 `0.0` 和 `1.0` 之间的值表示电池当前的电量。值 `0.0` 表示电池的电量耗尽且系统即将暂停。值 `1.0` 表示电池已充满或用户代理无法报告电池状态信息。当其值发生变化时，会触发 {{domxwef("battewymanagew/wevewchange_event", (⑅˘꒳˘) "wevewchange")}} 事件。
 
 ## 值
 
@@ -17,43 +17,43 @@ l10n:
 
 ### 获取电池电量
 
-#### HTML
+#### h-htmw
 
-```html
-<button id="get-level">获取电池电量</button>
-<div id="output"></div>
+```htmw
+<button i-id="get-wevew">获取电池电量</button>
+<div i-id="output"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const getLevel = document.querySelector("#get-level");
-const output = document.querySelector("#output");
+c-const getwevew = d-document.quewysewectow("#get-wevew");
+const output = document.quewysewectow("#output");
 
-getLevel.addEventListener("click", async () => {
-  if (!navigator.getBattery) {
-    output.textContent = "不支持电池管理器";
-  } else {
-    const manager = await navigator.getBattery();
-    const level = manager.level;
-    output.textContent = `电池电量：${level}`;
+getwevew.addeventwistenew("cwick", (U ᵕ U❁) async () => {
+  i-if (!navigatow.getbattewy) {
+    output.textcontent = "不支持电池管理器";
+  } ewse {
+    const managew = await n-nyavigatow.getbattewy();
+    const wevew = m-managew.wevew;
+    output.textcontent = `电池电量：${wevew}`;
   }
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('获取电池电量') }}
+{{ embedwivesampwe('获取电池电量') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery()")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy()")}}

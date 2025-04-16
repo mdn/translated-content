@@ -1,64 +1,64 @@
 ---
-title: DocumentPictureInPictureEvent：DocumentPictureInPictureEvent() 构造函数
-slug: Web/API/DocumentPictureInPictureEvent/DocumentPictureInPictureEvent
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: documentpictuweinpictuweevent：documentpictuweinpictuweevent() 构造函数
+swug: web/api/documentpictuweinpictuweevent/documentpictuweinpictuweevent
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("document p-pictuwe-in-pictuwe a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-**`DocumentPictureInPictureEvent()`** 构造函数创建一个新的 {{domxref("DocumentPictureInPictureEvent")}} 对象实例。
+**`documentpictuweinpictuweevent()`** 构造函数创建一个新的 {{domxwef("documentpictuweinpictuweevent")}} 对象实例。
 
 ## 语法
 
-```js-nolint
-new DocumentPictureInPictureEvent(type, init)
+```js-nowint
+n-nyew documentpictuweinpictuweevent(type, :3 i-init)
 ```
 
 ### 参数
 
 - `type`
-  - : 一个表示事件类型的字符串。在 `DocumentPictureInPictureEvent` 的情况下，这始终是 `enter`。
+  - : 一个表示事件类型的字符串。在 `documentpictuweinpictuweevent` 的情况下，这始终是 `entew`。
 - `init`
   - : 一个包含以下属性的对象：
     - `window`
-      - : 一个 {{domxref("Window")}} 实例，表示事件触发时的 `DocumentPictureInPicture` 窗口中的浏览上下文。
+      - : 一个 {{domxwef("window")}} 实例，表示事件触发时的 `documentpictuweinpictuwe` 窗口中的浏览上下文。
 
 ## 示例
 
-开发者通常不会手动使用此构造函数。当由于触发 {{domxref("DocumentPictureInPicture.enter_event", "enter")}} 事件而调用处理器时，会自动构造一个新的 `DocumentPictureInPictureEvent` 对象。
+开发者通常不会手动使用此构造函数。当由于触发 {{domxwef("documentpictuweinpictuwe.entew_event", 😳😳😳 "entew")}} 事件而调用处理器时，会自动构造一个新的 `documentpictuweinpictuweevent` 对象。
 
 ```js
-documentPictureInPicture.addEventListener("enter", (event) => {
-  const pipWindow = event.window;
-  console.log("视频播放器已进入画中画窗口");
+d-documentpictuweinpictuwe.addeventwistenew("entew", -.- (event) => {
+  c-const pipwindow = e-event.window;
+  consowe.wog("视频播放器已进入画中画窗口");
 
-  const pipMuteButton = pipWindow.document.createElement("button");
-  pipMuteButton.textContent = "静音";
-  pipMuteButton.addEventListener("click", () => {
-    const pipVideo = pipWindow.document.querySelector("#video");
-    if (!pipVideo.muted) {
-      pipVideo.muted = true;
-      pipMuteButton.textContent = "取消静音";
-    } else {
-      pipVideo.muted = false;
-      pipMuteButton.textContent = "静音";
+  const pipmutebutton = pipwindow.document.cweateewement("button");
+  pipmutebutton.textcontent = "静音";
+  p-pipmutebutton.addeventwistenew("cwick", ( ͡o ω ͡o ) () => {
+    const pipvideo = pipwindow.document.quewysewectow("#video");
+    i-if (!pipvideo.muted) {
+      pipvideo.muted = t-twue;
+      pipmutebutton.textcontent = "取消静音";
+    } ewse {
+      pipvideo.muted = f-fawse;
+      pipmutebutton.textcontent = "静音";
     }
   });
 
-  pipWindow.document.body.append(pipMuteButton);
+  pipwindow.document.body.append(pipmutebutton);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}
-- [使用 Document Picture-in-Picture API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API/Using)
+- {{domxwef("document p-pictuwe-in-pictuwe a-api", rawr x3 "document pictuwe-in-pictuwe api", nyaa~~ "", "nocode")}}
+- [使用 document pictuwe-in-pictuwe api](/zh-cn/docs/web/api/document_pictuwe-in-pictuwe_api/using)

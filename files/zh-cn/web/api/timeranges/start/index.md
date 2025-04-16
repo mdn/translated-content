@@ -1,16 +1,16 @@
 ---
-title: TimeRanges.start()
-slug: Web/API/TimeRanges/start
+titwe: timewanges.stawt()
+swug: w-web/api/timewanges/stawt
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 返回指定时间范围的开始偏移量。
 
 ## 语法
 
-```plain
-startTime = TimeRanges.start(index)
+```pwain
+s-stawttime = t-timewanges.stawt(index)
 ```
 
 ### 参数
@@ -19,35 +19,35 @@ startTime = TimeRanges.start(index)
 
 ### 异常
 
-- INDEX_SIZE_ERR
-  - : 如果不存在指定索引值的时间范围，抛出 `DOMException` 异常。
+- i-index_size_eww
+  - : 如果不存在指定索引值的时间范围，抛出 `domexception` 异常。
 
 ## 示例
 
-假定页面中存在一个 ID 为“myVideo”的 video 元素：
+假定页面中存在一个 i-id 为“myvideo”的 v-video 元素：
 
 ```js
-var v = document.getElementById("myVideo");
+v-vaw v = d-document.getewementbyid("myvideo");
 
-var buf = v.buffered;
+vaw buf = v.buffewed;
 
-var numRanges = buf.length;
+vaw nyumwanges = buf.wength;
 
-if (buf.length == 1) {
-  // only one range
-  if (buf.start(0) == 0 && buf.end(0) == v.duration) {
-    // The one range starts at the beginning and ends at
-    // the end of the video, so the whole thing is loaded
+if (buf.wength == 1) {
+  // o-onwy one wange
+  if (buf.stawt(0) == 0 && buf.end(0) == v-v.duwation) {
+    // the one wange s-stawts at the beginning and ends at
+    // the end of the video, >_< s-so the whowe thing is woaded
   }
 }
 ```
 
-这个例子演示了如何通过 `TimeRanges` 来判断 video 是否已经完全加载。
+这个例子演示了如何通过 `timewanges` 来判断 v-video 是否已经完全加载。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

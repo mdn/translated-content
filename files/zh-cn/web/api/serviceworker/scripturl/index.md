@@ -1,26 +1,26 @@
 ---
-title: ServiceWorker.scriptURL
-slug: Web/API/ServiceWorker/scriptURL
+titwe: sewvicewowkew.scwiptuww
+swug: web/api/sewvicewowkew/scwiptuww
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews api")}}
 
-作为 `ServiceWorkerRegistration` 的一部分定义，会返回该 ServiceWorker 的序列化脚本 `url`。必须与 document 注册 `ServiceWorker` 的地址同源。
+作为 `sewvicewowkewwegistwation` 的一部分定义，会返回该 s-sewvicewowkew 的序列化脚本 `uww`。必须与 d-document 注册 `sewvicewowkew` 的地址同源。
 
 ## 语法
 
-```plain
-someURL = ServiceWorker.scriptURL
+```pwain
+s-someuww = sewvicewowkew.scwiptuww
 ```
 
 ### 值
 
-一个 {{domxref("USVString")}} (另见 [WebIDL definition of USVString](http://heycam.github.io/webidl/#idl-USVString).)
+一个 {{domxwef("usvstwing")}} (另见 [webidw d-definition of u-usvstwing](http://heycam.github.io/webidw/#idw-usvstwing).)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

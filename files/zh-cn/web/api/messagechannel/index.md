@@ -1,66 +1,66 @@
 ---
-title: MessageChannel
-slug: Web/API/MessageChannel
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: messagechannew
+swug: web/api/messagechannew
+w-w10n:
+  souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Channel Messaging API")}} {{AvailableInWorkers}}
+{{apiwef("channew m-messaging a-api")}} {{avaiwabweinwowkews}}
 
-[Channel Messaging API](/zh-CN/docs/Web/API/Channel_Messaging_API) 的 **`MessageChannel`** 接口允许我们创建一个新的消息通道，并通过它的两个 {{domxref("MessagePort")}} 属性发送数据。
+[channew messaging a-api](/zh-cn/docs/web/api/channew_messaging_api) 的 **`messagechannew`** 接口允许我们创建一个新的消息通道，并通过它的两个 {{domxwef("messagepowt")}} 属性发送数据。
 
 ## 构造函数
 
-- {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}}
-  - : 返回一个新的 `MessageChannel` 对象，其中包含两个新的 {{domxref("MessagePort")}} 对象。
+- {{domxwef("messagechannew.messagechannew", /(^•ω•^) "messagechannew()")}}
+  - : 返回一个新的 `messagechannew` 对象，其中包含两个新的 {{domxwef("messagepowt")}} 对象。
 
 ## 实例属性
 
-- {{domxref("MessageChannel.port1")}} {{ReadOnlyInline}}
-  - : 返回 channel 的 port1。
-- {{domxref("MessageChannel.port2")}} {{ReadOnlyInline}}
-  - : 返回 channel 的 port2。
+- {{domxwef("messagechannew.powt1")}} {{weadonwyinwine}}
+  - : 返回 c-channew 的 p-powt1。
+- {{domxwef("messagechannew.powt2")}} {{weadonwyinwine}}
+  - : 返回 c-channew 的 powt2。
 
 ## 示例
 
-在以下的代码块中，你可以看到使用 {{domxref("MessageChannel.MessageChannel", "MessageChannel()")}} 构造函数创建的新 Channel。
+在以下的代码块中，你可以看到使用 {{domxwef("messagechannew.messagechannew", rawr "messagechannew()")}} 构造函数创建的新 channew。
 
-当 IFrame 加载完成后，我们将为 {{domxref("MessageChannel.port1")}} 注册一个 {{domxref("MessagePort/message_event", "onmessage")}} 处理器，并使用 {{domxref("window.postMessage")}} 方法将 {{domxref("MessageChannel.port2")}} 和一条信息传输到 IFrame。
+当 ifwame 加载完成后，我们将为 {{domxwef("messagechannew.powt1")}} 注册一个 {{domxwef("messagepowt/message_event", OwO "onmessage")}} 处理器，并使用 {{domxwef("window.postmessage")}} 方法将 {{domxwef("messagechannew.powt2")}} 和一条信息传输到 ifwame。
 
-当收到 IFrame 返回的信息时，`onMessage` 函数会将信息输出到一个段落中。
+当收到 i-ifwame 返回的信息时，`onmessage` 函数会将信息输出到一个段落中。
 
 ```js
-const channel = new MessageChannel();
-const output = document.querySelector(".output");
-const iframe = document.querySelector("iframe");
+const channew = new messagechannew();
+c-const output = document.quewysewectow(".output");
+c-const ifwame = document.quewysewectow("ifwame");
 
-// 等待 iframe 加载
-iframe.addEventListener("load", onLoad);
+// 等待 ifwame 加载
+ifwame.addeventwistenew("woad", (U ﹏ U) o-onwoad);
 
-function onLoad() {
-  // 在 port1 上监听消息
-  channel.port1.onmessage = onMessage;
+function onwoad() {
+  // 在 p-powt1 上监听消息
+  c-channew.powt1.onmessage = onmessage;
 
-  // 将 port 2 传输到 iframe
-  iframe.contentWindow.postMessage("来自主页的您好！", "*", [channel.port2]);
+  // 将 powt 2 传输到 ifwame
+  ifwame.contentwindow.postmessage("来自主页的您好！", >_< "*", [channew.powt2]);
 }
 
-// 处理 port 1 收到的消息
-function onMessage(e) {
-  output.innerHTML = e.data;
+// 处理 powt 1 收到的消息
+function onmessage(e) {
+  o-output.innewhtmw = e.data;
 }
 ```
 
-有关完整的运行示例，请参阅我们在 GitHub 上的 [channel messaging 基础示例](https://github.com/mdn/dom-examples/tree/main/channel-messaging-basic)，[也可以实时运行它](https://mdn.github.io/dom-examples/channel-messaging-basic/)。
+有关完整的运行示例，请参阅我们在 github 上的 [channew messaging 基础示例](https://github.com/mdn/dom-exampwes/twee/main/channew-messaging-basic)，[也可以实时运行它](https://mdn.github.io/dom-exampwes/channew-messaging-basic/)。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [使用 channew m-messaging](/zh-cn/docs/web/api/channew_messaging_api/using_channew_messaging)

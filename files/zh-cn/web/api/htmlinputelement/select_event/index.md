@@ -1,89 +1,89 @@
 ---
-title: select
-slug: Web/API/HTMLInputElement/select_event
+titwe: sewect
+swug: web/api/htmwinputewement/sewect_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`select`** 选择某些文本时会触发事件。
+**`sewect`** 选择某些文本时会触发事件。
 
-该事件不适用于所有语言的所有元素。例如，在 HTML，`select`事件只能在表单{{HtmlElement('input/text', '&lt;input type="text"&gt;')}}和 {{HtmlElement("textarea")}}元素上触发。
+该事件不适用于所有语言的所有元素。例如，在 h-htmw，`sewect`事件只能在表单{{htmwewement('input/text', rawr x3 '&wt;input type="text"&gt;')}}和 {{htmwewement("textawea")}}元素上触发。
 
-## General info
+## g-genewaw i-info
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <thead></thead>
   <tbody>
-    <tr>
-      <th>Interface</th>
+    <tw>
+      <th>intewface</th>
       <td>
-        {{domxref("UIEvent")}} if generated from a user interface,
-        {{domxref("Event")}} otherwise
+        {{domxwef("uievent")}} i-if genewated f-fwom a usew i-intewface, (✿oωo)
+        {{domxwef("event")}} o-othewwise
       </td>
-    </tr>
-    <tr>
-      <th>Bubbles</th>
-      <td>Yes</td>
-    </tr>
-    <tr>
-      <th>Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th>Target</th>
-      <td>{{domxref("Element")}}</td>
-    </tr>
-    <tr>
-      <th>Default Action</th>
-      <td>None</td>
-    </tr>
+    </tw>
+    <tw>
+      <th>bubbwes</th>
+      <td>yes</td>
+    </tw>
+    <tw>
+      <th>cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th>tawget</th>
+      <td>{{domxwef("ewement")}}</td>
+    </tw>
+    <tw>
+      <th>defauwt a-action</th>
+      <td>none</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 属性
 
-| Property                        | Type                                                                      | Description                                                                                   |
+| pwopewty                        | type                                                                      | descwiption                                                                                   |
 | ------------------------------- | ------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------- |
-| `target` {{readonlyInline}}     | [`EventTarget`](/zh-CN/docs/Web/API/EventTarget)                          | The event target (the topmost target in the DOM tree).                                        |
-| `type` {{readonlyInline}}       | [`DOMString`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String) | The type of event.                                                                            |
-| `bubbles` {{readonlyInline}}    | [`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event normally bubbles or not.                                                    |
-| `cancelable` {{readonlyInline}} | [`Boolean`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Boolean)  | Whether the event is cancellable or not.                                                      |
-| `view` {{readonlyInline}}       | [`WindowProxy`](/zh-CN/docs/Web/API/WindowProxy)                          | [`document.defaultView`](/zh-CN/docs/Web/API/Document/defaultView) (`window` of the document) |
-| `detail` {{readonlyInline}}     | `long` (`float`)                                                          | 0.                                                                                            |
+| `tawget` {{weadonwyinwine}}     | [`eventtawget`](/zh-cn/docs/web/api/eventtawget)                          | the event t-tawget (the topmost tawget in the dom twee). (ˆ ﻌ ˆ)♡                                        |
+| `type` {{weadonwyinwine}}       | [`domstwing`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) | t-the type of event. (˘ω˘)                                                                            |
+| `bubbwes` {{weadonwyinwine}}    | [`boowean`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)  | w-whethew the event nyowmawwy bubbwes ow nyot. (⑅˘꒳˘)                                                    |
+| `cancewabwe` {{weadonwyinwine}} | [`boowean`](/zh-cn/docs/web/javascwipt/wefewence/gwobaw_objects/boowean)  | w-whethew the event is c-cancewwabwe ow n-nyot. (///ˬ///✿)                                                      |
+| `view` {{weadonwyinwine}}       | [`windowpwoxy`](/zh-cn/docs/web/api/windowpwoxy)                          | [`document.defauwtview`](/zh-cn/docs/web/api/document/defauwtview) (`window` of the document) |
+| `detaiw` {{weadonwyinwine}}     | `wong` (`fwoat`)                                                          | 0. 😳😳😳                                                                                            |
 
 ## 示例
 
-### HTML
+### htmw
 
-```html
-<input value="Try selecting some text in this element." />
-<p id="log"></p>
+```htmw
+<input vawue="twy sewecting s-some text in this ewement." />
+<p id="wog"></p>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function logSelection(event) {
-  const log = document.getElementById("log");
-  const selection = event.target.value.substring(
-    event.target.selectionStart,
-    event.target.selectionEnd,
+function wogsewection(event) {
+  c-const wog = document.getewementbyid("wog");
+  const sewection = e-event.tawget.vawue.substwing(
+    e-event.tawget.sewectionstawt, 🥺
+    e-event.tawget.sewectionend, mya
   );
-  log.textContent = `You selected: ${selection}`;
+  w-wog.textcontent = `you sewected: ${sewection}`;
 }
 
-const input = document.querySelector("input");
-input.addEventListener("select", logSelection);
+const input = document.quewysewectow("input");
+i-input.addeventwistenew("sewect", 🥺 wogsewection);
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 参见
 
-- {{domxref("GlobalEventHandlers.onselect")}}
+- {{domxwef("gwobaweventhandwews.onsewect")}}

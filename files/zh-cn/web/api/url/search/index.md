@@ -1,15 +1,15 @@
 ---
-title: URL：search 属性
-slug: Web/API/URL/search
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uww：seawch 属性
+swug: w-web/api/uww/seawch
+w-w10n:
+  souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URL")}} 接口的 **`search`** 属性是一个搜索字符串，也称为查询字符串，这是一个包含 `'?'` 且其后跟着 URL 的参数的字符串。
+{{domxwef("uww")}} 接口的 **`seawch`** 属性是一个搜索字符串，也称为查询字符串，这是一个包含 `'?'` 且其后跟着 u-uww 的参数的字符串。
 
-现代浏览器提供了 {{domxref("URL.searchParams")}} 属性，以便轻松解析查询字符串中的参数。
+现代浏览器提供了 {{domxwef("uww.seawchpawams")}} 属性，以便轻松解析查询字符串中的参数。
 
 ## 值
 
@@ -18,20 +18,20 @@ l10n:
 ## 示例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/search?q=123",
+c-const uww = nyew u-uww(
+  "https://devewopew.moziwwa.owg/zh-cn/docs/web/api/uww/seawch?q=123", (U ᵕ U❁)
 );
-console.log(url.search); // 输出“?q=123”
+c-consowe.wog(uww.seawch); // 输出“?q=123”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属的 {{domxref("URL")}} 接口。
+- 所属的 {{domxwef("uww")}} 接口。

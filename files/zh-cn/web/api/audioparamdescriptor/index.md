@@ -1,40 +1,40 @@
 ---
-title: AudioParamDescriptor
-slug: Web/API/AudioParamDescriptor
+titwe: audiopawamdescwiptow
+swug: web/api/audiopawamdescwiptow
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-The **`AudioParamDescriptor`** dictionary of the [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API) specifies properties for an {{domxref("AudioParam")}} objects. It is used to create custom `AudioParam`s on an {{domxref("AudioWorkletNode")}}. If the underlying {{domxref("AudioWorkletProcessor")}} has a {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} static getter, then the returned array of objects based on this dictionary is used internally by `AudioWorkletNode` constructor to populate its {{domxref("AudioWorkletNode.parameters", "parameters")}} property accordingly.
+t-the **`audiopawamdescwiptow`** d-dictionawy of t-the [web audio a-api](/zh-cn/docs/web/api/web_audio_api) s-specifies p-pwopewties fow a-an {{domxwef("audiopawam")}} objects. o.O it is used to cweate custom `audiopawam`s on an {{domxwef("audiowowkwetnode")}}. ( ͡o ω ͡o ) i-if the undewwying {{domxwef("audiowowkwetpwocessow")}} has a {{domxwef("audiowowkwetpwocessow.pawametewdescwiptows", (U ﹏ U) "pawametewdescwiptows")}} static gettew, (///ˬ///✿) t-then the wetuwned awway of o-objects based on this dictionawy is used intewnawwy by `audiowowkwetnode` c-constwuctow to popuwate i-its {{domxwef("audiowowkwetnode.pawametews", >w< "pawametews")}} p-pwopewty accowdingwy. rawr
 
 ## 属性
 
 - `name`
-  - : The {{domxref("DOMString")}} which represents the name of the `AudioParam`. Under this name the `AudioParam` will be available in the {{domxref("AudioWorkletNode.parameters", "parameters")}} property of the node, and under this name the {{domxref("AudioWorkletProcessor.process")}} method will acquire the calculated values of this `AudioParam`.
-- `automationRate` {{optional_inline}}
-  - : Either [`"a-rate"`](/zh-CN/docs/Web/API/AudioParam#a-rate), or [`"k-rate"`](/zh-CN/docs/Web/API/AudioParam#k-rate) string which represents an automation rate of this `AudioParam`. Defaults to `"a-rate"`.
-- `minValue` {{optional_inline}}
-  - : A `float` which represents minimum value of the `AudioParam`. Defaults to `-3.4028235e38`.
-- `maxValue` {{optional_inline}}
-  - : A `float` which represents maximum value of the `AudioParam`. Defaults to `3.4028235e38`.
-- `defaultValue` {{optional_inline}}
-  - : A `float` which represents initial value of the `AudioParam`. Defaults to `0`.
+  - : the {{domxwef("domstwing")}} which wepwesents the nyame of the `audiopawam`. mya u-undew this nyame the `audiopawam` wiww be avaiwabwe in the {{domxwef("audiowowkwetnode.pawametews", "pawametews")}} pwopewty of the n-nyode, ^^ and undew this nyame the {{domxwef("audiowowkwetpwocessow.pwocess")}} method w-wiww acquiwe t-the cawcuwated v-vawues of this `audiopawam`. 😳😳😳
+- `automationwate` {{optionaw_inwine}}
+  - : e-eithew [`"a-wate"`](/zh-cn/docs/web/api/audiopawam#a-wate), ow [`"k-wate"`](/zh-cn/docs/web/api/audiopawam#k-wate) stwing which wepwesents a-an automation wate of this `audiopawam`. mya defauwts to `"a-wate"`. 😳
+- `minvawue` {{optionaw_inwine}}
+  - : a `fwoat` w-which wepwesents minimum vawue of the `audiopawam`. -.- defauwts to `-3.4028235e38`. 🥺
+- `maxvawue` {{optionaw_inwine}}
+  - : a `fwoat` which w-wepwesents maximum vawue of the `audiopawam`. o.O defauwts t-to `3.4028235e38`. /(^•ω•^)
+- `defauwtvawue` {{optionaw_inwine}}
+  - : a-a `fwoat` w-which wepwesents initiaw vawue of the `audiopawam`. nyaa~~ defauwts to `0`. nyaa~~
 
 ## 示例
 
-下面的代码片段展示了自定义的 `AudioWorkletProcessor` 中的静态方法 {{domxref("AudioWorkletProcessor.parameterDescriptors", "parameterDescriptors")}} 返回该类型的描述符（这是 [AudioWorkletNode.parameters](/zh-CN/docs/Web/API/AudioWorkletNode/parameters#examples) 中完整示例的一部分）。
+下面的代码片段展示了自定义的 `audiowowkwetpwocessow` 中的静态方法 {{domxwef("audiowowkwetpwocessow.pawametewdescwiptows", :3 "pawametewdescwiptows")}} 返回该类型的描述符（这是 [audiowowkwetnode.pawametews](/zh-cn/docs/web/api/audiowowkwetnode/pawametews#exampwes) 中完整示例的一部分）。
 
 ```js
-// white-noise-processor.js
-class WhiteNoiseProcessor extends AudioWorkletProcessor {
-  static get parameterDescriptors() {
-    return [
+// w-white-noise-pwocessow.js
+c-cwass whitenoisepwocessow e-extends audiowowkwetpwocessow {
+  s-static get pawametewdescwiptows() {
+    wetuwn [
       {
-        name: "customGain",
-        defaultValue: 1,
-        minValue: 0,
-        maxValue: 1,
-        automationRate: "a-rate",
+        n-nyame: "customgain", 😳😳😳
+        defauwtvawue: 1, (˘ω˘)
+        m-minvawue: 0, ^^
+        maxvawue: 1,
+        automationwate: "a-wate", :3
       },
     ];
   }
@@ -45,8 +45,8 @@ class WhiteNoiseProcessor extends AudioWorkletProcessor {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

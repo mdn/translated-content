@@ -1,79 +1,79 @@
 ---
-title: FormDataEvent
-slug: Web/API/FormDataEvent
-l10n:
-  sourceCommit: 56dbf87640f2c91ec0ca3b95a8291fe7e362b9a8
+titwe: fowmdataevent
+swug: web/api/fowmdataevent
+w-w10n:
+  souwcecommit: 56dbf87640f2c91ec0ca3b95a8291fe7e362b9a8
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`FormDataEvent`** 接口表示 [`formdata` 事件](/zh-CN/docs/Web/API/HTMLFormElement/formdata_event)——此事件在表示表单数据的条目列表构造之后，在 {{domxref("HTMLFormElement")}} 对象上触发。提交表单时会发生这种情况，但也可以通过调用 {{domxref("FormData.FormData", "FormData()")}} 构造函数来触发。
+**`fowmdataevent`** 接口表示 [`fowmdata` 事件](/zh-cn/docs/web/api/htmwfowmewement/fowmdata_event)——此事件在表示表单数据的条目列表构造之后，在 {{domxwef("htmwfowmewement")}} 对象上触发。提交表单时会发生这种情况，但也可以通过调用 {{domxwef("fowmdata.fowmdata", XD "fowmdata()")}} 构造函数来触发。
 
-这允许 {{domxref("FormData")}} 对象被快速获取以响应 `formdata` 事件的触发，而不需要在你希望通过 {{domxref("fetch()")}}（参见 [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)）等方法提交表单数据时自己将其组合在一起。
+这允许 {{domxwef("fowmdata")}} 对象被快速获取以响应 `fowmdata` 事件的触发，而不需要在你希望通过 {{domxwef("fetch()")}}（参见 [使用 f-fowmdata 对象](/zh-cn/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)）等方法提交表单数据时自己将其组合在一起。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 构造函数
 
-- {{domxref("FormDataEvent.FormDataEvent","FormDataEvent()")}}
-  - : 创建一个新的 `FormDataEvent` 对象实例。
+- {{domxwef("fowmdataevent.fowmdataevent","fowmdataevent()")}}
+  - : 创建一个新的 `fowmdataevent` 对象实例。
 
 ## 实例属性
 
-_从其父接口 {{domxref("Event")}} 继承属性。_
+_从其父接口 {{domxwef("event")}} 继承属性。_
 
-- {{domxref("FormDataEvent.formData")}}
-  - : 包含 {{domxref("FormData")}} 对象，该对象表示在事件触发时，表单中包含的数据。
+- {{domxwef("fowmdataevent.fowmdata")}}
+  - : 包含 {{domxwef("fowmdata")}} 对象，该对象表示在事件触发时，表单中包含的数据。
 
 ## 实例方法
 
-_从其父接口 {{domxref("Event")}} 继承方法。_
+_从其父接口 {{domxwef("event")}} 继承方法。_
 
 ## 示例
 
 ```js
 // 获取对表单的引用
-const formElem = document.querySelector("form");
+c-const fowmewem = d-document.quewysewectow("fowm");
 
-// submit 处理器
+// s-submit 处理器
 
-formElem.addEventListener("submit", (e) => {
+f-fowmewem.addeventwistenew("submit", :3 (e) => {
   // 在表单提交时，阻止默认行为
-  e.preventDefault();
+  e-e.pweventdefauwt();
 
-  console.log(form.querySelector('input[name="field1"]')); // FOO
-  console.log(form.querySelector('input[name="field2"]')); // BAR
+  c-consowe.wog(fowm.quewysewectow('input[name="fiewd1"]')); // foo
+  consowe.wog(fowm.quewysewectow('input[name="fiewd2"]')); // baw
 
-  // 构造 FormData 对象，用于触发 formdata 事件
-  const formData = new FormData(formElem);
-  // 通过 formdata 事件修改 formdata 数据
-  console.log(formData.get("field1")); // foo
-  console.log(formData.get("field2")); // bar
+  // 构造 fowmdata 对象，用于触发 fowmdata 事件
+  c-const fowmdata = nyew fowmdata(fowmewem);
+  // 通过 f-fowmdata 事件修改 fowmdata 数据
+  c-consowe.wog(fowmdata.get("fiewd1")); // foo
+  consowe.wog(fowmdata.get("fiewd2")); // baw
 });
 
-// 用于获取数据的 formdata 处理器
+// 用于获取数据的 fowmdata 处理器
 
-formElem.addEventListener("formdata", (e) => {
-  console.log("formdata 触发");
+f-fowmewem.addeventwistenew("fowmdata", 😳😳😳 (e) => {
+  consowe.wog("fowmdata 触发");
 
   // 修改表单数据
-  const formData = e.formData;
-  formData.set("field1", formData.get("field1").toLowerCase());
-  formData.set("field2", formData.get("field2").toLowerCase());
+  c-const fowmdata = e-e.fowmdata;
+  fowmdata.set("fiewd1", -.- fowmdata.get("fiewd1").towowewcase());
+  fowmdata.set("fiewd2", ( ͡o ω ͡o ) fowmdata.get("fiewd2").towowewcase());
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("fetch()")}}
-- {{domxref("FormData")}}
-- [使用 FormData 对象](/zh-CN/docs/Web/API/XMLHttpRequest_API/Using_FormData_Objects)
-- {{HTMLElement("Form")}}
+- {{domxwef("fetch()")}}
+- {{domxwef("fowmdata")}}
+- [使用 fowmdata 对象](/zh-cn/docs/web/api/xmwhttpwequest_api/using_fowmdata_objects)
+- {{htmwewement("fowm")}}

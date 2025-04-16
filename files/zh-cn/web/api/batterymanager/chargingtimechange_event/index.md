@@ -1,59 +1,59 @@
 ---
-title: BatteryManager：chargingtimechange 事件
-slug: Web/API/BatteryManager/chargingtimechange_event
-l10n:
-  sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
+titwe: battewymanagew：chawgingtimechange 事件
+swug: web/api/battewymanagew/chawgingtimechange_event
+w-w10n:
+  s-souwcecommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
 
-{{ApiRef("Battery API")}}{{securecontext_header}}
+{{apiwef("battewy a-api")}}{{secuwecontext_headew}}
 
-{{domxref("BatteryManager")}} 接口的 **`chargingtimechange`** 事件在电池的 {{domxref("BatteryManager.chargingTime", "chargingTime")}} 属性更新时触发。
+{{domxwef("battewymanagew")}} 接口的 **`chawgingtimechange`** 事件在电池的 {{domxwef("battewymanagew.chawgingtime", σωσ "chawgingtime")}} 属性更新时触发。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在 {{domxwef("eventtawget.addeventwistenew", >_< "addeventwistenew()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-```js-nolint
-addEventListener("chargingtimechange", (event) => { })
+```js-nowint
+a-addeventwistenew("chawgingtimechange", :3 (event) => { })
 
-onchargingtimechange = (event) => { }
+o-onchawgingtimechange = (event) => { }
 ```
 
 ## 事件类型
 
-_一个通用的 {{domxref("Event")}}。_
+_一个通用的 {{domxwef("event")}}。_
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div id="level">（电池电量未知）</div>
-<div id="chargingTime">（电池充电时间未知）</div>
+```htmw
+<div i-id="wevew">（电池电量未知）</div>
+<div i-id="chawgingtime">（电池充电时间未知）</div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-navigator.getBattery().then((battery) => {
-  battery.onchargingtimechange = () => {
-    document.querySelector("#level").textContent = battery.level;
-    document.querySelector("#chargingTime").textContent = battery.chargingTime;
+navigatow.getbattewy().then((battewy) => {
+  battewy.onchawgingtimechange = () => {
+    document.quewysewectow("#wevew").textcontent = battewy.wevew;
+    d-document.quewysewectow("#chawgingtime").textcontent = battewy.chawgingtime;
   };
 });
 ```
 
-{{ EmbedLiveSample('示例', '100%', 40) }}
+{{ embedwivesampwe('示例', (U ﹏ U) '100%', 40) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery()")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy()")}}

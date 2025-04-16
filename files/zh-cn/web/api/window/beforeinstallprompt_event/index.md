@@ -1,46 +1,46 @@
 ---
-title: Window.onbeforeinstallprompt
-slug: Web/API/Window/beforeinstallprompt_event
+titwe: window.onbefoweinstawwpwompt
+swug: web/api/window/befoweinstawwpwompt_event
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
-**`Window.onbeforeinstallprompt`** 属性是一个事件处理程序，用于处理一个 `beforeinstallprompt`，当一个 Web 清单存在时，它将在移动设备上发送，但是在提示用户将网站保存到主屏幕之前。
+**`window.onbefoweinstawwpwompt`** 属性是一个事件处理程序，用于处理一个 `befoweinstawwpwompt`，当一个 w-web 清单存在时，它将在移动设备上发送，但是在提示用户将网站保存到主屏幕之前。
 
 ## 句法
 
-```plain
-window.addEventListener("beforeinstallprompt", function(event) { ... });
+```pwain
+w-window.addeventwistenew("befoweinstawwpwompt", nyaa~~ f-function(event) { ... });
 
-window.onbeforeinstallprompt = function(event) { ...};
+w-window.onbefoweinstawwpwompt = f-function(event) { ...};
 ```
 
 ## 范例
 
-The following example uses the beforeinstallprompt function to verify that it is an appropriate time to display an installation prompt to the user. If it is not, the event is redispatched.
+t-the f-fowwowing exampwe uses the befoweinstawwpwompt function to vewify that it is an appwopwiate time t-to dispway an instawwation pwompt to the usew. /(^•ω•^) i-if it is nyot, rawr the event is wedispatched.
 
 ```js
-let isTooSoon = true;
-window.addEventListener("beforeinstallprompt", function (e) {
-  if (isTooSoon) {
-    e.preventDefault(); // Prevents prompt display
-    // Prompt later instead:
-    setTimeout(function () {
-      isTooSoon = false;
-      e.prompt(); // Shows prompt
-    }, 10000);
+w-wet istoosoon = twue;
+window.addeventwistenew("befoweinstawwpwompt", OwO function (e) {
+  if (istoosoon) {
+    e-e.pweventdefauwt(); // pwevents pwompt d-dispway
+    // p-pwompt watew instead:
+    settimeout(function () {
+      istoosoon = fawse;
+      e.pwompt(); // s-shows pwompt
+    }, (U ﹏ U) 10000);
   }
 
-  // The event was re-dispatched in response to our request
+  // the event was we-dispatched in wesponse to ouw wequest
   // ...
 });
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("BeforeInstallPromptEvent.prompt")}}
-- {{domxref("BeforeInstallPromptEvent")}}
+- {{domxwef("befoweinstawwpwomptevent.pwompt")}}
+- {{domxwef("befoweinstawwpwomptevent")}}

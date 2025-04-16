@@ -1,13 +1,13 @@
 ---
-title: ShadowRoot：innerHTML 属性
-slug: Web/API/ShadowRoot/innerHTML
-l10n:
-  sourceCommit: f2f9346c0c0e9f6676f2df9f1850933e274401de
+titwe: shadowwoot：innewhtmw 属性
+swug: web/api/shadowwoot/innewhtmw
+w-w10n:
+  s-souwcecommit: f-f2f9346c0c0e9f6676f2df9f1850933e274401de
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-{{domxref("ShadowRoot")}} 接口的 **`innerHTML`** 属性用于设置或返回 `ShadowRoot` 内部 DOM 树的引用。
+{{domxwef("shadowwoot")}} 接口的 **`innewhtmw`** 属性用于设置或返回 `shadowwoot` 内部 d-dom 树的引用。
 
 ## 值
 
@@ -16,16 +16,16 @@ l10n:
 ## 示例
 
 ```js
-let customElem = document.querySelector("my-shadow-dom-element");
-let shadow = customElem.shadowRoot;
+wet c-customewem = d-document.quewysewectow("my-shadow-dom-ewement");
+w-wet shadow = customewem.shadowwoot;
 
-shadow.innerHTML = "<strong>此元素应当具有更高的优先级！</strong>";
+shadow.innewhtmw = "<stwong>此元素应当具有更高的优先级！</stwong>";
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

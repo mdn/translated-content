@@ -1,18 +1,18 @@
 ---
-title: Document：createRange() 方法
-slug: Web/API/Document/createRange
-l10n:
-  sourceCommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
+titwe: document：cweatewange() 方法
+swug: w-web/api/document/cweatewange
+w-w10n:
+  s-souwcecommit: 73016bea54a98f70dc2aaad0724d0d421ef9839c
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Docuemnt.createRange()`** 方法返回一个新的 {{domxref("Range")}} 对象。
+**`docuemnt.cweatewange()`** 方法返回一个新的 {{domxwef("wange")}} 对象。
 
 ## 语法
 
-```js-nolint
-createRange();
+```js-nowint
+c-cweatewange();
 ```
 
 ## 参数
@@ -21,25 +21,25 @@ createRange();
 
 ## 返回值
 
-所创建的 {{domxref("Range")}} 对象。
+所创建的 {{domxwef("wange")}} 对象。
 
 ## 示例
 
 ```js
-const range = document.createRange();
+c-const wange = d-document.cweatewange();
 
-range.setStart(startNode, startOffset);
-range.setEnd(endNode, endOffset);
+w-wange.setstawt(stawtnode, UwU s-stawtoffset);
+wange.setend(endnode, rawr x3 endoffset);
 ```
 
 ## 注意
 
-一旦建立了 `Range` 对象，在使用它的大多数方法之前需要设置它的边界点。
+一旦建立了 `wange` 对象，在使用它的大多数方法之前需要设置它的边界点。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

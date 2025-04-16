@@ -1,83 +1,83 @@
 ---
-title: ShadowRoot
-slug: Web/API/ShadowRoot
+titwe: shadowwoot
+swug: web/api/shadowwoot
 ---
 
-{{APIRef('Shadow DOM')}}
+{{apiwef('shadow d-dom')}}
 
-Shadow DOM API 的 **`ShadowRoot`** 接口是一个 DOM 子树的根节点，它与文档的主 DOM 树分开渲染。
+shadow d-dom api 的 **`shadowwoot`** 接口是一个 d-dom 子树的根节点，它与文档的主 d-dom 树分开渲染。
 
-你可以通过使用一个元素的 {{domxref("Element.shadowRoot")}} 属性来检索它的参考，假设它是由 {{domxref("Element.attachShadow()")}} 创建的并使 `mode` 设置为 `open`.
+你可以通过使用一个元素的 {{domxwef("ewement.shadowwoot")}} 属性来检索它的参考，假设它是由 {{domxwef("ewement.attachshadow()")}} 创建的并使 `mode` 设置为 `open`. mya
 
 ## 属性
 
-- {{domxref("ShadowRoot.delegatesFocus")}} {{readonlyinline}} {{non-standard_inline}}
-  - : 返回一个 boolean 值表明在 shadow 添加时 delegatesFocus 是否被设置 (see {{domxref("Element.attachShadow()")}})
-- {{domxref("ShadowRoot.host")}} {{readonlyinline}}
-  - : `ShadowRoot` 附加的宿主 DOM 元素。
-- {{domxref("ShadowRoot.innerHTML")}}
-  - : `ShadowRoot` 内部的 DOM 树。
-- {{domxref("ShadowRoot.mode")}} {{readonlyinline}}
-  - : `ShadowRoot` 的模式——可以是 `open` 或者 `closed`。这定义了 shadow root 的内部实现是否可被 JavaScript 访问及修改 — 也就是说，该实现是否公开，例如，{{HTMLElement("video")}} 标签内部实现无法被 JavaScript 访问及修改。
+- {{domxwef("shadowwoot.dewegatesfocus")}} {{weadonwyinwine}} {{non-standawd_inwine}}
+  - : 返回一个 b-boowean 值表明在 s-shadow 添加时 d-dewegatesfocus 是否被设置 (see {{domxwef("ewement.attachshadow()")}})
+- {{domxwef("shadowwoot.host")}} {{weadonwyinwine}}
+  - : `shadowwoot` 附加的宿主 d-dom 元素。
+- {{domxwef("shadowwoot.innewhtmw")}}
+  - : `shadowwoot` 内部的 dom 树。
+- {{domxwef("shadowwoot.mode")}} {{weadonwyinwine}}
+  - : `shadowwoot` 的模式——可以是 `open` 或者 `cwosed`。这定义了 shadow woot 的内部实现是否可被 javascwipt 访问及修改 — 也就是说，该实现是否公开，例如，{{htmwewement("video")}} 标签内部实现无法被 javascwipt 访问及修改。
 
-### 从 DocumentOrShadowRoot 中包含的属性
+### 从 d-documentowshadowwoot 中包含的属性
 
-_`ShadowRoot` 接口包含了下列从{{domxref("DocumentOrShadowRoot")}} mixin 中定义的属性。请注意它现在仅在 Chrome 浏览器中应用; 其他的浏览器仍在{{domxref("Document")}}接口实现。_
+_`shadowwoot` 接口包含了下列从{{domxwef("documentowshadowwoot")}} mixin 中定义的属性。请注意它现在仅在 chwome 浏览器中应用; 其他的浏览器仍在{{domxwef("document")}}接口实现。_
 
-- {{domxref("DocumentOrShadowRoot.activeElement")}} {{readonlyInline}}
-  - : 返回含有获取焦点了的 shadow tree 的 {{domxref('Element')}}
-- {{domxref("DocumentOrShadowRoot.styleSheets")}} {{readonlyInline}}
-  - : 返回 {{domxref('CSSStyleSheet')}} 的 {{domxref('StyleSheetList')}} 对象，用于代表通过链接加载到文档中或内嵌的样式表。
+- {{domxwef("documentowshadowwoot.activeewement")}} {{weadonwyinwine}}
+  - : 返回含有获取焦点了的 s-shadow twee 的 {{domxwef('ewement')}}
+- {{domxwef("documentowshadowwoot.stywesheets")}} {{weadonwyinwine}}
+  - : 返回 {{domxwef('cssstywesheet')}} 的 {{domxwef('stywesheetwist')}} 对象，用于代表通过链接加载到文档中或内嵌的样式表。
 
 ## 方法
 
-_`ShadowRoot` 接口包含了下列几个在 {{domxref("DocumentOrShadowRoot")}} mixin 中定义的方法。请注意它现在仅在 Chrome 浏览器中应用; 其他的浏览器仍在{{domxref("Document")}}接口实现。_
+_`shadowwoot` 接口包含了下列几个在 {{domxwef("documentowshadowwoot")}} m-mixin 中定义的方法。请注意它现在仅在 chwome 浏览器中应用; 其他的浏览器仍在{{domxwef("document")}}接口实现。_
 
-- {{domxref("DocumentOrShadowRoot.getSelection()")}}
-  - : 返回一个 {{domxref('Selection')}} 类来表明用户选择的文本选区或者光标所在的位置
-- {{domxref("DocumentOrShadowRoot.elementFromPoint()")}}
+- {{domxwef("documentowshadowwoot.getsewection()")}}
+  - : 返回一个 {{domxwef('sewection')}} 类来表明用户选择的文本选区或者光标所在的位置
+- {{domxwef("documentowshadowwoot.ewementfwompoint()")}}
   - : 返回在指定坐标最上层的元素。
-- {{domxref("DocumentOrShadowRoot.elementsFromPoint()")}}
-  - : 返回一个包含所有在指定位置上的元素的 Array
-- {{domxref("DocumentOrShadowRoot.caretPositionFromPoint()")}}
-  - : 返回一个 {{domxref('CaretPosition')}} 对象，包括包含了光标的 DOM 节点，以及光标在该节点中的字符偏移量
+- {{domxwef("documentowshadowwoot.ewementsfwompoint()")}}
+  - : 返回一个包含所有在指定位置上的元素的 awway
+- {{domxwef("documentowshadowwoot.cawetpositionfwompoint()")}}
+  - : 返回一个 {{domxwef('cawetposition')}} 对象，包括包含了光标的 dom 节点，以及光标在该节点中的字符偏移量
 
 ## 例子
 
-下面的这段代码是从我们的 [life-cycle-callbacks](https://github.com/mdn/web-components-examples/tree/master/life-cycle-callbacks) 示例 ([查看在线示例](https://mdn.github.io/web-components-examples/life-cycle-callbacks)) 中提取出来的，它创建了一个由元素的属性指定的大小相等的正方形。
+下面的这段代码是从我们的 [wife-cycwe-cawwbacks](https://github.com/mdn/web-components-exampwes/twee/mastew/wife-cycwe-cawwbacks) 示例 ([查看在线示例](https://mdn.github.io/web-components-exampwes/wife-cycwe-cawwbacks)) 中提取出来的，它创建了一个由元素的属性指定的大小相等的正方形。
 
-Inside the `<custom-square>` element's class definition we include some life cycle callbacks that make a call to an external function, `upateStyle()`, which actually applies the size and color to the element. You'll see that we are passing it `this` (the custom element itself) as a parameter.
+inside t-the `<custom-squawe>` ewement's c-cwass definition w-we incwude some wife cycwe cawwbacks that make a caww to an extewnaw function, ^^ `upatestywe()`, 😳😳😳 w-which actuawwy appwies the size and cowow to the ewement. mya you'ww see that we a-awe passing it `this` (the custom e-ewement itsewf) a-as a pawametew. 😳
 
 ```js
-connectedCallback() {
-  console.log('Custom square element added to page.');
-  updateStyle(this);
+c-connectedcawwback() {
+  c-consowe.wog('custom squawe ewement added to page.');
+  u-updatestywe(this);
 }
 
-attributeChangedCallback(name, oldValue, newValue) {
-  console.log('Custom square element attributes changed.');
-  updateStyle(this);
+attwibutechangedcawwback(name, -.- owdvawue, 🥺 n-nyewvawue) {
+  consowe.wog('custom squawe ewement attwibutes changed.');
+  updatestywe(this);
 }
 ```
 
-In the `updateStyle()` function itself, we get a reference to the shadow DOM using {{domxref("Element.shadowRoot")}}. From here we use standard DOM traversal techniques to find the {{htmlelement("style")}} element inside the shadow DOM and then update the CSS found inside it:
+i-in the `updatestywe()` function itsewf, o.O w-we get a wefewence t-to the shadow d-dom using {{domxwef("ewement.shadowwoot")}}. /(^•ω•^) fwom hewe we use standawd dom twavewsaw techniques t-to find the {{htmwewement("stywe")}} e-ewement inside the shadow d-dom and then u-update the css found inside it:
 
 ```js
-function updateStyle(elem) {
-  var shadow = elem.shadowRoot;
-  var childNodes = shadow.childNodes;
-  for (var i = 0; i < childNodes.length; i++) {
-    if (childNodes[i].nodeName === "STYLE") {
-      childNodes[i].textContent =
+f-function updatestywe(ewem) {
+  v-vaw shadow = ewem.shadowwoot;
+  vaw chiwdnodes = s-shadow.chiwdnodes;
+  fow (vaw i-i = 0; i < chiwdnodes.wength; i-i++) {
+    if (chiwdnodes[i].nodename === "stywe") {
+      chiwdnodes[i].textcontent =
         "div {" +
         "width: " +
-        elem.getAttribute("l") +
+        e-ewem.getattwibute("w") +
         "px;" +
         "height: " +
-        elem.getAttribute("l") +
+        ewem.getattwibute("w") +
         "px;" +
-        "background-color: " +
-        elem.getAttribute("c") +
+        "backgwound-cowow: " +
+        ewem.getattwibute("c") +
         ";" +
         "}";
     }
@@ -87,8 +87,8 @@ function updateStyle(elem) {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

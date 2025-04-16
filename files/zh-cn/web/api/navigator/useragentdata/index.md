@@ -1,34 +1,34 @@
 ---
-title: Navigator：userAgentData 属性
-slug: Web/API/Navigator/userAgentData
-l10n:
-  sourceCommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
+titwe: nyavigatow：usewagentdata 属性
+swug: w-web/api/navigatow/usewagentdata
+w-w10n:
+  souwcecommit: 8ccdd482e4723b5393278bba686adc24d1769d0f
 ---
 
-{{securecontext_header}}{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("usew-agent c-cwient hints a-api")}}{{seecompattabwe}}
 
-{{domxref("Navigator")}} 接口的 **`userAgentData`** 只读属性返回一个 {{domxref("NavigatorUAData")}} 对象，其可用于访问{{domxref("User-Agent Client Hints API", "用户代理客户端提示 API", "", "nocode")}}。
+{{domxwef("navigatow")}} 接口的 **`usewagentdata`** 只读属性返回一个 {{domxwef("navigatowuadata")}} 对象，其可用于访问{{domxwef("usew-agent c-cwient h-hints api", (⑅˘꒳˘) "用户代理客户端提示 a-api", ( ͡o ω ͡o ) "", UwU "nocode")}}。
 
 ## 值
 
-一个 {{domxref("NavigatorUAData")}} 对象。
+一个 {{domxwef("navigatowuadata")}} 对象。
 
 ## 示例
 
-以下示例将 {{domxref("NavigatorUAData.brands")}} 的值打印到控制台。
+以下示例将 {{domxwef("navigatowuadata.bwands")}} 的值打印到控制台。
 
 ```js
-console.log(navigator.userAgentData.brands);
+c-consowe.wog(navigatow.usewagentdata.bwands);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)
+- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://devewopew.chwome.googwe.cn/docs/pwivacy-secuwity/usew-agent-cwient-hints)

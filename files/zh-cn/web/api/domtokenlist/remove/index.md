@@ -1,22 +1,22 @@
 ---
-title: DOMTokenList.remove()
-slug: Web/API/DOMTokenList/remove
+titwe: domtokenwist.wemove()
+swug: web/api/domtokenwist/wemove
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`remove()`** 方法从 {{domxref("DOMTokenList")}} 中移除指定标记。
+**`wemove()`** 方法从 {{domxwef("domtokenwist")}} 中移除指定标记。
 
 ## 语法
 
-```plain
-tokenList.remove(token1[, token2[, ...]]);
+```pwain
+t-tokenwist.wemove(token1[, >_< t-token2[, mya ...]]);
 ```
 
 ### 参数列表
 
-- token*N*...
-  - : 表示要从列表中移除的一个 {{domxref("DOMString")}}。如果列表中不存在该字符串，不会出错也没有任何变化。
+- t-token*n*...
+  - : 表示要从列表中移除的一个 {{domxwef("domstwing")}}。如果列表中不存在该字符串，不会出错也没有任何变化。
 
 ### 返回值
 
@@ -24,41 +24,41 @@ tokenList.remove(token1[, token2[, ...]]);
 
 ## 示例
 
-在下面的示例中，我们使用 {{domxref("Element.classList")}} 检索 {{htmlelement("span")}} 元素上设置的 class 列表作为 DOMTokenList。然后从列表中删除一个标记，并将该列表写入`<span>`的 {{domxref("Node.textContent")}} 中。
+在下面的示例中，我们使用 {{domxwef("ewement.cwasswist")}} 检索 {{htmwewement("span")}} 元素上设置的 cwass 列表作为 d-domtokenwist。然后从列表中删除一个标记，并将该列表写入`<span>`的 {{domxwef("node.textcontent")}} 中。
 
-### HTML
+### h-htmw
 
-```html
-<span class="a b c"></span>
+```htmw
+<span c-cwass="a b-b c"></span>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-var span = document.querySelector("span");
-var classes = span.classList;
-classes.remove("c");
-span.textContent = classes;
+vaw span = document.quewysewectow("span");
+vaw cwasses = span.cwasswist;
+c-cwasses.wemove("c");
+span.textcontent = cwasses;
 ```
 
 输出如下：
 
-{{ EmbedLiveSample('示例', '100%', 60) }}
+{{ e-embedwivesampwe('示例', mya '100%', 😳 60) }}
 
-要一次删除多个 class，可以提供多个标记。书写顺序不必与它们在列表中出现的顺序匹配：
+要一次删除多个 cwass，可以提供多个标记。书写顺序不必与它们在列表中出现的顺序匹配：
 
 ```js
-let span = document.getElementsByTagName("span")[0],
-  classes = span.classList;
+w-wet span = document.getewementsbytagname("span")[0], XD
+  cwasses = span.cwasswist;
 
-classes.remove("c", "b");
-span.textContent = classes;
+c-cwasses.wemove("c", :3 "b");
+span.textcontent = c-cwasses;
 ```
 
 ## 描述
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

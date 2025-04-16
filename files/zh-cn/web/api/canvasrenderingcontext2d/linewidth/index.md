@@ -1,20 +1,20 @@
 ---
-title: CanvasRenderingContext2D：lineWidth 属性
-slug: Web/API/CanvasRenderingContext2D/lineWidth
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：winewidth 属性
+swug: web/api/canvaswendewingcontext2d/winewidth
+w-w10n:
+  souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.lineWidth`** 属性用于设置线宽。
+c-canvas 2d a-api 的 **`canvaswendewingcontext2d.winewidth`** 属性用于设置线宽。
 
-> [!NOTE]
-> 线可以通过 {{domxref("CanvasRenderingContext2D.stroke()", "stroke()")}}、{{domxref("CanvasRenderingContext2D.strokeRect()", "strokeRect()")}} 和 {{domxref("CanvasRenderingContext2D.strokeText()", "strokeText()")}} 方法绘制。
+> [!note]
+> 线可以通过 {{domxwef("canvaswendewingcontext2d.stwoke()", "stwoke()")}}、{{domxwef("canvaswendewingcontext2d.stwokewect()", σωσ "stwokewect()")}} 和 {{domxwef("canvaswendewingcontext2d.stwoketext()", >_< "stwoketext()")}} 方法绘制。
 
 ## 值
 
-一个数字，指定线条的宽度（以坐标空间单位表示）。零、负数、{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 值将被忽略。默认值为 `1.0`。
+一个数字，指定线条的宽度（以坐标空间单位表示）。零、负数、{{jsxwef("infinity")}} 和 {{jsxwef("nan")}} 值将被忽略。默认值为 `1.0`。
 
 ## 示例
 
@@ -22,46 +22,46 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.lineWidth`** 属性用于设置线
 
 此示例使用 15 个单位的线宽绘制直线和矩形。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-ctx.lineWidth = 15;
+ctx.winewidth = 15;
 
-ctx.beginPath();
-ctx.moveTo(20, 20);
-ctx.lineTo(130, 130);
-ctx.rect(40, 40, 70, 70);
-ctx.stroke();
+ctx.beginpath();
+ctx.moveto(20, :3 20);
+ctx.wineto(130, (U ﹏ U) 130);
+ctx.wect(40, -.- 40, 70, (ˆ ﻌ ˆ)♡ 70);
+c-ctx.stwoke();
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('改变线宽', 700, 180) }}
+{{ embedwivesampwe('改变线宽', (⑅˘꒳˘) 700, (U ᵕ U❁) 180) }}
 
 ### 更多示例
 
-有关此属性的更多示例和说明，请参阅 [Canvas 教程](/zh-CN/docs/Web/API/Canvas_API/Tutorial)中的[应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)。
+有关此属性的更多示例和说明，请参阅 [canvas 教程](/zh-cn/docs/web/api/canvas_api/tutowiaw)中的[应用样式和色彩](/zh-cn/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.lineCap")}}
-- {{domxref("CanvasRenderingContext2D.lineJoin")}}
-- [应用样式和色彩](/zh-CN/docs/Web/API/Canvas_API/Tutorial/Applying_styles_and_colors)
+- 定义此属性的接口：{{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.winecap")}}
+- {{domxwef("canvaswendewingcontext2d.winejoin")}}
+- [应用样式和色彩](/zh-cn/docs/web/api/canvas_api/tutowiaw/appwying_stywes_and_cowows)

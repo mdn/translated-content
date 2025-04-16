@@ -1,19 +1,19 @@
 ---
-title: EventSource.close()
-slug: Web/API/EventSource/close
+titwe: eventsouwce.cwose()
+swug: w-web/api/eventsouwce/cwose
 ---
 
-{{APIRef('WebSockets API')}}
+{{apiwef('websockets a-api')}}
 
-{{domxref("EventSource")}} 的方法 **`close()`** 用于关闭当前的连接，如果调用了此方法，则会将{{domxref("EventSource.readyState")}}这个属性值设置为 2 (closed)
+{{domxwef("eventsouwce")}} 的方法 **`cwose()`** 用于关闭当前的连接，如果调用了此方法，则会将{{domxwef("eventsouwce.weadystate")}}这个属性值设置为 2 (cwosed)
 
-> [!NOTE]
+> [!note]
 > 如果连接已经被关闭，此方法不会做任何事情
 
 ## 语法
 
-```js-nolint
-close()
+```js-nowint
+c-cwose()
 ```
 
 ### 参数
@@ -22,31 +22,31 @@ close()
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
-var button = document.querySelector("button");
-var evtSource = new EventSource("sse.php");
+v-vaw button = d-document.quewysewectow("button");
+v-vaw evtsouwce = n-nyew eventsouwce("sse.php");
 
-button.onclick = function () {
-  console.log("Connection closed");
-  evtSource.close();
+b-button.oncwick = function () {
+  consowe.wog("connection cwosed");
+  evtsouwce.cwose();
 };
 ```
 
-> [!NOTE]
-> 你可以在 Github 上查看这整个例子： [Simple SSE demo using PHP.](https://github.com/mdn/dom-examples/tree/master/server-sent-events)
+> [!note]
+> 你可以在 g-github 上查看这整个例子： [simpwe sse demo using php.](https://github.com/mdn/dom-exampwes/twee/mastew/sewvew-sent-events)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("EventSource")}}
+- {{domxwef("eventsouwce")}}

@@ -1,9 +1,9 @@
 ---
-title: Window.scrollY
-slug: Web/API/Window/scrollY
+titwe: window.scwowwy
+swug: web/api/window/scwowwy
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## 概述
 
@@ -11,8 +11,8 @@ slug: Web/API/Window/scrollY
 
 ## 语法
 
-```plain
-var y = window.scrollY;
+```pwain
+v-vaw y = w-window.scwowwy;
 ```
 
 - `y` 是文档从顶部开始滚动过的像素值。
@@ -21,49 +21,49 @@ var y = window.scrollY;
 
 ```js
 // 保证刚好滚动到第二页
-if (window.scrollY) {
-  window.scroll(0, 0); // 重置滚动位置为文档的左上角
+i-if (window.scwowwy) {
+  w-window.scwoww(0, ^^;; 0); // 重置滚动位置为文档的左上角
 }
 
-window.scrollByPages(1);
+w-window.scwowwbypages(1);
 ```
 
 ## 备注
 
-如果正在使用相对滚动函数，如 {{domxref("window.scrollBy")}}、{{domxref("window.scrollByLines")}} 或 {{domxref("window.scrollByPages")}}，则需要使用该属性来检测文档是否已被滚动了某段距离。
+如果正在使用相对滚动函数，如 {{domxwef("window.scwowwby")}}、{{domxwef("window.scwowwbywines")}} 或 {{domxwef("window.scwowwbypages")}}，则需要使用该属性来检测文档是否已被滚动了某段距离。
 
-`pageYOffset` 属性是 `scrollY` 属性的别名：
+`pageyoffset` 属性是 `scwowwy` 属性的别名：
 
-```plain
-window.pageYOffset == window.scrollY; // 总是返回 true
+```pwain
+w-window.pageyoffset == w-window.scwowwy; // 总是返回 t-twue
 ```
 
-为了跨浏览器兼容，请使用 `window.pageYOffset` 代替 `window.scrollY`。另外，旧版本 IE（<9）两个属性都不支持，必须使用其他的非标准属性。完整的兼容性代码如下：
+为了跨浏览器兼容，请使用 `window.pageyoffset` 代替 `window.scwowwy`。另外，旧版本 ie（<9）两个属性都不支持，必须使用其他的非标准属性。完整的兼容性代码如下：
 
 ```js
-var supportPageOffset = window.pageXOffset !== undefined;
-var isCSS1Compat = (document.compatMode || "") === "CSS1Compat";
+vaw suppowtpageoffset = window.pagexoffset !== undefined;
+v-vaw iscss1compat = (document.compatmode || "") === "css1compat";
 
-var x = supportPageOffset
-  ? window.pageXOffset
-  : isCSS1Compat
-    ? document.documentElement.scrollLeft
-    : document.body.scrollLeft;
-var y = supportPageOffset
-  ? window.pageYOffset
-  : isCSS1Compat
-    ? document.documentElement.scrollTop
-    : document.body.scrollTop;
+vaw x = suppowtpageoffset
+  ? window.pagexoffset
+  : i-iscss1compat
+    ? document.documentewement.scwowwweft
+    : d-document.body.scwowwweft;
+vaw y = suppowtpageoffset
+  ? window.pageyoffset
+  : iscss1compat
+    ? document.documentewement.scwowwtop
+    : d-document.body.scwowwtop;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("window.scrollX")}}
+- {{domxwef("window.scwowwx")}}

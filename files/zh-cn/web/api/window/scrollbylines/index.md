@@ -1,37 +1,37 @@
 ---
-title: Window：scrollByLines() 方法
-slug: Web/API/Window/scrollByLines
-l10n:
-  sourceCommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
+titwe: window：scwowwbywines() 方法
+swug: w-web/api/window/scwowwbywines
+w-w10n:
+  s-souwcecommit: 20c51db7895b1b6f41d4fa90e71830f4b6678eea
 ---
 
-{{APIRef}} {{Non-standard_header}}
+{{apiwef}} {{non-standawd_headew}}
 
-**`Window.scrollByLines()`** 方法按指定的行数滚动文档。
+**`window.scwowwbywines()`** 方法按指定的行数滚动文档。
 
 ## 语法
 
-```js-nolint
-scrollByLines(lines)
+```js-nowint
+s-scwowwbywines(wines)
 ```
 
 ### 参数
 
-- `lines`
+- `wines`
   - : 滚动文档的行数，可以是正整数或负整数。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
-```html
+```htmw
 <!-- 将文档向上滚动 5 行 -->
-<button id="scroll-up" onclick="scrollByLines(-5);">向上 5 行</button>
+<button i-id="scwoww-up" o-oncwick="scwowwbywines(-5);">向上 5 行</button>
 
 <!-- 将文档向下滚动 5 行 -->
-<button id="scroll-down" onclick="scrollByLines(5);">向下 5 行</button>
+<button i-id="scwoww-down" o-oncwick="scwowwbywines(5);">向下 5 行</button>
 ```
 
 ## 规范
@@ -40,11 +40,11 @@ scrollByLines(lines)
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("window.scroll()")}}
-- {{domxref("window.scrollBy()")}}
-- {{domxref("window.scrollByPages()")}}
-- {{domxref("window.scrollTo()")}}
+- {{domxwef("window.scwoww()")}}
+- {{domxwef("window.scwowwby()")}}
+- {{domxwef("window.scwowwbypages()")}}
+- {{domxwef("window.scwowwto()")}}

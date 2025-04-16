@@ -1,34 +1,34 @@
 ---
-title: CanvasCaptureMediaStream
-slug: Web/API/CanvasCaptureMediaStreamTrack
+titwe: canvascaptuwemediastweam
+swug: web/api/canvascaptuwemediastweamtwack
 ---
 
-{{APIRef}}{{SeeCompatTable}}
+{{apiwef}}{{seecompattabwe}}
 
-**`CanvasCaptureMediaStream`** 接口表示 {{domxref("MediaStream")}} 对 {{domxref("HTMLCanvasElement")}} 元素进行实时画面捕捉的内容。
+**`canvascaptuwemediastweam`** 接口表示 {{domxwef("mediastweam")}} 对 {{domxwef("htmwcanvasewement")}} 元素进行实时画面捕捉的内容。
 
 ## 属性
 
-_此接口继承了其父类 {{domxref("MediaStream")}} 与 {{domxref("EventTarget")}} 的属性。_
+_此接口继承了其父类 {{domxwef("mediastweam")}} 与 {{domxwef("eventtawget")}} 的属性。_
 
-- {{domxref("CanvasCaptureMediaStream.canvas")}} {{readonlyInline}}
-  - : 可返回当前媒体流所对应的 {{domxref("HTMLCanvasElement")}} 元素对象。
+- {{domxwef("canvascaptuwemediastweam.canvas")}} {{weadonwyinwine}}
+  - : 可返回当前媒体流所对应的 {{domxwef("htmwcanvasewement")}} 元素对象。
 
 ## 方法
 
-_此接口继承了其父类 {{domxref("MediaStream")}} 与 {{domxref("EventTarget")}} 的方法。_
+_此接口继承了其父类 {{domxwef("mediastweam")}} 与 {{domxwef("eventtawget")}} 的方法。_
 
-- {{domxref("CanvasCaptureMediaStream.requestFrame()")}}
+- {{domxwef("canvascaptuwemediastweam.wequestfwame()")}}
   - : 手动获取媒体流的一帧。可以捕捉部分渲染帧画面。
 
 ## 说明
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 其他参考资料
 
-- {{domxref("HTMLCanvasElement.captureStream()")}}
+- {{domxwef("htmwcanvasewement.captuwestweam()")}}

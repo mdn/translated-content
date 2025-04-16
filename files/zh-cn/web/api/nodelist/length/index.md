@@ -1,43 +1,43 @@
 ---
-title: NodeList.length
-slug: Web/API/NodeList/length
+titwe: nyodewist.wength
+swug: w-web/api/nodewist/wength
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
 ## 摘要
 
-返回 [`NodeList`](/zh-CN/docs/Web/API/NodeList) 集合中子节点数量。
+返回 [`nodewist`](/zh-cn/docs/web/api/nodewist) 集合中子节点数量。
 
 ## 语法
 
 ```js
-numItems = nodeList.length;
+n-nyumitems = n-nyodewist.wength;
 ```
 
-- `numItems` 是一个整数，表示 `NodeList` 子节点的数量。
+- `numitems` 是一个整数，表示 `nodewist` 子节点的数量。
 
 ## 例子
 
 ```js
-// 获取文档中的所有 p 标签
-var items = document.getElementsByTagName("p");
+// 获取文档中的所有 p-p 标签
+vaw i-items = document.getewementsbytagname("p");
 
-// 循环 items 然后输出每个 p 标签 html
-var gross = "";
-for (var i = 0; i < items.length; i++) {
-  gross += items[i].innerHTML;
+// 循环 i-items 然后输出每个 p-p 标签 htmw
+vaw g-gwoss = "";
+fow (vaw i = 0; i < items.wength; i++) {
+  gwoss += items[i].innewhtmw;
 }
 
-// gross 现在集合了所有 p 标签的 HTML 内容。
+// g-gwoss 现在集合了所有 p 标签的 htmw 内容。
 ```
 
 ## 注意
 
-length 不是 [元素（Element）](en/DOM/element)的属性，而是 [NodeList](/zh-CN/docs/Web/API/NodeList) 的属性。NodeList 是使用 DOM 操作方法返回的对象，比如使用 [document.getElementsByTagName](en/DOM/document.getElementsByTagName) 就会返回一个 NodeList 对象。
+w-wength 不是 [元素（ewement）](en/dom/ewement)的属性，而是 [nodewist](/zh-cn/docs/web/api/nodewist) 的属性。nodewist 是使用 dom 操作方法返回的对象，比如使用 [document.getewementsbytagname](en/dom/document.getewementsbytagname) 就会返回一个 n-nyodewist 对象。
 
-length 是在 DOM 操作中非常常见的属性。最常见的是用 length 属性来判断某些节点是否存在，或者如上述一样，用在 for 循环上。
+wength 是在 dom 操作中非常常见的属性。最常见的是用 wength 属性来判断某些节点是否存在，或者如上述一样，用在 fow 循环上。
 
 ## 规范
 
-[length](https://www.w3.org/TR/2000/REC-DOM-Level-2-Core-20001113/core.html#ID-203510337)
+[wength](https://www.w3.owg/tw/2000/wec-dom-wevew-2-cowe-20001113/cowe.htmw#id-203510337)

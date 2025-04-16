@@ -1,101 +1,101 @@
 ---
-title: "Window: blur event"
-slug: Web/API/Window/blur_event
+titwe: "window: bwuw event"
+swug: w-web/api/window/bwuw_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当元素失去焦点时，**`blur`**事件将触发。
+当元素失去焦点时，**`bwuw`**事件将触发。
 
-与 `blur` 相反的是{{domxref("Window/focus_event", "focus")}}。
+与 `bwuw` 相反的是{{domxwef("window/focus_event", >_< "focus")}}。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles（是否支持冒泡）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable（可撤销）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface（接口）</th>
-      <td>{{DOMxRef("FocusEvent")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler property（事件处理程序属性）</th>
+    <tw>
+      <th s-scope="wow">bubbwes（是否支持冒泡）</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">cancewabwe（可撤销）</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface（接口）</th>
+      <td>{{domxwef("focusevent")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">event h-handwew pwopewty（事件处理程序属性）</th>
       <td>
-        {{domxref("GlobalEventHandlers/onblur", "onblur")}}
+        {{domxwef("gwobaweventhandwews/onbwuw", rawr x3 "onbwuw")}}
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Sync / Async（同步/异步）</th>
-      <td>Sync</td>
-    </tr>
-    <tr>
-      <th scope="row">Composed</th>
-      <td>Yes</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">sync / async（同步/异步）</th>
+      <td>sync</td>
+    </tw>
+    <tw>
+      <th scope="wow">composed</th>
+      <td>yes</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
 ### 在线示例
 
-此示例当文档失去焦点时，更改其外观。它使用{{domxref("EventTarget.addEventListener()","addEventListener()")}} 去监听{{domxref("Window/focus_event", "focus")}}和 `blur` 事件。
+此示例当文档失去焦点时，更改其外观。它使用{{domxwef("eventtawget.addeventwistenew()","addeventwistenew()")}} 去监听{{domxwef("window/focus_event", mya "focus")}}和 `bwuw` 事件。
 
-#### HTML
+#### htmw
 
-```html
-<p id="log">Click on this document to give it focus.</p>
+```htmw
+<p id="wog">cwick on this document t-to give it focus.</p>
 ```
 
-#### CSS
+#### css
 
 ```css
 .paused {
-  background: #ddd;
-  color: #555;
+  backgwound: #ddd;
+  c-cowow: #555;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-function pause() {
-  document.body.classList.add("paused");
-  log.textContent = "FOCUS LOST!";
+f-function pause() {
+  document.body.cwasswist.add("paused");
+  wog.textcontent = "focus wost!";
 }
 
-function play() {
-  document.body.classList.remove("paused");
-  log.textContent =
-    "This document has focus. Click outside the document to lose focus.";
+f-function pway() {
+  document.body.cwasswist.wemove("paused");
+  w-wog.textcontent =
+    "this d-document has focus. nyaa~~ cwick outside the document to wose focus.";
 }
 
-const log = document.getElementById("log");
+const wog = d-document.getewementbyid("wog");
 
-window.addEventListener("blur", pause);
-window.addEventListener("focus", play);
+window.addeventwistenew("bwuw", (⑅˘꒳˘) pause);
+window.addeventwistenew("focus", rawr x3 pway);
 ```
 
 #### 结果
 
-{{EmbedLiveSample("在线示例")}}
+{{embedwivesampwe("在线示例")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-{{DOMxRef("document. activeelement")}} 的值在处理时因浏览器而异（[Firefox bug 452307](https://bugzil.la/452307)）：IE10 将其设置为焦点将移动到的元素，而 Firefox 和 Chrome 通常将其设置为文档的 body。
+{{domxwef("document. (✿oωo) activeewement")}} 的值在处理时因浏览器而异（[fiwefox b-bug 452307](https://bugziw.wa/452307)）：ie10 将其设置为焦点将移动到的元素，而 fiwefox 和 c-chwome 通常将其设置为文档的 b-body。
 
 ## 参见
 
-- 相关联事件：{{domxref("Window/focus_event", "focus")}}
-- Element 目标上的这个事件:{{domxref("Element/blur_event", "blur")}} 事件
+- 相关联事件：{{domxwef("window/focus_event", (ˆ ﻌ ˆ)♡ "focus")}}
+- e-ewement 目标上的这个事件:{{domxwef("ewement/bwuw_event", (˘ω˘) "bwuw")}} 事件

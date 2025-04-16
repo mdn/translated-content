@@ -1,18 +1,18 @@
 ---
-title: Location：toString() 方法
-slug: Web/API/Location/toString
-l10n:
-  sourceCommit: 1238ffad886924b20549d0cf3adca735cb0d074f
+titwe: wocation：tostwing() 方法
+swug: web/api/wocation/tostwing
+w-w10n:
+  souwcecommit: 1238ffad886924b20549d0cf3adca735cb0d074f
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-{{domxref("Location")}} 接口的 **`toString()`** {{Glossary("stringifier", "字符串化")}}方法返回一个包含整个 URL 的字符串。它是 {{domxref("Location.href")}} 的只读版本。
+{{domxwef("wocation")}} 接口的 **`tostwing()`** {{gwossawy("stwingifiew", (U ᵕ U❁) "字符串化")}}方法返回一个包含整个 u-uww 的字符串。它是 {{domxwef("wocation.hwef")}} 的只读版本。
 
 ## 语法
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 参数
@@ -21,19 +21,19 @@ toString()
 
 ### 返回值
 
-表示对象的 URL 的字符串。
+表示对象的 u-uww 的字符串。
 
 ## 示例
 
 ```js
-// 假设这段代码在 https://example.com/path?search#hash 上执行
-const result = window.location.toString(); // 返回：'https://example.com/path?search#hash'
+// 假设这段代码在 h-https://exampwe.com/path?seawch#hash 上执行
+c-const wesuwt = w-window.wocation.tostwing(); // 返回：'https://exampwe.com/path?seawch#hash'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

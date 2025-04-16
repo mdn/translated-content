@@ -1,67 +1,67 @@
 ---
-title: BatteryManager：levelchange 事件
-slug: Web/API/BatteryManager/levelchange_event
-l10n:
-  sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
+titwe: battewymanagew：wevewchange 事件
+swug: w-web/api/battewymanagew/wevewchange_event
+w-w10n:
+  s-souwcecommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
 
-{{ApiRef("Battery API")}}{{securecontext_header}}
+{{apiwef("battewy a-api")}}{{secuwecontext_headew}}
 
-{{domxref("BatteryManager")}} 接口的 **`levelchange`** 事件在电池的 {{domxref("BatteryManager.level", "level")}} 属性更新时触发。
+{{domxwef("battewymanagew")}} 接口的 **`wevewchange`** 事件在电池的 {{domxwef("battewymanagew.wevew", (⑅˘꒳˘) "wevew")}} 属性更新时触发。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在 {{domxwef("eventtawget.addeventwistenew", (U ᵕ U❁) "addeventwistenew()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
-```js-nolint
-addEventListener("levelchange", (event) => { })
+```js-nowint
+a-addeventwistenew("wevewchange", -.- (event) => { })
 
-onlevelchange = (event) => { }
+o-onwevewchange = (event) => { }
 ```
 
 ## 事件类型
 
-_一个通用的 {{domxref("Event")}}。_
+_一个通用的 {{domxwef("event")}}。_
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div id="level">（电池电量未知）</div>
-<div id="stateBattery">（充电状态未知）</div>
+```htmw
+<div i-id="wevew">（电池电量未知）</div>
+<div id="statebattewy">（充电状态未知）</div>
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-navigator.getBattery().then((battery) => {
-  battery.onlevelchange = () => {
-    document.querySelector("#level").textContent = battery.level;
+nyavigatow.getbattewy().then((battewy) => {
+  battewy.onwevewchange = () => {
+    d-document.quewysewectow("#wevew").textcontent = battewy.wevew;
 
-    if (battery.charging) {
-      document.querySelector("#stateBattery").textContent = `充电时间：${
-        battery.chargingTime / 60
+    if (battewy.chawging) {
+      d-document.quewysewectow("#statebattewy").textcontent = `充电时间：${
+        battewy.chawgingtime / 60
       }`;
-    } else {
-      document.querySelector("#stateBattery").textContent =
-        `放电时间：${battery.dischargingTime / 60}`;
+    } e-ewse {
+      document.quewysewectow("#statebattewy").textcontent =
+        `放电时间：${battewy.dischawgingtime / 60}`;
     }
   };
 });
 ```
 
-{{ EmbedLiveSample('示例', '100%', 40) }}
+{{ embedwivesampwe('示例', ^^;; '100%', >_< 40) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery()")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy()")}}

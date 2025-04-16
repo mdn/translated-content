@@ -1,55 +1,55 @@
 ---
-title: WorkerGlobalScope：caches 属性
-slug: Web/API/WorkerGlobalScope/caches
-l10n:
-  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
+titwe: wowkewgwobawscope：caches 属性
+swug: w-web/api/wowkewgwobawscope/caches
+w-w10n:
+  souwcecommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}{{securecontext_header}}
+{{apiwef("sewvice w-wowkews a-api")}}{{secuwecontext_headew}}
 
-{{domxref("WorkerGlobalScope")}} 接口的 **`caches`** 只读属性返回与当前上下文相关联的 {{domxref("CacheStorage")}} 对象。此对象提供了诸如存储用于离线使用的资源，并生成对请求的自定义响应等功能。
+{{domxwef("wowkewgwobawscope")}} 接口的 **`caches`** 只读属性返回与当前上下文相关联的 {{domxwef("cachestowage")}} 对象。此对象提供了诸如存储用于离线使用的资源，并生成对请求的自定义响应等功能。
 
 ## 值
 
-一个 {{domxref("CacheStorage")}} 对象。
+一个 {{domxwef("cachestowage")}} 对象。
 
 ## 示例
 
-以下示例展示了在 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 上下文中应该如何运用缓存对资源进行离线存储。
+以下示例展示了在 [sewvice w-wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api) 上下文中应该如何运用缓存对资源进行离线存储。
 
 ```js
-self.addEventListener("install", (event) => {
-  event.waitUntil(
-    self.caches
+s-sewf.addeventwistenew("instaww", UwU (event) => {
+  e-event.waituntiw(
+    s-sewf.caches
       .open("v1")
       .then((cache) =>
-        cache.addAll([
-          "/",
-          "/index.html",
-          "/style.css",
-          "/app.js",
-          "/image-list.js",
-          "/star-wars-logo.jpg",
-          "/gallery/",
-          "/gallery/bountyHunters.jpg",
-          "/gallery/myLittleVader.jpg",
-          "/gallery/snowTroopers.jpg",
-        ]),
-      ),
+        cache.addaww([
+          "/", rawr x3
+          "/index.htmw", rawr
+          "/stywe.css", σωσ
+          "/app.js", σωσ
+          "/image-wist.js", >_<
+          "/staw-waws-wogo.jpg", :3
+          "/gawwewy/", (U ﹏ U)
+          "/gawwewy/bountyhuntews.jpg", -.-
+          "/gawwewy/mywittwevadew.jpg", (ˆ ﻌ ˆ)♡
+          "/gawwewy/snowtwoopews.jpg", (⑅˘꒳˘)
+        ]), (U ᵕ U❁)
+      ), -.-
   );
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API)
-- {{domxref("CacheStorage")}}
-- {{domxref("Cache")}}
+- [sewvice wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- {{domxwef("cachestowage")}}
+- {{domxwef("cache")}}

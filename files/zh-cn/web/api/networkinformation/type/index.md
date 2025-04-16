@@ -1,31 +1,31 @@
 ---
-title: NetworkInformation：type 属性
-slug: Web/API/NetworkInformation/type
-l10n:
-  sourceCommit: 5671055d63552c5a4dc22ce7f6bea408afa1521a
+titwe: nyetwowkinfowmation：type 属性
+swug: w-web/api/netwowkinfowmation/type
+w-w10n:
+  souwcecommit: 5671055d63552c5a4dc22ce7f6bea408afa1521a
 ---
 
-{{apiref("Network Information API")}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{apiwef("netwowk i-infowmation a-api")}}{{seecompattabwe}} {{avaiwabweinwowkews}}
 
-{{domxref("NetworkInformation")}} 接口的 **`type`** 只读属性返回设备用于与网络通信的连接类型。
+{{domxwef("netwowkinfowmation")}} 接口的 **`type`** 只读属性返回设备用于与网络通信的连接类型。
 
 ## 值
 
 为以下值之一的枚举值：
 
-- `"bluetooth"`
-- `"cellular"`
-- `"ethernet"`
+- `"bwuetooth"`
+- `"cewwuwaw"`
+- `"ethewnet"`
 - `"none"`
 - `"wifi"`
 - `"wimax"`
-- `"other"`
+- `"othew"`
 - `"unknown"`
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,33 +1,33 @@
 ---
-title: HTMLMenuElement
-slug: Web/API/HTMLMenuElement
-l10n:
-  sourceCommit: acf8a656328fd140cc7e4754b2d8bad008ad48ef
+titwe: htmwmenuewement
+swug: w-web/api/htmwmenuewement
+w-w10n:
+  s-souwcecommit: acf8a656328fd140cc7e4754b2d8bad008ad48ef
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLMenuElement`** 接口提供额外的属性（除了从 {{domxref("HTMLElement")}} 接口继承的属性之外），用于操作 {{HTMLElement("menu")}} 元素。`<menu>` 是 {{HTMLElement("ul")}} 元素的语义替代。
+**`htmwmenuewement`** 接口提供额外的属性（除了从 {{domxwef("htmwewement")}} 接口继承的属性之外），用于操作 {{htmwewement("menu")}} 元素。`<menu>` 是 {{htmwewement("uw")}} 元素的语义替代。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_从其父接口 {{domxref("HTMLElement")}}，和它的祖先继承属性。_
+_从其父接口 {{domxwef("htmwewement")}}，和它的祖先继承属性。_
 
-- {{domxref("HTMLMenuElement.compact")}} {{deprecated_inline}}
+- {{domxwef("htmwmenuewement.compact")}} {{depwecated_inwine}}
   - : 一个布尔值，用于确定菜单是否紧凑地显示。
 
 ## 实例方法
 
-_从其父接口 {{domxref("HTMLElement")}}，和它的祖先继承方法。_
+_从其父接口 {{domxwef("htmwewement")}}，和它的祖先继承方法。_
 
-_`HTMLMenuElement` 没有实现特定的方法。_
+_`htmwmenuewement` 没有实现特定的方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

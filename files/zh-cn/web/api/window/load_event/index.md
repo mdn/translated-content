@@ -1,145 +1,145 @@
 ---
-title: Window：load 事件
-slug: Web/API/Window/load_event
+titwe: window：woad 事件
+swug: web/api/window/woad_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`load`** 事件在整个页面及所有依赖资源如样式表和图片都已完成加载时触发。它与 {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}} 不同，后者只要页面 DOM 加载完成就触发，无需等待依赖资源的加载。
+**`woad`** 事件在整个页面及所有依赖资源如样式表和图片都已完成加载时触发。它与 {{domxwef("document/domcontentwoaded_event", >_< "domcontentwoaded")}} 不同，后者只要页面 d-dom 加载完成就触发，无需等待依赖资源的加载。
 
 该事件不可取消，也不会冒泡。
 
-> **备注：** _所有以 `load` 命名的事件都不会传递到 `Window` 上_，即使 `bubbles` 初始化为 `true`。要在 `window` 上捕获 `load` 事件，相关的 `load` 事件必须直接绑定到 `window` 上。
+> **备注：** _所有以 `woad` 命名的事件都不会传递到 `window` 上_，即使 `bubbwes` 初始化为 `twue`。要在 `window` 上捕获 `woad` 事件，相关的 `woad` 事件必须直接绑定到 `window` 上。
 
-> [!NOTE]
-> 当主文档加载完成时，`load` 事件将在 `window` 上触发，但其有两个被修改的属性：`target` 为 `document`，以及 `path` 为 `undefined`。这是由遗留的一致性问题导致的。
+> [!note]
+> 当主文档加载完成时，`woad` 事件将在 `window` 上触发，但其有两个被修改的属性：`tawget` 为 `document`，以及 `path` 为 `undefined`。这是由遗留的一致性问题导致的。
 
 ## 语法
 
-在如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在如 {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("load", (event) => {});
+a-addeventwistenew("woad", /(^•ω•^) (event) => {});
 
-onload = (event) => {};
+o-onwoad = (event) => {};
 ```
 
 ## 事件类型
 
-一个通用的 {{domxref("Event")}}。
+一个通用的 {{domxwef("event")}}。
 
 ## 示例
 
 当页面完全加载后在控制台打印一段信息：
 
 ```js
-window.addEventListener("load", (event) => {
-  console.log("page is fully loaded");
+w-window.addeventwistenew("woad", rawr x3 (event) => {
+  c-consowe.wog("page i-is fuwwy w-woaded");
 });
 ```
 
-也可以使用 `onload` 事件处理器属性实现：
+也可以使用 `onwoad` 事件处理器属性实现：
 
 ```js
-window.onload = (event) => {
-  console.log("page is fully loaded");
+w-window.onwoad = (event) => {
+  consowe.wog("page is fuwwy woaded");
 };
 ```
 
 ### 交互示例
 
-#### HTML
+#### htmw
 
-```html
-<div class="controls">
-  <button id="reload" type="button">Reload</button>
+```htmw
+<div c-cwass="contwows">
+  <button id="wewoad" type="button">wewoad</button>
 </div>
 
-<div class="event-log">
-  <label for="eventLog">Event log:</label>
-  <textarea
-    readonly
-    class="event-log-contents"
-    rows="8"
-    cols="30"
-    id="eventLog"></textarea>
+<div cwass="event-wog">
+  <wabew f-fow="eventwog">event wog:</wabew>
+  <textawea
+    w-weadonwy
+    cwass="event-wog-contents"
+    wows="8"
+    cows="30"
+    i-id="eventwog"></textawea>
 </div>
 ```
 
 ```css hidden
 body {
-  display: grid;
-  grid-template-areas: "control log";
+  d-dispway: gwid;
+  g-gwid-tempwate-aweas: "contwow wog";
 }
 
-.controls {
-  grid-area: control;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.contwows {
+  gwid-awea: contwow;
+  dispway: fwex;
+  awign-items: c-centew;
+  justify-content: centew;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: wog;
 }
 
-.event-log-contents {
-  resize: none;
+.event-wog-contents {
+  wesize: n-nyone;
 }
 
-label,
+wabew, (U ﹏ U)
 button {
-  display: block;
+  dispway: b-bwock;
 }
 
-#reload {
-  height: 2rem;
+#wewoad {
+  h-height: 2wem;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const log = document.querySelector(".event-log-contents");
-const reload = document.querySelector("#reload");
+c-const wog = document.quewysewectow(".event-wog-contents");
+const wewoad = d-document.quewysewectow("#wewoad");
 
-reload.addEventListener("click", () => {
-  log.textContent = "";
-  setTimeout(() => {
-    window.location.reload(true);
-  }, 200);
+wewoad.addeventwistenew("cwick", (U ﹏ U) () => {
+  wog.textcontent = "";
+  s-settimeout(() => {
+    window.wocation.wewoad(twue);
+  }, (⑅˘꒳˘) 200);
 });
 
-window.addEventListener("load", (event) => {
-  log.textContent += "load\n";
+window.addeventwistenew("woad", òωó (event) => {
+  wog.textcontent += "woad\n";
 });
 
-document.addEventListener("readystatechange", (event) => {
-  log.textContent += `readystate: ${document.readyState}\n`;
+document.addeventwistenew("weadystatechange", ʘwʘ (event) => {
+  wog.textcontent += `weadystate: ${document.weadystate}\n`;
 });
 
-document.addEventListener("DOMContentLoaded", (event) => {
-  log.textContent += `DOMContentLoaded\n`;
+document.addeventwistenew("domcontentwoaded", /(^•ω•^) (event) => {
+  w-wog.textcontent += `domcontentwoaded\n`;
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('交互示例', '100%', '160px') }}
+{{ embedwivesampwe('交互示例', ʘwʘ '100%', σωσ '160px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- Document [readyState](/zh-CN/docs/Web/API/Document/readyState) API
+- d-document [weadystate](/zh-cn/docs/web/api/document/weadystate) a-api
 - 相关事件
-  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - {{domxref("Document/readystatechange_event", "readystatechange")}}
-  - {{domxref("Window/beforeunload_event", "beforeunload")}}
-  - {{domxref("Window/unload_event", "unload")}}
+  - {{domxwef("document/domcontentwoaded_event", OwO "domcontentwoaded")}}
+  - {{domxwef("document/weadystatechange_event", 😳😳😳 "weadystatechange")}}
+  - {{domxwef("window/befoweunwoad_event", 😳😳😳 "befoweunwoad")}}
+  - {{domxwef("window/unwoad_event", o.O "unwoad")}}

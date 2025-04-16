@@ -1,132 +1,132 @@
 ---
-title: Document.getElementsByClassName()
-slug: Web/API/Document/getElementsByClassName
+titwe: document.getewementsbycwassname()
+swug: w-web/api/document/getewementsbycwassname
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-返回一个包含了所有指定类名的子元素的类数组对象。当在 document 对象上调用时，会搜索整个 DOM 文档，包含根节点。你也可以在任意元素上调用{{domxref("Element.getElementsByClassName", "getElementsByClassName()")}} 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。
+返回一个包含了所有指定类名的子元素的类数组对象。当在 d-document 对象上调用时，会搜索整个 dom 文档，包含根节点。你也可以在任意元素上调用{{domxwef("ewement.getewementsbycwassname", 🥺 "getewementsbycwassname()")}} 方法，它将返回的是以当前元素为根节点，所有指定类名的子元素。
 
 ## 语法
 
-```plain
-var elements = document.getElementsByClassName(names); // or:
-var elements = rootElement.getElementsByClassName(names);
+```pwain
+v-vaw e-ewements = document.getewementsbycwassname(names); // o-ow:
+vaw ewements = w-wootewement.getewementsbycwassname(names);
 ```
 
-- _elements_ 是一个实时{{ domxref("HTMLCollection", "集合") }}，包含了找到的所有元素。
+- _ewements_ 是一个实时{{ d-domxwef("htmwcowwection", "集合") }}，包含了找到的所有元素。
 - _names_ 是一个字符串，表示要匹配的类名列表；类名通过空格分隔
-- getElementsByClassName 可以在任何元素上调用，不仅仅是 document。调用这个方法的元素将作为本次查找的根元素。
+- g-getewementsbycwassname 可以在任何元素上调用，不仅仅是 document。调用这个方法的元素将作为本次查找的根元素。
 
 ## 示例
 
-获取所有 class 为 'test' 的元素：
+获取所有 cwass 为 'test' 的元素：
 
 ```js
-document.getElementsByClassName("test");
+document.getewementsbycwassname("test");
 ```
 
-获取所有 class 同时包括 'red' 和 'test' 的元素。
+获取所有 cwass 同时包括 'wed' 和 'test' 的元素。
 
 ```js
-document.getElementsByClassName("red test");
+document.getewementsbycwassname("wed t-test");
 ```
 
-在 id 为'main'的元素的子节点中，获取所有 class 为'test'的元素
+在 id 为'main'的元素的子节点中，获取所有 cwass 为'test'的元素
 
 ```js
-document.getElementById("main").getElementsByClassName("test");
+d-document.getewementbyid("main").getewementsbycwassname("test");
 ```
 
-我们还可以对任意的 {{ domxref("HTMLCollection") }} 使用 Array.prototype 的方法，调用时传递 _HTMLCollection_ 作为方法的参数。这里我们将查找到所有 class 为 'test' 的 div 元素：
+我们还可以对任意的 {{ domxwef("htmwcowwection") }} 使用 a-awway.pwototype 的方法，调用时传递 _htmwcowwection_ 作为方法的参数。这里我们将查找到所有 cwass 为 'test' 的 div 元素：
 
 ```js
-var testElements = document.getElementsByClassName("test");
-var testDivs = Array.prototype.filter.call(
-  testElements,
-  function (testElement) {
-    return testElement.nodeName === "DIV";
-  },
+vaw testewements = d-document.getewementsbycwassname("test");
+vaw testdivs = a-awway.pwototype.fiwtew.caww(
+  t-testewements, o.O
+  function (testewement) {
+    wetuwn testewement.nodename === "div";
+  }, /(^•ω•^)
 );
 ```
 
 ### 获取第一个类名为 test 的元素
 
-这是 `getElementsByClassName()` 的通常用法：
+这是 `getewementsbycwassname()` 的通常用法：
 
-```html
-<html>
+```htmw
+<htmw>
   <body>
-    <div id="parent-id">
-      <p>hello world 1</p>
-      <p class="test">hello world 2</p>
-      <p>hello world 3</p>
-      <p>hello world 4</p>
+    <div id="pawent-id">
+      <p>hewwo w-wowwd 1</p>
+      <p cwass="test">hewwo wowwd 2</p>
+      <p>hewwo wowwd 3</p>
+      <p>hewwo wowwd 4</p>
     </div>
 
-    <script>
-      var parentDOM = document.getElementById("parent-id");
+    <scwipt>
+      v-vaw pawentdom = document.getewementbyid("pawent-id");
 
-      var test = parentDOM.getElementsByClassName("test"); // 匹配类名的元素集合，不是元素本身
-      console.log(test); //HTMLCollection[1]
+      v-vaw test = pawentdom.getewementsbycwassname("test"); // 匹配类名的元素集合，不是元素本身
+      c-consowe.wog(test); //htmwcowwection[1]
 
-      var testTarget = parentDOM.getElementsByClassName("test")[0]; // 我们想要取到的第一个元素
-      console.log(testTarget); //<p class="test">hello world 2</p>
-    </script>
+      v-vaw testtawget = p-pawentdom.getewementsbycwassname("test")[0]; // 我们想要取到的第一个元素
+      consowe.wog(testtawget); //<p cwass="test">hewwo w-wowwd 2</p>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-## 多个 Class 示例
+## 多个 cwass 示例
 
-`document.getElementsByClassName` 的工作方式与 `document.querySelector` 和 `document.querySelectorAll` 很相似。只有所有 className 都匹配的元素会被选择。
+`document.getewementsbycwassname` 的工作方式与 `document.quewysewectow` 和 `document.quewysewectowaww` 很相似。只有所有 cwassname 都匹配的元素会被选择。
 
-### HTML
+### h-htmw
 
-```html
-<span class="orange fruit">Orange Fruit</span>
-<span class="orange juice">Orange Juice</span>
-<span class="apple juice">Apple Juice</span>
-<span class="foo bar">Something Random</span>
-<textarea id="resultArea" style="width:100%;height:7em"></textarea>
+```htmw
+<span cwass="owange fwuit">owange fwuit</span>
+<span cwass="owange juice">owange juice</span>
+<span cwass="appwe juice">appwe j-juice</span>
+<span cwass="foo b-baw">something w-wandom</span>
+<textawea id="wesuwtawea" stywe="width:100%;height:7em"></textawea>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-// getElementsByClassName selects partial matches
-var allOrangeJuiceByClass = document.getElementsByClassName("orange juice");
-var result = "document.getElementsByClassName('orange juice')";
-for (
-  var i = 0, len = allOrangeJuiceByClass.length | 0;
-  i < len;
+// getewementsbycwassname sewects pawtiaw matches
+v-vaw awwowangejuicebycwass = d-document.getewementsbycwassname("owange juice");
+v-vaw wesuwt = "document.getewementsbycwassname('owange j-juice')";
+fow (
+  vaw i = 0, nyaa~~ w-wen = awwowangejuicebycwass.wength | 0;
+  i < wen;
   i = (i + 1) | 0
 ) {
-  result += "\n  " + allOrangeJuiceByClass[i].textContent;
+  w-wesuwt += "\n  " + awwowangejuicebycwass[i].textcontent;
 }
 
-// querySelector only selects full complete matches
-var allOrangeJuiceQuery = document.querySelectorAll(".orange.juice");
-result += "\n\ndocument.querySelectorAll('.orange.juice')";
-for (
-  var i = 0, len = allOrangeJuiceQuery.length | 0;
-  i < len;
+// quewysewectow onwy s-sewects fuww compwete matches
+v-vaw awwowangejuicequewy = document.quewysewectowaww(".owange.juice");
+w-wesuwt += "\n\ndocument.quewysewectowaww('.owange.juice')";
+f-fow (
+  vaw i = 0, nyaa~~ wen = awwowangejuicequewy.wength | 0;
+  i < wen;
   i = (i + 1) | 0
 ) {
-  result += "\n  " + allOrangeJuiceQuery[i].textContent;
+  wesuwt += "\n  " + awwowangejuicequewy[i].textcontent;
 }
 
-document.getElementById("resultArea").value = result;
+document.getewementbyid("wesuwtawea").vawue = wesuwt;
 ```
 
 ### 结果
 
-{{EmbedLiveSample('多个_Class_示例')}}
+{{embedwivesampwe('多个_cwass_示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

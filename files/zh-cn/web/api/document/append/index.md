@@ -1,69 +1,69 @@
 ---
-title: Document：append() 方法
-slug: Web/API/Document/append
-l10n:
-  sourceCommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
+titwe: document：append() 方法
+swug: web/api/document/append
+w-w10n:
+  souwcecommit: 542ef6cfd82288925e0a9238b47933f03e2dddca
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.append()`** 方法会在文档的最后一个子节点后插入一组{{domxref("Node", "节点", "", 1)}}对象或字符串对象。字符串对象被插入为相同{{domxref("Text", "文本", "", 1)}}节点。
+**`document.append()`** 方法会在文档的最后一个子节点后插入一组{{domxwef("node", (U ᵕ U❁) "节点", -.- "", 1)}}对象或字符串对象。字符串对象被插入为相同{{domxwef("text", ^^;; "文本", >_< "", 1)}}节点。
 
-此方法将一个子元素追加到 `Document` 中。要向树中的任意元素添加子元素，请参阅 {{domxref("Element.append()")}}。
+此方法将一个子元素追加到 `document` 中。要向树中的任意元素添加子元素，请参阅 {{domxwef("ewement.append()")}}。
 
 ## 语法
 
-```js-nolint
-append(param1)
-append(param1, param2)
-append(param1, param2, /* …, */ paramN)
+```js-nowint
+a-append(pawam1)
+a-append(pawam1, mya p-pawam2)
+append(pawam1, p-pawam2, mya /* …, 😳 */ p-pawamn)
 ```
 
 ### 参数
 
-- `param1`, …, `paramN`
-  - : 要插入的一组 {{domxref("Node")}} 或字符串对象。
+- `pawam1`, XD …, :3 `pawamn`
+  - : 要插入的一组 {{domxwef("node")}} 或字符串对象。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ### 异常
 
-- `HierarchyRequestError` {{DOMxRef("DOMException")}}
+- `hiewawchywequestewwow` {{domxwef("domexception")}}
   - : 当节点无法插入层次结构中的指定点时抛出异常。
 
 ## 示例
 
 ### 向文档添加根元素
 
-如果你尝试在现有 HTML 文档中添加元素，可能会抛出 `HierarchyRequestError` {{domxref("DOMException")}}，因为 {{HTMLElement("html")}} 元素已经存在。
+如果你尝试在现有 h-htmw 文档中添加元素，可能会抛出 `hiewawchywequestewwow` {{domxwef("domexception")}}，因为 {{htmwewement("htmw")}} 元素已经存在。
 
 ```js
-let html = document.createElement("html");
-document.append(html);
-// HierarchyRequestError: The operation would yield an incorrect node tree.
+w-wet htmw = document.cweateewement("htmw");
+document.append(htmw);
+// hiewawchywequestewwow: the opewation wouwd yiewd an incowwect n-nyode twee. 😳😳😳
 ```
 
-如果创建的新文档没有任何现有元素，你可以添加一个 HTML 根元素（或 SVG 根元素）：
+如果创建的新文档没有任何现有元素，你可以添加一个 htmw 根元素（或 svg 根元素）：
 
 ```js
-let doc = new Document();
-let html = document.createElement("html");
-doc.append(html);
+w-wet doc = nyew document();
+wet htmw = d-document.cweateewement("htmw");
+doc.append(htmw);
 
-doc.children; // HTMLCollection [<html>]
+doc.chiwdwen; // htmwcowwection [<htmw>]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Document.prepend()")}}
-- {{domxref("Element.append()")}}
+- {{domxwef("document.pwepend()")}}
+- {{domxwef("ewement.append()")}}

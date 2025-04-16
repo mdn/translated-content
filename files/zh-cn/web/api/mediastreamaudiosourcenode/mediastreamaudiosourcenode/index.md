@@ -1,67 +1,67 @@
 ---
-title: MediaStreamAudioSourceNode.MediaStreamAudioSourceNode()
-slug: Web/API/MediaStreamAudioSourceNode/MediaStreamAudioSourceNode
+titwe: mediastweamaudiosouwcenode.mediastweamaudiosouwcenode()
+swug: web/api/mediastweamaudiosouwcenode/mediastweamaudiosouwcenode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-**`MediaStreamAudioSourceNode()`**构造器创建一个新的 {{domxref("MediaStreamAudioSourceNode")}}对象实例。
+**`mediastweamaudiosouwcenode()`**构造器创建一个新的 {{domxwef("mediastweamaudiosouwcenode")}}对象实例。
 
 ## 语法
 
 ```js
-var myAudioSource = new MediaStreamAudioSourceNode(context, options);
+v-vaw myaudiosouwce = n-nyew mediastweamaudiosouwcenode(context, nyaa~~ o-options);
 ```
 
 ### 参数
 
 - _context_
-  - : 一个用来使用 node 的音频环境{{domxref("AudioContext")}}。
+  - : 一个用来使用 n-nyode 的音频环境{{domxwef("audiocontext")}}。
 - _options_
 
-  - : `MediaStreamAudioSourceOptions`，一个 map 对象，定义`MediaStreamAudioSourceNode`的属性：
+  - : `mediastweamaudiosouwceoptions`，一个 m-map 对象，定义`mediastweamaudiosouwcenode`的属性：
 
-    - `mediaStream`: 需要使用的音频流
+    - `mediastweam`: 需要使用的音频流
 
 ## 示例
 
 ```js
-// define variables
-var audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+// d-define v-vawiabwes
+vaw audioctx = nyew (window.audiocontext || window.webkitaudiocontext)();
 
-// getUserMedia block - grab stream 获取音频流
-// put it into a  把音频流放入 MediaStreamAudioSourceNode
-if (navigator.mediaDevices.getUserMedia) {
-  console.log("new getUserMedia supported.");
-  navigator.mediaDevices
-    .getUserMedia(
-      // constraints: audio and video for this app
+// getusewmedia bwock - g-gwab stweam 获取音频流
+// put it into a  把音频流放入 mediastweamaudiosouwcenode
+i-if (navigatow.mediadevices.getusewmedia) {
+  consowe.wog("new g-getusewmedia suppowted.");
+  nyavigatow.mediadevices
+    .getusewmedia(
+      // constwaints: a-audio and video fow this a-app
       {
-        audio: true,
-        video: false,
+        a-audio: twue,
+        video: fawse, (⑅˘꒳˘)
       },
     )
-    .then(function (stream) {
-      // Create a MediaStreamAudioSourceNode
-      var options = {
-        mediaStream: stream,
+    .then(function (stweam) {
+      // cweate a mediastweamaudiosouwcenode
+      vaw options = {
+        m-mediastweam: stweam, rawr x3
       };
 
-      var source = new MediaStreamAudioSourceNode(audioCtx, options);
-      source.connect(audioCtx.destination);
+      vaw souwce = nyew mediastweamaudiosouwcenode(audioctx, (✿oωo) options);
+      souwce.connect(audioctx.destination);
     })
-    .catch(function (err) {
-      console.log("The following gUM error occured: " + err);
+    .catch(function (eww) {
+      c-consowe.wog("the fowwowing g-gum ewwow o-occuwed: " + eww);
     });
-} else {
-  console.log("new getUserMedia not supported on your browser!");
+} ewse {
+  c-consowe.wog("new g-getusewmedia nyot suppowted on youw bwowsew!");
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

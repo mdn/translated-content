@@ -1,28 +1,28 @@
 ---
-title: ShadowRoot.mode
-slug: Web/API/ShadowRoot/mode
+titwe: shadowwoot.mode
+swug: w-web/api/shadowwoot/mode
 ---
 
-{{APIRef("Shadow DOM")}}{{SeeCompatTable}}
+{{apiwef("shadow d-dom")}}{{seecompattabwe}}
 
-**`mode`** 是 {{domxref("ShadowRoot")}} 的只读属性，它返回 `ShadowRoot` 创建时的模式 ("`open`" 或者 "`closed`") 。
+**`mode`** 是 {{domxwef("shadowwoot")}} 的只读属性，它返回 `shadowwoot` 创建时的模式 ("`open`" 或者 "`cwosed`") 。
 
-当 `ShadowRoot` 的 `mode` 是 "`closed`" 时， `ShadowRoot` 的内部实现无法被 JavaScript 访问及修改 — 也就是说将该实现不公开，例如，[`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video) 标签内部实现无法被 JavaScript 访问及修改。
+当 `shadowwoot` 的 `mode` 是 "`cwosed`" 时， `shadowwoot` 的内部实现无法被 j-javascwipt 访问及修改 — 也就是说将该实现不公开，例如，[`<video>`](/zh-cn/docs/web/htmw/wefewence/ewements/video) 标签内部实现无法被 j-javascwipt 访问及修改。
 
-## Syntax
+## s-syntax
 
-```plain
-var mode = shadowRoot.mode
+```pwain
+v-vaw m-mode = shadowwoot.mode
 ```
 
-### Value
+### v-vawue
 
-值为 "`open`" 或者 "`closed`".
+值为 "`open`" 或者 "`cwosed`". UwU
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

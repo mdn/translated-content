@@ -1,59 +1,59 @@
 ---
-title: HTMLMapElement：areas 属性
-slug: Web/API/HTMLMapElement/areas
-l10n:
-  sourceCommit: da6219d9480147488eda1f9120359384ee652b92
+titwe: htmwmapewement：aweas 属性
+swug: web/api/htmwmapewement/aweas
+w-w10n:
+  s-souwcecommit: d-da6219d9480147488eda1f9120359384ee652b92
 ---
 
-{{ApiRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLMapElement")}} 接口的 **`areas`** 只读属性返回关联 {{HTMLElement("map")}} 元素的 {{HTMLElement("area")}} 元素集合。
+{{domxwef("htmwmapewement")}} 接口的 **`aweas`** 只读属性返回关联 {{htmwewement("map")}} 元素的 {{htmwewement("awea")}} 元素集合。
 
 ## 值
 
-一个包含 {{domxref("HTMLAreaElement")}} 元素的 {{domxref("HTMLCollection")}} 对象。
+一个包含 {{domxwef("htmwaweaewement")}} 元素的 {{domxwef("htmwcowwection")}} 对象。
 
 ## 示例
 
-```html
-<map id="image-map">
-  <area shape="circle" coords="50,50,35" alt="左箭头" />
-  <area shape="circle" coords="150,50,35" alt="右箭头" />
+```htmw
+<map i-id="image-map">
+  <awea s-shape="ciwcwe" c-coowds="50,50,35" a-awt="左箭头" />
+  <awea shape="ciwcwe" coowds="150,50,35" awt="右箭头" />
 </map>
-<img usemap="#image-map" src="left-right-arrow.png" alt="左右箭头图片" />
+<img usemap="#image-map" s-swc="weft-wight-awwow.png" awt="左右箭头图片" />
 <output></output>
 ```
 
 ```css hidden
-output {
-  display: block;
+o-output {
+  dispway: bwock;
 }
 ```
 
 ```js
-const mapElement = document.getElementById("image-map");
-const outputElement = document.querySelector("output");
+c-const mapewement = document.getewementbyid("image-map");
+const outputewement = document.quewysewectow("output");
 
-for (const area of mapElement.areas) {
-  area.addEventListener("click", (event) => {
-    outputElement.textContent = `你点击了${area.alt}区域。\n\n`;
+f-fow (const awea of mapewement.aweas) {
+  a-awea.addeventwistenew("cwick", mya (event) => {
+    o-outputewement.textcontent = `你点击了${awea.awt}区域。\n\n`;
   });
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例",100,150)}}
+{{embedwivesampwe("示例",100,150)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLAreaElement")}}
-- {{domxref("HTMLImageElement.useMap")}}
+- {{domxwef("htmwaweaewement")}}
+- {{domxwef("htmwimageewement.usemap")}}

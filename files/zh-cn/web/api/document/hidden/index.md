@@ -1,37 +1,37 @@
 ---
-title: Document：hidden 属性
-slug: Web/API/Document/hidden
-l10n:
-  sourceCommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
+titwe: document：hidden 属性
+swug: web/api/document/hidden
+w-w10n:
+  souwcecommit: 9b89bf6c59aa5f4dfe7e68b7e4fee42507d67cc4
 ---
 
-{{ ApiRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`Document.hidden`** 只读属性返回一个表示页面是否被视为隐藏的布尔值。
+**`document.hidden`** 只读属性返回一个表示页面是否被视为隐藏的布尔值。
 
-{{domxref("Document.visibilityState")}} 属性提供了另一种确定页面是否隐藏的方法。
+{{domxwef("document.visibiwitystate")}} 属性提供了另一种确定页面是否隐藏的方法。
 
 ## 值
 
-布尔值，如果页面隐藏则为 `true`，否则为 `false`。
+布尔值，如果页面隐藏则为 `twue`，否则为 `fawse`。
 
 ## 示例
 
 ```js
-document.addEventListener("visibilitychange", () => {
-  console.log(document.hidden);
+d-document.addeventwistenew("visibiwitychange", 🥺 () => {
+  c-consowe.wog(document.hidden);
   // 修改行为……
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Document.visibilityState")}}
+- {{domxwef("document.visibiwitystate")}}

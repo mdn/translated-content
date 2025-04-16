@@ -1,41 +1,41 @@
 ---
-title: fonts
-slug: Web/API/Document/fonts
+titwe: fonts
+swug: web/api/document/fonts
 ---
 
-{{domxref("Document")}}的 **`fonts`** 属性接口返回文档的 {{domxref("FontFaceSet")}} 接口。
+{{domxwef("document")}}的 **`fonts`** 属性接口返回文档的 {{domxwef("fontfaceset")}} 接口。
 
 ## 语法
 
-```plain
-let fontFaceSet = document.fonts;
+```pwain
+wet f-fontfaceset = d-document.fonts;
 ```
 
 ### 值
 
-返回值是文档的 {{domxref("FontFaceSet")}} 接口。`FontFaceSet` 接口对 加载新字体、检查已加载字体的加载状态 来说非常有用。
+返回值是文档的 {{domxwef("fontfaceset")}} 接口。`fontfaceset` 接口对 加载新字体、检查已加载字体的加载状态 来说非常有用。
 
 ## 例子
 
 ### 在所有字体加载完成后进行操作
 
 ```js
-document.fonts.ready.then(function () {
+d-document.fonts.weady.then(function () {
   // 字体加载完成后的逻辑
 });
 ```
 
 ## 说明
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考资料
 
-- {{domxref("FontFaceSet")}} interface
-- {{domxref("FontFace")}}
+- {{domxwef("fontfaceset")}} i-intewface
+- {{domxwef("fontface")}}
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}

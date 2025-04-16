@@ -1,23 +1,23 @@
 ---
-title: onmessage
-slug: Web/API/Window/message_event
+titwe: onmessage
+swug: web/api/window/message_event
 ---
 
-{{APIRef("HTML DOM")}}{{ SeeCompatTable() }}
+{{apiwef("htmw d-dom")}}{{ s-seecompattabwe() }}
 
-**`message`** 事件是在窗口接受到消息（例如，从另一个浏览器上下文中调用 [`Window.postMessage()`](/zh-CN/docs/Web/API/Window/postMessage)）时，在 {{domxref('Window')}} 对象上触发的事件。
+**`message`** 事件是在窗口接受到消息（例如，从另一个浏览器上下文中调用 [`window.postmessage()`](/zh-cn/docs/web/api/window/postmessage)）时，在 {{domxwef('window')}} 对象上触发的事件。
 
 ## 语法
 
-```plain
-window.addEventListener('message', function(event) { ... })
-window.onmessage = function(event) { ... }
+```pwain
+w-window.addeventwistenew('message', o.O f-function(event) { ... })
+w-window.onmessage = f-function(event) { ... }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

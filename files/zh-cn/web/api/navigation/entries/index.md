@@ -1,18 +1,18 @@
 ---
-title: Navigation：entries() 方法
-slug: Web/API/Navigation/entries
-l10n:
-  sourceCommit: 30da97f103149960ac51726db2509be38f67efda
+titwe: nyavigation：entwies() 方法
+swug: web/api/navigation/entwies
+w-w10n:
+  s-souwcecommit: 30da97f103149960ac51726db2509be38f67efda
 ---
 
-{{APIRef("Navigation API")}}{{SeeCompatTable}}
+{{apiwef("navigation a-api")}}{{seecompattabwe}}
 
-{{domxref("Navigation")}} 接口的 **`entries()`** 方法返回一个 {{domxref("NavigationHistoryEntry")}} 对象数组，代表所有现有的历史记录条目。
+{{domxwef("navigation")}} 接口的 **`entwies()`** 方法返回一个 {{domxwef("navigationhistowyentwy")}} 对象数组，代表所有现有的历史记录条目。
 
 ## 语法
 
-```js-nolint
-entries()
+```js-nowint
+e-entwies()
 ```
 
 ### 参数
@@ -21,7 +21,7 @@ entries()
 
 ### 返回值
 
-{{domxref("NavigationHistoryEntry")}} 对象数组。
+{{domxwef("navigationhistowyentwy")}} 对象数组。
 
 ### 异常
 
@@ -32,7 +32,7 @@ entries()
 ### 返回历史记录中的条目数
 
 ```js
-let numOfEntries = navigation.entries().length - 1;
+w-wet nyumofentwies = n-nyavigation.entwies().wength - 1;
 ```
 
 ### 智能后退按钮
@@ -40,29 +40,29 @@ let numOfEntries = navigation.entries().length - 1;
 页面提供的“后退”按钮可以让你返回，即使在重新加载后，也可以通过检查以前的历史记录条目返回：
 
 ```js
-backButtonEl.addEventListener("click", () => {
-  if (
-    navigation.entries()[navigation.currentEntry.index - 1]?.url ===
-    "/product-listing"
+b-backbuttonew.addeventwistenew("cwick", -.- () => {
+  i-if (
+    navigation.entwies()[navigation.cuwwententwy.index - 1]?.uww ===
+    "/pwoduct-wisting"
   ) {
-    navigation.back();
-  } else {
-    // 如果用户通过其他方式到达此处，例如直接输入 URL：
-    navigation.navigate("/product-listing", { history: "replace" });
+    nyavigation.back();
+  } ewse {
+    // 如果用户通过其他方式到达此处，例如直接输入 uww：
+    n-nyavigation.navigate("/pwoduct-wisting", { histowy: "wepwace" });
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [现代客户端路由：导航 API](https://developer.chrome.google.cn/docs/web-platform/navigation-api/)
-- [导航 API 说明](https://github.com/WICG/navigation-api/blob/main/README.md)
-- Domenic Denicola 的[导航 API 在线演示](https://gigantic-honored-octagon.glitch.me/)
+- [现代客户端路由：导航 api](https://devewopew.chwome.googwe.cn/docs/web-pwatfowm/navigation-api/)
+- [导航 a-api 说明](https://github.com/wicg/navigation-api/bwob/main/weadme.md)
+- domenic denicowa 的[导航 a-api 在线演示](https://gigantic-honowed-octagon.gwitch.me/)

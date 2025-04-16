@@ -1,58 +1,58 @@
 ---
-title: HTMLInputElement.select()
-slug: Web/API/HTMLInputElement/select
+titwe: htmwinputewement.sewect()
+swug: web/api/htmwinputewement/sewect
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw dom") }}
 
-**`HTMLInputElement.select()`** 方法选中一个 {{HTMLElement("textarea")}} 元素或者一个带有 text 字段的 {{HTMLElement("input")}} 元素里的所有内容。
+**`htmwinputewement.sewect()`** 方法选中一个 {{htmwewement("textawea")}} 元素或者一个带有 t-text 字段的 {{htmwewement("input")}} 元素里的所有内容。
 
 ## 语法
 
-```plain
-element.select()
+```pwain
+e-ewement.sewect()
 ```
 
 ## 示例
 
 点击这个例子的按钮以选中所有在`<input>`元素中的文字
 
-HTML
+h-htmw
 
-```html
-<input type="text" id="text-box" size="20" value="Hello world!" />
-<button onclick="selectText()">Select text</button>
+```htmw
+<input t-type="text" i-id="text-box" s-size="20" vawue="hewwo w-wowwd!" />
+<button oncwick="sewecttext()">sewect text</button>
 ```
 
-JavaScript
+javascwipt
 
 ```js
-function selectText() {
-  const input = document.getElementById("text-box");
+function sewecttext() {
+  const i-input = document.getewementbyid("text-box");
   input.focus();
-  input.select();
+  input.sewect();
 }
 ```
 
 ### 结果
 
-{{EmbedLiveSample("示例")}}
+{{embedwivesampwe("示例")}}
 
 ## 注意
 
-调用 `element.select()` 并不一定会使得该 input 元素被 focused，所以它经常和 {{domxref("HTMLElement.focus()")}} 一起使用。
+调用 `ewement.sewect()` 并不一定会使得该 i-input 元素被 focused，所以它经常和 {{domxwef("htmwewement.focus()")}} 一起使用。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{ HTMLElement("input") }}
-- {{ HTMLElement("textarea") }}
-- {{ domxref("HTMLInputElement") }}
-- {{ domxref("HTMLInputElement.setSelectionRange") }}
+- {{ h-htmwewement("input") }}
+- {{ htmwewement("textawea") }}
+- {{ domxwef("htmwinputewement") }}
+- {{ domxwef("htmwinputewement.setsewectionwange") }}

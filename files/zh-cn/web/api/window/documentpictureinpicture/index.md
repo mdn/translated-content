@@ -1,29 +1,29 @@
 ---
-title: Window：documentPictureInPicture 属性
-slug: Web/API/Window/documentPictureInPicture
-l10n:
-  sourceCommit: bac20b9ed34bf5b6427ba9274c99c1737dc309ff
+titwe: window：documentpictuweinpictuwe 属性
+swug: web/api/window/documentpictuweinpictuwe
+w-w10n:
+  souwcecommit: b-bac20b9ed34bf5b6427ba9274c99c1737dc309ff
 ---
 
-{{APIRef("Document Picture-in-Picture API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("document p-pictuwe-in-pictuwe a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("Window")}} 接口的 **`documentPictureInPicture`** 只读属性返回对当前文档上下文的 {{domxref("DocumentPictureInPicture")}} 对象的引用。
+{{domxwef("window")}} 接口的 **`documentpictuweinpictuwe`** 只读属性返回对当前文档上下文的 {{domxwef("documentpictuweinpictuwe")}} 对象的引用。
 
 ## 值
 
-{{domxref("DocumentPictureInPicture")}} 对象实例。
+{{domxwef("documentpictuweinpictuwe")}} 对象实例。
 
 ## 示例
 
 ```js
-const videoPlayer = document.getElementById("player");
+c-const videopwayew = d-document.getewementbyid("pwayew");
 
 // ...
 
 // 打开画中画窗口。
-await window.documentPictureInPicture.requestWindow({
-  width: videoPlayer.clientWidth,
-  height: videoPlayer.clientHeight,
+a-await window.documentpictuweinpictuwe.wequestwindow({
+  w-width: videopwayew.cwientwidth, (U ﹏ U)
+  height: videopwayew.cwientheight, -.-
 });
 
 // ...
@@ -31,13 +31,13 @@ await window.documentPictureInPicture.requestWindow({
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Document Picture-in-Picture API", "Document Picture-in-Picture API", "", "nocode")}}
-- [使用 Document Picture-in-Picture API](/zh-CN/docs/Web/API/Document_Picture-in-Picture_API/Using)
+- {{domxwef("document pictuwe-in-pictuwe api", (ˆ ﻌ ˆ)♡ "document p-pictuwe-in-pictuwe api", (⑅˘꒳˘) "", "nocode")}}
+- [使用 document p-pictuwe-in-pictuwe api](/zh-cn/docs/web/api/document_pictuwe-in-pictuwe_api/using)

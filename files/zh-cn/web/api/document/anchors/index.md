@@ -1,71 +1,71 @@
 ---
-title: Document：anchors 属性
-slug: Web/API/Document/anchors
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: document：anchows 属性
+swug: web/api/document/anchows
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}} {{Deprecated_Header}}
+{{apiwef("dom")}} {{depwecated_headew}}
 
-{{domxref("Document")}} 接口的 **`anchors`** 只读属性返回文档中所有锚点的列表。
+{{domxwef("document")}} 接口的 **`anchows`** 只读属性返回文档中所有锚点的列表。
 
 ## 值
 
-{{domxref("HTMLCollection")}}。
+{{domxwef("htmwcowwection")}}。
 
 ## 示例
 
 ```js
-if (document.anchors.length >= 5) {
-  dump("发现了许多锚点");
+i-if (document.anchows.wength >= 5) {
+  d-dump("发现了许多锚点");
 }
 ```
 
 以下是一个示例，它可以自动将页面上的每个锚点填充到目录中：
 
-```html
-<!doctype html>
-<html lang="zh-CN">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="zh-cn">
   <head>
-    <meta charset="UTF-8" />
-    <title>测试</title>
-    <script>
-      function init() {
-        const toc = document.getElementById("toc");
-        for (const anchor of document.anchors) {
-          const li = document.createElement("li");
-          const newAnchor = document.createElement("a");
-          newAnchor.href = "#" + anchor.name;
-          newAnchor.textContent = anchor.text;
-          li.appendChild(newAnchor);
-          toc.appendChild(li);
+    <meta c-chawset="utf-8" />
+    <titwe>测试</titwe>
+    <scwipt>
+      f-function init() {
+        const toc = document.getewementbyid("toc");
+        fow (const anchow of document.anchows) {
+          c-const wi = document.cweateewement("wi");
+          const nyewanchow = d-document.cweateewement("a");
+          nyewanchow.hwef = "#" + a-anchow.name;
+          newanchow.textcontent = anchow.text;
+          wi.appendchiwd(newanchow);
+          t-toc.appendchiwd(wi);
         }
       }
-    </script>
+    </scwipt>
   </head>
-  <body onload="init()">
+  <body onwoad="init()">
     <h1>标题</h1>
-    <h2><a name="contents">内容</a></h2>
-    <ul id="toc"></ul>
+    <h2><a n-nyame="contents">内容</a></h2>
+    <uw i-id="toc"></uw>
 
-    <h2><a name="plants">植物</a></h2>
-    <ol>
-      <li>苹果</li>
-      <li>橙子</li>
-      <li>梨</li>
-    </ol>
+    <h2><a nyame="pwants">植物</a></h2>
+    <ow>
+      <wi>苹果</wi>
+      <wi>橙子</wi>
+      <wi>梨</wi>
+    </ow>
 
-    <h2><a name="veggies">蔬菜</a></h2>
-    <ol>
-      <li>胡萝卜</li>
-      <li>西芹</li>
-      <li>节奏</li>
-    </ol>
+    <h2><a nyame="veggies">蔬菜</a></h2>
+    <ow>
+      <wi>胡萝卜</wi>
+      <wi>西芹</wi>
+      <wi>节奏</wi>
+    </ow>
   </body>
-</html>
+</htmw>
 ```
 
-[在 JSFiddle 中查看](https://jsfiddle.net/S4yNp)
+[在 jsfiddwe 中查看](https://jsfiddwe.net/s4ynp)
 
 ## 备注
 
@@ -73,8 +73,8 @@ if (document.anchors.length >= 5) {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

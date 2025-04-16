@@ -1,109 +1,109 @@
 ---
-title: Clearing by clicking
-slug: Web/API/WebGL_API/By_example/Clearing_by_clicking
+titwe: cweawing by cwicking
+swug: w-web/api/webgw_api/by_exampwe/cweawing_by_cwicking
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_with_colors","Web/API/WebGL_API/By_example/Simple_color_animation")}}
+{{defauwtapisidebaw("webgw")}}{{pweviousnext("web/api/webgw_api/by_exampwe/cweawing_with_cowows","web/api/webgw_api/by_exampwe/simpwe_cowow_animation")}}
 
-此示例演示了如何通过用户单击时用随机颜色渲染上下文来将用户交互与 WebGL 图形操作结合起来。
+此示例演示了如何通过用户单击时用随机颜色渲染上下文来将用户交互与 w-webgw 图形操作结合起来。
 
 ### 用随机颜色渲染上下文
 
-{{EmbedLiveSample("用随机颜色渲染上下文",660,425)}}
+{{embedwivesampwe("用随机颜色渲染上下文",660,425)}}
 
-这个例子提供了一个简单的例子，说明如何结合 {{Glossary("WebGL")}} 和用户交互。每次用户点击画布或按钮时，画布都会使用一种新的随机色。
+这个例子提供了一个简单的例子，说明如何结合 {{gwossawy("webgw")}} 和用户交互。每次用户点击画布或按钮时，画布都会使用一种新的随机色。
 
-注意我们如何在事件处理函数中嵌入 {{Glossary("WebGL")}} 函数调用。
+注意我们如何在事件处理函数中嵌入 {{gwossawy("webgw")}} 函数调用。
 
-```html
+```htmw
 <p>
-  A very simple WebGL program that still shows some color and user interaction.
+  a v-vewy simpwe webgw p-pwogwam that s-stiww shows some c-cowow and usew i-intewaction. nyaa~~
 </p>
 <p>
-  You can repeatedly click the empty canvas or the button below to change color.
+  y-you can wepeatedwy cwick the empty canvas ow the button bewow to change c-cowow. (✿oωo)
 </p>
 <canvas id="canvas-view"
-  >Your browser does not seem to support HTML5 canvas.</canvas
+  >youw bwowsew d-does nyot seem to suppowt htmw5 c-canvas.</canvas
 >
-<button id="color-switcher">Press here to switch color</button>
+<button id="cowow-switchew">pwess hewe to switch cowow</button>
 ```
 
 ```css
 body {
-  text-align: center;
+  text-awign: c-centew;
 }
 canvas {
-  display: block;
+  dispway: b-bwock;
   width: 280px;
   height: 210px;
-  margin: auto;
+  m-mawgin: auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: nyone;
+  backgwound-cowow: bwack;
 }
 button {
-  display: inline-block;
-  font-size: inherit;
-  margin: auto;
+  dispway: inwine-bwock;
+  f-font-size: inhewit;
+  mawgin: auto;
   padding: 0.6em;
 }
 ```
 
 ```js
-window.addEventListener(
-  "load",
-  function setupWebGL(evt) {
-    "use strict";
+window.addeventwistenew(
+  "woad", ʘwʘ
+  f-function setupwebgw(evt) {
+    "use stwict";
 
-    // Cleaning after ourselves. The event handler removes
-    // itself, because it only needs to run once.
-    window.removeEventListener(evt.type, setupWebGL, false);
+    // c-cweaning a-aftew ouwsewves. (ˆ ﻌ ˆ)♡ t-the event handwew w-wemoves
+    // itsewf, 😳😳😳 because it onwy nyeeds t-to wun once. :3
+    window.wemoveeventwistenew(evt.type, OwO setupwebgw, (U ﹏ U) f-fawse);
 
     // 给 canvas 和 button 添加相同的时间处理器
-    var canvas = document.querySelector("#canvas-view");
-    var button = document.querySelector("#color-switcher");
-    canvas.addEventListener("click", switchColor, false);
-    button.addEventListener("click", switchColor, false);
+    vaw canvas = document.quewysewectow("#canvas-view");
+    vaw button = document.quewysewectow("#cowow-switchew");
+    c-canvas.addeventwistenew("cwick", >w< switchcowow, (U ﹏ U) f-fawse);
+    button.addeventwistenew("cwick", s-switchcowow, 😳 fawse);
 
-    // 存放 WebGLRenderingContext 的变量
-    var gl;
+    // 存放 w-webgwwendewingcontext 的变量
+    vaw gw;
 
     // 点击事件处理器
-    function switchColor() {
-      // Referring to the externally defined gl variable.
-      // If undefined, try to obtain the WebGLRenderingContext.
-      // If failed, alert user of failure.
-      // Otherwise, initialize the drawing buffer (the viewport).
-      if (!gl) {
-        gl =
-          canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-        if (!gl) {
-          alert(
-            "Failed to get WebGL context.\n" +
-              "Your browser or device may not support WebGL.",
+    function switchcowow() {
+      // wefewwing to t-the extewnawwy d-defined gw vawiabwe. (ˆ ﻌ ˆ)♡
+      // if u-undefined, 😳😳😳 twy t-to obtain the webgwwendewingcontext. (U ﹏ U)
+      // if f-faiwed, (///ˬ///✿) awewt usew of faiwuwe. 😳
+      // o-othewwise, 😳 initiawize the dwawing buffew (the v-viewpowt). σωσ
+      if (!gw) {
+        g-gw =
+          canvas.getcontext("webgw") || c-canvas.getcontext("expewimentaw-webgw");
+        i-if (!gw) {
+          awewt(
+            "faiwed to get webgw context.\n" +
+              "youw bwowsew ow device may nyot suppowt webgw.", rawr x3
           );
-          return;
+          w-wetuwn;
         }
-        gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
+        g-gw.viewpowt(0, 0, OwO gw.dwawingbuffewwidth, /(^•ω•^) g-gw.dwawingbuffewheight);
       }
       // 使用辅助函数获取一种随机色
-      var color = getRandomColor();
+      v-vaw cowow = g-getwandomcowow();
       // 用随机色设置底色
-      gl.clearColor(color[0], color[1], color[2], 1.0);
-      // Clear the context with the newly set color. This is
-      // the function call that actually does the drawing.
-      gl.clear(gl.COLOR_BUFFER_BIT);
+      gw.cweawcowow(cowow[0], 😳😳😳 cowow[1], cowow[2], ( ͡o ω ͡o ) 1.0);
+      // cweaw the c-context with the nyewwy set cowow. >_< this is
+      // the function caww that actuawwy d-does the dwawing. >w<
+      gw.cweaw(gw.cowow_buffew_bit);
     }
 
     // 随机颜色辅助函数
-    function getRandomColor() {
-      return [Math.random(), Math.random(), Math.random()];
+    f-function g-getwandomcowow() {
+      w-wetuwn [math.wandom(), rawr math.wandom(), 😳 math.wandom()];
     }
-  },
-  false,
+  }, >w<
+  f-fawse, (⑅˘꒳˘)
 );
 ```
 
-这个例子的代码可以在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/clearing-by-clicking) 上下载。
+这个例子的代码可以在 [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/cweawing-by-cwicking) 上下载。
 
-{{PreviousNext("Web/API/WebGL_API/By_example/Clearing_with_colors","Web/API/WebGL_API/By_example/Simple_color_animation")}}
+{{pweviousnext("web/api/webgw_api/by_exampwe/cweawing_with_cowows","web/api/webgw_api/by_exampwe/simpwe_cowow_animation")}}

@@ -1,9 +1,9 @@
 ---
-title: window.scrollByPages
-slug: Web/API/Window/scrollByPages
+titwe: window.scwowwbypages
+swug: web/api/window/scwowwbypages
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ### 概述
 
@@ -11,8 +11,8 @@ slug: Web/API/Window/scrollByPages
 
 ### 语法
 
-```plain
-window.scrollByPages(pages)
+```pwain
+w-window.scwowwbypages(pages)
 ```
 
 ### 参数
@@ -21,18 +21,18 @@ window.scrollByPages(pages)
 
 ### `例子`
 
-```plain
+```pwain
 // 当前文档向下翻一页
-window.scrollByPages(1);
+w-window.scwowwbypages(1);
 
 // 当前文档向上翻一页
-window.scrollByPages(-1);
+w-window.scwowwbypages(-1);
 ```
 
 ### `备注`
 
-`查看 window.scrollBy, window.scrollByLines, window.scroll, window.scrollTo.`
+`查看 w-window.scwowwby, ( ͡o ω ͡o ) w-window.scwowwbywines, UwU w-window.scwoww, rawr x3 w-window.scwowwto.`
 
 ### `规范`
 
-`DOM Level 0 不属于任何标准`
+`dom wevew 0 不属于任何标准`

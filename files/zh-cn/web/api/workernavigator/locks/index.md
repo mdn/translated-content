@@ -1,22 +1,22 @@
 ---
-title: WorkerNavigator：locks 属性
-slug: Web/API/WorkerNavigator/locks
-l10n:
-  sourceCommit: e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
+titwe: wowkewnavigatow：wocks 属性
+swug: web/api/wowkewnavigatow/wocks
+w-w10n:
+  s-souwcecommit: e-e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
 ---
 
-{{APIRef("Web Locks API")}}{{securecontext_header}}{{AvailableInWorkers("worker")}}
+{{apiwef("web wocks a-api")}}{{secuwecontext_headew}}{{avaiwabweinwowkews("wowkew")}}
 
-{{domxref("WorkerNavigator")}} 接口的 **`locks`** 只读属性返回一个 {{domxref("LockManager")}} 对象，该对象提供了请求新的 {{domxref('Lock')}} 对象和查询现有的 `Lock` 对象的方法。
+{{domxwef("wowkewnavigatow")}} 接口的 **`wocks`** 只读属性返回一个 {{domxwef("wockmanagew")}} 对象，该对象提供了请求新的 {{domxwef('wock')}} 对象和查询现有的 `wock` 对象的方法。
 
 ## 值
 
-一个 {{domxref("LockManager")}} 对象。
+一个 {{domxwef("wockmanagew")}} 对象。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

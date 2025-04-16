@@ -1,38 +1,38 @@
 ---
-title: HTMLInputElement.multiple
-slug: Web/API/HTMLInputElement/multiple
+titwe: htmwinputewement.muwtipwe
+swug: web/api/htmwinputewement/muwtipwe
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ a-apiwef("htmw d-dom") }}
 
-**`HTMLInputElement.multiple`** 属性表示一个 input 是否可以有多个值。目前只有火狐支持 `<input type="file">`存有多个值。
+**`htmwinputewement.muwtipwe`** 属性表示一个 i-input 是否可以有多个值。目前只有火狐支持 `<input t-type="fiwe">`存有多个值。
 
 ## 实例
 
 ```js
-// fileInput is a <input type=file multiple>
-let fileInput = document.getElementById("myfileinput");
+// f-fiweinput is a-a <input type=fiwe m-muwtipwe>
+wet f-fiweinput = document.getewementbyid("myfiweinput");
 
-if (fileInput.multiple == true) {
-  for (let i = 0; i < fileInput.files.length; i++) {
-    // Loop fileInput.files
+if (fiweinput.muwtipwe == twue) {
+  fow (wet i = 0; i < fiweinput.fiwes.wength; i-i++) {
+    // woop fiweinput.fiwes
   }
 
-  // Only one file available
-} else {
-  let file = fileInput.files.item(0);
+  // onwy one fiwe a-avaiwabwe
+} ewse {
+  wet fiwe = f-fiweinput.fiwes.item(0);
 }
 ```
 
-## See also
+## see awso
 
-- [FileList](/zh-CN/docs/Web/API/FileList)
-- [Bug 523771](https://bugzilla.mozilla.org/show_bug.cgi?id=523771) - Support \<input type=file multiple>
+- [fiwewist](/zh-cn/docs/web/api/fiwewist)
+- [bug 523771](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=523771) - suppowt \<input type=fiwe muwtipwe>
 
-## Specification
+## s-specification
 
-- [The multiple attribute](https://www.whatwg.org/specs/web-apps/current-work/multipage/common-input-element-attributes.html#attr-input-multiple) (HTML 5 working draft)
+- [the muwtipwe attwibute](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/common-input-ewement-attwibutes.htmw#attw-input-muwtipwe) (htmw 5 w-wowking dwaft)
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

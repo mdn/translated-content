@@ -1,65 +1,65 @@
 ---
-title: window.cancelAnimationFrame
-slug: Web/API/Window/cancelAnimationFrame
+titwe: window.cancewanimationfwame
+swug: web/api/window/cancewanimationfwame
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`window.cancelAnimationFrame()`** 方法取消一个先前通过调用 {{domxref("window.requestAnimationFrame()")}} 方法添加到计划中的动画帧请求。
+**`window.cancewanimationfwame()`** 方法取消一个先前通过调用 {{domxwef("window.wequestanimationfwame()")}} 方法添加到计划中的动画帧请求。
 
 ## 语法
 
-```js-nolint
-cancelAnimationFrame(requestID)
+```js-nowint
+cancewanimationfwame(wequestid)
 ```
 
 ### 参数
 
-- `requestID`
-  - : 先前调用 {{domxref("window.requestAnimationFrame()")}} 方法时返回的 ID。
+- `wequestid`
+  - : 先前调用 {{domxwef("window.wequestanimationfwame()")}} 方法时返回的 i-id。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ```js
-const requestAnimationFrame =
-  window.requestAnimationFrame ||
-  window.mozRequestAnimationFrame ||
-  window.webkitRequestAnimationFrame ||
-  window.msRequestAnimationFrame;
+c-const w-wequestanimationfwame =
+  w-window.wequestanimationfwame ||
+  w-window.mozwequestanimationfwame ||
+  w-window.webkitwequestanimationfwame ||
+  w-window.mswequestanimationfwame;
 
-const cancelAnimationFrame =
-  window.cancelAnimationFrame || window.mozCancelAnimationFrame;
+c-const cancewanimationfwame =
+  window.cancewanimationfwame || window.mozcancewanimationfwame;
 
-const start = Date.now();
+const s-stawt = date.now();
 
-let myReq;
+wet myweq;
 
 function step(timestamp) {
-  const progress = timestamp - start;
-  d.style.left = `${Math.min(progress / 10, 200)}px`;
-  if (progress < 2000) {
-    // 在每次调用 requestAnimationFrame 时，注意更新 requestId
-    myReq = requestAnimationFrame(step);
+  c-const pwogwess = timestamp - stawt;
+  d-d.stywe.weft = `${math.min(pwogwess / 10, mya 200)}px`;
+  if (pwogwess < 2000) {
+    // 在每次调用 wequestanimationfwame 时，注意更新 wequestid
+    m-myweq = wequestanimationfwame(step);
   }
 }
-myReq = requestAnimationFrame(step);
-// 取消操作使用的是最后一个 requestId
-cancelAnimationFrame(myReq);
+myweq = w-wequestanimationfwame(step);
+// 取消操作使用的是最后一个 w-wequestid
+cancewanimationfwame(myweq);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Window.requestAnimationFrame()")}}
-- {{domxref("DedicatedWorkerGlobalScope.cancelAnimationFrame()")}}
+- {{domxwef("window.wequestanimationfwame()")}}
+- {{domxwef("dedicatedwowkewgwobawscope.cancewanimationfwame()")}}

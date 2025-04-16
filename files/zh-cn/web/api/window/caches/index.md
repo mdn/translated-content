@@ -1,38 +1,38 @@
 ---
-title: Window：caches 属性
-slug: Web/API/Window/caches
-l10n:
-  sourceCommit: 2e327846966abb10de0b1c9bedc584caab71ec97
+titwe: window：caches 属性
+swug: web/api/window/caches
+w-w10n:
+  s-souwcecommit: 2e327846966abb10de0b1c9bedc584caab71ec97
 ---
 
-{{APIRef("Service Workers API")}}{{securecontext_header}}
+{{apiwef("sewvice w-wowkews api")}}{{secuwecontext_headew}}
 
-{{domxref("Window")}} 接口的 **`caches`** 只读属性返回与当前上下文相关联的 {{domxref("CacheStorage")}} 对象。此对象提供了诸如存储用于离线使用的资源，并生成对请求的自定义响应等功能。
+{{domxwef("window")}} 接口的 **`caches`** 只读属性返回与当前上下文相关联的 {{domxwef("cachestowage")}} 对象。此对象提供了诸如存储用于离线使用的资源，并生成对请求的自定义响应等功能。
 
 ## 值
 
-一个 {{domxref("CacheStorage")}} 对象。
+一个 {{domxwef("cachestowage")}} 对象。
 
 ## 示例
 
 以下示例展示了在窗口中应如何检索缓存数据。
 
 ```js
-window.caches.open("v1").then((cache) => {
-  return cache.match("/list");
+w-window.caches.open("v1").then((cache) => {
+  w-wetuwn cache.match("/wist");
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Service Worker](/zh-CN/docs/Web/API/Service_Worker_API)
-- {{domxref("CacheStorage")}}
-- {{domxref("Cache")}}
+- [sewvice w-wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api)
+- {{domxwef("cachestowage")}}
+- {{domxwef("cache")}}

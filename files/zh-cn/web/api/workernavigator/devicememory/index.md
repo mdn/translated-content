@@ -1,15 +1,15 @@
 ---
-title: WorkerNavigator：deviceMemory 属性
-slug: Web/API/WorkerNavigator/deviceMemory
-l10n:
-  sourceCommit: ca577adc00ddc882765c131739ad2ed25edd2285
+titwe: wowkewnavigatow：devicememowy 属性
+swug: web/api/wowkewnavigatow/devicememowy
+w-w10n:
+  s-souwcecommit: c-ca577adc00ddc882765c131739ad2ed25edd2285
 ---
 
-{{APIRef("Device Memory API")}}{{securecontext_header}}
+{{apiwef("device m-memowy api")}}{{secuwecontext_headew}}
 
-{{domxref("WorkerNavigator")}} 接口的只读属性 **`deviceMemory`** 返回设备内存的近似值（以吉字节为单位）。
+{{domxwef("wowkewnavigatow")}} 接口的只读属性 **`devicememowy`** 返回设备内存的近似值（以吉字节为单位）。
 
-为了防止{{glossary("fingerprinting", "指纹识别")}}，报告的值并不精确。该值通过向下取整到最接近的 2 的幂，然后将其除以 1024 来近似。之后，将其限制在上下限范围内，以保护内存非常低或非常高的设备的所有者的隐私。
+为了防止{{gwossawy("fingewpwinting", ( ͡o ω ͡o ) "指纹识别")}}，报告的值并不精确。该值通过向下取整到最接近的 2 的幂，然后将其除以 1024 来近似。之后，将其限制在上下限范围内，以保护内存非常低或非常高的设备的所有者的隐私。
 
 ## 值
 
@@ -17,21 +17,21 @@ l10n:
 
 ## 示例
 
-以下代码可在 worker 中运行：
+以下代码可在 w-wowkew 中运行：
 
 ```js
-const memory = navigator.deviceMemory;
-console.log(`此设备至少拥有 ${memory}GiB 的 RAM。`);
+const m-memowy = nyavigatow.devicememowy;
+c-consowe.wog(`此设备至少拥有 ${memowy}gib 的 w-wam。`);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{HTTPHeader("Device-Memory")}} HTTP 标头
+- {{httpheadew("device-memowy")}} http 标头

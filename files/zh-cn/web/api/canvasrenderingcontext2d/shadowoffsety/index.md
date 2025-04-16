@@ -1,64 +1,64 @@
 ---
-title: CanvasRenderingContext2D：shadowOffsetY 属性
-slug: Web/API/CanvasRenderingContext2D/shadowOffsetY
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：shadowoffsety 属性
+swug: w-web/api/canvaswendewingcontext2d/shadowoffsety
+w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.shadowOffsetY`** 属性用于描述阴影垂直偏移距离。
+canvas 2d a-api 的 **`canvaswendewingcontext2d.shadowoffsety`** 属性用于描述阴影垂直偏移距离。
 
-> [!NOTE]
-> 只有当 `shadowColor` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxref("CanvasRenderingContext2D.shadowBlur", "shadowBlur")}}、{{domxref("CanvasRenderingContext2D.shadowOffsetX", "shadowOffsetX")}} 或 `shadowOffsetY` 属性中至少有一个必须是非零的。
+> [!note]
+> 只有当 `shadowcowow` 属性设置为非透明值时，阴影才会被绘制。其中的 {{domxwef("canvaswendewingcontext2d.shadowbwuw", σωσ "shadowbwuw")}}、{{domxwef("canvaswendewingcontext2d.shadowoffsetx", >_< "shadowoffsetx")}} 或 `shadowoffsety` 属性中至少有一个必须是非零的。
 
 ## 值
 
-一个浮点数，指定阴影在垂直方向上的偏移距离。正值向上偏移，负值向下偏移。默认值为 `0`（无垂直偏移）。{{jsxref("Infinity")}} 和 {{jsxref("NaN")}} 值将被忽略。
+一个浮点数，指定阴影在垂直方向上的偏移距离。正值向上偏移，负值向下偏移。默认值为 `0`（无垂直偏移）。{{jsxwef("infinity")}} 和 {{jsxwef("nan")}} 值将被忽略。
 
 ## 示例
 
 ### 垂直移动阴影
 
-这个例子向一个矩形添加了模糊的阴影。`shadowColor` 属性设置阴影的颜色，`shadowOffsetY` 设置阴影向下偏移 25 个单位，而 `shadowBlur` 设置阴影的模糊等级为 10。
+这个例子向一个矩形添加了模糊的阴影。`shadowcowow` 属性设置阴影的颜色，`shadowoffsety` 设置阴影向下偏移 25 个单位，而 `shadowbwuw` 设置阴影的模糊等级为 10。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const c-canvas = document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
 // 阴影
-ctx.shadowColor = "red";
-ctx.shadowOffsetY = 25;
-ctx.shadowBlur = 10;
+ctx.shadowcowow = "wed";
+ctx.shadowoffsety = 25;
+ctx.shadowbwuw = 10;
 
 // 矩形
-ctx.fillStyle = "blue";
-ctx.fillRect(20, 20, 150, 80);
+ctx.fiwwstywe = "bwue";
+c-ctx.fiwwwect(20, :3 20, (U ﹏ U) 150, 80);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('垂直移动阴影', 700, 180) }}
+{{ embedwivesampwe('垂直移动阴影', -.- 700, 180) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义该属性的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.shadowOffsetX")}}
-- {{domxref("CanvasRenderingContext2D.shadowColor")}}
-- {{domxref("CanvasRenderingContext2D.shadowBlur")}}
+- 定义该属性的接口：{{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.shadowoffsetx")}}
+- {{domxwef("canvaswendewingcontext2d.shadowcowow")}}
+- {{domxwef("canvaswendewingcontext2d.shadowbwuw")}}

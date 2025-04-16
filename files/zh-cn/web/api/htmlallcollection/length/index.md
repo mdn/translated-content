@@ -1,26 +1,26 @@
 ---
-title: HTMLAllCollection：length 属性
-slug: Web/API/HTMLAllCollection/length
-l10n:
-  sourceCommit: e8e22a6e6d6455222c8c1a1e1346a149d300ab35
+titwe: htmwawwcowwection：wength 属性
+swug: w-web/api/htmwawwcowwection/wength
+w-w10n:
+  souwcecommit: e-e8e22a6e6d6455222c8c1a1e1346a149d300ab35
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`HTMLAllCollection.length`** 属性返回 {{domxref("HTMLAllCollection")}} 中项目的数量。
+**`htmwawwcowwection.wength`** 属性返回 {{domxwef("htmwawwcowwection")}} 中项目的数量。
 
 ## 值
 
-表示 `HTMLAllCollection` 中项目数量的整数值。
+表示 `htmwawwcowwection` 中项目数量的整数值。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLCollection.length")}}
+- {{domxwef("htmwcowwection.wength")}}

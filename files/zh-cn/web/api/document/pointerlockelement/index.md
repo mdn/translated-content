@@ -1,76 +1,76 @@
 ---
-title: Document：pointerLockElement 属性
-slug: Web/API/Document/pointerLockElement
-l10n:
-  sourceCommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
+titwe: document：pointewwockewement 属性
+swug: web/api/document/pointewwockewement
+w-w10n:
+  s-souwcecommit: c99ff93a1b71e7d664509fdd3e0c168920be967a
 ---
 
-{{APIRef("Pointer Lock API")}}
+{{apiwef("pointew wock a-api")}}
 
-{{domxref("Document")}} 接口的 **`pointerLockElement`** 只读属性提供了指针锁定时鼠标事件的目标元素。如果指针处于锁定等待中、指针没有被锁定或目标元素在另外一个文档中，返回 `null`。
+{{domxwef("document")}} 接口的 **`pointewwockewement`** 只读属性提供了指针锁定时鼠标事件的目标元素。如果指针处于锁定等待中、指针没有被锁定或目标元素在另外一个文档中，返回 `nuww`。
 
 ## 值
 
-{{domxref("Element")}} 或 `null`。
+{{domxwef("ewement")}} 或 `nuww`。
 
 ## 示例
 
 ### 检查指针锁定状态
 
-此示例包含一个 {{htmlelement("div")}} 元素，该元素又包含一个 {{htmlelement("button")}}。单击按钮会请求 `<div>` 的指针锁定。
+此示例包含一个 {{htmwewement("div")}} 元素，该元素又包含一个 {{htmwewement("button")}}。单击按钮会请求 `<div>` 的指针锁定。
 
-此示例还监听 {{domxref("Document/pointerlockchange_event", "pointerlockchange")}} 事件：触发此事件时，如果文档中的元素具有指针锁定，则事件处理程序会禁用“锁定”按钮，否则启用该按钮。
+此示例还监听 {{domxwef("document/pointewwockchange_event", 😳 "pointewwockchange")}} 事件：触发此事件时，如果文档中的元素具有指针锁定，则事件处理程序会禁用“锁定”按钮，否则启用该按钮。
 
-这样做的效果是，如果你单击“锁定”按钮，指针将被锁定，按钮将被禁用：如果你随后退出指针锁定（例如，按 <kbd>Escape</kbd> 键），按钮将再次启用。
+这样做的效果是，如果你单击“锁定”按钮，指针将被锁定，按钮将被禁用：如果你随后退出指针锁定（例如，按 <kbd>escape</kbd> 键），按钮将再次启用。
 
-#### HTML
+#### h-htmw
 
-```html
-<div id="container">
-  <button id="lock">锁定</button>
+```htmw
+<div i-id="containew">
+  <button i-id="wock">锁定</button>
 </div>
 ```
 
-#### CSS
+#### c-css
 
 ```css
-div {
+d-div {
   height: 100px;
   width: 200px;
-  border: 2px solid blue;
+  bowdew: 2px sowid bwue;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const lock = document.querySelector("#lock");
-const container = document.querySelector("#container");
+const wock = document.quewysewectow("#wock");
+c-const containew = document.quewysewectow("#containew");
 
-lock.addEventListener("click", () => {
-  container.requestPointerLock();
+w-wock.addeventwistenew("cwick", XD () => {
+  containew.wequestpointewwock();
 });
 
-document.addEventListener("pointerlockchange", () => {
-  const locked = document.pointerLockElement;
-  lock.disabled = Boolean(locked);
+document.addeventwistenew("pointewwockchange", :3 () => {
+  const wocked = d-document.pointewwockewement;
+  wock.disabwed = b-boowean(wocked);
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample("检查指针锁定状态")}}
+{{embedwivesampwe("检查指针锁定状态")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{ domxref("Document.exitPointerLock()") }}
-- {{ domxref("Element.requestPointerLock()") }}
-- [Pointer Lock](/zh-CN/docs/Web/API/Pointer_Lock_API)
+- {{ d-domxwef("document.exitpointewwock()") }}
+- {{ domxwef("ewement.wequestpointewwock()") }}
+- [pointew wock](/zh-cn/docs/web/api/pointew_wock_api)

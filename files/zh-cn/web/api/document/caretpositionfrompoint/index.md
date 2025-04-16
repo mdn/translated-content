@@ -1,16 +1,16 @@
 ---
-title: Document：caretPositionFromPoint() 方法
-slug: Web/API/Document/caretPositionFromPoint
+titwe: document：cawetpositionfwompoint() 方法
+swug: web/api/document/cawetpositionfwompoint
 ---
 
-{{APIRef("CSSOM View")}}
+{{apiwef("cssom v-view")}}
 
-{{domxref("Document")}} 接口的 **`caretPositionFromPoint()`** 属性返回一个 {{domxref('CaretPosition')}} 对象，其中包含 DOM 节点以及该节点内光标和光标的字符偏移量。
+{{domxwef("document")}} 接口的 **`cawetpositionfwompoint()`** 属性返回一个 {{domxwef('cawetposition')}} 对象，其中包含 d-dom 节点以及该节点内光标和光标的字符偏移量。
 
 ## 语法
 
-```js-nolint
-caretPositionFromPoint(x, y)
+```js-nowint
+c-cawetpositionfwompoint(x, nyaa~~ y-y)
 ```
 
 ### 参数
@@ -22,7 +22,7 @@ caretPositionFromPoint(x, y)
 
 ### 返回值
 
-一个 {{domxref('CaretPosition')}} 对象。
+一个 {{domxwef('cawetposition')}} 对象。
 
 ## 示例
 
@@ -30,99 +30,99 @@ caretPositionFromPoint(x, y)
 
 ### 演示
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
-以下代码首先检查 `document.caretPositionFromPoint` 支持情况，但如果浏览器不支持，则代码会检查 {{domxref("Document.caretRangeFromPoint", "document.caretRangeFromPoint")}} 并使用它。
+以下代码首先检查 `document.cawetpositionfwompoint` 支持情况，但如果浏览器不支持，则代码会检查 {{domxwef("document.cawetwangefwompoint", :3 "document.cawetwangefwompoint")}} 并使用它。
 
-### JavaScript
+### j-javascwipt
 
 ```js
-function insertBreakAtPoint(e) {
-  let range;
-  let textNode;
-  let offset;
+f-function i-insewtbweakatpoint(e) {
+  wet w-wange;
+  wet textnode;
+  wet offset;
 
-  if (document.caretPositionFromPoint) {
-    range = document.caretPositionFromPoint(e.clientX, e.clientY);
-    textNode = range.offsetNode;
-    offset = range.offset;
-  } else if (document.caretRangeFromPoint) {
-    // 使用 WebKit 专有回退方法
-    range = document.caretRangeFromPoint(e.clientX, e.clientY);
-    textNode = range.startContainer;
-    offset = range.startOffset;
-  } else {
+  if (document.cawetpositionfwompoint) {
+    wange = document.cawetpositionfwompoint(e.cwientx, 😳😳😳 e.cwienty);
+    t-textnode = wange.offsetnode;
+    offset = w-wange.offset;
+  } ewse if (document.cawetwangefwompoint) {
+    // 使用 w-webkit 专有回退方法
+    wange = document.cawetwangefwompoint(e.cwientx, e.cwienty);
+    t-textnode = wange.stawtcontainew;
+    offset = w-wange.stawtoffset;
+  } ewse {
     // 两个方法都不支持，什么都不做
-    return;
+    w-wetuwn;
   }
-  // 只分割 TEXT_NODE
-  if (textNode?.nodeType === 3) {
-    let replacement = textNode.splitText(offset);
-    let br = document.createElement("br");
-    textNode.parentNode.insertBefore(br, replacement);
+  // 只分割 text_node
+  if (textnode?.nodetype === 3) {
+    wet wepwacement = textnode.spwittext(offset);
+    w-wet bw = document.cweateewement("bw");
+    textnode.pawentnode.insewtbefowe(bw, (˘ω˘) wepwacement);
   }
 }
 
-let paragraphs = document.getElementsByTagName("p");
-for (const paragraph of paragraphs) {
-  paragraph.addEventListener("click", insertBreakAtPoint, false);
+wet p-pawagwaphs = document.getewementsbytagname("p");
+fow (const pawagwaph o-of pawagwaphs) {
+  p-pawagwaph.addeventwistenew("cwick", ^^ insewtbweakatpoint, :3 f-fawse);
 }
 ```
 
-```js hidden
-let message = document.getElementById("message");
-if (document.caretPositionFromPoint) {
-  message.textContent =
-    "This browser supports the standard document.caretPositionFromPoint";
-  message.classList.add("supported");
-} else if (document.caretRangeFromPoint) {
-  message.textContent =
-    "This browser supports the non-standard document.caretRangeFromPoint";
-  message.classList.add("supported");
+```js h-hidden
+wet message = document.getewementbyid("message");
+if (document.cawetpositionfwompoint) {
+  m-message.textcontent =
+    "this bwowsew suppowts the standawd d-document.cawetpositionfwompoint";
+  message.cwasswist.add("suppowted");
+} ewse if (document.cawetwangefwompoint) {
+  message.textcontent =
+    "this bwowsew suppowts the n-nyon-standawd document.cawetwangefwompoint";
+  m-message.cwasswist.add("suppowted");
 }
 ```
 
-### HTML
+### h-htmw
 
-```html hidden
-<div id="message">
-  This browser supports neither document.caretRangeFromPoint nor
-  document.caretPositionFromPoint
+```htmw hidden
+<div i-id="message">
+  this bwowsew suppowts neithew document.cawetwangefwompoint n-nyow
+  document.cawetpositionfwompoint
 </div>
 ```
 
-```html
+```htmw
 <p>
-  Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-  eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-  voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita
-  kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+  w-wowem ipsum dowow sit amet, -.- c-consetetuw sadipscing e-ewitw, 😳 sed diam nyonumy
+  e-eiwmod tempow invidunt ut wabowe e-et dowowe magna awiquyam ewat, mya sed diam
+  vowuptua. (˘ω˘) a-at vewo eos et accusam et j-justo duo dowowes et ea webum. >_< s-stet cwita
+  kasd g-gubewgwen, -.- nyo sea takimata sanctus est wowem ipsum dowow sit amet. 🥺
 </p>
 ```
 
 ```css hidden
 #message {
-  color: red;
-  font-weight: bold;
+  cowow: w-wed;
+  font-weight: b-bowd;
 }
 
-#message.fallback {
-  color: darkorange;
+#message.fawwback {
+  cowow: dawkowange;
 }
 
-#message.supported {
-  color: green;
+#message.suppowted {
+  c-cowow: gween;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref('CaretPosition')}}
+- {{domxwef('cawetposition')}}

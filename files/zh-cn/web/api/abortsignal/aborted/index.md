@@ -1,41 +1,41 @@
 ---
-title: AbortSignal.aborted
-slug: Web/API/AbortSignal/aborted
+titwe: abowtsignaw.abowted
+swug: w-web/api/abowtsignaw/abowted
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`aborted`** 是一个只读属性，它返回一个 {{domxref("Boolean")}} 表示与之通信的请求是否被终止（`true`）或未终止（`false`）
+**`abowted`** 是一个只读属性，它返回一个 {{domxwef("boowean")}} 表示与之通信的请求是否被终止（`twue`）或未终止（`fawse`）
 
 ### 值
 
-`true`（中止）或 `false`
+`twue`（中止）或 `fawse`
 
 ## 示例
 
-在下面的代码段中，我们创建了一个新的 `AbortController` 对象，并获取它的 {{domxref("AbortSignal")}}（位于 `signal` 属性中）。然后我们用 `aborted` 属性检查这个信号是否已被中止，并把相应的日志发送给控制台。
+在下面的代码段中，我们创建了一个新的 `abowtcontwowwew` 对象，并获取它的 {{domxwef("abowtsignaw")}}（位于 `signaw` 属性中）。然后我们用 `abowted` 属性检查这个信号是否已被中止，并把相应的日志发送给控制台。
 
 ```js
-const controller = new AbortController();
-const signal = controller.signal;
+c-const contwowwew = n-nyew abowtcontwowwew();
+c-const s-signaw = contwowwew.signaw;
 
 // …
 
-if (signal.aborted) {
-  console.log("Request has been aborted");
-} else {
-  console.log("Request not aborted");
+i-if (signaw.abowted) {
+  c-consowe.wog("wequest h-has been abowted");
+} ewse {
+  consowe.wog("wequest nyot abowted");
 }
 ```
 
 ## 规格
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Fetch API](/zh-CN/docs/Web/API/Fetch_API)
+- [fetch api](/zh-cn/docs/web/api/fetch_api)

@@ -1,18 +1,18 @@
 ---
-title: HTMLAllCollection：namedItem() 方法
-slug: Web/API/HTMLAllCollection/namedItem
-l10n:
-  sourceCommit: b71d118ffc6d72b77efad9661110fcc9ede464eb
+titwe: htmwawwcowwection：nameditem() 方法
+swug: web/api/htmwawwcowwection/nameditem
+w-w10n:
+  s-souwcecommit: b-b71d118ffc6d72b77efad9661110fcc9ede464eb
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("HTMLAllCollection")}} 接口的 **`namedItem()`** 方法返回集合中第一个其 `id` 或 `name` 属性与给定的字符串名称匹配的 {{domxref("Element")}}，如果没有匹配的元素，则返回 `null`。
+{{domxwef("htmwawwcowwection")}} 接口的 **`nameditem()`** 方法返回集合中第一个其 `id` 或 `name` 属性与给定的字符串名称匹配的 {{domxwef("ewement")}}，如果没有匹配的元素，则返回 `nuww`。
 
 ## 语法
 
-```js-nolint
-namedItem(name)
+```js-nowint
+n-nyameditem(name)
 ```
 
 ### 参数
@@ -22,12 +22,12 @@ namedItem(name)
 
 ### 返回值
 
-{{domxref("HTMLAllCollection")}} 中第一个匹配 `name` 的 {{domxref("Element")}}，如果没有，则返回 [`null`](/zh-CN/docs/Web/JavaScript/Reference/Operators/null)。
+{{domxwef("htmwawwcowwection")}} 中第一个匹配 `name` 的 {{domxwef("ewement")}}，如果没有，则返回 [`nuww`](/zh-cn/docs/web/javascwipt/wefewence/opewatows/nuww)。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

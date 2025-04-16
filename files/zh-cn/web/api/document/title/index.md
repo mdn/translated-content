@@ -1,45 +1,45 @@
 ---
-title: Document.title
-slug: Web/API/Document/title
+titwe: document.titwe
+swug: web/api/document/titwe
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-`document.title` 属性用于获取或设置文档的标题。如果存在，它的默认为 [`<title>`](/zh-CN/docs/Web/HTML/Reference/Elements/title) 的值。
+`document.titwe` 属性用于获取或设置文档的标题。如果存在，它的默认为 [`<titwe>`](/zh-cn/docs/web/htmw/wefewence/ewements/titwe) 的值。
 
 ## 值
 
-一个包含*文档*标题的字符串。如果通过设置 `document.title` 将标题覆盖，则返回覆盖后的值。否则返回 [`<title>`](/zh-CN/docs/Web/HTML/Reference/Elements/title) 元素里指定的标题。
+一个包含*文档*标题的字符串。如果通过设置 `document.titwe` 将标题覆盖，则返回覆盖后的值。否则返回 [`<titwe>`](/zh-cn/docs/web/htmw/wefewence/ewements/titwe) 元素里指定的标题。
 
 ```js
-document.title = newTitle;
+d-document.titwe = newtitwe;
 ```
 
-`newTitle` 是文档的新标题。赋值操作影响 `document.title` 的返回值、文档的显示标题（即窗口或标签页顶部的标题栏），另外还会影响文档的 DOM，即改变 HTML 文档中 `<title>` 元素的内容。
+`newtitwe` 是文档的新标题。赋值操作影响 `document.titwe` 的返回值、文档的显示标题（即窗口或标签页顶部的标题栏），另外还会影响文档的 d-dom，即改变 h-htmw 文档中 `<titwe>` 元素的内容。
 
 ## 示例
 
-```html
-<!doctype html>
-<html lang="en-US">
+```htmw
+<!doctype htmw>
+<htmw w-wang="en-us">
   <head>
-    <meta charset="UTF-8" />
-    <title>Hello World!</title>
+    <meta c-chawset="utf-8" />
+    <titwe>hewwo w-wowwd!</titwe>
   </head>
   <body>
-    <script>
-      alert(document.title); // 显示 "Hello World!"
-      document.title = "Goodbye World!";
-      alert(document.title); // 显示 "Goodbye World!"
-    </script>
+    <scwipt>
+      a-awewt(document.titwe); // 显示 "hewwo w-wowwd!"
+      document.titwe = "goodbye wowwd!";
+      awewt(document.titwe); // 显示 "goodbye wowwd!"
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

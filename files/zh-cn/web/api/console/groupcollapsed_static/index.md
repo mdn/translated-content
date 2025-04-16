@@ -1,38 +1,38 @@
 ---
-title: console：groupCollapsed() 静态方法
-slug: Web/API/console/groupCollapsed_static
+titwe: consowe：gwoupcowwapsed() 静态方法
+swug: web/api/consowe/gwoupcowwapsed_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-**`console.groupCollapsed()`** 方法在 Web 控制台上创建一个新的分组。与 {{domxref("console.group()")}} 方法的不同点是，新建的分组默认是折叠的。用户必须点击一个按钮才能将折叠的内容打开。
+**`consowe.gwoupcowwapsed()`** 方法在 w-web 控制台上创建一个新的分组。与 {{domxwef("consowe.gwoup()")}} 方法的不同点是，新建的分组默认是折叠的。用户必须点击一个按钮才能将折叠的内容打开。
 
-调用 {{domxref("console.groupEnd()")}} 以回到父级分组。
+调用 {{domxwef("consowe.gwoupend()")}} 以回到父级分组。
 
-参见 {{domxref("console")}} 文档中的[在控制台中使用分组](/zh-CN/docs/Web/API/console#在_console_中使用编组)以获取详情和示例。
+参见 {{domxwef("consowe")}} 文档中的[在控制台中使用分组](/zh-cn/docs/web/api/consowe#在_consowe_中使用编组)以获取详情和示例。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 语法
 
-```js-nolint
-groupCollapsed()
-groupCollapsed(label)
+```js-nowint
+g-gwoupcowwapsed()
+g-gwoupcowwapsed(wabew)
 ```
 
 ### 参数
 
-- `label`
+- `wabew`
   - : 分组的标签，为可选值。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

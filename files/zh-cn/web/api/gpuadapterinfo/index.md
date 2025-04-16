@@ -1,43 +1,43 @@
 ---
-title: GPUAdapterInfo
-slug: Web/API/GPUAdapterInfo
+titwe: gpuadaptewinfo
+swug: web/api/gpuadaptewinfo
 ---
 
-{{APIRef("WebGPU API")}}{{SeeCompatTable}}
+{{apiwef("webgpu a-api")}}{{seecompattabwe}}
 
-{{domxref("WebGPU API", "WebGPU API", "", 1)}} 的 **`GPUAdapterInfo`** 接口包含关于 {{domxref("GPUAdapter")}} 的标识信息。
+{{domxwef("webgpu a-api", (⑅˘꒳˘) "webgpu a-api", (U ᵕ U❁) "", 1)}} 的 **`gpuadaptewinfo`** 接口包含关于 {{domxwef("gpuadaptew")}} 的标识信息。
 
-使用 {{domxref("GPUAdapter.requestAdapterInfo()")}} 方法去请求 `GPUAdapterInfo` 对象。
+使用 {{domxwef("gpuadaptew.wequestadaptewinfo()")}} 方法去请求 `gpuadaptewinfo` 对象。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-- {{domxref("GPUAdapterInfo.architecture", "architecture")}} {{Experimental_Inline}} {{ReadOnlyInline}}
-  - : 适配器所属的 GPU 家族或类别的名称。如果不能获得，则返回空字符串。
-- {{domxref("GPUAdapterInfo.description", "description")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxwef("gpuadaptewinfo.awchitectuwe", -.- "awchitectuwe")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
+  - : 适配器所属的 g-gpu 家族或类别的名称。如果不能获得，则返回空字符串。
+- {{domxwef("gpuadaptewinfo.descwiption", ^^;; "descwiption")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
   - : 描述适配器的人类可读字符串。如果不能获得，则返回空字符串。
-- {{domxref("GPUAdapterInfo.device", "device")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxwef("gpuadaptewinfo.device", >_< "device")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
   - : 适配器供应商的标识符。如果不能获得，则返回空字符串。
-- {{domxref("GPUAdapterInfo.vendor", "vendor")}} {{Experimental_Inline}} {{ReadOnlyInline}}
+- {{domxwef("gpuadaptewinfo.vendow", mya "vendow")}} {{expewimentaw_inwine}} {{weadonwyinwine}}
   - : 适配器供应商的名称。如果不能获得，则返回空字符串。
 
 ## 示例
 
 ```js
-async function init() {
-  if (!navigator.gpu) {
-    throw Error("WebGPU not supported.");
+a-async f-function init() {
+  i-if (!navigatow.gpu) {
+    t-thwow ewwow("webgpu nyot suppowted.");
   }
 
-  const adapter = await navigator.gpu.requestAdapter();
-  if (!adapter) {
-    throw Error("Couldn't request WebGPU adapter.");
+  const adaptew = await nyavigatow.gpu.wequestadaptew();
+  if (!adaptew) {
+    t-thwow ewwow("couwdn't wequest webgpu a-adaptew.");
   }
 
-  const adapterInfo = await adapter.requestAdapterInfo();
-  console.log(adapterInfo.architecture);
-  console.log(adapterInfo.vendor);
+  const adaptewinfo = a-await adaptew.wequestadaptewinfo();
+  consowe.wog(adaptewinfo.awchitectuwe);
+  consowe.wog(adaptewinfo.vendow);
 
   // ...
 }
@@ -45,12 +45,12 @@ async function init() {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebGPU API](/zh-CN/docs/Web/API/WebGPU_API)
+- [webgpu api](/zh-cn/docs/web/api/webgpu_api)

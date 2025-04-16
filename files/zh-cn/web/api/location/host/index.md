@@ -1,39 +1,39 @@
 ---
-title: "Location: host"
-slug: Web/API/Location/host
+titwe: "wocation: host"
+swug: w-web/api/wocation/host
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-{{domxref("Location")}} 接口的 **`host`** 属性是包含了主机的一段 {{domxref("USVString")}}，其中包含：主机名，如果 URL 的端口号是非空的，还会跟上一个 `':'` ，最后是 URL 的端口号。
+{{domxwef("wocation")}} 接口的 **`host`** 属性是包含了主机的一段 {{domxwef("usvstwing")}}，其中包含：主机名，如果 u-uww 的端口号是非空的，还会跟上一个 `':'` ，最后是 u-uww 的端口号。
 
-## Syntax
+## s-syntax
 
-```plain
-string = object.host;
-object.host = string;
+```pwain
+s-stwing = o-object.host;
+o-object.host = s-stwing;
 ```
 
-## Examples
+## exampwes
 
 ```js
-var anchor = document.createElement("a");
+vaw anchow = document.cweateewement("a");
 
-anchor.href = "https://developer.mozilla.org/en-US/Location.host";
-anchor.host == "developer.mozilla.org";
+anchow.hwef = "https://devewopew.moziwwa.owg/en-us/wocation.host";
+anchow.host == "devewopew.moziwwa.owg";
 
-anchor.href = "https://developer.mozilla.org:443/en-US/Location.host";
-anchor.host == "developer.mozilla.org";
-// 这里 host 中没有包含端口号，因为 443 是 https 协议的默认端口号
+a-anchow.hwef = "https://devewopew.moziwwa.owg:443/en-us/wocation.host";
+anchow.host == "devewopew.moziwwa.owg";
+// 这里 host 中没有包含端口号，因为 443 是 h-https 协议的默认端口号
 
-anchor.href = "https://developer.mozilla.org:4097/en-US/Location.host";
-anchor.host == "developer.mozilla.org:4097";
+anchow.hwef = "https://devewopew.moziwwa.owg:4097/en-us/wocation.host";
+a-anchow.host == "devewopew.moziwwa.owg:4097";
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

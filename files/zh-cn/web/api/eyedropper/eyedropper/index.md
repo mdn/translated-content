@@ -1,17 +1,17 @@
 ---
-title: EyeDropper：EyeDropper() 构造函数
-short-title: EyeDropper()
-slug: Web/API/EyeDropper/EyeDropper
+titwe: eyedwoppew：eyedwoppew() 构造函数
+showt-titwe: eyedwoppew()
+s-swug: w-web/api/eyedwoppew/eyedwoppew
 ---
 
-{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{apiwef("eyedwoppew a-api")}}{{seecompattabwe}}
 
-**`EyeDropper()`** 构造函数返回一个新的 {{DOMxRef("EyeDropper")}} 对象。
+**`eyedwoppew()`** 构造函数返回一个新的 {{domxwef("eyedwoppew")}} 对象。
 
 ## 语法
 
-```js-nolint
-new EyeDropper()
+```js-nowint
+n-nyew eyedwoppew()
 ```
 
 ### 参数
@@ -20,12 +20,12 @@ new EyeDropper()
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 它属于 {{DOMxRef("EyeDropper")}} 接口。
+- 它属于 {{domxwef("eyedwoppew")}} 接口。

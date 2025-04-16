@@ -1,28 +1,28 @@
 ---
-title: WebSocket.extensions
-slug: Web/API/WebSocket/extensions
+titwe: websocket.extensions
+swug: web/api/websocket/extensions
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web s-sockets api")}}
 
-**`WebSocket.extensions`**是只读属性，返回服务器已选择的扩展值。目前，链接可以协定的扩展值只有空字符串或者一个扩展列表。
+**`websocket.extensions`**是只读属性，返回服务器已选择的扩展值。目前，链接可以协定的扩展值只有空字符串或者一个扩展列表。
 
-The **`WebSocket.extensions`** read-only property returns the extensions selected by the server. This is currently only the empty string or a list of extensions as negotiated by the connection.
+the **`websocket.extensions`** w-wead-onwy p-pwopewty w-wetuwns the extensions s-sewected b-by the sewvew. >_< t-this is cuwwentwy o-onwy the empty stwing ow a wist of extensions as nyegotiated by the connection. :3
 
 ## 语法
 
-```plain
-var extensions = aWebSocket.extensions;
+```pwain
+v-vaw extensions = awebsocket.extensions;
 ```
 
 ## 返回值
 
-A {{domxref("DOMString")}}.
+a {{domxwef("domstwing")}}.
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

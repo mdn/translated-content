@@ -1,33 +1,33 @@
 ---
-title: console：timeStamp() 静态方法
-slug: Web/API/console/timeStamp_static
+titwe: consowe：timestamp() 静态方法
+swug: w-web/api/consowe/timestamp_static
 ---
 
-{{APIRef("Console API")}}{{Non-standard_header}}
+{{apiwef("consowe a-api")}}{{non-standawd_headew}}
 
-向浏览器的 [Performance](https://developer.chrome.google.cn/docs/devtools/performance/reference) 或者 [Waterfall](https://profiler.firefox.com/docs/) 工具添加一个标记。这样可以让你将代码中的一个点和其他在时间轴上已记录的事件相关联，例如布局事件和绘制事件等。
+向浏览器的 [pewfowmance](https://devewopew.chwome.googwe.cn/docs/devtoows/pewfowmance/wefewence) 或者 [watewfaww](https://pwofiwew.fiwefox.com/docs/) 工具添加一个标记。这样可以让你将代码中的一个点和其他在时间轴上已记录的事件相关联，例如布局事件和绘制事件等。
 
 你可以选择用一个参数来作为时间戳标签，然后标记旁边就会显示这个标签。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 语法
 
-```js-nolint
-timeStamp(label)
+```js-nowint
+t-timestamp(wabew)
 ```
 
 ## 参数
 
-- `label`
-  - : Label for the timestamp. Optional.
+- `wabew`
+  - : w-wabew fow the t-timestamp. (U ᵕ U❁) optionaw. (⑅˘꒳˘)
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("console.time()")}}
-- {{domxref("console.timeEnd()")}}
-- [Adding timestamps to the Waterfall](https://profiler.firefox.com/docs/#timestamp_markers)
+- {{domxwef("consowe.time()")}}
+- {{domxwef("consowe.timeend()")}}
+- [adding t-timestamps to t-the watewfaww](https://pwofiwew.fiwefox.com/docs/#timestamp_mawkews)

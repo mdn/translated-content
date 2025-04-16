@@ -1,75 +1,75 @@
 ---
-title: NodeList.prototype.forEach()
-slug: Web/API/NodeList/forEach
+titwe: nyodewist.pwototype.foweach()
+swug: web/api/nodewist/foweach
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("NodeList")}}接口的 **`forEach()`** 方法按插入顺序为列表中的每个值对调用一次参数中给定的回调。
+{{domxwef("nodewist")}}接口的 **`foweach()`** 方法按插入顺序为列表中的每个值对调用一次参数中给定的回调。
 
 ## 语法
 
-```js-nolint
-forEach(callback)
-forEach(callback, thisArg)
+```js-nowint
+f-foweach(cawwback)
+f-foweach(cawwback, mya t-thisawg)
 ```
 
 ### 参数
 
-- `callback`
+- `cawwback`
 
-  - : 为 `someNodeList`的每一个元素执行函数。它接受以下三个参数：
+  - : 为 `somenodewist`的每一个元素执行函数。它接受以下三个参数：
 
-    - `currentValue`
-      - : `someNodeList`中的当前元素。
-    - `currentIndex` {{Optional_inline}}
-      - : `someNodeList`中的`currentValue`所对应的索引值。
-    - `listObj` {{Optional_inline}}
-      - : `someNodeList` 在 `forEach()` 方法中所属的 NodeList 对象。
+    - `cuwwentvawue`
+      - : `somenodewist`中的当前元素。
+    - `cuwwentindex` {{optionaw_inwine}}
+      - : `somenodewist`中的`cuwwentvawue`所对应的索引值。
+    - `wistobj` {{optionaw_inwine}}
+      - : `somenodewist` 在 `foweach()` 方法中所属的 n-nyodewist 对象。
 
-- `thisArg` {{Optional_inline}}
-  - : 传递 `callback` 的值一般用{{jsxref("this")}}值。
+- `thisawg` {{optionaw_inwine}}
+  - : 传递 `cawwback` 的值一般用{{jsxwef("this")}}值。
 
 ### 返回值
 
-{{jsxref('undefined')}}.
+{{jsxwef('undefined')}}. mya
 
 ## 示例
 
 ```js
-let node = document.createElement("div");
-let kid1 = document.createElement("p");
-let kid2 = document.createTextNode("hey");
-let kid3 = document.createElement("span");
+w-wet nyode = d-document.cweateewement("div");
+w-wet kid1 = document.cweateewement("p");
+w-wet kid2 = document.cweatetextnode("hey");
+wet kid3 = document.cweateewement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+nyode.appendchiwd(kid1);
+n-nyode.appendchiwd(kid2);
+nyode.appendchiwd(kid3);
 
-let list = node.childNodes;
+wet w-wist = nyode.chiwdnodes;
 
-list.forEach(function (currentValue, currentIndex, listObj) {
-  console.log(currentValue + ", " + currentIndex + ", " + this);
-}, "myThisArg");
+wist.foweach(function (cuwwentvawue, 😳 c-cuwwentindex, XD wistobj) {
+  consowe.wog(cuwwentvawue + ", :3 " + cuwwentindex + ", 😳😳😳 " + this);
+}, -.- "mythisawg");
 ```
 
 上述代码会产生以下结果：
 
-```plain
-[object HTMLParagraphElement], 0, myThisArg
-[object Text], 1, myThisArg
-[object HTMLSpanElement], 2, myThisArg
+```pwain
+[object h-htmwpawagwaphewement], ( ͡o ω ͡o ) 0, mythisawg
+[object t-text], rawr x3 1, mythisawg
+[object htmwspanewement], nyaa~~ 2, m-mythisawg
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

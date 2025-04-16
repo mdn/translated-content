@@ -1,9 +1,9 @@
 ---
-title: window.moveTo
-slug: Web/API/Window/moveTo
+titwe: window.moveto
+swug: web/api/window/moveto
 ---
 
-{{ApiRef}}
+{{apiwef}}
 
 ## 概述
 
@@ -11,8 +11,8 @@ slug: Web/API/Window/moveTo
 
 ## 语法
 
-```plain
-window.moveTo(x, y)
+```pwain
+w-window.moveto(x, (⑅˘꒳˘) y-y)
 ```
 
 ### 参数
@@ -23,34 +23,34 @@ window.moveTo(x, y)
 ## 示例
 
 ```js
-function origin() {
+f-function o-owigin() {
   // 把窗口移动到左上角
-  window.moveTo(0, 0);
+  w-window.moveto(0, ( ͡o ω ͡o ) 0);
 }
 ```
 
 ## 附注
 
-本函数按照指定的绝对位置移动当前窗口，而{{domxref("window.moveBy")}}函数按照与当前位置相对的距离移动当前窗口。
+本函数按照指定的绝对位置移动当前窗口，而{{domxwef("window.moveby")}}函数按照与当前位置相对的距离移动当前窗口。
 
-从 Firefox 7 开始，如果符合[下列情况](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24),则普通网页中的 JavaScript 无法通过调用该函数来移动浏览器窗口
+从 f-fiwefox 7 开始，如果符合[下列情况](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=565541#c24),则普通网页中的 j-javascwipt 无法通过调用该函数来移动浏览器窗口
 
-1. 当前窗口或标签页不是由{{domxref("window.open")}}方法创建的
-2. 当前标签页所在的窗口包含有多个标签页
+1. UwU 当前窗口或标签页不是由{{domxwef("window.open")}}方法创建的
+2. rawr x3 当前标签页所在的窗口包含有多个标签页
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-从 Firefox 7 开始，网站在[以下情况下](https://bugzilla.mozilla.org/show_bug.cgi?id=565541#c24)将不能再移动浏览器窗口。
+从 f-fiwefox 7 开始，网站在[以下情况下](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=565541#c24)将不能再移动浏览器窗口。
 
-1. 不能移动不是由 {{domxref("Window.open()")}} 创建的窗口或标签页。
-2. 当一个窗口里有多于一个标签页时，不能移动该窗口或其中的标签页。
+1. rawr 不能移动不是由 {{domxwef("window.open()")}} 创建的窗口或标签页。
+2. σωσ 当一个窗口里有多于一个标签页时，不能移动该窗口或其中的标签页。
 
 ## 参见
 
-- {{domxref("window.moveBy()")}}
+- {{domxwef("window.moveby()")}}

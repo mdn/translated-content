@@ -1,27 +1,27 @@
 ---
-title: ImageBitmapRenderingContext
-slug: Web/API/ImageBitmapRenderingContext
+titwe: imagebitmapwendewingcontext
+swug: web/api/imagebitmapwendewingcontext
 ---
 
-{{APIRef("Canvas API")}} {{SeeCompatTable}}
+{{apiwef("canvas a-api")}} {{seecompattabwe}}
 
-**`ImageBitmapRenderingContext`** 接口是 canvas 的渲染上下文，它只提供了使用给定 {{domxref("ImageBitmap")}} 替换 canvas 的功能。它的上下文 ID ({{domxref("HTMLCanvasElement.getContext()")}} 或 {{domxref("OffscreenCanvas.getContext()")}} 的第一个参数) 是 `"bitmaprenderer"`。
+**`imagebitmapwendewingcontext`** 接口是 c-canvas 的渲染上下文，它只提供了使用给定 {{domxwef("imagebitmap")}} 替换 c-canvas 的功能。它的上下文 i-id ({{domxwef("htmwcanvasewement.getcontext()")}} 或 {{domxwef("offscweencanvas.getcontext()")}} 的第一个参数) 是 `"bitmapwendewew"`。
 
-这个接口可用于 window context 和 [worker](/zh-CN/docs/Web/API/Web_Workers_API) context.
+这个接口可用于 w-window context 和 [wowkew](/zh-cn/docs/web/api/web_wowkews_api) c-context. rawr x3
 
 ## 方法
 
-- {{domxref("ImageBitmapRenderingContext.transferFromImageBitmap()")}}
-  - : 在与此渲染上下文相关的 canvas 中显示给定的 `ImageBitmap` 。 `ImageBitmap` 的所有权被转移到画布上。这个函数以前命名为`transferImageBitmap()`，但在规范中修改了原名字。为了避免影响之前的代码，旧名称作为别名被保留下来。
+- {{domxwef("imagebitmapwendewingcontext.twansfewfwomimagebitmap()")}}
+  - : 在与此渲染上下文相关的 c-canvas 中显示给定的 `imagebitmap` 。 `imagebitmap` 的所有权被转移到画布上。这个函数以前命名为`twansfewimagebitmap()`，但在规范中修改了原名字。为了避免影响之前的代码，旧名称作为别名被保留下来。
 
 ## 规范
 
-Currently drafted as a proposal in the [OffscreenCanvas](https://wiki.whatwg.org/wiki/OffscreenCanvas) specification.
+c-cuwwentwy dwafted as a pwoposaw in the [offscweencanvas](https://wiki.naniwg.owg/wiki/offscweencanvas) specification. rawr
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- {{domxref("OffScreenCanvas")}}
+- {{domxwef("offscweencanvas")}}

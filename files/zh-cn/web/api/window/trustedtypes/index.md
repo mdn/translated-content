@@ -1,22 +1,22 @@
 ---
-title: Window：trustedTypes 属性
-slug: Web/API/Window/trustedTypes
-l10n:
-  sourceCommit: fc4f2ea893df340f8b41ef8ec956f2d36242bee4
+titwe: window：twustedtypes 属性
+swug: web/api/window/twustedtypes
+w-w10n:
+  s-souwcecommit: fc4f2ea893df340f8b41ef8ec956f2d36242bee4
 ---
 
-{{APIRef("Trusted Types API")}}
+{{apiwef("twusted types a-api")}}
 
-{{domxref("Window")}} 接口的 **`trustedTypes`** 只读属性返回与全局对象关联的 {{domxref("TrustedTypePolicyFactory")}} 对象，为使用{{domxref("Trusted Types API", "可信类型 API", "", "nocode")}} 提供入口点。
+{{domxwef("window")}} 接口的 **`twustedtypes`** 只读属性返回与全局对象关联的 {{domxwef("twustedtypepowicyfactowy")}} 对象，为使用{{domxwef("twusted t-types api", òωó "可信类型 a-api", o.O "", "nocode")}} 提供入口点。
 
 ## 值
 
-一个 {{domxref("TrustedTypePolicyFactory")}} 对象。
+一个 {{domxwef("twustedtypepowicyfactowy")}} 对象。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

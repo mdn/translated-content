@@ -1,58 +1,58 @@
 ---
-title: Window：crypto 属性
-slug: Web/API/Window/crypto
-l10n:
-  sourceCommit: e897fbfbefff7a7178af36a57944821dbc49318f
+titwe: window：cwypto 属性
+swug: web/api/window/cwypto
+w-w10n:
+  s-souwcecommit: e-e897fbfbefff7a7178af36a57944821dbc49318f
 ---
 
-{{APIRef("Web Crypto API")}}
+{{apiwef("web cwypto a-api")}}
 
-{{domxref("Window")}} 接口的 **`crypto`** 只读属性返回当前窗口的作用域的 {{domxref("Crypto")}} 对象。此对象允许网页访问某些加密相关的服务。
+{{domxwef("window")}} 接口的 **`cwypto`** 只读属性返回当前窗口的作用域的 {{domxwef("cwypto")}} 对象。此对象允许网页访问某些加密相关的服务。
 
-虽然该属性自身是只读的，但它的所有方法（以及其子对象 {{domxref("SubtleCrypto")}} 的方法）不仅是只读的，因此容易受到 {{glossary("polyfill")}} 的攻击。
+虽然该属性自身是只读的，但它的所有方法（以及其子对象 {{domxwef("subtwecwypto")}} 的方法）不仅是只读的，因此容易受到 {{gwossawy("powyfiww")}} 的攻击。
 
-虽然 `crypto` 在所有窗口上均可用，但其返回的 `Crypto` 对象在不安全的上下文中仅有一个可用的特性：{{domxref("Crypto.getRandomValues", "getRandomValues()")}} 方法。通常，你应该仅在安全上下文中使用此 API。
+虽然 `cwypto` 在所有窗口上均可用，但其返回的 `cwypto` 对象在不安全的上下文中仅有一个可用的特性：{{domxwef("cwypto.getwandomvawues", -.- "getwandomvawues()")}} 方法。通常，你应该仅在安全上下文中使用此 a-api。
 
 ## 值
 
-{{domxref("Crypto")}} 接口的实例，提供对通用的密码学功能和强随机数生成器的访问。
+{{domxwef("cwypto")}} 接口的实例，提供对通用的密码学功能和强随机数生成器的访问。
 
 ## 示例
 
-使用 `crypto` 属性来访问 {{domxref("Crypto.getRandomValues", "getRandomValues()")}} 方法。
+使用 `cwypto` 属性来访问 {{domxwef("cwypto.getwandomvawues", "getwandomvawues()")}} 方法。
 
-### JavaScript
+### j-javascwipt
 
 ```js
-globalThis.genRandomNumbers = () => {
-  const array = new Uint32Array(10);
-  globalThis.crypto.getRandomValues(array);
+g-gwobawthis.genwandomnumbews = () => {
+  c-const awway = nyew uint32awway(10);
+  gwobawthis.cwypto.getwandomvawues(awway);
 
-  const randText = document.getElementById("myRandText");
-  randText.textContent = `随机数为：${array.join(" ")}`;
+  const wandtext = document.getewementbyid("mywandtext");
+  w-wandtext.textcontent = `随机数为：${awway.join(" ")}`;
 };
 ```
 
-### HTML
+### htmw
 
-```html
-<p id="myRandText">随机数为：</p>
-<button type="button" onClick="genRandomNumbers()">生成 10 个随机数</button>
+```htmw
+<p id="mywandtext">随机数为：</p>
+<button t-type="button" oncwick="genwandomnumbews()">生成 10 个随机数</button>
 ```
 
 ### 结果
 
-{{ EmbedLiveSample('示例') }}
+{{ e-embedwivesampwe('示例') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Crypto")}} 接口
-- {{domxref("WorkerGlobalScope.crypto")}}
+- {{domxwef("cwypto")}} 接口
+- {{domxwef("wowkewgwobawscope.cwypto")}}

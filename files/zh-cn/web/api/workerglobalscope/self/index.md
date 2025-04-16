@@ -1,67 +1,67 @@
 ---
-title: WorkerGlobalScope.self
-slug: Web/API/WorkerGlobalScope/self
+titwe: wowkewgwobawscope.sewf
+swug: web/api/wowkewgwobawscope/sewf
 ---
 
-{{APIRef("Web Workers API")}}
+{{apiwef("web w-wowkews a-api")}}
 
-**`self`** 是 {{domxref("WorkerGlobalScope")}} 的只读属性，它指向 `WorkerGlobalScope` 自身。通常情况下，它是如 {{domxref("DedicatedWorkerGlobalScope")}}, {{domxref("SharedWorkerGlobalScope")}}, 或 {{domxref("ServiceWorkerGlobalScope")}} 类型的 scope。
+**`sewf`** 是 {{domxwef("wowkewgwobawscope")}} 的只读属性，它指向 `wowkewgwobawscope` 自身。通常情况下，它是如 {{domxwef("dedicatedwowkewgwobawscope")}}, σωσ {{domxwef("shawedwowkewgwobawscope")}}, OwO 或 {{domxwef("sewvicewowkewgwobawscope")}} 类型的 s-scope。
 
 ## 语法
 
 ```js
-var selfRef = self;
+v-vaw sewfwef = s-sewf;
 ```
 
 ### 值
 
-当前 worker 的全局 scope（值取决于你创建的 worker 类型）。
+当前 w-wowkew 的全局 s-scope（值取决于你创建的 w-wowkew 类型）。
 
 ## 示例
 
-在 worker 中运行这行代码：
+在 wowkew 中运行这行代码：
 
 ```js
-console.log(self);
+consowe.wog(sewf);
 ```
 
-console 中会输出当前 worker 的全局 scope，如下所示：
+consowe 中会输出当前 wowkew 的全局 s-scope，如下所示：
 
 ```js
-DedicatedWorkerGlobalScope {
-undefined: undefined, Infinity: Infinity, Math: MathConstructor, NaN: NaN, Intl: Object…}
-    Infinity: Infinity
-    Array: function Array() { [native code] }
-      arguments: null
-      caller: null
-      isArray: function isArray() { [native code] }
-      length: 1
-      name: "Array"
-      observe: function observe() { [native code] }
-      prototype: Array[0]
-      unobserve: function unobserve() { [native code] }
-      __proto__: function Empty() {}
+dedicatedwowkewgwobawscope {
+undefined: u-undefined, 😳😳😳 infinity: infinity, 😳😳😳 m-math: mathconstwuctow, nyan: nan, o.O intw: object…}
+    infinity: i-infinity
+    awway: function a-awway() { [native c-code] }
+      awguments: nyuww
+      cawwew: nyuww
+      isawway: function isawway() { [native c-code] }
+      wength: 1
+      nyame: "awway"
+      obsewve: function obsewve() { [native c-code] }
+      pwototype: a-awway[0]
+      u-unobsewve: function u-unobsewve() { [native c-code] }
+      __pwoto__: function empty() {}
       <function scope>
-    ArrayBuffer: function ArrayBuffer() { [native code] }
-    Blob: function Blob() { [native code] }
-    Boolean: function Boolean() { [native code] }
-    DataView: function DataView() { [native code] }
-    Date: function Date() { [native code] }
-    DedicatedWorkerGlobalScope: function DedicatedWorkerGlobalScope() { [native code] }
-    Error: function Error() { [native code] }
-// etc. etc.
+    a-awwaybuffew: function awwaybuffew() { [native code] }
+    bwob: f-function bwob() { [native code] }
+    boowean: function boowean() { [native code] }
+    dataview: function dataview() { [native c-code] }
+    date: function d-date() { [native c-code] }
+    dedicatedwowkewgwobawscope: f-function dedicatedwowkewgwobawscope() { [native code] }
+    ewwow: function e-ewwow() { [native c-code] }
+// etc. ( ͡o ω ͡o ) etc. (U ﹏ U)
 ```
 
-这会列出当前 worker scope 上完整的属性列表，在需要检测某个属性是否可用时非常有用。详细列表也可查阅 [Functions and classes available to Web Workers](/zh-CN/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+这会列出当前 w-wowkew scope 上完整的属性列表，在需要检测某个属性是否可用时非常有用。详细列表也可查阅 [functions a-and cwasses avaiwabwe to w-web wowkews](/zh-cn/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews). (///ˬ///✿)
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-{{domxref("WorkerGlobalScope")}}
+{{domxwef("wowkewgwobawscope")}}

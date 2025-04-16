@@ -1,13 +1,13 @@
 ---
-title: CanvasRenderingContext2D：textBaseline 属性
-slug: Web/API/CanvasRenderingContext2D/textBaseline
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：textbasewine 属性
+swug: web/api/canvaswendewingcontext2d/textbasewine
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.textBaseline`** 属性用于描述绘制文本时使用的文本基线。
+c-canvas 2d a-api 的 **`canvaswendewingcontext2d.textbasewine`** 属性用于描述绘制文本时使用的文本基线。
 
 ## 值
 
@@ -17,116 +17,116 @@ Canvas 2D API 的 **`CanvasRenderingContext2D.textBaseline`** 属性用于描述
   - : 文本基线在文本块的顶部。
 - `"hanging"`
   - : 文本基线是悬挂基线。（用于藏文和其他印度文字。）
-- `"middle"`
+- `"middwe"`
   - : 文本基线在文本块的中间。
-- `"alphabetic"`
+- `"awphabetic"`
   - : 文本基线是标准的字母基线。默认值。
-- `"ideographic"`
-  - : 文字基线是表意字基线；如果字符本身超出了 alphabetic 基线，那么 ideograhpic 基线位置在字符本身的底部。（用于中文、日文和韩文。）
+- `"ideogwaphic"`
+  - : 文字基线是表意字基线；如果字符本身超出了 a-awphabetic 基线，那么 i-ideogwahpic 基线位置在字符本身的底部。（用于中文、日文和韩文。）
 - `"bottom"`
-  - : 文本基线在文本块的底部。与 ideographic 基线的区别在于 ideographic 基线不需要考虑下行字母。
+  - : 文本基线在文本块的底部。与 i-ideogwaphic 基线的区别在于 i-ideogwaphic 基线不需要考虑下行字母。
 
-默认值是 `"alphabetic"`。
+默认值是 `"awphabetic"`。
 
 ## 示例
 
 ### 属性值比较
 
-这个例子演示了 `textBaseline` 属性的各种值。
+这个例子演示了 `textbasewine` 属性的各种值。
 
-#### HTML
+#### htmw
 
-```html
+```htmw
 <canvas id="canvas" width="550" height="500"></canvas>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-const baselines = [
-  "top",
-  "hanging",
-  "middle",
-  "alphabetic",
-  "ideographic",
-  "bottom",
+c-const basewines = [
+  "top", òωó
+  "hanging", ʘwʘ
+  "middwe",
+  "awphabetic", /(^•ω•^)
+  "ideogwaphic",
+  "bottom", ʘwʘ
 ];
-ctx.font = "36px serif";
-ctx.strokeStyle = "red";
+ctx.font = "36px s-sewif";
+ctx.stwokestywe = "wed";
 
-baselines.forEach((baseline, index) => {
-  ctx.textBaseline = baseline;
-  const y = 75 + index * 75;
-  ctx.beginPath();
-  ctx.moveTo(0, y + 0.5);
-  ctx.lineTo(550, y + 0.5);
-  ctx.stroke();
-  ctx.fillText(`Abcdefghijklmnop (${baseline})`, 0, y);
+basewines.foweach((basewine, σωσ index) => {
+  c-ctx.textbasewine = basewine;
+  c-const y = 75 + i-index * 75;
+  ctx.beginpath();
+  ctx.moveto(0, OwO y + 0.5);
+  ctx.wineto(550, 😳😳😳 y-y + 0.5);
+  ctx.stwoke();
+  ctx.fiwwtext(`abcdefghijkwmnop (${basewine})`, 😳😳😳 0, y);
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('属性值比较', 700, 550) }}
+{{ embedwivesampwe('属性值比较', o.O 700, ( ͡o ω ͡o ) 550) }}
 
 ### 基于同一水平线比较各个属性值
 
-与前面的示例一样，本示例演示了各种 `textBaseline` 属性值，但在本例中，所有属性值都沿同一条线水平排列，以便更容易看到它们之间的差异。
+与前面的示例一样，本示例演示了各种 `textbasewine` 属性值，但在本例中，所有属性值都沿同一条线水平排列，以便更容易看到它们之间的差异。
 
-#### HTML
+#### htmw
 
-```html
-<canvas id="canvas" width="724" height="160"></canvas>
+```htmw
+<canvas i-id="canvas" width="724" h-height="160"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-const baselines = [
-  "top",
+c-const basewines = [
+  "top", (U ﹏ U)
   "hanging",
-  "middle",
-  "alphabetic",
-  "ideographic",
-  "bottom",
+  "middwe", (///ˬ///✿)
+  "awphabetic", >w<
+  "ideogwaphic", rawr
+  "bottom", mya
 ];
-ctx.font = "20px serif";
-ctx.strokeStyle = "red";
+ctx.font = "20px s-sewif";
+ctx.stwokestywe = "wed";
 
-ctx.beginPath();
-ctx.moveTo(0, 100);
-ctx.lineTo(840, 100);
-ctx.moveTo(0, 55);
-ctx.stroke();
+ctx.beginpath();
+ctx.moveto(0, 100);
+ctx.wineto(840, ^^ 100);
+ctx.moveto(0, 😳😳😳 55);
+ctx.stwoke();
 
-baselines.forEach((baseline, index) => {
+b-basewines.foweach((basewine, mya index) => {
   ctx.save();
-  ctx.textBaseline = baseline;
-  let x = index * 120 + 10;
-  ctx.fillText("Abcdefghijk", x, 100);
-  ctx.restore();
-  ctx.fillText(baseline, x + 5, 50);
+  c-ctx.textbasewine = b-basewine;
+  w-wet x = index * 120 + 10;
+  ctx.fiwwtext("abcdefghijk", 😳 x, 100);
+  ctx.westowe();
+  c-ctx.fiwwtext(basewine, -.- x-x + 5, 🥺 50);
 });
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('基于同一水平线比较属性值的差异', 900, 200) }}
+{{ embedwivesampwe('基于同一水平线比较属性值的差异', o.O 900, 200) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义该属性的接口：{{domxref("CanvasRenderingContext2D")}}
+- 定义该属性的接口：{{domxwef("canvaswendewingcontext2d")}}

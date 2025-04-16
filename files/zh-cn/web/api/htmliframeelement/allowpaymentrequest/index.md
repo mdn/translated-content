@@ -1,13 +1,13 @@
 ---
-title: HTMLIFrameElement：allowPaymentRequest 属性
-slug: Web/API/HTMLIFrameElement/allowPaymentRequest
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwifwameewement：awwowpaymentwequest 属性
+swug: web/api/htmwifwameewement/awwowpaymentwequest
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{apiwef("htmw d-dom")}}{{depwecated_headew}}{{non-standawd_headew}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`allowPaymentRequest`** 属性返回一个表示是否可以在跨源 iframe 上调用[支付请求 API](/zh-CN/docs/Web/API/Payment_Request_API) 的布尔值。
+{{domxwef("htmwifwameewement")}} 接口的 **`awwowpaymentwequest`** 属性返回一个表示是否可以在跨源 i-ifwame 上调用[支付请求 a-api](/zh-cn/docs/web/api/payment_wequest_api) 的布尔值。
 
 ## 值
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [支付请求 API](/zh-CN/docs/Web/API/Payment_Request_API)
+- [支付请求 api](/zh-cn/docs/web/api/payment_wequest_api)

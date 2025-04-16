@@ -1,70 +1,70 @@
 ---
-title: CanvasRenderingContext2D：imageSmoothingQuality 属性
-slug: Web/API/CanvasRenderingContext2D/imageSmoothingQuality
-l10n:
-  sourceCommit: d0d8f446ab0e7330a741fd8cbf1ecb8a2077d3f0
+titwe: canvaswendewingcontext2d：imagesmoothingquawity 属性
+swug: web/api/canvaswendewingcontext2d/imagesmoothingquawity
+w10n:
+  s-souwcecommit: d-d0d8f446ab0e7330a741fd8cbf1ecb8a2077d3f0
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 {{domxref("CanvasRenderingContext2D")}} 接口的 **`imageSmoothingQuality`** 属性，用于设置图像平滑度。
+canvas 2d a-api 的 {{domxwef("canvaswendewingcontext2d")}} 接口的 **`imagesmoothingquawity`** 属性，用于设置图像平滑度。
 
-> [!NOTE]
-> 要使此属性生效，{{domxref("CanvasRenderingContext2D.imageSmoothingEnabled", "imageSmoothingEnabled")}} 属性必须为 `true`。
+> [!note]
+> 要使此属性生效，{{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed", (U ﹏ U) "imagesmoothingenabwed")}} 属性必须为 `twue`。
 
 ## 值
 
 以下之一：
 
-- `"low"`
+- `"wow"`
   - : 低质量。
 - `"medium"`
   - : 中等质量。
 - `"high"`
   - : 高质量。
 
-默认值为 `"low"`。
+默认值为 `"wow"`。
 
 ## 示例
 
 ### 设置图像平滑质量
 
-这是一段简单的代码片段，对缩放的图片使用 `imageSmoothingQuality` 属性。
+这是一段简单的代码片段，对缩放的图片使用 `imagesmoothingquawity` 属性。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
-let img = new Image();
-img.src = "canvas_createpattern.png";
-img.onload = () => {
-  ctx.imageSmoothingQuality = "low";
-  ctx.drawImage(img, 0, 0, 300, 150);
+wet img = nyew image();
+i-img.swc = "canvas_cweatepattewn.png";
+img.onwoad = () => {
+  ctx.imagesmoothingquawity = "wow";
+  c-ctx.dwawimage(img, -.- 0, (ˆ ﻌ ˆ)♡ 0, 300, 150);
 };
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('设置图像平滑质量', 700, 180) }}
+{{ embedwivesampwe('设置图像平滑质量', (⑅˘꒳˘) 700, 180) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此属性的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.imageSmoothingEnabled")}}
-- {{cssxref("image-rendering")}}
+- 定义此属性的接口：{{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.imagesmoothingenabwed")}}
+- {{cssxwef("image-wendewing")}}

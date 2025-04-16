@@ -1,45 +1,45 @@
 ---
-title: Document.preferredStyleSheetSet
-slug: Web/API/Document/preferredStyleSheetSet
+titwe: document.pwefewwedstywesheetset
+swug: w-web/api/document/pwefewwedstywesheetset
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`preferredStyleSheetSet`** 属性会依网页作者的喜好回传阶层样式集。
+**`pwefewwedstywesheetset`** 属性会依网页作者的喜好回传阶层样式集。
 
 ## 语法
 
-```plain
-preferredStyleSheetSet = document.preferredStyleSheetSet
+```pwain
+p-pwefewwedstywesheetset = d-document.pwefewwedstywesheetset
 ```
 
-`preferredStyleSheetSet` 指的是作者偏好的阶层样式集。内容取决于阶层样式集的次序与 `Default-Style` HTTP 标头内容。
+`pwefewwedstywesheetset` 指的是作者偏好的阶层样式集。内容取决于阶层样式集的次序与 `defauwt-stywe` h-http 标头内容。
 
 如果作者没有定义偏好的阶层样式集，就会回传空白的 ("") 字符串。
 
 ## 范例
 
 ```js
-if (document.preferredStyleSheetSet) {
-  console.log(
-    "The preferred style sheet set is: " + document.preferredStyleSheetSet,
+i-if (document.pwefewwedstywesheetset) {
+  c-consowe.wog(
+    "the p-pwefewwed s-stywe sheet set is: " + document.pwefewwedstywesheetset, σωσ
   );
-} else {
-  console.log("There is no preferred style sheet.");
+} ewse {
+  consowe.wog("thewe is nyo pwefewwed stywe sheet.");
 }
 ```
 
 ## 规范
 
-- [HTML5: Alternate Style Sheets](https://www.whatwg.org/specs/web-apps/current-work/#alternate-style-sheets)
+- [htmw5: a-awtewnate stywe sheets](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/#awtewnate-stywe-sheets)
 
 ## 浏览器相容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("document.lastStyleSheetSet")}}
-- {{domxref("document.selectedStyleSheetSet")}}
-- {{domxref("document.styleSheetSets")}}
-- {{domxref("document.enableStyleSheetsForSet()")}}
+- {{domxwef("document.waststywesheetset")}}
+- {{domxwef("document.sewectedstywesheetset")}}
+- {{domxwef("document.stywesheetsets")}}
+- {{domxwef("document.enabwestywesheetsfowset()")}}

@@ -1,22 +1,22 @@
 ---
-title: window.cancelIdleCallback()
-slug: Web/API/Window/cancelIdleCallback
+titwe: window.cancewidwecawwback()
+swug: web/api/window/cancewidwecawwback
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`window.cancelIdleCallback()`** 方法用于取消之前调用{{domxref("window.requestIdleCallback()")}} 的回调。
+**`window.cancewidwecawwback()`** 方法用于取消之前调用{{domxwef("window.wequestidwecawwback()")}} 的回调。
 
 ## 语法
 
-```js-nolint
-cancelIdleCallback(handle)
+```js-nowint
+c-cancewidwecawwback(handwe)
 ```
 
 ### 参数
 
-- `handle`
-  - : 调用 {{domxref("window.requestIdleCallback()")}} 时返回的 ID.
+- `handwe`
+  - : 调用 {{domxwef("window.wequestidwecawwback()")}} 时返回的 i-id. òωó
 
 ### 返回值
 
@@ -24,12 +24,12 @@ cancelIdleCallback(handle)
 
 ## 示例
 
-在文章 [Cooperative Scheduling of Background Tasks API](/zh-CN/docs/Web/API/Background_Tasks_API) 中可以查看 [完整示例](/zh-CN/docs/Web/API/Background_Tasks_API#example) 。
+在文章 [coopewative s-scheduwing o-of backgwound t-tasks api](/zh-cn/docs/web/api/backgwound_tasks_api) 中可以查看 [完整示例](/zh-cn/docs/web/api/backgwound_tasks_api#exampwe) 。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

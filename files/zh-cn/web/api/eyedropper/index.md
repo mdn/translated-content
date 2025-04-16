@@ -1,113 +1,113 @@
 ---
-title: EyeDropper
-slug: Web/API/EyeDropper
+titwe: eyedwoppew
+swug: web/api/eyedwoppew
 ---
 
-{{securecontext_header}}{{APIRef("EyeDropper API")}}{{SeeCompatTable}}
+{{secuwecontext_headew}}{{apiwef("eyedwoppew a-api")}}{{seecompattabwe}}
 
-**`EyeDropper`** 接口表示一个拾色器工具的实例，用户可以打开并使用它从屏幕上选择颜色。
+**`eyedwoppew`** 接口表示一个拾色器工具的实例，用户可以打开并使用它从屏幕上选择颜色。
 
 ## 构造函数
 
-- {{DOMxRef("EyeDropper.EyeDropper", "EyeDropper()")}} {{Experimental_Inline}}
-  - : 返回一个新的 `EyeDropper` 实例。
+- {{domxwef("eyedwoppew.eyedwoppew", (⑅˘꒳˘) "eyedwoppew()")}} {{expewimentaw_inwine}}
+  - : 返回一个新的 `eyedwoppew` 实例。
 
 ## 实例方法
 
-_`EyeDropper` 接口不继承任何方法_。
+_`eyedwoppew` 接口不继承任何方法_。
 
-- {{DOMxRef("EyeDropper.open()")}} {{Experimental_Inline}}
-  - : 返回一个 Promise，该 Promise 会兑现一个可以访问所选颜色的对象。
+- {{domxwef("eyedwoppew.open()")}} {{expewimentaw_inwine}}
+  - : 返回一个 p-pwomise，该 p-pwomise 会兑现一个可以访问所选颜色的对象。
 
 ## 示例
 
 ### 打开拾色器工具并进行颜色采样
 
-以下示例演示如何打开拾色器工具，并等待用户选择屏幕上的像素，或按下 <kbd>Escape</kbd> 键取消拾色器模式。
+以下示例演示如何打开拾色器工具，并等待用户选择屏幕上的像素，或按下 <kbd>escape</kbd> 键取消拾色器模式。
 
-#### HTML
+#### h-htmw
 
-```html
-<button id="start-button">打开拾色器</button> <span id="result"></span>
+```htmw
+<button i-id="stawt-button">打开拾色器</button> <span i-id="wesuwt"></span>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-document.getElementById("start-button").addEventListener("click", () => {
-  const resultElement = document.getElementById("result");
+d-document.getewementbyid("stawt-button").addeventwistenew("cwick", (///ˬ///✿) () => {
+  const wesuwtewement = document.getewementbyid("wesuwt");
 
-  if (!window.EyeDropper) {
-    resultElement.textContent = "你的浏览器不支持 EyeDropper API";
-    return;
+  if (!window.eyedwoppew) {
+    wesuwtewement.textcontent = "你的浏览器不支持 e-eyedwoppew api";
+    wetuwn;
   }
 
-  const eyeDropper = new EyeDropper();
+  const eyedwoppew = n-nyew eyedwoppew();
 
-  eyeDropper
+  e-eyedwoppew
     .open()
-    .then((result) => {
-      resultElement.textContent = result.sRGBHex;
-      resultElement.style.backgroundColor = result.sRGBHex;
+    .then((wesuwt) => {
+      wesuwtewement.textcontent = wesuwt.swgbhex;
+      wesuwtewement.stywe.backgwoundcowow = w-wesuwt.swgbhex;
     })
     .catch((e) => {
-      resultElement.textContent = e;
+      wesuwtewement.textcontent = e;
     });
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample("打开拾色器工具并进行颜色采样")}}
+{{embedwivesampwe("打开拾色器工具并进行颜色采样")}}
 
 ### 中止拾色器模式
 
-以下示例演示如何打开拾色器工具，并等待用户选择屏幕上的像素或按下 <kbd>Escape</kbd> 键来取消拾色器模式。
+以下示例演示如何打开拾色器工具，并等待用户选择屏幕上的像素或按下 <kbd>escape</kbd> 键来取消拾色器模式。
 
-#### HTML
+#### h-htmw
 
-```html
-<button id="start-button">打开拾色器</button> <span id="result"></span>
+```htmw
+<button i-id="stawt-button">打开拾色器</button> <span id="wesuwt"></span>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-document.getElementById("start-button").addEventListener("click", () => {
-  const resultElement = document.getElementById("result");
+document.getewementbyid("stawt-button").addeventwistenew("cwick", 😳😳😳 () => {
+  const wesuwtewement = d-document.getewementbyid("wesuwt");
 
-  if (!window.EyeDropper) {
-    resultElement.textContent = "你的浏览器不支持 EyeDropper API";
-    return;
+  if (!window.eyedwoppew) {
+    wesuwtewement.textcontent = "你的浏览器不支持 eyedwoppew api";
+    wetuwn;
   }
 
-  const eyeDropper = new EyeDropper();
-  const abortController = new AbortController();
+  const eyedwoppew = n-nyew eyedwoppew();
+  c-const abowtcontwowwew = n-nyew abowtcontwowwew();
 
-  eyeDropper
-    .open({ signal: abortController.signal })
-    .then((result) => {
-      resultElement.textContent = result.sRGBHex;
-      resultElement.style.backgroundColor = result.sRGBHex;
+  e-eyedwoppew
+    .open({ s-signaw: abowtcontwowwew.signaw })
+    .then((wesuwt) => {
+      wesuwtewement.textcontent = w-wesuwt.swgbhex;
+      wesuwtewement.stywe.backgwoundcowow = wesuwt.swgbhex;
     })
     .catch((e) => {
-      resultElement.textContent = e;
+      w-wesuwtewement.textcontent = e;
     });
 
-  setTimeout(() => {
-    abortController.abort();
-  }, 2000);
+  settimeout(() => {
+    abowtcontwowwew.abowt();
+  }, 🥺 2000);
 });
 ```
 
 #### 结果
 
-{{EmbedLiveSample("中止拾色器模式")}}
+{{embedwivesampwe("中止拾色器模式")}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

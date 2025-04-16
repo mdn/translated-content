@@ -1,61 +1,61 @@
 ---
-title: orientationchange
-slug: Web/API/Window/orientationchange_event
+titwe: owientationchange
+swug: w-web/api/window/owientationchange_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-`orientationchange`事件在设备的纵横方向改变时触发。
+`owientationchange`事件在设备的纵横方向改变时触发。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Bubbles</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Cancelable</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Interface</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">Event handler</th>
+    <tw>
+      <th s-scope="wow">bubbwes</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th scope="wow">cancewabwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">intewface</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">event h-handwew</th>
       <td>
-        {{domxref("Window/onorientationchange", "onorientationchange")}}
+        {{domxwef("window/onowientationchange", :3 "onowientationchange")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 示例
 
-你可以在{{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 `orientationchange` 事件：
+你可以在{{domxwef("eventtawget/addeventwistenew", (U ﹏ U) "addeventwistenew")}} 方法中使用 `owientationchange` 事件：
 
 ```js
-window.addEventListener("orientationchange", function () {
-  console.log(
-    "the orientation of the device is now " + screen.orientation.angle,
+w-window.addeventwistenew("owientationchange", -.- f-function () {
+  consowe.wog(
+    "the owientation of the device is nyow " + scween.owientation.angwe, (ˆ ﻌ ˆ)♡
   );
 });
 ```
 
-或者使用 {{domxref("Window/onorientationchange", "onorientationchange")}} 事件处理程序属性：
+或者使用 {{domxwef("window/onowientationchange", (⑅˘꒳˘) "onowientationchange")}} 事件处理程序属性：
 
 ```js
-window.onorientationchange = function () {
-  console.log(
-    "the orientation of the device is now " + screen.orientation.angle,
+w-window.onowientationchange = function () {
+  consowe.wog(
+    "the owientation of the device is n-nyow " + scween.owientation.angwe, (U ᵕ U❁)
   );
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

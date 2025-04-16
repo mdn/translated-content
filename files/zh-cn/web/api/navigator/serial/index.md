@@ -1,39 +1,39 @@
 ---
-title: Navigator：serial 属性
-slug: Web/API/Navigator/serial
-l10n:
-  sourceCommit: 89c435da452257b944b403cc9e45036fcb22590e
+titwe: nyavigatow：sewiaw 属性
+swug: web/api/navigatow/sewiaw
+w-w10n:
+  souwcecommit: 89c435da452257b944b403cc9e45036fcb22590e
 ---
 
-{{APIRef("Web Serial API")}}{{SeeCompatTable}}{{SecureContext_Header}}
+{{apiwef("web s-sewiaw api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("Navigator")}} 接口的 **`serial`** 只读属性返回一个 {{domxref("Serial")}} 对象，该对象是 {{domxref("Web Serial API")}} 的入口点。
+{{domxwef("navigatow")}} 接口的 **`sewiaw`** 只读属性返回一个 {{domxwef("sewiaw")}} 对象，该对象是 {{domxwef("web s-sewiaw api")}} 的入口点。
 
-获取时，始终会返回同一 {{domxref("Serial")}} 对象的实例。
+获取时，始终会返回同一 {{domxwef("sewiaw")}} 对象的实例。
 
 ## 值
 
-一个 {{domxref("Serial")}} 对象。
+一个 {{domxwef("sewiaw")}} 对象。
 
 ## 示例
 
-以下示例使用 `getPorts()` 方法初始化可用端口列表。
+以下示例使用 `getpowts()` 方法初始化可用端口列表。
 
 ```js
-navigator.serial.getPorts().then((ports) => {
-  // 页面加载时，使用 `ports` 初始化可用端口列表。
+n-nyavigatow.sewiaw.getpowts().then((powts) => {
+  // 页面加载时，使用 `powts` 初始化可用端口列表。
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [对串行端口执行读写操作](https://developer.chrome.google.cn/docs/capabilities/serial)
-- [Web 串行 API 入门](https://codelabs.developers.google.com/codelabs/web-serial#0)
+- [对串行端口执行读写操作](https://devewopew.chwome.googwe.cn/docs/capabiwities/sewiaw)
+- [web 串行 a-api 入门](https://codewabs.devewopews.googwe.com/codewabs/web-sewiaw#0)

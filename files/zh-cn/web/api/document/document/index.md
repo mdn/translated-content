@@ -1,18 +1,18 @@
 ---
-title: Document：Document() 构造函数
-slug: Web/API/Document/Document
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: document：document() 构造函数
+swug: w-web/api/document/document
+w-w10n:
+  s-souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Document`** 构造函数创建一个新的 {{domxref("Document")}} 对象，该对象是浏览器中加载的网页，并作为页面内容的入口点。
+**`document`** 构造函数创建一个新的 {{domxwef("document")}} 对象，该对象是浏览器中加载的网页，并作为页面内容的入口点。
 
 ## 语法
 
-```js-nolint
-new Document()
+```js-nowint
+n-nyew document()
 ```
 
 ### 参数
@@ -21,8 +21,8 @@ new Document()
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

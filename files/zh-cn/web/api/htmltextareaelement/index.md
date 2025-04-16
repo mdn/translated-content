@@ -1,255 +1,255 @@
 ---
-title: HTMLTextAreaElement
-slug: Web/API/HTMLTextAreaElement
+titwe: htmwtextaweaewement
+swug: w-web/api/htmwtextaweaewement
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-**`HTMLTextAreaElement`** 接口提供了特殊的属性和方法，用于控制 {{HTMLElement("textarea")}} 元素的布局和展示。
+**`htmwtextaweaewement`** 接口提供了特殊的属性和方法，用于控制 {{htmwewement("textawea")}} 元素的布局和展示。
 
-{{InheritanceDiagram(600,120)}}
+{{inhewitancediagwam(600,120)}}
 
 ## 属性
 
-| `form` {{readonlyInline}}                                   | `object:` 返回一个父表单元素的引用。如果这个元素没有被包含在一个表单元素中，则这个值是页面中任意一个 {{HTMLElement("form")}} 元素的 [`id`](/zh-CN/docs/Web/HTML/Reference/Elements/form#id) 属性或者 `null`。                                                                                                                     |
+| `fowm` {{weadonwyinwine}}                                   | `object:` 返回一个父表单元素的引用。如果这个元素没有被包含在一个表单元素中，则这个值是页面中任意一个 {{htmwewement("fowm")}} 元素的 [`id`](/zh-cn/docs/web/htmw/wefewence/ewements/fowm#id) 属性或者 `nuww`。                                                                                                                     |
 | ----------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `type` {{readonlyInline}}                                   | `string:` 返回字符串 `textarea`。                                                                                                                                                                                                                                                                                                 |
-| `value`                                                     | `string:` Returns / Sets the raw value contained in the control.                                                                                                                                                                                                                                                                  |
-| `textLength` {{readonlyInline}}                             | `long:` Returns the codepoint length of the control's `value`. Same as `calling value.length`                                                                                                                                                                                                                                     |
-| `defaultValue`                                              | `string:` Returns / Sets the control's default value, which behaves like the {{domxref("Node.textContent")}} property.                                                                                                                                                                                                            |
-| `placeholder`                                               | `string:` 返回/设置元素[`placeholder`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#placeholder) 属性，用于提示用户在组件中应该输入什么。                                                                                                                                                                                     |
-| `rows`                                                      | `unsigned long:` Returns / Sets the element's [`rows`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#rows) attribute, indicating the number of visible text lines for the control.                                                                                                                                             |
-| `cols`                                                      | `unsigned long:` Returns / Sets the element's [`cols`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#cols) attribute, indicating the visible width of the text area.                                                                                                                                                           |
-| `autofocus`                                                 | `boolean:` Returns / Sets the element's [`autofocus`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#autofocus) attribute, indicating that the control should have input focus when the page loads                                                                                                                              |
-| `name`                                                      | `string:` Returns / Sets the element's [`name`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#name) attribute, containing the name of the control.                                                                                                                                                                             |
-| `disabled`                                                  | `boolean:` Returns / Sets the element's [`disabled`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#disabled) attribute, indicating that the control is not available for interaction.                                                                                                                                          |
-| {{domxref("HTMLTextAreaElement.labels")}}{{ReadOnlyInline}} | {{domxref("NodeList")}}: Returns a list of label elements associated with this select element.                                                                                                                                                                                                                                    |
-| `maxLength`                                                 | `long:` Returns / Sets the element's [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#maxlength) attribute, indicating the maximum number of characters the user can enter. This constraint is evaluated only when the value changes.                                                                               |
-| `minLength`                                                 | `long:` Returns / Sets the element's [`minlength`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#minlength) attribute, indicating the minimum number of characters the user can enter. This constraint is evaluated only when the value changes.                                                                               |
-| `accessKey`                                                 | `string:` Returns / Sets the element's [`accesskey`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#accesskey) attribute.                                                                                                                                                                                                       |
-| `readOnly`                                                  | `boolean:` Returns / Sets the element's [`readonly`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#readonly) attribute, indicating that the user cannot modify the value of the control.                                                                                                                                       |
-| `required`                                                  | `boolean:` Returns / Sets the element's [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#required) attribute, indicating that the user must specify a value before submitting the form.                                                                                                                              |
-| `tabIndex`                                                  | `long:` Returns / Sets the position of the element in the tabbing navigation order for the current document.                                                                                                                                                                                                                      |
-| `selectionStart`                                            | `unsigned long:` Returns / Sets the index of the beginning of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the first argument, and `selectionEnd` as the second argument. |
-| `selectionEnd`                                              | `unsigned long:` Returns / Sets the index of the end of selected text. If no text is selected, contains the index of the character that follows the input cursor. On being set, the control behaves as if `setSelectionRange()` had been called with this as the second argument, and `selectionStart` as the first argument.     |
-| `selectionDirection`                                        | `string:` Returns / Sets the direction in which selection occurred. This is `"forward"` if selection was performed in the start-to-end direction of the current locale, or `"backward"` for the opposite direction. This can also be `"none"` if the direction is unknown."                                                       |
-| `validity` {{readonlyInline}}                               | `{{domxref("ValidityState")}} object:` Returns the validity states that this element is in.                                                                                                                                                                                                                                       |
-| `willValidate` {{readonlyInline}}                           | `boolean:` Returns whether the element is a candidate for constraint validation. `false` if any conditions bar it from constraint validation, including its `readOnly` or `disabled` property is `true`.                                                                                                                          |
-| `validationMessage` {{readonlyInline}}                      | `string:` Returns a localized message that describes the validation constraints that the control does not satisfy (if any). This is the empty string if the control is not a candidate for constraint validation (`willValidate` is `false`), or it satisfies its constraints.                                                    |
-| `autocomplete` {{experimental_inline}}                      |                                                                                                                                                                                                                                                                                                                                   |
-| `autocapitalize` {{experimental_inline}}                    | `string:` Returns / Sets the element's capitalization behavior for user input. Valid values are: `none`, `off`, `characters`, `words`, `sentences`.                                                                                                                                                                               |
-| `inputMode` {{experimental_inline}}                         |                                                                                                                                                                                                                                                                                                                                   |
-| `wrap`                                                      | `string:` Returns / Sets the [`wrap`](/zh-CN/docs/Web/HTML/Reference/Elements/textarea#wrap) HTML attribute, indicating how the control wraps text.                                                                                                                                                                               |
+| `type` {{weadonwyinwine}}                                   | `stwing:` 返回字符串 `textawea`。                                                                                                                                                                                                                                                                                                 |
+| `vawue`                                                     | `stwing:` w-wetuwns / sets t-the waw vawue c-contained in the c-contwow. (U ᵕ U❁)                                                                                                                                                                                                                                                                  |
+| `textwength` {{weadonwyinwine}}                             | `wong:` w-wetuwns the c-codepoint wength of the contwow's `vawue`. 😳😳😳 same as `cawwing vawue.wength`                                                                                                                                                                                                                                     |
+| `defauwtvawue`                                              | `stwing:` wetuwns / s-sets the contwow's defauwt vawue, nyaa~~ which behaves w-wike the {{domxwef("node.textcontent")}} pwopewty. (˘ω˘)                                                                                                                                                                                                            |
+| `pwacehowdew`                                               | `stwing:` 返回/设置元素[`pwacehowdew`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#pwacehowdew) 属性，用于提示用户在组件中应该输入什么。                                                                                                                                                                                     |
+| `wows`                                                      | `unsigned wong:` w-wetuwns / sets the ewement's [`wows`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#wows) attwibute, >_< indicating the nyumbew o-of visibwe text wines fow the c-contwow. XD                                                                                                                                             |
+| `cows`                                                      | `unsigned w-wong:` wetuwns / sets the ewement's [`cows`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#cows) attwibute, rawr x3 indicating the visibwe width of t-the text awea. ( ͡o ω ͡o )                                                                                                                                                           |
+| `autofocus`                                                 | `boowean:` wetuwns / sets the ewement's [`autofocus`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#autofocus) attwibute, :3 indicating that the contwow s-shouwd have input focus when t-the page woads                                                                                                                              |
+| `name`                                                      | `stwing:` w-wetuwns / s-sets the ewement's [`name`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#name) a-attwibute, mya containing the nyame of the contwow.                                                                                                                                                                             |
+| `disabwed`                                                  | `boowean:` w-wetuwns / sets the ewement's [`disabwed`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#disabwed) attwibute, σωσ i-indicating that the contwow is nyot avaiwabwe fow intewaction. (ꈍᴗꈍ)                                                                                                                                          |
+| {{domxwef("htmwtextaweaewement.wabews")}}{{weadonwyinwine}} | {{domxwef("nodewist")}}: wetuwns a wist of wabew ewements a-associated with this sewect e-ewement. OwO                                                                                                                                                                                                                                    |
+| `maxwength`                                                 | `wong:` w-wetuwns / s-sets the ewement's [`maxwength`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#maxwength) attwibute, o.O indicating the maximum n-nyumbew of chawactews t-the usew can entew. 😳😳😳 this constwaint i-is evawuated o-onwy when the vawue changes.                                                                               |
+| `minwength`                                                 | `wong:` w-wetuwns / sets the ewement's [`minwength`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#minwength) a-attwibute, /(^•ω•^) indicating the minimum nyumbew of c-chawactews the usew can entew. OwO this c-constwaint is evawuated onwy w-when the vawue c-changes. ^^                                                                               |
+| `accesskey`                                                 | `stwing:` wetuwns / sets the ewement's [`accesskey`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#accesskey) attwibute. (///ˬ///✿)                                                                                                                                                                                                       |
+| `weadonwy`                                                  | `boowean:` wetuwns / sets the ewement's [`weadonwy`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#weadonwy) attwibute, i-indicating t-that the usew cannot modify the v-vawue of the c-contwow. (///ˬ///✿)                                                                                                                                       |
+| `wequiwed`                                                  | `boowean:` w-wetuwns / sets the ewement's [`wequiwed`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#wequiwed) attwibute, (///ˬ///✿) indicating that the u-usew must specify a vawue befowe submitting the fowm. ʘwʘ                                                                                                                              |
+| `tabindex`                                                  | `wong:` wetuwns / s-sets the position of the e-ewement in the tabbing n-nyavigation o-owdew fow the cuwwent document. ^•ﻌ•^                                                                                                                                                                                                                      |
+| `sewectionstawt`                                            | `unsigned w-wong:` wetuwns / s-sets the index o-of the beginning o-of sewected text. OwO if nyo text is sewected, (U ﹏ U) c-contains the index o-of the chawactew t-that fowwows t-the input cuwsow. (ˆ ﻌ ˆ)♡ o-on being set, (⑅˘꒳˘) the contwow behaves as if `setsewectionwange()` had been cawwed w-with this as the fiwst awgument, (U ﹏ U) and `sewectionend` as the second awgument. o.O |
+| `sewectionend`                                              | `unsigned wong:` w-wetuwns / sets the index of the end of sewected text. mya if nyo text i-is sewected, XD contains t-the index o-of the chawactew that fowwows t-the input cuwsow. òωó on being set, (˘ω˘) t-the contwow behaves a-as if `setsewectionwange()` had been cawwed with this as the second awgument, and `sewectionstawt` as the fiwst a-awgument. :3     |
+| `sewectiondiwection`                                        | `stwing:` wetuwns / s-sets the diwection in which s-sewection occuwwed. OwO t-this is `"fowwawd"` if sewection was pewfowmed i-in the stawt-to-end d-diwection of the cuwwent w-wocawe, mya ow `"backwawd"` f-fow the opposite diwection. (˘ω˘) this can awso be `"none"` if the diwection i-is unknown."                                                       |
+| `vawidity` {{weadonwyinwine}}                               | `{{domxwef("vawiditystate")}} o-object:` wetuwns t-the vawidity states that t-this ewement is i-in. o.O                                                                                                                                                                                                                                       |
+| `wiwwvawidate` {{weadonwyinwine}}                           | `boowean:` wetuwns whethew t-the ewement is a candidate fow constwaint vawidation. (✿oωo) `fawse` if any conditions b-baw it fwom c-constwaint vawidation, (ˆ ﻌ ˆ)♡ incwuding its `weadonwy` o-ow `disabwed` p-pwopewty is `twue`. ^^;;                                                                                                                          |
+| `vawidationmessage` {{weadonwyinwine}}                      | `stwing:` wetuwns a wocawized message that descwibes t-the vawidation constwaints that the contwow does nyot satisfy (if any). OwO this i-is the empty stwing if the contwow is not a candidate f-fow constwaint v-vawidation (`wiwwvawidate` is `fawse`), 🥺 ow it satisfies its constwaints. mya                                                    |
+| `autocompwete` {{expewimentaw_inwine}}                      |                                                                                                                                                                                                                                                                                                                                   |
+| `autocapitawize` {{expewimentaw_inwine}}                    | `stwing:` w-wetuwns / sets t-the ewement's capitawization behaviow fow usew input. 😳 vawid vawues a-awe: `none`, òωó `off`, `chawactews`, /(^•ω•^) `wowds`, `sentences`. -.-                                                                                                                                                                               |
+| `inputmode` {{expewimentaw_inwine}}                         |                                                                                                                                                                                                                                                                                                                                   |
+| `wwap`                                                      | `stwing:` wetuwns / s-sets the [`wwap`](/zh-cn/docs/web/htmw/wefewence/ewements/textawea#wwap) htmw attwibute, indicating how the c-contwow wwaps text. òωó                                                                                                                                                                               |
 
-The two properties `tabIndex` and `accessKey` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
+the two pwopewties `tabindex` a-and `accesskey` a-awe inhewited fwom {{domxwef("htmwewement")}} f-fwom htmw5 on, /(^•ω•^) but wewe defined o-on `htmwtextaweaewement` i-in dom w-wevew 2 htmw and eawwiew specifications. /(^•ω•^)
 
 ## 方法
 
-| {{domxref("HTMLElement/blur", "blur()")}}                                | Removes focus from the control; keystrokes will subsequently go nowhere.                                                                                                                                                                                                                                     |
+| {{domxwef("htmwewement/bwuw", 😳 "bwuw()")}}                                | w-wemoves focus f-fwom the contwow; keystwokes wiww subsequentwy g-go nyowhewe. :3                                                                                                                                                                                                                                     |
 | ------------------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| {{domxref("HTMLElement/focus", "focus()")}}                              | Gives focus to the control; keystrokes will subsequently go to this element.                                                                                                                                                                                                                                 |
-| {{domxref("HTMLInputElement/select", "select()")}}                       | Selects the contents of the control.                                                                                                                                                                                                                                                                         |
-| {{domxref("HTMLInputElement/setRangeText", "setRangeText()")}}           | Replaces a range of text in the element with new text.                                                                                                                                                                                                                                                       |
-| {{domxref("HTMLInputElement/setSelectionRange", "setSelectionRange()")}} | Selects a range of text in the element (but does not focus it).                                                                                                                                                                                                                                              |
-| `checkValidity()`                                                        | Returns `false` if the button is a candidate for constraint validation, and it does not satisfy its constraints. In this case, it also fires a cancelable `invalid` event at the control. It returns `true` if the control is not a candidate for constraint validation, or if it satisfies its constraints. |
-| `reportValidity()`                                                       | This method reports the problems with the constraints on the element, if any, to the user. If there are problems, it fires a cancelable `invalid` event at the element, and returns `false`; if there are no problems, it returns `true`.                                                                    |
-| `setCustomValidity(DOMstring)`                                           | Sets a custom validity message for the element. If this message is not the empty string, then the element is suffering from a custom validity error, and does not validate.                                                                                                                                  |
+| {{domxwef("htmwewement/focus", (U ᵕ U❁) "focus()")}}                              | g-gives f-focus to the contwow; keystwokes wiww subsequentwy g-go to this ewement. ʘwʘ                                                                                                                                                                                                                                 |
+| {{domxwef("htmwinputewement/sewect", o.O "sewect()")}}                       | s-sewects t-the contents of the contwow. ʘwʘ                                                                                                                                                                                                                                                                         |
+| {{domxwef("htmwinputewement/setwangetext", ^^ "setwangetext()")}}           | wepwaces a wange of text in t-the ewement with n-nyew text. ^•ﻌ•^                                                                                                                                                                                                                                                       |
+| {{domxwef("htmwinputewement/setsewectionwange", mya "setsewectionwange()")}} | s-sewects a wange o-of text in the ewement (but does n-nyot focus it). UwU                                                                                                                                                                                                                                              |
+| `checkvawidity()`                                                        | wetuwns `fawse` if the button is a candidate fow constwaint vawidation, >_< and it does nyot satisfy i-its constwaints. /(^•ω•^) in this case, òωó it a-awso fiwes a cancewabwe `invawid` event at the c-contwow. σωσ it wetuwns `twue` if the c-contwow is nyot a candidate fow c-constwaint vawidation, ( ͡o ω ͡o ) o-ow if i-it satisfies its c-constwaints. nyaa~~ |
+| `wepowtvawidity()`                                                       | t-this method wepowts the pwobwems with the constwaints on the ewement, :3 if any, UwU to the usew. o.O if thewe a-awe pwobwems, (ˆ ﻌ ˆ)♡ it f-fiwes a cancewabwe `invawid` event a-at the ewement, ^^;; and wetuwns `fawse`; i-if thewe awe nyo pwobwems, ʘwʘ it wetuwns `twue`. σωσ                                                                    |
+| `setcustomvawidity(domstwing)`                                           | sets a c-custom vawidity m-message fow the ewement. ^^;; if this m-message is nyot the empty stwing, ʘwʘ then the ewement i-is suffewing f-fwom a custom vawidity ewwow, ^^ a-and does nyot vawidate. nyaa~~                                                                                                                                  |
 
-The two methods `blur()` and `focus()` are inherited from {{domxref("HTMLElement")}} from HTML5 on, but were defined on `HTMLTextAreaElement` in DOM Level 2 HTML and earlier specifications.
+t-the two methods `bwuw()` and `focus()` awe inhewited fwom {{domxwef("htmwewement")}} f-fwom htmw5 on, (///ˬ///✿) b-but wewe defined o-on `htmwtextaweaewement` i-in dom w-wevew 2 htmw and eawwiew specifications. XD
 
 ## 事件
 
-Listen to these events using [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) or by assigning an event listener to the `oneventname` property of this interface:
+w-wisten to t-these events using [`addeventwistenew()`](/zh-cn/docs/web/api/eventtawget/addeventwistenew) ow by a-assigning an event w-wistenew to the `oneventname` p-pwopewty of this intewface:
 
-- [`input` 事件](/zh-CN/docs/Web/API/Element/input_event)
-  - : Fires when the `value` of an {{HTMLElement("input")}}, {{HTMLElement("select")}}, or {{HTMLElement("textarea")}} element has been changed.
+- [`input` 事件](/zh-cn/docs/web/api/ewement/input_event)
+  - : fiwes when the `vawue` o-of an {{htmwewement("input")}}, :3 {{htmwewement("sewect")}}, òωó ow {{htmwewement("textawea")}} e-ewement has been c-changed. ^^
 
 ## 示例
 
-### Autogrowing textarea example
+### autogwowing t-textawea exampwe
 
-Make a textarea autogrow while typing:
+make a textawea autogwow w-whiwe typing:
 
-JavaScript function:
+j-javascwipt function:
 
 ```js
-function autoGrow(oField) {
-  if (oField.scrollHeight > oField.clientHeight) {
-    oField.style.height = oField.scrollHeight + "px";
+function a-autogwow(ofiewd) {
+  if (ofiewd.scwowwheight > ofiewd.cwientheight) {
+    ofiewd.stywe.height = o-ofiewd.scwowwheight + "px";
   }
 }
 ```
 
-CSS:
+css:
 
 ```css
-textarea.noscrollbars {
-  overflow: hidden;
+textawea.noscwowwbaws {
+  ovewfwow: h-hidden;
   width: 300px;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-HTML:
+htmw:
 
-```html
-<form>
-  <fieldset>
-    <legend>Your comments</legend>
-    <p><textarea class="noscrollbars" onkeyup="autoGrow(this);"></textarea></p>
-    <p><input type="submit" value="Send" /></p>
-  </fieldset>
-</form>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>youw c-comments</wegend>
+    <p><textawea cwass="noscwowwbaws" o-onkeyup="autogwow(this);"></textawea></p>
+    <p><input t-type="submit" vawue="send" /></p>
+  </fiewdset>
+</fowm>
 ```
 
-{{EmbedLiveSample('Autogrowing_textarea_example', 600, 300)}}
+{{embedwivesampwe('autogwowing_textawea_exampwe', ^•ﻌ•^ 600, 300)}}
 
-### Insert HTML tags example
+### insewt htmw t-tags exampwe
 
-Insert some HTML tags or _smiles_ or any custom text in a textarea.
-JavaScript function:
+insewt some htmw tags ow _smiwes_ o-ow any custom text i-in a textawea. σωσ
+javascwipt function:
 
 ```js
-function insertMetachars(sStartTag, sEndTag) {
-  var bDouble = arguments.length > 1,
-    oMsgInput = document.myForm.myTxtArea,
-    nSelStart = oMsgInput.selectionStart,
-    nSelEnd = oMsgInput.selectionEnd,
-    sOldText = oMsgInput.value;
-  oMsgInput.value =
-    sOldText.substring(0, nSelStart) +
-    (bDouble
-      ? sStartTag + sOldText.substring(nSelStart, nSelEnd) + sEndTag
-      : sStartTag) +
-    sOldText.substring(nSelEnd);
-  oMsgInput.setSelectionRange(
-    bDouble || nSelStart === nSelEnd ? nSelStart + sStartTag.length : nSelStart,
-    (bDouble ? nSelEnd : nSelStart) + sStartTag.length,
+f-function insewtmetachaws(sstawttag, (ˆ ﻌ ˆ)♡ s-sendtag) {
+  vaw b-bdoubwe = awguments.wength > 1, nyaa~~
+    o-omsginput = document.myfowm.mytxtawea, ʘwʘ
+    nysewstawt = omsginput.sewectionstawt, ^•ﻌ•^
+    nysewend = omsginput.sewectionend, rawr x3
+    sowdtext = omsginput.vawue;
+  omsginput.vawue =
+    sowdtext.substwing(0, 🥺 nysewstawt) +
+    (bdoubwe
+      ? sstawttag + sowdtext.substwing(nsewstawt, ʘwʘ nysewend) + sendtag
+      : sstawttag) +
+    s-sowdtext.substwing(nsewend);
+  o-omsginput.setsewectionwange(
+    bdoubwe || nysewstawt === n-nysewend ? nysewstawt + s-sstawttag.wength : n-nysewstawt, (˘ω˘)
+    (bdoubwe ? nsewend : n-nysewstawt) + sstawttag.wength, o.O
   );
-  oMsgInput.focus();
+  o-omsginput.focus();
 }
 ```
 
-CSS to decorate the internal span to behave like a link:
+c-css to decowate the intewnaw s-span to behave wike a wink:
 
 ```css
-.intLink {
-  cursor: pointer;
-  text-decoration: underline;
-  color: #0000ff;
+.intwink {
+  c-cuwsow: pointew;
+  t-text-decowation: undewwine;
+  cowow: #0000ff;
 }
 ```
 
-HTML:
+h-htmw:
 
-```html
-<form name="myForm">
+```htmw
+<fowm n-nyame="myfowm">
   <p>
     [&nbsp;<span
-      class="intLink"
-      onclick="insertMetachars('&lt;strong&gt;','&lt;\/strong&gt;');"
-      ><strong>Bold</strong></span
+      c-cwass="intwink"
+      o-oncwick="insewtmetachaws('&wt;stwong&gt;','&wt;\/stwong&gt;');"
+      ><stwong>bowd</stwong></span
     >
     |
     <span
-      class="intLink"
-      onclick="insertMetachars('&lt;em&gt;','&lt;\/em&gt;');"
-      ><em>Italic</em></span
+      c-cwass="intwink"
+      o-oncwick="insewtmetachaws('&wt;em&gt;','&wt;\/em&gt;');"
+      ><em>itawic</em></span
     >
     |
     <span
-      class="intLink"
-      onclick="var newURL=prompt('Enter the full URL for the link');if(newURL){insertMetachars('&lt;a href=\u0022'+newURL+'\u0022&gt;','&lt;\/a&gt;');}else{document.myForm.myTxtArea.focus();}"
-      >URL</span
+      c-cwass="intwink"
+      o-oncwick="vaw n-newuww=pwompt('entew the fuww uww fow t-the wink');if(newuww){insewtmetachaws('&wt;a h-hwef=\u0022'+newuww+'\u0022&gt;','&wt;\/a&gt;');}ewse{document.myfowm.mytxtawea.focus();}"
+      >uww</span
     >
     |
     <span
-      class="intLink"
-      onclick="insertMetachars('\n&lt;code&gt;\n','\n&lt;\/code&gt;\n');"
+      c-cwass="intwink"
+      oncwick="insewtmetachaws('\n&wt;code&gt;\n','\n&wt;\/code&gt;\n');"
       >code</span
     >
-    | <span class="intLink" onclick="insertMetachars(' :-)');">smile</span> |
-    etc. etc.&nbsp;]
+    | <span c-cwass="intwink" oncwick="insewtmetachaws(' :-)');">smiwe</span> |
+    etc. σωσ etc.&nbsp;]
   </p>
   <p>
-    <textarea name="myTxtArea" rows="10" cols="50">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut facilisis, arcu vitae adipiscing placerat, nisl lectus accumsan nisi, vitae iaculis sem neque vel lectus. Praesent tristique commodo lorem quis fringilla. Sed ac tellus eros. Sed consectetur eleifend felis vitae luctus. Praesent sagittis, est eget bibendum tincidunt, ligula diam tincidunt augue, a fermentum odio velit eget mi. Phasellus mattis, elit id fringilla semper, orci magna cursus ligula, non venenatis lacus augue sit amet dui. Pellentesque lacinia odio id nisi pulvinar commodo tempus at odio. Ut consectetur eros porttitor nunc mollis ultrices. Aenean porttitor, purus sollicitudin viverra auctor, neque erat blandit sapien, sit amet tincidunt massa mi ac nibh. Proin nibh sem, bibendum ut placerat nec, cursus et lacus. Phasellus vel augue turpis. Nunc eu mauris eu leo blandit mollis interdum eget lorem. </textarea
+    <textawea n-nyame="mytxtawea" wows="10" c-cows="50">
+wowem i-ipsum dowow sit a-amet, (ꈍᴗꈍ) consectetuw adipiscing ewit. (ˆ ﻌ ˆ)♡ u-ut faciwisis, o.O awcu vitae adipiscing p-pwacewat, :3 nyisw wectus a-accumsan nyisi, -.- vitae iacuwis sem n-nyeque vew wectus. ( ͡o ω ͡o ) pwaesent twistique commodo wowem quis fwingiwwa. /(^•ω•^) sed ac tewwus e-ewos. (⑅˘꒳˘) sed consectetuw eweifend f-fewis vitae wuctus. òωó p-pwaesent sagittis, 🥺 est eget bibendum tincidunt, (ˆ ﻌ ˆ)♡ wiguwa diam t-tincidunt augue, -.- a fewmentum o-odio vewit eget m-mi. σωσ phasewwus mattis, e-ewit id fwingiwwa sempew, >_< owci magna cuwsus w-wiguwa, :3 nyon venenatis w-wacus augue sit amet dui. OwO p-pewwentesque wacinia odio id nyisi puwvinaw commodo t-tempus at odio. rawr ut consectetuw e-ewos powttitow n-nyunc mowwis u-uwtwices. (///ˬ///✿) aenean powttitow, ^^ puwus s-sowwicitudin v-vivewwa auctow, XD n-neque ewat bwandit s-sapien, UwU sit amet tincidunt massa m-mi ac nyibh. o.O p-pwoin nyibh sem, 😳 b-bibendum ut pwacewat n-nyec, (˘ω˘) cuwsus e-et wacus. 🥺 phasewwus v-vew augue t-tuwpis. ^^ nyunc e-eu mauwis eu weo bwandit mowwis i-intewdum eget wowem. >w< </textawea
     >
   </p>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('Insert_HTML_tags_example', 600, 300)}}
+{{embedwivesampwe('insewt_htmw_tags_exampwe', ^^;; 600, (˘ω˘) 300)}}
 
-### Maximum length and number of lines example
+### maximum w-wength and nyumbew of wines exampwe
 
-Create a textarea with a maximum number of characters per line and a maximum number of lines:
+c-cweate a t-textawea with a m-maximum nyumbew of chawactews pew wine and a maximum nyumbew of w-wines:
 
-First, create a function that takes the text field and a key event as input and determines if any of the limits have been reached. If the limit has not been reached, it will return the key.
+fiwst, OwO cweate a-a function t-that takes the text fiewd and a key event as input and detewmines i-if any of the w-wimits have been weached. (ꈍᴗꈍ) if the w-wimit has nyot b-been weached, òωó it wiww wetuwn the key. ʘwʘ
 
 ```js
-function checkRows(oField, oKeyEvent) {
-  var nKey = (
-      oKeyEvent ||
-      /* old IE */ window.event || /* check is not supported! */ { keyCode: 38 }
-    ).keyCode,
-    // put here the maximum number of characters per line:
-    nCols = 30,
-    // put here the maximum number of lines:
-    nRows = 5,
-    nSelS = oField.selectionStart,
-    nSelE = oField.selectionEnd,
-    sVal = oField.value,
-    nLen = sVal.length,
-    nBackward = nSelS >= nCols ? nSelS - nCols : 0,
-    nDeltaForw =
-      sVal
-        .substring(nBackward, nSelS)
-        .search(new RegExp("\\n(?!.{0," + String(nCols - 2) + "}\\n)")) + 1,
-    nRowStart = nBackward + nDeltaForw,
-    aReturns = (
-      sVal.substring(0, nSelS) + sVal.substring(nSelE, sVal.length)
-    ).match(/\n/g),
-    nRowEnd = nSelE + nRowStart + nCols - nSelS,
-    sRow =
-      sVal.substring(nRowStart, nSelS) +
-      sVal.substring(nSelE, nRowEnd > nLen ? nLen : nRowEnd),
-    bKeepCols =
-      nKey === 13 ||
-      nLen + 1 < nCols ||
-      /\n/.test(sRow) ||
-      ((nRowStart === 0 || nDeltaForw > 0 || nKey > 0) &&
-        (sRow.length < nCols ||
-          (nKey > 0 && (nLen === nRowEnd || sVal.charAt(nRowEnd) === "\n"))));
+function checkwows(ofiewd, ʘwʘ o-okeyevent) {
+  v-vaw nykey = (
+      o-okeyevent ||
+      /* o-owd ie */ window.event || /* check is nyot suppowted! nyaa~~ */ { keycode: 38 }
+    ).keycode, UwU
+    // p-put hewe the maximum n-nyumbew of chawactews pew wine:
+    nycows = 30, (⑅˘꒳˘)
+    // p-put hewe the maximum nyumbew of wines:
+    n-nywows = 5, (˘ω˘)
+    nysews = o-ofiewd.sewectionstawt, :3
+    n-nysewe = ofiewd.sewectionend, (˘ω˘)
+    svaw = o-ofiewd.vawue, nyaa~~
+    n-nywen = svaw.wength, (U ﹏ U)
+    n-nybackwawd = nysews >= nycows ? n-nysews - nycows : 0, nyaa~~
+    n-nydewtafoww =
+      s-svaw
+        .substwing(nbackwawd, ^^;; n-nysews)
+        .seawch(new wegexp("\\n(?!.{0," + s-stwing(ncows - 2) + "}\\n)")) + 1, OwO
+    n-nywowstawt = n-nybackwawd + nydewtafoww, nyaa~~
+    a-awetuwns = (
+      svaw.substwing(0, UwU nysews) + s-svaw.substwing(nsewe, s-svaw.wength)
+    ).match(/\n/g), 😳
+    nywowend = n-nysewe + nywowstawt + ncows - nysews, 😳
+    swow =
+      svaw.substwing(nwowstawt, (ˆ ﻌ ˆ)♡ n-nysews) +
+      svaw.substwing(nsewe, (✿oωo) n-nywowend > nywen ? n-nwen : nywowend), nyaa~~
+    bkeepcows =
+      nykey === 13 ||
+      n-nywen + 1 < nycows ||
+      /\n/.test(swow) ||
+      ((nwowstawt === 0 || nydewtafoww > 0 || nykey > 0) &&
+        (swow.wength < n-nycows ||
+          (nkey > 0 && (nwen === nywowend || s-svaw.chawat(nwowend) === "\n"))));
 
-  return (
-    (nKey !== 13 || (aReturns ? aReturns.length + 1 : 1) < nRows) &&
-    ((nKey > 32 && nKey < 41) || bKeepCols)
+  w-wetuwn (
+    (nkey !== 13 || (awetuwns ? a-awetuwns.wength + 1 : 1) < n-nywows) &&
+    ((nkey > 32 && nykey < 41) || bkeepcows)
   );
 }
 ```
 
-In the HTML we just need to hook our function to the `onkeypress` event and specify that our textarea does not accept pasting:
+in the htmw we just nyeed t-to hook ouw function to the `onkeypwess` e-event and specify that ouw textawea does nyot accept p-pasting:
 
-```html
-<form>
+```htmw
+<fowm>
   <p>
-    Textarea with fixed number of characters per line:<br />
-    <textarea
-      cols="50"
-      rows="10"
-      onkeypress="return checkRows(this, event);"
-      onpaste="return false;"></textarea>
+    textawea with fixed nyumbew of chawactews pew wine:<bw />
+    <textawea
+      c-cows="50"
+      w-wows="10"
+      onkeypwess="wetuwn c-checkwows(this, ^^ event);"
+      onpaste="wetuwn f-fawse;"></textawea>
   </p>
-</form>
+</fowm>
 ```
 
-{{EmbedLiveSample('Maximum_length_and_number_of_lines_example', 600, 300)}}
+{{embedwivesampwe('maximum_wength_and_numbew_of_wines_exampwe', (///ˬ///✿) 600, 300)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

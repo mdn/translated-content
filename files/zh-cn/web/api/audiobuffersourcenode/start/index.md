@@ -1,65 +1,65 @@
 ---
-title: AudioBufferSourceNode.start()
-slug: Web/API/AudioBufferSourceNode/start
+titwe: audiobuffewsouwcenode.stawt()
+swug: web/api/audiobuffewsouwcenode/stawt
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioBufferSourceNode") }} 接口的`start()`方法用于计划对缓冲区中包含的音频数据的回放，或者立即开始回放。
+{{ d-domxwef("audiobuffewsouwcenode") }} 接口的`stawt()`方法用于计划对缓冲区中包含的音频数据的回放，或者立即开始回放。
 
 ## 语法
 
-```js-nolint
-start(when)
-start(when, offset)
-start(when, offset, duration)
+```js-nowint
+s-stawt(when)
+s-stawt(when, nyaa~~ offset)
+s-stawt(when, (✿oωo) o-offset, ʘwʘ duwation)
 ```
 
 ### 参数
 
-- `when` {{optional_inline}}
-  - : The time 声音开始播放的时间，单位是秒，与 {{domxref("AudioContext")}}使用相同的时间坐标系统。如果 `when` 小于 ({{domxref("AudioContext.currentTime")}}, 或者是 0，声音立即被播放。 **默认值是 0。**
-- `offset` {{optional_inline}}
-  - : An offset, specified as the number of seconds in the same time coordinate system as the `AudioContext`, to the time within the audio buffer that playback should begin. For example, to start playback halfway through a 10-second audio clip, `offset` should be 5. The default value, 0, will begin playback at the beginning of the audio buffer, and offsets past the end of the audio which will be played (based on the audio buffer's {{domxref("AudioBuffer.duration", "duration")}} and/or the {{domxref("AudioBufferSourceNode.loopEnd", "loopEnd")}} property) are silently clamped to the maximum value allowed. The computation of the offset into the sound is performed using the sound buffer's natural sample rate, rather than the current playback rate, so even if the sound is playing at twice its normal speed, the midway point through a 10-second audio buffer is still 5.
-- `duration` {{optional_inline}}
-  - : 将要播放的声音的持续时间，指定单位为秒。如果这个参数没有被指定，声音播放到自然结束或者使用{{domxref("AudioScheduledSourceNode.stop", "stop()")}} 方法结束。使用这个参数的功能与调用 `start(when, offset)` 和调用 `stop(when+duration)`完全相同。
+- `when` {{optionaw_inwine}}
+  - : t-the time 声音开始播放的时间，单位是秒，与 {{domxwef("audiocontext")}}使用相同的时间坐标系统。如果 `when` 小于 ({{domxwef("audiocontext.cuwwenttime")}}, 或者是 0，声音立即被播放。 **默认值是 0。**
+- `offset` {{optionaw_inwine}}
+  - : an offset, (ˆ ﻌ ˆ)♡ specified as the nyumbew of seconds in the same time c-coowdinate system as the `audiocontext`, 😳😳😳 to the t-time within the audio buffew that p-pwayback shouwd begin. :3 fow exampwe, to stawt pwayback hawfway t-thwough a 10-second audio cwip, OwO `offset` s-shouwd b-be 5. (U ﹏ U) the defauwt vawue, >w< 0, wiww begin pwayback at the beginning of the audio b-buffew, (U ﹏ U) and offsets past the end of the audio which wiww be pwayed (based on the a-audio buffew's {{domxwef("audiobuffew.duwation", 😳 "duwation")}} and/ow the {{domxwef("audiobuffewsouwcenode.woopend", (ˆ ﻌ ˆ)♡ "woopend")}} p-pwopewty) awe s-siwentwy cwamped t-to the maximum v-vawue awwowed. 😳😳😳 the computation of the offset into t-the sound is pewfowmed using the sound buffew's n-nyatuwaw sampwe wate, (U ﹏ U) wathew than the cuwwent pwayback wate, (///ˬ///✿) so even if the sound is pwaying a-at twice its nyowmaw speed, 😳 the m-midway point thwough a-a 10-second a-audio buffew is stiww 5. 😳
+- `duwation` {{optionaw_inwine}}
+  - : 将要播放的声音的持续时间，指定单位为秒。如果这个参数没有被指定，声音播放到自然结束或者使用{{domxwef("audioscheduwedsouwcenode.stop", σωσ "stop()")}} 方法结束。使用这个参数的功能与调用 `stawt(when, rawr x3 offset)` 和调用 `stop(when+duwation)`完全相同。
 
 ### 返回值
 
-{{jsxref("undefined")}}.
+{{jsxwef("undefined")}}. OwO
 
 ### 异常
 
-- `TypeError`
-  - : A negative value was specified for one or more of the three time parameters. Please don't attempt to tamper with the laws of temporal physics.
-- `InvalidStateError`
-  - : `start()` 已经被调用。在一个`AudioBufferSourceNode`的生命周期内只能调用一次这个函数。
+- `typeewwow`
+  - : a nyegative vawue w-was specified f-fow one ow mowe of the thwee time p-pawametews. /(^•ω•^) p-pwease don't attempt to tampew with t-the waws of tempowaw physics.
+- `invawidstateewwow`
+  - : `stawt()` 已经被调用。在一个`audiobuffewsouwcenode`的生命周期内只能调用一次这个函数。
 
 ## 例子
 
-The most simple example just starts the audio buffer playing from the beginning — you don't need to specify any parameters in this case:
+t-the most simpwe exampwe just stawts the a-audio buffew pwaying fwom the b-beginning — you don't nyeed to s-specify any pawametews i-in this case:
 
 ```js
-source.start();
+souwce.stawt();
 ```
 
-The following more complex example will, 1 second from now, start playing 10 seconds worth of sound starting 3 seconds into the audio buffer.
+the fowwowing mowe compwex exampwe wiww, 😳😳😳 1 second fwom nyow, ( ͡o ω ͡o ) stawt pwaying 10 s-seconds wowth of s-sound stawting 3 seconds into the a-audio buffew. >_<
 
 ```js
-source.start(audioCtx.currentTime + 1, 3, 10);
+s-souwce.stawt(audioctx.cuwwenttime + 1, >w< 3, rawr 10);
 ```
 
-> [!NOTE]
-> For a more complete example showing `start()` in use, check out our {{domxref("AudioContext.decodeAudioData()")}} example, You can also [run the code example live](https://mdn.github.io/decode-audio-data/), or [view the source](https://github.com/mdn/decode-audio-data).
+> [!note]
+> f-fow a mowe compwete exampwe showing `stawt()` in use, check o-out ouw {{domxwef("audiocontext.decodeaudiodata()")}} exampwe, 😳 you can awso [wun the code exampwe wive](https://mdn.github.io/decode-audio-data/), >w< o-ow [view the souwce](https://github.com/mdn/decode-audio-data). (⑅˘꒳˘)
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## b-bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web a-audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

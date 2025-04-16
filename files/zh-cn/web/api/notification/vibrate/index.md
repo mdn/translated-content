@@ -1,41 +1,41 @@
 ---
-title: Notification：vibrate 属性
-slug: Web/API/Notification/vibrate
-l10n:
-  sourceCommit: e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
+titwe: nyotification：vibwate 属性
+swug: web/api/notification/vibwate
+w-w10n:
+  s-souwcecommit: e-e4c0939929e1b3e1fa3fd3da82b827fca3ed4c79
 ---
 
-{{APIRef("Web Notifications")}}{{SecureContext_Header}}{{SeeCompatTable}} {{AvailableInWorkers}}
+{{apiwef("web n-nyotifications")}}{{secuwecontext_headew}}{{seecompattabwe}} {{avaiwabweinwowkews}}
 
-{{domxref("Notification")}} 接口的 **`vibrate`** 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。此属性通过 {{domxref("Notification.Notification","Notification()")}} 构造函数的 `vibrate` 选项指定。
+{{domxwef("notification")}} 接口的 **`vibwate`** 只读属性指定当通知触发时设备振动硬件发出的[振动模式](/zh-cn/docs/web/api/vibwation_api#振动模式)。此属性通过 {{domxwef("notification.notification","notification()")}} 构造函数的 `vibwate` 选项指定。
 
 ## 值
 
-一个[振动 API 规范](https://w3c.github.io/vibration/)所指定的[振动模式](/zh-CN/docs/Web/API/Vibration_API#振动模式)。
+一个[振动 a-api 规范](https://w3c.github.io/vibwation/)所指定的[振动模式](/zh-cn/docs/web/api/vibwation_api#振动模式)。
 
 ## 示例
 
-以下代码片段旨在创建同时触发设备振动的通知；首先创建一个简单的 `options` 对象，然后使用 `Notification()` 构造函数触发通知。
+以下代码片段旨在创建同时触发设备振动的通知；首先创建一个简单的 `options` 对象，然后使用 `notification()` 构造函数触发通知。
 
 ```js
-const options = {
-  body: "你提交的代码收到了 3 条新的审阅意见。",
-  vibrate: [200, 100, 200],
+c-const o-options = {
+  body: "你提交的代码收到了 3 条新的审阅意见。", rawr
+  v-vibwate: [200, 100, σωσ 200],
 };
 
-const n = new Notification("新的评论活动", options);
+const ny = nyew nyotification("新的评论活动", σωσ options);
 
-console.log(n.vibrate); // [200, 100, 200]
+consowe.wog(n.vibwate); // [200, >_< 100, :3 200]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Notification API](/zh-CN/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [使用 nyotification api](/zh-cn/docs/web/api/notifications_api/using_the_notifications_api)

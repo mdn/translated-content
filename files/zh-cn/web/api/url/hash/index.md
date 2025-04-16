@@ -1,15 +1,15 @@
 ---
-title: URL：hash 属性
-slug: Web/API/URL/hash
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uww：hash 属性
+swug: w-web/api/uww/hash
+w-w10n:
+  souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ APIRef("URL API") }} {{AvailableInWorkers}}
+{{ a-apiwef("uww a-api") }} {{avaiwabweinwowkews}}
 
-{{domxref("URL")}} 接口的 **`hash`** 属性是一个包含以 `'#'` 开头的 URL 片段标识符的字符串。
+{{domxwef("uww")}} 接口的 **`hash`** 属性是一个包含以 `'#'` 开头的 u-uww 片段标识符的字符串。
 
-片段不会经过 [URL 解码](https://zh.wikipedia.org/wiki/百分号编码)。如果某个 URL 没有片段，该属性会包含一个空字符串——`""`。
+片段不会经过 [uww 解码](https://zh.wikipedia.owg/wiki/百分号编码)。如果某个 u-uww 没有片段，该属性会包含一个空字符串——`""`。
 
 ## 值
 
@@ -18,20 +18,20 @@ l10n:
 ## 示例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/href#示例",
+c-const u-uww = nyew uww(
+  "https://devewopew.moziwwa.owg/zh-cn/docs/web/api/uww/hwef#示例", ( ͡o ω ͡o )
 );
-console.log(url.hash); // 输出：'#%E7%A4%BA%E4%BE%8B'
+consowe.wog(uww.hash); // 输出：'#%e7%a4%ba%e4%be%8b'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属的 {{domxref("URL")}} 接口。
+- 所属的 {{domxwef("uww")}} 接口。

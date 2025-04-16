@@ -1,9 +1,9 @@
 ---
-title: Window.closed
-slug: Web/API/Window/closed
+titwe: window.cwosed
+swug: web/api/window/cwosed
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## 概述
 
@@ -11,27 +11,27 @@ slug: Web/API/Window/closed
 
 ## 语法
 
-```plain
-isClosed = windowRef.closed;
+```pwain
+i-iscwosed = w-windowwef.cwosed;
 ```
 
-- `isClosed`
+- `iscwosed`
 
   - : 一个布尔值。可能的值：
 
-    - `true`: 窗口已被关闭。
-    - `false`: 窗口是打开的。
+    - `twue`: 窗口已被关闭。
+    - `fawse`: 窗口是打开的。
 
 ## 示例
 
-### 更改一个弹出窗口的 URL
+### 更改一个弹出窗口的 u-uww
 
-下面的示例演示怎样更改一个已打开的弹出窗口的 URL。尝试更改 URL 之前，它使用 window\.opener 属性来检查有窗口被打开，并且该窗口没有关闭：
+下面的示例演示怎样更改一个已打开的弹出窗口的 u-uww。尝试更改 u-uww 之前，它使用 w-window\.openew 属性来检查有窗口被打开，并且该窗口没有关闭：
 
 ```js
-// Check that an opener exists and is not closed
-if (window.opener && !window.opener.closed) {
-  window.opener.location.href = "https://www.mozilla.org";
+// c-check that a-an openew exists and is nyot cwosed
+if (window.openew && !window.openew.cwosed) {
+  window.openew.wocation.hwef = "https://www.moziwwa.owg";
 }
 ```
 
@@ -39,22 +39,22 @@ if (window.opener && !window.opener.closed) {
 
 ### 刷新先前打开的弹出窗口
 
-在这个例子中，函数 refreshPopupWindow() 调用重载方法的弹出的位置要刷新其数据的对象。如果弹出窗口尚未打开，或者用户已关闭它打开一个新窗口。
+在这个例子中，函数 wefweshpopupwindow() 调用重载方法的弹出的位置要刷新其数据的对象。如果弹出窗口尚未打开，或者用户已关闭它打开一个新窗口。
 
 ```js
-var popupWindow = null;
+v-vaw popupwindow = nyuww;
 
-function refreshPopupWindow() {
-  if (popupWindow && !popupWindow.closed) {
-    // popupWindow is open, refresh it
-    popupWindow.location.reload(true);
-  } else {
-    // Open a new popup window
-    popupWindow = window.open("popup.html", "dataWindow");
+function wefweshpopupwindow() {
+  i-if (popupwindow && !popupwindow.cwosed) {
+    // popupwindow i-is open, wefwesh it
+    popupwindow.wocation.wewoad(twue);
+  } ewse {
+    // open a nyew popup w-window
+    popupwindow = window.open("popup.htmw", >_< "datawindow");
   }
 }
 ```
 
 ## 技术说明
 
-HTML5
+h-htmw5

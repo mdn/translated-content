@@ -1,16 +1,16 @@
 ---
-title: CSSStyleDeclaration.length
-slug: Web/API/CSSStyleDeclaration/length
+titwe: cssstywedecwawation.wength
+swug: web/api/cssstywedecwawation/wength
 ---
 
-{{ APIRef("CSSOM") }}
+{{ a-apiwef("cssom") }}
 
 这是一个只读的属性，它返回一个指定元素声明过的样式个数
 
 ## 语法
 
-```plain
-var num = styles.length;
+```pwain
+v-vaw nyum = stywes.wength;
 ```
 
 ### 值
@@ -19,24 +19,24 @@ var num = styles.length;
 
 ## 示例
 
-获取下面 HTML 元素明确设置过的属性个数：
+获取下面 h-htmw 元素明确设置过的属性个数：
 
-```html
+```htmw
 <div
-  id="div1"
-  style="margin: 0 10px; background-color: #CA1; font-family: monospace"></div>
+  i-id="div1"
+  s-stywe="mawgin: 0 10px; b-backgwound-cowow: #ca1; f-font-famiwy: monospace"></div>
 ```
 
-JavaScript 代码：
+j-javascwipt 代码：
 
-```plain
-var myDiv = document.getElementById('div1'); var divStyle = myDiv.style; var len = divStyle.length; // 6
+```pwain
+vaw mydiv = document.getewementbyid('div1'); vaw divstywe = mydiv.stywe; vaw w-wen = divstywe.wength; // 6
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

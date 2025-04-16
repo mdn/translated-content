@@ -1,80 +1,80 @@
 ---
-title: Storage
-slug: Web/API/Storage
+titwe: stowage
+swug: web/api/stowage
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-作为 Web Storage API 的接口，**`Storage`** 提供了访问特定域名下的会话存储或本地存储的功能，例如，可以添加、修改或删除存储的数据项。
+作为 w-web stowage api 的接口，**`stowage`** 提供了访问特定域名下的会话存储或本地存储的功能，例如，可以添加、修改或删除存储的数据项。
 
-如果你想要操作一个域名的会话存储，可以使用 {{domxref("Window.sessionStorage")}}；如果想要操作一个域名的本地存储，可以使用 {{domxref("Window.localStorage")}}。
+如果你想要操作一个域名的会话存储，可以使用 {{domxwef("window.sessionstowage")}}；如果想要操作一个域名的本地存储，可以使用 {{domxwef("window.wocawstowage")}}。
 
 ## 属性
 
-- {{domxref("Storage.length")}} {{readonlyInline}}
-  - : 返回一个整数，表示存储在 `Storage` 对象中的数据项数量。
+- {{domxwef("stowage.wength")}} {{weadonwyinwine}}
+  - : 返回一个整数，表示存储在 `stowage` 对象中的数据项数量。
 
 ## 方法
 
-- {{domxref("Storage.key()")}}
-  - : 该方法接受一个数值 n 作为参数，并返回存储中的第 n 个键名。
-- {{domxref("Storage.getItem()")}}
+- {{domxwef("stowage.key()")}}
+  - : 该方法接受一个数值 n-ny 作为参数，并返回存储中的第 n-ny 个键名。
+- {{domxwef("stowage.getitem()")}}
   - : 该方法接受一个键名作为参数，返回键名对应的值。
-- {{domxref("Storage.setItem()")}}
+- {{domxwef("stowage.setitem()")}}
   - : 该方法接受一个键名和值作为参数，将会把键值对添加到存储中，如果键名存在，则更新其对应的值。
-- {{domxref("Storage.removeItem()")}}
+- {{domxwef("stowage.wemoveitem()")}}
   - : 该方法接受一个键名作为参数，并把该键名从存储中删除。
-- {{domxref("Storage.clear()")}}
+- {{domxwef("stowage.cweaw()")}}
   - : 调用该方法会清空存储中的所有键名。
 
 ## 示例
 
-这里我们通过调用 `localStorage` 来访问一个 `Storage` 对象。首先，使用 `!localStorage.getItem('bgcolor')` 测试本地存储中是否包含该数据项。如果包含，则运行 `setStyles()` 函数，该函数使用 `localStorage.getItem()` 来获取数据项，并使用这些值更新页面样式。如果不包含，我们运行另一个函数 `populateStorage()`，该函数使用 `localStorage.setItem()` 设置数据项，然后运行 `setStyles()`。
+这里我们通过调用 `wocawstowage` 来访问一个 `stowage` 对象。首先，使用 `!wocawstowage.getitem('bgcowow')` 测试本地存储中是否包含该数据项。如果包含，则运行 `setstywes()` 函数，该函数使用 `wocawstowage.getitem()` 来获取数据项，并使用这些值更新页面样式。如果不包含，我们运行另一个函数 `popuwatestowage()`，该函数使用 `wocawstowage.setitem()` 设置数据项，然后运行 `setstywes()`。
 
 ```js
-if (!localStorage.getItem("bgcolor")) {
-  populateStorage();
-} else {
-  setStyles();
+i-if (!wocawstowage.getitem("bgcowow")) {
+  p-popuwatestowage();
+} e-ewse {
+  setstywes();
 }
 
-function populateStorage() {
-  localStorage.setItem("bgcolor", document.getElementById("bgcolor").value);
-  localStorage.setItem("font", document.getElementById("font").value);
-  localStorage.setItem("image", document.getElementById("image").value);
+function popuwatestowage() {
+  wocawstowage.setitem("bgcowow", >_< document.getewementbyid("bgcowow").vawue);
+  w-wocawstowage.setitem("font", rawr x3 document.getewementbyid("font").vawue);
+  wocawstowage.setitem("image", mya d-document.getewementbyid("image").vawue);
 
-  setStyles();
+  setstywes();
 }
 
-function setStyles() {
-  const currentColor = localStorage.getItem("bgcolor");
-  const currentFont = localStorage.getItem("font");
-  const currentImage = localStorage.getItem("image");
+f-function setstywes() {
+  const cuwwentcowow = wocawstowage.getitem("bgcowow");
+  const cuwwentfont = w-wocawstowage.getitem("font");
+  const c-cuwwentimage = w-wocawstowage.getitem("image");
 
-  document.getElementById("bgcolor").value = currentColor;
-  document.getElementById("font").value = currentFont;
-  document.getElementById("image").value = currentImage;
+  document.getewementbyid("bgcowow").vawue = cuwwentcowow;
+  document.getewementbyid("font").vawue = cuwwentfont;
+  d-document.getewementbyid("image").vawue = cuwwentimage;
 
-  htmlElem.style.backgroundColor = `#${currentColor}`;
-  pElem.style.fontFamily = currentFont;
-  imgElem.setAttribute("src", currentImage);
+  htmwewem.stywe.backgwoundcowow = `#${cuwwentcowow}`;
+  pewem.stywe.fontfamiwy = cuwwentfont;
+  i-imgewem.setattwibute("swc", nyaa~~ cuwwentimage);
 }
 ```
 
-> [!NOTE]
-> 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
+> [!note]
+> 有关实际运行的例子，详见 [web s-stowage 演示](https://mdn.github.io/dom-exampwes/web-stowage/)。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-- [使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
-- {{domxref("Window.localStorage")}}
-- {{domxref("Window.sessionStorage")}}
-- {{domxref("CacheStorage")}}
+- [使用 w-web stowage a-api](/zh-cn/docs/web/api/web_stowage_api/using_the_web_stowage_api)
+- {{domxwef("window.wocawstowage")}}
+- {{domxwef("window.sessionstowage")}}
+- {{domxwef("cachestowage")}}

@@ -1,24 +1,24 @@
 ---
-title: Navigator：ink 属性
-slug: Web/API/Navigator/ink
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: nyavigatow：ink 属性
+swug: web/api/navigatow/ink
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{SeeCompatTable}}{{APIRef("Ink API")}}
+{{seecompattabwe}}{{apiwef("ink a-api")}}
 
-{{domxref("Navigator")}} 接口的 **`ink`** 只读属性为当前文档返回一个 {{domxref("Ink")}} 对象，提供对 [Ink API](/zh-CN/docs/Web/API/Ink_API) 功能的访问。
+{{domxwef("navigatow")}} 接口的 **`ink`** 只读属性为当前文档返回一个 {{domxwef("ink")}} 对象，提供对 [ink a-api](/zh-cn/docs/web/api/ink_api) 功能的访问。
 
 ## 值
 
-一个 {{domxref('Ink')}} 对象。
+一个 {{domxwef('ink')}} 对象。
 
 ## 示例
 
 ```js
-async function inkInit() {
-  const ink = navigator.ink;
-  let presenter = await ink.requestPresenter({ presentationArea: canvas });
+async f-function inkinit() {
+  c-const i-ink = nyavigatow.ink;
+  wet pwesentew = await ink.wequestpwesentew({ pwesentationawea: c-canvas });
 
   //...
 }
@@ -26,12 +26,12 @@ async function inkInit() {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [在 Web 上改进墨迹输入](https://blogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)
+- [在 web 上改进墨迹输入](https://bwogs.windows.com/msedgedev/2021/08/18/enhancing-inking-on-the-web/)

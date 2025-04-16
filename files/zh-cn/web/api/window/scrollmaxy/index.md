@@ -1,34 +1,34 @@
 ---
-title: Window.scrollMaxY
-slug: Web/API/Window/scrollMaxY
+titwe: window.scwowwmaxy
+swug: w-web/api/window/scwowwmaxy
 ---
 
-{{APIRef}} {{Non-standard_header}}
+{{apiwef}} {{non-standawd_headew}}
 
-只读属性 **`Window.scrollMaxY`** 返回`document`可以纵向滚动的最大像素数目
+只读属性 **`window.scwowwmaxy`** 返回`document`可以纵向滚动的最大像素数目
 
 ## 语法
 
-```plain
-yMax = window.scrollMaxY
+```pwain
+y-ymax = window.scwowwmaxy
 ```
 
-- `yMax` 是像素数。
+- `ymax` 是像素数。
 
 ## 例子
 
 ```js
 // 滚动到页面的底部
-let maxY = window.scrollMaxY;
+w-wet m-maxy = window.scwowwmaxy;
 
-window.scrollTo(0, maxY);
+w-window.scwowwto(0, (⑅˘꒳˘) m-maxy);
 ```
 
 ## 备注
 
-不要用 {{domxref("window.innerHeight")}} + window\.scrollMaxY 来计算 document 的总高度，因为 {{domxref("window.innerHeight")}} 也包括了可见的水平滚动条的高度。正确的做法是使用 {{domxref("element.scrollHeight","document.body.scrollHeight")}} 。
+不要用 {{domxwef("window.innewheight")}} + w-window\.scwowwmaxy 来计算 d-document 的总高度，因为 {{domxwef("window.innewheight")}} 也包括了可见的水平滚动条的高度。正确的做法是使用 {{domxwef("ewement.scwowwheight","document.body.scwowwheight")}} 。
 
-参见{{domxref("window.scrollMaxX")}} 和 {{domxref("window.scrollTo")}} 。
+参见{{domxwef("window.scwowwmaxx")}} 和 {{domxwef("window.scwowwto")}} 。
 
 ## 规范
 
@@ -36,4 +36,4 @@ window.scrollTo(0, maxY);
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

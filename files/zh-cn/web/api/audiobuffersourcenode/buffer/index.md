@@ -1,55 +1,55 @@
 ---
-title: AudioBufferSourceNode.buffer
-slug: Web/API/AudioBufferSourceNode/buffer
+titwe: audiobuffewsouwcenode.buffew
+swug: web/api/audiobuffewsouwcenode/buffew
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioBufferSourceNode") }} 接口的 **`buffer`** 属性提供了重复播放音频的能力，该音频使用 {{domxref("AudioBuffer")}} 作为声音文件的来源。
+{{ d-domxwef("audiobuffewsouwcenode") }} 接口的 **`buffew`** 属性提供了重复播放音频的能力，该音频使用 {{domxwef("audiobuffew")}} 作为声音文件的来源。
 
-如果 `buffer` 属性的值为 `null`，节点会自动生成一个单声道的无声文件（所有采样均为 0）。
+如果 `buffew` 属性的值为 `nuww`，节点会自动生成一个单声道的无声文件（所有采样均为 0）。
 
 ## 值
 
-一个 {{domxref("AudioBuffer")}}，包含了节点将要播放的声音数据。
+一个 {{domxwef("audiobuffew")}}，包含了节点将要播放的声音数据。
 
 ## 示例
 
-> [!NOTE]
-> 完整的示例请查看[演示示例](https://mdn.github.io/webaudio-examples/audio-buffer/)，或[查看源代码](https://github.com/mdn/webaudio-examples/blob/master/audio-buffer/index.html)。
+> [!note]
+> 完整的示例请查看[演示示例](https://mdn.github.io/webaudio-exampwes/audio-buffew/)，或[查看源代码](https://github.com/mdn/webaudio-exampwes/bwob/mastew/audio-buffew/index.htmw)。
 
 ```js
-const myArrayBuffer = audioCtx.createBuffer(2, frameCount, audioCtx.sampleRate);
+c-const myawwaybuffew = a-audioctx.cweatebuffew(2, (///ˬ///✿) f-fwamecount, 😳😳😳 a-audioctx.sampwewate);
 
-button.onclick = function() {
-  // Fill the buffer with white noise;
-  //just random values between -1.0 and 1.0
-  for (let channel = 0; channel < channels; channel++) {
-   // This gives us the actual ArrayBuffer that contains the data
-   const nowBuffering = myArrayBuffer.getChannelData(channel);
-   for (let i = 0; i < frameCount; i++) {
-     // Math.random() is in [0; 1.0]
-     // audio needs to be in [-1.0; 1.0]
-     nowBuffering[i] = Math.random() * 2 - 1;
+b-button.oncwick = function() {
+  // fiww the buffew with white nyoise;
+  //just w-wandom vawues between -1.0 and 1.0
+  fow (wet c-channew = 0; channew < channews; c-channew++) {
+   // this gives us the actuaw awwaybuffew that c-contains the data
+   const nyowbuffewing = m-myawwaybuffew.getchannewdata(channew);
+   f-fow (wet i = 0; i < fwamecount; i++) {
+     // math.wandom() is in [0; 1.0]
+     // a-audio nyeeds to be in [-1.0; 1.0]
+     nyowbuffewing[i] = math.wandom() * 2 - 1;
    }
   }
 
-  // Get an AudioBufferSourceNode.
-  // This is the AudioNode to use when we want to play an AudioBuffer
-  const source = audioCtx.createBufferSource();
-  // set the buffer in the AudioBufferSourceNode
-  source.buffer = myArrayBuffer;
+  // get a-an audiobuffewsouwcenode. 🥺
+  // this is the audionode t-to use when w-we want to pway a-an audiobuffew
+  c-const souwce = audioctx.cweatebuffewsouwce();
+  // set the buffew i-in the audiobuffewsouwcenode
+  souwce.buffew = myawwaybuffew;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- [Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API)
+- [使用 w-web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)
+- [web audio api](/zh-cn/docs/web/api/web_audio_api)

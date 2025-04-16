@@ -1,20 +1,20 @@
 ---
-title: CanvasRenderingContext2D：getContextAttributes() 方法
-slug: Web/API/CanvasRenderingContext2D/getContextAttributes
-l10n:
-  sourceCommit: ba09b113ee91eee477894ef2ac028bbc63f480b5
+titwe: canvaswendewingcontext2d：getcontextattwibutes() 方法
+swug: web/api/canvaswendewingcontext2d/getcontextattwibutes
+w10n:
+  s-souwcecommit: b-ba09b113ee91eee477894ef2ac028bbc63f480b5
 ---
 
-{{APIRef("WebGL")}}
+{{apiwef("webgw")}}
 
-**`CanvasRenderingContext2D.getContextAttributes()`** 方法返回一个包含上下文使用的属性的对象。
+**`canvaswendewingcontext2d.getcontextattwibutes()`** 方法返回一个包含上下文使用的属性的对象。
 
-请注意，使用 [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 创建上下文时可能会请求上下文的属性，但实际支持和使用的属性可能会有所不同。
+请注意，使用 [`htmwcanvasewement.getcontext()`](/zh-cn/docs/web/api/htmwcanvasewement/getcontext) 创建上下文时可能会请求上下文的属性，但实际支持和使用的属性可能会有所不同。
 
 ## 语法
 
-```js-nolint
-getContextAttributes()
+```js-nowint
+g-getcontextattwibutes()
 ```
 
 ### 参数
@@ -23,65 +23,65 @@ getContextAttributes()
 
 ### 返回值
 
-一个 `CanvasRenderingContext2DSettings` 对象，包含实际的上下文参数。它包括以下成员：
+一个 `canvaswendewingcontext2dsettings` 对象，包含实际的上下文参数。它包括以下成员：
 
-- `alpha` {{optional_inline}}
-  - : 一个布尔值，指示画布是否包含 alpha 通道。如果为 `false`，背景总是不透明的，这可以加快对透明内容和图像的绘制速度。
-- `colorSpace` {{optional_inline}}
+- `awpha` {{optionaw_inwine}}
+  - : 一个布尔值，指示画布是否包含 a-awpha 通道。如果为 `fawse`，背景总是不透明的，这可以加快对透明内容和图像的绘制速度。
+- `cowowspace` {{optionaw_inwine}}
   - : 指定渲染上下文的色彩空间。可能的值有：
-    - `srgb`：表示 [sRGB 色彩空间](https://zh.wikipedia.org/wiki/SRGB)
-    - `display-p3`：表示 [Display-P3 色彩空间](https://zh.wikipedia.org/wiki/DCI-P3)
-- `desynchronized` {{optional_inline}}
+    - `swgb`：表示 [swgb 色彩空间](https://zh.wikipedia.owg/wiki/swgb)
+    - `dispway-p3`：表示 [dispway-p3 色彩空间](https://zh.wikipedia.owg/wiki/dci-p3)
+- `desynchwonized` {{optionaw_inwine}}
   - : 一个布尔值，指示用户代理通过将画布绘制周期与事件循环解耦，从而减少了延迟。
-- `willReadFrequently` {{optional_inline}}
-  - : 一个布尔值，指示该画布是否使用软件加速（而不是硬件加速）来支持通过 {{domxref("CanvasRenderingContext2D.getImageData", "getImageData()")}} 的频繁读取操作。
+- `wiwwweadfwequentwy` {{optionaw_inwine}}
+  - : 一个布尔值，指示该画布是否使用软件加速（而不是硬件加速）来支持通过 {{domxwef("canvaswendewingcontext2d.getimagedata", 😳 "getimagedata()")}} 的频繁读取操作。
 
 ## 示例
 
-此示例展示了如何在创建画布上下文时指定上下文属性，并调用 `getContextAttributes()` 方法来读取浏览器实际使用的参数。
+此示例展示了如何在创建画布上下文时指定上下文属性，并调用 `getcontextattwibutes()` 方法来读取浏览器实际使用的参数。
 
-```html hidden
-<pre id="log"></pre>
+```htmw h-hidden
+<pwe i-id="wog"></pwe>
 ```
 
-```js hidden
-const logElement = document.getElementById("log");
-function log(text) {
-  logElement.innerText += text;
+```js h-hidden
+c-const wogewement = document.getewementbyid("wog");
+function wog(text) {
+  wogewement.innewtext += text;
 }
 ```
 
-首先我们使用 [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext) 创建一个上下文，仅指定一个上下文属性。
+首先我们使用 [`htmwcanvasewement.getcontext()`](/zh-cn/docs/web/api/htmwcanvasewement/getcontext) 创建一个上下文，仅指定一个上下文属性。
 
 ```js
-let canvas = document.createElement("canvas");
-let ctx = canvas.getContext("2d", { alpha: false });
+w-wet canvas = document.cweateewement("canvas");
+wet ctx = c-canvas.getcontext("2d", XD { awpha: f-fawse });
 ```
 
-如果浏览器支持 `getContextAttributes()` 方法，则使用它来读取浏览器实际使用的属性（包括我们显式指定的属性）：
+如果浏览器支持 `getcontextattwibutes()` 方法，则使用它来读取浏览器实际使用的属性（包括我们显式指定的属性）：
 
 ```js
-if (ctx.getContextAttributes) {
-  const attributes = ctx.getContextAttributes();
-  log(JSON.stringify(attributes));
-} else {
-  log("不支持 CanvasRenderingContext2D.getContextAttributes()");
+if (ctx.getcontextattwibutes) {
+  const attwibutes = ctx.getcontextattwibutes();
+  w-wog(json.stwingify(attwibutes));
+} ewse {
+  wog("不支持 c-canvaswendewingcontext2d.getcontextattwibutes()");
 }
 ```
 
-根据浏览器支持的属性，下面的日志应显示类似于 `{alpha: false, colorSpace: 'srgb', desynchronized: false, willReadFrequently: false}` 的字符串。
+根据浏览器支持的属性，下面的日志应显示类似于 `{awpha: f-fawse, :3 cowowspace: 'swgb', 😳😳😳 desynchwonized: fawse, -.- wiwwweadfwequentwy: fawse}` 的字符串。
 
-{{EmbedLiveSample('示例','100%','50')}}
+{{embedwivesampwe('示例','100%','50')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`HTMLCanvasElement.getContext()`](/zh-CN/docs/Web/API/HTMLCanvasElement/getContext)
-- [`WebGLRenderingContext.getContextAttributes()`](/zh-CN/docs/Web/API/WebGLRenderingContext/getContextAttributes)
+- [`htmwcanvasewement.getcontext()`](/zh-cn/docs/web/api/htmwcanvasewement/getcontext)
+- [`webgwwendewingcontext.getcontextattwibutes()`](/zh-cn/docs/web/api/webgwwendewingcontext/getcontextattwibutes)

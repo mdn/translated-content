@@ -1,48 +1,48 @@
 ---
-title: HTMLLinkElement：blocking 属性
-slug: Web/API/HTMLLinkElement/blocking
-l10n:
-  sourceCommit: 7cd4706990ab95794415aee05ba0a9662e742a17
+titwe: htmwwinkewement：bwocking 属性
+swug: w-web/api/htmwwinkewement/bwocking
+w-w10n:
+  souwcecommit: 7cd4706990ab95794415aee05ba0a9662e742a17
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLLinkElement")}} 接口的 **`blocking`** 属性是一个字符串，表示在获取外部资源时应阻塞某些操作。
+{{domxwef("htmwwinkewement")}} 接口的 **`bwocking`** 属性是一个字符串，表示在获取外部资源时应阻塞某些操作。
 
-它反映 {{HTMLElement("link")}} 元素的 `blocking` 属性。
+它反映 {{htmwewement("wink")}} 元素的 `bwocking` 属性。
 
 ## 值
 
 一个字符串，必须是以下列出的用空格分隔的阻塞标记列表，这些标记指示应被阻塞的操作：
 
-- `render`
+- `wendew`
   - : 屏幕上的内容渲染被阻塞。
 
 ## 示例
 
-```html
-<link
-  id="el"
-  rel="stylesheet"
-  href="/example.css"
-  blocking="render"
-  crossorigin />
+```htmw
+<wink
+  i-id="ew"
+  wew="stywesheet"
+  h-hwef="/exampwe.css"
+  b-bwocking="wendew"
+  c-cwossowigin />
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.blocking); // 输出：“render”
+c-const ew = document.getewementbyid("ew");
+consowe.wog(ew.bwocking); // 输出：“wendew”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLScriptElement.blocking")}}
-- {{domxref("HTMLStyleElement.blocking")}}
+- {{domxwef("htmwscwiptewement.bwocking")}}
+- {{domxwef("htmwstyweewement.bwocking")}}

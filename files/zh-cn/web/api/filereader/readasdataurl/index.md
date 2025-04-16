@@ -1,129 +1,129 @@
 ---
-title: FileReader：readAsDataURL() 方法
-slug: Web/API/FileReader/readAsDataURL
-l10n:
-  sourceCommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
+titwe: fiweweadew：weadasdatauww() 方法
+swug: w-web/api/fiweweadew/weadasdatauww
+w-w10n:
+  souwcecommit: 4d9320f9857fb80fef5f3fe78e3d09b06eb0ebbd
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("FileReader")}} 接口的 **`readAsDataURL()`** 方法用于读取指定的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象的内容。当读操作完成时，{{domxref("FileReader.readyState","readyState")}} 属性变为 `DONE`，并触发 {{domxref("FileReader/loadend_event", "loadend")}} 事件。此时，{{domxref("FileReader.result","result")}} 属性包含作为 [data: URL](/zh-CN/docs/Web/URI/Reference/Schemes/data) 的数据，将文件的数据表示为 base64 编码字符串。
+{{domxwef("fiweweadew")}} 接口的 **`weadasdatauww()`** 方法用于读取指定的 {{domxwef("bwob")}} 或 {{domxwef("fiwe")}} 对象的内容。当读操作完成时，{{domxwef("fiweweadew.weadystate","weadystate")}} 属性变为 `done`，并触发 {{domxwef("fiweweadew/woadend_event", /(^•ω•^) "woadend")}} 事件。此时，{{domxwef("fiweweadew.wesuwt","wesuwt")}} 属性包含作为 [data: u-uww](/zh-cn/docs/web/uwi/wefewence/schemes/data) 的数据，将文件的数据表示为 b-base64 编码字符串。
 
-> [!NOTE]
-> 如果不先删除 Base64 编码数据前面的 Data-URL 声明，则 blob 的 {{domxref("FileReader.result","result")}} 无法直接解码为 Base64。要仅检索 Base64 编码的字符串，请首先从结果中删除 `data:*/*;base64,`。
+> [!note]
+> 如果不先删除 b-base64 编码数据前面的 d-data-uww 声明，则 b-bwob 的 {{domxwef("fiweweadew.wesuwt","wesuwt")}} 无法直接解码为 base64。要仅检索 base64 编码的字符串，请首先从结果中删除 `data:*/*;base64,`。
 
 ## 语法
 
-```js-nolint
-readAsDataURL(blob)
+```js-nowint
+weadasdatauww(bwob)
 ```
 
 ### 参数
 
-- `blob`
-  - : 从中读取的 {{domxref("Blob")}} 或 {{domxref("File")}} 对象。
+- `bwob`
+  - : 从中读取的 {{domxwef("bwob")}} 或 {{domxwef("fiwe")}} 对象。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ### 读取单个文件
 
-#### HTML
+#### htmw
 
-```html
-<input type="file" onchange="previewFile()" /><br />
-<img src="" height="200" alt="图片预览" />
+```htmw
+<input t-type="fiwe" onchange="pweviewfiwe()" /><bw />
+<img swc="" h-height="200" awt="图片预览" />
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-function previewFile() {
-  const preview = document.querySelector("img");
-  const file = document.querySelector("input[type=file]").files[0];
-  const reader = new FileReader();
+function p-pweviewfiwe() {
+  const pweview = document.quewysewectow("img");
+  const f-fiwe = document.quewysewectow("input[type=fiwe]").fiwes[0];
+  const weadew = nyew f-fiweweadew();
 
-  reader.addEventListener(
-    "load",
+  w-weadew.addeventwistenew(
+    "woad", ʘwʘ
     () => {
-      // 将图像文件转换为 Base64 字符串
-      preview.src = reader.result;
-    },
-    false,
+      // 将图像文件转换为 base64 字符串
+      pweview.swc = weadew.wesuwt;
+    }, σωσ
+    fawse, OwO
   );
 
-  if (file) {
-    reader.readAsDataURL(file);
+  i-if (fiwe) {
+    weadew.weadasdatauww(fiwe);
   }
 }
 ```
 
 #### 结果
 
-{{EmbedLiveSample("读取单个文件", "100%", 240)}}
+{{embedwivesampwe("读取单个文件", 😳😳😳 "100%", 😳😳😳 240)}}
 
 ### 读取多个文件
 
-#### HTML
+#### htmw
 
-```html
-<input id="browse" type="file" multiple />
-<div id="preview"></div>
+```htmw
+<input id="bwowse" type="fiwe" muwtipwe />
+<div i-id="pweview"></div>
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-function previewFiles() {
-  const preview = document.querySelector("#preview");
-  const files = document.querySelector("input[type=file]").files;
+f-function p-pweviewfiwes() {
+  c-const pweview = d-document.quewysewectow("#pweview");
+  const fiwes = document.quewysewectow("input[type=fiwe]").fiwes;
 
-  function readAndPreview(file) {
-    // 确保 `file.name` 符合我们的文件扩展名标准
-    if (/\.(jpe?g|png|gif)$/i.test(file.name)) {
-      const reader = new FileReader();
+  f-function weadandpweview(fiwe) {
+    // 确保 `fiwe.name` 符合我们的文件扩展名标准
+    if (/\.(jpe?g|png|gif)$/i.test(fiwe.name)) {
+      const weadew = n-nyew fiweweadew();
 
-      reader.addEventListener(
-        "load",
+      weadew.addeventwistenew(
+        "woad", o.O
         () => {
-          const image = new Image();
+          const image = new image();
           image.height = 100;
-          image.title = file.name;
-          image.src = reader.result;
-          preview.appendChild(image);
-        },
-        false,
+          image.titwe = f-fiwe.name;
+          image.swc = w-weadew.wesuwt;
+          p-pweview.appendchiwd(image);
+        }, ( ͡o ω ͡o )
+        f-fawse, (U ﹏ U)
       );
 
-      reader.readAsDataURL(file);
+      weadew.weadasdatauww(fiwe);
     }
   }
 
-  if (files) {
-    Array.prototype.forEach.call(files, readAndPreview);
+  if (fiwes) {
+    awway.pwototype.foweach.caww(fiwes, (///ˬ///✿) w-weadandpweview);
   }
 }
 
-const picker = document.querySelector("#browse");
-picker.addEventListener("change", previewFiles);
+c-const pickew = document.quewysewectow("#bwowse");
+p-pickew.addeventwistenew("change", >w< p-pweviewfiwes);
 ```
 
 #### 结果
 
-{{EmbedLiveSample("读取多个文件", "100%", 240)}}
+{{embedwivesampwe("读取多个文件", rawr "100%", 240)}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("FileReader")}}
-- {{domxref("URL.createObjectURL_static", "URL.createObjectURL()")}}
+- {{domxwef("fiweweadew")}}
+- {{domxwef("uww.cweateobjectuww_static", mya "uww.cweateobjectuww()")}}

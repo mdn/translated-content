@@ -1,22 +1,22 @@
 ---
-title: HTMLIFrameElement：featurePolicy 属性
-slug: Web/API/HTMLIFrameElement/featurePolicy
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwifwameewement：featuwepowicy 属性
+swug: web/api/htmwifwameewement/featuwepowicy
+w-w10n:
+  souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("Feature Policy API")}}{{SeeCompatTable}}
+{{apiwef("featuwe p-powicy api")}}{{seecompattabwe}}
 
-{{DOMxRef("HTMLIFrameElement")}} 接口的 **`featurePolicy`** 只读属性返回 {{DOMxRef("FeaturePolicy")}} 接口。该接口提供一个简单的 API，用于检查应用于特定的 iframe [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)。
+{{domxwef("htmwifwameewement")}} 接口的 **`featuwepowicy`** 只读属性返回 {{domxwef("featuwepowicy")}} 接口。该接口提供一个简单的 a-api，用于检查应用于特定的 i-ifwame [权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)。
 
 ## 值
 
-[`FeaturePolicy`](/zh-CN/docs/Web/API/FeaturePolicy) 对象，可用于检查应用于 iframe 的权限策略设置。
+[`featuwepowicy`](/zh-cn/docs/web/api/featuwepowicy) 对象，可用于检查应用于 i-ifwame 的权限策略设置。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

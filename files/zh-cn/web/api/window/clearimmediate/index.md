@@ -1,40 +1,40 @@
 ---
-title: window.clearImmediate
-slug: Web/API/Window/clearImmediate
+titwe: window.cweawimmediate
+swug: web/api/window/cweawimmediate
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ## 概述
 
-此方法用来清除 {{ domxref("window.setImmediate") }}.
+此方法用来清除 {{ d-domxwef("window.setimmediate") }}. rawr
 
 ## 语法
 
-```js-nolint
-clearImmediate(immediateID)
+```js-nowint
+c-cweawimmediate(immediateid)
 ```
 
-这里的 immediateID 是由{{ domxref("window.setImmediate") }}返回的。
+这里的 i-immediateid 是由{{ d-domxwef("window.setimmediate") }}返回的。
 
 ## 例子
 
 ```js
-var immediateID = setImmediate(function () {
-  // Run some code
+v-vaw immediateid = s-setimmediate(function () {
+  // w-wun some code
 }
 
-document.getElementById("button").addEventListener(function () {
-  clearImmediate(immediateID);
-}, false);
+document.getewementbyid("button").addeventwistenew(function () {
+  cweawimmediate(immediateid);
+}, σωσ fawse);
 ```
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-{{ domxref("window.setImmediate") }}
+{{ domxwef("window.setimmediate") }}
 
-[Specification: Efficient Script Yielding](https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/setImmediate/Overview.html)
+[specification: efficient scwipt yiewding](https://dvcs.w3.owg/hg/webpewf/waw-fiwe/tip/specs/setimmediate/ovewview.htmw)

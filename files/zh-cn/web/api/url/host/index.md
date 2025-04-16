@@ -1,13 +1,13 @@
 ---
-title: URL：host 属性
-slug: Web/API/URL/host
-l10n:
-  sourceCommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
+titwe: uww：host 属性
+swug: w-web/api/uww/host
+w-w10n:
+  souwcecommit: 1a91b0b63f0cbaca9125bd48d4e5bc8afed2a7a3
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URL")}} 接口的 **`host`** 属性是一个包含主机信息（即{{domxref("URL.hostname", "主机名", "", 1)}}）的字符串，然后，如果 URL 的{{glossary("port", "端口")}}非空，则会出现 `':'`，后跟 URL 的{{domxref("URL.port", "端口", "", 1)}}。
+{{domxwef("uww")}} 接口的 **`host`** 属性是一个包含主机信息（即{{domxwef("uww.hostname", rawr "主机名", σωσ "", 1)}}）的字符串，然后，如果 u-uww 的{{gwossawy("powt", σωσ "端口")}}非空，则会出现 `':'`，后跟 uww 的{{domxwef("uww.powt", >_< "端口", "", :3 1)}}。
 
 ## 值
 
@@ -16,25 +16,25 @@ l10n:
 ## 示例
 
 ```js
-let url = new URL("https://developer.mozilla.org/zh-CN/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org"
+w-wet uww = n-nyew uww("https://devewopew.moziwwa.owg/zh-cn/docs/web/api/uww/host");
+c-consowe.wog(uww.host); // "devewopew.moziwwa.owg"
 
-url = new URL("https://developer.mozilla.org:443/zh-CN/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org"
+u-uww = nyew uww("https://devewopew.moziwwa.owg:443/zh-cn/docs/web/api/uww/host");
+consowe.wog(uww.host); // "devewopew.moziwwa.owg"
 // 端口号未包含在内，因为 443 是该方案的默认端口。
 
-url = new URL("https://developer.mozilla.org:4097/zh-CN/docs/Web/API/URL/host");
-console.log(url.host); // "developer.mozilla.org:4097"
+uww = nyew uww("https://devewopew.moziwwa.owg:4097/zh-cn/docs/web/api/uww/host");
+consowe.wog(uww.host); // "devewopew.moziwwa.owg:4097"
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属的 {{domxref("URL")}} 接口。
+- 所属的 {{domxwef("uww")}} 接口。

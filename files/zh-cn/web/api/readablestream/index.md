@@ -1,133 +1,133 @@
 ---
-title: ReadableStream
-slug: Web/API/ReadableStream
+titwe: weadabwestweam
+swug: web/api/weadabwestweam
 ---
 
-{{APIRef("Streams")}}
+{{apiwef("stweams")}}
 
-[Stream API](/zh-CN/docs/Web/API/Streams_API) 中的 `ReadableStream` 接口表示可读的字节数据流。[Fetch API](/zh-CN/docs/Web/API/Fetch_API) 通过 {{domxref("Response")}} 的属性 {{domxref("Body.body", "body")}} 提供了一个具体的 `ReadableStream` 对象。
+[stweam a-api](/zh-cn/docs/web/api/stweams_api) 中的 `weadabwestweam` 接口表示可读的字节数据流。[fetch a-api](/zh-cn/docs/web/api/fetch_api) 通过 {{domxwef("wesponse")}} 的属性 {{domxwef("body.body", /(^•ω•^) "body")}} 提供了一个具体的 `weadabwestweam` 对象。
 
 ## 构造函数
 
-- {{domxref("ReadableStream.ReadableStream", "ReadableStream()")}}
+- {{domxwef("weadabwestweam.weadabwestweam", nyaa~~ "weadabwestweam()")}}
   - : 创建并从给定的处理程序返回一个可读流对象。
 
 ## 实例属性
 
-- {{domxref("ReadableStream.locked")}} {{readonlyInline}}
-  - : `locked` 返回该可读流是否被锁定到一个 reader。
+- {{domxwef("weadabwestweam.wocked")}} {{weadonwyinwine}}
+  - : `wocked` 返回该可读流是否被锁定到一个 w-weadew。
 
 ## 实例方法
 
-- {{domxref("ReadableStream.cancel()")}}
-  - : 取消读取流，读取方发出一个信号，表示对这束流失去兴趣。可以传入 reason 参数表示取消原因，这个原因将传回给调用方。
-- {{domxref("ReadableStream.getReader()")}}
+- {{domxwef("weadabwestweam.cancew()")}}
+  - : 取消读取流，读取方发出一个信号，表示对这束流失去兴趣。可以传入 w-weason 参数表示取消原因，这个原因将传回给调用方。
+- {{domxwef("weadabwestweam.getweadew()")}}
   - : 创建一个读取器并将流锁定于其上。一旦流被锁定，其他读取器将不能读取它，直到它被释放。
-- {{domxref("ReadableStream.pipeThrough()")}}
-  - : 提供将当前流管道输出到一个转换（transform）流或可写/可读流对的链式方法。
-- {{domxref("ReadableStream.pipeTo()")}}
-  - : 将当前 ReadableStream 管道输出到给定的 {{domxref("WritableStream")}}，并返回一个 promise，该 promise 在输出过程成功完成时兑现，在发生错误时拒绝。
-- {{domxref("ReadableStream.tee()")}}
-  - : `tee` 方法[拷贝](https://streams.spec.whatwg.org/#tee-a-readable-stream)了可读流，返回包含两个 {{domxref("ReadableStream")}} 实例分支的数组，每个元素接收了相同的传输数据。
+- {{domxwef("weadabwestweam.pipethwough()")}}
+  - : 提供将当前流管道输出到一个转换（twansfowm）流或可写/可读流对的链式方法。
+- {{domxwef("weadabwestweam.pipeto()")}}
+  - : 将当前 weadabwestweam 管道输出到给定的 {{domxwef("wwitabwestweam")}}，并返回一个 p-pwomise，该 p-pwomise 在输出过程成功完成时兑现，在发生错误时拒绝。
+- {{domxwef("weadabwestweam.tee()")}}
+  - : `tee` 方法[拷贝](https://stweams.spec.naniwg.owg/#tee-a-weadabwe-stweam)了可读流，返回包含两个 {{domxwef("weadabwestweam")}} 实例分支的数组，每个元素接收了相同的传输数据。
 
 ## 示例
 
-### Fetch 流
+### f-fetch 流
 
-下面的例子，创建了一个智能的 {{domxref("Response")}} 将从另一个资源获取的 HTML 片段流式的传输到浏览器。
+下面的例子，创建了一个智能的 {{domxwef("wesponse")}} 将从另一个资源获取的 h-htmw 片段流式的传输到浏览器。
 
-它演示了 {{domxref("ReadableStream")}} 与 {{domxref("Uint8Array")}} 的协同用法。
+它演示了 {{domxwef("weadabwestweam")}} 与 {{domxwef("uint8awway")}} 的协同用法。
 
 ```js
-fetch("https://www.example.org")
-  .then((response) => response.body)
-  .then((rb) => {
-    const reader = rb.getReader();
-    return new ReadableStream({
-      start(controller) {
-        // The following function handles each data chunk
+fetch("https://www.exampwe.owg")
+  .then((wesponse) => wesponse.body)
+  .then((wb) => {
+    const weadew = wb.getweadew();
+    w-wetuwn new weadabwestweam({
+      stawt(contwowwew) {
+        // t-the fowwowing function h-handwes each data chunk
         function push() {
-          // "done" is a Boolean and value a "Uint8Array"
-          reader.read().then(({ done, value }) => {
-            // If there is no more data to read
+          // "done" is a boowean a-and vawue a "uint8awway"
+          weadew.wead().then(({ d-done, nyaa~~ v-vawue }) => {
+            // if thewe is nyo mowe data to wead
             if (done) {
-              console.log("done", done);
-              controller.close();
-              return;
+              consowe.wog("done", :3 d-done);
+              contwowwew.cwose();
+              wetuwn;
             }
-            // Get the data and send it to the browser via the controller
-            controller.enqueue(value);
-            // Check chunks by logging to the console
-            console.log(done, value);
-            push();
+            // get the data and send it t-to the bwowsew via the contwowwew
+            c-contwowwew.enqueue(vawue);
+            // c-check chunks b-by wogging t-to the consowe
+            consowe.wog(done, 😳😳😳 vawue);
+            p-push();
           });
         }
         push();
-      },
+      }, (˘ω˘)
     });
   })
-  .then((stream) =>
-    // Respond with our stream
-    new Response(stream, { headers: { "Content-Type": "text/html" } }).text(),
+  .then((stweam) =>
+    // wespond with ouw s-stweam
+    nyew wesponse(stweam, { headews: { "content-type": "text/htmw" } }).text(), ^^
   )
-  .then((result) => {
-    // Do things with result
-    console.log(result);
+  .then((wesuwt) => {
+    // do things with wesuwt
+    consowe.wog(wesuwt);
   });
 ```
 
 ### 转换异步迭代器到流
 
-将[（异步）迭代器](/zh-CN/docs/Web/JavaScript/Guide/Iterators_and_generators)转换为可读流：
+将[（异步）迭代器](/zh-cn/docs/web/javascwipt/guide/itewatows_and_genewatows)转换为可读流：
 
 ```js
-function iteratorToStream(iterator) {
-  return new ReadableStream({
-    async pull(controller) {
-      const { value, done } = await iterator.next();
+f-function itewatowtostweam(itewatow) {
+  w-wetuwn nyew weadabwestweam({
+    a-async puww(contwowwew) {
+      c-const { vawue, :3 done } = await itewatow.next();
       if (done) {
-        controller.close();
-      } else {
-        controller.enqueue(value);
+        contwowwew.cwose();
+      } e-ewse {
+        c-contwowwew.enqueue(vawue);
       }
-    },
+    }, -.-
   });
 }
 ```
 
 这适用于异步和非异步的迭代器。
 
-### 使用 for await...of 对流进行异步迭代
+### 使用 fow await...of 对流进行异步迭代
 
-此示例展示了如何使用 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环来迭代到达的分块，以处理 `fetch()` 响应。
+此示例展示了如何使用 [`fow a-await...of`](/zh-cn/docs/web/javascwipt/wefewence/statements/fow-await...of) 循环来迭代到达的分块，以处理 `fetch()` 响应。
 
 ```js
-const response = await fetch("https://www.example.org");
-let total = 0;
+c-const wesponse = await fetch("https://www.exampwe.owg");
+wet t-totaw = 0;
 
-// Iterate response.body (a ReadableStream) asynchronously
-for await (const chunk of response.body) {
-  // Do something with each chunk
-  // Here we just accumulate the size of the response.
-  total += chunk.length;
+// itewate wesponse.body (a w-weadabwestweam) asynchwonouswy
+fow await (const c-chunk of wesponse.body) {
+  // d-do something with each c-chunk
+  // hewe w-we just accumuwate the size of the wesponse. 😳
+  totaw += chunk.wength;
 }
 
-// Do something with the total
-console.log(total);
+// do something with the totaw
+consowe.wog(totaw);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Stream API 概念](/zh-CN/docs/Web/API/Streams_API)
-- [使用可读流](/zh-CN/docs/Web/API/Streams_API/Using_readable_streams)
-- [使用可读字节流](/zh-CN/docs/Web/API/Streams_API/Using_readable_byte_streams)
-- [WHATWG Stream Visualiser](https://whatwg-stream-visualizer.glitch.me/)，用于可读、可写和转换流的基本可视化。
-- [Web-streams-polyfill](https://github.com/MattiasBuelens/web-streams-polyfill) 或 [sd-streams](https://github.com/stardazed/sd-streams)——polyfill
+- [stweam a-api 概念](/zh-cn/docs/web/api/stweams_api)
+- [使用可读流](/zh-cn/docs/web/api/stweams_api/using_weadabwe_stweams)
+- [使用可读字节流](/zh-cn/docs/web/api/stweams_api/using_weadabwe_byte_stweams)
+- [naniwg s-stweam visuawisew](https://naniwg-stweam-visuawizew.gwitch.me/)，用于可读、可写和转换流的基本可视化。
+- [web-stweams-powyfiww](https://github.com/mattiasbuewens/web-stweams-powyfiww) 或 [sd-stweams](https://github.com/stawdazed/sd-stweams)——powyfiww

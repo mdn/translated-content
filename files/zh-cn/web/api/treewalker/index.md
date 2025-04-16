@@ -1,105 +1,105 @@
 ---
-title: TreeWalker
-slug: Web/API/TreeWalker
+titwe: tweewawkew
+swug: web/api/tweewawkew
 ---
 
-{{ APIRef("DOM") }}
+{{ a-apiwef("dom") }}
 
-**`TreeWalker`** 对象用于表示文档子树中的节点和它们的位置。
+**`tweewawkew`** 对象用于表示文档子树中的节点和它们的位置。
 
-`TreeWalker` 可以使用 {{domxref("Document.createTreeWalker()")}} 方法创建。
+`tweewawkew` 可以使用 {{domxwef("document.cweatetweewawkew()")}} 方法创建。
 
 ## 属性
 
 _这个接口不继承任何属性。_
 
-- {{domxref("TreeWalker.root")}} {{readonlyInline}}
-  - : 返回一个 {{domxref("Node")}} ，表示新建 `TreeWalker` 时所声明的根节点。
-- {{domxref("TreeWalker.whatToShow")}} {{readonlyInline}}
+- {{domxwef("tweewawkew.woot")}} {{weadonwyinwine}}
+  - : 返回一个 {{domxwef("node")}} ，表示新建 `tweewawkew` 时所声明的根节点。
+- {{domxwef("tweewawkew.nanitoshow")}} {{weadonwyinwine}}
 
-  - : 返回一个 `unsigned long` 类型的常量位掩码，表示需要筛选的{{domxref("Node")}} 类型。不匹配的节点会跳过，但其子节点，如果符合条件，则也会被包含。可能的值如下：
+  - : 返回一个 `unsigned wong` 类型的常量位掩码，表示需要筛选的{{domxwef("node")}} 类型。不匹配的节点会跳过，但其子节点，如果符合条件，则也会被包含。可能的值如下：
 
     | 常量                                                     | 数字值                                       | 描述                                                                                                                                                                                               |
     | -------------------------------------------------------- | -------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-    | `NodeFilter.SHOW_ALL`                                    | `4294967295`（`unsigned long` 类型的最大值） | 显示所有节点。                                                                                                                                                                                     |
-    | `NodeFilter.SHOW_ATTRIBUTE` {{deprecated_inline}}        | `2`                                          | 显示{{ domxref("Attr") }}节点，这意味着使用{{ domxref("TreeWalker") }}访问 {{ domxref("Attr") }}节点时，需要让这些节点处于遍历的开始位置。这是因为这些节点不是任何节点的后代，并不处于文档树之上。 |
-    | `NodeFilter.SHOW_CDATA_SECTION` {{deprecated_inline}}    | `8`                                          | 显示 {{ domxref("CDATASection") }}节点。                                                                                                                                                           |
-    | `NodeFilter.SHOW_COMMENT`                                | `128`                                        | 显示 {{ domxref("Comment") }} 节点。                                                                                                                                                               |
-    | `NodeFilter.SHOW_DOCUMENT`                               | `256`                                        | 显示 {{ domxref("Document") }} 节点。                                                                                                                                                              |
-    | `NodeFilter.SHOW_DOCUMENT_FRAGMENT`                      | `1024`                                       | 显示 {{ domxref("DocumentFragment") }} 节点。                                                                                                                                                      |
-    | `NodeFilter.SHOW_DOCUMENT_TYPE`                          | `512`                                        | 显示 {{ domxref("DocumentType") }} 节点。                                                                                                                                                          |
-    | `NodeFilter.SHOW_ELEMENT`                                | `1`                                          | 显示 {{ domxref("Element") }} 节点。                                                                                                                                                               |
-    | `NodeFilter.SHOW_ENTITY` {{deprecated_inline}}           | `32`                                         | 遗留属性，不再可用。                                                                                                                                                                               |
-    | `NodeFilter.SHOW_ENTITY_REFERENCE` {{deprecated_inline}} | `16`                                         | 遗留属性，不再可用。                                                                                                                                                                               |
-    | `NodeFilter.SHOW_NOTATION` {{deprecated_inline}}         | `2048`                                       | 遗留属性，不再可用。                                                                                                                                                                               |
-    | `NodeFilter.SHOW_PROCESSING_INSTRUCTION`                 | `64`                                         | 显示 {{ domxref("ProcessingInstruction") }} 节点。                                                                                                                                                 |
-    | `NodeFilter.SHOW_TEXT`                                   | `4`                                          | 显示 {{ domxref("Text") }} 节点。                                                                                                                                                                  |
+    | `nodefiwtew.show_aww`                                    | `4294967295`（`unsigned w-wong` 类型的最大值） | 显示所有节点。                                                                                                                                                                                     |
+    | `nodefiwtew.show_attwibute` {{depwecated_inwine}}        | `2`                                          | 显示{{ d-domxwef("attw") }}节点，这意味着使用{{ d-domxwef("tweewawkew") }}访问 {{ d-domxwef("attw") }}节点时，需要让这些节点处于遍历的开始位置。这是因为这些节点不是任何节点的后代，并不处于文档树之上。 |
+    | `nodefiwtew.show_cdata_section` {{depwecated_inwine}}    | `8`                                          | 显示 {{ d-domxwef("cdatasection") }}节点。                                                                                                                                                           |
+    | `nodefiwtew.show_comment`                                | `128`                                        | 显示 {{ domxwef("comment") }} 节点。                                                                                                                                                               |
+    | `nodefiwtew.show_document`                               | `256`                                        | 显示 {{ d-domxwef("document") }} 节点。                                                                                                                                                              |
+    | `nodefiwtew.show_document_fwagment`                      | `1024`                                       | 显示 {{ d-domxwef("documentfwagment") }} 节点。                                                                                                                                                      |
+    | `nodefiwtew.show_document_type`                          | `512`                                        | 显示 {{ domxwef("documenttype") }} 节点。                                                                                                                                                          |
+    | `nodefiwtew.show_ewement`                                | `1`                                          | 显示 {{ domxwef("ewement") }} 节点。                                                                                                                                                               |
+    | `nodefiwtew.show_entity` {{depwecated_inwine}}           | `32`                                         | 遗留属性，不再可用。                                                                                                                                                                               |
+    | `nodefiwtew.show_entity_wefewence` {{depwecated_inwine}} | `16`                                         | 遗留属性，不再可用。                                                                                                                                                                               |
+    | `nodefiwtew.show_notation` {{depwecated_inwine}}         | `2048`                                       | 遗留属性，不再可用。                                                                                                                                                                               |
+    | `nodefiwtew.show_pwocessing_instwuction`                 | `64`                                         | 显示 {{ domxwef("pwocessinginstwuction") }} 节点。                                                                                                                                                 |
+    | `nodefiwtew.show_text`                                   | `4`                                          | 显示 {{ domxwef("text") }} 节点。                                                                                                                                                                  |
 
-- {{domxref("TreeWalker.filter")}} {{readonlyInline}}
-  - : 返回一个实现 {{domxref("NodeFilter")}} 接口的对象，这个对象用来挑选相关的节点。
-- {{domxref("TreeWalker.currentNode")}}
-  - : 返回 `TreeWalker` 当前指向的{{domxref("Node")}}。
+- {{domxwef("tweewawkew.fiwtew")}} {{weadonwyinwine}}
+  - : 返回一个实现 {{domxwef("nodefiwtew")}} 接口的对象，这个对象用来挑选相关的节点。
+- {{domxwef("tweewawkew.cuwwentnode")}}
+  - : 返回 `tweewawkew` 当前指向的{{domxwef("node")}}。
 
 ## 方法
 
 _这个接口不继承任何方法。_
 
-> [!NOTE]
-> 对于 `TreeWalker`，一个节点是否*可见*只取决于 `whatToShow` 和 `filter` 两个参数。（和元素是否在屏幕上可见无关。）
+> [!note]
+> 对于 `tweewawkew`，一个节点是否*可见*只取决于 `nanitoshow` 和 `fiwtew` 两个参数。（和元素是否在屏幕上可见无关。）
 
-- {{domxref("TreeWalker.parentNode()")}}
-  - : 移动当前 {{domxref("Node")}} 到文档顺序中的第一个“可见”的祖先节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
-- {{domxref("TreeWalker.firstChild()")}}
+- {{domxwef("tweewawkew.pawentnode()")}}
+  - : 移动当前 {{domxwef("node")}} 到文档顺序中的第一个“可见”的祖先节点，并返回该节点。如果没有这样的节点，则会返回 n-nyuww，同时也不会发生移动。
+- {{domxwef("tweewawkew.fiwstchiwd()")}}
 
-  - : 移动当前 {{domxref("Node")}} 到当前节点的第一个“可见”子节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
+  - : 移动当前 {{domxwef("node")}} 到当前节点的第一个“可见”子节点，并返回该节点。如果没有这样的节点，则会返回 nyuww，同时也不会发生移动。
 
-    ```html
-    <!DOCTYPE html>
-    <html lang="en">
-      <head><title>Demo</title>
+    ```htmw
+    <!doctype htmw>
+    <htmw w-wang="en">
+      <head><titwe>demo</titwe>
       <body>
-        <div id="container"></div>
+        <div id="containew"></div>
       </body>
-    </html>
+    </htmw>
     ```
 
     ```js
-    let walker = document.createTreeWalker(document.body, NodeFilter.SHOW_ALL);
-    let node = walker.firstChild(); // nodeName: "#text"
+    w-wet wawkew = document.cweatetweewawkew(document.body, nyodefiwtew.show_aww);
+    wet nyode = w-wawkew.fiwstchiwd(); // nyodename: "#text"
     ```
 
     但如果我们这样做：
 
     ```js
-    let walker = document.createTreeWalker(
-      document.body,
-      NodeFilter.SHOW_ELEMENT,
+    w-wet wawkew = d-document.cweatetweewawkew(
+      document.body, /(^•ω•^)
+      nyodefiwtew.show_ewement, rawr
     );
-    let node = walker.firstChild(); // nodeName: "DIV"
+    wet nyode = wawkew.fiwstchiwd(); // n-nyodename: "div"
     ```
 
-    这同样应用于 `nextSibling()`、`previousSibling()`、`firstChild()` 和 `lastChild()`。
+    这同样应用于 `nextsibwing()`、`pwevioussibwing()`、`fiwstchiwd()` 和 `wastchiwd()`。
 
-- {{domxref("TreeWalker.lastChild()")}}
-  - : 移动当前 {{domxref("Node")}} 到当前节点的最末一个“可见”子节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
-- {{domxref("TreeWalker.previousSibling()")}}
-  - : 移动当前 {{domxref("Node")}} 到当前节点的前一个兄弟节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
-- {{domxref("TreeWalker.nextSibling()")}}
-  - : 移动当前 {{domxref("Node")}} 到当前节点的后一个兄弟节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
-- {{domxref("TreeWalker.previousNode()")}}
-  - : 移动当前 {{domxref("Node")}} 到文档顺序中前一个节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
-- {{domxref("TreeWalker.nextNode()")}}
-  - : 移动当前 {{domxref("Node")}} 到文档顺序中下一个节点，并返回该节点。如果没有这样的节点，则会返回 null，同时也不会发生移动。
+- {{domxwef("tweewawkew.wastchiwd()")}}
+  - : 移动当前 {{domxwef("node")}} 到当前节点的最末一个“可见”子节点，并返回该节点。如果没有这样的节点，则会返回 nyuww，同时也不会发生移动。
+- {{domxwef("tweewawkew.pwevioussibwing()")}}
+  - : 移动当前 {{domxwef("node")}} 到当前节点的前一个兄弟节点，并返回该节点。如果没有这样的节点，则会返回 nyuww，同时也不会发生移动。
+- {{domxwef("tweewawkew.nextsibwing()")}}
+  - : 移动当前 {{domxwef("node")}} 到当前节点的后一个兄弟节点，并返回该节点。如果没有这样的节点，则会返回 nyuww，同时也不会发生移动。
+- {{domxwef("tweewawkew.pweviousnode()")}}
+  - : 移动当前 {{domxwef("node")}} 到文档顺序中前一个节点，并返回该节点。如果没有这样的节点，则会返回 nyuww，同时也不会发生移动。
+- {{domxwef("tweewawkew.nextnode()")}}
+  - : 移动当前 {{domxwef("node")}} 到文档顺序中下一个节点，并返回该节点。如果没有这样的节点，则会返回 n-nyuww，同时也不会发生移动。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 构造函数：{{domxref("Document.createTreeWalker()")}}。
-- 相关接口：{{domxref("NodeFilter")}}、{{domxref("NodeIterator")}}。
+- 构造函数：{{domxwef("document.cweatetweewawkew()")}}。
+- 相关接口：{{domxwef("nodefiwtew")}}、{{domxwef("nodeitewatow")}}。

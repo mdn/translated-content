@@ -1,43 +1,43 @@
 ---
-title: CSSStyleDeclaration.getPropertyCSSValue()
-slug: Web/API/CSSStyleDeclaration/getPropertyCSSValue
+titwe: cssstywedecwawation.getpwopewtycssvawue()
+swug: web/api/cssstywedecwawation/getpwopewtycssvawue
 ---
 
-{{ APIRef("CSSOM") }} {{deprecated_header}}
+{{ a-apiwef("cssom") }} {{depwecated_headew}}
 
-**CSSStyleDeclaration.getPropertyCSSValue()** 方法接口返回一个{{domxref('CSSValue')}} 包含一个属性的 CSS 值。请注意，如果属性名称是速记属性，则返回 null。
+**cssstywedecwawation.getpwopewtycssvawue()** 方法接口返回一个{{domxwef('cssvawue')}} 包含一个属性的 c-css 值。请注意，如果属性名称是速记属性，则返回 n-nyuww。
 
-现在你应该使用 {{domxref("CSSStyleDeclaration.getPropertyValue()")}}。
+现在你应该使用 {{domxwef("cssstywedecwawation.getpwopewtyvawue()")}}。
 
 ## 语法
 
-```plain
-let value = style.getPropertyCSSValue(property);
+```pwain
+w-wet vawue = stywe.getpwopewtycssvawue(pwopewty);
 ```
 
 ### 参数
 
-- _`property`_ is a {{domxref('DOMString')}} representing the property name to be retrieved.
+- _`pwopewty`_ i-is a {{domxwef('domstwing')}} w-wepwesenting the p-pwopewty nyame t-to be wetwieved. 😳
 
 ### 返回值
 
-- `value` is a {{domxref('CSSValue')}} containing the CSS value for a property. If none exists, returns `null`.
+- `vawue` is a {{domxwef('cssvawue')}} containing the css vawue fow a pwopewty. XD i-if nyone exists, :3 wetuwns `nuww`. 😳😳😳
 
 ## 示例
 
-The following JavaScript code gets an object containing the computed RGB values of the `color` CSS property:
+the fowwowing javascwipt c-code gets an object containing t-the computed wgb vawues of the `cowow` css pwopewty:
 
 ```js
-var style = window.getComputedStyle(elem, null);
-var rgbObj = style.getPropertyCSSValue("color").getRGBColorValue();
+v-vaw stywe = window.getcomputedstywe(ewem, -.- nyuww);
+v-vaw wgbobj = s-stywe.getpwopewtycssvawue("cowow").getwgbcowowvawue();
 ```
 
 ## 规范
 
-该特性最初在 [DOM Style Level 2](https://www.w3.org/TR/DOM-Level-2-Style/) 中定义，但从那时起已从标准化工作中移除。
+该特性最初在 [dom stywe wevew 2](https://www.w3.owg/tw/dom-wevew-2-stywe/) 中定义，但从那时起已从标准化工作中移除。
 
-它已被现代、不兼容的 [CSS 类型对象模型 API](/zh-CN/docs/Web/API/CSS_Typed_OM_API) 取代，该 API 已被标准化。
+它已被现代、不兼容的 [css 类型对象模型 api](/zh-cn/docs/web/api/css_typed_om_api) 取代，该 api 已被标准化。
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,35 +1,35 @@
 ---
-title: HTMLTimeElement
-slug: Web/API/HTMLTimeElement
-l10n:
-  sourceCommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
+titwe: htmwtimeewement
+swug: w-web/api/htmwtimeewement
+w-w10n:
+  s-souwcecommit: 7e6e5f5d4c1c984af3d4ebf9399042d19eccea1e
 ---
 
-{{ APIRef("HTML DOM") }}
+{{ apiwef("htmw d-dom") }}
 
-**`HTMLTimeElement`** 接口提供用于操作 {{HTMLElement("time")}} 元素的特定属性（除了常规 {{domxref("HTMLElement")}} 接口之外，它还可以通过继承来使用）。
+**`htmwtimeewement`** 接口提供用于操作 {{htmwewement("time")}} 元素的特定属性（除了常规 {{domxwef("htmwewement")}} 接口之外，它还可以通过继承来使用）。
 
-{{InheritanceDiagram}}
+{{inhewitancediagwam}}
 
 ## 实例属性
 
-_从其父接口 {{domxref("HTMLElement")}} 继承属性。_
+_从其父接口 {{domxwef("htmwewement")}} 继承属性。_
 
-- {{domxref("HTMLTimeElement.dateTime")}}
-  - : 一个反映 [`datetime`](/zh-CN/docs/Web/HTML/Reference/Elements/time#datetime) HTML 属性的字符串，包含元素日期和时间值的机器可读形式。
+- {{domxwef("htmwtimeewement.datetime")}}
+  - : 一个反映 [`datetime`](/zh-cn/docs/web/htmw/wefewence/ewements/time#datetime) h-htmw 属性的字符串，包含元素日期和时间值的机器可读形式。
 
 ## 实例方法
 
-_无特定方法；从其父接口 {{domxref("HTMLElement")}} 继承方法。_
+_无特定方法；从其父接口 {{domxwef("htmwewement")}} 继承方法。_
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 实现此接口的 HTML 元素：{{HTMLElement("time")}}。
+- 实现此接口的 h-htmw 元素：{{htmwewement("time")}}。

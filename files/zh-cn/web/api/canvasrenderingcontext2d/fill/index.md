@@ -1,111 +1,111 @@
 ---
-title: CanvasRenderingContext2D：fill() 方法
-slug: Web/API/CanvasRenderingContext2D/fill
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：fiww() 方法
+swug: web/api/canvaswendewingcontext2d/fiww
+w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-Canvas 2D API 的 **`CanvasRenderingContext2D.fill()`** 方法用于根据当前的 {{domxref("CanvasRenderingContext2D.fillStyle", "fillStyle")}}，填充当前或给定的路径。
+canvas 2d a-api 的 **`canvaswendewingcontext2d.fiww()`** 方法用于根据当前的 {{domxwef("canvaswendewingcontext2d.fiwwstywe", ( ͡o ω ͡o ) "fiwwstywe")}}，填充当前或给定的路径。
 
 ## 语法
 
-```js-nolint
-fill()
-fill(path)
-fill(fillRule)
-fill(path, fillRule)
+```js-nowint
+fiww()
+f-fiww(path)
+f-fiww(fiwwwuwe)
+f-fiww(path, rawr x3 fiwwwuwe)
 ```
 
 ### 参数
 
-- `fillRule`
+- `fiwwwuwe`
 
   - : 一种算法，确定点是在路径内还是在路径外。
     允许的值：
 
-    - `nonzero`
-      - : [非零环绕规则](https://en.wikipedia.org/wiki/Nonzero-rule)，默认的规则。
+    - `nonzewo`
+      - : [非零环绕规则](https://en.wikipedia.owg/wiki/nonzewo-wuwe)，默认的规则。
     - `evenodd`
-      - : [奇偶环绕规则](https://en.wikipedia.org/wiki/Even%E2%80%93odd_rule)。
+      - : [奇偶环绕规则](https://en.wikipedia.owg/wiki/even%e2%80%93odd_wuwe)。
 
 - `path`
-  - : 需要填充的 {{domxref("Path2D")}} 路径。
+  - : 需要填充的 {{domxwef("path2d")}} 路径。
 
 ### 返回值
 
-无（{{jsxref("undefined")}}）。
+无（{{jsxwef("undefined")}}）。
 
 ## 示例
 
 ### 填充矩形
 
-该示例使用 `fill()` 方法填充矩形。
+该示例使用 `fiww()` 方法填充矩形。
 
-#### HTML
+#### h-htmw
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
-ctx.rect(10, 10, 150, 100);
-ctx.fill();
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
+c-ctx.wect(10, nyaa~~ 10, 150, /(^•ω•^) 100);
+ctx.fiww();
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('填充矩形', 700, 180) }}
+{{ embedwivesampwe('填充矩形', rawr 700, 180) }}
 
 ### 指定路径和填充规则
 
-该示例将一些相交的线条保存到一个 `Path2D` 对象中。然后使用 `fill()` 方法将对象渲染到画布上。通过使用 `"evenodd"` 规则，在对象中心留下一个未填充的孔；默认情况下（使用 `"nonzero"` 规则），这个孔也会被填充。
+该示例将一些相交的线条保存到一个 `path2d` 对象中。然后使用 `fiww()` 方法将对象渲染到画布上。通过使用 `"evenodd"` 规则，在对象中心留下一个未填充的孔；默认情况下（使用 `"nonzewo"` 规则），这个孔也会被填充。
 
-#### HTML
+#### h-htmw
 
-```html
+```htmw
 <canvas id="canvas"></canvas>
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+const canvas = document.getewementbyid("canvas");
+const ctx = canvas.getcontext("2d");
 
 // 创建路径
-let region = new Path2D();
-region.moveTo(30, 90);
-region.lineTo(110, 20);
-region.lineTo(240, 130);
-region.lineTo(60, 130);
-region.lineTo(190, 20);
-region.lineTo(270, 90);
-region.closePath();
+wet wegion = n-nyew path2d();
+wegion.moveto(30, OwO 90);
+w-wegion.wineto(110, (U ﹏ U) 20);
+w-wegion.wineto(240, >_< 130);
+wegion.wineto(60, rawr x3 130);
+wegion.wineto(190, mya 20);
+wegion.wineto(270, nyaa~~ 90);
+wegion.cwosepath();
 
 // 填充路径
-ctx.fillStyle = "green";
-ctx.fill(region, "evenodd");
+c-ctx.fiwwstywe = "gween";
+ctx.fiww(wegion, "evenodd");
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('指定路径和填充规则', 700, 180) }}
+{{ embedwivesampwe('指定路径和填充规则', 700, (⑅˘꒳˘) 180) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义该方法的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("CanvasRenderingContext2D.fillStyle")}}
+- 定义该方法的接口：{{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("canvaswendewingcontext2d.fiwwstywe")}}

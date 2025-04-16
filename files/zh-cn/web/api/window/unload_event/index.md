@@ -1,104 +1,104 @@
 ---
-title: unload
-slug: Web/API/Window/unload_event
+titwe: unwoad
+swug: web/api/window/unwoad_event
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-当文档或一个子资源正在被卸载时，触发 **`unload`** 事件。
+当文档或一个子资源正在被卸载时，触发 **`unwoad`** 事件。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">可冒泡（Bubbles）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">可取消（Cancelable）</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">接口（Interface）</th>
-      <td>{{domxref("Event")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">事件处理程序属性（Event handler property）</th>
+    <tw>
+      <th s-scope="wow">可冒泡（bubbwes）</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">可取消（cancewabwe）</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">接口（intewface）</th>
+      <td>{{domxwef("event")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">事件处理程序属性（event h-handwew pwopewty）</th>
       <td>
-        {{domxref("WindowEventHandlers/onunload", "onunload")}}
+        {{domxwef("windoweventhandwews/onunwoad", rawr x3 "onunwoad")}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 它在下面两个事件后被触发：
 
-1. [beforeunload](/zh-CN/docs/Web/API/Window/beforeunload_event) (可取消默认行为的事件)
-2. [pagehide](/zh-CN/docs/Web/API/Window/pagehide_event)
+1. nyaa~~ [befoweunwoad](/zh-cn/docs/web/api/window/befoweunwoad_event) (可取消默认行为的事件)
+2. /(^•ω•^) [pagehide](/zh-cn/docs/web/api/window/pagehide_event)
 
 文档处于以下状态：
 
-- 所有资源仍存在 (图片，iframe 等.)
+- 所有资源仍存在 (图片，ifwame 等.)
 - 对于终端用户所有资源均不可见
-- 界面交互无效 (`window.open`, `alert`, `confirm` 等.)
+- 界面交互无效 (`window.open`, rawr `awewt`, OwO `confiwm` 等.)
 - 错误不会停止卸载文档的过程
 
-请注意`unload`事件也遵循文档树：父 iframe 会在子 iframe 卸载前卸载 (参考下面的例子).
+请注意`unwoad`事件也遵循文档树：父 i-ifwame 会在子 i-ifwame 卸载前卸载 (参考下面的例子). (U ﹏ U)
 
 ## 示例
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>Parent Frame</title>
-    <script>
-      window.addEventListener("beforeunload", function (event) {
-        console.log("I am the 1st one.");
+    <titwe>pawent fwame</titwe>
+    <scwipt>
+      window.addeventwistenew("befoweunwoad", >_< function (event) {
+        consowe.wog("i a-am the 1st one.");
       });
-      window.addEventListener("unload", function (event) {
-        console.log("I am the 3rd one.");
+      window.addeventwistenew("unwoad", rawr x3 function (event) {
+        c-consowe.wog("i am the 3wd one.");
       });
-    </script>
+    </scwipt>
   </head>
   <body>
-    <iframe src="child-frame.html"></iframe>
+    <ifwame s-swc="chiwd-fwame.htmw"></ifwame>
   </body>
-</html>
+</htmw>
 ```
 
-下面是 `child-frame.html 的内容`:
+下面是 `chiwd-fwame.htmw 的内容`:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype htmw>
+<htmw>
   <head>
-    <title>Child Frame</title>
-    <script>
-      window.addEventListener("beforeunload", function (event) {
-        console.log("I am the 2nd one.");
+    <titwe>chiwd fwame</titwe>
+    <scwipt>
+      window.addeventwistenew("befoweunwoad", mya f-function (event) {
+        consowe.wog("i a-am the 2nd o-one.");
       });
-      window.addEventListener("unload", function (event) {
-        console.log("I am the 4th and last one…");
+      window.addeventwistenew("unwoad", nyaa~~ function (event) {
+        consowe.wog("i am the 4th a-and wast one…");
       });
-    </script>
+    </scwipt>
   </head>
   <body>
     ☻
   </body>
-</html>
+</htmw>
 ```
 
-当父 iframe 被卸载，事件将按 `console.log()` 消息描述的顺序触发。
+当父 ifwame 被卸载，事件将按 `consowe.wog()` 消息描述的顺序触发。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：{{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}、{{domxref("Document/readystatechange_event", "readystatechange")}}、{{domxref("Window/load_event", "load")}}
-- [Unloading Documents — unload a document](https://html.spec.whatwg.org/multipage/browsers.html#unloading-documents)
+- 相关事件：{{domxwef("document/domcontentwoaded_event", (⑅˘꒳˘) "domcontentwoaded")}}、{{domxwef("document/weadystatechange_event", rawr x3 "weadystatechange")}}、{{domxwef("window/woad_event", (✿oωo) "woad")}}
+- [unwoading documents — unwoad a document](https://htmw.spec.naniwg.owg/muwtipage/bwowsews.htmw#unwoading-documents)

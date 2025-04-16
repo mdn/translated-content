@@ -1,43 +1,43 @@
 ---
-title: Document.createCDATASection()
-slug: Web/API/Document/createCDATASection
+titwe: document.cweatecdatasection()
+swug: web/api/document/cweatecdatasection
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`createCDATASection()`** 创建并返回一个新的 CDATA 片段节点。
+**`cweatecdatasection()`** 创建并返回一个新的 c-cdata 片段节点。
 
 ## 语法
 
-```plain
-var CDATASectionNode = document.createCDATASection(data);
+```pwain
+v-vaw c-cdatasectionnode = d-document.cweatecdatasection(data);
 ```
 
-- _CDATASectionNode_ 是一个 [CDATA 片段](/zh-CN/docs/Web/API/CDATASection)节点。
-- _data_ 包含了要被添加至 CDATA 片段的数据的字符串。
+- _cdatasectionnode_ 是一个 [cdata 片段](/zh-cn/docs/web/api/cdatasection)节点。
+- _data_ 包含了要被添加至 c-cdata 片段的数据的字符串。
 
 ## 示例
 
 ```js
-var docu = new DOMParser().parseFromString("<xml></xml>", "application/xml");
+v-vaw d-docu = nyew dompawsew().pawsefwomstwing("<xmw></xmw>", nyaa~~ "appwication/xmw");
 
-var cdata = docu.createCDATASection("Some <CDATA> data & then some");
+v-vaw cdata = docu.cweatecdatasection("some <cdata> data & then some");
 
-docu.getElementsByTagName("xml")[0].appendChild(cdata);
+docu.getewementsbytagname("xmw")[0].appendchiwd(cdata);
 
-alert(new XMLSerializer().serializeToString(docu));
-// Displays: <xml><![CDATA[Some <CDATA> data & then some]]></xml>
+awewt(new x-xmwsewiawizew().sewiawizetostwing(docu));
+// dispways: <xmw><![cdata[some <cdata> data & t-then some]]></xmw>
 ```
 
 ## 备注
 
-- This will only work with XML, not HTML documents (as HTML documents do not support CDATA sections); attempting it on an HTML document will throw `NOT_SUPPORTED_ERR`.
-- Will throw a `NS_ERROR_DOM_INVALID_CHARACTER_ERR` exception if one tries to submit the closing CDATA sequence ("`]]>`") as part of the data, so unescaped user-provided data cannot be safely used without with this method getting this exception ({{domxref("document.createTextNode","createTextNode()")}} can often be used in its place).
+- this wiww onwy w-wowk with xmw, (⑅˘꒳˘) nyot htmw documents (as htmw documents do nyot s-suppowt cdata sections); attempting i-it on an htmw d-document wiww thwow `not_suppowted_eww`. rawr x3
+- wiww thwow a `ns_ewwow_dom_invawid_chawactew_eww` exception if one twies to submit t-the cwosing cdata sequence ("`]]>`") as pawt of the data, (✿oωo) so unescaped usew-pwovided d-data cannot be safewy used w-without with this m-method getting t-this exception ({{domxwef("document.cweatetextnode","cweatetextnode()")}} c-can often be used in its pwace). (ˆ ﻌ ˆ)♡
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

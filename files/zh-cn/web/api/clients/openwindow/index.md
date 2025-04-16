@@ -1,53 +1,53 @@
 ---
-title: Clients.openWindow()
-slug: Web/API/Clients/openWindow
+titwe: cwients.openwindow()
+swug: web/api/cwients/openwindow
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews a-api")}}
 
-{{domxref("Clients")}}接口的 **`openWindow()`** 方法创建一个顶级的浏览器上下文并加载给定的 URL. 如果调用脚本没有显示弹出窗口的权限， **`openWindow()`** 将抛出 InvalidAccessError.
+{{domxwef("cwients")}}接口的 **`openwindow()`** 方法创建一个顶级的浏览器上下文并加载给定的 u-uww. (ˆ ﻌ ˆ)♡ 如果调用脚本没有显示弹出窗口的权限， **`openwindow()`** 将抛出 i-invawidaccessewwow. (˘ω˘)
 
-在 Firefox 中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口。
+在 fiwefox 中，只有在作为通知点击事件的结果调用时，才允许该方法显示弹出窗口。
 
-在 Chrome for Android 中，该方法可以改为在先前添加到用户主屏幕的 [standalone web app](/zh-CN/docs/Web/Apps/Progressive/Installable) 提供的现有浏览上下文中打开 URL.
+在 c-chwome fow andwoid 中，该方法可以改为在先前添加到用户主屏幕的 [standawone web a-app](/zh-cn/docs/web/apps/pwogwessive/instawwabwe) 提供的现有浏览上下文中打开 u-uww. (⑅˘꒳˘)
 
 ## 语法
 
 ```js
-ServiceWorkerClients.openWindow(url).then(function (WindowClient) {
-  // do something with your WindowClient
+s-sewvicewowkewcwients.openwindow(uww).then(function (windowcwient) {
+  // do something with youw windowcwient
 });
 ```
 
 ### 参数
 
-- `url`
-  - : 一个 {{domxref("USVString")}}，表示要在窗口中打开的 client 的 URL。通常，此值必须是与调用脚本有相同域的 URL.
+- `uww`
+  - : 一个 {{domxwef("usvstwing")}}，表示要在窗口中打开的 cwient 的 u-uww。通常，此值必须是与调用脚本有相同域的 uww. (///ˬ///✿)
 
 ### 返回值
 
-如果 URL 来自与服务工作者相同的域，则 resolve 为 {{domxref("WindowClient")}} 对象的 Promise，否则 resolve 为 {{Glossary("null", "null value")}}.
+如果 uww 来自与服务工作者相同的域，则 w-wesowve 为 {{domxwef("windowcwient")}} 对象的 pwomise，否则 w-wesowve 为 {{gwossawy("nuww", 😳😳😳 "nuww vawue")}}. 🥺
 
 ## 示例
 
 ```js
-// When the user clicks a notification focus the window if it exists or open
-// a new one otherwise.
-onotificationclick = function (event) {
-  var found = false;
-  clients.matchAll().then(function (clientsArr) {
-    for (i = 0; i < clientsArr.length; i++) {
-      if (clientsArr[i].url === event.data.url) {
-        // We already have a window to use, focus it.
-        found = true;
-        clientsArr[i].focus();
-        break;
+// when the usew cwicks a nyotification f-focus the window if it exists o-ow open
+// a n-nyew one othewwise. mya
+onotificationcwick = function (event) {
+  vaw found = fawse;
+  cwients.matchaww().then(function (cwientsaww) {
+    f-fow (i = 0; i < cwientsaww.wength; i++) {
+      if (cwientsaww[i].uww === event.data.uww) {
+        // we a-awweady have a window to use, f-focus it. 🥺
+        f-found = twue;
+        c-cwientsaww[i].focus();
+        b-bweak;
       }
     }
     if (!found) {
-      // Create a new window.
-      clients.openWindow(event.data.url).then(function (windowClient) {
-        // do something with the windowClient.
+      // cweate a n-nyew window. >_<
+      cwients.openwindow(event.data.uww).then(function (windowcwient) {
+        // do something with t-the windowcwient.
       });
     }
   });
@@ -56,8 +56,8 @@ onotificationclick = function (event) {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

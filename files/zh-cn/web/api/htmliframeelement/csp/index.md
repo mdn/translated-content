@@ -1,13 +1,13 @@
 ---
-title: HTMLIFrameElement：csp 属性
-slug: Web/API/HTMLIFrameElement/csp
-l10n:
-  sourceCommit: a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
+titwe: htmwifwameewement：csp 属性
+swug: web/api/htmwifwameewement/csp
+w-w10n:
+  s-souwcecommit: a-a3d9f61a8990ba7b53bda9748d1f26a9e9810b18
 ---
 
-{{APIRef("HTML DOM")}}{{SeeCompatTable}}
+{{apiwef("htmw d-dom")}}{{seecompattabwe}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`csp`** 属性指定了嵌入文档必须同意对自己执行的[内容安全策略](/zh-CN/docs/Web/HTTP/Guides/CSP)。
+{{domxwef("htmwifwameewement")}} 接口的 **`csp`** 属性指定了嵌入文档必须同意对自己执行的[内容安全策略](/zh-cn/docs/web/http/guides/csp)。
 
 ## 值
 
@@ -15,8 +15,8 @@ l10n:
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

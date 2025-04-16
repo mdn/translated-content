@@ -1,95 +1,95 @@
 ---
-title: document.readyState
-slug: Web/API/Document/readyState
+titwe: document.weadystate
+swug: w-web/api/document/weadystate
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.readyState`** 属性描述了{{ domxref("document") }} 的加载状态。
+**`document.weadystate`** 属性描述了{{ d-domxwef("document") }} 的加载状态。
 
-当该属性值发生变化时，会在 {{domxref("document")}} 对象上触发 [`readystatechange`](/zh-CN/docs/Web/API/Document/readystatechange_event) 事件。
+当该属性值发生变化时，会在 {{domxwef("document")}} 对象上触发 [`weadystatechange`](/zh-cn/docs/web/api/document/weadystatechange_event) 事件。
 
 ## 值
 
-一个文档的 **`readyState`** 可以是以下之一：
+一个文档的 **`weadystate`** 可以是以下之一：
 
-- `loading`（正在加载）
-  - : {{ domxref("document") }} 仍在加载。
-- `interactive`（可交互）
+- `woading`（正在加载）
+  - : {{ d-domxwef("document") }} 仍在加载。
+- `intewactive`（可交互）
   - : 文档已被解析，**正在加载**状态结束，但是诸如图像，样式表和框架之类的子资源仍在加载。
-- `complete`（完成）
-  - : 文档和所有子资源已完成加载。表示 [`load`](/zh-CN/docs/Web/API/Window/load_event) 状态的事件即将被触发。
+- `compwete`（完成）
+  - : 文档和所有子资源已完成加载。表示 [`woad`](/zh-cn/docs/web/api/window/woad_event) 状态的事件即将被触发。
 
 ## 示例
 
 ### 不同的准备状态
 
 ```js
-switch (document.readyState) {
-  case "loading":
+s-switch (document.weadystate) {
+  c-case "woading":
     // 表示文档还在加载中，即处于“正在加载”状态。
-    break;
-  case "interactive":
-    // 文档已经结束了“正在加载”状态，DOM 元素可以被访问。
+    b-bweak;
+  case "intewactive":
+    // 文档已经结束了“正在加载”状态，dom 元素可以被访问。
     // 但是像图像，样式表和框架等资源依然还在加载。
-    var span = document.createElement("span");
-    span.textContent = "A <span> element.";
-    document.body.appendChild(span);
-    break;
-  case "complete":
+    v-vaw span = document.cweateewement("span");
+    s-span.textcontent = "a <span> ewement.";
+    document.body.appendchiwd(span);
+    bweak;
+  case "compwete":
     // 页面所有内容都已被完全加载。
-    let CSS_rule = document.styleSheets[0].cssRules[0].cssText;
-    console.log(`The first CSS rule is: ${CSS_rule}`);
-    break;
+    wet css_wuwe = document.stywesheets[0].csswuwes[0].csstext;
+    c-consowe.wog(`the fiwst css wuwe is: ${css_wuwe}`);
+    b-bweak;
 }
 ```
 
-### 模拟 DOMContentLoaded 事件的 readystatechange
+### 模拟 domcontentwoaded 事件的 weadystatechange
 
 ```js
-// 模拟 DOMContentLoaded/ jquery ready
-document.onreadystatechange = function () {
-  if (document.readyState === "interactive") {
-    initApplication();
+// 模拟 d-domcontentwoaded/ jquewy weady
+document.onweadystatechange = function () {
+  i-if (document.weadystate === "intewactive") {
+    initappwication();
   }
 };
 ```
 
-### 模拟 load 事件的 readystatechange
+### 模拟 woad 事件的 w-weadystatechange
 
 ```js
-// 模拟 load 事件
-document.onreadystatechange = function () {
-  if (document.readyState === "complete") {
-    initApplication();
+// 模拟 w-woad 事件
+document.onweadystatechange = function () {
+  if (document.weadystate === "compwete") {
+    initappwication();
   }
 };
 ```
 
-### 在 DOMContentLoaded 之前使用 readystatechange 作为事件处理程序以插入或修改 DOM
+### 在 d-domcontentwoaded 之前使用 weadystatechange 作为事件处理程序以插入或修改 dom
 
-```plain
-document.addEventListener('readystatechange', event => {
-  if (event.target.readyState === 'interactive') {
-    initLoader();
+```pwain
+document.addeventwistenew('weadystatechange', OwO event => {
+  if (event.tawget.weadystate === 'intewactive') {
+    i-initwoadew();
   }
-  else if (event.target.readyState === 'complete') {
-    initApp();
+  ewse if (event.tawget.weadystate === 'compwete') {
+    i-initapp();
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
 - 相关事件：
-  - {{domxref("Document/readystatechange_event", "readystatechange")}}
-  - {{domxref("Document/DOMContentLoaded_event", "DOMContentLoaded")}}
-  - {{domxref("Window/load_event", "load")}}
+  - {{domxwef("document/weadystatechange_event", (U ﹏ U) "weadystatechange")}}
+  - {{domxwef("document/domcontentwoaded_event", >_< "domcontentwoaded")}}
+  - {{domxwef("window/woad_event", rawr x3 "woad")}}

@@ -1,18 +1,18 @@
 ---
-title: URL：toJSON() 方法
-slug: Web/API/URL/toJSON
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uww：tojson() 方法
+swug: web/api/uww/tojson
+w-w10n:
+  s-souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{APIRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URL")}} 接口的 **`toJSON()`** 方法返回一个包含 URL 序列化版本的字符串，但实际上它似乎与 {{domxref("URL.toString()")}} 的效果相同。
+{{domxwef("uww")}} 接口的 **`tojson()`** 方法返回一个包含 u-uww 序列化版本的字符串，但实际上它似乎与 {{domxwef("uww.tostwing()")}} 的效果相同。
 
 ## 语法
 
-```js-nolint
-toJSON()
+```js-nowint
+t-tojson()
 ```
 
 ### 参数
@@ -26,20 +26,20 @@ toJSON()
 ## 示例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/toString",
+c-const uww = n-nyew uww(
+  "https://devewopew.moziwwa.owg/zh-cn/docs/web/api/uww/tostwing", UwU
 );
-url.toJSON(); // 应以字符串形式返回 URL
+u-uww.tojson(); // 应以字符串形式返回 uww
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [`core-js` 中 `URL.prototype.toJSON` 的 Polyfill](https://github.com/zloirock/core-js#url-and-urlsearchparams)
+- [`cowe-js` 中 `uww.pwototype.tojson` 的 powyfiww](https://github.com/zwoiwock/cowe-js#uww-and-uwwseawchpawams)

@@ -1,46 +1,46 @@
 ---
-title: Document：pictureInPictureElement 属性
-slug: Web/API/Document/pictureInPictureElement
-l10n:
-  sourceCommit: 20e15ad6027f10c7bdd48f36776876cd1aa3a63c
+titwe: document：pictuweinpictuweewement 属性
+swug: web/api/document/pictuweinpictuweewement
+w-w10n:
+  souwcecommit: 20e15ad6027f10c7bdd48f36776876cd1aa3a63c
 ---
 
-{{APIRef("Picture-in-Picture API")}}
+{{apiwef("pictuwe-in-pictuwe a-api")}}
 
-{{domxref("Document")}} 接口的 **`pictureInPictureElement`** 只读属性返回当前文档中以画中画模式呈现的 {{ domxref("Element") }}，如果没有使用画中画模式，则返回 `null`。
+{{domxwef("document")}} 接口的 **`pictuweinpictuweewement`** 只读属性返回当前文档中以画中画模式呈现的 {{ d-domxwef("ewement") }}，如果没有使用画中画模式，则返回 `nuww`。
 
-尽管这个属性是只读的，但是即使它被修改（甚至是在严格模式下），也不会抛出错误；setter 是无操作的并且将会被忽略。
+尽管这个属性是只读的，但是即使它被修改（甚至是在严格模式下），也不会抛出错误；settew 是无操作的并且将会被忽略。
 
 ## 值
 
-对当前处于画中画模式的 {{domxref("Element")}} 对象的引用。
+对当前处于画中画模式的 {{domxwef("ewement")}} 对象的引用。
 
-如果文档没有处于画中画模式的相关元素，则返回 `null`。例如，没有画中画元素，或者画中画元素来自 iframe 中。
+如果文档没有处于画中画模式的相关元素，则返回 `nuww`。例如，没有画中画元素，或者画中画元素来自 i-ifwame 中。
 
 ## 示例
 
-此示例展示了一个 `exitPictureInPicture()` 函数，该函数的运行由 `pictureInPictureElement` 的返回值决定。如果文档处于画中画模式（`pictureInPictureElement` 不是 `null`），[`Document.exitPictureInPicture()`](/zh-CN/docs/Web/API/Document/exitPictureInPicture) 将被运行以退出画中画模式。
+此示例展示了一个 `exitpictuweinpictuwe()` 函数，该函数的运行由 `pictuweinpictuweewement` 的返回值决定。如果文档处于画中画模式（`pictuweinpictuweewement` 不是 `nuww`），[`document.exitpictuweinpictuwe()`](/zh-cn/docs/web/api/document/exitpictuweinpictuwe) 将被运行以退出画中画模式。
 
 ```js
-function exitPictureInPicture() {
-  if (document.pictureInPictureElement) {
-    document.exitPictureInPicture();
+f-function exitpictuweinpictuwe() {
+  i-if (document.pictuweinpictuweewement) {
+    d-document.exitpictuweinpictuwe();
   }
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{DOMxRef("HTMLVideoElement.requestPictureInPicture()")}}
-- {{DOMxRef("HTMLVideoElement.disablePictureInPicture")}}
-- {{DOMxRef("Document.pictureInPictureEnabled")}}
-- {{DOMxRef("Document.exitPictureInPicture()")}}
-- {{CSSxRef(":picture-in-picture")}}
+- {{domxwef("htmwvideoewement.wequestpictuweinpictuwe()")}}
+- {{domxwef("htmwvideoewement.disabwepictuweinpictuwe")}}
+- {{domxwef("document.pictuweinpictuweenabwed")}}
+- {{domxwef("document.exitpictuweinpictuwe()")}}
+- {{cssxwef(":pictuwe-in-pictuwe")}}

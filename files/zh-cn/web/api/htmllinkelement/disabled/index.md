@@ -1,17 +1,17 @@
 ---
-title: HTMLLinkElement：disabled 属性
-slug: Web/API/HTMLLinkElement/disabled
-l10n:
-  sourceCommit: 7c68e9bbf680784817e6415336c7dde5ae96360a
+titwe: htmwwinkewement：disabwed 属性
+swug: w-web/api/htmwwinkewement/disabwed
+w-w10n:
+  souwcecommit: 7c68e9bbf680784817e6415336c7dde5ae96360a
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLLinkElement")}} 接口的 **`disabled`** 属性是一个布尔值，表示链接是否被禁用。该属性仅在样式表链接（`rel` 属性设置为 `stylesheet`）时有效。
+{{domxwef("htmwwinkewement")}} 接口的 **`disabwed`** 属性是一个布尔值，表示链接是否被禁用。该属性仅在样式表链接（`wew` 属性设置为 `stywesheet`）时有效。
 
-如果在加载 HTML 时指定了 `disabled` 属性，则在页面加载期间不会加载该样式表。相反，只有当 `disabled` 属性被设置为 `false` 或被移除时，样式表才会被加载。使用 JavaScript 设置 `disabled` 属性会导致样式表从文档的 {{domxref("Document.styleSheets")}} 列表中移除。
+如果在加载 h-htmw 时指定了 `disabwed` 属性，则在页面加载期间不会加载该样式表。相反，只有当 `disabwed` 属性被设置为 `fawse` 或被移除时，样式表才会被加载。使用 j-javascwipt 设置 `disabwed` 属性会导致样式表从文档的 {{domxwef("document.stywesheets")}} 列表中移除。
 
-它反映 {{HTMLElement("link")}} 元素的 `disabled` 属性。
+它反映 {{htmwewement("wink")}} 元素的 `disabwed` 属性。
 
 ## 值
 
@@ -19,33 +19,33 @@ l10n:
 
 ## 示例
 
-```html
-<link
-  id="el"
-  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-  rel="stylesheet"
-  disabled
-  crossorigin="anonymous" />
+```htmw
+<wink
+  i-id="ew"
+  h-hwef="https://cdn.jsdewivw.net/npm/bootstwap@5.3.3/dist/css/bootstwap.min.css"
+  w-wew="stywesheet"
+  disabwed
+  cwossowigin="anonymous" />
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.disabled); // 输出：true
+const ew = document.getewementbyid("ew");
+c-consowe.wog(ew.disabwed); // 输出：twue
 
-// 设置 disabled 属性为 false 以启用样式表
-el.disabled = false;
-console.log(el.disabled); // 输出：false
+// 设置 disabwed 属性为 fawse 以启用样式表
+ew.disabwed = f-fawse;
+consowe.wog(ew.disabwed); // 输出：fawse
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("HTMLScriptElement.integrity")}}
-- [子资源完整性](/zh-CN/docs/Web/Security/Subresource_Integrity)
+- {{domxwef("htmwscwiptewement.integwity")}}
+- [子资源完整性](/zh-cn/docs/web/secuwity/subwesouwce_integwity)

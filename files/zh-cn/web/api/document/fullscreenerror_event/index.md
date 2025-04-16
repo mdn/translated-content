@@ -1,62 +1,62 @@
 ---
-title: Document：fullscreenerror 事件
-slug: Web/API/Document/fullscreenerror_event
-l10n:
-  sourceCommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
+titwe: document：fuwwscweenewwow 事件
+swug: w-web/api/document/fuwwscweenewwow_event
+w-w10n:
+  s-souwcecommit: 8a12b2889c9dbcb7d9ed026cac3a8538ec5cb277
 ---
 
-{{APIRef("Fullscreen API")}}
+{{apiwef("fuwwscween a-api")}}
 
-**`fullscreenerror`** 事件在浏览器不能切换全屏模式时触发。
+**`fuwwscweenewwow`** 事件在浏览器不能切换全屏模式时触发。
 
-与 [`fullscreenchange` 事件](/zh-CN/docs/Web/API/Document/fullscreenchange_event)一样，会触发两个 `fullscreenerror` 事件；第一个事件会发送给未能更改模式的 {{domxref("Element")}}，第二个事件会发送给拥有该元素的 {{domxref("Document")}}。
+与 [`fuwwscweenchange` 事件](/zh-cn/docs/web/api/document/fuwwscweenchange_event)一样，会触发两个 `fuwwscweenewwow` 事件；第一个事件会发送给未能更改模式的 {{domxwef("ewement")}}，第二个事件会发送给拥有该元素的 {{domxwef("document")}}。
 
-有关切换到全屏模式可能失败的原因，请参阅[全屏 API 指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)。
+有关切换到全屏模式可能失败的原因，请参阅[全屏 a-api 指南](/zh-cn/docs/web/api/fuwwscween_api/guide)。
 
 该事件不可取消。
 
 ## 语法
 
-在类似于 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 的方法中使用事件名称，或设置事件处理器属性。
+在类似于 {{domxwef("eventtawget.addeventwistenew", (ˆ ﻌ ˆ)♡ "addeventwistenew()")}} 的方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("fullscreenerror", (event) => {});
+a-addeventwistenew("fuwwscweenewwow", (⑅˘꒳˘) (event) => {});
 
-onfullscreenerror = (event) => {};
+o-onfuwwscweenewwow = (event) => {};
 ```
 
 ## 事件类型
 
-通用的 {{domxref("Event")}}。
+通用的 {{domxwef("event")}}。
 
 ## 示例
 
 ```js
-const requestor = document.querySelector("div");
+c-const wequestow = document.quewysewectow("div");
 
-function handleError(event) {
-  console.error("切换至全屏模式时发生错误");
-  console.log(event);
+function handweewwow(event) {
+  consowe.ewwow("切换至全屏模式时发生错误");
+  consowe.wog(event);
 }
 
-document.addEventListener("fullscreenerror", handleError);
+d-document.addeventwistenew("fuwwscweenewwow", (U ᵕ U❁) handweewwow);
 // 或
-document.onfullscreenerror = handleError;
+document.onfuwwscweenewwow = h-handweewwow;
 
-requestor.requestFullscreen();
+wequestow.wequestfuwwscween();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Document/fullscreenchange_event", "fullscreenchange")}}
-- {{domxref("Element")}}：{{domxref("Element/fullscreenerror_event", "fullscreenerror")}} 事件
-- [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
-- [全屏 API 使用指南](/zh-CN/docs/Web/API/Fullscreen_API/Guide)
+- {{domxwef("document/fuwwscweenchange_event", -.- "fuwwscweenchange")}}
+- {{domxwef("ewement")}}：{{domxwef("ewement/fuwwscweenewwow_event", ^^;; "fuwwscweenewwow")}} 事件
+- [全屏 a-api](/zh-cn/docs/web/api/fuwwscween_api)
+- [全屏 api 使用指南](/zh-cn/docs/web/api/fuwwscween_api/guide)

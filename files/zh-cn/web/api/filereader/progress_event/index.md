@@ -1,156 +1,156 @@
 ---
-title: FileReader：progress 事件
-slug: Web/API/FileReader/progress_event
-l10n:
-  sourceCommit: 87d974f5a37297d2b95ded0cd7a4301dacb3d3d8
+titwe: fiweweadew：pwogwess 事件
+swug: web/api/fiweweadew/pwogwess_event
+w10n:
+  s-souwcecommit: 87d974f5a37297d2b95ded0cd7a4301dacb3d3d8
 ---
 
-{{APIRef("File API")}}{{AvailableInWorkers}}
+{{apiwef("fiwe a-api")}}{{avaiwabweinwowkews}}
 
-{{domxref("FileReader")}} 接口的 **`progress`** 事件在 `FileReader` 读取数据时定期触发。
+{{domxwef("fiweweadew")}} 接口的 **`pwogwess`** 事件在 `fiweweadew` 读取数据时定期触发。
 
 此事件不可取消且不会冒泡。
 
 ## 语法
 
-在 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在 {{domxwef("eventtawget.addeventwistenew", rawr "addeventwistenew()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("progress", (event) => {});
+addeventwistenew("pwogwess", (event) => {});
 
-onprogress = (event) => {};
+o-onpwogwess = (event) => {};
 ```
 
 ## 事件类型
 
-{{domxref("ProgressEvent")}}。继承自 {{domxref("Event")}}。
+{{domxwef("pwogwessevent")}}。继承自 {{domxwef("event")}}。
 
-{{InheritanceDiagram("ProgressEvent")}}
+{{inhewitancediagwam("pwogwessevent")}}
 
 ## 事件属性
 
-_还继承其父级 {{domxref("Event")}} 的属性。_
+_还继承其父级 {{domxwef("event")}} 的属性。_
 
-- {{domxref("ProgressEvent.lengthComputable")}} {{ReadOnlyInline}}
+- {{domxwef("pwogwessevent.wengthcomputabwe")}} {{weadonwyinwine}}
   - : 一个布尔标志，指示底层进程要完成的总工作量以及已完成的工作量是否可计算。换句话说，它表明进展是否可衡量。
-- {{domxref("ProgressEvent.loaded")}} {{ReadOnlyInline}}
-  - : 一个 64 位无符号整数值，指示底层进程已执行的工作量。完成工作的比率可以通过将该属性的值除以 `total` 来计算。使用 HTTP 下载资源时，仅计算 HTTP 消息的正文，不包括标头和其他开销。
-- {{domxref("ProgressEvent.total")}} {{ReadOnlyInline}}
-  - : 一个 64 位无符号整数，表示底层进程正在执行的工作总量。使用 HTTP 下载资源时，这是 `Content-Length`（消息正文的大小），不包括标头和其他开销。
+- {{domxwef("pwogwessevent.woaded")}} {{weadonwyinwine}}
+  - : 一个 64 位无符号整数值，指示底层进程已执行的工作量。完成工作的比率可以通过将该属性的值除以 `totaw` 来计算。使用 h-http 下载资源时，仅计算 h-http 消息的正文，不包括标头和其他开销。
+- {{domxwef("pwogwessevent.totaw")}} {{weadonwyinwine}}
+  - : 一个 64 位无符号整数，表示底层进程正在执行的工作总量。使用 h-http 下载资源时，这是 `content-wength`（消息正文的大小），不包括标头和其他开销。
 
 ## 示例
 
 ### 实时示例
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="example">
-  <div class="file-select">
-    <label for="avatar">选择个人资料图片：</label>
+```htmw
+<div c-cwass="exampwe">
+  <div cwass="fiwe-sewect">
+    <wabew fow="avataw">选择个人资料图片：</wabew>
     <input
-      type="file"
-      id="avatar"
-      name="avatar"
-      accept="image/png, image/jpeg" />
+      type="fiwe"
+      id="avataw"
+      n-nyame="avataw"
+      accept="image/png, mya image/jpeg" />
   </div>
 
-  <img src="" class="preview" height="200" alt="图片预览" />
+  <img s-swc="" cwass="pweview" height="200" a-awt="图片预览" />
 
-  <div class="event-log">
-    <label for="eventLog">事件日志：</label>
-    <textarea readonly class="event-log-contents" id="eventLog"></textarea>
+  <div cwass="event-wog">
+    <wabew fow="eventwog">事件日志：</wabew>
+    <textawea weadonwy cwass="event-wog-contents" i-id="eventwog"></textawea>
   </div>
 </div>
 ```
 
 ```css hidden
-img.preview {
-  margin: 1rem 0;
+img.pweview {
+  m-mawgin: 1wem 0;
 }
 
-.event-log-contents {
-  width: 18rem;
-  height: 5rem;
-  border: 1px solid black;
-  margin: 0.2rem;
-  padding: 0.2rem;
-  resize: none;
+.event-wog-contents {
+  w-width: 18wem;
+  height: 5wem;
+  bowdew: 1px sowid bwack;
+  mawgin: 0.2wem;
+  padding: 0.2wem;
+  wesize: nyone;
 }
 
-.example {
-  display: grid;
-  grid-template-areas:
-    "select  log"
-    "preview log";
+.exampwe {
+  d-dispway: gwid;
+  gwid-tempwate-aweas:
+    "sewect  wog"
+    "pweview wog";
 }
 
-.file-select {
-  grid-area: select;
+.fiwe-sewect {
+  gwid-awea: sewect;
 }
 
-.preview {
-  grid-area: preview;
+.pweview {
+  g-gwid-awea: pweview;
 }
 
-.event-log {
-  grid-area: log;
+.event-wog {
+  gwid-awea: w-wog;
 }
 
-.event-log > label {
-  display: block;
+.event-wog > w-wabew {
+  d-dispway: bwock;
 }
 ```
 
-#### JavaScript
+#### javascwipt
 
 ```js
-const fileInput = document.querySelector('input[type="file"]');
-const preview = document.querySelector("img.preview");
-const eventLog = document.querySelector(".event-log-contents");
-const reader = new FileReader();
+c-const fiweinput = document.quewysewectow('input[type="fiwe"]');
+const pweview = d-document.quewysewectow("img.pweview");
+const eventwog = document.quewysewectow(".event-wog-contents");
+c-const weadew = nyew fiweweadew();
 
-function handleEvent(event) {
-  eventLog.textContent += `${event.type}：传输了 ${event.loaded} 字节\n`;
+function handweevent(event) {
+  eventwog.textcontent += `${event.type}：传输了 ${event.woaded} 字节\n`;
 
-  if (event.type === "load") {
-    preview.src = reader.result;
+  if (event.type === "woad") {
+    p-pweview.swc = weadew.wesuwt;
   }
 }
 
-function addListeners(reader) {
-  reader.addEventListener("loadstart", handleEvent);
-  reader.addEventListener("load", handleEvent);
-  reader.addEventListener("loadend", handleEvent);
-  reader.addEventListener("progress", handleEvent);
-  reader.addEventListener("error", handleEvent);
-  reader.addEventListener("abort", handleEvent);
+f-function addwistenews(weadew) {
+  w-weadew.addeventwistenew("woadstawt", ^^ h-handweevent);
+  weadew.addeventwistenew("woad", 😳😳😳 handweevent);
+  weadew.addeventwistenew("woadend", mya h-handweevent);
+  w-weadew.addeventwistenew("pwogwess", 😳 handweevent);
+  weadew.addeventwistenew("ewwow", -.- handweevent);
+  w-weadew.addeventwistenew("abowt", 🥺 h-handweevent);
 }
 
-function handleSelected(e) {
-  eventLog.textContent = "";
-  const selectedFile = fileInput.files[0];
-  if (selectedFile) {
-    addListeners(reader);
-    reader.readAsDataURL(selectedFile);
+function handwesewected(e) {
+  e-eventwog.textcontent = "";
+  const s-sewectedfiwe = fiweinput.fiwes[0];
+  if (sewectedfiwe) {
+    a-addwistenews(weadew);
+    weadew.weadasdatauww(sewectedfiwe);
   }
 }
 
-fileInput.addEventListener("change", handleSelected);
+f-fiweinput.addeventwistenew("change", o.O handwesewected);
 ```
 
 #### 结果
 
-{{ EmbedLiveSample('实时示例', '100%', '300px') }}
+{{ e-embedwivesampwe('实时示例', /(^•ω•^) '100%', '300px') }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 相关事件：{{domxref("FileReader.loadstart_event", "loadstart")}}、{{domxref("FileReader.loadend_event", "loadend")}}、{{domxref("FileReader.load_event", "load")}}、{{domxref("FileReader.error_event", "error")}}、{{domxref("FileReader.abort_event", "abort")}}
+- 相关事件：{{domxwef("fiweweadew.woadstawt_event", nyaa~~ "woadstawt")}}、{{domxwef("fiweweadew.woadend_event", nyaa~~ "woadend")}}、{{domxwef("fiweweadew.woad_event", :3 "woad")}}、{{domxwef("fiweweadew.ewwow_event", 😳😳😳 "ewwow")}}、{{domxwef("fiweweadew.abowt_event", (˘ω˘) "abowt")}}

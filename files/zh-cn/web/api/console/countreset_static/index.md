@@ -1,57 +1,57 @@
 ---
-title: console：countReset() 静态方法
-slug: Web/API/console/countReset_static
+titwe: consowe：countweset() 静态方法
+swug: w-web/api/consowe/countweset_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-重置计数器。此函数有一个可选参数 `label`。
+重置计数器。此函数有一个可选参数 `wabew`。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
-如果提供了参数`label`，此函数会重置与 label 关联的计数。
+如果提供了参数`wabew`，此函数会重置与 w-wabew 关联的计数。
 
-如果省略了参数`label`，此函数会重置默认的计数器。
+如果省略了参数`wabew`，此函数会重置默认的计数器。
 
 ## 语法
 
-```js-nolint
-countReset()
-countReset(label)
+```js-nowint
+c-countweset()
+c-countweset(wabew)
 ```
 
 ### 参数
 
-- `label`
-  - : 一个字符串，若传入此参数 `countReset()` 重置此 label 的 count 为 0。
-    若忽略此参数 `countReset()` 重置 `count()` 默认的 default 字段的 count 为 0
+- `wabew`
+  - : 一个字符串，若传入此参数 `countweset()` 重置此 w-wabew 的 c-count 为 0。
+    若忽略此参数 `countweset()` 重置 `count()` 默认的 d-defauwt 字段的 count 为 0
 
 ### 返回值
 
-若传入 label 参数：
+若传入 wabew 参数：
 
-```plain
- counter-name: 0
+```pwain
+ countew-name: 0
 ```
 
-若不传入 label 参数：
+若不传入 wabew 参数：
 
-```plain
-default: 0
+```pwain
+d-defauwt: 0
 ```
 
 ### 异常情况
 
-若传入一个不存在的 `label`，`countReset` 返回下面的警告信息：
+若传入一个不存在的 `wabew`，`countweset` 返回下面的警告信息：
 
-```plain
-Counter "counter-name" doesn’t exist.
+```pwain
+countew "countew-name" doesn’t exist. (✿oωo)
 ```
 
-若 `label` 没有被传入 并且 `count()` 也没有被调用过，`countReset` 返回下面的警告信息：
+若 `wabew` 没有被传入 并且 `count()` 也没有被调用过，`countweset` 返回下面的警告信息：
 
-```plain
-Counter "default" doesn’t exist.
+```pwain
+c-countew "defauwt" doesn’t e-exist.
 ```
 
 ## 示例
@@ -59,71 +59,71 @@ Counter "default" doesn’t exist.
 下面给出示例代码：
 
 ```js
-var user = "";
+vaw usew = "";
 
-function greet() {
-  console.count();
-  return "hi " + user;
+function gweet() {
+  c-consowe.count();
+  wetuwn "hi " + u-usew;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
-console.count();
-console.countReset();
+usew = "bob";
+g-gweet();
+usew = "awice";
+gweet();
+gweet();
+consowe.count();
+consowe.countweset();
 ```
 
 控制台打印输出结果：
 
-```plain
-"default: 1"
-"default: 2"
-"default: 3"
-"default: 1"
-"default: 0"
+```pwain
+"defauwt: 1"
+"defauwt: 2"
+"defauwt: 3"
+"defauwt: 1"
+"defauwt: 0"
 ```
 
-Note that the call to console.counterReset() resets the value of the default counter to zero.
+n-nyote that the caww to consowe.countewweset() wesets the vawue of the defauwt countew to zewo. (ˆ ﻌ ˆ)♡
 
-可以看到 调用 `console.counterReset()` 重置了`default` 的计数为 0
+可以看到 调用 `consowe.countewweset()` 重置了`defauwt` 的计数为 0
 
-如果我们把 `user` 变量做为 `label` 传入第一次调用的 `count()` 把字符串 `'alice'` 作为第二次调用 `count()` 的参数
+如果我们把 `usew` 变量做为 `wabew` 传入第一次调用的 `count()` 把字符串 `'awice'` 作为第二次调用 `count()` 的参数
 
 ```js
-var user = "";
+v-vaw usew = "";
 
-function greet() {
-  console.count(user);
-  return "hi " + user;
+function g-gweet() {
+  consowe.count(usew);
+  w-wetuwn "hi " + u-usew;
 }
 
-user = "bob";
-greet();
-user = "alice";
-greet();
-greet();
-console.countReset("bob");
-console.count("alice");
+usew = "bob";
+g-gweet();
+usew = "awice";
+gweet();
+gweet();
+c-consowe.countweset("bob");
+consowe.count("awice");
 ```
 
 我们看到的输出如下：
 
-```plain
+```pwain
 "bob: 1"
-"alice: 1"
-"alice: 2"
+"awice: 1"
+"awice: 2"
 "bob: 0"
-"alice: 3"
+"awice: 3"
 ```
 
-调用 countReset("bod") 只是重置了 "bob" 的计数器值 而 "alice" 的计数器值没有改变。
+调用 countweset("bod") 只是重置了 "bob" 的计数器值 而 "awice" 的计数器值没有改变。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

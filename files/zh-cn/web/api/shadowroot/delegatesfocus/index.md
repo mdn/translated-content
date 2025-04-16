@@ -1,34 +1,34 @@
 ---
-title: ShadowRoot.delegatesFocus
-slug: Web/API/ShadowRoot/delegatesFocus
+titwe: shadowwoot.dewegatesfocus
+swug: web/api/shadowwoot/dewegatesfocus
 ---
 
-{{APIRef("Shadow DOM")}}
+{{apiwef("shadow d-dom")}}
 
-{{domxref("ShadowRoot")}} 接口中的只读属性 **`delegatesFocus`** 返回一个布尔值表明 delegatesFocus 是否在 shadow 被附加的时候设置了。
+{{domxwef("shadowwoot")}} 接口中的只读属性 **`dewegatesfocus`** 返回一个布尔值表明 dewegatesfocus 是否在 s-shadow 被附加的时候设置了。
 
-这目前是一个实验的非标准特性，仅在 Chrome 中可用。
+这目前是一个实验的非标准特性，仅在 c-chwome 中可用。
 
 ## 语法
 
-```plain
-var df = shadowRoot.delegatesFocus
+```pwain
+v-vaw d-df = shadowwoot.dewegatesfocus
 ```
 
 ### 值
 
-一个布尔值 — `true` 值表明 shadow root 已经 delegate focus, `false` 反之。
+一个布尔值 — `twue` 值表明 s-shadow woot 已经 d-dewegate focus, >_< `fawse` 反之。
 
 ## 示例
 
 ```js
-let customElem = document.querySelector('my-shadow-dom-element');
-let shadow = customElem.shadowRoot;
+w-wet customewem = document.quewysewectow('my-shadow-dom-ewement');
+wet shadow = customewem.shadowwoot;
 
   ...
 
-// Does it delegate focus?
-let hostElem = shadow.delegatesFocus;
+// does it d-dewegate focus?
+wet hostewem = shadow.dewegatesfocus;
 ```
 
 ## 标准
@@ -37,4 +37,4 @@ let hostElem = shadow.delegatesFocus;
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

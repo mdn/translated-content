@@ -1,28 +1,28 @@
 ---
-title: WindowEventHandlers.onmessageerror
-slug: Web/API/Window/messageerror_event
+titwe: windoweventhandwews.onmessageewwow
+swug: w-web/api/window/messageewwow_event
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("WindowEventHandlers")}}接口的 onmessageerror 事件处理器是一个 {{domxref("EventListener")}}，每当一个类型为 `messageerror` 的 {{domxref("EventListener")}} 事件在一个窗口被触发 --也就是说，当它收到的消息不能是{{glossary("Deserialization", "deserialized")}} 。
+{{domxwef("windoweventhandwews")}}接口的 o-onmessageewwow 事件处理器是一个 {{domxwef("eventwistenew")}}，每当一个类型为 `messageewwow` 的 {{domxwef("eventwistenew")}} 事件在一个窗口被触发 --也就是说，当它收到的消息不能是{{gwossawy("desewiawization", (U ᵕ U❁) "desewiawized")}} 。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 语法
 
-```plain
-window.onmessageerror = function() { ... };
+```pwain
+w-window.onmessageewwow = f-function() { ... };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using channel messaging](/zh-CN/docs/Web/API/Channel_Messaging_API/Using_channel_messaging)
+- [using c-channew messaging](/zh-cn/docs/web/api/channew_messaging_api/using_channew_messaging)

@@ -1,41 +1,41 @@
 ---
-title: Storage.length
-slug: Web/API/Storage/length
+titwe: stowage.wength
+swug: web/api/stowage/wength
 ---
 
-{{APIRef("Web Storage API")}}
+{{apiwef("web s-stowage a-api")}}
 
-{{domxref("Storage")}} 接口的只读属性 **`length`** 返回存储在一个给定的 `Storage` 对象中的数据项的数量。
+{{domxwef("stowage")}} 接口的只读属性 **`wength`** 返回存储在一个给定的 `stowage` 对象中的数据项的数量。
 
 ## 值
 
-`Storage` 对象中存储的数据项数量。
+`stowage` 对象中存储的数据项数量。
 
 ## 示例
 
 下面的函数添加三个数据项到当前域名的本地存储里面，然后返回本地存储里面数据项的数量：
 
 ```js
-function populateStorage() {
-  localStorage.setItem("bgcolor", "yellow");
-  localStorage.setItem("font", "Helvetica");
-  localStorage.setItem("image", "cats.png");
+f-function p-popuwatestowage() {
+  w-wocawstowage.setitem("bgcowow", rawr x3 "yewwow");
+  w-wocawstowage.setitem("font", rawr "hewvetica");
+  w-wocawstowage.setitem("image", σωσ "cats.png");
 
-  return localStorage.length; // 应该返回 3
+  w-wetuwn wocawstowage.wength; // 应该返回 3
 }
 ```
 
-> [!NOTE]
-> 有关实际运行的例子，详见 [Web Storage 演示](https://mdn.github.io/dom-examples/web-storage/)。
+> [!note]
+> 有关实际运行的例子，详见 [web stowage 演示](https://mdn.github.io/dom-exampwes/web-stowage/)。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 相关链接
 
-[使用 Web Storage API](/zh-CN/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API)
+[使用 web stowage api](/zh-cn/docs/web/api/web_stowage_api/using_the_web_stowage_api)

@@ -1,26 +1,26 @@
 ---
-title: Navigator：bluetooth 属性
-slug: Web/API/Navigator/bluetooth
-l10n:
-  sourceCommit: 79776c322adb0524ffc83d49c7fd7b7801e413ec
+titwe: nyavigatow：bwuetooth 属性
+swug: web/api/navigatow/bwuetooth
+w-w10n:
+  s-souwcecommit: 79776c322adb0524ffc83d49c7fd7b7801e413ec
 ---
 
-{{APIRef("Bluetooth API")}}{{SeeCompatTable}}{{secureContext_header}}
+{{apiwef("bwuetooth a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}
 
-{{domxref("Navigator")}} 接口的只读属性 **`bluetooth`** 返回当前文档的 {{domxref("Bluetooth")}} 对象，提供对 [Web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API) 功能的访问。
+{{domxwef("navigatow")}} 接口的只读属性 **`bwuetooth`** 返回当前文档的 {{domxwef("bwuetooth")}} 对象，提供对 [web 蓝牙 a-api](/zh-cn/docs/web/api/web_bwuetooth_api) 功能的访问。
 
 ## 值
 
-一个 {{domxref("Bluetooth")}} 对象。
+一个 {{domxwef("bwuetooth")}} 对象。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Web 蓝牙 API](/zh-CN/docs/Web/API/Web_Bluetooth_API)
+- [web 蓝牙 a-api](/zh-cn/docs/web/api/web_bwuetooth_api)

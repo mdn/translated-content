@@ -1,39 +1,39 @@
 ---
-title: Document：documentElement 属性
-slug: Web/API/Document/documentElement
-l10n:
-  sourceCommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
+titwe: document：documentewement 属性
+swug: w-web/api/document/documentewement
+w-w10n:
+  souwcecommit: 41a8b9c9832359d445d136b6d7a8a28737badc6b
 ---
 
-{{ApiRef("DOM")}}
+{{apiwef("dom")}}
 
-**`Document.documentElement`** 返回 {{domxref("document")}} 的根{{domxref("Element", "元素", "", "nocode")}}（例如，HTML 文档的 {{HTMLElement("html")}} 元素）。
+**`document.documentewement`** 返回 {{domxwef("document")}} 的根{{domxwef("ewement", rawr "元素", σωσ "", "nocode")}}（例如，htmw 文档的 {{htmwewement("htmw")}} 元素）。
 
 ## 值
 
-{{domxref("Element")}} 对象。
+{{domxwef("ewement")}} 对象。
 
 ## 示例
 
 ```js
-const rootElement = document.documentElement;
-const firstTier = rootElement.childNodes;
-// firstTier 是包含根元素直接子元素的 NodeList
+c-const wootewement = d-document.documentewement;
+c-const fiwsttiew = w-wootewement.chiwdnodes;
+// f-fiwsttiew 是包含根元素直接子元素的 n-nyodewist
 // 例如 <head> 和 <body>
 
-for (const child of firstTier) {
+fow (const chiwd of fiwsttiew) {
   // 对根元素的每个直接子元素执行某个操作
 }
 ```
 
 ## 备注
 
-对于任何非空 HTML 文档，`documentElement` 将始终是 {{HTMLElement("html")}} 元素。对于任何非空 XML 文档，`documentElement` 将始终是文档的根元素。
+对于任何非空 htmw 文档，`documentewement` 将始终是 {{htmwewement("htmw")}} 元素。对于任何非空 xmw 文档，`documentewement` 将始终是文档的根元素。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

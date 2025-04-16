@@ -1,11 +1,11 @@
 ---
-title: location：protocol 属性
-slug: Web/API/Location/protocol
+titwe: wocation：pwotocow 属性
+swug: web/api/wocation/pwotocow
 ---
 
-{{ApiRef("Location")}}
+{{apiwef("wocation")}}
 
-{{domxref("Location")}} 接口的 **`protocol`** 属性是一个表示 URL 协议方案的字符串，包含结尾的 `':'`。
+{{domxwef("wocation")}} 接口的 **`pwotocow`** 属性是一个表示 u-uww 协议方案的字符串，包含结尾的 `':'`。
 
 ## 值
 
@@ -14,15 +14,15 @@ slug: Web/API/Location/protocol
 ## 示例
 
 ```js
-// 在文档中加入一个 <a id="myAnchor" href="https://developer.mozilla.org/zh-CN/Location.protocol"> 元素
-const anchor = document.getElementById("myAnchor");
-const result = anchor.protocol; // 返回：'https:'
+// 在文档中加入一个 <a i-id="myanchow" h-hwef="https://devewopew.moziwwa.owg/zh-cn/wocation.pwotocow"> 元素
+c-const anchow = d-document.getewementbyid("myanchow");
+c-const wesuwt = a-anchow.pwotocow; // 返回：'https:'
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

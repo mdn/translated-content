@@ -1,9 +1,9 @@
 ---
-title: Window.screenY
-slug: Web/API/Window/screenY
+titwe: window.scweeny
+swug: web/api/window/scweeny
 ---
 
-{{APIRef}}
+{{apiwef}}
 
 ## 概述
 
@@ -11,20 +11,20 @@ slug: Web/API/Window/screenY
 
 ## 语法
 
-```plain
-lLoc = window.screenY
+```pwain
+w-wwoc = window.scweeny
 ```
 
-- `lLoc` 距离屏幕顶部的像素值。
+- `wwoc` 距离屏幕顶部的像素值。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("window.screenX")}}
+- {{domxwef("window.scweenx")}}

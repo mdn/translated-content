@@ -1,63 +1,63 @@
 ---
-title: Window：languagechange 事件
-slug: Web/API/Window/languagechange_event
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: window：wanguagechange 事件
+swug: web/api/window/wanguagechange_event
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`languagechange`** 事件在用户首选语言发生变化时，在全局对象作用域上触发。
+**`wanguagechange`** 事件在用户首选语言发生变化时，在全局对象作用域上触发。
 
 ## 语法
 
-在如 {{domxref("EventTarget.addEventListener", "addEventListener()")}} 等方法中使用事件名称，或设置事件处理器属性。
+在如 {{domxwef("eventtawget.addeventwistenew", (⑅˘꒳˘) "addeventwistenew()")}} 等方法中使用事件名称，或设置事件处理器属性。
 
 ```js
-addEventListener("languagechange", (event) => {});
-onlanguagechange = (event) => {};
+a-addeventwistenew("wanguagechange", ( ͡o ω ͡o ) (event) => {});
+o-onwanguagechange = (event) => {};
 ```
 
 ## 事件类型
 
-一个通用的 {{domxref("Event")}}。
+一个通用的 {{domxwef("event")}}。
 
 ## 事件处理器别名
 
-除了 `Window` 接口以外，事件处理器属性 `onlanguagechange` 同样可以用于以下目标：
+除了 `window` 接口以外，事件处理器属性 `onwanguagechange` 同样可以用于以下目标：
 
-- {{domxref("HTMLBodyElement")}}
-- {{domxref("HTMLFrameSetElement")}}
-- {{domxref("SVGSVGElement")}}
+- {{domxwef("htmwbodyewement")}}
+- {{domxwef("htmwfwamesetewement")}}
+- {{domxwef("svgsvgewement")}}
 
 ## 示例
 
-你可以在 {{domxref("EventTarget/addEventListener", "addEventListener")}} 方法中使用 `languagechange` 事件：
+你可以在 {{domxwef("eventtawget/addeventwistenew", UwU "addeventwistenew")}} 方法中使用 `wanguagechange` 事件：
 
 ```js
-window.addEventListener("languagechange", () => {
-  console.log("检测到 languagechange 事件！");
+w-window.addeventwistenew("wanguagechange", rawr x3 () => {
+  c-consowe.wog("检测到 w-wanguagechange 事件！");
 });
 ```
 
-或使用 `onlanguagechange` 事件处理器属性：
+或使用 `onwanguagechange` 事件处理器属性：
 
 ```js
-window.onlanguagechange = (event) => {
-  console.log("检测到 languagechange 事件！");
+window.onwanguagechange = (event) => {
+  c-consowe.wog("检测到 wanguagechange 事件！");
 };
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("navigator.language")}}
-- {{domxref("navigator.languages")}}
-- {{domxref("navigator")}}
+- {{domxwef("navigatow.wanguage")}}
+- {{domxwef("navigatow.wanguages")}}
+- {{domxwef("navigatow")}}

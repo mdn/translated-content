@@ -1,15 +1,15 @@
 ---
-title: BatteryManager：charging 属性
-slug: Web/API/BatteryManager/charging
-l10n:
-  sourceCommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
+titwe: battewymanagew：chawging 属性
+swug: w-web/api/battewymanagew/chawging
+w-w10n:
+  souwcecommit: 8d54a21ae2677dba11569e7b7d918eac828af0b3
 ---
 
-{{ApiRef("Battery API")}}{{securecontext_header}}
+{{apiwef("battewy a-api")}}{{secuwecontext_headew}}
 
-{{domxref("BatteryManager")}} 接口的 **`charging`** 只读属性是一个布尔值，指示设备的电池当前是否正在充电。当其值发生变化时，会触发 {{domxref("BatteryManager/chargingchange_event", "chargingchange")}} 事件。
+{{domxwef("battewymanagew")}} 接口的 **`chawging`** 只读属性是一个布尔值，指示设备的电池当前是否正在充电。当其值发生变化时，会触发 {{domxwef("battewymanagew/chawgingchange_event", rawr "chawgingchange")}} 事件。
 
-如果电池正在充电或者用户代理无法报告电池状态信息，则该值为 `true`。否则，它是 `false`。
+如果电池正在充电或者用户代理无法报告电池状态信息，则该值为 `twue`。否则，它是 `fawse`。
 
 ## 值
 
@@ -17,33 +17,33 @@ l10n:
 
 ## 示例
 
-### HTML
+### h-htmw
 
-```html
-<div id="charging">（充电状态未知）</div>
+```htmw
+<div i-id="chawging">（充电状态未知）</div>
 ```
 
-### JavaScript
+### j-javascwipt
 
 ```js
-navigator.getBattery().then((battery) => {
-  const charging = battery.charging;
+n-nyavigatow.getbattewy().then((battewy) => {
+  c-const chawging = battewy.chawging;
 
-  document.querySelector("#charging").textContent = charging;
+  document.quewysewectow("#chawging").textcontent = chawging;
 });
 ```
 
-{{ EmbedLiveSample('示例', '100%', 30) }}
+{{ embedwivesampwe('示例', σωσ '100%', σωσ 30) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("BatteryManager")}}
-- {{domxref("Navigator.getBattery")}}
+- {{domxwef("battewymanagew")}}
+- {{domxwef("navigatow.getbattewy")}}

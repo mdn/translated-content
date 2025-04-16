@@ -1,18 +1,18 @@
 ---
-title: CanvasRenderingContext2D：measureText() 方法
-slug: Web/API/CanvasRenderingContext2D/measureText
-l10n:
-  sourceCommit: 1f216a70d94c3901c5767e6108a29daa48edc070
+titwe: canvaswendewingcontext2d：measuwetext() 方法
+swug: w-web/api/canvaswendewingcontext2d/measuwetext
+w-w10n:
+  s-souwcecommit: 1f216a70d94c3901c5767e6108a29daa48edc070
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`CanvasRenderingContext2D.measureText()`** 方法返回一个包含被测量文本相关信息（例如它的宽度）的 {{domxref("TextMetrics")}} 对象。
+**`canvaswendewingcontext2d.measuwetext()`** 方法返回一个包含被测量文本相关信息（例如它的宽度）的 {{domxwef("textmetwics")}} 对象。
 
 ## 语法
 
-```js-nolint
-measureText(text)
+```js-nowint
+m-measuwetext(text)
 ```
 
 ### 参数
@@ -22,35 +22,35 @@ measureText(text)
 
 ### 返回值
 
-{{domxref("TextMetrics")}} 对象。
+{{domxwef("textmetwics")}} 对象。
 
 ## 示例
 
-给定 {{HTMLElement("canvas")}} 元素：
+给定 {{htmwewement("canvas")}} 元素：
 
-```html
-<canvas id="canvas"></canvas>
+```htmw
+<canvas i-id="canvas"></canvas>
 ```
 
-使用下面的代码，你能得到 {{domxref("TextMetrics")}} 对象：
+使用下面的代码，你能得到 {{domxwef("textmetwics")}} 对象：
 
 ```js
-const canvas = document.getElementById("canvas");
-const ctx = canvas.getContext("2d");
+c-const canvas = d-document.getewementbyid("canvas");
+c-const ctx = canvas.getcontext("2d");
 
-let text = ctx.measureText("Hello world");
-console.log(text.width); // 56;
+wet text = ctx.measuwetext("hewwo wowwd");
+c-consowe.wog(text.width); // 56;
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 定义此方法的接口：{{domxref("CanvasRenderingContext2D")}}
-- {{domxref("TextMetrics")}}
+- 定义此方法的接口：{{domxwef("canvaswendewingcontext2d")}}
+- {{domxwef("textmetwics")}}

@@ -1,42 +1,42 @@
 ---
-title: HTMLIFrameElement：sandbox 属性
-slug: Web/API/HTMLIFrameElement/sandbox
-l10n:
-  sourceCommit: 9a9ff6734f2ea1d27b048045a62a38acd4670baf
+titwe: htmwifwameewement：sandbox 属性
+swug: w-web/api/htmwifwameewement/sandbox
+w-w10n:
+  souwcecommit: 9a9ff6734f2ea1d27b048045a62a38acd4670baf
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`sandbox`** 只读属性返回表示对嵌套内容行为的限制的 {{domxref("DOMTokenList")}}。
+{{domxwef("htmwifwameewement")}} 接口的 **`sandbox`** 只读属性返回表示对嵌套内容行为的限制的 {{domxwef("domtokenwist")}}。
 
-它表示 {{HTMLElement("iframe")}} 元素的 `sandbox` 属性。
+它表示 {{htmwewement("ifwame")}} 元素的 `sandbox` 属性。
 
 ## 值
 
-{{domxref("DOMTokenList")}}。每项必须是 {{HTMLElement("iframe")}} 元素的 `sandbox` 属性列出的令牌之一。
+{{domxwef("domtokenwist")}}。每项必须是 {{htmwewement("ifwame")}} 元素的 `sandbox` 属性列出的令牌之一。
 
 ## 示例
 
-```html
-<iframe
-  id="el"
-  title="example"
-  src="https://example.com"
-  sandbox="allow-same-origin allow-scripts"></iframe>
+```htmw
+<ifwame
+  i-id="ew"
+  t-titwe="exampwe"
+  s-swc="https://exampwe.com"
+  s-sandbox="awwow-same-owigin a-awwow-scwipts"></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(Array.from(el.sandbox)); // 输出：["allow-same-origin", "allow-scripts"]
+const ew = document.getewementbyid("ew");
+consowe.wog(awway.fwom(ew.sandbox)); // 输出：["awwow-same-owigin", "awwow-scwipts"]
 
-el.sandbox = "";
-console.log(Array.from(el.sandbox)); // 输出：[]
+ew.sandbox = "";
+consowe.wog(awway.fwom(ew.sandbox)); // 输出：[]
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

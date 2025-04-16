@@ -1,15 +1,15 @@
 ---
-title: URL：password 属性
-slug: Web/API/URL/password
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uww：passwowd 属性
+swug: web/api/uww/passwowd
+w-w10n:
+  s-souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww a-api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URL")}} 接口的 **`password`** 属性是一个包含域名之前指定的密码的字符串。
+{{domxwef("uww")}} 接口的 **`passwowd`** 属性是一个包含域名之前指定的密码的字符串。
 
-如果未设置 {{domxref("URL.username", "username")}} 属性而直接设置该属性，将导致静默失败。
+如果未设置 {{domxwef("uww.usewname", òωó "usewname")}} 属性而直接设置该属性，将导致静默失败。
 
 ## 值
 
@@ -18,20 +18,20 @@ l10n:
 ## 示例
 
 ```js
-const url = new URL(
-  "https://anonymous:flabada@developer.mozilla.org/zh-CN/docs/Web/API/URL/password",
+c-const uww = nyew u-uww(
+  "https://anonymous:fwabada@devewopew.moziwwa.owg/zh-cn/docs/web/api/uww/passwowd", o.O
 );
-console.log(url.password); // 输出“flabada”
+consowe.wog(uww.passwowd); // 输出“fwabada”
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属的 {{domxref("URL")}} 接口。
+- 所属的 {{domxwef("uww")}} 接口。

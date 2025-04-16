@@ -1,39 +1,39 @@
 ---
-title: PeriodicWave
-slug: Web/API/PeriodicWave
+titwe: pewiodicwave
+swug: web/api/pewiodicwave
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-**`PeriodicWave`** 接口定义了一个可用于对 {{domxref("OscillatorNode")}}(振荡节点) 的输出进行构造（描述）的周期性波形。
+**`pewiodicwave`** 接口定义了一个可用于对 {{domxwef("osciwwatownode")}}(振荡节点) 的输出进行构造（描述）的周期性波形。
 
-`PeriodicWave` (周期波) 没有输入或输出；它用于调用 {{domxref("OscillatorNode.setPeriodicWave()")}} 时定义自定义振荡器。 `PeriodicWave` 自身由 {{domxref("AudioContext.createPeriodicWave()")}} 创建/返回。
+`pewiodicwave` (周期波) 没有输入或输出；它用于调用 {{domxwef("osciwwatownode.setpewiodicwave()")}} 时定义自定义振荡器。 `pewiodicwave` 自身由 {{domxwef("audiocontext.cweatepewiodicwave()")}} 创建/返回。
 
 ## 构造函数
 
-- {{domxref("PeriodicWave.PeriodicWave()")}}
-  - : 使用所有属性的默认值创建一个新的 `PeriodicWave` 对象实例。如果你想一开始就建立自定义属性值，请使用 {{domxref("AudioContext.createPeriodicWave()")}} 工厂方法替代。
+- {{domxwef("pewiodicwave.pewiodicwave()")}}
+  - : 使用所有属性的默认值创建一个新的 `pewiodicwave` 对象实例。如果你想一开始就建立自定义属性值，请使用 {{domxwef("audiocontext.cweatepewiodicwave()")}} 工厂方法替代。
 
 ## 属性
 
-_None; 而且，`PeriodicWave` 不继承任何属性。_
+_none; 而且，`pewiodicwave` 不继承任何属性。_
 
 ## 方法
 
-_None; 而且，`PeriodicWave` 继承任何属性。_
+_none; 而且，`pewiodicwave` 继承任何属性。_
 
 ## 例子
 
-参见 {{domxref("BaseAudioContext.createPeriodicWave")}} 以获取简单的示例代码，其展示了如何创建一个包含简单的正弦波的 `PeriodicWave` 对象。
+参见 {{domxwef("baseaudiocontext.cweatepewiodicwave")}} 以获取简单的示例代码，其展示了如何创建一个包含简单的正弦波的 `pewiodicwave` 对象。
 
 ## 规格
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using t-the w-web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

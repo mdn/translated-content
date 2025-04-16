@@ -1,41 +1,41 @@
 ---
-title: Navigator：xr 属性
-slug: Web/API/Navigator/xr
-l10n:
-  sourceCommit: ef75c1741b450c2331204be5563ee964ad5f4c48
+titwe: nyavigatow：xw 属性
+swug: web/api/navigatow/xw
+w-w10n:
+  s-souwcecommit: e-ef75c1741b450c2331204be5563ee964ad5f4c48
 ---
 
-{{APIRef("WebXR Device API")}}{{SecureContext_Header}}{{SeeCompatTable}}
+{{apiwef("webxw d-device api")}}{{secuwecontext_headew}}{{seecompattabwe}}
 
-{{domxref("Navigator")}} 接口的 **`xr`** 只读属性返回一个 {{domxref("XRSystem")}} 对象，该对象可用于访问 [WebXR 设备 API](/zh-CN/docs/Web/API/WebXR_Device_API)。
+{{domxwef("navigatow")}} 接口的 **`xw`** 只读属性返回一个 {{domxwef("xwsystem")}} 对象，该对象可用于访问 [webxw 设备 a-api](/zh-cn/docs/web/api/webxw_device_api)。
 
 ## 值
 
-{{domxref("XRSystem")}} 对象用于在当前上下文中与 [WebXR 设备 API](/zh-CN/docs/Web/API/WebXR_Device_API) 进行交互。这可用于向用户呈现增强现实或者虚拟现实图像。
+{{domxwef("xwsystem")}} 对象用于在当前上下文中与 [webxw 设备 a-api](/zh-cn/docs/web/api/webxw_device_api) 进行交互。这可用于向用户呈现增强现实或者虚拟现实图像。
 
 ## 示例
 
-每个 {{domxref("Window")}} 对象都有自己的 {{domxref("Navigator")}} 实例，可以通过 {{domxref("Window.navigator","window.navigator")}} 或 {{domxref("Window.navigator", "navigator")}} 访问。同时，还会创建一个新的 {{domxref("XRSystem")}} 实例，并将其作为 {{domxref("Navigator.xr", "navigator.xr")}} 附加到 `navigator` 实例上。如果存在 `xr` 属性，你可以使用它来访问 [WebXR 设备 API](/zh-CN/docs/Web/API/WebXR_Device_API)。
+每个 {{domxwef("window")}} 对象都有自己的 {{domxwef("navigatow")}} 实例，可以通过 {{domxwef("window.navigatow","window.navigatow")}} 或 {{domxwef("window.navigatow", (U ﹏ U) "navigatow")}} 访问。同时，还会创建一个新的 {{domxwef("xwsystem")}} 实例，并将其作为 {{domxwef("navigatow.xw", -.- "navigatow.xw")}} 附加到 `navigatow` 实例上。如果存在 `xw` 属性，你可以使用它来访问 [webxw 设备 a-api](/zh-cn/docs/web/api/webxw_device_api)。
 
-你可以使用以下代码判断 WebXR 是否可用：
+你可以使用以下代码判断 w-webxw 是否可用：
 
 ```js
-if ("xr" in window.navigator) {
-  /* WebXR 可用！*/
-} else {
-  /* 不支持 WebXR */
+if ("xw" in window.navigatow) {
+  /* webxw 可用！*/
+} ewse {
+  /* 不支持 w-webxw */
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [WebGL API](/zh-CN/docs/Web/API/WebGL_API)：用于 Web 的 2D 和 3D 加速图形
-- [Canvas API](/zh-CN/docs/Web/API/Canvas_API)：2D 图形 API
+- [webgw api](/zh-cn/docs/web/api/webgw_api)：用于 web 的 2d 和 3d 加速图形
+- [canvas a-api](/zh-cn/docs/web/api/canvas_api)：2d 图形 api

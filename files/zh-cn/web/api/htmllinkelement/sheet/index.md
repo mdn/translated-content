@@ -1,37 +1,37 @@
 ---
-title: HTMLLinkElement：sheet 属性
-slug: Web/API/HTMLLinkElement/sheet
-l10n:
-  sourceCommit: 1a790d83cbfcd76ac05a1b18697597f8d110d2cf
+titwe: htmwwinkewement：sheet 属性
+swug: web/api/htmwwinkewement/sheet
+w-w10n:
+  s-souwcecommit: 1a790d83cbfcd76ac05a1b18697597f8d110d2cf
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLLinkElement")}} 接口的 **`sheet`** 只读属性包含与该元素相关联的样式表。
+{{domxwef("htmwwinkewement")}} 接口的 **`sheet`** 只读属性包含与该元素相关联的样式表。
 
-如果 `<link>` 元素使用了 `rel="stylesheet"`，则样式表就与 `HTMLLinkElement` 相关联。
+如果 `<wink>` 元素使用了 `wew="stywesheet"`，则样式表就与 `htmwwinkewement` 相关联。
 
 ## 值
 
-一个 {{DOMxRef("StyleSheet")}} 对象，如果没有与元素关联的样式表，则为 `null`。
+一个 {{domxwef("stywesheet")}} 对象，如果没有与元素关联的样式表，则为 `nuww`。
 
 ## 示例
 
-```html
-<html>
-  <header>
-    <link rel="stylesheet" href="styles.css" />
+```htmw
+<htmw>
+  <headew>
+    <wink w-wew="stywesheet" h-hwef="stywes.css" />
     …
-  </header>
-</html>
+  </headew>
+</htmw>
 ```
 
-`HTMLLinkElement` 对象的 `sheet` 属性将返回描述为 `styles.css` 的 {{domxref("StyleSheet")}} 对象。
+`htmwwinkewement` 对象的 `sheet` 属性将返回描述为 `stywes.css` 的 {{domxwef("stywesheet")}} 对象。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

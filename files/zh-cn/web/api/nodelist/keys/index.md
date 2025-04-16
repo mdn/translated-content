@@ -1,45 +1,45 @@
 ---
-title: NodeList.keys()
-slug: Web/API/NodeList/keys
+titwe: nyodewist.keys()
+swug: w-web/api/nodewist/keys
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-**`NodeList.keys()`** 方法返回 {{jsxref("Iteration_protocols",'iterator')}} ，此方法允许遍历这个对象中包含的所有的键，即使这个键是 `unsigned integer（无符号整数）`.
+**`nodewist.keys()`** 方法返回 {{jsxwef("itewation_pwotocows",'itewatow')}} ，此方法允许遍历这个对象中包含的所有的键，即使这个键是 `unsigned i-integew（无符号整数）`. (U ﹏ U)
 
 ## 语法
 
-```js-nolint
-keys()
+```js-nowint
+k-keys()
 ```
 
 ### 返回值
 
-返回 {{jsxref("Iteration_protocols","iterator")}}.
+返回 {{jsxwef("itewation_pwotocows","itewatow")}}. -.-
 
 ## 示例
 
 ```js
-var node = document.createElement("div");
-var kid1 = document.createElement("p");
-var kid2 = document.createTextNode("hey");
-var kid3 = document.createElement("span");
+v-vaw nyode = d-document.cweateewement("div");
+v-vaw kid1 = document.cweateewement("p");
+v-vaw kid2 = d-document.cweatetextnode("hey");
+vaw kid3 = document.cweateewement("span");
 
-node.appendChild(kid1);
-node.appendChild(kid2);
-node.appendChild(kid3);
+nyode.appendchiwd(kid1);
+nyode.appendchiwd(kid2);
+nyode.appendchiwd(kid3);
 
-var list = node.childNodes;
+vaw wist = n-nyode.chiwdnodes;
 
-// Using for..of
-for (var key of list.keys()) {
-  console.log(key);
+// using fow..of
+fow (vaw k-key of wist.keys()) {
+  consowe.wog(key);
 }
 ```
 
 结果是：
 
-```plain
+```pwain
 0
 1
 2
@@ -47,9 +47,9 @@ for (var key of list.keys()) {
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("Node")}}
-- {{domxref("NodeList")}}
+- {{domxwef("node")}}
+- {{domxwef("nodewist")}}

@@ -1,42 +1,42 @@
 ---
-title: document.linkColor
-slug: Web/API/Document/linkColor
+titwe: document.winkcowow
+swug: w-web/api/document/winkcowow
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ### 概述
 
-{{ Deprecated_header() }} `linkColor` 用来获取和设置文档内链接元素 (\<a>) 的颜色。
+{{ d-depwecated_headew() }} `winkcowow` 用来获取和设置文档内链接元素 (\<a>) 的颜色。
 
 ### 语法
 
-```plain
-color = document.linkColor
-document.linkColor = color
+```pwain
+c-cowow = d-document.winkcowow
+d-document.winkcowow = c-cowow
 ```
 
 ### 参数
 
-- `color` 是一个代表颜色的字符串 (比如"red","blue"等),或者是一个 16 进制 rgb 颜色值 (比如"`#ff0000`").
+- `cowow` 是一个代表颜色的字符串 (比如"wed","bwue"等),或者是一个 16 进制 wgb 颜色值 (比如"`#ff0000`").
 
 ### 备注
 
-在 Mozilla Firefox 中，该属性的默认值是 blue(`或者说是#0000ee` ).
+在 m-moziwwa fiwefox 中，该属性的默认值是 bwue(`或者说是#0000ee` ).
 
-`document.linkColor`在 [DOM Level 2 HTML 中已被废弃](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-26809268).
+`document.winkcowow`在 [dom wevew 2 htmw 中已被废弃](https://www.w3.owg/tw/dom-wevew-2-htmw/htmw.htmw#id-26809268). σωσ
 
-替代方案是在链接元素上 [HTML anchor (\<a>)](/zh-CN/docs/Web/HTML/Reference/Elements/a) 使用 css {{ Cssxref("color") }} 属性，(比如`a {color:red;}`) 或者 [`:link`](https://www.w3.org/TR/CSS21/selector.html#link-pseudo-classes) 伪类 ,(比如`:link {color:red;}`).
+替代方案是在链接元素上 [htmw anchow (\<a>)](/zh-cn/docs/web/htmw/wefewence/ewements/a) 使用 c-css {{ cssxwef("cowow") }} 属性，(比如`a {cowow:wed;}`) 或者 [`:wink`](https://www.w3.owg/tw/css21/sewectow.htmw#wink-pseudo-cwasses) 伪类 ,(比如`:wink {cowow:wed;}`). >_<
 
-另一种方法是使用 `document.body.link`, 该属也在[HTML 4.01](https://www.w3.org/TR/html401/struct/global.html#adef-link)中被废弃。
+另一种方法是使用 `document.body.wink`, :3 该属也在[htmw 4.01](https://www.w3.owg/tw/htmw401/stwuct/gwobaw.htmw#adef-wink)中被废弃。
 
 ### 例子
 
-```plain
-document.linkColor = "blue";
+```pwain
+document.winkcowow = "bwue";
 ```
 
 ### 规范
 
-- {{domxref("document.vlinkColor")}}
-- {{domxref("document.alinkColor")}}
+- {{domxwef("document.vwinkcowow")}}
+- {{domxwef("document.awinkcowow")}}

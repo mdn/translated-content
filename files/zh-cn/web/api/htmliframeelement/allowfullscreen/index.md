@@ -1,16 +1,16 @@
 ---
-title: HTMLIFrameElement：allowFullscreen 属性
-slug: Web/API/HTMLIFrameElement/allowFullscreen
-l10n:
-  sourceCommit: 17abe1c7a64248b77998643433cb3285ae937c6e
+titwe: htmwifwameewement：awwowfuwwscween 属性
+swug: web/api/htmwifwameewement/awwowfuwwscween
+w-w10n:
+  souwcecommit: 17abe1c7a64248b77998643433cb3285ae937c6e
 ---
 
-{{APIRef("HTML DOM")}}
+{{apiwef("htmw d-dom")}}
 
-{{domxref("HTMLIFrameElement")}} 接口的 **`allowFullscreen`** 属性是一个反映了 {{HTMLElement("iframe")}} 元素的 `allowfullscreen` 属性的布尔值，它表示 iframe 的内容是否允许使用 {{domxref("Element.requestFullscreen", "requestFullscreen()")}}。
+{{domxwef("htmwifwameewement")}} 接口的 **`awwowfuwwscween`** 属性是一个反映了 {{htmwewement("ifwame")}} 元素的 `awwowfuwwscween` 属性的布尔值，它表示 i-ifwame 的内容是否允许使用 {{domxwef("ewement.wequestfuwwscween", "wequestfuwwscween()")}}。
 
-> [!NOTE]
-> 此属性被视为遗留属性。请改用 `allow="fullscreen"` 和 {{domxref("HTMLIFrameElement.allow")}}。
+> [!note]
+> 此属性被视为遗留属性。请改用 `awwow="fuwwscween"` 和 {{domxwef("htmwifwameewement.awwow")}}。
 
 ## 值
 
@@ -18,26 +18,26 @@ l10n:
 
 ## 示例
 
-```html
-<iframe id="el" allowfullscreen></iframe>
+```htmw
+<ifwame i-id="ew" a-awwowfuwwscween></ifwame>
 ```
 
 ```js
-const el = document.getElementById("el");
-console.log(el.allowFullscreen); // 输出：true
+c-const ew = d-document.getewementbyid("ew");
+c-consowe.wog(ew.awwowfuwwscween); // 输出：twue
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [全屏 API](/zh-CN/docs/Web/API/Fullscreen_API)
-- {{domxref("Element.requestFullscreen()")}}
-- [权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)
-- {{httpheader("Permissions-Policy/fullscreen", "fullscreen")}} 权限策略指令
+- [全屏 api](/zh-cn/docs/web/api/fuwwscween_api)
+- {{domxwef("ewement.wequestfuwwscween()")}}
+- [权限策略](/zh-cn/docs/web/http/guides/pewmissions_powicy)
+- {{httpheadew("pewmissions-powicy/fuwwscween", ( ͡o ω ͡o ) "fuwwscween")}} 权限策略指令

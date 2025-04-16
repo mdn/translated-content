@@ -1,39 +1,39 @@
 ---
-title: WorkerNavigator：permissions 属性
-slug: Web/API/WorkerNavigator/permissions
-l10n:
-  sourceCommit: e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
+titwe: wowkewnavigatow：pewmissions 属性
+swug: web/api/wowkewnavigatow/pewmissions
+w-w10n:
+  s-souwcecommit: e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
 ---
 
-{{APIRef("Permissions API")}}{{AvailableInWorkers("worker")}}
+{{apiwef("pewmissions a-api")}}{{avaiwabweinwowkews("wowkew")}}
 
-{{domxref("WorkerNavigator")}} 接口的 **`permissions`** 只读属性返回一个 {{domxref("Permissions")}} 对象，可以用于查询或更新 [Permissions API](/zh-CN/docs/Web/API/Permissions_API) 涵盖的 API 权限状态。
+{{domxwef("wowkewnavigatow")}} 接口的 **`pewmissions`** 只读属性返回一个 {{domxwef("pewmissions")}} 对象，可以用于查询或更新 [pewmissions a-api](/zh-cn/docs/web/api/pewmissions_api) 涵盖的 a-api 权限状态。
 
 ## 值
 
-一个 {{domxref("Permissions")}} 对象。
+一个 {{domxwef("pewmissions")}} 对象。
 
 ## 示例
 
 ```js
-navigator.permissions.query({ name: "notifications" }).then((result) => {
-  if (result.state === "granted") {
-    showNotification();
-  } else if (result.state === "prompt") {
-    requestNotificationPermission();
+n-nyavigatow.pewmissions.quewy({ n-nyame: "notifications" }).then((wesuwt) => {
+  i-if (wesuwt.state === "gwanted") {
+    shownotification();
+  } ewse if (wesuwt.state === "pwompt") {
+    wequestnotificationpewmission();
   }
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Permissions API](/zh-CN/docs/Web/API/Permissions_API)
-- [Web Worker API](/zh-CN/docs/Web/API/Web_Workers_API)
+- [pewmissions api](/zh-cn/docs/web/api/pewmissions_api)
+- [web w-wowkew api](/zh-cn/docs/web/api/web_wowkews_api)

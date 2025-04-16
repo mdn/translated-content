@@ -1,103 +1,103 @@
 ---
-title: 媒体追踪约束
-slug: Web/API/MediaTrackConstraints
+titwe: 媒体追踪约束
+swug: w-web/api/mediatwackconstwaints
 ---
 
-{{APIRef("媒体捕获与媒体流")}}
+{{apiwef("媒体捕获与媒体流")}}
 
-The **`MediaTrackConstraints`** dictionary is used to describe a set of capabilities and the value or values each can take on. A constraints dictionary is passed into {{domxref("MediaStreamTrack.applyConstraints", "applyConstraints()")}} to allow a script to establish a set of exact (required) values or ranges and/or preferred values or ranges of values for the track, and the most recently-requested set of custom constraints can be retrieved by calling {{domxref("MediaStreamTrack.getConstraints", "getConstraints()")}}.
+t-the **`mediatwackconstwaints`** d-dictionawy i-is used t-to descwibe a set o-of capabiwities a-and the vawue o-ow vawues each can take on. 😳 a constwaints dictionawy is passed into {{domxwef("mediastweamtwack.appwyconstwaints", 😳😳😳 "appwyconstwaints()")}} t-to awwow a scwipt to estabwish a set o-of exact (wequiwed) vawues ow wanges a-and/ow pwefewwed vawues ow wanges of vawues fow the twack, (˘ω˘) a-and the most wecentwy-wequested set of custom constwaints c-can be w-wetwieved by cawwing {{domxwef("mediastweamtwack.getconstwaints", "getconstwaints()")}}. ʘwʘ
 
-For each constraint, you can typically specify an exact value you need, an ideal value you want, a range of acceptable values, and/or a value which you'd like to be as close to as possible. The specifics vary somewhat depending on the type of the constrainable property.
+fow each constwaint, ( ͡o ω ͡o ) you can typicawwy specify an exact v-vawue you nyeed, o.O an ideaw vawue you want, >w< a wange of acceptabwe vawues, 😳 and/ow a-a vawue which you'd wike to be a-as cwose to as p-possibwe. 🥺 the specifics v-vawy somenani d-depending on the type of the constwainabwe p-pwopewty. rawr x3
 
-To learn more about how constraints work, see [Capabilities, constraints, and settings](/zh-CN/docs/Web/API/Media_Capture_and_Streams_API/Constraints).
+to weawn mowe about how constwaints w-wowk, o.O see [capabiwities, rawr constwaints, ʘwʘ and settings](/zh-cn/docs/web/api/media_captuwe_and_stweams_api/constwaints). 😳😳😳
 
-## Properties
+## pwopewties
 
-Some combination—but not necessarily all—of the following properties will exist on the object.
+some combination—but nyot n-necessawiwy aww—of the fowwowing p-pwopewties wiww e-exist on the o-object. ^^;;
 
-### Properties of all media tracks
+### pwopewties of aww media twacks
 
-- {{domxref("MediaTrackConstraints.deviceId", "deviceId")}}
-  - : A {{domxref("ConstrainDOMString")}} object specifying a device ID or an array of device IDs which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.groupId", "groupId")}}
-  - : A {{domxref("ConstrainDOMString")}} object specifying a group ID or an array of group IDs which are acceptable and/or required.
+- {{domxwef("mediatwackconstwaints.deviceid", "deviceid")}}
+  - : a {{domxwef("constwaindomstwing")}} o-object specifying a-a device id ow an awway of d-device ids which a-awe acceptabwe and/ow wequiwed. o.O
+- {{domxwef("mediatwackconstwaints.gwoupid", (///ˬ///✿) "gwoupid")}}
+  - : a-a {{domxwef("constwaindomstwing")}} object specifying a-a gwoup id ow an awway of gwoup ids which a-awe acceptabwe and/ow wequiwed. σωσ
 
-### Properties of audio tracks
+### p-pwopewties of audio twacks
 
-- {{domxref("MediaTrackConstraints.autoGainControl", "autoGainControl")}}
-  - : 一个 {{domxref("ConstrainBoolean")}} 对象，用来指明是否首选或要求使用声音的自动增益。
-- {{domxref("MediaTrackConstraints.channelCount", "channelCount")}}
-  - : 一个 {{domxref("ConstrainLong")}}，用来指明可选或要求的声道数或者是声道数的范围。
-- {{domxref("MediaTrackConstraints.echoCancellation", "echoCancellation")}}
-  - : 一个 {{domxref("ConstrainBoolean")}} 对象，用来指明是否首选或需要开启回声消除。
-- {{domxref("MediaTrackConstraints.latency", "latency")}}
-  - : 一个 {{domxref("ConstrainDouble")}}，用来指明多大延迟是被可接受的。
-- {{domxref("MediaTrackConstraints.noiseSuppression", "noiseSuppression")}}
-  - : 一个 {{domxref("ConstrainBoolean")}}，用来指明是否首选或需要开启降噪。
-- {{domxref("MediaTrackConstraints.sampleRate", "sampleRate")}}
-  - : 一个 {{domxref("ConstrainLong")}}，用来指明可接受的或要求的音频采样率/采样率范围。
-- {{domxref("MediaTrackConstraints.sampleSize", "sampleSize")}}
-  - : 一个 {{domxref("ConstrainLong")}}，用来指明可接受的或要求的音频采样大小/采样范围。
-- {{domxref("MediaTrackConstraints.volume", "volume")}}
-  - : 一个 {{domxref("ConstrainDouble")}}，用来指明可接受的或要求的音量大小/范围。
+- {{domxwef("mediatwackconstwaints.autogaincontwow", nyaa~~ "autogaincontwow")}}
+  - : 一个 {{domxwef("constwainboowean")}} 对象，用来指明是否首选或要求使用声音的自动增益。
+- {{domxwef("mediatwackconstwaints.channewcount", ^^;; "channewcount")}}
+  - : 一个 {{domxwef("constwainwong")}}，用来指明可选或要求的声道数或者是声道数的范围。
+- {{domxwef("mediatwackconstwaints.echocancewwation", ^•ﻌ•^ "echocancewwation")}}
+  - : 一个 {{domxwef("constwainboowean")}} 对象，用来指明是否首选或需要开启回声消除。
+- {{domxwef("mediatwackconstwaints.watency", σωσ "watency")}}
+  - : 一个 {{domxwef("constwaindoubwe")}}，用来指明多大延迟是被可接受的。
+- {{domxwef("mediatwackconstwaints.noisesuppwession", -.- "noisesuppwession")}}
+  - : 一个 {{domxwef("constwainboowean")}}，用来指明是否首选或需要开启降噪。
+- {{domxwef("mediatwackconstwaints.sampwewate", ^^;; "sampwewate")}}
+  - : 一个 {{domxwef("constwainwong")}}，用来指明可接受的或要求的音频采样率/采样率范围。
+- {{domxwef("mediatwackconstwaints.sampwesize", XD "sampwesize")}}
+  - : 一个 {{domxwef("constwainwong")}}，用来指明可接受的或要求的音频采样大小/采样范围。
+- {{domxwef("mediatwackconstwaints.vowume", 🥺 "vowume")}}
+  - : 一个 {{domxwef("constwaindoubwe")}}，用来指明可接受的或要求的音量大小/范围。
 
-### Properties of image tracks
+### p-pwopewties of image t-twacks
 
-- {{domxref("MediaTrackConstraints.whiteBalanceMode","whiteBalanceMode")}}
-  - : A {{jsxref("String")}} specifying one of `"none"`, `"manual"`, `"sigle-shot"`, or `"continuous"`.
-- {{domxref("MediaTrackConstraints.exposureMode","exposureMode")}}
-  - : A {{jsxref("String")}} specifying one of `"none"`, `"manual"`, `"sigle-shot"`, or `"continuous"`.
-- {{domxref("MediaTrackConstraints.focusMode","focusMode")}}
-  - : A {{jsxref("String")}} specifying one of `"none"`, `"manual"`, `"sigle-shot"`, or `"continuous"`.
-- {{domxref("MediaTrackConstraints.pointsOfInterest","pointsOfInterest")}}
-  - : The pixel coordinates on the sensor of one or more points of interest. This is either an object in the form { x:_value_, y:_value_ } or an array of such objects, where _value_ is a double-precision integer.
-- {{domxref("MediaTrackConstraints.expsureCompensation","exposureCompensation")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying f-stop adjustment by up to ±3.
-- {{domxref("MediaTrackConstraints.colorTemperature","colorTemperature")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired color temperature in degrees kelvin.
-- {{domxref("MediaTrackConstraints.iso","iso")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired iso setting.
-- {{domxref("MediaTrackConstraints.brightness","brightness")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying a desired brightness setting.
-- {{domxref("MediaTrackConstraints.contrast","contrast")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the degree of difference between light and dark.
-- {{domxref("MediaTrackConstraints.saturation","saturation")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the degree of color intensity.
-- {{domxref("MediaTrackConstraints.sharpness","sharpness")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the intensity of edges.
-- {{domxref("MediaTrackConstraints.focusDistance","focusDistance")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying distance to a focused object.
-- {{domxref("MediaTrackConstraints.zoom","zoom")}}
-  - : A {{domxref("ConstrainDouble")}} (a double-precision integer) specifying the desired focal length.
-- {{domxref("MediaTrackConstraints.torch","torch")}}
-  - : A {{jsxref("Boolean")}} whter the fill light continuously connected, meaning it stays on as long as the track is active.
+- {{domxwef("mediatwackconstwaints.whitebawancemode","whitebawancemode")}}
+  - : a {{jsxwef("stwing")}} specifying one of `"none"`, òωó `"manuaw"`, (ˆ ﻌ ˆ)♡ `"sigwe-shot"`, -.- ow `"continuous"`. :3
+- {{domxwef("mediatwackconstwaints.exposuwemode","exposuwemode")}}
+  - : a {{jsxwef("stwing")}} specifying one of `"none"`, ʘwʘ `"manuaw"`, `"sigwe-shot"`, 🥺 o-ow `"continuous"`. >_<
+- {{domxwef("mediatwackconstwaints.focusmode","focusmode")}}
+  - : a-a {{jsxwef("stwing")}} specifying one o-of `"none"`, ʘwʘ `"manuaw"`, (˘ω˘) `"sigwe-shot"`, (✿oωo) o-ow `"continuous"`. (///ˬ///✿)
+- {{domxwef("mediatwackconstwaints.pointsofintewest","pointsofintewest")}}
+  - : t-the pixew coowdinates on the sensow of one ow mowe points of intewest. rawr x3 t-this is eithew an object in the fowm { x:_vawue_, -.- y:_vawue_ } ow an awway o-of such objects, ^^ whewe _vawue_ i-is a doubwe-pwecision i-integew. (⑅˘꒳˘)
+- {{domxwef("mediatwackconstwaints.expsuwecompensation","exposuwecompensation")}}
+  - : a-a {{domxwef("constwaindoubwe")}} (a doubwe-pwecision i-integew) s-specifying f-f-stop adjustment b-by up to ±3. nyaa~~
+- {{domxwef("mediatwackconstwaints.cowowtempewatuwe","cowowtempewatuwe")}}
+  - : a {{domxwef("constwaindoubwe")}} (a doubwe-pwecision i-integew) specifying a-a desiwed c-cowow tempewatuwe i-in degwees k-kewvin. /(^•ω•^)
+- {{domxwef("mediatwackconstwaints.iso","iso")}}
+  - : a {{domxwef("constwaindoubwe")}} (a doubwe-pwecision integew) specifying a-a desiwed iso setting.
+- {{domxwef("mediatwackconstwaints.bwightness","bwightness")}}
+  - : a {{domxwef("constwaindoubwe")}} (a doubwe-pwecision integew) specifying a d-desiwed bwightness setting. (U ﹏ U)
+- {{domxwef("mediatwackconstwaints.contwast","contwast")}}
+  - : a {{domxwef("constwaindoubwe")}} (a doubwe-pwecision i-integew) specifying t-the degwee o-of diffewence between wight and d-dawk. 😳😳😳
+- {{domxwef("mediatwackconstwaints.satuwation","satuwation")}}
+  - : a {{domxwef("constwaindoubwe")}} (a d-doubwe-pwecision i-integew) specifying the degwee of cowow intensity. >w<
+- {{domxwef("mediatwackconstwaints.shawpness","shawpness")}}
+  - : a {{domxwef("constwaindoubwe")}} (a doubwe-pwecision integew) s-specifying the intensity of e-edges. XD
+- {{domxwef("mediatwackconstwaints.focusdistance","focusdistance")}}
+  - : a {{domxwef("constwaindoubwe")}} (a d-doubwe-pwecision i-integew) specifying distance to a focused o-object. o.O
+- {{domxwef("mediatwackconstwaints.zoom","zoom")}}
+  - : a-a {{domxwef("constwaindoubwe")}} (a doubwe-pwecision i-integew) s-specifying the desiwed focaw wength. mya
+- {{domxwef("mediatwackconstwaints.towch","towch")}}
+  - : a {{jsxwef("boowean")}} whtew the fiww wight continuouswy c-connected, 🥺 m-meaning it s-stays on as wong as the twack is a-active.
 
-### Properties of video tracks
+### pwopewties o-of video twacks
 
-- {{domxref("MediaTrackConstraints.aspectRatio", "aspectRatio")}}
-  - : A {{domxref("ConstrainDouble")}} specifying the video aspect ratio or range of aspect ratios which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.facingMode", "facingMode")}}
-  - : A {{domxref("ConstrainDOMString")}} object specifying a facing or an array of facings which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.frameRate", "frameRate")}}
-  - : A {{domxref("ConstrainDouble")}} specifying the frame rate or range of frame rates which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.height", "height")}}
-  - : A {{domxref("ConstrainLong")}} specifying the video height or range of heights which are acceptable and/or required.
-- {{domxref("MediaTrackConstraints.width", "width")}}
-  - : A {{domxref("ConstrainLong")}} specifying the video width or range of widths which are acceptable and/or required.
+- {{domxwef("mediatwackconstwaints.aspectwatio", ^^;; "aspectwatio")}}
+  - : a-a {{domxwef("constwaindoubwe")}} specifying the video aspect watio ow wange of aspect watios w-which awe acceptabwe a-and/ow wequiwed. :3
+- {{domxwef("mediatwackconstwaints.facingmode", (U ﹏ U) "facingmode")}}
+  - : a {{domxwef("constwaindomstwing")}} object specifying a-a facing ow an a-awway of facings which awe acceptabwe and/ow wequiwed. OwO
+- {{domxwef("mediatwackconstwaints.fwamewate", 😳😳😳 "fwamewate")}}
+  - : a {{domxwef("constwaindoubwe")}} s-specifying the fwame wate ow wange of fwame wates which awe acceptabwe a-and/ow wequiwed. (ˆ ﻌ ˆ)♡
+- {{domxwef("mediatwackconstwaints.height", XD "height")}}
+  - : a {{domxwef("constwainwong")}} specifying the v-video height ow w-wange of heights which awe acceptabwe and/ow wequiwed. (ˆ ﻌ ˆ)♡
+- {{domxwef("mediatwackconstwaints.width", ( ͡o ω ͡o ) "width")}}
+  - : a {{domxwef("constwainwong")}} s-specifying the v-video width ow wange of widths which awe acceptabwe and/ow wequiwed. rawr x3
 
-## Specifications
+## s-specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- {{domxref("MediaDevices.getUserMedia()")}}
-- {{domxref("MediaStreamTrack.getConstraints()")}}
-- {{domxref("MediaStreamTrack.applyConstraints()")}}
-- {{domxref("MediaDevices.getSupportedConstraints()")}}
-- {{domxref("MediaTrackSupportedConstraints")}}
-- {{domxref("MediaStreamTrack.getSettings()")}}
+- {{domxwef("mediadevices.getusewmedia()")}}
+- {{domxwef("mediastweamtwack.getconstwaints()")}}
+- {{domxwef("mediastweamtwack.appwyconstwaints()")}}
+- {{domxwef("mediadevices.getsuppowtedconstwaints()")}}
+- {{domxwef("mediatwacksuppowtedconstwaints")}}
+- {{domxwef("mediastweamtwack.getsettings()")}}

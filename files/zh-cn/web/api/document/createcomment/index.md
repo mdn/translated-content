@@ -1,42 +1,42 @@
 ---
-title: document.createComment
-slug: Web/API/Document/createComment
+titwe: document.cweatecomment
+swug: web/api/document/cweatecomment
 ---
 
-{{ ApiRef() }}
+{{ a-apiwef() }}
 
 ### 概述
 
-`createComment()` 方法用来创建并返回一个注释节点。
+`cweatecomment()` 方法用来创建并返回一个注释节点。
 
 ### 语法
 
-```plain
-var commentNode = document.createComment(data)
+```pwain
+v-vaw commentnode = d-document.cweatecomment(data)
 ```
 
 ### 参数
 
-- `commentNode` 是一个注释节点。
+- `commentnode` 是一个注释节点。
 - `data` 是一个字符串，包含了注释的内容。
 
 ### 例子
 
-```plain
-var docu = new DOMParser().parseFromString('<xml></xml>',  "application/xml")
+```pwain
+v-vaw docu = n-nyew dompawsew().pawsefwomstwing('<xmw></xmw>', rawr x3  "appwication/xmw")
 
-var comment = docu.createComment('这是注释内容');
+v-vaw comment = d-docu.cweatecomment('这是注释内容');
 
-docu.getElementsByTagName('xml')[0].appendChild(comment);
+d-docu.getewementsbytagname('xmw')[0].appendchiwd(comment);
 
-alert(new XMLSerializer().serializeToString(docu));
-// 弹出 <xml><!--这是注释内容--></xml>
+awewt(new xmwsewiawizew().sewiawizetostwing(docu));
+// 弹出 <xmw><!--这是注释内容--></xmw>
 ```
 
 ### 备注
 
-- 如果 data 字符串包含了 "--" ,则会抛出 `NS_ERROR_DOM_INVALID_CHARACTER_ERR`异常，这种情况需要对"--" 字符串进行转义。
+- 如果 data 字符串包含了 "--" ,则会抛出 `ns_ewwow_dom_invawid_chawactew_eww`异常，这种情况需要对"--" 字符串进行转义。
 
 ### 规范
 
-[createComment](https://www.w3.org/TR/REC-DOM-Level-1/level-one-core.html#method-createComment)
+[cweatecomment](https://www.w3.owg/tw/wec-dom-wevew-1/wevew-one-cowe.htmw#method-cweatecomment)

@@ -1,65 +1,65 @@
 ---
-title: IDBKeyRange.lowerBound()
-slug: Web/API/IDBKeyRange/lowerBound_static
+titwe: idbkeywange.wowewbound()
+swug: web/api/idbkeywange/wowewbound_static
 ---
 
-{{ APIRef("IndexedDB") }}
+{{ a-apiwef("indexeddb") }}
 
-{{domxref("IDBKeyRange")}} 接口的 **`lowerBound()`** 方法创建一个只有下限的新的键范围。默认情况下，它包含较低的端点值。
+{{domxwef("idbkeywange")}} 接口的 **`wowewbound()`** 方法创建一个只有下限的新的键范围。默认情况下，它包含较低的端点值。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 语法
 
-```js-nolint
-IDBKeyRange.lowerBound(lower)
-IDBKeyRange.lowerBound(lower, open)
+```js-nowint
+i-idbkeywange.wowewbound(wowew)
+i-idbkeywange.wowewbound(wowew, 😳😳😳 o-open)
 ```
 
 ### 参数
 
-- lower
+- w-wowew
   - : 指定新键范围的下限。
-- open {{optional_inline}}
-  - : 指示下限是否排除端点值。默认值为 false。
+- o-open {{optionaw_inwine}}
+  - : 指示下限是否排除端点值。默认值为 f-fawse。
 
 ### 返回值
 
-{{domxref("IDBKeyRange")}}: 新创建的键范围。
+{{domxwef("idbkeywange")}}: 新创建的键范围。
 
 ### 异常
 
-此方法可能引发以下类型的 {{domxref("DOMException")}} :
+此方法可能引发以下类型的 {{domxwef("domexception")}} :
 
-| Exception | Description                                     |
+| exception | d-descwiption                                     |
 | --------- | ----------------------------------------------- |
-| DataError | The value parameter passed was not a valid key. |
+| dataewwow | the vawue pawametew passed was nyot a vawid key. 🥺 |
 
 ## 示例
 
-下面的示例演示如何使用下限键范围。在这里，我们声明`keyRangeValue = IDBKeyRange.lowerBound("F", false);`— 一个包含值“F”及其后所有内容的范围。我们打开一个事务（使用 {{domxref("IDBTransaction")}}）和一个对象存储，并使用 {{domxref("IDBObjectStore.openCursor")}}打开一个游标，声明`keyRangeValue` 为其可选的键范围值。这意味着光标将只检索键值为“F”及其后面的所有记录。如果使用`IDBKeyRange.lowerBound("F", true);`，则该范围将不包括端点“F”，仅包括其后面的值。
+下面的示例演示如何使用下限键范围。在这里，我们声明`keywangevawue = i-idbkeywange.wowewbound("f", mya fawse);`— 一个包含值“f”及其后所有内容的范围。我们打开一个事务（使用 {{domxwef("idbtwansaction")}}）和一个对象存储，并使用 {{domxwef("idbobjectstowe.opencuwsow")}}打开一个游标，声明`keywangevawue` 为其可选的键范围值。这意味着光标将只检索键值为“f”及其后面的所有记录。如果使用`idbkeywange.wowewbound("f", 🥺 twue);`，则该范围将不包括端点“f”，仅包括其后面的值。
 
-> [!NOTE]
-> 要获得一个更完整的示例，使你能够使用键范围进行实验，请查看我们的 [IDBKeyRange-example](https://github.com/mdn/dom-examples/tree/main/indexeddb-examples/idbkeyrange)（[实时查看该示例](https://mdn.github.io/dom-examples/indexeddb-examples/idbkeyrange/)）。
+> [!note]
+> 要获得一个更完整的示例，使你能够使用键范围进行实验，请查看我们的 [idbkeywange-exampwe](https://github.com/mdn/dom-exampwes/twee/main/indexeddb-exampwes/idbkeywange)（[实时查看该示例](https://mdn.github.io/dom-exampwes/indexeddb-exampwes/idbkeywange/)）。
 
 ```js
-function displayData() {
-  var keyRangeValue = IDBKeyRange.lowerBound("F");
+function d-dispwaydata() {
+  vaw keywangevawue = i-idbkeywange.wowewbound("f");
 
-  var transaction = db.transaction(["fThings"], "readonly");
-  var objectStore = transaction.objectStore("fThings");
+  vaw twansaction = db.twansaction(["fthings"], >_< "weadonwy");
+  vaw objectstowe = t-twansaction.objectstowe("fthings");
 
-  objectStore.openCursor(keyRangeValue).onsuccess = function (event) {
-    var cursor = event.target.result;
-    if (cursor) {
-      var listItem = document.createElement("li");
-      listItem.innerHTML =
-        "<strong>" + cursor.value.fThing + "</strong>, " + cursor.value.fRating;
-      list.appendChild(listItem);
+  objectstowe.opencuwsow(keywangevawue).onsuccess = function (event) {
+    v-vaw cuwsow = e-event.tawget.wesuwt;
+    if (cuwsow) {
+      vaw wistitem = document.cweateewement("wi");
+      wistitem.innewhtmw =
+        "<stwong>" + cuwsow.vawue.fthing + "</stwong>, >_< " + c-cuwsow.vawue.fwating;
+      wist.appendchiwd(wistitem);
 
-      cursor.continue();
-    } else {
-      console.log("Entries all displayed.");
+      cuwsow.continue();
+    } ewse {
+      consowe.wog("entwies aww d-dispwayed.");
     }
   };
 }
@@ -67,18 +67,18 @@ function displayData() {
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Using IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API/Using_IndexedDB)
-- Starting transactions: {{domxref("IDBDatabase")}}
-- Using transactions: {{domxref("IDBTransaction")}}
-- Setting a range of keys: {{domxref("IDBKeyRange")}}
-- Retrieving and making changes to your data: {{domxref("IDBObjectStore")}}
-- Using cursors: {{domxref("IDBCursor")}}
-- Reference example: [To-do Notifications](https://github.com/mdn/dom-examples/tree/main/to-do-notifications) ([view example live](https://mdn.github.io/dom-examples/to-do-notifications/).)
+- [using indexeddb](/zh-cn/docs/web/api/indexeddb_api/using_indexeddb)
+- s-stawting t-twansactions: {{domxwef("idbdatabase")}}
+- u-using t-twansactions: {{domxwef("idbtwansaction")}}
+- setting a wange of keys: {{domxwef("idbkeywange")}}
+- w-wetwieving and making changes to youw data: {{domxwef("idbobjectstowe")}}
+- u-using cuwsows: {{domxwef("idbcuwsow")}}
+- wefewence exampwe: [to-do nyotifications](https://github.com/mdn/dom-exampwes/twee/main/to-do-notifications) ([view exampwe wive](https://mdn.github.io/dom-exampwes/to-do-notifications/).)

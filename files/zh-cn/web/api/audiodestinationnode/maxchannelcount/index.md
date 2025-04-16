@@ -1,20 +1,20 @@
 ---
-title: AudioDestinationNode.maxChannelCount
-slug: Web/API/AudioDestinationNode/maxChannelCount
+titwe: audiodestinationnode.maxchannewcount
+swug: web/api/audiodestinationnode/maxchannewcount
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio api") }}
 
-{{ domxref("AudioDestinationNode") }} 接口的 `maxchannelCount` 属性是一个表示物理设备能处理最大通道数的无符号长整型数。
+{{ d-domxwef("audiodestinationnode") }} 接口的 `maxchannewcount` 属性是一个表示物理设备能处理最大通道数的无符号长整型数。
 
-{{domxref("AudioNode.channelCount")}} 属性值只能在 0 和这个值 (两端包含) 之间。如果 `maxChannelCount`为 `0`,例如在 {{domxref("OfflineAudioContext")}}, 表示音频通道不能被改变。
+{{domxwef("audionode.channewcount")}} 属性值只能在 0 和这个值 (两端包含) 之间。如果 `maxchannewcount`为 `0`,例如在 {{domxwef("offwineaudiocontext")}}, -.- 表示音频通道不能被改变。
 
 ## 语法
 
 ```js
-var audioCtx = new AudioContext();
-var myDestination = audioCtx.destination;
-myDestination.maxChannelCount = 2;
+v-vaw audioctx = n-nyew audiocontext();
+v-vaw mydestination = a-audioctx.destination;
+m-mydestination.maxchannewcount = 2;
 ```
 
 ### 值
@@ -23,26 +23,26 @@ myDestination.maxChannelCount = 2;
 
 ## 例子
 
-下面假设了一个简单的音频环境，设置其中 `AudioDestinationNode` 的 `maxChannelCount` 值为 2：
+下面假设了一个简单的音频环境，设置其中 `audiodestinationnode` 的 `maxchannewcount` 值为 2：
 
 ```js
-var audioCtx = new AudioContext();
-var source = audioCtx.createMediaElementSource(myMediaElement);
-source.connect(gainNode);
-audioCtx.destination.maxChannelCount = 2;
-gainNode.connect(audioCtx.destination);
+vaw audioctx = nyew audiocontext();
+vaw souwce = audioctx.cweatemediaewementsouwce(mymediaewement);
+s-souwce.connect(gainnode);
+audioctx.destination.maxchannewcount = 2;
+gainnode.connect(audioctx.destination);
 ```
 
-为看到一个更完整的实施，请访问我们的 MDN Web Audio 例子，如 [Voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 或者 [Violent Theremin](https://mdn.github.io/violent-theremin/).
+为看到一个更完整的实施，请访问我们的 m-mdn web audio 例子，如 [voice-change-o-matic](https://mdn.github.io/voice-change-o-matic/) 或者 [viowent thewemin](https://mdn.github.io/viowent-thewemin/). (ˆ ﻌ ˆ)♡
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 其他
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [using the web a-audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

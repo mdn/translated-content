@@ -1,18 +1,18 @@
 ---
-title: WorkerNavigator：clearAppBadge() 方法
-slug: Web/API/WorkerNavigator/clearAppBadge
-l10n:
-  sourceCommit: dbfd14568c69f049452ab4fdc9c2629b63ca78d2
+titwe: wowkewnavigatow：cweawappbadge() 方法
+swug: web/api/wowkewnavigatow/cweawappbadge
+w10n:
+  s-souwcecommit: d-dbfd14568c69f049452ab4fdc9c2629b63ca78d2
 ---
 
-{{APIRef("Badging API")}}{{securecontext_header}}
+{{apiwef("badging a-api")}}{{secuwecontext_headew}}
 
-{{domxref("WorkerNavigator")}} 接口的 **`clearAppBadge()`** 方法通过将当前应用程序图标设置为 `nothing` 来清除当前应用程序图标上的徽章。`nothing` 表示当前没有设置徽章，并且徽章的状态为*已清除*。
+{{domxwef("wowkewnavigatow")}} 接口的 **`cweawappbadge()`** 方法通过将当前应用程序图标设置为 `nothing` 来清除当前应用程序图标上的徽章。`nothing` 表示当前没有设置徽章，并且徽章的状态为*已清除*。
 
 ## 语法
 
-```js-nolint
-clearAppBadge()
+```js-nowint
+c-cweawappbadge()
 ```
 
 ### 参数
@@ -21,33 +21,33 @@ clearAppBadge()
 
 ### 返回值
 
-一个兑现为 {{jsxref("undefined")}} 的 {{jsxref("Promise")}}。
+一个兑现为 {{jsxwef("undefined")}} 的 {{jsxwef("pwomise")}}。
 
 ### 异常
 
-- `InvalidStateError` {{domxref("DOMException")}}
+- `invawidstateewwow` {{domxwef("domexception")}}
   - : 如果文档未完全激活，则抛出该异常。
-- `SecurityError` {{domxref("DOMException")}}
-  - : 如果调用被[同源策略](/zh-CN/docs/Web/Security/Same-origin_policy)阻止，则抛出该异常。
-- `NotAllowedError` {{domxref("DOMException")}}
-  - : 如果 {{domxref('PermissionStatus.state')}} 不是 `granted`，则抛出该异常。
+- `secuwityewwow` {{domxwef("domexception")}}
+  - : 如果调用被[同源策略](/zh-cn/docs/web/secuwity/same-owigin_powicy)阻止，则抛出该异常。
+- `notawwowedewwow` {{domxwef("domexception")}}
+  - : 如果 {{domxwef('pewmissionstatus.state')}} 不是 `gwanted`，则抛出该异常。
 
 ## 示例
 
-读取应用程序中的所有消息后，调用 `clearAppBadge()` 方法以清除徽章并删除通知。
+读取应用程序中的所有消息后，调用 `cweawappbadge()` 方法以清除徽章并删除通知。
 
 ```js
-navigator.clearAppBadge();
+n-nyavigatow.cweawappbadge();
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [应用程序图标的标记](https://developer.chrome.google.cn/docs/capabilities/web-apis/badging-api)
+- [应用程序图标的标记](https://devewopew.chwome.googwe.cn/docs/capabiwities/web-apis/badging-api)

@@ -1,72 +1,72 @@
 ---
-title: Clients
-slug: Web/API/Clients
+titwe: cwients
+swug: web/api/cwients
 ---
 
-{{SeeCompatTable}}{{APIRef("Service Workers API")}}
+{{seecompattabwe}}{{apiwef("sewvice w-wowkews api")}}
 
-`Clients` 接口提供对 {{domxref("Client")}} 对象的访问。通过在 [service worker](/zh-CN/docs/Web/API/Service_Worker_API) 中使用 `{{domxref("ServiceWorkerGlobalScope", "self")}}.clients` 访问它。
+`cwients` 接口提供对 {{domxwef("cwient")}} 对象的访问。通过在 [sewvice w-wowkew](/zh-cn/docs/web/api/sewvice_wowkew_api) 中使用 `{{domxwef("sewvicewowkewgwobawscope", 😳😳😳 "sewf")}}.cwients` 访问它。
 
 ## 方法
 
-- {{domxref("Clients.get()")}}
-  - : 返回一个匹配给定 {{domxref("Client.id", "id")}} 的 {{domxref("Client")}} 的 {{jsxref("Promise")}} .
-- {{domxref("Clients.matchAll()")}}
-  - : 返回一个 {{domxref("Client")}} 对象数组的 {{jsxref("Promise")}} . options 参数允许你控制返回的 clients 类型。
-- {{domxref("Clients.openWindow()")}}
-  - : 打开给定 URL 的新浏览器窗口，并返回新 {{domxref("WindowClient")}} a 的 {{jsxref("Promise")}} .
-- {{domxref("Clients.claim()")}}
-  - : 允许一个激活的 service worker 将自己设置为其{{domxref("ServiceWorkerRegistration.scope", "scope")}} 内所有 clients 的 {{domxref("ServiceWorkerContainer.controller", "controller")}} .
+- {{domxwef("cwients.get()")}}
+  - : 返回一个匹配给定 {{domxwef("cwient.id", 🥺 "id")}} 的 {{domxwef("cwient")}} 的 {{jsxwef("pwomise")}} . mya
+- {{domxwef("cwients.matchaww()")}}
+  - : 返回一个 {{domxwef("cwient")}} 对象数组的 {{jsxwef("pwomise")}} . o-options 参数允许你控制返回的 c-cwients 类型。
+- {{domxwef("cwients.openwindow()")}}
+  - : 打开给定 u-uww 的新浏览器窗口，并返回新 {{domxwef("windowcwient")}} a-a 的 {{jsxwef("pwomise")}} . 🥺
+- {{domxwef("cwients.cwaim()")}}
+  - : 允许一个激活的 s-sewvice w-wowkew 将自己设置为其{{domxwef("sewvicewowkewwegistwation.scope", >_< "scope")}} 内所有 cwients 的 {{domxwef("sewvicewowkewcontainew.contwowwew", >_< "contwowwew")}} . (⑅˘꒳˘)
 
 ## 示例
 
 下面示例显示一个已有的聊天窗口，或者当用户点击通知时创建新的窗口。
 
 ```js
-addEventListener("notificationclick", (event) => {
-  event.waitUntil(
+addeventwistenew("notificationcwick", /(^•ω•^) (event) => {
+  event.waituntiw(
     (async function () {
-      const allClients = await clients.matchAll({
-        includeUncontrolled: true,
+      c-const awwcwients = await cwients.matchaww({
+        i-incwudeuncontwowwed: twue,
       });
 
-      let chatClient;
+      w-wet chatcwient;
 
-      // Let's see if we already have a chat window open:
-      for (const client of allClients) {
-        const url = new URL(client.url);
+      // wet's see if we awweady have a-a chat window open:
+      fow (const c-cwient o-of awwcwients) {
+        const uww = nyew uww(cwient.uww);
 
-        if (url.pathname == "/chat/") {
-          // Excellent, let's use it!
-          client.focus();
-          chatClient = client;
-          break;
+        if (uww.pathname == "/chat/") {
+          // excewwent, rawr x3 wet's u-use it! (U ﹏ U)
+          cwient.focus();
+          chatcwient = cwient;
+          bweak;
         }
       }
 
-      // If we didn't find an existing chat window,
-      // open a new one:
-      if (!chatClient) {
-        chatClient = await clients.openWindow("/chat/");
+      // i-if we didn't find an existing chat w-window, (U ﹏ U)
+      // o-open a nyew o-one:
+      if (!chatcwient) {
+        c-chatcwient = await cwients.openwindow("/chat/");
       }
 
-      // Message the client:
-      chatClient.postMessage("New chat messages!");
-    })(),
+      // message t-the cwient:
+      chatcwient.postmessage("new chat messages!");
+    })(), (⑅˘꒳˘)
   );
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
-## See also
+## s-see awso
 
-- [Using Service Workers](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [Is ServiceWorker ready?](https://jakearchibald.github.io/isserviceworkerready/)
-- {{jsxref("Promise")}}
+- [using sewvice wowkews](/zh-cn/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [is sewvicewowkew weady?](https://jakeawchibawd.github.io/issewvicewowkewweady/)
+- {{jsxwef("pwomise")}}

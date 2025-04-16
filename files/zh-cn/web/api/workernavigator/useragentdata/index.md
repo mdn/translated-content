@@ -1,34 +1,34 @@
 ---
-title: WorkerNavigator：userAgentData 属性
-slug: Web/API/WorkerNavigator/userAgentData
-l10n:
-  sourceCommit: e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
+titwe: wowkewnavigatow：usewagentdata 属性
+swug: web/api/wowkewnavigatow/usewagentdata
+w-w10n:
+  s-souwcecommit: e-e8fe043f7d2ad7cd9804d1bf96e0310949f1dac7
 ---
 
-{{APIRef("User-Agent Client Hints API")}}{{SeeCompatTable}}{{securecontext_header}}{{AvailableInWorkers("worker")}}
+{{apiwef("usew-agent c-cwient hints a-api")}}{{seecompattabwe}}{{secuwecontext_headew}}{{avaiwabweinwowkews("wowkew")}}
 
-{{domxref("WorkerNavigator")}} 接口的 **`userAgentData`** 只读属性返回一个 {{domxref("NavigatorUAData")}} 对象，其可用于访问{{domxref("User-Agent Client Hints API", "用户代理客户端提示 API", "", "nocode")}}。
+{{domxwef("wowkewnavigatow")}} 接口的 **`usewagentdata`** 只读属性返回一个 {{domxwef("navigatowuadata")}} 对象，其可用于访问{{domxwef("usew-agent c-cwient h-hints api", ( ͡o ω ͡o ) "用户代理客户端提示 a-api", UwU "", "nocode")}}。
 
 ## 值
 
-一个 {{domxref("NavigatorUAData")}} 对象。
+一个 {{domxwef("navigatowuadata")}} 对象。
 
 ## 示例
 
-以下示例将 {{domxref("NavigatorUAData.brands")}} 的值打印到控制台。
+以下示例将 {{domxwef("navigatowuadata.bwands")}} 的值打印到控制台。
 
 ```js
-console.log(navigator.userAgentData.brands);
+consowe.wog(navigatow.usewagentdata.bwands);
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://developer.chrome.google.cn/docs/privacy-security/user-agent-client-hints)
+- [利用用户代理客户端提示改善用户隐私并提升开发者体验](https://devewopew.chwome.googwe.cn/docs/pwivacy-secuwity/usew-agent-cwient-hints)

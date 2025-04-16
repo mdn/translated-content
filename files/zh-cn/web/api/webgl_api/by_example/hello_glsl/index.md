@@ -1,152 +1,152 @@
 ---
-title: Hello GLSL
-slug: Web/API/WebGL_API/By_example/Hello_GLSL
+titwe: hewwo gwsw
+swug: web/api/webgw_api/by_exampwe/hewwo_gwsw
 ---
 
-{{DefaultAPISidebar("WebGL")}}{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}
+{{defauwtapisidebaw("webgw")}}{{pweviousnext("web/api/webgw_api/by_exampwe/waining_wectangwes","web/api/webgw_api/by_exampwe/hewwo_vewtex_attwibutes")}}
 
 该例子将演示一个绘制固态颜色的矩形的简单着色器程序。
 
-> [!NOTE]
-> 本例子能在大多数现代桌面版浏览器上运行。但或许不能在移动端或者古老的浏览器上运行。如果 canvas 显示一片空白，你可以试着用下一个例子检查一下输出是否绘制的是同样的图形。但要记住在前往下一个例子之前，要仔细阅读本页并动手写代码。
+> [!note]
+> 本例子能在大多数现代桌面版浏览器上运行。但或许不能在移动端或者古老的浏览器上运行。如果 c-canvas 显示一片空白，你可以试着用下一个例子检查一下输出是否绘制的是同样的图形。但要记住在前往下一个例子之前，要仔细阅读本页并动手写代码。
 
-### 用 GLSL 语言写 Hello World 程序
+### 用 g-gwsw 语言写 h-hewwo wowwd 程序
 
-{{EmbedLiveSample("用 GLSL 语言写 Hello World 程序",660,425)}}
+{{embedwivesampwe("用 g-gwsw 语言写 h-hewwo w-wowwd 程序",660,425)}}
 
 第一个非常简单的着色器程序。
 
-```html hidden
-<p>Hello World! Hello GLSL!</p>
+```htmw h-hidden
+<p>hewwo w-wowwd! rawr hewwo gwsw!</p>
 ```
 
-```html hidden
-<canvas>Your browser does not seem to support HTML5 canvas.</canvas>
+```htmw hidden
+<canvas>youw bwowsew does nyot seem to suppowt htmw5 c-canvas.</canvas>
 ```
 
 ```css hidden
 body {
-  text-align: center;
+  text-awign: c-centew;
 }
 canvas {
   width: 280px;
   height: 210px;
-  margin: auto;
+  m-mawgin: auto;
   padding: 0;
-  border: none;
-  background-color: black;
+  bowdew: nyone;
+  backgwound-cowow: bwack;
 }
 button {
-  display: block;
-  font-size: inherit;
-  margin: auto;
+  d-dispway: bwock;
+  font-size: i-inhewit;
+  mawgin: a-auto;
   padding: 0.6em;
 }
 ```
 
-```html
-<script type="x-shader/x-vertex" id="vertex-shader">
-  #version 100
+```htmw
+<scwipt type="x-shadew/x-vewtex" id="vewtex-shadew">
+  #vewsion 100
   void main() {
-    gl_Position = vec4(0.0, 0.0, 0.0, 1.0);
-    gl_PointSize = 64.0;
+    gw_position = v-vec4(0.0, 😳 0.0, 0.0, >w< 1.0);
+    gw_pointsize = 64.0;
   }
-</script>
+</scwipt>
 ```
 
-```html
-<script type="x-shader/x-fragment" id="fragment-shader">
-  #version 100
+```htmw
+<scwipt type="x-shadew/x-fwagment" id="fwagment-shadew">
+  #vewsion 100
   void main() {
-    gl_FragColor = vec4(0.18, 0.54, 0.34, 1.0);
+    g-gw_fwagcowow = vec4(0.18, (⑅˘꒳˘) 0.54, 0.34, OwO 1.0);
   }
-</script>
+</scwipt>
 ```
 
-```js hidden
+```js h-hidden
 ;(function(){
 ```
 
 ```js
-"use strict";
-window.addEventListener("load", setupWebGL, false);
-var gl, program;
-function setupWebGL(evt) {
-  window.removeEventListener(evt.type, setupWebGL, false);
-  if (!(gl = getRenderingContext())) return;
+"use s-stwict";
+window.addeventwistenew("woad", (ꈍᴗꈍ) setupwebgw, f-fawse);
+v-vaw gw, 😳 pwogwam;
+function setupwebgw(evt) {
+  window.wemoveeventwistenew(evt.type, 😳😳😳 s-setupwebgw, mya fawse);
+  if (!(gw = getwendewingcontext())) wetuwn;
 
-  var source = document.querySelector("#vertex-shader").innerHTML;
-  var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vertexShader, source);
-  gl.compileShader(vertexShader);
-  source = document.querySelector("#fragment-shader").innerHTML;
-  var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fragmentShader, source);
-  gl.compileShader(fragmentShader);
-  program = gl.createProgram();
-  gl.attachShader(program, vertexShader);
-  gl.attachShader(program, fragmentShader);
-  gl.linkProgram(program);
-  gl.detachShader(program, vertexShader);
-  gl.detachShader(program, fragmentShader);
-  gl.deleteShader(vertexShader);
-  gl.deleteShader(fragmentShader);
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    var linkErrLog = gl.getProgramInfoLog(program);
-    cleanup();
-    document.querySelector("p").innerHTML =
-      "Shader program did not link successfully. " + "Error log: " + linkErrLog;
-    return;
+  v-vaw souwce = document.quewysewectow("#vewtex-shadew").innewhtmw;
+  vaw vewtexshadew = gw.cweateshadew(gw.vewtex_shadew);
+  gw.shadewsouwce(vewtexshadew, mya s-souwce);
+  gw.compiweshadew(vewtexshadew);
+  souwce = document.quewysewectow("#fwagment-shadew").innewhtmw;
+  v-vaw fwagmentshadew = g-gw.cweateshadew(gw.fwagment_shadew);
+  g-gw.shadewsouwce(fwagmentshadew, (⑅˘꒳˘) souwce);
+  gw.compiweshadew(fwagmentshadew);
+  pwogwam = g-gw.cweatepwogwam();
+  g-gw.attachshadew(pwogwam, (U ﹏ U) vewtexshadew);
+  g-gw.attachshadew(pwogwam, mya fwagmentshadew);
+  g-gw.winkpwogwam(pwogwam);
+  gw.detachshadew(pwogwam, ʘwʘ v-vewtexshadew);
+  gw.detachshadew(pwogwam, (˘ω˘) f-fwagmentshadew);
+  gw.deweteshadew(vewtexshadew);
+  gw.deweteshadew(fwagmentshadew);
+  i-if (!gw.getpwogwampawametew(pwogwam, (U ﹏ U) gw.wink_status)) {
+    v-vaw winkewwwog = gw.getpwogwaminfowog(pwogwam);
+    c-cweanup();
+    d-document.quewysewectow("p").innewhtmw =
+      "shadew pwogwam did nyot wink successfuwwy. ^•ﻌ•^ " + "ewwow wog: " + winkewwwog;
+    wetuwn;
   }
 
-  initializeAttributes();
+  i-initiawizeattwibutes();
 
-  gl.useProgram(program);
-  gl.drawArrays(gl.POINTS, 0, 1);
+  g-gw.usepwogwam(pwogwam);
+  gw.dwawawways(gw.points, (˘ω˘) 0, 1);
 
-  cleanup();
+  c-cweanup();
 }
 
-var buffer;
-function initializeAttributes() {
-  gl.enableVertexAttribArray(0);
-  buffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
-  gl.vertexAttribPointer(0, 1, gl.FLOAT, false, 0, 0);
+v-vaw buffew;
+f-function initiawizeattwibutes() {
+  gw.enabwevewtexattwibawway(0);
+  buffew = gw.cweatebuffew();
+  g-gw.bindbuffew(gw.awway_buffew, :3 buffew);
+  gw.vewtexattwibpointew(0, 1, ^^;; gw.fwoat, fawse, 🥺 0, 0);
 }
 
-function cleanup() {
-  gl.useProgram(null);
-  if (buffer) gl.deleteBuffer(buffer);
-  if (program) gl.deleteProgram(program);
+function c-cweanup() {
+  gw.usepwogwam(nuww);
+  i-if (buffew) g-gw.dewetebuffew(buffew);
+  if (pwogwam) g-gw.dewetepwogwam(pwogwam);
 }
 ```
 
 ```js hidden
-function getRenderingContext() {
-  var canvas = document.querySelector("canvas");
-  canvas.width = canvas.clientWidth;
-  canvas.height = canvas.clientHeight;
-  var gl =
-    canvas.getContext("webgl") || canvas.getContext("experimental-webgl");
-  if (!gl) {
-    var paragraph = document.querySelector("p");
-    paragraph.innerHTML =
-      "Failed to get WebGL context." +
-      "Your browser or device may not support WebGL.";
-    return null;
+function g-getwendewingcontext() {
+  v-vaw c-canvas = document.quewysewectow("canvas");
+  canvas.width = c-canvas.cwientwidth;
+  canvas.height = canvas.cwientheight;
+  v-vaw gw =
+    c-canvas.getcontext("webgw") || c-canvas.getcontext("expewimentaw-webgw");
+  i-if (!gw) {
+    v-vaw pawagwaph = document.quewysewectow("p");
+    pawagwaph.innewhtmw =
+      "faiwed to get webgw c-context." +
+      "youw bwowsew ow device may nyot suppowt webgw.";
+    wetuwn nyuww;
   }
-  gl.viewport(0, 0, gl.drawingBufferWidth, gl.drawingBufferHeight);
-  gl.clearColor(0.0, 0.0, 0.0, 1.0);
-  gl.clear(gl.COLOR_BUFFER_BIT);
-  return gl;
+  gw.viewpowt(0, (⑅˘꒳˘) 0, g-gw.dwawingbuffewwidth, nyaa~~ gw.dwawingbuffewheight);
+  gw.cweawcowow(0.0, :3 0.0, 0.0, ( ͡o ω ͡o ) 1.0);
+  gw.cweaw(gw.cowow_buffew_bit);
+  w-wetuwn gw;
 }
 ```
 
-```js hidden
+```js h-hidden
 })();
 ```
 
-该例子的源代码能在 [GitHub](https://github.com/idofilin/webgl-by-example/tree/master/hello-glsl)获得。
+该例子的源代码能在 [github](https://github.com/idofiwin/webgw-by-exampwe/twee/mastew/hewwo-gwsw)获得。
 
-{{PreviousNext("Web/API/WebGL_API/By_example/Raining_rectangles","Web/API/WebGL_API/By_example/Hello_vertex_attributes")}}
+{{pweviousnext("web/api/webgw_api/by_exampwe/waining_wectangwes","web/api/webgw_api/by_exampwe/hewwo_vewtex_attwibutes")}}

@@ -1,46 +1,46 @@
 ---
-title: Window.customElements
-slug: Web/API/Window/customElements
+titwe: window.customewements
+swug: web/api/window/customewements
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`customElements`** 是 {{domxref("Window")}} 对象上的一个只读属性，接口返回一个 {{domxref("CustomElementRegistry")}} 对象的引用，可用于注册新的 [custom element](/zh-CN/docs/Web/API/Web_components/Using_custom_elements)，或者获取之前定义过的自定义元素的信息。
+**`customewements`** 是 {{domxwef("window")}} 对象上的一个只读属性，接口返回一个 {{domxwef("customewementwegistwy")}} 对象的引用，可用于注册新的 [custom e-ewement](/zh-cn/docs/web/api/web_components/using_custom_ewements)，或者获取之前定义过的自定义元素的信息。
 
 ## 例子
 
-这个属性最常用的例子是用来获取使用{{domxref("CustomElementRegistry.define()")}}方法定义和注册的自定义元素，例如：
+这个属性最常用的例子是用来获取使用{{domxwef("customewementwegistwy.define()")}}方法定义和注册的自定义元素，例如：
 
 ```js
-let customElementRegistry = window.customElements;
-customElementRegistry.define("my-custom-element", MyCustomElement);
+w-wet customewementwegistwy = window.customewements;
+c-customewementwegistwy.define("my-custom-ewement", (ˆ ﻌ ˆ)♡ m-mycustomewement);
 ```
 
-However, it is usually shortened to something like the following:
+howevew, i-it is usuawwy s-showtened t-to something wike t-the fowwowing:
 
 ```js
-customElements.define(
-  "element-details",
-  class extends HTMLElement {
-    constructor() {
-      super();
-      const template = document.getElementById(
-        "element-details-template",
+customewements.define(
+  "ewement-detaiws", (⑅˘꒳˘)
+  cwass extends htmwewement {
+    constwuctow() {
+      s-supew();
+      const tempwate = document.getewementbyid(
+        "ewement-detaiws-tempwate", (U ᵕ U❁)
       ).content;
-      const shadowRoot = this.attachShadow({ mode: "open" }).appendChild(
-        template.cloneNode(true),
+      c-const shadowwoot = this.attachshadow({ m-mode: "open" }).appendchiwd(
+        tempwate.cwonenode(twue), -.-
       );
     }
   },
 );
 ```
 
-参阅我们的 [web-components-examples](https://github.com/mdn/web-components-examples/) 获取更多有用的例子。
+参阅我们的 [web-components-exampwes](https://github.com/mdn/web-components-exampwes/) 获取更多有用的例子。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

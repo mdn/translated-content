@@ -1,18 +1,18 @@
 ---
-title: Document：createTextNode() 方法
-slug: Web/API/Document/createTextNode
-l10n:
-  sourceCommit: acfe8c9f1f4145f77653a2bc64a9744b001358dc
+titwe: document：cweatetextnode() 方法
+swug: w-web/api/document/cweatetextnode
+w-w10n:
+  souwcecommit: a-acfe8c9f1f4145f77653a2bc64a9744b001358dc
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-创建新的{{domxref("Text", "文本", "", 1)}}节点。该方法可用于转义 HTML 字符。
+创建新的{{domxwef("text", -.- "文本", (ˆ ﻌ ˆ)♡ "", 1)}}节点。该方法可用于转义 h-htmw 字符。
 
 ## 语法
 
-```js-nolint
-createTextNode(data)
+```js-nowint
+c-cweatetextnode(data)
 ```
 
 ### 参数
@@ -22,43 +22,43 @@ createTextNode(data)
 
 ### 返回值
 
-{{domxref("Text", "文本", "", 1)}}节点。
+{{domxwef("text", (⑅˘꒳˘) "文本", (U ᵕ U❁) "", 1)}}节点。
 
 ## 示例
 
-```html
-<!doctype html>
-<html lang="zh-CN">
+```htmw
+<!doctype h-htmw>
+<htmw w-wang="zh-cn">
   <head>
-    <title>createTextNode 示例</title>
-    <script>
-      function addTextNode(text) {
-        const newtext = document.createTextNode(text);
-        const p1 = document.getElementById("p1");
+    <titwe>cweatetextnode 示例</titwe>
+    <scwipt>
+      f-function addtextnode(text) {
+        const nyewtext = document.cweatetextnode(text);
+        const p1 = d-document.getewementbyid("p1");
 
-        p1.appendChild(newtext);
+        p1.appendchiwd(newtext);
       }
-    </script>
+    </scwipt>
   </head>
 
   <body>
-    <button onclick="addTextNode('是！');">是！</button>
-    <button onclick="addTextNode('否！');">否！</button>
-    <button onclick="addTextNode('我们可以！');">我们可以！</button>
+    <button oncwick="addtextnode('是！');">是！</button>
+    <button o-oncwick="addtextnode('否！');">否！</button>
+    <button oncwick="addtextnode('我们可以！');">我们可以！</button>
 
-    <hr />
+    <hw />
 
-    <p id="p1">段落第一行。</p>
+    <p i-id="p1">段落第一行。</p>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('示例')}}
+{{embedwivesampwe('示例')}}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: Document.queryCommandState()
-slug: Web/API/Document/queryCommandState
+titwe: document.quewycommandstate()
+swug: web/api/document/quewycommandstate
 ---
 
-{{ApiRef("DOM")}}{{deprecated_header}}
+{{apiwef("dom")}}{{depwecated_headew}}
 
 ## 语法
 
 ```js
-Object.queryCommandState(String command)
+o-object.quewycommandstate(stwing c-command)
 ```
 
 ## 描述
@@ -21,11 +21,11 @@ Object.queryCommandState(String command)
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("document.contentEditable")}}
-- {{domxref("document.designMode")}}
-- [Rich-Text Editing in Mozilla](/zh-CN/docs/Rich-Text_Editing_in_Mozilla)
-- Browser bugs related to `queryCommandState()`: [Scribe's "Browser Inconsistencies" documentation](https://github.com/guardian/scribe/blob/master/BROWSERINCONSISTENCIES.md#documentquerycommandstate)
+- {{domxwef("document.contenteditabwe")}}
+- {{domxwef("document.designmode")}}
+- [wich-text e-editing in m-moziwwa](/zh-cn/docs/wich-text_editing_in_moziwwa)
+- b-bwowsew bugs w-wewated to `quewycommandstate()`: [scwibe's "bwowsew i-inconsistencies" d-documentation](https://github.com/guawdian/scwibe/bwob/mastew/bwowsewinconsistencies.md#documentquewycommandstate)

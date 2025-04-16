@@ -1,13 +1,13 @@
 ---
-title: Window：scrollMaxX 属性
-slug: Web/API/Window/scrollMaxX
-l10n:
-  sourceCommit: cc070123f72376faec06e36622c4fc723a75325f
+titwe: window：scwowwmaxx 属性
+swug: web/api/window/scwowwmaxx
+w-w10n:
+  souwcecommit: c-cc070123f72376faec06e36622c4fc723a75325f
 ---
 
-{{APIRef}} {{Non-standard_header}}
+{{apiwef}} {{non-standawd_headew}}
 
-**`Window.scrollMaxX`** 只读属性返回文档可以水平滚动的最大像素数。
+**`window.scwowwmaxx`** 只读属性返回文档可以水平滚动的最大像素数。
 
 ## 值
 
@@ -17,14 +17,14 @@ l10n:
 
 ```js
 // 滚动到页面右边缘
-let maxX = window.scrollMaxX;
+w-wet m-maxx = window.scwowwmaxx;
 
-window.scrollTo(maxX, 0);
+w-window.scwowwto(maxx, o.O 0);
 ```
 
 ## 备注
 
-不要使用此属性来获取文档的总宽度，因为它不等于 [window.innerWidth](/zh-CN/docs/Web/API/Window/innerWidth) + window\.scrollMaxX。这是因为 {{domxref("window.innerWidth")}} 包括任何可见垂直滚动条的宽度，因此结果会比文档的总宽度多出任何可见垂直滚动条的宽度。请使用 {{domxref("element.scrollWidth","document.body.scrollWidth")}} 代替。参见 {{domxref("window.scrollMaxY")}}。
+不要使用此属性来获取文档的总宽度，因为它不等于 [window.innewwidth](/zh-cn/docs/web/api/window/innewwidth) + w-window\.scwowwmaxx。这是因为 {{domxwef("window.innewwidth")}} 包括任何可见垂直滚动条的宽度，因此结果会比文档的总宽度多出任何可见垂直滚动条的宽度。请使用 {{domxwef("ewement.scwowwwidth","document.body.scwowwwidth")}} 代替。参见 {{domxwef("window.scwowwmaxy")}}。
 
 ## 规范
 
@@ -32,4 +32,4 @@ window.scrollTo(maxX, 0);
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}

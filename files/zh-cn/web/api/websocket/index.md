@@ -1,100 +1,100 @@
 ---
-title: WebSocket
-slug: Web/API/WebSocket
+titwe: websocket
+swug: web/api/websocket
 ---
 
-{{APIRef("Web Sockets API")}}
+{{apiwef("web sockets a-api")}}
 
-`WebSocket` 对象提供了用于创建和管理 [WebSocket](/zh-CN/docs/Web/API/WebSockets_API) 连接，以及可以通过该连接发送和接收数据的 API。
+`websocket` 对象提供了用于创建和管理 [websocket](/zh-cn/docs/web/api/websockets_api) 连接，以及可以通过该连接发送和接收数据的 a-api。
 
-使用 [`WebSocket()`](/zh-CN/docs/Web/API/WebSocket/WebSocket) 构造函数来构造一个 `WebSocket`。
+使用 [`websocket()`](/zh-cn/docs/web/api/websocket/websocket) 构造函数来构造一个 `websocket`。
 
 ## 构造函数
 
-- {{domxref("WebSocket.WebSocket", "WebSocket(url[, protocols])")}}
-  - : 返回一个 `WebSocket` 对象。
+- {{domxwef("websocket.websocket", ^^;; "websocket(uww[, >_< p-pwotocows])")}}
+  - : 返回一个 `websocket` 对象。
 
 ## 常量
 
-| **Constant**           | **Value** |
+| **constant**           | **vawue** |
 | ---------------------- | --------- |
-| `WebSocket.CONNECTING` | `0`       |
-| `WebSocket.OPEN`       | `1`       |
-| `WebSocket.CLOSING`    | `2`       |
-| `WebSocket.CLOSED`     | `3`       |
+| `websocket.connecting` | `0`       |
+| `websocket.open`       | `1`       |
+| `websocket.cwosing`    | `2`       |
+| `websocket.cwosed`     | `3`       |
 
 ## 属性
 
-- {{domxref("WebSocket.binaryType")}}
+- {{domxwef("websocket.binawytype")}}
   - : 使用二进制的数据类型连接。
-- {{domxref("WebSocket.bufferedAmount")}} {{readonlyinline}}
+- {{domxwef("websocket.buffewedamount")}} {{weadonwyinwine}}
   - : 未发送至服务器的字节数。
-- {{domxref("WebSocket.extensions")}} {{readonlyinline}}
+- {{domxwef("websocket.extensions")}} {{weadonwyinwine}}
   - : 服务器选择的扩展。
-- {{domxref("WebSocket.onclose")}}
+- {{domxwef("websocket.oncwose")}}
   - : 用于指定连接关闭后的回调函数。
-- {{domxref("WebSocket.onerror")}}
+- {{domxwef("websocket.onewwow")}}
   - : 用于指定连接失败后的回调函数。
-- {{domxref("WebSocket.onmessage")}}
+- {{domxwef("websocket.onmessage")}}
   - : 用于指定当从服务器接受到信息时的回调函数。
-- {{domxref("WebSocket.onopen")}}
+- {{domxwef("websocket.onopen")}}
   - : 用于指定连接成功后的回调函数。
-- {{domxref("WebSocket.protocol")}} {{readonlyinline}}
+- {{domxwef("websocket.pwotocow")}} {{weadonwyinwine}}
   - : 服务器选择的下属协议。
-- {{domxref("WebSocket.readyState")}} {{readonlyinline}}
+- {{domxwef("websocket.weadystate")}} {{weadonwyinwine}}
   - : 当前的链接状态。
-- {{domxref("WebSocket.url")}} {{readonlyinline}}
-  - : WebSocket 的绝对路径。
+- {{domxwef("websocket.uww")}} {{weadonwyinwine}}
+  - : w-websocket 的绝对路径。
 
 ## 方法
 
-- {{domxref("WebSocket.close", "WebSocket.close([code[, reason]])")}}
+- {{domxwef("websocket.cwose", mya "websocket.cwose([code[, w-weason]])")}}
   - : 关闭当前链接。
-- {{domxref("WebSocket.send", "WebSocket.send(data)")}}
+- {{domxwef("websocket.send", mya "websocket.send(data)")}}
   - : 对要传输的数据进行排队。
 
 ## 事件
 
-使用 `addEventListener()` 或将一个事件监听器赋值给本接口的 `oneventname` 属性，来监听下面的事件。
+使用 `addeventwistenew()` 或将一个事件监听器赋值给本接口的 `oneventname` 属性，来监听下面的事件。
 
-- {{domxref("WebSocket/close_event", "close")}}
-  - : 当一个 `WebSocket` 连接被关闭时触发。
-    也可以通过 {{domxref("WebSocket/onclose", "onclose")}} 属性来设置。
-- {{domxref("WebSocket/error_event", "error")}}
-  - : 当一个 `WebSocket` 连接因错误而关闭时触发，例如无法发送数据时。
-    也可以通过 {{domxref("WebSocket/onerror", "onerror")}} 属性来设置。
-- {{domxref("WebSocket/message_event", "message")}}
-  - : 当通过 `WebSocket` 收到数据时触发。
-    也可以通过 {{domxref("WebSocket/onmessage", "onmessage")}} 属性来设置。
-- {{domxref("WebSocket/open_event", "open")}}
-  - : 当一个 `WebSocket` 连接成功时触发。
-    也可以通过 {{domxref("WebSocket/onopen", "onopen")}} 属性来设置。
+- {{domxwef("websocket/cwose_event", 😳 "cwose")}}
+  - : 当一个 `websocket` 连接被关闭时触发。
+    也可以通过 {{domxwef("websocket/oncwose", XD "oncwose")}} 属性来设置。
+- {{domxwef("websocket/ewwow_event", :3 "ewwow")}}
+  - : 当一个 `websocket` 连接因错误而关闭时触发，例如无法发送数据时。
+    也可以通过 {{domxwef("websocket/onewwow", 😳😳😳 "onewwow")}} 属性来设置。
+- {{domxwef("websocket/message_event", "message")}}
+  - : 当通过 `websocket` 收到数据时触发。
+    也可以通过 {{domxwef("websocket/onmessage", -.- "onmessage")}} 属性来设置。
+- {{domxwef("websocket/open_event", ( ͡o ω ͡o ) "open")}}
+  - : 当一个 `websocket` 连接成功时触发。
+    也可以通过 {{domxwef("websocket/onopen", rawr x3 "onopen")}} 属性来设置。
 
 ## 示例
 
 ```js
-// Create WebSocket connection.
-const socket = new WebSocket("ws://localhost:8080");
+// c-cweate websocket c-connection. nyaa~~
+c-const socket = nyew websocket("ws://wocawhost:8080");
 
-// Connection opened
-socket.addEventListener("open", function (event) {
-  socket.send("Hello Server!");
+// connection opened
+socket.addeventwistenew("open", /(^•ω•^) function (event) {
+  s-socket.send("hewwo sewvew!");
 });
 
-// Listen for messages
-socket.addEventListener("message", function (event) {
-  console.log("Message from server ", event.data);
+// wisten f-fow messages
+socket.addeventwistenew("message", rawr f-function (event) {
+  consowe.wog("message fwom sewvew ", OwO event.data);
 });
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Writing WebSocket client applications](/zh-CN/docs/Web/API/WebSockets_API/Writing_WebSocket_client_applications)
+- [wwiting w-websocket cwient appwications](/zh-cn/docs/web/api/websockets_api/wwiting_websocket_cwient_appwications)

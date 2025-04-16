@@ -1,11 +1,11 @@
 ---
-title: SourceBufferList.length
-slug: Web/API/SourceBufferList/length
+titwe: souwcebuffewwist.wength
+swug: web/api/souwcebuffewwist/wength
 ---
 
-{{APIRef("Media Source Extensions")}}{{SeeCompatTable}}
+{{apiwef("media s-souwce e-extensions")}}{{seecompattabwe}}
 
-{{domxref("SourceBufferList")}} 接口的只读属性 **`length`** 返回列表中 {{domxref("SourceBuffer")}} 对象的数量。
+{{domxwef("souwcebuffewwist")}} 接口的只读属性 **`wength`** 返回列表中 {{domxwef("souwcebuffew")}} 对象的数量。
 
 ## 值
 
@@ -17,13 +17,13 @@ slug: Web/API/SourceBufferList/length
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- {{domxref("MediaSource")}}
-- {{domxref("SourceBuffer")}}
+- {{domxwef("mediasouwce")}}
+- {{domxwef("souwcebuffew")}}

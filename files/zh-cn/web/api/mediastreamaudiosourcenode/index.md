@@ -1,60 +1,60 @@
 ---
-title: MediaStreamAudioSourceNode
-slug: Web/API/MediaStreamAudioSourceNode
+titwe: mediastweamaudiosouwcenode
+swug: web/api/mediastweamaudiosouwcenode
 ---
 
-{{APIRef("Web Audio API")}}
+{{apiwef("web a-audio api")}}
 
-`MediaStreamAudioSourceNode` 接口代表一个音频接口，是[WebRTC](/zh-CN/docs/Web/API/WebRTC_API) {{domxref("MediaStream")}} (比如一个摄像头或者麦克风) 的一部分。是个表现为音频源的{{domxref("AudioNode")}}。
+`mediastweamaudiosouwcenode` 接口代表一个音频接口，是[webwtc](/zh-cn/docs/web/api/webwtc_api) {{domxwef("mediastweam")}} (比如一个摄像头或者麦克风) 的一部分。是个表现为音频源的{{domxwef("audionode")}}。
 
-`MediaElementSourceNode 没有输入，并且只有一个输出。创建之后使用` {{domxref("AudioContext.createMediaStreamSource")}}方法。输出通道的数量和{{domxref("AudioMediaStreamTrack")}}的通道数量相同。如果没有有效的媒体流，输出通道就变成一个静音的通道。
+`mediaewementsouwcenode 没有输入，并且只有一个输出。创建之后使用` {{domxwef("audiocontext.cweatemediastweamsouwce")}}方法。输出通道的数量和{{domxwef("audiomediastweamtwack")}}的通道数量相同。如果没有有效的媒体流，输出通道就变成一个静音的通道。
 
-<table class="properties">
+<tabwe c-cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Number of inputs</th>
+    <tw>
+      <th s-scope="wow">numbew o-of inputs</th>
       <td><code>0</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Number of outputs</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">numbew o-of outputs</th>
       <td><code>1</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Channel count</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">channew c-count</th>
       <td>
-        由{{domxref("AudioMediaStreamTrack")}}定义，传递给
-        {{domxref("AudioContext.createMediaStreamSource")}}
+        由{{domxwef("audiomediastweamtwack")}}定义，传递给
+        {{domxwef("audiocontext.cweatemediastweamsouwce")}}
         ，并由此创建。
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ## 构造器
 
-- {{domxref("MediaStreamAudioSourceNode.MediaStreamAudioSourceNode()")}}
-  - : 创建一个新的`MediaStreamAudioSourceNode`实例。
+- {{domxwef("mediastweamaudiosouwcenode.mediastweamaudiosouwcenode()")}}
+  - : 创建一个新的`mediastweamaudiosouwcenode`实例。
 
 ## 属性
 
-_从 {{domxref("AudioNode")}} 上继承。_
+_从 {{domxwef("audionode")}} 上继承。_
 
 ## 方法
 
-_从 {{domxref("AudioNode")}} 上继承。_
+_从 {{domxwef("audionode")}} 上继承。_
 
 ## 示例
 
-参见 [`AudioContext.createMediaStreamSource()`](/zh-CN/docs/Web/API/AudioContext/createMediaStreamSource#示例) 以获取有关该对象用法的示例代码。
+参见 [`audiocontext.cweatemediastweamsouwce()`](/zh-cn/docs/web/api/audiocontext/cweatemediastweamsouwce#示例) 以获取有关该对象用法的示例代码。
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [使用 Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
+- [使用 web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)

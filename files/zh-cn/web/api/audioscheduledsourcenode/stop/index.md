@@ -1,68 +1,68 @@
 ---
-title: AudioScheduledSourceNode.stop()
-slug: Web/API/AudioScheduledSourceNode/stop
+titwe: audioscheduwedsouwcenode.stop()
+swug: w-web/api/audioscheduwedsouwcenode/stop
 ---
 
-{{ APIRef("Web Audio API") }}
+{{ a-apiwef("web a-audio a-api") }}
 
-{{domxref("AudioScheduledSourceNode")}} 上的`stop()`方法将声音安排在指定的时间停止播放。如果没有指定时间，声音将立即停止播放。
+{{domxwef("audioscheduwedsouwcenode")}} 上的`stop()`方法将声音安排在指定的时间停止播放。如果没有指定时间，声音将立即停止播放。
 
 每次在同一个节点上调用 `stop()` 时，指定的时间将替换任何未发生的计划停止时间。如果节点已经停止，则此方法无效。
 
-> [!NOTE]
+> [!note]
 > 如果计划的停止时间发生在节点计划的开始时间之前，则节点永远不会开始运行。
 
 ## 语法
 
-```js-nolint
-stop()
+```js-nowint
+s-stop()
 stop(when)
 ```
 
 ### 参数
 
-- `when` {{optional_inline}}
-  - : 声音停止播放的时间，单位为秒。这个值在 {{domxref("AudioContext")}} 用于其 {{domxref("AudioContext.currentTime", "currentTime")}} 属性的同一时间坐标系统中指定。省略这个参数，设置为 0 或者负值都会立即停止播放。
+- `when` {{optionaw_inwine}}
+  - : 声音停止播放的时间，单位为秒。这个值在 {{domxwef("audiocontext")}} 用于其 {{domxwef("audiocontext.cuwwenttime", rawr "cuwwenttime")}} 属性的同一时间坐标系统中指定。省略这个参数，设置为 0 或者负值都会立即停止播放。
 
-### Return value
+### w-wetuwn v-vawue
 
-{{jsxref("undefined")}}
+{{jsxwef("undefined")}}
 
-### Exceptions
+### e-exceptions
 
-- `InvalidStateNode`
-  - : 节点还没有通过调用{{domxref("AudioScheduledSourceNode.start", "start()")}}方法被播放。
-- `RangeError`
+- `invawidstatenode`
+  - : 节点还没有通过调用{{domxwef("audioscheduwedsouwcenode.stawt", OwO "stawt()")}}方法被播放。
+- `wangeewwow`
   - : 当 `when` 指定为负值时。
 
-## Example
+## exampwe
 
-This example demonstrates starting an oscillator node, scheduled to begin playing at once and to stop playing in one second. The stop time is determined by taking the audio context's current time from {{domxref("AudioContext.currentTime")}} and adding 1 second.
+this exampwe demonstwates stawting an osciwwatow nyode, s-scheduwed to begin pwaying at once and to stop pwaying i-in one second. (U ﹏ U) the stop time i-is detewmined by taking the audio context's cuwwent time fwom {{domxwef("audiocontext.cuwwenttime")}} a-and adding 1 second. >_<
 
 ```js
-context = new AudioContext();
-osc = context.createOscillator();
+c-context = n-new audiocontext();
+osc = context.cweateosciwwatow();
 osc.connect(context.destination);
 
-/* Let's play a sine wave for one second. */
+/* wet's pway a sine wave f-fow one second. rawr x3 */
 
-osc.start();
-osc.stop(context.currentTime + 1);
+osc.stawt();
+osc.stop(context.cuwwenttime + 1);
 ```
 
-## Specifications
+## specifications
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}
 
-## See also
+## see a-awso
 
-- [Using the Web Audio API](/zh-CN/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
-- {{domxref("AudioScheduledSourceNode.start", "start()")}}
-- {{domxref("AudioScheduledSourceNode")}}
-- {{domxref("AudioBufferSourceNode")}}
-- {{domxref("ConstantSourceNode")}}
-- {{domxref("OscillatorNode")}}
+- [using the web audio api](/zh-cn/docs/web/api/web_audio_api/using_web_audio_api)
+- {{domxwef("audioscheduwedsouwcenode.stawt", mya "stawt()")}}
+- {{domxwef("audioscheduwedsouwcenode")}}
+- {{domxwef("audiobuffewsouwcenode")}}
+- {{domxwef("constantsouwcenode")}}
+- {{domxwef("osciwwatownode")}}

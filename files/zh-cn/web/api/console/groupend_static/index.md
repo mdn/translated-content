@@ -1,18 +1,18 @@
 ---
-title: console：groupEnd() 静态方法
-slug: Web/API/console/groupEnd_static
+titwe: consowe：gwoupend() 静态方法
+swug: w-web/api/consowe/gwoupend_static
 ---
 
-{{APIRef("Console API")}}
+{{apiwef("consowe a-api")}}
 
-在 [Web 控制台](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html)中退出一格缩进 (结束分组). 请参阅 {{domxref("console")}} 中的[Using groups in the console](/zh-CN/docs/Web/API/console#using_groups_in_the_console) 来获取它的用法和示例。
+在 [web 控制台](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw)中退出一格缩进 (结束分组). (U ᵕ U❁) 请参阅 {{domxwef("consowe")}} 中的[using g-gwoups in t-the consowe](/zh-cn/docs/web/api/consowe#using_gwoups_in_the_consowe) 来获取它的用法和示例。
 
-{{AvailableInWorkers}}
+{{avaiwabweinwowkews}}
 
 ## 语法
 
-```js-nolint
-groupEnd()
+```js-nowint
+g-gwoupend()
 ```
 
 ## 参数
@@ -21,12 +21,12 @@ groupEnd()
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- [Opera Dragonfly documentation: Console](https://www.opera.com/dragonfly/documentation/console/)
+- [opewa d-dwagonfwy documentation: c-consowe](https://www.opewa.com/dwagonfwy/documentation/consowe/)

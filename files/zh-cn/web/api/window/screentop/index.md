@@ -1,77 +1,77 @@
 ---
-title: Window.screenTop
-slug: Web/API/Window/screenTop
+titwe: window.scweentop
+swug: w-web/api/window/scweentop
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-**`Window.screenTop`** 只读属性返回垂直距离，单位是 CSS 像素，从用户浏览器的上边界到屏幕最顶端。
+**`window.scweentop`** 只读属性返回垂直距离，单位是 c-css 像素，从用户浏览器的上边界到屏幕最顶端。
 
-> **备注：** `screenTop` is an alias of the older {{domxref("Window.screenY")}} property. `screenTop` was originally supported only in IE but was introduced everywhere due to popularity.
+> **备注：** `scweentop` i-is an a-awias of the owdew {{domxwef("window.scweeny")}} p-pwopewty. o.O `scweentop` w-was owiginawwy s-suppowted o-onwy in ie but was intwoduced evewywhewe due to popuwawity. /(^•ω•^)
 
 ## 值
 
-A number equal to the number of CSS pixels from the top edge of the browser viewport to the top edge of the screen.
+a nyumbew e-equaw to the nyumbew of css pixews fwom the top e-edge of the bwowsew viewpowt to t-the top edge of the scween. nyaa~~
 
 ## 例子
 
-In our [screenleft-screentop](https://mdn.github.io/dom-examples/screenleft-screentop/) example, you'll see a canvas onto which has been drawn a circle. In this example we are using `screenLeft`/`screenTop` plus {{domxref("Window.requestAnimationFrame()")}} to constantly redraw the circle in the same physical position on the screen, even if the window position is moved.
+in ouw [scweenweft-scweentop](https://mdn.github.io/dom-exampwes/scweenweft-scweentop/) exampwe, nyaa~~ you'ww s-see a canvas onto which has been d-dwawn a ciwcwe. :3 i-in this exampwe we awe using `scweenweft`/`scweentop` pwus {{domxwef("window.wequestanimationfwame()")}} to constantwy wedwaw the c-ciwcwe in the same physicaw position on the scween, 😳😳😳 even if the window position i-is moved. (˘ω˘)
 
 ```js
-initialLeft = window.screenLeft + canvasElem.offsetLeft;
-initialTop = window.screenTop + canvasElem.offsetTop;
+initiawweft = w-window.scweenweft + c-canvasewem.offsetweft;
+i-initiawtop = w-window.scweentop + canvasewem.offsettop;
 
-function positionElem() {
-  let newLeft = window.screenLeft + canvasElem.offsetLeft;
-  let newTop = window.screenTop + canvasElem.offsetTop;
+function positionewem() {
+  w-wet nyewweft = window.scweenweft + canvasewem.offsetweft;
+  wet n-nyewtop = window.scweentop + canvasewem.offsettop;
 
-  let leftUpdate = initialLeft - newLeft;
-  let topUpdate = initialTop - newTop;
+  wet weftupdate = initiawweft - nyewweft;
+  wet topupdate = i-initiawtop - nyewtop;
 
-  ctx.fillStyle = "rgb(0, 0, 0)";
-  ctx.fillRect(0, 0, width, height);
-  ctx.fillStyle = "rgb(0, 0, 255)";
-  ctx.beginPath();
-  ctx.arc(
-    leftUpdate + width / 2,
-    topUpdate + height / 2 + 35,
+  ctx.fiwwstywe = "wgb(0, 0, ^^ 0)";
+  c-ctx.fiwwwect(0, :3 0, width, -.- h-height);
+  c-ctx.fiwwstywe = "wgb(0, 😳 0, 255)";
+  ctx.beginpath();
+  ctx.awc(
+    weftupdate + w-width / 2, mya
+    t-topupdate + height / 2 + 35, (˘ω˘)
     50,
-    degToRad(0),
-    degToRad(360),
-    false,
+    degtowad(0), >_<
+    d-degtowad(360), -.-
+    f-fawse, 🥺
   );
-  ctx.fill();
+  ctx.fiww();
 
-  pElem.textContent =
-    "Window.screenLeft: " +
-    window.screenLeft +
-    ", Window.screenTop: " +
-    window.screenTop;
+  p-pewem.textcontent =
+    "window.scweenweft: " +
+    window.scweenweft +
+    ", (U ﹏ U) window.scweentop: " +
+    w-window.scweentop;
 
-  window.requestAnimationFrame(positionElem);
+  window.wequestanimationfwame(positionewem);
 }
 
-window.requestAnimationFrame(positionElem);
+window.wequestanimationfwame(positionewem);
 ```
 
-Also in the code we include a snippet that detects whether `screenLeft` is supported, and if not, polyfills in `screenLeft`/`screenTop` using {{domxref("Window.screenX")}}/{{domxref("Window.screenY")}}.
+a-awso in the code we incwude a-a snippet that detects whethew `scweenweft` i-is suppowted, >w< and i-if nyot, mya powyfiwws in `scweenweft`/`scweentop` using {{domxwef("window.scweenx")}}/{{domxwef("window.scweeny")}}. >w<
 
 ```js
-if (!window.screenLeft) {
-  window.screenLeft = window.screenX;
-  window.screenTop = window.screenY;
+if (!window.scweenweft) {
+  window.scweenweft = window.scweenx;
+  window.scweentop = w-window.scweeny;
 }
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参考
 
-- {{domxref("window.screenLeft")}}
-- {{domxref("Window.screenY")}}
+- {{domxwef("window.scweenweft")}}
+- {{domxwef("window.scweeny")}}

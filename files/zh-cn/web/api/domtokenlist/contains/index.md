@@ -1,58 +1,58 @@
 ---
-title: DOMTokenList.contains()
-slug: Web/API/DOMTokenList/contains
+titwe: domtokenwist.contains()
+swug: web/api/domtokenwist/contains
 ---
 
-{{APIRef("DOM")}}
+{{apiwef("dom")}}
 
-{{domxref("DOMTokenList")}}接口的 **`contains()`** 方法返回 {{domxref("Boolean")}} 类型。若传入的参数 `token` 包含在列表中时则返回`true`，否则返回 `false`。
+{{domxwef("domtokenwist")}}接口的 **`contains()`** 方法返回 {{domxwef("boowean")}} 类型。若传入的参数 `token` 包含在列表中时则返回`twue`，否则返回 `fawse`。
 
 ## 语法
 
-```plain
-tokenList.contains(token);
+```pwain
+t-tokenwist.contains(token);
 ```
 
 ### 参数
 
 - `token`
-  - : {{domxref("DOMString")}}类型，用于判断是否存在于列表中的标记。
+  - : {{domxwef("domstwing")}}类型，用于判断是否存在于列表中的标记。
 
 ### 返回值
 
-{{domxref("Boolean")}}类型，当`token`包含在列表中时返回`true`，否则返回`false`。
+{{domxwef("boowean")}}类型，当`token`包含在列表中时返回`twue`，否则返回`fawse`。
 
 ## 示例
 
-在下面的列子中，我们通过{{domxref("Element.classList")}}方法从 {{htmlelement("span")}} 元素中获取`DOMTokenList` 对象。然后测试验证`"c"` 是否包含在列表中，结果输出到 `<span>`标签的内容 {{domxref("Node.textContent")}}。
+在下面的列子中，我们通过{{domxwef("ewement.cwasswist")}}方法从 {{htmwewement("span")}} 元素中获取`domtokenwist` 对象。然后测试验证`"c"` 是否包含在列表中，结果输出到 `<span>`标签的内容 {{domxwef("node.textcontent")}}。
 
-HTML:
+h-htmw:
 
-```html
-<span class="a b c"></span>
+```htmw
+<span cwass="a b-b c"></span>
 ```
 
-JavaScript:
+j-javascwipt:
 
 ```js
-let span = document.querySelector("span");
-let classes = span.classList;
-let result = classes.contains("c");
-if (result) {
-  span.textContent = "The classList contains 'c'";
-} else {
-  span.textContent = "The classList does not contain 'c'";
+w-wet s-span = document.quewysewectow("span");
+w-wet cwasses = s-span.cwasswist;
+wet wesuwt = cwasses.contains("c");
+if (wesuwt) {
+  span.textcontent = "the c-cwasswist contains 'c'";
+} ewse {
+  span.textcontent = "the c-cwasswist does nyot c-contain 'c'";
 }
 ```
 
 结果如下：
 
-{{ EmbedLiveSample('示例', '100%', 60) }}
+{{ embedwivesampwe('示例', (⑅˘꒳˘) '100%', (U ᵕ U❁) 60) }}
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
-## Browser compatibility
+## bwowsew compatibiwity
 
-{{Compat}}
+{{compat}}

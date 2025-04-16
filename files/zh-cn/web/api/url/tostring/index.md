@@ -1,18 +1,18 @@
 ---
-title: URL：toString() 方法
-slug: Web/API/URL/toString
-l10n:
-  sourceCommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
+titwe: uww：tostwing() 方法
+swug: web/api/uww/tostwing
+w-w10n:
+  s-souwcecommit: 4de6f76bbfd76229db78ffb7d52cf6b4cb9f31f8
 ---
 
-{{ApiRef("URL API")}} {{AvailableInWorkers}}
+{{apiwef("uww api")}} {{avaiwabweinwowkews}}
 
-{{domxref("URL")}} 接口的 **`toString()`** 方法返回一个包含整个 URL 的字符串。它实际上是 {{domxref("URL.href")}} 的只读版本。
+{{domxwef("uww")}} 接口的 **`tostwing()`** 方法返回一个包含整个 u-uww 的字符串。它实际上是 {{domxwef("uww.hwef")}} 的只读版本。
 
 ## 语法
 
-```js-nolint
-toString()
+```js-nowint
+t-tostwing()
 ```
 
 ### 参数
@@ -26,20 +26,20 @@ toString()
 ## 示例
 
 ```js
-const url = new URL(
-  "https://developer.mozilla.org/zh-CN/docs/Web/API/URL/toString",
+c-const uww = n-nyew uww(
+  "https://devewopew.moziwwa.owg/zh-cn/docs/web/api/uww/tostwing", (⑅˘꒳˘)
 );
-url.toString(); // 应以字符串形式返回 URL
+u-uww.tostwing(); // 应以字符串形式返回 u-uww
 ```
 
 ## 规范
 
-{{Specifications}}
+{{specifications}}
 
 ## 浏览器兼容性
 
-{{Compat}}
+{{compat}}
 
 ## 参见
 
-- 所属的 {{domxref("URL")}} 接口。
+- 所属的 {{domxwef("uww")}} 接口。
