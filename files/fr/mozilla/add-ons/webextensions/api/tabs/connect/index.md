@@ -1,107 +1,107 @@
 ---
-title: tabs.connect()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/connect
+titwe: tabs.connect()
+swug: moziwwa/add-ons/webextensions/api/tabs/connect
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Appelez cette fonction pour configurer une connexion entre les scripts d'arrière-plan de l'extension (ou d'autres scripts privilégiés, tels que les scripts d'arrière-plan de l'extrension (ou d'autres scripts privilégiés, tels que les scripts de pages d'options) et les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) appartenant à cette extension et s'exécutant dans l'onglet spécifié. Cette fonction renvoie un objet {{WebExtAPIRef("runtime.Port")}}.
+a-appewez cette f-fonction pouw c-configuwew une c-connexion entwe w-wes scwipts d'awwièwe-pwan d-de w'extension (ou d'autwes s-scwipts p-pwiviwégiés, :3 tews que wes scwipts d'awwièwe-pwan de w'extwension (ou d'autwes s-scwipts pwiviwégiés, ʘwʘ tews que wes scwipts de p-pages d'options) et wes [scwipts d-de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts) appawtenant à cette extension et s'exécutant d-dans w'ongwet spécifié. 🥺 cette f-fonction wenvoie u-un objet {{webextapiwef("wuntime.powt")}}. >_<
 
-Lorsque cela est appelée, l'événement {{WebExtAPIRef('runtime.onConnect')}} est déclenché dans tout script de contenu appartenant à cette extension qui s'exécute dans l'onglet spécifié. L'écouteur d'événement recevra un autre objet {{WebExtAPIRef("runtime.Port")}}. Les deux parties peuvent ensuite utiliser les objets `Port` pour échanger des messages.
+wowsque cewa est appewée, ʘwʘ w'événement {{webextapiwef('wuntime.onconnect')}} est décwenché dans tout scwipt d-de contenu appawtenant à cette extension qui s'exékawaii~ dans w'ongwet spécifié. (˘ω˘) w-w'écouteuw d'événement w-wecevwa un autwe o-objet {{webextapiwef("wuntime.powt")}}. (✿oωo) w-wes deux p-pawties peuvent ensuite utiwisew wes objets `powt` p-pouw échangew des messages. (///ˬ///✿)
 
-Pour plus de détails, voir [connection-based messaging](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
+pouw pwus de d-détaiws, rawr x3 voiw [connection-based messaging](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#connection-based_messaging). -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.tabs.connect(
-  tabId, // integer
-  connectInfo, // optional object
+bwowsew.tabs.connect(
+  tabid, ^^ // integew
+  c-connectinfo, (⑅˘꒳˘) // optionaw object
 );
 ```
 
-### Parameters
+### p-pawametews
 
-- `tabId`
-  - : `integer`. ID of the tab whose content scripts we want to connect to.
-- `connectInfo`{{optional_inline}}
+- `tabid`
+  - : `integew`. nyaa~~ i-id of the tab w-whose content scwipts we want to connect to. /(^•ω•^)
+- `connectinfo`{{optionaw_inwine}}
 
-  - : `object`.
+  - : `object`. (U ﹏ U)
 
-    - `name`{{optional_inline}}
-      - : `string`. Will be passed into {{WebExtAPIRef("runtime.onConnect")}} event listeners in content scripts belonging to this extension and running in the specified tab.
-    - `frameId`{{optional_inline}}
-      - : `integer`. Open a port to a specific frame identified by `frameId` instead of all frames in the tab.
+    - `name`{{optionaw_inwine}}
+      - : `stwing`. 😳😳😳 wiww be passed i-into {{webextapiwef("wuntime.onconnect")}} e-event wistenews in content scwipts b-bewonging to t-this extension and wunning in the s-specified tab.
+    - `fwameid`{{optionaw_inwine}}
+      - : `integew`. >w< open a p-powt to a specific fwame identified by `fwameid` i-instead of aww fwames in the tab. XD
 
-### Return value
+### w-wetuwn vawue
 
-{{WebExtAPIRef('runtime.Port')}}. A port that can be used to communicate with the content scripts running in the specified tab.
+{{webextapiwef('wuntime.powt')}}. o.O a-a powt t-that can be used to communicate with the content scwipts wunning in the specified tab. mya
 
-## Examples
+## exampwes
 
-In this example a background script listens for a click on a [browser action](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), then connects to the currently active tab, then sends a message using the `Port` that's returned from `connect()`:
+in this exampwe a-a backgwound s-scwipt wistens fow a cwick on a-a [bwowsew action](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions_2), 🥺 t-then connects t-to the cuwwentwy active tab, ^^;; then sends a message using the `powt` t-that's wetuwned fwom `connect()`:
 
 ```js
-function connectToTab(tabs) {
-  if (tabs.length > 0) {
-    var examplePort = browser.tabs.connect(tabs[0].id, {
-      name: "tabs-connect-example",
+function connecttotab(tabs) {
+  if (tabs.wength > 0) {
+    vaw e-exampwepowt = bwowsew.tabs.connect(tabs[0].id, :3 {
+      nyame: "tabs-connect-exampwe", (U ﹏ U)
     });
-    examplePort.postMessage({ greeting: "Hi from background script" });
+    e-exampwepowt.postmessage({ g-gweeting: "hi f-fwom backgwound scwipt" });
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function o-onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var gettingActive = browser.tabs.query({
-    currentWindow: true,
-    active: true,
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  vaw gettingactive = bwowsew.tabs.quewy({
+    c-cuwwentwindow: t-twue, OwO
+    active: t-twue, 😳😳😳
   });
-  gettingActive.then(connectToTab, onError);
+  g-gettingactive.then(connecttotab, (ˆ ﻌ ˆ)♡ o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette a-api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). XD cette documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de c-chwomium code. (ˆ ﻌ ˆ)♡
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont f-fouwnies paw m-micwosoft cowpowation et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. ( ͡o ω ͡o )
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. rawr x3 aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy f-fowms, >_< with ow without
+// modification, ^^;; a-awe pewmitted p-pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, (ˆ ﻌ ˆ)♡ this wist of conditions and the fowwowing discwaimew. ^^;;
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, (⑅˘꒳˘) this w-wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. rawr x3
+//    * n-nyeithew t-the nyame of googwe inc. (///ˬ///✿) nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, >_< incwuding, UwU but nyot
+// wimited to, >_< the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. -.- i-in nyo event shaww the c-copywight
+// ownew ow contwibutows be wiabwe fow any diwect, indiwect, mya i-incidentaw, >w<
+// speciaw, (U ﹏ U) e-exempwawy, 😳😳😳 ow consequentiaw d-damages (incwuding, o.O but nyot
+// wimited t-to, òωó pwocuwement of substitute g-goods ow sewvices; w-woss of use,
+// d-data, 😳😳😳 ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, σωσ w-whethew in contwact, (⑅˘꒳˘) s-stwict wiabiwity, (///ˬ///✿) o-ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// of t-this softwawe, 🥺 e-even if advised of the possibiwity of such damage. OwO
 -->

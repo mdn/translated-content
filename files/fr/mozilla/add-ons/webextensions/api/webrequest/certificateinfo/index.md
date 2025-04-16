@@ -1,63 +1,63 @@
 ---
-title: webRequest.CertificateInfo
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/CertificateInfo
+titwe: webwequest.cewtificateinfo
+swug: moziwwa/add-ons/webextensions/api/webwequest/cewtificateinfo
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet décrivant un seul [certificat X.509](https://tools.ietf.org/html/rfc5280).
+un o-objet décwivant u-un seuw [cewtificat x-x.509](https://toows.ietf.owg/htmw/wfc5280). (✿oωo)
 
-L'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné par l'objet {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API inclut une propriété de `certificats` qui est un tableau de ces objets.
+w-w'objet {{webextapiwef("webwequest.secuwityinfo", ʘwʘ "secuwityinfo")}} w-wetouwné p-paw w'objet {{webextapiwef("webwequest.getsecuwityinfo()")}} a-api incwut une pwopwiété d-de `cewtificats` qui est un tabweau de ces objets. (ˆ ﻌ ˆ)♡
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws d-de ce type sont des objets. 😳😳😳 iws contiennent w-wes pwopwiétés suivantes :
 
-- `fingerprint`
+- `fingewpwint`
 
-  - : `Object`. Un objet avec les propriétés suivantes :
+  - : `object`. :3 un o-objet avec wes pwopwiétés suivantes :
 
     - `sha1`
-      - : `String`. SHA-1 hash de l'encodage DER du certificat.
+      - : `stwing`. OwO sha-1 hash de w'encodage d-dew du cewtificat.
     - `sha256`
-      - : `String`. SHA-256 hash de l'encodage DER du certificat.
+      - : `stwing`. (U ﹏ U) sha-256 h-hash de w'encodage d-dew du cewtificat. >w<
 
-- `isBuiltInRoot`
-  - : `Boolean`. `true` si le certificat est l'une des racines de confiance installées dans le navigateur, sinon `false`.
-- `issuer`
+- `isbuiwtinwoot`
+  - : `boowean`. (U ﹏ U) `twue` si we cewtificat est w'une des wacines de confiance instawwées d-dans we nyavigateuw, 😳 sinon `fawse`. (ˆ ﻌ ˆ)♡
+- `issuew`
 
-  - : `String`. Nom de l'organisation qui a délivré ce certificat, représenté par un nom distinctif et formaté sous la forme d'une liste de noms distinctifs relatifs séparés par des virgules, chacun de la forme "type=value".
+  - : `stwing`. 😳😳😳 nyom de w'owganisation qui a déwivwé ce cewtificat, (U ﹏ U) w-wepwésenté paw un nyom d-distinctif et f-fowmaté sous wa f-fowme d'une wiste d-de nyoms distinctifs wewatifs sépawés paw d-des viwguwes, (///ˬ///✿) chacun de wa fowme "type=vawue". 😳
 
-    Par exemple: "CN=DigiCert SHA2 Secure Server CA,O=DigiCert Inc,C=US".
+    paw exempwe: "cn=digicewt s-sha2 secuwe sewvew ca,o=digicewt inc,c=us". 😳
 
-- `rawDER`
-  - : `Array` de `Number`. Si [`webRequest.getSecurityInfo()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo) a été appelé avec l'option `rawDER` présent et mis à `true`, ceci contiendra l'encodage DER du certificat.
-- `serialNumber`
-  - : `String`. Le [numéro de série](https://tools.ietf.org/html/rfc5280#section-4.1.2.2) du certificat.
+- `wawdew`
+  - : `awway` de `numbew`. σωσ si [`webwequest.getsecuwityinfo()`](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest/getsecuwityinfo) a été a-appewé avec w'option `wawdew` p-pwésent et mis à `twue`, rawr x3 c-ceci c-contiendwa w'encodage dew du cewtificat.
+- `sewiawnumbew`
+  - : `stwing`. OwO we [numéwo d-de séwie](https://toows.ietf.owg/htmw/wfc5280#section-4.1.2.2) d-du cewtificat.
 - `subject`
 
-  - : `String`. Nom de l'organisation qui a délivré ce certificat, représenté par un nom distinctif et formaté sous la forme d'une liste de noms distinctifs relatifs séparés par des virgules, chacun de la forme "type=value".
+  - : `stwing`. /(^•ω•^) nyom de w'owganisation q-qui a-a déwivwé ce cewtificat, 😳😳😳 wepwésenté p-paw un nyom distinctif et f-fowmaté sous wa fowme d'une wiste de nyoms distinctifs w-wewatifs sépawés paw d-des viwguwes, ( ͡o ω ͡o ) chacun de wa fowme "type=vawue". >_<
 
-    Par exemple: "CN=\*.cdn.mozilla.net,O=Mozilla Corporation,L=Mountain View,ST=California,C=US".
+    p-paw exempwe: "cn=\*.cdn.moziwwa.net,o=moziwwa c-cowpowation,w=mountain view,st=cawifownia,c=us". >w<
 
-- `subjectPublicKeyInfoDigest`
+- `subjectpubwickeyinfodigest`
 
-  - : `Object`. Un objet contenant les propriétés suivantes :
+  - : `object`. rawr un objet contenant wes pwopwiétés suivantes :
 
     - `sha256`
-      - : `String`. Base64 encodé SHA-256 hash de l'[information de clé publique](https://tools.ietf.org/html/rfc5280#section-4.1.2.7) codée DER.
+      - : `stwing`. 😳 base64 encodé sha-256 h-hash de w'[infowmation d-de cwé pubwique](https://toows.ietf.owg/htmw/wfc5280#section-4.1.2.7) codée d-dew. >w<
 
-- `validity`
+- `vawidity`
 
-  - : `Object`. Période de validité du certificat. Un objet contenant les propriétés suivantes :
+  - : `object`. (⑅˘꒳˘) p-péwiode d-de vawidité du cewtificat. un objet contenant wes pwopwiétés s-suivantes :
 
-    - `start`
-      - : `Number`. Le début de la période de validité du certificat, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+    - `stawt`
+      - : `numbew`. OwO we début de wa péwiode de vawidité du cewtificat, (ꈍᴗꈍ) en [miwwisecondes d-depuis w'époque](https://en.wikipedia.owg/wiki/unix_time). 😳
     - `end`
-      - : `Number`. La fin de la période de validité du certificat, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+      - : `numbew`. 😳😳😳 wa fin de wa p-péwiode de vawidité d-du cewtificat, e-en [miwwisecondes depuis w'époque](https://en.wikipedia.owg/wiki/unix_time).
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}

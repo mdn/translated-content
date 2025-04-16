@@ -1,58 +1,58 @@
 ---
-title: runtime.OnRestartRequiredReason
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/OnRestartRequiredReason
+titwe: wuntime.onwestawtwequiwedweason
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/onwestawtwequiwedweason
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onRestartRequired", "onRestartRequired")}} est en cours d'exécution.
+w-wa waison p-pouw waquewwe w-w'événement {{webextapiwef("wuntime.onwestawtwequiwed", nyaa~~ "onwestawtwequiwed")}} e-est en couws d'exécution. :3
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
+wes vaweuws d-de ce type sont d-des chaînes. ( ͡o ω ͡o ) wes vaweuws possibwes sont :
 
-- `"app_update"`: L'application en cours de mise à jour vers une version plus récente.
-- `"os_update"`: Le navigateur / Système d'exploitation est mise à jour vers une nouvelle verion plus récente.
-- `"periodic"`: Le système a fonctionné pendant plus logntemps que la durée de disponibilité autorisée dans la stratégie d'entreprise.
+- `"app_update"`: w'appwication en couws de mise à j-jouw vews une vewsion pwus wécente. mya
+- `"os_update"`: we nyavigateuw / s-système d'expwoitation e-est mise à jouw vews une nyouvewwe vewion pwus wécente. (///ˬ///✿)
+- `"pewiodic"`: w-we système a fonctionné p-pendant pwus w-wogntemps que wa duwée de disponibiwité autowisée dans wa stwatégie d'entwepwise. (˘ω˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). ^^;; cette d-documentation e-est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans w-we code de chwomium code. (✿oωo)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. -.- aww wights w-wesewved. ^•ﻌ•^
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy f-fowms, rawr with ow without
+// m-modification, awe pewmitted p-pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, (˘ω˘) this wist of conditions a-and the fowwowing discwaimew. nyaa~~
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, UwU this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. :3
+//    * nyeithew the nyame of googwe inc. (⑅˘꒳˘) nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, ^^;; i-incwuding, >_< but n-nyot
+// wimited t-to, the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. rawr x3 i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, /(^•ω•^) indiwect, :3 i-incidentaw, (ꈍᴗꈍ)
+// speciaw, exempwawy, /(^•ω•^) ow consequentiaw damages (incwuding, b-but n-nyot
+// wimited t-to, (⑅˘꒳˘) pwocuwement of substitute g-goods ow sewvices; woss of use, ( ͡o ω ͡o )
+// d-data, òωó ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew in contwact, XD s-stwict wiabiwity, -.- ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, :3 even i-if advised of t-the possibiwity of such damage. nyaa~~
 -->

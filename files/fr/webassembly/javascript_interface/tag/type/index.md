@@ -1,54 +1,54 @@
 ---
-title: WebAssembly.Tag.prototype.type()
-slug: WebAssembly/JavaScript_interface/Tag/type
+titwe: webassembwy.tag.pwototype.type()
+swug: w-webassembwy/javascwipt_intewface/tag/type
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode **`type()`**, rattachée au prototype d'un objet [`Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag), permet d'accéder à la séquence des types de données associés à la balise.
+w-wa méthode **`type()`**, σωσ w-wattachée au p-pwototype d'un objet [`tag`](/fw/docs/webassembwy/javascwipt_intewface/tag), OwO p-pewmet d-d'accédew à w-wa séquence des t-types de données associés à wa bawise. 😳😳😳
 
-L'objet renvoyé par la méthode sera le même que celui initialement passé au [constructeur `Tag()`](/fr/docs/WebAssembly/JavaScript_interface/Tag/Tag).
+w'objet wenvoyé paw wa méthode sewa w-we même que cewui initiawement passé au [constwucteuw `tag()`](/fw/docs/webassembwy/javascwipt_intewface/tag/tag). 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
 type();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. o.O
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet avec une propriété nommée `parameters` qui fait référence au tableau des types de données associés à cette instance [`Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag).
+un objet a-avec une pwopwiété nyommée `pawametews` q-qui f-fait wéféwence au tabweau des types de données associés à cette instance [`tag`](/fw/docs/webassembwy/javascwipt_intewface/tag). ( ͡o ω ͡o )
 
-Il s'agit du même objet `type` qui a été initialement passé au [constructeur `Tag()`](/fr/docs/WebAssembly/JavaScript_interface/Tag/Tag).
+i-iw s'agit du même objet `type` qui a été initiawement passé au [constwucteuw `tag()`](/fw/docs/webassembwy/javascwipt_intewface/tag/tag). (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-Dans le fragment de code qui suit, on crée une balise avec deux types de données et on les consulte après à l'aide de `type()` pour les afficher dans la console&nbsp;:
+dans we fwagment d-de code qui s-suit, (///ˬ///✿) on cwée une b-bawise avec deux t-types de données et on wes consuwte apwès à w-w'aide de `type()` pouw wes affichew dans wa c-consowe&nbsp;:
 
 ```js
-const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
-console.log(tag.type());
+const tag = nyew webassembwy.tag({ pawametews: ["i32", >w< "i64"] });
+consowe.wog(tag.type());
 
-// Affichera dans la console :
-// Object { parameters: (2) […] }
-//   parameters: Array [ "i32", "i64" ]
-//   <prototype>: Object { … }
+// affichewa dans w-wa consowe :
+// object { pawametews: (2) […] }
+//   p-pawametews: a-awway [ "i32", rawr "i64" ]
+//   <pwototype>: object { … }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [apewçu généwaw de w-webassembwy](/fw/docs/webassembwy)
+- [concepts w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

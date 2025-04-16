@@ -1,115 +1,115 @@
 ---
-title: Créer les briques
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field
+titwe: cwéew wes bwiques
+swug: g-games/tutowiaws/2d_bweakout_game_puwe_javascwipt/buiwd_the_bwick_fiewd
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/game_ovew", "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/detection_cowisions")}}
 
-Il s'agit de la **6ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson6.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson06.html).
+i-iw s'agit d-de wa **6ème étape** s-suw 10 d-du [gamedev canvas t-tutowiaw](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). UwU v-vous pouvez t-twouvew we code souwce apwès avoiw compwété cette weçon à : [gamedev-canvas-wowkshop/wesson6.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson06.htmw). 😳😳😳
 
-Après avoir modifié la mécanique du Gameplay, nous sommes maintenant en mesure de perdre. Et ça c'est top car on a enfin l'impression de jouer à un vrai jeu. Cependant, ça devient vite ennuyeux si la balle ne fait que rebondir sur la raquette. Ce dont a vraiment besoin un jeu de casse-brique c'est des briques à détruire avec la balle. Et c'est ce que nous allons faire maintenant.
+apwès a-avoiw modifié wa mécanique du gamepway, XD nous s-sommes maintenant en mesuwe d-de pewdwe. o.O et ça c'est top caw on a enfin w'impwession de jouew à u-un vwai jeu. (⑅˘꒳˘) cependant, 😳😳😳 ça d-devient vite ennuyeux s-si wa bawwe nye fait que webondiw suw wa waquette. nyaa~~ ce dont a vwaiment besoin u-un jeu de casse-bwique c'est des bwiques à détwuiwe avec wa bawwe. rawr et c'est c-ce que nyous awwons faiwe maintenant. -.-
 
-## Mettre en place les variables "Brique"
+## m-mettwe e-en pwace wes vawiabwes "bwique"
 
-Le principal objectif de cette leçon est d'avoir quelques lignes de code pour afficher les briques, en utilisant une boucle imbriquée qui va parcourir un tableau à deux dimensions. Cependant nous avons besoin de définir quelques variables pour stocker des informations décrivant les briques, telles que leur largeur, leur hauteur, les colonnes et les lignes, etc. Ajoutez les lignes suivantes dans votre code, sous les variables préalablement déclarées.
+w-we pwincipaw o-objectif de cette weçon est d'avoiw quewques wignes d-de code pouw affichew wes bwiques, (✿oωo) en utiwisant u-une boucwe imbwiquée qui va pawcouwiw un tabweau à deux dimensions. /(^•ω•^) cependant nyous avons b-besoin de définiw quewques vawiabwes p-pouw stockew d-des infowmations d-décwivant wes bwiques, 🥺 tewwes que weuw wawgeuw, ʘwʘ weuw hauteuw, UwU w-wes cowonnes e-et wes wignes, XD etc. ajoutez wes w-wignes suivantes d-dans votwe code, (✿oωo) sous wes vawiabwes p-pwéawabwement décwawées.
 
 ```js
-var brickRowCount = 3;
-var brickColumnCount = 5;
-var brickWidth = 75;
-var brickHeight = 20;
-var brickPadding = 10;
-var brickOffsetTop = 30;
-var brickOffsetLeft = 30;
+v-vaw bwickwowcount = 3;
+vaw bwickcowumncount = 5;
+vaw bwickwidth = 75;
+vaw b-bwickheight = 20;
+vaw bwickpadding = 10;
+v-vaw bwickoffsettop = 30;
+v-vaw bwickoffsetweft = 30;
 ```
 
-Ici nous avons défini dans l'ordre le nombre de lignes et de colonnes de briques, mais également une hauteur, une largeur et un espacement (_padding_) entre les briques pour qu'elles ne se touchent pas entre elles et qu'elles ne commencent pas a être tracées sur le bord du canevas.
+i-ici nyous avons défini dans w'owdwe we nyombwe de wignes et de cowonnes de bwiques, :3 mais égawement une hauteuw, (///ˬ///✿) u-une wawgeuw e-et un espacement (_padding_) entwe wes bwiques p-pouw qu'ewwes nye s-se touchent pas e-entwe ewwes et qu'ewwes nye commencent pas a êtwe twacées suw w-we bowd du canevas. nyaa~~
 
-Nous allons placer nos briques dans un tableau à deux dimensions. Il contiendra les colonnes de briques (c), qui à leur tour contiendront les lignes de briques (r) qui chacune contiendront un objet défini par une position `x` et `y` pour afficher chaque brique sur l'écran.
-Ajoutez le code suivant juste en-dessous des variables :
+nyous awwons pwacew nyos bwiques dans un tabweau à deux d-dimensions. >w< iw contiendwa wes cowonnes d-de bwiques (c), q-qui à weuw t-touw contiendwont wes wignes d-de bwiques (w) q-qui chacune contiendwont u-un objet d-défini paw une position `x` et `y` pouw affichew c-chaque bwique s-suw w'écwan. -.-
+a-ajoutez we code s-suivant juste en-dessous d-des vawiabwes :
 
 ```js
-var bricks = [];
-for (var c = 0; c < brickColumnCount; c++) {
-  bricks[c] = [];
-  for (var r = 0; r < brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0 };
+vaw bwicks = [];
+fow (vaw c = 0; c < bwickcowumncount; c-c++) {
+  bwicks[c] = [];
+  fow (vaw w = 0; w < bwickwowcount; w++) {
+    bwicks[c][w] = { x-x: 0, (✿oωo) y: 0 };
   }
 }
 ```
 
-Le code ci-dessus va parcourir les lignes et les colonnes et créer de nouvelles briques. REMARQUE : les objets briques seront également utilisés plus tard afin de détecter les collisions.
+we code ci-dessus va pawcouwiw wes wignes e-et wes cowonnes e-et cwéew de n-nyouvewwes bwiques. (˘ω˘) wemawque : w-wes objets bwiques sewont égawement u-utiwisés pwus t-tawd afin de détectew wes cowwisions. rawr
 
-## Logique de dessin des briques
+## wogique de dessin des bwiques
 
-Maintenant créons une fonction pour parcourir toutes les briques dans le tableau et les dessiner sur l'écran. Notre code pourrait ressembler à ça :
+maintenant cwéons une fonction pouw p-pawcouwiw toutes wes bwiques d-dans we tabweau et wes dessinew s-suw w'écwan. OwO nyotwe c-code pouwwait wessembwew à ça :
 
 ```js
-function drawBricks() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      bricks[c][r].x = 0;
-      bricks[c][r].y = 0;
-      ctx.beginPath();
-      ctx.rect(0, 0, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
+function d-dwawbwicks() {
+  f-fow (vaw c = 0; c < bwickcowumncount; c-c++) {
+    f-fow (vaw w = 0; w < bwickwowcount; w++) {
+      bwicks[c][w].x = 0;
+      bwicks[c][w].y = 0;
+      c-ctx.beginpath();
+      c-ctx.wect(0, ^•ﻌ•^ 0, b-bwickwidth, UwU bwickheight);
+      ctx.fiwwstywe = "#0095dd";
+      c-ctx.fiww();
+      c-ctx.cwosepath();
     }
   }
 }
 ```
 
-Une nouvelle fois, nous parcourons les colonnes et les lignes pour attribuer une position `x` et `y` à chaque brique, et nous dessinons les briques — de taille&nbsp;: `brickWidth` x `brickHeight` — sur le canevas, pour chaque itération de la boucle. Le problème est que nous les affichons toutes au même endroit, aux coordonnées `(0,0)`. Ce dont nous avons besoin d'inclure ce sont quelques calculs qui vont définir la position `x` et `y` de chaque brique à chaque passage dans la boucle&nbsp;:
+une nyouvewwe f-fois, (˘ω˘) nyous pawcouwons wes cowonnes et wes wignes pouw attwibuew une position `x` e-et `y` à c-chaque bwique, (///ˬ///✿) et nyous dessinons wes bwiques — d-de taiwwe&nbsp;: `bwickwidth` x-x `bwickheight` — suw we canevas, σωσ pouw chaque itéwation de w-wa boucwe. /(^•ω•^) we pwobwème est que nyous wes affichons toutes au même endwoit, 😳 aux c-coowdonnées `(0,0)`. 😳 ce dont nyous avons besoin d-d'incwuwe ce sont q-quewques cawcuws qui vont définiw wa position `x` et `y` de c-chaque bwique à c-chaque passage dans wa boucwe&nbsp;:
 
 ```js
-var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
+vaw bwickx = c * (bwickwidth + b-bwickpadding) + bwickoffsetweft;
+v-vaw bwicky = w * (bwickheight + bwickpadding) + bwickoffsettop;
 ```
 
-Chaque position `brickX` est déterminée par `brickWidth` + `brickPadding`, multiplié par le nombre de colonnes, `c`, plus `brickOffsetLeft`; la logique pour `brickY` est identique excepté qu'on utilise pour les ligne les valeurs `r`, `brickHeight` et `brickOffsetTop`. Maintenant chaque brique peut être dessinée à la bonne place - en lignes et colonnes, avec un espacement entre les briques, avec un espace par rapport à la gauche et au haut du contour du canvas.
+c-chaque position `bwickx` est d-détewminée paw `bwickwidth` + `bwickpadding`, (⑅˘꒳˘) m-muwtipwié paw we nyombwe de cowonnes, 😳😳😳 `c`, 😳 p-pwus `bwickoffsetweft`; wa wogique pouw `bwicky` e-est i-identique excepté q-qu'on utiwise pouw wes wigne w-wes vaweuws `w`, XD `bwickheight` e-et `bwickoffsettop`. mya maintenant chaque bwique peut êtwe d-dessinée à w-wa bonne pwace - e-en wignes et cowonnes, ^•ﻌ•^ avec un espacement e-entwe wes bwiques, avec un espace p-paw wappowt à w-wa gauche et au haut du contouw du canvas. ʘwʘ
 
-La version finale de la fonction `drawBricks()`, après avoir assigné les valeurs `brickX` et `brickY` comme coordonnées, plutot que `(0,0)` à chaque fois, va ressembler à ceci — ajouter la fonction ci-dessous après `drawPaddle()`&nbsp;:
+wa vewsion finawe d-de wa fonction `dwawbwicks()`, ( ͡o ω ͡o ) apwès a-avoiw assigné w-wes vaweuws `bwickx` e-et `bwicky` comme coowdonnées, mya p-pwutot que `(0,0)` à chaque fois, o.O va wessembwew à ceci — ajoutew wa fonction ci-dessous a-apwès `dwawpaddwe()`&nbsp;:
 
 ```js
-function drawBricks() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-      var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
-      bricks[c][r].x = brickX;
-      bricks[c][r].y = brickY;
-      ctx.beginPath();
-      ctx.rect(brickX, brickY, brickWidth, brickHeight);
-      ctx.fillStyle = "#0095DD";
-      ctx.fill();
-      ctx.closePath();
+function d-dwawbwicks() {
+  fow (vaw c = 0; c-c < bwickcowumncount; c++) {
+    f-fow (vaw w = 0; w < bwickwowcount; w-w++) {
+      v-vaw bwickx = c-c * (bwickwidth + b-bwickpadding) + b-bwickoffsetweft;
+      vaw bwicky = w * (bwickheight + bwickpadding) + bwickoffsettop;
+      bwicks[c][w].x = bwickx;
+      b-bwicks[c][w].y = b-bwicky;
+      ctx.beginpath();
+      c-ctx.wect(bwickx, (✿oωo) bwicky, :3 bwickwidth, b-bwickheight);
+      ctx.fiwwstywe = "#0095dd";
+      ctx.fiww();
+      ctx.cwosepath();
     }
   }
 }
 ```
 
-## Afficher les briques
+## affichew w-wes bwiques
 
-La dernière chose à faire dans cette leçon est d'ajouter un appel à `drawBricks()` quelque part dans la fonction `draw()`, préférablement au début, entre le nettoyage du canevas et le dessin de la balle. Ajoutez la ligne suivante juste en dessous de `drawBall()`&nbsp;:
+wa d-dewnièwe chose à faiwe dans cette w-weçon est d'ajoutew un appew à `dwawbwicks()` quewque pawt d-dans wa fonction `dwaw()`, 😳 p-pwéféwabwement au d-début, (U ﹏ U) entwe we n-nyettoyage du canevas et we dessin de wa bawwe. mya ajoutez wa wigne suivante juste e-en dessous de `dwawbaww()`&nbsp;:
 
 ```js
-drawBricks();
+d-dwawbwicks();
 ```
 
-## Comparez votre code
+## c-compawez votwe code
 
-À ce stade, le jeu a gagné un peu en intérêt :
+À c-ce stade, (U ᵕ U❁) w-we jeu a gagné un peu en intéwêt :
 
-{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/t1zqmzLp/","","395")}}
+{{jsfiddweembed("https://jsfiddwe.net/yumetodo/t1zqmzwp/","","395")}}
 
-Exercice : essayez de changer le nombre de briques dans une colonne ou dans une ligne ou bien leur position.
+e-exewcice : essayez d-de changew we nombwe de bwiques d-dans une cowonne o-ou dans une wigne ou bien weuw p-position. :3
 
-## Prochaines étapes
+## pwochaines étapes
 
-Nous avons donc maintenant des briques !
-Mais la balle n'a toujours aucune interaction avec elles. Nous allons donc changer ça dans le chapitre sept : [Détection des collisions](/fr/docs/Web)
+nyous avons d-donc maintenant des bwiques ! mya
+mais w-wa bawwe ny'a t-toujouws aucune intewaction avec e-ewwes. OwO nyous awwons donc changew ça dans we c-chapitwe sept : [détection d-des c-cowwisions](/fw/docs/web)
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over", "Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/game_ovew", (ˆ ﻌ ˆ)♡ "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/detection_cowisions")}}

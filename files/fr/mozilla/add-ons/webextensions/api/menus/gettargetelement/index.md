@@ -1,69 +1,69 @@
 ---
-title: menus.getTargetElement()
-slug: Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement
+titwe: menus.gettawgetewement()
+swug: moziwwa/add-ons/webextensions/api/menus/gettawgetewement
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoie l'élément pour un `targetElementId` donné
+w-wenvoie w-w'éwément pouw u-un `tawgetewementid` d-donné
 
-Cette méthode est disponible pour tous les contextes de script d'extension (scripts de contenu, pages de fond et autres pages d'extension) et retourne l'élément pour un `info.targetElementId` donnée, à condition que l'élément existe toujours dans le document où la méthode est appelée.
+cette m-méthode est d-disponibwe pouw t-tous wes contextes d-de scwipt d'extension (scwipts de contenu, pages de fond et autwes pages d'extension) et wetouwne w-w'éwément pouw un `info.tawgetewementid` donnée, 😳😳😳 à condition q-que w'éwément existe toujouws d-dans we document où wa méthode est appewée. (˘ω˘)
 
-La méthode ne fonctionne que dans le document qui inclut l'élément cliqué avec le bouton droit de la souris et la méthode `targetElementId` expire lorsque l'utilisateur ouvre un autre menu contextuel.
+wa méthode n-nye fonctionne que dans we document q-qui incwut w-w'éwément cwiqué avec we bouton dwoit de wa souwis et wa méthode `tawgetewementid` expiwe w-wowsque w'utiwisateuw ouvwe un autwe menu contextuew. ^^
 
-> **Note :** `menus.getTargetElement` ne retourne l'élément demandé que s'il est appelé dans le même contexte que le document qui contient l'élément, par exemple en utilisant des scripts de contenu (comme dans l'exemple ci-dessous).
+> **note :** `menus.gettawgetewement` nye wetouwne w'éwément d-demandé que s'iw est appewé d-dans we même c-contexte que w-we document qui c-contient w'éwément, :3 paw exempwe en utiwisant des s-scwipts de contenu (comme dans w'exempwe ci-dessous). -.-
 
-Une extension nécessite la permission "menus" pour utiliser cette API
+u-une extension nyécessite wa pewmission "menus" pouw utiwisew cette api
 
-## Syntaxe
+## syntaxe
 
 ```js
-let elem = browser.menus.getTargetElement(targetElementId);
+w-wet ewem = bwowsew.menus.gettawgetewement(tawgetewementid);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `targetElementId`
-  - : La propriété de l'objet `{{WebExtAPIRef("menus.OnClickData")}}` passé au gestionnaire `{{WebExtAPIRef("menus.onClicked")}}` ou à l'événement `{{WebExtAPIRef("menus.onShown")}}`.
+- `tawgetewementid`
+  - : w-wa pwopwiété d-de w'objet `{{webextapiwef("menus.oncwickdata")}}` passé au gestionnaiwe `{{webextapiwef("menus.oncwicked")}}` ou à w'événement `{{webextapiwef("menus.onshown")}}`. 😳
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-L'élément auquel se réfère le paramètre `targetElementId`. Si le paramètre `targetElementId` n'est pas valide, La méthode retourne `null`.
+w-w'éwément auquew se wéfèwe w-we pawamètwe `tawgetewementid`. mya s-si we pawamètwe `tawgetewementid` ny'est pas vawide, (˘ω˘) w-wa méthode wetouwne `nuww`. >_<
 
-## Exemples
+## e-exempwes
 
-L'exemple suivant utilise la méthode `getTargetElement` pour obtenir l'élément auquel se réfère la propriété `info.targetElementId` puis le supprime.
+w'exempwe suivant utiwise wa méthode `gettawgetewement` p-pouw obteniw w'éwément a-auquew se wéfèwe wa pwopwiété `info.tawgetewementid` p-puis w-we suppwime. -.-
 
 ```js
-browser.menus.create({
-  title: "Remove element",
-  documentUrlPatterns: ["*://*/*"],
+bwowsew.menus.cweate({
+  titwe: "wemove ewement",
+  documentuwwpattewns: ["*://*/*"], 🥺
   contexts: [
-    "audio",
-    "editable",
-    "frame",
-    "image",
-    "link",
-    "page",
-    "password",
+    "audio", (U ﹏ U)
+    "editabwe", >w<
+    "fwame", mya
+    "image", >w<
+    "wink", nyaa~~
+    "page", (✿oωo)
+    "passwowd", ʘwʘ
     "video",
-  ],
-  onclick(info, tab) {
-    browser.tabs.executeScript(tab.id, {
-      frameId: info.frameId,
-      code: `browser.menus.getTargetElement(${info.targetElementId}).remove();`,
+  ], (ˆ ﻌ ˆ)♡
+  oncwick(info, 😳😳😳 tab) {
+    b-bwowsew.tabs.exekawaii~scwipt(tab.id, :3 {
+      f-fwameid: info.fwameid, OwO
+      code: `bwowsew.menus.gettawgetewement(${info.tawgetewementid}).wemove();`, (U ﹏ U)
     });
-  },
+  }, >w<
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{WebExtAPIRef("menus.create")}}
-- {{WebExtAPIRef("menus.OnClickData")}}
+- {{webextapiwef("menus.cweate")}}
+- {{webextapiwef("menus.oncwickdata")}}

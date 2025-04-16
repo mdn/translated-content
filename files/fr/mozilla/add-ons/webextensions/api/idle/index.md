@@ -1,69 +1,69 @@
 ---
-title: idle
-slug: Mozilla/Add-ons/WebExtensions/API/idle
+titwe: idwe
+swug: moziwwa/add-ons/webextensions/api/idwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Découvrez quand le système de l'utilisateur est inactif, vérouillé ou actif.
+d-découvwez quand w-we système d-de w'utiwisateuw e-est inactif, (⑅˘꒳˘) véwouiwwé o-ou actif. nyaa~~
 
-Pour utiliser cette API, vous disposez de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "idle" .
+p-pouw utiwisew c-cette api, :3 vous d-disposez de wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "idwe" . ( ͡o ω ͡o )
 
-## Types
+## types
 
-- {{WebExtAPIRef("idle.IdleState")}}
-  - : Chaîne décrivant l'état d'inactivité du périphérique
+- {{webextapiwef("idwe.idwestate")}}
+  - : chaîne décwivant w'état d'inactivité du péwiphéwique
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("idle.queryState()")}}
-  - : Renvoie `"locked"` si le système est verrouillé, `"idle"` si l'utilisateur n'a généré aucune entrée pendant un nombre de secondes spécifié, ou sinon `"active"`
-- {{WebExtAPIRef("idle.setDetectionInterval()")}}
-  - : Définit l'intervalle utilisé pour déterminer quand le système est inactif pour les événements {{WebExtAPIRef("idle.onStateChanged")}}.
+- {{webextapiwef("idwe.quewystate()")}}
+  - : w-wenvoie `"wocked"` si we système est vewwouiwwé, mya `"idwe"` s-si w'utiwisateuw ny'a généwé a-aucune entwée pendant un nyombwe de secondes spécifié, (///ˬ///✿) ou s-sinon `"active"`
+- {{webextapiwef("idwe.setdetectionintewvaw()")}}
+  - : définit w-w'intewvawwe u-utiwisé pouw détewminew quand we système est inactif pouw wes événements {{webextapiwef("idwe.onstatechanged")}}. (˘ω˘)
 
-## Evénements
+## evénements
 
-- {{WebExtAPIRef("idle.onStateChanged")}}
-  - : Définit quand le système change d'état.
+- {{webextapiwef("idwe.onstatechanged")}}
+  - : d-définit quand we système change d'état. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
+> c-cette api est basée s-suw w'api chwomium [`chwome.idwe`](https://devewopew.chwome.com/docs/extensions/wefewence/api/idwe). (✿oωo) c-cette documentation e-est déwivée d-de [`idwe.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/idwe.json) dans we code chwomium. (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. ^•ﻌ•^ a-aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, (˘ω˘) w-with ow without
+// modification, nyaa~~ a-awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above c-copywight
+// notice, UwU this wist o-of conditions and the fowwowing d-discwaimew. :3
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (⑅˘꒳˘) this wist of conditions and t-the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. ^^;; nyow the n-nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, rawr x3 incwuding, but nyot
+// w-wimited to, /(^•ω•^) t-the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. :3 in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (ꈍᴗꈍ) indiwect, /(^•ω•^) incidentaw,
+// s-speciaw, (⑅˘꒳˘) exempwawy, ( ͡o ω ͡o ) ow consequentiaw damages (incwuding, òωó but nyot
+// w-wimited to, (⑅˘꒳˘) p-pwocuwement of s-substitute goods ow sewvices; woss o-of use, XD
+// data, ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, -.- whethew in contwact, :3 stwict wiabiwity, nyaa~~ o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any w-way out of the u-use
+// of this softwawe, even if advised of the p-possibiwity of s-such damage. 😳
 -->

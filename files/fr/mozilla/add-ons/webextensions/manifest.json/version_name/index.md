@@ -1,31 +1,31 @@
 ---
-title: version_name
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/version_name
+titwe: vewsion_name
+swug: moziwwa/add-ons/webextensions/manifest.json/vewsion_name
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
-      <td><pre class="brush: json">"version_name": "0.1 beta"</pre></td>
-    </tr>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">exempwe</th>
+      <td><pwe c-cwass="bwush: j-json">"vewsion_name": "0.1 b-beta"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-En plus du champ [version](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), qui est utilisé à des fins de mise à jour, [version_name](https://developer.chrome.com/docs/extensions/reference/manifest/version) peut être défini sur une chaîne de version descriptive et sera utilisé à des fins d'affichage s'il est présent.
+e-en pwus du champ [vewsion](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/vewsion), 😳 qui est utiwisé à des fins de mise à jouw, XD [vewsion_name](https://devewopew.chwome.com/docs/extensions/wefewence/manifest/vewsion) p-peut êtwe défini suw une chaîne de vewsion descwiptive e-et sewa utiwisé à des f-fins d'affichage s'iw est pwésent. :3
 
-Si aucun **version_name** n'est présent, le champ de **version** sera également utilisé à des fins d'affichage.
+si aucun **vewsion_name** ny'est pwésent, 😳😳😳 w-we champ de **vewsion** sewa égawement u-utiwisé à d-des fins d'affichage. -.-
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

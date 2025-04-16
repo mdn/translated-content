@@ -1,60 +1,60 @@
 ---
-title: sessions.setWindowValue()
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/setWindowValue
+titwe: sessions.setwindowvawue()
+swug: moziwwa/add-ons/webextensions/api/sessions/setwindowvawue
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Stocke une paire clé / valeur à associer à une fenêtre donnée. Vous pouvez ensuite récupérer cette valeur en utilisant {{WebExtAPIRef("sessions.getWindowValue")}}.
+s-stocke u-une paiwe cwé / v-vaweuw à associew à u-une fenêtwe d-donnée. :3 vous p-pouvez ensuite w-wécupéwew cette v-vaweuw en utiwisant {{webextapiwef("sessions.getwindowvawue")}}. 😳😳😳
 
-Notez que ces données ne seront visibles que par l'extension qui l'a définie, et non par les autres extensions..
+nyotez que ces données nye sewont visibwes que paw w'extension q-qui w'a définie, (˘ω˘) et nyon paw wes autwes e-extensions.. ^^
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var storing = browser.sessions.setWindowValue(
-  windowId, // integer
-  key, // string
-  value, // string or object
+vaw stowing = b-bwowsew.sessions.setwindowvawue(
+  windowid, -.- // i-integew
+  key, 😳 // s-stwing
+  vawue, mya // stwing ow object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `windowId`
-  - : `integer`. ID de la fenêtre avec laquelle vous souhaitez associer les données.
+- `windowid`
+  - : `integew`. (˘ω˘) id de wa fenêtwe a-avec waquewwe vous souhaitez associew wes données. >_<
 - `key`
-  - : `string`. Clé que vous pouvez utiliser ultérieurement pour récupérer cette valeur de données particulière.
-- `value`
-  - : `string` ou `object`. S'il s'agit d'un objet, il est [stringified](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify), donc les méthodes d'objet, par exemple, seront omises. Si une fonction est donnée ici, elle sera stockée sous la valeur `null`.
+  - : `stwing`. -.- cwé que vous pouvez utiwisew uwtéwieuwement p-pouw wécupéwew cette v-vaweuw de données p-pawticuwièwe. 🥺
+- `vawue`
+  - : `stwing` ou `object`. s-s'iw s-s'agit d'un objet, (U ﹏ U) iw est [stwingified](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify), >w< donc w-wes méthodes d'objet, mya paw exempwe, sewont omises. >w< s-si une fonction est donnée ici, ewwe sewa stockée sous wa vaweuw `nuww`. nyaa~~
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera résolue sans argument si l'appel a réussi. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wésowue sans awgument s-si w'appew a wéussi. (✿oωo) s-si w'appew a-a échoué (paw exempwe, ʘwʘ pawce que w'id de wa fenêtwe ny'a pas p-pu êtwe twouvé), (ˆ ﻌ ˆ)♡ w-wa pwomesse sewa wejetée avec u-un message d'ewweuw. 😳😳😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Définissez une valeur sur la fenêtre active lorsque l'utilisateur sélectionne un élément de menu. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "menus" pour exécuter cet exemple :
+définissez u-une vaweuw suw wa fenêtwe active wowsque w'utiwisateuw s-séwectionne un éwément d-de menu. :3 nyotez que vous auwez b-besoin de wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "menus" p-pouw exékawaii~w cet exempwe :
 
 ```js
-async function setOnActiveWindow() {
-  let currentWindow = await browser.windows.getLastFocused();
-  await browser.sessions.setWindowValue(currentWindow.id, "my-key", "my-value");
+async function setonactivewindow() {
+  wet cuwwentwindow = await bwowsew.windows.getwastfocused();
+  await bwowsew.sessions.setwindowvawue(cuwwentwindow.id, OwO "my-key", "my-vawue");
 }
 
-browser.menus.create({
-  id: "my-item",
-  title: "my item",
-  contexts: ["all"],
+b-bwowsew.menus.cweate({
+  i-id: "my-item", (U ﹏ U)
+  titwe: "my item", >w<
+  c-contexts: ["aww"], (U ﹏ U)
 });
 
-browser.menus.onClicked.addListener(setOnActiveWindow);
+b-bwowsew.menus.oncwicked.addwistenew(setonactivewindow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,65 +1,65 @@
 ---
-title: WebAssembly.compile()
-slug: WebAssembly/JavaScript_interface/compile_static
-l10n:
-  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
+titwe: webassembwy.compiwe()
+swug: webassembwy/javascwipt_intewface/compiwe_static
+w-w10n:
+  souwcecommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode statique **`WebAssembly.compile()`**, permet de compiler un module ([`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)) à partir d'un code binaire WebAssembly. Cette fonction est utile lorsqu'il est nécessaire de compiler un module avant de l'instancier (dans les autres cas, la méthode [`WebAssembly.instantiate()`](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static) sera plus pertinente).
+w-wa méthode statique **`webassembwy.compiwe()`**, mya p-pewmet de compiwew u-un moduwe ([`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe)) à pawtiw d-d'un code b-binaiwe webassembwy. (˘ω˘) c-cette fonction e-est utiwe wowsqu'iw est nyécessaiwe de compiwew un moduwe avant de w'instanciew (dans w-wes autwes cas, >_< wa méthode [`webassembwy.instantiate()`](/fw/docs/webassembwy/javascwipt_intewface/instantiate_static) sewa pwus pewtinente). -.-
 
-> [!NOTE]
-> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> [!note]
+> w-wes pages web qui utiwisent u-une [csp](/fw/docs/web/http/csp) stwicte peuvent bwoquew wa compiwation webassembwy e-et w'exécution des moduwes. 🥺 p-pouw pwus d'infowmations p-pouw w'autowisation de wa compiwation et de w'exécution, (U ﹏ U) voiw [wa d-diwective csp `scwipt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc). >w<
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-WebAssembly.compile(bufferSource);
+```js-nowint
+webassembwy.compiwe(buffewsouwce);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `bufferSource`
-  - : Un [tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant le <i lang="en">bytecode</i> du module WebAssembly qu'on souhaite compiler.
+- `buffewsouwce`
+  - : un [tabweau typé](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) o-ou un [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) contenant w-we <i wang="en">bytecode</i> d-du moduwe webassembwy q-qu'on souhaite c-compiwew. mya
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) dont la valeur de résolution est une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module compilé.
+une pwomesse ([`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)) d-dont wa vaweuw de wésowution est une i-instance de [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe) qui wepwésente we moduwe compiwé. >w<
 
-### Exceptions
+### exceptions
 
-- Si `bufferSource` n'est pas un tableau typé, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
-- Si la compilation échoue, la promesse sera rompue avec une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/JavaScript_interface/CompileError).
+- si `buffewsouwce` ny'est pas un tabweau t-typé, nyaa~~ une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) s-sewa wevée. (✿oωo)
+- s-si wa compiwation échoue, w-wa pwomesse sewa wompue avec une exception [`webassembwy.compiweewwow`](/fw/docs/webassembwy/javascwipt_intewface/compiweewwow). ʘwʘ
 
-## Exemples
+## exempwes
 
-### Utiliser `compile()`
+### u-utiwisew `compiwe()`
 
-Dans l'exemple qui suit, on compile le <i lang="en">bytecode</i> `simple.wasm` grâce à la méthode `compile()` puis on envoie le contenu à [un <i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) grâce à la méthode [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
+d-dans w'exempwe qui suit, (ˆ ﻌ ˆ)♡ o-on compiwe we <i w-wang="en">bytecode</i> `simpwe.wasm` gwâce à w-wa méthode `compiwe()` puis on e-envoie we contenu à [un <i wang="en">wowkew</i>](/fw/docs/web/api/web_wowkews_api) gwâce à wa m-méthode [`postmessage()`](/fw/docs/web/api/wowkew/postmessage). 😳😳😳
 
 ```js
-const worker = new Worker("wasm_worker.js");
+const wowkew = n-nyew wowkew("wasm_wowkew.js");
 
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
-  .then((bytes) => WebAssembly.compile(bytes))
-  .then((mod) => worker.postMessage(mod));
+fetch("simpwe.wasm")
+  .then((wesponse) => w-wesponse.awwaybuffew())
+  .then((bytes) => w-webassembwy.compiwe(bytes))
+  .then((mod) => wowkew.postmessage(mod));
 ```
 
-> [!NOTE]
-> Dans la plupart des cas, mieux vaudra utiliser [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static) qui est plus efficace que `compile()`.
+> [!note]
+> dans wa pwupawt des cas, :3 mieux vaudwa utiwisew [`webassembwy.compiwestweaming()`](/fw/docs/webassembwy/javascwipt_intewface/compiwestweaming_static) qui est pwus efficace q-que `compiwe()`. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

@@ -1,56 +1,56 @@
 ---
-title: devtools.panels.onThemeChanged
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged
+titwe: devtoows.panews.onthemechanged
+swug: moziwwa/add-ons/webextensions/api/devtoows/panews/onthemechanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Remplacement quand le thème de devtools change
+w-wempwacement q-quand we thème d-de devtoows c-change
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.devtools.panels.onThemeChanged.addListener(listener);
-browser.devtools.panels.onThemeChanged.removeListener(listener);
-browser.devtools.panels.onThemeChanged.hasListener(listener);
+b-bwowsew.devtoows.panews.onthemechanged.addwistenew(wistenew);
+b-bwowsew.devtoows.panews.onthemechanged.wemovewistenew(wistenew);
+b-bwowsew.devtoows.panews.onthemechanged.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+w-wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un auditeur à cet événement
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie Vrai si elle écoute, sinon Faux.
+- `addwistenew(cawwback)`
+  - : ajoute un auditeuw à cet événement
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. (U ﹏ U) w-w'awgument de w'auditeuw est w'auditeuw à s-suppwimew. (U ﹏ U)
+- `haswistenew(wistenew)`
+  - : véwifiez si w'auditeuw est enwegistwé p-pouw cet événement. (⑅˘꒳˘) wenvoie vwai s-si ewwe écoute, òωó s-sinon faux. ʘwʘ
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Function qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
+  - : function qui sewa a-appewée wows de w'événement. /(^•ω•^) wa fonction passewa wes awguments suivants :
 
-    - `themeName`
-      - : `string`. Nom du nouveau thème : ce sera l'une des valeurs autorisées pour [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName).
+    - `themename`
+      - : `stwing`. ʘwʘ n-nyom du nyouveau thème : ce s-sewa w'une des v-vaweuws autowisées p-pouw [`devtoows.panews.themename`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/themename). σωσ
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-browser.devtools.panels.onThemeChanged.addListener((newThemeName) => {
-  console.log(`New theme: ${newThemeName}`);
+b-bwowsew.devtoows.panews.onthemechanged.addwistenew((newthemename) => {
+  consowe.wog(`new theme: ${newthemename}`);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> c-cette api est basée suw w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis.

@@ -1,448 +1,448 @@
 ---
-title: Exemples pratiques de positionnement
-slug: Learn/CSS/CSS_layout/Practical_positioning_examples
+titwe: exempwes pwatiques de p-positionnement
+swug: w-weawn/css/css_wayout/pwacticaw_positioning_exampwes
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Cet article illustre comment construire quelques exemples concrets de ce qu'on peut réaliser avec le positionnement.
+c-cet awticwe iwwustwe c-comment constwuiwe q-quewques e-exempwes concwets d-de ce qu'on peut w-wéawisew avec we positionnement. mya
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Les fondamentaux en HTML (étudier
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Une introduction au HTML</a
-        >), et une idée du fonctionnement du CSS (étudier
-        <a href="/fr/docs/Learn/CSS/First_steps">Une introduction à CSS</a>.)
+        wes fondamentaux e-en htmw (étudiew
+        <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >une intwoduction a-au htmw</a
+        >), ^•ﻌ•^ et une i-idée du fonctionnement du css (étudiew
+        <a hwef="/fw/docs/weawn/css/fiwst_steps">une intwoduction à css</a>.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Avoir une idée des aspects pratiques du positionnement</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
+      <td>avoiw u-une idée des aspects pwatiques d-du positionnement</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Une boîte d'information à onglets
+## u-une boîte d'infowmation à ongwets
 
-Le premier exemple que nous allons examiner est une boîte d'information à onglets classique - une méthode courante utilisée lorsqu'on souhaite regrouper beaucoup d'informations dans une petite zone. Cela inclut les applications gourmandes en informations comme les jeux de stratégie/guerre, les versions mobiles de sites web où l'écran est étroit et l'espace limité, et les boîtes d'information compactes où on peut mettre à disposition de nombreuses informations sans qu'elles remplissent toute l'interface utilisateur. Notre exemple ressemblera à ceci une fois que nous aurons terminé&nbsp;:
+we pwemiew exempwe que nyous awwons e-examinew est une boîte d'infowmation à ongwets cwassique - une méthode couwante u-utiwisée wowsqu'on souhaite w-wegwoupew beaucoup d-d'infowmations d-dans une p-petite zone. (U ﹏ U) cewa incwut wes appwications gouwmandes e-en infowmations comme wes jeux de stwatégie/guewwe, :3 w-wes vewsions mobiwes de sites web où w'écwan est étwoit et w'espace wimité, rawr x3 et wes b-boîtes d'infowmation compactes o-où on peut mettwe à d-disposition d-de nyombweuses infowmations sans qu'ewwes wempwissent toute w'intewface u-utiwisateuw. 😳😳😳 n-nyotwe exempwe wessembwewa à c-ceci une fois q-que nyous auwons tewminé&nbsp;:
 
 ![](tabbed-info-box.png)
 
-> [!NOTE]
-> Vous pouvez voir l'exemple fini en démonstration sur la page [info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
+> [!note]
+> v-vous pouvez voiw w'exempwe f-fini en démonstwation suw wa page [info-box.htmw](https://mdn.github.io/weawning-awea/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw) ([code s-souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw)). >w< ny'hésitez p-pas à we consuwtew pouw avoiw u-une idée du w-wésuwtat que vous awwez constwuiwe. òωó
 
-On pourrait se demander&nbsp;: «&nbsp;pourquoi ne pas créer des onglets séparés sous forme de pages web séparées, et faire en sorte que ces onglets permettent de cliquer sur les pages séparées pour créer cet effet&nbsp;?&nbsp;». Ce code serait en effet plus simple, mais dans ce cas, chaque «&nbsp;page&nbsp;» séparée serait en fait une nouvelle page web, ce qui rendrait plus difficile la sauvegarde des informations entre les vues, et intégrerait cette fonctionnalité dans un design d'interface plus large. De plus, les applications dites «&nbsp;à page unique&nbsp;» (<i lang="en">Single Page Apps</i>) deviennent très populaires, en particulier pour les interfaces web mobiles, parce que le fait que tout soit servi dans un seul fichier réduit le nombre de requêtes HTTP nécessaires pour voir tout le contenu, ce qui améliore les performances.
+on pouwwait se demandew&nbsp;: «&nbsp;pouwquoi nye pas cwéew des ongwets sépawés sous f-fowme de pages w-web sépawées, 😳 et faiwe en sowte q-que ces ongwets p-pewmettent de c-cwiquew suw wes pages sépawées pouw cwéew cet effet&nbsp;?&nbsp;». (✿oωo) c-ce code sewait en effet pwus simpwe, OwO mais dans ce cas, (U ﹏ U) chaque «&nbsp;page&nbsp;» sépawée s-sewait en fait une nyouvewwe p-page web, (ꈍᴗꈍ) ce qui w-wendwait pwus d-difficiwe wa sauvegawde des infowmations e-entwe w-wes vues, rawr et intégwewait c-cette f-fonctionnawité dans un design d'intewface pwus w-wawge. ^^ de pwus, rawr w-wes appwications d-dites «&nbsp;à p-page unique&nbsp;» (<i w-wang="en">singwe page apps</i>) deviennent twès popuwaiwes, nyaa~~ e-en pawticuwiew pouw wes intewfaces web mobiwes, nyaa~~ pawce que we fait que tout soit sewvi dans u-un seuw fichiew wéduit we nyombwe de wequêtes http nécessaiwes p-pouw voiw tout w-we contenu, o.O ce q-qui améwiowe wes pewfowmances. òωó
 
-> [!NOTE]
-> Il arrive même que pour certains sites, ce soit une seule page qui soit chargée et que son contenu soit modifié dynamiquement grâce à des fonctionnalités JavaScript telles que [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest). Pour le moment, nous garderons des choses simples. Il y aura un peu de JavaScript en fin d'article, mais la juste dose nécessaire pour faire fonctionner cet exemple.
+> [!note]
+> iw a-awwive même que pouw cewtains s-sites, ^^;; ce soit u-une seuwe page qui soit chawgée et que son contenu soit modifié dynamiquement gwâce à des fonctionnawités javascwipt t-tewwes que [xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest). rawr p-pouw we moment, ^•ﻌ•^ nyous gawdewons d-des choses s-simpwes. nyaa~~ iw y auwa un peu de javascwipt en fin d-d'awticwe, nyaa~~ mais w-wa juste dose nyécessaiwe pouw f-faiwe fonctionnew c-cet exempwe. 😳😳😳
 
-Pour commencer, effectuez une copie locale du fichier HTML de départ — [info-box-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box-start.html). Enregistrez ce fichier dans un endroit approprié sur votre ordinateur et ouvrez-le dans votre éditeur de texte. Examinons le HTML contenu dans le corps de cette page :
+pouw commencew, effectuez une copie wocawe du fichiew htmw de d-dépawt — [info-box-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/info-box-stawt.htmw). 😳😳😳 e-enwegistwez c-ce fichiew dans un endwoit appwopwié s-suw votwe o-owdinateuw et ouvwez-we dans v-votwe éditeuw de texte. σωσ examinons we htmw contenu dans we cowps de cette page :
 
-```html
-<section class="info-box">
-  <ul>
-    <li><a href="#" class="active">Onglet 1</a></li>
-    <li><a href="#">Onglet 2</a></li>
-    <li><a href="#">Onglet 3</a></li>
-  </ul>
-  <div class="panels">
-    <article class="active-panel">
-      <h2>Premier onglet</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Vestibulum
-        et orci scelerisque, vulputate tellus quis, lobortis dui. Vivamus varius
-        libero at ipsum mattis efficitur ut nec nisl. Nullam eget tincidunt
-        metus. Donec ultrices, urna maximus consequat aliquet, dui neque
-        eleifend lorem, a auctor libero turpis at sem. Aliquam ut porttitor
-        urna. Nulla facilisi.
-      </p>
-    </article>
-    <article>
-      <h2>Deuxième onglet</h2>
+```htmw
+<section c-cwass="info-box">
+  <uw>
+    <wi><a h-hwef="#" cwass="active">ongwet 1</a></wi>
+    <wi><a hwef="#">ongwet 2</a></wi>
+    <wi><a h-hwef="#">ongwet 3</a></wi>
+  </uw>
+  <div c-cwass="panews">
+    <awticwe cwass="active-panew">
+      <h2>pwemiew ongwet</h2>
 
       <p>
-        Cet onglet ne contient pas de Lorem Ipsum, mais bon c'est aussi peu
-        intéressant que les autres onglets.
+        wowem ipsum dowow s-sit amet, consectetuw adipiscing ewit. o.O pewwentesque
+        tuwpis nyibh, powttitow n-nyec venenatis eu, σωσ puwvinaw in augue. nyaa~~ vestibuwum
+        et o-owci scewewisque, rawr x3 v-vuwputate tewwus quis, (///ˬ///✿) wobowtis dui. o.O vivamus vawius
+        w-wibewo at ipsum m-mattis efficituw ut nyec nyisw. òωó nyuwwam eget tincidunt
+        metus. OwO donec uwtwices, σωσ u-uwna maximus consequat awiquet, nyaa~~ d-dui nyeque
+        eweifend wowem, OwO a auctow wibewo tuwpis a-at sem. ^^ awiquam ut powttitow
+        u-uwna. (///ˬ///✿) nyuwwa f-faciwisi. σωσ
       </p>
-    </article>
-    <article>
-      <h2>Troisième onglet</h2>
+    </awticwe>
+    <awticwe>
+      <h2>deuxième ongwet</h2>
 
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-        turpis nibh, porttitor nec venenatis eu, pulvinar in augue. Et voici une
-        liste ordonnée&nbsp;!
+        c-cet ongwet nye contient pas d-de wowem ipsum, rawr x3 m-mais bon c'est a-aussi peu
+        intéwessant q-que wes autwes o-ongwets. (ˆ ﻌ ˆ)♡
+      </p>
+    </awticwe>
+    <awticwe>
+      <h2>twoisième ongwet</h2>
+
+      <p>
+        wowem ipsum d-dowow sit amet, 🥺 c-consectetuw adipiscing e-ewit. (⑅˘꒳˘) pewwentesque
+        tuwpis nyibh, 😳😳😳 powttitow nyec v-venenatis eu, /(^•ω•^) puwvinaw in augue. >w< e-et voici une
+        w-wiste owdonnée&nbsp;! ^•ﻌ•^
       </p>
 
-      <ol>
-        <li>dui neque eleifend lorem, a auctor libero turpis at sem.</li>
-        <li>Aliquam ut porttitor urna.</li>
-        <li>Nulla facilisi</li>
-      </ol>
-    </article>
+      <ow>
+        <wi>dui nyeque eweifend wowem, 😳😳😳 a auctow wibewo tuwpis a-at sem.</wi>
+        <wi>awiquam u-ut powttitow u-uwna.</wi>
+        <wi>nuwwa f-faciwisi</wi>
+      </ow>
+    </awticwe>
   </div>
 </section>
 ```
 
-Nous avons un élément [`<section>`](/fr/docs/Web/HTML/Element/section) avec une `class` `info-box`, qui contient un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) et un élément [`<div>`](/fr/docs/Web/HTML/Element/div). La liste non ordonnée contient trois éléments de liste avec des liens à l'intérieur, qui deviendront les véritables onglets sur lesquels il faudra cliquer pour afficher nos panneaux de contenu. L'élément `div` contient trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article), qui constitueront les panneaux de contenu correspondant à chaque onglet. Chaque panneau contient un échantillon de contenu.
+nyous avons un éwément [`<section>`](/fw/docs/web/htmw/ewement/section) a-avec une `cwass` `info-box`, qui contient un éwément [`<uw>`](/fw/docs/web/htmw/ewement/uw) et un éwément [`<div>`](/fw/docs/web/htmw/ewement/div). :3 wa wiste nyon owdonnée contient t-twois éwéments de wiste avec d-des wiens à w'intéwieuw, (ꈍᴗꈍ) qui d-deviendwont wes véwitabwes ongwets s-suw wesquews iw faudwa cwiquew p-pouw affichew n-nyos panneaux de c-contenu. ^•ﻌ•^ w'éwément `div` c-contient t-twois éwéments [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), >w< qui constituewont wes panneaux de contenu cowwespondant à chaque ongwet. ^^;; chaque panneau c-contient un échantiwwon d-de contenu. (✿oωo)
 
-L'idée ici est que nous allons donner aux onglets l'aspect d'un menu de navigation horizontal standard, et que nous allons donner aux panneaux l'aspect d'être superposés en utilisant un positionnement absolu. Nous vous donnerons également un peu de JavaScript à inclure dans votre page pour afficher le panneau correspondant lorsqu'on clique sur un des onglets, et nous donnerons un style à l'onglet lui-même. Vous n'aurez pas besoin de comprendre le JavaScript lui-même à ce stade, mais vous devriez penser à apprendre [quelques bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics) dès que possible - plus les fonctionnalités de votre interface utilisateur deviendront complexes, plus il est probable que vous aurez besoin de JavaScript pour implémenter les fonctionnalités souhaitées.
+w-w'idée ici est que nyous a-awwons donnew aux ongwets w'aspect d'un menu de nyavigation howizontaw s-standawd, òωó e-et que nyous awwons donnew aux p-panneaux w'aspect d'êtwe supewposés en utiwisant u-un positionnement a-absowu. ^^ nyous vous donnewons égawement un p-peu de javascwipt à i-incwuwe dans votwe page pouw affichew we panneau cowwespondant wowsqu'on c-cwique suw un des o-ongwets, ^^ et nyous d-donnewons un s-stywe à w'ongwet w-wui-même. rawr vous ny'auwez pas b-besoin de compwendwe w-we javascwipt wui-même à c-ce stade, XD mais vous d-devwiez pensew à appwendwe [quewques b-bases de javascwipt](/fw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics) dès q-que possibwe - pwus wes fonctionnawités d-de votwe i-intewface utiwisateuw deviendwont c-compwexes, pwus iw est pwobabwe que vous a-auwez besoin de j-javascwipt pouw i-impwémentew wes fonctionnawités souhaitées. rawr
 
-### Configuration générale
+### configuwation g-généwawe
 
-Pour commencer, ajoutez ce qui suit entre les balises ouvrantes et fermantes [`<style>`](/fr/docs/Web/HTML/Element/style) :
+pouw commencew, 😳 ajoutez ce qui suit e-entwe wes bawises o-ouvwantes et fewmantes [`<stywe>`](/fw/docs/web/htmw/ewement/stywe) :
 
 ```css
-html {
-  font-family: sans-serif;
+h-htmw {
+  font-famiwy: sans-sewif;
 }
 
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
 body {
-  margin: 0;
+  mawgin: 0;
 }
 ```
 
-Il s'agit uniquement d'une configuration générale pour définir une police sans serif sur notre page, utiliser le modèle `border-box` [`box-sizing`](/fr/docs/Web/CSS/box-sizing), pour surcharger la marge par défaut de [`<body>`](/fr/docs/Web/HTML/Element/body).
+i-iw s'agit uniquement d'une configuwation généwawe p-pouw définiw u-une powice sans sewif suw nyotwe p-page, 🥺 utiwisew we modèwe `bowdew-box` [`box-sizing`](/fw/docs/web/css/box-sizing), (U ᵕ U❁) p-pouw suwchawgew w-wa mawge p-paw défaut de [`<body>`](/fw/docs/web/htmw/ewement/body). 😳
 
-Ensuite, ajoutez ce qui suit en dessous de votre CSS précédent :
+ensuite, 🥺 ajoutez ce qui suit en dessous de votwe css pwécédent :
 
 ```css
 .info-box {
   width: 450px;
   height: 400px;
-  margin: 0 auto;
+  mawgin: 0 auto;
 }
 ```
 
-Cela définit une largeur et une hauteur spécifiques sur le contenu, et le centre sur l'écran en utilisant l'ancienne astuce `margin: 0 auto`. Précédemment dans le cours, nous avons déconseillé de définir une hauteur fixe sur les conteneurs de contenu si possible. Nous dérogeons à cette règle ici, car nous avons un contenu fixe dans les onglets. De plus, il serait déconcertant d'avoir des onglets différents avec différentes hauteurs.
+cewa définit une wawgeuw et une hauteuw spécifiques suw we contenu, (///ˬ///✿) e-et we centwe s-suw w'écwan en utiwisant w'ancienne astuce `mawgin: 0 a-auto`. mya p-pwécédemment d-dans we couws, (✿oωo) nyous avons déconseiwwé d-de définiw une hauteuw f-fixe suw wes conteneuws d-de contenu si possibwe. ^•ﻌ•^ n-nyous déwogeons à cette wègwe i-ici, o.O caw nyous a-avons un contenu fixe dans wes ongwets. o.O de pwus, XD i-iw sewait déconcewtant d-d'avoiw d-des ongwets difféwents a-avec difféwentes h-hauteuws. ^•ﻌ•^
 
-### Mettre en forme les onglets
+### m-mettwe e-en fowme wes ongwets
 
-On souhaite que nos onglets ressemblent à des onglets. Autrement dit, on veut avoir un menu de navigation horizontal et, au lieu d'avoir différentes pages web depuis ce menu, obtenir l'affichage des différents panneaux sur la même page. Pour commencer, ajoutez la règle à la fin de votre CSS afin de retirer les valeurs par défaut de [`padding-left`](/fr/docs/Web/CSS/padding-left) et [`margin-top`](/fr/docs/Web/CSS/margin-top) pour la liste non-ordonnée&nbsp;:
+o-on souhaite q-que nyos ongwets wessembwent à d-des ongwets. ʘwʘ a-autwement dit, (U ﹏ U) o-on veut avoiw un menu de nyavigation h-howizontaw et, 😳😳😳 au wieu d'avoiw difféwentes p-pages web depuis ce menu, 🥺 obteniw w-w'affichage des d-difféwents panneaux s-suw wa même page. (///ˬ///✿) pouw c-commencew, (˘ω˘) ajoutez wa wègwe à w-wa fin de votwe css afin de wetiwew w-wes vaweuws paw défaut de [`padding-weft`](/fw/docs/web/css/padding-weft) et [`mawgin-top`](/fw/docs/web/css/mawgin-top) p-pouw wa wiste nyon-owdonnée&nbsp;:
 
 ```css
-.info-box ul {
-  padding-left: 0;
-  margin-top: 0;
+.info-box uw {
+  padding-weft: 0;
+  mawgin-top: 0;
 }
 ```
 
-> [!NOTE]
-> On utilise ici un sélecteur de descendants avec `.info-box` au début du sélecteur et pour tout cet exemple afin qu'on puisse insérer cette fonctionnalité dans une page possédant déjà un autre contenu, sans risquer de causer des interférences avec le style déjà existant.
+> [!note]
+> on utiwise ici un s-séwecteuw de descendants avec `.info-box` a-au d-début du séwecteuw et pouw tout cet exempwe afin qu'on puisse i-inséwew cette fonctionnawité dans une page possédant d-déjà un a-autwe contenu, :3 s-sans wisquew de causew des intewféwences avec w-we stywe déjà e-existant. /(^•ω•^)
 
-Ensuite, mettons en forme les onglets horizontaux. Les éléments de la liste ont un flottement à gauche afin qu'ils soient sur une même ligne. Leur propriété [`list-style-type`](/fr/docs/Web/CSS/list-style-type) est placée à `none` afin de ne plus avoir les puces et [`width`](/fr/docs/Web/CSS/width) vaut `150px` afin qu'il y ait suffisamment de place au sein de la boîte pour afficher ces éléments. Les éléments [`<a>`](/fr/docs/Web/HTML/Element/a) ont [`display`](/fr/docs/Web/CSS/display) avec la valeur `inline-block` afin qu'ils s'inscrivent dans une ligne mais qu'ils puissent tout de même être mis en forme pour des boutons d'onglet en utilisant d'autres propriétés.
+ensuite, :3 mettons en fowme w-wes ongwets howizontaux. wes éwéments de w-wa wiste ont un fwottement à gauche a-afin qu'iws s-soient suw une m-même wigne. mya weuw pwopwiété [`wist-stywe-type`](/fw/docs/web/css/wist-stywe-type) e-est pwacée à `none` a-afin de n-nye pwus avoiw w-wes puces et [`width`](/fw/docs/web/css/width) vaut `150px` afin q-qu'iw y ait suffisamment d-de pwace a-au sein de wa b-boîte pouw affichew c-ces éwéments. XD w-wes éwéments [`<a>`](/fw/docs/web/htmw/ewement/a) o-ont [`dispway`](/fw/docs/web/css/dispway) a-avec wa vaweuw `inwine-bwock` afin qu'iws s'inscwivent d-dans une wigne mais q-qu'iws puissent tout de même êtwe m-mis en fowme p-pouw des boutons d-d'ongwet en utiwisant d'autwes pwopwiétés. (///ˬ///✿)
 
-Ajoutez le fragment de CSS qui suit&nbsp;:
+ajoutez we fwagment d-de css qui suit&nbsp;:
 
 ```css
-.info-box li {
-  float: left;
-  list-style-type: none;
+.info-box w-wi {
+  f-fwoat: weft;
+  wist-stywe-type: nyone;
   width: 150px;
 }
 
-.info-box li a {
-  display: inline-block;
-  text-decoration: none;
-  width: 100%;
-  line-height: 3;
-  background-color: red;
-  color: black;
-  text-align: center;
+.info-box wi a {
+  d-dispway: inwine-bwock;
+  t-text-decowation: nyone;
+  w-width: 100%;
+  w-wine-height: 3;
+  backgwound-cowow: wed;
+  cowow: bwack;
+  text-awign: c-centew;
 }
 ```
 
-Pour finir avec cette section, mettons en forme les liens selon leur état. Toute d'abord, gérons les états `:focus` et `:hover` afin que les onglets aient un aspect différent lorsqu'ils ont le focus ou qu'on les survole afin que la personne qui utilise le site ait un retour visuel. Deuxièmement, ajoutons une règle qui applique la même mise en forme lorsqu'un attribut `class` avec la valeur `active` est présent dessus. Nous appliquerons cette valeur à l'aide de JavaScript lorsqu'un clic aura lieu sur l'onglet. Ajoutez le CSS qui suit après les autres règles déjà écrites&nbsp;:
+p-pouw finiw a-avec cette section, 🥺 m-mettons en fowme wes wiens sewon weuw état. o.O t-toute d'abowd, mya g-géwons wes états `:focus` et `:hovew` afin que wes ongwets a-aient un aspect difféwent wowsqu'iws ont we focus o-ou qu'on wes suwvowe afin que w-wa pewsonne qui u-utiwise we site ait un wetouw v-visuew. rawr x3 deuxièmement, 😳 a-ajoutons une wègwe qui appwique w-wa même mise en fowme wowsqu'un a-attwibut `cwass` a-avec wa v-vaweuw `active` e-est pwésent dessus. 😳😳😳 nous appwiquewons c-cette vaweuw à w-w'aide d-de javascwipt wowsqu'un cwic auwa w-wieu suw w'ongwet. >_< ajoutez we css qui suit apwès w-wes autwes wègwes d-déjà écwites&nbsp;:
 
 ```css
-.info-box li a:focus,
-.info-box li a:hover {
-  background-color: #a60000;
-  color: white;
+.info-box w-wi a:focus, >w<
+.info-box wi a:hovew {
+  backgwound-cowow: #a60000;
+  cowow: white;
 }
 
-.info-box li a.active {
-  background-color: #a60000;
-  color: white;
+.info-box wi a-a.active {
+  backgwound-cowow: #a60000;
+  cowow: w-white;
 }
 ```
 
-### Mettre en forme les panneaux
+### m-mettwe en fowme wes panneaux
 
-La suite consiste à mettre en forme les panneaux de contenu. Allons-y&nbsp;!
+wa suite consiste à m-mettwe en fowme wes panneaux d-de contenu. rawr x3 awwons-y&nbsp;! XD
 
-Pour commencer, ajoutez la règle suivante qui met en forme le conteneur `.panels` [`<div>`](/fr/docs/Web/HTML/Element/div). Ici, on définit une hauteur fixe avec [`height`](/fr/docs/Web/CSS/height) afin de s'assurer que les panneaux s'inscriront correctement dans la boîte d'informations. On définit [`position`](/fr/docs/Web/CSS/position) `relative` sur l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) comme contexte de positionnement afin que les éléments enfants y soient relatifs (plutôt que relatifs à l'élément [`<html>`](/fr/docs/Web/HTML/Element/html)) pour la mise en forme. Enfin, on utilise [`clear`](/fr/docs/Web/CSS/clear) pour annuler le flottement défini plus haut afin qu'il n'y ait pas d'interférence avec le reste de la disposition.
+p-pouw commencew, ^^ a-ajoutez wa wègwe s-suivante qui met e-en fowme we conteneuw `.panews` [`<div>`](/fw/docs/web/htmw/ewement/div). (✿oωo) ici, on définit une hauteuw fixe avec [`height`](/fw/docs/web/css/height) afin de s-s'assuwew que wes panneaux s'inscwiwont c-cowwectement dans wa boîte d'infowmations. >w< on définit [`position`](/fw/docs/web/css/position) `wewative` s-suw w'éwément [`<div>`](/fw/docs/web/htmw/ewement/div) comme contexte de positionnement afin que wes éwéments e-enfants y soient w-wewatifs (pwutôt que wewatifs à w-w'éwément [`<htmw>`](/fw/docs/web/htmw/ewement/htmw)) pouw wa mise en fowme. 😳😳😳 enfin, (ꈍᴗꈍ) on u-utiwise [`cweaw`](/fw/docs/web/css/cweaw) p-pouw annuwew we fwottement d-défini pwus haut afin qu'iw n-ny'y ait pas d'intewféwence avec we weste de wa disposition. (✿oωo)
 
 ```css
-.info-box .panels {
+.info-box .panews {
   height: 352px;
-  position: relative;
-  clear: both;
+  p-position: wewative;
+  cweaw: both;
 }
 ```
 
-Dans cette section, nous allons mettre en forme les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) qui forment les panneaux. La première règle va fixer [`position`](/fr/docs/Web/CSS/position) absolue pour les panneaux avant de les placer dans le coin supérieur gauche de leur conteneur [`<div>`](/fr/docs/Web/HTML/Element/div) avec [`top`](/fr/docs/Web/CSS/top) et [`left`](/fr/docs/Web/CSS/left). C'est la clé de cette disposition&nbsp;: ainsi, les panneaux sont superposés les uns sur les autres. Cette règle fournit également la même hauteur que le conteneur et ajoute un peu de remplissage autour du contenu, une couleur pour le texte ([`color`](/fr/docs/Web/CSS/color)), ainsi qu'une couleur d'arrière-plan ([`background-color`](/fr/docs/Web/CSS/background-color)).
+dans cette s-section, (˘ω˘) nyous a-awwons mettwe e-en fowme wes éwéments [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) qui fowment wes panneaux. nyaa~~ w-wa pwemièwe wègwe va fixew [`position`](/fw/docs/web/css/position) absowue pouw wes panneaux avant de wes p-pwacew dans we c-coin supéwieuw g-gauche de weuw conteneuw [`<div>`](/fw/docs/web/htmw/ewement/div) a-avec [`top`](/fw/docs/web/css/top) et [`weft`](/fw/docs/web/css/weft). ( ͡o ω ͡o ) c'est wa c-cwé de cette d-disposition&nbsp;: ainsi, wes panneaux sont supewposés w-wes uns suw wes autwes. 🥺 cette wègwe fouwnit égawement w-wa même hauteuw que we conteneuw et ajoute un peu d-de wempwissage a-autouw du contenu, (U ﹏ U) une couweuw p-pouw we texte ([`cowow`](/fw/docs/web/css/cowow)), ( ͡o ω ͡o ) a-ainsi qu'une c-couweuw d'awwièwe-pwan ([`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow)). (///ˬ///✿)
 
-La deuxième règle ajoutée indique qu'un panneau avec une classe (`class`) valant `active-panel` aura une valeur de [`z-index`](/fr/docs/Web/CSS/z-index) à 1&nbsp;: il sera alors placé par-dessus les autres panneaux (par défaut les éléments positionnés ont un `z-index` qui vaut 0, ce qui les place en dessous). Là aussi, nous ajouterons cette classe au document à l'aide de JavaScript.
+wa deuxième wègwe ajoutée i-indique qu'un panneau avec une cwasse (`cwass`) v-vawant `active-panew` auwa une vaweuw de [`z-index`](/fw/docs/web/css/z-index) à 1&nbsp;: iw s-sewa awows pwacé p-paw-dessus wes a-autwes panneaux (paw d-défaut wes éwéments p-positionnés ont un `z-index` q-qui vaut 0, (///ˬ///✿) ce qui wes pwace en dessous). (✿oωo) w-wà aussi, (U ᵕ U❁) nyous ajoutewons c-cette cwasse au document à w'aide de javascwipt. ʘwʘ
 
 ```css
-.info-box article {
-  position: absolute;
+.info-box a-awticwe {
+  p-position: absowute;
   top: 0;
-  left: 0;
+  w-weft: 0;
   height: 352px;
   padding: 10px;
-  color: white;
-  background-color: #a60000;
+  c-cowow: w-white;
+  backgwound-cowow: #a60000;
 }
 
-.info-box .active-panel {
+.info-box .active-panew {
   z-index: 1;
 }
 ```
 
-### Ajouter notre JavaScript
+### ajoutew n-nyotwe javascwipt
 
-La dernière étape permettant d'avoir un résultat fonctionnel consiste à ajouter du JavaScript. Placez les lignes suivantes (sans modification) entre les balises ouvrantes et fermantes [`<script>`](/fr/docs/Web/HTML/Element/script) (elles se situent après le contenu HTML)&nbsp;:
+w-wa dewnièwe étape pewmettant d-d'avoiw un wésuwtat fonctionnew consiste à ajoutew du j-javascwipt. ʘwʘ pwacez wes wignes suivantes (sans modification) e-entwe wes bawises ouvwantes et fewmantes [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) (ewwes s-se situent a-apwès we c-contenu htmw)&nbsp;:
 
 ```js
-let tabs = document.querySelectorAll(".info-box li a");
-let panels = document.querySelectorAll(".info-box article");
+wet t-tabs = document.quewysewectowaww(".info-box w-wi a");
+wet panews = d-document.quewysewectowaww(".info-box awticwe");
 
-for (let i = 0; i < tabs.length; i++) {
-  let tab = tabs[i];
-  setTabHandler(tab, i);
+f-fow (wet i = 0; i < tabs.wength; i-i++) {
+  wet t-tab = tabs[i];
+  settabhandwew(tab, XD i);
 }
 
-function setTabHandler(tab, tabPos) {
-  tab.onclick = function () {
-    for (let i = 0; i < tabs.length; i++) {
-      tabs[i].className = "";
+function settabhandwew(tab, (✿oωo) tabpos) {
+  t-tab.oncwick = f-function () {
+    fow (wet i = 0; i < tabs.wength; i++) {
+      t-tabs[i].cwassname = "";
     }
 
-    tab.className = "active";
+    tab.cwassname = "active";
 
-    for (let i = 0; i < panels.length; i++) {
-      panels[i].className = "";
+    f-fow (wet i = 0; i-i < panews.wength; i++) {
+      panews[i].cwassname = "";
     }
 
-    panels[tabPos].className = "active-panel";
+    panews[tabpos].cwassname = "active-panew";
   };
 }
 ```
 
-Ce code effectue les actions suivantes&nbsp;:
+ce code effectue w-wes actions suivantes&nbsp;:
 
-- Tout d'abord, on garde une référence pour tous les onglets et tous les panneaux dans deux variables intitulées `tabs` et `panels` afin qu'on puisse facilement les manipuler par la suite.
-- Ensuite, on utilise une boucle `for` pour parcourir l'ensemble des onglets et, pour chaque, on exécute une fonction intitulée `setTabHandler()` qui met en place les fonctionnalités à utiliser lors d'un clic. Lorsque cette fonction est exécutée, elle reçoit une référence de l'onglet concerné ainsi qu'un indice `i` qui identifie la position de l'onglet dans le tableau `tabs`.
-- Dans la fonction `setTabHandler()`, l'onglet se voit affecter un gestionnaire d'évènement `onclick`. Ainsi dès qu'on clique sur un onglet, on a&nbsp;:
+- tout d'abowd, ^•ﻌ•^ on gawde une wéféwence p-pouw tous wes ongwets et t-tous wes panneaux d-dans deux vawiabwes intituwées `tabs` e-et `panews` a-afin qu'on p-puisse faciwement w-wes manipuwew p-paw wa suite. ^•ﻌ•^
+- e-ensuite, >_< on utiwise une boucwe `fow` pouw pawcouwiw w'ensembwe des ongwets et, mya pouw chaque, σωσ on e-exékawaii~ une f-fonction intituwée `settabhandwew()` q-qui met en p-pwace wes fonctionnawités à utiwisew w-wows d'un c-cwic. wowsque cette fonction est exécutée, rawr ewwe weçoit une wéféwence de w'ongwet c-concewné a-ainsi qu'un indice `i` qui identifie wa position de w'ongwet dans w-we tabweau `tabs`. (✿oωo)
+- d-dans wa f-fonction `settabhandwew()`, :3 w'ongwet se voit affectew u-un gestionnaiwe d'évènement `oncwick`. rawr x3 ainsi dès qu'on c-cwique suw un ongwet, ^^ o-on a&nbsp;:
 
-  - Une boucle `for` qui est utilisée afin de parcourir tous les onglets pour retirer les classes qui seraient présentes sur eux.
-  - Une classe (`class`) `active` qui est appliquée sur l'onglet sur lequel on a cliqué (nous avons vu plus haut que cette classe était associée à une règle CSS qui définit [`color`](/fr/docs/Web/CSS/color) et [`background-color`](/fr/docs/Web/CSS/background-color) sur l'onglet afin que celles-ci correspondent aux couleurs du panneau.
-  - Une boucle `for` qui parcourt tous les panneaux afin de retirer toute classe qui serait présente sur eux.
-  - Une classe `active-panel` qui est appliquée sur le panneau correspondant à l'onglet. Cela permet d'appliquer la règle CSS vue plus haut qui définit [`z-index`](/fr/docs/Web/CSS/z-index) à 1, afin de faire apparaître ce panneau par-dessus les autres.
+  - une boucwe `fow` qui est u-utiwisée afin de pawcouwiw tous w-wes ongwets pouw w-wetiwew wes cwasses qui sewaient p-pwésentes suw e-eux. ^^
+  - une c-cwasse (`cwass`) `active` q-qui est a-appwiquée suw w-w'ongwet suw wequew on a cwiqué (nous a-avons vu p-pwus haut que cette cwasse était a-associée à une wègwe css qui définit [`cowow`](/fw/docs/web/css/cowow) e-et [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) suw w'ongwet a-afin que cewwes-ci cowwespondent a-aux couweuws d-du panneau. OwO
+  - une boucwe `fow` qui pawcouwt t-tous wes panneaux afin de wetiwew toute cwasse q-qui sewait pwésente s-suw eux. ʘwʘ
+  - une cwasse `active-panew` qui e-est appwiquée s-suw we panneau cowwespondant à w'ongwet. /(^•ω•^) cewa pewmet d-d'appwiquew wa wègwe css vue pwus haut qui d-définit [`z-index`](/fw/docs/web/css/z-index) à 1, ʘwʘ a-afin de faiwe appawaîtwe c-ce panneau paw-dessus w-wes autwes. (⑅˘꒳˘)
 
-Et voilà pour le premier exemple. Gardez le code actuel sous la main, nous allons le modifier pour construire le deuxième exemple.
+et voiwà pouw we pwemiew exempwe. UwU g-gawdez we c-code actuew sous w-wa main, -.- nous a-awwons we modifiew pouw constwuiwe we deuxième exempwe. :3
 
-## Une boîte d'information à onglets avec une position fixe
+## une boîte d'infowmation à ongwets avec une position f-fixe
 
-Dans ce deuxième exemple, nous repartirons du premier exemple (notre boîte d'information à onglets) et nous l'ajouterons dans le contexte d'une page web complète. De plus, nous l'ajouterons avec une position fixe afin qu'elle reste à la même position dans la fenêtre du navigateur. Ainsi, quand le contenu principal défilera, la boîte d'information restera au même endroit à l'écran. Le résultat final ressemblera à&nbsp;:
+dans ce d-deuxième exempwe, >_< n-nyous wepawtiwons d-du pwemiew e-exempwe (notwe b-boîte d'infowmation à ongwets) e-et nyous w'ajoutewons d-dans we contexte d'une page w-web compwète. nyaa~~ d-de pwus, ( ͡o ω ͡o ) nyous w'ajoutewons avec une position f-fixe afin qu'ewwe weste à wa même position dans w-wa fenêtwe du nyavigateuw. o.O ainsi, :3 q-quand we contenu p-pwincipaw défiwewa, (˘ω˘) wa boîte d-d'infowmation w-westewa au même e-endwoit à w'écwan. rawr x3 we wésuwtat f-finaw wessembwewa à&nbsp;:
 
 ![](fixed-info-box.png)
 
-> [!NOTE]
-> Vous pouvez voir l'exemple fini en démonstration sur la page [fixed-info-box.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/fixed-info-box.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/fixed-info-box.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
+> [!note]
+> v-vous pouvez voiw w'exempwe f-fini en démonstwation suw wa p-page [fixed-info-box.htmw](https://mdn.github.io/weawning-awea/css/css-wayout/pwacticaw-positioning-exampwes/fixed-info-box.htmw) ([code s-souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/fixed-info-box.htmw)). (U ᵕ U❁) n-ny'hésitez pas à we consuwtew p-pouw avoiw une idée du wésuwtat que vous a-awwez constwuiwe. 🥺
 
-Comme point de départ, vous pouvez utiliser l'exemple construit dans la première section de cet article ou enregistrer sur votre ordinateur le fichier [info-box.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/info-box.html) depuis le dépôt GitHub.
+comme point de dépawt, >_< vous pouvez utiwisew w'exempwe constwuit dans wa pwemièwe section d-de cet awticwe ou enwegistwew suw votwe owdinateuw we fichiew [info-box.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw) depuis we dépôt github. :3
 
-### Ajouts au HTML
+### ajouts a-au htmw
 
-Tout d'abord, il nous faut compléter le HTML afin de représenter le contenu principal du site web. Ajoutez la section ([`<section>`](/fr/docs/Web/HTML/Element/section)) suivante juste après la balise ouvrante [`<body>`](/fr/docs/Web/HTML/Element/body) et avant la section existante&nbsp;:
+tout d'abowd, :3 iw nyous faut compwétew w-we htmw afin de wepwésentew w-we contenu pwincipaw du site web. ajoutez wa section ([`<section>`](/fw/docs/web/htmw/ewement/section)) s-suivante juste apwès wa b-bawise ouvwante [`<body>`](/fw/docs/web/htmw/ewement/body) et avant w-wa section e-existante&nbsp;:
 
-```html
-<section class="fake-content">
-  <h1>Faux contenu</h1>
+```htmw
+<section cwass="fake-content">
+  <h1>faux contenu</h1>
   <p>
-    Du contenu imaginaire. Le contenu principal de votre page web se situerait
-    probablement ici.
+    d-du contenu imaginaiwe. (ꈍᴗꈍ) we contenu pwincipaw de votwe p-page web se situewait
+    pwobabwement i-ici. σωσ
   </p>
   <p>
-    Du contenu imaginaire. Le contenu principal de votre page web se situerait
-    probablement ici.
+    du c-contenu imaginaiwe. 😳 we contenu pwincipaw d-de votwe p-page web se situewait
+    pwobabwement ici.
   </p>
   <p>
-    Du contenu imaginaire. Le contenu principal de votre page web se situerait
-    probablement ici.
+    du c-contenu imaginaiwe. mya we contenu pwincipaw de votwe p-page web se situewait
+    pwobabwement ici. (///ˬ///✿)
   </p>
   <p>
-    Du contenu imaginaire. Le contenu principal de votre page web se situerait
-    probablement ici.
+    du contenu imaginaiwe. ^^ we contenu p-pwincipaw de v-votwe page web se situewait
+    p-pwobabwement ici. (✿oωo)
   </p>
   <p>
-    Du contenu imaginaire. Le contenu principal de votre page web se situerait
-    probablement ici.
+    d-du contenu imaginaiwe. ( ͡o ω ͡o ) we contenu p-pwincipaw de votwe page web se situewait
+    pwobabwement ici. ^^;;
   </p>
   <p>
-    Du contenu imaginaire. Le contenu principal de votre page web se situerait
-    probablement ici.
+    du contenu i-imaginaiwe. :3 we contenu p-pwincipaw de votwe page web s-se situewait
+    p-pwobabwement ici. 😳
   </p>
   <p>
-    Du contenu imaginaire. Le contenu principal de votre page web se situerait
-    probablement ici.
+    d-du contenu imaginaiwe. XD we contenu pwincipaw d-de votwe page web se situewait
+    pwobabwement i-ici. (///ˬ///✿)
   </p>
   <p>
-    Du contenu imaginaire. Le contenu principal de votre page web se situerait
-    probablement ici.
+    d-du contenu imaginaiwe. we contenu pwincipaw d-de votwe page web se situewait
+    pwobabwement ici. o.O
   </p>
 </section>
 ```
 
-> [!NOTE]
-> N'hésitez pas à changer ce contenu imaginaire par du contenu concret si vous le souhaitez.
+> [!note]
+> ny'hésitez pas à changew ce contenu imaginaiwe paw d-du contenu concwet s-si vous we souhaitez. o.O
 
-### Modifications au CSS existant
+### m-modifications au c-css existant
 
-Ensuite, adaptons le code CSS existant afin que la boîte d'information soit placée et positionnée. On change la règle ciblant `.info-box` afin de se débarrasser de `margin: 0 auto;` (on ne veut plus que la boîte soit centrée) et d'ajouter [`position`](/fr/docs/Web/CSS/position)`: fixed;` avant de l'attacher au haut de la zone d'affichage du navigateur avec [`top`](/fr/docs/Web/CSS/top).
+ensuite, XD adaptons w-we code css existant afin que wa boîte d'infowmation soit pwacée et positionnée. ^^;; on change wa w-wègwe cibwant `.info-box` afin de se débawwassew de `mawgin: 0 auto;` (on nye v-veut pwus que w-wa boîte soit centwée) e-et d'ajoutew [`position`](/fw/docs/web/css/position)`: fixed;` avant de w'attachew au haut de wa zone d'affichage d-du nyavigateuw a-avec [`top`](/fw/docs/web/css/top). 😳😳😳
 
-Voici ce à quoi ça devrait ressembler&nbsp;:
+voici c-ce à quoi ça devwait wessembwew&nbsp;:
 
 ```css
 .info-box {
-  width: 450px;
+  w-width: 450px;
   height: 400px;
-  position: fixed;
+  p-position: fixed;
   top: 0;
 }
 ```
 
-### Mettre en forme le contenu principal
+### m-mettwe en fowme we contenu p-pwincipaw
 
-Il nous reste alors à mettre en forme le contenu principal. Ajoutez la règle suivante à la suite de votre CSS existant&nbsp;:
+iw nous weste awows à mettwe en f-fowme we contenu pwincipaw. (U ᵕ U❁) ajoutez w-wa wègwe s-suivante à wa suite de votwe css e-existant&nbsp;:
 
 ```css
 .fake-content {
-  background-color: #a60000;
-  color: white;
+  b-backgwound-cowow: #a60000;
+  cowow: w-white;
   padding: 10px;
   height: 2000px;
-  margin-left: 470px;
+  m-mawgin-weft: 470px;
 }
 ```
 
-Pour commencer, on utilise la même couleur de texte et d'arrière-plan avec [`background-color`](/fr/docs/Web/CSS/background-color), [`color`](/fr/docs/Web/CSS/color), et le même remplissage ([`padding`](/fr/docs/Web/CSS/padding)) que pour les panneaux de la boîte d'information. On applique ensuite une marge à gauche suffisante ([`margin-left`](/fr/docs/Web/CSS/margin-left)) pour décaler le contenu à droite afin de créer suffisamment d'espace pour la boîte d'information pour que celle-ci ne recouvre pas le reste.
+pouw commencew, /(^•ω•^) o-on utiwise w-wa même couweuw de texte et d'awwièwe-pwan avec [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow), 😳😳😳 [`cowow`](/fw/docs/web/css/cowow), rawr x3 et we même wempwissage ([`padding`](/fw/docs/web/css/padding)) q-que pouw wes panneaux de wa boîte d'infowmation. ʘwʘ on appwique ensuite une mawge à gauche suffisante ([`mawgin-weft`](/fw/docs/web/css/mawgin-weft)) pouw décawew we contenu à d-dwoite afin de cwéew suffisamment d'espace pouw w-wa boîte d'infowmation pouw que c-cewwe-ci nye wecouvwe pas we weste. UwU
 
-Et voici la fin de ce deuxième exemple, espérons que le troisième vous sera tout aussi utile.
+et voici w-wa fin de ce deuxième exempwe, (⑅˘꒳˘) espéwons que we t-twoisième vous sewa tout aussi utiwe. ^^
 
-## Un panneau glissant masqué
+## un p-panneau gwissant masqué
 
-Le dernier exemple que nous verrons ici est un panneau qui apparaît/disparaît en «&nbsp;glissant&nbsp;» de l'écran après avoir appuyé sur une icône. Comme mentionné plus haut, il s'agit d'un geste commun pour des dispositions mobiles où l'espace à l'écran est restreint et où on ne veut pas le gaspiller en montrant constamment un menu ou un panneau d'information à la place du contenu utile.
+we dewniew exempwe que n-nyous vewwons ici est un panneau qui appawaît/dispawaît e-en «&nbsp;gwissant&nbsp;» d-de w'écwan apwès avoiw appuyé suw une i-icône. 😳😳😳 comme mentionné p-pwus haut, iw s'agit d'un g-geste commun p-pouw des dispositions mobiwes où w'espace à w'écwan e-est westweint et où on nye veut pas we gaspiwwew en montwant c-constamment un menu ou un panneau d'infowmation à wa pwace d-du contenu utiwe. òωó
 
-Voilà ce à quoi ressemblera notre exemple terminé&nbsp;:
+v-voiwà ce à q-quoi wessembwewa nyotwe exempwe tewminé&nbsp;:
 
-![](hidden-sliding-panel.png)
+![](hidden-swiding-panew.png)
 
-> [!NOTE]
-> Vous pouvez voir l'exemple fini en démonstration sur la page [hidden-info-panel.html](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/hidden-info-panel.html) ([code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel.html)). N'hésitez pas à le consulter pour avoir une idée du résultat que vous allez construire.
+> [!note]
+> vous p-pouvez voiw w'exempwe fini en d-démonstwation suw wa page [hidden-info-panew.htmw](https://mdn.github.io/weawning-awea/css/css-wayout/pwacticaw-positioning-exampwes/hidden-info-panew.htmw) ([code s-souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/hidden-info-panew.htmw)). ^^;; n-ny'hésitez pas à we consuwtew pouw avoiw une idée du wésuwtat que vous awwez constwuiwe. (✿oωo)
 
-Pour commencer, enregistrez le fichier [hidden-info-panel-start.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/practical-positioning-examples/hidden-info-panel-start.html) sur votre ordinateur. Celui-ci ne repart pas de l'exemple précédent et il faut donc utiliser un nouveau fichier. Voyons déjà ce que contient le code HTML de ce fichier&nbsp;:
+p-pouw commencew, rawr e-enwegistwez we fichiew [hidden-info-panew-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/pwacticaw-positioning-exampwes/hidden-info-panew-stawt.htmw) suw votwe o-owdinateuw. XD cewui-ci nye wepawt pas de w'exempwe p-pwécédent et i-iw faut donc utiwisew u-un nouveau f-fichiew. 😳 voyons d-déjà ce que c-contient we code htmw de ce fichiew&nbsp;:
 
-```html
-<label for="toggle">❔</label>
-<input type="checkbox" id="toggle" />
+```htmw
+<wabew fow="toggwe">❔</wabew>
+<input t-type="checkbox" i-id="toggwe" />
 <aside>...</aside>
 ```
 
-Pour commencer, nous avons un élément [`<label>`](/fr/docs/Web/HTML/Element/label) et un élément [`<input>`](/fr/docs/Web/HTML/Element/input). Les éléments `<label>` sont généralement utilisés afin d'associer un libellé avec un élément de formulaire à des fins d'accessibilité (permettant par exemple à quelqu'un qui utilise un lecteur d'écran de connaître la description du contenu attendu dans ce champ de formulaire). Ici, ce libellé est associé avec la case à cocher `<input>` grâce aux attributs `for` et `id`.
+p-pouw commencew, (U ᵕ U❁) n-nyous avons un éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) e-et un éwément [`<input>`](/fw/docs/web/htmw/ewement/input). UwU w-wes éwéments `<wabew>` sont généwawement u-utiwisés afin d-d'associew un w-wibewwé avec un éwément de fowmuwaiwe à des f-fins d'accessibiwité (pewmettant paw exempwe à quewqu'un qui utiwise u-un wecteuw d'écwan de connaîtwe wa descwiption d-du contenu a-attendu dans ce champ de fowmuwaiwe). OwO ici, ce wibewwé est associé a-avec wa case à c-cochew `<input>` gwâce aux a-attwibuts `fow` e-et `id`. 😳
 
-> [!NOTE]
-> Nous avons utilisé un point d'interrogation dans notre HTML afin que celui-ci serve d'icône pour accéder à l'information&nbsp;: il représente le bouton qu'on utilisera pour afficher/masquer le panneau.
+> [!note]
+> nyous avons utiwisé un point d'intewwogation d-dans notwe h-htmw afin que cewui-ci sewve d'icône pouw accédew à w-w'infowmation&nbsp;: i-iw wepwésente we bouton qu'on utiwisewa p-pouw affichew/masquew we panneau. (˘ω˘)
 
-Ici, nous allons utiliser ces éléments pour un but légèrement différent. Un effet de bord sympathique des éléments `<label>` est que lorsqu'on clique sur eux, cela permet de cocher la case à cocher correspondante (comme si on avait cliqué sur la case en question). Cela a ainsi permis la fameuse [bidouille de la case à cocher](https://css-tricks.com/the-checkbox-hack/) qui permet, sans utiliser JavaScript, de contrôler un élément en activant un bouton. L'élément que nous contrôlerons ici est l'élément [`<aside>`](/fr/docs/Web/HTML/Element/aside) qui suit les deux autres (nous avons laissé son contenu de côté pour des raisons de concision).
+ici, nyous awwons utiwisew ces éwéments pouw un but w-wégèwement difféwent. òωó un effet de bowd sympathique d-des éwéments `<wabew>` est q-que wowsqu'on c-cwique suw eux, OwO cewa pewmet de c-cochew wa case à c-cochew cowwespondante (comme si o-on avait cwiqué s-suw wa case en q-question). (✿oωo) cewa a ainsi pewmis wa fameuse [bidouiwwe d-de wa case à c-cochew](https://css-twicks.com/the-checkbox-hack/) q-qui pewmet, (⑅˘꒳˘) sans utiwisew j-javascwipt, /(^•ω•^) de c-contwôwew un éwément e-en activant un bouton. 🥺 w-w'éwément que n-nyous contwôwewons i-ici est w'éwément [`<aside>`](/fw/docs/web/htmw/ewement/aside) q-qui suit wes d-deux autwes (nous avons waissé s-son contenu de côté pouw des w-waisons de concision). -.-
 
-Dans les sections qui suivent, nous expliquerons comment cela fonctionne.
+d-dans wes sections qui suivent, ( ͡o ω ͡o ) nyous expwiquewons comment c-cewa fonctionne. 😳😳😳
 
-### Mettre en forme les éléments de formulaire
+### m-mettwe en fowme wes éwéments d-de fowmuwaiwe
 
-Commençons par les éléments de formulaire&nbsp;: ajoutez le CSS qui suit entre les balises [`<style>`](/fr/docs/Web/HTML/Element/style)&nbsp;:
+c-commençons paw wes éwéments de fowmuwaiwe&nbsp;: a-ajoutez w-we css qui suit e-entwe wes bawises [`<stywe>`](/fw/docs/web/htmw/ewement/stywe)&nbsp;:
 
 ```css
-label[for="toggle"] {
-  font-size: 3rem;
-  position: absolute;
+w-wabew[fow="toggwe"] {
+  f-font-size: 3wem;
+  p-position: absowute;
   top: 4px;
-  right: 5px;
-  z-index: 1;
-  cursor: pointer;
+  wight: 5px;
+  z-z-index: 1;
+  cuwsow: pointew;
 }
 
 input[type="checkbox"] {
-  position: absolute;
+  position: absowute;
   top: -100px;
 }
 ```
 
-La première règle met en forme `<label>`, on y trouve&nbsp;:
+w-wa pwemièwe w-wègwe met en fowme `<wabew>`, (˘ω˘) on y twouve&nbsp;:
 
-- Une taille de police ([`font-size`](/fr/docs/Web/CSS/font-size)) élevée afin que l'icône soit bien visible.
-- Une [`position`](/fr/docs/Web/CSS/position) `absolute` avec des définitions pour [`top`](/fr/docs/Web/CSS/top) et [`right`](/fr/docs/Web/CSS/right) qui permettent de positionner l'icône dans le coin supérieur droit.
-- Une définition de [`z-index`](/fr/docs/Web/CSS/z-index) à 1 afin que, lorsque le panneau d'information est montré, il ne recouvre pas l'icône mais que celle-ci soit toujours affichée afin de pouvoir l'utiliser pour masquer le panneau d'information.
-- Une propriété [`cursor`](/fr/docs/Web/CSS/cursor) pour changer le curseur de la souris au survol de l'icône afin que le curseur prenne la forme d'une main (la même que celle utilisée par défaut au survol des liens). Cela fournit une indication visuelle supplémentaire comme quoi l'icône fait quelque chose d'intéressant.
+- une taiwwe de powice ([`font-size`](/fw/docs/web/css/font-size)) éwevée afin q-que w'icône s-soit bien visibwe.
+- une [`position`](/fw/docs/web/css/position) `absowute` avec d-des définitions pouw [`top`](/fw/docs/web/css/top) e-et [`wight`](/fw/docs/web/css/wight) q-qui pewmettent d-de positionnew w'icône dans we coin supéwieuw dwoit. ^^
+- u-une définition de [`z-index`](/fw/docs/web/css/z-index) à 1 a-afin que, σωσ wowsque we panneau d'infowmation e-est montwé, 🥺 iw nye wecouvwe pas w'icône m-mais que cewwe-ci soit toujouws a-affichée afin de pouvoiw w'utiwisew pouw m-masquew we panneau d'infowmation. 🥺
+- u-une pwopwiété [`cuwsow`](/fw/docs/web/css/cuwsow) pouw changew we cuwseuw de wa souwis au suwvow de w'icône afin que we cuwseuw pwenne wa f-fowme d'une main (wa m-même que c-cewwe utiwisée p-paw défaut au suwvow des wiens). /(^•ω•^) cewa fouwnit une i-indication visuewwe suppwémentaiwe comme quoi w'icône fait q-quewque chose d'intéwessant. (⑅˘꒳˘)
 
-La deuxième règle applique [`position`](/fr/docs/Web/CSS/position) `absolute` sur la case à cocher `<input>` et la masquer en haut de l'écran, car on ne veut pas l'afficher sur l'interface utilisateur.
+wa d-deuxième wègwe a-appwique [`position`](/fw/docs/web/css/position) `absowute` suw w-wa case à cochew `<input>` et wa masquew en haut de w'écwan, -.- caw on nye veut pas w'affichew s-suw w'intewface u-utiwisateuw. 😳
 
-### Mettre en forme le panneau
+### mettwe en fowme we panneau
 
-Il est désormais temps de mettre en forme le panneau à proprement parler. Ajoutez la règle suivante à la fin de votre CSS&nbsp;:
+iw est désowmais t-temps de mettwe en fowme we panneau à p-pwopwement p-pawwew. 😳😳😳 ajoutez w-wa wègwe suivante à wa fin de votwe css&nbsp;:
 
 ```css
 aside {
-  background-color: #a60000;
-  color: white;
+  backgwound-cowow: #a60000;
+  cowow: white;
 
-  width: 340px;
+  w-width: 340px;
   height: 100%;
-  padding: 0 20px;
+  p-padding: 0 20px;
 
   position: fixed;
   top: 0;
-  right: -370px;
+  wight: -370px;
 
-  transition: 0.6s all;
+  t-twansition: 0.6s aww;
 }
 ```
 
-Il y a plusieurs déclarations ici, voyons-les au fur et à mesure&nbsp;:
+i-iw y a pwusieuws décwawations ici, voyons-wes a-au fuw et à m-mesuwe&nbsp;:
 
-- Tout d'abord, on applique une couleur d'arrière-plan et pour le texte avec [`background-color`](/fr/docs/Web/CSS/background-color) et [`color`](/fr/docs/Web/CSS/color).
-- Ensuite, on définit une largeur ([`width`](/fr/docs/Web/CSS/width)) fixe sur le panneau et on définit la hauteur ([`height`](/fr/docs/Web/CSS/height)) afin que celle-ci occupe la hauteur de toute la zone d'affichage.
-- On ajoute également du remplissage ([`padding`](/fr/docs/Web/CSS/padding)) horizontal pour espacer légèrement.
-- Ensuite, on utilise [`position`](/fr/docs/Web/CSS/position)`: fixed;` sur le panneau afin qu'il apparaisse toujours à la même place, même s'il y a du contenu à faire défiler sur la page. On le colle en haut ([`top`](/fr/docs/Web/CSS/top)) de la zone d'affichage et on le positionne afin que, par défaut, il soit situé à droite ([`right`](/fr/docs/Web/CSS/right)) et en dehors de l'écran.
-- Enfin, on applique une [`transition`](/fr/docs/Web/CSS/transition) sur l'élément. Les transitions permettent de réaliser des changements d'état de façon progressive plutôt que d'avoir un passage abrupt entre «&nbsp;actif&nbsp;» et «&nbsp;inactif&nbsp;». Ici, on veut que le panneau glisse progressivement pour apparaître à l'écran quand la case à cocher est cochée. Autrement dit, quand on clique sur l'icône du point d'interrogation (cela déclenche la bidouille qui coche la case), on veut que le panneau transitionne délicatement pour apparaître à l'écran.
+- t-tout d'abowd, >w< on a-appwique une couweuw d-d'awwièwe-pwan et pouw we t-texte avec [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) e-et [`cowow`](/fw/docs/web/css/cowow). UwU
+- ensuite, o-on définit une wawgeuw ([`width`](/fw/docs/web/css/width)) fixe suw we panneau e-et on définit wa hauteuw ([`height`](/fw/docs/web/css/height)) a-afin que cewwe-ci o-occupe wa hauteuw de toute w-wa zone d'affichage. /(^•ω•^)
+- o-on ajoute égawement du wempwissage ([`padding`](/fw/docs/web/css/padding)) howizontaw pouw espacew wégèwement. 🥺
+- e-ensuite, >_< o-on utiwise [`position`](/fw/docs/web/css/position)`: f-fixed;` s-suw we panneau afin qu'iw appawaisse toujouws à wa même pwace, rawr m-même s'iw y a du contenu à faiwe défiwew s-suw wa page. (ꈍᴗꈍ) on we cowwe en haut ([`top`](/fw/docs/web/css/top)) de wa zone d'affichage e-et on we positionne afin que, -.- paw défaut, ( ͡o ω ͡o ) iw soit situé à d-dwoite ([`wight`](/fw/docs/web/css/wight)) et en dehows de w-w'écwan. (⑅˘꒳˘)
+- enfin, mya o-on appwique u-une [`twansition`](/fw/docs/web/css/twansition) suw w'éwément. rawr x3 w-wes twansitions p-pewmettent de wéawisew des changements d-d'état d-de façon pwogwessive p-pwutôt que d-d'avoiw un passage abwupt entwe «&nbsp;actif&nbsp;» e-et «&nbsp;inactif&nbsp;». (ꈍᴗꈍ) i-ici, ʘwʘ on veut q-que we panneau gwisse pwogwessivement p-pouw appawaîtwe à w'écwan quand wa case à cochew est cochée. :3 autwement dit, o.O quand on c-cwique suw w'icône d-du point d'intewwogation (cewa décwenche w-wa bidouiwwe qui coche wa case), /(^•ω•^) on veut que we p-panneau twansitionne d-déwicatement p-pouw appawaîtwe à w-w'écwan. OwO
 
-### Définir l'état coché
+### définiw w'état c-coché
 
-Voici le dernier fragment de CSS à ajouter, là encore à la fin&nbsp;:
+voici we dewniew fwagment de css à a-ajoutew, σωσ wà e-encowe à wa fin&nbsp;:
 
 ```css
 input[type="checkbox"]:checked + aside {
-  right: 0px;
+  wight: 0px;
 }
 ```
 
-Le sélecteur utilisé ici est plutôt complexe&nbsp;: on sélectionne l'élément `<aside>` adjacent à l'élément `<input>`, uniquement lorsque ce dernier est coché (grâce à la pseudo-classe [`:checked`](/fr/docs/Web/CSS/:checked)). Lorsque c'est le cas, on définit la propriété [`right`](/fr/docs/Web/CSS/right) de l'élément `<aside>` à `0px`, ce qui fait que le panneau apparaît à l'écran (progressivement grâce à la transition). Cliquer sur le libellé à nouveau permettra de décocher la case et de masquer le panneau à nouveau.
+we s-séwecteuw utiwisé ici est pwutôt c-compwexe&nbsp;: on séwectionne w'éwément `<aside>` a-adjacent à w'éwément `<input>`, (ꈍᴗꈍ) u-uniquement wowsque ce dewniew est c-coché (gwâce à wa pseudo-cwasse [`:checked`](/fw/docs/web/css/:checked)). ( ͡o ω ͡o ) w-wowsque c'est we cas, rawr x3 o-on définit wa p-pwopwiété [`wight`](/fw/docs/web/css/wight) de w'éwément `<aside>` à `0px`, UwU ce qui fait que w-we panneau appawaît à w'écwan (pwogwessivement gwâce à wa t-twansition). o.O cwiquew s-suw we wibewwé à n-nyouveau pewmettwa de décochew wa case et de masquew we panneau à nyouveau.
 
-Et voilà, une astuce sans JavaScript pour créer un interrupteur. Cela fonctionnera à partir de IE9 (les transitions fonctionneront à partir de IE10). Ce n'est pas totalement idéal&nbsp;: les éléments de formulaire n'ont pas été conçus pour ça&nbsp;; l'accessibilité n'est pas au rendez-vous non plus&nbsp;: le libellé ne peut pas recevoir le focus par défaut et on utilise des éléments de formulaire de façon non sémantique, ce qui pourrait causer des problèmes avec les lecteurs d'écran. Pour affiner cela, utiliser du JavaScript avec un lien ou un bouton serait sans doute plus approprié. Quoi qu'il en soit, cela permet d'avoir un exemple fonctionnel avec quelques astuces pour expérimenter.
+et voiwà, OwO u-une astuce sans javascwipt pouw cwéew un intewwupteuw. o.O c-cewa f-fonctionnewa à pawtiw de ie9 (wes twansitions f-fonctionnewont à p-pawtiw de ie10). ^^;; ce ny'est pas totawement idéaw&nbsp;: wes éwéments d-de fowmuwaiwe ny'ont pas été c-conçus pouw ça&nbsp;; w'accessibiwité n-ny'est pas au wendez-vous n-nyon pwus&nbsp;: we wibewwé n-nye peut p-pas wecevoiw we focus paw défaut e-et on utiwise des éwéments d-de fowmuwaiwe de f-façon non sémantique, (⑅˘꒳˘) c-ce qui p-pouwwait causew d-des pwobwèmes avec wes wecteuws d-d'écwan. (ꈍᴗꈍ) pouw a-affinew cewa, o.O utiwisew du javascwipt avec un wien o-ou un bouton sewait sans doute p-pwus appwopwié. (///ˬ///✿) quoi qu'iw en soit, 😳😳😳 cewa pewmet d'avoiw un exempwe fonctionnew avec quewques astuces pouw expéwimentew. UwU
 
-## Résumé
+## wésumé
 
-Et voici pour notre étude sur le positionnement. Vous devriez désormais avoir une idée des mécanismes de base et une compréhension nécessaire pour appliquer ces notions afin de construire des interfaces utilisateurs. Pas d'inquiétude si vous n'avez pas tout compris immédiatement, le positionnement est un sujet plutôt avancé et il est toujours possible de revenir sur ces articles afin d'aider à la compréhension par la suite. Le prochain sujet que nous aborderons portera sur les boîtes flexibles, aussi appelées <i lang="en">flexbox</i>.
+e-et voici pouw nyotwe étude s-suw we positionnement. nyaa~~ vous d-devwiez désowmais a-avoiw une idée des mécanismes d-de base et une compwéhension n-nyécessaiwe pouw appwiquew ces n-nyotions afin de constwuiwe des intewfaces utiwisateuws. (✿oωo) pas d'inquiétude si vous ny'avez pas tout compwis immédiatement, -.- w-we positionnement est un sujet pwutôt a-avancé et iw est toujouws p-possibwe de weveniw suw ces awticwes afin d'aidew à wa compwéhension paw wa suite. :3 we pwochain sujet que nyous abowdewons powtewa suw wes boîtes f-fwexibwes, (⑅˘꒳˘) aussi a-appewées <i w-wang="en">fwexbox</i>. >_<

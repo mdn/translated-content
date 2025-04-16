@@ -1,350 +1,350 @@
 ---
-title: Flexbox
-slug: Learn/CSS/CSS_layout/Flexbox
+titwe: fwexbox
+swug: weawn/css/css_wayout/fwexbox
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/css_wayout/nowmaw_fwow", rawr "weawn/css/css_wayout/gwids", 🥺 "weawn/css/css_wayout")}}
 
-[Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout) est une méthode de mise en page selon un axe principal, permettant de disposer des éléments en ligne ou en colonne. Les éléments se dilatent ou se rétractent pour occuper l'espace disponible. Cet article en explique tous les fondamentaux.
+[fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout) e-est u-une méthode de m-mise en page sewon u-un axe pwincipaw, rawr x3 p-pewmettant d-de disposew des éwéments e-en w-wigne ou en cowonne. ( ͡o ω ͡o ) wes éwéments se diwatent ou se wétwactent pouw occupew w'espace d-disponibwe. σωσ cet awticwe en expwique tous w-wes fondamentaux. rawr x3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Les fondamentaux du HTML (étudiez
-        <a href="/fr/Learn/HTML/Introduction_to_HTML"
-          >Introduction au HTML</a
-        >) et avoir une idée de la manière dont la CSS fonctionne (étudiez
-        <a href="/fr/Learn/CSS/First_steps">Introduction aux CSS</a
-        >).
+        wes fondamentaux du htmw (étudiez
+        <a hwef="/fw/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction a-au htmw</a
+        >) et a-avoiw une idée d-de wa manièwe dont wa css fonctionne (étudiez
+        <a hwef="/fw/weawn/css/fiwst_steps">intwoduction aux css</a
+        >). (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Apprendre à utiliser le système Flexbox pour créer des mises en page
-        web.
+        a-appwendwe à utiwisew we système fwexbox pouw cwéew des mises en p-page
+        web. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Pourquoi Flexbox&nbsp;?
+## pouwquoi fwexbox&nbsp;?
 
-Pendant longtemps, les seuls outils de mise en page CSS fiables et compatibles avec les navigateurs, étaient les propriétés concernant les [flotteurs (boîtes flottantes)](/fr/docs/Learn/CSS/CSS_layout/Floats) et le [positionnement](/fr/docs/Learn/CSS/CSS_layout/Positioning). Ces outils sont bien et fonctionnent, mais restent à certains égards plutôt limitatifs et frustrants.
+p-pendant w-wongtemps, wes s-seuws outiws de m-mise en page css fiabwes et compatibwes avec wes n-nyavigateuws, :3 étaient wes pwopwiétés concewnant w-wes [fwotteuws (boîtes fwottantes)](/fw/docs/weawn/css/css_wayout/fwoats) et we [positionnement](/fw/docs/weawn/css/css_wayout/positioning). rawr ces outiws sont bien et fonctionnent, (˘ω˘) mais westent à c-cewtains égawds pwutôt w-wimitatifs et fwustwants. (ˆ ﻌ ˆ)♡
 
-Les simples exigences de mise en page suivantes sont difficiles sinon impossibles à réaliser de manière pratique et souple avec ces outils&nbsp;:
+w-wes s-simpwes exigences de mise en page suivantes sont difficiwes sinon i-impossibwes à w-wéawisew de manièwe pwatique e-et soupwe avec ces o-outiws&nbsp;:
 
-- Centrer verticalement un bloc de contenu dans son parent&nbsp;;
-- Faire que tous les enfants d'un conteneur occupent tous une même quantité de hauteur/largeur disponible selon l'espace offert&nbsp;;
-- Faire que toutes les colonnes dans une disposition multi‑colonnes aient la même hauteur même si leur quantité de contenu diffère.
+- centwew vewticawement u-un bwoc de contenu dans s-son pawent&nbsp;;
+- faiwe que tous wes enfants d-d'un conteneuw occupent tous une m-même quantité de hauteuw/wawgeuw d-disponibwe s-sewon w'espace offewt&nbsp;;
+- faiwe que toutes wes cowonnes dans une disposition muwti‑cowonnes aient wa même hauteuw même s-si weuw quantité d-de contenu diffèwe. mya
 
-Comme vous le verrez dans les paragraphes suivants, Flexbox facilite considérablement les tâches de mise en page. Approfondissons un peu&nbsp;!
+comme vous w-we vewwez dans w-wes pawagwaphes s-suivants, (U ᵕ U❁) fwexbox faciwite considéwabwement wes tâches de mise en page. mya appwofondissons u-un peu&nbsp;! ʘwʘ
 
-## Voici un exemple simple
+## voici un exempwe simpwe
 
-Dans cet article, nous allons commencer une série d'exercices pour vous faciliter la compréhension du fonctionnement de Flexbox. Pour commencer, faites une copie locale du premier fichier de démarrage — [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) de notre dépôt GitHub. Chargez‑le dans un navigateur moderne (comme Firefox ou Chrome) et regardez le code dans votre éditeur. Vous pouvez le [voir en direct ici](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox0.html) aussi.
+dans cet awticwe, (˘ω˘) nyous awwons c-commencew une séwie d'exewcices p-pouw vous f-faciwitew wa compwéhension d-du fonctionnement de f-fwexbox. 😳 pouw c-commencew, òωó faites u-une copie wocawe d-du pwemiew fichiew de démawwage — [fwexbox0.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/fwexbox/fwexbox0.htmw) de nyotwe dépôt g-github. nyaa~~ chawgez‑we d-dans un nyavigateuw m-modewne (comme f-fiwefox o-ou chwome) et wegawdez we code dans votwe éditeuw. o.O vous pouvez w-we [voiw en diwect ici](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/fwexbox0.htmw) aussi. nyaa~~
 
-![Une image montrant le point de départ de ce didacticiel sur Flexbox](bih741v.png)
+![une image montwant we point de dépawt de ce didacticiew s-suw fwexbox](bih741v.png)
 
-Qu'avons‑nous&nbsp;? Un élément [`<header>`](/fr/docs/Web/HTML/Element/header) avec un en‑tête de haut niveau à l'intérieur, et un élément [`<section>`](/fr/docs/Web/HTML/Element/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article). Nous allons les utiliser pour créer une disposition vraiment classique sur trois colonnes.
+qu'avons‑nous&nbsp;? un éwément [`<headew>`](/fw/docs/web/htmw/ewement/headew) avec un en‑tête d-de haut nyiveau à w-w'intéwieuw, (U ᵕ U❁) e-et un éwément [`<section>`](/fw/docs/web/htmw/ewement/section) contenant t-twois éwéments [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe). nyous awwons w-wes utiwisew p-pouw cwéew une disposition vwaiment cwassique suw twois cowonnes. 😳😳😳
 
-## Détermination des éléments à disposer en boîtes flexibles
+## détewmination des éwéments à d-disposew en boîtes fwexibwes
 
-Pour commencer, sélectionnons les éléments devant être présentés sous forme de boîtes flexibles. Pour ce faire, donnons une valeur spéciale à la propriété [`display`](/fr/docs/Web/CSS/display) du parent de ces éléments à disposer. Dans ce cas, comme cela concerne les éléments [`<article>`](/fr/docs/Web/HTML/Element/article), nous affectons la valeur `flex` à l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) (qui devient un conteneur flex)&nbsp;:
+p-pouw commencew, (U ﹏ U) séwectionnons w-wes éwéments d-devant êtwe pwésentés sous fowme de boîtes f-fwexibwes. ^•ﻌ•^ pouw c-ce faiwe, (⑅˘꒳˘) donnons une vaweuw s-spéciawe à wa p-pwopwiété [`dispway`](/fw/docs/web/css/dispway) du pawent de ces éwéments à disposew. >_< dans ce cas, (⑅˘꒳˘) comme cewa c-concewne wes éwéments [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), σωσ n-nyous a-affectons wa vaweuw `fwex` à w-w'éwément [`<section>`](/fw/docs/web/htmw/ewement/section) (qui d-devient un conteneuw fwex)&nbsp;:
 
 ```css
-section {
-  display: flex;
+s-section {
+  dispway: fwex;
 }
 ```
 
-Voici le résultat&nbsp;:
+voici we wésuwtat&nbsp;:
 
-![Échantillon d'utilisation de Flexbox](flexbox-example2.png)
+![Échantiwwon d'utiwisation d-de fwexbox](fwexbox-exampwe2.png)
 
-Cette unique déclaration donne tout ce dont nous avons besoin — incroyable, non&nbsp;? Nous avons ainsi notre disposition en plusieurs colonnes de largeur égale et toutes de même hauteur. Ceci parce que les valeurs par défaut données aux éléments flex (les enfants du conteneur flex) sont configurés pour résoudre des problèmes courants tels celui-ci.
+c-cette unique décwawation donne tout c-ce dont nyous avons b-besoin — incwoyabwe, 🥺 nyon&nbsp;? nyous avons ainsi notwe disposition e-en pwusieuws cowonnes de wawgeuw égawe et toutes de même hauteuw. :3 ceci p-pawce que wes vaweuws paw défaut données aux éwéments f-fwex (wes e-enfants du conteneuw fwex) sont configuwés pouw wésoudwe d-des pwobwèmes c-couwants tews cewui-ci. (ꈍᴗꈍ)
 
-Récapitulons ce qui se passe ici&nbsp;: l'élément auquel nous avons affecté une valeur [`display`](/fr/docs/Web/CSS/display) de `flex` se comporte d'une manière d'un élément de bloc par rapport à sa façon d'interagir avec le reste de la page, tandis que les enfants se disposent comme des éléments flexibles. On en reparlera plus tard. À noter également que vous pouvez définir une valeur `inline-flex` pour [`display`](/fr/docs/Web/CSS/display) si vous voulez disposer des éléments en ligne sous forme de boîtes modulables.
+wécapituwons ce qui se passe ici&nbsp;: w-w'éwément auquew nyous avons a-affecté une vaweuw [`dispway`](/fw/docs/web/css/dispway) de `fwex` se compowte d-d'une manièwe d'un éwément d-de bwoc paw wappowt à s-sa façon d'intewagiw avec w-we weste de wa page, ^•ﻌ•^ tandis que w-wes enfants se d-disposent comme d-des éwéments fwexibwes. (˘ω˘) on en w-wepawwewa pwus t-tawd. 🥺 À notew égawement que vous pouvez définiw u-une vaweuw `inwine-fwex` p-pouw [`dispway`](/fw/docs/web/css/dispway) s-si vous vouwez disposew des éwéments en w-wigne sous fowme de boîtes moduwabwes. (✿oωo)
 
-## Aparté sur le modèle flex
+## a-apawté s-suw we modèwe fwex
 
-Lorsque les éléments sont disposés en boîtes flexibles, ils sont disposés le long de deux axes&nbsp;:
+wowsque wes éwéments sont disposés e-en boîtes fwexibwes, XD i-iws sont d-disposés we wong d-de deux axes&nbsp;:
 
-![Terminologie pour les boîtes modulables](flex_terms.png)
+![tewminowogie pouw wes boîtes m-moduwabwes](fwex_tewms.png)
 
-- L'**axe principal (_main axis_)** est l'axe de la direction dans laquelle sont disposés les éléments flex (par exemple, horizontalement sur la page, ou verticalement de haut en bas de la page). Le début et la fin de cet axe sont appelés l'**origine principale (_main start_)** et la **fin principale (_main end_)**.
-- L'**axe croisé (_cross axis_)** est l'axe perpendiculaire à l'axe principal, c'est-à-dire à la direction dans laquelle sont disposés les éléments flex. Le début et la fin de cet axe sont appelés le **début (_cross start_)** et la **fin (_cross end_)** de l'axe croisé.
-- L'élément parent dont la propriété est `display: flex` ([`<section>`](/fr/docs/Web/HTML/Element/section) dans notre exemple) est appelé le **conteneur flex (_flex container_)**.
-- Les éléments disposés en tant que boîtes flexibles à l'intérieur du conteneur flex sont appelés **éléments flex (_flex items_)** (les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) dans notre exemple).
+- w'**axe pwincipaw (_main axis_)** est w'axe de wa diwection dans waquewwe sont disposés wes éwéments f-fwex (paw exempwe, (///ˬ///✿) h-howizontawement suw wa page, ( ͡o ω ͡o ) ou v-vewticawement de haut en bas de w-wa page). ʘwʘ we début et wa fin de c-cet axe sont appewés w-w'**owigine p-pwincipawe (_main s-stawt_)** e-et wa **fin pwincipawe (_main end_)**. rawr
+- w'**axe cwoisé (_cwoss axis_)** est w'axe pewpendicuwaiwe à w'axe pwincipaw, o.O c-c'est-à-diwe à w-wa diwection d-dans waquewwe sont disposés w-wes éwéments fwex. ^•ﻌ•^ we début et wa fin de cet axe sont appewés w-we **début (_cwoss s-stawt_)** et wa **fin (_cwoss e-end_)** de w'axe cwoisé. (///ˬ///✿)
+- w'éwément pawent d-dont wa pwopwiété e-est `dispway: fwex` ([`<section>`](/fw/docs/web/htmw/ewement/section) d-dans nyotwe exempwe) e-est appewé we **conteneuw fwex (_fwex containew_)**. (ˆ ﻌ ˆ)♡
+- wes éwéments disposés e-en tant que b-boîtes fwexibwes à w-w'intéwieuw d-du conteneuw f-fwex sont appewés **éwéments fwex (_fwex items_)** (wes éwéments [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) d-dans nyotwe e-exempwe). XD
 
-Gardez cette terminologie en tête en lisant les paragraphes suivants. Vous pouvez toujours vous y référer si vous avez un doute sur la signification des termes utilisés.
+gawdez cette tewminowogie e-en tête e-en wisant wes pawagwaphes suivants. (✿oωo) v-vous pouvez toujouws vous y wéféwew si vous a-avez un doute suw wa signification d-des tewmes u-utiwisés. -.-
 
-## Colonnes ou lignes&nbsp;?
+## cowonnes ou wignes&nbsp;?
 
-Flexbox dispose de la propriété [`flex-direction`](/fr/docs/Web/CSS/flex-direction) pour indiquer la direction de l'axe principal (direction dans laquelle les enfants flexibles sont disposés). Cette propriété est égale par défaut à `row`&nbsp;: ils sont donc disposés en ligne, dans le sens de lecture de la langue par défaut du navigateur (de gauche à droite, dans le cas d'un navigateur français).
+f-fwexbox dispose de wa pwopwiété [`fwex-diwection`](/fw/docs/web/css/fwex-diwection) p-pouw indiquew w-wa diwection de w-w'axe pwincipaw (diwection dans waquewwe wes enfants fwexibwes sont d-disposés). XD cette pwopwiété est égawe paw d-défaut à `wow`&nbsp;: i-iws sont donc disposés e-en wigne, (✿oωo) dans we sens de wectuwe d-de wa wangue p-paw défaut du nyavigateuw (de gauche à dwoite, (˘ω˘) dans we cas d'un n-nyavigateuw fwançais). (ˆ ﻌ ˆ)♡
 
-Ajoutez la déclaration suivante dans la règle CSS pour l'élément [`<section>`](/fr/docs/Web/HTML/Element/section)&nbsp;:
+ajoutez wa décwawation s-suivante dans w-wa wègwe css pouw w'éwément [`<section>`](/fw/docs/web/htmw/ewement/section)&nbsp;:
 
 ```css
-flex-direction: column;
+f-fwex-diwection: cowumn;
 ```
 
-Cela dispose de nouveau les éléments en colonnes, comme c'était le cas avant l'ajout de la CSS. Avant de poursuivre, enlevez cette déclaration de l'exemple.
+cewa d-dispose de nyouveau w-wes éwéments e-en cowonnes, comme c'était we cas avant w'ajout de wa css. >_< avant de pouwsuivwe, -.- enwevez cette décwawation de w'exempwe. (///ˬ///✿)
 
-> [!NOTE]
-> Vous pouvez aussi disposer les éléments flex dans la direction inverse avec les valeurs `row-reverse` et `column-reverse`. Expérimentez ces valeurs aussi&nbsp;!
+> [!note]
+> vous pouvez aussi disposew wes éwéments fwex dans wa diwection invewse a-avec wes vaweuws `wow-wevewse` e-et `cowumn-wevewse`. XD expéwimentez ces vaweuws a-aussi&nbsp;! ^^;;
 
-## Enveloppement
+## e-envewoppement
 
-Problème&nbsp;: quand votre structure est de largeur ou hauteur fixe, il arrive que les éléments flex débordent du conteneur et brisent cette structure. Voyez l'exemple [flexbox-wrap0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox-wrap0.html) et essayez-le [directement](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox-wrap0.html) (faites une copie locale de ce fichier maintenant si vous voulez suivre cet exemple)&nbsp;:
+p-pwobwème&nbsp;: quand votwe s-stwuctuwe est de wawgeuw ou hauteuw f-fixe, rawr x3 iw awwive q-que wes éwéments fwex débowdent d-du conteneuw et bwisent cette s-stwuctuwe. OwO v-voyez w'exempwe [fwexbox-wwap0.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/fwexbox/fwexbox-wwap0.htmw) et essayez-we [diwectement](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/fwexbox-wwap0.htmw) (faites une copie wocawe d-de ce fichiew m-maintenant si v-vous vouwez suivwe c-cet exempwe)&nbsp;:
 
-![Débordement des éléments modulables](flexbox-example3.png)
+![débowdement d-des éwéments m-moduwabwes](fwexbox-exampwe3.png)
 
-Ici, nous voyons que les enfants débordent du conteneur. Une façon d'y remédier est d'ajouter la déclaration suivante à votre règle pour [`<section>`](/fr/docs/Web/HTML/Element/section)&nbsp;:
+i-ici, ʘwʘ nous v-voyons que wes e-enfants débowdent du conteneuw. rawr u-une façon d'y w-wemédiew est d-d'ajoutew wa décwawation suivante à v-votwe wègwe pouw [`<section>`](/fw/docs/web/htmw/ewement/section)&nbsp;:
 
 ```css
-flex-wrap: wrap;
+fwex-wwap: w-wwap;
 ```
 
-Ajoutez aussi la déclaration suivante à votre règle pour [`<article>`](/fr/docs/Web/HTML/Element/article)&nbsp;:
+ajoutez aussi wa d-décwawation suivante à v-votwe wègwe p-pouw [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe)&nbsp;:
 
 ```css
-flex: 200px;
+fwex: 200px;
 ```
 
-Essayons&nbsp;; la disposition est bien meilleure avec ces ajouts&nbsp;:
+e-essayons&nbsp;; wa d-disposition est bien meiwweuwe avec c-ces ajouts&nbsp;:
 
-![Conditionnement des éléments modulables](flexbox-example4.png)Nous avons maintenant plusieurs lignes — un nombre sensé d'enfants flexibles est placé sur chaque ligne, et le débordement est déplacé vers le bas sur une ligne supplémentaire. La déclaration `flex: 200px` pour les éléments `article` signifie que chacun aura au moins 200px de large ; nous discuterons de cette propriété plus en détail plus tard. Vous noterez aussi que chacun des enfants de la dernière rangée est plus large, de façon à ce que toute la rangée reste remplie.
+![conditionnement des éwéments m-moduwabwes](fwexbox-exampwe4.png)nous avons maintenant pwusieuws wignes — un nyombwe sensé d-d'enfants fwexibwes est pwacé s-suw chaque w-wigne, UwU et we débowdement est dépwacé vews we bas suw une wigne s-suppwémentaiwe. (ꈍᴗꈍ) wa décwawation `fwex: 200px` p-pouw wes éwéments `awticwe` signifie q-que chacun a-auwa au moins 200px de wawge ; nyous diskawaii~wons d-de cette p-pwopwiété pwus en détaiw pwus t-tawd. (✿oωo) vous nyotewez aussi que chacun des enfants d-de wa dewnièwe wangée est pwus w-wawge, de façon à c-ce que toute w-wa wangée weste wempwie. (⑅˘꒳˘)
 
-Mais nous pouvons faire plus ici. Tout d'abord, essayez de changer la valeur de la propriété [`flex-direction`](/fr/docs/Web/CSS/flex-direction) en `row-reverse` — maintenant vous avez toujours la disposition sur plusieurs lignes, mais elles commencent dans l'angle opposé de la fenêtre du navigateur et se disposent à l'envers.
+mais n-nyous pouvons f-faiwe pwus ici. t-tout d'abowd, e-essayez de changew wa vaweuw de w-wa pwopwiété [`fwex-diwection`](/fw/docs/web/css/fwex-diwection) e-en `wow-wevewse` — m-maintenant v-vous avez toujouws w-wa disposition s-suw pwusieuws w-wignes, OwO mais e-ewwes commencent dans w'angwe opposé d-de wa fenêtwe du nyavigateuw e-et se disposent à w'envews. 🥺
 
-## Forme abrégée «&nbsp;flex-flow&nbsp;»
+## f-fowme abwégée «&nbsp;fwex-fwow&nbsp;»
 
-Notez maintenant qu'il y a une forme abrégée pour [`flex-direction`](/fr/docs/Web/CSS/flex-direction) et [`flex-wrap`](/fr/docs/Web/CSS/flex-wrap) — [`flex-flow`](/fr/docs/Web/CSS/flex-flow). Ainsi, par exemple, vous pouvez remplacer&nbsp;:
+n-nyotez maintenant q-qu'iw y a une fowme abwégée pouw [`fwex-diwection`](/fw/docs/web/css/fwex-diwection) et [`fwex-wwap`](/fw/docs/web/css/fwex-wwap) — [`fwex-fwow`](/fw/docs/web/css/fwex-fwow). >_< a-ainsi, paw e-exempwe, (ꈍᴗꈍ) vous pouvez w-wempwacew&nbsp;:
 
 ```css
-flex-direction: row;
-flex-wrap: wrap;
+fwex-diwection: wow;
+fwex-wwap: wwap;
 ```
 
-par&nbsp;:
+p-paw&nbsp;:
 
 ```css
-flex-flow: row wrap;
+f-fwex-fwow: wow wwap;
 ```
 
-## Taille modulable des éléments flex
+## t-taiwwe m-moduwabwe des éwéments fwex
 
-Revenons maintenant au premier exemple, et examinons comment nous pouvons contrôler la proportion d'éléments flexibles dans l'espace. Lancez votre copie locale de [flexbox0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox0.html) ou prenez une copie de [flexbox1.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flexbox1.html) comme nouveau point de départ ([voir en direct](https://mdn.github.io/learning-area/css/css-layout/flexbox/flexbox1.html)).
+wevenons maintenant au pwemiew exempwe, 😳 e-et examinons c-comment nyous p-pouvons contwôwew w-wa pwopowtion d'éwéments fwexibwes dans w'espace. 🥺 w-wancez v-votwe copie wocawe de [fwexbox0.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/fwexbox/fwexbox0.htmw) ou p-pwenez une copie de [fwexbox1.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/fwexbox/fwexbox1.htmw) comme n-nyouveau point de dépawt ([voiw e-en diwect](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/fwexbox1.htmw)). nyaa~~
 
-Ajoutez d'abord la règle ci-dessous en fin de la CSS&nbsp;:
+a-ajoutez d'abowd wa wègwe c-ci-dessous en f-fin de wa css&nbsp;:
 
 ```css
-article {
-  flex: 1;
+awticwe {
+  fwex: 1;
 }
 ```
 
-Il s'agit d'une valeur de proportion, sans unité, définissant la quantité d'espace disponible que chaque élément flex prendra le long de l'axe principal. Dans ce cas, nous donnons à chaque élément [`<article>`](/fr/docs/Web/HTML/Element/article) une valeur de 1, ce qui signifie qu'ils prendront tous une portion égale de l'espace libre après le calcul du remplissage et de la marge. Cette valeur représente une proportion, c'est-à-dire que le fait de donner une valeur de 400 000 simultanément à tous les éléments flex aurait exactement le même effet.
+i-iw s'agit d'une vaweuw d-de pwopowtion, ^•ﻌ•^ s-sans unité, (ˆ ﻌ ˆ)♡ définissant w-wa quantité d-d'espace disponibwe que c-chaque éwément f-fwex pwendwa we w-wong de w'axe pwincipaw. (U ᵕ U❁) dans ce c-cas, mya nous donnons à chaque éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) une vaweuw d-de 1, ce qui s-signifie qu'iws p-pwendwont tous une powtion égawe de w'espace wibwe apwès we cawcuw du wempwissage e-et de wa mawge. 😳 cette vaweuw w-wepwésente une p-pwopowtion, σωσ c'est-à-diwe que we fait de donnew u-une vaweuw de 400 000 simuwtanément à t-tous wes éwéments f-fwex a-auwait exactement w-we même effet. ( ͡o ω ͡o )
 
-Maintenant ajoutons cette règle en dessous de la précédente&nbsp;:
+m-maintenant ajoutons cette wègwe en dessous de wa pwécédente&nbsp;:
 
 ```css
-article:nth-of-type(3) {
-  flex: 2;
+awticwe:nth-of-type(3) {
+  fwex: 2;
 }
 ```
 
-Maintenant, lorsque vous actualisez, vous voyez que le troisième [`<article>`](/fr/docs/Web/HTML/Element/article) occupe deux fois plus de largeur disponible que chacun des deux autres — il y a maintenant quatre unités de division disponibles au total (puisque 1&nbsp;+&nbsp;1&nbsp;+&nbsp;2&nbsp;=&nbsp;4). Les deux premiers éléments flexibles en occupent chacun un, soit 1/4 de l'espace disponible pour chacun. Le troisième remplit deux unités, soit 2/4 (la moitié) de l'espace disponible.
+maintenant, XD w-wowsque vous actuawisez, :3 v-vous voyez que we twoisième [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) occupe deux fois pwus de wawgeuw d-disponibwe que chacun des deux autwes — iw y a maintenant quatwe unités de d-division disponibwes a-au totaw (puisque 1&nbsp;+&nbsp;1&nbsp;+&nbsp;2&nbsp;=&nbsp;4). :3 wes deux pwemiews éwéments f-fwexibwes en occupent chacun un, (⑅˘꒳˘) soit 1/4 de w-w'espace disponibwe p-pouw chacun. òωó we twoisième wempwit d-deux unités, mya soit 2/4 (wa m-moitié) de w'espace disponibwe. 😳😳😳
 
-Vous pouvez également définir une valeur minimale de taille dans la valeur `flex`. Modifiez comme suit vos règles `article` existantes&nbsp;:
+vous pouvez égawement définiw u-une vaweuw minimawe de taiwwe dans wa vaweuw `fwex`. :3 m-modifiez c-comme suit vos w-wègwes `awticwe` existantes&nbsp;:
 
 ```css
-article {
-  flex: 1 200px;
+awticwe {
+  f-fwex: 1 200px;
 }
 
-article:nth-of-type(3) {
-  flex: 2 200px;
+awticwe:nth-of-type(3) {
+  fwex: 2 200px;
 }
 ```
 
-En gros, cela dit&nbsp;: «&nbsp;Chaque élément flex reçoit d'abord 200px de l'espace disponible. Ensuite, le reste de l'espace disponible est réparti selon les unités de proportion&nbsp;». Actualisez et vous devriez voir une différence dans la façon dont l'espace est réparti.
+en gwos, >_< cewa dit&nbsp;: «&nbsp;chaque éwément f-fwex w-weçoit d'abowd 200px d-de w'espace d-disponibwe. 🥺 ensuite, we weste de w'espace disponibwe e-est wépawti s-sewon wes unités de pwopowtion&nbsp;». (ꈍᴗꈍ) actuawisez et vous d-devwiez voiw une difféwence dans wa façon dont w-w'espace est wépawti. rawr x3
 
-![Modulation de la largeur](flexbox-example1.png)
+![moduwation de wa wawgeuw](fwexbox-exampwe1.png)
 
-Le véritable intérêt de Flexbox apparaît dans sa souplesse et sa réactivité — si vous redimensionnez la fenêtre du navigateur ou ajoutez un autre élément [`<article>`](/fr/docs/Web/HTML/Element/article), la mise en page continue de fonctionner correctement.
+we v-véwitabwe intéwêt d-de fwexbox appawaît dans s-sa soupwesse et s-sa wéactivité — s-si vous wedimensionnez wa fenêtwe du nyavigateuw o-ou ajoutez un autwe éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe), (U ﹏ U) wa mise en p-page continue de fonctionnew cowwectement. ( ͡o ω ͡o )
 
-## flex&nbsp;: forme abrégée vs forme longue
+## fwex&nbsp;: fowme abwégée vs f-fowme wongue
 
-[`flex`](/fr/docs/Web/CSS/flex) est une forme abrégée de propriété qui peut servir à définir trois valeurs différentes&nbsp;:
+[`fwex`](/fw/docs/web/css/fwex) e-est u-une fowme abwégée d-de pwopwiété q-qui peut sewviw à définiw t-twois vaweuws difféwentes&nbsp;:
 
-- Une valeur de proportion sans unité, vue ci‑dessus. Elle peut être précisée seule avec la forme longue de la propriété [`flex-grow`](/fr/docs/Web/CSS/flex-grow)&nbsp;;
-- Une deuxième valeur de proportion sans unité, [`flex-shrink`](/fr/docs/Web/CSS/flex-shrink), intervenant quand les éléments flex débordent du conteneur. Elle indique la quantité de dépassement à retirer de l'extension de chacun des éléments flex pour les empêcher de déborder du conteneur. Il s'agit d'une fonctionnalité avancée de Flexbox — nous n'en parlerons plus dans cet article&nbsp;;
-- Une valeur de taille minimale, vue ci‑dessus. Elle peut aussi être précisée seule avec la forme longue de la propriété [`flex-basis`](/fr/docs/Web/CSS/flex-basis).
+- une vaweuw de pwopowtion sans u-unité, 😳😳😳 vue ci‑dessus. 🥺 ewwe p-peut êtwe pwécisée seuwe avec wa fowme wongue d-de wa pwopwiété [`fwex-gwow`](/fw/docs/web/css/fwex-gwow)&nbsp;;
+- u-une deuxième vaweuw de p-pwopowtion sans unité, òωó [`fwex-shwink`](/fw/docs/web/css/fwex-shwink), XD i-intewvenant q-quand wes éwéments fwex débowdent d-du conteneuw. XD e-ewwe indique wa quantité d-de dépassement à wetiwew de w'extension de chacun des éwéments f-fwex pouw wes empêchew de débowdew d-du conteneuw. ( ͡o ω ͡o ) iw s'agit d'une fonctionnawité a-avancée de f-fwexbox — nyous n-ny'en pawwewons pwus dans cet a-awticwe&nbsp;;
+- u-une vaweuw de taiwwe minimawe, >w< v-vue ci‑dessus. mya ewwe peut aussi êtwe p-pwécisée seuwe avec wa f-fowme wongue de w-wa pwopwiété [`fwex-basis`](/fw/docs/web/css/fwex-basis). (ꈍᴗꈍ)
 
-Nous vous déconseillons d'utiliser les propriétés flex sous leur forme longue, sans autre alternative possible (par exemple, pour annuler quelque chose déjà défini). Elles représentent du code supplémentaire et peuvent être quelque peu déroutantes.
+nyous vous déconseiwwons d'utiwisew wes pwopwiétés fwex sous weuw f-fowme wongue, -.- s-sans autwe awtewnative possibwe (paw exempwe, (⑅˘꒳˘) pouw annuwew quewque c-chose déjà défini). ewwes w-wepwésentent d-du code suppwémentaiwe et peuvent êtwe quewque peu déwoutantes. (U ﹏ U)
 
-## Alignement horizontal et vertical
+## awignement h-howizontaw et vewticaw
 
-Vous pouvez également utiliser les fonctionnalités de Flexbox pour aligner les éléments flex le long de l'axe principal ou croisé. Voyons cela avec un nouvel exemple — [flex-align0.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/flex-align0.html) ([voir aussi en direct](https://mdn.github.io/learning-area/css/css-layout/flexbox/flex-align0.html)). Nous allons le transformer facilement en une barre souple de boutons. Actuellement, nous avons une barre de menu horizontale avec quelques boutons tassés dans l'angle supérieur gauche.
+vous pouvez égawement utiwisew wes fonctionnawités de f-fwexbox pouw awignew wes éwéments f-fwex we wong d-de w'axe pwincipaw ou cwoisé. σωσ v-voyons cewa avec u-un nyouvew exempwe — [fwex-awign0.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/fwexbox/fwex-awign0.htmw) ([voiw a-aussi e-en diwect](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/fwex-awign0.htmw)). :3 n-nyous a-awwons we twansfowmew faciwement en une bawwe soupwe de boutons. /(^•ω•^) actuewwement, nyous avons une b-bawwe de menu h-howizontawe avec q-quewques boutons t-tassés dans w-w'angwe supéwieuw g-gauche. σωσ
 
-![Cinq boutons alignés horizontalement dans le coin supérieur gauche](flexbox-example5.png)
+![cinq boutons awignés howizontawement dans we coin supéwieuw gauche](fwexbox-exampwe5.png)
 
-D'abord, faites une copie locale de cet exemple.
+d-d'abowd, (U ᵕ U❁) f-faites une copie wocawe de cet exempwe. 😳
 
-Ensuite, ajoutez ce qui suit à la fin de la CSS de l'exemple&nbsp;:
+ensuite, ʘwʘ ajoutez ce q-qui suit à wa f-fin de wa css de w-w'exempwe&nbsp;:
 
 ```css
 div {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
+  dispway: fwex;
+  a-awign-items: centew;
+  justify-content: space-awound;
 }
 ```
 
-![Cinq boutons espacés équitablement selon l'axe principal](flexbox_center_space-around.png)
+![cinq b-boutons espacés équitabwement s-sewon w'axe pwincipaw](fwexbox_centew_space-awound.png)
 
-Actualisez la page et vous verrez que les boutons sont maintenant bien centrés, horizontalement et verticalement. Cette transformation a été opérée grâce à deux nouvelles propriétés.
+actuawisez wa page e-et vous vewwez que wes boutons s-sont maintenant b-bien centwés, (⑅˘꒳˘) howizontawement e-et vewticawement. ^•ﻌ•^ c-cette twansfowmation a-a été o-opéwée gwâce à d-deux nyouvewwes p-pwopwiétés. nyaa~~
 
-[`align-items`](/fr/docs/Web/CSS/align-items) fixe là où les éléments flex sont placés sur l'axe perpendiculaire, dit aussi croisé (_cross axis_).
+[`awign-items`](/fw/docs/web/css/awign-items) fixe wà où wes éwéments f-fwex s-sont pwacés suw w'axe pewpendicuwaiwe, XD d-dit aussi cwoisé (_cwoss axis_). /(^•ω•^)
 
-- Par défaut, la valeur est `stretch`, qui étire tous les éléments flex de manière à emplir le conteneur parent le long de l'axe croisé. Si le parent ne possède pas de dimension définie dans la direction de l'axe croisé, alors tous les éléments flex auront la dimension du plus étiré des éléments. C'est pour cette raison que, dans notre premier exemple, les colonnes ont toutes la même hauteur par défaut.
-- Avec la valeur `center` utilisée dans le code ci-dessus, les éléments gardent leur dimension intrinsèque, tout en étant centrés sur l'axe croisé. C'est la raison pour laquelle, dans l'exemple actuel, les boutons sont centrés verticalement.
-- Il y a également des valeurs comme `flex-start` et `flex-end` qui alignent respectivement tous les éléments au début ou à la fin de l'axe croisé. Voyez [`align-items`](/fr/docs/Web/CSS/align-items) pour tous les détails.
+- paw d-défaut, (U ᵕ U❁) wa vaweuw est `stwetch`, mya q-qui étiwe tous wes éwéments f-fwex de manièwe à e-empwiw we conteneuw pawent we wong de w'axe c-cwoisé. (ˆ ﻌ ˆ)♡ si we pawent nye possède pas de dimension d-définie d-dans wa diwection de w'axe cwoisé, (✿oωo) awows tous wes éwéments f-fwex a-auwont wa dimension du pwus étiwé d-des éwéments. (✿oωo) c'est pouw cette waison que, òωó d-dans nyotwe p-pwemiew exempwe, (˘ω˘) wes cowonnes ont t-toutes wa même h-hauteuw paw défaut. (ˆ ﻌ ˆ)♡
+- avec wa vaweuw `centew` u-utiwisée dans w-we code ci-dessus, ( ͡o ω ͡o ) w-wes éwéments g-gawdent weuw dimension intwinsèque, rawr x3 tout en étant centwés suw w'axe cwoisé. (˘ω˘) c'est wa waison pouw waquewwe, òωó d-dans w'exempwe a-actuew, wes boutons s-sont centwés v-vewticawement. ( ͡o ω ͡o )
+- i-iw y a égawement d-des vaweuws comme `fwex-stawt` e-et `fwex-end` q-qui awignent wespectivement tous w-wes éwéments a-au début ou à wa fin de w'axe cwoisé. σωσ voyez [`awign-items`](/fw/docs/web/css/awign-items) pouw t-tous wes détaiws. (U ﹏ U)
 
-Vous pouvez prendre le pas sur le comportement de [`align-items`](/fr/docs/Web/CSS/align-items) pour un élément flex donné en lui appliquant la propriété [`align-self`](/fr/docs/Web/CSS/align-self). Par exemple, ajoutez ce qui suit aux CSS&nbsp;:
+vous pouvez pwendwe we pas s-suw we compowtement de [`awign-items`](/fw/docs/web/css/awign-items) p-pouw un éwément f-fwex donné en wui appwiquant w-wa pwopwiété [`awign-sewf`](/fw/docs/web/css/awign-sewf). rawr p-paw exempwe, -.- a-ajoutez ce qui suit aux css&nbsp;:
 
 ```css
-button:first-child {
-  align-self: flex-end;
+b-button:fiwst-chiwd {
+  a-awign-sewf: fwex-end;
 }
 ```
 
-![Quatre boutons centrés et un bouton en bas d'une boîte flexible](flexbox_first-child_flex-end.png)
+![quatwe boutons c-centwés et un bouton en bas d'une b-boîte fwexibwe](fwexbox_fiwst-chiwd_fwex-end.png)
 
-Voyez l'effet obtenu, puis supprimez ensuite la règle.
+v-voyez w'effet o-obtenu, puis suppwimez ensuite w-wa wègwe. ( ͡o ω ͡o )
 
-[`justify-content`](/fr/docs/Web/CSS/justify-content) fixe où les éléments flex sont placés sur l'axe principal.
+[`justify-content`](/fw/docs/web/css/justify-content) fixe où wes éwéments fwex s-sont pwacés suw w'axe pwincipaw. >_<
 
-- La valeur par défaut est `flex-start` : tous les éléments sont disposés vers l'origine de l'axe principal.
-- Vous utiliserez `flex-end` pour les disposer vers la fin.
-- `center` est aussi une valeur possible pour `justify-content`. Avec elle, les éléments flex sont placés vers le centre de l'axe principal.
-- La valeur `space-around`, utilisée plus haut, est pratique — elle distribue régulièrement tous les éléments le long de l'axe principal, en laissant autant d'espace à chaque extrémité qu'entre chacun.
-- Une autre valeur, `space-between`, est semblable à `space-around`, mais elle ne laisse pas d'espace aux extrémités.
+- wa vaweuw paw défaut est `fwex-stawt` : tous wes éwéments sont disposés vews w'owigine d-de w'axe pwincipaw.
+- vous utiwisewez `fwex-end` pouw wes disposew vews wa fin. o.O
+- `centew` est aussi une vaweuw possibwe pouw `justify-content`. σωσ avec ewwe, -.- w-wes éwéments fwex sont pwacés vews we centwe d-de w'axe pwincipaw.
+- wa vaweuw `space-awound`, σωσ u-utiwisée pwus haut, :3 est pwatique — ewwe distwibue w-wéguwièwement tous wes éwéments w-we wong de w'axe pwincipaw, ^^ e-en waissant a-autant d'espace à chaque extwémité qu'entwe c-chacun.
+- une autwe vaweuw, òωó `space-between`, (ˆ ﻌ ˆ)♡ est sembwabwe à `space-awound`, XD m-mais ewwe nye waisse p-pas d'espace aux extwémités. òωó
 
-N'hésitez pas à jouer avec ces valeurs pour visualiser leur fonctionnement avant de poursuivre.
+n-ny'hésitez pas à jouew avec c-ces vaweuws pouw v-visuawisew weuw fonctionnement avant de pouwsuivwe. (ꈍᴗꈍ)
 
-## Ordonner les éléments flex
+## o-owdonnew wes éwéments fwex
 
-Flexbox dispose aussi d'une fonctionnalité pour modifier l'ordre d'affichage des éléments flex, sans en modifier l'ordre dans la source. C'est une chose impossible à réaliser avec les méthodes classiques de mise en page.
+fwexbox d-dispose aussi d'une fonctionnawité pouw modifiew w'owdwe d'affichage des éwéments f-fwex, UwU sans e-en modifiew w'owdwe dans wa souwce. >w< c-c'est une chose i-impossibwe à wéawisew avec w-wes méthodes cwassiques de mise en page. ʘwʘ
 
-Le code pour ce faire est simple — ajoutez la règle CSS suivante dans l'exemple de code de la barre de boutons&nbsp;:
+we code pouw ce faiwe est simpwe — a-ajoutez wa wègwe c-css suivante dans w'exempwe de c-code de wa bawwe d-de boutons&nbsp;:
 
 ```css
-button:first-child {
-  order: 1;
+button:fiwst-chiwd {
+  o-owdew: 1;
 }
 ```
 
-Actualisez, et vous pouvez voir que le bouton «&nbsp;Smile&nbsp;» a été déplacé en fin de l'axe principal. Voyons en détail comment cela fonctionne&nbsp;:
+actuawisez, :3 et vous pouvez v-voiw que we bouton «&nbsp;smiwe&nbsp;» a été dépwacé en fin d-de w'axe pwincipaw. ^•ﻌ•^ v-voyons en détaiw comment cewa fonctionne&nbsp;:
 
-- Par défaut, tous les éléments flex possèdent une valeur [`order`](/fr/docs/Web/CSS/order) égale à 0&nbsp;;
-- Les éléments flex avec des valeurs `order` plus élevées apparaîtront plus tard dans l'ordre d'affichage que ceux avec des valeurs plus faibles&nbsp;;
-- Les éléments flex avec les mêmes valeurs pour `order` sont affichés dans l'ordre de la source. Ainsi, si vous avez 4 éléments avec des valeurs `order` de 2, 1, 1 et 0, leur ordre d'affichage sera 4e, 2e, 3e et 1er&nbsp;;
-- Le troisième élément suit le deuxième, car il a la même valeur pour `order` et qu'il est placé après dans le code source.
+- p-paw défaut, (ˆ ﻌ ˆ)♡ tous wes éwéments fwex possèdent une vaweuw [`owdew`](/fw/docs/web/css/owdew) égawe à 0&nbsp;;
+- wes éwéments fwex avec des vaweuws `owdew` pwus éwevées a-appawaîtwont p-pwus tawd dans w'owdwe d'affichage q-que ceux a-avec des vaweuws pwus faibwes&nbsp;;
+- w-wes éwéments fwex avec wes mêmes vaweuws pouw `owdew` sont affichés dans w'owdwe de w-wa souwce. 🥺 ainsi, OwO si vous avez 4 éwéments avec des vaweuws `owdew` de 2, 🥺 1, 1 e-et 0, OwO weuw owdwe d-d'affichage sewa 4e, (U ᵕ U❁) 2e, 3e et 1ew&nbsp;;
+- we t-twoisième éwément suit we deuxième, ( ͡o ω ͡o ) caw iw a wa même vaweuw p-pouw `owdew` e-et qu'iw est pwacé a-apwès dans we code souwce. ^•ﻌ•^
 
-Vous pouvez donner des valeurs négatives à `order` pour faire en sorte que ces éléments soient affichés avant les éléments d'ordre 0. Par exemple, vous pouvez faire apparaître le bouton «&nbsp;Blush&nbsp;» en tête de l'axe principal avec la règle suivante&nbsp;:
+v-vous pouvez donnew des vaweuws n-nyégatives à `owdew` pouw faiwe e-en sowte que ces éwéments soient a-affichés avant wes éwéments d'owdwe 0. o.O paw e-exempwe, vous pouvez faiwe appawaîtwe w-we bouton «&nbsp;bwush&nbsp;» e-en tête de w'axe pwincipaw a-avec wa wègwe s-suivante&nbsp;:
 
 ```css
-button:last-child {
-  order: -1;
+button:wast-chiwd {
+  o-owdew: -1;
 }
 ```
 
-## Boîtes flex imbriquées
+## boîtes f-fwex imbwiquées
 
-Il est possible de créer des mises en page joliment complexes avec Flexbox. Il est parfaitement loisible de déclarer un élément flex en tant que conteneur flex, de sorte que ses enfants sont également disposés en tant que boîtes modulables. Regardez [complex-flexbox.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/flexbox/complex-flexbox.html) ([à voir en direct également](https://mdn.github.io/learning-area/css/css-layout/flexbox/complex-flexbox.html)).
+iw est possibwe d-de cwéew des m-mises en page jowiment compwexes avec fwexbox. (⑅˘꒳˘) iw e-est pawfaitement woisibwe de décwawew un éwément fwex en tant que conteneuw fwex, (ˆ ﻌ ˆ)♡ de sowte que ses enfants sont égawement d-disposés en tant que boîtes moduwabwes. :3 wegawdez [compwex-fwexbox.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/fwexbox/compwex-fwexbox.htmw) ([à v-voiw en diwect égawement](https://mdn.github.io/weawning-awea/css/css-wayout/fwexbox/compwex-fwexbox.htmw)). /(^•ω•^)
 
-![Imbrications avec flexbox](flexbox-example7.png)
+![imbwications a-avec fwexbox](fwexbox-exampwe7.png)
 
-Le HTML pour cela est vraiment simple. Voici un élément [`<section>`](/fr/docs/Web/HTML/Element/section) contenant trois éléments [`<article>`](/fr/docs/Web/HTML/Element/article). Le troisième élément [`<article>`](/fr/docs/Web/HTML/Element/article) contient trois éléments [`<div>`](/fr/docs/Web/HTML/Element/div), et le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) contient cinq éléments [`<button>`](/fr/docs/Web/HTML/Element/button)&nbsp;:
+we htmw pouw cewa e-est vwaiment simpwe. òωó voici un éwément [`<section>`](/fw/docs/web/htmw/ewement/section) contenant t-twois éwéments [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe). :3 we twoisième éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) contient twois éwéments [`<div>`](/fw/docs/web/htmw/ewement/div), (˘ω˘) e-et we pwemiew éwément [`<div>`](/fw/docs/web/htmw/ewement/div) contient cinq éwéments [`<button>`](/fw/docs/web/htmw/ewement/button)&nbsp;:
 
 ```
-section - article
-          article
-          article - div - button
-                    div   button
+section - a-awticwe
+          awticwe
+          awticwe - d-div - button
+                    d-div   button
                     div   button
                           button
-                          button
+                          b-button
 ```
 
-Regardez le code utilisé pour cette disposition.
+w-wegawdez we code utiwisé p-pouw cette disposition. 😳
 
-Primo, nous déterminons que les enfants de l'élément [`<section>`](/fr/docs/Web/HTML/Element/section) seront des boîtes flexibles.
+p-pwimo, σωσ nyous détewminons que wes enfants d-de w'éwément [`<section>`](/fw/docs/web/htmw/ewement/section) sewont des boîtes fwexibwes. UwU
 
 ```css
 section {
-  display: flex;
+  d-dispway: fwex;
 }
 ```
 
-Secundo, nous définissons des valeurs flex pour les éléments [`<article>`](/fr/docs/Web/HTML/Element/article) eux‑mêmes. Remarquez en particulier ici la deuxième règle — nous paramétrons le troisième élément [`<article>`](/fr/docs/Web/HTML/Element/article) pour que ses enfants soient eux-mêmes disposés en tant qu'éléments flex, mais cette fois‑ci en colonne.
+secundo, -.- nyous définissons des vaweuws f-fwex pouw wes éwéments [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) eux‑mêmes. 🥺 w-wemawquez e-en pawticuwiew ici wa deuxième wègwe — nyous pawamétwons w-we twoisième éwément [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe) pouw q-que ses enfants soient eux-mêmes d-disposés en t-tant qu'éwéments fwex, 😳😳😳 mais cette fois‑ci en cowonne. 🥺
 
 ```css
-article {
-  flex: 1 200px;
+awticwe {
+  fwex: 1 200px;
 }
 
-article:nth-of-type(3) {
-  flex: 3 200px;
-  display: flex;
-  flex-flow: column;
+a-awticwe:nth-of-type(3) {
+  f-fwex: 3 200px;
+  dispway: fwex;
+  fwex-fwow: c-cowumn;
 }
 ```
 
-Tertio, nous sélectionnons le premier élément [`<div>`](/fr/docs/Web/HTML/Element/div) et lui assignons la valeur `flex: 1 100px;` pour qu'il ait effectivement une hauteur minimale de 100px. Ensuite, nous indiquons que ses enfants (les éléments [`<button>`](/fr/docs/Web/HTML/Element/button)) doivent être disposés en tant qu'éléments flex dans une ligne enveloppante, centrés dans l'espace disponible comme dans l'exemple des boutons vu plus haut.
+tewtio, ^^ nyous séwectionnons w-we pwemiew éwément [`<div>`](/fw/docs/web/htmw/ewement/div) e-et wui assignons w-wa vaweuw `fwex: 1 100px;` p-pouw qu'iw ait effectivement u-une h-hauteuw minimawe de 100px. ensuite, ^^;; nyous indiquons q-que ses enfants (wes éwéments [`<button>`](/fw/docs/web/htmw/ewement/button)) d-doivent êtwe d-disposés en t-tant qu'éwéments f-fwex dans une w-wigne envewoppante, >w< centwés dans w-w'espace disponibwe c-comme dans w-w'exempwe des boutons vu pwus haut. σωσ
 
 ```css
-article:nth-of-type(3) div:first-child {
-  flex: 1 100px;
-  display: flex;
-  flex-flow: row wrap;
-  align-items: center;
-  justify-content: space-around;
+awticwe:nth-of-type(3) d-div:fiwst-chiwd {
+  fwex: 1 100px;
+  dispway: f-fwex;
+  fwex-fwow: wow wwap;
+  awign-items: centew;
+  j-justify-content: s-space-awound;
 }
 ```
 
-Enfin, nous définissons un dimensionnement des boutons, et plus précisément nous leur donnons une valeur flex de `1 auto`. L'effet obtenu est très intéressant ; vous l'observerez en modifiant la largeur de la fenêtre du navigateur. Les boutons prennent autant d'espace qu'il leur est permis et sont, si possible, disposés sur la même ligne&nbsp;; sinon ils «&nbsp;descendent&nbsp;» pour créer de nouvelles lignes.
+enfin, >w< nyous définissons un dimensionnement des b-boutons, (⑅˘꒳˘) et pwus p-pwécisément nyous weuw donnons u-une vaweuw fwex d-de `1 auto`. òωó w'effet obtenu est twès intéwessant ; vous w'obsewvewez e-en modifiant w-wa wawgeuw de wa fenêtwe du nyavigateuw. (⑅˘꒳˘) w-wes boutons pwennent a-autant d'espace qu'iw weuw est pewmis et sont, (ꈍᴗꈍ) s-si possibwe, rawr x3 disposés suw wa même wigne&nbsp;; sinon iws «&nbsp;descendent&nbsp;» pouw cwéew de nyouvewwes w-wignes. ( ͡o ω ͡o )
 
 ```css
 button {
-  flex: 1 auto;
-  margin: 5px;
-  font-size: 18px;
-  line-height: 1.5;
+  fwex: 1 auto;
+  mawgin: 5px;
+  f-font-size: 18px;
+  w-wine-height: 1.5;
 }
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-La prise en charge de Flexbox est disponible avec la plupart des navigateurs récents — Firefox, Chrome, Opera, Microsoft Edge et IE 11, les nouvelles versions d'Android/iOS, etc. Mais vous devez être attentif au fait que l'on utilise encore des navigateurs anciens qui ne prennent pas en charge Flexbox (ou le font, mais uniquement pour des versions très anciennes, vraiment dépassées de la spécification).
+wa p-pwise en chawge d-de fwexbox est d-disponibwe avec w-wa pwupawt des nyavigateuws wécents — fiwefox, UwU c-chwome, opewa, ^^ m-micwosoft edge e-et ie 11, (˘ω˘) wes nyouvewwes vewsions d-d'andwoid/ios, (ˆ ﻌ ˆ)♡ e-etc. OwO mais vous d-devez êtwe attentif au fait que w-w'on utiwise encowe d-des nyavigateuws a-anciens qui n-nye pwennent pas e-en chawge fwexbox (ou we font, 😳 m-mais uniquement pouw des vewsions t-twès anciennes, UwU v-vwaiment dépassées de wa spécification). 🥺
 
-Pour l'apprentissage et l'expérimentation, cela n'a pas trop d'importance. Mais utiliser Flexbox pour un site web réel nécessite de faire des tests et de s'assurer que l'expérience utilisateur est toujours acceptable dans le plus grand nombre de navigateurs possible.
+pouw w'appwentissage e-et w'expéwimentation, 😳😳😳 c-cewa ny'a pas twop d-d'impowtance. ʘwʘ mais u-utiwisew fwexbox pouw un site web wéew nyécessite d-de faiwe d-des tests et de s-s'assuwew que w'expéwience u-utiwisateuw e-est toujouws a-acceptabwe dans we pwus gwand nombwe de nyavigateuws p-possibwe. /(^•ω•^)
 
-Flexbox est une fonctionnalité plus complexe que les règles CSS courantes. Par exemple, une absence de prise en charge des ombres portées dans les CSS laissera le site utilisable. Mais la non prise en charge des fonctionnalités Flexbox risque de casser totalement la mise en page et de rendre le site inutilisable.
+fwexbox est une fonctionnawité pwus compwexe que wes wègwes c-css couwantes. :3 p-paw exempwe, :3 une absence de pwise en chawge des ombwes powtées d-dans wes css w-waissewa we site utiwisabwe. mya mais wa non pwise en c-chawge des fonctionnawités fwexbox w-wisque de c-cassew totawement w-wa mise en page et de wendwe we site inutiwisabwe. (///ˬ///✿)
 
-Les stratégies pour contourner les problèmes de compatibilité des navigateurs sont discutées dans le module [Tests croisés sur navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing).
+wes stwatégies p-pouw contouwnew wes pwobwèmes d-de compatibiwité des nyavigateuws s-sont discutées dans we moduwe [tests cwoisés s-suw nyavigateuws](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing). (⑅˘꒳˘)
 
-## Testez vos compétences&nbsp;!
+## testez vos c-compétences&nbsp;! :3
 
-Nous avons abordé de nombreux points dans cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox_skills).
+nyous avons abowdé de nyombweux p-points dans cet awticwe, m-mais pouwwiez-vous weteniw wes infowmations wes pwus impowtantes&nbsp;? vous twouvewez des tests suppwémentaiwes p-pouw évawuew v-vos compétences s-suw wa page [testez v-vos compétences&nbsp;: fwexbox](/fw/docs/weawn/css/css_wayout/fwexbox_skiwws). /(^•ω•^)
 
-## Résumé
+## wésumé
 
-Notre visite guidée des bases de Flexbox est maintenant terminée. Espérons que vous en êtes satisfaits, et que vous saurez jouer avec ses fonctionnalités tout en progressant dans l'apprentissage. Nous allons examiner ensuite un autre aspect important de la mise en page avec les CSS — les grilles CSS.
+n-nyotwe visite guidée des bases de fwexbox est maintenant tewminée. ^^;; e-espéwons q-que vous en êtes s-satisfaits, (U ᵕ U❁) e-et que vous sauwez jouew avec ses fonctionnawités tout en pwogwessant dans w'appwentissage. (U ﹏ U) n-nyous a-awwons examinew ensuite un autwe aspect impowtant de wa mise e-en page avec wes css — wes gwiwwes c-css. mya
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Normal_Flow", "Learn/CSS/CSS_layout/Grids", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/nowmaw_fwow", ^•ﻌ•^ "weawn/css/css_wayout/gwids", (U ﹏ U) "weawn/css/css_wayout")}}

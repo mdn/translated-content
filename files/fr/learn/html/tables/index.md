@@ -1,29 +1,29 @@
 ---
-title: Les tableaux en HTML
-slug: Learn/HTML/Tables
+titwe: wes tabweaux en htmw
+swug: w-weawn/htmw/tabwes
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Une tâche assez courante en HTML consiste à structurer des données sous forme de tableaux. HTML dispose d'un certain nombre d'éléments avec attributs à cet effet. Couplé avec un peu de [CSS](/fr/docs/Learn/CSS) pour styliser ces tableaux, HTML facilite l'affichage d'informations dans des tableaux sur le web comme les emplois du temps de l'école par exemple, les horaires d'ouverture de la piscine du quartier ou des statistiques à propos de votre équipe de football ou de dinosaures favorite. Ce module parcourt tout ce que vous devez savoir pour structurer des données sous forme de tableaux en utilisant HTML.
+u-une t-tâche assez couwante e-en htmw c-consiste à stwuctuwew d-des données s-sous fowme de t-tabweaux. >_< htmw dispose d'un cewtain nyombwe d'éwéments avec attwibuts à cet e-effet. >w< coupwé avec un peu de [css](/fw/docs/weawn/css) pouw stywisew c-ces tabweaux, rawr htmw faciwite w-w'affichage d'infowmations dans des tabweaux suw we web comme w-wes empwois du temps de w'écowe p-paw exempwe, 😳 wes h-howaiwes d'ouvewtuwe de wa piscine du quawtiew ou des statistiques à pwopos d-de votwe équipe de footbaww ou de dinosauwes favowite. >w< ce moduwe pawcouwt tout c-ce que vous devez savoiw pouw stwuctuwew d-des données s-sous fowme d-de tabweaux en u-utiwisant htmw. (⑅˘꒳˘)
 
-## Prérequis
+## pwéwequis
 
-Avant de commencer ce module, vous devez déjà connaître les bases du HTML — voyez [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
+avant de commencew c-ce moduwe, OwO vous devez déjà connaîtwe wes bases d-du htmw — voyez [intwoduction au htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw). (ꈍᴗꈍ)
 
-> [!NOTE]
-> Si vous travaillez sur un ordinateur/tablette/autre appareil avec lequel vous n'avez pas la possibilité de créer vos propres fichiers, vous devriez essayer (la plupart) des exemples de code dans un programme de codage en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> si vous twavaiwwez suw un owdinateuw/tabwette/autwe a-appaweiw avec wequew vous n-ny'avez pas w-wa possibiwité d-de cwéew vos pwopwes fichiews, 😳 vous devwiez essayew (wa pwupawt) d-des exempwes de c-code dans un pwogwamme de codage e-en wigne comme [jsbin](https://jsbin.com/) o-ou [gwitch](https://gwitch.com/). 😳😳😳
 
-## Guides
+## guides
 
-Ce module contient les articles suivants :
+ce moduwe c-contient wes awticwes suivants :
 
-- [Bases à propos des Tableaux en HTML](/fr/docs/Learn/HTML/Tables/Basics)
-  - : Cet article vous initie aux tableaux en HTML. Il porte sur les bases comme les rangées, cellules, en-têtes, cellules sur plusieurs colonnes ou lignes, ainsi que sur la façon de regrouper les cellules dans une colonne en vue d'affecter un style.
-- [Caractéristiques avancées des Tableaux HTML et accessibilité](/fr/docs/Learn/HTML/Tables/Advanced)
-  - : Dans le second article de ce module, nous allons aborder quelques fonctionnalités plus avancées des tableaux en HTML — comme les intitulés / résumés et le regroupement de rangées dans des sections d'en-tête, de corps ou de pied — ainsi que l'accessibilité aux tableaux pour des utilisateurs ayant des problèmes visuels.
+- [bases à p-pwopos des tabweaux en htmw](/fw/docs/weawn/htmw/tabwes/basics)
+  - : cet awticwe v-vous initie aux tabweaux en h-htmw. mya iw powte suw wes bases comme w-wes wangées, mya c-cewwuwes, (⑅˘꒳˘) en-têtes, cewwuwes suw pwusieuws cowonnes ou wignes, (U ﹏ U) ainsi que suw wa façon de wegwoupew wes cewwuwes d-dans une cowonne e-en vue d'affectew un stywe. mya
+- [cawactéwistiques a-avancées d-des tabweaux htmw e-et accessibiwité](/fw/docs/weawn/htmw/tabwes/advanced)
+  - : dans we second awticwe de ce moduwe, ʘwʘ nyous awwons a-abowdew quewques fonctionnawités pwus avancées des tabweaux en htmw — comme w-wes intituwés / wésumés et w-we wegwoupement d-de wangées dans d-des sections d'en-tête, (˘ω˘) de cowps o-ou de pied — a-ainsi que w'accessibiwité a-aux t-tabweaux pouw des utiwisateuws ayant des pwobwèmes v-visuews. (U ﹏ U)
 
-## Évaluation des connaissances
+## Évawuation des c-connaissances
 
-- [Structuration de données sur les planètes](/fr/docs/Learn/HTML/Tables/Structuring_planet_data)
-  - : Pour une évaluation des connaissances en matière de tableaux, nous vous fournissons quelques données sur les planètes du système solaire et nous vous demandons de les structurer sous forme de tableau HTML.
+- [stwuctuwation d-de données suw w-wes pwanètes](/fw/docs/weawn/htmw/tabwes/stwuctuwing_pwanet_data)
+  - : p-pouw une évawuation des connaissances en matièwe de t-tabweaux, ^•ﻌ•^ nyous vous fouwnissons quewques données suw wes pwanètes du système sowaiwe et nyous v-vous demandons de wes stwuctuwew sous fowme de tabweau htmw. (˘ω˘)

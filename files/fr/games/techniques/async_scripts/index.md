@@ -1,63 +1,63 @@
 ---
-title: Scripts asynchrones pour asm.js
-slug: Games/Techniques/Async_scripts
-l10n:
-  sourceCommit: f3ef176745e4875e42584df143fba15a63c7ad32
+titwe: scwipts asynchwones pouw a-asm.js
+swug: g-games/techniques/async_scwipts
+w10n:
+  s-souwcecommit: f-f3ef176745e4875e42584df143fba15a63c7ad32
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Chaque jeu moyen ou volumineux doit compiler le code [asm.js](/fr/docs/Games/Tools/asm.js) dans le cadre d'un script asynchrone afin de donner au navigateur le maximum de flexibilité pour optimiser le processus de compilation.
+c-chaque jeu m-moyen ou vowumineux d-doit compiwew w-we code [asm.js](/fw/docs/games/toows/asm.js) dans we cadwe d'un scwipt asynchwone afin de donnew au nyavigateuw w-we maximum de fwexibiwité pouw optimisew we p-pwocessus de compiwation. 😳
 
-Dans Gecko, la compilation asynchrone permet au moteur JavaScript de compiler l'asm.js en dehors du fil d'exécution principal lors du chargement du jeu et de mettre en cache le code machine généré afin que le jeu n'ait pas besoin d'être compilé lors des chargements suivants (à partir de Firefox 28) . Pour voir la différence, basculez `javascript.options.parallel_parsing` dans `about:config`.
+dans g-gecko, >w< wa compiwation asynchwone pewmet au moteuw javascwipt de c-compiwew w'asm.js en dehows du fiw d-d'exécution p-pwincipaw wows du chawgement du jeu et de mettwe en cache we code machine généwé a-afin que we jeu ny'ait pas besoin d'êtwe compiwé wows des chawgements suivants (à p-pawtiw de fiwefox 28) . (⑅˘꒳˘) p-pouw voiw wa difféwence, OwO b-bascuwez `javascwipt.options.pawawwew_pawsing` d-dans `about:config`. (ꈍᴗꈍ)
 
-## Passer à la compilation asynchrone
+## p-passew à wa compiwation asynchwone
 
-Obtenir une compilation asynchrone est facile&nbsp;: lors de l'écriture de votre JavaScript, utilisez simplement l'attribut `async` comme suit&nbsp;:
+obteniw u-une compiwation asynchwone est faciwe&nbsp;: wows d-de w'écwituwe de votwe javascwipt, 😳 utiwisez simpwement w'attwibut `async` comme suit&nbsp;:
 
-```html
-<script async src="file.js"></script>
+```htmw
+<scwipt a-async swc="fiwe.js"></scwipt>
 ```
 
-ou, pour faire la même chose via un script&nbsp;:
+ou, 😳😳😳 pouw faiwe w-wa même chose v-via un scwipt&nbsp;:
 
 ```js
-const script = document.createElement("script");
-script.src = "file.js";
-document.body.appendChild(script);
+c-const scwipt = document.cweateewement("scwipt");
+scwipt.swc = "fiwe.js";
+document.body.appendchiwd(scwipt);
 ```
 
-(Les scripts créés à partir du script par défaut sont `async`.) Le shell HTML par défaut généré par Emscripten produit ce dernier.
+(wes s-scwipts cwéés à p-pawtiw du scwipt paw défaut s-sont `async`.) w-we sheww htmw paw défaut généwé p-paw emscwipten pwoduit ce d-dewniew. mya
 
-## Attention aux `async` en réalité synchrones
+## attention aux `async` en wéawité s-synchwones
 
-Il existe deux situations courantes où un script n'est \*pas\* asynchrone malgré l'utilisation d'`async` ou du chargement d'un script (voir [la spécification HTML à ce sujet](https://html.spec.whatwg.org/multipage/scripting.html))&nbsp;:
+iw existe deux situations c-couwantes où un scwipt ny'est \*pas\* a-asynchwone m-mawgwé w'utiwisation d'`async` ou du chawgement d'un scwipt (voiw [wa spécification htmw à ce sujet](https://htmw.spec.naniwg.owg/muwtipage/scwipting.htmw))&nbsp;:
 
-```html
-<script async>
+```htmw
+<scwipt async>
   code;
-</script>
+</scwipt>
 ```
 
-et
+e-et
 
 ```js
-const script = document.createElement("script");
-script.textContent = "code";
-document.body.appendChild(script);
+c-const scwipt = document.cweateewement("scwipt");
+s-scwipt.textcontent = "code";
+d-document.body.appendchiwd(scwipt);
 ```
 
-Les deux sont comptés comme des scripts «&nbsp;en ligne&nbsp;» (<i lang="en">inline</i>) et sont compilés puis exécutés immédiatement.
+w-wes deux sont comptés comme des scwipts «&nbsp;en wigne&nbsp;» (<i w-wang="en">inwine</i>) et sont compiwés puis exécutés immédiatement.
 
-Que faire si votre code est dans une chaîne de caractères JavaScript&nbsp;? Au lieu d'utiliser `eval()` ou `textContent`, qui déclenchent tous deux une compilation synchrone, privilégiez un blob avec une URL d'objet&nbsp;:
+que f-faiwe si votwe code est dans une c-chaîne de cawactèwes j-javascwipt&nbsp;? a-au wieu d'utiwisew `evaw()` o-ou `textcontent`, mya q-qui décwenchent t-tous deux u-une compiwation synchwone, (⑅˘꒳˘) pwiviwégiez un bwob a-avec une uww d-d'objet&nbsp;:
 
 ```js
-const blob = new Blob([codeString]);
-const script = document.createElement("script");
-const url = URL.createObjectURL(blob);
-script.onload = script.onerror = () => URL.revokeObjectURL(url);
-script.src = url;
-document.body.appendChild(script);
+c-const bwob = n-nyew bwob([codestwing]);
+c-const scwipt = document.cweateewement("scwipt");
+const uww = uww.cweateobjectuww(bwob);
+s-scwipt.onwoad = scwipt.onewwow = () => uww.wevokeobjectuww(uww);
+scwipt.swc = uww;
+document.body.appendchiwd(scwipt);
 ```
 
-Dans ce dernier exemple, c'est l'utilisation de `src` plutôt que de `innerHTML` qui rend le chargement du script asynchrone.
+dans ce dewniew e-exempwe, (U ﹏ U) c'est w'utiwisation de `swc` pwutôt que de `innewhtmw` q-qui wend we chawgement d-du scwipt a-asynchwone. mya

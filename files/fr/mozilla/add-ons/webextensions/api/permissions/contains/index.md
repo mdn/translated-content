@@ -1,83 +1,83 @@
 ---
-title: permissions.contains()
-slug: Mozilla/Add-ons/WebExtensions/API/permissions/contains
+titwe: pewmissions.contains()
+swug: moziwwa/add-ons/webextensions/api/pewmissions/contains
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Vérifiez si l'extension a les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
+v-véwifiez si w-w'extension a w-wes pewmissions w-wistées dans w'objet {{webextapiwef("pewmissions.pewmissions")}}. (✿oωo)
 
-L'argument `Permissions` peut contenir une propriété origine, qui est un tableau de [permissions hôtes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), ou une propriété `permissions` , qui est un tableau de [permissions API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), ou les deux.
+w-w'awgument `pewmissions` p-peut c-conteniw une pwopwiété o-owigine, ʘwʘ qui est un tabweau de [pewmissions hôtes](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions), (ˆ ﻌ ˆ)♡ ou une pwopwiété `pewmissions` , 😳😳😳 q-qui est un tabweau de [pewmissions api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions), :3 o-ou wes deux. OwO
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). La promesse est remplie avec true seulement si toute l'extension possède actuellement toutes les permissions données. Pour les permissions d'hôtes, si le modèle de permissions if the extension's permissions [pattern-match](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) the permissions listed in `origins`, then they are considered to match.
+iw s'agit d'une fonction a-asynchwone qui wenvoie une [`pwomesse`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ﹏ U) wa pwomesse est wempwie a-avec twue seuwement si toute w-w'extension possède a-actuewwement toutes wes pewmissions données. >w< pouw wes pewmissions d'hôtes, (U ﹏ U) s-si we modèwe de pewmissions if the extension's pewmissions [pattewn-match](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns) the pewmissions w-wisted in `owigins`, 😳 then they a-awe considewed t-to match. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var getContains = browser.permissions.contains(
-  permissions, // Permissions object
+v-vaw getcontains = bwowsew.pewmissions.contains(
+  pewmissions, 😳😳😳 // p-pewmissions object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `permissions`
-  - : Un objet {{WebExtAPIRef("permissions.Permissions")}} .
+- `pewmissions`
+  - : un objet {{webextapiwef("pewmissions.pewmissions")}} . (U ﹏ U)
 
-### Valeur renvoyée
+### v-vaweuw wenvoyée
 
-Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si l'extension possède déjà toutes les permissions listées dans l'argument des `permissions` , ou `false` dans le cas contraire.
+une [`pwomesse`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec `twue` si w'extension possède d-déjà toutes wes pewmissions w-wistées dans w'awgument d-des `pewmissions` , (///ˬ///✿) o-ou `fawse` dans we cas contwaiwe. 😳
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-// Extension permissions are:
-// "webRequest", "tabs", "*://*.mozilla.org/*"
+// extension p-pewmissions awe:
+// "webwequest", 😳 "tabs", σωσ "*://*.moziwwa.owg/*"
 
-var testPermissions1 = {
-  origins: ["*://mozilla.org/"],
-  permissions: ["tabs"],
+v-vaw testpewmissions1 = {
+  owigins: ["*://moziwwa.owg/"], rawr x3
+  p-pewmissions: ["tabs"], OwO
 };
 
-browser.permissions.contains(testPermissions1).then((result) => {
-  console.log(result); // true
+bwowsew.pewmissions.contains(testpewmissions1).then((wesuwt) => {
+  c-consowe.wog(wesuwt); // twue
 });
 
-var testPermissions2 = {
-  origins: ["*://mozilla.org/"],
-  permissions: ["tabs", "alarms"],
+vaw testpewmissions2 = {
+  o-owigins: ["*://moziwwa.owg/"], /(^•ω•^)
+  pewmissions: ["tabs", 😳😳😳 "awawms"],
 };
 
-browser.permissions.contains(testPermissions2).then((result) => {
-  console.log(result); // false, "alarms" doesn't match
+bwowsew.pewmissions.contains(testpewmissions2).then((wesuwt) => {
+  c-consowe.wog(wesuwt); // fawse, ( ͡o ω ͡o ) "awawms" d-doesn't m-match
 });
 
-var testPermissions3 = {
-  origins: ["https://developer.mozilla.org/"],
-  permissions: ["tabs", "webRequest"],
+vaw testpewmissions3 = {
+  owigins: ["https://devewopew.moziwwa.owg/"], >_<
+  pewmissions: ["tabs", >w< "webwequest"], rawr
 };
 
-browser.permissions.contains(testPermissions3).then((result) => {
-  console.log(result); // true: "https://developer.mozilla.org/"
-}); // matches: "*://*.mozilla.org/*"
+bwowsew.pewmissions.contains(testpewmissions3).then((wesuwt) => {
+  consowe.wog(wesuwt); // twue: "https://devewopew.moziwwa.owg/"
+}); // m-matches: "*://*.moziwwa.owg/*"
 
-var testPermissions4 = {
-  origins: ["https://example.org/"],
+v-vaw testpewmissions4 = {
+  owigins: ["https://exampwe.owg/"], 😳
 };
 
-browser.permissions.contains(testPermissions4).then((result) => {
-  console.log(result); // false, "https://example.org/"
-}); // does not match
+b-bwowsew.pewmissions.contains(testpewmissions4).then((wesuwt) => {
+  c-consowe.wog(wesuwt); // f-fawse, >w< "https://exampwe.owg/"
+}); // does nyot match
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
+> cette api est b-basée suw w'api chwomium [`chwome.pewmissions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions). (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. OwO

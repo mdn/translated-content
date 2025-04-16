@@ -1,90 +1,90 @@
 ---
-title: pageAction.getTitle()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getTitle
+titwe: pageaction.gettitwe()
+swug: moziwwa/add-ons/webextensions/api/pageaction/gettitwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient le titre de la page action.
+o-obtient we titwe d-de wa page action. mya
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (///ˬ///✿)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var gettingTitle = browser.pageAction.getTitle(
-  details, // object
+v-vaw gettingtitwe = bwowsew.pageaction.gettitwe(
+  detaiws, (˘ω˘) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`.
+  - : `object`. ^^;;
 
-    - `tabId`
-      - : `integer`. L'ID de l'onglet contenant l'action page dont vous voulez obtenir le titre.
+    - `tabid`
+      - : `integew`. (✿oωo) w'id de w'ongwet c-contenant w'action page dont vous vouwez obteniw w-we titwe. (U ﹏ U)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accomplie avec une chaîne contenant le titre de l'action de la page.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa accompwie avec une chaîne c-contenant we titwe de w'action d-de wa page. -.-
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple enregistre le titre de l'action de la page lorsque l'utilisateur clique sur son icône :
+cet exempwe enwegistwe we titwe de w'action d-de wa page wowsque w'utiwisateuw cwique suw son icône :
 
 ```js
-function gotTitle(title) {
-  console.log(`Title ${title}`);
+function gottitwe(titwe) {
+  c-consowe.wog(`titwe ${titwe}`);
 }
 
-browser.pageAction.onClicked.addListener((tab) => {
-  var gettingTitle = browser.pageAction.getTitle({
-    tabId: tab.id,
+bwowsew.pageaction.oncwicked.addwistenew((tab) => {
+  v-vaw gettingtitwe = b-bwowsew.pageaction.gettitwe({
+    t-tabid: tab.id, ^•ﻌ•^
   });
-  gettingTitle.then(gotTitle);
+  g-gettingtitwe.then(gottitwe);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.pageaction`](https://devewopew.chwome.com/extensions/pageaction). rawr c-cette documentation est déwivée de [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json) d-dans we code de chwomium code. (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge s-sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa w-wicence cweative commons attwibution 3.0 pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. UwU aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy f-fowms, (⑅˘꒳˘) with ow without
+// modification, (///ˬ///✿) a-awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, ^^;; this wist of conditions and the fowwowing discwaimew. >_<
+//    * wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, rawr x3 t-this wist of conditions a-and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. /(^•ω•^)
+//    * nyeithew the nyame of googwe inc. :3 nyow the nyames o-of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. (ꈍᴗꈍ)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, /(^•ω•^) i-incwuding, (⑅˘꒳˘) but nyot
+// wimited to, ( ͡o ω ͡o ) the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. òωó in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (⑅˘꒳˘) i-indiwect, incidentaw, XD
+// s-speciaw, -.- e-exempwawy, :3 ow consequentiaw damages (incwuding, nyaa~~ b-but nyot
+// wimited to, 😳 pwocuwement o-of substitute g-goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, nyaa~~ w-whethew in contwact, OwO stwict w-wiabiwity, rawr x3 ow t-towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way o-out of the use
+// of this softwawe, XD e-even if advised o-of the possibiwity of such damage. σωσ
 -->

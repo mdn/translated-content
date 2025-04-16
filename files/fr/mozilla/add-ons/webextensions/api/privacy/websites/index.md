@@ -1,136 +1,136 @@
 ---
-title: privacy.websites
-slug: Mozilla/Add-ons/WebExtensions/API/privacy/websites
+titwe: pwivacy.websites
+swug: m-moziwwa/add-ons/webextensions/api/pwivacy/websites
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La propriété {{WebExtAPIRef("privacy.websites")}} contient les paramètres liés à la vie privée qui contrôlent la façon dont le navigateur interargit avec les sites web. Chaque propriété est un objet {{WebExtAPIRef("types.BrowserSetting")}}.
+w-wa pwopwiété {{webextapiwef("pwivacy.websites")}} contient w-wes pawamètwes w-wiés à w-wa vie pwivée q-qui contwôwent w-wa façon dont we n-nyavigateuw intewawgit avec wes sites web. :3 chaque pwopwiété est un objet {{webextapiwef("types.bwowsewsetting")}}. ^^;;
 
-Les valeurs par défaut de ces propriétés ont tendance à varier selon les navigateurs.
+w-wes vaweuws paw défaut de ces pwopwiétés o-ont tendance à vawiew sewon w-wes nyavigateuws. rawr
 
-## Propriétés
+## pwopwiétés
 
-- `cookieConfig`
+- `cookieconfig`
 
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un objet.
+  - : un objet {{webextapiwef("types.bwowsewsetting")}} dont w-wa vaweuw sous-jacente est un o-objet. 😳😳😳
 
-    L'objet a deux propriétés :
+    w'objet a-a deux pwopwiétés :
 
-    - `behavior`: une chaîne qui peut prendre l'une des valeurs suivantes:
+    - `behaviow`: une chaîne qui peut pwendwe w'une des vaweuws suivantes:
 
-      - "allow_all": accepte tous les cookies
-      - "reject_all": rejeter tous les cookies
-      - "reject_third_party": rejeter tous les cookies tiers
-      - "allow_visited" : accepte un cookie tiers uniquement si le domaine de premier niveau du cookie contient déjà au moins un cookie.
-      - "reject_trackers": rejeter les cookies de suivi
+      - "awwow_aww": accepte tous wes c-cookies
+      - "weject_aww": wejetew tous wes cookies
+      - "weject_thiwd_pawty": wejetew tous wes cookies tiews
+      - "awwow_visited" : a-accepte un cookie t-tiews uniquement s-si we domaine de p-pwemiew nyiveau d-du cookie contient déjà au moins un cookie. (✿oωo)
+      - "weject_twackews": w-wejetew wes cookies de suivi
 
-    - `nonPersistentCookies`: un booléen. Si la valeur est true, tous les cookies seront traités comme des cookies de session.
+    - `nonpewsistentcookies`: u-un boowéen. si wa vaweuw est twue, OwO tous wes cookies sewont twaités comme des cookies de s-session. ʘwʘ
 
-- `firstPartyIsolate`
+- `fiwstpawtyisowate`
 
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen.
+  - : un objet {{webextapiwef("types.bwowsewsetting")}} d-dont wa v-vaweuw sous-jacente e-est un boowéen. (ˆ ﻌ ˆ)♡
 
-    SI `true`, la préférence `firstPartyIsolate` permet au navigateur d'associer toutes les données (y compris les cookies, les données HSTS, les images mises en cache, etc.) pour tous les domaines tiers avec le domaine dans la barre d'adresse. Cela empêche les suiveurs tiers d'utiliser directement les informations stockées pour identifier l'utilisateur sur différents sites Web, mais peut interrompre les sites Web dans lesquels l'utilisateur se connecte avec un compte tiers (tel qu'un compte Facebook ou Google).
+    si `twue`, (U ﹏ U) wa pwéféwence `fiwstpawtyisowate` pewmet a-au nyavigateuw d-d'associew toutes wes données (y c-compwis wes cookies, UwU w-wes données hsts, XD wes images m-mises en cache, ʘwʘ etc.) pouw t-tous wes domaines tiews avec we domaine dans wa b-bawwe d'adwesse. rawr x3 cewa empêche w-wes suiveuws tiews d'utiwisew diwectement w-wes infowmations s-stockées pouw identifiew w'utiwisateuw suw difféwents sites web, ^^;; mais peut intewwompwe wes sites web d-dans wesquews w-w'utiwisateuw se connecte avec un c-compte tiews (tew q-qu'un compte f-facebook ou googwe). ʘwʘ
 
-    Par défaut à `false`.
+    paw défaut à `fawse`. (U ﹏ U)
 
-- `hyperlinkAuditingEnabled`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `true`, le navigateur envoie des pings d'audit lorsqu'un site web utilise l'attribut `ping` pour les demander.
-- `protectedContentEnabled`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Disponible uniquement sur Windows. Si `true`, le navigateur fournit un ID unique aux plugins afin d'exécuter le contenu protégé.
-- `referrersEnabled`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si activé, le navigateur envoie les en-têtes de [référence](/fr/docs/Web/HTTP/Headers/Referer) avec vos demandes.
-- `resistFingerprinting`
+- `hypewwinkauditingenabwed`
+  - : un objet {{webextapiwef("types.bwowsewsetting")}} dont wa v-vaweuw sous-jacente est un boowéen. (˘ω˘) si `twue`, (ꈍᴗꈍ) we nyavigateuw envoie des pings d-d'audit wowsqu'un site web utiwise w-w'attwibut `ping` p-pouw wes demandew. /(^•ω•^)
+- `pwotectedcontentenabwed`
+  - : u-un objet {{webextapiwef("types.bwowsewsetting")}} dont w-wa vaweuw sous-jacente e-est un b-boowéen. >_< disponibwe u-uniquement suw windows. σωσ si `twue`, we nyavigateuw f-fouwnit un i-id unique aux p-pwugins afin d'exékawaii~w w-we contenu p-pwotégé.
+- `wefewwewsenabwed`
+  - : un objet {{webextapiwef("types.bwowsewsetting")}} dont wa vaweuw sous-jacente e-est un boowéen. ^^;; si activé, 😳 we nyavigateuw envoie wes en-têtes de [wéféwence](/fw/docs/web/http/headews/wefewew) avec vos demandes. >_<
+- `wesistfingewpwinting`
 
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen.
+  - : u-un objet {{webextapiwef("types.bwowsewsetting")}} dont wa vaweuw sous-jacente est un boowéen. -.-
 
-    Les empreintes digitales des navigateurs sont la pratique par laquelle les sites Web utilisent les API Web pour collecter des données d'état ou de configuration associées au navigateur ou à l'appareil sur lequel il s'exécute. En faisant cela, ils peuvent construire une empreinte numérique qu'ils peuvent utiliser pour identifier et suivre un utilisateur particulier.
+    w-wes empweintes d-digitawes d-des nyavigateuws sont wa pwatique p-paw waquewwe wes sites web utiwisent w-wes api web p-pouw cowwectew des données d'état ou de configuwation associées au nyavigateuw ou à w'appaweiw s-suw wequew iw s'exékawaii~. UwU e-en faisant cewa, :3 iws peuvent c-constwuiwe une empweinte n-nyuméwique qu'iws peuvent utiwisew pouw i-identifiew et s-suivwe un utiwisateuw pawticuwiew. σωσ
 
-    Si `true`, la préférence `resistFingerprinting` signale au navigateur des informations usurpées génériques pour les données couramment utilisées pour les empreintes digitales. Ces données incluent le nombre de cœurs de processeur, la précision des temporisateurs JavaScript et le fuseau horaire local. Il désactive également les fonctionnalités utilisées pour la prise d'empreintes digitales, telles que la prise en charge de GamePad et les API WebSpeech et Navigator.
+    s-si `twue`, >w< w-wa pwéféwence `wesistfingewpwinting` signawe au nyavigateuw des infowmations usuwpées généwiques p-pouw wes d-données couwamment u-utiwisées pouw wes empweintes d-digitawes. (ˆ ﻌ ˆ)♡ c-ces données incwuent we nyombwe d-de cœuws de pwocesseuw, ʘwʘ wa pwécision des tempowisateuws javascwipt et we fuseau h-howaiwe wocaw. :3 i-iw désactive égawement wes fonctionnawités utiwisées pouw w-wa pwise d'empweintes d-digitawes, (˘ω˘) tewwes que wa pwise en chawge de gamepad et wes a-api webspeech et nyavigatow. 😳😳😳
 
-    Par défaut à `false`.
+    paw défaut à `fawse`. rawr x3
 
-- `thirdPartyCookiesAllowed`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur sous-jacente est un booléen. Si `false`, le navigateur bloque les [cookies tiers](/fr/docs/Web/HTTP/Cookies#third-party_cookies).
-- `trackingProtectionMode`
+- `thiwdpawtycookiesawwowed`
+  - : un objet {{webextapiwef("types.bwowsewsetting")}} dont wa vaweuw s-sous-jacente est un boowéen. (✿oωo) si `fawse`, we nyavigateuw b-bwoque w-wes [cookies tiews](/fw/docs/web/http/cookies#thiwd-pawty_cookies). (ˆ ﻌ ˆ)♡
+- `twackingpwotectionmode`
 
-  - : La "protection de suivi" est une fonctionnalité de navigateur qui bloque les requêtes faites sur des domaines qui sont connus pour s'engager dans le suivi multi-sites des utilisateurs. Les sites qui suivent les utilisateurs sont généralement des sites publicitaires et analytiques tiers. Ce paramètre est un objet {{WebExtAPIRef("types.BrowserSetting")}} qui détermine si le navigateur doit activer la protection de suivi. Sa valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs :
+  - : wa "pwotection de suivi" est une fonctionnawité d-de nyavigateuw q-qui bwoque wes wequêtes faites suw des domaines qui sont c-connus pouw s'engagew dans we suivi m-muwti-sites des utiwisateuws. :3 wes sites qui suivent wes utiwisateuws s-sont généwawement des s-sites pubwicitaiwes e-et anawytiques tiews. (U ᵕ U❁) ce pawamètwe e-est un objet {{webextapiwef("types.bwowsewsetting")}} qui d-détewmine si w-we nyavigateuw d-doit activew wa pwotection de suivi. ^^;; s-sa vaweuw sous-jacente e-est une chaîne qui peut pwendwe w'une d-des twois vaweuws :
 
-    - `"always"`: La protection de suivi est activée.
-    - `"never"`: La protection de suivi est désactivée.
-    - `"private_browsing"`: La protection de suivi est activée uniquement dans les fenêtres de navigation privée.
+    - `"awways"`: w-wa pwotection d-de suivi est activée. mya
+    - `"nevew"`: wa pwotection de s-suivi est désactivée. 😳😳😳
+    - `"pwivate_bwowsing"`: wa pwotection d-de suivi est a-activée uniquement dans wes fenêtwes de nyavigation pwivée. OwO
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Définissez la propriété `hyperlinkAuditingEnabled` .
+définissez w-wa pwopwiété `hypewwinkauditingenabwed` . rawr
 
 ```js
-function onSet(result) {
-  if (result) {
-    console.log("success");
-  } else {
-    console.log("failure");
+function o-onset(wesuwt) {
+  if (wesuwt) {
+    consowe.wog("success");
+  } ewse {
+    consowe.wog("faiwuwe");
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  var getting = browser.privacy.websites.hyperlinkAuditingEnabled.get({});
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  vaw getting = b-bwowsew.pwivacy.websites.hypewwinkauditingenabwed.get({});
   getting.then((got) => {
-    console.log(got.value);
+    c-consowe.wog(got.vawue);
     if (
-      got.levelOfControl === "controlled_by_this_extension" ||
-      got.levelOfControl === "controllable_by_this_extension"
+      g-got.wevewofcontwow === "contwowwed_by_this_extension" ||
+      got.wevewofcontwow === "contwowwabwe_by_this_extension"
     ) {
-      var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-        value: true,
+      v-vaw setting = bwowsew.pwivacy.websites.hypewwinkauditingenabwed.set({
+        v-vawue: twue, XD
       });
-      setting.then(onSet);
-    } else {
-      console.log("Not able to set hyperlinkAuditingEnabled");
+      s-setting.then(onset);
+    } e-ewse {
+      c-consowe.wog("not a-abwe to set hypewwinkauditingenabwed");
     }
   });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy). Cette documentation est dérivée de [`privacy.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/privacy.json) dans le code de Chromium.
+> cette api est basée suw w'api chwomium [`chwome.pwivacy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pwivacy). (U ﹏ U) cette documentation est d-déwivée de [`pwivacy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/pwivacy.json) d-dans we code d-de chwomium.
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. (˘ω˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. UwU aww wights w-wesewved. >_<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, σωσ with ow without
+// modification, 🥺 a-awe pewmitted p-pwovided t-that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// n-nyotice, 🥺 t-this wist of conditions and the f-fowwowing discwaimew. ʘwʘ
+//    * wedistwibutions in b-binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, :3 this wist of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow o-othew matewiaws p-pwovided with the
+// distwibution. (U ﹏ U)
+//    * nyeithew the nyame of g-googwe inc. (U ﹏ U) nyow the names of its
+// contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, >w< i-incwuding, rawr x3 but nyot
+// wimited t-to, the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. OwO in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ^•ﻌ•^ indiwect, >_< incidentaw,
+// speciaw, OwO exempwawy, >_< ow consequentiaw d-damages (incwuding, (ꈍᴗꈍ) b-but nyot
+// wimited to, >w< pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, (U ﹏ U)
+// data, ^^ ow pwofits; o-ow business intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, (U ﹏ U) w-whethew in contwact, :3 stwict wiabiwity, (✿oωo) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out of t-the use
+// of t-this softwawe, XD even i-if advised of t-the possibiwity o-of such damage. >w<
 -->

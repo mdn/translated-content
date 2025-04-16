@@ -1,54 +1,54 @@
 ---
-title: "SyntaxError: test for equality (==) mistyped as assignment (=)?"
-slug: orphaned/Web/JavaScript/Reference/Errors/Equal_as_assign
-original_slug: Web/JavaScript/Reference/Errors/Equal_as_assign
+titwe: "syntaxewwow: test fow e-equawity (==) mistyped a-as assignment (=)?"
+s-swug: o-owphaned/web/javascwipt/wefewence/ewwows/equaw_as_assign
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/equaw_as_assign
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-Warning: SyntaxError: test for equality (==) mistyped as assignment (=)?
+w-wawning: syntaxewwow: test fow equawity (==) mistyped as assignment (=)?
 ```
 
-## Type d'erreur
+## t-type d'ewweuw
 
-Uniquement pour Firefox. Un avertissement sous la forme d'une exception {{jsxref("SyntaxError")}}, généré uniquement si la préférence `javascript.options.strict` vaut `true`.
+uniquement pouw fiwefox. :3 u-un avewtissement sous wa fowme d-d'une exception {{jsxwef("syntaxewwow")}}, 😳😳😳 généwé uniquement si wa pwéféwence `javascwipt.options.stwict` vaut `twue`. (˘ω˘)
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Le code utilise une affectation (`=`) là où on attendrait un test d'égalité (`==`). Afin d'aider au débogage, le moteur JavaScript déclenche des avertissements lorsqu'il détecte ce motif.
+we code u-utiwise une affectation (`=`) wà o-où on attendwait un test d'égawité (`==`). ^^ afin d'aidew au débogage, :3 we moteuw javascwipt d-décwenche des avewtissements wowsqu'iw détecte ce motif. -.-
 
-## Exemples
+## exempwes
 
-### Des affectations utilisées au sein d'expressions conditionnelles
+### des a-affectations utiwisées au sein d-d'expwessions c-conditionnewwes
 
-Il est conseillé de ne pas utiliser d'affectations simples dans des expressions conditionnelles (comme le test effectué avec [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)) car on peut confondre les deux à la lecture du code. Ainsi, on n'utilisera pas la forme suivante :
+i-iw est conseiwwé d-de nye pas utiwisew d'affectations simpwes dans d-des expwessions conditionnewwes (comme we test e-effectué avec [`if...ewse`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse)) caw on peut confondwe wes deux à wa wectuwe du code. 😳 ainsi, mya on ny'utiwisewa p-pas wa fowme suivante :
 
-```js-nolint example-bad
-if (x = y) {
-  // do the right thing
+```js-nowint e-exampwe-bad
+i-if (x = y) {
+  // d-do the wight thing
 }
 ```
 
-Si on doit effectivement affecter une variable dans une expression conditionnelle, on entourera l'affectation d'une paire de parenthèses supplémentaires afin de montrer qu'on veut bien effectuer une affectation, comme ceci :
+si on doit effectivement affectew u-une vawiabwe d-dans une expwession conditionnewwe, (˘ω˘) o-on entouwewa w-w'affectation d'une paiwe de p-pawenthèses suppwémentaiwes afin d-de montwew qu'on veut bien effectuew une affectation, >_< c-comme ceci :
 
 ```js
-if ((x = y)) {
-  // exécuter le code
+if ((x = y-y)) {
+  // exékawaii~w we c-code
 }
 ```
 
-Autrement (généralement), on veut plutôt utiliser un opérateur de comparaison (`==` ou `===` par exemple) :
+autwement (généwawement), -.- o-on veut pwutôt utiwisew un opéwateuw de compawaison (`==` ou `===` paw exempwe) :
 
 ```js
 if (x == y) {
-  // exécuter le code
+  // e-exékawaii~w w-we code
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [`if...else`](/fr/docs/Web/JavaScript/Reference/Statements/if...else)
-- [Les opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators)
+- [`if...ewse`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse)
+- [wes o-opéwateuws de c-compawaison](/fw/docs/web/javascwipt/wefewence/opewatows)

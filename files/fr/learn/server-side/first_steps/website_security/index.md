@@ -1,148 +1,148 @@
 ---
-title: La sécurité d'un site Web
-slug: Learn/Server-side/First_steps/Website_security
+titwe: wa sécuwité d'un site w-web
+swug: weawn/sewvew-side/fiwst_steps/website_secuwity
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/Premiers_pas")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/sewvew-side/fiwst_steps/web_fwamewowks", >w< "weawn/sewvew-side/pwemiews_pas")}}
 
-La sécurité d'un site web exige de la vigilance dans tous les aspects de sa conception et de son utilisation. Cet article d'introduction ne fera pas de vous un gourou de la sécurité des sites web, mais il vous aidera à comprendre d'où viennent les menaces et ce que vous pouvez faire pour renforcer votre application web contre les attaques les plus courantes.
+w-wa sécuwité d-d'un site web e-exige de wa vigiwance d-dans tous w-wes aspects de sa c-conception et d-de son utiwisation. UwU cet awticwe d'intwoduction ne fewa pas de vous un gouwou de w-wa sécuwité des sites web, 😳 mais iw vous aidewa à c-compwendwe d'où viennent wes m-menaces et ce que vous pouvez faiwe pouw wenfowcew votwe appwication w-web contwe wes attaques wes p-pwus couwantes. XD
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requis :</th>
-      <td>Connaissances de base en informatique.</td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    <tw>
+      <th scope="wow">pwé-wequis :</th>
+      <td>connaissances de base en infowmatique.</td>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Comprendre les menaces les plus courantes à la sécurité des applications
-        web et ce que vous pouvez faire pour réduire le risque de piratage de
-        votre site.
+        c-compwendwe wes menaces wes pwus couwantes à wa sécuwité des appwications
+        w-web et ce que vous pouvez faiwe p-pouw wéduiwe w-we wisque de p-piwatage de
+        v-votwe site. (✿oωo)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce que la sécurité d'un site web?
+## qu'est-ce que wa sécuwité d-d'un site web?
 
-Internet est un endroit dangereux ! Fréquemment, nous entendons parler de sites web devenus indisponibles en raison d'attaques par déni de service, ou affichant des informations modifiées (et souvent préjudiciables) sur leurs pages d'accueil. Dans d'autres cas, très médiatisés, des millions de mots de passe, d'adresses électroniques et de détails sur des cartes de crédit sont divulgués au public, exposant les utilisateurs du site web à la fois à l'embarras personnel et au risque de pertes financières.
+intewnet est un endwoit d-dangeweux ! ^•ﻌ•^ fwéquemment, mya nyous entendons pawwew de sites web devenus indisponibwes en waison d-d'attaques paw déni de sewvice, (˘ω˘) o-ou affichant des i-infowmations modifiées (et s-souvent pwéjudiciabwes) suw weuws pages d'accueiw. nyaa~~ d-dans d'autwes c-cas, :3 twès médiatisés, (✿oωo) des miwwions d-de mots de p-passe, (U ﹏ U) d'adwesses éwectwoniques et de détaiws s-suw des cawtes de cwédit sont d-divuwgués au pubwic, (ꈍᴗꈍ) exposant wes utiwisateuws d-du site web à wa fois à w'embawwas p-pewsonnew et au wisque de pewtes f-financièwes. (˘ω˘)
 
-L'objectif de la sécurité des sites web est de prévenir ces types d'attaques. Plus formellement, la sécurité des sites web est l'acte de protéger les sites web contre l'accès, l'utilisation, la modification, la destruction ou la perturbation non autorisées.
+w-w'objectif de wa sécuwité des sites web est de pwéveniw ces types d'attaques. ^^ pwus fowmewwement, (⑅˘꒳˘) wa sécuwité d-des sites w-web est w'acte de pwotégew wes s-sites web contwe w-w'accès, rawr w'utiwisation, :3 w-wa modification, OwO wa destwuction ou wa pewtuwbation nyon a-autowisées. (ˆ ﻌ ˆ)♡
 
-La sécurité efficace d'un site web nécessite un effort de conception sur l'ensemble du site : dans votre application web, dans la configuration du serveur web, dans vos politiques de création et de renouvellement des mots de passe et dans le code côté-client. Bien que tout cela semble très inquiétant, la bonne nouvelle est que si vous utilisez un framework web côté serveur, il incluera certainement par défaut des mécanismes de défense solides et bien pensés contre un certain nombre des attaques les plus courantes. D'autres attaques peuvent être atténuées grâce à la configuration de votre serveur web, par exemple en activant HTTPS. Enfin, les outils d'analyse de vulnérabilité accessibles au public peuvent vous aider à découvrir d'éventuelles erreurs dans votre conception.
+wa sécuwité efficace d'un site web nyécessite un effowt de conception s-suw w'ensembwe du site : d-dans votwe appwication w-web, :3 dans w-wa configuwation du sewveuw w-web, -.- dans vos powitiques d-de cwéation e-et de wenouvewwement d-des mots de passe et dans we code côté-cwient. b-bien q-que tout cewa sembwe t-twès inquiétant, -.- w-wa bonne n-nouvewwe est que si vous utiwisez un fwamewowk web côté sewveuw, òωó i-iw incwuewa cewtainement paw défaut des mécanismes de défense sowides et bien pensés contwe u-un cewtain nyombwe des attaques wes pwus couwantes. 😳 d'autwes a-attaques peuvent êtwe a-atténuées g-gwâce à wa configuwation d-de votwe sewveuw web, paw exempwe e-en activant https. nyaa~~ e-enfin, wes outiws d'anawyse de vuwnéwabiwité accessibwes au pubwic peuvent vous aidew à d-découvwiw d'éventuewwes ewweuws d-dans votwe conception. (⑅˘꒳˘)
 
-Le reste de cet article détaille les menaces les plus courantes qui pèsent sur les sites web et quelques étapes simples pour protèger votre site.
+we weste d-de cet awticwe d-détaiwwe wes menaces wes pwus couwantes qui pèsent s-suw wes sites w-web et quewques étapes simpwes p-pouw pwotègew v-votwe site. 😳
 
-> [!NOTE]
-> Ceci est un article d'introduction, conçu pour vous aider à réflechir à la sécurité de votre site web. Il n'est en rien exhaustif.
+> [!note]
+> ceci est un awticwe d'intwoduction, (U ﹏ U) conçu pouw vous a-aidew à wéfwechiw à w-wa sécuwité d-de votwe site web. /(^•ω•^) iw ny'est e-en wien exhaustif. OwO
 
-## Menaces visant la sécurité des sites web
+## m-menaces visant wa sécuwité d-des sites web
 
-Cette section n'énumère que quelques-unes des menaces les plus courantes visant les sites web et la façon dont elles sont tenues à distance. À mesure que vous lisez, notez comment les menaces apparaissent lorsque l'application web fait confiance ou n'est pas assez méfiante vis-à-vis des données provenant du navigateur !
+cette section ny'énumèwe que quewques-unes des menaces w-wes pwus couwantes v-visant wes sites web et wa façon dont ewwes s-sont tenues à distance. ( ͡o ω ͡o ) À m-mesuwe que vous wisez, XD nyotez comment wes menaces appawaissent w-wowsque w'appwication web fait confiance ou ny'est pas assez méfiante v-vis-à-vis des données pwovenant du navigateuw ! /(^•ω•^)
 
-### Cross-Site Scripting (XSS)
+### c-cwoss-site s-scwipting (xss)
 
-XSS est un terme utilisé pour décrire une classe d'attaque qui permet à l'attaquant d'injecter des scripts, exécutés côté-client, _au travers_ du site web pour viser le navigateur web des autres utilisateurs. Comme le code injecté provient du site web le navigateur web le considère comme sûr, il peut de ce fait faire des choses comme transmettre le cookie d'authentification de l'utilisateur à l'attaquant. Une fois que l'attaquant obtient ce cookie il peut se connecter sur le site comme si il était l'utilisateur attaqué et peut faire tout ce que l'utilisateur pourrait faire. En fonction du site sur lequel l'attaque se produit, cela peut inclure l'accès aux détails de carte bancaire, les informations des contacts, la modification du mot de passe, etc.
+xss est un tewme utiwisé pouw décwiwe une c-cwasse d'attaque q-qui pewmet à w'attaquant d'injectew des scwipts, /(^•ω•^) exécutés côté-cwient, 😳😳😳 _au t-twavews_ du site web pouw visew w-we nyavigateuw web des autwes utiwisateuws. comme we code injecté p-pwovient du site web we nyavigateuw w-web we c-considèwe comme sûw, (ˆ ﻌ ˆ)♡ iw peut de c-ce fait faiwe des choses comme t-twansmettwe we c-cookie d'authentification d-de w'utiwisateuw à w'attaquant. :3 u-une fois q-que w'attaquant obtient ce cookie iw peut se c-connectew suw we s-site comme si i-iw était w'utiwisateuw attaqué et peut faiwe tout c-ce que w'utiwisateuw pouwwait f-faiwe. òωó en fonction d-du site suw wequew w'attaque se pwoduit, 🥺 cewa peut incwuwe w-w'accès aux détaiws d-de cawte bancaiwe, (U ﹏ U) w-wes infowmations d-des contacts, wa modification d-du mot de passe, XD etc.
 
-> [!NOTE]
-> Les vulnérabilités XSS ont historiquement été les plus courantes.
+> [!note]
+> wes vuwnéwabiwités xss ont histowiquement été wes pwus couwantes. ^^
 
-Il y a deux manières principales pour demander au site de retourner un script injecté vers un navigateur web — elles sont désignées en tant que vulnérabilités XSS _réfléchie_ et _persistante_.
+i-iw y a deux manièwes pwincipawes p-pouw demandew au site de wetouwnew u-un scwipt injecté vews un n-nyavigateuw web — ewwes sont d-désignées en t-tant que vuwnéwabiwités x-xss _wéfwéchie_ e-et _pewsistante_. o.O
 
-- Une vulnérabilité XSS réfléchie se produit quand le contenu de l'utilisateur transmis au serveur est immédiatement retourné, sans avoir été modifié, pour être affiché dans le navigateur — tout les scripts présents dans le contenu d'origine seront exécutés quand la nouvelle page sera chargée!
-  On prendra par exemple une fonction de recherche dans un site où les termes recherchés sont encodés en tant que paramètres dans l'URL, et que ces termes sont affichés en permanence avec les résultats. Un attaquant peut construire un lien de recherche contenant un script malicieux en tant que paramètre (ex: `https://developer.mozilla.org?q=beer<script%20src="http://example.com/script_malveillant.js"></script>`) et le transmettre par e-mail à un autre utilisateur. Si l'utilisateur ciblé clique sur ce "lien intéressant", le script sera exécuté quand les résultats de la recherche seront affichés. Comme vu auparavant, cela donne à l'attaquant toute les informations dont il a besoin pour se connecter sur le site avec le compte de la victime — potentiellement faire des achats en tant que cet utilisateur ou accèder à la liste de contacts..
-- Une vulnérabilité XSS _persistante_ sera celle où le script malicieux est stocké sur le site web puis affiché, sans modification, un peu plus tard par les autres utilisateurs et exécuté à leur insu.
-  Par exemple, un écran de discussion qui accepte les commentaires contenant du code HTML pur peuvent stocker le script malicieux de l'attaquant. Quand les commentaires sont affichés le script est exécuté et peut ensuite transmettre à l'attaquant les informations nécessaires pour accèder au compte de l'utilisateur. Cette méthode d'attaque est extrêmement courante et efficace, parce que l'attaquant n'a pas besoin d'avoir une relation directe avec les victimes.
+- u-une vuwnéwabiwité xss wéfwéchie se pwoduit quand we contenu de w'utiwisateuw twansmis au sewveuw est immédiatement w-wetouwné, 😳😳😳 s-sans avoiw été m-modifié, /(^•ω•^) pouw êtwe affiché d-dans we nyavigateuw — tout wes scwipts pwésents dans we contenu d-d'owigine s-sewont exécutés quand wa nouvewwe p-page sewa chawgée! 😳😳😳
+  on pwendwa paw exempwe u-une fonction de w-wechewche dans un site où wes t-tewmes wechewchés s-sont encodés en tant que pawamètwes dans w'uww, ^•ﻌ•^ et que ces tewmes sont affichés e-en pewmanence a-avec wes wésuwtats. 🥺 u-un attaquant p-peut constwuiwe u-un wien de wechewche contenant u-un scwipt mawicieux e-en tant que pawamètwe (ex: `https://devewopew.moziwwa.owg?q=beew<scwipt%20swc="http://exampwe.com/scwipt_mawveiwwant.js"></scwipt>`) et w-we twansmettwe p-paw e-maiw à un autwe utiwisateuw. o.O s-si w'utiwisateuw cibwé cwique suw ce "wien i-intéwessant", (U ᵕ U❁) we scwipt sewa exécuté q-quand wes w-wésuwtats de wa wechewche sewont a-affichés. ^^ comme vu aupawavant, (⑅˘꒳˘) cewa donne à w-w'attaquant toute w-wes infowmations d-dont iw a besoin pouw se connectew suw we site avec we compte d-de wa victime — potentiewwement faiwe des a-achats en tant que c-cet utiwisateuw ou accèdew à w-wa wiste de contacts..
+- une vuwnéwabiwité xss _pewsistante_ s-sewa cewwe où w-we scwipt mawicieux est stocké suw we site web p-puis affiché, :3 sans modification, (///ˬ///✿) un peu pwus tawd p-paw wes autwes u-utiwisateuws et exécuté à weuw i-insu. :3
+  paw exempwe, 🥺 un écwan d-de discussion q-qui accepte wes c-commentaiwes contenant du code htmw puw peuvent stockew we scwipt mawicieux de w'attaquant. mya quand wes commentaiwes sont affichés we scwipt est exécuté et peut ensuite twansmettwe à w'attaquant wes infowmations n-nyécessaiwes p-pouw accèdew au compte de w'utiwisateuw. XD cette m-méthode d'attaque e-est extwêmement c-couwante et efficace, -.- pawce q-que w'attaquant ny'a pas besoin d-d'avoiw une w-wewation diwecte avec wes victimes. o.O
 
-  Alors que l'envoi de données avec `POST` ou `GET` est la source la plus commune de vulnérabilité XSS, toute donnée en provenance du navigateur web est potentiellement vulnérable (cela inclut l'affichage des données des cookies par le navigateur, ou les fichiers de l'utilisateur qui sont chargés et affichés).
+  a-awows que w'envoi de données a-avec `post` o-ou `get` est wa souwce wa pwus commune de vuwnéwabiwité x-xss, (˘ω˘) t-toute donnée en p-pwovenance du n-nyavigateuw web e-est potentiewwement v-vuwnéwabwe (cewa i-incwut w'affichage d-des données d-des cookies paw we nyavigateuw, (U ᵕ U❁) o-ou wes fichiews d-de w'utiwisateuw q-qui sont chawgés et affichés). rawr
 
-La meilleur défense contre les vulnérabilités XSS est de supprimer ou désactiver toutes les balises qui peuvent potentiellement contenir des instructions pour exécuter du code. Pour HTML cela inclut les tags comme `<script>`, `<object>`, `<embed>`, et `<link>`.
+w-wa meiwweuw défense contwe wes vuwnéwabiwités x-xss est de suppwimew ou d-désactivew toutes w-wes bawises q-qui peuvent potentiewwement conteniw d-des instwuctions pouw exékawaii~w d-du code. 🥺 pouw htmw cewa i-incwut wes tags comme `<scwipt>`, rawr x3 `<object>`, ( ͡o ω ͡o ) `<embed>`, σωσ e-et `<wink>`. rawr x3
 
-Il est nécessaire de traiter les données saisies par l'utilisateur pour être sûr qu'il ne puisse ni exécuter de scripts ni pertuber le fonctionnement normal du site (ce procédé est appelé _input sanitization_ en anglais). De nombreux frameworks proposent par défaut cette vérification sur les entrées des formulaires.
+iw est nécessaiwe de twaitew wes données saisies paw w'utiwisateuw p-pouw êtwe sûw qu'iw n-nye puisse nyi e-exékawaii~w de scwipts nyi pewtubew we fonctionnement nyowmaw d-du site (ce pwocédé est appewé _input s-sanitization_ e-en angwais). (ˆ ﻌ ˆ)♡ d-de nyombweux fwamewowks pwoposent paw défaut c-cette véwification s-suw wes entwées des fowmuwaiwes. rawr
 
-### Injection SQL
+### i-injection sqw
 
-L'injection SQL est une vulnérabilité qui permet à un attaquant d'exécuter du code SQL frauduleux sur une base de données, permettant l'accès, la modification ou la suppression des données quelque soit le droit de l'utilisateur. Une attaque par injection réussie peut permettre l'usurpation d'un compte, la création d'un compte avec les droits administrateur, l'accès à toute les données du serveur, ou la modification / destruction des données pour le rendre inutilisable.
+w'injection sqw est u-une vuwnéwabiwité qui pewmet à u-un attaquant d-d'exékawaii~w du c-code sqw fwauduweux suw une base d-de données, :3 p-pewmettant w'accès, rawr w-wa modification o-ou wa suppwession des données q-quewque soit w-we dwoit de w'utiwisateuw. (˘ω˘) u-une a-attaque paw injection w-wéussie peut p-pewmettwe w'usuwpation d-d'un c-compte, (ˆ ﻌ ˆ)♡ wa cwéation d'un compte a-avec wes dwoits administwateuw, mya w-w'accès à toute wes données d-du sewveuw, (U ᵕ U❁) ou wa m-modification / d-destwuction des données pouw we wendwe inutiwisabwe. mya
 
-Cette vulnérabilité est présente quand la saisie de l'utilisateur est transmise à une requête SQL sous-jacente qui peut modifier le sens de la requête. Par exemple, dans le code ci-dessous qui devrait lister l'ensemble des utilisateurs avec un nom particulier (`userName`) et qui provient d'un formulaire HTML:
+cette vuwnéwabiwité e-est p-pwésente quand w-wa saisie de w'utiwisateuw est twansmise à une wequête sqw sous-jacente q-qui p-peut modifiew we sens de wa wequête. ʘwʘ p-paw exempwe, (˘ω˘) d-dans we code ci-dessous qui devwait wistew w'ensembwe des utiwisateuws a-avec un n-nyom pawticuwiew (`usewname`) e-et qui pwovient d-d'un fowmuwaiwe htmw:
 
-```sql
-statement = "SELECT * FROM users WHERE name = '" + userName + "';"
+```sqw
+statement = "sewect * fwom usews whewe n-name = '" + u-usewname + "';"
 ```
 
-Si l'utilisateur entre un nom correct cela marchera comme voulu. Cependant un utilisateur malveillant peut changer complètement le sens de cette requête SQL pour obtenir la requête qui suit, simplement en ajoutant le texte, **en gras** ci dessous, en tant que nom, cette requête, modifiée, va créer une requête SQL valide qui va supprimer la table `users` et sélectionner toute les données de la table `userinfo` (révèlant les informations de chaque utilisateur). Tout cela est rendu possible à cause du début du texte injecté (`'a';`) qui va complèter la requête d'origine (`'` est le symbole pour délimiter une chaine de texte en SQL).
+si w'utiwisateuw entwe un n-nyom cowwect cewa mawchewa comme vouwu. cependant u-un utiwisateuw mawveiwwant peut c-changew compwètement w-we sens de cette wequête s-sqw pouw obteniw w-wa wequête qui suit, 😳 simpwement e-en ajoutant we texte, òωó **en gwas** c-ci dessous, nyaa~~ e-en tant que nyom, o.O c-cette wequête, nyaa~~ m-modifiée, (U ᵕ U❁) va cwéew une wequête s-sqw vawide q-qui va suppwimew w-wa tabwe `usews` et séwectionnew t-toute wes données de wa tabwe `usewinfo` (wévèwant wes infowmations d-de chaque u-utiwisateuw). 😳😳😳 t-tout cewa est wendu possibwe à cause du début du texte injecté (`'a';`) qui v-va compwètew wa wequête d'owigine (`'` e-est we s-symbowe pouw déwimitew une chaine de texte en s-sqw). (U ﹏ U)
 
-```sql
-SELECT * FROM users WHERE name = 'a';DROP TABLE users; SELECT * FROM userinfo WHERE 't' = 't';
+```sqw
+sewect * fwom usews w-whewe nyame = 'a';dwop t-tabwe u-usews; sewect * f-fwom usewinfo whewe 't' = 't';
 ```
 
-Le moyen pour éviter ce type d'attaque est de s'assurer que toute saisie de l'utilisateur transmise à une requête SQL ne peut pas changer la nature de cette requête. Un moyen de faire cela est d'[échapper](https://fr.wikipedia.org/wiki/Caractère_d%27échappement) tous les caractères de la saisie utilisateur quand ils ont un sens particulier en SQL.
+w-we moyen pouw évitew ce type d'attaque est de s'assuwew que toute saisie de w-w'utiwisateuw twansmise à une w-wequête sqw nye peut pas changew wa nyatuwe de cette wequête. u-un moyen de faiwe cewa est d'[échappew](https://fw.wikipedia.owg/wiki/cawactèwe_d%27échappement) tous wes cawactèwes de wa saisie utiwisateuw q-quand iws ont u-un sens pawticuwiew en sqw. ^•ﻌ•^
 
-> [!NOTE]
-> La requête SQL considère le symbole ' comme le début et la fin d'une chaine de texte. En ajoutant le caractère \ nous allons "échapper" ce symbole, et dire à SQL de le traiter comme une simple partie de la chaîne de caractères.
+> [!note]
+> w-wa wequête sqw considèwe we symbowe ' c-comme we début e-et wa fin d'une chaine de texte. (⑅˘꒳˘) e-en ajoutant we cawactèwe \ nyous a-awwons "échappew" ce symbowe, >_< et diwe à sqw de we twaitew c-comme une simpwe pawtie de wa chaîne de cawactèwes. (⑅˘꒳˘)
 
-Dans la requête ci-dessous nous avons échappé le caractère '. Le SQL va donc interpréter la chaine complète (en gras) comme un nom (un nom étrange en effet, mais pas nuisible).
+d-dans wa wequête c-ci-dessous n-nyous avons échappé we cawactèwe '. σωσ we sqw v-va donc intewpwétew wa chaine compwète (en gwas) comme un nyom (un nyom étwange e-en effet, 🥺 mais p-pas nyuisibwe). :3
 
-```sql
-SELECT * FROM users WHERE name = 'a\';DROP TABLE users; SELECT * FROM userinfo WHERE \'t\' = \'t';
+```sqw
+s-sewect * f-fwom usews whewe nyame = 'a\';dwop tabwe usews; s-sewect * fwom u-usewinfo whewe \'t\' = \'t';
 ```
 
-Les frameworks web se chargent bien souvent d'échapper ces caractères à votre place. Django, par exemple, s'assure que toute saisie d'un utilisateur transmise au modèle est bien échappée.
+wes fwamewowks web se chawgent b-bien souvent d'échappew ces cawactèwes à votwe p-pwace. (ꈍᴗꈍ) django, paw exempwe, ^•ﻌ•^ s'assuwe que toute s-saisie d'un u-utiwisateuw twansmise au modèwe e-est bien échappée. (˘ω˘)
 
-> [!NOTE]
-> Cette section s'inspire beaucoup des informations de [Wikipedia ici](https://en.wikipedia.org/wiki/SQL_injection).
+> [!note]
+> c-cette section s-s'inspiwe beaucoup des infowmations de [wikipedia i-ici](https://en.wikipedia.owg/wiki/sqw_injection). 🥺
 
-### Falsification de requête inter-sites (CSRF)
+### fawsification de wequête i-intew-sites (cswf)
 
-Les attaques CSRF permettent à un utilisateur malveillant d'éxécuter des actions à l'aide des identifiants d'un autre utilisateur sans que cet utilisateur ne soit informé ou consentant.
+wes attaques cswf pewmettent à un utiwisateuw m-mawveiwwant d-d'éxékawaii~w d-des actions à w-w'aide des identifiants d-d'un autwe utiwisateuw s-sans que cet utiwisateuw nye soit infowmé ou c-consentant. (✿oωo)
 
-Ce type d'attaque s'explique mieux avec un exemple. John est l'utilisateur malveillant qui sait qu'un site particulier permet à des utilisateurs authentifiés d'envoyer de l'argent vers un compte particulier en utilisant des requêtes HTTP POST qui incluent le numéro de compte et le montant. John construit un formulaire qui inclut son numéro de compte et un montant dans des champs cachés (invisibles) et le transmet à un autre utilisateur du site (avec le bouton de validation déguisé en un lien vers un site "pour devenir riche".
+ce type d'attaque s'expwique m-mieux avec un exempwe. XD john est w'utiwisateuw m-mawveiwwant q-qui sait qu'un site pawticuwiew p-pewmet à des utiwisateuws authentifiés d-d'envoyew d-de w'awgent vews un compte p-pawticuwiew en u-utiwisant des wequêtes http post q-qui incwuent we nyuméwo de compte et we montant. (///ˬ///✿) john constwuit u-un fowmuwaiwe qui incwut son n-nyuméwo de compte et un montant dans des champs c-cachés (invisibwes) e-et we twansmet à u-un autwe utiwisateuw du s-site (avec we bouton d-de vawidation déguisé en u-un wien vews un site "pouw deveniw w-wiche". ( ͡o ω ͡o )
 
-Si un utilisateur clique sur le bouton de validation, une requête HTTP POST, contenant les informations de transaction, va être transmise au serveur ainsi que le cookie que le navigateur web associe au site (l'ajout à la requête du cookie associé au site est le comportement normal du navigateur). Le serveur va vérifier le cookie d'authentification, et l'utiliser pour déterminer si l'utilisateur est ou n'est pas connecté et donc permet ou non la transaction.
+si un utiwisateuw cwique s-suw we bouton d-de vawidation, ʘwʘ une wequête http post, rawr contenant wes infowmations de twansaction, o.O v-va êtwe twansmise a-au sewveuw ainsi que we cookie que we nyavigateuw web associe a-au site (w'ajout à wa wequête d-du cookie a-associé au site est we compowtement nyowmaw du nyavigateuw). ^•ﻌ•^ we sewveuw va véwifiew w-we cookie d'authentification, (///ˬ///✿) et w'utiwisew p-pouw détewminew si w'utiwisateuw e-est ou ny'est p-pas connecté et donc pewmet o-ou nyon wa twansaction. (ˆ ﻌ ˆ)♡
 
-Au final tout utilisateur qui va cliquer sur le bouton de validation, alors qu'il sera connecté sur le site d'échange d'argent, va autoriser la transaction. John va devenir riche !
+a-au finaw t-tout utiwisateuw q-qui va cwiquew s-suw we bouton d-de vawidation, XD awows qu'iw sewa connecté suw we site d'échange d'awgent, (✿oωo) va autowisew wa twansaction. -.- j-john va d-deveniw wiche !
 
-> [!NOTE]
-> L'astuce ici est que John n'a pas besoin d'accéder aux cookies de l'utilisateur (ou à ses identifiants), le navigateur web stocke cette information et l'inclut automatiquement dans toute les requêtes destinées au serveur associé.
+> [!note]
+> w-w'astuce i-ici est que j-john ny'a pas b-besoin d'accédew aux cookies de w'utiwisateuw (ou à ses identifiants), XD we nyavigateuw w-web stocke c-cette infowmation et w'incwut automatiquement dans toute wes w-wequêtes destinées a-au sewveuw a-associé. (✿oωo)
 
-Un moyen de prévenir ce type d'attaque est que le serveur demande que chaque requête POST possède un secret généré par le serveur et spécifique à l'utilisateur (le secret serait transmis par le serveur lors de l'envoi du formulaire de transaction). Cette approche empêche John de créer son propre formulaire car il n'est pas capable de connaitre le secret que le serveur founit à l'utilisateur. Même si il venait à trouver ce secret et créer un formulaire pour un utilisateur particulier, il ne pourrait pas utiliser ce formulaire pour attaquer d'autres utilisateurs
+un moyen de pwéveniw ce type d'attaque e-est que we sewveuw demande que chaque wequête p-post possède u-un secwet généwé paw we sewveuw et spécifique à w-w'utiwisateuw (we secwet sewait t-twansmis paw w-we sewveuw wows de w'envoi du f-fowmuwaiwe de twansaction). (˘ω˘) c-cette a-appwoche empêche j-john de cwéew s-son pwopwe fowmuwaiwe c-caw iw ny'est pas capabwe d-de connaitwe w-we secwet que we sewveuw founit à w-w'utiwisateuw. (ˆ ﻌ ˆ)♡ même si iw venait à twouvew c-ce secwet et cwéew un fowmuwaiwe p-pouw un utiwisateuw pawticuwiew, >_< i-iw nye pouwwait p-pas utiwisew ce fowmuwaiwe pouw attaquew d'autwes u-utiwisateuws
 
-Les framework web incluent souvent des mécanismes afin de prévenir les attaques CSRF.
+wes fwamewowk web incwuent souvent d-des mécanismes a-afin de pwéveniw wes attaques cswf. -.-
 
-### Autre menaces
+### a-autwe menaces
 
-Les autres attaques et vulnérabilités courantes incluent:
+wes a-autwes attaques et vuwnéwabiwités c-couwantes incwuent:
 
-- [Clickjacking](https://www.owasp.org/index.php/Clickjacking). Dans cette attaque un utilisateur malveillant détourne les clics destinés à un site visible et les envoie dans une page cachée en dessous. Cette technique peut être utilisée, par exemple, pour afficher le site légitime d'une banque mais capturer les identifiants d'authentification dans une \<iframe> invisible controlée par l'attaquant. Sinon cela peut être utilisé pour obtenir de l'utilisateur qu'il clique sur le bouton visible d'un site, mais en le faisant il va en fait cliquer involontairement sur un bouton différent. Comme défense, votre site peut se prévenir d'être inclut dans une iframe d'un autre site en configurant les bonnes en-têtes HTTP.
-- [Déni de Service](/fr/docs/Glossary/Distributed_Denial_of_Service) (DoS). Le déni de service est souvent pratiqué en surchargeant de fausses requêtes un site cible avec afin que l'accès au site soit perturbé pour les usagers légitimes. Les requêtes peuvent simplement être nombreuses, ou elles peuvent individuellement nécessiter une grande quantité de ressource (ex: chargement de fichiers lourds, etc). La défense contre cette attaque se base souvent sur l'identification et le blocage du mauvais trafic tout en autorisant l'arrivée des messages légitimes. Ces défenses sont généralement intégrées ou en amont du serveur web (elle ne font pas partie de l'application web).
-- [Découverte via la navigation dans les répertoires et fichiers](https://en.wikipedia.org/wiki/Directory_traversal_attack). Dans cette famille d'attaque un utilisateur malveillant va tenter d'accèder aux fichiers du serveur web auxquels il ne devrait pas avoir accès. Cette vulnérabilité se produit quand l'utilisateur peut transmettre le nom d'un fichier qui comprend les caractères de navigation dans le système de fichier (par exemple: `../../`). La solution est de désinfecter la saisie avant de l'utiliser.
-- [Inclusion de fichiers](https://fr.wikipedia.org/wiki/Remote_File_Inclusion). Dans cette attaque un utilisateur est capable de spécifier un fichier "involontaire" pour être affiché ou exécuté dans les données transmises au serveur. Une fois chargé ce fichier peut être exécuté sur le serveur web ou du côté client (menant à une attaque XSS). La solution est de vérifier les saisies avant de les utiliser.
-- [Injection de commandes](https://www.owasp.org/index.php/Command_Injection). Les attaques par injection de commande permettent à un utilisateur malveillant d'exécuter des commandes systèmes frauduleuses sur le système hôte. La solution est de vérifier chaque saisie des utilisateurs avant de les utiliser dans les appels systèmes.
+- [cwickjacking](https://www.owasp.owg/index.php/cwickjacking). dans c-cette attaque un u-utiwisateuw mawveiwwant détouwne w-wes cwics destinés à u-un site visibwe et wes envoie dans une p-page cachée en d-dessous. (///ˬ///✿) cette t-technique peut êtwe u-utiwisée, XD paw exempwe, ^^;; pouw affichew we site wégitime d'une banque mais captuwew wes identifiants d'authentification d-dans u-une \<ifwame> i-invisibwe contwowée p-paw w'attaquant. rawr x3 s-sinon cewa p-peut êtwe utiwisé pouw obteniw d-de w'utiwisateuw q-qu'iw cwique suw we bouton visibwe d-d'un site, OwO m-mais en we faisant iw va en fait cwiquew invowontaiwement s-suw un bouton difféwent. ʘwʘ comme défense, rawr v-votwe site peut se pwéveniw d-d'êtwe incwut d-dans une ifwame d'un autwe site e-en configuwant w-wes bonnes en-têtes h-http. UwU
+- [déni de sewvice](/fw/docs/gwossawy/distwibuted_deniaw_of_sewvice) (dos). (ꈍᴗꈍ) w-we déni d-de sewvice est souvent pwatiqué e-en suwchawgeant de fausses wequêtes u-un site cibwe a-avec afin que w-w'accès au site soit pewtuwbé p-pouw wes usagews wégitimes. (✿oωo) wes wequêtes peuvent s-simpwement êtwe nyombweuses, (⑅˘꒳˘) ou ewwes peuvent individuewwement nyécessitew une gwande quantité de wessouwce (ex: c-chawgement de fichiews wouwds, OwO etc). wa défense contwe cette attaque se base souvent suw w'identification e-et we bwocage du mauvais twafic tout en autowisant w-w'awwivée des messages w-wégitimes. 🥺 ces défenses sont généwawement intégwées o-ou en amont du sewveuw w-web (ewwe nye font pas pawtie de w-w'appwication w-web). >_<
+- [découvewte via wa nyavigation dans wes w-wépewtoiwes et fichiews](https://en.wikipedia.owg/wiki/diwectowy_twavewsaw_attack). (ꈍᴗꈍ) dans cette famiwwe d'attaque u-un utiwisateuw mawveiwwant va t-tentew d'accèdew aux fichiews d-du sewveuw web auxquews iw nye devwait p-pas avoiw a-accès. 😳 cette vuwnéwabiwité se pwoduit quand w'utiwisateuw peut t-twansmettwe we nyom d'un fichiew qui compwend w-wes cawactèwes de nyavigation dans we système de fichiew (paw exempwe: `../../`). 🥺 w-wa sowution e-est de désinfectew wa saisie avant d-de w'utiwisew.
+- [incwusion d-de fichiews](https://fw.wikipedia.owg/wiki/wemote_fiwe_incwusion). nyaa~~ dans cette attaque u-un utiwisateuw est capabwe de spécifiew un fichiew "invowontaiwe" pouw êtwe a-affiché ou e-exécuté dans wes données twansmises a-au sewveuw. ^•ﻌ•^ u-une fois chawgé ce fichiew p-peut êtwe exécuté suw we sewveuw web ou du côté c-cwient (menant à une attaque xss). (ˆ ﻌ ˆ)♡ wa sowution e-est de véwifiew w-wes saisies avant de wes utiwisew. (U ᵕ U❁)
+- [injection de commandes](https://www.owasp.owg/index.php/command_injection). mya w-wes attaques paw injection de commande pewmettent à un utiwisateuw mawveiwwant d'exékawaii~w des commandes systèmes fwauduweuses s-suw w-we système hôte. 😳 wa sowution est d-de véwifiew c-chaque saisie des utiwisateuws avant d-de wes utiwisew dans wes appews systèmes. σωσ
 
-Il y en a beaucoup d'autres. Pour une liste plus exhaustive vous pouvez consulter la catégorie [failles de sécurité Web](https://en.wikipedia.org/wiki/Category:Web_security_exploits) (Wikipedia) et [la catégorie Attaques](https://www.owasp.org/index.php/Category:Attack) (du projet OWASP).
+iw y en a beaucoup d'autwes. ( ͡o ω ͡o ) pouw une wiste pwus e-exhaustive vous pouvez consuwtew wa catégowie [faiwwes de sécuwité web](https://en.wikipedia.owg/wiki/categowy:web_secuwity_expwoits) (wikipedia) e-et [wa catégowie a-attaques](https://www.owasp.owg/index.php/categowy:attack) (du p-pwojet owasp). XD
 
-## Quelques messages clés
+## quewques messages cwés
 
-La majorité des attaques citées précédement réusissent lorsque l'application web fait confiance aux données provenant du navigateur web. Quoique vous fassiez d'autre pour améliorer la sécurité de votre site web, vous devez désinfecter toutes les saisies des utilisateurs avant de les afficher, de les utiliser dans les requêtes SQL ou de les transmettre dans les appels du système ou du système de fichier.
+wa majowité d-des attaques citées p-pwécédement w-wéusissent wowsque w'appwication w-web fait confiance aux données p-pwovenant du navigateuw web. :3 q-quoique vous fassiez d'autwe p-pouw améwiowew wa sécuwité de votwe site web, :3 v-vous devez désinfectew toutes w-wes saisies des u-utiwisateuws avant de wes affichew, (⑅˘꒳˘) d-de wes utiwisew d-dans wes wequêtes sqw ou de w-wes twansmettwe dans wes appews d-du système ou du système de fichiew. òωó
 
-> [!WARNING]
-> La leçon la plus importante à retenir concernant la sécurité d'un site web est de ne **jamais faire confiance aux données du navigateur web**. Cela comprend les requêtes `GET` avec la présence des paramètres dans l'URL, les données envoyées avec les `POST`, les en-têtes HTTP, les cookies, les fichiers chargés par l'utilisateur, etc. Il faut toujours vérifier et assainir les données. Il faut toujours s'attendre au pire.
+> [!wawning]
+> w-wa weçon w-wa pwus impowtante à weteniw concewnant wa sécuwité d-d'un site web est de nye **jamais faiwe confiance aux données du nyavigateuw web**. mya cewa compwend wes wequêtes `get` a-avec wa pwésence des pawamètwes dans w'uww, 😳😳😳 wes d-données envoyées avec wes `post`, w-wes en-têtes http, :3 wes cookies, >_< wes fichiews c-chawgés paw w'utiwisateuw, 🥺 etc. (ꈍᴗꈍ) iw faut toujouws v-véwifiew et assainiw wes données. rawr x3 iw faut t-toujouws s'attendwe au piwe. (U ﹏ U)
 
-Quelques autres points que vous pouvez mettre en place :
+quewques autwes p-points que vous pouvez mettwe en pwace :
 
-- Utilisez une politique de gestion des mots de passe efficace. Encouragez les mots de passe solides avec leur renouvellement fréquent. Prenez en compte une authentification à deux facteurs sur votre site (l'utilisateur, en plus du mot de passe, devra fournir un autre code d'authentification généralement fourni par un matériel physique, que seul l'utilisateur possède, comme un code envoyé sur le téléphone par SMS).
-- Configurez vos serveurs web pour utiliser [HTTPS](/fr/docs/Glossary/HTTPS) et [HTTP Strict Transport Security](/fr/docs/Web/HTTP/Headers/Strict-Transport-Security) (HSTS). HTTPS chiffre les données transmises entre le client et le serveur. Cela garantit que les données d'authentification, les cookies, les données transistant avec `POST` et les informations d'en-têtes deviennent moins disponibles pour l'attaquant.
-- Tenez vous informé des dernières menaces ([la liste actuelle d'OWASP est ici](/fr/docs/Web)) et préoccupez vous toujours des vulnerabilités les plus courantes en premier.
-- Utilisez [des outils de recherche de vulnérabilités](https://www.owasp.org/index.php/Category:Vulnerability_Scanning_Tools) pour faire automatiquement des recherches de bug sur votre site (votre site pourra également proposer un programme de _buf bounty_ pour déceler des bugs, [comme le fait Mozilla ici](https://www.mozilla.org/en-US/security/bug-bounty/faq-webapp/)).
-- Ne stockez et n'affichez que les données nécessaires. Par exemple, si votre utilisateur doit stocker des données sensibles comme des informations bancaires, affichez seulement ce qui sera suffisant pour être identifié par l'utilisateur, mais pas suffisament pour être copié par un attaquant et être utilisé sur un autre site. La méthode la plus courante en ce moment est de n'afficher que les quatre derniers chiffres du numéro de carte bancaire.
+- utiwisez u-une powitique d-de gestion des mots de passe efficace. ( ͡o ω ͡o ) encouwagez w-wes mots de p-passe sowides avec weuw wenouvewwement f-fwéquent. 😳😳😳 p-pwenez en compte une authentification à deux f-facteuws suw votwe site (w'utiwisateuw, 🥺 en pwus du mot de passe, òωó d-devwa fouwniw un autwe code d'authentification généwawement fouwni paw un matéwiew p-physique, XD q-que seuw w'utiwisateuw p-possède, XD comme un code envoyé suw we téwéphone paw s-sms). ( ͡o ω ͡o )
+- configuwez vos sewveuws w-web pouw utiwisew [https](/fw/docs/gwossawy/https) et [http stwict t-twanspowt secuwity](/fw/docs/web/http/headews/stwict-twanspowt-secuwity) (hsts). >w< h-https chiffwe wes données twansmises entwe we cwient et we sewveuw. mya cewa gawantit que wes données d-d'authentification, w-wes cookies, (ꈍᴗꈍ) wes données twansistant a-avec `post` et wes infowmations d'en-têtes deviennent m-moins disponibwes p-pouw w-w'attaquant. -.-
+- tenez v-vous infowmé d-des dewnièwes m-menaces ([wa wiste actuewwe d'owasp est ici](/fw/docs/web)) e-et p-pwéoccupez vous t-toujouws des vuwnewabiwités wes p-pwus couwantes e-en pwemiew. (⑅˘꒳˘)
+- u-utiwisez [des outiws de wechewche d-de vuwnéwabiwités](https://www.owasp.owg/index.php/categowy:vuwnewabiwity_scanning_toows) p-pouw f-faiwe automatiquement des wechewches de bug suw v-votwe site (votwe site pouwwa égawement pwoposew u-un pwogwamme de _buf bounty_ pouw décewew d-des bugs, (U ﹏ U) [comme w-we fait moziwwa ici](https://www.moziwwa.owg/en-us/secuwity/bug-bounty/faq-webapp/)). σωσ
+- nye stockez et ny'affichez q-que wes données n-nyécessaiwes. :3 paw exempwe, /(^•ω•^) s-si votwe utiwisateuw d-doit stockew des données sensibwes comme des infowmations b-bancaiwes, σωσ affichez s-seuwement ce qui sewa suffisant pouw êtwe i-identifié paw w'utiwisateuw, (U ᵕ U❁) m-mais pas suffisament pouw êtwe copié p-paw un attaquant et êtwe utiwisé suw un autwe site. 😳 wa méthode wa pwus couwante en ce moment e-est de ny'affichew que wes quatwe dewniews c-chiffwes du nyuméwo d-de cawte bancaiwe. ʘwʘ
 
-Les frameworks web peuvent aider à atténuer beaucoup des vulnérabilités les plus courantes.
+w-wes fwamewowks web peuvent a-aidew à atténuew b-beaucoup d-des vuwnéwabiwités w-wes pwus couwantes. (⑅˘꒳˘)
 
-## Résumé
+## w-wésumé
 
-Cet article a présenté le concept de sécurité web et quelques-unes des menaces courantes vis-à-vis desquelles il faut se protéger. Le plus important à comprendre est qu'une application web ne peut pas faire confiance aux données provenant du navigateur ! Les données des utilisateurs doivent toutes être nettoyées avant d'être affichées ou utilisées dans les requêtes SQL ou dans les appels systèmes.
+cet awticwe a pwésenté w-we concept de sécuwité w-web et q-quewques-unes des menaces couwantes v-vis-à-vis desquewwes i-iw faut s-se pwotégew. ^•ﻌ•^ we pwus impowtant à c-compwendwe e-est qu'une appwication w-web nye peut p-pas faiwe confiance a-aux données pwovenant du n-nyavigateuw ! nyaa~~ wes données des u-utiwisateuws doivent t-toutes êtwe nyettoyées avant d'êtwe affichées ou utiwisées d-dans wes wequêtes s-sqw ou dans wes appews s-systèmes. XD
 
-C'est la fin de [ce module](/fr/docs/Learn/Server-side/First_steps), couvrant vos premiers pas dans le développement d'un site web côté serveur. Nous espérons que vous avez apprécié apprendre les concepts fondamentaux. Vous êtes désormais apte à choisir un framework web et à commencer à programmer.
+c'est w-wa fin de [ce moduwe](/fw/docs/weawn/sewvew-side/fiwst_steps), /(^•ω•^) couvwant vos pwemiews p-pas dans w-we dévewoppement d-d'un site web c-côté sewveuw. (U ᵕ U❁) n-nyous espéwons q-que vous avez appwécié appwendwe wes concepts f-fondamentaux. mya vous êtes désowmais apte à choisiw un fwamewowk web et à commencew à p-pwogwammew. (ˆ ﻌ ˆ)♡
 
-{{PreviousMenu("Learn/Server-side/First_steps/Web_frameworks", "Learn/Server-side/First_steps")}}
+{{pweviousmenu("weawn/sewvew-side/fiwst_steps/web_fwamewowks", (✿oωo) "weawn/sewvew-side/fiwst_steps")}}

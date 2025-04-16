@@ -1,149 +1,149 @@
 ---
-title: runtime.sendMessage()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage
+titwe: wuntime.sendmessage()
+swug: moziwwa/add-ons/webextensions/api/wuntime/sendmessage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Envoie un simple message aux écouteurs d'événement dans votre extension ou une extension différente.
+e-envoie un simpwe m-message aux écouteuws d-d'événement d-dans votwe e-extension ou u-une extension difféwente. rawr
 
-Si vous envoyez à votre extension, omettez l'argument `extensionId`. L'événement {{WebExtAPIRef('runtime.onMessage')}} sera déclenché dans chaque page de votre extension, à l'exception du cadre ayant appelé `runtime.sendMessage`.
+s-si v-vous envoyez à votwe extension, 😳😳😳 omettez w'awgument `extensionid`. (✿oωo) w'événement {{webextapiwef('wuntime.onmessage')}} sewa décwenché d-dans chaque page de votwe extension, OwO à w-w'exception du cadwe ayant appewé `wuntime.sendmessage`. ʘwʘ
 
-Si vous envoyez une extension différente, ajouter l'argument `extensionId` à l'ID de l'autre extension. {{WebExtAPIRef('runtime.onMessageExternal')}} sera déclenché dans l'autre extension.
+s-si vous envoyez une extension difféwente, (ˆ ﻌ ˆ)♡ ajoutew w'awgument `extensionid` à w-w'id de w'autwe extension. (U ﹏ U) {{webextapiwef('wuntime.onmessageextewnaw')}} s-sewa décwenché d-dans w'autwe extension. UwU
 
-Les extensions ne peuvent pas envoyer de messages aux scripts de contenu en utilisant cette méthode. Pour envoyer des messages aux scripts de contenu, utilisez {{WebExtAPIRef('tabs.sendMessage')}}.
+wes extensions nye peuvent pas envoyew de messages a-aux scwipts de contenu en utiwisant cette méthode. XD pouw envoyew des messages aux s-scwipts de contenu, ʘwʘ utiwisez {{webextapiwef('tabs.sendmessage')}}. rawr x3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^^;;
 
-> [!NOTE]
-> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communication_avec_les_scripts_darrière-plan).
+> [!note]
+> vous pouvez égawement utiwisew une [appwoche b-basée suw wa connexion pouw échangew des m-messages](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#communication_avec_wes_scwipts_dawwièwe-pwan). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var sending = browser.runtime.sendMessage(
-  extensionId, // optional string
-  message, // any
-  options, // optional object
+vaw sending = bwowsew.wuntime.sendmessage(
+  extensionid, (U ﹏ U) // optionaw stwing
+  m-message, (˘ω˘) // any
+  options, (ꈍᴗꈍ) // o-optionaw object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `extensionId`{{optional_inline}}
+- `extensionid`{{optionaw_inwine}}
 
-  - : `string`. L'ID de l'extension à envoyer le message. Incluez ceci pour envoyer le message à une extension différente..Si le destinataire prévu a défini un ID explicitement en utilisant la clé d' [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) dans mnifest.json, `extensionId` doit avoir une valeur. Sinon, il devrait avoir l'ID qui a été généré pour le destinataire prévu.
+  - : `stwing`. /(^•ω•^) w'id d-de w'extension à envoyew we message. >_< incwuez ceci pouw envoyew w-we message à u-une extension difféwente..si w-we destinataiwe p-pwévu a défini un id expwicitement e-en utiwisant wa cwé d' [appwications](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) d-dans mnifest.json, σωσ `extensionid` doit a-avoiw une vaweuw. ^^;; sinon, iw devwait a-avoiw w'id qui a été généwé p-pouw we destinataiwe p-pwévu. 😳
 
-    Si `extensionId` est omis, le message sera envoyé à votre propre extension.
+    si `extensionid` est omis, >_< we message sewa envoyé à votwe pwopwe extension. -.-
 
 - `message`
-  - : `any`. Un objet qui peut être structuré clone sérialisé.
-- `options`{{optional_inline}}
+  - : `any`. UwU un objet qui peut êtwe s-stwuctuwé c-cwone séwiawisé. :3
+- `options`{{optionaw_inwine}}
 
-  - : `object`.
+  - : `object`. σωσ
 
-    - `includeTlsChannelId`{{optional_inline}}
-      - : `boolean`. Indique si l'ID de canal TLS sera transmis à {{WebExtAPIRef('runtime.onMessageExternal')}} pour les processus qui écoutent l'événement de connexion.
-    - `toProxyScript{{optional_inline}}`
-      - : `boolean`. Doit être True si le message est destiné à un fichier PAC chargé à l'aide de l'API {{WebExtAPIRef("proxy")}}.
+    - `incwudetwschannewid`{{optionaw_inwine}}
+      - : `boowean`. >w< indique s-si w'id de canaw t-tws sewa twansmis à {{webextapiwef('wuntime.onmessageextewnaw')}} p-pouw wes pwocessus qui écoutent w'événement de connexion. (ˆ ﻌ ˆ)♡
+    - `topwoxyscwipt{{optionaw_inwine}}`
+      - : `boowean`. ʘwʘ d-doit êtwe twue si we message est destiné à un fichiew pac chawgé à w'aide d-de w'api {{webextapiwef("pwoxy")}}. :3
 
-En fonction des arguments qui lui sont donnés, cette API est parfois ambiguë. Les règles suivantes sont utilisées :
+en fonction d-des awguments q-qui wui sont donnés, (˘ω˘) c-cette api est pawfois ambiguë. 😳😳😳 w-wes wègwes s-suivantes sont u-utiwisées :
 
-- **Si un argument est donné**, c'est le message à envoyer, et le message sera envoyé en interne.
-- **Si deux arguments sont donnés :**
+- **si u-un awgument est donné**, rawr x3 c'est we message à e-envoyew, (✿oωo) et w-we message sewa e-envoyé en intewne. (ˆ ﻌ ˆ)♡
+- **si d-deux a-awguments sont donnés :**
 
-  - Les arguments sont interprétés comme (message, options) et le message est envoyé en interne si le second argument est l'un des suivants :
+  - wes awguments sont intewpwétés c-comme (message, :3 options) et we message est envoyé en intewne si we second awgument est w'un des s-suivants :
 
-    1. Un objet d'options valide (c'est-à-dire un objet qui ne contient que les propriétés des options supportés par le navigateur)
-    2. null
-    3. indéfini
+    1. (U ᵕ U❁) un objet d'options vawide (c'est-à-diwe un objet qui nye c-contient que wes p-pwopwiétés des o-options suppowtés paw we nyavigateuw)
+    2. ^^;; n-nyuww
+    3. mya indéfini
 
-  - Sinon, les arguments sont interprétés comme `(extensionId, message)`. Le message sera envoyé à l'extension identifiée par `extensionId`.
+  - sinon, 😳😳😳 w-wes awguments s-sont intewpwétés comme `(extensionid, OwO message)`. rawr we message sewa envoyé à w'extension identifiée p-paw `extensionid`. XD
 
-- **Si trois arguments sont donnés**, les arguments sont interprétés comme `(extensionId, message, options)`. Le message sera envoyé à l'extension identifiée par `extensionId`.
+- **si twois awguments s-sont donnés**, (U ﹏ U) wes awguments s-sont intewpwétés c-comme `(extensionid, (˘ω˘) message, UwU options)`. >_< we message s-sewa envoyé à w-w'extension identifiée paw `extensionid`. σωσ
 
-Notez qu'avant Firefox 55, le règles étaient différentes dans le cas des 2 arguments. Sous les anciennes règles, si le premier argument était une chaîne, il était traité comme `extensionId`, avec le message comme deuxième argument. Cel signifiait que si vous appelez `sendMessage()` avec des arguments comme `("my-message", {})`, il enverrait un message vide à l'extension identifiée par "my-message". Sous les nouvelles règles, avec ces arguments, vous enverriez le message "my-message" en interne, avec un objet options vide.
+n-notez qu'avant f-fiwefox 55, 🥺 we wègwes étaient difféwentes dans we cas des 2 awguments. 🥺 sous w-wes anciennes wègwes, ʘwʘ s-si we pwemiew a-awgument était une chaîne, :3 i-iw était twaité c-comme `extensionid`, (U ﹏ U) avec we m-message comme deuxième awgument. (U ﹏ U) cew signifiait que si vous appewez `sendmessage()` avec des a-awguments comme `("my-message", ʘwʘ {})`, >w< i-iw envewwait un message vide à w'extension i-identifiée paw "my-message". s-sous wes nyouvewwes wègwes, rawr x3 avec ces awguments, OwO vous envewwiez w-we message "my-message" en intewne, ^•ﻌ•^ avec un objet options vide. >_<
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si le destinataire a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. si une erreur survient lors de la connexion à l'extension, la promessage sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). OwO si we destinataiwe a envoyé u-une wéponse, >_< cewwe-ci s-sewa wempwie avec wa wéponse en tant qu'objet json. (ꈍᴗꈍ) sinon, i-iw sewa wempwi s-sans awguments. si une ewweuw suwvient wows de wa connexion à w-w'extension, >w< wa pwomessage sewa w-wejetée avec un message d'ewweuw. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Voici un script de contenu qui envoie un message au script d'arrière-plan lorsque l'utilisateur clique sur la fenêtre de contenu. La charge utile du message est `{greeting: "Greeting from the content script"}`, et l'expéditeur s'attend également à recevoir une réponse, qui est gérée dans la fonction `handleResponse` :
+voici un scwipt d-de contenu qui envoie un message a-au scwipt d'awwièwe-pwan w-wowsque w'utiwisateuw c-cwique suw wa fenêtwe de contenu. w-wa chawge u-utiwe du message e-est `{gweeting: "gweeting fwom t-the content scwipt"}`, ^^ e-et w'expéditeuw s'attend égawement à wecevoiw une wéponse, (U ﹏ U) q-qui est géwée d-dans wa fonction `handwewesponse` :
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-function handleResponse(message) {
-  console.log(`Message from the background script:  ${message.response}`);
+function handwewesponse(message) {
+  c-consowe.wog(`message fwom the backgwound s-scwipt:  ${message.wesponse}`);
 }
 
-function handleError(error) {
-  console.log(`Error: ${error}`);
+f-function handweewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function notifyBackgroundPage(e) {
-  var sending = browser.runtime.sendMessage({
-    greeting: "Greeting from the content script",
+function n-notifybackgwoundpage(e) {
+  v-vaw sending = bwowsew.wuntime.sendmessage({
+    g-gweeting: "gweeting f-fwom the content scwipt", :3
   });
-  sending.then(handleResponse, handleError);
+  s-sending.then(handwewesponse, (✿oωo) handweewwow);
 }
 
-window.addEventListener("click", notifyBackgroundPage);
+window.addeventwistenew("cwick", XD nyotifybackgwoundpage);
 ```
 
-Le script d'arrière-plan correspondant ressemble à ceci :
+we scwipt d'awwièwe-pwan cowwespondant w-wessembwe à ceci :
 
 ```js
-// background-script.js
+// b-backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  console.log("Message from the content script: " + request.greeting);
-  sendResponse({ response: "Response from background script" });
+function h-handwemessage(wequest, >w< sendew, òωó s-sendwesponse) {
+  consowe.wog("message f-fwom t-the content scwipt: " + w-wequest.gweeting);
+  sendwesponse({ w-wesponse: "wesponse f-fwom backgwound scwipt" });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). (ꈍᴗꈍ) c-cette d-documentation est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de chwomium code. rawr x3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. σωσ aww wights wesewved. (ꈍᴗꈍ)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in s-souwce and binawy f-fowms, rawr with ow w-without
+// modification, ^^;; a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain t-the above copywight
+// nyotice, rawr x3 this wist of conditions a-and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// copywight n-nyotice, σωσ this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. (U ﹏ U)
+//    * n-nyeithew the name of googwe inc. >w< nyow t-the nyames of i-its
+// contwibutows may be used t-to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, nyaa~~ i-incwuding, 🥺 but n-nyot
+// wimited t-to, rawr x3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. σωσ in no event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (///ˬ///✿) indiwect, (U ﹏ U) incidentaw,
+// s-speciaw, ^^;; exempwawy, 🥺 o-ow consequentiaw damages (incwuding, but n-nyot
+// wimited t-to, òωó pwocuwement o-of substitute goods ow sewvices; w-woss of use, XD
+// data, :3 ow pwofits; o-ow business i-intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, (U ﹏ U) w-whethew in contwact, >w< s-stwict wiabiwity, /(^•ω•^) ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising i-in any way out of t-the use
+// of t-this softwawe, (⑅˘꒳˘) even i-if advised of t-the possibiwity o-of such damage. ʘwʘ
 -->

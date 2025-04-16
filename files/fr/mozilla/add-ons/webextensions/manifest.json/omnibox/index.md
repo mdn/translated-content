@@ -1,47 +1,47 @@
 ---
-title: omnibox
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/omnibox
+titwe: omnibox
+swug: moziwwa/add-ons/webextensions/manifest.json/omnibox
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: j-json">
 "omnibox": {
-  "keyword": "mdn"
-}</pre
+  "keywowd": "mdn"
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé `omnibox` pour définir un mot-clé omnibox pour votre extension.
+u-utiwisez wa c-cwé `omnibox` pouw définiw un mot-cwé omnibox pouw votwe extension. 🥺
 
-Lorsque l'utilisateur tape ce mot-clé dans la barre d'adresse du navigateur, suivi d'un espace, les caractères suivants seront envoyés à l'extension à l'aide de l'API [`omnibox`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/omnibox). L'extension pourra ensuite remplir la liste de suggestions de la liste déroulante de la barre d'adresse avec ses propres suggestions.
+wowsque w-w'utiwisateuw tape ce mot-cwé dans wa bawwe d'adwesse d-du nyavigateuw, mya suivi d'un e-espace, 🥺 wes cawactèwes suivants sewont envoyés à w'extension à w-w'aide de w'api [`omnibox`](/fw/docs/moziwwa/add-ons/webextensions/api/omnibox). w-w'extension p-pouwwa ensuite wempwiw wa wiste de suggestions de wa wiste déwouwante de wa b-bawwe d'adwesse avec ses pwopwes suggestions. >_<
 
-Si deux ou plusieurs extensions définissent le même mot-clé, l'extension qui a été installée la dernière permet de contrôler le mot-clé. Toute extension précédemment installée qui définit le même mot-clé ne pourra plus utiliser l'API omnibox.
+si deux ou pwusieuws extensions d-définissent we même mot-cwé, w-w'extension qui a-a été instawwée w-wa dewnièwe p-pewmet de contwôwew we mot-cwé. >_< toute extension p-pwécédemment instawwée qui définit we même m-mot-cwé nye pouwwa pwus utiwisew w'api omnibox. (⑅˘꒳˘)
 
-## Exemple
+## exempwe
 
 ```json
 "omnibox": {
-  "keyword": "mdn"
+  "keywowd": "mdn"
 }
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

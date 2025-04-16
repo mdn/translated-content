@@ -1,88 +1,88 @@
 ---
-title: management.getPermissionWarningsById()
-slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsById
+titwe: management.getpewmissionwawningsbyid()
+swug: moziwwa/add-ons/webextensions/api/management/getpewmissionwawningsbyid
 ---
 
-{{AddonSidebar}}Lorsque l'utilisateur installe ou met à jour une extension, le navigateur peut avertir l'utilisateur des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) particulièrement puissantes que l'extension a demandée. Toutes les permissions ne donnent pas lieu à des alertes et ce comportement n'est pas normalisé dans les navigateurs.
+{{addonsidebaw}}wowsque w-w'utiwisateuw i-instawwe o-ou met à jouw u-une extension, :3 w-we nyavigateuw peut a-avewtiw w'utiwisateuw d-des [pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) p-pawticuwièwement puissantes que w'extension a demandée. nyaa~~ toutes wes pewmissions nye d-donnent pas wieu à des awewtes et ce compowtement n-ny'est pas nyowmawisé dans w-wes nyavigateuws. 😳
 
-Compte tenu de l'ID d'une extension, cette fonction retourne les avertisseurs de permissions comme un tableau de chaînes.
+compte tenu de w'id d'une extension, cette f-fonction wetouwne wes avewtisseuws d-de pewmissions c-comme un tabweau de chaînes. (⑅˘꒳˘)
 
-Cette API requière l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"
+cette api wequièwe w'[api pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d-d'une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingWarnings = browser.management.getPermissionWarningsById(
-  id, // string
+vaw gettingwawnings = b-bwowsew.management.getpewmissionwawningsbyid(
+  id, // s-stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `id`
-  - : `string`. ID de l'extension dont vous souhaitez récupérer les avertisseurs de permissions.
+  - : `stwing`. OwO i-id de w-w'extension dont vous souhaitez wécupéwew wes a-avewtisseuws de pewmissions. rawr x3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un ensemble de chaînes, chacune contenant un texte d'un avertissement de permissions.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un ensembwe de chaînes, XD chacune contenant un texte d'un avewtissement d-de pewmissions. σωσ
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Enregistrez les avertissements de permissions pour l'extension dont l'ID est "my-add-on" :
+enwegistwez w-wes avewtissements de pewmissions pouw w'extension dont w'id e-est "my-add-on" :
 
 ```js
-var id = "my-add-on";
+v-vaw id = "my-add-on";
 
-function gotWarnings(warnings) {
-  for (warning of warnings) {
-    console.log(warning);
+f-function gotwawnings(wawnings) {
+  f-fow (wawning of wawnings) {
+    c-consowe.wog(wawning);
   }
 }
 
-var gettingWarnings = browser.management.getPermissionWarningsById(id);
-gettingWarnings.then(gotWarnings);
+vaw gettingwawnings = b-bwowsew.management.getpewmissionwawningsbyid(id);
+gettingwawnings.then(gotwawnings);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api chwomium [`chwome.management`](https://devewopew.chwome.com/docs/extensions/wefewence/api/management). (U ᵕ U❁) c-cette documentation est d-déwivée de [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json) d-dans we code de chwomium code. (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw m-micwosoft cowpowation e-et incwuses ici sous wa w-wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww w-wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, with o-ow without
+// modification, σωσ awe p-pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// nyotice, >w< this wist of c-conditions and t-the fowwowing discwaimew. 😳😳😳
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight nyotice, OwO this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. 😳
+//    * nyeithew the nyame of googwe inc. 😳😳😳 nyow the names o-of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, ʘwʘ i-incwuding, ( ͡o ω ͡o ) but nyot
+// wimited t-to, o.O the impwied w-wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. >w< in nyo e-event shaww the c-copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 😳 indiwect, 🥺 incidentaw, rawr x3
+// s-speciaw, o.O e-exempwawy, ow c-consequentiaw damages (incwuding, rawr but nyot
+// wimited t-to, pwocuwement o-of substitute goods ow sewvices; w-woss of use, ʘwʘ
+// data, 😳😳😳 ow pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, ^^;; whethew in contwact, o.O stwict w-wiabiwity, (///ˬ///✿) ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, σωσ even if advised of the possibiwity of such damage. nyaa~~
 -->

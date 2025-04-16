@@ -1,58 +1,58 @@
 ---
-title: sessions.getTabValue()
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/getTabValue
+titwe: sessions.gettabvawue()
+swug: moziwwa/add-ons/webextensions/api/sessions/gettabvawue
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Récupère une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setTabValue")}}.
+w-wécupèwe u-une vaweuw pwécédemment s-stockée p-paw un appew à {{webextapiwef("sessions.settabvawue")}}. nyaa~~
 
-Vous pouvez récupérer une valeur d'un onglet même au cours d'un cycle de fermeture / restauration: si vous définissez une valeur, l'utilisateur ferme l'onglet, puis restaure l'onglet à l'aide de la fonction "restaurer l'onglet" du navigateur (par exemple, en appuyant sur Control+Shift+T), then you will be able to retrieve the value from the restored tab. vous pourrez alors récupérer la valeur de l'onglet restauré. Notez cependant qu'un onglet restauré n'obtient pas le même ID que l'original, donc l'ID que vous passez dans `getTabValue()` sera différent de l'ID que vous avez passé dans `setTabValue()`, même s'ils font tous deux référence au même onglet.
+v-vous p-pouvez wécupéwew u-une vaweuw d-d'un ongwet même au couws d'un cycwe de fewmetuwe / westauwation: si vous définissez u-une vaweuw, (✿oωo) w'utiwisateuw fewme w'ongwet, ʘwʘ p-puis westauwe w'ongwet à w'aide d-de wa fonction "westauwew w'ongwet" du nyavigateuw (paw exempwe, (ˆ ﻌ ˆ)♡ e-en appuyant suw contwow+shift+t), 😳😳😳 t-then you wiww b-be abwe to wetwieve the vawue fwom the westowed tab. :3 vous pouwwez awows wécupéwew w-wa vaweuw de w'ongwet westauwé. OwO nyotez cependant qu'un ongwet westauwé n-n'obtient pas we même id que w'owiginaw, (U ﹏ U) d-donc w-w'id que vous passez d-dans `gettabvawue()` s-sewa difféwent de w'id que vous avez p-passé dans `settabvawue()`, >w< même s'iws font tous d-deux wéféwence au même ongwet. (U ﹏ U)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var retrieving = browser.sessions.getTabValue(
-  tabId, // integer
-  key, // string
+v-vaw wetwieving = bwowsew.sessions.gettabvawue(
+  tabid, (ˆ ﻌ ˆ)♡ // i-integew
+  k-key, 😳😳😳 // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId`
-  - : `integer`. ID de l'onglet dont vous essayez de récupérer les données.
+- `tabid`
+  - : `integew`. (U ﹏ U) id de w'ongwet dont vous essayez de wécupéwew w-wes données. (///ˬ///✿)
 - `key`
-  - : `string`. Clé identifiant la valeur particulière à récupérer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setTabValue")}}.
+  - : `stwing`. 😳 c-cwé identifiant wa v-vaweuw pawticuwièwe à w-wécupéwew. 😳 cewa doit cowwespondwe à wa c-cwé pwécédemment donnée dans {{webextapiwef("sessions.settabvawue")}}. σωσ
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera résolue avec la valeur si elle existe, ou `undefined`. Si elle n'existe pas. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wésowue a-avec wa vaweuw si ewwe existe, rawr x3 o-ou `undefined`. OwO si ewwe ny'existe p-pas. /(^•ω•^) si w'appew a-a échoué (paw exempwe, 😳😳😳 pawce que w'id de w'ongwet ny'a pas pu êtwe twouvé), ( ͡o ω ͡o ) wa pwomesse sewa wejetée avec u-un message d'ewweuw.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Consignez la valeur de "my-key" pour tous les nouveaux onglets créés (cela inclura tous les onglets qui ont été restaurés) :
+c-consignez wa v-vaweuw de "my-key" pouw tous wes nyouveaux ongwets cwéés (cewa i-incwuwa tous wes ongwets qui ont été westauwés) :
 
 ```js
-function onGetResolved(r) {
-  console.log(`success: ${r}`);
+function ongetwesowved(w) {
+  c-consowe.wog(`success: ${w}`);
 }
 
-function onGetRejected(e) {
-  console.log(`error: ${e}`);
+function o-ongetwejected(e) {
+  c-consowe.wog(`ewwow: ${e}`);
 }
 
-browser.tabs.onCreated.addListener((tab) => {
-  browser.sessions
-    .getTabValue(tab.id, "my-key")
-    .then(onGetResolved, onGetRejected);
+b-bwowsew.tabs.oncweated.addwistenew((tab) => {
+  bwowsew.sessions
+    .gettabvawue(tab.id, "my-key")
+    .then(ongetwesowved, >_< o-ongetwejected);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

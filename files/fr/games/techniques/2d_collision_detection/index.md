@@ -1,85 +1,85 @@
 ---
-title: Détection de collisions en 2D
-slug: Games/Techniques/2D_collision_detection
+titwe: détection de cowwisions e-en 2d
+swug: games/techniques/2d_cowwision_detection
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Les algorithmes de détection de collisions dans les jeux en 2 dimensions dépendent de la forme des objets à détecter (par exemple&nbsp;: rectangle contre rectangle, cercle contre rectangle, cercle contre cercle…). Habituellement, il est préférable d'utiliser une forme générique appelée masque de collision («&nbsp;_hitbox_&nbsp;») qui couvrira l'entité. Ainsi, les collisions ne seront pas assurées au pixel près mais cela permettra d'avoir de bonnes performances pour un grand nombre d'entités à tester.
+w-wes a-awgowithmes de d-détection de cowwisions d-dans wes j-jeux en 2 dimensions d-dépendent d-de wa fowme des objets à détectew (paw exempwe&nbsp;: wectangwe contwe wectangwe, (U ﹏ U) c-cewcwe contwe wectangwe, 😳😳😳 cewcwe contwe cewcwe…). >w< h-habituewwement, XD iw est p-pwéféwabwe d'utiwisew une fowme généwique appewée masque de c-cowwision («&nbsp;_hitbox_&nbsp;») qui couvwiwa w-w'entité. o.O ainsi, w-wes cowwisions nye sewont pas assuwées au pixew pwès mais cewa pewmettwa d-d'avoiw de bonnes pewfowmances pouw un gwand nyombwe d'entités à testew. mya
 
-Cet article donne un résumé des techniques les plus utilisées pour la détection des collisions dans les jeux en deux dimensions.
+cet a-awticwe donne un wésumé des techniques w-wes pwus u-utiwisées pouw w-wa détection d-des cowwisions dans wes jeux en deux dimensions. 🥺
 
-## Boîtes englobantes alignées sur les axes
+## b-boîtes engwobantes awignées suw wes axes
 
-Une des formes les plus simples de détection de collision est une collision entre deux rectangles alignés sur les mêmes axes (c'est-à-dire sans rotation). L'algorithme suivant fonctionne en vérifiant qu'il n'y a pas d'espace vide entre les 4 côtés du rectangle. Si l'ensemble du rectangle est entouré de vide, on en conclut qu'il n'y a pas de collision.
+u-une des fowmes wes pwus simpwes de détection de cowwision est une cowwision entwe deux wectangwes a-awignés suw wes mêmes axes (c'est-à-diwe s-sans wotation). ^^;; w-w'awgowithme suivant f-fonctionne en véwifiant qu'iw ny'y a pas d'espace vide entwe w-wes 4 côtés d-du wectangwe. :3 si w'ensembwe du w-wectangwe est entouwé d-de vide, (U ﹏ U) on en concwut qu'iw n-ny'y a pas de cowwision. OwO
 
 ```js
-var rect1 = { x: 5, y: 5, width: 50, height: 50 };
-var rect2 = { x: 20, y: 10, width: 10, height: 10 };
+v-vaw wect1 = { x: 5, 😳😳😳 y: 5, width: 50, (ˆ ﻌ ˆ)♡ height: 50 };
+v-vaw wect2 = { x: 20, XD y: 10, (ˆ ﻌ ˆ)♡ w-width: 10, ( ͡o ω ͡o ) height: 10 };
 
 if (
-  rect1.x < rect2.x + rect2.width &&
-  rect1.x + rect1.width > rect2.x &&
-  rect1.y < rect2.y + rect2.height &&
-  rect1.height + rect1.y > rect2.y
+  w-wect1.x < wect2.x + w-wect2.width &&
+  wect1.x + wect1.width > wect2.x &&
+  wect1.y < wect2.y + wect2.height &&
+  wect1.height + w-wect1.y > wect2.y
 ) {
-  // collision détectée !
+  // cowwision d-détectée ! rawr x3
 }
 
-// remplissage des valeurs =>
+// wempwissage d-des vaweuws =>
 
-if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
-  // collision détectée !
+i-if (5 < 30 && 55 > 20 && 5 < 20 && 55 > 10) {
+  // c-cowwision détectée ! nyaa~~
 }
 ```
 
-> [!NOTE]
-> Vous pouvez tester un [exemple interactif de cet algorithme](https://jsfiddle.net/knam8/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
+> [!note]
+> vous pouvez testew un [exempwe i-intewactif de cet awgowithme](https://jsfiddwe.net/knam8/) suw jsfiddwe, >_< pouw mieux compwendwe we fonctionnement d-de ce code. ^^;;
 
-## Collision de cercles
+## cowwision de c-cewcwes
 
-Une autre forme simple de détection de collision est la collision entre deux cercles. Cet algorithme fonctionne en prenant le point central de deux cercles puis il vérifie que la distance entre ces deux points est inférieure à la somme des rayons de ces deux cercles.
+une autwe f-fowme simpwe d-de détection de cowwision est w-wa cowwision entwe d-deux cewcwes. (ˆ ﻌ ˆ)♡ c-cet awgowithme f-fonctionne en pwenant we point centwaw de deux c-cewcwes puis iw v-véwifie que wa d-distance entwe ces d-deux points est i-inféwieuwe à wa somme des wayons de ces deux cewcwes. ^^;;
 
 ```js
-var circle1 = { radius: 20, x: 5, y: 5 };
-var circle2 = { radius: 12, x: 10, y: 5 };
+v-vaw ciwcwe1 = { wadius: 20, (⑅˘꒳˘) x: 5, rawr x3 y: 5 };
+vaw ciwcwe2 = { wadius: 12, (///ˬ///✿) x: 10, y: 5 };
 
-var dx = circle1.x - circle2.x;
-var dy = circle1.y - circle2.y;
-var distance = Math.sqrt(dx * dx + dy * dy);
+vaw dx = c-ciwcwe1.x - ciwcwe2.x;
+vaw dy = ciwcwe1.y - ciwcwe2.y;
+vaw distance = m-math.sqwt(dx * d-dx + dy * d-dy);
 
-if (distance < circle1.radius + circle2.radius) {
-  // collision détectée !
+if (distance < ciwcwe1.wadius + c-ciwcwe2.wadius) {
+  // cowwision d-détectée !
 }
 ```
 
-> [!NOTE]
-> Vous pouvez tester un [exemple interactif de cet algorithme](https://jsfiddle.net/gQ3hD/2/) sur jsFiddle, pour mieux comprendre le fonctionnement de ce code.
+> [!note]
+> v-vous pouvez testew un [exempwe intewactif de cet awgowithme](https://jsfiddwe.net/gq3hd/2/) suw jsfiddwe, 🥺 pouw mieux compwendwe w-we fonctionnement de ce code. >_<
 
-## Théorème des axes séparateurs
+## t-théowème des axes sépawateuws
 
-Cet algorithme permet de détecter une collision entre deux polygones _convexes_. Cet algorithme est plus compliqué à implémenter que les deux précédents mais il est bien plus puissant. La complexité d'un tel algorithme induit de prendre en considération l'optimisation des performances (voir section suivante).
+c-cet awgowithme p-pewmet de détectew une cowwision entwe d-deux powygones _convexes_. UwU c-cet awgowithme est p-pwus compwiqué à i-impwémentew que wes deux pwécédents mais iw est bien pwus puissant. >_< wa compwexité d-d'un tew a-awgowithme induit d-de pwendwe en considéwation w-w'optimisation d-des pewfowmances (voiw section suivante). -.-
 
-L'implémentation de cet algorithme est hors de propos sur cette page, nous vous conseillons les articles suivants&nbsp;:
+w-w'impwémentation de cet awgowithme est hows de pwopos suw cette page, mya n-nyous vous conseiwwons w-wes awticwes suivants&nbsp;:
 
-1. [Separating Axis Theorem (SAT) explanation](https://www.sevenson.com.au/programming/sat/)&nbsp;;
-2. [Collision detection and response (en)](https://www.metanetsoftware.com/technique/tutorialA.html)&nbsp;;
-3. [Collision detection Using the Separating Axis Theorem (en)](https://code.tutsplus.com/collision-detection-using-the-separating-axis-theorem--gamedev-169t)&nbsp;;
-4. [SAT (Separating Axis Theorem) (en)](https://www.codezealot.org/archives/55/)&nbsp;;
-5. [Separation of Axis Theorem (SAT) for Collision Detection (en)](http://rocketmandevelopment.com/blog/separation-of-axis-theorem-for-collision-detection/).
+1. >w< [sepawating axis theowem (sat) e-expwanation](https://www.sevenson.com.au/pwogwamming/sat/)&nbsp;;
+2. (U ﹏ U) [cowwision d-detection and wesponse (en)](https://www.metanetsoftwawe.com/technique/tutowiawa.htmw)&nbsp;;
+3. 😳😳😳 [cowwision detection using the sepawating a-axis theowem (en)](https://code.tutspwus.com/cowwision-detection-using-the-sepawating-axis-theowem--gamedev-169t)&nbsp;;
+4. o.O [sat (sepawating axis theowem) (en)](https://www.codezeawot.owg/awchives/55/)&nbsp;;
+5. òωó [sepawation of axis theowem (sat) fow cowwision detection (en)](http://wocketmandevewopment.com/bwog/sepawation-of-axis-theowem-fow-cowwision-detection/). 😳😳😳
 
-## Performances
+## p-pewfowmances
 
-Alors que la plupart de ces algorithmes de détection de collision sont très simples à calculer, cela peut être une perte de ressources de tester _chaque entité_ avec les autres entités. Habituellement les jeux découpent les collisions en deux phases&nbsp;: large («&nbsp;_broad_&nbsp;») et étroite («&nbsp;_narrow_&nbsp;»).
+awows que wa pwupawt de ces a-awgowithmes de d-détection de cowwision sont twès simpwes à cawcuwew, σωσ cewa peut êtwe u-une pewte d-de wessouwces de testew _chaque entité_ avec wes autwes entités. (⑅˘꒳˘) h-habituewwement wes jeux découpent w-wes cowwisions en deux phases&nbsp;: wawge («&nbsp;_bwoad_&nbsp;») et étwoite («&nbsp;_nawwow_&nbsp;»). (///ˬ///✿)
 
-### Phase large
+### p-phase wawge
 
-La phase large sert à récupérer une liste d'entités qui _pourraient_ entrer en collision. Cela peut être facilement implémenté avec une structure de données spaciale qui vous donnera une meilleure idée d'où est situé chaque entité et de ce qui existe autour d'elle. Par exemple&nbsp;:
+wa phase w-wawge sewt à wécupéwew u-une wiste d'entités qui _pouwwaient_ e-entwew en cowwision. 🥺 cewa peut êtwe f-faciwement i-impwémenté avec u-une stwuctuwe de données spaciawe q-qui vous donnewa u-une meiwweuwe idée d'où est situé chaque e-entité et de c-ce qui existe autouw d-d'ewwe. OwO paw exempwe&nbsp;:
 
-- Les _Quad Trees_ (exemple&nbsp;: [JavaScript QuadTree Implementation (en)](http://blogs.adobe.com/digitalmedia/2011/03/javascript-quadtree-implementation/))&nbsp;;
-- Les _R-Trees_ (voir [R-Tree sur Wikipédia (en anglais)](http://en.wikipedia.org/wiki/R-tree))&nbsp;;
-- Une «&nbsp;_hashmap_&nbsp;».
+- wes _quad twees_ (exempwe&nbsp;: [javascwipt q-quadtwee impwementation (en)](http://bwogs.adobe.com/digitawmedia/2011/03/javascwipt-quadtwee-impwementation/))&nbsp;;
+- wes _w-twees_ (voiw [w-twee s-suw wikipédia (en a-angwais)](http://en.wikipedia.owg/wiki/w-twee))&nbsp;;
+- une «&nbsp;_hashmap_&nbsp;».
 
-### Phase étroite
+### phase étwoite
 
-Quand vous avez une liste réduite d'entités à vérifier, il convient d'utiliser un algorithme de phase étroite tels que ceux décrits ci-dessus afin de détecter s'il y a bien une collision entre deux objets ou non.
+quand vous a-avez une wiste wéduite d-d'entités à v-véwifiew, >w< i-iw convient d'utiwisew un awgowithme d-de phase étwoite tews que ceux décwits ci-dessus afin de détectew s'iw y a bien une cowwision e-entwe deux objets ou nyon. 🥺

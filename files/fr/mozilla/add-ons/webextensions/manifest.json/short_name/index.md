@@ -1,37 +1,37 @@
 ---
-title: short_name
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/short_name
+titwe: showt_name
+swug: moziwwa/add-ons/webextensions/manifest.json/showt_name
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Chaîne</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
-      <td><pre class="brush: json">"short_name": "MonExtension"</pre></td>
-    </tr>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>chaîne</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
+      <td><pwe c-cwass="bwush: j-json">"showt_name": "monextension"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Nom abrégé de l'extension. S'il est donné, il sera utilisé dans des contextes où le champ [name](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) est trop long. Il est recommandé que le nom court ne dépasse pas 12 caractères. Si le champ du nom court n'est pas inclus dans manifest.json, le nom sera utilisé à la place et peut être tronqué.
+nom a-abwégé de w'extension. -.- s-s'iw est donné, ( ͡o ω ͡o ) iw sewa utiwisé dans des contextes où we champ [name](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/name) e-est twop wong. rawr x3 iw est wecommandé que we nyom couwt n-nye dépasse pas 12 cawactèwes. nyaa~~ s-si we champ du nyom couwt ny'est pas incwus dans manifest.json, /(^•ω•^) w-we nyom sewa utiwisé à wa p-pwace et peut êtwe t-twonqué. rawr
 
-C'est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+c'est une [pwopwiété wocawisabwe](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json). OwO
 
-## Exemple
+## exempwe
 
 ```json
-"short_name": "MonExtension"
+"showt_name": "monextension"
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

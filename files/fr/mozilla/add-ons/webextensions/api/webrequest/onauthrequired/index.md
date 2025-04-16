@@ -1,316 +1,316 @@
 ---
-title: webRequest.onAuthRequired
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired
+titwe: webwequest.onauthwequiwed
+swug: moziwwa/add-ons/webextensions/api/webwequest/onauthwequiwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Mise en place quand le serveur envoie un code status 401 ou 407 : c'est-à-dire lorsque le serveur demande au client de fournir des informations d'authentification telles qu'un nom d'utilisateur et un mot de passe.
+m-mise e-en pwace quand w-we sewveuw envoie u-un code status 401 o-ou 407 : c'est-à-diwe w-wowsque w-we sewveuw d-demande au cwient de fouwniw des infowmations d'authentification tewwes qu'un nyom d'utiwisateuw e-et un mot de passe. /(^•ω•^)
 
-L'auditeur peut répondre de l'une des quatre façons suivantes :
+w'auditeuw peut wépondwe d-de w'une des quatwe façons suivantes :
 
-**Ne rien faire** : l'auditeur ne peut rien faire, il suffit d'observer la demande. Si cela se produit, cela n'aura aucun effet sur le traitement de la demande, et le navigateur demandera probablement simplement à l'utilisateur de se connecter.
+**ne w-wien faiwe** : w'auditeuw nye peut wien faiwe, 🥺 iw s-suffit d'obsewvew wa demande. nyaa~~ si c-cewa se pwoduit, mya c-cewa ny'auwa aucun effet suw we twaitement de wa demande, XD et we navigateuw demandewa p-pwobabwement simpwement à w'utiwisateuw de se connectew. nyaa~~
 
-**Annuler la demande** : l'auditeur peut annuler la demande. S'ils le font, l'authentification échouera et l'utilisateur ne sera pas invité à se connecter. Les prolongations peuvent annuler les demandes comme suit :
+**annuwew wa demande** : w-w'auditeuw peut annuwew w-wa demande. ʘwʘ s'iws w-we font, (⑅˘꒳˘) w'authentification échouewa e-et w'utiwisateuw n-nye sewa pas invité à se connectew. :3 w-wes pwowongations peuvent annuwew wes demandes c-comme suit :
 
-- dans addListener, passez `"blocking"` dans le paramètre `extraInfoSpec`
-- dans l'écouteur lui-même, retourne un objet avec une propriété `cancel` définie à `true`
+- dans addwistenew, -.- passez `"bwocking"` dans we pawamètwe `extwainfospec`
+- dans w'écouteuw wui-même, 😳😳😳 w-wetouwne un objet avec une p-pwopwiété `cancew` d-définie à `twue`
 
-**Fournir des informations d'identification de manière synchrone** : si les informations d'identification sont disponibles de manière synchrone, l'extension peut les fournir de manière synchrone. Si l'extension fait cela, le navigateur tentera de se connecter avec les informations d'identification données.
-L'auditeur peut fournir des informations d'identification de manière synchrone comme suit :
+**fouwniw d-des infowmations d'identification de manièwe synchwone** : s-si wes infowmations d-d'identification sont disponibwes d-de manièwe s-synchwone, (U ﹏ U) w'extension peut w-wes fouwniw de manièwe synchwone. o.O s-si w'extension fait cewa, ( ͡o ω ͡o ) we nyavigateuw tentewa d-de se connectew avec wes infowmations d-d'identification données. òωó
+w-w'auditeuw p-peut fouwniw des infowmations d'identification de manièwe synchwone comme suit :
 
-- dans addListener, passez `"blocking"` dans le paramètre `extraInfoSpec`
-- dans l'auditeur, retourner un objet avec une propriété `authCredentials` définie sur les informations d'identification à fournir
+- dans addwistenew, 🥺 passez `"bwocking"` dans w-we pawamètwe `extwainfospec`
+- d-dans w'auditeuw, /(^•ω•^) wetouwnew un objet a-avec une pwopwiété `authcwedentiaws` d-définie s-suw wes infowmations d'identification à fouwniw
 
-**Fournir les informations d'identification de manière asynchrone** : l'extension peut avoir besoin de récupérer les informations d'identification de manière asynchrone. Par exemple, l'extension peut avoir besoin d'extraire les informations d'identification du stockage ou de demander à l'utilisateur. Dans ce cas, l'auditeur peut fournir des informations d'identification de manière asynchrone comme suit :
+**fouwniw wes infowmations d-d'identification de manièwe asynchwone** : w'extension peut avoiw besoin de wécupéwew w-wes infowmations d'identification d-de manièwe a-asynchwone. 😳😳😳 p-paw exempwe, ^•ﻌ•^ w'extension peut a-avoiw besoin d'extwaiwe w-wes infowmations d-d'identification d-du stockage ou de demandew à w'utiwisateuw. nyaa~~ d-dans ce c-cas, OwO w'auditeuw p-peut fouwniw des i-infowmations d'identification d-de manièwe asynchwone comme suit :
 
-- dans addListener, passez `"blocking"` dans le paramère `extraInfoSpec`
-- dans l'auditeur, retourner une `Promise` qui est résolue avec un objet contenant une propriété `authCredentials`, définie sur les credentials à fournir.
+- dans addwistenew, ^•ﻌ•^ passez `"bwocking"` d-dans we pawamèwe `extwainfospec`
+- dans w'auditeuw, σωσ wetouwnew une `pwomise` qui est wésowue avec u-un objet contenant une pwopwiété `authcwedentiaws`, -.- définie suw wes cwedentiaws à f-fouwniw. (˘ω˘)
 
-Voir [Exemples](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired#examples).
+v-voiw [exempwes](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest/onauthwequiwed#exampwes). rawr x3
 
-Si vous utilisez le `"blockage"` vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
+s-si vous utiwisez we `"bwockage"` v-vous devez avoiw wa [pewmission d-de w'api "webwequestbwocking"](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) d-dans votwe manifest.json. rawr x3
 
-Si votre poste fournit de mauvaises informations d'identification, l'auditeur sera rappelé. Pour cette raison, veillez à ne pas entrer dans une boucle infinie en fournissant à plusieurs reprises de mauvaises informations d'identification.
+si votwe poste fouwnit de mauvaises infowmations d'identification, σωσ w'auditeuw sewa w-wappewé. nyaa~~ pouw cette waison, (ꈍᴗꈍ) veiwwez à n-nye pas entwew dans une b-boucwe infinie e-en fouwnissant à pwusieuws wepwises de mauvaises i-infowmations d'identification. ^•ﻌ•^
 
-## Autorisation de proxy
+## a-autowisation de pwoxy
 
-En général, Firefox ne déclenche pas d'événements `webRequest` pour les requêtes système, telles que les mises à jour de navigateur ou d'extension, ou les requêtes des moteurs de recherche. Pour permettre à l'autorisation de proxy de fonctionner sans problème pour les requêtes système, à partir de la version 57 Firefox implémente une exception à cette règle.
+en généwaw, >_< f-fiwefox n-nye décwenche pas d'événements `webwequest` pouw wes wequêtes système, ^^;; tewwes que wes mises à j-jouw de nyavigateuw o-ou d'extension, ^^;; o-ou wes wequêtes des moteuws d-de wechewche. /(^•ω•^) p-pouw pewmettwe à w'autowisation d-de pwoxy de fonctionnew sans pwobwème pouw wes wequêtes système, nyaa~~ à pawtiw d-de wa vewsion 57 f-fiwefox impwémente une exception à cette w-wègwe. (✿oωo)
 
-Si une extension a les permissions "webRequest", "webRequestBlocking", "proxy", et "\<all_urls>", alors elle pourra utiliser `onAuthRequired` pour fournir des informations d'identification pour l'autorisation de proxy (mais pas pour l'autorisation web normale). L'auditeur ne sera pas en mesure d'annuler les demandes du système ou d'apporter d'autres modifications aux demandes du système.
+si une e-extension a wes pewmissions "webwequest", ( ͡o ω ͡o ) "webwequestbwocking", (U ᵕ U❁) "pwoxy", et "\<aww_uwws>", òωó awows e-ewwe pouwwa utiwisew `onauthwequiwed` pouw fouwniw des infowmations d'identification pouw w'autowisation d-de pwoxy (mais pas pouw w'autowisation w-web nyowmawe). σωσ w-w'auditeuw nye sewa pas en mesuwe d'annuwew wes demandes du système o-ou d'appowtew d-d'autwes modifications aux demandes du système. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.webRequest.onAuthRequired.addListener(
-  listener, // function
-  filter, //  object
-  extraInfoSpec, //  optional array of strings
+b-bwowsew.webwequest.onauthwequiwed.addwistenew(
+  wistenew, OwO // f-function
+  fiwtew, ^^ //  object
+  extwainfospec, (˘ω˘) //  optionaw a-awway of stwings
 );
-browser.webRequest.onAuthRequired.removeListener(listener);
-browser.webRequest.onAuthRequired.hasListener(listener);
+bwowsew.webwequest.onauthwequiwed.wemovewistenew(wistenew);
+b-bwowsew.webwequest.onauthwequiwed.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(callback, filter, extraInfoSpec)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `écouteur` est enregistré à cet événement. Retourne `true` s'il est à l'écoute, sinon `false`.
+- `addwistenew(cawwback, OwO fiwtew, extwainfospec)`
+  - : a-ajoute un écouteuw à c-cet événement. UwU
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d-d'écoutew cet événement. ^•ﻌ•^ w'awgument `wistenew` e-est w'écouteuw à s-suppwimew. (ꈍᴗꈍ)
+- `haswistenew(wistenew)`
+  - : véwifiez si `écouteuw` est enwegistwé à c-cet événement. /(^•ω•^) wetouwne `twue` s'iw e-est à w'écoute, (U ᵕ U❁) s-sinon `fawse`. (✿oωo)
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
+  - : une fonction q-qui sewa appewée w-wowsque cet événement se pwoduiwa. OwO wa fonction sewa passée w-wes awguments suivants :
 
-    - `details`
-      - : [`object`](#details). Détails sur la demande. Voir les [`détails`](#details) ci-dessous.
+    - `detaiws`
+      - : [`object`](#detaiws). :3 d-détaiws s-suw wa demande. nyaa~~ v-voiw wes [`détaiws`](#detaiws) ci-dessous. ^•ﻌ•^
 
-    Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}} ou une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+    w-wetouwne : {{webextapiwef('webwequest.bwockingwesponse')}} ou une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-    - Pour traiter la requête de manière synchrone, inclure`"blocking"` dans le paramètre `extraInfoSpec` et retourner un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
-    - Pour traiter la requête de manière asynchrone, inclure `"blocking"` dans le paramètre `extraInfoSpec` et retourner une `Promise` qui est résolue avec un objet `BlockingResponse`, avec son `cancel` ou ses propriétés `authCredentials`.
+    - pouw twaitew wa wequête de manièwe synchwone, ^^;; incwuwe`"bwocking"` d-dans we pawamètwe `extwainfospec` e-et wetouwnew un objet `bwockingwesponse`, mya a-avec son `cancew` ou ses pwopwiétés `authcwedentiaws`. (U ᵕ U❁)
+    - p-pouw twaitew wa wequête de m-manièwe asynchwone, ^•ﻌ•^ i-incwuwe `"bwocking"` d-dans we p-pawamètwe `extwainfospec` e-et wetouwnew une `pwomise` qui est wésowue avec un objet `bwockingwesponse`, (U ﹏ U) avec son `cancew` ou s-ses pwopwiétés `authcwedentiaws`. /(^•ω•^)
 
-- `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
-- `extraInfoSpec`{{optional_inline}}
+- `fiwtew`
+  - : {{webextapiwef('webwequest.wequestfiwtew')}}. ʘwʘ u-un fiwtwe qui w-westweint wes événements qui s-sewont envoyés à cet auditeuw. XD
+- `extwainfospec`{{optionaw_inwine}}
 
-  - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
+  - : `awway` de `stwing`. (⑅˘꒳˘) options suppwémentaiwes p-pouw w-w'événement. nyaa~~ vous pouvez passew n-ny'impowte waquewwe des vaweuws suivantes :
 
-    - `"blocking"`: faire le blocage de la demande, afin que vous puissiez annuler la demande ou fournir des informations d'authentification.
-    - `"responseHeaders"`: inclure `responseHeaders` dans l'objet `details` transmis à l'auditeur
+    - `"bwocking"`: f-faiwe we bwocage d-de wa demande, UwU afin que vous p-puissiez annuwew w-wa demande ou fouwniw des infowmations d'authentification.
+    - `"wesponseheadews"`: incwuwe `wesponseheadews` dans w'objet `detaiws` t-twansmis à w-w'auditeuw
 
-## Objets supplémentaires
+## o-objets suppwémentaiwes
 
-### Détails
+### d-détaiws
 
-- `challenger`
+- `chawwengew`
 
-  - : `object`. Le serveur demandant l'authentification. C'est un objet avec les propriétés suivantes :
+  - : `object`. (˘ω˘) w-we sewveuw demandant w-w'authentification. rawr x3 c-c'est un objet avec wes pwopwiétés s-suivantes :
 
     - `host`
-      - : `string`. Le [nom d'hôte](https://en.wikipedia.org/wiki/Hostname#Internet_hostnames) du serveur.
-        **Warning**: Contrairement à chrome, Firefox retournera l'hôte demandé au lieu du proxy demandant l'authentification, même si `isProxy` est `true`.
-    - `port`
-      - : `integer`. Le numéro de port du serveur.
+      - : `stwing`. (///ˬ///✿) w-we [nom d'hôte](https://en.wikipedia.owg/wiki/hostname#intewnet_hostnames) d-du sewveuw. 😳😳😳
+        **wawning**: contwaiwement à chwome, (///ˬ///✿) fiwefox w-wetouwnewa w'hôte demandé a-au wieu du pwoxy d-demandant w'authentification, ^^;; même si `ispwoxy` e-est `twue`. ^^
+    - `powt`
+      - : `integew`. we nyuméwo de powt du sewveuw.
 
-- `frameId`
-  - : `integer`. Zéro si la requête se produit dans le cadre principal ; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'un (sous-)cadre est chargé (`type` is `main_frame` or `sub_frame`), `frameId` indique l'ID de ce cadre et non l'ID du cadre extérieur. Les ID de trame sont uniques dans un onglet.
-- `isProxy`
-  - : `boolean`. `true` pour Proxy-Authenticate, `false` pour WWW-Authenticate. **Note**: `webRequest.onAuthRequired` n'est appelé que pour les serveurs proxy HTTP et HTTPS/SSL nécessitant une authentification, et non pour les serveurs proxy SOCKS nécessitant une authentification.
+- `fwameid`
+  - : `integew`. (///ˬ///✿) z-zéwo si wa wequête s-se pwoduit d-dans we cadwe pwincipaw ; une vaweuw positive est w'id d'une sous-twame d-dans waquewwe wa wequête se pwoduit. -.- si w-we document d'un (sous-)cadwe est c-chawgé (`type` is `main_fwame` o-ow `sub_fwame`), `fwameid` indique w-w'id de ce c-cadwe et nyon w'id du cadwe extéwieuw. /(^•ω•^) wes id d-de twame sont uniques dans un ongwet. UwU
+- `ispwoxy`
+  - : `boowean`. (⑅˘꒳˘) `twue` pouw pwoxy-authenticate, ʘwʘ `fawse` p-pouw w-www-authenticate. σωσ **note**: `webwequest.onauthwequiwed` ny'est appewé q-que pouw wes sewveuws pwoxy h-http et https/ssw n-nyécessitant u-une authentification, ^^ et nyon pouw wes sewveuws pwoxy socks nécessitant une authentification.
 - `method`
-  - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
-- `parentFrameId`
-  - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
-- `proxyInfo`
+  - : `stwing`. OwO méthode http standawd : paw exempwe, (ˆ ﻌ ˆ)♡ "get" ou "post". o.O
+- `pawentfwameid`
+  - : `integew`. (˘ω˘) de wa twame qui contient wa twame qui a envoyé w-wa wequête. 😳 w-wégwé à -1 s'iw ny'existe pas de w'ifwame p-pawent. (U ᵕ U❁)
+- `pwoxyinfo`
 
-  - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
+  - : `object`. :3 c-cette pwopwiété n-ny'est pwésente que si w-wa demande est pwoxied. o.O iw contient w-wes pwopwiétés s-suivantes :
 
     - `host`
-      - : `string`. Le nom d'hôte du serveur proxy.
-    - `port`
-      - : `integer`. Le numéro de port du serveur proxy.
+      - : `stwing`. (///ˬ///✿) we nyom d'hôte d-du sewveuw pwoxy. OwO
+    - `powt`
+      - : `integew`. >w< w-we nyuméwo d-de powt du sewveuw pwoxy. ^^
     - `type`
 
-      - : `string`. Le type de serveur proxy. L'un des :
+      - : `stwing`. (⑅˘꒳˘) we type de sewveuw p-pwoxy. ʘwʘ w'un d-des :
 
-        - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
-        - "https": proxy HTTP sur connexion TLS vers proxy
-        - "socks": SOCKS v5 proxy
-        - "socks4": SOCKS v4 proxy
-        - "direct": pas de proxy
-        - "unknown": proxy inconnu
+        - "http": p-pwoxy http (ou s-ssw connect p-pouw https)
+        - "https": p-pwoxy http suw c-connexion tws v-vews pwoxy
+        - "socks": s-socks v5 pwoxy
+        - "socks4": s-socks v4 pwoxy
+        - "diwect": p-pas de pwoxy
+        - "unknown": p-pwoxy inconnu
 
-    - `username`
-      - : `string`. Nom d'utilisateur pour le service proxy.
-    - `proxyDNS`
-      - : `boolean`. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.
-    - `failoverTimeout`
-      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par [FindProxyForURL()](</fr/docs/Add-ons/WebExtensions/API/proxy#FindProxyForURL()_return_value>) sera utilisé.
+    - `usewname`
+      - : `stwing`. (///ˬ///✿) nyom d'utiwisateuw p-pouw we sewvice pwoxy. XD
+    - `pwoxydns`
+      - : `boowean`. 😳 vwai si w-we pwoxy exékawaii~wa une wésowution d-de nyom d-de domaine basée s-suw we nyom d'hôte fouwni, >w< ce q-qui signifie que we cwient nye d-doit pas faiwe sa pwopwe wechewche d-dns. (˘ω˘)
+    - `faiwuvwtimeout`
+      - : `integew`. nyaa~~ déwai d'attente d-de bascuwement en secondes. si wa connexion nye pawvient pas à connectew w-we sewveuw pwoxy apwès ce nyombwe d-de secondes, 😳😳😳 w-we sewveuw pwoxy suivant dans we tabweau wenvoyé paw [findpwoxyfowuww()](</fw/docs/add-ons/webextensions/api/pwoxy#findpwoxyfowuww()_wetuwn_vawue>) s-sewa utiwisé. (U ﹏ U)
 
-- `realm`{{optional_inline}}
-  - : `string`. La zone d'authentification [realm](https://tools.ietf.org/html/rfc1945#section-11) fournie par le serveur, s'il y en a un.
-- `requestId`
-  - : `string`. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.
-- `responseHeaders`{{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.
+- `weawm`{{optionaw_inwine}}
+  - : `stwing`. (˘ω˘) wa zone d'authentification [weawm](https://toows.ietf.owg/htmw/wfc1945#section-11) f-fouwnie paw w-we sewveuw, :3 s'iw y-y en a un. >w<
+- `wequestid`
+  - : `stwing`. ^^ w'id de wa demande. 😳😳😳 wes i-id de wequête s-sont uniques au sein d'une session d-de nyavigateuw, nyaa~~ de sowte que vous pouvez wes u-utiwisew pouw wewiew difféwents événements a-associés à wa m-même wequête. (⑅˘꒳˘)
+- `wesponseheadews`{{optionaw_inwine}}
+  - : {{webextapiwef('webwequest.httpheadews')}}. :3 w-wes en-têtes de wéponse h-http qui ont été w-weçus avec c-cette wéponse. ʘwʘ
 - `scheme`
-  - : `string`. Le schéma d'authentification : `"basic"` ou `"digest`".
-- `statusCode`
-  - : `integer`. Code d'état HTTP standard renvoyé par le serveur.
-- `statusLine`
-  - : `string`. Status d'état HTTP de la réponse ou la chaîne 'HTTP/0.9 200 OK' pour les réponses HTTP/0.9 (c'est-à-dire les réponses qui n'ont pas de ligne d'état) ou une chaîne vide s'il n'y a pas d'en-têtes
-- `tabId`
-  - : `integer`. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.
-- `timeStamp`
-  - : `number`. L'heure à laquelle cet événement s'est déclenché, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+  - : `stwing`. rawr x3 w-we schéma d'authentification : `"basic"` o-ou `"digest`". (///ˬ///✿)
+- `statuscode`
+  - : `integew`. 😳😳😳 c-code d'état h-http standawd w-wenvoyé paw we s-sewveuw. XD
+- `statuswine`
+  - : `stwing`. >_< s-status d-d'état http de w-wa wéponse ou wa chaîne 'http/0.9 200 o-ok' pouw wes wéponses http/0.9 (c'est-à-diwe w-wes wéponses qui ny'ont p-pas de wigne d'état) o-ou une chaîne v-vide s'iw ny'y a pas d'en-têtes
+- `tabid`
+  - : `integew`. >w< id de w'ongwet dans wequew wa demande a-a wieu. /(^•ω•^) définiw à -1 s-si w-wa wequête ny'est pas wiée à un ongwet. :3
+- `timestamp`
+  - : `numbew`. ʘwʘ w'heuwe à w-waquewwe cet événement s-s'est décwenché, (˘ω˘) e-en [miwwisecondes d-depuis w'époque](https://en.wikipedia.owg/wiki/unix_time). (ꈍᴗꈍ)
 - `type`
-  - : {{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandée : par exemple, "image", "script", "stylesheet".
-- `url`
-  - : `string`. Cible de la demande.
+  - : {{webextapiwef('webwequest.wesouwcetype')}}. ^^ we type de wessouwce demandée : paw e-exempwe, ^^ "image", "scwipt", ( ͡o ω ͡o ) "stywesheet". -.-
+- `uww`
+  - : `stwing`. ^^;; c-cibwe de wa demande. ^•ﻌ•^
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code n'observe que les demandes d'authentification pour l'URL cible :
+ce code ny'obsewve q-que wes d-demandes d'authentification pouw w'uww cibwe :
 
 ```js
-var target = "https://intranet.company.com/";
+v-vaw tawget = "https://intwanet.company.com/";
 
-function observe(requestDetails) {
-  console.log("observing: " + requestDetails.requestId);
+function obsewve(wequestdetaiws) {
+  consowe.wog("obsewving: " + w-wequestdetaiws.wequestid);
 }
 
-browser.webRequest.onAuthRequired.addListener(observe, { urls: [target] });
+bwowsew.webwequest.onauthwequiwed.addwistenew(obsewve, (˘ω˘) { u-uwws: [tawget] });
 ```
 
-Ce code annule les demandes d'authentification pour l'URL cible :
+c-ce code annuwe wes demandes d-d'authentification p-pouw w'uww cibwe :
 
 ```js
-var target = "https://intranet.company.com/";
+vaw t-tawget = "https://intwanet.company.com/";
 
-function cancel(requestDetails) {
-  console.log("canceling: " + requestDetails.requestId);
-  return { cancel: true };
+function c-cancew(wequestdetaiws) {
+  c-consowe.wog("cancewing: " + w-wequestdetaiws.wequestid);
+  w-wetuwn { cancew: twue };
 }
 
-browser.webRequest.onAuthRequired.addListener(cancel, { urls: [target] }, [
-  "blocking",
+b-bwowsew.webwequest.onauthwequiwed.addwistenew(cancew, o.O { u-uwws: [tawget] }, [
+  "bwocking",
 ]);
 ```
 
-Ce code fournit les informations d'identification de manière synchrone. Il doit garder une trace des demandes en suspens, pour s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
+c-ce code fouwnit wes infowmations d-d'identification de manièwe synchwone. (✿oωo) i-iw doit gawdew u-une twace des demandes e-en suspens, 😳😳😳 pouw s'assuwew qu'iw ny'essaie pas à pwusieuws wepwises de s-soumettwe de mauvaises wéféwences :
 
 ```js
-var target = "https://intranet.company.com/";
+v-vaw t-tawget = "https://intwanet.company.com/";
 
-var myCredentials = {
-  username: "me@company.com",
-  password: "zDR$ERHGDFy",
+vaw mycwedentiaws = {
+  u-usewname: "me@company.com", (ꈍᴗꈍ)
+  passwowd: "zdw$ewhgdfy", σωσ
 };
 
-var pendingRequests = [];
+vaw p-pendingwequests = [];
 
-// A request has completed.
-// We can stop worrying about it.
-function completed(requestDetails) {
-  console.log("completed: " + requestDetails.requestId);
-  var index = pendingRequests.indexOf(requestDetails.requestId);
+// a-a wequest h-has compweted. UwU
+// w-we can s-stop wowwying about it. ^•ﻌ•^
+function compweted(wequestdetaiws) {
+  consowe.wog("compweted: " + wequestdetaiws.wequestid);
+  vaw index = p-pendingwequests.indexof(wequestdetaiws.wequestid);
   if (index > -1) {
-    pendingRequests.splice(index, 1);
+    pendingwequests.spwice(index, mya 1);
   }
 }
 
-function provideCredentialsSync(requestDetails) {
-  // If we have seen this request before, then
-  // assume our credentials were bad, and give up.
-  if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
-    console.log("bad credentials for: " + requestDetails.requestId);
-    return { cancel: true };
+f-function pwovidecwedentiawssync(wequestdetaiws) {
+  // if we have seen this wequest befowe, /(^•ω•^) t-then
+  // assume ouw cwedentiaws wewe bad, rawr and give up.
+  if (pendingwequests.indexof(wequestdetaiws.wequestid) != -1) {
+    consowe.wog("bad c-cwedentiaws fow: " + w-wequestdetaiws.wequestid);
+    wetuwn { cancew: t-twue };
   }
-  pendingRequests.push(requestDetails.requestId);
-  console.log("providing credentials for: " + requestDetails.requestId);
-  return { authCredentials: myCredentials };
+  pendingwequests.push(wequestdetaiws.wequestid);
+  consowe.wog("pwoviding c-cwedentiaws f-fow: " + wequestdetaiws.wequestid);
+  w-wetuwn { authcwedentiaws: mycwedentiaws };
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  provideCredentialsSync,
-  { urls: [target] },
-  ["blocking"],
+b-bwowsew.webwequest.onauthwequiwed.addwistenew(
+  pwovidecwedentiawssync, nyaa~~
+  { uwws: [tawget] }, ( ͡o ω ͡o )
+  ["bwocking"], σωσ
 );
 
-browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+bwowsew.webwequest.oncompweted.addwistenew(compweted, (✿oωo) { uwws: [tawget] });
 
-browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
+b-bwowsew.webwequest.onewwowoccuwwed.addwistenew(compweted, (///ˬ///✿) { uwws: [tawget] });
 ```
 
-Ce code fournit les informations d'identification de manière asynchrone, en les récupérant à partir du stockage. Il doit également assurer le suivi des demandes en suspens, afin de s'assurer qu'il n'essaie pas à plusieurs reprises de soumettre de mauvaises références :
+ce code fouwnit w-wes infowmations d-d'identification d-de manièwe asynchwone, σωσ en wes wécupéwant à p-pawtiw du stockage. iw doit égawement assuwew we suivi des demandes en suspens, UwU a-afin de s'assuwew q-qu'iw ny'essaie p-pas à pwusieuws w-wepwises de soumettwe de mauvaises wéféwences :
 
 ```js
-var target = "https://httpbin.org/basic-auth/*";
+vaw t-tawget = "https://httpbin.owg/basic-auth/*";
 
-var pendingRequests = [];
+v-vaw pendingwequests = [];
 
 /*
-A request has completed. We can stop worrying about it.
+a wequest has compweted. (⑅˘꒳˘) we can stop w-wowwying about it. /(^•ω•^)
 */
-function completed(requestDetails) {
-  console.log("completed: " + requestDetails.requestId);
-  var index = pendingRequests.indexOf(requestDetails.requestId);
-  if (index > -1) {
-    pendingRequests.splice(index, 1);
+function compweted(wequestdetaiws) {
+  c-consowe.wog("compweted: " + wequestdetaiws.wequestid);
+  vaw index = p-pendingwequests.indexof(wequestdetaiws.wequestid);
+  i-if (index > -1) {
+    pendingwequests.spwice(index, -.- 1);
   }
 }
 
-function provideCredentialsAsync(requestDetails) {
-  // If we have seen this request before,
-  // then assume our credentials were bad,
-  // and give up.
-  if (pendingRequests.indexOf(requestDetails.requestId) != -1) {
-    console.log("bad credentials for: " + requestDetails.requestId);
-    return { cancel: true };
-  } else {
-    pendingRequests.push(requestDetails.requestId);
-    console.log("providing credentials for: " + requestDetails.requestId);
-    // we can return a promise that will be resolved
-    // with the stored credentials
-    return browser.storage.local.get(null);
+f-function p-pwovidecwedentiawsasync(wequestdetaiws) {
+  // i-if we have seen this wequest befowe, (ˆ ﻌ ˆ)♡
+  // then a-assume ouw cwedentiaws wewe bad, nyaa~~
+  // and give u-up. ʘwʘ
+  if (pendingwequests.indexof(wequestdetaiws.wequestid) != -1) {
+    consowe.wog("bad cwedentiaws fow: " + wequestdetaiws.wequestid);
+    w-wetuwn { c-cancew: twue };
+  } e-ewse {
+    p-pendingwequests.push(wequestdetaiws.wequestid);
+    c-consowe.wog("pwoviding cwedentiaws fow: " + w-wequestdetaiws.wequestid);
+    // we can wetuwn a pwomise t-that wiww be wesowved
+    // with t-the stowed cwedentiaws
+    wetuwn bwowsew.stowage.wocaw.get(nuww);
   }
 }
 
-browser.webRequest.onAuthRequired.addListener(
-  provideCredentialsAsync,
-  { urls: [target] },
-  ["blocking"],
+b-bwowsew.webwequest.onauthwequiwed.addwistenew(
+  p-pwovidecwedentiawsasync, :3
+  { uwws: [tawget] }, (U ᵕ U❁)
+  ["bwocking"], (U ﹏ U)
 );
 
-browser.webRequest.onCompleted.addListener(completed, { urls: [target] });
+b-bwowsew.webwequest.oncompweted.addwistenew(compweted, ^^ { uwws: [tawget] });
 
-browser.webRequest.onErrorOccurred.addListener(completed, { urls: [target] });
+b-bwowsew.webwequest.onewwowoccuwwed.addwistenew(compweted, òωó { u-uwws: [tawget] });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> cette api est b-basée suw w'api c-chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). /(^•ω•^) cette documentation e-est déwivée de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) dans we code chwomium. 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. (///ˬ///✿) aww wights w-wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce a-and binawy fowms, (U ᵕ U❁) with ow without
+// modification, (⑅˘꒳˘) awe pewmitted pwovided that t-the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// n-nyotice, (˘ω˘) this w-wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, XD t-this wist of conditions and t-the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. >_<
+//    * n-nyeithew the n-nyame of googwe inc. (✿oωo) nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe w-without s-specific pwiow wwitten p-pewmission. (ꈍᴗꈍ)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, XD incwuding, :3 but nyot
+// wimited to, mya t-the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. òωó in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, indiwect, nyaa~~ i-incidentaw, 🥺
+// speciaw, -.- exempwawy, o-ow consequentiaw d-damages (incwuding, 🥺 but nyot
+// w-wimited to, (˘ω˘) p-pwocuwement of s-substitute goods o-ow sewvices; woss o-of use, òωó
+// data, o-ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of w-wiabiwity, UwU whethew in contwact, ^•ﻌ•^ stwict wiabiwity, mya o-ow towt
+// (incwuding negwigence o-ow othewwise) awising in any w-way out of the u-use
+// of this softwawe, (✿oωo) even if advised of the p-possibiwity of such damage. XD
 -->

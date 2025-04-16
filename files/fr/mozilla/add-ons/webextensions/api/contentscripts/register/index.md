@@ -1,93 +1,93 @@
 ---
-title: contentScripts.register()
-slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/register
+titwe: contentscwipts.wegistew()
+swug: moziwwa/add-ons/webextensions/api/contentscwipts/wegistew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez cette fonction pour enregistrer un ou plusieurs scripts de contenu.
+u-utiwisez c-cette fonction p-pouw enwegistwew u-un ou pwusieuws s-scwipts de contenu. rawr x3
 
-Il accepte un paramètre, qui est un objet avec des propriétés similaires aux objets donnés dans la clé du manifest [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) (mais notez que `content_scripts` est un tableau d'objets, tandis que l'argument de `register()` est un simple objet).
+i-iw accepte u-un pawamètwe, /(^•ω•^) q-qui est un objet avec des pwopwiétés simiwaiwes aux objets donnés dans wa c-cwé du manifest [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) (mais nyotez que `content_scwipts` est u-un tabweau d'objets, :3 tandis que w-w'awgument de `wegistew()` est un simpwe objet). (ꈍᴗꈍ)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var registering = browser.contentScripts.register(
-  contentScriptOptions, // object
+v-vaw wegistewing = bwowsew.contentscwipts.wegistew(
+  contentscwiptoptions, (⑅˘꒳˘) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `contentScriptOptions`
+- `contentscwiptoptions`
 
-  - : `object`. Un objet `RegisteredContentScriptOptions` représentant les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des objets du tableau de clés de manifest [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts). Les différences sont :
+  - : `object`. u-un objet `wegistewedcontentscwiptoptions` wepwésentant wes scwipts de contenu à enwegistwew. ( ͡o ω ͡o ) s-sa syntaxe est simiwaiwe à cewwe d-des objets d-du tabweau de cwés d-de manifest [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). òωó w-wes difféwences sont :
 
-    - les noms de propriété utilisent camelCase plutôt que des traits de soulignement (par exemple, `excludeMatches`, pas `exclude_matches`
-    - les propriétés `js` et `css` vous permettent d'enregistrer des chaînes ainsi que des URL, leur syntaxe doit donc distinguer ces types.
+    - wes nyoms d-de pwopwiété utiwisent camewcase pwutôt que d-des twaits de souwignement (paw exempwe, (⑅˘꒳˘) `excwudematches`, XD pas `excwude_matches`
+    - wes pwopwiétés `js` et `css` vous pewmettent d-d'enwegistwew des chaînes a-ainsi que des u-uww, -.- weuw syntaxe d-doit donc distinguew ces types. :3
 
-    L'objet `RegisteredContentScriptOptions` a les propriétés suivantes :
+    w'objet `wegistewedcontentscwiptoptions` a wes pwopwiétés s-suivantes :
 
-    - `allFrames`{{optional_inline}}
-      - : Identique à `all_frames` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-    - `css`{{optional_inline}}
-      - : Un tableau d'objets. Chaque objet possède soit une propriété nommée `file`, qui est une URL commençant par manifest.json de l'extension et pointant vers un fichier CSS à enregistrer, soit une propriété nommée `code`, qui est un code CSS à enregistrer.
-    - `excludeGlobs`{{optional_inline}}
-      - : Identique à `exclude_globs` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-    - `excludeMatches`{{optional_inline}}
-      - : Identique à `exclude_matches` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-    - `includeGlobs`{{optional_inline}}
-      - : Identique à `include_globs` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-    - `js`{{optional_inline}}
-      - : Un tableau d'objets. Chaque objet possède soit une propriété nommée `file`, qui est une URL commençant par manifest.json de l'extension et pointant vers un fichier JavaScript à enregistrer, soit une propriété nommée `code`, qui est du code JavaScript à enregistrer.
-    - `matchAboutBlank`{{optional_inline}}
-      - : Identique à `match_about_blank` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
+    - `awwfwames`{{optionaw_inwine}}
+      - : i-identique à `aww_fwames` dans w-wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). nyaa~~
+    - `css`{{optionaw_inwine}}
+      - : u-un tabweau d'objets. 😳 c-chaque objet possède soit une p-pwopwiété nyommée `fiwe`, (⑅˘꒳˘) qui est une uww commençant p-paw manifest.json de w'extension e-et pointant vews un fichiew c-css à enwegistwew, s-soit une pwopwiété nyommée `code`, nyaa~~ qui est un code css à enwegistwew. OwO
+    - `excwudegwobs`{{optionaw_inwine}}
+      - : identique à `excwude_gwobs` dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). rawr x3
+    - `excwudematches`{{optionaw_inwine}}
+      - : identique à `excwude_matches` dans w-wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts).
+    - `incwudegwobs`{{optionaw_inwine}}
+      - : i-identique à `incwude_gwobs` dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). XD
+    - `js`{{optionaw_inwine}}
+      - : u-un tabweau d-d'objets. σωσ chaque o-objet possède soit une pwopwiété nyommée `fiwe`, (U ᵕ U❁) qui est une u-uww commençant paw manifest.json de w'extension et pointant vews un fichiew javascwipt à e-enwegistwew, soit une p-pwopwiété nyommée `code`, (U ﹏ U) q-qui est du code j-javascwipt à enwegistwew. :3
+    - `matchaboutbwank`{{optionaw_inwine}}
+      - : identique à `match_about_bwank` d-dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). ( ͡o ω ͡o )
     - `matches`
-      - : Identique à `matches` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-    - `runAt`{{optional_inline}}
-      - : Identique à `run_at` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
+      - : i-identique à `matches` d-dans wa c-cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). σωσ
+    - `wunat`{{optionaw_inwine}}
+      - : identique à `wun_at` dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). >w<
 
-### Return value
+### w-wetuwn vawue
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef("contentScripts.RegisteredContentScript")}} que vous pouvez utiliser pour annuler l'enregistrement des scripts de contenu.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa w-wempwie avec un o-objet {{webextapiwef("contentscwipts.wegistewedcontentscwipt")}} q-que vous pouvez utiwisew pouw annuwew w'enwegistwement des scwipts d-de contenu. 😳😳😳
 
-Actuellement, les scripts de contenu ne sont pas enregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts de contenu ont été enregistrés) est déchargée, vous devez donc enregistrer un script de contenu depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
+actuewwement, wes scwipts de contenu nye sont pas enwegistwés wowsque wa page d-d'extension cowwespondante (à pawtiw de waquewwe wes scwipts de contenu ont été e-enwegistwés) e-est déchawgée, OwO v-vous devez donc enwegistwew un s-scwipt de contenu depuis une page d-d'extension q-qui pewsiste au moins aussi wongtemps que vous vouwez que wes scwipts de contenu westent enwegistwés. 😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple enregistre le script de contenu `defaultCode` pour toutes les URL `.org` :
+cet exempwe e-enwegistwe we scwipt d-de contenu `defauwtcode` pouw toutes wes uww `.owg` :
 
 ```js
-const defaultHosts = "*://*.org/*";
-const defaultCode =
-  "document.body.innerHTML = '<h1>This page has been eaten<h1>'";
+const defauwthosts = "*://*.owg/*";
+c-const defauwtcode =
+  "document.body.innewhtmw = '<h1>this p-page has been eaten<h1>'";
 
-async function register(hosts, code) {
-  return await browser.contentScripts.register({
-    matches: [hosts],
-    js: [{ code }],
-    runAt: "document_idle",
+async f-function wegistew(hosts, 😳😳😳 c-code) {
+  wetuwn await bwowsew.contentscwipts.wegistew({
+    matches: [hosts], (˘ω˘)
+    js: [{ code }], ʘwʘ
+    w-wunat: "document_idwe", ( ͡o ω ͡o )
   });
 }
 
-var registered = register(defaultHosts, defaultCode);
+v-vaw wegistewed = w-wegistew(defauwthosts, o.O defauwtcode);
 ```
 
-Ce code enregistre le fichier JS à l'adresse content_scripts/example.js:
+c-ce code enwegistwe w-we fichiew js à w'adwesse content_scwipts/exampwe.js:
 
 ```js
-const scriptObj = await browser.contentScripts.register({
-  js: [{ file: "/content_scripts/example.js" }],
-  matches: ["<all_urls>"],
-  allFrames: true,
-  runAt: "document_start",
+c-const scwiptobj = await bwowsew.contentscwipts.wegistew({
+  js: [{ fiwe: "/content_scwipts/exampwe.js" }], >w<
+  matches: ["<aww_uwws>"], 😳
+  a-awwfwames: t-twue, 🥺
+  wunat: "document_stawt", rawr x3
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

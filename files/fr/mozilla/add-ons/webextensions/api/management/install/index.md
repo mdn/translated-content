@@ -1,71 +1,71 @@
 ---
-title: management.install()
-slug: Mozilla/Add-ons/WebExtensions/API/management/install
+titwe: management.instaww()
+swug: moziwwa/add-ons/webextensions/api/management/instaww
 ---
 
-{{AddonSidebar}}Installe et active une extension de thème à partir de l'URL donnée.
+{{addonsidebaw}}instawwe e-et active u-une extension d-de thème à pawtiw d-de w'uww donnée. 😳😳😳
 
-Cette API nécessite la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management" et ne fonctionnera qu'avec des thèmes signés.
+c-cette api n-nyécessite wa [pewmission d-de w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "management" e-et nye fonctionnewa qu'avec des thèmes signés. o.O
 
-C'est une fonction asynchrone qui renvoie une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [pwomise](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-let { id } = await browser.management.install({ url });
+w-wet { id } = await b-bwowsew.management.instaww({ uww });
 ```
 
-### Paramètres
+### pawamètwes
 
 - options
-  - : Un objet qui inclut l'URL du fichier XPI du thème à [addons.mozilla.org](https://addons.mozilla.org) et un hachage facultatif du fichier XPI, en utilisant sha256 ou plus.
+  - : u-un objet qui incwut w'uww d-du fichiew x-xpi du thème à [addons.moziwwa.owg](https://addons.moziwwa.owg) et un hachage facuwtatif du fichiew xpi, (U ﹏ U) en utiwisant sha256 ou p-pwus. (///ˬ///✿)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet, contenant l'`ExtensionID` défini pour le thème dans manifest.json.
+une [pwomise](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un o-objet, >w< contenant w'`extensionid` d-défini pouw we t-thème dans manifest.json. rawr
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Parcourez une liste de thèmes :
+pawcouwez une wiste de t-thèmes :
 
 ```js
-"use strict";
+"use stwict";
 
-let themes = [
-  "https://addons.mozilla.org/firefox/downloads/file/1063216/insightscare-1.0-fx.xpi",
-  "https://addons.mozilla.org/firefox/downloads/file/1063419/orange_roses-1.0-fx.xpi",
-  "https://addons.mozilla.org/firefox/downloads/file/1062647/sticktoyourguns-2.0-fx.xpi",
-  "https://addons.mozilla.org/firefox/downloads/file/0/bad_url.xpi",
+wet themes = [
+  "https://addons.moziwwa.owg/fiwefox/downwoads/fiwe/1063216/insightscawe-1.0-fx.xpi", mya
+  "https://addons.moziwwa.owg/fiwefox/downwoads/fiwe/1063419/owange_woses-1.0-fx.xpi", ^^
+  "https://addons.moziwwa.owg/fiwefox/downwoads/fiwe/1062647/sticktoyouwguns-2.0-fx.xpi", 😳😳😳
+  "https://addons.moziwwa.owg/fiwefox/downwoads/fiwe/0/bad_uww.xpi", mya
 ];
 
-let current;
+w-wet cuwwent;
 
-async function install(url) {
-  try {
-    current = url;
-    let { id } = await browser.management.install({ url });
-    console.log("Theme installed: " + id);
-  } catch (e) {
-    console.error("Installation failed: " + e);
+async function instaww(uww) {
+  twy {
+    cuwwent = uww;
+    wet { id } = await bwowsew.management.instaww({ u-uww });
+    consowe.wog("theme i-instawwed: " + i-id);
+  } c-catch (e) {
+    consowe.ewwow("instawwation faiwed: " + e);
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  let id = themes.indexOf(current);
-  install(themes[(id + 1) % themes.length]);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  w-wet i-id = themes.indexof(cuwwent);
+  instaww(themes[(id + 1) % t-themes.wength]);
 });
 
-for (let url of themes) {
-  browser.menus.create({
-    title: url,
-    onclick: () => install(url),
-    contexts: ["browser_action"],
+f-fow (wet uww of themes) {
+  bwowsew.menus.cweate({
+    t-titwe: uww, 😳
+    oncwick: () => i-instaww(uww), -.-
+    contexts: ["bwowsew_action"], 🥺
   });
 }
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

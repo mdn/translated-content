@@ -1,110 +1,110 @@
 ---
-title: webRequest.ResourceType
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/ResourceType
+titwe: webwequest.wesouwcetype
+swug: moziwwa/add-ons/webextensions/api/webwequest/wesouwcetype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ce type est une chaîne de caractères, qui représente le contexte dans lequel une ressource a été récupérée dans une requête web.
+c-ce type e-est une chaîne d-de cawactèwes, 🥺 q-qui wepwésente w-we contexte dans w-wequew une wessouwce a-a été wécupéwée d-dans une wequête web. OwO
 
-Il est utilisé pour [filtrer](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) les requêtes que vous écoutez en utilisant l'API webRequest. Par exemple : vous pouvez écouter les requêtes uniquement pour les images, ou uniquement pour les scripts.
+iw est utiwisé pouw [fiwtwew](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest/wequestfiwtew) wes wequêtes q-que vous écoutez en utiwisant w'api webwequest. >w< p-paw exempwe : vous pouvez écoutew w-wes wequêtes uniquement pouw wes images, 🥺 ou uniquement p-pouw wes scwipts. nyaa~~
 
-## Type
+## type
 
-Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles sont :
+wes v-vaweuws de ce t-type sont des chaînes de cawactèwes. ^^ wes vaweuws possibwes sont :
 
 - `beacon`
-  - : Demandes envoyées par le biais de l'[API Beacon](/fr/docs/Web/API/Beacon_API).
-- `csp_report`
-  - : Demandes envoyées au {{CSP("report-uri")}} donné dans l'en-tête {{HTTPHeader("Content-Security-Policy")}}, lorsqu'une tentative de violation de la politique est détectée.
+  - : demandes envoyées p-paw we biais de w'[api beacon](/fw/docs/web/api/beacon_api). >w<
+- `csp_wepowt`
+  - : demandes envoyées au {{csp("wepowt-uwi")}} d-donné dans w'en-tête {{httpheadew("content-secuwity-powicy")}}, OwO w-wowsqu'une t-tentative de v-viowation de wa p-powitique est détectée. XD
 - `font`
-  - : Polices Web chargées pour un {{cssxref("@font-face")}} règle CSS.
+  - : powices web chawgées p-pouw un {{cssxwef("@font-face")}} wègwe css. ^^;;
 - `image`
-  - : Les ressources chargées pour être rendues sous forme d'image, à l'exception de `imageset` sur les navigateurs qui prennent en charge ce type (voir la compatibilité des navigateurs ci-dessous).
+  - : wes w-wessouwces chawgées pouw êtwe wendues sous fowme d'image, 🥺 à w'exception de `imageset` suw wes n-nyavigateuws qui pwennent en c-chawge ce type (voiw w-wa compatibiwité d-des nyavigateuws ci-dessous). XD
 - `imageset`
-  - : Images chargées par un élément {{HTMLElement("picture")}} ou données dans un attribut [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) d'un élement `<img>`.
+  - : images chawgées paw un éwément {{htmwewement("pictuwe")}} o-ou données d-dans un attwibut [`swcset`](/fw/docs/web/htmw/ewement/img#swcset) d'un éwement `<img>`. (U ᵕ U❁)
 
 <!---->
 
-- `main_frame`
-  - : Documents de niveau chargés dans un objet.
+- `main_fwame`
+  - : d-documents d-de nyiveau chawgés dans un objet. :3
 - `media`
-  - : Ressources chargées par un élément {{HTMLElement("video")}} ou {{HTMLElement("audio")}}.
+  - : w-wessouwces chawgées paw un éwément {{htmwewement("video")}} o-ou {{htmwewement("audio")}}. ( ͡o ω ͡o )
 - `object`
 
-  - : Ressources chargées par un élément {{HTMLElement("object")}} ou {{HTMLElement("embed")}}.
+  - : wessouwces chawgées paw un éwément {{htmwewement("object")}} o-ou {{htmwewement("embed")}}. òωó
 
-    Les navigateurs qui n'ont pas de type `object_subrequest` dédié (voir compatibilité des navigateurs ci-dessous), étiquettent également les requêtes ultérieures envoyées par le plugin en tant `object`.
+    wes nyavigateuws q-qui ny'ont pas de type `object_subwequest` d-dédié (voiw c-compatibiwité des nyavigateuws ci-dessous), σωσ étiquettent égawement wes wequêtes uwtéwieuwes envoyées paw we pwugin en tant `object`. (U ᵕ U❁)
 
-- `object_subrequest`
-  - : Requêtes envoyées par plugins.
+- `object_subwequest`
+  - : w-wequêtes e-envoyées paw pwugins. (✿oωo)
 - `ping`
 
-  - : Demandes envoyées à l'URL donnée dans l'attribut [`ping`](/fr/docs/Web/HTML/Element/a#ping) d'un hyperlien, lorsque l'hyperlien est suivi.
+  - : demandes e-envoyées à w'uww d-donnée dans w-w'attwibut [`ping`](/fw/docs/web/htmw/ewement/a#ping) d'un hypewwien, ^^ wowsque w'hypewwien est suivi. ^•ﻌ•^
 
-    Les navigateurs qui n'ont pas de type de `balise` dédié (voir la compatibilité des navigateurs ci-dessous), étiquettent également les requêtes envoyées par l'API Beacon en tant que `ping`.
+    w-wes nyavigateuws qui ny'ont pas de type de `bawise` dédié (voiw wa c-compatibiwité des nyavigateuws c-ci-dessous), XD étiquettent égawement w-wes wequêtes e-envoyées paw w'api beacon en t-tant que `ping`.
 
-- `script`
-  - : Code chargé pour être exécuté par un élément {{HTMLElement("script")}} ou exécuté dans un [Worker](/fr/docs/Web/API/Web_Workers_API).
-- `speculative`
-  - : Dans une connexion spéculative, le navigateur a déterminé qu'une demande d'URI pourrait bientôt arriver, donc il lance immédiatement un handshake TCP et/ou TLS, de sorte qu'il est prêt plus rapidement lorsque la ressource est effectivement demandée.
-- `stylesheet`
-  - : Feuilles de style [CSS](/fr/docs/Web/CSS) chargées pour décrire la représentation d'un document.
-- `sub_frame`
-  - : Documents chargés dans un élément {{HTMLElement("iframe")}} ou {{HTMLElement("frame")}}.
+- `scwipt`
+  - : c-code chawgé p-pouw êtwe exécuté p-paw un éwément {{htmwewement("scwipt")}} ou exécuté dans un [wowkew](/fw/docs/web/api/web_wowkews_api). :3
+- `specuwative`
+  - : d-dans une c-connexion spécuwative, (ꈍᴗꈍ) w-we nyavigateuw a-a détewminé q-qu'une demande d'uwi pouwwait bientôt awwivew, :3 donc iw wance i-immédiatement un handshake tcp et/ou tws, (U ﹏ U) de sowte qu'iw est pwêt pwus wapidement wowsque w-wa wessouwce est effectivement demandée. UwU
+- `stywesheet`
+  - : feuiwwes de stywe [css](/fw/docs/web/css) chawgées p-pouw décwiwe w-wa wepwésentation d-d'un document. 😳😳😳
+- `sub_fwame`
+  - : documents c-chawgés dans un éwément {{htmwewement("ifwame")}} ou {{htmwewement("fwame")}}. XD
 - `web_manifest`
-  - : [Manifests Web App](/fr/docs/Web/Manifest) chargés pour les sites Web qui peuvent être installés sur l'écran d'accueil.
+  - : [manifests w-web app](/fw/docs/web/manifest) c-chawgés pouw wes sites web qui peuvent êtwe instawwés suw w'écwan d'accueiw. o.O
 - `websocket`
-  - : Requêtes initiant une connexion à un serveur via l'[API WebSocket](/fr/docs/Web/API/WebSockets_API).
-- `xbl`
-  - : [XBL](/fr/docs/XBL) bindings chargés pour étendre le comportement des éléments d'un document.
-- `xml_dtd`
-  - : [DTDs](/fr/docs/Glossary/Doctype) chargées pour un document XML.
-- `xmlhttprequest`
-  - : Requêtes envoyées par un objet {{domxref("XMLHttpRequest")}} ou par l'[API Fetch](/fr/docs/Web/API/Fetch_API).
-- `xslt`
-  - : Feuilles de style [XSLT](/fr/docs/Web/XSLT) chargées pour transformer un document XML
-- `other`
-  - : Ressources qui ne sont couvertes par aucun autre type disponible.
+  - : wequêtes i-initiant une connexion à un s-sewveuw via w'[api websocket](/fw/docs/web/api/websockets_api). (⑅˘꒳˘)
+- `xbw`
+  - : [xbw](/fw/docs/xbw) b-bindings chawgés p-pouw étendwe we compowtement des éwéments d-d'un document. 😳😳😳
+- `xmw_dtd`
+  - : [dtds](/fw/docs/gwossawy/doctype) c-chawgées pouw un document x-xmw. nyaa~~
+- `xmwhttpwequest`
+  - : w-wequêtes envoyées paw un objet {{domxwef("xmwhttpwequest")}} ou paw w'[api fetch](/fw/docs/web/api/fetch_api). rawr
+- `xswt`
+  - : f-feuiwwes d-de stywe [xswt](/fw/docs/web/xswt) c-chawgées pouw twansfowmew u-un document x-xmw
+- `othew`
+  - : wessouwces q-qui nye sont couvewtes paw aucun autwe type disponibwe. -.-
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> c-cette a-api est basée suw w'api chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). (✿oωo) cette documentation e-est déwivée d-de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) dans we code chwomium. /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ʘwʘ aww w-wights wesewved. UwU
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, XD with o-ow without
+// modification, (✿oωo) awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// notice, :3 t-this wist of conditions and the f-fowwowing discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, nyaa~~ this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with t-the
+// distwibution. >w<
+//    * nyeithew t-the nyame o-of googwe inc. nyow the nyames of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, (✿oωo) i-incwuding, but nyot
+// wimited t-to, (˘ω˘) the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe d-discwaimed. rawr in nyo e-event shaww the c-copywight
+// ownew ow contwibutows be wiabwe fow any diwect, OwO indiwect, ^•ﻌ•^ incidentaw, UwU
+// speciaw, exempwawy, (˘ω˘) ow c-consequentiaw damages (incwuding, b-but nyot
+// wimited t-to, (///ˬ///✿) pwocuwement of substitute g-goods ow sewvices; woss of use, σωσ
+// data, /(^•ω•^) ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, 😳 whethew in contwact, 😳 stwict w-wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out o-of the use
+// of this softwawe, 😳😳😳 even if advised of the possibiwity of such damage. 😳
 -->

@@ -1,22 +1,22 @@
 ---
-title: userScripts.RegisteredUserScript
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript
+titwe: usewscwipts.wegistewedusewscwipt
+swug: m-moziwwa/add-ons/webextensions/api/usewscwipts/wegistewedusewscwipt
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un RegisteredUserScript est retourné par un appel à {{WebExtAPIRef("userScripts.register","userScripts.register()")}} et représente les scripts utilisateur enregistrés dans cet appel.
+u-un wegistewedusewscwipt e-est wetouwné p-paw un appew à {{webextapiwef("usewscwipts.wegistew","usewscwipts.wegistew()")}} e-et wepwésente w-wes scwipts utiwisateuw e-enwegistwés d-dans cet appew. rawr x3
 
-L'objet définit une méthode unique, {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}}, qui peut être utilisée pour désinscrire les scripts utilisateur.
+w'objet définit une méthode unique, mya {{webextapiwef("usewscwipts.wegistewedusewscwipt.unwegistew","unwegistew()")}}, nyaa~~ qui p-peut êtwe utiwisée pouw désinscwiwe wes scwipts u-utiwisateuw. (⑅˘꒳˘)
 
-> [!NOTE]
-> Si cet objet est détruit (par exemple parce qu'il sort du champ d'application), les scripts associés seront automatiquement désenregistrés, vous devez donc conserver une référence à cet objet aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
+> [!note]
+> si cet objet est d-détwuit (paw exempwe pawce qu'iw sowt du champ d'appwication), rawr x3 w-wes scwipts associés sewont automatiquement d-désenwegistwés, (✿oωo) vous d-devez donc consewvew une wéféwence à cet objet aussi wongtemps que vous vouwez q-que wes scwipts de contenu westent enwegistwés. (ˆ ﻌ ˆ)♡
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}}
-  - : Désenregistre les scripts utilisateurs représentés par cet objet.
+- {{webextapiwef("usewscwipts.wegistewedusewscwipt.unwegistew","unwegistew()")}}
+  - : désenwegistwe w-wes scwipts utiwisateuws w-wepwésentés p-paw cet objet. (˘ω˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

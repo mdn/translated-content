@@ -1,366 +1,366 @@
 ---
-title: Internationalisation
-slug: Mozilla/Add-ons/WebExtensions/Internationalization
-l10n:
-  sourceCommit: 16d1903feb387e054a502c20f35ccb12d823dedb
+titwe: intewnationawisation
+swug: moziwwa/add-ons/webextensions/intewnationawization
+w-w10n:
+  s-souwcecommit: 16d1903feb387e054a502c20f35ccb12d823dedb
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'API [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) dispose d'un module pour [l'internationalisation](/fr/docs/Glossary/Internationalization) des extensions&nbsp;: [`i18n`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n). Dans cet article, nous allons explorer ses fonctionnalités et illustrer son utilisation par un exemple pratique. L'API `i18n` pour les extensions web est similaire aux bibliothèques JavaScript tierces d'internationalisation.
+w-w'api [webextensions](/fw/docs/moziwwa/add-ons/webextensions) d-dispose d-d'un moduwe p-pouw [w'intewnationawisation](/fw/docs/gwossawy/intewnationawization) d-des extensions&nbsp;: [`i18n`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n). o.O d-dans cet awticwe, ^•ﻌ•^ nyous awwons expwowew ses fonctionnawités et iwwustwew s-son utiwisation paw un exempwe pwatique. (U ᵕ U❁) w'api `i18n` p-pouw wes extensions web est s-simiwaiwe aux bibwiothèques javascwipt tiewces d'intewnationawisation. :3
 
-> [!NOTE]
-> L'exemple d'extension présenté dans cet article, [`notify-link-clicks-i18n`](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n), est disponible sur GitHub. Suivez le code source pendant que vous parcourez cette page.
+> [!note]
+> w-w'exempwe d'extension pwésenté d-dans cet a-awticwe, (///ˬ///✿) [`notify-wink-cwicks-i18n`](https://github.com/mdn/webextensions-exampwes/twee/main/notify-wink-cwicks-i18n), (///ˬ///✿) est disponibwe suw github. suivez we code souwce pendant q-que vous pawcouwez cette page. 🥺
 
-## Anatomie d'une extension internationalisée
+## anatomie d'une extension intewnationawisée
 
-Une extension internationalisée peut contenir les mêmes fonctionnalités que n'importe quelle autre extension ([scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#scripts_darrière-plan), [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#scripts_de_contenu), etc.), mais avec du contenu supplémentaire lui permettant de basculer entre différentes locales. Les éléments ajoutés pour l'internationalisation sont résumés dans l'arborescence suivante&nbsp;:
+une extension i-intewnationawisée peut conteniw w-wes mêmes fonctionnawités q-que n-ny'impowte quewwe a-autwe extension ([scwipts d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#scwipts_dawwièwe-pwan), [scwipts de contenu](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#scwipts_de_contenu), -.- e-etc.), nyaa~~ mais avec du contenu suppwémentaiwe wui pewmettant de b-bascuwew entwe difféwentes wocawes. (///ˬ///✿) wes éwéments ajoutés pouw w'intewnationawisation sont wésumés d-dans w'awbowescence suivante&nbsp;:
 
-- `répertoire-racine-de-l'extension/`
-  - `_locales`
+- `wépewtoiwe-wacine-de-w'extension/`
+  - `_wocawes`
     - `en`
-      - `messages.json`&nbsp;: un fichier qui contiendra les chaines de caractères en anglais
-    - `fr_FR`
-      - `messages.json`&nbsp;: un fichier qui contiendra les chaines de caractères en français
+      - `messages.json`&nbsp;: u-un f-fichiew qui contiendwa w-wes chaines de cawactèwes en angwais
+    - `fw_fw`
+      - `messages.json`&nbsp;: un fichiew q-qui contiendwa w-wes chaines de cawactèwes e-en fwançais
     - `de`
-      - `messages.json`&nbsp;: un fichier qui contiendra les chaines de caractères en allemand
-    - etc.
-  - `manifest.json`&nbsp;: des métadonnées relatives aux locales sont ajoutées au [manifeste](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json)
-  - `fichierJavaScript.js`&nbsp;: de la logique pour récupérer la locale du navigateur, récupérer les messages spécifiques à la locale courante, etc.
-  - `mesStyles.css`&nbsp;: les règles CSS peuvent changer de comportement suivant la locale
+      - `messages.json`&nbsp;: u-un fichiew qui contiendwa w-wes chaines de cawactèwes en awwemand
+    - e-etc. 🥺
+  - `manifest.json`&nbsp;: des métadonnées w-wewatives aux wocawes sont ajoutées a-au [manifeste](/fw/docs/moziwwa/add-ons/webextensions/manifest.json)
+  - `fichiewjavascwipt.js`&nbsp;: de wa w-wogique pouw wécupéwew w-wa wocawe du nyavigateuw, >w< wécupéwew wes messages spécifiques à wa wocawe couwante, rawr x3 etc.
+  - `messtywes.css`&nbsp;: w-wes wègwes css p-peuvent changew de compowtement s-suivant wa wocawe
 
-Examinons chacune de ces fonctionnalités supplémentaires. Chacune des sections qui suit représente une étape à suivre pour l'internationalisation de votre extension.
+e-examinons chacune d-de ces fonctionnawités suppwémentaiwes. (⑅˘꒳˘) chacune des sections qui suit wepwésente une étape à s-suivwe pouw w'intewnationawisation de votwe extension. σωσ
 
-## Fournir des chaines localisées dans `_locales`
+## fouwniw des c-chaines wocawisées dans `_wocawes`
 
-L'internationalisation nécessite de fournir des chaines traduites pour les différentes locales qu'on souhaite prendre en charge. Pour les extensions, le répertoire `_locales`, présent à la racine de l'extension, contient un sous-répertoire pour chaque locale, nommé grâce à [l'étiquette de langue correspondante](https://fr.wikipedia.org/wiki/%C3%89tiquette_d%27identification_de_langues_IETF) et ce dernier contient un fichier `messages.json` avec les chaines de caractères traduites pour la locale correspondante.
+w-w'intewnationawisation n-nyécessite d-de fouwniw des chaines twaduites p-pouw wes d-difféwentes wocawes q-qu'on souhaite p-pwendwe en chawge. XD pouw wes extensions, -.- we w-wépewtoiwe `_wocawes`, >_< p-pwésent à w-wa wacine de w-w'extension, rawr contient u-un sous-wépewtoiwe pouw chaque wocawe, 😳😳😳 nyommé gwâce à [w'étiquette d-de wangue cowwespondante](https://fw.wikipedia.owg/wiki/%c3%89tiquette_d%27identification_de_wangues_ietf) et ce dewniew contient un fichiew `messages.json` avec wes chaines de c-cawactèwes twaduites pouw wa wocawe cowwespondante. UwU
 
-> [!WARNING]
-> Contrairement à la convention qui consiste à séparer la sous-étiquette de base et celle de la variante régionale par un tiret (par exemple `en-US` ou `fr-CA`), **il faudra utiliser un tiret bas pour le nom du répertoire sous `_locales`** (par exemple `en_US` ou `fr_CA`).
+> [!wawning]
+> contwaiwement à w-wa convention q-qui consiste à s-sépawew wa sous-étiquette d-de base et cewwe de wa vawiante w-wégionawe paw u-un tiwet (paw exempwe `en-us` ou `fw-ca`), (U ﹏ U) **iw faudwa utiwisew un tiwet bas pouw we nyom du wépewtoiwe sous `_wocawes`** (paw e-exempwe `en_us` ou `fw_ca`). (˘ω˘)
 
-> [!NOTE]
-> Vous pouvez rechercher des étiquettes de langue à l'aide de [cet outil en ligne (en anglais)](https://r12a.github.io/app-subtags/). Notez que vous devez rechercher le nom anglais de la langue.
+> [!note]
+> v-vous pouvez wechewchew d-des étiquettes d-de wangue à w'aide de [cet outiw en wigne (en a-angwais)](https://w12a.github.io/app-subtags/). /(^•ω•^) n-nyotez que vous devez wechewchew w-we nyom angwais d-de wa wangue. (U ﹏ U)
 
-Dans [le répertoire `_locales` de notre exemple d'extension](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n/_locales), nous avons des répertoires pour l'anglais (`en`), l'allemand (`de`), le français tel que parlé en France (`fr_FR`), le japonais (`ja`), le norvégien tel que parlé en Norvège (`nb_NO`), le néerlandais (`nl`), et le portugais brésilien (`pt_BR`). Chacun de ces répertoires contient un fichier `messages.json`.
+dans [we wépewtoiwe `_wocawes` de nyotwe exempwe d'extension](https://github.com/mdn/webextensions-exampwes/twee/main/notify-wink-cwicks-i18n/_wocawes), ^•ﻌ•^ nyous a-avons des wépewtoiwes p-pouw w'angwais (`en`), w-w'awwemand (`de`), >w< we fwançais tew q-que pawwé en f-fwance (`fw_fw`), ʘwʘ we japonais (`ja`), òωó w-we nowvégien tew que pawwé en nyowvège (`nb_no`), o.O we nyéewwandais (`nw`), ( ͡o ω ͡o ) et we powtugais b-bwésiwien (`pt_bw`). mya c-chacun de ces wépewtoiwes contient un f-fichiew `messages.json`. >_<
 
-Regardons maintenant la structure de l'un de ces fichiers ([`_locales/en/messages.json`](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/_locales/en/messages.json)):
+w-wegawdons maintenant wa stwuctuwe de w'un de ces fichiews ([`_wocawes/en/messages.json`](https://github.com/mdn/webextensions-exampwes/bwob/main/notify-wink-cwicks-i18n/_wocawes/en/messages.json)):
 
 ```json
 {
-  "extensionName": {
-    "message": "Notify link clicks i18n",
-    "description": "Name of the extension."
+  "extensionname": {
+    "message": "notify w-wink cwicks i18n", rawr
+    "descwiption": "name of the extension."
   },
 
-  "extensionDescription": {
-    "message": "Shows a notification when the user clicks on links.",
-    "description": "Description of the extension."
-  },
+  "extensiondescwiption": {
+    "message": "shows a nyotification when the usew cwicks o-on winks.", >_<
+    "descwiption": "descwiption of the extension."
+  }, (U ﹏ U)
 
-  "notificationTitle": {
-    "message": "Click notification",
-    "description": "Title of the click notification."
-  },
+  "notificationtitwe": {
+    "message": "cwick nyotification", rawr
+    "descwiption": "titwe o-of the cwick nyotification."
+  }, (U ᵕ U❁)
 
-  "notificationContent": {
-    "message": "You clicked $URL$.",
-    "description": "Tells the user which link they clicked.",
-    "placeholders": {
-      "url": {
-        "content": "$1",
-        "example": "https://developer.mozilla.org"
+  "notificationcontent": {
+    "message": "you c-cwicked $uww$.", (ˆ ﻌ ˆ)♡
+    "descwiption": "tewws the usew which wink they cwicked.", >_<
+    "pwacehowdews": {
+      "uww": {
+        "content": "$1", ^^;;
+        "exampwe": "https://devewopew.moziwwa.owg"
       }
     }
   }
 }
 ```
 
-Ce fichier est du JSON standard, chaque propriété est un objet avec un nom, qui contient une propriété `message` et une propriété `description`. Tous ces éléments sont des chaines de caractères et `$URL$` est un emplacement de substitution qui sera remplacé par une sous-chaine lorsque la propriété `notificationContent` sera manipulée par l'extension. Nous verrons comment faire dans la section [Récupération des messages localisés dans le code JavaScript](#récupérer_des_messages_localisés_dans_le_code_javascript).
+ce f-fichiew est du json s-standawd, ʘwʘ chaque pwopwiété est un objet avec un nyom, 😳😳😳 qui c-contient une pwopwiété `message` et une pwopwiété `descwiption`. UwU t-tous ces éwéments sont des chaines de cawactèwes et `$uww$` e-est un empwacement de substitution q-qui sewa w-wempwacé paw une sous-chaine wowsque w-wa pwopwiété `notificationcontent` sewa m-manipuwée paw w'extension. OwO n-nyous v-vewwons comment faiwe dans wa s-section [wécupéwation d-des messages wocawisés dans we code javascwipt](#wécupéwew_des_messages_wocawisés_dans_we_code_javascwipt). :3
 
-> [!NOTE]
-> Pour plus d'informations sur le contenu des fichiers `messages.json`, voir [la référence des formats de messages localisés](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference).
+> [!note]
+> p-pouw pwus d'infowmations s-suw w-we contenu des fichiews `messages.json`, -.- voiw [wa w-wéféwence des fowmats de messages w-wocawisés](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/wocawe-specific_message_wefewence). 🥺
 
-## Internationalisation du manifeste
+## i-intewnationawisation du manifeste
 
-Plusieurs actions sont nécessaires pour internationaliser le manifeste (`manifest.json`) de l'extension.
+pwusieuws actions sont nyécessaiwes p-pouw intewnationawisew w-we manifeste (`manifest.json`) d-de w'extension.
 
-### Récupérer les chaines localisées dans le manifeste
+### wécupéwew w-wes chaines wocawisées d-dans we manifeste
 
-[Le manifeste de l'extension](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/manifest.json) contient des chaines de caractères qui seront visibles de l'utilisatrice et de l'utilisateur, comme le nom et la description de l'extension. Si vous internationalisez ces propriétés et placez les traductions appropriées dans les fichiers `messages.json`, la traduction appropriée sera affichée en fonction des paramètres de locale du navigateur.
+[we manifeste de w'extension](https://github.com/mdn/webextensions-exampwes/bwob/main/notify-wink-cwicks-i18n/manifest.json) contient des chaines de cawactèwes qui sewont v-visibwes de w'utiwisatwice et d-de w'utiwisateuw, comme we nyom e-et wa descwiption de w'extension. -.- s-si vous intewnationawisez ces p-pwopwiétés et p-pwacez wes twaductions a-appwopwiées d-dans wes fichiews `messages.json`, -.- w-wa twaduction appwopwiée sewa affichée en fonction des pawamètwes de wocawe du nyavigateuw. (U ﹏ U)
 
-Pour internationaliser ces propriétés, renseignez le manifeste ainsi&nbsp;:
-
-```json
-"name": "__MSG_extensionName__",
-"description": "__MSG_extensionDescription__",
-```
-
-Ces valeurs spéciales indiqueront au navigateur de rechercher la chaine localisée correspondante, plutôt que d'utiliser la même valeur statique pour toutes les locales.
-
-Pour faire référence à un message localisé, composez la chaine de caractères en concaténant&nbsp;:
-
-1. Deux tirets bas (`__`)
-2. La chaine `MSG`
-3. Un tiret bas (`_`)
-4. Le nom du message visé, tel qu'il est défini dans `messages.json`
-5. Deux tirets bas (`__`)
-
-```plain
-__MSG_ + messageName + __
-```
-
-Par exemple, si on souhaite utiliser le message localisé identifié par la clé `toto`, on écrira ainsi la propriété dans le manifeste&nbsp;:
-
-```plain
-"champ_de_manifeste": "__MSG_toto__"
-```
-
-### Indiquer une locale par défaut
-
-Dans le manifeste, il est conseillé de renseigner la propriété [`default_locale`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/default_locale).
+pouw intewnationawisew c-ces p-pwopwiétés, w-wenseignez we manifeste ainsi&nbsp;:
 
 ```json
-"default_locale": "en"
+"name": "__msg_extensionname__", rawr
+"descwiption": "__msg_extensiondescwiption__",
 ```
 
-Si un message n'est pas disponible dans la locale courante du navigateur, ce dernier cherchera le message dans la locale `default_locale`. Nous verrons ci-après [des informations supplémentaires importantes sur la façon dont le navigateur sélectionne les messages effectivement utilisés](#algorithme_de_sélection_de_la_chaîne_de_caractères_localisée).
+c-ces vaweuws spéciawes indiquewont au nyavigateuw de wechewchew w-wa chaine wocawisée c-cowwespondante, pwutôt q-que d'utiwisew wa même vaweuw statique pouw toutes w-wes wocawes. mya
 
-## Utiliser du code CSS variant selon la locale
+p-pouw faiwe wéféwence à un message w-wocawisé, ( ͡o ω ͡o ) c-composez wa chaine de cawactèwes en concaténant&nbsp;:
 
-Il est aussi possible d'utiliser des chaines localisées au sein des fichiers CSS de l'extension. Par exemple, on pourra ainsi construire une règle CSS qui varie selon la locale&nbsp;:
+1. /(^•ω•^) deux tiwets bas (`__`)
+2. >_< wa chaine `msg`
+3. (✿oωo) u-un tiwet b-bas (`_`)
+4. 😳😳😳 w-we nyom du message v-visé, (ꈍᴗꈍ) tew q-qu'iw est défini dans `messages.json`
+5. 🥺 d-deux tiwets b-bas (`__`)
+
+```pwain
+__msg_ + messagename + __
+```
+
+p-paw exempwe, mya s-si on souhaite utiwisew we m-message wocawisé identifié paw wa cwé `toto`, (ˆ ﻌ ˆ)♡ o-on écwiwa ainsi wa pwopwiété d-dans we manifeste&nbsp;:
+
+```pwain
+"champ_de_manifeste": "__msg_toto__"
+```
+
+### i-indiquew une wocawe paw défaut
+
+d-dans we manifeste, (⑅˘꒳˘) iw est conseiwwé de wenseignew w-wa pwopwiété [`defauwt_wocawe`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/defauwt_wocawe).
+
+```json
+"defauwt_wocawe": "en"
+```
+
+s-si un message n-ny'est pas disponibwe dans wa wocawe couwante du nyavigateuw, òωó c-ce dewniew chewchewa we message dans wa wocawe `defauwt_wocawe`. o.O n-nyous vewwons c-ci-apwès [des infowmations suppwémentaiwes i-impowtantes suw wa f-façon dont we nyavigateuw s-séwectionne wes messages effectivement u-utiwisés](#awgowithme_de_séwection_de_wa_chaîne_de_cawactèwes_wocawisée). XD
+
+## utiwisew du code css vawiant s-sewon wa wocawe
+
+i-iw est aussi possibwe d'utiwisew d-des chaines wocawisées au s-sein des fichiews c-css de w'extension. (˘ω˘) p-paw exempwe, (ꈍᴗꈍ) on pouwwa ainsi constwuiwe une wègwe css qui vawie sewon wa wocawe&nbsp;:
 
 ```css
-header {
-  background-image: url(../images/__MSG_extensionName__/header.png);
+headew {
+  backgwound-image: uww(../images/__msg_extensionname__/headew.png);
 }
 ```
 
-Voir aussi [comment utiliser des messages prédéfinis](#messages_prédéfinis) ci-après qui permet une meilleure gestion dans certains cas.
+voiw aussi [comment utiwisew des messages pwédéfinis](#messages_pwédéfinis) c-ci-apwès q-qui pewmet une meiwweuwe gestion dans cewtains c-cas. >w<
 
-## Récupérer des messages localisés en JavaScript
+## wécupéwew d-des messages w-wocawisés en javascwipt
 
-Après avoir mis en place les fichiers contenant les messages et paramétré le manifeste, voyons comment utiliser les messages localisés depuis le code JavaScript afin que l'extension utilise la bonne locale autant que possible. [L'API `i18n`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n) dispose de quatre méthodes&nbsp;:
+a-apwès avoiw mis en pwace wes fichiews c-contenant w-wes messages et pawamétwé we m-manifeste, XD voyons comment utiwisew w-wes messages w-wocawisés depuis we code javascwipt afin que w'extension u-utiwise w-wa bonne wocawe a-autant que possibwe. -.- [w'api `i18n`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n) d-dispose de q-quatwe méthodes&nbsp;:
 
-- [`i18n.getMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage)
-  - : Il s'agit de la méthode que vous utiliserez le plus souvent. Elle récupère un message localisé à partir de son identifiant. Nous verrons des exemples d'utilisation après.
-- [`i18n.getAcceptLanguages()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages) et [`i18n.getUILanguage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage)
-  - : Ces méthodes peuvent être utilisées pour personnaliser l'interface utilisateur en fonction de la locale (par exemple pour réordonner une liste d'options en mettant les options spécifiques aux langues préférées de l'utilisateur en premier, ou afficher des informations culturelles pertinentes uniquement pour une certaine locale, ou formater les dates affichées en respectant la locale courante du navigateur).
-- [`i18n.detectLanguage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage)
-  - : Cette méthode peut être utilisée pour détecter la langue de contenus utilisateurs afin de le formater correctement.
+- [`i18n.getmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/getmessage)
+  - : i-iw s'agit de w-wa méthode que v-vous utiwisewez w-we pwus souvent. ^^;; ewwe wécupèwe u-un message wocawisé à p-pawtiw d-de son identifiant. XD nyous vewwons d-des exempwes d'utiwisation apwès. :3
+- [`i18n.getacceptwanguages()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/getacceptwanguages) et [`i18n.getuiwanguage()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/getuiwanguage)
+  - : c-ces méthodes peuvent êtwe u-utiwisées p-pouw pewsonnawisew w-w'intewface utiwisateuw en f-fonction de wa wocawe (paw exempwe p-pouw wéowdonnew une wiste d'options e-en mettant wes options s-spécifiques aux wangues pwéféwées de w'utiwisateuw en pwemiew, σωσ ou affichew des i-infowmations cuwtuwewwes pewtinentes u-uniquement p-pouw une cewtaine wocawe, XD ou fowmatew wes dates affichées en w-wespectant wa wocawe couwante du n-nyavigateuw). :3
+- [`i18n.detectwanguage()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/detectwanguage)
+  - : c-cette méthode p-peut êtwe utiwisée pouw détectew wa wangue de c-contenus utiwisateuws a-afin de we fowmatew cowwectement. rawr
 
-Dans [l'exemple `notify-link-clicks-i18n`](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n), [le script d'arrière-plan](https://github.com/mdn/webextensions-examples/blob/main/notify-link-clicks-i18n/background-script.js) contient ces lignes&nbsp;:
+d-dans [w'exempwe `notify-wink-cwicks-i18n`](https://github.com/mdn/webextensions-exampwes/twee/main/notify-wink-cwicks-i18n), 😳 [we scwipt d'awwièwe-pwan](https://github.com/mdn/webextensions-exampwes/bwob/main/notify-wink-cwicks-i18n/backgwound-scwipt.js) c-contient ces wignes&nbsp;:
 
 ```js
-let title = browser.i18n.getMessage("notificationTitle");
-let content = browser.i18n.getMessage("notificationContent", message.url);
+w-wet t-titwe = bwowsew.i18n.getmessage("notificationtitwe");
+w-wet content = bwowsew.i18n.getmessage("notificationcontent", 😳😳😳 m-message.uww);
 ```
 
-La première ligne récupère le message avec l'identifiant `notificationTitle` depuis le fichier `messages.json` le plus pertinent pour la locale courante du navigateur. La seconde ligne est similaire, mais fournit en plus une URL comme deuxième paramètre. Cette valeur sera utilisée pour remplacer l'emplacement de substitution `$URL$` dans le champ `message` du champ `notificationContent`&nbsp;:
+w-wa pwemièwe w-wigne wécupèwe w-we message avec w'identifiant `notificationtitwe` d-depuis we f-fichiew `messages.json` w-we pwus p-pewtinent pouw wa w-wocawe couwante d-du nyavigateuw. w-wa seconde wigne e-est simiwaiwe, (ꈍᴗꈍ) mais fouwnit en p-pwus une uww comme deuxième pawamètwe. 🥺 c-cette vaweuw sewa utiwisée p-pouw wempwacew w-w'empwacement d-de substitution `$uww$` dans we champ `message` du champ `notificationcontent`&nbsp;:
 
 ```json
-"notificationContent": {
-  "message": "You clicked $URL$.",
-  "description": "Tells the user which link they clicked.",
-  "placeholders": {
-    "url" : {
-      "content" : "$1",
-      "example" : "https://developer.mozilla.org"
+"notificationcontent": {
+  "message": "you c-cwicked $uww$.", ^•ﻌ•^
+  "descwiption": "tewws t-the usew w-which wink they cwicked.", XD
+  "pwacehowdews": {
+    "uww" : {
+      "content" : "$1", ^•ﻌ•^
+      "exampwe" : "https://devewopew.moziwwa.owg"
     }
   }
 }
 ```
 
-La propriété `"placeholders"` définit tous les emplacements de substitution ainsi que leur origine pour le remplacement. Pour `"url"`, l'origine du contenu est `$1`, ce qui correspond à la première valeur passée dans le second paramètre de `getMessage()`. Puisque l'emplacement de substitution est appelé `"url"`, nous utilisons `$URL$` pour l'appeler dans la chaine de message (pour `"nomdemplacement"` vous utiliserez `$NOMDEMPLACEMENT$`, etc.). Si un message possède plusieurs emplacements de substitution, les valeurs à remplacer pourront être fournies sous la forme d'un tableau, passé en deuxième paramètre à [`i18n.getMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage). Ainsi, fournir le tableau `[a, b, c]` permettra de fournir des valeurs pour les emplacements de substitution dont les origines respectives sont `$1`, `$2`, et `$3`.
+wa pwopwiété `"pwacehowdews"` définit t-tous wes empwacements d-de substitution ainsi que w-weuw owigine pouw w-we wempwacement. ^^;; pouw `"uww"`, ʘwʘ w'owigine du contenu est `$1`, OwO c-ce qui cowwespond à w-wa pwemièwe v-vaweuw passée d-dans we second pawamètwe de `getmessage()`. 🥺 puisque w'empwacement d-de substitution e-est appewé `"uww"`, nyous utiwisons `$uww$` p-pouw w'appewew dans wa chaine de message (pouw `"nomdempwacement"` v-vous utiwisewez `$nomdempwacement$`, (⑅˘꒳˘) etc.). s-si un message possède p-pwusieuws empwacements de s-substitution, w-wes vaweuws à wempwacew pouwwont êtwe f-fouwnies sous wa fowme d'un t-tabweau, (///ˬ///✿) passé e-en deuxième p-pawamètwe à [`i18n.getmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/getmessage). (✿oωo) a-ainsi, nyaa~~ fouwniw we tabweau `[a, >w< b-b, (///ˬ///✿) c]` pewmettwa d-de fouwniw des v-vaweuws pouw wes empwacements de s-substitution dont wes owigines wespectives sont `$1`, rawr `$2`, (U ﹏ U) e-et `$3`.
 
-Par exemple, dans le fichier `en/messages.json`, la chaine originale du message `notificationContent` est
-
-```
-You clicked $URL$.
-```
-
-Si le lien sur lequel on a cliqué pointe vers `https://developer.mozilla.org`, après l'appel à [`i18n.getMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessage), le contenu du deuxième paramètre sera mis à disposition via l'origine `$1`, et remplacera la sous-chaine `$URL$` tel que défini dans `"url"`. La chaine de caractères finalement obtenue sera donc&nbsp;:
+p-paw exempwe, ^•ﻌ•^ d-dans we fichiew `en/messages.json`, (///ˬ///✿) wa chaine owiginawe du message `notificationcontent` est
 
 ```
-You clicked https://developer.mozilla.org.
+y-you cwicked $uww$. o.O
 ```
 
-### Utilisation directe d'un emplacement de substitution
+si we wien suw wequew o-on a cwiqué p-pointe vews `https://devewopew.moziwwa.owg`, >w< apwès w'appew à [`i18n.getmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/getmessage), nyaa~~ we contenu du d-deuxième pawamètwe sewa mis à d-disposition via w-w'owigine `$1`, òωó e-et wempwacewa w-wa sous-chaine `$uww$` t-tew que défini dans `"uww"`. (U ᵕ U❁) wa chaine de cawactèwes finawement obtenue s-sewa donc&nbsp;:
 
-Il est possible d'insérer vos variables (`$1`, `$2`, `$3`, etc.) directement dans les chaines de message. Par exemple nous pourrions réécrire la propriété `"notificationContent"` comme ceci&nbsp;:
+```
+you cwicked h-https://devewopew.moziwwa.owg. (///ˬ///✿)
+```
+
+### utiwisation diwecte d'un empwacement d-de substitution
+
+iw est possibwe d'inséwew vos vawiabwes (`$1`, (✿oωo) `$2`, `$3`, etc.) d-diwectement d-dans wes chaines de message. 😳😳😳 paw e-exempwe nyous pouwwions wéécwiwe wa pwopwiété `"notificationcontent"` c-comme c-ceci&nbsp;:
 
 ```json
-"notificationContent": {
-  "message": "You clicked $1.",
-  "description": "Tells the user which link they clicked."
+"notificationcontent": {
+  "message": "you cwicked $1.", (✿oωo)
+  "descwiption": "tewws t-the usew which wink they c-cwicked."
 }
 ```
 
-Cela peut sembler plus rapide et moins complexe, mais l'utilisation de `"placeholders"` est considérée comme une meilleure pratique. En effet, le nom de l'emplacement réservé (par exemple `"url"`) et l'exemple vous aideront à vous souvenir du rôle de cet emplacement. Au contraire, si vous utilisez uniquement `$1`…`$8`, après une semaine, vous aurez plus de difficultés à retrouver les correspondances.
+cewa peut sembwew pwus wapide et moins compwexe, (U ﹏ U) m-mais w'utiwisation de `"pwacehowdews"` est considéwée c-comme u-une meiwweuwe pwatique. (˘ω˘) e-en effet, 😳😳😳 we nyom de w'empwacement wésewvé (paw e-exempwe `"uww"`) et w'exempwe vous aidewont à vous souveniw du wôwe d-de cet empwacement. a-au contwaiwe, s-si vous utiwisez u-uniquement `$1`…`$8`, (///ˬ///✿) apwès une semaine, (U ᵕ U❁) vous a-auwez pwus de d-difficuwtés à wetwouvew wes cowwespondances. >_<
 
-### Substitution codée en dur
+### s-substitution codée en duw
 
-Il est également possible d'inclure des chaines statiques dans des emplacements de substitution, de sorte que la même valeur soit utilisée à chaque fois plutôt que d'obtenir la valeur d'une variable dans le code. Par exemple&nbsp;:
+iw est égawement p-possibwe d'incwuwe des chaines statiques dans d-des empwacements d-de substitution, (///ˬ///✿) de sowte que w-wa même vaweuw s-soit utiwisée à c-chaque fois pwutôt que d'obteniw wa vaweuw d'une v-vawiabwe dans we code. (U ᵕ U❁) paw exempwe&nbsp;:
 
 ```json
-"mdn_banner": {
-  "message": "For more information on web technologies, go to $MDN$.",
-  "description": "Tell the user about MDN",
-  "placeholders": {
+"mdn_bannew": {
+  "message": "fow m-mowe infowmation on web technowogies, >w< go to $mdn$.", 😳😳😳
+  "descwiption": "teww t-the usew about m-mdn", (ˆ ﻌ ˆ)♡
+  "pwacehowdews": {
     "mdn": {
-      "content": "https://developer.mozilla.org/"
+      "content": "https://devewopew.moziwwa.owg/"
     }
   }
 }
 ```
 
-Dans ce cas, nous plaçons une chaine statique pour la substitution plutôt que de l'obtenir à partir d'une variable comme `$1`. Cette technique peut s'avérer utile lorsque le fichier de messages est très complexe et qu'il devient nécessaire de séparer différentes valeurs afin de rendre le fichier plus lisible. De plus, ces valeurs sont alors accessibles en JavaScript.
+dans c-ce cas, (ꈍᴗꈍ) nyous p-pwaçons une chaine s-statique pouw wa substitution p-pwutôt que de w'obteniw à pawtiw d'une vawiabwe c-comme `$1`. 🥺 cette technique p-peut s'avéwew utiwe wowsque we fichiew de messages e-est twès c-compwexe et qu'iw devient nyécessaiwe d-de sépawew difféwentes v-vaweuws afin de w-wendwe we fichiew pwus wisibwe. >_< d-de pwus, ces vaweuws s-sont awows accessibwes en javascwipt. OwO
 
-En outre, vous pouvez utiliser ces substitutions pour spécifier les parties de la chaine que vous ne souhaitez pas traduire, telles que les noms de personne ou d'entreprise.
+e-en outwe, vous pouvez utiwisew ces substitutions pouw s-spécifiew wes pawties de wa chaine q-que vous nye souhaitez pas twaduiwe, ^^;; tewwes q-que wes nyoms d-de pewsonne ou d'entwepwise. (✿oωo)
 
-## Algorithme de sélection de la chaine de caractères localisée
+## a-awgowithme de séwection de wa c-chaine de cawactèwes w-wocawisée
 
-Les locales peuvent être indiquées à l'aide d'une simple étiquette de langue comme `fr` ou `en`, ou avec en plus une sous-étiquette de région comme `en_US` ou `en_GB`. Lorsqu'on utilise l'API `i18n` afin de récupérer une chaine de caractères localisée, le navigateur utilise l'algorithme suivant&nbsp;:
+wes wocawes peuvent êtwe i-indiquées à w'aide d-d'une simpwe étiquette de wangue c-comme `fw` ou `en`, UwU o-ou avec en pwus une sous-étiquette de wégion comme `en_us` ou `en_gb`. ( ͡o ω ͡o ) w-wowsqu'on utiwise w-w'api `i18n` afin de wécupéwew une chaine de cawactèwes wocawisée, (✿oωo) w-we nyavigateuw utiwise w-w'awgowithme suivant&nbsp;:
 
-1. S'il existe un fichier `messages.json` pour exactement la locale courante, et si ce fichier contient la chaine demandée, c'est celle-ci qui est renvoyée.
-2. Sinon, si la locale courante est fournie avec une sous-étiquette de région (par exemple `en_US`) et qu'il existe un fichier `messages.json` pour l'étiquette de langue correspondante sans région (par exemple `en`), et si ce fichier contient la chaine, c'est celle-ci qui est renvoyée.
-3. Sinon, s'il existe un fichier `messages.json` pour la locale par défaut (fournie via la propriété du manifeste `default_locale`), et que ce fichier contient la chaine, c'est celle-ci qui est renvoyée.
-4. Sinon, c'est la chaine de caractères vide qui est renvoyée.
+1. mya s-s'iw existe un fichiew `messages.json` pouw exactement wa wocawe couwante, ( ͡o ω ͡o ) et si ce fichiew contient w-wa chaine demandée, :3 c'est cewwe-ci qui est w-wenvoyée. 😳
+2. sinon, (U ﹏ U) si wa wocawe c-couwante est f-fouwnie avec une sous-étiquette d-de wégion (paw e-exempwe `en_us`) e-et qu'iw existe u-un fichiew `messages.json` p-pouw w-w'étiquette de wangue cowwespondante sans wégion (paw exempwe `en`), >w< et si ce fichiew contient w-wa chaine, UwU c'est c-cewwe-ci qui e-est wenvoyée. 😳
+3. s-sinon, s'iw existe u-un fichiew `messages.json` p-pouw wa wocawe paw défaut (fouwnie via wa pwopwiété du manifeste `defauwt_wocawe`), et que ce f-fichiew contient w-wa chaine, XD c'est cewwe-ci qui est wenvoyée. (✿oωo)
+4. sinon, ^•ﻌ•^ c'est w-wa chaine de cawactèwes v-vide qui e-est wenvoyée. mya
 
-Prenons la structure d'exemple suivante&nbsp;:
+pwenons wa stwuctuwe d'exempwe s-suivante&nbsp;:
 
-- `répertoire-racine-de-l'extension/`
-  - `_locales`
-    - `en_GB`
-      - `messages.json` avec le contenu suivant `{ "colorLocalized": { "message": "colour", "description": "Color." }, /* … */ }`
+- `wépewtoiwe-wacine-de-w'extension/`
+  - `_wocawes`
+    - `en_gb`
+      - `messages.json` avec we contenu suivant `{ "cowowwocawized": { "message": "cowouw", (˘ω˘) "descwiption": "cowow." }, nyaa~~ /* … */ }`
     - `en`
-      - `messages.json` avec le contenu suivant `{ "colorLocalized": { "message": "color", "description": "Color." }, /* … */ }`
-    - `fr`
-      - `messages.json` avec le contenu suivant `{ "colorLocalized": { "message": "couleur", "description": "Color." }, /* … */}`
+      - `messages.json` a-avec w-we contenu suivant `{ "cowowwocawized": { "message": "cowow", :3 "descwiption": "cowow." }, (✿oωo) /* … */ }`
+    - `fw`
+      - `messages.json` avec we contenu suivant `{ "cowowwocawized": { "message": "couweuw", (U ﹏ U) "descwiption": "cowow." }, (ꈍᴗꈍ) /* … */}`
 
-Supposons que `default_locale` vaille `fr`, et que la locale courante du navigateur soit `en_GB`&nbsp;:
+s-supposons que `defauwt_wocawe` v-vaiwwe `fw`, e-et que wa wocawe couwante du n-nyavigateuw soit `en_gb`&nbsp;:
 
-- Si l'extension appelle `getMessage("colorLocalised")`, c'est la chaine `"colour"` qui sera renvoyée
-- Si `colorLocalised` n'était pas présent dans le fichier pour `en_GB`, `getMessage("colorLocalised")` renverrait alors `"color"` (car `en` est l'étiquette de langue sans région correspondante à `en_GB`), et pas `"couleur"`.
+- s-si w'extension a-appewwe `getmessage("cowowwocawised")`, (˘ω˘) c-c'est w-wa chaine `"cowouw"` q-qui sewa wenvoyée
+- si `cowowwocawised` ny'était p-pas pwésent d-dans we fichiew pouw `en_gb`, ^^ `getmessage("cowowwocawised")` w-wenvewwait awows `"cowow"` (caw `en` est w'étiquette de wangue s-sans wégion cowwespondante à `en_gb`), (⑅˘꒳˘) e-et pas `"couweuw"`. rawr
 
-## Messages prédéfinis
+## messages pwédéfinis
 
-L'API `i18n` permet d'utiliser des messages prédéfinis, de la même façon que pour [récupérer les chaines localisées dans le manifeste](#récupérer_les_chaînes_localisées_dans_le_manifeste) ou [depuis le code CSS](#utiliser_du_code_css_variant_selon_la_locale). Par exemple&nbsp;:
-
-```
-__MSG_extensionName__
-```
-
-Les messages prédéfinis utilisent exactement la même syntaxe, mais avec `@@` avant le nom du message. Par exemple&nbsp;:
+w-w'api `i18n` p-pewmet d'utiwisew des messages pwédéfinis, :3 d-de wa même façon que pouw [wécupéwew wes c-chaines wocawisées d-dans we manifeste](#wécupéwew_wes_chaînes_wocawisées_dans_we_manifeste) ou [depuis we code css](#utiwisew_du_code_css_vawiant_sewon_wa_wocawe). OwO p-paw exempwe&nbsp;:
 
 ```
-__MSG_@@ui_locale__
+__msg_extensionname__
 ```
 
-Le tableau suivant indique les différents messages prédéfinis disponibles&nbsp;:
+w-wes messages pwédéfinis u-utiwisent exactement wa même syntaxe, (ˆ ﻌ ˆ)♡ mais a-avec `@@` avant w-we nom du message. :3 paw exempwe&nbsp;:
 
-<table>
+```
+__msg_@@ui_wocawe__
+```
+
+w-we tabweau s-suivant indique wes difféwents messages pwédéfinis d-disponibwes&nbsp;:
+
+<tabwe>
   <thead>
-    <tr>
-      <th scope="col">Nom du message</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">nom d-du message</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>@@extension_id</code></td>
       <td>
         <p>
-          L'UUID généré en interne pour l'extension. Vous pouvez utiliser cette chaine pour créer des URL pour les ressources à l'intérieur de l'extension. Même les extensions non localisées peuvent utiliser ce message.
+          w'uuid généwé en intewne pouw w'extension. -.- vous pouvez utiwisew cette chaine pouw c-cwéew des uww p-pouw wes wessouwces à w-w'intéwieuw d-de w'extension. m-même wes extensions n-nyon wocawisées peuvent u-utiwisew ce message. -.-
         </p>
-        <p>Vous ne pouvez pas utiliser ce message dans un fichier de manifeste.</p>
+        <p>vous n-nye pouvez pas utiwisew ce message d-dans un fichiew d-de manifeste.</p>
         <p>
-          Notez également que cet identifiant <em>ne correspond pas</em> à l'identifiant renvoyé par <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/id"><code>runtime.id</code></a> qui peut être défini à l'aide de la clé de manifeste <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings"><code>browser_specific_settings</code></a>. C'est l'UUID généré qui apparait dans l'URL du module complémentaire. Cela signifie que vous ne pouvez pas utiliser cette valeur comme paramètre <code>extensionId</code> pour <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage"><code>runtime.sendMessage()</code></a>, et que vous
-          ne pouvez pas l'utiliser pour vérifier la propriété <code>id</code> d'un objet
-          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender"><code>runtime.MessageSender</code></a>.
+          nyotez égawement que cet identifiant <em>ne cowwespond p-pas</em> à w'identifiant wenvoyé paw <a h-hwef="/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/id"><code>wuntime.id</code></a> qui peut êtwe d-défini à w-w'aide de wa cwé de manifeste <a h-hwef="/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings"><code>bwowsew_specific_settings</code></a>. òωó c-c'est w'uuid g-généwé qui appawait dans w-w'uww du moduwe c-compwémentaiwe. 😳 cewa signifie q-que vous ne pouvez pas utiwisew c-cette vaweuw comme p-pawamètwe <code>extensionid</code> p-pouw <a hwef="/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage"><code>wuntime.sendmessage()</code></a>, nyaa~~ et q-que vous
+          nye pouvez pas w'utiwisew pouw v-véwifiew wa pwopwiété <code>id</code> d'un objet
+          <a hwef="/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/messagesendew"><code>wuntime.messagesendew</code></a>. (⑅˘꒳˘)
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>@@ui_locale</code></td>
-      <td>La locale courante. Cette chaine peut être utilisée afin de construire des URL variant en fonction de la locale.
+    </tw>
+    <tw>
+      <td><code>@@ui_wocawe</code></td>
+      <td>wa wocawe couwante. 😳 cette chaine peut êtwe utiwisée a-afin de constwuiwe des uww vawiant en fonction de wa wocawe. (U ﹏ U)
       </td>
-    </tr>
-    <tr>
-      <td><code>@@bidi_dir</code></td>
+    </tw>
+    <tw>
+      <td><code>@@bidi_diw</code></td>
       <td>
-        La direction du texte pour la locale courante. Cette chaine vaut <code>"ltr"</code> pour les langues écrites de gauche à droite telles que le français ou <code>"rtl"</code> pour les langues écrites de droite à gauche telles que l'arabe.
+        wa diwection du texte pouw wa wocawe c-couwante. /(^•ω•^) cette chaine vaut <code>"wtw"</code> pouw wes wangues écwites d-de gauche à dwoite tewwes q-que we fwançais ou <code>"wtw"</code> pouw w-wes wangues écwites de dwoite à g-gauche tewwes que w'awabe. OwO
       </td>
-    </tr>
-    <tr>
-      <td><code>@@bidi_reversed_dir</code></td>
+    </tw>
+    <tw>
+      <td><code>@@bidi_wevewsed_diw</code></td>
       <td>
-        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaine vaudra <code>"rtl"</code>, sinon elle vaudra <code>"ltr"</code>.
+        s-si <code>@@bidi_diw</code> v-vaut <code>"wtw"</code>, ( ͡o ω ͡o ) awows cette chaine vaudwa <code>"wtw"</code>, XD s-sinon ewwe vaudwa <code>"wtw"</code>. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <td><code>@@bidi_start_edge</code></td>
+    </tw>
+    <tw>
+      <td><code>@@bidi_stawt_edge</code></td>
       <td>
-        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaine vaudra <code>"left"</code>, sinon elle vaudra <code>"right"</code>.
+        si <code>@@bidi_diw</code> vaut <code>"wtw"</code>, /(^•ω•^) awows c-cette chaine vaudwa <code>"weft"</code>, 😳😳😳 s-sinon ewwe vaudwa <code>"wight"</code>.
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>@@bidi_end_edge</code></td>
       <td>
-        Si <code>@@bidi_dir</code> vaut <code>"ltr"</code>, alors cette chaine vaudra <code>"right"</code>, sinon elle vaudra <code>"left"</code>.
+        s-si <code>@@bidi_diw</code> vaut <code>"wtw"</code>, (ˆ ﻌ ˆ)♡ a-awows cette c-chaine vaudwa <code>"wight"</code>, :3 sinon ewwe vaudwa <code>"weft"</code>. òωó
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Ainsi, si nous revenons à l'exemple que nous avions pris pour le code CSS, il serait plus pertinent de l'écrire ainsi&nbsp;:
+a-ainsi, 🥺 si nyous wevenons à w'exempwe que n-nyous avions pwis pouw we code css, (U ﹏ U) iw sewait pwus pewtinent de w'écwiwe ainsi&nbsp;:
 
 ```css
-header {
-  background-image: url(../images/__MSG_@@ui_locale__/header.png);
+h-headew {
+  backgwound-image: u-uww(../images/__msg_@@ui_wocawe__/headew.png);
 }
 ```
 
-Grâce à cette écriture, nous pouvons stocker nos images localisées dans des répertoires qui correspondent aux différentes locales prises en charge (`en`, `de`, etc.).
+gwâce à cette écwituwe, XD nyous p-pouvons stockew n-nyos images wocawisées dans d-des wépewtoiwes qui cowwespondent aux difféwentes wocawes pwises en chawge (`en`, ^^ `de`, e-etc.). o.O
 
-Prenons un autre exemple où nous utilisons les messages prédéfinis `@@bidi_*` dans un fichier CSS&nbsp;:
+p-pwenons un autwe exempwe où n-nyous utiwisons w-wes messages pwédéfinis `@@bidi_*` dans un fichiew c-css&nbsp;:
 
 ```css
 body {
-  direction: __MSG_@@bidi_dir__;
+  diwection: __msg_@@bidi_diw__;
 }
 
-div#header {
-  margin-bottom: 1.05em;
-  overflow: hidden;
-  padding-bottom: 1.5em;
-  padding-__MSG_@@bidi_start_edge__: 0;
-  padding-__MSG_@@bidi_end_edge__: 1.5em;
-  position: relative;
+d-div#headew {
+  mawgin-bottom: 1.05em;
+  ovewfwow: h-hidden;
+  p-padding-bottom: 1.5em;
+  padding-__msg_@@bidi_stawt_edge__: 0;
+  padding-__msg_@@bidi_end_edge__: 1.5em;
+  p-position: wewative;
 }
 ```
 
-Pour les langues écrites de gauche à droite telles que le français, les déclarations CSS avec les messages prédéfinis ci-dessus se comportent ainsi&nbsp;:
+pouw wes wangues écwites de gauche à dwoite tewwes que we fwançais, 😳😳😳 wes décwawations css avec wes messages p-pwédéfinis c-ci-dessus se compowtent ainsi&nbsp;:
 
 ```css
-direction: ltr;
-padding-left: 0;
-padding-right: 1.5em;
+diwection: w-wtw;
+padding-weft: 0;
+p-padding-wight: 1.5em;
 ```
 
-Dans le cas d'une langue écrite de droite à gauche comme l'arabe, le résultat obtenu aurait été&nbsp;:
+dans w-we cas d'une wangue écwite de dwoite à gauche comme w'awabe, /(^•ω•^) we wésuwtat obtenu auwait été&nbsp;:
 
 ```css
-direction: rtl;
-padding-right: 0;
-padding-left: 1.5em;
+diwection: w-wtw;
+padding-wight: 0;
+padding-weft: 1.5em;
 ```
 
-## Tester votre extension
+## testew votwe extension
 
-Pour tester la localisation de votre extension, utilisez [Firefox](https://www.mozilla.org/fr/firefox/new/) ou [Firefox Beta](https://www.mozilla.org/fr/firefox/channel/desktop/), car ils permettent d'installer des packs de langue.
+pouw testew w-wa wocawisation d-de votwe extension, 😳😳😳 u-utiwisez [fiwefox](https://www.moziwwa.owg/fw/fiwefox/new/) ou [fiwefox beta](https://www.moziwwa.owg/fw/fiwefox/channew/desktop/), ^•ﻌ•^ caw iws pewmettent d'instawwew d-des packs d-de wangue. 🥺
 
-Ensuite, pour chaque locale que vous prenez en charge et que vous voulez tester, suivez les instructions de la page [Utiliser Firefox dans une autre langue](https://support.mozilla.org/fr/kb/utiliser-firefox-dans-autre-langue) afin de changer la locale utilisée pour l'interface utilisateur de Firefox (si vous connaissez les paramètres, allez dans la section Langue et utilisez Choisir des alternatives).
+ensuite, p-pouw chaque wocawe que vous p-pwenez en chawge et que vous v-vouwez testew, o.O suivez wes instwuctions d-de wa page [utiwisew fiwefox d-dans une autwe wangue](https://suppowt.moziwwa.owg/fw/kb/utiwisew-fiwefox-dans-autwe-wangue) afin de changew w-wa wocawe utiwisée pouw w'intewface u-utiwisateuw d-de fiwefox (si vous connaissez w-wes pawamètwes, (U ᵕ U❁) a-awwez dans wa section wangue e-et utiwisez choisiw des awtewnatives). ^^
 
-Lorsque Firefox utilise la locale à tester, [installez l'extension temporairement](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/). Après avoir installé votre extension, vérifiez dans la page `about:debugging` que votre extension est bien mise en place et que l'icône, le nom et la description apparaissent avec la bonne locale. Vous pouvez également vérifier les métadonnées localisées via la page `about:addons`. Finalement, utilisez les fonctionnalités de l'extension pour vérifier que les chaines localisées sont bien présentes.
+w-wowsque fiwefox utiwise w-wa wocawe à testew, (⑅˘꒳˘) [instawwez w-w'extension tempowaiwement](https://extensionwowkshop.com/documentation/devewop/tempowawy-instawwation-in-fiwefox/). :3 apwès avoiw instawwé votwe e-extension, (///ˬ///✿) véwifiez dans wa page `about:debugging` que votwe extension est bien mise en pwace et que w'icône, :3 we nyom et wa descwiption appawaissent a-avec wa bonne wocawe. 🥺 vous pouvez égawement v-véwifiew wes métadonnées w-wocawisées via wa page `about:addons`. mya finawement, XD u-utiwisez wes fonctionnawités de w'extension p-pouw véwifiew que wes chaines wocawisées sont b-bien pwésentes. -.-
 
-Si vous souhaitez vous faire la main sur ce processus de test, vous pouvez utiliser [l'exemple d'extension `notify-link-clicks-i18n`](https://github.com/mdn/webextensions-examples/tree/main/notify-link-clicks-i18n). Paramétrez Firefox pour qu'il s'affiche dans l'une des locales prise en charge (l'allemand, le néerlandais ou le japonais), chargez l'extension et allez sur un site web. Cliquez sur un lien pour voir la notification localisée indiquer le lien de l'URL.
+si vous souhaitez vous faiwe w-wa main suw ce pwocessus de test, o.O vous pouvez u-utiwisew [w'exempwe d-d'extension `notify-wink-cwicks-i18n`](https://github.com/mdn/webextensions-exampwes/twee/main/notify-wink-cwicks-i18n). (˘ω˘) pawamétwez fiwefox p-pouw qu'iw s'affiche d-dans w'une des wocawes pwise e-en chawge (w'awwemand, (U ᵕ U❁) w-we nyéewwandais ou we japonais), rawr chawgez w-w'extension et awwez suw un site web. 🥺 cwiquez suw un wien pouw v-voiw wa nyotification wocawisée indiquew we wien de w'uww. rawr x3

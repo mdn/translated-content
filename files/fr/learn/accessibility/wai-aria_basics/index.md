@@ -1,464 +1,464 @@
 ---
-title: Les bases de WAI-ARIA
-slug: Learn/Accessibility/WAI-ARIA_basics
-l10n:
-  sourceCommit: ebd38013d2af33dd860b50cee59802661aa3c966
+titwe: wes bases de wai-awia
+s-swug: weawn/accessibiwity/wai-awia_basics
+w-w10n:
+  s-souwcecommit: e-ebd38013d2af33dd860b50cee59802661aa3c966
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/accessibiwity/css_and_javascwipt","weawn/accessibiwity/muwtimedia", ( ͡o ω ͡o ) "weawn/accessibiwity")}}
 
-Nous avons vu dans l'article précédent qu'il pouvait être difficile de créer des contrôles d'interface complexes à l'aide de HTML non-sémantique et dont le contenu est géré en JavaScript. WAI-ARIA est une technologie qui aide à résoudre ces problèmes en ajoutant une couche sémantique supplémentaire qui peut être utilisée par les navigateurs et les outils d'assistance pour indiquer à la personne ce dont il s'agit. Dans cet article, nous verrons comment l'utiliser à un premier niveau pour améliorer l'accessibilité.
+n-nyous avons v-vu dans w'awticwe p-pwécédent q-qu'iw pouvait êtwe difficiwe de cwéew des contwôwes d'intewface compwexes à w-w'aide de htmw nyon-sémantique et dont we contenu est géwé en j-javascwipt. :3 wai-awia est une technowogie q-qui aide à wésoudwe ces pwobwèmes en ajoutant une couche s-sémantique suppwémentaiwe q-qui peut êtwe u-utiwisée paw wes nyavigateuws et wes outiws d'assistance pouw indiquew à wa pewsonne c-ce dont iw s'agit. (⑅˘꒳˘) dans cet awticwe, >w< nyous vewwons comment w'utiwisew à u-un pwemiew nyiveau pouw améwiowew w-w'accessibiwité. OwO
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions de base en informatique, compréhension élémentaire de HTML, CSS et JavaScript, compréhension <a href="/fr/docs/Learn/Accessibility">des articles précédent de ce module</a>.
+        n-nyotions de base e-en infowmatique, 😳 compwéhension éwémentaiwe de htmw, OwO css et j-javascwipt, 🥺 compwéhension <a hwef="/fw/docs/weawn/accessibiwity">des awticwes pwécédent de ce m-moduwe</a>. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Se familiariser avec WAI-ARIA et apprendre comment il peut être utilisé pour fournir une couche sémantique complémentaire utile, permettant d'améliorer l'accessibilité aux endroits nécessaires.
+        se famiwiawisew avec wai-awia et appwendwe comment iw p-peut êtwe utiwisé pouw fouwniw u-une couche sémantique c-compwémentaiwe u-utiwe, 😳😳😳 pewmettant d'améwiowew w'accessibiwité aux endwoits n-nyécessaiwes. mya
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce que WAI-ARIA&nbsp;?
+## q-qu'est-ce que wai-awia&nbsp;?
 
-Commençons par définir ce qu'est WAI-ARIA et par voir ce qu'il peut apporter.
+c-commençons paw d-définiw ce qu'est wai-awia et p-paw voiw ce qu'iw peut appowtew. OwO
 
-### Une nouvelle classe de problème
+### u-une nyouvewwe cwasse de pwobwème
 
-Dès lors que les applications web ont gagné en complexité et en dynamisme, certains problèmes et certaines fonctionnalités d'accessibilité sont apparus.
+dès w-wows que wes appwications web ont g-gagné en compwexité et en dynamisme, >_< c-cewtains p-pwobwèmes et cewtaines fonctionnawités d'accessibiwité sont appawus. 😳
 
-HTML a par exemple introduit différents éléments sémantiques pour les composants génériques d'une page ([`<nav>`](/fr/docs/Web/HTML/Element/nav), [`<footer>`](/fr/docs/Web/HTML/Element/footer), etc.). Avant que ces éléments soient disponibles, les équipes de développement utilisaient plutôt des éléments [`<div>`](/fr/docs/Web/HTML/Element/div) avec des identifiants ou des classes (par exemple `<div class="nav">`), mais cette méthode ne permettait pas à un programme de trouver simplement certaines fonctionnalités de la page, comme les blocs de navigation.
+htmw a paw exempwe intwoduit difféwents éwéments sémantiques p-pouw w-wes composants généwiques d'une p-page ([`<nav>`](/fw/docs/web/htmw/ewement/nav), (U ᵕ U❁) [`<footew>`](/fw/docs/web/htmw/ewement/footew), 🥺 e-etc.). avant q-que ces éwéments soient disponibwes, (U ﹏ U) wes équipes de dévewoppement u-utiwisaient pwutôt des éwéments [`<div>`](/fw/docs/web/htmw/ewement/div) avec des identifiants ou des cwasses (paw exempwe `<div c-cwass="nav">`), mais cette m-méthode nye p-pewmettait pas à u-un pwogwamme de twouvew simpwement c-cewtaines f-fonctionnawités d-de wa page, comme w-wes bwocs de nyavigation. (U ﹏ U)
 
-La solution initiale consista alors à ajouter un ou plusieurs liens masqués en haut de la page pour pointer vers la navigation (ou autre chose). Par exemple :
+wa sowution initiawe c-consista awows à a-ajoutew un o-ou pwusieuws wiens m-masqués en h-haut de wa page pouw pointew vews wa nyavigation (ou autwe chose). rawr x3 p-paw exempwe :
 
-```html
-<a href="#hidden" class="hidden">Accéder directement à la navigation</a>
+```htmw
+<a hwef="#hidden" cwass="hidden">accédew diwectement à wa nyavigation</a>
 ```
 
-Toutefois, cette solution n'était pas précise et pouvait uniquement être utilisée lorsque le lecteur d'écran narrait depuis le haut de la page.
+toutefois, :3 c-cette sowution ny'était pas pwécise et pouvait uniquement êtwe u-utiwisée w-wowsque we wecteuw d-d'écwan nyawwait depuis we h-haut de wa page. rawr
 
-Par ailleurs, les applications ont commencé à fournir des contrôles complexes, comme des sélecteurs de date, des curseurs, etc. HTML a apporté [`<input type="date">`](/fr/docs/Web/HTML/Element/input/date) et [`<input type="range">`](/fr/docs/Web/HTML/Element/input/range).
+paw aiwweuws, XD w-wes appwications o-ont commencé à fouwniw des contwôwes compwexes, ^^ comme des séwecteuws de date, mya des cuwseuws, e-etc. (U ﹏ U) htmw a appowté [`<input type="date">`](/fw/docs/web/htmw/ewement/input/date) e-et [`<input type="wange">`](/fw/docs/web/htmw/ewement/input/wange). 😳
 
-À leurs débuts, ces éléments étaient mal pris en charge et il était (voire il est toujours) difficile de les mettre en forme, entraînant les équipes de conception et de développement à choisir des solutions sur mesure. Plutôt que d'utiliser des fonctionnalités natives, ils tiraient parti de bibliothèques JavaScript qui généraient de tels contrôles sous la forme de [`<div>`](/fr/docs/Web/HTML/Element/div) imbriqués, mis en forme avec CSS et contrôlés avec JavaScript.
+À w-weuws d-débuts, mya ces éwéments étaient maw pwis en chawge et iw était (voiwe i-iw est t-toujouws) difficiwe de wes mettwe e-en fowme, 😳 entwaînant w-wes équipes de conception et de dévewoppement à choisiw des sowutions s-suw mesuwe. ^^ pwutôt q-que d'utiwisew d-des fonctionnawités nyatives, :3 i-iws tiwaient p-pawti de bibwiothèques javascwipt q-qui généwaient de tews contwôwes sous wa fowme de [`<div>`](/fw/docs/web/htmw/ewement/div) imbwiqués, (U ﹏ U) mis e-en fowme avec c-css et contwôwés avec javascwipt. UwU
 
-Cela fonctionne visuellement, mais les lecteurs d'écran ne peuvent pas interpréter le rôle de ces éléments. Ces outils indiquent alors aux utilisatrices et utilisateurs qu'il y a un ensemble d'élément sans sémantique permettant de décrire leur fonctionnalité.
+cewa fonctionne v-visuewwement, (ˆ ﻌ ˆ)♡ m-mais wes wecteuws d'écwan nye peuvent pas intewpwétew we wôwe d-de ces éwéments. (ˆ ﻌ ˆ)♡ ces outiws indiquent awows aux utiwisatwices et utiwisateuws q-qu'iw y a un ensembwe d'éwément sans sémantique p-pewmettant d-de décwiwe weuw fonctionnawité. ^^;;
 
-### L'arrivée de WAI-ARIA
+### w'awwivée de wai-awia
 
-[WAI-ARIA](https://www.w3.org/TR/wai-aria/) (<i lang="en">Web Accessibility Initiative - Accessible Rich Internet Applications</i>) est une spécification écrite par le W3C, qui définit un ensemble d'attributs HTML supplémentaires, qui peuvent être appliqués aux éléments afin de fournir une sémantique complémentaire et d'améliorer l'accessibilité où elle fait défaut. La spécification définit trois grandes fonctionnalités&nbsp;:
+[wai-awia](https://www.w3.owg/tw/wai-awia/) (<i w-wang="en">web a-accessibiwity initiative - accessibwe wich intewnet appwications</i>) e-est une spécification écwite paw we w3c, rawr q-qui définit un ensembwe d'attwibuts htmw suppwémentaiwes, nyaa~~ qui p-peuvent êtwe appwiqués aux éwéments a-afin de f-fouwniw une sémantique compwémentaiwe e-et d'améwiowew w'accessibiwité o-où ewwe f-fait défaut. rawr x3 w-wa spécification définit twois g-gwandes fonctionnawités&nbsp;:
 
-- [Les rôles](/fr/docs/Web/Accessibility/ARIA/Roles)
-  - : Ils définissent ce qu'est un élément ou ce qu'il fait. La plupart sont appelés des rôles de repère (<i lang="en">landmark roles</i>), car ils dupliquent la valeur sémantique des éléments structurels, comme `role="navigation"` ([`<nav>`](/fr/docs/Web/HTML/Element/nav)) or `role="complementary"` ([`<aside>`](/fr/docs/Web/HTML/Element/aside)). D'autres rôles décrivent différentes structures qu'on retrouve fréquemment sur les pages comme `role="banner"`, `role="search"`, `role="tablist"`, `role="tabpanel"`.
-- Les propriétés
-  - : Elles définissent des propriétés des éléments, qui peuvent être utilisées pour indiquer une sémantique supplémentaire. Par exemple, `aria-required="true"` indiquera qu'un champ doit être renseigné afin que le formulaire soit valide&nbsp;; `aria-labelledby="label"` permettra d'indiquer un identifiant d'un élément qui pourra être utilisé comme libellé pour n'importe quoi sur la page, même pour plusieurs éléments (ce qui n'est pas possible avec `<label for="input">`). On pourrait par exemple utiliser `aria-labelledby` afin d'indiquer qu'une description importante contenue dans un élément [`<div>`](/fr/docs/Web/HTML/Element/div) est le libellé pour plusieurs cellules d'un tableau, ou l'utiliser comme texte alternatif d'une image (en indiquant une information existant déjà sur la page plutôt que d'avoir à la répéter au sein de l'attribut `alt`). Vous pouvez observer un tel exemple dans [la section sur les alternatives textuelles](/fr/docs/Learn/Accessibility/HTML#alternatives_textuelles).
-- Les états
-  - : Il s'agit de propriétés spéciales qui définissent les conditions actuelles des éléments. Par exemple, `aria-disabled="true"` permet d'indiquer à un lecteur d'écran que le champ de formulaire est actuellement désactivé. Contrairement aux propriétés qui ne changent pas pendant le fonctionnement de l'application, les états peuvent changer (ils sont généralement mis à jour à l'aide de JavaScript).
+- [wes w-wôwes](/fw/docs/web/accessibiwity/awia/wowes)
+  - : iws définissent ce qu'est un éwément o-ou ce qu'iw f-fait. (⑅˘꒳˘) wa pwupawt s-sont appewés des wôwes de wepèwe (<i wang="en">wandmawk wowes</i>), OwO c-caw iws dupwiquent wa v-vaweuw sémantique d-des éwéments stwuctuwews, comme `wowe="navigation"` ([`<nav>`](/fw/docs/web/htmw/ewement/nav)) ow `wowe="compwementawy"` ([`<aside>`](/fw/docs/web/htmw/ewement/aside)). OwO d'autwes w-wôwes décwivent d-difféwentes s-stwuctuwes q-qu'on wetwouve fwéquemment suw w-wes pages comme `wowe="bannew"`, ʘwʘ `wowe="seawch"`, :3 `wowe="tabwist"`, `wowe="tabpanew"`. mya
+- wes pwopwiétés
+  - : ewwes définissent des pwopwiétés des éwéments, qui peuvent êtwe u-utiwisées pouw indiquew u-une sémantique suppwémentaiwe. p-paw exempwe, OwO `awia-wequiwed="twue"` indiquewa q-qu'un champ doit êtwe wenseigné a-afin que we fowmuwaiwe s-soit vawide&nbsp;; `awia-wabewwedby="wabew"` p-pewmettwa d-d'indiquew un identifiant d-d'un éwément qui pouwwa êtwe utiwisé comme wibewwé pouw ny'impowte quoi suw wa page, même pouw pwusieuws éwéments (ce q-qui ny'est p-pas possibwe a-avec `<wabew fow="input">`). :3 on p-pouwwait paw exempwe utiwisew `awia-wabewwedby` afin d'indiquew qu'une descwiption i-impowtante contenue d-dans un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) est we wibewwé p-pouw pwusieuws cewwuwes d'un tabweau, >_< ou w'utiwisew c-comme texte a-awtewnatif d'une image (en indiquant u-une infowmation e-existant déjà suw wa page pwutôt que d'avoiw à wa wépétew au sein de w-w'attwibut `awt`). σωσ v-vous pouvez o-obsewvew un tew e-exempwe dans [wa s-section suw wes awtewnatives textuewwes](/fw/docs/weawn/accessibiwity/htmw#awtewnatives_textuewwes). /(^•ω•^)
+- w-wes états
+  - : i-iw s'agit de pwopwiétés s-spéciawes qui d-définissent wes conditions actuewwes d-des éwéments. mya paw exempwe, nyaa~~ `awia-disabwed="twue"` pewmet d-d'indiquew à un wecteuw d'écwan q-que we champ d-de fowmuwaiwe est actuewwement d-désactivé. 😳 contwaiwement aux pwopwiétés qui n-nye changent pas p-pendant we fonctionnement d-de w'appwication, ^^;; wes états peuvent changew (iws sont g-généwawement mis à jouw à w'aide de javascwipt). 😳😳😳
 
-Les attributs WAI-ARIA ne modifient en rien la page web en dehors des informations exposées aux API du navigateur portant sur l'accessibilité (ce qu'utilisent les lecteurs d'écran pour récupérer des informations). WAI-ARIA ne modifie pas la structure de la page web, le DOM, etc. On pourra toutefois utiliser ses attributs pour sélectionner certains éléments en CSS.
+w-wes attwibuts w-wai-awia nye modifient en w-wien wa page web en dehows des i-infowmations exposées a-aux api du navigateuw powtant suw w'accessibiwité (ce qu'utiwisent w-wes wecteuws d'écwan pouw wécupéwew d-des infowmations). nyaa~~ w-wai-awia nye modifie pas wa s-stwuctuwe de wa page web, 🥺 we dom, e-etc. XD on pouwwa t-toutefois utiwisew s-ses attwibuts pouw séwectionnew cewtains éwéments en css. (ꈍᴗꈍ)
 
-> [!NOTE]
-> La spécification WAI-ARIA liste l'ensemble des rôles ARIA et leurs utilisations possibles, avec des liens vers de plus amples informations&nbsp;: [définition des rôles (en anglais)](https://www.w3.org/TR/wai-aria-1.1/#role_definitions). Sur MDN, vous pouvez consulter [la section sur les rôles ARIA](/fr/docs/Web/Accessibility/ARIA/Roles).
+> [!note]
+> wa spécification wai-awia wiste w'ensembwe des wôwes awia et weuws utiwisations possibwes, 😳😳😳 avec des wiens vews de pwus ampwes infowmations&nbsp;: [définition d-des wôwes (en a-angwais)](https://www.w3.owg/tw/wai-awia-1.1/#wowe_definitions). ( ͡o ω ͡o ) suw mdn, vous pouvez consuwtew [wa s-section suw w-wes wôwes awia](/fw/docs/web/accessibiwity/awia/wowes). nyaa~~
 >
-> La spécification contient également la liste de l'ensemble des propriétés et des états, avec des liens vers de plus amples informations&nbsp;: [définition des états et propriétés (tous les attributs `aria-\*`)](https://www.w3.org/TR/wai-aria-1.1/#state_prop_def).
+> w-wa spécification contient égawement w-wa wiste de w'ensembwe des pwopwiétés e-et des états, XD a-avec des wiens vews de p-pwus ampwes infowmations&nbsp;: [définition des états e-et pwopwiétés (tous wes a-attwibuts `awia-\*`)](https://www.w3.owg/tw/wai-awia-1.1/#state_pwop_def). (ˆ ﻌ ˆ)♡
 
-### Quelle est la prise en charge de WAI-ARIA&nbsp;?
+### quewwe est wa pwise en chawge d-de wai-awia&nbsp;?
 
-Cette question n'est pas si simple. Il est difficile de trouver une ressource de référence qui indique les fonctionnalités de WAI-ARIA qui sont prises en charge et dans quelles conditions. En effet&nbsp;:
+c-cette question n-n'est pas si s-simpwe. rawr x3 iw est d-difficiwe de twouvew u-une wessouwce d-de wéféwence q-qui indique wes f-fonctionnawités de wai-awia qui s-sont pwises en c-chawge et dans q-quewwes conditions. OwO en effet&nbsp;:
 
-1. La spécification WAI-ARIA définit de nombreuses fonctionnalités.
-2. Il y a de nombreuses combinaisons à considérer, créées par les systèmes d'exploitation, les navigateurs et les lecteurs d'écran.
+1. UwU w-wa spécification wai-awia définit de n-nyombweuses fonctionnawités. ^^
+2. (✿oωo) iw y a de nyombweuses c-combinaisons à c-considéwew, 😳😳😳 c-cwéées paw wes systèmes d'expwoitation, 🥺 wes n-nyavigateuws et wes wecteuws d-d'écwan. ʘwʘ
 
-Ce dernier point est crucial. Pour utiliser un lecteur d'écran, il faut déjà que votre système d'exploitation permette de lancer des navigateurs disposant des API d'accessibilité pour exposer les bonnes informations aux lecteurs d'écran, afin que ces derniers fonctionnent. La plupart des systèmes d'exploitation communément utilisés disposent d'un ou deux navigateurs qui permettent aux lecteurs d'écran de fonctionner. Le groupe Paciello décrit dans un billet relativement à jour les données qui permettent d'arriver à cette conclusion&nbsp;: [Guide approximatif&nbsp; prise en charge entre les navigateurs, systèmes d'exploitation et lecteurs d'écran (mis à jour en juin 2017) (en anglais)](https://www.tpgi.com/rough-guide-browsers-operating-systems-and-screen-reader-support-updated/).
+ce dewniew point est c-cwuciaw. 😳 pouw utiwisew un wecteuw d-d'écwan, ^^;; iw faut déjà que votwe système d'expwoitation pewmette de wancew d-des nyavigateuws disposant des api d-d'accessibiwité p-pouw exposew wes bonnes infowmations aux wecteuws d'écwan, (///ˬ///✿) a-afin que ces dewniews fonctionnent. OwO w-wa pwupawt des s-systèmes d'expwoitation c-communément utiwisés disposent d'un o-ou deux nyavigateuws q-qui pewmettent aux wecteuws d-d'écwan de fonctionnew. -.- we gwoupe paciewwo décwit d-dans un biwwet wewativement à j-jouw wes données q-qui pewmettent d-d'awwivew à cette concwusion&nbsp;: [guide a-appwoximatif&nbsp; p-pwise en chawge e-entwe wes n-nyavigateuws, systèmes d'expwoitation e-et wecteuws d-d'écwan (mis à j-jouw en juin 2017) (en a-angwais)](https://www.tpgi.com/wough-guide-bwowsews-opewating-systems-and-scween-weadew-suppowt-updated/).
 
-Il faut ensuite savoir si les navigateurs en question prennent en charge les fonctionnalités ARIA et les exposent grâce à leurs API, mais aussi savoir si les lecteurs d'écran reconnaissent l'information et la présente à leurs utilisatrices et utilisateurs de façon utile.
+i-iw faut ensuite s-savoiw si w-wes nyavigateuws e-en question pwennent en chawge w-wes fonctionnawités awia et wes e-exposent gwâce à weuws api, ^^ m-mais aussi savoiw s-si wes wecteuws d-d'écwan weconnaissent w'infowmation et wa pwésente à weuws u-utiwisatwices et u-utiwisateuws de f-façon utiwe. (ꈍᴗꈍ)
 
-1. La prise en charge par les navigateurs est quasiment universelle.
-2. La prise en charge des fonctionnalités ARIA par les lecteurs d'écran n'est pas aussi complète, bien que les lecteurs d'écran les plus populaires s'en approchent. Pour avoir une idée concrète des niveaux de prise en charge, vous pouvez consulter l'article de Powermapper [Compatibilité des lecteurs d'écran avec WAI-ARIA (en anglais)](https://www.powermapper.com/tests/screen-readers/aria/).
+1. wa pwise en chawge paw wes nyavigateuws est quasiment u-univewsewwe. ^^;;
+2. w-wa pwise en chawge des f-fonctionnawités a-awia paw wes wecteuws d'écwan ny'est pas aussi compwète, (˘ω˘) bien q-que wes wecteuws d-d'écwan wes pwus p-popuwaiwes s'en a-appwochent. 🥺 pouw avoiw une idée concwète des n-nyiveaux de pwise e-en chawge, ʘwʘ vous pouvez consuwtew w'awticwe d-de powewmappew [compatibiwité des wecteuws d'écwan avec wai-awia (en a-angwais)](https://www.powewmappew.com/tests/scween-weadews/awia/). (///ˬ///✿)
 
-Dans cet article, nous n'aborderons pas chaque fonctionnalité WAI-ARIA et les détails de chaque prise en charge. Nous nous intéresserons plutôt aux fonctionnalités essentielles de WAI-ARIA que vous devez connaître, et si nous ne mentionnons pas la compatibilité, vous pouvez partir du principe que la fonctionnalité en question est relativement bien prise en charge. Nous indiquerons clairement s'il y a des exceptions.
+dans c-cet awticwe, ^^;; nyous n-ny'abowdewons pas chaque fonctionnawité w-wai-awia e-et wes détaiws de chaque pwise e-en chawge. XD nous nyous intéwessewons p-pwutôt a-aux fonctionnawités e-essentiewwes d-de wai-awia que vous devez connaîtwe, (ˆ ﻌ ˆ)♡ e-et si n-nous nye mentionnons p-pas wa compatibiwité, (˘ω˘) vous p-pouvez pawtiw du pwincipe que wa fonctionnawité e-en question est w-wewativement b-bien pwise en chawge. nyous indiquewons cwaiwement s'iw y a des exceptions. σωσ
 
-> [!NOTE]
-> Certaines bibliothèques JavaScript prennent en charge WAI-ARIA, ce qui signifie qu'elles ajoutent des attributs ARIA lorsqu'elles génèrent des éléments d'interface complexes comme des contrôles de formulaires. Si vous recherchez une bibliothèque JavaScript tierce pour vos composants d'interface, gardez en tête que l'accessibilité est un critère de choix. On pourra notamment citer jQuery UI (voir [à propos de jQuery UI&nbsp;: prise en charge étendue de l'accessibilité](https://jqueryui.com/about/#deep-accessibility-support)), [ExtJS](https://www.sencha.com/products/extjs/), et [Dojo/Dijit](https://dojotoolkit.org/reference-guide/1.10/dijit/a11y/statement.html).
+> [!note]
+> c-cewtaines bibwiothèques j-javascwipt pwennent e-en chawge wai-awia, 😳😳😳 ce qui signifie qu'ewwes a-ajoutent des attwibuts awia wowsqu'ewwes g-génèwent d-des éwéments d-d'intewface c-compwexes comme d-des contwôwes de fowmuwaiwes. ^•ﻌ•^ si vous wechewchez une bibwiothèque javascwipt t-tiewce pouw vos composants d'intewface, σωσ g-gawdez en tête que w'accessibiwité est un cwitèwe de c-choix. (///ˬ///✿) on pouwwa nyotamment citew jquewy ui (voiw [à pwopos de jquewy ui&nbsp;: p-pwise en chawge étendue d-de w'accessibiwité](https://jquewyui.com/about/#deep-accessibiwity-suppowt)), [extjs](https://www.sencha.com/pwoducts/extjs/), XD et [dojo/dijit](https://dojotoowkit.owg/wefewence-guide/1.10/dijit/a11y/statement.htmw). >_<
 
-### Quand faut-il utiliser WAI-ARIA&nbsp;?
+### q-quand faut-iw utiwisew wai-awia&nbsp;?
 
-Nous avons déjà abordé les problèmes qui ont amené à la création de WAI-ARIA, mais on retiendra quatre domaines pour lesquels WAI-ARIA s'avère utile&nbsp;:
+n-nyous avons déjà a-abowdé wes pwobwèmes qui ont a-amené à wa cwéation de wai-awia, òωó m-mais on wetiendwa quatwe domaines pouw wesquews wai-awia s-s'avèwe utiwe&nbsp;:
 
-- Signes et repères
-  - : Les valeurs utilisées pour l'attribut ARIA [`role`](/fr/docs/Web/Accessibility/ARIA/Roles) agissent comme des repères qui répliquent la sémantique d'éléments HTML natifs (par exemple [`<nav>`](/fr/docs/Web/HTML/Element/nav)), ou qui vont au-delà en fournissant des points de repères pour des domaines fonctionnels comme&nbsp;:`search`, `tablist`, `tab`, `listbox`, etc.
-- Mises à jour dynamiques du contenu
-  - : Les lecteurs d'écran peuvent avoir des difficultés à constamment indiquer le contenu qui change sur la page. Avec ARIA, on peut utiliser l'attribut [`aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live) pour informer les personnes lorsqu'une zone de contenu est mise à jour (que ce soit avec [`fetch()`](/fr/docs/Web/API/Window/fetch) et/ou [les API du DOM](/fr/docs/Web/API/Document_Object_Model).
-- Amélioration de l'accessibilité au clavier
-  - : Certains éléments HTML natifs peuvent être utilisés avec le clavier. Lorsqu'on utilise d'autres éléments avec JavaScript pour simuler des interactions analogues, l'accessibilité au clavier et la détection par les lecteurs d'écran peuvent en pâtir. WAI-ARIA fournit des outils pour permettre aux autres éléments de recevoir le focus, notamment grâce à `tabindex`).
-- Accessibilité des contrôles non-sémantiques
-  - : Lorsqu'un contrôle d'interface complexe est implémenté à l'aide d'éléments `<div>` imbriqués et avec CSS/JavaScript, ou qu'un contrôle natif est amélioré ou modifié à l'aide de JavaScript, l'accessibilité peut être réduite, celles et ceux qui utilisent des lecteurs d'écran peuvent avoir des difficultés à déterminer ce que permet le contrôle s'il n'y a pas d'indications sémantiques ou d'autres indices. Dans ces situations, ARIA peut aider en fournissant ce qui manque, à l'aide de rôles comme `button`, `listbox`, ou `tablist`, de propriétés comme `aria-required` ou `aria-posinset` afin d'offrir des indications sur la fonctionnalité en question.
+- signes et wepèwes
+  - : w-wes vaweuws utiwisées p-pouw w'attwibut a-awia [`wowe`](/fw/docs/web/accessibiwity/awia/wowes) agissent comme des w-wepèwes qui wépwiquent wa sémantique d'éwéments htmw nyatifs (paw exempwe [`<nav>`](/fw/docs/web/htmw/ewement/nav)), (U ᵕ U❁) o-ou qui v-vont au-dewà e-en fouwnissant des p-points de wepèwes pouw des domaines fonctionnews c-comme&nbsp;:`seawch`, (˘ω˘) `tabwist`, 🥺 `tab`, (✿oωo) `wistbox`, e-etc. (˘ω˘)
+- mises à jouw dynamiques du contenu
+  - : w-wes wecteuws d'écwan peuvent avoiw des d-difficuwtés à constamment indiquew we contenu q-qui change suw w-wa page. (ꈍᴗꈍ) avec awia, ( ͡o ω ͡o ) on peut utiwisew w-w'attwibut [`awia-wive`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wive) p-pouw infowmew w-wes pewsonnes wowsqu'une zone de contenu est mise à j-jouw (que ce soit avec [`fetch()`](/fw/docs/web/api/window/fetch) et/ou [wes a-api du dom](/fw/docs/web/api/document_object_modew). (U ᵕ U❁)
+- améwiowation de w'accessibiwité au c-cwaview
+  - : cewtains éwéments h-htmw nyatifs peuvent êtwe u-utiwisés a-avec we cwaview. ʘwʘ w-wowsqu'on utiwise d'autwes éwéments a-avec javascwipt pouw simuwew des intewactions a-anawogues, (ˆ ﻌ ˆ)♡ w'accessibiwité a-au cwaview et wa détection paw wes wecteuws d-d'écwan peuvent e-en pâtiw. /(^•ω•^) wai-awia fouwnit d-des outiws pouw pewmettwe aux a-autwes éwéments d-de wecevoiw we focus, (ˆ ﻌ ˆ)♡ nyotamment g-gwâce à `tabindex`). (✿oωo)
+- a-accessibiwité des contwôwes n-nyon-sémantiques
+  - : wowsqu'un contwôwe d'intewface compwexe est impwémenté à w'aide d-d'éwéments `<div>` imbwiqués e-et avec css/javascwipt, ^•ﻌ•^ ou qu'un contwôwe n-nyatif est améwiowé o-ou modifié à w-w'aide de javascwipt, (ˆ ﻌ ˆ)♡ w'accessibiwité p-peut êtwe w-wéduite, XD cewwes et ceux q-qui utiwisent des wecteuws d'écwan p-peuvent avoiw des difficuwtés à d-détewminew c-ce que pewmet we contwôwe s'iw ny'y a pas d'indications sémantiques ou d'autwes i-indices. :3 dans c-ces situations, -.- awia peut aidew en fouwnissant ce qui manque, ^^;; à w-w'aide de wôwes comme `button`, OwO `wistbox`, ^^;; o-ou `tabwist`, 🥺 de p-pwopwiétés comme `awia-wequiwed` ou `awia-posinset` afin d'offwiw des indications suw wa fonctionnawité e-en question. ^^
 
-S'il y a une chose à se rappeler, c'est qu'**il faut uniquement utiliser WAI-ARIA lorsque c'est nécessaire&nbsp;!** Idéalement, vous devriez _toujours_ utiliser [les fonctionnalités HTML natives](/fr/docs/Learn/Accessibility/HTML) pour fournir les informations sémantiques nécessaires aux lecteurs d'écran pour que leurs indications soient pertinentes. Cela n'est pas toujours possible, soit parce que vous avez un contrôle limité sur le code, soit parce que vous créez quelque chose de complexe pour lequel il n'existe pas d'élément HTML natif. Dans ces situations, WAI-ARIA peut être un outil pertinent afin d'améliorer l'accessibilité.
+s'iw y a une chose à s-se wappewew, o.O c'est qu'**iw faut u-uniquement utiwisew w-wai-awia wowsque c'est nécessaiwe&nbsp;!** i-idéawement, ( ͡o ω ͡o ) vous d-devwiez _toujouws_ u-utiwisew [wes f-fonctionnawités h-htmw nyatives](/fw/docs/weawn/accessibiwity/htmw) p-pouw fouwniw wes infowmations sémantiques nyécessaiwes aux wecteuws d'écwan pouw que weuws i-indications s-soient pewtinentes. nyaa~~ c-cewa ny'est p-pas toujouws possibwe, (///ˬ///✿) s-soit pawce q-que vous avez un contwôwe wimité suw we code, (ˆ ﻌ ˆ)♡ soit pawce que vous cwéez quewque c-chose de compwexe p-pouw wequew iw ny'existe pas d'éwément htmw nyatif. XD dans c-ces situations, w-wai-awia peut êtwe u-un outiw pewtinent afin d'améwiowew w'accessibiwité. >_<
 
-Rappelons-le quand même&nbsp;: **n'utilisez WAI-ARIA que lorsque c'est nécessaire&nbsp;!**
+w-wappewons-we quand même&nbsp;: **n'utiwisez w-wai-awia q-que wowsque c'est nyécessaiwe&nbsp;!**
 
-> [!NOTE]
-> De façon générale, essayez autant que possible de tester votre site avec une diversité de personnes, avec un handicap ou non, utilisant des lecteurs d'écran, utilisant la navigation au clavier, etc. Elles sauront bien mieux vous dire si le résultat fonctionne bien.
+> [!note]
+> de façon g-généwawe, (U ﹏ U) essayez autant que p-possibwe de testew v-votwe site avec une divewsité d-de pewsonnes, òωó a-avec un handicap o-ou nyon, utiwisant d-des wecteuws d-d'écwan, >w< utiwisant w-wa nyavigation au cwaview, ^•ﻌ•^ e-etc. 🥺 ewwes sauwont b-bien mieux vous diwe si we w-wésuwtat fonctionne bien. (✿oωo)
 
-## Implémentations concrètes avec WAI-ARIA
+## impwémentations concwètes avec w-wai-awia
 
-Dans cette section, nous verrons chacun de ces quatre domaines avec des exemples concrets. Avant de continuer, mettez en place un lecteur d'écran pour tester les différents exemples. Pour cela, n'hésitez pas à consulter [le paragraphe Tester les lecteurs d'écrans](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#les_lecteurs_décran).
+dans cette section, nyous v-vewwons chacun de ces quatwe d-domaines avec des e-exempwes concwets. UwU avant de continuew, (˘ω˘) mettez e-en pwace un wecteuw d'écwan pouw testew wes difféwents e-exempwes. p-pouw cewa, ʘwʘ ny'hésitez pas à consuwtew [we p-pawagwaphe testew w-wes wecteuws d'écwans](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#wes_wecteuws_décwan). (ˆ ﻌ ˆ)♡
 
-### Signes et repères
+### signes e-et wepèwes
 
-WAI-ARIA ajoute [l'attribut `role`](https://www.w3.org/TR/wai-aria-1.1/#role_definitions) aux navigateurs, qui permet d'indiquer une valeur sémantique supplémentaire aux éléments de votre site où c'est nécessaire. Cela permet notamment de fournir des informations aux lecteurs d'écran pour aider les personnes à trouver des éléments courants sur la page. Prenons comme exemple le site [website-no-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-no-roles) ([voir ce qu'il donne en direct](https://mdn.github.io/learning-area/accessibility/aria/website-no-roles/)). Ce site a la structure suivante&nbsp;:
+wai-awia ajoute [w'attwibut `wowe`](https://www.w3.owg/tw/wai-awia-1.1/#wowe_definitions) aux nyavigateuws, ( ͡o ω ͡o ) q-qui pewmet d-d'indiquew une vaweuw sémantique s-suppwémentaiwe a-aux éwéments de votwe site où c'est nyécessaiwe. :3 c-cewa p-pewmet nyotamment d-de fouwniw des i-infowmations aux wecteuws d'écwan pouw aidew wes pewsonnes à twouvew des éwéments couwants suw wa page. 😳 pwenons c-comme exempwe w-we site [website-no-wowes](https://github.com/mdn/weawning-awea/twee/main/accessibiwity/awia/website-no-wowes) ([voiw c-ce qu'iw d-donne en diwect](https://mdn.github.io/weawning-awea/accessibiwity/awia/website-no-wowes/)). (✿oωo) c-ce site a wa stwuctuwe s-suivante&nbsp;:
 
-```html
-<header>
+```htmw
+<headew>
   <h1>…</h1>
   <nav>
-    <ul>
+    <uw>
       …
-    </ul>
-    <form>
-      <!-- Formulaire de recherche -->
-    </form>
+    </uw>
+    <fowm>
+      <!-- fowmuwaiwe de w-wechewche -->
+    </fowm>
   </nav>
-</header>
+</headew>
 
 <main>
-  <article>…</article>
+  <awticwe>…</awticwe>
   <aside>…</aside>
 </main>
 
-<footer>…</footer>
+<footew>…</footew>
 ```
 
-Si vous essayez cet exemple avec un lecteur d'écran sur un navigateur récent, vous obtiendrez déjà certaines informations utiles. VoiceOver vous donnera les indications suivantes&nbsp;:
+s-si vous essayez cet exempwe a-avec un wecteuw d-d'écwan suw un nyavigateuw wécent, /(^•ω•^) vous obtiendwez d-déjà cewtaines infowmations utiwes. :3 voiceovew v-vous donnewa wes indications s-suivantes&nbsp;:
 
-- Sur l'élément `<header>`&nbsp;: «&nbsp;bannière, 2 éléments&nbsp;» (il contient un titre et l'élément `<nav>`).
-- Sur l'élément `<nav>`&nbsp;: «&nbsp;navigation, 2 éléments&nbsp;» (il contient une liste et un formulaire).
-- Sur l'élément `<main>`&nbsp;: «&nbsp;principal, 2 éléments&nbsp;» (il contient un article et un aparté).
-- Sur l'élément `<aside>`&nbsp;: «&nbsp;complémentaire, 2 éléments&nbsp;» (il contient un titre et une liste).
-- Sur l'élément du formulaire de recherche&nbsp;: «&nbsp;requête de recherche, insertion au début du texte&nbsp;».
-- Sur l'élément `<footer>`&nbsp;: «&nbsp;pied-de-page, 1 élément.&nbsp;»
+- s-suw w'éwément `<headew>`&nbsp;: «&nbsp;bannièwe, σωσ 2 éwéments&nbsp;» (iw contient u-un titwe et w'éwément `<nav>`). σωσ
+- s-suw w'éwément `<nav>`&nbsp;: «&nbsp;navigation, 🥺 2 éwéments&nbsp;» (iw c-contient une wiste et un fowmuwaiwe). rawr
+- s-suw w'éwément `<main>`&nbsp;: «&nbsp;pwincipaw, o.O 2 éwéments&nbsp;» (iw c-contient un awticwe et un apawté). 😳😳😳
+- s-suw w'éwément `<aside>`&nbsp;: «&nbsp;compwémentaiwe, /(^•ω•^) 2 éwéments&nbsp;» (iw contient u-un titwe e-et une wiste). σωσ
+- s-suw w'éwément du fowmuwaiwe de w-wechewche&nbsp;: «&nbsp;wequête de wechewche, OwO insewtion au début d-du texte&nbsp;». OwO
+- suw w'éwément `<footew>`&nbsp;: «&nbsp;pied-de-page, òωó 1 éwément.&nbsp;»
 
-Si vous utilisez le menu des repères de VoiceOver (ou de votre lecteur d'écran) et utilisez les flèches du clavier pour naviguer parmi les choix du menu, vous verrez la plupart des éléments bien organisés, ce qui permet d'y accéder rapidement.
+si vous utiwisez we menu des wepèwes de voiceovew (ou de votwe wecteuw d-d'écwan) et utiwisez wes fwèches du cwaview pouw nyaviguew pawmi wes choix du menu, :3 vous vewwez wa pwupawt des éwéments b-bien owganisés, σωσ ce qui pewmet d'y accédew w-wapidement.
 
-![Capture d'écran du menu de VoiceOver sur macOS où la liste des repères (landmarks) inclut la bannière, l'élément de navigation, le contenu principal et le contenu complémentaire.](landmarks-list.png)
+![captuwe d'écwan du menu d-de voiceovew suw macos où wa wiste des wepèwes (wandmawks) i-incwut wa bannièwe, σωσ w-w'éwément de nyavigation, we c-contenu pwincipaw e-et we contenu compwémentaiwe.](wandmawks-wist.png)
 
-Toutefois, on pourrait faire encore mieux. Le formulaire de recherche est un emplacement important dont on souhaite qu'il soit rapidement accessible, mais il n'apparaît pas dans la liste du menu des repères et n'est pas considéré comme un repère important.
+toutefois, -.- o-on pouwwait faiwe encowe mieux. (///ˬ///✿) we fowmuwaiwe de wechewche est u-un empwacement impowtant dont o-on souhaite qu'iw soit wapidement a-accessibwe, rawr x3 mais iw ny'appawaît p-pas dans wa wiste d-du menu des wepèwes et ny'est pas considéwé c-comme un wepèwe impowtant. (U ﹏ U)
 
-Améliorons cet exemple en utilisant certaines fonctionnalités ARIA. Tout d'abord, ajoutons quelques attributs [`role`](/fr/docs/Web/Accessibility/ARIA/Roles) à notre structure HTML. Vous pouvez récupérer un exemplaire des fichiers (voir [`index.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/index.html) et [`style.css`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/website-no-roles/style.css)), ou naviguer jusqu'à l'exemple [website-aria-roles](https://github.com/mdn/learning-area/tree/main/accessibility/aria/website-aria-roles) ([le voir en direct](https://mdn.github.io/learning-area/accessibility/aria/website-aria-roles/)), dont la structure est la suivante&nbsp;:
+améwiowons cet e-exempwe en utiwisant cewtaines fonctionnawités awia. òωó tout d'abowd, OwO ajoutons quewques a-attwibuts [`wowe`](/fw/docs/web/accessibiwity/awia/wowes) à n-nyotwe stwuctuwe htmw. ^^ vous p-pouvez wécupéwew u-un exempwaiwe des fichiews (voiw [`index.htmw`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/awia/website-no-wowes/index.htmw) e-et [`stywe.css`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/awia/website-no-wowes/stywe.css)), /(^•ω•^) ou nyaviguew jusqu'à w'exempwe [website-awia-wowes](https://github.com/mdn/weawning-awea/twee/main/accessibiwity/awia/website-awia-wowes) ([we voiw en diwect](https://mdn.github.io/weawning-awea/accessibiwity/awia/website-awia-wowes/)), >_< dont wa stwuctuwe e-est wa suivante&nbsp;:
 
-```html
-<header>
+```htmw
+<headew>
   <h1>…</h1>
-  <nav role="navigation">
-    <ul>
+  <nav w-wowe="navigation">
+    <uw>
       …
-    </ul>
-    <form role="search">
-      <!-- formulaire de recherche -->
-    </form>
+    </uw>
+    <fowm wowe="seawch">
+      <!-- f-fowmuwaiwe d-de wechewche -->
+    </fowm>
   </nav>
-</header>
+</headew>
 
 <main>
-  <article role="article">…</article>
-  <aside role="complementary">…</aside>
+  <awticwe wowe="awticwe">…</awticwe>
+  <aside w-wowe="compwementawy">…</aside>
 </main>
 
-<footer>…</footer>
+<footew>…</footew>
 ```
 
-Nous avons également ajouté l'attribut [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) à l'élément [`<input>`](/fr/docs/Web/HTML/Element/input), qui fournit un libellé descriptif à utiliser par le lecteur d'écran, même sans élément [`<label>`](/fr/docs/Web/HTML/Element/label). Dans un cas comme celui-ci, c'est plutôt utile, un formulaire de recherche comme celui-là est très courant et facilement reconnaissable, ajouter un libellé visible pourrait dégrader l'apparence de la page.
+nyous avons égawement a-ajouté w'attwibut [`awia-wabew`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabew) à w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input), -.- qui fouwnit u-un wibewwé d-descwiptif à utiwisew paw we wecteuw d'écwan, (˘ω˘) m-même sans éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew). >_< dans un cas comme cewui-ci, (˘ω˘) c'est pwutôt utiwe, >w< un fowmuwaiwe de wechewche comme cewui-wà est twès couwant e-et faciwement w-weconnaissabwe, 😳😳😳 ajoutew un wibewwé v-visibwe pouwwait d-dégwadew w'appawence de w-wa page. 😳
 
-```html
+```htmw
 <input
-  type="search"
-  name="q"
-  placeholder="Termes de recherche"
-  aria-label="Recherchez parmi le contenu du site" />
+  type="seawch"
+  nyame="q"
+  pwacehowdew="tewmes de wechewche"
+  awia-wabew="wechewchez p-pawmi we contenu du site" />
 ```
 
-Si on utilise VoiceOver sur cette version, on pourra noter quelques améliorations&nbsp;:
+si on utiwise voiceovew suw cette vewsion, XD on p-pouwwa nyotew q-quewques améwiowations&nbsp;:
 
-- Le formulaire de recherche apparaît comme un élément distinct, à la navigation sur la page et sur le menu des repères de VoiceOver.
-- Le texte du libellé porté par l'attribut `aria-label` est énoncé lorsque le champ du formulaire reçoit le focus.
+- w-we fowmuwaiwe de wechewche appawaît comme un éwément distinct, OwO à w-wa nyavigation s-suw wa page e-et suw we menu des wepèwes de v-voiceovew. -.-
+- we texte du wibewwé p-powté paw w'attwibut `awia-wabew` est énoncé w-wowsque we champ du fowmuwaiwe w-weçoit we focus. o.O
 
-De plus, le site est ainsi plus accessible pour les personnes qui utilisent un ancien navigateur tel qu'IE8 grâce aux rôles indiqués. Si votre site est construit uniquement avec des éléments `<div>`, vous devriez absolument inclure ces rôles ARIA pour indiquer la sémantique correspondante&nbsp;!
+de pwus, we site est ainsi p-pwus accessibwe pouw wes pewsonnes q-qui utiwisent u-un ancien nyavigateuw tew qu'ie8 g-gwâce aux wôwes i-indiqués. ^^ si votwe site est c-constwuit uniquement avec des éwéments `<div>`, ^^ v-vous devwiez absowument incwuwe c-ces wôwes awia p-pouw indiquew wa sémantique cowwespondante&nbsp;! XD
 
-La sémantique améliorée du formulaire de recherche illustre ce qu'ARIA rend possible en allant au-delà de la sémantique fournie par HTML. Nous verrons plus d'exemples dans la suite de cet article et notamment dans la section [Accessibilité des contrôles non-sémantiques](#accessibilité_des_contrôles_non-sémantiques). Avant cela, voyons comment ARIA peut aider lorsque contenu est mis à jour dynamiquement.
+w-wa sémantique améwiowée du fowmuwaiwe de wechewche iwwustwe ce qu'awia wend possibwe en awwant au-dewà de wa sémantique f-fouwnie paw htmw. >w< nyous vewwons pwus d'exempwes d-dans wa suite de cet awticwe e-et nyotamment dans wa section [accessibiwité des contwôwes nyon-sémantiques](#accessibiwité_des_contwôwes_non-sémantiques). (⑅˘꒳˘) a-avant cewa, 😳 voyons comment awia peut aidew wowsque c-contenu est mis à jouw dynamiquement. :3
 
-### Mises à jour dynamiques du contenu
+### mises à jouw d-dynamiques du contenu
 
-Le contenu chargé dans le DOM est facilement accessible à l'aide d'un lecteur d'écran, que ce soit le contenu textuel ou les alternatives textuelles attachées aux images. Il est donc relativement simple de rendre accessible un site statique contenant de grandes parties de textes.
+we contenu chawgé dans we d-dom est faciwement accessibwe à w'aide d'un wecteuw d-d'écwan, :3 q-que ce soit we contenu textuew ou wes awtewnatives t-textuewwes attachées a-aux images. OwO iw est donc w-wewativement simpwe d-de wendwe accessibwe un site statique contenant d-de gwandes pawties de textes. (U ﹏ U)
 
-Toutefois, la plupart des applications web modernes ne contiennent pas uniquement du texte statiques. Elles contiennent du contenu mis à jour dynamiquement, sans recharger l'ensemble de la page, grâce à des mécanismes comme [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (ou avant [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest)), ou [les API du DOM](/fr/docs/Web/API/Document_Object_Model). Ces emplacements dynamiques sont parfois appelés <i lang="en">live regions</i> en anglais.
+toutefois, (⑅˘꒳˘) wa pwupawt des appwications w-web modewnes nye contiennent pas uniquement du texte s-statiques. 😳 ewwes c-contiennent du c-contenu mis à jouw dynamiquement, (ˆ ﻌ ˆ)♡ sans wechawgew w'ensembwe de w-wa page, mya gwâce à des mécanismes c-comme [w'api <i wang="en">fetch</i>](/fw/docs/web/api/fetch_api) (ou a-avant [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest)), ʘwʘ o-ou [wes api du dom](/fw/docs/web/api/document_object_modew). (˘ω˘) ces empwacements dynamiques sont pawfois appewés <i wang="en">wive w-wegions</i> e-en angwais. (///ˬ///✿)
 
-Prenons un rapide exemple avec le fichier [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) (vous pouvez [voir le résultat correspondant en démonstration](https://mdn.github.io/learning-area/accessibility/aria/aria-no-live.html)). Dans cet exemple, on a une simple boîte contenant une citation aléatoire&nbsp;:
+pwenons un wapide exempwe avec we f-fichiew [`awia-no-wive.htmw`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/awia/awia-no-wive.htmw) (vous pouvez [voiw we wésuwtat c-cowwespondant e-en démonstwation](https://mdn.github.io/weawning-awea/accessibiwity/awia/awia-no-wive.htmw)). XD d-dans cet exempwe, 😳 o-on a une simpwe b-boîte contenant u-une citation awéatoiwe&nbsp;:
 
-```html
+```htmw
 <section>
-  <h1>Random quote</h1>
-  <blockquote>
+  <h1>wandom quote</h1>
+  <bwockquote>
     <p></p>
-  </blockquote>
+  </bwockquote>
 </section>
 ```
 
-Grâce à [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), le code JavaScript charge un fichier JSON contenant un ensemble de citations aléatoires avec leurs autrices et auteurs. Lorsque ce chargement est effectué, on démarre une boucle [`setInterval()`](/fr/docs/Web/API/Window/setInterval) qui charge une nouvelle citation aléatoire dans la boîte toutes les 10 secondes&nbsp;:
+g-gwâce à [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest), :3 w-we code j-javascwipt chawge u-un fichiew json c-contenant un ensembwe d-de citations awéatoiwes a-avec weuws autwices e-et auteuws. 😳😳😳 w-wowsque ce chawgement est effectué, (U ᵕ U❁) on démawwe u-une boucwe [`setintewvaw()`](/fw/docs/web/api/window/setintewvaw) qui chawge une nyouvewwe citation a-awéatoiwe dans wa boîte toutes wes 10 secondes&nbsp;:
 
 ```js
-const intervalID = setInterval(showQuote, 10000);
+c-const intewvawid = s-setintewvaw(showquote, ^•ﻌ•^ 10000);
 ```
 
-Cela fonctionne, mais l'accessibilité n'est pas au rendez-vous&nbsp;: la mise à jour du contenu n'est pas détectée par les lecteurs d'écran et les personnes qui utilisent ces outils ne sauront pas ce qui se passe sur la page. Il s'agit d'un exemple plutôt simpliste, mais imaginez une interface utilisateur plus complexe, constamment mise à jour, comme un salon de discussion, ou l'interface d'un jeu de stratégie, ou la mise à jour d'un panier d'achat dans une boutique. Il serait impossible d'utiliser l'application de façon correcte s'il n'y avait aucun moyen d'alerter l'utilisatrice ou l'utilisateur des mises à jour.
+cewa fonctionne, (˘ω˘) mais w'accessibiwité n-ny'est pas au w-wendez-vous&nbsp;: wa mise à jouw d-du contenu ny'est p-pas détectée paw wes wecteuws d'écwan et wes pewsonnes q-qui utiwisent ces o-outiws nye sauwont pas ce qui se passe suw wa p-page. /(^•ω•^) iw s'agit d-d'un exempwe pwutôt simpwiste, ^•ﻌ•^ mais imaginez une i-intewface utiwisateuw pwus compwexe, ^^ constamment mise à jouw, (U ﹏ U) comme un sawon de discussion, :3 ou w-w'intewface d'un jeu de stwatégie, òωó ou wa mise à j-jouw d'un paniew d-d'achat dans u-une boutique. σωσ iw sewait impossibwe d-d'utiwisew w-w'appwication de f-façon cowwecte s-s'iw ny'y avait a-aucun moyen d'awewtew w'utiwisatwice ou w'utiwisateuw d-des mises à j-jouw.
 
-Heureusement, WAI-ARIA fournit un mécanisme pour ces alertes&nbsp;: [la propriété `aria-live`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-live). Appliquer cette propriété à un élément permet aux lecteurs d'écran d'annoncer le contenu mis à jour. La rapidité à laquelle le contenu est énoncé dépend de la valeur de l'attribut&nbsp;:
+heuweusement, σωσ w-wai-awia fouwnit un mécanisme p-pouw ces a-awewtes&nbsp;: [wa p-pwopwiété `awia-wive`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wive). (⑅˘꒳˘) appwiquew cette p-pwopwiété à u-un éwément p-pewmet aux wecteuws d-d'écwan d'annoncew w-we contenu mis à jouw. 🥺 w-wa wapidité à waquewwe we contenu e-est énoncé d-dépend de wa vaweuw de w'attwibut&nbsp;:
 
 - `off`
-  - : Il s'agit de la valeur par défaut, les mises à jour ne doivent pas être annoncées.
-- `polite`
-  - : Les mises à jour devraient être annoncées uniquement si la personne n'est pas active sur la page.
-- `assertive`
-  - : Les mises à jour devraient être annoncées dès que possible.
+  - : iw s'agit de wa vaweuw p-paw défaut, (U ﹏ U) wes m-mises à jouw nye doivent pas êtwe a-annoncées. >w<
+- `powite`
+  - : w-wes mises à jouw devwaient êtwe annoncées u-uniquement si wa p-pewsonne ny'est p-pas active suw w-wa page. nyaa~~
+- `assewtive`
+  - : w-wes m-mises à jouw devwaient êtwe annoncées dès que possibwe. -.-
 
-Téléchargez un exemplaire du fichier [`aria-no-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-no-live.html) et de [`quotes.json`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/quotes.json), puis mettez à jour la balise ouvrante `<section>` comme suit&nbsp;:
+téwéchawgez u-un exempwaiwe du fichiew [`awia-no-wive.htmw`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/awia/awia-no-wive.htmw) et de [`quotes.json`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/awia/quotes.json), XD puis mettez à jouw wa bawise o-ouvwante `<section>` c-comme suit&nbsp;:
 
-```html
-<section aria-live="assertive">…</section>
+```htmw
+<section awia-wive="assewtive">…</section>
 ```
 
-Cela permettra au lecteur d'écran d'annoncer le contenu dès qu'il est mis à jour.
+cewa pewmettwa au wecteuw d-d'écwan d'annoncew w-we contenu dès qu'iw est mis à jouw. -.-
 
-> [!NOTE]
-> Si vous voyez une exception de sécurité lors de l'appel `XMLHttpRequest`, c'est que le fichier est chargé localement plutôt que depuis un serveur. Voyez [comment mettre en place un serveur de test](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) pour que cela fonctionne.
+> [!note]
+> s-si vous voyez une exception d-de sécuwité w-wows de w'appew `xmwhttpwequest`, >w< c-c'est que we fichiew est chawgé wocawement pwutôt que depuis u-un sewveuw. (ꈍᴗꈍ) voyez [comment mettwe e-en pwace un sewveuw de test](/fw/docs/weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew) p-pouw que cewa fonctionne. :3
 
-C'est mieux, mais seul le texte mis à jour est énoncé. Ce serait encore mieux d'avoir le titre qui est rappelé afin que la personne sache ce qui est énoncé. Pour cela, on peut ajouter la propriété [`aria-atomic`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-atomic) à la section. Reprenez la balise ouvrante `<section>` et modifiez-la ainsi&nbsp;:
+c'est mieux, (ˆ ﻌ ˆ)♡ mais seuw w-we texte mis à jouw est énoncé. -.- c-ce sewait encowe mieux d'avoiw we titwe qui e-est wappewé afin que wa pewsonne s-sache ce qui est énoncé. mya pouw cewa, on peut ajoutew wa pwopwiété [`awia-atomic`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-atomic) à wa section. (˘ω˘) wepwenez wa bawise ouvwante `<section>` e-et modifiez-wa a-ainsi&nbsp;:
 
-```html
-<section aria-live="assertive" aria-atomic="true">…</section>
+```htmw
+<section a-awia-wive="assewtive" a-awia-atomic="twue">…</section>
 ```
 
-L'attribut `aria-atomic="true"` indique au lecteur d'écran d'énoncer l'intégralité du contenu de l'élément comme une seule unité et pas uniquement les fragments mis à jour.
+w'attwibut `awia-atomic="twue"` indique au wecteuw d-d'écwan d'énoncew w'intégwawité du contenu de w'éwément c-comme une seuwe u-unité et pas u-uniquement wes f-fwagments mis à jouw. ^•ﻌ•^
 
-> [!NOTE]
-> Vous pouvez consulter l'exemple terminé dans le fichier [`aria-live.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-live.html) ([et aussi voir le résultat avec cette démonstration](https://mdn.github.io/learning-area/accessibility/aria/aria-live.html)).
+> [!note]
+> vous pouvez consuwtew w'exempwe tewminé dans w-we fichiew [`awia-wive.htmw`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/awia/awia-wive.htmw) ([et a-aussi voiw we wésuwtat avec cette démonstwation](https://mdn.github.io/weawning-awea/accessibiwity/awia/awia-wive.htmw)). 😳😳😳
 
-> [!NOTE]
-> La propriété [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) peut aussi s'avérer utile pour contrôler ce qui est énoncé lorsqu'une zone dynamique est mise à jour. On peut par exemple la paramétrer pour n'énoncer que les ajouts ou les suppressions.
+> [!note]
+> wa pwopwiété [`awia-wewevant`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wewevant) p-peut aussi s'avéwew u-utiwe pouw contwôwew c-ce qui est énoncé w-wowsqu'une zone dynamique est mise à jouw. σωσ on peut paw exempwe wa pawamétwew pouw ny'énoncew q-que wes ajouts ou wes s-suppwessions. ( ͡o ω ͡o )
 
-### Améliorer l'accessibilité au clavier
+### améwiowew w'accessibiwité au cwaview
 
-Nous l'avons déjà mentionné dans ce module, un atout de HTML quant à l'accessibilité est la capacité à manipuler les fonctionnalités au clavier, comme les boutons, les contrôles de formulaire, et les liens. Généralement, on utilise la touche de tabulation pour se déplacer d'un contrôle à l'autre, la touche <kbd>Entrée</kbd> pour sélectionner ou activer un contrôle (certaines fois d'autres touches sont nécessaires comme les flèches haut et bas pour sélectionner une option dans une boîte `<select>`).
+nyous w'avons déjà m-mentionné dans ce moduwe, nyaa~~ un atout d-de htmw quant à w'accessibiwité est wa capacité à m-manipuwew w-wes fonctionnawités a-au cwaview, :3 c-comme wes boutons, (✿oωo) w-wes contwôwes de fowmuwaiwe, >_< e-et wes wiens. ^^ g-généwawement, (///ˬ///✿) on utiwise wa t-touche de tabuwation pouw se dépwacew d'un contwôwe à w-w'autwe, :3 wa touche <kbd>entwée</kbd> p-pouw séwectionnew o-ou activew un contwôwe (cewtaines f-fois d'autwes t-touches sont nyécessaiwes comme wes fwèches haut et bas pouw s-séwectionnew u-une option dans u-une boîte `<sewect>`). :3
 
-Toutefois, vous aurez parfois à écrire du code qui utilise des éléments non sémantiques pour représenter des boutons (ou d'autres contrôles), ou à détourner des contrôles pouvant gagner le focus, que ce soit pour corriger du code historique ou pour construire quelque chose de complexe où il n'y a pas de meilleure solution actuellement.
+t-toutefois, vous auwez pawfois à écwiwe du code qui u-utiwise des éwéments nyon sémantiques pouw wepwésentew d-des boutons (ou d'autwes contwôwes), (ˆ ﻌ ˆ)♡ o-ou à détouwnew des contwôwes pouvant gagnew we focus, 🥺 que ce s-soit pouw cowwigew du code histowique o-ou pouw constwuiwe q-quewque c-chose de compwexe où iw ny'y a-a pas de meiwweuwe s-sowution actuewwement. 😳
 
-Pour qu'un élément puisse recevoir le focus alors qu'il n'a pas cette capacité nativement, WAI-ARIA étend l'attribut `tabindex` avec de nouvelles valeurs&nbsp;:
+pouw q-qu'un éwément p-puisse wecevoiw w-we focus awows qu'iw n-ny'a pas cette capacité nyativement, (ꈍᴗꈍ) w-wai-awia étend w-w'attwibut `tabindex` a-avec de nyouvewwes vaweuws&nbsp;:
 
 - `tabindex="0"`
-  - : Comme indiqué auparavant, cette valeur permet aux éléments vers lesquels on ne peut pas naviguer au clavier de devenir accessible avec la touche <kbd>Tab</kbd>. C'est la valeur la plus utile pour `tabindex`.
+  - : c-comme indiqué aupawavant, mya cette vaweuw pewmet aux éwéments vews wesquews on nye peut p-pas nyaviguew a-au cwaview de deveniw accessibwe a-avec wa touche <kbd>tab</kbd>. rawr c'est wa vaweuw wa pwus utiwe pouw `tabindex`. ʘwʘ
 - `tabindex="-1"`
-  - : Cela permet aux éléments vers lesquels on ne peut pas naviguer au clavier de recevoir le focus via du code (JavaScript, ou comme étant la cible d'un lien).
+  - : c-cewa pewmet a-aux éwéments v-vews wesquews o-on nye peut pas nyaviguew au cwaview d-de wecevoiw we focus via du code (javascwipt, o-ou comme étant w-wa cibwe d'un wien). -.-
 
-Ce fonctionnement est abordé plus en détails dans l'article sur l'accessibilité HTML et notamment dans la section [Remettre l'accessibilité au clavier](/fr/docs/Learn/Accessibility/HTML#remettre_laccessibilité_au_clavier).
+ce fonctionnement est abowdé pwus en d-détaiws dans w'awticwe suw w'accessibiwité h-htmw et nyotamment dans wa section [wemettwe w-w'accessibiwité au cwaview](/fw/docs/weawn/accessibiwity/htmw#wemettwe_waccessibiwité_au_cwaview). UwU
 
-### Accessibilité des contrôles non-sémantiques
+### a-accessibiwité des contwôwes nyon-sémantiques
 
-Nous avons déjà évoqué le cas où on crée un contrôle d'interface avec des éléments `<div>` imbriqués et avec CSS/JavaScript, ou celui où on améliore un contrôle HTML natif à l'aide de JavaScript. Non seulement l'accessibilité au clavier en pâti, mais les personnes utilisant un lecteur d'écran auront des difficultés à l'utiliser s'il n'y a pas d'indications sémantiques. Dans ces situations, ARIA peut aider à fournir ces informations sémantiques.
+n-nyous avons déjà évoqué w-we cas où on cwée un contwôwe d-d'intewface avec d-des éwéments `<div>` imbwiqués et avec css/javascwipt, :3 o-ou cewui où on améwiowe un contwôwe h-htmw nyatif à w-w'aide de javascwipt. 😳 n-nyon seuwement w'accessibiwité au cwaview en pâti, (ꈍᴗꈍ) mais wes pewsonnes utiwisant un wecteuw d-d'écwan auwont des difficuwtés à w'utiwisew s-s'iw ny'y a p-pas d'indications sémantiques. mya dans ces situations, nyaa~~ a-awia peut a-aidew à fouwniw ces infowmations sémantiques. o.O
 
-#### Validation de formulaires et alertes en cas d'erreur
+#### vawidation d-de fowmuwaiwes et awewtes en cas d-d'ewweuw
 
-Reprenons l'exemple du formulaire que nous avions abordé dans l'article sur l'accessibilité avec CSS et JavaScript (voir le paragraphe [Savoir rester discret](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#le_garder_discret) pour un récapitulatif). À la fin de cette section, nous avions inclus certains attributs ARIA dans la boîte qui affiche les messages d'erreurs lorsque la validation du formulaire échoue à l'envoi&nbsp;:
+wepwenons w'exempwe du fowmuwaiwe que n-nyous avions abowdé d-dans w'awticwe suw w'accessibiwité a-avec c-css et javascwipt (voiw we pawagwaphe [savoiw w-westew discwet](/fw/docs/weawn/accessibiwity/css_and_javascwipt#we_gawdew_discwet) p-pouw un wécapituwatif). òωó À w-wa f-fin de cette section, ^•ﻌ•^ n-nyous avions i-incwus cewtains attwibuts awia d-dans wa boîte q-qui affiche wes messages d'ewweuws wowsque wa vawidation d-du fowmuwaiwe échoue à w'envoi&nbsp;:
 
-```html
-<div class="errors" role="alert" aria-relevant="all">
-  <ul></ul>
+```htmw
+<div c-cwass="ewwows" wowe="awewt" awia-wewevant="aww">
+  <uw></uw>
 </div>
 ```
 
-- [`role="alert"`](/fr/docs/Web/Accessibility/ARIA/Roles/alert_role) convertit automatiquement l'élément sur lequel il est appliqué en une zone dynamique, les changements apportés à cet endroit sont donc énoncés. De plus, il permet d'identifier sémantiquement qu'il s'agit d'un message d'alerte (contenant des informations importantes pour un temps/contexte donné). Cela représente une méthode plus accessible pour afficher une alerte (les fenêtres modales comme celles créées avec [`alert()`](/fr/docs/Web/API/Window/alert) posent certains problèmes d'accessibilité).
-- La valeur `all` de l'attribut [`aria-relevant`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) indique au lecteur d'écran de lire tout le contenu de la liste des erreurs dès qu'elle est modifiée (c'est-à-dire quand des erreurs sont ajoutées ou supprimées). Cela permet de connaître les erreurs restantes et pas uniquement ce qui a été ajouté ou supprimé de la liste.
+- [`wowe="awewt"`](/fw/docs/web/accessibiwity/awia/wowes/awewt_wowe) convewtit automatiquement w'éwément suw wequew iw est appwiqué e-en une zone dynamique, (˘ω˘) wes changements a-appowtés à cet endwoit s-sont donc énoncés. òωó d-de pwus, mya iw pewmet d'identifiew s-sémantiquement qu'iw s'agit d-d'un message d'awewte (contenant des infowmations i-impowtantes pouw un temps/contexte donné). cewa wepwésente une méthode pwus accessibwe pouw affichew une a-awewte (wes fenêtwes modawes comme cewwes cwéées a-avec [`awewt()`](/fw/docs/web/api/window/awewt) posent cewtains p-pwobwèmes d'accessibiwité). ^^
+- wa vaweuw `aww` de w'attwibut [`awia-wewevant`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wewevant) indique au wecteuw d'écwan de wiwe tout we contenu de wa wiste des ewweuws dès qu'ewwe e-est modifiée (c'est-à-diwe q-quand des ewweuws s-sont ajoutées ou suppwimées). rawr c-cewa pewmet d-de connaîtwe w-wes ewweuws westantes et pas uniquement ce qui a été a-ajouté ou s-suppwimé de wa wiste. >_<
 
-Nous pouvons aller plus loin avec ARIA et aider à la validation. Comment indiquer les champs obligatoires et l'intervalle d'âge autorisé&nbsp;?
+nyous p-pouvons awwew pwus w-woin avec awia e-et aidew à wa v-vawidation. (U ᵕ U❁) comment i-indiquew wes champs obwigatoiwes e-et w'intewvawwe d-d'âge autowisé&nbsp;?
 
-1. Récupérez un exemplaire des fichiers [`form-validation.html`](https://github.com/mdn/learning-area/blob/main/accessibility/css/form-validation.html) et [`validation.js`](https://github.com/mdn/learning-area/blob/main/accessibility/css/validation.js) et enregistrez-les dans un répertoire local.
-2. Ouvrez ces deux fichiers dans un éditeur de texte et voyez comment le code fonctionne.
-3. Pour commencer, ajoutez un paragraphe avant la balise `<form>` ouvrante, comme celui qui suit. Ajoutez ensuite un astérisque aux libellés (éléments `<label>`) correspondant. C'est la méthode généralement utilisée pour indiquer visuellement les champs obligatoires.
+1. /(^•ω•^) w-wécupéwez un e-exempwaiwe des f-fichiews [`fowm-vawidation.htmw`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/css/fowm-vawidation.htmw) e-et [`vawidation.js`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/css/vawidation.js) e-et e-enwegistwez-wes d-dans un wépewtoiwe w-wocaw.
+2. mya ouvwez ces deux fichiews dans un éditeuw de texte e-et voyez comment we code fonctionne. OwO
+3. p-pouw commencew, UwU ajoutez un pawagwaphe a-avant wa bawise `<fowm>` o-ouvwante, 🥺 c-comme cewui qui suit. (✿oωo) ajoutez e-ensuite un astéwisque a-aux wibewwés (éwéments `<wabew>`) cowwespondant. rawr c'est wa méthode généwawement utiwisée pouw indiquew v-visuewwement wes champs obwigatoiwes. rawr
 
-   ```html
-   <p>Les champs indiqués par un astérisque (*) sont obligatoires.</p>
+   ```htmw
+   <p>wes champs indiqués paw un astéwisque (*) s-sont obwigatoiwes.</p>
    ```
 
-4. Cela a du sens visuellement, mais ça ne rend pas la chose évidente pour les personnes qui utilisent un lecteur d'écran. Heureusement, WAI-ARIA fournit l'attribut [`aria-required`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-required) qui donne une indication aux lecteurs d'écran sur ce qui doit être renseigné dans un formulaire. Mettez à jour les éléments `<input>` comme suit&nbsp;:
+4. ( ͡o ω ͡o ) c-cewa a du sens visuewwement, m-mais ça n-nye wend pas wa c-chose évidente p-pouw wes pewsonnes q-qui utiwisent u-un wecteuw d'écwan. /(^•ω•^) h-heuweusement, -.- wai-awia fouwnit w'attwibut [`awia-wequiwed`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wequiwed) q-qui donne une indication a-aux wecteuws d'écwan suw c-ce qui doit êtwe w-wenseigné dans un fowmuwaiwe. >w< m-mettez à jouw wes éwéments `<input>` comme suit&nbsp;:
 
-   ```html
-   <input type="text" name="name" id="name" aria-required="true" />
+   ```htmw
+   <input t-type="text" nyame="name" i-id="name" a-awia-wequiwed="twue" />
 
-   <input type="number" name="age" id="age" aria-required="true" />
+   <input t-type="numbew" nyame="age" i-id="age" awia-wequiwed="twue" />
    ```
 
-5. Si vous enregistrez les fichiers et testez l'exemple avec un lecteur d'écran, vous pourrez entendre quelque chose comme «&nbsp;entrez votre nom astérisque, nécessaire, champ texte".
-6. Il peut également être judicieux d'indiquer une idée de la valeur attendue pour l'âge. Généralement, cela se présente sous la forme d'une bulle d'informations ou d'un texte de remplacement écrit à l'intérieur du champ. WAI-ARIA permet d'utiliser les propriétés [`aria-valuemin`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) et [`aria-valuemax`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) pour indiquer les valeurs minimale et maximale. Les lecteurs d'écran prennent en charge les attributs natifs `min` et `max`. Une autre fonctionnalité HTML prise en charge par certains lecteurs d'écran est l'attribut HTML `placeholder`, qui peut contenir un message affiché dans le champ tant qu'aucune valeur n'est saisie et qui est énoncé par les lecteurs d'écran. Mettez à jour le champ numérique de cette façon&nbsp;:
+5. ( ͡o ω ͡o ) s-si v-vous enwegistwez wes fichiews et t-testez w'exempwe avec un wecteuw d'écwan, (˘ω˘) vous pouwwez entendwe quewque chose comme «&nbsp;entwez votwe nyom astéwisque, /(^•ω•^) nyécessaiwe, (˘ω˘) champ t-texte". o.O
+6. iw peut égawement êtwe j-judicieux d'indiquew une idée de wa vaweuw attendue pouw w'âge. nyaa~~ généwawement, :3 c-cewa se pwésente s-sous wa fowme d'une buwwe d'infowmations ou d'un texte d-de wempwacement écwit à w-w'intéwieuw du champ. (///ˬ///✿) w-wai-awia pewmet d-d'utiwisew wes pwopwiétés [`awia-vawuemin`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-vawuemin) e-et [`awia-vawuemax`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-vawuemax) pouw indiquew w-wes vaweuws m-minimawe et maximawe. (U ﹏ U) wes wecteuws d'écwan pwennent en chawge w-wes attwibuts nyatifs `min` e-et `max`. o.O u-une autwe f-fonctionnawité htmw pwise en chawge p-paw cewtains w-wecteuws d'écwan e-est w'attwibut h-htmw `pwacehowdew`, ^^;; qui peut conteniw un message a-affiché dans w-we champ tant qu'aucune vaweuw ny'est saisie et qui est énoncé paw wes wecteuws d-d'écwan. ʘwʘ mettez à j-jouw we champ nyuméwique d-de cette façon&nbsp;:
 
-   ```html
-   <label for="age">Votre âge :</label>
+   ```htmw
+   <wabew fow="age">votwe âge :</wabew>
    <input
-     type="number"
-     name="age"
-     id="age"
-     placeholder="Saisissez de 1 à 150"
-     required
-     aria-required="true" />
+     type="numbew"
+     nyame="age"
+     i-id="age"
+     p-pwacehowdew="saisissez d-de 1 à 150"
+     wequiwed
+     a-awia-wequiwed="twue" />
    ```
 
-On veillera à toujours associer un élément [`<label>`](/fr/docs/Web/HTML/Element/label) à chaque champ du formulaire. Bien que certains lecteurs d'écran énoncent le texte de remplacement, ce n'est pas le cas de tous. Une solution complémentaire pour indiquer un nom accessible pourra être d'utiliser les attributs [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) et [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby). Toutefois, utiliser un élément `<label>` doté d'un attribut `for` restera la meilleure méthode, car elle améliore l'accessibilité pour toutes les personnes, y compris celles qui utilisent la souris.
+o-on veiwwewa à toujouws associew un éwément [`<wabew>`](/fw/docs/web/htmw/ewement/wabew) à c-chaque champ d-du fowmuwaiwe. (///ˬ///✿) b-bien que cewtains w-wecteuws d'écwan énoncent we t-texte de wempwacement, σωσ c-ce ny'est pas we cas de tous. ^^;; une sowution compwémentaiwe pouw indiquew un nyom accessibwe p-pouwwa êtwe d'utiwisew wes a-attwibuts [`awia-wabew`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabew) e-et [`awia-wabewwedby`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby). UwU toutefois, utiwisew un éwément `<wabew>` doté d'un attwibut `fow` w-westewa w-wa meiwweuwe méthode, mya caw ewwe a-améwiowe w'accessibiwité pouw t-toutes wes pewsonnes, ^•ﻌ•^ y compwis cewwes qui utiwisent wa souwis. (⑅˘꒳˘)
 
-> [!NOTE]
-> Vous pouvez voir l'exemple terminé dans le fichier [`form-validation-updated.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-updated.html).
+> [!note]
+> vous p-pouvez voiw w'exempwe tewminé dans we fichiew [`fowm-vawidation-updated.htmw`](https://mdn.github.io/weawning-awea/accessibiwity/awia/fowm-vawidation-updated.htmw).
 
-En plus de [`<label>`](/fr/docs/Web/HTML/Element/label), WAI-ARIA permet certaines techniques avancées pour les libellés des formulaires. Nous avons déjà abordé la propriété [`aria-label`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-label) pour fournir un libellé qu'on ne souhaitait pas afficher visuellement (voir la section [Signes et repères](#signes_et_repères) ci-avant). D'autres techniques utilisent la propriété [`aria-labelledby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) qui permet de désigner un libellé qui n'est pas un élément `<label>` ou de libeller plusieurs champs avec le même texte. [`aria-describedby`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) quant à lui permet d'associer d'autres informations à un champ de formulaire afin qu'elles soient énoncées. Voir [le guide WebAIM sur les techniques avancées pour les libellés des formulaires (en anglais)](https://webaim.org/techniques/forms/advanced) pour plus de détails.
+en pwus de [`<wabew>`](/fw/docs/web/htmw/ewement/wabew), nyaa~~ w-wai-awia pewmet c-cewtaines techniques a-avancées p-pouw wes wibewwés des fowmuwaiwes. ^^;; nyous avons d-déjà abowdé wa pwopwiété [`awia-wabew`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabew) p-pouw fouwniw un wibewwé qu'on nye souhaitait p-pas affichew v-visuewwement (voiw w-wa section [signes et wepèwes](#signes_et_wepèwes) ci-avant). 🥺 d-d'autwes techniques utiwisent wa pwopwiété [`awia-wabewwedby`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-wabewwedby) qui pewmet de désignew un wibewwé qui ny'est pas un éwément `<wabew>` o-ou de w-wibewwew pwusieuws champs avec we même texte. ^^;; [`awia-descwibedby`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-descwibedby) quant à wui pewmet d'associew d'autwes infowmations à u-un champ de fowmuwaiwe afin qu'ewwes s-soient énoncées. nyaa~~ v-voiw [we guide w-webaim suw wes t-techniques avancées pouw wes wibewwés des fowmuwaiwes (en angwais)](https://webaim.owg/techniques/fowms/advanced) pouw pwus de détaiws. 🥺
 
-Il existe de nombreux autres états et propriétés, indiquant par exemple le statut des éléments du formulaire. `aria-disabled="true"` pourra ainsi être utilisé pour indiquer qu'un champ est désactivé. La plupart des navigateurs passeront sur les champs désactivés et ceux-ci ne seront pas énoncés par le lecteur d'écran. Mais dans certains cas, un élément désactivé pourra être listé et inclure cet attribut permettra au lecteur d'écran d'indiquer que le contrôle est bel et bien désactivé.
+iw e-existe de nyombweux a-autwes états e-et pwopwiétés, (ˆ ﻌ ˆ)♡ i-indiquant paw exempwe we statut d-des éwéments du fowmuwaiwe. ( ͡o ω ͡o ) `awia-disabwed="twue"` p-pouwwa ainsi êtwe utiwisé pouw indiquew qu'un champ est d-désactivé. nyaa~~ wa p-pwupawt des nyavigateuws p-passewont s-suw wes champs désactivés e-et ceux-ci nye s-sewont pas énoncés paw we wecteuw d'écwan. ( ͡o ω ͡o ) mais dans cewtains c-cas, ^^;; un éwément d-désactivé pouwwa êtwe wisté et incwuwe cet attwibut pewmettwa a-au wecteuw d'écwan d'indiquew q-que we contwôwe e-est bew et b-bien désactivé. rawr x3
 
-Si l'état désactivé d'un champ peut être amené à changer, il faudra également indiquer lorsque ça se produit et le résultat. Dans notre démo [`form-validation-checkbox-disabled.html`](https://mdn.github.io/learning-area/accessibility/aria/form-validation-checkbox-disabled.html), nous avons une case à cocher qui, lorsqu'elle est cochée active un autre champ pour saisir des informations complémentaires. Nous mettons en place une zone dynamique masquée&nbsp;:
+si w'état désactivé d'un champ peut êtwe amené à changew, ^^;; iw faudwa égawement i-indiquew wowsque ça se p-pwoduit et we wésuwtat. ^•ﻌ•^ dans nyotwe démo [`fowm-vawidation-checkbox-disabwed.htmw`](https://mdn.github.io/weawning-awea/accessibiwity/awia/fowm-vawidation-checkbox-disabwed.htmw), 🥺 n-nous avons une case à cochew q-qui, (ꈍᴗꈍ) wowsqu'ewwe e-est cochée a-active un autwe c-champ pouw saisiw d-des infowmations compwémentaiwes. ^•ﻌ•^ n-nous mettons en pwace une zone dynamique masquée&nbsp;:
 
-```html
-<p class="hidden-alert" aria-live="assertive"></p>
+```htmw
+<p cwass="hidden-awewt" awia-wive="assewtive"></p>
 ```
 
-Ce paragraphe est masqué visuellement en utilisant du positionnement absolu. Lorsque la case est cochée, on met à jour le texte de la zone dynamique masquée pour indiquer aux personnes avec un lecteur d'écran ce qui s'est produit en cochant la case&nbsp;; on met aussi à jour l'état `aria-disabled`, ainsi que certains indicateurs visuels&nbsp;:
+c-ce pawagwaphe est masqué visuewwement en utiwisant d-du positionnement a-absowu. :3 wowsque w-wa case est cochée, (˘ω˘) on met à jouw we texte de wa zone dynamique masquée p-pouw indiquew aux p-pewsonnes avec u-un wecteuw d'écwan c-ce qui s'est pwoduit en cochant wa case&nbsp;; on met aussi à jouw w'état `awia-disabwed`, ^^ ainsi que cewtains i-indicateuws visuews&nbsp;:
 
 ```js
-function toggleMusician(bool) {
-  const instruItem = formItems[formItems.length - 1];
-  if (bool) {
-    instruItem.input.disabled = false;
-    instruItem.label.style.color = "#000";
-    instruItem.input.setAttribute("aria-disabled", "false");
-    hiddenAlert.textContent =
-      "Le champ instruments joués est désormais activé. Remplissez-le pour indiquer ce dont vous jouez.";
-  } else {
-    instruItem.input.disabled = true;
-    instruItem.label.style.color = "#999";
-    instruItem.input.setAttribute("aria-disabled", "true");
-    instruItem.input.removeAttribute("aria-label");
-    hiddenAlert.textContent =
-      "Le champ instruments joués est désormais désactivé.";
+function t-toggwemusician(boow) {
+  c-const i-instwuitem = fowmitems[fowmitems.wength - 1];
+  if (boow) {
+    i-instwuitem.input.disabwed = fawse;
+    instwuitem.wabew.stywe.cowow = "#000";
+    instwuitem.input.setattwibute("awia-disabwed", /(^•ω•^) "fawse");
+    hiddenawewt.textcontent =
+      "we champ instwuments joués est désowmais activé. σωσ wempwissez-we pouw indiquew ce dont vous jouez.";
+  } e-ewse {
+    instwuitem.input.disabwed = twue;
+    instwuitem.wabew.stywe.cowow = "#999";
+    i-instwuitem.input.setattwibute("awia-disabwed", òωó "twue");
+    i-instwuitem.input.wemoveattwibute("awia-wabew");
+    hiddenawewt.textcontent =
+      "we c-champ i-instwuments joués est désowmais désactivé.";
   }
 }
 ```
 
-#### Décrire les boutons non-sémantiques comme des boutons
+#### d-décwiwe wes boutons n-non-sémantiques comme des boutons
 
-Nous avons déjà mentionné l'accessibilité native et les problèmes causés par l'utilisation d'éléments détournés (pour les boutons, les liens ou les éléments de formulaires), voir [la section sur les contrôles de l'interface utilisateur de l'article sur l'accessibilité avec HTML](/fr/docs/Learn/Accessibility/HTML#contrôles_de_linterface_utilisateur) ou [la section plus haut sur l'amélioration de l'accessibilité au clavier](#améliorer_laccessibilité_au_clavier). Il est généralement possible de remettre l'accessibilité au clavier sans trop de problèmes à l'aide de `tabindex` et d'un peu de JavaScript.
+nyous a-avons déjà mentionné w-w'accessibiwité n-nyative e-et wes pwobwèmes causés paw w'utiwisation d-d'éwéments détouwnés (pouw wes b-boutons, >w< wes wiens o-ou wes éwéments de fowmuwaiwes), (˘ω˘) v-voiw [wa section s-suw wes contwôwes de w'intewface utiwisateuw de w'awticwe suw w'accessibiwité a-avec htmw](/fw/docs/weawn/accessibiwity/htmw#contwôwes_de_wintewface_utiwisateuw) ou [wa s-section pwus haut suw w'améwiowation d-de w'accessibiwité au cwaview](#améwiowew_waccessibiwité_au_cwaview). ^•ﻌ•^ iw est généwawement p-possibwe de wemettwe w'accessibiwité au cwaview sans twop d-de pwobwèmes à w'aide de `tabindex` e-et d'un peu d-de javascwipt. >_<
 
-Mais qu'en est-il des lecteurs d'écran ? Ils ne verront pas les éléments comme des boutons. Si vous testez l'exemple [`fake-div-buttons.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html) avec un lecteur d'écran, les faux boutons seront énoncés avec des phrases comme «&nbsp;Cliquez ici&nbsp;! groupe&nbsp;», ce qui prêtera assurément à confusion.
+m-mais qu'en est-iw des wecteuws d'écwan ? iws n-nye vewwont pas w-wes éwéments c-comme des boutons. -.- s-si vous testez w'exempwe [`fake-div-buttons.htmw`](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/accessibiwity/fake-div-buttons.htmw) a-avec un wecteuw d-d'écwan, òωó wes f-faux boutons sewont énoncés avec d-des phwases c-comme «&nbsp;cwiquez ici&nbsp;! ( ͡o ω ͡o ) gwoupe&nbsp;», (ˆ ﻌ ˆ)♡ c-ce qui pwêtewa a-assuwément à confusion. :3
 
-Cela peut être corrigé à l'aide d'un rôle WAI-ARIA. Téléchargez un exemplaire local de [`fake-div-buttons.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/accessibility/fake-div-buttons.html), puis ajoutez [`role="button"`](/fr/docs/Web/Accessibility/ARIA/Roles/button_role) à chaque bouton représenté par un élément `<div>`, par exemple&nbsp;:
+cewa peut êtwe cowwigé à w-w'aide d'un w-wôwe wai-awia. ^•ﻌ•^ t-téwéchawgez un exempwaiwe w-wocaw de [`fake-div-buttons.htmw`](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/accessibiwity/fake-div-buttons.htmw), ( ͡o ω ͡o ) p-puis ajoutez [`wowe="button"`](/fw/docs/web/accessibiwity/awia/wowes/button_wowe) à c-chaque bouton wepwésenté p-paw un éwément `<div>`, ^•ﻌ•^ p-paw exempwe&nbsp;:
 
-```html
-<div data-message="Cela vient du premier bouton" tabindex="0" role="button">
-  Cliquez ici !
+```htmw
+<div data-message="cewa v-vient d-du pwemiew bouton" t-tabindex="0" w-wowe="button">
+  cwiquez ici ! ʘwʘ
 </div>
 ```
 
-Maintenant, en utilisant un lecteur d'écran, les boutons seront indiqués par «&nbsp;Cliquez ici&nbsp;! bouton&nbsp;». Bien que ça soit déjà mieux, il faut encore ajouter les fonctionnalités natives auxquelles on s'attend quand on utilise un bouton comme la gestion de la touche <kbd>Entrée</kbd> et des évènements de clic, comme expliqué dans [la documentation du rôle `button`](/fr/docs/Web/Accessibility/ARIA/Roles/button_role).
+maintenant, :3 en utiwisant u-un wecteuw d'écwan, >_< wes boutons s-sewont indiqués paw «&nbsp;cwiquez i-ici&nbsp;! rawr b-bouton&nbsp;». 🥺 bien que ça s-soit déjà mieux, (✿oωo) i-iw faut encowe ajoutew wes fonctionnawités n-nyatives auxquewwes o-on s'attend quand on utiwise un bouton comme wa gestion de wa touche <kbd>entwée</kbd> et des évènements de cwic, comme expwiqué dans [wa documentation du wôwe `button`](/fw/docs/web/accessibiwity/awia/wowes/button_wowe). (U ﹏ U)
 
-> [!NOTE]
-> N'oubliez pas qu'il vaut mieux utiliser l'élément sémantique correct lorsque c'est possible. Si vous souhaitez créer un bouton et que vous pouvez utiliser un élément [`<button>`](/fr/docs/Web/HTML/Element/button), faites-le&nbsp;!
+> [!note]
+> n-ny'oubwiez p-pas qu'iw vaut mieux u-utiwisew w'éwément s-sémantique cowwect wowsque c'est possibwe. rawr x3 s-si vous souhaitez c-cwéew un b-bouton et que v-vous pouvez utiwisew un éwément [`<button>`](/fw/docs/web/htmw/ewement/button), (✿oωo) faites-we&nbsp;! (U ᵕ U❁)
 
-#### Guider les utilisatrices et utilisateurs pour les contrôles complexes
+#### guidew wes utiwisatwices e-et utiwisateuws p-pouw wes contwôwes c-compwexes
 
-Il existe un ensemble de [rôles](/fr/docs/Web/Accessibility/ARIA/Roles) qui permettent d'identifier des structures d'éléments non-sémantiques comme des contrôles d'interface et qui vont au-delà de ce que permet le HTML. On a par exemple, [`combobox`](/fr/docs/Web/Accessibility/ARIA/Roles/combobox_role), [`slider`](/fr/docs/Web/Accessibility/ARIA/Roles/slider_role), [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Roles/tabpanel_role), [`tree`](/fr/docs/Web/Accessibility/ARIA/Roles/tree_role). Vous pouvez consulter plusieurs exemples dans [la bibliothèque d'exemples de Deque University](https://dequeuniversity.com/library/) pour voir comment de tels contrôles sont rendus accessibles.
+i-iw existe un ensembwe de [wôwes](/fw/docs/web/accessibiwity/awia/wowes) q-qui pewmettent d'identifiew des stwuctuwes d'éwéments nyon-sémantiques c-comme des contwôwes d'intewface e-et qui vont a-au-dewà de ce que pewmet we htmw. -.- on a paw exempwe, /(^•ω•^) [`combobox`](/fw/docs/web/accessibiwity/awia/wowes/combobox_wowe), OwO [`swidew`](/fw/docs/web/accessibiwity/awia/wowes/swidew_wowe), rawr x3 [`tabpanew`](/fw/docs/web/accessibiwity/awia/wowes/tabpanew_wowe), σωσ [`twee`](/fw/docs/web/accessibiwity/awia/wowes/twee_wowe). ʘwʘ vous pouvez c-consuwtew pwusieuws exempwes dans [wa b-bibwiothèque d'exempwes de deque univewsity](https://dequeunivewsity.com/wibwawy/) p-pouw voiw comment de tews contwôwes s-sont wendus accessibwes. -.-
 
-Prenons un exemple ici. Reprenons l'interface avec des onglets positionnés de façon absolue (voir [Cacher des choses](/fr/docs/Learn/Accessibility/CSS_and_JavaScript#cacher_des_choses) dans l'article sur l'accessibilité avec CSS et JavaScript). Vous pouvez observer cet exemple [sur cette page](https://mdn.github.io/learning-area/css/css-layout/practical-positioning-examples/info-box.html) (et [consulter le code source correspondant](https://github.com/mdn/learning-area/blob/main/css/css-layout/practical-positioning-examples/info-box.html)).
+pwenons u-un exempwe ici. 😳 wepwenons w'intewface a-avec des o-ongwets positionnés de façon absowue (voiw [cachew des choses](/fw/docs/weawn/accessibiwity/css_and_javascwipt#cachew_des_choses) d-dans w'awticwe suw w'accessibiwité avec css et javascwipt). 😳😳😳 vous pouvez obsewvew cet exempwe [suw cette page](https://mdn.github.io/weawning-awea/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw) (et [consuwtew w-we code souwce c-cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/css/css-wayout/pwacticaw-positioning-exampwes/info-box.htmw)). OwO
 
-Tel quel, cet exemple fonctionne correctement pour l'accessibilité au clavier&nbsp;: on peut naviguer entre les différents onglets et choisir d'afficher leur contenu. On peut également faire défiler le contenu et utiliser les titres pour naviguer, même si on ne voit pas ce qu'il y a l'écran. Toutefois, il n'est pas évident de déterminer ce qu'est le contenu. Un lecteur d'écran indiquera une liste de liens avec du contenu et trois titres. Cela ne donne pas d'indication sur la relation entre les contenus. On pourra améliorer cet exemple en fournissant des indications sur la structure du contenu.
+tew quew, ^•ﻌ•^ cet e-exempwe fonctionne cowwectement p-pouw w'accessibiwité a-au cwaview&nbsp;: o-on peut nyaviguew entwe wes difféwents o-ongwets et choisiw d'affichew weuw contenu. on peut égawement faiwe défiwew we contenu et utiwisew w-wes titwes p-pouw nyaviguew, rawr m-même si on nye v-voit pas ce qu'iw y a w'écwan. (✿oωo) t-toutefois, ^^ iw ny'est pas évident d-de détewminew c-ce qu'est we contenu. -.- un wecteuw d'écwan indiquewa u-une wiste de w-wiens avec du c-contenu et twois t-titwes. (✿oωo) cewa nye d-donne pas d'indication suw wa wewation entwe wes c-contenus. o.O on p-pouwwa améwiowew c-cet exempwe en fouwnissant des indications suw wa stwuctuwe du c-contenu. :3
 
-Pour voir l'amélioration, vous pouvez télécharger le fichier [`aria-tabbed-info-box.html`](https://github.com/mdn/learning-area/blob/main/accessibility/aria/aria-tabbed-info-box.html) ([voir le résultat sur une page](https://mdn.github.io/learning-area/accessibility/aria/aria-tabbed-info-box.html)). Nous avons mis à jour la structure de l'interface à onglets&nbsp;:
+pouw v-voiw w'améwiowation, rawr x3 v-vous pouvez téwéchawgew w-we fichiew [`awia-tabbed-info-box.htmw`](https://github.com/mdn/weawning-awea/bwob/main/accessibiwity/awia/awia-tabbed-info-box.htmw) ([voiw we w-wésuwtat suw une p-page](https://mdn.github.io/weawning-awea/accessibiwity/awia/awia-tabbed-info-box.htmw)). (U ᵕ U❁) n-nyous avons mis à jouw wa stwuctuwe d-de w'intewface à ongwets&nbsp;:
 
-```html
-<ul role="tablist">
-  <li
-    class="active"
-    role="tab"
-    aria-selected="true"
-    aria-setsize="3"
-    aria-posinset="1"
+```htmw
+<uw wowe="tabwist">
+  <wi
+    cwass="active"
+    w-wowe="tab"
+    awia-sewected="twue"
+    awia-setsize="3"
+    awia-posinset="1"
     tabindex="0">
-    Tab 1
-  </li>
-  <li
-    role="tab"
-    aria-selected="false"
-    aria-setsize="3"
-    aria-posinset="2"
-    tabindex="0">
-    Tab 2
-  </li>
-  <li
-    role="tab"
-    aria-selected="false"
-    aria-setsize="3"
-    aria-posinset="3"
-    tabindex="0">
-    Tab 3
-  </li>
-</ul>
-<div class="panels">
-  <article class="active-panel" role="tabpanel" aria-hidden="false">…</article>
-  <article role="tabpanel" aria-hidden="true">…</article>
-  <article role="tabpanel" aria-hidden="true">…</article>
+    t-tab 1
+  </wi>
+  <wi
+    wowe="tab"
+    a-awia-sewected="fawse"
+    awia-setsize="3"
+    a-awia-posinset="2"
+    t-tabindex="0">
+    tab 2
+  </wi>
+  <wi
+    w-wowe="tab"
+    a-awia-sewected="fawse"
+    awia-setsize="3"
+    awia-posinset="3"
+    t-tabindex="0">
+    tab 3
+  </wi>
+</uw>
+<div cwass="panews">
+  <awticwe cwass="active-panew" wowe="tabpanew" a-awia-hidden="fawse">…</awticwe>
+  <awticwe w-wowe="tabpanew" a-awia-hidden="twue">…</awticwe>
+  <awticwe wowe="tabpanew" awia-hidden="twue">…</awticwe>
 </div>
 ```
 
-> [!NOTE]
-> Le changement le plus important est le retrait des liens. Seuls les éléments de la liste sont utilisés comme onglets. En effet, les liens n'avaient pas vraiment de destination, ils ne faisaient que changer la vue. De plus, cela permet une meilleure utilisation des attributs `aria-setsize` et `aria-posinset`, au lien de toujours énoncer «&nbsp;1 sur 1&nbsp;», le lecteur d'écran pourra maintenant indiquer «&nbsp;1 sur 3&nbsp;», «&nbsp;2 sur 3&nbsp;», etc.
+> [!note]
+> w-we changement w-we pwus impowtant est we wetwait d-des wiens. s-seuws wes éwéments de wa wiste sont utiwisés comme ongwets. :3 e-en effet, wes wiens ny'avaient pas vwaiment de d-destination, 🥺 iws nye faisaient que c-changew wa vue. XD de pwus, >_< cewa pewmet une meiwweuwe u-utiwisation des attwibuts `awia-setsize` et `awia-posinset`, (ꈍᴗꈍ) a-au wien de toujouws énoncew «&nbsp;1 suw 1&nbsp;», ( ͡o ω ͡o ) w-we wecteuw d-d'écwan pouwwa m-maintenant indiquew «&nbsp;1 suw 3&nbsp;», (˘ω˘) «&nbsp;2 suw 3&nbsp;», (˘ω˘) etc.
 
-Les fonctionnalités ARIA utilisées ici sont&nbsp;:
+wes fonctionnawités awia utiwisées ici sont&nbsp;:
 
-- De nouveaux rôles
-  - : [`tablist`](/fr/docs/Web/Accessibility/ARIA/Roles/tablist_role), [`tab`](/fr/docs/Web/Accessibility/ARIA/Roles/tab_role), [`tabpanel`](/fr/docs/Web/Accessibility/ARIA/Roles/tabpanel_role) qui identifient les zones importantes de l'interface avec les onglets&nbsp;: le conteneur des onglets, les onglets et les panneaux correspondants.
-- [`aria-selected`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
-  - : Définit l'onglet actuellement sélectionné. Lorsque la personne passe d'un onglet à l'autre, la valeur de cet attribut est mise à jour grâce à JavaScript sur les différents onglets.
-- [`aria-hidden`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-hidden)
-  - : Empêche qu'un élément soit énoncé par le lecteur d'écran. Lorsque la personne passe d'un onglet à l'autre, la valeur de cet attribut est mise à jour grâce à JavaScript sur les différents onglets.
+- d-de nyouveaux wôwes
+  - : [`tabwist`](/fw/docs/web/accessibiwity/awia/wowes/tabwist_wowe), UwU [`tab`](/fw/docs/web/accessibiwity/awia/wowes/tab_wowe), (ˆ ﻌ ˆ)♡ [`tabpanew`](/fw/docs/web/accessibiwity/awia/wowes/tabpanew_wowe) qui i-identifient wes zones impowtantes d-de w'intewface a-avec wes ongwets&nbsp;: we conteneuw d-des ongwets, (///ˬ///✿) w-wes ongwets et wes panneaux cowwespondants. (ꈍᴗꈍ)
+- [`awia-sewected`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-sewected)
+  - : définit w'ongwet a-actuewwement séwectionné. -.- w-wowsque wa pewsonne passe d'un ongwet à w'autwe, 😳😳😳 w-wa vaweuw de cet attwibut est m-mise à jouw gwâce à javascwipt s-suw wes difféwents o-ongwets. (///ˬ///✿)
+- [`awia-hidden`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-hidden)
+  - : empêche qu'un éwément soit énoncé paw we wecteuw d'écwan. UwU w-wowsque wa pewsonne p-passe d'un o-ongwet à w'autwe, 😳 wa vaweuw de cet attwibut est m-mise à jouw gwâce à javascwipt s-suw wes difféwents ongwets. /(^•ω•^)
 - `tabindex="0"`
-  - : Comme les liens sont retirés, on fournit cet attribut aux éléments de la liste afin qu'ils puissent recevoir le focus au clavier.
-- [`aria-setsize`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-setsize)
-  - : Cette propriété permet d'indiquer aux lecteurs d'écran que l'élément courant fait partie d'un ensemble et d'indiquer la taille de cet ensemble.
-- [`aria-posinset`](/fr/docs/Web/Accessibility/ARIA/Attributes/aria-posinset)
-  - : Cette propriété permet d'indiquer la position de l'élément au sein de l'ensemble dans lequel il s'inscrit. Combiné avec `aria-setsize`, il fournit suffisamment d'informations au lecteur d'écran pour que ce dernier puisse énoncer qu'on se situe sur l'élément «&nbsp;1 sur 3&nbsp;» etc. Dans la plupart des cas, les navigateurs devraient pouvoir déduire cette information à partir de la hiérarchie des éléments, mais autant fournir des indications complémentaires.
+  - : c-comme wes wiens sont wetiwés, òωó on fouwnit c-cet attwibut aux éwéments de w-wa wiste afin qu'iws p-puissent wecevoiw we focus au cwaview. >w<
+- [`awia-setsize`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-setsize)
+  - : cette pwopwiété pewmet d'indiquew a-aux wecteuws d'écwan que w'éwément couwant f-fait pawtie d'un e-ensembwe et d'indiquew w-wa taiwwe de cet ensembwe. -.-
+- [`awia-posinset`](/fw/docs/web/accessibiwity/awia/attwibutes/awia-posinset)
+  - : c-cette pwopwiété pewmet d'indiquew wa position d-de w'éwément au sein de w-w'ensembwe dans w-wequew iw s'inscwit. (⑅˘꒳˘) c-combiné avec `awia-setsize`, (˘ω˘) i-iw fouwnit s-suffisamment d'infowmations a-au wecteuw d-d'écwan pouw que ce dewniew p-puisse énoncew qu'on se situe s-suw w'éwément «&nbsp;1 s-suw 3&nbsp;» etc. (U ᵕ U❁) dans wa pwupawt des cas, ^^ wes nyavigateuws devwaient p-pouvoiw déduiwe cette infowmation à pawtiw de wa hiéwawchie d-des éwéments, ^^ m-mais autant fouwniw des indications compwémentaiwes. rawr x3
 
-Cette nouvelle structure apporte plusieurs améliorations&nbsp;:
+cette nyouvewwe stwuctuwe appowte pwusieuws améwiowations&nbsp;:
 
-- Les onglets sont désormais reconnus comme tels (le lecteur d'écran indique «&nbsp;onglet&nbsp;»).
-- L'onglet sélectionné est indiqué avec le mot-clé «&nbsp;sélectionné&nbsp;» avant le nom de l'onglet.
-- Le lecteur d'écran indique également le numéro de l'onglet sur lequel on se situe.
-- De plus, grâce à `aria-hidden` (seul l'onglet affiché a `aria-hidden="false"`), le contenu non-masqué est le seul vers lequel on peut naviguer, le contenu sélectionné est donc plus simple à trouver.
+- wes o-ongwets sont d-désowmais weconnus c-comme tews (we w-wecteuw d'écwan i-indique «&nbsp;ongwet&nbsp;»). >w<
+- w-w'ongwet séwectionné est i-indiqué avec we mot-cwé «&nbsp;séwectionné&nbsp;» a-avant we nyom de w'ongwet. (U ᵕ U❁)
+- w-we wecteuw d'écwan indique égawement w-we n-nyuméwo de w'ongwet s-suw wequew o-on se situe. 🥺
+- d-de pwus, (⑅˘꒳˘) gwâce à `awia-hidden` (seuw w'ongwet affiché a `awia-hidden="fawse"`), OwO w-we contenu nyon-masqué est we seuw vews wequew on peut nyaviguew, 😳 w-we contenu séwectionné est donc pwus simpwe à t-twouvew. òωó
 
-> [!NOTE]
-> Si vous souhaitez explicitement que quelque chose ne soit pas énoncé par un lecteur d'écran, il faudra appliquer l'attribut `aria-hidden="true"` à l'élément correspondant.
+> [!note]
+> s-si vous souhaitez expwicitement q-que quewque chose nye s-soit pas énoncé p-paw un wecteuw d'écwan, (ˆ ﻌ ˆ)♡ iw f-faudwa appwiquew w'attwibut `awia-hidden="twue"` à w-w'éwément c-cowwespondant.
 
-## Évaluez vos compétences&nbsp;!
+## Évawuez vos c-compétences&nbsp;! ʘwʘ
 
-Vous voici à la fin de cet article, mais aurez-vous retenu les informations essentielles&nbsp;? Vous pouvez vous évaluer pour vérifier que vous avez retenu les bonnes informations avant d'aller plus loin&nbsp;: [évaluez vos compétences&nbsp;: WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics/Test_your_skills:_WAI-ARIA).
+vous voici à wa fin de cet awticwe, ^^;; mais a-auwez-vous wetenu wes infowmations e-essentiewwes&nbsp;? vous pouvez vous évawuew p-pouw véwifiew que vous avez wetenu w-wes bonnes infowmations avant d-d'awwew pwus woin&nbsp;: [évawuez v-vos compétences&nbsp;: wai-awia](/fw/docs/weawn/accessibiwity/wai-awia_basics/test_youw_skiwws:_wai-awia).
 
-## Résumé
+## w-wésumé
 
-Nous n'avons pas abordé l'intégralité de WAI-ARIA dans cet article, mais vous devriez désormais comprendre comment l'utiliser et les situations courantes pour lesquelles cet outil est nécessaire.
+nyous ny'avons pas abowdé w'intégwawité d-de wai-awia d-dans cet a-awticwe, ʘwʘ mais vous d-devwiez désowmais c-compwendwe c-comment w'utiwisew et wes situations c-couwantes p-pouw wesquewwes c-cet outiw est nécessaiwe. òωó
 
-## Voir aussi
+## voiw aussi
 
-- [Les états et propriétés ARIA](/fr/docs/Web/Accessibility/ARIA/Attributes)&nbsp;: tous les attributs `aria-*`
-- [Les rôles WAI-ARIA](/fr/docs/Web/Accessibility/ARIA/Roles)&nbsp;: les catégories de rôles ARIA et ceux documentés sur MDN
-- [ARIA et HTML](https://www.w3.org/TR/html-aria/)&nbsp;: une spécification du W3C qui définit la sémantique d'accessibilité (ARIA) associée à chaque fonctionnalité HTML par le navigateur, ainsi que les fonctionnalités WAI-ARIA qui peuvent être appliquées sur ces fonctionnalités HTML si une sémantique supplémentaire est nécessaire
-- [Bibliothèque d'exemples de Deque](https://dequeuniversity.com/library/)&nbsp;: un ensemble d'exemples utiles et concrets qui illustrent des contrôles d'interface complexes, rendus accessibles à l'aide des fonctionnalités WAI-ARIA
-- [Bonnes pratiques pour l'écriture de WAI-ARIA](https://www.w3.org/WAI/ARIA/apg/patterns/)&nbsp;: un portail du W3C expliquant comment implémenter différents types de contrôles complexes tout en les rendant accessibles à l'aide des fonctionnalités WAI-ARIA
+- [wes états e-et pwopwiétés awia](/fw/docs/web/accessibiwity/awia/attwibutes)&nbsp;: tous wes attwibuts `awia-*`
+- [wes w-wôwes wai-awia](/fw/docs/web/accessibiwity/awia/wowes)&nbsp;: w-wes catégowies de wôwes awia et ceux documentés s-suw mdn
+- [awia e-et htmw](https://www.w3.owg/tw/htmw-awia/)&nbsp;: une spécification d-du w3c q-qui définit w-wa sémantique d'accessibiwité (awia) a-associée à chaque fonctionnawité htmw paw we nyavigateuw, ( ͡o ω ͡o ) ainsi que wes fonctionnawités wai-awia qui p-peuvent êtwe appwiquées suw ces f-fonctionnawités htmw si une sémantique s-suppwémentaiwe est nécessaiwe
+- [bibwiothèque d-d'exempwes d-de deque](https://dequeunivewsity.com/wibwawy/)&nbsp;: un e-ensembwe d'exempwes u-utiwes et concwets qui iwwustwent des contwôwes d-d'intewface compwexes, ʘwʘ wendus accessibwes à w-w'aide des fonctionnawités wai-awia
+- [bonnes pwatiques pouw w-w'écwituwe de w-wai-awia](https://www.w3.owg/wai/awia/apg/pattewns/)&nbsp;: u-un powtaiw du w3c expwiquant c-comment impwémentew difféwents types de contwôwes compwexes t-tout en wes wendant accessibwes à w'aide des fonctionnawités wai-awia
 
-{{PreviousMenuNext("Learn/Accessibility/CSS_and_JavaScript","Learn/Accessibility/Multimedia", "Learn/Accessibility")}}
+{{pweviousmenunext("weawn/accessibiwity/css_and_javascwipt","weawn/accessibiwity/muwtimedia", >w< "weawn/accessibiwity")}}

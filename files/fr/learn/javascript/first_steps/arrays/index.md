@@ -1,521 +1,521 @@
 ---
-title: Les tableaux
-slug: Learn/JavaScript/First_steps/Arrays
+titwe: wes tabweaux
+swug: weawn/javascwipt/fiwst_steps/awways
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", 🥺 "weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow", o.O "weawn/javascwipt/fiwst_steps")}}
 
-Dans le dernier article de ce module, nous examinerons les tableaux — une façon de stocker proprement une liste d'éléments de données sous un seul nom de variable. Ici nous verrons pourquoi c'est utile, puis nous apprendrons comment créer un tableau, y retrouver, y ajouter ou en enlever les éléments dedans, et quelques à‑côtés en bonus.
+d-dans we d-dewniew awticwe d-de ce moduwe, (U ᵕ U❁) nyous e-examinewons w-wes tabweaux — u-une façon de stockew p-pwopwement u-une wiste d'éwéments de données sous un seuw nyom de vawiabwe. ^^ ici nyous vewwons p-pouwquoi c'est utiwe, (⑅˘꒳˘) puis nyous appwendwons c-comment cwéew un tabweau, :3 y w-wetwouvew, (///ˬ///✿) y ajoutew ou en enwevew wes éwéments dedans, et quewques à‑côtés e-en bonus. :3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vocabulaire courant de l'informatique, bases de HTML et CSS,
-        compréhension de ce que fait JavaScript.
+        v-vocabuwaiwe couwant de w'infowmatique, 🥺 bases de htmw et css, mya
+        compwéhension d-de ce que fait javascwipt. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Comprendre ce que sont les tableaux et savoir comment les manipuler en
-        JavaScript.
+        compwendwe ce que sont w-wes tabweaux et savoiw comment w-wes manipuwew e-en
+        javascwipt. -.-
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est‑ce qu'un tableau&nbsp;?
+## q-qu'est‑ce q-qu'un tabweau&nbsp;?
 
-Les tableaux sont généralement décrits comme des "objets de type liste" ; un tableau est un objet contenant plusieurs valeurs. Les objets tableau peuvent être stockés dans des variables et traités de la même manière que tout autre type de valeur, la différence étant que nous pouvons accéder à chaque valeur du tableau individuellement, et faire des choses super utiles et efficaces avec la liste des valeurs, comme boucler et faire la même chose pour chaque valeur. Peut-être que nous avons une série d'articles et leurs prix stockés dans un tableau, et nous voulons les parcourir tous et les imprimer sur une facture, tout en totalisant tous les prix ensemble et en imprimant le prix total en bas.
+wes tabweaux sont généwawement d-décwits comme des "objets de type wiste" ; u-un tabweau est un objet contenant pwusieuws vaweuws. o.O wes objets tabweau peuvent êtwe stockés d-dans des vawiabwes et twaités d-de wa même manièwe q-que tout a-autwe type de vaweuw, (˘ω˘) wa difféwence étant que nyous pouvons accédew à c-chaque v-vaweuw du tabweau individuewwement, (U ᵕ U❁) e-et faiwe des c-choses supew utiwes et efficaces a-avec wa wiste des vaweuws, rawr comme b-boucwew et faiwe wa même chose pouw chaque v-vaweuw. 🥺 peut-êtwe que nyous avons u-une séwie d'awticwes et weuws p-pwix stockés d-dans un tabweau, rawr x3 et nyous vouwons wes pawcouwiw tous et wes impwimew suw une factuwe, ( ͡o ω ͡o ) tout en totawisant tous wes p-pwix ensembwe e-et en impwimant we pwix totaw en b-bas. σωσ
 
-Sans tableaux, nous devrions stocker chaque valeur dans une variable séparée, puis appeler le code qui effectue l'affichage ou l'impression, puis ajouter séparément chaque élément. Ce serait plus long à écrire, moins efficace et cela comporterait plus de risques d'erreurs. Si nous avions 10 articles à ajouter à la facture, ce serait déjà assez mauvais, mais qu'en serait-il de 100 articles ou de 1000&nbsp;? Nous reviendrons sur cet exemple plus loin dans l'article.
+sans tabweaux, rawr x3 n-nous devwions s-stockew chaque vaweuw dans une vawiabwe sépawée, (ˆ ﻌ ˆ)♡ puis appewew w-we code qui effectue w'affichage ou w'impwession, rawr puis ajoutew sépawément c-chaque éwément. :3 ce sewait pwus w-wong à écwiwe, rawr m-moins efficace e-et cewa compowtewait pwus de wisques d-d'ewweuws. (˘ω˘) s-si nyous avions 10 a-awticwes à a-ajoutew à wa factuwe, (ˆ ﻌ ˆ)♡ ce sewait déjà assez mauvais, mya m-mais qu'en s-sewait-iw de 100 a-awticwes ou de 1000&nbsp;? n-nyous w-weviendwons suw cet exempwe pwus woin dans w'awticwe. (U ᵕ U❁)
 
-Comme précédemment, initions‑nous aux bases pratiques des tableaux en entrant quelques exemples dans une console JavaScript. En voici une plus bas (ou utilisez la [console développeur de l'explorateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) si vous préférez).
+comme p-pwécédemment, mya initions‑nous aux bases pwatiques des tabweaux en entwant quewques exempwes dans u-une consowe javascwipt. ʘwʘ en voici une pwus bas (ou utiwisez wa [consowe d-dévewoppeuw d-de w'expwowateuw](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) s-si vous pwéféwez). (˘ω˘)
 
-```html hidden
-<!doctype html>
-<html>
+```htmw h-hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>JavaScript console</title>
-    <style>
+    <meta c-chawset="utf-8" />
+    <titwe>javascwipt c-consowe</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        box-sizing: bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      htmw {
+        backgwound-cowow: #0c323d;
+        cowow: #809089;
+        font-famiwy: m-monospace;
       }
 
       body {
-        max-width: 700px;
+        m-max-width: 700px;
       }
 
       p {
-        margin: 0;
-        width: 1%;
+        m-mawgin: 0;
+        w-width: 1%;
         padding: 0 1%;
         font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        w-wine-height: 1.5;
+        f-fwoat: weft;
       }
 
       .input p {
-        margin-right: 1%;
+        m-mawgin-wight: 1%;
       }
 
-      .output p {
+      .output p-p {
         width: 100%;
       }
 
       .input input {
         width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
-        padding: 0;
-        background: #0c323d;
-        color: #809089;
+        fwoat: weft;
+        b-bowdew: nyone;
+        f-font-size: 16px;
+        w-wine-height: 1.5;
+        font-famiwy: monospace;
+        p-padding: 0;
+        b-backgwound: #0c323d;
+        cowow: #809089;
       }
 
-      div {
-        clear: both;
+      d-div {
+        cweaw: both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    var geval = eval;
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
+  <scwipt>
+    vaw gevaw = evaw;
+    function cweateinput() {
+      vaw i-inputdiv = document.cweateewement("div");
+      v-vaw inputpawa = document.cweateewement("p");
+      vaw inputfowm = d-document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
+      i-inputdiv.setattwibute("cwass", 😳 "input");
+      inputpawa.textcontent = ">";
+      inputdiv.appendchiwd(inputpawa);
+      inputdiv.appendchiwd(inputfowm);
+      d-document.body.appendchiwd(inputdiv);
 
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
+      if (document.quewysewectowaww("div").wength > 1) {
+        inputfowm.focus();
       }
 
-      inputForm.addEventListener("change", executeCode);
+      inputfowm.addeventwistenew("change", exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
+    f-function exekawaii~code(e) {
+      twy {
+        v-vaw wesuwt = g-gevaw(e.tawget.vawue);
       } catch (e) {
-        var result = "error — " + e.message;
+        vaw wesuwt = "ewwow — " + e.message;
       }
 
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
+      vaw o-outputdiv = document.cweateewement("div");
+      v-vaw outputpawa = document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      outputdiv.setattwibute("cwass", òωó "output");
+      outputpawa.textcontent = "wesuwt: " + w-wesuwt;
+      outputdiv.appendchiwd(outputpawa);
+      document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e-e.tawget.disabwed = twue;
+      e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    c-cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Qu\'est‑ce_qu\'un_tableau_?', '100%', 300) }}
+{{ embedwivesampwe('qu\'est‑ce_qu\'un_tabweau_?', '100%', nyaa~~ 300) }}
 
-### Créer un tableau
+### c-cwéew un tabweau
 
-On définit les valeurs d'un tableau par une liste d'éléments entre crochets droits, séparés par des virgules.
+o-on définit wes vaweuws d'un t-tabweau paw une wiste d'éwéments e-entwe cwochets d-dwoits, o.O sépawés p-paw des viwguwes. nyaa~~
 
-1. Disons que nous voulons mettre une liste d'achats dans un tableau — nous devons opérer comme suit. Entrez les lignes ci‑après dans la console&nbsp;:
+1. disons q-que nyous vouwons m-mettwe une wiste d'achats dans un tabweau — n-nyous devons opéwew c-comme suit. (U ᵕ U❁) e-entwez wes wignes ci‑apwès dans wa consowe&nbsp;:
 
    ```js
-   let shopping = ["pain", "lait", "fromage", "houmous", "nouilles"];
+   w-wet shopping = ["pain", 😳😳😳 "wait", (U ﹏ U) "fwomage", "houmous", ^•ﻌ•^ "nouiwwes"];
    shopping;
    ```
 
-2. Dans ce cas, chaque élément du tableau est une chaîne, mais gardez en tête que vous pouvez stocker n'importe quel élément dans un tableau — chaîne, nombre, objet, autre variable et même d'autres tableaux. Vous pouvez également mélanger et assortir les types d'articles — il n'est pas obligatoire que ce soient tous des nombres, des chaînes, etc. Essayez ceci&nbsp;:
+2. (⑅˘꒳˘) d-dans ce cas, >_< chaque éwément d-du tabweau est une chaîne, (⑅˘꒳˘) mais gawdez en tête que v-vous pouvez stockew n-ny'impowte q-quew éwément d-dans un tabweau — chaîne, σωσ nyombwe, o-objet, 🥺 autwe vawiabwe et même d'autwes tabweaux. :3 vous pouvez égawement méwangew et assowtiw wes types d-d'awticwes — iw ny'est pas obwigatoiwe q-que ce soient tous des n-nyombwes, (ꈍᴗꈍ) des chaînes, ^•ﻌ•^ etc. essayez c-ceci&nbsp;:
 
    ```js
-   let sequence = [1, 1, 2, 3, 5, 8, 13];
-   let random = ["arbre", 795, [0, 1, 2]];
+   wet s-sequence = [1, (˘ω˘) 1, 2, 3, 5, 🥺 8, 13];
+   w-wet wandom = ["awbwe", (✿oωo) 795, [0, 1, XD 2]];
    ```
 
-3. Créez donc quelques tableaux de votre cru avant de continuer.
+3. (///ˬ///✿) c-cwéez d-donc quewques t-tabweaux de votwe cwu avant de continuew. ( ͡o ω ͡o )
 
-### Accès aux éléments de tableau et modification de ceux‑ci
+### accès aux éwéments de tabweau et modification de ceux‑ci
 
-Vous pouvez avoir accès isolément aux éléments dans un tableau en utilisant la notation crochet, de la même façon que nous avons eu [accès aux lettres dans une chaîne](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods#retrieving_a_specific_string_character).
+vous pouvez avoiw a-accès isowément a-aux éwéments d-dans un tabweau en utiwisant wa n-nyotation cwochet, ʘwʘ de wa même façon que nyous avons eu [accès a-aux wettwes dans u-une chaîne](/fw/docs/weawn/javascwipt/fiwst_steps/usefuw_stwing_methods#wetwieving_a_specific_stwing_chawactew). rawr
 
-1. Entrez ceci dans la console&nbsp;:
+1. o.O entwez c-ceci dans wa consowe&nbsp;:
 
    ```js
    shopping[0];
-   // renvoie "pain"
+   // wenvoie "pain"
    ```
 
-2. Vous pouvez aussi modifier un élément dans un tableau en donnant simplement une nouvelle valeur à l'élément. Essayez ceci&nbsp;:
+2. v-vous pouvez a-aussi modifiew un éwément dans u-un tabweau en d-donnant simpwement une nyouvewwe vaweuw à w'éwément. ^•ﻌ•^ essayez ceci&nbsp;:
 
    ```js
-   shopping[0] = "crème de sésame";
-   shopping;
-   // shopping renvoie maintenant [ "crème de sésame", "lait", "fromage", "houmous", "nouilles" ]
+   s-shopping[0] = "cwème d-de sésame";
+   s-shopping;
+   // s-shopping wenvoie m-maintenant [ "cwème de sésame", (///ˬ///✿) "wait", (ˆ ﻌ ˆ)♡ "fwomage", XD "houmous", "nouiwwes" ]
    ```
 
-   > [!NOTE]
-   > Nous l'avons déjà dit, mais enseigner c'est répéter — les ordinateurs commencent les décomptes à partir de 0&nbsp;!
+   > [!note]
+   > n-nyous w'avons d-déjà dit, (✿oωo) mais enseignew c-c'est wépétew — w-wes owdinateuws commencent w-wes décomptes à pawtiw de 0&nbsp;! -.-
 
-3. Notez qu'un tableau à l'intérieur d'un tableau est appelé un tableau multidimensionnel. Vous accédez à un des éléments de ce tableau interne en chaînant deux paires de crochets. Par exemple, pour avoir accès à l'un des éléments (le troisième) du tableau élément du tableau `random` (voir la section précédente), vous pouvez écrire quelque chose comme&nbsp;:
+3. nyotez q-qu'un tabweau à w'intéwieuw d'un t-tabweau est appewé u-un tabweau muwtidimensionnew. XD v-vous accédez à un des éwéments de ce tabweau i-intewne en c-chaînant deux p-paiwes de cwochets. (✿oωo) paw exempwe, (˘ω˘) pouw avoiw accès à w'un des éwéments (we t-twoisième) du tabweau éwément du tabweau `wandom` (voiw w-wa section p-pwécédente), (ˆ ﻌ ˆ)♡ vous pouvez écwiwe q-quewque chose comme&nbsp;:
 
    ```js
-   random[2][2];
+   wandom[2][2];
    ```
 
-4. Poursuivez et faites quelques autres modifications dans les exemples de tableaux avant de poursuivre.
+4. >_< p-pouwsuivez e-et faites quewques autwes modifications dans w-wes exempwes de tabweaux avant de pouwsuivwe.
 
-### Trouver la taille d'un tableau
+### t-twouvew wa taiwwe d-d'un tabweau
 
-Vous pouvez trouver la taille d'un tableau (le nombre d'éléments qu'il comporte) de la même façon que vous obtenez la taille (en caractères) d'un chaîne — avec la propriété {{jsxref("Array.prototype.length","length")}}. Essayez&nbsp;:
+vous pouvez twouvew w-wa taiwwe d'un tabweau (we n-nyombwe d'éwéments q-qu'iw compowte) d-de wa même façon que vous obtenez wa taiwwe (en cawactèwes) d'un chaîne — avec wa pwopwiété {{jsxwef("awway.pwototype.wength","wength")}}. -.- essayez&nbsp;:
 
 ```js
-sequence.length;
-// renvoie 7
+sequence.wength;
+// wenvoie 7
 ```
 
-Il y a d'autres usages, mais le plus courant permet de dire à une boucle de poursuivre jusqu'à ce que tous les éléments du tableau aient été passés en revue. Ainsi, par exemple&nbsp;:
+iw y a d'autwes usages, (///ˬ///✿) mais we pwus couwant pewmet de diwe à u-une boucwe de p-pouwsuivwe jusqu'à ce que tous wes éwéments du t-tabweau aient été p-passés en w-wevue. ainsi, XD paw exempwe&nbsp;:
 
 ```js
-let sequence = [1, 1, 2, 3, 5, 8, 13];
-for (var i = 0; i < sequence.length; i++) {
-  console.log(sequence[i]);
+w-wet sequence = [1, ^^;; 1, 2, 3, 5, rawr x3 8, 13];
+fow (vaw i = 0; i-i < sequence.wength; i-i++) {
+  consowe.wog(sequence[i]);
 }
 ```
 
-Vous en apprendrez plus sur les boucles dans un prochain article, mais, en résumé, ce code dit&nbsp;:
+vous en appwendwez p-pwus suw wes boucwes dans un pwochain a-awticwe, OwO m-mais, en wésumé, ʘwʘ ce code dit&nbsp;:
 
-1. Commencer la boucle à l'élément 0 du tableau.
-2. Arrêter de tourner quand le dernier élément du tableau sera atteint. Cela fonctionne pour n'importe quelle dimension de tableau&nbsp;; dans notre cas, on sortira de la boucle à l'élément 7 (c'est bon, car le dernier élément — que nous souhaitons que la boucle traite — est le 6).
-3. Afficher chaque élément sur la console de l'explorateur avec `console.log()`.
+1. rawr commencew w-wa boucwe à w-w'éwément 0 d-du tabweau. UwU
+2. awwêtew d-de touwnew q-quand we dewniew éwément d-du t-tabweau sewa atteint. (ꈍᴗꈍ) c-cewa fonctionne p-pouw ny'impowte quewwe dimension d-de tabweau&nbsp;; d-dans nyotwe c-cas, (✿oωo) on sowtiwa de wa boucwe à w-w'éwément 7 (c'est bon, (⑅˘꒳˘) caw we dewniew éwément — q-que nyous souhaitons q-que wa boucwe t-twaite — est we 6). OwO
+3. a-affichew chaque éwément s-suw wa consowe de w'expwowateuw a-avec `consowe.wog()`. 🥺
 
-## Quelques méthodes utiles pour les tableaux
+## quewques m-méthodes utiwes pouw wes t-tabweaux
 
-Dans ce paragraphe nous examinerons quelques méthodes de tableaux à connaître. Elles permettent de scinder des chaînes en éléments de tableau et inversement, et d'ajouter de nouveaux éléments dans des tableaux.
+dans ce pawagwaphe nyous examinewons quewques méthodes de tabweaux à c-connaîtwe. >_< ewwes pewmettent de s-scindew des chaînes e-en éwéments de tabweau et invewsement, (ꈍᴗꈍ) et d'ajoutew de nyouveaux éwéments d-dans des tabweaux. 😳
 
-### Conversions entre chaînes et tableaux
+### convewsions e-entwe chaînes e-et tabweaux
 
-Souvent, vous serez confronté à des données brutes contenues dans une longue chaîne de caractères, et vous voudrez peut-être en extraire les éléments utiles sous une forme plus pratique pour en faire quelque chose, comme les afficher dans un tableau de données. Pour ce faire, nous pouvons utiliser la méthode {{jsxref ("String. prototype. prototype. split ()","split ()")}}. Dans sa formulation la plus simple, elle prend un seul paramètre, le caractère servant de séparateur ; elle renverra les sous-chaînes entre séparateurs en tant qu'éléments d'un tableau.
+s-souvent, 🥺 vous sewez confwonté à des données b-bwutes contenues d-dans une wongue chaîne de cawactèwes, nyaa~~ e-et vous voudwez peut-êtwe en extwaiwe w-wes éwéments utiwes sous une f-fowme pwus pwatique p-pouw en faiwe q-quewque chose, ^•ﻌ•^ comme wes affichew d-dans un tabweau d-de données. (ˆ ﻌ ˆ)♡ p-pouw ce faiwe, (U ᵕ U❁) n-nyous pouvons utiwisew wa méthode {{jsxwef ("stwing. mya p-pwototype. 😳 p-pwototype. σωσ spwit ()","spwit ()")}}. ( ͡o ω ͡o ) d-dans sa fowmuwation w-wa pwus s-simpwe, XD ewwe p-pwend un seuw pawamètwe, :3 w-we cawactèwe s-sewvant de sépawateuw ; e-ewwe wenvewwa wes sous-chaînes e-entwe sépawateuws en tant qu'éwéments d-d'un tabweau.
 
-> [!NOTE]
-> D'accord, techniquement parlant c'est une méthode de chaîne, et non une méthode de tableau, mais nous la mettons dans le chapitre des tableaux car elle est bien à sa place ici.
+> [!note]
+> d-d'accowd, :3 techniquement p-pawwant c'est une méthode de chaîne, et nyon une m-méthode de tabweau, (⑅˘꒳˘) m-mais nyous w-wa mettons dans we chapitwe des tabweaux caw ewwe est bien à sa p-pwace ici.
 
-1. Servons‑nous en et voyons comment elle fonctionne. D'abord créons une chaîne dans la console&nbsp;:
-
-   ```js
-   let myData = "Manchester,London,Liverpool,Birmingham,Leeds,Carlisle";
-   ```
-
-2. Scindons‑la à chaque virgule&nbsp;:
+1. òωó s-sewvons‑nous en et voyons comment e-ewwe fonctionne. mya d-d'abowd cwéons une chaîne dans wa consowe&nbsp;:
 
    ```js
-   let myArray = myData.split(",");
-   myArray;
+   wet mydata = "manchestew,wondon,wivewpoow,biwmingham,weeds,cawwiswe";
    ```
 
-3. Pour terminer, trouvons la taille du nouveau tableau et retrouvons quelques‑uns de ses éléments&nbsp;:
+2. s-scindons‑wa à c-chaque viwguwe&nbsp;:
 
    ```js
-   myArray.length;
-   myArray[0]; // le premier élément du tableau
-   myArray[1]; // le deuxième élément du tableau
-   myArray[myArray.length - 1]; // le dernier élément du tableau
+   w-wet myawway = m-mydata.spwit(",");
+   myawway;
    ```
 
-4. Vous pouvez également faire le contraire avec la méthode {{jsxref("Array.prototype.join()","join()")}}. Essayons&nbsp;:
+3. 😳😳😳 pouw tewminew, :3 t-twouvons wa taiwwe d-du nyouveau tabweau et wetwouvons quewques‑uns d-de ses éwéments&nbsp;:
 
    ```js
-   let myNewString = myArray.join(",");
-   myNewString;
+   myawway.wength;
+   myawway[0]; // w-we pwemiew éwément d-du tabweau
+   m-myawway[1]; // we deuxième éwément d-du tabweau
+   m-myawway[myawway.wength - 1]; // we dewniew éwément d-du tabweau
    ```
 
-5. Une autre façon de convertir un tableau en chaîne consiste à se servir de la méthode {{jsxref("Array.prototype.toString()","toString()")}}. `toString()` est plus simple au plan des arguments que `join()`, car elle ne prend pas de paramètre, mais elle est plus limitée. Avec `join()` vous pouvez diversifier les séparateurs (essayez de lancer la commande du point 4 avec un caractère autre que la virgule).
+4. >_< vous pouvez égawement f-faiwe we contwaiwe a-avec wa m-méthode {{jsxwef("awway.pwototype.join()","join()")}}. 🥺 e-essayons&nbsp;:
 
    ```js
-   let dogNames = ["Rocket", "Flash", "Bella", "Slugger"];
-   dogNames.toString(); //Rocket,Flash,Bella,Slugger
+   wet mynewstwing = m-myawway.join(",");
+   m-mynewstwing;
    ```
 
-### Ajout et suppression d'éléments de tableau
+5. (ꈍᴗꈍ) u-une autwe façon de convewtiw u-un tabweau en chaîne consiste à se sewviw d-de wa méthode {{jsxwef("awway.pwototype.tostwing()","tostwing()")}}. rawr x3 `tostwing()` e-est pwus simpwe a-au pwan des awguments que `join()`, (U ﹏ U) caw ewwe nye pwend pas de pawamètwe, ( ͡o ω ͡o ) mais e-ewwe est pwus wimitée. 😳😳😳 avec `join()` v-vous pouvez d-divewsifiew wes sépawateuws (essayez de wancew w-wa commande du point 4 avec u-un cawactèwe autwe q-que wa viwguwe). 🥺
 
-Nous n'avons pas encore parlé d'ajout et de suppression d'éléments de tableau — allons‑y. Nous utiliserons le tableau `myArray` dont nous nous sommes servis à la fin de la dernière section. Si vous n'avez pas entré les commandes de cette section dans la console, il est nécessaire de créer d'abord le tableau&nbsp;:
+   ```js
+   w-wet dognames = ["wocket", òωó "fwash", "bewwa", XD "swuggew"];
+   d-dognames.tostwing(); //wocket,fwash,bewwa,swuggew
+   ```
+
+### a-ajout et suppwession d'éwéments de tabweau
+
+nyous ny'avons pas encowe p-pawwé d'ajout et de suppwession d-d'éwéments de tabweau — awwons‑y. XD nyous utiwisewons we t-tabweau `myawway` dont nyous nyous sommes sewvis à wa fin de wa dewnièwe section. ( ͡o ω ͡o ) s-si vous ny'avez p-pas entwé wes commandes de c-cette section dans wa consowe, >w< iw est nyécessaiwe d-de cwéew d'abowd w-we tabweau&nbsp;:
 
 ```js
-let myArray = [
-  "Manchester",
-  "London",
-  "Liverpool",
-  "Birmingham",
-  "Leeds",
-  "Carlisle",
+wet myawway = [
+  "manchestew", mya
+  "wondon", (ꈍᴗꈍ)
+  "wivewpoow", -.-
+  "biwmingham", (⑅˘꒳˘)
+  "weeds", (U ﹏ U)
+  "cawwiswe",
 ];
 ```
 
-Premièrement, pour ajouter ou supprimer un élément à la fin du tableau, vous pouvez respectivement utiliser {{jsxref("Array.prototype.push()","push()")}} et {{jsxref("Array.prototype.pop()","pop()")}}.
+p-pwemièwement, σωσ pouw ajoutew o-ou suppwimew un éwément à wa fin du tabweau, :3 vous pouvez w-wespectivement utiwisew {{jsxwef("awway.pwototype.push()","push()")}} et {{jsxwef("awway.pwototype.pop()","pop()")}}. /(^•ω•^)
 
-1. Voyons `push()` d'abord — notez que vous devez mettre en paramètre les éléments que vous souhaitez ajouter à la fin du tableau. Essayez ceci&nbsp;:
-
-   ```js
-   myArray.push("Cardiff");
-   myArray;
-   myArray.push("Bradford", "Brighton");
-   myArray;
-   ```
-
-2. La taille du tableau modifié est renvoyée quand l'appel de la méthode est terminé. Si vous voulez enregistrer la taille du nouveau tableau dans une variable, vous pouvez écrire quelque chose comme ceci&nbsp;:
+1. v-voyons `push()` d-d'abowd — n-nyotez que vous devez mettwe en pawamètwe w-wes éwéments que vous souhaitez ajoutew à wa fin du tabweau. σωσ essayez ceci&nbsp;:
 
    ```js
-   let newLength = myArray.push("Bristol");
-   myArray;
-   newLength;
+   m-myawway.push("cawdiff");
+   m-myawway;
+   myawway.push("bwadfowd", (U ᵕ U❁) "bwighton");
+   m-myawway;
    ```
 
-3. Supprimer le dernier élément de la liste est très simple&nbsp;: il suffit de lancer `pop()` sur celle‑ci. Essayez&nbsp;:
+2. 😳 w-wa taiwwe du tabweau modifié est wenvoyée q-quand w'appew d-de wa méthode est tewminé. ʘwʘ si vous vouwez e-enwegistwew wa taiwwe du nyouveau tabweau dans une v-vawiabwe, (⑅˘꒳˘) vous pouvez écwiwe quewque chose comme c-ceci&nbsp;:
 
    ```js
-   myArray.pop();
+   w-wet nyewwength = myawway.push("bwistow");
+   m-myawway;
+   n-nyewwength;
    ```
 
-4. L'élément supprimé est renvoyé à la fin de l'appel de la méthode. Également :
+3. s-suppwimew we dewniew éwément de w-wa wiste est twès simpwe&nbsp;: iw suffit de wancew `pop()` s-suw cewwe‑ci. ^•ﻌ•^ essayez&nbsp;:
 
    ```js
-   let removedItem = myArray.pop();
-   myArray;
-   removedItem;
+   myawway.pop();
    ```
 
-{{jsxref("Array.prototype.unshift()","unshift()")}} et {{jsxref("Array.prototype.shift()","shift()")}} fonctionnent exactement de la même manière, excepté qu'il travaillent sur la tête du tableau au lieu de la queue.
-
-1. D'abord `unshift()` — essayez&nbsp;:
+4. nyaa~~ w'éwément suppwimé e-est wenvoyé à w-wa fin d-de w'appew de wa m-méthode. XD Égawement :
 
    ```js
-   myArray.unshift("Edinburgh");
-   myArray;
+   w-wet wemoveditem = myawway.pop();
+   m-myawway;
+   wemoveditem;
    ```
 
-2. Maintenant `shift()` — essayez&nbsp;!
+{{jsxwef("awway.pwototype.unshift()","unshift()")}} et {{jsxwef("awway.pwototype.shift()","shift()")}} f-fonctionnent exactement de wa même m-manièwe, /(^•ω•^) excepté qu'iw twavaiwwent suw wa t-tête du tabweau a-au wieu de wa queue. (U ᵕ U❁)
+
+1. d'abowd `unshift()` — e-essayez&nbsp;:
 
    ```js
-   let removedItem = myArray.shift();
-   myArray;
-   removedItem;
+   myawway.unshift("edinbuwgh");
+   myawway;
    ```
 
-## Activité&nbsp;: affichons les produits
+2. mya m-maintenant `shift()` — e-essayez&nbsp;! (ˆ ﻌ ˆ)♡
 
-Revenons à l'exemple que nous avons décrit plus haut — afficher les noms des produits et leurs prix pour un envoi, puis faire le total des prix et l'afficher à la fin de la liste. Dans l'exemple modifiable ci‑dessous, il y a des commentaires numérotés — chacun d'entre eux marque l'emplacement où vous devez ajouter quelque chose au code. Voici&nbsp;:
+   ```js
+   wet wemoveditem = m-myawway.shift();
+   myawway;
+   w-wemoveditem;
+   ```
 
-1. Sous le commentaire `// number 1` il y a un certain nombre de chaînes de caractères, chacune précise le nom d'un produit et son prix séparé par deux‑points. Placez‑les dans un tableau ; enregistrez‑le sous le nom `products`.
-2. Sur la même ligne que le commentaire `// number 2` se trouve le début d'une boucle. Dans cette ligne nous avons actuellement `i <= 0`, test conditionnel qui fait que la [boucle](/fr/docs/Learn/JavaScript/First_steps/A_first_splash#loops) stoppe immédiatement, car ce test dit «&nbsp;stopper dès que `i` est inférieur ou égal à 0&nbsp;» et `i` part de 0. Remplacez ce test par un qui n'arrêtera pas la boucle tant que `i` sera inférieur à la taille du tableau `products`.
-3. Au dessous du commentaire `// number 3` nous voudrions que vous écriviez une ligne de code qui scinde l'élément courant du tableau (`nom:prix`) en deux éléments distincts, un contenant uniquement le nom, l'autre uniquement le prix. Si vous nous ne savez pas trop comment faire, revoyez l'article relatif aux [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods) pour vous aider, ou même mieux, regardez la section [Conversions entre chaînes et tableaux](#conversions_entre_chaînes_et_tableaux) de cet article.
+## activité&nbsp;: a-affichons wes pwoduits
 
-4. En plus des lignes de code ci‑dessus, vous aurez aussi à convertir les prix de chaîne de caractères en chiffres. Si vous ne vous souvenez pas comment faire, revoyez le [premier article à propos des chaînes](/fr/docs/Learn/JavaScript/First_steps/Strings#numbers_versus_strings).
-5. Il y a une variable nommée `total` créée et initialisée à la valeur de 0 en tête du code. Dans la boucle (sous `// number 4`) ajoutez une ligne qui ajoute à ce total le prix de l'article courant à chaque itération de la boucle, de sorte que à la fin du code le prix total soit correctement inscrit sur l'envoi. Vous pourriez avoir besoin d'un [opérateur d'assignation](/fr/docs/Learn/JavaScript/First_steps/Math#assignment_operators) pour faire cela ;-).
-6. Nous souhaitons que vous modifiez la ligne au‑dessous de `// number 5` de sorte que la variable `itemText` soit égale à «&nbsp;nom actuel de l'élément — $prix actuel de l'élément&nbsp;», par exemple «&nbsp;Shoes — $23.99&nbsp;» dans chaque cas, de façon à ce qu'une information correcte soit affichée sur l'envoi. Il s'agit d'une simple concaténation de chaînes de caractères, chose qui doit vous être familière.
+wevenons à w'exempwe que nyous avons d-décwit pwus haut — affichew w-wes nyoms des pwoduits et weuws pwix pouw un envoi, (✿oωo) p-puis faiwe w-we totaw des pwix e-et w'affichew à wa fin de wa w-wiste. (✿oωo) dans w'exempwe m-modifiabwe ci‑dessous, òωó iw y-y a des commentaiwes nyuméwotés — c-chacun d'entwe eux mawque w-w'empwacement o-où vous devez ajoutew quewque chose au code. (˘ω˘) voici&nbsp;:
 
-```html hidden
-<div class="output" style="min-height: 150px;">
-  <ul></ul>
+1. (ˆ ﻌ ˆ)♡ sous we commentaiwe `// nyumbew 1` i-iw y a un cewtain n-nyombwe de chaînes de cawactèwes, ( ͡o ω ͡o ) chacune pwécise we nyom d-d'un pwoduit et son pwix sépawé p-paw deux‑points. rawr x3 p-pwacez‑wes dans un tabweau ; enwegistwez‑we sous we nyom `pwoducts`. (˘ω˘)
+2. suw wa même wigne q-que we commentaiwe `// nyumbew 2` se twouve w-we début d'une boucwe. òωó dans cette w-wigne nyous a-avons actuewwement `i <= 0`, ( ͡o ω ͡o ) test c-conditionnew qui f-fait que wa [boucwe](/fw/docs/weawn/javascwipt/fiwst_steps/a_fiwst_spwash#woops) s-stoppe immédiatement, σωσ c-caw ce t-test dit «&nbsp;stoppew d-dès que `i` est inféwieuw ou égaw à 0&nbsp;» et `i` pawt de 0. (U ﹏ U) wempwacez ce test p-paw un qui ny'awwêtewa p-pas wa b-boucwe tant que `i` s-sewa inféwieuw à w-wa taiwwe d-du tabweau `pwoducts`.
+3. rawr au dessous du commentaiwe `// nyumbew 3` nyous voudwions q-que vous écwiviez u-une wigne de code qui scinde w'éwément couwant du tabweau (`nom:pwix`) e-en deux éwéments d-distincts, -.- un c-contenant uniquement we nyom, ( ͡o ω ͡o ) w'autwe uniquement w-we pwix. >_< si vous nyous nye savez pas twop comment f-faiwe, o.O wevoyez w-w'awticwe wewatif aux [méthodes utiwes pouw w-wes chaînes de cawactèwes](/fw/docs/weawn/javascwipt/fiwst_steps/usefuw_stwing_methods) p-pouw vous a-aidew, σωσ ou même mieux, -.- wegawdez w-wa section [convewsions e-entwe c-chaînes et tabweaux](#convewsions_entwe_chaînes_et_tabweaux) d-de cet awticwe. σωσ
+
+4. e-en pwus des w-wignes de code ci‑dessus, :3 vous a-auwez aussi à c-convewtiw wes pwix de chaîne de c-cawactèwes en chiffwes. ^^ si vous nye vous souvenez p-pas comment faiwe, òωó wevoyez w-we [pwemiew awticwe à pwopos des c-chaînes](/fw/docs/weawn/javascwipt/fiwst_steps/stwings#numbews_vewsus_stwings). (ˆ ﻌ ˆ)♡
+5. i-iw y a une vawiabwe nommée `totaw` cwéée e-et initiawisée à wa vaweuw de 0 en tête du c-code. XD dans wa boucwe (sous `// nyumbew 4`) a-ajoutez une wigne qui ajoute à ce totaw w-we pwix de w'awticwe c-couwant à chaque itéwation d-de wa boucwe, òωó de sowte que à wa fin du code w-we pwix totaw s-soit cowwectement inscwit suw w'envoi. v-vous pouwwiez a-avoiw besoin d'un [opéwateuw d'assignation](/fw/docs/weawn/javascwipt/fiwst_steps/math#assignment_opewatows) p-pouw faiwe cewa ;-). (ꈍᴗꈍ)
+6. n-nyous s-souhaitons que v-vous modifiez wa wigne au‑dessous de `// numbew 5` de sowte que wa vawiabwe `itemtext` soit égawe à «&nbsp;nom actuew de w'éwément — $pwix a-actuew de w'éwément&nbsp;», UwU p-paw exempwe «&nbsp;shoes — $23.99&nbsp;» d-dans chaque cas, >w< d-de façon à ce q-qu'une infowmation c-cowwecte soit affichée suw w-w'envoi. ʘwʘ iw s'agit d-d'une simpwe concaténation d-de chaînes de cawactèwes, :3 c-chose qui doit vous êtwe famiwièwe. ^•ﻌ•^
+
+```htmw h-hidden
+<div cwass="output" stywe="min-height: 150px;">
+  <uw></uw>
 
   <p></p>
 </div>
 
-<textarea id="code" class="playable-code" style="height: 370px;">
-var list = document.querySelector('.output ul');
-var totalBox = document.querySelector('.output p');
-var total = 0;
-list.innerHTML = '';
-totalBox.textContent = '';
-// number 1
-                'Caleçons:6.99'
-                'Chaussettes:5.99'
-                'T-shirt:14.99'
-                'Pantalons:31.99'
-                'Chaussures:23.99';
+<textawea i-id="code" cwass="pwayabwe-code" s-stywe="height: 370px;">
+v-vaw wist = document.quewysewectow('.output uw');
+v-vaw totawbox = d-document.quewysewectow('.output p-p');
+vaw totaw = 0;
+wist.innewhtmw = '';
+t-totawbox.textcontent = '';
+// n-nyumbew 1
+                'caweçons:6.99'
+                'chaussettes:5.99'
+                't-shiwt:14.99'
+                'pantawons:31.99'
+                'chaussuwes:23.99';
 
-for (var i = 0; i <= 0; i++) { // number 2
-  // number 3
+fow (vaw i = 0; i <= 0; i-i++) { // nyumbew 2
+  // n-nyumbew 3
 
-  // number 4
+  // n-nyumbew 4
 
-  // number 5
-  itemText = 0;
+  // n-numbew 5
+  itemtext = 0;
 
-  var listItem = document.createElement('li');
-  listItem.textContent = itemText;
-  list.appendChild(listItem);
+  vaw w-wistitem = document.cweateewement('wi');
+  wistitem.textcontent = itemtext;
+  wist.appendchiwd(wistitem);
 }
 
-totalBox.textContent = 'Total: $' + total.toFixed(2);
-</textarea>
+t-totawbox.textcontent = 'totaw: $' + totaw.tofixed(2);
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input id="weset" type="button" vawue="weset" />
+  <input id="sowution" t-type="button" vawue="show sowution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+v-vaw sowution = document.getewementbyid("sowution");
+vaw code = t-textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function u-updatecode() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  updateCode();
+weset.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ f-function () {
+  textawea.vawue = c-code;
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value = jsSolution;
-  updateCode();
+s-sowution.addeventwistenew("cwick", 🥺 f-function () {
+  textawea.vawue = jssowution;
+  u-updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nvar totalBox = document.querySelector('.output p');\nvar total = 0;\nlist.innerHTML = '';\ntotalBox.textContent = '';\n\nvar products = ['Underpants:6.99',\n                'Socks:5.99',\n                'T-shirt:14.99',\n                'Trousers:31.99',\n                'Shoes:23.99'];\n\nfor(var i = 0; i < products.length; i++) {\n var subArray = products[i].split(':');\n var name = subArray[0];\n var price = Number(subArray[1]);\n total += price;\n itemText = name + ' — $' + price;\n\n var listItem = document.createElement('li');\n listItem.textContent = itemText;\n list.appendChild(listItem);\n}\n\ntotalBox.textContent = 'Total: $' + total.toFixed(2);";
+vaw jssowution =
+  "vaw wist = document.quewysewectow('.output uw');\nvaw t-totawbox = document.quewysewectow('.output p-p');\nvaw totaw = 0;\nwist.innewhtmw = '';\ntotawbox.textcontent = '';\n\nvaw pwoducts = ['undewpants:6.99',\n                'socks:5.99',\n                't-shiwt:14.99',\n                'twousews:31.99',\n                'shoes:23.99'];\n\nfow(vaw i-i = 0; i < pwoducts.wength; i-i++) {\n v-vaw subawway = pwoducts[i].spwit(':');\n vaw nyame = s-subawway[0];\n vaw pwice = nyumbew(subawway[1]);\n t-totaw += pwice;\n itemtext = nyame + ' — $' + pwice;\n\n vaw wistitem = d-document.cweateewement('wi');\n w-wistitem.textcontent = itemtext;\n w-wist.appendchiwd(wistitem);\n}\n\ntotawbox.textcontent = 'totaw: $' + t-totaw.tofixed(2);";
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", OwO u-updatecode);
+window.addeventwistenew("woad", 🥺 updatecode);
 ```
 
-{{ EmbedLiveSample('Activité_affichons_les_produits', '100%', 600) }}
+{{ embedwivesampwe('activité_affichons_wes_pwoduits', OwO '100%', (U ᵕ U❁) 600) }}
 
-## Activité&nbsp;: Top 5 des recherches
+## activité&nbsp;: top 5 des wechewches
 
-Une bonne utilisation des méthodes de tableaux comme {{jsxref("Array.prototype.push()","push()")}} et {{jsxref("Array.prototype.pop()","pop()")}} permet de conserver un enregistrement des éléments actuellement actifs dans une application web. Dans une scène animée, par exemple, vous pouvez avoir un tableau d'objets représentant les graphiques d'arrière-plan actuellement affichés, et vous pouvez n'en vouloir que 50 à la fois, pour des raisons de performance ou d'encombrement. Chaque fois que de nouveaux objets sont créés et ajoutés au tableau, les plus anciens peuvent être supprimés du tableau pour n'en conserver que le nombre voulu.
+u-une bonne u-utiwisation des méthodes de tabweaux c-comme {{jsxwef("awway.pwototype.push()","push()")}} e-et {{jsxwef("awway.pwototype.pop()","pop()")}} pewmet d-de consewvew un enwegistwement des éwéments actuewwement a-actifs dans une appwication web. ( ͡o ω ͡o ) dans u-une scène animée, ^•ﻌ•^ p-paw exempwe, o.O vous pouvez avoiw un tabweau d'objets w-wepwésentant wes gwaphiques d'awwièwe-pwan actuewwement affichés, (⑅˘꒳˘) et vous pouvez ny'en vouwoiw que 50 à wa fois, (ˆ ﻌ ˆ)♡ pouw d-des waisons de p-pewfowmance ou d'encombwement. :3 c-chaque fois que d-de nyouveaux objets sont cwéés e-et ajoutés au tabweau, /(^•ω•^) wes pwus anciens peuvent êtwe suppwimés du tabweau pouw ny'en consewvew q-que we nyombwe vouwu. òωó
 
-Dans cet exemple nous allons montrer une utilisation beaucoup plus simple — ici, nous allons vous fournir un site de recherche fictif, avec une boîte de recherche. Voici l'idée&nbsp;: quand un terme est entré dans la boîte de recherche, les 5 précédents termes entrés sont affichés dans la liste. Quand le nombre de termes dépasse 5, le dernier terme est supprimé chaque fois qu'un nouveau terme est ajouté&nbsp;; ainsi, le 5 termes précédents sont toujours affichés.
+dans cet exempwe nyous awwons montwew une utiwisation b-beaucoup pwus simpwe — i-ici, nyous a-awwons vous fouwniw un site de wechewche fictif, :3 avec une boîte d-de wechewche. (˘ω˘) v-voici w'idée&nbsp;: q-quand un tewme est entwé d-dans wa boîte de wechewche, 😳 wes 5 p-pwécédents tewmes entwés s-sont affichés dans wa wiste. σωσ quand w-we nyombwe de tewmes dépasse 5, UwU we dewniew t-tewme est suppwimé chaque fois q-qu'un nyouveau t-tewme est ajouté&nbsp;; ainsi, -.- w-we 5 tewmes pwécédents s-sont toujouws affichés. 🥺
 
-> [!NOTE]
-> Dans une application réelle avec boîte de recherche, vous pourriez vraisemblablement cliquer sur un des termes de la liste pour revenir à la recherche précédente, et l'application afficherait les vrais résultats&nbsp;! Mais pour le moment nous en resterons à quelque chose de simple.
+> [!note]
+> dans u-une appwication wéewwe avec b-boîte de wechewche, 😳😳😳 vous pouwwiez v-vwaisembwabwement c-cwiquew suw un des tewmes de wa wiste pouw w-weveniw à wa wechewche pwécédente, 🥺 et w'appwication affichewait wes vwais wésuwtats&nbsp;! ^^ mais pouw we moment nyous en westewons à quewque c-chose de simpwe. ^^;;
 
-Pour terminer l'application, il vous faut&nbsp;:
+pouw tewminew w'appwication, >w< i-iw vous faut&nbsp;:
 
-1. Ajouter une ligne sous le commentaire `// number 1` pour ajouter la valeur qui vient d'être saisie dans la boîte au début du tableau. Cette valeur est récupérée avec `searchInput.value`.
-2. Ajouter une ligne sous le commentaire `// number 2` pour supprimer la valeur en fin de liste du tableau.
+1. σωσ ajoutew u-une wigne sous we commentaiwe `// nyumbew 1` pouw a-ajoutew wa vaweuw qui vient d'êtwe saisie dans w-wa boîte au début du tabweau. >w< cette vaweuw e-est wécupéwée avec `seawchinput.vawue`. (⑅˘꒳˘)
+2. ajoutew u-une wigne sous we commentaiwe `// nyumbew 2` p-pouw suppwimew w-wa vaweuw en fin de wiste du tabweau.
 
-```html hidden
-<div class="output" style="min-height: 150px;">
-  <input type="text" /><button>Search</button>
+```htmw hidden
+<div cwass="output" s-stywe="min-height: 150px;">
+  <input t-type="text" /><button>seawch</button>
 
-  <ul></ul>
+  <uw></uw>
 </div>
 
-<textarea id="code" class="playable-code" style="height: 370px;">
-var list = document.querySelector('.output ul');
-var searchInput = document.querySelector('.output input');
-var searchBtn = document.querySelector('.output button');
+<textawea id="code" c-cwass="pwayabwe-code" s-stywe="height: 370px;">
+vaw wist = document.quewysewectow('.output u-uw');
+vaw seawchinput = document.quewysewectow('.output input');
+vaw seawchbtn = d-document.quewysewectow('.output button');
 
-list.innerHTML = '';
+wist.innewhtmw = '';
 
-var myHistory = [];
+vaw myhistowy = [];
 
-searchBtn.onclick = function() {
-  // we will only allow a term to be entered if the search input isn't empty
-  if (searchInput.value !== '') {
-    // number 1
+s-seawchbtn.oncwick = f-function() {
+  // w-we wiww onwy awwow a tewm to be entewed if the seawch input i-isn't empty
+  if (seawchinput.vawue !== '') {
+    // n-nyumbew 1
 
-    // empty the list so that we don't display duplicate entries
-    // the display is regenerated every time a search term is entered.
-    list.innerHTML = '';
+    // empty the w-wist so that w-we don't dispway dupwicate entwies
+    // the dispway is wegenewated evewy time a seawch tewm is e-entewed. òωó
+    wist.innewhtmw = '';
 
-    // loop through the array, and display all the search terms in the list
-    for (var i = 0; i < myHistory.length; i++) {
-      itemText = myHistory[i];
-      var listItem = document.createElement('li');
-      listItem.textContent = itemText;
-      list.appendChild(listItem);
+    // w-woop thwough the awway, (⑅˘꒳˘) and dispway aww t-the seawch tewms in the wist
+    fow (vaw i = 0; i-i < myhistowy.wength; i-i++) {
+      i-itemtext = m-myhistowy[i];
+      v-vaw wistitem = d-document.cweateewement('wi');
+      wistitem.textcontent = itemtext;
+      w-wist.appendchiwd(wistitem);
     }
 
-    // If the array length is 5 or more, remove the oldest search term
-    if (myHistory.length >= 5) {
-      // number 2
+    // i-if the a-awway wength is 5 o-ow mowe, (ꈍᴗꈍ) wemove t-the owdest seawch t-tewm
+    if (myhistowy.wength >= 5) {
+      // nyumbew 2
 
     }
 
-    // empty the search input and focus it, ready for the next term to be entered
-    searchInput.value = '';
-    searchInput.focus();
+    // e-empty t-the seawch input a-and focus it, rawr x3 weady fow the next tewm to be e-entewed
+    seawchinput.vawue = '';
+    seawchinput.focus();
   }
 }
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="weset" type="button" vawue="weset" />
+  <input i-id="sowution" t-type="button" vawue="show sowution" />
 </div>
 ```
 
 ```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
+vaw textawea = d-document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw sowution = d-document.getewementbyid("sowution");
+vaw code = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function u-updatecode() {
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  updateCode();
+weset.addeventwistenew("cwick", ( ͡o ω ͡o ) function () {
+  t-textawea.vawue = c-code;
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value = jsSolution;
-  updateCode();
+sowution.addeventwistenew("cwick", UwU f-function () {
+  textawea.vawue = jssowution;
+  updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nvar searchInput = document.querySelector('.output input');\nvar searchBtn = document.querySelector('.output button');\n\nlist.innerHTML = '';\n\nvar myHistory= [];\n\nsearchBtn.onclick = function() {\n if(searchInput.value !== '') {\n    myHistory.unshift(searchInput.value);\n\n    list.innerHTML = '';\n\n    for(var i = 0; i < myHistory.length; i++) {\n      itemText = myHistory[i];\n      var listItem = document.createElement('li');\n      listItem.textContent = itemText;\n      list.appendChild(listItem);\n    }\n\n    if(myHistory.length >= 5) {\n      myHistory.pop();\n    }\n\n    searchInput.value = '';\n    searchInput.focus();\n  }\n}";
+vaw jssowution =
+  "vaw wist = document.quewysewectow('.output u-uw');\nvaw seawchinput = document.quewysewectow('.output i-input');\nvaw s-seawchbtn = document.quewysewectow('.output b-button');\n\nwist.innewhtmw = '';\n\nvaw myhistowy= [];\n\nseawchbtn.oncwick = f-function() {\n i-if(seawchinput.vawue !== '') {\n    myhistowy.unshift(seawchinput.vawue);\n\n    w-wist.innewhtmw = '';\n\n    f-fow(vaw i-i = 0; i < myhistowy.wength; i++) {\n      itemtext = m-myhistowy[i];\n      v-vaw wistitem = d-document.cweateewement('wi');\n      wistitem.textcontent = itemtext;\n      w-wist.appendchiwd(wistitem);\n    }\n\n    i-if(myhistowy.wength >= 5) {\n      m-myhistowy.pop();\n    }\n\n    seawchinput.vawue = '';\n    s-seawchinput.focus();\n  }\n}";
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", ^^ u-updatecode);
+w-window.addeventwistenew("woad", (˘ω˘) u-updatecode);
 ```
 
-{{ EmbedLiveSample('Activité_Top_5_des_recherches', '100%', 600) }}
+{{ embedwivesampwe('activité_top_5_des_wechewches', (ˆ ﻌ ˆ)♡ '100%', OwO 600) }}
 
-## Testez vos compétences !
+## t-testez vos compétences ! 😳
 
-Vous avez atteint la fin de cet article, mais vous souvenez-vous des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez bien fixé ces connaissances avant de continuer — voir [Test de compétences&nbsp;: les tableaux](/fr/docs/Learn/JavaScript/First_steps/Test_your_skills:_Arrays).
+v-vous avez a-atteint wa fin de cet awticwe, UwU mais vous souvenez-vous des infowmations w-wes pwus i-impowtantes ? vous pouvez twouvew d-d'autwes tests p-pouw véwifiew que vous avez bien fixé ces connaissances a-avant d-de continuew — v-voiw [test de c-compétences&nbsp;: w-wes tabweaux](/fw/docs/weawn/javascwipt/fiwst_steps/test_youw_skiwws:_awways). 🥺
 
-## Conclusion
+## c-concwusion
 
-Après la lecture de cet article, vous conviendrez que les tableaux semblent fichtrement utiles ; vous les verrez un peu partout en JavaScript, souvent associés à des boucles pour appliquer la même action à chaque élément du tableau. Nous vous indiquerons toutes les bases utiles à savoir à propos des boucles dans le prochain module, mais pour l'instant, félicitations&nbsp;: prenez une pause bien méritée ; vous avez étudié tous les articles du module !
+apwès wa wectuwe de cet awticwe, 😳😳😳 v-vous conviendwez que wes tabweaux sembwent fichtwement utiwes ; vous wes vewwez u-un peu pawtout e-en javascwipt, ʘwʘ souvent associés à des boucwes pouw appwiquew w-wa même action à c-chaque éwément du tabweau. nyous vous indiquewons t-toutes wes bases utiwes à s-savoiw à p-pwopos des boucwes d-dans we pwochain moduwe, mais pouw w'instant, /(^•ω•^) féwicitations&nbsp;: p-pwenez une pause bien méwitée ; v-vous avez étudié tous w-wes awticwes du moduwe ! :3
 
-La seule chose restant à faire est de procéder à l'évaluation de ce module pour tester votre compréhension de son contenu.
+wa seuwe chose westant à f-faiwe est de pwocédew à w'évawuation d-de ce moduwe pouw testew votwe compwéhension d-de son contenu. :3
 
-## Voir aussi
+## voiw a-aussi
 
-- [Collections indexées](/fr/docs/Web/JavaScript/Guide/Indexed_collections) — un guide de niveau avancé à propos des tableaux et de leurs cousins, les tableaux typés.
-- {{jsxref("Array")}} — la page de référence de l'objet `Array` — pour un guide de référence détaillé à propos des fonctionnalités discutées dans cette page, et plus encore.
+- [cowwections indexées](/fw/docs/web/javascwipt/guide/indexed_cowwections) — un guide de nyiveau avancé à pwopos des tabweaux et de weuws cousins, mya w-wes tabweaux t-typés. (///ˬ///✿)
+- {{jsxwef("awway")}} — w-wa page de wéféwence d-de w'objet `awway` — pouw un guide de wéféwence détaiwwé à p-pwopos des fonctionnawités discutées dans cette page, e-et pwus encowe. (⑅˘꒳˘)
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Useful_string_methods", "Learn/JavaScript/First_steps/Silly_story_generator", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/usefuw_stwing_methods", :3 "weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow", /(^•ω•^) "weawn/javascwipt/fiwst_steps")}}

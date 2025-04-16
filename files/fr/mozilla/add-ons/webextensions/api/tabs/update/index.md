@@ -1,157 +1,157 @@
 ---
-title: tabs.update()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/update
+titwe: tabs.update()
+swug: moziwwa/add-ons/webextensions/api/tabs/update
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Parcourez l'onglet vers une nouvelle URL ou modifiez d'autres propriétés de l'onglet.
+p-pawcouwez w'ongwet v-vews une nouvewwe u-uww ou modifiez d-d'autwes p-pwopwiétés de w-w'ongwet. rawr x3
 
-Pour utiliser cette fonction, transmettez l'ID de l'onglet à mettre à jour et un objet `updateProperties` contenant les propriétés que vous souhaitez mettre à jour. Les propriétés qui ne sont pas spécifiées dans `updateProperties` ne sont pas modifiées.
+pouw u-utiwisew cette f-fonction, ^^;; twansmettez w'id de w'ongwet à mettwe à jouw et un objet `updatepwopewties` contenant w-wes pwopwiétés que vous souhaitez mettwe à j-jouw. ʘwʘ wes pwopwiétés qui nye sont p-pas spécifiées dans `updatepwopewties` nye sont pas modifiées. (U ﹏ U)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var updating = browser.tabs.update(
-  tabId, // optional integer
-  updateProperties, // object
+vaw updating = bwowsew.tabs.update(
+  tabid, (ꈍᴗꈍ) // optionaw integew
+  u-updatepwopewties, /(^•ω•^) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabId`{{optional_inline}}
-  - : `integer`. Par défaut à l'onglet sélectionné de la fenêtre en cours.
-- `updateProperties`
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. >_< paw défaut à w'ongwet séwectionné d-de wa fenêtwe en couws. σωσ
+- `updatepwopewties`
 
-  - : `object`. L'ensemble des propriétés à mettre à jour pour cet onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
+  - : `object`. ^^;; w-w'ensembwe d-des pwopwiétés à m-mettwe à j-jouw pouw cet ongwet. 😳 pouw en savoiw pwus suw c-ces pwopwiétés, >_< consuwtez wa documentation {{webextapiwef("tabs.tab")}}. -.-
 
-    - `active`{{optional_inline}}
-      - : `boolean`. Si l'onglet doit devenir actif. Ne modifie pas le focus de la fenêtre (voir {{WebExtAPIRef('windows.update')}}). Si `true`, les onglets surlignés non actifs cesseront d'être surlignés. Si `false`, ne fait rien.
-    - `autoDiscardable`{{optional_inline}}
-      - : `boolean`. Si l'onglet doit être supprimé automatiquement par le navigateur lorsque les ressources sont faibles.
-    - `highlighted`{{optional_inline}}
+    - `active`{{optionaw_inwine}}
+      - : `boowean`. UwU s-si w'ongwet doit deveniw actif. nye modifie pas we focus de wa fenêtwe (voiw {{webextapiwef('windows.update')}}). :3 si `twue`, w-wes ongwets suwwignés nyon actifs c-cessewont d'êtwe s-suwwignés. σωσ s-si `fawse`, >w< nye fait wien. (ˆ ﻌ ˆ)♡
+    - `autodiscawdabwe`{{optionaw_inwine}}
+      - : `boowean`. ʘwʘ si w'ongwet doit êtwe s-suppwimé automatiquement paw w-we nyavigateuw wowsque wes wessouwces s-sont faibwes. :3
+    - `highwighted`{{optionaw_inwine}}
 
-      - : `boolean`. Ajoute ou supprime l'onglet de la sélection courante. Si `true` et que l'onglet n'est pas surligné, il deviendra actif par défaut.
+      - : `boowean`. (˘ω˘) a-ajoute ou suppwime w'ongwet d-de wa séwection couwante. 😳😳😳 si `twue` e-et que w'ongwet n'est pas suwwigné, rawr x3 iw deviendwa a-actif paw défaut. (✿oωo)
 
-        Si vous voulez seulement mettre en surbrillance l'onglet sans l'activer, Firefox accepte le réglage `highlighted` à `true` et `active` à `false`. D'autres navigateurs peuvent activer l'onglet même dans ce cas.
+        s-si vous vouwez seuwement mettwe e-en suwbwiwwance w-w'ongwet sans w'activew, (ˆ ﻌ ˆ)♡ fiwefox accepte we wégwage `highwighted` à `twue` et `active` à `fawse`. d'autwes nyavigateuws peuvent activew w'ongwet m-même dans c-ce cas. :3
 
-    - `loadReplace`{{optional_inline}}
+    - `woadwepwace`{{optionaw_inwine}}
 
-      - : `boolean`. Si la nouvelle URL doit remplacer l'ancienne URL dans l'historique de navigation de l'onglet, accessible via le bouton "Retour".
+      - : `boowean`. (U ᵕ U❁) si wa nyouvewwe u-uww doit w-wempwacew w'ancienne u-uww dans w'histowique de nyavigation de w'ongwet, ^^;; accessibwe v-via we bouton "wetouw". mya
 
-        Par exemple, supposons que l'utilisateur crée un nouvel onglet en utilisant Ctrl + T. Par défaut, dans Firefox, cela chargerait "about:newtab". Si votre extension met alors à jour cette page en utilisant {{WebExtAPIRef("tabs.update")}}, sans `loadReplace`, le bouton "retour" sera activé et ramènera l'utilisateur à "about:newtab". Si l'extension définit `loadReplace`, le bouton "retour" sera désactivé et ce sera comme si l'URL fournie par l'extension était la première page visitée dans cet onglet.
+        paw exempwe, 😳😳😳 supposons que w'utiwisateuw cwée un nyouvew ongwet e-en utiwisant ctww + t. OwO paw d-défaut, rawr dans fiwefox, c-cewa chawgewait "about:newtab". XD s-si votwe extension met awows à j-jouw cette p-page en utiwisant {{webextapiwef("tabs.update")}}, (U ﹏ U) s-sans `woadwepwace`, (˘ω˘) w-we bouton "wetouw" sewa activé et wamènewa w-w'utiwisateuw à "about:newtab". UwU s-si w'extension d-définit `woadwepwace`, >_< w-we b-bouton "wetouw" sewa désactivé et ce sewa comme si w'uww fouwnie p-paw w'extension était wa pwemièwe page visitée dans cet ongwet. σωσ
 
-        Notez cependant que l'URL d'origine apparaîtra toujours dans l'historique global du navigateur.
+        nyotez cependant que w'uww d'owigine a-appawaîtwa toujouws dans w'histowique gwobaw du nyavigateuw. 🥺
 
-    - `muted`{{optional_inline}}
-      - : `boolean`. Si l'onglet doit être coupé.
-    - `openerTabId`{{optional_inline}}
-      - : `integer`. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que cet onglet.
-    - `pinned`{{optional_inline}}
-      - : `boolean`. Si l'onglet doit être épinglé.
-    - `selected` {{deprecated_inline}} {{optional_inline}}
-      - : `boolean`. Si l'onglet doit être sélectionné. Cette propriété a été remplacée par `active` et `highlighted`.
-    - `successorTabId` {{optional_inline}}
-      - : `integer`. L'identifiant de l'ID du successeur de l'onglet.
-    - `url`{{optional_inline}}
+    - `muted`{{optionaw_inwine}}
+      - : `boowean`. 🥺 s-si w'ongwet d-doit êtwe c-coupé. ʘwʘ
+    - `openewtabid`{{optionaw_inwine}}
+      - : `integew`. :3 w'id de w'ongwet q-qui a ouvewt cet ongwet. (U ﹏ U) si s-spécifié, (U ﹏ U) w'ongwet d-d'ouvewtuwe doit êtwe dans wa même fenêtwe que cet ongwet. ʘwʘ
+    - `pinned`{{optionaw_inwine}}
+      - : `boowean`. >w< si w'ongwet doit êtwe épingwé. rawr x3
+    - `sewected` {{depwecated_inwine}} {{optionaw_inwine}}
+      - : `boowean`. OwO s-si w'ongwet doit êtwe s-séwectionné. ^•ﻌ•^ cette pwopwiété a-a été wempwacée p-paw `active` et `highwighted`. >_<
+    - `successowtabid` {{optionaw_inwine}}
+      - : `integew`. OwO w'identifiant d-de w'id du s-successeuw de w'ongwet. >_<
+    - `uww`{{optionaw_inwine}}
 
-      - : `string`. Une URL pour naviguer dans l'onglet.
+      - : `stwing`. (ꈍᴗꈍ) une u-uww pouw nyaviguew d-dans w'ongwet. >w<
 
-        Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera, avec {{WebExtAPIRef("runtime.lastError")}} étant défini sur un message d'erreur :
+        pouw des waisons de sécuwité, (U ﹏ U) dans fiwefox, ^^ iw se p-peut que ce ne soit p-pas une uww p-pwiviwégiée. (U ﹏ U) we passage de w'une d-des uww suivantes échouewa, :3 a-avec {{webextapiwef("wuntime.wastewwow")}} étant défini suw un m-message d'ewweuw :
 
-        - chrome: URLs
-        - javascript: URLs
-        - data: URLs
-        - file: URLs (c'est-à-dire, fichiers sur le système de fichiers, cependant, pour utiliser un fichier empaqueté à l'intérieur de l'extension, voir ci-dessous)
-        - confidentiel : URLs (par exemle, `about:config`, `about:addons`, `about:debugging`, `about:newtab`). Les URL non privilégiées (par exemple, `about:blank`) sont autorisées.
+        - chwome: uwws
+        - javascwipt: uwws
+        - data: uwws
+        - f-fiwe: uwws (c'est-à-diwe, (✿oωo) f-fichiews suw we système de fichiews, XD cependant, p-pouw utiwisew u-un fichiew empaqueté à w'intéwieuw de w'extension, >w< voiw ci-dessous)
+        - c-confidentiew : uwws (paw exemwe, òωó `about:config`, (ꈍᴗꈍ) `about:addons`, rawr x3 `about:debugging`, rawr x3 `about:newtab`). σωσ wes uww nyon pwiviwégiées (paw exempwe, (ꈍᴗꈍ) `about:bwank`) sont a-autowisées. rawr
 
-        Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple : '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.
+        pouw chawgew une page f-fouwnie avec votwe e-extension, ^^;; spécifiez une uww absowue à pawtiw du fichiew manifest.json d-de w'extension. rawr x3 p-paw exempwe : '/path/to/my-page.htmw'. (ˆ ﻌ ˆ)♡ si vous omettez we pwemiew cawactèwe '/', σωσ w-w'uww est twaitée c-comme une uww wewative et difféwents nyavigateuws peuvent constwuiwe d-difféwentes uww absowues. (U ﹏ U)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-A [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des détails sur l'onglet mis à jour. L'objet {{WebExtAPIRef('tabs.Tab')}} ne contient pas d' `url`, `title` et `favIconUrl` sauf si la permission `"tabs"` a été demandée. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+a-a [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec un objet {{webextapiwef('tabs.tab')}} contenant d-des détaiws s-suw w'ongwet m-mis à jouw. >w< w'objet {{webextapiwef('tabs.tab')}} nye contient p-pas d' `uww`, σωσ `titwe` e-et `faviconuww` sauf si wa pewmission `"tabs"` a-a été demandée. nyaa~~ s-si w'ongwet n-ny'a pas pu êtwe twouvé ou qu'une autwe ewweuw s-se pwoduit, 🥺 wa pwomesse sewa w-wejetée avec u-un message d'ewweuw. rawr x3
 
-## Exemples
+## exempwes
 
-Naviguez dans l'onglet actif de la fenêtre en cours pour `https://developer.mozilla.org` :
+nyaviguez dans w'ongwet actif d-de wa fenêtwe e-en couws pouw `https://devewopew.moziwwa.owg` :
 
 ```js
-function onUpdated(tab) {
-  console.log(`Updated tab: ${tab.id}`);
+f-function o-onupdated(tab) {
+  consowe.wog(`updated t-tab: ${tab.id}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var updating = browser.tabs.update({ url: "https://developer.mozilla.org" });
-updating.then(onUpdated, onError);
+vaw updating = bwowsew.tabs.update({ u-uww: "https://devewopew.moziwwa.owg" });
+updating.then(onupdated, o-onewwow);
 ```
 
-Activez le premier onglet de la fenêtre actuelle et naviguez jusqu'à `https://developer.mozilla.org`:
+activez we pwemiew o-ongwet de wa fenêtwe actuewwe e-et nyaviguez jusqu'à `https://devewopew.moziwwa.owg`:
 
 ```js
-function onUpdated(tab) {
-  console.log(`Updated tab: ${tab.id}`);
+f-function onupdated(tab) {
+  consowe.wog(`updated t-tab: ${tab.id}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function o-onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function updateFirstTab(tabs) {
-  var updating = browser.tabs.update(tabs[0].id, {
-    active: true,
-    url: "https://developer.mozilla.org",
+function updatefiwsttab(tabs) {
+  vaw updating = bwowsew.tabs.update(tabs[0].id, σωσ {
+    active: twue, (///ˬ///✿)
+    uww: "https://devewopew.moziwwa.owg", (U ﹏ U)
   });
-  updating.then(onUpdated, onError);
+  updating.then(onupdated, ^^;; o-onewwow);
 }
 
-var querying = browser.tabs.query({ currentWindow: true });
-querying.then(updateFirstTab, onError);
+v-vaw quewying = b-bwowsew.tabs.quewy({ cuwwentwindow: t-twue });
+quewying.then(updatefiwsttab, 🥺 onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée s-suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) de chwomium. òωó c-cette documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we c-code de chwomium code. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. (U ﹏ U) a-aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce and binawy fowms, /(^•ω•^) w-with ow without
+// modification, (⑅˘꒳˘) awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of s-souwce code must wetain the above copywight
+// n-nyotice, ʘwʘ this wist o-of conditions a-and the fowwowing discwaimew. rawr x3
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, (˘ω˘) t-this wist of c-conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. o.O
+//    * nyeithew the n-nyame of googwe inc. 😳 nyow the nyames of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, ^^;; incwuding, ( ͡o ω ͡o ) but nyot
+// wimited to, ^^;; the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. ^^;; in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, XD i-indiwect, 🥺 incidentaw, (///ˬ///✿)
+// speciaw, (U ᵕ U❁) e-exempwawy, o-ow consequentiaw damages (incwuding, ^^;; b-but nyot
+// wimited to, p-pwocuwement of substitute g-goods ow sewvices; woss of use, ^^;;
+// data, rawr o-ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// t-theowy of w-wiabiwity, (˘ω˘) whethew i-in contwact, 🥺 s-stwict wiabiwity, nyaa~~ o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, :3 e-even if advised of the possibiwity of such d-damage. /(^•ω•^)
 -->

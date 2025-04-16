@@ -1,57 +1,57 @@
 ---
-title: contentScripts.RegisteredContentScript.unregister()
-slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript/unregister
+titwe: contentscwipts.wegistewedcontentscwipt.unwegistew()
+swug: m-moziwwa/add-ons/webextensions/api/contentscwipts/wegistewedcontentscwipt/unwegistew
 ---
 
-{{AddonSidebar}}Annule l'inscription des scripts de contenu représentés par cet objet `RegisteredContentScript`.
+{{addonsidebaw}}annuwe w-w'inscwiption d-des scwipts de c-contenu wepwésentés p-paw cet objet `wegistewedcontentscwipt`. OwO
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-registered.unregister();
+w-wegistewed.unwegistew();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-None.
+nyone. (U ﹏ U)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-None.
+nyone. >_<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ce code permet de basculer un script de contenu enregistré sur un clic d'action du navigateur :
+ce code pewmet de bascuwew u-un scwipt de contenu enwegistwé s-suw un cwic d'action du nyavigateuw :
 
 ```js
-var registered = null;
+vaw wegistewed = nyuww;
 
-async function register() {
-  registered = await browser.contentScripts.register({
-    matches: ["*://*.org/*"],
-    js: [
+async function w-wegistew() {
+  wegistewed = a-await bwowsew.contentscwipts.wegistew({
+    matches: ["*://*.owg/*"], rawr x3
+    j-js: [
       {
-        code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'",
+        code: "document.body.innewhtmw = '<h1>this page has been eaten<h1>'", mya
       },
-    ],
-    runAt: "document_idle",
+    ], nyaa~~
+    wunat: "document_idwe", (⑅˘꒳˘)
   });
 }
 
-function toggle() {
-  if (registered) {
-    registered.unregister();
-    registered = null;
-  } else {
-    register();
+f-function toggwe() {
+  if (wegistewed) {
+    wegistewed.unwegistew();
+    wegistewed = n-nuww;
+  } ewse {
+    wegistew();
   }
 }
 
-browser.browserAction.onClicked.addListener(toggle);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(toggwe);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

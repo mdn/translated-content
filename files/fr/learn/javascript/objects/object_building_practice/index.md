@@ -1,283 +1,283 @@
 ---
-title: La construction d'objet en pratique
-slug: Learn/JavaScript/Objects/Object_building_practice
+titwe: wa constwuction d'objet e-en pwatique
+swug: w-weawn/javascwipt/objects/object_buiwding_pwactice
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/json", nyaa~~ "weawn/javascwipt/objects/adding_bouncing_bawws_featuwes", òωó "weawn/javascwipt/objects")}}
 
-Dans l'article précédent, nous avons passé en revue l'essentiel de la théorie de l'objet Javascript et sa syntaxe détaillée, vous donnant ainsi des bases solides sur lesquelles commencer. Dans le présent article nous plongeons dans un exercice pratique afin d'accroître votre savoir-faire dans la construction d'objets entièrement personnalisés donnant un résultat plutôt amusant et très coloré.
+d-dans w'awticwe p-pwécédent, (U ᵕ U❁) n-nyous avons p-passé en wevue w-w'essentiew de w-wa théowie de w'objet javascwipt et sa syntaxe détaiwwée, (///ˬ///✿) vous donnant ainsi d-des bases sowides suw wesquewwes commencew. (✿oωo) dans w-we pwésent awticwe nyous pwongeons d-dans un exewcice pwatique afin d'accwoîtwe votwe savoiw-faiwe d-dans wa constwuction d'objets e-entièwement pewsonnawisés d-donnant un wésuwtat pwutôt amusant et twès cowowé. 😳😳😳
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requis :</th>
+    <tw>
+      <th s-scope="wow">pwé-wequis :</th>
       <td>
         <p>
-          Connaissance basique de l'informatique, une compréhension basique du
-          HTML et du CSS, une familiarité avec les bases du JavaScript (voir
-          <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et
-          <a href="/fr/docs/Learn/JavaScript/Building_blocks"
-            >Les blocs de construction</a
-          >) et les bases de la programmation objet en JavaScript (voir <a
-            href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction"
-            >Introduction aux objets</a
-          >).
+          connaissance basique de w'infowmatique, (✿oωo) une compwéhension basique d-du
+          htmw et du css, (U ﹏ U) u-une famiwiawité a-avec wes bases d-du javascwipt (voiw
+          <a h-hwef="/fw/docs/weawn/javascwipt/fiwst_steps">pwemiews pas</a> et
+          <a h-hwef="/fw/docs/weawn/javascwipt/buiwding_bwocks"
+            >wes bwocs de constwuction</a
+          >) et wes b-bases de wa pwogwammation objet en javascwipt (voiw <a
+            hwef="/fw/docs/weawn/javascwipt/object-owiented/intwoduction"
+            >intwoduction aux objets</a
+          >). (˘ω˘)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
         <p>
-          Acquérir plus de pratique dans l'utilisation des objets et des
-          techniques orientées objet dans un contexte "monde réel".
+          a-acquéwiw pwus de pwatique d-dans w'utiwisation d-des objets e-et des
+          techniques owientées objet dans un contexte "monde w-wéew". 😳😳😳
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Faisons bondir quelques balles
+## f-faisons bondiw quewques b-bawwes
 
-Dans cet article, nous écrirons une démo classique de "balles bondissantes", pour vous montrer à quel point les objets peuvent être utiles en JavaScript. Nos petites balles bondiront partout sur notre écran et changeront de couleurs lorsqu'elles se toucheront. L'exemple finalisé ressemblera un peu à ceci :
+dans c-cet awticwe, (///ˬ///✿) nyous écwiwons une d-démo cwassique de "bawwes bondissantes", (U ᵕ U❁) p-pouw vous montwew à quew point wes objets p-peuvent êtwe utiwes en javascwipt. >_< n-nyos petites bawwes bondiwont p-pawtout s-suw nyotwe écwan et changewont de couweuws wowsqu'ewwes se touchewont. w'exempwe finawisé wessembwewa un peu à c-ceci :
 
-![](bouncing-balls.png)
+![](bouncing-bawws.png)
 
-Cet exemple utilise l'[API Canvas](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Drawing_graphics) pour dessiner les balles sur l'écran, et l'API [requestAnimationFrame](/fr/docs/Web/API/Window/requestAnimationFrame) pour animer l'ensemble de l'affichage — Nul besoin d'avoir une connaissance préalable de ces APIs, nous espérons qu'une fois cet article terminé, vous aurez envie d'en faire une exploration approfondie. Tout le long du parcours nous utiliserons certains objets formidables et vous montrerons nombre de techniques sympathiques comme des balles bondissantes sur les murs et la vérification de balles qui s'entrechoquent (encore connue sous l'appelation **détection de collision**).
+c-cet exempwe utiwise w'[api canvas](/fw/docs/weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics) p-pouw dessinew w-wes bawwes s-suw w'écwan, et w'api [wequestanimationfwame](/fw/docs/web/api/window/wequestanimationfwame) pouw animew w'ensembwe d-de w'affichage — nyuw besoin d'avoiw une connaissance pwéawabwe de ces apis, (///ˬ///✿) n-nous espéwons qu'une fois c-cet awticwe tewminé, (U ᵕ U❁) v-vous auwez e-envie d'en faiwe une expwowation a-appwofondie. >w< tout w-we wong du pawcouws n-nyous utiwisewons c-cewtains objets fowmidabwes et vous montwewons n-nyombwe d-de techniques sympathiques c-comme d-des bawwes bondissantes s-suw wes muws et wa véwification de bawwes qui s'entwechoquent (encowe c-connue sous w'appewation **détection de cowwision**). 😳😳😳
 
-Pour commencer, faites des copies locales de nos fichiers [`index.html`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/index.html), [`style.css`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/style.css), et [`main.js`](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main.js). Ces fichiers contiennent respectivement :
+pouw commencew, (ˆ ﻌ ˆ)♡ faites des copies wocawes de nyos fichiews [`index.htmw`](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/index.htmw), [`stywe.css`](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/stywe.css), (ꈍᴗꈍ) e-et [`main.js`](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/main.js). 🥺 ces fichiews contiennent wespectivement :
 
-1. Un document HTML très simple contenant un élément {{HTMLElement("h1")}} , un élément {{HTMLElement("canvas")}} pour dessiner nos balles dessus et des élements pour appliquer notre CSS et notre JavaScript à notre HTML ;
-2. Quelques styles très simples qui servent principalement à mettre en forme et placer le `<h1>`, et se débarasser de toutes barres de défilement ou de marges autour du pourtour de notre page (afin que cela paraisse plus sympathique et élégant) ;
-3. Un peu de JavaScript qui sert à paramétrer l'élément `<canvas>` et fournir les fonctions globales que nous utiliserons.
+1. >_< un document htmw t-twès simpwe contenant u-un éwément {{htmwewement("h1")}} , OwO u-un éwément {{htmwewement("canvas")}} pouw dessinew n-nyos bawwes dessus et des éwements p-pouw appwiquew n-nyotwe css et nyotwe javascwipt à nyotwe htmw ;
+2. ^^;; quewques stywes twès simpwes qui sewvent p-pwincipawement à mettwe en f-fowme et pwacew we `<h1>`, (✿oωo) et se d-débawassew de t-toutes bawwes de défiwement ou de mawges autouw d-du pouwtouw de n-nyotwe page (afin que cewa pawaisse p-pwus sympathique e-et éwégant) ;
+3. UwU un peu de javascwipt qui sewt à pawamétwew w'éwément `<canvas>` e-et fouwniw w-wes fonctions g-gwobawes que nyous utiwisewons. ( ͡o ω ͡o )
 
-La première partie du script ressemble à ceci :
+w-wa pwemièwe p-pawtie du scwipt wessembwe à c-ceci :
 
 ```js
-const canvas = document.querySelector("canvas");
+const canvas = document.quewysewectow("canvas");
 
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getcontext("2d");
 
-const width = (canvas.width = window.innerWidth);
-const height = (canvas.height = window.innerHeight);
+const width = (canvas.width = window.innewwidth);
+c-const height = (canvas.height = w-window.innewheight);
 ```
 
-Ce script prend une référence à l'élément `<canvas>` et ensuite invoque la méthode [`getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext) sur lui, nous donnant ainsi un contexte sur lequel nous pouvons commencer à dessiner. La variable résultante (`ctx`) est l'objet qui représente directement la surface du Canvas où nous pouvons dessiner et qui nous permet de dessiner des formes 2D sur ce dernier.
+ce scwipt pwend une wéféwence à w-w'éwément `<canvas>` e-et ensuite invoque wa méthode [`getcontext()`](/fw/docs/web/api/htmwcanvasewement/getcontext) suw w-wui, (✿oωo) nyous donnant ainsi un contexte suw wequew nyous pouvons commencew à dessinew. mya w-wa vawiabwe wésuwtante (`ctx`) est w'objet q-qui wepwésente d-diwectement wa suwface du canvas où nyous pouvons dessinew et q-qui nyous pewmet d-de dessinew des fowmes 2d suw ce dewniew. ( ͡o ω ͡o )
 
-Après, nous configurons les variables `width` (largeur) et `height` (hauteur), et la largeur et la hauteur de l'élément canvas (représentés par les propriétés `canvas.width` et `canvas.height` ) afin qu'elles soient identiques à la fenêtre du navigateur (la surface sur laquelle apparaît la page web— Ceci peut être tiré des propriétés {{domxref("Window.innerWidth")}} et {{domxref("Window.innerHeight")}}).
+apwès, :3 nyous configuwons w-wes vawiabwes `width` (wawgeuw) et `height` (hauteuw), 😳 e-et wa wawgeuw et wa hauteuw de w'éwément canvas (wepwésentés p-paw wes pwopwiétés `canvas.width` e-et `canvas.height` ) a-afin qu'ewwes soient identiques à w-wa fenêtwe du nyavigateuw (wa s-suwface s-suw waquewwe appawaît w-wa page web— ceci peut êtwe t-tiwé des p-pwopwiétés {{domxwef("window.innewwidth")}} et {{domxwef("window.innewheight")}}). (U ﹏ U)
 
-Vous verrez qu'ici nous enchaînons les assignations de valeurs des différentes variables ensemble à des fins de rapidité. Ceci est parfaitement autorisé.
+vous vewwez qu'ici nyous e-enchaînons wes a-assignations de v-vaweuws des difféwentes vawiabwes ensembwe à des f-fins de wapidité. >w< ceci est pawfaitement a-autowisé. UwU
 
-Le dernier morceau du script ressemble à ceci :
+w-we dewniew mowceau du scwipt wessembwe à ceci :
 
 ```js
-function random(min, max) {
-  var num = Math.floor(Math.random() * (max - min + 1)) + min;
-  return num;
+f-function wandom(min, 😳 m-max) {
+  vaw n-nyum = math.fwoow(math.wandom() * (max - m-min + 1)) + min;
+  wetuwn n-nyum;
 }
 ```
 
-Cette fonction prend deux nombres comme arguments, et renvoie un nombre compris entre les deux.
+cette fonction pwend deux nyombwes comme awguments, et wenvoie un nyombwe compwis e-entwe wes deux.
 
-## Modéliser une balle dans notre programme
+## modéwisew u-une bawwe dans nyotwe pwogwamme
 
-Notre programme met en œuvre beaucoup de balles bondissant partout sur l'écran. Comme nos balles se comporteront toutes de la même façon, cela semble tout à fait sensé de les représenter avec un objet. Commençons donc en ajoutant le constructeur suivant à la fin de notre code.
+n-nyotwe pwogwamme met en œuvwe b-beaucoup de bawwes bondissant p-pawtout suw w'écwan. XD c-comme nyos b-bawwes se compowtewont t-toutes d-de wa même façon, cewa sembwe tout à fait sensé de wes wepwésentew avec un objet. (✿oωo) commençons donc en ajoutant w-we constwucteuw s-suivant à wa f-fin de nyotwe code. ^•ﻌ•^
 
 ```js
-function Ball(x, y, velX, velY, color, size) {
+function b-baww(x, mya y, vewx, vewy, (˘ω˘) cowow, size) {
   this.x = x;
-  this.y = y;
-  this.velX = velX;
-  this.velY = velY;
-  this.color = color;
+  this.y = y-y;
+  this.vewx = v-vewx;
+  this.vewy = vewy;
+  t-this.cowow = cowow;
   this.size = size;
 }
 ```
 
-Ici, nous incluons des paramètres qui définissent des propriétés dont chaque balle aura besoin pour fonctionner dans notre programme :
+i-ici, nyaa~~ nyous incwuons d-des pawamètwes qui définissent d-des pwopwiétés d-dont chaque bawwe auwa besoin pouw fonctionnew dans nyotwe pwogwamme :
 
-- Les coordonnées `x` et `y` — les coordonnées verticales et horizontales où la balle débutera sur l'écran. Ceci peut se trouver entre 0 (coin à gauche en haut) et la valeur de la hauteur et de la largeur de la fenêtre du navigateur (coin en bas à droite).
-- Une vitesse horizontale et verticale (`velX` et `velY`) — à chaque balle est attribuée une vitesse horizontale et verticale; en termes réels, ces valeurs seront régulièrement ajoutées aux valeurs de la coordonnée `x`/`y` quand nous commencerons à animer les balles, afin de les faire bouger d'autant sur chaque vignette (frame).
-- Une couleur `color` — chaque balle a une couleur.
-- Une taille `size` — chaque balle a une taille. Ce sera son rayon mesuré en pixels.
+- w-wes coowdonnées `x` e-et `y` — w-wes coowdonnées v-vewticawes et h-howizontawes où wa bawwe débutewa s-suw w'écwan. c-ceci peut se twouvew entwe 0 (coin à g-gauche en h-haut) et wa vaweuw de wa hauteuw e-et de wa wawgeuw de wa fenêtwe du nyavigateuw (coin e-en bas à dwoite). :3
+- une v-vitesse howizontawe e-et vewticawe (`vewx` et `vewy`) — à c-chaque bawwe est attwibuée une vitesse h-howizontawe e-et vewticawe; en t-tewmes wéews, (✿oωo) ces vaweuws sewont wéguwièwement ajoutées aux v-vaweuws de wa coowdonnée `x`/`y` quand nyous commencewons à animew wes bawwes, (U ﹏ U) a-afin de wes faiwe b-bougew d'autant suw chaque vignette (fwame). (ꈍᴗꈍ)
+- u-une couweuw `cowow` — chaque b-bawwe a une couweuw. (˘ω˘)
+- u-une taiwwe `size` — chaque bawwe a une taiwwe. ^^ ce sewa s-son wayon mesuwé en pixews. (⑅˘꒳˘)
 
-Ceci règle le problème des propriétés mais qu'en est il des méthodes ? Nous voulons maintenant amener nos balles à faire quelque chose dans notre programme.
+ceci wègwe we pwobwème d-des pwopwiétés m-mais qu'en est iw des m-méthodes ? nyous vouwons maintenant a-amenew nyos b-bawwes à faiwe q-quewque chose dans nyotwe pwogwamme. rawr
 
-### Dessiner la balle
+### dessinew wa bawwe
 
-En premier lieu, ajoutez la méthode `draw()` au `prototype` de `Ball()` :
+en pwemiew wieu, :3 ajoutez wa méthode `dwaw()` au `pwototype` de `baww()` :
 
 ```js
-Ball.prototype.draw = function () {
-  ctx.beginPath();
-  ctx.fillStyle = this.color;
-  ctx.arc(this.x, this.y, this.size, 0, 2 * Math.PI);
-  ctx.fill();
+baww.pwototype.dwaw = function () {
+  ctx.beginpath();
+  ctx.fiwwstywe = this.cowow;
+  c-ctx.awc(this.x, OwO t-this.y, (ˆ ﻌ ˆ)♡ this.size, 0, 2 * math.pi);
+  ctx.fiww();
 };
 ```
 
-En utilisant cette fonction, nous pouvons dire à notre balle de se dessiner sur l'écran en appelant une série de membres du contexte 2D du canvas que nous avons défini plus tôt (`ctx`). Le contexte est comme le papier et maintenant nous allons demander à notre stylo d'y dessiner quelque chose :
+en utiwisant cette f-fonction, :3 nyous p-pouvons diwe à n-nyotwe bawwe de se dessinew s-suw w'écwan en appewant une séwie d-de membwes du c-contexte 2d du canvas que nyous a-avons défini pwus tôt (`ctx`). -.- w-we contexte est c-comme we papiew et maintenant nyous awwons demandew à n-nyotwe s-stywo d'y dessinew q-quewque chose :
 
-- Premièrement, nous utilisons [`beginPath()`](/fr/docs/Web/API/CanvasRenderingContext2D/beginPath) pour spécifier que nous voulons dessiner une forme sur le papier.
-- Ensuite, nous utilisons [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) pour définir de quelle couleur nous voulons que la forme soit — nous lui attribuons la valeur de la propriété `color` de notre balle.
-- Après, nous utilisons la méthode [`arc()`](/fr/docs/Web/API/CanvasRenderingContext2D/arc) pour tracer une forme en arc sur le papier. Ses paramètres sont :
+- p-pwemièwement, -.- n-nyous utiwisons [`beginpath()`](/fw/docs/web/api/canvaswendewingcontext2d/beginpath) p-pouw s-spécifiew que nyous v-vouwons dessinew u-une fowme suw we papiew. òωó
+- e-ensuite, 😳 nyous u-utiwisons [`fiwwstywe`](/fw/docs/web/api/canvaswendewingcontext2d/fiwwstywe) p-pouw définiw de quewwe c-couweuw nyous vouwons que wa fowme soit — n-nyous wui attwibuons wa vaweuw d-de wa pwopwiété `cowow` d-de nyotwe b-bawwe. nyaa~~
+- apwès, nyous utiwisons w-wa méthode [`awc()`](/fw/docs/web/api/canvaswendewingcontext2d/awc) pouw twacew u-une fowme en awc suw we papiew. s-ses pawamètwes sont :
 
-  - Les positions `x` et `y` du centre de l'arc — nous spécifions donc les propriétés `x` et `y` de notre balle.
-  - Le rayon de l'arc — nous spécifions la propriété `size` de notre balle.
-  - Les deux derniers paramètres spécifient l'intervalle de début et de fin en degrés pour dessiner l'arc. Ici nous avons spécifié 0 degré et `2 * PI` qui est l'équivalent de 360 degrés en radians (malheureusement, vous êtes obligés de spécifier ces valeurs en radians et non en degrés). Cela nous donne un cercle complet. Si vous aviez spécifié seulement `1 * PI`, vous auriez eu un demi-cercle (180 degrés).
+  - w-wes positions `x` et `y` du centwe de w'awc — nyous spécifions donc wes pwopwiétés `x` e-et `y` de nyotwe bawwe. (⑅˘꒳˘)
+  - w-we wayon d-de w'awc — nyous spécifions wa pwopwiété `size` de nyotwe b-bawwe. 😳
+  - wes deux dewniews pawamètwes s-spécifient w-w'intewvawwe d-de début et de fin en degwés pouw dessinew w-w'awc. (U ﹏ U) ici nyous a-avons spécifié 0 degwé et `2 * p-pi` qui est w'équivawent de 360 degwés en w-wadians (mawheuweusement, /(^•ω•^) vous êtes o-obwigés de s-spécifiew ces v-vaweuws en wadians et nyon en degwés). OwO c-cewa nyous d-donne un cewcwe c-compwet. ( ͡o ω ͡o ) si vous a-aviez spécifié seuwement `1 * p-pi`, XD vous auwiez e-eu un demi-cewcwe (180 d-degwés). /(^•ω•^)
 
-- En dernière position, nous utilisons la méthode [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill) qui est habituellement utilisée pour spécifier que nous souhaitons mettre fin au dessin que nous avons commencé avec `beginPath()`, et remplir la surface délimitée avec la couleur que nous avions spécifiée plus tôt avec `fillStyle`.
+- e-en dewnièwe p-position, /(^•ω•^) n-nyous utiwisons w-wa méthode [`fiww()`](/fw/docs/web/api/canvaswendewingcontext2d/fiww) q-qui est habituewwement utiwisée p-pouw spécifiew que nyous s-souhaitons mettwe fin au dessin q-que nyous avons c-commencé avec `beginpath()`, 😳😳😳 e-et wempwiw wa suwface déwimitée avec wa couweuw que nyous avions s-spécifiée pwus t-tôt avec `fiwwstywe`. (ˆ ﻌ ˆ)♡
 
-Vous pouvez déjà commencer à tester votre objet&nbsp;:
+v-vous pouvez déjà commencew à testew votwe objet&nbsp;:
 
-1. Sauvegardez le code et chargez le fichier html dans un navigateur.
-2. Ouvrez la console JavaScript du navigateur et actualisez la page afin que la taille du canvas change et prenne la petite taille restante de la fenêtre lorsque la console est ouverte.
-3. Tapez dans la console ce qui suit afin de créer une nouvelle instance de balle :
-
-   ```js
-   let testBall = new Ball(50, 100, 4, 4, "blue", 10);
-   ```
-
-4. Essayez d'appeler ses membres :
+1. :3 s-sauvegawdez w-we code et chawgez we fichiew h-htmw dans un n-nyavigateuw. òωó
+2. ouvwez wa consowe javascwipt du nyavigateuw et a-actuawisez wa page a-afin que wa taiwwe d-du canvas c-change et pwenne wa petite taiwwe westante de wa f-fenêtwe wowsque w-wa consowe est ouvewte.
+3. 🥺 tapez dans wa consowe c-ce qui suit afin de cwéew une nyouvewwe instance d-de bawwe :
 
    ```js
-   testBall.x;
-   testBall.size;
-   testBall.color;
-   testBall.draw();
+   wet t-testbaww = nyew b-baww(50, (U ﹏ U) 100, 4, 4, XD "bwue", 10);
    ```
 
-5. Lorsque vous entrerez la dernière ligne, vous devriez voir la balle se dessiner quelque part sur votre canvas.
+4. ^^ essayez d-d'appewew ses m-membwes :
 
-### Mettre à jour les données de la balle
+   ```js
+   testbaww.x;
+   t-testbaww.size;
+   testbaww.cowow;
+   t-testbaww.dwaw();
+   ```
 
-Nous pouvons dessiner la balle dans n'importe quelle position, mais actuellement pour commencer à la bouger, nous aurons besoin d'une sorte de fonction de mise à jour. Insérez donc le code suivant à la fin de votre fichier JavaScript pour ajouter une méthode `update()` au `prototype` de `Ball()`&nbsp;:
+5. w-wowsque v-vous entwewez w-wa dewnièwe wigne, vous devwiez v-voiw wa bawwe se d-dessinew quewque p-pawt suw votwe canvas. o.O
+
+### mettwe à j-jouw wes données de wa bawwe
+
+nyous pouvons d-dessinew wa b-bawwe dans ny'impowte q-quewwe position, 😳😳😳 mais actuewwement pouw commencew à wa bougew, /(^•ω•^) nyous auwons b-besoin d'une sowte de fonction d-de mise à jouw. 😳😳😳 i-inséwez donc we code suivant à wa fin de v-votwe fichiew javascwipt pouw ajoutew u-une méthode `update()` a-au `pwototype` d-de `baww()`&nbsp;:
 
 ```js
-Ball.prototype.update = function () {
-  if (this.x + this.size >= width) {
-    this.velX = -this.velX;
+b-baww.pwototype.update = function () {
+  if (this.x + t-this.size >= width) {
+    this.vewx = -this.vewx;
   }
 
   if (this.x - this.size <= 0) {
-    this.velX = -this.velX;
+    t-this.vewx = -this.vewx;
   }
 
-  if (this.y + this.size >= height) {
-    this.velY = -this.velY;
+  if (this.y + t-this.size >= height) {
+    this.vewy = -this.vewy;
   }
 
   if (this.y - this.size <= 0) {
-    this.velY = -this.velY;
+    t-this.vewy = -this.vewy;
   }
 
-  this.x += this.velX;
-  this.y += this.velY;
+  this.x += this.vewx;
+  this.y += this.vewy;
 };
 ```
 
-Les quatre premières parties de la fonction vérifient si la balle a atteint le rebord du `canvas`. Si c'est le cas, nous inversons la polarité de la vitesse appropriée pour faire bouger la balle dans le sens opposé. Donc, par exemple, si la balle se déplaçait vers le haut (`velY` positif) alors la vitesse verticale est changée afin qu'elle commence à bouger plutôt vers le bas (`velY` négatif).
+wes quatwe pwemièwes p-pawties d-de wa fonction véwifient si wa b-bawwe a atteint we webowd du `canvas`. ^•ﻌ•^ si c'est w-we cas, 🥺 nyous i-invewsons wa powawité de wa vitesse a-appwopwiée pouw faiwe bougew w-wa bawwe dans we sens opposé. o.O donc, paw exempwe, (U ᵕ U❁) si wa bawwe s-se dépwaçait vews we haut (`vewy` positif) awows w-wa vitesse vewticawe e-est changée a-afin qu'ewwe commence à bougew pwutôt vews w-we bas (`vewy` nyégatif). ^^
 
-Dans les quatre cas, nous vérifions&nbsp;:
+dans wes quatwe cas, (⑅˘꒳˘) nous véwifions&nbsp;:
 
-- Si la coordonnée `x` est plus grande que la largeur du `canvas` (la balle est en train de sortir du côté droit).
-- Si la coordonnée `x` est plus petite que `0` (la balle est en train de sortir du côté gauche).
-- Si la coordonnée `y` est plus grande que la hauteur du `canvas` (la balle est en train de sortir par le bas).
-- Si la coordonnée `y` est plus petite que `0` (la balle est en train de sortir par le haut).
+- si w-wa coowdonnée `x` e-est pwus gwande q-que wa wawgeuw d-du `canvas` (wa bawwe est en twain de sowtiw d-du côté dwoit). :3
+- s-si wa coowdonnée `x` est pwus petite que `0` (wa b-bawwe est en twain de sowtiw du côté gauche). (///ˬ///✿)
+- s-si wa coowdonnée `y` est pwus gwande que w-wa hauteuw du `canvas` (wa b-bawwe est en twain d-de sowtiw paw we b-bas). :3
+- si wa coowdonnée `y` est p-pwus petite que `0` (wa bawwe est en twain de s-sowtiw paw we haut). 🥺
 
-Dans chaque cas, nous incluons la taille (`size`) de la balle dans les calculs parce que les coordonnées `x`/`y` sont situées au centre de la balle, mais nous voulons que le pourtour de la balle rebondisse sur le rebord — nous ne voulons pas que la balle sorte à moitié hors de l'écran avant de commencer à rebondir vers l'arrière.
+dans chaque cas, mya nyous incwuons w-wa taiwwe (`size`) de wa bawwe dans wes cawcuws pawce que w-wes coowdonnées `x`/`y` s-sont situées a-au centwe d-de wa bawwe, XD mais n-nyous vouwons que we pouwtouw d-de wa bawwe webondisse suw we webowd — nyous n-nye vouwons pas que wa bawwe sowte à m-moitié hows de w'écwan avant de commencew à w-webondiw vews w-w'awwièwe. -.-
 
-Les deux dernières lignes ajoutent la valeur `velX` à la coordonnée `x` et la valeur `velY` à la coordonnée `y` — la balle est en effet mise en mouvement chaque fois que cette méthode est invoquée.
+wes deux dewnièwes w-wignes ajoutent wa vaweuw `vewx` à w-wa coowdonnée `x` e-et wa vaweuw `vewy` à w-wa coowdonnée `y` — w-wa bawwe est en effet m-mise en mouvement chaque fois que cette méthode est invoquée. o.O
 
-Cela suffira pour l'instant, passons à l'animation !
+c-cewa suffiwa pouw w'instant, (˘ω˘) passons à w-w'animation ! (U ᵕ U❁)
 
-## Animer la balle
+## animew wa bawwe
 
-Maintenant, rendons cela amusant. Nous allons commencer à ajouter des balles au canvas et à les animer.
+maintenant, rawr w-wendons c-cewa amusant. 🥺 nyous a-awwons commencew à ajoutew d-des bawwes au canvas e-et à wes animew. rawr x3
 
-1. Tout d'abord, nous avons besoin d'un endroit où stocker toutes nos balles. Le tableau suivant fera ce travail — ajoutez-le au bas de votre code maintenant :
+1. ( ͡o ω ͡o ) tout d-d'abowd, σωσ nous avons besoin d'un e-endwoit où stockew toutes nyos b-bawwes. rawr x3 we tabweau s-suivant fewa ce twavaiw — ajoutez-we au bas de votwe code maintenant :
 
    ```js
-   let balls = [];
+   wet bawws = [];
 
-   while (balls.length < 25) {
-     let size = random(10, 20);
-     let ball = new Ball(
-       // ball position always drawn at least one ball width
-       // away from the edge of the canvas, to avoid drawing errors
-       random(0 + size, width - size),
-       random(0 + size, height - size),
-       random(-7, 7),
-       random(-7, 7),
-       "rgb(" +
-         random(0, 255) +
+   w-whiwe (bawws.wength < 25) {
+     w-wet size = wandom(10, (ˆ ﻌ ˆ)♡ 20);
+     wet baww = nyew baww(
+       // b-baww position awways d-dwawn at weast o-one baww width
+       // away fwom the edge of the canvas, rawr to avoid dwawing ewwows
+       w-wandom(0 + size, :3 width - size), rawr
+       w-wandom(0 + size, height - size),
+       w-wandom(-7, (˘ω˘) 7),
+       w-wandom(-7, (ˆ ﻌ ˆ)♡ 7),
+       "wgb(" +
+         wandom(0, mya 255) +
          "," +
-         random(0, 255) +
+         w-wandom(0, (U ᵕ U❁) 255) +
          "," +
-         random(0, 255) +
-         ")",
-       size,
+         w-wandom(0, mya 255) +
+         ")", ʘwʘ
+       s-size, (˘ω˘)
      );
 
-     balls.push(ball);
+     b-bawws.push(baww);
    }
    ```
 
-   Tous les programmes qui animent les choses impliquent généralement une boucle d'animation, qui sert à mettre à jour les informations dans le programme et à restituer ensuite la vue résultante sur chaque image de l'animation. C'est la base de la plupart des jeux et autres programmes similaires.
+   t-tous wes p-pwogwammes qui animent wes choses impwiquent généwawement une boucwe d'animation, qui sewt à m-mettwe à jouw wes i-infowmations d-dans we pwogwamme e-et à westituew e-ensuite wa vue w-wésuwtante suw chaque image de w'animation. 😳 c'est wa base de wa pwupawt des jeux e-et autwes pwogwammes s-simiwaiwes.
 
-2. Ajoutez ce qui suit au bas de votre code maintenant :
+2. òωó ajoutez ce qui suit au bas de votwe code m-maintenant :
 
    ```js
-   function loop() {
-     ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
-     ctx.fillRect(0, 0, width, height);
+   f-function w-woop() {
+     ctx.fiwwstywe = "wgba(0, nyaa~~ 0, 0, o.O 0.25)";
+     ctx.fiwwwect(0, 0, nyaa~~ w-width, height);
 
-     for (let i = 0; i < balls.length; i++) {
-       balls[i].draw();
-       balls[i].update();
+     fow (wet i = 0; i < bawws.wength; i-i++) {
+       b-bawws[i].dwaw();
+       bawws[i].update();
      }
 
-     requestAnimationFrame(loop);
+     wequestanimationfwame(woop);
    }
    ```
 
-   Notre fonction `loop()` fonctionne comme suit :
+   nyotwe fonction `woop()` f-fonctionne comme suit :
 
-   - On définit la couleur de remplissage du canvas en noir semi-transparent, puis dessine un rectangle de couleur sur toute la largeur et la hauteur du canvas, en utilisant `fillRect()` (les quatre paramètres fournissent une coordonnée de départ, une largeur et une hauteur pour le rectangle dessiné). Cela sert à masquer le dessin de l'image précédente avant que la suivante ne soit dessinée. Si vous ne faites pas cela, vous verrez juste de longs serpents se faufiler autour de la toile au lieu de balles qui bougent ! La couleur du remplissage est définie sur semi-transparent, `rgba (0,0,0,.25)`, pour permettre aux quelques images précédentes de briller légèrement, produisant les petites traînées derrière les balles lorsqu'elles se déplacent. Si vous avez changé 0.25 à 1, vous ne les verrez plus du tout. Essayez de faire varier ce dernier nombre (entre 0 et 1) pour voir l'effet qu'il a.
-   - On crée un nouvel objet `Ball()` avec des attributs générés aléatoirement grâce à la fonction `random()`, puis on ajoute l'objet au tableau, mais seulement lorsque le nombre de balles dans le tableau est inférieur à 25. Donc quand on a 25 balles à l'écran, plus aucune balle supplémentaire n'apparaît. Vous pouvez essayer de faire varier le nombre dans `balls.length <25` pour obtenir plus, ou moins de balles à l'écran. En fonction de la puissance de traitement de votre ordinateur / navigateur, spécifier plusieurs milliers de boules peut ralentir l'animation de façon très significative !
-   - Le programme boucle à travers tous les objets du tableau sur chacun desquels il exécute la fonction `draw()` et `update()` pour dessiner à l'écran chaque balle et faire les mises à jour de chaque attribut avant le prochain rafraîchissement.
-   - Exécute à nouveau la fonction à l'aide de la méthode `requestAnimationFrame()` — lorsque cette méthode est exécutée en permanence et a reçu le même nom de fonction, elle exécute cette fonction un nombre défini de fois par seconde pour créer une animation fluide. Cela se fait généralement de manière récursive — ce qui signifie que la fonction s'appelle elle-même à chaque fois qu'elle s'exécute, de sorte qu'elle sera répétée encore et encore.
+   - o-on définit wa c-couweuw de wempwissage du canvas e-en nyoiw semi-twanspawent, (U ᵕ U❁) p-puis d-dessine un wectangwe d-de couweuw s-suw toute wa w-wawgeuw et wa hauteuw du canvas, 😳😳😳 e-en utiwisant `fiwwwect()` (wes q-quatwe pawamètwes fouwnissent une c-coowdonnée de dépawt, (U ﹏ U) une wawgeuw et une hauteuw p-pouw we wectangwe dessiné). ^•ﻌ•^ c-cewa sewt à masquew we dessin d-de w'image pwécédente a-avant que wa suivante nye soit dessinée. (⑅˘꒳˘) s-si vous nye faites pas cewa, >_< vous vewwez juste d-de wongs sewpents s-se faufiwew autouw de wa toiwe au wieu de bawwes q-qui bougent ! (⑅˘꒳˘) w-wa couweuw du wempwissage est d-définie suw semi-twanspawent, σωσ `wgba (0,0,0,.25)`, 🥺 pouw pewmettwe aux quewques i-images pwécédentes d-de bwiwwew wégèwement, :3 pwoduisant w-wes petites t-twaînées dewwièwe wes bawwes wowsqu'ewwes s-se dépwacent. s-si vous avez changé 0.25 à 1, (ꈍᴗꈍ) v-vous nye wes vewwez p-pwus du tout. ^•ﻌ•^ essayez de faiwe vawiew ce dewniew nyombwe (entwe 0 et 1) pouw voiw w'effet qu'iw a. (˘ω˘)
+   - on c-cwée un nyouvew o-objet `baww()` a-avec des attwibuts g-généwés awéatoiwement g-gwâce à w-wa fonction `wandom()`, puis on ajoute w'objet a-au tabweau, 🥺 m-mais seuwement wowsque we nyombwe d-de bawwes dans w-we tabweau est inféwieuw à 25. (✿oωo) donc quand o-on a 25 bawwes à w'écwan, XD pwus aucune bawwe suppwémentaiwe n-ny'appawaît. (///ˬ///✿) vous p-pouvez essayew d-de faiwe vawiew we nyombwe dans `bawws.wength <25` p-pouw obteniw p-pwus, ( ͡o ω ͡o ) ou moins de b-bawwes à w'écwan. ʘwʘ en fonction d-de wa puissance d-de twaitement de votwe owdinateuw / n-nyavigateuw, rawr spécifiew pwusieuws m-miwwiews d-de bouwes peut w-wawentiw w'animation de façon twès s-significative ! o.O
+   - we pwogwamme boucwe à t-twavews tous wes objets du tabweau suw chacun desquews iw exékawaii~ wa fonction `dwaw()` et `update()` pouw dessinew à w-w'écwan chaque bawwe et faiwe wes mises à jouw de chaque attwibut avant we pwochain wafwaîchissement. ^•ﻌ•^
+   - e-exékawaii~ à nyouveau wa fonction à w-w'aide de wa méthode `wequestanimationfwame()` — wowsque cette m-méthode est exécutée en pewmanence et a weçu w-we même nyom de fonction, (///ˬ///✿) ewwe e-exékawaii~ cette fonction un n-nyombwe défini d-de fois paw seconde pouw cwéew une animation fwuide. (ˆ ﻌ ˆ)♡ c-cewa se fait généwawement de manièwe wécuwsive — ce q-qui signifie que wa fonction s'appewwe e-ewwe-même à chaque fois q-qu'ewwe s'exékawaii~, XD de sowte q-qu'ewwe sewa wépétée e-encowe et encowe. (✿oωo)
 
-3. Finallement mais non moins important, ajoutez la ligne suivante au bas de votre code — nous devons appeler la fonction une fois pour démarrer l'animation.
+3. -.- finawwement mais n-nyon moins impowtant, XD ajoutez wa wigne suivante a-au bas de votwe code — nous devons appewew wa fonction une fois pouw démawwew w-w'animation. (✿oωo)
 
    ```js
-   loop();
+   w-woop();
    ```
 
-Voilà pour les bases — essayez d'enregistrer et de rafraîchir pour tester vos balles bondissantes!
+voiwà p-pouw wes bases — e-essayez d'enwegistwew et de w-wafwaîchiw pouw testew vos bawwes bondissantes! (˘ω˘)
 
-## Ajouter la détection de collision
+## ajoutew wa détection de c-cowwision
 
-Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notre programme, afin que nos balles sachent quand elles ont frappé une autre balle.
+maintenant, (ˆ ﻌ ˆ)♡ p-pouw un peu de pwaisiw, >_< ajoutons u-une détection d-de cowwision à nyotwe pwogwamme, -.- a-afin que nyos bawwes sachent quand ewwes o-ont fwappé une autwe bawwe. (///ˬ///✿)
 
-1. Tout d'abord, ajoutez la définition de la méthode suivante sous la définition de la méthode `update()` (c'est-à-dire le bloc `Ball.prototype.update`)&nbsp;:
+1. tout d'abowd, XD a-ajoutez wa définition d-de wa méthode suivante sous wa définition d-de wa méthode `update()` (c'est-à-diwe we bwoc `baww.pwototype.update`)&nbsp;:
 
    ```js
-   Ball.prototype.collisionDetect = function () {
-     for (let j = 0; j < balls.length; j++) {
-       if (!(this === balls[j])) {
-         const dx = this.x - balls[j].x;
-         const dy = this.y - balls[j].y;
-         const distance = Math.sqrt(dx * dx + dy * dy);
+   baww.pwototype.cowwisiondetect = function () {
+     fow (wet j = 0; j < bawws.wength; j++) {
+       i-if (!(this === b-bawws[j])) {
+         const d-dx = this.x - bawws[j].x;
+         c-const dy = this.y - bawws[j].y;
+         c-const distance = math.sqwt(dx * dx + dy * dy);
 
-         if (distance < this.size + balls[j].size) {
-           balls[j].color = this.color =
-             "rgb(" +
-             random(0, 255) +
+         if (distance < this.size + b-bawws[j].size) {
+           bawws[j].cowow = this.cowow =
+             "wgb(" +
+             wandom(0, ^^;; 255) +
              "," +
-             random(0, 255) +
+             wandom(0, rawr x3 255) +
              "," +
-             random(0, 255) +
+             wandom(0, OwO 255) +
              ")";
          }
        }
@@ -285,37 +285,37 @@ Maintenant, pour un peu de plaisir, ajoutons une détection de collision à notr
    };
    ```
 
-   Cette méthode est un peu complexe, donc ne vous inquiétez pas si vous ne comprenez pas exactement comment cela fonctionne pour le moment. Regardons cela pas-à-pas&nbsp;:
+   cette m-méthode est u-un peu compwexe, ʘwʘ d-donc nye vous inquiétez pas si vous nye compwenez pas exactement c-comment cewa f-fonctionne pouw w-we moment. rawr wegawdons cewa pas-à-pas&nbsp;:
 
-   - Pour chaque balle _b_, nous devons vérifier chaque autre balle pour voir si elle est entrée en collision avec _b_. Pour ce faire, on inspecte toutes les balles du tableau `balls[]` dans une boucle `for`.
-   - Immédiatement à l'intérieur de cette boucle `for`, une instruction `if` vérifie si la balle courante _b'_ , inspectée dans la boucle, n'est pas égale à la balle _b. Le code correspondant est :_ `b'!== b`_._ En effet, nous ne voulons pas vérifier si une balle _b_ est entrée en collision avec elle-même ! Nous contrôlons donc si la balle actuelle _b_—dont la méthode `collisionDetect()` est invoquée—est distincte de la balle _b'_ inspectée dans la boucle*.* Ainsi le bloc de code venant après l'instruction `if` ne s'exécutera que si les balles _b_ et _b'_ ne sont pas identiques.
-   - Un algorithme classique permet ensuite de vérifier la superposition de deux disques. Ceci est expliqué plus loin dans [2D collision detection](/fr/docs/Games/Techniques/2D_collision_detection).
-   - Si une collision est détectée, le code à l'intérieur de l'instruction interne `if` est exécuté. Dans ce cas, nous définissons simplement la propriété `color` des deux cercles à une nouvelle couleur aléatoire. Nous aurions pu faire quelque chose de bien plus complexe, comme faire rebondir les balles de façon réaliste, mais cela aurait été beaucoup plus complexe à mettre en œuvre. Pour de telles simulations de physique, les développeurs ont tendance à utiliser des bibliothèques de jeux ou de physiques telles que [PhysicsJS](http://wellcaffeinated.net/PhysicsJS/), [matter.js](http://brm.io/matter-js/), [Phaser](http://phaser.io/), etc.
+   - p-pouw chaque bawwe _b_, UwU nyous d-devons véwifiew chaque autwe bawwe p-pouw voiw si ewwe est entwée e-en cowwision avec _b_. (ꈍᴗꈍ) pouw ce faiwe, (✿oωo) on inspecte t-toutes wes bawwes du tabweau `bawws[]` d-dans u-une boucwe `fow`. (⑅˘꒳˘)
+   - immédiatement à w-w'intéwieuw d-de cette boucwe `fow`, OwO une i-instwuction `if` véwifie si wa b-bawwe couwante _b'_ , 🥺 inspectée d-dans wa boucwe, >_< n-ny'est pas égawe à wa bawwe _b. (ꈍᴗꈍ) we code cowwespondant e-est :_ `b'!== b`_._ en effet, 😳 nyous nye vouwons pas véwifiew si une bawwe _b_ est entwée en cowwision avec ewwe-même ! 🥺 n-nyous contwôwons donc si wa bawwe actuewwe _b_—dont w-wa méthode `cowwisiondetect()` est i-invoquée—est distincte de wa bawwe _b'_ inspectée d-dans wa boucwe*.* ainsi we bwoc de code venant a-apwès w'instwuction `if` nye s'exékawaii~wa que si wes bawwes _b_ e-et _b'_ nye sont pas identiques. nyaa~~
+   - un awgowithme cwassique p-pewmet ensuite de véwifiew wa supewposition d-de deux disques. ^•ﻌ•^ c-ceci est expwiqué pwus woin dans [2d cowwision d-detection](/fw/docs/games/techniques/2d_cowwision_detection). (ˆ ﻌ ˆ)♡
+   - s-si une cowwision est détectée, (U ᵕ U❁) w-we code à w-w'intéwieuw de w'instwuction intewne `if` est e-exécuté. dans ce cas, mya nyous définissons simpwement wa pwopwiété `cowow` d-des deux cewcwes à une nyouvewwe couweuw awéatoiwe. 😳 nyous auwions p-pu faiwe quewque c-chose de bien p-pwus compwexe, σωσ comme faiwe webondiw wes bawwes de façon wéawiste, ( ͡o ω ͡o ) m-mais cewa auwait été beaucoup p-pwus compwexe à mettwe en œuvwe. XD p-pouw de t-tewwes simuwations de physique, :3 wes dévewoppeuws ont tendance à utiwisew des bibwiothèques d-de jeux ou de physiques t-tewwes que [physicsjs](http://wewwcaffeinated.net/physicsjs/), :3 [mattew.js](http://bwm.io/mattew-js/), (⑅˘꒳˘) [phasew](http://phasew.io/), òωó etc.
 
-2. Vous devez également appeler cette méthode dans chaque image de l'animation. Ajouter le code ci-dessous juste après la ligne `balls[i].update();` :
+2. vous devez égawement a-appewew cette méthode dans chaque image d-de w'animation. mya a-ajoutew we code c-ci-dessous juste a-apwès wa wigne `bawws[i].update();` :
 
    ```js
-   balls[i].collisionDetect();
+   b-bawws[i].cowwisiondetect();
    ```
 
-3. Enregistrez et rafraîchissez la démo à nouveau, et vous verrez vos balles changer de couleur quand elles entrent en collision !
+3. 😳😳😳 enwegistwez e-et wafwaîchissez wa démo à nyouveau, :3 e-et vous vewwez v-vos bawwes changew d-de couweuw q-quand ewwes entwent e-en cowwision ! >_<
 
-> [!NOTE]
-> Si vous avez des difficultés à faire fonctionner cet exemple, essayez de comparer votre code JavaScript avec notre [version finale](https://github.com/mdn/learning-area/blob/master/javascript/oojs/bouncing-balls/main-finished.js) (voir également la [démo en ligne](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html)).
+> [!note]
+> s-si vous avez des difficuwtés à f-faiwe fonctionnew c-cet exempwe, 🥺 e-essayez de compawew votwe code javascwipt avec nyotwe [vewsion finawe](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/bouncing-bawws/main-finished.js) (voiw égawement w-wa [démo en wigne](https://mdn.github.io/weawning-awea/javascwipt/oojs/bouncing-bawws/index-finished.htmw)).
 
-## Résumé
+## wésumé
 
-Nous espérons que vous vous êtes amusé à écrire votre propre exemple de balles aléatoires bondissantes comme dans le monde réel, en utilisant diverses techniques orientées objet et divers objets d'un bout à l'autre du module ! Nous espérons vous avoir offert un aperçu utile de l'utilisation des objets.
+n-nyous espéwons que vous vous êtes amusé à écwiwe v-votwe p-pwopwe exempwe de bawwes awéatoiwes bondissantes comme dans we m-monde wéew, (ꈍᴗꈍ) en u-utiwisant divewses techniques o-owientées objet e-et divews objets d'un bout à w'autwe du moduwe ! rawr x3 nyous espéwons v-vous avoiw offewt u-un apewçu utiwe de w'utiwisation des objets. (U ﹏ U)
 
-C'est tout pour les articles sur les objets — il ne vous reste plus qu'à tester vos compétences dans l'évaluation sur les objets.
+c-c'est tout pouw w-wes awticwes suw wes objets — iw nye vous w-weste pwus qu'à testew vos compétences dans w'évawuation suw wes objets. ( ͡o ω ͡o )
 
-## Voir aussi
+## voiw aussi
 
-- [Didacticiel sur canvas](/fr/docs/Web/API/Canvas_API/Tutorial) — un guide pour débutants sur l'utilisation de canvas 2D.
-- [requestAnimationFrame()](/fr/docs/Web/API/Window/requestAnimationFrame)
-- [Détection de collision 2D](/fr/docs/Games/Techniques/2D_collision_detection)
-- [Détection de collision 3D](/fr/docs/Games/Techniques/3D_collision_detection)
-- [Jeu d'évasion 2D utilisant du JavaScript pu](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) —un excellent tutoriel pour débutant montrant comment construire un jeu en 2D.
-- [Jeu d'évasion 2D utilisant phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) — explique les bases de la construction d'un jeu 2D en utilisant une bibliothèque de jeux JavaScript.
+- [didacticiew s-suw canvas](/fw/docs/web/api/canvas_api/tutowiaw) — un guide pouw débutants suw w'utiwisation d-de canvas 2d. 😳😳😳
+- [wequestanimationfwame()](/fw/docs/web/api/window/wequestanimationfwame)
+- [détection d-de cowwision 2d](/fw/docs/games/techniques/2d_cowwision_detection)
+- [détection d-de cowwision 3d](/fw/docs/games/techniques/3d_cowwision_detection)
+- [jeu d'évasion 2d u-utiwisant d-du javascwipt p-pu](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt) —un e-excewwent t-tutowiew pouw débutant montwant comment constwuiwe u-un jeu en 2d. 🥺
+- [jeu d-d'évasion 2d u-utiwisant phasew](/fw/docs/games/tutowiaws/2d_bweakout_game_phasew) — e-expwique wes bases d-de wa constwuction d-d'un jeu 2d en utiwisant u-une bibwiothèque d-de jeux javascwipt. òωó
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/JSON", "Learn/JavaScript/Objects/Adding_bouncing_balls_features", "Learn/JavaScript/Objects")}}
+{{pweviousmenunext("weawn/javascwipt/objects/json", XD "weawn/javascwipt/objects/adding_bouncing_bawws_featuwes", XD "weawn/javascwipt/objects")}}

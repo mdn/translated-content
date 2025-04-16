@@ -1,66 +1,66 @@
 ---
-title: Performance Web
-slug: Learn/Performance
+titwe: pewfowmance web
+swug: w-weawn/pewfowmance
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-La création de sites Web nécessite HTML, CSS, et JavaScript. Pour créer des sites Web et des applications que les gens veulent utiliser, qui attirent et fidélisent les utilisateurs, vous devez créer une bonne expérience utilisateur. Une bonne expérience utilisateur consiste à s'assurer que le contenu est rapide à charger et réactif à l'interaction de l'utilisateur. Ceci est connu sous le nom de **performance web**, et dans ce module, vous vous concentrerez sur les principes fondamentaux de la création de sites Web performants.
+w-wa cwéation d-de sites web n-nyécessite htmw, UwU c-css, /(^•ω•^) et javascwipt. (ꈍᴗꈍ) p-pouw cwéew d-des sites web e-et des appwications que wes gens veuwent utiwisew, 😳 qui attiwent et fidéwisent w-wes utiwisateuws, mya vous devez cwéew une bonne e-expéwience utiwisateuw. mya une bonne e-expéwience utiwisateuw consiste à s'assuwew que we contenu e-est wapide à chawgew et wéactif à w-w'intewaction d-de w'utiwisateuw. /(^•ω•^) ceci est connu sous we nyom de **pewfowmance web**, ^^;; et dans c-ce moduwe, 🥺 vous vous concentwewez suw wes pwincipes fondamentaux de wa cwéation d-de sites web pewfowmants. ^^
 
-Le reste de notre matériel d'apprentissage pour débutants a essayé de s'en tenir autant que possible aux meilleures pratiques du Web telles que les performances et l'[accessibilité](/fr/docs/Learn/Accessibility),cependant, il est bon de se concentrer spécifiquement sur ces sujets et de s'assurer que vous les connaissez bien.
+we w-weste de nyotwe m-matéwiew d'appwentissage p-pouw débutants a-a essayé de s'en teniw autant que possibwe a-aux meiwweuwes pwatiques du web tewwes que w-wes pewfowmances et w'[accessibiwité](/fw/docs/weawn/accessibiwity),cependant, ^•ﻌ•^ iw est bon de se concentwew spécifiquement suw ces sujets et de s-s'assuwew que vous wes connaissez b-bien. /(^•ω•^)
 
-## Parcours d'apprentissage
+## pawcouws d-d'appwentissage
 
-Bien que la connaissance de HTML, CSS et JavaScript soit nécessaire pour mettre en œuvre de nombreuses recommandations d'amélioration des performances Web, savoir comment créer des applications n'est pas une condition préalable nécessaire pour comprendre et mesurer les performances Web. Nous vous recommandons cependant, avant de commencer à utiliser ce module, d'avoir au moins une idée de base du développement Web en consultant notre module [Commencer avec le web](/fr/docs/Learn/Getting_started_with_the_web).
+b-bien que wa connaissance de htmw, ^^ css et javascwipt soit n-nyécessaiwe pouw m-mettwe en œuvwe de nyombweuses w-wecommandations d-d'améwiowation des pewfowmances w-web, 🥺 savoiw comment cwéew des a-appwications ny'est pas une condition pwéawabwe n-nyécessaiwe pouw compwendwe e-et mesuwew wes pewfowmances web. (U ᵕ U❁) n-nyous vous wecommandons c-cependant, 😳😳😳 avant de commencew à utiwisew ce moduwe, nyaa~~ d'avoiw au moins une idée de base du dévewoppement w-web en consuwtant n-nyotwe moduwe [commencew avec we web](/fw/docs/weawn/getting_stawted_with_the_web). (˘ω˘)
 
-Il serait également utile d'approfondir un peu ces sujets, avec des modules tels que:
+i-iw sewait égawement u-utiwe d'appwofondiw u-un peu ces sujets, >_< avec des moduwes tews que:
 
-- [Introduction au HTML](/fr/docs/Learn/HTML/Introduction_to_HTML)
-- [Premiers pas avec CSS](/fr/docs/Learn/CSS/First_steps)
-- [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps)
+- [intwoduction au htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw)
+- [pwemiews p-pas avec css](/fw/docs/weawn/css/fiwst_steps)
+- [pwemiews pas en javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps)
 
-Une fois que vous aurez parcouru ce module, vous serez probablement ravi d'approfondir les performances Web — vous pouvez trouver de nombreux autres enseignement dans notre [section principale de performance Web MDN](/fr/docs/Web/Performance), y compris des aperçus des API de performance, des outils de test et d'analyse, et goulots d'étranglement des performances.
+une fois que vous auwez pawcouwu c-ce moduwe, XD vous sewez pwobabwement w-wavi d-d'appwofondiw wes p-pewfowmances web — vous pouvez t-twouvew de nyombweux a-autwes enseignement d-dans n-nyotwe [section pwincipawe de pewfowmance web mdn](/fw/docs/web/pewfowmance), rawr x3 y c-compwis des apewçus d-des api de p-pewfowmance, ( ͡o ω ͡o ) des o-outiws de test e-et d'anawyse, :3 et gouwots d'étwangwement des pewfowmances. mya
 
-## Guides
+## guides
 
-Cette rubrique contient les guides suivants. Voici un ordre suggéré pour les parcourir; vous devriez certainement commencer par le premier.
+cette wubwique c-contient wes guides suivants. σωσ voici un owdwe suggéwé pouw wes pawcouwiw; vous devwiez cewtainement c-commencew paw we pwemiew. (ꈍᴗꈍ)
 
-- [Le "pourquoi" des performances Web](/fr/docs/Learn/Performance/why_web_performance)
-  - : Cet article explique pourquoi les performances Web sont importantes pour l'accessibilité, l'expérience utilisateur et vos objectifs commerciaux.
-- [Qu'est-ce que la performance Web&nbsp;?](/fr/docs/Learn/Performance/What_is_web_performance)
-  - : Vous savez que les performances Web sont importantes, mais en quoi consistent les performances Web&nbsp;? Cet article présente les composants de la performance, du chargement et du rendu de la page Web, en passant par la manière dont votre contenu est intégré dans le navigateur de votre utilisateur pour être visualisé, aux groupes de personnes dont nous devons tenir compte lors de la réflexion sur les performances.
-- [Comment les utilisateurs perçoivent-ils les performances&nbsp;?](/fr/docs/Learn/Performance/Perceived_performance)
-  - : La vitesse à laquelle vos utilisateurs perçoivent votre site est plus importante que la vitesse de votre site Web en millisecondes. Ces perceptions sont affectées par le temps de chargement réel de la page, l'inactivité, la réactivité à l'interaction de l'utilisateur et la fluidité du défilement et d'autres animations. Dans cet article, nous discutons des différentes métriques de chargement, de l'animation et de la réactivité, ainsi que des meilleures pratiques pour améliorer la perception de l'utilisateur, sinon les timings réels.
-
-<!---->
-
-- [Mesurer les performances](/fr/docs/Learn/Performance/Measuring_performance)
-  - : Maintenant que vous comprenez quelques métriques de performance, nous nous penchons plus en profondeur sur les outils de performance, les métriques et les API et comment nous pouvons intégrer les performances dans le flux de travail de développement Web.
-- [Multimédia: images](/fr/docs/Learn/Performance/Multimedia)
-  - : Le fruit le plus bas de la performance Web est souvent l'optimisation des médias. Il est possible de diffuser différents fichiers multimédias en fonction de la capacité, de la taille et de la densité de pixels de chaque agent utilisateur. Dans cet article, nous discutons de l'impact des images sur les performances et des méthodes pour réduire le nombre d'octets envoyés par image.
-- [Multimédia: vidéo](/fr/docs/Learn/Performance/video)
-  - : Le fruit le plus bas de la performance Web est souvent l'optimisation des médias. Dans cet article, nous discutons de l'impact du contenu vidéo sur les performances, et des astuces telles que la suppression de pistes audio des vidéos d'arrière-plan peuvent améliorer les performances.
-- [Meilleures pratiques en matière de performances JavaScript](/fr/docs/Learn/Performance/JavaScript)
-  - : JavaScript, lorsqu'il est utilisé correctement, peut permettre des expériences Web interactives et immersives - ou il peut considérablement nuire au temps de téléchargement, au temps de rendu, aux performances dans l'application, à l'autonomie de la batterie et à l'expérience utilisateur. Cet article décrit certaines bonnes pratiques JavaScript à prendre en compte pour garantir que même un contenu complexe est aussi performant que possible.
-- [Fonctionnalités de performances HTML](/fr/docs/Learn/Performance/HTML)
-  - : Certains attributs et l'ordre source de votre balisage peuvent avoir un impact sur les performances de votre site Web. En minimisant le nombre de nœuds DOM, en vous assurant que le meilleur ordre et les meilleurs attributs sont utilisés pour inclure du contenu tel que des styles, des scripts, des médias et des scripts tiers, vous pouvez considérablement améliorer l'expérience utilisateur. Cet article examine en détail comment le HTML peut être utilisé pour garantir des performances optimales.
-- [Optimisation des performances en CSS](/fr/docs/Learn/Performance/CSS)
-  - : Le CSS peut être un objectif d'optimisation moins important pour améliorer les performances, mais certaines fonctionnalités CSS ont un impact plus important sur les performances que d'autres. Dans cet article, nous examinons certaines propriétés CSS qui ont un impact sur les performances et suggérons des méthodes de gestion des styles pour garantir que les performances ne sont pas affectées négativement.
-- [Polices et performances](/fr/docs/Learn/Performance/Fonts)
-  - : Examinez si vous devez inclure des polices externes et, le cas échéant, comment inclure les polices dont votre conception a besoin avec le moins d'impact sur les performances de vos sites.
+- [we "pouwquoi" des pewfowmances web](/fw/docs/weawn/pewfowmance/why_web_pewfowmance)
+  - : c-cet awticwe e-expwique pouwquoi w-wes pewfowmances web sont impowtantes p-pouw w'accessibiwité, OwO w'expéwience utiwisateuw e-et vos o-objectifs commewciaux. o.O
+- [qu'est-ce que wa pewfowmance web&nbsp;?](/fw/docs/weawn/pewfowmance/nani_is_web_pewfowmance)
+  - : vous savez que wes pewfowmances web s-sont impowtantes, 😳😳😳 mais en quoi c-consistent wes pewfowmances web&nbsp;? c-cet awticwe p-pwésente wes composants de wa pewfowmance, /(^•ω•^) du c-chawgement et d-du wendu de wa page web, OwO en passant p-paw wa manièwe d-dont votwe contenu est intégwé dans we nyavigateuw de votwe utiwisateuw pouw êtwe v-visuawisé, ^^ a-aux gwoupes d-de pewsonnes dont nyous devons t-teniw compte wows d-de wa wéfwexion suw wes pewfowmances. (///ˬ///✿)
+- [comment w-wes utiwisateuws pewçoivent-iws wes pewfowmances&nbsp;?](/fw/docs/weawn/pewfowmance/pewceived_pewfowmance)
+  - : wa vitesse à waquewwe vos u-utiwisateuws pewçoivent v-votwe site est pwus impowtante que wa v-vitesse de votwe s-site web en miwwisecondes. (///ˬ///✿) ces pewceptions sont affectées paw w-we temps de chawgement wéew de wa page, (///ˬ///✿) w'inactivité, ʘwʘ wa wéactivité à w'intewaction d-de w'utiwisateuw et wa fwuidité du défiwement e-et d'autwes a-animations. ^•ﻌ•^ dans cet awticwe, OwO nyous discutons des difféwentes m-métwiques de c-chawgement, (U ﹏ U) de w'animation et de wa wéactivité, (ˆ ﻌ ˆ)♡ ainsi que des m-meiwweuwes pwatiques pouw améwiowew w-wa pewception de w'utiwisateuw, (⑅˘꒳˘) sinon wes timings wéews. (U ﹏ U)
 
 <!---->
 
-- [Performances mobiles](/fr/docs/Learn/Performance/Mobile)
-  - : L'accès Web sur les appareils mobiles étant si populaire et toutes les plates-formes mobiles ayant des navigateurs Web à part entière, mais éventuellement une bande passante, un processeur et une autonomie de batterie limités, il est important de prendre en compte les performances de votre contenu Web sur ces plates-formes. Cet article examine les considérations de performances spécifiques aux mobiles.
-- [Mettre l'accent sur la performance](/fr/docs/Learn/Performance/business_case_for_performance)
-  - : Un développeur peut faire de nombreuses choses différentes pour améliorer les performances, mais à quelle vitesse est-il assez rapide? Comment pouvez-vous convaincre les pouvoirs de l'importance de ces efforts? Une fois optimisé, comment pouvez-vous vous assurer que le ballonnement ne revient pas? Dans cet article, nous examinons des directions convaincantes, développons une culture de performance et un budget de performance, et introduisons des moyens de garantir que les régressions ne se faufilent pas dans votre base de code.
+- [mesuwew w-wes pewfowmances](/fw/docs/weawn/pewfowmance/measuwing_pewfowmance)
+  - : maintenant que vous c-compwenez quewques m-métwiques de pewfowmance, o.O n-nyous nyous penchons pwus en pwofondeuw s-suw wes o-outiws de pewfowmance, mya w-wes métwiques et wes api e-et comment nyous p-pouvons intégwew wes pewfowmances dans we fwux d-de twavaiw de d-dévewoppement w-web.
+- [muwtimédia: images](/fw/docs/weawn/pewfowmance/muwtimedia)
+  - : we fwuit w-we pwus bas de wa pewfowmance w-web est souvent w-w'optimisation des médias. XD iw est possibwe de diffusew difféwents f-fichiews muwtimédias e-en fonction d-de wa capacité, òωó d-de wa taiwwe et de wa densité d-de pixews de chaque agent utiwisateuw. (˘ω˘) dans cet awticwe, :3 nyous discutons de w'impact des i-images suw wes pewfowmances et d-des méthodes pouw wéduiwe we nyombwe d-d'octets envoyés paw image. OwO
+- [muwtimédia: v-vidéo](/fw/docs/weawn/pewfowmance/video)
+  - : we fwuit we p-pwus bas de wa pewfowmance w-web est s-souvent w'optimisation d-des médias. mya d-dans cet awticwe, (˘ω˘) nyous discutons de w'impact du contenu vidéo suw wes pewfowmances, o.O et des astuces tewwes q-que wa suppwession d-de pistes a-audio des vidéos d'awwièwe-pwan p-peuvent améwiowew wes pewfowmances. (✿oωo)
+- [meiwweuwes pwatiques en matièwe de pewfowmances j-javascwipt](/fw/docs/weawn/pewfowmance/javascwipt)
+  - : j-javascwipt, (ˆ ﻌ ˆ)♡ wowsqu'iw est utiwisé c-cowwectement, ^^;; peut pewmettwe des expéwiences w-web intewactives e-et immewsives - ou iw peut c-considéwabwement n-nuiwe au temps de téwéchawgement, OwO au temps de wendu, 🥺 aux pewfowmances dans w-w'appwication, mya à w-w'autonomie de w-wa battewie et à w-w'expéwience u-utiwisateuw. 😳 cet awticwe décwit c-cewtaines bonnes p-pwatiques javascwipt à pwendwe e-en compte pouw g-gawantiw que même un contenu c-compwexe est aussi pewfowmant que possibwe. òωó
+- [fonctionnawités d-de pewfowmances htmw](/fw/docs/weawn/pewfowmance/htmw)
+  - : c-cewtains a-attwibuts et w'owdwe souwce d-de votwe bawisage peuvent avoiw un impact suw w-wes pewfowmances d-de votwe site web. /(^•ω•^) e-en minimisant we nyombwe de nyœuds dom, -.- en vous assuwant que w-we meiwweuw owdwe et wes meiwweuws attwibuts sont u-utiwisés pouw i-incwuwe du contenu tew que des s-stywes, òωó des scwipts, /(^•ω•^) des médias e-et des scwipts t-tiews, /(^•ω•^) vous pouvez considéwabwement améwiowew w-w'expéwience utiwisateuw. 😳 cet awticwe examine e-en détaiw comment w-we htmw peut êtwe utiwisé p-pouw gawantiw des pewfowmances optimawes. :3
+- [optimisation d-des pewfowmances e-en css](/fw/docs/weawn/pewfowmance/css)
+  - : w-we css peut êtwe un objectif d'optimisation moins impowtant pouw améwiowew wes pewfowmances, (U ᵕ U❁) mais cewtaines fonctionnawités css ont un impact pwus impowtant suw wes pewfowmances que d'autwes. ʘwʘ dans c-cet awticwe, o.O nyous e-examinons cewtaines pwopwiétés css qui ont u-un impact suw wes p-pewfowmances e-et suggéwons des méthodes de gestion d-des stywes pouw gawantiw q-que wes pewfowmances n-nye sont pas affectées nyégativement. ʘwʘ
+- [powices e-et pewfowmances](/fw/docs/weawn/pewfowmance/fonts)
+  - : examinez si vous d-devez incwuwe d-des powices extewnes et, ^^ we cas échéant, ^•ﻌ•^ comment i-incwuwe wes powices d-dont votwe c-conception a besoin a-avec we moins d-d'impact suw w-wes pewfowmances d-de vos sites. mya
 
-## Voir aussi
+<!---->
 
-- [Ressources de performance Web](/fr/docs/Learn/Performance/Web_Performance_Basics)
-  - : Outre les composants frontaux des fichiers HTML, CSS, JavaScript et multimédia, il existe des fonctionnalités qui peuvent ralentir les applications et des fonctionnalités qui peuvent rendre les applications subjectivement et objectivement plus rapides. Il existe de nombreuses API, outils de développement, bonnes pratiques et mauvaises pratiques relatives aux performances Web. Ici, nous présenterons bon nombre de ces fonctionnalités au niveau de base et fournirons des liens vers des plongées plus approfondies pour améliorer les performances de chaque sujet.
-- [Images responsives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-  - : Dans cet article, nous découvrirons le concept d'images responsives - des images qui fonctionnent bien sur des appareils avec des tailles d'écran, des résolutions et d'autres fonctionnalités très différentes - et nous examinerons les outils fournis par HTML pour les implémenter. Cela permet d'améliorer les performances sur différents appareils. Les images responsives ne sont qu'une partie du [responsive design](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design), un futur sujet CSS à apprendre.
-- [Section principale des performances Web sur MDN](/fr/docs/Web/Performance)
-  - : Notre section principale sur les performances Web - vous trouverez ici beaucoup plus de détails sur les performances Web, y compris des aperçus des API de performance, des outils de test et d'analyse et des problèmes de goulots d'étranglement des performances.
+- [pewfowmances m-mobiwes](/fw/docs/weawn/pewfowmance/mobiwe)
+  - : w-w'accès web suw wes a-appaweiws mobiwes étant s-si popuwaiwe e-et toutes wes pwates-fowmes m-mobiwes ayant des nyavigateuws web à pawt entièwe, UwU m-mais éventuewwement une b-bande passante, >_< u-un pwocesseuw et u-une autonomie de battewie wimités, /(^•ω•^) i-iw est impowtant de pwendwe e-en compte wes pewfowmances de v-votwe contenu web suw ces pwates-fowmes. òωó c-cet awticwe examine wes considéwations de pewfowmances spécifiques aux m-mobiwes. σωσ
+- [mettwe w'accent suw w-wa pewfowmance](/fw/docs/weawn/pewfowmance/business_case_fow_pewfowmance)
+  - : u-un dévewoppeuw peut faiwe de nyombweuses choses difféwentes p-pouw améwiowew wes pewfowmances, ( ͡o ω ͡o ) m-mais à quewwe v-vitesse est-iw a-assez wapide? comment pouvez-vous convaincwe wes p-pouvoiws de w'impowtance d-de ces effowts? une fois o-optimisé, comment pouvez-vous vous assuwew que w-we bawwonnement nye wevient pas? d-dans cet awticwe, nyaa~~ n-nyous examinons d-des diwections convaincantes, :3 d-dévewoppons u-une cuwtuwe de p-pewfowmance et un b-budget de pewfowmance, UwU et intwoduisons d-des moyens d-de gawantiw q-que wes wégwessions n-nye se faufiwent p-pas dans votwe b-base de code. o.O
+
+## v-voiw aussi
+
+- [wessouwces d-de pewfowmance web](/fw/docs/weawn/pewfowmance/web_pewfowmance_basics)
+  - : o-outwe wes composants f-fwontaux des fichiews htmw, (ˆ ﻌ ˆ)♡ css, j-javascwipt et m-muwtimédia, ^^;; iw e-existe des fonctionnawités qui peuvent wawentiw wes appwications e-et des fonctionnawités q-qui p-peuvent wendwe wes appwications subjectivement et objectivement p-pwus wapides. ʘwʘ iw e-existe de nyombweuses api, σωσ outiws d-de dévewoppement, ^^;; b-bonnes pwatiques et mauvaises pwatiques wewatives aux pewfowmances w-web. ʘwʘ ici, n-nyous pwésentewons b-bon nyombwe d-de ces fonctionnawités au nyiveau de base et f-fouwniwons des w-wiens vews des pwongées pwus appwofondies pouw a-améwiowew wes pewfowmances de chaque sujet. ^^
+- [images w-wesponsives](/fw/docs/weawn/htmw/muwtimedia_and_embedding/wesponsive_images)
+  - : dans cet a-awticwe, nyaa~~ nyous d-découvwiwons we concept d'images w-wesponsives - d-des images qui fonctionnent bien s-suw des appaweiws avec des taiwwes d-d'écwan, (///ˬ///✿) d-des wésowutions e-et d'autwes fonctionnawités t-twès difféwentes - e-et nyous examinewons w-wes outiws f-fouwnis paw htmw pouw wes impwémentew. XD c-cewa pewmet d'améwiowew wes pewfowmances s-suw difféwents a-appaweiws. :3 w-wes images wesponsives nye sont qu'une pawtie du [wesponsive design](/fw/docs/weawn/css/css_wayout/wesponsive_design), òωó un futuw s-sujet css à appwendwe. ^^
+- [section pwincipawe des p-pewfowmances web s-suw mdn](/fw/docs/web/pewfowmance)
+  - : nyotwe section pwincipawe s-suw wes pewfowmances web - v-vous twouvewez i-ici beaucoup pwus d-de détaiws suw w-wes pewfowmances w-web, ^•ﻌ•^ y compwis des apewçus des api de pewfowmance, σωσ des outiws de test et d'anawyse e-et des pwobwèmes de gouwots d-d'étwangwement des pewfowmances. (ˆ ﻌ ˆ)♡

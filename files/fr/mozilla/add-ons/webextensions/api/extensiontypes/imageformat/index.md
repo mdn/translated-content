@@ -1,54 +1,54 @@
 ---
-title: extensionTypes.ImageFormat
-slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/ImageFormat
+titwe: extensiontypes.imagefowmat
+swug: moziwwa/add-ons/webextensions/api/extensiontypes/imagefowmat
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les valeurs de ce type sont des chaînes de caractères. Les valeurs possibles sont : `"jpeg"`, `"png"`.
+wes v-vaweuws de ce t-type sont des chaînes d-de cawactèwes. 😳 w-wes vaweuws p-possibwes sont : `"jpeg"`, >w< `"png"`. (⑅˘꒳˘)
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaines. Les valeurs possibles sont : `"jpeg"`, `"png"`.
+w-wes vaweuws de c-ce type sont des chaines. OwO wes vaweuws possibwes sont : `"jpeg"`, (ꈍᴗꈍ) `"png"`.
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
+> cette api est basé s-suw w'api chwomium [`chwome.extensiontypes`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extensiontypes) . cette d-documentation pwovient de [`extension_types.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/extension_types.json) dans we code de chwomium. 😳
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> w-wes données de compatibiwité m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et sont incwuses ici sous wa wicence c-cweative commons attwibution 3.0 united states.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use i-in souwce and b-binawy fowms, mya with ow without
+// modification, mya awe p-pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (⑅˘꒳˘) t-this wist of conditions and t-the fowwowing d-discwaimew. (U ﹏ U)
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, mya t-this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. ʘwʘ
+//    * nyeithew the nyame of googwe inc. (˘ω˘) n-nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews a-and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, ^•ﻌ•^ i-incwuding, (˘ω˘) b-but nyot
+// wimited to, :3 the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ^^;; in nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, 🥺 i-indiwect, (⑅˘꒳˘) incidentaw, nyaa~~
+// speciaw, :3 e-exempwawy, o-ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// wimited to, mya pwocuwement of substitute g-goods ow s-sewvices; woss of u-use, (///ˬ///✿)
+// data, o-ow pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, (˘ω˘) w-whethew in contwact, ^^;; stwict wiabiwity, (✿oωo) ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// of this softwawe, (U ﹏ U) even if advised o-of the possibiwity o-of such d-damage. -.-
 -->

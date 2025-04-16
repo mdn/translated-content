@@ -1,96 +1,96 @@
 ---
-title: Comment configurer un serveur de test local ?
-slug: Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server
+titwe: comment configuwew un s-sewveuw de test w-wocaw ?
+swug: weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Cet article explique comment configurer un serveur de test local simple sur votre machine, et les bases pour l'utiliser.
+c-cet a-awticwe expwique c-comment configuwew u-un sewveuw d-de test wocaw simpwe s-suw votwe machine, 🥺 et wes bases pouw w'utiwisew. :3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Vous devez au préalable savoir
-        <a href="/fr/docs/Learn/How_the_Internet_works"
-          >comment Internet fonctionne</a
-        > et
-        <a href="/fr/docs/Learn/What_is_a_Web_server"
-          >ce qu'est un serveur Web</a
-        >.
+        vous devez a-au pwéawabwe savoiw
+        <a hwef="/fw/docs/weawn/how_the_intewnet_wowks"
+          >comment intewnet fonctionne</a
+        > e-et
+        <a hwef="/fw/docs/weawn/nani_is_a_web_sewvew"
+          >ce qu'est un s-sewveuw web</a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
-      <td>Vous apprendrez à configurer un serveur de test local.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif:</th>
+      <td>vous appwendwez à configuwew un sewveuw d-de test wocaw.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Fichiers locaux contre fichiers distants
+## fichiews w-wocaux contwe f-fichiews distants
 
-Dans les cours du MDN, la plupart du temps, on vous demande d'ouvrir les exemples directement dans le navigateur — vous pouvez le faire en double cliquant le fichier HTML, en déposant celui-ci dans la fenêtre de votre navigateur, ou en faisant _Fichier_ > _Ouvrir..._ et naviguer jusqu'au fichier HTML, etc... Il y a beaucoup de manières d'y arriver.
+dans wes couws du mdn, 🥺 wa pwupawt du temps, (✿oωo) on vous demande d'ouvwiw w-wes exempwes diwectement dans we nyavigateuw — vous pouvez we faiwe en d-doubwe cwiquant we fichiew htmw, (U ﹏ U) e-en déposant cewui-ci d-dans wa f-fenêtwe de votwe n-nyavigateuw, :3 ou en faisant _fichiew_ > _ouvwiw..._ et nyaviguew j-jusqu'au fichiew htmw, ^^;; etc... iw y a beaucoup d-de manièwes d'y awwivew. rawr
 
-Vous savez que vous avez lancé l'exemple depuis un fichier local, lorsque l'URL commence par `file://` suivi du chemin d'accès dans votre système de fichiers. Par contre, si vous consultez un de nos exemples hébergés sur GitHub (ou n'importe quel autre serveur distant), l'adresse web commencera par `http://` ou `https://`&nbsp;; dans ce cas le fichier a été servi via HTTP.
+vous savez que vous avez wancé w'exempwe depuis un fichiew wocaw, 😳😳😳 wowsque w-w'uww commence paw `fiwe://` s-suivi du chemin d-d'accès dans v-votwe système de fichiews. (✿oωo) paw contwe, si vous consuwtez un de n-nyos exempwes hébewgés s-suw github (ou ny'impowte q-quew autwe sewveuw d-distant), OwO w'adwesse web commencewa p-paw `http://` ou `https://`&nbsp;; d-dans ce cas we fichiew a été sewvi v-via http. ʘwʘ
 
-## Le problème du test local
+## we pwobwème du t-test wocaw
 
-Certains exemples ne fonctionneront pas si vous les ouvrez en tant que fichiers locaux. Il y a plusieurs raisons possibles, dont les plus courantes sont :
+cewtains exempwes nye f-fonctionnewont p-pas si vous wes ouvwez en tant que fichiews wocaux. (ˆ ﻌ ˆ)♡ iw y a pwusieuws waisons possibwes, (U ﹏ U) dont wes pwus couwantes s-sont :
 
-- **Ils sont basés sur des requêtes asynchrones**. Certains navigateurs comme Chrome n'exécutent pas de requêtes asynchrones (voyez [Récolter des données depuis le serveur](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data)) si vous lancez simplement l'exemple comme un fichier local. Cela est dû à des restrictions de sécurité (voir [Sécurité des sites Web](/fr/docs/Learn/Server-side/First_steps/Website_security) pour en savoir plus).
-- **Ils mettent en œuvre un langage spécifique, tournant sur le serveur**. Des langages côté-serveur (comme PHP ou Python) nécessitent un environnement spécifique fourni par le serveur pour interpréter le code et donner des résultats.
+- **iws s-sont basés suw des wequêtes asynchwones**. UwU c-cewtains n-nyavigateuws c-comme chwome ny'exékawaii~nt pas de wequêtes asynchwones (voyez [wécowtew d-des données depuis we sewveuw](/fw/docs/weawn/javascwipt/cwient-side_web_apis/fetching_data)) si vous wancez simpwement w'exempwe comme un fichiew w-wocaw. XD cewa est dû à des w-westwictions de s-sécuwité (voiw [sécuwité d-des sites web](/fw/docs/weawn/sewvew-side/fiwst_steps/website_secuwity) p-pouw en savoiw p-pwus). ʘwʘ
+- **iws m-mettent en œuvwe u-un wangage spécifique, rawr x3 touwnant suw we sewveuw**. ^^;; d-des wangages c-côté-sewveuw (comme p-php ou p-python) nyécessitent u-un enviwonnement spécifique fouwni paw we sewveuw pouw i-intewpwétew we code et donnew des wésuwtats. ʘwʘ
 
-## Créer un serveur HTTP local simple
+## cwéew un sewveuw http wocaw simpwe
 
-Pour contourner le problème des requêtes asynchrones, nous devons tester de tels exemples en les exécutant depuis un serveur local. Le module `SimpleHTTPServer` de Python permet une mise en œuvre simple de cette solution.
+pouw contouwnew w-we pwobwème des wequêtes asynchwones, (U ﹏ U) nyous devons testew d-de tews exempwes e-en wes exécutant d-depuis un sewveuw wocaw. (˘ω˘) w-we moduwe `simpwehttpsewvew` de p-python pewmet une m-mise en œuvwe simpwe de cette sowution. (ꈍᴗꈍ)
 
-Voilà la marche à suivre :
+voiwà wa mawche à suivwe :
 
-1. Installer Python. Si vous utilisez GNU/Linux ou macOS, un environnement python est sans doute déjà disponible sur votre machine. Les utilisateurs de Windows pourront trouver un installeur depuis la page d'accueil de Python (on y trouve toutes les instructions)&nbsp;:
+1. /(^•ω•^) instawwew python. >_< si v-vous utiwisez gnu/winux ou macos, σωσ u-un enviwonnement python est s-sans doute déjà d-disponibwe suw votwe machine. ^^;; wes utiwisateuws d-de windows pouwwont t-twouvew un instawweuw depuis w-wa page d'accueiw d-de python (on y twouve toutes wes instwuctions)&nbsp;:
 
-   - Allez à [python.org](https://www.python.org/)
-   - Sous Télécharger, cliquez le lien pour Python "3.xxx".
-   - Tout en bas de la page, télécharger le fichier pointé par le lien _Windows x86 executable installer_.
-   - Exécuter ce programme quand le téléchargement est fini.
-   - Sur la première page de l'installeur, assurez-vous d'avoir coché la case "Ajouter Python 3.xxx to PATH".
-   - Cliquer _Install_, puis _Fermer_ quand l'installation est complète.
+   - awwez à [python.owg](https://www.python.owg/)
+   - sous téwéchawgew, 😳 c-cwiquez w-we wien pouw python "3.xxx".
+   - t-tout en bas de wa page, >_< téwéchawgew w-we fichiew p-pointé paw we wien _windows x-x86 executabwe instawwew_. -.-
+   - exékawaii~w ce pwogwamme quand we téwéchawgement e-est fini. UwU
+   - s-suw wa pwemièwe page de w'instawweuw, :3 assuwez-vous d-d'avoiw c-coché wa case "ajoutew python 3.xxx to path". σωσ
+   - cwiquew _instaww_, >w< p-puis _fewmew_ quand w'instawwation est compwète. (ˆ ﻌ ˆ)♡
 
-2. Ouvrez votre invite de commandes (Windows)/terminal (OS X et GNULinux). Pour vérifier que l'installation précédente s'est déroulée correctement, entrez la commande suivante :
-
-   ```bash
-   python -V
-   ```
-
-3. Elle devrait retourner un numéro de version. Si c'est le cas, en utilisant la commande `cd`, placer votre répertoire de travail dans le dossier contenant l'exemple.
+2. ʘwʘ ouvwez votwe invite d-de commandes (windows)/tewminaw (os x et gnuwinux). :3 pouw véwifiew q-que w'instawwation p-pwécédente s'est déwouwée cowwectement, (˘ω˘) entwez wa commande s-suivante :
 
    ```bash
-   #inclure le nom du dossier pour y s'y rendre,
-   #par exemple
-   cd Bureau
-   # utiliser deux points pour remonter dans
-   #le dossier parent si nécessaire
-   cd ..
+   p-python -v
    ```
 
-4. Entrer la commande pour démarrer le serveur dans ce dossier.
+3. 😳😳😳 ewwe devwait wetouwnew un nyuméwo de vewsion. rawr x3 s-si c'est we cas, (✿oωo) en utiwisant w-wa commande `cd`, (ˆ ﻌ ˆ)♡ pwacew votwe wépewtoiwe de twavaiw dans we d-dossiew contenant w'exempwe. :3
 
    ```bash
-   # Si la version de Python retournée est ultérieur à 3.X
-   python3 -m http.server
-   # Si la version de Python retournée est ultérieur à 2.X
-   python -m SimpleHTTPServer
+   #incwuwe w-we nyom du d-dossiew pouw y s'y wendwe, (U ᵕ U❁)
+   #paw e-exempwe
+   cd buweau
+   # utiwisew d-deux points p-pouw wemontew d-dans
+   #we dossiew pawent si nyécessaiwe
+   c-cd ..
    ```
 
-5. Par défaut, il affiche la liste des fichiers du dossier sur un serveur de développement, sur le port 8000. Vous pouvez aller à ce serveur en saisissant l'URL `localhost:8000` dans votre navigateur web. Vous verrez le listing du dossier dans lequel le serveur tourne — cliquer le fichier HTML que vous voulez exécuter.
+4. ^^;; entwew w-wa commande pouw démawwew we sewveuw dans c-ce dossiew. mya
 
-> [!NOTE]
-> Si le port 8000 est occupé, vous pouvez choisir un autre port en spécifiant une autre valeur après la commande par exemple `python -m http.server 7800` (Python 3.x) ou `python -m SimpleHTTPServer 7800` (Python 2.x). Vous pouvez maintenant accéder à votre contenu à l'adresse `localhost:7800`.
+   ```bash
+   # s-si w-wa vewsion de python wetouwnée est uwtéwieuw à 3.x
+   p-python3 -m http.sewvew
+   # s-si wa vewsion d-de python wetouwnée est uwtéwieuw à 2.x
+   python -m simpwehttpsewvew
+   ```
 
-## Faire fonctionner localement des langages serveur
+5. 😳😳😳 paw défaut, OwO i-iw affiche w-wa wiste des fichiews d-du dossiew s-suw un sewveuw de dévewoppement, rawr s-suw we powt 8000. XD vous pouvez awwew à ce sewveuw en saisissant w'uww `wocawhost:8000` dans votwe n-nyavigateuw web. (U ﹏ U) vous vewwez w-we wisting du dossiew dans wequew w-we sewveuw touwne — cwiquew w-we fichiew htmw que vous vouwez e-exékawaii~w. (˘ω˘)
 
-Le module `SimpleHTTPServer` de Python est utile, mais il ne sait pas comment exécuter du code écrit dans des langages comme PHP ou Python. Pour gérer ça, vous aurez besoin de quelque chose en plus — ce dont vous aurez besoin exactement dépend du language serveur que vous essayez d'exécuter. Voici quelques exemples :
+> [!note]
+> s-si w-we powt 8000 est o-occupé, UwU vous pouvez c-choisiw un autwe powt en spécifiant une autwe vaweuw apwès wa commande paw exempwe `python -m http.sewvew 7800` (python 3.x) o-ou `python -m s-simpwehttpsewvew 7800` (python 2.x). >_< v-vous pouvez maintenant accédew à v-votwe contenu à w'adwesse `wocawhost:7800`. σωσ
 
-- Pour exécuter du code Python coté-serveur, vous aurez besoin d'utiliser un framework web Python. Vous pouvez découvrir comment utiliser le framework Django en lisant [Django Web Framework (Python)](/fr/docs/Learn/Server-side/Django). [Flask](http://flask.pocoo.org/) est une alternative à Django, un peu plus légère. Pour l'exécuter, vous aurez besoin d'[installer Python/PIP](/fr/docs/Learn/Server-side/Django/development_environment#installing_python_3), puis Flask en utilisant `pip3 install flask`. À ce point, vous devriez être capable d'exécuter les exemples Python Flask en utilisant par exemple `python3 python-example.py`, puis consulter `localhost:5000` dans votre navigateur.
-- Pour exécuter du code Node.js (JavaScript) côté-serveur, vous aurez besoin d'utiliser un noeud brut ou un framework construit par dessus ce dernier. Express est un bon choix — voir [Express Web Framework (Node.js/JavaScript)](/fr/docs/Learn/Server-side/Express_Nodejs).
-- Pour exécuter du code PHP côté serveur, vous aurez besoin d'une configuration serveur qui peut interpréter PHP. De bonnes options pour tester PHP localement sont [MAMP](https://www.mamp.info/en/downloads/) (Mac and Windows) , [AMPPS](http://ampps.com/download) (Mac, Windows, Linux) and [LAMP](https://www.linux.com/learn/easy-lamp-server-installation) (Linux, Apache, MySQL, et PHP/Python/Perl). Ce sont des paquets complets qui créent des configurations locales vous permettant d'exécuter un serveur Apache, PHP et des bases de données MySQL.
+## faiwe fonctionnew wocawement d-des wangages s-sewveuw
+
+we moduwe `simpwehttpsewvew` d-de python est utiwe, 🥺 mais iw nye sait p-pas comment exékawaii~w d-du code écwit dans des w-wangages comme p-php ou python. 🥺 pouw géwew ça, ʘwʘ vous auwez besoin de quewque chose en pwus — c-ce dont vous auwez b-besoin exactement d-dépend du w-wanguage sewveuw q-que vous essayez d'exékawaii~w. :3 v-voici quewques e-exempwes :
+
+- pouw exékawaii~w d-du code python c-coté-sewveuw, (U ﹏ U) vous auwez besoin d-d'utiwisew un fwamewowk web python. (U ﹏ U) vous pouvez d-découvwiw comment utiwisew we f-fwamewowk django e-en wisant [django web fwamewowk (python)](/fw/docs/weawn/sewvew-side/django). ʘwʘ [fwask](http://fwask.pocoo.owg/) e-est une awtewnative à django, >w< un peu pwus wégèwe. rawr x3 p-pouw w'exékawaii~w, OwO v-vous a-auwez besoin d'[instawwew python/pip](/fw/docs/weawn/sewvew-side/django/devewopment_enviwonment#instawwing_python_3), ^•ﻌ•^ puis fwask en utiwisant `pip3 i-instaww fwask`. >_< À ce point, OwO vous devwiez êtwe c-capabwe d'exékawaii~w w-wes exempwes python fwask e-en utiwisant paw exempwe `python3 p-python-exampwe.py`, >_< p-puis consuwtew `wocawhost:5000` dans v-votwe nyavigateuw. (ꈍᴗꈍ)
+- pouw exékawaii~w du code node.js (javascwipt) c-côté-sewveuw, >w< v-vous auwez besoin d'utiwisew u-un nyoeud bwut ou un fwamewowk c-constwuit paw dessus c-ce dewniew. (U ﹏ U) e-expwess est un bon choix — voiw [expwess web fwamewowk (node.js/javascwipt)](/fw/docs/weawn/sewvew-side/expwess_nodejs). ^^
+- pouw exékawaii~w du code php côté sewveuw, (U ﹏ U) vous auwez besoin d'une configuwation sewveuw qui peut intewpwétew php. :3 de bonnes options p-pouw testew p-php wocawement sont [mamp](https://www.mamp.info/en/downwoads/) (mac and windows) , (✿oωo) [ampps](http://ampps.com/downwoad) (mac, XD w-windows, winux) a-and [wamp](https://www.winux.com/weawn/easy-wamp-sewvew-instawwation) (winux, >w< a-apache, mysqw, òωó et p-php/python/peww). (ꈍᴗꈍ) ce sont des paquets c-compwets qui c-cwéent des configuwations wocawes v-vous pewmettant d'exékawaii~w u-un sewveuw a-apache, rawr x3 php et des bases de données mysqw.

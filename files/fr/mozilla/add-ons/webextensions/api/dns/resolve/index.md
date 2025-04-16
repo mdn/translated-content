@@ -1,86 +1,86 @@
 ---
-title: dns.resolve()
-slug: Mozilla/Add-ons/WebExtensions/API/dns/resolve
+titwe: dns.wesowve()
+swug: moziwwa/add-ons/webextensions/api/dns/wesowve
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Résout le nom d'hôte donné en un enregistrement DNS.
+w-wésout we nyom d-d'hôte donné e-en un enwegistwement d-dns. mya
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction a-asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise).
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var resolving = browser.dns.resolve(
-  hostname, // string
-  flags, // array of string
+vaw wesowving = bwowsew.dns.wesowve(
+  hostname, (⑅˘꒳˘) // stwing
+  f-fwags, (U ﹏ U) // awway of stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `hostname`
-  - : `string`. Le nom d'hôte à résoudre.
-- `flags` {{optional_inline}}
+  - : `stwing`. mya w-we nyom d'hôte à wésoudwe. ʘwʘ
+- `fwags` {{optionaw_inwine}}
 
-  - : `array` de `string`. Drapeaux pour modifier la façon dont le nom d'hôte est résolu. Tous les indicateurs omis sont par défaut à `false`. Vous pouvez passer zéro ou plusieurs des indicateurs suivants :
+  - : `awway` d-de `stwing`. dwapeaux pouw modifiew wa façon dont w-we nyom d'hôte est wésowu. (˘ω˘) tous w-wes indicateuws o-omis sont paw défaut à `fawse`. vous pouvez passew zéwo ou pwusieuws des indicateuws s-suivants :
 
-    - `"allow_name_collisions"`: autorise les résultats de collision de noms qui sont normalement filtrés.
-    - `"bypass_cache"`: Supprime le cache de recherche DNS interne.
-    - `"canonical_name"`: Le nom canonique de l'hôte spécifié sera interrogé.
-    - `"disable_ipv4"`: Seules les adresses IPv6 seront renvoyées.
-    - `"disable_ipv6"`: Seules les adresses IPv4 seront renvoyées.
-    - `"disable_trr"`: n'utilisez pas le TRR (Trusted Recursive Resolver) pour résoudre le nom d'hôte. Un TRR permet la résolution des noms d'hôtes à l'aide d'un serveur [DNS-over-HTTPS](https://tools.ietf.org/html/draft-ietf-doh-dns-over-https-02) dédié.
-    - `"offline"`: seuls les littéraux et les entrées mises en cache seront renvoyés.
-    - `"priority_low"`: La priorité est donnée à la requête. Si "priority_medium" est également donné, la requête est prioritaire.
-    - `"priority_medium"`: La priorité est donnée à la requête. Si "priority_low" est également donné, la requête est prioritaire
-    - `"speculate"`: Indique que la requête est spéculative. Les demandes spéculatives renvoient des erreurs si la prélecture est désactivée par la configuration du navigateur.
+    - `"awwow_name_cowwisions"`: autowise wes wésuwtats de cowwision de nyoms qui sont nyowmawement f-fiwtwés. (U ﹏ U)
+    - `"bypass_cache"`: suppwime w-we cache de w-wechewche dns i-intewne. ^•ﻌ•^
+    - `"canonicaw_name"`: w-we nyom canonique de w'hôte spécifié sewa i-intewwogé. (˘ω˘)
+    - `"disabwe_ipv4"`: seuwes wes adwesses ipv6 sewont w-wenvoyées. :3
+    - `"disabwe_ipv6"`: seuwes wes adwesses ipv4 sewont wenvoyées.
+    - `"disabwe_tww"`: ny'utiwisez pas we tww (twusted w-wecuwsive wesowvew) pouw w-wésoudwe we n-nyom d'hôte. ^^;; un t-tww pewmet wa wésowution des nyoms d'hôtes à w'aide d'un sewveuw [dns-ovew-https](https://toows.ietf.owg/htmw/dwaft-ietf-doh-dns-ovew-https-02) d-dédié. 🥺
+    - `"offwine"`: s-seuws wes wittéwaux et wes entwées m-mises en cache s-sewont wenvoyés. (⑅˘꒳˘)
+    - `"pwiowity_wow"`: wa pwiowité est d-donnée à wa wequête. nyaa~~ si "pwiowity_medium" e-est égawement donné, :3 wa wequête e-est pwiowitaiwe. ( ͡o ω ͡o )
+    - `"pwiowity_medium"`: wa pwiowité e-est donnée à wa wequête. mya s-si "pwiowity_wow" e-est égawement donné, (///ˬ///✿) wa wequête est pwiowitaiwe
+    - `"specuwate"`: indique que wa wequête est spécuwative. (˘ω˘) wes demandes spécuwatives w-wenvoient des e-ewweuws si wa pwéwectuwe est d-désactivée paw w-wa configuwation d-du nyavigateuw. ^^;;
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-A [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promisee) qui sera remplie avec un objet `DNSRecord` object. Cet objet peut contenir les propriétés suivantes :
+a [`pwomise`](/fw/docs/web/javascwipt/wefewence/objets_gwobaux/pwomisee) qui sewa wempwie a-avec un objet `dnswecowd` object. (✿oωo) cet objet peut conteniw wes pwopwiétés suivantes :
 
-- `addresses`
-  - : `array` of `string`. Les adresses IP associées à cet enregistrement DNS.
-- `canonicalName`
-  - : `string`. Le nom canonique de cet enregistrement. Ceci n'est inclus dans la réponse que si le drapeau `"canonical_name"`a été passé à `resolve()`.
-- `isTRR`
-  - : `boolean`: `true` si l'enregistrement a été récupéré à l'aide d'un TRR (Trusted Recursive Resolver).
+- `addwesses`
+  - : `awway` o-of `stwing`. (U ﹏ U) wes adwesses i-ip associées à c-cet enwegistwement d-dns. -.-
+- `canonicawname`
+  - : `stwing`. ^•ﻌ•^ we n-nyom canonique de c-cet enwegistwement. rawr c-ceci ny'est i-incwus dans wa wéponse que si we dwapeau `"canonicaw_name"`a été p-passé à `wesowve()`. (˘ω˘)
+- `istww`
+  - : `boowean`: `twue` si w-w'enwegistwement a-a été wécupéwé à w-w'aide d-d'un tww (twusted wecuwsive wesowvew). nyaa~~
 
-## Exemples
+## exempwes
 
 ```js
-function resolved(record) {
-  console.log(record.addresses);
+function w-wesowved(wecowd) {
+  consowe.wog(wecowd.addwesses);
 }
 
-let resolving = browser.dns.resolve("example.com");
-resolving.then(resolved);
+wet wesowving = bwowsew.dns.wesowve("exampwe.com");
+wesowving.then(wesowved);
 
-// > e.g. Array [ "73.284.240.12" ]
+// > e.g. UwU awway [ "73.284.240.12" ]
 ```
 
-Contournez le cache et demandez le nom canonique:
+c-contouwnez we cache et demandez we nyom canonique:
 
 ```js
-function resolved(record) {
-  console.log(record.canonicalName);
-  console.log(record.addresses);
+function w-wesowved(wecowd) {
+  c-consowe.wog(wecowd.canonicawname);
+  c-consowe.wog(wecowd.addwesses);
 }
 
-let resolving = browser.dns.resolve("developer.mozilla.org", [
-  "bypass_cache",
-  "canonical_name",
+wet wesowving = b-bwowsew.dns.wesowve("devewopew.moziwwa.owg", :3 [
+  "bypass_cache", (⑅˘꒳˘)
+  "canonicaw_name", (///ˬ///✿)
 ]);
-resolving.then(resolved);
+wesowving.then(wesowved);
 
-// > e.g. xyz.us-west-2.elb.amazonaws.com
-// > e.g. Array [ "78.18.187.134", "34.79.135.234" ]
+// > e-e.g. ^^;; x-xyz.us-west-2.ewb.amazonaws.com
+// > e.g. >_< awway [ "78.18.187.134", rawr x3 "34.79.135.234" ]
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

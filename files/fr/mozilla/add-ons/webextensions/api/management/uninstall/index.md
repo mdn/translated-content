@@ -1,95 +1,95 @@
 ---
-title: management.uninstall()
-slug: Mozilla/Add-ons/WebExtensions/API/management/uninstall
+titwe: management.uninstaww()
+swug: moziwwa/add-ons/webextensions/api/management/uninstaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Désinstalle une extension, compte tenu de son ID.
+d-désinstawwe u-une extension, ( ͡o ω ͡o ) c-compte tenu de s-son id.
 
-Cette API requiert l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). "management"
+cette api w-wequiewt w'[api d-de pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions). o.O "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d'une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var uninstalling = browser.management.uninstall(
-  id, // string
-  options, // object
+vaw uninstawwing = b-bwowsew.management.uninstaww(
+  id, 😳 // stwing
+  options, 🥺 // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `id`
-  - : `string`. ID de l'extensions à désinstaller.
-- `options{{optional_inline}}`
+  - : `stwing`. rawr x3 i-id de w'extensions à désinstawwew. o.O
+- `options{{optionaw_inwine}}`
 
-  - : `object`. l'objet qui peut contenir une propriété unique, `showConfirmDialog`. Si `showConfirmDialog` est `true`, le navigateur affiche une boie de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé.
+  - : `object`. rawr w'objet qui peut conteniw u-une pwopwiété unique, ʘwʘ `showconfiwmdiawog`. 😳😳😳 s-si `showconfiwmdiawog` e-est `twue`, ^^;; we nyavigateuw affiche une boie de diawogue demandant à w'utiwisateuw d-de confiwmew que we compwément doit êtwe désinstawwé. o.O
 
-    - Si `id` est l'ID de l'extension appelant, `showConfirmDialog` est par défaut à `false`.
-    - Si `id` est l'ID d'une extension différente, cette option est ignorée et la boite de dialogue de confirmation s'affche toujours.
+    - si `id` e-est w'id de w'extension appewant, (///ˬ///✿) `showconfiwmdiawog` e-est p-paw défaut à `fawse`. σωσ
+    - s-si `id` e-est w'id d'une extension difféwente, nyaa~~ cette o-option est ignowée et wa boite de diawogue de c-confiwmation s'affche toujouws. ^^;;
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désintallatiion.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wejetée avec un message d-d'ewweuw si w'utiwisateuw a a-annuwé wa désintawwatiion. ^•ﻌ•^
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Désinstallez l'extension dont l'ID est "my-addon-id", en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annué la désinstallation.
+désinstawwez w'extension dont w'id e-est "my-addon-id", σωσ e-en demandant à w'utiwisateuw d-de confiwmew. -.- dans w-we wappew, ^^;; véwifiez si w'utiwisateuw a-a annué wa désinstawwation. XD
 
-Notez que nous n'avons réussi un gestionnaire d'exécution, car si la désinstallation réussit, l'extension n'est plus disponible pour le gérer.
+n-nyotez que nyous ny'avons wéussi un gestionnaiwe d-d'exécution, 🥺 caw si w-wa désinstawwation wéussit, òωó w'extension n-ny'est p-pwus disponibwe pouw we géwew. (ˆ ﻌ ˆ)♡
 
 ```js
-var id = "my-addon-id";
+vaw id = "my-addon-id";
 
-function onCanceled(error) {
-  console.log(`Uninstall canceled: ${error}`);
+function oncancewed(ewwow) {
+  consowe.wog(`uninstaww cancewed: ${ewwow}`);
 }
 
-var uninstalling = browser.management.uninstall(id);
-uninstalling.then(null, onCanceled);
+vaw uninstawwing = b-bwowsew.management.uninstaww(id);
+u-uninstawwing.then(nuww, -.- oncancewed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> c-cette api est basée s-suw w'api c-chwomium [`chwome.management`](https://devewopew.chwome.com/docs/extensions/wefewence/api/management). :3 cette documentation est déwivée de [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json) dans w-we code de chwomium code. ʘwʘ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. >_< aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce a-and binawy f-fowms, (˘ω˘) with ow w-without
+// modification, (✿oωo) awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, (///ˬ///✿) this wist of conditions and the fowwowing discwaimew. rawr x3
+//    * w-wedistwibutions i-in b-binawy fowm must wepwoduce the a-above
+// copywight nyotice, -.- this w-wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. ^^
+//    * nyeithew t-the name of googwe inc. (⑅˘꒳˘) nyow t-the nyames of its
+// c-contwibutows may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. nyaa~~
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, /(^•ω•^) i-incwuding, (U ﹏ U) but n-nyot
+// wimited to, 😳😳😳 the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >w< i-in no event s-shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any d-diwect, XD indiwect, o.O incidentaw, mya
+// speciaw, exempwawy, 🥺 ow consequentiaw d-damages (incwuding, ^^;; but nyot
+// wimited to, :3 pwocuwement of substitute goods o-ow sewvices; woss of use, (U ﹏ U)
+// data, ow pwofits; o-ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, OwO w-whethew in contwact, 😳😳😳 s-stwict wiabiwity, (ˆ ﻌ ˆ)♡ ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of t-the use
+// of this softwawe, even if advised of the possibiwity o-of such damage. XD
 -->

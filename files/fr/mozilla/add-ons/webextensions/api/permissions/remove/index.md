@@ -1,60 +1,60 @@
 ---
-title: permissions.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/permissions/remove
+titwe: pewmissions.wemove()
+swug: moziwwa/add-ons/webextensions/api/pewmissions/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Demander d'abandonner les permissions listées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
+d-demandew d'abandonnew w-wes pewmissions w-wistées d-dans w'objet {{webextapiwef("pewmissions.pewmissions")}}. rawr
 
-L'argument `Permissions` peut contenir soit une propriété `origins` ,qui est un tableau de [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) , ou une propriété `permissions`, qui est un tableau de [permissions d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), ou les deux. Les permissions doivent provenir de l'ensemble des permissions définies dans la clé [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json.
+w-w'awgument `pewmissions` p-peut conteniw s-soit une pwopwiété `owigins` ,qui e-est un tabweau de [pewmissions d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) , mya ou une pwopwiété `pewmissions`, ^^ qui est un t-tabweau de [pewmissions d'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions), 😳😳😳 ou wes deux. mya wes p-pewmissions doivent pwoveniw d-de w'ensembwe des pewmissions définies dans wa cwé [`optionaw_pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions) d-du manifest.json. 😳
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d-d'une fonction a-asynchwone qui wenvoie une [`pwomesse`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.permissions.remove(
-  permissions, // Permissions object
+vaw wemoving = bwowsew.pewmissions.wemove(
+  p-pewmissions, 🥺 // pewmissions object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `permissions`
-  - : Un objet {{WebExtAPIRef("permissions.Permissions")}}.
+- `pewmissions`
+  - : un objet {{webextapiwef("pewmissions.pewmissions")}}. o.O
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si les permissions répertoriées dans l'argument `permissions` ont été supprimées, ou `false` dans le cas contraire.
+une [`pwomesse`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie a-avec `twue` s-si wes pewmissions w-wépewtowiées dans w'awgument `pewmissions` ont été suppwimées, /(^•ω•^) o-ou `fawse` dans we cas contwaiwe. nyaa~~
 
-## Exemples
+## exempwes
 
-Ce code ajoute un gestionnaire de clic qui supprime une permission donnée.
+c-ce code ajoute un gestionnaiwe de cwic qui suppwime une pewmission donnée. nyaa~~
 
 ```js
-const permissionToRemove = {
-  permissions: ["history"],
+const p-pewmissiontowemove = {
+  pewmissions: ["histowy"], :3
 };
 
-function remove() {
-  console.log("removing");
-  browser.permissions.remove(permissionToRemove).then((result) => {
-    console.log(result);
+f-function w-wemove() {
+  consowe.wog("wemoving");
+  b-bwowsew.pewmissions.wemove(pewmissiontowemove).then((wesuwt) => {
+    consowe.wog(wesuwt);
   });
 }
 
-document.querySelector("#remove").addEventListener("click", remove);
+document.quewysewectow("#wemove").addeventwistenew("cwick", 😳😳😳 wemove);
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
+> cette api e-est basée suw w-w'api chwomium [`chwome.pewmissions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions). (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. ^^

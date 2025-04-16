@@ -1,34 +1,34 @@
 ---
-title: UserScripts.UserScriptOptions
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/UserScriptOptions
+titwe: usewscwipts.usewscwiptoptions
+swug: moziwwa/add-ons/webextensions/api/usewscwipts/usewscwiptoptions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'objet UserScriptOptions représente les scripts de contenu à enregistrer. Sa syntaxe est similaire à celle des options contentScript prises en charge par browser.contentScripts.register. Les différences sont les suivantes :
+w-w'objet usewscwiptoptions wepwésente w-wes scwipts d-de contenu à e-enwegistwew. 🥺 s-sa syntaxe est s-simiwaiwe à cewwe d-des options c-contentscwipt pwises en chawge paw bwowsew.contentscwipts.wegistew. o.O wes difféwences sont wes suivantes :
 
-- il ne prend pas en charge une propriété css (utilisez browser.contentScripts.register pour enregistrer/désenregistrer dynamiquement les feuilles de style)
-- Il supporte une propriété optionnelle scriptMetadata (comme un objet JSON simple qui contient certaines propriétés de métadonnées associées aux userScripts enregistrés)
+- i-iw nye pwend pas en chawge une pwopwiété c-css (utiwisez bwowsew.contentscwipts.wegistew p-pouw enwegistwew/désenwegistwew dynamiquement wes feuiwwes de stywe)
+- iw s-suppowte une pwopwiété optionnewwe s-scwiptmetadata (comme u-un objet json simpwe qui contient cewtaines pwopwiétés de métadonnées a-associées aux usewscwipts enwegistwés)
 
-L'objet UserScriptOptions a les propriétés suivantes :
+w'objet usewscwiptoptions a wes p-pwopwiétés suivantes :
 
-- `allFrames`{{optional_inline}}
-  - : Même chose que `all_frames` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-- `excludeGlobs`{{optional_inline}}
-  - : Même chose que `exclude_globs` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-- `excludeMatches`{{optional_inline}}
-  - : Même chose que `exclude_matches` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-- `includeGlobs`{{optional_inline}}
-  - : Même chose que `include_globs` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-- `js`{{optional_inline}}
-  - : Un ensemble d'objets. Chaque objet a soit une propriété nommée `file`, qui est une URL commençant à l'extension manifest.json et pointant vers un fichier JavaScript à enregistrer, soit une propriété nommée `code`, qui est un code JavaScript à enregistrer.
-- `matchAboutBlank`{{optional_inline}}
-  - : Même chose que `match_about_blank` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
+- `awwfwames`{{optionaw_inwine}}
+  - : même chose que `aww_fwames` d-dans w-wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). /(^•ω•^)
+- `excwudegwobs`{{optionaw_inwine}}
+  - : m-même chose que `excwude_gwobs` d-dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts).
+- `excwudematches`{{optionaw_inwine}}
+  - : même chose que `excwude_matches` d-dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). nyaa~~
+- `incwudegwobs`{{optionaw_inwine}}
+  - : même chose que `incwude_gwobs` d-dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). nyaa~~
+- `js`{{optionaw_inwine}}
+  - : un ensembwe d'objets. :3 chaque objet a soit une pwopwiété nyommée `fiwe`, 😳😳😳 q-qui est une uww commençant à w-w'extension m-manifest.json e-et pointant vews un fichiew javascwipt à enwegistwew, (˘ω˘) soit u-une pwopwiété n-nyommée `code`, ^^ qui est un code j-javascwipt à enwegistwew. :3
+- `matchaboutbwank`{{optionaw_inwine}}
+  - : m-même chose que `match_about_bwank` d-dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). -.-
 - `matches`
-  - : Même chose que `matches` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-- `runAt`{{optional_inline}}
-  - : Même chose que `run_at` dans la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts).
-- `scriptMetadata` {{optional_inline}}
-  - : Une valeur de métadonnées de script utilisateur
+  - : m-même chose que `matches` dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). 😳
+- `wunat`{{optionaw_inwine}}
+  - : m-même chose que `wun_at` d-dans wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts). mya
+- `scwiptmetadata` {{optionaw_inwine}}
+  - : une vaweuw d-de métadonnées d-de scwipt utiwisateuw
 
-Sa syntaxe est similaire à celle des options contentScript prises en charge par browser.contentScripts.register.
+sa syntaxe est simiwaiwe à cewwe des options contentscwipt pwises en chawge paw bwowsew.contentscwipts.wegistew. (˘ω˘)

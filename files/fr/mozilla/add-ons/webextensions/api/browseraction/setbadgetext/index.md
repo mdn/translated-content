@@ -1,102 +1,102 @@
 ---
-title: browserAction.setBadgeText()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeText
+titwe: bwowsewaction.setbadgetext()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/setbadgetext
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit le texte du badge pour l'action du navigateur. Le badge est affiché en haut de l'icône.
+d-définit we texte d-du badge pouw w-w'action du nyavigateuw. w-we badge e-est affiché e-en haut de w'icône. rawr
 
-Les onglets sans texte de badge spécifique hériteront du texte global du badge, qui est `""` par défaut.
+w-wes ongwets s-sans texte de badge spécifique héwitewont du texte gwobaw du badge, ʘwʘ qui est `""` p-paw défaut. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.browserAction.setBadgeText(
-  details, // object
+bwowsew.bwowsewaction.setbadgetext(
+  d-detaiws, ^^;; // object
 );
 ```
 
-Cette API est également disponible sous `chrome.browserAction.setBadgeText()`.
+c-cette api est égawement disponibwe sous `chwome.bwowsewaction.setbadgetext()`. o.O
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
   - : `object`
 
     - `text`
 
-      - : `string` or `null`. N'importe quel nombre de caractères peut être passé, mais seulement quatre environ peuvent tenir dans l'espace.
+      - : `stwing` o-ow `nuww`. (///ˬ///✿) ny'impowte quew n-nombwe de cawactèwes p-peut êtwe passé, σωσ mais seuwement quatwe enviwon peuvent teniw dans w'espace. nyaa~~
 
-        Utilisez une chaîne vide - `""` - si vous ne voulez pas de badge.
+        u-utiwisez une chaîne vide - `""` - si vous nye vouwez pas de badge.
 
-        Si un `tabId` est spécifié, `null` supprime le texte du badge spécifique à l'onglet afin que l'onglet hérite du texte global du badge. Dans le cas contraire, le texte du badge global devient `""`.
+        s-si un `tabid` est spécifié, ^^;; `nuww` s-suppwime we texte d-du badge spécifique à w-w'ongwet a-afin que w'ongwet héwite du texte gwobaw du b-badge. ^•ﻌ•^ dans we cas contwaiwe, σωσ we texte du badge g-gwobaw devient `""`. -.-
 
-        Si un `windowId` est spécifié, `null` supprime le texte du badge spécifique à la fenêtre afin que l'onglet hérite du texte global du badge. Dans le cas contraire, le texte du badge global devient `""`.
+        si un `windowid` est spécifié, ^^;; `nuww` suppwime we texte du badge s-spécifique à wa fenêtwe afin q-que w'ongwet héwite d-du texte gwobaw d-du badge. XD dans we cas contwaiwe, 🥺 we texte du badge gwobaw d-devient `""`. òωó
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Définir le texte du badge uniquement pour l'onglet donné. Le texte est réinitialisé lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Définir le texte du badge pour la fenêtre donnée.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. (ˆ ﻌ ˆ)♡ d-définiw we texte du badge u-uniquement pouw w-w'ongwet donné. -.- we texte est wéinitiawisé w-wowsque w'utiwisateuw n-nyavigue dans cet ongwet vews une nyouvewwe page. :3
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. ʘwʘ d-définiw we texte d-du badge pouw wa fenêtwe donnée. 🥺
 
 <!---->
 
-- si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue.
-- si `windowId` et `tabId` sont tous les deux omis, le badge global est défini.
+- si `windowid` e-et `tabid` s-sont tous wes deux fouwnis, >_< wa fonction échoue. ʘwʘ
+- si `windowid` et `tabid` sont tous wes deux omis, (˘ω˘) we b-badge gwobaw est d-défini. (✿oωo)
 
-## Exemples
+## exempwes
 
-Ajouter un badge indiquant combien de fois l'utilisateur a cliqué sur le bouton :
+ajoutew u-un badge indiquant c-combien de fois w-w'utiwisateuw a cwiqué suw we bouton :
 
 ```js
-var clicks = 0;
+vaw cwicks = 0;
 
-function increment() {
-  browser.browserAction.setBadgeText({ text: (++clicks).toString() });
+f-function incwement() {
+  bwowsew.bwowsewaction.setbadgetext({ text: (++cwicks).tostwing() });
 }
 
-browser.browserAction.onClicked.addListener(increment);
+bwowsew.bwowsewaction.oncwicked.addwistenew(incwement);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api c-chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). (///ˬ///✿) c-cette documentation e-est déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) d-dans we code d-de chwomium code. rawr x3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à m-micwosoft edge s-sont fouwnies paw m-micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. ^^ aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, nyaa~~ with ow without
+// modification, /(^•ω•^) awe p-pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, (U ﹏ U) this wist of conditions and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, >w< t-this wist of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow o-othew matewiaws pwovided with t-the
+// distwibution. XD
+//    * nyeithew t-the nyame of googwe inc. o.O nyow the names of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, 🥺 i-incwuding, but nyot
+// wimited to, ^^;; the impwied w-wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, :3 indiwect, incidentaw, (U ﹏ U)
+// speciaw, OwO e-exempwawy, 😳😳😳 ow c-consequentiaw damages (incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// wimited to, XD pwocuwement of substitute g-goods ow sewvices; w-woss of use, (ˆ ﻌ ˆ)♡
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, ( ͡o ω ͡o ) whethew in contwact, rawr x3 stwict wiabiwity, nyaa~~ ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out o-of the use
+// of this softwawe, >_< e-even if advised of the possibiwity o-of such damage. ^^;;
 -->

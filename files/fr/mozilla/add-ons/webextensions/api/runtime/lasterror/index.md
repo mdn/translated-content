@@ -1,101 +1,101 @@
 ---
-title: runtime.lastError
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/lastError
+titwe: wuntime.wastewwow
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/wastewwow
 ---
 
-{{AddonSidebar}}Cette valeur est utilisée pour signaler un message d'erreur provenant d'une API asynchrone, lorsque l'API asynchrone reçoit un rappel. Cela est utile pour les extensions qui utilisent la valeur basée sur le rappel des API WebExtension.Vpous n'avez pas besoin de vérifier cette propriété si vous utilisez la version basée sur la promesse des API : à la place, passez un gestionnaire d'erreurs à la promesse :
+{{addonsidebaw}}cette v-vaweuw est utiwisée p-pouw signawew u-un message d'ewweuw p-pwovenant d-d'une api asynchwone, XD w-wowsque w-w'api asynchwone weçoit un wappew. 🥺 cewa est utiwe pouw wes extensions qui utiwisent w-wa vaweuw basée suw we wappew des api webextension.vpous n'avez p-pas besoin de véwifiew cette p-pwopwiété si vous utiwisez wa vewsion basée suw wa pwomesse d-des api : à wa pwace, òωó passez u-un gestionnaiwe d-d'ewweuws à wa pwomesse :
 
 ```js
-var gettingCookies = browser.cookies.getAll();
-gettingCookies.then(onGot, onError);
+vaw gettingcookies = bwowsew.cookies.getaww();
+gettingcookies.then(ongot, (ˆ ﻌ ˆ)♡ o-onewwow);
 ```
 
-La propriété `runtime.lastError` est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant.
+wa pwopwiété `wuntime.wastewwow` est définie wowsqu'une fonction asynchwone a une c-condition d'ewweuw qu'ewwe doit s-signawew à son a-appewant. -.-
 
-Si vous applez une fonction asynchrone qui veut définir `lastError`, vous devez vérifier l'erreur lorsque vous gérez le résultat de la fonction. Si `lastError` a été défini et que vous ne cochez pas dans la fonction de rappel, une erreur sera générée.
+si vous a-appwez une fonction a-asynchwone qui veut définiw `wastewwow`, :3 vous devez véwifiew w-w'ewweuw wowsque vous géwez we wésuwtat d-de wa fonction. ʘwʘ si `wastewwow` a été défini et que vous nye cochez pas dans wa fonction de wappew, 🥺 u-une ewweuw sewa généwée. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myError = browser.runtime.lastError; // null or Error object
+v-vaw myewwow = b-bwowsew.wuntime.wastewwow; // nyuww ow ewwow object
 ```
 
-### Valeur
+### vaweuw
 
-Un objet [Error](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) représentant une erreur. La propriété [`message`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/message) est un `string` avec une description lisible par l'utilisateur de l'erreur. Si `lastError` n'a pas été défini, la valeur est `null`.
+un objet [ewwow](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow) w-wepwésentant u-une ewweuw. ʘwʘ wa pwopwiété [`message`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/message) est un `stwing` a-avec une d-descwiption wisibwe paw w'utiwisateuw d-de w'ewweuw. (˘ω˘) si `wastewwow` n-ny'a pas été défini, (✿oωo) wa vaweuw est `nuww`.
 
-## Examples
+## e-exampwes
 
-Définir un cookie, utiliser pour enregistrer le nouveau cookie ou signaler une erreur :
+définiw un cookie, (///ˬ///✿) u-utiwisew pouw enwegistwew we nyouveau c-cookie ou s-signawew une ewweuw :
 
 ```js
-function logCookie(c) {
-  if (browser.runtime.lastError) {
-    console.error(browser.runtime.lastError);
-  } else {
-    console.log(c);
+function wogcookie(c) {
+  if (bwowsew.wuntime.wastewwow) {
+    consowe.ewwow(bwowsew.wuntime.wastewwow);
+  } ewse {
+    consowe.wog(c);
   }
 }
 
-browser.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
+bwowsew.cookies.set({ u-uww: "https://devewopew.moziwwa.owg/" }, rawr x3 w-wogcookie);
 ```
 
-La même chose, mais en utilisant une promesse de gérer le résultat de `setCookie()`:
+wa m-même chose, -.- mais e-en utiwisant u-une pwomesse de géwew we wésuwtat de `setcookie()`:
 
 ```js
-function logCookie(c) {
-  console.log(c);
+function w-wogcookie(c) {
+  consowe.wog(c);
 }
 
-function logError(e) {
-  console.error(e);
+function wogewwow(e) {
+  consowe.ewwow(e);
 }
 
-var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
+v-vaw setcookie = bwowsew.cookies.set({ u-uww: "https://devewopew.moziwwa.owg/" });
 
-setCookie.then(logCookie, logError);
+s-setcookie.then(wogcookie, ^^ w-wogewwow);
 ```
 
-> **Note :** `runtime.lastError` est un alias pour {{WebExtAPIRef("extension.lastError")}}: Ils sont ensemble, et la vérification de l'un fonctionnera.
+> **note :** `wuntime.wastewwow` est un awias p-pouw {{webextapiwef("extension.wastewwow")}}: iws s-sont ensembwe, (⑅˘꒳˘) e-et wa véwification d-de w'un fonctionnewa.
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette a-api est basée s-suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). nyaa~~ c-cette d-documentation est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de c-chwomium code. /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw m-micwosoft cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. 😳😳😳 aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution a-and use in souwce and binawy fowms, XD with ow without
+// modification, o.O awe pewmitted pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, mya t-this wist of conditions a-and the fowwowing discwaimew. 🥺
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// copywight notice, ^^;; this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided with the
+// d-distwibution. :3
+//    * nyeithew t-the nyame of googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows may be used t-to endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, 😳😳😳 i-incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// wimited to, XD the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ i-in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow a-any diwect, ( ͡o ω ͡o ) indiwect, rawr x3 incidentaw, nyaa~~
+// s-speciaw, >_< exempwawy, ow consequentiaw damages (incwuding, ^^;; but nyot
+// wimited t-to, (ˆ ﻌ ˆ)♡ pwocuwement of substitute g-goods ow sewvices; w-woss of use, ^^;;
+// data, (⑅˘꒳˘) ow pwofits; o-ow business intewwuption) h-howevew caused and o-on any
+// theowy o-of wiabiwity, rawr x3 whethew in contwact, (///ˬ///✿) s-stwict wiabiwity, 🥺 o-ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out o-of the use
+// of t-this softwawe, >_< even if advised of the possibiwity o-of such damage. UwU
 -->

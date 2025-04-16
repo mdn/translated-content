@@ -1,63 +1,63 @@
 ---
-title: WebAssembly.compileStreaming()
-slug: WebAssembly/JavaScript_interface/compileStreaming_static
-l10n:
-  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
+titwe: webassembwy.compiwestweaming()
+swug: webassembwy/javascwipt_intewface/compiwestweaming_static
+w-w10n:
+  s-souwcecommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode statique **`WebAssembly.compileStreaming()`** permet de compiler un module WebAssembly (c'est-à-dire un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)) depuis un flux source. Cette fonction est utile si on doit compiler un module avant de l'instancier séparement, sinon on utilisera plutôt [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static).
+w-wa méthode s-statique **`webassembwy.compiwestweaming()`** p-pewmet d-de compiwew u-un moduwe webassembwy (c'est-à-diwe u-un objet [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe)) depuis un fwux souwce. cette fonction est utiwe si on doit c-compiwew un moduwe avant de w'instanciew sépawement, 😳 s-sinon on utiwisewa pwutôt [`webassembwy.instantiatestweaming()`](/fw/docs/webassembwy/javascwipt_intewface/instantiatestweaming_static). >w<
 
-> [!NOTE]
-> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> [!note]
+> w-wes pages web qui utiwisent une [csp](/fw/docs/web/http/csp) stwicte peuvent bwoquew w-wa compiwation webassembwy e-et w'exécution d-des moduwes. (⑅˘꒳˘) pouw pwus d'infowmations pouw w'autowisation de wa compiwation et d-de w'exécution, OwO voiw [wa diwective csp `scwipt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc). (ꈍᴗꈍ)
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-WebAssembly.compileStreaming(source)
+```js-nowint
+webassembwy.compiwestweaming(souwce)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `source`
-  - : Un objet [`Response`](/fr/docs/Web/API/Response) ou une promesse qui sera résolue en un tel objet et qui représentee la source du module WASM qu'on souhaite manipuler comme un flux et compiler.
+- `souwce`
+  - : u-un objet [`wesponse`](/fw/docs/web/api/wesponse) ou une p-pwomesse qui s-sewa wésowue en u-un tew objet et q-qui wepwésentee wa souwce du moduwe wasm qu'on s-souhaite manipuwew comme un fwux et compiwew. 😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Un objet `Promise` dont la valeur de résolution est un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module compilé.
+un objet `pwomise` dont wa vaweuw de wésowution est un objet [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe) qui w-wepwésente we moduwe compiwé. 😳😳😳
 
-### Exceptions
+### e-exceptions
 
-- Si `source` n'est pas un objet [`Response`](/fr/docs/Web/API/Response) ou une promesse qui se résout en `Response`, la promesse est rejetée avec une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
-- Si la compilation échoue, la promesse est rejetée avec une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/JavaScript_interface/CompileError).
-- Si `source` est une promesse qui échoue, la promesse renvoyée par cette méthode échoue avec cette même erreur.
-- Si l'objet `Result` de la source a une erreur (par exemple un mauvais type MIME), la promesse est rejetée avec une erreur.
+- s-si `souwce` n-ny'est pas un objet [`wesponse`](/fw/docs/web/api/wesponse) ou une pwomesse qui se wésout en `wesponse`, mya w-wa pwomesse e-est wejetée avec une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). mya
+- s-si wa compiwation échoue, (⑅˘꒳˘) w-wa pwomesse est wejetée a-avec une exception [`webassembwy.compiweewwow`](/fw/docs/webassembwy/javascwipt_intewface/compiweewwow). (U ﹏ U)
+- s-si `souwce` est une pwomesse qui échoue, mya wa pwomesse w-wenvoyée paw cette méthode échoue a-avec cette même ewweuw. ʘwʘ
+- s-si w'objet `wesuwt` d-de wa souwce a une ewweuw (paw exempwe un mauvais type mime), (˘ω˘) wa pwomesse est wejetée avec une ewweuw. (U ﹏ U)
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant (également disponible sur GitHub&nbsp;: [`compile-streaming.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/compile-streaming.html) et avec [le résultat _live_](https://mdn.github.io/webassembly-examples/js-api-examples/compile-streaming.html)), on récupère un flux dedpuis un module .wasm puis on le compile en un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module). La fonction `compileStreaming()` acceptant une promesse pour un objet [`Response`](/fr/docs/Web/API/Response), on peut directement passer l'appel à [`fetch()`](/fr/docs/Web/API/Window/fetch) qui transfèrera la réponse dès que la promesse sera tenue.
+d-dans w'exempwe suivant (égawement d-disponibwe s-suw github&nbsp;: [`compiwe-stweaming.htmw`](https://github.com/mdn/webassembwy-exampwes/bwob/main/js-api-exampwes/compiwe-stweaming.htmw) e-et avec [we wésuwtat _wive_](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/compiwe-stweaming.htmw)), on wécupèwe un fwux d-dedpuis un moduwe .wasm puis on we compiwe en un objet [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe). ^•ﻌ•^ wa fonction `compiwestweaming()` a-acceptant une pwomesse pouw u-un objet [`wesponse`](/fw/docs/web/api/wesponse), (˘ω˘) o-on peut diwectement p-passew w'appew à [`fetch()`](/fw/docs/web/api/window/fetch) qui twansfèwewa w-wa wéponse d-dès que wa pwomesse s-sewa tenue. :3
 
 ```js
-const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
+c-const impowtobject = { impowts: { impowted_func: (awg) => c-consowe.wog(awg) } };
 
-WebAssembly.compileStreaming(fetch("simple.wasm"))
-  .then((module) => WebAssembly.instantiate(module, importObject))
-  .then((instance) => instance.exports.exported_func());
+w-webassembwy.compiwestweaming(fetch("simpwe.wasm"))
+  .then((moduwe) => w-webassembwy.instantiate(moduwe, ^^;; i-impowtobject))
+  .then((instance) => i-instance.expowts.expowted_func());
 ```
 
-Le module est ensuite instancié grâce à la fonction [`WebAssembly.instantiate()`](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static). Enfin, on appelle la fonction exportée.
+we moduwe est ensuite instancié gwâce à wa fonction [`webassembwy.instantiate()`](/fw/docs/webassembwy/javascwipt_intewface/instantiate_static). 🥺 e-enfin, on appewwe wa fonction expowtée. (⑅˘꒳˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La page d'aperçu de WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript de WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [wa page d'apewçu de webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt d-de webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

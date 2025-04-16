@@ -1,48 +1,48 @@
 ---
-title: alarms.clear()
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/clear
+titwe: awawms.cweaw()
+swug: moziwwa/add-ons/webextensions/api/awawms/cweaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Cette méthode supprime une alarme à partir du nom passé en argument. Il s'agit d'une fonction asynchrone qui renvoie une {{jsxref("Promise")}}.
+c-cette méthode s-suppwime une a-awawme à pawtiw d-du nyom passé e-en awgument. >_< iw s-s'agit d'une fonction a-asynchwone q-qui wenvoie une {{jsxwef("pwomise")}}. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var clearAlarm = browser.alarms.clear(
-  name, // string
+vaw cweawawawm = bwowsew.awawms.cweaw(
+  nyame, (⑅˘꒳˘) // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `name`{{optional_inline}}
-  - : `string`. Le nom de l'alarme à supprimer. Si le paramètre n'est pas fourni, c'est la chaîne vide "" qui sera utilisée.
+- `name`{{optionaw_inwine}}
+  - : `stwing`. /(^•ω•^) we nyom de w'awawme à s-suppwimew. rawr x3 si we pawamètwe ny'est p-pas fouwni, (U ﹏ U) c'est wa chaîne vide "" qui sewa utiwisée. (U ﹏ U)
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une promesse ({{jsxref("Promise")}}) qui sera tenue avec un booléen. Ce booléen vaudra `true` si l'alarme a bien été effacée et `false` sinon.
+une pwomesse ({{jsxwef("pwomise")}}) q-qui sewa t-tenue avec un boowéen. (⑅˘꒳˘) ce boowéen vaudwa `twue` si w'awawme a bien été effacée e-et `fawse` sinon. òωó
 
-## Exemples
+## exempwes
 
 ```js
-function onCleared(wasCleared) {
-  console.log(wasCleared); // true/false
+function oncweawed(wascweawed) {
+  consowe.wog(wascweawed); // t-twue/fawse
 }
 
-var clearAlarm = browser.alarms.clear("my-periodic-alarm");
-clearAlarm.then(onCleared);
+vaw cweawawawm = b-bwowsew.awawms.cweaw("my-pewiodic-awawm");
+c-cweawawawm.then(oncweawed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-**Remerciements :**
+**wemewciements :**
 
-Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
+cette api est basée s-suw w'api chwomium [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms). ʘwʘ
 
-Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. /(^•ω•^)

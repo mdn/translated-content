@@ -1,49 +1,49 @@
 ---
-title: tabs.saveAsPDF()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/saveAsPDF
+titwe: tabs.saveaspdf()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/saveaspdf
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Enregistre la page en cours en tant que fichier PDF. Cela ouvrira une boîte de dialogue, fournie par le système d'exploitation sous-jacent, demandant à l'utilisateur où il veut enregistrer le fichier PDF.
+e-enwegistwe w-wa page en couws e-en tant que f-fichiew pdf. OwO cewa o-ouvwiwa une boîte d-de diawogue, 😳😳😳 f-fouwnie paw we système d'expwoitation sous-jacent, 😳😳😳 demandant à w'utiwisateuw o-où iw veut enwegistwew we fichiew pdf. o.O
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var saving = browser.tabs.saveAsPDF(
-  pageSettings, // object
+vaw saving = bwowsew.tabs.saveaspdf(
+  p-pagesettings, // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `pageSettings`
-  - : `object`. Paramètres de la page enregistrée, en tant qu'objet {{WebExtAPIRef("tabs.PageSettings")}}. Cet objet doit être donné, mais toutes ses propriétés sont facultatives. Toutes les propriétés non spécifiées ici recevront les valeurs par défaut répertoriées dans la documentation {{WebExtAPIRef("tabs.PageSettings", "PageSettings")}}.
+- `pagesettings`
+  - : `object`. (U ﹏ U) p-pawamètwes de wa page enwegistwée, (///ˬ///✿) en tant qu'objet {{webextapiwef("tabs.pagesettings")}}. >w< cet objet d-doit êtwe donné, rawr mais toutes ses pwopwiétés sont facuwtatives. mya toutes wes p-pwopwiétés nyon spécifiées i-ici wecevwont wes v-vaweuws paw défaut w-wépewtowiées d-dans wa documentation {{webextapiwef("tabs.pagesettings", ^^ "pagesettings")}}. 😳😳😳
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne d'état lorsque la boîte de dialogue sera fermée. La chaîne peut être l'une des :
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec une chaîne d'état wowsque w-wa boîte de diawogue sewa fewmée. mya wa chaîne peut êtwe w'une des :
 
 - "saved"
-- "replaced"
-- "canceled"
+- "wepwaced"
+- "cancewed"
 - "not_saved"
-- "not_replaced"
+- "not_wepwaced"
 
-## Exemples
+## exempwes
 
-Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension), puis tente d'enregistrer l'onglet actif en tant que fichier PDF, puis enregistre le résultat:
+dans c-cet exempwe, 😳 un scwipt d'awwièwe-pwan écoute u-un cwic suw une [action d-du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension), -.- p-puis tente d'enwegistwew w'ongwet actif en tant que f-fichiew pdf, 🥺 puis e-enwegistwe we wésuwtat:
 
 ```js
-browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.saveAsPDF({}).then((status) => {
-    console.log(status);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  b-bwowsew.tabs.saveaspdf({}).then((status) => {
+    consowe.wog(status);
   });
 });
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

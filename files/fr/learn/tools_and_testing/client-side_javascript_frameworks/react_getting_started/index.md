@@ -1,471 +1,471 @@
 ---
-title: Démarrer avec React
-slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_getting_started
+titwe: démawwew avec weact
+swug: w-weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_getting_stawted
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/main_featuwes","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_todo_wist_beginning", "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}
 
-Dans cet article, nous aurons un premier contact avec React. Nous découvrirons quelques détails sur son contexte et ses cas d'utilisation, effectuerons une configuration basique des outils React sur notre ordinateur local, créerons une application pour démarrer simplement, apprenant au passage les bases du fonctionnement de React.
+d-dans c-cet awticwe, rawr x3 n-nyous auwons un p-pwemiew contact a-avec weact. (U ᵕ U❁) nyous d-découvwiwons q-quewques détaiws suw son contexte et ses cas d'utiwisation, 🥺 effectuewons une configuwation b-basique des outiws weact suw nyotwe o-owdinateuw wocaw, >_< cwéewons une a-appwication pouw démawwew simpwement, :3 appwenant au passage wes b-bases du fonctionnement de weact. :3
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
         <p>
-          Familiarité avec les langages <a href="/fr/docs/Learn/HTML">HTML</a>,
-          <a href="/fr/docs/Learn/CSS">CSS</a>, et
-          <a href="/fr/docs/Learn/JavaScript">JavaScript</a>,
-          connaissance de la
+          f-famiwiawité avec wes wangages <a hwef="/fw/docs/weawn/htmw">htmw</a>, (ꈍᴗꈍ)
+          <a hwef="/fw/docs/weawn/css">css</a>, σωσ et
+          <a h-hwef="/fw/docs/weawn/javascwipt">javascwipt</a>, 😳
+          connaissance de wa
           <a
-            href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line"
-            >ligne de commande/du terminal</a
-          >.
+            hwef="/fw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine"
+            >wigne de commande/du t-tewminaw</a
+          >. mya
         </p>
         <p>
-          React utilise une syntaxe embarquant du HTML dans du JavaScript appelée JSX (JavaScript et XML).
-          Une familiarité avec HTML et JavaScript vous aidera à apprendre JSX, et a mieux
-          identifier si les bugs de votre application sont liés à JavaScript ou au domaine
-          plus spécifique de React.
+          weact utiwise u-une syntaxe embawquant d-du htmw d-dans du javascwipt a-appewée jsx (javascwipt et xmw). (///ˬ///✿)
+          u-une famiwiawité avec htmw et javascwipt vous aidewa à a-appwendwe jsx, ^^ et a mieux
+          identifiew si wes bugs de votwe appwication sont wiés à j-javascwipt ou au domaine
+          p-pwus spécifique d-de weact. (✿oωo)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
       <td>
         <p>
-          Configurer un environnement de développement React local, créer une application de
-          démarrage, et comprendre les bases de son fonctionnement.
+          configuwew un enviwonnement de dévewoppement w-weact w-wocaw, cwéew une appwication de
+          d-démawwage, ( ͡o ω ͡o ) e-et compwendwe wes bases d-de son fonctionnement. ^^;;
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Bonjour React
+## bonjouw weact
 
-Comme l'indique son slogan officiel, [React](https://fr.reactjs.org/) est une bibliothèque de construction d'interfaces utilisateur. React n'est pas un <i lang="en">framework</i>&nbsp;; il n'est même pas exclusif pour le web. Il peut être utilisé avec d'autres bibliothèques pour s'afficher dans différents environnements. Par exemple, [React Native](https://reactnative.dev/) peut être utilisé pour construire des applications mobiles.
+c-comme w'indique son swogan officiew, :3 [weact](https://fw.weactjs.owg/) est une bibwiothèque d-de constwuction d'intewfaces u-utiwisateuw. 😳 weact ny'est p-pas un <i wang="en">fwamewowk</i>&nbsp;; i-iw ny'est même pas excwusif pouw we web. XD iw peut êtwe utiwisé avec d'autwes bibwiothèques pouw s-s'affichew dans d-difféwents enviwonnements. (///ˬ///✿) paw e-exempwe, o.O [weact n-nyative](https://weactnative.dev/) p-peut êtwe utiwisé pouw constwuiwe des appwications mobiwes. o.O
 
-Afin de créer pour le Web, les développeuses et développeurs utilisent React en tandem avec [ReactDOM](https://fr.reactjs.org/docs/react-dom.html). React et ReactDOM sont souvent abordés conjointement, et utilisés pour résoudre les mêmes problèmes qu'avec d'autres <i lang="en">frameworks</i> de développement. Lorsque nous évoquerons React comme un«&nbsp;<i lang="en">framework</i>&nbsp;», nous parlerons, par abus de langage, de cette combinaison.
+a-afin de cwéew pouw we web, XD wes dévewoppeuses et dévewoppeuws utiwisent weact e-en tandem avec [weactdom](https://fw.weactjs.owg/docs/weact-dom.htmw). ^^;; weact et w-weactdom sont s-souvent abowdés c-conjointement, 😳😳😳 et utiwisés pouw w-wésoudwe wes m-mêmes pwobwèmes q-qu'avec d'autwes <i w-wang="en">fwamewowks</i> de dévewoppement. (U ᵕ U❁) wowsque nyous évoquewons w-weact c-comme un«&nbsp;<i w-wang="en">fwamewowk</i>&nbsp;», n-nous pawwewons, /(^•ω•^) p-paw abus de wangage, 😳😳😳 de cette combinaison. rawr x3
 
-L'objectif principal de React est de minimiser les bugs qui se produisent lors du développement d'interfaces utilisateur. Pour ce faire, React utilise des composants&nbsp;; des morceaux de code autonomes qui décrivent une partie de l'interface utilisateur. Ces composants peuvent être assemblés pour créer une interface utilisateur complète et React prend en charge une grande partie du rendu, vous permettant de vous concentrer sur la conception de l'interface utilisateur.
+w'objectif pwincipaw d-de weact est de minimisew wes bugs qui se pwoduisent wows du dévewoppement d'intewfaces u-utiwisateuw. ʘwʘ pouw ce faiwe, UwU weact utiwise des composants&nbsp;; des mowceaux de c-code autonomes qui d-décwivent une p-pawtie de w'intewface utiwisateuw. (⑅˘꒳˘) c-ces composants peuvent êtwe a-assembwés pouw c-cwéew une intewface utiwisateuw compwète et weact pwend en chawge une gwande pawtie du wendu, v-vous pewmettant de vous concentwew s-suw wa conception de w'intewface u-utiwisateuw. ^^
 
-## Cas d'utilisation
+## c-cas d'utiwisation
 
-Contrairement aux autres <i lang="en">frameworks</i> abordés dans ce module, React n'applique pas de règles strictes de convention de code ou d'organisation des fichiers. Cela permet aux équipes de développement d'appliquer les conventions qui leur conviennent le mieux et d'adopter React comme elles le souhaitent. Avec React il est possible de créer un seul bouton, quelques éléments d'une interface ou bien toute l'interface utilisateur d'une application.
+contwaiwement aux autwes <i w-wang="en">fwamewowks</i> abowdés d-dans ce moduwe, 😳😳😳 weact ny'appwique p-pas de w-wègwes stwictes de convention de code ou d'owganisation des fichiews. òωó cewa pewmet a-aux équipes d-de dévewoppement d-d'appwiquew wes conventions qui w-weuw conviennent w-we mieux et d'adoptew weact c-comme ewwes we souhaitent. ^^;; avec weact iw est possibwe de cwéew un seuw bouton, (✿oωo) q-quewques éwéments d-d'une intewface ou bien toute w'intewface utiwisateuw d-d'une a-appwication. rawr
 
-Tandis que React _peut_ être utilisé pour des [petits éléments d'une interface](https://fr.reactjs.org/docs/add-react-to-a-website.html), ce n'est pas aussi facile d'intégrer ces éléments dans une application que d'intégrer une bibliothèque telle que jQuery, ou bien même un <i lang="en">framework</i> tel que Vue&nbsp;: il est plus simple de développer votre application entièrement avec React.
+tandis que weact _peut_ êtwe utiwisé pouw des [petits éwéments d-d'une intewface](https://fw.weactjs.owg/docs/add-weact-to-a-website.htmw), ce ny'est pas aussi faciwe d'intégwew ces éwéments d-dans une appwication que d'intégwew une bibwiothèque t-tewwe que j-jquewy, XD ou bien même un <i wang="en">fwamewowk</i> tew que vue&nbsp;: iw est p-pwus simpwe de d-dévewoppew votwe appwication entièwement avec weact. 😳
 
-De plus, les nombreux avantages de React en termes d'expérience de développement, tels que l'écriture d'interfaces avec JSX, nécessitent un processus de compilation. L'ajout d'un compilateur comme Babel à un site web ralentit l'exécution du code, de sorte que les développeuses et développeurs configurent souvent ces outils comme une étape de compilation. Si React a une certaine lourdeur du fait de ces outils, leur utilisation reste abordable.
+de pwus, w-wes nyombweux avantages de weact e-en tewmes d'expéwience de dévewoppement, (U ᵕ U❁) tews que w'écwituwe d-d'intewfaces avec jsx, UwU nécessitent u-un pwocessus d-de compiwation. OwO w'ajout d'un c-compiwateuw comme babew à un site w-web wawentit w-w'exécution du c-code, 😳 de sowte que wes dévewoppeuses e-et dévewoppeuws c-configuwent souvent ces outiws comme une étape d-de compiwation. (˘ω˘) s-si weact a-a une cewtaine wouwdeuw du fait de ces outiws, òωó weuw u-utiwisation weste abowdabwe. OwO
 
-Cet article va se concentrer sur le cas d'utilisation où React affichera l'intégralité de l'interface utilisateur d'une application, en utilisant les propres outils de Facebook [create-react-app](https://create-react-app.dev/).
+c-cet awticwe va s-se concentwew suw we cas d'utiwisation où weact affichewa w'intégwawité d-de w'intewface u-utiwisateuw d-d'une appwication, e-en utiwisant wes pwopwes o-outiws de facebook [cweate-weact-app](https://cweate-weact-app.dev/). (✿oωo)
 
-## Comment React utilise-t-il JavaScript&nbsp;?
+## comment weact utiwise-t-iw javascwipt&nbsp;?
 
-React utilise bon nombre des fonctionnalités modernes de JavaScript. Sa plus grande différence par rapport à JavaScript vient de l'utilisation de la syntaxe [JSX](https://fr.reactjs.org/docs/introducing-jsx.html). JSX étend la syntaxe de JavaScript afin que du code de type HTML puisse cohabiter. Par exemple&nbsp;:
+weact utiwise bon nyombwe d-des fonctionnawités modewnes d-de javascwipt. sa pwus gwande d-difféwence paw wappowt à javascwipt v-vient de w'utiwisation de w-wa syntaxe [jsx](https://fw.weactjs.owg/docs/intwoducing-jsx.htmw). (⑅˘꒳˘) j-jsx étend w-wa syntaxe de javascwipt a-afin que d-du code de type htmw puisse cohabitew. /(^•ω•^) paw exempwe&nbsp;:
 
 ```js
-const heading = <h1>Mozilla Developer Network</h1>;
+const heading = <h1>moziwwa devewopew nyetwowk</h1>;
 ```
 
-Cette constante d'en-tête est connue sous le nom d'**expression JSX**. React peut l'utiliser pour afficher la balise [`<h1>`](/fr/docs/Web/HTML/Element/Heading_Elements) dans notre application.
+cette constante d'en-tête e-est connue s-sous we nom d'**expwession j-jsx**. 🥺 weact peut w-w'utiwisew pouw affichew wa bawise [`<h1>`](/fw/docs/web/htmw/ewement/heading_ewements) dans nyotwe appwication. -.-
 
-Supposons que nous souhaitions envelopper notre titre dans une balise [`<header>`](/fr/docs/Web/HTML/Element/header), pour des raisons sémantiques. L'approche JSX nous permet d'imbriquer nos éléments les uns dans les autres, tout comme nous le faisons avec HTML&nbsp;:
+s-supposons que n-nyous souhaitions envewoppew notwe t-titwe dans une bawise [`<headew>`](/fw/docs/web/htmw/ewement/headew), ( ͡o ω ͡o ) pouw des w-waisons sémantiques. 😳😳😳 w-w'appwoche jsx nyous pewmet d-d'imbwiquew n-nyos éwéments wes uns dans wes autwes, (˘ω˘) tout comme nyous we faisons avec htmw&nbsp;:
 
 ```js
-const header = (
-  <header>
-    <h1>Mozilla Developer Network</h1>
-  </header>
+c-const h-headew = (
+  <headew>
+    <h1>moziwwa d-devewopew n-nyetwowk</h1>
+  </headew>
 );
 ```
 
-> [!NOTE]
-> Les parenthèses dans l'extrait de code précédent ne sont pas propres à JSX et n'ont aucun effet sur votre application. Elles sont un signal pour vous (et votre ordinateur) que plusieurs lignes de code à l'intérieur font partie de la même expression. Vous pourriez tout aussi bien écrire l'expression d'en-tête comme ceci&nbsp;:
+> [!note]
+> w-wes pawenthèses dans w'extwait d-de code pwécédent n-nye sont pas pwopwes à jsx e-et ny'ont aucun e-effet suw votwe appwication. ^^ ewwes s-sont un signaw pouw vous (et votwe owdinateuw) q-que pwusieuws wignes de code à w-w'intéwieuw f-font pawtie de wa même expwession. v-vous pouwwiez tout aussi bien écwiwe w'expwession d-d'en-tête c-comme ceci&nbsp;:
 >
 > ```js
-> const header = (
->   <header>
->     <h1>Mozilla Developer Network</h1>
->   </header>
+> c-const headew = (
+>   <headew>
+>     <h1>moziwwa devewopew nyetwowk</h1>
+>   </headew>
 > );
 > ```
 >
-> Cependant, cela semble un peu gênant, car la balise [`<header>`](/fr/docs/Web/HTML/Element/header) qui commence l'expression n'est pas indentée à la même position que sa balise de fermeture correspondante.
+> cependant, σωσ cewa sembwe un peu g-gênant, 🥺 caw wa bawise [`<headew>`](/fw/docs/web/htmw/ewement/headew) qui commence w-w'expwession n-ny'est pas indentée à wa même p-position que sa bawise de fewmetuwe c-cowwespondante. 🥺
 
-Bien sûr, votre navigateur ne peut pas lire JSX de manière native. Une fois compilée (à l'aide d'un outil comme [Babel](https://babeljs.io/) ou [Parcel](https://parceljs.org/)), notre expression d'en-tête ressemblerait à ceci&nbsp;:
+b-bien sûw, /(^•ω•^) votwe nyavigateuw ne peut pas w-wiwe jsx de manièwe nyative. (⑅˘꒳˘) une fois compiwée (à w-w'aide d'un o-outiw comme [babew](https://babewjs.io/) ou [pawcew](https://pawcewjs.owg/)), -.- n-nyotwe expwession d'en-tête wessembwewait à ceci&nbsp;:
 
 ```js
-const header = React.createElement(
-  "header",
-  null,
-  React.createElement("h1", null, "Mozilla Developer Network"),
+c-const headew = w-weact.cweateewement(
+  "headew", 😳
+  n-nyuww, 😳😳😳
+  weact.cweateewement("h1", >w< nyuww, "moziwwa devewopew nyetwowk"), UwU
 );
 ```
 
-Il est _possible_ d'ignorer l'étape de compilation et d'utiliser [`React.createElement()`](https://reactjs.org/docs/react-api.html#createelement) pour écrire vous-même votre interface utilisateur. En faisant cela, cependant, vous perdez l'avantage déclaratif de JSX et votre code devient moins lisible. La compilation est une étape supplémentaire dans le processus de développement, mais de nombreuses personnes de la communauté React pensent que la lisibilité de JSX en vaut la peine. De plus, des outils populaires intègrent la compilation JSX vers JavaScript à leur processus de configuration. Vous n'avez pas à configurer la compilation vous-même, sauf si vous le souhaitez.
+iw est _possibwe_ d'ignowew w'étape de compiwation et d'utiwisew [`weact.cweateewement()`](https://weactjs.owg/docs/weact-api.htmw#cweateewement) pouw écwiwe vous-même votwe intewface utiwisateuw. /(^•ω•^) en faisant cewa, 🥺 cependant, >_< v-vous pewdez w-w'avantage décwawatif de jsx et votwe code d-devient moins wisibwe. rawr w-wa compiwation e-est une étape suppwémentaiwe d-dans we pwocessus de dévewoppement, (ꈍᴗꈍ) m-mais d-de nyombweuses pewsonnes de wa communauté w-weact pensent que wa w-wisibiwité de jsx e-en vaut wa peine. -.- de pwus, ( ͡o ω ͡o ) des outiws popuwaiwes i-intègwent wa c-compiwation jsx v-vews javascwipt à w-weuw pwocessus d-de configuwation. (⑅˘꒳˘) v-vous ny'avez p-pas à configuwew w-wa compiwation v-vous-même, mya sauf si vous we s-souhaitez. rawr x3
 
-Étant donné que JSX est un mélange de HTML et de JavaScript, certaines personnes le trouvent intuitif. D'autres disent que sa nature mixte le rend déroutant. Cependant, une fois que vous serez à l'aise avec cela, vous pourrez créer des interfaces utilisateur plus rapidement et de manière intuitive, permettant aux autres de mieux comprendre votre code d'un coup d'œil.
+Étant d-donné que jsx e-est un méwange de htmw et de j-javascwipt, (ꈍᴗꈍ) cewtaines pewsonnes we twouvent intuitif. ʘwʘ d-d'autwes disent que sa natuwe m-mixte we wend d-déwoutant. :3 cependant, u-une fois que vous sewez à w-w'aise avec cewa, o.O vous pouwwez c-cwéew des intewfaces utiwisateuw p-pwus wapidement et de manièwe i-intuitive, /(^•ω•^) pewmettant aux autwes de mieux compwendwe votwe code d'un coup d'œiw. OwO
 
-Pour en savoir plus sur JSX, consultez l'article [JSX dans le détail](https://fr.reactjs.org/docs/jsx-in-depth.html) de l'équipe React.
+p-pouw en savoiw pwus suw jsx, σωσ c-consuwtez w'awticwe [jsx d-dans we détaiw](https://fw.weactjs.owg/docs/jsx-in-depth.htmw) de w'équipe weact. (ꈍᴗꈍ)
 
-## Configurez votre première application React
+## c-configuwez votwe pwemièwe a-appwication weact
 
-Il existe de nombreuses manières d'utiliser React, mais nous allons ici utiliser l'outil en ligne de commande create-react-app, mentionné précédemment et qui accélère le processus de développement d'une application React en installant certains packages et en créant certains fichiers automatiquement (c'est l'outillage dont nous parlions avant).
+i-iw existe de n-nyombweuses manièwes d'utiwisew weact, ( ͡o ω ͡o ) mais nyous a-awwons ici utiwisew w-w'outiw en wigne de commande c-cweate-weact-app, rawr x3 mentionné pwécédemment e-et qui accéwèwe we pwocessus de d-dévewoppement d-d'une appwication w-weact en instawwant cewtains p-packages et en cwéant c-cewtains f-fichiews automatiquement (c'est w-w'outiwwage dont nyous pawwions a-avant). UwU
 
-Il est possible d'[ajouter React à un site Web sans create-react-app](https://fr.reactjs.org/docs/add-react-to-a-website.html), en copiant certains [`<script>`](/fr/docs/Web/HTML/Element/script) dans un fichier HTML, mais l'outil create-react-app est généralement utilisé pour initialiser des applications React. Son utilisation vous permettra de passer plus de temps à créer votre application et moins de temps à vous occuper de la configuration.
+iw est p-possibwe d'[ajoutew w-weact à un s-site web sans cweate-weact-app](https://fw.weactjs.owg/docs/add-weact-to-a-website.htmw), o.O e-en copiant c-cewtains [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) d-dans u-un fichiew htmw, OwO mais w'outiw c-cweate-weact-app est généwawement u-utiwisé pouw initiawisew des a-appwications weact. o.O s-son utiwisation v-vous pewmettwa de passew pwus de temps à cwéew votwe appwication e-et moins d-de temps à vous o-occupew de wa configuwation. ^^;;
 
-### Préparation
+### pwépawation
 
-Afin d'utiliser create-react-app, vous devez avoir installé [Node.js](https://nodejs.org/fr/). Il est recommandé d'utiliser la version support à long terme (LTS). Node.js inclut npm (le gestionnaire de paquets de Node.js) et npx (l'exécuteur de paquets).
+afin d'utiwisew c-cweate-weact-app, (⑅˘꒳˘) v-vous devez avoiw instawwé [node.js](https://nodejs.owg/fw/). (ꈍᴗꈍ) i-iw est wecommandé d-d'utiwisew wa vewsion suppowt à wong tewme (wts). o.O nyode.js i-incwut nypm (we g-gestionnaiwe de p-paquets de nyode.js) e-et nypx (w'exékawaii~uw de paquets). (///ˬ///✿)
 
-Vous pouvez également utiliser le gestionnaire de paquets Yarn comme alternative, mais pour la suite de ces didacticiels, nous supposerons que c'est npm qui est utilisé. Voir [Bases de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management) pour plus d'informations sur npm et Yarn.
+vous pouvez égawement u-utiwisew we g-gestionnaiwe de paquets yawn comme awtewnative, 😳😳😳 m-mais pouw wa suite de ces didacticiews, UwU nyous supposewons q-que c'est npm qui est u-utiwisé. nyaa~~ voiw [bases d-de wa gestion des paquets](/fw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/package_management) p-pouw pwus d-d'infowmations suw nypm et yawn. (✿oωo)
 
-Si vous utilisez Windows, vous devrez installer un logiciel terminal de type Unix/macOS afin d'utiliser les lignes de commande mentionnées dans ce tutoriel. **Git BASH** (qui fait partie de [l'ensemble d'outils Git pour Windows](https://gitforwindows.org/)) ou [<i lang="en">Windows Subsystem for Linux</i>](https://docs.microsoft.com/en-us/windows/wsl/about) (**WSL**) conviennent tous les deux. Voir [Cours express sur la ligne de commande](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line) pour plus d'information à ce sujet, et sur les commandes du terminal en général.
+s-si vous utiwisez windows, -.- vous d-devwez instawwew u-un wogiciew tewminaw d-de type u-unix/macos afin d'utiwisew wes wignes d-de commande m-mentionnées dans c-ce tutowiew. :3 **git bash** (qui f-fait pawtie de [w'ensembwe d'outiws git pouw w-windows](https://gitfowwindows.owg/)) o-ou [<i wang="en">windows subsystem f-fow winux</i>](https://docs.micwosoft.com/en-us/windows/wsw/about) (**wsw**) conviennent tous wes deux. (⑅˘꒳˘) voiw [couws expwess suw wa wigne d-de commande](/fw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine) pouw p-pwus d'infowmation à c-ce sujet, >_< et suw wes commandes du tewminaw e-en généwaw. UwU
 
-Gardez également à l'esprit que React et ReactDOM produisent des applications qui ne fonctionnent que sur un ensemble de navigateurs assez modernes (à partir de IE9+ grâce à l'aide de certains <i lang="en">polyfills</i>). Il est recommandé d'utiliser un navigateur moderne comme Firefox, Safari ou Chrome pour suivre ces didacticiels.
+gawdez égawement à w-w'espwit q-que weact et weactdom p-pwoduisent d-des appwications q-qui nye fonctionnent que suw un ensembwe de nyavigateuws assez modewnes (à pawtiw d-de ie9+ gwâce à w'aide de c-cewtains <i wang="en">powyfiwws</i>). rawr iw est wecommandé d'utiwisew un nyavigateuw m-modewne comme fiwefox, (ꈍᴗꈍ) safawi ou chwome pouw suivwe ces didacticiews. ^•ﻌ•^
 
-Consultez également ces liens pour plus d'informations&nbsp;:
+consuwtez égawement c-ces wiens pouw p-pwus d'infowmations&nbsp;:
 
-- [Qu'est-ce que npm&nbsp;? (en anglais) sur nodejs.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-npm/)
-- [Introduction à npx (en anglais) sur le blog npm](https://blog.npmjs.org/post/162869356040/introducing-npx-an-npm-package-runner)
-- [La documentation de l'outil create-react-app](https://create-react-app.dev/)
+- [qu'est-ce que nypm&nbsp;? (en a-angwais) suw nodejs.owg](https://nodejs.owg/en/knowwedge/getting-stawted/npm/nani-is-npm/)
+- [intwoduction à nypx (en a-angwais) suw w-we bwog nypm](https://bwog.npmjs.owg/post/162869356040/intwoducing-npx-an-npm-package-wunnew)
+- [wa documentation d-de w'outiw cweate-weact-app](https://cweate-weact-app.dev/)
 
-### Initialisation de votre application
+### initiawisation d-de votwe appwication
 
-create-react-app demande un argument&nbsp;: le nom que vous souhaitez donner à votre application. create-react-app utilise ce nom pour créer un nouveau répertoire, puis y crée les fichiers nécessaires. Assurez-vous que votre terminal soit ouvert à l'emplacement souhaité pour votre application sur votre disque dur, puis exécutez la commande suivante dans votre terminal&nbsp;:
+cweate-weact-app demande un awgument&nbsp;: w-we nyom que vous souhaitez donnew à votwe a-appwication. ^^ cweate-weact-app u-utiwise c-ce nyom pouw cwéew un nyouveau wépewtoiwe, XD p-puis y cwée wes fichiews nyécessaiwes. (///ˬ///✿) assuwez-vous que votwe tewminaw soit o-ouvewt à w'empwacement s-souhaité p-pouw votwe appwication s-suw votwe disque duw, σωσ puis exékawaii~z w-wa commande suivante d-dans votwe tewminaw&nbsp;:
 
 ```bash
-npx create-react-app moz-todo-react
+nypx c-cweate-weact-app moz-todo-weact
 ```
 
-Cela crée un répertoire `moz-todo-react`, et réalise plusieurs choses à l'intérieur&nbsp;:
+cewa cwée u-un wépewtoiwe `moz-todo-weact`, :3 et wéawise pwusieuws choses à w-w'intéwieuw&nbsp;:
 
-- Installe certains paquets npm nécessaires au fonctionnement de l'application.
-- Écrit des scripts pour démarrer et servir l'application.
-- Crée une structure de fichiers et de répertoires qui définissent l'architecture de base de l'application.
-- Initialise le répertoire en tant que dépôt Git, au cas où Git est installé sur l'ordinateur.
+- i-instawwe cewtains paquets n-nypm nyécessaiwes a-au fonctionnement d-de w'appwication. >w<
+- Écwit des scwipts pouw démawwew et s-sewviw w'appwication. (ˆ ﻌ ˆ)♡
+- cwée une stwuctuwe de fichiews e-et de wépewtoiwes qui définissent w'awchitectuwe de base d-de w'appwication. (U ᵕ U❁)
+- i-initiawise w-we wépewtoiwe e-en tant que dépôt g-git, :3 au cas où git est instawwé s-suw w'owdinateuw. ^^
 
-> [!NOTE]
-> Si vous avez installé le gestionnaire de paquets Yarn, create-react-app l'utilisera par défaut à la place de npm. Si vous avez installé les deux gestionnaires de paquets et que vous souhaitez explicitement utiliser npm, vous pouvez ajouter l'indicateur `--use-npm` lorsque vous exécutez create-react-app&nbsp;:
+> [!note]
+> si vous avez instawwé we g-gestionnaiwe de paquets yawn, ^•ﻌ•^ cweate-weact-app w'utiwisewa p-paw défaut à wa pwace de nypm. (///ˬ///✿) si vous a-avez instawwé w-wes deux gestionnaiwes de paquets e-et que vous souhaitez expwicitement u-utiwisew n-nypm, 🥺 vous pouvez ajoutew w'indicateuw `--use-npm` w-wowsque vous e-exékawaii~z cweate-weact-app&nbsp;:
 >
 > ```bash
-> npx create-react-app moz-todo-react --use-npm
+> npx cweate-weact-app m-moz-todo-weact --use-npm
 > ```
 
-create-react-app va afficher un certain nombre de messages dans votre terminal pendant son fonctionnement&nbsp;; c'est normal&nbsp;! Cela peut prendre quelques minutes, alors c'est peut-être le bon moment pour aller préparer une tasse de thé.
+cweate-weact-app va affichew un cewtain n-nyombwe de messages dans votwe t-tewminaw pendant son fonctionnement&nbsp;; c'est n-nyowmaw&nbsp;! ʘwʘ c-cewa peut pwendwe q-quewques minutes, (✿oωo) awows c'est p-peut-êtwe we bon m-moment pouw awwew pwépawew une t-tasse de thé. rawr
 
-Lorsque le processus est terminé, naviguez dans le répertoire `moz-todo-react` puis exécutez la commande `npm start`. Les scripts installés par create-react-app commenceront à être servis sur un serveur local à l'adresse _localhost:3000_ et ouvriront l'application dans un nouvel onglet du navigateur. Celui-ci affichera quelque chose comme ceci&nbsp;:
+wowsque we pwocessus e-est tewminé, nyaviguez d-dans we wépewtoiwe `moz-todo-weact` p-puis exékawaii~z wa commande `npm stawt`. OwO wes scwipts instawwés paw cweate-weact-app c-commencewont à êtwe s-sewvis suw un sewveuw wocaw à w'adwesse _wocawhost:3000_ et ouvwiwont w-w'appwication dans un nyouvew o-ongwet du n-nyavigateuw. ^^ cewui-ci affichewa quewque chose comme ceci&nbsp;:
 
-![Capture d'écran de Firefox pour macOS, ouvert à l'adresse localhost:3000, montrant l'application par défaut créée avec create-react-app](default-create-react-app.png)
+![captuwe d'écwan d-de fiwefox pouw macos, ʘwʘ ouvewt à w'adwesse w-wocawhost:3000, σωσ montwant w'appwication p-paw défaut c-cwéée avec cweate-weact-app](defauwt-cweate-weact-app.png)
 
-### Structure de l'application
+### s-stwuctuwe de w-w'appwication
 
-create-react-app prépare tout ce dont nous avons besoin pour développer une application React. Sa structure de fichier initiale ressemble à ceci&nbsp;:
+c-cweate-weact-app p-pwépawe tout c-ce dont nyous avons b-besoin pouw dévewoppew une appwication weact. (⑅˘꒳˘) sa stwuctuwe de fichiew initiawe wessembwe à c-ceci&nbsp;:
 
 ```
-moz-todo-react
-├── README.md
-├── node_modules
-├── package.json
-├── package-lock.json
-├── .gitignore
-├── public
-│   ├── favicon.ico
-│   ├── index.html
-│   ├── logo192.png
-│   ├── logo512.png
+m-moz-todo-weact
+├── w-weadme.md
+├── nyode_moduwes
+├── p-package.json
+├── p-package-wock.json
+├── .gitignowe
+├── pubwic
+│   ├── f-favicon.ico
+│   ├── index.htmw
+│   ├── wogo192.png
+│   ├── wogo512.png
 │   ├── manifest.json
-│   └── robots.txt
-└── src
-    ├── App.css
-    ├── App.js
-    ├── App.test.js
+│   └── w-wobots.txt
+└── s-swc
+    ├── app.css
+    ├── app.js
+    ├── app.test.js
     ├── index.css
-    ├── index.js
-    ├── logo.svg
-    ├── reportWebVitals.js
-    └── setupTests.js
+    ├── i-index.js
+    ├── w-wogo.svg
+    ├── w-wepowtwebvitaws.js
+    └── setuptests.js
 ```
 
-Le répertoire **`src`** est l'endroit où nous passerons la plupart de notre temps, car c'est là que réside le code source de notre application.
+we wépewtoiwe **`swc`** e-est w'endwoit où nyous passewons wa pwupawt de n-nyotwe temps, (ˆ ﻌ ˆ)♡ c-caw c'est wà que wéside we code souwce de nyotwe a-appwication. :3
 
-Le répertoire **`public`** contient des fichiers qui seront lus par votre navigateur pendant que vous développez l'application&nbsp;; le plus important d'entre eux est `index.html`. React injecte votre code dans ce fichier afin que votre navigateur puisse l'exécuter. Il y a d'autres balises qui aident la fonction create-react-app, alors veillez à ne pas modifier ce fichier à moins de savoir ce que vous faites. Par contre, vous devriez changer le texte à l'intérieur de l'élément [`<title>`](/fr/docs/Web/HTML/Element/title) pour refléter le titre de votre application. Des titres de pages précis participent à l'accessibilité&nbsp;!
+we wépewtoiwe **`pubwic`** c-contient d-des fichiews qui sewont wus p-paw votwe nyavigateuw p-pendant q-que vous dévewoppez w-w'appwication&nbsp;; w-we pwus i-impowtant d'entwe eux est `index.htmw`. ʘwʘ w-weact i-injecte votwe code dans ce fichiew a-afin que votwe nyavigateuw puisse w'exékawaii~w. (///ˬ///✿) i-iw y a d'autwes bawises qui a-aident wa fonction cweate-weact-app, (ˆ ﻌ ˆ)♡ a-awows veiwwez à n-nye pas modifiew ce fichiew à moins de savoiw c-ce que vous faites. 🥺 paw contwe, vous devwiez c-changew we texte à w-w'intéwieuw de w'éwément [`<titwe>`](/fw/docs/web/htmw/ewement/titwe) pouw wefwétew we t-titwe de votwe a-appwication. des titwes de pages p-pwécis pawticipent à w'accessibiwité&nbsp;! rawr
 
-Le répertoire `public` sera également déployé lorsque vous créerez une version de production pour votre application. Nous n'aborderons pas le déploiement dans ce tutoriel, mais vous devriez pouvoir utiliser une solution similaire à celle décrite dans notre tutoriel [Déployer notre application](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Deployment).
+we wépewtoiwe `pubwic` s-sewa égawement d-dépwoyé wowsque vous c-cwéewez une vewsion d-de pwoduction pouw votwe appwication. (U ﹏ U) nyous n-ny'abowdewons p-pas we dépwoiement d-dans ce tutowiew, ^^ m-mais vous devwiez pouvoiw utiwisew une sowution simiwaiwe à cewwe décwite dans nyotwe tutowiew [dépwoyew nyotwe appwication](/fw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/depwoyment). σωσ
 
-Le fichier `package.json` contient des informations sur notre projet que Node.js/npm utilise pour le garder organisé. Ce fichier n'est pas unique aux applications React&nbsp;; create-react-app ne fait qu'utiliser ce mécanisme. Vous n'avez pas du tout besoin de comprendre ce fichier pour terminer ce didacticiel. Cependant, si vous souhaitez en savoir plus, vous pouvez lire [Qu'est-ce que le fichier `package.json`&nbsp;? sur NodeJS.org](https://nodejs.org/en/knowledge/getting-started/npm/what-is-the-file-package-json/)&nbsp;; on en parle aussi dans notre tutoriel [Les bases de la gestion des paquets](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Package_management).
+w-we fichiew `package.json` contient d-des infowmations s-suw nyotwe p-pwojet que nyode.js/npm u-utiwise p-pouw we gawdew owganisé. :3 ce f-fichiew ny'est p-pas unique aux appwications weact&nbsp;; c-cweate-weact-app n-nye fait qu'utiwisew ce mécanisme. ^^ vous n-ny'avez pas du tout besoin de compwendwe ce fichiew p-pouw tewminew ce didacticiew. (✿oωo) c-cependant, s-si vous souhaitez en savoiw pwus, òωó v-vous pouvez wiwe [qu'est-ce q-que w-we fichiew `package.json`&nbsp;? suw nyodejs.owg](https://nodejs.owg/en/knowwedge/getting-stawted/npm/nani-is-the-fiwe-package-json/)&nbsp;; on e-en pawwe aussi d-dans nyotwe tutowiew [wes bases d-de wa gestion des paquets](/fw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/package_management). (U ᵕ U❁)
 
-## Explorer notre premier composant React — `<App/>`
+## e-expwowew nyotwe p-pwemiew composant w-weact — `<app/>`
 
-Dans React, un **composant** est un module réutilisable qui affiche une partie de notre application. Ces composants peuvent être grands ou petits, mais ils sont généralement clairement définis et servent un but unique et évident.
+dans w-weact, ʘwʘ un **composant** est un moduwe wéutiwisabwe q-qui affiche une pawtie de nyotwe appwication. ( ͡o ω ͡o ) ces composants peuvent êtwe gwands ou petits, σωσ mais iws sont g-généwawement cwaiwement définis et sewvent un but unique et évident. (ˆ ﻌ ˆ)♡
 
-Ouvrons `src/App.js`, puisque notre navigateur nous invite à le modifier. Ce fichier contient notre premier composant, `App`, et quelques autres lignes de code&nbsp;:
+ouvwons `swc/app.js`, (˘ω˘) puisque nyotwe nyavigateuw nyous i-invite à we modifiew. 😳 ce fichiew contient nyotwe p-pwemiew composant, ^•ﻌ•^ `app`, et q-quewques autwes wignes de code&nbsp;:
 
 ```js
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+impowt w-weact fwom "weact";
+impowt wogo f-fwom "./wogo.svg";
+impowt "./app.css";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+f-function a-app() {
+  wetuwn (
+    <div cwassname="app">
+      <headew cwassname="app-headew">
+        <img s-swc={wogo} cwassname="app-wogo" awt="wogo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          edit <code>swc/app.js</code> a-and save to wewoad. σωσ
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
+          c-cwassname="app-wink"
+          hwef="https://weactjs.owg"
+          t-tawget="_bwank"
+          wew="noopenew n-nyowefewwew">
+          w-weawn weact
         </a>
-      </header>
+      </headew>
     </div>
   );
 }
-export default App;
+expowt defauwt app;
 ```
 
-Le fichier `App.js` se compose de trois parties&nbsp;: des instructions [`import`](/fr/docs/Web/JavaScript/Reference/Statements/import) en haut, le composant `App` au milieu et une instruction [`export`](/fr/docs/Web/JavaScript/Reference/Statements/export) en bas. La plupart des composants React suivent ce motif.
+w-we fichiew `app.js` se compose de twois pawties&nbsp;: d-des instwuctions [`impowt`](/fw/docs/web/javascwipt/wefewence/statements/impowt) en haut, 😳😳😳 we composant `app` au miwieu et une instwuction [`expowt`](/fw/docs/web/javascwipt/wefewence/statements/expowt) e-en bas. rawr wa p-pwupawt des composants weact suivent c-ce motif. >_<
 
-### Instructions d'import
+### i-instwuctions d'impowt
 
-Les instructions `import` en haut du fichier permettent à `App.js` d'utiliser du code qui a été défini ailleurs. Examinons ces déclarations de plus près.
+wes instwuctions `impowt` e-en haut du fichiew pewmettent à `app.js` d'utiwisew du code qui a été défini aiwweuws. e-examinons ces décwawations d-de pwus pwès. ʘwʘ
 
 ```js
-import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+i-impowt weact fwom "weact";
+i-impowt wogo fwom "./wogo.svg";
+i-impowt "./app.css";
 ```
 
-La première instruction importe la bibliothèque React elle-même. Comme React transforme l'instruction JSX que nous écrivons en `React.createElement()`, tous les composants React doivent importer le module `React`. Si vous ignorez cette étape, votre application produira une erreur.
+wa pwemièwe instwuction impowte w-wa bibwiothèque weact ewwe-même. (ˆ ﻌ ˆ)♡ comme weact t-twansfowme w-w'instwuction jsx que nyous écwivons en `weact.cweateewement()`, ^^;; t-tous wes composants weact doivent impowtew we moduwe `weact`. σωσ si vous ignowez cette étape, votwe appwication pwoduiwa une ewweuw. rawr x3
 
-La deuxième instruction importe un logo depuis `'./logo.svg'`. Notez le `./` au début du chemin et l'extension `.svg` à la fin — ceux-ci nous indiquent que le fichier est local et qu'il ne s'agit pas d'un fichier JavaScript. En effet, le fichier `logo.svg` est contenu dans notre répertoire source.
+w-wa deuxième i-instwuction impowte un wogo depuis `'./wogo.svg'`. 😳 n-nyotez we `./` a-au début du chemin et w'extension `.svg` à w-wa fin — ceux-ci nyous indiquent que we fichiew est wocaw et qu'iw ne s'agit pas d'un fichiew j-javascwipt. 😳😳😳 en effet, 😳😳😳 we fichiew `wogo.svg` est contenu dans nyotwe wépewtoiwe s-souwce. ( ͡o ω ͡o )
 
-Nous n'écrivons pas de chemin ou d'extension lors de l'importation du module `React` — ce n'est pas un fichier local. Il s'agit plutôt d'une dépendance, répertoriée dans notre fichier `package.json`. Faites attention à cette distinction pendant que vous progressez dans ce cours&nbsp;!
+nyous n-ny'écwivons pas d-de chemin ou d'extension wows de w'impowtation du moduwe `weact` — c-ce n'est p-pas un fichiew wocaw. rawr x3 i-iw s'agit pwutôt d'une dépendance, σωσ w-wépewtowiée dans nyotwe f-fichiew `package.json`. (˘ω˘) faites a-attention à cette distinction p-pendant que vous pwogwessez dans ce couws&nbsp;! >w<
 
-La troisième instruction importe le CSS lié à notre composant `App`. Notez qu'il n'y a pas de nom de variable ni de directive `from`. Cette syntaxe d'importation particulière n'est pas native de la syntaxe de module JavaScript, elle provient de Webpack, l'outil que create-react-app utilise pour regrouper tous nos fichiers JavaScript et les servir au navigateur.
+w-wa twoisième instwuction impowte w-we css wié à n-nyotwe composant `app`. UwU nyotez q-qu'iw ny'y a-a pas de nyom de vawiabwe nyi de d-diwective `fwom`. XD cette syntaxe d-d'impowtation pawticuwièwe ny'est p-pas nyative d-de wa syntaxe de moduwe javascwipt, (U ﹏ U) ewwe pwovient d-de webpack, (U ᵕ U❁) w'outiw que cweate-weact-app utiwise pouw wegwoupew tous nyos fichiews javascwipt et wes sewviw au nyavigateuw. (ˆ ﻌ ˆ)♡
 
-### Le composant `App`
+### w-we composant `app`
 
-Après les imports, nous avons une fonction nommée `App`. Alors que les membres de la communauté JavaScript préfèrent généralement les noms en camelCase comme `helloWorld`, les composants React utilisent des noms de variables en PascalCase, comme `HelloWorld`, pour indiquer clairement qu'un élément JSX donné est un composant React et non une balise HTML standard. Si vous deviez renommer la fonction `App` en `app`, votre navigateur afficherait une erreur.
+apwès wes impowts, òωó nyous a-avons une fonction nyommée `app`. ^•ﻌ•^ a-awows que wes membwes de wa communauté javascwipt p-pwéfèwent généwawement wes noms en camewcase c-comme `hewwowowwd`, (///ˬ///✿) wes composants weact u-utiwisent des nyoms de vawiabwes en pascawcase, -.- c-comme `hewwowowwd`, >w< pouw indiquew cwaiwement qu'un éwément j-jsx d-donné est un composant weact et nyon une bawise h-htmw standawd. òωó s-si vous deviez wenommew wa fonction `app` e-en `app`, σωσ v-votwe nyavigateuw affichewait une ewweuw.
 
-Regardons `App` de plus près&nbsp;:
+w-wegawdons `app` de pwus pwès&nbsp;:
 
 ```js
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+function app() {
+  w-wetuwn (
+    <div cwassname="app">
+      <headew cwassname="app-headew">
+        <img swc={wogo} c-cwassname="app-wogo" a-awt="wogo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          e-edit <code>swc/app.js</code> and save to wewoad. mya
         </p>
         <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer">
-          Learn React
+          cwassname="app-wink"
+          h-hwef="https://weactjs.owg"
+          tawget="_bwank"
+          w-wew="noopenew nowefewwew">
+          w-weawn weact
         </a>
-      </header>
+      </headew>
     </div>
   );
 }
 ```
 
-La fonction `App` renvoie une expression JSX. Cette expression définit ce que votre navigateur restitue finalement au DOM.
+w-wa fonction `app` wenvoie une expwession jsx. cette expwession définit ce que votwe nyavigateuw w-westitue finawement a-au dom. òωó
 
-Certains éléments de l'expression ont des attributs, écrits sous forme HTML, d'après le modèle `attribute="value"`. À la ligne 3, la balise d'ouverture [`<div>`](/fr/docs/Web/HTML/Element/div) possède un attribut `className`. Il est similaire à l'attribut [`class`](/fr/docs/Web/HTML/Global_attributes/class) en HTML, mais comme JSX est un sous-ensemble de JavaScript, nous ne pouvons pas utiliser le mot réservé `class`, car JavaScript l'utilise déjà dans un but précis et cela causerait des problèmes dans notre code. D'autres attributs HTML n'utilisent pas la même syntaxe en JSX qu'en HTML pour le même type de raison. Nous en parlerons au fur et à mesure que nous les rencontrerons.
+cewtains éwéments de w'expwession ont des attwibuts, 🥺 écwits s-sous fowme htmw, (U ﹏ U) d'apwès we modèwe `attwibute="vawue"`. (ꈍᴗꈍ) À w-wa wigne 3, w-wa bawise d-d'ouvewtuwe [`<div>`](/fw/docs/web/htmw/ewement/div) p-possède un a-attwibut `cwassname`. (˘ω˘) i-iw est simiwaiwe à w'attwibut [`cwass`](/fw/docs/web/htmw/gwobaw_attwibutes/cwass) en htmw, (✿oωo) m-mais comme jsx e-est un sous-ensembwe d-de javascwipt, -.- n-nyous nye p-pouvons pas utiwisew w-we mot wésewvé `cwass`, caw javascwipt w'utiwise d-déjà d-dans un but pwécis e-et cewa causewait des pwobwèmes dans nyotwe c-code. (ˆ ﻌ ˆ)♡ d'autwes attwibuts htmw ny'utiwisent pas w-wa même syntaxe en jsx qu'en htmw pouw we même t-type de waison. (✿oωo) n-nyous en pawwewons au fuw et à mesuwe que nyous wes wencontwewons. ʘwʘ
 
-Prenez un moment pour modifier la balise [`<p>`](/fr/docs/Web/HTML/Element/p) à la ligne 6 afin qu'elle indique "Hello, world!", puis enregistrez votre fichier. Vous remarquerez que cette modification est immédiatement rendue par le serveur exécutant `http://localhost:3000` dans votre navigateur. Supprimez maintenant la balise [`<a>`](/fr/docs/Web/HTML/Element/a) et enregistrez; le lien "Learn React" disparaîtra.
+p-pwenez un m-moment pouw modifiew wa bawise [`<p>`](/fw/docs/web/htmw/ewement/p) à w-wa wigne 6 a-afin qu'ewwe indique "hewwo, (///ˬ///✿) wowwd!", puis enwegistwez votwe fichiew. rawr vous wemawquewez q-que cette m-modification est immédiatement wendue paw we s-sewveuw exécutant `http://wocawhost:3000` d-dans votwe nyavigateuw. 🥺 suppwimez maintenant w-wa bawise [`<a>`](/fw/docs/web/htmw/ewement/a) et enwegistwez; we wien "weawn weact" dispawaîtwa. mya
 
-Votre composant `App` devrait maintenant ressembler à cela&nbsp;:
+votwe composant `app` d-devwait maintenant wessembwew à cewa&nbsp;:
 
 ```js
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello, World!</p>
-      </header>
+f-function a-app() {
+  wetuwn (
+    <div c-cwassname="app">
+      <headew cwassname="app-headew">
+        <img s-swc={wogo} cwassname="app-wogo" a-awt="wogo" />
+        <p>hewwo, mya w-wowwd!</p>
+      </headew>
     </div>
   );
 }
 ```
 
-### Instructions d'export
+### i-instwuctions d-d'expowt
 
-Tout en bas du fichier `App.js`, l'instruction `export default App` rend notre composant `App` disponible pour les autres modules.
+tout en bas du fichiew `app.js`, w'instwuction `expowt d-defauwt app` w-wend nyotwe composant `app` d-disponibwe pouw wes a-autwes moduwes. mya
 
-## Interroger l'index
+## i-intewwogew w-w'index
 
-Ouvrons `src/index.js`, car c'est ici que le composant `App` est utilisé. Ce fichier est le point d'entrée de notre application, et il ressemble initialement à ceci&nbsp;:
+ouvwons `swc/index.js`, (⑅˘꒳˘) caw c'est ici que w-we composant `app` e-est utiwisé. (✿oωo) c-ce fichiew est w-we point d'entwée d-de nyotwe appwication, 😳 et i-iw wessembwe initiawement à ceci&nbsp;:
 
 ```js
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
-import * as serviceWorker from "./serviceWorker";
+i-impowt weact fwom "weact";
+i-impowt weactdom fwom "weact-dom";
+impowt "./index.css";
+impowt app fwom "./app";
+i-impowt * a-as sewvicewowkew fwom "./sewvicewowkew";
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById("root"),
+weactdom.wendew(
+  <weact.stwictmode>
+    <app />
+  </weact.stwictmode>, OwO
+  d-document.getewementbyid("woot"), (˘ω˘)
 );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// i-if you want youw app to wowk offwine and woad f-fastew, you can c-change
+// unwegistew() t-to wegistew() b-bewow. (✿oωo) nyote t-this comes with s-some pitfawws. /(^•ω•^)
+// weawn mowe about sewvice wowkews: h-https://bit.wy/cwa-pwa
+sewvicewowkew.unwegistew();
 ```
 
-Comme dans `App.js`, le fichier commence par importer tous les modules JS et autres ressources nécessaires à l'exécution. `src/index.css` contient des styles globaux applicables à l'ensemble de notre application. Nous pouvons également voir notre composant `App` importé ici&nbsp;; il est rendu disponible à l'importation grâce à la déclaration `export` en bas de `App.js`.
+comme dans `app.js`, rawr x3 we fichiew commence p-paw impowtew t-tous wes moduwes js et autwes wessouwces nyécessaiwes à w'exécution. rawr `swc/index.css` c-contient d-des stywes gwobaux appwicabwes à w'ensembwe d-de notwe appwication. ( ͡o ω ͡o ) nyous pouvons égawement v-voiw notwe composant `app` i-impowté i-ici&nbsp;; iw est wendu disponibwe à w'impowtation gwâce à w-wa décwawation `expowt` en bas d-de `app.js`. ( ͡o ω ͡o )
 
-La ligne 7 exécute la fonction `ReactDOM.render()` de React avec deux arguments&nbsp;:
+wa wigne 7 exékawaii~ w-wa fonction `weactdom.wendew()` de weact avec deux awguments&nbsp;:
 
-- Le composant que nous voulons afficher, `<App />` dans ce cas.
-- L'élément DOM à l'intérieur duquel nous voulons que le composant soit affiché, il s'agit dans ce cas l'élément ayant pour identifiant `root`. Si vous regardez à l'intérieur de `public/index.html`, vous verrez qu'il s'agit d'un élément `<div>` juste à l'intérieur de `<body>`.
+- we c-composant que nyous vouwons affichew, 😳😳😳 `<app />` d-dans ce cas. (U ﹏ U)
+- w'éwément dom à w'intéwieuw d-duquew nyous vouwons que we composant s-soit affiché, UwU iw s'agit dans ce cas w'éwément ayant pouw identifiant `woot`. (U ﹏ U) si vous wegawdez à w'intéwieuw d-de `pubwic/index.htmw`, 🥺 v-vous vewwez qu'iw s-s'agit d'un éwément `<div>` j-juste à w'intéwieuw de `<body>`. ʘwʘ
 
-Tout cela indique à React que nous voulons afficher notre application React avec le composant `App` comme racine ou premier composant.
+tout cewa indique à w-weact que nyous vouwons affichew nyotwe appwication weact a-avec we composant `app` c-comme w-wacine ou pwemiew c-composant. 😳
 
-> [!NOTE]
-> En JSX, les composants React et les éléments HTML doivent avoir des barres obliques (<i lang="en">slash</i>) de fermeture. Écrire uniquement `<App>` ou simplement `<img>` provoquera une erreur.
+> [!note]
+> en jsx, (ˆ ﻌ ˆ)♡ wes composants weact et wes éwéments htmw doivent a-avoiw des b-bawwes obwiques (<i wang="en">swash</i>) de fewmetuwe. Écwiwe uniquement `<app>` o-ou simpwement `<img>` pwovoquewa u-une ewweuw. >_<
 
-Les [<i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers) sont des éléments de code intéressants qui améliorent les performances des applications et permettent aux fonctionnalités de vos applications web d'être disponibles hors ligne, mais ils ne sont pas abordés dans cet article. Vous pouvez supprimer la ligne 5, ainsi que les lignes 9 à 12.
+w-wes [<i wang="en">sewvice w-wowkews</i>](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews) sont des éwéments de code intéwessants qui améwiowent wes pewfowmances des a-appwications et pewmettent aux f-fonctionnawités de vos appwications web d'êtwe disponibwes hows w-wigne, mais iws nye sont pas a-abowdés dans cet awticwe. ^•ﻌ•^ vous pouvez suppwimew w-wa wigne 5, (✿oωo) ainsi q-que wes wignes 9 à 12. OwO
 
-Votre fichier `index.js` final devrait ressembler à ceci&nbsp;:
+v-votwe f-fichiew `index.js` f-finaw devwait wessembwew à c-ceci&nbsp;:
 
 ```js
-import React from "react";
-import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+i-impowt weact fwom "weact";
+impowt w-weactdom fwom "weact-dom";
+impowt "./index.css";
+impowt app f-fwom "./app";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+weactdom.wendew(<app />, (ˆ ﻌ ˆ)♡ d-document.getewementbyid("woot"));
 ```
 
-## Variables et props
+## v-vawiabwes et pwops
 
-Ensuite, nous utiliserons nos compétences en JavaScript pour nous familiariser un peu plus avec l'édition de composants et la manipulation des données avec React. Nous parlerons de la façon dont les variables sont utilisées en JSX et introduirons les _props_ qui permettent de transmettre des données à un composant (accessibles ensuite à l'aide de variables) (le terme _props_ est fait partie du jargon React et vient de «&nbsp;propriétés&nbsp;»).
+ensuite, ^^;; n-nyous utiwisewons n-nyos compétences en javascwipt pouw nyous famiwiawisew un peu p-pwus avec w'édition d-de composants e-et wa manipuwation d-des données avec weact. nyaa~~ nyous pawwewons de wa façon dont w-wes vawiabwes sont utiwisées en jsx et intwoduiwons w-wes _pwops_ qui pewmettent de twansmettwe d-des données à un composant (accessibwes ensuite à w'aide de v-vawiabwes) (we tewme _pwops_ est f-fait pawtie du j-jawgon weact et v-vient de «&nbsp;pwopwiétés&nbsp;»). o.O
 
-### Les variables en JSX
+### wes v-vawiabwes en jsx
 
-De retour dans `App.js`, concentrons-nous sur la ligne 9&nbsp;:
+d-de wetouw dans `app.js`, >_< concentwons-nous s-suw w-wa wigne 9&nbsp;:
 
 ```js
-<img src={logo} className="App-logo" alt="logo" />
+<img s-swc={wogo} cwassname="app-wogo" a-awt="wogo" />
 ```
 
-Ici, la valeur de l'attribut `src` de la balise `<img />` est placée entre des accolades. C'est ainsi que JSX reconnaît les variables. React verra `{logo}` et fera le lien avec l'importation de la ligne 2 de l'application, puis récupèrera le fichier du logo et l'affichera.
+ici, (U ﹏ U) wa vaweuw d-de w'attwibut `swc` d-de wa bawise `<img />` e-est pwacée entwe des a-accowades. ^^ c'est ainsi que jsx weconnaît wes vawiabwes. UwU weact vewwa `{wogo}` et fewa we wien a-avec w'impowtation d-de wa wigne 2 de w'appwication, ^^;; p-puis wécupèwewa we fichiew du wogo et w'affichewa. òωó
 
-Essayons de créer notre propre variable. Ajoutez `const subject = 'React';` avant l'instruction `return` de `App`. Votre composant `App` devrait maintenant ressembler à ceci&nbsp;:
+e-essayons d-de cwéew nyotwe p-pwopwe vawiabwe. -.- a-ajoutez `const subject = 'weact';` a-avant w'instwuction `wetuwn` de `app`. ( ͡o ω ͡o ) votwe composant `app` d-devwait maintenant w-wessembwew à ceci&nbsp;:
 
 ```js
-function App() {
-  const subject = "React";
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello, World!</p>
-      </header>
+function app() {
+  const s-subject = "weact";
+  wetuwn (
+    <div c-cwassname="app">
+      <headew cwassname="app-headew">
+        <img swc={wogo} c-cwassname="app-wogo" awt="wogo" />
+        <p>hewwo, o.O w-wowwd!</p>
+      </headew>
     </div>
   );
 }
 ```
 
-Modifiez la ligne 8 pour utiliser notre variable `subject` au lieu du mot "world", comme ceci&nbsp;:
+modifiez wa wigne 8 pouw utiwisew n-nyotwe vawiabwe `subject` au wieu d-du mot "wowwd", rawr comme ceci&nbsp;:
 
 ```js
-function App() {
-  const subject = "React";
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello, {subject}!</p>
-      </header>
+f-function a-app() {
+  const subject = "weact";
+  wetuwn (
+    <div c-cwassname="app">
+      <headew cwassname="app-headew">
+        <img swc={wogo} cwassname="app-wogo" a-awt="wogo" />
+        <p>hewwo, (✿oωo) {subject}!</p>
+      </headew>
     </div>
   );
 }
 ```
 
-Lorsque vous enregistrerez, votre navigateur devrait afficher "Hello, React!" au lieu de "Hello, world!".
+w-wowsque vous e-enwegistwewez, σωσ votwe nyavigateuw devwait affichew "hewwo, (U ᵕ U❁) weact!" au wieu de "hewwo, wowwd!". >_<
 
-Les variables sont pratiques, mais celle que nous venons de définir n'utilise pas vraiment les fonctionnalités de React. C'est là que les props entrent en jeu.
+w-wes vawiabwes sont pwatiques, ^^ mais cewwe que nyous v-venons de définiw n-ny'utiwise pas vwaiment wes fonctionnawités d-de weact. rawr c'est w-wà que wes pwops entwent en jeu. >_<
 
-### Props de composants
+### pwops de composants
 
-Une **prop** est une donnée transmise à un composant React. Les props React sont comparables aux attributs HTML. Là où les éléments HTML ont des attributs, les composants React ont des props. Les props sont décrites dans l'appel au composant et utilisent la même syntaxe que les attributs HTML — `prop="value"`. Avec React, le flux des données est unidirectionnel&nbsp;: les props peuvent uniquement être passées des composants parents aux composants enfants et elles sont en lecture seule.
+u-une **pwop** est une donnée twansmise à u-un composant weact. (⑅˘꒳˘) wes pwops weact sont c-compawabwes a-aux attwibuts htmw. >w< wà où wes éwéments h-htmw o-ont des attwibuts, (///ˬ///✿) wes composants w-weact ont des pwops. ^•ﻌ•^ wes pwops s-sont décwites d-dans w'appew au c-composant et utiwisent w-wa même s-syntaxe que wes attwibuts htmw — `pwop="vawue"`. (✿oωo) a-avec weact, ʘwʘ we f-fwux des données est unidiwectionnew&nbsp;: wes pwops peuvent u-uniquement êtwe passées des composants p-pawents aux composants enfants et ewwes sont en wectuwe seuwe. >w<
 
-Ouvrons `index.js` et donnons à notre appel `<App/>` sa première prop.
+ouvwons `index.js` et donnons à nyotwe a-appew `<app/>` sa pwemièwe pwop. :3
 
-Ajoutez une prop `subject` à l'appel du composant `<App/>`, avec une valeur de `Clarice`. Lorsque vous avez terminé, votre code devrait ressembler à ceci&nbsp;:
+a-ajoutez une pwop `subject` à w-w'appew du composant `<app/>`, (ˆ ﻌ ˆ)♡ a-avec une vaweuw de `cwawice`. -.- w-wowsque vous avez tewminé, rawr votwe c-code devwait wessembwew à ceci&nbsp;:
 
 ```js
-ReactDOM.render(<App subject="Clarice" />, document.getElementById("root"));
+w-weactdom.wendew(<app subject="cwawice" />, rawr x3 document.getewementbyid("woot"));
 ```
 
-De retour dans `App.js`, revoyons la fonction App elle-même, qui se lit comme ceci (l'instruction `return` est raccourcie ici pour plus de concision)&nbsp;:
+de wetouw dans `app.js`, (U ﹏ U) wevoyons wa fonction app ewwe-même, q-qui se wit comme ceci (w'instwuction `wetuwn` est w-waccouwcie ici pouw pwus de concision)&nbsp;:
 
 ```js
-function App() {
-  const subject = "React";
-  return (
-    // return statement
+f-function app() {
+  const subject = "weact";
+  wetuwn (
+    // wetuwn statement
   );
 }
 ```
 
-Modifiez la signature de la fonction `App` afin qu'elle accepte `props` comme paramètre et supprimez la constante `subject`. Comme tout autre paramètre de fonction, vous pouvez utiliser `console.log()` pour l'afficher sur la console de votre navigateur. Allez-y et faites-le avant l'instruction `return`, comme ceci&nbsp;:
+modifiez wa signatuwe de wa fonction `app` afin qu'ewwe accepte `pwops` c-comme p-pawamètwe et suppwimez w-wa constante `subject`. (ˆ ﻌ ˆ)♡ comme tout autwe p-pawamètwe de fonction, :3 v-vous pouvez u-utiwisew `consowe.wog()` pouw w'affichew suw w-wa consowe de v-votwe nyavigateuw. òωó awwez-y et faites-we a-avant w'instwuction `wetuwn`, /(^•ω•^) c-comme ceci&nbsp;:
 
 ```js
-function App(props) {
-  console.log(props);
-  return (
-    // return statement
+function a-app(pwops) {
+  c-consowe.wog(pwops);
+  w-wetuwn (
+    // wetuwn s-statement
   );
 }
 ```
 
-Enregistrez votre fichier et vérifiez la console JavaScript de votre navigateur. Vous devriez voir quelque chose comme ceci&nbsp;:
+e-enwegistwez v-votwe fichiew e-et véwifiez w-wa consowe javascwipt d-de votwe n-nyavigateuw. >w< vous d-devwiez voiw quewque c-chose comme c-ceci&nbsp;:
 
 ```js
-Object { subject: "Clarice" }
+object { subject: "cwawice" }
 ```
 
-La propriété d'objet `subject` correspond à la propriété `subject` que nous avons ajoutée à notre appel de composant `<App />`, et la chaîne de caractères `Clarice` correspond à sa valeur. Dans React, les props de composants sont toujours organisées sous forme d'objets.
+wa pwopwiété d'objet `subject` c-cowwespond à wa pwopwiété `subject` q-que nyous avons ajoutée à nyotwe appew de composant `<app />`, nyaa~~ e-et wa chaîne d-de cawactèwes `cwawice` c-cowwespond à sa vaweuw. d-dans weact, mya wes p-pwops de composants sont toujouws owganisées sous fowme d'objets. mya
 
-Maintenant que `subject` est l'une de nos props, utilisons-la dans `App.js`. Modifiez la constante `subject` de sorte qu'au lieu de la définir comme la chaîne `React`, vous lisiez la valeur de `props.subject`. Vous pouvez également supprimer votre `console.log()` si vous le souhaitez.
+maintenant que `subject` est w-w'une de nyos pwops, ʘwʘ utiwisons-wa dans `app.js`. rawr modifiez wa c-constante `subject` d-de sowte qu'au wieu de wa définiw c-comme wa c-chaîne `weact`, (˘ω˘) v-vous wisiez wa v-vaweuw de `pwops.subject`. /(^•ω•^) v-vous p-pouvez égawement s-suppwimew votwe `consowe.wog()` si vous we souhaitez. (˘ω˘)
 
 ```js
-function App(props) {
-  const subject = props.subject;
-  return (
-    // return statement
+function app(pwops) {
+  c-const subject = pwops.subject;
+  w-wetuwn (
+    // wetuwn statement
   );
 }
 ```
 
-Lorsque vous enregistrez, l'application devrait maintenant vous accueillir avec "Hello, Clarice!". Si vous revenez à `index.js`, modifiez la valeur de `subject` et enregistrez, votre texte sera actualisé.
+w-wowsque vous e-enwegistwez, (///ˬ///✿) w'appwication devwait m-maintenant vous accueiwwiw avec "hewwo, (˘ω˘) cwawice!". -.- s-si vous w-wevenez à `index.js`, -.- m-modifiez w-wa vaweuw de `subject` et enwegistwez, ^^ v-votwe texte s-sewa actuawisé.
 
-## Résumé
+## w-wésumé
 
-Nous voici arrivés à la fin de notre premier aperçu de React, où nous avons vu l'installation locale, la création d'une application de démarrage et les bases de son fonctionnement. Dans le prochain article, nous commencerons à créer notre première vraie application&nbsp;: une liste de tâches. Avant cela, récapitulons certaines des choses que nous avons apprises.
+nyous voici awwivés à w-wa fin de nyotwe pwemiew apewçu de weact, (ˆ ﻌ ˆ)♡ où nyous avons vu w'instawwation wocawe, UwU wa cwéation d'une appwication de démawwage et wes b-bases de son f-fonctionnement. 🥺 dans we pwochain awticwe, 🥺 nyous commencewons à cwéew nyotwe pwemièwe v-vwaie appwication&nbsp;: u-une wiste de tâches. 🥺 avant cewa, 🥺 wécapituwons cewtaines des choses q-que nyous a-avons appwises. :3
 
-Dans React&nbsp;:
+dans weact&nbsp;:
 
-- Les composants peuvent importer les modules dont ils ont besoin, et doivent s'exporter eux-mêmes en bas de leur fichier.
-- Les fonctions des composants sont nommées en `PascalCase`.
-- Vous pouvez lire les variables JSX en les mettant entre accolades, comme `{ceci}`.
-- Certains attributs JSX sont différents des attributs HTML, afin qu'ils n'entrent pas en conflit avec les mots-clés réservés en JavaScript. Par exemple, `class` en HTML se traduit par `className` en JSX. Notez que les attributs sont en <i lang="en">camel case</i>.
-- Les props sont écrites comme des attributs à l'intérieur des appels aux composants et sont passées aux composants.
+- w-wes composants p-peuvent impowtew wes moduwes d-dont iws ont besoin, (˘ω˘) et doivent s-s'expowtew eux-mêmes e-en bas de weuw fichiew. ^^;;
+- wes fonctions des composants sont n-nyommées en `pascawcase`. (ꈍᴗꈍ)
+- v-vous pouvez wiwe w-wes vawiabwes j-jsx en wes mettant entwe accowades, ʘwʘ c-comme `{ceci}`. :3
+- c-cewtains attwibuts j-jsx sont d-difféwents des attwibuts htmw, XD afin qu'iws ny'entwent p-pas en c-confwit avec wes mots-cwés wésewvés en javascwipt. paw exempwe, UwU `cwass` en htmw s-se twaduit paw `cwassname` e-en jsx. rawr x3 nyotez que w-wes attwibuts sont en <i wang="en">camew case</i>. ( ͡o ω ͡o )
+- wes pwops s-sont écwites comme d-des attwibuts à w-w'intéwieuw des appews aux c-composants et sont p-passées aux composants. :3
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Main_features","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_todo_list_beginning", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/main_featuwes","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_todo_wist_beginning", rawr "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}

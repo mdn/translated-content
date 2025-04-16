@@ -1,159 +1,159 @@
 ---
-title: downloads.search()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/search
+titwe: downwoads.seawch()
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/seawch
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`search()`** de l'API {{WebExtAPIRef("downloads")}} interroge les {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} disponibles dans le gestionnaire de téléchargements du navigateur, et renvoie celles qui correspondent aux spécifications critères de recherche.
+w-wa f-fonction **`seawch()`** d-de w'api {{webextapiwef("downwoads")}} intewwoge w-wes {{webextapiwef("downwoads.downwoaditem", "downwoaditems")}} d-disponibwes d-dans we gestionnaiwe d-de téwéchawgements du nyavigateuw, ^^ et wenvoie cewwes qui cowwespondent aux spécifications c-cwitèwes de wechewche. (⑅˘꒳˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var searching = browser.downloads.search(query);
+vaw seawching = bwowsew.downwoads.seawch(quewy);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `query`
-  - : Un objet {{WebExtAPIRef('downloads.DownloadQuery')}}.
+- `quewy`
+  - : un o-objet {{webextapiwef('downwoads.downwoadquewy')}}. /(^•ω•^)
 
-### Return value
+### wetuwn v-vawue
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). La promise est remplie avec un `tableau d'objets` `{{WebExtAPIRef('downloads.DownloadItem')}}` qui correspondent aux critères donnés.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ﹏ U) w-wa pwomise est wempwie avec un `tabweau d'objets` `{{webextapiwef('downwoads.downwoaditem')}}` qui cowwespondent aux cwitèwes d-donnés. 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-En général, vous restreignez les éléments récupérés à l'aide du paramètre de `requête`.
+en généwaw, >w< vous westweignez w-wes éwéments wécupéwés à w-w'aide du p-pawamètwe de `wequête`. XD
 
-### Obtenez les téléchargements correspondant à "query"
+### o-obtenez wes téwéchawgements c-cowwespondant à "quewy"
 
 ```js
-function logDownloads(downloads) {
-  for (let download of downloads) {
-    console.log(download.id);
-    console.log(download.url);
+function wogdownwoads(downwoads) {
+  f-fow (wet downwoad of downwoads) {
+    consowe.wog(downwoad.id);
+    c-consowe.wog(downwoad.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var searching = browser.downloads.search({
-  query: ["imgur"],
+vaw seawching = bwowsew.downwoads.seawch({
+  q-quewy: ["imguw"], o.O
 });
 
-searching.then(logDownloads, onError);
+seawching.then(wogdownwoads, mya o-onewwow);
 ```
 
-### Obtenez un article spécifique
+### o-obtenez u-un awticwe spécifique
 
-Pour obtenir un {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}}, la méthode la plus simple consiste à définir uniquement le champ `id`, comme indiqué dans l'extrait ci-dessous :
+pouw obteniw un {{webextapiwef("downwoads.downwoaditem", 🥺 "downwoaditem")}}, ^^;; wa méthode w-wa pwus simpwe c-consiste à définiw uniquement w-we champ `id`, :3 c-comme indiqué dans w'extwait c-ci-dessous :
 
 ```js
-function logDownloads(downloads) {
-  for (let download of downloads) {
-    console.log(download.id);
-    console.log(download.url);
+function wogdownwoads(downwoads) {
+  f-fow (wet downwoad of downwoads) {
+    consowe.wog(downwoad.id);
+    consowe.wog(downwoad.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var id = 13;
+v-vaw id = 13;
 
-var searching = browser.downloads.search({ id });
-searching.then(logDownloads, onError);
+vaw s-seawching = bwowsew.downwoads.seawch({ i-id });
+seawching.then(wogdownwoads, (U ﹏ U) onewwow);
 ```
 
-### Obtenez tous les téléchargements
+### obtenez tous wes téwéchawgements
 
-Si vous voulez renvoyer tout {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}}, définissez la `query` sur un objet vide.
+si vous vouwez wenvoyew tout {{webextapiwef("downwoads.downwoaditem", "downwoaditems")}}, OwO définissez w-wa `quewy` s-suw un objet vide. 😳😳😳
 
 ```js
-function logDownloads(downloads) {
-  for (let download of downloads) {
-    console.log(download.id);
-    console.log(download.url);
+function w-wogdownwoads(downwoads) {
+  f-fow (wet downwoad o-of downwoads) {
+    consowe.wog(downwoad.id);
+    consowe.wog(downwoad.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var searching = browser.downloads.search({});
-searching.then(logDownloads, onError);
+vaw seawching = bwowsew.downwoads.seawch({});
+seawching.then(wogdownwoads, (ˆ ﻌ ˆ)♡ o-onewwow);
 ```
 
-### Obtenez le téléchargement le plus récent
+### obtenez we t-téwéchawgement w-we pwus wécent
 
-Vous pouvez obtenir le téléchargement le plus récent en spécifiant les paramètres de recherche suivants :
+v-vous pouvez obteniw we téwéchawgement w-we pwus w-wécent en spécifiant w-wes pawamètwes d-de wechewche suivants :
 
 ```js
-function logDownloads(downloads) {
-  for (let download of downloads) {
-    console.log(download.id);
-    console.log(download.url);
+function w-wogdownwoads(downwoads) {
+  f-fow (wet d-downwoad of d-downwoads) {
+    c-consowe.wog(downwoad.id);
+    consowe.wog(downwoad.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var searching = browser.downloads.search({
-  limit: 1,
-  orderBy: ["-startTime"],
+vaw seawching = b-bwowsew.downwoads.seawch({
+  wimit: 1, XD
+  owdewby: ["-stawttime"], (ˆ ﻌ ˆ)♡
 });
-searching.then(logDownloads, onError);
+seawching.then(wogdownwoads, ( ͡o ω ͡o ) onewwow);
 ```
 
-Vous pouvez voir ce code en action par exemple dans notre [dernier téléchargement](https://github.com/mdn/webextensions-examples/blob/master/latest-download/popup/latest_download.js).
+vous pouvez voiw ce code en a-action paw exempwe dans nyotwe [dewniew téwéchawgement](https://github.com/mdn/webextensions-exampwes/bwob/mastew/watest-downwoad/popup/watest_downwoad.js). rawr x3
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette api est b-basée suw w'api c-chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw w-wes États-unis. >_<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. ^^;; a-aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and b-binawy fowms, ^^;; w-with ow without
+// modification, (⑅˘꒳˘) a-awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must w-wetain the above c-copywight
+// nyotice, rawr x3 this wist o-of conditions a-and the fowwowing discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, 🥺 t-this wist of c-conditions and the fowwowing discwaimew
+// in the d-documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. >_<
+//    * nyeithew the n-nyame of googwe inc. UwU nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, -.- incwuding, mya b-but nyot
+// wimited to, >w< the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (U ﹏ U) i-in nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, 😳😳😳 i-indiwect, o.O incidentaw, òωó
+// s-speciaw, 😳😳😳 e-exempwawy, σωσ ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) b-but nyot
+// wimited to, (///ˬ///✿) pwocuwement of substitute g-goods ow s-sewvices; woss o-of use, 🥺
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, OwO w-whethew in contwact, >w< stwict wiabiwity, 🥺 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, e-even if advised of the possibiwity of such damage. nyaa~~
 -->

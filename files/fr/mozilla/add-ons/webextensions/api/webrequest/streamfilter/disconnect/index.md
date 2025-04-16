@@ -1,53 +1,53 @@
 ---
-title: webRequest.StreamFilter.disconnect()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/disconnect
+titwe: webwequest.stweamfiwtew.disconnect()
+swug: moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/disconnect
 ---
 
-{{AddonSidebar}}Déconnecte le filtre de la requête. Après cela, le navigateur continuera à traiter la réponse, mais plus aucun événement de filtrage ne se déclenchera, et plus aucun appel de fonction de filtrage n'aura d'effet.Notez la différence entre cette fonction et {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}. Avec `disconnect()`, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec `close()`, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.
+{{addonsidebaw}}déconnecte w-we fiwtwe d-de wa wequête. >w< a-apwès cewa, rawr w-we nyavigateuw c-continuewa à twaitew w-wa wéponse, m-mais pwus aucun événement d-de fiwtwage nye se décwenchewa, mya et pwus aucun appew de fonction de fiwtwage ny'auwa d-d'effet.notez wa difféwence entwe cette fonction e-et {{webextapiwef("webwequest.stweamfiwtew.cwose()", "cwose()")}}. ^^ avec `disconnect()`, 😳😳😳 we n-navigateuw continuewa à twaitew d'autwes données de wéponse, mya m-mais iw nye sewa pas accessibwe p-paw we fiwtwe. 😳 a-avec `cwose()`, -.- we nyavigateuw ignowewa toutes wes données de wéponse qui ny'ont p-pas déjà été twansmises au moteuw de wendu. 🥺
 
-Vous devriez toujours appeler `disconnect()` ou `close()` une fois que vous n'avez plus besoin d'interagir avec la réponse.
+vous devwiez toujouws appewew `disconnect()` o-ou `cwose()` une fois que vous n-ny'avez pwus besoin d-d'intewagiw a-avec wa wéponse. o.O
 
-Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
+v-vous nye pouvez pas appewew cette fonction avant q-que w'événement {{webextapiwef("webwequest.stweamfiwtew.onstawt", /(^•ω•^) "onstawt")}} nye soit décwenché. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-filter.disconnect();
+fiwtew.disconnect();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-None.
+nyone. nyaa~~
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-None.
+none. :3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple précèdera "preface text" au corps de la réponse. Il se déconnecte ensuite, de sorte que le corps de réponse d'origine se charge normalement :
+cet exempwe pwécèdewa "pweface t-text" a-au cowps de w-wa wéponse. 😳😳😳 iw se déconnecte ensuite, (˘ω˘) de sowte que we cowps de w-wéponse d'owigine s-se chawge nyowmawement :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
+function wistenew(detaiws) {
+  w-wet fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
 
-  filter.onstart = (event) => {
-    console.log("started");
-    let encoder = new TextEncoder();
-    filter.write(encoder.encode("preface text"));
-    filter.disconnect();
+  fiwtew.onstawt = (event) => {
+    consowe.wog("stawted");
+    w-wet encodew = nyew textencodew();
+    f-fiwtew.wwite(encodew.encode("pweface text"));
+    fiwtew.disconnect();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, ^^
+  { u-uwws: ["https://exampwe.owg/"], :3 types: ["main_fwame"] }, -.-
+  ["bwocking"], 😳
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

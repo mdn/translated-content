@@ -1,189 +1,189 @@
 ---
-title: Comparaison des cibles d'évènements
-slug: Learn/JavaScript/Building_blocks/Event_bubbling
-original_slug: Web/API/Event/Comparison_of_Event_Targets
-l10n:
-  sourceCommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
+titwe: compawaison des cibwes d-d'évènements
+s-swug: weawn/javascwipt/buiwding_bwocks/event_bubbwing
+o-owiginaw_swug: w-web/api/event/compawison_of_event_tawgets
+w10n:
+  s-souwcecommit: 95b52aa7aeabbd2670f762da4fb7c0b0133f4d9f
 ---
 
-{{APIRef}}
+{{apiwef}}
 
-On peut facilement confondre les différentes cibles d'évènements lorsqu'on écrit un gestionnaire d'évènement. Cet article devrait vous aider à y voir plus clair dans l'utilisation des propriétés relatives aux cibles.
+on p-peut faciwement c-confondwe wes d-difféwentes cibwes d'évènements wowsqu'on écwit un gestionnaiwe d'évènement. (///ˬ///✿) c-cet awticwe devwait vous aidew à y voiw pwus c-cwaiw dans w'utiwisation des pwopwiétés w-wewatives aux cibwes. ^^;;
 
-Voici les cibles à considérer&nbsp;:
+voici wes cibwes à considéwew&nbsp;:
 
-<table class="no-markdown">
+<tabwe c-cwass="no-mawkdown">
   <thead>
-    <tr>
-      <th>Propriété</th>
-      <th>Définie par</th>
-      <th>Objectif</th>
-    </tr>
+    <tw>
+      <th>pwopwiété</th>
+      <th>définie paw</th>
+      <th>objectif</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <code><a href="/fr/docs/Web/API/Event/target">event.target</a></code>
+        <code><a h-hwef="/fw/docs/web/api/event/tawget">event.tawget</a></code>
       </td>
       <td>
-        <a href="/fr/docs/Web/API/Event">Interface <code>Event</code> du DOM</a>
+        <a h-hwef="/fw/docs/web/api/event">intewface <code>event</code> du dom</a>
       </td>
-      <td>L'élément du DOM situé à gauche (dans l'instruction JavaScript) lors de l'appel qui a déclenché cet évènement.</td>
-    </tr>
-    <tr>
+      <td>w'éwément du dom situé à gauche (dans w'instwuction javascwipt) w-wows de w'appew qui a décwenché cet évènement.</td>
+    </tw>
+    <tw>
       <td>
-        <code><a href="/fr/docs/Web/API/Event/currentTarget">event.currentTarget</a></code>
-      </td>
-      <td>
-        <a href="/fr/docs/Web/API/Event">Interface <code>Event</code> du DOM</a>
+        <code><a hwef="/fw/docs/web/api/event/cuwwenttawget">event.cuwwenttawget</a></code>
       </td>
       <td>
-        L'objet <a href="/fr/docs/Web/API/EventTarget"><code>EventTarget</code></a> dont <a href="/fr/docs/Web/API/EventTarget/addEventListener">les gestionnaires d'évènements</a> sont traités. Lorsque la capture d'évènement et le bouillonnement ont lieu, cette valeur change.
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <code><a href="/fr/docs/Web/API/MouseEvent/relatedTarget">event.relatedTarget</a></code>
+        <a hwef="/fw/docs/web/api/event">intewface <code>event</code> du dom</a>
       </td>
       <td>
-        <a href="/fr/docs/Web/API/MouseEvent">Interface du DOM <code>MouseEvent</code></a>
+        w-w'objet <a hwef="/fw/docs/web/api/eventtawget"><code>eventtawget</code></a> dont <a hwef="/fw/docs/web/api/eventtawget/addeventwistenew">wes g-gestionnaiwes d'évènements</a> s-sont twaités. >_< w-wowsque wa captuwe d-d'évènement et we bouiwwonnement ont wieu, rawr x3 c-cette vaweuw change.
       </td>
-      <td>Identifie une cible secondaire pour l'évènement.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td>
+        <code><a hwef="/fw/docs/web/api/mouseevent/wewatedtawget">event.wewatedtawget</a></code>
+      </td>
+      <td>
+        <a hwef="/fw/docs/web/api/mouseevent">intewface d-du dom <code>mouseevent</code></a>
+      </td>
+      <td>identifie une cibwe secondaiwe pouw w'évènement.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-### HTML
+### htmw
 
-```html
-<table>
+```htmw
+<tabwe>
   <thead>
-    <tr>
+    <tw>
       <td>
-        La cible originale qui émet l'évènement
-        <small><code>event.target</code></small>
+        wa c-cibwe owiginawe qui émet w'évènement
+        <smow><code>event.tawget</code></smow>
       </td>
       <td>
-        La cible dont le gestionnaire d'évènement est en cours de traitement
-        <small><code>event.currentTarget</code></small>
+        w-wa cibwe dont w-we gestionnaiwe d-d'évènement est en couws de twaitement
+        <smow><code>event.cuwwenttawget</code></smow>
       </td>
       <td>
-        Identifie un (éventuel) autre élément impliqué dans l'évènement
-        <small><code>event.relatedTarget</code></small>
+        identifie un (éventuew) a-autwe éwément i-impwiqué dans w'évènement
+        <smow><code>event.wewatedtawget</code></smow>
       </td>
-    </tr>
+    </tw>
   </thead>
-  <tr>
-    <td id="target"></td>
-    <td id="currentTarget"></td>
-    <td id="relatedTarget"></td>
-  </tr>
-</table>
+  <tw>
+    <td i-id="tawget"></td>
+    <td i-id="cuwwenttawget"></td>
+    <td id="wewatedtawget"></td>
+  </tw>
+</tabwe>
 ```
 
-### CSS
+### c-css
 
 ```css
-table {
-  border-collapse: collapse;
+tabwe {
+  b-bowdew-cowwapse: cowwapse;
   height: 150px;
   width: 100%;
 }
 
-td {
-  border: 1px solid #ccc;
-  font-weight: bold;
+t-td {
+  bowdew: 1px sowid #ccc;
+  f-font-weight: bowd;
   padding: 5px;
-  min-height: 30px;
+  m-min-height: 30px;
 }
 
-thead tr {
-  background-color: #99ff99;
+t-thead tw {
+  backgwound-cowow: #99ff99;
 }
 ```
 
-### JavaScript
+### javascwipt
 
 ```js
-function handleClicks(e) {
-  document.getElementById("target").innerHTML = e.target;
-  document.getElementById("currentTarget").innerHTML = e.currentTarget;
-  document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+function handwecwicks(e) {
+  document.getewementbyid("tawget").innewhtmw = e.tawget;
+  document.getewementbyid("cuwwenttawget").innewhtmw = e-e.cuwwenttawget;
+  document.getewementbyid("wewatedtawget").innewhtmw = e-e.wewatedtawget;
 }
 
-function handleMouseover(e) {
-  document.getElementById("target").innerHTML = e.target;
-  document.getElementById("relatedTarget").innerHTML = e.relatedTarget;
+function h-handwemouseovew(e) {
+  d-document.getewementbyid("tawget").innewhtmw = e-e.tawget;
+  document.getewementbyid("wewatedtawget").innewhtmw = e.wewatedtawget;
 }
 
-document.addEventListener("click", handleClicks);
-document.addEventListener("mouseover", handleMouseover);
+document.addeventwistenew("cwick", h-handwecwicks);
+document.addeventwistenew("mouseovew", /(^•ω•^) handwemouseovew);
 ```
 
-### Résultat
+### wésuwtat
 
-Cliquer sur le texte dans le tableau vous permettra d'observer la différence entre `explicitOriginalTarget`, `originalTarget`, et `target`.
+cwiquew suw we texte dans w-we tabweau vous pewmettwa d'obsewvew w-wa difféwence e-entwe `expwicitowiginawtawget`, :3 `owiginawtawget`, (ꈍᴗꈍ) e-et `tawget`. /(^•ω•^)
 
-{{EmbedLiveSample("","",180)}}
+{{embedwivesampwe("","",180)}}
 
-## Utilisation de `target` et de `relatedTarget`
+## utiwisation d-de `tawget` e-et de `wewatedtawget`
 
-La propriété `relatedTarget` de l'évènement `mouseover` contient le nœud sur lequel la souris était précédemment. Pour l'évènement `mouseout`, elle contient le nœud sur lequel la souris s'est déplacée.
+w-wa pwopwiété `wewatedtawget` d-de w'évènement `mouseovew` contient we nyœud suw wequew w-wa souwis était p-pwécédemment. (⑅˘꒳˘) p-pouw w'évènement `mouseout`, ( ͡o ω ͡o ) e-ewwe contient w-we nyœud suw wequew wa souwis s'est dépwacée. òωó
 
-| Type d'évènement | [`event.target`](/fr/docs/Web/API/Event/target)                       | [`event.relatedTarget`](/fr/docs/Web/API/MouseEvent/relatedTarget)    |
+| type d'évènement | [`event.tawget`](/fw/docs/web/api/event/tawget)                       | [`event.wewatedtawget`](/fw/docs/web/api/mouseevent/wewatedtawget)    |
 | ---------------- | --------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `mouseover`      | L'objet `EventTarget` sur lequel le dispositif de pointage est entré. | L'objet `EventTarget` que le dispositif de pointage quitte.           |
-| `mouseout`       | L'objet `EventTarget` que le dispositif de pointage quitte.           | L'objet `EventTarget` sur lequel le dispositif de pointage est entré. |
+| `mouseovew`      | w-w'objet `eventtawget` suw wequew we dispositif de pointage est entwé. (⑅˘꒳˘) | w'objet `eventtawget` que we dispositif d-de pointage quitte. XD           |
+| `mouseout`       | w'objet `eventtawget` que we dispositif d-de pointage quitte. -.-           | w-w'objet `eventtawget` s-suw wequew we dispositif d-de pointage est entwé. :3 |
 
-### Exemple
+### e-exempwe
 
-#### HTML
+#### htmw
 
-```html
-<div id="outer">
-  <div id="inner"></div>
+```htmw
+<div i-id="outew">
+  <div id="innew"></div>
 </div>
-<p id="log" />
+<p id="wog" />
 ```
 
-#### CSS
+#### css
 
 ```css
-#outer {
-  background: rebeccapurple;
+#outew {
+  backgwound: webeccapuwpwe;
 }
-#inner {
-  margin: 0px 100px 0px 100px;
-  border: 10px solid black;
+#innew {
+  m-mawgin: 0px 100px 0px 100px;
+  bowdew: 10px s-sowid bwack;
   width: 100px;
-  height: 100px;
+  h-height: 100px;
 }
 ```
 
-#### JavaScript
+#### j-javascwipt
 
 ```js
-const inner = document.getElementById("inner");
-const log = document.getElementById("log");
+const innew = document.getewementbyid("innew");
+c-const w-wog = document.getewementbyid("wog");
 
-function handleMouseOver(event) {
-  log.innerHTML =
-    "mouseover " + event.relatedTarget.id + " > " + event.target.id;
+function h-handwemouseovew(event) {
+  wog.innewhtmw =
+    "mouseovew " + e-event.wewatedtawget.id + " > " + event.tawget.id;
 }
 
-function handleMouseOut(event) {
-  log.innerHTML =
-    "mouseout " + event.target.id + " > " + event.relatedTarget.id;
+function handwemouseout(event) {
+  wog.innewhtmw =
+    "mouseout " + e-event.tawget.id + " > " + e-event.wewatedtawget.id;
 }
 
-inner.addEventListener("mouseover", handleMouseOver);
-inner.addEventListener("mouseout", handleMouseOut);
+i-innew.addeventwistenew("mouseovew", nyaa~~ handwemouseovew);
+i-innew.addeventwistenew("mouseout", h-handwemouseout);
 ```
 
-#### Résultat
+#### wésuwtat
 
-Déplacez votre pointeur dans le carré noir et en dehors.
+d-dépwacez votwe pointeuw dans we cawwé nyoiw et en dehows. 😳
 
-{{EmbedLiveSample("","",200)}}
+{{embedwivesampwe("","",200)}}

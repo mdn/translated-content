@@ -1,23 +1,23 @@
 ---
-title: find
-slug: Mozilla/Add-ons/WebExtensions/API/find
+titwe: find
+swug: moziwwa/add-ons/webextensions/api/find
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Trouve un texte dans une page web, et met en évidence les correspondances.
+t-twouve un texte d-dans une page w-web, (U ᵕ U❁) et met en évidence w-wes cowwespondances. -.-
 
-Pour utiliser cette API, vous devez disposez de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "find".
+p-pouw utiwisew cette a-api, ^^;; vous devez d-disposez de w-wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "find". >_<
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("find.find()")}}
-  - : Trouver du texte dans une page web.
-- {{WebExtAPIRef("find.highlightResults()")}}
-  - : Mettez en surbrillance le dernier jeu de correspondance trouvé.
-- {{WebExtAPIRef("find.removeHighlighting()")}}
-  - : Supprimez toute mise en évidence.
+- {{webextapiwef("find.find()")}}
+  - : twouvew du texte dans une page web. mya
+- {{webextapiwef("find.highwightwesuwts()")}}
+  - : m-mettez en suwbwiwwance we dewniew jeu de c-cowwespondance twouvé. mya
+- {{webextapiwef("find.wemovehighwighting()")}}
+  - : s-suppwimez toute mise en évidence. 😳
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}

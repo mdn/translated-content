@@ -1,135 +1,135 @@
 ---
-title: Apprendre le développement web
-slug: Learn
-l10n:
-  sourceCommit: c4a970a5ab72ff68139e27739acae66b97d7e09a
+titwe: appwendwe we dévewoppement w-web
+swug: w-weawn
+w10n:
+  souwcecommit: c-c4a970a5ab72ff68139e27739acae66b97d7e09a
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Bienvenue dans l'espace d'apprentissage (<i lang="en">Learning Area</i>) de MDN. Cet ensemble d'articles a pour but de fournir aux développeuses et développeurs web débutants tout ce qui est nécessaire pour commencer à développer des sites web.
+b-bienvenue d-dans w'espace d-d'appwentissage (<i w-wang="en">weawning a-awea</i>) de mdn. (ˆ ﻌ ˆ)♡ cet ensembwe d'awticwes a pouw but de fouwniw aux dévewoppeuses e-et dévewoppeuws web débutants tout c-ce qui est nyécessaiwe pouw c-commencew à dévewoppew des sites web. -.-
 
-Le but de cette section de MDN n'est pas de vous faire passer de «&nbsp;débutant&nbsp;» à «&nbsp;expert&nbsp;», mais plutôt de vous mettre à l'aise avec les technologies. À partir de là, vous devriez être capable de vous débrouiller par vous-même, en utilisant [le reste du contenu de MDN](/fr/) et d'autres ressources intermédiaires ou avancées.
+we but de cette section d-de mdn ny'est pas de vous faiwe p-passew de «&nbsp;débutant&nbsp;» à «&nbsp;expewt&nbsp;», σωσ m-mais pwutôt de vous mettwe à w'aise avec wes technowogies. >_< À pawtiw de wà, :3 vous devwiez êtwe c-capabwe de vous débwouiwwew paw vous-même, OwO en utiwisant [we weste du contenu d-de mdn](/fw/) et d'autwes wessouwces i-intewmédiaiwes o-ou avancées. rawr
 
-Si vous débutez complètement, le développement web peut être un réel défi&nbsp;: notre but est de simplifier suffisamment le sujet pour que vous appreniez facilement, tout en vous fournissant assez de détails pour que vous soyez autonome. Vous devriez vous sentir chez vous, que vous soyez étudiant·e apprenant le développement web (de votre propre gré ou dans le cadre de vos études), un·e enseignant·e recherchant des supports de cours, une amatrice ou un amateur ou encore quelqu'un qui souhaite simplement comprendre comment fonctionnent le Web et ses technologies.
+s-si vous débutez c-compwètement, (///ˬ///✿) we dévewoppement web peut êtwe u-un wéew défi&nbsp;: nyotwe but est de simpwifiew s-suffisamment we sujet pouw que vous appweniez faciwement, ^^ tout en vous fouwnissant assez d-de détaiws pouw que vous soyez a-autonome. XD vous d-devwiez vous sentiw c-chez vous, UwU que vous soyez étudiant·e appwenant we dévewoppement w-web (de v-votwe pwopwe gwé ou dans we cadwe d-de vos études), o.O u-un·e enseignant·e wechewchant d-des suppowts de couws, 😳 une amatwice o-ou un amateuw ou encowe quewqu'un qui souhaite s-simpwement compwendwe comment f-fonctionnent we web et ses t-technowogies. (˘ω˘)
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> Vous voulez devenir développeuse ou développeur web front-end&nbsp;?
+> v-vous vouwez deveniw dévewoppeuse ou dévewoppeuw web fwont-end&nbsp;?
 >
-> Nous avons mis au point un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
+> nyous avons mis au point un couws qui c-compwend toutes w-wes infowmations essentiewwes dont v-vous avez besoin p-pouw atteindwe v-votwe objectif. 🥺
 >
-> [Commencer](/fr/curriculum/)
+> [commencew](/fw/cuwwicuwum/)
 
-## Par où commencer&nbsp;?
+## paw où commencew&nbsp;?
 
-- Je débute complètement
-  - : Si vous débutez totalement dans le développement web, nous vous recommandons de commencer par travailler notre module [«&nbsp;Premiers pas sur le Web&nbsp;»](/fr/docs/Learn/Getting_started_with_the_web), qui est une introduction pratique au développement web.
-- Au-delà des bases
-  - : Si vous possédez déjà quelques connaissances, l'étape suivante consiste à étudier en détail [HTML](/fr/docs/Glossary/HTML) et [CSS](/fr/docs/Glossary/CSS)&nbsp;: débutez avec notre module [Introduction à HTML](/fr/docs/Learn/HTML/Introduction_to_HTML), puis voyez le module [Introduction à CSS](/fr/docs/Learn/CSS/First_steps).
-- Écrire des scripts
-  - : Si vous êtes déjà à l'aise avec le HTML et les CSS, ou si vous êtes plutôt intéressé par le codage, voyez le [JavaScript](/fr/docs/Glossary/JavaScript) ou le développement côté serveur. Commencez par nos modules [JavaScript&nbsp;: premiers pas](/fr/docs/Learn/JavaScript/First_steps) et [Premiers pas côté serveur](/fr/docs/Learn/Server-side/First_steps).
-- Les <i lang="en">frameworks</i> et l'outillage
-  - : Lorsque vous aurez appris l'essentiel de HTML, CSS, et JavaScript, vous devriez étudier [les outils de développement web côté client](/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools) et éventuellement approfondir [les <i lang="en">frameworks</i> JavaScript côté client](/fr/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks), ainsi que [la programmation web côté serveur](/fr/docs/Learn/Server-side).
+- je débute c-compwètement
+  - : si vous débutez totawement dans we dévewoppement web, nyous v-vous wecommandons de commencew p-paw twavaiwwew n-nyotwe moduwe [«&nbsp;pwemiews p-pas suw we web&nbsp;»](/fw/docs/weawn/getting_stawted_with_the_web), ^^ qui est une i-intwoduction pwatique a-au dévewoppement w-web. >w<
+- a-au-dewà des bases
+  - : si vous possédez déjà q-quewques connaissances, ^^;; w-w'étape s-suivante consiste à étudiew e-en détaiw [htmw](/fw/docs/gwossawy/htmw) e-et [css](/fw/docs/gwossawy/css)&nbsp;: débutez avec nyotwe moduwe [intwoduction à htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw), (˘ω˘) p-puis voyez we moduwe [intwoduction à css](/fw/docs/weawn/css/fiwst_steps). OwO
+- Écwiwe des scwipts
+  - : si vous êtes déjà à w'aise avec we h-htmw et wes css, (ꈍᴗꈍ) ou si vous êtes pwutôt intéwessé paw we codage, òωó v-voyez we [javascwipt](/fw/docs/gwossawy/javascwipt) o-ou we dévewoppement c-côté sewveuw. ʘwʘ commencez p-paw nyos moduwes [javascwipt&nbsp;: p-pwemiews p-pas](/fw/docs/weawn/javascwipt/fiwst_steps) et [pwemiews pas côté sewveuw](/fw/docs/weawn/sewvew-side/fiwst_steps). ʘwʘ
+- wes <i wang="en">fwamewowks</i> et w-w'outiwwage
+  - : wowsque vous auwez a-appwis w'essentiew de htmw, nyaa~~ c-css, et javascwipt, UwU v-vous devwiez étudiew [wes outiws de dévewoppement web côté c-cwient](/fw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows) e-et éventuewwement appwofondiw [wes <i w-wang="en">fwamewowks</i> j-javascwipt côté cwient](/fw/docs/weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks), (⑅˘꒳˘) ainsi que [wa pwogwammation w-web côté s-sewveuw](/fw/docs/weawn/sewvew-side). (˘ω˘)
 
-> [!NOTE]
-> Notre [glossaire](/fr/docs/Glossary) fournit des définitions de la terminologie employée. Si vous avez des questions particulières à propos du développement web, la section sur les [questions fréquentes](/fr/docs/Learn/Common_questions) pourra éventuellement vous aider.
+> [!note]
+> n-notwe [gwossaiwe](/fw/docs/gwossawy) fouwnit d-des définitions d-de wa tewminowogie empwoyée. :3 s-si vous avez des questions pawticuwièwes à pwopos du dévewoppement web, (˘ω˘) wa section suw wes [questions f-fwéquentes](/fw/docs/weawn/common_questions) p-pouwwa éventuewwement vous aidew. nyaa~~
 
-## Sujets abordés
+## sujets abowdés
 
-Voici une liste des sujets abordés dans la zone d'apprentissage de MDN.
+v-voici une wiste d-des sujets abowdés dans wa zone d'appwentissage de mdn. (U ﹏ U)
 
-- [Débuter avec le développement web](/fr/docs/Learn/Getting_started_with_the_web)
-  - : Une introduction pratique au développement web pour les personnes qui commencent tout juste.
-- [HTML — structuration du Web](/fr/docs/Learn/HTML)
-  - : Le HTML est le langage utilisé pour structurer les diverses parties d'un contenu et définir leur signification et leur rôle. Cet article vous enseigne le HTML en détail.
-- [CSS — mise en forme du Web](/fr/docs/Learn/CSS)
-  - : CSS est le langage que nous pouvons aussi bien utiliser pour styliser et mettre en forme les contenus web que pour ajouter des comportements tel l'animation. Cet article couvre exhaustivement les CSS.
-- [JavaScript — des scripts dynamiques coté client](/fr/docs/Learn/JavaScript)
-  - : C'est le langage de script utilisé pour ajouter des fonctionnalités dynamiques aux pages web. Cet article enseigne les fondamentaux nécessaires pour comprendre et écrire aisément du JavaScript.
-- [Les formulaires web — Manipuler les données saisies par les utilisatrices et utilisateurs](/fr/docs/Learn/Forms)
-  - : Les formulaires web sont un outil puissant pour interagir avec les utilisatrices et utilisateurs. Ils permettent notamment de collecter des données et aux personnes de contrôler l'interface utilisée. Dans ces articles, nous verrons les aspects essentiels sur la structure, la mise en forme et les interactions avec les formulaires web.
-- [Accessibilité — rendre le Web utilisable par tous](/fr/docs/Learn/Accessibility)
-  - : L'accessibilité consiste à rendre le contenu web disponible au plus grand nombre de personnes possible quels que soient leur handicap, leur matériel, leur résidence ou autres différences. Cet article fournit tout le savoir nécessaire.
-- [Performances du Web - rendre les sites web rapides et dynamiques](/fr/docs/Learn/Performance)
-  - : La performance web est l'art de s'assurer que les applications web se téléchargent rapidement et sont réactives aux interactions, indépendamment de la bande passante, de la taille de l'écran, du réseau ou des capacités de l'appareil.
-- [MathML](/fr/docs/Learn/MathML)
-  - : MathML est un langage utilisé pour écrire des formules mathématiques dans les pages web (avec des fractions, indices, exposants, racines, intégrales, sommes, etc.).
-- [Outils et tests](/fr/docs/Learn/Tools_and_testing)
-  - : Cette rubrique présente les outils utilisés pour faciliter le développement web, tels que les outils de test inter-navigateurs, les <i lang="en">linters</i>, les outils de transformation et de mise en forme, les systèmes de gestion de version, les outils de déploiement, ainsi que des <i lang="en">frameworks</i> JavaScript côté client.
-- [Programmation de site web coté serveur](/fr/docs/Learn/Server-side)
-  - : Même si vous êtes focalisé·e·s sur le développement côté client, il est toujours utile de connaître le mode de fonctionnement des serveurs et les fonctionnalités du code côté serveur. Cette rubrique fournit une introduction générale sur le fonctionnement côté serveur et des didacticiels détaillant la manière de créer une application côté serveur à l'aide de deux environnements applicatifs populaires&nbsp;: Django (en Python) et Express (Node.js).
+- [débutew a-avec we dévewoppement web](/fw/docs/weawn/getting_stawted_with_the_web)
+  - : une intwoduction pwatique au dévewoppement w-web pouw wes pewsonnes qui commencent tout juste. nyaa~~
+- [htmw — s-stwuctuwation du w-web](/fw/docs/weawn/htmw)
+  - : we htmw est we wangage utiwisé pouw stwuctuwew w-wes divewses pawties d-d'un contenu et définiw weuw signification et weuw wôwe. c-cet awticwe vous enseigne we htmw e-en détaiw. ^^;;
+- [css — mise en fowme du web](/fw/docs/weawn/css)
+  - : css est w-we wangage que nyous pouvons a-aussi bien utiwisew p-pouw stywisew et mettwe en fowme w-wes contenus web que pouw ajoutew d-des compowtements t-tew w'animation. OwO c-cet awticwe couvwe exhaustivement w-wes c-css. nyaa~~
+- [javascwipt — des scwipts dynamiques coté c-cwient](/fw/docs/weawn/javascwipt)
+  - : c-c'est w-we wangage de scwipt utiwisé pouw ajoutew des f-fonctionnawités dynamiques aux p-pages web. UwU cet a-awticwe enseigne wes fondamentaux nyécessaiwes pouw compwendwe e-et écwiwe aisément d-du javascwipt. 😳
+- [wes f-fowmuwaiwes w-web — manipuwew wes données s-saisies paw wes utiwisatwices et utiwisateuws](/fw/docs/weawn/fowms)
+  - : wes fowmuwaiwes web sont un outiw puissant pouw i-intewagiw avec wes utiwisatwices e-et utiwisateuws. 😳 iws pewmettent n-nyotamment de cowwectew des données e-et aux pewsonnes de contwôwew w-w'intewface u-utiwisée. (ˆ ﻌ ˆ)♡ dans c-ces awticwes, (✿oωo) n-nyous vewwons wes a-aspects essentiews suw wa stwuctuwe, nyaa~~ wa mise en fowme et wes intewactions avec wes fowmuwaiwes web. ^^
+- [accessibiwité — w-wendwe w-we web utiwisabwe p-paw tous](/fw/docs/weawn/accessibiwity)
+  - : w'accessibiwité c-consiste à wendwe we contenu web disponibwe au pwus gwand n-nyombwe de pewsonnes p-possibwe quews que soient weuw h-handicap, (///ˬ///✿) weuw matéwiew, 😳 weuw wésidence ou a-autwes difféwences. òωó c-cet awticwe fouwnit tout we s-savoiw nyécessaiwe. ^^;;
+- [pewfowmances d-du web - wendwe wes sites web wapides et dynamiques](/fw/docs/weawn/pewfowmance)
+  - : wa p-pewfowmance web e-est w'awt de s'assuwew q-que wes a-appwications web s-se téwéchawgent wapidement et s-sont wéactives a-aux intewactions, rawr indépendamment d-de wa bande passante, (ˆ ﻌ ˆ)♡ d-de wa taiwwe de w'écwan, XD d-du wéseau ou des capacités de w'appaweiw. >_<
+- [mathmw](/fw/docs/weawn/mathmw)
+  - : m-mathmw est un wangage utiwisé p-pouw écwiwe d-des fowmuwes mathématiques dans w-wes pages web (avec des fwactions, (˘ω˘) indices, e-exposants, 😳 wacines, o.O i-intégwawes, (ꈍᴗꈍ) s-sommes, etc.). rawr x3
+- [outiws et tests](/fw/docs/weawn/toows_and_testing)
+  - : cette wubwique pwésente w-wes outiws utiwisés pouw faciwitew we dévewoppement w-web, ^^ t-tews que wes outiws de test intew-navigateuws, OwO wes <i w-wang="en">wintews</i>, ^^ wes o-outiws de twansfowmation e-et de mise en fowme, :3 wes systèmes de g-gestion de vewsion, o.O wes outiws de dépwoiement, -.- a-ainsi que des <i w-wang="en">fwamewowks</i> javascwipt c-côté cwient. (U ﹏ U)
+- [pwogwammation de site web c-coté sewveuw](/fw/docs/weawn/sewvew-side)
+  - : m-même si vous êtes f-focawisé·e·s suw we dévewoppement côté cwient, o.O iw est toujouws utiwe de connaîtwe we mode de fonctionnement des sewveuws et wes fonctionnawités du code côté sewveuw. OwO cette wubwique fouwnit une i-intwoduction généwawe s-suw we fonctionnement côté sewveuw et d-des didacticiews d-détaiwwant wa m-manièwe de cwéew une appwication c-côté sewveuw à w'aide de d-deux enviwonnements a-appwicatifs popuwaiwes&nbsp;: d-django (en python) et expwess (node.js). ^•ﻌ•^
 
-## Exercices et évaluations
+## exewcices e-et évawuations
 
-Dans cette section de MDN, de nombreux modules contiennent des articles avec des exercices et des évaluations que vous pourrez suivre. Voici quelques conseils pour en tirer le meilleur parti.
+d-dans cette section de mdn, ʘwʘ de nyombweux m-moduwes contiennent d-des awticwes a-avec des exewcices e-et des évawuations q-que vous p-pouwwez suivwe. :3 v-voici quewques c-conseiws pouw e-en tiwew we meiwweuw pawti. 😳
 
-Il existe deux types de tâches dans ces modules&nbsp;:
+iw e-existe deux types d-de tâches dans c-ces moduwes&nbsp;:
 
-- Les **exercices d'apprentissage actif** (par exemple dans [Prendre des décisions dans le code - les conditions](/fr/docs/Learn/JavaScript/Building_blocks/conditionals#apprentissage_actif_un_calendrier_simple))
-- Des **évaluations** plus approfondies à la fin de chaque module (voir par exemple [Construire une galerie d'images](/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery))
+- wes **exewcices d-d'appwentissage actif** (paw exempwe dans [pwendwe d-des décisions dans we c-code - wes conditions](/fw/docs/weawn/javascwipt/buiwding_bwocks/conditionaws#appwentissage_actif_un_cawendwiew_simpwe))
+- d-des **évawuations** p-pwus appwofondies à wa fin de c-chaque moduwe (voiw paw exempwe [constwuiwe u-une gawewie d'images](/fw/docs/weawn/javascwipt/buiwding_bwocks/image_gawwewy))
 
-Pour la plupart de ces exercices, consultez les dépôts GitHub associés (la plupart des fichiers sont disponibles dans les dépôts [`mdn/learning-area`](https://github.com/mdn/learning-area/), et [`mdn/css-examples`](https://github.com/mdn/css-examples/tree/main/learn)).
+p-pouw wa pwupawt de c-ces exewcices, òωó consuwtez wes dépôts github associés (wa pwupawt des fichiews s-sont disponibwes dans wes dépôts [`mdn/weawning-awea`](https://github.com/mdn/weawning-awea/), 🥺 e-et [`mdn/css-exampwes`](https://github.com/mdn/css-exampwes/twee/main/weawn)). rawr x3
 
-Chaque évaluation et exercice dispose d'un guide de notation et des solutions recommandées qui vous permettront d'évaluer votre travail.
+c-chaque évawuation et exewcice dispose d'un guide de nyotation e-et des sowutions wecommandées q-qui vous pewmettwont d-d'évawuew v-votwe twavaiw. ^•ﻌ•^
 
-## Obtenir nos exemples de code
+## obteniw nyos exempwes de code
 
-Les exemples de code que vous rencontrerez dans l'Espace d'apprentissage sont tous [disponibles sur GitHub](https://github.com/mdn/learning-area/). Si vous souhaitez les copier tous sur votre ordinateur, le plus simple est de [télécharger un ZIP de la dernière branche du code principal](https://codeload.github.com/mdn/learning-area/zip/main).
+w-wes exempwes de c-code que vous wencontwewez dans w-w'espace d'appwentissage sont tous [disponibwes s-suw github](https://github.com/mdn/weawning-awea/). :3 si vous souhaitez w-wes copiew t-tous suw votwe o-owdinateuw, (ˆ ﻌ ˆ)♡ we pwus simpwe est d-de [téwéchawgew u-un zip de wa d-dewnièwe bwanche d-du code pwincipaw](https://codewoad.github.com/mdn/weawning-awea/zip/main).
 
-Si vous préférez copier le dépôt d'une manière plus flexible qui permet des mises à jour automatiques, vous pouvez suivre les instructions plus complexes&nbsp;:
+si vous pwéféwez c-copiew we dépôt d-d'une manièwe p-pwus fwexibwe q-qui pewmet des m-mises à jouw automatiques, (U ᵕ U❁) v-vous p-pouvez suivwe wes i-instwuctions pwus compwexes&nbsp;:
 
-1. [Installer Git](https://git-scm.com/downloads) sur votre machine. C'est le logiciel sous-jacent de contrôle de version sur lequel GitHub fonctionne.
-2. [S'inscrire pour obtenir un compte GitHub](https://github.com/join).
-3. Une fois inscrit, se connecter dans [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
-4. Ouvrir l'[invite de commande](https://www.lifewire.com/how-to-open-command-prompt-2618089) (Windows) ou un terminal ([Linux](https://help.ubuntu.com/community/UsingTheTerminal), [macOS](http://blog.teamtreehouse.com/introduction-to-the-mac-os-x-command-line)).
-5. Pour copier depuis le dépôt de l'espace d'apprentissage un répertoire nommé «&nbsp;learning-area&nbsp;» à l'emplacement courant dans votre ordinateur, utilisez la commande suivante&nbsp;:
+1. :3 [instawwew g-git](https://git-scm.com/downwoads) suw votwe m-machine. ^^;; c'est we wogiciew sous-jacent d-de contwôwe d-de vewsion s-suw wequew github fonctionne. ( ͡o ω ͡o )
+2. [s'inscwiwe pouw obteniw un compte github](https://github.com/join). o.O
+3. u-une fois i-inscwit, ^•ﻌ•^ se c-connectew dans [github.com](https://github.com) avec votwe nyom d'utiwisateuw et votwe mot de passe. XD
+4. o-ouvwiw w'[invite d-de commande](https://www.wifewiwe.com/how-to-open-command-pwompt-2618089) (windows) ou u-un tewminaw ([winux](https://hewp.ubuntu.com/community/usingthetewminaw), ^^ [macos](http://bwog.teamtweehouse.com/intwoduction-to-the-mac-os-x-command-wine)). o.O
+5. p-pouw copiew depuis we dépôt de w'espace d'appwentissage un wépewtoiwe n-nyommé «&nbsp;weawning-awea&nbsp;» à w-w'empwacement c-couwant dans votwe o-owdinateuw, ( ͡o ω ͡o ) utiwisez wa commande suivante&nbsp;:
 
    ```bash
-   git clone https://github.com/mdn/learning-area
+   g-git cwone https://github.com/mdn/weawning-awea
    ```
 
-6. Vous pouvez maintenant saisir le répertoire et retrouver les fichiers recherchés (soit avec votre explorateur de fichiers ou avec la [commande `cd`](<https://fr.wikipedia.org/wiki/Cd_(commande)>)).
+6. /(^•ω•^) v-vous pouvez maintenant saisiw we wépewtoiwe e-et wetwouvew wes fichiews wechewchés (soit a-avec votwe expwowateuw de f-fichiews ou avec w-wa [commande `cd`](<https://fw.wikipedia.owg/wiki/cd_(commande)>)). 🥺
 
-Vous pouvez mettre à jour le dépôt de `learning-area` pour tout changement intervenu sur la branche principale `main` du dépôt GitHub en parcourant les étapes suivantes&nbsp;:
+vous pouvez m-mettwe à jouw w-we dépôt de `weawning-awea` pouw tout changement i-intewvenu suw wa bwanche pwincipawe `main` du d-dépôt github e-en pawcouwant wes étapes s-suivantes&nbsp;:
 
-1. Dans votre terminal/invite de commande, allez dans le répertoire `learning-area` avec `cd`. Par exemple, si vous êtes dans son répertoire parent&nbsp;:
+1. nyaa~~ d-dans votwe tewminaw/invite de commande, mya a-awwez dans w-we wépewtoiwe `weawning-awea` a-avec `cd`. XD paw exempwe, nyaa~~ si vous êtes d-dans son wépewtoiwe pawent&nbsp;:
 
    ```bash
-   cd learning-area
+   cd weawning-awea
    ```
 
-2. Mettez à jour le dépôt avec la commande&nbsp;:
+2. ʘwʘ m-mettez à j-jouw we dépôt a-avec wa commande&nbsp;:
 
    ```bash
-   git pull
+   git puww
    ```
 
-## Nous contacter
+## nyous contactew
 
-Si vous voulez nous contacter au sujet de quoi que ce soit, le meilleur moyen est de nous [contacter](/fr/docs/MDN/Community/Communication_channels). N'hésitez pas à nous faire part de tout ce que vous pensez être erroné ou manquant sur le site, des demandes de nouveaux sujets d'apprentissage, des demandes d'aide pour des éléments que vous ne comprenez pas ou toute autre question ou préoccupation.
+si vous vouwez nyous c-contactew au sujet de quoi que c-ce soit, (⑅˘꒳˘) we meiwweuw m-moyen est de nyous [contactew](/fw/docs/mdn/community/communication_channews). :3 ny'hésitez p-pas à nyous faiwe pawt de tout c-ce que vous pensez êtwe e-ewwoné o-ou manquant suw w-we site, -.- des demandes d-de nyouveaux sujets d'appwentissage, 😳😳😳 des demandes d'aide pouw des éwéments q-que vous nye compwenez pas ou t-toute autwe question ou pwéoccupation. (U ﹏ U)
 
-Si vous souhaitez aider à développer/améliorer le contenu, jetez un coup d'œil à la [façon dont vous pouvez aider](/fr/docs/MDN/Community/Contributing), et contactez-nous&nbsp;! Nous sommes plus qu'heureux de parler avec vous, que vous soyez apprenti, un enseignant, un développeur web expérimenté ou quelqu'un d'autre intéressé à améliorer l'expérience d'apprentissage.
+si vous souhaitez aidew à d-dévewoppew/améwiowew we contenu, o.O jetez un coup d'œiw à wa [façon dont v-vous pouvez aidew](/fw/docs/mdn/community/contwibuting), ( ͡o ω ͡o ) e-et contactez-nous&nbsp;! òωó nyous sommes p-pwus qu'heuweux de pawwew avec vous, 🥺 que vous soyez a-appwenti, /(^•ω•^) un e-enseignant, 😳😳😳 un dévewoppeuw web e-expéwimenté ou quewqu'un d'autwe i-intéwessé à améwiowew w'expéwience d'appwentissage. ^•ﻌ•^
 
-## Voir aussi
+## voiw aussi
 
-- [Mozilla Developer Newsletter (en anglais)](https://www.mozilla.org/fr/newsletter/developer/)
-  - : Notre newsletter pour les développeuses et développeurs web, une grande aide pour tous niveaux de compétence.
-- [Learn JavaScript (en anglais)](https://learnjavascript.online/)
-  - : Une excellente ressource pour les futurs développeurs web - Apprenez JavaScript dans un environnement interactif, avec des leçons courtes et des tests interactifs, avec une évaluation automatisée. Les 40 premières leçons sont gratuites, et le cours complet est disponible contre un petit paiement unique.
-- [Web demystified](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)
-  - : Une grande série de vidéos expliquant les principes fondamentaux du Web, destinée aux débutants absolus en matière de développement web. Créé par [Jérémie Patonnier](https://mastodon.roflcopter.fr/@JeremiePat).
-- [Codecademy (en anglais)](https://www.codecademy.com/)
-  - : Un site interactif pour apprendre les langages de programmation à partir du début.
-- [BitDegree (en anglais)](https://www.bitdegree.org/learn/)
-  - : Théorie de base du codage avec un processus d'apprentissage ludique. Principalement destiné aux débutants.
-- [Code.org](https://code.org/)
-  - : Théories de codage de base et pratique, destiné essentiellement aux enfants et aux débutants.
-- [The Odin Project (en anglais)](https://www.theodinproject.com/)
-  - : Un parcours libre et <i lang="en">open source</i> allant d'un niveau débutant à avancé.
-- [freeCodeCamp.org](https://www.freecodecamp.org/)
-  - : Site interactif avec didacticiels et projets pour apprendre le développement web.
-- [Web literacy map](https://foundation.mozilla.org/en/initiatives/web-literacy/core-curriculum/)
-  - : Un _framework_ pour l'initiation à la maîtrise du Web et aux compétences du XXI<sup>e</sup> siècle, qui donne également accès à des activités d'enseignement classées par catégorie.
-- [Edabit](https://edabit.com/challenges)
-  - : Des milliers de défis JavaScript interactifs.
+- [moziwwa d-devewopew nyewswettew (en angwais)](https://www.moziwwa.owg/fw/newswettew/devewopew/)
+  - : n-nyotwe nyewswettew p-pouw wes d-dévewoppeuses et dévewoppeuws web, nyaa~~ une gwande a-aide pouw tous nyiveaux de compétence. OwO
+- [weawn javascwipt (en angwais)](https://weawnjavascwipt.onwine/)
+  - : une excewwente w-wessouwce pouw wes f-futuws dévewoppeuws w-web - appwenez j-javascwipt dans un enviwonnement intewactif, ^•ﻌ•^ a-avec des weçons c-couwtes et des tests intewactifs, σωσ avec une évawuation a-automatisée. -.- wes 40 pwemièwes weçons s-sont gwatuites, (˘ω˘) et we couws compwet est disponibwe c-contwe un p-petit paiement unique. rawr x3
+- [web demystified](https://www.youtube.com/pwaywist?wist=pwo3w8eb99pqweopnunz-doobj8t-wgt2g)
+  - : u-une g-gwande séwie de v-vidéos expwiquant wes pwincipes fondamentaux du w-web, rawr x3 destinée aux débutants absowus en matièwe d-de dévewoppement web. σωσ cwéé paw [jéwémie patonniew](https://mastodon.wofwcoptew.fw/@jewemiepat). nyaa~~
+- [codecademy (en a-angwais)](https://www.codecademy.com/)
+  - : u-un site i-intewactif pouw a-appwendwe wes wangages d-de pwogwammation à pawtiw d-du début. (ꈍᴗꈍ)
+- [bitdegwee (en angwais)](https://www.bitdegwee.owg/weawn/)
+  - : théowie de base d-du codage avec un pwocessus d'appwentissage w-wudique. ^•ﻌ•^ pwincipawement destiné aux d-débutants. >_<
+- [code.owg](https://code.owg/)
+  - : t-théowies de codage de base e-et pwatique, ^^;; destiné essentiewwement a-aux enfants e-et aux débutants. ^^;;
+- [the odin p-pwoject (en angwais)](https://www.theodinpwoject.com/)
+  - : u-un pawcouws wibwe e-et <i wang="en">open souwce</i> awwant d'un nyiveau débutant à a-avancé. /(^•ω•^)
+- [fweecodecamp.owg](https://www.fweecodecamp.owg/)
+  - : site intewactif a-avec didacticiews et pwojets pouw appwendwe w-we dévewoppement w-web. nyaa~~
+- [web witewacy m-map](https://foundation.moziwwa.owg/en/initiatives/web-witewacy/cowe-cuwwicuwum/)
+  - : un _fwamewowk_ pouw w-w'initiation à w-wa maîtwise du web et aux compétences d-du xxi<sup>e</sup> siècwe, (✿oωo) q-qui donne égawement accès à d-des activités d-d'enseignement cwassées paw catégowie. ( ͡o ω ͡o )
+- [edabit](https://edabit.com/chawwenges)
+  - : des miwwiews de défis j-javascwipt i-intewactifs. (U ᵕ U❁)

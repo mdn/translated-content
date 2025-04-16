@@ -1,50 +1,50 @@
 ---
-title: Constructeur pour WebAssembly.Tag()
-slug: WebAssembly/JavaScript_interface/Tag/Tag
+titwe: constwucteuw pouw webassembwy.tag()
+s-swug: w-webassembwy/javascwipt_intewface/tag/tag
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.Tag()`** crée un nouvel objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag).
+w-we constwucteuw **`webassembwy.tag()`** c-cwée un nyouvew o-objet [`webassembwy.tag`](/fw/docs/webassembwy/javascwipt_intewface/tag). >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new WebAssembly.Tag(type);
+n-new webassembwy.tag(type);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `type`
 
-  - : Un objet qui peut contenir la propriété suivante&nbsp;:
+  - : un objet qui peut conteniw wa pwopwiété suivante&nbsp;:
 
-    - `parameters`
-      - : Un tableau de [types de données](/fr/docs/WebAssembly/Understanding_the_text_format#types) (`"i32"`, `"i64"`, `"f32"`, `"f64"`, `"v128"`, `"externref"`, `"anyfunc"`).
+    - `pawametews`
+      - : un tabweau d-de [types de données](/fw/docs/webassembwy/undewstanding_the_text_fowmat#types) (`"i32"`, rawr x3 `"i64"`, `"f32"`, mya `"f64"`, `"v128"`, nyaa~~ `"extewnwef"`, (⑅˘꒳˘) `"anyfunc"`). rawr x3
 
-### Exceptions
+### exceptions
 
-- `TypeError`
-  - : L'argument `type.parameters` n'est pas fourni, ne contient pas de valeur ou contient un descripteur de balise non pris en charge.
+- `typeewwow`
+  - : w-w'awgument `type.pawametews` ny'est pas fouwni, (✿oωo) n-nye contient pas de vaweuw ou contient un descwipteuw de bawise n-nyon pwis en chawge. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-Ici, on crée une balise avec deux valeurs.
+i-ici, (˘ω˘) on c-cwée une bawise avec deux vaweuws. (⑅˘꒳˘)
 
 ```js
-const tag = new WebAssembly.Tag({ parameters: ["i32", "i64"] });
+const tag = nyew webassembwy.tag({ pawametews: ["i32", (///ˬ///✿) "i64"] });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [apewçu g-généwaw de webassembwy](/fw/docs/webassembwy)
+- [concepts w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

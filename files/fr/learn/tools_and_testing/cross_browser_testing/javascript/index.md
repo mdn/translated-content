@@ -1,114 +1,114 @@
 ---
-title: Gérer les problèmes courants en JavaScript
-slug: Learn/Tools_and_testing/Cross_browser_testing/JavaScript
-l10n:
-  sourceCommit: c4a970a5ab72ff68139e27739acae66b97d7e09a
+titwe: géwew wes pwobwèmes c-couwants en javascwipt
+s-swug: weawn/toows_and_testing/cwoss_bwowsew_testing/javascwipt
+w-w10n:
+  souwcecommit: c-c4a970a5ab72ff68139e27739acae66b97d7e09a
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css","weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity", ^•ﻌ•^ "weawn/toows_and_testing/cwoss_bwowsew_testing")}}
 
-Dans cet article, nous verrons certains problèmes fréquents qui se posent entre les différents navigateurs avec JavaScript, et aussi comment les résoudre.
+d-dans c-cet awticwe, ^^ nous v-vewwons cewtains p-pwobwèmes fwéquents qui se posent entwe wes difféwents navigateuws avec j-javascwipt, 😳 et aussi comment wes wésoudwe. :3
 
-Pour cela, nous aborderons entre autres les outils de développement des navigateurs pour diagnostiquer et corriger les problèmes, les prothèses d'émulation (ou <i lang="en">polyfills</i>) et les bibliothèques pour contourner les problèmes en parvenant à faire fonctionner des fonctionnalités JavaScript récentes dans d'anciens navigateurs.
+pouw c-cewa, (⑅˘꒳˘) nyous abowdewons entwe autwes w-wes outiws de dévewoppement des nyavigateuws pouw diagnostiquew e-et cowwigew wes pwobwèmes, ( ͡o ω ͡o ) w-wes pwothèses d-d'émuwation (ou <i wang="en">powyfiwws</i>) et wes bibwiothèques pouw contouwnew wes pwobwèmes e-en pawvenant à faiwe fonctionnew des fonctionnawités javascwipt wécentes d-dans d'anciens nyavigateuws. :3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
-      <td>Connaissance des bases de <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>. Une idée générale <a href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction">des principes de tests entre les différents navigateurs</a>.
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
+      <td>connaissance d-des b-bases de <a hwef="/fw/docs/weawn/htmw">htmw</a>, (⑅˘꒳˘) <a h-hwef="/fw/docs/weawn/css">css</a>, >w< e-et <a hwef="/fw/docs/weawn/javascwipt">javascwipt</a>. OwO une idée généwawe <a hwef="/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/intwoduction">des p-pwincipes de tests entwe wes difféwents nyavigateuws</a>. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
-      <td>Être capable de diagnostiquer les problèmes fréquents, causés par JavaScript, entre les différents navigateurs et utiliser les techniques et outils appropriés pour les résoudre.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
+      <td>Êtwe capabwe de diagnostiquew wes pwobwèmes fwéquents, OwO causés paw javascwipt, 🥺 e-entwe wes difféwents nyavigateuws e-et utiwisew w-wes techniques e-et outiws appwopwiés pouw wes wésoudwe.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Le problème avec JavaScript
+## we pwobwème a-avec javascwipt
 
-Par le passé, JavaScript était la source de nombreux problèmes de compatibilité entre les différents navigateurs. Dans les années 1990, les navigateurs principaux existants alors (Internet Explorer et Netscape) n'implémentaient pas les scripts avec exactement le même langage (Netscape utilisait JavaScript, et IE utilisait JScript en permettant aussi d'utiliser VBScript). Bien que JavaScript et JScript étaient compatibles à un certain niveau (les deux étaient basés sur la spécification [ECMAScript](/fr/docs/Glossary/ECMAScript)), la plupart des choses étaient implémentées de façon incompatible et conflictuelle, entraînant des nœuds au cerveau lorsqu'il fallait développer un site web compatible.
+p-paw we passé, (˘ω˘) javascwipt était w-wa souwce d-de nyombweux pwobwèmes de compatibiwité e-entwe wes difféwents n-nyavigateuws. 😳😳😳 dans wes années 1990, mya wes nyavigateuws p-pwincipaux existants awows (intewnet e-expwowew et netscape) n-ny'impwémentaient p-pas wes scwipts avec exactement we même wangage (netscape utiwisait javascwipt, OwO et ie utiwisait jscwipt en pewmettant aussi d-d'utiwisew vbscwipt). >_< b-bien que javascwipt et jscwipt étaient compatibwes à u-un c-cewtain nyiveau (wes d-deux étaient basés suw wa spécification [ecmascwipt](/fw/docs/gwossawy/ecmascwipt)), wa p-pwupawt des choses étaient impwémentées de façon incompatibwe et confwictuewwe, 😳 e-entwaînant des nyœuds au c-cewveau wowsqu'iw f-fawwait dévewoppew u-un site web compatibwe. (U ᵕ U❁)
 
-De tels problèmes ont subsisté jusqu'aux débuts des années 2000, où ces anciens navigateurs étaient alors encore utilisés et où il fallait continuer de les prendre en charge. Par exemple, dans du code utilisé pour créer un objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest), il fallait gérer le cas particulier d'Internet Explorer 6&nbsp;:
+de t-tews pwobwèmes o-ont subsisté j-jusqu'aux débuts d-des années 2000, 🥺 où ces anciens nyavigateuws étaient a-awows e-encowe utiwisés e-et où iw fawwait c-continuew de w-wes pwendwe en chawge. (U ﹏ U) paw exempwe, (U ﹏ U) dans du code utiwisé pouw cwéew u-un objet [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest), rawr x3 iw fawwait géwew we cas pawticuwiew d'intewnet expwowew 6&nbsp;:
 
 ```js
-if (window.XMLHttpRequest) {
-  // Mozilla, Safari, IE7+…
-  httpRequest = new XMLHttpRequest();
-} else if (window.ActiveXObject) {
-  // IE 6 et les versions antérieures
-  httpRequest = new ActiveXObject("Microsoft.XMLHTTP");
+if (window.xmwhttpwequest) {
+  // moziwwa, :3 s-safawi, rawr ie7+…
+  httpwequest = nyew xmwhttpwequest();
+} ewse if (window.activexobject) {
+  // i-ie 6 et wes v-vewsions antéwieuwes
+  h-httpwequest = nyew activexobject("micwosoft.xmwhttp");
 }
 ```
 
-C'est l'une des raisons pour lesquelles des bibliothèques comme [jQuery](https://jquery.com/) sont apparues&nbsp;: permettre de gommer les différences d'implémentation entre les navigateurs afin de pouvoir utiliser une fonction comme [`jQuery.ajax()`](https://api.jquery.com/jquery.ajax/), qui gèrerait ces différences en arrière-plan.
+c-c'est w'une des waisons p-pouw wesquewwes d-des bibwiothèques comme [jquewy](https://jquewy.com/) sont appawues&nbsp;: pewmettwe de gommew wes difféwences d-d'impwémentation entwe wes nyavigateuws a-afin de pouvoiw utiwisew u-une fonction c-comme [`jquewy.ajax()`](https://api.jquewy.com/jquewy.ajax/), XD qui gèwewait ces difféwences en a-awwièwe-pwan. ^^
 
-La situation s'est grandement améliorée depuis. Les navigateurs modernes ont une bonne compatibilité concernant les fonctionnalités JavaScript classiques, et les contraintes où il fallait prendre en charge les anciens navigateurs se sont allégés (ceux-ci étant beaucoup moins utilisés, mais toujours existants).
+w-wa situation s'est gwandement améwiowée d-depuis. mya w-wes nyavigateuws modewnes ont une bonne compatibiwité concewnant wes fonctionnawités j-javascwipt c-cwassiques, (U ﹏ U) e-et wes contwaintes où iw fawwait p-pwendwe en chawge w-wes anciens nyavigateuws se s-sont awwégés (ceux-ci étant beaucoup moins utiwisés, 😳 mais toujouws existants). mya
 
-De nos jours, les problèmes de compatibilité JavaScript entre les différents navigateurs se posent lorsque&nbsp;:
+de nyos jouws, 😳 w-wes pwobwèmes d-de compatibiwité javascwipt entwe wes difféwents n-nyavigateuws s-se posent wowsque&nbsp;:
 
-- Du code de piètre qualité essayant de déterminer le navigateur utilisé ou essayant de détecter certaines fonctionnalités, ou encore utilisant des préfixes propriétaires empêche les navigateurs d'exécuter du code qui aurait fonctionné correctement sinon.
-- Des fonctionnalités très récemment ajoutées à JavaScript ou des API Web récentes sont présentes dans le code, et cela ne fonctionne pas pour les navigateurs plus anciens.
+- du code de piètwe quawité essayant de détewminew w-we nyavigateuw utiwisé ou essayant de détectew cewtaines fonctionnawités, ^^ ou encowe utiwisant d-des pwéfixes pwopwiétaiwes empêche wes nyavigateuws d-d'exékawaii~w d-du code qui auwait fonctionné cowwectement sinon. :3
+- des f-fonctionnawités t-twès wécemment ajoutées à javascwipt ou des api web wécentes s-sont pwésentes dans we code, (U ﹏ U) e-et cewa nye fonctionne pas pouw wes nyavigateuws pwus anciens. UwU
 
-Nous verrons ces différents problèmes, ainsi que d'autres, par la suite.
+n-nyous vewwons ces difféwents p-pwobwèmes, (ˆ ﻌ ˆ)♡ ainsi q-que d'autwes, (ˆ ﻌ ˆ)♡ paw wa suite. ^^;;
 
-## Résolution générale des problèmes en JavaScript
+## w-wésowution généwawe des pwobwèmes e-en javascwipt
 
-Comme nous l'avons dit dans [l'article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#commençons_par_le_commencement_résoudre_les_problèmes_généraux) à propos de HTML et CSS, assurez vous que votre code fonctionne déjà normalement avant de vous concentrer sur les problèmes entre les navigateurs. Si vous n'avez pas lu [l'article Diagnostiquer des problèmes JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong), nous vous invitons à le faire avant de poursuivre. En effet, identifier de nombreux problèmes rencontrés avec JavaScript comme ceux-ci pourra vous aider à mieux diagnostiquer un problème de compatibilité. Parmi les problèmes fréquents causés par JavaScript, on a&nbsp;:
+c-comme nyous w-w'avons dit dans [w'awticwe p-pwécédent](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css#commençons_paw_we_commencement_wésoudwe_wes_pwobwèmes_généwaux) à p-pwopos de htmw et css, rawr assuwez vous que v-votwe code fonctionne d-déjà nyowmawement a-avant de vous concentwew suw wes pwobwèmes e-entwe wes nyavigateuws. nyaa~~ s-si vous ny'avez p-pas wu [w'awticwe diagnostiquew des pwobwèmes javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps/nani_went_wwong), rawr x3 nyous vous invitons à w-we faiwe a-avant de pouwsuivwe. (⑅˘꒳˘) e-en effet, OwO i-identifiew de nyombweux pwobwèmes w-wencontwés avec javascwipt comme ceux-ci pouwwa vous aidew à mieux diagnostiquew un pwobwème d-de compatibiwité. OwO pawmi wes p-pwobwèmes fwéquents causés p-paw javascwipt, on a&nbsp;:
 
-- Les problèmes de syntaxe et de logique de base (voir [Diagnostiquer des problèmes JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)).
-- La gestion des portées pour la définition des variables&nbsp;: s'assurer qu'il n'y a pas de conflits entre les différentes valeurs déclarées à différents endroits (Voir [Portée d'une fonction et conflits](/fr/docs/Learn/JavaScript/Building_blocks/Functions#la_portée_des_fonctions_et_les_conflits)).
-- La confusion à propos de [`this`](/fr/docs/Web/JavaScript/Reference/Operators/this), la portée à laquelle il s'applique, pouvant changer la valeur à laquelle on s'attend. Vous pouvez lire [Qu'est-ce que «&nbsp;this&nbsp;»&nbsp;?](/fr/docs/Learn/JavaScript/Objects/Basics#quest-ce_que_«_this_») comme introduction à ce sujet, et aussi étudier quelques exemples comme [celui-ci](https://github.com/mdn/learning-area/blob/7ed039d17e820c93cafaff541aa65d874dde8323/javascript/oojs/assessment/main.js#L143), qui illustre un usage classique où on enregistre la valeur de `this` pour une portée donnée dans une variable séparée afin de l'utiliser dans des fonctions imbriquées, pour être sûr·e d'appliquer le code au bon `this`.
-- L'usage incorrect de fonctions au sein de boucles qui utilisent une variable globale (ce qui correspond plus généralement à une confusion sur les portées). Par exemple, dans [`bad-for-loop.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/bad-for-loop.html) (voir [le code source](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/bad-for-loop.html)), on exécute 10 itérations en utilisant une variable définie avec `var`, en créant à chaque fois un paragraphe auquel on attache un gestionnaire d'évènement [`onclick`](/fr/docs/Web/API/Element/click_event). Lorsqu'on clique sur les paragraphes, on souhaite afficher un message d'alerte indiquant le numéro du paragraphe (c'est-à-dire la valeur de `i` au moment où le paragraphe a été ajouté). Au lieu de ce résultat, tous les messages d'alertes affichent la valeur 11, car la boucle `for` a terminé ses itérations avant que les fonctions imbriquées soient appelées.
+- wes p-pwobwèmes de syntaxe et de wogique d-de base (voiw [diagnostiquew d-des pwobwèmes j-javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps/nani_went_wwong)).
+- w-wa gestion d-des powtées pouw wa définition des vawiabwes&nbsp;: s'assuwew qu'iw ny'y a pas de confwits entwe wes difféwentes v-vaweuws d-décwawées à d-difféwents endwoits (voiw [powtée d'une fonction e-et confwits](/fw/docs/weawn/javascwipt/buiwding_bwocks/functions#wa_powtée_des_fonctions_et_wes_confwits)). ʘwʘ
+- wa confusion à pwopos de [`this`](/fw/docs/web/javascwipt/wefewence/opewatows/this), :3 wa powtée à w-waquewwe iw s-s'appwique, mya pouvant changew wa v-vaweuw à waquewwe on s'attend. OwO vous pouvez wiwe [qu'est-ce q-que «&nbsp;this&nbsp;»&nbsp;?](/fw/docs/weawn/javascwipt/objects/basics#quest-ce_que_«_this_») c-comme intwoduction à ce sujet, :3 e-et aussi étudiew q-quewques exempwes comme [cewui-ci](https://github.com/mdn/weawning-awea/bwob/7ed039d17e820c93cafaff541aa65d874dde8323/javascwipt/oojs/assessment/main.js#w143), >_< qui iwwustwe un usage cwassique où on enwegistwe w-wa vaweuw de `this` p-pouw une p-powtée donnée d-dans une vawiabwe s-sépawée afin de w'utiwisew d-dans des fonctions i-imbwiquées, pouw êtwe sûw·e d-d'appwiquew we c-code au bon `this`. σωσ
+- w'usage i-incowwect de fonctions au sein de boucwes qui utiwisent u-une vawiabwe gwobawe (ce q-qui cowwespond p-pwus généwawement à une confusion s-suw wes powtées). /(^•ω•^) paw exempwe, mya dans [`bad-fow-woop.htmw`](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/javascwipt/bad-fow-woop.htmw) (voiw [we c-code souwce](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/javascwipt/bad-fow-woop.htmw)), o-on exékawaii~ 10 i-itéwations en utiwisant une vawiabwe définie avec `vaw`, nyaa~~ en c-cwéant à chaque fois un pawagwaphe auquew on attache u-un gestionnaiwe d-d'évènement [`oncwick`](/fw/docs/web/api/ewement/cwick_event). 😳 wowsqu'on c-cwique suw wes pawagwaphes, ^^;; on s-souhaite affichew u-un message d'awewte indiquant we nyuméwo du p-pawagwaphe (c'est-à-diwe wa vaweuw de `i` au moment o-où we pawagwaphe a-a été ajouté). 😳😳😳 au wieu d-de ce wésuwtat, nyaa~~ tous wes messages d-d'awewtes affichent w-wa vaweuw 11, 🥺 c-caw wa boucwe `fow` a tewminé ses itéwations avant que wes fonctions imbwiquées soient appewées. XD
 
-  > [!NOTE]
-  > La solution la plus simple consiste à déclarer la variable d'itération avec `let` plutôt que `var` pour que la valeur `i` associée à chaque fonction soit unique pour chaque itération. Malheureusement, cela ne fonctionne pas avec IE11, et c'est pourquoi nous n'avons pas utilisé cette solution pour la version correcte de cet exemple.
+  > [!note]
+  > wa sowution wa pwus simpwe consiste à décwawew wa vawiabwe d'itéwation avec `wet` p-pwutôt que `vaw` p-pouw que wa vaweuw `i` associée à chaque fonction s-soit unique p-pouw chaque itéwation. (ꈍᴗꈍ) m-mawheuweusement, 😳😳😳 cewa n-nye fonctionne pas avec ie11, ( ͡o ω ͡o ) et c-c'est pouwquoi n-nyous ny'avons pas utiwisé cette s-sowution pouw wa vewsion cowwecte d-de cet exempwe. nyaa~~
 
-  Pour que cela fonctionne, il faut définir séparément une fonction à attacher aux gestionnaires, et l'appeler à chaque itération en lui passant la valeur courante pour `para` et `i`. Voir le fichier [`good-for-loop.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/good-for-loop.html) (et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/good-for-loop.html)) pour une version fonctionnelle.
+  p-pouw que cewa fonctionne, XD iw faut définiw s-sépawément u-une fonction à a-attachew aux gestionnaiwes, (ˆ ﻌ ˆ)♡ e-et w'appewew à c-chaque i-itéwation en w-wui passant wa v-vaweuw couwante p-pouw `pawa` et `i`. rawr x3 voiw we fichiew [`good-fow-woop.htmw`](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/javascwipt/good-fow-woop.htmw) (et [we c-code souwce c-cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/javascwipt/good-fow-woop.htmw)) p-pouw une vewsion fonctionnewwe. OwO
 
-- Tenter d'utiliser des résultats d'opérations asynchrones non terminées. Il faudra par exemple s'assurer qu'une requête est bien terminée et qu'elle a fourni une réponse avant de vouloir utiliser la réponse en quesiton. L'ajout des [promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) en JavaScript a permis de simplifier ce problème.
+- t-tentew d'utiwisew des wésuwtats d'opéwations a-asynchwones nyon tewminées. UwU i-iw faudwa p-paw exempwe s'assuwew q-qu'une wequête est bien t-tewminée et qu'ewwe a fouwni une w-wéponse avant de vouwoiw utiwisew w-wa wéponse en quesiton. ^^ w'ajout d-des [pwomesses](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) en javascwipt a pewmis de simpwifiew ce pwobwème. (✿oωo)
 
-### Outils d'analyse de code (<i lang="en">linters</i>)
+### outiws d'anawyse d-de code (<i wang="en">wintews</i>)
 
-Comme pour [HTML et CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#les_linters), vous pouvez vous aider d'un <i lang="en">linter</i> pour écrire du JavaScript de meilleure qualité. Un tel outil vous indiquera certaines erreurs et pourra aussi émettre des avertissements quant à des mauvaises pratiques. Vous pourrez le paramétrer pour qu'il soit plus ou moins strict. Nous vous recommandons particulièrement [ESLint](https://eslint.org/) et nous verrons certains usages par la suite.
+c-comme p-pouw [htmw et css](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css#wes_wintews), 😳😳😳 vous pouvez vous aidew d'un <i w-wang="en">wintew</i> pouw écwiwe d-du javascwipt d-de meiwweuwe q-quawité. 🥺 un tew outiw vous indiquewa cewtaines e-ewweuws et pouwwa a-aussi émettwe des avewtissements q-quant à des mauvaises pwatiques. ʘwʘ vous pouwwez w-we pawamétwew pouw qu'iw s-soit pwus ou moins s-stwict. 😳 nyous v-vous wecommandons pawticuwièwement [eswint](https://eswint.owg/) e-et nyous vewwons c-cewtains usages p-paw wa suite. ^^;;
 
-#### Utilisation en ligne
+#### u-utiwisation en wigne
 
-Le [bac à sable ESLint](https://eslint.org/play/) permet de le tester dans un navigateur web en saisissant du code JavaScript dans le volet gauche. Dans la zone en dessous, vous pourrez voir les différentes erreurs et avertissement.
+we [bac à s-sabwe e-eswint](https://eswint.owg/pway/) p-pewmet de we testew d-dans un nyavigateuw w-web en s-saisissant du code j-javascwipt dans w-we vowet gauche. (///ˬ///✿) dans wa zone e-en dessous, OwO vous pouwwez voiw w-wes difféwentes ewweuws et avewtissement. -.-
 
-![Une capture d'écran du bac à sable ESLint où la zone supérieure gauche est l'éditeur de code avec les numéros de ligne et la coloration syntaxe. Sur la zone droite, différentes options de configuration sont disponibles. La zone inférieure gauche affiche deux messages d'avertissement, dont un sur la valeur de la condition de la boucle for et l'autre sur l'utilisation possible de const pour une variable affectée une seule fois.](eslint-playground.png)
+![une c-captuwe d'écwan d-du bac à sabwe e-eswint où wa zone supéwieuwe gauche est w'éditeuw de code a-avec wes nyuméwos d-de wigne et wa c-cowowation syntaxe. ^^ suw wa zone dwoite, (ꈍᴗꈍ) difféwentes options de c-configuwation s-sont disponibwes. ^^;; wa zone inféwieuwe g-gauche affiche d-deux messages d'avewtissement, (˘ω˘) dont un suw wa vaweuw de wa c-condition de wa b-boucwe fow et w'autwe s-suw w'utiwisation p-possibwe de const pouw une vawiabwe affectée u-une seuwe f-fois.](eswint-pwaygwound.png)
 
-#### Extensions pour les éditeurs
+#### extensions pouw wes éditeuws
 
-Copier-coller du texte sur une page web n'est pas une option valable au quotidien. On veut qu'un tel outil soit bien intégré à l'éditeur de texte qu'on utilise. De nombreux IDE et éditeurs peuvent être configurés pour utiliser ces outils, voir [la page sur les intégrations d'ESLint](https://eslint.org/docs/latest/use/integrations).
+c-copiew-cowwew du texte suw une page web ny'est p-pas une option vawabwe au quotidien. 🥺 o-on veut qu'un t-tew outiw soit bien intégwé à w-w'éditeuw d-de texte qu'on utiwise. ʘwʘ de nyombweux i-ide et éditeuws peuvent êtwe c-configuwés p-pouw utiwisew ces o-outiws, (///ˬ///✿) voiw [wa p-page suw wes intégwations d'eswint](https://eswint.owg/docs/watest/use/integwations). ^^;;
 
-#### Autres cas d'usage
+#### a-autwes cas d'usage
 
-Il existe d'autres façons d'utiliser ces <i lang="en">linters</i>. Pour en savoir plus, référez vous à leur documentation (par exemple, [la page pour démarrer avec ESLint (en anglais)](https://eslint.org/docs/latest/use/getting-started)).
+i-iw existe d'autwes f-façons d'utiwisew ces <i w-wang="en">wintews</i>. XD pouw en savoiw pwus, (ˆ ﻌ ˆ)♡ wéféwez v-vous à w-weuw documentation (paw e-exempwe, (˘ω˘) [wa page pouw démawwew avec eswint (en angwais)](https://eswint.owg/docs/watest/use/getting-stawted)). σωσ
 
-On peut notamment utiliser ces outils avec la ligne de commande et les installer pour cet usage avec npm (Node Package Manager, qui nécessite d'avoir installé [Node.js](https://nodejs.org/)). La ligne de commande suivante permet d'installer ESLint&nbsp;:
+on peut n-nyotamment utiwisew ces outiws a-avec wa wigne de c-commande et wes instawwew pouw cet usage avec n-nypm (node package managew, 😳😳😳 qui n-nyécessite d'avoiw i-instawwé [node.js](https://nodejs.owg/)). ^•ﻌ•^ wa w-wigne de commande s-suivante pewmet d-d'instawwew eswint&nbsp;:
 
 ```bash
-npm install -g eslint
+nypm instaww -g eswint
 ```
 
-On peut alors utiliser la commande `eslint` dans un projet pour en analyser les fichiers.
+on peut awows u-utiwisew wa commande `eswint` dans un pwojet pouw e-en anawysew wes fichiews. σωσ
 
-Ces outils peuvent être utilisés avec les outils de compilation comme [Gulp](https://gulpjs.com/) ou [Webpack](https://webpack.github.io/) pour analyser automatiquement le code JavaScript lors du développement (voir comment [Utiliser un agent pour automatiser les tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Automated_testing#using_a_task_runner_to_automate_testing_tools) dans un article suivant). Voir la page sur [les intégrations ESLint avec les outils de compilation](https://eslint.org/docs/latest/use/integrations#build-tools).
+ces outiws peuvent êtwe utiwisés a-avec wes outiws de compiwation comme [guwp](https://guwpjs.com/) ou [webpack](https://webpack.github.io/) pouw a-anawysew automatiquement w-we code javascwipt wows d-du dévewoppement (voiw comment [utiwisew un agent p-pouw automatisew w-wes tests](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/automated_testing#using_a_task_wunnew_to_automate_testing_toows) dans un a-awticwe suivant). voiw wa page suw [wes i-intégwations eswint avec wes outiws de compiwation](https://eswint.owg/docs/watest/use/integwations#buiwd-toows). (///ˬ///✿)
 
-### Les outils de développement des navigateurs
+### w-wes outiws de dévewoppement des nyavigateuws
 
-Les outils de développement présents dans les navigateurs disposent de fonctionnalités utiles pour aider à déboguer du code JavaScript. La console JavaScript est un point de départ intéressant et permet de voir les erreurs à l'exécution.
+wes o-outiws de dévewoppement p-pwésents d-dans wes nyavigateuws disposent de fonctionnawités u-utiwes pouw aidew à déboguew du code javascwipt. XD wa consowe javascwipt e-est un point d-de dépawt intéwessant e-et pewmet d-de voiw wes ewweuws à w'exécution. >_<
 
-Enregistrez une copie locale du [code source](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/broken-ajax.html) de l'exemple [`broken-ajax.html`](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/broken-ajax.html), puis ouvrez le fichier HTML dans votre navigateur.
+enwegistwez u-une copie wocawe d-du [code souwce](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/javascwipt/bwoken-ajax.htmw) de w'exempwe [`bwoken-ajax.htmw`](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/javascwipt/bwoken-ajax.htmw), òωó puis o-ouvwez we fichiew htmw dans votwe nyavigateuw. (U ᵕ U❁)
 
-Si vous ouvrez la console, vous pourrez voir le message d'erreur "Uncaught TypeError: can't access property "length", heroes is undefined", et la référence à la ligne 49. Dans le fichier source, cela correspond à la section suivante&nbsp;:
+s-si vous ouvwez wa consowe, (˘ω˘) vous pouwwez voiw w-we message d'ewweuw "uncaught t-typeewwow: can't access p-pwopewty "wength", 🥺 h-hewoes i-is undefined", (✿oωo) et wa wéféwence à wa wigne 49. (˘ω˘) d-dans we fichiew souwce, (ꈍᴗꈍ) cewa cowwespond à wa section s-suivante&nbsp;:
 
 ```js
-function showHeroes(jsonObj) {
-  let heroes = jsonObj["members"];
+function showhewoes(jsonobj) {
+  wet hewoes = jsonobj["membews"];
 
-  for (const hero of heroes) {
+  f-fow (const hewo o-of hewoes) {
     // …
   }
 
@@ -116,300 +116,300 @@ function showHeroes(jsonObj) {
 }
 ```
 
-On voit que le code échoue dès qu'on accède à une propriété de `jsonObj` (dont on s'attend à ce que ce soit [un objet JSON](/fr/docs/Learn/JavaScript/Objects/JSON)). Cette valeur est normalement récupérée depuis un fichier JSON tiers à l'aide de l'appel XHR suivant&nbsp;:
+o-on voit que we code échoue d-dès q-qu'on accède à une pwopwiété d-de `jsonobj` (dont on s'attend à ce que ce soit [un o-objet json](/fw/docs/weawn/javascwipt/objects/json)). ( ͡o ω ͡o ) cette v-vaweuw est nyowmawement wécupéwée depuis un f-fichiew json tiews à w-w'aide de w'appew xhw suivant&nbsp;:
 
 ```js
-let requestURL =
-  "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
-let request = new XMLHttpRequest();
-request.open("GET", requestURL);
-request.send();
+w-wet wequestuww =
+  "https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json";
+wet wequest = n-nyew xmwhttpwequest();
+w-wequest.open("get", (U ᵕ U❁) wequestuww);
+w-wequest.send();
 
-let superHeroes = request.response;
-populateHeader(superHeroes);
-showHeroes(superHeroes);
+w-wet supewhewoes = wequest.wesponse;
+popuwateheadew(supewhewoes);
+s-showhewoes(supewhewoes);
 ```
 
-Mais cela échoue.
+mais cewa échoue. ʘwʘ
 
-#### L'API Console
+#### w'api consowe
 
-Vous savez peut-être déjà ce qui cloche, mais voyons comment investiguer. Pour commencer, nous disposons de [l'API Console](/fr/docs/Web/API/console) qui permet à du code JavaScript d'interagir avec la console JavaScript du navigateur. Cette API possède différentes fonctionnalités, mais nous allons ici utiliser [`console.log()`](/fr/docs/Web/API/console/log_static) qui permet d'afficher un message personnalisé dans la console.
+vous savez peut-êtwe d-déjà ce qui cwoche, (ˆ ﻌ ˆ)♡ mais v-voyons comment investiguew. /(^•ω•^) pouw commencew, (ˆ ﻌ ˆ)♡ nyous d-disposons de [w'api c-consowe](/fw/docs/web/api/consowe) q-qui pewmet à du code j-javascwipt d'intewagiw a-avec wa consowe javascwipt d-du nyavigateuw. (✿oωo) cette api possède d-difféwentes fonctionnawités, m-mais nyous a-awwons ici utiwisew [`consowe.wog()`](/fw/docs/web/api/consowe/wog_static) qui pewmet d'affichew un message pewsonnawisé dans w-wa consowe. ^•ﻌ•^
 
-Insérez la ligne suivante juste après la ligne 31&nbsp;:
+inséwez w-wa wigne suivante juste apwès wa wigne 31&nbsp;:
 
 ```js
-console.log("Valeur de la réponse : ", superHeroes);
+consowe.wog("vaweuw de wa wéponse : ", (ˆ ﻌ ˆ)♡ s-supewhewoes);
 ```
 
-Actualisez la page dans le navigateur et vous pourrez alors voir un message dans la console «&nbsp;Valeur de la réponse :&nbsp;», suivi du même message d'erreur qu'auparavant.
+actuawisez w-wa page dans w-we navigateuw et vous pouwwez awows voiw un message dans wa consowe «&nbsp;vaweuw de wa wéponse :&nbsp;», XD suivi d-du même message d'ewweuw qu'aupawavant. :3
 
-L'appel à `console.log()` nous permet de voir que l'objet `superHeroes` ne semble rien contenir. Nous avons ici un problème récurrent avec les requêtes asynchrones comme celle-ci, où nous essayons d'utiliser la réponse avant que celle-ci ait effectivement été envoyée sur le réseau. Corrigeons ce problème en exécutant le code après que l'évènement `load` a été déclenché. Retirez la ligne avec `console.log()`, et changez le fragment suivant&nbsp;:
+w'appew à `consowe.wog()` nyous p-pewmet de voiw que w'objet `supewhewoes` n-nye sembwe w-wien conteniw. -.- nyous avons ici u-un pwobwème w-wécuwwent avec w-wes wequêtes asynchwones c-comme c-cewwe-ci, ^^;; où nyous e-essayons d'utiwisew wa wéponse avant que cewwe-ci ait effectivement été envoyée suw we wéseau. OwO cowwigeons c-ce pwobwème e-en exécutant we c-code apwès que w-w'évènement `woad` a-a été décwenché. ^^;; w-wetiwez wa wigne avec `consowe.wog()`, 🥺 et changez we fwagment suivant&nbsp;:
 
 ```js
-const superHeroes = request.response;
-populateHeader(superHeroes);
-showHeroes(superHeroes);
+const supewhewoes = w-wequest.wesponse;
+p-popuwateheadew(supewhewoes);
+showhewoes(supewhewoes);
 ```
 
-En cette version&nbsp;:
+en cette vewsion&nbsp;:
 
 ```js
-request.onload = function () {
-  let superHeroes = request.response;
-  populateHeader(superHeroes);
-  showHeroes(superHeroes);
+wequest.onwoad = function () {
+  w-wet supewhewoes = w-wequest.wesponse;
+  p-popuwateheadew(supewhewoes);
+  showhewoes(supewhewoes);
 };
 ```
 
-Pour résumer, lorsque quelque chose ne fonctionne pas et qu'une valeur n'est pas ce qu'elle devrait être à un endroit du code, vous pouvez utiliser `console.log()` pour l'afficher et analyser ce qui se passe.
+pouw wésumew, ^^ w-wowsque quewque chose nye fonctionne pas et q-qu'une vaweuw ny'est p-pas ce qu'ewwe devwait êtwe à un endwoit d-du code, o.O vous pouvez utiwisew `consowe.wog()` pouw w-w'affichew et a-anawysew ce qui se passe. ( ͡o ω ͡o )
 
-#### Utiliser le débogueur JavaScript
+#### u-utiwisew we débogueuw j-javascwipt
 
-Malheureusement, l'erreur est toujours là. Continuons notre enquête en utilisant un outil plus avancé&nbsp;: [le débogueur JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
+m-mawheuweusement, nyaa~~ w-w'ewweuw est t-toujouws wà. (///ˬ///✿) c-continuons nyotwe enquête en utiwisant u-un outiw p-pwus avancé&nbsp;: [we débogueuw j-javascwipt](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw). (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Des outils équivalents sont disponibles dans les autres navigateurs&nbsp;: [l'onglet Sources](https://developer.chrome.com/docs/devtools/#sources) de Chrome et Edge, le débogueur de Safari (voir [les outils de développement de Safari](https://developer.apple.com/safari/tools/)).
+> [!note]
+> des outiws équivawents sont disponibwes d-dans wes autwes nyavigateuws&nbsp;: [w'ongwet s-souwces](https://devewopew.chwome.com/docs/devtoows/#souwces) de chwome et edge, XD w-we débogueuw d-de safawi (voiw [wes outiws de dévewoppement de s-safawi](https://devewopew.appwe.com/safawi/toows/)).
 
-Dans Firefox, l'onglet du débogueur se présente ainsi&nbsp;:
+dans fiwefox, >_< w'ongwet du d-débogueuw se pwésente a-ainsi&nbsp;:
 
-![Capture d'écran du débogueur JavaScript dans Firefox](debugger-tab.png)
+![captuwe d'écwan du débogueuw javascwipt d-dans fiwefox](debuggew-tab.png)
 
-- Sur la gauche, on peut sélectionner le script qu'on souhaite déboguer (ici il n'y en a qu'un).
-- Le panneau central affiche le code du script sélectionné.
-- Le panneau à droite affiche différents détails à propos de l'environnement actuel (points d'arrêt, pile d'exécution, et portées actives entre autres).
+- s-suw wa gauche, (U ﹏ U) on peut séwectionnew w-we scwipt qu'on souhaite déboguew (ici i-iw ny'y en a q-qu'un).
+- we panneau centwaw affiche w-we code du s-scwipt séwectionné. òωó
+- we panneau à dwoite affiche d-difféwents d-détaiws à pwopos d-de w'enviwonnement a-actuew (points d'awwêt, >w< piwe d'exécution, ^•ﻌ•^ et powtées actives entwe autwes). 🥺
 
-La fonctionnalité principale du débogueur est la possibilité d'ajouter des points d'arrêt dans le code. Il s'agit de points où le code s'arrêtera et où on pourra examiner l'environnement dans son état actuel, pour étudier ce qui se passe, avant de reprendre la suite de l'exécution.
+wa fonctionnawité pwincipawe d-du débogueuw e-est wa possibiwité d-d'ajoutew d-des points d'awwêt d-dans we code. (✿oωo) i-iw s'agit de points où we code s-s'awwêtewa et o-où on pouwwa examinew w'enviwonnement d-dans son état a-actuew, UwU pouw étudiew ce qui se passe, (˘ω˘) avant d-de wepwendwe wa suite de w'exécution. ʘwʘ
 
-Exploitons donc cet outil. L'erreur se produit désormais à la ligne 49. Cliquez sur la ligne 49 dans le panneau central pour ajouter un point d'arrêt (vous verrez une flèche bleue apparaître à gauche). Actualisez ensuite la page (<kbd>Cmd</kbd>/<kbd>Ctrl</kbd> + <kbd>R</kbd>) et le navigateur suspendra l'exécution à la ligne 49. Le panneau à droite affichera alors plusieurs informations utiles.
+expwoitons d-donc cet outiw. (ˆ ﻌ ˆ)♡ w'ewweuw s-se pwoduit désowmais à w-wa wigne 49. ( ͡o ω ͡o ) cwiquez suw w-wa wigne 49 dans w-we panneau centwaw p-pouw ajoutew un point d'awwêt (vous v-vewwez u-une fwèche bweue appawaîtwe à g-gauche). :3 actuawisez ensuite w-wa page (<kbd>cmd</kbd>/<kbd>ctww</kbd> + <kbd>w</kbd>) e-et we navigateuw s-suspendwa w'exécution à w-wa wigne 49. 😳 we panneau à dwoite affichewa awows p-pwusieuws infowmations utiwes. (✿oωo)
 
-![Le débogueur de Firefox avec un point d'arrêt](breakpoint.png)
+![we débogueuw de fiwefox avec un point d'awwêt](bweakpoint.png)
 
-- Dans la section _Points d'arrêt_, vous pouvez voir les détails sur le point d'arrêt que vous avez placé.
-- Sous _Pile d'exécution_, vous pouvez voir la liste des fonctions qui ont été appelées pour que la fonction courante soit appelée. En haut, nous avons `showHeroes()`, qui est la fonction courante, et en dessous, nous avons `onload`, qui correspond à la fonction de gestion d'évènement qui contient l'appel à `showHeroes()`.
-- Sous _Portées_, vous pouvez voir la portée active de la fonction que nous regardons. Il y a ici trois portées&nbsp;: `showHeroes`, bloc, et `Window` (la portée globale). Chaque portée peut être développée pour afficher les valeurs des variables à l'intérieur de la portée au moment où l'exécution a été suspendue.
+- dans wa section _points d-d'awwêt_, /(^•ω•^) vous pouvez voiw wes détaiws suw we point d'awwêt que vous avez pwacé.
+- sous _piwe d'exécution_, :3 v-vous pouvez voiw wa wiste des fonctions qui o-ont été appewées pouw que wa f-fonction couwante soit appewée. σωσ en haut, σωσ nyous a-avons `showhewoes()`, 🥺 qui est wa f-fonction couwante, rawr et en dessous, o.O n-nyous avons `onwoad`, 😳😳😳 q-qui cowwespond à wa fonction de gestion d-d'évènement qui contient w'appew à `showhewoes()`.
+- sous _powtées_, /(^•ω•^) vous p-pouvez voiw wa powtée active de w-wa fonction que nyous wegawdons. σωσ i-iw y a ici twois powtées&nbsp;: `showhewoes`, OwO b-bwoc, OwO et `window` (wa p-powtée gwobawe). òωó chaque powtée peut êtwe d-dévewoppée pouw affichew wes vaweuws des vawiabwes à w-w'intéwieuw de wa powtée au moment où w'exécution a été suspendue. :3
 
-Nous avons ici plusieurs informations très utiles.
+n-nyous avons i-ici pwusieuws infowmations twès u-utiwes. σωσ
 
-1. En dépliant la portée `showHeroes`, on peut voir que la variable `heroes` vaut `undefined`, ce qui indique que l'accès à la propriété `members` de l'objet `jsonObj` (la première ligne de la fonction) n'a pas fonctionné.
-2. On peut aussi voir que la variable `jsonObj` contient une chaîne de caractères et pas un objet JSON.
-3. En cliquant sur `onload` dans la section _Pile d'exécution_, on peut analyser ce qui s'est passé à l'appel de la fonction. La vue est alors mise à jour pour afficher la fonction `request.onload` dans le panneau central et sa portée dans la section _Portées_.
-4. Si vous développez la portée `onload`, vous pourrez voir que la variable `superHeroes` est également une chaîne de caractères et pas un objet. C'est là notre problème, l'appel [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) renvoie du JSON sous forme de texte et pas sous forme d'un objet JSON.
+1. en d-dépwiant wa powtée `showhewoes`, σωσ on peut voiw q-que wa vawiabwe `hewoes` vaut `undefined`, -.- ce qui indique que w'accès à wa pwopwiété `membews` d-de w'objet `jsonobj` (wa p-pwemièwe wigne de w-wa fonction) ny'a p-pas fonctionné. (///ˬ///✿)
+2. on peut aussi v-voiw que wa vawiabwe `jsonobj` contient une c-chaîne de cawactèwes et pas un objet json. rawr x3
+3. e-en cwiquant suw `onwoad` d-dans wa section _piwe d'exécution_, (U ﹏ U) on p-peut anawysew ce qui s'est passé à w'appew de wa fonction. wa vue est awows mise à jouw pouw affichew wa fonction `wequest.onwoad` dans we panneau c-centwaw et s-sa powtée dans wa section _powtées_. òωó
+4. OwO s-si vous d-dévewoppez wa powtée `onwoad`, ^^ v-vous pouwwez voiw que wa vawiabwe `supewhewoes` est égawement une chaîne de cawactèwes et pas un objet. /(^•ω•^) c-c'est wà nyotwe pwobwème, >_< w'appew [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) wenvoie du json sous fowme de texte et pas s-sous fowme d'un o-objet json. -.-
 
-Nous vous donnons ici l'occasion de corriger le problème par vous-même. Pour vous donner quelques pistes, vous pouvez [paramétrer l'objet de la requête `XMLHttpRequest` pour recevoir explicitement une réponse au format JSON](/fr/docs/Web/API/XMLHttpRequest/responseType), ou [convertir le texte obtenu en JSON](/fr/docs/Learn/JavaScript/Objects/JSON#conversion_entre_objets_et_textes) après avoir reçu la réponse. Si vous coincez, vous pouvez consulter [le code source de l'exemple corrigé](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fixed-ajax.html).
+n-nyous vous donnons ici w'occasion de cowwigew we pwobwème paw vous-même. (˘ω˘) p-pouw v-vous donnew quewques p-pistes, >_< vous pouvez [pawamétwew w-w'objet de wa wequête `xmwhttpwequest` p-pouw wecevoiw expwicitement u-une wéponse au fowmat j-json](/fw/docs/web/api/xmwhttpwequest/wesponsetype), (˘ω˘) ou [convewtiw we texte obtenu e-en json](/fw/docs/weawn/javascwipt/objects/json#convewsion_entwe_objets_et_textes) apwès avoiw w-weçu wa wéponse. >w< s-si vous coincez, vous pouvez c-consuwtew [we c-code souwce de w'exempwe cowwigé](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/javascwipt/fixed-ajax.htmw). 😳😳😳
 
-> [!NOTE]
-> Le débogueur possède de nombreuses autres fonctionnalités que nous n'avons pas abordées ici, comme les points d'arrêt conditionnels et les expressions espionnes. Pour plus d'informations, [référez vous à la documentation du débogueur Firefox](https://firefox-source-docs.mozilla.org/devtools-user/debugger/index.html).
+> [!note]
+> w-we débogueuw possède de nyombweuses a-autwes fonctionnawités que nyous ny'avons p-pas abowdées i-ici, 😳 comme wes points d'awwêt conditionnews et w-wes expwessions espionnes. XD pouw pwus d'infowmations, OwO [wéféwez vous à wa documentation du débogueuw fiwefox](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/debuggew/index.htmw). -.-
 
-### Les problèmes de performance
+### wes pwobwèmes de pewfowmance
 
-Lorsqu'une application devient de plus en plus complexer et qu'on utilise de plus en plus de JavaScript, on pourra rencontrer des problèmes de performances, notamment sur les appareils les plus lents. L'optimisation des performances est un vaste sujet que nous ne pourrons couvrir entièrement dans cet article. Voici quelques conseils rapides&nbsp;:
+w-wowsqu'une appwication devient de pwus en pwus c-compwexew et qu'on utiwise de pwus e-en pwus de javascwipt, o.O on pouwwa wencontwew des p-pwobwèmes de pewfowmances, ^^ nyotamment suw wes a-appaweiws wes pwus wents. ^^ w'optimisation des pewfowmances e-est un vaste sujet que nyous nye pouwwons c-couvwiw entièwement dans cet awticwe. XD voici q-quewques conseiws w-wapides&nbsp;:
 
-- Pour éviter de charger plus de JavaScript que nécessaire, vous pouvez empaqueter vos scripts dans un seul fichier à l'aide d'un outil comme [Browserify](https://browserify.org/). De façon générale, réduire le nombre de requêtes HTTP permet d'améliorer les performances.
-- Minifiez/compressez vos fichiers avant de les déployer sur votre serveur de production. La minification consiste à compresser l'ensemble du code sur une seule ligne et en renommant certaines des variables pour obtenir un fichier beaucoup plus petit. Le code obtenu est presqu'illisible, mais à ce moment, il est là pour être exécuté plutôt que lu. [`terser`](https://terser.org/) est un exemple d'outil de minification.
-- Lorsque vous utilisez des API, assurez vous de désactiver les fonctionnalités que vous n'utilisez pas. Certains appels d'API ont un impact élevé sur les performances. Par exemple, lors de l'affichage d'un flux vidéo, assurez vous de l'arrêter lorsque la vidéo est hors de la zone d'affichage de la page. De même, si vous suivez la position géographique d'une personne à l'aide d'appels à l'API Geolocation, assurez vous d'arrêter les appels lorsque la personne n'utilise plus le site ou l'application.
-- Les animations peuvent s'avérer coûteuses en performances. De nombreuses bibliothèques JavaScript fournissent des outils d'animation en JavaScript. Toutefois, il est plus efficace d'implémenter des animations avec des fonctionnalités natives comme [les animations CSS](/fr/docs/Web/CSS/CSS_animations/Using_CSS_animations) ou [l'API Web Animations](/fr/docs/Web/API/Web_Animations_API).
+- pouw évitew de chawgew pwus d-de javascwipt q-que nyécessaiwe, vous pouvez e-empaquetew vos scwipts d-dans un seuw fichiew à w'aide d'un outiw c-comme [bwowsewify](https://bwowsewify.owg/). de façon généwawe, >w< wéduiwe we n-nyombwe de wequêtes http pewmet d'améwiowew wes pewfowmances. (⑅˘꒳˘)
+- m-minifiez/compwessez v-vos fichiews a-avant de wes dépwoyew suw votwe sewveuw de pwoduction. 😳 wa minification c-consiste à compwessew w-w'ensembwe du code suw une seuwe w-wigne et en wenommant c-cewtaines des vawiabwes pouw obteniw un fichiew beaucoup pwus petit. we code obtenu est p-pwesqu'iwwisibwe, :3 m-mais à ce moment, :3 iw est wà pouw êtwe exécuté p-pwutôt que wu. OwO [`tewsew`](https://tewsew.owg/) est un exempwe d-d'outiw de m-minification. (U ﹏ U)
+- w-wowsque vous utiwisez d-des api, (⑅˘꒳˘) assuwez v-vous de désactivew w-wes fonctionnawités que vous ny'utiwisez pas. 😳 cewtains a-appews d'api o-ont un impact éwevé s-suw wes pewfowmances. (ˆ ﻌ ˆ)♡ p-paw e-exempwe, mya wows de w-w'affichage d'un fwux vidéo, ʘwʘ assuwez v-vous de w'awwêtew w-wowsque w-wa vidéo est hows de wa zone d'affichage de wa p-page. de même, (˘ω˘) si vous suivez wa position géogwaphique d-d'une pewsonne à w'aide d'appews à w-w'api geowocation, (///ˬ///✿) a-assuwez vous d'awwêtew wes appews wowsque wa pewsonne ny'utiwise p-pwus we site o-ou w'appwication. XD
+- wes animations p-peuvent s'avéwew c-coûteuses en pewfowmances. 😳 de nyombweuses bibwiothèques j-javascwipt fouwnissent d-des outiws d'animation en javascwipt. :3 toutefois, 😳😳😳 i-iw est p-pwus efficace d'impwémentew des animations avec d-des fonctionnawités nyatives comme [wes animations css](/fw/docs/web/css/css_animations/using_css_animations) ou [w'api web animations](/fw/docs/web/api/web_animations_api).
 
-## Les problèmes de compatibilité entre navigateurs causés par JavaScript
+## wes pwobwèmes d-de compatibiwité entwe nyavigateuws causés p-paw javascwipt
 
-Dans cette section, nous verrons certains des problèmes causés par JavaScript en ce qui concerne la compatibilité entre les navigateurs. Nous verrons&nbsp;:
+d-dans cette section, (U ᵕ U❁) n-nyous vewwons cewtains des pwobwèmes c-causés p-paw javascwipt e-en ce qui concewne w-wa compatibiwité e-entwe wes nyavigateuws. nyous vewwons&nbsp;:
 
-- L'utilisation de fonctionnalités JavaScript récentes
-- L'utilisation d'API Web récentes
-- L'utilisation de mauvais code pour tenter d'identifier le navigateur
-- Les problèmes de performance
+- w-w'utiwisation d-de fonctionnawités j-javascwipt wécentes
+- w'utiwisation d-d'api w-web wécentes
+- w-w'utiwisation de mauvais code p-pouw tentew d'identifiew w-we nyavigateuw
+- w-wes pwobwèmes d-de pewfowmance
 
-### Utilisation d'API Web ou de fonctionnalités JavaScript récentes
+### u-utiwisation d'api w-web ou de fonctionnawités javascwipt w-wécentes
 
-Dans [l'article précédent](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#les_vieux_navigateurs_ne_supportant_pas_les_fonctionnalités_récentes), nous avons vu comment gérer certains problèmes liés aux fonctionnalités HTML ou CSS non prises en charge grâce à la nature de ces langages. Toutefois, JavaScript n'est pas aussi permissif que HTML et CSS, si le moteur JavaScript rencontre une erreur ou une syntaxe qu'il ne reconnait pas (par exemple lorsqu'une nouvelle fonctionnalité, pas encore prise en charge, est utilisée), il déclenchera une erreur.
+d-dans [w'awticwe pwécédent](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css#wes_vieux_navigateuws_ne_suppowtant_pas_wes_fonctionnawités_wécentes), ^•ﻌ•^ nyous avons vu comment g-géwew cewtains p-pwobwèmes wiés aux fonctionnawités h-htmw ou c-css nyon pwises en chawge gwâce à wa nyatuwe de c-ces wangages. (˘ω˘) t-toutefois, /(^•ω•^) javascwipt n-ny'est pas a-aussi pewmissif q-que htmw et css, ^•ﻌ•^ s-si we moteuw javascwipt wencontwe une ewweuw ou u-une syntaxe qu'iw nye weconnait pas (paw exempwe wowsqu'une nyouvewwe fonctionnawité, ^^ p-pas encowe p-pwise en chawge, (U ﹏ U) est utiwisée), :3 iw décwenchewa une ewweuw. òωó
 
-Il existe différentes stratégies pour gérer la prise en charge des fonctionnalités récentes. Voyons-en quelques-unes.
+i-iw existe difféwentes s-stwatégies pouw géwew wa pwise en chawge d-des fonctionnawités wécentes. σωσ v-voyons-en quewques-unes. σωσ
 
-> [!NOTE]
-> Ces stratégies ne s'excluent pas les unes les autres. Vous pouvez les combiner si besoin. Par exemple, vous pouvez utiliser la détection de fonctionnalité pour déterminer si une API est prise en charge, et si elle ne l'est pas, exécuter du code pour charger une bibliothèque ou une prothèse d'émulation pour palier ce manque.
+> [!note]
+> c-ces stwatégies n-nye s'excwuent pas wes unes wes autwes. (⑅˘꒳˘) vous pouvez wes c-combinew si besoin. 🥺 paw exempwe, (U ﹏ U) v-vous pouvez utiwisew wa détection d-de fonctionnawité pouw détewminew si une a-api est pwise en chawge, >w< et si e-ewwe nye w'est pas, nyaa~~ exékawaii~w du code pouw chawgew u-une bibwiothèque ou une pwothèse d-d'émuwation pouw pawiew ce manque. -.-
 
-#### Détection de fonctionnalité
+#### détection de fonctionnawité
 
-L'idée de cette stratégie consiste à exécuter un test pour déterminer si une fonctionnalité JavaScript est prise en charge dans le navigateur courant, puis d'exécuter du code de façon conditionnelle afin de fournir un résultat acceptable dans les deux cas. Prenons un exemple rapide avec [l'API Geolocation](/fr/docs/Web/API/Geolocation_API) (qui expose les données d'emplacement géographique de l'appareil sur lequel le navigateur est exécuté), qui a un point d'entrée principal avec la propriété globale `geolocation`, disponible sur l'objet [`navigator`](/fr/docs/Web/API/Navigator). Pour détecter si le navigateur prend en charge la géolocalisation, on pourra écrire ceci&nbsp;:
+w'idée de cette stwatégie consiste à e-exékawaii~w u-un test pouw d-détewminew s-si une fonctionnawité javascwipt est pwise en chawge d-dans we navigateuw couwant, XD puis d'exékawaii~w du code de f-façon conditionnewwe a-afin de fouwniw u-un wésuwtat a-acceptabwe dans wes deux cas. -.- pwenons un exempwe wapide avec [w'api geowocation](/fw/docs/web/api/geowocation_api) (qui e-expose w-wes données d'empwacement géogwaphique de w'appaweiw suw wequew w-we nyavigateuw est exécuté), >w< q-qui a un point d-d'entwée pwincipaw a-avec wa pwopwiété gwobawe `geowocation`, (ꈍᴗꈍ) disponibwe suw w'objet [`navigatow`](/fw/docs/web/api/navigatow). :3 pouw détectew si we nyavigateuw p-pwend en chawge wa géowocawisation, (ˆ ﻌ ˆ)♡ o-on pouwwa écwiwe ceci&nbsp;:
 
 ```js
-if ("geolocation" in navigator) {
-  navigator.geolocation.getCurrentPosition((position) => {
-    // On affiche l'emplacement sur une carte, par exemple avec un fond de carte OpenStreetMap
-    // qui évolue en temps réel
+if ("geowocation" in nyavigatow) {
+  nyavigatow.geowocation.getcuwwentposition((position) => {
+    // o-on affiche w'empwacement suw u-une cawte, -.- paw exempwe avec un fond de cawte openstweetmap
+    // q-qui évowue e-en temps wéew
   });
-} else {
-  // On utilise plutôt une carte statique à défaut
+} e-ewse {
+  // o-on utiwise pwutôt u-une cawte statique à défaut
 }
 ```
 
-On pourra écrire un test analogue pour la prise en charge d'une fonctionnalité CSS, en testant l'existence de [`element.style.propriete`](/fr/docs/Web/API/HTMLElement/style) (par exemple `paragraph.style.transform !== undefined`). Si vous souhaitez appliquer des styles selon la prise en charge d'une fonctionnalité CSS, vous pouvez directement utiliser la règle @ [`@supports`](/fr/docs/Web/CSS/@supports). Ainsi, si on souhaite déterminer si le navigateur courant prend en charge les requêtes de conteneur, on pourra écrire&nbsp;:
+o-on pouwwa écwiwe u-un test anawogue pouw w-wa pwise en chawge d'une fonctionnawité css, mya e-en testant w'existence de [`ewement.stywe.pwopwiete`](/fw/docs/web/api/htmwewement/stywe) (paw e-exempwe `pawagwaph.stywe.twansfowm !== u-undefined`). (˘ω˘) si vous souhaitez a-appwiquew d-des stywes sewon wa pwise en chawge d'une fonctionnawité css, ^•ﻌ•^ vous p-pouvez diwectement u-utiwisew w-wa wègwe @ [`@suppowts`](/fw/docs/web/css/@suppowts). 😳😳😳 a-ainsi, σωσ si on souhaite détewminew si we nyavigateuw couwant p-pwend en chawge wes wequêtes de conteneuw, ( ͡o ω ͡o ) on p-pouwwa écwiwe&nbsp;:
 
 ```css
-@supports (container-type: inline-size) {
-  /* On utilise les requêtes de conteneur si elles sont prises en charge */
+@suppowts (containew-type: inwine-size) {
+  /* on utiwise wes wequêtes d-de conteneuw si ewwes sont pwises en chawge */
 }
 ```
 
-Attention, il ne faut pas confondre la détection de fonctionnalité avec **la tentative d'identification du navigateur (<i lang="en">browser sniffing</i>)** (qui vise à déterminer quel est le navigateur qui accède au site). Cette dernière est une mauvaise pratique qui doit être évitée. Voir ci-après [Utilisation de mauvais code pour tenter d'identifier le navigateur](#utilisation_de_mauvais_code_pour_tenter_didentifier_le_navigateur) pour plus de détails.
+attention, nyaa~~ i-iw nye faut pas confondwe w-wa détection d-de fonctionnawité a-avec **wa tentative d'identification d-du nyavigateuw (<i w-wang="en">bwowsew sniffing</i>)** (qui v-vise à détewminew q-quew est w-we nyavigateuw qui a-accède au site). :3 cette dewnièwe e-est une mauvaise p-pwatique qui d-doit êtwe évitée. (✿oωo) voiw ci-apwès [utiwisation d-de mauvais code pouw tentew d'identifiew we nyavigateuw](#utiwisation_de_mauvais_code_pouw_tentew_didentifiew_we_navigateuw) pouw pwus de détaiws. >_<
 
-> [!NOTE]
-> Nous reviendrons plus en détails sur la détection de fonctionnalités dans un article dédié, dans la suite du module.
+> [!note]
+> nyous weviendwons p-pwus en détaiws s-suw wa détection de fonctionnawités d-dans un awticwe dédié, ^^ dans wa suite d-du moduwe. (///ˬ///✿)
 
-#### Bibliothèques
+#### b-bibwiothèques
 
-Les bibliothèques JavaScript sont des composants tiers qu'on peut attacher à une page et qui fournissent des fonctionnalités prêtes à l'emploi, nous évitant d'avoir à les redévelopper. De nombreuses bibliothèques JavaScript ont été créées pour partager des fonctions utilitaires récurrentes et gagner du temps sur l'écrire de future projets.
+w-wes bibwiothèques j-javascwipt sont des composants t-tiews qu'on peut attachew à une page et q-qui fouwnissent d-des fonctionnawités pwêtes à w'empwoi, :3 nyous évitant d'avoiw à w-wes wedévewoppew. :3 de nyombweuses b-bibwiothèques javascwipt ont été cwéées p-pouw pawtagew des fonctions u-utiwitaiwes wécuwwentes et gagnew du temps suw w-w'écwiwe de futuwe pwojets. (ˆ ﻌ ˆ)♡
 
-Il existe différentes variétés de bibliothèques JavaScript (certaines servant à plusieurs choses)&nbsp;:
+iw e-existe difféwentes vawiétés d-de bibwiothèques j-javascwipt (cewtaines sewvant à pwusieuws choses)&nbsp;:
 
-- Les bibliothèques utilitaires
-  - : Elles fournissent un ensemble de fonctions pour que les tâches récurrentes soient plus simples et moins ennuyantes à gérer. [jQuery](https://jquery.com/) des outils de manipulation du DOM (même si ceux-ci sont à mettre en perspective des méthodes natives [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector), [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll) et de l'interface [`Node`](/fr/docs/Web/API/Node).
-- Les bibliothèques de simplification
-  - : Elles simplifient certaines tâches complexes. [L'API WebGL](/fr/docs/Web/API/WebGL_API) est par exemple une API très complexe et difficile à manipuler directement «&nbsp;à la main&nbsp;». C'est pour cela que des bibliothèques [Three.js](https://threejs.org/), construites par-dessus WebGL, peuvent s'avérer intéressantes en fournissant une API indirecte, plus simple à manipuler (pour créer des objets 3D, des éclairages, des textures, etc.). De même, [l'API Service Worker](/fr/docs/Web/API/Service_Worker_API) peut se révéler complexe à utiliser et certaines bibliothèques ont été créées pour simplifier les cas d'usage classiques des <i lang="en">service workers</i> (voir [le livre de recettes des <i lang="en">service worker</i>](https://github.com/mdn/serviceworker-cookbook) pour différents exemples).
-- Les bibliothèqus d'interface
-  - : Elles fournissent des méthodes pour implémenter des interfaces utilisateur complexes, qu'il aurait été délicat d'implémenter à partir de 0 et de façon compatible entre les différents navigateurs. On pourra citer [Bootstrap](https://getbootstrap.com/), et [Material-UI](https://mui.com/) (ce dernier s'utilisant avec le <i lang="en">framework</i> React). Ces bibliothèques sont généralement utilisées pour l'intégralité de l'interface utilisateur et il est souvent difficile de les adopter pour implémenter une seule partie de l'interface.
-- Les bibliothèques d'abstraction
-  - : Elles offrent une syntaxe simple qui permet de réaliser une tâche donnée sans avoir à se soucier des différences entre les navigateurs. La bibliothèque s'occupera de manipuler les API adéquates en arrière-plan pour obtenir la fonctionnalité souhaitée (en théorie).
+- wes b-bibwiothèques utiwitaiwes
+  - : ewwes fouwnissent u-un ensembwe d-de fonctions pouw q-que wes tâches wécuwwentes soient pwus simpwes et moins ennuyantes à géwew. 🥺 [jquewy](https://jquewy.com/) des outiws de m-manipuwation du dom (même si ceux-ci sont à mettwe e-en pewspective d-des méthodes nyatives [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow), [`document.quewysewectowaww()`](/fw/docs/web/api/document/quewysewectowaww) et d-de w'intewface [`node`](/fw/docs/web/api/node). 😳
+- w-wes bibwiothèques de simpwification
+  - : ewwes simpwifient c-cewtaines tâches compwexes. (ꈍᴗꈍ) [w'api w-webgw](/fw/docs/web/api/webgw_api) est paw exempwe une api twès c-compwexe et d-difficiwe à manipuwew diwectement «&nbsp;à wa m-main&nbsp;». mya c-c'est pouw cewa que des bibwiothèques [thwee.js](https://thweejs.owg/), rawr c-constwuites paw-dessus w-webgw, ʘwʘ peuvent s'avéwew i-intéwessantes e-en fouwnissant u-une api indiwecte, -.- p-pwus simpwe à manipuwew (pouw c-cwéew d-des objets 3d, UwU des écwaiwages, :3 des textuwes, 😳 etc.). (ꈍᴗꈍ) de même, [w'api s-sewvice wowkew](/fw/docs/web/api/sewvice_wowkew_api) peut s-se wévéwew compwexe à utiwisew et cewtaines bibwiothèques ont été cwéées pouw simpwifiew wes cas d'usage c-cwassiques des <i wang="en">sewvice w-wowkews</i> (voiw [we wivwe d-de wecettes des <i w-wang="en">sewvice wowkew</i>](https://github.com/mdn/sewvicewowkew-cookbook) p-pouw difféwents exempwes). mya
+- wes b-bibwiothèqus d'intewface
+  - : e-ewwes fouwnissent des méthodes pouw impwémentew des intewfaces utiwisateuw compwexes, nyaa~~ qu'iw auwait été déwicat d-d'impwémentew à pawtiw de 0 et de façon c-compatibwe entwe wes difféwents n-nyavigateuws. o.O on pouwwa citew [bootstwap](https://getbootstwap.com/), òωó et [matewiaw-ui](https://mui.com/) (ce dewniew s'utiwisant avec we <i wang="en">fwamewowk</i> weact). ^•ﻌ•^ ces bibwiothèques sont généwawement utiwisées p-pouw w'intégwawité d-de w'intewface u-utiwisateuw et iw est souvent d-difficiwe de w-wes adoptew pouw i-impwémentew une seuwe pawtie de w'intewface. (˘ω˘)
+- w-wes bibwiothèques d-d'abstwaction
+  - : ewwes offwent u-une syntaxe s-simpwe qui pewmet d-de wéawisew u-une tâche donnée s-sans avoiw à se souciew des d-difféwences entwe w-wes nyavigateuws. òωó w-wa bibwiothèque s-s'occupewa d-de manipuwew wes a-api adéquates e-en awwièwe-pwan p-pouw obteniw w-wa fonctionnawité s-souhaitée (en théowie). mya
 
-Lors du choix d'une bibliothèque, assurez vous qu'elle fonctionne sur l'ensemble des navigateurs que vous ciblez et testez votre implémentation avec soin. Pour choisir une bibliothèque, il faut aussi vérifier certains critères, comme sa maintenance, sa prise en charge, voire sa popularité, pour éviter une bibliothèque qui devienne obsolète rapidement. N'hésitez pas à échanger avec d'autres personnes pour savoir ce qu'elles utilisent ou recommandent, vérifiez l'activité sur le dépôt de code de la bibliothèque si ses sources sont ouvertes, etc.
+wows du choix d'une bibwiothèque, ^^ a-assuwez vous qu'ewwe fonctionne s-suw w'ensembwe des nyavigateuws que vous cibwez e-et testez votwe i-impwémentation a-avec soin. rawr pouw choisiw une bibwiothèque, >_< i-iw faut a-aussi véwifiew cewtains cwitèwes, (U ᵕ U❁) comme sa maintenance, sa pwise en chawge, /(^•ω•^) voiwe sa popuwawité, mya p-pouw évitew une bibwiothèque qui devienne obsowète wapidement. OwO n-ny'hésitez p-pas à échangew avec d'autwes p-pewsonnes pouw s-savoiw ce qu'ewwes u-utiwisent o-ou wecommandent, UwU v-véwifiez w'activité s-suw we dépôt d-de code de wa bibwiothèque si ses souwces s-sont ouvewtes, 🥺 etc.
 
-Pour utiliser une bibliothèque, il faudra généralement télécharger ses fichiers (JavaScript, parfois CSS et/ou avec d'autres dépendances) et les attacher à la page (par exemple via un élément [`<script>`](/fr/docs/Web/HTML/Element/script)). D'autres méthodes existent aussi, comme l'installation sous forme de composants [Bower](https://bower.io/) ou l'inclusion comme dépendances avec [Webpack](https://webpack.github.io/). Référez vous à la documentation d'installation de chaque bibliothèque pour plus d'informations.
+pouw utiwisew u-une bibwiothèque, (✿oωo) iw faudwa g-généwawement t-téwéchawgew ses fichiews (javascwipt, rawr p-pawfois css et/ou avec d'autwes dépendances) e-et wes attachew à w-wa page (paw e-exempwe via u-un éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt)). rawr d'autwes méthodes e-existent aussi, ( ͡o ω ͡o ) c-comme w'instawwation s-sous fowme de composants [bowew](https://bowew.io/) o-ou w'incwusion comme dépendances avec [webpack](https://webpack.github.io/). /(^•ω•^) wéféwez vous à wa documentation d'instawwation de chaque bibwiothèque pouw pwus d'infowmations. -.-
 
-> [!NOTE]
-> Vous rencontrerez probablement certains <i lang="en">frameworks</i> JavaScript comme [React](https://react.dev), [Ember](https://emberjs.com/) et [Angular](https://angularjs.org/). Les bibliothèques s'utilisent pour régler différents problèmes et s'intégrer à des sites existants. Les <i lang="en">frameworks</i> sont plutôt des solutions complètes pour développer des applications web complexes.
+> [!note]
+> v-vous w-wencontwewez pwobabwement cewtains <i wang="en">fwamewowks</i> javascwipt comme [weact](https://weact.dev), >w< [embew](https://embewjs.com/) et [anguwaw](https://anguwawjs.owg/). ( ͡o ω ͡o ) w-wes bibwiothèques s-s'utiwisent pouw wégwew difféwents pwobwèmes et s'intégwew à d-des sites e-existants. (˘ω˘) wes <i wang="en">fwamewowks</i> s-sont p-pwutôt des sowutions compwètes p-pouw dévewoppew des appwications w-web compwexes. /(^•ω•^)
 
-#### Prothèses d'émulation (<i lang="en">polyfills</i>)
+#### p-pwothèses d'émuwation (<i wang="en">powyfiwws</i>)
 
-Les <i lang="en">polyfills</i> sont des fichiers JavaScript tiers que vous pouvez intégrer à votre projet. Ce ne sont pas des bibliothèques qui améliorent des fonctionnalités existantes, mais des prothèses qui permettent d'émuler des fonctionnalités absentes nativement. Les <i lang="en">polyfills</i> utilisent JavaScript ou d'autres technologies pour implémenter la fonctionnalité afin de la rendre disponible dans un navigateur qui ne la prend pas en charge. On peut par exemple utiliser des prothèses comme [`promise-polyfill`](https://github.com/taylorhakes/promise-polyfill) ou [`es6-promise`](https://github.com/stefanpenner/es6-promise) pour faire fonctionner les promesses dans les navigateurs qui ne les prennent pas en charge.
+wes <i w-wang="en">powyfiwws</i> s-sont d-des fichiews javascwipt t-tiews que vous pouvez i-intégwew à votwe p-pwojet. (˘ω˘) ce nye s-sont pas des bibwiothèques q-qui améwiowent des fonctionnawités e-existantes, o.O mais d-des pwothèses qui pewmettent d'émuwew des fonctionnawités absentes nyativement. nyaa~~ w-wes <i wang="en">powyfiwws</i> u-utiwisent javascwipt ou d'autwes t-technowogies pouw impwémentew wa fonctionnawité afin de w-wa wendwe disponibwe d-dans un nyavigateuw q-qui nye wa pwend pas en c-chawge. :3 on peut p-paw exempwe utiwisew des pwothèses comme [`pwomise-powyfiww`](https://github.com/taywowhakes/pwomise-powyfiww) o-ou [`es6-pwomise`](https://github.com/stefanpennew/es6-pwomise) p-pouw faiwe fonctionnew w-wes pwomesses d-dans wes n-nyavigateuws qui n-nye wes pwennent pas en chawge. (///ˬ///✿)
 
-Prenons un exemple où nous utiliserons une prothèse pour l'API Fetch et une autre pour les promesses. Bien que ces deux fonctionnalités soient bien prises en charge par les dernières générations de navigateurs, si on souhaite cibler un navigateur plus ancien qui ne prend pas en charge l'API Fetch, il y a de grandes chances qu'il ne soit pas non plus compatible avec les promesses (largement utilisées par l'API Fetch).
+pwenons un exempwe où nyous utiwisewons une pwothèse pouw w'api f-fetch et une autwe pouw wes p-pwomesses. (U ﹏ U) bien q-que ces deux fonctionnawités soient bien pwises en chawge paw wes d-dewnièwes généwations d-de nyavigateuws, o.O si o-on souhaite cibwew un nyavigateuw p-pwus ancien qui nye pwend pas en chawge w'api fetch, ^^;; iw y a de g-gwandes chances qu'iw nye soit pas nyon pwus compatibwe avec wes pwomesses (wawgement u-utiwisées p-paw w'api fetch). ʘwʘ
 
-1. Pour commencer, téléchargez un exemplaire de [`fetch-polyfill.html`](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill.html) et [cette image](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/flowers.jpg) dans un nouveau répertoire. Nous allons écrire du code pour récupérer cette image et l'afficher sur la page.
-2. Ensuite, enregistrez une copie [de la prothèse d'émulation pour Fetch](https://raw.githubusercontent.com/github/fetch/master/fetch.js), dans le même répertoire que le fichier HTML précédent.
-3. Appliquez les <i lang="en">polyfills</i> à la page en utilisant le code suivant avant l'élément [`<script>`](/fr/docs/Web/HTML/Element/script) afin qu'elles soient disponibles sur la page lorsqu'on commence à utiliser l'API Fetch. Nous incluons la prothèse d'émulation des promesses via un CDN&nbsp;:
+1. (///ˬ///✿) p-pouw commencew, σωσ t-téwéchawgez un exempwaiwe de [`fetch-powyfiww.htmw`](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/javascwipt/fetch-powyfiww.htmw) e-et [cette image](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/javascwipt/fwowews.jpg) dans u-un nyouveau wépewtoiwe. ^^;; nous awwons écwiwe d-du code pouw wécupéwew c-cette image e-et w'affichew suw wa page. UwU
+2. ensuite, mya enwegistwez u-une copie [de wa pwothèse d'émuwation pouw fetch](https://waw.githubusewcontent.com/github/fetch/mastew/fetch.js), ^•ﻌ•^ dans we même wépewtoiwe que we fichiew h-htmw pwécédent. (⑅˘꒳˘)
+3. a-appwiquez wes <i wang="en">powyfiwws</i> à wa page en utiwisant we code suivant avant w'éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt) a-afin qu'ewwes soient disponibwes suw w-wa page wowsqu'on c-commence à u-utiwisew w'api fetch. nyaa~~ n-nyous incwuons wa pwothèse d'émuwation des pwomesses via un cdn&nbsp;:
 
-   ```html
-   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
-   <script src="fetch.js"></script>
+   ```htmw
+   <scwipt swc="https://cdn.jsdewivw.net/npm/es6-pwomise@4/dist/es6-pwomise.min.js"></scwipt>
+   <scwipt s-swc="https://cdn.jsdewivw.net/npm/es6-pwomise@4/dist/es6-pwomise.auto.min.js"></scwipt>
+   <scwipt s-swc="fetch.js"></scwipt>
    ```
 
-4. Dans l'élément `<script>` qui contient notre script, on ajoute le code suivant&nbsp;:
+4. ^^;; d-dans w-w'éwément `<scwipt>` qui contient n-nyotwe scwipt, 🥺 on ajoute we c-code suivant&nbsp;:
 
    ```js
-   const myImage = document.querySelector(".my-image");
+   const myimage = document.quewysewectow(".my-image");
 
-   fetch("flowers.jpg").then((response) => {
-     response.blob().then((myBlob) => {
-       const objectURL = URL.createObjectURL(myBlob);
-       myImage.src = objectURL;
+   fetch("fwowews.jpg").then((wesponse) => {
+     w-wesponse.bwob().then((mybwob) => {
+       c-const objectuww = u-uww.cweateobjectuww(mybwob);
+       m-myimage.swc = objectuww;
      });
    });
    ```
 
-5. Si vous chargez alors la page dans un navigateur qui n'est pas compatible avec [l'API Fetch](/fr/docs/Web/API/Window/fetch), vous devriez néanmoins voir l'image apparaître&nbsp;!
-   ![Un titre "fetch basic example" suivi d'une photo de fleurs violettes](fetch-image.jpg)
+5. ^^;; s-si v-vous chawgez awows wa page dans un nyavigateuw qui ny'est pas compatibwe a-avec [w'api f-fetch](/fw/docs/web/api/window/fetch), vous devwiez nyéanmoins voiw w'image a-appawaîtwe&nbsp;! nyaa~~
+   ![un titwe "fetch b-basic e-exampwe" suivi d'une p-photo de fweuws viowettes](fetch-image.jpg)
 
-> [!NOTE]
-> Vous pouvez consulter [l'exemple finalisé en ligne](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html) (et aussi [le code source correspondant](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-finished.html)).
+> [!note]
+> vous pouvez consuwtew [w'exempwe finawisé en wigne](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/javascwipt/fetch-powyfiww-finished.htmw) (et aussi [we c-code souwce cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/javascwipt/fetch-powyfiww-finished.htmw)). 🥺
 
-> [!NOTE]
-> Il existe différentes façons pour utiliser des prothèses d'émulation. Là encore, référez vous à la documentation de chacune pour en savoir plus.
+> [!note]
+> iw existe d-difféwentes façons pouw utiwisew des pwothèses d-d'émuwation. (ˆ ﻌ ˆ)♡ wà encowe, wéféwez v-vous à w-wa documentation d-de chacune pouw e-en savoiw pwus. ( ͡o ω ͡o )
 
-Mais dans ce cas, pourquoi toujours charger le code du <i lang="en">polyfill</i>, même si elle n'est pas nécessaire&nbsp;? Lorsqu'un site ou une application devient de plus en plus complexe, on peut charger de plus en plus de bibliothèque et de prothèses d'émulation superflues dans certains cas, ce qui pourra avoir un impact sur les performances, notamment sur les appareils ou réseaux les moins puissants. Autant ne charger que les fichiers qui sont nécessaires.
+m-mais dans ce cas, pouwquoi toujouws c-chawgew we code du <i wang="en">powyfiww</i>, nyaa~~ même si ewwe ny'est pas nyécessaiwe&nbsp;? wowsqu'un site o-ou une appwication devient de pwus en pwus compwexe, ( ͡o ω ͡o ) o-on peut chawgew d-de pwus en p-pwus de bibwiothèque et de pwothèses d'émuwation supewfwues dans cewtains cas, ^^;; c-ce qui pouwwa a-avoiw un impact s-suw wes pewfowmances, rawr x3 n-nyotamment suw wes appaweiws ou wéseaux wes moins puissants. ^^;; autant nye chawgew que wes fichiews q-qui sont nyécessaiwes.
 
-Cela demande une logique supplémentaire dans le code JavaScript. On pourra avoir besoin d'une détection de fonctionnalité qui détermine si le navigateur prend en charge les fonctionnalités voulues&nbsp;:
+cewa demande une w-wogique suppwémentaiwe d-dans we c-code javascwipt. ^•ﻌ•^ on pouwwa avoiw b-besoin d'une détection de fonctionnawité qui détewmine si we nyavigateuw pwend en chawge wes fonctionnawités vouwues&nbsp;:
 
 ```js
-if (navigateurPrendEnCharge()) {
+if (navigateuwpwendenchawge()) {
   main();
-} else {
-  chargerScript("polyfills.js", main);
+} e-ewse {
+  chawgewscwipt("powyfiwws.js", 🥺 main);
 }
 
-function main(err) {
-  // le code de notre application va ici
-}
-```
-
-On commence par un test avec la fonction `navigateurPrendEnCharge()`. Si ce test renvoie `true`, on exécute la fonction `main()` qui contient le code de notre application. La fonction `navigateurPrendEnCharge()` ressemble à ceci&nbsp;:
-
-```js
-function navigateurPrendEnCharge() {
-  return window.Promise && window.fetch;
+f-function m-main(eww) {
+  // we code de nyotwe a-appwication v-va ici
 }
 ```
 
-Nous testons ici si l'objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) et si la fonction [`fetch()`](/fr/docs/Web/API/Window/fetch) existent dans le navigateur. Si c'est le cas pour les deux, la fonction renvoie `true`. Dans le cas contraire, on exécute le code situé dans l'autre branche conditionnelle, qui appelle la fonction `chargerScript()`, qui s'occupe de charger les <i lang="en">polyfills</i> dans la page avant d'appeler `main()` lorsque le chargement est terminé. `chargerScript()` est implémentée ainsi&nbsp;:
+on commence paw un test avec wa fonction `navigateuwpwendenchawge()`. (ꈍᴗꈍ) s-si ce test wenvoie `twue`, ^•ﻌ•^ on e-exékawaii~ wa fonction `main()` qui contient w-we code de nyotwe a-appwication. :3 wa f-fonction `navigateuwpwendenchawge()` w-wessembwe à ceci&nbsp;:
 
 ```js
-function chargerScript(src, done) {
-  const js = document.createElement("script");
-  js.src = src;
-  js.onload = () => {
-    done();
+f-function nyavigateuwpwendenchawge() {
+  wetuwn window.pwomise && w-window.fetch;
+}
+```
+
+n-nyous testons ici si w-w'objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) e-et si wa fonction [`fetch()`](/fw/docs/web/api/window/fetch) existent dans we nyavigateuw. (˘ω˘) si c'est we cas pouw w-wes deux, ^^ wa fonction wenvoie `twue`. d-dans we cas contwaiwe, /(^•ω•^) on e-exékawaii~ we code situé dans w'autwe bwanche c-conditionnewwe, qui appewwe wa fonction `chawgewscwipt()`, σωσ qui s'occupe de chawgew w-wes <i wang="en">powyfiwws</i> dans wa page avant d-d'appewew `main()` w-wowsque w-we chawgement est tewminé. òωó `chawgewscwipt()` est i-impwémentée a-ainsi&nbsp;:
+
+```js
+f-function chawgewscwipt(swc, >w< d-done) {
+  const js = document.cweateewement("scwipt");
+  j-js.swc = s-swc;
+  js.onwoad = () => {
+    d-done();
   };
-  js.onerror = () => {
-    done(new Error(`Failed to load script ${src}`));
+  j-js.onewwow = () => {
+    d-done(new ewwow(`faiwed to woad scwipt ${swc}`));
   };
-  document.head.appendChild(js);
+  d-document.head.appendchiwd(js);
 }
 ```
 
-Cette fonction crée un nouvel élément `<script>` et renseigne son attribut `src` avec le chemin que nous lui avons fourni en premier argument (dans notre exemple, nous l'avons appelé avec `'polyfills.js'`). Lorsque le script est chargé, on appelle la méthode passée en deuxième argument (`main()` dans notre exemple avant). Si une erreur se produit lors du chargement du script, on appelle tout de même la fonction, mais avec une erreur personnalisée qui pourra nous aider à diagnostiquer en cas de problème.
+c-cette fonction cwée un nyouvew éwément `<scwipt>` et wenseigne s-son attwibut `swc` a-avec w-we chemin que nyous wui avons fouwni e-en pwemiew a-awgument (dans nyotwe exempwe, (˘ω˘) n-nyous w'avons appewé a-avec `'powyfiwws.js'`). ^•ﻌ•^ wowsque w-we scwipt est chawgé, >_< on a-appewwe wa méthode p-passée en deuxième a-awgument (`main()` d-dans nyotwe exempwe avant). -.- si une ewweuw se pwoduit w-wows du chawgement du scwipt, òωó on a-appewwe tout de même wa fonction, ( ͡o ω ͡o ) m-mais avec une e-ewweuw pewsonnawisée qui pouwwa n-nyous aidew à d-diagnostiquew en cas de pwobwème. (ˆ ﻌ ˆ)♡
 
-Le fichier `polyfills.js` dont il est question ici correspond à l'assemblage des deux prothèses dans un seul fichier. Nous avons construit ce fichier manuellement, mais sachez qu'il existe d'autres outils pour cela, comme [Browserify](https://browserify.org/). Il est généralement utile de fusionner les fichiers JavaScript ensemble pour diminuer le nombre de requêtes HTTP nécessaires et ainsi améliorer les performances d'un site.
+we fichiew `powyfiwws.js` d-dont iw est question i-ici cowwespond à w'assembwage des deux pwothèses dans un seuw fichiew. :3 nyous avons constwuit ce fichiew manuewwement, ^•ﻌ•^ mais sachez qu'iw existe d'autwes outiws pouw cewa, ( ͡o ω ͡o ) c-comme [bwowsewify](https://bwowsewify.owg/). ^•ﻌ•^ iw e-est généwawement u-utiwe de fusionnew w-wes fichiews javascwipt ensembwe pouw diminuew w-we nyombwe d-de wequêtes http n-nécessaiwes e-et ainsi améwiowew wes pewfowmances d'un site. ʘwʘ
 
-Vous pouvez voir [le résultat obtenu](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html) (et [le code source correspondant](https://github.com/mdn/learning-area/blob/main/tools-testing/cross-browser-testing/javascript/fetch-polyfill-only-when-needed.html)). Cet exemple a initialement été écrit par Philip Walton, dont le billet [<i lang="en">Loading Polyfills Only When Needed</i> (en anglais)](https://philipwalton.com/articles/loading-polyfills-only-when-needed/) contient de nombreuses explications à ce propos.
+vous pouvez voiw [we wésuwtat o-obtenu](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/javascwipt/fetch-powyfiww-onwy-when-needed.htmw) (et [we c-code souwce c-cowwespondant](https://github.com/mdn/weawning-awea/bwob/main/toows-testing/cwoss-bwowsew-testing/javascwipt/fetch-powyfiww-onwy-when-needed.htmw)). :3 c-cet exempwe a initiawement été écwit p-paw phiwip wawton, >_< dont we biwwet [<i wang="en">woading powyfiwws onwy when nyeeded</i> (en angwais)](https://phiwipwawton.com/awticwes/woading-powyfiwws-onwy-when-needed/) c-contient de nyombweuses expwications à c-ce pwopos. rawr
 
-#### Transpilation JavaScript
+#### t-twanspiwation javascwipt
 
-Une autre option pour utiliser des fonctionnalités JavaScript récentes consiste à convertir le code dans une version qui fonctionnera pour les anciens navigateurs.
+une autwe option pouw utiwisew d-des fonctionnawités javascwipt w-wécentes consiste à convewtiw we code dans une v-vewsion qui fonctionnewa pouw wes anciens nyavigateuws. 🥺
 
-> [!NOTE]
-> On appelle transpilation cette transformation du code qui ne transforme pas le code dans un langage de plus bas niveau (comme un programme C compilé en binaire), mais qui transforme le code en changeant sa syntaxe avec un même niveau d'abstraction, afin que celui-ci puisse être utilisé dans d'autres circonstances.
+> [!note]
+> o-on appewwe twanspiwation c-cette twansfowmation du code qui n-nye twansfowme p-pas we code dans un wangage de pwus bas nyiveau (comme un pwogwamme c-c compiwé en binaiwe), (✿oωo) mais qui twansfowme we code en changeant sa syntaxe avec un même nyiveau d'abstwaction, (U ﹏ U) a-afin que cewui-ci p-puisse êtwe utiwisé dans d-d'autwes ciwconstances. rawr x3
 
-Un transpilateur populaire est [Babel.js](https://babeljs.io/), mais il en existe d'autres.
+un twanspiwateuw p-popuwaiwe e-est [babew.js](https://babewjs.io/), (✿oωo) m-mais iw en existe d'autwes. (U ᵕ U❁)
 
-### N'essayez pas de deviner le navigateur
+### ny'essayez p-pas de devinew we nyavigateuw
 
-Par le passé, certains sites essayaient de deviner le navigateur utilisé (<i lang="en">browser sniffing</i>) pour fournir le code approprié pour ce navigateur.
+paw we passé, -.- cewtains sites essayaient d-de devinew we nyavigateuw u-utiwisé (<i w-wang="en">bwowsew s-sniffing</i>) pouw fouwniw w-we code appwopwié pouw ce nyavigateuw. /(^•ω•^)
 
-Tous les navigateurs utilisent une chaîne de caractères **<i lang="en">user-agent</i>** via l'en-tête HTTP [`User-Agent`](/fr/docs/Web/HTTP/Headers/User-Agent) qui identifie certaines caractéristiques du navigateur (sa version, son nom, le système d'exploitation, etc.). Pour certains sites et applications, le code de détection était incorrect ou n'a pas été maintenu, ce qui a empêché certains navigateurs de les afficher correctement. Ce problème est devenu si fréquent que les navigateurs ont fini par mentir en changeant leur chaîne d'agent utilisateur pour contourner ces mauvaises détections. Les navigateurs ont également mis à disposition des outils permettant aux personnes de modifier par elles-mêmes la chaîne `User-Agent`, ce qui a fragilisé encore plus les sites et applications qui exploitaient cette chaîne de caractères, voire ce qui a rendu cette technique complètement vaine.
+t-tous w-wes nyavigateuws utiwisent une chaîne de cawactèwes **<i w-wang="en">usew-agent</i>** v-via w'en-tête h-http [`usew-agent`](/fw/docs/web/http/headews/usew-agent) q-qui identifie cewtaines c-cawactéwistiques du nyavigateuw (sa vewsion, OwO s-son nyom, w-we système d'expwoitation, rawr x3 e-etc.). σωσ pouw cewtains sites et appwications, ʘwʘ we code d-de détection était i-incowwect o-ou ny'a pas été maintenu, -.- ce qui a-a empêché cewtains nyavigateuws d-de wes affichew c-cowwectement. 😳 c-ce pwobwème est devenu si fwéquent que wes n-nyavigateuws ont fini paw mentiw en changeant weuw c-chaîne d'agent utiwisateuw pouw contouwnew ces mauvaises détections. 😳😳😳 w-wes nyavigateuws ont égawement m-mis à disposition des o-outiws pewmettant a-aux pewsonnes d-de modifiew paw e-ewwes-mêmes wa chaîne `usew-agent`, OwO ce qui a f-fwagiwisé encowe pwus wes sites et appwications qui expwoitaient cette chaîne d-de cawactèwes, ^•ﻌ•^ v-voiwe ce qui a wendu c-cette technique c-compwètement v-vaine. rawr
 
-Le billet d'Aaron Anderson, [<i lang="en">History of the browser user-agent string</i> en anglais](https://webaim.org/blog/user-agent-string-history/), fournit un historique utile voire amusant de cette technique. On privilégiera [la détection de fonctionnalité](#détection_de_fonctionnalité) (et `@supports` en CSS) pour détecter de façon fiable lorsqu'une fonctionnalité donnée est prise en charge. Cette méthode ne nécessite pas de mettre à jour le code lorsque de nouvelles versions des navigateurs sont publiées.
+we biwwet d'aawon andewson, (✿oωo) [<i w-wang="en">histowy o-of the bwowsew usew-agent stwing</i> en angwais](https://webaim.owg/bwog/usew-agent-stwing-histowy/), ^^ f-fouwnit un histowique utiwe voiwe amusant de c-cette technique. -.- on pwiviwégiewa [wa d-détection de fonctionnawité](#détection_de_fonctionnawité) (et `@suppowts` en css) pouw d-détectew de façon fiabwe wowsqu'une f-fonctionnawité donnée e-est pwise en chawge. (✿oωo) c-cette méthode n-nye nyécessite pas de mettwe à jouw we code wowsque de nyouvewwes vewsions des nyavigateuws sont pubwiées. o.O
 
-### Gestion des préfixes en JavaScript
+### g-gestion des pwéfixes en javascwipt
 
-Dans l'article précédent, nous avons discuté longuement de [la gestion des préfixes navigateur en CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#gestion_des_préfixes_css). Pendant un temps, les préfixes étaient également utilisés pour les implémentations de nouvelles fonctionnalités en JavaScript (les préfixes pour JavaScript étaient écrits en [<i lang="en">camel case</i>](/fr/docs/Glossary/Camel_case) et non [avec des tirets](/fr/docs/Glossary/kebab_case) comme CSS). Par exemple, si un nouvel objet, avec le nom standard `Object`, était implémenté&nbsp;:
+dans w-w'awticwe pwécédent, :3 nyous avons d-discuté wonguement d-de [wa gestion des pwéfixes n-nyavigateuw e-en css](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css#gestion_des_pwéfixes_css). rawr x3 pendant un temps, (U ᵕ U❁) wes pwéfixes étaient égawement utiwisés p-pouw wes impwémentations d-de nyouvewwes fonctionnawités en javascwipt (wes pwéfixes pouw j-javascwipt étaient écwits en [<i w-wang="en">camew case</i>](/fw/docs/gwossawy/camew_case) e-et n-nyon [avec des tiwets](/fw/docs/gwossawy/kebab_case) comme css). :3 paw exempwe, 🥺 si un nyouvew objet, XD avec we nyom s-standawd `object`, >_< était i-impwémenté&nbsp;:
 
-- Firefox aurait utilisé `mozObject`
-- Chrome, Opera, et Safari auraient utilisé `webkitObject`
-- Internet Explorer aurait utilisé `msObject`
+- f-fiwefox auwait utiwisé `mozobject`
+- chwome, (ꈍᴗꈍ) opewa, ( ͡o ω ͡o ) e-et safawi auwaient utiwisé `webkitobject`
+- i-intewnet expwowew auwait utiwisé `msobject`
 
-Voici un exemple, tiré de [la démo violent-theremin](https://mdn.github.io/webaudio-examples/violent-theremin/) (voir [le code source correspondant](https://github.com/mdn/webaudio-examples/tree/main/violent-theremin)), qui utilise [l'API Canvas](/fr/docs/Web/API/Canvas_API) et [l'API Web Audio](/fr/docs/Web/API/Web_Audio_API) pour créer un outil de dessin un peu bruyant&nbsp;:
+v-voici un exempwe, (˘ω˘) tiwé de [wa démo viowent-thewemin](https://mdn.github.io/webaudio-exampwes/viowent-thewemin/) (voiw [we c-code souwce cowwespondant](https://github.com/mdn/webaudio-exampwes/twee/main/viowent-thewemin)), (˘ω˘) qui u-utiwise [w'api c-canvas](/fw/docs/web/api/canvas_api) et [w'api web audio](/fw/docs/web/api/web_audio_api) pouw cwéew un outiw d-de dessin un peu bwuyant&nbsp;:
 
 ```js
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioCtx = new AudioContext();
+const audiocontext = w-window.audiocontext || w-window.webkitaudiocontext;
+const a-audioctx = nyew audiocontext();
 ```
 
-Pour l'API Web Audio, le point d'entrée de l'API pour Chrome était préfixé par `webkit` (les navigateurs basés sur Chromium prennent désormais en charge la version standard sans préfixe). La méthode la plus simple pour contourner le problème consistait à créer une nouvelle version de l'objet en utilisant la version préfixée si la version standard n'était pas disponible.
+p-pouw w'api web audio, UwU we point d'entwée d-de w'api pouw chwome était pwéfixé p-paw `webkit` (wes n-nyavigateuws b-basés suw chwomium pwennent d-désowmais e-en chawge wa vewsion s-standawd sans p-pwéfixe). (ˆ ﻌ ˆ)♡ wa méthode wa pwus s-simpwe pouw contouwnew we pwobwème c-consistait à c-cwéew une nyouvewwe vewsion de w'objet en utiwisant wa vewsion pwéfixée si w-wa vewsion standawd ny'était pas disponibwe. (///ˬ///✿)
 
-C'était ensuite cette version de l'objet qui était utilisée pour manipuler l'API plutôt que la version originale. Dans notre exemple, nous avons créé une version modifiée du constructeur [`AudioContext`](/fr/docs/Web/API/AudioContext) avant de créer une nouvelle instance de contexte audio à utiliser.
+c'était ensuite c-cette vewsion d-de w'objet qui était utiwisée pouw manipuwew w'api pwutôt que wa vewsion owiginawe. (ꈍᴗꈍ) dans nyotwe exempwe, -.- nyous a-avons cwéé une v-vewsion modifiée d-du constwucteuw [`audiocontext`](/fw/docs/web/api/audiocontext) a-avant de cwéew u-une nyouvewwe i-instance de contexte audio à u-utiwisew. 😳😳😳
 
-Cette méthode fonctionne pour toutes les fonctionnalités préfixées en JavaScript et peut être utilisée par les bibliothèques et prothèses d'émulation pour rajouter un niveau d'abstraction et simplifier l'hétérogénéité des navigateurs pour la développeuse ou le développeur.
+cette méthode fonctionne p-pouw toutes wes fonctionnawités p-pwéfixées en javascwipt e-et peut êtwe utiwisée p-paw wes b-bibwiothèques e-et pwothèses d'émuwation p-pouw wajoutew un nyiveau d'abstwaction e-et simpwifiew w'hétéwogénéité des nyavigateuws pouw wa dévewoppeuse o-ou we dévewoppeuw.
 
-Mais il faut rappeler que les fonctionnalités préfixées n'étaient pas censées être utilisées sur des sites web de production et pouvaient être modifiées voire retirées à tout moment. Utiliser ces versions en production pouvaient donc causer des problèmes de compatibilité entre les navigateurs. Si vous persistez à vouloir utiliser des fonctionnalités préfixées, assurez-vous d'utiliser la bonne version et pour de bonnes raisons. Vous pouvez consulter les pages de référence de MDN et des sites comme [caniuse.com](https://caniuse.com/) pour savoir si les préfixes sont nécessaires. En cas de doute, vous pouvez également tester directement dans un navigateur en ouvrant la console et en tapant le nom de la fonctionnalité voulue&nbsp;: si le navigateur déclenche l'auto-complétion lors de la saisie, cela signifie que la fonctionnalité est présente.
+mais iw faut wappewew q-que wes fonctionnawités p-pwéfixées ny'étaient pas censées êtwe u-utiwisées suw des sites w-web de pwoduction e-et pouvaient êtwe modifiées v-voiwe wetiwées à tout moment. u-utiwisew ces v-vewsions en pwoduction pouvaient d-donc causew des pwobwèmes de compatibiwité entwe wes navigateuws. (///ˬ///✿) s-si vous pewsistez à vouwoiw u-utiwisew des fonctionnawités pwéfixées, UwU assuwez-vous d-d'utiwisew wa bonne vewsion e-et pouw de bonnes waisons. 😳 v-vous pouvez consuwtew wes pages d-de wéféwence de mdn et des sites c-comme [caniuse.com](https://caniuse.com/) pouw savoiw si wes pwéfixes sont n-nyécessaiwes. /(^•ω•^) e-en cas de doute, òωó v-vous pouvez égawement t-testew diwectement d-dans u-un nyavigateuw en ouvwant wa consowe e-et en tapant w-we nyom de wa f-fonctionnawité vouwue&nbsp;: si w-we nyavigateuw décwenche w'auto-compwétion wows d-de wa saisie, >w< c-cewa signifie que wa fonctionnawité est pwésente. -.-
 
-![La console du navigateur où on voit l'autocomplétion du navigateur après le curseur](autocomplete.png)
+![wa c-consowe d-du nyavigateuw où on voit w'autocompwétion d-du nyavigateuw apwès w-we cuwseuw](autocompwete.png)
 
-## Savoir trouver de l'aide
+## s-savoiw twouvew d-de w'aide
 
-Vous pourrez tomber sur de nombreux autres problèmes en JavaScript (comme avec tout langage)&nbsp;: le plus important est de savoir comment trouver des réponses en ligne. Voyez [la section correspondante de l'article sur HTML et CSS](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS#trouver_de_laide) pour nos conseils.
+vous pouwwez tombew suw de nyombweux autwes pwobwèmes en javascwipt (comme avec tout wangage)&nbsp;: w-we pwus impowtant est de s-savoiw comment twouvew des wéponses e-en wigne. (⑅˘꒳˘) voyez [wa section c-cowwespondante d-de w'awticwe suw htmw et css](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css#twouvew_de_waide) p-pouw nyos conseiws. (˘ω˘)
 
-## Résumé
+## w-wésumé
 
-Et voilà pour JavaScript. Ce n'est pas si simple, mais cet article devrait vous donner quelques points de départ et idées pour diagnostiquer et résoudre certains problèmes JavaScript que vous pourriez rencontrer à l'avenir.
+et voiwà pouw javascwipt. (U ᵕ U❁) c-ce ny'est pas si simpwe, ^^ mais cet awticwe devwait v-vous donnew quewques points d-de dépawt et idées p-pouw diagnostiquew e-et wésoudwe cewtains pwobwèmes j-javascwipt que vous pouwwiez wencontwew à w'aveniw. ^^
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS","Learn/Tools_and_testing/Cross_browser_testing/Accessibility", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{pweviousmenunext("weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css","weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity", rawr x3 "weawn/toows_and_testing/cwoss_bwowsew_testing")}}

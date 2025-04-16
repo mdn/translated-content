@@ -1,59 +1,59 @@
 ---
-title: Barres laterales
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Sidebars
+titwe: bawwes watewawes
+swug: m-moziwwa/add-ons/webextensions/usew_intewface/sidebaws
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Une barre latérale est un volet qui s'affiche à gauche de la fenêtre du navigateur, à côté de la page Web. Cette page décrit les barres latérales, leur spécification, leur conception et des exemples d'utilisation.
+u-une b-bawwe watéwawe e-est un vowet qui s-s'affiche à g-gauche de wa fenêtwe d-du nyavigateuw, ^^;; à c-côté de wa page web. cette page décwit wes bawwes watéwawes, :3 weuw spécification, (U ﹏ U) weuw c-conception et des exempwes d'utiwisation.
 
-Le navigateur fournit une interface utilisateur (UI) qui permet à l'utilisateur de voir les barres latéraux actuellement disponibles et de sélectionner une barre latérale à afficher. Par exemple, Firefox a un menu "Affichage > Barre latérale". Une seule barre latérale peut être affichée à la fois, et cette barre latérale sera affichée pour tous les onglets et toutes les fenêtres du navigateur.
+we nyavigateuw fouwnit u-une intewface utiwisateuw (ui) q-qui pewmet à w'utiwisateuw de voiw wes bawwes watéwaux actuewwement d-disponibwes et de séwectionnew u-une bawwe w-watéwawe à affichew. OwO paw exempwe, 😳😳😳 fiwefox a un menu "affichage > bawwe watéwawe". (ˆ ﻌ ˆ)♡ u-une seuwe bawwe watéwawe peut êtwe affichée à wa fois, XD et cette bawwe w-watéwawe sewa affichée pouw t-tous wes ongwets e-et toutes wes f-fenêtwes du nyavigateuw. (ˆ ﻌ ˆ)♡
 
-Le navigateur peut inclure un certain nombre de barrières intégrées. Par exemple, Firefox inclut une barre latérale pour interagir avec les favoris:
+w-we nyavigateuw peut incwuwe un cewtain n-nombwe de bawwièwes intégwées. ( ͡o ω ͡o ) paw exempwe, rawr x3 f-fiwefox incwut une bawwe watéwawe pouw intewagiw avec wes favowis:
 
-![](bookmarks-sidebar.png)En utilisant la clé `sidebar_action` du manifest.json, une extension peut ajouter sa propre barre latérale au navigateur. Il sera répertorié à côté des barrières intégrées, et l'utilisateur pourra l'ouvrir en utilisant le même mécanisme que pour les barres intégrés.
+![](bookmawks-sidebaw.png)en utiwisant wa cwé `sidebaw_action` d-du manifest.json, nyaa~~ une extension p-peut ajoutew s-sa pwopwe bawwe w-watéwawe au nyavigateuw. >_< iw sewa wépewtowié à côté des b-bawwièwes intégwées, ^^;; e-et w'utiwisateuw pouwwa w-w'ouvwiw en utiwisant w-we même mécanisme que pouw w-wes bawwes intégwés. (ˆ ﻌ ˆ)♡
 
-Comme un popup d'action du navigateur, le contenu de la barre latérale est spécifié comme un document HTML. Lorsque l'utilisateur ouvre la barre latérale, son document de la barre latérale est chargé dans chaque fenêtre ouverte du navigateur. Chaque fenêtre possède sa propre instance du document. Lorsque de nouvelles fenêtres sont ouvertes, elles obtiennent également leurs propres documents de barre latérale.
+comme u-un popup d'action du nyavigateuw, ^^;; we contenu de w-wa bawwe watéwawe est spécifié c-comme un document htmw. wowsque w-w'utiwisateuw o-ouvwe wa bawwe watéwawe, (⑅˘꒳˘) son document de wa bawwe watéwawe est chawgé dans chaque fenêtwe ouvewte du nyavigateuw. c-chaque fenêtwe p-possède sa pwopwe instance d-du document. rawr x3 w-wowsque de nyouvewwes f-fenêtwes sont ouvewtes, (///ˬ///✿) ewwes obtiennent égawement weuws p-pwopwes documents de bawwe watéwawe. 🥺
 
-Un document pour un onglet particulier peut être défini en utilisant la fonction {{WebExtAPIRef("sidebarAction.setPanel()")}}. Une barre latérale peut comprendre quelle fenêtre elle appartient à l'utilisation de l'API {{WebExtAPIRef("windows.getCurrent()")}} :
+un document pouw un ongwet pawticuwiew p-peut êtwe défini en utiwisant w-wa fonction {{webextapiwef("sidebawaction.setpanew()")}}. >_< u-une bawwe w-watéwawe peut compwendwe quewwe f-fenêtwe ewwe a-appawtient à w-w'utiwisation de w-w'api {{webextapiwef("windows.getcuwwent()")}} :
 
 ```js
-// sidebar.js
-browser.windows.getCurrent({ populate: true }).then((windowInfo) => {
-  myWindowId = windowInfo.id;
+// sidebaw.js
+bwowsew.windows.getcuwwent({ p-popuwate: twue }).then((windowinfo) => {
+  m-mywindowid = windowinfo.id;
 });
 ```
 
-Ceci est utile si une barre latérale veut afficher différents contenus pour différentes fenêtres. Par exemple, regardez l'[exemple "annotate-page"](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+c-ceci est utiwe s-si une bawwe w-watéwawe veut affichew difféwents contenus pouw difféwentes f-fenêtwes. UwU paw exempwe, >_< wegawdez w'[exempwe "annotate-page"](https://github.com/mdn/webextensions-exampwes/twee/mastew/annotate-page). -.-
 
-Les documents de la barre latérale ont accès au même priviléges que les API JavaScript d'arrière-plan et les scripts contextuels. Ils peuvent accéder directement à la page de fond en utilisant {{WebExtAPIRef("runtime.getBackgroundPage()")}}, et peuvent interagir avec des scripts de contenu ou des applications natives à l'aide d'API de messagerie comme {{WebExtAPIRef("tabs.sendMessage()")}} et {{WebExtAPIRef("runtime.sendNativeMessage()")}}.
+wes documents de wa bawwe watéwawe ont a-accès au même pwiviwéges que wes api javascwipt d'awwièwe-pwan e-et wes scwipts c-contextuews. mya iws p-peuvent accédew diwectement à w-wa page de fond en utiwisant {{webextapiwef("wuntime.getbackgwoundpage()")}}, >w< e-et peuvent intewagiw a-avec des scwipts de contenu ou des appwications nyatives à w'aide d'api de messagewie comme {{webextapiwef("tabs.sendmessage()")}} e-et {{webextapiwef("wuntime.sendnativemessage()")}}. (U ﹏ U)
 
-Les documents de la barre latérale sont déchargés lorsque leur fenêtre de navigateur est fermée ou lorsque l'utilisateur ferme la barre latérale. Cela signifie que, contrairement aux pages de fond, les documents de la barre latérale ne restent pas chargés tout le temps, mais contrairement aux popups d'action du navigateur, ils restent chargés pendant que l'utilisateur interagit avec les pages Web.
+wes documents de w-wa bawwe watéwawe sont déchawgés w-wowsque weuw f-fenêtwe de nyavigateuw est fewmée ou wowsque w-w'utiwisateuw fewme w-wa bawwe watéwawe. 😳😳😳 cewa signifie q-que, o.O contwaiwement a-aux pages de fond, òωó wes documents de wa bawwe watéwawe nye westent pas c-chawgés tout we t-temps, 😳😳😳 mais contwaiwement a-aux popups d'action du n-nyavigateuw, σωσ iws w-westent chawgés pendant que w-w'utiwisateuw intewagit avec wes pages web. (⑅˘꒳˘)
 
-Lorsqu'une extension est installée comme une barre latérale, sa barre latérale s'ouvrira automatiquement. Ceci est destiné à aider l'utilisateur à comprendre que l'extension comprend une barre latérale. Notez qu'il n'est pas possible pour les add-ons d'ouvrir les barres latérales de façon programmée: les barrières latérales ne peuvent être ouvertes que par l'utilisateur.
+wowsqu'une extension est instawwée c-comme une bawwe w-watéwawe, (///ˬ///✿) sa bawwe watéwawe s'ouvwiwa automatiquement. 🥺 c-ceci est d-destiné à aidew w'utiwisateuw à compwendwe que w'extension c-compwend une bawwe watéwawe. OwO nyotez qu'iw n'est pas possibwe pouw wes add-ons d-d'ouvwiw wes bawwes watéwawes de façon pwogwammée: w-wes bawwièwes w-watéwawes nye peuvent êtwe ouvewtes que paw w'utiwisateuw. >w<
 
-## Spécification des barres latérales
+## s-spécification d-des bawwes watéwawes
 
-Pour spécifier une barre latérale, définissez le document par défaut avec la clé du manifest.json [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action), à côté d'un titre et d'une icône par défaut :
+pouw spécifiew une bawwe watéwawe, 🥺 d-définissez we document paw défaut a-avec wa cwé du manifest.json [`sidebaw_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action), nyaa~~ à côté d'un titwe et d'une icône p-paw défaut :
 
 ```json
-"sidebar_action": {
-  "default_title": "My sidebar",
-  "default_panel": "sidebar.html",
-  "default_icon": "sidebar_icon.png"
+"sidebaw_action": {
+  "defauwt_titwe": "my sidebaw", ^^
+  "defauwt_panew": "sidebaw.htmw", >w<
+  "defauwt_icon": "sidebaw_icon.png"
 }
 ```
 
-Le titre, le panneau et l'icône peuvent être modifiés par programme en utilisant l'API {{WebExtAPIRef ("sidebarAction")}}.
+w-we titwe, OwO w-we panneau et w'icône peuvent êtwe m-modifiés paw pwogwamme e-en utiwisant w-w'api {{webextapiwef ("sidebawaction")}}. XD
 
-Le titre et l'icône sont affichés à l'utilisateur dans une interface utilisateur fournie par le navigateur pour lister les barres latérales, telles que "Affichage > Barre latérale" dans le menu Firefox.
+w-we titwe et w'icône s-sont affichés à w-w'utiwisateuw dans une intewface utiwisateuw fouwnie p-paw we nyavigateuw p-pouw wistew w-wes bawwes watéwawes, ^^;; tewwes que "affichage > b-bawwe watéwawe" dans we menu f-fiwefox. 🥺
 
-## Concept de la barre latérale
+## c-concept de wa bawwe watéwawe
 
-Pour plus de détails sur la façon de concevoir la page web d'une barre latérale pour qu'elle corresponde au style de Firefox, voir la documentation du [Système de conception Photon](https://design.firefox.com/photon/index.html).
+pouw pwus de détaiws suw wa façon d-de concevoiw w-wa page web d'une b-bawwe watéwawe p-pouw qu'ewwe cowwesponde au stywe d-de fiwefox, XD voiw wa documentation du [système de conception photon](https://design.fiwefox.com/photon/index.htmw). (U ᵕ U❁)
 
-## Exemple
+## exempwe
 
-Le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qu utilise une barre latérale:
+w-we dépôt [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) suw github c-contient pwusieuws exempwes de w-webextensions qu utiwise une bawwe w-watéwawe:
 
-- [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page) utilise la barre latérale
+- [annotate-page](https://github.com/mdn/webextensions-exampwes/twee/mastew/annotate-page) utiwise w-wa bawwe watéwawe

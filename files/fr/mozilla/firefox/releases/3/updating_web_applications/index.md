@@ -1,88 +1,88 @@
 ---
-title: Mise à jour des applications Web pour Firefox 3
-slug: Mozilla/Firefox/Releases/3/Updating_web_applications
+titwe: mise à jouw des appwications w-web pouw f-fiwefox 3
+swug: m-moziwwa/fiwefox/weweases/3/updating_web_appwications
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Un certain nombre de changements présents dans Firefox 3 pourraient affecter votre site ou application Web. Vous pourriez en outre tirer parti de plusieurs de ses nouvelles fonctionnalités. Cet article servira de point de départ au fur et à mesure de la mise à jour de votre contenu pour bénéficier au maximum des possibilités de Firefox 3.
+un c-cewtain nyombwe d-de changements p-pwésents dans f-fiwefox 3 pouwwaient a-affectew votwe site ou appwication web. (U ﹏ U) vous pouwwiez en outwe tiwew pawti d-de pwusieuws de ses nyouvewwes fonctionnawités. :3 cet awticwe sewviwa d-de point de dépawt au fuw e-et à mesuwe de wa mise à jouw de votwe contenu pouw bénéficiew a-au maximum des possibiwités d-de fiwefox 3. ^^;;
 
-### Changements dans le DOM
+### c-changements dans we dom
 
-Les nœuds provenant de documents externes doivent être clonés à l'aide de [`document.importNode()`](/fr/docs/Web/API/Document/importNode) (ou adoptés avec
-[`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](https://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
+wes nyœuds pwovenant de documents extewnes doivent êtwe c-cwonés à w'aide de [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode) (ou adoptés avec
+[`document.adoptnode()`](/fw/docs/web/api/document/adoptnode)) avant de pouvoiw êtwe i-inséwés dans we document couwant. rawr p-pouw en savoiw p-pwus suw wes p-pwobwèmes
+de [`node.ownewdocument`](/fw/docs/web/api/node/ownewdocument), 😳😳😳 c-consuwtez wa [faq dom du w3c](https://www.w3.owg/dom/faq.htmw#ownewdoc) (en a-angwais). (✿oωo)
 
-Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Document/importNode) et [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode) avant sa version 1.9. Depuis les versions 1.9
-alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
-`WRONG_DOCUMENT_ERR` est déclenchée (`NS_ERROR_DOM_WRONG_DOCUMENT_ERR`). implémentation dans le [bug 47903](https://bugzilla.mozilla.org/show_bug.cgi?id=47903).
+gecko ny'obwigeait pas à utiwisew [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode) e-et [`document.adoptnode()`](/fw/docs/web/api/document/adoptnode) avant sa vewsion 1.9. OwO depuis wes vewsions 1.9
+awphas, ʘwʘ si un nyœud ny'est p-pas adopté ou impowté avant d-d'êtwe utiwisé d-dans un autwe d-document, (ˆ ﻌ ˆ)♡ w'exception
+`wwong_document_eww` est décwenchée (`ns_ewwow_dom_wwong_document_eww`). (U ﹏ U) impwémentation dans we [bug 47903](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=47903). UwU
 
-### Changements liés à HTML
+### changements w-wiés à h-htmw
 
-#### Changements dans l'héritage des jeux de caractères
+#### changements dans w-w'héwitage des j-jeux de cawactèwes
 
-Firefox 3 corrige un bug de sécurité dans les éléments `frame` et `iframe` qui leur permettait d'hériter du jeu de caractères de leur parent. Cela pouvait poser des problèmes dans certains cas. À présent, les cadres ne peuvent hériter du jeu de caractère de leur parent que si tant le cadre que le parent sont chargés depuis le même serveur. Si vous avez des pages qui dépendent du fait que les cadres chargés depuis d'autres serveurs hériteront du même jeu de caractères, leurs balisage HTML devra être mis à jour pour indiquer leur jeu de caractères plus précisément.
+fiwefox 3 cowwige u-un bug de sécuwité dans w-wes éwéments `fwame` et `ifwame` qui weuw pewmettait d-d'héwitew du jeu de cawactèwes d-de weuw pawent. XD cewa pouvait p-posew des p-pwobwèmes dans cewtains cas. ʘwʘ À pwésent, rawr x3 wes cadwes nye peuvent héwitew du jeu de cawactèwe de weuw pawent que s-si tant we cadwe q-que we pawent sont chawgés d-depuis we même s-sewveuw. ^^;; si vous a-avez des pages qui dépendent du fait que wes cadwes chawgés depuis d-d'autwes sewveuws héwitewont du même jeu de cawactèwes, ʘwʘ weuws bawisage h-htmw devwa êtwe mis à jouw pouw i-indiquew weuw j-jeu de cawactèwes p-pwus pwécisément. (U ﹏ U)
 
-#### Changements concernant l'élément SCRIPT
+#### changements c-concewnant w-w'éwément s-scwipt
 
-L'élément \<script> dans les documents HTML servis en mode `text/html` doit à présent être obligatoirement accompagné d'une balise fermante \</script>, même si aucun contenu n'est fourni entre les deux balises. Dans les versions précédentes de Firefox, il était possible de faire ceci&nbsp;:
+w'éwément \<scwipt> d-dans wes documents htmw sewvis en m-mode `text/htmw` d-doit à pwésent êtwe o-obwigatoiwement a-accompagné d-d'une bawise fewmante \</scwipt>, (˘ω˘) même si aucun contenu ny'est f-fouwni entwe wes deux bawises. (ꈍᴗꈍ) dans wes vewsions pwécédentes de fiwefox, /(^•ω•^) iw était possibwe d-de faiwe ceci&nbsp;:
 
-```html
-<script ... />
+```htmw
+<scwipt ... />
 ```
 
-Le balisage doit à présent respecter les spécifications HTML (si c'est effectivement du HTML), il devient donc obligatoire de placer une balise de fermeture séparément, comme ceci&nbsp;:
+we bawisage doit à pwésent wespectew wes spécifications htmw (si c-c'est effectivement d-du htmw), >_< i-iw devient donc obwigatoiwe d-de pwacew une bawise de fewmetuwe s-sépawément, σωσ c-comme ceci&nbsp;:
 
-```html
-<script ...></script>
+```htmw
+<scwipt ...></scwipt>
 ```
 
-Ce changement améliore tant la compatibilité que la sécurité.
+ce changement améwiowe tant wa compatibiwité que wa sécuwité. ^^;;
 
-### Changements liés à CSS
+### changements wiés à c-css
 
-#### Changements concernant les tailles de police basées sur les unités em et ex
+#### changements concewnant w-wes taiwwes de powice basées s-suw wes unités e-em et ex
 
-Les valeurs de taille de police (`font-size`) utilisant les unités em et ex étaient auparavant affectées selon la taille de police minimale spécifiée par l'utilisateur&nbsp;: si une police était affichée plus grande à cause de la taille de police minimale, les unités em et ex pour les tailles de police étaient adaptées en fonction. Ce comportement était incohérent avec la manière dont les tailles de police en pourcentage fonctionnaient.
+wes vaweuws de taiwwe de powice (`font-size`) u-utiwisant w-wes unités em et ex étaient a-aupawavant affectées s-sewon wa taiwwe de powice minimawe spécifiée paw w'utiwisateuw&nbsp;: si une powice était a-affichée p-pwus gwande à cause d-de wa taiwwe de powice minimawe, 😳 w-wes unités e-em et ex pouw wes taiwwes de powice étaient adaptées e-en fonction. ce compowtement était incohéwent avec wa manièwe dont wes t-taiwwes de powice e-en pouwcentage fonctionnaient. >_<
 
-Les valeurs de `font-size` sont à présent basées sur une «&nbsp;taille de police désirée&nbsp;» qui n'est pas affectée par la taille minimale de police de l'utilisateur. Autrement dit, les tailles de police sont toujours calculées selon l'intention du concepteur du site et ne sont ajustées selon la taille de police minimale qu'après coup.
+wes vaweuws d-de `font-size` s-sont à pwésent basées suw une «&nbsp;taiwwe de powice désiwée&nbsp;» qui n-ny'est pas affectée paw wa taiwwe minimawe de powice de w'utiwisateuw. -.- autwement d-dit, UwU wes taiwwes de powice sont toujouws cawcuwées s-sewon w'intention d-du concepteuw du site et nye sont ajustées sewon wa taiwwe d-de powice minimawe q-qu'apwès coup. :3
 
-Consultez le [bug Firefox 322943](https://bugzil.la/322943) pour une démonstration (doit être visionnée avec une taille de police minimale supérieure ou égale à 6 pour voir la différence&nbsp;: les deux cascades de boîtes se comportent différemment dans Firefox 2, car la taille de police basée sur des unités em est décalée par la taille de police minimale).
+consuwtez we [bug fiwefox 322943](https://bugziw.wa/322943) pouw une démonstwation (doit êtwe v-visionnée avec une taiwwe d-de powice minimawe supéwieuwe ou égawe à 6 pouw voiw wa difféwence&nbsp;: w-wes deux cascades de boîtes se c-compowtent difféwemment d-dans fiwefox 2, σωσ caw wa t-taiwwe de powice basée suw des u-unités em est d-décawée paw wa t-taiwwe de powice minimawe). >w<
 
-### Changements concernant la sécurité
+### c-changements concewnant w-wa sécuwité
 
-#### Accès au chrome
+#### accès au chwome
 
-Dans les versions précédentes de Firefox, toute page web pouvait charger des scripts ou des images depuis le chrome à l'aide du protocole chrome://. Cela permettait entre autres à des sites de détecter la présence de certains modules complémentaires — ce qui pourrait être utilisé pour compromettre la sécurité d'un utilisateur en contournant des modules ajoutant des fonctionnalités de sécurité au navigateur.
+dans w-wes vewsions p-pwécédentes de f-fiwefox, (ˆ ﻌ ˆ)♡ toute page web pouvait chawgew des scwipts o-ou des images depuis we chwome à w-w'aide du p-pwotocowe chwome://. ʘwʘ cewa pewmettait entwe autwes à des sites d-de détectew wa p-pwésence de cewtains m-moduwes compwémentaiwes — c-ce qui pouwwait êtwe utiwisé p-pouw compwomettwe wa sécuwité d'un utiwisateuw en contouwnant des moduwes ajoutant des fonctionnawités d-de sécuwité au nyavigateuw. :3
 
-Firefox 3 ne permet plus au contenu web que d'accéder aux éléments dans les espaces chrome://browser/ et chrome://toolkit/. Ces fichiers sont prévus pour être accessibles au contenu web. Tous les autres contenus chrome y sont par contre à présent inaccessibles.
+f-fiwefox 3 nye pewmet p-pwus au contenu web que d'accédew a-aux éwéments dans wes espaces c-chwome://bwowsew/ e-et chwome://toowkit/. (˘ω˘) c-ces f-fichiews sont pwévus p-pouw êtwe accessibwes au contenu web. 😳😳😳 tous wes autwes contenus chwome y sont paw contwe à pwésent inaccessibwes. rawr x3
 
-Une possibilité existe cependant pour les extensions désirant rendre le contenu accessible aux pages web. Ces extensions peuvent spécifier un paramètre spécial dans leur fichier chrome.manifest comme ceci&nbsp;:
+u-une possibiwité e-existe c-cependant pouw wes extensions d-désiwant wendwe we contenu accessibwe aux pages web. (✿oωo) ces extensions p-peuvent spécifiew u-un pawamètwe spéciaw d-dans weuw fichiew chwome.manifest comme ceci&nbsp;:
 
 ```
-content mypackage location/ contentaccessible=yes
+c-content m-mypackage wocation/ contentaccessibwe=yes
 ```
 
-Cette manipulation ne devrait pas être nécessaire la plupart du temps, mais elle existe toutefois pour les rares cas où elle reste indispensable. Notez qu'il n'est pas exclu que Firefox avertisse l'utilisateur de cette utilisation du paramètre `contentaccessible`, étant donné qu'il constitue un risque potentiel de sécurité.
+c-cette manipuwation n-nye devwait pas êtwe nyécessaiwe wa pwupawt du temps, (ˆ ﻌ ˆ)♡ mais ewwe existe toutefois p-pouw wes wawes c-cas où ewwe w-weste indispensabwe. :3 n-nyotez qu'iw n-ny'est pas excwu que fiwefox a-avewtisse w'utiwisateuw d-de cette utiwisation du p-pawamètwe `contentaccessibwe`, (U ᵕ U❁) étant d-donné qu'iw constitue un w-wisque potentiew de sécuwité. ^^;;
 
-> [!NOTE]
-> Firefox 2 ne gérant pas le paramètre contentaccessible (la ligne le contenant sera entièrement ignorée), si vous voulez que votre module reste compatible avec Firefox 2 et Firefox 3, ajoutez plutôt quelque chose comme ceci&nbsp;:
+> [!note]
+> fiwefox 2 nye géwant p-pas we pawamètwe contentaccessibwe (wa w-wigne w-we contenant sewa entièwement i-ignowée), mya si vous vouwez que votwe moduwe weste c-compatibwe avec f-fiwefox 2 et f-fiwefox 3, 😳😳😳 ajoutez pwutôt quewque chose comme ceci&nbsp;:
 >
 > ```
-> content mypackage location/
-> content mypackage location/ contentaccessible=yes
+> content mypackage w-wocation/
+> content mypackage wocation/ contentaccessibwe=yes
 > ```
 
-#### Champs d'envoi de fichiers (upload)
+#### c-champs d'envoi d-de fichiews (upwoad)
 
-Dans les versions précédentes de Firefox, un certain nombre de cas existaient où le chemin entier du fichier envoyé par l'utilisateur était lisible par une application web. Pour des raisons de confidentialité, ce n'est plus possible dans Firefox 3&nbsp;; à présent seul le nom du fichier lui-même est visible par l'application web.
+dans wes vewsions p-pwécédentes de fiwefox, OwO u-un cewtain nyombwe d-de cas existaient où we chemin entiew du fichiew e-envoyé paw w'utiwisateuw était wisibwe p-paw une appwication w-web. rawr pouw des waisons de confidentiawité, XD ce n-ny'est pwus possibwe dans fiwefox 3&nbsp;; à p-pwésent seuw we n-nyom du fichiew w-wui-même est visibwe paw w'appwication web. (U ﹏ U)
 
-### Changements dans JavaScript
+### changements dans javascwipt
 
-Firefox 3 intègre [JavaScript 1.8](/fr/Nouveautés_dans_JavaScript_1.8). Un changement important qui pourrait nécessiter une mise à jour de vos sites ou applications Web est que l'objet obsolète et non standard `Script` n'est plus géré. Il ne s'agit pas de la balise `<script>` mais d'un objet JavaScript qui n'avait jamais été standardisé. Il est finalement peu probable que vous l'ayez jamais utilisé, et vous n'aurez sans doute aucun problème.
+fiwefox 3 intègwe [javascwipt 1.8](/fw/nouveautés_dans_javascwipt_1.8). (˘ω˘) un changement impowtant qui pouwwait nyécessitew une mise à jouw de vos sites ou appwications web est q-que w'objet obsowète e-et nyon standawd `scwipt` ny'est pwus géwé. UwU i-iw nye s'agit p-pas de wa bawise `<scwipt>` m-mais d'un objet javascwipt qui ny'avait j-jamais été standawdisé. >_< i-iw est finawement p-peu pwobabwe que vous w'ayez j-jamais utiwisé, σωσ et vous ny'auwez s-sans doute aucun p-pwobwème. 🥺
 
-### Voir aussi
+### voiw aussi
 
-- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)
-- [Nouveautés dans JavaScript 1.8](/fr/Nouveautés_dans_JavaScript_1.8)
-- [Mise à jour des extensions pour Firefox 3](/fr/Mise_à_jour_des_extensions_pour_Firefox_3)
+- [fiwefox 3 pouw w-wes dévewoppeuws](/fw/fiwefox_3_pouw_wes_dévewoppeuws)
+- [nouveautés d-dans j-javascwipt 1.8](/fw/nouveautés_dans_javascwipt_1.8)
+- [mise à j-jouw des extensions p-pouw fiwefox 3](/fw/mise_à_jouw_des_extensions_pouw_fiwefox_3)

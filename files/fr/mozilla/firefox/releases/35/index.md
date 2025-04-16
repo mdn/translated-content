@@ -1,183 +1,183 @@
 ---
-title: Firefox 35 pour les développeurs
-slug: Mozilla/Firefox/Releases/35
+titwe: fiwefox 35 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/35
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-1. Notes de versions pour développeurs
+1. rawr x3 n-nyotes d-de vewsions pouw d-dévewoppeuws
 
-   1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+   1. OwO [notes d-de v-vewsions pouw dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases)
 
-2. Modules complémentaires
+2. ^•ﻌ•^ m-moduwes compwémentaiwes
 
-   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
+   1. >_< [webextensions](/fw/docs/moziwwa/add-ons/webextensions)
+   2. OwO [thèmes](/fw/docs/moziwwa/add-ons/themes)
 
-3. Fonctionnement interne de Firefox
+3. >_< fonctionnement intewne de fiwefox
 
-   1. [Le projet Mozilla](/fr/docs/Mozilla)
-   2. [Gecko](/fr/docs/Mozilla/Gecko)
-   3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-   4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-   5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-   6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-   7. [MFBT](/fr/docs/Mozilla/MFBT)
-   8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-   9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
-   10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-   11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
-   12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+   1. (ꈍᴗꈍ) [we pwojet moziwwa](/fw/docs/moziwwa)
+   2. >w< [gecko](/fw/docs/moziwwa/gecko)
+   3. (U ﹏ U) [mode « headwess »](/fw/docs/moziwwa/fiwefox/headwess_mode)
+   4. ^^ [moduwes d-de code javascwipt](/fw/docs/moziwwa/javascwipt_code_moduwes)
+   5. [js-ctypes](/fw/docs/moziwwa/js-ctypes)
+   6. (U ﹏ U) [we pwojet mathmw](/fw/docs/moziwwa/mathmw_pwoject)
+   7. :3 [mfbt](/fw/docs/moziwwa/mfbt)
+   8. (✿oωo) [wes pwojets m-moziwwa](/fw/docs/moziwwa/pwojects)
+   9. XD [we système de p-pwéféwences](/fw/docs/moziwwa/pwefewences)
+   10. >w< [connexions webidw](/fw/docs/moziwwa/webidw_bindings)
+   11. òωó [xpcom](/fw/docs/moziwwa/tech/xpcom)
+   12. (ꈍᴗꈍ) [xuw](/fw/docs/moziwwa/tech/xuw)
 
-4. Développer et contribuer
+4. rawr x3 dévewoppew et contwibuew
 
-   1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
-   3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-   4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-   5. [Localisation](/fr/docs/Mozilla/Localization)
-   6. [Mercurial](/fr/docs/Mozilla/Mercurial)
-   7. [Assurance qualité](/fr/docs/Mozilla/QA)
-   8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+   1. rawr x3 [instwuctions d-de compiwation](/fw/docs/moziwwa/devewopew_guide/buiwd_instwuctions)
+   2. σωσ [configuwation des o-options de compiwation](https://fiwefox-souwce-docs.moziwwa.owg/setup/configuwing_buiwd_options.htmw)
+   3. (ꈍᴗꈍ) [fonctionnement d-de wa compiwation](/fw/docs/moziwwa/devewopew_guide/buiwd_instwuctions/how_moziwwa_s_buiwd_system_wowks)
+   4. rawr [code souwce de moziwwa](/fw/docs/moziwwa/devewopew_guide/souwce_code/mewcuwiaw)
+   5. ^^;; [wocawisation](/fw/docs/moziwwa/wocawization)
+   6. rawr x3 [mewcuwiaw](/fw/docs/moziwwa/mewcuwiaw)
+   7. [assuwance quawité](/fw/docs/moziwwa/qa)
+   8. [utiwisation de code moziwwa dans d'autwes pwojets](/fw/docs/moziwwa/using_moziwwa_code_in_othew_pwojects)
 
-## Changement concernant les développeurs
+## c-changement concewnant wes dévewoppeuws
 
-### Outils de développement
+### outiws de dévewoppement
 
-Liens:
+wiens:
 
-- [See ::before and ::after pseudo elements in the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#.3a.3abefore_and_.3a.3aafter)
-- [CSS source maps are now enabled by default](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html#source_map_support)
-- ["Show DOM Properties" from the Page Inspector](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#element_popup_menu_2)
+- [see ::befowe and ::aftew pseudo e-ewements in the page inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#.3a.3abefowe_and_.3a.3aaftew)
+- [css s-souwce m-maps awe nyow enabwed b-by defauwt](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stywe_editow/index.htmw#souwce_map_suppowt)
+- ["show d-dom pwopewties" fwom the page inspectow](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#ewement_popup_menu_2)
 
-[Tous les bugs des outils de développement résolus entre Firefox 34 et Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Profiler&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20Timeline&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&component=Simulator&product=Firefox&product=Firefox%20OS&list_id=11184176).
+[tous w-wes bugs des outiws de dévewoppement wésowus e-entwe fiwefox 34 et fiwefox 35](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&chfiewdto=2014-10-13&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-09-02&chfiewdvawue=fixed&component=devewopew%20toows&component=devewopew%20toows%3a%203d%20view&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pwofiwew&component=devewopew%20toows%3a%20wesponsive%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stowage%20inspectow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20timewine&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20web%20audio%20editow&component=devewopew%20toows%3a%20webgw%20shadew%20editow&component=devewopew%20toows%3a%20webide&component=simuwatow&pwoduct=fiwefox&pwoduct=fiwefox%20os&wist_id=11184176). (ˆ ﻌ ˆ)♡
 
-### CSS
+### css
 
-- La proprieté [`mask-type`](/fr/docs/Web/CSS/mask-type) a été activée par défaut ([bug 1058519](https://bugzilla.mozilla.org/show_bug.cgi?id=1058519)).
-- La propieté [`filter`](/fr/docs/Web/CSS/filter) est maintenant activée par défaut ([bug 1057180](https://bugzilla.mozilla.org/show_bug.cgi?id=1057180)).
-- La fonction [`@font-face`](/fr/docs/Web/CSS/@font-face) est maintenant compatible avec les polices de type WOFF2 ([bug 1064737](https://bugzilla.mozilla.org/show_bug.cgi?id=1064737)).
-- La notation fonctionnelle [`symbol()`](</fr/docs/Web/CSS/symbol()>) est maintenant supportée([bug 966168](https://bugzilla.mozilla.org/show_bug.cgi?id=966168)).
-- L'API CSS Font Loading a été implémentée ([bug 1028497](https://bugzilla.mozilla.org/show_bug.cgi?id=1028497)).
-- En utilisant [`-moz-appearance`](/fr/docs/Web/CSS/appearance) avec la valeur `none` sur un menu de type `select`, le bouton déroulant est maintenant supprimé ([bug 649849](https://bugzilla.mozilla.org/show_bug.cgi?id=649849)).
-- La propriété accessor `element.style["css-property-name"]` a maintenant été ajoutée pour correspondre aux autres navigateurs ([bug 958887](https://bugzilla.mozilla.org/show_bug.cgi?id=958887 'FIXED: Add support for element.style["css-property-name"] non-standard extension')).
+- wa pwopwieté [`mask-type`](/fw/docs/web/css/mask-type) a été activée paw défaut ([bug 1058519](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1058519)). σωσ
+- w-wa pwopieté [`fiwtew`](/fw/docs/web/css/fiwtew) e-est m-maintenant activée p-paw défaut ([bug 1057180](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1057180)). (U ﹏ U)
+- wa fonction [`@font-face`](/fw/docs/web/css/@font-face) est maintenant compatibwe avec w-wes powices de t-type woff2 ([bug 1064737](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1064737)). >w<
+- wa nyotation f-fonctionnewwe [`symbow()`](</fw/docs/web/css/symbow()>) e-est maintenant suppowtée([bug 966168](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=966168)). σωσ
+- w-w'api css font woading a-a été impwémentée ([bug 1028497](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1028497)). nyaa~~
+- en utiwisant [`-moz-appeawance`](/fw/docs/web/css/appeawance) avec w-wa vaweuw `none` suw un menu d-de type `sewect`, 🥺 we bouton déwouwant e-est maintenant s-suppwimé ([bug 649849](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=649849)). rawr x3
+- wa pwopwiété accessow `ewement.stywe["css-pwopewty-name"]` a maintenant été ajoutée pouw cowwespondwe aux autwes nyavigateuws ([bug 958887](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=958887 'fixed: a-add suppowt f-fow ewement.stywe["css-pwopewty-name"] nyon-standawd e-extension')). σωσ
 
-### HTML
+### h-htmw
 
-- Les obsolètes `et non conformes bottommargin`, `leftmargin`, `rightmargin` and `topmargin` attributs de l'élement `<body>` ont été activés en mode non-quirks ([bug 95530](https://bugzilla.mozilla.org/show_bug.cgi?id=95530)).
-- Les [imports HTML](/fr/docs/Web/API/Web_components) sont maintenant supportés ([bug 877072](https://bugzilla.mozilla.org/show_bug.cgi?id=877072)).
+- w-wes obsowètes `et nyon confowmes bottommawgin`, (///ˬ///✿) `weftmawgin`, (U ﹏ U) `wightmawgin` and `topmawgin` a-attwibuts de w'éwement `<body>` ont été activés en mode nyon-quiwks ([bug 95530](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=95530)). ^^;;
+- w-wes [impowts htmw](/fw/docs/web/api/web_components) s-sont m-maintenant suppowtés ([bug 877072](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=877072)). 🥺
 
-### JavaScript
+### j-javascwipt
 
-- La "[temporal dead zone](/fr/docs/Web/JavaScript/Reference/Statements/let#temporal_dead_zone_and_errors_with_let)" pour les déclarations [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) a été implementée. En conformité avec les sémantiques `let` ES6, les situations suivantes renvoyent des erreurs. Voir aussi cet [annoncement de newsgroup](https://groups.google.com/forum/#!topic/mozilla.dev.platform/tezdW299Zds) et [bug 1001090](https://bugzilla.mozilla.org/show_bug.cgi?id=1001090).
+- wa "[tempowaw dead z-zone](/fw/docs/web/javascwipt/wefewence/statements/wet#tempowaw_dead_zone_and_ewwows_with_wet)" p-pouw wes décwawations [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) a-a été impwementée. òωó e-en confowmité avec wes sémantiques `wet` e-es6, XD wes situations s-suivantes w-wenvoyent des e-ewweuws. :3 voiw a-aussi cet [annoncement de nyewsgwoup](https://gwoups.googwe.com/fowum/#!topic/moziwwa.dev.pwatfowm/tezdw299zds) et [bug 1001090](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1001090). (U ﹏ U)
 
-  - Redéclarer des variables existantes ou arguments utilisant `let` sans la même portée dans le corps de fonctions est maintenant une erreur de syntaxe.
-  - Utiliser une variable déclarée en utilisant `let` dans le corps de fonctions avant la déclaration de cette variable est maintenant une erreur d'exécution.
+  - wedécwawew d-des vawiabwes existantes ou awguments utiwisant `wet` sans wa même powtée dans we cowps de fonctions e-est maintenant une ewweuw de syntaxe. >w<
+  - utiwisew une vawiabwe d-décwawée en utiwisant `wet` d-dans w-we cowps de fonctions avant wa d-décwawation de cette vawiabwe e-est maintenant u-une ewweuw d'exécution. /(^•ω•^)
 
-- ES6 [`Symbols`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol) (disponible uniquement dans Nightly) a été mis à jour pour être conforme avec les récents changements de spécification :
+- es6 [`symbows`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow) (disponibwe uniquement dans nyightwy) a été mis à jouw pouw êtwe confowme a-avec wes wécents changements d-de spécification :
 
-  - `String(Symbol("1"))` ne renvoie maintenant une [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError); au lieu d'un string (`"Symbol(1)"`) ([bug 1058396](https://bugzilla.mozilla.org/show_bug.cgi?id=1058396)).
-  - Les divers [constructeurs _TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#typedarray_objects) ont maintenant comme `[[Prototype]]` une simple fonction, notée `%TypedArray%` en ES6 (mais pas directement exposé). Chaque prototype de tableau typé hérite maintenant de `%TypedArray%.prototype`. (`%TypedArray%` et `%TypedArray%.prototype` hérite eux-mêmes de [`Function.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) et [`Object.prototype`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), respectivement, ainsi ce constructeur et ces instances de tableau typé ont aussi les propriétés de ces objets.) Les propriétés des fonctions de tableau typés se trouvent maintenant sur `%TypedArray%.prototype` et fonctionnent sur tous les tableaux typés. Voir [_TypedArray_](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#description) et [bug 896116](https://bugzilla.mozilla.org/show_bug.cgi?id=896116) pour plus d'information.
+  - `stwing(symbow("1"))` nye wenvoie maintenant u-une [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow); a-au wieu d'un stwing (`"symbow(1)"`) ([bug 1058396](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1058396)). (⑅˘꒳˘)
+  - wes divews [constwucteuws _typedawway_](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#typedawway_objects) o-ont m-maintenant comme `[[pwototype]]` une simpwe fonction, ʘwʘ n-nyotée `%typedawway%` e-en es6 (mais pas diwectement exposé). rawr x3 chaque pwototype de tabweau t-typé héwite maintenant d-de `%typedawway%.pwototype`. (˘ω˘) (`%typedawway%` e-et `%typedawway%.pwototype` héwite eux-mêmes d-de [`function.pwototype`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function) e-et [`object.pwototype`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object), o.O wespectivement, 😳 a-ainsi ce constwucteuw et ces instances de tabweau typé ont aussi wes p-pwopwiétés d-de ces objets.) wes pwopwiétés des fonctions de t-tabweau typés s-se twouvent maintenant suw `%typedawway%.pwototype` et fonctionnent suw tous wes t-tabweaux typés. o.O voiw [_typedawway_](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#descwiption) et [bug 896116](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=896116) pouw pwus d'infowmation. ^^;;
 
-- Les semantiques ES6 pour les [mutations de prototype utilisant les _initialisateurs d'objet_](/fr/docs/Web/JavaScript/Reference/Operators/Object_initializer#prototype_mutation) ont été implémentées ([bug 1061853](https://bugzilla.mozilla.org/show_bug.cgi?id=1061853)).
+- wes semantiques e-es6 pouw wes [mutations de pwototype utiwisant w-wes _initiawisateuws d-d'objet_](/fw/docs/web/javascwipt/wefewence/opewatows/object_initiawizew#pwototype_mutation) ont été impwémentées ([bug 1061853](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1061853)). ( ͡o ω ͡o )
 
-  - Maintenant un seul membre noté `__proto__:value` peut changer `le [[Prototype]]` dans la syntaxe de l'initialisateur d'objet.
-  - Les membres de méthode comme `__proto__() {}` ne réecrivent pas le `[[Prototype]]`.
+  - maintenant un seuw membwe n-nyoté `__pwoto__:vawue` p-peut changew `we [[pwototype]]` dans wa syntaxe de w'initiawisateuw d'objet. ^^;;
+  - w-wes membwes de méthode c-comme `__pwoto__() {}` nye wéecwivent pas we `[[pwototype]]`. ^^;;
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-- L'interface [`NavigatorLanguage`](/fr/docs/Web/API/Navigator) est maintenant disponible aux développeurs sur [`WorkerNavigator`](/fr/docs/Web/API/WorkerNavigator) ([bug 925849](https://bugzilla.mozilla.org/show_bug.cgi?id=925849)).
-- La méthode [`Element.closest`](/fr/docs/Web/API/Element/closest) retourne l'ancêtre le plus proche de l'élément utilisé ([bug 1055533](https://bugzilla.mozilla.org/show_bug.cgi?id=1055533)).
-- Appui expérimental pour la propriété [`CanvasRenderingContext2D.filter`](/fr/docs/Web/API/CanvasRenderingContext2D/filter) a été ajouté sous le nom `canvas.filters.enabled` ([bug 927892](https://bugzilla.mozilla.org/show_bug.cgi?id=927892)).
-- Our experimental implementation of Web Animations progresses with the landing of the [`Animation.target`](/fr/docs/Web/API/Animation/target) property. This always is behind the dom.animations-api.core.enabled pref, off by default ([bug 1067701](https://bugzilla.mozilla.org/show_bug.cgi?id=1067701)).
-- The [`hasAttributes()`](/fr/docs/Web/API/Element/hasAttributes) method has been moved from [`Node`](/fr/docs/Web/API/Node) to [`Element`](/fr/docs/Web/API/Element) as required by the spec ([`1055773`](/fr/docs/Web/API/1055773)).
-- [Websockets](/fr/docs/Web/API/WebSockets_API) can now be used in [Workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers) ([bug 504553](https://bugzilla.mozilla.org/show_bug.cgi?id=504553)).
-- The `crossOrigin` reflected attribute of [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), [`HTMLLinkElement`](/fr/docs/Web/API/HTMLLinkElement), [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement), [`HTMLScriptElement`](/fr/docs/Web/API/HTMLScriptElement), and [`SVGScriptElement`](/fr/docs/Web/API/SVGScriptElement) only accepts valid values, and `""` isn't, `null` has to be used instead ([bug 880997](https://bugzilla.mozilla.org/show_bug.cgi?id=880997)).
-- The Resource Timing API has been activated by default ([bug 1002855](https://bugzilla.mozilla.org/show_bug.cgi?id=1002855)).
-- To match the spec, the first argument of [`Selection.containsNode()`](/fr/docs/Web/API/Selection/containsNode) cannot be `null` anymore ([bug 1068058](https://bugzilla.mozilla.org/show_bug.cgi?id=1068058)).
-- The new [`ImageCapture`](/fr/docs/Web/API/ImageCapture) API has been implemented: [`ImageCapture.takePhoto()`](/fr/docs/Web/API/ImageCapture/takePhoto) is available ([bug 916643](https://bugzilla.mozilla.org/show_bug.cgi?id=916643)).
-- Non-HTTP [`XHR`](/fr/docs/Web/API/XMLHttpRequest) request now returns `200` in case of success (instead of the erroneous `0`) ([bug 716491](https://bugzilla.mozilla.org/show_bug.cgi?id=716491)).
-- The internal, non-standard, [`File.mozFullPath`](/fr/docs/Web/API/File/mozFullPath) property is no more visible from content ([bug 1048293](https://bugzilla.mozilla.org/show_bug.cgi?id=1048293)).
-- The constructor of [`File`](/fr/docs/Web/API/File) has been extended to match the specification ([bug 10457483](https://bugzilla.mozilla.org/show_bug.cgi?id=10457483)).
-- An experimental implementation of [`AbortablePromise`](/fr/docs/Web/API/AbortablePromise), a promise that can be aborted by a different entity that the one who created it, has been added. It is prefixed with `Moz` and controlled by the `dom.abortablepromise.enabled` property, defaulting to `false` ([bug 1035060](https://bugzilla.mozilla.org/show_bug.cgi?id=1035060)).
-- La propriété non standardisée [`Navigator.mozIsLocallyAvailable`](/fr/docs/Web/API/Navigator) a été supprimée ([bug 1066826](https://bugzilla.mozilla.org/show_bug.cgi?id=1066826)).
+- w-w'intewface [`navigatowwanguage`](/fw/docs/web/api/navigatow) est m-maintenant disponibwe a-aux dévewoppeuws suw [`wowkewnavigatow`](/fw/docs/web/api/wowkewnavigatow) ([bug 925849](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=925849)). XD
+- w-wa méthode [`ewement.cwosest`](/fw/docs/web/api/ewement/cwosest) wetouwne w-w'ancêtwe we p-pwus pwoche de w-w'éwément utiwisé ([bug 1055533](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1055533)). 🥺
+- appui expéwimentaw p-pouw wa pwopwiété [`canvaswendewingcontext2d.fiwtew`](/fw/docs/web/api/canvaswendewingcontext2d/fiwtew) a-a été ajouté sous we nyom `canvas.fiwtews.enabwed` ([bug 927892](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=927892)). (///ˬ///✿)
+- o-ouw expewimentaw i-impwementation o-of web animations pwogwesses with the w-wanding of the [`animation.tawget`](/fw/docs/web/api/animation/tawget) pwopewty. (U ᵕ U❁) t-this awways is b-behind the dom.animations-api.cowe.enabwed pwef, ^^;; off by defauwt ([bug 1067701](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1067701)). ^^;;
+- the [`hasattwibutes()`](/fw/docs/web/api/ewement/hasattwibutes) m-method h-has been moved fwom [`node`](/fw/docs/web/api/node) t-to [`ewement`](/fw/docs/web/api/ewement) a-as wequiwed by the s-spec ([`1055773`](/fw/docs/web/api/1055773)). rawr
+- [websockets](/fw/docs/web/api/websockets_api) can nyow be used in [wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews) ([bug 504553](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=504553)). (˘ω˘)
+- the `cwossowigin` wefwected attwibute of [`htmwimageewement`](/fw/docs/web/api/htmwimageewement), 🥺 [`htmwwinkewement`](/fw/docs/web/api/htmwwinkewement), nyaa~~ [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement), :3 [`htmwscwiptewement`](/fw/docs/web/api/htmwscwiptewement), /(^•ω•^) a-and [`svgscwiptewement`](/fw/docs/web/api/svgscwiptewement) onwy accepts vawid v-vawues, ^•ﻌ•^ and `""` isn't, UwU `nuww` h-has to be used instead ([bug 880997](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=880997)). 😳😳😳
+- t-the wesouwce timing api has been a-activated by defauwt ([bug 1002855](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1002855)). OwO
+- to m-match the spec, ^•ﻌ•^ t-the fiwst awgument o-of [`sewection.containsnode()`](/fw/docs/web/api/sewection/containsnode) c-cannot be `nuww` anymowe ([bug 1068058](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1068058)). (ꈍᴗꈍ)
+- the nyew [`imagecaptuwe`](/fw/docs/web/api/imagecaptuwe) api has been impwemented: [`imagecaptuwe.takephoto()`](/fw/docs/web/api/imagecaptuwe/takephoto) is avaiwabwe ([bug 916643](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=916643)). (⑅˘꒳˘)
+- nyon-http [`xhw`](/fw/docs/web/api/xmwhttpwequest) w-wequest nyow wetuwns `200` i-in case o-of success (instead of the ewwoneous `0`) ([bug 716491](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=716491)). (⑅˘꒳˘)
+- t-the intewnaw, (ˆ ﻌ ˆ)♡ nyon-standawd, /(^•ω•^) [`fiwe.mozfuwwpath`](/fw/docs/web/api/fiwe/mozfuwwpath) pwopewty is nyo mowe visibwe f-fwom content ([bug 1048293](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1048293)).
+- t-the constwuctow of [`fiwe`](/fw/docs/web/api/fiwe) has b-been extended to match the specification ([bug 10457483](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=10457483)). òωó
+- an expewimentaw i-impwementation o-of [`abowtabwepwomise`](/fw/docs/web/api/abowtabwepwomise), a pwomise that c-can be abowted b-by a diffewent entity that the one who cweated it, (⑅˘꒳˘) has been added. (U ᵕ U❁) it is pwefixed w-with `moz` and c-contwowwed by the `dom.abowtabwepwomise.enabwed` p-pwopewty, >w< defauwting t-to `fawse` ([bug 1035060](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1035060)). σωσ
+- w-wa pwopwiété nyon standawdisée [`navigatow.moziswocawwyavaiwabwe`](/fw/docs/web/api/navigatow) a-a été s-suppwimée ([bug 1066826](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1066826)). -.-
 
-### MathML
+### mathmw
 
-- La fonction `dtls` OpenType (via les CSS [`font-feature-settings`](/fr/docs/Web/CSS/font-feature-settings) sur la feuille de styles par défaut) est maintenant appliquée automatiquement aux éléments MathML lors du positionnement des scripts au-dessus (e.g. dotless i with mathematical hat).
+- w-wa fonction `dtws` o-opentype (via wes css [`font-featuwe-settings`](/fw/docs/web/css/font-featuwe-settings) s-suw wa feuiwwe de stywes paw défaut) est maintenant a-appwiquée automatiquement a-aux éwéments m-mathmw wows du positionnement des s-scwipts au-dessus (e.g. o.O dotwess i with mathematicaw h-hat). ^^
 
-### SVG
+### s-svg
 
-_Aucun changement._
+_aucun changement._
 
-### Audio/Video
+### audio/video
 
-_Aucun changement._
+_aucun c-changement._
 
-## Réseau & Sécurité
+## wéseau & sécuwité
 
-- L'entête HTTP/2 `alt-svc` est maintenant supportée ([bug 1003448](https://bugzilla.mozilla.org/show_bug.cgi?id=1003448)).
-- L'extension [Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency) pour HTTP (HPKP) a été implementée ([bug 787133](https://bugzilla.mozilla.org/show_bug.cgi?id=787133)).
+- w'entête http/2 `awt-svc` e-est maintenant suppowtée ([bug 1003448](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1003448)). >_<
+- w'extension [pubwic k-key p-pinning](/fw/docs/web/secuwity/cewtificate_twanspawency) pouw h-http (hpkp) a été impwementée ([bug 787133](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=787133)). >w<
 
-## Changements pour les modules et les développeurs Mozilla
+## c-changements p-pouw wes moduwes et wes dévewoppeuws moziwwa
 
-### XUL & Modules
+### x-xuw & moduwes
 
-- La méthode privée `_getTabForBrowser()` sur l'élement [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) a été remplacée. À la place, nous avons ajouté une nouvelle méthode publique apellée [`getTabForBrowser`](/fr/docs/Mozilla/Tech/XUL/Méthodes/getTabForBrowser). Elle retourne assez prévisiblement l'élément [`tab`](/fr/docs/Mozilla/Tech/XUL/tab) qui contient le spécifique [`browser`](/fr/docs/Mozilla/Tech/XUL/browser).
-- `Components.utils.now()`, correspondant à [`Performance.now()`](/fr/docs/Web/API/Performance/now) a été implémenté pour les codes Chrome sans fenêtre ouverte ([bug 969490](https://bugzilla.mozilla.org/show_bug.cgi?id=969490)).
+- wa méthode pwivée `_gettabfowbwowsew()` s-suw w'éwement [`tabbwowsew`](/fw/docs/moziwwa/tech/xuw/tabbwowsew) a-a été wempwacée. >_< À wa p-pwace, >w< nyous avons ajouté une n-nyouvewwe méthode p-pubwique apewwée [`gettabfowbwowsew`](/fw/docs/moziwwa/tech/xuw/méthodes/gettabfowbwowsew). rawr e-ewwe wetouwne assez pwévisibwement w'éwément [`tab`](/fw/docs/moziwwa/tech/xuw/tab) qui contient we spécifique [`bwowsew`](/fw/docs/moziwwa/tech/xuw/bwowsew). rawr x3
+- `components.utiws.now()`, ( ͡o ω ͡o ) cowwespondant à [`pewfowmance.now()`](/fw/docs/web/api/pewfowmance/now) a été impwémenté pouw wes codes chwome sans fenêtwe ouvewte ([bug 969490](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=969490)). (˘ω˘)
 
-### Module SDK
+### moduwe sdk
 
-#### Titres
+#### titwes
 
-- Ajout de [clés d'accès pour le menu contextuel](/fr/docs/Mozilla/Add-ons/SDK/Tutorials/Add_a_Context_Menu_Item#adding_an_access_key).
-- Suppression de `isPrivateBrowsing` de [`BrowserWindow`](/fr/docs/Mozilla/Add-ons/SDK/High-Level_APIs/windows#browserwindow).
+- a-ajout de [cwés d-d'accès pouw we menu contextuew](/fw/docs/moziwwa/add-ons/sdk/tutowiaws/add_a_context_menu_item#adding_an_access_key). 😳
+- suppwession d-de `ispwivatebwowsing` d-de [`bwowsewwindow`](/fw/docs/moziwwa/add-ons/sdk/high-wevew_apis/windows#bwowsewwindow). OwO
 
-#### Détails
+#### d-détaiws
 
-[Commits de GitHub effectués entre Firefox 34 et Firefox 35](https://github.com/mozilla/addon-sdk/compare/firefox34...firefox35). Ceci ne comprendra pas les évolutions après la sortie officielle.
+[commits de github effectués e-entwe fiwefox 34 et fiwefox 35](https://github.com/moziwwa/addon-sdk/compawe/fiwefox34...fiwefox35). (˘ω˘) c-ceci nye c-compwendwa pas wes évowutions a-apwès wa sowtie officiewwe. òωó
 
-[Bugs corrigés entre Firefox 34 et Firefox 35](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&chfieldto=2014-10-13&chfield=resolution&query_format=advanced&chfieldfrom=2014-09-02&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&product=Add-on%20SDK&list_id=11562840). Ceci ne comprendra pas les évolutions après la sortie officielle.
+[bugs c-cowwigés e-entwe fiwefox 34 et fiwefox 35](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&chfiewdto=2014-10-13&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2014-09-02&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&bug_status=cwosed&pwoduct=add-on%20sdk&wist_id=11562840). ( ͡o ω ͡o ) ceci nye compwendwa p-pas wes évowutions a-apwès w-wa sowtie officiewwe. UwU
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Compatibilité web pour Firefox 35](/fr/docs/Mozilla/Firefox/Releases/35/Site_Compatibility)
+- [compatibiwité w-web pouw f-fiwefox 35](/fw/docs/moziwwa/fiwefox/weweases/35/site_compatibiwity)
 
-## Anciennes versions
+## a-anciennes v-vewsions
 
-- [Firefox 34 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/34)
-- [Firefox 33 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/33)
-- [Firefox 32 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/32)
-- [Firefox 31 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/31)
-- [Firefox 30 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/30)
-- [Firefox 29 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/29)
-- [Firefox 28 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/28)
-- [Firefox 27 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/27)
-- [Firefox 26 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/26)
-- [Firefox 25 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/25)
-- [Firefox 24 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/24)
-- [Firefox 23 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/23)
-- [Firefox 22 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/22)
-- [Firefox 21 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/21)
-- [Firefox 20 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/20)
-- [Firefox 19 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/19)
-- [Firefox 18 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/18)
-- [Firefox 17 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/17)
-- [Firefox 16 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/16)
-- [Firefox 15 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/15)
-- [Firefox 14 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/14)
-- [Firefox 13 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/13)
-- [Firefox 12 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/12)
-- [Firefox 11 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/11)
-- [Firefox 10 pour les développeurs](/fr/docs/Mozilla/Firefox/Versions/10)
-- [Firefox 9 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/9)
-- [Firefox 8 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/8)
-- [Firefox 7 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/7)
-- [Firefox 6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/6)
-- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)
+- [fiwefox 34 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/34)
+- [fiwefox 33 p-pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/33)
+- [fiwefox 32 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/32)
+- [fiwefox 31 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/31)
+- [fiwefox 30 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/30)
+- [fiwefox 29 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/29)
+- [fiwefox 28 pouw wes d-dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/28)
+- [fiwefox 27 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/27)
+- [fiwefox 26 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/26)
+- [fiwefox 25 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/25)
+- [fiwefox 24 pouw wes d-dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/24)
+- [fiwefox 23 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/23)
+- [fiwefox 22 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/22)
+- [fiwefox 21 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/21)
+- [fiwefox 20 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/20)
+- [fiwefox 19 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/19)
+- [fiwefox 18 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/18)
+- [fiwefox 17 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/17)
+- [fiwefox 16 p-pouw wes d-dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/16)
+- [fiwefox 15 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/15)
+- [fiwefox 14 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/14)
+- [fiwefox 13 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/13)
+- [fiwefox 12 pouw wes d-dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/12)
+- [fiwefox 11 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/11)
+- [fiwefox 10 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/vewsions/10)
+- [fiwefox 9 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/9)
+- [fiwefox 8 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/8)
+- [fiwefox 7 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/7)
+- [fiwefox 6 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/6)
+- [fiwefox 5 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/5)
+- [fiwefox 4 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/4)
+- [fiwefox 3.6 p-pouw wes d-dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3.6)
+- [fiwefox 3.5 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3.5)
+- [fiwefox 3 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3)
+- [fiwefox 2 p-pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/2)
+- [fiwefox 1.5 p-pouw wes d-dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/1.5)

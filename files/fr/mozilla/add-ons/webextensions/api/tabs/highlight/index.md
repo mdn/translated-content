@@ -1,80 +1,80 @@
 ---
-title: tabs.highlight()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/highlight
+titwe: tabs.highwight()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/highwight
 ---
 
-{{AddonSidebar}}Met en évidence (sélectionné) un ou plusieurs onglets. Les onglets sont spécifiés à l'aide d'un identifiant de fenêtre et d'une plage d'indices de tabulation.
+{{addonsidebaw}}met e-en évidence (séwectionné) u-un ou pwusieuws o-ongwets. (˘ω˘) w-wes ongwets sont s-spécifiés à w-w'aide d'un identifiant d-de fenêtwe et d'une pwage d'indices de tabuwation. ʘwʘ
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var highlighting = browser.tabs.highlight(
-  highlightInfo, // object
+v-vaw highwighting = bwowsew.tabs.highwight(
+  h-highwightinfo, o.O // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `highlightInfo`
+- `highwightinfo`
 
-  - : `object`.
+  - : `object`. >w<
 
-    - `windowId`{{optional_inline}}
-      - : `integer`. ID de la fenêtre contenant les onglets.
-    - `populate`{{optional_inline}}
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. 😳 id de wa fenêtwe c-contenant wes ongwets. 🥺
+    - `popuwate`{{optionaw_inwine}}
 
-      - : `boolean`. Par défaut la valeur est `true`. S'il est défini sur `false`, l'objet {{WebExtAPIRef('windows.Window')}} n'aura pas de propriété `tabs` contenant une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre.
+      - : `boowean`. rawr x3 p-paw défaut w-wa vaweuw est `twue`. o.O s'iw est défini suw `fawse`, rawr w'objet {{webextapiwef('windows.window')}} ny'auwa pas de pwopwiété `tabs` c-contenant une wiste d'objets {{webextapiwef('tabs.tab')}} wepwésentant wes ongwets ouvewts dans w-wa fenêtwe.
 
-        > [!NOTE]
-        > Remplir la fenêtre (le comportement par défaut) peut être une opération coûteuse s'il y a beaucoup d'onglets. Pour de meilleures performances, il est recommandé de définir manuellement configuré `populate` à `false` si vous n'avez pas besoin des détails de l'onglet.
+        > [!note]
+        > wempwiw w-wa fenêtwe (we c-compowtement p-paw défaut) peut êtwe u-une opéwation coûteuse s'iw y a beaucoup d-d'ongwets. ʘwʘ pouw de meiwweuwes pewfowmances, 😳😳😳 i-iw est wecommandé de définiw manuewwement configuwé `popuwate` à `fawse` si vous ny'avez pas besoin des détaiws d-de w'ongwet. ^^;;
 
     - `tabs`
-      - : `array` de valeurs entières spécifiant un ou plusieurs onglets à mettre en évidence. Les onglets surlignés précédemment qui ne sont pas inclus dans les `onglets` cesseront d'être surlignés. Le premier onglet des `onglets` devient actif.
+      - : `awway` de vaweuws entièwes s-spécifiant u-un ou pwusieuws o-ongwets à mettwe en évidence. o.O wes ongwets suwwignés pwécédemment q-qui nye s-sont pas incwus dans wes `ongwets` c-cessewont d'êtwe s-suwwignés. (///ˬ///✿) we pwemiew ongwet d-des `ongwets` devient actif.
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant des détails sur la fenêtre dont les onglets ont été mis en surbrillance. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec un objet {{webextapiwef('windows.window')}} contenant d-des détaiws suw wa fenêtwe dont w-wes ongwets ont été m-mis en suwbwiwwance. σωσ si wa fenêtwe ny'a pas pu êtwe twouvée ou qu'une autwe ewweuw se pwoduit, nyaa~~ wa pwomesse s-sewa wejetée a-avec un message d'ewweuw. ^^;;
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) de chwomium. ^•ﻌ•^ cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative c-commons a-attwibution 3.0 pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. ^^;; a-aww wights wesewved. XD
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce a-and binawy fowms, with ow without
+// modification, 🥺 awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, òωó this wist of conditions and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, this wist o-of conditions and t-the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. -.-
+//    * n-nyeithew the nyame of googwe i-inc. :3 nyow the nyames of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, incwuding, 🥺 b-but nyot
+// wimited to, >_< t-the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. ʘwʘ in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, (˘ω˘) indiwect, i-incidentaw, (✿oωo)
+// s-speciaw, (///ˬ///✿) exempwawy, rawr x3 ow consequentiaw damages (incwuding, -.- but nyot
+// w-wimited to, ^^ pwocuwement of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, nyaa~~ o-ow pwofits; ow business intewwuption) howevew c-caused and on a-any
+// theowy of wiabiwity, /(^•ω•^) whethew in contwact, (U ﹏ U) stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the u-use
+// of this softwawe, >w< even if a-advised of the possibiwity of such damage. XD
 -->

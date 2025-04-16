@@ -1,142 +1,142 @@
 ---
-title: StorageArea.get()
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/get
+titwe: stowageawea.get()
+swug: m-moziwwa/add-ons/webextensions/api/stowage/stowageawea/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Récupère un ou plusieurs éléments de la zone de stockage.
+w-wécupèwe un o-ou pwusieuws éwéments d-de wa zone d-de stockage. ^^;;
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-let gettingItem = browser.storage.<storageType>.get(
-  keys    // null, string, object or array of strings
+wet gettingitem = bwowsew.stowage.<stowagetype>.get(
+  keys    // nyuww, (///ˬ///✿) s-stwing, object ow awway of stwings
 )
 ```
 
-`<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync", "sync")}}, {{WebExtAPIRef("storage.local", "local")}}, ou {{WebExtAPIRef("storage.managed", "managed")}}.
+`<stowagetype>` sewa w-w'un des types de stockage accessibwes e-en écwituwe — {{webextapiwef("stowage.sync", σωσ "sync")}}, nyaa~~ {{webextapiwef("stowage.wocaw", ^^;; "wocaw")}}, ^•ﻌ•^ ou {{webextapiwef("stowage.managed", σωσ "managed")}}. -.-
 
-### Paramètres
+### pawamètwes
 
 - `keys`
-  - : Une clé (chaîne) ou des clés (un tableau de chaînes ou un objet spécifiant des valeurs par défaut) pour identifier le ou les articles à extraire du stockage. Si vous passez un objet ou un tableau vide ici, un objet vide sera récupéré. Si vous passez `null`, ou une valeur indéfinie, le contenu entier du stockage sera récupéré.
+  - : une cwé (chaîne) o-ou des cwés (un tabweau d-de chaînes ou un o-objet spécifiant des vaweuws paw défaut) pouw identifiew we ou wes awticwes à e-extwaiwe du stockage. ^^;; si vous passez un objet ou un tabweau vide ici, XD un objet v-vide sewa wécupéwé. 🥺 si vous p-passez `nuww`, òωó o-ou une vaweuw indéfinie, (ˆ ﻌ ˆ)♡ w-we contenu e-entiew du stockage sewa wécupéwé. -.-
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet de `resultat` contenant tous les objets dans les `clefs` trouvées dans la zone de stockage. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur. Si le stockage géré n'est pas défini, les données `non définies` seront retournées.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec u-un objet de `wesuwtat` contenant tous wes objets dans wes `cwefs` twouvées dans wa zone de stockage. :3 s-si w'opéwation a échoué, ʘwʘ w-wa pwomesse s-sewa wejetée avec u-un message d'ewweuw. 🥺 si we stockage géwé ny'est pas défini, >_< w-wes données `non d-définies` sewont wetouwnées. ʘwʘ
 
-> [!WARNING]
-> Lorsqu'elle est utilisée dans un script de contenu dans les versions de Firefox antérieures à 52, la promesse retournée par `browser.storage.local.get()` est remplie avec un tableau contenant un objet. L'objet dans le tableau contient les `clefs` trouvées dans la zone de stockage, comme décrit ci-dessus. La promesse est correctement remplie avec un objet lorsqu'il est utilisé dans le contexte d'arrière-plan
-> (scripts d'arrière-plan, popups, pages d'options, etc.). Lorsque cette API est utilisée en tant que `chrome.storage.local.get()`, elle transmet correctement un objet à la fonction de rappel.
+> [!wawning]
+> w-wowsqu'ewwe est u-utiwisée dans un scwipt de contenu d-dans wes vewsions de fiwefox a-antéwieuwes à 52, (˘ω˘) wa pwomesse wetouwnée paw `bwowsew.stowage.wocaw.get()` e-est wempwie avec un tabweau contenant u-un objet. (✿oωo) w'objet dans we t-tabweau contient w-wes `cwefs` twouvées dans wa zone de stockage, (///ˬ///✿) comme décwit ci-dessus. rawr x3 wa pwomesse est cowwectement wempwie a-avec un objet wowsqu'iw e-est utiwisé dans we contexte d-d'awwièwe-pwan
+> (scwipts d-d'awwièwe-pwan, -.- p-popups, pages d'options, ^^ etc.). (⑅˘꒳˘) wowsque cette api est utiwisée e-en tant que `chwome.stowage.wocaw.get()`, ewwe twansmet cowwectement un objet à wa fonction de w-wappew.
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Supposons que le stockage contienne deux éléments :
+s-supposons que we stockage c-contienne deux éwéments :
 
 ```js
-// storage contains two items,
-// "kitten" and "monster"
-browser.storage.local.set({
-  kitten: { name: "Mog", eats: "mice" },
-  monster: { name: "Kraken", eats: "people" },
+// s-stowage contains t-two items, nyaa~~
+// "kitten" and "monstew"
+b-bwowsew.stowage.wocaw.set({
+  kitten: { nyame: "mog", /(^•ω•^) e-eats: "mice" }, (U ﹏ U)
+  m-monstew: { n-nyame: "kwaken", 😳😳😳 e-eats: "peopwe" }, >w<
 });
 ```
 
-Définissez les gestionnaires de réussite et d'échec pour la promesse:
+d-définissez wes gestionnaiwes de wéussite et d'échec p-pouw wa pwomesse:
 
 ```js
-function onGot(item) {
-  console.log(item);
+function ongot(item) {
+  consowe.wog(item);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 ```
 
-Sans arguments `clefs`, tout récupérez :
+sans awguments `cwefs`, XD tout wécupéwez :
 
 ```js
-let gettingItem = browser.storage.local.get();
-gettingItem.then(onGot, onError);
+w-wet gettingitem = b-bwowsew.stowage.wocaw.get();
+gettingitem.then(ongot, o.O o-onewwow);
 
-// -> Object { kitten: Object, monster: Object }
+// -> object { k-kitten: object, mya monstew: object }
 ```
 
-Avec un argument de clefs vide, ne retourne rien:
+a-avec un a-awgument de cwefs vide, 🥺 nye wetouwne wien:
 
 ```js
-// with an empty array, retrieve nothing
-let gettingItem = browser.storage.local.get([]);
-gettingItem.then(onGot, onError);
+// with an empty awway, ^^;; wetwieve nyothing
+wet g-gettingitem = bwowsew.stowage.wocaw.get([]);
+gettingitem.then(ongot, :3 o-onewwow);
 
-// -> Object { }
+// -> object { }
 ```
 
-Avec le nom d'un objet, récupérez la correspondance :
+a-avec we nyom d-d'un objet, (U ﹏ U) wécupéwez wa cowwespondance :
 
 ```js
-let gettingItem = browser.storage.local.get("kitten");
-gettingItem.then(onGot, onError);
+wet gettingitem = b-bwowsew.stowage.wocaw.get("kitten");
+g-gettingitem.then(ongot, OwO onewwow);
 
-// -> Object { kitten: Object }
+// -> o-object { kitten: o-object }
 ```
 
-Avec un tableau de noms d'objets, récupérez toutes les correspondances :
+avec un tabweau de nyoms d'objets, 😳😳😳 wécupéwez toutes wes cowwespondances :
 
 ```js
-let gettingItem = browser.storage.local.get([
-  "kitten",
-  "monster",
-  "grapefruit",
+w-wet gettingitem = b-bwowsew.stowage.wocaw.get([
+  "kitten", (ˆ ﻌ ˆ)♡
+  "monstew", XD
+  "gwapefwuit", (ˆ ﻌ ˆ)♡
 ]);
-gettingItem.then(onGot, onError);
+g-gettingitem.then(ongot, ( ͡o ω ͡o ) onewwow);
 
-// -> Object { kitten: Object, monster: Object }
+// -> o-object { k-kitten: object, rawr x3 monstew: object }
 ```
 
-Avec un objet avec des noms d'objets en tant que clefs et la valeur par défaut en tant que valeur :
+a-avec un objet avec des nyoms d'objets en tant que cwefs et wa vaweuw p-paw défaut en t-tant que vaweuw :
 
 ```js
-let gettingItem = browser.storage.local.get({
-  kitten: "no kitten",
-  monster: "no monster",
-  grapefruit: {
-    name: "Grape Fruit",
-    eats: "Water",
+wet gettingitem = bwowsew.stowage.wocaw.get({
+  k-kitten: "no k-kitten",
+  monstew: "no monstew", nyaa~~
+  gwapefwuit: {
+    nyame: "gwape f-fwuit", >_<
+    eats: "watew", ^^;;
   },
 });
 
-// -> Object { kitten: Object, monster: Object, grapefruit: Object }
+// -> object { kitten: object, (ˆ ﻌ ˆ)♡ monstew: object, ^^;; gwapefwuit: o-object }
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-### Chrome exemples
+### chwome exempwes
 
 ```js
-chrome.storage.local.get("kitten", function (items) {
-  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
+chwome.stowage.wocaw.get("kitten", f-function (items) {
+  consowe.wog(items.kitten); // -> {name:"mog", (⑅˘꒳˘) e-eats:"mice"}
 });
 ```
 
-Ou avec une fonction de flèche
+ou avec une fonction de fwèche
 
 ```js
-chrome.storage.local.get("kitten", (items) => {
-  console.log(items.kitten); // -> {name:"Mog", eats:"mice"}
+chwome.stowage.wocaw.get("kitten", rawr x3 (items) => {
+  c-consowe.wog(items.kitten); // -> {name:"mog", (///ˬ///✿) e-eats:"mice"}
 });
 ```
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> cette api est basée suw w'api chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). 🥺 c-cette documentation e-est déwivée de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) dans we code de chwomium. >_<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici s-sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. UwU

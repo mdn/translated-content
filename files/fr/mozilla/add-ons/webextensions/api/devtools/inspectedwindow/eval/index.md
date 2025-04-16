@@ -1,198 +1,198 @@
 ---
-title: devtools.inspectedWindow.eval()
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval
+titwe: devtoows.inspectedwindow.evaw()
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/evaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Exécute JavaScript dans la fenêtre à laquelle les devtools sont attachés.
+e-exékawaii~ j-javascwipt dans w-wa fenêtwe à w-waquewwe wes devtoows s-sont attachés. ^^;;
 
-C'est un peu comme utiliser {{WebExtAPIRef("tabs.executeScript()")}} pour joindre un script de contenu, mais avec deux différences principales:
+c-c'est un p-peu comme utiwisew {{webextapiwef("tabs.exekawaii~scwipt()")}} pouw joindwe un scwipt de contenu, ^^;; mais avec deux difféwences p-pwincipawes:
 
-Tout d'abord, le JavaScript peut utiliser un ensemble de [commandes spéciales que les navigateurs fournissent généralement dans leur implémentation de console devtools](#helpers)&nbsp;: par exemple, en utilisant "$0" pour designer l'élément actuellement sélectionné dans l'inspecteur.
+tout d'abowd, XD we javascwipt peut utiwisew u-un ensembwe de [commandes s-spéciawes que wes nyavigateuws fouwnissent généwawement dans w-weuw impwémentation de consowe d-devtoows](#hewpews)&nbsp;: p-paw exempwe, 🥺 en utiwisant "$0" pouw designew w'éwément actuewwement s-séwectionné dans w'inspecteuw. (///ˬ///✿)
 
-Deuxièmement, le JavaScript que vous exécutez peut voir les modifications apportées à la page par des scripts que la page a chargés. Cela contraste avec les scripts de contenu, qui voient la page [telle qu'elle existerait si aucun script de page n'était pas chargé](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access). Cependant, notez que l'isolement fourni par les scripts de contenu est une fonction de sécurité délibérée, destinée à rendre plus difficile la confusion ou la subversion des WebExtensions par des pages web malveillantes ou simplement non coopératives en redéfinissant les fonctions et les propriétés du DOM. Cela signifie que vous devez être très prudent si vous renoncez à cette protection en utilisant eval(), et devrait utiliser les scripts de contenu, sauf si vous devez utiliser eval().
+deuxièmement, (U ᵕ U❁) we javascwipt que vous exékawaii~z p-peut voiw wes modifications a-appowtées à w-wa page paw des s-scwipts que wa p-page a chawgés. ^^;; cewa contwaste avec wes scwipts d-de contenu, ^^;; qui voient wa page [tewwe qu'ewwe e-existewait si aucun scwipt de page ny'était pas chawgé](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#dom_access). rawr cependant, (˘ω˘) nyotez q-que w'isowement fouwni paw wes scwipts d-de contenu e-est une fonction d-de sécuwité déwibéwée, 🥺 destinée à wendwe pwus difficiwe w-wa confusion ou w-wa subvewsion des webextensions p-paw des pages w-web mawveiwwantes ou simpwement n-nyon coopéwatives en wedéfinissant w-wes fonctions et wes pwopwiétés du dom. nyaa~~ cewa s-signifie que vous devez êtwe t-twès pwudent si vous wenoncez à c-cette pwotection e-en utiwisant evaw(), :3 et devwait utiwisew wes scwipts de contenu, /(^•ω•^) sauf si vous devez utiwisew evaw(). ^•ﻌ•^
 
-Le script est évalué par défaut dans le cadre principal de la page. Le script doit évaluer une valeur qui peut être représentée comme JSON (ce qui signifie que, par exemple, il peut ne pas évaluer une fonction ou un objet contenant des fonctions). Par défaut, le script ne voit pas les scripts de contenu attachés à la page.
+we scwipt e-est évawué p-paw défaut dans we cadwe pwincipaw d-de wa page. w-we scwipt doit évawuew u-une vaweuw qui peut êtwe wepwésentée comme json (ce q-qui signifie que, UwU paw exempwe, 😳😳😳 iw peut nye pas évawuew une fonction ou un objet c-contenant des fonctions). OwO paw d-défaut, ^•ﻌ•^ we scwipt n-nye voit pas w-wes scwipts de contenu attachés à w-wa page. (ꈍᴗꈍ)
 
-Vous ne pouvez pas appeler eval() sur les fenêtres de navigateur privilégiées telles que "about: addons".
+vous n-nye pouvez pas a-appewew evaw() s-suw wes fenêtwes de navigateuw pwiviwégiées t-tewwes que "about: a-addons". (⑅˘꒳˘)
 
-Vous pouvez éventuellement fournir un paramètre d'options, qui comprend des options pour évaluer le script dans une image différente ou dans le contexte des scripts de contenu attachés. Notez que Firefox ne supporte pas encore le paramètre d'options.
+vous p-pouvez éventuewwement f-fouwniw u-un pawamètwe d'options, (⑅˘꒳˘) qui compwend des options pouw évawuew w-we scwipt dans une image difféwente ou dans we contexte des scwipts de contenu attachés. (ˆ ﻌ ˆ)♡ nyotez q-que fiwefox nye suppowte pas encowe we pawamètwe d'options. /(^•ω•^)
 
-La fonction eval() renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui résout le résultat évalué du script ou une erreur.
+w-wa fonction evaw() w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui wésout we wésuwtat évawué d-du scwipt ou une ewweuw. òωó
 
-## Aides
+## a-aides
 
-Le script accède à un certain nombre d'objets qui aident le script injecté à interagir avec les outils du développeur. Les assistants suivants sont actuellement pris en charge:
+we scwipt a-accède à un cewtain nyombwe d'objets qui aident we scwipt injecté à intewagiw avec wes o-outiws du dévewoppeuw. (⑅˘꒳˘) wes assistants s-suivants sont actuewwement p-pwis en chawge:
 
 - `$0`
-  - : Contient une référence à l'élément actuellement sélectionné dans l'inspecteur Devtools.
+  - : c-contient une wéféwence à w'éwément actuewwement s-séwectionné d-dans w'inspecteuw devtoows. (U ᵕ U❁)
 - `inspect()`
-  - : Etant donné un objet, s'il s'agit d'un élément DOM dans la page, sélectionnez-le dans l'inspecteur devtools, sinon il crée un aperçu de l'objet dans la webconsole.
+  - : e-etant donné u-un objet, >w< s'iw s'agit d'un éwément dom dans wa page, σωσ séwectionnez-we dans w'inspecteuw d-devtoows, -.- s-sinon iw cwée u-un apewçu de w'objet dans wa w-webconsowe. o.O
 
-[Voir quelques exemples.](#examples)
+[voiw q-quewques exempwes.](#exampwes)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var evaluating = browser.devtools.inspectedWindow.eval(
-  expression, // string
-  options, // object
+v-vaw evawuating = bwowsew.devtoows.inspectedwindow.evaw(
+  expwession, ^^ // stwing
+  options, >_< // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `expression`
-  - : `string`. L'expression JavaScript à évaluer. La chaîne doit évaluer un objet qui peut être représenté comme JSON, ou une exception sera lancée. Par exemple, l'expression ne doit pas évaluer une fonction.
-- `options`{{optional_inline}}
+- `expwession`
+  - : `stwing`. w-w'expwession javascwipt à évawuew. >w< wa chaîne d-doit évawuew u-un objet qui peut êtwe wepwésenté comme json, >_< ou une exception s-sewa wancée. >w< paw exempwe, rawr w'expwession nye doit pas évawuew une fonction. rawr x3
+- `options`{{optionaw_inwine}}
 
-  - : `object`. Options pour la fonction (Notez que Firefox ne supporte pas encore cette option), comme suit :
+  - : `object`. ( ͡o ω ͡o ) o-options pouw wa fonction (notez que fiwefox nye s-suppowte pas encowe c-cette option), (˘ω˘) comme suit :
 
-    - `frameURL`{{optional_inline}}
-      - : `string`. L'URL du cadre dans lequel à évaluer l'expression. Si cela est supprimé, l'expression est évaluée dans la trame principale de la fenêtre.
-    - `useContentScriptContext`{{optional_inline}}
-      - : `boolean`. Si c'est vrai, évaluez l'expression dans le contexte des scripts de contenu que cette extension a attachée à la page. Si vous définissez cette option, vous devez d'abord attacher certains scripts de contenu à la page ou une erreur Devtools sera lancée.
-    - `contextSecurityOrigin` {{optional_inline}}
-      - : `string`. Evaluez l'expression dans le contexte d'un script de contenu attaché par une extension différente, dont l'origine correspond à la valeur donnée ici. Ces remplacements sont `useContentScriptContext`.
+    - `fwameuww`{{optionaw_inwine}}
+      - : `stwing`. 😳 w'uww du cadwe dans wequew à évawuew w-w'expwession. OwO si c-cewa est suppwimé, (˘ω˘) w'expwession est évawuée dans wa twame pwincipawe d-de wa fenêtwe. òωó
+    - `usecontentscwiptcontext`{{optionaw_inwine}}
+      - : `boowean`. ( ͡o ω ͡o ) si c'est vwai, évawuez w-w'expwession dans we contexte des scwipts de contenu que c-cette extension a attachée à w-wa page. si vous d-définissez cette option, UwU vous d-devez d'abowd attachew cewtains s-scwipts de contenu à w-wa page ou u-une ewweuw devtoows sewa wancée. /(^•ω•^)
+    - `contextsecuwityowigin` {{optionaw_inwine}}
+      - : `stwing`. (ꈍᴗꈍ) e-evawuez w-w'expwession dans we contexte d'un scwipt de contenu a-attaché p-paw une extension d-difféwente, 😳 dont w'owigine cowwespond à wa vaweuw d-donnée ici. mya ces wempwacements s-sont `usecontentscwiptcontext`. mya
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau contenant deux éléments.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un t-tabweau contenant d-deux éwéments. /(^•ω•^)
 
-Si aucune erreur n'est survenue, l'élément 0 contiendra le résultat de l'évaluation de l'expression et l'élément 1 sera indéfini.
+s-si aucune ewweuw n-ny'est suwvenue, ^^;; w'éwément 0 c-contiendwa we wésuwtat de w'évawuation de w'expwession et w'éwément 1 sewa indéfini. 🥺
 
-Si une erreur s'est produite, l'élément 0 sera indéfini et l'élément 1 contiendra un objet donnant des détails sur l'erreur. Deux types différents d'erreurs sont distingués :
+si u-une ewweuw s'est pwoduite, ^^ w'éwément 0 s-sewa indéfini et w'éwément 1 c-contiendwa un objet donnant d-des détaiws suw w'ewweuw. ^•ﻌ•^ d-deux types difféwents d-d'ewweuws s-sont distingués :
 
-- Des erreurs rencontrées lors de l'évaluation du JavaScript (par exemple, des erreurs de syntaxe dans l'expression). Dans ce cas, l'élément 1 contiendra :
+- d-des ewweuws w-wencontwées wows de w'évawuation du javascwipt (paw exempwe, des ewweuws de syntaxe dans w'expwession). /(^•ω•^) dans c-ce cas, ^^ w'éwément 1 c-contiendwa :
 
-  - Une propriété boolean isException, définie sur true
-  - Une valeur de propriété de chaîne, en donnant plus de détails.
+  - u-une pwopwiété boowean i-isexception, 🥺 définie suw twue
+  - une vaweuw de pwopwiété d-de chaîne, (U ᵕ U❁) en d-donnant pwus de détaiws. 😳😳😳
 
-- D'autres erreurs (par exemple, une expression qui évalue sur un objet qui ne peut pas être représenté comme JSON). Dans ce cas, l'élément 1 contiendra:
+- d'autwes e-ewweuws (paw exempwe, nyaa~~ une expwession qui évawue s-suw un objet q-qui nye peut pas êtwe wepwésenté c-comme json). (˘ω˘) d-dans ce cas, >_< w'éwément 1 contiendwa:
 
-  - Une propriété booléenne isError, définie sur true
-  - Un code de propriété de chaîne contenant un code d'erreur.
+  - une pwopwiété boowéenne isewwow, XD d-définie suw t-twue
+  - un code d-de pwopwiété d-de chaîne contenant u-un code d'ewweuw. rawr x3
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ceci teste si jQuery est défini dans la fenêtre inspectée et enregistre le résultat. Notez que cela ne fonctionnerait pas dans un script de contenu, car même si jQuery était défini, le script de contenu ne le verrait pas.
+c-ceci teste s-si jquewy est défini dans wa f-fenêtwe inspectée et enwegistwe we wésuwtat. ( ͡o ω ͡o ) n-nyotez que cewa nye fonctionnewait p-pas dans un scwipt d-de contenu, :3 caw même si jquewy était d-défini, mya we scwipt de contenu nye we v-vewwait pas. σωσ
 
 ```js
-function handleError(error) {
-  if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
-  } else {
-    console.log(`JavaScript error: ${error.value}`);
+f-function handweewwow(ewwow) {
+  i-if (ewwow.isewwow) {
+    consowe.wog(`devtoows ewwow: ${ewwow.code}`);
+  } ewse {
+    consowe.wog(`javascwipt ewwow: ${ewwow.vawue}`);
   }
 }
 
-function handleResult(result) {
-  console.log(result);
-  if (result[0] !== undefined) {
-    console.log(`jQuery: ${result[0]}`);
-  } else if (result[1]) {
-    handleError(result[1]);
+f-function handwewesuwt(wesuwt) {
+  consowe.wog(wesuwt);
+  if (wesuwt[0] !== undefined) {
+    c-consowe.wog(`jquewy: ${wesuwt[0]}`);
+  } e-ewse if (wesuwt[1]) {
+    handweewwow(wesuwt[1]);
   }
 }
 
-const checkjQuery = "typeof jQuery != 'undefined'";
+c-const checkjquewy = "typeof jquewy != 'undefined'";
 
-evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(checkjQuery).then(handleResult);
+e-evawbutton.addeventwistenew("cwick", (ꈍᴗꈍ) () => {
+  b-bwowsew.devtoows.inspectedwindow.evaw(checkjquewy).then(handwewesuwt);
 });
 ```
 
-### Exemples d'aide
+### exempwes d'aide
 
-Cela utilise l'aide de `$0` pour définir la couleur d'arrière-plan de l'élément, actuellement sélectionné dans l'inspecteur :
+cewa u-utiwise w'aide de `$0` pouw définiw wa couweuw d-d'awwièwe-pwan d-de w'éwément, OwO actuewwement séwectionné d-dans w'inspecteuw :
 
 ```js
-const evalButton = document.querySelector("#reddinate");
-const evalString = "$0.style.backgroundColor = 'red'";
+c-const evawbutton = d-document.quewysewectow("#weddinate");
+const e-evawstwing = "$0.stywe.backgwoundcowow = 'wed'";
 
-function handleError(error) {
-  if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
-  } else {
-    console.log(`JavaScript error: ${error.value}`);
+function handweewwow(ewwow) {
+  if (ewwow.isewwow) {
+    consowe.wog(`devtoows ewwow: ${ewwow.code}`);
+  } ewse {
+    consowe.wog(`javascwipt ewwow: ${ewwow.vawue}`);
   }
 }
 
-function handleResult(result) {
-  if (result[1]) {
-    handleError(result[1]);
+function handwewesuwt(wesuwt) {
+  if (wesuwt[1]) {
+    handweewwow(wesuwt[1]);
   }
 }
 
-evalButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(evalString).then(handleResult);
+evawbutton.addeventwistenew("cwick", o.O () => {
+  bwowsew.devtoows.inspectedwindow.evaw(evawstwing).then(handwewesuwt);
 });
 ```
 
-Cela utilise l'assistant l'inspection() pour sélectionner le premier élément \<h1> dans la page:
+c-cewa utiwise w-w'assistant w'inspection() pouw séwectionnew w-we pwemiew éwément \<h1> dans w-wa page:
 
 ```js
-const inspectButton = document.querySelector("#inspect");
-const inspectString = "inspect(document.querySelector('h1'))";
+c-const inspectbutton = document.quewysewectow("#inspect");
+c-const inspectstwing = "inspect(document.quewysewectow('h1'))";
 
-function handleError(error) {
-  if (error.isError) {
-    console.log(`Devtools error: ${error.code}`);
-  } else {
-    console.log(`JavaScript error: ${error.value}`);
+f-function h-handweewwow(ewwow) {
+  if (ewwow.isewwow) {
+    c-consowe.wog(`devtoows ewwow: ${ewwow.code}`);
+  } e-ewse {
+    c-consowe.wog(`javascwipt ewwow: ${ewwow.vawue}`);
   }
 }
 
-function handleResult(result) {
-  if (result[1]) {
-    handleError(result[1]);
+function h-handwewesuwt(wesuwt) {
+  i-if (wesuwt[1]) {
+    h-handweewwow(wesuwt[1]);
   }
 }
 
-inspectButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.eval(inspectString).then(handleResult);
+i-inspectbutton.addeventwistenew("cwick", 😳😳😳 () => {
+  b-bwowsew.devtoows.inspectedwindow.evaw(inspectstwing).then(handwewesuwt);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
+> c-cette api e-est basée suw w-w'api chwomium [`chwome.devtoows`](https://devewopew.chwome.com/extensions/devtoows). /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. OwO
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the c-chwomium authows. ^^ aww wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and u-use in souwce and binawy fowms, (///ˬ///✿) w-with ow without
+// modification, (///ˬ///✿) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above c-copywight
+// nyotice, ʘwʘ this wist of conditions and the fowwowing d-discwaimew. ^•ﻌ•^
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, OwO this wist of c-conditions and t-the fowwowing discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution.
+//    * nyeithew the n-nyame of googwe i-inc. (U ﹏ U) nyow the nyames o-of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts d-dewived f-fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (⑅˘꒳˘) incwuding, (U ﹏ U) b-but nyot
+// wimited to, o.O t-the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. mya in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, XD indiwect, òωó incidentaw,
+// speciaw, (˘ω˘) exempwawy, :3 o-ow consequentiaw d-damages (incwuding, OwO but nyot
+// w-wimited to, mya p-pwocuwement of substitute goods ow sewvices; woss of use, (˘ω˘)
+// data, o-ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, o.O whethew i-in contwact, (✿oωo) s-stwict wiabiwity, (ˆ ﻌ ˆ)♡ ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the u-use
+// of this softwawe, ^^;; even if a-advised of the p-possibiwity of such damage. OwO
 -->

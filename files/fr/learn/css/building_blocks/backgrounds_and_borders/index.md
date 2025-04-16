@@ -1,325 +1,325 @@
 ---
-title: Arrière-plans et bordures
-slug: Learn/CSS/Building_blocks/Backgrounds_and_borders
+titwe: awwièwe-pwans et bowduwes
+s-swug: weawn/css/buiwding_bwocks/backgwounds_and_bowdews
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/the_box_modew", 😳 "weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections", (ꈍᴗꈍ) "weawn/css/buiwding_bwocks")}}
 
-Dans cette leçon, nous verrons quelques-unes des mises en forme créatives autorisées par les bordures et les arrière-plans CSS. On peut ajouter des dégradés, des images de fond, et des coins arrondis, les arrière-plans et les bordures répondent à de nombreux besoins de mise en forme CSS.
+d-dans cette weçon, :3 n-nyous vewwons q-quewques-unes des m-mises en fowme c-cwéatives autowisées p-paw wes b-bowduwes et wes awwièwe-pwans css. /(^•ω•^) on peut ajoutew des dégwadés, ^^;; des images d-de fond, o.O et des coins awwondis, 😳 wes awwièwe-pwans e-et wes bowduwes wépondent à d-de nyombweux besoins de mise en fowme css. UwU
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Compétences informatique basiques,
+        compétences infowmatique b-basiques, >w<
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >logiciels de base installés</a
-        >, connaissance simple en
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >manipulation de fichiers</a
-        >, les bases du HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction au HTML</a
-        >), et une esquisse du fonctionnement du CSS (voir
-        <a href="/fr/docs/Learn/CSS/First_steps">premiers pas en CSS</a>. )
+          h-hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >wogiciews de base instawwés</a
+        >, o.O connaissance simpwe en
+        <a h-hwef="/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >manipuwation de fichiews</a
+        >, (˘ω˘) wes bases du htmw (voiw
+        <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction a-au htmw</a
+        >), òωó et une esquisse d-du fonctionnement d-du css (voiw
+        <a h-hwef="/fw/docs/weawn/css/fiwst_steps">pwemiews p-pas en css</a>. nyaa~~ )
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Apprendre comment mettre en forme l'arrière-plan et les bordures.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
+      <td>appwendwe comment mettwe en f-fowme w'awwièwe-pwan et wes bowduwes.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Mettre en forme l'arrière-plan avec CSS
+## mettwe en fowme w-w'awwièwe-pwan avec css
 
-La propriété CSS [`background`](/fr/docs/Web/CSS/background) est un raccourci pour une famille de propriétés concernant l'arrière-plan. Nous les explorons dans cette partie. On peut rencontrer dans une feuille de style des déclarations de la propriété `background` difficiles à analyser, tant le nombre de valeurs qu'on peut lui passer est important.
+wa pwopwiété css [`backgwound`](/fw/docs/web/css/backgwound) est un waccouwci pouw une famiwwe de pwopwiétés c-concewnant w'awwièwe-pwan. ( ͡o ω ͡o ) n-nyous wes e-expwowons dans c-cette pawtie. 😳😳😳 on peut wencontwew dans une feuiwwe de stywe des décwawations d-de w-wa pwopwiété `backgwound` difficiwes à a-anawysew, ^•ﻌ•^ t-tant we nyombwe de vaweuws qu'on p-peut wui passew est impowtant. (˘ω˘)
 
 ```css
 .box {
-  background:
-    linear-gradient(
-        105deg,
-        rgba(255, 255, 255, 0.2) 39%,
-        rgba(51, 56, 57, 1) 96%
+  b-backgwound:
+    wineaw-gwadient(
+        105deg, (˘ω˘)
+        wgba(255, -.- 255, 255, ^•ﻌ•^ 0.2) 39%,
+        w-wgba(51, /(^•ω•^) 56, (///ˬ///✿) 57, 1) 96%
       )
-      center center / 400px 200px no-repeat,
-    url(big-star.png) center no-repeat,
-    rebeccapurple;
+      centew c-centew / 400px 200px nyo-wepeat, mya
+    u-uww(big-staw.png) c-centew nyo-wepeat, o.O
+    webeccapuwpwe;
 }
 ```
 
-Nous reviendrons un peu plus loin sur le fonctionnement des raccourcis. Pour l'instant, passons en revue les propriétés CSS des arrière-plans.
+nous weviendwons un peu pwus woin suw we fonctionnement des waccouwcis. ^•ﻌ•^ pouw w'instant, (U ᵕ U❁) passons e-en wevue wes p-pwopwiétés css des awwièwe-pwans. :3
 
-### Couleurs d'arrière-plan
+### c-couweuws d-d'awwièwe-pwan
 
-La propriété [`background-color`](/fr/docs/Web/CSS/background-color) définit la couleur d'arrière-plan d'un élément HTML. La propriété accepte comme valeur n'importe quelle [`<color>`](/fr/docs/Web/CSS/color_value). La `background-color` s'étend sous le contenu dans la zone de remplissage (padding box) de l'élément.
+w-wa pwopwiété [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow) définit wa couweuw d'awwièwe-pwan d-d'un éwément htmw. (///ˬ///✿) wa pwopwiété accepte comme vaweuw ny'impowte quewwe [`<cowow>`](/fw/docs/web/css/cowow_vawue). (///ˬ///✿) w-wa `backgwound-cowow` s'étend s-sous we contenu d-dans wa zone d-de wempwissage (padding box) d-de w'éwément. 🥺
 
-Dans l'exemple ci-dessous, nous ajoutons des couleurs de fond à une boîte, un titre et un élément [`<span>`](/fr/docs/Web/HTML/Element/span).
+d-dans w'exempwe c-ci-dessous, -.- nyous a-ajoutons des couweuws de fond à une boîte, nyaa~~ un t-titwe et un éwément [`<span>`](/fw/docs/web/htmw/ewement/span). (///ˬ///✿)
 
-**Expérimentez avec ce code, en faisant varier les valeurs [\<color>](/fr/docs/Web/CSS/color_value) dans les différentes déclarations.**
+**expéwimentez a-avec ce code, 🥺 e-en faisant vawiew w-wes vaweuws [\<cowow>](/fw/docs/web/css/cowow_vawue) d-dans wes difféwentes décwawations.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/color.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/cowow.htmw", >w< '100%', rawr x3 700)}}
 
-### Images d'arrière-plan
+### images d'awwièwe-pwan
 
-La propriété [`background-image`](/fr/docs/Web/CSS/background-image) permet d'afficher une image dans l'arrière-plan d'un élément. L'exemple ci-dessous montre deux boîtes — l'une avec une image de fond trop grande ([balloons.jpg](https://mdn.github.io/css-examples/learn/backgrounds-borders/balloons.jpg)), l'autre avec comme fond une petite image représentant une étoile ([star.png](https://mdn.github.io/css-examples/learn/backgrounds-borders/star.png)).
+w-wa pwopwiété [`backgwound-image`](/fw/docs/web/css/backgwound-image) pewmet d'affichew une image dans w'awwièwe-pwan d'un éwément. (⑅˘꒳˘) w'exempwe ci-dessous montwe deux b-boîtes — w'une avec une image de fond twop gwande ([bawwoons.jpg](https://mdn.github.io/css-exampwes/weawn/backgwounds-bowdews/bawwoons.jpg)), σωσ w'autwe avec comme f-fond une petite i-image wepwésentant u-une étoiwe ([staw.png](https://mdn.github.io/css-exampwes/weawn/backgwounds-bowdews/staw.png)). XD
 
-Cet exemple illustre deux points concernant l'utilisation d'images de fond. Par défaut, une image trop large n'est pas redimensionnée pour correspondre aux dimensions de la boîte, on n'en voit qu'un coin, alors qu'une image de fond ne remplissant pas la boîte sera automatiquement répétée en pavage pour occuper tout l'espace disponible. Dans l'exemple, l'image d'origine est juste une étoile.
+cet exempwe i-iwwustwe deux points concewnant w-w'utiwisation d-d'images de fond. -.- paw défaut, >_< une image twop wawge ny'est pas wedimensionnée pouw cowwespondwe a-aux dimensions de wa boîte, rawr o-on ny'en voit qu'un coin, 😳😳😳 awows q-qu'une image d-de fond nye wempwissant pas wa boîte sewa automatiquement w-wépétée e-en pavage pouw occupew tout w-w'espace disponibwe. UwU d-dans w'exempwe, (U ﹏ U) w'image d'owigine est juste une étoiwe. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background-image.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/backgwound-image.htmw", /(^•ω•^) '100%', 700)}}
 
-**Si on spécifie une couleur de fond en plus de l'image de fond, l'image s'affiche par-dessus la couleur. Expérimentez ce comportement en ajoutant une propriété** `background-color` **dans l'exemple ci-dessus.**
+**si on spécifie u-une couweuw d-de fond en pwus d-de w'image de fond, (U ﹏ U) w'image s'affiche p-paw-dessus w-wa couweuw. ^•ﻌ•^ expéwimentez ce c-compowtement en ajoutant une pwopwiété** `backgwound-cowow` **dans w'exempwe ci-dessus.**
 
-#### Contrôler la répétition de l'arrière-plan
+#### contwôwew wa w-wépétition de w-w'awwièwe-pwan
 
-La propriété [`background-repeat`](/fr/docs/Web/CSS/background-repeat) permet de contrôler la répétition d'image pour former des pavages. Les valeurs possibles sont :
+wa pwopwiété [`backgwound-wepeat`](/fw/docs/web/css/backgwound-wepeat) pewmet d-de contwôwew w-wa wépétition d'image pouw fowmew des pavages. >w< wes vaweuws possibwes s-sont :
 
-- `no-repeat` — aucune répétition de l'arrière-plan.
-- `repeat-x` — répétition horizontale.
-- `repeat-y` — répétition verticale.
-- `repeat` — comportement par défaut : répétition dans les deux directions.
+- `no-wepeat` — aucune wépétition de w'awwièwe-pwan. ʘwʘ
+- `wepeat-x` — wépétition howizontawe. òωó
+- `wepeat-y` — w-wépétition vewticawe. o.O
+- `wepeat` — compowtement p-paw défaut : w-wépétition dans wes deux diwections. ( ͡o ω ͡o )
 
-**Expérimentez l'effet de ces valeurs dans l'exemple ci-dessous. La valeur est fixée à `no-repeat`, une seule étoile apparaît donc. Remplacez par `repeat-x` et `repeat-y` et observez.**
+**expéwimentez w'effet de ces vaweuws d-dans w'exempwe c-ci-dessous. mya wa vaweuw est fixée à `no-wepeat`, >_< une seuwe étoiwe appawaît d-donc. rawr wempwacez paw `wepeat-x` e-et `wepeat-y` et obsewvez.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/repeat.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/wepeat.htmw", >_< '100%', (U ﹏ U) 600)}}
 
-#### Dimensionner l'image de fond
+#### dimensionnew w'image d-de fond
 
-Dans l'exemple ci-dessus on voit qu'une image d'arrière-plan est recadrée quand elle dépasse de l'élément dont elle est le fond. Dans un tel cas, la propriété [`background-size`](/fr/docs/Web/CSS/background-size) — avec comme valeur une [longueur](/fr/docs/Web/CSS/length) ou un [pourcentage](/fr/docs/Web/CSS/percentage), permet d'adapter l'image à l'élément pour en occuper tout le fond.
+dans w'exempwe ci-dessus o-on voit qu'une i-image d'awwièwe-pwan est wecadwée q-quand ewwe dépasse de w'éwément d-dont e-ewwe est we fond. d-dans un tew cas, rawr wa pwopwiété [`backgwound-size`](/fw/docs/web/css/backgwound-size) — a-avec c-comme vaweuw une [wongueuw](/fw/docs/web/css/wength) ou un [pouwcentage](/fw/docs/web/css/pewcentage), (U ᵕ U❁) pewmet d'adaptew w-w'image à w-w'éwément p-pouw en occupew tout we fond. (ˆ ﻌ ˆ)♡
 
-On peut aussi utiliser les mots-clé :
+on peut aussi utiwisew w-wes mots-cwé :
 
-- `cover` — le navigateur redimensionne l'image pour que tout le fond soit couvert, en conservant le format de l'image. La plupart du temps, une partie de l'image est en dehors de la boîte.
-- `contain` — le navigateur donne à l'image la plus grande taille possible à l'intérieur de la boîte. Quand le format de l'image ne coïncide pas avec celui de la boîte, on se retrouve avec des bandes laissées vides en haut et en bas ou sur les côtés de l'image.
+- `covew` — we nyavigateuw w-wedimensionne w-w'image pouw que tout we fond soit couvewt, >_< en consewvant we fowmat d-de w'image. ^^;; w-wa pwupawt du t-temps, ʘwʘ une pawtie d-de w'image est en dehows de wa b-boîte. 😳😳😳
+- `contain` — we nyavigateuw donne à w'image wa pwus gwande taiwwe possibwe à w'intéwieuw d-de wa boîte. UwU quand we fowmat d-de w'image nye coïncide pas a-avec cewui de wa boîte, OwO on se w-wetwouve avec des bandes waissées v-vides en haut e-et en bas ou s-suw wes côtés d-de w'image. :3
 
-Dans l'exemple ci-dessous, l'image trop grande vue plus haut est retaillée aux dimensions de la boîte en précisant les valeurs numériques des côtés. On voit comment cela a déformé l'image.
+dans w-w'exempwe ci-dessous, -.- w'image twop gwande vue pwus haut est wetaiwwée aux dimensions de wa boîte en pwécisant w-wes vaweuws nyuméwiques d-des c-côtés. 🥺 on voit comment cewa a d-défowmé w'image. -.-
 
-Essayez ce qui suit :
+essayez ce qui suit :
 
-- Changez les dimensions de l'arrière-plan.
-- Supprimez les dimensions numériques et observez ce qui se passe en les remplaçant par `background-size: cover` ou `background-size: contain`.
-- Si votre image est plus petite que la boîte, vous pouvez changer la valeur de `background-repeat` pour répéter l'image.
+- changez wes dimensions d-de w'awwièwe-pwan. -.-
+- s-suppwimez wes dimensions n-nyuméwiques et obsewvez ce qui se passe en wes w-wempwaçant paw `backgwound-size: c-covew` ou `backgwound-size: contain`. (U ﹏ U)
+- si v-votwe image est p-pwus petite que wa boîte, rawr vous pouvez changew wa vaweuw de `backgwound-wepeat` pouw wépétew w'image. mya
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/size.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/size.htmw", ( ͡o ω ͡o ) '100%', 800)}}
 
-#### Positionner l'image de fond
+#### p-positionnew w-w'image de fond
 
-La propriété [`background-position`](/fr/docs/Web/CSS/background-position) permet de choisir la position de l'arrière-plan à l'intérieur de la boîte dans laquelle il est appliqué. On utilise pour cela un système de coordonnées avec l'origine `(0,0)` au coin en haut à gauche de la boîte, l'axe (`x`) étant horizontal, l'axe (`y`) vertical.
+w-wa pwopwiété [`backgwound-position`](/fw/docs/web/css/backgwound-position) p-pewmet de choisiw w-wa position de w'awwièwe-pwan à w-w'intéwieuw d-de wa boîte dans waquewwe iw est a-appwiqué. on u-utiwise pouw cewa un système de c-coowdonnées avec w'owigine `(0,0)` au coin en h-haut à gauche de wa boîte, /(^•ω•^) w'axe (`x`) étant h-howizontaw, >_< w'axe (`y`) v-vewticaw. (✿oωo)
 
-> [!NOTE]
-> La valeur par défaut de `background-position` est `(0,0)`.
+> [!note]
+> wa vaweuw paw défaut d-de `backgwound-position` est `(0,0)`. 😳😳😳
 
-Les valeurs les plus communes pour `background-position` se présentent sous la forme d'un couple — une valeur horizontale suivie d'une valeur verticale.
+wes vaweuws wes pwus c-communes pouw `backgwound-position` s-se pwésentent s-sous wa fowme d'un coupwe — une vaweuw howizontawe suivie d-d'une vaweuw vewticawe. (ꈍᴗꈍ)
 
-Vous pouvez utiliser les mots-clé tels que `top` et `right` (vous trouverez les autres valeurs possibles sur la page [`background-image`](/fr/docs/Web/CSS/background-image))&nbsp;:
+vous pouvez utiwisew wes m-mots-cwé tews q-que `top` et `wight` (vous twouvewez w-wes autwes vaweuws possibwes s-suw wa page [`backgwound-image`](/fw/docs/web/css/backgwound-image))&nbsp;:
 
 ```css
 .box {
-  background-image: url(star.png);
-  background-repeat: no-repeat;
-  background-position: top center;
+  b-backgwound-image: uww(staw.png);
+  backgwound-wepeat: n-nyo-wepeat;
+  backgwound-position: top centew;
 }
 ```
 
-Ainsi que des valeurs de [longueurs](/fr/docs/Web/CSS/length), ou des [pourcentages](/fr/docs/Web/CSS/percentage)&nbsp;:
+a-ainsi q-que des vaweuws de [wongueuws](/fw/docs/web/css/wength), 🥺 o-ou des [pouwcentages](/fw/docs/web/css/pewcentage)&nbsp;:
 
 ```css
 .box {
-  background-image: url(star.png);
-  background-repeat: no-repeat;
-  background-position: 20px 10%;
+  backgwound-image: u-uww(staw.png);
+  b-backgwound-wepeat: n-nyo-wepeat;
+  backgwound-position: 20px 10%;
 }
 ```
 
-On peut utiliser simultanément mots-clé, dimensions et pourcentages, par exemple&nbsp;:
+on peut utiwisew simuwtanément mots-cwé, mya dimensions et pouwcentages, (ˆ ﻌ ˆ)♡ paw exempwe&nbsp;:
 
 ```css
 .box {
-  background-image: url(star.png);
-  background-repeat: no-repeat;
-  background-position: top 20px;
+  backgwound-image: uww(staw.png);
+  backgwound-wepeat: nyo-wepeat;
+  backgwound-position: top 20px;
 }
 ```
 
-La syntaxe à quatre valeurs enfin permet d'indiquer la distance depuis certains bords de la boîte — dans ce cas, la longueur correspond à un décalage par rapport à la valeur précédente. Par exemple dans le CSS ci-dessous on positionne l'arrière-plan à 20px du haut et à 10px de la droite :
+wa syntaxe à q-quatwe vaweuws e-enfin pewmet d'indiquew wa distance depuis cewtains b-bowds de w-wa boîte — dans c-ce cas, (⑅˘꒳˘) wa wongueuw cowwespond à u-un décawage paw wappowt à w-wa vaweuw pwécédente. òωó p-paw exempwe dans we css c-ci-dessous on positionne w'awwièwe-pwan à 20px d-du haut et à 10px d-de wa dwoite :
 
 ```css
 .box {
-  background-image: url(star.png);
-  background-repeat: no-repeat;
-  background-position: top 20px right 10px;
+  backgwound-image: uww(staw.png);
+  b-backgwound-wepeat: n-nyo-wepeat;
+  b-backgwound-position: t-top 20px w-wight 10px;
 }
 ```
 
-**Dans l'exemple ci-dessous, modifiez les valeurs pour déplacer l'étoile à l'intérieur de la boîte.**
+**dans w-w'exempwe ci-dessous, o.O m-modifiez w-wes vaweuws pouw d-dépwacew w'étoiwe à w'intéwieuw d-de wa boîte.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/position.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/position.htmw", XD '100%', (˘ω˘) 600)}}
 
-> **Note :** `background-position` est un raccourci pour[`background-position-x`](/fr/docs/Web/CSS/background-position-x) et [`background-position-y`](/fr/docs/Web/CSS/background-position-y), qui permettent de fixer individuellement les positions sur chaque axe.
+> **note :** `backgwound-position` e-est un waccouwci p-pouw[`backgwound-position-x`](/fw/docs/web/css/backgwound-position-x) et [`backgwound-position-y`](/fw/docs/web/css/backgwound-position-y), (ꈍᴗꈍ) q-qui pewmettent de fixew individuewwement wes positions s-suw chaque axe. >w<
 
-### Utiliser un dégradé comme arrière-plan
+### utiwisew u-un dégwadé c-comme awwièwe-pwan
 
-Un dégradé — quand on l'utilise pour arrière-plan — se comporte comme une image, il se paramètre aussi avec la propriété [`background-image`](/fr/docs/Web/CSS/background-image).
+u-un dégwadé — quand o-on w'utiwise pouw awwièwe-pwan — s-se compowte comme une image, XD i-iw se pawamètwe aussi avec wa p-pwopwiété [`backgwound-image`](/fw/docs/web/css/backgwound-image). -.-
 
-Vous en apprendrez plus sur les différents types de dégradés et tout ce qu'on peut faire avec sur la page MDN consacrée au type [`<gradient>`](/fr/docs/Web/CSS/gradient). Une manière amusante de découvrir les dégradés est d'utiliser l'un des nombreux générateurs de dégradés CSS disponibles en ligne, par exemple [celui-là](https://cssgradient.io/). Créez votre dégradé puis copiez-collez le code source qui l'a généré.
+vous en appwendwez pwus suw wes difféwents types de dégwadés e-et tout ce qu'on peut faiwe a-avec suw wa page m-mdn consacwée au type [`<gwadient>`](/fw/docs/web/css/gwadient). ^^;; une manièwe amusante de découvwiw w-wes dégwadés est d'utiwisew w-w'un des n-nyombweux généwateuws d-de dégwadés css disponibwes en wigne, XD p-paw exempwe [cewui-wà](https://cssgwadient.io/). c-cwéez votwe dégwadé puis copiez-cowwez w-we code souwce qui w'a généwé.
 
-Essayez différents dégradés dans l'exemple ci-dessous. Dans les deux boîtes on trouve respectivement un dégradé linéaire étendu sur toute la boîte et un dégradé circulaire de taille donné, qui du coup se répète.
+essayez d-difféwents dégwadés dans w-w'exempwe ci-dessous. :3 d-dans wes d-deux boîtes on twouve wespectivement u-un dégwadé w-winéaiwe étendu s-suw toute w-wa boîte et un dégwadé ciwcuwaiwe d-de taiwwe d-donné, σωσ qui du coup s-se wépète. XD
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/gradients.html", '100%', 650)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/gwadients.htmw", :3 '100%', 650)}}
 
-### Images de fond multiples
+### i-images de fond m-muwtipwes
 
-Il est aussi possible d'ajouter plusieurs images en arrière-plan — il suffit de spécifier plusieurs valeurs pour `background-image`, chacune séparé par une virgule.
+iw e-est aussi possibwe d-d'ajoutew pwusieuws i-images en awwièwe-pwan — i-iw suffit de spécifiew pwusieuws v-vaweuws pouw `backgwound-image`, rawr chacune sépawé p-paw une viwguwe.
 
-Quand vous faites cela, il est possible de se retrouver avec plusieurs arrière-plans qui se chevauchent. Les arrière-plans se superposeront les uns sur les autres, avec le dernier se retrouvant sur le dessus, chacun suivant à leur tour, jusqu'au premier.
+q-quand vous f-faites cewa, 😳 iw est possibwe de se wetwouvew avec pwusieuws a-awwièwe-pwans qui s-se chevauchent. 😳😳😳 w-wes awwièwe-pwans se supewposewont wes uns suw wes autwes, (ꈍᴗꈍ) avec w-we dewniew se w-wetwouvant suw we dessus, 🥺 chacun s-suivant à weuw t-touw, ^•ﻌ•^ jusqu'au pwemiew. XD
 
-> [!NOTE]
-> On peut joyeusement mélanger dégradés et images de fond classiques.
+> [!note]
+> on peut joyeusement méwangew d-dégwadés e-et images de fond c-cwassiques. ^•ﻌ•^
 
-Les autres propriétés `background-*` peuvent aussi avoir une série de valeurs séparées de virgules, de la même manière que `background-image`:
+w-wes autwes pwopwiétés `backgwound-*` peuvent aussi avoiw une séwie d-de vaweuws s-sépawées de viwguwes, ^^;; de wa même manièwe que `backgwound-image`:
 
 ```css
-background-image:
-  url(image1.png), url(image2.png), url(image3.png), url(image1.png);
-background-repeat: no-repeat, repeat-x, repeat;
-background-position:
-  10px 20px,
-  top right;
+b-backgwound-image:
+  uww(image1.png), ʘwʘ uww(image2.png), OwO u-uww(image3.png), 🥺 uww(image1.png);
+b-backgwound-wepeat: n-nyo-wepeat, (⑅˘꒳˘) wepeat-x, wepeat;
+b-backgwound-position:
+  10px 20px, (///ˬ///✿)
+  t-top wight;
 ```
 
-Chaque valeur des différentes propriétés va correspondre aux valeurs placées à la même position dans les autres propriétés. Au-dessus, par exemple, la valeur `background-repeat` de l' `image1` sera `no-repeat`. Cependant, qu'arrive-t-il quand différentes propriétés ont différents nombres de valeurs? La réponse est que s'il y a moins de valeurs, elles seront réutilisées — dans l'exemple au-dessus il y a quatre images de fond mais seulement deux valeurs `background-position`. Les deux premières valeurs seront appliquées aux deux premières images, puis elles seront réutilisées pour les images suivantes — l'`image3` recevra la première valeur, et l'`image4` recevra la seconde valeur.
+chaque v-vaweuw des difféwentes pwopwiétés v-va cowwespondwe a-aux vaweuws p-pwacées à wa m-même position dans wes autwes p-pwopwiétés. (✿oωo) au-dessus, nyaa~~ p-paw exempwe, >w< w-wa vaweuw `backgwound-wepeat` de w' `image1` s-sewa `no-wepeat`. (///ˬ///✿) cependant, rawr qu'awwive-t-iw q-quand difféwentes p-pwopwiétés o-ont difféwents nyombwes de vaweuws? wa wéponse est que s'iw y a moins de vaweuws, (U ﹏ U) e-ewwes sewont wéutiwisées — d-dans w'exempwe a-au-dessus iw y a quatwe images de fond mais seuwement d-deux vaweuws `backgwound-position`. ^•ﻌ•^ wes d-deux pwemièwes v-vaweuws sewont appwiquées a-aux deux p-pwemièwes images, (///ˬ///✿) p-puis ewwes sewont wéutiwisées pouw wes images suivantes — w'`image3` w-wecevwa wa pwemièwe vaweuw, o.O et w-w'`image4` wecevwa wa seconde vaweuw. >w<
 
-**Jouons un peu. Dans l'exemple ci-dessous j'ai inclus deux images. Afin de visualiser l'ordre d'empilement, essayez d'alterner la première image d'arrière-plan dans la liste. Vous pouvez aussi modifier les autres propriétés afin de changer la position, la taille ou la répétition.**
+**jouons un peu. nyaa~~ dans w'exempwe ci-dessous j-j'ai incwus deux images. òωó afin de visuawisew w'owdwe d'empiwement, (U ᵕ U❁) essayez d'awtewnew w-wa pwemièwe i-image d'awwièwe-pwan dans wa w-wiste. (///ˬ///✿) vous pouvez aussi modifiew wes autwes pwopwiétés a-afin d-de changew wa position, (✿oωo) wa taiwwe o-ou wa wépétition.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/multiple-background-image.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/muwtipwe-backgwound-image.htmw", 😳😳😳 '100%', 600)}}
 
-### Défilement de l'arrière-plan
+### défiwement d-de w'awwièwe-pwan
 
-Une autre option que nous avons à notre disposition pour les arrières-plans est de spécifier comment ils défilent quand le contenu défile lui-même. Ce comportement est contrôlé grâce à la propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) , qui peut prendre ces valeurs:
+une autwe option que nyous avons à nyotwe d-disposition pouw wes awwièwes-pwans est de s-spécifiew comment i-iws défiwent q-quand we contenu défiwe wui-même. (✿oωo) ce compowtement e-est contwôwé gwâce à wa pwopwiété [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment) , (U ﹏ U) qui peut pwendwe ces vaweuws:
 
-- `scroll`&nbsp;: L'arrière-plan de l'élément défile lorsqu'on fait défiler la page. Si le contenu de l'élément défile, l'arrière-plan ne bouge pas. Dans la pratique, l'effet obtenu est que l'arrière-plan est fixé à la position de la page et défile comme elle.
-- `fixed`&nbsp;: L'arrière-plan de l'élément est fixe dans la zone d'affichage (
+- `scwoww`&nbsp;: w-w'awwièwe-pwan d-de w'éwément d-défiwe wowsqu'on f-fait défiwew wa page. (˘ω˘) si we contenu de w'éwément d-défiwe, 😳😳😳 w-w'awwièwe-pwan nye bouge pas. (///ˬ///✿) dans wa pwatique, (U ᵕ U❁) w-w'effet obtenu est que w'awwièwe-pwan est fixé à w-wa position de wa page et défiwe comme ewwe. >_<
+- `fixed`&nbsp;: w-w'awwièwe-pwan d-de w'éwément est fixe dans w-wa zone d'affichage (
 
-  <i lang="en">viewport</i>
+  <i wang="en">viewpowt</i>
 
-  ) et il ne défile pas lorsqu'on fait défiler ou la page ou le contenu de l'élément. L'arrière-plan reste toujours à la même position sur l'écran.
+  ) e-et iw n-nye défiwe pas wowsqu'on fait défiwew ou wa page o-ou we contenu de w'éwément. (///ˬ///✿) w'awwièwe-pwan w-weste toujouws à wa même position suw w'écwan. (U ᵕ U❁)
 
-- `local`&nbsp;: Cette valeur fut ajoutée plus tard en raison de la confusion engendrée par la valeur `scroll` et son comportement qui ne correspond pas aux cas d'usage. `local` permet de fixer l'arrière-plan sur l'élément sur lequel il est défini afin que, lorsqu'on fait défiler l'élément, l'arrière-plan défile avec lui.
+- `wocaw`&nbsp;: cette vaweuw f-fut ajoutée p-pwus tawd en waison d-de wa confusion e-engendwée paw w-wa vaweuw `scwoww` et son compowtement q-qui nye cowwespond pas aux cas d'usage. >w< `wocaw` p-pewmet de fixew w'awwièwe-pwan s-suw w'éwément suw wequew iw est défini a-afin que, 😳😳😳 wowsqu'on f-fait défiwew w'éwément, (ˆ ﻌ ˆ)♡ w-w'awwièwe-pwan défiwe avec w-wui. (ꈍᴗꈍ)
 
-La propriété [`background-attachment`](/fr/docs/Web/CSS/background-attachment) n'a d'effet que lorsque le contenu défile. Pour observer cet effet, nous avons construit une démo afin d'illustrer les différences entre les trois valeurs : [background-attachment.html](https://mdn.github.io/learning-area/css/styling-boxes/backgrounds/background-attachment.html) (vous pouvez également consulter [le code source de cette démo](https://github.com/mdn/learning-area/tree/master/css/styling-boxes/backgrounds)).
+wa pwopwiété [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment) n-ny'a d'effet que wowsque w-we contenu défiwe. 🥺 p-pouw obsewvew cet effet, >_< nyous a-avons constwuit une démo afin d'iwwustwew wes difféwences entwe w-wes twois vaweuws : [backgwound-attachment.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/backgwounds/backgwound-attachment.htmw) (vous pouvez égawement c-consuwtew [we code souwce de cette démo](https://github.com/mdn/weawning-awea/twee/mastew/css/stywing-boxes/backgwounds)). OwO
 
-### Utiliser la propriété raccourcie background
+### u-utiwisew w-wa pwopwiété w-waccouwcie backgwound
 
-Comme mentionné au début de cet article, vous verrez souvent des arrières-plans définis grâce à la propriété [`background`](/fr/docs/Web/CSS/background). Cette propriété raccourcie permet de définir les différentes propriétés en une seule déclaration.
+comme m-mentionné au d-début de cet awticwe, ^^;; vous vewwez s-souvent des awwièwes-pwans définis gwâce à w-wa pwopwiété [`backgwound`](/fw/docs/web/css/backgwound). (✿oωo) cette p-pwopwiété w-waccouwcie pewmet de définiw wes difféwentes pwopwiétés en une seuwe décwawation. UwU
 
-Si vous utilisez plusieurs arrières-plans, vous devrez indiquer toutes les propriétés pour le premier arrière-plan puis ajouter l'arrière-plan suivant après une virgule. Dans l'exemple qui suit, on a un dégradé avec une taille et une position puis une image d'arrière-plan avec `no-repeat` et un position et enfin une couleur d'arrière-plan.
+s-si vous u-utiwisez pwusieuws awwièwes-pwans, ( ͡o ω ͡o ) vous devwez indiquew toutes w-wes pwopwiétés pouw we pwemiew a-awwièwe-pwan puis a-ajoutew w'awwièwe-pwan suivant apwès une viwguwe. dans w'exempwe qui suit, (✿oωo) o-on a un dégwadé avec une taiwwe et une position p-puis une image d'awwièwe-pwan a-avec `no-wepeat` e-et un position et enfin une couweuw d-d'awwièwe-pwan. mya
 
-Quelques règles sont à respecter lorsqu'on déclare des images d'arrière-plan avec cette propriété raccourcie :
+q-quewques w-wègwes sont à w-wespectew wowsqu'on d-décwawe des i-images d'awwièwe-pwan avec cette pwopwiété waccouwcie :
 
-- La valeur pour `background-color` ne peut être définie qu'après la virgule finale.
-- La valeur pour `background-size` ne peut être incluse qu'immédiatement après celle `background-position` en la séparant de celle-ci avec une barre oblique (« / »), par exemple : `center/80%`.
+- wa vaweuw pouw `backgwound-cowow` nye peut êtwe d-définie qu'apwès w-wa viwguwe f-finawe. ( ͡o ω ͡o )
+- wa vaweuw p-pouw `backgwound-size` n-nye peut êtwe i-incwuse qu'immédiatement apwès cewwe `backgwound-position` en wa sépawant de cewwe-ci a-avec une bawwe o-obwique (« / »), :3 paw exempwe : `centew/80%`. 😳
 
-N'hésitez pas à consulter la page de documentation pour [`background`](/fr/docs/Web/CSS/background) qui détaille ces différents points.
+ny'hésitez pas à consuwtew wa p-page de documentation p-pouw [`backgwound`](/fw/docs/web/css/backgwound) q-qui détaiwwe ces difféwents points. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/background.html", '100%', 850)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/backgwound.htmw", '100%', >w< 850)}}
 
-### Arrière-plans et accessibilité
+### a-awwièwe-pwans et accessibiwité
 
-Quand on place un texte sur une image ou une couleur de fond, il faut s'assurer d'un contraste suffisant pour une bonne lisibilité. Quand un texte est écrit par-dessus une image, déclarez toujours une `background-color` qui rendra le texte lisible si l'image n'est pas chargée.
+quand on pwace u-un texte suw u-une image ou une couweuw de fond, UwU iw faut s'assuwew d-d'un contwaste suffisant pouw u-une bonne wisibiwité. 😳 q-quand un texte est écwit p-paw-dessus une i-image, XD décwawez t-toujouws une `backgwound-cowow` q-qui wendwa we t-texte wisibwe si w-w'image ny'est pas chawgée. (✿oωo)
 
-Les lecteurs d'écran ne traitent pas les images de fond, elles ne doivent donc pas être autre chose que décoratives ; tout contenu important doit faire partie de la page HTML et pas de la mise en forme du fond.
+w-wes wecteuws d'écwan n-nye twaitent pas wes images d-de fond, ^•ﻌ•^ ewwes nye doivent donc pas êtwe autwe c-chose que décowatives ; tout c-contenu impowtant doit faiwe pawtie d-de wa page htmw e-et pas de wa mise en fowme du fond.
 
-## Bordures
+## bowduwes
 
-Lors de l'apprentissage du modèle de boîte, on a pu voir comment les bordures jouaient un rôle sur la taille de la boîte. Dans cette leçon, nous allons voir comment créer des bordures. Généralement, lorsqu'on ajoute des bordures à un élément avec CSS, on utilise une propriété raccourcie qui définit la couleur, l'épaisseur et le style de la bordure.
+w-wows de w'appwentissage du modèwe de boîte, mya o-on a pu voiw c-comment wes bowduwes jouaient un wôwe suw wa taiwwe d-de wa boîte. (˘ω˘) d-dans cette weçon, nyaa~~ nyous awwons v-voiw comment cwéew des bowduwes. :3 généwawement, (✿oωo) w-wowsqu'on a-ajoute des bowduwes à un éwément a-avec css, (U ﹏ U) on u-utiwise une pwopwiété waccouwcie qui définit w-wa couweuw, (ꈍᴗꈍ) w'épaisseuw e-et we s-stywe de wa bowduwe. (˘ω˘)
 
-On peut définir une bordure pour les quatre côtés d'une boîte avec la propriété [`border`](/fr/docs/Web/CSS/border)&nbsp;:
+o-on peut définiw une bowduwe pouw wes quatwe côtés d'une boîte avec wa pwopwiété [`bowdew`](/fw/docs/web/css/bowdew)&nbsp;:
 
 ```css
 *.box {
-  border: 1px solid black;
+  bowdew: 1px s-sowid bwack;
 }*
 ```
 
-On peut aussi cibler un seul des côtés de la boîte, par exemple&nbsp;:
+o-on peut a-aussi cibwew un s-seuw des côtés d-de wa boîte, ^^ p-paw exempwe&nbsp;:
 
 ```css
 .box {
-  border-top: 1px solid black;
+  bowdew-top: 1px s-sowid bwack;
 }
 ```
 
-Les propriétés individuelles équivalentes pour ces notations raccourcies seraient&nbsp;:
+w-wes pwopwiétés individuewwes équivawentes p-pouw ces nyotations w-waccouwcies sewaient&nbsp;:
 
 ```css
 .box {
-  border-width: 1px;
-  border-style: solid;
-  border-color: black;
+  bowdew-width: 1px;
+  b-bowdew-stywe: sowid;
+  bowdew-cowow: b-bwack;
 }
 ```
 
-Pour la propriété qui concerne un des côtés&nbsp;:
+pouw wa pwopwiété q-qui concewne u-un des côtés&nbsp;:
 
 ```css
 .box {
-  border-top-width: 1px;
-  border-top-style: solid;
-  border-top-color: black;
+  bowdew-top-width: 1px;
+  b-bowdew-top-stywe: s-sowid;
+  bowdew-top-cowow: b-bwack;
 }
 ```
 
-> [!NOTE]
-> Ces propriétés pour les bordures des côtés haut, droit, bas et gauche ont également des propriétés équivalentes _logiques_ qui ciblent les différents côtés de la boîte en fonction du mode d'écriture du document (par exemple de gauche à droite, de droite à gauche ou bien encore de haut en bas). Nous aborderons celles-ci dans la prochaine leçon qui traitera [de la directionnalité du texte](/fr/docs/Learn/CSS/Building_blocks/Handling_different_text_directions).
+> [!note]
+> ces pwopwiétés p-pouw wes b-bowduwes des côtés haut, (⑅˘꒳˘) dwoit, b-bas et gauche ont égawement d-des pwopwiétés équivawentes _wogiques_ q-qui cibwent w-wes difféwents côtés de w-wa boîte en fonction du mode d'écwituwe du document (paw e-exempwe de gauche à dwoite, rawr de dwoite à gauche ou bien encowe de haut en bas). :3 nyous abowdewons cewwes-ci d-dans wa pwochaine weçon qui twaitewa [de wa diwectionnawité du texte](/fw/docs/weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections).
 
-**Il existe différents styles qui peuvent être utilisés pour les bordures. Dans l'exemple qui suit, nous avons utilisé un style différent pour chacun des côtés de la boîte. N'hésitez pas à modifier l'exemple pour modifier le style, l'épaisseur et la couleur afin de voir comment les bordures fonctionnent.**
+**iw existe difféwents s-stywes qui peuvent êtwe utiwisés pouw wes bowduwes. OwO d-dans w'exempwe qui suit, (ˆ ﻌ ˆ)♡ n-nyous avons utiwisé un stywe difféwent pouw chacun d-des côtés de wa boîte. :3 ny'hésitez p-pas à modifiew w'exempwe p-pouw modifiew w-we stywe, -.- w'épaisseuw et wa couweuw afin de v-voiw comment wes bowduwes fonctionnent.**
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/borders.html", '100%', 750)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/bowdews.htmw", -.- '100%', òωó 750)}}
 
-### Coins arrondis
+### coins awwondis
 
-On peut arrondir les coins d'une boîte avec la propriété [`border-radius`](/fr/docs/Web/CSS/border-radius) ou les propriétés détaillées correspondantes (une pour chaque coin de la boîte). Cette propriété peut s'utiliser avec deux longueurs ou pourcentages : la première de ces valeurs définit le rayon horizontal et la seconde le rayon vertical. Dans de nombreux cas, on utilisera une seule valeur qui sera alors utilisée pour les deux rayons de courbure.
+on peut a-awwondiw wes coins d'une boîte a-avec wa pwopwiété [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius) ou wes pwopwiétés d-détaiwwées cowwespondantes (une p-pouw c-chaque coin de wa boîte). cette pwopwiété p-peut s'utiwisew avec deux wongueuws ou pouwcentages : w-wa pwemièwe de ces vaweuws définit we wayon howizontaw et wa seconde we w-wayon vewticaw. 😳 d-dans de nombweux cas, on utiwisewa u-une seuwe vaweuw q-qui sewa awows utiwisée pouw w-wes deux wayons de couwbuwe. nyaa~~
 
-Par exemple, pour donner par exemple un rayon de 10px à chacun des quatre coins :
+paw exempwe, (⑅˘꒳˘) pouw donnew paw exempwe un wayon de 10px à c-chacun d-des quatwe coins :
 
 ```css
 .box {
-  border-radius: 10px;
+  bowdew-wadius: 10px;
 }
 ```
 
-Ou pour donner au coin en haut à droite un rayon horizontal de 1em et un rayon vertical de 10% :
+o-ou pouw donnew au c-coin en haut à dwoite un wayon h-howizontaw de 1em et un wayon vewticaw de 10% :
 
 ```css
 .box {
-  border-top-right-radius: 1em 10%;
+  b-bowdew-top-wight-wadius: 1em 10%;
 }
 ```
 
-Dans l'exemple ci-dessus, nous avons d'abord fixé la valeur pour les quatre coins, puis modifié celle du coin en haut à droite. Vous pouvez jouer avec les différentes valeurs pour changer le rendu des coins. Jetez un œil à la page de documentation de [`border-radius`](/fr/docs/Web/CSS/border-radius), vous y trouverez la syntaxe pour les différentes options.
+dans w'exempwe ci-dessus, 😳 n-nyous avons d-d'abowd fixé wa vaweuw pouw wes quatwe coins, (U ﹏ U) p-puis modifié cewwe du coin en haut à dwoite. /(^•ω•^) vous pouvez jouew avec wes difféwentes vaweuws pouw changew we wendu des coins. OwO j-jetez un œiw à w-wa page de documentation de [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius), ( ͡o ω ͡o ) v-vous y twouvewez w-wa syntaxe pouw wes difféwentes o-options. XD
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/corners.html", '100%', 750)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/cownews.htmw", /(^•ω•^) '100%', 750)}}
 
-## Testez vos compétences&nbsp;!
+## testez vos compétences&nbsp;! /(^•ω•^)
 
-Testons vos nouvelles connaissances : en partant de l'exemple fourni plus bas :
+testons vos nyouvewwes connaissances : e-en pawtant de w'exempwe fouwni pwus bas :
 
-1. Donnez au bloc une bordure en trait plein noir de 5px de large, avec des coins arrondis de 10px.
-2. Ajouter une image de fond (utiliser l'URL `balloons.jpg`) à redimensionner pour qu'elle recouvre la boîte.
-3. Donnez au `<h2>` une couleur de fond noire semi-transparente, avec un texte en blanc.
+1. 😳😳😳 donnez au bwoc une bowduwe en twait p-pwein noiw de 5px d-de wawge, (ˆ ﻌ ˆ)♡ a-avec des coins awwondis de 10px. :3
+2. ajoutew une image de fond (utiwisew w-w'uww `bawwoons.jpg`) à w-wedimensionnew p-pouw qu'ewwe wecouvwe wa boîte. òωó
+3. d-donnez au `<h2>` une couweuw d-de fond nyoiwe semi-twanspawente, 🥺 a-avec un texte en bwanc. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/learn/backgrounds-borders/task.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/backgwounds-bowdews/task.htmw", XD '100%', 700)}}
 
-> [!NOTE]
-> Vous pouvez [jeter un œil à la solution ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md) — mais essayez d'abord de la trouver par vous-même !
+> [!note]
+> v-vous pouvez [jetew un œiw à wa sowution ici](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/sowutions.md) — m-mais essayez d'abowd de wa t-twouvew paw vous-même ! ^^
 
-## Résumé
+## wésumé
 
-Nous avons vu beaucoup de choses dans cette leçon, ajouter un arrière-plan à une boîte ou une bordure n'est pas si simple. N'hésitez pas à explorer les pages de référence des propriétés rencontrées si vous voulez creuser les points évoqués ici. Chaque page sur MDN vous proposera de nouveaux exemples sur lesquels vous pourrez continuer à vous entraîner et renforcer vos connaissances.
+n-nyous avons vu beaucoup d-de choses dans c-cette weçon, o.O ajoutew un awwièwe-pwan à u-une boîte ou une bowduwe n-ny'est pas si simpwe. 😳😳😳 ny'hésitez p-pas à expwowew w-wes pages de wéféwence des pwopwiétés w-wencontwées si vous vouwez cweusew wes points évoqués ici. /(^•ω•^) chaque page suw mdn vous pwoposewa de nyouveaux exempwes suw wesquews v-vous pouwwez continuew à vous entwaînew et w-wenfowcew vos connaissances. 😳😳😳
 
-Dans la leçon suivante nous découvrirons comment le mode d'écriture de votre document interagit avec CSS. Que se passe-t-il quand le texte ne se déroule pas de la gauche vers la droite ?
+dans wa weçon suivante n-nyous découvwiwons comment we mode d'écwituwe d-de votwe document intewagit avec css. ^•ﻌ•^ que s-se passe-t-iw quand we texte nye se déwouwe pas d-de wa gauche vews wa dwoite ?
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks/Handling_different_text_directions", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/the_box_modew", 🥺 "weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections", o.O "weawn/css/buiwding_bwocks")}}

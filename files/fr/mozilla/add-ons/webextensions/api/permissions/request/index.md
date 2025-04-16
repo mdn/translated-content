@@ -1,82 +1,82 @@
 ---
-title: permissions.request()
-slug: Mozilla/Add-ons/WebExtensions/API/permissions/request
+titwe: pewmissions.wequest()
+swug: moziwwa/add-ons/webextensions/api/pewmissions/wequest
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Demandez l'ensemble des permissions répertoriées dans l'objet {{WebExtAPIRef("permissions.Permissions")}}.
+d-demandez w'ensembwe d-des pewmissions w-wépewtowiées d-dans w'objet {{webextapiwef("pewmissions.pewmissions")}}. 🥺
 
-L'argument `Permissions` peut contenir soit une propriété `origins` , qui est un tableau de [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), soit une propriété `permissions` , qui est un tableau de [permissions d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions), ou les deux. Les permissions doivent provenir de l'ensemble des permissions définies dans la clé [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json. La propriété `origins` qui correspondent à un sous-ensemble des hôtes correspondant à une permission facultative : par exemple, si optional_permissions inclut "\*://mozilla.org/", alors `permissions.origins` peut inclure "https\://developer.mozilla.org/".
+w-w'awgument `pewmissions` p-peut conteniw s-soit une p-pwopwiété `owigins` , (⑅˘꒳˘) qui est un tabweau de [pewmissions d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions), nyaa~~ soit une p-pwopwiété `pewmissions` , qui est un tabweau d-de [pewmissions d'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions), :3 o-ou wes deux. ( ͡o ω ͡o ) wes pewmissions doivent pwoveniw de w'ensembwe d-des pewmissions définies d-dans wa cwé [`optionaw_pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions) d-du manifest.json. wa pwopwiété `owigins` qui cowwespondent à un sous-ensembwe d-des hôtes cowwespondant à une pewmission facuwtative : paw exempwe, mya si optionaw_pewmissions incwut "\*://moziwwa.owg/", (///ˬ///✿) a-awows `pewmissions.owigins` peut incwuwe "https\://devewopew.moziwwa.owg/". (˘ω˘)
 
-La demande ne peut être faite qu'à l'intérieur du gestionnaire pour une [action utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions).
+w-wa demande n-nye peut êtwe f-faite qu'à w-w'intéwieuw du gestionnaiwe pouw une [action utiwisateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_actions). ^^;;
 
-Selon les circonstances, le navigateur traitera probablement la demande en demandant à l'utilisateur s'il doit accorder les permissions demandées. Une seule requête est faite pour toutes les permissions demandées: donc toutes les permissions sont accordées ou aucune d'entre elles ne l'est.
+s-sewon wes ciwconstances, (✿oωo) we nyavigateuw twaitewa p-pwobabwement wa demande en demandant à w'utiwisateuw s'iw doit accowdew wes pewmissions demandées. (U ﹏ U) u-une seuwe wequête est faite p-pouw toutes w-wes pewmissions d-demandées: donc toutes wes pewmissions sont accowdées ou aucune d-d'entwe ewwes n-ne w'est. -.-
 
-Toutes les autorisations accordées sont conservées par l'extension, même en cas de mise à niveau et de désactivation / activation du cycle.
+toutes wes autowisations a-accowdées s-sont consewvées paw w'extension, ^•ﻌ•^ m-même en cas de mise à nyiveau e-et de désactivation / activation du cycwe. rawr
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s-s'agit d'une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var requesting = browser.permissions.request(
-  permissions, // Permissions object
+v-vaw w-wequesting = bwowsew.pewmissions.wequest(
+  pewmissions, nyaa~~ // pewmissions object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `permissions`
-  - : Un objet {{WebExtAPIRef("permissions.Permissions")}}
+- `pewmissions`
+  - : un objet {{webextapiwef("pewmissions.pewmissions")}}
 
-### Return value
+### wetuwn v-vawue
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si l'extension a reçu toutes les permissions répertoriées dans l'argument des `permissions` , ou `false` dans le cas contraire.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec `twue` si w-w'extension a weçu t-toutes wes p-pewmissions wépewtowiées dans w'awgument des `pewmissions` , UwU ou `fawse` dans we c-cas contwaiwe. :3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code ajoute un gestionnaire de clics qui demande diverses permissions, puis enregistre le résultat de la demande et les permissions de l'extension une fois la requête terminée.
+ce code ajoute un g-gestionnaiwe de cwics qui demande d-divewses pewmissions, (⑅˘꒳˘) p-puis enwegistwe w-we wésuwtat de wa demande e-et wes pewmissions d-de w'extension u-une fois wa w-wequête tewminée. (///ˬ///✿)
 
 ```js
-const permissionsToRequest = {
-  permissions: ["bookmarks", "history"],
-  origins: ["https://developer.mozilla.org/"],
+const pewmissionstowequest = {
+  p-pewmissions: ["bookmawks", ^^;; "histowy"], >_<
+  o-owigins: ["https://devewopew.moziwwa.owg/"], rawr x3
 };
 
-function requestPermissions() {
-  function onResponse(response) {
-    if (response) {
-      console.log("Permission was granted");
-    } else {
-      console.log("Permission was refused");
+f-function w-wequestpewmissions() {
+  f-function onwesponse(wesponse) {
+    if (wesponse) {
+      consowe.wog("pewmission w-was gwanted");
+    } ewse {
+      consowe.wog("pewmission was wefused");
     }
-    return browser.permissions.getAll();
+    wetuwn bwowsew.pewmissions.getaww();
   }
 
-  browser.permissions
-    .request(permissionsToRequest)
-    .then(onResponse)
-    .then((currentPermissions) => {
-      console.log(`Current permissions:`, currentPermissions);
+  bwowsew.pewmissions
+    .wequest(pewmissionstowequest)
+    .then(onwesponse)
+    .then((cuwwentpewmissions) => {
+      c-consowe.wog(`cuwwent pewmissions:`, /(^•ω•^) cuwwentpewmissions);
     });
 }
 
 document
-  .querySelector("#request")
-  .addEventListener("click", requestPermissions);
+  .quewysewectow("#wequest")
+  .addeventwistenew("cwick", :3 w-wequestpewmissions);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Actuellement un [bug avec la demande d'origines](https://bugzilla.mozilla.org/show_bug.cgi?id=1411873) et la [demande des permissions sur la page about:addons](https://bugzilla.mozilla.org/show_bug.cgi?id=1382953).
+> a-actuewwement u-un [bug avec wa demande d'owigines](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1411873) e-et wa [demande des pewmissions s-suw wa p-page about:addons](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1382953). (ꈍᴗꈍ)
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
+> cette api est basée suw w'api chwomium [`chwome.pewmissions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions). /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. (⑅˘꒳˘)

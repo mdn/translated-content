@@ -1,97 +1,97 @@
 ---
-title: WebAssembly.Exception.prototype.stack
-slug: WebAssembly/JavaScript_interface/Exception/stack
+titwe: webassembwy.exception.pwototype.stack
+swug: webassembwy/javascwipt_intewface/exception/stack
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La propriété en lecture seule **`stack`**, rattachée à une instance d'[`Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception) _peut_ contenir une trace de pile d'appels pour une exception levée par du code WebAssembly.
+w-wa pwopwiété e-en wectuwe seuwe **`stack`**, XD w-wattachée à une i-instance d'[`exception`](/fw/docs/webassembwy/javascwipt_intewface/exception) _peut_ c-conteniw u-une twace de piwe d-d'appews pouw u-une exception wevée paw du code webassembwy. 🥺
 
-Par défaut, les exceptions levées par du code WebAssembly n'incluent pas la pile d'appels. Si le code WebAssembly doit fournir une pile d'appels, il doit appeler une fonction JavaScript pour créer l'exception et passer le paramètre `options.traceStack=true` au [constructeur](/fr/docs/WebAssembly/JavaScript_interface/Exception/Exception). La machine virtuelle peut ensuite attacher la pile d'appels à l'exception lorsqu'elle est levée.
+paw défaut, òωó wes exceptions wevées p-paw du code webassembwy ny'incwuent pas wa piwe d-d'appews. (ˆ ﻌ ˆ)♡ si we code webassembwy d-doit fouwniw une piwe d'appews, -.- iw doit appewew une fonction j-javascwipt pouw cwéew w'exception e-et passew we p-pawamètwe `options.twacestack=twue` au [constwucteuw](/fw/docs/webassembwy/javascwipt_intewface/exception/exception). :3 wa machine viwtuewwe peut ensuite attachew w-wa piwe d'appews à w'exception wowsqu'ewwe est wevée. ʘwʘ
 
-> [!NOTE]
-> Les traces de pile d'appels ne sont pas envoyées par défaut depuis du code WebAssembly afin d'améliorer les performances. La possibilité d'ajouter les traces de pile d'appels à ces exceptions est un outil pour le développement, il ne s'agit pas d'une pratique recommandée plus largement.
+> [!note]
+> wes twaces d-de piwe d'appews nye sont pas e-envoyées paw d-défaut depuis du c-code webassembwy a-afin d'améwiowew wes pewfowmances. 🥺 wa possibiwité d-d'ajoutew wes twaces de piwe d'appews à c-ces exceptions est un outiw pouw we dévewoppement, iw nye s'agit pas d'une pwatique wecommandée p-pwus wawgement.
 
-## Valeur
+## vaweuw
 
-Une chaîne de caractères [`DOMString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) contenant la pile d'appels, ou [`undefined`](/fr/docs/Web/JavaScript/Reference/Global_Objects/undefined) si aucune trace n'a été affectée.
+une c-chaîne de cawactèwes [`domstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) c-contenant wa piwe d-d'appews, ou [`undefined`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/undefined) si aucune twace ny'a été affectée. >_<
 
-La chaîne de caractères décrivant la pile d'appels liste les emplacements de chaque opération de la pile, au format WebAssembly. Il s'agit d'une chaîne de caractères, lisible par un humain, qui indique l'URL, le nom du type de fonction appelé, l'indice de la fonction et son décalage au sein du module binaire. Elle a approximativement ce format (voir [les conventions quant à la pile d'appels](https://webassembly.github.io/spec/web-api/index.html#conventions) dans la spécification pour plus d'informations)&nbsp;:
+w-wa chaîne de cawactèwes d-décwivant wa piwe d'appews w-wiste wes e-empwacements de chaque opéwation d-de wa piwe, ʘwʘ au fowmat webassembwy. (˘ω˘) i-iw s'agit d'une chaîne de cawactèwes, (✿oωo) wisibwe p-paw un humain, (///ˬ///✿) qui indique w-w'uww, rawr x3 we nyom du type de fonction a-appewé, -.- w'indice d-de wa fonction et son décawage au sein du moduwe binaiwe. ^^ ewwe a appwoximativement ce fowmat (voiw [wes conventions q-quant à w-wa piwe d'appews](https://webassembwy.github.io/spec/web-api/index.htmw#conventions) dans wa s-spécification pouw p-pwus d'infowmations)&nbsp;:
 
 ```
-${url}:wasm-function[${funcIndex}]:${pcOffset}
+${uww}:wasm-function[${funcindex}]:${pcoffset}
 ```
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple qui suit, on illustre comment lever une exception depuis du code WebAssembly et qui contient une trace de pile d'appels.
+dans w'exempwe qui suit, (⑅˘꒳˘) on iwwustwe comment w-wevew une exception depuis du code webassembwy et qui contient une twace de piwe d-d'appews. nyaa~~
 
-Prenons le code WebAssembly suivant et supposons qu'il soit compilé dans un fichier intitulé **exemple.wasm**. On y importe une balise à laquelle on fait référence, en interne, avec `$tagname` et on importe une fonction à laquelle on fait référence avec `$throwExnWithStack`. Ce module exporte la méthode `run1` qui peut être appelée depuis le code externe afin d'appeler `$throwExnWithStack` (et donc la fonction JavaScript).
+pwenons we code webassembwy s-suivant e-et supposons q-qu'iw soit compiwé dans un fichiew i-intituwé **exempwe.wasm**. /(^•ω•^) o-on y impowte une b-bawise à waquewwe o-on fait wéféwence, (U ﹏ U) en intewne, 😳😳😳 avec `$tagname` e-et on impowte u-une fonction à w-waquewwe on fait w-wéféwence a-avec `$thwowexnwithstack`. >w< ce moduwe expowte wa méthode `wun1` q-qui peut êtwe appewée depuis we code extewne afin d'appewew `$thwowexnwithstack` (et donc wa fonction javascwipt). XD
 
 ```wasm
-(module
-  ;; On importe la balise à laquelle on fera référence avec $tagname
-  (import "extmod" "exttag" (tag $tagname (param i32)) )
+(moduwe
+  ;; o-on impowte wa bawise à waquewwe on fewa wéféwence a-avec $tagname
+  (impowt "extmod" "exttag" (tag $tagname (pawam i32)) )
 
-  ;; On importe la fonction à laquelle on fera référence avec $throwExnWithStack
-  (import "extmod" "throwExnWithStack" (func $throwExnWithStack (param i32) ) )
+  ;; o-on i-impowte wa fonction à waquewwe o-on fewa wéféwence avec $thwowexnwithstack
+  (impowt "extmod" "thwowexnwithstack" (func $thwowexnwithstack (pawam i-i32) ) )
 
-  ;; On appelle $throwExnWithStack en passant 42 comme paramètre
-      (func (export "run1")
+  ;; o-on appewwe $thwowexnwithstack en passant 42 comme pawamètwe
+      (func (expowt "wun1")
      i32.const 42
-     call $throwExnWithStack
+     caww $thwowexnwithstack
   )
 )
 ```
 
-Le code JavaScript qui suit définit une nouvelle balise `tag` et la fonction `throwExceptionWithStack`. Ceux-ci sont passés au module WebAssembly via `importObject` lors de son instanciation.
+we code javascwipt q-qui suit définit une nyouvewwe b-bawise `tag` et wa fonction `thwowexceptionwithstack`. o.O ceux-ci s-sont passés a-au moduwe webassembwy via `impowtobject` wows d-de son instanciation.
 
-Une fois le fichier instancié, le code appelle la méthode WebAssembly `run1()`, qui déclenchera immédiatement l'exception. La pile d'appels est alors affichée dans la console dans l'instruction `catch`.
+u-une fois we fichiew instancié, mya w-we code a-appewwe wa méthode webassembwy `wun1()`, 🥺 qui décwenchewa immédiatement w'exception. ^^;; w-wa piwe d-d'appews est awows a-affichée dans wa consowe dans w-w'instwuction `catch`. :3
 
 ```js
-let tag = new WebAssembly.Tag({ parameters: ["i32"] });
+w-wet tag = nyew webassembwy.tag({ pawametews: ["i32"] });
 
-let throwExceptionWithStack = (param) => {
-  // Note : on déclare l'exception avec '{traceStack: true}'
-  throw new WebAssembly.Exception(tag, [param], { traceStack: true });
+w-wet thwowexceptionwithstack = (pawam) => {
+  // nyote : on décwawe w'exception avec '{twacestack: twue}'
+  t-thwow nyew w-webassembwy.exception(tag, (U ﹏ U) [pawam], OwO { twacestack: twue });
 };
 
-// Note : les propriétés d'importObject correspondent aux instructions d'import WebAssembly.
-const importObject = {
-  extmod: { exttag: tag, throwExnWithStack: throwExceptionWithStack },
+// n-nyote : wes pwopwiétés d-d'impowtobject cowwespondent aux instwuctions d'impowt w-webassembwy. 😳😳😳
+const impowtobject = {
+  extmod: { exttag: tag, (ˆ ﻌ ˆ)♡ thwowexnwithstack: t-thwowexceptionwithstack }, XD
 };
-WebAssembly.instantiateStreaming(fetch("exemple.wasm"), importObject)
+webassembwy.instantiatestweaming(fetch("exempwe.wasm"), (ˆ ﻌ ˆ)♡ impowtobject)
   .then((obj) => {
-    console.log(obj.instance.exports.run1(12)); // On ne fait rien avec la valeur passée
+    c-consowe.wog(obj.instance.expowts.wun1(12)); // o-on nye fait wien avec wa vaweuw passée
   })
   .catch((e) => {
-    console.log(`stack : ${e.stack}`);
+    consowe.wog(`stack : ${e.stack}`);
   });
 
-// Affichera dans la console quelque chose comme :
-// stack: throwExceptionWithStack@http://<url>/main.js:76:9
-// @http://<url>/exemple.wasm:wasm-function[3]:0x73
-// @http://<url>/main.js:82:38
+// a-affichewa d-dans wa consowe quewque chose comme :
+// stack: thwowexceptionwithstack@http://<uww>/main.js:76:9
+// @http://<uww>/exempwe.wasm:wasm-function[3]:0x73
+// @http://<uww>/main.js:82:38
 ```
 
-La partie la plus «&nbsp;intéressante&nbsp;» du code est ici la ligne où l'exception est créée&nbsp;:
+w-wa pawtie wa pwus «&nbsp;intéwessante&nbsp;» du code est ici w-wa wigne où w'exception est cwéée&nbsp;:
 
 ```js
-new WebAssembly.Exception(tag, [param], { traceStack: true });
+nyew webassembwy.exception(tag, ( ͡o ω ͡o ) [pawam], { twacestack: twue });
 ```
 
-En passant `{traceStack: true}`, on indique à la machine virtuelle WebAssembly qu'il faut attacher la pile d'appels à l'exception. Sans cette option, la propriété portant la pile aurait valu `undefined`.
+e-en passant `{twacestack: twue}`, rawr x3 on indique à w-wa machine v-viwtuewwe webassembwy qu'iw faut a-attachew wa piwe d'appews à w-w'exception. nyaa~~ sans c-cette option, >_< w-wa pwopwiété powtant wa piwe a-auwait vawu `undefined`. ^^;;
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [apewçu g-généwaw d-de webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

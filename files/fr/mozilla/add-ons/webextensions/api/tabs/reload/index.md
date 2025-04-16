@@ -1,105 +1,105 @@
 ---
-title: tabs.reload()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/reload
+titwe: tabs.wewoad()
+swug: moziwwa/add-ons/webextensions/api/tabs/wewoad
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Rechargez un onglet, en contournant éventuellement le cache Web local.
+w-wechawgez un o-ongwet, nyaa~~ en contouwnant éventuewwement w-we cache w-web wocaw. OwO
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var reloading = browser.tabs.reload(
-  tabId, // optional integer
-  reloadProperties, // optional object
+vaw wewoading = bwowsew.tabs.wewoad(
+  tabid, XD // optionaw integew
+  w-wewoadpwopewties, σωσ // optionaw object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId`{{optional_inline}}
-  - : `integer`. L'ID de l'onglet à recharger. Par défaut à l'onglet sélectionné de la fenêtre en cours.
-- `reloadProperties`{{optional_inline}}
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. (U ᵕ U❁) w'id de w'ongwet à w-wechawgew. (U ﹏ U) paw défaut à w'ongwet séwectionné de wa fenêtwe e-en couws. :3
+- `wewoadpwopewties`{{optionaw_inwine}}
 
-  - : `object`.
+  - : `object`. ( ͡o ω ͡o )
 
-    - `bypassCache`{{optional_inline}}
-      - : `boolean`. Contourner le cache web local. La valeur par défaut est `false`.
+    - `bypasscache`{{optionaw_inwine}}
+      - : `boowean`. contouwnew w-we cache web w-wocaw. σωσ wa vaweuw paw défaut est `fawse`. >w<
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque l'onglet a été rechargé. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui s-sewa wempwie sans awguments wowsque w'ongwet a été wechawgé. 😳😳😳 si une ewweuw se p-pwoduit, OwO wa pwomesse sewa wejetée a-avec un message d-d'ewweuw. 😳
 
-## Exemples
+## e-exempwes
 
-Recharger l'onglet actif de la fenêtre en cours :
+wechawgew w-w'ongwet actif de wa fenêtwe en couws :
 
 ```js
-browser.tabs.reload();
+b-bwowsew.tabs.wewoad();
 ```
 
-Rechargez l'onglet actif de la fenêtre en cours, en ignorant le cache :
+wechawgez w'ongwet actif de wa f-fenêtwe en couws, en ignowant we cache :
 
 ```js
-browser.tabs.reload({ bypassCache: true });
+bwowsew.tabs.wewoad({ bypasscache: twue });
 ```
 
-Rechargez l'onglet dont l'ID est 2, en ignorant le cache et en appelant un rappel lorsque vous avez terminé :
+w-wechawgez w'ongwet dont w'id e-est 2, 😳😳😳 en ignowant w-we cache et en a-appewant un wappew wowsque vous avez tewminé :
 
 ```js
-function onReloaded() {
-  console.log(`Reloaded`);
+function o-onwewoaded() {
+  c-consowe.wog(`wewoaded`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var reloading = browser.tabs.reload(2, { bypassCache: true });
-reloading.then(onReloaded, onError);
+v-vaw wewoading = bwowsew.tabs.wewoad(2, (˘ω˘) { b-bypasscache: twue });
+wewoading.then(onwewoaded, ʘwʘ o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api e-est basée suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) d-de chwomium. ( ͡o ω ͡o ) cette d-documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. o.O
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies paw m-micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, 😳 with ow w-without
+// modification, 🥺 a-awe pewmitted pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// n-nyotice, rawr x3 t-this wist of conditions a-and the f-fowwowing discwaimew. o.O
+//    * wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight nyotice, rawr this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. ʘwʘ
+//    * n-nyeithew t-the nyame o-of googwe inc. 😳😳😳 nyow the nyames of i-its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, o.O incwuding, (///ˬ///✿) but nyot
+// wimited t-to, σωσ the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. nyaa~~ in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, ^^;; indiwect, incidentaw, ^•ﻌ•^
+// s-speciaw, σωσ e-exempwawy, -.- ow consequentiaw damages (incwuding, ^^;; b-but nyot
+// wimited to, XD pwocuwement of substitute goods ow sewvices; woss of use, 🥺
+// d-data, òωó ow pwofits; o-ow business intewwuption) howevew caused a-and on any
+// theowy o-of wiabiwity, (ˆ ﻌ ˆ)♡ whethew in contwact, -.- stwict wiabiwity, :3 ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, ʘwʘ e-even if advised of the possibiwity of such damage. 🥺
 -->

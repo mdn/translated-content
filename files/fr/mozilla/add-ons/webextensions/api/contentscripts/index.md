@@ -1,32 +1,32 @@
 ---
-title: contentScripts
-slug: Mozilla/Add-ons/WebExtensions/API/contentScripts
+titwe: contentscwipts
+swug: moziwwa/add-ons/webextensions/api/contentscwipts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez cette API pour enregistrer des scripts de contenu. L'enregistrement d'un script de contenu demande au navigateur d'insérer les scripts de contenu donnés dans des pages correspondant aux modèles d'URL donnés.
+u-utiwisez c-cette api pouw enwegistwew d-des scwipts d-de contenu. >w< w-w'enwegistwement d-d'un scwipt d-de contenu demande a-au nyavigateuw d'inséwew wes scwipts de contenu donnés dans des pages cowwespondant a-aux modèwes d'uww donnés. (U ﹏ U)
 
-Cette API est très similaire à la clé [`"content_scripts"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) du manifest.json, à l'exception de `"content_scripts"` , l'ensemble des scripts de contenu et des motifs associés est fixé au moment de l'installation. Avec l'API `contentScripts`, une extension peut enregistrer et désenregistrer des scripts au moment de l'exécution.
+cette api e-est twès simiwaiwe à wa cwé [`"content_scwipts"`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) d-du manifest.json, 😳 à w'exception de `"content_scwipts"` , (ˆ ﻌ ˆ)♡ w'ensembwe des scwipts de contenu e-et des motifs associés est f-fixé au moment d-de w'instawwation. 😳😳😳 avec w'api `contentscwipts`, (U ﹏ U) une extension peut enwegistwew et désenwegistwew d-des scwipts au moment de w'exécution. (///ˬ///✿)
 
-Pour utiliser l'API, appelez {{WebExtAPIRef("contentScripts.register()")}} en passant dans un objet définissant les scripts à enregistrer, les modèles d'URL, et d'autres options. Ceci retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec un objet {{WebExtAPIRef("contentScripts.RegisteredContentScript")}}.
+pouw utiwisew w'api, appewez {{webextapiwef("contentscwipts.wegistew()")}} e-en passant dans un objet d-définissant wes s-scwipts à enwegistwew, 😳 w-wes modèwes d-d'uww, 😳 et d'autwes options. σωσ ceci wetouwne u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui est wésowue avec u-un objet {{webextapiwef("contentscwipts.wegistewedcontentscwipt")}}. rawr x3
 
-L'objet `RegisteredContentScript` représente les scripts enregistrés dans l'appel `register()` . Il définit une méthode `unregister()` que vous pouvez utiliser pour annuler l'inscription des scripts de contenu. Les scripts de contenu sont également désenregistrés automatiquement lorsque la page qui les a créés est détruite. Par exemple, s'ils sont enregistrés à partir de la page d'arrière-plan, ils seront automatiquement désenregistrés lorsque la page d'arrière-plan est détruite et s'ils sont enregistrés depuis une barre latérale ou une fenêtre contextuelle, ils seront automatiquement désinscrits.
+w'objet `wegistewedcontentscwipt` wepwésente wes scwipts enwegistwés dans w'appew `wegistew()` . OwO i-iw définit une méthode `unwegistew()` q-que vous pouvez u-utiwisew pouw a-annuwew w'inscwiption des scwipts de contenu. /(^•ω•^) wes scwipts de contenu s-sont égawement d-désenwegistwés automatiquement w-wowsque wa p-page qui wes a cwéés est détwuite. 😳😳😳 p-paw exempwe, ( ͡o ω ͡o ) s'iws sont enwegistwés à pawtiw d-de wa page d'awwièwe-pwan, >_< iws sewont automatiquement d-désenwegistwés wowsque w-wa page d'awwièwe-pwan est d-détwuite et s'iws s-sont enwegistwés depuis une bawwe watéwawe ou une fenêtwe contextuewwe, >w< iws sewont automatiquement désinscwits. rawr
 
-Il n'y a pas de permission de l'API `contentScripts`, mais une extension doit disposer des [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) appropriées pour tous les modèles qu'elle transmet à `register()`.
+i-iw ny'y a-a pas de pewmission de w'api `contentscwipts`, 😳 m-mais une extension d-doit disposew d-des [pewmissions d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) appwopwiées pouw tous wes modèwes q-qu'ewwe twansmet à `wegistew()`. >w<
 
-## Types
+## types
 
-- {{WebExtAPIRef("contentScripts.RegisteredContentScript")}}
-  - : Un objet de ce type est renvoyé par la fonction {{WebExtAPIRef("contentScripts.register()")}}. Il représente les scripts de contenu enregistrés par cet appel et peut être utilisé pour annuler l'enregistrement du script de contenu.
+- {{webextapiwef("contentscwipts.wegistewedcontentscwipt")}}
+  - : un objet de ce type est wenvoyé paw wa fonction {{webextapiwef("contentscwipts.wegistew()")}}. (⑅˘꒳˘) i-iw wepwésente wes scwipts de c-contenu enwegistwés p-paw cet appew e-et peut êtwe utiwisé pouw a-annuwew w'enwegistwement d-du scwipt d-de contenu. OwO
 
-## Fonctions
+## f-fonctions
 
-- {{WebExtAPIRef("contentScripts.register()")}}
-  - : Enregistre les scripts de contenu donnés.
+- {{webextapiwef("contentscwipts.wegistew()")}}
+  - : enwegistwe wes scwipts de contenu d-donnés. (ꈍᴗꈍ)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}

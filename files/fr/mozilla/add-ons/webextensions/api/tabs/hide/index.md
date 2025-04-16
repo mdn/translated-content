@@ -1,81 +1,81 @@
 ---
-title: tabs.hide()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/hide
+titwe: tabs.hide()
+swug: moziwwa/add-ons/webextensions/api/tabs/hide
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Masque un ou plusieurs onglets.
+masque u-un ou pwusieuws o-ongwets. mya
 
-Les onglets cachés ne sont plus visibles dans l'onglet du navigateur. Les onglets cachés ne sont pas automatiquement [supprimés](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/discard) : le code qui s'y trouve continue à s'exécuter. Vous pouvez explicitement supprimer les onglets à chaque fois que vous les masquez : bien que cela ne soit pas approprié dans toutes les situations, cela aidera à réduire les ressources utilisées par le navigateur.
+w-wes ongwets cachés n-nye sont pwus v-visibwes dans w-w'ongwet du nyavigateuw. mya w-wes ongwets c-cachés nye sont pas automatiquement [suppwimés](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/discawd) : we code qui s'y twouve continue à s'exékawaii~w. (⑅˘꒳˘) v-vous pouvez expwicitement suppwimew wes ongwets à c-chaque fois que vous wes m-masquez : bien que cewa nye soit pas appwopwié dans toutes wes s-situations, (U ﹏ U) cewa aidewa à wéduiwe w-wes wessouwces u-utiwisées paw we nyavigateuw. mya
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-Tous les onglets ne peuvent pas être masqués :
+t-tous wes ongwets nye peuvent pas êtwe masqués :
 
-- Les onglets épinglés ne peuvent pas être masqués.
-- Les onglets qui partagent l'écran, le microphone ou l'appareil photo ne peuvent pas être masqués.
-- L'onglet actif actuel ne peut pas être masqué.
-- Les onglets en cours de fermeture ne peuvent pas être masqués.
+- wes ongwets épingwés n-nye peuvent pas êtwe masqués. (˘ω˘)
+- w-wes ongwets q-qui pawtagent w-w'écwan, (U ﹏ U) we micwophone o-ou w'appaweiw photo nye peuvent pas êtwe m-masqués. ^•ﻌ•^
+- w'ongwet actif actuew nye peut pas êtwe m-masqué. (˘ω˘)
+- wes ongwets en couws de fewmetuwe nye peuvent pas êtwe masqués. :3
 
-La première fois qu'une extension cache un onglet, le navigateur indiquera à l'utilisateur que l'onglet est caché, leur montrera comment ils peuvent accéder à l'onglet caché et leur donnera l'option de désactiver l'extension à la place.
+wa pwemièwe f-fois qu'une extension cache u-un ongwet, ^^;; we nyavigateuw i-indiquewa à w-w'utiwisateuw que w'ongwet est caché, 🥺 weuw montwewa comment i-iws peuvent a-accédew à w'ongwet caché et weuw d-donnewa w'option d-de désactivew w'extension à w-wa pwace. (⑅˘꒳˘)
 
-Pour utiliser cette API, vous devez disposer de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabHide".
+pouw utiwisew cette a-api, nyaa~~ vous devez disposew de wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "tabhide". :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var hiding = browser.tabs.hide(
-  tabIds, // integer or integer array
+vaw h-hiding = bwowsew.tabs.hide(
+  tabids, ( ͡o ω ͡o ) // integew o-ow integew awway
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabIds`
+- `tabids`
 
-  - : `integer` or `array` of `integer`. Les ID de l'onglet ou des onglets à masquer.
+  - : `integew` o-ow `awway` o-of `integew`. mya wes id de w'ongwet ou des ongwets à masquew. (///ˬ///✿)
 
-    Si l'un de ces onglets ne peut pas être masqué, il ne sera pas masqué, mais l'appel sera toujours valide et les onglets éligibles seront toujours masqués. Par exemple, si vous passez `[1, 3]`, et `1` identifie l'onglet actif, alors seulement `3` seront cachés.
+    si w'un de ces ongwets nye peut pas êtwe masqué, i-iw ne sewa p-pas masqué, (˘ω˘) mais w'appew sewa t-toujouws vawide e-et wes ongwets éwigibwes s-sewont toujouws masqués. ^^;; paw exempwe, (✿oωo) si vous passez `[1, (U ﹏ U) 3]`, e-et `1` identifie w'ongwet actif, -.- awows seuwement `3` sewont cachés. ^•ﻌ•^
 
-    Cependant, si l'un des ID d'onglet n'est pas valide, l'appel échouera et aucun onglet ne sera masqué.
+    c-cependant, rawr si w'un des id d-d'ongwet ny'est p-pas vawide, (˘ω˘) w'appew échouewa e-et aucun ongwet nye s-sewa masqué. nyaa~~
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau contenant les ID des onglets qui ont été cachés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un tabweau contenant wes i-id des ongwets q-qui ont été cachés. UwU s-si une ewweuw s-se pwoduit, :3 w-wa pwomesse sewa wejetée avec un message d'ewweuw. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Masquer un seul onglet :
-
-```js
-function onHidden() {
-  console.log(`Hidden`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-browser.tabs.hide(2).then(onHidden, onError);
-```
-
-Masquer plusieurs onglets :
+m-masquew un seuw ongwet :
 
 ```js
-function onHidden() {
-  console.log(`Hidden`);
+function onhidden() {
+  consowe.wog(`hidden`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.tabs.hide([15, 14, 1]).then(onHidden, onError);
+b-bwowsew.tabs.hide(2).then(onhidden, (///ˬ///✿) onewwow);
 ```
 
-{{WebExtExamples}}
+masquew pwusieuws ongwets :
 
-## Compatibilité des navigateurs
+```js
+f-function o-onhidden() {
+  c-consowe.wog(`hidden`);
+}
 
-{{Compat}}
+function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
+}
+
+b-bwowsew.tabs.hide([15, ^^;; 14, >_< 1]).then(onhidden, rawr x3 o-onewwow);
+```
+
+{{webextexampwes}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

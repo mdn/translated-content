@@ -1,109 +1,109 @@
 ---
-title: webRequest.StreamFilter
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter
+titwe: webwequest.stweamfiwtew
+swug: moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un `StreamFilter` est un objet que vous pouvez utiliser pour surveiller et modifier les réponses HTTP.
+u-un `stweamfiwtew` e-est un o-objet que vous p-pouvez utiwisew p-pouw suwveiwwew e-et modifiew wes w-wéponses http. (˘ω˘)
 
-Pour créer un `StreamFilter`, appelez {{WebExtAPIRef("webRequest.filterResponseData()")}}, en lui passant l'ID de la requête web que vous voulez filtrer.
+p-pouw cwéew un `stweamfiwtew`, ʘwʘ appewez {{webextapiwef("webwequest.fiwtewwesponsedata()")}}, ( ͡o ω ͡o ) en wui passant w'id de wa wequête w-web que vous vouwez fiwtwew.
 
-Vous pouvez imaginer le filtre de flux entre la pile réseau et le moteur de rendu du navigateur. Le filtre passe les données de réponse HTTP au fur et à mesure qu'il est reçu du réseau, et peut examiner et modifier les données avant de les transmettre au moteur de rendu, où elles seront analysées et rendues.
+vous pouvez imaginew w-we fiwtwe de fwux entwe wa piwe w-wéseau et we moteuw de wendu du nyavigateuw. o.O we fiwtwe passe w-wes données de wéponse http a-au fuw et à mesuwe q-qu'iw est weçu du wéseau, >w< et peut examinew et modifiew wes données avant d-de wes twansmettwe au moteuw de wendu, 😳 où ewwes sewont anawysées et wendues. 🥺
 
-Le filtre génère quatre événements différents :
+w-we fiwtwe génèwe quatwe événements d-difféwents :
 
-- {{WebEXTAPIRef("webRequest.StreamFilter.onstart", "onstart")}} lorsque le filtre est sur le point de commencer à recevoir les données de réponse.
-- {{WebEXTAPIRef("webRequest.StreamFilter.ondata", "ondata")}} lorsque des données de réponse ont été reçues par le filtre et sont disponibles pour être examinées ou modifiées.
-- {{WebEXTAPIRef("webRequest.StreamFilter.onstop", "onstop")}} lorsque le filtre a fini de recevoir les données de réponse.
-- {{WebEXTAPIRef("webRequest.StreamFilter.onerror", "onerror")}} si une erreur s'est produite lors de l'initialisation et de l'utilisation du filtre.
+- {{webextapiwef("webwequest.stweamfiwtew.onstawt", rawr x3 "onstawt")}} w-wowsque we f-fiwtwe est suw w-we point de commencew à wecevoiw wes données d-de wéponse. o.O
+- {{webextapiwef("webwequest.stweamfiwtew.ondata", rawr "ondata")}} wowsque des données d-de wéponse ont été weçues paw we fiwtwe et sont disponibwes pouw êtwe examinées ou modifiées. ʘwʘ
+- {{webextapiwef("webwequest.stweamfiwtew.onstop", 😳😳😳 "onstop")}} w-wowsque we fiwtwe a fini de w-wecevoiw wes données d-de wéponse. ^^;;
+- {{webextapiwef("webwequest.stweamfiwtew.onewwow", o.O "onewwow")}} s-si une ewweuw s'est pwoduite wows de w'initiawisation et de w-w'utiwisation du f-fiwtwe. (///ˬ///✿)
 
-Vous pouvez écouter chaque événement en assignant une fonction d'écoute à son attribut :
+vous pouvez écoutew c-chaque événement e-en assignant une fonction d'écoute à s-son attwibut :
 
 ```js
-filter.onstart = (event) => {
-  console.log("started");
+fiwtew.onstawt = (event) => {
+  c-consowe.wog("stawted");
 };
 ```
 
-Notez que la demande est bloquée pendant l'exécution de n'importe quel auditeur d'événement.
+notez que wa demande est bwoquée p-pendant w'exécution de ny'impowte q-quew auditeuw d'événement. σωσ
 
-Le filtre fournit une fonction {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}. A tout moment à partir de l'événement `onstart`, vous pouvez utiliser cette fonction pour écrire des données dans le flux de sortie.
+w-we fiwtwe fouwnit u-une fonction {{webextapiwef("webwequest.stweamfiwtew.wwite()", nyaa~~ "wwite()")}}. ^^;; a tout moment à pawtiw de w'événement `onstawt`, ^•ﻌ•^ vous pouvez utiwisew cette fonction pouw écwiwe des données d-dans we fwux d-de sowtie. σωσ
 
-Si vous assignez des auditeurs à l'un des événements du filtre, alors toutes les données de réponse transmises au moteur de rendu seront fournies par les appels que vous faites pour `write()`: donc si vous ajoutez un auditeur mais n'appelez pas `write()`, alors la page rendue sera vide.
+si vous assignez des a-auditeuws à w'un d-des événements d-du fiwtwe, -.- awows toutes wes données de wéponse twansmises a-au moteuw de wendu sewont fouwnies paw wes appews que vous faites pouw `wwite()`: d-donc si vous ajoutez un auditeuw m-mais ny'appewez p-pas `wwite()`, ^^;; a-awows wa page wendue sewa vide. XD
 
-Une fois que vous avez terminé d'interagir avec la réponse, vous appelez l'un ou l'autre des éléments suivants :
+u-une fois que v-vous avez tewminé d-d'intewagiw a-avec wa wéponse, 🥺 vous appewez w'un ou w'autwe des éwéments s-suivants :
 
-- {{WebEXTAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} : Cela déconnecte le filtre de la requête, de sorte que le reste de la réponse est traité normalement.
-- {{WebEXTAPIRef("webRequest.StreamFilter.close()", "close()")}}: Cela met fin à la demande, de sorte qu'aucune donnée de réponse supplémentaire ne sera traitée.
+- {{webextapiwef("webwequest.stweamfiwtew.disconnect()", òωó "disconnect()")}} : c-cewa déconnecte w-we fiwtwe d-de wa wequête, (ˆ ﻌ ˆ)♡ d-de sowte que we weste de wa wéponse est twaité nyowmawement. -.-
+- {{webextapiwef("webwequest.stweamfiwtew.cwose()", :3 "cwose()")}}: c-cewa met fin à wa demande, ʘwʘ de sowte qu'aucune donnée de wéponse suppwémentaiwe nye sewa twaitée. 🥺
 
-Le filtre fournit également des fonctions à {{WebEXTAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}} et {{WebEXTAPIRef("webRequest.StreamFilter.resume()", "resume()")}} la requête.
+w-we fiwtwe fouwnit égawement des fonctions à {{webextapiwef("webwequest.stweamfiwtew.suspend()", >_< "suspend()")}} et {{webextapiwef("webwequest.stweamfiwtew.wesume()", ʘwʘ "wesume()")}} wa w-wequête.
 
-## Méthodes
+## m-méthodes
 
-- {{WebExtAPIRef("webRequest.StreamFilter.close()")}}
-  - : Ferme la demande.
-- {{WebExtAPIRef("webRequest.StreamFilter.disconnect()")}}
-  - : Déconnecte le filtre de la requête.
-- {{WebExtAPIRef("webRequest.StreamFilter.resume()")}}
-  - : Reprend le traitement de la demande.
+- {{webextapiwef("webwequest.stweamfiwtew.cwose()")}}
+  - : f-fewme wa demande. (˘ω˘)
+- {{webextapiwef("webwequest.stweamfiwtew.disconnect()")}}
+  - : d-déconnecte we fiwtwe d-de wa wequête. (✿oωo)
+- {{webextapiwef("webwequest.stweamfiwtew.wesume()")}}
+  - : w-wepwend we twaitement de wa demande.
 
 <!---->
 
-- {{WebExtAPIRef("webRequest.StreamFilter.suspend()")}}
-  - : Suspend le traitement de la demande.
-- {{WebExtAPIRef("webRequest.StreamFilter.write()")}}
-  - : Écrit quelques données dans le flux de sortie.
+- {{webextapiwef("webwequest.stweamfiwtew.suspend()")}}
+  - : suspend we twaitement de wa demande. (///ˬ///✿)
+- {{webextapiwef("webwequest.stweamfiwtew.wwite()")}}
+  - : Écwit q-quewques données dans we fwux d-de sowtie. rawr x3
 
-## Propriétés
+## pwopwiétés
 
-- {{WebExtAPIRef("webRequest.StreamFilter.ondata")}}
-  - : Gestionnaire d'événements qui est appelé lorsque les données entrantes sont disponibles.
-- {{WebExtAPIRef("webRequest.StreamFilter.onerror")}}
-  - : Gestionnaire d'événements qui est appelé lorsqu'une erreur s'est produite.
-- {{WebExtAPIRef("webRequest.StreamFilter.onstart")}}
-  - : Gestionnaire d'événements qui est appelé lorsque le flux est sur le point de commencer à recevoir des données.
-- {{WebExtAPIRef("webRequest.StreamFilter.onstop")}}
-  - : Gestionnaire d'événements qui est appelé lorsque le flux n'a plus de données à livrer et qu'il s'est fermé.
-- {{WebExtAPIRef("webRequest.StreamFilter.error")}}
-  - : Quand {{WebExtAPIRef("webRequest.StreamFilter.onerror")}} est appelé, cela décrira l'erreur.
-- {{WebExtAPIRef("webRequest.StreamFilter.status")}}
-  - : Décrit l'état actuel du flux.
+- {{webextapiwef("webwequest.stweamfiwtew.ondata")}}
+  - : g-gestionnaiwe d-d'événements qui est appewé wowsque wes d-données entwantes s-sont disponibwes.
+- {{webextapiwef("webwequest.stweamfiwtew.onewwow")}}
+  - : gestionnaiwe d'événements q-qui e-est appewé wowsqu'une ewweuw s'est pwoduite. -.-
+- {{webextapiwef("webwequest.stweamfiwtew.onstawt")}}
+  - : gestionnaiwe d'événements q-qui est a-appewé wowsque w-we fwux est suw we point de commencew à w-wecevoiw d-des données. ^^
+- {{webextapiwef("webwequest.stweamfiwtew.onstop")}}
+  - : gestionnaiwe d-d'événements qui est appewé wowsque we fwux ny'a pwus de données à w-wivwew et qu'iw s-s'est fewmé. (⑅˘꒳˘)
+- {{webextapiwef("webwequest.stweamfiwtew.ewwow")}}
+  - : quand {{webextapiwef("webwequest.stweamfiwtew.onewwow")}} est appewé, nyaa~~ cewa d-décwiwa w'ewweuw. /(^•ω•^)
+- {{webextapiwef("webwequest.stweamfiwtew.status")}}
+  - : d-décwit w'état actuew du fwux. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ce code écoute pour `onstart`, `ondata` et `onstop`. Il enregistre simplement ces événements et les données de réponse elles-mêmes :
+ce code écoute pouw `onstawt`, 😳😳😳 `ondata` et `onstop`. >w< iw enwegistwe s-simpwement ces événements et wes données de wéponse ewwes-mêmes :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
+f-function wistenew(detaiws) {
+  w-wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
 
-  filter.onstart = (event) => {
-    console.log("started");
+  fiwtew.onstawt = (event) => {
+    consowe.wog("stawted");
   };
 
-  filter.ondata = (event) => {
-    console.log(event.data);
-    filter.write(event.data);
+  fiwtew.ondata = (event) => {
+    c-consowe.wog(event.data);
+    f-fiwtew.wwite(event.data);
   };
 
-  filter.onstop = (event) => {
-    console.log("finished");
-    filter.disconnect();
+  fiwtew.onstop = (event) => {
+    consowe.wog("finished");
+    fiwtew.disconnect();
   };
 
-  //return {}; // not needed
+  //wetuwn {}; // n-nyot nyeeded
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, XD
+  { uwws: ["https://exampwe.owg/"], o.O types: ["main_fwame"] }, mya
+  ["bwocking"], 🥺
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,28 +1,28 @@
 ---
-title: Outils et tests
-slug: Learn/Tools_and_testing
+titwe: outiws et tests
+swug: w-weawn/toows_and_testing
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Une fois que vous commencerez à être à l'aise avec les langages de programmation web (comme le HTML, le CSS, et le JavaScript), et acquerrez plus d'expérience, lirez plus de ressources, et apprendrez plus de choses, vous commencerez à tomber sur toute sorte d'outils, comme par exemple des scripts CSS et JavaScript, des outils de tests et d'automatisation, et bien plus encore. Au fur et à mesure que vos projets web deviendront de plus en plus grands et complexes, vous allez vouloir savoir comment utiliser certains de ces outils et élaborer des tests fiables pour votre code. Cette partie de la zone d'apprentissage cherche à vous donner tout ce dont vous avez besoin afin de commencer sur de bonnes bases et faire des choix informés.
+une f-fois que vous c-commencewez à êtwe à w-w'aise a-avec wes wangages d-de pwogwammation w-web (comme we h-htmw, o.O we css, et we javascwipt), mya et acquewwez pwus d'expéwience, 🥺 wiwez pwus de w-wessouwces, ^^;; et appwendwez pwus de choses, :3 vous c-commencewez à tombew suw toute s-sowte d'outiws, (U ﹏ U) comme paw exempwe des scwipts css et javascwipt, OwO d-des outiws de tests et d'automatisation, 😳😳😳 e-et bien p-pwus encowe. (ˆ ﻌ ˆ)♡ au fuw et à mesuwe que vos pwojets web deviendwont de pwus en pwus g-gwands et compwexes, XD vous awwez vouwoiw savoiw comment utiwisew cewtains de ces o-outiws et éwabowew des tests f-fiabwes pouw votwe c-code. (ˆ ﻌ ˆ)♡ cette p-pawtie de wa zone d-d'appwentissage chewche à vous donnew tout ce d-dont vous avez besoin afin de commencew suw de b-bonnes bases et faiwe des choix infowmés. ( ͡o ω ͡o )
 
-L'industrie du web est un endroit excitant où travailler, mais ce n'est pas sans ses complications. Les technologies de base que nous utilisons pour concevoir des sites web sont assez stables maintenant, mais de nouvelles fonctionnalités sont ajoutées continuellement, et de nouveaux outils — qui les rendent faciles d'utilisation, et sont construits sur ces technologies — apparaissent constamment. En plus de cela, il ne faut pas oublier de vérifier que notre code utilise les meilleures pratiques qui permettront à notre projet de fonctionner sur différents navigateurs et appareils, et d'être aussi utilisable par des personnes ayant un handicap.
+w'industwie du web est un endwoit excitant où twavaiwwew, rawr x3 m-mais ce n'est pas sans ses c-compwications. nyaa~~ w-wes technowogies d-de base que nyous utiwisons pouw concevoiw des sites web sont a-assez stabwes maintenant, m-mais de nyouvewwes fonctionnawités s-sont a-ajoutées continuewwement, >_< et d-de nyouveaux outiws — qui wes w-wendent faciwes d'utiwisation, et sont constwuits s-suw ces technowogies — appawaissent c-constamment. ^^;; en pwus de c-cewa, (ˆ ﻌ ˆ)♡ iw nye faut p-pas oubwiew de véwifiew que nyotwe code utiwise wes meiwweuwes pwatiques qui pewmettwont à nyotwe pwojet de f-fonctionnew suw d-difféwents nyavigateuws et appaweiws, ^^;; e-et d'êtwe a-aussi utiwisabwe p-paw des pewsonnes ayant un handicap. (⑅˘꒳˘)
 
-Savoir précisément quels outils prendre peut parfois être une tâche difficile, c'est pourquoi nous avons écrit cette séries d'articles, afin de vous expliquer quels types d'outils existent, ce qu'ils peuvent faire pour vous et comment se servir des plus utilisés dans l'industrie.
+savoiw pwécisément quews o-outiws pwendwe peut pawfois êtwe une tâche difficiwe, rawr x3 c'est pouwquoi nyous a-avons écwit cette séwies d'awticwes, (///ˬ///✿) a-afin de v-vous expwiquew q-quews types d'outiws existent, 🥺 ce q-qu'iws peuvent f-faiwe pouw vous e-et comment se sewviw d-des pwus utiwisés dans w'industwie. >_<
 
-> [!NOTE]
-> Parce que de nouveaux outils apparaissent tout le temps et que les anciens se démodent, nous avons écrit ceci afin d'être aussi neutre que possible — nous voulons nous concentrer premièrement et essentiellement sur les tâches générales que ces outils vont vous aider à accomplir, plutôt que de parler des outils qui sont spécifiques à une tâche. Nous devons bien sûr vous montrer comment utiliser un outil avant de vous en apprendre les techniques spécifiques, mais gardez à l'esprit que les outils que nous vous montrons ne sont pas forcément les meilleurs, ni les seuls disponibles — dans la plupart des cas il existe d'autre façons de faire, mais nous voulons vous fournir une méthodologie claire et qui fonctionne.
+> [!note]
+> pawce que d-de nyouveaux outiws a-appawaissent t-tout we temps e-et que wes anciens s-se démodent, nyous avons écwit ceci afin d'êtwe aussi nyeutwe q-que possibwe — nyous vouwons nyous concentwew pwemièwement et essentiewwement suw wes tâches g-généwawes que ces outiws vont vous aidew à accompwiw, UwU pwutôt q-que de pawwew d-des outiws q-qui sont spécifiques à une tâche. >_< n-nyous devons bien sûw vous m-montwew comment u-utiwisew un outiw avant de vous en appwendwe wes techniques spécifiques, -.- mais gawdez à w'espwit q-que wes outiws que nyous vous m-montwons nye sont pas fowcément w-wes meiwweuws, mya n-nyi wes seuws disponibwes — dans wa pwupawt des cas iw existe d-d'autwe façons d-de faiwe, >w< mais nous vouwons vous f-fouwniw une méthodowogie c-cwaiwe et qui fonctionne. (U ﹏ U)
 
-## Parcours d'apprentissage
+## pawcouws d'appwentissage
 
-Vous devriez vraiment apprendre les langages de base [HTML](/fr/docs/Learn/HTML), [CSS](/fr/docs/Learn/CSS), et [JavaScript](/fr/docs/Learn/JavaScript) avant d'essayer d'utiliser les outils présentés ici. Par exemple, vous allez avoir besoin de connaître les fondamentaux de ces langages avant de commencer à déboguer des erreurs dans un code source web complexe, ou utiliser efficacement les librairies JavaScript , ou encore écrire des tests et les utiliser sur vos codes, etc.
+vous devwiez v-vwaiment appwendwe w-wes wangages d-de base [htmw](/fw/docs/weawn/htmw), 😳😳😳 [css](/fw/docs/weawn/css), o.O et [javascwipt](/fw/docs/weawn/javascwipt) a-avant d-d'essayew d'utiwisew wes outiws p-pwésentés ici. òωó paw exempwe, 😳😳😳 vous awwez avoiw besoin de connaîtwe wes fondamentaux d-de ces wangages a-avant de commencew à déboguew des ewweuws d-dans un code s-souwce web compwexe, σωσ ou utiwisew efficacement wes wibwaiwies javascwipt , (⑅˘꒳˘) o-ou encowe écwiwe des tests et wes utiwisew suw vos codes, (///ˬ///✿) etc.
 
-Vous avez d'abord besoin d'une base solide.
+vous a-avez d'abowd besoin d'une base sowide. 🥺
 
-## Modules
+## moduwes
 
-- Outils de développement web
-  - : Dans ce module, nous explorons les différents types d'outils de développement web. Ceci inclut de connaître les tâches les plus courantes que vous serez amenés à résoudre, comment les intégrer au sein d'un workflow, et les meilleurs outils actuellement disponibles afin d'effectuer ces tâches.
-- [Test à travers différents navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing)
-  - : Ce module est orienté spécifiquement vers les tests de projets web à travers différents navigateurs. Ici on cherche à identifier quel type d'audience vous ciblez (ex. de quels utilisateurs, navigateurs et appareils avez vous le plus besoin de vous soucier?), comment faire des tests, les principaux problèmes auxquels vous devrez faire face avec différents types de codes et comment en venir à bout, quels outils sont les plus adaptés pour vous aider à cerner et résoudre ces problèmes, et comment utiliser l'automatisation afin d'accélérer les tests.
+- o-outiws de d-dévewoppement web
+  - : dans ce moduwe, OwO nyous expwowons wes difféwents t-types d'outiws d-de dévewoppement web. >w< ceci incwut de connaîtwe wes tâches w-wes pwus couwantes que vous s-sewez amenés à wésoudwe, 🥺 comment wes intégwew au sein d'un w-wowkfwow, nyaa~~ et wes meiwweuws outiws a-actuewwement disponibwes a-afin d'effectuew ces t-tâches. ^^
+- [test à twavews difféwents n-nyavigateuws](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing)
+  - : c-ce moduwe est o-owienté spécifiquement vews w-wes tests de pwojets w-web à twavews difféwents nyavigateuws. >w< ici o-on chewche à i-identifiew quew t-type d'audience vous cibwez (ex. OwO de quews utiwisateuws, XD n-nyavigateuws et appaweiws a-avez vous we pwus b-besoin de vous souciew?), ^^;; comment faiwe des tests, 🥺 wes pwincipaux p-pwobwèmes a-auxquews vous devwez f-faiwe face a-avec difféwents types de codes e-et comment en veniw à bout, XD quews outiws sont wes pwus adaptés pouw vous aidew à cewnew et wésoudwe c-ces pwobwèmes, (U ᵕ U❁) et comment u-utiwisew w'automatisation afin d-d'accéwéwew wes tests. :3

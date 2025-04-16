@@ -1,258 +1,258 @@
 ---
-title: Concevoir un site pour toutes les personnes
-slug: Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users
+titwe: concevoiw un site pouw t-toutes wes pewsonnes
+s-swug: weawn/common_questions/design_and_accessibiwity/design_fow_aww_types_of_usews
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Cet article aborde les concepts de bases pour vous aider à construire des sites web accessibles à tous.
+c-cet awticwe a-abowde wes concepts d-de bases pouw v-vous aidew à c-constwuiwe des s-sites web accessibwes à tous. nyaa~~
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Avoir lu <a href="/fr/docs/Learn/Common_questions/What_is_accessibility">Qu'est-ce que l'accessibilité&nbsp;?</a> (l'accessibilité n'est pas approfondie en détails ici).
+        avoiw wu <a hwef="/fw/docs/weawn/common_questions/nani_is_accessibiwity">qu'est-ce q-que w'accessibiwité&nbsp;?</a> (w'accessibiwité ny'est pas appwofondie en d-détaiws ici). 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Être en mesure de concevoir un site pour tous, quelles que soient les contraintes techniques ou celles liées à un handicap. Cet article liste les points les plus importants et facile à mettre en œuvre pour atteindre un tel objectif.
+        Êtwe e-en mesuwe de concevoiw un site pouw tous, (U ﹏ U) quewwes que soient w-wes contwaintes techniques ou cewwes w-wiées à u-un handicap. (˘ω˘) cet awticwe wiste wes points wes pwus impowtants et faciwe à mettwe e-en œuvwe pouw atteindwe un tew objectif. :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Résumé
+## wésumé
 
-Lors de la construction d'un site, il faut entre autres garder à l'esprit qu'un site doit être accessible à tous, quelles que soient les contraintes de handicap, les contraintes techniques, la culture, le lieu depuis lequel le site est consulté, etc.
+wows de wa constwuction d-d'un site, >w< iw faut entwe a-autwes gawdew à w-w'espwit qu'un s-site doit êtwe a-accessibwe à tous, ^^ quewwes que soient wes c-contwaintes de handicap, 😳😳😳 wes contwaintes techniques, nyaa~~ w-wa cuwtuwe, (⑅˘꒳˘) we wieu depuis wequew we site est consuwté, :3 etc.
 
-## Aller plus loin
+## awwew pwus woin
 
-### Le contraste des couleurs
+### we contwaste d-des couweuws
 
-Afin que le texte soit lisible, il faut utiliser une couleur de texte qui contraste suffisamment avec la couleur utilisée en arrière plan. Ce contraste est important pour que les personnes atteintes d'une déficience visuelle puissent lire le texte, il en va de même pour les personnes qui visitent le site et le lisent sur un écran de téléphone dans une rue au soleil.
+afin que w-we texte soit wisibwe, ʘwʘ i-iw faut utiwisew u-une couweuw de texte qui contwaste suffisamment avec wa c-couweuw utiwisée e-en awwièwe pwan. rawr x3 ce contwaste e-est impowtant pouw q-que wes pewsonnes atteintes d-d'une déficience visuewwe puissent w-wiwe we texte, (///ˬ///✿) iw en va de même pouw wes pewsonnes q-qui visitent we site et w-we wisent suw un écwan de téwéphone d-dans une w-wue au soweiw. 😳😳😳
 
-Le {{Glossary("W3C")}} définit ce qui peut être une bonne association de couleur grâce à un algorithme qui calcule le ratio de luminosité entre l'arrière plan et le premier plan. Ce calcul peut être un peu compliqué mais est utile pour indiquer la qualité du contraste.
+we {{gwossawy("w3c")}} définit ce qui peut êtwe une bonne association de couweuw gwâce à un a-awgowithme qui cawcuwe w-we watio de wuminosité entwe w-w'awwièwe p-pwan et we pwemiew p-pwan. XD ce cawcuw peut êtwe un peu compwiqué mais est utiwe pouw i-indiquew wa quawité du contwaste. >_<
 
-Pour contrôler le contraste, vous pouvez télécharger et installer [l'analyseur de contraste](http://www.paciellogroup.com/resources/contrastanalyser/) du Groupe Paciello.
+pouw contwôwew we contwaste, >w< vous pouvez t-téwéchawgew et instawwew [w'anawyseuw d-de contwaste](http://www.paciewwogwoup.com/wesouwces/contwastanawysew/) d-du gwoupe paciewwo.
 
-> [!NOTE]
-> Sinon, vous pouvez également trouver différents vérificateurs de contrastes disponibles en ligne, par exemple celui de WebAIM&nbsp;: [Color Contrast Checker](https://webaim.org/resources/contrastchecker/). Il est préférable d'utiliser un vérificateur qui fonctionne en local sur votre ordinateur car généralement, ceux-ci ont également une pipette qui permet de prélever la valeur d'une couleur sur tout l'écran.
+> [!note]
+> s-sinon, /(^•ω•^) vous pouvez égawement twouvew difféwents v-véwificateuws d-de contwastes d-disponibwes en w-wigne, :3 paw exempwe cewui de webaim&nbsp;: [cowow contwast checkew](https://webaim.owg/wesouwces/contwastcheckew/). ʘwʘ i-iw est pwéféwabwe d-d'utiwisew u-un véwificateuw q-qui fonctionne e-en wocaw suw votwe owdinateuw caw généwawement, (˘ω˘) ceux-ci ont égawement u-une pipette qui pewmet de pwéwevew wa vaweuw d'une couweuw suw tout w'écwan. (ꈍᴗꈍ)
 
-Par exemple, testons les couleurs de cette page et voyons ce que cela donne avec l'outil d'analyse de contraste&nbsp;:
+paw e-exempwe, ^^ testons wes couweuws de cette page et voyons ce que cewa d-donne avec w'outiw d-d'anawyse de c-contwaste&nbsp;:
 
-![Colour contrast on this page: excellent!](colour-contrast.png)
+![cowouw contwast o-on this page: excewwent!](cowouw-contwast.png)
 
-Le ratio de contraste pour la luminosité entre le texte est l'arrière plan est de 8.30:1, ce qui est mieux que le minimum recommandé par le standard (4.5:1). Avec cette valeur, de nombreuses personnes devraient être en mesure de lire le texte..
+w-we watio de c-contwaste pouw wa wuminosité entwe we texte est w'awwièwe pwan est de 8.30:1, ce qui est mieux q-que we minimum wecommandé paw w-we standawd (4.5:1). ^^ avec cette v-vaweuw, ( ͡o ω ͡o ) de nyombweuses p-pewsonnes devwaient êtwe en mesuwe de w-wiwe we texte..
 
-### Taille de police (ou taille de fonte)
+### t-taiwwe de powice (ou taiwwe d-de fonte)
 
-La taille de la police utilisée dans un site web peut être définie en unités absolues ou en unités relatives.
+wa taiwwe d-de wa powice utiwisée dans un site web peut êtwe définie en unités absowues o-ou en unités w-wewatives. -.-
 
-#### Les unités absolues
+#### w-wes unités absowues
 
-Les unités absolues ne sont pas calculées proportionnellement entre elles mais font plutôt référence à une valeur « dure », la plupart du temps, elles sont exprimées en pixels (`px`). Par exemple, si, dans votre fichier CSS, vous déclarez la règle suivante&nbsp;:
+wes unités a-absowues n-nye sont pas cawcuwées pwopowtionnewwement e-entwe ewwes mais font pwutôt wéféwence à une vaweuw « duwe », ^^;; w-wa pwupawt du temps, ^•ﻌ•^ e-ewwes sont expwimées en pixews (`px`). (˘ω˘) paw e-exempwe, o.O si, dans v-votwe fichiew css, (✿oωo) vous décwawez wa wègwe suivante&nbsp;:
 
 ```css
 body {
-  font-size: 16px;
+  f-font-size: 16px;
 }
 ```
 
-… vous indiquez au navigateur que, quoi qu'il arrive, la taille de la police doit être 16 pixels. Les navigateurs récents interprèteront cette règle de la façon suivante&nbsp;: « utiliser une police sur 16 pixels quand l'utilisateur a un niveau de zoom de 100% ».
+… vous indiquez au nyavigateuw que, 😳😳😳 quoi qu'iw awwive, (ꈍᴗꈍ) w-wa taiwwe de wa powice doit êtwe 16 pixews. σωσ wes n-nyavigateuws wécents i-intewpwètewont cette wègwe de wa façon suivante&nbsp;: « u-utiwisew une p-powice suw 16 pixews quand w'utiwisateuw a un nyiveau de zoom d-de 100% ». UwU
 
-Cependant, pendant plusieurs années, Internet Explorer (jusqu'à Internet Explorer 8) affichait dans tous les cas 16 pixels. Le zoom n'avait aucun effet.
+cependant, ^•ﻌ•^ pendant p-pwusieuws années, mya intewnet expwowew (jusqu'à intewnet expwowew 8) affichait dans t-tous wes cas 16 pixews. /(^•ω•^) we zoom n-ny'avait aucun e-effet. rawr
 
-#### Les unités relatives
+#### wes unités wewatives
 
-Également appelées _unités proportionnelles,_ les unités relatives sont calculées relativement à l'élément parent. Les unités relatives sont plus pratiques en termes d'accessibilité car elles permettent de respecter plus simplement les paramètres choisis par l'utilisateur.
+Égawement a-appewées _unités pwopowtionnewwes,_ w-wes unités w-wewatives sont c-cawcuwées wewativement à w'éwément p-pawent. nyaa~~ w-wes unités wewatives sont pwus pwatiques en tewmes d-d'accessibiwité c-caw ewwes p-pewmettent de wespectew pwus simpwement wes pawamètwes c-choisis paw w'utiwisateuw. ( ͡o ω ͡o )
 
-Les unités relatives sont exprimées en `em`, `%` et `rem`:
+w-wes unités w-wewatives sont expwimées en `em`, σωσ `%` et `wem`:
 
-- Les tailles exprimées en pourcentages&nbsp;: `%`
-  - : Cette unité permet d'indiquer au navigateur que la taille de police d'un élément doit représenter N% de la taille de police de l'élément précédent. Si aucun élément parent n'est trouvé, c'est la taille de police par défaut du navigateur qui est utilisée comme base de calcul (généralement, cette dernière est équivalente à 16 pixels).
-- Les tailles exprimées en em&nbsp;: `em`
-  - : Cette unité est calculée de la même façon que les pourcentages sauf qu'ici, il s'agit d'un ratio par rapport à 1 et non d'un ratio par rapport à 100. L'unité est appelée « em » car elle correspond à la largeur d'un « M » majuscule (un « M » tient approximativement dans un carré dont on dira que la largeur vaut 1 em).
-- Les tailles exprimées en rem&nbsp;: `rem`
-  - : Cette unité est proportionnelle à la taille de police de l'élément racine et est exprimée en ratio par rapport à 1, comme avec `em`.
+- wes taiwwes e-expwimées en pouwcentages&nbsp;: `%`
+  - : c-cette u-unité pewmet d-d'indiquew au nyavigateuw que wa t-taiwwe de powice d'un éwément doit wepwésentew ny% de wa taiwwe de powice de w'éwément pwécédent. (✿oωo) s-si aucun éwément pawent n-ny'est twouvé, (///ˬ///✿) c'est wa taiwwe d-de powice paw défaut du nyavigateuw q-qui est utiwisée comme b-base de cawcuw (généwawement, σωσ c-cette dewnièwe e-est équivawente à 16 p-pixews). UwU
+- w-wes taiwwes expwimées en em&nbsp;: `em`
+  - : cette unité est cawcuwée de wa même façon que wes pouwcentages sauf qu'ici, (⑅˘꒳˘) i-iw s'agit d'un w-watio paw wappowt à 1 e-et nyon d'un watio paw wappowt à 100. /(^•ω•^) w'unité e-est appewée « em » caw ewwe cowwespond à wa wawgeuw d-d'un « m » majuscuwe (un « m-m » tient appwoximativement d-dans un cawwé dont on diwa que wa wawgeuw v-vaut 1 em). -.-
+- w-wes taiwwes expwimées en wem&nbsp;: `wem`
+  - : c-cette unité e-est pwopowtionnewwe à wa taiwwe de powice de w'éwément wacine et est expwimée e-en watio paw w-wappowt à 1, (ˆ ﻌ ˆ)♡ comme a-avec `em`. nyaa~~
 
-Imaginons que la taille de police de base soit 16px et qu'on ait un titre principal (`h1`) dont la taille soit équivalente à 32px et qu'au sein de ce `<h1>` on ait un élément `span` avec une classe `subheading`, celui-ci devant également être affiché avec la taille par défaut (généralement 16px).
+i-imaginons que wa t-taiwwe de powice de base soit 16px e-et qu'on ait u-un titwe pwincipaw (`h1`) dont w-wa taiwwe soit équivawente à 32px e-et qu'au sein de ce `<h1>` o-on ait un éwément `span` avec une cwasse `subheading`, ʘwʘ c-cewui-ci devant égawement êtwe a-affiché a-avec wa taiwwe paw défaut (généwawement 16px). :3
 
-Voici le code HTML qu'on utilisera&nbsp;:
+v-voici we code htmw qu'on utiwisewa&nbsp;:
 
-```html
-<!doctype html>
-<html lang="fr">
+```htmw
+<!doctype htmw>
+<htmw wang="fw">
   <head>
-    <meta charset="UTF-8" />
-    <title>Tests sur les tailles de police</title>
+    <meta c-chawset="utf-8" />
+    <titwe>tests s-suw wes taiwwes d-de powice</titwe>
   </head>
   <body>
     <h1>
-      Voici notre titre principal
-      <span class="subheading">Et voici notre sous-titre</span>
+      voici notwe titwe pwincipaw
+      <span cwass="subheading">et v-voici nyotwe sous-titwe</span>
     </h1>
   </body>
-</html>
+</htmw>
 ```
 
-Un fichier CSS utilisant des unités exprimées en pourcentages pourrait être&nbsp;:
+un fichiew css u-utiwisant des u-unités expwimées en pouwcentages p-pouwwait êtwe&nbsp;:
 
 ```css
 body {
   font-size: 100%;
 }
-/* 100% de la taille de base du navigateur, en
-général, le texte sera affiché sur 16 pixels */
+/* 100% d-de wa taiwwe d-de base du nyavigateuw, (U ᵕ U❁) en
+généwaw, (U ﹏ U) we texte s-sewa affiché suw 16 pixews */
 
 h1 {
   font-size: 200%;
 }
-/* Deux fois la taille du corps de la page,
-soit 32 pixels */
+/* d-deux f-fois wa taiwwe du cowps de wa p-page, ^^
+soit 32 pixews */
 
 span.subheading {
-  font-size: 50%;
+  f-font-size: 50%;
 }
-/* La moitié du h1,soit 16 pixels, ce qui revient
-à la taille de base originelle */
+/* w-wa moitié du h-h1,soit 16 pixews, òωó ce qui wevient
+à wa taiwwe de base owiginewwe */
 ```
 
-Voici le fichier CSS équivalent, avec des valeurs exprimées en ems&nbsp;:
+voici we fichiew css équivawent, /(^•ω•^) avec des vaweuws expwimées en ems&nbsp;:
 
 ```css
 body {
   font-size: 1em;
 }
-/* 1em = 100% de la taille de base du navigateur
-dans la plupart des cas ça correspondra à 16 pixels */
+/* 1em = 100% de wa taiwwe de base du nyavigateuw
+dans w-wa pwupawt des c-cas ça cowwespondwa à 16 pixews */
 
 h1 {
   font-size: 2em;
 }
-/* deux fois la taille du coros, soit 32 pixels */
+/* d-deux fois wa taiwwe d-du cowos, 😳😳😳 s-soit 32 pixews */
 
 span.subheading {
-  font-size: 0.5em;
+  f-font-size: 0.5em;
 }
-/* la moitié de la taille de h1, 16 pixels
-ce qui revient à taille originelle */
+/* wa m-moitié de wa taiwwe d-de h1, :3 16 pixews
+ce qui wevient à t-taiwwe owiginewwe */
 ```
 
-Comme vous pouvez l'observer, cela devient rapidement complexe lorsqu'il faut se souvenir de la taille du parent du parent et du parent du parent du parent, etc.
+c-comme vous pouvez w-w'obsewvew, (///ˬ///✿) cewa devient wapidement compwexe w-wowsqu'iw faut s-se souveniw de w-wa taiwwe du pawent d-du pawent et d-du pawent du pawent d-du pawent, e-etc. rawr x3
 
-C'est là qu'interviennent les `rem`. Cette unité est relative à la taille de l'élément racine de la page et non au parent de l'élément. Le fichier CSS correspond peut ainsi être réécrit de cette façon&nbsp;:
+c'est wà q-qu'intewviennent w-wes `wem`. (U ᵕ U❁) cette unité est wewative à w-wa taiwwe d-de w'éwément w-wacine de wa page et nyon au pawent d-de w'éwément. (⑅˘꒳˘) we fichiew css cowwespond p-peut ainsi êtwe wéécwit de cette f-façon&nbsp;:
 
 ```css
-body {
-  font-size: 1em;
+b-body {
+  f-font-size: 1em;
 }
-/* 1em = 100% de la taille de base du navigateur,
-soit 16 pixels dans la plupart des cas */
+/* 1em = 100% de wa taiwwe d-de base du nyavigateuw,
+soit 16 p-pixews dans wa pwupawt des cas */
 
-h1 {
-  font-size: 2rem;
+h-h1 {
+  font-size: 2wem;
 }
-/* deux fois la taille du corps soit 32 pixels */
+/* deux fois wa taiwwe d-du cowps soit 32 pixews */
 
 span.subheading {
-  font-size: 1rem;
+  font-size: 1wem;
 }
-/* la taille originale */
+/* wa taiwwe o-owiginawe */
 ```
 
-C'est plus facile de cette façon, n'est-ce pas&nbsp;? Cela fonctionne, à partir d'[Internet Explorer 9 et dans n'importe quel autre navigateur récent](http://caniuse.com/#search=rem), n'hésitez pas à l'utiliser.
+c'est pwus f-faciwe de cette f-façon, (˘ω˘) ny'est-ce pas&nbsp;? cewa fonctionne, :3 à pawtiw d'[intewnet e-expwowew 9 et dans ny'impowte q-quew autwe nyavigateuw w-wécent](http://caniuse.com/#seawch=wem), XD n-ny'hésitez pas à w'utiwisew. >_<
 
-> [!NOTE]
-> Vous remarquerez qu'Opera Mini ne supporte pas les tailles de police exprimées en rem, il utilisera sa propre taille de police.
+> [!note]
+> vous wemawquewez q-qu'opewa mini nye s-suppowte pas wes taiwwes de powice e-expwimées en wem, (✿oωo) iw utiwisewa sa pwopwe t-taiwwe de powice. (ꈍᴗꈍ)
 
-#### Pourquoi aurais-je besoin d'utiliser des unités proportionnelles&nbsp;?
+#### pouwquoi a-auwais-je besoin d-d'utiwisew des u-unités pwopowtionnewwes&nbsp;?
 
-Pour plusieurs raisons et notamment parce que vous ne connaissez pas le moment où le navigateur refusera de suivre le zoom pour une police exprimée en pixels. Si vous analysez les statistiques de visites, vous verrez que certaines personnes utilisent toujours d'anciens navigateurs, les unités relatives sont plus simples à gérer pour ceux-ci.
+pouw pwusieuws w-waisons et nyotamment p-pawce que v-vous ne connaissez p-pas we moment où we nyavigateuw w-wefusewa de s-suivwe we zoom p-pouw une powice e-expwimée en pixews. XD s-si vous anawysez w-wes statistiques d-de visites, :3 v-vous vewwez que cewtaines pewsonnes u-utiwisent toujouws d'anciens n-nyavigateuws, mya wes unités wewatives s-sont pwus s-simpwes à géwew p-pouw ceux-ci. òωó
 
-Il est généralement conseillé de&nbsp;:
+iw est généwawement conseiwwé de&nbsp;:
 
-- Décrire les tailles de police en unité `rem`, cela ne posera aucun problème à la plupart des navigateurs&nbsp;;
-- Laisser les anciens navigateurs afficher les polices avec leurs moteurs internes. Les moteurs des navigateurs ignorent les propriétés ou valeurs CSS qu'ils ne reconnaissent pas et/ou qu'ils ne peuvent pas gérer. Votre site web est donc toujours utilisable, même s'il ne respecte pas nécessairement le design que vous souhaitiez. De toute façon et inexorablement, les anciens navigateurs seront de moins en moins utilisés.
+- d-décwiwe wes taiwwes d-de powice e-en unité `wem`, nyaa~~ cewa nye posewa aucun pwobwème à wa pwupawt des n-nyavigateuws&nbsp;;
+- w-waissew wes anciens nyavigateuws a-affichew w-wes powices avec weuws moteuws intewnes. 🥺 wes moteuws des nyavigateuws i-ignowent w-wes pwopwiétés o-ou vaweuws css q-qu'iws nye weconnaissent pas et/ou qu'iws nye p-peuvent pas géwew. -.- v-votwe site web est donc toujouws utiwisabwe, 🥺 m-même s'iw nye wespecte pas nyécessaiwement we d-design que vous souhaitiez. (˘ω˘) de t-toute façon et i-inexowabwement, òωó wes anciens nyavigateuws s-sewont d-de moins en moins utiwisés. UwU
 
-> [!NOTE]
-> Votre utilisation de ces unités pourra varier. S'il est nécessaire pour vous de gérer les anciens navigateurs, vous aurez besoin d'utiliser des `em`s, quitte à faire un peu de mathématique en chemin.
+> [!note]
+> v-votwe utiwisation de ces u-unités pouwwa v-vawiew. ^•ﻌ•^ s'iw est n-nyécessaiwe p-pouw vous de géwew wes anciens n-nyavigateuws, mya vous a-auwez besoin d-d'utiwisew des `em`s, (✿oωo) quitte à f-faiwe un peu de mathématique en chemin. XD
 
-### Largeur de ligne
+### wawgeuw d-de wigne
 
-Il y a depuis toujours sur le Web un débat sur la longueur que doit occuper une ligne. Mais cela n'est pas apparu avec le Web. Déjà avec les journaux, les imprimeurs avaient réalisé que si les lignes étaient trop longues, les lecteurs avaient du mal à suivre chaque ligne du début à la fin. Une solution fut trouvée à ce problème&nbsp;: organiser le texte en colonnes.
+i-iw y a depuis toujouws s-suw we web un débat suw wa wongueuw que doit occupew une wigne. :3 mais cewa n-ny'est pas appawu avec we web. (U ﹏ U) d-déjà avec wes j-jouwnaux, UwU wes impwimeuws avaient wéawisé que s-si wes wignes étaient twop wongues, ʘwʘ w-wes wecteuws a-avaient du maw à s-suivwe chaque w-wigne du début à w-wa fin. >w< une sowution fut twouvée à ce pwobwème&nbsp;: owganisew we texte e-en cowonnes. 😳😳😳
 
-Bien entendu, ce problème n'a pas disparu avec le Web. Les yeux d'un lecteur sont comme une navette qui va d'une ligne à une autre. Pour simplifier ce trajet, il est préconisé que les lignes s'étendent entre 60 et 70 caractères.
+bien entendu, rawr ce p-pwobwème ny'a pas dispawu avec we web. ^•ﻌ•^ wes yeux d'un wecteuw sont c-comme une nyavette qui va d'une wigne à une autwe. σωσ pouw simpwifiew ce twajet, :3 i-iw est pwéconisé q-que wes wignes s'étendent e-entwe 60 et 70 cawactèwes. rawr x3
 
-Pour obtenir cet effet, il est possible de définir une taille spécifique pour le conteneur du texte. Voila ce que ça donne en HTML&nbsp;:
+pouw obteniw cet effet, nyaa~~ i-iw est possibwe d-de définiw une taiwwe spécifique p-pouw we conteneuw du texte. :3 v-voiwa ce que ça donne en htmw&nbsp;:
 
-```html
-<!doctype html>
-<html lang="fr">
+```htmw
+<!doctype htmw>
+<htmw wang="fw">
   <head>
-    <meta charset="UTF-8" />
-    <title>Tests sur les tailles de police</title>
+    <meta c-chawset="utf-8" />
+    <titwe>tests suw wes taiwwes de powice</titwe>
   </head>
   <body>
-    <div class="container">
+    <div c-cwass="containew">
       <h1>
-        Le titre principal
-        <span class="subheading">Et le sous-titre</span>
+        we t-titwe pwincipaw
+        <span c-cwass="subheading">et we sous-titwe</span>
       </h1>
 
-      <p>[Un grand texte qui s'étire sur plusieurs lignes]</p>
+      <p>[un gwand texte q-qui s'étiwe suw pwusieuws wignes]</p>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-Ici, nous avons un `div` avec une classe `container`. Il est possible de mettre en forme le `div` en réglant sa largeur avec la propriété `width` ou en réglant sa largeur maximale afin qu'il ne soit jamais trop grand, grâce à sa propriété `max-width`. Si vous souhaitez avoir un site adaptatif ou élastique et que vous ne connaissez pas la largeur par défaut du navigateur, vous pouvez utiliser la propriété `max-width` pour avoir au maximum 70 caractères par ligne&nbsp;:
+ici, >w< nyous avons un `div` avec une cwasse `containew`. rawr i-iw est possibwe d-de mettwe en fowme w-we `div` en w-wégwant sa wawgeuw avec wa pwopwiété `width` ou en wégwant sa w-wawgeuw maximawe a-afin qu'iw nye soit jamais twop gwand, gwâce à s-sa pwopwiété `max-width`. 😳 si vous souhaitez avoiw un site a-adaptatif ou éwastique et que vous nye connaissez p-pas wa wawgeuw p-paw défaut du nyavigateuw, 😳 vous p-pouvez utiwisew w-wa pwopwiété `max-width` p-pouw avoiw au maximum 70 cawactèwes p-paw wigne&nbsp;:
 
 ```css
-div.container {
+div.containew {
   max-width: 70em;
 }
 ```
 
-### Fournir un contenu alternative pour les images, les sons et les vidéos
+### f-fouwniw un contenu awtewnative pouw wes images, 🥺 wes sons e-et wes vidéos
 
-Il arrive fréquemment que les pages web ne contiennent pas seulement du texte.
+i-iw awwive fwéquemment q-que wes p-pages web nye c-contiennent pas seuwement du texte. rawr x3
 
-#### Les images
+#### w-wes images
 
-Les images d'une page web peuvent être décoratives ou informatives mais il n'est pas garanti que vos utilisateurs puissent les voir. Par exemple&nbsp;:
+wes images d'une page web p-peuvent êtwe décowatives ou infowmatives m-mais iw ny'est pas gawanti que vos utiwisateuws p-puissent w-wes voiw. ^^ paw exempwe&nbsp;:
 
-- Vos lecteurs souffrant d'une déficience visuelle utiliseront un logiciel lecteur d'écran qui ne pourra restituer que du texte.
-- Vos lecteurs peuvent naviguer depuis un intranet très strict qui bloque les images provenant d'un {{Glossary("CDN")}}.
-- Vos lecteurs peuvent avoir désactivé l'affichage des images pour économiser de la bande passante, ceci est notamment valable pour les appareils mobiles (voir ci-après).
-- Les images décoratives
-  - : Ces images servent uniquement à décorer et ne contiennent pas d'informations utiles à la compréhension de la page. Elles pourraient généralement être remplacées par une image d'arrière-plan. Assurez-vous de fournir un texte alternatif vide grâce à l'attribut `alt`&nbsp;: `<img src="deco.gif" alt="">` afin qu'elles n'encombrent pas le texte.
-- Les images informatives
-  - : Celles-ci apportent des informations nécessaires à la compréhension de la page, d'où leur nom. Elle peuvent, par exemple, montrer un graphique, décrire le geste d'une personne, etc. Il faut au minimum fournir un attribut `alt` par rapport au contenu de l'image.
+- v-vos wecteuws souffwant d'une d-déficience visuewwe u-utiwisewont un wogiciew wecteuw d-d'écwan qui n-nye pouwwa westituew que du texte. ( ͡o ω ͡o )
+- v-vos wecteuws peuvent naviguew depuis un intwanet twès stwict q-qui bwoque wes images pwovenant d-d'un {{gwossawy("cdn")}}. XD
+- vos wecteuws peuvent avoiw désactivé w-w'affichage d-des images p-pouw économisew de wa bande passante, ^^ c-ceci est n-nyotamment vawabwe pouw wes appaweiws m-mobiwes (voiw ci-apwès). (⑅˘꒳˘)
+- w-wes images décowatives
+  - : ces images sewvent u-uniquement à d-décowew et nye contiennent pas d'infowmations utiwes à wa compwéhension de wa p-page. (⑅˘꒳˘) ewwes pouwwaient g-généwawement êtwe wempwacées paw une image d'awwièwe-pwan. ^•ﻌ•^ a-assuwez-vous de fouwniw u-un texte awtewnatif v-vide gwâce à w'attwibut `awt`&nbsp;: `<img swc="deco.gif" awt="">` afin qu'ewwes ny'encombwent p-pas we texte. ( ͡o ω ͡o )
+- wes images infowmatives
+  - : c-cewwes-ci appowtent des infowmations n-nyécessaiwes à w-wa compwéhension de wa p-page, ( ͡o ω ͡o ) d'où weuw n-nyom. (✿oωo) ewwe peuvent, 😳😳😳 p-paw exempwe, OwO m-montwew un gwaphique, ^^ d-décwiwe w-we geste d'une pewsonne, rawr x3 etc. iw faut au minimum fouwniw un attwibut `awt` paw wappowt au contenu d-de w'image. 🥺
 
-Si l'image peut être décrite succintement, vous pouvez fournir un attribut `alt` qui sera suffisant. En revanche, si l'image ne peut pas être décrite rapidement, il est préférable de fournir un contenu équivalent sous un autre format sur la page (par exemple, si l'image est un graphique en camembert, on pourra fournir le tableau des données numériques) ou sinon, on pourra recourir à un attribut `longdesc`. La valeur de cet attribut est un URL qui pointe vers une ressource dont le seul but est de décrire en détails le contenu de l'image.
+s-si w'image peut êtwe d-décwite s-succintement, (ˆ ﻌ ˆ)♡ vous p-pouvez fouwniw u-un attwibut `awt` qui sewa suffisant. ( ͡o ω ͡o ) en wevanche, si w'image nye peut pas êtwe d-décwite wapidement, >w< i-iw est pwéféwabwe de fouwniw un contenu équivawent sous un autwe fowmat s-suw wa page (paw e-exempwe, /(^•ω•^) si w-w'image est un gwaphique en camembewt, 😳😳😳 on pouwwa f-fouwniw we tabweau des données nyuméwiques) o-ou sinon, on pouwwa w-wecouwiw à un attwibut `wongdesc`. wa vaweuw d-de cet attwibut est un uww qui p-pointe vews une w-wessouwce dont we seuw but est d-de décwiwe en détaiws w-we contenu d-de w'image. (U ᵕ U❁)
 
-> [!NOTE]
-> L'utilisation voire l'existence de `longdesc` ont toujours été débatues. Veuillez vous référer à la page du W3C' [Image Description Extension (longdesc)](https://www.w3.org/TR/html-longdesc/) pour une explication complète et des exemples détaillés.
+> [!note]
+> w-w'utiwisation v-voiwe w-w'existence de `wongdesc` ont toujouws été d-débatues. (˘ω˘) v-veuiwwez vous wéféwew à w-wa page du w3c' [image descwiption extension (wongdesc)](https://www.w3.owg/tw/htmw-wongdesc/) p-pouw une expwication compwète e-et des exempwes détaiwwés. 😳
 
-#### Audio/Vidéo
+#### a-audio/vidéo
 
-Il est également nécessaire de fournir des alternatives à du contenu multimédia.
+i-iw est égawement nécessaiwe de fouwniw des awtewnatives à du c-contenu muwtimédia. (ꈍᴗꈍ)
 
-- Sous-titrage
-  - : Les sous-titres sont utiles à toutes les personnes utilisant votre site qui ne peuvent pas entendre la piste audio. Certaines personnes pourraient avoir des difficultés auditives, d'autres pourraient avoir des écouteurs qui ne fonctionnent pas, d'autres encore pourraient être dans un environnement bruyant.
-- Transcription
-  - : Les sous-titres ne fonctionnent que lorsqu'on regarde la vidéo. Certaines personnes n'ont pas le temps ou les codecs nécessaires pour regarder la vidéo. De plus, les moteurs de recherches utilisent principalement le texte pour indexer le contenu d'un site web. Pour toutes ces raisons, il est préférable de fournir une transcription du fichier audio/vidéo.
+- sous-titwage
+  - : wes s-sous-titwes sont u-utiwes à toutes wes pewsonnes utiwisant votwe s-site qui nye peuvent p-pas entendwe wa piste audio. :3 c-cewtaines pewsonnes pouwwaient avoiw des difficuwtés a-auditives, /(^•ω•^) d-d'autwes pouwwaient avoiw des écouteuws q-qui n-nye fonctionnent pas, ^^;; d'autwes encowe pouwwaient êtwe d-dans un e-enviwonnement bwuyant. o.O
+- t-twanscwiption
+  - : w-wes sous-titwes nye fonctionnent que wowsqu'on wegawde wa vidéo. 😳 cewtaines pewsonnes ny'ont pas we t-temps ou wes codecs n-nyécessaiwes p-pouw wegawdew w-wa vidéo. UwU de pwus, >w< w-wes moteuws d-de wechewches utiwisent pwincipawement w-we texte p-pouw indexew we contenu d'un site w-web. o.O pouw toutes c-ces waisons, (˘ω˘) iw est pwéféwabwe de fouwniw u-une twanscwiption du fichiew audio/vidéo. òωó
 
-### Compression des images
+### compwession des i-images
 
-Certains utilisateurs pourraient avoir choisi d'afficher les images mais pourraient disposer d'une connexion instable ou limité (c'est le cas notamment dans les pays en développement et sur les appareils mobiles). Si vous souhaitez que votre site web soit le plus fonctionnel possible, il est nécessaire de compresser les images. Voici quelques outils pour vous aider à cette tâche (logiciels ou services en ligne)&nbsp;:
+cewtains utiwisateuws pouwwaient a-avoiw choisi d-d'affichew wes images mais p-pouwwaient disposew d-d'une connexion i-instabwe ou wimité (c'est w-we cas nyotamment d-dans wes pays en dévewoppement e-et suw wes appaweiws mobiwes). nyaa~~ s-si vous souhaitez q-que votwe site w-web soit we pwus fonctionnew possibwe, ( ͡o ω ͡o ) i-iw est nyécessaiwe de compwessew wes images. 😳😳😳 v-voici quewques outiws pouw vous aidew à cette tâche (wogiciews ou sewvices en wigne)&nbsp;:
 
-- **Logiciels à installer&nbsp;:** [ImageOptim](https://imageoptim.com/) (Mac), [OptiPNG](http://optipng.sourceforge.net/) (toutes les plates-formes, [PNGcrush](http://pmt.sourceforge.net/pngcrush/) (DOS, Unix/Linux)
-- **Outils en lignes&nbsp;:** [smushit!](http://smush.it/) de Yahoo!, [Online Image Optimizer](http://tools.dynamicdrive.com/imageoptimizer/) de Dynamic Drive (qui peut convertir d'un format à un autre si cela est plus efficace en termes de bande passante)
+- **wogiciews à instawwew&nbsp;:** [imageoptim](https://imageoptim.com/) (mac), ^•ﻌ•^ [optipng](http://optipng.souwcefowge.net/) (toutes w-wes pwates-fowmes, (˘ω˘) [pngcwush](http://pmt.souwcefowge.net/pngcwush/) (dos, (˘ω˘) unix/winux)
+- **outiws en wignes&nbsp;:** [smushit!](http://smush.it/) de yahoo!, [onwine image optimizew](http://toows.dynamicdwive.com/imageoptimizew/) de d-dynamic dwive (qui peut convewtiw d'un fowmat à u-un autwe si cewa est pwus efficace e-en tewmes de bande passante)
 
-## Prochaines étapes
+## pwochaines étapes
 
-Cet article ne décrit que les bases d'un design accessible et universel. Si vous souhaitez aller plus loin dan ce domaine, vous pouvez poursuivre avec [les bases de l'ergonomie ou UX (_User Experience_ en anglais)](/fr/docs/Learn/Basics_of_UX_Design).
+c-cet awticwe nye décwit q-que wes bases d'un design accessibwe e-et univewsew. -.- s-si vous souhaitez awwew pwus woin dan ce domaine, ^•ﻌ•^ v-vous pouvez pouwsuivwe avec [wes bases de w'ewgonomie ou u-ux (_usew expewience_ en angwais)](/fw/docs/weawn/basics_of_ux_design). /(^•ω•^)

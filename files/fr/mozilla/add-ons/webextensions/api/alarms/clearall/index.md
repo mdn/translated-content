@@ -1,45 +1,45 @@
 ---
-title: alarms.clearAll()
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/clearAll
+titwe: awawms.cweawaww()
+swug: m-moziwwa/add-ons/webextensions/api/awawms/cweawaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Cette méthode supprime toutes les alarmes actives. C'est une fonction asynchrone qui renvoie une promesse {{jsxref("Promise")}}.
+c-cette m-méthode suppwime t-toutes wes awawmes a-actives. (///ˬ///✿) c'est u-une fonction a-asynchwone qui w-wenvoie une pwomesse {{jsxwef("pwomise")}}. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var clearAlarms = browser.alarms.clearAll();
+vaw cweawawawms = bwowsew.awawms.cweawaww();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+a-aucun. 🥺
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une promesse ({{jsxref("Promise")}}) qui sera tenue avec une valeur booléenne. Ce dernier vaudra `true` si certaines alarmes ont bien été effacées et `false` sinon. On notera que Chrome renvoie toujours `true`.
+une pwomesse ({{jsxwef("pwomise")}}) q-qui sewa tenue avec une vaweuw b-boowéenne. mya ce dewniew vaudwa `twue` si cewtaines awawmes ont b-bien été effacées et `fawse` s-sinon. 🥺 on nyotewa q-que chwome wenvoie toujouws `twue`. >_<
 
-## Exemples
+## exempwes
 
 ```js
-function onClearedAll(wasCleared) {
-  console.log(wasCleared); // true/false
+function oncweawedaww(wascweawed) {
+  c-consowe.wog(wascweawed); // twue/fawse
 }
 
-var clearAlarms = browser.alarms.clearAll();
-clearAlarms.then(onClearedAll);
+vaw cweawawawms = bwowsew.awawms.cweawaww();
+cweawawawms.then(oncweawedaww);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
+> cette api est basée s-suw w'api c-chwomium [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms). >_<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (⑅˘꒳˘)

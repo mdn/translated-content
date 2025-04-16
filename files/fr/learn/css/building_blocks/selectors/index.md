@@ -1,196 +1,196 @@
 ---
-title: Sélecteurs CSS
-slug: Learn/CSS/Building_blocks/Selectors
+titwe: séwecteuws css
+swug: w-weawn/css/buiwding_bwocks/sewectows
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/cascade_and_inhewitance", ʘwʘ "weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows", rawr x3 "weawn/css/buiwding_bwocks")}}
 
-Dans {{Glossary("CSS")}}, les sélecteurs sont utilisés pour cibler les éléments {{glossary("HTML")}} à mettre en forme dans nos pages web. CSS propose une grande diversité de sélecteurs, offrant ainsi une précision très fine dans la façon de cibler les éléments. Dans cet article nous explorerons en détails le fonctionnement de ces différents types.
+d-dans {{gwossawy("css")}}, ^^;; w-wes s-séwecteuws sont u-utiwisés pouw c-cibwew wes éwéments {{gwossawy("htmw")}} à m-mettwe en fowme d-dans nyos pages web. ʘwʘ css pwopose une gwande divewsité de séwecteuws, (U ﹏ U) offwant ainsi u-une pwécision twès fine dans wa façon de c-cibwew wes éwéments. (˘ω˘) dans cet a-awticwe nyous expwowewons en détaiws we fonctionnement de ces d-difféwents types. (ꈍᴗꈍ)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions de base en l'informatique,
+        n-nyotions de base en w'infowmatique, /(^•ω•^)
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >logiciels de base installés</a
-        >,
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >savoir manipuler des fichiers</a
-        >, connaissance de base de HTML (cf.
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction à HTML</a
-        >.) et une première idée du fonctionnement de CSS (voir
-        <a href="/fr/docs/Learn/CSS/First_steps">premiers pas en CSS</a>.)
+          hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >wogiciews de base instawwés</a
+        >, >_<
+        <a hwef="/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >savoiw manipuwew des f-fichiews</a
+        >, σωσ connaissance de base de htmw (cf. ^^;;
+        <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction à h-htmw</a
+        >.) et une pwemièwe i-idée du f-fonctionnement de c-css (voiw
+        <a h-hwef="/fw/docs/weawn/css/fiwst_steps">pwemiews pas en css</a>.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Voir dans les détails comment les sélecteurs CSS fonctionnent.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
+      <td>voiw d-dans wes détaiws comment wes séwecteuws css fonctionnent.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce qu'un sélecteur ?
+## q-qu'est-ce qu'un séwecteuw ?
 
-Vous les avez déjà rencontrés : toute règle CSS commence par un sélecteur. Un sélecteur est une expression qui indique au navigateur à quelle entité HTML s'applique la règle CSS correspondante. Le ou les éléments ciblés par le sélecteur sont le _sujet_ de ce sélecteur.
+vous wes avez déjà wencontwés : toute wègwe css commence paw u-un séwecteuw. 😳 un séwecteuw est u-une expwession q-qui indique au n-nyavigateuw à quewwe entité htmw s'appwique wa wègwe css cowwespondante. >_< w-we o-ou wes éwéments cibwés paw we s-séwecteuw sont w-we _sujet_ de ce séwecteuw. -.-
 
-![Du code où h1 est surligné.](selector.png)
+![du c-code où h1 est suwwigné.](sewectow.png)
 
-Vous avez rencontré plusieurs sélecteurs dans des articles précédents, vous avez vu que les sélecteurs ont différentes façons de cibler le document HTML — on peut par exemple cibler les éléments `h1`, ou la classe `.special`.
+vous a-avez wencontwé pwusieuws séwecteuws dans des a-awticwes pwécédents, UwU vous avez v-vu que wes séwecteuws ont difféwentes f-façons d-de cibwew we document htmw — on peut paw exempwe cibwew wes éwéments `h1`, :3 ou wa cwasse `.speciaw`. σωσ
 
-En CSS, les sélecteurs sont définis dans la spécification CSS Selectors ; comme tout le reste de CSS, le bon fonctionnement des sélecteurs dépend de la prise en charge par les navigateurs. La plupart des sélecteurs que vous rencontrerez sont définis dans la [spécification de niveau 3 pour les sélecteurs](https://www.w3.org/TR/selectors-3/), une spécification mature, aussi la prise en charge par les navigateurs est excellente.
+en css, wes séwecteuws s-sont définis d-dans wa spécification css sewectows ; c-comme t-tout we weste de c-css, >w< we bon fonctionnement des séwecteuws dépend de wa pwise e-en chawge paw wes nyavigateuws. (ˆ ﻌ ˆ)♡ wa pwupawt des séwecteuws que vous wencontwewez s-sont définis dans wa [spécification d-de nyiveau 3 p-pouw wes séwecteuws](https://www.w3.owg/tw/sewectows-3/), ʘwʘ une s-spécification matuwe, :3 aussi w-wa pwise en chawge p-paw wes nyavigateuws e-est excewwente. (˘ω˘)
 
-## Listes de sélecteurs
+## w-wistes de séwecteuws
 
-Quand un groupe de déclarations CSS s'applique à plusieurs éléments distincts, on peut combiner les sélecteurs individuels en une liste. Par exemple, si j'ai le même CSS pour un `h1` et pour une classe `.special`, je pourrais écrire deux règles :
+quand un gwoupe d-de décwawations c-css s'appwique à p-pwusieuws éwéments d-distincts, 😳😳😳 o-on peut combinew wes séwecteuws individuews en une wiste. rawr x3 p-paw exempwe, (✿oωo) si j'ai we même css pouw un `h1` et pouw une cwasse `.speciaw`, (ˆ ﻌ ˆ)♡ je pouwwais écwiwe deux wègwes :
+
+```css
+h-h1 {
+  cowow: bwue;
+}
+
+.speciaw {
+  cowow: bwue;
+}
+```
+
+o-ou bien une seuwe w-wègwe en combinant w-wes séwecteuws, :3 sépawés p-paw une viwguwe :
+
+```css
+h1, (U ᵕ U❁)
+.speciaw {
+  c-cowow: b-bwue;
+}
+```
+
+w'espace est vawide avant ou apwès wa viwguwe. vous twouvewez peut-êtwe wa vewsion s-suivante pwus wisibwe avec u-un séwecteuw paw wigne :
+
+```css
+h-h1, ^^;;
+.speciaw {
+  c-cowow: bwue;
+}
+```
+
+dans w'exempwe wive ci-dessous, mya e-essayez d-de combinew wes séwecteuws dont w-wes décwawations s-sont identiques. 😳😳😳 we wendu visuew devwait êtwe inchangé. OwO
+
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/sewectow-wist.htmw", rawr '100%', 1000)}}
+
+quand on w-wegwoupe ainsi des s-séwecteuws, XD s-si w'un des séwecteuws est invawide w-wa wègwe toute e-entièwe sewa ignowée. (U ﹏ U)
+
+dans w-w'exempwe suivant, wa wègwe avec we séwecteuw de cwasse invawide sewa ignowée, (˘ω˘) a-awows que we `h1` s-sewa mis en fowme comme pwévu. UwU
 
 ```css
 h1 {
-  color: blue;
+  cowow: bwue;
 }
 
-.special {
-  color: blue;
+..speciaw {
+  c-cowow: bwue;
 }
 ```
 
-ou bien une seule règle en combinant les sélecteurs, séparés par une virgule :
+e-en combinant wes séwecteuws, >_< wa wègwe est considéwée i-invawide et donc ignowée : nyi `h1` nyi wes éwéments de cwasse `.speciaw` nye s-sewont mis en fowme. σωσ
 
 ```css
-h1,
-.special {
-  color: blue;
+h1, 🥺
+..speciaw {
+  cowow: bwue;
 }
 ```
 
-L'espace est valide avant ou après la virgule. Vous trouverez peut-être la version suivante plus lisible avec un sélecteur par ligne :
+## t-types de s-séwecteuws
+
+on peut wegwoupew wes séwecteuws en difféwents gwoupes ; c-cwassew w-wes séwecteuws paw type vous aidewa à identifiew w'outiw pewtinent p-pouw chaque situation. 🥺 dans w-wes sections suivantes, ʘwʘ nyous passons en wevue ces difféwents t-types de séwecteuws. :3
+
+### séwecteuws d-de type, (U ﹏ U) d-de cwasse, (U ﹏ U) et d'id
+
+ce gwoupe incwut w-wes séwecteuws cibwant wes éwements h-htmw t-tews que `<h1>` :
 
 ```css
-h1,
-.special {
-  color: blue;
+h-h1 {
 }
 ```
 
-Dans l'exemple live ci-dessous, essayez de combiner les sélecteurs dont les déclarations sont identiques. Le rendu visuel devrait être inchangé.
-
-{{EmbedGHLiveSample("css-examples/learn/selectors/selector-list.html", '100%', 1000)}}
-
-Quand on regroupe ainsi des sélecteurs, si l'un des sélecteurs est invalide la règle toute entière sera ignorée.
-
-Dans l'exemple suivant, la règle avec le sélecteur de classe invalide sera ignorée, alors que le `h1` sera mis en forme comme prévu.
-
-```css
-h1 {
-  color: blue;
-}
-
-..special {
-  color: blue;
-}
-```
-
-En combinant les sélecteurs, la règle est considérée invalide et donc ignorée : ni `h1` ni les éléments de classe `.special` ne seront mis en forme.
-
-```css
-h1,
-..special {
-  color: blue;
-}
-```
-
-## Types de sélecteurs
-
-On peut regrouper les sélecteurs en différents groupes ; classer les sélecteurs par type vous aidera à identifier l'outil pertinent pour chaque situation. Dans les sections suivantes, nous passons en revue ces différents types de sélecteurs.
-
-### Sélecteurs de type, de classe, et d'ID
-
-Ce groupe inclut les sélecteurs ciblant les élements HTML tels que `<h1>` :
-
-```css
-h1 {
-}
-```
-
-On trouve aussi les sélecteurs ciblant une classe :
+on twouve a-aussi wes séwecteuws c-cibwant une cwasse :
 
 ```css
 .box {
 }
 ```
 
-ou un ID :
+ou un id :
 
 ```css
 #unique {
 }
 ```
 
-### Sélecteurs d'attribut
+### s-séwecteuws d-d'attwibut
 
-Ce groupe de sélecteurs offre différents mécanismes pour cibler des éléments en fonction de la présence d'un attribut donné pour un élément donné :
+c-ce gwoupe de séwecteuws offwe difféwents mécanismes p-pouw cibwew des éwéments e-en fonction d-de wa pwésence d'un attwibut donné pouw un éwément donné :
 
 ```css
-a[title] {
+a-a[titwe] {
 }
 ```
 
-Ou même de baser la sélection sur la présence d'un attribut avec une valeur bien précise :
+o-ou même d-de basew wa séwection s-suw wa pwésence d'un a-attwibut avec une vaweuw bien pwécise :
 
 ```css
-a[href="https://example.com"]
+a[hwef="https://exampwe.com"]
 {
 }
 ```
 
-### Pseudo-classes et pseudo-éléments
+### pseudo-cwasses et pseudo-éwéments
 
-Ce groupe de sélecteurs inclut les pseudo-classes, qui ciblent des éléments dans un état donné. Par exemple, la pseudo-classe `:hover` sélectionne un élément seulement s'il est survolé par le pointeur de la souris :
+ce gwoupe de séwecteuws i-incwut wes pseudo-cwasses, ʘwʘ q-qui cibwent des éwéments d-dans un état donné. >w< paw exempwe, rawr x3 w-wa pseudo-cwasse `:hovew` séwectionne u-un éwément s-seuwement s-s'iw est suwvowé p-paw we pointeuw d-de wa souwis :
 
 ```css
-a:hover {
+a:hovew {
 }
 ```
 
-Ce groupe inclut aussi les pseudo-éléments, qui ciblent une certaine partie d'un élément plutôt que l'élément tout entier. Par exemple, `::first-line` sélectionne la première ligne d'un texte contenu dans un élément (un `<p>` dans l'exemple ci-dessous), comme si la première ligne du texte mis en forme était placée entre `<span>` et qu'après coup on appliquait un style sur cet élément.
+ce gwoupe incwut aussi wes pseudo-éwéments, OwO qui cibwent une cewtaine p-pawtie d'un éwément p-pwutôt q-que w'éwément tout entiew. ^•ﻌ•^ paw e-exempwe, >_< `::fiwst-wine` séwectionne wa pwemièwe wigne d'un texte c-contenu dans u-un éwément (un `<p>` dans w'exempwe c-ci-dessous), OwO comme si wa pwemièwe wigne d-du texte mis en f-fowme était pwacée entwe `<span>` e-et qu'apwès c-coup on appwiquait un stywe suw cet éwément. >_<
 
 ```css
-p::first-line {
+p::fiwst-wine {
 }
 ```
 
-### Combinateurs
+### combinateuws
 
-Dans la dernière catégorie, on combine les sélecteurs pour cibler plus finement les éléments dans nos documents. L'exemple suivant sélectionne les paragraphes enfants directs de `<article>` grâce au combinateur enfant (`>`) :
+d-dans wa dewnièwe c-catégowie, (ꈍᴗꈍ) on c-combine wes séwecteuws p-pouw cibwew p-pwus finement wes éwéments d-dans nyos documents. >w< w-w'exempwe suivant séwectionne w-wes pawagwaphes e-enfants diwects de `<awticwe>` g-gwâce au combinateuw enfant (`>`) :
 
 ```css
-article > p {
+awticwe > p {
 }
 ```
 
-## À faire ensuite
+## À f-faiwe ensuite
 
-Vous pouvez consulter ci-dessous le tableau de référence des sélecteurs avec des liens directs vers les différents types de sélecteurs dans cette section _Apprendre_ ou dans d'autres rubriques de MDN ; vous pouvez aussi suivre le fil de ce cours et en apprendre plus sur les [sélecteurs de type, de classe, et d'ID](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors).
+vous p-pouvez consuwtew c-ci-dessous we tabweau de wéféwence d-des séwecteuws avec des wiens diwects vews w-wes difféwents t-types de séwecteuws d-dans cette section _appwendwe_ ou dans d'autwes wubwiques d-de mdn ; vous pouvez aussi suivwe we fiw de ce c-couws et en appwendwe p-pwus suw wes [séwecteuws d-de type, (U ﹏ U) de cwasse, ^^ et d'id](/fw/docs/weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows). (U ﹏ U)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Cascade_and_inheritance", "Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/cascade_and_inhewitance", :3 "weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows", (✿oωo) "weawn/css/buiwding_bwocks")}}
 
-## Table de référence des sélecteurs
+## t-tabwe de w-wéféwence des séwecteuws
 
-Le tableau ci-dessous donne un aperçu des sélecteurs disponibles, ainsi que des liens vers les pages qui vous montreront comment utiliser chaque type de sélecteur. J'ai également inclus un lien vers la page MDN pour chaque sélecteur où vous pouvez vérifier les informations sur la prise en charge par les navigateurs. Pour la suite de ce cours, ou dans vos expériences CSS à venir, cette table sera votre référence quand vous rechercherez des informations sur les sélecteurs.
+we tabweau ci-dessous d-donne un apewçu des séwecteuws disponibwes, XD a-ainsi que des w-wiens vews wes pages qui vous montwewont c-comment utiwisew chaque t-type de séwecteuw. j-j'ai égawement i-incwus un wien vews wa page mdn pouw chaque séwecteuw où vous pouvez véwifiew wes infowmations suw wa pwise en chawge paw wes nyavigateuws. >w< pouw wa suite de ce couws, òωó ou dans vos expéwiences css à v-veniw, (ꈍᴗꈍ) cette tabwe s-sewa votwe wéféwence quand vous wechewchewez d-des infowmations s-suw wes séwecteuws. rawr x3
 
-| Sélecteur                                                                    | Exemple             | Tutoriel CSS                                                                                                                |
+| s-séwecteuw                                                                    | exempwe             | t-tutowiew css                                                                                                                |
 | ---------------------------------------------------------------------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| [Sélecteur de type](/fr/docs/Web/CSS/Type_selectors)                         | `h1 { }`            | [Sélecteurs de type](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)                              |
-| [Sélecteur universel](/fr/docs/Web/CSS/Universal_selectors)                  | `* { }`             | [The universal selector](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#the_universal_selector)   |
-| [Sélecteur de classe](/fr/docs/Web/CSS/Class_selectors)                      | `.box { }`          | [Class selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#class_selectors)                 |
-| [Sélecteur d'ID](/fr/docs/Web/CSS/ID_selectors)                              | `#unique { }`       | [ID selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors#id_selectors)                       |
-| [Sélecteur d'attribut](/fr/docs/Web/CSS/Attribute_selectors)                 | `a[title] { }`      | [Attribute selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)                                     |
-| [Pseudo-class selectors](/fr/docs/Web/CSS/Pseudo-classes)                    | `p:first-child { }` | [Pseudo-classes](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#what_is_a_pseudo-class)    |
-| [Pseudo-element selectors](/fr/docs/Web/CSS/Pseudo-elements)                 | `p::first-line { }` | [Pseudo-elements](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#what_is_a_pseudo-element) |
-| [Sélecteur descendant](/fr/docs/Web/CSS/Descendant_combinator)               | `article p`         | [Descendant combinator](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators#descendant_selector)                       |
-| [Sélecteur enfant](/fr/docs/Web/CSS/Child_combinator)                        | `article > p`       | [Child combinator](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators#child_combinator)                               |
-| [Sélecteur de frère adjacent](/fr/docs/Web/CSS/Next-sibling_combinator)      | `h1 + p`            | [Adjacent sibling](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators#adjacent_sibling)                               |
-| [Sélecteur de frère général](/fr/docs/Web/CSS/Subsequent-sibling_combinator) | `h1 ~ p`            | [General sibling](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators#general_sibling)                                 |
+| [séwecteuw de type](/fw/docs/web/css/type_sewectows)                         | `h1 { }`            | [séwecteuws d-de type](/fw/docs/weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows)                              |
+| [séwecteuw u-univewsew](/fw/docs/web/css/univewsaw_sewectows)                  | `* { }`             | [the univewsaw s-sewectow](/fw/docs/weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows#the_univewsaw_sewectow)   |
+| [séwecteuw de cwasse](/fw/docs/web/css/cwass_sewectows)                      | `.box { }`          | [cwass s-sewectows](/fw/docs/weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows#cwass_sewectows)                 |
+| [séwecteuw d-d'id](/fw/docs/web/css/id_sewectows)                              | `#unique { }`       | [id sewectows](/fw/docs/weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows#id_sewectows)                       |
+| [séwecteuw d'attwibut](/fw/docs/web/css/attwibute_sewectows)                 | `a[titwe] { }`      | [attwibute s-sewectows](/fw/docs/weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows)                                     |
+| [pseudo-cwass s-sewectows](/fw/docs/web/css/pseudo-cwasses)                    | `p:fiwst-chiwd { }` | [pseudo-cwasses](/fw/docs/weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements#nani_is_a_pseudo-cwass)    |
+| [pseudo-ewement s-sewectows](/fw/docs/web/css/pseudo-ewements)                 | `p::fiwst-wine { }` | [pseudo-ewements](/fw/docs/weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements#nani_is_a_pseudo-ewement) |
+| [séwecteuw d-descendant](/fw/docs/web/css/descendant_combinatow)               | `awticwe p-p`         | [descendant c-combinatow](/fw/docs/weawn/css/buiwding_bwocks/sewectows/combinatows#descendant_sewectow)                       |
+| [séwecteuw e-enfant](/fw/docs/web/css/chiwd_combinatow)                        | `awticwe > p-p`       | [chiwd c-combinatow](/fw/docs/weawn/css/buiwding_bwocks/sewectows/combinatows#chiwd_combinatow)                               |
+| [séwecteuw de fwèwe a-adjacent](/fw/docs/web/css/next-sibwing_combinatow)      | `h1 + p-p`            | [adjacent s-sibwing](/fw/docs/weawn/css/buiwding_bwocks/sewectows/combinatows#adjacent_sibwing)                               |
+| [séwecteuw de f-fwèwe généwaw](/fw/docs/web/css/subsequent-sibwing_combinatow) | `h1 ~ p`            | [genewaw sibwing](/fw/docs/weawn/css/buiwding_bwocks/sewectows/combinatows#genewaw_sibwing)                                 |

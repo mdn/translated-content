@@ -1,61 +1,61 @@
 ---
-title: menus.ItemType
-slug: Mozilla/Add-ons/WebExtensions/API/menus/ItemType
+titwe: menus.itemtype
+swug: moziwwa/add-ons/webextensions/api/menus/itemtype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type d'élément de menu.
+w-we type d'éwément d-de menu. rawr x3
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
+wes v-vaweuws de ce t-type sont des chaînes. /(^•ω•^) w-wes vaweuws p-possibwes sont:
 
-- normal
-  - : Un élément de menu qui affiche simplement une étiquette.
-- checkbox
-  - : Un élément de menu qui représente un état binaire. Il affiche une coche à côté de l'étiquette. Cliquez sur l'élément pour activer la coche. L'écouteur {{WebExtAPIRef("menus.onClicked")}} recevra deux propriétés supplémentaires : "checked", indiquant si l'élément est vérifié maintenant, et "wasChecked", indiquant si l'élément a été vérifié avant l'événement click.
-- radio
-  - : Un élément de menu qui représente l'un des groupes de choix. Tout comme une case à cocher, cela affiche également une coche à côté de l'étiquette, et son écouteur {{WebExtAPIRef("menus.onClicked")}} est passé "checked" et "wasChecked". However, Cependant, si vous créez plus d'un élément radio, les éléments fonctionnent comme un groupe d'éléments radio items: un seul élément du groupe peut être vérifié, et cliquer sur un élément en fait l'élément sélectionné.
-- separator
-  - : Une ligne séparant un groupe d'éléments.
+- n-nyowmaw
+  - : un éwément de menu qui affiche simpwement une étiquette. :3
+- c-checkbox
+  - : un éwément de menu qui wepwésente u-un état binaiwe. (ꈍᴗꈍ) iw affiche u-une coche à côté de w'étiquette. /(^•ω•^) cwiquez suw w'éwément p-pouw activew wa coche. w'écouteuw {{webextapiwef("menus.oncwicked")}} w-wecevwa d-deux pwopwiétés suppwémentaiwes : "checked", (⑅˘꒳˘) indiquant si w'éwément est véwifié maintenant, ( ͡o ω ͡o ) e-et "waschecked", òωó indiquant si w'éwément a été véwifié avant w'événement c-cwick. (⑅˘꒳˘)
+- wadio
+  - : un éwément d-de menu qui w-wepwésente w'un d-des gwoupes de c-choix. tout comme une case à cochew, XD cewa affiche égawement une c-coche à côté de w'étiquette, -.- et son écouteuw {{webextapiwef("menus.oncwicked")}} e-est passé "checked" et "waschecked". :3 howevew, nyaa~~ cependant, si vous cwéez pwus d'un éwément wadio, 😳 wes éwéments f-fonctionnent comme un g-gwoupe d'éwéments w-wadio items: u-un seuw éwément du gwoupe peut êtwe véwifié, (⑅˘꒳˘) et cwiquew s-suw un éwément e-en fait w'éwément séwectionné. nyaa~~
+- s-sepawatow
+  - : u-une wigne sépawant un gwoupe d-d'éwéments.
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> cette api est basée suw w'api [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) d-de chwomium. OwO cette documentation e-est déwivée de [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) d-dans we code c-chwomium. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. XD aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in s-souwce and binawy f-fowms, (U ᵕ U❁) with ow without
+// modification, (U ﹏ U) a-awe pewmitted p-pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, :3 this wist of conditions a-and the fowwowing discwaimew. ( ͡o ω ͡o )
+//    * w-wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// copywight n-nyotice, σωσ this w-wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. >w<
+//    * n-nyeithew t-the nyame of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, 😳 i-incwuding, 😳😳😳 but nyot
+// wimited t-to, (˘ω˘) the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ʘwʘ in nyo e-event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, ( ͡o ω ͡o ) indiwect, i-incidentaw, o.O
+// speciaw, >w< exempwawy, 😳 ow consequentiaw d-damages (incwuding, 🥺 b-but nyot
+// wimited to, rawr x3 pwocuwement o-of substitute g-goods ow sewvices; woss of use, o.O
+// data, ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy o-of wiabiwity, rawr whethew in contwact, ʘwʘ s-stwict w-wiabiwity, 😳😳😳 ow towt
+// (incwuding nyegwigence ow o-othewwise) awising in any way out of the use
+// of this softwawe, ^^;; even if advised o-of the possibiwity o-of such damage. o.O
 -->

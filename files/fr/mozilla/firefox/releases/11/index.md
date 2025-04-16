@@ -1,111 +1,111 @@
 ---
-title: Firefox 11 pour les développeurs
-slug: Mozilla/Firefox/Releases/11
+titwe: fiwefox 11 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/11
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 11, basé sur Gecko 11.0, est sorti le 13 mars 2012. Cet article fournit des informations sur les nouvelles fonctionnalités et les principaux bugs corrigés, ainsi que des liens vers une documentation plus détaillée pour les développeurs web et d'extensions.
+f-fiwefox 11, mya b-basé suw gecko 11.0, OwO e-est sowti w-we 13 maws 2012. c-cet awticwe f-fouwnit des infowmations suw wes nyouvewwes fonctionnawités et wes pwincipaux bugs c-cowwigés, (ˆ ﻌ ˆ)♡ ainsi que des wiens vews une documentation p-pwus détaiwwée pouw w-wes dévewoppeuws web et d'extensions. ʘwʘ
 
-## Changements pour les développeurs Web
+## changements pouw wes d-dévewoppeuws web
 
-### HTML
+### htmw
 
-- Les attributs `muted` et `loop` pour les éléments {{HTMLElement("audio")}} et {{HTMLElement("video")}} ont été implémentés.
+- wes a-attwibuts `muted` e-et `woop` pouw wes éwéments {{htmwewement("audio")}} et {{htmwewement("video")}} ont été impwémentés. o.O
 
-### DOM
+### d-dom
 
-- La propriété {{domxref("element.outerHTML")}} supporte maintenant les éléments HTML.
-- [`XMLHttpRequest` supporte l'analyse HTML](/fr/docs/Web/API/XMLHttpRequest_API/HTML_in_XMLHttpRequest).
-- Suppression du support des attributs `responseType` et `withCredentials` {{domxref("XMLHttpRequest")}} lors de requêtes synchrones. Si vous tentez de le faire l'exception `NS_ERROR_DOM_INVALID_ACCESS_ERR` est envoyée. Ce changement a été proposé au W3C pour être normalisé.
-- la nouvelle méthode {{domxref("window.navigator.mozVibrate()")}} vous permet de faire vibrer le périphérique supporté, c'est implémenté dans Gecko en tant que `mozVibrate()`.
-- {{domxref("window.navigator.mozApps")}} retourne un objet [Apps](/fr/docs/DOM/Apps), vous pouvez l'utiliser pour installer et gérer des [applications Web ouvertes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings).
-- Les évènements `MozBeforePaint` ne sont plus exploités. Ceux qui ont utilisé {{domxref("window.requestAnimationFrame", "mozRequestAnimationFrame()")}} devraient transmettre une fonction de rappel à la place.
-- La prise en charge de l'annulation des demandes d'animation de trame a été ajouté, {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} retourne désormais la valeur ID de la demande, que vous pouvez passer à {{domxref("window.cancelAnimationFrame", "window.mozCancelAnimationFrame()")}} pour annuler la demande.
-- Plusieurs constructeurs {{domxref("Event")}} (`Event`, HTML events, `UIEvent` et `MouseEvent`) introduits dans les spécifications DOM4 sont à présent supportés.
-- {{domxref("window.navigator.mozBattery", "Battery API")}} est désormais activée par défaut.
-- Le support des propriétés [`defaultMuted`](/fr/docs/Web/API/HTMLMediaElement), [`loop`](/fr/docs/Web/API/HTMLMediaElement) et [`muted`](/fr/docs/Web/API/HTMLMediaElement) de [`HTMLMediaElement`](/fr/docs/Web/API/HTMLMediaElement) a été ajouté.
-- L'appel {{domxref("document.mozCancelFullScreen()")}} restaure à présent l'élément précédemment en plein-écran, si un autre élément était en mode plein-écran lorsque la méthode {{domxref("element.mozRequestFullScreen()")}} a été appelée.
-- La méthode {{domxref("window.requestAnimationFrame", "window.mozRequestAnimationFrame()")}} ne supporte plus une forme sans argument. Cela n'est pas beaucoup utilisé et il est peu probable que ça fasse partie de la norme.
-- Les images SVG peuvent à présent être dessinées dans un canvas sans [entacher le canvas](/fr/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f).
-- La propriété non-standard `countryCode` de l'interface `GeoPositionAddress` a été supprimée, voir `nsIDOMGeoPositionAddress`.
-- [Les évènements Server-sent](/fr/docs/Web/API/Server-sent_events) supportent désormais [CORS](/fr/docs/Web/HTTP/CORS).
-- Dans le passé, lorsque l'utilisateur suivait un lien, les valeurs définies sur l'objet {{domxref("window.navigator")}} été retenus par la nouvelle page. Maintenant un nouvel objet `navigator` est crée pour la nouvelle page. Cela rend le comportement de Firefox identique aux autres navigateurs.
+- wa pwopwiété {{domxwef("ewement.outewhtmw")}} suppowte maintenant wes éwéments h-htmw. UwU
+- [`xmwhttpwequest` suppowte w-w'anawyse htmw](/fw/docs/web/api/xmwhttpwequest_api/htmw_in_xmwhttpwequest). rawr x3
+- s-suppwession du s-suppowt des attwibuts `wesponsetype` e-et `withcwedentiaws` {{domxwef("xmwhttpwequest")}} wows de wequêtes synchwones. 🥺 s-si vous tentez de we faiwe w'exception `ns_ewwow_dom_invawid_access_eww` e-est envoyée. :3 ce changement a été pwoposé au w3c pouw êtwe nyowmawisé. (ꈍᴗꈍ)
+- wa nouvewwe méthode {{domxwef("window.navigatow.mozvibwate()")}} v-vous pewmet de faiwe vibwew we péwiphéwique s-suppowté, 🥺 c-c'est impwémenté d-dans gecko en tant que `mozvibwate()`. (✿oωo)
+- {{domxwef("window.navigatow.mozapps")}} wetouwne un objet [apps](/fw/docs/dom/apps), (U ﹏ U) v-vous pouvez w-w'utiwisew pouw instawwew e-et géwew des [appwications w-web ouvewtes](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings). :3
+- w-wes évènements `mozbefowepaint` nye sont pwus expwoités. ^^;; c-ceux qui ont utiwisé {{domxwef("window.wequestanimationfwame", rawr "mozwequestanimationfwame()")}} devwaient t-twansmettwe une fonction de wappew à w-wa pwace. 😳😳😳
+- wa pwise en c-chawge de w'annuwation d-des demandes d'animation de twame a été ajouté, (✿oωo) {{domxwef("window.wequestanimationfwame", OwO "window.mozwequestanimationfwame()")}} wetouwne désowmais wa vaweuw id de w-wa demande, ʘwʘ que v-vous pouvez passew à {{domxwef("window.cancewanimationfwame", (ˆ ﻌ ˆ)♡ "window.mozcancewanimationfwame()")}} pouw annuwew w-wa demande. (U ﹏ U)
+- p-pwusieuws constwucteuws {{domxwef("event")}} (`event`, UwU h-htmw events, XD `uievent` et `mouseevent`) intwoduits dans wes spécifications d-dom4 sont à pwésent suppowtés. ʘwʘ
+- {{domxwef("window.navigatow.mozbattewy", rawr x3 "battewy api")}} est désowmais activée paw défaut. ^^;;
+- w-we suppowt des pwopwiétés [`defauwtmuted`](/fw/docs/web/api/htmwmediaewement), ʘwʘ [`woop`](/fw/docs/web/api/htmwmediaewement) e-et [`muted`](/fw/docs/web/api/htmwmediaewement) d-de [`htmwmediaewement`](/fw/docs/web/api/htmwmediaewement) a-a été ajouté. (U ﹏ U)
+- w'appew {{domxwef("document.mozcancewfuwwscween()")}} w-westauwe à p-pwésent w'éwément p-pwécédemment e-en pwein-écwan, (˘ω˘) si un autwe éwément était e-en mode pwein-écwan w-wowsque w-wa méthode {{domxwef("ewement.mozwequestfuwwscween()")}} a-a été a-appewée. (ꈍᴗꈍ)
+- wa méthode {{domxwef("window.wequestanimationfwame", /(^•ω•^) "window.mozwequestanimationfwame()")}} nye suppowte pwus une fowme sans a-awgument. >_< cewa ny'est pas beaucoup utiwisé et iw est peu pwobabwe que ça fasse pawtie de wa nyowme. σωσ
+- w-wes images svg peuvent à pwésent êtwe dessinées dans u-un canvas sans [entachew w-we canvas](/fw/docs/web/htmw/cows_enabwed_image#nani_is_a_.22tainted.22_canvas.3f). ^^;;
+- w-wa pwopwiété nyon-standawd `countwycode` de w'intewface `geopositionaddwess` a été s-suppwimée, 😳 voiw `nsidomgeopositionaddwess`. >_<
+- [wes évènements s-sewvew-sent](/fw/docs/web/api/sewvew-sent_events) s-suppowtent désowmais [cows](/fw/docs/web/http/cows). -.-
+- dans we passé, wowsque w'utiwisateuw suivait un wien, UwU wes vaweuws d-définies suw w'objet {{domxwef("window.navigatow")}} été w-wetenus paw wa nyouvewwe page. :3 m-maintenant un nyouvew o-objet `navigatow` est cwée pouw wa nyouvewwe p-page. σωσ cewa wend w-we compowtement de fiwefox identique a-aux autwes n-nyavigateuws.
 
-### CSS
+### css
 
-- La propriété [`text-size-adjust`](/fr/docs/Web/CSS/text-size-adjust) est à présent supportée.
-- Les [Règles Conditionnelles](/fr/docs/CSS/CSS3#Conditional_Rules) [CSS3](/fr/docs/CSS/CSS3) sont à présent mieux supportées : les déclarations imbriquées peuvent désormais être ajoutées à [@media](/fr/docs/Web/CSS/@media), [@-moz-document](/fr/docs/Web/CSS/@document). (Voir [CSS Syntax](/fr/docs/Web/CSS/Syntax) et [CSS at-rules](/fr/docs/Web/CSS/At-rule)).
+- wa pwopwiété [`text-size-adjust`](/fw/docs/web/css/text-size-adjust) est à pwésent suppowtée. >w<
+- w-wes [wègwes c-conditionnewwes](/fw/docs/css/css3#conditionaw_wuwes) [css3](/fw/docs/css/css3) s-sont à pwésent mieux suppowtées : w-wes décwawations i-imbwiquées peuvent désowmais êtwe a-ajoutées à [@media](/fw/docs/web/css/@media), (ˆ ﻌ ˆ)♡ [@-moz-document](/fw/docs/web/css/@document). ʘwʘ (voiw [css syntax](/fw/docs/web/css/syntax) et [css at-wuwes](/fw/docs/web/css/at-wuwe)). :3
 
-### SVG
+### svg
 
-- L'interface DOM {{domxref("SVGSVGElement")}} supporte désormais la méthode `getElementById`.
+- w'intewface dom {{domxwef("svgsvgewement")}} s-suppowte d-désowmais wa méthode `getewementbyid`. (˘ω˘)
 
-### WebSocket
+### websocket
 
-- L'API [WebSocket](/fr/docs/Web/API/WebSockets_API) supporte désormais les messages binaires (voir [bug Firefox 676439](https://bugzil.la/676439)).
-- Le protocole et l'API ont été mis à jour suivant la dernière version de la spécification et l'API n'a plus de préfixe (voir [bug Firefox 666349](https://bugzil.la/666349) et [bug Firefox 695635](https://bugzil.la/695635)).
-- Auparavant, les messages envoyés et reçus à l'aide de WebSockets dans Firefox été limités à 16 Mo en taille, désormais ils peuvent aller jusqu'à 2 Go (bien que les limitations de capacité de mémoire peut les empêcher d'être plus grand, Firefox le supporte).
+- w-w'api [websocket](/fw/docs/web/api/websockets_api) s-suppowte désowmais wes messages binaiwes (voiw [bug fiwefox 676439](https://bugziw.wa/676439)). 😳😳😳
+- w-we pwotocowe et w'api ont été mis à jouw suivant wa dewnièwe vewsion d-de wa spécification et w'api ny'a pwus de pwéfixe (voiw [bug fiwefox 666349](https://bugziw.wa/666349) e-et [bug f-fiwefox 695635](https://bugziw.wa/695635)). rawr x3
+- aupawavant, (✿oωo) wes messages envoyés et weçus à w'aide d-de websockets d-dans fiwefox été wimités à 16 mo en taiwwe, (ˆ ﻌ ˆ)♡ désowmais iws p-peuvent awwew jusqu'à 2 go (bien q-que wes wimitations de capacité de mémoiwe peut wes empêchew d-d'êtwe pwus gwand, :3 fiwefox w-we suppowte). (U ᵕ U❁)
 
-### IndexedDB
+### i-indexeddb
 
-- Le support de [IDBFactory.cmp()](/fr/docs/IndexedDB/IDBFactory#cmp%28%29) a été ajouté.
-- Une [clé IndexedDB](/fr/docs/Web/API/IndexedDB_API/Basic_Terminology#section_6) peut également être de l'un des types suivants : Date, Arrays et Float (et pas seulement String et Integer).
+- we suppowt de [idbfactowy.cmp()](/fw/docs/indexeddb/idbfactowy#cmp%28%29) a-a été ajouté. ^^;;
+- une [cwé i-indexeddb](/fw/docs/web/api/indexeddb_api/basic_tewminowogy#section_6) p-peut égawement êtwe d-de w'un des types suivants : d-date, mya awways et f-fwoat (et pas seuwement stwing et integew). 😳😳😳
 
-### Réseau
+### w-wéseau
 
-- La modification dans Firefox 8 concernant la suppression des guillemets comme délimiteurs pour {{rfc(2231)}} et {{rfc(5987)}} a été annulée, car cela a cassé certains sites, y compris Outlook Web Access.
+- wa m-modification dans f-fiwefox 8 concewnant wa suppwession des guiwwemets c-comme déwimiteuws pouw {{wfc(2231)}} e-et {{wfc(5987)}} a-a été annuwée, OwO caw cewa a cassé cewtains sites, y-y compwis outwook w-web access. rawr
 
-### Outils de développement
+### o-outiws de dévewoppement
 
-- L'[Inspecteur de page](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) offre désormais une [vue 3D](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) si votre système supporte [WebGL](/fr/docs/Web/API/WebGL_API).
-- Le nouvel [Editeur de styles](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) offre un moyen d'éditer et de composer des feuilles de style CSS en temps réel.
-- La [fonctionnalité Afficher la source](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) utilise désormais le nouveau parseur HTML5 au lieu du vieux parseur HTML.
+- w'[inspecteuw d-de page](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw) o-offwe désowmais une [vue 3d](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/3d_view/index.htmw) si votwe système suppowte [webgw](/fw/docs/web/api/webgw_api). XD
+- we nyouvew [editeuw de stywes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stywe_editow/index.htmw) offwe u-un moyen d'éditew et de composew d-des feuiwwes de stywe css e-en temps wéew. (U ﹏ U)
+- wa [fonctionnawité a-affichew wa souwce](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/view_souwce/index.htmw) u-utiwise d-désowmais we nyouveau p-pawseuw h-htmw5 au wieu du v-vieux pawseuw htmw. (˘ω˘)
 
-## Changements pour les développeurs de Mozilla et de modules complémentaires
+## changements pouw wes dévewoppeuws de moziwwa et de moduwes compwémentaiwes
 
-### Module de code JavaScript
+### moduwe d-de code javascwipt
 
-#### NetUtil.jsm
+#### n-nyetutiw.jsm
 
-- [`readInputStreamToString()`](</fr/docs/JavaScript_code_modules/NetUtil.jsm#readInputStreamToString()>) a un nouveau paramètre (optionnel) à configurer pour l'interprétation du jeu de caractères lors de la lecture du flux d'entrée.
+- [`weadinputstweamtostwing()`](</fw/docs/javascwipt_code_moduwes/netutiw.jsm#weadinputstweamtostwing()>) a-a un nyouveau pawamètwe (optionnew) à c-configuwew pouw w'intewpwétation du jeu de cawactèwes w-wows de wa wectuwe d-du fwux d'entwée. UwU
 
-#### Nouveau module de code JavaScript
+#### nouveau moduwe de c-code javascwipt
 
-- [`source-editor.jsm`](/fr/docs/JavaScript_code_modules/source-editor.jsm)
-  - : Offre un moyen pratique facile d'éditeur de code source que vous pouvez utiliser dans vos add-ons. C'est le même éditeur utilisé par l'[Ardoise](/fr/docs/Outils/Ardoise) et les autres outils de développement intégrés dans Firefox.
+- [`souwce-editow.jsm`](/fw/docs/javascwipt_code_moduwes/souwce-editow.jsm)
+  - : offwe un moyen pwatique faciwe d-d'éditeuw de c-code souwce que vous pouvez utiwisew d-dans vos add-ons. >_< c-c'est we même éditeuw utiwisé paw w'[awdoise](/fw/docs/outiws/awdoise) et wes autwes outiws de dévewoppement i-intégwés d-dans fiwefox. σωσ
 
-### Changements dans les interfaces
+### c-changements d-dans wes intewfaces
 
-- L'interface `mozIAsyncHistory` a une nouvelle méthode `mozIAsyncHistory.isURIVisited()` pour vérifier si une URI a été visitée.
-- Une nouvelle interface `mozIVisitStatusCallback` a été ajoutée pour fournir une fonctionnalité de traitement des rappels pour `mozIAsyncHistory.isURIVisited()`.
-- L'interface `nsIMacDockSupport` interface now supports adding a text badge to the application's icon in the Dock using its new `badgeText` attribute.
-- Dans l'interface `nsINavHistoryResultObserver`, vous devez à présent implémenter `nsINavHistoryResultObserver.containerStateChanged()` au lieu des anciennes méthodes `containerOpened()` et `containerClosed()`.
+- w-w'intewface `moziasynchistowy` a une nouvewwe m-méthode `moziasynchistowy.isuwivisited()` p-pouw véwifiew si une uwi a été v-visitée. 🥺
+- u-une nyouvewwe intewface `mozivisitstatuscawwback` a été ajoutée p-pouw fouwniw une fonctionnawité de twaitement d-des wappews pouw `moziasynchistowy.isuwivisited()`. 🥺
+- w'intewface `nsimacdocksuppowt` i-intewface n-nyow suppowts adding a text badge t-to the appwication's icon in the dock using i-its nyew `badgetext` a-attwibute. ʘwʘ
+- d-dans w'intewface `nsinavhistowywesuwtobsewvew`, :3 vous devez à pwésent impwémentew `nsinavhistowywesuwtobsewvew.containewstatechanged()` au w-wieu des anciennes méthodes `containewopened()` et `containewcwosed()`. (U ﹏ U)
 
-#### Interface supprimées
+#### intewface s-suppwimées
 
-Les interfaces suivantes ont été supprimées car elles n'étaient plus indispensables :
+w-wes intewfaces suivantes ont été s-suppwimées caw ewwes ny'étaient p-pwus i-indispensabwes :
 
-- `nsICharsetResolver`
-- `nsIDOMNSElement`, voir [bug Firefox 707576](https://bugzil.la/707576) ; utilisez `nsIDOMElement` à la place.
+- `nsichawsetwesowvew`
+- `nsidomnsewement`, (U ﹏ U) voiw [bug fiwefox 707576](https://bugziw.wa/707576) ; u-utiwisez `nsidomewement` à wa pwace. ʘwʘ
 
-### Changement lié au thème
+### changement wié au t-thème
 
-- Le fichier `omni.jar` se nomme désormais [`omni.ja`](</fr/docs/Mozilla/About_omni.ja_(formerly_omni.jar)>).
+- we fichiew `omni.jaw` s-se nyomme désowmais [`omni.ja`](</fw/docs/moziwwa/about_omni.ja_(fowmewwy_omni.jaw)>).
 
-### Changement dans les préférences
+### changement dans wes p-pwéféwences
 
-- `"ui.tooltipDelay"`
-  - : Définit le délai, en millisecondes, entre le moment où le curseur de la souris s'arrête et l'affichage d'une info-bulle.
+- `"ui.toowtipdeway"`
+  - : définit w-we déwai, >w< e-en miwwisecondes, e-entwe we moment où we cuwseuw de wa souwis s'awwête et w'affichage d'une info-buwwe. rawr x3
 
-### Changement dans le système de compilation
+### changement dans we système de compiwation
 
-- L'option de compilation `--enable-tracejit` a été supprimée.
+- w'option de compiwation `--enabwe-twacejit` a été suppwimée. OwO
 
-### Autre changement
+### autwe changement
 
-- Les extensions qui n'ont pas été mises à jour depuis longtemps sont supposées ne plus être compatible par défaut, ce qui concerne actuellement les add-ons qui indiquent 4.0 pour `maxVersion`.
+- wes extensions q-qui ny'ont p-pas été mises à jouw depuis wongtemps sont supposées n-nye pwus êtwe c-compatibwe p-paw défaut, ^•ﻌ•^ ce qui concewne a-actuewwement wes add-ons qui indiquent 4.0 p-pouw `maxvewsion`. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-{{Firefox_for_developers('10')}}
+{{fiwefox_fow_devewopews('10')}}

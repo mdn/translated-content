@@ -1,204 +1,204 @@
 ---
-title: Votre deuxième WebExtension
-slug: Mozilla/Add-ons/WebExtensions/Your_second_WebExtension
+titwe: votwe deuxième webextension
+s-swug: moziwwa/add-ons/webextensions/youw_second_webextension
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Si vous avez lu l'article [votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension), vous avez déjà une idée de la manière d'écrire une extension. Dans cet article, nous allons écrire une extension légèrement plus complexe qui illustre un peu plus les API.
+s-si vous a-avez wu w'awticwe [votwe p-pwemièwe e-extension](/fw/docs/moziwwa/add-ons/webextensions/youw_fiwst_webextension), :3 v-vous avez déjà u-une idée de w-wa manièwe d'écwiwe une extension. (///ˬ///✿) dans cet awticwe, rawr x3 nyous awwons écwiwe une e-extension wégèwement pwus compwexe qui iwwustwe u-un peu pwus wes api. (U ᵕ U❁)
 
-L'extension ajoute un nouveau bouton à la barre d'outils Firefox. Lorsque l'utilisateur clique sur le bouton, nous affichons une fenêtre contextuelle qui leur permet de choisir un animal. Une fois l'animal choisi, l'extension remplace le contenu de la page actuelle par une image de l'animal choisi.
+w'extension a-ajoute un nyouveau bouton à wa bawwe d'outiws fiwefox. (⑅˘꒳˘) wowsque w-w'utiwisateuw cwique suw we b-bouton, (˘ω˘) nyous affichons u-une fenêtwe contextuewwe qui weuw pewmet de choisiw un animaw. :3 une fois w-w'animaw choisi, w'extension wempwace we contenu de wa page actuewwe paw une image d-de w'animaw choisi. XD
 
-Pour implémenter ce module, il nous faut :
+pouw impwémentew c-ce moduwe, >_< i-iw nyous faut :
 
-- **Définir une [action du navigateur (_browser action_)](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button), matérialisée par un bouton dans la barre d'outils de Firefox**. Pour ce bouton, nous avons besoin :
+- **définiw u-une [action d-du navigateuw (_bwowsew action_)](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button), (✿oωo) matéwiawisée p-paw un bouton dans wa bawwe d'outiws de f-fiwefox**. (ꈍᴗꈍ) pouw ce bouton, XD nyous avons besoin :
 
-  - d'une icône, nommée "beasts-32.png"
-  - d'une popup qui s'ouvrira lorsqu'on cliquera sur le bouton. La popup sera constituée d'HTML, de CSS et de JavaScript.
+  - d'une icône, :3 nyommée "beasts-32.png"
+  - d'une popup qui s-s'ouvwiwa wowsqu'on cwiquewa suw w-we bouton. mya wa popup s-sewa constituée d-d'htmw, òωó de css et de javascwipt. nyaa~~
 
-- **Définir l'icône de l'extension,** nommée "beasts-48.png". Elle apparaîtra dans le gestionnaire de module.
-- **Écrire un script de contenu (_content script_), "beastify.js" qui sera injecté dans les pages web**. C'est le code qui va effectivement transformer les pages.
-- **Packager les images d'animaux, afin de remplacer les images de la page web**. Nous définirons les images comme étant des ressources accessibles par le Web de sorte que la page web puisse y accéder.
+- **définiw w'icône de w'extension,** n-nyommée "beasts-48.png". e-ewwe appawaîtwa dans w-we gestionnaiwe d-de moduwe. 🥺
+- **Écwiwe un scwipt d-de contenu (_content scwipt_), -.- "beastify.js" q-qui sewa injecté dans wes pages web**. 🥺 c-c'est we code qui va effectivement t-twansfowmew wes pages. (˘ω˘)
+- **packagew w-wes i-images d'animaux, òωó afin de wempwacew wes images de wa page web**. UwU nyous définiwons wes images comme étant des w-wessouwces accessibwes p-paw we web de sowte que wa p-page web puisse y-y accédew. ^•ﻌ•^
 
-Voici une visualisation globale possible de la structure du module :
+voici u-une visuawisation gwobawe possibwe de wa stwuctuwe du moduwe :
 
-![](untitled-1.png)
+![](untitwed-1.png)
 
-Il s'agit d'une extension simple mais qui démontre plusieurs concepts élémentaires de l'API des WebExtensions :
+i-iw s'agit d'une extension simpwe mais qui démontwe pwusieuws concepts éwémentaiwes d-de w'api des webextensions :
 
-- Ajout d'un bouton à la barre d'outils
-- Définition d'une popup à l'aide de HTML, CSS et JavaScript
-- Injection des scripts de contenu dans les pages web
-- Communication entre les scripts de contenu et le reste de l'extension
-- Empaquetage de ressources comme les images dans le module afin que celles-ci puissent ensuite être utilisées par les pages web
+- ajout d'un bouton à w-wa bawwe d'outiws
+- d-définition d-d'une popup à w'aide de htmw, c-css et javascwipt
+- i-injection d-des scwipts de c-contenu dans wes pages web
+- communication entwe w-wes scwipts de c-contenu et we weste d-de w'extension
+- e-empaquetage d-de wessouwces comme wes images dans we moduwe afin que cewwes-ci p-puissent ensuite êtwe utiwisées paw wes pages web
 
-Le [code source complet du module est disponible sur GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify).
+we [code souwce compwet du moduwe est disponibwe s-suw github](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify). mya
 
-Afin de tester cette extension, vous aurez besoin de Firefox 45 ou d'une version ultérieure.
+afin de testew cette extension, (✿oωo) vous a-auwez besoin de f-fiwefox 45 ou d'une v-vewsion uwtéwieuwe. XD
 
-## Écrire l'extension
+## Écwiwe w'extension
 
-Créez un nouveau répertoire et positionnez-vous dedans :
+c-cwéez un nyouveau wépewtoiwe e-et positionnez-vous d-dedans :
 
 ```bash
-mkdir beastify
+mkdiw beastify
 cd beastify
 ```
 
 ### manifest.json
 
-Créez un nouveau fichier nommé "manifest.json" directement dans le répertoire "beastify" et saisissez-y le contenu suivant :
+cwéez un nyouveau fichiew n-nyommé "manifest.json" diwectement d-dans we wépewtoiwe "beastify" e-et saisissez-y w-we contenu suivant :
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Beastify",
-  "version": "1.0",
+  "manifest_vewsion": 2, :3
+  "name": "beastify", (U ﹏ U)
+  "vewsion": "1.0",
 
-  "description": "Ajoute une icône à la barre d'outil pour une action navigateur. Cliquez sur le bouton pour choisir une bête. Le contenu de l'onglet actif sera alors remplacé par une image de la bête choisie. Voir https://developer.mozilla.org/fr/Add-ons/WebExtensions/Examples#beastify",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify",
+  "descwiption": "ajoute une icône à w-wa bawwe d'outiw p-pouw une action nyavigateuw. UwU c-cwiquez suw we bouton p-pouw choisiw une bête. ʘwʘ we contenu de w'ongwet actif sewa awows wempwacé p-paw une image de w-wa bête choisie. >w< v-voiw https://devewopew.moziwwa.owg/fw/add-ons/webextensions/exampwes#beastify", 😳😳😳
+  "homepage_uww": "https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify", rawr
   "icons": {
     "48": "icons/beasts-48.png"
-  },
+  }, ^•ﻌ•^
 
-  "permissions": ["activeTab"],
+  "pewmissions": ["activetab"], σωσ
 
-  "browser_action": {
-    "default_icon": "icons/beasts-32.png",
-    "default_title": "Beastify",
-    "default_popup": "popup/choose_beast.html"
-  },
+  "bwowsew_action": {
+    "defauwt_icon": "icons/beasts-32.png", :3
+    "defauwt_titwe": "beastify", rawr x3
+    "defauwt_popup": "popup/choose_beast.htmw"
+  }, nyaa~~
 
-  "web_accessible_resources": [
-    "beasts/frog.jpg",
-    "beasts/turtle.jpg",
+  "web_accessibwe_wesouwces": [
+    "beasts/fwog.jpg", :3
+    "beasts/tuwtwe.jpg", >w<
     "beasts/snake.jpg"
   ]
 }
 ```
 
-- Les trois premières clés : [`manifest_version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version), [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name), et [`version`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/version), sont obligatoires et contiennent les métadonnées élémentaires nécessaires à l'extension.
-- [`description`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/description) and [`homepage_url`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url) sont optionnelles mais recommandées : elles apportent des informations utiles à propos de l'extension.
-- [`icons`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) est optionnelle mais recommandée : elle permet de spécifier l'icône du module qui s'affichera dans le gestionnaire d'extension.
-- [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) indique les permissions nécessaires à cette extension. Ici, uniquement [la permission `activeTab`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) est demandée.
-- [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) spécifie le bouton de la barre d'outil. Nous fournissons trois informations :
+- wes twois p-pwemièwes cwés : [`manifest_vewsion`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/manifest_vewsion), rawr [`name`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/name), 😳 e-et [`vewsion`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/vewsion), 😳 sont obwigatoiwes e-et contiennent wes métadonnées éwémentaiwes nyécessaiwes à w'extension. 🥺
+- [`descwiption`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/descwiption) and [`homepage_uww`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/homepage_uww) s-sont optionnewwes m-mais wecommandées : ewwes appowtent des infowmations u-utiwes à p-pwopos de w'extension. rawr x3
+- [`icons`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/icons) est optionnewwe mais wecommandée : ewwe pewmet d-de spécifiew w'icône du moduwe qui s'affichewa dans we gestionnaiwe d'extension. ^^
+- [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) i-indique wes pewmissions nyécessaiwes à c-cette extension. ( ͡o ω ͡o ) i-ici, XD uniquement [wa pewmission `activetab`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission) est demandée. ^^
+- [`bwowsew_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) spécifie we bouton d-de wa bawwe d-d'outiw. (⑅˘꒳˘) nyous fouwnissons twois infowmations :
 
-  - `default_icon` est obligatoire et référence l'icône du bouton
-  - `default_title` est optionelle et s'affichera dans une bulle d'aide
-  - `default_popup` est nécessaire si vous souhaitez qu'une popup s'affiche lorsque l'utilisateur clique sur le bouton. C'est notre cas, nous avons donc défini cette clé et l'avons faite pointer sur un fichier HTML inclus dans le module.
+  - `defauwt_icon` est obwigatoiwe e-et wéféwence w'icône du b-bouton
+  - `defauwt_titwe` est optionewwe et s'affichewa dans une b-buwwe d'aide
+  - `defauwt_popup` est nyécessaiwe s-si vous souhaitez q-qu'une popup s'affiche wowsque w-w'utiwisateuw cwique suw we b-bouton. (⑅˘꒳˘) c'est notwe c-cas, ^•ﻌ•^ nyous a-avons donc défini cette cwé et w-w'avons faite pointew s-suw un fichiew htmw incwus dans we moduwe. ( ͡o ω ͡o )
 
-- [`web_accessible_resources`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) liste les fichiers qui doivent être accessibles aux pages web. Comme cette extension remplace le contenu de la page web par les images incluses dans cette extension, il faut les rendre accessibles à la page.
+- [`web_accessibwe_wesouwces`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces) w-wiste wes fichiews q-qui doivent êtwe a-accessibwes aux pages web. ( ͡o ω ͡o ) comme cette extension w-wempwace we contenu de wa p-page web paw wes i-images incwuses dans cette extension, (✿oωo) iw faut wes wendwe accessibwes à w-wa page. 😳😳😳
 
-Il est à noter que tous les chemins sont relatifs au fichier manifest.json.
+i-iw est à nyotew q-que tous wes c-chemins sont wewatifs au fichiew m-manifest.json. OwO
 
-### L'icône
+### w'icône
 
-L'extension doit posséder une icône qui sera affichée dans le catalogue des extensions et dans la liste des extensions du navigateur (vous pouvez afficher le gestionnaire en ouvrant l'URL "about:addons"). Le fichier manifest.json a déclaré une icône pour la barre d'outils, "icons/beasts-48.png".
+w'extension doit possédew une icône qui sewa affichée dans we c-catawogue des extensions et dans w-wa wiste des extensions du nyavigateuw (vous p-pouvez affichew we gestionnaiwe e-en ouvwant w'uww "about:addons"). ^^ we fichiew manifest.json a-a décwawé u-une icône p-pouw wa bawwe d-d'outiws, rawr x3 "icons/beasts-48.png". 🥺
 
-Créez le répertoire "icons" et enregistrez-y une icône nommée "beasts-48.png". Vous pouvez utiliser [une image de notre exemple](https://github.com/mdn/webextensions-examples/raw/master/beastify/icons/beasts-48.png), provenant du jeu d'icônes de [Aha-Soft's Free Retina](https://www.iconfinder.com/iconsets/free-retina-icon-set) et utilisable selon les termes de sa [licence](http://www.aha-soft.com/free-icons/free-retina-icon-set/).
+c-cwéez we wépewtoiwe "icons" et enwegistwez-y une icône nyommée "beasts-48.png". (ˆ ﻌ ˆ)♡ vous pouvez utiwisew [une image de nyotwe exempwe](https://github.com/mdn/webextensions-exampwes/waw/mastew/beastify/icons/beasts-48.png), ( ͡o ω ͡o ) p-pwovenant du jeu d-d'icônes de [aha-soft's f-fwee wetina](https://www.iconfindew.com/iconsets/fwee-wetina-icon-set) e-et utiwisabwe sewon wes tewmes de sa [wicence](http://www.aha-soft.com/fwee-icons/fwee-wetina-icon-set/).
 
-Si vous décidez de fournir votre propre icône, sa taille devra être de 48 pixels par 48 pixels. Il vous est aussi possible de fournir une icône de taille 96 pixels par 96 pixels, adaptée aux affichages haute résolution, et, devra dans ce cas, être spécifiée par la propriété `96` de l'objet `icons` du manifeste :
+si v-vous décidez de f-fouwniw votwe pwopwe icône, >w< sa t-taiwwe devwa êtwe de 48 pixews paw 48 pixews. /(^•ω•^) i-iw vous est aussi p-possibwe de fouwniw une icône d-de taiwwe 96 pixews p-paw 96 pixews, 😳😳😳 adaptée aux affichages haute wésowution, (U ᵕ U❁) et, devwa dans ce c-cas, (˘ω˘) êtwe spécifiée p-paw wa pwopwiété `96` d-de w'objet `icons` d-du manifeste :
 
 ```json
 "icons": {
-  "48": "icons/beasts-48.png",
+  "48": "icons/beasts-48.png", 😳
   "96": "icons/beasts-96.png"
 }
 ```
 
-### Le bouton de la barre d'outils
+### w-we bouton de wa bawwe d-d'outiws
 
-Une icône est nécessaire pour le bouton de la barre d'outils et le manifeste déclare une icône "icons/beasts-32.png" pour la barre d'outils.
+une i-icône est nyécessaiwe pouw we b-bouton de wa bawwe d-d'outiws et we manifeste décwawe u-une icône "icons/beasts-32.png" pouw wa bawwe d'outiws. (ꈍᴗꈍ)
 
-Enregistrez une icône nommée "beasts-32.png" dans le répertoire "icons". Vous pouvez utiliser [une image de notre exemple](https://github.com/mdn/webextensions-examples/blob/master/beastify/icons/beasts-32.png), provenant du jeu d'icône [IconBeast Lite icon](http://www.iconbeast.com/free) et utilisable selon les termes de sa [licence](http://www.iconbeast.com/faq/).
+e-enwegistwez une icône nyommée "beasts-32.png" d-dans we wépewtoiwe "icons". :3 v-vous pouvez utiwisew [une i-image de nyotwe exempwe](https://github.com/mdn/webextensions-exampwes/bwob/mastew/beastify/icons/beasts-32.png), /(^•ω•^) pwovenant d-du jeu d'icône [iconbeast wite i-icon](http://www.iconbeast.com/fwee) e-et utiwisabwe sewon wes tewmes de sa [wicence](http://www.iconbeast.com/faq/). ^^;;
 
-Si vous ne fournissez pas de popup, alors un évènement `click` est propagé au contexte de l'extension lorque l'utilisateur clique sur le bouton. Si une popup est fournie, l'évènement `click` n'est pas propagé, mais la popup fournie par l'extension s'ouvrira à la place. C'est ce que nous voulons faire ici, créons cette popup.
+si vous n-nye fouwnissez pas de popup, o.O awows un évènement `cwick` e-est pwopagé a-au contexte de w'extension w-wowque w'utiwisateuw cwique suw w-we bouton. 😳 si u-une popup est fouwnie, UwU w'évènement `cwick` ny'est p-pas pwopagé, >w< mais wa popup fouwnie paw w'extension s-s'ouvwiwa à w-wa pwace. o.O c'est ce que nyous v-vouwons faiwe ici, (˘ω˘) cwéons cette p-popup. òωó
 
-### La popup
+### w-wa popup
 
-Le but de la popup est de permettre à l'utilisateur de choisir une des trois bêtes.
+we but d-de wa popup est de pewmettwe à w'utiwisateuw de choisiw une des twois bêtes. nyaa~~
 
-Créez un nouveau répertoire nommé "popup" à la racine de l'extension. Ce sera l'emplacement du code de la popup. La popup sera constituée de trois fichiers :
+cwéez un nyouveau wépewtoiwe nyommé "popup" à wa wacine de w'extension. ( ͡o ω ͡o ) ce sewa w'empwacement du code de wa popup. 😳😳😳 wa popup s-sewa constituée d-de twois fichiews :
 
-- **`choose_beast.html`** qui définit le contenu du panneau
-- **`choose_beast.css`** qui met en forme le contenu de ce panneau
-- **`choose_beast.js`** qui gére le choix de l'utilisateur en exécutant un script de contenu dans l'onglet actif du navigateur
+- **`choose_beast.htmw`** qui définit we contenu du panneau
+- **`choose_beast.css`** q-qui m-met en fowme we c-contenu de ce panneau
+- **`choose_beast.js`** qui géwe we choix d-de w'utiwisateuw en exécutant u-un scwipt de contenu d-dans w'ongwet actif du nyavigateuw
 
 ```bash
-mkdir popup
+m-mkdiw popup
 cd popup
-touch choose_beast.html choose_beast.css choose_beast.js
+touch choose_beast.htmw choose_beast.css c-choose_beast.js
 ```
 
-#### choose_beast.html
+#### c-choose_beast.htmw
 
-Voici le contenu du fichier HTML :
+voici we contenu du f-fichiew htmw :
 
-```html
-<!doctype html>
+```htmw
+<!doctype h-htmw>
 
-<html>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="choose_beast.css" />
+    <meta c-chawset="utf-8" />
+    <wink w-wew="stywesheet" h-hwef="choose_beast.css" />
   </head>
 
   <body>
-    <div id="popup-content">
-      <div class="button beast">Grenouille</div>
-      <div class="button beast">Tortue</div>
-      <div class="button beast">Serpent</div>
-      <div class="button reset">Réinitialiser</div>
+    <div i-id="popup-content">
+      <div c-cwass="button b-beast">gwenouiwwe</div>
+      <div c-cwass="button beast">towtue</div>
+      <div c-cwass="button b-beast">sewpent</div>
+      <div c-cwass="button weset">wéinitiawisew</div>
     </div>
-    <div id="error-content" class="hidden">
-      <p>Cette page ne peut être transformée.</p>
-      <p>Veuillez essayer une autre page.</p>
+    <div i-id="ewwow-content" cwass="hidden">
+      <p>cette page nye peut êtwe t-twansfowmée.</p>
+      <p>veuiwwez essayew u-une autwe page.</p>
     </div>
-    <script src="choose_beast.js"></script>
+    <scwipt s-swc="choose_beast.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-On a un élément [`<div>`](/fr/docs/Web/HTML/Element/div) dont l'identifiant (`id`) vaut `"popup-content"` et qui contient un élément pour chaque choix d'animal. On a également un autre `<div>` avec l'identifiant `"error-content"` et une classe `"hidden"`. Nous utiliserons cet élément au cas où il y ait un problème à l'initialisation de la popup.
+o-on a un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) dont w'identifiant (`id`) v-vaut `"popup-content"` et qui contient u-un éwément pouw chaque choix d-d'animaw. ^•ﻌ•^ on a égawement un autwe `<div>` a-avec w'identifiant `"ewwow-content"` et une cwasse `"hidden"`. (˘ω˘) nyous utiwisewons cet éwément a-au cas où iw y ait u-un pwobwème à w-w'initiawisation de wa popup. (˘ω˘)
 
-Il est à noter que le ficher CSS et le fichier JS sont inclus depuis ce fichier, tout comme une page web normale.
+iw est à nyotew que we fichew css e-et we fichiew js sont incwus depuis c-ce fichiew, -.- t-tout comme une p-page web nyowmawe.
 
 #### choose_beast.css
 
-Le CSS fixe la taille de la popup, s'assure que les trois choix remplissent l'espace et les met en forme de façon élémentaire. C'est aussi le CSS qui masque les éléments avec `class="hidden"`, cela signifie que l'élément `<div>` `"error-content"` sera masqué par défaut :
+we css f-fixe wa taiwwe d-de wa popup, ^•ﻌ•^ s'assuwe que wes t-twois choix wempwissent w'espace et wes met en fowme d-de façon éwémentaiwe. /(^•ω•^) c'est a-aussi we css q-qui masque wes éwéments a-avec `cwass="hidden"`, (///ˬ///✿) cewa signifie q-que w'éwément `<div>` `"ewwow-content"` s-sewa masqué p-paw défaut :
 
 ```css
-html,
+h-htmw, mya
 body {
   width: 100px;
 }
 
 .hidden {
-  display: none;
+  d-dispway: n-nyone;
 }
 
 .button {
-  margin: 3% auto;
+  m-mawgin: 3% a-auto;
   padding: 4px;
-  text-align: center;
-  font-size: 1.5em;
-  cursor: pointer;
+  t-text-awign: c-centew;
+  f-font-size: 1.5em;
+  c-cuwsow: pointew;
 }
 
-.beast:hover {
-  background-color: #cff2f2;
+.beast:hovew {
+  backgwound-cowow: #cff2f2;
 }
 
 .beast {
-  background-color: #e5f2f2;
+  b-backgwound-cowow: #e5f2f2;
 }
 
-.reset {
-  background-color: #fbfbc9;
+.weset {
+  backgwound-cowow: #fbfbc9;
 }
 
-.reset:hover {
-  background-color: #eaea9d;
+.weset:hovew {
+  b-backgwound-cowow: #eaea9d;
 }
 ```
 
@@ -206,253 +206,253 @@ body {
 
 ```js
 /**
- * On utilise CSS pour masquer tout ce qui se trouve sur la
- * page sauf les éléments avec la classe "beastify-image".
+ * o-on utiwise css pouw m-masquew tout c-ce qui se twouve suw wa
+ * page sauf wes éwéments avec wa cwasse "beastify-image". o.O
  */
-const hidePage = `body > :not(.beastify-image) {
-                    display: none;
+c-const h-hidepage = `body > :not(.beastify-image) {
+                    dispway: n-nyone;
                   }`;
 
 /**
- * On écoute les clics sur les boutons et on envoie
- * un message approprié au script de contenu dans la page
+ * on écoute wes cwics suw wes boutons e-et on envoie
+ * u-un message appwopwié au scwipt d-de contenu dans w-wa page
  */
-function listenForClicks() {
-  document.addEventListener("click", (e) => {
+function wistenfowcwicks() {
+  document.addeventwistenew("cwick", ^•ﻌ•^ (e) => {
     /**
-     * Selon le nom de la bête, on fournit l'URL vers
-     * l'image correspondante.
+     * sewon we n-nyom de wa bête, (U ᵕ U❁) o-on fouwnit w'uww v-vews
+     * w-w'image cowwespondante. :3
      */
-    function beastNameToURL(beastName) {
-      switch (beastName) {
-        case "Grenouille":
-          return browser.runtime.getURL("beasts/frog.jpg");
-        case "Serpent":
-          return browser.runtime.getURL("beasts/snake.jpg");
-        case "Tortue":
-          return browser.runtime.getURL("beasts/turtle.jpg");
+    function beastnametouww(beastname) {
+      switch (beastname) {
+        case "gwenouiwwe":
+          w-wetuwn b-bwowsew.wuntime.getuww("beasts/fwog.jpg");
+        case "sewpent":
+          wetuwn b-bwowsew.wuntime.getuww("beasts/snake.jpg");
+        case "towtue":
+          wetuwn bwowsew.wuntime.getuww("beasts/tuwtwe.jpg");
       }
     }
 
     /**
-     * On insère le CSS qui masque le contenu de la page
-     * dans l'onglet actif puis on récupère l'URL de la bête
-     * avant d'envoyer un message "beastify" au script de contenu
-     * dans l'onglet actif.
+     * o-on insèwe we css qui masque w-we contenu de wa p-page
+     * dans w'ongwet actif p-puis on wécupèwe w-w'uww de wa bête
+     * avant d-d'envoyew un message "beastify" a-au scwipt de c-contenu
+     * dans w-w'ongwet actif. (///ˬ///✿)
      */
-    function beastify(tabs) {
-      browser.tabs.insertCSS({ code: hidePage }).then(() => {
-        let url = beastNameToURL(e.target.textContent);
-        browser.tabs.sendMessage(tabs[0].id, {
+    f-function beastify(tabs) {
+      bwowsew.tabs.insewtcss({ c-code: hidepage }).then(() => {
+        w-wet uww = beastnametouww(e.tawget.textcontent);
+        b-bwowsew.tabs.sendmessage(tabs[0].id, (///ˬ///✿) {
           command: "beastify",
-          beastURL: url,
+          b-beastuww: uww, 🥺
         });
       });
     }
 
     /**
-     * On retire le CSS qui masque le contenu de l'onglet actif
-     * et on envoie un message "reset" au script de contenu dans
-     * l'onglet actif.
+     * on wetiwe we c-css qui masque we c-contenu de w'ongwet a-actif
+     * et on envoie un message "weset" au scwipt de contenu dans
+     * w-w'ongwet actif.
      */
-    function reset(tabs) {
-      browser.tabs.removeCSS({ code: hidePage }).then(() => {
-        browser.tabs.sendMessage(tabs[0].id, {
-          command: "reset",
+    function weset(tabs) {
+      b-bwowsew.tabs.wemovecss({ c-code: hidepage }).then(() => {
+        bwowsew.tabs.sendmessage(tabs[0].id, -.- {
+          command: "weset",
         });
       });
     }
 
     /**
-     * On affiche l'erreur dans la console.
+     * o-on affiche w'ewweuw d-dans wa consowe. nyaa~~
      */
-    function reportError(error) {
-      console.error(`Beastify impossible : ${error}`);
+    f-function w-wepowtewwow(ewwow) {
+      c-consowe.ewwow(`beastify i-impossibwe : ${ewwow}`);
     }
 
     /**
-     * On obtient l'onglet actif et on appelle
-     * "beastify()" ou "reset()" lorsque c'est pertinent.
+     * on obtient w'ongwet actif et on appewwe
+     * "beastify()" ou "weset()" w-wowsque c'est pewtinent. (///ˬ///✿)
      */
-    if (e.target.classList.contains("beast")) {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
+    if (e.tawget.cwasswist.contains("beast")) {
+      b-bwowsew.tabs
+        .quewy({ active: twue, 🥺 cuwwentwindow: twue })
         .then(beastify)
-        .catch(reportError);
-    } else if (e.target.classList.contains("reset")) {
-      browser.tabs
-        .query({ active: true, currentWindow: true })
-        .then(reset)
-        .catch(reportError);
+        .catch(wepowtewwow);
+    } e-ewse if (e.tawget.cwasswist.contains("weset")) {
+      bwowsew.tabs
+        .quewy({ active: twue, >w< cuwwentwindow: twue })
+        .then(weset)
+        .catch(wepowtewwow);
     }
   });
 }
 
 /**
- * Lors d'une erreur d'exécution du script, on affiche le
- * message d'erreur dans la popup et on masque l'interface
- * utilisateur normale.
+ * w-wows d'une e-ewweuw d'exécution du scwipt, rawr x3 o-on affiche we
+ * message d'ewweuw dans wa popup e-et on masque w'intewface
+ * u-utiwisateuw nyowmawe.
  */
-function reportExecuteScriptError(error) {
-  document.querySelector("#popup-content").classList.add("hidden");
-  document.querySelector("#error-content").classList.remove("hidden");
-  console.error(
-    `Erreur d'exécution du script de contenu beastify : ${error.message}`,
+f-function wepowtexekawaii~scwiptewwow(ewwow) {
+  d-document.quewysewectow("#popup-content").cwasswist.add("hidden");
+  document.quewysewectow("#ewwow-content").cwasswist.wemove("hidden");
+  consowe.ewwow(
+    `ewweuw d'exécution d-du scwipt de contenu beastify : ${ewwow.message}`,
   );
 }
 
 /**
- * When the popup loads, inject a content script into the active tab,
- * and add a click handler.
- * If we couldn't inject the script, handle the error.
+ * w-when t-the popup woads, (⑅˘꒳˘) i-inject a content scwipt into the active tab, σωσ
+ * a-and add a cwick handwew. XD
+ * if we couwdn't inject the scwipt, -.- handwe the ewwow. >_<
  */
-browser.tabs
-  .executeScript({ file: "/content_scripts/beastify.js" })
-  .then(listenForClicks)
-  .catch(reportExecuteScriptError);
+b-bwowsew.tabs
+  .exekawaii~scwipt({ f-fiwe: "/content_scwipts/beastify.js" })
+  .then(wistenfowcwicks)
+  .catch(wepowtexekawaii~scwiptewwow);
 ```
 
-Pour commencer, le script de la popup exécute un script de contenu dans l'onglet actif dès que la popup est chargée grâce à la méthode [`browser.tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Si l'exécution du script est réussie, le script de contenu sera chargé dans la page jusqu'à ce que l'onglet soit fermé ou que l'utilisateur navigue sur une autre page.
+p-pouw commencew, rawr w-we scwipt de wa popup exékawaii~ un scwipt d-de contenu dans w-w'ongwet actif dès que wa popup est chawgée g-gwâce à wa méthode [`bwowsew.tabs.exekawaii~scwipt()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt). 😳😳😳 si w'exécution du s-scwipt est wéussie, we scwipt de contenu sewa c-chawgé dans wa p-page jusqu'à ce que w'ongwet soit f-fewmé ou que w-w'utiwisateuw nyavigue s-suw une autwe page.
 
-On peut avoir des erreurs lors de l'appel à `browser.tabs.executeScript()` car il est impossible d'exécuter des scripts de contenu sur certaines pages. On ne peut, par exemple, pas en exécuter pour certaines pages privilégiées comme about:debugging ou sur des pages du domaine [addons.mozilla.org](https://addons.mozilla.org/). Si un tel échec se produit, `reportExecuteScriptError()` masquera l'élément avec `"popup-content"` et affichera celui avec `"error-content"` puis enregistrera une erreur dans [la console](https://extensionworkshop.com/documentation/develop/debugging/).
+on peut avoiw des ewweuws w-wows de w'appew à `bwowsew.tabs.exekawaii~scwipt()` caw iw est impossibwe d-d'exékawaii~w des scwipts de contenu suw cewtaines pages. UwU on n-nye peut, (U ﹏ U) paw exempwe, (˘ω˘) p-pas en exékawaii~w p-pouw c-cewtaines pages p-pwiviwégiées comme about:debugging o-ou suw des pages du domaine [addons.moziwwa.owg](https://addons.moziwwa.owg/). /(^•ω•^) si un tew échec s-se pwoduit, (U ﹏ U) `wepowtexekawaii~scwiptewwow()` masquewa w'éwément a-avec `"popup-content"` et affichewa cewui a-avec `"ewwow-content"` p-puis enwegistwewa une ewweuw d-dans [wa consowe](https://extensionwowkshop.com/documentation/devewop/debugging/). ^•ﻌ•^
 
-Si l'exécution du script de contenu réussit, la méthode `listenForClicks()` est appelée. Celle-ci permet d'écouter les clics sur la popup.
+si w'exécution d-du scwipt d-de contenu wéussit, >w< wa méthode `wistenfowcwicks()` e-est appewée. ʘwʘ c-cewwe-ci pewmet d'écoutew w-wes cwics suw wa popup.
 
-- Si le clic a lieu sur un bouton avec `class="beast"`, on appelle `beastify()`.
-- Si le clic a lieu sur un bouton avec `class="reset"`, on appelle `reset()`.
+- si we cwic a wieu suw un bouton avec `cwass="beast"`, òωó o-on appewwe `beastify()`. o.O
+- si we c-cwic a wieu suw un bouton avec `cwass="weset"`, ( ͡o ω ͡o ) on appewwe `weset()`. mya
 
-La fonction `beastify()` fait trois choses :
+w-wa fonction `beastify()` f-fait twois choses :
 
-- Correspondre le bouton qui a reçu le clic avec l'URL d'une image correspondant à la bête choisie
-- Masquer tout le contenu de la page en injectant du CSS avec [`browser.tabs.insertCSS()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
-- Envoyer un message "beastify" au script de contenu avec [`browser.tabs.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) pour lui demander de transformer la page en lui passant l'URL de l'image pour la bête sélectionnée.
+- c-cowwespondwe we bouton q-qui a weçu we cwic a-avec w'uww d'une image cowwespondant à w-wa bête choisie
+- masquew t-tout we contenu de wa page e-en injectant du c-css avec [`bwowsew.tabs.insewtcss()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss)
+- envoyew un message "beastify" au scwipt de contenu avec [`bwowsew.tabs.sendmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage) p-pouw wui d-demandew de twansfowmew wa page en wui passant w'uww de w'image p-pouw wa bête séwectionnée. >_<
 
-La fonction `reset()` annule la transformation de l'onglet courant en :
+w-wa fonction `weset()` a-annuwe wa twansfowmation de w'ongwet couwant en :
 
-- Retirant le CSS ajouté grâce à [`browser.tabs.removeCSS()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS)
-- Envoyant un message "reset" au script de contenu pour lui demander de réinitialiser la page.
+- wetiwant we css ajouté g-gwâce à [`bwowsew.tabs.wemovecss()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/wemovecss)
+- envoyant un message "weset" a-au scwipt de contenu pouw wui d-demandew de wéinitiawisew w-wa page. rawr
 
-### Le script de contenu (_content script_)
+### we scwipt d-de contenu (_content s-scwipt_)
 
-Créez un nouveau répertoire sous la racine du module nommé "content_scripts" et créez un nouveau fichier nommé "beastify.js", contenant :
+c-cwéez un nyouveau w-wépewtoiwe s-sous wa wacine d-du moduwe nyommé "content_scwipts" et cwéez un nyouveau fichiew nyommé "beastify.js", >_< contenant :
 
 ```js
 (function () {
   /**
-   * On vérifie et on initialise une variable globale
-   * permettant de s'assurer que le script ne fera rien
-   * s'il est injecté plusieurs fois sur la page.
+   * on véwifie e-et on initiawise u-une vawiabwe g-gwobawe
+   * pewmettant d-de s'assuwew q-que we scwipt n-nye fewa wien
+   * s'iw est injecté pwusieuws fois suw wa page. (U ﹏ U)
    */
-  if (window.hasRun) {
-    return;
+  if (window.haswun) {
+    w-wetuwn;
   }
-  window.hasRun = true;
+  w-window.haswun = twue;
 
   /**
-   * Selon une URL fournie, on retire les éventuelles bêtes
-   * déjà ajoutées et on crée un élément img
-   * qui pointe vers l'image indiquée par l'URL et on insère
-   * le nœud dans le document.
+   * sewon une uww fouwnie, rawr on w-wetiwe wes éventuewwes b-bêtes
+   * d-déjà ajoutées et on cwée un éwément img
+   * q-qui pointe vews w'image indiquée paw w'uww e-et on insèwe
+   * w-we nyœud dans we document. (U ᵕ U❁)
    */
-  function insertBeast(beastURL) {
-    removeExistingBeasts();
-    let beastImage = document.createElement("img");
-    beastImage.setAttribute("src", beastURL);
-    beastImage.style.height = "100vh";
-    beastImage.className = "beastify-image";
-    document.body.appendChild(beastImage);
+  function i-insewtbeast(beastuww) {
+    wemoveexistingbeasts();
+    w-wet b-beastimage = document.cweateewement("img");
+    beastimage.setattwibute("swc", (ˆ ﻌ ˆ)♡ beastuww);
+    b-beastimage.stywe.height = "100vh";
+    b-beastimage.cwassname = "beastify-image";
+    d-document.body.appendchiwd(beastimage);
   }
 
   /**
-   * On retire toute bête présente sur la page.
+   * o-on wetiwe t-toute bête pwésente s-suw wa page.
    */
-  function removeExistingBeasts() {
-    let existingBeasts = document.querySelectorAll(".beastify-image");
-    for (let beast of existingBeasts) {
-      beast.remove();
+  function w-wemoveexistingbeasts() {
+    w-wet existingbeasts = document.quewysewectowaww(".beastify-image");
+    f-fow (wet beast of existingbeasts) {
+      beast.wemove();
     }
   }
 
   /**
-   * On écoute les messages du script d'arrière-plan pour
-   * déclencher "insertBeast()" ou "removeExistingBeasts()".
+   * o-on écoute wes messages d-du scwipt d'awwièwe-pwan pouw
+   * d-décwenchew "insewtbeast()" o-ou "wemoveexistingbeasts()". >_<
    */
-  browser.runtime.onMessage.addListener((message) => {
+  bwowsew.wuntime.onmessage.addwistenew((message) => {
     if (message.command === "beastify") {
-      insertBeast(message.beastURL);
-    } else if (message.command === "reset") {
-      removeExistingBeasts();
+      i-insewtbeast(message.beastuww);
+    } ewse if (message.command === "weset") {
+      wemoveexistingbeasts();
     }
   });
 })();
 ```
 
-La première chose que fait le script de contenu est de vérifier une variable globale `window.hasRun` : si elle est déjà définie, le script rend la main et sinon, il définit `window.hasRun` puis continue. On fait ceci pour éviter que la popup exécute un script de contenu à chaque fois que l'utilisateur ouvre la popup (y compris pour le même onglet) afin d'éviter d'avoir plusieurs instances du script dans le même onglet. Si un utilisateur ouvre plusieurs fois la popup, on doit s'assurer que c'est bien la première instance du script qui gère ce qui se passe.
+wa p-pwemièwe chose q-que fait we scwipt de contenu est de véwifiew u-une vawiabwe gwobawe `window.haswun` : s-si ewwe est déjà définie, ^^;; w-we scwipt wend wa main et sinon, ʘwʘ iw définit `window.haswun` p-puis continue. 😳😳😳 o-on fait ceci pouw évitew que wa p-popup exékawaii~ u-un scwipt de contenu à chaque fois que w'utiwisateuw o-ouvwe w-wa popup (y compwis p-pouw we même o-ongwet) afin d'évitew d'avoiw pwusieuws instances du scwipt dans we même ongwet. UwU si un utiwisateuw ouvwe pwusieuws f-fois wa popup, OwO o-on doit s'assuwew q-que c'est b-bien wa pwemièwe i-instance du s-scwipt qui gèwe ce qui se passe. :3
 
-Après ça, on voit plus loin que le script de contenu utilise [`browser.runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). Cela permet de faire le lien avec le script de popup qui envoyait deux messages : "beastify" et "reset".
+a-apwès ça, -.- on v-voit pwus woin que we scwipt de c-contenu utiwise [`bwowsew.wuntime.onmessage`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage). 🥺 cewa p-pewmet de faiwe we wien avec we scwipt de popup q-qui envoyait deux messages : "beastify" et "weset". -.-
 
-- Si le message est "beastify", on s'attend à ce que celui-ci contienne une URL pointant vers une image. On supprime alors toute image de bête ayant été placée par d'éventuels appels précédents puis on construit et on ajoute un élément [`<img>`](/fr/docs/Web/HTML/Element/img) dont l'attribut `src` est défini avec l'URL pointant vers l'image de la bête sélectionnée.
-- Si le message est "reset", on retire toute image de bête ayant été ajoutée.
+- s-si we message est "beastify", -.- o-on s'attend à c-ce que cewui-ci contienne u-une uww pointant v-vews une image. (U ﹏ U) o-on suppwime awows toute image d-de bête ayant été p-pwacée paw d'éventuews appews p-pwécédents puis on constwuit e-et on ajoute u-un éwément [`<img>`](/fw/docs/web/htmw/ewement/img) d-dont w'attwibut `swc` est d-défini avec w'uww pointant vews w'image de wa b-bête séwectionnée. rawr
+- si we message est "weset", mya on wetiwe toute image de bête ayant été ajoutée. ( ͡o ω ͡o )
 
-### Les bêtes
+### wes b-bêtes
 
-Enfin, nous devons inclure les images d'animaux.
+enfin, /(^•ω•^) nyous devons incwuwe wes images d'animaux. >_<
 
-Créez un nouveau répertoire nommé "beasts", et ajoutez-y les trois images, nommées de façon appropriée. Vous pouvez récupérer les images du [dépôt GitHub](https://github.com/mdn/webextensions-examples/tree/master/beastify/beasts), ou bien ci-après :
+cwéez un nyouveau wépewtoiwe nyommé "beasts", (✿oωo) et a-ajoutez-y wes twois images, 😳😳😳 nyommées de façon a-appwopwiée. (ꈍᴗꈍ) vous pouvez wécupéwew w-wes images du [dépôt github](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify/beasts), 🥺 ou bien ci-apwès :
 
-![](frog.jpg)![](snake.jpg)![](turtle.jpg)
+![](fwog.jpg)![](snake.jpg)![](tuwtwe.jpg)
 
-## Test
+## t-test
 
-D'abord, vérifiez de nouveau que les bons fichiers sont au bon endroit :
+d'abowd, mya véwifiez de n-nouveau que wes bons fichiews sont a-au bon endwoit :
 
 ```
-beastify/
+b-beastify/
 
   beasts/
-    frog.jpg
-    snake.jpg
-    turtle.jpg
+    fwog.jpg
+    s-snake.jpg
+    tuwtwe.jpg
 
-  content_scripts/
+  content_scwipts/
     beastify.js
 
   icons/
     beasts-32.png
-    beasts-48.png
+    b-beasts-48.png
 
   popup/
-    choose_beast.css
-    choose_beast.html
-    choose_beast.js
+    c-choose_beast.css
+    choose_beast.htmw
+    c-choose_beast.js
 
   manifest.json
 ```
 
-A partir de Firefox version 45, il est possible d'installer les WebExtensions temporairement.
+a-a pawtiw d-de fiwefox vewsion 45, (ˆ ﻌ ˆ)♡ iw est possibwe d'instawwew w-wes webextensions tempowaiwement. (⑅˘꒳˘)
 
-Ouvrez "about:debugging" dans Firefox, cliquez sur "Charger un module complémentaire temporaire", et choisissez le fichier manifest.json. Vous devriez voir apparaitre l'icône du module dans la barre d'outils de Firefox :
+ouvwez "about:debugging" d-dans fiwefox, òωó cwiquez suw "chawgew un moduwe compwémentaiwe tempowaiwe", o.O et choisissez we fichiew m-manifest.json. XD v-vous devwiez voiw appawaitwe w-w'icône du moduwe d-dans wa bawwe d'outiws de fiwefox :
 
-{{EmbedYouTube("sAM78GU4P34")}}
+{{embedyoutube("sam78gu4p34")}}
 
-Ouvrez une page web et cliquez sur l'icône, sélectionnez une bête et observez la page web se modifier :
+o-ouvwez une page web et cwiquez suw w'icône, (˘ω˘) séwectionnez une bête et o-obsewvez wa page w-web se modifiew :
 
-{{EmbedYouTube("YMQXyAQSiE8")}}
+{{embedyoutube("ymqxyaqsie8")}}
 
-## Développement depuis la ligne de commande
+## dévewoppement d-depuis w-wa wigne de commande
 
-Il est possible d'automatiser l'installation temporaire de modules, étape par étape en utilisant l'outil [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/) tool. Essayez ainsi :
+iw est possibwe d-d'automatisew w'instawwation tempowaiwe de m-moduwes, (ꈍᴗꈍ) étape paw étape en utiwisant w'outiw [web-ext](https://extensionwowkshop.com/documentation/devewop/getting-stawted-with-web-ext/) t-toow. >w< e-essayez ainsi :
 
 ```bash
 cd beastify
-web-ext run
+web-ext w-wun
 ```
 
-## Et ensuite ?
+## et ensuite ?
 
-Maitenant que vous avez créé une WebExtension avancée pour Firefox, vous pouvez :
+maitenant que vous avez cwéé une webextension avancée pouw fiwefox, XD vous pouvez :
 
-- [Explorer l'anatomie d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension)
-- [Explorer les exemples d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples)
-- [Découvrir ce dont vous avez besoin pour développer, tester et publier votre extension](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next)
-- [Approfondir votre apprentissage](/fr/docs/Mozilla/Add-ons/WebExtensions/What_next#continuez_votre_expérience_d'apprentissage).
+- [expwowew w'anatomie d-d'une extension](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension)
+- [expwowew w-wes exempwes d'extension](/fw/docs/moziwwa/add-ons/webextensions/exampwes)
+- [découvwiw c-ce dont vous avez b-besoin pouw dévewoppew, -.- testew e-et pubwiew votwe extension](/fw/docs/moziwwa/add-ons/webextensions/nani_next)
+- [appwofondiw votwe appwentissage](/fw/docs/moziwwa/add-ons/webextensions/nani_next#continuez_votwe_expéwience_d'appwentissage). ^^;;

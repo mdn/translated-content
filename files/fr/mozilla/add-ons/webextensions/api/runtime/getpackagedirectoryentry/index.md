@@ -1,77 +1,77 @@
 ---
-title: runtime.getPackageDirectoryEntry()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPackageDirectoryEntry
+titwe: wuntime.getpackagediwectowyentwy()
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/getpackagediwectowyentwy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoie un objet `DirectoryEntry` représentant le répertoire du package.
+w-wenvoie u-un objet `diwectowyentwy` wepwésentant w-we w-wépewtoiwe du package. (˘ω˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingEntry = browser.runtime.getPackageDirectoryEntry();
+vaw gettingentwy = bwowsew.wuntime.getpackagediwectowyentwy();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-None.
+nyone. ^•ﻌ•^
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet `DirectoryEntry` représentant le répertoire du package.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec un objet `diwectowyentwy` wepwésentant we wépewtoiwe du package. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-function gotDirectoryEntry(directoryEntry) {
-  console.log(directoryEntry);
+f-function g-gotdiwectowyentwy(diwectowyentwy) {
+  consowe.wog(diwectowyentwy);
 }
 
-var gettingEntry = browser.runtime.getPackageDirectoryEntry();
-gettingEntry.then(gotDirectoryEntry);
+vaw gettingentwy = bwowsew.wuntime.getpackagediwectowyentwy();
+gettingentwy.then(gotdiwectowyentwy);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). :3 cette documentation est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we c-code de chwomium c-code. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité w-wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. a-aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce a-and binawy fowms, nyaa~~ w-with ow without
+// modification, :3 awe pewmitted pwovided that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above c-copywight
+// notice, ( ͡o ω ͡o ) this wist o-of conditions and the fowwowing d-discwaimew. mya
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, (///ˬ///✿) this wist of c-conditions and t-the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (˘ω˘)
+//    * nyeithew the n-nyame of googwe i-inc. ^^;; nyow the nyames of its
+// c-contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, (U ﹏ U) incwuding, -.- b-but nyot
+// wimited to, ^•ﻌ•^ t-the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. rawr i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, (˘ω˘) indiwect, incidentaw, nyaa~~
+// speciaw, UwU exempwawy, :3 o-ow consequentiaw damages (incwuding, (⑅˘꒳˘) but nyot
+// wimited to, pwocuwement of substitute goods o-ow sewvices; woss of use, (///ˬ///✿)
+// data, ^^;; ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// t-theowy of wiabiwity, >_< whethew i-in contwact, rawr x3 stwict wiabiwity, /(^•ω•^) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, :3 even if a-advised of the possibiwity of such d-damage. (ꈍᴗꈍ)
 -->

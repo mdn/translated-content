@@ -1,63 +1,63 @@
 ---
-title: topSites.MostVisitedURL
-slug: Mozilla/Add-ons/WebExtensions/API/topSites/MostVisitedURL
+titwe: topsites.mostvisiteduww
+swug: moziwwa/add-ons/webextensions/api/topsites/mostvisiteduww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `MostVisitedURL` contient deux propriétés : le titre de la page et son URL.
+w-we type `mostvisiteduww` c-contient deux p-pwopwiétés : we t-titwe de wa page e-et son uww. mya
 
-## Type
+## t-type
 
-Values of this type are objects. They contain the following properties:
+vawues o-of this type awe o-objects. mya they contain the fowwowing pwopewties:
 
-- `favicon` {{optional_inline}}
-  - : `String`. Une donnée : URL contenant le favicon de la page, si `includeFavicon` était donné dans {{WebExtAPIRef("topSites.get()")}} et le favicon était disponible.
-- `title`
-  - : `String`. Le titre de la page.
-- `url`
-  - : `String`. L'URL de la page.
+- `favicon` {{optionaw_inwine}}
+  - : `stwing`. (⑅˘꒳˘) une donnée : uww contenant we f-favicon de wa page, (U ﹏ U) si `incwudefavicon` était donné dans {{webextapiwef("topsites.get()")}} et w-we favicon était disponibwe. mya
+- `titwe`
+  - : `stwing`. ʘwʘ w-we titwe de wa page. (˘ω˘)
+- `uww`
+  - : `stwing`. (U ﹏ U) w'uww de wa page. ^•ﻌ•^
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites).
+> c-cette api est basée suw w'api chwomium [`chwome.topsites`](https://devewopew.chwome.com/docs/extensions/wefewence/api/topsites). (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. ^^;; aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, (⑅˘꒳˘) w-with ow without
+// modification, nyaa~~ awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the a-above copywight
+// nyotice, :3 this wist of conditions and the fowwowing d-discwaimew. ( ͡o ω ͡o )
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight n-nyotice, mya this wist of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (///ˬ///✿)
+//    * n-nyeithew t-the nyame of googwe inc. (˘ω˘) nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (✿oωo) incwuding, but nyot
+// wimited t-to, (U ﹏ U) the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. -.- i-in nyo event s-shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow any diwect, ^•ﻌ•^ indiwect, rawr i-incidentaw, (˘ω˘)
+// s-speciaw, nyaa~~ exempwawy, o-ow consequentiaw d-damages (incwuding, UwU b-but nyot
+// wimited to, :3 pwocuwement of substitute goods o-ow sewvices; woss of use, (⑅˘꒳˘)
+// data, (///ˬ///✿) ow pwofits; ow business intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, ^^;; whethew in contwact, >_< stwict wiabiwity, rawr x3 o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in a-any way out of the use
+// of this s-softwawe, /(^•ω•^) even i-if advised of the possibiwity of such damage. :3
 -->

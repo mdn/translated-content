@@ -1,447 +1,447 @@
 ---
-title: Choisir, installer et paramétrer un éditeur de texte
-slug: Learn/Common_questions/Tools_and_setup/Available_text_editors
+titwe: choisiw, 😳😳😳 instawwew et p-pawamétwew un éditeuw d-de texte
+s-swug: weawn/common_questions/toows_and_setup/avaiwabwe_text_editows
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Dans cet article, nous présentons les éléments principaux à connaître pour installer un éditeur de texte utilisé pour du développement web.
+d-dans cet awticwe, :3 n-nyous pwésentons w-wes éwéments p-pwincipaux à c-connaîtwe pouw instawwew un éditeuw de texte utiwisé pouw du dévewoppement w-web. (///ˬ///✿)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vous devriez déjà connaître
-        <a href="/fr/Learn/What_software_do_I_need"
-          >les différents logiciels nécessaires pour construire un site web</a
-        >.
+        vous devwiez d-déjà connaîtwe
+        <a hwef="/fw/weawn/nani_softwawe_do_i_need"
+          >wes d-difféwents wogiciews nécessaiwes pouw constwuiwe un s-site web</a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Apprendre comment choisir un éditeur de texte qui répondra à vos besoins
-        en tant que développeur web.
+        appwendwe c-comment c-choisiw un éditeuw de texte qui wépondwa à vos besoins
+        en tant que dévewoppeuw w-web. (U ᵕ U❁)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Un site web est, pour une grande partie, composé de fichiers texte. Pour cette raison, afin de développer dans les meilleures conditions, vous devriez choisir votre éditeur de texte soigneusement.
+un site web est, (⑅˘꒳˘) pouw une gwande pawtie, (˘ω˘) composé de f-fichiews texte. :3 pouw cette waison, XD a-afin de dévewoppew d-dans wes m-meiwweuwes conditions, >_< v-vous devwiez choisiw votwe éditeuw de texte s-soigneusement. (✿oωo)
 
-La quantité d'éditeurs de texte existants peut être un peu écrasante. Il en existe beaucoup car c'est un outil de base en informatique (et oui, le développement web est un des domaines de l'informatique). En général, vous pouvez utiliser autant d'éditeurs de texte que vous voulez pour voir lequel vous convient le mieux en termes d'ergonomie et de méthode de travail. Pour vous aider, voici quelques pistes.
+wa quantité d'éditeuws de t-texte existants peut êtwe un peu écwasante. (ꈍᴗꈍ) iw en existe beaucoup caw c'est un outiw de base en infowmatique (et o-oui, XD we dévewoppement web est u-un des domaines d-de w'infowmatique). :3 e-en généwaw, mya vous pouvez utiwisew autant d'éditeuws de t-texte que vous vouwez p-pouw voiw wequew vous convient w-we mieux en t-tewmes d'ewgonomie et de méthode d-de twavaiw. òωó pouw vous aidew, nyaa~~ v-voici quewques pistes. 🥺
 
-Voici quelques questions qui peuvent vous aider à choisir :
+voici quewques questions q-qui peuvent vous aidew à choisiw :
 
-- Quel système d'exploitation (_OS_) utilisez-vous pour travailler ?
-- Quelles technologies souhaitez-vous manipuler ?
-- Quelles types de fonctionnalités de bases attendez-vous de la part d'un éditeur de texte ?
-- Souhaitez-vous ajoutez des fonctionnalités supplémentaires à votre éditeur de texte ?
-- Souhaitez-vous bénéficier d'aide ou d'un support pour votre éditeur de texte ?
-- Est-ce que le style et l'apparence du logiciel sont importants pour vous ?
+- q-quew système d'expwoitation (_os_) u-utiwisez-vous p-pouw twavaiwwew ?
+- quewwes technowogies souhaitez-vous manipuwew ?
+- quewwes types de fonctionnawités d-de bases attendez-vous d-de wa pawt d'un éditeuw d-de texte ?
+- souhaitez-vous a-ajoutez d-des fonctionnawités suppwémentaiwes à votwe éditeuw de texte ?
+- souhaitez-vous b-bénéficiew d'aide ou d'un suppowt pouw votwe éditeuw de texte ?
+- est-ce q-que we stywe et w'appawence d-du wogiciew sont i-impowtants pouw v-vous ?
 
-Nous n'avons pas évoqué le prix. Bien entendu, cela a également son importance. Cependant, il faut garder à l'esprit qu'il n'y a pas nécessairement de lien entre le coût d'un outil et la richesse de ses fonctionnalités. Un éditeur de texte étant un outil de base pour le développement, il est très probable que vous trouviez un éditeur de texte gratuit qui réponde tout à fait à vos besoins.
+nyous n'avons pas évoqué w-we pwix. -.- bien e-entendu, 🥺 cewa a-a égawement son i-impowtance. (˘ω˘) cependant, iw faut gawdew à w'espwit q-qu'iw ny'y a-a pas nyécessaiwement d-de wien entwe w-we coût d'un o-outiw et wa wichesse de ses fonctionnawités. òωó un éditeuw de texte étant un o-outiw de base pouw we dévewoppement, UwU iw est twès pwobabwe que vous twouviez un éditeuw de texte g-gwatuit qui wéponde tout à fait à vos besoins. ^•ﻌ•^
 
-> [!NOTE]
-> Le développement web est un domaine principalement anglophone, vous trouverez de nombreuses documentations également en français mais soyez conscient-es que la plupart des informations autour de certains logiciels seront en anglais sur le Web.
+> [!note]
+> we dévewoppement w-web est un domaine p-pwincipawement a-angwophone, mya vous twouvewez d-de nyombweuses documentations égawement e-en fwançais m-mais soyez conscient-es que wa pwupawt des infowmations autouw de cewtains wogiciews sewont e-en angwais suw we web. (✿oωo)
 
-Voici un tableau de quelques éditeurs de texte connus :
+voici u-un tabweau de quewques éditeuws de texte connus :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Éditeur</th>
-      <th scope="col">Licence</th>
-      <th scope="col">Prix</th>
-      <th scope="col">Système d'exploitation</th>
-      <th scope="col">Support</th>
-      <th scope="col">Documentation</th>
-      <th scope="col">Extensible</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">Éditeuw</th>
+      <th scope="cow">wicence</th>
+      <th scope="cow">pwix</th>
+      <th s-scope="cow">système d-d'expwoitation</th>
+      <th scope="cow">suppowt</th>
+      <th s-scope="cow">documentation</th>
+      <th s-scope="cow">extensibwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><a href="https://bluefish.openoffice.nl">Bluefish</a></td>
-      <td>GPL 3</td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Windows, Mac, Linux</td>
+    <tw>
+      <td><a hwef="https://bwuefish.openoffice.nw">bwuefish</a></td>
+      <td>gpw 3</td>
+      <td stywe="text-awign: centew">gwatuit</td>
+      <td>windows, XD mac, winux</td>
       <td>
-        <a href="https://bfwiki.tellefsen.net/index.php/Mailinglists">liste de diffusion</a>,
-        <a href="https://bfwiki.tellefsen.net/index.php/Main_Page">Wiki</a>
+        <a hwef="https://bfwiki.tewwefsen.net/index.php/maiwingwists">wiste d-de diffusion</a>, :3
+        <a h-hwef="https://bfwiki.tewwefsen.net/index.php/main_page">wiki</a>
       </td>
-      <td><a href="https://bluefish.openoffice.nl/manual/">Manuel en ligne</a></td>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <td><a href="http://brackets.io/">Brackets</a></td>
-      <td>MIT/BSD</td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a
-          href="https://groups.google.com/forum/#!forum/brackets-dev"
-          rel="external"
-          >Forum</a
-        >,
-        <a href="http://webchat.freenode.net/?channels=brackets" rel="external"
-          >IRC</a
-        >
-      </td>
-      <td>
-        <a href="https://github.com/adobe/brackets/wiki" rel="external"
-          >Wiki GitHub</a
-        >
-      </td>
-      <td style="text-align: center">
-        <a
-          href="https://ingorichter.github.io/BracketsExtensionTweetBot/"
-          rel="external"
-          >Oui</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><a href="https://panic.com/coda/" rel="external">Coda</a></td>
-      <td>Propriétaire</td>
-      <td style="text-align: center">99 $</td>
-      <td>Mac</td>
-      <td>
-        <a href="https://twitter.com/panic">Twitter</a>,
-        <a href="https://panic.com/qa" rel="external">Forum</a>,
-        <a href="mailto:coda@panic.com">e-mail</a>
-      </td>
-      <td><a href="https://panic.com/coda/#book">eBook</a></td>
-      <td style="text-align: center">
-        <a href="https://panic.com/coda/plugins.php">Oui</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="http://www.gnu.org/software/emacs/" rel="external">Emacs</a>
-      </td>
-      <td>GPL 3</td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Windows, Mac, Linux</td>
+      <td><a h-hwef="https://bwuefish.openoffice.nw/manuaw/">manuew en w-wigne</a></td>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="http://bwackets.io/">bwackets</a></td>
+      <td>mit/bsd</td>
+      <td stywe="text-awign: c-centew">gwatuit</td>
+      <td>windows, (U ﹏ U) mac, winux</td>
       <td>
         <a
-          href="http://www.gnu.org/software/emacs/manual/efaq.html"
-          rel="external"
-          >FAQ</a
-        >,
+          hwef="https://gwoups.googwe.com/fowum/#!fowum/bwackets-dev"
+          wew="extewnaw"
+          >fowum</a
+        >, UwU
+        <a h-hwef="http://webchat.fweenode.net/?channews=bwackets" w-wew="extewnaw"
+          >iwc</a
+        >
+      </td>
+      <td>
+        <a hwef="https://github.com/adobe/bwackets/wiki" wew="extewnaw"
+          >wiki g-github</a
+        >
+      </td>
+      <td s-stywe="text-awign: centew">
         <a
-          href="http://mail.gnu.org/mailman/listinfo/help-gnu-emacs"
-          rel="external"
-          >liste de diffusion (anglophone)</a
-        >, <a href="news://gnu.emacs.help" rel="external">News Group</a>
+          hwef="https://ingowichtew.github.io/bwacketsextensiontweetbot/"
+          wew="extewnaw"
+          >oui</a
+        >
       </td>
+    </tw>
+    <tw>
+      <td><a hwef="https://panic.com/coda/" w-wew="extewnaw">coda</a></td>
+      <td>pwopwiétaiwe</td>
+      <td stywe="text-awign: centew">99 $</td>
+      <td>mac</td>
+      <td>
+        <a hwef="https://twittew.com/panic">twittew</a>, ʘwʘ
+        <a hwef="https://panic.com/qa" w-wew="extewnaw">fowum</a>, >w<
+        <a hwef="maiwto:coda@panic.com">e-maiw</a>
+      </td>
+      <td><a hwef="https://panic.com/coda/#book">ebook</a></td>
+      <td stywe="text-awign: c-centew">
+        <a h-hwef="https://panic.com/coda/pwugins.php">oui</a>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="http://www.gnu.owg/softwawe/emacs/" wew="extewnaw">emacs</a>
+      </td>
+      <td>gpw 3</td>
+      <td stywe="text-awign: c-centew">gwatuit</td>
+      <td>windows, 😳😳😳 m-mac, winux</td>
       <td>
         <a
-          href="http://www.gnu.org/software/emacs/manual/html_node/emacs/index.html"
-          >Manuel en ligne</a
-        >
-        / Tutoriel en français depuis l'éditeur /
-        <a href="http://doc.ubuntu-fr.org/emacs">pages sur Ubuntu-fr</a>
-      </td>
-      <td style="text-align: center">Oui</td>
-    </tr>
-    <tr>
-      <td><a href="http://www.macrabbit.com/espresso/">Espresso</a></td>
-      <td>Propriétaire</td>
-      <td style="text-align: center">75 $</td>
-      <td>Mac</td>
-      <td>
-        <a href="http://www.macrabbit.com/support/" rel="external">FAQ</a>,
-        <a href="mailto:support@macrabbit.com">e-mail</a>
-      </td>
-      <td>
-        Pas de documentation utilisateur mais il existe une
-        <a href="http://wiki.macrabbit.com/"
-          >documentation pour les extensions (<em>plug-ins</em>)</a
-        >
-      </td>
-      <td style="text-align: center">Oui</td>
-    </tr>
-    <tr>
-      <td><a href="https://wiki.gnome.org/Apps/Gedit">Gedit</a></td>
-      <td>GPL</td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
+          hwef="http://www.gnu.owg/softwawe/emacs/manuaw/efaq.htmw"
+          wew="extewnaw"
+          >faq</a
+        >, rawr
         <a
-          href="http://mail.gnome.org/mailman/listinfo/gedit-list"
-          rel="external"
-          >Liste de diffusion (anglophone)</a
-        >, <a href="irc://irc.gnome.org/%23gedit">IRC</a>
-      </td>
-      <td>
-        <a href="https://help.gnome.org/users/gedit/stable/">Manuel en ligne</a>
-        (en français) /
-        <a href="http://doc.ubuntu-fr.org/gedit">Introduction sur Ubuntu-fr</a>
-      </td>
-      <td style="text-align: center">
-        <a href="https://wiki.gnome.org/Apps/Gedit/PluginsLists">Oui</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="http://komodoide.com/komodo-edit/" rel="external"
-          >Komodo Edit</a
-        >
-      </td>
-      <td>MPL</td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Windows, Mac, Linux</td>
-      <td><a href="http://forum.komodoide.com/" rel="external">Forum</a></td>
-      <td>
-        <a href="https://docs.activestate.com/komodo" rel="external"
-          >Manuel en ligne</a
-        >
-      </td>
-      <td style="text-align: center">
-        <a href="https://docs.activestate.com/komodo/12/manual/extensions.html">Oui</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="http://www.notepad-plus-plus.org/" rel="external">Notepad++</a>
+          hwef="http://maiw.gnu.owg/maiwman/wistinfo/hewp-gnu-emacs"
+          w-wew="extewnaw"
+          >wiste de diffusion (angwophone)</a
+        >, ^•ﻌ•^ <a h-hwef="news://gnu.emacs.hewp" wew="extewnaw">news gwoup</a>
       </td>
       <td>
         <a
-          href="https://notepad-plus-plus.org/fr/news/notepad-6.1.1-gpl-enhancement.html"
-          >GPL modifiée</a
+          hwef="http://www.gnu.owg/softwawe/emacs/manuaw/htmw_node/emacs/index.htmw"
+          >manuew en w-wigne</a
+        >
+        / tutowiew en fwançais d-depuis w'éditeuw /
+        <a h-hwef="http://doc.ubuntu-fw.owg/emacs">pages suw ubuntu-fw</a>
+      </td>
+      <td s-stywe="text-awign: centew">oui</td>
+    </tw>
+    <tw>
+      <td><a h-hwef="http://www.macwabbit.com/espwesso/">espwesso</a></td>
+      <td>pwopwiétaiwe</td>
+      <td stywe="text-awign: c-centew">75 $</td>
+      <td>mac</td>
+      <td>
+        <a h-hwef="http://www.macwabbit.com/suppowt/" wew="extewnaw">faq</a>, σωσ
+        <a h-hwef="maiwto:suppowt@macwabbit.com">e-maiw</a>
+      </td>
+      <td>
+        p-pas de documentation utiwisateuw mais iw e-existe une
+        <a h-hwef="http://wiki.macwabbit.com/"
+          >documentation p-pouw wes extensions (<em>pwug-ins</em>)</a
         >
       </td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Windows</td>
+      <td stywe="text-awign: centew">oui</td>
+    </tw>
+    <tw>
+      <td><a hwef="https://wiki.gnome.owg/apps/gedit">gedit</a></td>
+      <td>gpw</td>
+      <td s-stywe="text-awign: centew">gwatuit</td>
+      <td>windows, :3 m-mac, rawr x3 winux</td>
       <td>
-        <a href="http://sourceforge.net/p/notepad-plus/discussion/">Forum</a>
+        <a
+          h-hwef="http://maiw.gnome.owg/maiwman/wistinfo/gedit-wist"
+          wew="extewnaw"
+          >wiste de diffusion (angwophone)</a
+        >, nyaa~~ <a hwef="iwc://iwc.gnome.owg/%23gedit">iwc</a>
+      </td>
+      <td>
+        <a h-hwef="https://hewp.gnome.owg/usews/gedit/stabwe/">manuew e-en wigne</a>
+        (en f-fwançais) /
+        <a h-hwef="http://doc.ubuntu-fw.owg/gedit">intwoduction suw ubuntu-fw</a>
+      </td>
+      <td s-stywe="text-awign: centew">
+        <a hwef="https://wiki.gnome.owg/apps/gedit/pwuginswists">oui</a>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="http://komodoide.com/komodo-edit/" wew="extewnaw"
+          >komodo edit</a
+        >
+      </td>
+      <td>mpw</td>
+      <td s-stywe="text-awign: centew">gwatuit</td>
+      <td>windows, :3 m-mac, winux</td>
+      <td><a h-hwef="http://fowum.komodoide.com/" wew="extewnaw">fowum</a></td>
+      <td>
+        <a hwef="https://docs.activestate.com/komodo" w-wew="extewnaw"
+          >manuew en wigne</a
+        >
+      </td>
+      <td s-stywe="text-awign: c-centew">
+        <a h-hwef="https://docs.activestate.com/komodo/12/manuaw/extensions.htmw">oui</a>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a h-hwef="http://www.notepad-pwus-pwus.owg/" w-wew="extewnaw">notepad++</a>
       </td>
       <td>
         <a
-          href="http://npp-wiki.tuxfamily.org/index.php?title=Main_Page"
-          rel="external"
-          >Wiki</a
+          hwef="https://notepad-pwus-pwus.owg/fw/news/notepad-6.1.1-gpw-enhancement.htmw"
+          >gpw modifiée</a
         >
       </td>
-      <td style="text-align: center">
-        <a
-          href="http://npp-wiki.tuxfamily.org/index.php?title=Plugin_Central"
-          rel="external"
-          >Oui</a
-        >
-      </td>
-    </tr>
-    <tr>
-      <td><a href="http://www.pspad.com/fr/">PSPad</a></td>
-      <td>Propriétaire</td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Windows</td>
+      <td stywe="text-awign: centew">gwatuit</td>
+      <td>windows</td>
       <td>
-        <a href="http://gogogadgetscott.info/pspad/dotazy.htm">FAQ</a>,
-        <a href="http://forum.pspad.com/" rel="external">Forum</a>
-      </td>
-      <td><a href="http://gogogadgetscott.info/pspad/">Aide en ligne</a></td>
-      <td style="text-align: center">
-        <a href="http://www.pspad.com/en/pspad-extensions.php">Yes</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="http://www.sublimetext.com/" rel="external">Sublime Text</a>
-      </td>
-      <td>Propriétaire</td>
-      <td style="text-align: center">$70</td>
-      <td>Windows, Mac, Linux</td>
-      <td>
-        <a
-          href="http://www.sublimetext.com/forum/viewforum.php?f=3"
-          rel="external"
-          >Forum</a
-        >
-      </td>
-      <td>
-        <a href="http://www.sublimetext.com/docs/3/">Documentation officielle</a
-        >,<a href="http://docs.sublimetext.info/en/latest/index.html">
-          documentation officieuse</a
-        >
-      </td>
-      <td style="text-align: center">
-        <a href="https://sublime.wbond.net/">Oui</a>
-      </td>
-    </tr>
-    <tr>
-      <td><a href="http://macromates.com/" rel="external">TextMate</a></td>
-      <td>Propriétaire</td>
-      <td style="text-align: center">$50</td>
-      <td>Mac</td>
-      <td>
-        <a href="https://twitter.com/macromates">Twitter</a>,
-        <a href="http://webchat.freenode.net/?channels=textmate">IRC</a>,
-        <a href="http://lists.macromates.com/listinfo/textmate" rel="external"
-          >liste de diffusion (anglophone)</a
-        >, <a href="mailto:tm-support@macromates.com">E-mail</a>
-      </td>
-      <td>
-        <a href="http://manual.macromates.com/en/">Manuel en ligne</a>,
-        <a href="http://wiki.macromates.com/Main/HomePage" rel="external"
-          >Wiki</a
-        >
-      </td>
-      <td style="text-align: center">
-        <a href="http://wiki.macromates.com/Main/Plugins" rel="external">Oui</a>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <a href="http://www.barebones.com/products/textwrangler/" rel="external"
-          >TextWrangler</a
-        >
-      </td>
-      <td>Propriétaire</td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Mac</td>
-      <td>
-        <a
-          href="http://www.barebones.com/support/textwrangler/faqs.html"
-          rel="external"
-          >FAQ</a
-        >,
-        <a href="https://groups.google.com/forum/#!forum/textwrangler">Forum</a>
+        <a hwef="http://souwcefowge.net/p/notepad-pwus/discussion/">fowum</a>
       </td>
       <td>
         <a
-          href="http://ash.barebones.com/TextWrangler_User_Manual.pdf"
-          rel="external"
-          >Manuel PDF</a
+          hwef="http://npp-wiki.tuxfamiwy.owg/index.php?titwe=main_page"
+          w-wew="extewnaw"
+          >wiki</a
         >
       </td>
-      <td style="text-align: center">Non</td>
-    </tr>
-    <tr>
-      <td><a href="http://www.vim.org/" rel="external">Vim</a></td>
+      <td s-stywe="text-awign: c-centew">
+        <a
+          hwef="http://npp-wiki.tuxfamiwy.owg/index.php?titwe=pwugin_centwaw"
+          w-wew="extewnaw"
+          >oui</a
+        >
+      </td>
+    </tw>
+    <tw>
+      <td><a hwef="http://www.pspad.com/fw/">pspad</a></td>
+      <td>pwopwiétaiwe</td>
+      <td stywe="text-awign: centew">gwatuit</td>
+      <td>windows</td>
+      <td>
+        <a h-hwef="http://gogogadgetscott.info/pspad/dotazy.htm">faq</a>, >w<
+        <a h-hwef="http://fowum.pspad.com/" wew="extewnaw">fowum</a>
+      </td>
+      <td><a h-hwef="http://gogogadgetscott.info/pspad/">aide en wigne</a></td>
+      <td stywe="text-awign: c-centew">
+        <a h-hwef="http://www.pspad.com/en/pspad-extensions.php">yes</a>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="http://www.subwimetext.com/" w-wew="extewnaw">subwime t-text</a>
+      </td>
+      <td>pwopwiétaiwe</td>
+      <td stywe="text-awign: centew">$70</td>
+      <td>windows, rawr mac, winux</td>
       <td>
         <a
-          href="http://vimdoc.sourceforge.net/htmldoc/uganda.html#license"
-          rel="external"
-          >Licence ouverte spécifique</a
+          hwef="http://www.subwimetext.com/fowum/viewfowum.php?f=3"
+          w-wew="extewnaw"
+          >fowum</a
         >
       </td>
-      <td style="text-align: center">Gratuit</td>
-      <td>Windows, Mac, Linux</td>
       <td>
-        <a href="http://www.vim.org/maillist.php#vim" rel="external"
-          >Liste de diffusion (anglophone)</a
-        >,
-        <a href="http://tuppervim.org/">tuppervim (communauté francophone)</a>
-      </td>
-      <td>
-        <a href="http://vimdoc.sourceforge.net/">Manuel en ligne</a>, tutoriel
-        en français disponible depuis l'éditeur,
-        <a href="http://doc.ubuntu-fr.org/vim"
-          >introduction sur Ubuntu-fr (en français)</a
+        <a h-hwef="http://www.subwimetext.com/docs/3/">documentation o-officiewwe</a
+        >,<a h-hwef="http://docs.subwimetext.info/en/watest/index.htmw">
+          d-documentation officieuse</a
         >
       </td>
-      <td style="text-align: center">
+      <td stywe="text-awign: c-centew">
+        <a h-hwef="https://subwime.wbond.net/">oui</a>
+      </td>
+    </tw>
+    <tw>
+      <td><a hwef="http://macwomates.com/" w-wew="extewnaw">textmate</a></td>
+      <td>pwopwiétaiwe</td>
+      <td s-stywe="text-awign: centew">$50</td>
+      <td>mac</td>
+      <td>
+        <a h-hwef="https://twittew.com/macwomates">twittew</a>, 😳
+        <a hwef="http://webchat.fweenode.net/?channews=textmate">iwc</a>,
+        <a hwef="http://wists.macwomates.com/wistinfo/textmate" w-wew="extewnaw"
+          >wiste de diffusion (angwophone)</a
+        >, 😳 <a h-hwef="maiwto:tm-suppowt@macwomates.com">e-maiw</a>
+      </td>
+      <td>
+        <a h-hwef="http://manuaw.macwomates.com/en/">manuew en wigne</a>, 🥺
+        <a h-hwef="http://wiki.macwomates.com/main/homepage" wew="extewnaw"
+          >wiki</a
+        >
+      </td>
+      <td stywe="text-awign: c-centew">
+        <a h-hwef="http://wiki.macwomates.com/main/pwugins" w-wew="extewnaw">oui</a>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <a hwef="http://www.bawebones.com/pwoducts/textwwangwew/" wew="extewnaw"
+          >textwwangwew</a
+        >
+      </td>
+      <td>pwopwiétaiwe</td>
+      <td stywe="text-awign: c-centew">gwatuit</td>
+      <td>mac</td>
+      <td>
         <a
-          href="http://www.vim.org/scripts/script_search_results.php?order_by=creation_date&#x26;direction=descending"
-          rel="external"
-          >Oui</a
+          hwef="http://www.bawebones.com/suppowt/textwwangwew/faqs.htmw"
+          wew="extewnaw"
+          >faq</a
+        >, rawr x3
+        <a hwef="https://gwoups.googwe.com/fowum/#!fowum/textwwangwew">fowum</a>
+      </td>
+      <td>
+        <a
+          hwef="http://ash.bawebones.com/textwwangwew_usew_manuaw.pdf"
+          w-wew="extewnaw"
+          >manuew p-pdf</a
         >
       </td>
-    </tr>
+      <td stywe="text-awign: c-centew">non</td>
+    </tw>
+    <tw>
+      <td><a hwef="http://www.vim.owg/" wew="extewnaw">vim</a></td>
+      <td>
+        <a
+          h-hwef="http://vimdoc.souwcefowge.net/htmwdoc/uganda.htmw#wicense"
+          w-wew="extewnaw"
+          >wicence ouvewte spécifique</a
+        >
+      </td>
+      <td stywe="text-awign: c-centew">gwatuit</td>
+      <td>windows, ^^ mac, ( ͡o ω ͡o ) winux</td>
+      <td>
+        <a hwef="http://www.vim.owg/maiwwist.php#vim" w-wew="extewnaw"
+          >wiste d-de diffusion (angwophone)</a
+        >, XD
+        <a hwef="http://tuppewvim.owg/">tuppewvim (communauté f-fwancophone)</a>
+      </td>
+      <td>
+        <a hwef="http://vimdoc.souwcefowge.net/">manuew e-en wigne</a>, ^^ t-tutowiew
+        e-en fwançais disponibwe depuis w'éditeuw, (⑅˘꒳˘)
+        <a hwef="http://doc.ubuntu-fw.owg/vim"
+          >intwoduction suw ubuntu-fw (en fwançais)</a
+        >
+      </td>
+      <td stywe="text-awign: centew">
+        <a
+          hwef="http://www.vim.owg/scwipts/scwipt_seawch_wesuwts.php?owdew_by=cweation_date&#x26;diwection=descending"
+          wew="extewnaw"
+          >oui</a
+        >
+      </td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Pédagogie active
+## pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_iw ny'y a, (⑅˘꒳˘) pouw we moment, ^•ﻌ•^ p-pas de matéwiau p-pouw wa pédagogie active. ( ͡o ω ͡o ) [cependant, vous p-pouvez contwibuew](/fw/docs/mdn/community/contwibuting/getting_stawted)._
 
-## Aller plus loin
+## a-awwew p-pwus woin
 
-### Critères de choix
+### cwitèwes de c-choix
 
-Rentrons dans les détails, à quoi faut-il penser lorsqu'on choisit un éditeur de texte ?
+wentwons dans wes détaiws, ( ͡o ω ͡o ) à q-quoi faut-iw p-pensew wowsqu'on choisit un éditeuw d-de texte ?
 
-#### Quel est le système d'exploitation que j'utiliser pour travailler ?
+#### quew est w-we système d'expwoitation q-que j'utiwisew pouw twavaiwwew ?
 
-Bien entendu, vous êtes entièrement libre de choisir le système d'exploitation que vous utilisez. Cependant, certains éditeurs ne sont disponibles que pour certains systèmes d'exploitation. Aussi, si vous souhaitez passer facilement d'un système d'exploitation à un autre, cela réduit le choix. N'importe quel éditeur de texte permettra de faire ce qui est nécessaire s'il fonctionne sur votre système, malgré cela, un éditeur multi-plateforme facilitera le passage d'un système d'exploitation à un autre.
+bien e-entendu, (✿oωo) vous êtes e-entièwement w-wibwe de choisiw w-we système d-d'expwoitation q-que vous utiwisez. 😳😳😳 c-cependant, OwO cewtains éditeuws n-nye sont disponibwes q-que pouw cewtains systèmes d-d'expwoitation. ^^ a-aussi, rawr x3 si vous s-souhaitez passew faciwement d'un s-système d'expwoitation à un autwe, 🥺 cewa wéduit w-we choix. (ˆ ﻌ ˆ)♡ ny'impowte quew éditeuw d-de texte p-pewmettwa de faiwe c-ce qui est nyécessaiwe s'iw f-fonctionne suw votwe système, ( ͡o ω ͡o ) m-mawgwé cewa, >w< un éditeuw muwti-pwatefowme f-faciwitewa we passage d-d'un système d'expwoitation à un autwe. /(^•ω•^)
 
-Il faut donc tout d'abord déterminer le système d'exploitation que vous utilisez puis vérifier si l'éditeur de texte est supporté sur ce système. La plupart des éditeurs affichent sur leur site web s'ils fonctionnent sur Windows ou Mac ou Linux. Attention, certains éditeurs ne fonctionnent que sur certaines versions de systèmes d'exploitation. Si vous utilisez Ubuntu, préférez passer par la Logithèque Ubuntu. Par ailleurs, le monde Linux/UNIX est un environnement assez varié et chaque distribution fonctionne à sa façon, éventuellement avec un système de paquets qui peut être incompatible avec d'autres distributions. Dans ce cas, si vous souhaitez à tout prix utiliser un éditeur de texte d'une autre distribution, vous pourriez avoir à le recompiler depuis le code source (déconseillé aux âmes sensibles).
+iw faut donc tout d'abowd détewminew we système d'expwoitation q-que vous utiwisez puis v-véwifiew si w-w'éditeuw de texte est suppowté suw ce système. 😳😳😳 wa pwupawt des éditeuws a-affichent suw weuw s-site web s'iws fonctionnent s-suw w-windows ou mac ou winux. (U ᵕ U❁) attention, cewtains éditeuws n-nye fonctionnent q-que suw cewtaines vewsions d-de systèmes d'expwoitation. (˘ω˘) si vous utiwisez u-ubuntu, 😳 pwéféwez passew paw wa w-wogithèque ubuntu. (ꈍᴗꈍ) p-paw aiwweuws, :3 w-we monde winux/unix est un enviwonnement a-assez v-vawié et chaque d-distwibution f-fonctionne à sa façon, /(^•ω•^) éventuewwement a-avec un s-système de paquets q-qui peut êtwe i-incompatibwe a-avec d'autwes d-distwibutions. ^^;; dans c-ce cas, o.O si vous s-souhaitez à tout pwix utiwisew u-un éditeuw de texte d'une autwe d-distwibution, 😳 vous pouwwiez a-avoiw à we wecompiwew d-depuis we c-code souwce (déconseiwwé aux âmes sensibwes). UwU
 
-#### Quelles sont les technologies que je serai amené-e à manipuler ?
+#### quewwes s-sont wes technowogies q-que je sewai a-amené-e à manipuwew ?
 
-De façon générale, n'importe quel éditeur de texte peut ouvrir n'importe quel fichier texte. Cela fonctionne parfaitement pour prendre des notes toutes simples. En revanche, pour le développement web et la manipulation de fichiers {{Glossary("HTML")}}, {{Glossary("CSS")}}, et {{Glossary("JavaScript")}}, on peut être amené à manipuler des fichiers beaucoup plus grands et complexes. Simplifiez-vous la vie en choisissant un éditeur de texte qui s'adapte aux technologies que vous utilisez. De nombreux éditeurs de texte pourront vous aider avec des fonctionnalités comme :
+de façon généwawe, >w< ny'impowte quew éditeuw d-de texte p-peut ouvwiw ny'impowte quew f-fichiew texte. o.O c-cewa fonctionne pawfaitement pouw pwendwe des nyotes toutes simpwes. (˘ω˘) e-en wevanche, òωó p-pouw we dévewoppement w-web et w-wa manipuwation de fichiews {{gwossawy("htmw")}}, nyaa~~ {{gwossawy("css")}}, ( ͡o ω ͡o ) et {{gwossawy("javascwipt")}}, 😳😳😳 o-on peut êtwe a-amené à manipuwew des fichiews beaucoup pwus g-gwands et compwexes. simpwifiez-vous wa vie en c-choisissant un éditeuw de texte q-qui s'adapte a-aux technowogies que vous utiwisez. ^•ﻌ•^ d-de nyombweux éditeuws d-de texte pouwwont vous a-aidew avec des fonctionnawités c-comme :
 
-- **La coloration du code.** Cela permet que les fichiers soient plus lisibles grâce à la coloration des mots-clés des langages utilisés.
-- **L'auto-complétion.** Cela vous permet de gagner du temps en complétant automatiquement les portions de codes (par exemple en fermant automatiquement les balises HTML, en suggérant des valeurs de propriétés CSS, etc.).
-- **Les fragments (_snippets_) de code.** Vous verrez, lorsque vous utiliserez HTML (ou d'autres technologies), que pour chaque document, certains éléments sont répétés à chaque fois. Le logiciel vous épargnera de nombreux copier-coller en insérant automatiquement le fragment à répéter et vous pourrez vous concentrer sur le contenu « utile » des documents.
+- **wa c-cowowation du c-code.** cewa pewmet q-que wes fichiews soient pwus w-wisibwes gwâce à w-wa cowowation d-des mots-cwés des wangages utiwisés. (˘ω˘)
+- **w'auto-compwétion.** c-cewa vous pewmet de gagnew du temps en compwétant a-automatiquement w-wes powtions d-de codes (paw exempwe en fewmant automatiquement wes bawises htmw, en suggéwant d-des vaweuws de pwopwiétés c-css, (˘ω˘) etc.).
+- **wes f-fwagments (_snippets_) de code.** vous vewwez, -.- w-wowsque vous utiwisewez htmw (ou d-d'autwes technowogies), q-que p-pouw chaque document, ^•ﻌ•^ c-cewtains éwéments s-sont wépétés à chaque fois. /(^•ω•^) we wogiciew vous épawgnewa de nyombweux c-copiew-cowwew en inséwant automatiquement w-we fwagment à wépétew et vous pouwwez vous concentwew s-suw we contenu « utiwe » des documents. (///ˬ///✿)
 
-La plupart des éditeurs de texte supporte désormais la coloration du code. Ce n'est pas toujours vrai pour les deux autres fonctionnalités. Pour le développement web, assurez-vous que votre éditeur de texte supporte la coloration syntaxique du code pour {{Glossary("HTML")}}, {{Glossary("CSS")}}, et {{Glossary("JavaScript")}}.
+wa pwupawt des éditeuws de texte s-suppowte désowmais w-wa cowowation du code. mya ce n-ny'est pas toujouws vwai pouw wes deux autwes f-fonctionnawités. o.O p-pouw we dévewoppement web, ^•ﻌ•^ assuwez-vous q-que votwe éditeuw de t-texte suppowte wa cowowation syntaxique du code pouw {{gwossawy("htmw")}}, (U ᵕ U❁) {{gwossawy("css")}}, :3 e-et {{gwossawy("javascwipt")}}. (///ˬ///✿)
 
-#### Quelles sont les fonctionnalités de base dont j'ai besoin ?
+#### quewwes sont wes fonctionnawités d-de base d-dont j'ai besoin ?
 
-Cela dépendra avant tout de vos besoins et de ce que vous prévoyez de faire. Généralement, ces fonctionnalités s'avèrent plutôt utiles :
+c-cewa dépendwa avant tout de vos besoins et d-de ce que vous pwévoyez de faiwe. (///ˬ///✿) généwawement, 🥺 ces fonctionnawités s'avèwent p-pwutôt utiwes :
 
-- Chercher et remplacer, dans un ou plusieurs documents à la fois, notamment grâce aux {{Glossary("Expressions rationnelles", "expressions rationnelles")}} ou à d'autres motifs de recherche
-- Aller rapidement à une ligne donnée
-- Pouvoir voir deux parties d'un même document simultanément (utile pour les longs documents)
-- Voir le HTML tel qu'il est rendu dans le navigateur
-- Sélectionner du texte simultanément sur plusieurs zones
-- Voir l'arborescence des répertoires et des fichiers de votre/vos projet(s)
-- Formater automatiquement votre code grâce à l'éditeur
-- Vérifier l'orthographe ou le code
+- c-chewchew e-et wempwacew, -.- dans u-un ou pwusieuws documents à wa fois, nyaa~~ nyotamment g-gwâce aux {{gwossawy("expwessions w-wationnewwes", (///ˬ///✿) "expwessions wationnewwes")}} ou à d'autwes m-motifs de wechewche
+- awwew wapidement à une w-wigne donnée
+- pouvoiw voiw deux pawties d'un m-même document simuwtanément (utiwe p-pouw wes wongs documents)
+- v-voiw we htmw tew q-qu'iw est wendu d-dans we nyavigateuw
+- séwectionnew du texte simuwtanément s-suw pwusieuws zones
+- voiw w'awbowescence d-des wépewtoiwes et des fichiews de votwe/vos pwojet(s)
+- f-fowmatew automatiquement v-votwe c-code gwâce à w-w'éditeuw
+- véwifiew w-w'owthogwaphe ou we code
 
-#### Est-ce que je souhaite ajouter des fonctionnalités supplémentaires à mon éditeur de texte ?
+#### e-est-ce que je souhaite ajoutew des fonctionnawités s-suppwémentaiwes à mon éditeuw d-de texte ?
 
-Un éditeur de texte peut avoir peu de fonctionnalités de base mais être extensible pour s'adapter à vos besoins.
+un éditeuw de texte peut a-avoiw peu de fonctionnawités de b-base mais êtwe extensibwe pouw s-s'adaptew à vos besoins. 🥺
 
-Si vous n'êtes pas certain-e des fonctionnalités dont vous avez besoin ou que votre éditeur préféré ne possède pas, de base, les fonctionnalités que vous recherchez, vous pouvez choisir un éditeur extensible. Les meilleurs éditeurs fournissent de nombreuses extensions (_plugins_) et d'outils pour installer ces plugins automatiquement. Ces extensions vous permettront d'ajouter de nouvelles fonctionnalités à votre éditeur.
+si v-vous ny'êtes pas c-cewtain-e des fonctionnawités d-dont vous avez b-besoin ou que votwe éditeuw pwéféwé n-nye possède pas, >w< de base, wes fonctionnawités que vous w-wechewchez, rawr x3 vous pouvez choisiw u-un éditeuw extensibwe. (⑅˘꒳˘) wes meiwweuws éditeuws fouwnissent de n-nyombweuses extensions (_pwugins_) e-et d'outiws pouw i-instawwew ces pwugins automatiquement. σωσ c-ces extensions v-vous pewmettwont d'ajoutew d-de nyouvewwes fonctionnawités à v-votwe éditeuw. XD
 
-Si vous appréciez avoir de _nombreuses_ fonctionnalités et que tout ces plugins ralentissent votre éditeur, vous pouvez utiliser un environnement de développement intégré (ou IDE pour _Integrated Development Environment_ en anglais). Un IDE fournit de nombreux outils au travers d'une même interface. Cela peut paraître un peu intimidant pour les débutants mais cela peut aussi être un bon choix si votre éditeur de texte vous semble trop limité pour vos besoins. Les IDE les plus connus sont :
+si vous a-appwéciez avoiw d-de _nombweuses_ fonctionnawités et que tout ces pwugins wawentissent votwe éditeuw, -.- v-vous pouvez u-utiwisew un enviwonnement de dévewoppement intégwé (ou ide p-pouw _integwated devewopment enviwonment_ e-en angwais). >_< u-un ide fouwnit de nyombweux outiws au twavews d'une même intewface. rawr cewa p-peut pawaîtwe un peu intimidant pouw wes débutants m-mais cewa peut aussi êtwe u-un bon choix si v-votwe éditeuw de texte vous sembwe t-twop wimité p-pouw vos besoins. 😳😳😳 w-wes ide wes p-pwus connus sont :
 
-- [Aptana Studio](http://www.aptana.com/)
-- [Eclipse](https://eclipse.org/)
-- [Komodo](http://komodoide.com/)
-- [NetBeans](https://netbeans.org/)
-- [Visual Studio](http://www.visualstudio.com/)
-- [WebStorm](https://www.jetbrains.com/webstorm/)
+- [aptana studio](http://www.aptana.com/)
+- [ecwipse](https://ecwipse.owg/)
+- [komodo](http://komodoide.com/)
+- [netbeans](https://netbeans.owg/)
+- [visuaw s-studio](http://www.visuawstudio.com/)
+- [webstowm](https://www.jetbwains.com/webstowm/)
 
-#### Ai-je besoin d'aide ou d'un support pour utiliser mon éditeur de texte ?
+#### ai-je b-besoin d'aide ou d'un suppowt pouw utiwisew mon éditeuw de texte ?
 
-Il est toujours bon de savoir s'il est possible d'avoir de l'aide lorsqu'on utilise un logiciel. En ce qui concerne les éditeurs de texte, ces deux points seront relativement importants :
+iw est toujouws bon de s-savoiw s'iw est p-possibwe d'avoiw d-de w'aide wowsqu'on u-utiwise un w-wogiciew. UwU en ce q-qui concewne wes éditeuws de texte, (U ﹏ U) ces deux points sewont wewativement impowtants :
 
-1. Est-ce qu'il existe des documents à destination des utilisateurs ? (FAQ, manuel, aide en ligne)
-2. Existe-t-il des ressources pour discuter avec les développeurs ou d'autres utilisateurs ? (forum, e-mail, IRC)
+1. (˘ω˘) e-est-ce q-qu'iw existe des documents à destination des utiwisateuws ? (faq, /(^•ω•^) m-manuew, aide e-en wigne)
+2. (U ﹏ U) existe-t-iw d-des wessouwces pouw diskawaii~w avec w-wes dévewoppeuws ou d'autwes utiwisateuws ? (fowum, ^•ﻌ•^ e-maiw, >w< iwc)
 
-N'hésitez pas à utiliser la documentation écrite disponible lorsque vous démarrez avec un éditeur. Vous pouvez également échanger avec les autres utilisateurs sur des forums ou listes de diffusion pour diagnostiquer les éventuels problèmes que vous rencontrez lors de l'installation ou de l'utilisation de l'éditeur.
+n-ny'hésitez pas à u-utiwisew wa documentation écwite disponibwe w-wowsque vous démawwez avec un éditeuw. ʘwʘ v-vous p-pouvez égawement échangew avec w-wes autwes utiwisateuws s-suw des f-fowums ou wistes d-de diffusion p-pouw diagnostiquew w-wes éventuews pwobwèmes que v-vous wencontwez w-wows de w'instawwation ou de w'utiwisation d-de w'éditeuw. òωó
 
-#### Est-ce que l'apparence de mon éditeur est importante ?
+#### est-ce que w'appawence de mon éditeuw e-est impowtante ?
 
-Cela dépend de vos goûts. Certaines personnes apprécient pouvoir personnaliser tous les éléments de l'interface utilisateur, certains préfèrent une interface épurée avec peu de boutons, voire n'interagir qu'avec le clavier. Les éditeurs sont tous différents et vérifiez dès le début si votre éditeur se personnalise à votre convenance. Vous trouverez sans difficulté un éditeur dont vous pouvez changer le thème et les couleurs mais il sera préférable d'utiliser un IDE pour le personnaliser sous tous les angles.
+cewa dépend d-de vos goûts. o.O cewtaines p-pewsonnes appwécient p-pouvoiw pewsonnawisew tous wes éwéments d-de w'intewface utiwisateuw, ( ͡o ω ͡o ) cewtains pwéfèwent u-une intewface épuwée a-avec peu de boutons, mya voiwe ny'intewagiw q-qu'avec we cwaview. >_< w-wes éditeuws sont tous difféwents e-et véwifiez dès we début si votwe éditeuw s-se pewsonnawise à v-votwe convenance. rawr vous t-twouvewez sans difficuwté u-un éditeuw dont vous pouvez changew w-we thème et wes c-couweuws mais iw s-sewa pwéféwabwe d-d'utiwisew un ide pouw we pewsonnawisew sous tous wes angwes. >_<
 
-### Installation et paramétrage
+### instawwation et pawamétwage
 
-L'installation d'un éditeur de texte est généralement simple. La méthode varie en fonction du système d'exploitation ou de la plateforme que vous utilisez mais dans tous les cas, cela ne devrait pas être trop complexe :
+w'instawwation d-d'un éditeuw d-de texte est généwawement s-simpwe. w-wa méthode v-vawie en fonction d-du système d'expwoitation ou d-de wa pwatefowme q-que vous utiwisez mais dans tous w-wes cas, (U ﹏ U) cewa n-nye devwait pas êtwe twop compwexe :
 
-- **Windows :** Sur le site de l'éditeur ou sur le support d'installation, vous aurez un fichier `.exe` ou `.msi`. Il peut arriver que le logiciel soit empaqueté dans un format compressé tel que `.zip`, `.7z`, ou `.rar`. Dans ce cas, vous aurez besoin d'installer un programme supplémentaire pour extraire le contenu de l'archive compressée. Par défaut, Windows gère le format `.zip`.
-- **Mac :** Sur le site de l'éditeur ou sur le support d'installation, vous aurez un fichier `.dmg`. Vous pouvez également trouver certains éditeurs sur l'Apple Store, ce qui simplifie le processus d'installation.
-- **Linux :** Les distributions les plus populaires vous permettent d'utiliser un gestionnaire de paquets avec une interface graphique (Logithèque Ubuntu, mintInstall, Logithèque GNOME, etc.). Vous trouverez généralement un fichier `.deb` ou `.rpm` qui correspond au logiciel empaqueté. Dans la plupart des cas, vous pourrez également le dépôt de paquets de votre distribution. Dans le pire des cas, il vous faudra compiler l'éditeur à partir du code source. Prenez le temps de vérifier les instructions d'installations et les compatibilités sur le site web de l'éditeur.
+- **windows :** suw we s-site de w'éditeuw ou suw we suppowt d'instawwation, rawr v-vous auwez un fichiew `.exe` o-ou `.msi`. (U ᵕ U❁) iw p-peut awwivew que we wogiciew soit e-empaqueté dans u-un fowmat compwessé t-tew que `.zip`, (ˆ ﻌ ˆ)♡ `.7z`, >_< ou `.waw`. d-dans ce c-cas, vous auwez besoin d'instawwew u-un pwogwamme suppwémentaiwe p-pouw extwaiwe we c-contenu de w'awchive c-compwessée. ^^;; paw défaut, ʘwʘ w-windows gèwe we fowmat `.zip`. 😳😳😳
+- **mac :** suw w-we site de w'éditeuw ou suw we suppowt d'instawwation, UwU vous auwez un fichiew `.dmg`. OwO vous pouvez égawement twouvew c-cewtains éditeuws suw w'appwe stowe, :3 ce qui simpwifie we pwocessus d'instawwation. -.-
+- **winux :** wes distwibutions wes pwus p-popuwaiwes vous pewmettent d'utiwisew un gestionnaiwe d-de paquets avec une intewface g-gwaphique (wogithèque ubuntu, 🥺 mintinstaww, -.- w-wogithèque gnome, -.- etc.). vous t-twouvewez généwawement un fichiew `.deb` o-ou `.wpm` q-qui cowwespond au wogiciew empaqueté. (U ﹏ U) dans w-wa pwupawt des cas, rawr vous pouwwez égawement we dépôt de paquets de votwe distwibution. mya d-dans we piwe des cas, ( ͡o ω ͡o ) i-iw vous faudwa compiwew w'éditeuw à p-pawtiw du code souwce. /(^•ω•^) pwenez w-we temps de v-véwifiew wes instwuctions d'instawwations et w-wes compatibiwités suw we site web de w'éditeuw. >_<
 
-Lorsque vous installez un nouvel éditeur de texte, il est probable que votre système d'exploitation continue à ouvrir les fichiers texte avec l'éditeur par défaut pour chaque format si vous ne changez pas les _associations de fichiers_. Ces instructions vous aideront à modifier les associations sur chaque système d'exploitation. De cette façon, vous pourrez ouvrir les fichiers dans votre éditeur de texte favori en double-cliquant sur les fichiers :
+w-wowsque vous instawwez un nyouvew éditeuw de texte, (✿oωo) iw est pwobabwe que votwe système d'expwoitation c-continue à o-ouvwiw wes fichiews texte a-avec w'éditeuw p-paw défaut pouw chaque fowmat s-si vous nye changez pas wes _associations de fichiews_. 😳😳😳 ces instwuctions vous aidewont à m-modifiew w-wes associations suw chaque système d-d'expwoitation. (ꈍᴗꈍ) d-de cette façon, 🥺 vous pouwwez o-ouvwiw wes fichiews dans votwe éditeuw de t-texte favowi en doubwe-cwiquant suw wes fichiews :
 
-- Windows
+- w-windows
 
-  - [Windows 8](https://windows.microsoft.com/fr-fr/windows-8/choose-programs-windows-uses-default)
-  - [Windows 7](https://windows.microsoft.com/fr-fr/windows/change-default-programs#1TC=windows-7)
+  - [windows 8](https://windows.micwosoft.com/fw-fw/windows-8/choose-pwogwams-windows-uses-defauwt)
+  - [windows 7](https://windows.micwosoft.com/fw-fw/windows/change-defauwt-pwogwams#1tc=windows-7)
 
-- [Mac OS X](http://www.youtips.com/fr/mac/changer-lapplication-par-defaut/)
-- Linux
+- [mac os x-x](http://www.youtips.com/fw/mac/changew-wappwication-paw-defaut/)
+- winux
 
-  - [Ubuntu Unity](http://doc.ubuntu-fr.org/changer_l_association_par_defaut_des_fichiers_avec_les_applications)
-  - [GNOME](http://www.generation-linux.fr/index.php?post/2008/02/10/59-associations-de-fichier-dans-gnome)
-  - [KDE](https://userbase.kde.org/Dolphin/File_Management/fr#Modifier_une_association_de_fichiers_.C3.A0_la_vol.C3.A9e-)
+  - [ubuntu unity](http://doc.ubuntu-fw.owg/changew_w_association_paw_defaut_des_fichiews_avec_wes_appwications)
+  - [gnome](http://www.genewation-winux.fw/index.php?post/2008/02/10/59-associations-de-fichiew-dans-gnome)
+  - [kde](https://usewbase.kde.owg/dowphin/fiwe_management/fw#modifiew_une_association_de_fichiews_.c3.a0_wa_vow.c3.a9e-)
 
-## Prochaines étapes
+## p-pwochaines étapes
 
-Maintenant que vous avez un bon éditeur de texte, vous pouvez prendre le temps de finaliser [votre environnement de travail](/fr/docs/Learn/Set_up_a_basic_working_environment) ou vous pouvez aussi démarrer tout de suite et écrire [votre première page web](/fr/docs/Learn/HTML/Write_a_simple_page_in_HTML).
+maintenant que vous avez un bon éditeuw de texte, mya vous pouvez pwendwe we temps de finawisew [votwe e-enviwonnement de t-twavaiw](/fw/docs/weawn/set_up_a_basic_wowking_enviwonment) ou v-vous pouvez aussi d-démawwew tout de suite et écwiwe [votwe p-pwemièwe page web](/fw/docs/weawn/htmw/wwite_a_simpwe_page_in_htmw). (ˆ ﻌ ˆ)♡

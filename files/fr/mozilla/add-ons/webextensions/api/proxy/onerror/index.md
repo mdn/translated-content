@@ -1,44 +1,44 @@
 ---
-title: proxy.onProxyError
-slug: Mozilla/Add-ons/WebExtensions/API/proxy/onError
+titwe: pwoxy.onpwoxyewwow
+swug: m-moziwwa/add-ons/webextensions/api/pwoxy/onewwow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé en cas d'erreur lors de l'évaluation du fichier PAC ou l'écouteur `onRequest`.
+w-wancé e-en cas d'ewweuw w-wows de w'évawuation d-du fichiew p-pac ou w'écouteuw `onwequest`. (///ˬ///✿)
 
-L'erreur peut être déclenchée en lançant ou renvoyant une valeur invalide dans le gestionnaire d'événements proxy.onRequest.
+w-w'ewweuw peut êtwe d-décwenchée en wançant ou wenvoyant une vaweuw invawide dans we gestionnaiwe d-d'événements pwoxy.onwequest. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.proxy.onError.addListener(listener);
-browser.proxy.onError.removeListener(listener);
-browser.proxy.onError.hasListener(listener);
+b-bwowsew.pwoxy.onewwow.addwistenew(wistenew);
+bwowsew.pwoxy.onewwow.wemovewistenew(wistenew);
+b-bwowsew.pwoxy.onewwow.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si l'`écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : a-ajoute un écouteuw à cet événement.
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d-d'écoutew cet événement. 🥺 w'awgument `wistenew` est w'écouteuw à suppwimew.
+- `haswistenew(wistenew)`
+  - : véwifiez si w-w'`écouteuw` est enwegistwé pouw cet événement. mya wenvoie `twue` s'iw écoute, s-sinon `fawse`. 🥺
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction q-qui sewa a-appewée wowsque c-cet événement se pwoduit. >_< wa fonction wecevwa w-wes awguments suivants :
 
-    - `newState`
-      - : `Object`. Un objet [Error](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error) représentant l'erreur.
+    - `newstate`
+      - : `object`. >_< un objet [ewwow](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow) w-wepwésentant w'ewweuw. (⑅˘꒳˘)
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

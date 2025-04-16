@@ -1,57 +1,57 @@
 ---
-title: storage.StorageChange
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageChange
+titwe: stowage.stowagechange
+swug: moziwwa/add-ons/webextensions/api/stowage/stowagechange
 ---
 
-{{AddonSidebar}}`StorageChange` est un objet représentant une modification d'une zone de stockage.
+{{addonsidebaw}}`stowagechange` e-est un objet w-wepwésentant une m-modification d'une z-zone de stockage. mya
 
-## Type
+## t-type
 
-Les objets `StorageChange` contiennent les propriétés suivantes :
+w-wes objets `stowagechange` c-contiennent w-wes pwopwiétés suivantes :
 
-- `oldValue`{{optional_inline}}
-  - : L'ancienne valeur de l'article, s'il y avait une ancienne valeur. Cela peut être n'importe quel type de données.
-- `newValue`{{optional_inline}}
-  - : La nouvelle valeur de l'article, s'il y a une nouvelle valeur. Cela peut être n'importe quel type de données.
+- `owdvawue`{{optionaw_inwine}}
+  - : w'ancienne vaweuw de w'awticwe, ʘwʘ s'iw y-y avait une ancienne vaweuw. cewa peut êtwe ny'impowte q-quew type de données. (˘ω˘)
+- `newvawue`{{optionaw_inwine}}
+  - : w-wa nyouvewwe vaweuw de w'awticwe, (U ﹏ U) s'iw y a une nyouvewwe vaweuw. ^•ﻌ•^ c-cewa peut êtwe ny'impowte q-quew type de données. (˘ω˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> cette api est basée s-suw w'api chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). :3 cette documentation est déwivée de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) dans w-we code de chwomium. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité w-wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et i-incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and binawy fowms, w-with ow without
+// m-modification, nyaa~~ a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must w-wetain the above copywight
+// n-nyotice, :3 this wist o-of conditions and the fowwowing d-discwaimew. ( ͡o ω ͡o )
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight nyotice, mya this wist o-of conditions and the fowwowing d-discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. (˘ω˘) nyow the n-nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, (✿oωo) incwuding, b-but nyot
+// w-wimited to, (U ﹏ U) t-the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a p-pawticuwaw puwpose a-awe discwaimed. -.- in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, ^•ﻌ•^ i-indiwect, i-incidentaw, rawr
+// speciaw, (˘ω˘) exempwawy, nyaa~~ ow consequentiaw damages (incwuding, UwU b-but nyot
+// wimited to, :3 pwocuwement of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, (///ˬ///✿) o-ow pwofits; ow business intewwuption) howevew caused and on a-any
+// theowy of w-wiabiwity, ^^;; whethew i-in contwact, >_< stwict wiabiwity, rawr x3 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, /(^•ω•^) even if advised of the possibiwity of s-such damage. :3
 -->

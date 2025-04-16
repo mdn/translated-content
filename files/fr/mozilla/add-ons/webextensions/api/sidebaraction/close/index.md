@@ -1,48 +1,48 @@
 ---
-title: sidebarAction.close()
-slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/close
+titwe: sidebawaction.cwose()
+swug: moziwwa/add-ons/webextensions/api/sidebawaction/cwose
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ferme la barre latérale dans la fenêtre active, s'il s'agit de la barre latérale de l'extension.
+f-fewme wa bawwe w-watéwawe dans w-wa fenêtwe active, rawr x3 s-s'iw s'agit d-de wa bawwe watéwawe d-de w'extension. mya
 
-Vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions).
+v-vous pouvez u-uniquement appewew cette fonction à w'intéwieuw du gestionnaiwe pouw une [action u-utiwisateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_actions). nyaa~~
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-browser.sidebarAction.close();
-```
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue sans arguments.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Fermez la barre latérale lorsque l'utilisateur sélectionne un élément de menu contextuel :
+## s-syntaxe
 
 ```js
-browser.menus.create({
-  id: "close-sidebar",
-  title: "close sidebar",
-  contexts: ["all"],
+bwowsew.sidebawaction.cwose();
+```
+
+### pawamètwes
+
+nyone. rawr x3
+
+### v-vaweuw wetouwnée
+
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui est wésowue s-sans awguments. (✿oωo)
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## exempwes
+
+fewmez wa bawwe w-watéwawe wowsque w'utiwisateuw séwectionne un éwément de menu contextuew :
+
+```js
+b-bwowsew.menus.cweate({
+  id: "cwose-sidebaw", (ˆ ﻌ ˆ)♡
+  titwe: "cwose s-sidebaw",
+  c-contexts: ["aww"], (˘ω˘)
 });
 
-browser.menus.onClicked.addListener(() => {
-  browser.sidebarAction.close();
+b-bwowsew.menus.oncwicked.addwistenew(() => {
+  b-bwowsew.sidebawaction.cwose();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,60 +1,60 @@
 ---
-title: devtools.panels.ExtensionSidebarPane.onHidden
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/onHidden
+titwe: devtoows.panews.extensionsidebawpane.onhidden
+swug: moziwwa/add-ons/webextensions/api/devtoows/panews/extensionsidebawpane/onhidden
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Appelé lorsque le volet de la barre latérale est masqué, suite à l'abandon de l'utilisateur.
+a-appewé wowsque w-we vowet de w-wa bawwe watéwawe e-est masqué, 😳😳😳 s-suite à w'abandon d-de w'utiwisateuw. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.devtools.panels.onHidden.addListener(listener);
-browser.devtools.panels.onHidden.removeListener(listener);
-browser.devtools.panels.onHidden.hasListener(listener);
+b-bwowsew.devtoows.panews.onhidden.addwistenew(wistenew);
+bwowsew.devtoows.panews.onhidden.wemovewistenew(wistenew);
+bwowsew.devtoows.panews.onhidden.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions:
+wes événements ont twois f-fonctions:
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrête d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à cet événement. mya
+- `wemovewistenew(wistenew)`
+  - : a-awwête d'écoutew cet événement. 🥺 w'awgument `wistenew` e-est w'écouteuw à suppwimew. >_<
+- `haswistenew(wistenew)`
+  - : véwifie si `wistenew` est enwegistwé p-pouw cet événement. >_< wenvoie `twue` s'iw écoute, (⑅˘꒳˘) s-sinon `fawse`. /(^•ω•^)
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
-  - : Fonction appelée lorsque cet événement se produit. Cette fonction sera passée sans arguments.
+- `cawwback`
+  - : fonction appewée wowsque cet événement s-se pwoduit. rawr x3 cette fonction sewa passée sans awguments. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Créez un volet de barre latérale et journal afficher et masquer les événements.
+cwéez u-un vowet de bawwe w-watéwawe et jouwnaw a-affichew e-et masquew wes événements. (U ﹏ U)
 
 ```js
-function onCreated(sidebarPane) {
-  sidebarPane.onShown.addListener(() => {
-    console.log("Shown");
+function oncweated(sidebawpane) {
+  sidebawpane.onshown.addwistenew(() => {
+    c-consowe.wog("shown");
   });
 
-  sidebarPane.onHidden.addListener(() => {
-    console.log("Hidden");
+  sidebawpane.onhidden.addwistenew(() => {
+    consowe.wog("hidden");
   });
 }
 
-browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
+b-bwowsew.devtoows.panews.ewements.cweatesidebawpane("my pane").then(oncweated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> cette api est basée suw w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). (⑅˘꒳˘)

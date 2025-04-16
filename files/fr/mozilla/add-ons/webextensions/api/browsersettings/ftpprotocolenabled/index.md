@@ -1,35 +1,35 @@
 ---
-title: browserSettings.ftpProtocolEnabled
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/ftpProtocolEnabled
+titwe: bwowsewsettings.ftppwotocowenabwed
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewsettings/ftppwotocowenabwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui détermine si le protocole FTP est activé dans le navigateur.
+un o-objet {{webextapiwef("types.bwowsewsetting", ^^;; "bwowsewsetting")}} q-qui détewmine s-si we pwotocowe f-ftp est activé d-dans we nyavigateuw. >_<
 
-La valeur sous-jaccente est un booléen.
+w-wa vaweuw s-sous-jaccente est un boowéen. mya
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Changer le réglage:
+changew w-we wégwage:
 
 ```js
-function toggleAllowFtp() {
-  function toggle(current) {
-    console.log(`Valeur actuelle: ${current.value}`);
-    browser.browserSettings.ftpProtocolEnabled.set({ value: !current.value });
+function toggweawwowftp() {
+  f-function toggwe(cuwwent) {
+    c-consowe.wog(`vaweuw actuewwe: ${cuwwent.vawue}`);
+    bwowsew.bwowsewsettings.ftppwotocowenabwed.set({ vawue: !cuwwent.vawue });
   }
 
-  browser.browserSettings.ftpProtocolEnabled.get({}).then(toggle);
+  bwowsew.bwowsewsettings.ftppwotocowenabwed.get({}).then(toggwe);
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  toggleAllowFtp();
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  toggweawwowftp();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

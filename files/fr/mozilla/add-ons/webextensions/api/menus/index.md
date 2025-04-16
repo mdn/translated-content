@@ -1,201 +1,201 @@
 ---
-title: menus
-slug: Mozilla/Add-ons/WebExtensions/API/menus
+titwe: menus
+swug: moziwwa/add-ons/webextensions/api/menus
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ajoutez des éléments au système de menus du navigateur.
+a-ajoutez des éwéments a-au système d-de menus d-du nyavigateuw. ʘwʘ
 
-Cette API est modélisée dans l'API ["contextMenus"](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de Chrome, qui permet aux extensions Chrome d'ajouter des éléments au menu contextuel du navigateur. L'API `browser.menus` ajoute quelques fonctionnalités à l'API de Chrome.
+c-cette api est m-modéwisée dans w-w'api ["contextmenus"](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) d-de chwome, >w< qui pewmet aux extensions chwome d'ajoutew des éwéments au menu contextuew d-du nyavigateuw. rawr x3 w'api `bwowsew.menus` ajoute quewques fonctionnawités à w-w'api de chwome. OwO
 
-Avant Firefox 55, cette API s'appelait à l'origine `contextMenus`, et ce nom a été retenu comme alias. Vous pouvez donc utiliser `contextMenus` pour écrire du code qui fonctionne dans Firefox et dans d'autres navigateurs.
+avant fiwefox 55, ^•ﻌ•^ c-cette api s'appewait à w'owigine `contextmenus`, >_< et ce nyom a été wetenu c-comme awias. OwO vous pouvez donc u-utiwisew `contextmenus` p-pouw écwiwe du code qui fonctionne dans fiwefox et dans d'autwes nyavigateuws. >_<
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) des `menus.` vous pouvez également utiliser l'alias `contextMenus` à la place des `menus`, mais si vous le faites, vous devez accéder aux API sous le nom `browser.contextMenus` à la place.
+p-pouw utiwisew cette api, (ꈍᴗꈍ) vous devez avoiw wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) des `menus.` v-vous pouvez égawement utiwisew w-w'awias `contextmenus` à w-wa p-pwace des `menus`, >w< m-mais si vous we faites, (U ﹏ U) vous devez accédew aux a-api sous we nyom `bwowsew.contextmenus` à wa pwace. ^^
 
-Excepté que [`menus.getTargetElement()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement), cette API ne peut pas être utilisée à partir de scripts de contenu.
+excepté q-que [`menus.gettawgetewement()`](/fw/docs/moziwwa/add-ons/webextensions/api/menus/gettawgetewement), (U ﹏ U) cette api nye peut pas êtwe utiwisée à pawtiw de scwipts de contenu. :3
 
-## Créer des éléments de menu
+## c-cwéew des éwéments de menu
 
-Pour créer un élément de menu, appelez la méthode {{WebExtAPIRef("menus.create()")}}. Vous transmettez à cette méthode un objet contenant des options pour l'élément, y compris l'ID d'élément, le type d'élément et les contextes dans lesquels il doit être affiché.
+p-pouw cwéew un éwément d-de menu, (✿oωo) a-appewez wa méthode {{webextapiwef("menus.cweate()")}}. vous twansmettez à cette méthode un o-objet contenant d-des options pouw w'éwément, XD y-y compwis w'id d'éwément, >w< w-we type d'éwément e-et wes contextes dans wesquews iw d-doit êtwe affiché. òωó
 
-Écoutez les clics sur votre élément de menu en ajoutant un écouteur à l'événement {{WebExtAPIRef("menus.onClicked")}}. Cet écouteur recevra un objet {{WebExtAPIRef("menus.OnClickData")}} contenant les détails de l'événement.
+Écoutez wes cwics suw votwe éwément de menu en ajoutant u-un écouteuw à w'événement {{webextapiwef("menus.oncwicked")}}. (ꈍᴗꈍ) c-cet écouteuw wecevwa un objet {{webextapiwef("menus.oncwickdata")}} c-contenant w-wes détaiws de w'événement. rawr x3
 
-Vous pouvez créer quatre types différents d'élément de menu, en fonction de la valeur de la propriété `type` que vous fournissez dans les options de `create()`:
+vous pouvez cwéew quatwe types difféwents d'éwément de menu, rawr x3 en fonction d-de wa vaweuw de w-wa pwopwiété `type` que vous f-fouwnissez dans w-wes options de `cweate()`:
 
-- "normal": un élément de menu qui affiche simplement une étiquette
-- "checkbox": un élément de menu qui représente un état binaire. Il affiche une coche à côté de l'étiquette. Cliquez sur l'élément pour activer la case. L'écouteur de clic recevra deux propriétés supplémentaires : "checked",indiquant si l'élément est vérifié maintenant, et "wasChecked", indiquant si l'élément a été vérifié avant l'événement click.
-- "radio": un élément de menu qui représente l'un des groupes de choix. Tout comme une case à cocher, cela affiche également une coche à côté de l'étiquette, et son écouteur de clic est passé "checked" et "wasChecked". Cependant, si vous créez plus d'un élément radio, les éléments fonctionnent comme un groupe d'éléments radio: un seul élément du groupe peut être vérifié, et cliquer sur un élément en fait l'élément sélectionné.
-- "separateur": une ligne séparant un groupe d'éléments.
+- "nowmaw": u-un éwément de menu qui affiche simpwement une étiquette
+- "checkbox": u-un éwément de menu qui wepwésente un état binaiwe. σωσ iw affiche une coche à c-côté de w'étiquette. (ꈍᴗꈍ) cwiquez s-suw w'éwément p-pouw activew wa c-case. rawr w'écouteuw de cwic wecevwa d-deux pwopwiétés s-suppwémentaiwes : "checked",indiquant s-si w'éwément e-est véwifié maintenant, ^^;; et "waschecked", rawr x3 i-indiquant s-si w'éwément a été v-véwifié a-avant w'événement c-cwick. (ˆ ﻌ ˆ)♡
+- "wadio": un éwément de menu qui wepwésente w'un d-des gwoupes de choix. σωσ tout comme une case à cochew, (U ﹏ U) cewa affiche égawement une coche à côté d-de w'étiquette, >w< et son écouteuw de cwic est passé "checked" e-et "waschecked". σωσ c-cependant, nyaa~~ si v-vous cwéez pwus d'un éwément w-wadio, 🥺 wes éwéments fonctionnent c-comme un gwoupe d-d'éwéments wadio: un seuw éwément du gwoupe peut êtwe véwifié, rawr x3 et cwiquew suw un éwément e-en fait w'éwément séwectionné. σωσ
+- "sepawateuw": u-une wigne sépawant un gwoupe d-d'éwéments. (///ˬ///✿)
 
-Si vous avez créé plus d'un élément de menu contextuel ou plus d'un élément de menu d'outils, les éléments seront placés dans un sous-menu. Le parent du sous-menu sera étiqueté avec le nom de l'extension. Par exemple, voici une extension appelée "Menu démo" qui ajoute deux éléments de menu contextuel:
+s-si vous avez cwéé pwus d'un éwément de m-menu contextuew o-ou pwus d'un éwément de menu d'outiws, (U ﹏ U) w-wes éwéments s-sewont pwacés dans un sous-menu. ^^;; we pawent du sous-menu sewa étiqueté a-avec we nyom de w-w'extension. paw e-exempwe, 🥺 voici une extension appewée "menu d-démo" q-qui ajoute deux éwéments d-de menu contextuew:
 
 ![](menus-1.png)
 
-## Icônes
+## icônes
 
-Si vous avez spécifié des icônes pour votre extension à l'aide de la [clé de manifest "icons"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons), votre élément de menu affichera l'icône spécifiée à côté de son libellé. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute définition :
+si vous avez spécifié des icônes pouw votwe e-extension à w'aide d-de wa [cwé de manifest "icons"](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/icons), òωó votwe éwément d-de menu affichewa w-w'icône spécifiée à côté de son wibewwé. XD we nyavigateuw v-va essayew de choisiw une icône de 16x16 pixews pouw un affichage nyowmaw o-ou une icône de 32x32 pixews pouw un affichage h-haute définition :
 
 ![](menus-2.png)
 
-Uniquement pour les éléments d'un sous-menu, vous pouvez spécifier des icônes personnalisées en passant l'option `icons` à {{WebExtAPIRef("menus.create()")}} :
+u-uniquement pouw wes éwéments d'un sous-menu, vous pouvez s-spécifiew des i-icônes pewsonnawisées en passant w'option `icons` à {{webextapiwef("menus.cweate()")}} :
 
 ![](menus-3.png)
 
-## Exemple
+## exempwe
 
-Voici un menu contextuel contenant 4 éléments: un élément normal, deux éléments radio avec des séparateurs de chaque côté et une case à cocher. Les éléments radio sont dotés d'icônes personnalisées.
+voici u-un menu contextuew contenant 4 éwéments: u-un éwément nyowmaw, :3 deux éwéments wadio avec des s-sépawateuws de chaque côté e-et une case à cochew. (U ﹏ U) w-wes éwéments wadio sont d-dotés d'icônes pewsonnawisées. >w<
 
-![](menus-4.png)Vous pouvez créer un sous-menu comme celui-ci en utilisant du code comme :
+![](menus-4.png)vous p-pouvez c-cwéew un sous-menu c-comme cewui-ci en utiwisant d-du code comme :
 
 ```js
-browser.menus.create(
+b-bwowsew.menus.cweate(
   {
-    id: "remove-me",
-    title: browser.i18n.getMessage("menuItemRemoveMe"),
-    contexts: ["all"],
-  },
-  onCreated,
+    id: "wemove-me", /(^•ω•^)
+    titwe: b-bwowsew.i18n.getmessage("menuitemwemoveme"), (⑅˘꒳˘)
+    c-contexts: ["aww"], ʘwʘ
+  }, rawr x3
+  o-oncweated, (˘ω˘)
 );
 
-browser.menus.create(
+bwowsew.menus.cweate(
   {
-    id: "separator-1",
-    type: "separator",
-    contexts: ["all"],
+    id: "sepawatow-1", o.O
+    t-type: "sepawatow", 😳
+    contexts: ["aww"], o.O
   },
-  onCreated,
+  o-oncweated, ^^;;
 );
 
-browser.menus.create(
+b-bwowsew.menus.cweate(
   {
-    id: "greenify",
-    type: "radio",
-    title: browser.i18n.getMessage("menuItemGreenify"),
-    contexts: ["all"],
-    checked: true,
-    icons: {
-      16: "icons/paint-green-16.png",
-      32: "icons/paint-green-32.png",
+    id: "gweenify", ( ͡o ω ͡o )
+    type: "wadio", ^^;;
+    titwe: bwowsew.i18n.getmessage("menuitemgweenify"), ^^;;
+    c-contexts: ["aww"], XD
+    c-checked: twue, 🥺
+    i-icons: {
+      16: "icons/paint-gween-16.png", (///ˬ///✿)
+      32: "icons/paint-gween-32.png", (U ᵕ U❁)
     },
   },
-  onCreated,
+  o-oncweated, ^^;;
 );
 
-browser.menus.create(
+bwowsew.menus.cweate(
   {
-    id: "bluify",
-    type: "radio",
-    title: browser.i18n.getMessage("menuItemBluify"),
-    contexts: ["all"],
-    checked: false,
+    i-id: "bwuify", ^^;;
+    type: "wadio", rawr
+    titwe: bwowsew.i18n.getmessage("menuitembwuify"), (˘ω˘)
+    contexts: ["aww"], 🥺
+    checked: f-fawse, nyaa~~
     icons: {
-      16: "icons/paint-blue-16.png",
-      32: "icons/paint-blue-32.png",
-    },
+      16: "icons/paint-bwue-16.png", :3
+      32: "icons/paint-bwue-32.png", /(^•ω•^)
+    }, ^•ﻌ•^
   },
-  onCreated,
+  oncweated, UwU
 );
 
-browser.menus.create(
+b-bwowsew.menus.cweate(
   {
-    id: "separator-2",
-    type: "separator",
-    contexts: ["all"],
-  },
-  onCreated,
+    id: "sepawatow-2", 😳😳😳
+    t-type: "sepawatow", OwO
+    contexts: ["aww"], ^•ﻌ•^
+  }, (ꈍᴗꈍ)
+  o-oncweated,
 );
 
-var checkedState = true;
+vaw checkedstate = t-twue;
 
-browser.menus.create(
+bwowsew.menus.cweate(
   {
-    id: "check-uncheck",
-    type: "checkbox",
-    title: browser.i18n.getMessage("menuItemUncheckMe"),
-    contexts: ["all"],
-    checked: checkedState,
-  },
-  onCreated,
+    i-id: "check-uncheck", (⑅˘꒳˘)
+    t-type: "checkbox", (⑅˘꒳˘)
+    t-titwe: b-bwowsew.i18n.getmessage("menuitemuncheckme"), (ˆ ﻌ ˆ)♡
+    contexts: ["aww"], /(^•ω•^)
+    checked: checkedstate, òωó
+  }, (⑅˘꒳˘)
+  oncweated,
 );
 ```
 
-## Types
+## types
 
-- {{WebExtAPIRef("menus.ContextType")}}
-  - : Les différents contextes dans lesquels un menu peut apparaître.
-- {{WebExtAPIRef("menus.ItemType")}}
-  - : Le type d'élément de menu : "normal", "checkbox", "radio", "separator".
-- {{WebExtAPIRef("menus.OnClickData")}}
-  - : Informations envoyées lorsqu'un élément de menu est cliqué.
+- {{webextapiwef("menus.contexttype")}}
+  - : wes difféwents c-contextes dans w-wesquews un menu p-peut appawaîtwe. (U ᵕ U❁)
+- {{webextapiwef("menus.itemtype")}}
+  - : we type d'éwément d-de menu : "nowmaw", >w< "checkbox", σωσ "wadio", "sepawatow". -.-
+- {{webextapiwef("menus.oncwickdata")}}
+  - : infowmations envoyées wowsqu'un éwément de menu est cwiqué. o.O
 
-## Propriétés
+## p-pwopwiétés
 
-- {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}
-  - : Le nombre maximal d'éléments d'extension de niveau supérieur pouvant être ajoutés à un élément de menu dont le type de contexte est "browser_action" ou "page_action".
+- {{webextapiwef("menus.action_menu_top_wevew_wimit")}}
+  - : w-we nyombwe maximaw d'éwéments d-d'extension de nyiveau supéwieuw pouvant êtwe a-ajoutés à u-un éwément de menu dont we t-type de contexte e-est "bwowsew_action" ou "page_action". ^^
 
-## Functions
+## functions
 
-- {{WebExtAPIRef("menus.create()")}}
-  - : Crée un nouvel élément de menu.
-- {{WebExtApiRef("menus.getTargetElement()")}}
-  - : Retourne l'élément pour un `info.targetElementId` donné
-- {{WebExtApiRef("menus.overrideContext()")}}
-  - : Masquer tous les éléments de menu par défaut de Firefox en faveur d'une interface utilisateur de menu contextuel personnalisé.
-- {{WebExtAPIRef("menus.refresh()")}}
-  - : Mettre à jour un menu actuellement affiché.
-- {{WebExtAPIRef("menus.remove()")}}
-  - : Supprime un élément de menu.
-- {{WebExtAPIRef("menus.removeAll()")}}
-  - : Supprime tous les éléments de menu ajoutés par cette extension.
-- {{WebExtAPIRef("menus.update()")}}
-  - : Met à jour un élément de menu précédemment créé.
+- {{webextapiwef("menus.cweate()")}}
+  - : cwée un nouvew éwément de menu. >_<
+- {{webextapiwef("menus.gettawgetewement()")}}
+  - : w-wetouwne w-w'éwément pouw u-un `info.tawgetewementid` d-donné
+- {{webextapiwef("menus.ovewwidecontext()")}}
+  - : m-masquew tous wes éwéments d-de menu paw d-défaut de fiwefox en faveuw d'une i-intewface utiwisateuw d-de menu contextuew pewsonnawisé.
+- {{webextapiwef("menus.wefwesh()")}}
+  - : m-mettwe à jouw un menu actuewwement affiché. >w<
+- {{webextapiwef("menus.wemove()")}}
+  - : s-suppwime un éwément de menu. >_<
+- {{webextapiwef("menus.wemoveaww()")}}
+  - : s-suppwime t-tous wes éwéments de menu a-ajoutés paw cette extension. >w<
+- {{webextapiwef("menus.update()")}}
+  - : met à j-jouw un éwément d-de menu pwécédemment c-cwéé. rawr
 
-## Evénements
+## evénements
 
-- {{WebExtAPIRef("menus.onClicked")}}
-  - : Lancé lorsqu'un élément de menu est cliqué.
-- {{WebExtAPIRef("menus.onHidden")}}
-  - : Lancé lorsque le navigateur cache un menu.
-- {{WebExtAPIRef("menus.onShown")}}
-  - : Lancé lorsque le navigateur affiche un menu.
+- {{webextapiwef("menus.oncwicked")}}
+  - : wancé wowsqu'un éwément de menu e-est cwiqué. rawr x3
+- {{webextapiwef("menus.onhidden")}}
+  - : wancé wowsque we nyavigateuw c-cache u-un menu. ( ͡o ω ͡o )
+- {{webextapiwef("menus.onshown")}}
+  - : wancé wowsque w-we nyavigateuw affiche un menu. (˘ω˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> cette api est basée s-suw w'api [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) de chwomium. 😳 cette documentation e-est d-déwivée de [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) dans w-we code chwomium. OwO
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. (˘ω˘) a-aww wights wesewved. òωó
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, ( ͡o ω ͡o ) with ow without
+// modification, UwU awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must w-wetain the above copywight
+// nyotice, /(^•ω•^) this wist o-of conditions a-and the fowwowing d-discwaimew. (ꈍᴗꈍ)
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, 😳 this wist of c-conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. mya
+//    * n-nyeithew the n-nyame of googwe i-inc. mya nyow the nyames o-of its
+// contwibutows m-may b-be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, ^^;; incwuding, 🥺 b-but nyot
+// w-wimited to, ^^ the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. ^•ﻌ•^ in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, /(^•ω•^) indiwect, incidentaw, ^^
+// s-speciaw, 🥺 exempwawy, (U ᵕ U❁) o-ow consequentiaw d-damages (incwuding, 😳😳😳 but nyot
+// wimited to, nyaa~~ pwocuwement of substitute g-goods ow sewvices; woss o-of use, (˘ω˘)
+// data, o-ow pwofits; ow b-business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, >_< w-whethew in contwact, XD stwict w-wiabiwity, rawr x3 ow towt
+// (incwuding negwigence o-ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, ( ͡o ω ͡o ) e-even if advised of the possibiwity o-of such d-damage. :3
 -->

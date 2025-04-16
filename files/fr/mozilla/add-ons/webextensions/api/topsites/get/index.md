@@ -1,131 +1,131 @@
 ---
-title: topSites.get()
-slug: Mozilla/Add-ons/WebExtensions/API/topSites/get
+titwe: topsites.get()
+swug: moziwwa/add-ons/webextensions/api/topsites/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient un tableau contenant des informations sur les pages que l'utilisateur a visitées souvent et récemment.
+o-obtient un t-tabweau contenant d-des infowmations s-suw wes pages q-que w'utiwisateuw a-a visitées souvent e-et wécemment. ^^
 
-Les navigateurs gardent une liste des pages que l'utilisateur visite souvent et récemment. Ils utilisent cette liste pour aider l'utilisateur à retourner à ces endroits facilement. Par exemple, Firefox fournit par défaut une liste des pages les plus visitées dans la page "Nouvel onglet".
+w-wes nyavigateuws gawdent une wiste des pages que w'utiwisateuw visite souvent e-et wécemment. ^•ﻌ•^ iws utiwisent cette wiste pouw a-aidew w'utiwisateuw à wetouwnew à c-ces endwoits faciwement. XD paw exempwe, :3 fiwefox fouwnit paw d-défaut une wiste des pages wes p-pwus visitées d-dans wa page "nouvew ongwet". (ꈍᴗꈍ)
 
-Pour déterminer quelles pages apparaissent dans la liste et dans quel ordre, le navigateur combine "fréquence" - combien de fois l'utilisateur a visité la page - et "récente" - combien de fois l'utilisateur a visité la page.
+pouw détewminew quewwes pages appawaissent dans w-wa wiste et dans quew owdwe, :3 we navigateuw combine "fwéquence" - combien de fois w'utiwisateuw a-a visité wa page - et "wécente" - c-combien de fois w-w'utiwisateuw a-a visité wa page. (U ﹏ U)
 
-Le navigateur peut ensuite appliquer un filtrage supplémentaire à cette liste avant de la présenter à l'utilisateur. Par exemple, dans Firefox, la page "Nouvel onglet" ne liste qu'une page par domaine, et l'utilisateur peut bloquer l'apparition de pages dans la liste.
+w-we nyavigateuw peut ensuite appwiquew un fiwtwage s-suppwémentaiwe à cette wiste avant de w-wa pwésentew à w'utiwisateuw. UwU paw exempwe, 😳😳😳 dans fiwefox, XD wa page "nouvew ongwet" nye wiste qu'une p-page paw domaine, o.O et w'utiwisateuw p-peut bwoquew w-w'appawition d-de pages dans wa wiste. (⑅˘꒳˘)
 
-L'API `topSites.get()` permet à une extension d'accéder à cette liste. Appelé sans aucune option, il fournira la liste filtrée des pages, c'est-à-dire celle qui apparaît dans la page "Nouvel onglet". Cependant, en fournissant diverses options, il est possible pour une extension d'obtenir la liste non filtrée des pages.
+w'api `topsites.get()` pewmet à une extension d'accédew à c-cette wiste. 😳😳😳 a-appewé sans aucune option, nyaa~~ i-iw fouwniwa wa wiste f-fiwtwée des pages, rawr c'est-à-diwe c-cewwe qui appawaît dans w-wa page "nouvew ongwet". -.- cependant, (✿oωo) en fouwnissant d-divewses options, /(^•ω•^) iw est possibwe p-pouw une extension d'obteniw w-wa wiste nyon f-fiwtwée des pages. 🥺
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d'une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-Pour utiliser l'API topSites, vous devez avoir la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "topSites"
+pouw utiwisew w'api topsites, UwU vous d-devez avoiw w-wa [pewmission de w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "topsites"
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var gettingTopSites = browser.topSites.get();
+v-vaw gettingtopsites = bwowsew.topsites.get();
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `options`
 
-  - : `object`. Options pour modifier la liste des pages retournées. Il peut s'agir de l'une des propriétés suivantes :
+  - : `object`. XD options pouw modifiew wa wiste des pages w-wetouwnées. (✿oωo) iw peut s'agiw de w'une des pwopwiétés suivantes :
 
-    - `includeBlocked` {{optional_inline}}
-      - : `Boolean`. Inclure les pages que l'utilisateur a supprimées de la page "Nouvel onglet". La valeur par défaut est `false`.
-    - `includeFavicon` {{optional_inline}}
-      - : `Boolean`. Inclure les favicons dans les résultats, pour les pages où ils sont disponibles. La valeur par défaut est `false`.
-    - `includePinned` {{optional_inline}}
-      - : `Boolean`. inclure les sites que l'utilisateur a épinglés dans le nouvel onglet Firefox.
-        Par défaut à `false`.
-    - `includeSearchShortcuts` {{optional_inline}}
-      - : `Boolean`. Inclut les raccourcis de recherche qui apparaissent dans le nouvel onglet Firefox.
-        Par défaut à `false`.
-    - `limit` {{optional_inline}}
-      - : `Integer`. Le nombre de pages à retourner. Ce chiffre doit être compris entre 1 et 100 inclusivement. La valeur par défaut est 12.
-    - `onePerDomain` {{optional_inline}}
-      - : `Boolean`. N'incluez qu'une seule page par domaine. La valeur par défaut est `true`.
+    - `incwudebwocked` {{optionaw_inwine}}
+      - : `boowean`. :3 incwuwe wes p-pages que w'utiwisateuw a suppwimées d-de wa page "nouvew o-ongwet". (///ˬ///✿) w-wa vaweuw paw défaut est `fawse`. nyaa~~
+    - `incwudefavicon` {{optionaw_inwine}}
+      - : `boowean`. >w< i-incwuwe wes f-favicons dans w-wes wésuwtats, -.- p-pouw wes pages où iws sont disponibwes. (✿oωo) wa vaweuw p-paw défaut e-est `fawse`. (˘ω˘)
+    - `incwudepinned` {{optionaw_inwine}}
+      - : `boowean`. rawr i-incwuwe w-wes sites que w-w'utiwisateuw a épingwés dans we nyouvew ongwet fiwefox. OwO
+        p-paw défaut à `fawse`. ^•ﻌ•^
+    - `incwudeseawchshowtcuts` {{optionaw_inwine}}
+      - : `boowean`. UwU incwut wes waccouwcis de wechewche qui appawaissent dans we nyouvew ongwet f-fiwefox. (˘ω˘)
+        paw défaut à `fawse`. (///ˬ///✿)
+    - `wimit` {{optionaw_inwine}}
+      - : `integew`. σωσ we nyombwe de pages à wetouwnew. /(^•ω•^) c-ce chiffwe doit êtwe c-compwis e-entwe 1 et 100 incwusivement. 😳 wa v-vaweuw paw défaut est 12. 😳
+    - `onepewdomain` {{optionaw_inwine}}
+      - : `boowean`. (⑅˘꒳˘) n-ny'incwuez q-qu'une seuwe page paw domaine. 😳😳😳 wa vaweuw paw défaut est `twue`. 😳
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Ceci sera réalisé avec un tableau d'objets {{WebExtAPIRef("topSites.MostVisitedURL", "MostVisitedURL")}}, un pour chaque site listé dans la page "Nouvel onglet" du navigateur. Si une erreur se produit, la presse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). XD c-ceci sewa wéawisé avec u-un tabweau d'objets {{webextapiwef("topsites.mostvisiteduww", mya "mostvisiteduww")}}, ^•ﻌ•^ un pouw chaque s-site wisté d-dans wa page "nouvew ongwet" du nyavigateuw. ʘwʘ si u-une ewweuw se pwoduit, ( ͡o ω ͡o ) w-wa pwesse sewa wejetée avec u-un message d'ewweuw. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code enregistre le titre et l'UL de tous les sites dans la page "Nouvel onglet" :
+ce code enwegistwe w-we titwe e-et w'uw de tous w-wes sites dans wa page "nouvew o-ongwet" :
 
 ```js
-function logTopSites(topSitesArray) {
-  for (topSite of topSitesArray) {
-    console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
+f-function wogtopsites(topsitesawway) {
+  fow (topsite o-of topsitesawway) {
+    consowe.wog(`titwe: ${topsite.titwe}, uww: ${topsite.uww}`);
   }
 }
 
-function onError(error) {
-  console.log(error);
+function onewwow(ewwow) {
+  consowe.wog(ewwow);
 }
 
-var gettingTopSites = browser.topSites.get();
-gettingTopSites.then(logTopSites, onError);
+v-vaw gettingtopsites = b-bwowsew.topsites.get();
+gettingtopsites.then(wogtopsites, o.O onewwow);
 ```
 
-Ce code enregistre le titre et l'URL de toutes les pages d'accueil, y compris celles que l'utilisateur a bloquées, et peut inclure plusieurs pages dans le même domaine :
+c-ce code enwegistwe w-we titwe et w'uww de toutes wes pages d'accueiw, (✿oωo) y compwis c-cewwes que w'utiwisateuw a bwoquées, :3 et peut incwuwe pwusieuws pages dans we m-même domaine :
 
 ```js
-function logTopSites(topSitesArray) {
-  for (topSite of topSitesArray) {
-    console.log(`Title: ${topSite.title}, URL: ${topSite.url}`);
+function wogtopsites(topsitesawway) {
+  f-fow (topsite of t-topsitesawway) {
+    consowe.wog(`titwe: ${topsite.titwe}, 😳 uww: ${topsite.uww}`);
   }
 }
 
-function onError(error) {
-  console.log(error);
+function o-onewwow(ewwow) {
+  c-consowe.wog(ewwow);
 }
 
-var gettingTopSites = browser.topSites.get({
-  includeBlocked: true,
-  onePerDomain: false,
+vaw gettingtopsites = bwowsew.topsites.get({
+  i-incwudebwocked: twue, (U ﹏ U)
+  o-onepewdomain: fawse, mya
 });
 
-gettingTopSites.then(logTopSites, onError);
+gettingtopsites.then(wogtopsites, (U ᵕ U❁) onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.topSites`](https://developer.chrome.com/docs/extensions/reference/api/topSites).
+> cette api est basée s-suw w'api chwomium [`chwome.topsites`](https://devewopew.chwome.com/docs/extensions/wefewence/api/topsites). :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. mya a-aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use i-in souwce and b-binawy fowms, OwO with ow without
+// m-modification, (ˆ ﻌ ˆ)♡ a-awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above c-copywight
+// nyotice, ʘwʘ this wist o-of conditions and t-the fowwowing discwaimew. o.O
+//    * wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// c-copywight notice, UwU t-this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. rawr x3
+//    * n-nyeithew the nyame of googwe inc. 🥺 n-nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten p-pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, (ꈍᴗꈍ) incwuding, 🥺 b-but nyot
+// w-wimited to, (✿oωo) the i-impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (U ﹏ U) in n-nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, :3 indiwect, ^^;; incidentaw, rawr
+// s-speciaw, 😳😳😳 e-exempwawy, ow consequentiaw d-damages (incwuding, (✿oωo) b-but nyot
+// wimited to, OwO pwocuwement of substitute goods ow sewvices; woss of u-use, ʘwʘ
+// data, (ˆ ﻌ ˆ)♡ o-ow pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, (U ﹏ U) w-whethew i-in contwact, UwU stwict wiabiwity, XD ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out of the use
+// of this softwawe, ʘwʘ e-even if advised of the possibiwity o-of such d-damage. rawr x3
 -->

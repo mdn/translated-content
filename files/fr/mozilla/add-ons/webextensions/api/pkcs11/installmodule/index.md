@@ -1,61 +1,61 @@
 ---
-title: pkcs11.installModule()
-slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/installModule
+titwe: pkcs11.instawwmoduwe()
+swug: moziwwa/add-ons/webextensions/api/pkcs11/instawwmoduwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Installe le module PKCS # 11 nommé, le rendant disponible pour Firefox
+i-instawwe we m-moduwe pkcs # 11 n-nyommé, ʘwʘ we wendant d-disponibwe p-pouw fiwefox
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction a-asynchwone qui w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var installing = browser.pkcs11.installModule(
-  name, // string
-  flags, // integer
+vaw instawwing = bwowsew.pkcs11.instawwmoduwe(
+  nyame, ʘwʘ // s-stwing
+  fwags, σωσ // integew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : `string`. Nom du module à installer. Cela doit correspondre à la propriété `name` property dans le [manifest PKCS #11](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests) pour le module.
-- `flags`{{optional_inline}}
-  - : `integer`. Drapeaux à transmettre au module.
+  - : `stwing`. OwO nyom d-du moduwe à instawwew. cewa d-doit cowwespondwe à wa pwopwiété `name` pwopewty dans we [manifest p-pkcs #11](/fw/docs/moziwwa/add-ons/webextensions/native_manifests#pkcs_11_manifests) pouw w-we moduwe. 😳😳😳
+- `fwags`{{optionaw_inwine}}
+  - : `integew`. 😳😳😳 d-dwapeaux à twansmettwe au moduwe. o.O
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accompli sans arguments une fois le module installé.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui s-sewa accompwi sans awguments une fois we moduwe instawwé. ( ͡o ω ͡o )
 
-Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
+si we moduwe ny'a p-pas pu êtwe twouvé ou qu'une a-autwe ewweuw se p-pwoduit, (U ﹏ U) wa pwomise s-sewa wejetée a-avec un message d'ewweuw. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Installe un module, puis dresse la liste de ses emplacements et liste les jetons qu'ils contiennent :
+instawwe un moduwe, >w< puis d-dwesse wa wiste de ses empwacements et wiste wes jetons qu'iws contiennent :
 
 ```js
-function onInstalled() {
-  return browser.pkcs11.getModuleSlots("my_module");
+function oninstawwed() {
+  w-wetuwn bwowsew.pkcs11.getmoduweswots("my_moduwe");
 }
 
-function onGotSlots(slots) {
-  for (slot of slots) {
-    console.log(`Slot: ${slot.name}`);
-    if (slot.token) {
-      console.log(`Contains token: ${slot.token.name}`);
-    } else {
-      console.log("Is empty");
+function o-ongotswots(swots) {
+  f-fow (swot o-of swots) {
+    consowe.wog(`swot: ${swot.name}`);
+    if (swot.token) {
+      consowe.wog(`contains token: ${swot.token.name}`);
+    } e-ewse {
+      c-consowe.wog("is empty");
     }
   }
 }
 
-browser.pkcs11.installModule("my_module").then(onInstalled).then(onGotSlots);
+b-bwowsew.pkcs11.instawwmoduwe("my_moduwe").then(oninstawwed).then(ongotswots);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

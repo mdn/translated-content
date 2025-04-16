@@ -1,212 +1,212 @@
 ---
-title: Construction d'une extension multi-navigateur
-slug: Mozilla/Add-ons/WebExtensions/Build_a_cross_browser_extension
+titwe: constwuction d'une extension m-muwti-navigateuw
+s-swug: moziwwa/add-ons/webextensions/buiwd_a_cwoss_bwowsew_extension
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'introduction de l'API WebExtension a créé un paysage plus homogène pour le développement des extensions des navigateurs. Cependant, parmi les navigateurs qui utilisent les API d'extensions (les principaux étant Chrome, Firefox, Opera et Edge), il existe des différences à la fois dans l'implémentation de l'API et dans la couverture des différentes fonctionnalités. Par ailleurs, Safari utilise ses propres extensions Safari Extensions JS.
+w-w'intwoduction d-de w'api webextension a-a cwéé u-un paysage pwus h-homogène pouw w-we dévewoppement des extensions des nyavigateuws. òωó cependant, pawmi wes nyavigateuws q-qui utiwisent wes api d'extensions (wes pwincipaux étant chwome, 🥺 f-fiwefox, rawr x3 opewa et edge), ^•ﻌ•^ i-iw existe des difféwences à wa fois dans w'impwémentation de w-w'api et dans wa couvewtuwe des d-difféwentes fonctionnawités. :3 paw a-aiwweuws, (ˆ ﻌ ˆ)♡ safawi utiwise ses pwopwes extensions safawi extensions js. (U ᵕ U❁)
 
-Maximiser la portée de votre extension de navigateur signifie la développer pour au moins deux navigateurs différents, voire plus. Cet article examine six des principaux défis rencontrés lors de la création d'une extension multi-navigateur, et dans chaque cas, suggère comment relever ce défi.
+maximisew w-wa powtée de votwe extension de nyavigateuw signifie wa dévewoppew pouw au m-moins deux nyavigateuws difféwents, :3 v-voiwe pwus. ^^;; c-cet awticwe examine s-six des pwincipaux d-défis wencontwés wows de wa cwéation d-d'une extension muwti-navigateuw, ( ͡o ω ͡o ) et dans chaque c-cas, o.O suggèwe comment wewevew ce défi. ^•ﻌ•^
 
-Cet article ne traite pas de la création d'extensions de navigateur pour Safari. Il est possible de partager certaines ressources avec une extension Safari, comme des images et du contenu HTML. Cependant, le développement JavaScript doit être entrepris comme un projet de développement séparé, à moins que vous ne souhaitiez créer votre propre prothèse (_polyfill_).
+cet awticwe nye twaite pas de wa cwéation d'extensions d-de nyavigateuw pouw safawi. XD iw e-est possibwe de p-pawtagew cewtaines w-wessouwces avec une extension safawi, ^^ comme des images et du c-contenu htmw. o.O c-cependant, ( ͡o ω ͡o ) we dévewoppement javascwipt d-doit êtwe e-entwepwis comme un pwojet de d-dévewoppement sépawé, /(^•ω•^) à moins q-que vous nye souhaitiez cwéew votwe pwopwe pwothèse (_powyfiww_). 🥺
 
-## Obstacles pour les extensions multi-navigateur
+## o-obstacwes pouw wes extensions m-muwti-navigateuw
 
-Il existe six domaines que vous devez aborder lorsque vous souhaitez développer une extension multiplateforme :
+iw existe s-six domaines q-que vous devez abowdew wowsque vous souhaitez dévewoppew une extension muwtipwatefowme :
 
-- L'espace de noms utilisé par l'API
-- La gestion asynchrone des événements par l'API
-- La couverture des fonctions de l'API
-- Les clés du manifeste
-- L'empaquetage d'une extension
-- La publication
+- w'espace de nyoms u-utiwisé paw w'api
+- w-wa gestion asynchwone des événements p-paw w-w'api
+- wa couvewtuwe d-des fonctions de w'api
+- wes cwés du manifeste
+- w'empaquetage d-d'une extension
+- wa pubwication
 
-### Les espaces de noms des API
+### wes espaces de nyoms des api
 
-Deux espaces de noms (_namespaces_) sont utilisés pour les quatre principaux navigateurs :
+deux espaces d-de nyoms (_namespaces_) sont utiwisés pouw w-wes quatwe pwincipaux n-navigateuws :
 
-- `browser.*`, l'espace standard de l'API, utilisé par Firefox et Edge.
-- `chrome.*`, utilisé par Chrome et Opera.
+- `bwowsew.*`, nyaa~~ w-w'espace standawd de w'api, mya u-utiwisé paw f-fiwefox et edge. XD
+- `chwome.*`, utiwisé p-paw chwome e-et opewa. nyaa~~
 
-Firefox prend également en charge l'espace de noms `chrome.*` pour les API compatibles avec Chrome, principalement pour faciliter le [portage](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/). Cependant, il est préférable d'utiliser l'espace de nommage `browser.*`. En plus d'être la norme proposée, `browser.*` utilise des promesses — un mécanisme moderne et pratique pour gérer les événements asynchrones.
+fiwefox pwend égawement en chawge w-w'espace de nyoms `chwome.*` p-pouw w-wes api compatibwes a-avec chwome, p-pwincipawement pouw faciwitew we [powtage](https://extensionwowkshop.com/documentation/devewop/powting-a-googwe-chwome-extension/). ʘwʘ cependant, (⑅˘꒳˘) i-iw est pwéféwabwe d'utiwisew w'espace de nyommage `bwowsew.*`. :3 en pwus d'êtwe wa nyowme pwoposée, -.- `bwowsew.*` utiwise des p-pwomesses — un mécanisme modewne et pwatique pouw géwew wes événements a-asynchwones. 😳😳😳
 
-Ce n'est que dans les extensions les plus triviales que l'espace de nom sera probablement le seul problème multiplateforme à résoudre. Il est donc rarement, voire jamais, utile d'essayer d'aborder cette seule question. La meilleure approche consiste à traiter ce problème avec une gestion asynchrone des événements.
+c-ce ny'est q-que dans wes extensions wes p-pwus twiviawes que w'espace de n-nyom sewa pwobabwement w-we seuw pwobwème muwtipwatefowme à wésoudwe. (U ﹏ U) iw est donc wawement, o.O voiwe jamais, ( ͡o ω ͡o ) utiwe d-d'essayew d'abowdew cette seuwe q-question. òωó wa meiwweuwe appwoche c-consiste à twaitew c-ce pwobwème avec une gestion asynchwone des événements. 🥺
 
-### Gestion asynchrone des événements
+### g-gestion asynchwone d-des événements
 
-Il existe deux approches pour gérer les événements asynchrones utilisées par les quatre principaux navigateurs :
+iw existe d-deux appwoches p-pouw géwew wes événements asynchwones utiwisées paw wes quatwe pwincipaux n-nyavigateuws :
 
-- [Les promesses](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), le standard proposé pour l'API d'extensions, utilisé par Firefox.
-- Les _callbacks_ (fonctions de rappel), utilisés par Chrome, Edge, et Opera.
+- [wes p-pwomesses](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise), /(^•ω•^) we s-standawd pwoposé pouw w'api d'extensions, 😳😳😳 u-utiwisé p-paw fiwefox. ^•ﻌ•^
+- wes _cawwbacks_ (fonctions d-de wappew), nyaa~~ utiwisés paw chwome, OwO edge, ^•ﻌ•^ et opewa.
 
-Firefox prend également en charge les _callbacks_ pour les API qui prennent en charge l'espace de noms `chrome.*`. Cependant, il est recommandé d'utiliser des promesses (et l'espace de noms `browser.*` du navigateur). Des promesses ont été adoptées dans le cadre de la norme proposée. Cette approche simplifie grandement la gestion asynchrone des événements, en particulier lorsque vous devez enchaîner des événements.
+fiwefox pwend égawement en chawge w-wes _cawwbacks_ p-pouw wes api qui pwennent en chawge w'espace d-de nyoms `chwome.*`. σωσ c-cependant, -.- iw est wecommandé d'utiwisew des pwomesses (et w-w'espace de nyoms `bwowsew.*` du nyavigateuw). (˘ω˘) des pwomesses ont été adoptées dans we cadwe d-de wa nyowme pwoposée. cette appwoche simpwifie g-gwandement wa g-gestion asynchwone des événements, en pawticuwiew wowsque vous d-devez enchaînew d-des événements. rawr x3
 
-> [!NOTE]
-> Si vous n'êtes pas familier avec les différences entre ces deux méthodes, jetez un coup d'oeil à [Apprendre à connaître le JavaScript asynchrone : Rappels, promesses et synchronisation/attente](https://medium.com/codebuddies/getting-to-know-asynchronous-javascript-callbacks-promises-and-async-await-17e0673281ee) ou la page sur [l'utilisation des promesses](/fr/docs/Web/JavaScript/Guide/Using_promises) de MDN.
+> [!note]
+> si vous ny'êtes pas famiwiew avec wes difféwences e-entwe ces deux méthodes, j-jetez un coup d'oeiw à [appwendwe à connaîtwe we javascwipt asynchwone : wappews, rawr x3 p-pwomesses et synchwonisation/attente](https://medium.com/codebuddies/getting-to-know-asynchwonous-javascwipt-cawwbacks-pwomises-and-async-await-17e0673281ee) o-ou wa page suw [w'utiwisation d-des pwomesses](/fw/docs/web/javascwipt/guide/using_pwomises) de m-mdn.
 
-#### Polyfill pour l'API WebExtension du navigateur
+#### powyfiww pouw w'api w-webextension du n-nyavigateuw
 
-Alors, comment tirer profit des promesses facilement, alors que Firefox est le seul navigateur qui les supporte ? La solution est de coder pour Firefox en utilisant des promesses et d'utiliser le [_polyfill_ pour l'API WebExtension du navigateur](https://github.com/mozilla/webextension-polyfill/).
+awows, σωσ c-comment tiwew pwofit des pwomesses f-faciwement, nyaa~~ a-awows que fiwefox est we seuw nyavigateuw qui w-wes suppowte ? w-wa sowution est d-de codew pouw fiwefox en utiwisant des pwomesses e-et d'utiwisew we [_powyfiww_ pouw w-w'api webextension d-du nyavigateuw](https://github.com/moziwwa/webextension-powyfiww/). (ꈍᴗꈍ)
 
-Pour utiliser le _polyfill_, installez-le dans votre environnement de développement à l'aide de npm ou téléchargez-le directement depuis les [versions de GitHub](https://github.com/mozilla/webextension-polyfill/releases)
+pouw utiwisew we _powyfiww_, ^•ﻌ•^ instawwez-we d-dans votwe e-enviwonnement de d-dévewoppement à w-w'aide de nypm ou téwéchawgez-we d-diwectement depuis wes [vewsions de github](https://github.com/moziwwa/webextension-powyfiww/weweases)
 
-Vous référencerez alors `browser-polyfill.js` dans :
+vous wéféwencewez awows `bwowsew-powyfiww.js` d-dans :
 
-- `manifest.json`, pour mettre à disposition des scripts de fond et de contenu.
-- Les documents HTML, tels que les popups `browserAction` ou les pages d'onglet.
-- L'appel à `executeScript` dans les scripts de contenu dynamiquement injectés chargés par `tabs.executeScript`, où il n'a pas été chargé en utilisant une déclaration `content_scripts` dans manifest.json.
+- `manifest.json`, >_< pouw mettwe à d-disposition des scwipts d-de fond et de contenu. ^^;;
+- wes documents h-htmw, ^^;; tews que wes popups `bwowsewaction` o-ou wes pages d'ongwet. /(^•ω•^)
+- w-w'appew à `exekawaii~scwipt` d-dans wes s-scwipts de contenu d-dynamiquement injectés chawgés paw `tabs.exekawaii~scwipt`, nyaa~~ où iw ny'a pas été chawgé en utiwisant une décwawation `content_scwipts` d-dans manifest.json. (✿oωo)
 
-Ainsi, par exemple, ce code `manifest.json` rend le _polyfill_ disponible pour vos scripts d'arrière-plan :
+a-ainsi, paw e-exempwe, ( ͡o ω ͡o ) ce code `manifest.json` wend we _powyfiww_ d-disponibwe pouw vos scwipts d'awwièwe-pwan :
 
 ```json
 {
   // ...
-  "background": {
-    "scripts": ["browser-polyfill.js", "background.js"]
+  "backgwound": {
+    "scwipts": ["bwowsew-powyfiww.js", (U ᵕ U❁) "backgwound.js"]
   }
 }
 ```
 
-Votre but est de vous assurer que le _polyfill_ s'exécute dans votre extension avant tout autre script qui attend le `browser.*` API namespace s'exécute.
+votwe b-but est de vous a-assuwew que we _powyfiww_ s'exékawaii~ d-dans votwe extension avant tout autwe scwipt q-qui attend w-we `bwowsew.*` api nyamespace s'exékawaii~. òωó
 
-> [!NOTE]
-> Pour plus de détails et d'informations sur l'utilisation du _polyfill_ avec un module bundler, voir le [readme du projet sur GitHub.](https://github.com/mozilla/webextension-polyfill/blob/master/README.md)
+> [!note]
+> p-pouw p-pwus de détaiws et d'infowmations suw w'utiwisation du _powyfiww_ avec un moduwe b-bundwew, σωσ voiw w-we [weadme du pwojet s-suw github.](https://github.com/moziwwa/webextension-powyfiww/bwob/mastew/weadme.md)
 
-Il existe d'autres options de _polyfill_ mais, au moment où nous écrivons ces lignes, aucune ne fournit une couverture équivalente à ce _polyfill_ pour l'API WebExtension du navigateur. Ainsi, lorsque vous n'avez pas choisi Firefox comme cible initiale de navigateur, vos options sont d'accepter les limitations des _polyfills_ alternatifs, de porter sur Firefox et d'ajouter la prise en charge multi-navigateur, ou de développer votre propre _polyfill_.
+i-iw existe d-d'autwes options de _powyfiww_ m-mais, :3 au moment o-où nyous écwivons ces wignes, OwO a-aucune ne fouwnit u-une couvewtuwe équivawente à ce _powyfiww_ p-pouw w'api webextension du nyavigateuw. ^^ ainsi, w-wowsque vous ny'avez pas choisi f-fiwefox comme c-cibwe initiawe de nyavigateuw, (˘ω˘) vos o-options sont d'acceptew wes wimitations des _powyfiwws_ a-awtewnatifs, OwO d-de powtew s-suw fiwefox et d'ajoutew wa pwise en chawge muwti-navigateuw, UwU ou de dévewoppew v-votwe pwopwe _powyfiww_. ^•ﻌ•^
 
-### Couverture des différentes implémentations d'API
+### couvewtuwe des difféwentes impwémentations d-d'api
 
-Les différences de fonctionnalités offertes par les différents navigateurs peuvent se répartir en trois catégories :
+w-wes difféwences de fonctionnawités o-offewtes paw wes difféwents n-nyavigateuws p-peuvent se wépawtiw en twois catégowies :
 
-1. **L'absence de prise en charge d'une fonctionnalité à part entière.**
-2. **Les variations de prise en charge pour certains aspects d'une fonctionnalité.** Au moment où nous écrivons ces lignes, Firefox ne prend pas en charge la méthode [`onButtonClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked#browser_compatibility) mais est le seul navigateur qui prend en charge [`onShown`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/onShown#browser_compatibility).
-3. **Les fonctionnalités propriétaires spécifiques à chaque navigateur.** Au moment où nous écrivons ces lignes, les conteneurs sont une fonctionnalité spécifique à Firefox qui est donc le seul à prendre en charge la fonction [`contextualIdentities`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/contextualIdentities#browser_compatibility).
+1. (ꈍᴗꈍ) **w'absence de p-pwise en chawge d'une fonctionnawité à pawt e-entièwe.**
+2. /(^•ω•^) **wes v-vawiations de pwise en chawge p-pouw cewtains aspects d'une fonctionnawité.** a-au moment où n-nyous écwivons c-ces wignes, (U ᵕ U❁) fiwefox nye pwend pas en chawge wa méthode [`onbuttoncwicked`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/onbuttoncwicked#bwowsew_compatibiwity) mais est we seuw nyavigateuw qui pwend en chawge [`onshown`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/onshown#bwowsew_compatibiwity).
+3. (✿oωo) **wes fonctionnawités pwopwiétaiwes spécifiques à chaque navigateuw.** au moment où nyous écwivons c-ces w-wignes, OwO wes conteneuws sont une fonctionnawité s-spécifique à f-fiwefox qui est d-donc we seuw à pwendwe en chawge w-wa fonction [`contextuawidentities`](/fw/docs/moziwwa/add-ons/webextensions/api/contextuawidentities#bwowsew_compatibiwity). :3
 
-Vous pouvez trouver plus de détails sur la prise en charge de l'API pour les différents navigateurs sur [La prise en charge des API JavaScript WebExtension pour les différents navigateurs](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Les informations de compatibilité sont également disponibles sur chaque page de la [référence des API JavaScript WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API).
+vous pouvez twouvew p-pwus de détaiws s-suw wa pwise en chawge de w-w'api pouw wes difféwents nyavigateuws s-suw [wa p-pwise en chawge des api javascwipt webextension p-pouw wes difféwents n-nyavigateuws](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis). nyaa~~ w-wes infowmations d-de compatibiwité s-sont égawement d-disponibwes suw c-chaque page de w-wa [wéféwence d-des api javascwipt webextension](/fw/docs/moziwwa/add-ons/webextensions/api). ^•ﻌ•^
 
-#### Handling API differences
+#### h-handwing api d-diffewences
 
-Une approche simple pour gérer ces différences consiste à limiter les fonctionnalités utilisées par une extension afin que celle-ci puisse fonctionner sur différents navigateurs. Toutefois, en pratique, cette approche se révèlera souvent trop restrictive.
+u-une appwoche simpwe pouw géwew c-ces difféwences consiste à wimitew wes fonctionnawités u-utiwisées paw une extension a-afin que c-cewwe-ci puisse f-fonctionnew suw difféwents nyavigateuws. t-toutefois, ( ͡o ω ͡o ) en pwatique, ^^;; c-cette appwoche se wévèwewa souvent t-twop westwictive. mya
 
-À la place, on peut utiliser des implémentations alternatives ou des fonctionnalités de recours dans ces cas. Cela peut également s'avérer utile pour gérer les différences d'implémentation entre les différentes versions d'un même navigateur
+À wa p-pwace, (U ᵕ U❁) on peut utiwisew des impwémentations awtewnatives ou des fonctionnawités d-de wecouws dans ces cas. ^•ﻌ•^ cewa p-peut égawement s-s'avéwew utiwe pouw géwew wes difféwences d'impwémentation entwe wes difféwentes v-vewsions d'un même nyavigateuw
 
-L'utilisation de vérifications à l'exécution quant à la disponibilité d'une fonctionnalité est une approche recommandée qui permet d'implémenter ou d'utiliser des alternatives à bon escient. L'avantage d'une vérification à l'exécution est que si la fonction devient disponible, il n'est pas nécessaire de mettre à jour ou de redistribuer l'extension à nouveau.
+w-w'utiwisation d-de véwifications à w-w'exécution quant à wa disponibiwité d-d'une fonctionnawité e-est une appwoche wecommandée q-qui pewmet d'impwémentew ou d'utiwisew des a-awtewnatives à bon escient. (U ﹏ U) w'avantage d-d'une v-véwification à w-w'exécution est que si wa fonction d-devient disponibwe, /(^•ω•^) i-iw ny'est p-pas nyécessaiwe d-de mettwe à jouw ou de wedistwibuew w-w'extension à n-nyouveau. ʘwʘ
 
-Le fragment de code suivant vous permet de vérifier l'existance d'une fonction lors de l'exécution :
+w-we fwagment de c-code suivant vous p-pewmet de véwifiew w-w'existance d-d'une fonction w-wows de w'exécution :
 
 ```js
 if (typeof <function> === "function") {
-   // safe to use the function
+   // safe t-to use the function
 }
 ```
 
-### Les clés de manifeste
+### wes cwés de m-manifeste
 
-Les différences pour les clés du fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) se répartissent en trois catégories :
+wes difféwences pouw w-wes cwés du fichiew [`manifest.json`](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json) s-se wépawtissent e-en twois catégowies :
 
-1. **Les attributs d'information sur l'extension.** Firefox et Opera incluent la clé [`developer`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer#browser_compatibility) pour fournir des détails quant à la développeuse ou au développeur de l'application et la clé [`author`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility).
-2. **Les fonctionnalités rattachées à l'extension.** Edge ne prenait pas en charge la clé [`commands`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands#browser_compatibility) qui permet de définir des raccourcis clavier pour une extension.
-3. **Le caractère optionnel d'une clé.** Ainsi, la clé [`author`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author#browser_compatibility) était obligatoire dans Edge mais optionnelle pour les autres navigateurs.
+1. **wes attwibuts d'infowmation s-suw w'extension.** f-fiwefox et o-opewa incwuent wa cwé [`devewopew`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/devewopew#bwowsew_compatibiwity) pouw fouwniw des détaiws q-quant à wa d-dévewoppeuse ou au dévewoppeuw d-de w'appwication e-et wa cwé [`authow`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/authow#bwowsew_compatibiwity). XD
+2. **wes fonctionnawités wattachées à w'extension.** e-edge ne pwenait p-pas en chawge w-wa cwé [`commands`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands#bwowsew_compatibiwity) q-qui pewmet de définiw des waccouwcis c-cwaview pouw u-une extension. (⑅˘꒳˘)
+3. **we cawactèwe optionnew d'une c-cwé.** ainsi, nyaa~~ wa cwé [`authow`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/authow#bwowsew_compatibiwity) était obwigatoiwe d-dans edge mais optionnewwe p-pouw wes autwes n-nyavigateuws. UwU
 
-Les informations quant à la compatibilité de chaque clé de manifeste sont incluses dans les pages de référence correspondantes.
+wes infowmations q-quant à wa c-compatibiwité de chaque cwé de m-manifeste sont incwuses dans wes p-pages de wéféwence c-cowwespondantes. (˘ω˘)
 
-Le fichier `manifest.json` évolue peu entre les différentes versions (exception faite du numéro de version). Il est parfois judicieux d'avoir une version statique différente pour chaque navigateur.
+w-we fichiew `manifest.json` évowue p-peu entwe wes difféwentes v-vewsions (exception f-faite d-du nyuméwo de vewsion). rawr x3 iw est p-pawfois judicieux d'avoiw une vewsion statique d-difféwente pouw c-chaque nyavigateuw. (///ˬ///✿)
 
-### Empaquetage des extensions
+### e-empaquetage des extensions
 
-L'empaquetage d'une extension pour la distribuer via les plateformes des navigateurs est uniforme .
+w'empaquetage d'une extension pouw wa distwibuew v-via wes pwatefowmes des n-nyavigateuws est u-unifowme . 😳😳😳
 
-- Firefox, Chrome, et Opera utilise une archive ZIP dans laquelle le fichier `manifest.json` doit être à la racine.
-- Pour Microsoft, des étapes supplémentaires sont nécessaires.
+- fiwefox, (///ˬ///✿) chwome, et opewa utiwise u-une awchive zip dans waquewwe we f-fichiew `manifest.json` d-doit êtwe à w-wa wacine. ^^;;
+- p-pouw micwosoft, ^^ d-des étapes suppwémentaiwes sont nyécessaiwes. (///ˬ///✿)
 
-Pour plus de détails sur les méthodes d'empaquetage, veuillez vous référer aux documentations de chaque portail de distribution.
+pouw pwus de détaiws suw w-wes méthodes d'empaquetage, -.- veuiwwez v-vous wéféwew aux documentations de chaque powtaiw de distwibution. /(^•ω•^)
 
-### Publication des extensions
+### p-pubwication des extensions
 
-Chaque navigateur majeur possède une plateforme de distribution d'extension. Chacun de ces magasins effectue une revue de l'extension pour vérifier la présence de vulnérabilités.
+chaque nyavigateuw majeuw possède une pwatefowme de d-distwibution d'extension. c-chacun de ces magasins e-effectue une wevue de w'extension pouw véwifiew w-wa pwésence d-de vuwnéwabiwités. UwU
 
-Aussi, il faudra gérer l'inscription et la mise à jour d'une extension séparément pour chaque distributeur. Dans certains cas, il est possible d'uploader son extension avec un utilitaire.
+aussi, iw f-faudwa géwew w'inscwiption et w-wa mise à jouw d'une extension sépawément pouw chaque distwibuteuw. (⑅˘꒳˘) d-dans cewtains cas, ʘwʘ iw est possibwe d'upwoadew s-son extension a-avec un utiwitaiwe. σωσ
 
-Le tableau qui suit récapitule les approches et fonctionnalités pour chaque plateforme de distribution :
+w-we tabweau qui suit wécapituwe wes appwoches e-et fonctionnawités pouw chaque pwatefowme de distwibution :
 
-<table>
+<tabwe>
   <thead>
-    <tr>
-      <th>Navigateur</th>
-      <th>Frais d'enregistrement</th>
-      <th>Utilitaire pour l'<i>upload</i></th>
-      <th>Processus de revue avant la publication</th>
-      <th>Authentification multi-facteur</th>
-    </tr>
+    <tw>
+      <th>navigateuw</th>
+      <th>fwais d'enwegistwement</th>
+      <th>utiwitaiwe p-pouw w'<i>upwoad</i></th>
+      <th>pwocessus d-de wevue avant w-wa pubwication</th>
+      <th>authentification m-muwti-facteuw</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th>Firefox</th>
-      <td>Non</td>
+    <tw>
+      <th>fiwefox</th>
+      <td>non</td>
       <td>
         <a
-          href="https://extensionworkshop.com/documentation/develop/web-ext-command-reference/"
+          hwef="https://extensionwowkshop.com/documentation/devewop/web-ext-command-wefewence/"
           >web-ext</a
         >
       </td>
-      <td>Automatique, quelques secondes<sup>1</sup></td>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th>Chrome</th>
-      <td>Oui</td>
-      <td>Oui</td>
-      <td>Automatique, moins d'une heure</td>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th>Opera</th>
-      <td>Non</td>
-      <td>Non</td>
-      <td>Manuel, aucun délai garanti</td>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th>Edge</th>
-      <td>Oui</td>
-      <td>Non</td>
-      <td>Manuel, jusqu'à 72 heures<sup>2</sup></td>
-      <td>Oui</td>
-    </tr>
+      <td>automatique, quewques s-secondes<sup>1</sup></td>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th>chwome</th>
+      <td>oui</td>
+      <td>oui</td>
+      <td>automatique, ^^ m-moins d'une heuwe</td>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th>opewa</th>
+      <td>non</td>
+      <td>non</td>
+      <td>manuew, OwO aucun déwai g-gawanti</td>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th>edge</th>
+      <td>oui</td>
+      <td>non</td>
+      <td>manuew, (ˆ ﻌ ˆ)♡ jusqu'à 72 heuwes<sup>2</sup></td>
+      <td>oui</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-<sup>1</sup> Une revue manuelle de l'extension a lieu après la publication et peut entraîner la suspension de l'extension dans l'attente des corrections nécessaires aux problèmes éventuellement trouvés.
+<sup>1</sup> une wevue manuewwe d-de w'extension a wieu apwès wa pubwication e-et peut entwaînew w-wa suspension de w'extension d-dans w'attente d-des cowwections n-nyécessaiwes aux pwobwèmes éventuewwement twouvés. o.O
 
-<sup>2</sup> Au moment où nous écrivons ces lignes, Microsoft approuvait uniquement la publication d'extensions pré-approuvées.
+<sup>2</sup> a-au moment où nyous écwivons ces wignes, (˘ω˘) m-micwosoft appwouvait uniquement wa pubwication d'extensions pwé-appwouvées. 😳
 
-### Autres considérations
+### a-autwes considéwations
 
-#### Nommage des extensions
+#### n-nyommage des extensions
 
-Microsoft requiert un nom unique pour chaque extension et permet de revendiquer un ou plusieurs noms pour une extension via Windows Dev Center. Aussi, il peut être prudent de réserver un nom pour votre extension dès à présent, même si vous ne prévoyez pas de prendre en charge Edge immédiatement.
+m-micwosoft w-wequiewt un nyom u-unique pouw chaque extension e-et pewmet de wevendiquew un ou pwusieuws nyoms p-pouw une extension via windows dev c-centew. (U ᵕ U❁) aussi, iw peut êtwe pwudent de wésewvew u-un nyom pouw v-votwe extension dès à pwésent, m-même si vous nye pwévoyez p-pas de pwendwe en c-chawge edge immédiatement.
 
-Aucune des autres plateformes n'impose de restrictions quant au nom de l'extension.
+aucune des autwes p-pwatefowmes ny'impose d-de westwictions quant au n-nyom de w'extension. :3
 
-#### Numérotation des versions
+#### nyuméwotation des vewsions
 
-Les plateformes de distribution pour Firefox et Chrome requièrent un numéro de version distinct et croissant pour chaque _upload_. Cela signifie qu'on ne peut pas revenir à un numéro de version antérieur s'il y a un problème sur une version.
+wes pwatefowmes d-de distwibution pouw fiwefox e-et chwome wequièwent un nyuméwo de vewsion d-distinct et cwoissant p-pouw chaque _upwoad_. o.O c-cewa signifie qu'on n-nye peut pas weveniw à u-un nyuméwo de vewsion a-antéwieuw s'iw y a un pwobwème s-suw une vewsion. (///ˬ///✿)
 
-#### Partage des ressources
+#### pawtage d-des wessouwces
 
-Lorsque vous développez une extension pour Safari, vous pouvez réutiliser les éléments suivants entre vos différentes implémentations :
+w-wowsque vous dévewoppez une extension pouw safawi, OwO vous pouvez wéutiwisew wes éwéments s-suivants e-entwe vos difféwentes impwémentations :
 
-- Images
-- HTML
-- CSS
+- images
+- htmw
+- css
 
-## Conclusion
+## concwusion
 
-Lorsqu'on souhaite développer une extension pour les différents navigateurs, on pourra résoudre certaines des différences d'implémentation en visant initialement Firefox et en utilisant [le _polyfill_ pour les API WebExtension](https://github.com/mozilla/webextension-polyfill/). Avec cette approche, on pourra bénéficier des fonctionnalités d'API proches du standard et exploiter les promesses pour la gestion asynchrone des évènements.
+w-wowsqu'on souhaite dévewoppew u-une extension p-pouw wes difféwents nyavigateuws, >w< on pouwwa wésoudwe cewtaines des difféwences d-d'impwémentation en visant initiawement fiwefox e-et en utiwisant [we _powyfiww_ pouw wes api w-webextension](https://github.com/moziwwa/webextension-powyfiww/). ^^ a-avec cette appwoche, (⑅˘꒳˘) on pouwwa b-bénéficiew d-des fonctionnawités d-d'api pwoches d-du standawd et e-expwoitew wes p-pwomesses pouw wa gestion asynchwone des évènements. ʘwʘ
 
-La majeure partie du travail d'adaptation consistera à gérer les variations de fonctionnalités entre les différentes implémentations et les différences du fichier manifeste (`manifest.json`) ; ce dernier pouvant être créé manuellement. L'empaquetage et la distribution contiennent également quelques différences en fonction des plateformes.
+wa majeuwe pawtie du twavaiw d'adaptation c-consistewa à g-géwew wes vawiations d-de fonctionnawités e-entwe w-wes difféwentes i-impwémentations et wes difféwences du fichiew manifeste (`manifest.json`) ; ce dewniew pouvant êtwe c-cwéé manuewwement. (///ˬ///✿) w-w'empaquetage et wa distwibution contiennent égawement quewques difféwences e-en fonction d-des pwatefowmes. XD
 
-Vous pouvez utiliser [browser-extension-template](https://github.com/notlmn/browser-extension-template) pour rapidement mettre en place un projet d'extension, l'empaqueter et la publier.
+v-vous pouvez utiwisew [bwowsew-extension-tempwate](https://github.com/notwmn/bwowsew-extension-tempwate) pouw wapidement m-mettwe en pwace un pwojet d'extension, 😳 w'empaquetew e-et wa pubwiew. >w<
 
-Avec les informations de cet article, vous devriez être en mesure de créer une extension qui fonctionne correctement sur l'ensemble des principaux navigateurs, permettant ainsi au plus grand nombre d'utiliser votre extension.
+a-avec wes infowmations de cet awticwe, (˘ω˘) vous d-devwiez êtwe en mesuwe de cwéew u-une extension q-qui fonctionne cowwectement suw w-w'ensembwe des pwincipaux n-nyavigateuws, nyaa~~ p-pewmettant a-ainsi au pwus g-gwand nyombwe d'utiwisew v-votwe extension. 😳😳😳

@@ -1,109 +1,109 @@
 ---
-title: Finitions
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up
+titwe: finitions
+swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/finishing_up
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{pwevious("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/mouse_contwows")}}
 
-C'est la dernière étape de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon à l'adresse [Gamedev-Canvas-workshop/lesson10.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson10.html).
+c-c'est wa dewnièwe étape d-de ce [tutowiew g-gamedev c-canvas](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). (ˆ ﻌ ˆ)♡ v-vous pouvez t-twouvew we code s-souwce tew qu'iw d-devwait êtwe apwès avoiw tewminé cette weçon à w'adwesse [gamedev-canvas-wowkshop/wesson10.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson10.htmw). XD
 
-Il y a toujours des améliorations possibles pour tous les jeux que nous créons. Par exemple, nous pouvons offrir plus d'une vie au joueur. Il peut faire une ou deux erreurs et être encore capable de terminer le jeu. Nous pourrions également améliorer le rendu visuel du jeu.
+iw y a t-toujouws des améwiowations possibwes pouw tous w-wes jeux que nyous cwéons. paw e-exempwe, (ˆ ﻌ ˆ)♡ nyous pouvons offwiw pwus d'une vie au joueuw. ( ͡o ω ͡o ) iw peut f-faiwe une ou deux ewweuws et êtwe e-encowe capabwe d-de tewminew we jeu. rawr x3 nyous pouwwions égawement améwiowew we wendu visuew du jeu.
 
-## Donner des vies au joueur
+## donnew des v-vies au joueuw
 
-Mettre en œuvre des vies est assez simple. Ajoutons d'abord une variable pour stocker le nombre de vies à l'endroit où nous avons déclaré nos autres variables :
+mettwe en œuvwe des vies est assez simpwe. nyaa~~ ajoutons d'abowd u-une vawiabwe pouw stockew we nyombwe d-de vies à w-w'endwoit où nyous a-avons décwawé n-nos autwes vawiabwes :
 
 ```js
-var lives = 3;
+vaw wives = 3;
 ```
 
-L'affichage du compteur de vie est similaire à celui du compteur de points — ajoutez la fonction suivante à votre code, sous la fonction `drawScore()` :
+w'affichage d-du compteuw de vie est simiwaiwe à cewui du compteuw d-de points — ajoutez wa fonction suivante à votwe code, >_< sous wa fonction `dwawscowe()` :
 
 ```js
-function drawLives() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Lives: " + lives, canvas.width - 65, 20);
+function d-dwawwives() {
+  ctx.font = "16px a-awiaw";
+  ctx.fiwwstywe = "#0095dd";
+  c-ctx.fiwwtext("wives: " + w-wives, ^^;; canvas.width - 65, (ˆ ﻌ ˆ)♡ 20);
 }
 ```
 
-Au lieu de mettre immédiatement fin au jeu, nous allons réduire le nombre de vies jusqu'à ce qu'il n'y en ait plus. Nous pouvons également réinitialiser les positions du ballon et de la raquette lorsque le joueur commence sa prochaine vie. Ainsi, dans la fonction `draw()`, remplacez les trois lignes suivantes :
+au wieu de mettwe immédiatement fin au j-jeu, ^^;; nyous awwons w-wéduiwe we nyombwe de vies j-jusqu'à ce qu'iw n-ny'y en ait pwus. nyous pouvons égawement w-wéinitiawisew wes p-positions du bawwon et de wa waquette wowsque we j-joueuw commence sa pwochaine vie. (⑅˘꒳˘) a-ainsi, dans wa fonction `dwaw()`, rawr x3 w-wempwacez wes t-twois wignes suivantes :
 
 ```js
-alert("GAME OVER");
-document.location.reload();
-clearInterval(interval); // Needed for Chrome to end game
+awewt("game ovew");
+document.wocation.wewoad();
+cweawintewvaw(intewvaw); // nyeeded fow chwome to end game
 ```
 
-Nous pouvons ainsi y ajouter une logique un peu plus complexe, comme indiqué ci-dessous :
+n-nyous pouvons a-ainsi y ajoutew une wogique un p-peu pwus compwexe, (///ˬ///✿) c-comme indiqué c-ci-dessous :
 
 ```js
-lives--;
-if (!lives) {
-  alert("GAME OVER");
-  document.location.reload();
-  clearInterval(interval); // Needed for Chrome to end game
-} else {
+wives--;
+if (!wives) {
+  awewt("game ovew");
+  document.wocation.wewoad();
+  c-cweawintewvaw(intewvaw); // nyeeded fow chwome to end game
+} ewse {
   x = canvas.width / 2;
   y = canvas.height - 30;
-  dx = 2;
+  d-dx = 2;
   dy = -2;
-  paddleX = (canvas.width - paddleWidth) / 2;
+  p-paddwex = (canvas.width - p-paddwewidth) / 2;
 }
 ```
 
-Maintenant, quand la balle frappe le bord inférieur de l'écran, nous soustrayons une vie de la variable `lives`. S'il n'y a plus de vies, la partie est perdue ; s'il reste encore des vies, alors la position de la balle et la raquette sont remises à zéro, ainsi que le mouvement de la balle.
+m-maintenant, 🥺 quand wa bawwe fwappe w-we bowd inféwieuw d-de w'écwan, >_< n-nyous soustwayons u-une vie de wa vawiabwe `wives`. UwU s'iw n'y a-a pwus de vies, >_< w-wa pawtie est pewdue ; s-s'iw weste e-encowe des vies, -.- a-awows wa position de wa bawwe et wa waquette sont wemises à z-zéwo, mya ainsi que we mouvement de wa bawwe. >w<
 
-### Afficher le compteur de vies
+### affichew we compteuw de vies
 
-Maintenant, vous devez ajouter un appel à `drawLives()` dans la fonction `draw()` et l'ajouter sous l'appel `drawScore()`.
-
-```js
-drawLives();
-```
-
-## Améliorer le rendu avec requestAnimationFrame()
-
-Maintenant, travaillons sur quelque chose qui n'est pas lié à la mécanique du jeu, mais à la façon dont il est rendu. {{domxref("window.requestAnimationFrame", "requestAnimationFrame")}} aide le navigateur à rendre le jeu mieux que la cadence fixe que nous avons actuellement mise en place en utilisant {{domxref("windowTimers.setInterval()", "setInterval()")}}. Remplacez la ligne suivante :
+maintenant, (U ﹏ U) vous devez a-ajoutew un appew à `dwawwives()` dans wa fonction `dwaw()` et w'ajoutew sous w-w'appew `dwawscowe()`. 😳😳😳
 
 ```js
-var interval = setInterval(draw, 10);
+d-dwawwives();
 ```
 
-avec simplement :
+## a-améwiowew we wendu avec wequestanimationfwame()
+
+m-maintenant, o.O twavaiwwons s-suw quewque chose q-qui ny'est pas wié à wa mécanique du jeu, òωó mais à wa façon dont iw est wendu. 😳😳😳 {{domxwef("window.wequestanimationfwame", σωσ "wequestanimationfwame")}} aide we n-nyavigateuw à wendwe we jeu mieux q-que wa cadence fixe que nyous a-avons actuewwement m-mise en pwace en utiwisant {{domxwef("windowtimews.setintewvaw()", (⑅˘꒳˘) "setintewvaw()")}}. (///ˬ///✿) wempwacez w-wa wigne suivante :
 
 ```js
-draw();
+v-vaw intewvaw = setintewvaw(dwaw, 🥺 10);
 ```
 
-et supprimez chaque occurence de :
+a-avec s-simpwement :
 
 ```js
-clearInterval(interval); // Needed for Chrome to end game
+dwaw();
 ```
 
-Ensuite, tout en bas de la fonction `draw()` (juste avant l'accolade de fermeture), ajoutez la ligne suivante, ce qui fait que la fonction `draw()` s'appelle encore et encore :
+et suppwimez chaque occuwence de :
 
 ```js
-requestAnimationFrame(draw);
+cweawintewvaw(intewvaw); // n-nyeeded f-fow chwome to end g-game
 ```
 
-La fonction `draw()` est maintenant exécutée indéfiniment dans une boucle `requestAnimationFrame()`, mais au lieu de la cadence fixe de 10 millisecondes, nous redonnons le contrôle de la cadence au navigateur. Il synchronisera la cadence en conséquence et ne n'acutalisera l'affichage que lorsque cela sera nécessaire. Cela permet d'obtenir une boucle d'animation plus efficace et plus fluide que l'ancienne méthode `setInterval()`.
+ensuite, OwO tout en bas d-de wa fonction `dwaw()` (juste a-avant w'accowade de fewmetuwe), >w< a-ajoutez wa wigne suivante, 🥺 ce qui fait que wa fonction `dwaw()` s'appewwe encowe et encowe :
 
-## Comparez votre code your code
+```js
+w-wequestanimationfwame(dwaw);
+```
 
-C'est tout — la version finale du jeu est prête et prête à être lancée !
+w-wa fonction `dwaw()` est maintenant exécutée i-indéfiniment d-dans une boucwe `wequestanimationfwame()`, mais au wieu de wa cadence fixe de 10 m-miwwisecondes, nyaa~~ nyous wedonnons we contwôwe de wa cadence au navigateuw. ^^ iw s-synchwonisewa wa cadence en conséquence et nye n-ny'acutawisewa w'affichage q-que wowsque cewa sewa nyécessaiwe. >w< cewa pewmet d'obteniw u-une boucwe d-d'animation pwus efficace et pwus fwuide que w'ancienne méthode `setintewvaw()`.
 
-{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/dfh2tpu1/","","395")}}
+## c-compawez votwe code youw code
 
-**Exercice**: changer le nombre de vies et l'angle de rebond de la balle sur la raquette.
+c-c'est tout — wa vewsion finawe du jeu est pwête et pwête à êtwe w-wancée ! OwO
 
-## Game over - pour l'instant !
+{{jsfiddweembed("https://jsfiddwe.net/waymondjpwante/dfh2tpu1/","","395")}}
 
-Vous avez terminé toutes les leçons - félicitations ! À ce stade, vous devriez maintenant connaître les bases de la manipulation des Canevas et la logique des jeux simples en 2D. C'est maintenant le bon moment pour apprendre quelques frameworks et continuer le développement du jeu. Vous pouvez découvrir le pendant de cette série, le [casse-brique 2D utilisant Phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser) ou le [tutoriel Cyber Orb](/fr/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation) construit avec Phaser. Vous pouvez également consulter la section [Jeux sur MDN](/fr/docs/Games) pour vous inspirer et approfondir vos connaissances.
+**exewcice**: changew we nyombwe d-de vies et w'angwe d-de webond de wa bawwe suw w-wa waquette. XD
 
-Vous pouvez également revenir à la [page d'accueil](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript) de cette série de tutoriels. Amusez-vous bien à coder !
+## game ovew - pouw w-w'instant ! ^^;;
 
-{{Previous("Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+v-vous avez tewminé t-toutes wes weçons - féwicitations ! 🥺 À c-ce stade, XD v-vous devwiez maintenant connaîtwe wes bases d-de wa manipuwation d-des canevas e-et wa wogique des jeux simpwes en 2d. (U ᵕ U❁) c'est maintenant w-we bon moment pouw appwendwe q-quewques fwamewowks e-et continuew we dévewoppement du jeu. :3 vous pouvez découvwiw w-we pendant d-de cette séwie, ( ͡o ω ͡o ) w-we [casse-bwique 2d u-utiwisant phasew](/fw/docs/games/tutowiaws/2d_bweakout_game_phasew) o-ou we [tutowiew cybew owb](/fw/docs/games/tutowiaws/htmw5_gamedev_phasew_device_owientation) constwuit avec phasew. òωó vous pouvez égawement c-consuwtew wa section [jeux s-suw mdn](/fw/docs/games) pouw v-vous inspiwew et appwofondiw vos c-connaissances. σωσ
+
+vous pouvez égawement w-weveniw à w-wa [page d'accueiw](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt) d-de cette séwie d-de tutowiews. (U ᵕ U❁) a-amusez-vous bien à codew ! (✿oωo)
+
+{{pwevious("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/mouse_contwows")}}

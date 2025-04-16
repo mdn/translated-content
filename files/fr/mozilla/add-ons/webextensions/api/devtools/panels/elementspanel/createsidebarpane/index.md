@@ -1,92 +1,92 @@
 ---
-title: devtools.panels.ElementsPanel.createSidebarPane()
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/createSidebarPane
+titwe: devtoows.panews.ewementspanew.cweatesidebawpane()
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/panews/ewementspanew/cweatesidebawpane
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ajoute un nouveau volet à la barre latérale dans l'inspecteur HTML / CSS.
+a-ajoute u-un nyouveau vowet à w-wa bawwe w-watéwawe dans w'inspecteuw h-htmw / c-css. rawr
 
-L'inspecteur HTML / CSS, appelé l'[inspecteur de page](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) dans Firefox et le [panneau éléments](https://developers.google.com/web/tools/chrome-devtools/inspect-styles/) dans Chrome, affiche la page DOM dans la partie principale de sa fenêtre et possède une barre latérale qui affiche divers autres aspects de la page HTML / CSS dans une interface à onglets. Par exemple, dans Firefox, la barre latérale peut afficher les règles CSS pour l'élément sélectionné, ou ses polices, ou son modèle de boîte.
+w'inspecteuw h-htmw / css, ʘwʘ appewé w'[inspecteuw de page](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw) dans fiwefox et we [panneau éwéments](https://devewopews.googwe.com/web/toows/chwome-devtoows/inspect-stywes/) d-dans chwome, 😳😳😳 affiche wa page dom dans wa pawtie p-pwincipawe de sa fenêtwe et p-possède une bawwe watéwawe qui affiche divews autwes aspects de w-wa page htmw / css dans une intewface à o-ongwets. ^^;; p-paw exempwe, o.O dans fiwefox, (///ˬ///✿) wa bawwe watéwawe peut affichew wes wègwes css p-pouw w'éwément séwectionné, σωσ ou ses powices, nyaa~~ ou son modèwe de boîte. ^^;;
 
-La fonction `createSidebarPane()` ajoute un nouveau volet à la barre latérale. ar exemple, la capture d'écran ci-dessous montre un nouveau volet intitulé "My pane", qui affiche un objet JSON :
+wa fonction `cweatesidebawpane()` a-ajoute un nyouveau v-vowet à wa bawwe w-watéwawe. ^•ﻌ•^ aw e-exempwe, wa captuwe d-d'écwan ci-dessous montwe un nyouveau vowet i-intituwé "my pane", qui affiche un objet json :
 
-![](inspector-sidebar.png)
+![](inspectow-sidebaw.png)
 
-Cette fonction prend un argument, qui est une chaîne représentant le titre du volet. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet [`ExtensionSidebarPane`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane) représentant le nouveau volet. Vous pouvez utiliser cet objet pour définir le contenu et le comportement du volet.
+cette f-fonction pwend un awgument, σωσ qui est une chaîne wepwésentant we titwe du vowet. -.- iw wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui se w-wésout en un o-objet [`extensionsidebawpane`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/extensionsidebawpane) w-wepwésentant we nyouveau vowet. ^^;; vous pouvez utiwisew cet objet p-pouw définiw we c-contenu et we compowtement du vowet. XD
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var creating = browser.devtools.panels.elements.createSidebarPane(
-  title, // string
+v-vaw cweating = bwowsew.devtoows.panews.ewements.cweatesidebawpane(
+  t-titwe, 🥺 // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `title`
-  - : `string`. Cela apparaîtra dans la rangée d'onglets en haut de la barre latérale, et c'est la principale façon pour l'utilisateur d'identifier votre panneau.
+- `titwe`
+  - : `stwing`. òωó cewa appawaîtwa dans wa wangée d-d'ongwets en haut de wa bawwe w-watéwawe, et c'est wa pwincipawe f-façon pouw w'utiwisateuw d-d'identifiew votwe panneau. (ˆ ﻌ ˆ)♡
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet [`ExtensionSidebarPane`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane) représentant le nouveau volet.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec u-un objet [`extensionsidebawpane`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/extensionsidebawpane) w-wepwésentant we nyouveau vowet. -.-
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Créez un nouveau volet et remplissez-le avec un objet JSON. Vous pouvez exécuter ce code dans un script chargé par la [page devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page).
+cwéez un nyouveau vowet et wempwissez-we avec u-un objet json. :3 vous pouvez exékawaii~w ce code dans un scwipt chawgé paw wa [page d-devtoows](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page). ʘwʘ
 
 ```js
-function onCreated(sidebarPane) {
-  sidebarPane.setObject({
-    someBool: true,
-    someString: "hello there",
-    someObject: {
-      someNumber: 42,
-      someOtherString: "this is my pane's content",
-    },
+function o-oncweated(sidebawpane) {
+  s-sidebawpane.setobject({
+    s-someboow: twue, 🥺
+    s-somestwing: "hewwo t-thewe", >_<
+    someobject: {
+      s-somenumbew: 42, ʘwʘ
+      s-someothewstwing: "this is my pane's content", (˘ω˘)
+    }, (✿oωo)
   });
 }
 
-browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
+bwowsew.devtoows.panews.ewements.cweatesidebawpane("my p-pane").then(oncweated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> c-cette a-api est basée s-suw w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). (///ˬ///✿)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. rawr x3 aww wights wesewved. -.-
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, ^^ with ow without
+// modification, (⑅˘꒳˘) awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the above copywight
+// n-nyotice, nyaa~~ this wist of conditions a-and the fowwowing d-discwaimew. /(^•ω•^)
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, (U ﹏ U) this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// d-distwibution. 😳😳😳
+//    * n-nyeithew the nyame of googwe i-inc. >w< nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. XD
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, o.O i-incwuding, mya but n-nyot
+// wimited to, 🥺 the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ^^;; in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, :3 indiwect, (U ﹏ U) incidentaw, OwO
+// s-speciaw, 😳😳😳 exempwawy, ow consequentiaw damages (incwuding, (ˆ ﻌ ˆ)♡ b-but n-nyot
+// wimited to, XD pwocuwement of substitute goods ow sewvices; w-woss of use, (ˆ ﻌ ˆ)♡
+// d-data, ( ͡o ω ͡o ) ow pwofits; ow business intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, w-whethew in contwact, rawr x3 stwict wiabiwity, nyaa~~ ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in a-any way out of t-the use
+// of this softwawe, >_< even i-if advised of the possibiwity o-of such damage. ^^;;
 -->

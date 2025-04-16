@@ -1,105 +1,105 @@
 ---
-title: tabs.onZoomChange
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onZoomChange
+titwe: tabs.onzoomchange
+swug: m-moziwwa/add-ons/webextensions/api/tabs/onzoomchange
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Envoyé lorsqu'un onglet est agrandi.
+e-envoyé w-wowsqu'un ongwet e-est agwandi. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.tabs.onZoomChange.addListener(listener);
-browser.tabs.onZoomChange.removeListener(listener);
-browser.tabs.onZoomChange.hasListener(listener);
+b-bwowsew.tabs.onzoomchange.addwistenew(wistenew);
+b-bwowsew.tabs.onzoomchange.wemovewistenew(wistenew);
+b-bwowsew.tabs.onzoomchange.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` de l'écouteur est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à c-cet événement. nyaa~~
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. OwO w-w'awgument `wistenew` de w'écouteuw est w-w'écouteuw à suppwimew. rawr x3
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` e-est enwegistwé pouw cet événement. XD w-wenvoie `twue` s-s'iw écoute, σωσ sinon `fawse`. (U ᵕ U❁)
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : f-fonction qui sewa appewée wowsque cet événement se pwoduit. (U ﹏ U) wa fonction wecevwa w-wes awguments suivants :
 
-    - `ZoomChangeInfo`
-      - : [`object`](#zoomchangeinfo). Informations sur l'événement de zoom.
+    - `zoomchangeinfo`
+      - : [`object`](#zoomchangeinfo). :3 infowmations s-suw w-w'événement de z-zoom. ( ͡o ω ͡o )
 
-## Objets supplémentaires
+## objets s-suppwémentaiwes
 
-### ZoomChangeInfo
+### zoomchangeinfo
 
-- `tabId`
-  - : `integer`. ID de l'onglet qui a été zoomé.
-- `oldZoomFactor`
-  - : `number`. Le facteur de zoom précédent.
-- `newZoomFactor`
-  - : `number`. Le nouveau facteur de zoom.
-- `zoomSettings`
-  - : {{WebExtAPIRef('tabs.ZoomSettings')}}. Paramètres de zoom pour l'onglet.
+- `tabid`
+  - : `integew`. σωσ id de w'ongwet q-qui a été zoomé.
+- `owdzoomfactow`
+  - : `numbew`. >w< we facteuw de zoom pwécédent. 😳😳😳
+- `newzoomfactow`
+  - : `numbew`. OwO w-we nyouveau facteuw de zoom. 😳
+- `zoomsettings`
+  - : {{webextapiwef('tabs.zoomsettings')}}. 😳😳😳 pawamètwes de zoom pouw w'ongwet. (˘ω˘)
 
-## Exemples
+## exempwes
 
-Ecoutez les événements de zoom et consignez les informations :
+e-ecoutez wes événements de zoom et consignez w-wes infowmations :
 
 ```js
-function handleZoomed(zoomChangeInfo) {
-  console.log("Tab: " + zoomChangeInfo.tabId + " zoomed");
-  console.log("Old zoom: " + zoomChangeInfo.oldZoomFactor);
-  console.log("New zoom: " + zoomChangeInfo.newZoomFactor);
+f-function h-handwezoomed(zoomchangeinfo) {
+  consowe.wog("tab: " + zoomchangeinfo.tabid + " zoomed");
+  c-consowe.wog("owd z-zoom: " + zoomchangeinfo.owdzoomfactow);
+  consowe.wog("new zoom: " + zoomchangeinfo.newzoomfactow);
 }
 
-browser.tabs.onZoomChange.addListener(handleZoomed);
+b-bwowsew.tabs.onzoomchange.addwistenew(handwezoomed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api e-est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). ʘwʘ cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code de chwomium c-code. ( ͡o ω ͡o )
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. o.O
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. >w< aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy fowms, 🥺 with ow without
+// modification, rawr x3 awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the a-above copywight
+// n-nyotice, o.O this w-wist of conditions and the fowwowing discwaimew. rawr
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// c-copywight nyotice, ʘwʘ this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution.
+//    * n-nyeithew the nyame of googwe inc. 😳😳😳 nyow the nyames of its
+// c-contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, o.O incwuding, but n-nyot
+// wimited t-to, (///ˬ///✿) the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, σωσ indiwect, nyaa~~ i-incidentaw,
+// s-speciaw, ^^;; exempwawy, ^•ﻌ•^ o-ow consequentiaw damages (incwuding, b-but n-nyot
+// wimited to, σωσ pwocuwement o-of substitute goods ow sewvices; woss of use, -.-
+// data, ^^;; ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, XD whethew i-in contwact, 🥺 s-stwict wiabiwity, òωó ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, (ˆ ﻌ ˆ)♡ even if advised of t-the possibiwity of such damage. -.-
 -->

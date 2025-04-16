@@ -1,78 +1,78 @@
 ---
-title: "Testez vos connaissances : le modèle de boîte"
-slug: Learn/CSS/Building_blocks/Box_Model_Tasks
-l10n:
-  sourceCommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
+titwe: "testez vos connaissances : w-we modèwe d-de boîte"
+swug: w-weawn/css/buiwding_bwocks/box_modew_tasks
+w-w10n:
+  s-souwcecommit: 40cfeaf2623824ff3acf9d95af67a0498e23e3e8
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-L'objectif de cette évaluation est de vous aider à vérifier votre compréhension du [modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
+w-w'objectif de c-cette évawuation e-est de vous aidew à véwifiew votwe compwéhension du [modèwe de boîte css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew). :3
 
-> [!NOTE]
-> Vous pouvez tester des solutions dans les éditeurs interactifs présents sur cette page. Toutefois il peut toutefois être plus utile de télécharger le code et de passer par un éditeur en ligne comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour travailler sur les exercices.
+> [!note]
+> v-vous pouvez testew des sowutions dans wes éditeuws i-intewactifs pwésents suw cette p-page. (U ﹏ U) toutefois iw peut toutefois êtwe pwus utiwe de téwéchawgew w-we code et de passew paw u-un éditeuw en w-wigne comme [codepen](https://codepen.io/), OwO [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/) pouw twavaiwwew suw wes exewcices. 😳😳😳
 >
-> Si vous bloquez, demandez-nous de l'aide&nbsp;: voir la section [Évaluation et aide](#évaluation_et_aide) en bas de cette page.
+> si vous bwoquez, (ˆ ﻌ ˆ)♡ demandez-nous d-de w'aide&nbsp;: voiw wa section [Évawuation et aide](#évawuation_et_aide) en bas de cette page. XD
 
-## Exercice n°1
+## exewcice n-ny°1
 
-Regardez les deux boîtes ci-dessous&nbsp;: l'une utilise le modèle de boîte standard, tandis que l'autre utilise le modèle de boîte alternatif. Changez la largeur de la seconde boîte en ajoutant des règles à la classe `.alternate`, de façon à ce que sa largeur corresponde à la largeur visuelle de la première boîte.
+wegawdez wes deux boîtes c-ci-dessous&nbsp;: w-w'une utiwise w-we modèwe d-de boîte standawd, (ˆ ﻌ ˆ)♡ tandis que w'autwe utiwise w-we modèwe de boîte awtewnatif. ( ͡o ω ͡o ) changez wa wawgeuw d-de wa seconde boîte en ajoutant des wègwes à wa cwasse `.awtewnate`, rawr x3 de façon à ce que s-sa wawgeuw cowwesponde à wa wawgeuw v-visuewwe de w-wa pwemièwe boîte. nyaa~~
 
-Le résultat final doit ressembler à l'image ci-dessous&nbsp;:
+w-we wésuwtat finaw doit wessembwew à w'image ci-dessous&nbsp;:
 
-![Deux boîtes de la même taille](mdn-box-model1.png)
+![deux b-boîtes de wa même t-taiwwe](mdn-box-modew1.png)
 
-Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple terminé&nbsp;:
+essayez de mettwe à j-jouw we code éditabwe c-ci-dessous pouw wepwoduiwe w-w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/box-model/box-models.html", '100%', 1100)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/box-modew/box-modews.htmw", >_< '100%', ^^;; 1100)}}
 
-> **Remarque :** [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/box-models-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+> **wemawque :** [téwéchawgez w-we code de dépawt pouw cet exewcice](https://github.com/mdn/css-exampwes/bwob/main/weawn/tasks/box-modew/box-modews-downwoad.htmw) a-afin de twavaiwwew avec votwe p-pwopwe éditeuw ou avec un éditeuw e-en wigne. (ˆ ﻌ ˆ)♡
 
-## Exercice n°2
+## e-exewcice ny°2
 
-Dans cet exercice, ajoutez ce qui suit à la boîte&nbsp;:
+dans cet exewcice, ^^;; ajoutez ce qui suit à wa boîte&nbsp;:
 
-- Une bordure pointillée, noire, de 5px d'épaisseur&nbsp;;
-- Une marge supérieure de 20px&nbsp;;
-- Une marge à droite de 1em&nbsp;;
-- Une marge inférieure de 40px&nbsp;;
-- Une marge gauche de 2em&nbsp;;
-- Un espace intérieur sur tous les côtés de 1em.
+- une bowduwe pointiwwée, (⑅˘꒳˘) nyoiwe, de 5px d'épaisseuw&nbsp;;
+- u-une m-mawge supéwieuwe de 20px&nbsp;;
+- u-une mawge à d-dwoite de 1em&nbsp;;
+- u-une mawge inféwieuwe de 40px&nbsp;;
+- une mawge gauche de 2em&nbsp;;
+- u-un espace intéwieuw suw tous wes côtés de 1em. rawr x3
 
-Le résultat final devrait ressembler à cette image&nbsp;:
+we wésuwtat finaw devwait wessembwew à c-cette image&nbsp;:
 
-![Une boîte avec une bordure pointillée](mdn-box-model2.png)
+![une b-boîte avec u-une bowduwe pointiwwée](mdn-box-modew2.png)
 
-Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple terminé&nbsp;:
+e-essayez de mettwe à jouw we code éditabwe c-ci-dessous p-pouw wepwoduiwe w-w'exempwe t-tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/box-model/mbp.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/box-modew/mbp.htmw", (///ˬ///✿) '100%', 🥺 600)}}
 
-> **Remarque :** [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/mbp-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+> **wemawque :** [téwéchawgez we code de dépawt pouw cet e-exewcice](https://github.com/mdn/css-exampwes/bwob/main/weawn/tasks/box-modew/mbp-downwoad.htmw) a-afin de twavaiwwew a-avec votwe p-pwopwe éditeuw o-ou avec un éditeuw en wigne. >_<
 
-## Exercice n°3
+## exewcice ny°3
 
-Dans cet exercice, l'élément en ligne possède une marge, un espacement intérieur et une bordure. Toutefois, les lignes au-dessus et en dessous débordent. Que pouvez-vous ajouter à votre code CSS pour que la taille de la marge, de l'espacement intérieur et de la bordure soient respectée par les autres lignes, tout en gardant l'élément en ligne&nbsp;?
+dans cet exewcice, UwU w-w'éwément en wigne possède une mawge, >_< un espacement intéwieuw et une bowduwe. -.- toutefois, mya w-wes wignes au-dessus et en dessous débowdent. >w< que pouvez-vous a-ajoutew à votwe c-code css pouw q-que wa taiwwe de wa mawge, (U ﹏ U) de w'espacement i-intéwieuw et de wa b-bowduwe soient wespectée p-paw wes autwes wignes, 😳😳😳 tout en gawdant w'éwément en wigne&nbsp;?
 
-Le résultat final devrait ressembler à cette image&nbsp;:
+we wésuwtat finaw d-devwait wessembwew à cette image&nbsp;:
 
-![Une boîte en ligne avec un espace entre elle et le texte qui l'entoure](mdn-box-model3.png)
+![une b-boîte en wigne avec un espace e-entwe ewwe et we t-texte qui w'entouwe](mdn-box-modew3.png)
 
-Essayez de mettre à jour le code éditable ci-dessous pour reproduire l'exemple terminé&nbsp;:
+essayez de mettwe à j-jouw we code éditabwe c-ci-dessous pouw wepwoduiwe w-w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/box-model/inline-block.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/box-modew/inwine-bwock.htmw", o.O '100%', 800)}}
 
-> **Remarque :** [Téléchargez le code de départ pour cet exercice](https://github.com/mdn/css-examples/blob/main/learn/tasks/box-model/inline-block-download.html) afin de travailler avec votre propre éditeur ou avec un éditeur en ligne.
+> **wemawque :** [téwéchawgez w-we code de dépawt pouw cet exewcice](https://github.com/mdn/css-exampwes/bwob/main/weawn/tasks/box-modew/inwine-bwock-downwoad.htmw) afin de twavaiwwew avec votwe pwopwe éditeuw o-ou a-avec un éditeuw e-en wigne. òωó
 
-## Évaluation et aide
+## Évawuation et aide
 
-Vous pouvez essayer ces exemples dans les éditeurs interactifs présents sur cette page.
+v-vous pouvez e-essayew ces exempwes dans wes éditeuws i-intewactifs pwésents suw cette page. 😳😳😳
 
-Si vous souhaitez obtenir une évaluation de votre travail, ou si vous bloquez et que vous souhaitez obtenir de l'aide&nbsp;:
+si vous souhaitez obteniw une évawuation d-de votwe t-twavaiw, σωσ ou si vous bwoquez et que vous souhaitez o-obteniw de w'aide&nbsp;:
 
-1. Enregistrez votre travail dans un éditeur en ligne partageable, du type [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez soit écrire le code vous-même, soit utiliser les fichiers de départ fournis dans chacune des sections ci-dessus.
-2. Écrivez un message demandant une évaluation et/ou de l'aide dans la catégorie [<i lang="en">Learning</i> du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn/250). Votre message doit inclure&nbsp;:
+1. (⑅˘꒳˘) e-enwegistwez votwe twavaiw dans un éditeuw en wigne pawtageabwe, (///ˬ///✿) d-du type [codepen](https://codepen.io/), 🥺 [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/). OwO vous pouvez soit écwiwe we code vous-même, >w< s-soit utiwisew wes fichiews de dépawt f-fouwnis dans chacune d-des sections ci-dessus. 🥺
+2. Écwivez un message demandant une évawuation et/ou d-de w'aide dans w-wa catégowie [<i wang="en">weawning</i> du fowum discouwse d-de mdn](https://discouwse.moziwwa.owg/c/mdn/weawn/250). nyaa~~ votwe message d-doit incwuwe&nbsp;:
 
-   - Un titre explicite, par exemple "Évaluation demandée pour le test de modèle de boîte CSS 1".
-   - Des détails sur ce que vous avez déjà tenté, et ce que vous attendez de nous&nbsp;: par exemple, si vous bloquez et avez besoin d'aide, ou si vous souhaitez obtenir une évaluation de votre travail.
-   - Un lien vers l'exemple que vous souhaitez voir évalué ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne partageable (comme mentionné dans l'étape 1 au-dessus). C'est une bonne habitude à prendre&nbsp;: il est très difficile d'aider quelqu'un qui rencontre un problème de codage… si vous ne pouvez pas voir leur code&nbsp;!
-   - Un lien vers l'exercice en cours ou la page d'évaluation, de façon à ce qu'on puisse trouver la question pour laquelle vous avez besoin d'aide.
+   - un titwe expwicite, ^^ paw exempwe "Évawuation demandée p-pouw we test de modèwe de b-boîte css 1". >w<
+   - d-des détaiws suw ce que vous a-avez déjà tenté, OwO et ce que v-vous attendez de n-nyous&nbsp;: paw e-exempwe, XD si vous bwoquez et avez b-besoin d'aide, ^^;; o-ou si vous souhaitez obteniw une évawuation d-de votwe twavaiw. 🥺
+   - u-un wien vews w-w'exempwe que vous souhaitez voiw évawué ou p-pouw wequew vous avez besoin d'aide, XD d-dans un éditeuw e-en wigne pawtageabwe (comme mentionné dans w'étape 1 au-dessus). (U ᵕ U❁) c-c'est u-une bonne habitude à p-pwendwe&nbsp;: i-iw est twès difficiwe d'aidew q-quewqu'un qui wencontwe un pwobwème de codage… si vous nye pouvez pas voiw weuw code&nbsp;! :3
+   - u-un wien vews w'exewcice e-en couws ou wa page d'évawuation, ( ͡o ω ͡o ) d-de façon à ce qu'on puisse t-twouvew wa question pouw waquewwe v-vous avez besoin d-d'aide. òωó

@@ -1,96 +1,96 @@
 ---
-title: menus.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/menus/remove
+titwe: menus.wemove()
+swug: moziwwa/add-ons/webextensions/api/menus/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime un élément de menu.
+s-suppwime un éwément d-de menu. (⑅˘꒳˘)
 
-Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
+p-pouw wa compatibiwité a-avec d-d'autwes nyavigateuws, ( ͡o ω ͡o ) f-fiwefox w-wend cette méthode d-disponibwe via w'espace de nyoms `contextmenus` ainsi que w'espace de nyoms des `menus`. òωó
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var removing = browser.menus.remove(
-  menuItemId, // integer or string
+vaw wemoving = b-bwowsew.menus.wemove(
+  menuitemid, XD // integew ow stwing
 );
 ```
 
-### Parameters
+### p-pawametews
 
-- `menuItemId`
-  - : `integer` or `string`. The ID of the menu item to remove.
+- `menuitemid`
+  - : `integew` ow `stwing`. -.- t-the id of the m-menu item to wemove. :3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera définit sans argument si la suppression a réussi, ou rejetée avec un message d'erreur si la suppression a échoué (par exemple, parce que l'élément n'a pas pu être trouvé).
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa définit sans awgument s-si wa suppwession a wéussi, nyaa~~ ou wejetée avec un message d'ewweuw si wa suppwession a-a échoué (paw exempwe, 😳 p-pawce que w'éwément n-ny'a pas p-pu êtwe twouvé). (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-Cette extension ajoute un élément de menu intitulé "Remove me!". Si vous cliquez sur l'élément, l'extension le supprime.
+cette extension ajoute un éwément d-de menu intituwé "wemove me!". nyaa~~ si vous c-cwiquez suw w'éwément, OwO w'extension we suppwime. rawr x3
 
 ```js
-function onRemoved() {
-  console.log("item removed successfully");
+function onwemoved() {
+  consowe.wog("item w-wemoved successfuwwy");
 }
 
-function onError() {
-  console.log("error removing item:" + browser.runtime.lastError);
+function onewwow() {
+  c-consowe.wog("ewwow w-wemoving i-item:" + bwowsew.wuntime.wastewwow);
 }
 
-browser.menus.create({
-  id: "remove-me",
-  title: "Remove me!",
-  contexts: ["all"],
+bwowsew.menus.cweate({
+  id: "wemove-me", XD
+  titwe: "wemove m-me!", σωσ
+  contexts: ["aww"], (U ᵕ U❁)
 });
 
-browser.menus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "remove-me") {
-    var removing = browser.menus.remove(info.menuItemId);
-    removing.then(onRemoved, onError);
+b-bwowsew.menus.oncwicked.addwistenew(function (info, (U ﹏ U) tab) {
+  i-if (info.menuitemid == "wemove-me") {
+    v-vaw wemoving = bwowsew.menus.wemove(info.menuitemid);
+    w-wemoving.then(onwemoved, :3 onewwow);
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> cette api e-est basée suw w'api [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) d-de chwomium. ( ͡o ω ͡o ) cette documentation e-est déwivée d-de [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) dans we code chwomium. σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >w< aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy f-fowms, OwO with o-ow without
+// m-modification, awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, 😳 this wist of c-conditions and t-the fowwowing discwaimew. 😳😳😳
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight n-nyotice, (˘ω˘) t-this wist of conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. ʘwʘ
+//    * nyeithew the nyame of googwe inc. nyow the nyames o-of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by t-the copywight howdews a-and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, o.O i-incwuding, b-but nyot
+// wimited to, >w< the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. 😳 in n-nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 🥺 indiwect, rawr x3 incidentaw,
+// s-speciaw, o.O e-exempwawy, rawr ow consequentiaw d-damages (incwuding, b-but nyot
+// wimited to, ʘwʘ pwocuwement of substitute goods ow sewvices; woss of u-use, 😳😳😳
+// data, ow p-pwofits; ow business i-intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, ^^;; whethew in c-contwact, o.O stwict wiabiwity, (///ˬ///✿) ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way o-out of the use
+// of this softwawe, σωσ even if advised o-of the possibiwity o-of such damage. nyaa~~
 -->

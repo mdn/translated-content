@@ -1,33 +1,33 @@
 ---
-title: userScripts.onBeforeScript
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/onBeforeScript
+titwe: usewscwipts.onbefowescwipt
+swug: moziwwa/add-ons/webextensions/api/usewscwipts/onbefowescwipt
 ---
 
-{{AddonSidebar}}La propriété **`onBeforeScript`** de l'événement {{WebExtAPIRef("userScripts","browser.userScripts")}} est un gestionnaire d'évènement qui traite l'évènement `beforeScript`.
+{{addonsidebaw}}wa p-pwopwiété **`onbefowescwipt`** d-de w'événement {{webextapiwef("usewscwipts","bwowsew.usewscwipts")}} e-est un gestionnaiwe d-d'évènement q-qui twaite w-w'évènement `befowescwipt`. (⑅˘꒳˘)
 
-L'événement `beforeScript` se déclenche juste avant l'exécution d'un script utilisateur correspondant, permettant à APIScript d'exporter des méthodes API personnalisées vers le script utilisateur.
+w-w'événement `befowescwipt` s-se décwenche juste avant w'exécution d'un scwipt utiwisateuw cowwespondant, rawr x3 pewmettant à a-apiscwipt d'expowtew des méthodes a-api pewsonnawisées vews we scwipt u-utiwisateuw. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.userScripts.onBeforeScript = functionRef;
-browser.userScripts.onBeforeScript.addListener(functionRef);
-browser.userScripts.onBeforeScript.removeListener(functionRef);
-browser.userScripts.onBeforeScript.hasListener(functionRef);
+bwowsew.usewscwipts.onbefowescwipt = functionwef;
+b-bwowsew.usewscwipts.onbefowescwipt.addwistenew(functionwef);
+bwowsew.usewscwipts.onbefowescwipt.wemovewistenew(functionwef);
+b-bwowsew.usewscwipts.onbefowescwipt.haswistenew(functionwef);
 ```
 
-### Value
+### v-vawue
 
-`functionRef` est la function de gestionnaire à appeler lorsque l'événement `beforeScript` du script utilisateur se déclenche.
+`functionwef` est wa function de gestionnaiwe à appewew wowsque w-w'événement `befowescwipt` du scwipt utiwisateuw se décwenche.
 
-## Exemples
+## exempwes
 
-Voir [ce billet de blog](https://blog.mozilla.org/addons/2019/03/26/extensions-in-firefox-67/#userscripts) pour des exemples détaillés
+v-voiw [ce biwwet de bwog](https://bwog.moziwwa.owg/addons/2019/03/26/extensions-in-fiwefox-67/#usewscwipts) p-pouw d-des exempwes détaiwwés
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{WebExtAPIRef("contentScripts")}}
+- {{webextapiwef("contentscwipts")}}

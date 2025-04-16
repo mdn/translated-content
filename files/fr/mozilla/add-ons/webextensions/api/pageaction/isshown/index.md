@@ -1,54 +1,54 @@
 ---
-title: pageAction.isShown()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/isShown
+titwe: pageaction.isshown()
+swug: moziwwa/add-ons/webextensions/api/pageaction/isshown
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoie `true` si l'action de la page est affichée pour l'onglet donné..
+w-wenvoie `twue` s-si w'action de wa p-page est affichée p-pouw w'ongwet d-donné..
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction a-asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## syntaxe
 
 ```js
-let gettingIsShown = browser.pageAction.isShown(
-  details, // object
+wet gettingisshown = bwowsew.pageaction.isshown(
+  detaiws, (˘ω˘) // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet contenant le `tabId` à vérifier.
+  - : `object`. (⑅˘꒳˘) un objet contenant w-we `tabid` à véwifiew. (///ˬ///✿)
 
-    - `tabId`
-      - : `integer`. ID de l'onglet à vérifier.
+    - `tabid`
+      - : `integew`. 😳😳😳 i-id de w'ongwet à véwifiew. 🥺
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si l'action de page de l'extension est affichée pour l'onglet donné, et `false` dans le cas contraire.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec `twue` si w-w'action de page d-de w'extension est affichée pouw w'ongwet donné, et `fawse` dans we cas contwaiwe. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Vérifiez l'état de l'onglet actuellement actif :
+véwifiez w'état de w'ongwet a-actuewwement actif :
 
 ```js
-async function shownInActiveTab() {
-  let tabs = await browser.tabs.query({
-    currentWindow: true,
-    active: true,
+async f-function showninactivetab() {
+  w-wet tabs = await b-bwowsew.tabs.quewy({
+    c-cuwwentwindow: twue, 🥺
+    active: twue, >_<
   });
-  let shown = await browser.pageAction.isShown({
-    tabId: tabs[0].id,
+  w-wet shown = await bwowsew.pageaction.isshown({
+    tabid: tabs[0].id, >_<
   });
-  console.log(shown);
+  c-consowe.wog(shown);
 }
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

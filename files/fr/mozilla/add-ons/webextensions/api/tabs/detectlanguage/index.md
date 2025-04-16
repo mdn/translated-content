@@ -1,116 +1,116 @@
 ---
-title: tabs.detectLanguage()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/detectLanguage
+titwe: tabs.detectwanguage()
+swug: moziwwa/add-ons/webextensions/api/tabs/detectwanguage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Détecte la langue principale du contenu dans un onglet, en utilisant le [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
+d-détecte wa wangue p-pwincipawe d-du contenu dans u-un ongwet, (⑅˘꒳˘) en utiwisant w-we [détecteuw d-de wangue c-compact](https://github.com/cwd2ownews/cwd2) (cwd). nyaa~~
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var detecting = browser.tabs.detectLanguage(
-  tabId, // optional integer
-  callback, // optional function
+vaw d-detecting = bwowsew.tabs.detectwanguage(
+  tabid, (U ﹏ U) // optionaw i-integew
+  cawwback, 😳😳😳 // optionaw f-function
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabId` {{optional_inline}}
-  - : `integer`. Par défaut à l'onglet actif de la fenêtre en cours.
-- `callback` {{optional_inline}}
-  - : `function`. Actuellement, si un `tabId` est spécifié, cette méthode utilise ce rappel pour renvoyer les résultats au lieu de renvoyer une promesse. Le rappel reçoit comme seul paramètre d'entrée une chaîne de caractères contenant le code de langue détecté `en` ou `fr`.
+- `tabid` {{optionaw_inwine}}
+  - : `integew`. >w< paw défaut à w'ongwet actif d-de wa fenêtwe en couws. XD
+- `cawwback` {{optionaw_inwine}}
+  - : `function`. o.O a-actuewwement, mya s-si un `tabid` est spécifié, 🥺 cette méthode utiwise ce wappew pouw wenvoyew w-wes wésuwtats au wieu de wenvoyew une pwomesse. ^^;; we wappew weçoit comme s-seuw pawamètwe d'entwée une chaîne d-de cawactèwes c-contenant we c-code de wangue d-détecté `en` ou `fw`. :3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)qui sera remplie avec une chaîne représentant un code de langue ISO tel que `en` ou `fr`. Pour une liste complète des langues prises en charge par cette méthode, see [kLanguageInfoTable](https://src.chromium.org/viewvc/chrome/trunk/src/third_party/cld/languages/internal/languages.cc#l23). Pour une langue inconnue, `"und"` sera retourné (mais voir [bug 1288263](https://bugzilla.mozilla.org/show_bug.cgi?id=1288263)). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)qui sewa wempwie avec u-une chaîne wepwésentant un code de wangue iso tew que `en` ou `fw`. (U ﹏ U) pouw une wiste compwète des w-wangues pwises en chawge paw c-cette méthode, s-see [kwanguageinfotabwe](https://swc.chwomium.owg/viewvc/chwome/twunk/swc/thiwd_pawty/cwd/wanguages/intewnaw/wanguages.cc#w23). OwO p-pouw une wangue inconnue, 😳😳😳 `"und"` sewa wetouwné (mais voiw [bug 1288263](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1288263)). (ˆ ﻌ ˆ)♡ s-si une ewweuw s-se pwoduit, XD wa pwomesse sewa wejetée a-avec un message d-d'ewweuw. (ˆ ﻌ ˆ)♡
 
-## Exemples
+## exempwes
 
-Détecter et enregistrer la langue de l'onglet actif lorsque l'utilisateur clique sur une action du navigateur :
+détectew e-et enwegistwew wa wangue d-de w'ongwet actif wowsque w'utiwisateuw cwique s-suw une action du nyavigateuw :
 
 ```js
-function onLanguageDetected(lang) {
-  console.log(`Language is: ${lang}`);
+f-function onwanguagedetected(wang) {
+  c-consowe.wog(`wanguage i-is: ${wang}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var detecting = browser.tabs.detectLanguage();
-  detecting.then(onLanguageDetected, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  vaw detecting = bwowsew.tabs.detectwanguage();
+  detecting.then(onwanguagedetected, ( ͡o ω ͡o ) o-onewwow);
 });
 ```
 
-Détecter et enregistrer la langue de chaque onglet ouvert lorsque l'utilisateur clique sur une action du navigateur (notez que cet exemple nécessite l [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions)) :
+d-détectew et enwegistwew w-wa wangue de chaque o-ongwet ouvewt w-wowsque w'utiwisateuw cwique suw une action du nyavigateuw (notez q-que cet exempwe nyécessite w [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions)) :
 
 ```js
-function onLanguageDetected(url, lang) {
-  console.log(`Language in ${url} is: ${lang}`);
+function onwanguagedetected(uww, w-wang) {
+  consowe.wog(`wanguage i-in ${uww} i-is: ${wang}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function detectLanguages(tabs) {
-  for (tab of tabs) {
-    var onFulfilled = onLanguageDetected.bind(null, tab.url);
-    var detecting = browser.tabs.detectLanguage(tab.id);
-    detecting.then(onFulfilled, onError);
+f-function d-detectwanguages(tabs) {
+  f-fow (tab of tabs) {
+    vaw onfuwfiwwed = o-onwanguagedetected.bind(nuww, rawr x3 t-tab.uww);
+    v-vaw detecting = b-bwowsew.tabs.detectwanguage(tab.id);
+    d-detecting.then(onfuwfiwwed, nyaa~~ onewwow);
   }
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var querying = browser.tabs.query({});
-  querying.then(detectLanguages, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  vaw quewying = b-bwowsew.tabs.quewy({});
+  quewying.then(detectwanguages, >_< onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) de chwomium. ^^;; cette documentation est déwivée d-de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code d-de chwomium code. (ˆ ﻌ ˆ)♡
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. (⑅˘꒳˘) a-aww wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and b-binawy fowms, (///ˬ///✿) with ow without
+// m-modification, 🥺 a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of s-souwce code must w-wetain the above copywight
+// nyotice, >_< t-this wist o-of conditions and the fowwowing d-discwaimew. UwU
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, t-this wist of conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws pwovided with the
+// distwibution. >_<
+//    * n-nyeithew the nyame of googwe inc. -.- nyow the nyames of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, >w< incwuding, (U ﹏ U) but nyot
+// w-wimited to, 😳😳😳 the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. o.O i-in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, òωó i-indiwect, incidentaw, 😳😳😳
+// s-speciaw, σωσ exempwawy, (⑅˘꒳˘) o-ow consequentiaw d-damages (incwuding, (///ˬ///✿) but not
+// wimited to, 🥺 pwocuwement o-of substitute g-goods ow s-sewvices; woss of use, OwO
+// data, ow pwofits; ow b-business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, >w< whethew in contwact, 🥺 stwict wiabiwity, o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// o-of this softwawe, nyaa~~ even if advised of the possibiwity of such damage. ^^
 -->

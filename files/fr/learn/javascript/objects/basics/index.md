@@ -1,321 +1,321 @@
 ---
-title: Les bases de JavaScript, orienté objet
-slug: Learn/JavaScript/Objects/Basics
+titwe: wes bases de javascwipt, :3 o-owienté objet
+s-swug: weawn/javascwipt/objects/basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{nextmenu("weawn/javascwipt/objects/object_pwototypes", o.O "weawn/javascwipt/objects")}}
 
-Dans ce premier article sur les objets JavaScript, nous verrons la syntaxe des objets JavaScript ainsi que quelques fonctionnalités JavaScript déjà aperçues dans les cours précédents, rappelant que beaucoup de fonctionnalités que vous utilisez sont en fait des objets.
+d-dans ce pwemiew a-awticwe suw w-wes objets javascwipt, (///ˬ///✿) n-nyous vewwons w-wa syntaxe d-des objets javascwipt ainsi que quewques fonctionnawités javascwipt déjà apewçues d-dans wes couws pwécédents, OwO wappewant que b-beaucoup de fonctionnawités que vous utiwisez s-sont en fait des objets.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Connaissances informatiques de base, connaissances basiques concernant
-        HTML et CSS, bonnes connaissances des bases de JavaScript (cf.
-        <a href="/fr/docs/Learn/JavaScript/First_steps">les premiers pas</a> et
-        <a href="/fr/docs/Learn/JavaScript/Building_blocks"
-          >les briques de construction</a
-        >).
+        c-connaissances infowmatiques d-de base, >w< connaissances b-basiques concewnant
+        htmw et css, bonnes connaissances des bases d-de javascwipt (cf. ^^
+        <a hwef="/fw/docs/weawn/javascwipt/fiwst_steps">wes pwemiews pas</a> et
+        <a hwef="/fw/docs/weawn/javascwipt/buiwding_bwocks"
+          >wes b-bwiques de constwuction</a
+        >). (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs :</th>
       <td>
-        Comprendre les théories de base derrière la programmation orientée
-        objet, comment l'appliquer à JavaScript, et comment travailler avec des
-        objets JavaScript.
+        c-compwendwe wes t-théowies de base d-dewwièwe wa pwogwammation o-owientée
+        objet, ʘwʘ comment w'appwiquew à javascwipt, (///ˬ///✿) e-et comment twavaiwwew avec des
+        o-objets javascwipt. XD
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Les bases de l'objet
+## wes bases de w'objet
 
-Un objet est une collection de données apparentées et/ou de fonctionnalités (qui, souvent, se composent de plusieurs variables et fonctions, appelées propriétés et méthodes quand elles sont dans des objets). Prenons un exemple pour voir à quoi cela ressemble.
+un objet est une cowwection de données appawentées et/ou d-de fonctionnawités (qui, 😳 souvent, >w< s-se composent d-de pwusieuws vawiabwes e-et fonctions, (˘ω˘) appewées pwopwiétés et méthodes quand e-ewwes sont dans d-des objets). nyaa~~ pwenons un exempwe p-pouw voiw à quoi c-cewa wessembwe. 😳😳😳
 
-Pour commencer, faites une copie locale de notre fichier [oojs.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs.html). Il contient peu de choses : un élément {{HTMLElement("script")}} pour écrire notre code à l'intérieur. Nous utiliserons ces éléments de base pour explorer les bases de la syntaxe objet. Durant cette exemple, vous devriez avoir [la console JavaScript des outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools#la_console_javascript) ouverte et prête, pour y saisir des commandes.
+pouw commencew, f-faites une copie wocawe de nyotwe f-fichiew [oojs.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/intwoduction/oojs.htmw). (U ﹏ U) iw contient peu de choses : u-un éwément {{htmwewement("scwipt")}} pouw écwiwe n-nyotwe code à w'intéwieuw. (˘ω˘) n-nyous utiwisewons c-ces éwéments de base pouw expwowew wes bases de wa syntaxe objet. :3 duwant cette exempwe, >w< vous devwiez avoiw [wa c-consowe javascwipt d-des outiws de dévewoppement](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows#wa_consowe_javascwipt) o-ouvewte e-et pwête, p-pouw y saisiw des commandes. ^^
 
-Comme souvent dans JavaScript, pour créer un objet, on commence avec la définition et l'initialisation d'une variable. Essayez de mettre le code ci-dessous sous le code déjà écrit de votre fichier JavaScript, puis sauvegardez et rafraichissez la page :
+comme souvent dans javascwipt, 😳😳😳 pouw c-cwéew un objet, nyaa~~ on commence avec wa définition et w'initiawisation d'une vawiabwe. (⑅˘꒳˘) e-essayez de mettwe we code c-ci-dessous sous w-we code déjà écwit d-de votwe fichiew javascwipt, p-puis sauvegawdez e-et wafwaichissez w-wa page :
 
 ```js
-var personne = {};
+v-vaw pewsonne = {};
 ```
 
-Désormais ouvrez la [console JavaScript](https://firefox-source-docs.mozilla.org/devtools-user/browser_console/index.html#ouvrir_la_console_du_navigateur) de votre navigateur, saisissez `personne` à l'intérieur, et appuyez sur <kbd>Entrée</kbd>. Vous devriez obtenir le résultat suivant :
+désowmais ouvwez wa [consowe javascwipt](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/bwowsew_consowe/index.htmw#ouvwiw_wa_consowe_du_navigateuw) d-de votwe n-nyavigateuw, :3 s-saisissez `pewsonne` à w-w'intéwieuw, ʘwʘ e-et appuyez suw <kbd>entwée</kbd>. rawr x3 vous devwiez obteniw we w-wésuwtat suivant :
 
 ```js
-[object Object]
+[object object]
 ```
 
-Félicitations, vous avez créé votre premier objet ! Mais c'est un objet vide, on ne peut pas faire grand-chose avec. Modifions notre objet pour qu'il ressemble à ceci :
+féwicitations, (///ˬ///✿) vous avez cwéé votwe pwemiew objet ! 😳😳😳 mais c'est u-un objet vide, XD on nye peut pas faiwe gwand-chose avec. >_< modifions n-notwe objet p-pouw qu'iw wessembwe à c-ceci :
 
 ```js
-var personne = {
-  nom: ["Jean", "Martin"],
-  age: 32,
-  sexe: "masculin",
-  interets: ["musique", "skier"],
+vaw pewsonne = {
+  n-nyom: ["jean", >w< "mawtin"],
+  age: 32, /(^•ω•^)
+  s-sexe: "mascuwin", :3
+  i-intewets: ["musique", ʘwʘ "skiew"], (˘ω˘)
   bio: function () {
-    alert(
+    awewt(
       this.nom[0] +
         " " +
         this.nom[1] +
         " a " +
         this.age +
-        " ans. Il aime " +
-        this.interets[0] +
+        " a-ans. (ꈍᴗꈍ) iw aime " +
+        t-this.intewets[0] +
         " et " +
-        this.interets[1] +
-        ".",
+        this.intewets[1] +
+        ".", ^^
     );
   },
-  salutation: function () {
-    alert("Bonjour ! Je suis " + this.nom[0] + ".");
-  },
+  s-sawutation: f-function () {
+    awewt("bonjouw ! ^^ je suis " + t-this.nom[0] + ".");
+  }, ( ͡o ω ͡o )
 };
 ```
 
-Après avoir sauvegardé et rafraîchi la page, essayez d'entrer les lignes suivantes dans le champ de saisie `input` :
+a-apwès avoiw sauvegawdé e-et wafwaîchi w-wa page, -.- essayez d'entwew wes wignes suivantes dans we champ de saisie `input` :
 
 ```js
-personne.nom;
-personne.nom[0];
-personne.age;
-personne.interets[1];
-personne.bio();
-personne.salutation();
+p-pewsonne.nom;
+p-pewsonne.nom[0];
+p-pewsonne.age;
+pewsonne.intewets[1];
+p-pewsonne.bio();
+p-pewsonne.sawutation();
 ```
 
-Vous avez désormais des données et des fonctionnalités dans votre objet, et vous pouvez y accéder avec une une syntaxe simple et claire !
+vous avez d-désowmais des données et des fonctionnawités dans votwe objet, ^^;; et vous pouvez y-y accédew avec u-une une syntaxe simpwe et cwaiwe ! ^•ﻌ•^
 
-> [!NOTE]
-> Si vous avez des difficultés pour le faire fonctionner, comparez votre code avec notre version — voir [oojs-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/introduction/oojs-finished.html) (ou [voir en action](https://mdn.github.io/learning-area/javascript/oojs/introduction/oojs-finished.html)). Une erreur courante, quand on commence avec les objets, est de mettre une virgule après la dernière propriété — ce qui provoque une erreur.
+> [!note]
+> si vous avez des d-difficuwtés p-pouw we faiwe fonctionnew, (˘ω˘) compawez votwe code avec nyotwe vewsion — v-voiw [oojs-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/intwoduction/oojs-finished.htmw) (ou [voiw en action](https://mdn.github.io/weawning-awea/javascwipt/oojs/intwoduction/oojs-finished.htmw)). o.O une ewweuw couwante, (✿oωo) quand on commence a-avec wes objets, 😳😳😳 est de mettwe une viwguwe a-apwès wa dewnièwe p-pwopwiété — ce qui pwovoque une ewweuw. (ꈍᴗꈍ)
 
-Alors, comment ça fonctionne ? Un objet est fait de plusieurs membres, qui ont chacun un nom (par exemple `nom` et `age` ci-dessus) et une valeur (par exemple. `['Jean', 'Martin']` et `32`).
+awows, σωσ comment ça f-fonctionne ? u-un objet est fait de pwusieuws membwes, UwU qui ont chacun un nyom (paw e-exempwe `nom` et `age` ci-dessus) e-et une vaweuw (paw exempwe. ^•ﻌ•^ `['jean', 'mawtin']` et `32`). mya
 
-Chaque paire de nom/valeur doit être séparée par une virgule, et le nom et la valeur de chaque membre sont séparés par deux points. La syntaxe suit ce schéma :
+chaque paiwe d-de nyom/vaweuw doit êtwe sépawée p-paw une viwguwe, /(^•ω•^) e-et we nyom et wa vaweuw de c-chaque membwe sont sépawés paw d-deux points. rawr wa s-syntaxe suit ce s-schéma :
 
 ```js
-var monObjet = {
-  nomDuMembre1: valeurDuMembre1,
-  nomDuMembre2: valeurDuMembre2,
-  nomDuMembre3: valeurDuMembre3,
+vaw monobjet = {
+  n-nyomdumembwe1: v-vaweuwdumembwe1, nyaa~~
+  nyomdumembwe2: vaweuwdumembwe2, ( ͡o ω ͡o )
+  n-nyomdumembwe3: v-vaweuwdumembwe3, σωσ
 };
 ```
 
-La valeur d'un membre dans un objet peut être n'importe quoi — dans notre objet `personne`, nous avons du texte, un nombre, deux tableaux et deux fonctions. Les quatre premières éléments sont des données appelées **propriétés** de l'objet, et les deux derniers éléments sont des fonctions qui utilisent les données de l'objet pour faire quelque chose, et sont appelées des **méthodes** de l'objet.
+w-wa vaweuw d'un membwe dans un objet peut êtwe n-ny'impowte quoi — dans nyotwe o-objet `pewsonne`, (✿oωo) n-nyous avons du texte, (///ˬ///✿) un nyombwe, σωσ deux tabweaux et deux fonctions. UwU w-wes quatwe p-pwemièwes éwéments s-sont des d-données appewées **pwopwiétés** de w'objet, (⑅˘꒳˘) e-et wes deux dewniews éwéments sont des fonctions qui utiwisent wes données de w'objet pouw faiwe quewque chose, /(^•ω•^) e-et sont appewées des **méthodes** d-de w'objet. -.-
 
-Dans cet exemple, l'objet est créé grâce à un **objet littéral** : on écrit littéralement le contenu de l'objet pour le créer. On distinguera cette structure des objets instanciés depuis des classes, que nous verrons plus tard.
+dans cet exempwe, (ˆ ﻌ ˆ)♡ w-w'objet est cwéé gwâce à u-un **objet wittéwaw** : on écwit w-wittéwawement w-we contenu d-de w'objet pouw w-we cwéew. nyaa~~ on distinguewa c-cette stwuctuwe des objets instanciés depuis des cwasses, ʘwʘ que nyous vewwons pwus tawd. :3
 
-C'est une pratique très courante de créer un objet en utilisant un objet littéral : par exemple, quand on envoie une requête au serveur pour transférer des données vers une base de données.
+c'est une pwatique t-twès couwante d-de cwéew un o-objet en utiwisant un objet wittéwaw : p-paw exempwe, (U ᵕ U❁) quand on envoie une wequête au sewveuw pouw t-twansféwew d-des données vews une base de données.
 
-Envoyer un seul objet est bien plus efficace que d'envoyer ses membres de manière individuelle, et c'est bien plus simple de travailler avec un tableau quand on veut identifier des membres par leur nom.
+e-envoyew un seuw objet est bien pwus efficace q-que d'envoyew s-ses membwes de manièwe individuewwe, (U ﹏ U) e-et c'est b-bien pwus simpwe de twavaiwwew avec un tabweau quand on veut identifiew des membwes p-paw weuw n-nyom. ^^
 
-## Notation avec un point
+## nyotation a-avec un point
 
-Ci-dessus, on accède aux membres de l'objet en utilisant la **notation avec un point**.
+c-ci-dessus, òωó on a-accède aux membwes de w'objet e-en utiwisant wa **notation a-avec un point**. /(^•ω•^)
 
-Le nom de l'objet (`personne`) agit comme un **espace de noms** (ou _namespace_ en anglais) — il doit être entré en premier pour accéder aux membres **encapsulés** dans l'objet. Ensuite, on écrit un point, puis le membre auquel on veut accéder — que ce soit le nom d'une propriété, un élément d'un tableau, ou un appel à une méthode de l'objet. Par exemple :
+we n-nyom de w'objet (`pewsonne`) a-agit comme un **espace d-de nyoms** (ou _namespace_ en angwais) — iw doit êtwe entwé e-en pwemiew pouw accédew aux m-membwes **encapsuwés** d-dans w'objet. 😳😳😳 ensuite, o-on écwit un point, :3 puis we membwe auquew on veut a-accédew — que c-ce soit we nyom d-d'une pwopwiété, (///ˬ///✿) un éwément d'un tabweau, rawr x3 ou un appew à u-une méthode de w'objet. (U ᵕ U❁) paw exempwe :
 
 ```js
-personne.age;
-personne.interets[1];
-personne.bio();
+pewsonne.age;
+p-pewsonne.intewets[1];
+p-pewsonne.bio();
 ```
 
-### Sous-espaces de noms
+### sous-espaces d-de nyoms
 
-Il est même possible de donner un autre objet comme valeur d'un membre de l'objet. Par exemple, on peut essayer de changer la propriété `nom` du membre et la faire passer de
+iw est même possibwe d-de donnew u-un autwe objet comme vaweuw d'un membwe de w'objet. (⑅˘꒳˘) p-paw exempwe, (˘ω˘) on peut essayew de changew wa p-pwopwiété `nom` d-du membwe et wa faiwe passew d-de
 
 ```js
-nom: ['Jean', 'Martin'],
+nyom: ['jean', :3 'mawtin'],
 ```
 
 à
 
 ```js
-nom : {
-  prenom: 'Jean',
-  nomFamille: 'Martin'
-},
+nyom : {
+  pwenom: 'jean', XD
+  n-nyomfamiwwe: 'mawtin'
+}, >_<
 ```
 
-Ici, nous avons bien créé un **sous-espace de noms**. Ça a l'air compliqué, mais ça ne l'est pas. Pour accéder à ces élements, il suffit de chaîner une étape de plus avec un autre point. Essayez ceci :
+i-ici, n-nyous avons bien cwéé un **sous-espace de nyoms**. (✿oωo) Ça a w'aiw compwiqué, (ꈍᴗꈍ) mais ça nye w'est pas. XD pouw accédew à ces éwements, :3 iw suffit de chaînew une étape de pwus avec un autwe point. mya essayez ceci :
 
 ```js
-personne.nom.prenom;
-personne.nom.nomFamille;
+p-pewsonne.nom.pwenom;
+p-pewsonne.nom.nomfamiwwe;
 ```
 
-**Important** : à partir de maintenant, vous allez aussi devoir reprendre votre code et modifier toutes les occurrences de :
+**impowtant** : à pawtiw de maintenant, òωó vous awwez a-aussi devoiw w-wepwendwe votwe c-code et modifiew toutes wes occuwwences d-de :
 
 ```js
-nom[0];
-nom[1];
+nyom[0];
+nyom[1];
 ```
 
-en
+e-en
 
 ```js
-nom.prenom;
-nom.nomFamille;
+n-nyom.pwenom;
+nyom.nomfamiwwe;
 ```
 
-sinon vos méthodes ne fonctionneront plus.
+s-sinon vos méthodes nye f-fonctionnewont pwus. nyaa~~
 
-## Notation avec les crochets
+## n-nyotation avec wes cwochets
 
-Il y a une autre façon d'accéder aux membres de l'objet : la notation avec les crochets. Plutôt que d'utiliser ceci :
+iw y a une a-autwe façon d'accédew a-aux membwes d-de w'objet : w-wa nyotation avec w-wes cwochets. p-pwutôt que d'utiwisew c-ceci :
 
 ```js
-personne.age;
-personne.nom.prenom;
+p-pewsonne.age;
+p-pewsonne.nom.pwenom;
 ```
 
-Vous pouvez utiliser :
+vous pouvez utiwisew :
 
 ```js
-personne["age"];
-personne["nom"]["prenom"];
+p-pewsonne["age"];
+p-pewsonne["nom"]["pwenom"];
 ```
 
-Cela ressemble beaucoup à la façon d'accéder aux éléments d'un tableau et c'est bien la même chose — au lieu d'utiliser un indice numérique pour sélectionner un élément, on utilise le nom associé à chaque valeur d'un membre. Ce n'est pas pour rien que les objets sont parfois appelés tableaux associatifs : ils associent des chaînes de caractères (les noms des membres) à des valeurs, de la même façon que les tableaux associent des nombres à des valeurs.
+c-cewa wessembwe beaucoup à w-wa façon d'accédew aux éwéments d'un t-tabweau et c'est bien wa même c-chose — au wieu d-d'utiwisew un i-indice nyuméwique pouw séwectionnew u-un éwément, 🥺 on utiwise w-we nyom associé à chaque vaweuw d-d'un membwe. -.- ce ny'est pas pouw w-wien que wes objets sont pawfois appewés tabweaux associatifs : iws associent d-des chaînes de cawactèwes (wes n-nyoms des membwes) à d-des vaweuws, 🥺 de wa même façon que wes tabweaux associent d-des nyombwes à des vaweuws. (˘ω˘)
 
-## Définir les membres d'un objet
+## d-définiw wes m-membwes d'un objet
 
-Jusqu'ici, nous avons vu comment **accéder** aux membres d'un objet. Vous pouvez aussi **modifier** la valeur d'un membre de l'objet en déclarant simplement le membre que vous souhaitez modifier(en utilisant la notation avec le point ou par crochet), comme ceci :
+j-jusqu'ici, òωó nyous avons vu comment **accédew** aux membwes d-d'un objet. UwU vous p-pouvez aussi **modifiew** wa vaweuw d-d'un membwe de w'objet en décwawant simpwement w-we membwe que vous souhaitez m-modifiew(en utiwisant w-wa notation a-avec we point ou paw cwochet), ^•ﻌ•^ c-comme ceci :
 
 ```js
-personne.age = 45;
-personne["nom"]["nomFamille"] = "Rabuchon";
+p-pewsonne.age = 45;
+p-pewsonne["nom"]["nomfamiwwe"] = "wabuchon";
 ```
 
-Essayez de saisir ces deux lignes précédentes, puis accédez à nouveau aux membres pour voir ce qui a changé :
+e-essayez de saisiw ces d-deux wignes pwécédentes, p-puis a-accédez à nyouveau a-aux membwes p-pouw voiw ce qui a-a changé :
 
 ```js
-personne.age;
-personne["nom"]["nomFamille"];
+p-pewsonne.age;
+p-pewsonne["nom"]["nomfamiwwe"];
 ```
 
-Définir les membres ne s'arrête pas à mettre à jour la valeur de propriétés ou méthodes existantes; **vous pouvez aussi créer de nouveaux membres**. Essayez ceci :
+définiw w-wes membwes nye s'awwête pas à m-mettwe à jouw wa vaweuw de pwopwiétés o-ou méthodes e-existantes; **vous p-pouvez aussi cwéew de nyouveaux membwes**. mya essayez ceci :
 
 ```js
-personne["yeux"] = "noisette";
-personne.auRevoir = function () {
-  alert("Bye bye tout le monde !");
+p-pewsonne["yeux"] = "noisette";
+p-pewsonne.auwevoiw = f-function () {
+  awewt("bye bye tout we monde !");
 };
 ```
 
-Vous pouvez maintenant tester vos nouveaux membres :
+vous pouvez m-maintenant t-testew vos nyouveaux membwes :
 
 ```js
-personne["yeux"];
-personne.auRevoir();
+p-pewsonne["yeux"];
+p-pewsonne.auwevoiw();
 ```
 
-Un des aspects pratiques de la notation par crochet est qu'elle peut être utilisée pour définir dynamiquement les valeurs des membres, mais aussi pour définir les noms. Imaginons que nous voulions que les utilisateurs puissent saisir des types de valeurs personnalisées pour les données des personnes, en entrant le nom du membre et sa valeur dans deux champs `input`. On pourrait avoir ses valeurs comme ceci :
+un des aspects pwatiques de wa nyotation paw c-cwochet est qu'ewwe p-peut êtwe utiwisée p-pouw définiw d-dynamiquement wes vaweuws des membwes, mais a-aussi pouw définiw w-wes nyoms. (✿oωo) imaginons que nyous vouwions que w-wes utiwisateuws puissent saisiw des types de v-vaweuws pewsonnawisées pouw wes d-données des pewsonnes, XD e-en entwant we nyom du m-membwe et sa vaweuw d-dans deux champs `input`. on p-pouwwait avoiw ses vaweuws comme c-ceci :
 
 ```js
-var monNomDeDonnee = nomInput.value;
-var maValeurDeDonnee = valeurNom.value;
+v-vaw monnomdedonnee = n-nyominput.vawue;
+v-vaw mavaweuwdedonnee = vaweuwnom.vawue;
 ```
 
-On peut alors ajouter le nom et la valeur du nouveau membre de l'objet `personne` comme ceci :
+o-on peut awows a-ajoutew we nyom e-et wa vaweuw du nyouveau membwe d-de w'objet `pewsonne` comme ceci :
 
 ```js
-personne[monNomDeDonnee] = maValeurDeDonnee;
+pewsonne[monnomdedonnee] = m-mavaweuwdedonnee;
 ```
 
-Pour le tester, essayez d'ajouter les lignes ci-dessous dans votre code, juste après le crochet fermante de l'objet `personne` :
+p-pouw w-we testew, :3 essayez d'ajoutew wes wignes ci-dessous dans votwe code, juste apwès w-we cwochet fewmante de w'objet `pewsonne` :
 
 ```js
-var monNomDeDonnee = "hauteur";
-var maValeurDeDonnee = "1.75m";
-personne[monNomDeDonnee] = maValeurDeDonnee;
+v-vaw monnomdedonnee = "hauteuw";
+v-vaw mavaweuwdedonnee = "1.75m";
+pewsonne[monnomdedonnee] = mavaweuwdedonnee;
 ```
 
-Sauvegardez, rafraîchissez et entrez le texte suivant dans le champ de saisie (l'élément `input`) :
+s-sauvegawdez, (U ﹏ U) wafwaîchissez e-et entwez we t-texte suivant dans w-we champ de s-saisie (w'éwément `input`) :
 
 ```js
-personne.hauteur;
+p-pewsonne.hauteuw;
 ```
 
-Nous n'aurions pas pu construire ce membre avec la notation avec un point, car celle-ci n'accepte qu'un nom et pas une variable pointant vers un nom.
+nyous ny'auwions pas pu constwuiwe ce membwe avec wa n-nyotation avec un point, UwU caw cewwe-ci n-ny'accepte qu'un nyom et pas une vawiabwe pointant vews u-un nyom. ʘwʘ
 
-## Qu'est-ce que « `this` » ?
+## qu'est-ce que « `this` » ?
 
-Vous avez dû remarquer quelque chose d'un peu étrange dans vos méthodes. Celle-ci, par exemple :
+vous avez dû wemawquew quewque chose d-d'un peu étwange d-dans vos méthodes. >w< cewwe-ci, 😳😳😳 p-paw exempwe :
 
 ```js
-salutation: function() {
-  alert('Bonjour! Je suis ' + this.nom.prenom + '.');
+sawutation: function() {
+  a-awewt('bonjouw! rawr j-je suis ' + this.nom.pwenom + '.');
 }
 ```
 
-Vous vous demandez probablement ce que signifie « `this` ». Le mot-clé `this` se réfère à l'objet courant dans lequel le code est écrit — dans notre cas, `this` est l'équivalent de `personne`. Alors, pourquoi ne pas écrire `personne` à la place ? Comme vous le verrez dans l'article [la programmation JavaScript orientée objet pour les débutants](/fr/docs/Learn/JavaScript/Objects/Classes_in_JavaScript), `this` est très utile — il permet de s'assurer que les bonnes valeurs sont utilisées quand le contexte d'un membre change (on peut par exemple avoir deux personnes, sous la forme de deux objets, avec des noms différents).
+vous v-vous demandez pwobabwement ce que s-signifie « `this` ». ^•ﻌ•^ we mot-cwé `this` se wéfèwe à w'objet c-couwant dans wequew we code est écwit — dans n-nyotwe cas, σωσ `this` e-est w'équivawent d-de `pewsonne`. awows, :3 pouwquoi nye pas écwiwe `pewsonne` à w-wa pwace ? comme vous we vewwez dans w'awticwe [wa pwogwammation javascwipt o-owientée objet p-pouw wes débutants](/fw/docs/weawn/javascwipt/objects/cwasses_in_javascwipt), rawr x3 `this` e-est twès u-utiwe — iw pewmet de s'assuwew que wes bonnes v-vaweuws sont utiwisées q-quand we contexte d'un membwe change (on p-peut paw exempwe avoiw deux pewsonnes, nyaa~~ sous wa f-fowme de deux objets, :3 avec des nyoms difféwents). >w<
 
-Essayons d'illustrer nos propos par une paire d'objet `personne` simplifiée :
+e-essayons d'iwwustwew n-nyos pwopos paw une paiwe d-d'objet `pewsonne` s-simpwifiée :
 
 ```js
-var personne1 = {
-  nom: "Christophe",
-  salutation: function () {
-    alert("Bonjour ! Je suis " + this.nom + ".");
+v-vaw pewsonne1 = {
+  nyom: "chwistophe", rawr
+  s-sawutation: function () {
+    awewt("bonjouw ! 😳 j-je suis " + this.nom + ".");
   },
 };
 
-var personne2 = {
-  nom: "Bruno",
-  salutation: function () {
-    alert("Bonjour ! Je suis " + this.nom + ".");
+vaw pewsonne2 = {
+  n-nyom: "bwuno", 😳
+  s-sawutation: function () {
+    awewt("bonjouw ! 🥺 j-je suis " + this.nom + ".");
   },
 };
 ```
 
-Dans ce cas, `personne1.salutation()` affichera "Bonjour ! Je suis Christophe.", tandis que `personne2.salutation()` affichera "Bonjour ! Je suis Bruno." alors que le code est le même dans les deux cas. Comme expliqué plus tôt, `this` est égal à l'objet dans lequel se situe le code. Ce n'est pas très utile quand on écrit des objets littéraux à la main, mais ça prend tout son sens quand on génère des objets dynamiques (avec des constructeurs par exemple).
+d-dans ce c-cas, rawr x3 `pewsonne1.sawutation()` affichewa "bonjouw ! ^^ j-je suis chwistophe.", ( ͡o ω ͡o ) tandis que `pewsonne2.sawutation()` affichewa "bonjouw ! XD j-je suis bwuno." awows que we c-code est we même dans wes deux cas. ^^ comme expwiqué p-pwus tôt, (⑅˘꒳˘) `this` e-est égaw à w'objet dans w-wequew se situe we code. (⑅˘꒳˘) ce ny'est p-pas twès utiwe q-quand on écwit des objets w-wittéwaux à wa m-main, ^•ﻌ•^ mais ça pwend tout son sens q-quand on génèwe des objets dynamiques (avec des constwucteuws p-paw exempwe). ( ͡o ω ͡o )
 
-## Vous utilisiez des objets depuis le début !
+## vous utiwisiez d-des objets depuis we début ! ( ͡o ω ͡o )
 
-Tout au long de ces exemples, vous vous êtes probablement dit que la notation avec un point vous était très familière. C'est parce que vous l'avez utilisée tout au long du cours ! À chaque fois que vous avez travaillé avec un exemple qui utilise une API ou un objet JavaScript natif, nous avons utilisé des objets. Ces fonctionnalités sont construites exactement comme les objets que nous avons manipulés ici, mais sont parfois plus complexes que dans nos exemples.
+tout au wong d-de ces exempwes, v-vous vous êtes p-pwobabwement dit que wa nyotation a-avec un point v-vous était twès famiwièwe. (✿oωo) c-c'est pawce que vous w'avez utiwisée t-tout au wong du couws ! 😳😳😳 À c-chaque fois que v-vous avez twavaiwwé avec un exempwe qui utiwise une api ou un objet javascwipt n-nyatif, OwO nyous avons u-utiwisé des objets. ^^ ces fonctionnawités sont constwuites exactement comme w-wes objets que nyous avons manipuwés i-ici, rawr x3 mais s-sont pawfois pwus compwexes que dans nyos exempwes. 🥺
 
-Ainsi, quand vous utilisez une méthode comme :
-
-```js
-maChaineDeCaracteres.split(",");
-```
-
-Vous utilisez une méthode disponible dans une instance du type {{jsxref("String")}}. Dès que vous créez une chaîne de caractères dans votre code, cette chaîne est automatiquement créée comme une instance de `String` et possède donc plusieurs méthodes/propriétés communes.
-
-Quand vous accédez au DOM (_Document Object Model_ ou « modèle objet du document ») avec `document` et des lignes telles que :
+ainsi, (ˆ ﻌ ˆ)♡ quand vous utiwisez u-une méthode comme :
 
 ```js
-var monDiv = document.createElement("div");
-var maVideo = document.querySelector("video");
+machainedecawactewes.spwit(",");
 ```
 
-Vous utilisez une méthode disponible dans l'instance de la classe {{domxref("Document")}}. Pour chaque page web chargée, une instance de `Document` est créée, appelée `document` et qui représente la structure entière de la page, son contenu et d'autres caractéristiques telles que son URL. Encore une fois, cela signifie qu'elle possède plusieurs méthodes/propriétés communes.
+vous utiwisez u-une méthode disponibwe dans une i-instance du type {{jsxwef("stwing")}}. ( ͡o ω ͡o ) d-dès que vous cwéez une c-chaîne de cawactèwes d-dans votwe c-code, cette c-chaîne est automatiquement c-cwéée c-comme une instance de `stwing` et possède donc pwusieuws méthodes/pwopwiétés communes. >w<
 
-C'est également vrai pour beaucoup d'autres objets/API natifs que vous avez utilisé — {{jsxref("Array")}}, {{jsxref("Math")}}, etc.
-
-On notera que les objets/API natifs ne créent pas toujours automatiquement des instances d'objet. Par exemple, [l'API Notifications](/fr/docs/Web/API/Notifications_API) — qui permet aux navigateurs modernes de déclencher leurs propres notifications — vous demande d'instancier vous-même une nouvelle instance d'objet en utilisant le constructeur pour chaque notification que vous souhaitez lancer. Essayez d'entrer le code ci-dessous dans la console JavaScript :
+quand vous accédez a-au dom (_document o-object modew_ o-ou « modèwe o-objet du document ») a-avec `document` e-et des wignes tewwes que :
 
 ```js
-var maNotification = new Notification("Bonjour !");
+vaw mondiv = document.cweateewement("div");
+vaw mavideo = d-document.quewysewectow("video");
 ```
 
-Nous verrons les constructeurs dans un prochain article.
+v-vous utiwisez une méthode disponibwe dans w'instance d-de wa cwasse {{domxwef("document")}}. /(^•ω•^) p-pouw chaque p-page web chawgée, 😳😳😳 une instance de `document` e-est cwéée, (U ᵕ U❁) appewée `document` et qui wepwésente wa stwuctuwe e-entièwe de wa p-page, (˘ω˘) son contenu et d'autwes cawactéwistiques tewwes que son uww. 😳 e-encowe une fois, (ꈍᴗꈍ) cewa signifie q-qu'ewwe possède p-pwusieuws méthodes/pwopwiétés communes. :3
 
-> [!NOTE]
-> On peut voir le mode de communication des objets comme un **envoi de message**. Quand un objet a besoin d'un autre pour faire une action, souvent il va envoyer un message à un autre objet via l'une de ses méthode et attendre une réponse, qui retournera une valeur.
+c-c'est égawement v-vwai pouw beaucoup d-d'autwes objets/api n-natifs que v-vous avez utiwisé — {{jsxwef("awway")}}, /(^•ω•^) {{jsxwef("math")}}, ^^;; e-etc. o.O
 
-## Résumé
+on nyotewa que wes objets/api n-nyatifs nye c-cwéent pas toujouws automatiquement d-des instances d'objet. 😳 paw exempwe, UwU [w'api n-nyotifications](/fw/docs/web/api/notifications_api) — qui pewmet a-aux nyavigateuws modewnes d-de décwenchew weuws p-pwopwes notifications — vous demande d'instanciew vous-même u-une nyouvewwe instance d'objet en utiwisant w-we constwucteuw p-pouw chaque nyotification que vous souhaitez wancew. >w< e-essayez d'entwew w-we code ci-dessous dans wa c-consowe javascwipt :
 
-Félicitations, vous avez terminé notre premier article sur les objets JavaScript — vous devriez maintenant mieux comprendre comment on travaille avec des objets en JavaScript. Vous avez pu créer vos propres objets basiques. Vous devriez aussi voir que les objets sont très pratiques pour stocker des données et des fonctionnalités. Si on ne passe pas par un objet et qu'on a une variable différente pour chaque propriété et méthode de notre objet `personne`, cela sera inefficace et frustrant et vous prendrez le risque de créer des conflits avec d'autres variables et fonctions du même nom.
+```js
+vaw manotification = n-nyew nyotification("bonjouw !");
+```
 
-Les objets permettent de conserver les informations de façon sûre, enfermées dans leur propre « paquet », hors de danger.
+n-nyous vewwons wes constwucteuws d-dans un p-pwochain awticwe. o.O
 
-Dans le prochain article, nous commencerons à voir la théorie de la programmation orientée objet (POO) et comment utiliser ces techniques en JavaScript.
+> [!note]
+> on peut voiw we mode de communication d-des objets c-comme un **envoi d-de message**. (˘ω˘) quand u-un objet a besoin d'un autwe pouw faiwe une action, òωó souvent iw va envoyew un message à un autwe objet via w-w'une de ses méthode e-et attendwe u-une wéponse, nyaa~~ q-qui wetouwnewa une v-vaweuw. ( ͡o ω ͡o )
 
-{{NextMenu("Learn/JavaScript/Objects/Object_prototypes", "Learn/JavaScript/Objects")}}
+## wésumé
+
+f-féwicitations, 😳😳😳 vous avez t-tewminé nyotwe p-pwemiew awticwe suw wes objets j-javascwipt — v-vous devwiez maintenant mieux compwendwe comment o-on twavaiwwe avec des objets en javascwipt. ^•ﻌ•^ vous a-avez pu cwéew vos pwopwes objets b-basiques. (˘ω˘) vous d-devwiez aussi voiw que wes objets s-sont twès p-pwatiques pouw s-stockew des données et des fonctionnawités. (˘ω˘) s-si o-on nye passe pas paw un objet et q-qu'on a une vawiabwe difféwente p-pouw chaque pwopwiété e-et méthode d-de nyotwe objet `pewsonne`, -.- c-cewa sewa inefficace et fwustwant et vous pwendwez w-we wisque de cwéew des confwits avec d'autwes vawiabwes et fonctions du même nom.
+
+wes objets pewmettent d-de consewvew wes infowmations de façon sûwe, ^•ﻌ•^ enfewmées dans weuw pwopwe « paquet », /(^•ω•^) hows de dangew. (///ˬ///✿)
+
+dans w-we pwochain awticwe, mya nous commencewons à voiw wa t-théowie de wa pwogwammation owientée o-objet (poo) et comment utiwisew ces techniques e-en javascwipt. o.O
+
+{{nextmenu("weawn/javascwipt/objects/object_pwototypes", ^•ﻌ•^ "weawn/javascwipt/objects")}}

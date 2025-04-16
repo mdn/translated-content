@@ -1,90 +1,90 @@
 ---
-title: Firefox 28 for developers
-slug: Mozilla/Firefox/Releases/28
+titwe: fiwefox 28 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/28
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 28 est sorti le 18 Mars 2014. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-ons.
+fiwefox 28 e-est sowti w-we 18 maws 2014. ^^;; c-cet awticwe w-wépewtowie wes m-modifications cwés q-qui sont utiwes n-nyon seuwement pouw wes dévewoppeuws web, mais aussi pouw wes dévewoppeuws f-fiwefox et gecko ainsi que pouw wes dévewoppeuws d-d'add-ons. (ˆ ﻌ ˆ)♡
 
-## Changements pour les développeurs Web
+## changements pouw w-wes dévewoppeuws web
 
-### Outils de développement
+### outiws de dévewoppement
 
-- La propriété {{domxref("console.exception")}} a été ajoutée ([bug Firefox 922214](https://bugzil.la/922214)).
-- La propriété {{domxref("console.assert")}} a été ajoutée ([bug Firefox 760193](https://bugzil.la/760193)).
-- Gestionnaire d'applications: un nouvel éditeur de manifeste a été ajouté.
-- Gestionnaire d'applications: la boîte à outils utilisée pour le débogage des applications est désormais intégrée dans l'interface utilisateur du gestionnaire d'applications.
-- Console Web: ajout d'un mode "console partagée" - appuyez sur Echap pour ouvrir rapidement la console dans n'importe quel autre outil.
-- Console Web: ajout d'un thème sombre pour la sortie.
-- Débogueur: JavaScript minifié pretty-print.
-- Débogueur: survolez simplement n'importe quelle variable ou cliquez dessus pour faire apparaître une fenêtre contextuelle qui affiche la valeur actuelle.
-- Inspecteur: ajout d'un sélecteur de couleur dans la vue des règles et de diverses info-bulles.
-- Browser Toolbox: permet aux développeurs d'add-on et de plates-formes d'utiliser presque tous les outils de développement tout en ciblant le navigateur lui-même.
+- wa pwopwiété {{domxwef("consowe.exception")}} a-a été ajoutée ([bug f-fiwefox 922214](https://bugziw.wa/922214)). ^^;;
+- w-wa pwopwiété {{domxwef("consowe.assewt")}} a été ajoutée ([bug fiwefox 760193](https://bugziw.wa/760193)). (⑅˘꒳˘)
+- gestionnaiwe d'appwications: un n-nyouvew éditeuw de manifeste a été ajouté. rawr x3
+- gestionnaiwe d'appwications: w-wa boîte à outiws utiwisée pouw w-we débogage d-des appwications e-est désowmais i-intégwée dans w'intewface utiwisateuw du gestionnaiwe d-d'appwications. (///ˬ///✿)
+- consowe web: ajout d'un m-mode "consowe pawtagée" - appuyez suw echap pouw ouvwiw wapidement wa consowe dans ny'impowte q-quew autwe outiw. 🥺
+- consowe web: a-ajout d'un thème s-sombwe pouw w-wa sowtie. >_<
+- débogueuw: javascwipt minifié pwetty-pwint. UwU
+- débogueuw: s-suwvowez s-simpwement ny'impowte quewwe vawiabwe o-ou cwiquez d-dessus pouw faiwe appawaîtwe u-une fenêtwe contextuewwe qui affiche w-wa vaweuw actuewwe. >_<
+- inspecteuw: ajout d'un s-séwecteuw de couweuw dans wa v-vue des wègwes et de divewses i-info-buwwes. -.-
+- b-bwowsew toowbox: pewmet aux dévewoppeuws d'add-on et de pwates-fowmes d'utiwisew pwesque tous wes outiws de dévewoppement t-tout e-en cibwant we nyavigateuw wui-même. mya
 
-Plus de détails dans [cet article](https://hacks.mozilla.org/2013/12/split-console-pretty-print-minified-js-and-more-firefox-developer-tools-episode-28/).
+p-pwus de détaiws d-dans [cet a-awticwe](https://hacks.moziwwa.owg/2013/12/spwit-consowe-pwetty-pwint-minified-js-and-mowe-fiwefox-devewopew-toows-episode-28/). >w<
 
-### CSS
+### css
 
-- Le support de la [flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) multi-lignes a été ajouté ([bug Firefox 939901](https://bugzil.la/939901)).
-- Les [styles de compteur](/fr/docs/Web/CSS/list-style-type) Longhand East Asian ont été implémentés ([bug Firefox 934072](https://bugzil.la/934072)).
-- La prise en charge expérimentale de la propriété {{cssxref("background-blend-mode")}} a été ajoutée, mais elle est désactivée par défaut ([bug Firefox 841601](https://bugzil.la/841601)).
-- La valeur `none` a été ajoutée à {{cssxref("font-variant-ligatures")}} ([bug Firefox 913264](https://bugzil.la/913264)).
-- Le support de la pseudo-classe d'action utilisateur {{cssxref(":hover")}} sur les pseudo-éléments a été implémenté ([bug Firefox 922669](https://bugzil.la/922669)).
+- we suppowt de wa [fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) muwti-wignes a-a été ajouté ([bug fiwefox 939901](https://bugziw.wa/939901)). (U ﹏ U)
+- wes [stywes de compteuw](/fw/docs/web/css/wist-stywe-type) wonghand e-east asian ont été impwémentés ([bug f-fiwefox 934072](https://bugziw.wa/934072)).
+- w-wa pwise e-en chawge expéwimentawe de wa p-pwopwiété {{cssxwef("backgwound-bwend-mode")}} a-a été ajoutée, 😳😳😳 m-mais ewwe est d-désactivée paw défaut ([bug fiwefox 841601](https://bugziw.wa/841601)). o.O
+- w-wa vaweuw `none` a-a été ajoutée à {{cssxwef("font-vawiant-wigatuwes")}} ([bug f-fiwefox 913264](https://bugziw.wa/913264)). òωó
+- we s-suppowt de wa p-pseudo-cwasse d'action utiwisateuw {{cssxwef(":hovew")}} suw wes pseudo-éwéments a-a été impwémenté ([bug fiwefox 922669](https://bugziw.wa/922669)). 😳😳😳
 
-### HTML
+### htmw
 
-- `<input type=color>` et `<input type=number>` ont été implémentés, désactivés par défaut.
+- `<input type=cowow>` et `<input type=numbew>` ont été impwémentés, σωσ désactivés p-paw défaut. (⑅˘꒳˘)
 
-### JavaScript
+### javascwipt
 
-- [ECMAScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) l'implémentation continue:
+- [ecmascwipt 6](/fw/docs/web/javascwipt/ecmascwipt_6_suppowt_in_moziwwa) (hawmony) w'impwémentation continue:
 
-  - De nouvelles méthodes `Array` ont été implémentées: {{jsxref("Array.prototype.entries()")}} et {{jsxref("Array.prototype.keys()")}} ([bug Firefox 894658](https://bugzil.la/894658)).
+  - de n-nyouvewwes méthodes `awway` o-ont été i-impwémentées: {{jsxwef("awway.pwototype.entwies()")}} et {{jsxwef("awway.pwototype.keys()")}} ([bug f-fiwefox 894658](https://bugziw.wa/894658)). (///ˬ///✿)
 
-- Un bug provoquant que {{jsxref("Object.getOwnPropertyNames()")}} ne voyait pas les propriétés non résolues des objets {{jsxref("Error")}} a été corrigé ([bug Firefox 724768](https://bugzil.la/724768)).
+- un b-bug pwovoquant que {{jsxwef("object.getownpwopewtynames()")}} n-nye voyait pas wes pwopwiétés nyon wésowues des objets {{jsxwef("ewwow")}} a été c-cowwigé ([bug fiwefox 724768](https://bugziw.wa/724768)). 🥺
 
-### Interfaces/APIs/DOM
+### i-intewfaces/apis/dom
 
-- `HTMLVideoElement.canPlayType('video/webm')` signale maintenant `maybe`. ([bug Firefox 884275](https://bugzil.la/884275)).
-- La méthode {{domxref("DocumentFragment.getElementById()")}} a été implémentée. Par exemple `document.createDocumentFragment().getElementById()` ([bug Firefox 933193](https://bugzil.la/933193)).
-- L'attribut {{domxref("KeyboardEvent.repeat")}} a été implémenté ([bug Firefox 600117](https://bugzil.la/600117)).
-- Le constructeur {{domxref("File")}}, par exemple `new File(["foo"], "foo.txt")` a été implémenté ([bug Firefox 819900](https://bugzil.la/819900)).
-- Le {{domxref("NavigatorPlugins.plugins", "navigator.plugins")}} n'est plus énumérable, pour des raisons de confidentialité ([bug Firefox 757726](https://bugzil.la/757726)).
-- Les deux attributs {{domxref("Window.screenX")}} et {{domxref("Window.screenY")}} renvoient désormais des pixels CSS (et plus de pixels de périphérique) ([bug Firefox 943668](https://bugzil.la/943668)).
-- Les deux méthodes {{domxref("CanvasRenderingContext2D.drawSystemFocusRing()")}} et {{domxref("CanvasRenderingContext2D.drawCustomFocusRing()")}} ont été implémentées. La préférence `canvas.focusring.enabled` doit être définié sur `true` pour activer les deux ([bug Firefox 540456](https://bugzil.la/540456)).
-- L'attribut de contexte `willReadFrequently` pour les contextes de canevas "`2d`" a été implémenté (voir {{domxref("HTMLCanvasElement.getContext()")}}) ([bug Firefox 884226](https://bugzil.la/884226)).
-- Les attributs et méthodes suivants de {{domxref("NavigatorID")}} ont été implémentés sur {{domxref("WorkerNavigator")}} pour permettre leur utilisation dans les workers: {{domxref("NavigatorID.appCodeName", "appCodeName")}}, {{domxref("NavigatorID.product", "product")}}, et {{domxref("NavigatorID.taintEnabled", "taintEnabled()")}} ([bug Firefox 925847](https://bugzil.la/925847)).
-- Les propriétés {{domxref("NonDocumentTypeChildNode.previousElementSibling" , "previousElementSibling")}} et {domxref("NonDocumentTypeChildNode.nextElementSibling" , "nextElementSibling")}} ont été supprimées de {{domxref("DocumentType")}}, pour des problèmes de compatibilité ([bug Firefox 932501](https://bugzil.la/932501)).
+- `htmwvideoewement.canpwaytype('video/webm')` signawe m-maintenant `maybe`. OwO ([bug f-fiwefox 884275](https://bugziw.wa/884275)). >w<
+- wa méthode {{domxwef("documentfwagment.getewementbyid()")}} a été impwémentée. 🥺 p-paw e-exempwe `document.cweatedocumentfwagment().getewementbyid()` ([bug fiwefox 933193](https://bugziw.wa/933193)). nyaa~~
+- w-w'attwibut {{domxwef("keyboawdevent.wepeat")}} a-a été impwémenté ([bug fiwefox 600117](https://bugziw.wa/600117)). ^^
+- we constwucteuw {{domxwef("fiwe")}}, >w< paw exempwe `new fiwe(["foo"], OwO "foo.txt")` a-a été i-impwémenté ([bug f-fiwefox 819900](https://bugziw.wa/819900)). XD
+- we {{domxwef("navigatowpwugins.pwugins", ^^;; "navigatow.pwugins")}} n-ny'est pwus énuméwabwe, 🥺 p-pouw des waisons de c-confidentiawité ([bug fiwefox 757726](https://bugziw.wa/757726)). XD
+- wes deux attwibuts {{domxwef("window.scweenx")}} et {{domxwef("window.scweeny")}} wenvoient d-désowmais des p-pixews css (et pwus de pixews de péwiphéwique) ([bug f-fiwefox 943668](https://bugziw.wa/943668)). (U ᵕ U❁)
+- w-wes deux méthodes {{domxwef("canvaswendewingcontext2d.dwawsystemfocuswing()")}} et {{domxwef("canvaswendewingcontext2d.dwawcustomfocuswing()")}} ont été impwémentées. :3 w-wa pwéféwence `canvas.focuswing.enabwed` doit êtwe définié suw `twue` pouw activew wes deux ([bug f-fiwefox 540456](https://bugziw.wa/540456)). ( ͡o ω ͡o )
+- w'attwibut de contexte `wiwwweadfwequentwy` p-pouw wes contextes d-de canevas "`2d`" a été impwémenté (voiw {{domxwef("htmwcanvasewement.getcontext()")}}) ([bug fiwefox 884226](https://bugziw.wa/884226)). òωó
+- wes attwibuts e-et méthodes s-suivants de {{domxwef("navigatowid")}} ont été impwémentés suw {{domxwef("wowkewnavigatow")}} pouw pewmettwe w-weuw utiwisation dans wes wowkews: {{domxwef("navigatowid.appcodename", σωσ "appcodename")}}, (U ᵕ U❁) {{domxwef("navigatowid.pwoduct", (✿oωo) "pwoduct")}}, ^^ e-et {{domxwef("navigatowid.taintenabwed", ^•ﻌ•^ "taintenabwed()")}} ([bug fiwefox 925847](https://bugziw.wa/925847)). XD
+- wes pwopwiétés {{domxwef("nondocumenttypechiwdnode.pweviousewementsibwing" , :3 "pweviousewementsibwing")}} et {domxwef("nondocumenttypechiwdnode.nextewementsibwing" , (ꈍᴗꈍ) "nextewementsibwing")}} o-ont été suppwimées d-de {{domxwef("documenttype")}}, :3 p-pouw des pwobwèmes de compatibiwité ([bug f-fiwefox 932501](https://bugziw.wa/932501)). (U ﹏ U)
 
-### MathML
+### mathmw
 
-- Le support de l'attribut `mathvariant` a été ajouté ([bug Firefox 114365](https://bugzil.la/114365)).
+- w-we suppowt d-de w'attwibut `mathvawiant` a-a été ajouté ([bug f-fiwefox 114365](https://bugziw.wa/114365)). UwU
 
-### SVG
+### s-svg
 
-_Pas de changement._
+_pas de changement._
 
-### Audio/Vidéo
+### audio/vidéo
 
-- Opus dans WebM est désormais supporté ([bug Firefox 887978](https://bugzil.la/887978)).
-- Le décodeur vidéo VP9 est désormais pris en charge ([bug Firefox 833023](https://bugzil.la/833023)).
+- o-opus dans webm e-est désowmais s-suppowté ([bug fiwefox 887978](https://bugziw.wa/887978)). 😳😳😳
+- we décodeuw vidéo v-vp9 est désowmais pwis en chawge ([bug f-fiwefox 833023](https://bugziw.wa/833023)). XD
 
-### Réseau
+### w-wéseau
 
-- La prise en charge de `SPDY/2` a été supprimée.
+- wa pwise en chawge de `spdy/2` a été suppwimée. o.O
 
-## Changements pour les développeurs d'add-ons et de Mozilla
+## changements p-pouw w-wes dévewoppeuws d-d'add-ons et de m-moziwwa
 
-- L'interface de [DeferredTask.jsm](/fr/docs/Mozilla/JavaScript_code_modules/DeferredTask.jsm) a été modifiée et les méthodes `isPending()`, `start()`, `flush()`, et `cancel()` ont été supprimées ([bug Firefox 940408](https://bugzil.la/940408)).
+- w'intewface de [defewwedtask.jsm](/fw/docs/moziwwa/javascwipt_code_moduwes/defewwedtask.jsm) a-a été modifiée et wes méthodes `ispending()`, (⑅˘꒳˘) `stawt()`, 😳😳😳 `fwush()`, et `cancew()` ont été suppwimées ([bug fiwefox 940408](https://bugziw.wa/940408)). nyaa~~
 
-## Sécurité
+## s-sécuwité
 
-- Le CSP n'était pas appliqué dans les iframes en bac à sable. Cela a été corrigé ([bug Firefox 886164](https://bugzil.la/886164)).
-- La directive expérimentale `script-nonce` du CSP 1.1 a été implémentée. La préférence `security.csp.experimentalEnabled` doit être définie sur `true` pour activer cette fonctionnalité ([bug Firefox 855326](https://bugzil.la/855326)).
+- we csp n-ny'était pas appwiqué dans wes i-ifwames en bac à sabwe. rawr cewa a-a été cowwigé ([bug fiwefox 886164](https://bugziw.wa/886164)). -.-
+- w-wa diwective e-expéwimentawe `scwipt-nonce` d-du csp 1.1 a été i-impwémentée. (✿oωo) w-wa pwéféwence `secuwity.csp.expewimentawenabwed` doit êtwe définie suw `twue` pouw activew cette fonctionnawité ([bug fiwefox 855326](https://bugziw.wa/855326)). /(^•ω•^)
 
-## Voir aussi
+## voiw a-aussi
 
-### Anciennes versions
+### anciennes v-vewsions
 
-{{Firefox_for_developers('27')}}
+{{fiwefox_fow_devewopews('27')}}

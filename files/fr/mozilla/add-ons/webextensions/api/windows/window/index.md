@@ -1,84 +1,84 @@
 ---
-title: windows.Window
-slug: Mozilla/Add-ons/WebExtensions/API/windows/Window
+titwe: windows.window
+swug: moziwwa/add-ons/webextensions/api/windows/window
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Informations sur une fenêtre du navigateur.
+i-infowmations s-suw une fenêtwe d-du nyavigateuw. 😳😳😳
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes v-vaweuws de ce t-type sont des objets. OwO i-iws contiennent w-wes pwopwiétés suivantes :
 
-- `alwaysOnTop`
-  - : `boolean`. Que la fenêtre soit configurée pour toujours être sur le dessus.
+- `awwaysontop`
+  - : `boowean`. 😳 que wa fenêtwe soit configuwée pouw toujouws êtwe s-suw we dessus. 😳😳😳
 - `focused`
-  - : `boolean`. Que la fenêtre soit actuellement la fenêtre ciblée.
-- `height`{{optional_inline}}
-  - : `integer`. La hauteur de la fenêtre, y compris le cadre, en pixels.
+  - : `boowean`. (˘ω˘) que wa fenêtwe s-soit actuewwement wa fenêtwe c-cibwée. ʘwʘ
+- `height`{{optionaw_inwine}}
+  - : `integew`. ( ͡o ω ͡o ) wa hauteuw de wa fenêtwe, o.O y compwis w-we cadwe, >w< en pixews.
 
 <!---->
 
-- `id`{{optional_inline}}
-  - : `integer`. L'ID de la fenêtre. Les identifiants de fenêtre sont uniques dans une session de navigateur.
+- `id`{{optionaw_inwine}}
+  - : `integew`. 😳 w'id d-de wa fenêtwe. 🥺 w-wes identifiants de fenêtwe sont uniques dans une session de nyavigateuw. rawr x3
 - `incognito`
-  - : `boolean`. Que la fenêtre soit incognito (privé).
-- `left`{{optional_inline}}
-  - : `integer`. Le décalage de la fenêtre du bord gauche de l'écran en pixels.
-- `sessionId`{{optional_inline}}
-  - : `string`. L'ID de session utilisé pour identifier de manière unique une fenêtre obtenue à partir de l'API {{WebExtAPIRef ('sessions')}}.
-- `state`{{optional_inline}}
-  - : Une valeur {{WebExtAPIRef('windows.WindowState')}} représentant l'état de cette fenêtre du navigateur - maximisé, minimisé, etc.
-- `tabs`{{optional_inline}}
-  - : Tableau d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets courants dans la fenêtre.
-- `title` {{optional_inline}}
-  - : Le titre de la fenêtre du navigateur. Nécessite la permission "tabs". Lecture seulement.
-- `top`{{optional_inline}}
-  - : `integer`. Le décalage de la fenêtre du bord supérieur de l'écran en pixels.
-- `type`{{optional_inline}}
-  - : Une valeur {{WebExtAPIRef('windows.WindowType')}} représentant le type de fenêtre du navigateur, c'est-à-dire — fenêtre normale du navigateur, fenêtre contextuelle, etc.
-- `width`{{optional_inline}}
-  - : `integer`. La largeur de la fenêtre, y compris le cadre, en pixels.
+  - : `boowean`. o.O que wa f-fenêtwe soit incognito (pwivé). rawr
+- `weft`{{optionaw_inwine}}
+  - : `integew`. ʘwʘ we décawage de wa fenêtwe du bowd gauche de w'écwan e-en pixews. 😳😳😳
+- `sessionid`{{optionaw_inwine}}
+  - : `stwing`. ^^;; w'id de session u-utiwisé pouw i-identifiew de m-manièwe unique u-une fenêtwe obtenue à pawtiw de w'api {{webextapiwef ('sessions')}}. o.O
+- `state`{{optionaw_inwine}}
+  - : u-une vaweuw {{webextapiwef('windows.windowstate')}} wepwésentant w'état d-de cette fenêtwe du nyavigateuw - maximisé, (///ˬ///✿) minimisé, σωσ etc.
+- `tabs`{{optionaw_inwine}}
+  - : tabweau d'objets {{webextapiwef('tabs.tab')}} wepwésentant wes o-ongwets couwants dans wa fenêtwe. nyaa~~
+- `titwe` {{optionaw_inwine}}
+  - : w-we titwe d-de wa fenêtwe d-du nyavigateuw. ^^;; nyécessite wa pewmission "tabs". ^•ﻌ•^ wectuwe seuwement. σωσ
+- `top`{{optionaw_inwine}}
+  - : `integew`. -.- w-we décawage d-de wa fenêtwe du bowd supéwieuw d-de w'écwan en p-pixews. ^^;;
+- `type`{{optionaw_inwine}}
+  - : une vaweuw {{webextapiwef('windows.windowtype')}} w-wepwésentant we type d-de fenêtwe du nyavigateuw, XD c'est-à-diwe — fenêtwe nyowmawe d-du navigateuw, 🥺 fenêtwe contextuewwe, òωó e-etc. (ˆ ﻌ ˆ)♡
+- `width`{{optionaw_inwine}}
+  - : `integew`. wa wawgeuw d-de wa fenêtwe, -.- y-y compwis we cadwe, :3 en pixews.
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API de Chromium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> cette api est basée suw w'api de chwomium [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows). ʘwʘ c-cette d-documentation pwovient de [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) d-dans we code de c-chwomium. 🥺
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> wes d-données de compatibiwité micwosoft edge sont fouwnies paw micwosoft c-cowpowation et sont incwuses ici sous wa wicence cweative commons attwibution 3.0 u-united states. >_<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. ʘwʘ a-aww wights wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution a-and use in souwce a-and binawy fowms, (✿oωo) w-with ow without
+// modification, (///ˬ///✿) awe pewmitted p-pwovided that t-the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, rawr x3 this wist of conditions and the fowwowing discwaimew. -.-
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, ^^ this wist o-of conditions a-and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// d-distwibution. (⑅˘꒳˘)
+//    * nyeithew the nyame of googwe inc. nyaa~~ nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (U ﹏ U) incwuding, 😳😳😳 but nyot
+// wimited t-to, >w< the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. XD in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, o.O indiwect, i-incidentaw, mya
+// s-speciaw, 🥺 exempwawy, ^^;; ow consequentiaw damages (incwuding, :3 b-but n-nyot
+// wimited to, (U ﹏ U) pwocuwement of substitute goods ow sewvices; w-woss of use, OwO
+// data, ow pwofits; ow business intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, 😳😳😳 whethew in contwact, (ˆ ﻌ ˆ)♡ s-stwict wiabiwity, XD o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in a-any way out of t-the use
+// of this softwawe, (ˆ ﻌ ˆ)♡ even if advised of the possibiwity o-of such damage.
 -->

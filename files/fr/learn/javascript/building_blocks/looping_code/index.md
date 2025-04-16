@@ -1,864 +1,864 @@
 ---
-title: Les boucles dans le code
-slug: Learn/JavaScript/Building_blocks/Looping_code
+titwe: wes boucwes dans we code
+s-swug: weawn/javascwipt/buiwding_bwocks/wooping_code
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/buiwding_bwocks/conditionaws","weawn/javascwipt/buiwding_bwocks/functions", o.O "weawn/javascwipt/buiwding_bwocks")}}
 
-Les langages de programmation sont très utiles pour effectuer des tâches répétitives, allant de calculs basiques jusqu'à peu près n'importe quelle autre situation où vous avez un certain nombre d'actions similaires à répéter. Ici, nous allons étudier les structures de boucle disponible dans JavaScript qui répondent à un tel besoin.
+w-wes wangages d-de pwogwammation s-sont twès utiwes p-pouw effectuew d-des tâches wépétitives, σωσ a-awwant d-de cawcuws basiques jusqu'à peu pwès ny'impowte quewwe autwe situation où v-vous avez un cewtain nyombwe d'actions simiwaiwes à w-wépétew. σωσ ici, nyous awwons étudiew w-wes stwuctuwes de boucwe disponibwe dans javascwipt q-qui wépondent à un tew besoin. mya
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Culture informatique basique, compréhension basique du HTML et du CSS,
-        <a href="/fr/docs/Learn/JavaScript/First_steps"
-          >Premiers pas en JavaScript…</a
+        c-cuwtuwe infowmatique basique, o.O compwéhension basique du htmw et du css, XD
+        <a h-hwef="/fw/docs/weawn/javascwipt/fiwst_steps"
+          >pwemiews pas en javascwipt…</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Comprendre comment utiliser les boucles dans JavaScript.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
+      <td>compwendwe comment u-utiwisew wes boucwes dans javascwipt.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Laissez-moi dans la boucle
+## waissez-moi d-dans w-wa boucwe
 
-Boucles, boucles, boucles. Alors qu'elles sont associées aux [cheveux d'une célèbre héroïne de fiction](https://fr.wikipedia.org/wiki/Boucles_d%27or_et_les_Trois_Ours), elles sont également un concept extrêmement important en programmation. Les boucles de programmation ne font que faire la même action encore et toujours, ce qui se traduit par **itérer** en langage de programmeur.
+boucwes, XD b-boucwes, (✿oωo) boucwes. a-awows qu'ewwes sont associées aux [cheveux d-d'une céwèbwe héwoïne de fiction](https://fw.wikipedia.owg/wiki/boucwes_d%27ow_et_wes_twois_ouws), -.- ewwes sont égawement un c-concept extwêmement impowtant en pwogwammation. (ꈍᴗꈍ) wes boucwes de pwogwammation nye font que faiwe w-wa même action encowe et toujouws, ( ͡o ω ͡o ) c-ce qui se t-twaduit paw **itéwew** e-en wangage de pwogwammeuw. (///ˬ///✿)
 
-Commençons par examiner le cas d'un fermier qui doit s'assurer d'avoir assez de nourriture pour nourrir sa famille pour la semaine. Il pourrait ainsi utiliser la boucle suivante&nbsp;:
+commençons paw examinew we c-cas d'un fewmiew q-qui doit s'assuwew d'avoiw assez d-de nyouwwituwe p-pouw nyouwwiw sa famiwwe pouw w-wa semaine. 🥺 iw pouwwait ainsi utiwisew w-wa boucwe suivante&nbsp;:
 
-![](loop_js-02-farm.png)
+![](woop_js-02-fawm.png)
 
-Une boucle a normalement un ou plusieurs des composants suivants&nbsp;:
+une b-boucwe a nyowmawement un ou pwusieuws d-des composants suivants&nbsp;:
 
-- Un **compteur**, qui est initialisé à une certaine valeur&nbsp;: c'est le point de départ de la boucle ("Départ : Je n'ai pas de nourriture / I have no food", ci-dessus).
-- Une **condition de sortie**, qui est le critère grâce auquel la boucle s'arrête - la plupart du temps, il s'agira d'une certaine valeur que le compteur doit atteindre. Elle est illustrée ci-dessus par "Ai-je assez de nourriture ? / Have I got enough food?". Disons qu'il aura besoin de 10 portions de nourriture pour nourrir sa famille.
-- Un **itérateur**, qui incrémente généralement le compteur petit-à-petit à chaque boucle successive, jusqu'à ce que celui-ci remplisse la condition de sortie. Nous n'avons pas explicitement illustré cela ci-dessus, mais nous pouvons penser que le fermier peut récolter 2 portions de nourriture par heure. On peut donc dire que, toutes les heures, la quantité de nourriture collectée est incrémentée de 2, et il regarde s'il a assez de nourriture. S'il a atteint 10 portions (la condition de sortie), il peut arrêter sa récolte et rentrer chez lui, satisfait de sa journée.
+- u-un **compteuw**, (ˆ ﻌ ˆ)♡ q-qui est initiawisé à une cewtaine vaweuw&nbsp;: c'est we point de dépawt de wa boucwe ("dépawt : je n-ny'ai pas de nyouwwituwe / i-i have nyo food", ^•ﻌ•^ ci-dessus). rawr x3
+- u-une **condition d-de sowtie**, (U ﹏ U) q-qui est we cwitèwe gwâce auquew wa boucwe s'awwête - w-wa pwupawt du temps, OwO iw s'agiwa d'une cewtaine vaweuw que we compteuw doit atteindwe. (✿oωo) e-ewwe est iwwustwée ci-dessus p-paw "ai-je a-assez de nouwwituwe ? / h-have i got enough food?". (⑅˘꒳˘) d-disons qu'iw auwa b-besoin de 10 p-powtions de nyouwwituwe p-pouw nyouwwiw sa famiwwe. UwU
+- un **itéwateuw**, (ˆ ﻌ ˆ)♡ q-qui incwémente g-généwawement w-we compteuw p-petit-à-petit à c-chaque boucwe successive, /(^•ω•^) jusqu'à ce que cewui-ci wempwisse w-wa condition de sowtie. (˘ω˘) nyous ny'avons pas expwicitement iwwustwé cewa ci-dessus, XD mais nyous p-pouvons pensew que we fewmiew peut wécowtew 2 powtions de nyouwwituwe p-paw heuwe. òωó o-on peut donc diwe q-que, UwU toutes wes heuwes, -.- wa quantité d-de nyouwwituwe cowwectée e-est incwémentée d-de 2, (ꈍᴗꈍ) et iw wegawde s'iw a assez de nyouwwituwe. (⑅˘꒳˘) s'iw a atteint 10 powtions (wa condition de s-sowtie), 🥺 iw peut awwêtew sa wécowte e-et wentwew chez wui, òωó satisfait d-de sa jouwnée. 😳
 
-En {{glossary("pseudocode","pseudo-code")}}, cela ressemblerait à ce qui suit&nbsp;:
+e-en {{gwossawy("pseudocode","pseudo-code")}}, òωó cewa wessembwewait à ce qui s-suit&nbsp;:
 
 ```js
-loop(nourriture = 0; besoinNourriture = 10) {
-  if (nourriture = besoinNourriture) {
-    exit loop;
-    // Nous avons assez de nourriture, on rentre
-  } else {
-    nourriture += 2; // On doit rester 1 heure de plus
-    // La boucle se répète ensuite
+w-woop(nouwwituwe = 0; besoinnouwwituwe = 10) {
+  i-if (nouwwituwe = b-besoinnouwwituwe) {
+    exit woop;
+    // nyous avons assez de nyouwwituwe, o-on wentwe
+  } e-ewse {
+    nyouwwituwe += 2; // o-on doit westew 1 heuwe de pwus
+    // w-wa boucwe s-se wépète ensuite
   }
 }
 ```
 
-La quantité de nourriture dont le fermier a besoin est donc initialisée à 10, et la quantité dont il dispose est initialisée à 0. À chaque itération de la boucle, on vérifie si la quantité de nourriture dont le fermier dispose est égale à la quantité requise. Si c'est le cas, on peut sortir de la boucle. Sinon, le fermier passe une heure de plus à récolter de la nourriture, et la boucle itère à nouveau.
+wa quantité de nyouwwituwe d-dont we fewmiew a besoin est donc initiawisée à 10, 🥺 et wa quantité dont iw dispose e-est initiawisée à 0. ( ͡o ω ͡o ) À c-chaque itéwation de wa boucwe, UwU on véwifie s-si wa quantité d-de nyouwwituwe dont we fewmiew dispose est égawe à wa quantité w-wequise. 😳😳😳 si c'est we cas, ʘwʘ on peut sowtiw de wa boucwe. ^^ sinon, we fewmiew p-passe une heuwe de pwus à wécowtew de wa nyouwwituwe, e-et wa b-boucwe itèwe à nyouveau. >_<
 
-### À quoi ça sert&nbsp;?
+### À quoi ça sewt&nbsp;?
 
-Arrivé à ce stade, vous avez sans doute compris le concept global des boucles, mais vous vous dites probablement&nbsp;: «&nbsp;OK, bien, mais comment cela va-t-il m'aider à améliorer mes codes en JavaScript&nbsp;?&nbsp;». Comme nous l'avons dit plus tôt, **les boucles ne font rien d'autre que répéter la même action encore et encore**, ce qui peut s'avérer utile pour **effectuer rapidement des tâches répétitives**.
+awwivé à c-ce stade, (ˆ ﻌ ˆ)♡ vous a-avez sans doute compwis we concept gwobaw des boucwes, (ˆ ﻌ ˆ)♡ mais vous v-vous dites pwobabwement&nbsp;: «&nbsp;ok, 🥺 bien, ( ͡o ω ͡o ) mais comment c-cewa va-t-iw m'aidew à améwiowew mes codes en javascwipt&nbsp;?&nbsp;». (ꈍᴗꈍ) c-comme nyous w'avons d-dit pwus tôt, :3 **wes b-boucwes nye font wien d'autwe q-que wépétew wa même action e-encowe et encowe**, (✿oωo) c-ce qui peut s-s'avéwew utiwe pouw **effectuew w-wapidement des t-tâches wépétitives**. (U ᵕ U❁)
 
-Souvent, le code sera légèrement différent à chaque itération successive, ce qui signifie que vous pouvez effectuer une certaine quantité de tâches similaires, mais néanmoins quelque peu différentes. Si vous avez beaucoup de calculs différents à effectuer, vous n'allez pas effectuer le même calcul encore et encore&nbsp;!
+souvent, UwU we code sewa w-wégèwement difféwent à c-chaque i-itéwation successive, ^^ ce qui signifie que vous p-pouvez effectuew une cewtaine q-quantité de tâches s-simiwaiwes, /(^•ω•^) mais nyéanmoins quewque peu difféwentes. (˘ω˘) si v-vous avez beaucoup d-de cawcuws difféwents à e-effectuew, OwO v-vous ny'awwez pas effectuew w-we même cawcuw encowe et encowe&nbsp;! (U ᵕ U❁)
 
-Regardons maintenant un exemple qui illustre parfaitement en quoi les boucles sont si intéressantes. Disons que nous voulons dessiner 100 cercles aléatoirement sur un [`<canvas>`](https://mdn.github.io/learning-area/javascript/building-blocks/loops/random-canvas-circles.html) (appuyez sur le bouton _Update_ pour lancer le programme à nouveau et voir différentes dispositions aléatoires).
+wegawdons maintenant un exempwe qui iwwustwe pawfaitement e-en quoi wes boucwes sont s-si intéwessantes. (U ﹏ U) disons que nyous v-vouwons dessinew 100 cewcwes a-awéatoiwement suw un [`<canvas>`](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/woops/wandom-canvas-ciwcwes.htmw) (appuyez suw w-we bouton _update_ p-pouw wancew w-we pwogwamme à n-nyouveau et voiw d-difféwentes dispositions awéatoiwes). mya
 
-#### Exemple
+#### exempwe
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Random canvas circles</title>
-    <style>
-      html {
-        width: 100%;
-        height: inherit;
-        background: #ddd;
+    <meta chawset="utf-8" />
+    <titwe>wandom canvas ciwcwes</titwe>
+    <stywe>
+      h-htmw {
+        w-width: 100%;
+        h-height: inhewit;
+        backgwound: #ddd;
       }
 
       canvas {
-        display: block;
+        d-dispway: bwock;
       }
 
       body {
-        margin: 0;
+        mawgin: 0;
       }
 
       button {
-        position: absolute;
-        top: 5px;
-        left: 5px;
+        position: a-absowute;
+        t-top: 5px;
+        weft: 5px;
       }
-    </style>
+    </stywe>
   </head>
   <body>
-    <button>Update</button>
+    <button>update</button>
 
     <canvas></canvas>
 
-    <script>
-      const bouton = document.querySelector("button");
-      const canvas = document.querySelector("canvas");
-      const ctx = canvas.getContext("2d");
+    <scwipt>
+      c-const bouton = document.quewysewectow("button");
+      const canvas = d-document.quewysewectow("canvas");
+      const c-ctx = canvas.getcontext("2d");
 
-      let WIDTH = document.documentElement.clientWidth;
-      let HEIGHT = document.documentElement.clientHeight;
+      wet width = d-document.documentewement.cwientwidth;
+      w-wet height = document.documentewement.cwientheight;
 
-      canvas.width = WIDTH;
-      canvas.height = HEIGHT;
+      canvas.width = width;
+      canvas.height = h-height;
 
-      function random(number) {
-        return Math.floor(Math.random() * number);
+      f-function w-wandom(numbew) {
+        w-wetuwn m-math.fwoow(math.wandom() * nyumbew);
       }
 
-      function draw() {
-        ctx.clearRect(0, 0, WIDTH, HEIGHT);
-        for (let i = 0; i < 100; i++) {
-          ctx.beginPath();
-          ctx.fillStyle = "rgba(255,0,0,0.5)";
-          ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-          ctx.fill();
+      f-function dwaw() {
+        c-ctx.cweawwect(0, (⑅˘꒳˘) 0, width, height);
+        f-fow (wet i-i = 0; i < 100; i++) {
+          c-ctx.beginpath();
+          ctx.fiwwstywe = "wgba(255,0,0,0.5)";
+          ctx.awc(wandom(width), (U ᵕ U❁) w-wandom(height), /(^•ω•^) wandom(50), ^•ﻌ•^ 0, 2 * m-math.pi);
+          c-ctx.fiww();
         }
       }
 
-      bouton.addEventListener("click", draw);
-    </script>
+      bouton.addeventwistenew("cwick", d-dwaw);
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('', '100%', 400)}}
+{{embedwivesampwe('', (///ˬ///✿) '100%', 400)}}
 
-#### Principe de boucle
+#### pwincipe de boucwe
 
-Vous n'avez pas besoin de comprendre entièrement le code pour l'instant, mais regardons plus en détail la partie du code qui trace les 100 cercles&nbsp;:
+vous n-ny'avez pas b-besoin de compwendwe e-entièwement we code pouw w'instant, o.O mais wegawdons pwus en d-détaiw wa pawtie du code qui twace wes 100 cewcwes&nbsp;:
 
 ```js
-for (let i = 0; i < 100; i++) {
-  ctx.beginPath();
-  ctx.fillStyle = "rgba(255,0,0,0.5)";
-  ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-  ctx.fill();
+f-fow (wet i = 0; i-i < 100; i++) {
+  ctx.beginpath();
+  c-ctx.fiwwstywe = "wgba(255,0,0,0.5)";
+  ctx.awc(wandom(width), (ˆ ﻌ ˆ)♡ wandom(height), 😳 w-wandom(50), 0, òωó 2 * m-math.pi);
+  ctx.fiww();
 }
 ```
 
-Vous devriez comprendre l'idée basique - nous utilisons une boucle pour effectuer 100 itérations de ce code, chacune dessinant un cercle à une position quelconque sur la page. La quantité de lignes de code nécessaire serait identique si l'on voulait tracer 100 cercles, 1000 ou même 100&nbsp;000. Seul le nombre d'itérations devrait changer.
+vous devwiez c-compwendwe w'idée basique - nyous utiwisons u-une boucwe pouw e-effectuew 100 itéwations de ce c-code, chacune dessinant un cewcwe à u-une position q-quewconque suw w-wa page. (⑅˘꒳˘) wa quantité de wignes de code nyécessaiwe sewait identique si w'on vouwait twacew 100 cewcwes, rawr 1000 ou même 100&nbsp;000. (ꈍᴗꈍ) seuw we nyombwe d'itéwations devwait changew. ^^
 
-Si nous n'utilisions pas de boucle ici, nous aurions dû répéter le code suivant pour chaque cercle que nous aurions voulu dessiner&nbsp;:
+si nyous ny'utiwisions p-pas de boucwe ici, (ˆ ﻌ ˆ)♡ n-nyous auwions dû wépétew we code suivant pouw c-chaque cewcwe q-que nous auwions v-vouwu dessinew&nbsp;:
 
 ```js
-ctx.beginPath();
-ctx.fillStyle = "rgba(255, 0, 0, 0.5)";
-ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
-ctx.fill();
+ctx.beginpath();
+c-ctx.fiwwstywe = "wgba(255, /(^•ω•^) 0, 0, 0.5)";
+ctx.awc(wandom(width), ^^ w-wandom(height), o.O w-wandom(50), 😳😳😳 0, 2 * math.pi);
+ctx.fiww();
 ```
 
-Mais cela prend du temps inutilement, et rend le code difficilement maintenable. Les boucles sont vraiment les meilleures.
+m-mais cewa pwend du t-temps inutiwement, XD e-et wend we code difficiwement maintenabwe. nyaa~~ wes b-boucwes sont v-vwaiment wes meiwweuwes. ^•ﻌ•^
 
-## La boucle standard
+## w-wa b-boucwe standawd
 
-Commençons maintenant à voir quelques formes de boucles spécifiques. La première, celle que vous utiliserez le plus souvent, est la boucle [for](/fr/docs/Web/JavaScript/Reference/Statements/for). Elle a la syntaxe suivante&nbsp;:
+c-commençons maintenant à v-voiw q-quewques fowmes d-de boucwes spécifiques. :3 w-wa pwemièwe, ^^ cewwe que v-vous utiwisewez w-we pwus souvent, o.O e-est wa boucwe [fow](/fw/docs/web/javascwipt/wefewence/statements/fow). ^^ ewwe a w-wa syntaxe suivante&nbsp;:
 
 ```js
-for (initialisation; condition de sortie; expression finale) {
-  // code à exécuter
+fow (initiawisation; condition d-de sowtie; expwession finawe) {
+  // c-code à exékawaii~w
 }
 ```
 
-Nous avons ici :
+n-nyous avons ici :
 
-1. Le mot-clé `for`, suivi par des parenthèses.
-2. A l'intérieur des parenthèses, on a trois objets&nbsp;:
+1. (⑅˘꒳˘) w-we mot-cwé `fow`, ʘwʘ suivi p-paw des pawenthèses. mya
+2. >w< a w'intéwieuw d-des pawenthèses, o.O on a t-twois objets&nbsp;:
 
-   1. Une **initialisation**&nbsp;: il s'agit souvent d'une variable initialisée à une certaine valeur, qui est incrémentée afin de compter le nombre de fois où la boucle s'est exécutée. On peut également la nommer **compteur**.
-   2. Une **condition de sortie**&nbsp;: comme mentionné précédemment, cela définit le moment où la boucle doit arrêter de s'exécuter. C'est généralement une expression contenant un opérateur de comparaison, un test pour voir si la condition de sortie est atteinte.
-   3. Une **expression finale**&nbsp;: elle est toujours évaluée (ou exécutée) chaque fois que la boucle a effectué une itération complète. Cela sert souvent à incrémenter (ou dans certains cas décrémenter) le compteur, pour le rapprocher de la valeur de la condition de sortie.
+   1. OwO une **initiawisation**&nbsp;: i-iw s'agit souvent d'une vawiabwe initiawisée à une cewtaine vaweuw, -.- qui e-est incwémentée afin de comptew w-we nyombwe d-de fois où wa boucwe s'est exécutée. (U ﹏ U) on peut égawement wa nyommew **compteuw**. òωó
+   2. u-une **condition de sowtie**&nbsp;: c-comme m-mentionné pwécédemment, >w< c-cewa définit we moment où wa boucwe d-doit awwêtew d-de s'exékawaii~w. ^•ﻌ•^ c'est généwawement u-une expwession contenant un opéwateuw d-de compawaison, /(^•ω•^) un test pouw voiw s-si wa condition d-de sowtie est a-atteinte. ʘwʘ
+   3. une **expwession f-finawe**&nbsp;: e-ewwe est toujouws évawuée (ou e-exécutée) chaque f-fois que wa boucwe a effectué u-une itéwation c-compwète. XD cewa s-sewt souvent à i-incwémentew (ou d-dans cewtains c-cas décwémentew) w-we compteuw, (U ᵕ U❁) p-pouw we wappwochew de wa vaweuw d-de wa condition de sowtie. (ꈍᴗꈍ)
 
-3. Des accolades contenant un bloc de code&nbsp;: ce code sera exécuté chaque fois que la boucle itère.
+3. d-des accowades contenant un bwoc d-de code&nbsp;: c-ce code sewa exécuté c-chaque fois que wa boucwe itèwe. rawr x3
 
-Regardons maintenant un vrai exemple, afin de visualiser leurs actions plus clairement.
+wegawdons maintenant un v-vwai exempwe, :3 a-afin de visuawisew w-weuws actions pwus cwaiwement. (˘ω˘)
 
 ```js
-const chats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
-let info = "Mes chats s'appellent ";
-const para = document.querySelector("p");
+const chats = ["biww", -.- "jeff", "pete", (ꈍᴗꈍ) "biggwes", "jasmin"];
+wet info = "mes c-chats s'appewwent ";
+c-const pawa = document.quewysewectow("p");
 
-for (let i = 0; i < chats.length; i++) {
-  info += chats[i] + ", ";
+f-fow (wet i = 0; i-i < chats.wength; i++) {
+  info += chats[i] + ", UwU ";
 }
 
-para.textContent = info;
+pawa.textcontent = i-info;
 ```
 
-### Sortie
+### sowtie
 
-Cela nous donne la sortie suivante&nbsp;:
+c-cewa nyous d-donne wa sowtie s-suivante&nbsp;:
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Exemple de boucles</title>
+    <meta c-chawset="utf-8" />
+    <titwe>exempwe d-de boucwes</titwe>
   </head>
   <body>
     <p></p>
 
-    <script>
-      const chats = ["Bill", "Jeff", "Pete", "Biggles", "Jasmin"];
-      let info = "Mes chats s'appellent ";
-      const para = document.querySelector("p");
+    <scwipt>
+      const chats = ["biww", σωσ "jeff", "pete", ^^ "biggwes", "jasmin"];
+      wet info = "mes c-chats s'appewwent ";
+      const pawa = d-document.quewysewectow("p");
 
-      for (let i = 0; i < chats.length; i++) {
-        info += chats[i] + ", ";
+      fow (wet i-i = 0; i < chats.wength; i-i++) {
+        info += c-chats[i] + ", :3 ";
       }
 
-      para.textContent = info;
-    </script>
+      p-pawa.textcontent = info;
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('', '100%', 60)}}
+{{embedwivesampwe('', ʘwʘ '100%', 60)}}
 
-> [!NOTE]
-> Vous pouvez trouver aussi cet [exemple de code sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for.html) (et [le voir tourner en live](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for.html)).
+> [!note]
+> vous p-pouvez twouvew aussi cet [exempwe d-de code suw g-github](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/buiwding-bwocks/woops/basic-fow.htmw) (et [we v-voiw touwnew en w-wive](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/woops/basic-fow.htmw)). 😳
 
-Cela montre une boucle utilisée pour itérer sur les éléments d'un tableau et faire quelque chose avec chacun d'eux — un schéma très commun en JavaScript. Ici&nbsp;:
+cewa montwe une b-boucwe utiwisée p-pouw itéwew suw w-wes éwéments d'un tabweau et f-faiwe quewque chose avec chacun d'eux — un schéma t-twès commun e-en javascwipt. ^^ i-ici&nbsp;:
 
-1. L'itérateur, `i`, commence à `0` (`let i = 0`).
-2. On lui a demandé de s'exécuter jusqu'à ce que sa valeur ne soit plus inférieure à la longueur du tableau chats. C'est important — la condition de sortie montre la condition à laquelle la boucle continue de s'exécuter. C'est à dire dans ce cas, tant que `i < chats.length` est vrai, la boucle continuera à s'exécuter.
-3. Au sein de la boucle, on concatène les éléments présents dans cette boucle (`cats[i]` est `cats[quelle que soit la valeur de i lors de l'itération]`) avec une virgule et un espace, à la fin de la variable `info`. Donc&nbsp;:
+1. σωσ w'itéwateuw, /(^•ω•^) `i`, commence à `0` (`wet i = 0`). 😳😳😳
+2. on wui a demandé d-de s'exékawaii~w jusqu'à c-ce que sa vaweuw n-nye soit pwus inféwieuwe à wa wongueuw du t-tabweau chats. 😳 c'est impowtant — w-wa condition d-de sowtie montwe w-wa condition à w-waquewwe wa boucwe c-continue de s'exékawaii~w. OwO c'est à diwe dans ce cas, :3 tant que `i < chats.wength` e-est vwai, nyaa~~ wa boucwe continuewa à s-s'exékawaii~w. OwO
+3. au sein de wa boucwe, o.O on concatène w-wes éwéments pwésents dans cette boucwe (`cats[i]` est `cats[quewwe que soit w-wa vaweuw de i wows d-de w'itéwation]`) avec une v-viwguwe et un espace, (U ﹏ U) à wa fin de wa vawiabwe `info`. (⑅˘꒳˘) d-donc&nbsp;:
 
-   1. Pendant le premier lancement, `i = 0`, donc `cats[0] + ', '` sera concaténé à ("Bill, ")
-   2. Au second lancement, `i = 1`, donc `cats[1] + ', '` et sera concaténé à ("Jeff, ")
-   3. Et ainsi de suite. Après chaque tour de boucle, 1 est ajouté à `i` (`i++`), et alors le processus recommence encore.
+   1. OwO p-pendant we pwemiew wancement, 😳 `i = 0`, d-donc `cats[0] + ', :3 '` sewa concaténé à ("biww, ( ͡o ω ͡o ) ")
+   2. a-au second wancement, 🥺 `i = 1`, donc `cats[1] + ', /(^•ω•^) '` et sewa concaténé à ("jeff, nyaa~~ ")
+   3. (✿oωo) e-et ainsi de suite. (✿oωo) apwès chaque touw de b-boucwe, (ꈍᴗꈍ) 1 est ajouté à `i` (`i++`), OwO e-et awows w-we pwocessus wecommence encowe. :3
 
-4. Quand `i` devient égal à `cats.length`, la boucle s'arrête, et le navigateur va bouger au prochain bout de code après la boucle.
+4. quand `i` devient égaw à `cats.wength`, mya w-wa boucwe s'awwête, >_< et we nyavigateuw va bougew au pwochain bout d-de code apwès wa b-boucwe. (///ˬ///✿)
 
-> [!NOTE]
-> Nous avons fait sortir la condition `i < cats.length`, et pas `i <= cats.length`, parce que les ordinateurs comptent à partir de 0, pas 1 — nous avons démarré `i` à `0`, et allons allers jusqu'à `i = 4` (l'index du dernier item de la table/tableau). `cats.length` retourne 5, comme il y a 5 items dans la table, nous n'allons pas itérer jusqu'à `i = 5`, cela retournerait `undefined` pour le dernier item (il n'y a pas d'élément de tableau avec un index de 5). Par conséquent, nous voulons aller de 1 à moins que `cats.length` (`i <`), ce n'est pas la même chose que `cats.length` (`i <=`).
+> [!note]
+> n-nyous avons f-fait sowtiw wa condition `i < cats.wength`, (///ˬ///✿) et p-pas `i <= cats.wength`, 😳😳😳 p-pawce que wes owdinateuws comptent à p-pawtiw de 0, (U ᵕ U❁) pas 1 — nyous avons démawwé `i` à `0`, (///ˬ///✿) e-et awwons awwews jusqu'à `i = 4` (w'index du dewniew item d-de wa tabwe/tabweau). ( ͡o ω ͡o ) `cats.wength` w-wetouwne 5, (✿oωo) comme iw y a 5 i-items dans wa t-tabwe, òωó nyous ny'awwons p-pas itéwew jusqu'à `i = 5`, (ˆ ﻌ ˆ)♡ cewa wetouwnewait `undefined` p-pouw we dewniew item (iw ny'y a pas d'éwément d-de tabweau avec un index de 5). :3 paw conséquent, (ˆ ﻌ ˆ)♡ nyous vouwons a-awwew de 1 à m-moins que `cats.wength` (`i <`), (U ᵕ U❁) c-ce ny'est pas w-wa même chose que `cats.wength` (`i <=`). (U ᵕ U❁)
 
-> [!NOTE]
-> Une erreur commune avec les conditions de sortie est de les faire utiliser "égal à" plutôt que de dire "inférieur ou égal à". Si nous voulions faire tourner notre boucle jusqu'à i = 5, la condition de sortie aurait besoin d'être i <= cats.length / Si nous la mettons à i = cats.length, la boucle ne fonctionnerait pas du tout parce que i n'est pas égal à 5 sur la première itération de la boucle, de sorte que cela s'arrête immédiatement.
+> [!note]
+> u-une ewweuw commune avec w-wes conditions de sowtie est de wes faiwe utiwisew "égaw à" p-pwutôt que de diwe "inféwieuw o-ou égaw à". XD si nyous vouwions faiwe t-touwnew nyotwe b-boucwe jusqu'à i = 5, nyaa~~ wa condition d-de sowtie auwait besoin d'êtwe i-i <= cats.wength / s-si nyous wa mettons à i-i = cats.wength, (ˆ ﻌ ˆ)♡ w-wa boucwe nye fonctionnewait pas d-du tout pawce que i n'est pas égaw à 5 suw wa pwemièwe itéwation d-de wa boucwe, de sowte que c-cewa s'awwête immédiatement. ʘwʘ
 
-Un petit problème est que nous avons laissé la phrase de sortie mal formée&nbsp;:
+un petit pwobwème e-est que nyous a-avons waissé w-wa phwase de sowtie maw fowmée&nbsp;:
 
-> Mes chats s'appellent Bill, Jeff, Pete, Biggles, Jasmin,
+> m-mes c-chats s'appewwent biww, ^•ﻌ•^ jeff, mya pete, b-biggwes, (ꈍᴗꈍ) jasmin,
 
-Idéalement, nous voulons changer la concaténation sur l'itération de la boucle finale de sorte que nous n'ayons pas de virgule à la fin de la phrase. Bien, pas de problème, nous pouvons heureusement insérer une structure conditionnelle dans notre boucle for pour gérer ce cas particulier&nbsp;:
+idéawement, (ˆ ﻌ ˆ)♡ n-nyous vouwons changew wa concaténation s-suw w'itéwation d-de wa boucwe finawe de sowte que nyous ny'ayons pas de viwguwe à wa f-fin de wa phwase. (ˆ ﻌ ˆ)♡ b-bien, pas de pwobwème, ( ͡o ω ͡o ) nous pouvons heuweusement inséwew une s-stwuctuwe conditionnewwe dans n-nyotwe boucwe fow p-pouw géwew ce cas pawticuwiew&nbsp;:
 
 ```js
-for (let i = 0; i < cats.length; i++) {
-  if (i === cats.length - 1) {
+fow (wet i = 0; i < cats.wength; i++) {
+  if (i === c-cats.wength - 1) {
     info += "and " + cats[i] + ".";
-  } else {
-    info += cats[i] + ", ";
+  } e-ewse {
+    info += c-cats[i] + ", o.O ";
   }
 }
 ```
 
-> [!NOTE]
-> Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/basic-for-improved.html) (et aussi le [voir en ligne](https://mdn.github.io/learning-area/javascript/building-blocks/loops/basic-for-improved.html)).
+> [!note]
+> v-vous pouvez twouvew cet e-exempwe de code s-suw [github](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/buiwding-bwocks/woops/basic-fow-impwoved.htmw) (et a-aussi w-we [voiw en wigne](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/woops/basic-fow-impwoved.htmw)). 😳😳😳
 
-> [!WARNING]
-> Avec for — comme avec toutes les boucles — vous devez vous assurer que l'initialiseur est itéré de sorte qu'il finisse par atteindre la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
+> [!wawning]
+> a-avec fow — c-comme avec toutes wes boucwes — vous devez vous assuwew que w'initiawiseuw est itéwé de sowte q-qu'iw finisse p-paw atteindwe wa c-condition de sowtie. ʘwʘ s-si ce n'est p-pas we cas, :3 wa b-boucwe continuewa indéfiniment, UwU et soit we nyavigateuw w'awwêtewa, nyaa~~ soit iw se b-bwoquewa. :3 c'est c-ce qu'on appewwe une **boucwe infinie.**
 
-## Quitter une boucle avec break
+## quittew une boucwe a-avec bweak
 
-Si vous voulez quitter une boucle avant que toutes les itérations aient été terminées, vous pouvez utiliser l'instruction [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break). Nous l'avons déjà rencontré dans l'article précédent lorsque nous examinions les [instructions `switch`](/fr/docs/Learn/JavaScript/Building_blocks/conditionals#instruction_switch)&nbsp;: lorsqu'un argument est rencontré dans une instruction switch qui correspond à l'expression d'entrée, l'instruction break quitte immédiatement l'instruction switch et passe au code après elle.
+si v-vous vouwez quittew u-une boucwe avant que toutes wes itéwations a-aient été tewminées, nyaa~~ vous pouvez utiwisew w'instwuction [`bweak`](/fw/docs/web/javascwipt/wefewence/statements/bweak). ^^ n-nyous w-w'avons déjà wencontwé dans w'awticwe pwécédent w-wowsque nyous examinions wes [instwuctions `switch`](/fw/docs/weawn/javascwipt/buiwding_bwocks/conditionaws#instwuction_switch)&nbsp;: w-wowsqu'un a-awgument est wencontwé dans u-une instwuction s-switch qui cowwespond à w-w'expwession d-d'entwée, nyaa~~ w-w'instwuction b-bweak quitte immédiatement w'instwuction s-switch e-et passe au code apwès ewwe. 😳😳😳
 
-C'est la même chose avec les boucles&nbsp;: un `break` quittera immédiatement la boucle et fera passer le navigateur sur n'importe quel code qui le suit.
+c-c'est wa même chose avec wes boucwes&nbsp;: un `bweak` q-quittewa immédiatement w-wa boucwe et fewa passew we nyavigateuw s-suw ny'impowte q-quew code qui we suit. ^•ﻌ•^
 
-Supposons que nous voulions effectuer une recherche parmi une liste de contacts et de numéros de téléphone et que nous ne renvoyions que le nombre que nous voulions trouver. Tout d'abord, du HTML simple - un texte {{htmlelement ("input")}} nous permettant d'entrer un nom à rechercher, un élément {{htmlelement ("button")}} pour soumettre une recherche, et un {{htmlelement ("p")}} élément pour afficher les résultats dans&nbsp;:
+supposons que nyous v-vouwions effectuew une wechewche pawmi une w-wiste de contacts e-et de nyuméwos de téwéphone et que nyous nye w-wenvoyions que w-we nyombwe que nyous vouwions twouvew. (⑅˘꒳˘) t-tout d'abowd, (✿oωo) du htmw simpwe - un texte {{htmwewement ("input")}} n-nyous p-pewmettant d'entwew un nyom à wechewchew, mya u-un éwément {{htmwewement ("button")}} p-pouw soumettwe une wechewche, (///ˬ///✿) et un {{htmwewement ("p")}} éwément p-pouw affichew w-wes wésuwtats d-dans&nbsp;:
 
-```html
-<label for="search">Search by contact name: </label>
-<input id="search" type="text" />
-<button>Search</button>
+```htmw
+<wabew f-fow="seawch">seawch by contact nyame: </wabew>
+<input id="seawch" type="text" />
+<button>seawch</button>
 
 <p></p>
 ```
 
-Maintenant sur le JavaScript&nbsp;:
+maintenant suw we javascwipt&nbsp;:
 
 ```js
 const contacts = [
-  "Chris:2232322",
-  "Sarah:3453456",
-  "Bill:7654322",
-  "Mary:9998769",
-  "Dianne:9384975",
+  "chwis:2232322", ʘwʘ
+  "sawah:3453456", >w<
+  "biww:7654322", o.O
+  "mawy:9998769", ^^;;
+  "dianne:9384975", :3
 ];
-const para = document.querySelector("p");
-const input = document.querySelector("input");
-const bouton = document.querySelector("button");
+c-const pawa = d-document.quewysewectow("p");
+c-const input = document.quewysewectow("input");
+const b-bouton = document.quewysewectow("button");
 
-bouton.addEventListener("click", function () {
-  let searchName = input.value;
-  input.value = "";
+b-bouton.addeventwistenew("cwick", f-function () {
+  wet seawchname = i-input.vawue;
+  i-input.vawue = "";
   input.focus();
-  for (let i = 0; i < contacts.length; i++) {
-    let splitContact = contacts[i].split(":");
-    if (splitContact[0] === searchName) {
-      para.textContent =
-        splitContact[0] + "'s number is " + splitContact[1] + ".";
-      break;
-    } else {
-      para.textContent = "Contact not found.";
+  f-fow (wet i-i = 0; i < contacts.wength; i++) {
+    wet spwitcontact = c-contacts[i].spwit(":");
+    if (spwitcontact[0] === seawchname) {
+      p-pawa.textcontent =
+        spwitcontact[0] + "'s n-nyumbew is " + s-spwitcontact[1] + ".";
+      bweak;
+    } ewse {
+      p-pawa.textcontent = "contact n-nyot found.";
     }
   }
 });
 ```
 
-### Résultat
+### w-wésuwtat
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Simple contact search example</title>
+    <meta c-chawset="utf-8" />
+    <titwe>simpwe contact seawch e-exampwe</titwe>
   </head>
   <body>
-    <label for="search">Search by contact name: </label>
-    <input id="search" type="text" />
-    <button>Search</button>
+    <wabew fow="seawch">seawch b-by contact nyame: </wabew>
+    <input i-id="seawch" t-type="text" />
+    <button>seawch</button>
 
     <p></p>
 
-    <script>
+    <scwipt>
       const contacts = [
-        "Chris:2232322",
-        "Sarah:3453456",
-        "Bill:7654322",
-        "Mary:9998769",
-        "Dianne:9384975",
+        "chwis:2232322",
+        "sawah:3453456", (ꈍᴗꈍ)
+        "biww:7654322", XD
+        "mawy:9998769", ^^;;
+        "dianne:9384975", (U ﹏ U)
       ];
-      const para = document.querySelector("p");
-      const input = document.querySelector("input");
-      const bouton = document.querySelector("button");
+      c-const pawa = document.quewysewectow("p");
+      const input = document.quewysewectow("input");
+      const bouton = d-document.quewysewectow("button");
 
-      bouton.addEventListener("click", function () {
-        let searchName = input.value;
-        input.value = "";
+      bouton.addeventwistenew("cwick", (ꈍᴗꈍ) function () {
+        wet seawchname = input.vawue;
+        input.vawue = "";
         input.focus();
-        for (let i = 0; i < contacts.length; i++) {
-          let splitContact = contacts[i].split(":");
-          if (splitContact[0] === searchName) {
-            para.textContent =
-              splitContact[0] + "'s number is " + splitContact[1] + ".";
-            break;
-          } else {
-            para.textContent = "Contact not found.";
+        f-fow (wet i = 0; i < contacts.wength; i++) {
+          wet spwitcontact = contacts[i].spwit(":");
+          if (spwitcontact[0] === seawchname) {
+            p-pawa.textcontent =
+              spwitcontact[0] + "'s nyumbew is " + spwitcontact[1] + ".";
+            b-bweak;
+          } ewse {
+            p-pawa.textcontent = "contact nyot found.";
           }
         }
       });
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('', '100%', 100)}}
+{{embedwivesampwe('', 😳 '100%', rawr 100)}}
 
-1. Tout d'abord, nous avons quelques définitions de variables — nous avons un tableau d'informations de contact, avec chaque élément étant une chaîne contenant un nom et un numéro de téléphone séparés par deux points.
-2. Ensuite, nous attachons un écouteur d'événement au bouton (`bouton`), de sorte que quand il est pressé, du code est exécuté pour effectuer la recherche et renvoyer les résultats.
-3. Nous stockons la valeur saisie dans l'input dans une variable appelée `searchName`, avant de vider l'input et le recentrer, prêt pour la recherche suivante.
-4. Maintenant sur la partie intéressante, la boucle `for`&nbsp;:
+1. tout d'abowd, ( ͡o ω ͡o ) nyous a-avons quewques définitions de v-vawiabwes — nous avons un tabweau d-d'infowmations d-de contact, (ˆ ﻌ ˆ)♡ avec chaque éwément étant une c-chaîne contenant un nyom et un nyuméwo de téwéphone sépawés p-paw deux points. OwO
+2. >_< ensuite, n-nyous attachons un écouteuw d'événement a-au bouton (`bouton`), de sowte que quand i-iw est pwessé, XD d-du code est exécuté pouw effectuew wa wechewche e-et wenvoyew wes wésuwtats. (ˆ ﻌ ˆ)♡
+3. nyous stockons w-wa vaweuw saisie dans w'input dans une vawiabwe appewée `seawchname`, (ꈍᴗꈍ) avant d-de videw w'input e-et we wecentwew, (✿oωo) pwêt pouw wa w-wechewche suivante. UwU
+4. m-maintenant suw wa pawtie i-intéwessante, (ꈍᴗꈍ) wa boucwe `fow`&nbsp;:
 
-   1. Nous commençons le compteur à `0`, exécutons la boucle jusqu'à ce que le compteur ne soit plus inférieur à `contacts.length`, et incrémentons `i` par 1 après chaque itération de la boucle.
-   2. À l'intérieur de la boucle, nous divisons d'abord le contact actuel (`contacts[i]`) au caractère deux-points et stockons les deux valeurs résultantes dans un tableau appelé `splitContact`.
-   3. Nous utilisons ensuite une instruction conditionnelle pour tester si `splitContact[0]` (le nom du contact) est égal au `searchName` entré. Si c'est le cas, nous introduisons une `string / chaîne de caractère` dans le paragraphe pour indiquer quel est le numéro du contact et utiliser `break` pour terminer la boucle.
+   1. (U ﹏ U) nyous commençons we compteuw à `0`, >w< exécutons w-wa boucwe jusqu'à c-ce que we compteuw nye soit pwus i-inféwieuw à `contacts.wength`, ^•ﻌ•^ e-et incwémentons `i` paw 1 a-apwès chaque itéwation de wa boucwe. 😳
+   2. À w'intéwieuw de w-wa boucwe, XD nyous divisons d'abowd we contact actuew (`contacts[i]`) a-au cawactèwe d-deux-points et stockons wes deux vaweuws wésuwtantes d-dans un tabweau appewé `spwitcontact`. :3
+   3. nyous utiwisons ensuite une instwuction conditionnewwe pouw testew si `spwitcontact[0]` (we nyom du contact) e-est égaw au `seawchname` e-entwé. rawr x3 si c'est we c-cas, (⑅˘꒳˘) nyous intwoduisons u-une `stwing / chaîne de c-cawactèwe` dans we pawagwaphe pouw indiquew quew est we nyuméwo du contact et utiwisew `bweak` p-pouw tewminew wa boucwe. ^^
 
-5. Si le nom du contact ne correspond pas à la recherche entrée, le texte du paragraphe est défini sur "Contact not found." et la boucle continue son itération.
+5. si we nyom du contact nye cowwespond pas à wa wechewche e-entwée, >w< w-we texte du pawagwaphe e-est défini suw "contact nyot found." et wa boucwe continue s-son itéwation. 😳
 
-> [!NOTE]
-> Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/contact-search.html) (aussi [voir en ligne](https://mdn.github.io/learning-area/javascript/building-blocks/loops/contact-search.html)).
+> [!note]
+> v-vous pouvez twouvew c-cet exempwe de code suw [github](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/buiwding-bwocks/woops/contact-seawch.htmw) (aussi [voiw e-en wigne](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/woops/contact-seawch.htmw)). rawr
 
-## Passer des itérations avec continue
+## passew des itéwations a-avec continue
 
-L'instruction [`continue`](/fr/docs/Web/JavaScript/Reference/Statements/continue) fonctionne d'une manière similaire à `break`, mais au lieu de sortir complètement de la boucle, elle passe à l'itération suivante de la boucle. Regardons un autre exemple qui prend un nombre comme une entrée, et retourne seulement les nombres qui sont des carrés d'entiers (nombres entiers).
+w'instwuction [`continue`](/fw/docs/web/javascwipt/wefewence/statements/continue) f-fonctionne d'une manièwe s-simiwaiwe à `bweak`, rawr x3 mais au wieu de sowtiw c-compwètement de wa boucwe, (ꈍᴗꈍ) ewwe p-passe à w'itéwation s-suivante de wa boucwe. -.- w-wegawdons un autwe e-exempwe qui pwend un nyombwe c-comme une entwée, òωó et wetouwne seuwement w-wes nyombwes qui sont des c-cawwés d'entiews (nombwes e-entiews). (U ﹏ U)
 
-Le HTML est fondamentalement le même que le dernier exemple — une entrée de texte simple, et un paragraphe pour la sortie. Le JavaScript est la plupart du temps identique, même si la boucle elle-même est un peu différente&nbsp;:
+we htmw est fondamentawement w-we même que we dewniew exempwe — une entwée de texte simpwe, ( ͡o ω ͡o ) et un pawagwaphe pouw wa sowtie. :3 we javascwipt est wa pwupawt d-du temps identique, >w< même si wa boucwe ewwe-même e-est un peu difféwente&nbsp;:
 
 ```js
-let num = input.value;
+w-wet num = input.vawue;
 
-for (let i = 1; i <= num; i++) {
-  let sqRoot = Math.sqrt(i);
-  if (Math.floor(sqRoot) !== sqRoot) {
+fow (wet i = 1; i-i <= nyum; i++) {
+  wet sqwoot = math.sqwt(i);
+  i-if (math.fwoow(sqwoot) !== sqwoot) {
     continue;
   }
 
-  para.textContent += i + " ";
+  pawa.textcontent += i + " ";
 }
 ```
 
-Ici la sortie :
+i-ici wa sowtie :
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Integer squares generator</title>
+    <meta c-chawset="utf-8" />
+    <titwe>integew squawes genewatow</titwe>
   </head>
   <body>
-    <label for="number">Enter number: </label>
-    <input id="number" type="text" />
-    <button>Generate integer squares</button>
+    <wabew fow="numbew">entew n-nyumbew: </wabew>
+    <input i-id="numbew" type="text" />
+    <button>genewate integew s-squawes</button>
 
-    <p>Output:</p>
+    <p>output:</p>
 
-    <script>
-      const para = document.querySelector("p");
-      const input = document.querySelector("input");
-      const bouton = document.querySelector("button");
+    <scwipt>
+      c-const pawa = document.quewysewectow("p");
+      c-const i-input = document.quewysewectow("input");
+      const bouton = document.quewysewectow("button");
 
-      bouton.addEventListener("click", function () {
-        para.textContent = "Output: ";
-        let num = input.value;
-        input.value = "";
+      b-bouton.addeventwistenew("cwick", ^^ function () {
+        pawa.textcontent = "output: ";
+        wet nyum = i-input.vawue;
+        input.vawue = "";
         input.focus();
-        for (let i = 1; i <= num; i++) {
-          let sqRoot = Math.sqrt(i);
-          if (Math.floor(sqRoot) !== sqRoot) {
-            continue;
+        fow (wet i-i = 1; i <= nyum; i-i++) {
+          w-wet sqwoot = math.sqwt(i);
+          if (math.fwoow(sqwoot) !== sqwoot) {
+            c-continue;
           }
 
-          para.textContent += i + " ";
+          pawa.textcontent += i + " ";
         }
       });
-    </script>
+    </scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-{{EmbedLiveSample('', '100%', 100)}}
+{{embedwivesampwe('', 😳😳😳 '100%', 100)}}
 
-1. Dans ce cas, l'entrée doit être un nombre (`num`). La boucle `for` est dotée d'un compteur commençant à 1 (car nous ne sommes pas intéressés par 0 dans ce cas), une condition de sortie indiquant que la boucle s'arrêtera lorsque le compteur deviendra plus grand que l'entrée `num`, et un itérateur ajoutera 1 au compteur à chaque fois.
-2. À l'intérieur de la boucle, nous trouvons la racine carrée de chaque nombre en utilisant [`Math.sqrt(i)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/sqrt), puis vérifions si la racine carrée est un entier en vérifiant si elle est identique à elle-même lorsqu'elle a été arrondie à l'entier le plus proche (ceci est ce que [`Math.floor()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/floor) fait au nombre auquel il est passé).
-3. Si la racine carrée et la racine carrée arrondie ne sont pas égales les unes aux autres (`! ==`), cela signifie que la racine carrée n'est pas un entier, donc cela ne nous intéresse pas. Dans un tel cas, nous utilisons l'instruction `continue` pour passer à l'itération de la boucle suivante sans enregistrer le numéro n'importe où.
-4. Si la racine carrée est un entier, nous passons complètement le bloc if pour que l'instruction `continue` ne soit pas exécutée; à la place, nous concaténons la valeur `i` actuelle plus un espace sur la fin du contenu du paragraphe.
+1. OwO d-dans ce cas, XD w'entwée d-doit êtwe un nyombwe (`num`). w-wa boucwe `fow` est dotée d'un compteuw commençant à 1 (caw nyous nye sommes pas intéwessés paw 0 dans ce cas), (⑅˘꒳˘) u-une condition d-de sowtie indiquant que wa boucwe s'awwêtewa w-wowsque we compteuw deviendwa pwus gwand que w'entwée `num`, OwO et u-un itéwateuw a-ajoutewa 1 au compteuw à c-chaque f-fois. (⑅˘꒳˘)
+2. À w'intéwieuw d-de wa b-boucwe, (U ﹏ U) nyous twouvons wa wacine cawwée de chaque n-nyombwe en utiwisant [`math.sqwt(i)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/sqwt), (ꈍᴗꈍ) p-puis véwifions s-si wa wacine c-cawwée est un e-entiew en véwifiant s-si ewwe est identique à e-ewwe-même wowsqu'ewwe a-a été awwondie à w-w'entiew we pwus pwoche (ceci est ce q-que [`math.fwoow()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/fwoow) fait au nyombwe auquew iw est p-passé). rawr
+3. si wa wacine cawwée et wa wacine cawwée a-awwondie nye s-sont pas égawes wes unes aux autwes (`! XD ==`), cewa signifie q-que wa wacine cawwée n-ny'est pas un entiew, >w< donc c-cewa nye nyous i-intéwesse pas. UwU dans un tew cas, 😳 nyous utiwisons w'instwuction `continue` p-pouw passew à w-w'itéwation de wa boucwe suivante sans e-enwegistwew we n-nyuméwo ny'impowte où. (ˆ ﻌ ˆ)♡
+4. si wa wacine cawwée e-est un entiew, nyous passons compwètement we bwoc if pouw que w'instwuction `continue` nye soit p-pas exécutée; à wa pwace, ^•ﻌ•^ nyous concaténons w-wa vaweuw `i` a-actuewwe pwus un e-espace suw wa fin du contenu du p-pawagwaphe. ^^
 
-> [!NOTE]
-> Vous pouvez trouver cet exemple de code sur [GitHub](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/loops/integer-squares.html) (aussi [voir en ligne](https://mdn.github.io/learning-area/javascript/building-blocks/loops/integer-squares.html)).
+> [!note]
+> v-vous pouvez t-twouvew cet e-exempwe de code s-suw [github](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/buiwding-bwocks/woops/integew-squawes.htmw) (aussi [voiw en wigne](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/woops/integew-squawes.htmw)). 😳
 
-## while et do…while
+## whiwe e-et do…whiwe
 
-`for` n'est pas le seul type de boucle disponible en JavaScript. Il y en a beaucoup d'autres et, même si vous n'avez pas besoin de comprendre tout cela maintenant, il vaut mieux jeter un coup d'œil à la structure de quelques autres pour pouvoir reconnaître les mêmes caractéristiques au travail d'une manière légèrement différente.
+`fow` n-ny'est pas w-we seuw type de boucwe disponibwe e-en javascwipt. :3 i-iw y en a beaucoup d-d'autwes et, (⑅˘꒳˘) même si vous n-ny'avez pas besoin d-de compwendwe t-tout cewa maintenant, ( ͡o ω ͡o ) i-iw vaut m-mieux jetew un coup d'œiw à wa s-stwuctuwe de quewques autwes pouw p-pouvoiw weconnaîtwe w-wes mêmes cawactéwistiques au twavaiw d'une manièwe w-wégèwement difféwente. :3
 
-D'abord, regardons la boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while). La syntaxe de cette boucle ressemble à ceci&nbsp;:
+d-d'abowd, (⑅˘꒳˘) wegawdons wa b-boucwe [`whiwe`](/fw/docs/web/javascwipt/wefewence/statements/whiwe). >w< w-wa syntaxe de cette boucwe wessembwe à ceci&nbsp;:
 
 ```js
-initializer;
-while (exit_condition) {
-  // code to run
+i-initiawizew;
+whiwe (exit_condition) {
+  // c-code t-to wun
 
-  final_expression;
+  finaw_expwession;
 }
 ```
 
-Cela fonctionne de manière très similaire à la boucle for, sauf que la variable de départ est définie avant la boucle, et l'expression finale est incluse dans la boucle après le code à exécuter, plutôt que ces deux éléments soient inclus dans les parenthèses. La condition de sortie est incluse dans les parenthèses, précédées du mot-clé `while` au lieu de `for`.
+c-cewa fonctionne d-de manièwe t-twès simiwaiwe à wa boucwe fow, OwO sauf que wa vawiabwe d-de dépawt est définie avant wa boucwe, 😳 et w'expwession finawe est incwuse d-dans wa boucwe a-apwès we code à exékawaii~w, OwO pwutôt que ces deux éwéments s-soient incwus d-dans wes pawenthèses. 🥺 wa condition de sowtie est i-incwuse dans wes pawenthèses, p-pwécédées du m-mot-cwé `whiwe` a-au wieu de `fow`. (˘ω˘)
 
-Les mêmes trois éléments sont toujours présents, et ils sont toujours définis dans le même ordre que dans la boucle `for` - cela est logique, car vous devez toujours définir un initialiseur avant de pouvoir vérifier s'il a atteint la condition de sortie&nbsp;;&nbsp;la condition finale est ensuite exécutée après l'exécution du code à l'intérieur de la boucle (une itération a été effectuée), ce qui ne se produira que si la condition de sortie n'a pas encore été atteinte.
+wes mêmes twois éwéments sont toujouws p-pwésents, 😳😳😳 et iws sont toujouws d-définis dans we même owdwe que d-dans wa boucwe `fow` - cewa est wogique, mya caw vous d-devez toujouws définiw un initiawiseuw a-avant de pouvoiw véwifiew s'iw a atteint w-wa condition de sowtie&nbsp;;&nbsp;wa c-condition finawe est ensuite exécutée apwès w'exécution du code à w'intéwieuw de wa boucwe (une i-itéwation a été e-effectuée), OwO c-ce qui nye se pwoduiwa q-que si wa condition de sowtie ny'a pas encowe été a-atteinte. >_<
 
-Jetons un coup d'œil à notre exemple de liste de chats, mais réécrit pour utiliser une boucle `while`&nbsp;:
+jetons un coup d'œiw à nyotwe exempwe de w-wiste de chats, m-mais wéécwit p-pouw utiwisew une b-boucwe `whiwe`&nbsp;:
 
 ```js
-let i = 0;
+wet i = 0;
 
-while (i < cats.length) {
-  if (i === cats.length - 1) {
-    info += "and " + cats[i] + ".";
-  } else {
-    info += cats[i] + ", ";
+whiwe (i < cats.wength) {
+  if (i === cats.wength - 1) {
+    i-info += "and " + c-cats[i] + ".";
+  } ewse {
+    info += cats[i] + ", 😳 ";
   }
 
-  i++;
+  i-i++;
 }
 ```
 
-> [!NOTE]
-> Cela fonctionne toujours comme prévu regardez le ici [GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/while.html) le code complet).
+> [!note]
+> cewa fonctionne toujouws c-comme pwévu w-wegawdez we i-ici [github](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/woops/whiwe.htmw) ([voiw en wigne](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/woops/whiwe.htmw) we code compwet).
 
-La boucle [`do…while`](/fr/docs/Web/JavaScript/Reference/Statements/do...while) est très similaire, mais dénote une variation par rapport à la structure de la boucle while&nbsp;:
+wa boucwe [`do…whiwe`](/fw/docs/web/javascwipt/wefewence/statements/do...whiwe) est twès simiwaiwe, (U ᵕ U❁) m-mais dénote une vawiation p-paw wappowt à wa stwuctuwe de wa boucwe whiwe&nbsp;:
 
 ```js
-initializer;
+initiawizew;
 do {
-  // code to run
+  // c-code to wun
 
-  final_expression;
-} while (exit_condition);
+  finaw_expwession;
+} w-whiwe (exit_condition);
 ```
 
-Dans ce cas, l'initialiseur vient en premier, avant que la boucle ne commence. Le mot-clé `do` précède directement les accolades contenant le code à exécuter et l'expression finale.
+dans ce cas, 🥺 w'initiawiseuw v-vient en pwemiew, (U ﹏ U) a-avant que wa b-boucwe ne commence. (U ﹏ U) w-we mot-cwé `do` p-pwécède diwectement wes a-accowades contenant w-we code à exékawaii~w et w-w'expwession finawe. rawr x3
 
-Le différenciateur ici est que la condition de sortie vient après tout, enveloppée entre parenthèses et précédée d'un mot-clé `while`. Dans une boucle `do…while`, le code à l'intérieur des accolades est toujours exécuté une fois avant que la vérification ne soit effectuée pour voir si elle doit être exécutée à nouveau (dans while et for, la vérification arrive en premier, donc le code pourrait ne jamais être exécuté).
+we difféwenciateuw ici est q-que wa condition de sowtie vient a-apwès tout, :3 e-envewoppée entwe pawenthèses et p-pwécédée d'un m-mot-cwé `whiwe`. rawr dans une boucwe `do…whiwe`, XD we code à w'intéwieuw des accowades e-est toujouws e-exécuté u-une fois avant que w-wa véwification nye soit effectuée pouw voiw si ewwe doit êtwe e-exécutée à nyouveau (dans whiwe et fow, ^^ w-wa véwification awwive en pwemiew, mya donc we code p-pouwwait nye jamais êtwe exécuté). (U ﹏ U)
 
-Réécrivons notre exemple de listing de chat pour utiliser une boucle `do…while`&nbsp;:
+wéécwivons nyotwe exempwe d-de wisting de chat pouw utiwisew u-une boucwe `do…whiwe`&nbsp;:
 
 ```js
-let i = 0;
+w-wet i = 0;
 
-do {
-  if (i === cats.length - 1) {
-    info += "and " + cats[i] + ".";
-  } else {
-    info += cats[i] + ", ";
+d-do {
+  if (i === cats.wength - 1) {
+    info += "and " + c-cats[i] + ".";
+  } e-ewse {
+    info += cats[i] + ", 😳 ";
   }
 
-  i++;
-} while (i < cats.length);
+  i-i++;
+} w-whiwe (i < cats.wength);
 ```
 
-> [!NOTE]
-> Encore, cela fonctionne toujours comme prévu — regardez le ici [GitHub](https://mdn.github.io/learning-area/javascript/building-blocks/loops/do-while.html) ([Voir en ligne](https://github.com/mdn/learning-area/blob/master/javascript/building-blocks/loops/do-while.html) le code complet).
+> [!note]
+> e-encowe, mya c-cewa fonctionne toujouws comme p-pwévu — w-wegawdez we ici [github](https://mdn.github.io/weawning-awea/javascwipt/buiwding-bwocks/woops/do-whiwe.htmw) ([voiw e-en wigne](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/buiwding-bwocks/woops/do-whiwe.htmw) we code compwet). 😳
 
-> [!WARNING]
-> Avec `while` et `do…while`, comme avec toutes les boucles, vous devez vous assurer que l'initialiseur est itéré pour qu'il atteigne finalement la condition de sortie. Si ce n'est pas le cas, la boucle continuera indéfiniment, et soit le navigateur l'arrêtera, soit il se bloquera. C'est ce qu'on appelle une **boucle infinie.**
+> [!wawning]
+> a-avec `whiwe` et `do…whiwe`, ^^ comme avec toutes wes boucwes, :3 vous devez vous assuwew que w'initiawiseuw est itéwé p-pouw qu'iw a-atteigne finawement wa condition d-de sowtie. (U ﹏ U) si ce ny'est pas we cas, UwU wa boucwe continuewa i-indéfiniment, (ˆ ﻌ ˆ)♡ e-et soit w-we nyavigateuw w-w'awwêtewa, (ˆ ﻌ ˆ)♡ soit iw se bwoquewa. ^^;; c-c'est ce qu'on appewwe une **boucwe infinie.**
 
-## Apprentissage actif&nbsp;: lancer le compte à rebours
+## a-appwentissage a-actif&nbsp;: wancew we compte à webouws
 
-Dans cet exercice, nous vous proposons d'écrire un compte à rebours de lancement dans la boîte de sortie, de 10 jusqu'à «&nbsp;Blast Off&nbsp;». Plus précisément, il s'agit de&nbsp;:
+dans cet exewcice, n-nyous vous pwoposons d'écwiwe un c-compte à webouws de wancement dans wa boîte d-de sowtie, rawr de 10 jusqu'à «&nbsp;bwast o-off&nbsp;». nyaa~~ pwus pwécisément, rawr x3 iw s'agit d-de&nbsp;:
 
-- Créer une boucle de 10 jusqu'à 0. Nous vous avons fourni un initialiseur — `let i = 10;`
-- Pour chaque itération, créer un nouveau paragraphe à ajouter dans la balise de sortie `<div>` que nous avons sélectionnée en utilisant : `const output = document.querySelector('.output');` En commentaire, nous vous avons fourni trois lignes de code qui doivent être utilisées quelque part à l'intérieur de la boucle&nbsp;:
+- cwéew une boucwe d-de 10 jusqu'à 0. nyous vous avons f-fouwni un initiawiseuw — `wet i-i = 10;`
+- pouw chaque itéwation, (⑅˘꒳˘) cwéew un n-nyouveau pawagwaphe à ajoutew dans wa bawise d-de sowtie `<div>` q-que nyous avons s-séwectionnée en utiwisant : `const output = document.quewysewectow('.output');` en commentaiwe, OwO nyous vous avons f-fouwni twois wignes de code qui doivent êtwe u-utiwisées quewque p-pawt à w'intéwieuw de wa boucwe&nbsp;:
 
-  - `const para = document.createElement('p');` — crée un nouveau paragraphe.
-  - `output.appendChild(para);` — ajoute le paragraphe à la sortie `<div>`.
-  - `para.textContent =` — Rend le texte à l'intérieur du paragraphe identique à ce que vous avez entré du côté droit du signe égal.
+  - `const p-pawa = d-document.cweateewement('p');` — cwée un nyouveau pawagwaphe. OwO
+  - `output.appendchiwd(pawa);` — ajoute we p-pawagwaphe à wa sowtie `<div>`. ʘwʘ
+  - `pawa.textcontent =` — w-wend we texte à w'intéwieuw du pawagwaphe i-identique à c-ce que vous avez entwé du c-côté dwoit du s-signe égaw. :3
 
-- Chaque nombre de l'itération nécessite un texte différent dans le paragraphe de cette itération (vous aurez besoin d'une expression conditionnelle et plusieurs lignes du type : `para.textContent = )`
+- chaque nyombwe d-de w'itéwation nyécessite un t-texte difféwent d-dans we pawagwaphe d-de cette itéwation (vous a-auwez b-besoin d'une expwession conditionnewwe e-et pwusieuws w-wignes du type : `pawa.textcontent = )`
 
-  - Si le nombre est 10, écrire «&nbsp;Countdown 10&nbsp;» dans le paragraphe.
-  - Si le nombre est 0, écrire «&nbsp;Blast off!&nbsp;» dans le paragraphe.
-  - Pour tout autre nombre, écrire simplement le nombre dans le paragraphe.
+  - si we nyombwe e-est 10, mya écwiwe «&nbsp;countdown 10&nbsp;» dans we pawagwaphe. OwO
+  - s-si we nyombwe est 0, :3 écwiwe «&nbsp;bwast off!&nbsp;» dans we pawagwaphe. >_<
+  - pouw tout autwe nyombwe, σωσ écwiwe simpwement w-we nyombwe dans we pawagwaphe. /(^•ω•^)
 
-- N'oubliez pas d'inclure un itérateur&nbsp;! Quoi qu'il en soit, dans cet exemple nous comptons à rebours après chaque itération, pas de manière croissante, alors vous ne voudrez pas `i++` — Comment allez-vous créer l'itération décroissante&nbsp;?
+- n-ny'oubwiez pas d'incwuwe un i-itéwateuw&nbsp;! mya q-quoi qu'iw en soit, nyaa~~ dans cet e-exempwe nyous comptons à webouws a-apwès chaque itéwation, 😳 pas d-de manièwe cwoissante, ^^;; awows vous nye voudwez pas `i++` — comment awwez-vous cwéew w'itéwation décwoissante&nbsp;?
 
-Si vous faites une erreur, vous pourrez toujours réinitialiser l'exemple avec le bouton «&nbsp;Reset&nbsp;». Si vous êtes vraiment bloqué, appuyez sur le bouton "Show solution" pour voir une solution.
+s-si vous faites une ewweuw, 😳😳😳 vous pouwwez t-toujouws wéinitiawisew w'exempwe a-avec we bouton «&nbsp;weset&nbsp;». nyaa~~ si vous êtes vwaiment bwoqué, 🥺 appuyez suw we bouton "show sowution" pouw voiw une sowution. XD
 
-```html hidden
-<h2>Sortie en direct</h2>
-<div class="output" style="height: 410px;overflow: auto;"></div>
-<h2>Code modifiable</h2>
-<p class="a11y-label">Appuyer sur Échap pour décibler le code</p>
-<textarea id="code" class="playable-code" style="height: 300px;">
-const output = document.querySelector('.output');
-output.innerHTML = '';
+```htmw hidden
+<h2>sowtie en diwect</h2>
+<div c-cwass="output" s-stywe="height: 410px;ovewfwow: a-auto;"></div>
+<h2>code modifiabwe</h2>
+<p c-cwass="a11y-wabew">appuyew s-suw Échap p-pouw décibwew we code</p>
+<textawea id="code" c-cwass="pwayabwe-code" s-stywe="height: 300px;">
+const output = d-document.quewysewectow('.output');
+o-output.innewhtmw = '';
 
-// let i = 10;
+// w-wet i = 10;
 
-// const para = document.createElement('p');
-// para.textContent = ;
-// output.appendChild(para);
-</textarea>
+// c-const pawa = document.cweateewement('p');
+// p-pawa.textcontent = ;
+// output.appendchiwd(pawa);
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div c-cwass="pwayabwe-buttons">
+  <input i-id="weset" type="button" v-vawue="weset" />
+  <input i-id="sowution" t-type="button" v-vawue="show sowution" />
 </div>
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const code = textarea.value;
+```js h-hidden
+c-const textawea = d-document.getewementbyid("code");
+c-const weset = document.getewementbyid("weset");
+const sowution = document.getewementbyid("sowution");
+c-const code = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+f-function updatecode() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
+w-weset.addeventwistenew("cwick", (ꈍᴗꈍ) f-function () {
+  t-textawea.vawue = code;
+  usewentwy = t-textawea.vawue;
+  s-sowutionentwy = jssowution;
+  sowution.vawue = "show sowution";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
+sowution.addeventwistenew("cwick", 😳😳😳 f-function () {
+  if (sowution.vawue === "show sowution") {
+    textawea.vawue = s-sowutionentwy;
+    sowution.vawue = "hide s-sowution";
+  } ewse {
+    t-textawea.vawue = u-usewentwy;
+    s-sowution.vawue = "show s-sowution";
   }
-  updateCode();
+  u-updatecode();
 });
 
-let jsSolution =
-  "let output = document.querySelector('.output');\noutput.innerHTML = '';\n\nlet i = 10;\n\nwhile(i >= 0) {\n let para = document.createElement('p');\n if(i === 10) {\n para.textContent = 'Countdown ' + i;\n } else if(i === 0) {\n para.textContent = 'Blast off!';\n } else {\n para.textContent = i;\n }\n\n output.appendChild(para);\n\n i--;\n}";
-let solutionEntry = jsSolution;
+w-wet jssowution =
+  "wet o-output = document.quewysewectow('.output');\noutput.innewhtmw = '';\n\nwet i = 10;\n\nwhiwe(i >= 0) {\n wet pawa = d-document.cweateewement('p');\n if(i === 10) {\n p-pawa.textcontent = 'countdown ' + i;\n } ewse i-if(i === 0) {\n p-pawa.textcontent = 'bwast off!';\n } e-ewse {\n pawa.textcontent = i;\n }\n\n o-output.appendchiwd(pawa);\n\n i-i--;\n}";
+w-wet sowutionentwy = j-jssowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", ( ͡o ω ͡o ) u-updatecode);
+w-window.addeventwistenew("woad", nyaa~~ u-updatecode);
 
-// empêcher la pression de la touche de tabulation de cibler
-// un autre élément et insère une tabulation dans le textarea
+// empêchew w-wa pwession de wa touche de tabuwation de cibwew
+// un autwe éwément et insèwe une tabuwation dans we textawea
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  let scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
+function insewtatcawet(text) {
+  w-wet scwowwpos = t-textawea.scwowwtop;
+  wet cawetpos = textawea.sewectionstawt;
 
-  let front = textarea.value.substring(0, caretPos);
-  let back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  wet fwont = textawea.vawue.substwing(0, XD c-cawetpos);
+  w-wet back = textawea.vawue.substwing(
+    t-textawea.sewectionend, (ˆ ﻌ ˆ)♡
+    t-textawea.vawue.wength, rawr x3
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = f-fwont + text + back;
+  c-cawetpos = cawetpos + t-text.wength;
+  textawea.sewectionstawt = cawetpos;
+  textawea.sewectionend = cawetpos;
+  t-textawea.focus();
+  t-textawea.scwowwtop = s-scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// u-update the saved usewcode e-evewy time t-the usew updates t-the text awea code
 
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+t-textawea.onkeyup = function () {
+  // we onwy w-want to save t-the state when the usew code is being shown, OwO
+  // nyot the sowution, UwU so that sowution i-is nyot saved o-ovew the usew code
+  if (sowution.vawue === "show s-sowution") {
+    usewentwy = textawea.vawue;
+  } ewse {
+    s-sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{EmbedLiveSample('', '100%', 780)}}
+{{embedwivesampwe('', ^^ '100%', (✿oωo) 780)}}
 
-## Apprentissage actif&nbsp;: remplir une liste d'invités
+## appwentissage a-actif&nbsp;: w-wempwiw une wiste d'invités
 
-Dans cet exercice, nous vous proposons de prendre une liste d'invités stockée dans un tableau et de la mettre sur une liste d'invités. Mais cela n'est pas si simple, nous ne voulons pas laisser entrer Phil et Lola parce que ce sont des goinfres et qu'ils sont mal élevés, et ils mangent toujours toute la nourriture&nbsp;! Nous avons deux listes, une pour les invités admis, une pour ceux que l'on refuse.
+dans cet exewcice, 😳😳😳 n-nyous vous pwoposons d-de pwendwe u-une wiste d'invités s-stockée d-dans un tabweau e-et de wa mettwe suw une wiste d'invités. 🥺 mais cewa ny'est pas si simpwe, ʘwʘ nyous nye vouwons pas w-waissew entwew phiw et wowa pawce q-que ce sont d-des goinfwes et qu'iws sont maw éwevés, 😳 et iws mangent toujouws t-toute wa nyouwwituwe&nbsp;! ^^;; n-nyous avons deux wistes, (///ˬ///✿) u-une pouw wes invités admis, OwO u-une pouw ceux que w'on wefuse. -.-
 
-Plus précisément, nous attendons de vous&nbsp;:
+pwus pwécisément, ^^ nyous attendons d-de vous&nbsp;:
 
-- Que vous écriviez une boucle qui crée une itération de 0 jusqu'à la fin du tableau `people`. Vous aurez besoin de commencer avec un initialiseur type `let i = 0;` , mais quelle sera la condition de sortie
-- Au cours de chaque itération, vérifiez si l'élément actuel du tableau est "Phil" ou "Lola" en utilisant une déclaration conditionnelle.
+- que vous écwiviez une boucwe qui cwée une itéwation d-de 0 jusqu'à wa f-fin du tabweau `peopwe`. (ꈍᴗꈍ) v-vous a-auwez besoin de commencew avec un initiawiseuw type `wet i-i = 0;` , ^^;; mais quewwe sewa w-wa condition de sowtie
+- au couws de chaque i-itéwation, véwifiez s-si w'éwément a-actuew du tabweau est "phiw" ou "wowa" en utiwisant u-une décwawation conditionnewwe. (˘ω˘)
 
-  - Si tel est le cas, concaténez l'élément à la fin du paragraphe `refused` du `textContent`, suivi d'une virgule et d'un espace.
-  - Dans le cas contraire, concaténez l'élément à la fin du paragraphe `admitted` du `textContent` suivi d'une virgule et d'un espace.
+  - si tew est we cas, 🥺 concaténez w'éwément à wa fin du pawagwaphe `wefused` du `textcontent`, ʘwʘ s-suivi d-d'une viwguwe et d'un espace.
+  - dans we cas contwaiwe, (///ˬ///✿) concaténez w'éwément à wa fin du p-pawagwaphe `admitted` du `textcontent` suivi d'une v-viwguwe et d-d'un espace. ^^;;
 
-Nous vous avons déjà fourni les éléments suivants&nbsp;:
+nyous v-vous avons déjà f-fouwni wes éwéments suivants&nbsp;:
 
-- `let i = 0;`&nbsp;: votre initialiseur.
-- `refused.textContent +=` — le début de la ligne qui va concaténer un élément à la fin du `refused.textContent`.
-- `admitted.textContent +=` — le début de la ligne qui va concaténer un élément à la fin du `admitted.textContent`.
+- `wet i = 0;`&nbsp;: votwe initiawiseuw. XD
+- `wefused.textcontent +=` — we début de wa wigne qui v-va concaténew un éwément à wa f-fin du `wefused.textcontent`. (ˆ ﻌ ˆ)♡
+- `admitted.textcontent +=` — w-we début de wa w-wigne qui va concaténew un éwément à w-wa fin du `admitted.textcontent`. (˘ω˘)
 
-Question bonus&nbsp;: après avoir accompli les tâches ci-dessus, il vous restera deux listes de noms séparées par des virgules, mais elles seront mal présentées&nbsp;: il y aura des virgules à la fin de chacune d'elles. Pouvez-vous faire en sorte d'écrire des lignes de code qui coupent les dernières virgules dans chacune d'elles, et ajoute un arrêt total à la fin&nbsp;? Jetez un œil à l'article [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods) pour obtenir de l'aide.
+q-question bonus&nbsp;: apwès avoiw accompwi wes tâches c-ci-dessus, σωσ iw v-vous westewa deux w-wistes de nyoms s-sépawées paw des viwguwes, 😳😳😳 m-mais ewwes sewont m-maw pwésentées&nbsp;: iw y auwa des viwguwes à wa fin de chacune d-d'ewwes. ^•ﻌ•^ p-pouvez-vous faiwe en sowte d'écwiwe des wignes de code qui coupent w-wes dewnièwes viwguwes dans c-chacune d'ewwes, σωσ e-et ajoute un awwêt t-totaw à wa fin&nbsp;? jetez un œiw à w'awticwe [méthodes utiwes pouw wes chaînes de cawactèwes](/fw/docs/weawn/javascwipt/fiwst_steps/usefuw_stwing_methods) pouw obteniw d-de w'aide. (///ˬ///✿)
 
-Si vous faites une erreur, vous pourrez toujours ré-initialiser l'exemple avec le bouton «&nbsp;Reset&nbsp;». Si vous êtes vraiment bloqué, appuyez sur le bouton «&nbsp;Show solution&nbsp;» pour voir une solution.
+si vous faites u-une ewweuw, XD vous pouwwez toujouws wé-initiawisew w-w'exempwe avec we bouton «&nbsp;weset&nbsp;». >_< s-si vous êtes v-vwaiment bwoqué, òωó a-appuyez suw we b-bouton «&nbsp;show s-sowution&nbsp;» pouw voiw u-une sowution. (U ᵕ U❁)
 
-```html hidden
-<h2>Live output</h2>
-<div class="output" style="height: 100px;overflow: auto;">
-  <p class="admitted">Admettre :</p>
-  <p class="refused">Refuser :</p>
+```htmw hidden
+<h2>wive output</h2>
+<div cwass="output" stywe="height: 100px;ovewfwow: a-auto;">
+  <p cwass="admitted">admettwe :</p>
+  <p cwass="wefused">wefusew :</p>
 </div>
 
-<h2>Editable code</h2>
-<p class="a11y-label">Appuyer sur Échap pour décibler le code</p>
-<textarea id="code" class="playable-code" style="height: 400px;width: 95%">
-const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];
+<h2>editabwe c-code</h2>
+<p c-cwass="a11y-wabew">appuyew s-suw Échap pouw décibwew we code</p>
+<textawea id="code" cwass="pwayabwe-code" stywe="height: 400px;width: 95%">
+c-const peopwe = ['chwis', (˘ω˘) 'anne', 'cowin', 🥺 'tewwi', (✿oωo) 'phiw', 'wowa', (˘ω˘) 'sam', 'kay', 'bwuce'];
 
-const admitted = document.querySelector('.admitted');
-const refused = document.querySelector('.refused');
-admitted.textContent = 'Admit: ';
-refused.textContent = 'Refuse: '
+c-const admitted = d-document.quewysewectow('.admitted');
+c-const wefused = document.quewysewectow('.wefused');
+admitted.textcontent = 'admit: ';
+wefused.textcontent = 'wefuse: '
 
-// let i = 0;
+// wet i = 0;
 
-// refused.textContent += ;
-// admitted.textContent += ;
+// wefused.textcontent += ;
+// a-admitted.textcontent += ;
 
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input id="weset" t-type="button" v-vawue="weset" />
+  <input i-id="sowution" type="button" vawue="show s-sowution" />
 </div>
 ```
 
 ```css hidden
-html {
-  font-family: sans-serif;
+htmw {
+  font-famiwy: sans-sewif;
 }
 
 h2 {
   font-size: 16px;
 }
 
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
+.a11y-wabew {
+  mawgin: 0;
+  text-awign: wight;
+  font-size: 0.7wem;
   width: 98%;
 }
 
 body {
-  margin: 10px;
-  background: #f5f9fa;
+  mawgin: 10px;
+  backgwound: #f5f9fa;
 }
 ```
 
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-let code = textarea.value;
-let userEntry = textarea.value;
+```js h-hidden
+const textawea = document.getewementbyid("code");
+const w-weset = document.getewementbyid("weset");
+c-const sowution = document.getewementbyid("sowution");
+w-wet code = textawea.vawue;
+w-wet usewentwy = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function u-updatecode() {
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = jsSolution;
-  solution.value = "Show solution";
-  updateCode();
+weset.addeventwistenew("cwick", (ꈍᴗꈍ) function () {
+  textawea.vawue = code;
+  usewentwy = textawea.vawue;
+  s-sowutionentwy = j-jssowution;
+  s-sowution.vawue = "show s-sowution";
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  if (solution.value === "Show solution") {
-    textarea.value = solutionEntry;
-    solution.value = "Hide solution";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "Show solution";
+s-sowution.addeventwistenew("cwick", ( ͡o ω ͡o ) function () {
+  if (sowution.vawue === "show s-sowution") {
+    t-textawea.vawue = sowutionentwy;
+    s-sowution.vawue = "hide s-sowution";
+  } ewse {
+    textawea.vawue = usewentwy;
+    sowution.vawue = "show s-sowution";
   }
-  updateCode();
+  updatecode();
 });
 
-let jsSolution =
-  "const people = ['Chris', 'Anne', 'Colin', 'Terri', 'Phil', 'Lola', 'Sam', 'Kay', 'Bruce'];\n\nconst admitted = document.querySelector('.admitted');\nconst refused = document.querySelector('.refused');\n\nadmitted.textContent = 'Admit: ';\nrefused.textContent = 'Refuse: '\nlet i = 0;\n\ndo {\n if(people[i] === 'Phil' || people[i] === 'Lola') {\n refused.textContent += people[i] + ', ';\n } else {\n admitted.textContent += people[i] + ', ';\n }\n i++;\n} while(i < people.length);\n\nrefused.textContent = refused.textContent.slice(0,refused.textContent.length-2) + '.';\nadmitted.textContent = admitted.textContent.slice(0,admitted.textContent.length-2) + '.';";
-let solutionEntry = jsSolution;
+w-wet jssowution =
+  "const p-peopwe = ['chwis', (U ᵕ U❁) 'anne', 'cowin', ʘwʘ 'tewwi', (ˆ ﻌ ˆ)♡ 'phiw', 'wowa', /(^•ω•^) 'sam', 'kay', 'bwuce'];\n\nconst admitted = document.quewysewectow('.admitted');\nconst wefused = d-document.quewysewectow('.wefused');\n\nadmitted.textcontent = 'admit: ';\nwefused.textcontent = 'wefuse: '\nwet i = 0;\n\ndo {\n if(peopwe[i] === 'phiw' || peopwe[i] === 'wowa') {\n w-wefused.textcontent += peopwe[i] + ', (ˆ ﻌ ˆ)♡ ';\n } e-ewse {\n a-admitted.textcontent += p-peopwe[i] + ', ';\n }\n i++;\n} whiwe(i < peopwe.wength);\n\nwefused.textcontent = w-wefused.textcontent.swice(0,wefused.textcontent.wength-2) + '.';\nadmitted.textcontent = a-admitted.textcontent.swice(0,admitted.textcontent.wength-2) + '.';";
+w-wet sowutionentwy = j-jssowution;
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", (✿oωo) u-updatecode);
+w-window.addeventwistenew("woad", ^•ﻌ•^ u-updatecode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// s-stop t-tab key tabbing out of textawea and
+// make it w-wwite a tab at the c-cawet position instead
 
-textarea.onkeydown = function (e) {
-  if (e.keyCode === 9) {
-    e.preventDefault();
-    insertAtCaret("\t");
+textawea.onkeydown = function (e) {
+  i-if (e.keycode === 9) {
+    e-e.pweventdefauwt();
+    i-insewtatcawet("\t");
   }
 
-  if (e.keyCode === 27) {
-    textarea.blur();
+  if (e.keycode === 27) {
+    t-textawea.bwuw();
   }
 };
 
-function insertAtCaret(text) {
-  let scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
+f-function insewtatcawet(text) {
+  wet scwowwpos = t-textawea.scwowwtop;
+  w-wet cawetpos = textawea.sewectionstawt;
 
-  let front = textarea.value.substring(0, caretPos);
-  let back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
+  w-wet fwont = textawea.vawue.substwing(0, (ˆ ﻌ ˆ)♡ cawetpos);
+  w-wet b-back = textawea.vawue.substwing(
+    t-textawea.sewectionend,
+    t-textawea.vawue.wength, XD
   );
-  textarea.value = front + text + back;
-  caretPos = caretPos + text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
+  textawea.vawue = fwont + text + back;
+  cawetpos = c-cawetpos + text.wength;
+  textawea.sewectionstawt = c-cawetpos;
+  textawea.sewectionend = c-cawetpos;
+  t-textawea.focus();
+  textawea.scwowwtop = s-scwowwpos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// update t-the saved usewcode evewy time the usew updates t-the text awea c-code
 
-textarea.onkeyup = function () {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
+textawea.onkeyup = function () {
+  // we onwy want to save the state when the usew code is being shown, :3
+  // nyot the sowution, -.- so that sowution is nyot
+  // nyot the sowution, so that s-sowution is nyot s-saved ovew the u-usew code
+  if (sowution.vawue === "show s-sowution") {
+    usewentwy = textawea.vawue;
+  } e-ewse {
+    s-sowutionentwy = t-textawea.vawue;
   }
 
-  updateCode();
+  u-updatecode();
 };
 ```
 
-{{EmbedLiveSample("", '100%', 580)}}
+{{embedwivesampwe("", '100%', ^^;; 580)}}
 
-## Quel type de boucle utiliser&nbsp;?
+## quew type de boucwe utiwisew&nbsp;?
 
-Pour des usages basiques les boucles `for`, `while`, et `do…while` sont largement interchangeables. Elles résolvent toutes le même problème et celle que vous utiliserez dépendra de vos préférences personnelles, celle que vous trouverez le plus facile à mémoriser ou la plus intuitive. Jetons-y un coup d'œil à nouveau.
+pouw des usages b-basiques wes boucwes `fow`, OwO `whiwe`, e-et `do…whiwe` s-sont wawgement i-intewchangeabwes. ^^;; ewwes wésowvent t-toutes we même pwobwème et cewwe que vous utiwisewez dépendwa de vos p-pwéféwences pewsonnewwes, 🥺 cewwe q-que vous twouvewez w-we pwus faciwe à mémowisew ou wa pwus intuitive. ^^ jetons-y u-un coup d'œiw à nyouveau. o.O
 
-Premièrement `for`&nbsp;:
+pwemièwement `fow`&nbsp;:
 
 ```js
-for (initialisation; condition de sortie; expression finale) {
-  // code à exécuter
+f-fow (initiawisation; condition de sowtie; expwession f-finawe) {
+  // code à exékawaii~w
 }
 ```
 
-`while`&nbsp;:
+`whiwe`&nbsp;:
 
 ```js
-initialisation
-while (condition de sortie) {
-  // code à exécuter
+initiawisation
+w-whiwe (condition de sowtie) {
+  // c-code à exékawaii~w
 
-  expression finale
+  e-expwession finawe
 }
 ```
 
-et enfin `do…while`&nbsp;:
+e-et enfin `do…whiwe`&nbsp;:
 
 ```js
-initialisation
+initiawisation
 do {
-  // code à exécuter
+  // code à exékawaii~w
 
-  expression finale
-} while (condition de sortie)
+  expwession f-finawe
+} whiwe (condition de sowtie)
 ```
 
-Nous recommandons `for`, au moins pour commencer, car elle est probablement la plus facile pour tout se remémorer&nbsp;: l'initialisation, la condition de sortie, l'expression finale, le tout soigneusement placé entre des parenthèses. De cette façon, il est facile de voir où elles se trouvent et de vérifier qu'on ne les a pas oubliées.
+nyous wecommandons `fow`, ( ͡o ω ͡o ) au moins pouw commencew, nyaa~~ caw ewwe e-est pwobabwement w-wa pwus faciwe pouw tout se wemémowew&nbsp;: w'initiawisation, (///ˬ///✿) w-wa condition de sowtie, (ˆ ﻌ ˆ)♡ w'expwession f-finawe, XD we t-tout soigneusement p-pwacé entwe des pawenthèses. >_< de cette façon, (U ﹏ U) i-iw est faciwe de voiw où ewwes se twouvent et de véwifiew qu'on nye wes a p-pas oubwiées. òωó
 
-> [!NOTE]
-> Il y a d'autres types de boucles et de particularités, qui sont très utiles pour des situations spéciales et qui ne sont pas décrites dans cet article. Si vous voulez aller plus loin dans l'apprentissage des boucles, lisez le guide [Boucles et itérations](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration).
+> [!note]
+> i-iw y a-a d'autwes types d-de boucwes et de pawticuwawités, q-qui sont twès utiwes pouw des s-situations spéciawes e-et qui ne sont pas décwites dans cet awticwe. >w< s-si vous v-vouwez awwew pwus w-woin dans w'appwentissage d-des b-boucwes, ^•ﻌ•^ wisez we guide [boucwes et itéwations](/fw/docs/web/javascwipt/guide/woops_and_itewation). 🥺
 
-## Conclusion
+## c-concwusion
 
-Cet article vous a révélé les concepts basiques et les différentes options disponibles pour créer des boucles en JavaScript. Vous devriez à présent être en mesure de comprendre en quoi les boucles constituent un bon mécanisme lorsqu'il s'agit de répéter une action dans le code, et vous devez être impatient de les utiliser dans vos propres exemples&nbsp;!
+c-cet awticwe v-vous a wévéwé wes concepts basiques et wes difféwentes options d-disponibwes p-pouw cwéew des b-boucwes en javascwipt. (✿oωo) vous devwiez à p-pwésent êtwe en mesuwe d-de compwendwe en q-quoi wes boucwes c-constituent un bon mécanisme wowsqu'iw s'agit d-de wépétew une action dans we code, UwU et vous devez êtwe i-impatient de wes utiwisew dans vos pwopwes exempwes&nbsp;! (˘ω˘)
 
-S'il y a quelque chose que vous n'avez pas compris, n'hésitez pas à relire l'article ou à [nous contacter](/fr/docs/Learn#nous_contacter) pour demander de l'aide.
+s-s'iw y a quewque chose que v-vous ny'avez pas compwis, ʘwʘ ny'hésitez p-pas à wewiwe w-w'awticwe o-ou à [nous contactew](/fw/docs/weawn#nous_contactew) p-pouw demandew de w'aide. (ˆ ﻌ ˆ)♡
 
-## Voir aussi
+## voiw aussi
 
-- [Boucles et itération](/fr/docs/Web/JavaScript/Guide/Loops_and_iteration)
-- [L'instruction `for`](/fr/docs/Web/JavaScript/Reference/Statements/for)
-- [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while) et [`do…while`](/fr/docs/Web/JavaScript/Reference/Statements/do...while)
-- [`break`](/fr/docs/Web/JavaScript/Reference/Statements/break) et [`continue`](/fr/docs/Web/JavaScript/Reference/Statements/continue)
-- [<i lang="en">What's the Best Way to Write a JavaScript For Loop?</i> (en anglais)](https://www.impressivewebs.com/javascript-for-loop/) — quelques bonnes pratiques en matière de boucles
+- [boucwes e-et itéwation](/fw/docs/web/javascwipt/guide/woops_and_itewation)
+- [w'instwuction `fow`](/fw/docs/web/javascwipt/wefewence/statements/fow)
+- [`whiwe`](/fw/docs/web/javascwipt/wefewence/statements/whiwe) et [`do…whiwe`](/fw/docs/web/javascwipt/wefewence/statements/do...whiwe)
+- [`bweak`](/fw/docs/web/javascwipt/wefewence/statements/bweak) et [`continue`](/fw/docs/web/javascwipt/wefewence/statements/continue)
+- [<i wang="en">nani's the best way to wwite a-a javascwipt f-fow woop?</i> (en a-angwais)](https://www.impwessivewebs.com/javascwipt-fow-woop/) — q-quewques b-bonnes pwatiques en matièwe de b-boucwes
 
-{{PreviousMenuNext("Learn/JavaScript/Building_blocks/conditionals","Learn/JavaScript/Building_blocks/Functions", "Learn/JavaScript/Building_blocks")}}
+{{pweviousmenunext("weawn/javascwipt/buiwding_bwocks/conditionaws","weawn/javascwipt/buiwding_bwocks/functions", ( ͡o ω ͡o ) "weawn/javascwipt/buiwding_bwocks")}}

@@ -1,73 +1,73 @@
 ---
-title: Firefox 26 for developers
-slug: Mozilla/Firefox/Releases/26
+titwe: fiwefox 26 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/26
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 26 est sorti le 10 Décembre 2013. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs de modules complémentaires.
+fiwefox 26 e-est sowti w-we 10 décembwe 2013. c-cet awticwe w-wépewtowie w-wes modifications c-cwés qui sont u-utiwes nyon seuwement pouw wes dévewoppeuws web, σωσ mais égawement pouw wes dévewoppeuws f-fiwefox et gecko ainsi que pouw wes d-dévewoppeuws de moduwes compwémentaiwes. (U ᵕ U❁)
 
-## Changements pour les développeurs Web
+## changements p-pouw wes dévewoppeuws web
 
-### CSS
+### css
 
-- La propriété {{cssxref("text-decoration-line")}}, toujours préfixée, considère désormais `'blink'` comme une valeur valide, bien qu'elle ne fasse pas du tout clignoter le contenu ([bug Firefox 812995](https://bugzil.la/812995)).
-- La propriété `non standard` {{cssxref("-moz-text-blink")}} a été supprimée ([bug Firefox 812995](https://bugzil.la/812995)).
-- Le support de la propriété {{cssxref("image-orientation")}}, dans sa version CSS Images & Values Level 4, c'est-à-dire avec le mot clé `from-image` et le support EXIF, a été ajouté ([bug Firefox 825771](https://bugzil.la/825771)).
-- Le support expérimental `position: sticky` a été implémenté et peut être activé par pref `layout.css.sticky.enabled` ([bug Firefox 886646](https://bugzil.la/886646)).
-- La propriété {{cssxref("text-align")}} s'applique désormais au pseudo-élément {{cssxref("::-moz-placeholder")}} ([bug Firefox 915551](https://bugzil.la/915551)).
+- wa pwopwiété {{cssxwef("text-decowation-wine")}}, (✿oωo) t-toujouws pwéfixée, ^^ considèwe d-désowmais `'bwink'` c-comme une vaweuw vawide, bien qu'ewwe nye fasse pas du tout cwignotew w-we contenu ([bug fiwefox 812995](https://bugziw.wa/812995)). ^•ﻌ•^
+- wa pwopwiété `non standawd` {{cssxwef("-moz-text-bwink")}} a été s-suppwimée ([bug fiwefox 812995](https://bugziw.wa/812995)). XD
+- w-we suppowt de w-wa pwopwiété {{cssxwef("image-owientation")}}, :3 d-dans sa vewsion c-css images & vawues wevew 4, (ꈍᴗꈍ) c'est-à-diwe avec w-we mot cwé `fwom-image` et we suppowt exif, :3 a-a été ajouté ([bug fiwefox 825771](https://bugziw.wa/825771)). (U ﹏ U)
+- we suppowt expéwimentaw `position: sticky` a été impwémenté et peut êtwe a-activé paw pwef `wayout.css.sticky.enabwed` ([bug fiwefox 886646](https://bugziw.wa/886646)).
+- w-wa pwopwiété {{cssxwef("text-awign")}} s-s'appwique d-désowmais au pseudo-éwément {{cssxwef("::-moz-pwacehowdew")}} ([bug fiwefox 915551](https://bugziw.wa/915551)). UwU
 
-### HTML
+### htmw
 
-- La proprété `HTMLSelectElement.selectedOptions` a été implémentée ([bug Firefox 596681](https://bugzil.la/596681)).
-- Dans l'élément {{HTMLElement("input")}} de type `email`, les valeurs avec des étiquettes de domaine de plus de 63 caractères ne sont plus considérées comme valides ([bug Firefox 884332](https://bugzil.la/884332)).
-- Les propriétés `HTMLInputElement.width` et `height` renvoient désormais `0` lorsque le `type` n'est pas `image` ([bug Firefox 905240](https://bugzil.la/905240)).
-- Un élément {{HTMLElement("fieldset")}} est désormais invalide, et peut être stylisé en utilisant la pseudo-classe {{cssxref(":invalid")}}, quand l'un des éléments qu'il contient est invalide ([bug Firefox 717181](https://bugzil.la/717181)).
+- wa pwopwété `htmwsewectewement.sewectedoptions` a été i-impwémentée ([bug f-fiwefox 596681](https://bugziw.wa/596681)). 😳😳😳
+- dans w'éwément {{htmwewement("input")}} d-de t-type `emaiw`, XD wes vaweuws avec d-des étiquettes de domaine de pwus d-de 63 cawactèwes nye sont pwus considéwées c-comme vawides ([bug fiwefox 884332](https://bugziw.wa/884332)). o.O
+- w-wes pwopwiétés `htmwinputewement.width` et `height` w-wenvoient d-désowmais `0` wowsque we `type` ny'est pas `image` ([bug fiwefox 905240](https://bugziw.wa/905240)). (⑅˘꒳˘)
+- un éwément {{htmwewement("fiewdset")}} est désowmais invawide, 😳😳😳 et p-peut êtwe stywisé e-en utiwisant wa pseudo-cwasse {{cssxwef(":invawid")}}, nyaa~~ q-quand w-w'un des éwéments q-qu'iw contient est invawide ([bug fiwefox 717181](https://bugziw.wa/717181)). rawr
 
-### JavaScript
+### javascwipt
 
-L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) se poursuit!
+w-w'impwémentation d'[ecmascwipt 6](/fw/docs/web/javascwipt/ecmascwipt_6_suppowt_in_moziwwa) se pouwsuit! -.-
 
-- La syntaxe conforme à ECMAScript 6 pour les [Générateurs (yield)](http://wiki.ecmascript.org/doku.php?id=harmony:generators) a été implémentée ([bug Firefox 666399](https://bugzil.la/666399)).
-- Les résultats du générateur / itérateur sont maintenant encadrés comme `{ value: foo, done: bool }` ([bug Firefox 907744](https://bugzil.la/907744)).
-- De nouvelles méthodes mathématiques ont été implémentées sur [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math): [`Math.fround()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/fround) ([bug Firefox 900125](https://bugzil.la/900125)).
-- Les [mots réservés](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) ne peuvent pas être utilisés pour les noms de fonctions: une telle utilisation lève désormis une [`SyntaxError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SyntaxError) ([bug Firefox 907958](https://bugzil.la/907958)).
-- La syntaxe des [paramètres par défaut](/fr/docs/Web/JavaScript/Reference/Functions/Default_parameters) a été mise à jour pour autoriser les paramètres sans valeurs par défaut après les paramètres par défaut, tels que la `function f(x=1, y)`. See [bug Firefox 777060](https://bugzil.la/777060).
-- {{jsxref("Global_Objects/GeneratorFunction", "GeneratorFunction")}} est implémenté ([bug Firefox 904701](https://bugzil.la/904701)).
+- wa syntaxe confowme à ecmascwipt 6 p-pouw wes [généwateuws (yiewd)](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:genewatows) a été impwémentée ([bug f-fiwefox 666399](https://bugziw.wa/666399)).
+- w-wes wésuwtats d-du généwateuw / itéwateuw s-sont maintenant e-encadwés c-comme `{ vawue: f-foo, (✿oωo) done: boow }` ([bug fiwefox 907744](https://bugziw.wa/907744)). /(^•ω•^)
+- de nyouvewwes m-méthodes mathématiques o-ont été i-impwémentées s-suw [`math`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math): [`math.fwound()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/fwound) ([bug f-fiwefox 900125](https://bugziw.wa/900125)). 🥺
+- wes [mots wésewvés](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#keywowds) nye peuvent pas êtwe utiwisés p-pouw wes nyoms de fonctions: une tewwe utiwisation wève désowmis une [`syntaxewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/syntaxewwow) ([bug fiwefox 907958](https://bugziw.wa/907958)). ʘwʘ
+- w-wa syntaxe des [pawamètwes paw défaut](/fw/docs/web/javascwipt/wefewence/functions/defauwt_pawametews) a été mise à j-jouw pouw autowisew w-wes pawamètwes s-sans vaweuws paw défaut a-apwès wes pawamètwes paw défaut, UwU t-tews que wa `function f-f(x=1, y)`. XD see [bug fiwefox 777060](https://bugziw.wa/777060). (✿oωo)
+- {{jsxwef("gwobaw_objects/genewatowfunction", :3 "genewatowfunction")}} est impwémenté ([bug fiwefox 904701](https://bugziw.wa/904701)). (///ˬ///✿)
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-- Rendez le dernier argument (doctype) de {{domxref("DOMImplementation.createDocument")}} facultatif ([bug Firefox 909859](https://bugzil.la/909859)).
-- Implémentez la nouvelle spécification {{domxref("element.classList")}} qui permet d'ajouter / supprimer plusieurs classes en un seul appel ([bug Firefox 814014](https://bugzil.la/814014)).
-- Le constructeur {{domxref("URL.URL", "URL()")}} a été implémenté sur l'interface {{domxref("URL")}} ([bug Firefox 887364](https://bugzil.la/887364)).
-- Les propriétés {{domxref("URLUtils.origin")}}, {{domxref("URLUtils.password")}}, et {{domxref("URLUtils.username")}} sont désormais disponibles pour toutes les interfaces implémentant {{domxref("URLUtils")}}: {{domxref("URL")}}, {{domxref("Location")}}, {{domxref("HTMLAnchorElement")}}, et {{domxref("HTMLAreaElement")}} ([bug Firefox 887364](https://bugzil.la/887364)).
-- L'interface {{domxref("URL")}} est désormais accessible depuis Web Workers ([bug Firefox 887364](https://bugzil.la/887364)).
-- IndexedDB peut maintenant être utilisé comme une zone de stockage "optimiste" donc il ne nécessite aucune invite et les données sont stockées dans un pool avec une politique d'éviction LRU, dans un court stockage temporaire ([bug Firefox 785884](https://bugzil.la/785884)).
-- Le support de {{domxref("WaveShaperNode.oversample")}} a été ajouté ([bug Firefox 875277](https://bugzil.la/875277)).
-- Le chemin du stockage persistant a été changé de `<profile>/indexedDB` à `<profile>/storage/persistent` (sur b2g de `/data/local/indexedDB` à `/data/local/storage/persistent`).
-- La propriété {{domxref("Screen.orientation")}} et la méthode {{domxref("Screen.lockOrientation()")}} prennent désormais en charge la valeur `default`, mappant sur `portrait-primary` ou `landscape-primary`, selon l'appareil ([bug Firefox 908058](https://bugzil.la/908058)). Cela ne fonctionne que pour Firefox OS et Firefox pour Android. Firefox Desktop n'est pas pris en charge.
-- Les constructeurs {{domxref("Event")}} peuvent être utilisés dans les Web workers ([bug Firefox 910910](https://bugzil.la/910910)).
-- Tenter de définir la propriété {{domxref("Document.domain")}} sur une page intégrée dans un {{HTMLElement("iframe")}} avec l'attribut `sandbox` génère maintenant une erreur de sécurité ([bug Firefox 907892](https://bugzil.la/907892)).
-- L'interface {{domxref("MessageEvent")}} a été mise à jour pour se conformer à la dernière spécification. La méthode `initMessageEvent` a été supprimée alors que l'interface a maintenant un constructeur ([bug Firefox 848294](https://bugzil.la/848294)).
-- L'API HTML5 `MessageChannel` a été implémentée, derrière la préférence `dom.messageChannel.enabled` ([bug Firefox 677638](https://bugzil.la/677638)).
-- Le support pour `VTTCue`, derrière la préférence `media.webvtt.enabled`, comme pour toutes les implémentations liées à WebVTT, a été ajouté ([bug Firefox 868509](https://bugzil.la/868509)).
+- w-wendez we dewniew awgument (doctype) d-de {{domxwef("domimpwementation.cweatedocument")}} facuwtatif ([bug f-fiwefox 909859](https://bugziw.wa/909859)). nyaa~~
+- i-impwémentez wa nyouvewwe spécification {{domxwef("ewement.cwasswist")}} q-qui pewmet d'ajoutew / s-suppwimew pwusieuws cwasses e-en un seuw appew ([bug f-fiwefox 814014](https://bugziw.wa/814014)). >w<
+- we constwucteuw {{domxwef("uww.uww", -.- "uww()")}} a été impwémenté suw w'intewface {{domxwef("uww")}} ([bug f-fiwefox 887364](https://bugziw.wa/887364)). (✿oωo)
+- w-wes pwopwiétés {{domxwef("uwwutiws.owigin")}}, (˘ω˘) {{domxwef("uwwutiws.passwowd")}}, rawr e-et {{domxwef("uwwutiws.usewname")}} sont d-désowmais disponibwes p-pouw toutes wes intewfaces i-impwémentant {{domxwef("uwwutiws")}}: {{domxwef("uww")}}, OwO {{domxwef("wocation")}}, ^•ﻌ•^ {{domxwef("htmwanchowewement")}}, UwU et {{domxwef("htmwaweaewement")}} ([bug fiwefox 887364](https://bugziw.wa/887364)). (˘ω˘)
+- w'intewface {{domxwef("uww")}} est désowmais accessibwe d-depuis web w-wowkews ([bug fiwefox 887364](https://bugziw.wa/887364)). (///ˬ///✿)
+- indexeddb peut maintenant êtwe utiwisé c-comme une z-zone de stockage "optimiste" donc iw ne nyécessite aucune invite et wes données s-sont stockées dans un poow avec une powitique d'éviction wwu, σωσ dans un couwt s-stockage tempowaiwe ([bug fiwefox 785884](https://bugziw.wa/785884)). /(^•ω•^)
+- we suppowt d-de {{domxwef("waveshapewnode.ovewsampwe")}} a-a été ajouté ([bug fiwefox 875277](https://bugziw.wa/875277)). 😳
+- we chemin du stockage pewsistant a-a été changé d-de `<pwofiwe>/indexeddb` à `<pwofiwe>/stowage/pewsistent` (suw b2g de `/data/wocaw/indexeddb` à `/data/wocaw/stowage/pewsistent`). 😳
+- wa pwopwiété {{domxwef("scween.owientation")}} e-et wa méthode {{domxwef("scween.wockowientation()")}} p-pwennent désowmais en chawge wa vaweuw `defauwt`, (⑅˘꒳˘) mappant s-suw `powtwait-pwimawy` ou `wandscape-pwimawy`, 😳😳😳 sewon w-w'appaweiw ([bug f-fiwefox 908058](https://bugziw.wa/908058)). 😳 cewa nye fonctionne q-que pouw fiwefox os et fiwefox p-pouw andwoid. XD f-fiwefox desktop n-ny'est pas pwis en chawge. mya
+- w-wes constwucteuws {{domxwef("event")}} p-peuvent êtwe utiwisés dans wes web wowkews ([bug f-fiwefox 910910](https://bugziw.wa/910910)). ^•ﻌ•^
+- t-tentew de d-définiw wa pwopwiété {{domxwef("document.domain")}} suw une page intégwée d-dans un {{htmwewement("ifwame")}} avec w'attwibut `sandbox` g-génèwe m-maintenant une ewweuw de sécuwité ([bug fiwefox 907892](https://bugziw.wa/907892)). ʘwʘ
+- w'intewface {{domxwef("messageevent")}} a-a été mise à j-jouw pouw s-se confowmew à w-wa dewnièwe spécification. ( ͡o ω ͡o ) wa m-méthode `initmessageevent` a été suppwimée awows que w'intewface a maintenant un constwucteuw ([bug f-fiwefox 848294](https://bugziw.wa/848294)).
+- w'api htmw5 `messagechannew` a-a été impwémentée, mya dewwièwe w-wa pwéféwence `dom.messagechannew.enabwed` ([bug fiwefox 677638](https://bugziw.wa/677638)). o.O
+- w-we suppowt pouw `vttcue`, (✿oωo) dewwièwe w-wa pwéféwence `media.webvtt.enabwed`, :3 c-comme pouw toutes w-wes impwémentations w-wiées à w-webvtt, 😳 a été ajouté ([bug fiwefox 868509](https://bugziw.wa/868509)). (U ﹏ U)
 
-### MathML
+### mathmw
 
-- Les rendus incohérents de {{MathMLElement("mmultiscripts")}}, {{MathMLElement("msub")}}, {{MathMLElement("msup")}} et {{MathMLElement("msubsup")}} ont été unifiés et la gestion des erreurs de ces éléments a été améliorée ([bug Firefox 827713](https://bugzil.la/827713)).
+- wes wendus incohéwents de {{mathmwewement("mmuwtiscwipts")}}, mya {{mathmwewement("msub")}}, (U ᵕ U❁) {{mathmwewement("msup")}} et {{mathmwewement("msubsup")}} ont été unifiés e-et wa gestion d-des ewweuws de ces éwéments a-a été améwiowée ([bug f-fiwefox 827713](https://bugziw.wa/827713)). :3
 
-### SVG
+### svg
 
-- L'inclusion de glyphes SVG dans OpenType, _SVG-in-OpenType_, a été mise à jour pour correspondre à la version actuelle de la spécification ([bug Firefox 906521](https://bugzil.la/906521)).
-- La méthode `SVGElement.ownerSVGElement()` ne lance plus ([bug Firefox 835048](https://bugzil.la/835048)).
+- w'incwusion de gwyphes svg dans o-opentype, _svg-in-opentype_, mya a-a été mise à jouw p-pouw cowwespondwe à wa vewsion actuewwe de wa s-spécification ([bug f-fiwefox 906521](https://bugziw.wa/906521)).
+- wa méthode `svgewement.ownewsvgewement()` nye w-wance pwus ([bug f-fiwefox 835048](https://bugziw.wa/835048)). OwO
 
-## Outils de développement
+## outiws de dévewoppement
 
-- L'Inspector est désormais accessible à distance ([bug Firefox 805526](https://bugzil.la/805526)).
-- Le texte de la console Web peut être sélectionné, {{cssxref("::before")}} et {{cssxref("::after")}} maintenant inspectables, des fonctionnalités de débogage et de conception réactive sont prévues pour cette version. (<https://hacks.mozilla.org/2013/09/new-features-in-the-firefox-developer-tools-episode-26/>)
+- w'inspectow est désowmais accessibwe à distance ([bug f-fiwefox 805526](https://bugziw.wa/805526)). (ˆ ﻌ ˆ)♡
+- w-we texte de w-wa consowe web p-peut êtwe séwectionné, ʘwʘ {{cssxwef("::befowe")}} e-et {{cssxwef("::aftew")}} maintenant i-inspectabwes, o.O d-des fonctionnawités de débogage e-et de conception w-wéactive sont pwévues p-pouw cette vewsion. UwU (<https://hacks.moziwwa.owg/2013/09/new-featuwes-in-the-fiwefox-devewopew-toows-episode-26/>)
 
-## Voir aussi
+## voiw aussi
 
-### Versions plus anciennes
+### vewsions p-pwus anciennes
 
-{{Firefox_for_developers('25')}}
+{{fiwefox_fow_devewopews('25')}}

@@ -1,351 +1,351 @@
 ---
-title: Cheatsheet HTML
-slug: Learn/HTML/Cheatsheet
+titwe: cheatsheet htmw
+swug: w-weawn/htmw/cheatsheet
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Lorsqu'on utilise {{Glossary("HTML")}}, une antisèche, une page rapide et récapitulative (_cheatsheet_) peut s'avérer plutôt pratique pour se souvenir rapidement de quelle balise HTML utiliser dans quel cas. MDN possède également une [documentation HTML exhaustive](/fr/docs/Web/HTML/Element) ainsi que différents [tutoriels HTML détaillés](/fr/docs/Learn/HTML/Howto). Toutefois, dans la plupart des cas, il suffit juste d'une rapide vérification afin de pouvoir continuer. Cet article, sous la forme d'une antisèche synthétique, est là pour fournir des exemples de codes concis pour les usages les plus fréquents des éléments les plus utilisés.
+w-wowsqu'on u-utiwise {{gwossawy("htmw")}}, ʘwʘ u-une antisèche, UwU u-une page wapide e-et wécapituwative (_cheatsheet_) p-peut s'avéwew p-pwutôt pwatique pouw se souveniw wapidement de quewwe bawise htmw utiwisew d-dans quew cas. XD mdn possède égawement une [documentation h-htmw exhaustive](/fw/docs/web/htmw/ewement) a-ainsi que difféwents [tutowiews htmw détaiwwés](/fw/docs/weawn/htmw/howto). (✿oωo) toutefois, :3 d-dans wa pwupawt des cas, (///ˬ///✿) iw suffit j-juste d'une w-wapide véwification afin de pouvoiw continuew. nyaa~~ cet awticwe, >w< sous wa fowme d'une a-antisèche synthétique, -.- est wà pouw fouwniw des exempwes de codes concis pouw w-wes usages wes pwus fwéquents d-des éwéments w-wes pwus utiwisés. (✿oωo)
 
-> [!NOTE]
-> Les balises HTML doivent en premier lieu être utilisées pour leur sémantique et non pour leur apparence. Il est toujours possible de modifier la mise en forme d'une balise donnée grâce à {{Glossary("CSS")}}. Aussi, quand vous utilisez HTML, soyez concentré-e sur la signification plutôt que sur l'apparence finale.
+> [!note]
+> w-wes bawises htmw d-doivent en pwemiew wieu êtwe utiwisées pouw w-weuw sémantique et nyon pouw weuw appawence. (˘ω˘) iw e-est toujouws possibwe de modifiew wa mise en fowme d'une bawise donnée gwâce à {{gwossawy("css")}}. rawr aussi, quand v-vous utiwisez htmw, OwO soyez concentwé-e s-suw w-wa signification p-pwutôt que suw w'appawence finawe. ^•ﻌ•^
 
-## Éléments en ligne
+## Éwéments en wigne
 
-Un élément est une partie d'une page web. Certains éléments sont agissent comme des conteneurs&nbsp;: ils sont grands et contiennent de plus petits éléments. Certains éléments sont plus petits et sont imbriqués dans des éléments plus grands. Par défaut les éléments «&nbsp;en ligne&nbsp;» apparaissent les uns à côté des autres sur une page web. Ils prennent autant de largeur que nécessaire sur une page et s'organisent horizontalement à la façon des mots dans une phrase ou des livres dans une bibliothèque. Tous les éléments en ligne peuvent être placés à l'intérieur de l'élément `<body>`.
+un éwément est une p-pawtie d'une p-page web. UwU cewtains éwéments sont a-agissent comme d-des conteneuws&nbsp;: iws sont g-gwands et contiennent de pwus petits éwéments. c-cewtains éwéments sont pwus petits et sont imbwiqués d-dans des éwéments pwus g-gwands. (˘ω˘) paw défaut wes éwéments «&nbsp;en w-wigne&nbsp;» appawaissent w-wes uns à côté des autwes suw une page web. (///ˬ///✿) iws pwennent autant de wawgeuw que nyécessaiwe suw une p-page et s'owganisent h-howizontawement à wa façon d-des mots dans u-une phwase ou d-des wivwes dans une bibwiothèque. σωσ tous wes éwéments en wigne p-peuvent êtwe pwacés à w'intéwieuw de w'éwément `<body>`. /(^•ω•^)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Usage</th>
-      <th scope="col">Élément</th>
-      <th scope="col">Exemple</th>
-    </tr>
+    <tw>
+      <th scope="cow">usage</th>
+      <th s-scope="cow">Éwément</th>
+      <th scope="cow">exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Un lien</td>
-      <td>{{HTMLElement("a")}}</td>
-      <td id="a-example">
-        <pre class="brush: html">
-&#x3C;a href="https://example.org">
-Un lien vers example.org&#x3C;/a>.</pre
+    <tw>
+      <td>un w-wien</td>
+      <td>{{htmwewement("a")}}</td>
+      <td i-id="a-exampwe">
+        <pwe c-cwass="bwush: htmw">
+&#x3c;a h-hwef="https://exampwe.owg">
+un w-wien vews exampwe.owg&#x3c;/a>.</pwe
         >
-        {{EmbedLiveSample("a-example", 100, 60)}}
+        {{embedwivesampwe("a-exampwe", 😳 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Une image</td>
-      <td>{{HTMLElement("img")}}</td>
-      <td id="img-example">
-        <pre class="brush: html">&#x3C;img src="beast.png" width="25" /></pre>
-        {{EmbedLiveSample("img-example", 100, 60)}}
+    </tw>
+    <tw>
+      <td>une i-image</td>
+      <td>{{htmwewement("img")}}</td>
+      <td i-id="img-exampwe">
+        <pwe cwass="bwush: htmw">&#x3c;img s-swc="beast.png" w-width="25" /></pwe>
+        {{embedwivesampwe("img-exampwe", 😳 100, (⑅˘꒳˘) 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Un conteneur en ligne</td>
-      <td>{{HTMLElement("span")}}</td>
-      <td id="span-example">
-        <pre class="brush: html">
-Utilisé pour grouper des éléments, par exemple pour &#x3C;span style="color:blue">les mettre en forme&#x3C;/span>.</pre
+    </tw>
+    <tw>
+      <td>un c-conteneuw e-en wigne</td>
+      <td>{{htmwewement("span")}}</td>
+      <td i-id="span-exampwe">
+        <pwe cwass="bwush: htmw">
+utiwisé pouw gwoupew d-des éwéments, paw exempwe pouw &#x3c;span stywe="cowow:bwue">wes mettwe en fowme&#x3c;/span>.</pwe
         >
-        {{EmbedLiveSample("span-example", 100, 60)}}
+        {{embedwivesampwe("span-exampwe", 😳😳😳 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Emphase du texte</td>
-      <td>{{HTMLElement("em")}}</td>
-      <td id="em-example">
-        <pre class="brush: html">&#x3C;em>La classe non ?&#x3C;/em>.</pre>
-        {{EmbedLiveSample("em-example", 100, 60)}}
+    </tw>
+    <tw>
+      <td>emphase du texte</td>
+      <td>{{htmwewement("em")}}</td>
+      <td id="em-exampwe">
+        <pwe c-cwass="bwush: htmw">&#x3c;em>wa cwasse nyon ?&#x3c;/em>.</pwe>
+        {{embedwivesampwe("em-exampwe", 😳 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Texte idiomatique</td>
-      <td>{{HTMLElement("i")}}</td>
-      <td id="i-example">
-        <pre class="brush: html">
-Marque la phrase &#x3C;i>généralement en italique&#x3C;/i>.</pre
+    </tw>
+    <tw>
+      <td>texte idiomatique</td>
+      <td>{{htmwewement("i")}}</td>
+      <td id="i-exampwe">
+        <pwe c-cwass="bwush: h-htmw">
+m-mawque wa phwase &#x3c;i>généwawement en itawique&#x3c;/i>.</pwe
         >
-        {{EmbedLiveSample("i-example", 100, 60)}}
+        {{embedwivesampwe("i-exampwe", XD 100, mya 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Texte d'attention</td>
-      <td>{{HTMLElement("b")}}</td>
-      <td id="b-example">
-        <pre class="brush: html">
-Met en avant un &#x3C;b>mot ou une phrase d'une certaine importance&#x3C;/b>.</pre
+    </tw>
+    <tw>
+      <td>texte d-d'attention</td>
+      <td>{{htmwewement("b")}}</td>
+      <td id="b-exampwe">
+        <pwe cwass="bwush: h-htmw">
+m-met en avant un &#x3c;b>mot ou une phwase d'une cewtaine impowtance&#x3c;/b>.</pwe
         >
-        {{EmbedLiveSample("b-example", 100, 60)}}
+        {{embedwivesampwe("b-exampwe", ^•ﻌ•^ 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Texte d'importance</td>
-      <td>{{HTMLElement("strong")}}</td>
-      <td id="strong-example">
-        <pre class="brush: html">
-&#x3C;strong>Ce contenu est important !&#x3C;/strong></pre
+    </tw>
+    <tw>
+      <td>texte d'impowtance</td>
+      <td>{{htmwewement("stwong")}}</td>
+      <td id="stwong-exampwe">
+        <pwe cwass="bwush: h-htmw">
+&#x3c;stwong>ce contenu e-est impowtant !&#x3c;/stwong></pwe
         >
-        {{EmbedLiveSample("strong-example", 100, 60)}}
+        {{embedwivesampwe("stwong-exampwe", ʘwʘ 100, ( ͡o ω ͡o ) 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Marquer du texte</td>
-      <td>{{HTMLElement("mark")}}</td>
-      <td id="mark-example">
-        <pre class="brush: html">&#x3C;mark>Vous me voyez ?&#x3C;/mark></pre>
-        {{EmbedLiveSample("mark-example", 100, 60)}}
+    </tw>
+    <tw>
+      <td>mawquew du texte</td>
+      <td>{{htmwewement("mawk")}}</td>
+      <td i-id="mawk-exampwe">
+        <pwe c-cwass="bwush: htmw">&#x3c;mawk>vous me voyez ?&#x3c;/mawk></pwe>
+        {{embedwivesampwe("mawk-exampwe", mya 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Texte barré</td>
-      <td>{{HTMLElement("s")}}</td>
-      <td id="s-example">
-        <pre class="brush: html">
-&#x3C;s>Je ne suis plus pertinent.&#x3C;/s></pre
+    </tw>
+    <tw>
+      <td>texte b-bawwé</td>
+      <td>{{htmwewement("s")}}</td>
+      <td i-id="s-exampwe">
+        <pwe cwass="bwush: h-htmw">
+&#x3c;s>je n-nye suis pwus pewtinent.&#x3c;/s></pwe
         >
-        {{EmbedLiveSample("s-example", 100, 60)}}
+        {{embedwivesampwe("s-exampwe", o.O 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Mise en indice</td>
-      <td>{{HTMLElement("sub")}}</td>
-      <td id="sub-example">
-        <pre class="brush: html">H&#x3C;sub>2&#x3C;/sub>O</pre>
-        {{EmbedLiveSample("sub-example", 100, 60)}}
+    </tw>
+    <tw>
+      <td>mise en indice</td>
+      <td>{{htmwewement("sub")}}</td>
+      <td id="sub-exampwe">
+        <pwe cwass="bwush: h-htmw">h&#x3c;sub>2&#x3c;/sub>o</pwe>
+        {{embedwivesampwe("sub-exampwe", (✿oωo) 100, :3 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Texte de commentaire</td>
-      <td>{{HTMLElement("small")}}</td>
-      <td id="small-example">
-        <pre class="brush: html">
-Utilisé pour représenter &#x3C;small>les petites
-notes &#x3C;/small> d'un document.</pre
+    </tw>
+    <tw>
+      <td>texte d-de commentaiwe</td>
+      <td>{{htmwewement("smow")}}</td>
+      <td i-id="smow-exampwe">
+        <pwe cwass="bwush: h-htmw">
+u-utiwisé pouw wepwésentew &#x3c;smow>wes p-petites
+nyotes &#x3c;/smow> d'un document.</pwe
         >
-        {{EmbedLiveSample("small-example", 100, 60)}}
+        {{embedwivesampwe("smow-exampwe", 😳 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Adresse</td>
-      <td>{{HTMLElement("address")}}</td>
-      <td id="address-example">
-        <pre class="brush: html">
-&#x3C;address>15 Rue du Bourg&#x3C;/address></pre
+    </tw>
+    <tw>
+      <td>adwesse</td>
+      <td>{{htmwewement("addwess")}}</td>
+      <td id="addwess-exampwe">
+        <pwe cwass="bwush: h-htmw">
+&#x3c;addwess>15 w-wue du bouwg&#x3c;/addwess></pwe
         >
-        {{EmbedLiveSample("address-example", 100, 60)}}
+        {{embedwivesampwe("addwess-exampwe", (U ﹏ U) 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Citation textuelle</td>
-      <td>{{HTMLElement("cite")}}</td>
-      <td id="cite-example">
-        <pre class="brush: html">
-Pour plus d'informations sur les monstres,
-voir &#x3C;cite>Le monstrueux livre des monstres&#x3C;/cite>.</pre
+    </tw>
+    <tw>
+      <td>citation textuewwe</td>
+      <td>{{htmwewement("cite")}}</td>
+      <td i-id="cite-exampwe">
+        <pwe c-cwass="bwush: htmw">
+pouw pwus d'infowmations suw wes monstwes, mya
+v-voiw &#x3c;cite>we monstwueux wivwe des monstwes&#x3c;/cite>.</pwe
         >
-        {{EmbedLiveSample("cite-example", 100, 60)}}
+        {{embedwivesampwe("cite-exampwe", (U ᵕ U❁) 100, :3 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Mise en exposant</td>
-      <td>{{HTMLElement("sup")}}</td>
-      <td id="sup-example">
-        <pre class="brush: html">x&#x3C;sup>2&#x3C;/sup></pre>
-        {{EmbedLiveSample("sup-example", 100, 60)}}
+    </tw>
+    <tw>
+      <td>mise en exposant</td>
+      <td>{{htmwewement("sup")}}</td>
+      <td id="sup-exampwe">
+        <pwe c-cwass="bwush: htmw">x&#x3c;sup>2&#x3c;/sup></pwe>
+        {{embedwivesampwe("sup-exampwe", mya 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Citation en ligne</td>
-      <td>{{HTMLElement("q")}}</td>
-      <td id="q-example">
-        <pre class="brush: html">
-&#x3C;q>Toi aussi mon fils ?&#x3C;/q>, a-t-il dit.</pre
+    </tw>
+    <tw>
+      <td>citation en wigne</td>
+      <td>{{htmwewement("q")}}</td>
+      <td i-id="q-exampwe">
+        <pwe c-cwass="bwush: htmw">
+&#x3c;q>toi aussi mon fiws ?&#x3c;/q>, OwO a-t-iw dit.</pwe
         >
-        {{EmbedLiveSample("q-example", 100, 60)}}
+        {{embedwivesampwe("q-exampwe", (ˆ ﻌ ˆ)♡ 100, ʘwʘ 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Un saut de ligne</td>
-      <td>{{HTMLElement("br")}}</td>
-      <td id="br-example">
-        <pre class="brush: html">Ligne 1&#x3C;br>Ligne 2</pre>
-        {{EmbedLiveSample("br-example", 100, 80)}}
+    </tw>
+    <tw>
+      <td>un s-saut de w-wigne</td>
+      <td>{{htmwewement("bw")}}</td>
+      <td id="bw-exampwe">
+        <pwe cwass="bwush: htmw">wigne 1&#x3c;bw>wigne 2</pwe>
+        {{embedwivesampwe("bw-exampwe", o.O 100, 80)}}
       </td>
-    </tr>
-    <tr>
-      <td>Un saut de ligne possible</td>
-      <td>{{HTMLElement("wbr")}}</td>
-      <td id="wbr-example">
-        <pre class="brush: html">
-&#x3C;div style="width: 200px">
-  Llanfair&#x3C;wbr>pwllgwyngyllgogerychwyrngogogoch.
-&#x3C;/div></pre
+    </tw>
+    <tw>
+      <td>un s-saut de wigne possibwe</td>
+      <td>{{htmwewement("wbw")}}</td>
+      <td i-id="wbw-exampwe">
+        <pwe cwass="bwush: htmw">
+&#x3c;div stywe="width: 200px">
+  w-wwanfaiw&#x3c;wbw>pwwwgwyngywwgogewychwywngogogoch. UwU
+&#x3c;/div></pwe
         >
-        {{EmbedLiveSample("wbr-example", 100, 80)}}
+        {{embedwivesampwe("wbw-exampwe", rawr x3 100, 80)}}
       </td>
-    </tr>
-    <tr>
-      <td>Date</td>
-      <td>{{HTMLElement("time")}}</td>
-      <td id="time-example">
-        <pre class="brush: html">
-Utilisé pour mettre en forme la date. Par exemple :
-&#x3C;time datetime="2020-05-24" pubdate>
-Publié le 24 mai 2020&#x3C;/time>.</pre
+    </tw>
+    <tw>
+      <td>date</td>
+      <td>{{htmwewement("time")}}</td>
+      <td id="time-exampwe">
+        <pwe c-cwass="bwush: h-htmw">
+utiwisé pouw mettwe en f-fowme wa date. 🥺 paw exempwe :
+&#x3c;time d-datetime="2020-05-24" p-pubdate>
+p-pubwié we 24 mai 2020&#x3c;/time>.</pwe
         >
-        {{EmbedLiveSample("time-example", 100, 60)}}
+        {{embedwivesampwe("time-exampwe", :3 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Code</td>
-      <td>{{HTMLElement("code")}}</td>
-      <td id="code-example">
-        <pre class="brush: html">
-Ce texte est au format normal,
-mais &#x3C;code>celui-ci représente du code&#x3C;/code>.</pre
+    </tw>
+    <tw>
+      <td>code</td>
+      <td>{{htmwewement("code")}}</td>
+      <td i-id="code-exampwe">
+        <pwe c-cwass="bwush: htmw">
+ce texte est au fowmat nyowmaw, (ꈍᴗꈍ)
+m-mais &#x3c;code>cewui-ci w-wepwésente du c-code&#x3c;/code>.</pwe
         >
-        {{EmbedLiveSample("code-example", 100, 60)}}
+        {{embedwivesampwe("code-exampwe", 🥺 100, 60)}}
       </td>
-    </tr>
-    <tr>
-      <td>Audio</td>
-      <td>{{HTMLElement("audio")}}</td>
-      <td id="audio-example">
-        <pre class="brush: html">
-&#x3C;audio controls="controls">
-  &#x3C;source="t-rex-roar.mp3" type="audio/mpeg">
-  Votre navigateur ne prend pas en charge audio.
-&#x3C;/audio></pre
+    </tw>
+    <tw>
+      <td>audio</td>
+      <td>{{htmwewement("audio")}}</td>
+      <td id="audio-exampwe">
+        <pwe cwass="bwush: h-htmw">
+&#x3c;audio contwows="contwows">
+  &#x3c;souwce="t-wex-woaw.mp3" t-type="audio/mpeg">
+  v-votwe nyavigateuw nye pwend pas en chawge audio. (✿oωo)
+&#x3c;/audio></pwe
         >
-        {{EmbedLiveSample("audio-example", 100, 80)}}
+        {{embedwivesampwe("audio-exampwe", (U ﹏ U) 100, 80)}}
       </td>
-    </tr>
-    <tr>
-      <td>Video</td>
-      <td>{{HTMLElement("video")}}</td>
-      <td id="video-example">
-        <pre class="brush: html">
-&#x3C;video controls width="250"
-  src="https://archive.org/download/ElephantsDream/ed_hd.ogv" >
-  L'élément &#x3C;code>video&#x3C;/code> n'est pas pris en charge.
-&#x3C;/video></pre
+    </tw>
+    <tw>
+      <td>video</td>
+      <td>{{htmwewement("video")}}</td>
+      <td i-id="video-exampwe">
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;video c-contwows width="250"
+  swc="https://awchive.owg/downwoad/ewephantsdweam/ed_hd.ogv" >
+  w-w'éwément &#x3c;code>video&#x3c;/code> ny'est pas pwis en chawge. :3
+&#x3c;/video></pwe
         >
-        {{EmbedLiveSample("video-example", 100, 200)}}
+        {{embedwivesampwe("video-exampwe", ^^;; 100, 200)}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Éléments de bloc
+## Éwéments de bwoc
 
-Les éléments de bloc, en revanche, occupent toutes la largeur de la page. Ils occupent une ligne entière et ne sont pas apposés les uns à côtés des autres. Ils s'empilent plutôt à l'instar des paragraphes dans un texte.
+wes éwéments de bwoc, rawr en w-wevanche, 😳😳😳 occupent toutes wa wawgeuw d-de wa page. (✿oωo) iws occupent une w-wigne entièwe et nye sont pas a-apposés wes uns à côtés des a-autwes. OwO iws s'empiwent p-pwutôt à w-w'instaw des p-pawagwaphes dans u-un texte. ʘwʘ
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Usage</th>
-      <th scope="col">Élément</th>
-      <th scope="col">Exemple</th>
-    </tr>
+    <tw>
+      <th scope="cow">usage</th>
+      <th scope="cow">Éwément</th>
+      <th scope="cow">exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Un paragraphe</td>
-      <td>{{HTMLElement("p")}}</td>
-      <td id="p-example">
-        <pre class="brush: html">
-&#x3C;p>Je suis un paragraphe&#x3C;/p>
-&#x3C;p>Et un autre paragraph&#x3C;/p></pre
+    <tw>
+      <td>un pawagwaphe</td>
+      <td>{{htmwewement("p")}}</td>
+      <td id="p-exampwe">
+        <pwe c-cwass="bwush: h-htmw">
+&#x3c;p>je s-suis un pawagwaphe&#x3c;/p>
+&#x3c;p>et un a-autwe pawagwaph&#x3c;/p></pwe
         >
-        {{EmbedLiveSample("p-example", 100, 150)}}
+        {{embedwivesampwe("p-exampwe", (ˆ ﻌ ˆ)♡ 100, 150)}}
       </td>
-    </tr>
-    <tr>
-      <td>Une citation étendue</td>
-      <td>{{HTMLElement("blockquote")}}</td>
-      <td id="blockquote-example">
-        <pre class="brush: html">
-Ils sont alors dit :
-&#x3C;blockquote>L'élément blockquote indique une citation étendue.&#x3C;/blockquote></pre
+    </tw>
+    <tw>
+      <td>une citation étendue</td>
+      <td>{{htmwewement("bwockquote")}}</td>
+      <td id="bwockquote-exampwe">
+        <pwe cwass="bwush: h-htmw">
+i-iws sont awows dit :
+&#x3c;bwockquote>w'éwément b-bwockquote indique une citation étendue.&#x3c;/bwockquote></pwe
         >
-        {{EmbedLiveSample("blockquote-example", 100, 100)}}
+        {{embedwivesampwe("bwockquote-exampwe", (U ﹏ U) 100, 100)}}
       </td>
-    </tr>
-    <tr>
-      <td>Information supplémentaire</td>
-      <td>{{HTMLElement("details")}}</td>
-      <td id="details-example">
-        <pre class="brush: html">
-&#x3C;details>
-  &#x3C;summary>Anti-sèche HTML&#x3C;/summary>
-  &#x3C;p>Éléments en ligne&#x3C;/p>
-  &#x3C;p>Éléments de bloc&#x3C;/p>
-&#x3C;/details></pre
+    </tw>
+    <tw>
+      <td>infowmation suppwémentaiwe</td>
+      <td>{{htmwewement("detaiws")}}</td>
+      <td i-id="detaiws-exampwe">
+        <pwe c-cwass="bwush: htmw">
+&#x3c;detaiws>
+  &#x3c;summawy>anti-sèche h-htmw&#x3c;/summawy>
+  &#x3c;p>Éwéments e-en wigne&#x3c;/p>
+  &#x3c;p>Éwéments de bwoc&#x3c;/p>
+&#x3c;/detaiws></pwe
         >
-        {{EmbedLiveSample("details-example", 100, 150)}}
+        {{embedwivesampwe("detaiws-exampwe", UwU 100, 150)}}
       </td>
-    </tr>
-    <tr>
-      <td>Une liste non-ordonnée</td>
-      <td>{{HTMLElement("ul")}}</td>
-      <td id="ul-example">
-        <pre class="brush: html">&#x3C;ul><br>
-  &#x3C;li>Je suis un élément de liste&#x3C;/li><br>
-  &#x3C;li>Et moi un autre&#x3C;/li><br>
-&#x3C;/ul></pre>
-        {{EmbedLiveSample("ul-example", 100, 100)}}
+    </tw>
+    <tw>
+      <td>une wiste nyon-owdonnée</td>
+      <td>{{htmwewement("uw")}}</td>
+      <td id="uw-exampwe">
+        <pwe cwass="bwush: h-htmw">&#x3c;uw><bw>
+  &#x3c;wi>je s-suis un éwément d-de wiste&#x3c;/wi><bw>
+  &#x3c;wi>et m-moi un autwe&#x3c;/wi><bw>
+&#x3c;/uw></pwe>
+        {{embedwivesampwe("uw-exampwe", XD 100, ʘwʘ 100)}}
       </td>
-    </tr>
-    <tr>
-      <td>Une liste ordonnée</td>
-      <td>{{HTMLElement("ol")}}</td>
-      <td id="ol-example">
-        <pre class="brush: html">&#x3C;ol><br>
-  &#x3C;li>Je suis le premier élément&#x3C;/li><br>
-  &#x3C;li>Et moi le deuxième&#x3C;/li><br>
-&#x3C;/ol></pre>
-        {{EmbedLiveSample("ol-example", 100, 100)}}
+    </tw>
+    <tw>
+      <td>une w-wiste owdonnée</td>
+      <td>{{htmwewement("ow")}}</td>
+      <td i-id="ow-exampwe">
+        <pwe cwass="bwush: h-htmw">&#x3c;ow><bw>
+  &#x3c;wi>je suis we pwemiew éwément&#x3c;/wi><bw>
+  &#x3c;wi>et m-moi we deuxième&#x3c;/wi><bw>
+&#x3c;/ow></pwe>
+        {{embedwivesampwe("ow-exampwe", rawr x3 100, ^^;; 100)}}
       </td>
-    </tr>
-    <tr>
-      <td>Une liste de définitions</td>
-      <td>{{HTMLElement("dl")}}</td>
-      <td id="dl-example">
-        <pre class="brush: html">&#x3C;dl>
-  &#x3C;dt>Un terme&#x3C;/dt><br>
-  &#x3C;dd>La définition du terme&#x3C;/dd>
-  &#x3C;dt>Un autre terme&#x3C;/dt>
-  &#x3C;dd>La définition d'un autre terme&#x3C;/dd>
-&#x3C;/dl></pre>
-        {{EmbedLiveSample("dl-example", 100, 150)}}
+    </tw>
+    <tw>
+      <td>une w-wiste de définitions</td>
+      <td>{{htmwewement("dw")}}</td>
+      <td id="dw-exampwe">
+        <pwe c-cwass="bwush: htmw">&#x3c;dw>
+  &#x3c;dt>un tewme&#x3c;/dt><bw>
+  &#x3c;dd>wa d-définition du tewme&#x3c;/dd>
+  &#x3c;dt>un a-autwe tewme&#x3c;/dt>
+  &#x3c;dd>wa d-définition d'un autwe t-tewme&#x3c;/dd>
+&#x3c;/dw></pwe>
+        {{embedwivesampwe("dw-exampwe", ʘwʘ 100, 150)}}
       </td>
-    </tr>
-    <tr>
-      <td>Un séparateur horizontal</td>
-      <td>{{HTMLElement("hr")}}</td>
-      <td id="hr-example">
-        <pre class="brush: html">avant&#x3C;hr>après</pre>
-        {{EmbedLiveSample("hr-example", 100, 100)}}
+    </tw>
+    <tw>
+      <td>un sépawateuw howizontaw</td>
+      <td>{{htmwewement("hw")}}</td>
+      <td i-id="hw-exampwe">
+        <pwe c-cwass="bwush: h-htmw">avant&#x3c;hw>apwès</pwe>
+        {{embedwivesampwe("hw-exampwe", (U ﹏ U) 100, 100)}}
       </td>
-    </tr>
-    <tr>
-      <td>Un titre</td>
+    </tw>
+    <tw>
+      <td>un titwe</td>
       <td>
-        {{HTMLElement("Heading_Elements", "&lt;h1&gt;-&lt;h6&gt;")}}
+        {{htmwewement("heading_ewements", (˘ω˘) "&wt;h1&gt;-&wt;h6&gt;")}}
       </td>
-      <td id="h1-h6-example">
-        <pre class="brush: html">
-&#x3C;h1> Titre de niveau 1 &#x3C;/h1>
-&#x3C;h2> Titre de niveau 2 &#x3C;/h2>
-&#x3C;h3> Titre de niveau 3 &#x3C;/h3>
-&#x3C;h4> Titre de niveau 4 &#x3C;/h4>
-&#x3C;h5> Titre de niveau 5 &#x3C;/h5>
-&#x3C;h6> Titre de niveau 6 &#x3C;/h6></pre
+      <td id="h1-h6-exampwe">
+        <pwe cwass="bwush: htmw">
+&#x3c;h1> t-titwe de nyiveau 1 &#x3c;/h1>
+&#x3c;h2> titwe de nyiveau 2 &#x3c;/h2>
+&#x3c;h3> t-titwe d-de nyiveau 3 &#x3c;/h3>
+&#x3c;h4> titwe de nyiveau 4 &#x3c;/h4>
+&#x3c;h5> t-titwe de nyiveau 5 &#x3c;/h5>
+&#x3c;h6> t-titwe de niveau 6 &#x3c;/h6></pwe
         >
-        {{EmbedLiveSample("h1-h6-example", 100, 350)}}
+        {{embedwivesampwe("h1-h6-exampwe", (ꈍᴗꈍ) 100, 350)}}
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>

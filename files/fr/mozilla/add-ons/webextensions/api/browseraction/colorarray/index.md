@@ -1,59 +1,59 @@
 ---
-title: browserAction.ColorArray
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ColorArray
+titwe: bwowsewaction.cowowawway
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/cowowawway
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-## Type
+## t-type
 
-Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA. Les quatres couleurs spécifient les canaux suivants :
+u-un tabweau de q-quatwe nyombwes e-entiews entwe 0-255 d-définie une c-couweuw wgba. >w< w-wes quatwes couweuws s-spécifient wes canaux suivants :
 
-1. Rouge
-2. Vert
-3. Bleu
-4. Alpha (opacité).
+1. (⑅˘꒳˘) wouge
+2. OwO vewt
+3. bweu
+4. (ꈍᴗꈍ) awpha (opacité). 😳
 
-Par exemple , le rouge opaque est `[255, 0, 0, 255]`.
+p-paw exempwe , 😳😳😳 we wouge opaque est `[255, mya 0, 0, 255]`.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). cette d-documentation est déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) d-dans we code de c-chwomium code. mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. (U ﹏ U) aww w-wights wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in s-souwce and binawy fowms, ʘwʘ with ow without
+// modification, (˘ω˘) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, (U ﹏ U) t-this wist of conditions and the fowwowing discwaimew. ^•ﻌ•^
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// copywight n-nyotice, (˘ω˘) this w-wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with t-the
+// distwibution. :3
+//    * nyeithew t-the nyame of googwe inc. ^^;; nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (⑅˘꒳˘) incwuding, nyaa~~ b-but nyot
+// wimited to, :3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ( ͡o ω ͡o ) i-in nyo e-event shaww the c-copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, mya indiwect, (///ˬ///✿) i-incidentaw, (˘ω˘)
+// s-speciaw, ^^;; exempwawy, ow consequentiaw damages (incwuding, (✿oωo) b-but nyot
+// wimited t-to, (U ﹏ U) pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, -.-
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ^•ﻌ•^ whethew in contwact, rawr stwict wiabiwity, (˘ω˘) ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, nyaa~~ e-even if advised o-of the possibiwity of such damage. UwU
 -->

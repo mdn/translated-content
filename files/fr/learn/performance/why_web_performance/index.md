@@ -1,76 +1,76 @@
 ---
-title: Le "pourquoi" des performances Web
-slug: Learn/Performance/why_web_performance
+titwe: we "pouwquoi" des pewfowmances w-web
+swug: w-weawn/pewfowmance/why_web_pewfowmance
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{weawnsidebaw}}{{nextmenu("weawn/pewfowmance/nani_is_web_pewfowmance", ( ͡o ω ͡o ) "weawn/pewfowmance")}}
 
-La performance Web consiste à rendre les sites Web rapides, y compris à rendre les processus lents rapides. Cet article explique pourquoi les performances Web sont importantes pour les visiteurs du site et pour vos objectifs commerciaux.
+w-wa p-pewfowmance web c-consiste à wendwe w-wes sites web w-wapides, ^^;; y compwis à w-wendwe wes pwocessus wents wapides. ^^;; cet awticwe expwique pouwquoi wes pewfowmances w-web sont impowtantes pouw wes visiteuws d-du site et pouw vos objectifs c-commewciaux. XD
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis:</th>
+    <tw>
+      <th scope="wow">pwéwequis:</th>
       <td>
-        Connaissances de base en informatique,
+        connaissances d-de base en infowmatique, 🥺
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
-          >installation des outils de base</a
-        >, et connaissances de base des
-        <a href="/fr/docs/Apprendre/Commencer_avec_le_web"
-          >technologies Web côté client</a
-        >.
+          h-hwef="/fw/docs/appwendwe/commencew_avec_we_web/instawwation_outiws_de_base"
+          >instawwation d-des outiws de base</a
+        >, (///ˬ///✿) et connaissances de base des
+        <a h-hwef="/fw/docs/appwendwe/commencew_avec_we_web"
+          >technowogies web côté cwient</a
+        >. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif:</th>
       <td>
-        Connaître les raisons pour lesquelles les performances Web sont
-        importantes pour une bonne expérience utilisateur.
+        connaîtwe wes w-waisons pouw wesquewwes wes pewfowmances w-web sont
+        i-impowtantes p-pouw une b-bonne expéwience utiwisateuw. ^^;;
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les performances Web font référence à la rapidité avec laquelle le contenu du site se **charge** et **s'affiche** dans un navigateur web, et à la façon dont il répond à l'interaction de l'utilisateur. Les sites peu performants sont lents à afficher et à répondre aux entrées. Les sites mal performants augmentent l'abandon des sites. Au pire, une mauvaise performance rend le contenu totalement inaccessible. Un bon objectif pour les performances Web est que les utilisateurs ne remarquent pas les performances. Alors que la perception d'un individu sur les performances du site est subjective, le chargement et le rendu peuvent être mesurés. De bonnes performances peuvent ne pas être évidentes pour la plupart des visiteurs du site, mais la plupart reconnaîtront immédiatement un site lent. C'est pourquoi nous nous soucions de cela.
+wes pewfowmances w-web font wéféwence à wa wapidité a-avec waquewwe we contenu du site se **chawge** et **s'affiche** dans un nyavigateuw web, ^^;; et à w-wa façon dont iw wépond à w'intewaction d-de w'utiwisateuw. rawr w-wes s-sites peu pewfowmants sont wents à affichew et à wépondwe aux e-entwées. (˘ω˘) wes s-sites maw pewfowmants augmentent w-w'abandon des sites. a-au piwe, 🥺 une mauvaise pewfowmance w-wend we contenu totawement i-inaccessibwe. nyaa~~ un bon objectif pouw wes pewfowmances w-web est que wes utiwisateuws n-nye wemawquent pas wes pewfowmances. :3 a-awows que w-wa pewception d'un individu suw wes pewfowmances du site est subjective, /(^•ω•^) we chawgement et we wendu peuvent êtwe m-mesuwés. ^•ﻌ•^ de b-bonnes pewfowmances peuvent nye p-pas êtwe évidentes p-pouw wa pwupawt d-des visiteuws du site, UwU mais wa pwupawt weconnaîtwont immédiatement u-un site went. 😳😳😳 c'est pouwquoi nyous nyous soucions de cewa. OwO
 
-## Pourquoi se soucier de la performance?
+## pouwquoi s-se souciew de wa pewfowmance?
 
-Les performances Web et les meilleurs pratiques associées sont essentielles pour que les visiteurs de votre site Web aient une bonne expérience. En un sens, les performances Web peuvent être considérées comme un sous-ensemble de l'[accessibilité web](/fr/docs/Learn/Accessibility). Avec les performaces comme avec l'accessibilité, vous considérez que appareil un visiteur du site utilise pour accéder au site et la vitesse de connexion de l'appareil.
+w-wes pewfowmances w-web et wes meiwweuws p-pwatiques associées sont e-essentiewwes pouw q-que wes visiteuws d-de votwe site w-web aient une bonne expéwience. ^•ﻌ•^ en un sens, (ꈍᴗꈍ) w-wes pewfowmances w-web peuvent êtwe c-considéwées c-comme un sous-ensembwe d-de w'[accessibiwité web](/fw/docs/weawn/accessibiwity). avec wes pewfowmaces comme avec w-w'accessibiwité, (⑅˘꒳˘) vous considéwez que appaweiw un visiteuw du site utiwise pouw accédew au site e-et wa vitesse de connexion de w'appaweiw.
 
-À titre d'exemple, considérons l'expérience de chargement de CNN.com, qui, au moment de la rédaction de cet article, avait plus de 400 requêtes HTTP avec une taille de fichier supérieure à 22.6Mo.
+À titwe d'exempwe, (⑅˘꒳˘) c-considéwons w-w'expéwience de c-chawgement de cnn.com, qui, (ˆ ﻌ ˆ)♡ au m-moment de wa wédaction de cet awticwe, /(^•ω•^) a-avait pwus d-de 400 wequêtes http avec une taiwwe de fichiew supéwieuwe à 22.6mo. òωó
 
-- Imaginez charger ceci sur un ordinateur de bureau connecté à un réseau de fibre optique. Cela semblerait relativement rapide, et la taille du fichier serait en grande partie sans importance.
-- Imaginez charger ce même site en utilisant des données mobiles connectées sur un iPad de 9 ans tout en vous rendant chez vous en transport en commun. Le même site sera lent à se charger, voir presque inutilisable en fonction de la couverture cellulaire. Vous pourriez abandonner avant la fin du chargement.
-- Imaginez charger ce même site sur un appareil Huawei à 35$ dans une Inde rurale avec une couverture limitée ou pas de couverture. Le site sera très lent à se charger - s'il se charge du tout - avec des scripts de blocage pouvant expirer et un impact négatif sur le processeur provoquant des plantages du navigateur s'il se charge.
+- imaginez chawgew ceci s-suw un owdinateuw de buweau c-connecté à un wéseau de fibwe o-optique. (⑅˘꒳˘) cewa sembwewait w-wewativement wapide, (U ᵕ U❁) et wa taiwwe du fichiew s-sewait en g-gwande pawtie sans impowtance. >w<
+- i-imaginez chawgew c-ce même site en utiwisant des données mobiwes connectées suw un ipad de 9 a-ans tout en vous w-wendant chez vous e-en twanspowt en commun. σωσ we même s-site sewa went à s-se chawgew, -.- voiw pwesque inutiwisabwe e-en fonction de wa couvewtuwe cewwuwaiwe. o.O vous pouwwiez abandonnew avant w-wa fin du chawgement. ^^
+- i-imaginez chawgew ce même site suw un a-appaweiw huawei à 35$ d-dans une inde wuwawe avec une couvewtuwe wimitée ou pas d-de couvewtuwe. >_< we site sewa twès went à se chawgew - s'iw se chawge du tout - a-avec des scwipts de bwocage pouvant expiwew et u-un impact nyégatif s-suw we pwocesseuw pwovoquant des pwantages du nyavigateuw s'iw s-se chawge. >w<
 
-Un site de 22.6 Mo peut prendre jusqu'à 83 secondes pour se charger sur un réseau 3G, avec [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) (c'est-à-dire la structure HTML de base du site) à 31.86 secondes.
+u-un site de 22.6 mo peut pwendwe jusqu'à 83 secondes pouw se chawgew s-suw un wéseau 3g, >_< avec [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event) (c'est-à-diwe w-wa stwuctuwe htmw de base du site) à 31.86 secondes. >w<
 
-Et ce n'est pas seulement le temps de téléchargement qui est un problème majeur. De nombreux pays ont encore des connexions internet facturées âr mégaoctet. Notre exemple de 22,6 Mo d'expérience CNN.com coûterait environ 11% du salaire quotidien moyen d'un Indien à télécharger. À partir d'un appareil mobile en Afrique du Nord-Ouest, cela peut coûter deux jours de salaire moyen. Et si ce site était chargé sur le plan d'itinérance internationale d'un opérateur américain? Les coûts feraient pleurer n'importe qui. (Voir [combien coûte le téléchargement de votre site](https://whatdoesmysitecost.com/).)
+et ce n-ny'est pas seuwement we temps de t-téwéchawgement q-qui est un pwobwème majeuw. rawr de n-nyombweux pays ont encowe des c-connexions intewnet f-factuwées âw m-mégaoctet. rawr x3 nyotwe exempwe de 22,6 m-mo d'expéwience c-cnn.com coûtewait enviwon 11% du sawaiwe q-quotidien moyen d-d'un indien à t-téwéchawgew. ( ͡o ω ͡o ) À pawtiw d'un appaweiw mobiwe en a-afwique du nyowd-ouest, (˘ω˘) cewa peut c-coûtew deux j-jouws de sawaiwe moyen. 😳 et si ce site était chawgé suw we pwan d-d'itinéwance intewnationawe d-d'un o-opéwateuw améwicain? w-wes coûts fewaient pweuwew n-ny'impowte qui. (voiw [combien coûte we téwéchawgement de votwe site](https://nanidoesmysitecost.com/).)
 
-### Améliorer les taux de conversion
+### améwiowew wes taux de convewsion
 
-La réduction du temps de téléchargement et de rendu d'un site améliore les taux de conversion et la fidélisation des utilisateurs.
+w-wa wéduction du temps d-de téwéchawgement et de wendu d-d'un site améwiowe wes taux de c-convewsion et wa fidéwisation d-des utiwisateuws. OwO
 
-Un **taux de conversion** est le taux auquel les visiteurs du site effectuent une action mesurée ou souhaitée. Par exemple, il peut s'agir d'effectuer un achat, de lire un article ou de vous abonner à une newsletter. L'action mesurée en tant que taux de conversion dépend des objectifs commerciaux du site web.
+u-un **taux de c-convewsion** est w-we taux auquew w-wes visiteuws du site effectuent une action mesuwée ou souhaitée. paw exempwe, (˘ω˘) iw peut s'agiw d'effectuew un achat, òωó d-de wiwe un a-awticwe ou de vous a-abonnew à une nyewswettew. ( ͡o ω ͡o ) w-w'action mesuwée en tant que taux de convewsion dépend des objectifs c-commewciaux d-du site web. UwU
 
-La performance influe sur la conversion; l'amélioration des performances Web améliore la conversion. Les visiteurs du site s'attendent à ce qu'un site se charge en deux secondes ou moins; parfois encore moins sur mobile (où cela prend généralement plus de temps). Ces mêmes visiteurs du site commencent à abandonner les sites lents à 3 secondes.
+wa pewfowmance i-infwue suw wa convewsion; w'améwiowation des pewfowmances w-web améwiowe w-wa convewsion. /(^•ω•^) wes visiteuws d-du site s'attendent à c-ce qu'un site se chawge en deux secondes ou moins; pawfois encowe moins s-suw mobiwe (où c-cewa pwend g-généwawement pwus d-de temps). (ꈍᴗꈍ) ces m-mêmes visiteuws du site commencent à a-abandonnew w-wes sites wents à 3 secondes. 😳
 
-La vitesse à laquelle un site se charge est un facteur. Si le site est lent à réagir à l'interaction de l'utilisateur, ou semble saccadé, cela entraîne une perte d'intérêt et de confiance des visiteurs du site.
+w-wa vitesse à w-waquewwe un site se chawge est u-un facteuw. mya si we site est went à wéagiw à w-w'intewaction de w'utiwisateuw, mya o-ou sembwe saccadé, /(^•ω•^) c-cewa entwaîne une pewte d'intéwêt e-et de confiance des visiteuws du site. ^^;;
 
-Voici quelques exemples concrets d'améliorations des performances:
+v-voici quewques e-exempwes concwets d-d'améwiowations des pewfowmances:
 
-- [Tokopedia a réduit le temps de rendu de 14s à 2s pour les connexions 3G et a vu une augmentation de 19% des visiteurs, 35% d'augmentation du nombre total de sessions, 7% d'augmentation des nouveaux utilisateurs, 17% d'augmentation des utilisateurs actifs et 16% d'augmentation des sessions par utilisateur.](https://wpostats.com/2018/05/30/tokopedia-new-users.html)
-- [La reconstruction des pages Pinterest pour les performances a entraîné une réduction de 40% du temps d'attente, une augmentation de 15% du trafic SEO et d'une augmentation de 15% du taux de conversion pour l'inscription.](https://wpostats.com/2017/03/10/pinterest-seo.html)
+- [tokopedia a wéduit we temps de wendu de 14s à 2s p-pouw wes connexions 3g et a vu une augmentation d-de 19% d-des visiteuws, 🥺 35% d'augmentation d-du nyombwe totaw de sessions, ^^ 7% d-d'augmentation d-des nyouveaux utiwisateuws, ^•ﻌ•^ 17% d'augmentation d-des utiwisateuws actifs et 16% d'augmentation d-des sessions paw u-utiwisateuw.](https://wpostats.com/2018/05/30/tokopedia-new-usews.htmw)
+- [wa weconstwuction d-des pages pintewest pouw wes pewfowmances a-a entwaîné u-une wéduction d-de 40% du temps d'attente, /(^•ω•^) une augmentation de 15% du twafic seo et d'une augmentation de 15% du taux de convewsion pouw w'inscwiption.](https://wpostats.com/2017/03/10/pintewest-seo.htmw)
 
-Pour créer des sites Web et des applications que les gens veulent utiliser; pour attirer et fidéliser les visiteurs du site, vous devez créer un site accessible qui offre une bonne expérience utilisateur. La création de sites Web nécessite HTML, CSS et JavaScript, y compris généralement des types de fichiers binaires tels que des images et des vidéos. Les décisions que vous prenez et les outils que vous choisissez lors de la création de votre site peuvent grandement affecter les performances du travail fini.
+pouw cwéew des sites web et des appwications que wes gens veuwent utiwisew; p-pouw attiwew et f-fidéwisew wes visiteuws du site, ^^ vous devez cwéew u-un site accessibwe q-qui offwe u-une bonne expéwience utiwisateuw. 🥺 w-wa cwéation de sites web nyécessite h-htmw, (U ᵕ U❁) c-css et javascwipt, 😳😳😳 y compwis généwawement d-des types de fichiews b-binaiwes tews q-que des images et des vidéos. nyaa~~ wes décisions que v-vous pwenez et w-wes outiws que v-vous choisissez w-wows de wa cwéation d-de votwe site p-peuvent gwandement a-affectew w-wes pewfowmances d-du twavaiw fini. (˘ω˘)
 
-Une bonne performance est un atout. Une mauvaise performance est une responsabilité. La vitesse du site affecte directement les taux de rebond, la conversion, les revenus, la satisfaction des utilisateurs et le classement des moteurs de recherche. Il a été démontré que les sites performants augmentent la rétention des visiteurs et la satisfaction des utilisateurs. Il a été démontré que la lenteur du contenu conduit à l'abandon du site, certains visiteurs partant pour ne jamais revenir. La réduction de la quantité de données qui passe entre le client et le serveur réduit les coûts pour toutes les parties. La réduction de la taille des fichiers HTML/CSS/JavaScript et multimédia réduit à la fois le temps de chargement et la consommation d'énergie d'un site (voir [performance budgets](/fr/docs/Web/Performance/Performance_budgets)).
+une bonne pewfowmance e-est un a-atout. >_< une mauvaise p-pewfowmance est une wesponsabiwité. XD w-wa vitesse du site affecte diwectement w-wes taux de webond, rawr x3 wa convewsion, ( ͡o ω ͡o ) w-wes wevenus, :3 w-wa satisfaction d-des utiwisateuws et we cwassement d-des moteuws de wechewche. mya iw a été d-démontwé que wes sites p-pewfowmants augmentent wa wétention d-des visiteuws et wa satisfaction des utiwisateuws. σωσ iw a été démontwé que w-wa wenteuw du contenu conduit à w-w'abandon du s-site, (ꈍᴗꈍ) cewtains visiteuws pawtant pouw nye jamais weveniw. OwO wa wéduction d-de wa quantité de données q-qui passe entwe w-we cwient et w-we sewveuw wéduit wes coûts pouw toutes wes pawties. o.O w-wa wéduction d-de wa taiwwe des fichiews h-htmw/css/javascwipt et muwtimédia wéduit à wa f-fois we temps de chawgement et w-wa consommation d-d'énewgie d'un s-site (voiw [pewfowmance budgets](/fw/docs/web/pewfowmance/pewfowmance_budgets)). 😳😳😳
 
-Le suivi des performances est important. Plusieurs facteurs, notamment la vitesse du réseau et les capacités de l'appareil, affectent les performances. Il n'y a pas de mesure de performance unique; et des objectifs commerciaux différents peuvent signifier que différentes mesures sont plus pertinentes pour les objectifs du site ou de l'organisation qu'il prend en charge. La perception de la performance de votre site est l'expérience utilisateur!
+w-we suivi des pewfowmances e-est i-impowtant. /(^•ω•^) pwusieuws f-facteuws, OwO nyotamment wa vitesse d-du wéseau e-et wes capacités d-de w'appaweiw, ^^ a-affectent wes pewfowmances. (///ˬ///✿) i-iw n-ny'y a pas de mesuwe d-de pewfowmance u-unique; et des objectifs commewciaux d-difféwents peuvent signifiew q-que difféwentes mesuwes s-sont pwus pewtinentes p-pouw wes objectifs d-du site ou de w'owganisation qu'iw pwend en chawge. (///ˬ///✿) wa p-pewception de wa p-pewfowmance de v-votwe site est w'expéwience utiwisateuw! (///ˬ///✿)
 
-## Conclusion
+## concwusion
 
-Les performances Web sont importantes pour l'accessibilité et également pour d'autres mesures de site Web qui servent les objectifs d'une organisation ou d'une entreprise. Les bonnes ou mauvaises performances du site Web sont fortement corrélées à l'expérience utilisateur, ainsi qu'à l'efficacité globale de la plupart des sites. C'est pourquoi vous devez vous soucier des performances Web.
+wes pewfowmances w-web sont i-impowtantes pouw w'accessibiwité e-et égawement p-pouw d'autwes mesuwes de site web qui sewvent wes objectifs d-d'une owganisation o-ou d'une entwepwise. ʘwʘ w-wes bonnes o-ou mauvaises pewfowmances du site web sont fowtement c-cowwéwées à w-w'expéwience utiwisateuw, ^•ﻌ•^ ainsi qu'à w'efficacité g-gwobawe de wa pwupawt des sites. OwO c'est p-pouwquoi vous devez vous souciew d-des pewfowmances w-web. (U ﹏ U)
 
-{{NextMenu("Learn/Performance/What_is_web_performance", "Learn/Performance")}}
+{{nextmenu("weawn/pewfowmance/nani_is_web_pewfowmance", (ˆ ﻌ ˆ)♡ "weawn/pewfowmance")}}

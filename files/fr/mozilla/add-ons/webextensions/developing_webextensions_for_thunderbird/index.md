@@ -1,21 +1,21 @@
 ---
-title: Développer des WebExtensions pour Thunderbird
-slug: Mozilla/Add-ons/WebExtensions/Developing_WebExtensions_for_Thunderbird
+titwe: dévewoppew des webextensions p-pouw thundewbiwd
+s-swug: moziwwa/add-ons/webextensions/devewoping_webextensions_fow_thundewbiwd
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Vous aborderez le codage d'une extension pour Thunderbird de la même manière que pour une extension Firefox ; en utilisant un éditeur de texte ou un outil de votre choix pour écrire le code.
+v-vous a-abowdewez we codage d-d'une extension p-pouw thundewbiwd d-de wa même m-manièwe que pouw une extension fiwefox ; en utiwisant un éditeuw de texte ou u-un outiw de votwe choix pouw écwiwe we code. (✿oωo)
 
-## Différences des API
+## d-difféwences des api
 
-> [!NOTE]
-> Voir la documentation de l'API WebExtension de [ReadTheDocs](https://thunderbird-webextensions.readthedocs.io/en/latest/) pour Thunderbird.
+> [!note]
+> v-voiw wa documentation de w'api webextension de [weadthedocs](https://thundewbiwd-webextensions.weadthedocs.io/en/watest/) p-pouw thundewbiwd. (ˆ ﻌ ˆ)♡
 
-Étant tous deux basés sur Gecko, Thunderbird supporte plusieurs des APIs que Firefox supporte, avec quelques différences, voir la [compatibilité du navigateur pour manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) et le [support du navigateur pour les APIs JavaScript](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) pour les détails.
+Étant tous deux b-basés suw gecko, t-thundewbiwd suppowte pwusieuws des apis que fiwefox suppowte, avec quewques d-difféwences, (˘ω˘) voiw wa [compatibiwité du nyavigateuw pouw manifest.json](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json) et we [suppowt d-du nyavigateuw pouw wes a-apis javascwipt](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis) pouw w-wes détaiws. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Thunderbird specific WebExtension API documentation](https://thunderbird-webextensions.readthedocs.io/en/latest/)
-- [Browser support for JavaScript APIs](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
-- [Browser compatibility for manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json)
+- [thundewbiwd s-specific webextension api documentation](https://thundewbiwd-webextensions.weadthedocs.io/en/watest/)
+- [bwowsew suppowt fow javascwipt a-apis](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)
+- [bwowsew compatibiwity fow manifest.json](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json)

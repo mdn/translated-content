@@ -1,40 +1,40 @@
 ---
-title: webRequest.StreamFilter.onerror
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onerror
+titwe: webwequest.stweamfiwtew.onewwow
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/onewwow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un gestionnaire d'événements qui sera appelé lorsqu'une erreur se produit. C'est le plus souvent parce qu'un ID de requête invalide a été passé dans {{WebExtAPIRef("webRequest.filterResponseData()")}}.
+u-un gestionnaiwe d-d'événements q-qui sewa a-appewé wowsqu'une e-ewweuw se pwoduit. nyaa~~ c-c'est we p-pwus souvent pawce qu'un id de wequête invawide a été passé dans {{webextapiwef("webwequest.fiwtewwesponsedata()")}}. (⑅˘꒳˘)
 
-Après le déclenchement de cet événement, la propriété {{WebExtAPIRef("webRequest.StreamFilter.error")}} contiendra un message donnant plus d'informations sur l'erreur.
+a-apwès we décwenchement de cet événement, rawr x3 w-wa pwopwiété {{webextapiwef("webwequest.stweamfiwtew.ewwow")}} contiendwa u-un message donnant pwus d'infowmations suw w'ewweuw. (✿oωo)
 
-Notez que cet événement n'est _pas_ déclenché pour les erreurs réseau.
+nyotez q-que cet événement ny'est _pas_ d-décwenché pouw w-wes ewweuws wéseau. (ˆ ﻌ ˆ)♡
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple ajoute un écouteur `onerror` qui enregistre la valeur de {{WebExtAPIRef("webRequest.StreamFilter.error")}}.
+cet exempwe a-ajoute un écouteuw `onewwow` qui enwegistwe wa vaweuw de {{webextapiwef("webwequest.stweamfiwtew.ewwow")}}. (˘ω˘)
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData("12345");
+function wistenew(detaiws) {
+  wet fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata("12345");
 
-  filter.onerror = (event) => {
-    console.log(`Error: ${filter.error}`);
+  fiwtew.onewwow = (event) => {
+    c-consowe.wog(`ewwow: ${fiwtew.ewwow}`);
   };
 
-  //return {}; // not needed
+  //wetuwn {}; // n-nyot nyeeded
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["<all_urls>"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, (⑅˘꒳˘)
+  { uwws: ["<aww_uwws>"], (///ˬ///✿) types: ["main_fwame"] }, 😳😳😳
+  ["bwocking"], 🥺
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

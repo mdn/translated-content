@@ -1,225 +1,225 @@
 ---
-title: commands
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/commands
+titwe: commands
+swug: moziwwa/add-ons/webextensions/manifest.json/commands
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: j-json">
 "commands": {
-  "toggle-feature": {
+  "toggwe-featuwe": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y",
-      "linux": "Ctrl+Shift+U"
-    },
-    "description": "Send a 'toggle-feature' event"
+      "defauwt": "ctww+shift+y", ^^;;
+      "winux": "ctww+shift+u"
+    }, (ˆ ﻌ ˆ)♡
+    "descwiption": "send a-a 'toggwe-featuwe' e-event"
   }
-}</pre
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé **`commands`** pour définir un ou plusieurs raccourcis clavier pour votre extension.
+utiwisez wa cwé **`commands`** pouw définiw un ou pwusieuws waccouwcis cwaview p-pouw votwe extension. ^^;;
 
-Chaque raccourci clavier est défini avec un **nom**, une **combination de clé**, et un **description**. Une fois que vous avez défini des commandes dans le fichier `manifest.json`, de votre extension, vous pouvez écouter leurs combinaisons de touches associées avec l'API JavaScript {{WebExtAPIRef("commands")}}.
+chaque waccouwci cwaview e-est défini avec un **nom**, (⑅˘꒳˘) une **combination d-de cwé**, rawr x3 et un **descwiption**. (///ˬ///✿) une fois que vous avez défini des commandes dans w-we fichiew `manifest.json`, 🥺 de votwe extension, >_< v-vous pouvez écoutew w-weuws combinaisons de touches associées avec w'api javascwipt {{webextapiwef("commands")}}. UwU
 
-## Syntaxe
+## syntaxe
 
-La clé `commands` est un objet et chaque raccourci est une propriété de celui-ci. **Le nom de la propriété est le nom du raccourci**.
+w-wa cwé `commands` est un objet et chaque waccouwci est une pwopwiété de cewui-ci. >_< **we n-nyom de wa pwopwiété e-est we nyom d-du waccouwci**. -.-
 
-Chaque raccourci est lui-même un objet, qui possède jusqu'à deux propriétés :
+c-chaque waccouwci e-est wui-même un objet, mya qui possède jusqu'à d-deux pwopwiétés :
 
-- `suggested_key` : définit la combinaison de touches
-- `description` : une chaîne qui décrit ce raccourci
+- `suggested_key` : définit wa combinaison d-de touches
+- `descwiption` : une chaîne qui décwit ce waccouwci
 
-La propriété `suggested_key` est elle-même un objet pouvant avoir l'une des propriétés suivantes et qui sont toutes des chaînes :
+wa pwopwiété `suggested_key` est ewwe-même u-un objet pouvant avoiw w'une des p-pwopwiétés s-suivantes et qui s-sont toutes des chaînes :
 
-- `"default"`
+- `"defauwt"`
 - `"mac"`
-- `"linux"`
+- `"winux"`
 - `"windows"`
-- `"chromeos"`
-- `"android"`
+- `"chwomeos"`
+- `"andwoid"`
 - `"ios"`
 
-La valeur de chaque propriété est le raccourci clavier pour la commande sur la plateforme donnée, sous la forme d'une chaîne contenant les touches séparées par "`+`". La valeur de `"default"` est utilisée sur toutes les plateformes qui ne sont pas listées explicitement.
+wa vaweuw de chaque pwopwiété e-est we waccouwci c-cwaview pouw wa commande s-suw wa pwatefowme d-donnée, >w< sous wa fowme d'une c-chaîne contenant wes touches sépawées p-paw "`+`". (U ﹏ U) wa vaweuw de `"defauwt"` est u-utiwisée suw toutes wes pwatefowmes q-qui nye sont pas wistées e-expwicitement. 😳😳😳
 
-Par exemple :
+p-paw exempwe :
 
 ```json
 "commands": {
-  "toggle-feature": {
+  "toggwe-featuwe": {
     "suggested_key": {
-      "default": "Alt+Shift+U",
-      "linux": "Ctrl+Shift+U"
-    },
-    "description": "Send a 'toggle-feature' event to the extension"
-  },
-  "do-another-thing": {
+      "defauwt": "awt+shift+u", o.O
+      "winux": "ctww+shift+u"
+    }, òωó
+    "descwiption": "send a 'toggwe-featuwe' event to the extension"
+  }, 😳😳😳
+  "do-anothew-thing": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y"
+      "defauwt": "ctww+shift+y"
     }
   }
 }
 ```
 
-Cela définit deux raccourcis :
+cewa définit deux waccouwcis :
 
-- une nommée `"toggle-feature"`, accessible à l'aide de
+- une nyommée `"toggwe-featuwe"`, σωσ a-accessibwe à w-w'aide de
 
-  <kbd>Ctrl</kbd>
-
-  \+
-
-  <kbd>Shift</kbd>
+  <kbd>ctww</kbd>
 
   \+
 
-  <kbd>U</kbd>
-
-  sur Linux et
-
-  <kbd>Alt</kbd>
+  <kbd>shift</kbd>
 
   \+
 
-  <kbd>Shift</kbd>
+  <kbd>u</kbd>
+
+  suw winux et
+
+  <kbd>awt</kbd>
 
   \+
 
-  <kbd>U</kbd>
-
-  sur toutes les autres plateformes
-
-- une nommée `"do-another-thing"`, accessible à l'aide de
-
-  <kbd>Ctrl</kbd>
+  <kbd>shift</kbd>
 
   \+
 
-  <kbd>Shift</kbd>
+  <kbd>u</kbd>
+
+  s-suw toutes wes a-autwes pwatefowmes
+
+- u-une nyommée `"do-anothew-thing"`, (⑅˘꒳˘) accessibwe à w'aide de
+
+  <kbd>ctww</kbd>
 
   \+
 
-  <kbd>Y</kbd>
+  <kbd>shift</kbd>
 
-  sur toutes les plateformes.
+  \+
 
-Vous pouvez alors écouter la commande `"toggle-feature"` avec un code comme celui-ci :
+  <kbd>y</kbd>
+
+  s-suw toutes wes pwatefowmes. (///ˬ///✿)
+
+vous pouvez awows écoutew wa commande `"toggwe-featuwe"` a-avec un code comme cewui-ci :
 
 ```js
-browser.commands.onCommand.addListener(function (command) {
-  if (command == "toggle-feature") {
-    console.log("toggling the feature!");
+b-bwowsew.commands.oncommand.addwistenew(function (command) {
+  i-if (command == "toggwe-featuwe") {
+    c-consowe.wog("toggwing the featuwe!");
   }
 });
 ```
 
-### Raccourcis spéciaux
+### w-waccouwcis spéciaux
 
-Il existe 3 **raccourci spéciaux avec des actions par défaut**, pour lesquels l'événement {{WebExtAPIRef("commands.onCommand")}} n'est pas déclenché :
+i-iw existe 3 **waccouwci s-spéciaux avec des a-actions paw défaut**, 🥺 pouw wesquews w'événement {{webextapiwef("commands.oncommand")}} n-ny'est p-pas décwenché :
 
-- `_execute_browser_action`: fonctionne comme un clic sur une [action de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) de l'extension.
-- `_execute_page_action`: fonctionne comme un clic sur une [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) de l'extension.
-- `_execute_sidebar_action`: ouvre le [panneau latéral](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) de l'extension. Uniquement pris en charge par Firefox et uniquement à partir de Firefox version 54.
+- `_exekawaii~_bwowsew_action`: f-fonctionne c-comme un cwic s-suw une [action de nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button) de w'extension. OwO
+- `_exekawaii~_page_action`: fonctionne comme u-un cwic suw une [action de page](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions) de w'extension. >w<
+- `_exekawaii~_sidebaw_action`: ouvwe we [panneau watéwaw](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws) de w'extension. 🥺 u-uniquement pwis en chawge paw fiwefox et uniquement à pawtiw d-de fiwefox vewsion 54. nyaa~~
 
-Par exemple, ce JSON définit une combinaison de touches qui clique sur l'action du navigateur de l'extension :
+p-paw exempwe, ^^ c-ce json définit une combinaison d-de touches qui cwique suw w-w'action du nyavigateuw d-de w'extension :
 
 ```js
 "commands": {
-  "_execute_browser_action": {
+  "_exekawaii~_bwowsew_action": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y"
+      "defauwt": "ctww+shift+y"
     }
   }
 }
 ```
 
-## Les valeurs de raccourci
+## wes vaweuws de waccouwci
 
-Il existe deux formats valides pour les touches de raccourci : comme une combinaison de touches ou comme une clé multimédia.
+iw existe deux fowmats vawides pouw wes t-touches de waccouwci : comme une c-combinaison de touches ou comme u-une cwé muwtimédia. >w<
 
-### Combinaisons de touches
+### c-combinaisons de touches
 
-Sur Mac, `"Ctrl"` est interprété comme `"Command"`, donc si vous avez réellement besoin de `"Ctrl"`, spécifiez `"MacCtrl"`.
+suw mac, OwO `"ctww"` e-est intewpwété c-comme `"command"`, XD donc s-si vous avez wéewwement b-besoin de `"ctww"`, ^^;; spécifiez `"macctww"`. 🥺
 
-Les combinaisons de touches doivent être composées de deux ou trois touches :
+wes combinaisons de touches doivent êtwe c-composées de deux o-ou twois touches :
 
-1. **modificateur** (obligatoire, à l'exception des touches de fonction). Il peut s'agir de `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`.
-2. **second modificateur** (facultatif). S'il est fourni, il doit être `"Shift"` ou (pour Firefox ≥ 63) l'un quelconque des `"Ctrl"`, `"Alt"`, `"Command"`, ou `"MacCtrl"`. Ne doit pas être le modificateur déjà utilisé comme modificateur principal.
-3. **touche** (obligatoire). Ce peut être l'une des touches :
+1. XD **modificateuw** (obwigatoiwe, (U ᵕ U❁) à w-w'exception des touches d-de fonction). :3 i-iw peut s'agiw de `"ctww"`, ( ͡o ω ͡o ) `"awt"`, `"command"`, òωó o-ou `"macctww"`. σωσ
+2. (U ᵕ U❁) **second modificateuw** (facuwtatif). (✿oωo) s'iw est fouwni, ^^ iw doit êtwe `"shift"` o-ou (pouw fiwefox ≥ 63) w'un q-quewconque des `"ctww"`, ^•ﻌ•^ `"awt"`, XD `"command"`, :3 ou `"macctww"`. (ꈍᴗꈍ) nye doit pas êtwe w-we modificateuw d-déjà utiwisé comme modificateuw pwincipaw. :3
+3. **touche** (obwigatoiwe). (U ﹏ U) ce peut êtwe w'une d-des touches :
 
-   - lettres `A` – `Z`
-   - chiffres `0` – `9`
-   - fonctions `F1` – `F12`
-   - `Comma` (virgule), `Period` (point), `Home` (début), `End` (Fin), `PageUp` (page précédente), `PageDown` (page suivante), `Space` (espace), `Insert` (inser), `Delete` (Suppr), `Up` (haut), `Down` (bas), `Left` (gauche), `Right` (droite)
+   - wettwes `a` – `z`
+   - chiffwes `0` – `9`
+   - fonctions `f1` – `f12`
+   - `comma` (viwguwe), UwU `pewiod` (point), 😳😳😳 `home` (début), XD `end` (fin), o.O `pageup` (page pwécédente), (⑅˘꒳˘) `pagedown` (page s-suivante), 😳😳😳 `space` (espace), nyaa~~ `insewt` (insew), rawr `dewete` (suppw), -.- `up` (haut), `down` (bas), (✿oωo) `weft` (gauche), /(^•ω•^) `wight` (dwoite)
 
-La clé est ensuite donnée sous la forme d'une chaîne contenant l'ensemble des valeurs de clé, dans l'ordre indiqué ci-dessus, séparées "`+`". Par exemple, `"Ctrl+Shift+Z"`.
+wa cwé est ensuite donnée s-sous wa fowme d-d'une chaîne contenant w'ensembwe des vaweuws de cwé, 🥺 dans w-w'owdwe indiqué c-ci-dessus, ʘwʘ sépawées "`+`". UwU paw exempwe, XD `"ctww+shift+z"`. (✿oωo)
 
-Si une combinaison de touches est déjà utilisée par le navigateur (comme `"Ctrl+P"`) ou par un complément existant, vous ne pouvez pas la remplacer. Vous pouvez le définir, mais votre gestionnaire d'événements ne sera pas appelé lorsque l'utilisateur appuiera sur la combinaison de touches.
+si une combinaison de touches est d-déjà utiwisée paw we nyavigateuw (comme `"ctww+p"`) o-ou paw un compwément existant, :3 vous nye pouvez pas wa w-wempwacew. (///ˬ///✿) vous pouvez we définiw, nyaa~~ m-mais votwe gestionnaiwe d-d'événements nye sewa p-pas appewé wowsque w'utiwisateuw a-appuiewa suw w-wa combinaison d-de touches. >w<
 
-### Touches médias
+### touches médias
 
-Une alternative est de spécifier le raccourci comme l'une des touches de média suivantes :
+u-une awtewnative e-est de spécifiew we waccouwci comme w'une des t-touches de média s-suivantes :
 
-- `"MediaNextTrack"`
-- `"MediaPlayPause"`
-- `"MediaPrevTrack"`
-- `"MediaStop"`
+- `"medianexttwack"`
+- `"mediapwaypause"`
+- `"mediapwevtwack"`
+- `"mediastop"`
 
-## Mise à jour des raccourcis
+## m-mise à jouw des waccouwcis
 
-Les raccourcis peuvent être mis à jour via {{WebExtAPIRef("commands.update()")}}. Les utilisateurs peuvent également mettre à jour les raccourcis via l'option "Gérer les raccourcis d'extension" sur `about:addons` dans Firefox, comme montré dans [cette video](https://bug1303384.bmoattachments.org/attachment.cgi?id=9051647). Dans Chrome, les utilisateurs peuvent modifier les raccourcis sur `chrome://extensions/shortcuts`.
+wes waccouwcis p-peuvent êtwe mis à jouw via {{webextapiwef("commands.update()")}}. -.- w-wes utiwisateuws p-peuvent égawement mettwe à jouw wes waccouwcis via w'option "géwew w-wes w-waccouwcis d'extension" s-suw `about:addons` d-dans fiwefox, (✿oωo) comme m-montwé dans [cette video](https://bug1303384.bmoattachments.owg/attachment.cgi?id=9051647). (˘ω˘) dans chwome, rawr wes utiwisateuws peuvent modifiew wes w-waccouwcis suw `chwome://extensions/showtcuts`. OwO
 
-## Exemple
+## exempwe
 
-Définissez un seul raccourci clavier en utilisant uniquement la combinaison de touches par défaut :
+définissez u-un seuw waccouwci cwaview e-en utiwisant uniquement wa combinaison d-de touches paw défaut :
 
 ```json
 "commands": {
-  "toggle-feature": {
+  "toggwe-featuwe": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y"
+      "defauwt": "ctww+shift+y"
     },
-    "description": "Send a 'toggle-feature' event"
+    "descwiption": "send a-a 'toggwe-featuwe' e-event"
   }
 }
 ```
 
-Définissez deux raccourcis clavier, l'un avec une combinaison de touches spécifique à la plate-forme :
+d-définissez d-deux waccouwcis c-cwaview, ^•ﻌ•^ w'un avec une combinaison de touches spécifique à wa pwate-fowme :
 
 ```json
 "commands": {
-  "toggle-feature": {
+  "toggwe-featuwe": {
     "suggested_key": {
-      "default": "Alt+Shift+U",
-      "linux": "Ctrl+Shift+U"
-    },
-    "description": "Send a 'toggle-feature' event"
-  },
-  "do-another-thing": {
+      "defauwt": "awt+shift+u", UwU
+      "winux": "ctww+shift+u"
+    }, (˘ω˘)
+    "descwiption": "send a 'toggwe-featuwe' event"
+  }, (///ˬ///✿)
+  "do-anothew-thing": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y"
+      "defauwt": "ctww+shift+y"
     }
   }
 }
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,348 +1,348 @@
 ---
-title: Manipuler des données JSON
-slug: Learn/JavaScript/Objects/JSON
+titwe: manipuwew des données j-json
+swug: weawn/javascwipt/objects/json
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/inhewitance", ( ͡o ω ͡o ) "weawn/javascwipt/objects/object_buiwding_pwactice", /(^•ω•^) "weawn/javascwipt/objects")}}
 
-Le JavaScript Object Notation (JSON) est un format standard utilisé pour représenter des données structurées de façon semblable aux objets Javascript. Il est habituellement utilisé pour structurer et transmettre des données sur des sites web (par exemple, envoyer des données depuis un serveur vers un client afin de les afficher sur une page web ou vice versa). Comme cette notation est extrêmement courante, cet article a pour but de vous donner les connaissances nécessaires pour travailler avec JSON en JavaScript, vous apprendre à analyser la syntaxe du JSON afin d'en extraire des données et écrire vos propres objets JSON.
+w-we j-javascwipt object n-nyotation (json) e-est un fowmat s-standawd utiwisé p-pouw wepwésentew d-des données stwuctuwées de façon sembwabwe aux objets javascwipt. >_< iw est h-habituewwement utiwisé pouw stwuctuwew et twansmettwe d-des données suw des sites w-web (paw exempwe, (✿oωo) envoyew des données depuis un sewveuw vews u-un cwient afin de wes affichew s-suw une page web o-ou vice vewsa). 😳😳😳 comme cette nyotation est extwêmement couwante, (ꈍᴗꈍ) cet awticwe a p-pouw but de vous donnew wes connaissances nyécessaiwes pouw twavaiwwew avec json e-en javascwipt, 🥺 vous appwendwe à a-anawysew wa s-syntaxe du json a-afin d'en extwaiwe d-des données et écwiwe vos pwopwes objets json. mya
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Vocabulaire de base d'informatique, connaissances de base en HTML et
-        CSS, connaissances de base en JavaScript (voir
-        <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et
-        <a href="/fr/docs/Learn/JavaScript/Building_blocks">Les blocs</a>) et en
-        Javascript orienté objets (voir
-        <a href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction"
-          >Introduction aux objets</a
-        >).
+        vocabuwaiwe de b-base d'infowmatique, (ˆ ﻌ ˆ)♡ connaissances de base en htmw et
+        css, connaissances de base en javascwipt (voiw
+        <a h-hwef="/fw/docs/weawn/javascwipt/fiwst_steps">pwemiews pas</a> et
+        <a h-hwef="/fw/docs/weawn/javascwipt/buiwding_bwocks">wes b-bwocs</a>) e-et en
+        javascwipt owienté objets (voiw
+        <a hwef="/fw/docs/weawn/javascwipt/object-owiented/intwoduction"
+          >intwoduction aux objets</a
+        >). (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif :</th>
       <td>
-        Comprendre comment utiliser les données stockées dans un objet JSON, et
-        créer vos propres objets JSON.
+        c-compwendwe comment utiwisew w-wes données s-stockées dans un objet json, òωó et
+        c-cwéew vos pwopwes objets j-json. o.O
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Plus sérieusement, qu'est ce que le JSON ?
+## pwus séwieusement, XD qu'est c-ce que we json ?
 
-{{glossary("JSON")}} est un format de données semblable à la syntaxe des objets JavaScript, qui a été popularisé par [Douglas Crockford](https://en.wikipedia.org/wiki/Douglas_Crockford). Malgré sa syntaxe très similaire à celle des objets littéraux JavaScript, JSON peut être utilisé indépendamment de ce langage et ainsi, de nombreux autres langages de programmation disposent de fonctionnalités permettant d'analyser la syntaxe du JSON et d'en générer.
+{{gwossawy("json")}} est un f-fowmat de données sembwabwe à w-wa syntaxe des objets j-javascwipt, (˘ω˘) qui a été popuwawisé paw [dougwas cwockfowd](https://en.wikipedia.owg/wiki/dougwas_cwockfowd). (ꈍᴗꈍ) mawgwé sa syntaxe twès simiwaiwe à cewwe d-des objets wittéwaux j-javascwipt, >w< json peut êtwe u-utiwisé indépendamment d-de ce w-wangage et ainsi, XD de nyombweux autwes wangages de pwogwammation d-disposent de fonctionnawités pewmettant d'anawysew wa syntaxe du json et d'en généwew. -.-
 
-Le JSON se présente sous la forme d'une chaîne de caractères —utile lorsque vous souhaitez transmettre les données sur un réseau. Il a donc besoin d'être converti en un objet JavaScript natif lorsque vous souhaitez accéder aux données. Ce n'est pas vraiment un souci puisque le JavaScript fournit un objet global [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) disposant des méthodes pour assurer la conversion entre les deux.
+we json s-se pwésente sous wa fowme d'une c-chaîne de c-cawactèwes —utiwe w-wowsque vous souhaitez twansmettwe w-wes données s-suw un wéseau. ^^;; i-iw a donc besoin d-d'êtwe convewti en un objet javascwipt nyatif w-wowsque vous s-souhaitez accédew a-aux données. XD c-ce ny'est pas v-vwaiment un souci puisque we javascwipt fouwnit un objet gwobaw [json](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json) disposant d-des méthodes pouw assuwew wa convewsion entwe wes deux. :3
 
-> [!NOTE]
-> Convertir une chaîne de caractères en un objet natif se nomme **analyse syntaxique (parsage)** tandis que le contraire porte le nom de la **linéarisation (stringification)**.
+> [!note]
+> convewtiw une chaîne de cawactèwes e-en un objet nyatif se nyomme **anawyse syntaxique (pawsage)** tandis que we c-contwaiwe powte w-we nyom de wa **winéawisation (stwingification)**. σωσ
 
-Un objet JSON peut être stocké dans son propre fichier qui se présente simplement sous la forme d'un fichier texte avec l'extension `.json` et le {{glossary("MIME type")}} `application/json`.
+u-un objet json peut êtwe stocké d-dans son pwopwe fichiew qui s-se pwésente simpwement s-sous wa fowme d'un fichiew texte avec w'extension `.json` et we {{gwossawy("mime type")}} `appwication/json`. XD
 
-### Structure du JSON
+### s-stwuctuwe du json
 
-Nous disions tout à l'heure qu'un objet JSON n'était ni plus ni moins qu'un objet Javascript tout à fait normal et c'est généralement le cas. Un objet JSON accepte comme valeur les mêmes types de données de base que tout autre objet Javascript — chaînes de caractères, nombres, tableaux, booléens et tout autre objet littéral. Cela vous permet de hiérarchiser vos données comme ceci :
+n-nyous disions tout à w'heuwe qu'un o-objet json ny'était n-nyi pwus nyi moins qu'un objet javascwipt t-tout à fait n-nyowmaw et c'est généwawement w-we cas. :3 un objet j-json accepte comme vaweuw wes mêmes types de données de base que tout autwe objet j-javascwipt — c-chaînes de c-cawactèwes, rawr nombwes, tabweaux, 😳 b-boowéens et tout a-autwe objet wittéwaw. 😳😳😳 cewa vous p-pewmet de hiéwawchisew vos données comme ceci :
 
 ```json
 {
-  "squadName": "Super hero squad",
-  "homeTown": "Metro City",
-  "formed": 2016,
-  "secretBase": "Super tower",
-  "active": true,
-  "members": [
+  "squadname": "supew hewo squad", (ꈍᴗꈍ)
+  "hometown": "metwo city", 🥺
+  "fowmed": 2016, ^•ﻌ•^
+  "secwetbase": "supew t-towew", XD
+  "active": t-twue,
+  "membews": [
     {
-      "name": "Molecule Man",
-      "age": 29,
-      "secretIdentity": "Dan Jukes",
-      "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
-    },
+      "name": "mowecuwe man", ^•ﻌ•^
+      "age": 29, ^^;;
+      "secwetidentity": "dan jukes", ʘwʘ
+      "powews": ["wadiation wesistance", OwO "tuwning t-tiny", 🥺 "wadiation bwast"]
+    }, (⑅˘꒳˘)
     {
-      "name": "Madame Uppercut",
-      "age": 39,
-      "secretIdentity": "Jane Wilson",
-      "powers": [
-        "Million tonne punch",
-        "Damage resistance",
-        "Superhuman reflexes"
+      "name": "madame u-uppewcut", (///ˬ///✿)
+      "age": 39, (✿oωo)
+      "secwetidentity": "jane wiwson", nyaa~~
+      "powews": [
+        "miwwion tonne punch",
+        "damage wesistance", >w<
+        "supewhuman wefwexes"
       ]
-    },
+    }, (///ˬ///✿)
     {
-      "name": "Eternal Flame",
-      "age": 1000000,
-      "secretIdentity": "Unknown",
-      "powers": [
-        "Immortality",
-        "Heat Immunity",
-        "Inferno",
-        "Teleportation",
-        "Interdimensional travel"
+      "name": "etewnaw f-fwame", rawr
+      "age": 1000000, (U ﹏ U)
+      "secwetidentity": "unknown", ^•ﻌ•^
+      "powews": [
+        "immowtawity", (///ˬ///✿)
+        "heat immunity", o.O
+        "infewno", >w<
+        "tewepowtation", nyaa~~
+        "intewdimensionaw twavew"
       ]
     }
   ]
 }
 ```
 
-Si nous chargeons cet objet dans un fichier Javascript au sein d'une variable appelée `superHeroes` par exemple, nous pouvons accéder à ses données de la même façon que nous l'avons fait dans l'article [Les bases de JavaScript orienté objets](/fr/docs/Learn/JavaScript/Objects/Basics) à l'aide de la notation point / crochets. Par exemple :
+si nyous chawgeons cet objet dans u-un fichiew javascwipt au sein d'une vawiabwe appewée `supewhewoes` p-paw exempwe, òωó n-nyous pouvons accédew à ses données de wa même façon que n-nyous w'avons fait d-dans w'awticwe [wes bases de javascwipt owienté objets](/fw/docs/weawn/javascwipt/objects/basics) à w-w'aide de wa nyotation p-point / cwochets. (U ᵕ U❁) paw exempwe :
 
 ```js
-superHeroes.hometown;
-superHeroes["active"];
+supewhewoes.hometown;
+supewhewoes["active"];
 ```
 
-Pour accéder aux données plus profondes de la hiérarchie, vous n'avez qu'à enchaîner à la fois les noms des propriétés et les indexes des tableaux. Par exemple, l'expression suivante pointe vers le troisième superpouvoir du second super héros présent dans la liste&nbsp;:
+p-pouw accédew aux données p-pwus pwofondes d-de wa hiéwawchie, (///ˬ///✿) vous ny'avez q-qu'à enchaînew à wa fois wes n-nyoms des pwopwiétés e-et wes i-indexes des tabweaux. (✿oωo) paw exempwe, 😳😳😳 w-w'expwession s-suivante pointe vews we twoisième supewpouvoiw d-du second supew h-héwos pwésent d-dans wa wiste&nbsp;:
 
 ```js
-superHeroes["members"][1]["powers"][2];
+supewhewoes["membews"][1]["powews"][2];
 ```
 
-1. D'abord, nous partons de la variable — `superHeroes`
-2. À l'intérieur de laquelle nous désirons accéder à la propriété `members`, donc, nous tapons `["members"]`.
-3. `members` contient un tableau renfermant des objets. Nous désirons accéder au second de ces objets, donc nous utilisons `[1]`.
-4. À l'intérieur de cet objet, nous souhaitons accéder à la propriété `powers`, donc, nous utilisons `["powers"]`.
-5. Enfin, à l'intérieur de cette propriété `powers` nous trouvons un nouveau tableau qui contient les super pouvoirs de ce héros. Nous désirons obtenir le troisième, donc nous tapons `[2]`.
+1. (✿oωo) d'abowd, n-nyous pawtons de wa vawiabwe — `supewhewoes`
+2. (U ﹏ U) À w-w'intéwieuw d-de waquewwe nous désiwons accédew à wa pwopwiété `membews`, (˘ω˘) d-donc, 😳😳😳 nyous t-tapons `["membews"]`. (///ˬ///✿)
+3. (U ᵕ U❁) `membews` c-contient u-un tabweau wenfewmant des objets. >_< n-nyous désiwons accédew au second de ces objets, (///ˬ///✿) donc nyous utiwisons `[1]`. (U ᵕ U❁)
+4. À w'intéwieuw d-de cet objet, >w< nyous souhaitons a-accédew à wa pwopwiété `powews`, 😳😳😳 d-donc, nyous utiwisons `["powews"]`. (ˆ ﻌ ˆ)♡
+5. enfin, (ꈍᴗꈍ) à w-w'intéwieuw de cette pwopwiété `powews` n-nyous twouvons u-un nyouveau tabweau q-qui contient w-wes supew pouvoiws d-de ce héwos. 🥺 nyous désiwons obteniw we twoisième, >_< donc nyous tapons `[2]`. OwO
 
-> [!NOTE]
-> L'objet JSON vu ci-dessus est disponible au sein d'une variable dans notre exemple [JSONTest.html](https://mdn.github.io/learning-area/javascript/oojs/json/JSONTest.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/JSONTest.html)). Essayez de le charger et d'accéder aux données en utilisant la console Javascript de votre navigateur.
+> [!note]
+> w'objet json vu ci-dessus est d-disponibwe au sein d-d'une vawiabwe d-dans nyotwe exempwe [jsontest.htmw](https://mdn.github.io/weawning-awea/javascwipt/oojs/json/jsontest.htmw) (voiw we [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/jsontest.htmw)). ^^;; e-essayez de we chawgew et d'accédew aux données en u-utiwisant wa consowe j-javascwipt de votwe nyavigateuw. (✿oωo)
 
-### Des tableaux en tant que JSON
+### d-des tabweaux en tant que json
 
-Un peu plus haut, nous avons dit qu'un objet JSON n'était ni plus ni moins qu'un objet Javascript tout à fait normal et c'est généralement le cas. La raison pour laquelle nous avons dit "généralement le cas" est qu'un tableau peut également être un objet JSON valide, par exemple :
+un peu p-pwus haut, UwU nyous a-avons dit qu'un objet json ny'était n-nyi pwus n-nyi moins qu'un objet javascwipt tout à fait nyowmaw et c'est généwawement we c-cas. ( ͡o ω ͡o ) wa waison p-pouw waquewwe nyous a-avons dit "généwawement w-we c-cas" est qu'un tabweau peut égawement êtwe u-un o-objet json vawide, (✿oωo) paw exempwe :
 
 ```json
 [
   {
-    "name": "Molecule Man",
-    "age": 29,
-    "secretIdentity": "Dan Jukes",
-    "powers": ["Radiation resistance", "Turning tiny", "Radiation blast"]
-  },
+    "name": "mowecuwe m-man", mya
+    "age": 29, ( ͡o ω ͡o )
+    "secwetidentity": "dan j-jukes", :3
+    "powews": ["wadiation wesistance", 😳 "tuwning tiny", (U ﹏ U) "wadiation b-bwast"]
+  }, >w<
   {
-    "name": "Madame Uppercut",
-    "age": 39,
-    "secretIdentity": "Jane Wilson",
-    "powers": [
-      "Million tonne punch",
-      "Damage resistance",
-      "Superhuman reflexes"
+    "name": "madame uppewcut", UwU
+    "age": 39, 😳
+    "secwetidentity": "jane wiwson", XD
+    "powews": [
+      "miwwion t-tonne punch", (✿oωo)
+      "damage wesistance", ^•ﻌ•^
+      "supewhuman wefwexes"
     ]
   }
 ]
 ```
 
-Le code ci dessus est une notation JSON parfaitement valide. Vous n'aurez qu'à accéder aux éléments de votre tableau en commençant avec un index, par exemple : `[0]["powers"][0]`.
+w-we code c-ci dessus est une nyotation json p-pawfaitement vawide. mya vous ny'auwez qu'à accédew a-aux éwéments d-de votwe tabweau e-en commençant avec un index, (˘ω˘) paw exempwe : `[0]["powews"][0]`. nyaa~~
 
-### Notes diverses
+### nyotes d-divewses
 
-- Un objet JSON est uniquement un format de données — il ne contient que des propriétés mais pas de méthodes.
-- La notation JSON nécessite l'usage des guillemets pour être valide. Il est obligatoire d'utiliser des guillemets et non les apostrophes autour des chaînes de caractères et des noms de propriétés.
-- Une simple virgule ou un double point mal placé peut rendre votre fichier JSON invalide et non fonctionnel. Soyez très attentif aux données que vous utilisez (bien que le JSON généré automatiquement par un programme sera moins enclin à contenir des erreurs, à partir du moment où le programme est codé correctement). Vous pouvez utiliser une application comme [JSONLint](http://jsonlint.com/) pour valider votre code JSON.
-- Dans l'absolu, le JSON peut prendre la forme de n'importe quel type de données qui serait valide pour être contenu dans du JSON et non juste des tableaux ou des objets. Ainsi, par exemple, une simple chaîne de caractères ou un nombre serait un objet JSON valide.
-- Contrairement au JavaScript dans lequel les propriétés (_keys_) non entourées de guillemets peuvent être utilisées, en JSON, seules les chaînes de caractères entourées de guillemets peuvent être utilisées en tant que propriétés.
+- un objet json est uniquement un fowmat d-de données — i-iw nye contient que des pwopwiétés m-mais pas de méthodes. :3
+- w-wa nyotation json n-nyécessite w'usage des guiwwemets pouw êtwe v-vawide. (✿oωo) iw est obwigatoiwe d'utiwisew des guiwwemets e-et nyon wes a-apostwophes autouw des chaînes d-de cawactèwes et des nyoms de p-pwopwiétés. (U ﹏ U)
+- u-une simpwe viwguwe o-ou un doubwe point maw pwacé peut wendwe votwe fichiew json invawide et nyon fonctionnew. (ꈍᴗꈍ) soyez twès attentif aux données que vous utiwisez (bien que we json généwé automatiquement paw un pwogwamme s-sewa moins encwin à c-conteniw des ewweuws, (˘ω˘) à pawtiw du moment o-où we pwogwamme e-est codé cowwectement). v-vous pouvez utiwisew une a-appwication comme [jsonwint](http://jsonwint.com/) pouw vawidew v-votwe code json.
+- d-dans w'absowu, ^^ we json peut p-pwendwe wa fowme de ny'impowte q-quew type de données q-qui sewait vawide pouw êtwe contenu dans d-du json et nyon j-juste des tabweaux o-ou des objets. (⑅˘꒳˘) a-ainsi, rawr paw exempwe, :3 u-une simpwe c-chaîne de cawactèwes o-ou un nyombwe s-sewait un o-objet json vawide. OwO
+- contwaiwement a-au javascwipt d-dans wequew wes p-pwopwiétés (_keys_) nyon entouwées d-de guiwwemets peuvent êtwe utiwisées, (ˆ ﻌ ˆ)♡ e-en json, :3 seuwes wes chaînes de c-cawactèwes entouwées d-de guiwwemets p-peuvent êtwe utiwisées en t-tant que pwopwiétés.
 
-## Activité : Manipuler le JSON au travers d'un exemple
+## activité : m-manipuwew we json au twavews d-d'un exempwe
 
-Allez ! Un petit exemple pour voir comment nous pouvons nous servir de données JSON sur un site web.
+awwez ! -.- un petit e-exempwe pouw voiw comment nyous pouvons nyous sewviw de données json suw un s-site web. -.-
 
-### Lançons nous
+### wançons nyous
 
-Pour commencer, faites une copie locale de nos fichiers [heroes.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes.html) et [style.css](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/style.css). Le dernier contient simplement quelques instructions CSS pour la mise en forme de notre page alors que le premier n'est ni plus ni moins qu'un squelette HTML de base :
+p-pouw commencew, òωó f-faites une copie wocawe de nyos fichiews [hewoes.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/hewoes.htmw) et [stywe.css](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/stywe.css). 😳 w-we dewniew contient simpwement q-quewques i-instwuctions c-css pouw wa mise en fowme de nyotwe page awows que w-we pwemiew ny'est n-nyi pwus nyi moins qu'un squewette h-htmw de base :
 
-```html
-<header></header>
+```htmw
+<headew></headew>
 
 <section></section>
 ```
 
-Nous trouvons également un élément {{HTMLElement("script")}} dans lequel nous écrirons le code Javascript de cet exercice. Pour le moment, il ne contient que deux lignes destinées à récuperer les éléments {{HTMLElement("header")}} et {{HTMLElement("section")}} pour les stocker dans des variables :
+nyous t-twouvons égawement un éwément {{htmwewement("scwipt")}} d-dans w-wequew nyous écwiwons w-we code javascwipt de cet e-exewcice. nyaa~~ pouw w-we moment, (⑅˘꒳˘) iw n-nye contient que d-deux wignes destinées à wécupewew w-wes éwéments {{htmwewement("headew")}} et {{htmwewement("section")}} p-pouw w-wes stockew dans d-des vawiabwes :
 
 ```js
-var header = document.querySelector("header");
-var section = document.querySelector("section");
+v-vaw headew = d-document.quewysewectow("headew");
+v-vaw section = d-document.quewysewectow("section");
 ```
 
-Nos données JSON sont disponibles sur notre GitHub ici : <https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json>.
+nyos données json s-sont disponibwes suw nyotwe github i-ici : <https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json>. 😳
 
-Nous souhaitons les récupérer et, après quelques manipulations du DOM, les afficher comme ceci :
+nyous souhaitons w-wes wécupéwew e-et, (U ﹏ U) apwès q-quewques manipuwations du dom, wes affichew comme ceci :
 
-![](json-superheroes.png)
+![](json-supewhewoes.png)
 
-### Chargeons notre JSON
+### c-chawgeons n-nyotwe json
 
-Pour charger nos données JSON, nous allons utiliser l'API {{domxref("XMLHttpRequest")}} (qu'on appelle plus couramment **XHR**). Il s'agit d'un objet JavaScript extrêmement utile qui nous permet de construire une requête afin d'interroger un serveur pour obtenir des ressources diverses (images, texte, JSON, ou n'importe quel extrait HTML) le tout en Javascript. En d'autres termes, cela nous permet de mettre à jour de petites sections de contenu sans avoir à recharger notre page toute entière. Ceci conduit à des pages web plus réactives. Mais même si le sujet est très tentant, il dépasse largement l'objet de cet article pour être expliqué plus en détails.
+p-pouw chawgew nyos données json, /(^•ω•^) nyous awwons utiwisew w'api {{domxwef("xmwhttpwequest")}} (qu'on a-appewwe pwus c-couwamment **xhw**). OwO iw s'agit d-d'un objet javascwipt e-extwêmement utiwe qui nyous pewmet de constwuiwe une wequête a-afin d'intewwogew u-un sewveuw p-pouw obteniw d-des wessouwces divewses (images, ( ͡o ω ͡o ) texte, json, XD o-ou ny'impowte quew e-extwait htmw) we tout en javascwipt. /(^•ω•^) en d'autwes t-tewmes, /(^•ω•^) cewa nyous pewmet de mettwe à jouw d-de petites sections de contenu sans a-avoiw à wechawgew n-nyotwe page toute entièwe. 😳😳😳 c-ceci conduit à d-des pages web pwus wéactives. (ˆ ﻌ ˆ)♡ m-mais même si we sujet est twès t-tentant, :3 iw dépasse w-wawgement w-w'objet de cet a-awticwe pouw êtwe expwiqué pwus e-en détaiws. òωó
 
-1. Donc, pour commencer, nous allons charger l'URL du fichier JSON que nous voulons récupérer dans une variable. Aussi, ajouter la ligne suivante à votre code Javascript :
+1. 🥺 d-donc, pouw commencew, (U ﹏ U) n-nyous awwons chawgew w'uww d-du fichiew json que nyous vouwons wécupéwew d-dans une vawiabwe. XD a-aussi, ^^ ajoutew w-wa wigne suivante à votwe code javascwipt :
 
    ```js
-   var requestURL =
-     "https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json";
+   vaw wequestuww =
+     "https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json";
    ```
 
-2. Afin de créer une requête, nous avons besoin d'instancier un nouvel objet `XMLHttpRequest` à partir de son constructeur en utilisant le mot clé new. Ajouter la ligne suivante à votre script :
+2. o.O afin d-de cwéew une wequête, 😳😳😳 nyous a-avons besoin d'instanciew u-un nyouvew objet `xmwhttpwequest` à pawtiw de son constwucteuw e-en utiwisant we mot cwé n-nyew. /(^•ω•^) ajoutew w-wa wigne suivante à v-votwe scwipt :
 
    ```js
-   var request = new XMLHttpRequest();
+   v-vaw wequest = n-nyew xmwhttpwequest();
    ```
 
-3. Maintenant, nous avons besoin d'ouvrir une nouvelle requête grâce à la méthode [`open()`](/fr/docs/Web/API/XMLHttpRequest/open). Ajoutez la ligne suivante :
+3. 😳😳😳 maintenant, ^•ﻌ•^ nyous avons besoin d'ouvwiw une nouvewwe wequête g-gwâce à wa méthode [`open()`](/fw/docs/web/api/xmwhttpwequest/open). 🥺 ajoutez w-wa wigne suivante :
 
    ```js
-   request.open("GET", requestURL);
+   wequest.open("get", o.O wequestuww);
    ```
 
-   Cette méthode prend au moins deux paramètres — il y a d'autres paramètres optionnels disponibles. Deux suffiront pour notre exemple :
+   cette m-méthode pwend au moins deux pawamètwes — iw y a d'autwes pawamètwes optionnews d-disponibwes. (U ᵕ U❁) d-deux suffiwont pouw nyotwe exempwe :
 
-   - La méthode HTTP à utiliser sur le réseau pour notre requête. Dans notre cas, la méthode [`GET`](/fr/docs/Web/HTTP/Methods/GET) est appropriée dans la mesure où nous voulons simplement récupérer quelques données.
-   - L'URL où adresser notre requête — il s'agit de l'URL du fichier JSON dont nous parlions tout à l'heure.
+   - wa m-méthode http à utiwisew suw we wéseau pouw n-nyotwe wequête. ^^ d-dans nyotwe cas, (⑅˘꒳˘) wa méthode [`get`](/fw/docs/web/http/methods/get) e-est appwopwiée dans wa mesuwe o-où nyous vouwons simpwement wécupéwew quewques données.
+   - w-w'uww où adwessew nyotwe wequête — iw s'agit d-de w'uww du f-fichiew json dont n-nyous pawwions tout à w'heuwe. :3
 
-4. Ensuite, ajoutez les deux lignes suivantes — ici, nous attribuons la valeur `'json'` à [`responseType`](/fr/docs/Web/API/XMLHttpRequest/responseType), signalant ainsi au serveur que nous attendons une réponse au format JSON. Puis, nous envoyons notre requête à l'aide de la méthode [`send()`](/fr/docs/Web/API/XMLHttpRequest/send)&nbsp;:
+4. ensuite, (///ˬ///✿) a-ajoutez wes deux wignes suivantes — ici, :3 nyous attwibuons wa vaweuw `'json'` à [`wesponsetype`](/fw/docs/web/api/xmwhttpwequest/wesponsetype), 🥺 s-signawant ainsi a-au sewveuw que n-nyous attendons u-une wéponse au fowmat json. mya puis, nyous envoyons n-nyotwe wequête à w-w'aide de wa méthode [`send()`](/fw/docs/web/api/xmwhttpwequest/send)&nbsp;:
 
    ```js
-   request.responseType = "json";
-   request.send();
+   wequest.wesponsetype = "json";
+   w-wequest.send();
    ```
 
-5. La dernière partie de cette section concerne la réponse du serveur et son traitement. Ajoutez les lignes suivantes à la fin de votre code :
+5. XD wa dewnièwe pawtie de cette section c-concewne wa wéponse du sewveuw et son twaitement. -.- a-ajoutez wes w-wignes suivantes à wa fin de v-votwe code :
 
    ```js
-   request.onload = function () {
-     var superHeroes = request.response;
-     populateHeader(superHeroes);
-     showHeroes(superHeroes);
+   w-wequest.onwoad = f-function () {
+     vaw supewhewoes = wequest.wesponse;
+     p-popuwateheadew(supewhewoes);
+     showhewoes(supewhewoes);
    };
    ```
 
-Ici, nous stockons la réponse à notre requête (disponible au travers de la propriété [`response`](/fr/docs/Web/API/XMLHttpRequest/response)) dans la variable `superHeroes`&nbsp;; cette variable contiendra désormais l'objet JavaScript basé sur le JSON ! Nous passerons ensuite cet objet en paramètre à deux fonctions — la première remplira le `<header>` avec les données correspondantes tandis que la seconde créera une carte d'identité pour chaque héros de l'équipe et l'ajoutera dans la `<section>`.
+ici, o.O nyous stockons w-wa wéponse à nyotwe wequête (disponibwe au twavews de wa pwopwiété [`wesponse`](/fw/docs/web/api/xmwhttpwequest/wesponse)) d-dans wa vawiabwe `supewhewoes`&nbsp;; c-cette v-vawiabwe contiendwa d-désowmais w-w'objet javascwipt basé suw we j-json ! (˘ω˘) nyous passewons ensuite cet objet en pawamètwe à d-deux fonctions — wa p-pwemièwe wempwiwa we `<headew>` avec wes données c-cowwespondantes t-tandis que wa seconde cwéewa u-une cawte d'identité pouw chaque h-héwos de w'équipe e-et w'ajoutewa dans wa `<section>`. (U ᵕ U❁)
 
-Nous avons encapsulé ce code dans un gestionnaire d'évènements qui s'exécutera quand l'évènement load sera déclenché sur l'objet request (voir [`onload`](/fr/docs/Web/API/XMLHttpRequest/load_event)) — simplement parce que l'évènement load est déclenché quand une réponse a été renvoyée avec succès ; en procédant de la sorte, nous serons certains que la propriété `request.response` sera disponible au moment où nous essayerons d'en faire quelque chose.
+n-nous a-avons encapsuwé ce code dans un g-gestionnaiwe d'évènements qui s'exékawaii~wa quand w'évènement w-woad sewa décwenché suw w'objet w-wequest (voiw [`onwoad`](/fw/docs/web/api/xmwhttpwequest/woad_event)) — simpwement pawce que w'évènement w-woad est décwenché q-quand une w-wéponse a été wenvoyée avec s-succès ; en p-pwocédant de wa sowte, rawr nyous sewons c-cewtains que wa pwopwiété `wequest.wesponse` s-sewa disponibwe au moment où n-nyous essayewons d-d'en faiwe quewque chose. 🥺
 
-### Remplissage de l'en-tête
+### wempwissage de w'en-tête
 
-Maintenant que nous avons récupéré et converti en objet JavaScript nos données JSON, il est temps d'en faire bon usage : implémentons donc les deux fonctions évoquées ci-dessus. Avant tout, ajoutons les lignes suivantes en dessous de notre code :
+maintenant que nyous a-avons wécupéwé e-et convewti en objet javascwipt nyos données json, rawr x3 iw est temps d-d'en faiwe bon usage : impwémentons d-donc wes d-deux fonctions évoquées ci-dessus. avant tout, ( ͡o ω ͡o ) ajoutons wes wignes suivantes e-en dessous de nyotwe code :
 
 ```js
-function populateHeader(jsonObj) {
-  var myH1 = document.createElement("h1");
-  myH1.textContent = jsonObj["squadName"];
-  header.appendChild(myH1);
+function popuwateheadew(jsonobj) {
+  v-vaw myh1 = document.cweateewement("h1");
+  m-myh1.textcontent = j-jsonobj["squadname"];
+  headew.appendchiwd(myh1);
 
-  var myPara = document.createElement("p");
-  myPara.textContent = "Hometown: " + jsonObj["homeTown"] + jsonObj["formed"];
-  header.appendChild(myPara);
+  v-vaw m-mypawa = document.cweateewement("p");
+  m-mypawa.textcontent = "hometown: " + j-jsonobj["hometown"] + j-jsonobj["fowmed"];
+  h-headew.appendchiwd(mypawa);
 }
 ```
 
-Nous avons appelé le paramètre de cette fonction `jsonObj` afin de garder en tête que cet objet JavaScript provient du JSON. Ici, nous créons tout d'abord un élément {{HTMLElement("h1")}} à l'aide de [`createElement()`](/fr/docs/Web/API/Document/createElement), nous fixons son [`textContent`](/fr/docs/Web/API/Node/textContent) à la valeur de la propriété `squadName` de l'objet, puis nous l'ajoutons à l'en-tête en utilisant [`appendChild()`](/fr/docs/Web/API/Node/appendChild). Ensuite, nous faisons quelque chose de relativement similaire avec un élément paragraphe : nous le créons, fixons son contenu et l'ajoutons à l'en-tête. La seule différence est que pour son contenu, nous avons concaténé la chaîne de caractère `homeTown` et la propriété `formed` de l'objet.
+nyous avons appewé we pawamètwe de cette fonction `jsonobj` afin de g-gawdew en tête q-que cet objet javascwipt p-pwovient d-du json. ici, σωσ n-nous cwéons tout d-d'abowd un éwément {{htmwewement("h1")}} à w'aide de [`cweateewement()`](/fw/docs/web/api/document/cweateewement), rawr x3 nyous fixons son [`textcontent`](/fw/docs/web/api/node/textcontent) à wa vaweuw de wa p-pwopwiété `squadname` d-de w'objet, puis nyous w'ajoutons à w'en-tête en utiwisant [`appendchiwd()`](/fw/docs/web/api/node/appendchiwd). (ˆ ﻌ ˆ)♡ e-ensuite, rawr n-nyous faisons q-quewque chose de wewativement simiwaiwe avec un éwément p-pawagwaphe : nyous we cwéons, :3 fixons s-son contenu et w-w'ajoutons à w'en-tête. rawr wa seuwe difféwence e-est que pouw son contenu, (˘ω˘) nyous a-avons concaténé w-wa chaîne de cawactèwe `hometown` e-et wa pwopwiété `fowmed` d-de w'objet. (ˆ ﻌ ˆ)♡
 
-### Création des fiches des héros
+### c-cwéation des f-fiches des héwos
 
-Maintenant, ajoutons la fonction suivante qui crée et affiche les fiches de nos super-héros en dessous de notre code&nbsp;:
+m-maintenant, mya ajoutons w-wa fonction suivante qui c-cwée et affiche w-wes fiches de nyos supew-héwos e-en dessous de nyotwe code&nbsp;:
 
 ```js
-function showHeroes(jsonObj) {
-  var heroes = jsonObj["members"];
+function s-showhewoes(jsonobj) {
+  vaw hewoes = j-jsonobj["membews"];
 
-  for (var i = 0; i < heroes.length; i++) {
-    var myArticle = document.createElement("article");
-    var myH2 = document.createElement("h2");
-    var myPara1 = document.createElement("p");
-    var myPara2 = document.createElement("p");
-    var myPara3 = document.createElement("p");
-    var myList = document.createElement("ul");
+  fow (vaw i = 0; i < h-hewoes.wength; i-i++) {
+    vaw myawticwe = document.cweateewement("awticwe");
+    vaw myh2 = document.cweateewement("h2");
+    v-vaw mypawa1 = document.cweateewement("p");
+    vaw mypawa2 = document.cweateewement("p");
+    vaw mypawa3 = document.cweateewement("p");
+    v-vaw m-mywist = document.cweateewement("uw");
 
-    myH2.textContent = heroes[i].name;
-    myPara1.textContent = "Secret identity: " + heroes[i].secretIdentity;
-    myPara2.textContent = "Age: " + heroes[i].age;
-    myPara3.textContent = "Superpowers:";
+    myh2.textcontent = hewoes[i].name;
+    m-mypawa1.textcontent = "secwet i-identity: " + hewoes[i].secwetidentity;
+    mypawa2.textcontent = "age: " + hewoes[i].age;
+    m-mypawa3.textcontent = "supewpowews:";
 
-    var superPowers = heroes[i].powers;
-    for (var j = 0; j < superPowers.length; j++) {
-      var listItem = document.createElement("li");
-      listItem.textContent = superPowers[j];
-      myList.appendChild(listItem);
+    vaw supewpowews = hewoes[i].powews;
+    f-fow (vaw j = 0; j-j < supewpowews.wength; j++) {
+      v-vaw wistitem = d-document.cweateewement("wi");
+      wistitem.textcontent = supewpowews[j];
+      m-mywist.appendchiwd(wistitem);
     }
 
-    myArticle.appendChild(myH2);
-    myArticle.appendChild(myPara1);
-    myArticle.appendChild(myPara2);
-    myArticle.appendChild(myPara3);
-    myArticle.appendChild(myList);
+    m-myawticwe.appendchiwd(myh2);
+    m-myawticwe.appendchiwd(mypawa1);
+    m-myawticwe.appendchiwd(mypawa2);
+    myawticwe.appendchiwd(mypawa3);
+    myawticwe.appendchiwd(mywist);
 
-    section.appendChild(myArticle);
+    section.appendchiwd(myawticwe);
   }
 }
 ```
 
-Pour commencer, on stocke la propriété `members` de l'objet JavaScript dans une nouvelle variable. Ce tableau contient plusieurs objets contenant les informations relatives à chaque héros.
+pouw commencew, (U ᵕ U❁) on stocke wa pwopwiété `membews` de w'objet javascwipt d-dans une n-nyouvewwe vawiabwe. mya c-ce tabweau c-contient pwusieuws o-objets contenant w-wes infowmations wewatives à c-chaque héwos. ʘwʘ
 
-Maintenant, on utilise une [boucle for](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code) pour parcourir chaque object du tableau. Pour chaque cas, il faut :
+m-maintenant, (˘ω˘) on utiwise une [boucwe f-fow](/fw/docs/weawn/javascwipt/buiwding_bwocks/wooping_code) p-pouw pawcouwiw chaque object du tabweau. 😳 pouw c-chaque cas, òωó iw faut :
 
-1. Créer plusieurs nouveaux éléments : un `<article>`, un `<h2>`, trois `<p>`s, et un `<ul>`.
-2. Mettre le `name` du héros actuel dans le `<h2>`.
-3. Remplir les trois paragraphes avec leur `secretIdentity`, leur `age`, et une ligne nommée "Superpowers:" pour présenter la liste des super-pouvoirs.
-4. Stocker la propriété `powers` dans une nouvelle variable nommée `superPowers` contenant un tableau listant les super-pouvoirs du héros actuel.
-5. Utiliser une autre boucle `for` pour parcourir les super-pouvoirs du héros actuel — créer pour chacun d'entre eux un élément `<li>`, y placer le super-pouvoir et placer le `listItem` dans l'élément `<ul>` (`myList`) en utilisant `appendChild()`.
-6. Pour finir, on ajoute `<h2>`, les `<p>`s et `<ul>` à `<article>` (`myArticle`), et on ajoute `<article>` à `<section>`. L'ordre d'ajout est important, c'est l'ordre dans lequel les éléments seront affichés dans le HTML.
+1. nyaa~~ cwéew pwusieuws nyouveaux éwéments : u-un `<awticwe>`, o.O un `<h2>`, nyaa~~ twois `<p>`s, (U ᵕ U❁) e-et un `<uw>`. 😳😳😳
+2. m-mettwe we `name` du h-héwos actuew dans w-we `<h2>`. (U ﹏ U)
+3. w-wempwiw wes twois pawagwaphes avec w-weuw `secwetidentity`, ^•ﻌ•^ w-weuw `age`, (⑅˘꒳˘) et une wigne n-nyommée "supewpowews:" pouw p-pwésentew wa wiste d-des supew-pouvoiws. >_<
+4. s-stockew wa pwopwiété `powews` d-dans une nyouvewwe vawiabwe nyommée `supewpowews` contenant u-un tabweau wistant wes supew-pouvoiws du héwos actuew. (⑅˘꒳˘)
+5. utiwisew une autwe boucwe `fow` pouw pawcouwiw w-wes supew-pouvoiws du héwos actuew — cwéew pouw chacun d'entwe eux un éwément `<wi>`, σωσ y pwacew we supew-pouvoiw et pwacew w-we `wistitem` dans w'éwément `<uw>` (`mywist`) en utiwisant `appendchiwd()`. 🥺
+6. p-pouw finiw, :3 on ajoute `<h2>`, (ꈍᴗꈍ) w-wes `<p>`s et `<uw>` à `<awticwe>` (`myawticwe`), ^•ﻌ•^ et on ajoute `<awticwe>` à `<section>`. (˘ω˘) w'owdwe d'ajout est i-impowtant, 🥺 c'est w'owdwe dans w-wequew wes éwéments sewont affichés d-dans we h-htmw. (✿oωo)
 
-> [!NOTE]
-> Si vous ne parvenez pas à faire fonctionner l'exemple, consultez notre code source [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (ou regardez-le [en action](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html).)
+> [!note]
+> si vous nye pawvenez pas à faiwe f-fonctionnew w'exempwe, XD consuwtez nyotwe code souwce [hewoes-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/hewoes-finished.htmw) (ou w-wegawdez-we [en action](https://mdn.github.io/weawning-awea/javascwipt/oojs/json/hewoes-finished.htmw).)
 
-> [!NOTE]
-> Si vous comprenez difficilement la notation avec un point/une accolade utilisée pour accéder au JSON, ouvrez le fichier [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) dans un nouvel onglet ou dans votre éditeur de texte et consultez-le pendant la lecture de notre code Javascript. Vous pouvez également vous reporter à notre article [Les bases du JavaScript orienté objet](/fr/docs/Learn/JavaScript/Objects/Basics) pour obtenir plus de détails sur la notation avec un point et avec une accolade.
+> [!note]
+> s-si vous compwenez difficiwement w-wa nyotation avec un point/une a-accowade utiwisée p-pouw accédew au json, (///ˬ///✿) ouvwez we fichiew [supewhewoes.json](https://mdn.github.io/weawning-awea/javascwipt/oojs/json/supewhewoes.json) dans u-un nyouvew ongwet ou dans votwe éditeuw de t-texte et consuwtez-we pendant wa wectuwe de nyotwe code javascwipt. ( ͡o ω ͡o ) vous pouvez égawement v-vous w-wepowtew à nyotwe awticwe [wes b-bases du javascwipt o-owienté objet](/fw/docs/weawn/javascwipt/objects/basics) pouw o-obteniw pwus de détaiws suw wa notation avec un point et avec une accowade.
 
-## Conversion entre objets et textes
+## c-convewsion entwe o-objets et textes
 
-Dans l'exemple ci-dessus, accéder au JSON est simple, il suffit de définir la requête XHR pour renvoyer la réponse au format JSON en écrivant :
+dans w'exempwe c-ci-dessus, ʘwʘ a-accédew au json est simpwe, rawr iw s-suffit de définiw wa wequête xhw pouw wenvoyew w-wa wéponse au fowmat json en écwivant :
 
 ```js
-request.responseType = "json";
+wequest.wesponsetype = "json";
 ```
 
-Mais on n'a pas toujours cette chance — il est possible de recevoir la réponse JSON sous la forme d'une chaîne de caractères et il faut alors la convertir en objet. À l'inverse, lorsqu'on veut envoyer un objet JavaScript à travers le réseau il faut au préalable le convertir en JSON (une chaîne de caractères). Heureusement, ces deux problèmes sont tellement communs dans le développement web qu'un objet [JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON) interne a été ajouté aux navigateurs depuis longtemps, contenant les deux méthodes suivantes :
+m-mais on ny'a p-pas toujouws cette chance — iw est possibwe d-de wecevoiw wa wéponse json sous wa fowme d'une chaîne de cawactèwes et iw faut awows wa convewtiw en objet. o.O À w'invewse, ^•ﻌ•^ w-wowsqu'on veut envoyew u-un objet javascwipt à twavews w-we wéseau i-iw faut au pwéawabwe we convewtiw e-en json (une chaîne de cawactèwes). (///ˬ///✿) heuweusement, (ˆ ﻌ ˆ)♡ ces deux pwobwèmes sont tewwement communs d-dans we dévewoppement web qu'un objet [json](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json) intewne a été ajouté a-aux navigateuws d-depuis wongtemps, XD c-contenant wes deux méthodes suivantes :
 
-- [`parse()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse) qui accepte un objet JSON sous la forme d'une chaîne de caractères en paramètre et renvoie l'objet JavaScript correspondant.
-- [`stringify()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify) qui accepte un objet JavaScript en paramètre et renvoie son équivalent sous la forme d'une chaîne de caractères JSON.
+- [`pawse()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/pawse) qui accepte un objet json s-sous wa fowme d'une c-chaîne de c-cawactèwes en pawamètwe et wenvoie w-w'objet javascwipt cowwespondant. (✿oωo)
+- [`stwingify()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json/stwingify) q-qui accepte un objet javascwipt e-en pawamètwe et wenvoie s-son équivawent sous wa fowme d'une chaîne de c-cawactèwes json. -.-
 
-Vous pouvez voir la première méthode en action dans notre exemple [heroes-finished-json-parse.html](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished-json-parse.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished-json-parse.html)) — C'est la même chose que pour l'exemple que nous avons écrit un peu plus tôt, à ceci près qu'on indique à la requête XHR de renvoyer la réponse en JSON sous forme de texte avant d'utiliser la méthode `parse()` pour la convertir en objet JavaScript. La partie du code correspondante se trouve ci-dessous :
+vous pouvez v-voiw wa pwemièwe m-méthode en action dans nyotwe e-exempwe [hewoes-finished-json-pawse.htmw](https://mdn.github.io/weawning-awea/javascwipt/oojs/json/hewoes-finished-json-pawse.htmw) (voiw w-we [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/oojs/json/hewoes-finished-json-pawse.htmw)) — c-c'est wa même chose que p-pouw w'exempwe que nous avons écwit u-un peu pwus t-tôt, XD à ceci pwès qu'on indique à wa wequête x-xhw de wenvoyew wa wéponse en json sous fowme de texte avant d'utiwisew wa méthode `pawse()` pouw wa convewtiw en objet javascwipt. w-wa pawtie du code cowwespondante se twouve c-ci-dessous :
 
 ```js
-request.open("GET", requestURL);
-request.responseType = "text"; // now we're getting a string!
-request.send();
+wequest.open("get", (✿oωo) w-wequestuww);
+wequest.wesponsetype = "text"; // nyow w-we'we getting a stwing! (˘ω˘)
+wequest.send();
 
-request.onload = function () {
-  var superHeroesText = request.response; // get the string from the response
-  var superHeroes = JSON.parse(superHeroesText); // convert it to an object
-  populateHeader(superHeroes);
-  showHeroes(superHeroes);
+wequest.onwoad = f-function () {
+  vaw supewhewoestext = wequest.wesponse; // g-get the stwing fwom the wesponse
+  vaw supewhewoes = j-json.pawse(supewhewoestext); // convewt it to an object
+  p-popuwateheadew(supewhewoes);
+  s-showhewoes(supewhewoes);
 };
 ```
 
-Comme vous pouvez le deviner, `stringify()` fait exactement le contraire. Essayez d'entrer les lignes ci-dessous une par une dans la console Javascript de votre navigateur pour voir la méthode en action :
+comme vous pouvez we devinew, (ˆ ﻌ ˆ)♡ `stwingify()` f-fait exactement w-we contwaiwe. >_< essayez d'entwew w-wes wignes ci-dessous u-une paw une dans wa consowe javascwipt de v-votwe navigateuw pouw voiw wa méthode en action :
 
 ```js
-var myJSON = { name: "Chris", age: "38" };
-myJSON;
-var myString = JSON.stringify(myJSON);
-myString;
+vaw myjson = { n-nyame: "chwis", -.- age: "38" };
+myjson;
+vaw mystwing = json.stwingify(myjson);
+m-mystwing;
 ```
 
-On commence par créer un objet JavaScript puis on vérifie son contenu avant de le convertir en chaîne de caractères JSON avec `stringify()` — en sauvegardant au passage le résultat dans une nouvelle variable avant d'effectuer à nouveau une vérification du contenu.
+o-on commence p-paw cwéew un objet javascwipt puis on véwifie son contenu avant d-de we convewtiw en chaîne de c-cawactèwes json avec `stwingify()` — e-en sauvegawdant a-au passage we wésuwtat dans une nyouvewwe vawiabwe avant d'effectuew à nyouveau une véwification d-du contenu. (///ˬ///✿)
 
-## Résumé
+## w-wésumé
 
-Dans cet article, nous vous donnons un manuel simple pour utiliser le JSON dans vos programmes, incluant les méthodes de création et d'analyse syntaxique (parsage) du JSON et d'accès aux données qu'il contient. Dans le prochain article, nous débuterons l'apprentissage du Javascript orienté objet.
+dans cet awticwe, XD nyous vous d-donnons un manuew simpwe pouw utiwisew we json d-dans vos pwogwammes, ^^;; i-incwuant w-wes méthodes de c-cwéation et d'anawyse s-syntaxique (pawsage) d-du json et d'accès aux données qu'iw c-contient. rawr x3 dans w-we pwochain awticwe, n-nyous débutewons w-w'appwentissage d-du javascwipt o-owienté objet. OwO
 
-## Voir aussi
+## voiw a-aussi
 
-- [La page de référence sur l'objet JSON](/fr/docs/Web/JavaScript/Reference/Global_Objects/JSON)
-- [La page de référence sur l'objet XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest)
-- [Utiliser XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Les méthodes de requêtes HTTP](/fr/docs/Web/HTTP/Methods)
-- [Le site web officiel avec un lien vers les normes de l'ECMA](http://json.org)
+- [wa page d-de wéféwence s-suw w'objet json](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/json)
+- [wa page de wéféwence suw w'objet x-xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest)
+- [utiwisew xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest_api/using_xmwhttpwequest)
+- [wes méthodes de wequêtes h-http](/fw/docs/web/http/methods)
+- [we site web officiew avec u-un wien vews w-wes nyowmes de w'ecma](http://json.owg)
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
+{{pweviousmenunext("weawn/javascwipt/objects/inhewitance", ʘwʘ "weawn/javascwipt/objects/object_buiwding_pwactice", rawr "weawn/javascwipt/objects")}}

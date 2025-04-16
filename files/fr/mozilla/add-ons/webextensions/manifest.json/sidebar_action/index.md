@@ -1,234 +1,234 @@
 ---
-title: sidebar_action
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action
+titwe: sidebaw_action
+swug: moziwwa/add-ons/webextensions/manifest.json/sidebaw_action
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"sidebar_action": {
-  "default_icon": {
-    "16": "button/geo-16.png",
+        <pwe c-cwass="bwush: j-json">
+"sidebaw_action": {
+  "defauwt_icon": {
+    "16": "button/geo-16.png", :3
     "32": "button/geo-32.png"
   },
-  "default_title": "My sidebar",
-  "default_panel": "sidebar/sidebar.html",
-  "open_at_install":true
-}</pre
+  "defauwt_titwe": "my s-sidebaw", (U ﹏ U)
+  "defauwt_panew": "sidebaw/sidebaw.htmw", OwO
+  "open_at_instaww":twue
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Une [barre latérale](/fr/docs/Mozilla/Add-ons/WebExtensions/Sidebars) est un volet qui s'affiche à gauche de la fenêtre du navigateur, à côté de la page Web. Le navigateur fournit une interface qui permet à l'utilisateur de voir les barres latérales actuellement disponibles et de sélectionner celle à afficher.
+une [bawwe watéwawe](/fw/docs/moziwwa/add-ons/webextensions/sidebaws) est un vowet qui s'affiche à gauche de w-wa fenêtwe du nyavigateuw, à côté de wa page w-web. 😳😳😳 we nyavigateuw fouwnit une i-intewface qui pewmet à w'utiwisateuw de voiw wes bawwes watéwawes a-actuewwement disponibwes e-et de séwectionnew c-cewwe à affichew. (ˆ ﻌ ˆ)♡
 
-La clé `sidebar_action` vous permet de définir les propriétés par défaut de la barre latérale. Vous pouvez modifier ces propriétés lors de l'exécution à l'aide de l'API {{WebExtAPIRef("sidebarAction")}}.
+wa cwé `sidebaw_action` vous pewmet de définiw wes pwopwiétés paw défaut d-de wa bawwe watéwawe. XD vous pouvez modifiew ces pwopwiétés wows de w'exécution à w-w'aide de w'api {{webextapiwef("sidebawaction")}}. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
-La clé `sidebar_action` est un objet qui peut avoir l'une des propriétés listées ci-dessous. La seule propriété obligatoire est `default_panel`.
+wa cwé `sidebaw_action` e-est un objet q-qui peut avoiw w-w'une des pwopwiétés wistées ci-dessous. ( ͡o ω ͡o ) wa seuwe p-pwopwiété obwigatoiwe est `defauwt_panew`. rawr x3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Nom</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">nom</th>
+      <th s-scope="cow">type</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
         <code
           ><a
-            href="/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >browser_style</a
+            hwef="/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes"
+            >bwowsew_stywe</a
           ></code
         >
       </td>
-      <td><code>Booléen</code></td>
+      <td><code>boowéen</code></td>
       <td>
-        <p>Facultatif, par défaut : <code>true</code> .</p>
+        <p>facuwtatif, nyaa~~ paw défaut : <code>twue</code> .</p>
         <p>
-          Utilisez cette option pour inclure une feuille de style dans votre
-          fenêtre contextuelle qui permettra la correspondance avec l'interface
-          utilisateur du navigateur et les autres extensions qui utilisent la
-          propriété <code>browser_style</code>.
+          utiwisez cette option p-pouw incwuwe une feuiwwe de stywe d-dans votwe
+          f-fenêtwe c-contextuewwe qui pewmettwa wa cowwespondance avec w'intewface
+          u-utiwisateuw d-du nyavigateuw et wes autwes e-extensions qui u-utiwisent wa
+          pwopwiété <code>bwowsew_stywe</code>. >_<
         </p>
         <p>
-          Dans Firefox, la feuille de style peut être vue sur
-          chrome://browser/content/extension.css, ou
-          chrome://browser/content/extension-mac.css sur OS X. Lors de la
-          définition des dimensions, savez que cette feiulle de style est
-          actuellement définit <code>box-sizing: border-box</code> (see
-          <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).
+          d-dans fiwefox, ^^;; wa feuiwwe de stywe p-peut êtwe vue suw
+          chwome://bwowsew/content/extension.css, (ˆ ﻌ ˆ)♡ o-ou
+          chwome://bwowsew/content/extension-mac.css s-suw os x. wows de wa
+          d-définition des d-dimensions, ^^;; savez que cette feiuwwe de stywe est
+          actuewwement définit <code>box-sizing: bowdew-box</code> (see
+          <a hwef="/docs/web/css/box-sizing">box-sizing</a>). (⑅˘꒳˘)
         </p>
         <p>
-          Le
-          <a href="https://firefoxux.github.io/StyleGuide/#/controls"
-            >guide de style de Firefox</a
+          w-we
+          <a h-hwef="https://fiwefoxux.github.io/styweguide/#/contwows"
+            >guide de stywe d-de fiwefox</a
           >
-          décrit les classes que vous pouvez appliquer aux éléments de la barre
-          latérale afin d'obtenir des styles particuliers.
+          d-décwit wes c-cwasses que vous pouvez appwiquew aux éwéments de wa bawwe
+          w-watéwawe afin d'obteniw des stywes pawticuwiews. rawr x3
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_icon</code></td>
-      <td><code>Objet</code> ou <code>Chaîne de caractères</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_icon</code></td>
+      <td><code>objet</code> ou <code>chaîne de c-cawactèwes</code></td>
       <td>
         <p>
-          Utilisez cette option pour spécifier une ou plusieurs icônes pour la
-          barre latérale. L'icône est affichée dans l'interface utilisateur du
-          navigateur pour l'ouverture et la fermeture des barres latérales.
+          utiwisez c-cette option pouw s-spécifiew une o-ou pwusieuws icônes pouw wa
+          b-bawwe w-watéwawe. (///ˬ///✿) w'icône e-est affichée d-dans w'intewface utiwisateuw du
+          nyavigateuw p-pouw w'ouvewtuwe e-et wa fewmetuwe d-des bawwes w-watéwawes. 🥺
         </p>
         <p>
-          Les icônes sont spécifiées comme des URL relatives au fichier
-          manifest.json lui-même.
+          w-wes icônes sont spécifiées comme des uww wewatives au fichiew
+          m-manifest.json wui-même. >_<
         </p>
         <p>
-          Vous pouvez spécifier un seul fichier d'icône en fournissant une
+          vous pouvez spécifiew un seuw fichiew d'icône en fouwnissant u-une
           chaîne ici :
         </p>
-        <pre class="brush: json">"default_icon": "path/to/geo.svg"</pre>
+        <pwe cwass="bwush: json">"defauwt_icon": "path/to/geo.svg"</pwe>
         <p>
-          Pour spécifier plusieurs icônes dans différentes tailles, spécifiez
-          ici un objet. Le nom de chaque propriété est la hauteur de l'icône en
-          pixels convertie en un nombre entier. La valeur est l'URL. Par
-          exemple:
+          pouw spécifiew p-pwusieuws icônes d-dans difféwentes t-taiwwes, UwU spécifiez
+          ici un objet. >_< w-we nyom de chaque pwopwiété est w-wa hauteuw de w-w'icône en
+          pixews convewtie en un nyombwe entiew. -.- wa vaweuw est w'uww. mya paw
+          e-exempwe:
         </p>
-        <pre class="brush: json">
-    "default_icon": {
-      "16": "path/to/geo-16.png",
+        <pwe cwass="bwush: j-json">
+    "defauwt_icon": {
+      "16": "path/to/geo-16.png", >w<
       "32": "path/to/geo-32.png"
-    }</pre
+    }</pwe
         >
         <p>
-          Voir
+          voiw
           <a
-            href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes"
-            >Choix de la taille d'icones</a
+            h-hwef="/fw/add-ons/webextensions/manifest.json/bwowsew_action#choosing_icon_sizes"
+            >choix d-de wa taiwwe d'icones</a
           >
-          pour plus de conseils sur ce sujet.
+          pouw pwus de conseiws suw ce sujet. (U ﹏ U)
         </p>
         <p>
-          Cette propriété est optionnelle : si elle est omise, la barre latérale
-          n'obtient pas d'icône.
+          c-cette pwopwiété e-est optionnewwe : si ewwe e-est omise, 😳😳😳 wa b-bawwe watéwawe
+          ny'obtient pas d'icône. o.O
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_panel</code></td>
-      <td><code>Chaîne de caractères</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_panew</code></td>
+      <td><code>chaîne de cawactèwes</code></td>
       <td>
         <p>
-          Le chemin d'accès à un fichier HTML qui spécifie le contenu de la
-          barre latérale.
+          we c-chemin d'accès à u-un fichiew htmw q-qui spécifie we contenu de wa
+          b-bawwe w-watéwawe. òωó
         </p>
         <p>
-          Le fichier HTML peut inclure des fichiers CSS et JavaScript à l'aide
-          des éléments
-          <code><a href="/fr/docs/Web/HTML/Element/link">&#x3C;link></a></code>
-          et
+          we fichiew htmw p-peut incwuwe des fichiews css et javascwipt à w'aide
+          des éwéments
+          <code><a hwef="/fw/docs/web/htmw/ewement/wink">&#x3c;wink></a></code>
+          e-et
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >, tout comme une page Web normale.
+            ><a h-hwef="/fw/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
+          >, 😳😳😳 tout comme une page web n-nyowmawe. σωσ
         </p>
         <p>
-           Contrairement à une page Web normale, JavaScript en cours d'exécution
-          dans le panneau peut accéder à toutes les
-          <a href="/fr/Add-ons/WebExtensions/API">APIs des WebExtension</a> (à
-          condition, bien sûr, que l'extension ait les
-          <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions"
-            >permissions</a
+           contwaiwement à u-une page web nyowmawe, (⑅˘꒳˘) javascwipt en couws d'exécution
+          dans we panneau p-peut accédew à toutes wes
+          <a hwef="/fw/add-ons/webextensions/api">apis des webextension</a> (à
+          condition, (///ˬ///✿) b-bien sûw, 🥺 que w'extension ait wes
+          <a h-hwef="/fw/add-ons/webextensions/manifest.json/pewmissions"
+            >pewmissions</a
           >
-          appropriées).
+          a-appwopwiées). OwO
         </p>
-        <p>Cette propriété est obligatoire.</p>
+        <p>cette pwopwiété est obwigatoiwe.</p>
         <p>
-          C'est une
+          c'est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >propriété localisable</a
-          >.
+            h-hwef="/fw/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >pwopwiété w-wocawisabwe</a
+          >. >w<
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_title</code></td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_titwe</code></td>
+      <td><code>stwing</code></td>
       <td>
         <p>
-          Titre de la barre latérale. Ceci est utilisé dans l'interface
-          utilisateur du navigateur pour la liste et l'ouverture des barres
-          latérales, et s'affiche en haut de la barre latérale lorsqu'elle est
-          ouverte.
+          titwe de wa bawwe watéwawe. 🥺 ceci est u-utiwisé dans w'intewface
+          u-utiwisateuw du nyavigateuw pouw wa wiste et w'ouvewtuwe des b-bawwes
+          watéwawes, nyaa~~ e-et s'affiche en h-haut de wa bawwe watéwawe wowsqu'ewwe e-est
+          ouvewte. ^^
         </p>
         <p>
-          Cette propriété est facultative : si elle est omise, le titre de la
-          barre latérale est le
+          c-cette pwopwiété e-est facuwtative : s-si ewwe est omise, >w< we titwe d-de wa
+          b-bawwe watéwawe est we
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/name"
+            ><a hwef="/fw/add-ons/webextensions/manifest.json/name"
               >nom</a
             ></code
           >
-          de l'extension.
+          d-de w'extension. OwO
         </p>
         <p>
-          C'est une
+          c'est u-une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >propriété localisable.</a
+            h-hwef="/fw/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >pwopwiété wocawisabwe.</a
           >
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>open_at_install</code></td>
-      <td>Boolean</td>
+    </tw>
+    <tw>
+      <td><code>open_at_instaww</code></td>
+      <td>boowean</td>
       <td>
-        Facultatif, par défaut à <code>true</code>. Détermine si la barre
-        latérale doit s'ouvrir lors de l'installation. Le comportement par
-        defaut est d'ouvrir la barre latérale lorsque l'installation est
-        terminée.
+        facuwtatif, XD paw d-défaut à <code>twue</code>. ^^;; détewmine s-si wa bawwe
+        w-watéwawe doit s'ouvwiw wows de w'instawwation. 🥺 we c-compowtement paw
+        d-defaut e-est d'ouvwiw wa b-bawwe watéwawe wowsque w'instawwation e-est
+        tewminée. XD
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## exempwe
 
 ```json
-"sidebar_action": {
-  "default_icon": "sidebar.svg",
-  "default_title": "Ma barre latérale !",
-  "default_panel": "sidebar.html",
-  "browser_style": true
+"sidebaw_action": {
+  "defauwt_icon": "sidebaw.svg", (U ᵕ U❁)
+  "defauwt_titwe": "ma bawwe watéwawe !", :3
+  "defauwt_panew": "sidebaw.htmw", ( ͡o ω ͡o )
+  "bwowsew_stywe": twue
 }
 ```
 
-Pour un exemple simple d'une extension qui utilise une barre latérale, regarder [annotate-page](https://github.com/mdn/webextensions-examples/tree/master/annotate-page).
+pouw un exempwe simpwe d-d'une extension qui utiwise u-une bawwe watéwawe, òωó wegawdew [annotate-page](https://github.com/mdn/webextensions-exampwes/twee/mastew/annotate-page). σωσ
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`page_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
-- [Browser styles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [`bwowsew_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action)
+- [`page_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/page_action)
+- [bwowsew s-stywes](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes)

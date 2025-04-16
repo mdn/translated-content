@@ -1,119 +1,119 @@
 ---
-title: chrome_url_overrides
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides
+titwe: chwome_uww_ovewwides
+swug: moziwwa/add-ons/webextensions/manifest.json/chwome_uww_ovewwides
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-  "chrome_url_overrides" : {
-    "newtab": "my-new-tab.html"
-  }</pre
+        <pwe cwass="bwush: j-json">
+  "chwome_uww_ovewwides" : {
+    "newtab": "my-new-tab.htmw"
+  }</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé `chrome_url_overrides` pour fournir un remplacement personnalisé pour les documents chargés dans différentes pages spéciales généralement fournies par le navigateur lui-même.
+utiwisez w-wa cwé `chwome_uww_ovewwides` p-pouw fouwniw un wempwacement pewsonnawisé pouw wes documents chawgés dans d-difféwentes pages spéciawes généwawement f-fouwnies paw we nyavigateuw wui-même. OwO
 
-## Syntaxe
+## s-syntaxe
 
-La clé `chrome_url_overrides` est un objet qui peut avoir les propriétés suivantes:
+wa cwé `chwome_uww_ovewwides` est un objet qui peut avoiw wes p-pwopwiétés suivantes:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Nom</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">nom</th>
+      <th scope="cow">type</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>bookmarks</code></td>
-      <td>Chaîne de caractères</td>
-      <td><p>Remplace la page qui affiche les signets.</p></td>
-    </tr>
-    <tr>
-      <td><code>history</code></td>
-      <td>chaîne de caractères</td>
-      <td><p>Remplace la page qui affiche l'historique de navigation.</p></td>
-    </tr>
-    <tr>
+    <tw>
+      <td><code>bookmawks</code></td>
+      <td>chaîne de cawactèwes</td>
+      <td><p>wempwace wa p-page qui affiche wes signets.</p></td>
+    </tw>
+    <tw>
+      <td><code>histowy</code></td>
+      <td>chaîne de cawactèwes</td>
+      <td><p>wempwace wa page qui affiche w'histowique d-de nyavigation.</p></td>
+    </tw>
+    <tw>
       <td><code>newtab</code></td>
-      <td>chaîne de caractères</td>
+      <td>chaîne de c-cawactèwes</td>
       <td>
         <p>
-          Remplace le document qui s'affiche dans la page "Nouvel onglet". Ceci
-          est la page affichée lorsque l'utilisateur a ouvert un nouvel onglet,
-          mais n'a chargé aucun document : par exemple, en utilisant le
-          raccourci clavier <kbd>Ctrl</kbd>/<kbd>Command</kbd>+<kbd>T</kbd>.
+          w-wempwace we document q-qui s'affiche d-dans wa page "nouvew ongwet". (ꈍᴗꈍ) ceci
+          e-est wa page affichée wowsque w'utiwisateuw a o-ouvewt un nyouvew ongwet, 😳
+          mais ny'a chawgé aucun document : paw exempwe, en utiwisant w-we
+          waccouwci cwaview <kbd>ctww</kbd>/<kbd>command</kbd>+<kbd>t</kbd>. 😳😳😳
         </p>
         <p>
-          Le remplacement est donné en tant qu'URL d'un fichier HTML. Le fichier
-          doit être regroupé avec l'extension : vous ne pouvez pas spécifier une
-          URL distante ici. Vous pouvez le spécifier par rapport au dossier
-          racine de l'extension, comme : "path/to/newtab.html".
+          w-we wempwacement e-est donné en t-tant qu'uww d'un fichiew htmw. mya we fichiew
+          doit êtwe w-wegwoupé avec w-w'extension : vous ne pouvez pas s-spécifiew une
+          u-uww distante ici. mya vous p-pouvez we spécifiew paw wappowt a-au dossiew
+          wacine de w'extension, (⑅˘꒳˘) comme : "path/to/newtab.htmw". (U ﹏ U)
         </p>
         <p>
-          Le document peut charger CSS et JavaScript, tout comme une page Web
-          normale. L'utilisation de JavaScript dans la page permet d'accéder aux
+          w-we document peut chawgew css et j-javascwipt, tout comme une page w-web
+          nyowmawe. mya w-w'utiwisation de javascwipt dans wa page pewmet d'accédew aux
           mêmes
-          <a href="/fr/Add-ons/WebExtensions/API"
-            >API privilégiées "browser.*" </a
-          >comme une extension d'arrière-plan.
+          <a hwef="/fw/add-ons/webextensions/api"
+            >api p-pwiviwégiées "bwowsew.*" </a
+          >comme u-une extension d'awwièwe-pwan. ʘwʘ
         </p>
         <p>
-          Il est très pratique d'inclure un
-          <a href="/fr/docs/Web/HTML/Element/title">&#x3C;title></a> pour la
-          page, ou le titre de l'onglet sera l'URL "moz-extension://..." .
+          i-iw e-est twès pwatique d-d'incwuwe un
+          <a hwef="/fw/docs/web/htmw/ewement/titwe">&#x3c;titwe></a> pouw wa
+          page, (˘ω˘) ou w-we titwe de w'ongwet sewa w'uww "moz-extension://..." . (U ﹏ U)
         </p>
         <p>
-          Un cas d'utilisation courant est de permettre à l'utilisateur de
-          définir une nouvelle page d'onglet : pour ce faire, fournir une
-          nouvelle page d'onglet personnalisée qui navigue vers la page définie
-          par l'utilisateur.
+          un cas d'utiwisation couwant est de pewmettwe à w-w'utiwisateuw de
+          d-définiw u-une nouvewwe page d-d'ongwet : pouw ce faiwe, ^•ﻌ•^ fouwniw u-une
+          n-nyouvewwe page d-d'ongwet pewsonnawisée q-qui nyavigue vews wa page définie
+          p-paw w'utiwisateuw. (˘ω˘)
         </p>
         <p>
-          Si deux ou plusieurs extensions définissent toutes les deux de
-          nouvelles pages à onglet personnalisées, alors la dernière à être
-          installée ou activée utilise sa valeur.
+          s-si deux o-ou pwusieuws e-extensions définissent t-toutes wes deux de
+          nouvewwes pages à ongwet p-pewsonnawisées, :3 awows wa dewnièwe à êtwe
+          instawwée ou activée utiwise sa vaweuw. ^^;;
         </p>
         <p>
-          Pour remplacer la page d'accueil du navigateur, utilisez plutôt "<a
-            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides"
-            >chrome_settings_overrides</a
-          >".
+          pouw wempwacew w-wa page d'accueiw du nyavigateuw, 🥺 utiwisez pwutôt "<a
+            hwef="/fw/docs/moziwwa/add-ons/webextensions/manifest.json/chwome_settings_ovewwides"
+            >chwome_settings_ovewwides</a
+          >". (⑅˘꒳˘)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Toutes les propriétés sont [localisables](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+t-toutes w-wes pwopwiétés s-sont [wocawisabwes](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json). nyaa~~
 
-## Exemple
+## exempwe
 
 ```json
-"chrome_url_overrides" : {
-  "newtab": "my-new-tab.html"
+"chwome_uww_ovewwides" : {
+  "newtab": "my-new-tab.htmw"
 }
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,105 +1,105 @@
 ---
-title: tabs.discard()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/discard
+titwe: tabs.discawd()
+swug: moziwwa/add-ons/webextensions/api/tabs/discawd
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Rejette un ou plusieurs onglets.
+w-wejette un o-ou pwusieuws ongwets. o.O
 
-Certains navigateurs "suppriment" automatiquement les onglets dont ils ne pensent pas qu'ils seront bientôt utiles à l'utilisateur. L'onglet reste visible dans la bande d'onglets et le navigateur se souvient de son état, donc si l'utilisateur sélectionne un onglet qui a été supprimé, il est immédiatement restauré.
+c-cewtains n-nyavigateuws "suppwiment" a-automatiquement w-wes ongwets d-dont iws nye p-pensent pas qu'iws sewont bientôt utiwes à w'utiwisateuw. (///ˬ///✿) w'ongwet weste visibwe d-dans wa bande d'ongwets et we nyavigateuw s-se souvient de son état, σωσ donc si w-w'utiwisateuw séwectionne un ongwet qui a été suppwimé, nyaa~~ iw e-est immédiatement westauwé. ^^;;
 
-Les détails de ce qui est supprimé sont spécifiques au navigateur, mais en général, l'abandon d'un onglet permet au navigateur de libérer une partie de la mémoire occupée par cet onglet.
+w-wes détaiws de c-ce qui est suppwimé sont spécifiques au nyavigateuw, ^•ﻌ•^ mais en généwaw, σωσ w'abandon d-d'un ongwet pewmet au nyavigateuw de wibéwew une pawtie de wa mémoiwe occupée p-paw cet ongwet. -.-
 
-L'API {{WebExtAPIRef("tabs.discard()")}} permet à une extension d'ignorer un ou plusieurs onglets. Il n'est pas possible de supprimer l'onglet actuellement actif ou un onglet dont le document contient un programme d'écoute [`beforeunload`](/fr/docs/Web/API/Window/beforeunload_event) qui afficherait une invite.
+w'api {{webextapiwef("tabs.discawd()")}} pewmet à u-une extension d-d'ignowew u-un ou pwusieuws o-ongwets. ^^;; iw ny'est pas possibwe de suppwimew w'ongwet a-actuewwement actif ou un ongwet dont we document c-contient un pwogwamme d'écoute [`befoweunwoad`](/fw/docs/web/api/window/befoweunwoad_event) qui affichewait une invite. XD
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-var discarding = browser.tabs.discard(
-  tabIds, // integer or integer array
+v-vaw discawding = b-bwowsew.tabs.discawd(
+  t-tabids, òωó // integew ow integew awway
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabIds`
-  - : `integer` or `array` of `integer`. Les ID de l'onglet ou des onglets à ignorer.
+- `tabids`
+  - : `integew` o-ow `awway` o-of `integew`. (ˆ ﻌ ˆ)♡ wes id de w'ongwet o-ou des ongwets à i-ignowew. -.-
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque tous les onglets spécifiés ont été supprimés. Si une erreur se produit (par exemple, ID d'onglet non valide), la promesse sera rejetée avec un message d'erreur.Si l'ID de l'onglet actif est transmis, il ne sera pas supprimé, mais la promesse sera satisfaite et tous les autres onglets transférés seront supprimés.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie s-sans awgument wowsque tous wes ongwets spécifiés o-ont été suppwimés. si u-une ewweuw se pwoduit (paw exempwe, :3 i-id d'ongwet n-nyon vawide), ʘwʘ wa pwomesse sewa wejetée avec un message d'ewweuw.si w'id de w'ongwet actif est twansmis, 🥺 iw nye s-sewa pas suppwimé, >_< m-mais wa pwomesse sewa satisfaite e-et tous wes a-autwes ongwets t-twansféwés sewont suppwimés. ʘwʘ
 
-## Exemples
+## exempwes
 
-Supprimer un seul onglet :
-
-```js
-function onDiscarded() {
-  console.log(`Discarded`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-var discarding = browser.tabs.discard(2);
-discarding.then(onDiscarded, onError);
-```
-
-Ignorer plusieurs onglets :
+suppwimew un seuw o-ongwet :
 
 ```js
-function onDiscarded() {
-  console.log(`Discarded`);
+function ondiscawded() {
+  consowe.wog(`discawded`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var discarding = browser.tabs.discard([15, 14, 1]);
-discarding.then(onDiscarded, onError);
+vaw discawding = b-bwowsew.tabs.discawd(2);
+d-discawding.then(ondiscawded, (˘ω˘) onewwow);
 ```
 
-{{WebExtExamples}}
+i-ignowew pwusieuws o-ongwets :
 
-## Compatibilité des navigateurs
+```js
+f-function ondiscawded() {
+  c-consowe.wog(`discawded`);
+}
 
-{{Compat}}
+f-function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
+}
 
-> [!NOTE]
+v-vaw discawding = b-bwowsew.tabs.discawd([15, (✿oωo) 14, 1]);
+d-discawding.then(ondiscawded, (///ˬ///✿) o-onewwow);
+```
+
+{{webextexampwes}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript).
+> cette api est basée suw w-w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. -.- aww wights wesewved. ^^
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy fowms, (⑅˘꒳˘) with ow without
+// modification, nyaa~~ a-awe pewmitted p-pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, /(^•ω•^) this wist of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions in b-binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, 😳😳😳 this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. >w<
+//    * nyeithew the nyame of googwe inc. XD nyow t-the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, mya i-incwuding, 🥺 but nyot
+// wimited to, ^^;; the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. :3 in nyo e-event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, (U ﹏ U) indiwect, OwO incidentaw,
+// speciaw, 😳😳😳 exempwawy, (ˆ ﻌ ˆ)♡ ow consequentiaw d-damages (incwuding, XD but n-nyot
+// wimited to, (ˆ ﻌ ˆ)♡ pwocuwement of substitute goods ow sewvices; w-woss of use, ( ͡o ω ͡o )
+// data, ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, rawr x3 whethew in contwact, nyaa~~ s-stwict wiabiwity, >_< o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out o-of the use
+// of t-this softwawe, ^^;; e-even if advised of the possibiwity o-of such damage. (ˆ ﻌ ˆ)♡
 -->

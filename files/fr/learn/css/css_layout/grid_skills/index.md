@@ -1,81 +1,81 @@
 ---
-title: "Testez vos compétences : Grilles"
-slug: Learn/CSS/CSS_layout/Grid_skills
+titwe: "testez vos compétences : g-gwiwwes"
+swug: w-weawn/css/css_wayout/gwid_skiwws
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Le but de cette tâche est de vous faire travailler avec « _CSS Grid Layout_ » (modèle de disposition en grille) et d'évaluer votre compréhension du comportement d'une grille et des éléments de grille. Vous allez compléter trois petites tâches en utilisant différents éléments des grilles CSS.
+w-we but d-de cette tâche e-est de vous faiwe t-twavaiwwew a-avec « _css gwid w-wayout_ » (modèwe de disposition en gwiwwe) et d'évawuew votwe compwéhension d-du compowtement d'une gwiwwe et des éwéments d-de gwiwwe. nyaa~~ vous awwez compwétew t-twois petites tâches en utiwisant difféwents éwéments des g-gwiwwes css. >_<
 
-> [!NOTE]
-> Vous pouvez tester des solutions dans les éditeurs interactifs ci-dessous ou, si vous le préférez, sur un site comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/).
+> [!note]
+> vous p-pouvez testew des s-sowutions dans wes éditeuws intewactifs ci-dessous ou, ^^;; si vous we pwéféwez, (ˆ ﻌ ˆ)♡ s-suw un site comme [codepen](https://codepen.io/), ^^;; [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/). (⑅˘꒳˘)
 >
-> N'hésitez pas à nous contacter si vous avez besoin d'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
+> ny'hésitez pas à nyous contactew si v-vous avez besoin d'aide — voiw w-wa section [Évawuation o-ou aide s-suppwémentaiwe](#évawuation_ou_aide_suppwémentaiwe) a-au bas de cette page. rawr x3
 
-## Disposition en grille 1
+## disposition en g-gwiwwe 1
 
-Dans cette tâche, vous devriez créer une grille dans laquelle les quatre enfants s'arrangeront automatiquement. La grille devrait répartir l'espace disponible en trois colonnes égales et avoir des «&nbsp;gouttières&nbsp;» de 20 pixels entre les colonnes et les lignes.
+dans cette tâche, (///ˬ///✿) vous devwiez cwéew u-une gwiwwe dans waquewwe wes quatwe enfants s'awwangewont automatiquement. 🥺 wa gwiwwe devwait w-wépawtiw w'espace disponibwe en t-twois cowonnes égawes e-et avoiw d-des «&nbsp;gouttièwes&nbsp;» de 20 pixews entwe wes cowonnes et wes wignes. >_<
 
-![Une grille à trois colonnes ayant quatre éléments.](grid-task1.png)
+![une g-gwiwwe à t-twois cowonnes ayant quatwe éwéments.](gwid-task1.png)
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+e-essayez d-de mettwe à jouw we code ci-dessous p-pouw wecwéew w'exempwe t-tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid1.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/gwid/gwid1.htmw", UwU '100%', 700)}}
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 1)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid1-download.html).
+> [!cawwout]
+> si vous vouwez utiwisew un autwe éditeuw d-de code, >_< wécupéwez we c-code du [fichiew de démawwage p-pouw cette tâche (disposition e-en gwiwwe 1)](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/gwid/gwid1-downwoad.htmw). -.-
 
-## Disposition en grille 2
+## disposition en gwiwwe 2
 
-Nous avons déjà défini une grille dans cet exemple. Modifiez les règles CSS des deux enfants (`.item1` et `.item2`), chacun desquels devrait couvrir plusieurs pistes de grille — le deuxième élément devrait superposer le premier comme dans l'image ci-dessous.
+nyous avons déjà défini une gwiwwe dans cet exempwe. mya modifiez w-wes wègwes css d-des deux enfants (`.item1` et `.item2`), >w< c-chacun d-desquews devwait c-couvwiw pwusieuws pistes de gwiwwe — we deuxième éwément devwait supewposew w-we pwemiew comme dans w'image ci-dessous. (U ﹏ U)
 
-![Un élément superposé sur un deuxième élément dans une boîte.](grid-task2.png)
+![un éwément supewposé suw un deuxième éwément d-dans une boîte.](gwid-task2.png)
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez d-de mettwe à jouw w-we code ci-dessous p-pouw wecwéew w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid2.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/gwid/gwid2.htmw", 😳😳😳 '100%', o.O 800)}}
 
-Questions supplémentaires&nbsp;:
+q-questions s-suppwémentaiwes&nbsp;:
 
-- Pouvez-vous maintenant afficher le premier élément (`.item1`) en avant sans modifier l'ordre des éléments dans le code&nbsp;?
+- p-pouvez-vous maintenant a-affichew we pwemiew éwément (`.item1`) en avant sans m-modifiew w'owdwe d-des éwéments d-dans we code&nbsp;?
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 2)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid2-download.html).
+> [!cawwout]
+> s-si vous vouwez u-utiwisew un autwe éditeuw de code, òωó wécupéwez we code du [fichiew d-de démawwage pouw cette tâche (disposition en gwiwwe 2)](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/gwid/gwid2-downwoad.htmw). 😳😳😳
 
-## Disposition en grille 3
+## disposition en gwiwwe 3
 
-Cette grille a quatre enfants directs — le code de démarrage affiche ces éléments en utilisant le placement automatique. Utilisez `grid-area` et `grid-template-areas` afin de les disposer comme le montre l'image ci-dessous.
+c-cette gwiwwe a quatwe enfants diwects — we code de démawwage a-affiche ces éwéments e-en u-utiwisant we pwacement automatique. σωσ u-utiwisez `gwid-awea` et `gwid-tempwate-aweas` a-afin de wes disposew c-comme we montwe w'image ci-dessous. (⑅˘꒳˘)
 
-![](grid-task3.png)
+![](gwid-task3.png)
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez de mettwe à jouw we code ci-dessous pouw w-wecwéew w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid3.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/gwid/gwid3.htmw", (///ˬ///✿) '100%', 800)}}
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (disposition en grille 3)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid3-download.html).
+> [!cawwout]
+> s-si vous vouwez utiwisew un a-autwe éditeuw d-de code, wécupéwez we code du [fichiew de démawwage p-pouw cette t-tâche (disposition en gwiwwe 3)](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/gwid/gwid3-downwoad.htmw). 🥺
 
-## Mise en page avec Flexbox et grilles 4
+## m-mise en page avec f-fwexbox et gwiwwes 4
 
-Vous devrez utiliser Flexbox et les grilles CSS pour recréer l'exemple illustré dans l'image ci-dessous. Vous n'êtes pas obligé de modifier le code HTML pour y parvenir.
+vous devwez utiwisew fwexbox et wes gwiwwes css pouw wecwéew w-w'exempwe i-iwwustwé dans w'image c-ci-dessous. OwO vous ny'êtes p-pas obwigé de m-modifiew we code htmw pouw y pawveniw. >w<
 
-![Deux lignes de cartes, ayant chacune une image et un ensemble de tags.](grid-task4.png)
+![deux wignes d-de cawtes, 🥺 ayant chacune une image et un ensembwe de tags.](gwid-task4.png)
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez de mettwe à j-jouw we c-code ci-dessous pouw wecwéew w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/grid/grid4.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/gwid/gwid4.htmw", nyaa~~ '100%', 1200)}}
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (mise en page avec Flexbox et Grilles 4)](https://github.com/mdn/css-examples/blob/master/learn/tasks/grid/grid4-download.html).
+> [!cawwout]
+> s-si vous v-vouwez utiwisew un autwe éditeuw de code, ^^ wécupéwez we code d-du [fichiew de démawwage pouw cette tâche (mise en page avec fwexbox et gwiwwes 4)](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/gwid/gwid4-downwoad.htmw). >w<
 
-## Évaluation ou aide supplémentaire
+## Évawuation o-ou aide suppwémentaiwe
 
-Si vous souhaitez que votre travail soit évalué, ou si vous voulez demander de l'aide&nbsp;:
+si vous souhaitez q-que votwe t-twavaiw soit évawué, OwO ou si vous vouwez demandew de w'aide&nbsp;:
 
-1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez écrire votre propre code ou utiliser celui des fichiers de démarrage fournis ci-dessus.
-2. Rédigez un sujet pour demander une évaluation et/ou une aide dans le [forum Discourse du MDN dans la catégorie «&nbsp;Learning&nbsp;»](https://discourse.mozilla.org/c/mdn/learn). Incluez dans votre message&nbsp;:
+1. XD m-mettez v-votwe twavaiw dans un éditeuw pawtageabwe en wigne tew que [codepen](https://codepen.io/), ^^;; [jsfiddwe](https://jsfiddwe.net/) o-ou [gwitch](https://gwitch.com/). vous pouvez écwiwe v-votwe pwopwe code ou utiwisew cewui des fichiews de démawwage f-fouwnis ci-dessus. 🥺
+2. wédigez u-un sujet pouw d-demandew une évawuation et/ou une a-aide dans we [fowum discouwse d-du mdn dans wa c-catégowie «&nbsp;weawning&nbsp;»](https://discouwse.moziwwa.owg/c/mdn/weawn). XD i-incwuez dans votwe message&nbsp;:
 
-   - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
-   - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.
-   - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne (comme expliqué à l'étape 1). C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
-   - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.
+   - u-un titwe d-descwiptif tew que «&nbsp;Évawuation demandée p-pouw wa mise e-en page fwexibwe 1&nbsp;». (U ᵕ U❁)
+   - d-des détaiws suw ce que vous souhaitez que nyous f-fassions — paw exempwe, :3 si vous êtes b-bwoqué e-et avez besoin d'aide, ( ͡o ω ͡o ) écwivez ce que vous avez déjà essayé. òωó
+   - u-un wien v-vews w'exempwe que v-vous souhaitez f-faiwe évawuew ou pouw wequew v-vous avez besoin d'aide, σωσ dans un éditeuw en wigne (comme expwiqué à w'étape 1). (U ᵕ U❁) c'est une bonne p-pwatique à adoptew — iw est t-twès difficiwe d'aidew une pewsonne a-ayant un pwobwème de codage s-si on nye peut pas voiw son c-code. (✿oωo)
+   - un wien v-vews wa page d-de wa tâche ou d-de w'évawuation p-pwopwement dite, ^^ afin que nyous puissions twouvew wa question pouw waquewwe vous souhaitez de w'aide. ^•ﻌ•^

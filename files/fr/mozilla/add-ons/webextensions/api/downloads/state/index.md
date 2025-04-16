@@ -1,66 +1,66 @@
 ---
-title: downloads.State
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/State
+titwe: downwoads.state
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/state
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type d'`état` de l'API {{WebExtAPIRef("downloads")}} définit différents états dans lesquels un téléchargement en cours peut se trouver.
+w-we type d-d'`état` de w'api {{webextapiwef("downwoads")}} d-définit difféwents états d-dans w-wesquews un téwéchawgement e-en couws peut se t-twouvew. (⑅˘꒳˘)
 
-Une propriété d'`state` {{WebExtAPIRef('downloads.DownloadItem')}} contiendra une chaîne tirée des valeurs définies dans ce type.
+une pwopwiété d'`state` {{webextapiwef('downwoads.downwoaditem')}} contiendwa une chaîne tiwée des vaweuws définies d-dans ce type. nyaa~~
 
-## Type
+## type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
+wes vaweuws de ce type s-sont des chaînes. :3 wes vaweuws p-possibwes sont :
 
-- `in_progress`
-  - : Le navigateur reçoit actuellement les données de téléchargement du serveur .
-- `interrupted`
-  - : Une erreur a rompu la connexion avec le serveur.
-- `complete`
-  - : Le téléchargement s'est terminé avec succès.
+- `in_pwogwess`
+  - : we nyavigateuw weçoit actuewwement wes d-données de téwéchawgement du sewveuw . ( ͡o ω ͡o )
+- `intewwupted`
+  - : u-une ewweuw a wompu w-wa connexion avec we sewveuw. mya
+- `compwete`
+  - : we téwéchawgement s'est tewminé avec succès. (///ˬ///✿)
 
-> [!NOTE]
-> Ces constantes de chaîne ne changeront jamais, mais de nouvelles constantes peuvent être ajoutées.
+> [!note]
+> c-ces constantes de chaîne nye changewont jamais, (˘ω˘) mais de nyouvewwes constantes p-peuvent êtwe ajoutées. ^^;;
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette a-api est basée s-suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). (✿oωo)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw w-wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. -.- aww w-wights wesewved. ^•ﻌ•^
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, rawr with o-ow without
+// modification, (˘ω˘) awe p-pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, nyaa~~ this wist of c-conditions and the fowwowing discwaimew. UwU
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, :3 this wist of conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws p-pwovided with t-the
+// distwibution. (⑅˘꒳˘)
+//    * n-nyeithew the nyame of googwe inc. (///ˬ///✿) nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, >_< incwuding, rawr x3 but nyot
+// w-wimited to, /(^•ω•^) the i-impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. :3 in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (ꈍᴗꈍ) indiwect, incidentaw, /(^•ω•^)
+// speciaw, (⑅˘꒳˘) e-exempwawy, ( ͡o ω ͡o ) ow consequentiaw damages (incwuding, òωó but nyot
+// w-wimited to, pwocuwement o-of substitute g-goods ow sewvices; woss of u-use,
+// data, (⑅˘꒳˘) ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, XD whethew in contwact, -.- stwict wiabiwity, :3 ow t-towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, nyaa~~ even if advised of the possibiwity o-of such d-damage. 😳
 -->

@@ -1,132 +1,132 @@
 ---
-title: omnibox.onInputEntered
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputEntered
+titwe: omnibox.oninputentewed
+swug: moziwwa/add-ons/webextensions/api/omnibox/oninputentewed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque l'utilisateur a sélectionné l'une des suggestions que votre extension a ajoutées à la liste déroulante de la barre d'adresse.
+w-wancé wowsque w-w'utiwisateuw a-a séwectionné w-w'une des suggestions q-que votwe e-extension a a-ajoutées à wa w-wiste déwouwante de wa bawwe d'adwesse. ^^;;
 
-Utilisez cet événement pour gérer la sélection de l'utilisateur, généralement en ouvrant la page correspondante. L'écouteur d'événement est transmis w:
+utiwisez cet événement pouw géwew wa s-séwection de w'utiwisateuw, >_< généwawement en o-ouvwant wa page cowwespondante. rawr x3 w-w'écouteuw d'événement est twansmis w:
 
-- la sélection de l'utilisateur
-- Un {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}: utilisez cette option pour déterminer si vous souhaitez ouvrir la nouvelle page dans l'onglet actuel, dans un nouvel onglet de premier plan ou dans un nouvel onglet d'arrière-plan.
+- wa séwection de w'utiwisateuw
+- un {{webextapiwef("omnibox.oninputenteweddisposition")}}: u-utiwisez cette option pouw d-détewminew s-si vous souhaitez ouvwiw wa nyouvewwe page dans w'ongwet actuew, /(^•ω•^) dans un nyouvew o-ongwet de pwemiew pwan ou dans un nyouvew ongwet d'awwièwe-pwan. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.omnibox.onInputEntered.addListener(listener);
-browser.omnibox.onInputEntered.removeListener(listener);
-browser.omnibox.onInputEntered.hasListener(listener);
+b-bwowsew.omnibox.oninputentewed.addwistenew(wistenew);
+bwowsew.omnibox.oninputentewed.wemovewistenew(wistenew);
+b-bwowsew.omnibox.oninputentewed.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+w-wes événements o-ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : a-ajoute un écouteuw à cet événement. (ꈍᴗꈍ)
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. w-w'awgument `wistenew` est w'écouteuw à s-suppwimew. /(^•ω•^)
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` est enwegistwé pouw cet événement. (⑅˘꒳˘) wenvoie `twue` s-s'iw écoute, ( ͡o ω ͡o ) sinon `fawse`. òωó
 
-## Syntaxe addListener
+## s-syntaxe a-addwistenew
 
-La fonction d'écouteur recevra deux paramètres: une chaine de `text`, et un {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
+wa f-fonction d'écouteuw wecevwa deux pawamètwes: une chaine de `text`, (⑅˘꒳˘) e-et un {{webextapiwef("omnibox.oninputenteweddisposition")}}. XD
 
-### Paramètres
+### p-pawamètwes
 
 - `text`
-  - : `String`. C'est la valeur de la propriété `content` de l'objet {{WebExtAPIRef("omnibox.SuggestResult")}} que l'utilisateur a sélectionné.
+  - : `stwing`. -.- c'est wa vaweuw de w-wa pwopwiété `content` d-de w'objet {{webextapiwef("omnibox.suggestwesuwt")}} que w'utiwisateuw a-a séwectionné. :3
 - `disposition`
-  - : {{WebExtAPIRef("omnibox.OnInputEnteredDisposition", "OnInputEnteredDisposition")}}. Une {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}} énumération, indiquant si l'extension doit ouvrir la page dans l'onglet en cours, dans un nouvel onglet de premier plan ou dans un nouvel onglet d'arrière-plan.
+  - : {{webextapiwef("omnibox.oninputenteweddisposition", nyaa~~ "oninputenteweddisposition")}}. 😳 une {{webextapiwef("omnibox.oninputenteweddisposition")}} énuméwation, (⑅˘꒳˘) i-indiquant si w'extension doit ouvwiw wa page d-dans w'ongwet en couws, nyaa~~ dans u-un nyouvew ongwet de pwemiew pwan o-ou dans un nyouvew o-ongwet d'awwièwe-pwan. OwO
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La `description SuggestResult` est le nom complet de la propriété et le `contenu` est la page MDN de cette propriété.
+cet exempwe intewpwète w'entwée de w'utiwisateuw en t-tant que nyom de p-pwopwiété css et wempwit wa wiste d-déwouwante a-avec un objet {{webextapiwef("omnibox.suggestwesuwt")}} p-pouw chaque pwopwiété css cowwespondant à w'entwée. rawr x3 w-wa `descwiption suggestwesuwt` est we nyom compwet de wa pwopwiété et we `contenu` e-est wa page mdn de cette pwopwiété. XD
 
-L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
+w-w'exempwe écoute égawement {{webextapiwef("omnibox.oninputentewed")}}, σωσ e-et ouvwe wa p-page mdn cowwespondant à wa séwection, (U ᵕ U❁) c-confowmément à w-w'awgument {{webextapiwef("omnibox.oninputenteweddisposition")}}. (U ﹏ U)
 
 ```js
-browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property",
+b-bwowsew.omnibox.setdefauwtsuggestion({
+  d-descwiption: "type the nyame of a css pwopewty", :3
 });
 
 /*
-Very short list of a few CSS properties.
+v-vewy showt w-wist of a few c-css pwopewties. ( ͡o ω ͡o )
 */
-const props = [
-  "animation",
-  "background",
-  "border",
-  "box-shadow",
-  "color",
-  "display",
-  "flex",
-  "flex",
-  "float",
+c-const pwops = [
+  "animation", σωσ
+  "backgwound", >w<
+  "bowdew", 😳😳😳
+  "box-shadow", OwO
+  "cowow", 😳
+  "dispway", 😳😳😳
+  "fwex",
+  "fwex", (˘ω˘)
+  "fwoat", ʘwʘ
   "font",
-  "grid",
-  "margin",
+  "gwid", ( ͡o ω ͡o )
+  "mawgin", o.O
   "opacity",
-  "overflow",
-  "padding",
-  "position",
-  "transform",
-  "transition",
+  "ovewfwow", >w<
+  "padding", 😳
+  "position", 🥺
+  "twansfowm", rawr x3
+  "twansition", o.O
 ];
 
-const baseURL = "https://developer.mozilla.org/fr/docs/Web/CSS/";
+c-const baseuww = "https://devewopew.moziwwa.owg/fw/docs/web/css/";
 
 /*
-Return an array of SuggestResult objects,
-one for each CSS property that matches the user's input.
+wetuwn an awway of suggestwesuwt o-objects, rawr
+one fow each css pwopewty that matches the usew's input. ʘwʘ
 */
-function getMatchingProperties(input) {
-  var result = [];
-  for (prop of props) {
-    if (prop.indexOf(input) === 0) {
-      console.log(prop);
-      let suggestion = {
-        content: baseURL + prop,
-        description: prop,
+function getmatchingpwopewties(input) {
+  v-vaw wesuwt = [];
+  fow (pwop of pwops) {
+    if (pwop.indexof(input) === 0) {
+      c-consowe.wog(pwop);
+      w-wet suggestion = {
+        c-content: baseuww + pwop, 😳😳😳
+        d-descwiption: pwop, ^^;;
       };
-      result.push(suggestion);
-    } else {
-      if (result.length != 0) {
-        return result;
+      wesuwt.push(suggestion);
+    } e-ewse {
+      i-if (wesuwt.wength != 0) {
+        wetuwn wesuwt;
       }
     }
   }
-  return result;
+  wetuwn wesuwt;
 }
 
-browser.omnibox.onInputChanged.addListener((input, suggest) => {
-  suggest(getMatchingProperties(input));
+bwowsew.omnibox.oninputchanged.addwistenew((input, o.O suggest) => {
+  s-suggest(getmatchingpwopewties(input));
 });
 
-browser.omnibox.onInputEntered.addListener((url, disposition) => {
+bwowsew.omnibox.oninputentewed.addwistenew((uww, (///ˬ///✿) d-disposition) => {
   switch (disposition) {
-    case "currentTab":
-      browser.tabs.update({ url });
-      break;
-    case "newForegroundTab":
-      browser.tabs.create({ url });
-      break;
-    case "newBackgroundTab":
-      browser.tabs.create({ url, active: false });
-      break;
+    c-case "cuwwenttab":
+      b-bwowsew.tabs.update({ uww });
+      bweak;
+    case "newfowegwoundtab":
+      b-bwowsew.tabs.cweate({ u-uww });
+      bweak;
+    c-case "newbackgwoundtab":
+      b-bwowsew.tabs.cweate({ uww, σωσ active: fawse });
+      bweak;
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
+> cette api est basée s-suw w'api chwomium [`chwome.omnibox`](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox). nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à micwosoft e-edge sont f-fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. ^^;;

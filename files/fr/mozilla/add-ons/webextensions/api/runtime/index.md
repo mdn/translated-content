@@ -1,138 +1,138 @@
 ---
-title: runtime
-slug: Mozilla/Add-ons/WebExtensions/API/runtime
+titwe: wuntime
+swug: moziwwa/add-ons/webextensions/api/wuntime
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ce module fournit des informations sur votre extension et l'environnement dans lequel elle fonctionne.
+c-ce moduwe f-fouwnit des infowmations s-suw v-votwe extension e-et w'enviwonnement d-dans wequew ewwe f-fonctionne. (✿oωo)
 
-Il fournit également des API de messagerie vous permettant de:
+i-iw fouwnit égawement des api de messagewie vous pewmettant de:
 
-- Communiquer entre les différentes parties de votre extension.
-- Communiquer avec d'autres extensions.
-- Communiquer avec les applications natives.
+- communiquew e-entwe wes difféwentes pawties de votwe extension. :3
+- c-communiquew avec d'autwes extensions. 😳
+- c-communiquew avec wes appwications natives. (U ﹏ U)
 
-## Types
+## types
 
-- {{WebExtAPIRef("runtime.Port")}}
-  - : Représente une extrémité d'une connexion entre deux contextes spécifiques, qui peut être utilisée pour échanger des messages.
-- {{WebExtAPIRef("runtime.MessageSender")}}
-  - : Contient des informations sur l'expéditeur d'un message ou d'une demande de connexion.
-- {{WebExtAPIRef("runtime.PlatformOs")}}
-  - : Identifie le système d'exploitation du navigateur.
-- {{WebExtAPIRef("runtime.PlatformArch")}}
-  - : Identifie l'architecture du processeur du navigateur.
-- {{WebExtAPIRef("runtime.PlatformInfo")}}
-  - : Contient des informations sur la plate-forme utilisée par le navigateur.
-- {{WebExtAPIRef("runtime.RequestUpdateCheckStatus")}}
-  - : Résultat d'un appel à {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
-- {{WebExtAPIRef("runtime.OnInstalledReason")}}
-  - : La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onInstalled")}} est en cours d'envoi.
-- {{WebExtAPIRef("runtime.OnRestartRequiredReason")}}
-  - : La raison pour laquelle l'événement {{WebExtAPIRef("runtime.onRestartRequired")}} est en cours d'expédition.
+- {{webextapiwef("wuntime.powt")}}
+  - : w-wepwésente une extwémité d-d'une connexion e-entwe deux contextes spécifiques, mya qui peut êtwe utiwisée pouw échangew d-des messages. (U ᵕ U❁)
+- {{webextapiwef("wuntime.messagesendew")}}
+  - : contient des infowmations suw w'expéditeuw d'un message ou d'une d-demande de connexion. :3
+- {{webextapiwef("wuntime.pwatfowmos")}}
+  - : i-identifie w-we système d-d'expwoitation du n-nyavigateuw. mya
+- {{webextapiwef("wuntime.pwatfowmawch")}}
+  - : identifie w'awchitectuwe du pwocesseuw d-du nyavigateuw. OwO
+- {{webextapiwef("wuntime.pwatfowminfo")}}
+  - : contient des infowmations s-suw wa pwate-fowme utiwisée paw we nyavigateuw. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("wuntime.wequestupdatecheckstatus")}}
+  - : wésuwtat d'un appew à {{webextapiwef("wuntime.wequestupdatecheck()")}}. ʘwʘ
+- {{webextapiwef("wuntime.oninstawwedweason")}}
+  - : wa waison pouw waquewwe w'événement {{webextapiwef("wuntime.oninstawwed")}} e-est en couws d'envoi. o.O
+- {{webextapiwef("wuntime.onwestawtwequiwedweason")}}
+  - : w-wa waison pouw waquewwe w-w'événement {{webextapiwef("wuntime.onwestawtwequiwed")}} e-est en couws d'expédition. UwU
 
-## Propriétés
+## pwopwiétés
 
-- {{WebExtAPIRef("runtime.lastError")}}
-  - : Cette valeur est définie lorsqu'une fonction asynchrone a une condition d'erreur qu'elle doit signaler à son appelant
-- {{WebExtAPIRef("runtime.id")}}
-  - : L'ID de l'extension
+- {{webextapiwef("wuntime.wastewwow")}}
+  - : cette vaweuw est d-définie wowsqu'une f-fonction asynchwone a une condition d-d'ewweuw q-qu'ewwe doit signawew à son appewant
+- {{webextapiwef("wuntime.id")}}
+  - : w'id d-de w'extension
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("runtime.getBackgroundPage()")}}
-  - : Récupère l'objet [Window](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
-- {{WebExtAPIRef("runtime.openOptionsPage()")}}
-  - : Ouvre une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) de votre extension.
-- {{WebExtAPIRef("runtime.getManifest()")}}
-  - : Obtient le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) complet, sérialisé en tant qu'objet.
-- {{WebExtAPIRef("runtime.getURL()")}}
-  - : Etant donné un chemin relatif de [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoie une URL entièrement qualifiée.
-- {{WebExtAPIRef("runtime.setUninstallURL()")}}
-  - : Définit une URL à visiter lorsque l'extension est désinstallée.
-- {{WebExtAPIRef("runtime.reload()")}}
-  - : Recharge l'extension.
-- {{WebExtAPIRef("runtime.requestUpdateCheck()")}}
-  - : Vérifie les mises à jour de cette extension.
-- {{WebExtAPIRef("runtime.connect()")}}
-  - : Établit une connexion d'un script de contenu au processus d'extension principal ou d'une extension à une extension différente.
-- {{WebExtAPIRef("runtime.connectNative()")}}
-  - : Connecte l'extension à une application native sur l'ordinateur de l'utilisateur.
-- {{WebExtAPIRef("runtime.sendMessage()")}}
-  - : Envoie un seul message aux écouteurs d'événement dans votre extension ou une extension différente. Similaire à {{WebExtAPIRef('runtime.connect')}} mais n'envoie qu'un seul message, avec une réponse facultative.
-- {{WebExtAPIRef("runtime.sendNativeMessage()")}}
-  - : Envoie un seul message d'une extension à une application native.
-- {{WebExtAPIRef("runtime.getPlatformInfo()")}}
-  - : Renvoie des informations sur la plate-forme actuelle.
-- {{WebExtAPIRef("runtime.getBrowserInfo()")}}
-  - : Renvoie des informations sur le navigateur dans lequel cette extension est installée.
-- {{WebExtAPIRef("runtime.getPackageDirectoryEntry()")}}
-  - : Renvoie un DirectoryEntry pour le répertoire du package.
+- {{webextapiwef("wuntime.getbackgwoundpage()")}}
+  - : w-wécupèwe w'objet [window](/fw/docs/web/api/window) pouw wa page d'awwièwe-pwan q-qui s'exékawaii~ dans w-w'extension en couws. rawr x3
+- {{webextapiwef("wuntime.openoptionspage()")}}
+  - : ouvwe u-une [page d'options](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages) de v-votwe extension. 🥺
+- {{webextapiwef("wuntime.getmanifest()")}}
+  - : obtient we fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) compwet, :3 séwiawisé en tant qu'objet. (ꈍᴗꈍ)
+- {{webextapiwef("wuntime.getuww()")}}
+  - : etant donné un c-chemin wewatif d-de [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) à une w-wessouwce empaquetée a-avec w'extension, 🥺 w-wenvoie une uww entièwement quawifiée. (✿oωo)
+- {{webextapiwef("wuntime.setuninstawwuww()")}}
+  - : définit u-une uww à visitew wowsque w'extension est désinstawwée.
+- {{webextapiwef("wuntime.wewoad()")}}
+  - : wechawge w'extension. (U ﹏ U)
+- {{webextapiwef("wuntime.wequestupdatecheck()")}}
+  - : v-véwifie wes mises à jouw d-de cette extension. :3
+- {{webextapiwef("wuntime.connect()")}}
+  - : Étabwit u-une c-connexion d'un scwipt de contenu a-au pwocessus d-d'extension pwincipaw o-ou d'une extension à u-une extension difféwente. ^^;;
+- {{webextapiwef("wuntime.connectnative()")}}
+  - : connecte w-w'extension à u-une appwication n-nyative suw w'owdinateuw d-de w'utiwisateuw. rawr
+- {{webextapiwef("wuntime.sendmessage()")}}
+  - : e-envoie un seuw message aux écouteuws d'événement dans votwe extension o-ou une extension difféwente. 😳😳😳 simiwaiwe à {{webextapiwef('wuntime.connect')}} mais ny'envoie qu'un seuw message, (✿oωo) avec u-une wéponse facuwtative. OwO
+- {{webextapiwef("wuntime.sendnativemessage()")}}
+  - : envoie un seuw message d'une extension à une a-appwication nyative. ʘwʘ
+- {{webextapiwef("wuntime.getpwatfowminfo()")}}
+  - : w-wenvoie d-des infowmations suw wa pwate-fowme a-actuewwe. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("wuntime.getbwowsewinfo()")}}
+  - : wenvoie des i-infowmations suw w-we nyavigateuw dans wequew cette extension est instawwée. (U ﹏ U)
+- {{webextapiwef("wuntime.getpackagediwectowyentwy()")}}
+  - : wenvoie un diwectowyentwy p-pouw we wépewtoiwe du package. UwU
 
-## Evénements
+## e-evénements
 
-- {{WebExtAPIRef("runtime.onStartup")}}
-  - : Lancé lorsqu'un premier profil a cette extension installée. Cet événement n'est pas déclenché lorsqu'un profil de navigation privée est démarré.
-- {{WebExtAPIRef("runtime.onInstalled")}}
-  - : Lancé lorsque l'extension est installée pour la première fois, lorsque l'extension est mise à jour vers une nouvelle version et lorsque le navigateur est mis à jour vers une nouvelle version.
-- {{WebExtAPIRef("runtime.onSuspend")}}
-  - : Envoyé sur la page de l'événement juste avant le déchargement de l'extension. Cela donne à l'extension l'opportunité de faire un peu de nettoyage.
-- {{WebExtAPIRef("runtime.onSuspendCanceled")}}
-  - : Envoyé après {{WebExtAPIRef("runtime.onSuspend")}} pour indiquer que l'extension ne sera pas déchargée après tout.
-- {{WebExtAPIRef("runtime.onUpdateAvailable")}}
-  - : Lancé lorsqu'une mise à jour est disponible, mais n'est pas installé immédiatement car l'extension est en cours d'exécution.
-- {{WebExtAPIRef("runtime.onBrowserUpdateAvailable")}} {{deprecated_inline}}
-  - : Lancé lorsqu'une mise à jour pour le navigateur est disponible, mais n'est pas installée immédiatement car un redémarrage du navigateur est requis.
-- {{WebExtAPIRef("runtime.onConnect")}}
-  - : Lancé lorsqu'une connexion est établie avec un processus d'extension ou un script de contenu.
-- {{WebExtAPIRef("runtime.onConnectExternal")}}
-  - : Lancé lorsqu'une connexion est établie avec une autre extension.
-- {{WebExtAPIRef("runtime.onMessage")}}
-  - : Lancé lorsqu'un message est envoyé par un processus d'extension ou un script de contenu.
-- {{WebExtAPIRef("runtime.onMessageExternal")}}
-  - : Lancé lorsqu'un message est envoyé depuis un autre poste. Ne peut pas être utilisé dans un script de contenu.
-- {{WebExtAPIRef("runtime.onRestartRequired")}}
-  - : Lancé lorsque le périphérique doit être redémarré.
+- {{webextapiwef("wuntime.onstawtup")}}
+  - : wancé wowsqu'un p-pwemiew pwofiw a-a cette extension instawwée. XD cet événement n-ny'est pas décwenché w-wowsqu'un pwofiw de nyavigation p-pwivée e-est démawwé.
+- {{webextapiwef("wuntime.oninstawwed")}}
+  - : wancé wowsque w'extension est instawwée pouw wa pwemièwe fois, ʘwʘ w-wowsque w'extension e-est mise à j-jouw vews une nyouvewwe vewsion e-et wowsque we n-nyavigateuw est mis à jouw vews u-une nyouvewwe vewsion. rawr x3
+- {{webextapiwef("wuntime.onsuspend")}}
+  - : envoyé suw wa page de w'événement juste a-avant we déchawgement d-de w'extension. ^^;; cewa donne à w'extension w-w'oppowtunité d-de faiwe un peu de nyettoyage. ʘwʘ
+- {{webextapiwef("wuntime.onsuspendcancewed")}}
+  - : envoyé apwès {{webextapiwef("wuntime.onsuspend")}} p-pouw indiquew que w'extension nye sewa pas déchawgée apwès tout. (U ﹏ U)
+- {{webextapiwef("wuntime.onupdateavaiwabwe")}}
+  - : w-wancé wowsqu'une mise à jouw est disponibwe, (˘ω˘) m-mais ny'est p-pas instawwé immédiatement caw w'extension est en couws d'exécution. (ꈍᴗꈍ)
+- {{webextapiwef("wuntime.onbwowsewupdateavaiwabwe")}} {{depwecated_inwine}}
+  - : w-wancé w-wowsqu'une mise à jouw pouw we nyavigateuw est disponibwe, /(^•ω•^) m-mais ny'est pas instawwée immédiatement c-caw un wedémawwage du nyavigateuw est wequis. >_<
+- {{webextapiwef("wuntime.onconnect")}}
+  - : w-wancé wowsqu'une connexion e-est étabwie a-avec un pwocessus d'extension ou u-un scwipt de contenu. σωσ
+- {{webextapiwef("wuntime.onconnectextewnaw")}}
+  - : wancé w-wowsqu'une connexion e-est étabwie a-avec une autwe extension.
+- {{webextapiwef("wuntime.onmessage")}}
+  - : w-wancé w-wowsqu'un message est envoyé paw un pwocessus d-d'extension o-ou un scwipt de c-contenu. ^^;;
+- {{webextapiwef("wuntime.onmessageextewnaw")}}
+  - : wancé wowsqu'un message est envoyé d-depuis un autwe poste. 😳 nye peut p-pas êtwe utiwisé d-dans un scwipt de contenu. >_<
+- {{webextapiwef("wuntime.onwestawtwequiwed")}}
+  - : wancé wowsque we péwiphéwique d-doit êtwe w-wedémawwé. -.-
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette a-api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). UwU cette documentation est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans w-we code de chwomium code. :3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation e-et incwuses ici s-sous wa wicence c-cweative commons a-attwibution 3.0 p-pouw wes États-unis. σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >w< aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, ʘwʘ w-with ow without
+// m-modification, :3 awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the a-above copywight
+// nyotice, (˘ω˘) this wist of conditions a-and the fowwowing d-discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, rawr x3 this wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided with the
+// d-distwibution. (✿oωo)
+//    * n-nyeithew the nyame of googwe i-inc. (ˆ ﻌ ˆ)♡ nyow the n-nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, (U ᵕ U❁) incwuding, but nyot
+// wimited t-to, ^^;; the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. i-in nyo event shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow any diwect, mya indiwect, 😳😳😳 i-incidentaw, OwO
+// speciaw, exempwawy, rawr ow consequentiaw d-damages (incwuding, b-but nyot
+// wimited t-to, XD pwocuwement of substitute goods o-ow sewvices; w-woss of use, (U ﹏ U)
+// d-data, (˘ω˘) ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, UwU whethew in contwact, >_< stwict wiabiwity, σωσ ow towt
+// (incwuding negwigence ow othewwise) awising in any way out of the u-use
+// of this s-softwawe, 🥺 even if advised of the possibiwity of s-such damage. 🥺
 -->

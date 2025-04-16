@@ -1,57 +1,57 @@
 ---
-title: webRequest.StreamFilter.close()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/close
+titwe: webwequest.stweamfiwtew.cwose()
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/cwose
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ferme la demande. Après cet appel, aucune autre donnée de réponse ne sera transmise au moteur de rendu du navigateur et aucun autre événement de filtrage ne sera donné à l'extension.
+f-fewme wa d-demande. (///ˬ///✿) apwès c-cet appew, >w< aucune a-autwe donnée d-de wéponse nye s-sewa twansmise au m-moteuw de wendu du nyavigateuw et aucun autwe événement de fiwtwage nye sewa d-donné à w'extension. rawr
 
-Notez la différence entre cette fonction et {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}. Avec `disconnect()`, le navigateur continuera à traiter d'autres données de réponse, mais il ne sera pas accessible par le filtre. Avec `close()`, le navigateur ignorera toutes les données de réponse qui n'ont pas déjà été transmises au moteur de rendu.
+nyotez wa difféwence entwe c-cette fonction et {{webextapiwef("webwequest.stweamfiwtew.disconnect()", mya "disconnect()")}}. ^^ a-avec `disconnect()`, 😳😳😳 we nyavigateuw continuewa à twaitew d'autwes d-données de wéponse, mya mais iw n-nye sewa pas accessibwe p-paw we fiwtwe. 😳 avec `cwose()`, -.- we nyavigateuw ignowewa toutes wes données d-de wéponse qui ny'ont pas déjà été twansmises au moteuw de wendu. 🥺
 
-Vous devriez toujours appeler `close()` ou `disconnect()` une fois que vous n'avez plus besoin d'interagir avec la réponse.
+vous d-devwiez toujouws appewew `cwose()` o-ou `disconnect()` u-une fois q-que vous ny'avez p-pwus besoin d'intewagiw avec wa wéponse. o.O
 
-Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
+vous n-nye pouvez pas appewew cette fonction avant que w-w'événement {{webextapiwef("webwequest.stweamfiwtew.onstawt", /(^•ω•^) "onstawt")}} nye soit décwenché.
 
-## Syntaxe
+## syntaxe
 
 ```js
-filter.close();
+fiwtew.cwose();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+nyone.
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-None.
+nyone. nyaa~~
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple remplacera le contenu de la page par "texte de remplacement" :
+cet exempwe wempwacewa we contenu de wa page paw "texte d-de wempwacement" :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
+f-function wistenew(detaiws) {
+  wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
 
-  filter.onstart = (event) => {
-    console.log("started");
-    let encoder = new TextEncoder();
-    filter.write(encoder.encode("replacement content"));
-    filter.close();
+  f-fiwtew.onstawt = (event) => {
+    c-consowe.wog("stawted");
+    wet encodew = n-nyew textencodew();
+    fiwtew.wwite(encodew.encode("wepwacement c-content"));
+    fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, nyaa~~
+  { uwws: ["https://exampwe.owg/"], :3 t-types: ["main_fwame"] }, 😳😳😳
+  ["bwocking"], (˘ω˘)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

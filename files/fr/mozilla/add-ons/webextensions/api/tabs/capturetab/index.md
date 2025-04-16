@@ -1,89 +1,89 @@
 ---
-title: tabs.captureTab()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/captureTab
+titwe: tabs.captuwetab()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/captuwetab
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Crée un URI de données codant une image de la zone visible de l'onglet donné. Vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `<all_urls>` pour utiliser cette méthode.
+c-cwée u-un uwi de données c-codant une image d-de wa zone v-visibwe de w'ongwet d-donné. /(^•ω•^) vous d-devez avoiw wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `<aww_uwws>` pouw utiwisew cette méthode. :3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (ꈍᴗꈍ)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var capturing = browser.tabs.captureTab(
-  tabId, // optional integer
-  options, // optional extensionTypes.ImageDetails
+v-vaw captuwing = bwowsew.tabs.captuwetab(
+  t-tabid, /(^•ω•^) // optionaw integew
+  options, (⑅˘꒳˘) // optionaw e-extensiontypes.imagedetaiws
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabId`{{optional_inline}}
-  - : `integer`. ID de l'onglet à capturer. Par défaut à l'onglet actif dans la fenêtre en cours.
-- `options`{{optional_inline}}
-  - : {{WebExtAPIRef('extensionTypes.ImageDetails')}}.
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. ( ͡o ω ͡o ) i-id de w'ongwet à c-captuwew. òωó paw défaut à w'ongwet actif dans wa fenêtwe en couws. (⑅˘꒳˘)
+- `options`{{optionaw_inwine}}
+  - : {{webextapiwef('extensiontypes.imagedetaiws')}}. XD
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une URL de données qui code une image de la zone visible de l'onglet capturé. Peut être affecté à la propriété 'src' d'un élément HTML Image pour l'affichage. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec une uww de données qui code u-une image de wa zone visibwe d-de w'ongwet captuwé. -.- p-peut êtwe a-affecté à wa p-pwopwiété 'swc' d'un éwément htmw image pouw w-w'affichage. :3 si une ewweuw se pwoduit, nyaa~~ wa pwomesse s-sewa wejetée avec un message d'ewweuw. 😳
 
-## Exemples
+## exempwes
 
-Capturez une image de l'onglet actif dans la fenêtre actuelle, avec les paramètres par défaut :
+captuwez une image de w'ongwet actif dans w-wa fenêtwe actuewwe, (⑅˘꒳˘) avec wes p-pawamètwes paw d-défaut :
 
 ```js
-function onCaptured(imageUri) {
-  console.log(imageUri);
+f-function oncaptuwed(imageuwi) {
+  consowe.wog(imageuwi);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var capturing = browser.tabs.captureTab();
-  capturing.then(onCaptured, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  v-vaw captuwing = b-bwowsew.tabs.captuwetab();
+  captuwing.then(oncaptuwed, nyaa~~ o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api e-est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). OwO cette d-documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code de chwomium c-code. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. XD aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, (U ᵕ U❁) with ow w-without
+// modification, (U ﹏ U) awe pewmitted p-pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// nyotice, :3 this wist of conditions and the f-fowwowing discwaimew. ( ͡o ω ͡o )
+//    * wedistwibutions i-in b-binawy fowm must w-wepwoduce the above
+// copywight n-nyotice, σωσ this w-wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow o-othew matewiaws p-pwovided with the
+// d-distwibution. >w<
+//    * n-nyeithew t-the nyame of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, 😳 incwuding, 😳😳😳 but n-nyot
+// wimited t-to, (˘ω˘) the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ʘwʘ i-in nyo event shaww the c-copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, ( ͡o ω ͡o ) indiwect, incidentaw, o.O
+// speciaw, >w< exempwawy, o-ow consequentiaw d-damages (incwuding, 😳 but nyot
+// wimited t-to, 🥺 pwocuwement o-of substitute goods ow sewvices; woss of use, rawr x3
+// data, o.O ow pwofits; ow business i-intewwuption) h-howevew caused and o-on any
+// theowy of wiabiwity, rawr w-whethew in contwact, ʘwʘ s-stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, ^^;; e-even if advised o-of the possibiwity of such damage. o.O
 -->

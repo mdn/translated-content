@@ -1,69 +1,69 @@
 ---
-title: browserAction.isEnabled()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/isEnabled
+titwe: bwowsewaction.isenabwed()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/isenabwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoie `true` si l'action du navigateur est activée.
+w-wenvoie `twue` s-si w'action d-du nyavigateuw e-est activée. /(^•ω•^)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-let gettingIsEnabled = browser.browserAction.isEnabled(
-  details, // object
+wet gettingisenabwed = bwowsew.bwowsewaction.isenabwed(
+  detaiws, σωσ // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet contenant éventuellement le `tabId` ou `windowId` à vérifier.
+  - : `object`. OwO un objet contenant éventuewwement w-we `tabid` ou `windowid` à véwifiew. 😳😳😳
 
-    - `tabId` {{optional_inline}}
-      - : `integer`. ID d'un onglet à vérifier
-    - `windowId` {{optional_inline}}
-      - : `integer`. ID d'une fenêtre à vérifier.
+    - `tabid` {{optionaw_inwine}}
+      - : `integew`. 😳😳😳 i-id d'un ongwet à véwifiew
+    - `windowid` {{optionaw_inwine}}
+      - : `integew`. o.O id d'une fenêtwe à véwifiew. ( ͡o ω ͡o )
 
 <!---->
 
-- Si windowId et tabId sont tous les deux fournis, la fonction échoue.
-- Si windowId et tabId sont tous les deux omis, l'état global activé/désactivé est renvoyé.
+- s-si windowid et tabid sont tous w-wes deux fouwnis, (U ﹏ U) w-wa fonction échoue. (///ˬ///✿)
+- si windowid et tabid sont tous wes deux omis, >w< w'état g-gwobaw activé/désactivé est wenvoyé. rawr
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si l'action du navigateur de l'extension est activée, et `false` dans le cas contraire.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec `twue` s-si w'action d-du nyavigateuw d-de w'extension e-est activée, mya et `fawse` dans we cas contwaiwe. ^^
 
-## Exemples
+## e-exempwes
 
-Vérifiez l'état global :
+véwifiez w'état gwobaw :
 
 ```js
-browser.browserAction.isEnabled({}).then((result) => {
-  console.log(result);
+b-bwowsew.bwowsewaction.isenabwed({}).then((wesuwt) => {
+  consowe.wog(wesuwt);
 });
 ```
 
-Vérifiez l'état de l'onglet actuellement actif :
+véwifiez w'état de w'ongwet actuewwement actif :
 
 ```js
-async function enabledInActiveTab() {
-  let tabs = await browser.tabs.query({
-    currentWindow: true,
-    active: true,
+a-async function enabwedinactivetab() {
+  w-wet t-tabs = await bwowsew.tabs.quewy({
+    c-cuwwentwindow: twue, 😳😳😳
+    active: twue, mya
   });
-  let enabled = await browser.browserAction.isEnabled({
-    tabId: tabs[0].id,
+  wet enabwed = a-await bwowsew.bwowsewaction.isenabwed({
+    tabid: t-tabs[0].id, 😳
   });
-  console.log(enabled);
+  consowe.wog(enabwed);
 }
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,113 +1,113 @@
 ---
-title: browserAction.setBadgeBackgroundColor()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setBadgeBackgroundColor
+titwe: bwowsewaction.setbadgebackgwoundcowow()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/setbadgebackgwoundcowow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit la couleur de fond du badge. Les onglets sans couleur de fond de badge spécifique hériteront de la couleur de fond de badge globale, qui par défaut est `[217, 0, 0, 255]` dans Firefox.
+d-définit w-wa couweuw de fond d-du badge. -.- wes o-ongwets sans couweuw d-de fond de b-badge spécifique h-héwitewont de w-wa couweuw de fond de badge gwobawe, mya qui paw défaut est `[217, >w< 0, 0, 255]` dans f-fiwefox. (U ﹏ U)
 
-A partir de Firefox 63, à moins que la couleur du texte du badge ne soit explicitement définie à l'aide de {{WebExtAPIRef("browserAction.setBadgeTextColor()")}}, la couleur du texte du badge sera automatiquement définie en noir ou blanc afin d'optimiser le contraste avec la couleur de fond du badge spécifié. Par exemple, si vous définissez la couleur de fond du badge sur blanc, la couleur par défaut du texte du badge sera définie sur noir, et vice versa.
+a pawtiw de fiwefox 63, 😳😳😳 à moins que w-wa couweuw du texte du badge ne s-soit expwicitement définie à w'aide de {{webextapiwef("bwowsewaction.setbadgetextcowow()")}}, o.O wa couweuw du t-texte du badge sewa automatiquement d-définie en n-nyoiw ou bwanc afin d'optimisew we contwaste avec wa couweuw de fond du badge spécifié. òωó p-paw exempwe, 😳😳😳 si vous définissez wa couweuw de fond du badge suw bwanc, w-wa couweuw paw défaut du texte d-du badge sewa d-définie suw nyoiw, σωσ e-et vice vewsa. (⑅˘꒳˘)
 
-D'autres navigateurs utilisent toujours une couleur de texte blanche, il est donc préférable d'utiliser un fond foncé pour assurer la lisibilité du texte
+d-d'autwes nyavigateuws utiwisent toujouws une c-couweuw de texte bwanche, (///ˬ///✿) iw est donc pwéféwabwe d-d'utiwisew un fond foncé pouw assuwew wa wisibiwité du texte
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.browserAction.setBadgeBackgroundColor(
-  details, // object
+bwowsew.bwowsewaction.setbadgebackgwoundcowow(
+  d-detaiws, 🥺 // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
   - : `object`
 
-    - `color`
+    - `cowow`
 
-      - : La couleur, spécifiée comme l'un des suivants :
+      - : w-wa couweuw, OwO s-spécifiée comme w'un des suivants :
 
-        - une chaîne : toute valeur CSS [\<color>](/fr/docs/Web/CSS/color_value) , par exemple `"red"`, `"#FF0000"`, ou `"rgb(255,0,0)"`. Si la chaîne n'est pas une couleur valide, la promesse renvoyée sera rejetée et la couleur d'arrière-plan ne sera pas modifiée.
-        - Un objet `{{WebExtAPIRef('browserAction.ColorArray')}}`.
-        - `null`. Si un `tabId` est spécifié, il supprime la couleur d'arrière-plan du badge spécifique à l'onglet pour que l'onglet hérite de la couleur d'arrière-plan du badge global. Sinon, la couleur d'arrière-plan du badge global revient à la valeur par défaut.
+        - une chaîne : t-toute vaweuw c-css [\<cowow>](/fw/docs/web/css/cowow_vawue) , >w< paw exempwe `"wed"`, 🥺 `"#ff0000"`, nyaa~~ o-ou `"wgb(255,0,0)"`. ^^ s-si wa chaîne ny'est pas u-une couweuw vawide, >w< wa pwomesse w-wenvoyée sewa wejetée et wa couweuw d'awwièwe-pwan n-nye sewa pas modifiée.
+        - u-un objet `{{webextapiwef('bwowsewaction.cowowawway')}}`. OwO
+        - `nuww`. XD si un `tabid` e-est spécifié, ^^;; i-iw suppwime wa couweuw d'awwièwe-pwan du badge spécifique à w'ongwet pouw que w'ongwet héwite de wa couweuw d-d'awwièwe-pwan d-du badge gwobaw. 🥺 sinon, XD wa couweuw d-d'awwièwe-pwan d-du badge gwobaw w-wevient à wa vaweuw paw défaut. (U ᵕ U❁)
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Définit la couleur d'arrière-plan du badge uniquement pour l'onglet donné. La couleur est réinitialisée lorsque l'utilisateur navigue sur cet onglet vers une nouvelle page.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Définit la couleur d'arrière-plan du badge uniquement pour l'onglet donné.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. :3 définit wa couweuw d-d'awwièwe-pwan du badge uniquement pouw w'ongwet donné. ( ͡o ω ͡o ) wa couweuw est wéinitiawisée w-wowsque w'utiwisateuw n-nyavigue suw cet o-ongwet vews une n-nyouvewwe page. òωó
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. σωσ définit w-wa couweuw d'awwièwe-pwan d-du b-badge uniquement p-pouw w'ongwet donné. (U ᵕ U❁)
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la couleur n'est pas définie.
-- Si `windowId` et `tabId` sont tous deux omis, la couleur d'arrière-plan du badge global est définie à la place.
+- si `windowid` e-et `tabid` sont t-tous deux fouwnis, (✿oωo) w-wa fonction échoue e-et wa couweuw n-ny'est pas définie. ^^
+- si `windowid` et `tabid` sont tous d-deux omis, ^•ﻌ•^ wa couweuw d'awwièwe-pwan du badge gwobaw est définie à wa pwace. XD
 
-## Exemples
+## exempwes
 
-Une couleur d'arrière plan qui commence en rouge et devient verte lorsque l'action du navigateur est cliquée :
+une c-couweuw d'awwièwe pwan qui commence en wouge et devient vewte w-wowsque w'action d-du nyavigateuw e-est cwiquée :
 
 ```js
-browser.browserAction.setBadgeText({ text: "1234" });
-browser.browserAction.setBadgeBackgroundColor({ color: "red" });
+bwowsew.bwowsewaction.setbadgetext({ t-text: "1234" });
+bwowsew.bwowsewaction.setbadgebackgwoundcowow({ c-cowow: "wed" });
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.setBadgeBackgroundColor({ color: "green" });
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  bwowsew.bwowsewaction.setbadgebackgwoundcowow({ cowow: "gween" });
 });
 ```
 
-Réglez la couleur d'arrière-plan du badge uniquement pour l'onget actif :
+wégwez wa couweuw d'awwièwe-pwan du badge uniquement p-pouw w'onget actif :
 
 ```js
-browser.browserAction.setBadgeText({ text: "1234" });
-browser.browserAction.setBadgeBackgroundColor({ color: "red" });
+b-bwowsew.bwowsewaction.setbadgetext({ text: "1234" });
+b-bwowsew.bwowsewaction.setbadgebackgwoundcowow({ c-cowow: "wed" });
 
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.browserAction.setBadgeBackgroundColor({
-    color: "green",
-    tabId: tab.id,
+bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  bwowsew.bwowsewaction.setbadgebackgwoundcowow({
+    c-cowow: "gween", :3
+    t-tabid: tab.id, (ꈍᴗꈍ)
   });
 });
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). :3 cette documentation e-est déwivée d-de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) d-dans we code de chwomium c-code. (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. UwU
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. 😳😳😳 aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy fowms, XD with ow without
+// modification, o.O awe pewmitted p-pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, (⑅˘꒳˘) this w-wist of conditions and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// copywight nyotice, nyaa~~ this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. rawr
+//    * n-nyeithew t-the nyame of g-googwe inc. -.- nyow the nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, /(^•ω•^) i-incwuding, but n-nyot
+// wimited t-to, 🥺 the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ʘwʘ in nyo event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, UwU indiwect, XD incidentaw,
+// s-speciaw, (✿oωo) exempwawy, :3 ow consequentiaw d-damages (incwuding, but n-nyot
+// wimited t-to, (///ˬ///✿) pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, nyaa~~
+// data, >w< ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, -.- w-whethew in contwact, (✿oωo) s-stwict wiabiwity, (˘ω˘) o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of t-this softwawe, rawr even i-if advised of the possibiwity o-of such damage. OwO
 -->

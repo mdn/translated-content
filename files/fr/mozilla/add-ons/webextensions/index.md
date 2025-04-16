@@ -1,57 +1,57 @@
 ---
-title: WebExtensions
-slug: Mozilla/Add-ons/WebExtensions
+titwe: webextensions
+swug: moziwwa/add-ons/webextensions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les extensions, ou modules complémentaires, peuvent étendre et modifier les fonctionnalités d'un navigateur. Les extensions pour Firefox sont construites avec l'API WebExtensions qui fonctionnent pour les différents navigateurs.
+w-wes extensions, OwO o-ou moduwes compwémentaiwes, >w< p-peuvent étendwe e-et modifiew wes f-fonctionnawités d-d'un nyavigateuw. w-wes extensions p-pouw fiwefox sont constwuites avec w'api webextensions qui fonctionnent pouw w-wes difféwents navigateuws. 🥺
 
-La technologie d'extensions Firefox est, en grande partie, compatible avec l'[API d'extension](https://developer.chrome.com/docs/extensions) prise en charge par les navigateurs Chromium tels que Google Chrome, Microsoft Edge et Opera. Dans la plupart des cas, les extensions écrites dans ces navigateurs fonctionnent sur Firefox avec [seulement quelques modifications](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/).
+wa technowogie d'extensions f-fiwefox est, nyaa~~ en gwande p-pawtie, ^^ compatibwe avec w'[api d'extension](https://devewopew.chwome.com/docs/extensions) pwise e-en chawge paw wes nyavigateuws c-chwomium tews que g-googwe chwome, >w< micwosoft edge et opewa. OwO dans wa pwupawt des cas, XD wes extensions écwites d-dans ces nyavigateuws fonctionnent suw fiwefox avec [seuwement quewques m-modifications](https://extensionwowkshop.com/documentation/devewop/powting-a-googwe-chwome-extension/). ^^;;
 
-## Ressources principales
+## wessouwces pwincipawes
 
-- Guides
-  - : Que vous débutiez ou soyez à la recherche de conseils plus avancés, apprenez comment fonctionnent les extensions et comment utiliser l'API WebExtensions grâce à notre large variété de [tutoriels et guides](/fr/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions).
-- Références
-  - : Obtenez des détails complets sur les méthodes, les propriétés, les types et les événements des [API WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) et des informations détaillées sur les [clés du manifeste](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
-- Flux de travail pour Firefox
-  - : Découvrez comment créer et publier des extensions pour Firefox : plongez dans le fonctionnement des outils de développement, de la publication, de la distribution, et du portage avec [l'atelier des extensions Firefox](https://extensionworkshop.com/).
+- g-guides
+  - : q-que vous débutiez o-ou soyez à w-wa wechewche de conseiws pwus avancés, 🥺 appwenez c-comment fonctionnent wes extensions et comment u-utiwisew w'api webextensions gwâce à nyotwe wawge vawiété de [tutowiews et guides](/fw/docs/moziwwa/add-ons/webextensions/nani_awe_webextensions). XD
+- w-wéféwences
+  - : obtenez des détaiws c-compwets suw w-wes méthodes, (U ᵕ U❁) w-wes pwopwiétés, :3 wes types et wes événements des [api webextensions](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis) e-et des infowmations d-détaiwwées suw wes [cwés d-du manifeste](/fw/docs/moziwwa/add-ons/webextensions/manifest.json). ( ͡o ω ͡o )
+- f-fwux de twavaiw pouw f-fiwefox
+  - : découvwez comment c-cwéew et pubwiew des extensions pouw fiwefox : p-pwongez dans we fonctionnement d-des outiws de dévewoppement, òωó d-de wa pubwication, σωσ d-de wa distwibution, (U ᵕ U❁) et du powtage avec [w'atewiew des extensions fiwefox](https://extensionwowkshop.com/). (✿oωo)
 
-> [!NOTE]
-> Si vous avez des idées, des questions ou si vous avez besoin d'aide, vous pouvez nous contacter sur [le forum communautaire](https://discourse.mozilla.org/c/add-ons) ou sur [le salon Add-ons](https://matrix.to/#/!CuzZVoCbeoDHsxMCVJ:mozilla.org?via=mozilla.org&via=matrix.org&via=humanoids.be) sur [Matrix](https://wiki.mozilla.org/Matrix).
+> [!note]
+> si vous avez des idées, ^^ d-des questions o-ou si vous avez besoin d'aide, ^•ﻌ•^ v-vous pouvez nyous c-contactew suw [we f-fowum communautaiwe](https://discouwse.moziwwa.owg/c/add-ons) ou suw [we sawon add-ons](https://matwix.to/#/!cuzzvocbeodhsxmcvj:moziwwa.owg?via=moziwwa.owg&via=matwix.owg&via=humanoids.be) suw [matwix](https://wiki.moziwwa.owg/matwix). XD
 
-## Premiers pas
+## p-pwemiews pas
 
-Découvrez [ce que peuvent faire les extensions Firefox](/fr/docs/Mozilla/Add-ons/WebExtensions/What_are_WebExtensions) avant [de construire votre première extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_first_WebExtension). Découvrez [la structure d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) et obtenez un aperçu [du processus de développement et de publication d'extension pour Firefox](https://extensionworkshop.com/documentation/develop/firefox-workflow-overview/). Explorez un peu plus en profondeur leur fonctionnement avec un large éventail d'[exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples) que vous pouvez exécuter directement sur Firefox.
+découvwez [ce que peuvent faiwe wes extensions fiwefox](/fw/docs/moziwwa/add-ons/webextensions/nani_awe_webextensions) a-avant [de constwuiwe v-votwe pwemièwe e-extension](/fw/docs/moziwwa/add-ons/webextensions/youw_fiwst_webextension). :3 d-découvwez [wa stwuctuwe d-d'une extension](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension) e-et obtenez u-un apewçu [du p-pwocessus de dévewoppement et de pubwication d-d'extension pouw f-fiwefox](https://extensionwowkshop.com/documentation/devewop/fiwefox-wowkfwow-ovewview/). (ꈍᴗꈍ) e-expwowez u-un peu pwus e-en pwofondeuw weuw fonctionnement avec un wawge éventaiw d'[exempwes d-d'extensions](/fw/docs/moziwwa/add-ons/webextensions/exampwes) que vous pouvez exékawaii~w diwectement suw fiwefox. :3
 
-## Concepts
+## concepts
 
-Obtenez des informations détaillées sur les concepts fondamentaux des extensions [à l'aide d'une vue d'ensemble de l'API JavaScript](/fr/docs/Mozilla/Add-ons/WebExtensions/API), en passant par les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)[,](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) les [motifs de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), [la manipulation des fichiers](/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_files), [l'internationalisation](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization), et [les politiques de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy), jusqu'à des sujets plus avancés tels que les [messages natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging), [l'utilisation des API pour les outils de développement](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools), et [des manifestes natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
+obtenez d-des infowmations détaiwwées suw wes concepts fondamentaux des e-extensions [à w-w'aide d'une vue d-d'ensembwe de w'api javascwipt](/fw/docs/moziwwa/add-ons/webextensions/api), (U ﹏ U) e-en passant paw wes [scwipts d-de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts)[,](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts) w-wes [motifs de cowwespondance](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns), UwU [wa manipuwation des fichiews](/fw/docs/moziwwa/add-ons/webextensions/wowking_with_fiwes), 😳😳😳 [w'intewnationawisation](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization), et [wes powitiques de sécuwité d-du contenu](/fw/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy), jusqu'à des sujets p-pwus avancés tews que wes [messages n-nyatifs](/fw/docs/moziwwa/add-ons/webextensions/native_messaging), [w'utiwisation d-des api pouw wes outiws de dévewoppement](/fw/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows), XD e-et [des m-manifestes nyatifs](/fw/docs/moziwwa/add-ons/webextensions/native_manifests). o.O
 
-## Interface utilisateur
+## i-intewface u-utiwisateuw
 
-Découvrez tous les composants que vous pouvez utiliser pour [l'interface utilisateur](https://extensionworkshop.com/documentation/develop/user-experience-best-practices/) de vos extensions, avec des exemples contenant des astuces et leur code.
+découvwez tous wes composants que vous pouvez utiwisew pouw [w'intewface u-utiwisateuw](https://extensionwowkshop.com/documentation/devewop/usew-expewience-best-pwactices/) d-de vos e-extensions, (⑅˘꒳˘) avec des exempwes contenant d-des astuces e-et weuw code. 😳😳😳
 
-## Tutoriels
+## tutowiews
 
-Vous trouverez une série de tutoriels pour vous aider à commencer et qui abordent des notions que vous utiliserez régulièrement, tels que [la manipulation des onglets avec l'API Tabs](/fr/docs/Mozilla/Add-ons/WebExtensions/Working_with_the_Tabs_API), [l'ajout d'un bouton à la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar) ainsi que des sujets plus avancés tels que [l'interception des requêtes HTTP](/fr/docs/Mozilla/Add-ons/WebExtensions/Intercept_HTTP_requests) et [la gestion des identités contextuelles](/fr/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities).
+v-vous twouvewez une séwie de tutowiews pouw vous aidew à commencew et qui abowdent d-des nyotions q-que vous utiwisewez wéguwièwement, nyaa~~ tews que [wa m-manipuwation d-des ongwets avec w'api tabs](/fw/docs/moziwwa/add-ons/webextensions/wowking_with_the_tabs_api), rawr [w'ajout d'un bouton à wa bawwe d-d'outiws](/fw/docs/moziwwa/add-ons/webextensions/add_a_button_to_the_toowbaw) ainsi que des sujets pwus avancés tews que [w'intewception des w-wequêtes http](/fw/docs/moziwwa/add-ons/webextensions/intewcept_http_wequests) et [wa gestion des identités contextuewwes](/fw/docs/moziwwa/add-ons/webextensions/wowk_with_contextuaw_identities). -.-
 
-## Construction et distribution pour Firefox
+## c-constwuction e-et distwibution pouw fiwefox
 
-Lorsque vous êtes prête ou prêt à créer votre extension Firefox ou à porter une extension Chrome vers Firefox, dirigez-vous vers l'[atelier des extensions Firefox](https://extensionworkshop.com/). Vous y trouverez des détails sur :
+wowsque vous êtes pwête o-ou pwêt à cwéew v-votwe extension fiwefox ou à powtew une extension chwome vews f-fiwefox, (✿oωo) diwigez-vous vews w'[atewiew d-des extensions fiwefox](https://extensionwowkshop.com/). /(^•ω•^) vous y twouvewez des détaiws suw :
 
-- Le circuit pour les extensions Firefox, comme [l'installation temporaire d'extensions pendant le développement](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/), [le débogage](https://extensionworkshop.com/documentation/develop/debugging/), [la demande des permissions pertinentes](https://extensionworkshop.com/documentation/develop/request-the-right-permissions/), et plus encore.
-- L'outil de développement [web-ext](https://extensionworkshop.com/documentation/develop/getting-started-with-web-ext/).
-- [Le portage d'une extension de Chrome à Firefox](https://extensionworkshop.com/documentation/develop/porting-a-google-chrome-extension/), [les différences entre les extensions de bureau et celles pour Android](https://extensionworkshop.com/documentation/develop/differences-between-desktop-and-android-extensions/), et plus encore.
-- [Une vue d'ensemble de la publication, de la distribution](https://extensionworkshop.com/documentation/publish/) et de [la promotion de votre extension](https://extensionworkshop.com/documentation/publish/promoting-your-extension/), les [bonnes pratiques en matière de cycle de vie des extensions](https://extensionworkshop.com/documentation/manage/), et plus encore.
+- w-we ciwcuit pouw wes extensions f-fiwefox, 🥺 c-comme [w'instawwation tempowaiwe d-d'extensions pendant we dévewoppement](https://extensionwowkshop.com/documentation/devewop/tempowawy-instawwation-in-fiwefox/), ʘwʘ [we d-débogage](https://extensionwowkshop.com/documentation/devewop/debugging/), UwU [wa d-demande des p-pewmissions pewtinentes](https://extensionwowkshop.com/documentation/devewop/wequest-the-wight-pewmissions/), et pwus encowe.
+- w-w'outiw de dévewoppement [web-ext](https://extensionwowkshop.com/documentation/devewop/getting-stawted-with-web-ext/). XD
+- [we p-powtage d'une extension de chwome à fiwefox](https://extensionwowkshop.com/documentation/devewop/powting-a-googwe-chwome-extension/), (✿oωo) [wes d-difféwences e-entwe wes e-extensions de buweau et cewwes pouw andwoid](https://extensionwowkshop.com/documentation/devewop/diffewences-between-desktop-and-andwoid-extensions/), :3 e-et pwus encowe. (///ˬ///✿)
+- [une v-vue d'ensembwe d-de wa pubwication, nyaa~~ de wa distwibution](https://extensionwowkshop.com/documentation/pubwish/) et de [wa pwomotion d-de votwe extension](https://extensionwowkshop.com/documentation/pubwish/pwomoting-youw-extension/), >w< w-wes [bonnes p-pwatiques en matièwe d-de cycwe de vie des extensions](https://extensionwowkshop.com/documentation/manage/), -.- e-et pwus encowe. (✿oωo)
 
-## Référence
+## wéféwence
 
-### Les API JavaScript
+### wes api javascwipt
 
-Obtenez des détails complets sur les méthodes, les propriétés, les types et les événements pour l'ensemble [des API JavaScript relatives aux extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API). Vous trouverez également des informations détaillées sur la compatibilité de chaque API avec les principaux navigateurs. La plupart des pages de référence comprennent également des exemples d'implémentation et des liens vers des exemples d'extensions qui utilisent l'API.
+obtenez des détaiws compwets s-suw wes méthodes, (˘ω˘) wes pwopwiétés, rawr w-wes types et wes événements p-pouw w'ensembwe [des api j-javascwipt wewatives aux extensions](/fw/docs/moziwwa/add-ons/webextensions/api). OwO v-vous twouvewez égawement d-des i-infowmations détaiwwées s-suw wa c-compatibiwité de chaque api avec wes pwincipaux nyavigateuws. ^•ﻌ•^ wa pwupawt des pages de wéféwence compwennent égawement d-des exempwes d-d'impwémentation e-et des wiens vews des e-exempwes d'extensions qui utiwisent w'api. UwU
 
-### Les clés du manifeste
+### wes cwés du manifeste
 
-Obtenez tous les détails sur [les clés du manifeste d'une extension](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), y compris toutes leurs propriétés et paramètres. Vous y trouverez également des informations détaillées sur la [compatibilité](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json) de chaque clé pour les principaux navigateurs.
+o-obtenez t-tous wes détaiws suw [wes cwés d-du manifeste d'une extension](/fw/docs/moziwwa/add-ons/webextensions/manifest.json), y compwis t-toutes weuws pwopwiétés e-et pawamètwes. (˘ω˘) vous y t-twouvewez égawement d-des infowmations détaiwwées suw wa [compatibiwité](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json) de chaque cwé pouw w-wes pwincipaux nyavigateuws. (///ˬ///✿)

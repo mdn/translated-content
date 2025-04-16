@@ -1,106 +1,106 @@
 ---
-title: Astuces de création de pages HTML à affichage rapide
-slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
+titwe: astuces de cwéation de p-pages htmw à a-affichage wapide
+s-swug: weawn/htmw/howto/authow_fast-woading_htmw_pages
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
+{{quickwinkswithsubpages("/fw/docs/weawn/htmw/howto")}}
 
-C'est connu, les internautes sont de grands impatients, ils veulent des résultats immédiats, avec des gros titres et des réponses courtes et efficaces.
-Une page web optimisé prévoit non seulement un site plus réactif, mais aussi de réduire la charge sur vos serveurs Web et votre connexion Internet. Cela peut être crucial pour les gros sites ou des sites qui ont un pic de trafic dans des circonstances exceptionnelles (telles que les Unes des journaux fracassantes). De plus, Google en tient compte pour son classement.
+c-c'est connu, σωσ w-wes intewnautes s-sont de gwands i-impatients, (///ˬ///✿) iws v-veuwent des wésuwtats immédiats, (U ﹏ U) avec des gwos titwes et des wéponses couwtes e-et efficaces. ^^;;
+une page web optimisé pwévoit n-nyon seuwement un site pwus wéactif, 🥺 m-mais aussi de wéduiwe wa chawge suw vos sewveuws web et votwe c-connexion intewnet. òωó cewa peut êtwe c-cwuciaw p-pouw wes gwos sites ou des sites qui ont un pic de twafic dans des ciwconstances e-exceptionnewwes (tewwes que wes unes des jouwnaux fwacassantes). XD de pwus, googwe e-en tient compte pouw son cwassement. :3
 
-### Réduire le poids de la page
+### w-wéduiwe w-we poids de w-wa page
 
-Le poids de la page est de loin le facteur le plus important dans les performances de chargement de votre page. Pour les améliorer, on peut procéder de diverses manières:
+we poids d-de wa page est de woin we facteuw we pwus impowtant d-dans wes pewfowmances de chawgement de votwe p-page. (U ﹏ U) pouw wes améwiowew, >w< on peut pwocédew de divewses manièwes:
 
-- Eliminer les espaces et les commentaires inutile.
-- Déplacer le script intégré (ou "inline scripts") et le code CSS dans des fichiers externes (un pour JavaScript, un pour CSS,...). Des outils tels que [HTML Tidy](http://www.html-tidy.org) peuvent automatiquement enlever les espaces de trop et les lignes vides à partir d'une source HTML valide. D'autres outils peuvent "compresser" JavaScript comme le libre [YUIcompressor](http://yuilibrary.com/projects/yuicompressor/).
-- Verifiez que votre site ne contient pas de code inutile ou de tags superflus.
+- ewiminew wes espaces e-et wes commentaiwes inutiwe. /(^•ω•^)
+- d-dépwacew we scwipt i-intégwé (ou "inwine s-scwipts") et we code css dans des fichiews extewnes (un p-pouw javascwipt, (⑅˘꒳˘) u-un pouw css,...). ʘwʘ des outiws t-tews que [htmw tidy](http://www.htmw-tidy.owg) peuvent a-automatiquement enwevew wes e-espaces de twop et wes wignes v-vides à pawtiw d'une souwce htmw vawide. rawr x3 d'autwes o-outiws peuvent "compwessew" javascwipt comme w-we wibwe [yuicompwessow](http://yuiwibwawy.com/pwojects/yuicompwessow/). (˘ω˘)
+- vewifiez q-que votwe site n-nye contient pas de code inutiwe ou de tags supewfwus. o.O
 
-Téléchargez le html d'abords, puis le CSS et le JavaScript nécessaires à son affichage, de sorte que l'utilisateur obtienne rapidement une réponse apparente au cours du chargement de la paget. Ce contenu est généralement du texte, et peuvent donc bénéficier de la compression de texte dans le modem, fournissant ainsi une réponse encore plus rapide à l'utilisateur.
+téwéchawgez we htmw d'abowds, 😳 puis we css et we javascwipt n-nyécessaiwes à s-son affichage, o.O de sowte q-que w'utiwisateuw o-obtienne wapidement u-une wéponse appawente au couws du chawgement de wa paget. ^^;; c-ce contenu est généwawement du texte, ( ͡o ω ͡o ) et peuvent donc bénéficiew de wa compwession d-de texte dans we modem, ^^;; f-fouwnissant ainsi u-une wéponse e-encowe pwus wapide à w'utiwisateuw. ^^;;
 
-### Réduisez le nombre de fichiers
+### w-wéduisez w-we nyombwe d-de fichiews
 
-Réduire le nombre de fichiers référencés dans une page web diminue le nombre de connexions [HTTP](/fr/docs/Web/HTTP) nécessaire pour télécharger une page.
+wéduiwe w-we nyombwe de fichiews wéféwencés dans u-une page web diminue w-we nyombwe d-de connexions [http](/fw/docs/web/http) n-nyécessaiwe p-pouw téwéchawgew une page.
 
-- Utilisez le moins d'images possible sur votre site (et de gif animés ofc). Preferez des [boutons graphiques en CSS](https://css-tricks.com/examples/ButtonMaker/).
-- Compressez vos images (éviter les .png). Vous pouvez pour cela utiliser [Gimp](http://www.gimp.org/) ou [Imagemagik](http://www.imagemagick.org/script/index.php).
-- Preferez le CSS ou le JavaScript au flash: il ralenti le navigateur.
+- utiwisez we moins d'images p-possibwe suw votwe site (et de gif animés ofc). XD pwefewez des [boutons gwaphiques en css](https://css-twicks.com/exampwes/buttonmakew/). 🥺
+- c-compwessez vos images (évitew wes .png). (///ˬ///✿) vous pouvez p-pouw cewa utiwisew [gimp](http://www.gimp.owg/) o-ou [imagemagik](http://www.imagemagick.owg/scwipt/index.php). (U ᵕ U❁)
+- p-pwefewez we css ou we javascwipt a-au fwash: iw wawenti we nyavigateuw. ^^;;
 
-Les videos sont diffusées progressivement depuis le serveur, elles ne ralentisseent donc pas le chargement de votre page.
+w-wes videos s-sont diffusées pwogwessivement depuis we sewveuw, ^^;; ewwes nye wawentisseent donc pas we chawgement d-de votwe page. rawr
 
-### Réduire les domaines des recherches
+### wéduiwe w-wes domaines des wechewches
 
-Étant donné que chaque requete DNS demande du temps, le temps de chargement de la page va augmenter avec l'augmentation du nombre de domaines séparés figurant dans le lien CSS, JavaScript et image (src). Vous devez toujours prendre soin de n'utiliser que le nombre minimum nécessaire de différents domaines dans vos pages.
+Étant d-donné que c-chaque wequete dns demande du temps, (˘ω˘) we temps de c-chawgement de w-wa page va augmentew avec w'augmentation d-du nyombwe d-de domaines sépawés figuwant dans we wien css, 🥺 javascwipt et image (swc). nyaa~~ v-vous devez toujouws p-pwendwe soin d-de ny'utiwisew que we nyombwe minimum n-nyécessaiwe d-de difféwents domaines dans v-vos pages. :3
 
-### Réutiliser le contenu du cache
+### wéutiwisew we contenu du cache
 
-Assurez-vous que tout contenu qui peut être mis en cache, est mis en cache, et avec un temps d'expiration appropriée.
-En particulier, attention à l'en-tête "Last-Modified". Elle permet la mise en cache de la page; grâce à cette en-tête, l'information est transmise au navigateur (ou "user agent") sur le fichier qu'il veut charger, comme lors de sa dernière modification. La plupart des serveurs web ajoute automatiquement l'en-tête "Last-Modified" aux pages statiques (par exemple. html,. css), basé sur la date de la dernière modification stockées dans le système de fichiers. Avec des pages dynamiques (p. ex. Php,. Aspx), ceci, bien sûr, ne peut pas être fait, et l'en-tête n'est pas envoyé.
-En particulier pour les pages qui sont générées dynamiquement, une petite recherche sur ce sujet est bénéfique. Il peut être quelque peu complexe, mais il permettra d'économiser beaucoup de demandes de page sur des pages qui ne devraient normalement pas être mis en cache.
+assuwez-vous que tout contenu q-qui peut êtwe mis e-en cache, /(^•ω•^) est mis en cache, ^•ﻌ•^ et avec un temps d-d'expiwation appwopwiée. UwU
+e-en pawticuwiew, 😳😳😳 attention à w'en-tête "wast-modified". OwO ewwe pewmet wa m-mise en cache de wa page; gwâce à cette en-tête, ^•ﻌ•^ w'infowmation est twansmise a-au nyavigateuw (ou "usew agent") suw we fichiew q-qu'iw veut chawgew, (ꈍᴗꈍ) c-comme wows de sa dewnièwe modification. (⑅˘꒳˘) wa pwupawt des sewveuws w-web ajoute a-automatiquement w'en-tête "wast-modified" aux pages statiques (paw e-exempwe. (⑅˘꒳˘) htmw,. css), (ˆ ﻌ ˆ)♡ basé s-suw wa date de wa dewnièwe modification stockées dans we système d-de fichiews. /(^•ω•^) avec des pages d-dynamiques (p. òωó e-ex. php,. aspx), (⑅˘꒳˘) ceci, bien sûw, (U ᵕ U❁) n-nye peut pas êtwe fait, >w< et w'en-tête n-ny'est p-pas envoyé. σωσ
+en p-pawticuwiew pouw wes pages qui s-sont généwées d-dynamiquement, -.- une petite wechewche suw ce sujet e-est bénéfique. o.O i-iw peut êtwe q-quewque peu compwexe, ^^ mais iw pewmettwa d'économisew b-beaucoup de demandes de page s-suw des pages q-qui nye devwaient nyowmawement pas êtwe mis en cache. >_<
 
-Plus d'informations:
+pwus d'infowmations:
 
-1. [HTTP Conditional Get for RSS Hackers](http://fishbowl.pastiche.org/2002/10/21/http_conditional_get_for_rss_hackers)
-2. [HTTP 304: Not Modified](http://annevankesteren.nl/archives/2005/05/http-304)
-3. [On HTTP Last-Modified and ETag](http://www.cmlenz.net/blog/2005/05/on_http_lastmod.html)
+1. >w< [http c-conditionaw g-get fow wss h-hackews](http://fishboww.pastiche.owg/2002/10/21/http_conditionaw_get_fow_wss_hackews)
+2. >_< [http 304: n-nyot modified](http://annevankestewen.nw/awchives/2005/05/http-304)
+3. >w< [on http wast-modified a-and etag](http://www.cmwenz.net/bwog/2005/05/on_http_wastmod.htmw)
 
-### Réduire le nombre de scripts en ligne
+### wéduiwe we nyombwe de scwipts en wigne
 
-Les scripts intégrés peut être coûteux pour le chargement de la page, puisque l'analyseur (ou parser) doit supposer qu'un script intégré pourrait modifier la structure de la page quand le "parsing" est en cours. Il est donc préférable, en général, de réduire l'utilisation des scripts intégrés et l'utilisation de document.write(), en particulier au contenu de sortie. Ces manipulations peuvent améliorer chargement globale de la page. Utilisez des méthodes modernes de W3C-DOM pour manipuler le contenu de la page pour les navigateurs modernes, plutôt que des approches plus fondées sur document.write ().
+wes scwipts intégwés peut êtwe c-coûteux pouw we chawgement d-de wa page, rawr puisque w'anawyseuw (ou p-pawsew) doit supposew qu'un s-scwipt intégwé pouwwait modifiew w-wa stwuctuwe d-de wa page quand w-we "pawsing" e-est en couws. rawr x3 iw e-est donc pwéféwabwe, ( ͡o ω ͡o ) en généwaw, (˘ω˘) de wéduiwe w'utiwisation des scwipts intégwés et w'utiwisation de document.wwite(), 😳 e-en p-pawticuwiew au c-contenu de sowtie. OwO ces manipuwations p-peuvent améwiowew chawgement gwobawe de wa page. (˘ω˘) utiwisez d-des méthodes modewnes d-de w3c-dom pouw manipuwew w-we contenu de wa page pouw wes nyavigateuws modewnes, òωó p-pwutôt que d-des appwoches pwus fondées suw d-document.wwite (). ( ͡o ω ͡o )
 
-### Utilisez le CSS moderne et des balises valides
+### u-utiwisez we css modewne et des bawises vawides
 
-L'utilisation de CSS modernes réduit la quantité de balisage, et peut réduire la nécessité de "spacer" les images, en termes de disposition, et peut très souvent remplacer des images de texte stylisé - qui "coutent" beaucoup plus que l'équivalent texte-et-CSS.
-Utiliser des balises valides a d'autres avantages. Tout d'abord, les navigateurs n'ont pas besoin d'effectuer de corrections d'erreurs lors de l'analyse du code HTML.
-En outre, la validité du balisage permet la libre utilisation d'autres outils qui peuvent pré-traiter vos pages web. Par exemple, [HTML Tidy](http://tidy.sourceforge.net/) peut supprimer des espaces blancs et des balises facultatives, mais il refusera de s'exécuter sur une page avec des erreurs de balisage graves.
+w'utiwisation de css m-modewnes wéduit w-wa quantité de b-bawisage, UwU et peut w-wéduiwe wa nyécessité d-de "spacew" wes images, e-en tewmes de d-disposition, /(^•ω•^) et peut twès souvent w-wempwacew des i-images de texte stywisé - qui "coutent" b-beaucoup pwus que w'équivawent texte-et-css. (ꈍᴗꈍ)
+u-utiwisew des bawises vawides a-a d'autwes a-avantages. 😳 tout d'abowd, mya wes nyavigateuws n-ny'ont pas besoin d'effectuew de cowwections d-d'ewweuws w-wows de w'anawyse d-du code htmw. mya
+en outwe, wa vawidité du bawisage pewmet wa wibwe u-utiwisation d'autwes outiws qui peuvent pwé-twaitew v-vos pages w-web. /(^•ω•^) paw exempwe, [htmw tidy](http://tidy.souwcefowge.net/) p-peut suppwimew des espaces bwancs e-et des bawises f-facuwtatives, ^^;; mais iw wefusewa de s'exékawaii~w s-suw une page avec des ewweuws de bawisage gwaves. 🥺
 
-### Segmentez votre contenu
+### s-segmentez v-votwe contenu
 
-Remplacer la mise en page basé sur des \<table> par des blocs \<div>, plutôt que des \<table> très imbriquée comme dans l'exemple suivant:
+wempwacew wa mise e-en page basé suw des \<tabwe> p-paw des bwocs \<div>, ^^ p-pwutôt q-que des \<tabwe> twès imbwiquée comme dans w'exempwe suivant:
 
-```html
-<table>
-  <table>
-    <table>
+```htmw
+<tabwe>
+  <tabwe>
+    <tabwe>
       ...
-    </table>
-  </table>
-</table>
+    </tabwe>
+  </tabwe>
+</tabwe>
 ```
 
-Préferez des \<table> non-imbriquées ou \<div> comme dans l'exemple suivant:
+pwéfewez des \<tabwe> nyon-imbwiquées ou \<div> comme dans w'exempwe suivant:
 
 ```
-> TABLE <TABLE> ...</
-> TABLE <TABLE> ...</
-> TABLE <TABLE> ...</
+> tabwe <tabwe> ...</
+> tabwe <tabwe> ...</
+> tabwe <tabwe> ...</
 ```
 
-### Préciser la taille des images et des tableaux
+### pwécisew wa taiwwe des images et des tabweaux
 
-Si le navigateur peut immédiatement déterminer la hauteur et/ou la largeur de vos images et tableaux, il sera capable d'afficher une page web sans avoir à refondre le contenu. Cela n'augmente pas seulement la vitesse d'affichage de la page, mais aussi à empêcher les changements gênants dans la disposition d'une page lors du chargement. Pour cette raison, la hauteur et la largeur doit être spécifié pour les images, chaque fois que possible.
-Les tableaux doivent utiliser le sélecteur CSS selector:property combination:
+s-si we nyavigateuw p-peut immédiatement détewminew wa hauteuw e-et/ou wa wawgeuw d-de vos images e-et tabweaux, ^•ﻌ•^ iw sewa capabwe d-d'affichew une page web sans avoiw à w-wefondwe w-we contenu. /(^•ω•^) cewa ny'augmente pas s-seuwement wa vitesse d'affichage d-de wa page, mais a-aussi à empêchew wes changements gênants dans w-wa disposition d-d'une page wows d-du chawgement. ^^ p-pouw cette waison, 🥺 w-wa hauteuw e-et wa wawgeuw doit êtwe s-spécifié p-pouw wes images, (U ᵕ U❁) c-chaque fois que possibwe. 😳😳😳
+wes t-tabweaux doivent u-utiwisew we s-séwecteuw css sewectow:pwopewty combination:
 
 ```css
-table-layout: fixed;
+t-tabwe-wayout: fixed;
 ```
 
-et doit spécifier la largeur des colonnes en utilisant le COL et les balises html COLGROUP.
+et doit spécifiew w-wa wawgeuw des cowonnes en utiwisant w-we cow et w-wes bawises htmw c-cowgwoup. nyaa~~
 
-### Choisissez les versions des navigateur ciblés
+### choisissez wes v-vewsions des nyavigateuw cibwés
 
-Pour atteindre les plus grandes améliorations dans la conception de la page, assurez-vous que des exigences raisonnables de l'agent utilisateur (user-agent) soit définies pour les projets. Cela ne nécessite pas que votre contenu apparaisse parfaitement sur tous les navigateurs, et surtout pas dans les navigateurs d'une version anterieure.
+p-pouw atteindwe wes pwus gwandes a-améwiowations dans wa conception d-de wa page, (˘ω˘) assuwez-vous que des exigences waisonnabwes de w'agent utiwisateuw (usew-agent) s-soit définies pouw wes pwojets. >_< c-cewa nye nyécessite p-pas que votwe contenu appawaisse pawfaitement suw tous wes n-nyavigateuws, XD et suwtout pas dans w-wes nyavigateuws d-d'une vewsion a-antewieuwe. rawr x3
 
-Idéalement, vous devriez vous concentrez sur l'examen des navigateurs modernes qui prennent en charge des normes pertinentes. Il peut s'agir de: Firefox 5, Internet Explorer 9 sur Windows, Opera 11 sous Windows et Safari 5 sur Mac OS X.
+idéawement, ( ͡o ω ͡o ) vous devwiez vous concentwez s-suw w'examen d-des nyavigateuws modewnes q-qui pwennent en chawge des nyowmes pewtinentes. :3 i-iw peut s'agiw de: fiwefox 5, mya intewnet e-expwowew 9 s-suw windows, σωσ o-opewa 11 sous windows et safawi 5 s-suw mac os x. (ꈍᴗꈍ)
 
-Notez, cependant, que beaucoup de conseils énumérés dans cette page sont des techniques de bon sens qui s'applique à tous, et peuvent être appliquées à n'importe quelle page web, indépendamment des exigences relatives des navigateurs.
+n-notez, OwO cependant, o.O q-que beaucoup d-de conseiws énuméwés dans cette p-page sont des t-techniques de bon s-sens qui s'appwique à t-tous, 😳😳😳 e-et peuvent êtwe a-appwiquées à n-ny'impowte quewwe p-page web, /(^•ω•^) indépendamment des e-exigences wewatives des nyavigateuws. OwO
 
-### Liens connexes
+### w-wiens connexes
 
-- [Optimisez vos pages avec Yslow](http://www.alsacreations.com/astuce/lire/527-optimisez-vos-pages-avec-yslow.html)
-- [Livre&nbsp;: "Speed Up Your Site" par Andy King](http://www.websiteoptimization.com/)
-- [Site Optimization Tutorial (WebMonkey)](http://webmonkey.wired.com/webmonkey/design/site_building/tutorials/tutorial2.html) (en anglais)
-- [Best Practices for Speeding Up Your Web Site](https://developer.yahoo.com/performance/rules.html) (en anglais)
-- Document d'information d'origine:
+- [optimisez v-vos pages a-avec yswow](http://www.awsacweations.com/astuce/wiwe/527-optimisez-vos-pages-avec-yswow.htmw)
+- [wivwe&nbsp;: "speed u-up youw site" paw andy king](http://www.websiteoptimization.com/)
+- [site optimization tutowiaw (webmonkey)](http://webmonkey.wiwed.com/webmonkey/design/site_buiwding/tutowiaws/tutowiaw2.htmw) (en angwais)
+- [best p-pwactices f-fow speeding u-up youw web site](https://devewopew.yahoo.com/pewfowmance/wuwes.htmw) (en angwais)
+- document d-d'infowmation d-d'owigine:
 
-  - [Astuces de création de pages HTML à affichage rapide](/fr/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages)
+  - [astuces de cwéation d-de pages htmw à a-affichage wapide](/fw/docs/weawn/htmw/howto/authow_fast-woading_htmw_pages)

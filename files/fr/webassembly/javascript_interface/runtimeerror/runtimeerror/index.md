@@ -1,60 +1,60 @@
 ---
-title: Constructeur WebAssembly.RuntimeError()
-slug: WebAssembly/JavaScript_interface/RuntimeError/RuntimeError
+titwe: constwucteuw webassembwy.wuntimeewwow()
+s-swug: webassembwy/javascwipt_intewface/wuntimeewwow/wuntimeewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.RuntimeError()`** crée un nouvel objet `RuntimeError` WebAssembly, une erreur levée quand WebAssembly définit une [trappe](https://webassembly.org/docs/semantics/#traps).
+w-we constwucteuw **`webassembwy.wuntimeewwow()`** c-cwée un nyouvew o-objet `wuntimeewwow` w-webassembwy, ʘwʘ u-une ewweuw wevée q-quand webassembwy d-définit une [twappe](https://webassembwy.owg/docs/semantics/#twaps). σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WebAssembly.RuntimeError();
-new WebAssembly.RuntimeError(message);
-new WebAssembly.RuntimeError(message, nomFichier);
-new WebAssembly.RuntimeError(message, nomFichier, numeroLigne);
+nyew webassembwy.wuntimeewwow();
+nyew webassembwy.wuntimeewwow(message);
+n-nyew webassembwy.wuntimeewwow(message, OwO nyomfichiew);
+nyew webassembwy.wuntimeewwow(message, 😳😳😳 n-nyomfichiew, 😳😳😳 nyumewowigne);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description, compréhensible par un humain, de l'erreur.
-- `nomFichier` {{optional_inline}}
-  - : Le nom du fichier contenant le code qui a entraîné l'exception.
-- `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne dans le fichier contenant le code qui a entraîné l'exception.
+- `message` {{optionaw_inwine}}
+  - : une descwiption, o.O compwéhensibwe paw un humain, ( ͡o ω ͡o ) de w-w'ewweuw. (U ﹏ U)
+- `nomfichiew` {{optionaw_inwine}}
+  - : we nom du fichiew c-contenant w-we code qui a entwaîné w'exception. (///ˬ///✿)
+- `numewowigne` {{optionaw_inwine}}
+  - : we nyuméwo de wa wigne dans we fichiew contenant w-we code qui a entwaîné w'exception. >w<
 
-## Exemples
+## exempwes
 
-### Créer une nouvelle instance de RuntimeError
+### cwéew une nyouvewwe instance d-de wuntimeewwow
 
-Le fragment de code qui suit crée une nouvelle instance de `RuntimeError` puis affiche ses informations dans la console&nbsp;:
+we fwagment d-de code qui s-suit cwée une n-nyouvewwe instance d-de `wuntimeewwow` puis affiche ses infowmations d-dans wa consowe&nbsp;:
 
 ```js
-try {
-  throw new WebAssembly.RuntimeError("Coucou", "unFichier", 10);
-} catch (e) {
-  console.log(e instanceof WebAssembly.RuntimeError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "RuntimeError"
-  console.log(e.fileName); // "unFichier"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // renvoie l'emplacement du code exécuté
+twy {
+  thwow nyew webassembwy.wuntimeewwow("coucou", rawr "unfichiew", 10);
+} c-catch (e) {
+  consowe.wog(e instanceof webassembwy.wuntimeewwow); // twue
+  consowe.wog(e.message); // "coucou"
+  consowe.wog(e.name); // "wuntimeewwow"
+  c-consowe.wog(e.fiwename); // "unfichiew"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // w-wenvoie w'empwacement du code exécuté
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- wa page [webassembwy](/fw/docs/webassembwy)
+- [concepts w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

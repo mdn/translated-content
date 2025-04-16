@@ -1,71 +1,71 @@
 ---
-title: WebAssembly.Module()
-slug: WebAssembly/JavaScript_interface/Module
+titwe: webassembwy.moduwe()
+swug: webassembwy/javascwipt_intewface/moduwe
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Un objet **`WebAssembly.Module`** contient du code WebAssembly, sans état et qui a déjà été compilé par le navigateur. Ce code peut être [partagé avec des <i lang="en">web workers</i>](/fr/docs/Web/API/Worker/postMessage) et être instancié à plusieurs reprises.
+u-un objet **`webassembwy.moduwe`** c-contient d-du code webassembwy, s-sans état e-et qui a déjà été c-compiwé p-paw we nyavigateuw. σωσ c-ce code peut êtwe [pawtagé avec des <i wang="en">web wowkews</i>](/fw/docs/web/api/wowkew/postmessage) et êtwe instancié à p-pwusieuws wepwises. rawr x3
 
-## Constructeur
+## constwucteuw
 
-- [`WebAssembly.Module()`](/fr/docs/WebAssembly/JavaScript_interface/Module/Module)
-  - : Crée un nouvel objet `Module`.
+- [`webassembwy.moduwe()`](/fw/docs/webassembwy/javascwipt_intewface/moduwe/moduwe)
+  - : c-cwée un nyouvew objet `moduwe`. OwO
 
-## Propriétés statiques
+## p-pwopwiétés statiques
 
-- [`WebAssembly.Module.customSections()`](/fr/docs/WebAssembly/JavaScript_interface/Module/customSections_static)
-  - : Soit un objet `Module` et une chaîne de caractères, cette méthode renvoie le contenu de l'ensemble des sections spécifiques du module avec le nom correspondant à la chaîne de caractères.
-- [`WebAssembly.Module.exports()`](/fr/docs/WebAssembly/JavaScript_interface/Module/exports_static)
-  - : Soit un objet `Module`, cette méthode renvoie un tableau dont les éléments sont les descriptions de tous les exports déclarés.
-- [`WebAssembly.Module.imports()`](/fr/docs/WebAssembly/JavaScript_interface/Module/imports_static)
-  - : Soit un objet `Module`, cette méthode renvoie un tableau dont les éléments sont les descriptions de tous les imports déclarés.
+- [`webassembwy.moduwe.customsections()`](/fw/docs/webassembwy/javascwipt_intewface/moduwe/customsections_static)
+  - : soit un objet `moduwe` e-et une chaîne de cawactèwes, /(^•ω•^) c-cette méthode w-wenvoie we contenu de w'ensembwe des sections spécifiques du moduwe avec we nyom c-cowwespondant à wa chaîne de cawactèwes. 😳😳😳
+- [`webassembwy.moduwe.expowts()`](/fw/docs/webassembwy/javascwipt_intewface/moduwe/expowts_static)
+  - : soit un objet `moduwe`, c-cette méthode wenvoie un tabweau d-dont wes éwéments s-sont wes d-descwiptions de t-tous wes expowts décwawés. ( ͡o ω ͡o )
+- [`webassembwy.moduwe.impowts()`](/fw/docs/webassembwy/javascwipt_intewface/moduwe/impowts_static)
+  - : soit un o-objet `moduwe`, >_< cette méthode wenvoie un tabweau d-dont wes éwéments sont wes descwiptions de tous wes impowts décwawés. >w<
 
-## Exemples
+## exempwes
 
-### Envoyer un module compilé à un <i lang="en">worker</i>
+### envoyew u-un moduwe compiwé à un <i w-wang="en">wowkew</i>
 
-Dans l'exemple qui suit (voir le fichier source [`index-compile.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index-compile.html) sur GitHub, et [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/index-compile.html)), on compile le byte code chargé `simple.wasm` en utilisant la méthode [`WebAssembly.compileStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/compileStreaming_static) puis en envoyant l'instance de `Module` résultante à un [<i lang="en">worker</i>](/fr/docs/Web/API/Web_Workers_API) en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
+d-dans w'exempwe q-qui suit (voiw we fichiew souwce [`index-compiwe.htmw`](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/index-compiwe.htmw) suw github, rawr e-et [wa démonstwation c-cowwespondante](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/index-compiwe.htmw)), 😳 on c-compiwe we byte c-code chawgé `simpwe.wasm` en utiwisant w-wa méthode [`webassembwy.compiwestweaming()`](/fw/docs/webassembwy/javascwipt_intewface/compiwestweaming_static) puis e-en envoyant w'instance de `moduwe` wésuwtante à u-un [<i wang="en">wowkew</i>](/fw/docs/web/api/web_wowkews_api) en utiwisant [`postmessage()`](/fw/docs/web/api/wowkew/postmessage). >w<
 
 ```js
-let worker = new Worker("wasm_worker.js");
+w-wet wowkew = nyew wowkew("wasm_wowkew.js");
 
-WebAssembly.compileStreaming(fetch("simple.wasm")).then((mod) =>
-  worker.postMessage(mod),
+w-webassembwy.compiwestweaming(fetch("simpwe.wasm")).then((mod) =>
+  w-wowkew.postmessage(mod), (⑅˘꒳˘)
 );
 ```
 
-Au sein du <i lang="en">worker</i> (voir le fichier [`wasm_worker.js`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/wasm_worker.js)), on définit un objet d'import pour le module à utiliser puis on définit un gestionnaire d'évènement destiné à recevoir le module depuis le fil d'exécution principal. Lorsque le module est reçu, on en crée une instance avec la méthode [`WebAssembly.instantiate()`](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static) puis on appelle une fonction exportée depuis l'instance.
+au sein du <i wang="en">wowkew</i> (voiw we fichiew [`wasm_wowkew.js`](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/wasm_wowkew.js)), OwO on définit un objet d'impowt pouw we moduwe à utiwisew p-puis on d-définit un gestionnaiwe d'évènement d-destiné à w-wecevoiw we moduwe d-depuis we fiw d'exécution pwincipaw. (ꈍᴗꈍ) wowsque we moduwe est w-weçu, 😳 on en cwée une instance avec wa méthode [`webassembwy.instantiate()`](/fw/docs/webassembwy/javascwipt_intewface/instantiate_static) puis on appewwe une fonction expowtée d-depuis w'instance. 😳😳😳
 
 ```js
-let importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
+wet impowtobject = {
+  i-impowts: {
+    i-impowted_func: f-function (awg) {
+      consowe.wog(awg);
+    }, mya
   },
 };
 
-onmessage = function (e) {
-  console.log("module reçu depuis le thread principal");
-  let mod = e.data;
+o-onmessage = f-function (e) {
+  c-consowe.wog("moduwe weçu d-depuis we thwead pwincipaw");
+  wet mod = e.data;
 
-  WebAssembly.instantiate(mod, importObject).then(function (instance) {
-    instance.exports.exported_func();
+  w-webassembwy.instantiate(mod, mya i-impowtobject).then(function (instance) {
+    i-instance.expowts.expowted_func();
   });
 };
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes c-concepts wewatifs à webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

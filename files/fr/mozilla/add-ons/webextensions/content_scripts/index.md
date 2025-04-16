@@ -1,507 +1,507 @@
 ---
-title: Scripts de contenu
-slug: Mozilla/Add-ons/WebExtensions/Content_scripts
+titwe: scwipts de contenu
+swug: m-moziwwa/add-ons/webextensions/content_scwipts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un script de contenu (_content script_ en anglais) est une partie de votre extension qui s'exécute dans le contexte d'une page web donnée (par opposition aux scripts d'arrière-plan qui font partie de l'extension, ou aux scripts qui font partie du site Web lui-même, tels que ceux chargés en utilisant l'élément {{HTMLElement("script")}}).
+u-un scwipt d-de contenu (_content s-scwipt_ en a-angwais) est une p-pawtie de votwe e-extension qui s-s'exékawaii~ dans we contexte d'une page web donnée (paw opposition aux scwipts d-d'awwièwe-pwan qui font pawtie de w'extension, ^•ﻌ•^ o-ou aux scwipts qui font pawtie d-du site web wui-même, (U ᵕ U❁) tews que ceux chawgés en utiwisant w'éwément {{htmwewement("scwipt")}}). :3
 
-Les [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) peuvent accéder à l'ensemble des [API WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) mais ils ne peuvent pas accéder directement au contenu des pages web. Aussi, si votre extension doit manipuler le contenu des pages web, vous devrez utiliser les scripts de contenu.
+w-wes [scwipts d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) p-peuvent a-accédew à w'ensembwe des [api webextension](/fw/docs/moziwwa/add-ons/webextensions/api) mais iws nye peuvent p-pas accédew diwectement au contenu des pages web. (///ˬ///✿) aussi, si votwe extension doit m-manipuwew we contenu des pages w-web, (///ˬ///✿) vous devwez u-utiwisew wes scwipts d-de contenu. 🥺
 
-Tout comme les scripts habituellement chargés par les pages web classiques, les scripts de contenu peuvent lire et modifier le contenu de leurs pages en utilisant les API DOM standard.
+t-tout comme wes scwipts habituewwement chawgés p-paw wes pages web cwassiques, -.- wes scwipts de c-contenu peuvent wiwe et modifiew we contenu de weuws pages en utiwisant wes api dom standawd. nyaa~~
 
-Les scripts de contenu ne peuvent accéder qu'à [un sous-ensemble des API WebExtension](<#API WebExtensions>), mais ils peuvent [communiquer avec les scripts d'arrière-plan](#communication_background) grâce à un système de messages et ainsi accéder indirectement aux API WebExtension.
+wes s-scwipts de contenu nye peuvent a-accédew qu'à [un s-sous-ensembwe d-des api webextension](<#api webextensions>), (///ˬ///✿) mais iws peuvent [communiquew avec wes scwipts d'awwièwe-pwan](#communication_backgwound) g-gwâce à u-un système de messages et a-ainsi accédew indiwectement a-aux api webextension. 🥺
 
-> [!NOTE]
-> Que les scripts de contenu sont bloqués sur les domaines suivants :
+> [!note]
+> q-que wes scwipts de contenu sont b-bwoqués suw wes domaines suivants :
 >
-> - accounts-static.cdn.mozilla.net
-> - accounts.firefox.com
-> - addons.cdn.mozilla.net
-> - addons.mozilla.org
-> - api.accounts.firefox.com
-> - content.cdn.mozilla.net
-> - content.cdn.mozilla.net
-> - discovery.addons.mozilla.org
-> - input.mozilla.org
-> - install.mozilla.org
-> - oauth.accounts.firefox.com
-> - profile.accounts.firefox.com
-> - support.mozilla.org
-> - sync.services.mozilla.com
-> - testpilot.firefox.com
+> - accounts-static.cdn.moziwwa.net
+> - accounts.fiwefox.com
+> - a-addons.cdn.moziwwa.net
+> - addons.moziwwa.owg
+> - a-api.accounts.fiwefox.com
+> - content.cdn.moziwwa.net
+> - c-content.cdn.moziwwa.net
+> - discovewy.addons.moziwwa.owg
+> - i-input.moziwwa.owg
+> - instaww.moziwwa.owg
+> - oauth.accounts.fiwefox.com
+> - pwofiwe.accounts.fiwefox.com
+> - suppowt.moziwwa.owg
+> - sync.sewvices.moziwwa.com
+> - testpiwot.fiwefox.com
 >
-> If you try to inject a content script into a page in these domains, it will fail and the page will log a [CSP](/fr/docs/Web/HTTP/CSP) error.
+> i-if y-you twy to inject a content scwipt i-into a page i-in these domains, >w< i-it wiww faiw and the page wiww wog a [csp](/fw/docs/web/http/csp) ewwow. rawr x3
 >
-> Because these restrictions include addons.mozilla.org, users may attempt to use your extension immediately after installation—only to find that it doesn't work! You may want to add an appropriate warning, or an [onboarding page](https://extensionworkshop.com/documentation/develop/onboard-upboard-offboard-users/) to move users away from addons.mozilla.org.
+> because t-these westwictions incwude addons.moziwwa.owg, (⑅˘꒳˘) usews may attempt to use youw e-extension immediatewy aftew i-instawwation—onwy t-to find that i-it doesn't wowk! σωσ you may want to a-add an appwopwiate w-wawning, XD ow a-an [onboawding p-page](https://extensionwowkshop.com/documentation/devewop/onboawd-upboawd-offboawd-usews/) to move usews away fwom a-addons.moziwwa.owg. -.-
 
-> [!NOTE]
-> Les valeurs ajoutées à la portée globale d'un script de contenu avec `var foo` ou `window.foo = "bar"` peuvent disparaître à cause du bogue [1408996](https://bugzilla.mozilla.org/show_bug.cgi?id=1408996).
+> [!note]
+> w-wes vaweuws a-ajoutées à wa p-powtée gwobawe d-d'un scwipt de contenu avec `vaw foo` ou `window.foo = "baw"` peuvent d-dispawaîtwe à cause du bogue [1408996](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1408996). >_<
 
-## Charger des scripts de contenu
+## chawgew des scwipts de contenu
 
-Il est possible de charger un script de contenu dans une page web de trois manières différentes :
+iw est possibwe de chawgew u-un scwipt de contenu dans une page web de twois manièwes difféwentes :
 
-1. **Lors de la phase d'installation, pour les pages qui correspondent à certains motifs d'URL :** en utilisant la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) dans le fichier `manifest.json`, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
-2. **Lors de l'exécution, pour les pages qui correspondent à certains motifs d'URL :** en utilisant l'API {{WebExtAPIRef("contentScripts")}}, vous pouvez demander au navigateur de charger un script de contenu chaque fois que le navigateur charge une page dont l'URL [correspond à un motif donné](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Cette méthode est la version dynamique de la première méthode.
-3. **Lors de l'exécution, pour certains onglets spécifiques :** en utilisant la méthode [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript), vous pouvez charger un script de contenu dans un onglet spécifique quand vous le souhaitez (par exemple lorsqu'un utilisateur clique sur un [bouton d'action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action)).
+1. rawr **wows d-de wa phase d-d'instawwation, 😳😳😳 p-pouw wes pages qui cowwespondent à c-cewtains motifs d'uww :** e-en utiwisant w-wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) dans we fichiew `manifest.json`, UwU vous pouvez demandew au nyavigateuw de chawgew un scwipt de contenu c-chaque fois que we nyavigateuw c-chawge une page dont w'uww [cowwespond à u-un motif donné](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns). (U ﹏ U)
+2. **wows d-de w'exécution, (˘ω˘) pouw wes pages qui cowwespondent à c-cewtains m-motifs d'uww :** en utiwisant w'api {{webextapiwef("contentscwipts")}}, /(^•ω•^) v-vous pouvez d-demandew au nyavigateuw de chawgew un scwipt de contenu chaque fois que we n-nyavigateuw chawge u-une page dont w-w'uww [cowwespond à un motif donné](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns). (U ﹏ U) cette m-méthode est w-wa vewsion dynamique de wa pwemièwe m-méthode. ^•ﻌ•^
+3. **wows de w'exécution, >w< pouw cewtains ongwets spécifiques :** e-en utiwisant w-wa méthode [`tabs.exekawaii~scwipt()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt), ʘwʘ vous pouvez chawgew un s-scwipt de contenu d-dans un ongwet spécifique quand vous we souhaitez (paw exempwe w-wowsqu'un utiwisateuw cwique suw un [bouton d'action du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_action)). òωó
 
-Il n'y a qu'une seule portée globale pour chaque _frame_ et pour chaque extension. Cela signifie que les variables d'un script de contenu peuvent être accédées directement par un autre script de contenu, indépendamment de la manière dont le script de contenu a été chargé.
+iw n'y a qu'une s-seuwe powtée gwobawe pouw chaque _fwame_ et p-pouw chaque extension. o.O c-cewa signifie que wes vawiabwes d'un scwipt de contenu peuvent êtwe a-accédées d-diwectement paw un autwe scwipt de contenu, ( ͡o ω ͡o ) indépendamment d-de wa manièwe dont we scwipt d-de contenu a été chawgé. mya
 
-À l'aide des méthodes (1) et (2), vous ne pouvez charger des scripts que dans des pages dont les URL peuvent être représentées par un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
+À w'aide des méthodes (1) et (2), >_< v-vous nye pouvez chawgew des scwipts q-que dans des p-pages dont wes uww peuvent êtwe w-wepwésentées paw un [motif d-de cowwespondance](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns). rawr
 
-En utilisant la méthode (3), vous pouvez également charger des scripts dans des pages packagées avec votre extension, mais vous ne pouvez pas charger des scripts dans des pages privilégiées du navigateur (comme [`about:debugging`]() ou [`about:addons`]()).
+e-en u-utiwisant wa méthode (3), >_< vous p-pouvez égawement c-chawgew des scwipts dans des pages packagées a-avec votwe extension, (U ﹏ U) m-mais vous n-nye pouvez pas chawgew des scwipts dans des pages p-pwiviwégiées du nyavigateuw (comme [`about:debugging`]() o-ou [`about:addons`]()). rawr
 
-## Environnement des scripts de contenu
+## e-enviwonnement des scwipts de contenu
 
-### Accès au DOM
+### accès au dom
 
-Les scripts de contenu peuvent accéder et modifier le DOM de la page à la manière des scripts classique. Ils peuvent également observer tout changement du DOM effectué par les scripts de la page.
+w-wes scwipts de c-contenu peuvent a-accédew et modifiew w-we dom de wa page à wa manièwe d-des scwipts cwassique. (U ᵕ U❁) iws peuvent égawement obsewvew tout changement du dom effectué paw w-wes scwipts de wa page. (ˆ ﻌ ˆ)♡
 
-Cependant, les scripts de contenu reçoivent une «&nbsp;vue propre du DOM&nbsp;». Cela signifie que :
+cependant, >_< w-wes scwipts de contenu weçoivent u-une «&nbsp;vue pwopwe d-du dom&nbsp;». ^^;; cewa signifie que :
 
-- Les scripts de contenu ne peuvent pas accéder aux variables JavaScript définies par les scripts de la page.
-- Si un script de page redéfinit une propriété intrinsèque du DOM, le script de contenu verra la version originale de cette propriété et non la version redéfinie.
+- w-wes scwipts d-de contenu nye p-peuvent pas accédew a-aux vawiabwes j-javascwipt définies paw wes scwipts de wa page. ʘwʘ
+- si un scwipt de page wedéfinit une pwopwiété intwinsèque d-du dom, 😳😳😳 we s-scwipt de contenu v-vewwa wa vewsion owiginawe de c-cette pwopwiété et nyon wa vewsion wedéfinie. UwU
 
-Dans Firefox, ce comportement s'appelle [Vision Xray](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html).
+dans fiwefox, OwO c-ce compowtement s-s'appewwe [vision xway](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw). :3
 
-Prenons par exemple la page web suivante&nbsp;:
+p-pwenons paw exempwe wa page web suivante&nbsp;:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta h-http-equiv="content-type" content="text/htmw; c-chawset=utf-8" />
   </head>
 
   <body>
-    <script src="page-scripts/page-script.js"></script>
+    <scwipt s-swc="page-scwipts/page-scwipt.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-Le script «&nbsp;page-script.js&nbsp;» est écrit ci-dessous&nbsp;:
+we scwipt «&nbsp;page-scwipt.js&nbsp;» est écwit ci-dessous&nbsp;:
 
 ```js
-// page-script.js
+// p-page-scwipt.js
 
-// ajouter un élément au DOM
-var p = document.createElement("p");
-p.textContent = "Ce paragraphe a été ajouté par un script de la page.";
-p.setAttribute("id", "page-script-para");
-document.body.appendChild(p);
+// a-ajoutew un éwément a-au dom
+vaw p-p = document.cweateewement("p");
+p-p.textcontent = "ce pawagwaphe a-a été ajouté p-paw un scwipt de wa page.";
+p.setattwibute("id", -.- "page-scwipt-pawa");
+d-document.body.appendchiwd(p);
 
-// définition d’une nouvelle propriété pour la fenêtre
-window.toto = "Cette variable globale a été ajoutée par un script de la page.";
+// d-définition d’une nyouvewwe p-pwopwiété pouw wa fenêtwe
+window.toto = "cette v-vawiabwe gwobawe a été a-ajoutée paw un s-scwipt de wa page.";
 
-// redéfinition de la fonction intégrée window.confirm()
-window.confirm = function () {
-  alert("Ce script de page peut aussi redéfinir ’confirm’.");
+// wedéfinition d-de wa fonction intégwée window.confiwm()
+w-window.confiwm = f-function () {
+  a-awewt("ce scwipt de page peut aussi wedéfiniw ’confiwm’.");
 };
 ```
 
-Et maintenant une extension injecte ce script de contenu dans la page&nbsp;:
+et m-maintenant une extension injecte ce scwipt de contenu d-dans wa page&nbsp;:
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-// peut accéder au DOM et le modifier
-var pageScriptPara = document.getElementById("page-script-para");
-pageScriptPara.style.backgroundColor = "blue";
+// peut accédew a-au dom et we modifiew
+vaw p-pagescwiptpawa = d-document.getewementbyid("page-scwipt-pawa");
+pagescwiptpawa.stywe.backgwoundcowow = "bwue";
 
-// ne peut pas voir les propriétés ajoutées par un script de la page
-console.log(window.toto); // non défini
+// nye peut pas v-voiw wes pwopwiétés ajoutées paw un scwipt de w-wa page
+consowe.wog(window.toto); // n-nyon défini
 
-// voit la forme originale des propriétés redéfinies
-window.confirm("Êtes-vous sûr ?"); // appelle la méthode window.confirm() originale
+// voit wa fowme o-owiginawe des pwopwiétés w-wedéfinies
+window.confiwm("Êtes-vous s-sûw ?"); // a-appewwe wa méthode window.confiwm() owiginawe
 ```
 
-L'inverse est également vrai&nbsp;: les scripts de la page ne peuvent pas voir les propriétés JavaScript ajoutées par les scripts de contenu.
+w'invewse est égawement vwai&nbsp;: wes scwipts de wa page nye peuvent pas voiw wes pwopwiétés javascwipt ajoutées paw wes scwipts de contenu. 🥺
 
-Ceci signifie que le script de contenu peut compter sur un comportement prévisible des propriétés du DOM et n'a pas à se soucier d'un éventuel conflit entre les variables qu'il définit et celles des scripts de page.
+ceci s-signifie que we s-scwipt de contenu peut comptew suw un compowtement p-pwévisibwe d-des pwopwiétés d-du dom et ny'a pas à se souciew d-d'un éventuew confwit entwe wes v-vawiabwes qu'iw d-définit et cewwes des scwipts d-de page. -.-
 
-Une des conséquences pratiques de ce comportement est que les scripts de contenu n'ont accès à aucune des bibliothèques JavaScript chargées par la page. Par exemple, si la page inclut jQuery, le script de contenu ne pourra pas le voir.
+une des conséquences p-pwatiques de ce c-compowtement est que wes scwipts de contenu ny'ont a-accès à aucune d-des bibwiothèques j-javascwipt c-chawgées paw w-wa page. -.- paw exempwe, (U ﹏ U) s-si wa page i-incwut jquewy, rawr w-we scwipt de contenu n-nye pouwwa pas we voiw. mya
 
-Si un script de contenu veut utiliser une bibliothèque JavaScript, alors la bibliothèque doit être injectée en tant que script de contenu aux côtés du script de contenu qui veut l'utiliser.
+s-si un scwipt de c-contenu veut utiwisew u-une bibwiothèque javascwipt, a-awows wa bibwiothèque doit êtwe injectée e-en tant que scwipt de contenu aux c-côtés du scwipt d-de contenu qui v-veut w'utiwisew. ( ͡o ω ͡o )
 
 ```json
-"content_scripts": [
+"content_scwipts": [
   {
-    "matches": ["*://*.mozilla.org/*"],
-    "js": ["jquery.js", "content-script.js"]
+    "matches": ["*://*.moziwwa.owg/*"], /(^•ω•^)
+    "js": ["jquewy.js", >_< "content-scwipt.js"]
   }
 ]
 ```
 
-> [!NOTE]
-> Firefox _fournis_ certaines API qui permettent aux scripts de contenu d'accéder aux objets JavaScript créés par les scripts de page et d'exposer leurs propres objets JavaScript aux scripts de page.
+> [!note]
+> fiwefox _fouwnis_ c-cewtaines api qui pewmettent a-aux scwipts de contenu d'accédew a-aux objets javascwipt cwéés p-paw wes scwipts de page et d'exposew weuws pwopwes objets javascwipt aux scwipts d-de page. (✿oωo)
 >
-> Voir [Partage d'objets avec des scripts de page](/fr/docs/Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts) pour plus de détails.
+> voiw [pawtage d'objets a-avec des scwipts d-de page](/fw/docs/moziwwa/add-ons/webextensions/shawing_objects_with_page_scwipts) pouw pwus de détaiws. 😳😳😳
 
-### Les API WebExtension accessibles
+### wes api webextension a-accessibwes
 
-En plus des API standard du DOM, les scripts de contenu peuvent utiliser les API WebExtension suivantes&nbsp;:
+en pwus d-des api standawd d-du dom, (ꈍᴗꈍ) wes scwipts d-de contenu peuvent utiwisew wes api webextension s-suivantes&nbsp;:
 
-Depuis l'API [`extension`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/extension)&nbsp;:
+d-depuis w'api [`extension`](/fw/docs/moziwwa/add-ons/webextensions/api/extension)&nbsp;:
 
-- [`getURL()`](</fr/Add-ons/WebExtensions/API/extension#getURL()>)
-- [`inIncognitoContext`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/extension#inincognitocontext)
+- [`getuww()`](</fw/add-ons/webextensions/api/extension#getuww()>)
+- [`inincognitocontext`](/fw/docs/moziwwa/add-ons/webextensions/api/extension#inincognitocontext)
 
-Depuis l'API [`runtime`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime)&nbsp;:
+depuis w'api [`wuntime`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime)&nbsp;:
 
-- [`connect()`](</fr/Add-ons/WebExtensions/API/runtime#connect()>)
-- [`getManifest()`](</fr/Add-ons/WebExtensions/API/runtime#getManifest()>)
-- [`getURL()`](</fr/Add-ons/WebExtensions/API/runtime#getURL()>)
-- [`onConnect`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onconnect)
-- [`onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime#onmessage)
-- [`sendMessage()`](</fr/Add-ons/WebExtensions/API/runtime#sendMessage()>)
+- [`connect()`](</fw/add-ons/webextensions/api/wuntime#connect()>)
+- [`getmanifest()`](</fw/add-ons/webextensions/api/wuntime#getmanifest()>)
+- [`getuww()`](</fw/add-ons/webextensions/api/wuntime#getuww()>)
+- [`onconnect`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime#onconnect)
+- [`onmessage`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime#onmessage)
+- [`sendmessage()`](</fw/add-ons/webextensions/api/wuntime#sendmessage()>)
 
-Depuis l'API [`i18n`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n)&nbsp;:
+d-depuis w'api [`i18n`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n)&nbsp;:
 
-- [`getMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getMessagee)
-- [`getAcceptLanguages()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getAcceptLanguages)
-- [`getUILanguage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/getUILanguage)
-- [`detectLanguage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage)
+- [`getmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/getmessagee)
+- [`getacceptwanguages()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/getacceptwanguages)
+- [`getuiwanguage()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/getuiwanguage)
+- [`detectwanguage()`](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/detectwanguage)
 
-A partir des [`menus`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus):
+a pawtiw des [`menus`](/fw/docs/moziwwa/add-ons/webextensions/api/menus):
 
-- [`getTargetElement`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus/getTargetElement)
+- [`gettawgetewement`](/fw/docs/moziwwa/add-ons/webextensions/api/menus/gettawgetewement)
 
-L'ensemble des propriétés et méthodes de l'API [`storage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage).
+w-w'ensembwe des pwopwiétés e-et méthodes de w-w'api [`stowage`](/fw/docs/moziwwa/add-ons/webextensions/api/stowage). 🥺
 
-### XHR et Fetch
+### x-xhw et fetch
 
-Les scripts de contenu peuvent effectuer des requêtes en utilisant les API classiques [`window.XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) et [`window.fetch()`](/fr/docs/Web/API/Fetch_API).
+wes scwipts d-de contenu p-peuvent effectuew d-des wequêtes e-en utiwisant wes api cwassiques [`window.xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) e-et [`window.fetch()`](/fw/docs/web/api/fetch_api). mya
 
-Les scripts de contenu obtiennent les mêmes privilèges interdomaines que le reste de l'extension : si l'extension a demandé un accès interdomaine pour un domaine à l'aide de la clé [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ses scripts de contenu auront également accès à ce domaine.
+w-wes scwipts de contenu o-obtiennent w-wes mêmes pwiviwèges i-intewdomaines q-que we weste d-de w'extension : s-si w'extension a demandé un a-accès intewdomaine pouw un domaine à w-w'aide de wa cwé [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) d-dans w-we fichiew [`manifest.json`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json), s-ses scwipts de contenu auwont égawement accès à ce domaine. (ˆ ﻌ ˆ)♡
 
-Ceci est accompli en exposant des instances XHR et _fetch_ privilégiées dans le script de contenu. Cela a pour effet secondaire de ne pas définir les en-têtes [`Origin`](/fr/docs/Web/HTTP/Headers/Origin) et [`Referer`](/fr/docs/Web/HTTP/Headers/Referer) tels que la page elle-même l'aurait fait. Cela est souvent préférable afin d'éviter que la requête révèle la différence d'origine. À partir de Firefox 58, les extensions qui doivent exécuter des requêtes se comportant comme si elles étaient envoyées par le contenu lui-même peuvent utiliser `content.XMLHttpRequest` et `content.fetch()`. Pour les extensions visant une compatibilité entre les navigateurs, il est nécessaire de vérifier la présence de ces API avant de les utiliser.
+ceci est accompwi e-en exposant d-des instances x-xhw et _fetch_ pwiviwégiées dans we scwipt de contenu. (⑅˘꒳˘) cewa a-a pouw effet secondaiwe d-de nye pas définiw wes e-en-têtes [`owigin`](/fw/docs/web/http/headews/owigin) e-et [`wefewew`](/fw/docs/web/http/headews/wefewew) tews que wa page ewwe-même w'auwait fait. òωó c-cewa est souvent p-pwéféwabwe a-afin d'évitew q-que wa wequête wévèwe wa difféwence d'owigine. o.O À p-pawtiw de f-fiwefox 58, XD wes extensions qui doivent exékawaii~w d-des wequêtes se compowtant comme si ewwes étaient e-envoyées paw we contenu w-wui-même peuvent u-utiwisew `content.xmwhttpwequest` et `content.fetch()`. (˘ω˘) p-pouw w-wes extensions visant une compatibiwité e-entwe wes nyavigateuws, (ꈍᴗꈍ) i-iw est nyécessaiwe d-de véwifiew w-wa pwésence d-de ces api avant de wes utiwisew. >w<
 
-## Communication avec les scripts d'arrière-plan
+## c-communication a-avec wes scwipts d-d'awwièwe-pwan
 
-Bien que les scripts de contenu ne puissent pas utiliser la totalité des API WebExtension, ils peuvent communiquer avec les scripts d'arrière-plan de l'extension via l'API de messagerie et ont donc indirectement accès aux mêmes API que ces derniers.
+bien que wes s-scwipts de contenu nye puissent pas utiwisew w-wa totawité des a-api webextension, XD i-iws peuvent communiquew avec wes scwipts d'awwièwe-pwan de w'extension via w'api d-de messagewie et ont donc indiwectement a-accès a-aux mêmes api que ces dewniews. -.-
 
-Par défault, il existe deux moyens de communication entre les scripts d'arrière-plan et les scripts de contenu&nbsp;: vous pouvez envoyer des messages un par un, avec des réponses optionelles, ou vous pouvez établir une connexion continue entre les scripts, et utiliser cette connexion pour échanger des messages.
+paw défauwt, ^^;; i-iw existe deux moyens de communication e-entwe w-wes scwipts d'awwièwe-pwan e-et w-wes scwipts de contenu&nbsp;: v-vous pouvez envoyew des messages un paw un, XD avec des wéponses optionewwes, :3 o-ou vous pouvez étabwiw u-une connexion continue entwe wes scwipts, σωσ et utiwisew cette connexion p-pouw échangew des messages. XD
 
-### Un message à la fois
+### un message à wa fois
 
-Pour envoyer un message à la fois, vous pouvez utiliser les API suivantes :
+pouw envoyew un m-message à wa fois, :3 v-vous pouvez utiwisew wes api s-suivantes :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col">Dans le script de contenu</th>
-      <th scope="col">Dans les scripts d'arrière-plan</th>
-    </tr>
+    <tw>
+      <th scope="wow"></th>
+      <th s-scope="cow">dans w-we scwipt de contenu</th>
+      <th s-scope="cow">dans wes s-scwipts d'awwièwe-pwan</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">Envoyer un message</th>
+    <tw>
+      <th scope="wow">envoyew un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#sendMessage()"
-            >browser.runtime.sendMessage()</a
+          ><a hwef="/fw/add-ons/webextensions/api/wuntime#sendmessage()"
+            >bwowsew.wuntime.sendmessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/Tabs/sendMessage"
-            >browser.tabs.sendMessage()</a
+          ><a h-hwef="/fw/add-ons/webextensions/api/tabs/sendmessage"
+            >bwowsew.tabs.sendmessage()</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Recevoir un message</th>
+    </tw>
+    <tw>
+      <th scope="wow">wecevoiw un m-message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage"
-            >browser.runtime.onMessage</a
+          ><a h-hwef="/fw/add-ons/webextensions/api/wuntime/onmessage"
+            >bwowsew.wuntime.onmessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#onMessage"
-            >browser.runtime.onMessage</a
+          ><a h-hwef="/fw/add-ons/webextensions/api/wuntime#onmessage"
+            >bwowsew.wuntime.onmessage</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Par exemple, voici un script de contenu qui écoute les évènements de clic sur une page web. Si le clic était sur un lien, il envoie un message à la page d'arrière-plan avec l'URL cible&nbsp;:
+paw exempwe, rawr voici u-un scwipt de contenu qui écoute wes évènements de cwic suw une page web. 😳 si we c-cwic était suw u-un wien, 😳😳😳 iw envoie u-un message à w-wa page d'awwièwe-pwan avec w'uww cibwe&nbsp;:
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-window.addEventListener("click", notifyExtension);
+w-window.addeventwistenew("cwick", (ꈍᴗꈍ) nyotifyextension);
 
-function notifyExtension(e) {
-  if (e.target.tagName != "A") {
-    return;
+function nyotifyextension(e) {
+  i-if (e.tawget.tagname != "a") {
+    wetuwn;
   }
-  browser.runtime.sendMessage({ url: e.target.href });
+  bwowsew.wuntime.sendmessage({ u-uww: e.tawget.hwef });
 }
 ```
 
-Le script d'arrière-plan écoute les messages et affiche une notification en utilisant l'API [`notification`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications) :
+we scwipt d'awwièwe-pwan écoute wes messages e-et affiche une n-nyotification en utiwisant w'api [`notification`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications) :
 
 ```js
-// background-script.js
+// b-backgwound-scwipt.js
 
-browser.runtime.onMessage.addListener(notify);
+bwowsew.wuntime.onmessage.addwistenew(notify);
 
-function notify(message) {
-  browser.notifications.create({
-    type: "basic",
-    iconUrl: browser.extension.getURL("link.png"),
-    title: "Vous avez cliqué sur un lien&nbsp;!",
-    message: message.url,
+function n-nyotify(message) {
+  b-bwowsew.notifications.cweate({
+    type: "basic", 🥺
+    iconuww: bwowsew.extension.getuww("wink.png"), ^•ﻌ•^
+    t-titwe: "vous avez cwiqué suw un wien&nbsp;!", XD
+    m-message: message.uww, ^•ﻌ•^
   });
 }
 ```
 
-Ce code d'exemple est légèrement dérivé de l'exemple [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) sur GitHub.
+ce code d'exempwe est w-wégèwement déwivé d-de w'exempwe [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/mastew/notify-wink-cwicks-i18n) s-suw github. ^^;;
 
-### Les messages en flux continu
+### w-wes messages e-en fwux continu
 
-L'envoi de messages distincts peut vite devenir lourd si de nombreux messages sont envoyés entre les scripts d'arrière plan et les scripts de contenu.
+w'envoi de messages d-distincts peut vite deveniw wouwd si de nyombweux m-messages sont envoyés entwe w-wes scwipts d'awwièwe pwan et wes scwipts de c-contenu. ʘwʘ
 
-L'une des alternatives possibles est d'établir une connexion longue durée entre les deux scripts et d'utiliser cette connexion afin d'échanger des messages.
+w'une d-des awtewnatives possibwes est d-d'étabwiw une connexion wongue d-duwée entwe wes d-deux scwipts et d'utiwisew cette c-connexion afin d-d'échangew des messages. OwO
 
-De chaque côté (contenu d'une part, arrière-plan d'autre part), les scripts possèdent un objet [`runtime.Port`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) dont ils peuvent se servir pour échanger des messages.
+de c-chaque côté (contenu d'une pawt, 🥺 awwièwe-pwan d'autwe pawt), (⑅˘꒳˘) w-wes scwipts possèdent un objet [`wuntime.powt`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/powt) d-dont iws peuvent se sewviw pouw échangew d-des messages.
 
-Pour créer la connexion&nbsp;:
+p-pouw cwéew wa c-connexion&nbsp;:
 
-- L'un des côtés se tient à l'écoute des connexions avec [`runtime.onConnect`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect).
-- L'autre côté appelle [`tabs.connect()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/connect) (pour se connecter à un script de contenu) ou [`runtime.connect()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/connect) (pour se connecter à un script d'arrière plan). Ces deux méthodes renvoient un objet [`runtime.Port`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port).
-- Le gestionnaire d'évènement [`runtime.onConnect`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onConnect) reçoit alors en argument un objet [`runtime.Port`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/Port) qui lui est propre.
+- w'un des côtés s-se tient à w-w'écoute des connexions avec [`wuntime.onconnect`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/onconnect). (///ˬ///✿)
+- w-w'autwe côté appewwe [`tabs.connect()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/connect) (pouw s-se connectew à un scwipt de contenu) o-ou [`wuntime.connect()`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/connect) (pouw s-se connectew à un scwipt d'awwièwe pwan). (✿oωo) ces deux méthodes wenvoient un objet [`wuntime.powt`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/powt). nyaa~~
+- w-we gestionnaiwe d-d'évènement [`wuntime.onconnect`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/onconnect) weçoit awows en awgument un objet [`wuntime.powt`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/powt) q-qui wui est pwopwe. >w<
 
-Une fois que chaque côté possède son propre port, ils peuvent échanger en utilisant `runtime.Port.postMessage()` pour envoyer des message et `runtime.Port.onMessage` pour en recevoir.
+une fois que c-chaque côté p-possède son pwopwe powt, (///ˬ///✿) iws peuvent échangew en utiwisant `wuntime.powt.postmessage()` pouw envoyew des message e-et `wuntime.powt.onmessage` pouw en wecevoiw. rawr
 
-Par exemple, dès le chargement, ce script de contenu&nbsp;:
+paw exempwe, (U ﹏ U) dès w-we chawgement, ^•ﻌ•^ ce scwipt de c-contenu&nbsp;:
 
-- se connecte au script d'arrière plan et stocke l'objet `Port` dans une variable `myPort`
-- écoute des messages sur `myPort`, et les enregistre.
-- envoie des messages au script d'arrière plan via `myPort`, quand l'utlisateur clique sur le document.
+- s-se connecte au scwipt d'awwièwe p-pwan et stocke w-w'objet `powt` d-dans une vawiabwe `mypowt`
+- écoute d-des messages s-suw `mypowt`, (///ˬ///✿) e-et wes enwegistwe.
+- envoie des messages au scwipt d'awwièwe pwan via `mypowt`, o.O quand w'utwisateuw c-cwique suw w-we document. >w<
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-var myPort = browser.runtime.connect({ name: "port-from-cs" });
-myPort.postMessage({ greeting: "ici le script de contenu" });
+v-vaw mypowt = b-bwowsew.wuntime.connect({ n-nyame: "powt-fwom-cs" });
+mypowt.postmessage({ gweeting: "ici we scwipt de contenu" });
 
-myPort.onMessage.addListener(function (m) {
-  console.log(
-    "Dans le script de contenu, réception d'un message du script d'arrière-plan",
+mypowt.onmessage.addwistenew(function (m) {
+  c-consowe.wog(
+    "dans we s-scwipt de contenu, nyaa~~ wéception d'un message du scwipt d'awwièwe-pwan", òωó
   );
-  console.log(m.greeting);
+  c-consowe.wog(m.gweeting);
 });
 
-document.body.addEventListener("click", function () {
-  myPort.postMessage({ greeting: "clic sur la page&nbsp;!" });
+d-document.body.addeventwistenew("cwick", (U ᵕ U❁) f-function () {
+  mypowt.postmessage({ gweeting: "cwic s-suw wa page&nbsp;!" });
 });
 ```
 
-Le script d'arrière plan qui correspond ·
+we scwipt d-d'awwièwe p-pwan qui cowwespond ·
 
-- Écoute les tentatives de connexion depuis le script de contenu.
-- Quand il reçoit une tentative de connexion&nbsp;:
+- Écoute wes tentatives de connexion depuis w-we scwipt de contenu. (///ˬ///✿)
+- quand i-iw weçoit une t-tentative de connexion&nbsp;:
 
-  - Enregistre le port dans une variable nommée `portFromCS`
-  - Envoie un message au script de contenu en utilisant le port
-  - Commence à écouter les messages reçus sur le port et les enregistre.
+  - e-enwegistwe w-we powt dans une v-vawiabwe nyommée `powtfwomcs`
+  - e-envoie un message a-au scwipt d-de contenu en utiwisant we powt
+  - c-commence à écoutew w-wes messages weçus suw w-we powt et wes enwegistwe. (✿oωo)
 
-- Envoie des messages au script de contenu en utilisant `portFromCS`, quand l'utilisateur clique sur l'action navigateur de l'add-on
+- envoie des messages a-au scwipt de contenu en utiwisant `powtfwomcs`, 😳😳😳 q-quand w'utiwisateuw cwique suw w-w'action nyavigateuw d-de w'add-on
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-var portFromCS;
+vaw powtfwomcs;
 
-function connected(p) {
-  portFromCS = p;
-  portFromCS.postMessage({ greeting: "salut, script de contenu&nbsp;!" });
-  portFromCS.onMessage.addListener(function (m) {
-    console.log(
-      "Dans le script d'arrière-plan, réception d'un message du script de contenu.",
+f-function connected(p) {
+  powtfwomcs = p;
+  powtfwomcs.postmessage({ g-gweeting: "sawut, (✿oωo) s-scwipt de contenu&nbsp;!" });
+  powtfwomcs.onmessage.addwistenew(function (m) {
+    c-consowe.wog(
+      "dans w-we scwipt d'awwièwe-pwan, (U ﹏ U) w-wéception d'un message du scwipt de contenu.", (˘ω˘)
     );
-    console.log(m.greeting);
+    consowe.wog(m.gweeting);
   });
 }
 
-browser.runtime.onConnect.addListener(connected);
+b-bwowsew.wuntime.onconnect.addwistenew(connected);
 
-browser.browserAction.onClicked.addListener(function () {
-  portFromCS.postMessage({ greeting: "clic sur le bouton&nbsp;!" });
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  powtfwomcs.postmessage({ g-gweeting: "cwic s-suw we bouton&nbsp;!" });
 });
 ```
 
-#### Scripts de contenu multiples
+#### scwipts de contenu m-muwtipwes
 
-Si plusieurs scripts de contenu communiquent en même temps, vous pouvez stocker chaque connexion dans un tableau.
+si p-pwusieuws scwipts d-de contenu communiquent e-en même temps, vous pouvez stockew chaque connexion dans un tabweau. 😳😳😳
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-var ports = [];
+vaw powts = [];
 
-function connected(p) {
-  ports[p.sender.tab.id] = p;
+f-function connected(p) {
+  p-powts[p.sendew.tab.id] = p-p;
   //...
 }
 
-browser.runtime.onConnect.addListener(connected);
+b-bwowsew.wuntime.onconnect.addwistenew(connected);
 
-browser.browserAction.onClicked.addListener(function () {
-  ports.forEach((p) => {
-    p.postMessage({ greeting: "clic sur le bouton !" });
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  p-powts.foweach((p) => {
+    p.postmessage({ g-gweeting: "cwic s-suw we bouton !" });
   });
 });
 ```
 
-## Communiquer avec la page web
+## c-communiquew a-avec wa page web
 
-Bien que les scripts de contenu ne puissent (par défaut) accéder aux objets créés par les scripts de page, ils peuvent cependant communiquer avec les scripts de page en utilisant les API [`window.postMessage`](/fr/docs/Web/API/Window/postMessage) et [`window.addEventListener`](/fr/docs/Web/API/EventTarget/addEventListener) du DOM.
+bien que wes scwipts de contenu n-nye puissent (paw défaut) accédew aux objets c-cwéés paw wes scwipts de page, (///ˬ///✿) i-iws peuvent cependant c-communiquew avec wes scwipts d-de page en u-utiwisant wes api [`window.postmessage`](/fw/docs/web/api/window/postmessage) et [`window.addeventwistenew`](/fw/docs/web/api/eventtawget/addeventwistenew) d-du dom. (U ᵕ U❁)
 
-Par exemple&nbsp;:
+paw exempwe&nbsp;:
 
 ```js
-// page-script.js
+// p-page-scwipt.js
 
-var messenger = document.getElementById("from-page-script");
+v-vaw messengew = document.getewementbyid("fwom-page-scwipt");
 
-messenger.addEventListener("click", messageContentScript);
+m-messengew.addeventwistenew("cwick", >_< messagecontentscwipt);
 
-function messageContentScript() {
-  window.postMessage({
-    direction: "from-page-script",
-    message: "Message de la page"
-  }, "*");
+f-function m-messagecontentscwipt() {
+  w-window.postmessage({
+    diwection: "fwom-page-scwipt", (///ˬ///✿)
+    m-message: "message de wa page"
+  }, (U ᵕ U❁) "*");
 ```
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-window.addEventListener("message", function (event) {
+w-window.addeventwistenew("message", function (event) {
   if (
-    event.source == window &&
+    event.souwce == window &&
     event.data &&
-    event.data.direction == "from-page-script"
+    event.data.diwection == "fwom-page-scwipt"
   ) {
-    alert(
-      'Le script de contenu a reçu ce message&nbsp;: "' +
+    awewt(
+      'we s-scwipt de contenu a weçu ce message&nbsp;: "' +
         event.data.message +
-        '"',
+        '"', >w<
     );
   }
 });
 ```
 
-Pour un exemple complet et fonctionnel, [visitez la page de démo sur Github](https://mdn.github.io/webextensions-examples/content-script-page-script-messaging.html) et suivez les instructions.
+pouw un exempwe compwet et fonctionnew, 😳😳😳 [visitez w-wa page de démo suw github](https://mdn.github.io/webextensions-exampwes/content-scwipt-page-scwipt-messaging.htmw) e-et suivez wes instwuctions. (ˆ ﻌ ˆ)♡
 
-> [!WARNING]
-> Notez que vous devez être très prudent lorsque vous interagissez avec du contenu Web non fiable de cette manière. Les extensions sont du code privilégié qui peut avoir de puissantes capacités et les pages Web hostiles peuvent facilement les amener à accéder à ces capacités.
+> [!wawning]
+> notez q-que vous devez êtwe twès pwudent wowsque v-vous intewagissez avec du contenu w-web nyon fiabwe de cette manièwe. (ꈍᴗꈍ) w-wes extensions s-sont du code pwiviwégié qui peut avoiw de p-puissantes capacités et wes pages web hostiwes peuvent faciwement w-wes amenew à accédew à ces c-capacités. 🥺
 >
-> Pour donner un exemple trivial, supposons que le code du script de contenu qui reçoit le message ressemble à ceci&nbsp;:
+> pouw donnew un e-exempwe twiviaw, >_< supposons que we c-code du scwipt d-de contenu qui weçoit we message wessembwe à c-ceci&nbsp;:
 >
 > ```js
-> // content-script.js
+> // content-scwipt.js
 >
-> window.addEventListener("message", function (event) {
+> window.addeventwistenew("message", OwO f-function (event) {
 >   if (
->     event.source == window &&
->     event.data.direction &&
->     event.data.direction == "from-page-script"
+>     event.souwce == window &&
+>     event.data.diwection &&
+>     e-event.data.diwection == "fwom-page-scwipt"
 >   ) {
->     eval(event.data.message);
+>     e-evaw(event.data.message);
 >   }
 > });
 > ```
 >
-> Maintenant, le script de page peut exécuter n'importe quel code avec tous les privilèges du script de contenu.
+> maintenant, ^^;; w-we scwipt d-de page peut exékawaii~w ny'impowte q-quew code avec tous wes pwiviwèges du scwipt de contenu. (✿oωo)
 
-## Utilisation de `eval()` dans les scripts de contenu
+## utiwisation d-de `evaw()` dans w-wes scwipts de contenu
 
-Dans Chrome, {{jsxref("Objets_globaux/eval","eval()")}} exécute toujours le code dans le contexte du script de contenu et pas dans le contexte de la page.
+dans c-chwome, UwU {{jsxwef("objets_gwobaux/evaw","evaw()")}} e-exékawaii~ toujouws we code d-dans we contexte du scwipt de contenu et pas dans w-we contexte de wa page. ( ͡o ω ͡o )
 
-Dans Firefox&nbsp;:
+dans fiwefox&nbsp;:
 
-- Si vous appelez `eval()`, le code est exécuté dans le contexte du **script de contenu**
-- Si vous appelez `window.eval()`, le code est exécute dans le contexte de la **page**.
+- s-si vous appewez `evaw()`, (✿oωo) w-we code est exécuté dans we contexte d-du **scwipt de contenu**
+- si vous appewez `window.evaw()`, mya we code est exékawaii~ dans we contexte de wa **page**. ( ͡o ω ͡o )
 
-Par exemple, considérons un script de contenu comme ceci &nbsp;:
+paw exempwe, :3 considéwons u-un scwipt de c-contenu comme ceci &nbsp;:
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-window.eval("window.x = 1;");
-eval("window.y = 2");
+w-window.evaw("window.x = 1;");
+e-evaw("window.y = 2");
 
-console.log(`Dans le script de contenu, window.x: ${window.x}`);
-console.log(`Dans le script de contenu, window.y: ${window.y}`);
+consowe.wog(`dans we s-scwipt de contenu, 😳 window.x: ${window.x}`);
+consowe.wog(`dans we scwipt de contenu, (U ﹏ U) window.y: ${window.y}`);
 
-window.postMessage(
+window.postmessage(
   {
-    message: "check",
-  },
+    m-message: "check", >w<
+  }, UwU
   "*",
 );
 ```
 
-Ce code crée simplement des variables x et y en utilisant `window.eval()` et `eval()` puis enregistre leurs valeurs et envoie un message à la page.
+ce code cwée simpwement des vawiabwes x et y en utiwisant `window.evaw()` e-et `evaw()` p-puis enwegistwe w-weuws vaweuws et envoie un message à wa page. 😳
 
-À la réception du message, le script de page enregistre les mêmes variables :
+À wa wéception d-du message, XD w-we scwipt d-de page enwegistwe wes mêmes vawiabwes :
 
 ```js
-window.addEventListener("message", function (event) {
-  if (event.source === window && event.data && event.data.message === "check") {
-    console.log(`Dans le script de la page, window.x: ${window.x}`);
-    console.log(`Dans le script de la page, window.y: ${window.y}`);
+w-window.addeventwistenew("message", function (event) {
+  i-if (event.souwce === window && e-event.data && event.data.message === "check") {
+    c-consowe.wog(`dans we scwipt de wa page, (✿oωo) w-window.x: ${window.x}`);
+    consowe.wog(`dans w-we scwipt de w-wa page, ^•ﻌ•^ window.y: ${window.y}`);
   }
 });
 ```
 
-Dans Chrome, cela produira le résultat suivant :
+dans chwome, mya cewa p-pwoduiwa we wésuwtat s-suivant :
 
 ```
-Dans le script de contenu, window.x: 1
-Dans le script de contenu, window.y: 2
-Dans le script de la page, window.x: undefined
-Dans le script de la page, window.y: undefined
+dans we scwipt d-de contenu, (˘ω˘) window.x: 1
+dans w-we scwipt de contenu, nyaa~~ window.y: 2
+d-dans we scwipt d-de wa page, :3 window.x: undefined
+dans we scwipt d-de wa page, (✿oωo) window.y: undefined
 ```
 
-Dans Firefox, on aura le résultat suivant :
+dans fiwefox, (U ﹏ U) on auwa we wésuwtat suivant :
 
 ```
-Dans le script de contenu, window.x: undefined
-Dans le script de contenu, window.y: 2
-Dans le script de la page, window.x: 1
-Dans le script de la page, window.y: undefined
+dans we scwipt de contenu, (ꈍᴗꈍ) window.x: undefined
+d-dans we scwipt de contenu, (˘ω˘) window.y: 2
+dans w-we scwipt de wa page, ^^ window.x: 1
+d-dans we scwipt de wa page, (⑅˘꒳˘) window.y: undefined
 ```
 
-La même chose s'applique pour [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout), [`setInterval()`](/fr/docs/Web/API/Window/setInterval), et [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function).
+w-wa même chose s'appwique pouw [`settimeout()`](/fw/docs/web/api/window/settimeout), rawr [`setintewvaw()`](/fw/docs/web/api/window/setintewvaw), :3 e-et [`function()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function). OwO
 
-> [!WARNING]
-> Lorsque vous exécutez du code dans le contexte de la page, l'avertissement précédent reste nécessaire : l'environnement de la page est contrôlé par des pages web potentiellement malveillantes qui peuvent redéfinir les objets avec lesquels vous interagissez&nbsp;:
+> [!wawning]
+> wowsque vous exékawaii~z du c-code dans we contexte de wa page, (ˆ ﻌ ˆ)♡ w'avewtissement p-pwécédent weste nyécessaiwe : w'enviwonnement d-de wa page e-est contwôwé paw des pages web potentiewwement m-mawveiwwantes qui p-peuvent wedéfiniw wes objets a-avec wesquews vous i-intewagissez&nbsp;:
 >
 > ```js
-> // page.js redéfinit console.log
+> // page.js wedéfinit consowe.wog
 >
-> var original = console.log;
+> v-vaw owiginaw = consowe.wog;
 >
-> console.log = function () {
->   original(true);
+> consowe.wog = function () {
+>   o-owiginaw(twue);
 > };
 > ```
 >
 > ```js
-> // content-script.js appelle la version redéfinie
+> // content-scwipt.js appewwe wa vewsion wedéfinie
 >
-> window.eval("console.log(false)");
+> w-window.evaw("consowe.wog(fawse)");
 > ```

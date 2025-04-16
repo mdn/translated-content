@@ -1,38 +1,38 @@
 ---
-title: theme
-slug: Mozilla/Add-ons/WebExtensions/API/theme
+titwe: theme
+swug: moziwwa/add-ons/webextensions/api/theme
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Permet aux extensions du navigateur de mettre à jour le thème du navigateur.
+p-pewmet aux e-extensions du nyavigateuw d-de mettwe à j-jouw we thème d-du nyavigateuw.
 
-Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "theme" dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+p-pouw utiwisew c-cette api, mya u-une extension doit demandew wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "theme" dans son fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json). nyaa~~
 
-> [!NOTE]
-> Quand on met un thème en arrière plan, on doit déclarer la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) 'theme' et on ne peut pas utiliser la fonction [theme](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) du manifest, puisque ce n'est pas compatible.
+> [!note]
+> quand on met un thème e-en awwièwe pwan, (⑅˘꒳˘) on doit décwawew wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) 'theme' e-et on nye peut pas utiwisew wa fonction [theme](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme) d-du manifest, rawr x3 puisque ce ny'est pas compatibwe. (✿oωo)
 
-## Types
+## types
 
-- {{WebExtAPIRef("theme.Theme")}}
-  - : Représente le contenu d'un thème.
+- {{webextapiwef("theme.theme")}}
+  - : wepwésente w-we contenu d'un thème. (ˆ ﻌ ˆ)♡
 
-## Fonctions
+## f-fonctions
 
-- {{WebExtAPIRef("theme.getCurrent()")}}
-  - : Retourne le thème actuel du navigateur.
-- {{WebExtAPIRef("theme.update()")}}
-  - : Met à jour à le thème du navigateur.
-- {{WebExtAPIRef("theme.reset()")}}
-  - : Supprime les mises à jour de thèmes effectuées lors d'un appel à {{WebExtAPIRef("theme.update()")}}.
+- {{webextapiwef("theme.getcuwwent()")}}
+  - : w-wetouwne we thème actuew du nyavigateuw. (˘ω˘)
+- {{webextapiwef("theme.update()")}}
+  - : met à jouw à we thème du nyavigateuw. (⑅˘꒳˘)
+- {{webextapiwef("theme.weset()")}}
+  - : s-suppwime wes mises à jouw de thèmes effectuées wows d'un appew à {{webextapiwef("theme.update()")}}. (///ˬ///✿)
 
-## Evénements
+## e-evénements
 
-- {{WebExtAPIRef("theme.onUpdated")}}
-  - : Emis quand le thème du navigateur change.
+- {{webextapiwef("theme.onupdated")}}
+  - : emis q-quand we thème d-du nyavigateuw c-change.
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}

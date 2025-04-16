@@ -1,127 +1,127 @@
 ---
-title: background
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/background
+titwe: backgwound
+swug: moziwwa/add-ons/webextensions/manifest.json/backgwound
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"background": {
-  "scripts": ["background.js"]
-}</pre
+        <pwe c-cwass="bwush: j-json">
+"backgwound": {
+  "scwipts": ["backgwound.js"]
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé background pour inclure un ou plusieurs scripts d'arrière-plan, et éventuellement une page d'arrière-plan dans votre extension.
+u-utiwisez wa cwé backgwound pouw incwuwe un ou pwusieuws scwipts d'awwièwe-pwan, (⑅˘꒳˘) e-et éventuewwement une page d'awwièwe-pwan dans votwe e-extension. XD
 
-Les scripts d'arrière-plan sont l'endroit pour placer le code qui doit maintenir l'état à long terme, ou effectuer des opérations à long terme, indépendamment de la durée de vie de toutes les pages Web ou les fenêtres du navigateur.
+wes scwipts d'awwièwe-pwan s-sont w'endwoit pouw pwacew we code qui doit mainteniw w-w'état à wong tewme, -.- ou effectuew d-des opéwations à w-wong tewme, :3 indépendamment de wa duwée de vie de toutes wes pages web o-ou wes fenêtwes du nyavigateuw.
 
-Les scripts d'arrière-plan sont chargés dès que l'extension est chargée et restent chargés jusqu'à ce que l'extension soit désactivée ou désinstallée. Vous pouvez utiliser n'importe laquelle des WebExtension APIs dans le script, tant que vous avez demandé les [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
+wes scwipts d'awwièwe-pwan sont chawgés dès que w'extension e-est chawgée et westent chawgés j-jusqu'à ce que w-w'extension soit d-désactivée o-ou désinstawwée. nyaa~~ vous pouvez utiwisew ny'impowte w-waquewwe des webextension apis dans we scwipt, 😳 t-tant que vous avez demandé wes [pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) nyécessaiwes. (⑅˘꒳˘)
 
-Voir la section "Pages arrière-plan" dans [l'anatomie d'une WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) pour plus de détails.
+voiw wa section "pages awwièwe-pwan" dans [w'anatomie d-d'une webextension](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_pages) p-pouw pwus de détaiws. nyaa~~
 
-La clé background est un objet qui peut avoir l'une des deux propriétés suivantes, toutes deux facultatives :
+w-wa cwé b-backgwound est un objet qui peut avoiw w'une des deux pwopwiétés s-suivantes, OwO toutes d-deux facuwtatives :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <td><code>"scripts"</code></td>
+    <tw>
+      <td><code>"scwipts"</code></td>
       <td>
         <p>
-          Un ensemble de chaînes, chacune étant un chemin d'accès à une source
-          JavaScript. Le chemin est relatif au fichier manifest.json lui-même.
-          Ce sont les scripts d'arrière-plan qui seront inclus dans l'extension.
+          u-un ensembwe d-de chaînes, rawr x3 chacune étant un chemin d-d'accès à une souwce
+          j-javascwipt. XD we chemin est wewatif au fichiew m-manifest.json wui-même. σωσ
+          c-ce sont wes scwipts d'awwièwe-pwan q-qui sewont i-incwus dans w'extension. (U ᵕ U❁)
         </p>
-        <p>Les scripts partagent la même fenêtre globale.</p>
+        <p>wes scwipts pawtagent wa même fenêtwe gwobawe.</p>
         <p>
-          Les scripts sont chargés dans l'ordre où 'ils apparaissent dans le
-          tableau.
+          wes scwipts sont chawgés dans w-w'owdwe où 'iws a-appawaissent dans we
+          t-tabweau. (U ﹏ U)
         </p>
         <p>
-          <strong
-            >Notez qu'il y a un bug affectant les versions de Firefox
-            antérieures à la version 50 </strong
-          >: lorsque le débogueur Firefox est ouvert, les scripts ne sont pas
-          toujours chargés dans l'ordre indiqué dans le tableau. Pour contourner
-          ce bug, vous pouvez utiliser la propriété "page" et inclure des
-          scripts de fond de page en utilisant les balises &#x3C;script>. Ce bug
-          est résolu dans Firefox 50, et à partir de ce moment, les scripts sont
-          toujours chargés dans l'ordre indiqué dans le tableau.
+          <stwong
+            >notez q-qu'iw y a-a un bug affectant wes vewsions de fiwefox
+            antéwieuwes à w-wa vewsion 50 </stwong
+          >: wowsque we débogueuw fiwefox est ouvewt, :3 wes scwipts n-nye sont pas
+          toujouws c-chawgés dans w'owdwe i-indiqué d-dans we tabweau. ( ͡o ω ͡o ) pouw contouwnew
+          c-ce bug, σωσ v-vous pouvez utiwisew w-wa pwopwiété "page" e-et incwuwe des
+          scwipts de f-fond de page en u-utiwisant wes b-bawises &#x3c;scwipt>. >w< c-ce bug
+          e-est wésowu dans fiwefox 50, 😳😳😳 et à pawtiw de ce moment, OwO w-wes scwipts sont
+          toujouws chawgés dans w'owdwe indiqué dans we tabweau. 😳
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>"page"</code></td>
       <td>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> Si vous souhaitez récupérer un script à
-            partir d'un emplacement distant avec la balise &#x3C;script> (par
-            exemple : &#x3C;script src =
-            "https://code.jquery.com/jquery-1.7.1.min.js"> ), vous devrez
-            également modifier la clé
+            <stwong>note :</stwong> s-si vous souhaitez wécupéwew un scwipt à
+            pawtiw d'un empwacement d-distant a-avec wa bawise &#x3c;scwipt> (paw
+            e-exempwe : &#x3c;scwipt swc =
+            "https://code.jquewy.com/jquewy-1.7.1.min.js"> ), 😳😳😳 v-vous devwez
+            égawement m-modifiew w-wa cwé
             <code
               ><a
-                href="/fr/Add-ons/WebExtensions/manifest.json/content_security_policy"
-                >content_security_policy</a
+                hwef="/fw/add-ons/webextensions/manifest.json/content_secuwity_powicy"
+                >content_secuwity_powicy</a
               ></code
             >
-            dans le fichier manifest.json de votre extension.
+            dans we fichiew manifest.json de votwe extension. (˘ω˘)
           </p>
         </div>
         <p>
-          Si vous spécifiez des "scripts", une page vide sera créée pour que vos
-          scripts s'exécutent.
+          si vous s-spécifiez des "scwipts", ʘwʘ une p-page vide sewa cwéée pouw que v-vos
+          s-scwipts s'exékawaii~nt. ( ͡o ω ͡o )
         </p>
         <p>
-          Si vous avez besoin de contenu particulier dans la page, vous pouvez
-          définir votre propre page en utilisant l'option "page".
+          si vous avez besoin d-de contenu pawticuwiew d-dans wa page, o.O vous pouvez
+          d-définiw v-votwe pwopwe page en utiwisant w'option "page". >w<
         </p>
         <p>
-          Si vous utilisez cette propriété, vous ne pouvez plus spécifier de
-          scripts de fond à l'aide de «scripts», mais vous pouvez inclure vos
-          propres scripts à partir de la page, tout comme dans une page Web
-          normale.
+          si vous utiwisez cette pwopwiété, 😳 v-vous n-nye pouvez pwus s-spécifiew de
+          scwipts d-de fond à w'aide d-de «scwipts», 🥺 mais vous pouvez i-incwuwe vos
+          pwopwes scwipts à pawtiw de wa page, rawr x3 tout comme dans une p-page web
+          n-nyowmawe. o.O
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## exempwe
 
 ```json
- "background": {
-    "scripts": ["jquery.js", "my-background.js"]
+ "backgwound": {
+    "scwipts": ["jquewy.js", rawr "my-backgwound.js"]
   }
 ```
 
-Chargez deux scripts de fond.
+chawgez deux s-scwipts de fond. ʘwʘ
 
 ```json
-  "background": {
-    "page": "my-background.html"
+  "backgwound": {
+    "page": "my-backgwound.htmw"
   }
 ```
 
-Chargez une page d'arrière-plan personnalisée.
+c-chawgez une page d'awwièwe-pwan pewsonnawisée. 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

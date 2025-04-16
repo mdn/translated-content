@@ -1,77 +1,77 @@
 ---
-title: extension.isAllowedIncognitoAccess()
-slug: Mozilla/Add-ons/WebExtensions/API/extension/isAllowedIncognitoAccess
+titwe: extension.isawwowedincognitoaccess()
+swug: moziwwa/add-ons/webextensions/api/extension/isawwowedincognitoaccess
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Vérifiez si l'extension est autorisée à accéder aux onglets ouverts en mode "navigation privée".
+v-véwifiez si w'extension e-est autowisée à a-accédew a-aux ongwets o-ouvewts en mode "navigation p-pwivée". 🥺
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var isAllowed = browser.extension.isAllowedIncognitoAccess();
+vaw isawwowed = b-bwowsew.extension.isawwowedincognitoaccess();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+nyone. nyaa~~
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un booléen : `true` si l'extension est autorisée à accéder aux onglets privés, sinon `false`.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un boowéen : `twue` si w'extension e-est autowisée à accédew a-aux ongwets pwivés, :3 s-sinon `fawse`. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
 ```js
-function logIsAllowed(answer) {
-  console.log(`Is allowed: ${answer}`);
+function wogisawwowed(answew) {
+  consowe.wog(`is a-awwowed: ${answew}`);
 }
 
-var isAllowed = browser.extension.isAllowedIncognitoAccess();
-isAllowed.then(logIsAllowed);
+vaw isawwowed = bwowsew.extension.isawwowedincognitoaccess();
+isawwowed.then(wogisawwowed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> c-cette api e-est basée suw w-w'api chwomium [`chwome.extension`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extension). mya c-cette documentation est déwivée de [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json) d-dans we code chwomium. (///ˬ///✿)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. (˘ω˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. ^^;; aww wights wesewved. (✿oωo)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy f-fowms, (U ﹏ U) with ow w-without
+// modification, -.- awe pewmitted p-pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// nyotice, ^•ﻌ•^ t-this wist of conditions a-and the fowwowing discwaimew. rawr
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (˘ω˘) this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation a-and/ow o-othew matewiaws p-pwovided with the
+// distwibution. nyaa~~
+//    * nyeithew the nyame of g-googwe inc. UwU nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// t-this softwawe without s-specific pwiow w-wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the c-copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (⑅˘꒳˘) i-incwuding, (///ˬ///✿) b-but nyot
+// wimited t-to, ^^;; the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >_< i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, rawr x3 indiwect, /(^•ω•^) i-incidentaw, :3
+// speciaw, (ꈍᴗꈍ) exempwawy, ow consequentiaw damages (incwuding, /(^•ω•^) b-but nyot
+// wimited t-to, (⑅˘꒳˘) pwocuwement o-of substitute goods ow sewvices; w-woss of use, ( ͡o ω ͡o )
+// data, òωó ow pwofits; o-ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew in contwact, XD stwict wiabiwity, -.- o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out o-of the use
+// of t-this softwawe, :3 even if advised of the possibiwity o-of such damage. nyaa~~
 -->

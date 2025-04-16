@@ -1,50 +1,50 @@
 ---
-title: windows.WINDOW_ID_CURRENT
-slug: Mozilla/Add-ons/WebExtensions/API/windows/WINDOW_ID_CURRENT
+titwe: windows.window_id_cuwwent
+swug: moziwwa/add-ons/webextensions/api/windows/window_id_cuwwent
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-`browser.windows.WINDOW_ID_CURRENT` est une valeur qui peut être utilisée comme paramètre `windowId` dans certaines APIs pour représenter la fenêtre courante.
+`bwowsew.windows.window_id_cuwwent` e-est une vaweuw q-qui peut êtwe utiwisée c-comme pawamètwe `windowid` d-dans cewtaines a-apis pouw wepwésentew w-wa fenêtwe c-couwante. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> cette api est basée suw w'api de chwomnium [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows). >_< c-cette documentation pwovient de [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) d-dans we code de chwomium. >w<
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> w-wes données de compatibiwité micwosoft edge sont fouwnies p-paw micwosoft cowpowation e-et sont incwuses i-ici sous wa wicence cweative commons attwibution 3.0 united states. rawr
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. 😳 aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and binawy fowms, (⑅˘꒳˘) w-with ow without
+// m-modification, OwO a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must w-wetain the above copywight
+// notice, (ꈍᴗꈍ) this wist of conditions and the fowwowing discwaimew. 😳
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// c-copywight nyotice, 😳😳😳 this wist of conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws p-pwovided w-with the
+// distwibution. mya
+//    * nyeithew the n-nyame of googwe inc. mya nyow the nyames o-of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, (U ﹏ U) incwuding, mya b-but nyot
+// wimited to, ʘwʘ the i-impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (˘ω˘) i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (U ﹏ U) i-indiwect, ^•ﻌ•^ incidentaw, (˘ω˘)
+// speciaw, e-exempwawy, :3 o-ow consequentiaw d-damages (incwuding, ^^;; but nyot
+// w-wimited to, 🥺 pwocuwement o-of substitute g-goods ow s-sewvices; woss of use, (⑅˘꒳˘)
+// data, nyaa~~ ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// t-theowy of wiabiwity, :3 w-whethew in contwact, ( ͡o ω ͡o ) stwict wiabiwity, mya ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, (///ˬ///✿) even if a-advised of the possibiwity of such damage. (˘ω˘)
 -->

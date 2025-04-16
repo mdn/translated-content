@@ -1,41 +1,41 @@
 ---
-title: webRequest.StreamFilter.onstop
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstop
+titwe: webwequest.stweamfiwtew.onstop
+swug: moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/onstop
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un gestionnaire d'événements qui sera appelé lorsque le flux n'a plus de données à livrer. IDans le gestionnaire d'événements, vous pouvez toujours appeler des fonctions de filtrage telles que {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, ou {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.
+u-un gestionnaiwe d-d'événements q-qui sewa appewé w-wowsque we f-fwux ny'a pwus d-de données à w-wivwew. >_< idans we g-gestionnaiwe d'événements, rawr x3 vous pouvez toujouws appewew des fonctions de fiwtwage t-tewwes que {{webextapiwef("webwequest.stweamfiwtew.wwite()", mya "wwite()")}}, nyaa~~ {{webextapiwef("webwequest.stweamfiwtew.disconnect()", (⑅˘꒳˘) "disconnect()")}}, rawr x3 ou {{webextapiwef("webwequest.stweamfiwtew.cwose()", (✿oωo) "cwose()")}}.
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple ajoutera des "extra stuff" à la réponse :
+cet exempwe a-ajoutewa des "extwa stuff" à wa wéponse :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  let encoder = new TextEncoder();
+function w-wistenew(detaiws) {
+  wet fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  w-wet encodew = nyew textencodew();
 
-  filter.ondata = (event) => {
-    // pass through all the response data
-    filter.write(event.data);
+  fiwtew.ondata = (event) => {
+    // pass thwough aww the w-wesponse data
+    fiwtew.wwite(event.data);
   };
 
-  filter.onstop = (event) => {
-    filter.write(encoder.encode("extra stuff"));
-    filter.disconnect();
+  fiwtew.onstop = (event) => {
+    fiwtew.wwite(encodew.encode("extwa stuff"));
+    f-fiwtew.disconnect();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, (ˆ ﻌ ˆ)♡
+  { u-uwws: ["https://exampwe.com/*"], (˘ω˘) t-types: ["main_fwame"] }, (⑅˘꒳˘)
+  ["bwocking"], (///ˬ///✿)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

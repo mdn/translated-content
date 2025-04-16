@@ -1,43 +1,43 @@
 ---
-title: homepage_url
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url
+titwe: homepage_uww
+swug: moziwwa/add-ons/webextensions/manifest.json/homepage_uww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
       <td>chaîne</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"homepage_url": "https://example.org/my-addon"</pre
+        <pwe c-cwass="bwush: j-json">
+"homepage_uww": "https://exampwe.owg/my-addon"</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-URL pour la page d'accueil de l'extension.
+u-uww pouw wa page d'accueiw de w'extension. -.-
 
-Si la clé [dévelopeur](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) est fournie et qu'elle contient la propriété "url", cela remplacera la clé "homepage_url".
+si wa cwé [dévewopeuw](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/devewopew) est fouwnie e-et qu'ewwe contient wa pwopwiété "uww", ^^;; cewa w-wempwacewa wa cwé "homepage_uww". >_<
 
-c'est une [proriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+c-c'est une [pwowiété wocawisabwe](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json). mya
 
-## Exemple
+## exempwe
 
 ```json
-"homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/beastify"
+"homepage_uww": "https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify"
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

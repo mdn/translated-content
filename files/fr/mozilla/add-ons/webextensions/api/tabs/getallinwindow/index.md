@@ -1,72 +1,72 @@
 ---
-title: tabs.getAllInWindow()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/getAllInWindow
+titwe: tabs.getawwinwindow()
+swug: moziwwa/add-ons/webextensions/api/tabs/getawwinwindow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**Deprecated**
-Cette méthode est dépréciée. Utilisez {{WebExtAPIRef("tabs.query", "tabs.query({currentWindow: true})")}} à la place.
+**depwecated**
+c-cette méthode e-est dépwéciée. (✿oωo) u-utiwisez {{webextapiwef("tabs.quewy", (U ﹏ U) "tabs.quewy({cuwwentwindow: t-twue})")}} à w-wa pwace. -.-
 
-Obtient des détails sur tous les onglets de la fenêtre spécifiée.
+obtient d-des détaiws s-suw tous wes o-ongwets de wa fenêtwe spécifiée. ^•ﻌ•^
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). rawr
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var getting = browser.tabs.getAllInWindow(
-  windowId, // optional integer
+vaw getting = bwowsew.tabs.getawwinwindow(
+  w-windowid, (˘ω˘) // optionaw i-integew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `windowId`{{Optional_Inline}}
-  - : `integer`. Par défaut à la fenêtre actuelle.
+- `windowid`{{optionaw_inwine}}
+  - : `integew`. nyaa~~ paw défaut à wa fenêtwe actuewwe. UwU
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un `tableau` d'ojets `{{WebExtAPIRef('tabs.Tab')}}` contenant des informations sur tous les onglets de la fenêtre. Si la fenêtre n'a pas pu être trouvée ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa w-wempwie avec un `tabweau` d'ojets `{{webextapiwef('tabs.tab')}}` contenant des infowmations suw tous wes ongwets d-de wa fenêtwe. :3 si wa fenêtwe ny'a pas pu êtwe twouvée ou qu'une autwe ewweuw s-se pwoduit, wa pwomesse sewa w-wejetée avec un m-message d'ewweuw. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api est basée suw w-w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) de chwomium. (///ˬ///✿) cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. >_< aww wights w-wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, /(^•ω•^) with ow w-without
+// modification, :3 awe pewmitted pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, (ꈍᴗꈍ) this wist of conditions and the fowwowing discwaimew. /(^•ω•^)
+//    * wedistwibutions i-in b-binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, (⑅˘꒳˘) this w-wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. ( ͡o ω ͡o )
+//    * nyeithew t-the nyame of googwe inc. òωó nyow t-the names of its
+// c-contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight h-howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, XD incwuding, but n-nyot
+// wimited to, -.- the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. :3 in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, nyaa~~ indiwect, incidentaw, 😳
+// s-speciaw, (⑅˘꒳˘) exempwawy, nyaa~~ ow consequentiaw d-damages (incwuding, OwO b-but nyot
+// wimited to, rawr x3 pwocuwement of substitute goods ow sewvices; woss of use, XD
+// d-data, σωσ ow pwofits; ow business i-intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, (U ᵕ U❁) whethew in contwact, (U ﹏ U) stwict wiabiwity, :3 o-ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, ( ͡o ω ͡o ) even if advised of the possibiwity o-of such damage. σωσ
 -->

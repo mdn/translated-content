@@ -1,53 +1,53 @@
 ---
-title: privacy.services
-slug: Mozilla/Add-ons/WebExtensions/API/privacy/services
+titwe: pwivacy.sewvices
+swug: m-moziwwa/add-ons/webextensions/api/pwivacy/sewvices
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La propriété {{WebExtAPIRef("privacy.services")}} contient des paramètres liés à la vie privée contrôlant les services offerts par le navigateur ou par des tiers. Chaque propriété est un objet {{WebExtAPIRef("types.BrowserSetting")}}.
+w-wa pwopwiété {{webextapiwef("pwivacy.sewvices")}} contient d-des pawamètwes w-wiés à w-wa vie pwivée c-contwôwant wes s-sewvices offewts p-paw we nyavigateuw ou paw des tiews. /(^•ω•^) chaque pwopwiété est un objet {{webextapiwef("types.bwowsewsetting")}}.
 
-## Propriétés
+## p-pwopwiétés
 
-- `passwordSavingEnabled`
-  - : Un objet {{WebExtAPIRef("types.BrowserSetting")}} dont la valeur contenue est un booléen. Si il est défini à `true`, le gestionnaire de mot de passe du navigateur proposera de stocker des mots de passe lorsque l'utilisateur les entrera. La valeur par défaut est : `true`.
+- `passwowdsavingenabwed`
+  - : un objet {{webextapiwef("types.bwowsewsetting")}} dont wa vaweuw c-contenue est un boowéen. rawr x3 si i-iw est défini à `twue`, we gestionnaiwe de mot de passe du nyavigateuw p-pwoposewa de stockew des m-mots de passe w-wowsque w'utiwisateuw wes entwewa. (U ﹏ U) wa vaweuw paw défaut est : `twue`. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Désactivation, si possible, du gestionnaire de mot de passe.
+désactivation, (⑅˘꒳˘) si possibwe, du gestionnaiwe d-de mot de passe. òωó
 
 ```js
-function onSet(result) {
-  if (result) {
-    console.log("success");
-  } else {
-    console.log("failure");
+function o-onset(wesuwt) {
+  i-if (wesuwt) {
+    c-consowe.wog("success");
+  } e-ewse {
+    consowe.wog("faiwuwe");
   }
 }
 
-var getting = browser.privacy.services.passwordSavingEnabled.get({});
-getting.then((got) => {
-  console.log(got.value);
+vaw getting = bwowsew.pwivacy.sewvices.passwowdsavingenabwed.get({});
+g-getting.then((got) => {
+  consowe.wog(got.vawue);
   if (
-    got.levelOfControl === "controlled_by_this_extension" ||
-    got.levelOfControl === "controllable_by_this_extension"
+    g-got.wevewofcontwow === "contwowwed_by_this_extension" ||
+    got.wevewofcontwow === "contwowwabwe_by_this_extension"
   ) {
-    var setting = browser.privacy.services.passwordSavingEnabled.set({
-      value: false,
+    vaw setting = bwowsew.pwivacy.sewvices.passwowdsavingenabwed.set({
+      vawue: fawse, ʘwʘ
     });
-    setting.then(onSet);
-  } else {
-    console.log("Not able to set passwordSavingEnabled");
+    setting.then(onset);
+  } ewse {
+    c-consowe.wog("not abwe to set p-passwowdsavingenabwed");
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy).
+> c-cette a-api est basée suw w'api chwomium [`chwome.pwivacy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pwivacy). /(^•ω•^)

@@ -1,199 +1,199 @@
 ---
-title: Interface utilisateur
-slug: Mozilla/Add-ons/WebExtensions/user_interface
+titwe: intewface utiwisateuw
+s-swug: moziwwa/add-ons/webextensions/usew_intewface
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les WebExtensions disposent de plusieurs options d'interface utilisateur afin que leur fonctionnalité puisse être mise à la disposition de l'utilisateur. Un résumé de ces options est fourni ci-dessous, avec une introduction plus détaillée à chaque option d'interface utilisateur dans cette section.
+w-wes webextensions d-disposent d-de pwusieuws o-options d'intewface u-utiwisateuw a-afin que weuw f-fonctionnawité puisse êtwe mise à wa disposition de w'utiwisateuw. nyaa~~ un wésumé d-de ces options est fouwni ci-dessous, >_< avec une i-intwoduction pwus détaiwwée à c-chaque option d'intewface utiwisateuw dans cette section. ^^;;
 
-> [!NOTE]
-> Pour en revenir des conseils sur l'utilisation de ces composants d'interface utilisateur afin de créer une expérience utilisateur générale dans votre extension, consultez l'article sur les [bonnes pratiques de l'expérience utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_experience_best_practices).
+> [!note]
+> p-pouw en weveniw des conseiws s-suw w'utiwisation d-de ces composants d'intewface utiwisateuw afin de cwéew une expéwience u-utiwisateuw généwawe dans votwe extension, (ˆ ﻌ ˆ)♡ consuwtez w'awticwe suw wes [bonnes p-pwatiques de w'expéwience utiwisateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_expewience_best_pwactices). ^^;;
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">UI option</th>
-      <th scope="col">Description</th>
-      <th scope="col" style="width: 350px">Exemple</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">ui option</th>
+      <th s-scope="cow">descwiption</th>
+      <th s-scope="cow" stywe="width: 350px">exempwe</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_action"
-          >Bouton de la barre d'outils (action du navigateur)</a
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/bwowsew_action"
+          >bouton d-de wa bawwe d'outiws (action du nyavigateuw)</a
         >
       </td>
       <td>
         <p>
-          Un bouton sur la barre d'outils du navigateur qui diffuse un événement
-          sur l'add-on lorsqu'il est cliqué. Par défaut, le bouton est visible
-          dans tous les onglets.
+          u-un bouton suw wa bawwe d'outiws du nyavigateuw qui diffuse un événement
+          suw w'add-on wowsqu'iw est cwiqué. (⑅˘꒳˘) p-paw défaut, rawr x3 we bouton est v-visibwe
+          d-dans tous wes o-ongwets.
         </p>
       </td>
-      <td><img src="browser-action.png" /></td>
-    </tr>
-    <tr>
+      <td><img swc="bwowsew-action.png" /></td>
+    </tw>
+    <tw>
       <td>
-        Bouton de la barre d'outils du navigateur avec un
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Popups">popup</a>
+        bouton de wa bawwe d'outiws d-du nyavigateuw a-avec un
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/popups">popup</a>
       </td>
       <td>
         <p>
-          Un popup sur un bouton dans la barre d'outils du navigateur qui
-          s'ouvre lorsque le bouton est cliqué. La fenêtre contextuelle est
-          définie dans un document HTML qui gère l'interaction de l'utilisateur.
+          u-un popup s-suw un bouton dans wa bawwe d'outiws d-du nyavigateuw qui
+          s-s'ouvwe wowsque we bouton est cwiqué. (///ˬ///✿) wa fenêtwe c-contextuewwe est
+          d-définie dans un document htmw qui g-gèwe w'intewaction d-de w'utiwisateuw. 🥺
         </p>
       </td>
-      <td><img src="popup-shadow.png" /></td>
-    </tr>
-    <tr>
+      <td><img swc="popup-shadow.png" /></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Page_actions"
-          >Bouton de la barre d'addresse</a
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/page_actions"
+          >bouton de wa bawwe d'addwesse</a
         >
         (action page)
       </td>
       <td>
         <p>
-          Un bouton sur la barre d'adresse du navigateur qui distribue un
-          événement à l'add-on lorsqu'il est cliqué. Par défaut, le bouton est
-          caché dans tous les onglets.
+          un bouton suw wa b-bawwe d'adwesse d-du navigateuw qui distwibue un
+          événement à w-w'add-on w-wowsqu'iw est cwiqué. >_< p-paw défaut, UwU we bouton est
+          caché dans tous wes o-ongwets. >_<
         </p>
       </td>
-      <td><img src="address_bar_button.png" /></td>
-    </tr>
-    <tr>
+      <td><img swc="addwess_baw_button.png" /></td>
+    </tw>
+    <tw>
       <td>
-        Bouton de la barre d'addresse avec un
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Popups">popup</a>
+        bouton de wa bawwe d'addwesse avec u-un
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/popups">popup</a>
       </td>
       <td>
         <p>
-          Un popup sur un bouton dans la barre d'adresse du navigateur qui
-          s'ouvre lorsque le bouton est cliqué. La fenêtre contextuelle est
-          définie dans un document HTML qui gère l'interaction de l'utilisateur.
+          un p-popup suw un bouton d-dans wa bawwe d-d'adwesse du nyavigateuw qui
+          s-s'ouvwe w-wowsque we bouton e-est cwiqué. -.- w-wa fenêtwe contextuewwe est
+          définie d-dans un document h-htmw qui gèwe w-w'intewaction de w-w'utiwisateuw. mya
         </p>
       </td>
-      <td><img src="page_action_popup.png" /></td>
-    </tr>
-    <tr>
+      <td><img s-swc="page_action_popup.png" /></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Context_menu_items"
-          >Elément du menu contextuel</a
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/context_menu_items"
+          >ewément du menu contextuew</a
         >
       </td>
       <td>
         <p>
-          Les éléments de menu, les cases à cocher et les boutons radio sur un
-          ou plusieurs des menus contextuels du navigateur. En outre, les menus
-          peuvent être structurés en ajoutant des séparateurs. Lorsque les
-          éléments du menu sont cliqués, un événement est envoyé à l'extension.
+          w-wes éwéments de menu, >w< wes cases à cochew et wes boutons wadio suw un
+          ou pwusieuws d-des menus contextuews du nyavigateuw. en outwe, (U ﹏ U) wes menus
+          p-peuvent êtwe s-stwuctuwés e-en ajoutant des sépawateuws. 😳😳😳 w-wowsque wes
+          éwéments du menu sont c-cwiqués, o.O un événement e-est envoyé à w'extension. òωó
         </p>
       </td>
-      <td><img src="context_menu_example.png" /></td>
-    </tr>
-    <tr>
+      <td><img swc="context_menu_exampwe.png" /></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Sidebars"
-          >Barre latérale</a
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/sidebaws"
+          >bawwe watéwawe</a
         >
       </td>
       <td>
         <p>
-          Un document HTML s'affiche à côté d'une page Web, avec l'option de
-          contenu unique par page. La barre latérale s'ouvre lorsque l'extension
-          est installée, puis obéit à la sélection de visibilité de la barre
-          latérale de l'utilisateur. L'interaction de l'utilisateur dans la
-          barre latérale est traitée par son document HTML.
+          un document htmw s'affiche à côté d-d'une page web, 😳😳😳 avec w'option d-de
+          contenu unique paw p-page. σωσ wa bawwe watéwawe s-s'ouvwe wowsque w'extension
+          est instawwée, (⑅˘꒳˘) puis o-obéit à wa s-séwection de visibiwité de wa b-bawwe
+          w-watéwawe de w'utiwisateuw. (///ˬ///✿) w'intewaction de w'utiwisateuw dans wa
+          bawwe w-watéwawe est t-twaitée paw son d-document htmw. 🥺
         </p>
       </td>
-      <td><img src="bookmarks-sidebar.png" /></td>
-    </tr>
-    <tr>
+      <td><img swc="bookmawks-sidebaw.png" /></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Options_pages"
-          >page d'options</a
+        <a h-hwef="/fw/add-ons/webextensions/usew_intewface/options_pages"
+          >page d-d'options</a
         >
       </td>
       <td>
         <p>
-          Une page qui vous permet de définir les préférences pour votre
-          WebExtension que vos utilisateurs peuvent modifier. L'utilisateur peut
-          accéder à cette page dans le gestionnaire des extensions du
-          navigateur.
+          une page q-qui vous pewmet de définiw wes pwéféwences pouw votwe
+          webextension q-que vos utiwisateuws p-peuvent modifiew. OwO w'utiwisateuw peut
+          a-accédew à c-cette page dans we gestionnaiwe des extensions du
+          nyavigateuw. >w<
         </p>
       </td>
-      <td><img src="options_page.png" /></td>
-    </tr>
-    <tr>
+      <td><img s-swc="options_page.png" /></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/extension_pages"
-          >Extension pages</a
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/extension_pages"
+          >extension pages</a
         >
       </td>
       <td>
         <p>
-          Utilisez les pages Web incluses dans votre WebExtension pour fournir
-          des formulaires, de l'aide ou tout autre contenu requis, dans les
-          fenêtres ou les onglets.
+          utiwisez wes pages web incwuses d-dans votwe webextension pouw fouwniw
+          des fowmuwaiwes, 🥺 d-de w'aide ou tout a-autwe contenu wequis, nyaa~~ dans wes
+          fenêtwes ou wes ongwets. ^^
         </p>
       </td>
-      <td><img src="bundled_page_as_panel_small.png" /></td>
-    </tr>
-    <tr>
+      <td><img s-swc="bundwed_page_as_panew_smow.png" /></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Notifications"
-          >Notifications</a
+        <a h-hwef="/fw/add-ons/webextensions/usew_intewface/notifications"
+          >notifications</a
         >
       </td>
       <td>
         <p>
-          Notifications transitoires affichées à l'utilisateur par le mécanisme
-          de notification du système d'exploitation sous-jacent. Déclenche un
-          événement vers l'extension lorsque l'utilisateur clique sur une
-          notification ou lorsque une notification se ferme (automatiquement ou
-          à la demande de l'utilisateur).
+          nyotifications twansitoiwes affichées à w'utiwisateuw p-paw we mécanisme
+          d-de nyotification du système d'expwoitation sous-jacent. >w< d-décwenche un
+          événement vews w'extension w-wowsque w'utiwisateuw c-cwique suw une
+          n-nyotification ou wowsque une n-nyotification s-se fewme (automatiquement o-ou
+          à wa demande d-de w'utiwisateuw). OwO
         </p>
       </td>
-      <td><img src="notify-shadowed.png" /></td>
-    </tr>
-    <tr>
+      <td><img s-swc="notify-shadowed.png" /></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/Omnibox"
-          >Suggestions de la barre d'addresse</a
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/omnibox"
+          >suggestions de wa b-bawwe d'addwesse</a
         >
       </td>
       <td>
         <p>
-          Offrez des suggestions de barèmes d'adresses personnalisées lorsque
-          l'utilisateur entre un mot-clé.
+          o-offwez d-des suggestions de bawèmes d'adwesses pewsonnawisées w-wowsque
+          w'utiwisateuw e-entwe un m-mot-cwé. XD
         </p>
       </td>
-      <td><img src="omnibox_example_small.png" /></td>
-    </tr>
-    <tr>
+      <td><img swc="omnibox_exampwe_smow.png" /></td>
+    </tw>
+    <tw>
       <td>
-        <a href="/fr/Add-ons/WebExtensions/user_interface/devtools_panels"
-          >Panneaux d'outils de développement</a
+        <a hwef="/fw/add-ons/webextensions/usew_intewface/devtoows_panews"
+          >panneaux d'outiws d-de dévewoppement</a
         >
       </td>
       <td>
         <p>
-          Un onglet avec un document HTML associé qui s'affiche dans les outils
-          de développement du navigateur.
+          u-un o-ongwet avec un document h-htmw associé qui s'affiche d-dans wes outiws
+          de dévewoppement du nyavigateuw. ^^;;
         </p>
       </td>
-      <td><img src="developer_panel_tab.png" /></td>
-    </tr>
+      <td><img swc="devewopew_panew_tab.png" /></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les guides pratiques suivants fournissent des conseils étape par étape pour créer certaines options d'interface utilisateur:
+wes g-guides pwatiques suivants fouwnissent d-des conseiws étape paw étape p-pouw cwéew cewtaines options d-d'intewface utiwisateuw:
 
-- [Lignes directrices en matière d'accessibilité](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/lignes_directrices_en_matiere_accessibilite)
-- [Ajouter un bouton à la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar)
-- [Styles des navigateurs](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
-- [Extension des outils de développement](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
-- [Mettre en place une page de paramètres](/fr/docs/Mozilla/Add-ons/WebExtensions/Implement_a_settings_page)
+- [wignes d-diwectwices e-en matièwe d-d'accessibiwité](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/wignes_diwectwices_en_matiewe_accessibiwite)
+- [ajoutew u-un bouton à wa b-bawwe d'outiws](/fw/docs/moziwwa/add-ons/webextensions/add_a_button_to_the_toowbaw)
+- [stywes des nyavigateuws](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes)
+- [extension des outiws de dévewoppement](/fw/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows)
+- [mettwe en pwace une page de pawamètwes](/fw/docs/moziwwa/add-ons/webextensions/impwement_a_settings_page)

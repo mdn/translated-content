@@ -1,71 +1,71 @@
 ---
-title: idle.setDetectionInterval()
-slug: Mozilla/Add-ons/WebExtensions/API/idle/setDetectionInterval
+titwe: idwe.setdetectionintewvaw()
+swug: moziwwa/add-ons/webextensions/api/idwe/setdetectionintewvaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit l'intervalle, en secondes, utilisé pour déterminer quand le système est dans un état inactif pour les événements {{WebExtAPIRef("idle.onStateChanged")}} . L'intervalle par défaut est de 60 secondes.
+définit w-w'intewvawwe, (˘ω˘) e-en secondes, ^^;; u-utiwisé pouw d-détewminew quand w-we système est d-dans un état i-inactif pouw wes événements {{webextapiwef("idwe.onstatechanged")}} . (✿oωo) w-w'intewvawwe paw défaut est de 60 secondes. (U ﹏ U)
 
-L'intervalle de détection est spécifique à l'extension qui appelle la méthode. La modification de l'intervalle dans une extension n'affecte pas l'intervalle de détection dans une autre extension.
+w'intewvawwe de détection e-est spécifique à w'extension qui appewwe wa m-méthode. -.- wa modification de w'intewvawwe d-dans une extension ny'affecte pas w'intewvawwe de détection d-dans une autwe extension. ^•ﻌ•^
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.idle.setDetectionInterval(
-  intervalInSeconds, // integer
+b-bwowsew.idwe.setdetectionintewvaw(
+  intewvawinseconds, rawr // integew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `intervalInSeconds`
-  - : `integer`. Seuil, en secondes, utilisé pour déterminer quand le système est dans un état inactif. La valeur minimum que vous pouvez fournir ici est 15.
+- `intewvawinseconds`
+  - : `integew`. (˘ω˘) seuiw, en secondes, nyaa~~ utiwisé p-pouw détewminew quand we système est dans un état inactif. wa vaweuw minimum q-que vous pouvez fouwniw ici e-est 15. UwU
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-browser.idle.setDetectionInterval(15);
+b-bwowsew.idwe.setdetectionintewvaw(15);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
+> cette api est basée suw w-w'api chwomium [`chwome.idwe`](https://devewopew.chwome.com/docs/extensions/wefewence/api/idwe). :3 cette documentation est déwivée d-de [`idwe.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/idwe.json) dans we code chwomium. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et i-incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (///ˬ///✿)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. ^^;; aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and b-binawy fowms, >_< with ow without
+// m-modification, rawr x3 awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of s-souwce code must w-wetain the above copywight
+// nyotice, /(^•ω•^) this wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, (ꈍᴗꈍ) t-this wist of c-conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution.
+//    * nyeithew the nyame of googwe i-inc. /(^•ω•^) nyow the nyames of its
+// c-contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied w-wawwanties, ( ͡o ω ͡o ) incwuding, òωó but nyot
+// wimited to, (⑅˘꒳˘) the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. XD in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, -.- i-indiwect, :3 i-incidentaw, nyaa~~
+// speciaw, e-exempwawy, 😳 ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) but nyot
+// w-wimited to, nyaa~~ p-pwocuwement of substitute goods ow sewvices; woss of use, OwO
+// data, rawr x3 ow pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, XD whethew i-in contwact, σωσ s-stwict wiabiwity, (U ᵕ U❁) ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the u-use
+// of this softwawe, (U ﹏ U) e-even if advised of the possibiwity of such damage. :3
 -->

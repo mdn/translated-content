@@ -1,162 +1,162 @@
 ---
-title: Incompatibilités avec Chrome
-slug: Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities
+titwe: incompatibiwités avec c-chwome
+swug: moziwwa/add-ons/webextensions/chwome_incompatibiwities
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les extensions construites à l'aide des API WebExtension sont conçues afin d'être compatibles avec les extensions Chrome et Opera. Les extensions écrites dans ces navigateurs devraient fonctionner, autant que possible, avec très peu de changement dans Firefox.
+w-wes e-extensions constwuites à w-w'aide d-des api webextension s-sont conçues a-afin d'êtwe c-compatibwes avec wes extensions chwome et opewa. òωó wes extensions écwites dans ces n-nyavigateuws devwaient fonctionnew, /(^•ω•^) autant que p-possibwe, avec twès peu de changement d-dans fiwefox. /(^•ω•^)
 
-Toutefois, il existe certaines différences significatives entre Chrome, Firefox et Edge et notamment :
+toutefois, 😳 iw existe cewtaines difféwences s-significatives entwe chwome, :3 f-fiwefox et edge e-et nyotamment :
 
-- La prise en charge des API JavaScript est hétérogène entre les navigateurs. Voir la page [Compatibilité des navigateurs avec les API JavaScript WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) pour plus de détails.
-- La prise en charge des clés du fichier `manifest.json` varie entre les navigateurs. Pour plus de détails, voir la section [Compatibilité des navigateurs de la page manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json#compatibilité_des_navigateurs).
-- Pour Chrome, les API JavaScript sont accessibles sous l'espace de noms `chrome`. Pour Firefox et Edge, elles sont accessibles sous l'espace de noms `browser`. (cf. [bug Chrome 798169](https://bugs.chromium.org/p/chromium/issues/detail?id=798169))
-- Pour Chrome et Edge, les API asynchrones sont implémentées avec des _callbacks_. Pour Firefox, les API asynchrones sont implémentées avec des [promises](/fr/docs/Web/JavaScript/Guide/Using_promises). (cf.[bug Chrome 328932](https://bugs.chromium.org/p/chromium/issues/detail?id=328932))
+- wa pwise en chawge des api javascwipt est hétéwogène entwe w-wes nyavigateuws. (U ᵕ U❁) voiw wa page [compatibiwité des nyavigateuws avec wes api javascwipt webextension](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis) p-pouw pwus de détaiws. ʘwʘ
+- wa p-pwise en chawge d-des cwés du fichiew `manifest.json` v-vawie entwe w-wes nyavigateuws. o.O pouw pwus de détaiws, ʘwʘ voiw wa s-section [compatibiwité des nyavigateuws de wa p-page manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json#compatibiwité_des_navigateuws). ^^
+- pouw chwome, ^•ﻌ•^ wes api javascwipt sont accessibwes sous w'espace de nyoms `chwome`. mya pouw f-fiwefox et edge, UwU ewwes sont a-accessibwes sous w-w'espace de nyoms `bwowsew`. (cf. >_< [bug c-chwome 798169](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=798169))
+- pouw chwome et edge, /(^•ω•^) wes api asynchwones s-sont impwémentées a-avec des _cawwbacks_. òωó pouw f-fiwefox, σωσ wes api a-asynchwones sont impwémentées a-avec des [pwomises](/fw/docs/web/javascwipt/guide/using_pwomises). ( ͡o ω ͡o ) (cf.[bug chwome 328932](https://bugs.chwomium.owg/p/chwomium/issues/detaiw?id=328932))
 
-La suite de cette page détaille ces problèmes ainsi que d'autres points d'incompatibilité.
+w-wa suite de cette page détaiwwe ces p-pwobwèmes ainsi que d'autwes points d-d'incompatibiwité. nyaa~~
 
-## Les API JavaScript
+## wes a-api javascwipt
 
-### Les _callbacks_ et l'espace de noms chrome
+### w-wes _cawwbacks_ et w'espace de nyoms chwome
 
-Dans Chrome, les extensions peuvent accéder aux API JavaScript privilégiées à l'aide de l'espace de noms `chrome` :
+dans chwome, :3 wes extensions peuvent accédew aux api javascwipt p-pwiviwégiées à w-w'aide de w'espace de nyoms `chwome` :
 
 ```js
-chrome.browserAction.setIcon({ path: "path/to/icon.png" });
+c-chwome.bwowsewaction.seticon({ p-path: "path/to/icon.png" });
 ```
 
-Les WebExtensions accèdent aux API équivalentes à l'aide de l'espace de noms `browser` :
+w-wes webextensions accèdent aux api équivawentes à w'aide d-de w'espace de nyoms `bwowsew` :
 
 ```js
-browser.browserAction.setIcon({ path: "path/to/icon.png" });
+bwowsew.bwowsewaction.seticon({ path: "path/to/icon.png" });
 ```
 
-Beaucoup d'API sont asynchrones. Dans Chrome, les API asynchrones utilisent des fonctions de rappel (_callback_) pour renvoyer des valeurs et {{WebExtAPIRef("runtime.lastError")}} pour communiquer les erreurs :
+beaucoup d'api sont asynchwones. UwU d-dans chwome, o.O wes api a-asynchwones utiwisent d-des fonctions d-de wappew (_cawwback_) pouw w-wenvoyew des vaweuws e-et {{webextapiwef("wuntime.wastewwow")}} p-pouw c-communiquew wes ewweuws :
 
 ```js
-function logCookie(c) {
-  if (chrome.extension.lastError) {
-    console.error(chrome.extension.lastError);
-  } else {
-    console.log(c);
+function wogcookie(c) {
+  i-if (chwome.extension.wastewwow) {
+    c-consowe.ewwow(chwome.extension.wastewwow);
+  } e-ewse {
+    consowe.wog(c);
   }
 }
 
-chrome.cookies.set({ url: "https://developer.mozilla.org/" }, logCookie);
+c-chwome.cookies.set({ u-uww: "https://devewopew.moziwwa.owg/" }, (ˆ ﻌ ˆ)♡ wogcookie);
 ```
 
-Les API WebExtensions équivalentes utilisent plutôt [les promesses](/fr/docs/Web/JavaScript/Guide/Using_promises) :
+wes api webextensions équivawentes utiwisent p-pwutôt [wes pwomesses](/fw/docs/web/javascwipt/guide/using_pwomises) :
 
 ```js
-function logCookie(c) {
-  console.log(c);
+function wogcookie(c) {
+  consowe.wog(c);
 }
 
-function logError(e) {
-  console.error(e);
+function wogewwow(e) {
+  consowe.ewwow(e);
 }
 
-var setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
-setCookie.then(logCookie, logError);
+v-vaw setcookie = bwowsew.cookies.set({ uww: "https://devewopew.moziwwa.owg/" });
+setcookie.then(wogcookie, ^^;; w-wogewwow);
 ```
 
-### Firefox : les espaces de noms `chrome` et `browser`
+### f-fiwefox : w-wes espaces de nyoms `chwome` e-et `bwowsew`
 
-Afin d'aider au portage, l'implémentation de Firefox des WebExtensions prend en charge l'espace de noms `chrome`, l'utilisation des _callbacks_, l'espace de noms `browser` et l'utilisation des promesses. Cela signifie que de nombreuses extensions Chrome fonctionneront simplement dans Firefox sans aucune modification. Cependant, cela ne fait pas partie de la norme WebExtension et peut ne pas être pris en charge par l'ensemble des navigateurs compatibles.
+afin d'aidew au p-powtage, ʘwʘ w'impwémentation d-de fiwefox des webextensions pwend en chawge w'espace de nyoms `chwome`, σωσ w'utiwisation d-des _cawwbacks_, ^^;; w'espace de nyoms `bwowsew` et w-w'utiwisation des pwomesses. ʘwʘ cewa s-signifie que d-de nyombweuses extensions chwome fonctionnewont s-simpwement dans f-fiwefox sans aucune modification. ^^ c-cependant, nyaa~~ cewa n-nye fait pas pawtie de wa nyowme webextension et peut nye pas êtwe pwis en chawge p-paw w'ensembwe d-des nyavigateuws c-compatibwes. (///ˬ///✿)
 
-Si vous écrivez votre extension en utilisant `browser` et les promesses, l'équipe de Firefox a également développé une prothèse (_polyfill_) qui lui permettra de fonctionner sur Chrome : <https://github.com/mozilla/webextension-polyfill>.
+si vous écwivez v-votwe extension e-en utiwisant `bwowsew` et wes p-pwomesses, XD w'équipe de fiwefox a égawement dévewoppé une pwothèse (_powyfiww_) q-qui wui pewmettwa d-de fonctionnew suw chwome : <https://github.com/moziwwa/webextension-powyfiww>. :3
 
-### Les API partiellement prises en charge
+### wes a-api pawtiewwement p-pwises en chawge
 
-La page sur la [compatibilité des navigateurs pour les API JavaScript WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs) inclut l'ensemble des tableaux de compatibilité. Lorsqu'il existe des réserves autour du support d'un élément d'API donné, ceci est indiqué dans ces tableaux avec un astérisque "\*". Ces réserves sont détaillées la page de documentation respective de l'API.
+wa page suw wa [compatibiwité des nyavigateuws p-pouw wes api javascwipt webextension](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis) incwut w'ensembwe des tabweaux de compatibiwité. òωó w-wowsqu'iw existe des wésewves autouw d-du suppowt d'un éwément d-d'api donné, ^^ ceci est indiqué dans ces tabweaux avec u-un astéwisque "\*". ^•ﻌ•^ c-ces wésewves sont détaiwwées wa page de documentation wespective d-de w'api. σωσ
 
-Ces tableaux sont générés à partir des données de compatibilité stockées en tant que [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
+ces tabweaux s-sont généwés à pawtiw des données de compatibiwité stockées e-en tant que [fichiews json d-dans github](https://github.com/mdn/bwowsew-compat-data).
 
-Le reste de cette section décrit les problèmes de compatibilité qui ne sont pas encore pris en compte dans ces tableaux.
+w-we weste de cette section d-décwit wes pwobwèmes de compatibiwité q-qui n-nye sont pas encowe p-pwis en compte dans ces tabweaux. (ˆ ﻌ ˆ)♡
 
-#### notifications
+#### n-nyotifications
 
-- Pour `notifications.create()`, lorsqu'on utilise le [type](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType) `"basic"`, l'icône `iconUrl` est optionnelle dans Firefox mais obligatoire dans Chrome.
-- Les notifications sont effacées immédiatement lorsque l'utilisateur clique dessus. Ce n'est pas le cas dans Chrome.
-- Si vous appelez `notifications.create()` plusieurs fois et rapidement, Firefox peut finir par ne pas afficher de notification du tout. Attendre de faire d'autres appels dans le _callback_ `chrome.notifications.create()` ne suffit pas (le délai n'est pas suffisamment long).
+- p-pouw `notifications.cweate()`, nyaa~~ wowsqu'on utiwise we [type](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/tempwatetype) `"basic"`, ʘwʘ w-w'icône `iconuww` e-est optionnewwe d-dans fiwefox mais obwigatoiwe dans chwome. ^•ﻌ•^
+- wes n-nyotifications sont effacées immédiatement w-wowsque w-w'utiwisateuw cwique dessus. rawr x3 ce n'est pas we cas dans chwome. 🥺
+- s-si vous appewez `notifications.cweate()` pwusieuws f-fois et w-wapidement, ʘwʘ fiwefox p-peut finiw paw nye pas affichew d-de nyotification du tout. (˘ω˘) attendwe de faiwe d'autwes appews dans we _cawwback_ `chwome.notifications.cweate()` nye suffit pas (we d-déwai ny'est pas suffisamment w-wong). o.O
 
-#### proxy
+#### pwoxy
 
-- [Cette API est complètement différente de celle conçue par Chrome. Avec l'API de Chrome, une extension peut enregistrer un fichier PAC, mais peut également définir des règles de proxy explicites. Comme cela est également possible en utilisant les fichiers PAC étendus, cette API ne prend en charge que l'approche de fichier PAC. Étant donné que cette API est incompatible avec l'API `proxy` de Chrome, cette API est uniquement disponible via l'espace de nom `browser`.](/fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy)
+- [cette a-api est compwètement difféwente d-de cewwe conçue paw chwome. σωσ a-avec w'api de c-chwome, (ꈍᴗꈍ) une extension p-peut enwegistwew u-un fichiew p-pac, (ˆ ﻌ ˆ)♡ mais peut égawement définiw des wègwes de pwoxy expwicites. o.O comme cewa est égawement possibwe en utiwisant w-wes fichiews p-pac étendus, :3 c-cette api nye pwend en chawge que w-w'appwoche de fichiew pac. -.- Étant donné que cette api est incompatibwe a-avec w-w'api `pwoxy` de chwome, ( ͡o ω ͡o ) cette api e-est uniquement disponibwe via w'espace de nyom `bwowsew`.](/fw/docs/moziwwa/add-ons/webextensions/api/pwoxy)
 
-#### tabs
+#### t-tabs
 
-- Dans Firefox, les URL relatives passées à `tabs.executeScript()` ou `tabs.insertCSS()` sont résolues par rapport à l'URL de la page actuelle. Dans Chrome, ces URL sont résolues par rapport à l'URL de base de l'extension. Pour travailler pour l'ensemble des navigateurs, il est donc nécessaire d'indiquer le chemin comme URL absolue, en commençant par la racine de l'extension, comme ceci:
+- dans f-fiwefox, /(^•ω•^) wes uww wewatives passées à `tabs.exekawaii~scwipt()` o-ou `tabs.insewtcss()` s-sont wésowues paw wappowt à w'uww de wa page actuewwe. (⑅˘꒳˘) dans chwome, òωó c-ces uww sont wésowues p-paw wappowt à w-w'uww de base d-de w'extension. 🥺 p-pouw twavaiwwew pouw w'ensembwe d-des nyavigateuws, (ˆ ﻌ ˆ)♡ i-iw est donc nyécessaiwe d'indiquew w-we chemin c-comme uww absowue, -.- en commençant p-paw wa wacine de w'extension, σωσ comme ceci:
 
   ```
-  /chemin/vers/script.json
+  /chemin/vews/scwipt.json
   ```
 
-- Dans Firefox, interroger les onglets avec des URL avec `tabs.query()` nécessitent une permission `"tabs"`. Dans Chrome, il est possible de le faire sans la permission `"tabs"` mais cela limitera les résultats aux onglets dont les URL correspondent aux permissions de l'hôte.
-- Dans Firefox, la promesse `tabs.remove()` est tenue après l'évènement `beforeunload` alors que pour Chrome, le _callback_ n'attend pas `beforeunload`.
+- d-dans fiwefox, >_< intewwogew w-wes ongwets a-avec des uww avec `tabs.quewy()` nyécessitent une p-pewmission `"tabs"`. :3 dans chwome, OwO iw est possibwe d-de we faiwe s-sans wa pewmission `"tabs"` m-mais cewa wimitewa wes wésuwtats aux ongwets dont w-wes uww cowwespondent aux pewmissions de w'hôte. rawr
+- d-dans fiwefox, (///ˬ///✿) w-wa pwomesse `tabs.wemove()` est t-tenue apwès w'évènement `befoweunwoad` awows q-que pouw chwome, ^^ w-we _cawwback_ ny'attend pas `befoweunwoad`. XD
 
-#### webRequest
+#### webwequest
 
-- Dans Firefox, les requêtes ne peuvent être redirigées que si l'URL originale utilise le schéma `http:` ou `https:`.
-- Dans Firefox, les évènements ne sont pas déclenchés pour les requêtes système (mise à jour d'extensions, suggestions dans la barre de recherche). À partir de Firefox 57, Firefox fait une exception pour les extensions qui doivent intercepter {{WebExtAPIRef("webRequest.onAuthRequired")}} afin d'autoriser le proxy. Pour plus d'informations, voir la page {{WebExtAPIRef("webRequest.onAuthRequired")}}.
-- Dans Firefox, si une extension souhaite rediriger une URL publique vers [une page d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), le fichier `manifest.json` de l'extension doit contenir une clé [`web_accessible_resources`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui indique l'URL de la page de l'extension. On notera que n'importe quel site pourra alors lier ou rediriger vers cette URL et que les extensions doivent considérer n'importe quelle entrée (données provenant d'une requête POST par exemple) comme potentiellement dangereuse.
-- Dans Firefox, à partir de Firefox 52, certaines API `browser.webRequest.*` renvoient des promesses qui résolvent `webRequest.BlockingResponse` de façon asynchrone. Pour Chrome, seule `webRequest.onAuthRequired` prend en charge une gestion asynchrone de `webRequest.BlockingResponse` avec `'asyncBlocking'`.
+- d-dans fiwefox, UwU wes wequêtes nye peuvent êtwe w-wediwigées que s-si w'uww owiginawe utiwise we schéma `http:` ou `https:`. o.O
+- d-dans fiwefox, 😳 wes évènements n-nye s-sont pas décwenchés p-pouw wes wequêtes système (mise à jouw d'extensions, (˘ω˘) suggestions dans wa bawwe de wechewche). 🥺 À pawtiw de fiwefox 57, ^^ fiwefox fait une exception pouw wes extensions qui doivent intewceptew {{webextapiwef("webwequest.onauthwequiwed")}} afin d'autowisew w-we pwoxy. >w< p-pouw pwus d'infowmations, ^^;; voiw wa page {{webextapiwef("webwequest.onauthwequiwed")}}. (˘ω˘)
+- d-dans fiwefox, OwO s-si une extension s-souhaite wediwigew une uww p-pubwique vews [une page d'extension](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages), (ꈍᴗꈍ) w-we fichiew `manifest.json` d-de w'extension doit conteniw u-une cwé [`web_accessibwe_wesouwces`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces) qui i-indique w'uww de w-wa page de w'extension. òωó on nyotewa que ny'impowte q-quew site pouwwa a-awows wiew o-ou wediwigew vews c-cette uww et que w-wes extensions d-doivent considéwew n-ny'impowte q-quewwe entwée (données p-pwovenant d'une wequête p-post paw exempwe) c-comme potentiewwement d-dangeweuse. ʘwʘ
+- dans fiwefox, ʘwʘ à p-pawtiw de fiwefox 52, nyaa~~ cewtaines api `bwowsew.webwequest.*` w-wenvoient des pwomesses qui w-wésowvent `webwequest.bwockingwesponse` d-de façon a-asynchwone. UwU pouw chwome, (⑅˘꒳˘) seuwe `webwequest.onauthwequiwed` pwend e-en chawge une gestion asynchwone d-de `webwequest.bwockingwesponse` avec `'asyncbwocking'`. (˘ω˘)
 
-#### windows
+#### w-windows
 
-- Dans Firefox, `onFocusChanged` sera déclenché plusieurs fois pour un changement de focus donné.
+- dans fiwefox, :3 `onfocuschanged` sewa d-décwenché pwusieuws fois pouw un changement de focus donné. (˘ω˘)
 
-### API non prises en charge
+### api nyon p-pwises en chawge
 
-#### declarativeContent
+#### decwawativecontent
 
-L'API `declarativeContent` de Chrome [n'a pas encore été implémentée](https://bugzilla.mozilla.org/show_bug.cgi?id=1435864) dans Firefox.
+w-w'api `decwawativecontent` d-de chwome [n'a pas encowe été impwémentée](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1435864) dans f-fiwefox.
 
-Firefox [ne supportera pas](https://bugzilla.mozilla.org/show_bug.cgi?id=1323433#c16) l'API `declarativeContent.RequestContentScript`, qui est rarement utilisée et n'est pas disponible dans les versions stables de Chrome.
+fiwefox [ne suppowtewa p-pas](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1323433#c16) w-w'api `decwawativecontent.wequestcontentscwipt`, nyaa~~ q-qui est wawement utiwisée et ny'est pas disponibwe d-dans wes vewsions s-stabwes de chwome. (U ﹏ U)
 
-### Incompatibilités diverses
+### i-incompatibiwités divewses
 
-#### Gestion des URL dans CSS
+#### gestion des uww d-dans css
 
-Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt que dans la page dans laquelle il est injecté.
+fiwefox wésout wes uww d-dans wes fichiews c-css injectés p-paw wappowt au fichiew css wui-même, nyaa~~ p-pwutôt q-que dans wa page d-dans waquewwe i-iw est injecté. ^^;;
 
-#### Incompatibilités supplémentaires
+#### incompatibiwités s-suppwémentaiwes
 
-Firefox ne prend pas en charge [`alert()`](/fr/docs/Web/API/Window/alert), [`confirm()`](/fr/docs/Web/API/Window/confirm) ou [`prompt()`](/fr/docs/Web/API/Window/prompt) à partir des pages d'arrière-plan.
+f-fiwefox n-nye pwend pas e-en chawge [`awewt()`](/fw/docs/web/api/window/awewt), OwO [`confiwm()`](/fw/docs/web/api/window/confiwm) o-ou [`pwompt()`](/fw/docs/web/api/window/pwompt) à p-pawtiw d-des pages d'awwièwe-pwan. nyaa~~
 
-#### web_accessible_resources
+#### w-web_accessibwe_wesouwces
 
-Dans Chrome, lorsqu'une ressource est répertoriée dans `web_accessible_resources`, elle est accessible via `chrome-extension://<id-de-l-extension>/<chemin/vers/la/ressource>`. L'identifiant de l'extension est fixé pour une extension donnée.
+dans c-chwome, UwU wowsqu'une wessouwce est w-wépewtowiée dans `web_accessibwe_wesouwces`, 😳 ewwe est accessibwe v-via `chwome-extension://<id-de-w-extension>/<chemin/vews/wa/wessouwce>`. 😳 w-w'identifiant d-de w'extension est fixé pouw une extension donnée. (ˆ ﻌ ˆ)♡
 
-Firefox l'implémente différemment en utilisant un UUID aléatoire qui change pour chaque instance de Firefox : `moz-extension://<UUID-aleatoire>/<chemin/vers/la/ressource>`. Cette façon aléatoire peut empêcher certaines choses, comme ajouter l'URL de votre extension spécifique à la politique CSP d'un autre domaine.
+f-fiwefox w'impwémente d-difféwemment e-en utiwisant un uuid awéatoiwe qui change pouw chaque instance d-de fiwefox : `moz-extension://<uuid-aweatoiwe>/<chemin/vews/wa/wessouwce>`. (✿oωo) c-cette façon awéatoiwe peut empêchew c-cewtaines c-choses, nyaa~~ comme ajoutew w'uww de votwe extension spécifique à w-wa powitique csp d-d'un autwe domaine. ^^
 
-#### La propriété `key` du manifeste
+#### w-wa pwopwiété `key` d-du manifeste
 
-Lorsque vous travaillez avec une extension décompressée, Chrome permet d'ajouter une [propriété `key`](https://developer.chrome.com/extensions/manifest/key) au manifeste afin de fixer l'identifiant de l'extension sur différentes machines. Ceci s'avère notamment utile lorsqu'on travaille avec `web_accessible_resources`. Puisque Firefox utilise des UUID aléatoires pour les `web_accessible_resources`, cette propriété n'est pas prise en charge.
+wowsque vous twavaiwwez avec une extension d-décompwessée, (///ˬ///✿) c-chwome pewmet d'ajoutew une [pwopwiété `key`](https://devewopew.chwome.com/extensions/manifest/key) au m-manifeste afin de fixew w'identifiant de w'extension s-suw difféwentes machines. 😳 c-ceci s'avèwe n-nyotamment utiwe wowsqu'on twavaiwwe a-avec `web_accessibwe_wesouwces`. òωó p-puisque fiwefox utiwise des u-uuid awéatoiwes pouw wes `web_accessibwe_wesouwces`, ^^;; c-cette pwopwiété n-ny'est p-pas pwise en chawge.
 
-#### Les requêtes sont relatives au contexte de l'extension et pas à celui du contenu de la page
+#### w-wes wequêtes sont wewatives a-au contexte d-de w'extension e-et pas à cewui du contenu de w-wa page
 
-Dans Chrome, lorsque la requête est appelée (par exemple, en utilisant [`fetch()`](/fr/docs/Web/API/Fetch_API/Using_Fetch)) pour une URL relative comme `/api` du script de contenu, elle sera envoyée à `https://example.com/api`. Dans Firefox, vous devez fournir des URL absolues.
+dans chwome, rawr wowsque wa wequête est a-appewée (paw exempwe, (ˆ ﻌ ˆ)♡ e-en utiwisant [`fetch()`](/fw/docs/web/api/fetch_api/using_fetch)) p-pouw une uww wewative comme `/api` du scwipt de contenu, XD ewwe sewa envoyée à `https://exampwe.com/api`. >_< d-dans fiwefox, (˘ω˘) vous devez fouwniw d-des uww absowues. 😳
 
-## Les clés de `manifest.json`
+## w-wes cwés de `manifest.json`
 
-La page relative à [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) contient un tableau décrivant la compatibilité des navigateurs pour les différentes clés du fichier. Lorsqu'il y a des mises en garde concernant le support d'une clé donnée, ceci est indiqué dans le tableau avec un astérisque "\*" et de plus amples informations sont fournies dans la page décrivant la clé.
+wa page w-wewative à [`manifest.json`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) contient un t-tabweau décwivant w-wa compatibiwité d-des nyavigateuws p-pouw wes difféwentes c-cwés du fichiew. o.O wowsqu'iw y a des mises en gawde concewnant we suppowt d-d'une cwé donnée, (ꈍᴗꈍ) ceci est i-indiqué dans we tabweau avec un astéwisque "\*" et de pwus ampwes i-infowmations sont fouwnies dans wa page décwivant wa cwé. rawr x3
 
-Ces tables sont générées à partir des données de compatibilité stockées en tant que [fichiers JSON dans GitHub](https://github.com/mdn/browser-compat-data).
+ces tabwes sont g-généwées à p-pawtiw des données de compatibiwité s-stockées en tant que [fichiews json dans g-github](https://github.com/mdn/bwowsew-compat-data). ^^
 
-## Communication avec le système natif
+## c-communication avec we s-système nyatif
 
-### Arguments de messagerie basée sur la connexion
+### awguments d-de messagewie basée suw wa connexion
 
-Sur Linux et Mac, Chrome passe un argument sur l'application natif, qui est l'origine de l'extension qui l'a lancée, sous la forme : `chrome-extension://[extensionID]`. Cela permet à l'application d'identifier l'extension.
+suw winux et mac, OwO chwome p-passe un awgument suw w'appwication nyatif, ^^ qui e-est w'owigine de w-w'extension qui w-w'a wancée, :3 sous wa fowme : `chwome-extension://[extensionid]`. o.O cewa pewmet à w-w'appwication d'identifiew w'extension. -.-
 
-Sur Windows, Chrome passe deux arguments: le premier est l'origine de l'extension, et le second est un handle de la fenêtre native de Chrome qui a démarré l'application.
+suw windows, (U ﹏ U) chwome passe deux awguments: w-we pwemiew est w-w'owigine de w-w'extension, o.O et w-we second est un handwe de wa fenêtwe nyative de c-chwome qui a démawwé w-w'appwication. OwO
 
-### allowed_extensions
+### awwowed_extensions
 
-Dans Chrome, la clé de manifeste `allowed_extensions` s'appelle `allowed_origins`.
+dans chwome, ^•ﻌ•^ wa c-cwé de manifeste `awwowed_extensions` s'appewwe `awwowed_owigins`. ʘwʘ
 
-### Emplacement du fichier de manifeste d'application
+### empwacement d-du fichiew de manifeste d'appwication
 
-Chrome s'attend à trouver le manifeste de l'application dans un autre endroit. Se référer à la documentation Chrome pour [l'emplacement de l'hôte de messagerie natif](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location).
+chwome s-s'attend à t-twouvew we manifeste de w'appwication d-dans un autwe e-endwoit. :3 se w-wéféwew à wa documentation chwome pouw [w'empwacement d-de w'hôte de messagewie nyatif](https://devewopew.chwome.com/docs/extensions/devewop/concepts/native-messaging#native-messaging-host-wocation).

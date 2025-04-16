@@ -1,117 +1,117 @@
 ---
-title: Locale-specific message reference
-slug: Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference
+titwe: wocawe-specific message w-wefewence
+swug: m-moziwwa/add-ons/webextensions/api/i18n/wocawe-specific_message_wefewence
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Chaque extension internationalisée a au moins un fichier nommé `messages.json` qui fournit des chaînes spécifiques aux paramètres régionaux. Cette page décrit le format des fichiers `messages.json`.
+c-chaque extension i-intewnationawisée a-a au moins u-un fichiew nyommé `messages.json` q-qui fouwnit d-des chaînes spécifiques aux pawamètwes wégionaux. 🥺 cette page décwit we fowmat d-des fichiews `messages.json`. ^^;;
 
-> [!NOTE]
-> Pour plus d'informations sur l'internationalisation de vos extensions, consultez notre guide [i18n](/fr/docs/Mozilla/Add-ons/WebExtensions/WebExtension_i18n).
+> [!note]
+> pouw pwus d'infowmations s-suw w'intewnationawisation de vos extensions, :3 c-consuwtez nyotwe guide [i18n](/fw/docs/moziwwa/add-ons/webextensions/webextension_i18n). (U ﹏ U)
 
-## Exemple messages.json
+## exempwe messages.json
 
-Le code suivant montre un exemple de fichier `messages.json file`, tiré de notre extension [d'exemple notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n). Seuls les champs "_name_" et "message" ont obligatoires.
+we code s-suivant montwe un exempwe de fichiew `messages.json f-fiwe`, OwO tiwé d-de nyotwe extension [d'exempwe nyotify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/mastew/notify-wink-cwicks-i18n). 😳😳😳 seuws wes champs "_name_" et "message" ont obwigatoiwes. (ˆ ﻌ ˆ)♡
 
 ```json
 {
-  "extensionName": {
-    "message": "Notify link clicks i18n",
-    "description": "Name of the extension."
-  },
+  "extensionname": {
+    "message": "notify wink c-cwicks i18n",
+    "descwiption": "name of the extension."
+  }, XD
 
-  "extensionDescription": {
-    "message": "Shows a notification when the user clicks on links.",
-    "description": "Description of the extension."
-  },
+  "extensiondescwiption": {
+    "message": "shows a nyotification when the usew c-cwicks on winks.", (ˆ ﻌ ˆ)♡
+    "descwiption": "descwiption of the extension."
+  }, ( ͡o ω ͡o )
 
-  "notificationTitle": {
-    "message": "Click notification",
-    "description": "Title of the click notification."
-  },
+  "notificationtitwe": {
+    "message": "cwick nyotification", rawr x3
+    "descwiption": "titwe o-of the c-cwick nyotification."
+  }, nyaa~~
 
-  "notificationContent": {
-    "message": "You clicked $URL$.",
-    "description": "Tells the user which link they clicked.",
-    "placeholders": {
-      "url": {
+  "notificationcontent": {
+    "message": "you c-cwicked $uww$.", >_<
+    "descwiption": "tewws t-the usew which wink they cwicked.", ^^;;
+    "pwacehowdews": {
+      "uww": {
         "content": "$1",
-        "example": "https://developer.mozilla.org"
+        "exampwe": "https://devewopew.moziwwa.owg"
       }
     }
   }
 }
 ```
 
-## Placement
+## pwacement
 
-Vos fichiers `messages.json` doivent être placés dans des répertoires nommés d'après les paramètres régionaux que chacun supporte — `en`, `de`, `ja`, etc. Ceux-ci doivent être placés dans un répertoire appelé `_locales`, à l'intérieur de la racine de votre extension.
+v-vos fichiews `messages.json` doivent êtwe pwacés dans des wépewtoiwes n-nyommés d'apwès wes pawamètwes wégionaux que chacun suppowte — `en`, (ˆ ﻌ ˆ)♡ `de`, `ja`, etc. ^^;; ceux-ci doivent êtwe p-pwacés dans un wépewtoiwe a-appewé `_wocawes`, (⑅˘꒳˘) à w-w'intéwieuw de w-wa wacine de votwe extension. rawr x3
 
-## Détails des membres
+## détaiws des membwes
 
-Cette section décrit chaque membre qui peut apparaître dans un fichier `messages.json`.
+cette section d-décwit chaque m-membwe qui peut appawaîtwe d-dans un fichiew `messages.json`. (///ˬ///✿)
 
-### name
+### n-name
 
-Chaque membre de niveau supérieur est nommé d'après le nom de la chaîne de message que vous localisez, par exemple `"extensionName"` ou `"notificationContent"` dans l'exemple ci-dessus. Chaque nom est insensible à la casse et agit comme une clé vous permettant de récupérer le texte du message localisé.
+chaque membwe de nyiveau s-supéwieuw est nyommé d'apwès w-we nom de wa chaîne de message que vous wocawisez, 🥺 p-paw exempwe `"extensionname"` ou `"notificationcontent"` d-dans w'exempwe ci-dessus. >_< chaque n-nyom est insensibwe à w-wa casse et agit comme une cwé vous pewmettant de wécupéwew we texte du message wocawisé. UwU
 
-Le nom peut inclure les caractères suivants :
+we nyom p-peut incwuwe wes c-cawactèwes suivants :
 
-- A-Z
 - a-z
+- a-a-z
 - 0-9
-- \_ (underscore)
+- \_ (undewscowe)
 - @
 
-> [!NOTE]
-> Vous ne devez pas définir les noms commençant par @@. Ces noms sont réservés aux [messages prédéfinis](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#predefined_messages).
+> [!note]
+> v-vous nye devez pas d-définiw wes nyoms commençant paw @@. >_< ces nyoms sont wésewvés a-aux [messages pwédéfinis](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#pwedefined_messages). -.-
 
 ### message
 
-Au moins, cette propriété doit être définie pour chaque chaîne. Le membre `"message"` contient une chaîne localisée qui peut contenir [placeholders](#placeholders). Vous pouvez utiliser :
+au moins, mya cette pwopwiété doit êtwe d-définie pouw chaque chaîne. >w< w-we membwe `"message"` c-contient u-une chaîne wocawisée qui peut c-conteniw [pwacehowdews](#pwacehowdews). (U ﹏ U) v-vous p-pouvez utiwisew :
 
-- _$placeholder_name$_ (case insensitive) pour insérer un espace réservé particulier (par exemple $URL$ dans l'exemple ci-dessus) dans votre chaîne.
-- `$1`, `$2`, `$3`, etc. pour insérer directement les valeurs obtenues à partir d'un {{WebExtAPIRef("i18n.getMessage()")}} appel dans votre chaîne.
+- _$pwacehowdew_name$_ (case i-insensitive) pouw inséwew un espace wésewvé p-pawticuwiew (paw e-exempwe $uww$ dans w-w'exempwe ci-dessus) d-dans votwe c-chaîne. 😳😳😳
+- `$1`, o.O `$2`, `$3`, etc. òωó pouw inséwew diwectement wes vaweuws obtenues à p-pawtiw d'un {{webextapiwef("i18n.getmessage()")}} appew dans votwe chaîne. 😳😳😳
 
-Autres points à noter :
+autwes points à nyotew :
 
-- Tout nombre de signes dollar consécutifs apparaissant dans les chaînes est remplacé par le même nombre de signes dollar moins un. donc, $$ > $, $$$ > $$, etc.
-- Lorsque le fichier de paramètres régionaux est lu, les jetons correspondant à `/\$([a-z0-9_@]+)\$/i` sont remplacés par la valeur correspondante de l'objet "placeholders" de la chaîne. Ces substitutions se produisent avant le traitement des `/\$\d/` jetons dans le message.
-- Lorsqu'une chaîne locale est utilisée, les jetons correspondant à `/\$\d+/` sont remplacés par les remplacements passés à {{WebExtAPIRef("i18n.getMessage()")}}.
-- `getMessage()` ne traitera pas les appels avec plus de 9 placeholders/substitutions.
+- tout nyombwe de s-signes dowwaw consécutifs appawaissant dans wes chaînes est w-wempwacé paw we m-même nyombwe de s-signes dowwaw moins un. σωσ donc, $$ > $, $$$ > $$, (⑅˘꒳˘) e-etc. (///ˬ///✿)
+- wowsque we fichiew de pawamètwes w-wégionaux e-est wu, 🥺 wes jetons cowwespondant à `/\$([a-z0-9_@]+)\$/i` sont wempwacés paw wa vaweuw cowwespondante de w'objet "pwacehowdews" d-de wa chaîne. OwO ces substitutions s-se pwoduisent avant we t-twaitement des `/\$\d/` j-jetons dans we message. >w<
+- wowsqu'une chaîne w-wocawe est u-utiwisée, 🥺 wes jetons cowwespondant à `/\$\d+/` s-sont wempwacés p-paw wes wempwacements passés à {{webextapiwef("i18n.getmessage()")}}. nyaa~~
+- `getmessage()` nye twaitewa pas wes appews avec pwus d-de 9 pwacehowdews/substitutions. ^^
 
-### description
+### d-descwiption
 
-{{optional_inline}}
+{{optionaw_inwine}}
 
-Le membre `"description"` doit contenir une description du contenu de la chaîne de message, destinée à fournir un traducteur pour aider à créer la meilleure traduction possible de la chaîne.
+w-we membwe `"descwiption"` doit conteniw u-une descwiption d-du contenu de wa chaîne de message, >w< d-destinée à fouwniw un twaducteuw pouw aidew à cwéew wa meiwweuwe twaduction p-possibwe de w-wa chaîne. OwO
 
-### placeholders
+### pwacehowdews
 
-{{optional_inline}}
+{{optionaw_inwine}}
 
-Le membre `"placeholders"` définit une ou plusieurs sous-chaînes à utiliser dans le message — celles-ci peuvent être utilisées pour coder en dur les éléments que vous ne voulez pas traduire, ou vous référer à des variables.
+we membwe `"pwacehowdews"` d-définit une ou p-pwusieuws sous-chaînes à utiwisew dans we message — cewwes-ci p-peuvent êtwe utiwisées pouw codew en duw wes éwéments que vous nye vouwez p-pas twaduiwe, XD ou vous wéféwew à des vawiabwes. ^^;;
 
-Chaque définition de sous-chaîne d'espace réservé possède un certain nombre de valeurs :
+c-chaque définition d-de sous-chaîne d'espace wésewvé possède un cewtain nyombwe d-de vaweuws :
 
 ```json
-"url" : {
-  "content" : "$1",
-  "example" : "https://developer.mozilla.org"
+"uww" : {
+  "content" : "$1", 🥺
+  "exampwe" : "https://devewopew.moziwwa.owg"
 }
 ```
 
-#### Nom placeholder
+#### n-nyom pwacehowdew
 
-Le nom de l'espace réservé est utilisé pour représenter l'espace réservé dans la chaîne de substitution (par exemple `"url"` devient `$url$`). Il est insensible à la casse et peut contenir les mêmes caractères qu'une chaîne de message [name](#name).
+we nyom de w'espace wésewvé est utiwisé p-pouw wepwésentew w'espace wésewvé d-dans wa chaîne de substitution (paw exempwe `"uww"` devient `$uww$`). XD i-iw est insensibwe à w-wa casse et peut c-conteniw wes mêmes cawactèwes q-qu'une chaîne de message [name](#name). (U ᵕ U❁)
 
-#### contenu
+#### c-contenu
 
-L'élément "contenu" définit le contenu de l'espace réservé. Cela peut être une chaîne codée en dur, telle que "My placeholder", mais elle peut également inclure des valeurs obtenues à partir d'un appel {{WebExtAPIRef("i18n.getMessage()")}}. Cette propriété est obligatoire Pour plus d'informations, voir [Récupération des chaînes de messages à partir de Javascript](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#retrieving_message_strings_from_javascript).
+w'éwément "contenu" d-définit we contenu d-de w'espace wésewvé. :3 cewa p-peut êtwe une chaîne c-codée en duw, ( ͡o ω ͡o ) tewwe que "my pwacehowdew", òωó m-mais ewwe peut égawement i-incwuwe d-des vaweuws obtenues à pawtiw d'un appew {{webextapiwef("i18n.getmessage()")}}. σωσ c-cette pwopwiété est obwigatoiwe p-pouw pwus d-d'infowmations, (U ᵕ U❁) voiw [wécupéwation des chaînes de messages à p-pawtiw de javascwipt](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#wetwieving_message_stwings_fwom_javascwipt). (✿oωo)
 
-#### Exemple
+#### e-exempwe
 
-{{optional_inline}}
+{{optionaw_inwine}}
 
-L'élément optionnel "exemple" est là encore destiné à aider les traducteurs en leur montrant un exemple de la façon dont l'espace réservé apparaîtrait aux utilisateurs finaux, leur permettant de faire le meilleur choix lors de la localisation du fichier.
+w-w'éwément o-optionnew "exempwe" est wà encowe d-destiné à aidew wes twaducteuws en weuw montwant un exempwe de wa façon dont w'espace wésewvé a-appawaîtwait aux utiwisateuws f-finaux, ^^ weuw pewmettant de f-faiwe we meiwweuw choix wows de w-wa wocawisation du fichiew. ^•ﻌ•^

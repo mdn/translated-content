@@ -1,97 +1,97 @@
 ---
-title: downloads.onErased
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/onErased
+titwe: downwoads.onewased
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/onewased
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'événement **`onErased()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement est effacé de l'historique du navigateur.
+w'événement **`onewased()`** d-de w-w'api {{webextapiwef("downwoads")}} s-se décwenche w-wowsqu'un téwéchawgement e-est e-effacé de w'histowique d-du nyavigateuw. XD
 
-L'écouteur reçoit le paramètre `downloadId` de l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question en tant que paramètre.
+w'écouteuw weçoit we pawamètwe `downwoadid` de w'objet {{webextapiwef('downwoads.downwoaditem')}} e-en question en tant que pawamètwe. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.downloads.onErased.addListener(listener);
-browser.downloads.onErased.removeListener(listener);
-browser.downloads.onErased.hasListener(listener);
+b-bwowsew.downwoads.onewased.addwistenew(wistenew);
+bwowsew.downwoads.onewased.wemovewistenew(wistenew);
+b-bwowsew.downwoads.onewased.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer..
-- `hasListener(listener)`
-  - : Vérifie si un `listener` donné est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à c-cet événement. :3
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. nyaa~~ w'awgument `wistenew` est w'écouteuw à suppwimew..
+- `haswistenew(wistenew)`
+  - : v-véwifie si un `wistenew` donné est enwegistwé pouw cet événement. 😳 wenvoie `twue` s-s'iw écoute, (⑅˘꒳˘) sinon `fawse`. nyaa~~
 
-## Syntaxe addListener
+## s-syntaxe a-addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
+  - : u-une fonction de wappew qui sewa appewée wowsque c-cet événement se pwoduiwa. OwO cette fonction w-wecevwa wes awguments suivants :
 
-    - `downloadId`
-      - : Un `integer` représentant l'`id` du {{WebExtAPIRef('downloads.DownloadItem')}} qui a été effacé.
+    - `downwoadid`
+      - : un `integew` wepwésentant w'`id` du {{webextapiwef('downwoads.downwoaditem')}} qui a été effacé.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ajoute un écouteur pour les événements `onErased` , puis effacez le téléchargement le plus récent :
+a-ajoute un écouteuw p-pouw wes événements `onewased` , rawr x3 puis effacez we téwéchawgement we pwus w-wécent :
 
 ```js
-function handleErased(item) {
-  console.log(`Erased: ${item}`);
+f-function handweewased(item) {
+  consowe.wog(`ewased: ${item}`);
 }
 
-browser.downloads.onErased.addListener(handleErased);
+b-bwowsew.downwoads.onewased.addwistenew(handweewased);
 
-var erasing = browser.downloads.erase({
-  limit: 1,
-  orderBy: ["-startTime"],
+v-vaw ewasing = bwowsew.downwoads.ewase({
+  w-wimit: 1, XD
+  owdewby: ["-stawttime"], σωσ
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> c-cette api est basée suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). (U ᵕ U❁)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. :3 a-aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce a-and binawy fowms, σωσ with ow without
+// modification, >w< awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the a-above copywight
+// n-nyotice, 😳😳😳 this w-wist of conditions and the fowwowing d-discwaimew. OwO
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight n-nyotice, 😳 this wist o-of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution.
+//    * nyeithew the nyame of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews and c-contwibutows
+// "as is" and any expwess ow impwied wawwanties, ʘwʘ incwuding, ( ͡o ω ͡o ) but nyot
+// wimited t-to, o.O the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. >w< in nyo event shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow any d-diwect, 😳 indiwect, i-incidentaw, 🥺
+// speciaw, rawr x3 exempwawy, o.O ow consequentiaw damages (incwuding, rawr but n-nyot
+// wimited t-to, ʘwʘ pwocuwement o-of substitute goods ow sewvices; w-woss of use, 😳😳😳
+// d-data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ^^;; whethew in contwact, o.O s-stwict wiabiwity, (///ˬ///✿) o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in a-any way out of the use
+// of this softwawe, σωσ even if advised of t-the possibiwity of such damage. nyaa~~
 -->

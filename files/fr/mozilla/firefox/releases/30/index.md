@@ -1,75 +1,75 @@
 ---
-title: Firefox 30 for developers
-slug: Mozilla/Firefox/Releases/30
+titwe: fiwefox 30 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/30
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## Changements pour les développeurs Web
+## c-changements pouw w-wes dévewoppeuws w-web
 
-### Outils de développement
+### outiws d-de dévewoppement
 
-- Un surligneur de modèle de boîte a été implémenté ([bug Firefox 663778](https://bugzil.la/663778)).
-- Partout où un nœud DOM apparaît dans la sortie de la console, il est mis en surbrillance lorsque vous survolez cette sortie de la console ([bug Firefox 757866](https://bugzil.la/757866)). De même, toutes les fonctions et les objets JS sont mis en évidence dans la sortie de la console ([bug Firefox 584733](https://bugzil.la/584733)). Vous trouverez plus d'informations sur l'amélioration de la console dans cet [article de blog](http://www.robodesign.ro/mihai/blog/web-console-improvements-episode-30).
-- La prise en charge de {{domxref("Console.count()")}} a été ajoutée ([bug Firefox 922208](https://bugzil.la/922208)).
+- u-un suwwigneuw d-de modèwe d-de boîte a été impwémenté ([bug fiwefox 663778](https://bugziw.wa/663778)). >w<
+- pawtout où un nyœud dom a-appawaît dans wa sowtie de wa consowe, (U ﹏ U) iw est mis e-en suwbwiwwance wowsque vous s-suwvowez cette sowtie de wa consowe ([bug fiwefox 757866](https://bugziw.wa/757866)). 😳😳😳 de même, o.O t-toutes wes fonctions et wes objets j-js sont mis en évidence d-dans wa sowtie de wa consowe ([bug fiwefox 584733](https://bugziw.wa/584733)). òωó vous twouvewez pwus d'infowmations s-suw w'améwiowation de wa consowe dans cet [awticwe de bwog](http://www.wobodesign.wo/mihai/bwog/web-consowe-impwovements-episode-30). 😳😳😳
+- w-wa pwise en chawge de {{domxwef("consowe.count()")}} a-a été a-ajoutée ([bug f-fiwefox 922208](https://bugziw.wa/922208)). σωσ
 
-### CSS
+### c-css
 
-- La propriété {{cssxref("background-blend-mode")}} a été activée par défaut ([bug Firefox 970600](https://bugzil.la/970600)).
-- La propriété non standard {{cssxref("overflow-clip-box")}} a été implémentée pour une utilisation dans les feuilles de style UA uniquement ([bug Firefox 966992](https://bugzil.la/966992)).
-- La propriété {{cssxref("line-height")}} affecte désormais les entrées de texte sur une seule ligne (types `<input type=text|password|email|search|tel|url|unknown>`) bien qu'elle ne puisse pas les réduire en dessous d'une hauteur de ligne de `1.0` ([bug Firefox 349259](https://bugzil.la/349259)).
-- La propriété {{cssxref("line-height")}} affecte désormais également `type=button`, sans aucune restriction ([bug Firefox 697451](https://bugzil.la/697451)).
-- Le changement du nom des images clés n'affecte pas les éléments actuels ([bug Firefox 978648](https://bugzil.la/978648)).
+- wa pwopwiété {{cssxwef("backgwound-bwend-mode")}} a été activée paw défaut ([bug f-fiwefox 970600](https://bugziw.wa/970600)). (⑅˘꒳˘)
+- wa pwopwiété nyon standawd {{cssxwef("ovewfwow-cwip-box")}} a-a été impwémentée pouw une utiwisation dans wes feuiwwes de stywe ua uniquement ([bug f-fiwefox 966992](https://bugziw.wa/966992)). (///ˬ///✿)
+- wa pwopwiété {{cssxwef("wine-height")}} a-affecte désowmais w-wes entwées d-de texte suw une seuwe wigne (types `<input type=text|passwowd|emaiw|seawch|tew|uww|unknown>`) bien qu'ewwe nye p-puisse pas wes wéduiwe e-en dessous d'une hauteuw d-de wigne de `1.0` ([bug f-fiwefox 349259](https://bugziw.wa/349259)). 🥺
+- wa pwopwiété {{cssxwef("wine-height")}} a-affecte désowmais égawement `type=button`, OwO sans a-aucune westwiction ([bug fiwefox 697451](https://bugziw.wa/697451)). >w<
+- we changement d-du nyom des images cwés n-ny'affecte pas wes éwéments actuews ([bug f-fiwefox 978648](https://bugziw.wa/978648)). 🥺
 
-### HTML
+### h-htmw
 
-_Pas de changement._
+_pas de changement._
 
-### JavaScript
+### javascwipt
 
-- Nouvelles [compréhensions de tableaux](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) compatibles ES6 `[for (item of iterable) item]` et [compréhensions de générateur](/fr/docs/Web/JavaScript/Reference/Deprecated_and_obsolete_features) `(for (item of iterable) item)` ont été implémentées ([bug Firefox 979865](https://bugzil.la/979865)).
-- [Les tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#property_access) sont désormais extensibles et prennent en charge de nouvelles propriétés nommées ([bug Firefox 695438](https://bugzil.la/695438)).
-- La propriété {{jsxref("Error.prototype.stack")}} contient désormais des numéros de colonne ([bug Firefox 762556](https://bugzil.la/762556)) et a été améliorée [lors de l'utilisation des appels `Function()` et `eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Error/stack#stack_of_eval'ed_code). Cela peut vous aider à mieux déboguer le code JavaScript minifié ou généré.
-- La méthode `Promise.cast()` a été renommée {{jsxref("Promise.resolve()")}} ([bug Firefox 966348](https://bugzil.la/966348)).
+- nyouvewwes [compwéhensions de tabweaux](/fw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes) compatibwes es6 `[fow (item o-of itewabwe) i-item]` et [compwéhensions de g-généwateuw](/fw/docs/web/javascwipt/wefewence/depwecated_and_obsowete_featuwes) `(fow (item o-of i-itewabwe) item)` ont été impwémentées ([bug fiwefox 979865](https://bugziw.wa/979865)). nyaa~~
+- [wes tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#pwopewty_access) s-sont désowmais extensibwes et pwennent en chawge de nyouvewwes pwopwiétés nyommées ([bug fiwefox 695438](https://bugziw.wa/695438)). ^^
+- w-wa pwopwiété {{jsxwef("ewwow.pwototype.stack")}} c-contient désowmais d-des nyuméwos d-de cowonne ([bug fiwefox 762556](https://bugziw.wa/762556)) e-et a-a été améwiowée [wows d-de w'utiwisation d-des appews `function()` et `evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/ewwow/stack#stack_of_evaw'ed_code). >w< c-cewa peut v-vous aidew à mieux d-déboguew we c-code javascwipt m-minifié ou généwé. OwO
+- wa méthode `pwomise.cast()` a été wenommée {{jsxwef("pwomise.wesowve()")}} ([bug fiwefox 966348](https://bugziw.wa/966348)). XD
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-- {{domxref("Navigator.sendBeacon")}} a été implémenté, facilitant la collecte des données de télémétrie ([bug Firefox 936340](https://bugzil.la/936340)).
-- Ajout d'une propriété `relList` renvoyant un {{domxref("DOMTokenList")}} à {{domxref("HTMLLinkElement")}}, {{domxref("HTMLAreaElement")}} et {{domxref("HTMLAnchorElement")}} ([bug Firefox 968637](https://bugzil.la/968637)).
-- Conformément à la dernière spécification, le premier argument de {{domxref("OscillatorNode.start")}} et {{domxref("OscillatorNode.stop")}} est désormais facultatif et vaut par défaut `0` ([bug Firefox 982541](https://bugzil.la/982541)).
-- La méthode {{domxref("Navigator.requestWakeLock()")}} et la méthode non standard {{domxref("MozWakeLock")}} ne sont plus disponibles sur le Web sur le Desktop ([bug Firefox 963366](https://bugzil.la/963366)).
-- La constante `DOM_VK_ENTER` a été supprimée de {{domxref("KeyboardEvent")}} ([bug Firefox 969247](https://bugzil.la/969247)).
-- Les composants Web {{domxref("Document.register")}} ont été adaptés pour suivre le comportement décrit dans la dernière version de la spécification ([bug Firefox 856140](https://bugzil.la/856140)).
-- La prise en charge de base des régions Hit sur canvas a été ajouté: les méthodes {{domxref("CanvasRenderingContext2D.addHitRegion()")}} et {{domxref("CanvasRenderingContext2D.removeHitRegion()")}} ont été ajoutées. Ceux-ci sont désactivés par défaut; pour les activer, définissez la préférence `canvas.hitregions.enabled` sur `true` ([bug Firefox 966591](https://bugzil.la/966591)).
-- Le non standard, et obsolète depuis Firefox 15, {{domxref("Blob.mozSlice")}} n'est plus supporté ([bug Firefox 961804](https://bugzil.la/961804)).
-- Les non standards {{domxref("ArchiveReader")}} et {{domxref("ArchiveRequest")}} ne sont plus exposés au Web ([bug Firefox 968883](https://bugzil.la/968883)).
-- Les [constructeurs WebIDL](https://searchfox.org/mozilla-central/source/dom/webidl/) ne peuvent plus être appelés en tant que fonctions. Ils doivent être précédés du mot-clé `new` ([bug Firefox 916644](https://bugzil.la/916644)).
-- Ajout du support d'une nouvelle valeur (`alpha`) pour le deuxième paramètre, optionnel, de la méthode {{domxref("HTMLCanvasElement.getContext()")}} permettant de définir si le mélange alpha doit être stocké ou non pour ce contexte. Dans le cas contraire, la valeur alpha par pixel dans ce magasin est toujours de `1.0`. Cela permet au back-end de mettre en œuvre une procédure accélérée ([bug Firefox 982480](https://bugzil.la/982480)).
-- {{domxref("GlobalWorkerScope.consle")}} renvoie maintenant pour le {{domxref("Console")}} normal ; {{domxref("WorkerConsole")}} a été supprimé ([bug Firefox 965860](https://bugzil.la/965860)).
-- L'extension {{domxref("WebGL_debug_shaders")}} WebGL a été implémentée ([bug Firefox 968374](https://bugzil.la/968374)).
+- {{domxwef("navigatow.sendbeacon")}} a-a été impwémenté, ^^;; faciwitant wa cowwecte des données de téwémétwie ([bug fiwefox 936340](https://bugziw.wa/936340)). 🥺
+- a-ajout d'une pwopwiété `wewwist` wenvoyant un {{domxwef("domtokenwist")}} à {{domxwef("htmwwinkewement")}}, XD {{domxwef("htmwaweaewement")}} e-et {{domxwef("htmwanchowewement")}} ([bug f-fiwefox 968637](https://bugziw.wa/968637)). (U ᵕ U❁)
+- confowmément à w-wa dewnièwe spécification, :3 we p-pwemiew awgument de {{domxwef("osciwwatownode.stawt")}} e-et {{domxwef("osciwwatownode.stop")}} e-est désowmais facuwtatif et vaut paw défaut `0` ([bug fiwefox 982541](https://bugziw.wa/982541)).
+- wa méthode {{domxwef("navigatow.wequestwakewock()")}} e-et wa méthode nyon standawd {{domxwef("mozwakewock")}} n-nye sont pwus disponibwes suw w-we web suw we desktop ([bug f-fiwefox 963366](https://bugziw.wa/963366)). ( ͡o ω ͡o )
+- wa constante `dom_vk_entew` a été suppwimée d-de {{domxwef("keyboawdevent")}} ([bug f-fiwefox 969247](https://bugziw.wa/969247)). òωó
+- wes c-composants web {{domxwef("document.wegistew")}} o-ont été adaptés pouw suivwe we compowtement décwit dans wa dewnièwe vewsion d-de wa spécification ([bug f-fiwefox 856140](https://bugziw.wa/856140)). σωσ
+- w-wa pwise en chawge de b-base des wégions h-hit suw canvas a été ajouté: w-wes méthodes {{domxwef("canvaswendewingcontext2d.addhitwegion()")}} et {{domxwef("canvaswendewingcontext2d.wemovehitwegion()")}} ont été ajoutées. (U ᵕ U❁) ceux-ci sont désactivés p-paw défaut; p-pouw wes activew, (✿oωo) définissez wa pwéféwence `canvas.hitwegions.enabwed` s-suw `twue` ([bug f-fiwefox 966591](https://bugziw.wa/966591)). ^^
+- we nyon standawd, ^•ﻌ•^ et obsowète depuis f-fiwefox 15, XD {{domxwef("bwob.mozswice")}} ny'est pwus suppowté ([bug fiwefox 961804](https://bugziw.wa/961804)). :3
+- wes nyon standawds {{domxwef("awchiveweadew")}} e-et {{domxwef("awchivewequest")}} nye sont pwus exposés au web ([bug f-fiwefox 968883](https://bugziw.wa/968883)). (ꈍᴗꈍ)
+- w-wes [constwucteuws webidw](https://seawchfox.owg/moziwwa-centwaw/souwce/dom/webidw/) nye peuvent pwus êtwe a-appewés en tant q-que fonctions. :3 iws doivent êtwe pwécédés du mot-cwé `new` ([bug f-fiwefox 916644](https://bugziw.wa/916644)). (U ﹏ U)
+- ajout du s-suppowt d'une nyouvewwe vaweuw (`awpha`) pouw we deuxième pawamètwe, UwU o-optionnew, 😳😳😳 de wa méthode {{domxwef("htmwcanvasewement.getcontext()")}} pewmettant d-de définiw s-si we méwange awpha doit êtwe s-stocké ou nyon pouw ce contexte. XD d-dans we c-cas contwaiwe, o.O wa v-vaweuw awpha paw pixew dans ce m-magasin est toujouws d-de `1.0`. (⑅˘꒳˘) cewa pewmet au back-end de mettwe e-en œuvwe une p-pwocéduwe accéwéwée ([bug f-fiwefox 982480](https://bugziw.wa/982480)). 😳😳😳
+- {{domxwef("gwobawwowkewscope.conswe")}} wenvoie maintenant pouw we {{domxwef("consowe")}} n-nyowmaw ; {{domxwef("wowkewconsowe")}} a été s-suppwimé ([bug f-fiwefox 965860](https://bugziw.wa/965860)). nyaa~~
+- w'extension {{domxwef("webgw_debug_shadews")}} webgw a été impwémentée ([bug f-fiwefox 968374](https://bugziw.wa/968374)). rawr
 
-### MathML
+### m-mathmw
 
-_Pas de changement._
+_pas d-de changement._
 
-### SVG
+### s-svg
 
-- {{SVGElement("feDropShadow")}}, et son interface {{domxref("SVGFEDropShadowElement")}}, du module Filter Effects sont désormais supportés ([bug Firefox 964200](https://bugzil.la/964200)).
+- {{svgewement("fedwopshadow")}}, -.- et s-son intewface {{domxwef("svgfedwopshadowewement")}}, du moduwe fiwtew effects sont désowmais suppowtés ([bug fiwefox 964200](https://bugziw.wa/964200)). (✿oωo)
 
-### Audio/Vidéo
+### audio/vidéo
 
-- Sous Linux, Gstreamer 1.0 est désormais supporté (au lieu de 0.10) ([bug Firefox 806917](https://bugzil.la/806917)).
+- s-sous winux, /(^•ω•^) gstweamew 1.0 est désowmais s-suppowté (au wieu de 0.10) ([bug f-fiwefox 806917](https://bugziw.wa/806917)). 🥺
 
-## Sécurité
+## sécuwité
 
-_Pas de changement._
+_pas d-de changement._
 
-## Changements pour les développeurs d'add-on et de Mozilla
+## c-changements pouw w-wes dévewoppeuws d-d'add-on et d-de moziwwa
 
-- L'interface `nsIDOMWindowUtils` supporte désormais l'attribut booléen `audioMuted` et `audioVolume`, un float dans la plage `[0.0` , `1.0]`, permettant de contrôler le son produit par une fenêtre (c'est-à-dire n'importe quel onglet ou iframe). Il n'y a pas d'interface utilisateur pour cela, mais est disponible pour les add-ons. ([bug Firefox 923247](https://bugzil.la/923247))
+- w'intewface `nsidomwindowutiws` s-suppowte désowmais w'attwibut boowéen `audiomuted` et `audiovowume`, ʘwʘ un fwoat dans wa pwage `[0.0` , UwU `1.0]`, pewmettant d-de contwôwew w-we son pwoduit p-paw une fenêtwe (c'est-à-diwe ny'impowte q-quew ongwet ou ifwame). XD iw ny'y a pas d'intewface utiwisateuw pouw c-cewa, (✿oωo) mais est d-disponibwe pouw wes add-ons. :3 ([bug f-fiwefox 923247](https://bugziw.wa/923247))
 
-## Voir aussi
+## voiw aussi
 
-### Anciennes versions
+### anciennes vewsions
 
-{{Firefox_for_developers('29')}}
+{{fiwefox_fow_devewopews('29')}}

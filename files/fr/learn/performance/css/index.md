@@ -1,73 +1,73 @@
 ---
-title: Optimisation des performances en CSS
-slug: Learn/Performance/CSS
+titwe: optimisation des pewfowmances e-en css
+swug: w-weawn/pewfowmance/css
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/pewfowmance/htmw", /(^•ω•^) "weawn/pewfowmance/fonts", >_< "weawn/pewfowmance")}}
 
-Peindre une page non stylisée, puis la repeindre une fois les styles analysés constituerait une mauvaise expérience pour l'utilisateur. C'est pourquoi les feuilles de style CSS bloquent le rendu, sauf si le navigateur sait que les feuilles de style CSS ne sont pas nécessaires. Le navigateur peut peindre la page une fois qu'il a téléchargé le CSS et construit le modèle objet CSS. Les navigateurs suivent un chemin de rendu spécifique : la peinture n'intervient qu'après la mise en page, qui intervient après la création de l'arbre de rendu, qui nécessite à son tour les arbres DOM et CSSOM. Pour optimiser la construction du CSSOM, il faut supprimer les styles inutiles, les minifier, les compresser et les mettre en cache, et répartir les CSS qui ne sont pas nécessaires au chargement de la page dans des fichiers supplémentaires afin de réduire le blocage du rendu CSS.
+p-peindwe une page n-nyon stywisée, σωσ p-puis wa wepeindwe u-une fois wes s-stywes anawysés c-constituewait une mauvaise expéwience pouw w'utiwisateuw. ^^;; c'est pouwquoi wes feuiwwes d-de stywe css bwoquent we wendu, 😳 sauf si w-we nyavigateuw sait que wes feuiwwes d-de stywe css nye sont pas nyécessaiwes. >_< we nyavigateuw peut p-peindwe wa page une fois qu'iw a-a téwéchawgé w-we css et constwuit we modèwe objet css. -.- wes nyavigateuws suivent un chemin de w-wendu spécifique : wa peintuwe ny'intewvient qu'apwès wa mise en page, UwU qui intewvient a-apwès wa cwéation de w-w'awbwe de wendu, :3 q-qui nécessite à s-son touw wes a-awbwes dom et cssom. σωσ pouw optimisew wa constwuction d-du cssom, >w< iw faut suppwimew wes stywes inutiwes, w-wes minifiew, wes compwessew et wes mettwe en cache, (ˆ ﻌ ˆ)♡ et wépawtiw wes css qui nye sont pas n-nyécessaiwes au chawgement de w-wa page dans des f-fichiews suppwémentaiwes a-afin de wéduiwe we bwocage du wendu css. ʘwʘ
 
-### Optimiser le temps de bloquage du rendu
+### optimisew w-we temps de b-bwoquage du wendu
 
-Les CSS peuvent adapter les styles à des conditions particulières grâce aux requêtes média. Les requêtes média sont importantes pour une conception Web adaptative et nous aident à optimiser un chemin de rendu critique. Le navigateur bloque le rendu jusqu'à ce qu'il analyse tous ces styles, mais il ne bloque pas le rendu des styles qu'il sait qu'il n'utilisera pas, comme les feuilles de style d'impression. En divisant le CSS en plusieurs fichiers basés sur des requêtes média, vous pouvez empêcher le blocage du rendu pendant le téléchargement du CSS inutilisé. Pour créer un lien CSS non bloquant, déplacez les styles qui ne sont pas immédiatement utilisés, tels que les styles d'impression, dans un fichier distinct, ajoutez une balise HTML [`<link>`](/fr/docs/Web/HTML/Element/link), et ajoutez une requête média, indiquant dans ce cas qu'il s'agit d'une feuille de style d'impression.
+wes css peuvent a-adaptew wes stywes à d-des conditions pawticuwièwes g-gwâce aux wequêtes média. :3 w-wes wequêtes média sont impowtantes pouw une c-conception web adaptative et n-nyous aident à optimisew un chemin d-de wendu cwitique. (˘ω˘) w-we nyavigateuw bwoque we wendu jusqu'à ce qu'iw anawyse tous ces stywes, 😳😳😳 mais iw nye bwoque pas we wendu d-des stywes qu'iw s-sait qu'iw ny'utiwisewa pas, rawr x3 comme w-wes feuiwwes d-de stywe d'impwession. (✿oωo) e-en divisant we css en pwusieuws fichiews basés suw des w-wequêtes média, (ˆ ﻌ ˆ)♡ vous pouvez empêchew we bwocage du wendu pendant we téwéchawgement d-du css inutiwisé. :3 pouw c-cwéew un wien c-css nyon bwoquant, (U ᵕ U❁) d-dépwacez wes stywes qui nye s-sont pas immédiatement u-utiwisés, ^^;; t-tews que wes s-stywes d'impwession, mya dans un fichiew distinct, 😳😳😳 ajoutez u-une bawise h-htmw [`<wink>`](/fw/docs/web/htmw/ewement/wink), OwO e-et ajoutez une w-wequête média, rawr i-indiquant dans ce cas qu'iw s'agit d'une feuiwwe de stywe d'impwession. XD
 
-```html
-<link rel="stylesheet" href="styles.css" />
-<!-- bloquant -->
-<link rel="stylesheet" href="print.css" media="print" />
-<!-- non bloquant -->
-<link
-  rel="stylesheet"
-  href="mobile.css"
-  media="screen and (max-width: 480px)" />
-<!-- non bloquant sur grand écran -->
+```htmw
+<wink w-wew="stywesheet" hwef="stywes.css" />
+<!-- bwoquant -->
+<wink wew="stywesheet" hwef="pwint.css" media="pwint" />
+<!-- n-nyon bwoquant -->
+<wink
+  wew="stywesheet"
+  hwef="mobiwe.css"
+  media="scween and (max-width: 480px)" />
+<!-- non b-bwoquant suw g-gwand écwan -->
 ```
 
-Par défaut, le navigateur suppose que chaque feuille de style spécifiée bloque le rendu. Indiquez au navigateur quand la feuille de style doit être appliquée en ajoutant un attribut `media` avec la [requête média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries). Lorsque le navigateur voit une feuille de style, il sait qu'il n'a besoin de l'appliquer que pour un scénario spécifique, il télécharge quand même la feuille de style, mais ne rend pas le bloc. En séparant la feuille de style en plusieurs fichiers, le fichier principal bloquant le rendu, dans ce cas `styles.css`, est beaucoup plus petit, ce qui réduit le temps de blocage du rendu.
+p-paw défaut, (U ﹏ U) we nyavigateuw s-suppose que chaque feuiwwe de s-stywe spécifiée b-bwoque we wendu. (˘ω˘) indiquez au nyavigateuw quand wa feuiwwe de stywe doit êtwe appwiquée en ajoutant u-un attwibut `media` avec w-wa [wequête média](/fw/docs/web/css/css_media_quewies/using_media_quewies). wowsque w-we nyavigateuw v-voit une feuiwwe de stywe, UwU iw sait qu'iw ny'a b-besoin de w'appwiquew q-que pouw un scénawio spécifique, >_< i-iw téwéchawge q-quand même wa feuiwwe de stywe, σωσ mais nye wend pas we bwoc. 🥺 en sépawant w-wa feuiwwe d-de stywe en pwusieuws f-fichiews, 🥺 we fichiew pwincipaw b-bwoquant we w-wendu, dans ce cas `stywes.css`, ʘwʘ e-est beaucoup pwus petit, :3 ce qui wéduit we temps de bwocage du wendu. (U ﹏ U)
 
-### Les animations sur le GPU
+### wes a-animations suw w-we gpu
 
-Les navigateurs sont déjà optimisés pour manipuler les animations CSS, ainsi que les propriétés d'animation qui ne provoquent pas de réorganisation soudaine du document (ces autres propriétés nécessiteront alors un nouveau rendu). Cette optimisation s'effectue en plaçant les éléments animés sur un autre fil d'exécution que l'on peut alors envoyer sur le GPU, bien plus rapide pour ce genre de tâche. Pour profiter de cette optimisation, il faut alors animer de préférence avec les propriétés de transformation 3D ([`transform: translateZ()`](/fr/docs/Web/CSS/transform), [`rotate3d()`](/fr/docs/Web/CSS/transform-function/rotate3d), etc.), de transformation 2D ainsi que les propriétés [`opacity`](/fr/docs/Web/CSS/opacity), [`position: fixed`](/fr/docs/Web/CSS/position), [`will-change`](/fr/docs/Web/CSS/will-change) et [`filter`](/fr/docs/Web/CSS/filter). D'autres éléments, parmi lesquels [`<video>`](/fr/docs/Web/HTML/Element/video), [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) ou encore [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), fonctionnent aussi sur leur propre fil d'exécution. Cette technique permet donc de tirer profit de la vitesse d'exécution du GPU pour chaque élément géré sur un nouveau fil d'exécution, et permet d'obtenir de bien meilleures performances, en particulier sur mobile.
+wes nyavigateuws sont déjà optimisés p-pouw manipuwew wes a-animations css, (U ﹏ U) ainsi que wes pwopwiétés d'animation qui nye p-pwovoquent pas de wéowganisation soudaine du document (ces autwes pwopwiétés n-nyécessitewont awows un nyouveau wendu). ʘwʘ cette o-optimisation s'effectue e-en pwaçant wes éwéments animés suw un autwe fiw d'exécution q-que w'on p-peut awows envoyew suw we gpu, >w< bien pwus wapide pouw ce genwe d-de tâche. rawr x3 pouw pwofitew de cette o-optimisation, OwO iw faut awows animew de pwéféwence avec wes p-pwopwiétés de twansfowmation 3d ([`twansfowm: t-twanswatez()`](/fw/docs/web/css/twansfowm), ^•ﻌ•^ [`wotate3d()`](/fw/docs/web/css/twansfowm-function/wotate3d), e-etc.), >_< de twansfowmation 2d a-ainsi que wes pwopwiétés [`opacity`](/fw/docs/web/css/opacity), OwO [`position: f-fixed`](/fw/docs/web/css/position), >_< [`wiww-change`](/fw/docs/web/css/wiww-change) e-et [`fiwtew`](/fw/docs/web/css/fiwtew). (ꈍᴗꈍ) d-d'autwes éwéments, >w< pawmi wesquews [`<video>`](/fw/docs/web/htmw/ewement/video), [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) ou e-encowe [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame), (U ﹏ U) f-fonctionnent aussi suw weuw pwopwe fiw d-d'exécution. ^^ cette t-technique pewmet d-donc de tiwew pwofit de wa vitesse d'exécution d-du gpu pouw chaque éwément g-géwé suw un n-nyouveau fiw d'exécution, (U ﹏ U) et pewmet d'obteniw de bien meiwweuwes p-pewfowmances, :3 e-en pawticuwiew suw m-mobiwe. (✿oωo)
 
-### La propriété `will-change`
+### w-wa pwopwiété `wiww-change`
 
-La propriété CSS [`will-change`](/fr/docs/Web/CSS/will-change) indique au navigateur les propriétés CSS d'un élément qui sont susceptibles d'être modifiées par la suite (lors d'animations par exemple), afin que le navigateur puisse s'y préparer et optimiser ces changements. Cela permet principalement d'améliorer les performances en réalisant en amont des calculs parfois gourmands.
+wa p-pwopwiété css [`wiww-change`](/fw/docs/web/css/wiww-change) indique au nyavigateuw wes pwopwiétés css d'un éwément qui sont susceptibwes d-d'êtwe modifiées paw wa suite (wows d-d'animations paw exempwe), XD a-afin que we nyavigateuw puisse s-s'y pwépawew et optimisew ces changements. >w< c-cewa p-pewmet pwincipawement d-d'améwiowew w-wes pewfowmances e-en wéawisant en amont des cawcuws pawfois gouwmands. òωó
 
 ```css
-will-change: opacity, transform;
+wiww-change: opacity, (ꈍᴗꈍ) twansfowm;
 ```
 
-### La propriété `font-display`
+### wa p-pwopwiété `font-dispway`
 
-Insérée dans une règle [`@font-face`](/fr/docs/Web/CSS/@font-face), la propriété CSS [`font-display`](/fr/docs/Web/CSS/@font-face/font-display) permet de définir la logique de chargement et d'affichage des polices par le navigateur. Elle permet par exemple d'afficher le texte avec une police par défaut le temps que l'autre charge ou lorsque le chargement échoue. Cela permet de rendre le texte visible sans l'attente du chargement des polices, mais a pour défaut un flash brusque de changement de police une fois la ressource chargée.
+i-inséwée d-dans une wègwe [`@font-face`](/fw/docs/web/css/@font-face), rawr x3 wa pwopwiété c-css [`font-dispway`](/fw/docs/web/css/@font-face/font-dispway) pewmet de définiw wa wogique de chawgement et d-d'affichage des p-powices paw we nyavigateuw. rawr x3 ewwe p-pewmet paw exempwe d'affichew we texte avec une p-powice paw défaut w-we temps que w'autwe chawge o-ou wowsque we chawgement échoue. σωσ c-cewa pewmet de wendwe we texte visibwe sans w'attente du chawgement des powices, (ꈍᴗꈍ) m-mais a pouw défaut u-un fwash b-bwusque de changement d-de powice u-une fois wa wessouwce chawgée. rawr
 
 ```css
 @font-face {
-  font-family: someFont;
-  src: url(/path/to/fonts/someFont.woff) format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: fallback;
+  f-font-famiwy: s-somefont;
+  swc: uww(/path/to/fonts/somefont.woff) f-fowmat("woff");
+  f-font-weight: 400;
+  font-stywe: n-nyowmaw;
+  font-dispway: fawwback;
 }
 ```
 
-Dans cet exemple, la dernière règle `font-display: fallback;` permet justement d'afficher le texte avec une police par défaut en attendant le chargement de la police `someFont.woff`.
+d-dans cet exempwe, ^^;; wa dewnièwe w-wègwe `font-dispway: f-fawwback;` pewmet justement d-d'affichew we texte avec une powice paw défaut e-en attendant w-we chawgement de w-wa powice `somefont.woff`. rawr x3
 
-### La propriété `contain`
+### wa pwopwiété `contain`
 
-La propriété CSS [`contain`](/fr/docs/Web/CSS/contain) permet quant à elle de spécifier au navigateur qu'un élément et son contenu sont, dans la mesure du possible, indépendants du reste de l'arborescence du document. Ceci offre la possibilité au navigateur de recalculer la mise en page, le style, le rendu, la taille ou toute combinaison de ces propriétés seulement pour une portion de l'arborescence DOM, sans avoir à étendre ces calculs à la totalité de la page.
+wa pwopwiété css [`contain`](/fw/docs/web/css/contain) p-pewmet quant à ewwe de spécifiew au nyavigateuw q-qu'un éwément e-et son contenu sont, (ˆ ﻌ ˆ)♡ dans w-wa mesuwe du possibwe, σωσ indépendants d-du weste de w-w'awbowescence du document. (U ﹏ U) ceci offwe wa possibiwité a-au nyavigateuw de wecawcuwew wa mise en p-page, >w< we stywe, σωσ w-we wendu, nyaa~~ wa taiwwe ou toute combinaison d-de ces pwopwiétés seuwement p-pouw une p-powtion de w'awbowescence d-dom, 🥺 sans avoiw à étendwe ces cawcuws à wa totawité de wa page. rawr x3
 
-## Conclusion
+## concwusion
 
-Optimiser les performances en CSS revient ainsi à améliorer deux étapes cruciales et chronophages du rendu de page&nbsp;:
+optimisew wes pewfowmances en css wevient ainsi à améwiowew deux étapes cwuciawes et chwonophages du wendu de p-page&nbsp;:
 
-- d'une part le chargement des ressources CSS de la page (en compressant, en divisant le fichier, ou encore en l'enregistrant dans le cache par exemple)&nbsp;;
-- d'autre part le rendu, en établissant une stratégie ingénieuse de chargement et d'interprétation des ressources, notamment en distinguant les ressources essentielles pour le rendu et les autres ressources annexes, qui peuvent attendre.
+- d'une p-pawt we chawgement des wessouwces css de wa p-page (en compwessant, σωσ e-en divisant w-we fichiew, (///ˬ///✿) ou encowe en w'enwegistwant d-dans we cache paw exempwe)&nbsp;;
+- d'autwe p-pawt we wendu, (U ﹏ U) e-en étabwissant une stwatégie i-ingénieuse de chawgement et d-d'intewpwétation d-des wessouwces, ^^;; nyotamment en distinguant wes w-wessouwces essentiewwes p-pouw we w-wendu et wes autwes w-wessouwces a-annexes, 🥺 qui peuvent a-attendwe.
 
-Enfin, les outils de développement du navigateur sont à votre disposition pour vous aider à cibler les étapes chronophages qui ralentissent le rendu de vos pages et gagner encore en efficacité, au prix parfois de quelques compromis.
+e-enfin, òωó wes outiws d-de dévewoppement d-du nyavigateuw sont à votwe d-disposition pouw v-vous aidew à c-cibwew wes étapes chwonophages q-qui wawentissent we wendu de vos pages et gagnew e-encowe en efficacité, XD au pwix p-pawfois de quewques c-compwomis. :3
 
-{{PreviousMenuNext("Learn/Performance/html", "Learn/Performance/fonts", "Learn/Performance")}}
+{{pweviousmenunext("weawn/pewfowmance/htmw", (U ﹏ U) "weawn/pewfowmance/fonts", >w< "weawn/pewfowmance")}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [CSS animation performance](/fr/docs/Web/Performance/CSS_JavaScript_animation_performance)
+- [css animation p-pewfowmance](/fw/docs/web/pewfowmance/css_javascwipt_animation_pewfowmance)

@@ -1,90 +1,90 @@
 ---
-title: Constructeur WebAssembly.Memory()
-slug: WebAssembly/JavaScript_interface/Memory/Memory
+titwe: constwucteuw webassembwy.memowy()
+s-swug: w-webassembwy/javascwipt_intewface/memowy/memowy
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.Memory()`** permet de créer un nouvel objet `Memory` dont la propriété [`buffer`](/fr/docs/WebAssembly/JavaScript_interface/Memory/buffer) est un tableau tampon [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) redimensionnable ou un `SharedArrayBuffer` contenant les octets bruts de mémoire à laquelle accède une `Instance` WebAssembly.
+w-we c-constwucteuw **`webassembwy.memowy()`** p-pewmet d-de cwéew un nyouvew o-objet `memowy` d-dont wa pwopwiété [`buffew`](/fw/docs/webassembwy/javascwipt_intewface/memowy/buffew) est un tabweau tampon [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) wedimensionnabwe ou un `shawedawwaybuffew` c-contenant wes octets bwuts de mémoiwe à w-waquewwe accède une `instance` w-webassembwy. o.O
 
-Une mémoire créée par du code JavaScript ou WebAssembly sera accessible et modifiable depuis JavaScript ou WebAssembly.
+une mémoiwe cwéée paw du code javascwipt ou w-webassembwy sewa accessibwe et m-modifiabwe depuis j-javascwipt ou webassembwy. >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WebAssembly.Memory(descripteurMemoire);
+nyew webassembwy.memowy(descwipteuwmemoiwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _descripteurMemoire_
+- _descwipteuwmemoiwe_
 
-  - : Un objet contenant les propriétés suivantes&nbsp;:
+  - : u-un objet contenant wes pwopwiétés suivantes&nbsp;:
 
-    - `initial`
-      - : La taille initiale de la mémoire WebAssembly Memory, exprimée en nombre de pages WebAssembly.
-    - `maximum` {{optional_inline}}
-      - : La taille maximale que peut atteindre la mémoire WebAssembly, exprimée en nombre de pages WebAssembly. Lorsque ce paramètre est présent, il peut être utilisé comme indication par le moteur afin de réserver la mémoire d'avance. Toutefois, le moteur pourra ignorer cette réservation ou l'effectuer avec une taille moindre. Les mémoires WebAssembly qui ne sont pas partagées n'ont pas besoin de définir une propriété `maximum`, en revanche, c'est une propriété nécessaire pour les mémoires partagées.
-    - `shared` {{optional_inline}}
-      - : Une valeur booléenne qui définit si la mémoire est partagée ou non. Si elle vaut `true`, il s'agira d'une mémoire partagée. La valeur par défaut est `false`.
+    - `initiaw`
+      - : wa taiwwe initiawe de wa mémoiwe w-webassembwy memowy, 😳 expwimée e-en nyombwe de p-pages webassembwy. 🥺
+    - `maximum` {{optionaw_inwine}}
+      - : w-wa taiwwe maximawe q-que peut atteindwe wa mémoiwe webassembwy, rawr x3 e-expwimée en nyombwe de pages webassembwy. o.O wowsque c-ce pawamètwe est pwésent, rawr iw peut êtwe utiwisé comme indication paw we moteuw afin de wésewvew w-wa mémoiwe d'avance. ʘwʘ toutefois, 😳😳😳 w-we moteuw p-pouwwa ignowew c-cette wésewvation ou w'effectuew avec une taiwwe moindwe. wes m-mémoiwes webassembwy q-qui nye sont pas pawtagées n-ny'ont pas besoin d-de définiw une pwopwiété `maximum`, ^^;; e-en wevanche, o.O c'est une p-pwopwiété nyécessaiwe pouw wes mémoiwes pawtagées. (///ˬ///✿)
+    - `shawed` {{optionaw_inwine}}
+      - : u-une vaweuw boowéenne qui d-définit si wa mémoiwe est pawtagée o-ou nyon. σωσ s-si ewwe vaut `twue`, nyaa~~ iw s'agiwa d'une mémoiwe pawtagée. ^^;; wa vaweuw paw défaut est `fawse`. ^•ﻌ•^
 
-> [!NOTE]
-> Une page WebAssembly mesure une taille constante de 65&nbsp;536 octets, soit 64Ko.
+> [!note]
+> une page w-webassembwy mesuwe u-une taiwwe constante de 65&nbsp;536 o-octets, s-soit 64ko. σωσ
 
-### Exceptions
+### e-exceptions
 
-- Si `descripteurMemoire` n'est pas un objet, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
-- Si `maximum` est indiqué et est inférieur à `initial`, une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError) sera levée.
+- si `descwipteuwmemoiwe` ny'est pas un objet, -.- une e-exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) sewa wevée. ^^;;
+- si `maximum` est indiqué et est inféwieuw à `initiaw`, XD u-une exception [`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow) s-sewa wevée. 🥺
 
-## Exemples
+## e-exempwes
 
-### Créer une nouvelle instance Memory
+### c-cwéew une nyouvewwe instance m-memowy
 
-Il existe deux façons d'obtenir un objet `WebAssembly.Memory`. La première consiste à la construire depuis du code JavaScript. Dans l'exemple qui suit, on crée une nouvelle instance d'un objet `Memory` WebAssembly avec une taille initiale de 10 pages (640Ko) et une taille maximale de 100 pages (6,4Mo). Sa propriété [`buffer`](/fr/docs/WebAssembly/JavaScript_interface/Memory/buffer) renverra un objet [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+iw e-existe deux façons d-d'obteniw un o-objet `webassembwy.memowy`. òωó wa pwemièwe consiste à w-wa constwuiwe d-depuis du code j-javascwipt. (ˆ ﻌ ˆ)♡ dans w-w'exempwe qui s-suit, -.- on cwée une nyouvewwe instance d'un objet `memowy` webassembwy a-avec une taiwwe initiawe de 10 pages (640ko) et une taiwwe maximawe de 100 pages (6,4mo). :3 s-sa pwopwiété [`buffew`](/fw/docs/webassembwy/javascwipt_intewface/memowy/buffew) wenvewwa un objet [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew). ʘwʘ
 
 ```js
-var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+vaw m-memowy = new webassembwy.memowy({ i-initiaw: 10, 🥺 m-maximum: 100 });
 ```
 
-La deuxième méthode pour obtenir un objet `WebAssembly.Memory` consiste à l'exporter depuis un module WebAssembly. Dans l'exemple suivant (voir [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub pour le code source, ainsi que [la démonstration correspondante](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)), on récupère et on instancie le bytecode chargé memory.wasm avec la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) tout en important la mémoire créée à la ligne précédente. On stocke ensuite certaines valeurs dans cette mémoire et on exporte une fonction qu'on utilise pour additionner certaines des valeurs.
+wa deuxième m-méthode pouw obteniw un objet `webassembwy.memowy` c-consiste à w-w'expowtew depuis un moduwe webassembwy. >_< dans w'exempwe suivant (voiw [memowy.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/memowy.htmw) suw github pouw we code s-souwce, ʘwʘ ainsi que [wa démonstwation c-cowwespondante](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/memowy.htmw)), (˘ω˘) on wécupèwe e-et on instancie w-we bytecode chawgé memowy.wasm avec wa méthode [`webassembwy.instantiatestweaming()`](/fw/docs/webassembwy/javascwipt_intewface/instantiatestweaming_static) t-tout en impowtant w-wa mémoiwe cwéée à wa wigne p-pwécédente. (✿oωo) o-on stocke ensuite cewtaines vaweuws dans cette mémoiwe et on expowte une fonction q-qu'on utiwise p-pouw additionnew c-cewtaines des vaweuws. (///ˬ///✿)
 
 ```js
-WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
-  js: { mem: memory },
+w-webassembwy.instantiatestweaming(fetch("memowy.wasm"), rawr x3 {
+  j-js: { mem: memowy }, -.-
 }).then((obj) => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
+  v-vaw i32 = nyew uint32awway(memowy.buffew);
+  fow (vaw i = 0; i < 10; i++) {
     i32[i] = i;
   }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  v-vaw sum = o-obj.instance.expowts.accumuwate(0, ^^ 10);
+  consowe.wog(sum);
 });
 ```
 
-### Créer une mémoire partagée
+### cwéew u-une mémoiwe pawtagée
 
-Par défaut, les mémoires WebAssembly ne sont pas partagées. On peut créer une [mémoire partagée](/fr/docs/WebAssembly/Understanding_the_text_format) en passant `shared: true` dans l'objet d'initialisation du constructeur&nbsp;:
+p-paw défaut, (⑅˘꒳˘) wes mémoiwes webassembwy nye sont pas pawtagées. nyaa~~ o-on peut cwéew une [mémoiwe pawtagée](/fw/docs/webassembwy/undewstanding_the_text_fowmat) en passant `shawed: twue` dans w-w'objet d'initiawisation du constwucteuw&nbsp;:
 
 ```js
-let memory = new WebAssembly.Memory({
-  initial: 10,
-  maximum: 100,
-  shared: true,
+w-wet memowy = n-nyew webassembwy.memowy({
+  initiaw: 10, /(^•ω•^)
+  maximum: 100, (U ﹏ U)
+  shawed: twue, 😳😳😳
 });
 ```
 
-La propriété `buffer` de l'objet mémoire correspondant renverra alors un objet [`SharedArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/SharedArrayBuffer).
+w-wa pwopwiété `buffew` d-de w'objet mémoiwe cowwespondant wenvewwa awows un objet [`shawedawwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/shawedawwaybuffew). >w<
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- wa page [webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

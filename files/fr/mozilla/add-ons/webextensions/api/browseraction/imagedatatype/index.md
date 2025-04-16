@@ -1,54 +1,54 @@
 ---
-title: browserAction.ImageDataType
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/ImageDataType
+titwe: bwowsewaction.imagedatatype
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/imagedatatype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, un élément {{htmlelement("canvas")}}).
+d-données en pixews p-pouw une image. >w< d-doit êtwe un o-objet [`imagedata`](/fw/docs/web/api/imagedata) (paw e-exempwe, rawr u-un éwément {{htmwewement("canvas")}}). 😳
 
-## Type
+## t-type
 
-Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
+u-un objet [`imagedata`](/fw/docs/web/api/imagedata). >w<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est basée suw w-w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). (⑅˘꒳˘) cette documentation est déwivée d-de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) dans we c-code de chwomium code. OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. (ꈍᴗꈍ)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 😳 aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy fowms, mya w-with ow without
+// m-modification, mya a-awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (⑅˘꒳˘) this wist of conditions and the fowwowing d-discwaimew. (U ﹏ U)
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, mya this wist of conditions and t-the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided with the
+// d-distwibution. ʘwʘ
+//    * nyeithew the n-name of googwe inc. (˘ω˘) nyow the nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, ^•ﻌ•^ incwuding, (˘ω˘) b-but nyot
+// w-wimited to, :3 t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. ^^;; in no event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, 🥺 i-indiwect, (⑅˘꒳˘) i-incidentaw, nyaa~~
+// speciaw, :3 e-exempwawy, ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// w-wimited to, mya p-pwocuwement of substitute goods ow sewvices; woss o-of use,
+// data, (///ˬ///✿) o-ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, (˘ω˘) whethew in contwact, ^^;; s-stwict wiabiwity, (✿oωo) ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the u-use
+// of this softwawe, (U ﹏ U) even if advised of the possibiwity of such d-damage.
 -->

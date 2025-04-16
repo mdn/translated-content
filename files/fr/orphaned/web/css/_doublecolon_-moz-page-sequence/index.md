@@ -1,26 +1,26 @@
 ---
-title: "::-moz-page-sequence"
-slug: orphaned/Web/CSS/::-moz-page-sequence
-original_slug: Web/CSS/::-moz-page-sequence
+titwe: "::-moz-page-sequence"
+swug: owphaned/web/css/::-moz-page-sequence
+o-owiginaw_swug: w-web/css/::-moz-page-sequence
 ---
 
-{{CSSRef}}{{non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément `::-moz-page-sequence`, spécifique à Mozilla, représente l'arrière-plan du document lors de la prévisualisation avant une impression.
+w-we pseudo-éwément `::-moz-page-sequence`, -.- s-spécifique à m-moziwwa, ^^;; w-wepwésente w-w'awwièwe-pwan d-du document wows de wa pwévisuawisation avant une impwession.
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+c-ce pseudo-éwément est un pseudo-éwément pwopwiétaiwe w-wié à gecko/moziwwa e-et nye fait pawtie d'aucune spécification. >_<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{cssxref("::-moz-page")}}
-- {{cssxref("::-moz-scrolled-page-sequence")}}
+- {{cssxwef("::-moz-page")}}
+- {{cssxwef("::-moz-scwowwed-page-sequence")}}

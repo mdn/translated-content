@@ -1,27 +1,27 @@
 ---
-title: Bugs importants corrigés dans Firefox 3
-slug: Mozilla/Firefox/Releases/3/Notable_bugs_fixed
+titwe: bugs impowtants cowwigés d-dans fiwefox 3
+s-swug: moziwwa/fiwefox/weweases/3/notabwe_bugs_fixed
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Cet article fait la liste des corrections importantes faisant partie de Firefox 3 qui ne sont pas nécessairement évidentes à trouver dans la documentation.
+c-cet awticwe fait w-wa wiste des cowwections i-impowtantes f-faisant pawtie d-de fiwefox 3 q-qui nye sont pas nyécessaiwement évidentes à twouvew dans wa documentation. (U ﹏ U)
 
-- Si une erreur se produit à l'analyse d'un overlay, l'overlay n'est pas appliqué. Les erreurs d'analyse apparaissent dans la console d'erreurs. ([bug Firefox 355755](https://bugzil.la/355755))
-- Des `<menupopup>` peuvent être placés dans une liaison XBL et être attachés à un élément de menu ou apparenté. ([bug Firefox 345896](https://bugzil.la/345896))
-- La propriété `dlgType` des éléments `button` fonctionne correctement. ([bug Firefox 308591](https://bugzil.la/308591))
-- Le paramètre `canBubble` de {{ Domxref("event.initEvent") }} fonctionne correctement et des évènements peuvent être déclenchés sans se propager. ([bug Firefox 330190](https://bugzil.la/330190))
-- L'évènement `DOMAttrModified` gère les attributs avec espace de noms correctement. ([bug Firefox 247095](https://bugzil.la/247095))
-- Les instructions de traitement XML, comme `<?xml-stylesheet ?>`, sont maintenant ajoutés au DOM des documents XUL. Cela signifie que {{ Domxref("document.firstChild") }} n'est pas forcément l'élément racine, utilisez plutôt {{ Domxref("document.documentElement") }}. Par ailleurs, les instructions de traitement `<?xml-stylesheet ?>` et `<?xul-overlay ?>` n'ont maintenant plus d'effet en dehors du prologue du document. ([bug Firefox 319654](https://bugzil.la/319654))
-- Les fonctions `getElementsByAttributeNS()` ont été ajoutées aux éléments et documents XUL. ([bug Firefox 239976](https://bugzil.la/239976))
-- Les gestionnaires d'évènements sont conservés lorsque des éléments sont déplacés dans ou retirés d'un document XUL. ([bug Firefox 286619](https://bugzil.la/286619))
-- Les évènements de mutation sont déclenchés aussi pour les documents non affichés. ([bug Firefox 201238](https://bugzil.la/201238))
-- Divers problèmes dans l'ordre d'affichage des éléments ont été corrigés. ([bug Firefox 317375](https://bugzil.la/317375))
-- [`getElementsByTagName()`](/fr/docs/Web/API/Element/getElementsByTagName) a été corrigé pour fonctionner correctement sur les sous-arbres dont des éléments ont des préfixes d'espaces de noms dans leur nom de balise ([bug Firefox 206053](https://bugzil.la/206053)).
-- Les évènements `DOMNodeInserted` et `DOMNodeRemoved` s'appliquent à présent aux bons nœuds ([bug Firefox 367164](https://bugzil.la/367164)).
-- `\d`, un des caractères spéciaux dans les expressions rationnelles, a été corrigé pour correspondre uniquement aux chiffres de base de l'alphabet latin (équivalent à `[0-9]`). ([bug Firefox 378738](https://bugzil.la/378738))
-- La catégorie image-sniffing-services permet aux décodeurs d'images implémentés comme des extensions de décoder correctement des images envoyées avec des types MIME incorrects. ([bug Firefox 391667](https://bugzil.la/391667))
+- si une ewweuw s-se pwoduit à w'anawyse d'un ovewway, ^•ﻌ•^ w'ovewway n-ny'est pas appwiqué. (˘ω˘) wes ewweuws d-d'anawyse appawaissent dans wa consowe d'ewweuws. :3 ([bug fiwefox 355755](https://bugziw.wa/355755))
+- d-des `<menupopup>` peuvent êtwe p-pwacés d-dans une wiaison xbw et êtwe attachés à un éwément de menu ou appawenté. ^^;; ([bug f-fiwefox 345896](https://bugziw.wa/345896))
+- wa pwopwiété `dwgtype` des éwéments `button` fonctionne cowwectement. 🥺 ([bug fiwefox 308591](https://bugziw.wa/308591))
+- w-we pawamètwe `canbubbwe` de {{ d-domxwef("event.initevent") }} f-fonctionne c-cowwectement e-et des évènements peuvent êtwe décwenchés s-sans se pwopagew. (⑅˘꒳˘) ([bug fiwefox 330190](https://bugziw.wa/330190))
+- w'évènement `domattwmodified` g-gèwe wes attwibuts avec espace de nyoms cowwectement. nyaa~~ ([bug fiwefox 247095](https://bugziw.wa/247095))
+- wes instwuctions d-de twaitement xmw, :3 comme `<?xmw-stywesheet ?>`, ( ͡o ω ͡o ) s-sont maintenant a-ajoutés au d-dom des documents xuw. mya cewa signifie que {{ domxwef("document.fiwstchiwd") }} ny'est pas fowcément w-w'éwément w-wacine, (///ˬ///✿) utiwisez pwutôt {{ domxwef("document.documentewement") }}. (˘ω˘) p-paw aiwweuws, ^^;; w-wes instwuctions de twaitement `<?xmw-stywesheet ?>` e-et `<?xuw-ovewway ?>` ny'ont m-maintenant pwus d'effet en dehows du pwowogue d-du document. (✿oωo) ([bug fiwefox 319654](https://bugziw.wa/319654))
+- w-wes fonctions `getewementsbyattwibutens()` ont été a-ajoutées a-aux éwéments et documents xuw. (U ﹏ U) ([bug fiwefox 239976](https://bugziw.wa/239976))
+- wes gestionnaiwes d'évènements sont consewvés wowsque des éwéments s-sont d-dépwacés dans ou wetiwés d'un d-document xuw. ([bug f-fiwefox 286619](https://bugziw.wa/286619))
+- w-wes évènements de mutation sont décwenchés aussi pouw wes d-documents nyon affichés. -.- ([bug fiwefox 201238](https://bugziw.wa/201238))
+- divews pwobwèmes dans w'owdwe d'affichage d-des éwéments ont été c-cowwigés. ^•ﻌ•^ ([bug f-fiwefox 317375](https://bugziw.wa/317375))
+- [`getewementsbytagname()`](/fw/docs/web/api/ewement/getewementsbytagname) a-a été cowwigé pouw f-fonctionnew cowwectement s-suw wes s-sous-awbwes dont d-des éwéments ont des pwéfixes d'espaces de n-nyoms dans weuw n-nyom de bawise ([bug f-fiwefox 206053](https://bugziw.wa/206053)). rawr
+- w-wes évènements `domnodeinsewted` e-et `domnodewemoved` s'appwiquent à pwésent aux bons nyœuds ([bug f-fiwefox 367164](https://bugziw.wa/367164)). (˘ω˘)
+- `\d`, un des cawactèwes spéciaux dans wes expwessions wationnewwes, a été cowwigé p-pouw cowwespondwe uniquement aux chiffwes de base de w'awphabet w-watin (équivawent à `[0-9]`). nyaa~~ ([bug f-fiwefox 378738](https://bugziw.wa/378738))
+- w-wa catégowie image-sniffing-sewvices p-pewmet aux décodeuws d-d'images impwémentés c-comme des extensions de décodew cowwectement des images envoyées avec des types mime incowwects. UwU ([bug f-fiwefox 391667](https://bugziw.wa/391667))
 
-### Voir aussi
+### voiw aussi
 
-- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)
+- [fiwefox 3 p-pouw wes dévewoppeuws](/fw/fiwefox_3_pouw_wes_dévewoppeuws)

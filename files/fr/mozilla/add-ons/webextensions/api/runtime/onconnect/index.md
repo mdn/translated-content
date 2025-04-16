@@ -1,134 +1,134 @@
 ---
-title: runtime.onConnect
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnect
+titwe: wuntime.onconnect
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/onconnect
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé quand une connexion est établie avec un processus d'extension ou un script de contenu.
+w-wancé q-quand une connexion e-est étabwie a-avec un pwocessus d-d'extension o-ou un scwipt d-de contenu. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.runtime.onConnect.addListener(listener);
-browser.runtime.onConnect.removeListener(listener);
-browser.runtime.onConnect.hasListener(listener);
+bwowsew.wuntime.onconnect.addwistenew(wistenew);
+bwowsew.wuntime.onconnect.wemovewistenew(wistenew);
+bwowsew.wuntime.onconnect.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de l'`écouteur` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si un `écouteur` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à c-cet événement. (ˆ ﻌ ˆ)♡
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew cet événement. XD w'awgument de w'`écouteuw` est w-w'écouteuw à suppwimew. (ˆ ﻌ ˆ)♡
+- `haswistenew(wistenew)`
+  - : v-véwifie s-si un `écouteuw` est enwegistwé pouw cet événement. ( ͡o ω ͡o ) wenvoie `twue` s'iw écoute, rawr x3 s-sinon `fawse`. nyaa~~
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
 - `fonction`
 
-  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants:
+  - : une fonction d-de wappew qui sewa appewée w-wowsque cet événement s-se pwoduiwa. >_< w-wa fonction w-wecevwa wes awguments suivants:
 
-    - `port`
-      - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script courant à l'autre contexte auquel il se connecte.
+    - `powt`
+      - : un objet {{webextapiwef('wuntime.powt')}} c-connectant we scwipt couwant à w'autwe contexte a-auquew iw se connecte. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce script de contenu :
+ce scwipt de contenu :
 
-- Se connecte au script d'arrière-plan et stocke le `Port` dans une variable `myPort`
-- Ecoute les messages sur `myPort`, et les enregistre
-- Envoie des messages au script d'arrière-plan, en utilisant `myPort`, lorsque l'utilisateur clique sur le document
+- s-se connecte au scwipt d'awwièwe-pwan e-et stocke w-we `powt` dans u-une vawiabwe `mypowt`
+- ecoute wes messages suw `mypowt`, et wes e-enwegistwe
+- e-envoie des messages au scwipt d'awwièwe-pwan, (ˆ ﻌ ˆ)♡ en u-utiwisant `mypowt`, w-wowsque w'utiwisateuw cwique s-suw we document
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-var myPort = browser.runtime.connect({ name: "port-from-cs" });
-myPort.postMessage({ greeting: "hello from content script" });
+v-vaw mypowt = bwowsew.wuntime.connect({ nyame: "powt-fwom-cs" });
+mypowt.postmessage({ g-gweeting: "hewwo fwom content s-scwipt" });
 
-myPort.onMessage.addListener(function (m) {
-  console.log("In content script, received message from background script: ");
-  console.log(m.greeting);
+mypowt.onmessage.addwistenew(function (m) {
+  consowe.wog("in content s-scwipt, ^^;; weceived m-message fwom backgwound scwipt: ");
+  consowe.wog(m.gweeting);
 });
 
-document.body.addEventListener("click", function () {
-  myPort.postMessage({ greeting: "they clicked the page!" });
+document.body.addeventwistenew("cwick", (⑅˘꒳˘) function () {
+  mypowt.postmessage({ gweeting: "they c-cwicked t-the page!" });
 });
 ```
 
-Le script d'arrière-plan correspondant :
+we scwipt d-d'awwièwe-pwan c-cowwespondant :
 
-- Ecoute les tentatives de connexion de script de contenu
-- Quand il reçoit une tentative de connexion :
+- e-ecoute wes tentatives de connexion de scwipt de contenu
+- q-quand iw weçoit une tentative de connexion :
 
-  - Stocke le port dans une variable nommée `portFromCS`
-  - Envoie un message au script de contenu en utilisant le port
-  - Commence à écouter les messages reçus sur le port et les enregistre
+  - stocke we powt dans une vawiabwe n-nyommée `powtfwomcs`
+  - envoie u-un message a-au scwipt de contenu e-en utiwisant we powt
+  - commence à écoutew w-wes messages w-weçus suw we powt e-et wes enwegistwe
 
-- Envoie des messages au script de contenu, en utilisant `portFromCS`, quand l'utilisateur clique sur l'action du navigateur de l'extension
+- e-envoie des messages au scwipt de contenu, rawr x3 e-en utiwisant `powtfwomcs`, (///ˬ///✿) q-quand w-w'utiwisateuw c-cwique suw w'action d-du nyavigateuw de w'extension
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-var portFromCS;
+vaw powtfwomcs;
 
-function connected(p) {
-  portFromCS = p;
-  portFromCS.postMessage({ greeting: "hi there content script!" });
-  portFromCS.onMessage.addListener(function (m) {
-    console.log("In background script, received message from content script");
-    console.log(m.greeting);
+f-function connected(p) {
+  powtfwomcs = p;
+  powtfwomcs.postmessage({ gweeting: "hi thewe content s-scwipt!" });
+  powtfwomcs.onmessage.addwistenew(function (m) {
+    consowe.wog("in backgwound s-scwipt, 🥺 weceived m-message fwom c-content scwipt");
+    consowe.wog(m.gweeting);
   });
 }
 
-browser.runtime.onConnect.addListener(connected);
+b-bwowsew.wuntime.onconnect.addwistenew(connected);
 
-browser.browserAction.onClicked.addListener(function () {
-  portFromCS.postMessage({ greeting: "they clicked the button!" });
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  p-powtfwomcs.postmessage({ g-gweeting: "they cwicked the button!" });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). >_< cette documentation e-est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code de chwomium c-code. UwU
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à micwosoft e-edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. >_<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. -.- a-aww wights wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce and binawy fowms, >w< w-with ow without
+// modification, (U ﹏ U) awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must w-wetain the above c-copywight
+// nyotice, 😳😳😳 this wist of conditions and the fowwowing d-discwaimew. o.O
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, òωó this wist of conditions and t-the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. 😳😳😳
+//    * n-nyeithew the nyame of googwe inc. σωσ nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, (///ˬ///✿) incwuding, 🥺 b-but nyot
+// wimited to, OwO the i-impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. >w< i-in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, 🥺 i-indiwect, incidentaw, nyaa~~
+// s-speciaw, ^^ exempwawy, >w< ow consequentiaw damages (incwuding, OwO b-but not
+// w-wimited to, XD pwocuwement o-of substitute g-goods ow sewvices; woss o-of use, ^^;;
+// data, ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, 🥺 w-whethew in contwact, XD stwict w-wiabiwity, (U ᵕ U❁) ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any way out of the use
+// o-of this softwawe, :3 e-even if advised o-of the possibiwity o-of such d-damage. ( ͡o ω ͡o )
 -->

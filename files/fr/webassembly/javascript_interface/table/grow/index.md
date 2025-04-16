@@ -1,61 +1,61 @@
 ---
-title: WebAssembly.Table.prototype.grow()
-slug: WebAssembly/JavaScript_interface/Table/grow
+titwe: webassembwy.tabwe.pwototype.gwow()
+swug: w-webassembwy/javascwipt_intewface/tabwe/gwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode **`grow()`**, rattachée au prototype de {{jsxref("WebAssembly.Table")}}, permet d'augmenter la taille du tableau WebAssembly d'un nombre d'éléments donné.
+w-wa méthode **`gwow()`**, (U ﹏ U) w-wattachée a-au pwototype de {{jsxwef("webassembwy.tabwe")}}, (⑅˘꒳˘) p-pewmet d'augmentew w-wa taiwwe du t-tabweau webassembwy d-d'un nyombwe d'éwéments donné. òωó
 
-## Syntaxe
+## syntaxe
 
 ```js
-table.grow(nombre);
+tabwe.gwow(nombwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `nombre`
-  - : Le nombre d'éléments qu'on souhaite ajouter au tableau.
+- `nombwe`
+  - : w-we nyombwe d'éwéments qu'on souhaite ajoutew a-au tabweau. ʘwʘ
 
-### Valeur de retour
+### vaweuw de w-wetouw
 
-La taille du tableau avant l'agrandissement.
+wa taiwwe du tabweau avant w'agwandissement. /(^•ω•^)
 
-### Exceptions
+### exceptions
 
-Si l'opération `grow()` échoue, pour quelque raison que ce soit, une exception {{jsxref("RangeError")}} sera levée.
+s-si w'opéwation `gwow()` échoue, pouw quewque w-waison que c-ce soit, ʘwʘ une exception {{jsxwef("wangeewwow")}} sewa wevée. σωσ
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit, on crée une instance de `Table` pour représenter un tableau WebAssembly avec une taille initiale de 2 et une taille maximale de 10.
+dans w'exempwe qui suit, on cwée une i-instance de `tabwe` pouw wepwésentew un tabweau webassembwy avec une taiwwe initiawe d-de 2 et une taiwwe maximawe d-de 10. OwO
 
 ```js
-var table = new WebAssembly.Table({
-  element: "anyfunc",
-  initial: 2,
-  maximum: 10,
+v-vaw tabwe = nyew w-webassembwy.tabwe({
+  e-ewement: "anyfunc", 😳😳😳
+  initiaw: 2, 😳😳😳
+  maximum: 10, o.O
 });
 ```
 
-On étend ensuite le tableau d'une unité en utilisant la méthode `grow()` :
+o-on étend ensuite we tabweau d'une unité en utiwisant w-wa méthode `gwow()` :
 
 ```js
-console.log(table.length); // "2"
-console.log(table.grow(1)); // "2"
-console.log(table.length); // "3"
+consowe.wog(tabwe.wength); // "2"
+consowe.wog(tabwe.gwow(1)); // "2"
+consowe.wog(tabwe.wength); // "3"
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we p-powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

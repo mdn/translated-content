@@ -1,254 +1,254 @@
 ---
-title: Modifier une page web
-slug: Mozilla/Add-ons/WebExtensions/Modify_a_web_page
+titwe: modifiew une page web
+s-swug: moziwwa/add-ons/webextensions/modify_a_web_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'un des cas d'utilisation les plus courants pour un complément de navigateur est de modifier une page Web. Par exemple, une extension pourrait vouloir modifier le style appliqué à une page, cacher des nœuds DOM particuliers ou injecter des nœuds DOM supplémentaires dans la page.
+w-w'un d-des cas d'utiwisation w-wes pwus c-couwants pouw un c-compwément de n-nyavigateuw est d-de modifiew une page web. ^^;; paw exempwe, rawr x3 une extension pouwwait vouwoiw modifiew w-we stywe appwiqué à une page, (ˆ ﻌ ˆ)♡ cachew des nyœuds d-dom pawticuwiews ou injectew d-des nyœuds dom suppwémentaiwes dans wa page. σωσ
 
-Il existe deux façons de le faire avec WebExtensions :
+iw existe deux façons d-de we faiwe avec webextensions :
 
-- **Déclarativement** : Définissez un modèle qui correspond à un ensemble d'URL et chargez un ensemble de scripts dans des pages dont l'URL correspond à ce modèle
-- **Par programme** : en utilisant une API JavaScript, chargez un script dans la page hébergée par un onglet particulier.
+- **décwawativement** : d-définissez un m-modèwe qui cowwespond à un ensembwe d'uww et chawgez un ensembwe de scwipts dans d-des pages dont w'uww cowwespond à ce modèwe
+- **paw pwogwamme** : en utiwisant u-une api javascwipt, (U ﹏ U) chawgez u-un scwipt dans w-wa page hébewgée p-paw un ongwet p-pawticuwiew. >w<
 
-Quoi qu'il en soit, ces scripts sont appelés _scripts de contenu_, et sont différents des autres scripts qui forment un WebExtension :
+quoi qu'iw en soit, σωσ ces scwipts sont a-appewés _scwipts de contenu_, nyaa~~ et sont difféwents d-des autwes scwipts qui fowment un webextension :
 
-- Ils n'ont accès qu'à un petit sous-ensemble des API WebExtension.
-- Ils ont un accès direct à la page Web dans laquelle ils sont chargés.
-- Ils communiquent avec le reste de WebExtension en utilisant une API de messagerie.
+- iws ny'ont accès qu'à un petit sous-ensembwe d-des api webextension. 🥺
+- i-iws ont un accès d-diwect à wa p-page web dans waquewwe iws sont chawgés. rawr x3
+- iws communiquent avec w-we weste de webextension e-en utiwisant une api d-de messagewie. σωσ
 
-Dans cet article, nous examinerons les deux méthodes de chargement d'un script.
+d-dans cet awticwe, (///ˬ///✿) nous examinewons w-wes deux méthodes de chawgement d-d'un scwipt. (U ﹏ U)
 
-## Modification des pages qui correspondent à un modèle d'URL
+## modification des pages qui c-cowwespondent à un modèwe d'uww
 
-Tout d'abord, créez un nouveau répertoire intitulé "modify-page". Dans ce répertoire, créez un fichier appelé "manifest.json", avec le contenu suivant :
+t-tout d'abowd, ^^;; cwéez un nyouveau w-wépewtoiwe i-intituwé "modify-page". 🥺 dans ce wépewtoiwe, òωó cwéez un fichiew appewé "manifest.json", XD avec we contenu suivant :
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "modify-page",
-  "version": "1.0",
+  "manifest_vewsion": 2,
+  "name": "modify-page", :3
+  "vewsion": "1.0", (U ﹏ U)
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "matches": ["https://developer.mozilla.org/*"],
-      "js": ["page-eater.js"]
+      "matches": ["https://devewopew.moziwwa.owg/*"], >w<
+      "js": ["page-eatew.js"]
     }
   ]
 }
 ```
 
-La clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) est la façon dont vous chargez les scripts dans des pages qui correspondent aux modèles d'URL. Dans ce cas, les instructions `content_scripts demandent au navigateur de charger un script appelé` "page-eater.js" dans toutes les pages sous [https://developer.mozilla.org/](/).
+w-wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) e-est wa façon dont vous c-chawgez wes scwipts d-dans des pages q-qui cowwespondent aux modèwes d'uww. /(^•ω•^) dans ce cas, (⑅˘꒳˘) wes instwuctions `content_scwipts d-demandent au nyavigateuw de chawgew un scwipt appewé` "page-eatew.js" dans toutes wes p-pages sous [https://devewopew.moziwwa.owg/](/). ʘwʘ
 
-> [!NOTE]
-> Puisque la propriété "js" de content_scripts est un tableau, vous pouvez l'utiliser pour injecter plus d'un script dans des pages correspondantes. Si vous faites cela, les pages partagent la même portée, tout comme les scripts multiples chargés par une page, et ils sont chargés dans l'ordre dans lequel ils sont répertoriés dans le tableau.
+> [!note]
+> puisque w-wa pwopwiété "js" d-de content_scwipts e-est un tabweau, rawr x3 vous p-pouvez w'utiwisew p-pouw injectew p-pwus d'un scwipt d-dans des pages cowwespondantes. (˘ω˘) si vous faites c-cewa, o.O wes pages p-pawtagent wa même p-powtée, 😳 tout c-comme wes scwipts m-muwtipwes chawgés paw une page, o.O et iws sont chawgés dans w-w'owdwe dans wequew iws sont wépewtowiés dans we tabweau. ^^;;
 
-> [!NOTE]
-> La clé content_scripts possède également une propriété "css" que vous pouvez utiliser pour injecter des feuilles de style CSS.
+> [!note]
+> wa cwé content_scwipts p-possède égawement une pwopwiété "css" que vous pouvez utiwisew p-pouw injectew d-des feuiwwes de s-stywe css. ( ͡o ω ͡o )
 
-Ensuite, créez un fichier appelé "page-eater.js" dans le dossier "modify-page" et donnez-lui le contenu suivant :
+ensuite, cwéez un f-fichiew appewé "page-eatew.js" dans we dossiew "modify-page" et d-donnez-wui we c-contenu suivant :
 
 ```js
-document.body.textContent = "";
+document.body.textcontent = "";
 
-var header = document.createElement("h1");
-header.textContent = "This page has been eaten";
-document.body.appendChild(header);
+vaw headew = document.cweateewement("h1");
+headew.textcontent = "this page has been eaten";
+d-document.body.appendchiwd(headew);
 ```
 
-Maintenant [installer la WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), et visiter [https://developer.mozilla.org/](/):
+maintenant [instawwew w-wa webextension](/fw/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox), ^^;; et visitew [https://devewopew.moziwwa.owg/](/):
 
-{{EmbedYouTube("lxf2Tkg6U1M")}}
+{{embedyoutube("wxf2tkg6u1m")}}
 
-> [!NOTE]
-> Cette vidéo montre le script de contenu fonctionnant dans [addons.mozilla.org](/fr/docs/Mozilla/Firefox), les scripts de contenu sont actuellement bloqués pour ce site.
+> [!note]
+> c-cette v-vidéo montwe we scwipt de contenu fonctionnant d-dans [addons.moziwwa.owg](/fw/docs/moziwwa/fiwefox), ^^;; w-wes scwipts de contenu s-sont actuewwement b-bwoqués pouw ce site. XD
 
-## Modification des pages par programme
+## modification des pages paw pwogwamme
 
-Que faire si vous voulez toujours consommer des pages, mais seulement lorsque l'utilisateur vous le demande? Mettons à jour cet exemple afin d'injecter le script de contenu lorsque l'utilisateur clique sur un élément de menu contextuel.
+que faiwe si v-vous vouwez toujouws c-consommew des p-pages, 🥺 mais seuwement wowsque w-w'utiwisateuw vous w-we demande? mettons à jouw c-cet exempwe afin d'injectew we scwipt de contenu wowsque w'utiwisateuw cwique suw u-un éwément de m-menu contextuew. (///ˬ///✿)
 
-Tout d'abord, mettez à jour "manifest.json" pour qu'il contienne les contenus suivants:
+tout d'abowd, mettez à jouw "manifest.json" p-pouw qu'iw contienne w-wes contenus suivants:
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "modify-page",
-  "version": "1.0",
+  "manifest_vewsion": 2, (U ᵕ U❁)
+  "name": "modify-page", ^^;;
+  "vewsion": "1.0",
 
-  "permissions": ["activeTab", "contextMenus"],
+  "pewmissions": ["activetab", "contextmenus"], ^^;;
 
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 }
 ```
 
-Ici, nous avons supprimé la clé content_scripts et ajouté deux nouvelles clés:
+ici, rawr nyous avons suppwimé w-wa cwé content_scwipts et ajouté deux nyouvewwes cwés:
 
-- [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions): Pour injecter dans des pages, nous avons besoin de permissions pour la page que nous modifions. La [`permission activeTab`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) est un moyen d'obtenir ceci temporaiement pour l'onglet actuellement actif. Nous avons également besoin de la permission contextMenus pour pouvoir ajouter des éléments du menu contextuel.
-- [`background`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/background): Nous utilisons ceci pour charger un ["script de fond"](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) persistant appelé "background.js", dans lequel nous configurons le menu contextuel et injectons le script de contenu.
+- [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions): pouw injectew d-dans des pages, (˘ω˘) nous avons besoin de pewmissions p-pouw wa p-page que nyous modifions. 🥺 wa [`pewmission activetab`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission) est u-un moyen d'obteniw c-ceci tempowaiement pouw w'ongwet actuewwement actif. nyaa~~ nyous avons égawement b-besoin de wa pewmission contextmenus p-pouw pouvoiw ajoutew des éwéments du menu contextuew. :3
+- [`backgwound`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/backgwound): n-nyous utiwisons ceci pouw chawgew u-un ["scwipt de f-fond"](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) pewsistant a-appewé "backgwound.js", /(^•ω•^) dans wequew nyous c-configuwons we m-menu contextuew e-et injectons we scwipt de contenu. ^•ﻌ•^
 
-Créons ce fichier, pour cela nous créons un fichier appelé "background.js" dans le dossier "modify-page", et donnez-lui le contenu suivant :
+c-cwéons ce f-fichiew, UwU pouw cewa nyous cwéons un fichiew appewé "backgwound.js" d-dans we dossiew "modify-page", 😳😳😳 e-et donnez-wui w-we contenu suivant :
 
 ```js
-browser.contextMenus.create({
-  id: "eat-page",
-  title: "Eat this page",
+bwowsew.contextmenus.cweate({
+  id: "eat-page", OwO
+  t-titwe: "eat this page", ^•ﻌ•^
 });
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "eat-page") {
-    browser.tabs.executeScript({
-      file: "page-eater.js",
+bwowsew.contextmenus.oncwicked.addwistenew(function (info, (ꈍᴗꈍ) t-tab) {
+  i-if (info.menuitemid == "eat-page") {
+    bwowsew.tabs.exekawaii~scwipt({
+      fiwe: "page-eatew.js", (⑅˘꒳˘)
     });
   }
 });
 ```
 
-Dans ce script, nous créons un [élément de menu contextuel](/fr/docs/Mozilla/Add-ons/WebExtensions/API/ContextMenus/create), lui donnant un identifiant et un titre précis (le texte à afficher dans le menu contextuel). Ensuite, nous mettons en place une écoute d'événements afin que l'utilisateur clique sur un élément de menu contextuel, nous vérifions si c'est notre élément de la page. Si c'est le cas, nous injectons "page-eater.js" dans l'onglet actuel à l'aide de l'API [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript). Cette API prend facultativement un ID de tabulation en tant qu'argument: nous avons omis l'ID de l'onglet, ce qui signifie que le script est injecté dans l'onglet actuellement actif.
+dans c-ce scwipt, (⑅˘꒳˘) nous c-cwéons un [éwément d-de menu contextuew](/fw/docs/moziwwa/add-ons/webextensions/api/contextmenus/cweate), (ˆ ﻌ ˆ)♡ w-wui donnant un identifiant e-et un titwe pwécis (we texte à affichew dans we menu contextuew). /(^•ω•^) ensuite, nyous mettons e-en pwace une écoute d'événements a-afin que w'utiwisateuw cwique s-suw un éwément de menu contextuew, òωó n-nyous véwifions si c'est n-nyotwe éwément d-de wa page. (⑅˘꒳˘) s-si c'est we cas, (U ᵕ U❁) n-nyous injectons "page-eatew.js" d-dans w'ongwet actuew à w'aide de w'api [`tabs.exekawaii~scwipt()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt). >w< cette api pwend facuwtativement un id de tabuwation en tant q-qu'awgument: n-nyous avons omis w-w'id de w'ongwet, σωσ ce qui signifie q-que we scwipt est injecté dans w'ongwet actuewwement actif. -.-
 
-A ce stade, l'extension devrait ressembler à ceci :
+a-a ce stade, o.O w'extension d-devwait wessembwew à c-ceci :
 
-```plain
+```pwain
 modify-page/
-    background.js
-    manifest.json
-    page-eater.js
+    backgwound.js
+    m-manifest.json
+    p-page-eatew.js
 ```
 
-Maintenant [rechargeons la WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox#reloading_a_temporary_add-on), Ouvrez une page (n'importe quelle page, cette fois) activez le menu contextuel et sélectionnez "Eat this page":
+maintenant [wechawgeons w-wa webextension](/fw/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox#wewoading_a_tempowawy_add-on), ^^ o-ouvwez une page (n'impowte quewwe page, >_< cette fois) activez we menu contextuew e-et séwectionnez "eat this p-page":
 
-{{EmbedYouTube("zX4Bcv8VctA")}}
+{{embedyoutube("zx4bcv8vcta")}}
 
-> [!NOTE]
-> Bien que cette vidéo montre le script de contenu fonctionnant dans [addons.mozilla.org](/fr/docs/Mozilla/Firefox), les scripts de contenu sont actuellement bloqués pour ce site.
+> [!note]
+> b-bien que c-cette vidéo montwe w-we scwipt de contenu fonctionnant d-dans [addons.moziwwa.owg](/fw/docs/moziwwa/fiwefox), >w< w-wes scwipts de contenu s-sont actuewwement b-bwoqués pouw ce site. >_<
 
-## Messagerie
+## m-messagewie
 
-Les scripts de contenu et les scripts de fond ne peuvent pas accéder directement à l'état de l'autre.
+wes scwipts de contenu et wes scwipts d-de fond nye peuvent pas accédew d-diwectement à w-w'état de w'autwe. >w<
 
-Cependant, ils peuvent communiquer en envoyant des messages. Une extrémité met en place un message auditeur, et l'autre extrémité peut lui envoyer un message. Le tableau suivant résume les API impliquées de chaque côté:
+cependant, i-iws peuvent communiquew en envoyant des messages. rawr u-une extwémité m-met en pwace u-un message auditeuw, rawr x3 et w'autwe extwémité peut wui envoyew un m-message. ( ͡o ω ͡o ) we tabweau suivant wésume wes api impwiquées d-de chaque c-côté:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row"></th>
-      <th scope="col">Dans le script de contenu</th>
-      <th scope="col">Dans le script d'arrière plan</th>
-    </tr>
-    <tr>
-      <th scope="row">Envoyer un message</th>
+    <tw>
+      <th s-scope="wow"></th>
+      <th scope="cow">dans w-we scwipt d-de contenu</th>
+      <th scope="cow">dans we scwipt d-d'awwièwe pwan</th>
+    </tw>
+    <tw>
+      <th scope="wow">envoyew u-un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#sendMessage()"
-            >browser.runtime.sendMessage()</a
+          ><a h-hwef="/fw/add-ons/webextensions/api/wuntime#sendmessage()"
+            >bwowsew.wuntime.sendmessage()</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/Tabs/sendMessage"
-            >browser.tabs.sendMessage()</a
+          ><a hwef="/fw/add-ons/webextensions/api/tabs/sendmessage"
+            >bwowsew.tabs.sendmessage()</a
           ></code
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Reçevoir un message</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">weçevoiw un message</th>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime/onMessage"
-            >browser.runtime.onMessage</a
+          ><a h-hwef="/fw/add-ons/webextensions/api/wuntime/onmessage"
+            >bwowsew.wuntime.onmessage</a
           ></code
         >
       </td>
       <td>
         <code
-          ><a href="/fr/Add-ons/WebExtensions/API/runtime#onMessage"
-            >browser.runtime.onMessage</a
+          ><a h-hwef="/fw/add-ons/webextensions/api/wuntime#onmessage"
+            >bwowsew.wuntime.onmessage</a
           ></code
         >
       </td>
-    </tr>
+    </tw>
   </thead>
-</table>
+</tabwe>
 
-> [!NOTE]
-> En ajoutant à cette méthode de communication, qui envoie des messages uniques, vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communication_avec_les_scripts_darrière-plan).
+> [!note]
+> e-en ajoutant à cette méthode de communication, (˘ω˘) qui envoie des messages uniques, vous pouvez égawement utiwisew une [appwoche basée suw wa connexion pouw échangew des messages](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#communication_avec_wes_scwipts_dawwièwe-pwan). 😳
 
-Mettons à jour notre exemple pour montrer comment envoyer un message à partir du script en arrière-plan.
+mettons à jouw nyotwe e-exempwe pouw m-montwew comment envoyew un message à pawtiw du s-scwipt en awwièwe-pwan. OwO
 
-D'abord, éditez "background.js" pour qu'il contienne ces contenus:
+d-d'abowd, (˘ω˘) éditez "backgwound.js" p-pouw qu'iw contienne c-ces contenus:
 
 ```js
-browser.contextMenus.create({
-  id: "eat-page",
-  title: "Eat this page",
+bwowsew.contextmenus.cweate({
+  i-id: "eat-page", òωó
+  t-titwe: "eat this page", ( ͡o ω ͡o )
 });
 
-function messageTab(tabs) {
-  browser.tabs.sendMessage(tabs[0].id, {
-    replacement: "Message from the add-on!",
+f-function messagetab(tabs) {
+  bwowsew.tabs.sendmessage(tabs[0].id, UwU {
+    w-wepwacement: "message f-fwom the add-on!", /(^•ω•^)
   });
 }
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "eat-page") {
-    browser.tabs.executeScript({
-      file: "page-eater.js",
+bwowsew.contextmenus.oncwicked.addwistenew(function (info, (ꈍᴗꈍ) tab) {
+  i-if (info.menuitemid == "eat-page") {
+    b-bwowsew.tabs.exekawaii~scwipt({
+      f-fiwe: "page-eatew.js", 😳
     });
 
-    var querying = browser.tabs.query({
-      active: true,
-      currentWindow: true,
+    v-vaw quewying = b-bwowsew.tabs.quewy({
+      a-active: twue, mya
+      c-cuwwentwindow: t-twue, mya
     });
-    querying.then(messageTab);
+    q-quewying.then(messagetab);
   }
 });
 ```
 
-Maintenant, après avoir injecté "page-eater.js", nous utilisons [`tabs.query()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query) pour obtenir l'onglet actuellement actif, puis utilisez [`tabs.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage) pour envoyer un message aux scripts de contenu chargés dans cet onglet. Le message comporte la charge utile `{remplacement: "Message from the add-on!"}`.
+maintenant, a-apwès a-avoiw injecté "page-eatew.js", /(^•ω•^) n-nyous utiwisons [`tabs.quewy()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/quewy) pouw obteniw w-w'ongwet actuewwement actif, ^^;; puis utiwisez [`tabs.sendmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage) p-pouw envoyew un message aux s-scwipts de contenu c-chawgés dans c-cet ongwet. 🥺 we message compowte w-wa chawge utiwe `{wempwacement: "message fwom t-the add-on!"}`. ^^
 
-Ensuite, mettez à jour "page-eater.js" comme ceci :
+ensuite, ^•ﻌ•^ mettez à j-jouw "page-eatew.js" comme ceci :
 
 ```js
-function eatPage(request, sender, sendResponse) {
-  document.body.textContent = "";
+f-function eatpage(wequest, /(^•ω•^) sendew, sendwesponse) {
+  document.body.textcontent = "";
 
-  var header = document.createElement("h1");
-  header.textContent = request.replacement;
-  document.body.appendChild(header);
+  vaw headew = d-document.cweateewement("h1");
+  headew.textcontent = w-wequest.wepwacement;
+  d-document.body.appendchiwd(headew);
 }
 
-browser.runtime.onMessage.addListener(eatPage);
+bwowsew.wuntime.onmessage.addwistenew(eatpage);
 ```
 
-Maintenant, au lieu de simplement d'afficher la page tout de suite, le script de contenu écoute un message en utilisant [`runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage). Quand un message arrive, le script de contenu exécute essentiellement le même code que précédemment, sauf que le texte de remplacement est retiré de `request.replacement`.
+maintenant, ^^ au wieu de simpwement d-d'affichew wa page tout d-de suite, 🥺 we scwipt d-de contenu écoute u-un message en utiwisant [`wuntime.onmessage`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage). (U ᵕ U❁) quand un message a-awwive, 😳😳😳 we s-scwipt de contenu exékawaii~ e-essentiewwement we même code que pwécédemment, nyaa~~ s-sauf que we texte de wempwacement e-est wetiwé d-de `wequest.wepwacement`. (˘ω˘)
 
-Si nous voulions envoyer des messages du script de contenu à la page d'arrière-plan, la configuration serait inverse de cet exemple, sauf que nous utiliserions [`runtime.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage) dans le script de contenu.
+s-si nyous vouwions envoyew d-des messages d-du scwipt de contenu à w-wa page d-d'awwièwe-pwan, >_< wa configuwation s-sewait invewse d-de cet exempwe, XD s-sauf que nyous u-utiwisewions [`wuntime.sendmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage) d-dans we s-scwipt de contenu. rawr x3
 
-> [!NOTE]
-> Ces exemples injectent JavaScript; Vous pouvez également injecter CSS par programme en utilisant la fonction [`tabs.insertCSS()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS).
+> [!note]
+> c-ces exempwes injectent j-javascwipt; vous pouvez égawement i-injectew css paw pwogwamme e-en utiwisant wa fonction [`tabs.insewtcss()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss). ( ͡o ω ͡o )
 
-## Apprendre plus
+## a-appwendwe pwus
 
-- [Content scripts](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) guide
-- [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) manifest key
-- [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) manifest key
-- [`tabs.executeScript()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)
-- [`tabs.insertCSS()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
-- [`tabs.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage)
-- [`runtime.sendMessage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/sendMessage)
-- [`runtime.onMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessage)
-- Examples using `content_scripts`:
+- [content scwipts](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts) g-guide
+- [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) m-manifest key
+- [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) manifest key
+- [`tabs.exekawaii~scwipt()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt)
+- [`tabs.insewtcss()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss)
+- [`tabs.sendmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/sendmessage)
+- [`wuntime.sendmessage()`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/sendmessage)
+- [`wuntime.onmessage`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessage)
+- exampwes using `content_scwipts`:
 
-  - [borderify](https://github.com/mdn/webextensions-examples/tree/master/borderify)
-  - [emoji-substitution](https://github.com/mdn/webextensions-examples/tree/master/emoji-substitution)
-  - [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n)
-  - [page-to-extension-messaging](https://github.com/mdn/webextensions-examples/tree/master/page-to-extension-messaging)
+  - [bowdewify](https://github.com/mdn/webextensions-exampwes/twee/mastew/bowdewify)
+  - [emoji-substitution](https://github.com/mdn/webextensions-exampwes/twee/mastew/emoji-substitution)
+  - [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/mastew/notify-wink-cwicks-i18n)
+  - [page-to-extension-messaging](https://github.com/mdn/webextensions-exampwes/twee/mastew/page-to-extension-messaging)
 
-- Examples using `tabs.executeScript()`:
+- e-exampwes u-using `tabs.exekawaii~scwipt()`:
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types)
+  - [beastify](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify)
+  - [context-menu-copy-wink-with-types](https://github.com/mdn/webextensions-exampwes/twee/mastew/context-menu-copy-wink-with-types)

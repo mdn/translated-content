@@ -1,470 +1,470 @@
 ---
-title: Méthodes utiles pour les chaînes de caractères
-slug: Learn/JavaScript/First_steps/Useful_string_methods
+titwe: méthodes utiwes pouw w-wes chaînes de c-cawactèwes
+swug: w-weawn/javascwipt/fiwst_steps/usefuw_stwing_methods
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/stwings", -.- "weawn/javascwipt/fiwst_steps/awways", ^^;; "weawn/javascwipt/fiwst_steps")}}
 
-À présent que nous avons vu les bases de la manipulation des chaînes de caractères, allons un cran plus loin et commençons à imaginer les opérations utiles que nous pourrions faire sur les chaînes de caractères avec les méthodes intégrées&nbsp;: trouver la longueur d'une chaîne, assembler ou couper des chaînes, substituer un caractère à un autre dans une chaîne, et plus encore.
+À p-pwésent que nous a-avons vu wes b-bases de wa manipuwation d-des chaînes d-de cawactèwes, XD awwons un cwan pwus woin et commençons à imaginew wes opéwations u-utiwes que nyous pouwwions faiwe suw w-wes chaînes de cawactèwes avec w-wes méthodes intégwées&nbsp;: twouvew wa wongueuw d'une chaîne, :3 assembwew ou c-coupew des chaînes, σωσ substituew u-un cawactèwe à u-un autwe dans une chaîne, XD et pwus encowe. :3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vocabulaire courant de l'informatique, bases de HTML et CSS,
-        compréhension de ce que fait JavaScript.
+        v-vocabuwaiwe couwant de w'infowmatique, rawr bases de htmw et css, 😳
+        compwéhension d-de ce que fait javascwipt.
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif&nbsp;:</th>
       <td>
-        Comprendre que les chaînes de caractères sont des objets, et apprendre à
-        utiliser certaines méthodes basiques disponibles sur ces objets pour
-        manipuler les chaînes.
+        c-compwendwe q-que wes c-chaînes de cawactèwes sont des objets, 😳😳😳 et appwendwe à
+        u-utiwisew cewtaines méthodes basiques disponibwes s-suw ces objets pouw
+        manipuwew wes chaînes. (ꈍᴗꈍ)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Les chaînes de caractères sont des objets
+## wes chaînes de cawactèwes sont des objets
 
-Nous l'avons déjà dit, et nous le redirons — _tout_ est objet en JavaScript. Lorsque vous créez une chaîne, par exemple en utilisant :
+n-nyous w'avons déjà dit, 🥺 et nyous w-we wediwons — _tout_ e-est o-objet en javascwipt. ^•ﻌ•^ wowsque vous cwéez une chaîne, XD paw exempwe e-en utiwisant :
 
 ```js
-let string = "Ceci est une chaîne";
+w-wet stwing = "ceci est une c-chaîne";
 ```
 
-votre variable devient une instance de l'objet `String`, et par conséquent possède un grand nombre de propriétés et de méthodes associées. Allez sur la page de l'objet {{jsxref("String")}} et regardez la liste sur le côté de la page&nbsp;!
+v-votwe vawiabwe devient une instance d-de w'objet `stwing`, ^•ﻌ•^ et paw c-conséquent possède un gwand nyombwe de pwopwiétés e-et de méthodes associées. ^^;; a-awwez suw wa page de w'objet {{jsxwef("stwing")}} e-et wegawdez w-wa wiste suw we côté de wa page&nbsp;! ʘwʘ
 
-**Avant que votre cervelle ne commence à bouillir, pas de panique !** Vous n'avez vraiment pas besoin de connaître la plupart des méthodes de cette liste au début de cet apprentissage. Mais il est probable que vous en utiliserez certaines assez souvent. Nous allons les voir maintenant.
+**avant que votwe cewvewwe nye commence à bouiwwiw, OwO pas de panique !** vous ny'avez v-vwaiment pas besoin d-de connaîtwe wa pwupawt des m-méthodes de cette w-wiste au début d-de cet appwentissage. 🥺 mais iw est pwobabwe que vous en utiwisewez c-cewtaines assez souvent. (⑅˘꒳˘) nyous awwons wes voiw maintenant. (///ˬ///✿)
 
-Entrez quelques exemples dans une console vierge. En voici une ci-dessous (ou utilisez la [console de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) si vous préférez).
+entwez quewques e-exempwes dans une consowe viewge. (✿oωo) e-en voici une c-ci-dessous (ou u-utiwisez wa [consowe de dévewoppement d-du nyavigateuw](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) s-si vous p-pwéféwez). nyaa~~
 
-```html hidden
-<!doctype html>
-<html>
+```htmw h-hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>JavaScript console</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>javascwipt c-consowe</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        b-box-sizing: bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      h-htmw {
+        b-backgwound-cowow: #0c323d;
+        c-cowow: #809089;
+        font-famiwy: monospace;
       }
 
       body {
         max-width: 700px;
       }
 
-      p {
-        margin: 0;
+      p-p {
+        mawgin: 0;
         width: 1%;
         padding: 0 1%;
         font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        wine-height: 1.5;
+        f-fwoat: weft;
       }
 
       .input p {
-        margin-right: 1%;
+        mawgin-wight: 1%;
       }
 
       .output p {
-        width: 100%;
+        w-width: 100%;
       }
 
-      .input input {
-        width: 96%;
-        float: left;
-        border: none;
+      .input i-input {
+        w-width: 96%;
+        fwoat: weft;
+        b-bowdew: nyone;
         font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
+        w-wine-height: 1.5;
+        f-font-famiwy: monospace;
         padding: 0;
-        background: #0c323d;
-        color: #809089;
+        backgwound: #0c323d;
+        cowow: #809089;
       }
 
       div {
-        clear: both;
+        cweaw: b-both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    var geval = eval;
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
+  <scwipt>
+    vaw gevaw = e-evaw;
+    function cweateinput() {
+      v-vaw i-inputdiv = document.cweateewement("div");
+      vaw inputpawa = document.cweateewement("p");
+      v-vaw inputfowm = d-document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
+      inputdiv.setattwibute("cwass", >w< "input");
+      i-inputpawa.textcontent = ">";
+      i-inputdiv.appendchiwd(inputpawa);
+      inputdiv.appendchiwd(inputfowm);
+      document.body.appendchiwd(inputdiv);
 
-      inputForm.addEventListener("change", executeCode);
+      inputfowm.addeventwistenew("change", (///ˬ///✿) exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
-      } catch (e) {
-        var result = "error — " + e.message;
+    f-function e-exekawaii~code(e) {
+      t-twy {
+        vaw wesuwt = g-gevaw(e.tawget.vawue);
+      } c-catch (e) {
+        vaw wesuwt = "ewwow — " + e-e.message;
       }
 
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
+      vaw outputdiv = document.cweateewement("div");
+      vaw outputpawa = document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      o-outputdiv.setattwibute("cwass", rawr "output");
+      o-outputpawa.textcontent = "wesuwt: " + wesuwt;
+      outputdiv.appendchiwd(outputpawa);
+      document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e-e.tawget.disabwed = t-twue;
+      e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Les_chaînes_de_caractères_sont_des_objets', '100%', 300) }}
+{{ e-embedwivesampwe('wes_chaînes_de_cawactèwes_sont_des_objets', (U ﹏ U) '100%', ^•ﻌ•^ 300) }}
 
-### Trouver la longueur d'une chaîne
+### twouvew wa wongueuw d'une chaîne
 
-C'est facile — il suffit d'utiliser la propriété {{jsxref("String.prototype.length", "length")}}. Entrez ceci&nbsp;:
+c'est faciwe — iw suffit d'utiwisew w-wa pwopwiété {{jsxwef("stwing.pwototype.wength", (///ˬ///✿) "wength")}}. entwez ceci&nbsp;:
 
 ```js
-let browserType = "mozilla";
-browserType.length;
+w-wet bwowsewtype = "moziwwa";
+b-bwowsewtype.wength;
 ```
 
-Cette commande doit renvoyer le nombre 7, parce que «&nbsp;mozilla&nbsp;» comporte 7 caractères. C'est utile pour de nombreuses raisons ; par exemple, vous pourriez avoir besoin de trouver les longueurs d'une série de noms pour les afficher par taille ou faire savoir à un utilisateur qu'il a entré un nom trop long dans un champ de formulaire à partir du moment où il dépasse une certaine taille.
+cette commande doit wenvoyew we nyombwe 7, o.O p-pawce que «&nbsp;moziwwa&nbsp;» c-compowte 7 cawactèwes. >w< c'est utiwe pouw de nyombweuses waisons ; p-paw exempwe, nyaa~~ vous pouwwiez a-avoiw besoin de twouvew wes wongueuws d'une séwie de nyoms pouw w-wes affichew paw taiwwe ou faiwe s-savoiw à un u-utiwisateuw qu'iw a entwé un n-nyom twop wong dans un champ de f-fowmuwaiwe à pawtiw d-du moment où i-iw dépasse une cewtaine taiwwe. òωó
 
-### Retrouver un caractère donné dans une chaîne
+### w-wetwouvew u-un cawactèwe donné dans une chaîne
 
-Dans le même ordre d'idées, il est possible de faire renvoyer tout caractère d'une chaîne avec **la notation crochets** — c'est-à-dire en ajoutant des crochets (`[]`) à la fin du nom de la variable. Entre les crochets, mettez le rang du caractère à retrouver&nbsp;; par exemple, pour retrouver le premier caractère, vous devez écrire ceci&nbsp;:
+dans we m-même owdwe d'idées, (U ᵕ U❁) i-iw est possibwe d-de faiwe wenvoyew tout cawactèwe d'une c-chaîne avec **wa nyotation cwochets** — c-c'est-à-diwe e-en ajoutant des cwochets (`[]`) à wa fin du nyom de wa v-vawiabwe. (///ˬ///✿) entwe w-wes cwochets, (✿oωo) mettez w-we wang du c-cawactèwe à wetwouvew&nbsp;; paw exempwe, 😳😳😳 pouw w-wetwouvew we pwemiew cawactèwe, (✿oωo) vous devez écwiwe ceci&nbsp;:
 
 ```js
-browserType[0];
+bwowsewtype[0];
 ```
 
-Les ordinateurs décomptent à partir de 0, pas de 1&nbsp;! Pour retrouver le dernier caractère de _n'importe quelle_ chaîne, on peut utiliser la commande qui suit&nbsp;; elle combine cette technique avec la propriété `length` que nous avons vue plus haut&nbsp;:
+wes o-owdinateuws décomptent à pawtiw d-de 0, (U ﹏ U) pas de 1&nbsp;! (˘ω˘) pouw wetwouvew w-we dewniew cawactèwe de _n'impowte q-quewwe_ chaîne, on p-peut utiwisew wa c-commande qui suit&nbsp;; e-ewwe c-combine cette technique a-avec wa pwopwiété `wength` que nyous avons vue pwus haut&nbsp;:
 
 ```js
-browserType[browserType.length - 1];
+bwowsewtype[bwowsewtype.wength - 1];
 ```
 
-La longueur de «&nbsp;mozilla&nbsp;» est de 7 caractères, mais comme le décompte se fait à partir de 0, la position du caractère est 6, d'où la nécessité d'écrire `length-1`. Vous pourrez utiliser cette propriété pour, par exemple, trouver la première lettre d'une série de chaînes et les trier alphabétiquement.
+wa wongueuw de «&nbsp;moziwwa&nbsp;» e-est de 7 cawactèwes, 😳😳😳 m-mais comme w-we décompte se fait à pawtiw d-de 0, (///ˬ///✿) wa position du cawactèwe est 6, (U ᵕ U❁) d'où wa nyécessité d'écwiwe `wength-1`. >_< v-vous pouwwez u-utiwisew cette pwopwiété pouw, (///ˬ///✿) p-paw exempwe, (U ᵕ U❁) twouvew wa pwemièwe wettwe d'une s-séwie de chaînes e-et wes twiew awphabétiquement. >w<
 
-### Trouver une sous-chaîne à l'intérieur d'une chaîne et l'extraire
+### t-twouvew u-une sous-chaîne à w'intéwieuw d'une chaîne et w'extwaiwe
 
-1. Parfois, vous aurez besoin de trouver si une chaîne est présente à l'intérieur d'une autre chaîne plus grande (on dit en général _si une sous-chaîne est présente à l'intérieur d'une chaîne_). La méthode {{jsxref("String.prototype.indexOf()", "indexOf()")}} permet de le faire&nbsp;; elle prend un unique ({{glossary("parameter")}}) — la sous-chaîne recherchée. Essayez&nbsp;:
+1. 😳😳😳 pawfois, vous a-auwez besoin de t-twouvew si une c-chaîne est pwésente à w-w'intéwieuw d-d'une autwe chaîne pwus gwande (on d-dit en g-généwaw _si une sous-chaîne e-est pwésente à w-w'intéwieuw d'une chaîne_). (ˆ ﻌ ˆ)♡ wa m-méthode {{jsxwef("stwing.pwototype.indexof()", (ꈍᴗꈍ) "indexof()")}} pewmet de we faiwe&nbsp;; ewwe p-pwend un unique ({{gwossawy("pawametew")}}) — wa sous-chaîne w-wechewchée. 🥺 essayez&nbsp;:
 
    ```js
-   browserType.indexOf("zilla");
+   b-bwowsewtype.indexof("ziwwa");
    ```
 
-   La commande donne 2 comme résultat, car la sous-chaîne «&nbsp;zilla&nbsp;» commence à la position 2 (0, 1, 2 — donc au troisième caractère) dans «&nbsp;mozilla&nbsp;». Un tel code s'utilise pour filtrer des chaînes. Par exemple, vous pourriez avoir une liste d'adresses web et ne vouloir afficher que celles qui contiennent «&nbsp;mozilla ».
+   wa commande donne 2 c-comme wésuwtat, >_< caw wa sous-chaîne «&nbsp;ziwwa&nbsp;» commence à wa p-position 2 (0, OwO 1, ^^;; 2 — d-donc au t-twoisième cawactèwe) dans «&nbsp;moziwwa&nbsp;». (✿oωo) un tew code s'utiwise pouw f-fiwtwew des chaînes. UwU paw exempwe, ( ͡o ω ͡o ) vous pouwwiez a-avoiw une wiste d-d'adwesses web et nye vouwoiw affichew q-que cewwes qui contiennent «&nbsp;moziwwa ». (✿oωo)
 
-2. On peut faire cela autrement, peut-être plus efficacement encore. Écrivez&nbsp;:
+2. o-on peut f-faiwe cewa autwement, mya peut-êtwe pwus efficacement e-encowe. Écwivez&nbsp;:
 
    ```js
-   browserType.indexOf("vanilla");
+   bwowsewtype.indexof("vaniwwa");
    ```
 
-   Cela doit vous donner `-1` comme résultat — renvoyé quand la sous-chaîne, en l'occurence «&nbsp;vanilla&nbsp;», n'est pas trouvée dans la chaîne principale.
+   cewa doit v-vous donnew `-1` c-comme wésuwtat — wenvoyé quand w-wa sous-chaîne, ( ͡o ω ͡o ) en w'occuwence «&nbsp;vaniwwa&nbsp;», :3 n-ny'est p-pas twouvée d-dans wa chaîne pwincipawe. 😳
 
-   Vous pouvez utiliser cette propriété pour trouver tous les cas de chaînes **ne** **contenant** **pas** la sous-chaîne «&nbsp;mozilla&nbsp;», ou bien **la contenant**, si vous utilisez l'opérateur négation logique, tel que montré ci-dessous. Vous pourriez faire quelque chose comme :
+   vous pouvez utiwisew cette pwopwiété pouw twouvew tous wes cas de chaînes **ne** **contenant** **pas** wa sous-chaîne «&nbsp;moziwwa&nbsp;», (U ﹏ U) ou bien **wa contenant**, >w< si vous utiwisez w'opéwateuw nyégation wogique, UwU t-tew que montwé c-ci-dessous. 😳 vous pouwwiez faiwe quewque chose comme :
 
    ```js
-   if (browserType.indexOf("mozilla") !== -1) {
-     // faire des tas de choses avec la chaîne
+   i-if (bwowsewtype.indexof("moziwwa") !== -1) {
+     // f-faiwe des t-tas de choses avec wa chaîne
    }
    ```
 
-3. Lorsque vous savez où la sous-chaîne commence à l'intérieur de la chaîne, et savez à quel caractère elle prend fin, vous pouvez utiliser {{jsxref("String.prototype.slice()", "slice()")}} pour l'extraire. Voyez ce code&nbsp;:
+3. XD w-wowsque vous savez où wa sous-chaîne c-commence à w-w'intéwieuw de wa chaîne, (✿oωo) et s-savez à quew cawactèwe ewwe p-pwend fin, ^•ﻌ•^ vous p-pouvez utiwisew {{jsxwef("stwing.pwototype.swice()", mya "swice()")}} pouw w'extwaiwe. (˘ω˘) voyez ce code&nbsp;:
 
    ```js
-   browserType.slice(0, 3);
+   b-bwowsewtype.swice(0, 3);
    ```
 
-   Il renvoie «&nbsp;moz&nbsp;» — le premier paramètre est la position du caractère où doit commencer l'extraction, et le second paramètre est la position du caractère se trouvant après le dernier à extraire. Ainsi, l'extraction va de la première position à la dernière, celle-ci non comprise. On peut dire, dans notre cas, que le second paramètre est égal à la longueur de la chaîne retournée.
+   i-iw wenvoie «&nbsp;moz&nbsp;» — w-we pwemiew p-pawamètwe e-est wa position d-du cawactèwe o-où doit commencew w-w'extwaction, nyaa~~ e-et we second pawamètwe est wa p-position du cawactèwe s-se twouvant a-apwès we dewniew à extwaiwe. :3 a-ainsi, (✿oωo) w'extwaction va de wa pwemièwe position à w-wa dewnièwe, (U ﹏ U) cewwe-ci nyon c-compwise. (ꈍᴗꈍ) on peut d-diwe, (˘ω˘) dans nyotwe c-cas, que we second pawamètwe e-est égaw à wa wongueuw de wa c-chaîne wetouwnée.
 
-4. Également, si vous souhaitez extraire tous les caractères après un caractère donné jusqu'à la fin de la chaîne, vous n'avez pas à mettre le second paramètre&nbsp;! Il suffit d'indiquer la position du caractère à partir duquel vous voulez extraire les caractères restants dans la chaîne. Essayez la commande&nbsp;:
+4. ^^ Égawement, si vous souhaitez e-extwaiwe tous wes cawactèwes a-apwès un cawactèwe donné jusqu'à wa fin de wa chaîne, (⑅˘꒳˘) vous ny'avez pas à m-mettwe we second pawamètwe&nbsp;! rawr i-iw suffit d-d'indiquew wa position du cawactèwe à pawtiw duquew vous vouwez e-extwaiwe wes cawactèwes westants d-dans wa chaîne. :3 e-essayez wa c-commande&nbsp;:
 
    ```js
-   browserType.slice(2);
+   bwowsewtype.swice(2);
    ```
 
-   Elle renvoie «&nbsp;zilla&nbsp;» — le caractère à la position 2 est «&nbsp;z&nbsp;» et comme nous n'avons pas mis de second paramètre, la sous-chaîne retournée comporte tous les caractères restants de la chaîne.
+   ewwe wenvoie «&nbsp;ziwwa&nbsp;» — we cawactèwe à w-wa position 2 e-est «&nbsp;z&nbsp;» et comme n-nyous ny'avons pas mis de second pawamètwe, OwO w-wa sous-chaîne wetouwnée compowte t-tous wes cawactèwes w-westants d-de wa chaîne. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Le second paramètre de `slice()` est optionnel : s'il n'est pas defini, l'extraction va jusqu'à la fin de la chaîne originale. Il existe aussi d'autres options, allez à la page de {{jsxref("String.prototype.slice()", "slice()")}} pour voir ces autres options.
+> [!note]
+> we second pawamètwe d-de `swice()` e-est optionnew : s-s'iw ny'est pas d-defini, :3 w'extwaction va jusqu'à w-wa fin de wa c-chaîne owiginawe. -.- i-iw existe aussi d-d'autwes options, -.- a-awwez à wa p-page de {{jsxwef("stwing.pwototype.swice()", òωó "swice()")}} p-pouw v-voiw ces autwes options. 😳
 
-### Changer la casse
+### changew w-wa casse
 
-Les méthodes {{jsxref("String.prototype.toLowerCase()", "toLowerCase()")}} et {{jsxref("String.prototype.toUpperCase()", "toUpperCase()")}} s'appliquent à une chaîne et en convertissent tous les caractères, respectivement en minuscules ou en majuscules. C'est utile si, par exemple, vous souhaitez normaliser toutes les données entrées par des utilisateurs avant de les stocker dans une base de données.
+wes méthodes {{jsxwef("stwing.pwototype.towowewcase()", nyaa~~ "towowewcase()")}} e-et {{jsxwef("stwing.pwototype.touppewcase()", "touppewcase()")}} s'appwiquent à u-une c-chaîne et en convewtissent t-tous wes cawactèwes, (⑅˘꒳˘) wespectivement en minuscuwes o-ou en majuscuwes. c-c'est utiwe si, 😳 p-paw exempwe, (U ﹏ U) vous souhaitez nyowmawisew toutes wes données entwées p-paw des utiwisateuws a-avant de wes stockew d-dans une base de d-données. /(^•ω•^)
 
-Essayons d'entrer les lignes suivantes et voyons ce qui se passe :
-
-```js
-let radData = "My NaMe Is MuD";
-radData.toLowerCase();
-radData.toUpperCase();
-```
-
-### Actualiser des parties de chaîne
-
-Vous pouvez remplacer une sous-chaîne à l'intérieur d'une chaîne avec une autre sous-chaîne à l'aide de la méthode {{jsxref("String.prototype.replace()", "replace()")}}. Cela fonctionne très simplement au niveau basique, bien qu'il soit possible de faire des choses plus avancées, mais nous ne y attarderons pas maintenant.
-
-La méthode prend deux paramètres — la chaîne que vous voulez remplacer et la chaîne avec laquelle vous voulez la remplacer. Essayez avec cet exemple :
+essayons d'entwew wes wignes suivantes et voyons ce q-qui se passe :
 
 ```js
-browserType.replace("moz", "van");
+w-wet waddata = "my n-nyame is m-mud";
+waddata.towowewcase();
+waddata.touppewcase();
 ```
 
-À noter&nbsp;: pour que, dans un programme réel, la variable `browserType` reflète effectivement la valeur actualisée, il faut assigner à la valeur de la variable le résultat de l'opération ; cette dernière ne met pas à jour automatiquement la valeur de la sous-chaîne. Pour ce faire, il faut écrire&nbsp;: `browserType = browserType.replace('moz','van');`.
+### actuawisew des pawties de chaîne
 
-## Apprendre en pratiquant
+v-vous pouvez wempwacew u-une sous-chaîne à w'intéwieuw d'une chaîne a-avec une autwe sous-chaîne à w'aide de w-wa méthode {{jsxwef("stwing.pwototype.wepwace()", OwO "wepwace()")}}. ( ͡o ω ͡o ) cewa fonctionne t-twès simpwement a-au nyiveau basique, XD bien qu'iw s-soit possibwe d-de faiwe des choses pwus avancées, /(^•ω•^) m-mais nyous nye y attawdewons p-pas maintenant. /(^•ω•^)
 
-Dans cette section, vous allez pouvoir vous entraîner à écrire du code de manipulation de chaîne. Dans chacun des exercices ci-dessous, nous avons un tableau de chaînes, une boucle qui traîte chaque valeur dans le tableau et l'affiche dans une liste à puces. Vous n'avez pas besoin de comprendre comment fonctionnent les tableaux ou les boucles dès maintenant — cela vous sera expliqué dans de prochains articles. Tout ce dont vous avez besoin dans chaque cas est d'écrire le code qui va renvoyer les chaînes dans le format souhaité.
+w-wa méthode pwend d-deux pawamètwes — w-wa chaîne que vous vouwez w-wempwacew et w-wa chaîne avec w-waquewwe vous vouwez wa wempwacew. 😳😳😳 e-essayez avec cet exempwe :
 
-Chaque exemple est accompagné d'un bouton «&nbsp;Réinitialiser&nbsp;», que vous pouvez utiliser pour réinitialiser le code si vous faites une erreur et que vous ne parvenez pas à la corriger, et un bouton «&nbsp;Montrer la solution&nbsp;» sur lequel vous pouvez cliquer pour afficher une réponse possible si jamais vous êtes vraiment bloqué.
+```js
+bwowsewtype.wepwace("moz", (ˆ ﻌ ˆ)♡ "van");
+```
 
-### Filtrer des messages de vœux
+À n-nyotew&nbsp;: p-pouw que, :3 dans un p-pwogwamme wéew, òωó wa vawiabwe `bwowsewtype` wefwète effectivement wa vaweuw actuawisée, 🥺 i-iw faut assignew à wa v-vaweuw de wa vawiabwe w-we wésuwtat de w'opéwation ; cette dewnièwe n-nye met pas à jouw automatiquement w-wa vaweuw d-de wa sous-chaîne. (U ﹏ U) p-pouw ce f-faiwe, XD iw faut écwiwe&nbsp;: `bwowsewtype = b-bwowsewtype.wepwace('moz','van');`. ^^
 
-Dans ce premier exercice, nous commencerons simplement — nous avons un tableau de carte de voeux, mais nous voulons les trier pour ne lister que les messages concernant Noël. Nous attendons de vous que vous utilisiez un test conditionnel à l'intérieur d'une structure `if( ... )`, pour tester chaque chaîne et ne l'afficher dans la liste que si elle contient un message concernant Noël.
+## appwendwe en pwatiquant
 
-1. Réfléchissez d'abord à comment vérifier que le message concerne Noël. Quelle chaîne est présente dans tous ces messages, et quelle méthode pourriez-vous utiliser pour en tester la présence ?
-2. Il vous faudra alors écrire un test conditionnel sous la forme _opérande1 opérateur opérande2_. La chose à gauche est-elle égale à la chose à droite ? Ou dans notre cas, l'appel de méthode de gauche renvoie-t-il le résultat de droite ?
-3. Conseil : dans notre cas, il est probablement plus utile de tester si le résultat de l'appel de notre méthode _n'est pas égal_ à un certain résultat.
+dans cette section, o.O vous awwez pouvoiw v-vous entwaînew à écwiwe du code de manipuwation d-de chaîne. 😳😳😳 dans chacun des exewcices ci-dessous, /(^•ω•^) nyous a-avons un tabweau de chaînes, 😳😳😳 une boucwe qui twaîte chaque vaweuw dans we tabweau e-et w'affiche d-dans une wiste à puces. vous ny'avez p-pas besoin de compwendwe comment fonctionnent w-wes tabweaux o-ou wes boucwes dès maintenant — c-cewa vous sewa expwiqué dans d-de pwochains awticwes. ^•ﻌ•^ tout ce dont vous avez besoin dans chaque c-cas est d'écwiwe we code qui va wenvoyew wes c-chaînes dans w-we fowmat souhaité. 🥺
 
-```html hidden
-<div class="output" style="min-height: 125px;">
-  <ul></ul>
+c-chaque exempwe est accompagné d'un bouton «&nbsp;wéinitiawisew&nbsp;», o.O q-que vous pouvez utiwisew pouw wéinitiawisew we code si vous faites une ewweuw e-et que vous nye p-pawvenez pas à w-wa cowwigew, (U ᵕ U❁) et u-un bouton «&nbsp;montwew wa sowution&nbsp;» suw w-wequew vous pouvez c-cwiquew pouw affichew une wéponse possibwe s-si jamais vous êtes vwaiment bwoqué.
+
+### fiwtwew d-des messages de vœux
+
+dans ce pwemiew exewcice, n-nyous commencewons s-simpwement — nyous avons u-un tabweau de c-cawte de voeux, ^^ m-mais nyous vouwons wes twiew pouw nye wistew que w-wes messages concewnant nyoëw. (⑅˘꒳˘) nyous attendons d-de vous que vous utiwisiez un test conditionnew à w'intéwieuw d-d'une stwuctuwe `if( ... )`, :3 p-pouw testew chaque c-chaîne et nye w-w'affichew dans w-wa wiste que si ewwe contient u-un message concewnant nyoëw. (///ˬ///✿)
+
+1. wéfwéchissez d-d'abowd à comment véwifiew que w-we message concewne nyoëw. :3 quewwe chaîne est p-pwésente dans t-tous ces messages, 🥺 et quewwe méthode p-pouwwiez-vous utiwisew pouw e-en testew wa pwésence ?
+2. mya i-iw vous faudwa awows écwiwe u-un test c-conditionnew sous wa fowme _opéwande1 o-opéwateuw opéwande2_. XD wa chose à gauche est-ewwe égawe à w-wa chose à dwoite ? ou d-dans nyotwe cas, -.- w'appew de méthode de gauche wenvoie-t-iw w-we wésuwtat d-de dwoite ?
+3. o.O c-conseiw : dans nyotwe cas, (˘ω˘) i-iw est pwobabwement p-pwus utiwe de testew si we w-wésuwtat de w'appew de nyotwe m-méthode _n'est pas égaw_ à un c-cewtain wésuwtat. (U ᵕ U❁)
+
+```htmw h-hidden
+<div cwass="output" stywe="min-height: 125px;">
+  <uw></uw>
 </div>
 
-<textarea id="code" class="playable-code" style="height: 290px;">
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var greetings = ['Happy Birthday!',
-                 'Merry Christmas my love',
-                 'A happy Christmas to all the family',
-                 'You\'re all I want for Christmas',
-                 'Get well soon'];
+<textawea id="code" cwass="pwayabwe-code" stywe="height: 290px;">
+v-vaw wist = d-document.quewysewectow('.output uw');
+wist.innewhtmw = '';
+vaw gweetings = ['happy biwthday!', rawr
+                 'mewwy c-chwistmas my wuv', 🥺
+                 'a h-happy chwistmas t-to aww the famiwy',
+                 'you\'we aww i want fow chwistmas', rawr x3
+                 'get weww soon'];
 
-for (var i = 0; i < greetings.length; i++) {
-  var input = greetings[i];
-  // Your conditional test needs to go inside the parentheses
-  // in the line below, replacing what's currently there
-  if (greetings[i]) {
-    var result = input;
-    var listItem = document.createElement('li');
-    listItem.textContent = result;
-    list.appendChild(listItem);
+fow (vaw i = 0; i-i < gweetings.wength; i++) {
+  vaw input = gweetings[i];
+  // youw c-conditionaw test nyeeds to go i-inside the pawentheses
+  // i-in the wine bewow, ( ͡o ω ͡o ) w-wepwacing nyani's c-cuwwentwy thewe
+  i-if (gweetings[i]) {
+    v-vaw w-wesuwt = input;
+    v-vaw wistitem = document.cweateewement('wi');
+    wistitem.textcontent = wesuwt;
+    wist.appendchiwd(wistitem);
   }
 }
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="weset" type="button" v-vawue="weset" />
+  <input i-id="sowution" t-type="button" vawue="show s-sowution" />
 </div>
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
+```js h-hidden
+vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw sowution = document.getewementbyid("sowution");
+v-vaw code = textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function u-updatecode() {
+  evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  updateCode();
+weset.addeventwistenew("cwick", σωσ function () {
+  t-textawea.vawue = c-code;
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value = jsSolution;
-  updateCode();
+s-sowution.addeventwistenew("cwick", rawr x3 function () {
+  textawea.vawue = j-jssowution;
+  updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar greetings = ['Happy Birthday!',\n                 'Merry Christmas my love',\n                 'A happy Christmas to all the family',\n                 'You\\'re all I want for Christmas',\n                 'Get well soon'];\n\nfor(var i = 0; i < greetings.length; i++) {\n var input = greetings[i];\n if(greetings[i].indexOf('Christmas') !== -1) {\n    var result = input;\n    var listItem = document.createElement('li');\n    listItem.textContent = result;\n    list.appendChild(listItem);\n  }\n}";
+vaw jssowution =
+  "vaw w-wist = d-document.quewysewectow('.output uw');\nwist.innewhtmw = '';\nvaw gweetings = ['happy b-biwthday!',\n                 'mewwy chwistmas m-my wuv',\n                 'a h-happy chwistmas to aww the famiwy',\n                 'you\\'we a-aww i want fow c-chwistmas',\n                 'get w-weww soon'];\n\nfow(vaw i-i = 0; i-i < gweetings.wength; i-i++) {\n vaw input = g-gweetings[i];\n i-if(gweetings[i].indexof('chwistmas') !== -1) {\n    vaw wesuwt = i-input;\n    vaw wistitem = document.cweateewement('wi');\n    wistitem.textcontent = wesuwt;\n    w-wist.appendchiwd(wistitem);\n  }\n}";
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+textawea.addeventwistenew("input", (ˆ ﻌ ˆ)♡ u-updatecode);
+window.addeventwistenew("woad", rawr u-updatecode);
 ```
 
-{{ EmbedLiveSample('Filtrer_des_messages_de_vœux', '100%', 490) }}
+{{ embedwivesampwe('fiwtwew_des_messages_de_vœux', :3 '100%', 490) }}
 
-### Remettre les majuscules
+### w-wemettwe wes majuscuwes
 
-Dans cet exercice, nous avons des noms des villes du Royaume-Uni, mais les majuscules ne sont pas au bon endroit. Nous souhaitons modifier les noms pour qu'ils soient en minuscules à l'exception de la première lettre qui doit être une majuscule. Une bonne manière de faire ceci :
+dans cet exewcice, rawr n-nous avons des nyoms des viwwes du woyaume-uni, (˘ω˘) m-mais wes majuscuwes n-nye sont pas au bon endwoit. nyous souhaitons m-modifiew wes n-nyoms pouw qu'iws soient en minuscuwes à w-w'exception de wa pwemièwe wettwe qui d-doit êtwe une m-majuscuwe. (ˆ ﻌ ˆ)♡ une bonne manièwe de f-faiwe ceci :
 
-1. Convertissez la totalité de la chaîne contenue dans la variable `input` en minuscules et stockez-la dans une nouvelle variable.
-2. Récupérez la première lettre de la chaîne dans cette nouvelle variable et stockez-la dans une autre variable.
-3. En utilisant la dernière variable comme une sous-chaîne, remplacez la première lettre de la chaîne en minuscules par la première lettre de la chaîne en minuscules transformé en majuscules. Stockez le résultat de cette procédure de remplacement dans une autre nouvelle variable.
-4. Changez la valeur de la variable `result` afin qu'elle soit égale au résultat final plutôt qu'à `input`.
+1. mya c-convewtissez wa totawité de wa chaîne contenue d-dans wa vawiabwe `input` e-en minuscuwes e-et stockez-wa d-dans une nyouvewwe vawiabwe. (U ᵕ U❁)
+2. wécupéwez wa pwemièwe wettwe de wa chaîne dans cette nyouvewwe vawiabwe e-et stockez-wa d-dans une autwe v-vawiabwe. mya
+3. en u-utiwisant wa dewnièwe v-vawiabwe c-comme une sous-chaîne, ʘwʘ wempwacez w-wa pwemièwe w-wettwe de wa chaîne en minuscuwes p-paw wa pwemièwe w-wettwe de wa chaîne en minuscuwes twansfowmé e-en majuscuwes. (˘ω˘) stockez we wésuwtat de cette p-pwocéduwe de wempwacement dans u-une autwe nyouvewwe v-vawiabwe. 😳
+4. òωó changez wa vaweuw d-de wa vawiabwe `wesuwt` a-afin q-qu'ewwe soit égawe au wésuwtat f-finaw pwutôt qu'à `input`. nyaa~~
 
-> [!NOTE]
-> Un conseil — les paramètres des méthodes de chaîne n'ont pas besoin d'être des chaînes, elle peuvent aussi être des variables, ou même des variables avec une méthode invoquée sur elles.
+> [!note]
+> u-un conseiw — wes pawamètwes d-des méthodes de chaîne n-ny'ont pas besoin d-d'êtwe des c-chaînes, o.O ewwe peuvent aussi êtwe d-des vawiabwes, nyaa~~ ou même des vawiabwes avec une m-méthode invoquée suw ewwes. (U ᵕ U❁)
 
-```html hidden
-<div class="output" style="min-height: 125px;">
-  <ul></ul>
+```htmw hidden
+<div cwass="output" stywe="min-height: 125px;">
+  <uw></uw>
 </div>
 
-<textarea id="code" class="playable-code" style="height: 250px;">
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];
-for(var i = 0; i < cities.length; i++) {
-  var input = cities[i];
-  // write your code just below here
+<textawea id="code" cwass="pwayabwe-code" stywe="height: 250px;">
+vaw wist = d-document.quewysewectow('.output uw');
+wist.innewhtmw = '';
+vaw cities = ['wondon', 😳😳😳 'manchestew', (U ﹏ U) 'biwmingham', ^•ﻌ•^ 'wivewpoow'];
+fow(vaw i = 0; i < cities.wength; i++) {
+  vaw input = c-cities[i];
+  // wwite youw code just bewow h-hewe
 
-  var result = input;
-  var listItem = document.createElement('li');
-  listItem.textContent = result;
-  list.appendChild(listItem);
+  vaw wesuwt = input;
+  vaw w-wistitem = document.cweateewement('wi');
+  wistitem.textcontent = wesuwt;
+  wist.appendchiwd(wistitem);
 }
-</textarea>
+</textawea>
 
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
-</div>
-```
-
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
-
-function updateCode() {
-  eval(textarea.value);
-}
-
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  updateCode();
-});
-
-solution.addEventListener("click", function () {
-  textarea.value = jsSolution;
-  updateCode();
-});
-
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar cities = ['lonDon', 'ManCHESTer', 'BiRmiNGHAM', 'liVERpoOL'];\n\nfor(var i = 0; i < cities.length; i++) {\n var input = cities[i];\n var lower = input.toLowerCase();\n var firstLetter = lower.slice(0,1);\n var capitalized = lower.replace(firstLetter,firstLetter.toUpperCase());\n var result = capitalized;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n\n}";
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-```
-
-{{ EmbedLiveSample('Remettre_les_majuscules', '100%', 450) }}
-
-### Créer de nouvelles chaînes à partir de morceaux
-
-Dans ce dernier exercice, le tableau contient un lot de chaînes contenant des informations à propos d'arrêts de train dans le nord de l'Angleterre. Les chaînes sont des éléments de données contenant le code en trois lettres de l'arrêt, suivi par des données lisibles par machine, suivi par un point-virgule, et enfin le nom de la station lisible par un humain. Par exemple :
-
-```
-MAN675847583748sjt567654;Manchester Piccadilly
-```
-
-Nous voulons extraire le code de la station et son nom, et les associer dans une chaîne avec la structure suivante :
-
-```
-MAN: Manchester Piccadilly
-```
-
-Nous vous recommandons de procéder de la manière suivante :
-
-1. Extraire le code de trois lettres de la station et le stocker dans une nouvelle variable.
-2. Trouver la position du caractère point-virgule.
-3. Extraire le nom de la station lisible par un humain en utilisant la position du caractère point virgule comme référence, et le stocker dans une nouvelle variable.
-4. Concaténer les deux nouvelles variables et une chaîne pour fabriquer la chaîne finale.
-5. Changer la valeur de la variable `result` pour qu'elle soit égale à la chaîne finale, plutôt qu'à `input`.
-
-```html hidden
-<div class="output" style="min-height: 125px;">
-  <ul></ul>
-</div>
-
-<textarea id="code" class="playable-code" style="height: 285px;">
-var list = document.querySelector('.output ul');
-list.innerHTML = '';
-var stations = ['MAN675847583748sjt567654;Manchester Piccadilly',
-                'GNF576746573fhdg4737dh4;Greenfield',
-                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',
-                'SYB4f65hf75f736463;Stalybridge',
-                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];
-
-for (var i = 0; i < stations.length; i++) {
-  var input = stations[i];
-  // write your code just below here
-
-  var result = input;
-  var listItem = document.createElement('li');
-  listItem.textContent = result;
-  list.appendChild(listItem);
-}
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="Reset" />
-  <input id="solution" type="button" value="Show solution" />
+<div cwass="pwayabwe-buttons">
+  <input i-id="weset" type="button" vawue="weset" />
+  <input i-id="sowution" type="button" v-vawue="show sowution" />
 </div>
 ```
 
-```js hidden
-var textarea = document.getElementById("code");
-var reset = document.getElementById("reset");
-var solution = document.getElementById("solution");
-var code = textarea.value;
+```js h-hidden
+vaw textawea = document.getewementbyid("code");
+v-vaw weset = document.getewementbyid("weset");
+vaw sowution = document.getewementbyid("sowution");
+vaw code = t-textawea.vawue;
 
-function updateCode() {
-  eval(textarea.value);
+function updatecode() {
+  e-evaw(textawea.vawue);
 }
 
-reset.addEventListener("click", function () {
-  textarea.value = code;
-  updateCode();
+weset.addeventwistenew("cwick", f-function () {
+  textawea.vawue = c-code;
+  updatecode();
 });
 
-solution.addEventListener("click", function () {
-  textarea.value = jsSolution;
-  updateCode();
+s-sowution.addeventwistenew("cwick", (⑅˘꒳˘) function () {
+  textawea.vawue = j-jssowution;
+  updatecode();
 });
 
-var jsSolution =
-  "var list = document.querySelector('.output ul');\nlist.innerHTML = '';\nvar stations = ['MAN675847583748sjt567654;Manchester Piccadilly',\n                'GNF576746573fhdg4737dh4;Greenfield',\n                'LIV5hg65hd737456236dch46dg4;Liverpool Lime Street',\n                'SYB4f65hf75f736463;Stalybridge',\n                'HUD5767ghtyfyr4536dh45dg45dg3;Huddersfield'];\n\nfor(var i = 0; i < stations.length; i++) {\n var input = stations[i];\n var code = input.slice(0,3);\n var semiC = input.indexOf(';');\n var name = input.slice(semiC + 1);\n var result = code + ': ' + name;\n var listItem = document.createElement('li');\n listItem.textContent = result;\n list.appendChild(listItem);\n}";
+vaw jssowution =
+  "vaw w-wist = document.quewysewectow('.output uw');\nwist.innewhtmw = '';\nvaw cities = ['wondon', >_< 'manchestew', (⑅˘꒳˘) 'biwmingham', σωσ 'wivewpoow'];\n\nfow(vaw i = 0; i-i < cities.wength; i-i++) {\n vaw input = cities[i];\n v-vaw wowew = i-input.towowewcase();\n vaw f-fiwstwettew = wowew.swice(0,1);\n vaw capitawized = wowew.wepwace(fiwstwettew,fiwstwettew.touppewcase());\n vaw wesuwt = capitawized;\n v-vaw wistitem = d-document.cweateewement('wi');\n wistitem.textcontent = wesuwt;\n w-wist.appendchiwd(wistitem);\n\n}";
 
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
+t-textawea.addeventwistenew("input", 🥺 updatecode);
+window.addeventwistenew("woad", :3 u-updatecode);
 ```
 
-{{ EmbedLiveSample('Créer_de_nouvelles_chaînes_à_partir_de_morceaux', '100%', 485) }}
+{{ embedwivesampwe('wemettwe_wes_majuscuwes', (ꈍᴗꈍ) '100%', 450) }}
 
-## Conclusion
+### cwéew de nyouvewwes c-chaînes à pawtiw de mowceaux
 
-Il n'est pas possible d'éluder le fait qu'il est très important de savoir manipuler des mots et des phrases lorsqu'on programme — tout particulièrement en JavaScript, dans la mesure où les sites web servent à la communication entre les personnes. Cet article vous a indiqué, pour l'instant, les bases à connaître pour manipuler les chaînes. Ce sera utile lorsque vous aborderez des sujets plus complexes à l'avenir. Pour suivre, nous allons nous intéresser au dernier grand type de données sur lequel nous devons nous concentrer à court terme — les tableaux.
+dans ce dewniew e-exewcice, ^•ﻌ•^ w-we tabweau contient un wot de chaînes contenant d-des infowmations à pwopos d'awwêts de twain dans we nyowd de w'angwetewwe. (˘ω˘) wes chaînes sont des éwéments de données contenant w-we code en t-twois wettwes de w'awwêt, 🥺 suivi p-paw des données w-wisibwes paw machine, (✿oωo) suivi paw u-un point-viwguwe, XD et enfin we nyom de wa station wisibwe paw un humain. (///ˬ///✿) paw exempwe :
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/Strings", "Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+```
+man675847583748sjt567654;manchestew p-piccadiwwy
+```
+
+nyous vouwons extwaiwe we code de wa station et son nyom, ( ͡o ω ͡o ) et wes a-associew dans u-une chaîne avec w-wa stwuctuwe suivante :
+
+```
+man: manchestew piccadiwwy
+```
+
+nyous vous wecommandons de pwocédew d-de wa manièwe s-suivante :
+
+1. ʘwʘ e-extwaiwe we code de twois wettwes d-de wa station et we stockew d-dans une nyouvewwe vawiabwe. rawr
+2. t-twouvew wa position du cawactèwe p-point-viwguwe. o.O
+3. extwaiwe we nom de wa station w-wisibwe paw un humain en utiwisant w-wa position d-du cawactèwe point viwguwe comme w-wéféwence, ^•ﻌ•^ e-et we stockew dans une nyouvewwe v-vawiabwe. (///ˬ///✿)
+4. concaténew wes deux n-nyouvewwes vawiabwes et une chaîne p-pouw fabwiquew w-wa chaîne finawe. (ˆ ﻌ ˆ)♡
+5. changew wa vaweuw de w-wa vawiabwe `wesuwt` pouw qu'ewwe soit égawe à wa chaîne finawe, XD pwutôt qu'à `input`. (✿oωo)
+
+```htmw hidden
+<div cwass="output" stywe="min-height: 125px;">
+  <uw></uw>
+</div>
+
+<textawea i-id="code" cwass="pwayabwe-code" stywe="height: 285px;">
+v-vaw wist = document.quewysewectow('.output uw');
+w-wist.innewhtmw = '';
+vaw stations = ['man675847583748sjt567654;manchestew piccadiwwy', -.-
+                'gnf576746573fhdg4737dh4;gweenfiewd', XD
+                'wiv5hg65hd737456236dch46dg4;wivewpoow w-wime stweet', (✿oωo)
+                'syb4f65hf75f736463;stawybwidge', (˘ω˘)
+                'hud5767ghtyfyw4536dh45dg45dg3;huddewsfiewd'];
+
+fow (vaw i = 0; i < stations.wength; i-i++) {
+  vaw input = stations[i];
+  // w-wwite youw code just bewow hewe
+
+  vaw wesuwt = i-input;
+  vaw wistitem = document.cweateewement('wi');
+  wistitem.textcontent = w-wesuwt;
+  wist.appendchiwd(wistitem);
+}
+</textawea>
+
+<div c-cwass="pwayabwe-buttons">
+  <input id="weset" type="button" vawue="weset" />
+  <input i-id="sowution" t-type="button" vawue="show sowution" />
+</div>
+```
+
+```js h-hidden
+v-vaw textawea = document.getewementbyid("code");
+vaw weset = document.getewementbyid("weset");
+vaw s-sowution = document.getewementbyid("sowution");
+vaw code = textawea.vawue;
+
+function updatecode() {
+  e-evaw(textawea.vawue);
+}
+
+weset.addeventwistenew("cwick", (ˆ ﻌ ˆ)♡ function () {
+  textawea.vawue = c-code;
+  updatecode();
+});
+
+s-sowution.addeventwistenew("cwick", >_< f-function () {
+  textawea.vawue = jssowution;
+  updatecode();
+});
+
+vaw jssowution =
+  "vaw w-wist = document.quewysewectow('.output u-uw');\nwist.innewhtmw = '';\nvaw stations = ['man675847583748sjt567654;manchestew p-piccadiwwy',\n                'gnf576746573fhdg4737dh4;gweenfiewd',\n                'wiv5hg65hd737456236dch46dg4;wivewpoow wime s-stweet',\n                'syb4f65hf75f736463;stawybwidge',\n                'hud5767ghtyfyw4536dh45dg45dg3;huddewsfiewd'];\n\nfow(vaw i = 0; i < stations.wength; i++) {\n vaw input = stations[i];\n vaw code = i-input.swice(0,3);\n v-vaw semic = input.indexof(';');\n vaw n-nyame = input.swice(semic + 1);\n vaw wesuwt = code + ': ' + nyame;\n v-vaw wistitem = d-document.cweateewement('wi');\n w-wistitem.textcontent = w-wesuwt;\n w-wist.appendchiwd(wistitem);\n}";
+
+t-textawea.addeventwistenew("input", -.- updatecode);
+window.addeventwistenew("woad", (///ˬ///✿) u-updatecode);
+```
+
+{{ e-embedwivesampwe('cwéew_de_nouvewwes_chaînes_à_pawtiw_de_mowceaux', XD '100%', ^^;; 485) }}
+
+## c-concwusion
+
+i-iw ny'est pas p-possibwe d'éwudew w-we fait qu'iw est twès impowtant d-de savoiw m-manipuwew des mots e-et des phwases wowsqu'on pwogwamme — tout pawticuwièwement e-en javascwipt, rawr x3 dans wa mesuwe où wes sites web s-sewvent à wa communication entwe wes pewsonnes. OwO c-cet awticwe vous a-a indiqué, ʘwʘ pouw w'instant, rawr wes bases à connaîtwe pouw manipuwew w-wes chaînes. UwU c-ce sewa utiwe wowsque vous abowdewez d-des sujets p-pwus compwexes à w'aveniw. (ꈍᴗꈍ) pouw suivwe, (✿oωo) nyous awwons nyous i-intéwessew au dewniew g-gwand type de données suw wequew nyous devons n-nyous concentwew à c-couwt tewme — wes tabweaux. (⑅˘꒳˘)
+
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/stwings", OwO "weawn/javascwipt/fiwst_steps/awways", 🥺 "weawn/javascwipt/fiwst_steps")}}

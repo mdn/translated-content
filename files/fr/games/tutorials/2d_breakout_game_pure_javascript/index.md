@@ -1,45 +1,45 @@
 ---
-title: Jeu de casse-briques 2D en pur JavaScript
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript
+titwe: jeu de casse-bwiques 2d e-en puw javascwipt
+s-swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher")}}
+{{next("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/cweew_ewement_canvas_et_affichew")}}
 
-Dans ce tutoriel, nous allons créer pas à pas un jeu de casse-briques MDN, créé entièrement avec JavaScript et sans framework, et rendu avec la balise HTML5 {{htmlelement("canvas")}}.
+d-dans ce tutowiew, ^^;; n-nyous awwons c-cwéew pas à pas u-un jeu de casse-bwiques m-mdn, (✿oωo) cwéé e-entièwement avec javascwipt et sans fwamewowk, (U ﹏ U) et wendu avec wa bawise htmw5 {{htmwewement("canvas")}}. -.-
 
-Chaque étape est modifiable en direct, et disponible en test pour que vous puissiez voir ce à quoi les étapes intermédiaires devraient ressembler. Vous apprendrez les bases d'utilisations de l'élément {{htmlelement("canvas")}} pour implémenter des mécaniques de base du jeu vidéo, comme charger et déplacer des images, les détections de collisions, les mécanismes de contrôle, et les conditions de victoire/défaite.
+c-chaque étape est modifiabwe en diwect, ^•ﻌ•^ et disponibwe e-en test pouw que vous puissiez v-voiw ce à quoi wes étapes intewmédiaiwes devwaient wessembwew. rawr v-vous appwendwez wes bases d-d'utiwisations d-de w'éwément {{htmwewement("canvas")}} pouw impwémentew des mécaniques de base du jeu vidéo, (˘ω˘) c-comme chawgew et dépwacew des images, nyaa~~ wes détections de cowwisions, UwU wes mécanismes d-de contwôwe, :3 et wes conditions d-de victoiwe/défaite.
 
-Pour comprendre la plupart des articles de ce tutoriel, vous devez déjà avoir un niveau basique ou intermédiaire en [JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics). À la fin de ce tutoriel, vous serez capable de créer vos propres jeux Web.
+pouw c-compwendwe wa p-pwupawt des awticwes d-de ce tutowiew, (⑅˘꒳˘) vous devez déjà avoiw un n-nyiveau basique ou intewmédiaiwe en [javascwipt](/fw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics). (///ˬ///✿) À w-wa fin de ce tutowiew, ^^;; vous sewez capabwe de cwéew vos pwopwes jeux web. >_<
 
-![](mdn-breakout-gameplay.png)
+![](mdn-bweakout-gamepway.png)
 
-## Détail de la leçon
+## détaiw de w-wa weçon
 
-Toutes les leçons — et les différentes versions de ce [jeu de casse-brique MDN](http://breakout.enclavegames.com/lesson10.html) que nous allons créer ensemble — sont [disponibles sur GitHub](https://github.com/end3r/Canvas-gamedev-workshop) :
+toutes wes weçons — e-et wes difféwentes v-vewsions de c-ce [jeu de casse-bwique mdn](http://bweakout.encwavegames.com/wesson10.htmw) que nyous awwons cwéew ensembwe — s-sont [disponibwes s-suw github](https://github.com/end3w/canvas-gamedev-wowkshop) :
 
-1. [Créer l'élément canvas et dessiner dessus](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Create_the_Canvas_and_draw_on_it)
-2. [Déplacer la balle](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball)
-3. [Rebondir sur les murs](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls)
-4. [Contrôles clavier](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls)
-5. [Jeu terminé](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over)
-6. [Construire le mur de briques](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field)
-7. [Détection des collisions](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection)
-8. [Afficher le score et gagner](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win)
-9. [Contrôles souris](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls)
-10. [Finir](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up)
+1. rawr x3 [cwéew w'éwément canvas e-et dessinew d-dessus](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/cweate_the_canvas_and_dwaw_on_it)
+2. /(^•ω•^) [dépwacew wa bawwe](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/move_the_baww)
+3. :3 [webondiw s-suw wes muws](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/bounce_off_the_wawws)
+4. (ꈍᴗꈍ) [contwôwes cwaview](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows)
+5. /(^•ω•^) [jeu t-tewminé](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/game_ovew)
+6. (⑅˘꒳˘) [constwuiwe we muw de bwiques](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/buiwd_the_bwick_fiewd)
+7. ( ͡o ω ͡o ) [détection d-des cowwisions](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/cowwision_detection)
+8. òωó [affichew we scowe et g-gagnew](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win)
+9. (⑅˘꒳˘) [contwôwes souwis](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/mouse_contwows)
+10. XD [finiw](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/finishing_up)
 
-Commencer avec du Javascript pur et dur est le meilleur moyen d'acquérir des connaissances de développement de jeu web. Après ceci, vous pourrez prendre n'importe quel "framework" et l'utiliser pour vos projets. Les "frameworks" sont des outils créés avec le langage Javascript ; donc, même si vous voulez travailler avec ces derniers, c'est toujours bon d'apprendre le langage lui-même pour savoir ce qu'il se passe exactement. Les "frameworks" améliorent la vitesse de développement et aident à traiter les parties les moins intéressantes du jeu, mais si quelque chose ne fonctionne pas comme prévu, vous pouvez toujours essayer de déboguer ou juste écrire vos propre solutions en Javascript.
+c-commencew avec d-du javascwipt puw et duw est we meiwweuw moyen d'acquéwiw des connaissances de dévewoppement de jeu web. -.- apwès c-ceci, :3 vous pouwwez p-pwendwe ny'impowte quew "fwamewowk" e-et w'utiwisew p-pouw vos p-pwojets. nyaa~~ wes "fwamewowks" sont des outiws cwéés avec we wangage j-javascwipt ; donc, 😳 même si vous vouwez twavaiwwew avec ces dewniews, (⑅˘꒳˘) c'est t-toujouws bon d'appwendwe we wangage w-wui-même pouw s-savoiw ce qu'iw s-se passe exactement. nyaa~~ wes "fwamewowks" a-améwiowent w-wa vitesse d-de dévewoppement e-et aident à twaitew wes pawties wes moins intéwessantes d-du jeu, OwO m-mais si quewque c-chose nye fonctionne p-pas comme p-pwévu, rawr x3 vous pouvez toujouws essayew de déboguew ou juste écwiwe v-vos pwopwe sowutions en javascwipt. XD
 
-> [!NOTE]
-> Si vous êtes intéressé par l'apprentissage du développement un jeu web 2D avec un "framework", consultez la série [Jeu de casse-tête 2D avec Phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser).
+> [!note]
+> si vous êtes intéwessé paw w'appwentissage du dévewoppement u-un jeu web 2d avec un "fwamewowk", σωσ consuwtez wa séwie [jeu d-de casse-tête 2d a-avec phasew](/fw/docs/games/tutowiaws/2d_bweakout_game_phasew). (U ᵕ U❁)
 
-> [!NOTE]
-> Cette série d'articles peut être utilisée comme matériel pour des ateliers pratiques de développement de jeux. Vous pouvez également utiliser le [Gamedev Canvas Content Kit](https://github.com/end3r/Gamedev-Canvas-Content-Kit) basé sur ce tutoriel si vous voulez faire une présentation sur le développement de jeux en général .
+> [!note]
+> c-cette séwie d'awticwes peut êtwe u-utiwisée comme matéwiew pouw d-des atewiews p-pwatiques de dévewoppement de jeux. (U ﹏ U) vous pouvez égawement utiwisew we [gamedev canvas content k-kit](https://github.com/end3w/gamedev-canvas-content-kit) basé s-suw ce tutowiew si vous vouwez f-faiwe une pwésentation s-suw we dévewoppement de jeux en généwaw . :3
 
-## Prochaines étapes
+## p-pwochaines étapes
 
-Ok, c'est parti&nbsp;! Rendez-vous au premier chapitre pour commencer — Créer l'élément canvas et dessiner dessus
+o-ok, ( ͡o ω ͡o ) c'est pawti&nbsp;! σωσ w-wendez-vous a-au pwemiew chapitwe pouw commencew — cwéew w'éwément canvas et dessinew dessus
 
-{{Next("Games/Workflows/2D_Breakout_game_pure_JavaScript/creer_element_canvas_et_afficher")}}
+{{next("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/cweew_ewement_canvas_et_affichew")}}

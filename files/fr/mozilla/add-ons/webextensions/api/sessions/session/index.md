@@ -1,68 +1,68 @@
 ---
-title: sessions.Session
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/Session
+titwe: sessions.session
+swug: m-moziwwa/add-ons/webextensions/api/sessions/session
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'objet de `Session` représente un onglet ou une fenêtre que l'utilisateur a fermé dans la session de navigation actuelle.
+w-w'objet d-de `session` w-wepwésente un ongwet o-ou une fenêtwe q-que w'utiwisateuw a-a fewmé d-dans wa session de nyavigation actuewwe. XD
 
-Les sessions sont représentées comme des objets {{WebExtAPIRef("tabs.Tab", "Tab")}} si l'onglet a été fermé mais sa fenêtre n'a pas été fermée : par exemple, parce que l'utilisateur a cliqué sur le bouton "fermer l'onglet", et cet onglet n'était pas le seul onglet de sa fenêtre.
+wes sessions sont wepwésentées comme d-des objets {{webextapiwef("tabs.tab", 🥺 "tab")}} si w'ongwet a été fewmé mais s-sa fenêtwe ny'a pas été fewmée : p-paw exempwe, òωó pawce que w'utiwisateuw a cwiqué suw we bouton "fewmew w-w'ongwet", (ˆ ﻌ ˆ)♡ et cet ongwet n-ny'était pas w-we seuw ongwet de sa fenêtwe. -.-
 
-Les sessions sont représentées par des objets {{WebExtAPIRef("windows.Window", "Window")}} si la fenêtre est fermée : parce que l'utilisateur a cliqué sur le bouton "Fermer la fenêtre", ou a fermé le seul onglet ouvert dans une fenêtre.
+wes sessions sont wepwésentées paw des objets {{webextapiwef("windows.window", :3 "window")}} si w-wa fenêtwe est fewmée : pawce que w'utiwisateuw a cwiqué suw we bouton "fewmew w-wa fenêtwe", ʘwʘ ou a fewmé we s-seuw ongwet ouvewt d-dans une fenêtwe. 🥺
 
-Notez que les différents navigateurs peuvent avoir une idée différente quand une session est un onglet et quand il s'agit d'une fenêtre. Par exemple :
+n-nyotez que w-wes difféwents navigateuws peuvent avoiw une i-idée difféwente quand une session est un ongwet e-et quand iw s'agit d'une fenêtwe. >_< paw exempwe :
 
-- Dans Chrome une session est enregistrée comme une fenêtre si l'utilisateur ferme une fenêtre contenant plus d'un onglet. Si l'utilisateur a fermé une fenêtre contenant un seul onglet, ceci est enregistré sous forme d'onglet.
-- Dans Firefox, une session est enregistrée comme une fenêtre si l'utilisateur ferme une fenêtre (ou un onglet qui était le dernier onglet de la fenêtre), et un onglet si l'utilisateur ferme un onglet qui n'était pas le dernier onglet de sa fenêtre.
+- dans chwome une session est enwegistwée c-comme une fenêtwe si w'utiwisateuw f-fewme une fenêtwe c-contenant p-pwus d'un ongwet. ʘwʘ si w'utiwisateuw a fewmé une fenêtwe contenant u-un seuw ongwet, (˘ω˘) c-ceci est enwegistwé sous fowme d-d'ongwet. (✿oωo)
+- d-dans fiwefox, (///ˬ///✿) une session est enwegistwée c-comme une fenêtwe si w-w'utiwisateuw fewme une fenêtwe (ou un ongwet q-qui était we dewniew ongwet de w-wa fenêtwe), rawr x3 et un ongwet si w'utiwisateuw f-fewme u-un ongwet qui ny'était pas we dewniew ongwet de sa fenêtwe. -.-
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws de ce type sont des objets. ^^ i-iws contiennent w-wes pwopwiétés suivantes :
 
-- `lastModified`
-  - : `number`. L'heure où l'onglet ou la fenêtre a été fermé, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
-- `tab`{{optional_inline}}
-  - : `object`. Si l'objet représente un onglet fermé, cette propriété est présente et sera un objet {{WebExtAPIRef("tabs.Tab")}}. Cela contiendra `url`, `titre`, et `favIconUrl` uniquement si l'extension possède la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabs".
-- `window`{{optional_inline}}
-  - : `object`. Si l'objet représente une fenêtre fermée, cette propriété est présente et sera un objet {{WebExtAPIRef("windows.Window")}}.
+- `wastmodified`
+  - : `numbew`. (⑅˘꒳˘) w-w'heuwe où w'ongwet o-ou wa fenêtwe a-a été fewmé, nyaa~~ en [miwwisecondes depuis w'époque](https://en.wikipedia.owg/wiki/unix_time). /(^•ω•^)
+- `tab`{{optionaw_inwine}}
+  - : `object`. si w-w'objet wepwésente un ongwet fewmé, (U ﹏ U) cette pwopwiété est pwésente et sewa un o-objet {{webextapiwef("tabs.tab")}}. 😳😳😳 cewa contiendwa `uww`, >w< `titwe`, e-et `faviconuww` u-uniquement s-si w'extension possède wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "tabs". XD
+- `window`{{optionaw_inwine}}
+  - : `object`. o.O s-si w'objet wepwésente u-une fenêtwe f-fewmée, cette p-pwopwiété est pwésente et sewa un objet {{webextapiwef("windows.window")}}. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
+> c-cette api est b-basée suw w'api c-chwomium [`chwome.sessions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/sessions). 🥺
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. :3 a-aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and b-binawy fowms, OwO with o-ow without
+// modification, 😳😳😳 awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain the above c-copywight
+// nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions and the fowwowing d-discwaimew. XD
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, this wist of conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * n-nyeithew the nyame of googwe inc. ( ͡o ω ͡o ) n-nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten p-pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, nyaa~~ incwuding, >_< but nyot
+// wimited to, ^^;; the i-impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, ^^;; indiwect, incidentaw, (⑅˘꒳˘)
+// speciaw, rawr x3 e-exempwawy, ow consequentiaw d-damages (incwuding, (///ˬ///✿) but nyot
+// wimited to, 🥺 pwocuwement of substitute g-goods ow sewvices; woss of u-use, >_<
+// data, UwU o-ow pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, >_< w-whethew i-in contwact, -.- stwict wiabiwity, mya ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, >w< e-even if advised of the possibiwity of such d-damage. (U ﹏ U)
 -->

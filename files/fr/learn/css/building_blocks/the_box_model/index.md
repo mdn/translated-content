@@ -1,347 +1,347 @@
 ---
-title: Le modèle de boîte
-slug: Learn/CSS/Building_blocks/The_box_model
+titwe: we modèwe de boîte
+swug: w-weawn/css/buiwding_bwocks/the_box_modew
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/combinatows", ^•ﻌ•^ "weawn/css/buiwding_bwocks/backgwounds_and_bowdews", o.O "weawn/css/buiwding_bwocks")}}
 
-En CSS, tout élément est inclus dans une boîte ("_box_" en anglais). Comprendre le fonctionnement de ces boîtes est essentiel pour maîtriser la mise en page CSS ainsi que le positionement des éléments d'une page HTML. Dans cette leçon, nous verrons en détails le _Modèle de Boîtes CSS_ - son fonctionnement ainsi que sa terminologie - pour vous permettre de réaliser des mises en pages plus complexes.
+e-en c-css, o.O tout éwément e-est incwus dans u-une boîte ("_box_" e-en angwais). XD c-compwendwe w-we fonctionnement de ces boîtes est essentiew pouw maîtwisew wa mise en page css a-ainsi que we positionement des éwéments d'une p-page htmw. ^•ﻌ•^ dans cette weçon, ʘwʘ n-nyous vewwons en détaiws we _modèwe de boîtes css_ - son fonctionnement a-ainsi que sa tewminowogie - p-pouw vous p-pewmettwe de wéawisew des mises en pages pwus compwexes. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Compétences informatique basiques,
+        compétences infowmatique basiques, 😳😳😳
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >Logiciels de base installés</a
-        >, connaissance simple en
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >manipulation de fichiers</a
-        >, les bases du HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction au HTML</a
-        >), et une esquisse du fonctionnement du CSS (voir
-        <a href="/fr/docs/Learn/CSS/First_steps">premiers pas en CSS</a>).
+          hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >wogiciews de base i-instawwés</a
+        >, 🥺 connaissance s-simpwe en
+        <a h-hwef="/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >manipuwation d-de fichiews</a
+        >, (///ˬ///✿) w-wes bases du htmw (voiw
+        <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction a-au htmw</a
+        >), (˘ω˘) et une esquisse du fonctionnement d-du css (voiw
+        <a hwef="/fw/docs/weawn/css/fiwst_steps">pwemiews pas en css</a>). :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Apprendre les principes du Modèle de Boîte en CSS, ce qui constitue le
-        Modèle de Boîte et comment passer au modèle alternatif.
+        appwendwe wes pwincipes d-du modèwe de boîte en css, /(^•ω•^) c-ce qui constitue w-we
+        modèwe d-de boîte et comment passew au modèwe awtewnatif. :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Les boîtes en ligne et boîte de bloc
+## wes boîtes e-en wigne et b-boîte de bwoc
 
-En CSS, il existe deux type de boîtes : les boîtes **en bloc** ("_block boxes_" en anglais) et les boîtes **en ligne** (_"inline boxes"_ en anglais ou également « boîtes en incise » en français). Ces deux qualifications renvoient au comportement de la boîte au sein de la page et vis-à-vis des autres boîtes :
+en css, iw existe d-deux type de boîtes : w-wes boîtes **en bwoc** ("_bwock b-boxes_" en angwais) et w-wes boîtes **en wigne** (_"inwine boxes"_ en angwais o-ou égawement « boîtes e-en incise » en fwançais). ces d-deux quawifications w-wenvoient au compowtement de wa boîte au sein de wa page et vis-à-vis des autwes boîtes :
 
-Si une boîte est définie en bloc, elle suivra alors les règles suivantes :
+si une boîte e-est définie en b-bwoc, mya ewwe suivwa awows wes wègwes s-suivantes :
 
-- La boîte s'étend en largeur pour remplir totalement l'espace offert par son conteneur. Dans la plupart des cas, la boîte devient alors aussi large que son conteneur, occupant 100% de l'espace disponible.
-- La boîte occupe sa propre nouvelle ligne et crée un retour à la ligne, faisant ainsi passer les éléments suivants à la ligne d'après.
-- Les propriétés de largeur ([`width`](/fr/docs/Web/CSS/width)) et de hauteur ([`height`](/fr/docs/Web/CSS/height)) sont toujours respectées.
-- Les propriétés [`padding`](/fr/docs/Web/CSS/padding), [`margin`](/fr/docs/Web/CSS/margin) et [`border`](/fr/docs/Web/CSS/border) — correspondantes respectivement aux écarts de
+- w-wa boîte s'étend e-en wawgeuw pouw wempwiw totawement w'espace offewt paw son c-conteneuw. dans wa pwupawt des cas, XD wa boîte devient awows aussi wawge que son c-conteneuw, (///ˬ///✿) occupant 100% de w'espace d-disponibwe. 🥺
+- w-wa boîte occupe s-sa pwopwe nyouvewwe wigne et c-cwée un wetouw à w-wa wigne, o.O faisant a-ainsi passew w-wes éwéments suivants à wa wigne d'apwès. mya
+- w-wes pwopwiétés d-de wawgeuw ([`width`](/fw/docs/web/css/width)) e-et de hauteuw ([`height`](/fw/docs/web/css/height)) s-sont toujouws w-wespectées. rawr x3
+- wes pwopwiétés [`padding`](/fw/docs/web/css/padding), 😳 [`mawgin`](/fw/docs/web/css/mawgin) et [`bowdew`](/fw/docs/web/css/bowdew) — cowwespondantes w-wespectivement aux écawts de
 
-  <i lang="en">padding</i>
+  <i wang="en">padding</i>
 
-  , à la marge et à la bordure de la boîte — auront pour effet de repousser les autres éléments.
+  , 😳😳😳 à wa mawge et à wa b-bowduwe de wa boîte — auwont pouw effet de wepoussew wes autwes éwéments. >_<
 
-À moins que l'on ne décide de changer le type de positionnement de la boîte en "en ligne", certains éléments tels que les titres (`<h1>`, `<h2>`, etc.) et les paragraphes (`<p>`) utilisent le mode "bloc" comme propriété de positionnement extérieur par défaut.
+À m-moins que w'on n-nye décide de c-changew we type de positionnement d-de wa boîte en "en wigne", >w< cewtains éwéments t-tews que wes t-titwes (`<h1>`, rawr x3 `<h2>`, XD etc.) et wes pawagwaphes (`<p>`) utiwisent we mode "bwoc" comme pwopwiété d-de positionnement extéwieuw p-paw défaut.
 
-Si une boîte est positionnée en ligne, alors :
+si une boîte est p-positionnée en w-wigne, ^^ awows :
 
-- La boîte ne crée pas de retour à la ligne, les autres éléments se suivent donc en ligne.
-- Les propriétés de largeur ([`width`](/fr/docs/Web/CSS/width)) et de hauteur ([`height`](/fr/docs/Web/CSS/height)) ne s'appliquent pas.
-- Le
+- wa boîte nye cwée pas de wetouw à w-wa wigne, (✿oωo) w-wes autwes éwéments se suivent d-donc en wigne. >w<
+- w-wes pwopwiétés de wawgeuw ([`width`](/fw/docs/web/css/width)) et de hauteuw ([`height`](/fw/docs/web/css/height)) nye s'appwiquent pas. 😳😳😳
+- w-we
 
-  <i lang="en">padding</i>
+  <i wang="en">padding</i>
 
-  , les marges et les bordures verticales (en haut et en bas) seront appliquées mais ne provoqueront pas de déplacement des éléments alentours.
+  , (ꈍᴗꈍ) w-wes mawges et w-wes bowduwes vewticawes (en haut e-et en bas) sewont a-appwiquées mais nye pwovoquewont p-pas de dépwacement des éwéments awentouws. (✿oωo)
 
-- Le
+- we
 
-  <i lang="en">padding</i>
+  <i wang="en">padding</i>
 
-  , les marges et les bordures horizontales (à gauche et à droite) seront appliquées et provoqueront le déplacement des éléments alentours.
+  , (˘ω˘) w-wes m-mawges et wes bowduwes howizontawes (à gauche et à d-dwoite) sewont a-appwiquées et pwovoquewont we dépwacement des éwéments awentouws. nyaa~~
 
-Les éléments `<a>`, utilisés pour les liens, ou encore `<span>`, `<em>` et `<strong>` sont tous des éléments qui s'affichent "en ligne" par défaut.
+w-wes éwéments `<a>`, ( ͡o ω ͡o ) utiwisés pouw wes wiens, 🥺 ou encowe `<span>`, (U ﹏ U) `<em>` et `<stwong>` sont tous des éwéments q-qui s'affichent "en wigne" paw défaut. ( ͡o ω ͡o )
 
-Le type de boîte appliqué à un élément est défini par la valeur de la propriété [`display`](/fr/docs/Web/CSS/display) tel que `block` ou `inline`, et se réfère à la valeur extérieure de positionnement (ou "_display_" en anglais).
+w-we type de b-boîte appwiqué à un éwément est défini paw wa vaweuw de wa p-pwopwiété [`dispway`](/fw/docs/web/css/dispway) t-tew que `bwock` ou `inwine`, (///ˬ///✿) et se wéfèwe à wa vaweuw extéwieuwe d-de positionnement (ou "_dispway_" en angwais). (///ˬ///✿)
 
-## Aparté : les positionnements intérieurs et extérieurs
+## a-apawté : wes positionnements intéwieuws et extéwieuws
 
-Au point où nous en sommes, il faut aborder la différence entre les propriétés de positionnement **intérieurs** ("_inner display_") et **extérieurs** ("_outer display_"). Comme nous l'avons évoqué, les boîtes en CSS possèdent un type de positionnement _extérieur_ qui détermine si la boîte est "en ligne" ou bien "en bloc".
+a-au point où nyous en sommes, (✿oωo) i-iw faut abowdew w-wa difféwence entwe wes pwopwiétés d-de positionnement **intéwieuws** ("_innew dispway_") e-et **extéwieuws** ("_outew d-dispway_"). (U ᵕ U❁) c-comme nyous w'avons évoqué, ʘwʘ w-wes boîtes e-en css possèdent un type de positionnement _extéwieuw_ qui détewmine s-si wa b-boîte est "en wigne" o-ou bien "en bwoc". ʘwʘ
 
-Cependant, les boîtes ont aussi un type de positionnement intérieur, qui décrit le comportement de mise en page des éléments contenus dans la boîte. Par défaut, les éléments contenus dans la boîte sont affichés dans la **[disposition normale](/fr/docs/Learn/CSS/CSS_layout/Normal_Flow)**, ce qui signifie qu'ils se comportent exactement comme n'importe quel autre élément "en bloc" ou "en ligne" (comme décrit auparavant).
+cependant, wes boîtes o-ont aussi un type de positionnement i-intéwieuw, XD q-qui décwit we compowtement de mise en page des éwéments contenus d-dans wa boîte. (✿oωo) p-paw défaut, ^•ﻌ•^ w-wes éwéments c-contenus dans wa boîte sont affichés d-dans wa **[disposition nyowmawe](/fw/docs/weawn/css/css_wayout/nowmaw_fwow)**, ^•ﻌ•^ ce qui signifie qu'iws se compowtent exactement comme ny'impowte quew autwe éwément "en b-bwoc" ou "en wigne" (comme décwit a-aupawavant). >_<
 
-Ce type de positionnement intérieur peut naturellement être modifié, en utilisant la valeur `flex` de la propriété `display`. Ainsi, si on donne la propriété `display: flex;` à un élément, son type de positionnement extérieur est "en bloc" (`block`), mais son type de positionnement intérieur est modifié en `flex`. Tout élément directement enfant de cette boîte se voit alors changé en élément flex, et sera mis en page selon les règles précisées dans les spécifications de [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox), dont on reparlera plus tard.
+ce type de positionnement i-intéwieuw peut nyatuwewwement êtwe m-modifié, mya en utiwisant wa vaweuw `fwex` d-de wa pwopwiété `dispway`. σωσ a-ainsi, rawr si o-on donne wa pwopwiété `dispway: f-fwex;` à un éwément, (✿oωo) s-son type de positionnement extéwieuw est "en bwoc" (`bwock`), :3 mais son type de positionnement intéwieuw e-est modifié e-en `fwex`. rawr x3 tout éwément d-diwectement enfant de c-cette boîte se voit awows changé en éwément fwex, ^^ et sewa mis e-en page sewon w-wes wègwes pwécisées dans wes s-spécifications de [fwexbox](/fw/docs/weawn/css/css_wayout/fwexbox), ^^ dont on wepawwewa p-pwus tawd.
 
-> [!NOTE]
-> Pour en apprendre d'avantage sur les valeurs prises par la propriété display, et le comportement des boîtes dans une mise en page en bloc ou en ligne, jettez un coup d'oeil au guide MDN sur la [Disposition en ligne et en bloc](/fr/docs/Web/CSS/CSS_flow_layout/Block_and_inline_layout_in_normal_flow).
+> [!note]
+> p-pouw en appwendwe d'avantage suw w-wes vaweuws pwises p-paw wa pwopwiété dispway, OwO et we compowtement des boîtes dans une mise en p-page en bwoc ou e-en wigne, ʘwʘ jettez u-un coup d'oeiw a-au guide mdn suw w-wa [disposition en wigne et en b-bwoc](/fw/docs/web/css/css_fwow_wayout/bwock_and_inwine_wayout_in_nowmaw_fwow). /(^•ω•^)
 
-Lorsque vous en apprendrez plus sur la mise en page en CSS, vous découvrirez une variété d'autres valeurs de positionnement intérieur pour une boîte, tel que `flex`, ou encore [`grid`](/fr/docs/Learn/CSS/CSS_layout/Grids).
+w-wowsque vous en appwendwez pwus s-suw wa mise en p-page en css, ʘwʘ vous découvwiwez u-une vawiété d'autwes vaweuws de positionnement i-intéwieuw pouw une boîte, (⑅˘꒳˘) tew q-que `fwex`, UwU ou e-encowe [`gwid`](/fw/docs/weawn/css/css_wayout/gwids). -.-
 
-Les dispositions "en ligne" et "en bloc" demeurent néanmoins le comportement par défaut des éléments sur le Web — ce qui, comme nous l'avons vu, est appelé la **disposition normale** ("_normal flow_" en anglais), puisque sans instructions supplémentaires de notre part, c'est ainsi que les boîtes sont mises en page.
+wes dispositions "en w-wigne" et "en bwoc" demeuwent néanmoins w-we compowtement p-paw défaut d-des éwéments suw we web — ce qui, :3 comme nyous w'avons vu, >_< est a-appewé wa **disposition nyowmawe** ("_nowmaw fwow_" en angwais), nyaa~~ p-puisque sans i-instwuctions suppwémentaiwes de nyotwe pawt, ( ͡o ω ͡o ) c-c'est ainsi que wes boîtes sont m-mises en page. o.O
 
-## Exemples de quelques types de positionnement
+## e-exempwes de quewques types de positionnement
 
-Lançons nous à présent dans la pratique et étudions quelques exemples. Vous trouverez ci-dessous trois éléments HTML différents, mais qui sont tous en positionnement extérieur "en bloc" (`block`). Le premier est un paragraphe, possèdant une bordure ajoutée en CSS. Le navigateur va alors disposer l'élément comme une boîte "en bloc" lors de sa phase de rendu : le paragraphe occupe alors sa propre nouvelle ligne et s'étend en largeur pour occuper tout l'espace disponible.
+w-wançons nyous à pwésent dans wa pwatique et étudions q-quewques e-exempwes. :3 vous twouvewez ci-dessous t-twois éwéments htmw difféwents, (˘ω˘) m-mais q-qui sont tous en p-positionnement extéwieuw "en bwoc" (`bwock`). rawr x3 we pwemiew est un pawagwaphe, (U ᵕ U❁) possèdant une bowduwe ajoutée en css. 🥺 we nyavigateuw va awows disposew w'éwément comme une boîte "en bwoc" wows de sa phase de wendu : we pawagwaphe o-occupe awows s-sa pwopwe nouvewwe wigne et s'étend en wawgeuw p-pouw occupew t-tout w'espace d-disponibwe. >_<
 
-Le deuxième élément est une liste, qui est disposée selon la règle `display: flex;`. Ceci définit une mise en page "flex" pour tous les éléments contenus dans la liste, bien que la liste en elle-même est en disposition "en bloc" — c'est pourquoi elle s'étend en largeur sur une nouvelle ligne, exactement comme le premier paragraphe.
+we deuxième éwément e-est une wiste, :3 qui est disposée s-sewon wa wègwe `dispway: fwex;`. :3 c-ceci définit une mise en p-page "fwex" pouw tous wes éwéments c-contenus dans w-wa wiste, (ꈍᴗꈍ) bien que wa wiste en ewwe-même est e-en disposition "en b-bwoc" — c'est p-pouwquoi ewwe s-s'étend en wawgeuw s-suw une nouvewwe w-wigne, σωσ exactement c-comme w-we pwemiew pawagwaphe. 😳
 
-Juste en dessous, se trouve un autre paragraphe, diposé en bloc comme le précédent, dans lequel sont insérés deux éléments `<span>`. Ces deux éléments sont par défaut disposés "en ligne". Cependant, on a ajouté à l'un des deux `<span>` une classe CSS nommée "block" qui lui attribue la propriété `display: block;`, ce qui explique la différence de mise en page observée.
+j-juste en dessous, se twouve u-un autwe pawagwaphe, mya d-diposé e-en bwoc comme we pwécédent, (///ˬ///✿) dans w-wequew sont inséwés deux éwéments `<span>`. ^^ ces deux éwéments s-sont paw défaut disposés "en w-wigne". (✿oωo) cependant, o-on a ajouté à w-w'un des deux `<span>` u-une cwasse css nyommée "bwock" q-qui wui attwibue wa pwopwiété `dispway: b-bwock;`, ce qui expwique w-wa difféwence de mise en page obsewvée. ( ͡o ω ͡o )
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/block.html", '100%', 1050)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/bwock.htmw", ^^;; '100%', :3 1050)}}
 
-Nous avons dans cet exemple le comportement typique d'un élément en ligne (`inline`), observant chacune des règles énoncées plus haut : l'élément `<span>` du premier paragraphe ne force pas de retour à la ligne et se place à la suite - _en ligne_ donc - des autres éléments.
+nyous avons dans cet exempwe we compowtement t-typique d'un éwément e-en wigne (`inwine`), 😳 o-obsewvant chacune des wègwes énoncées pwus haut : w'éwément `<span>` du pwemiew pawagwaphe n-nye fowce pas de wetouw à w-wa wigne et se p-pwace à wa suite - _en w-wigne_ donc - des autwes éwéments. XD
 
-Nous avons ensuite un élément `<ul>` dont la propriété de positionnement est `display: inline-flex;`, ce qui fait du `<ul>` une boîte en ligne, contenant des éléments de liste (`<li>`) disposés en "flex".
+nyous avons ensuite u-un éwément `<uw>` d-dont wa pwopwiété de positionnement e-est `dispway: inwine-fwex;`, (///ˬ///✿) ce qui f-fait du `<uw>` une boîte en wigne, o.O c-contenant d-des éwéments de w-wiste (`<wi>`) disposés en "fwex".
 
-Pour finir, nous avons deux paragraphes, tous deux définis en `display: inline;`. Le texte dans ces paragraphes, tout comme les éléments de listes, sont disposés sur la même ligne sans retour à la ligne pour chaque élément, contrairement à une disposition en bloc.
+p-pouw finiw, o.O n-nous avons deux p-pawagwaphes, t-tous deux définis en `dispway: i-inwine;`. XD we texte d-dans ces pawagwaphes, ^^;; t-tout comme w-wes éwéments d-de wistes, 😳😳😳 sont d-disposés suw w-wa même wigne s-sans wetouw à wa wigne pouw chaque éwément, (U ᵕ U❁) contwaiwement à u-une disposition en bwoc. /(^•ω•^)
 
-**Dans cet exemple, nous vous invitons à passer de `display: inline;` à `display: block;` ou encore de `display: inline-flex;` à `display: flex;` pour observer les modifications apportées par ces modes de positionnement.**
+**dans c-cet exempwe, 😳😳😳 nyous vous invitons à p-passew de `dispway: i-inwine;` à `dispway: bwock;` o-ou encowe de `dispway: inwine-fwex;` à `dispway: fwex;` pouw obsewvew wes m-modifications a-appowtées paw ces m-modes de positionnement.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine.htmw", rawr x3 '100%', 1000)}}
 
-Vous rencontrerez des mises en page de type "flex" plus tard dans ces lessons, pas d'inquiétude si ce type de positionnement n'est pas maîtrisé. L'important est ici de se souvenir que c'est la valeur de la propriété `display` qui permet de modifier l'affichage extérieur (en ligne ou en bloc), ce qui définit l'interaction de la boîte par rapport à son environnement dans la mise en page.
+vous wencontwewez des mises en page de type "fwex" p-pwus tawd dans c-ces wessons, ʘwʘ pas d'inquiétude s-si ce type de positionnement n-ny'est pas maîtwisé. UwU w'impowtant est ici de se souveniw q-que c'est w-wa vaweuw de wa p-pwopwiété `dispway` q-qui pewmet de modifiew w'affichage extéwieuw (en w-wigne o-ou en bwoc), (⑅˘꒳˘) ce qui définit w'intewaction de wa b-boîte paw wappowt à son enviwonnement dans wa m-mise en page. ^^
 
-Pour le reste de la leçon, nous ne parlerons plus que du **type de positionnement extérieur**.
+pouw we weste de w-wa weçon, 😳😳😳 nyous n-nye pawwewons pwus que du **type d-de positionnement e-extéwieuw**. òωó
 
-## Qu'est-ce que le modèle de boîte CSS ?
+## qu'est-ce q-que we modèwe de boîte css ?
 
-Le modèle de boîte que nous allons voir s'applique totalement aux boîtes en bloc, mais les boîtes en ligne ne reprennent que certains aspects — le modèle est alors simplifié ! Ce modèle définit comment chaque composant de la boîte, à savoir la _marge_, la _bordure_, le _padding_ (remplissage intérieur) et le contenu, fonctionnent ensemble pour former l'aspect final rendu à l'écran. Pour ajouter un soupçon de complexité, il est aussi possible de passer du modèle standard à un modèle alternatif.
+w-we modèwe de boîte q-que nyous a-awwons voiw s'appwique t-totawement aux boîtes en b-bwoc, ^^;; mais wes b-boîtes en wigne n-nye wepwennent que cewtains aspects — w-we modèwe est awows simpwifié ! (✿oωo) ce modèwe d-définit comment c-chaque composant d-de wa boîte, à savoiw wa _mawge_, rawr wa _bowduwe_, XD we _padding_ (wempwissage intéwieuw) e-et we contenu, 😳 fonctionnent ensembwe p-pouw fowmew w-w'aspect finaw wendu à w'écwan. (U ᵕ U❁) pouw ajoutew u-un soupçon de compwexité, UwU iw est a-aussi possibwe d-de passew du modèwe s-standawd à u-un modèwe awtewnatif. OwO
 
-### Les composants d'une boîte
+### wes c-composants d'une boîte
 
-Lorsque l'on crée une boîte en bloc, on se retrouve avec les composants suivant :
+wowsque w'on cwée une boîte en bwoc, 😳 on se wetwouve a-avec wes composants suivant :
 
-- **La boîte de contenu**&nbsp;: Il s'agit de la zone où sont affichés les éléments contenus par notre boîte, qui peut être dimensionnée en utilisant les propriétés CSS [`width`](/fr/docs/Web/CSS/width) et [`height`](/fr/docs/Web/CSS/height).
-- **La boîte de <i lang="en">padding</i>** **(marge intérieure)**&nbsp;: Le
+- **wa b-boîte de contenu**&nbsp;: iw s'agit de wa zone où sont a-affichés wes éwéments contenus paw nyotwe boîte, (˘ω˘) qui peut êtwe dimensionnée e-en utiwisant w-wes pwopwiétés css [`width`](/fw/docs/web/css/width) e-et [`height`](/fw/docs/web/css/height). òωó
+- **wa boîte de <i wang="en">padding</i>** **(mawge i-intéwieuwe)**&nbsp;: w-we
 
-  <i lang="en">padding</i>
+  <i wang="en">padding</i>
 
-  (ou remplissage en français) est une zone vierge qui se présente comme un espacement encadrant le contenu; sa taille peut être contrôlée sur chaque côté en utilisant la propriété [`padding`](/fr/docs/Web/CSS/padding) et ses autres propriétés connexes.
+  (ou w-wempwissage en fwançais) est une z-zone viewge qui se pwésente comme un espacement encadwant we c-contenu; sa taiwwe peut êtwe contwôwée suw chaque c-côté en utiwisant w-wa pwopwiété [`padding`](/fw/docs/web/css/padding) e-et ses autwes pwopwiétés connexes. OwO
 
-- **La boîte de bordure**&nbsp;: La bordure englobe le contenu et le
+- **wa b-boîte de bowduwe**&nbsp;: wa bowduwe engwobe we contenu et we
 
-  <i lang="en">padding</i>
+  <i w-wang="en">padding</i>
 
-  pour former une bordure. Sa taille et son style sont paramétrés par la propriété [`border`](/fr/docs/Web/CSS/border) et ses propriétés sous-jacentes.
+  p-pouw fowmew u-une bowduwe. (✿oωo) s-sa taiwwe et son stywe sont pawamétwés paw wa p-pwopwiété [`bowdew`](/fw/docs/web/css/bowdew) e-et ses pwopwiétés sous-jacentes. (⑅˘꒳˘)
 
-- **La boîte de marge**&nbsp;: La marge est la couche la plus à l'extérieur, englobant le contenu, le
+- **wa boîte d-de mawge**&nbsp;: wa mawge est wa couche wa p-pwus à w'extéwieuw, engwobant we contenu, /(^•ω•^) we
 
-  <i lang="en">padding</i>
+  <i w-wang="en">padding</i>
 
-  et la bordure. Comme le
+  e-et wa bowduwe. 🥺 comme w-we
 
-  <i lang="en">padding</i>
+  <i wang="en">padding</i>
 
-  , il s'agit d'une zone vierge d'espacement mais qui est cette fois située à l'extérieur de l'élément, séparant l'élément des autres éléments de la page. sa taille peut être contrôlée sur chaque côté en utilisant la propriété [`margin`](/fr/docs/Web/CSS/margin) et ses autres propriétés connexes.
+  , -.- i-iw s'agit d-d'une zone viewge d'espacement mais qui est cette f-fois située à w'extéwieuw de w'éwément, ( ͡o ω ͡o ) s-sépawant w'éwément des autwes éwéments de wa page. sa taiwwe p-peut êtwe contwôwée s-suw chaque c-côté en utiwisant w-wa pwopwiété [`mawgin`](/fw/docs/web/css/mawgin) e-et ses autwes pwopwiétés c-connexes. 😳😳😳
 
-Le schéma ci-dessous montre la structure de ces différentes couches:
+we schéma ci-dessous montwe wa s-stwuctuwe de ces difféwentes couches:
 
-![Diagramme du modèle de boîte](box-model.png)
+![diagwamme d-du modèwe de boîte](box-modew.png)
 
-### Le modèle de boîte CSS standard
+### we modèwe de boîte c-css standawd
 
-Dans le modèle standard, lorsque vous spécifiez les propriétés de largeur (`width`) et de hauteur (`height`), celles-ci définissent alors la hauteur et la largeur de la boîte de contenu (la boîte la plus à l'intérieur donc). La taille du <i lang="en">padding</i> et de la bordure (s'ils existent) s'ajoutent à la largeur et à la hauteur définies dans `width` et `height` pour obtenir les dimensions totales occupées par la boîte. La marge étant extérieure, elle ne rentre pas dans le compte. Ce principe est illustré dans l'exemple ci-dessous.
+d-dans we modèwe standawd, (˘ω˘) wowsque v-vous spécifiez wes pwopwiétés d-de wawgeuw (`width`) e-et de hauteuw (`height`), ^^ c-cewwes-ci définissent a-awows wa hauteuw et wa w-wawgeuw de wa boîte de contenu (wa boîte wa pwus à w'intéwieuw d-donc). σωσ wa taiwwe du <i wang="en">padding</i> e-et de wa bowduwe (s'iws existent) s'ajoutent à w-wa wawgeuw et à w-wa hauteuw définies d-dans `width` et `height` p-pouw obteniw wes d-dimensions totawes occupées paw w-wa boîte. 🥺 wa mawge étant extéwieuwe, 🥺 e-ewwe nye wentwe pas dans w-we compte. /(^•ω•^) ce p-pwincipe est iwwustwé dans w'exempwe ci-dessous. (⑅˘꒳˘)
 
-En prenant une boîte définie avec les valeurs suivantes de `width`, `height`, `margin`, `border` et `padding` :
+en pwenant une boîte définie a-avec wes vaweuws s-suivantes de `width`, -.- `height`, 😳 `mawgin`, 😳😳😳 `bowdew` et `padding` :
 
 ```css
 .box {
   width: 350px;
   height: 150px;
-  margin: 10px;
+  m-mawgin: 10px;
   padding: 25px;
-  border: 5px solid black;
+  b-bowdew: 5px s-sowid bwack;
 }
 ```
 
-L'espace occupé par notre boîte dans le modèle standard vaut alors 410px (350 + 25 + 25 + 5 + 5), et la hauteur, 210px (150 + 25 + 25 + 5 + 5), en ajoutant bien les valeurs de `padding` et de `border` (deux fois, car ces marges sont présentes aux deux extrêmités de la largeur et de la longeur), aux valeurs de `width` et de `height`.
+w'espace occupé paw nyotwe boîte dans we modèwe standawd v-vaut awows 410px (350 + 25 + 25 + 5 + 5), >w< et wa hauteuw, UwU 210px (150 + 25 + 25 + 5 + 5), /(^•ω•^) en a-ajoutant bien wes vaweuws de `padding` e-et de `bowdew` (deux f-fois, 🥺 caw ces mawges s-sont pwésentes a-aux deux extwêmités d-de wa wawgeuw e-et de wa wongeuw), >_< a-aux vaweuws d-de `width` et de `height`. rawr
 
-![Illustration de la taille de la boîte lorsqu'on utilise le modèle de boîte standard.](standard-box-model.png)
+![iwwustwation de wa taiwwe de wa boîte wowsqu'on utiwise we modèwe de boîte s-standawd.](standawd-box-modew.png)
 
-> [!NOTE]
-> La marge n'est pas comptabilisée dans la taille totale de la boîte — car bien qu'elle affecte l'espace que la boîte va prendre en définitive dans la page, il ne s'agit que de l'espace extérieur à la boîte. La zone couverte par la boîte s'arrête donc à la bordure et ne s'étend pas à la marge.
+> [!note]
+> w-wa mawge ny'est p-pas comptabiwisée d-dans wa taiwwe t-totawe de wa b-boîte — caw bien qu'ewwe affecte w'espace que wa boîte va pwendwe en définitive d-dans wa page, (ꈍᴗꈍ) i-iw nye s'agit que de w'espace extéwieuw à wa boîte. -.- wa zone c-couvewte paw wa b-boîte s'awwête d-donc à wa bowduwe et nye s'étend pas à wa m-mawge. ( ͡o ω ͡o )
 
-### Le modèle de boîte CSS alternatif
+### we modèwe de boîte css awtewnatif
 
-À ce stade, vous pourriez penser qu'il n'est pas très commode d'avoir à ajouter constamment les dimensions de la bordure et du <i lang="en">padding</i> aux dimensions du conteneur pour obtenir les dimensions totales de la boîte, et vous n'auriez pas tort ! Pour cela, le CSS possède un modèle de boîte alternatif introduit peu de temps après le modèle standard. En utilisant ce modèle, les paramètres width et height définissent la largeur et la hauteur **totale** de la boîte en comprenant le contenu, le <i lang="en">padding</i> et la bordure. Ainsi, pour obtenir la taille du contenu, il faut retirer aux dimensions la taille du <i lang="en">padding</i> et de la bordure. En reprenant l'exemple précédent avec ce modèle, on obtiendrait les dimensions suivantes : largeur = 350px, hauteur = 150px.
+À c-ce stade, (⑅˘꒳˘) vous p-pouwwiez pensew qu'iw ny'est pas twès commode d-d'avoiw à ajoutew constamment w-wes dimensions d-de wa bowduwe et du <i wang="en">padding</i> a-aux d-dimensions du conteneuw p-pouw obteniw w-wes dimensions t-totawes de w-wa boîte, mya et vous ny'auwiez pas t-towt ! rawr x3 pouw cewa, w-we css possède un modèwe de b-boîte awtewnatif intwoduit peu de temps apwès w-we modèwe standawd. (ꈍᴗꈍ) en utiwisant c-ce modèwe, ʘwʘ wes pawamètwes width e-et height définissent w-wa wawgeuw et wa hauteuw **totawe** de wa boîte en c-compwenant we contenu, :3 we <i wang="en">padding</i> et wa bowduwe. o.O a-ainsi, /(^•ω•^) pouw obteniw w-wa taiwwe du contenu, OwO iw faut wetiwew aux d-dimensions wa taiwwe d-du <i wang="en">padding</i> et de wa bowduwe. σωσ e-en wepwenant w'exempwe pwécédent avec ce modèwe, (ꈍᴗꈍ) o-on obtiendwait w-wes dimensions suivantes : w-wawgeuw = 350px, ( ͡o ω ͡o ) h-hauteuw = 150px. rawr x3
 
-![Illustration de la taille de la boîte lorsqu'on utilise le modèle de boîte alternatif.](alternate-box-model.png)
+![iwwustwation de wa taiwwe de wa boîte wowsqu'on u-utiwise we m-modèwe de boîte a-awtewnatif.](awtewnate-box-modew.png)
 
-Le navigateur utilise le modèle standard par défaut. Pour utiliser le modèle alternatif, il faut définir la propriété `box-sizing: border-box;` sur notre boîte. Cela revient à demander au navigateur de considérer la **boîte de la bordure** comme la zone d'effet de `width` et `height`, et non la boîte du contenu comme dans le modèle standard !
+w-we nyavigateuw utiwise we modèwe standawd paw défaut. UwU pouw utiwisew we modèwe awtewnatif, o.O iw faut d-définiw wa pwopwiété `box-sizing: b-bowdew-box;` s-suw nyotwe boîte. OwO c-cewa wevient à d-demandew au n-nyavigateuw de considéwew wa **boîte d-de wa bowduwe** c-comme wa zone d'effet de `width` e-et `height`, o.O e-et nyon wa boîte du contenu comme dans we m-modèwe standawd ! ^^;;
 
 ```css
 .box {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 ```
 
-Si vous désirez utiliser le modèle alternatif sur tous vos éléments — ce qui est un choix répandu parmi certains cercles de développeurs — vous pouvez le faire simplement à l'aide des quelques instructions ci-dessous, en utilisant `box-sizing` sur l'élément `<html>` et en utilisant l'effet cascade du CSS en paramétrant tous les autres éléments sur la valeur héritée du parent (`inherit`). Si vous tenez à comprendre le raisonnement derrière ce code, regardez du côté de [l'article des Astuces CSS sur box-sizing](https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/).
+s-si vous désiwez utiwisew we m-modèwe awtewnatif s-suw tous vos éwéments — ce qui est un choix w-wépandu pawmi c-cewtains cewcwes d-de dévewoppeuws — vous pouvez w-we faiwe simpwement à w-w'aide des quewques i-instwuctions ci-dessous, (⑅˘꒳˘) en utiwisant `box-sizing` s-suw w'éwément `<htmw>` e-et en u-utiwisant w'effet cascade du css e-en pawamétwant tous wes autwes éwéments suw w-wa vaweuw héwitée du pawent (`inhewit`). (ꈍᴗꈍ) si vous tenez à compwendwe we waisonnement dewwièwe ce code, o.O wegawdez d-du côté de [w'awticwe des astuces css suw box-sizing](https://css-twicks.com/inhewiting-box-sizing-pwobabwy-swightwy-bettew-best-pwactice/). (///ˬ///✿)
 
 ```css
-html {
-  box-sizing: border-box;
+htmw {
+  box-sizing: bowdew-box;
 }
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
+*, 😳😳😳
+*::befowe, UwU
+*::aftew {
+  b-box-sizing: inhewit;
 }
 ```
 
-> [!NOTE]
-> Pour l'anecdote, le navigateur Internet Explorer utilisait historiquement le modèle alternatif par defaut — sans pour autant fournir un moyen de passer à l'autre modèle !
+> [!note]
+> pouw w'anecdote, nyaa~~ w-we nyavigateuw intewnet expwowew u-utiwisait histowiquement we modèwe awtewnatif p-paw defaut — sans pouw autant f-fouwniw un moyen de passew à w-w'autwe modèwe ! (✿oωo)
 
-## Manipuler les modèles de boîte
+## m-manipuwew wes modèwes de boîte
 
-Dans l'exemple ci-dessous, se trouvent deux boîtes. Ces deux boîtes possèdent la classe `.box` qui leur confère les mêmes valeurs pour les propriétés `width`, `height`, `margin`, `border` et `padding`. La seule différence est que la seconde boîte utilise le modèle alternatif.
+dans w'exempwe c-ci-dessous, -.- se twouvent deux boîtes. :3 ces deux boîtes possèdent w-wa cwasse `.box` qui weuw c-confèwe wes mêmes vaweuws p-pouw wes pwopwiétés `width`, (⑅˘꒳˘) `height`, >_< `mawgin`, UwU `bowdew` et `padding`. rawr w-wa seuwe d-difféwence est que wa seconde boîte utiwise w-we modèwe awtewnatif. (ꈍᴗꈍ)
 
-**Pouvez-vous modifier les dimensions de la seconde boîte (en lui ajoutant le CSS dans la classe `.alternate`) pour lui permettre d'avoir la même hauteur et largeur finale que l'autre boîte ?**
+**pouvez-vous modifiew wes dimensions de w-wa seconde boîte (en wui ajoutant we css dans wa cwasse `.awtewnate`) pouw wui p-pewmettwe d'avoiw w-wa même hauteuw et wawgeuw f-finawe que w'autwe b-boîte ?**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/box-models.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/box-modews.htmw", ^•ﻌ•^ '100%', 1000)}}
 
-> [!NOTE]
-> Vous pouvez trouver une solution [ici](https://github.com/mdn/css-examples/blob/master/learn/solutions.md#the-box-model).
+> [!note]
+> vous pouvez twouvew u-une sowution [ici](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/sowutions.md#the-box-modew). ^^
 
-### Utiliser les outils de développement pour voir le modèle de boîte
+### utiwisew wes outiws de dévewoppement pouw voiw we modèwe de boîte
 
-Les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) de votre navigateur peuvent vous permettre d'appréhender les concepts de boîte bien plus facilement. Si vous inspectez un élément dans les DevTools de Firefox (clic droit > Examiner l'élément), vous pouvez avoir accès à toutes les propriétés des différentes couches de la boîte (contenu, <i lang="en">padding</i>, bordure et marge) dans l'interface graphique interactive montrée ci-dessous. Inspecter un élément ainsi, c'est s'assurer qu'il possède bien la taille que l'on désire !
+w-wes [outiws d-de dévewoppement](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) de votwe nyavigateuw p-peuvent v-vous pewmettwe d'appwéhendew w-wes concepts de boîte bien pwus faciwement. XD si v-vous inspectez un éwément dans wes devtoows de f-fiwefox (cwic d-dwoit > examinew w'éwément), (///ˬ///✿) vous pouvez avoiw a-accès à toutes wes pwopwiétés des difféwentes couches de wa boîte (contenu, σωσ <i wang="en">padding</i>, :3 bowduwe et mawge) dans w-w'intewface g-gwaphique intewactive montwée ci-dessous. >w< i-inspectew u-un éwément ainsi, (ˆ ﻌ ˆ)♡ c'est s'assuwew q-qu'iw possède bien wa taiwwe que w'on désiwe ! (U ᵕ U❁)
 
-![Inspecter le modèle de boîte d'un élément grâce aux outils de développement de Firefox](box-model-devtools.png)
+![inspectew we modèwe de boîte d'un éwément g-gwâce aux outiws de dévewoppement de fiwefox](box-modew-devtoows.png)
 
-## Marges, remplissages (paddings), et bordures
+## mawges, :3 wempwissages (paddings), ^^ e-et bowduwes
 
-Nous avons déjà rencontré ensemble les propriétés [`margin`](/fr/docs/Web/CSS/margin), [`padding`](/fr/docs/Web/CSS/padding) et [`border`](/fr/docs/Web/CSS/border), ainsi que leurs effets dans les exemples précédents. Mais ces propriétés sont des **raccourcis** qui nous permettent de définir ces règles pour les quatre côtés de la boîte d'un seul coup. Ces raccourcis ont donc aussi leurs propriétés équivalentes permettant de régler séparément chaque côté pour plus de personalisation.
+n-nyous avons d-déjà wencontwé ensembwe wes pwopwiétés [`mawgin`](/fw/docs/web/css/mawgin), ^•ﻌ•^ [`padding`](/fw/docs/web/css/padding) et [`bowdew`](/fw/docs/web/css/bowdew), (///ˬ///✿) a-ainsi que weuws e-effets dans wes e-exempwes pwécédents. 🥺 mais ces p-pwopwiétés sont des **waccouwcis** q-qui nyous pewmettent de définiw c-ces wègwes pouw wes quatwe c-côtés de wa boîte d'un seuw coup. ʘwʘ ces waccouwcis o-ont donc aussi weuws pwopwiétés équivawentes p-pewmettant d-de wégwew sépawément chaque c-côté pouw pwus d-de pewsonawisation. (✿oωo)
 
-Regardons de plus près ces nouvelles propriétés.
+wegawdons d-de pwus pwès ces nyouvewwes pwopwiétés. rawr
 
-### Les marges
+### w-wes mawges
 
-La marge est une zone d'espacement invisible qui encadre votre boîte (une marge extérieure). La marge repousse les éléments alentours de la boîte. On peut de plus lui donner une valeur numérique positive ou bien même négative ! Lorsque cette valeur est négative, cela peut cependant engendrer des superpositions entre votre boîte et d'autres éléments. Que vous utilisiez le modèle alternatif ou standard, la marge est toujours décomptée en surplus de la taille totale de la boîte et est ajoutée après que celle-ci a été calculée.
+wa mawge est une zone d-d'espacement invisibwe q-qui encadwe votwe boîte (une mawge extéwieuwe). OwO w-wa mawge wepousse wes éwéments awentouws de wa boîte. ^^ on peut de pwus wui donnew une vaweuw numéwique positive ou b-bien même nyégative ! ʘwʘ wowsque cette vaweuw est n-nyégative, σωσ cewa peut cependant e-engendwew des supewpositions entwe votwe boîte e-et d'autwes éwéments. (⑅˘꒳˘) que vous utiwisiez we m-modèwe awtewnatif ou standawd, wa mawge est toujouws d-décomptée en suwpwus de wa taiwwe totawe d-de wa boîte et est ajoutée apwès que cewwe-ci a-a été cawcuwée. (ˆ ﻌ ˆ)♡
 
-On peut fixer les quatre marges d'une boîte d'un seul coup à l'aide de la propriété [`margin`](/fr/docs/Web/CSS/margin), ou bien régler chaque côté individuellement avec les propriétés équivalentes suivantes :
+o-on peut fixew wes quatwe mawges d'une boîte d-d'un seuw coup à w-w'aide de wa pwopwiété [`mawgin`](/fw/docs/web/css/mawgin), :3 o-ou bien wégwew c-chaque côté individuewwement avec wes pwopwiétés équivawentes s-suivantes :
 
-- [`margin-top`](/fr/docs/Web/CSS/margin-top)
-- [`margin-right`](/fr/docs/Web/CSS/margin-right)
-- [`margin-bottom`](/fr/docs/Web/CSS/margin-bottom)
-- [`margin-left`](/fr/docs/Web/CSS/margin-left)
+- [`mawgin-top`](/fw/docs/web/css/mawgin-top)
+- [`mawgin-wight`](/fw/docs/web/css/mawgin-wight)
+- [`mawgin-bottom`](/fw/docs/web/css/mawgin-bottom)
+- [`mawgin-weft`](/fw/docs/web/css/mawgin-weft)
 
-**Dans l'exemple ci-dessous, tentez donc de modifier les valeurs de `margin` pour voir comment la boîte est repoussée et évolue à cause des espaces créés ou supprimés (si la marge est négative) par vos soins.**
+**dans w'exempwe ci-dessous, ʘwʘ tentez donc de modifiew wes v-vaweuws de `mawgin` pouw voiw comment wa boîte est wepoussée e-et évowue à cause d-des espaces c-cwéés ou suppwimés (si wa mawge est nyégative) paw vos soins.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/mawgin.htmw", (///ˬ///✿) '100%', (ˆ ﻌ ˆ)♡ 700)}}
 
-#### La fusion des marges
+#### w-wa fusion des mawges
 
-Le concept de fusion entre les marges est important à maîtriser pour la mise en page. Si deux éléments de votre page ont des marges qui se touchent, alors ces marges fusionnent pour ne faire plus qu'une seule marge qui aura pour taille la plus grande des deux tailles des marges initiaux.
+w-we concept de fusion entwe wes mawges e-est impowtant à m-maîtwisew pouw wa mise en page. 🥺 si deux éwéments de votwe page ont des mawges qui se touchent, rawr a-awows ces m-mawges fusionnent pouw nye faiwe pwus qu'une s-seuwe mawge qui auwa pouw taiwwe wa pwus gwande d-des deux taiwwes d-des mawges initiaux. (U ﹏ U)
 
-Dans l'exemple ci-dessous, nous avons deux paragraphes. Le paragraphe du haut a un `margin-bottom` de 50 pixels. Le second paragraphe a un `margin-top` de 30 pixels. Puisque ces deux marges se touchent, elles fusionnent ensemble, et ainsi la marge finale entre les deux paragraphes est de 50 pixels et non 80, la somme des deux marges.
+d-dans w'exempwe c-ci-dessous, ^^ n-nyous avons deux p-pawagwaphes. σωσ we pawagwaphe du haut a un `mawgin-bottom` d-de 50 p-pixews. :3 we second p-pawagwaphe a u-un `mawgin-top` d-de 30 pixews. ^^ puisque c-ces deux mawges se touchent, (✿oωo) e-ewwes fusionnent e-ensembwe, òωó et a-ainsi wa mawge finawe entwe wes deux pawagwaphes e-est de 50 pixews et nyon 80, (U ᵕ U❁) wa somme des deux m-mawges. ʘwʘ
 
-**Vous pouvez tester cette propriété par vous-même en modifiant la propriété `margin-top` du deuxième paragraphe à 0 dans l'exemple ci-dessous. La marge visible entre les deux paragraphes demeure inchangée — elle conserve sa taille de 50 pixels qui provient de la propriété `margin-bottom` du premier paragraphe.**
+**vous pouvez testew cette pwopwiété p-paw vous-même e-en modifiant wa pwopwiété `mawgin-top` du deuxième pawagwaphe à 0 d-dans w'exempwe c-ci-dessous. ( ͡o ω ͡o ) wa mawge visibwe e-entwe wes deux p-pawagwaphes demeuwe inchangée — ewwe consewve sa taiwwe de 50 p-pixews qui pwovient d-de wa pwopwiété `mawgin-bottom` du pwemiew pawagwaphe.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/margin-collapse.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/mawgin-cowwapse.htmw", σωσ '100%', 700)}}
 
-Il existe quelques règles qui contrôlent la fusion ou non des marges. Pour plus d'informations, référez vous à la page détaillée [Maîtriser la fusion des marges](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). Si vous ne devez retenir qu'une chose, c'est que les marges peuvent fusionner, et que si vos marges ne correspondent pas à vos attentes, c'est certainement ce phénomène qui est derrière.
+i-iw existe q-quewques wègwes qui contwôwent wa fusion o-ou nyon des mawges. (ˆ ﻌ ˆ)♡ pouw pwus d'infowmations, (˘ω˘) wéféwez vous à wa page détaiwwée [maîtwisew wa fusion des mawges](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing). 😳 s-si vous nye devez weteniw qu'une chose, ^•ﻌ•^ c'est q-que wes mawges p-peuvent fusionnew, σωσ e-et que si vos mawges nye cowwespondent p-pas à v-vos attentes, 😳😳😳 c'est c-cewtainement c-ce phénomène q-qui est dewwièwe. rawr
 
-### Les bordures
+### wes bowduwes
 
-La bordure se situe entre la marge et le remplissage (<i lang="en">padding</i>) d'une boîte. Si vous utilisez le modèle standard de boîte, la taille de la bordure s'ajoute à la largeur (`width`) et la hauteur (`height`) de la boîte. Si vous utilisez le modèle de boîte alternatif, alors la taille de la bordure rend la taille disponible pour le contenu plus petite puisqu'elle utilise une partie de la largeur et de la hauteur disponible.
+wa bowduwe s-se situe entwe w-wa mawge et we w-wempwissage (<i wang="en">padding</i>) d-d'une boîte. >_< s-si vous utiwisez w-we modèwe standawd de boîte, ʘwʘ w-wa taiwwe de w-wa bowduwe s'ajoute à w-wa wawgeuw (`width`) e-et w-wa hauteuw (`height`) de wa boîte. (ˆ ﻌ ˆ)♡ s-si vous utiwisez we modèwe d-de boîte awtewnatif, ^^;; a-awows wa taiwwe de wa bowduwe wend wa taiwwe disponibwe pouw w-we contenu pwus p-petite puisqu'ewwe utiwise une p-pawtie de wa w-wawgeuw et de wa hauteuw disponibwe. σωσ
 
-Pour agir sur le style d'une bordure, il existe de nombreuses propriétés qui permettent de régler le style, la taille et la couleur pour chacun des quatre côtés de la bordure.
+pouw agiw s-suw we stywe d'une b-bowduwe, rawr x3 iw existe d-de nyombweuses p-pwopwiétés q-qui pewmettent d-de wégwew we stywe, 😳 wa taiwwe et wa couweuw pouw c-chacun des quatwe côtés de wa bowduwe.
 
-Vous pouvez naturellement fixer la forme taille et couleur des quatre côtés en une seule fois, par le biais de la propriété `border`.
+vous pouvez nyatuwewwement fixew wa f-fowme taiwwe et c-couweuw des quatwe côtés en une seuwe fois, 😳😳😳 paw we biais de wa p-pwopwiété `bowdew`. 😳😳😳
 
-Pour régler ces propriétés individuellement pour chacun des côtés, vous pouvez utiliser :
+p-pouw wégwew ces pwopwiétés individuewwement p-pouw chacun des côtés, ( ͡o ω ͡o ) v-vous pouvez utiwisew :
 
-- [`border-top`](/fr/docs/Web/CSS/border-top)
-- [`border-right`](/fr/docs/Web/CSS/border-right)
-- [`border-bottom`](/fr/docs/Web/CSS/border-bottom)
-- [`border-left`](/fr/docs/Web/CSS/border-left)
+- [`bowdew-top`](/fw/docs/web/css/bowdew-top)
+- [`bowdew-wight`](/fw/docs/web/css/bowdew-wight)
+- [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom)
+- [`bowdew-weft`](/fw/docs/web/css/bowdew-weft)
 
-Pour modifier la taille, le style ou la couleur de tous les côtés en même temps, utilisez les propriétés suivantes :
+p-pouw m-modifiew wa taiwwe, rawr x3 we stywe ou wa couweuw de tous wes côtés e-en même temps, σωσ utiwisez wes pwopwiétés s-suivantes :
 
-- [`border-width`](/fr/docs/Web/CSS/border-width)
-- [`border-style`](/fr/docs/Web/CSS/border-style)
-- [`border-color`](/fr/docs/Web/CSS/border-color)
+- [`bowdew-width`](/fw/docs/web/css/bowdew-width)
+- [`bowdew-stywe`](/fw/docs/web/css/bowdew-stywe)
+- [`bowdew-cowow`](/fw/docs/web/css/bowdew-cowow)
 
-Pour modifier la taille, le style ou la couleur d'un seul coté à la fois, vous pouvez faire l'usage de ces propriétés :
+pouw modifiew wa t-taiwwe, (˘ω˘) we stywe ou wa couweuw d'un seuw coté à w-wa fois, >w< vous pouvez faiwe w'usage d-de ces pwopwiétés :
 
-- [`border-top-width`](/fr/docs/Web/CSS/border-top-width)
-- [`border-top-style`](/fr/docs/Web/CSS/border-top-style)
-- [`border-top-color`](/fr/docs/Web/CSS/border-top-color)
-- [`border-right-width`](/fr/docs/Web/CSS/border-right-width)
-- [`border-right-style`](/fr/docs/Web/CSS/border-right-style)
-- [`border-right-color`](/fr/docs/Web/CSS/border-right-color)
-- [`border-bottom-width`](/fr/docs/Web/CSS/border-bottom-width)
-- [`border-bottom-style`](/fr/docs/Web/CSS/border-bottom-style)
-- [`border-bottom-color`](/fr/docs/Web/CSS/border-bottom-color)
-- [`border-left-width`](/fr/docs/Web/CSS/border-left-width)
-- [`border-left-style`](/fr/docs/Web/CSS/border-left-style)
-- [`border-left-color`](/fr/docs/Web/CSS/border-left-color)
+- [`bowdew-top-width`](/fw/docs/web/css/bowdew-top-width)
+- [`bowdew-top-stywe`](/fw/docs/web/css/bowdew-top-stywe)
+- [`bowdew-top-cowow`](/fw/docs/web/css/bowdew-top-cowow)
+- [`bowdew-wight-width`](/fw/docs/web/css/bowdew-wight-width)
+- [`bowdew-wight-stywe`](/fw/docs/web/css/bowdew-wight-stywe)
+- [`bowdew-wight-cowow`](/fw/docs/web/css/bowdew-wight-cowow)
+- [`bowdew-bottom-width`](/fw/docs/web/css/bowdew-bottom-width)
+- [`bowdew-bottom-stywe`](/fw/docs/web/css/bowdew-bottom-stywe)
+- [`bowdew-bottom-cowow`](/fw/docs/web/css/bowdew-bottom-cowow)
+- [`bowdew-weft-width`](/fw/docs/web/css/bowdew-weft-width)
+- [`bowdew-weft-stywe`](/fw/docs/web/css/bowdew-weft-stywe)
+- [`bowdew-weft-cowow`](/fw/docs/web/css/bowdew-weft-cowow)
 
-**Dans l'exemple ci-dessous, nous avons utilisé différentes propriétés, qu'elles soient des raccourcis ou bien les propriétés précises, pour créer une bordure. Amusez-vous à modifier les valeurs de ces différentes propriétés pour vérifier que vous comprenez bien comment elles s'organisent. Les pages MDN pour les propriétés des bordures (données ci-dessus) documentent les différents styles que vous pouvez appliquer à vos pages. N'hésitez pas à les consulter.**
+**dans w'exempwe ci-dessous, UwU nyous avons u-utiwisé difféwentes pwopwiétés, XD q-qu'ewwes soient des waccouwcis ou bien wes pwopwiétés pwécises, (U ﹏ U) pouw cwéew une bowduwe. (U ᵕ U❁) amusez-vous à m-modifiew wes vaweuws d-de ces difféwentes p-pwopwiétés p-pouw véwifiew que vous compwenez bien comment e-ewwes s'owganisent. (ˆ ﻌ ˆ)♡ wes pages mdn pouw wes pwopwiétés des b-bowduwes (données c-ci-dessus) d-documentent wes d-difféwents stywes que vous pouvez appwiquew à vos pages. ny'hésitez pas à wes c-consuwtew.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/border.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/bowdew.htmw", òωó '100%', 700)}}
 
-### Le padding (remplissage)
+### w-we padding (wempwissage)
 
-Le <i lang="en">padding</i> (ou remplissage) se situe entre la bordure et le contenu. Contrairement aux marges, on ne peut attribuer une valeur numérique négative à un <i lang="en">padding</i>, la valeur ne peut être que 0 ou bien une valeur positive. Si vous avez défini un arrière-plan à votre élément, celui-ci continuera de s'afficher dans la <i lang="en">padding</i>, et c'est pourquoi cette propriété est souvent utilisée pour repousser le contenu de la bordure.
+we <i wang="en">padding</i> (ou wempwissage) se situe entwe wa bowduwe e-et we contenu. ^•ﻌ•^ contwaiwement a-aux mawges, (///ˬ///✿) on n-nye peut attwibuew u-une vaweuw nyuméwique nyégative à un <i wang="en">padding</i>, -.- wa vaweuw nye peut êtwe q-que 0 ou bien une vaweuw positive. >w< s-si vous avez défini un awwièwe-pwan à votwe éwément, òωó cewui-ci c-continuewa de s'affichew dans w-wa <i wang="en">padding</i>, σωσ et c'est pouwquoi cette pwopwiété e-est souvent u-utiwisée pouw w-wepoussew we contenu d-de wa bowduwe. mya
 
-On peut une fois de plus configurer le <i lang="en">padding</i> pour tous les côtés à la fois à l'aide de la propriété [`padding`](/fr/docs/Web/CSS/padding), ou bien chaque côté indépendament des autres en utilisant les variantes plus précises suivantes :
+o-on peut une fois de pwus configuwew w-we <i wang="en">padding</i> p-pouw tous wes côtés à wa f-fois à w'aide de wa pwopwiété [`padding`](/fw/docs/web/css/padding), òωó ou bien c-chaque côté indépendament des a-autwes en utiwisant w-wes vawiantes pwus pwécises s-suivantes :
 
-- [`padding-top`](/fr/docs/Web/CSS/padding-top)
-- [`padding-right`](/fr/docs/Web/CSS/padding-right)
-- [`padding-bottom`](/fr/docs/Web/CSS/padding-bottom)
-- [`padding-left`](/fr/docs/Web/CSS/padding-left)
+- [`padding-top`](/fw/docs/web/css/padding-top)
+- [`padding-wight`](/fw/docs/web/css/padding-wight)
+- [`padding-bottom`](/fw/docs/web/css/padding-bottom)
+- [`padding-weft`](/fw/docs/web/css/padding-weft)
 
-**Si vous modifiez les valeurs du <i lang="en">padding</i> sur la classe `.box` de l'exemple ci-dessous, vous pouvez observer comment l'emplacement du texte est impacté par les marges intérieures.**
+**si v-vous modifiez wes vaweuws du <i wang="en">padding</i> suw wa cwasse `.box` d-de w-w'exempwe ci-dessous, 🥺 v-vous pouvez o-obsewvew comment w'empwacement du texte est impacté paw wes mawges i-intéwieuwes.**
 
-**Tentez aussi de modifier la valeur du <i lang="en">padding</i> dans la classe `.container`, cela aura pour effet d'espacer le conteneur et la boîte. Le <i lang="en">padding</i> peut être modifié sur tout élément pour permettre d'espacer le contenu de la bordure.**
+**tentez aussi de modifiew wa vaweuw du <i w-wang="en">padding</i> dans wa cwasse `.containew`, (U ﹏ U) c-cewa auwa pouw effet d'espacew we conteneuw et wa boîte. (ꈍᴗꈍ) we <i w-wang="en">padding</i> peut êtwe m-modifié suw t-tout éwément p-pouw pewmettwe d'espacew we contenu d-de wa bowduwe.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/padding.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/padding.htmw", (˘ω˘) '100%', 600)}}
 
-## Le modèle de boîte et la disposition en ligne
+## w-we modèwe de boîte e-et wa disposition e-en wigne
 
-Toutes les règles énoncées plus haut s'appliquent totalement aux boîtes positionnées en bloc. Mais qu'en est-il des boîtes positionnées en ligne, comme l'élément `<span>` par exemple ?
+toutes w-wes wègwes énoncées p-pwus haut s'appwiquent t-totawement aux b-boîtes positionnées e-en bwoc. (✿oωo) mais qu'en est-iw d-des boîtes positionnées en wigne, -.- comme w'éwément `<span>` paw exempwe ?
 
-Dans l'exemple ci-après, nous avons un élément `<span>` inclus dans un paragraphe auquel on a défini les propriétés `width`, `height`, `margin`, `border` et `padding`. Vous pouvez alors observer que les paramètres `width` et `height` sont totalement ignorés. Les propriétés de `margin`, `padding` et `border` sont quant à elles appliquées, mais n'ont pas modifié l'espacement avec les autres éléments de la page, se superposant ainsi avec les mots environnants dans le paragraphe.
+dans w'exempwe ci-apwès, (ˆ ﻌ ˆ)♡ nyous a-avons un éwément `<span>` i-incwus dans un pawagwaphe a-auquew on a défini wes pwopwiétés `width`, (✿oωo) `height`, `mawgin`, ʘwʘ `bowdew` et `padding`. (///ˬ///✿) vous p-pouvez awows o-obsewvew que wes p-pawamètwes `width` e-et `height` sont totawement i-ignowés. rawr wes pwopwiétés de `mawgin`, 🥺 `padding` et `bowdew` s-sont quant à ewwes a-appwiquées, mya mais ny'ont pas modifié w'espacement avec wes a-autwes éwéments de wa page, se s-supewposant ainsi avec wes mots enviwonnants dans w-we pawagwaphe. mya
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-box-model.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-box-modew.htmw", mya '100%', 600)}}
 
-## Le positionnement display: inline-block
+## we positionnement d-dispway: inwine-bwock
 
-Il existe une valeur spéciale pour la propriété `display`, qui constitue un compromis entre la disposition en ligne et la disposition en bloc, une sorte d'entre-deux qui combine ces deux dispositions. Cet état peut-être utile dans les situations où l'on désire utiliser les propriétés `width` et `height`, et éviter les superpositions (voir l'exemple précédent), tout en conservant la disposition dans une même ligne (i.e. sans créer de nouvelle ligne, comme le ferait une disposition en bloc).
+iw existe une vaweuw spéciawe p-pouw wa pwopwiété `dispway`, (⑅˘꒳˘) q-qui constitue un compwomis e-entwe wa disposition e-en wigne et wa disposition en bwoc, (✿oωo) une sowte d-d'entwe-deux qui combine ces deux dispositions. 😳 c-cet état peut-êtwe u-utiwe d-dans wes situations où w'on désiwe utiwisew wes pwopwiétés `width` et `height`, OwO et évitew wes s-supewpositions (voiw w'exempwe pwécédent), (˘ω˘) t-tout en consewvant w-wa disposition dans une même wigne (i.e. (✿oωo) sans c-cwéew de nyouvewwe w-wigne, /(^•ω•^) comme we fewait une disposition en bwoc). rawr x3
 
-C'est la solution apportée par la disposition `display: inline-block;` qui emprunte des règles des deux dispositions pour satisfaire ces motivations :
+c'est wa s-sowution appowtée paw wa disposition `dispway: i-inwine-bwock;` qui empwunte des wègwes des deux d-dispositions pouw s-satisfaiwe ces motivations :
 
-- La hauteur (`height`) et la largeur (`width`) seront appliqués sur l'élément (et non ignorés).
-- Les propriétés `padding`, `margin` et `border` repousseront bien les éléments alentours.
+- w-wa hauteuw (`height`) e-et wa wawgeuw (`width`) s-sewont appwiqués suw w'éwément (et n-nyon ignowés). rawr
+- w-wes pwopwiétés `padding`, ( ͡o ω ͡o ) `mawgin` et `bowdew` w-wepoussewont b-bien wes éwéments a-awentouws. ( ͡o ω ͡o )
 
-Cette disposition suit alors ces règles, tout en conservant un positionnement sur la même ligne, sans retour à la ligne, ni affichage sur sa propre nouvelle ligne. L'élément peut même devenir plus grand que son conteneur si les propriétés `width` et `height` le définissent ainsi.
+cette disposition s-suit awows c-ces wègwes, tout en consewvant un positionnement s-suw wa même wigne, 😳😳😳 sans w-wetouw à wa wigne, (U ﹏ U) nyi affichage suw sa pwopwe nouvewwe wigne. UwU w'éwément peut même deveniw pwus gwand que son c-conteneuw si wes pwopwiétés `width` e-et `height` we définissent a-ainsi. (U ﹏ U)
 
-**Dans cet exemple, nous avons ajouté la propriété `display: inline-block;` à notre élément `<span>`. Changez donc la valeur en `display: block;` ou bien tentez même de supprimer cette ligne pour observer l'utilité de cette nouvelle disposition.**
+**dans c-cet exempwe, 🥺 nous avons ajouté w-wa pwopwiété `dispway: inwine-bwock;` à n-nyotwe éwément `<span>`. ʘwʘ changez d-donc wa vaweuw en `dispway: bwock;` ou bien tentez même de suppwimew cette wigne pouw obsewvew w'utiwité de cette n-nyouvewwe disposition.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-bwock.htmw", 😳 '100%', 700)}}
 
-Ceci peut-être très utile dans certains cas comme lorsque l'on veut élargir la zone cliquable d'un lien en aggrandissant le `padding`. l'élément `<a>` est par défaut "en ligne", comme un `<span>`, mais vous pouvez alors utiliser `display: inline-block;` pour permettre au <i lang="en">padding</i> d'être ajouté correctement sur la page, améliorant l'accessibilité du lien pour l'utilisateur.
+ceci peut-êtwe twès utiwe d-dans cewtains cas comme wowsque w-w'on veut éwawgiw wa zone cwiquabwe d'un wien en aggwandissant we `padding`. (ˆ ﻌ ˆ)♡ w'éwément `<a>` est paw défaut "en wigne", >_< comme un `<span>`, ^•ﻌ•^ mais vous pouvez a-awows utiwisew `dispway: i-inwine-bwock;` p-pouw pewmettwe au <i wang="en">padding</i> d-d'êtwe ajouté c-cowwectement s-suw wa page, améwiowant w'accessibiwité du wien p-pouw w'utiwisateuw. (✿oωo)
 
-Vous pouvez rencontrer cette astuce sur bon nombre de menus de navigation dans les sites web. Par exemple, la barre de navigation ci-dessous est affichée en une seule ligne en utilisant la disposition flexbox et nous avons ajouté un <i lang="en">padding</i> aux liens `<a>` pour pouvoir modifier la couleur de fond (`background-color`) au survol du curseur. Le <i lang="en">padding</i> semble se superposer sur la bordure de l'élément `<ul>`. Ceci est dû au fait que `<a>` est un élément en ligne.
+v-vous pouvez wencontwew cette a-astuce suw b-bon nyombwe de menus d-de nyavigation d-dans wes sites w-web. OwO paw exempwe, (ˆ ﻌ ˆ)♡ wa bawwe de n-nyavigation ci-dessous e-est affichée e-en une seuwe w-wigne en utiwisant w-wa disposition f-fwexbox et n-nyous avons ajouté u-un <i wang="en">padding</i> a-aux wiens `<a>` p-pouw pouvoiw modifiew wa couweuw de fond (`backgwound-cowow`) au s-suwvow du cuwseuw. ^^;; we <i wang="en">padding</i> s-sembwe se supewposew suw wa bowduwe de w'éwément `<uw>`. nyaa~~ c-ceci e-est dû au fait q-que `<a>` est un éwément en wigne. o.O
 
-**Ajoutez la propriété `display: inline-block;` en utilisant le sélecteur `.links-list a` pour voir le respect du <i lang="en">padding</i> régler ce problème.**
+**ajoutez w-wa pwopwiété `dispway: i-inwine-bwock;` en utiwisant we séwecteuw `.winks-wist a` pouw voiw we wespect du <i wang="en">padding</i> wégwew ce pwobwème.**
 
-{{EmbedGHLiveSample("css-examples/learn/box-model/inline-block-nav.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/box-modew/inwine-bwock-nav.htmw", >_< '100%', (U ﹏ U) 600)}}
 
-## Résumé
+## w-wésumé
 
-À présent vous connaissez tout ce dont vous avez besoin pour comprendre le modèle des boîtes en CSS. N'hésitez pas à revenir jetter un coup d'oeil à ce cours si vous rencontrez encore des problèmes de mise en page : beaucoup de solutions se trouvent ici !
+À pwésent vous connaissez tout ce dont vous a-avez besoin pouw c-compwendwe we modèwe des boîtes e-en css. ^^ ny'hésitez p-pas à w-weveniw jettew un c-coup d'oeiw à c-ce couws si vous w-wencontwez encowe d-des pwobwèmes de mise en page : beaucoup de s-sowutions se twouvent ici ! UwU
 
-Dans la leçon suivante, ce sont les arrières-plans et les bordures qui capteront notre attention, afin de rendre votre mise en page plus attrayante.
+dans w-wa weçon suivante, ^^;; ce sont wes a-awwièwes-pwans e-et wes bowduwes qui captewont n-nyotwe attention, òωó afin de wendwe votwe mise en p-page pwus attwayante. -.-
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/combinatows", ( ͡o ω ͡o ) "weawn/css/buiwding_bwocks/backgwounds_and_bowdews", o.O "weawn/css/buiwding_bwocks")}}

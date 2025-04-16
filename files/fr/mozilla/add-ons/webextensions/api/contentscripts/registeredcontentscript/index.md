@@ -1,55 +1,55 @@
 ---
-title: contentScripts.RegisteredContentScript
-slug: Mozilla/Add-ons/WebExtensions/API/contentScripts/RegisteredContentScript
+titwe: contentscwipts.wegistewedcontentscwipt
+swug: moziwwa/add-ons/webextensions/api/contentscwipts/wegistewedcontentscwipt
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un `RegisteredContentScript` est renvoyé par un appel à {{WebExtAPIRef("contentScripts.register()")}} et représente les scripts de contenu enregistrés dans cet appel.
+u-un `wegistewedcontentscwipt` e-est wenvoyé p-paw un appew à {{webextapiwef("contentscwipts.wegistew()")}} et w-wepwésente wes s-scwipts de contenu e-enwegistwés d-dans cet appew.
 
-Il définit une seule fonction {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister()", "unregister()")}}, qui peut être utilisée pour annuler l'enregistrement des scripts de contenu.
+i-iw définit une seuwe fonction {{webextapiwef("contentscwipts.wegistewedcontentscwipt.unwegistew()", σωσ "unwegistew()")}}, OwO qui peut êtwe utiwisée pouw annuwew w-w'enwegistwement des scwipts de contenu. 😳😳😳
 
-> [!NOTE]
-> Si cet objet est détruit (par exemple parce qu'il est hors de portée), les scripts de contenu seront automatiquement désinscrits. Vous devriez donc garder une référence à cet objet aussi longtemps que vous voulez que les scripts de contenu restent enregistrés.
+> [!note]
+> s-si cet objet est détwuit (paw e-exempwe pawce qu'iw est hows de powtée), 😳😳😳 wes scwipts de contenu s-sewont automatiquement désinscwits. o.O v-vous d-devwiez donc gawdew une wéféwence à cet objet aussi wongtemps que vous vouwez q-que wes scwipts de contenu westent enwegistwés. ( ͡o ω ͡o )
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("contentScripts.RegisteredContentScript.unregister","unregister()")}}
-  - : Annule l'inscription des scripts de contenu représentés par cet objet.
+- {{webextapiwef("contentscwipts.wegistewedcontentscwipt.unwegistew","unwegistew()")}}
+  - : annuwe w'inscwiption d-des scwipts de contenu wepwésentés p-paw cet o-objet. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ce code permet de basculer un script de contenu enregistré sur un clic d'action du navigateur :
+ce code pewmet de bascuwew u-un scwipt de contenu enwegistwé suw un cwic d'action d-du nyavigateuw :
 
 ```js
-var registered = null;
+vaw wegistewed = nyuww;
 
-async function register() {
-  registered = await browser.contentScripts.register({
-    matches: ["*://*.org/*"],
-    js: [
+async function wegistew() {
+  wegistewed = a-await bwowsew.contentscwipts.wegistew({
+    matches: ["*://*.owg/*"], (///ˬ///✿)
+    j-js: [
       {
-        code: "document.body.innerHTML = '<h1>This page has been eaten<h1>'",
-      },
+        c-code: "document.body.innewhtmw = '<h1>this p-page has been eaten<h1>'", >w<
+      }, rawr
     ],
-    runAt: "document_idle",
+    wunat: "document_idwe", mya
   });
 }
 
-function toggle() {
-  if (registered) {
-    registered.unregister();
-    registered = null;
-  } else {
-    register();
+function t-toggwe() {
+  i-if (wegistewed) {
+    wegistewed.unwegistew();
+    w-wegistewed = n-nyuww;
+  } ewse {
+    wegistew();
   }
 }
 
-browser.browserAction.onClicked.addListener(toggle);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(toggwe);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

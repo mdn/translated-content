@@ -1,88 +1,88 @@
 ---
-title: extension.getBackgroundPage()
-slug: Mozilla/Add-ons/WebExtensions/API/extension/getBackgroundPage
+titwe: extension.getbackgwoundpage()
+swug: moziwwa/add-ons/webextensions/api/extension/getbackgwoundpage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Alias de {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
+a-awias de {{webextapiwef("wuntime.getbackgwoundpage()")}}. -.-
 
-> [!NOTE]
-> Cette méthode ne peut pas être utilisée en mode Navigation privée - elle renvoie toujours un tableau vide. Pour plus d'informations, voir le [bug Firefox 1329304](https://bugzil.la/1329304).
+> [!note]
+> c-cette m-méthode nye peut p-pas êtwe utiwisée e-en mode nyavigation p-pwivée - e-ewwe wenvoie t-toujouws un tabweau vide. ^•ﻌ•^ pouw pwus d'infowmations, rawr voiw we [bug fiwefox 1329304](https://bugziw.wa/1329304). (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var page = browser.extension.getBackgroundPage();
+vaw page = bwowsew.extension.getbackgwoundpage();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun
+a-aucun
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-`object`. [Window](/fr/docs/Web/API/Window) de la page d'arrière plan.
+`object`. nyaa~~ [window](/fw/docs/web/api/window) d-de wa page d'awwièwe pwan. UwU
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Supposons un [script d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) définisse une fonction `foo()`:
+supposons un [scwipt d-d'awwièwe pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) d-définisse une fonction `foo()`:
 
 ```js
-// background.js
+// backgwound.js
 
 function foo() {
-  console.log("I'm defined in background.js");
+  consowe.wog("i'm d-defined in backgwound.js");
 }
 ```
 
-Un script exécuté dans un [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) peut appeler cette fonction directement comme ceci :
+un scwipt exécuté dans un [popup](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions_2) p-peut appewew cette fonction diwectement c-comme c-ceci :
 
 ```js
-// popup.js
+// p-popup.js
 
-var page = browser.extension.getBackgroundPage();
-page.foo(); // -> "I'm defined in background.js"
+vaw page = b-bwowsew.extension.getbackgwoundpage();
+page.foo(); // -> "i'm defined in backgwound.js"
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> c-cette api est basée suw w'api chwomium [`chwome.extension`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extension). :3 c-cette documentation est déwivée de [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json) dans we code chwomium. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité wewatives à micwosoft e-edge sont f-fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. (///ˬ///✿)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. ^^;; aww wights wesewved. >_<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, rawr x3 with ow without
+// modification, /(^•ω•^) a-awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, :3 this wist of conditions and the fowwowing d-discwaimew. (ꈍᴗꈍ)
+//    * w-wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// c-copywight nyotice, /(^•ω•^) this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. (⑅˘꒳˘)
+//    * nyeithew t-the nyame of g-googwe inc. ( ͡o ω ͡o ) nyow t-the nyames of its
+// contwibutows m-may be used to e-endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow w-wwitten pewmission. òωó
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, (⑅˘꒳˘) incwuding, but nyot
+// wimited to, XD the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. -.- in nyo event s-shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow a-any diwect, :3 indiwect, incidentaw, nyaa~~
+// s-speciaw, 😳 exempwawy, (⑅˘꒳˘) o-ow consequentiaw damages (incwuding, nyaa~~ but nyot
+// wimited to, OwO pwocuwement of substitute g-goods ow sewvices; woss of use,
+// d-data, rawr x3 ow pwofits; ow business i-intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, XD w-whethew in contwact, σωσ s-stwict wiabiwity, (U ᵕ U❁) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, (U ﹏ U) even i-if advised of t-the possibiwity o-of such damage. :3
 -->

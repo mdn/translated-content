@@ -1,35 +1,35 @@
 ---
-title: browserSettings.zoomFullPage
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomFullPage
+titwe: bwowsewsettings.zoomfuwwpage
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/zoomfuwwpage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.
+u-un objet {{webextapiwef("types.bwowsewsetting", (ˆ ﻌ ˆ)♡ "bwowsewsetting")}} d-dont wa vaweuw s-sous-jaccente e-est un boowéen. (˘ω˘)
 
-Par défaut, le zoom s'applique à la page web entière. En utilisant le [Zoom Text Only setting](https://support.mozilla.org/fr/kb/taille-police-zoom-augmenter-taille-pages#w_daefinir-un-niveau-de-zoom-par-daefaut-pour-tous-les-sites-web) les utilisateurs/utilisatrices peuvent choisir de zoomer uniquement le texte de la page. Ce réglage permet à une web extension de modifier et de déterminer la valeur du paramètre, le zoom est appliqué à la page entière ou bien au texte seulement.
+p-paw défaut, (⑅˘꒳˘) w-we zoom s'appwique à w-wa page w-web entièwe. (///ˬ///✿) en utiwisant we [zoom text onwy setting](https://suppowt.moziwwa.owg/fw/kb/taiwwe-powice-zoom-augmentew-taiwwe-pages#w_daefiniw-un-niveau-de-zoom-paw-daefaut-pouw-tous-wes-sites-web) wes utiwisateuws/utiwisatwices peuvent choisiw d-de zoomew uniquement we texte de wa page. 😳😳😳 ce w-wégwage pewmet à une web extension d-de modifiew et de détewminew wa vaweuw du pawamètwe, 🥺 we z-zoom est appwiqué à wa page entièwe o-ou bien a-au texte seuwement.
 
-Valeurs du paramètre:
+vaweuws du pawamètwe:
 
-- `true`: le zoom s'applique à la page web en entier (par défaut).
-- `false`: le zoom s'applique au texte de la page web seulement.
+- `twue`: we zoom s'appwique à wa p-page web en entiew (paw défaut).
+- `fawse`: we zoom s'appwique au texte de wa page w-web seuwement. mya
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Mettre le réglage à `false`:
+m-mettwe we wégwage à `fawse`:
 
 ```js
-function afficherResultat(resultat) {
-  console.log(`Le paramètre a été modifié: ${resultat}`);
+f-function affichewwesuwtat(wesuwtat) {
+  consowe.wog(`we pawamètwe a été m-modifié: ${wesuwtat}`);
 }
 
-browser.browserSettings.zoomFullPage
-  .set({ value: false })
-  .then(afficherResultat);
+bwowsew.bwowsewsettings.zoomfuwwpage
+  .set({ vawue: f-fawse })
+  .then(affichewwesuwtat);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

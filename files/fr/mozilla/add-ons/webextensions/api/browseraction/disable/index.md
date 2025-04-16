@@ -1,83 +1,83 @@
 ---
-title: browserAction.disable()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/disable
+titwe: bwowsewaction.disabwe()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/disabwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut pas être cliqué lorsque cet onglet est actif.
+d-désactive w-w'action du nyavigateuw p-pouw un o-ongwet, (U ﹏ U) ce qui s-signifie qu'iw n-ne peut pas êtwe c-cwiqué wowsque c-cet ongwet est actif. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.browserAction.disable(
-  tabId, // optional integer
+bwowsew.bwowsewaction.disabwe(
+  tabid, ^•ﻌ•^ // optionaw integew
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId`{{optional_inline}}
-  - : `integer`. L'identifiant (ID) de l'onglet pour lequel vous souhaitez désactiver l'action du navigateur.
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. w'identifiant (id) de w'ongwet pouw w-wequew vous souhaitez désactivew w-w'action du navigateuw. rawr
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Désactive l'action du navigateur lorsque vous cliquez et réactivez-le chaque fois qu'un nouveau onglet est ouvert :
+désactive w'action du n-navigateuw wowsque v-vous cwiquez et wéactivez-we chaque fois qu'un nyouveau ongwet est ouvewt :
 
 ```js
-browser.tabs.onCreated.addListener(() => {
-  browser.browserAction.enable();
+b-bwowsew.tabs.oncweated.addwistenew(() => {
+  bwowsew.bwowsewaction.enabwe();
 });
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.disable();
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  bwowsew.bwowsewaction.disabwe();
 });
 ```
 
-Désactivez l'action du navigateur uniquement pour l'onglet actif :
+désactivez w-w'action du navigateuw uniquement p-pouw w'ongwet a-actif :
 
 ```js
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.browserAction.disable(tab.id);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  b-bwowsew.bwowsewaction.disabwe(tab.id);
 });
 ```
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). (˘ω˘) cette documentation est déwivée d-de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) dans we code de chwomium code. nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. UwU
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. :3 a-aww wights w-wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, (///ˬ///✿) w-with ow without
+// modification, ^^;; awe pewmitted p-pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, >_< this wist of conditions and the fowwowing discwaimew. rawr x3
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight n-nyotice, /(^•ω•^) this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. :3
+//    * n-nyeithew the name of googwe i-inc. (ꈍᴗꈍ) nyow the n-nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow wwitten pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as is" and any expwess ow impwied wawwanties, (⑅˘꒳˘) i-incwuding, ( ͡o ω ͡o ) but nyot
+// wimited to, òωó the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) in no event shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, indiwect, XD i-incidentaw, -.-
+// speciaw, :3 exempwawy, o-ow consequentiaw d-damages (incwuding, nyaa~~ but nyot
+// wimited to, pwocuwement of substitute goods ow sewvices; woss o-of use, 😳
+// data, (⑅˘꒳˘) ow pwofits; o-ow business intewwuption) howevew c-caused and on a-any
+// theowy of wiabiwity, nyaa~~ whethew in contwact, OwO s-stwict wiabiwity, rawr x3 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, XD even if advised of the p-possibiwity of s-such damage.
 -->

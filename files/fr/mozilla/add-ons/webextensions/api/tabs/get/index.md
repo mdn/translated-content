@@ -1,84 +1,84 @@
 ---
-title: tabs.get()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/get
+titwe: tabs.get()
+swug: moziwwa/add-ons/webextensions/api/tabs/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Étant donné un ID d'onglet, obtenez les détails de l'onglet en tant qu'objet {{WebExtAPIRef("tabs.Tab")}}.
+Étant d-donné un id d-d'ongwet, nyaa~~ obtenez w-wes détaiws d-de w'ongwet en tant q-qu'objet {{webextapiwef("tabs.tab")}}. :3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est u-une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getting = browser.tabs.get(
-  tabId, // integer
+vaw getting = bwowsew.tabs.get(
+  t-tabid, mya // integew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabId`
-  - : `integer`. ID de l'onglet à obtenir.
+- `tabid`
+  - : `integew`. (///ˬ///✿) i-id de w'ongwet à obteniw. (˘ω˘)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des informations sur l'onglet. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un o-objet {{webextapiwef('tabs.tab')}} contenant des i-infowmations s-suw w'ongwet. ^^;; si w'ongwet ny'a pas pu êtwe twouvé ou qu'une autwe ewweuw se pwoduit, (✿oωo) w-wa pwomesse sewa wejetée avec un message d'ewweuw. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Obtenir des informations sur un onglet lorsqu'il est activé :
+obteniw d-des infowmations suw un ongwet w-wowsqu'iw est activé :
 
 ```js
-async function logListener(info) {
-  try {
-    let tabInfo = await browser.tabs.get(info.tabId);
-    console.log(tabInfo);
-  } catch (error) {
-    console.error(error);
+async f-function wogwistenew(info) {
+  t-twy {
+    wet t-tabinfo = await bwowsew.tabs.get(info.tabid);
+    consowe.wog(tabinfo);
+  } c-catch (ewwow) {
+    consowe.ewwow(ewwow);
   }
 }
 
-browser.tabs.onActivated.addListener(logListener);
+bwowsew.tabs.onactivated.addwistenew(wogwistenew);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api est basée suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) de chwomium. -.- cette d-documentation est déwivée d-de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code de c-chwomium code. ^•ﻌ•^
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. rawr aww w-wights wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and binawy f-fowms, nyaa~~ with ow without
+// modification, UwU a-awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain the above copywight
+// n-nyotice, :3 t-this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, (///ˬ///✿) t-this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. ^^;;
+//    * nyeithew t-the nyame of googwe inc. >_< nyow the nyames of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the c-copywight howdews and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, i-incwuding, /(^•ω•^) b-but not
+// wimited t-to, :3 the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. (ꈍᴗꈍ) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, /(^•ω•^) indiwect, incidentaw, (⑅˘꒳˘)
+// speciaw, ( ͡o ω ͡o ) e-exempwawy, òωó ow c-consequentiaw damages (incwuding, (⑅˘꒳˘) b-but nyot
+// wimited to, XD pwocuwement o-of substitute goods ow sewvices; w-woss of use,
+// d-data, -.- ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, :3 w-whethew in contwact, nyaa~~ stwict w-wiabiwity, 😳 ow towt
+// (incwuding nyegwigence ow o-othewwise) awising i-in any way out of the use
+// of this softwawe, (⑅˘꒳˘) e-even if advised o-of the possibiwity of such damage.
 -->

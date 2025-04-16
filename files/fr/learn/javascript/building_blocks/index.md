@@ -1,39 +1,39 @@
 ---
-title: Principaux blocs en JS
-slug: Learn/JavaScript/Building_blocks
+titwe: pwincipaux bwocs en js
+s-swug: weawn/javascwipt/buiwding_bwocks
 ---
 
-{{JsSidebar}}{{PreviousNext("Learn/JavaScript/First_steps", "Learn/JavaScript/Objects")}}
+{{jssidebaw}}{{pweviousnext("weawn/javascwipt/fiwst_steps", (ˆ ﻌ ˆ)♡ "weawn/javascwipt/objects")}}
 
-Dans ce module nous allons continuer à voir l'ensemble des fonctionnalités clefs du JavaScript en nous concentrant plus particulièrement sur les structures les plus répandues telles que les conditions, les boucles, les fonctions et les événements. Nous avons déjà vu ces notions dans le cours mais sans nous y attarder, nous allons maintenant les étudier en détails.
+d-dans ce m-moduwe nyous awwons c-continuew à v-voiw w'ensembwe d-des fonctionnawités c-cwefs du javascwipt e-en nyous concentwant pwus pawticuwièwement suw wes stwuctuwes wes pwus w-wépandues tewwes que wes conditions, ( ͡o ω ͡o ) wes boucwes, rawr x3 w-wes fonctions et wes événements. nyaa~~ n-nyous avons déjà vu ces notions dans we couws mais sans n-nous y attawdew, >_< nyous awwons m-maintenant wes étudiew e-en détaiws. ^^;;
 
-## Prérequis
+## pwéwequis
 
-Avant de commencer ce module, vous devriez connaître les bases du [HTML](/fr/docs/Learn/HTML/Introduction_to_HTML) et du [CSS](/fr/docs/Learn/CSS/First_steps) et avoir suivi le module précédent, [JavaScript Premiers Pas.](/fr/docs/Learn/JavaScript/First_steps)
+avant de commencew ce moduwe, (ˆ ﻌ ˆ)♡ vous devwiez c-connaîtwe wes bases du [htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw) et du [css](/fw/docs/weawn/css/fiwst_steps) et avoiw suivi we moduwe pwécédent, ^^;; [javascwipt p-pwemiews pas.](/fw/docs/weawn/javascwipt/fiwst_steps)
 
-> [!NOTE]
-> Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, ce n'est pas un problème, vous pourrez essayer la plupart des exemples en lignes grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> s-si vous t-twavaiwwez depuis u-un owdinateuw, (⑅˘꒳˘) u-une tabwette ou depuis un autwe appaweiw suw w-wequew vous nye pouvez pas cwéew vos pwopwes fichiews, rawr x3 c-ce ny'est pas un pwobwème, vous pouwwez essayew wa pwupawt des exempwes en wignes gwâce à d-des outiws comme [jsbin](https://jsbin.com/) o-ou [gwitch](https://gwitch.com/). (///ˬ///✿)
 
-## Guides
+## g-guides
 
-- [Prendre des décisions dans votre code — les conditions](/fr/docs/Learn/JavaScript/Building_blocks/conditionals)
-  - : Quelque soit le langage de programmation, notre programme doit prendre des décisions et effectuer des actions différentes selon les valeurs traitées. Dans un jeu par exemple, si le nombre de vies du joueur est égal à 0, le jeu s'achève. Sur le même principe, une application météo affiche un fond d'aube si elle est lancée le matin, des étoiles et la Lune si, au contraire, elle est lancée la nuit. Dans cet article, nous allons voir comment les structures conditionnelles fonctionnent en JavaScript.
-- [Les boucles](/fr/docs/Learn/JavaScript/Building_blocks/Looping_code)
-  - : Parfois une action doit être réalisée plusieurs fois d'affilée. Par exemple, parcourir une liste de noms. En programmation, les boucles effectuent ce genre de tâches à merveille. Ici, nous allons examiner les structures de boucles en JavaScript.
-- [Les fonctions — réutiliser des blocs de code](/fr/docs/Learn/JavaScript/Building_blocks/Functions)
-  - : Un autre concept essentiel en programmation est celui de **fonctions.** Les **fonctions** permettent de définir un morceau de code réalisant une tâche particulière qui pourra être appelé ultérieurement dans le reste du programme par une simple ligne, ce qui évite d'écrire plusieurs fois le même code. Dans cet article, nous allons voir les concepts qui se cachent derrière les fonctions tels que la syntaxe de base, la définition et l'appel d'une fonction, sa portée et ses paramètres.
-- [Créez votre propre fonction](/fr/docs/Learn/JavaScript/Building_blocks/Build_your_own_function)
-  - : L'essentiel sur la théorie des fonctions a été traité dans le chapitre précédent, cet article va vous permettre de mettre en pratique vos connaissances avec un exercice. Nous allons construire notre propre fonction et nous en profiterons pour expliquer quelques notions plus avancées, utiles pour travailler avec les fonctions.
-- [Les valeurs de retour des fonctions](/fr/docs/Learn/JavaScript/Building_blocks/Return_values)
-  - : Il reste un dernier point à vous présenter avant de terminer cette partie sur les fonctions, il s'agit des valeurs retournées. Une fois leur exécution finie, les fonctions renvoient des valeurs, pour certaines d'entre-elles ce retour nous est utile. Il est important de bien comprendre ce que sont ces valeurs, comment les utiliser dans notre programme et comment faire en sorte que nos fonctions renvoient des valeurs qui nous soient utiles.
-- [Introduction aux événements](/fr/docs/Learn/JavaScript/Building_blocks/Events)
-  - : Les événements sont des actions ou occurences qui surviennent au cours de l'exécution de votre programme, auxquels vous pouvez répondre de la manière que vous souhaitez. Par exemple, si l'utilisateur clique sur une page web, vous pourriez vouloir répondre à cette action en affichant un élément d'information. Dans ce dernier article, nous allons voir des concepts importants se rapportant aux événements et voir la manière dont ils fonctionnent au sein des navigateurs.
+- [pwendwe d-des décisions dans votwe code — wes conditions](/fw/docs/weawn/javascwipt/buiwding_bwocks/conditionaws)
+  - : q-quewque s-soit we wangage de pwogwammation, 🥺 n-nyotwe pwogwamme d-doit pwendwe des décisions e-et effectuew des actions difféwentes s-sewon wes vaweuws twaitées. >_< dans un jeu p-paw exempwe, UwU si we nyombwe de v-vies du joueuw est égaw à 0, >_< we jeu s'achève. -.- s-suw we même pwincipe, mya u-une appwication météo affiche un fond d'aube si ewwe est wancée we matin, >w< des étoiwes et wa wune si, (U ﹏ U) a-au contwaiwe, 😳😳😳 ewwe e-est wancée wa nyuit. o.O dans cet a-awticwe, òωó nyous a-awwons voiw comment w-wes stwuctuwes conditionnewwes fonctionnent en javascwipt. 😳😳😳
+- [wes b-boucwes](/fw/docs/weawn/javascwipt/buiwding_bwocks/wooping_code)
+  - : pawfois une action doit êtwe wéawisée pwusieuws fois d'affiwée. σωσ p-paw exempwe, (⑅˘꒳˘) pawcouwiw une wiste d-de nyoms. (///ˬ///✿) en p-pwogwammation, 🥺 w-wes boucwes effectuent ce genwe d-de tâches à mewveiwwe. OwO i-ici, nyous a-awwons examinew w-wes stwuctuwes de boucwes en javascwipt. >w<
+- [wes f-fonctions — w-wéutiwisew des b-bwocs de code](/fw/docs/weawn/javascwipt/buiwding_bwocks/functions)
+  - : u-un autwe c-concept essentiew en pwogwammation est cewui de **fonctions.** w-wes **fonctions** pewmettent de définiw un mowceau de code wéawisant une tâche pawticuwièwe q-qui pouwwa êtwe appewé uwtéwieuwement dans we weste du pwogwamme p-paw une s-simpwe wigne, 🥺 ce q-qui évite d'écwiwe pwusieuws f-fois we même code. nyaa~~ dans cet awticwe, n-nyous awwons v-voiw wes concepts qui se cachent dewwièwe wes fonctions tews que wa syntaxe de base, ^^ wa définition e-et w'appew d'une fonction, >w< s-sa powtée et ses pawamètwes. OwO
+- [cwéez v-votwe p-pwopwe fonction](/fw/docs/weawn/javascwipt/buiwding_bwocks/buiwd_youw_own_function)
+  - : w'essentiew suw wa théowie d-des fonctions a-a été twaité dans we chapitwe p-pwécédent, c-cet awticwe va vous pewmettwe de mettwe en pwatique vos connaissances avec un e-exewcice. XD nous a-awwons constwuiwe n-nyotwe pwopwe fonction et nous e-en pwofitewons p-pouw expwiquew quewques nyotions p-pwus avancées, ^^;; utiwes pouw twavaiwwew avec wes fonctions. 🥺
+- [wes vaweuws de wetouw d-des fonctions](/fw/docs/weawn/javascwipt/buiwding_bwocks/wetuwn_vawues)
+  - : i-iw weste un dewniew point à vous pwésentew a-avant de tewminew c-cette pawtie suw wes fonctions, XD iw s'agit des vaweuws wetouwnées. (U ᵕ U❁) u-une fois weuw exécution finie, :3 wes fonctions wenvoient des vaweuws, ( ͡o ω ͡o ) pouw c-cewtaines d'entwe-ewwes ce wetouw nyous est utiwe. òωó i-iw est impowtant d-de bien compwendwe ce que sont ces vaweuws, σωσ comment wes utiwisew d-dans nyotwe p-pwogwamme et comment faiwe en sowte que nyos fonctions wenvoient d-des vaweuws qui nyous soient utiwes. (U ᵕ U❁)
+- [intwoduction a-aux événements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events)
+  - : wes événements sont des actions ou occuwences q-qui suwviennent au couws de w'exécution d-de votwe p-pwogwamme, (✿oωo) auxquews vous pouvez w-wépondwe de wa manièwe que v-vous souhaitez. ^^ p-paw exempwe, ^•ﻌ•^ si w-w'utiwisateuw cwique suw une page w-web, XD vous pouwwiez v-vouwoiw wépondwe à cette action en affichant u-un éwément d-d'infowmation. :3 d-dans ce dewniew awticwe, (ꈍᴗꈍ) nyous awwons voiw des concepts i-impowtants se wappowtant a-aux événements e-et voiw wa manièwe dont iws fonctionnent au sein des nyavigateuws. :3
 
-## Auto-évaluation
+## a-auto-évawuation
 
-L'auto-évaluation suivante teste votre compréhension des bases du JavaScript vues dans le guide ci-dessus.
+w-w'auto-évawuation suivante t-teste votwe c-compwéhension des bases du j-javascwipt vues dans we guide ci-dessus. (U ﹏ U)
 
-- [Galerie de photos](/fr/docs/Learn/JavaScript/Building_blocks/Image_gallery)
-  - : Maintenant que vous avez fini ce chapitre sur la construction de blocs en JavaScript, vous allez pouvoir tester vos connaissances sur les boucles, les fonctions, les conditions et les événements en codant un élément que l'on retrouve sur de très nombreux sites web, une galerie de photos en JavaScript.
+- [gawewie de photos](/fw/docs/weawn/javascwipt/buiwding_bwocks/image_gawwewy)
+  - : maintenant que vous avez fini ce chapitwe suw wa c-constwuction de bwocs en javascwipt, UwU v-vous awwez pouvoiw testew vos c-connaissances suw wes boucwes, 😳😳😳 w-wes fonctions, XD wes conditions e-et wes événements e-en codant un éwément q-que w'on w-wetwouve suw d-de twès nyombweux sites web, o.O une gawewie de photos en javascwipt.
 
-{{PreviousNext("Learn/JavaScript/First_steps", "Learn/JavaScript/Objects")}}
+{{pweviousnext("weawn/javascwipt/fiwst_steps", "weawn/javascwipt/objects")}}

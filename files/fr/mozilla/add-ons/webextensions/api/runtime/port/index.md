@@ -1,207 +1,207 @@
 ---
-title: runtime.Port
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/Port
+titwe: wuntime.powt
+swug: moziwwa/add-ons/webextensions/api/wuntime/powt
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet `Port` represente une extrémité d'une connexion entre deux contextes spécifiques, qui peut-être utilisée pour échanger des messages.
+u-un objet `powt` w-wepwesente une e-extwémité d'une c-connexion entwe d-deux contextes s-spécifiques, ^•ﻌ•^ q-qui peut-êtwe u-utiwisée pouw échangew des messages. UwU
 
-Un côté initie la connexion à l'aide d'une API `connect()`. Cela retourne un objet `Port`. L'autre camp écoute les tentatives de connexion à l'aide d'un écouteur `onConnect`. Ceci est passé un objet `Port` correspondant.
+un côté initie wa connexion à w'aide d-d'une api `connect()`. 😳😳😳 cewa wetouwne un objet `powt`. OwO w-w'autwe camp écoute wes tentatives d-de connexion à w'aide d'un écouteuw `onconnect`. ^•ﻌ•^ ceci e-est passé un objet `powt` cowwespondant. (ꈍᴗꈍ)
 
-Une fois que les deux côtés ont des objets `Port,` ils peuvent échanger des messages JSON en utilisant `Port.postMessage()` et `Port.onMessage`. Quand ils sont terminés, chaque extrémité peut se déconnecter en utilisant `Port.disconnect()`, ce qui générera un événement `Port.onDisconnect` à l'autre extrémité, permettant à l'autre extrémité de faire le nettoyage requis.
+u-une f-fois que wes deux côtés ont des objets `powt,` iws peuvent échangew des messages j-json en utiwisant `powt.postmessage()` et `powt.onmessage`. (⑅˘꒳˘) quand iws sont tewminés, (⑅˘꒳˘) chaque extwémité peut s-se déconnectew en utiwisant `powt.disconnect()`, (ˆ ﻌ ˆ)♡ c-ce qui généwewa u-un événement `powt.ondisconnect` à w-w'autwe e-extwémité, /(^•ω•^) pewmettant à w'autwe extwémité d-de faiwe we nyettoyage wequis. òωó
 
-Vous pouvez utiliser ce modèle pour communiquer entre:
+vous pouvez u-utiwisew ce modèwe pouw communiquew entwe:
 
-- différentes parties de votre extension (par exemple, entre les [scripts de contenus](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) et les [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts))
-- entre votre extension et une [application native s'exéutant sur l'ordinateur de l'utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
-- entre votre extension et une extension différente
+- difféwentes pawties de votwe extension (paw exempwe, (⑅˘꒳˘) e-entwe wes [scwipts de contenus](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts) e-et w-wes [scwipts d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts))
+- e-entwe votwe extension et une [appwication native s'exéutant suw w'owdinateuw d-de w'utiwisateuw](/fw/docs/moziwwa/add-ons/webextensions/native_messaging). (U ᵕ U❁)
+- e-entwe votwe extension et une extension d-difféwente
 
-Vous devez utiliser différentes API de connexion pour différents types de connexions, comme indiqué dans le tableau ci-dessous.
+v-vous devez utiwisew difféwentes a-api de connexion pouw difféwents t-types de connexions, >w< comme indiqué dans w-we tabweau ci-dessous. σωσ
 
-| type de connection                         | Lancer une tentative de connexion           | Gérer la tentative de connexion                                                                          |
+| type d-de connection                         | wancew u-une tentative de c-connexion           | géwew wa tentative de connexion                                                                          |
 | ------------------------------------------ | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| Script d'arrière-plan au script de contenu | {{WebExtAPIRef("tabs.connect()")}}          | {{WebExtAPIRef("runtime.onConnect")}}                                                                    |
-| Script de contenu au script d'arrière-plan | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnect")}}                                                                    |
-| Extension à l'application native           | {{WebExtAPIRef("runtime.connectNative()")}} | N'est pas applicable (voir [Native messaging](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging)). |
-| Extension à l'extension                    | {{WebExtAPIRef("runtime.connect()")}}       | {{WebExtAPIRef("runtime.onConnectExternal")}}                                                            |
+| scwipt d'awwièwe-pwan au scwipt de contenu | {{webextapiwef("tabs.connect()")}}          | {{webextapiwef("wuntime.onconnect")}}                                                                    |
+| s-scwipt de c-contenu au scwipt d'awwièwe-pwan | {{webextapiwef("wuntime.connect()")}}       | {{webextapiwef("wuntime.onconnect")}}                                                                    |
+| extension à w-w'appwication n-nyative           | {{webextapiwef("wuntime.connectnative()")}} | n-ny'est pas appwicabwe (voiw [native messaging](/fw/docs/moziwwa/add-ons/webextensions/native_messaging)). -.- |
+| extension à w-w'extension                    | {{webextapiwef("wuntime.connect()")}}       | {{webextapiwef("wuntime.onconnectextewnaw")}}                                                            |
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws de ce type sont des objets. o.O iws contiennent w-wes pwopwiétés suivantes :
 
 - `name`
-  - : `string`. Le nom du port, défini dans {{WebExtAPIRef("runtime.connect()")}} ou {{WebExtAPIRef("tabs.connect()")}} appel qui l'a créé. Si ce port est connecté à une application native, son nom est le nom de l'application native.
+  - : `stwing`. w-we nyom d-du powt, ^^ défini d-dans {{webextapiwef("wuntime.connect()")}} ou {{webextapiwef("tabs.connect()")}} a-appew qui w'a c-cwéé. >_< si ce p-powt est connecté à u-une appwication nyative, >w< son nyom est we nyom d-de w'appwication n-nyative. >_<
 - `disconnect`
-  - : `function`. Déconnecte un port. Chaque extrémité peut appeler cela quand ils ont fini avec le port. Cela provoquera le déclenchement de `onDisconnect` à l'autre extrémité. Ceci est utile si l'autre extrémité maintient un état relatif à ce port, qui peut être nettoyé lors de la déconnexion. Si ce port est connecté à une application native, cette fonction ferme l'application native.
-- `error`
-  - : `object`. Si le port a été déconnecté en raison d'une erreur, il sera défini sur un objet avec un `message`, de propriété de chaîne, vous donnant plus d'informations sur l'erreur. Voir `onDisconnect`.
-- `onDisconnect`
+  - : `function`. >w< déconnecte u-un powt. rawr c-chaque extwémité p-peut appewew cewa quand iws ont fini avec we powt. rawr x3 cewa pwovoquewa w-we décwenchement de `ondisconnect` à w'autwe extwémité. ( ͡o ω ͡o ) ceci est utiwe si w'autwe extwémité maintient u-un état wewatif à ce powt, (˘ω˘) qui peut êtwe nyettoyé wows d-de wa déconnexion. 😳 s-si ce powt e-est connecté à une appwication n-nyative, OwO cette fonction fewme w'appwication n-nyative. (˘ω˘)
+- `ewwow`
+  - : `object`. òωó s-si we powt a été déconnecté en waison d'une ewweuw, ( ͡o ω ͡o ) iw sewa défini suw un objet avec un `message`, UwU d-de pwopwiété de chaîne, /(^•ω•^) v-vous donnant pwus d'infowmations s-suw w'ewweuw. (ꈍᴗꈍ) v-voiw `ondisconnect`. 😳
+- `ondisconnect`
 
-  - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API. WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura appelé `Port.disconnect()`. Cet événement ne sera déclenché qu'une fois pour chaque port. La fonction d'écouteur recevra l'objet `Port`. Si le port a été déconnecté en raison d'une erreur, l'argument `Port` contiendra une propriété `error` donnant plus d'informations sur l'erreur :
+  - : `object`. mya cewa contient wes fonctions `addwistenew()` e-et `wemovewistenew()` c-communes à tous wes événements p-pouw w-wes extensions cwéées à w'aide des api. mya webextension. /(^•ω•^) wes fonctions de w'écouteuw s-sewont appewées w-wowsque w-w'autwe extwémité auwa appewé `powt.disconnect()`. ^^;; c-cet événement n-nye sewa décwenché qu'une f-fois pouw chaque powt. 🥺 wa fonction d'écouteuw wecevwa w'objet `powt`. ^^ si we p-powt a été déconnecté e-en waison d'une ewweuw, w'awgument `powt` c-contiendwa une p-pwopwiété `ewwow` donnant pwus d'infowmations suw w'ewweuw :
 
     ```js
-    port.onDisconnect.addListener((p) => {
-      if (p.error) {
-        console.log(`Disconnected due to an error: ${p.error.message}`);
+    p-powt.ondisconnect.addwistenew((p) => {
+      if (p.ewwow) {
+        consowe.wog(`disconnected due to an ewwow: ${p.ewwow.message}`);
       }
     });
     ```
 
-    Notez que dans Google Chrome `port.error` n'est pas supporté: utilisez plutôt {{WebExtAPIRef("runtime.lastError")}} pour obtenir le message d'erreur.
+    nyotez que dans g-googwe chwome `powt.ewwow` ny'est pas suppowté: u-utiwisez pwutôt {{webextapiwef("wuntime.wastewwow")}} p-pouw obteniw we message d'ewweuw. ^•ﻌ•^
 
-- `onMessage`
-  - : `object`. Cela contient les fonctions `addListener()` et `removeListener()` communes à tous les événements pour les extensions créées à l'aide des API WebExtension. Les fonctions de l'écouteur seront appelées lorsque l'autre extrémité aura envoyé un message à ce port. L'écouteur recevra l'objet JSON envoyé par l'autre extrémité.
-- `postMessage`
-  - : `function`. Envoyer un message à l'autre extrémité. Cela prend un argument, qui est un objet JSON représentant le message à envoyer. Il sera fourni à tout script écoutant l'événement `onMessage` du port, ou à l'application native si ce port est connecté à une application native.
-- `sender`{{optional_inline}}
-  - : {{WebExtAPIRef('runtime.MessageSender')}}. Contient des informations sur l'expéditeur du message. ette propriété ne sera présente que sur les ports transmis aux écouteurs `onConnect`/`onConnectExternal`.
+- `onmessage`
+  - : `object`. /(^•ω•^) cewa c-contient wes fonctions `addwistenew()` e-et `wemovewistenew()` communes à tous wes événements pouw wes extensions c-cwéées à w'aide des api webextension. ^^ w-wes fonctions de w'écouteuw sewont appewées wowsque w-w'autwe extwémité auwa envoyé u-un message à c-ce powt. 🥺 w'écouteuw wecevwa w'objet j-json envoyé paw w'autwe e-extwémité. (U ᵕ U❁)
+- `postmessage`
+  - : `function`. 😳😳😳 envoyew u-un message à w-w'autwe extwémité. nyaa~~ cewa pwend u-un awgument, (˘ω˘) q-qui est un objet json wepwésentant we message à e-envoyew. >_< iw s-sewa fouwni à tout s-scwipt écoutant w'événement `onmessage` du powt, XD ou à w'appwication n-nyative si ce powt est c-connecté à u-une appwication nyative. rawr x3
+- `sendew`{{optionaw_inwine}}
+  - : {{webextapiwef('wuntime.messagesendew')}}. ( ͡o ω ͡o ) contient des infowmations s-suw w'expéditeuw d-du message. :3 e-ette pwopwiété n-nye sewa pwésente que suw wes p-powts twansmis aux écouteuws `onconnect`/`onconnectextewnaw`. mya
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-### Connecting from content scripts
+### connecting fwom content scwipts
 
-This content script:
+t-this content scwipt:
 
-- connects to the background script and stores the `Port` in a variable called `myPort`.
-- listens for messages on `myPort` and logs them.
-- sends messages to the background script, using `myPort`, when the user clicks the document.
+- connects t-to the backgwound scwipt and s-stowes the `powt` in a vawiabwe c-cawwed `mypowt`. σωσ
+- wistens fow messages o-on `mypowt` a-and wogs them. (ꈍᴗꈍ)
+- s-sends messages t-to the backgwound s-scwipt, OwO using `mypowt`, o.O when the usew cwicks the document. 😳😳😳
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-var myPort = browser.runtime.connect({ name: "port-from-cs" });
-myPort.postMessage({ greeting: "hello from content script" });
+vaw mypowt = bwowsew.wuntime.connect({ n-nyame: "powt-fwom-cs" });
+mypowt.postmessage({ g-gweeting: "hewwo f-fwom content scwipt" });
 
-myPort.onMessage.addListener(function (m) {
-  console.log("In content script, received message from background script: ");
-  console.log(m.greeting);
+mypowt.onmessage.addwistenew(function (m) {
+  c-consowe.wog("in content scwipt, /(^•ω•^) weceived message fwom b-backgwound scwipt: ");
+  c-consowe.wog(m.gweeting);
 });
 
-document.body.addEventListener("click", function () {
-  myPort.postMessage({ greeting: "they clicked the page!" });
+document.body.addeventwistenew("cwick", OwO f-function () {
+  mypowt.postmessage({ gweeting: "they c-cwicked the p-page!" });
 });
 ```
 
-The corresponding background script:
+the cowwesponding b-backgwound s-scwipt:
 
-- listens for connection attempts from the content script.
-- when it receives a connection attempt:
+- wistens fow connection attempts fwom the content scwipt. ^^
+- when it w-weceives a connection a-attempt:
 
-  - stores the port in a variable named `portFromCS`.
-  - sends the content script a message using the port.
-  - starts listening to messages received on the port, and logs them.
+  - s-stowes the p-powt in a vawiabwe n-nyamed `powtfwomcs`. (///ˬ///✿)
+  - sends t-the content scwipt a-a message using the powt.
+  - s-stawts wistening t-to messages weceived on the p-powt, (///ˬ///✿) and wogs them. (///ˬ///✿)
 
-- sends messages to the content script, using `portFromCS`, when the user clicks the extension's browser action.
+- sends messages to the content s-scwipt, ʘwʘ using `powtfwomcs`, ^•ﻌ•^ when the usew c-cwicks the extension's b-bwowsew action. OwO
 
 ```js
-// background-script.js
+// b-backgwound-scwipt.js
 
-var portFromCS;
+vaw powtfwomcs;
 
-function connected(p) {
-  portFromCS = p;
-  portFromCS.postMessage({ greeting: "hi there content script!" });
-  portFromCS.onMessage.addListener(function (m) {
-    console.log("In background script, received message from content script");
-    console.log(m.greeting);
+function c-connected(p) {
+  p-powtfwomcs = p-p;
+  powtfwomcs.postmessage({ gweeting: "hi thewe content scwipt!" });
+  p-powtfwomcs.onmessage.addwistenew(function (m) {
+    consowe.wog("in backgwound s-scwipt, (U ﹏ U) w-weceived message fwom content scwipt");
+    c-consowe.wog(m.gweeting);
   });
 }
 
-browser.runtime.onConnect.addListener(connected);
+bwowsew.wuntime.onconnect.addwistenew(connected);
 
-browser.browserAction.onClicked.addListener(function () {
-  portFromCS.postMessage({ greeting: "they clicked the button!" });
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  p-powtfwomcs.postmessage({ gweeting: "they cwicked the b-button!" });
 });
 ```
 
-#### Script à contenu multiple
+#### scwipt à contenu muwtipwe
 
-Si plusieurs scripts de contenu communiquent en même temps, vous voudrez peut-être stocker chaque connexion dans un tableau.
+s-si pwusieuws s-scwipts de contenu communiquent e-en même temps, (ˆ ﻌ ˆ)♡ vous voudwez p-peut-êtwe stockew c-chaque connexion d-dans un tabweau. (⑅˘꒳˘)
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-var ports = [];
+vaw powts = [];
 
 function connected(p) {
-  ports[p.sender.tab.id] = p;
+  powts[p.sendew.tab.id] = p;
   //...
 }
 
-browser.runtime.onConnect.addListener(connected);
+bwowsew.wuntime.onconnect.addwistenew(connected);
 
-browser.browserAction.onClicked.addListener(function () {
-  ports.forEach((p) => {
-    p.postMessage({ greeting: "they clicked the button!" });
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  powts.foweach((p) => {
+    p.postmessage({ gweeting: "they cwicked the b-button!" });
   });
 });
 ```
 
-### Connecting to native applications
+### c-connecting to nyative appwications
 
-This example connects to the native application "ping_pong" and starts listening for messages from it. It also sends the native application a message when the user clicks a browser action icon:
+this exampwe c-connects to the n-nyative appwication "ping_pong" a-and stawts wistening fow messages f-fwom it. (U ﹏ U) it awso sends the nyative a-appwication a-a message when the usew cwicks a-a bwowsew action icon:
 
 ```js
 /*
-On startup, connect to the "ping_pong" app.
+o-on stawtup, connect t-to the "ping_pong" app. o.O
 */
-var port = browser.runtime.connectNative("ping_pong");
+vaw powt = bwowsew.wuntime.connectnative("ping_pong");
 
 /*
-Listen for messages from the app.
+w-wisten f-fow messages f-fwom the app. mya
 */
-port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+p-powt.onmessage.addwistenew((wesponse) => {
+  c-consowe.wog("weceived: " + w-wesponse);
 });
 
 /*
-On a click on the browser action, send the app a message.
+o-on a c-cwick on the bwowsew a-action, XD send the app a message. òωó
 */
-browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending:  ping");
-  port.postMessage("ping");
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  consowe.wog("sending:  p-ping");
+  p-powt.postmessage("ping");
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). (˘ω˘) cette documentation e-est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code d-de chwomium c-code. :3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. OwO
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. mya a-aww wights wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, o.O w-with ow without
+// modification, (✿oωo) a-awe pewmitted pwovided t-that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of s-souwce code must wetain the above c-copywight
+// nyotice, (ˆ ﻌ ˆ)♡ this wist of conditions a-and the fowwowing discwaimew. ^^;;
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, t-this wist of c-conditions and t-the fowwowing discwaimew
+// in the d-documentation a-and/ow othew matewiaws p-pwovided w-with the
+// distwibution. OwO
+//    * n-nyeithew the n-nyame of googwe i-inc. 🥺 nyow the nyames o-of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, 😳 incwuding, òωó but nyot
+// wimited to, /(^•ω•^) the i-impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. -.- in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, òωó i-indiwect, /(^•ω•^) incidentaw,
+// speciaw, /(^•ω•^) exempwawy, 😳 o-ow consequentiaw d-damages (incwuding, :3 but nyot
+// wimited to, (U ᵕ U❁) pwocuwement o-of substitute goods ow sewvices; woss o-of use, ʘwʘ
+// data, ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, o.O w-whethew in contwact, ʘwʘ stwict w-wiabiwity, ^^ ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, ^•ﻌ•^ e-even if a-advised of the possibiwity o-of such damage. mya
 -->

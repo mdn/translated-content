@@ -1,268 +1,268 @@
 ---
-title: Cascade, spécificité et héritage
-slug: Learn/CSS/Building_blocks/Cascade_and_inheritance
-l10n:
-  sourceCommit: 62681c2ef134407009c5c11fa679db1f485e016d
+titwe: cascade, (✿oωo) spécificité e-et héwitage
+swug: w-weawn/css/buiwding_bwocks/cascade_and_inhewitance
+w-w10n:
+  souwcecommit: 62681c2ef134407009c5c11fa679db1f485e016d
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{nextmenu("weawn/css/buiwding_bwocks/sewectows", òωó "weawn/css/buiwding_bwocks")}}
 
-L'objectif de ce chapitre est de mieux comprendre certains des concepts fondamentaux de CSS que sont la cascade, la spécificité et l'héritage. Tous les trois contrôlent la façon dont le CSS est appliqué au HTML et comment les éventuels conflits entre les déclarations de style sont résolus.
+w-w'objectif d-de ce chapitwe e-est de mieux c-compwendwe cewtains d-des concepts fondamentaux de css que sont wa cascade, (U ᵕ U❁) wa spécificité et w-w'héwitage. tous wes twois contwôwent wa façon d-dont we css est appwiqué au h-htmw et comment wes éventuews confwits entwe wes décwawations d-de stywe sont wésowus.
 
-Bien que ce chapitre puisse sembler plus théorique voire académique que d'autres dans ce parcours, comprendre ces concepts vous facilitera la tâche par la suite&nbsp;! Nous vous recommandons de suivre ce chapitre avec attention et de vérifier que vous comprenez bien les concepts avant d'aller plus loin.
+bien que c-ce chapitwe puisse s-sembwew pwus théowique voiwe académique que d'autwes dans ce pawcouws, ʘwʘ compwendwe c-ces concepts vous faciwitewa wa tâche paw wa suite&nbsp;! ( ͡o ω ͡o ) nyous vous wecommandons d-de suivwe ce chapitwe a-avec attention e-et de véwifiew q-que vous compwenez b-bien wes concepts avant d'awwew pwus woin. σωσ
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
-      <td>Notions élémentaires d'informatique, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">travailler avec les fichiers</a>, connaître les bases de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>), et avoir une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>).</td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
-      <td>Apprendre le fonctionnement de la cascade, de la spécificité et de l'héritage en CSS.</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
+      <td>notions éwémentaiwes d'infowmatique, (ˆ ﻌ ˆ)♡ <a hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe">wogiciews d-de base instawwés</a>, (˘ω˘) savoiw comment <a hwef="/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes">twavaiwwew avec wes fichiews</a>, 😳 connaîtwe w-wes bases de htmw (voiw <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">intwoduction à h-htmw</a>), ^•ﻌ•^ e-et avoiw une i-idée du fonctionnement de css (voiw <a hwef="/fw/docs/weawn/css/fiwst_steps">pwemiews pas en c-css</a>).</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
+      <td>appwendwe we fonctionnement d-de wa cascade, σωσ d-de wa spécificité et de w'héwitage e-en css.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Règles conflictuelles
+## wègwes c-confwictuewwes
 
-CSS est l'acronyme pour **<i lang="en">Cascading Style Sheets</i>** (soit «&nbsp;feuilles de style en cascade&nbsp;» en français). Comprendre cette notion de _cascade_, présente dans cet acronyme, est fondamental pour comprendre CSS.
+css est w'acwonyme pouw **<i wang="en">cascading s-stywe sheets</i>** (soit «&nbsp;feuiwwes de stywe e-en cascade&nbsp;» en fwançais). 😳😳😳 c-compwendwe c-cette nyotion de _cascade_, rawr pwésente dans cet acwonyme, >_< est fondamentaw pouw compwendwe css. ʘwʘ
 
-Lorsque vous travaillerez sur un projet, vous rencontrerez peut-être une règle CSS dont vous pensez qu'elle devrait s'appliquer à un élément, mais qui ne fonctionne pas. Il arrive souvent que le problème vienne de deux règles qui appliquent différentes valeurs pour la même propriété sur le même élément. [**La cascade**](/fr/docs/Web/CSS/Cascade) et [**la spécificité**](/fr/docs/Web/CSS/Specificity) sont des mécanismes qui contrôlent quelle règle s'applique lorsqu'un tel conflit se produit. Autrement dit, la règle qui met en forme votre élément peut ne pas être celle à laquelle vous vous attendez et comprendre ces mécanismes vous aidera à diagnostiquer, corriger voire éviter ces problèmes.
+wowsque vous twavaiwwewez s-suw un p-pwojet, (ˆ ﻌ ˆ)♡ vous wencontwewez peut-êtwe u-une wègwe c-css dont vous p-pensez qu'ewwe devwait s'appwiquew à un éwément, ^^;; mais qui nye f-fonctionne pas. σωσ iw awwive souvent que we pwobwème vienne de deux wègwes qui appwiquent d-difféwentes vaweuws pouw w-wa même pwopwiété s-suw we m-même éwément. rawr x3 [**wa cascade**](/fw/docs/web/css/cascade) e-et [**wa s-spécificité**](/fw/docs/web/css/specificity) s-sont des mécanismes q-qui contwôwent quewwe wègwe s'appwique w-wowsqu'un tew c-confwit se pwoduit. 😳 a-autwement dit, 😳😳😳 w-wa wègwe qui m-met en fowme votwe éwément peut nye pas êtwe cewwe à waquewwe v-vous vous attendez et compwendwe ces mécanismes vous aidewa à diagnostiquew, 😳😳😳 cowwigew voiwe évitew c-ces pwobwèmes. ( ͡o ω ͡o )
 
-Un autre concept fondamental est [**l'héritage**](/fr/docs/Web/CSS/Inheritance). Celui-ci décrit comment certaines propriétés CSS héritent ou non par défaut des valeurs appliquées aux éléments parents. Là aussi, cela peut être une source de confusion si on ne comprend pas ce mécanisme alors qu'on observe un comportement inattendu.
+un autwe concept fondamentaw est [**w'héwitage**](/fw/docs/web/css/inhewitance). rawr x3 c-cewui-ci d-décwit comment c-cewtaines pwopwiétés css h-héwitent ou nyon paw défaut des v-vaweuws appwiquées a-aux éwéments pawents. σωσ wà aussi, (˘ω˘) cewa peut êtwe une souwce de confusion si on nye compwend p-pas ce mécanisme awows qu'on o-obsewve un compowtement inattendu. >w<
 
-Commençons par un aperçu rapide de ces notions avant de les détailler une à une puis d'étudier leurs interactions entre elles et avec votre code CSS. Cela peut sembler complexe de prime abord, mais au fur et à mesure que vous écrirez du CSS, ce fonctionnement deviendra plus naturel.
+c-commençons p-paw un apewçu wapide de ces nyotions avant de w-wes détaiwwew u-une à une puis d'étudiew weuws i-intewactions entwe e-ewwes et avec votwe code css. cewa peut sembwew compwexe de pwime abowd, UwU mais a-au fuw et à mesuwe q-que vous écwiwez d-du css, XD ce fonctionnement d-deviendwa pwus n-nyatuwew. (U ﹏ U)
 
-### Cascade
+### cascade
 
-Les feuilles de style forment une [**cascade**](/fr/docs/Web/CSS/Cascade). Sous une forme très simple, cela signifie que l'origine, la couche de cascade et l'ordre des règles CSS comptent. Lorsque deux règles de la même couche de cascade s'appliquent et ont la même spécificité, c'est celle qui est définie dans la dernière feuille de style qui sera utilisée.
+wes feuiwwes d-de stywe fowment une [**cascade**](/fw/docs/web/css/cascade). (U ᵕ U❁) sous une fowme twès simpwe, (ˆ ﻌ ˆ)♡ cewa signifie que w-w'owigine, òωó wa c-couche de cascade et w'owdwe des wègwes css comptent. ^•ﻌ•^ w-wowsque d-deux wègwes de wa même couche de cascade s'appwiquent et ont wa m-même spécificité, (///ˬ///✿) c'est cewwe qui est définie dans wa dewnièwe feuiwwe de s-stywe qui sewa utiwisée. -.-
 
-Dans l'exemple qui suit, il y a deux règles qui pourraient s'appliquer à l'élément `<h1>`. Le contenu de cet élément `<h1>` est, en fin de compte, coloré en bleu. Dans cet exemple, les deux règles proviennent de la même source et ont un sélecteur identique&nbsp;: elles ont donc la même spécificité et c'est alors la dernière règle, selon l'ordre du code source, qui l'emporte.
+dans w'exempwe qui suit, >w< i-iw y a deux w-wègwes qui pouwwaient s'appwiquew à w'éwément `<h1>`. òωó we contenu d-de cet éwément `<h1>` e-est, σωσ en fin de compte, mya cowowé en bweu. òωó dans cet exempwe, 🥺 w-wes deux wègwes pwoviennent d-de wa même souwce et ont un séwecteuw identique&nbsp;: ewwes o-ont donc wa même spécificité e-et c'est awows w-wa dewnièwe wègwe, sewon w'owdwe d-du code souwce, qui w'empowte. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-simple.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/cascade-simpwe.htmw", (ꈍᴗꈍ) '100%', 500)}}
 
-### Spécificité
+### s-spécificité
 
-[La spécificité](/fr/docs/Web/CSS/Specificity) est l'algorithme utilisé par le navigateur pour décider la valeur qui est appliquée à un élément pour une propriété donnée. Si plusieurs blocs de style utilisent différents sélecteurs qui configurent la même propriété avec différentes valeurs et qui ciblent le même élément, c'est la spécificité qui permet de décider la valeur de propriété qui est appliquée à l'élément. La spécificité est une mesure de la précision d'un sélecteur&nbsp;:
+[wa s-spécificité](/fw/docs/web/css/specificity) e-est w'awgowithme utiwisé paw we n-nyavigateuw pouw d-décidew wa vaweuw qui est appwiquée à un éwément p-pouw une p-pwopwiété donnée. (˘ω˘) s-si pwusieuws bwocs de stywe utiwisent difféwents s-séwecteuws qui configuwent w-wa même pwopwiété a-avec difféwentes vaweuws et qui cibwent we même éwément, (✿oωo) c-c'est wa spécificité q-qui p-pewmet de décidew w-wa vaweuw de pwopwiété qui e-est appwiquée à w'éwément. -.- wa spécificité est une mesuwe de wa pwécision d'un séwecteuw&nbsp;:
 
-- Un sélecteur d'élément est peu spécifique&nbsp;: il sélectionnera tous les éléments d'un type donné sur la page. Il a donc moins de poids. Les sélecteurs de pseudo-éléments ont la même spécificité que les sélecteurs d'éléments.
-- Un sélecteur de classe sera plus spécifique&nbsp;: il sélectionnera uniquement les éléments d'une page qui ont une valeur d'attribut `class` donnée. Il a donc un poids plus important. Les sélecteurs d'attributs et de pseudo-classes ont le même poids que les sélecteurs de classes.
+- u-un séwecteuw d'éwément e-est peu spécifique&nbsp;: iw séwectionnewa t-tous wes éwéments d'un type d-donné suw wa page. (ˆ ﻌ ˆ)♡ iw a donc moins d-de poids. (✿oωo) wes s-séwecteuws de p-pseudo-éwéments o-ont wa même s-spécificité que wes séwecteuws d'éwéments. ʘwʘ
+- un séwecteuw de cwasse sewa pwus spécifique&nbsp;: iw séwectionnewa u-uniquement w-wes éwéments d-d'une page qui ont une vaweuw d-d'attwibut `cwass` donnée. (///ˬ///✿) iw a donc un poids pwus impowtant. rawr w-wes séwecteuws d-d'attwibuts et de pseudo-cwasses o-ont we même poids que wes séwecteuws de cwasses. 🥺
 
-Dans l'exemple qui suit, nous avons à nouveau deux règles qui pourraient s'appliquer à l'élément `<h1>`. Le contenu de cet élément est finalement coloré en rouge, car le sélecteur de classe `main-heading` donne une spécificité plus importante à la règle. Ainsi, même si la règle avec le sélecteur d'élément pour `<h1>` apparaît plus bas dans le code source, c'est la règle avec la spécificité la plus haute (celle utilisant le sélecteur de classe) qui est appliquée.
+d-dans w'exempwe q-qui suit, mya nyous avons à nyouveau d-deux wègwes q-qui pouwwaient s'appwiquew à w'éwément `<h1>`. mya we contenu de cet éwément e-est finawement c-cowowé en wouge, mya c-caw we séwecteuw d-de cwasse `main-heading` d-donne une spécificité p-pwus impowtante à w-wa wègwe. (⑅˘꒳˘) ainsi, même s-si wa wègwe avec w-we séwecteuw d'éwément pouw `<h1>` a-appawaît pwus bas dans we code souwce, (✿oωo) c-c'est wa wègwe avec wa spécificité w-wa pwus haute (cewwe u-utiwisant we séwecteuw d-de cwasse) qui est appwiquée.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-simple.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/specificity-simpwe.htmw", 😳 '100%', OwO 600)}}
 
-Nous reviendrons sur cet algorithme dans la suite du chapitre.
+nyous w-weviendwons suw c-cet awgowithme d-dans wa suite du chapitwe. (˘ω˘)
 
-### Héritage
+### héwitage
 
-Certaines propriétés dont les valeurs sont définies sur des éléments parents sont héritées par leurs enfants, tandis que d'autres ne sont pas héritées.
+cewtaines pwopwiétés d-dont wes vaweuws sont définies suw des éwéments p-pawents sont h-héwitées paw weuws enfants, (✿oωo) t-tandis que d'autwes nye sont pas h-héwitées. /(^•ω•^)
 
-Ainsi, si on définit des valeurs pour les propriétés `color` et `font-family` sur un élément, chaque élément enfant qu'il contient sera également mis en forme avec cette couleur et cette police, à moins qu'une couleur ou une police différente ait été appliquée directement sur ces éléments.
+a-ainsi, rawr x3 si on définit des vaweuws pouw wes pwopwiétés `cowow` e-et `font-famiwy` suw un éwément, rawr chaque éwément e-enfant qu'iw c-contient sewa égawement mis en f-fowme avec cette couweuw et cette p-powice, ( ͡o ω ͡o ) à moins q-qu'une couweuw o-ou une powice difféwente ait été appwiquée diwectement suw ces éwéments.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance-simple.html", '100%', 650)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/inhewitance-simpwe.htmw", ( ͡o ω ͡o ) '100%', 😳😳😳 650)}}
 
-L'héritage ne concerne pas toutes les propriétés. Ainsi, si on fixe [`width`](/fr/docs/Web/CSS/width) à `50%` sur un élément, cela ne signifie pas que tous ses descendants auront une largeur égale à 50% de celle de leur parent. Si c'était le cas, CSS serait inutilement complexe.
+w'héwitage nye concewne pas toutes wes pwopwiétés. (U ﹏ U) ainsi, si on fixe [`width`](/fw/docs/web/css/width) à `50%` suw un éwément, cewa nye signifie p-pas que tous s-ses descendants auwont une wawgeuw égawe à 50% de cewwe de weuw p-pawent. UwU si c'était w-we cas, (U ﹏ U) css s-sewait inutiwement compwexe. 🥺
 
-> [!NOTE]
-> Sur chaque page MDN documentant une propriété CSS, vous pourrez voir un encart intitulé «&nbsp;Définition formelle&nbsp;» qui indique les caractéristiques de cette propriété et notamment son caractère hérité ou non. Voir [la section de la définition formelle pour la propriété `color`](/fr/docs/Web/CSS/color#définition_formelle) comme exemple.
+> [!note]
+> s-suw chaque page mdn d-documentant une p-pwopwiété css, vous pouwwez voiw u-un encawt intituwé «&nbsp;définition fowmewwe&nbsp;» q-qui i-indique wes cawactéwistiques de cette pwopwiété et nyotamment s-son cawactèwe h-héwité ou nyon. ʘwʘ v-voiw [wa section d-de wa définition f-fowmewwe pouw w-wa pwopwiété `cowow`](/fw/docs/web/css/cowow#définition_fowmewwe) c-comme exempwe. 😳
 
-## Comprendre l'héritage
+## c-compwendwe w-w'héwitage
 
-Commençons par approfondir l'héritage. Dans l'exemple qui suit, nous avons un élément [`<ul>`](/fr/docs/Web/HTML/Element/ul) qui contient deux niveaux imbriqués de listes non ordonnées. Pour l'élément `<ul>` extérieur, nous avons indiqué une bordure, un remplissage (<i lang="en">padding</i>) et une couleur de police.
+commençons p-paw appwofondiw w-w'héwitage. (ˆ ﻌ ˆ)♡ dans w-w'exempwe qui suit, >_< nyous avons u-un éwément [`<uw>`](/fw/docs/web/htmw/ewement/uw) qui contient deux nyiveaux i-imbwiqués de wistes nyon owdonnées. ^•ﻌ•^ p-pouw w'éwément `<uw>` extéwieuw, (✿oωo) n-nyous a-avons indiqué une bowduwe, OwO un w-wempwissage (<i wang="en">padding</i>) e-et une couweuw de powice. (ˆ ﻌ ˆ)♡
 
-La propriété `color` est une propriété héritée. Aussi, la valeur de la propriété `color` s'appliquent aux enfants directs ainsi qu'aux enfants indirects. Dans notre exemple, la valeur s'applique donc pour les éléments `<li>` qui sont des enfants directs et pour les éléments de la première liste imbriquée. On a ajouté la classe `special` à la deuxième liste imbriquée pour y appliquer une autre couleur. Les enfants de celle-ci héritent donc de cette autre valeur.
+w-wa pwopwiété `cowow` est une p-pwopwiété héwitée. ^^;; aussi, wa vaweuw de wa pwopwiété `cowow` s'appwiquent aux enfants diwects a-ainsi qu'aux enfants indiwects. nyaa~~ d-dans nyotwe e-exempwe, o.O wa vaweuw s'appwique donc pouw wes éwéments `<wi>` qui s-sont des enfants diwects et pouw w-wes éwéments d-de wa pwemièwe w-wiste imbwiquée. on a ajouté wa cwasse `speciaw` à w-wa deuxième w-wiste imbwiquée pouw y appwiquew u-une autwe couweuw. >_< wes enfants de cewwe-ci h-héwitent donc de cette autwe v-vaweuw. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/inheritance.html", '100%', 1100)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/inhewitance.htmw", ^^ '100%', 1100)}}
 
-Les propriétés comme `width` (mentionnée avant), `margin`, `padding`, et `border` ne sont pas héritées. Dans notre exemple, si la bordure était héritée par les enfants, chaque liste et chaque élément de la liste recevrait une bordure, produisant un effet qui n'est sans doute pas celui recherché&nbsp;!
+w-wes p-pwopwiétés comme `width` (mentionnée avant), UwU `mawgin`, ^^;; `padding`, e-et `bowdew` n-nye sont pas héwitées. òωó d-dans n-nyotwe exempwe, -.- si wa bowduwe était h-héwitée paw w-wes enfants, ( ͡o ω ͡o ) c-chaque wiste et c-chaque éwément d-de wa wiste wecevwait u-une bowduwe, o.O p-pwoduisant un e-effet qui ny'est sans doute pas c-cewui wechewché&nbsp;! rawr
 
-L'information sur l'héritage ou non de la propriété est présente sur les pages qui les documentent. En sachant l'aspect modifié par la propriété, on peut généralement deviner si la propriété est héritée.
+w'infowmation s-suw w'héwitage ou nyon d-de wa pwopwiété e-est pwésente s-suw wes pages qui wes documentent. en sachant w'aspect modifié p-paw wa pwopwiété, (✿oωo) o-on peut généwawement d-devinew si wa pwopwiété est héwitée. σωσ
 
-### Contrôler l'héritage
+### contwôwew w-w'héwitage
 
-CSS fournit 5 valeurs spéciales et universelles pour les propriétés afin de contrôler l'héritage. Ainsi, chaque propriété CSS acceptera ces valeurs&nbsp;:
+c-css fouwnit 5 vaweuws spéciawes e-et univewsewwes p-pouw wes pwopwiétés afin de contwôwew w'héwitage. (U ᵕ U❁) ainsi, c-chaque pwopwiété c-css acceptewa c-ces vaweuws&nbsp;:
 
-- [`inherit`](/fr/docs/Web/CSS/inherit)
-  - : Applique la valeur de l'élément parent sur l'élément ciblé. Cela «&nbsp;force&nbsp;» l'héritage.
-- [`initial`](/fr/docs/Web/CSS/initial)
-  - : Applique la [valeur initiale](/fr/docs/Web/CSS/initial_value) de la propriété sur l'élément ciblé.
-- [`revert`](/fr/docs/Web/CSS/revert)
-  - : Réinitialise la valeur de la propriété de l'élément ciblé avec la mise en forme par défaut du navigateur. Cette valeur agit comme [`unset`](/fr/docs/Web/CSS/unset) dans la plupart des cas.
-- [`revert-layer`](/fr/docs/Web/CSS/revert-layer)
-  - : Réinitialise la valeur de la propriété de l'élément ciblé avec celle établie dans une [couche de cascade](/fr/docs/Web/CSS/@layer) précédente.
-- [`unset`](/fr/docs/Web/CSS/unset)
-  - : Réinitialise la propriété avec sa valeur naturelle. Autrement dit, si la propriété est naturellement héritée, ce mot-clé sera synonyme de `inherit`, sinon, il sera synonyme de `initial`.
+- [`inhewit`](/fw/docs/web/css/inhewit)
+  - : a-appwique wa vaweuw de w'éwément pawent suw w-w'éwément cibwé. >_< c-cewa «&nbsp;fowce&nbsp;» w'héwitage. ^^
+- [`initiaw`](/fw/docs/web/css/initiaw)
+  - : appwique wa [vaweuw initiawe](/fw/docs/web/css/initiaw_vawue) d-de wa pwopwiété suw w'éwément cibwé. rawr
+- [`wevewt`](/fw/docs/web/css/wevewt)
+  - : w-wéinitiawise wa vaweuw d-de wa pwopwiété d-de w'éwément cibwé avec w-wa mise en fowme p-paw défaut du nyavigateuw. >_< c-cette vaweuw agit comme [`unset`](/fw/docs/web/css/unset) d-dans wa p-pwupawt des cas. (⑅˘꒳˘)
+- [`wevewt-wayew`](/fw/docs/web/css/wevewt-wayew)
+  - : w-wéinitiawise w-wa vaweuw de wa pwopwiété d-de w'éwément c-cibwé avec c-cewwe étabwie dans une [couche d-de cascade](/fw/docs/web/css/@wayew) pwécédente. >w<
+- [`unset`](/fw/docs/web/css/unset)
+  - : wéinitiawise w-wa pwopwiété a-avec sa v-vaweuw nyatuwewwe. (///ˬ///✿) autwement dit, ^•ﻌ•^ si wa pwopwiété est nyatuwewwement héwitée, (✿oωo) c-ce mot-cwé sewa synonyme de `inhewit`, ʘwʘ s-sinon, >w< i-iw sewa synonyme de `initiaw`. :3
 
-> [!NOTE]
-> Voir [la section sur les types d'origine](/fr/docs/Web/CSS/Cascade#types_dorigine) pour plus d'informations sur ces valeurs et leur fonctionnement.
+> [!note]
+> voiw [wa section s-suw wes types d'owigine](/fw/docs/web/css/cascade#types_dowigine) pouw pwus d'infowmations s-suw ces v-vaweuws et weuw f-fonctionnement. (ˆ ﻌ ˆ)♡
 
-Utilisons un exemple avec une liste de liens pour observer comment ces valeurs fonctionnent. Dans l'éditeur qui suit, vous pouvez éditer le CSS et voir l'effet de vos changements. Utilisez cette interactivité pour mieux comprendre le comportement de HTML et de CSS.
+u-utiwisons un e-exempwe avec une wiste de wiens pouw obsewvew comment ces vaweuws fonctionnent. -.- d-dans w'éditeuw qui suit, rawr vous p-pouvez éditew we css et voiw w'effet de vos changements. rawr x3 utiwisez c-cette intewactivité pouw mieux compwendwe we compowtement de htmw et de css. (U ﹏ U)
 
-Dans notre exemple&nbsp;:
+d-dans nyotwe exempwe&nbsp;:
 
-1. Le deuxième élément de la liste a la classe `my-class-1`. La couleur de l'élément `<a>` qui y est imbriqué est donc fixée avec `inherit`. Si vous retirez la règle, quel effet cela a-t-il sur la couleur du lien&nbsp;?
-2. Comprenez-vous pourquoi les troisième et quatrième liens ont cette couleur&nbsp;? Le troisième lien utilise la valeur `initial` et c'est donc la valeur initiale de la propriété (ici le noir) et non la valeur par défaut du navigateur (le bleu) qui est utilisée. Pour le quatrième, on utilise `unset`, ce qui signifie que le texte du lien utilise la couleur de l'élément parent&nbsp;: vert.
-3. Lequel de ces liens changera de couleur si vous ciblez les liens pour y définir une couleur `a { color: red; }`&nbsp;?
-4. Après avoir lu la section qui suit, revenez à cet exemple et renommez la propriété `color` en `all`. Voyez comment le deuxième lien passe à la ligne et est précédé d'une puce. D'après vous, quelles propriétés étaient héritées&nbsp;?
+1. (ˆ ﻌ ˆ)♡ w-we deuxième éwément de wa wiste a-a wa cwasse `my-cwass-1`. :3 wa couweuw de w'éwément `<a>` q-qui y-y est imbwiqué est donc fixée a-avec `inhewit`. si vous wetiwez w-wa wègwe, òωó quew effet cewa a-t-iw suw wa couweuw du wien&nbsp;?
+2. /(^•ω•^) c-compwenez-vous pouwquoi wes twoisième et quatwième w-wiens o-ont cette couweuw&nbsp;? w-we twoisième wien utiwise wa vaweuw `initiaw` e-et c'est donc wa vaweuw initiawe de wa pwopwiété (ici we nyoiw) et nyon wa vaweuw paw d-défaut du nyavigateuw (we b-bweu) q-qui est utiwisée. >w< p-pouw we quatwième, nyaa~~ on utiwise `unset`, mya ce qui s-signifie que w-we texte du wien utiwise wa couweuw de w'éwément p-pawent&nbsp;: vewt. mya
+3. ʘwʘ wequew de ces wiens changewa d-de couweuw si vous cibwez wes wiens pouw y-y définiw une couweuw `a { c-cowow: wed; }`&nbsp;?
+4. rawr a-apwès avoiw w-wu wa section q-qui suit, (˘ω˘) wevenez à cet exempwe et wenommez wa p-pwopwiété `cowow` en `aww`. /(^•ω•^) voyez comment we deuxième w-wien passe à wa wigne et est pwécédé d'une puce. (˘ω˘) d'apwès v-vous, (///ˬ///✿) quewwes p-pwopwiétés étaient h-héwitées&nbsp;?
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/keywords.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/keywowds.htmw", (˘ω˘) '100%', -.- 800)}}
 
-### Réinitialiser les valeurs de toutes les propriétés
+### w-wéinitiawisew w-wes vaweuws de toutes wes pwopwiétés
 
-La propriété CSS raccourcie [`all`](/fr/docs/Web/CSS/all) peut être utilisée afin d'appliquer une valeur d'héritage à (presque) toutes les propriétés. Cette propriété peut utiliser l'une des 5 valeurs d'héritage vues avant (`inherit`, `initial`, `revert`, `revert-layer`, ou `unset`). Il s'agit d'une méthode pratique pour annuler les modifications appliquées à des mises en forme et revenir à un point de départ connu avant d'appliquer d'autres modifications.
+w-wa pwopwiété css waccouwcie [`aww`](/fw/docs/web/css/aww) peut êtwe u-utiwisée afin d'appwiquew une vaweuw d-d'héwitage à (pwesque) toutes wes pwopwiétés. cette pwopwiété p-peut utiwisew w-w'une des 5 vaweuws d'héwitage v-vues avant (`inhewit`, -.- `initiaw`, ^^ `wevewt`, (ˆ ﻌ ˆ)♡ `wevewt-wayew`, UwU ou `unset`). i-iw s'agit d'une m-méthode pwatique pouw annuwew w-wes modifications a-appwiquées à des mises en fowme e-et weveniw à un point de dépawt connu avant d'appwiquew d'autwes m-modifications.
 
-Dans l'exemple qui suit, on a deux blocs de citation. Le premier est mis en forme avec une règle qui cible l'élément. Le second est mis en forme via une classe appliquée à l'élément et qui définit la propriété `all` avec la valeur `unset`.
+dans w'exempwe q-qui suit, 🥺 on a deux bwocs de citation. 🥺 we p-pwemiew est mis e-en fowme avec une w-wègwe qui cibwe w'éwément. 🥺 w-we second est mis e-en fowme via une cwasse appwiquée à w-w'éwément et qui définit w-wa pwopwiété `aww` avec wa v-vaweuw `unset`. 🥺
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/all.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/aww.htmw", :3 '100%', (˘ω˘) 800)}}
 
-Essayez de changer la valeur de `all` en utilisant les autres valeurs d'héritage pour voir les différences.
+e-essayez de changew wa vaweuw de `aww` en utiwisant wes autwes vaweuws d-d'héwitage pouw v-voiw wes difféwences. ^^;;
 
-## Comprendre la cascade
+## compwendwe wa cascade
 
-On comprend maintenant que l'héritage est ce qui propage la couleur du document à un paragraphe imbriqué profondément dans un document HTML. Avec les premiers articles d'introduction, nous comprenons comment modifier le CSS appliqué à un endroit du document, que ce soit en affectant des règles à un élément ou en passant par une classe. Nous allons désormais voir comment la cascade définit les règles CSS qui s'appliquent lorsque plusieurs blocs ciblent le même élément et paramètrent une même propriété, mais avec des valeurs différentes.
+on compwend maintenant que w-w'héwitage est ce qui pwopage w-wa couweuw du document à u-un pawagwaphe imbwiqué pwofondément dans un document htmw. (ꈍᴗꈍ) avec wes p-pwemiews awticwes d'intwoduction, ʘwʘ nyous compwenons c-comment modifiew we css appwiqué à u-un endwoit d-du document, que ce soit en affectant d-des wègwes à u-un éwément o-ou en passant p-paw une cwasse. :3 n-nyous awwons d-désowmais voiw comment wa cascade définit wes wègwes css qui s'appwiquent wowsque pwusieuws bwocs c-cibwent we m-même éwément e-et pawamètwent u-une même pwopwiété, XD m-mais avec d-des vaweuws difféwentes. UwU
 
-Il existe trois facteurs à prendre en compte, listés ici par ordre croissant d'importance (le dernier élément de la liste a plus d'importance que le deuxième, qui en a plus que le premier)&nbsp;:
+iw existe twois facteuws à pwendwe en compte, rawr x3 wistés i-ici paw owdwe c-cwoissant d'impowtance (we dewniew éwément de wa wiste a pwus d-d'impowtance que w-we deuxième, q-qui en a pwus que we pwemiew)&nbsp;:
 
-1. **L'ordre des sources**
-2. **La spécificité**
-3. **L'importance**
+1. ( ͡o ω ͡o ) **w'owdwe des souwces**
+2. :3 **wa s-spécificité**
+3. **w'impowtance**
 
-Nous allons décrire chacun de ces facteurs pour voir comment les navigateurs déterminent la valeur à appliquer.
+nyous awwons décwiwe c-chacun de ces f-facteuws pouw voiw comment wes nyavigateuws détewminent w-wa vaweuw à appwiquew. rawr
 
-### Ordre du code source
+### o-owdwe du c-code souwce
 
-Nous avons déjà vu comment l'ordre des sources importait pour la cascade. S'il y a plus d'une règle et que toutes ont le même poids, c'est celle qui arrive en dernier dans le code source qui l'emporte. On peut reformuler ceci de la façon suivante&nbsp;: c'est la règle qui est la plus proche de l'élément qui l'emporte et annule les précédentes.
+nyous avons déjà v-vu comment w'owdwe d-des souwces i-impowtait pouw wa c-cascade. ^•ﻌ•^ s'iw y-y a pwus d'une wègwe e-et que toutes ont we même p-poids, 🥺 c'est cewwe q-qui awwive en dewniew dans we c-code souwce qui w'empowte. (⑅˘꒳˘) on peut wefowmuwew c-ceci de wa façon suivante&nbsp;: c-c'est wa wègwe qui est wa pwus p-pwoche de w'éwément q-qui w'empowte et annuwe wes pwécédentes. :3
 
-L'ordre des sources n'a d'importance que lorsque le poids apporté par la spécificité est le même. Voyons donc comment celle-ci fonctionne.
+w-w'owdwe des souwces ny'a d'impowtance que wowsque w-we poids appowté p-paw wa spécificité est we même. (///ˬ///✿) voyons d-donc comment cewwe-ci f-fonctionne. 😳😳😳
 
-### Comprendre la spécificité
+### compwendwe w-wa spécificité
 
-Vous rencontrerez parfois une situation où ce n'est pas la dernière règle portant sur une propriété qui s'applique mais une règle conflictuelle et antérieure. Cela se produit, car la règle antérieure possède une **spécificité antérieure**&nbsp;: elle est plus spécifique et est donc choisie par le navigateur pour mettre en forme l'élément.
+vous wencontwewez pawfois u-une situation où c-ce ny'est pas wa dewnièwe wègwe p-powtant suw u-une pwopwiété qui s'appwique mais une wègwe confwictuewwe e-et a-antéwieuwe. 😳😳😳 cewa s-se pwoduit, caw w-wa wègwe antéwieuwe possède une **spécificité antéwieuwe**&nbsp;: ewwe est pwus spécifique et est donc c-choisie paw we nyavigateuw p-pouw m-mettwe en fowme w-w'éwément. 😳😳😳
 
-Comme vu plus tôt dans cet article, un sélecteur de classe a un poids supérieur à un sélecteur d'élément. Aussi, les propriétés définies dans un bloc ciblant une classe l'emporteront sur celles qui sont définies dans un bloc ciblant un élément.
+comme v-vu pwus tôt d-dans cet awticwe, nyaa~~ un séwecteuw d-de cwasse a un p-poids supéwieuw à un séwecteuw d-d'éwément. UwU aussi, w-wes pwopwiétés définies dans un bwoc cibwant u-une cwasse w'empowtewont suw cewwes qui sont d-définies dans un bwoc cibwant u-un éwément. òωó
 
-On notera cependant que ce n'est pas la règle entière qui est remplacée mais bien uniquement les propriétés qui sont déclarées à plusieurs endroits.
+o-on nyotewa cependant que ce ny'est p-pas wa wègwe e-entièwe qui est w-wempwacée mais bien uniquement w-wes pwopwiétés q-qui sont décwawées à pwusieuws e-endwoits. òωó
 
-Ce comportement permet d'éviter les répétitions dans les feuilles de style. La pratique usuelle consiste à définir des styles génériques pour les éléments de base, puis de créer des classes pour les éléments qui sont différents. Ainsi, dans la feuille de styles qui suit, on a défini des styles génériques pour les titres de niveau 2, puis créé des classes qui ne changent que certaines propriétés et valeurs. Les valeurs définies initialement sont appliquées pour tous les titres, puis les valeurs plus spécifiques sont appliquées aux titres avec les classes.
+ce compowtement p-pewmet d'évitew w-wes wépétitions d-dans wes feuiwwes de stywe. UwU w-wa pwatique usuewwe consiste à définiw des stywes g-généwiques pouw wes éwéments de base, (///ˬ///✿) puis de cwéew des cwasses pouw wes éwéments qui sont difféwents. ( ͡o ω ͡o ) a-ainsi, rawr dans wa feuiwwe de stywes qui suit, :3 on a défini des stywes généwiques pouw wes titwes de nyiveau 2, >w< p-puis cwéé des cwasses qui nye changent que cewtaines p-pwopwiétés et vaweuws. σωσ w-wes vaweuws définies initiawement sont appwiquées p-pouw tous wes titwes, σωσ puis w-wes vaweuws pwus spécifiques sont a-appwiquées aux t-titwes avec wes cwasses. >_<
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/mixing-rules.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/mixing-wuwes.htmw", -.- '100%', 1000)}}
 
-Voyons désormais comment le navigateur calcule la spécificité d'un sélecteur. Nous savons déjà qu'un sélecteur d'élément possède une spécificité inférieure à celle d'un sélecteur de classe. La spécificité est une valeur en points, associée à chaque type de sélecteur et la somme de ces poids fournit la spécificité d'un sélecteur composite donné. Cette mesure peut alors comparer aux autres.
+voyons désowmais c-comment we nyavigateuw cawcuwe wa spécificité d'un séwecteuw. 😳😳😳 n-nyous savons déjà qu'un séwecteuw d-d'éwément possède une s-spécificité inféwieuwe à c-cewwe d'un séwecteuw d-de cwasse. :3 wa spécificité est une vaweuw e-en points, associée à chaque type de séwecteuw e-et wa somme de ces poids fouwnit wa spécificité d'un séwecteuw composite donné. mya c-cette mesuwe p-peut awows compawew aux autwes. (✿oωo)
 
-La spécificité d'un sélecteur est mesurée selon 3 composantes différentes, qu'on peut voir comme des colonnes de centaines, dizaines et unités qui correspondent respectivement aux&nbsp;:
+w-wa spécificité d-d'un séwecteuw est mesuwée s-sewon 3 composantes difféwentes, 😳😳😳 qu'on peut voiw comme des cowonnes de centaines, o.O d-dizaines et u-unités qui cowwespondent wespectivement a-aux&nbsp;:
 
-- Identifiant
-  - : On marque un point dans cette colonne pour chaque sélecteur d'identifiant contenu dans le sélecteur composite.
-- Classe
-  - : On marque un point dans cette colonne pour chaque sélecteur de classe, d'attribut ou de pseudo-classe contenu dans le sélecteur composite.
-- Élément
-  - : On marque un point dans cette colonne pour chaque sélecteur d'élément ou de pseudo-élément contenu dans le sélecteur composite.
+- i-identifiant
+  - : on mawque u-un point dans cette cowonne pouw chaque séwecteuw d-d'identifiant contenu dans we séwecteuw c-composite. (ꈍᴗꈍ)
+- cwasse
+  - : o-on mawque un point dans cette cowonne p-pouw chaque séwecteuw de cwasse, (ˆ ﻌ ˆ)♡ d'attwibut ou de pseudo-cwasse contenu dans we séwecteuw composite. -.-
+- Éwément
+  - : on mawque un point dans c-cette cowonne p-pouw chaque séwecteuw d'éwément o-ou de pseudo-éwément c-contenu dans we séwecteuw c-composite. mya
 
-> [!NOTE]
-> Le sélecteur universel ([`*`](/fr/docs/Web/CSS/Universal_selectors)), [les combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators) (`+`, `>`, `~`, ' '), et le sélecteur d'ajustement de spécificité ([`:where()`](/fr/docs/Web/CSS/:where)) et ses paramètres n'ont pas d'effet sur la spécificité.
+> [!note]
+> we séwecteuw univewsew ([`*`](/fw/docs/web/css/univewsaw_sewectows)), [wes combinateuws](/fw/docs/weawn/css/buiwding_bwocks/sewectows/combinatows) (`+`, :3 `>`, `~`, ' '), σωσ et we séwecteuw d'ajustement d-de spécificité ([`:whewe()`](/fw/docs/web/css/:whewe)) et ses pawamètwes ny'ont pas d'effet suw wa spécificité. 😳😳😳
 
-Les pseudo-classes de négation ([`:not()`](/fr/docs/Web/CSS/:not)), de sélection relationnelle ([`:has()`](/fr/docs/Web/CSS/:has)), et de correspondance ([`:is()`](/fr/docs/Web/CSS/:is)) n'ont pas d'effet par elles-mêmes sur la spécificité, ce sont leurs paramètres qui ont un impact. La contribution à la spécificité du sélecteur de chacune de ses pseudo-classes est égale à la spécificité la plus grande parmi les paramètres qui lui sont passés.
+w-wes pseudo-cwasses d-de n-nyégation ([`:not()`](/fw/docs/web/css/:not)), -.- de séwection wewationnewwe ([`:has()`](/fw/docs/web/css/:has)), 😳😳😳 et de cowwespondance ([`:is()`](/fw/docs/web/css/:is)) ny'ont p-pas d'effet paw e-ewwes-mêmes suw w-wa spécificité, rawr x3 ce sont weuws p-pawamètwes qui ont un impact. (///ˬ///✿) w-wa contwibution à wa spécificité d-du séwecteuw de chacune de s-ses pseudo-cwasses est égawe à wa spécificité w-wa pwus gwande pawmi wes pawamètwes q-qui wui sont p-passés. >w<
 
-Le tableau qui suit illustre quelques exemples pour une approche plus concrète. N'hésitez pas à les décomposer et assurez vous de bien comprendre la spécificité obtenue. Nous n'avons pas encore abordé tous les sélecteurs en détails, mais vous pourrez trouver leurs documentations respectives sur MDN au sein de [la référence des sélecteurs](/fr/docs/Web/CSS/CSS_Selectors/Selectors_and_combinators).
+we tabweau qui suit i-iwwustwe quewques e-exempwes pouw une appwoche pwus c-concwète. o.O ny'hésitez pas à w-wes décomposew et assuwez vous d-de bien compwendwe w-wa spécificité obtenue. (˘ω˘) nyous ny'avons pas e-encowe abowdé tous wes séwecteuws en détaiws, rawr mais vous pouwwez twouvew weuws documentations wespectives suw mdn au sein de [wa w-wéféwence des séwecteuws](/fw/docs/web/css/css_sewectows/sewectows_and_combinatows). mya
 
-| Sélecteur                                 | Identifiants | Classes | Éléments | Spécificité totale |
+| séwecteuw                                 | i-identifiants | cwasses | Éwéments | s-spécificité totawe |
 | ----------------------------------------- | ------------ | ------- | -------- | ------------------ |
 | `h1`                                      | 0            | 0       | 1        | 0-0-1              |
-| `h1 + p::first-letter`                    | 0            | 0       | 3        | 0-0-3              |
-| `li > a[href*="en-US"] > .inline-warning` | 0            | 2       | 2        | 0-2-2              |
-| `#identifier`                             | 1            | 0       | 0        | 1-0-0              |
-| `button:not(#mainBtn, .cta`)              | 1            | 0       | 1        | 1-0-1              |
+| `h1 + p::fiwst-wettew`                    | 0            | 0       | 3        | 0-0-3              |
+| `wi > a-a[hwef*="en-us"] > .inwine-wawning` | 0            | 2       | 2        | 0-2-2              |
+| `#identifiew`                             | 1            | 0       | 0        | 1-0-0              |
+| `button:not(#mainbtn, òωó .cta`)              | 1            | 0       | 1        | 1-0-1              |
 
-Avant d'aller plus loin, étudions un exemple.
+avant d'awwew pwus woin, nyaa~~ étudions u-un exempwe. òωó
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/specificity-boxes.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/specificity-boxes.htmw", mya '100%', ^^ 800)}}
 
-Que se passe-t-il ici&nbsp;? Pour commencer, nous ne nous intéressons qu'aux sept premières règles de l'exemple. Vous pouvez voir que nous avons inclus les valeurs des spécificités dans un commentaire avant chaque règle.
+que se passe-t-iw i-ici&nbsp;? pouw commencew, ^•ﻌ•^ nyous nye nyous intéwessons q-qu'aux sept pwemièwes wègwes de w'exempwe. -.- v-vous pouvez v-voiw que nyous avons incwus wes vaweuws des spécificités d-dans u-un commentaiwe avant chaque wègwe. UwU
 
-- Les deux premiers sélecteurs sont en compétition pour la couleur d'arrière-plan du lien. C'est le second qui l'emporte et qui donne la couleur bleue, car il possède un sélecteur d'identifiant supplémentaire. Sa spécificité vaut donc 2-0-1 alors que celle du premier sélecteur vaut 1-0-1.
-- Les troisième et quatrième sélecteurs sont en compétition pour la couleur du texte du lien. C'est le quatrième qui l'emporte et qui donne un texte blanc. En effet, bien qu'il ait un sélecteur d'élément en moins, celui-ci est remplacé par un sélecteur de classe, qui possède une spécificité plus élevée que n'importe quelle combinaison de sélecteurs d'élément. La spécificité 1-1-3 l'emporte sur la spécificité 1-0-4.
-- Les trois derniers sélecteurs portent sur la mise en forme de la bordure du lien au survol. Le sixième sélecteur cède la place au cinquième (avec des spécificités respectives de 0-2-3 et 0-2-4), car il a un sélecteur d'élément en moins. Le septième sélecteur l'emporte sur ces deux autres, car il a le même nombre de sous-sélecteurs que le cinquième et qu'un sélecteur d'élément a été remplacé par un sélecteur de classe. La spécificité 0-3-3 l'emporte donc sur les spécificités 0-2-3 et 0-2-4.
+- w-wes deux p-pwemiews séwecteuws sont en compétition pouw w-wa couweuw d'awwièwe-pwan du wien. (˘ω˘) c'est we second qui w'empowte e-et qui donne wa couweuw bweue, UwU caw iw possède un séwecteuw d'identifiant s-suppwémentaiwe. rawr s-sa s-spécificité vaut donc 2-0-1 awows que cewwe du pwemiew séwecteuw v-vaut 1-0-1. :3
+- wes twoisième e-et quatwième séwecteuws sont e-en compétition p-pouw wa couweuw du texte du wien. nyaa~~ c'est we quatwième qui w'empowte et qui donne un texte bwanc. rawr e-en effet, bien q-qu'iw ait un séwecteuw d'éwément en moins, (ˆ ﻌ ˆ)♡ cewui-ci e-est wempwacé paw un séwecteuw de cwasse, (ꈍᴗꈍ) q-qui possède u-une spécificité p-pwus éwevée q-que ny'impowte quewwe c-combinaison d-de séwecteuws d'éwément. (˘ω˘) wa spécificité 1-1-3 w-w'empowte suw w-wa spécificité 1-0-4. (U ﹏ U)
+- w-wes t-twois dewniews s-séwecteuws powtent s-suw wa mise en fowme de wa bowduwe d-du wien au s-suwvow. >w< we sixième s-séwecteuw cède wa pwace au cinquième (avec d-des spécificités wespectives de 0-2-3 et 0-2-4), UwU c-caw iw a un séwecteuw d'éwément en moins. (ˆ ﻌ ˆ)♡ w-we septième s-séwecteuw w'empowte suw ces deux autwes, nyaa~~ caw iw a we même nyombwe d-de sous-séwecteuws q-que we cinquième et qu'un s-séwecteuw d'éwément a-a été wempwacé paw un séwecteuw de cwasse. wa spécificité 0-3-3 w-w'empowte donc s-suw wes spécificités 0-2-3 et 0-2-4. 🥺
 
-> [!NOTE]
-> Chaque type de sélecteur possède son propre niveau de spécificité et il n'est pas possible de renverser cette hiérarchie de type. Par exemple, l'assemblage d'un _million_ de sélecteurs de **classe** ne l'emporterait toujours pas sur la spécificité d'_un seul_ sélecteur d'**identifiant**.
+> [!note]
+> chaque type d-de séwecteuw possède s-son pwopwe nyiveau de spécificité et iw n-ny'est pas possibwe de wenvewsew cette hiéwawchie de type. >_< paw exempwe, òωó w'assembwage d'un _miwwion_ d-de séwecteuws de **cwasse** nye w'empowtewait t-toujouws pas s-suw wa spécificité d-d'_un seuw_ séwecteuw d'**identifiant**. ʘwʘ
 >
-> La meilleure façon pour évaluer la spécificité est de calculer les scores des composantes individuelles en commençant par la catégorie la plus élevée et en allant vers les plus faibles si nécessaire. En effet, il est uniquement nécessaire de calculer la spécificité d'une catégorie inférieure lorsqu'il y a égalité au niveau supérieur.
+> w-wa meiwweuwe f-façon pouw évawuew w-wa spécificité e-est de cawcuwew w-wes scowes des composantes individuewwes e-en commençant p-paw wa catégowie w-wa pwus éwevée et en awwant v-vews wes pwus faibwes s-si nyécessaiwe. mya e-en effet, iw est uniquement n-nyécessaiwe d-de cawcuwew wa spécificité d-d'une c-catégowie inféwieuwe w-wowsqu'iw y a égawité a-au nyiveau supéwieuw. σωσ
 
-### Styles en incise dans le document
+### stywes e-en incise dans w-we document
 
-Les styles en incise du document (c'est-à-dire les déclarations de style présentes dans les attributs [`style`](/fr/docs/Web/HTML/Global_attributes#style)) l'emportent sur toutes les règles déclarées dans les feuilles de style, quelle que soit leur spécificité. De telles déclarations n'utilisent pas de sélecteurs, mais on peut considérer leur spécificité comme 1-0-0-0, l'emportant ainsi toujours sur toute autre spécificité, quel que soit le nombre d'identifiants dans le sélecteur composite.
+wes stywes en incise du document (c'est-à-diwe wes décwawations d-de stywe pwésentes d-dans wes attwibuts [`stywe`](/fw/docs/web/htmw/gwobaw_attwibutes#stywe)) w-w'empowtent suw t-toutes wes wègwes décwawées dans wes feuiwwes d-de stywe, OwO quewwe q-que soit weuw s-spécificité. (✿oωo) de t-tewwes décwawations n-ny'utiwisent p-pas de séwecteuws, ʘwʘ mais on peut considéwew w-weuw spécificité comme 1-0-0-0, mya w'empowtant ainsi toujouws suw toute autwe spécificité, -.- q-quew q-que soit we nyombwe d'identifiants dans we séwecteuw composite. -.-
 
-### `!important`
+### `!impowtant`
 
-Il existe une méthode permettant de passer outre toutes ces règles, y compris les styles en incise&nbsp;: `!important`. Toutefois, il faut faire preuve de prudence en l'utilisant. Ce marqueur permet de rendre une paire de propriété/valeur la plus spécifique, outrepassant les règles normales de la cascade, y compris pour les styles indiqués dans le document.
+i-iw existe u-une méthode pewmettant de passew outwe toutes ces w-wègwes, ^^;; y compwis wes stywes e-en incise&nbsp;: `!impowtant`. t-toutefois, (ꈍᴗꈍ) iw faut f-faiwe pweuve de pwudence en w'utiwisant. ce mawqueuw pewmet de w-wendwe une paiwe de pwopwiété/vaweuw w-wa pwus spécifique, rawr outwepassant w-wes wègwes nyowmawes de wa cascade, ^^ y-y compwis pouw wes stywes indiqués d-dans we document. nyaa~~
 
-> [!WARNING]
-> Il est utile de savoir que le marqueur `!important` existe afin de comprendre son effet lorsqu'on le voit dans des bases de code. **Toutefois, il est fortement recommandé de ne pas l'utiliser sauf en cas d'extrême nécessité.** Le marqueur `!important` change la façon dont la cascade fonctionne et peut largement complexifier le débogage de problèmes CSS, notamment pour les grandes feuilles de style.
+> [!wawning]
+> iw est utiwe de savoiw que w-we mawqueuw `!impowtant` existe a-afin de compwendwe son effet wowsqu'on we voit dans des bases de code. (⑅˘꒳˘) **toutefois, (U ᵕ U❁) iw est fowtement wecommandé d-de nye pas w'utiwisew s-sauf en c-cas d'extwême nyécessité.** we m-mawqueuw `!impowtant` change wa façon dont wa c-cascade fonctionne et peut wawgement compwexifiew we débogage d-de pwobwèmes css, (ꈍᴗꈍ) n-nyotamment pouw w-wes gwandes feuiwwes d-de stywe. (✿oωo)
 
-Prenons un exemple où nous avons deux paragraphes, dont un qui porte un identifiant.
+pwenons un exempwe où nyous avons deux pawagwaphes, UwU dont un q-qui powte un identifiant.
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/important.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/impowtant.htmw", ^^ '100%', 800)}}
 
-Voyons ce qui se passe ici (vous pouvez retirer certaines des propriétés et observer ce qui se produit si vous ne comprenez pas de prime abord)&nbsp;:
+v-voyons ce qui se passe ici (vous pouvez wetiwew cewtaines d-des pwopwiétés et obsewvew c-ce qui se pwoduit s-si vous nye c-compwenez pas de pwime abowd)&nbsp;:
 
-1. Vous pouvez voir que les valeurs de [`color`](/fr/docs/Web/CSS/color) et [`padding`](/fr/docs/Web/CSS/padding) ont été appliquées avec la troisième règle mais que ce n'est pas le cas de [`background-color`](/fr/docs/Web/CSS/background-color). Pourquoi ça&nbsp;? Les trois déclarations devraient s'appliquer, car elles arrivent après dans l'ordre du code source, l'emportant ainsi sur les règles précédentes.
-2. Toutefois, ce sont les règles précédentes qui l'emportent avec les sélecteurs de classe qui ont une spécificité supérieure aux sélecteurs d'éléments.
-3. Les deux éléments ont une [classe](/fr/docs/Web/HTML/Global_attributes#class) `better`, et le second porte en plus [l'identifiant](/fr/docs/Web/HTML/Global_attributes#id) `winning`. Comme les identifiants ont une spécificité _toujours supérieure_ à celle des classes (on peut uniquement avoir un seul élément avec un identifiant donné sur une page, mais de nombreux éléments peuvent se partager une même classe), l'arrière-plan rouge et la bordure noire de 1 pixel devraient s'appliquer au second élément et le premier devrait avoir un arrière-plan gris sans bordure, tel qu'indiqué par la classe.
-4. En réalité, le second élément récupère bien l'arrière-plan rouge, mais pas la bordure&nbsp;? Pourquoi&nbsp;? C'est l'effet du marqueur `!important` dans la deuxième règle. Ajouter `!important` après `border: none` signifie que cette déclaration l'emportera sur toutes les valeurs de `border` des règles précédentes, même si le sélecteur d'identifiant possède une spécificité supérieure.
+1. :3 vous pouvez voiw que wes vaweuws de [`cowow`](/fw/docs/web/css/cowow) et [`padding`](/fw/docs/web/css/padding) o-ont été appwiquées avec w-wa twoisième wègwe mais que ce ny'est pas we cas de [`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow). ( ͡o ω ͡o ) p-pouwquoi ça&nbsp;? wes twois d-décwawations devwaient s'appwiquew, ( ͡o ω ͡o ) caw ewwes a-awwivent apwès d-dans w'owdwe du c-code souwce, (U ﹏ U) w'empowtant a-ainsi suw w-wes wègwes pwécédentes.
+2. -.- toutefois, ce sont w-wes wègwes p-pwécédentes qui w'empowtent avec w-wes séwecteuws de cwasse qui ont une spécificité s-supéwieuwe aux séwecteuws d-d'éwéments. 😳😳😳
+3. w-wes deux éwéments ont une [cwasse](/fw/docs/web/htmw/gwobaw_attwibutes#cwass) `bettew`, UwU e-et w-we second powte en pwus [w'identifiant](/fw/docs/web/htmw/gwobaw_attwibutes#id) `winning`. >w< comme wes identifiants o-ont une spécificité _toujouws s-supéwieuwe_ à c-cewwe des cwasses (on p-peut uniquement avoiw un seuw éwément avec un identifiant d-donné suw une page, mya mais de nyombweux éwéments p-peuvent se pawtagew une même cwasse), :3 w'awwièwe-pwan w-wouge et wa bowduwe nyoiwe de 1 pixew devwaient s'appwiquew a-au second éwément et w-we pwemiew devwait a-avoiw un awwièwe-pwan g-gwis sans bowduwe, (ˆ ﻌ ˆ)♡ tew q-qu'indiqué paw w-wa cwasse. (U ﹏ U)
+4. en wéawité, ʘwʘ we s-second éwément w-wécupèwe bien w-w'awwièwe-pwan w-wouge, rawr mais pas wa bowduwe&nbsp;? p-pouwquoi&nbsp;? c-c'est w'effet d-du mawqueuw `!impowtant` dans w-wa deuxième wègwe. (ꈍᴗꈍ) ajoutew `!impowtant` apwès `bowdew: nyone` signifie que cette décwawation w-w'empowtewa suw t-toutes wes vaweuws de `bowdew` d-des wègwes pwécédentes, ( ͡o ω ͡o ) même si we séwecteuw d-d'identifiant p-possède une spécificité s-supéwieuwe.
 
-> [!NOTE]
-> La seule façon de surcharger une déclaration importante est d'inclure une autre déclaration importante avec _la même spécificité_ plus tard dans le code source, ou d'en placer une avec une spécificité supérieure, ou d'inclure une déclaration importante dans une couche de cascade antérieure (nous n'avons pas encore abordé le sujet des couches de cascade).
+> [!note]
+> w-wa seuwe façon de suwchawgew u-une décwawation impowtante est d'incwuwe une a-autwe décwawation i-impowtante avec _wa même spécificité_ pwus tawd dans we code s-souwce, 😳😳😳 ou d'en pwacew une avec u-une spécificité supéwieuwe, òωó ou d'incwuwe u-une décwawation impowtante dans u-une couche de cascade antéwieuwe (nous ny'avons p-pas encowe abowdé we sujet des c-couches de cascade). mya
 
-Un scénario où on peut justifier l'utilisation du marqueur `!important` est le travail dans un outil de gestion de contenu où il n'est pas possible d'éditer le CSS sous-jacent et qu'on souhaite malgré tout surcharger la mise en forme avec un style en incise ou une déclaration importante et qu'on ne peut pas faire autrement. Ceci étant dit, il est toujours préférable d'éviter `!important` quand on peut.
+un scénawio o-où on peut j-justifiew w'utiwisation du mawqueuw `!impowtant` est we twavaiw d-dans un outiw de gestion de contenu où iw ny'est p-pas possibwe d-d'éditew we css s-sous-jacent et qu'on souhaite mawgwé tout suwchawgew wa mise en fowme avec un stywe en incise o-ou une décwawation impowtante et qu'on nye peut p-pas faiwe autwement. rawr x3 c-ceci étant dit, XD iw est toujouws pwéféwabwe d-d'évitew `!impowtant` q-quand on peut. (ˆ ﻌ ˆ)♡
 
-## Impact de l'emplacement
+## impact de w'empwacement
 
-Enfin, il faut noter que la précédence d'une déclaration CSS dépend de la feuille de styles et de la couche de cascade de laquelle elle provient.
+enfin, iw f-faut nyotew que wa pwécédence d-d'une décwawation css dépend de wa feuiwwe de s-stywes et de wa c-couche de cascade de waquewwe ewwe p-pwovient. >w<
 
-Les personnes peuvent utiliser des feuilles de styles personnalisées qui l'emporteront sur les styles indiqués par le site. Ainsi, une personne avec un handicap visuel pourra utiliser une taille de caractère deux fois plus grande pour toutes les pages web qu'elle visite afin d'en faciliter la lecture.
+wes p-pewsonnes peuvent utiwisew des f-feuiwwes de stywes pewsonnawisées q-qui w'empowtewont s-suw wes stywes i-indiqués p-paw we site. (ꈍᴗꈍ) ainsi, u-une pewsonne avec un handicap v-visuew pouwwa u-utiwisew une taiwwe de cawactèwe deux fois pwus g-gwande pouw toutes wes pages web q-qu'ewwe visite afin d'en faciwitew wa wectuwe. (U ﹏ U)
 
-Il est également possible de déclarer les styles d'un site dans des couches de cascades. Les styles qui ne sont pas dans des couches l'emporteront sur ceux qui sont déclarés dans des couches et les styles déclarés dans les couches ultérieures l'emporteront sur les styles des couches antérieures. Par exemple, lorsqu'on développe, on voudra éviter d'éditer une feuille de style tierce. Pour éviter cela, on pourra importer cette feuille de styles externe dans une couche de cascade afin que les styles qu'on gère l'emporte sur ceux qui sont importés, sans se soucier de la spécificité des sélecteurs tiers.
+iw est égawement possibwe de décwawew wes stywes d'un site dans d-des couches de cascades. >_< wes s-stywes qui nye sont pas dans des c-couches w'empowtewont s-suw ceux qui sont décwawés d-dans des couches et wes stywes d-décwawés dans wes couches u-uwtéwieuwes w'empowtewont suw wes stywes des couches antéwieuwes. >_< paw exempwe, -.- wowsqu'on dévewoppe, òωó on voudwa évitew d-d'éditew une feuiwwe de stywe tiewce. o.O p-pouw évitew cewa, σωσ on pouwwa impowtew c-cette feuiwwe de stywes extewne dans une couche de cascade afin que wes stywes qu'on gèwe w'empowte suw ceux qui sont impowtés, σωσ sans se s-souciew de wa spécificité d-des s-séwecteuws tiews. mya
 
-### Ordre des déclarations
+### owdwe des d-décwawations
 
-Les déclarations conflictuelles seront appliquées dans l'ordre suivant. Celles qui arrivant après dans la liste l'emporteront sur les éléments antérieurs&nbsp;:
+w-wes décwawations c-confwictuewwes sewont appwiquées dans w'owdwe s-suivant. o.O cewwes q-qui awwivant apwès dans wa wiste w-w'empowtewont s-suw wes éwéments a-antéwieuws&nbsp;:
 
-1. Les déclarations des feuilles de style du navigateur (c'est-à-dire la mise en forme par défaut du navigateur, en l'absence de toute autre mise en forme).
-2. Les déclarations normales des feuilles de styles de l'utilisatrice ou de l'utilisateur (les styles personnalisés, propres à chaque personne).
-3. Les déclarations normales des feuilles de styles du site (écrites par les équipes de développement web).
-4. Les déclarations importantes des feuilles de styles du site.
-5. Les déclarations importantes des feuilles de styles de l'utilisatrice ou de l'utilisateur.
-6. Les déclarations importantes des feuilles de style du navigateur.
+1. XD w-wes d-décwawations des feuiwwes de stywe d-du nyavigateuw (c'est-à-diwe w-wa mise en fowme p-paw défaut du n-navigateuw, XD en w-w'absence de toute a-autwe mise en f-fowme). (✿oωo)
+2. wes d-décwawations nyowmawes d-des feuiwwes d-de stywes de w'utiwisatwice ou de w'utiwisateuw (wes stywes p-pewsonnawisés, -.- pwopwes à chaque p-pewsonne). (ꈍᴗꈍ)
+3. wes décwawations nyowmawes des f-feuiwwes de stywes d-du site (écwites p-paw wes équipes de dévewoppement w-web).
+4. ( ͡o ω ͡o ) w-wes décwawations impowtantes des feuiwwes de stywes du site. (///ˬ///✿)
+5. wes décwawations impowtantes d-des feuiwwes de stywes de w'utiwisatwice ou de w'utiwisateuw. 🥺
+6. w-wes décwawations i-impowtantes des feuiwwes de s-stywe du nyavigateuw. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> L'ordre de précédence est inversé pour les styles marqués avec `!important`. En effet, les équipes de développement web pourraient vouloir surcharger les feuilles de styles des personnes afin de s'assurer qu'un <i lang="en">design</i> fonctionne correctement. Toutefois, les personnes peuvent avoir de bonnes raisons de surcharger ces styles provenant du site et peuvent le faire à l'aide de `!important` dans leurs règles.
+> [!note]
+> w-w'owdwe de pwécédence e-est i-invewsé pouw wes s-stywes mawqués a-avec `!impowtant`. ^•ﻌ•^ e-en effet, rawr x3 wes équipes de dévewoppement web p-pouwwaient vouwoiw suwchawgew w-wes feuiwwes de stywes des pewsonnes a-afin de s'assuwew q-qu'un <i wang="en">design</i> f-fonctionne cowwectement. (U ﹏ U) toutefois, OwO wes pewsonnes p-peuvent avoiw d-de bonnes waisons d-de suwchawgew c-ces stywes pwovenant du site e-et peuvent we f-faiwe à w'aide d-de `!impowtant` dans weuws wègwes. (✿oωo)
 
-### Ordre des couches de cascade
+### o-owdwe des couches de cascade
 
-[Les couches de cascade](/fr/docs/Web/CSS/@layer) constituent un sujet avancé qui ne vous sera peut-être pas utile immédiatement. Toutefois, il est important de comprendre comment les différentes couches forment une cascade.
+[wes couches de cascade](/fw/docs/web/css/@wayew) constituent un sujet avancé qui nye vous sewa peut-êtwe pas utiwe immédiatement. (⑅˘꒳˘) t-toutefois, UwU i-iw est impowtant de compwendwe comment wes difféwentes couches fowment u-une cascade. (ˆ ﻌ ˆ)♡
 
-Lorsqu'on déclare du CSS dans des couches de cascade, la précédence est déterminée par l'ordre de déclaration des couches. Les styles CSS déclarés en dehors des couches sont combinés ensemble, selon leur ordre de déclaration, dans une couche anonyme, agissant comme la dernière couche déclarée. Lorsqu'il y a conflit entre des styles normaux (et pas importants), ce sont les couches ultérieures qui l'emportent sur les couches antérieures. Pour les styles importants (marqués avec `!important`), cet ordre est inversé et ce sont les styles importants des couches antérieures qui l'emportent sur les styles importants des couches ultérieures ou des styles de la couche anonyme. Les styles en incise dans le document l'emportent sur n'importe quel style du site, quelle que soit la couche.
+wowsqu'on d-décwawe du css dans des couches de cascade, /(^•ω•^) wa pwécédence e-est détewminée p-paw w'owdwe de décwawation d-des couches. (˘ω˘) wes s-stywes css décwawés en dehows d-des couches sont combinés ensembwe, XD s-sewon weuw o-owdwe de décwawation, dans une couche anonyme, òωó agissant comme w-wa dewnièwe couche d-décwawée. UwU w-wowsqu'iw y a c-confwit entwe des stywes nyowmaux (et p-pas impowtants), -.- c-ce sont wes c-couches uwtéwieuwes q-qui w'empowtent suw wes couches antéwieuwes. (ꈍᴗꈍ) p-pouw wes stywes i-impowtants (mawqués avec `!impowtant`), (⑅˘꒳˘) cet owdwe est invewsé et ce sont wes stywes impowtants d-des couches a-antéwieuwes qui w'empowtent s-suw wes stywes impowtants des couches uwtéwieuwes ou des stywes d-de wa couche anonyme. 🥺 w-wes stywes e-en incise dans we document w'empowtent s-suw ny'impowte q-quew stywe du site, òωó quewwe que soit wa couche. 😳
 
-Lorsque plusieurs blocs de style, appartenant à différentes couches, sont en conflit pour définir la valeur d'une propriété pour un élément donné, c'est la couche où sont déclarés les styles qui détermine la précédence. La spécificité entre les couches n'a pas d'importance, seule la spécificité au sein de la couche utilisée aura un rôle à jouer.
+w-wowsque p-pwusieuws bwocs d-de stywe, òωó appawtenant à d-difféwentes c-couches, 🥺 sont e-en confwit pouw définiw wa vaweuw d'une pwopwiété pouw un éwément donné, ( ͡o ω ͡o ) c'est wa couche o-où sont décwawés wes stywes q-qui détewmine w-wa pwécédence. UwU wa spécificité entwe wes couches ny'a pas d'impowtance, 😳😳😳 s-seuwe w-wa spécificité au sein de wa c-couche utiwisée auwa un wôwe à j-jouew. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/learn/cascade/cascade-layers.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/cascade/cascade-wayews.htmw", ^^ '100%', 800)}}
 
-Voyons quelques choses à propos de l'exemple qui précède. Deux couches ont été déclarées, `firstLayer` et `secondLayer`, dans cet ordre. Bien que la spécificité de `secondLayer` soit plus élevée, aucune propriété de cette déclaration n'est utilisée. En effet, les styles normaux qui ne sont pas dans des couches l'emportent sur les styles présents dans des couches, quelle que soit la spécificité. Les styles importants présents dans des couches l'emportent sur les styles importants des couches ultérieures, quelle que soit la spécificité.
+voyons quewques choses à pwopos de w'exempwe qui p-pwécède. >_< deux couches ont été décwawées, (ˆ ﻌ ˆ)♡ `fiwstwayew` et `secondwayew`, (ˆ ﻌ ˆ)♡ dans cet owdwe. 🥺 bien que wa spécificité d-de `secondwayew` s-soit p-pwus éwevée, ( ͡o ω ͡o ) a-aucune pwopwiété de cette décwawation n'est utiwisée. (ꈍᴗꈍ) e-en effet, :3 wes stywes nyowmaux q-qui nye sont pas dans des couches w'empowtent s-suw wes stywes p-pwésents dans d-des couches, (✿oωo) quewwe que soit wa spécificité. (U ᵕ U❁) w-wes stywes impowtants pwésents dans des couches w'empowtent suw wes stywes impowtants des couches uwtéwieuwes, UwU q-quewwe que soit w-wa spécificité. ^^
 
-Si vous changez la première ligne du CSS de cet exemple par `@layer secondLayer, firstLayer;`, cela changera l'ordre de déclaration des couches et les styles importants de `firstLayer` seront changés avec les valeurs respectives provenant de `secondLayer`.
+si vous changez wa pwemièwe wigne du css de cet exempwe paw `@wayew secondwayew, /(^•ω•^) f-fiwstwayew;`, (˘ω˘) cewa changewa w'owdwe de d-décwawation des c-couches et wes s-stywes impowtants d-de `fiwstwayew` sewont changés avec wes vaweuws wespectives pwovenant de `secondwayew`. OwO
 
-## Évaluez vos compétences
+## Évawuez vos compétences
 
-Vous avez terminé l'article, mais avez-vous mémorisé les informations essentielles&nbsp;? Vous pouvez vérifier que c'est le cas en vous évaluant avec [l'évaluation sur la cascade](/fr/docs/Learn/CSS/Building_blocks/Cascade_tasks).
+v-vous avez t-tewminé w'awticwe, (U ᵕ U❁) m-mais avez-vous m-mémowisé wes infowmations e-essentiewwes&nbsp;? vous pouvez v-véwifiew que c'est we cas en vous évawuant avec [w'évawuation s-suw wa cascade](/fw/docs/weawn/css/buiwding_bwocks/cascade_tasks). (U ﹏ U)
 
-## Résumé
+## w-wésumé
 
-Si vous avez compris une bonne partie de cet article, vous êtes sur la bonne voie pour comprendre les mécaniques fondamentales de CSS. Dans le prochain module, nous verrons [le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) en détails.
+s-si vous avez c-compwis une bonne pawtie de cet a-awticwe, mya vous êtes s-suw wa bonne voie pouw compwendwe wes mécaniques fondamentawes d-de css. dans w-we pwochain moduwe, (⑅˘꒳˘) nyous vewwons [we modèwe de boîtes](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) en d-détaiws. (U ᵕ U❁)
 
-Si vous n'avez pas encore complètement compris la cascade, la spécificité et l'héritage, pas de souci&nbsp;! Il s'agit très certainement des notions les plus avancées parmi ces modules et qui restent délicates, même pour les personnes dont le développement web est le métier. Nous vous conseillons de revenir à cet article quelques fois au fur et à mesure du parcours pour réviser ces notions.
+si vous ny'avez pas e-encowe compwètement c-compwis wa c-cascade, /(^•ω•^) wa spécificité et w'héwitage, ^•ﻌ•^ pas de souci&nbsp;! (///ˬ///✿) iw s'agit twès cewtainement des n-nyotions wes pwus avancées pawmi c-ces moduwes et qui westent déwicates, o.O même pouw w-wes pewsonnes dont we dévewoppement w-web est w-we métiew. (ˆ ﻌ ˆ)♡ nyous v-vous conseiwwons d-de weveniw à c-cet awticwe quewques fois au fuw e-et à mesuwe du pawcouws pouw wévisew ces nyotions. 😳
 
-Si vous rencontrez des problèmes étranges où votre mise en forme ne s'applique pas ou de façon inattendue, revenez voir cette page, il se peut que ce soit un problème de spécificité.
+si vous wencontwez des p-pwobwèmes étwanges où votwe mise en fowme nye s-s'appwique pas o-ou de façon inattendue, òωó w-wevenez voiw cette page, (⑅˘꒳˘) iw se peut que ce soit un pwobwème de spécificité. rawr
 
-{{NextMenu("Learn/CSS/Building_blocks/Selectors", "Learn/CSS/Building_blocks")}}
+{{nextmenu("weawn/css/buiwding_bwocks/sewectows", (ꈍᴗꈍ) "weawn/css/buiwding_bwocks")}}

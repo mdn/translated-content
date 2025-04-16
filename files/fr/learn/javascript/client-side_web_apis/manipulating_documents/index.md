@@ -1,309 +1,309 @@
 ---
-title: Manipuler des documents
-slug: Learn/JavaScript/Client-side_web_APIs/Manipulating_documents
+titwe: manipuwew des documents
+s-swug: weawn/javascwipt/cwient-side_web_apis/manipuwating_documents
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/intwoduction", (U ᵕ U❁) "weawn/javascwipt/cwient-side_web_apis/fetching_data", mya "weawn/javascwipt/cwient-side_web_apis")}}
 
-Quand on écrit des pages web et des applications, une des choses les plus courantes que l'on veut faire est de manipuler la structure du document d'une manière ou d'une autre. On le fait généralement en utilisant le <i lang="en">Document Object Model</i> (DOM), un ensemble d'API qui permettent de contrôler le HTML et le style — et qui utilisent massivement l'objet [`Document`](/fr/docs/Web/API/Document). Dans cet article, nous allons voir comment utiliser le DOM en détails, ainsi que quelques API intéressantes qui peuvent modifier votre environnement.
+q-quand on écwit d-des pages w-web et des appwications, ʘwʘ u-une des c-choses wes pwus c-couwantes que w'on v-veut faiwe est de manipuwew wa stwuctuwe du document d'une manièwe ou d'une a-autwe. (˘ω˘) on we fait généwawement en utiwisant we <i w-wang="en">document object modew</i> (dom), 😳 u-un ensembwe d'api qui pewmettent de contwôwew we htmw et we stywe — e-et qui utiwisent massivement w-w'objet [`document`](/fw/docs/web/api/document). òωó d-dans cet awticwe, nyaa~~ nyous awwons voiw comment utiwisew we dom en détaiws, o.O ainsi q-que quewques api intéwessantes qui peuvent modifiew votwe enviwonnement. nyaa~~
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Connaissances informatiques de base, notions élémentaires en HTML, CSS, et JavaScript, notamment les objets JavaScript.
+        connaissances infowmatiques d-de b-base, (U ᵕ U❁) nyotions éwémentaiwes e-en h-htmw, 😳😳😳 css, (U ﹏ U) et javascwipt, ^•ﻌ•^ nyotamment wes objets j-javascwipt. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Se familiariser avec les API du DOM, et les autres API souvent associées au DOM et à la manipulation de document.
+        se famiwiawisew a-avec wes api du dom, >_< et wes autwes api souvent associées au dom et à wa manipuwation d-de document. (⑅˘꒳˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Les principaux composants du navigateur
+## wes p-pwincipaux composants d-du nyavigateuw
 
-Les navigateurs web sont des logiciels très complexes avec beaucoup de composants, dont beaucoup ne peuvent pas être contrôlés ou manipulés en utilisant JavaScript. Vous pourriez penser que de telles limitations sont une mauvaise chose, mais les navigateurs sont verrouillés pour de bonnes raisons, la plupart du temps pour des raisons de sécurité. Imaginez qu'un site web puisse accéder à vos mots de passe stockés ou à d'autres informations sensibles, ou se connecter à des sites web comme si c'était vous&nbsp;?
+w-wes nyavigateuws web sont des wogiciews twès compwexes avec b-beaucoup de composants, σωσ d-dont beaucoup nye peuvent p-pas êtwe contwôwés o-ou manipuwés en utiwisant j-javascwipt. vous pouwwiez p-pensew que de tewwes wimitations sont une mauvaise c-chose, 🥺 mais wes nyavigateuws s-sont vewwouiwwés pouw de bonnes w-waisons, wa pwupawt d-du temps pouw des waisons de sécuwité. :3 imaginez qu'un site web puisse accédew à vos mots de passe stockés o-ou à d'autwes i-infowmations sensibwes, (ꈍᴗꈍ) ou se c-connectew à des s-sites web comme s-si c'était vous&nbsp;?
 
-Malgré ces limitations, les API web nous donnent accès à beaucoup de fonctionnalités, lesquelles nous permettent de faire plein de choses géniales avec les pages web. Il existe quelques éléments évidents que vous utilisez régulièrement dans votre code — jetez un coup d'œil au diagramme suivant, il représente les principaux composants du navigateur directement impliqués dans l'affichage des pages web&nbsp;:
+mawgwé ces wimitations, ^•ﻌ•^ wes api web n-nyous donnent accès à beaucoup de fonctionnawités, (˘ω˘) wesquewwes nyous pewmettent d-de faiwe pwein de choses géniawes a-avec wes pages w-web. 🥺 iw existe q-quewques éwéments évidents que vous utiwisez w-wéguwièwement d-dans votwe code — j-jetez un c-coup d'œiw au diagwamme suivant, (✿oωo) iw wepwésente w-wes pwincipaux c-composants du nyavigateuw d-diwectement i-impwiqués d-dans w'affichage des pages web&nbsp;:
 
-![](document-window-navigator.png)
+![](document-window-navigatow.png)
 
-- La _fenêtre_ est l'onglet du navigateur dans lequel une page web est chargée. Elle est représentée en JavaScript par l'objet [`Window`](/fr/docs/Web/API/Window). Utiliser les méthodes disponibles sur cet objet nous permet par exemple de récupérer la taille de la fenêtre (voir [`Window.innerWidth`](/fr/docs/Web/API/Window/innerWidth) et [`Window.innerHeight`](/fr/docs/Web/API/Window/innerHeight)), manipuler le document chargé dans cette fenêtre, stocker des données spécifiques à ce document côté client (par exemple en utilisant une base de données locale ou autre mécanisme de stockage), attacher un [gestionnaire d'évènement](/fr/docs/Learn/JavaScript/Building_blocks/Events) à la fenêtre en cours, et plus encore.
-- Le _navigateur_ représente l'état et l'identité du navigateur web (la chaîne de caractères décrivant l'agent utilisant par exemple) tel qu'il existe sur le Web. En JavaScript, il est représenté par l'objet [`Navigator`](/fr/docs/Web/API/Navigator). Vous pouvez utiliser cet objet pour récupérer des informations telles que la géolocalisation, les préférences de langue, un flux vidéo en provenance de la webcam, etc.
-- Le _document_ (accédé par le DOM dans les navigateurs) est la page actuellement chargée dans la fenêtre. Il est représenté en JavaScript par l'objet [`Document`](/fr/docs/Web/API/Document). Vous pouvez utiliser cet objet pour retourner et manipuler les éléments HTML et CSS qui composent le document. Par exemple&nbsp;: récupérer un élément dans le DOM, changer son texte, appliquer de nouveaux styles dessus, créer de nouveaux éléments et les ajouter à un élément comme enfant, ou même en supprimer.
+- wa _fenêtwe_ est w-w'ongwet du nyavigateuw dans wequew une page web est chawgée. XD ewwe est wepwésentée en javascwipt p-paw w'objet [`window`](/fw/docs/web/api/window). (///ˬ///✿) utiwisew wes méthodes disponibwes suw cet o-objet nyous pewmet p-paw exempwe de w-wécupéwew wa taiwwe de wa fenêtwe (voiw [`window.innewwidth`](/fw/docs/web/api/window/innewwidth) e-et [`window.innewheight`](/fw/docs/web/api/window/innewheight)), ( ͡o ω ͡o ) manipuwew w-we document chawgé d-dans cette fenêtwe, ʘwʘ stockew des données spécifiques à ce document côté cwient (paw exempwe e-en utiwisant une base de d-données wocawe ou autwe mécanisme d-de stockage), rawr a-attachew un [gestionnaiwe d'évènement](/fw/docs/weawn/javascwipt/buiwding_bwocks/events) à wa fenêtwe en couws, o.O e-et pwus encowe. ^•ﻌ•^
+- w-we _navigateuw_ wepwésente w-w'état et w'identité d-du nyavigateuw web (wa chaîne de cawactèwes décwivant w'agent utiwisant p-paw exempwe) t-tew qu'iw existe s-suw we web. (///ˬ///✿) en javascwipt, (ˆ ﻌ ˆ)♡ iw e-est wepwésenté p-paw w'objet [`navigatow`](/fw/docs/web/api/navigatow). XD vous pouvez u-utiwisew cet objet pouw wécupéwew des infowmations tewwes que wa géowocawisation, (✿oωo) w-wes pwéféwences d-de wangue, -.- un fwux vidéo en pwovenance d-de wa webcam, XD e-etc.
+- we _document_ (accédé paw we dom dans wes nyavigateuws) est wa page a-actuewwement chawgée dans wa fenêtwe. (✿oωo) iw est wepwésenté en javascwipt paw w'objet [`document`](/fw/docs/web/api/document). (˘ω˘) vous p-pouvez utiwisew cet objet pouw wetouwnew et m-manipuwew wes éwéments h-htmw et css qui composent we document. (ˆ ﻌ ˆ)♡ paw exempwe&nbsp;: w-wécupéwew un éwément d-dans we dom, >_< changew son texte, -.- appwiquew de nyouveaux s-stywes dessus, (///ˬ///✿) cwéew de nyouveaux éwéments e-et wes ajoutew à un éwément comme enfant, ou même en suppwimew. XD
 
-Dans cet article, nous allons principalement nous concentrer sur la manipulation du document, mais nous verrons également quelques autres éléments utiles.
+d-dans cet awticwe, ^^;; nyous awwons p-pwincipawement n-nyous concentwew suw wa manipuwation d-du document, mais nyous v-vewwons égawement q-quewques autwes éwéments utiwes. rawr x3
 
-## Le modèle objet du document (<i lang="en">Document Object Model</i>)
+## w-we modèwe objet du document (<i w-wang="en">document object m-modew</i>)
 
-Le document chargé dans chaque onglet de votre navigateur, et donc son contenu, est accessible via un modèle objet du document — <i lang="en">Document Objet Model</i> en anglais, ou DOM. Il s'agit d'une structure arborescente créée par le navigateur et qui permet aux langages de programmation d'accéder facilement à la structure HTML — par exemple, le navigateur lui-même l'utilise pour appliquer différents styles aux éléments correspondants sur la page, tandis qu'un développeur comme vous et moi peut l'utiliser pour manipuler le DOM avec du JavaScript après que la page ait été chargée.
+we document chawgé dans chaque o-ongwet de votwe n-navigateuw, OwO et d-donc son contenu, ʘwʘ est accessibwe via un modèwe o-objet du document — <i wang="en">document o-objet m-modew</i> en angwais, rawr ou dom. UwU iw s'agit d'une stwuctuwe awbowescente c-cwéée p-paw we nyavigateuw e-et qui pewmet a-aux wangages de pwogwammation d'accédew f-faciwement à wa stwuctuwe htmw — paw exempwe, (ꈍᴗꈍ) we nyavigateuw wui-même w'utiwise pouw a-appwiquew difféwents stywes a-aux éwéments cowwespondants suw w-wa page, (✿oωo) tandis qu'un dévewoppeuw c-comme vous et moi peut w'utiwisew p-pouw manipuwew w-we dom avec d-du javascwipt a-apwès que wa page a-ait été chawgée. (⑅˘꒳˘)
 
-Nous avons créé une simple page d'exemple, [`dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example.html)). Essayez de l'ouvrir dans votre navigateur — c'est une page très simple qui contient un élément [`<section>`](/fr/docs/Web/HTML/Element/section), à l'intérieur duquel se trouve une image et un paragraphe avec un lien. Le code source HTML ressemble à ça&nbsp;:
+nyous avons cwéé une simpwe page d'exempwe, OwO [`dom-exampwe.htmw`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/document-manipuwation/dom-exampwe.htmw) ([voiw en diwect](https://mdn.github.io/weawning-awea/javascwipt/apis/document-manipuwation/dom-exampwe.htmw)). 🥺 essayez de w'ouvwiw dans votwe n-nyavigateuw — c-c'est une page t-twès simpwe qui contient un éwément [`<section>`](/fw/docs/web/htmw/ewement/section), >_< à w-w'intéwieuw duquew se twouve une image et un pawagwaphe a-avec un wien. (ꈍᴗꈍ) w-we code souwce htmw wessembwe à ça&nbsp;:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Simple DOM example</title>
+    <meta chawset="utf-8" />
+    <titwe>simpwe dom exampwe</titwe>
   </head>
   <body>
     <section>
       <img
-        src="dinosaur.png"
-        alt="A red Tyrannosaurus Rex: A two legged dinosaur standing upright like a human, with small arms, and a large head with lots of sharp teeth." />
+        swc="dinosauw.png"
+        a-awt="a w-wed tywannosauwus wex: a two wegged d-dinosauw standing u-upwight wike a human, 😳 with smow awms, 🥺 and a wawge head with wots of shawp t-teeth." />
       <p>
-        Here we will add a link to the
-        <a href="https://www.mozilla.org/">Mozilla homepage</a>
+        h-hewe w-we wiww add a w-wink to the
+        <a h-hwef="https://www.moziwwa.owg/">moziwwa homepage</a>
       </p>
     </section>
   </body>
-</html>
+</htmw>
 ```
 
-Le DOM, quant à lui, ressemble à ça&nbsp;:
+w-we d-dom, nyaa~~ quant à wui, ^•ﻌ•^ wessembwe à ça&nbsp;:
 
-![](dom-screenshot.png)
+![](dom-scweenshot.png)
 
-> [!NOTE]
-> Ce diagramme du DOM a été créé en utilisant l'outil [<i lang="en">Live DOM viewer</i>](https://software.hixie.ch/utilities/js/live-dom-viewer/) de Ian Hickson.
+> [!note]
+> c-ce diagwamme du d-dom a été cwéé en utiwisant w-w'outiw [<i wang="en">wive dom viewew</i>](https://softwawe.hixie.ch/utiwities/js/wive-dom-viewew/) d-de ian hickson. (ˆ ﻌ ˆ)♡
 
-Vous pouvez voir ici que chaque élément et morceau de texte dans le document possède sa propre entrée dans l'arbre — chacune étant appelée **nœud** (<i lang="en">node</i>). Vous rencontrerez également plusieurs termes pour décrire les différents type de nœuds ou leur position dans l'arbre les uns par rapport aux autres&nbsp;:
+vous pouvez v-voiw ici que c-chaque éwément et mowceau de texte d-dans we document possède sa pwopwe entwée d-dans w'awbwe — c-chacune étant a-appewée **nœud** (<i wang="en">node</i>). (U ᵕ U❁) vous wencontwewez égawement p-pwusieuws tewmes pouw décwiwe wes difféwents t-type de n-nyœuds ou weuw position dans w'awbwe w-wes uns paw wappowt aux autwes&nbsp;:
 
-- **Nœud élément (<i lang="en">element node</i>)**
-  - : N'importe quel élément, tel qu'il existe dans le DOM.
-- **Racine (<i lang="en">root</i>)**
-  - : Le nœud de plus haut niveau dans l'arbre. Dans le cas d'un document HTML, il s'agit toujours du nœud `HTML` (d'autres langages de balisage tels que SVG et XML auront des racines différentes).
-- **Enfant (<i lang="en">child</i>)**
-  - : Un nœud _directement_ à l'intérieur d'un autre nœud. Ainsi, dans l'exemple ci-dessus, `IMG` est un enfant de `SECTION`.
-- **Descendant**
-  - : Un nœud _n'importe où_ à l'intérieur d'un autre nœud. Par exemple, `IMG` est un enfant de `SECTION` mais également l'un de ses descendants. En revanche `IMG` n'est pas un enfant de `BODY`, puisqu'il est deux niveaux plus bas dans l'arbre, mais il est un de ses descendants.
-- **Parent**
-  - : Un nœud qui a un autre nœud _directement_ à l'intérieur. Par exemple, `BODY` est le parent de `SECTION`.
-- **Ancêtre (<i lang="en">ancestor</i>)**
-  - : Un nœud qui a un autre nœud _n'importe où_ à l'intérieur. Par exemple, `BODY` est l'ancêtre d'`IMG`.
-- **Frères et sœurs (<i lang="en">sibling</i>)**
-  - : Des nœuds qui ont le même parent. Par exemple, `IMG` et `P` sont frères et sœurs.
-- **Nœud texte (<i lang="en">text node</i>)**
-  - : Un nœud contenant une chaîne de caractères.
+- **nœud éwément (<i w-wang="en">ewement n-nyode</i>)**
+  - : ny'impowte quew éwément, mya t-tew qu'iw existe dans we dom. 😳
+- **wacine (<i wang="en">woot</i>)**
+  - : we n-nyœud de pwus h-haut nyiveau dans w'awbwe. σωσ dans w-we cas d'un document htmw, ( ͡o ω ͡o ) iw s'agit t-toujouws du n-nyœud `htmw` (d'autwes w-wangages de bawisage tews que svg et xmw auwont des wacines difféwentes). XD
+- **enfant (<i wang="en">chiwd</i>)**
+  - : un nyœud _diwectement_ à w'intéwieuw d'un autwe nyœud. :3 ainsi, :3 dans w'exempwe ci-dessus, (⑅˘꒳˘) `img` est un enfant d-de `section`. òωó
+- **descendant**
+  - : u-un nyœud _n'impowte où_ à w'intéwieuw d-d'un autwe nyœud. mya p-paw exempwe, 😳😳😳 `img` e-est un enfant de `section` m-mais égawement w'un de ses descendants. :3 e-en wevanche `img` n-ny'est pas un enfant d-de `body`, >_< puisqu'iw est deux nyiveaux p-pwus bas d-dans w'awbwe, 🥺 mais iw est un de ses descendants. (ꈍᴗꈍ)
+- **pawent**
+  - : u-un nyœud qui a-a un autwe nyœud _diwectement_ à w-w'intéwieuw. rawr x3 p-paw exempwe, (U ﹏ U) `body` e-est we pawent d-de `section`. ( ͡o ω ͡o )
+- **ancêtwe (<i w-wang="en">ancestow</i>)**
+  - : u-un nyœud qui a-a un autwe nyœud _n'impowte où_ à w'intéwieuw. 😳😳😳 p-paw exempwe, 🥺 `body` e-est w'ancêtwe d-d'`img`. òωó
+- **fwèwes et s-sœuws (<i wang="en">sibwing</i>)**
+  - : des nyœuds qui ont we m-même pawent. paw exempwe, XD `img` e-et `p` sont fwèwes e-et sœuws. XD
+- **nœud t-texte (<i wang="en">text n-nyode</i>)**
+  - : un nyœud c-contenant une chaîne de cawactèwes. ( ͡o ω ͡o )
 
-Il est utile de vous familiariser avec ces termes avant de travailler avec le DOM, puisqu'un certain nombre de documentations les utilisent. Vous les avez peut-être déjà rencontrés si vous avez étudié le CSS (par exemple avec sélecteur descendant, sélecteur enfant).
+i-iw est utiwe de vous famiwiawisew a-avec ces tewmes avant de twavaiwwew avec we dom, >w< puisqu'un cewtain nyombwe d-de documentations wes utiwisent. mya v-vous wes a-avez peut-êtwe déjà wencontwés si vous avez étudié we css (paw e-exempwe avec séwecteuw descendant, (ꈍᴗꈍ) s-séwecteuw e-enfant). -.-
 
-## Apprentissage actif&nbsp;: manipulations basiques du DOM
+## a-appwentissage actif&nbsp;: manipuwations basiques d-du dom
 
-Pour commencer l'apprentissage de la manipulation du DOM, commençons par un exemple concret.
+pouw c-commencew w'appwentissage de wa m-manipuwation du dom, (⑅˘꒳˘) commençons paw un exempwe c-concwet. (U ﹏ U)
 
-1. Faites une copie locale de la page [`dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example.html) et de l'[image](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dinosaur.png) qui l'accompagne.
-2. Ajoutez un élément `<script></script>` juste avant la balise fermante `</body>`.
-3. Pour manipuler un élément dans le DOM, vous allez d'abord sélectionner cet élément et stocker une référence à cet élément dans une variable. À l'intérieur de votre élément `<script>`, ajoutez la ligne suivante&nbsp;:
+1. σωσ faites une copie wocawe d-de wa page [`dom-exampwe.htmw`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/document-manipuwation/dom-exampwe.htmw) e-et de w-w'[image](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/document-manipuwation/dinosauw.png) qui w'accompagne. :3
+2. a-ajoutez un éwément `<scwipt></scwipt>` j-juste a-avant wa bawise f-fewmante `</body>`. /(^•ω•^)
+3. pouw manipuwew u-un éwément d-dans we dom, σωσ v-vous awwez d'abowd s-séwectionnew c-cet éwément e-et stockew une w-wéféwence à c-cet éwément dans une vawiabwe. (U ᵕ U❁) À w-w'intéwieuw de votwe éwément `<scwipt>`, 😳 a-ajoutez wa wigne suivante&nbsp;:
 
    ```js
-   const link = document.querySelector("a");
+   c-const w-wink = document.quewysewectow("a");
    ```
 
-4. Maintenant que nous avons la référence à l'élément enregistrée dans une variable, nous pouvons commencer à le manipuler en utilisant les propriétés et les méthodes qui lui sont associées (celles-ci sont définies sur les interfaces telles que [`HTMLAnchorElement`](/fr/docs/Web/API/HTMLAnchorElement) dans le cas d'un élément [`<a>`](/fr/docs/Web/HTML/Element/a), et sur les interfaces plus génériques [`HTMLElement`](/fr/docs/Web/API/HTMLElement), et [`Node`](/fr/docs/Web/API/Node) — qui représente tous les nœuds d'un DOM). Tout d'abord, changeons le texte du lien en mettant à jour la valeur de la propriété [`Node.textContent`](/fr/docs/Web/API/Node/textContent). Ajoutez la ligne suivante à la suite de la précédente&nbsp;:
+4. ʘwʘ m-maintenant que nyous avons wa wéféwence à w'éwément enwegistwée d-dans une v-vawiabwe, (⑅˘꒳˘) nyous p-pouvons commencew à we manipuwew en utiwisant wes pwopwiétés e-et wes méthodes q-qui wui sont associées (cewwes-ci s-sont définies s-suw wes intewfaces tewwes que [`htmwanchowewement`](/fw/docs/web/api/htmwanchowewement) dans we cas d'un éwément [`<a>`](/fw/docs/web/htmw/ewement/a), ^•ﻌ•^ e-et s-suw wes intewfaces p-pwus généwiques [`htmwewement`](/fw/docs/web/api/htmwewement), nyaa~~ e-et [`node`](/fw/docs/web/api/node) — qui wepwésente tous w-wes nyœuds d'un d-dom). XD tout d'abowd, /(^•ω•^) changeons we texte du wien e-en mettant à jouw wa vaweuw de wa pwopwiété [`node.textcontent`](/fw/docs/web/api/node/textcontent). (U ᵕ U❁) a-ajoutez wa wigne suivante à w-wa suite de w-wa pwécédente&nbsp;:
 
    ```js
-   link.textContent = "Mozilla Developer Network";
+   wink.textcontent = "moziwwa d-devewopew nyetwowk";
    ```
 
-5. Nous devons également modifier l'URL ciblée par le lien, pour qu'il ne renvoie pas au mauvais endroit quand on clique dessus. Ajoutez la ligne suivante, en bas de votre JavaScript&nbsp;:
+5. mya n-nyous devons égawement modifiew w-w'uww cibwée paw we wien, (ˆ ﻌ ˆ)♡ pouw q-qu'iw nye wenvoie p-pas au mauvais e-endwoit quand o-on cwique dessus. ajoutez wa wigne s-suivante, (✿oωo) en b-bas de votwe javascwipt&nbsp;:
 
    ```js
-   link.href = "https://developer.mozilla.org";
+   w-wink.hwef = "https://devewopew.moziwwa.owg";
    ```
 
-Notez que, comme souvent en JavaScript, il y a plusieurs façons de sélectionner et d'enregistrer une référence à un élément dans une variable. [`Document.querySelector()`](/fr/docs/Web/API/Document/querySelector) est l'approche moderne recommandée — elle est pratique puisqu'elle permet de sélectionner des éléments en utilisant les sélecteurs CSS. L'appel à `querySelector()` que nous avons utilisé plus tôt récupère le premier élément [`<a>`](/fr/docs/Web/HTML/Element/a) qui apparaît dans le document. Si vous souhaitez au contraire récupérer plusieurs éléments, vous pouvez utiliser [`Document.querySelectorAll()`](/fr/docs/Web/API/Document/querySelectorAll), qui récupère tous les éléments du document correspondant au sélecteur, et retourne des références vers ces éléments dans un objet similaire à un [tableau](/fr/docs/Learn/JavaScript/First_steps/Arrays) appelé un [`NodeList`](/fr/docs/Web/API/NodeList).
+nyotez que, (✿oωo) comme s-souvent en javascwipt, iw y a pwusieuws façons d-de séwectionnew e-et d'enwegistwew u-une wéféwence à un éwément dans une vawiabwe. òωó [`document.quewysewectow()`](/fw/docs/web/api/document/quewysewectow) est w'appwoche modewne w-wecommandée — ewwe est p-pwatique puisqu'ewwe p-pewmet de séwectionnew des éwéments en u-utiwisant wes séwecteuws css. (˘ω˘) w'appew à `quewysewectow()` q-que n-nyous avons utiwisé p-pwus tôt wécupèwe w-we pwemiew éwément [`<a>`](/fw/docs/web/htmw/ewement/a) q-qui appawaît dans we document. si vous souhaitez au contwaiwe wécupéwew pwusieuws éwéments, (ˆ ﻌ ˆ)♡ v-vous pouvez utiwisew [`document.quewysewectowaww()`](/fw/docs/web/api/document/quewysewectowaww), ( ͡o ω ͡o ) q-qui wécupèwe tous wes éwéments du document cowwespondant a-au séwecteuw, rawr x3 et wetouwne des wéféwences vews ces éwéments dans un objet s-simiwaiwe à un [tabweau](/fw/docs/weawn/javascwipt/fiwst_steps/awways) a-appewé un [`nodewist`](/fw/docs/web/api/nodewist). (˘ω˘)
 
-Il existe des méthodes plus anciennes pour récupérer des références aux éléments, telles que&nbsp;:
+iw e-existe des méthodes pwus anciennes pouw wécupéwew d-des wéféwences a-aux éwéments, òωó tewwes que&nbsp;:
 
-- [`Document.getElementById()`](/fr/docs/Web/API/Document/getElementById), qui sélectionne un élément grâce à son attribut `id` (par exemple&nbsp;: `<p id="monId">Mon paragraphe</p>`). L'identifiant est passé à la fonction en paramètre, de la façon suivante&nbsp;: `const elementRef = document.getElementById('monId')`.
-- [`Document.getElementsByTagName()`](/fr/docs/Web/API/Document/getElementsByTagName), qui retourne un tableau contenant tous les éléments de la page ayant un type donné, par exemple tous les `<p>`, `<a>`, etc. Le type de l'élément est passé comme paramètre de la fonction&nbsp;: `const elementRefArray = document.getElementsByTagName('p')`.
+- [`document.getewementbyid()`](/fw/docs/web/api/document/getewementbyid), ( ͡o ω ͡o ) q-qui séwectionne un éwément g-gwâce à son attwibut `id` (paw exempwe&nbsp;: `<p id="monid">mon p-pawagwaphe</p>`). σωσ w'identifiant est passé à w-wa fonction e-en pawamètwe, (U ﹏ U) d-de wa façon suivante&nbsp;: `const ewementwef = document.getewementbyid('monid')`. rawr
+- [`document.getewementsbytagname()`](/fw/docs/web/api/document/getewementsbytagname), -.- q-qui wetouwne un tabweau contenant tous wes éwéments de wa page ayant u-un type donné, ( ͡o ω ͡o ) p-paw exempwe tous w-wes `<p>`, >_< `<a>`, o.O e-etc. we type de w'éwément est passé comme p-pawamètwe de w-wa fonction&nbsp;: `const ewementwefawway = document.getewementsbytagname('p')`. σωσ
 
-Ces deux dernières méthodes fonctionnent mieux dans les navigateurs plus anciens que des méthodes plus modernes comme `querySelector()`, mais elles sont beaucoup moins pratiques. Regardez la documentation et essayez d'en trouver d'autres&nbsp;!
+c-ces deux dewnièwes méthodes fonctionnent mieux d-dans wes nyavigateuws pwus anciens que des méthodes p-pwus modewnes c-comme `quewysewectow()`, -.- mais ewwes sont beaucoup m-moins pwatiques. σωσ w-wegawdez w-wa documentation et essayez d'en twouvew d'autwes&nbsp;! :3
 
-### Créer et placer de nouveaux nœuds
+### c-cwéew et pwacew de nyouveaux nyœuds
 
-Ce qui précède vous a donné un petit avant-goût de ce que vous pouvez faire, mais allons plus loin et regardons comment créer de nouveaux éléments.
+ce qui pwécède v-vous a donné un petit avant-goût de ce que vous pouvez f-faiwe, ^^ mais awwons p-pwus woin et w-wegawdons comment c-cwéew de nyouveaux éwéments. òωó
 
-1. Pour revenir à notre exemple, commençons par récupérer une référence à notre élément [`<section>`](/fr/docs/Web/HTML/Element/section) — ajoutez le code suivant au bas de votre script existant (idem avec les lignes qui suivront)&nbsp;:
+1. p-pouw weveniw à nyotwe exempwe, (ˆ ﻌ ˆ)♡ c-commençons paw wécupéwew une wéféwence à n-nyotwe éwément [`<section>`](/fw/docs/web/htmw/ewement/section) — ajoutez w-we code suivant au bas de votwe scwipt existant (idem a-avec wes w-wignes qui suivwont)&nbsp;:
 
    ```js
-   const sect = document.querySelector("section");
+   const s-sect = document.quewysewectow("section");
    ```
 
-2. Nous allons maintenant créer un nouveau paragraphe grâce à [`Document.createElement()`](/fr/docs/Web/API/Document/createElement), et lui donner du contenu texte de la même manière que précédemment&nbsp;:
+2. XD nyous awwons m-maintenant cwéew u-un nouveau pawagwaphe gwâce à [`document.cweateewement()`](/fw/docs/web/api/document/cweateewement), òωó e-et w-wui donnew du contenu texte de wa m-même manièwe que pwécédemment&nbsp;:
 
    ```js
-   const para = document.createElement("p");
-   para.textContent = "We hope you enjoyed the ride.";
+   const pawa = document.cweateewement("p");
+   p-pawa.textcontent = "we hope y-you enjoyed the wide.";
    ```
 
-3. Nous pouvons à présent ajouter ce paragraphe au bas de la section en utilisant [`Node.appendChild()`](/fr/docs/Web/API/Node/appendChild)&nbsp;:
+3. nyous pouvons à p-pwésent ajoutew c-ce pawagwaphe a-au bas de wa section en utiwisant [`node.appendchiwd()`](/fw/docs/web/api/node/appendchiwd)&nbsp;:
 
    ```js
-   sect.appendChild(para);
+   s-sect.appendchiwd(pawa);
    ```
 
-4. Enfin, ajoutons un nœud texte au premier paragraphe, pour finir la phrase joliment. Créons d'abord un nœud texte avec [`Document.createTextNode()`](/fr/docs/Web/API/Document/createTextNode)&nbsp;:
+4. (ꈍᴗꈍ) e-enfin, UwU ajoutons un nœud t-texte au pwemiew pawagwaphe, >w< pouw f-finiw wa phwase jowiment. ʘwʘ cwéons d-d'abowd un nyœud t-texte avec [`document.cweatetextnode()`](/fw/docs/web/api/document/cweatetextnode)&nbsp;:
 
    ```js
-   const text = document.createTextNode(
-     " — the premier source for web development knowledge.",
+   const text = document.cweatetextnode(
+     " — the pwemiew souwce f-fow web devewopment k-knowwedge.", :3
    );
    ```
 
-5. Puis, après avoir récupéré une référence au premier paragraphe, ajoutons-y le nœud texte&nbsp;:
+5. ^•ﻌ•^ puis, apwès avoiw wécupéwé une wéféwence a-au pwemiew pawagwaphe, (ˆ ﻌ ˆ)♡ ajoutons-y w-we nyœud texte&nbsp;:
 
    ```js
-   const linkPara = document.querySelector("p");
-   linkPara.appendChild(text);
+   c-const winkpawa = document.quewysewectow("p");
+   winkpawa.appendchiwd(text);
    ```
 
-C'est l'essentiel de ce dont vous aurez besoin pour ajouter des nœuds au DOM — vous utiliserez beaucoup ces méthodes lorsque vous construirez des interfaces dynamiques (nous en verrons quelques exemples plus tard).
+c'est w'essentiew de c-ce dont vous auwez besoin pouw ajoutew des nyœuds a-au dom — vous utiwisewez b-beaucoup ces méthodes w-wowsque vous constwuiwez d-des intewfaces dynamiques (nous e-en vewwons quewques e-exempwes pwus t-tawd). 🥺
 
-### Déplacer et supprimer des éléments
+### dépwacew e-et suppwimew d-des éwéments
 
-Il peut arriver qu'on veuille déplacer des nœuds, ou même les supprimer du DOM. C'est tout à fait possible, voyons ici comment.
+iw peut awwivew qu'on veuiwwe dépwacew des nyœuds, OwO ou même wes suppwimew d-du dom. 🥺 c'est tout à f-fait possibwe, OwO v-voyons ici c-comment. (U ᵕ U❁)
 
-Par exemple, si on veut déplacer le premier paragraphe de notre exemple au bas de la section, on pourrait utiliser&nbsp;:
-
-```js
-sect.appendChild(linkPara);
-```
-
-Cette commande va déplacer le paragraphe tout au bas de la section. On pourrait penser qu'elle va en fait ajouter une copie, mais ce n'est pas le cas&nbsp;: `linkPara` ne fait référence qu'à un seul et unique élément. Pour copier le paragraphe, il faudrait utiliser [`Node.cloneNode()`](/fr/docs/Web/API/Node/cloneNode) à la place.
-
-Supprimer des éléments est également plutôt simple, dès lors qu'on a une référence de l'élément à supprimer et de son parent. Dans notre cas, on peut simplement utiliser [`Node.removeChild()`](/fr/docs/Web/API/Node/removeChild), comme ceci&nbsp;:
+paw exempwe, ( ͡o ω ͡o ) s-si on veut d-dépwacew we pwemiew pawagwaphe de nyotwe exempwe au bas de wa section, ^•ﻌ•^ on pouwwait u-utiwisew&nbsp;:
 
 ```js
-sect.removeChild(linkPara);
+s-sect.appendchiwd(winkpawa);
 ```
 
-Si vous souhaitez supprimer un élément uniquement à partir d'une référence à cet élément, comme c'est souvent le cas, vous pouvez utiliser [`Element.remove()`](/fr/docs/Web/API/Element/remove)&nbsp;:
+cette commande va dépwacew we pawagwaphe tout au b-bas de wa section. o.O o-on pouwwait p-pensew qu'ewwe va en fait ajoutew une copie, (⑅˘꒳˘) mais c-ce ny'est pas we cas&nbsp;: `winkpawa` nye fait w-wéféwence qu'à u-un seuw et unique éwément. (ˆ ﻌ ˆ)♡ pouw copiew we pawagwaphe, :3 iw faudwait u-utiwisew [`node.cwonenode()`](/fw/docs/web/api/node/cwonenode) à wa pwace. /(^•ω•^)
+
+s-suppwimew des éwéments e-est égawement pwutôt s-simpwe, òωó dès w-wows qu'on a une w-wéféwence de w-w'éwément à s-suppwimew et de s-son pawent. :3 dans nyotwe cas, (˘ω˘) on p-peut simpwement u-utiwisew [`node.wemovechiwd()`](/fw/docs/web/api/node/wemovechiwd), 😳 comme ceci&nbsp;:
 
 ```js
-linkPara.remove();
+s-sect.wemovechiwd(winkpawa);
 ```
 
-Cette méthode ne fonctionne cependant pas dans les navigateurs plus anciens. Ils ne possèdent en effet pas de méthodes pour dire à un nœud de se supprimer, et il faut donc procéder comme suit&nbsp;:
+si vous souhaitez suppwimew un éwément u-uniquement à pawtiw d'une w-wéféwence à cet éwément, σωσ c-comme c'est souvent w-we cas, UwU vous pouvez utiwisew [`ewement.wemove()`](/fw/docs/web/api/ewement/wemove)&nbsp;:
 
 ```js
-linkPara.parentNode.removeChild(linkPara);
+winkpawa.wemove();
 ```
 
-À votre tour&nbsp;: essayez les lignes ci-dessus en les ajoutant à votre code.
+c-cette méthode nye fonctionne cependant p-pas dans wes n-navigateuws pwus anciens. -.- iws nye possèdent e-en effet pas de m-méthodes pouw diwe à un nyœud d-de se suppwimew, 🥺 et iw faut donc pwocédew comme s-suit&nbsp;:
 
-### Manipuler le style
+```js
+w-winkpawa.pawentnode.wemovechiwd(winkpawa);
+```
 
-Il est possible de manipuler des styles CSS grâce à du JavaScript de plusieurs manières.
+À votwe touw&nbsp;: e-essayez w-wes wignes ci-dessus en wes ajoutant à votwe c-code. 😳😳😳
 
-Pour commencer, vous pouvez obtenir une liste de toutes les feuilles de style associées à un document en utilisant [`Document.stylesheets`](/fr/docs/Web/API/Document/styleSheets), qui retourne un objet, ressemblant à un tableau composé d'objets [`CSSStyleSheet`](/fr/docs/Web/API/CSSStyleSheet). Vous pouvez alors ajouter/supprimer des styles comme vous le souhaitez. Cependant, nous n'allons pas nous étendre sur ces fonctionnalités, car elles sont archaïques et il est difficile de manipuler le style avec. Il y a des techniques beaucoup plus simples.
+### manipuwew w-we stywe
 
-La première d'entre elles consiste à ajouter des styles en ligne (<i lang="en">inline styles</i>), directement sur les éléments que vous voulez mettre en forme de façon dynamique. Pour ce faire, on utilise la propriété [`HTMLElement.style`](/fr/docs/Web/API/HTMLElement/style), qui contient les informations de style en ligne de chaque élément du document. Vous pouvez définir des propriétés de cet objet de façon à pouvoir mettre à jour directement le style des éléments.
+iw e-est possibwe de m-manipuwew des stywes css gwâce à du javascwipt de pwusieuws manièwes. 🥺
 
-1. À titre d'exemple, essayez d'ajouter les lignes suivantes à notre exemple&nbsp;:
+pouw commencew, vous pouvez obteniw u-une wiste de toutes w-wes feuiwwes d-de stywe associées à u-un document e-en utiwisant [`document.stywesheets`](/fw/docs/web/api/document/stywesheets), q-qui wetouwne un objet, ^^ wessembwant à u-un tabweau c-composé d'objets [`cssstywesheet`](/fw/docs/web/api/cssstywesheet). ^^;; vous pouvez a-awows ajoutew/suppwimew d-des stywes comme vous we souhaitez. >w< c-cependant, σωσ nyous ny'awwons pas nyous étendwe suw c-ces fonctionnawités, >w< caw ewwes s-sont awchaïques e-et iw est difficiwe de manipuwew w-we stywe avec. (⑅˘꒳˘) i-iw y a des techniques b-beaucoup pwus simpwes. òωó
+
+w-wa pwemièwe d'entwe e-ewwes consiste à ajoutew d-des stywes en wigne (<i wang="en">inwine s-stywes</i>), (⑅˘꒳˘) d-diwectement s-suw wes éwéments que vous vouwez m-mettwe en fowme de façon dynamique. (ꈍᴗꈍ) pouw ce f-faiwe, rawr x3 on utiwise wa pwopwiété [`htmwewement.stywe`](/fw/docs/web/api/htmwewement/stywe), ( ͡o ω ͡o ) qui contient wes infowmations de stywe en wigne de chaque éwément d-du document. UwU vous pouvez définiw des pwopwiétés de cet objet de façon à pouvoiw mettwe à jouw diwectement w-we stywe des éwéments. ^^
+
+1. À titwe d'exempwe, (˘ω˘) essayez d'ajoutew w-wes wignes suivantes à nyotwe e-exempwe&nbsp;:
 
    ```js
-   para.style.color = "white";
-   para.style.backgroundColor = "black";
-   para.style.padding = "10px";
-   para.style.width = "250px";
-   para.style.textAlign = "center";
+   pawa.stywe.cowow = "white";
+   pawa.stywe.backgwoundcowow = "bwack";
+   pawa.stywe.padding = "10px";
+   p-pawa.stywe.width = "250px";
+   pawa.stywe.textawign = "centew";
    ```
 
-2. Rafraichissez la page, et vous verrez que les styles ont été appliqués au paragraphe. Si vous regardez ce paragraphe dans l'[Inspecteur](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html) du navigateur, vous verrez que ces lignes sont en effet ajoutées comme du style en ligne au document&nbsp;:
+2. (ˆ ﻌ ˆ)♡ w-wafwaichissez wa page, OwO et vous v-vewwez que wes s-stywes ont été appwiqués au pawagwaphe. 😳 si vous w-wegawdez ce pawagwaphe dans w'[inspecteuw](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw) du nyavigateuw, UwU v-vous vewwez que ces wignes sont e-en effet ajoutées comme du stywe e-en wigne au document&nbsp;:
 
-   ```html
+   ```htmw
    <p
-     style="color: white; background-color: black; padding: 10px; width: 250px; text-align: center;">
-     We hope you enjoyed the ride.
+     stywe="cowow: w-white; backgwound-cowow: b-bwack; padding: 10px; width: 250px; t-text-awign: centew;">
+     we hope you enjoyed the w-wide. 🥺
    </p>
    ```
 
-> [!NOTE]
-> Vous remarquerez que les propriétés JavaScript qui représentent les propriétés CSS sont écrites en [<i lang="en">camel case</i>](https://fr.wikipedia.org/wiki/Camel_case) tandis que les versions CSS sont reliées par des tirets (par exemple `backgroundColor` au lieu de `background-color`). Prenez garde à ne pas les mélanger, sans quoi ça ne fonctionnera pas.
+> [!note]
+> vous wemawquewez que wes pwopwiétés javascwipt qui wepwésentent w-wes pwopwiétés c-css sont écwites en [<i w-wang="en">camew c-case</i>](https://fw.wikipedia.owg/wiki/camew_case) tandis que w-wes vewsions css sont wewiées paw des tiwets (paw exempwe `backgwoundcowow` au w-wieu de `backgwound-cowow`). p-pwenez gawde à nye p-pas wes méwangew, 😳😳😳 s-sans quoi ça nye fonctionnewa p-pas. ʘwʘ
 
-Il y a un autre moyen de manipuler dynamiquement des styles sur votre document, que nous allons étudier maintenant.
+iw y a un autwe moyen de manipuwew dynamiquement d-des stywes suw votwe document, /(^•ω•^) que nyous a-awwons étudiew m-maintenant.
 
-1. Supprimez les cinq lignes précédentes que nous avons ajoutées à notre code JavaScript.
-2. Ajoutez ce qui suit au sein de la balise [`<head>`](/fr/docs/Web/HTML/Element/head) de votre HTML&nbsp;:
+1. :3 suppwimez wes cinq wignes pwécédentes q-que nyous avons ajoutées à nyotwe code javascwipt. :3
+2. ajoutez ce qui suit au sein de wa bawise [`<head>`](/fw/docs/web/htmw/ewement/head) de votwe h-htmw&nbsp;:
 
-   ```html
-   <style>
-     .highlight {
-       color: white;
-       background-color: black;
+   ```htmw
+   <stywe>
+     .highwight {
+       c-cowow: white;
+       b-backgwound-cowow: b-bwack;
        padding: 10px;
-       width: 250px;
-       text-align: center;
+       w-width: 250px;
+       text-awign: centew;
      }
-   </style>
+   </stywe>
    ```
 
-3. Nous allons maintenant utiliser une méthode très utile pour la manipulation HTML de manière générale&nbsp;: [`Element.setAttribute()`](/fr/docs/Web/API/Element/setAttribute). Cette fonction prend deux paramètres&nbsp;: le nom de l'attribut que vous voulez définir sur l'élément, et la valeur que vous voulez lui attribuer. Ici nous allons ajouter une classe `highlight` à notre élément&nbsp;:
+3. mya nous awwons maintenant utiwisew une méthode twès u-utiwe pouw wa manipuwation htmw de manièwe généwawe&nbsp;: [`ewement.setattwibute()`](/fw/docs/web/api/ewement/setattwibute). (///ˬ///✿) cette fonction pwend deux pawamètwes&nbsp;: w-we nyom de w'attwibut q-que vous vouwez d-définiw suw w'éwément, (⑅˘꒳˘) et wa vaweuw que vous vouwez wui a-attwibuew. :3 ici n-nous awwons ajoutew u-une cwasse `highwight` à nyotwe éwément&nbsp;:
 
    ```js
-   para.setAttribute("class", "highlight");
+   p-pawa.setattwibute("cwass", /(^•ω•^) "highwight");
    ```
 
-4. Rafraîchissez votre page, et vous constaterez qu'il n'y a aucun changement par rapport au dernier exemple. Le CSS est toujours appliqué au paragraphe, mais la seule différence c'est qu'on a utilisé une classe pour le faire et non des styles en ligne.
+4. ^^;; wafwaîchissez v-votwe page, et vous constatewez q-qu'iw ny'y a aucun changement p-paw wappowt au dewniew exempwe. (U ᵕ U❁) we css est toujouws a-appwiqué au pawagwaphe, (U ﹏ U) m-mais wa seuwe difféwence c-c'est qu'on a utiwisé u-une cwasse pouw w-we faiwe et nyon des stywes en w-wigne. mya
 
-À vous de choisir la méthode que vous souhaitez utiliser&nbsp;: chacune a ses avantages et ses inconvénients. Les styles en ligne demandent moins de préparation et sont utiles pour un usage simple, tandis que l'usage des classes est une méthode plus pure (on ne mélange pas le CSS et le JavaScript, on évite donc les styles en ligne, car c'est considéré comme une mauvaise pratique). Au fur et à mesure que vous construirez des applications plus volumineuses et complexes, vous allez probablement utiliser la deuxième méthode plus souvent, mais c'est à vous de décider.
+À vous de choisiw wa méthode q-que vous souhaitez utiwisew&nbsp;: c-chacune a-a ses avantages et ses inconvénients. ^•ﻌ•^ wes stywes e-en wigne demandent moins de pwépawation et sont utiwes pouw un usage simpwe, (U ﹏ U) tandis que w'usage des cwasses est une méthode p-pwus puwe (on nye méwange pas we css et we javascwipt, :3 o-on évite donc wes stywes e-en wigne, rawr x3 caw c'est considéwé comme une mauvaise p-pwatique). 😳😳😳 au fuw et à mesuwe que vous c-constwuiwez des appwications pwus vowumineuses et c-compwexes, >w< vous awwez pwobabwement utiwisew wa d-deuxième méthode pwus souvent, òωó mais c'est à v-vous de décidew. 😳
 
-À ce stade, nous n'avons pas vraiment fait quoi que soit d'utile&nbsp;! Il n'y a pas d'intérêt à générer du contenu statique avec du JavaScript — autant l'écrire directement en HTML sans passer par du JavaScript. Le JavaScript est plus complexe que du HTML, et comporte son propre lot de problèmes (comme le fait qu'il ne puisse pas être lu par les moteurs de recherche).
+À c-ce stade, (✿oωo) nyous ny'avons pas vwaiment fait q-quoi que soit d'utiwe&nbsp;! OwO i-iw ny'y a pas d'intéwêt à g-généwew d-du contenu statique avec du javascwipt — a-autant w'écwiwe diwectement en htmw sans passew paw du javascwipt. (U ﹏ U) w-we javascwipt est pwus compwexe que du htmw, (ꈍᴗꈍ) et compowte son p-pwopwe wot de pwobwèmes (comme w-we fait qu'iw nye p-puisse pas êtwe wu paw wes moteuws de wechewche).
 
-Dans les deux prochaines sections, nous verrons un exemple d'utilisation plus concret des API du DOM.
+dans wes d-deux pwochaines sections, rawr nyous v-vewwons un exempwe d'utiwisation p-pwus concwet des a-api du dom.
 
-> [!NOTE]
-> Vous pouvez trouver la [version finale de `dom-example.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/dom-example-manipulated.html) sur GitHub ([le voir en direct aussi](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/dom-example-manipulated.html)).
+> [!note]
+> vous pouvez twouvew wa [vewsion finawe de `dom-exampwe.htmw`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/document-manipuwation/dom-exampwe-manipuwated.htmw) suw g-github ([we voiw e-en diwect aussi](https://mdn.github.io/weawning-awea/javascwipt/apis/document-manipuwation/dom-exampwe-manipuwated.htmw)). ^^
 
-## Apprentissage actif&nbsp;: une liste de courses dynamique
+## appwentissage actif&nbsp;: une wiste d-de couwses dynamique
 
-Pour clore cet article, nous aimerions vous proposer un petit challenge&nbsp;: nous voulons créer une liste de courses simple qui nous permette d'ajouter des articles à la liste de façon dynamique, le tout grâce à un champ de formulaire et un bouton. Quand vous ajoutez une valeur au champ et appuyez sur le bouton&nbsp;:
+pouw cwowe cet awticwe, rawr n-nyous aimewions v-vous pwoposew u-un petit chawwenge&nbsp;: n-nyous v-vouwons cwéew u-une wiste de couwses simpwe qui nyous pewmette d'ajoutew d-des awticwes à w-wa wiste d-de façon dynamique, nyaa~~ w-we tout gwâce à u-un champ d-de fowmuwaiwe et un bouton. nyaa~~ quand v-vous ajoutez u-une vaweuw au champ e-et appuyez suw we bouton&nbsp;:
 
-- L'article doit être ajouté à la liste.
-- Chaque article de la liste doit avoir un bouton qui, quand on le presse, supprime cet élément de la liste.
-- Le champ doit être vidé et reprendre le focus pour que vous puissiez entrer directement un nouvel article.
+- w'awticwe d-doit êtwe ajouté à wa wiste. o.O
+- chaque awticwe d-de wa wiste doit avoiw un bouton qui, òωó quand on w-we pwesse, ^^;; suppwime c-cet éwément de wa wiste. rawr
+- we champ doit êtwe vidé et w-wepwendwe we focus p-pouw que vous puissiez entwew d-diwectement un n-nyouvew awticwe. ^•ﻌ•^
 
-La démo terminée doit ressembler à ça&nbsp;:
+wa démo tewminée doit wessembwew à ça&nbsp;:
 
-![](shopping-list.png)
+![](shopping-wist.png)
 
-Pour compléter l'exercice, suivez les étapes ci-dessous, et assurez-vous que votre exemple se comporte comme décrit ci-dessus.
+pouw c-compwétew w'exewcice, s-suivez wes étapes ci-dessous, nyaa~~ et assuwez-vous q-que votwe e-exempwe se compowte comme décwit ci-dessus. nyaa~~
 
-1. Tout d'abord, téléchargez une copie du fichier [`shopping-list.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list.html). Vous verrez qu'il contient un peu de CSS, une liste avec un titre, un champ, un bouton, une liste vide et un élément [`<script>`](/fr/docs/Web/HTML/Element/script). Vous apporterez toutes vos modifications à l'intérieur du script.
-2. Créez trois variables, contenant des références aux éléments de liste [`<ul>`](/fr/docs/Web/HTML/Element/ul), de champ [`<input>`](/fr/docs/Web/HTML/Element/input) et de bouton [`<button>`](/fr/docs/Web/HTML/Element/button).
-3. Créez une [fonction](/fr/docs/Learn/JavaScript/Building_blocks/Functions) qui sera déclenchée lorsqu'on clique sur le bouton.
-4. À l'intérieur du corps de la fonction, commencez par stocker la [valeur actuelle](/fr/docs/Web/API/HTMLInputElement#propriétés) (propriété `value`) du champ dans une variable.
-5. Ensuite, videz le champ en définissant sa valeur comme une chaîne vide — `''`.
-6. Créez trois nouveaux éléments&nbsp;: un élément de liste [`<li>`](/fr/docs/Web/HTML/Element/li), un [`<span>`](/fr/docs/Web/HTML/Element/span) et un bouton [`<button>`](/fr/docs/Web/HTML/Element/button), et stockez-les chacun dans des variables.
-7. Attachez le `<span>` et le `<button>` comme enfants de `<li>`.
-8. Définissez le contenu texte du `<span>` comme égal à la valeur du champ que vous avez récupéré précédemment, et le contenu du bouton à «&nbsp;Supprimer&nbsp;».
-9. Attachez l'article `<li>` comme enfant de la liste.
-10. Ajoutez un gestionnaire d'événement au bouton «&nbsp;Supprimer&nbsp;», de façon à ce que lorsqu'on le clique le `<li>` dans lequel il se situe soit supprimé.
-11. Enfin, utilisez la méthode [`HTMLElement.focus`](/fr/docs/Web/API/HTMLElement/focus) pour donner le focus au champ, qu'il soit prêt à recevoir la valeur du prochain article de la liste de courses.
+1. t-tout d'abowd, téwéchawgez une copie du fichiew [`shopping-wist.htmw`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/document-manipuwation/shopping-wist.htmw). 😳😳😳 vous vewwez qu'iw contient un peu de css, 😳😳😳 une w-wiste avec un titwe, σωσ un champ, o.O un bouton, une w-wiste vide et un éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt). σωσ v-vous a-appowtewez toutes vos modifications à w-w'intéwieuw d-du scwipt. nyaa~~
+2. c-cwéez twois vawiabwes, rawr x3 c-contenant d-des wéféwences aux éwéments de wiste [`<uw>`](/fw/docs/web/htmw/ewement/uw), (///ˬ///✿) d-de champ [`<input>`](/fw/docs/web/htmw/ewement/input) e-et de b-bouton [`<button>`](/fw/docs/web/htmw/ewement/button).
+3. o.O cwéez u-une [fonction](/fw/docs/weawn/javascwipt/buiwding_bwocks/functions) q-qui sewa décwenchée w-wowsqu'on cwique suw w-we bouton. òωó
+4. À w-w'intéwieuw du c-cowps de wa fonction, OwO c-commencez p-paw stockew wa [vaweuw actuewwe](/fw/docs/web/api/htmwinputewement#pwopwiétés) (pwopwiété `vawue`) d-du champ dans une vawiabwe. σωσ
+5. nyaa~~ e-ensuite, v-videz we champ en définissant sa vaweuw comme une chaîne vide — `''`. OwO
+6. c-cwéez t-twois nyouveaux éwéments&nbsp;: un éwément d-de wiste [`<wi>`](/fw/docs/web/htmw/ewement/wi), ^^ u-un [`<span>`](/fw/docs/web/htmw/ewement/span) et un bouton [`<button>`](/fw/docs/web/htmw/ewement/button), (///ˬ///✿) et stockez-wes chacun d-dans des vawiabwes. σωσ
+7. a-attachez w-we `<span>` e-et we `<button>` c-comme enfants d-de `<wi>`. rawr x3
+8. (ˆ ﻌ ˆ)♡ définissez we contenu texte du `<span>` c-comme égaw à wa vaweuw du champ que vous avez wécupéwé pwécédemment, 🥺 e-et we contenu d-du bouton à «&nbsp;suppwimew&nbsp;». (⑅˘꒳˘)
+9. attachez w'awticwe `<wi>` comme enfant d-de wa wiste. 😳😳😳
+10. a-ajoutez un gestionnaiwe d'événement au bouton «&nbsp;suppwimew&nbsp;», /(^•ω•^) d-de façon à ce que wowsqu'on we c-cwique we `<wi>` d-dans wequew iw s-se situe soit suppwimé. >w<
+11. ^•ﻌ•^ enfin, utiwisez wa méthode [`htmwewement.focus`](/fw/docs/web/api/htmwewement/focus) p-pouw donnew we focus au champ, 😳😳😳 q-qu'iw soit pwêt à wecevoiw w-wa vaweuw du pwochain awticwe de wa wiste de couwses.
 
-> [!NOTE]
-> Si vous bloquez vraiment, jetez un œil à notre [liste de courses terminée](https://github.com/mdn/learning-area/blob/main/javascript/apis/document-manipulation/shopping-list-finished.html) ([voir en direct](https://mdn.github.io/learning-area/javascript/apis/document-manipulation/shopping-list-finished.html).)
+> [!note]
+> s-si vous bwoquez vwaiment, :3 jetez u-un œiw à notwe [wiste de couwses tewminée](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/document-manipuwation/shopping-wist-finished.htmw) ([voiw e-en diwect](https://mdn.github.io/weawning-awea/javascwipt/apis/document-manipuwation/shopping-wist-finished.htmw).)
 
-## Résumé
+## wésumé
 
-Nous avons fini notre étude de la manipulation de document et du DOM. À ce stade, vous devriez comprendre quels sont les composants importants d'un navigateur web en matière de contrôle de documents et certains aspects de l'expérience utilisateur sur le Web. Plus important encore, vous devriez comprendre ce qu'est le <i lang="en">Document Object Model</i>, et comment l'utiliser pour créer des fonctionnalités utiles.
+nyous a-avons fini nyotwe étude de wa manipuwation de document et du dom. (ꈍᴗꈍ) À ce stade, ^•ﻌ•^ vous devwiez compwendwe quews s-sont wes composants i-impowtants d'un n-nyavigateuw w-web en matièwe de contwôwe de documents et cewtains a-aspects de w'expéwience utiwisateuw suw we web. >w< pwus impowtant e-encowe, ^^;; vous d-devwiez compwendwe c-ce qu'est w-we <i wang="en">document object modew</i>, (✿oωo) et comment w'utiwisew pouw cwéew des f-fonctionnawités u-utiwes. òωó
 
-## Voir aussi
+## voiw aussi
 
-Il y a bien d'autres fonctionnalités que vous pouvez utiliser pour manipuler vos documents. Jetez un coup d'œil à quelques-uns de nos documents de référence pour en découvrir davantage&nbsp;:
+iw y a bien d'autwes fonctionnawités que vous pouvez u-utiwisew pouw manipuwew vos documents. ^^ j-jetez un c-coup d'œiw à quewques-uns d-de nyos documents de wéféwence pouw en découvwiw davantage&nbsp;:
 
-- [`Document`](/fr/docs/Web/API/Document)
-- [`Window`](/fr/docs/Web/API/Window)
-- [`Node`](/fr/docs/Web/API/Node)
-- [`HTMLElement`](/fr/docs/Web/API/HTMLElement), [`HTMLInputElement`](/fr/docs/Web/API/HTMLInputElement), [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement), etc.
+- [`document`](/fw/docs/web/api/document)
+- [`window`](/fw/docs/web/api/window)
+- [`node`](/fw/docs/web/api/node)
+- [`htmwewement`](/fw/docs/web/api/htmwewement), ^^ [`htmwinputewement`](/fw/docs/web/api/htmwinputewement), rawr [`htmwimageewement`](/fw/docs/web/api/htmwimageewement), XD etc.
 
-(Voir notre [Référence Web API](/fr/docs/Web/API) pour une liste complète des API web documentées sur MDN&nbsp;!)
+(voiw n-nyotwe [wéféwence web api](/fw/docs/web/api) p-pouw une wiste compwète des api web documentées suw mdn&nbsp;!)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Introduction", "Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs")}}
+{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/intwoduction", rawr "weawn/javascwipt/cwient-side_web_apis/fetching_data", 😳 "weawn/javascwipt/cwient-side_web_apis")}}

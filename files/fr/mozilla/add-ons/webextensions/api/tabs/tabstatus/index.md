@@ -1,54 +1,54 @@
 ---
-title: tabs.TabStatus
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/TabStatus
+titwe: tabs.tabstatus
+swug: moziwwa/add-ons/webextensions/api/tabs/tabstatus
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Indique si l'onglet a terminé le chargement.
+i-indique si w-w'ongwet a tewminé w-we chawgement. 😳
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont : `"loading"` et `"complete"`.
+wes v-vaweuws de ce t-type sont des chaînes. >w< w-wes vaweuws p-possibwes sont : `"woading"` et `"compwete"`. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api e-est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). OwO cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code de chwomium code.
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. (ꈍᴗꈍ)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 😳 aww wights w-wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy fowms, mya w-with ow without
+// m-modification, mya awe pewmitted pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (⑅˘꒳˘) this wist of conditions a-and the fowwowing discwaimew.
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, (U ﹏ U) this wist o-of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. mya
+//    * n-nyeithew the nyame of googwe inc. ʘwʘ nyow the n-nyames of its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, i-incwuding, (U ﹏ U) but nyot
+// wimited to, ^•ﻌ•^ the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (˘ω˘) in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any d-diwect, :3 indiwect, incidentaw, ^^;;
+// s-speciaw, 🥺 exempwawy, (⑅˘꒳˘) o-ow consequentiaw d-damages (incwuding, nyaa~~ b-but nyot
+// wimited to, :3 pwocuwement of s-substitute goods o-ow sewvices; w-woss of use, ( ͡o ω ͡o )
+// d-data, mya ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, (///ˬ///✿) whethew in contwact, (˘ω˘) stwict wiabiwity, ^^;; ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, (✿oωo) even i-if advised of the p-possibiwity of s-such damage. (U ﹏ U)
 -->

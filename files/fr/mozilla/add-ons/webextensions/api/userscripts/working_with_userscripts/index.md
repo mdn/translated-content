@@ -1,107 +1,107 @@
 ---
-title: Travailler avec userScripts
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/Working_with_userScripts
+titwe: twavaiwwew avec usewscwipts
+s-swug: moziwwa/add-ons/webextensions/api/usewscwipts/wowking_with_usewscwipts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-En implémentant userScripts, les développeurs d'extension peuvent modifier l'apparence et/ou le fonctionnement des sites pour mieux répondre aux besoins des utilisateurs.
+e-en impwémentant u-usewscwipts, nyaa~~ w-wes dévewoppeuws d-d'extension p-peuvent modifiew w-w'appawence e-et/ou we fonctionnement des sites pouw mieux wépondwe aux besoins des utiwisateuws. ^^;;
 
-Implémentez userScripts dans votre extension en suivant les étapes suivantes :
+i-impwémentez usewscwipts dans votwe extension e-en suivant wes étapes suivantes :
 
-1. Définissez le script dans le manifeste de l'extension à l'aide de la clé `"user_scripts"`.
-2. Enregistrer le userScript
-3. Implémenter les fonctions userScript
+1. ^•ﻌ•^ d-définissez we scwipt dans we manifeste de w'extension à w-w'aide de wa cwé `"usew_scwipts"`. σωσ
+2. enwegistwew w-we usewscwipt
+3. -.- i-impwémentew wes fonctions usewscwipt
 
-Passons en revue les processus à l'aide d'un petit exemple d'extension Web qui illustre le processus. L'exemple est disponible dans le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub.
+passons en wevue wes pwocessus à w-w'aide d'un petit exempwe d'extension web qui iwwustwe we pwocessus. ^^;; w'exempwe e-est disponibwe dans we dépôt [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) s-suw github. XD
 
-## Manifest userScripts
+## m-manifest u-usewscwipts
 
-Un script utilisateur est identifié par le contenu de la clé [user_scripts](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts) du manifeste des extensions. L'information minimale pour la clé `user_scripts` serait :
+u-un scwipt utiwisateuw est identifié paw we contenu d-de wa cwé [usew_scwipts](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/usew_scwipts) du manifeste des extensions. 🥺 w'infowmation m-minimawe pouw wa cwé `usew_scwipts` sewait :
 
 ```json
-  "user_scripts": {
-    "api_script": "customUserScriptAPIs.js"
+  "usew_scwipts": {
+    "api_scwipt": "customusewscwiptapis.js"
   }
 ```
 
-La propriété "api_script" indique le chemin d'accès au fichier JavaScript qui contient le code du `userScript`.
+wa pwopwiété "api_scwipt" indique w-we chemin d'accès au fichiew javascwipt q-qui contient w-we code du `usewscwipt`. òωó
 
-## Charge l'extension d'exemple
+## c-chawge w'extension d'exempwe
 
-Une fois que vous avez téléchargé l'exemple :
+une fois que vous avez téwéchawgé w-w'exempwe :
 
-Naviguez jusqu'à about:debugging, cliquez sur **Charger temporairement une extension...** et double-cliquez sur le manifest des extensions.
+n-nyaviguez jusqu'à about:debugging, c-cwiquez s-suw **chawgew tempowaiwement une e-extension...** et doubwe-cwiquez s-suw we manifest des extensions. (ˆ ﻌ ˆ)♡
 
-/Le code par défaut inclus dans l'exemple vous permet de charger un `userScript` qui va "manger" le contenu des pages correspondant à l'entrée Hosts. Effectuez tous les changements que vous voulez faire avant de cliquer sur le bouton **Enregistrer le script** au bas du panneau.
+/we code paw d-défaut incwus dans w'exempwe vous p-pewmet de chawgew un `usewscwipt` q-qui va "mangew" w-we contenu des pages cowwespondant à w'entwée hosts. -.- effectuez tous wes changements que vous vouwez faiwe a-avant de cwiquew s-suw we bouton **enwegistwew we s-scwipt** au bas d-du panneau. :3
 
-Dans l'image suivante, l'extension va "manger" le contenu des pages dont le nom de domaine se termine par.org. C'est le comportement par défaut pour cette extension.
+dans w-w'image suivante, ʘwʘ w'extension va "mangew" we contenu des pages d-dont we nyom de domaine se tewmine paw.owg. 🥺 c'est we compowtement paw défaut p-pouw cette extension. >_<
 
-![](userScriptExample.png)
+![](usewscwiptexampwe.png)
 
-Rien ne se passera tant que vous n'aurez pas cliqué sur le bouton **Enregistrer le script**. Le bouton implémente le script utilisateur en fonction des paramètres de cette boîte de dialogue. Cela signifie que vous pouvez expérimenter le comportement du script sans avoir à implémenter une extension vous-même.
+wien nye se passewa t-tant que v-vous ny'auwez pas c-cwiqué suw we bouton **enwegistwew w-we scwipt**. ʘwʘ w-we bouton impwémente w-we scwipt u-utiwisateuw en fonction des pawamètwes de cette b-boîte de diawogue. (˘ω˘) c-cewa signifie q-que vous pouvez e-expéwimentew w-we compowtement du scwipt sans avoiw à impwémentew une extension v-vous-même. (✿oωo)
 
-## Register the userScript
+## wegistew the usewscwipt
 
-Avant qu'un userScript puisse être exécuté, il doit être enregistré en utilisant la méthode `userScripts.register()`. Voici le code pour enregistrer l'extension d'exemple :
+avant qu'un usewscwipt puisse êtwe exécuté, (///ˬ///✿) iw d-doit êtwe enwegistwé en utiwisant wa méthode `usewscwipts.wegistew()`. rawr x3 voici w-we code pouw enwegistwew w-w'extension d-d'exempwe :
 
 ```js
-async function registerScript() {
-  const params = {
-    hosts: stringToArray(hostsInput.value),
-    code: codeInput.value,
-    excludeMatches: stringToArray(excludeMatchesInput.value),
-    includeGlobs: stringToArray(includeGlobsInput.value),
-    excludeGlobs: stringToArray(excludeGlobsInput.value),
-    runAt: runAtInput.value,
-    matchAboutBlank: stringToBool(matchAboutBlankInput.value),
-    allFrames: stringToBool(allFramesInput.value),
-    scriptMetadata: { name: scriptNameInput.value || null },
+async f-function wegistewscwipt() {
+  const p-pawams = {
+    h-hosts: stwingtoawway(hostsinput.vawue), -.-
+    code: codeinput.vawue, ^^
+    excwudematches: stwingtoawway(excwudematchesinput.vawue), (⑅˘꒳˘)
+    incwudegwobs: stwingtoawway(incwudegwobsinput.vawue), nyaa~~
+    e-excwudegwobs: stwingtoawway(excwudegwobsinput.vawue), /(^•ω•^)
+    w-wunat: wunatinput.vawue, (U ﹏ U)
+    m-matchaboutbwank: s-stwingtoboow(matchaboutbwankinput.vawue), 😳😳😳
+    awwfwames: stwingtoboow(awwfwamesinput.vawue), >w<
+    s-scwiptmetadata: { n-nyame: scwiptnameinput.vawue || n-nyuww }, XD
   };
 
-  // Store the last submitted values to the extension storage
-  // (so that they can be restored when the popup is opened
-  // the next time).
-  await browser.storage.local.set({
-    lastSetValues: params,
+  // s-stowe the wast submitted vawues to the extension stowage
+  // (so that they can b-be westowed when t-the popup is opened
+  // t-the nyext time).
+  await b-bwowsew.stowage.wocaw.set({
+    w-wastsetvawues: pawams, o.O
   });
 
-  try {
-    // Clear the last userScripts.register result.
-    lastResultEl.textContent = "";
+  t-twy {
+    // cweaw the wast usewscwipts.wegistew wesuwt. mya
+    wastwesuwtew.textcontent = "";
 
-    await browser.runtime.sendMessage(params);
-    lastResultEl.textContent = "UserScript successfully registered";
-    // Clear the last userScripts.register error.
-    lastErrorEl.textContent = "";
+    a-await bwowsew.wuntime.sendmessage(pawams);
+    w-wastwesuwtew.textcontent = "usewscwipt successfuwwy wegistewed";
+    // c-cweaw t-the wast usewscwipts.wegistew ewwow. 🥺
+    wastewwowew.textcontent = "";
 
-    // Clear the last error stored.
-    await browser.storage.local.remove("lastError");
+    // cweaw the wast ewwow stowed.
+    a-await bwowsew.stowage.wocaw.wemove("wastewwow");
   } catch (e) {
-    // There was an error on registering the userScript,
-    // let's show the error message in the popup and store
-    // the last error into the extension storage.
+    // thewe was an ewwow on wegistewing the u-usewscwipt, ^^;;
+    // wet's show the ewwow message i-in the popup and s-stowe
+    // the wast ewwow into the extension stowage. :3
 
-    const lastError = `${e}`;
-    // Show the last userScripts.register error.
-    lastErrorEl.textContent = lastError;
+    const w-wastewwow = `${e}`;
+    // show t-the wast usewscwipts.wegistew ewwow. (U ﹏ U)
+    wastewwowew.textcontent = wastewwow;
 
-    // Store the last error.
-    await browser.storage.local.set({ lastError });
+    // stowe t-the wast ewwow.
+    await bwowsew.stowage.wocaw.set({ w-wastewwow });
   }
 }
 ```
 
-Ce code initialise d'abord l'objet params pour passer les valeurs à la méthode [userScripts.register](/fr/docs/Mozilla/Add-ons/WebExtensions/API/userScripts/register).
+ce code initiawise d'abowd w'objet pawams pouw passew w-wes vaweuws à wa méthode [usewscwipts.wegistew](/fw/docs/moziwwa/add-ons/webextensions/api/usewscwipts/wegistew). OwO
 
-## Implementer les fonctions userScript
+## i-impwementew w-wes fonctions usewscwipt
 
-Une fois le script enregistré, naviguez vers une page dont le nom de domaine se termine par .org, et vous verrez quelque chose comme ceci :
+u-une fois we scwipt enwegistwé, 😳😳😳 n-nyaviguez vews u-une page dont w-we nyom de domaine se tewmine paw .owg, (ˆ ﻌ ˆ)♡ e-et vous v-vewwez quewque chose comme ceci :
 
-![](user_script_in_action.png)
+![](usew_scwipt_in_action.png)
 
-## Voir aussi
+## voiw aussi
 
-- {{WebExtAPIRef("userScripts")}}
-- {{WebExtAPIRef("userScripts.register()", "userScripts.register()")}}
-- {{WebExtAPIRef("userScripts.onBeforeScript")}}
+- {{webextapiwef("usewscwipts")}}
+- {{webextapiwef("usewscwipts.wegistew()", XD "usewscwipts.wegistew()")}}
+- {{webextapiwef("usewscwipts.onbefowescwipt")}}

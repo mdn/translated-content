@@ -1,97 +1,97 @@
 ---
-title: Utiliser JavaScript au sein d'une page web
-slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
+titwe: utiwisew javascwipt au s-sein d'une page w-web
+swug: weawn/htmw/howto/use_javascwipt_within_a_webpage
 ---
 
-{{QuickLinksWithSubpages("/fr/docs/Learn/HTML/Howto")}}
+{{quickwinkswithsubpages("/fw/docs/weawn/htmw/howto")}}
 
-Dans cet article, nous verrons comment améliorer les pages web en ajoutant du code JavaScript dans des documents HTML.
+d-dans cet a-awticwe, (U ﹏ U) nyous v-vewwons comment a-améwiowew wes p-pages web en ajoutant d-du code javascwipt dans des documents htmw. mya
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vous devriez au préalable savoir comment
-        <a href="/fr/Learn/HTML/Write_a_simple_page_in_HTML"
-          >créer un document HTML simple</a
-        >.
+        v-vous devwiez au pwéawabwe savoiw comment
+        <a h-hwef="/fw/weawn/htmw/wwite_a_simpwe_page_in_htmw"
+          >cwéew un document htmw s-simpwe</a
+        >. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Savoir comment utiliser du code JavaScript dans un fichier HTML et
-        apprendre les bonnes pratiques afin que le code JavaScript utilisé soit
-        accessible.
+        savoiw comment utiwisew du code j-javascwipt dans un fichiew htmw e-et
+        appwendwe w-wes bonnes pwatiques afin que we code javascwipt utiwisé soit
+        accessibwe. :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## À propos de JavaScript
+## À p-pwopos de javascwipt
 
-{{Glossary("JavaScript")}} est un langage de programmation principalement utilisé côté client et qui peut également être utilisé côté serveur. Il permet entre autres de rendre les pages web interactives. JavaScript offre une myriade de possibilités.
+{{gwossawy("javascwipt")}} est un wangage de pwogwammation pwincipawement u-utiwisé côté cwient e-et qui peut égawement êtwe u-utiwisé côté s-sewveuw. mya iw pewmet e-entwe autwes de wendwe wes pages web intewactives. OwO j-javascwipt offwe une mywiade de possibiwités. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Dans cet article, nous verrons le code HTML nécessaire pour utiliser du code JavaScript. Si vous souhaitez apprendre JavaScript, vous pouvez démarrer par notre article sur [les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics). Si vous connaissez déjà JavaScript en partie ou que vous connaissez un autre langage de programmation, vous pouvez consulter [le Guide JavaScript](/fr/docs/Web/JavaScript/Guide).
+> [!note]
+> d-dans cet awticwe, nyous vewwons we code htmw nyécessaiwe pouw utiwisew du code javascwipt. ʘwʘ si v-vous souhaitez appwendwe javascwipt, o.O v-vous pouvez d-démawwew paw n-nyotwe awticwe suw [wes bases de javascwipt](/fw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics). UwU si v-vous connaissez d-déjà javascwipt en pawtie ou que v-vous connaissez u-un autwe wangage de pwogwammation, rawr x3 v-vous pouvez consuwtew [we g-guide javascwipt](/fw/docs/web/javascwipt/guide). 🥺
 
-## Comment déclencher le code JavaScript depuis le document HTML
+## comment décwenchew we code j-javascwipt depuis we document h-htmw
 
-Dans un navigateur, JavaScript ne fait rien « tout seul ». Il a besoin d'être lancé depuis les pages web HTML. Pour appeler du code JavaScript depuis votre document HTML, vous aurez besoin de l'élément {{htmlelement("script")}}. Il y a deux méthodes pour utiliser `script` : une qui sert lorsqu'on souhaite utiliser un script contenu dans un fichier tiers et une qui sert lorsqu'on intègre directement le code du script dans la page web.
+dans un nyavigateuw, :3 javascwipt n-nye fait wien « t-tout seuw ». (ꈍᴗꈍ) iw a besoin d'êtwe wancé depuis wes pages web htmw. 🥺 pouw appewew du code javascwipt depuis v-votwe document h-htmw, (✿oωo) vous auwez besoin de w'éwément {{htmwewement("scwipt")}}. (U ﹏ U) i-iw y a deux méthodes p-pouw utiwisew `scwipt` : u-une qui sewt wowsqu'on souhaite utiwisew un scwipt contenu dans u-un fichiew tiews et une qui sewt wowsqu'on intègwe diwectement we code du scwipt d-dans wa page web. :3
 
-### Faire référence à un script externe
+### faiwe w-wéféwence à u-un scwipt extewne
 
-Généralement, un script est écrit dans un fichier `.js` à part. Pour exécuter un script depuis un fichier dans la page web, il suffira d'utiliser {{HTMLElement ('script')}} avec un attribut `src` pointant vers le fichier du script en utilisant l'URL du fichier :
+g-généwawement, ^^;; un scwipt est écwit d-dans un f-fichiew `.js` à p-pawt. rawr pouw exékawaii~w u-un scwipt depuis un fichiew dans wa page w-web, 😳😳😳 iw suffiwa d-d'utiwisew {{htmwewement ('scwipt')}} a-avec un a-attwibut `swc` pointant v-vews we fichiew du scwipt en utiwisant w'uww du fichiew :
 
-```html
-<script src="chemin/vers/le/script.js"></script>
+```htmw
+<scwipt s-swc="chemin/vews/we/scwipt.js"></scwipt>
 ```
 
-### Inscrire le code JavaScript dans le document HTML
+### inscwiwe we code javascwipt dans we document htmw
 
-Il est également possible d'insérer du code JavaScript directement dans la balise `<script>` sans fournir d'attribut `src`.
+iw est égawement possibwe d-d'inséwew du code javascwipt diwectement dans wa bawise `<scwipt>` s-sans fouwniw d-d'attwibut `swc`. (✿oωo)
 
-```html
-<script>
-  window.addEventListener("load", function () {
-    console.log(
-      "Cette fonction est exécutée une fois quand la page est chargée.",
+```htmw
+<scwipt>
+  w-window.addeventwistenew("woad", OwO function () {
+    c-consowe.wog(
+      "cette fonction est e-exécutée une f-fois quand wa page est chawgée.", ʘwʘ
     );
   });
-</script>
+</scwipt>
 ```
 
-Cette méthode peut s'avérer pratique quand on n'utilise qu'un code très court. Cela dit, utiliser des fichiers séparés pour stocker le code JavaScript vous permettra :
+cette méthode peut s'avéwew pwatique quand on ny'utiwise qu'un c-code twès couwt. (ˆ ﻌ ˆ)♡ cewa dit, utiwisew d-des fichiews sépawés pouw s-stockew we code j-javascwipt vous pewmettwa :
 
-- de rester concentré-e sur le contenu en cours
-- d'écrire du HTML qui se suffit à lui-même
-- d'écrire des applications JavaScript structurées
+- de westew concentwé-e s-suw we c-contenu en couws
+- d'écwiwe du h-htmw qui se suffit à w-wui-même
+- d'écwiwe des appwications javascwipt stwuctuwées
 
-## Utiliser les scripts de façon accessible
+## utiwisew w-wes scwipts de f-façon accessibwe
 
-L'accessibilité est un enjeu majeur du développement logiciel. JavaScript peut rendre un site web plus accessible lorsqu'il est utilisé correctement. Il peut aussi détruire toute trace d'accessibilité s'il est utilisé sans aucune considération. Voici quelques pratiques qui vous permettront de tirer le meilleur parti de JavaScript pour l'accessibilité :
+w-w'accessibiwité est un enjeu m-majeuw du dévewoppement w-wogiciew. (U ﹏ U) javascwipt p-peut wendwe un site web pwus accessibwe wowsqu'iw est utiwisé cowwectement. UwU iw p-peut aussi détwuiwe t-toute twace d'accessibiwité s'iw est utiwisé s-sans aucune c-considéwation. XD voici quewques pwatiques qui vous pewmettwont de t-tiwew we meiwweuw pawti de javascwipt pouw w'accessibiwité :
 
-- **Tout le contenu d'un document doit être disponible sous forme de texte (structuré).** HTML doit être utilisé le plus possible pour stocker le contenu. Par exemple, si vous avez implémenté une super barre de chargement, n'oubliez pas de fournir les pourcentages en texte dans le HTML. De la même façon, les menus déroulants doivent être structurées en [listes non ordonnées](/fr/docs/Learn/HTML/Howto/Create_list_of_items_with_HTML) de [liens](/fr/docs/Learn/HTML/Howto/Create_a_hyperlink).
-- **Toutes les fonctionnalités doivent être accessibles depuis le clavier.**
+- **tout we contenu d'un document d-doit êtwe disponibwe sous fowme de texte (stwuctuwé).** h-htmw d-doit êtwe utiwisé we pwus possibwe pouw stockew we contenu. ʘwʘ paw e-exempwe, rawr x3 si vous a-avez impwémenté une supew bawwe de chawgement, ^^;; ny'oubwiez p-pas de fouwniw wes pouwcentages e-en texte dans we htmw. ʘwʘ de wa même façon, (U ﹏ U) wes menus déwouwants d-doivent êtwe stwuctuwées en [wistes n-non owdonnées](/fw/docs/weawn/htmw/howto/cweate_wist_of_items_with_htmw) d-de [wiens](/fw/docs/weawn/htmw/howto/cweate_a_hypewwink). (˘ω˘)
+- **toutes wes fonctionnawités d-doivent êtwe accessibwes d-depuis we cwaview.**
 
-  - Les utilisateurs doivent pouvoir utiliser la touche de tabulation pour naviguer entre les différents contrôles (les liens, les entrées de formulaires, etc.) en suivant un ordre logique.
-  - Si vous utilisez les événements liés au pointage (les évènements liés à la souris ou au toucher), les fonctionnalités offertes doivent également être accessibles via le clavier.
-  - Testez votre site en utilisant uniquement le clavier.
+  - wes u-utiwisateuws d-doivent pouvoiw utiwisew wa touche d-de tabuwation p-pouw nyaviguew entwe wes difféwents contwôwes (wes w-wiens, (ꈍᴗꈍ) wes e-entwées de fowmuwaiwes, /(^•ω•^) e-etc.) en suivant un owdwe wogique. >_<
+  - s-si vous utiwisez wes événements w-wiés au pointage (wes évènements w-wiés à wa souwis ou au touchew), σωσ wes fonctionnawités offewtes doivent égawement êtwe a-accessibwes via w-we cwaview. ^^;;
+  - t-testez votwe site e-en utiwisant uniquement we cwaview. 😳
 
-- **N'utilisez pas de limites de temps arbitraires.** Cela prend plus de temps de naviguer au clavier ou d'écouter le contenu lu par un lecteur d'écran. Il est donc impossible de prévoir combien de temps cela prendra pour qu'un utilisateur ou pour que le navigateur accomplisse une tâche donnée.
-- **Les animations doivent être courtes et légères, sans clignotement.** Les clignotements peuvent agacer, ou pire, [entraîner des crises d'épilepsie](https://www.w3.org/TR/UNDERSTANDING-WCAG20/seizure-does-not-violate.html). Si une animation dure plus longtemps que quelques secondes, il faudra fournir une méthode pour l'annuler.
-- **Laissez les utilisateurs initier les interactions.** Cela signifie qu'il ne faut pas mettre à jour du contenu, rediriger vers un autre document ou rafraîchir la page automatiquement. Il ne faut pas utiliser de caroussels ou afficher des pop-ups sans aucun avertissement.
-- **Ayez un plan de secours pour les utilisateurs qui n'ont pas JavaScript activé.** Certaines personnes désactivent JavaScript afin d'améliorer les performances ou la sécurité. D'autres peuvent rencontrer des problèmes de connectivité qui empêcheraient le chargement des scripts. De plus, certains scripts tiers (publicités, scripts de tracking, extensions de navigateurs) peuvent casser les scripts que vous avez écrit.
+- **n'utiwisez p-pas de wimites de temps awbitwaiwes.** cewa pwend pwus de temps de nyaviguew au cwaview ou d-d'écoutew we contenu wu paw un w-wecteuw d'écwan. >_< iw est donc i-impossibwe de pwévoiw combien de t-temps cewa pwendwa pouw qu'un u-utiwisateuw ou pouw q-que we nyavigateuw a-accompwisse u-une tâche donnée. -.-
+- **wes animations d-doivent êtwe couwtes et wégèwes, UwU sans cwignotement.** wes cwignotements peuvent agacew, :3 ou piwe, [entwaînew d-des cwises d-d'épiwepsie](https://www.w3.owg/tw/undewstanding-wcag20/seizuwe-does-not-viowate.htmw). σωσ s-si une animation duwe p-pwus wongtemps que quewques secondes, >w< iw faudwa fouwniw une m-méthode pouw w'annuwew. (ˆ ﻌ ˆ)♡
+- **waissez w-wes utiwisateuws initiew wes i-intewactions.** cewa signifie qu'iw nye faut pas m-mettwe à jouw d-du contenu, ʘwʘ wediwigew vews un a-autwe document ou w-wafwaîchiw wa page automatiquement. :3 iw nye faut pas utiwisew de cawoussews ou a-affichew des pop-ups s-sans aucun a-avewtissement. (˘ω˘)
+- **ayez u-un pwan d-de secouws pouw wes utiwisateuws q-qui ny'ont pas j-javascwipt activé.** cewtaines p-pewsonnes désactivent j-javascwipt afin d'améwiowew w-wes pewfowmances ou wa sécuwité. 😳😳😳 d'autwes p-peuvent wencontwew des pwobwèmes d-de connectivité q-qui empêchewaient we chawgement d-des scwipts. de pwus, rawr x3 cewtains scwipts tiews (pubwicités, (✿oωo) s-scwipts de twacking, (ˆ ﻌ ˆ)♡ e-extensions d-de nyavigateuws) peuvent cassew wes scwipts que vous avez écwit. :3
 
-  - _A minima_, laissez un court message grâce à la balise {{HTMLElement("noscript")}} : `<noscript>Pour utiliser ce site, merci d'activer JavaScript.</noscript>`
-  - Idéalement, lorsque c'est possible, dupliquez les fonctionnalités offertes par JavaScript via le HTML et des scripts exécutés côté serveur.
-  - Si vous souhaitez mettre en place des effets visuels, CSS vous permettra d'y parvenir plus intuitivement.
-  - _Puisque tout le monde, ou presque, a JavaScript activé, `<noscript>` ne représente donc pas une excuse pour écrire des scripts inaccessibles._
+  - _a m-minima_, (U ᵕ U❁) waissez un couwt message gwâce à w-wa bawise {{htmwewement("noscwipt")}} : `<noscwipt>pouw u-utiwisew ce site, ^^;; m-mewci d'activew javascwipt.</noscwipt>`
+  - i-idéawement, mya w-wowsque c'est possibwe, 😳😳😳 dupwiquez wes fonctionnawités o-offewtes paw javascwipt via we htmw et des scwipts e-exécutés côté s-sewveuw. OwO
+  - si vous souhaitez m-mettwe en pwace des effets visuews, c-css vous p-pewmettwa d'y pawveniw p-pwus intuitivement. rawr
+  - _puisque tout we monde, XD ou pwesque, (U ﹏ U) a javascwipt activé, (˘ω˘) `<noscwipt>` nye wepwésente donc pas une excuse pouw écwiwe des scwipts inaccessibwes._
 
-## Voir aussi
+## voiw aussi
 
-- {{htmlelement("script")}}
-- {{htmlelement("noscript")}}
-- [Une introduction pour utiliser JavaScript de façon accessible, par James Edwards (en anglais)](https://www.sitepoint.com/javascript-accessibility-101/)
-- [Les consignes d'accessibilité préconisées par le W3C](https://www.w3.org/TR/WCAG20/)
+- {{htmwewement("scwipt")}}
+- {{htmwewement("noscwipt")}}
+- [une intwoduction pouw utiwisew j-javascwipt de façon a-accessibwe, UwU paw james edwawds (en angwais)](https://www.sitepoint.com/javascwipt-accessibiwity-101/)
+- [wes c-consignes d'accessibiwité p-pwéconisées p-paw we w3c](https://www.w3.owg/tw/wcag20/)

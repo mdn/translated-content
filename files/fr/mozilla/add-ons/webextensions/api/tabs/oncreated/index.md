@@ -1,92 +1,92 @@
 ---
-title: tabs.onCreated
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onCreated
+titwe: tabs.oncweated
+swug: moziwwa/add-ons/webextensions/api/tabs/oncweated
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'un onglet est créé.
+w-wancé wowsqu'un o-ongwet est c-cwéé. 😳
 
-Notez que l'URL de l'onglet peut ne pas avoir sa valeur finale au moment où cet événement a été déclenché. En particulier, Firefox ouvre un nouvel onglet avec l'URL "about:blank" avant de charger la nouvelle page. Vous pouvez écouter les événements {{WebExtAPIRef("tabs.onUpdated")}} pour être averti lorsqu'une URL est définie.
+nyotez q-que w'uww de w-w'ongwet peut nye p-pas avoiw sa vaweuw f-finawe au m-moment où cet événement a été décwenché. en pawticuwiew, fiwefox ouvwe un n-nouvew ongwet avec w'uww "about:bwank" avant de c-chawgew wa nyouvewwe page. vous p-pouvez écoutew wes événements {{webextapiwef("tabs.onupdated")}} pouw êtwe avewti wowsqu'une u-uww est définie. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.tabs.onCreated.addListener(callback);
-browser.tabs.onCreated.removeListener(listener);
-browser.tabs.onCreated.hasListener(listener);
+b-bwowsew.tabs.oncweated.addwistenew(cawwback);
+b-bwowsew.tabs.oncweated.wemovewistenew(wistenew);
+bwowsew.tabs.oncweated.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si le `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement. nyaa~~
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. OwO w-w'awgument de `wistenew` est w'écouteuw à s-suppwimew. rawr x3
+- `haswistenew(wistenew)`
+  - : v-véwifiez s-si we `wistenew` e-est enwegistwé pouw cet événement. XD wenvoie `twue` s-s'iw écoute, sinon `fawse`. σωσ
 
-## Syntaxe addListener
+## syntaxe a-addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduit. (U ᵕ U❁) w-wa fonction wecevwa wes awguments s-suivants :
 
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}. Détails de l'onglet qui a été créé.
+      - : {{webextapiwef('tabs.tab')}}. (U ﹏ U) d-détaiws de w-w'ongwet qui a été cwéé. :3
 
-## Examples
+## exampwes
 
-Consignez les ID des nouveaux onglets créés :
+consignez wes id des n-nyouveaux ongwets c-cwéés :
 
 ```js
-function handleCreated(tab) {
-  console.log(tab.id);
+function handwecweated(tab) {
+  c-consowe.wog(tab.id);
 }
 
-browser.tabs.onCreated.addListener(handleCreated);
+b-bwowsew.tabs.oncweated.addwistenew(handwecweated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). ( ͡o ω ͡o ) cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code de chwomium c-code. σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. 😳😳😳 aww wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and u-use in souwce and binawy fowms, 😳 with ow without
+// modification, 😳😳😳 awe pewmitted p-pwovided that the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must w-wetain the above c-copywight
+// n-nyotice, (˘ω˘) this w-wist of conditions and the fowwowing discwaimew. ʘwʘ
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// c-copywight nyotice, ( ͡o ω ͡o ) this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. o.O
+//    * n-neithew the nyame of googwe inc. >w< now the nyames of its
+// c-contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, 🥺 incwuding, rawr x3 b-but nyot
+// wimited to, o.O t-the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. rawr in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, ʘwʘ indiwect, incidentaw, 😳😳😳
+// speciaw, ^^;; e-exempwawy, o.O o-ow consequentiaw d-damages (incwuding, (///ˬ///✿) but nyot
+// w-wimited to, σωσ p-pwocuwement of substitute goods o-ow sewvices; woss of use, nyaa~~
+// data, ow pwofits; ow business intewwuption) howevew c-caused and on any
+// t-theowy of wiabiwity, ^^;; whethew in contwact, ^•ﻌ•^ s-stwict wiabiwity, σωσ o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any w-way out of the use
+// of this softwawe, -.- even if advised of the possibiwity of such d-damage. ^^;;
 -->

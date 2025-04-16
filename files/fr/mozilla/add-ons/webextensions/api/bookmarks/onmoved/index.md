@@ -1,114 +1,114 @@
 ---
-title: bookmarks.onMoved
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onMoved
+titwe: bookmawks.onmoved
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/onmoved
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'un signet ou un dossier est déplacé vers un autre dossier parent et / ou position dans un dossier.
+w-wancé w-wowsqu'un signet o-ou un dossiew e-est dépwacé v-vews un autwe dossiew p-pawent et / o-ou position dans un dossiew.
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.bookmarks.onMoved.addListener(listener);
-browser.bookmarks.onMoved.removeListener(listener);
-browser.bookmarks.onMoved.hasListener(listener);
+bwowsew.bookmawks.onmoved.addwistenew(wistenew);
+bwowsew.bookmawks.onmoved.wemovewistenew(wistenew);
+b-bwowsew.bookmawks.onmoved.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement. OwO
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. 😳 w'awgument `wistenew` est w-w'écouteuw à suppwimew. 😳😳😳
+- `haswistenew(wistenew)`
+  - : véwifiez s-si `wistenew` e-est enwegistwé pouw cet événement. (˘ω˘) wenvoie `twue` s'iw écoute, ʘwʘ sinon `fawse`.
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Parameters
+### pawametews
 
-- `callback`
+- `cawwback`
 
-  - : Function that will be called when this event occurs. The function will be passed the following arguments:
+  - : function that wiww be cawwed when t-this event occuws. ( ͡o ω ͡o ) the function w-wiww be passed t-the fowwowing a-awguments:
 
     - `id`
-      - : `string`. ID of the item that was moved.
+      - : `stwing`. o.O i-id of the item that was moved. >w<
 
     <!---->
 
-    - `moveInfo`
-      - : [`object`](#moveinfo). Object containing more details about the move.
+    - `moveinfo`
+      - : [`object`](#moveinfo). 😳 o-object containing mowe detaiws about the m-move. 🥺
 
-## Objets supplémentaires
+## objets suppwémentaiwes
 
-### moveInfo
+### moveinfo
 
-- `parentId`
-  - : `string`. Le nouveau dossier parent.
+- `pawentid`
+  - : `stwing`. rawr x3 we nyouveau dossiew pawent. o.O
 - `index`
-  - : `integer`. Le nouvel index de cet élément dans son parent.
-- `oldParentId`
-  - : `string`. L'ancien dossier parent.
-- `oldIndex`
-  - : `integer`. L'ancien index de l'élément dans son parent.
+  - : `integew`. rawr we nyouvew i-index de cet éwément dans son p-pawent. ʘwʘ
+- `owdpawentid`
+  - : `stwing`. 😳😳😳 w-w'ancien d-dossiew pawent. ^^;;
+- `owdindex`
+  - : `integew`. o.O w'ancien index de w'éwément dans son pawent. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-function handleMoved(id, moveInfo) {
-  console.log("Item: " + id + " moved");
-  console.log("Old index: " + moveInfo.oldIndex);
-  console.log("New index: " + moveInfo.index);
-  console.log("Old folder: " + moveInfo.oldParentId);
-  console.log("New folder: " + moveInfo.parentId);
+f-function handwemoved(id, σωσ m-moveinfo) {
+  consowe.wog("item: " + i-id + " moved");
+  consowe.wog("owd i-index: " + moveinfo.owdindex);
+  consowe.wog("new i-index: " + moveinfo.index);
+  c-consowe.wog("owd fowdew: " + m-moveinfo.owdpawentid);
+  c-consowe.wog("new fowdew: " + moveinfo.pawentid);
 }
 
-function handleClick() {
-  browser.bookmarks.onMoved.addListener(handleMoved);
+function handwecwick() {
+  bwowsew.bookmawks.onmoved.addwistenew(handwemoved);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> cette api est b-basée suw w'api c-chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). nyaa~~ cette documentation p-pwovient d-de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) dans w-we code chwomium. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous w-wa wicence cweative commons attwibution 3.0 p-pouw w-wes États-unis. ^•ﻌ•^
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. a-aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, -.- w-with ow without
+// m-modification, ^^;; a-awe pewmitted pwovided t-that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above copywight
+// nyotice, XD this wist of conditions and the fowwowing d-discwaimew.
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, 🥺 t-this wist of conditions and t-the fowwowing discwaimew
+// in the d-documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. òωó
+//    * nyeithew the nyame of googwe inc. (ˆ ﻌ ˆ)♡ nyow the nyames o-of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten p-pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, :3 incwuding, ʘwʘ but nyot
+// w-wimited to, 🥺 the i-impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. >_< i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ʘwʘ i-indiwect, (˘ω˘) incidentaw, (✿oωo)
+// s-speciaw, (///ˬ///✿) exempwawy, ow consequentiaw d-damages (incwuding, rawr x3 b-but nyot
+// wimited to, -.- pwocuwement of substitute goods ow s-sewvices; woss of use, ^^
+// data, (⑅˘꒳˘) ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, whethew i-in contwact, nyaa~~ stwict w-wiabiwity, /(^•ω•^) ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, (U ﹏ U) even if advised of the possibiwity o-of such damage. 😳😳😳
 -->

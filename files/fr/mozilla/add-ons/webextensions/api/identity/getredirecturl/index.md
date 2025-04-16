@@ -1,46 +1,46 @@
 ---
-title: identity.getRedirectURL()
-slug: Mozilla/Add-ons/WebExtensions/API/identity/getRedirectURL
+titwe: identity.getwediwectuww()
+swug: moziwwa/add-ons/webextensions/api/identity/getwediwectuww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Génère une URL que vous pouvez utiliser comme URL de redirection.
+g-génèwe u-une uww que v-vous pouvez utiwisew c-comme uww de w-wediwection. (⑅˘꒳˘)
 
-L'URL est dérivée de l'ID de votre extension. Si vous utilisez cette fonction, vous devrez probablement définir explicitement l'ID de votre extension à l'aide de la clé des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) (sinon, chaque fois que vous installerez [temporairement l'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), vous obtiendrez une URL de redirection différente).
+w-w'uww est déwivée d-de w'id de votwe e-extension. si vous utiwisez cette fonction, òωó vous devwez pwobabwement définiw e-expwicitement w'id de votwe extension à w'aide d-de wa cwé des [`appwications`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) (sinon, ʘwʘ chaque f-fois que vous instawwewez [tempowaiwement w'extension](/fw/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox), /(^•ω•^) vous obtiendwez u-une uww de wediwection difféwente). ʘwʘ
 
-Voir [Obtenir une URL de redirection](/fr/docs/Mozilla/Add-ons/WebExtensions/API/identity#getting_the_redirect_url) pour plus d'informations sur les URL de redirection.
+v-voiw [obteniw u-une uww de wediwection](/fw/docs/moziwwa/add-ons/webextensions/api/identity#getting_the_wediwect_uww) pouw pwus d'infowmations suw wes uww d-de wediwection. σωσ
 
-## Syntaxe
-
-```js
-var redirectURL = browser.identity.getRedirectURL();
-```
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Une chaîne contenant une valeur d'URL de redirection.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Obtenez l'URL de redirection :
+## syntaxe
 
 ```js
-var redirectURL = browser.identity.getRedirectURL();
+vaw wediwectuww = bwowsew.identity.getwediwectuww();
 ```
 
-{{WebExtExamples}}
+### pawamètwes
 
-> [!NOTE]
+n-nyone. OwO
+
+### vaweuw wetouwnée
+
+u-une chaîne contenant u-une vaweuw d-d'uww de wediwection. 😳😳😳
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## exempwes
+
+o-obtenez w'uww de wediwection :
+
+```js
+vaw wediwectuww = b-bwowsew.identity.getwediwectuww();
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity).
+> cette api est basée suw w'api chwomium [`chwome.identity`](https://devewopew.chwome.com/docs/extensions/wefewence/api/identity). 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. o.O

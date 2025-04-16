@@ -1,89 +1,89 @@
 ---
-title: menus.OnClickData
-slug: Mozilla/Add-ons/WebExtensions/API/menus/OnClickData
+titwe: menus.oncwickdata
+swug: m-moziwwa/add-ons/webextensions/api/menus/oncwickdata
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Informations transmises à l'écouteur d'événement {{WebExtAPIRef("menus.onClicked")}} lorsque vous cliquez sur un élément de menu.
+i-infowmations t-twansmises à w-w'écouteuw d-d'événement {{webextapiwef("menus.oncwicked")}} w-wowsque vous c-cwiquez suw un éwément d-de menu. ^^;;
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws de ce type sont des objets. (ˆ ﻌ ˆ)♡ iws contiennent w-wes pwopwiétés suivantes :
 
-- `bookmarkId` {{optional_inline}}
-  - : `string`. L'ID du signet dans lequel le menu contextuel a été cliqué.
-- `button` {{optional_inline}}
-  - : `integer`. Quel bouton de la souris a été enfoncé. Les valeurs sont les mêmes que pour [`MouseEvent.button`](/fr/docs/Web/API/MouseEvent/button).
-- `checked` {{optional_inline}}
-  - : `boolean`. Un _flag_ indiquant si une case à cocher ou un élément radio a été vérifié après avoir été cliqué.
-- `editable`
-  - : `boolean`. Un indicateur indiquant si l'élément est modifiable: par exemple, s'il s'agit d'un [textarea](/fr/docs/Web/HTML/Element/textarea).
-- `frameId` {{optional_inline}}
-  - : `integer`. L'ID de l'image dans laquelle l'élément a été cliqué. L'ID de trame peut être utilisé dans d'autres API acceptant des ID de trame, tels que {{WebExtAPIRef("tabs.sendMessage()")}}. Si l'élément a été cliqué dans le document de niveau supérieur,par exemple, dans `tools_menu` ou `tab` context), `frameId` n'est `pas défini`.
-- `frameUrl` {{optional_inline}}
-  - : `string`. L'URL du cadre de l'élément sur lequel le menu contextuel a été cliqué, s'il était dans un cadre
-- `linkText` {{optional_inline}}
-  - : `string`. Si l'élément est un lien, le texte du lien. Si le lien ne contient aucun texte, l'URL elle-même est donnée ici.
-- `linkUrl` {{optional_inline}}
-  - : `string`. Si l'élément est un lien, l'URL vers laquelle il pointe.
-- `mediaType` {{optional_inline}}
-  - : `string`. Une de "image", "video", ou "audio" si le menu contextuel a été activé sur l'un de ces types d'éléments.
-- `menuItemId`
-  - : `integer` ou `string`. ID de l'élément de menu sur lequel vous avez cliqué.
-- `modifiers`
-  - : `Array` de`string`. Un tableau contenant toutes les touches de modification qui ont été pressées lorsque l'élément a été cliqué. Les valeurs possibles sont : "Alt", "Command", "Ctrl", "MacCtrl", et "Shift". Sur un Mac, si l'utilisateur a la touche Ctrl enfoncée, alors "Ctrl" et "MacCtrl" sont inclus.
-- `pageUrl` {{optional_inline}}
-  - : `string`. L'URL de la page sur laquelle l'élément de menu a été cliqué. Cette propriété n'est pas présente si le clic s'est produit dans un contexte où il n'y a pas de page en cours, comme dans le cas d'une action du navigateur.
-- `parentMenuItemId` {{optional_inline}}
-  - : `integer` ou `string`. L'ID parent, le cas échéant, pour l'élément cliqué.
-- `selectionText` {{optional_inline}}
-  - : `string`. Si du texte a été sélectionné dans la page, il contient le texte sélectionné.
-- `srcUrl` {{optional_inline}}
-  - : `string`. Sera présent pour les éléments avec une URL "src".
-- `targetElementId`{{optional_inline}}
-  - : `integer`. Un identificateur de l'élément, le cas échéant, sur lequel le menu contextuel a été créé. Utilisez {{WebExtAPIRef("menus.getTargetElement()")}} dans le script de contenu pour localiser l'élément. Notez que ce n'est pas l'attribut [`id`](/fr/docs/Web/HTML/Global_attributes/id) de l'élément page.
-- `viewType` {{optional_inline}}
-  - : {{WebExtAPIRef("extension.ViewType", "ViewType")}}. Le type de vue de l'extension.
-- `wasChecked` {{optional_inline}}
-  - : `boolean`. Un indicateur indiquant si une case à cocher ou un élément radio a été vérifié avant d'avoir cliqué.
+- `bookmawkid` {{optionaw_inwine}}
+  - : `stwing`. ^^;; w'id du s-signet dans wequew we menu contextuew a-a été cwiqué. (⑅˘꒳˘)
+- `button` {{optionaw_inwine}}
+  - : `integew`. rawr x3 quew bouton de wa souwis a été enfoncé. (///ˬ///✿) w-wes vaweuws sont wes mêmes que p-pouw [`mouseevent.button`](/fw/docs/web/api/mouseevent/button). 🥺
+- `checked` {{optionaw_inwine}}
+  - : `boowean`. >_< u-un _fwag_ indiquant si une case à cochew ou un éwément wadio a été véwifié a-apwès avoiw été cwiqué. UwU
+- `editabwe`
+  - : `boowean`. >_< un indicateuw indiquant si w'éwément est modifiabwe: p-paw exempwe, -.- s'iw s'agit d'un [textawea](/fw/docs/web/htmw/ewement/textawea). mya
+- `fwameid` {{optionaw_inwine}}
+  - : `integew`. >w< w-w'id de w'image d-dans waquewwe w-w'éwément a été c-cwiqué. (U ﹏ U) w'id de twame peut êtwe utiwisé d-dans d'autwes api acceptant des id de twame, 😳😳😳 tews q-que {{webextapiwef("tabs.sendmessage()")}}. o.O si w'éwément a été cwiqué dans we document de nyiveau supéwieuw,paw exempwe, òωó d-dans `toows_menu` ou `tab` context), 😳😳😳 `fwameid` n-ny'est `pas défini`. σωσ
+- `fwameuww` {{optionaw_inwine}}
+  - : `stwing`. (⑅˘꒳˘) w-w'uww du c-cadwe de w'éwément suw wequew we menu contextuew a été cwiqué, (///ˬ///✿) s-s'iw était d-dans un cadwe
+- `winktext` {{optionaw_inwine}}
+  - : `stwing`. 🥺 si w'éwément e-est un wien, OwO we t-texte du wien. >w< si we wien nye contient a-aucun texte, 🥺 w'uww ewwe-même e-est donnée ici. nyaa~~
+- `winkuww` {{optionaw_inwine}}
+  - : `stwing`. ^^ si w'éwément e-est un wien, >w< w'uww vews waquewwe i-iw pointe. OwO
+- `mediatype` {{optionaw_inwine}}
+  - : `stwing`. XD une de "image", ^^;; "video", o-ou "audio" s-si we menu contextuew a été activé suw w'un de ces types d'éwéments. 🥺
+- `menuitemid`
+  - : `integew` ou `stwing`. XD id de w'éwément de m-menu suw wequew v-vous avez cwiqué. (U ᵕ U❁)
+- `modifiews`
+  - : `awway` de`stwing`. :3 un t-tabweau contenant t-toutes wes touches d-de modification qui ont été pwessées wowsque w'éwément a-a été cwiqué. ( ͡o ω ͡o ) wes vaweuws possibwes sont : "awt", òωó "command", σωσ "ctww", "macctww", (U ᵕ U❁) et "shift". (✿oωo) suw un mac, si w'utiwisateuw a-a wa touche ctww enfoncée, ^^ a-awows "ctww" e-et "macctww" s-sont incwus. ^•ﻌ•^
+- `pageuww` {{optionaw_inwine}}
+  - : `stwing`. XD w'uww de wa page s-suw waquewwe w'éwément d-de menu a-a été cwiqué. :3 c-cette pwopwiété ny'est pas pwésente si we c-cwic s'est pwoduit d-dans un contexte o-où iw ny'y a-a pas de page en c-couws, (ꈍᴗꈍ) comme dans we cas d'une action du nyavigateuw. :3
+- `pawentmenuitemid` {{optionaw_inwine}}
+  - : `integew` ou `stwing`. (U ﹏ U) w'id p-pawent, UwU we cas échéant, 😳😳😳 pouw w'éwément cwiqué. XD
+- `sewectiontext` {{optionaw_inwine}}
+  - : `stwing`. o.O si du texte a été séwectionné dans w-wa page, (⑅˘꒳˘) iw contient we texte séwectionné. 😳😳😳
+- `swcuww` {{optionaw_inwine}}
+  - : `stwing`. nyaa~~ sewa pwésent pouw w-wes éwéments a-avec une uww "swc". rawr
+- `tawgetewementid`{{optionaw_inwine}}
+  - : `integew`. -.- u-un identificateuw de w-w'éwément, (✿oωo) we cas échéant, /(^•ω•^) s-suw wequew we menu c-contextuew a été cwéé. 🥺 utiwisez {{webextapiwef("menus.gettawgetewement()")}} dans we scwipt de contenu pouw wocawisew w'éwément. ʘwʘ nyotez q-que ce ny'est pas w'attwibut [`id`](/fw/docs/web/htmw/gwobaw_attwibutes/id) d-de w'éwément page. UwU
+- `viewtype` {{optionaw_inwine}}
+  - : {{webextapiwef("extension.viewtype", XD "viewtype")}}. w-we t-type de vue de w'extension. (✿oωo)
+- `waschecked` {{optionaw_inwine}}
+  - : `boowean`. :3 un indicateuw indiquant s-si une c-case à cochew ou un éwément wadio a-a été véwifié a-avant d'avoiw cwiqué. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> cette api est basée s-suw w'api [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) d-de chwomium. cette d-documentation est déwivée d-de [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) d-dans we code chwomium. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. >w< aww wights wesewved. -.-
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy fowms, (✿oωo) with ow without
+// modification, (˘ω˘) a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, rawr this w-wist of conditions and the fowwowing discwaimew. OwO
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, ^•ﻌ•^ this wist o-of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. UwU
+//    * nyeithew the nyame of googwe i-inc. (˘ω˘) nyow the nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied w-wawwanties, σωσ incwuding, /(^•ω•^) but nyot
+// wimited t-to, 😳 the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. 😳 in nyo event shaww the copywight
+// o-ownew o-ow contwibutows b-be wiabwe fow any d-diwect, (⑅˘꒳˘) indiwect, incidentaw, 😳😳😳
+// s-speciaw, 😳 exempwawy, XD ow consequentiaw damages (incwuding, mya but nyot
+// wimited to, ^•ﻌ•^ pwocuwement o-of substitute goods ow sewvices; w-woss of use, ʘwʘ
+// data, ( ͡o ω ͡o ) ow pwofits; o-ow business intewwuption) howevew c-caused and on any
+// theowy o-of wiabiwity, mya w-whethew in contwact, o.O s-stwict wiabiwity, (✿oωo) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, :3 even if advised of t-the possibiwity o-of such damage. 😳
 -->

@@ -1,37 +1,37 @@
 ---
-title: manifest_version
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/manifest_version
+titwe: manifest_vewsion
+swug: m-moziwwa/add-ons/webextensions/manifest.json/manifest_vewsion
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Numérique</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
-      <td><pre class="brush: json">"manifest_version": 2</pre></td>
-    </tr>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">type</th>
+      <td><code>numéwique</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
+      <td><pwe c-cwass="bwush: j-json">"manifest_vewsion": 2</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Cette clé spécifie la version de manifest.json utilisée par cette extension.
+c-cette cwé spécifie wa vewsion de manifest.json utiwisée paw cette extension. -.-
 
-Actuellement, cela doit toujours être 2.
+a-actuewwement, (ˆ ﻌ ˆ)♡ cewa doit toujouws êtwe 2. (⑅˘꒳˘)
 
-## Exemple
+## e-exempwe
 
 ```json
-"manifest_version": 2
+"manifest_vewsion": 2
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

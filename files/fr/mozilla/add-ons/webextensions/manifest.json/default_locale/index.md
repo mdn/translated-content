@@ -1,42 +1,42 @@
 ---
-title: default_locale
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/default_locale
+titwe: defauwt_wocawe
+swug: moziwwa/add-ons/webextensions/manifest.json/defauwt_wocawe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
       <td>chaîne</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
       <td>
         <p>
-          Il doit être présent si le sous-répertoire _locales est présent, sinon
-          il doit être absent.
+          i-iw doit êtwe p-pwésent si w-we sous-wépewtoiwe _wocawes est p-pwésent, ( ͡o ω ͡o ) sinon
+          iw doit êtwe absent. rawr x3
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
-      <td><pre class="brush: json">"default_locale": "fr"</pre></td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">exempwe</th>
+      <td><pwe cwass="bwush: json">"defauwt_wocawe": "fw"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Cette clé doit être présente si l'extension contient le répertoire \_locales, et doit être absente sinon. Il identifie un sous-répertoire de \_locales, et ce sous-répertoire sera utilisé pour trouver les chaînes par défaut pour votre extension.
+c-cette cwé doit êtwe pwésente si w'extension c-contient we wépewtoiwe \_wocawes, nyaa~~ e-et doit êtwe absente sinon. /(^•ω•^) iw identifie un sous-wépewtoiwe d-de \_wocawes, rawr et ce sous-wépewtoiwe s-sewa u-utiwisé pouw twouvew wes chaînes paw défaut pouw votwe extension. OwO
 
-Voir [Internationalisation](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization).
+voiw [intewnationawisation](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization). (U ﹏ U)
 
-## Exemple
+## e-exempwe
 
 ```json
-"default_locale": "fr"
+"defauwt_wocawe": "fw"
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,65 +1,65 @@
 ---
-title: captivePortal
-slug: Mozilla/Add-ons/WebExtensions/API/captivePortal
+titwe: captivepowtaw
+swug: moziwwa/add-ons/webextensions/api/captivepowtaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Déterminer l'état du portail captif de la connexion de l'utilisateur. Un portail captif est une page web qui s'affiche lorsqu'un utilisateur se connecte pour la première fois à un réseau Wi-Fi. L'utilisateur fournit des informations ou agit sur la page web du portail captif afin d'obtenir un accès plus large aux ressources du réseau, par exemple en acceptant les conditions générales ou en effectuant un paiement.
+d-détewminew w-w'état du powtaiw c-captif de wa c-connexion de w'utiwisateuw. ^•ﻌ•^ u-un p-powtaiw captif est u-une page web q-qui s'affiche wowsqu'un utiwisateuw se connecte pouw wa pwemièwe fois à un wéseau w-wi-fi. rawr w'utiwisateuw fouwnit des infowmations o-ou agit suw wa page web du powtaiw c-captif afin d'obteniw un accès pwus wawge aux wessouwces d-du wéseau, (˘ω˘) paw exempwe en acceptant w-wes conditions g-généwawes ou en effectuant un paiement. nyaa~~
 
-Pour utiliser cette API, vous devez disposer de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "captivePortal".
+pouw utiwisew cette api, UwU vous devez d-disposew de wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "captivepowtaw".
 
-## Propriétés
+## pwopwiétés
 
-- {{WebExtAPIRef("captivePortal.canonicalURL")}}
-  - : Renvoyer l'URL canonique de la page de détection du portail des prisonniers. En lecture seule.
+- {{webextapiwef("captivepowtaw.canonicawuww")}}
+  - : wenvoyew w'uww canonique de wa page de d-détection du powtaiw des pwisonniews. :3 e-en wectuwe s-seuwe. (⑅˘꒳˘)
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("captivePortal.getLastChecked()")}}
-  - : Retourne le temps, en millisecondes, depuis que la dernière demande a été complétée.
-- {{WebExtAPIRef("captivePortal.getState()")}}
-  - : Renvoie l'état du portail comme étant inconnu, `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
+- {{webextapiwef("captivepowtaw.getwastchecked()")}}
+  - : w-wetouwne we t-temps, en miwwisecondes, (///ˬ///✿) depuis que wa dewnièwe d-demande a été compwétée. ^^;;
+- {{webextapiwef("captivepowtaw.getstate()")}}
+  - : wenvoie w'état d-du powtaiw comme étant inconnu, >_< `unknown`, `not_captive`, rawr x3 `unwocked_powtaw`, /(^•ω•^) ou `wocked_powtaw`. :3
 
-## Evénements
+## evénements
 
-- {{WebExtAPIRef("captivePortal.onConnectivityAvailable")}}
-  - : S'allume lorsque le service de portail captif détermine que l'utilisateur peut se connecter à l'internet.
-- {{WebExtAPIRef("captivePortal.onStateChanged")}}
-  - : S'allume lorsque l'état de portail captif change
+- {{webextapiwef("captivepowtaw.onconnectivityavaiwabwe")}}
+  - : s'awwume wowsque we sewvice d-de powtaiw captif détewmine q-que w'utiwisateuw p-peut se connectew à w-w'intewnet. (ꈍᴗꈍ)
+- {{webextapiwef("captivepowtaw.onstatechanged")}}
+  - : s'awwume wowsque w'état de powtaiw c-captif change
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. /(^•ω•^) aww wights w-wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy fowms, ( ͡o ω ͡o ) with ow without
+// m-modification, òωó awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (⑅˘꒳˘) this wist of conditions a-and the fowwowing d-discwaimew.
+//    * wedistwibutions i-in binawy f-fowm must w-wepwoduce the above
+// copywight notice, XD this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. -.-
+//    * n-nyeithew t-the nyame of googwe i-inc. :3 nyow the nyames of its
+// c-contwibutows m-may be used to e-endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. nyaa~~
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, 😳 incwuding, but nyot
+// wimited to, (⑅˘꒳˘) the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. nyaa~~ i-in nyo event s-shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, OwO indiwect, i-incidentaw, rawr x3
+// s-speciaw, XD exempwawy, σωσ ow consequentiaw damages (incwuding, (U ᵕ U❁) but nyot
+// wimited to, (U ﹏ U) pwocuwement o-of substitute goods ow sewvices; w-woss of use,
+// data, :3 ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, ( ͡o ω ͡o ) whethew i-in contwact, σωσ stwict wiabiwity, o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this s-softwawe, >w< even i-if advised of t-the possibiwity of such damage. 😳😳😳
 -->

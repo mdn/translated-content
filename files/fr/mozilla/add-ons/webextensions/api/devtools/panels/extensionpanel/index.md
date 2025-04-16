@@ -1,84 +1,84 @@
 ---
-title: devtools.panels.ExtensionPanel
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel
+titwe: devtoows.panews.extensionpanew
+swug: moziwwa/add-ons/webextensions/api/devtoows/panews/extensionpanew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Une `ExtensionPanel` représente un panneau ajouté aux devtools. C'est la résolution de la [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) renvoyé par [`browser.devtools.panels.create()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create).
+u-une `extensionpanew` w-wepwésente u-un panneau a-ajouté aux devtoows. >_< c-c'est wa w-wésowution de w-wa [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) w-wenvoyé paw [`bwowsew.devtoows.panews.cweate()`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/cweate).
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Définissez deux événements, `onShown` et `onHidden`.
+wes vaweuws de ce type sont des objets. rawr x3 d-définissez deux événements, /(^•ω•^) `onshown` et `onhidden`. :3
 
-- `onShown` est émis lorsque le panneau est affiché dans les devtools (par exemple, quand l'utilisateur a cliqué sur le panneau dans la fenêtre des devtools).
-- `onHidden` est émis lorsque le panneau est caché (par exemple, quand l'utilisateur a basculé sur un onglet différent dans la fenêtre devtools).
+- `onshown` est émis w-wowsque we panneau est affiché d-dans wes devtoows (paw exempwe, (ꈍᴗꈍ) quand w'utiwisateuw a cwiqué suw w-we panneau dans wa fenêtwe des d-devtoows). /(^•ω•^)
+- `onhidden` e-est émis wowsque we panneau est caché (paw exempwe, (⑅˘꒳˘) quand w'utiwisateuw a-a bascuwé suw un ongwet difféwent dans wa fenêtwe devtoows). ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code crée un nouveau panneau, puis ajoute des gestionnaires pour ces événements `onShown` et `onHidden`.
+c-ce code cwée u-un nyouveau panneau, òωó p-puis ajoute d-des gestionnaiwes pouw ces événements `onshown` et `onhidden`. (⑅˘꒳˘)
 
 ```js
-function handleShown(e) {
-  console.log(e);
-  console.log("panel is being shown");
+f-function handweshown(e) {
+  consowe.wog(e);
+  c-consowe.wog("panew is being shown");
 }
 
-function handleHidden(e) {
-  console.log(e);
-  console.log("panel is being hidden");
+function handwehidden(e) {
+  consowe.wog(e);
+  consowe.wog("panew is being hidden");
 }
 
-browser.devtools.panels
-  .create(
-    "My Panel", // title
-    "icons/star.png", // icon
-    "devtools/panel/panel.html", // content
+b-bwowsew.devtoows.panews
+  .cweate(
+    "my panew", XD // titwe
+    "icons/staw.png", -.- // i-icon
+    "devtoows/panew/panew.htmw", :3 // c-content
   )
-  .then((newPanel) => {
-    newPanel.onShown.addListener(handleShown);
-    newPanel.onHidden.addListener(handleHidden);
+  .then((newpanew) => {
+    n-nyewpanew.onshown.addwistenew(handweshown);
+    nyewpanew.onhidden.addwistenew(handwehidden);
   });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> cette api est basée suw w-w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. 😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. (⑅˘꒳˘) a-aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, OwO with ow without
+// modification, rawr x3 a-awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, XD t-this wist of conditions and the fowwowing discwaimew. σωσ
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, (U ᵕ U❁) t-this wist of conditions and t-the fowwowing discwaimew
+// i-in the d-documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. (U ﹏ U)
+//    * n-nyeithew the n-nyame of googwe i-inc. :3 nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, incwuding, ( ͡o ω ͡o ) b-but nyot
+// w-wimited to, σωσ the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. >w< in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, 😳😳😳 indiwect, incidentaw, OwO
+// s-speciaw, 😳 exempwawy, 😳😳😳 o-ow consequentiaw d-damages (incwuding, (˘ω˘) but not
+// wimited to, ʘwʘ pwocuwement o-of substitute g-goods ow sewvices; woss o-of use, ( ͡o ω ͡o )
+// data, o-ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, o.O w-whethew i-in contwact, stwict w-wiabiwity, >w< ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way o-out of the use
+// of this softwawe, 😳 even if advised of the possibiwity of such d-damage. 🥺
 -->

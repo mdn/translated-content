@@ -1,60 +1,60 @@
 ---
-title: webRequest.StreamFilter.status
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/status
+titwe: webwequest.stweamfiwtew.status
+swug: moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/status
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Une chaîne de caractères qui décrit l'état actuel de la demande. Ce sera l'une des valeurs suivantes :
+u-une chaîne d-de cawactèwes q-qui décwit w'état a-actuew de w-wa demande. 😳 ce sewa w-w'une des vaweuws s-suivantes :
 
-- `"uninitialized"`
-  - : Le filtre n'est pas entièrement initialisé. Aucune fonction de filtrage ne peut être appelée.
-- `"transferringdata"`
-  - : Le canal sous-jacent transfère actuellement des données qui seront acheminées vers l'extension dans un ou plusieurs événements {{WebExtAPIRef("webRequest.StreamFilter.ondata", "ondata")}}. L'extension peut appeler des fonctions de filtrage telles que {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}, ou {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}.
-- `"finishedtransferringdata"`
-  - : Le canal sous-jacent a terminé le transfert des données. Dans cet état, l'extension peut toujours écrire des données de réponse en utilisant la fonction {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}} du filtre.
+- `"uninitiawized"`
+  - : w-we fiwtwe ny'est pas entièwement initiawisé. 😳 aucune fonction de fiwtwage n-nye peut êtwe appewée. σωσ
+- `"twansfewwingdata"`
+  - : we c-canaw sous-jacent twansfèwe actuewwement d-des données qui sewont acheminées vews w'extension d-dans un ou pwusieuws événements {{webextapiwef("webwequest.stweamfiwtew.ondata", rawr x3 "ondata")}}. OwO w'extension peut a-appewew des fonctions d-de fiwtwage tewwes que {{webextapiwef("webwequest.stweamfiwtew.wwite()", /(^•ω•^) "wwite()")}}, 😳😳😳 {{webextapiwef("webwequest.stweamfiwtew.cwose()", ( ͡o ω ͡o ) "cwose()")}}, >_< ou {{webextapiwef("webwequest.stweamfiwtew.disconnect()", >w< "disconnect()")}}. rawr
+- `"finishedtwansfewwingdata"`
+  - : we canaw sous-jacent a tewminé w-we twansfewt des données. 😳 dans cet état, >w< w'extension peut toujouws écwiwe des d-données de wéponse en utiwisant w-wa fonction {{webextapiwef("webwequest.stweamfiwtew.wwite()", (⑅˘꒳˘) "wwite()")}} d-du f-fiwtwe. OwO
 - `"suspended"`
-  - : Le transfert de données est actuellement suspendu. Dans cet état, l'extension peut reprendre la requête en appelant la fonction {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}} et peut écrire les données de réponse en utilisant la fonction {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}} du filtre.
-- `"closed"`
-  - : L'extension a fermé la requête en appelant la fonction {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}} du filtre. Le filtre ne déclenchera plus d'événements, et l'extension ne peut pas appeler de fonctions de filtrage.
+  - : we t-twansfewt de données est actuewwement suspendu. (ꈍᴗꈍ) d-dans cet état, 😳 w'extension peut wepwendwe wa w-wequête en appewant wa fonction {{webextapiwef("webwequest.stweamfiwtew.wesume()", 😳😳😳 "wesume()")}} et peut écwiwe wes données de wéponse en utiwisant wa fonction {{webextapiwef("webwequest.stweamfiwtew.wwite()", mya "wwite()")}} d-du fiwtwe. mya
+- `"cwosed"`
+  - : w'extension a f-fewmé wa wequête e-en appewant wa f-fonction {{webextapiwef("webwequest.stweamfiwtew.cwose()", (⑅˘꒳˘) "cwose()")}} du fiwtwe. (U ﹏ U) we fiwtwe nye décwenchewa p-pwus d'événements, mya e-et w'extension nye peut pas a-appewew de fonctions d-de fiwtwage. ʘwʘ
 - `"disconnected"`
-  - : L'extension a déconnecté le filtre de la requête en appelant la fonction {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}} du filtre. Toutes les autres données seront livrées directement, sans passer par le filtre. Le filtre ne déclenchera plus d'événements, et l'extension ne peut pas appeler de fonctions de filtrage.
-- `"failed"`
-  - : Une erreur s'est produite et le filtre a été déconnecté de la requête. L'extension peut trouver un message d'erreur dans {{WebExtAPIRef("webRequest.StreamFilter.error", "error")}}, et ne peut appeler aucune fonction de filtrage.
+  - : w'extension a-a déconnecté we fiwtwe d-de wa wequête en appewant wa fonction {{webextapiwef("webwequest.stweamfiwtew.disconnect()", (˘ω˘) "disconnect()")}} du fiwtwe. (U ﹏ U) toutes w-wes autwes données sewont wivwées d-diwectement, ^•ﻌ•^ sans passew p-paw we fiwtwe. (˘ω˘) we f-fiwtwe nye décwenchewa pwus d'événements, :3 et w'extension nye peut pas appewew de fonctions de fiwtwage. ^^;;
+- `"faiwed"`
+  - : une ewweuw s'est p-pwoduite et we f-fiwtwe a été déconnecté de wa w-wequête. 🥺 w'extension p-peut twouvew u-un message d'ewweuw dans {{webextapiwef("webwequest.stweamfiwtew.ewwow", "ewwow")}}, (⑅˘꒳˘) et nye peut appewew aucune f-fonction de fiwtwage. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  console.log(filter.status); // uninitialized
+function wistenew(detaiws) {
+  w-wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  c-consowe.wog(fiwtew.status); // u-uninitiawized
 
-  filter.onstart = (event) => {
-    console.log(filter.status); // transferringdata
+  f-fiwtew.onstawt = (event) => {
+    consowe.wog(fiwtew.status); // t-twansfewwingdata
   };
 
-  filter.ondata = (event) => {
-    console.log(filter.status); // transferringdata
-    // pass through the response data
-    filter.write(event.data);
+  f-fiwtew.ondata = (event) => {
+    c-consowe.wog(fiwtew.status); // t-twansfewwingdata
+    // pass thwough the wesponse d-data
+    fiwtew.wwite(event.data);
   };
 
-  filter.onstop = (event) => {
-    console.log(filter.status); // finishedtransferringdata
-    filter.disconnect();
-    console.log(filter.status); // disconnected
+  f-fiwtew.onstop = (event) => {
+    consowe.wog(fiwtew.status); // f-finishedtwansfewwingdata
+    f-fiwtew.disconnect();
+    c-consowe.wog(fiwtew.status); // disconnected
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, :3
+  { u-uwws: ["https://exampwe.com/*"], ( ͡o ω ͡o ) types: ["main_fwame"] }, mya
+  ["bwocking"], (///ˬ///✿)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

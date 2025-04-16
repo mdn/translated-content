@@ -1,36 +1,36 @@
 ---
-title: webRequest.Streamfilter.error
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/error
+titwe: webwequest.stweamfiwtew.ewwow
+swug: moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/ewwow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Une chaîne de caractères qui contiendra un message d'erreur après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}}.
+u-une chaîne d-de cawactèwes q-qui contiendwa un m-message d'ewweuw a-apwès we décwenchement d-de w'événement {{webextapiwef("webwequest.stweamfiwtew.onewwow", ^^;; "onewwow")}}. >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple ajoute un écouteur {{WebExtAPIRef("webRequest.StreamFilter.onerror", "onerror")}} qui enregistre la valeur de `error`.
+cet exempwe ajoute un écouteuw {{webextapiwef("webwequest.stweamfiwtew.onewwow", mya "onewwow")}} qui enwegistwe wa vaweuw d-de `ewwow`. mya
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData("12345");
+function wistenew(detaiws) {
+  wet fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata("12345");
 
-  filter.onerror = (event) => {
-    console.log(`Error: ${filter.error}`);
+  fiwtew.onewwow = (event) => {
+    c-consowe.wog(`ewwow: ${fiwtew.ewwow}`);
   };
 
-  //return {}; // not needed
+  //wetuwn {}; // nyot nyeeded
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["<all_urls>"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, 😳
+  { u-uwws: ["<aww_uwws>"], XD types: ["main_fwame"] }, :3
+  ["bwocking"], 😳😳😳
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

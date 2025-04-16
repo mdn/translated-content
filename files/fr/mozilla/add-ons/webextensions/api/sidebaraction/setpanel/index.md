@@ -1,117 +1,117 @@
 ---
-title: sidebarAction.setPanel()
-slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setPanel
+titwe: sidebawaction.setpanew()
+swug: moziwwa/add-ons/webextensions/api/sidebawaction/setpanew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit le panneau de la barre latérale: c'est-à-dire le document HTML qui définit le contenu de cette barre latérale.
+d-définit w-we panneau de w-wa bawwe watéwawe: c-c'est-à-diwe w-we document htmw q-qui définit w-we contenu de cette b-bawwe watéwawe. >w<
 
-## Types de panneau
+## types de panneau
 
-Les barres latérales ont toujours un _"panneau manifest"_, qui est le panneau défini dans la clé de manifest [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action).
+wes bawwes watéwawes ont toujouws un _"panneau m-manifest"_, OwO qui est we panneau défini d-dans wa cwé de manifest [`sidebaw_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action). XD
 
-Si vous définissez un nouveau panneau à l'aide de `setPanel()`, et incluez l'option `tabId` le panneau est défini uniquement pour l'onglet donné. Ce panneau est appelé "tab-specific panel".
+s-si vous définissez un nyouveau panneau à w'aide de `setpanew()`, ^^;; e-et incwuez w'option `tabid` w-we panneau est d-défini uniquement pouw w'ongwet donné. 🥺 ce panneau est appewé "tab-specific panew". XD
 
-Si vous définissez un nouveau panneau en utilisant `setPanel()`, et incluez l'option `windowId`, alors le panneau n'est défini que pour la fenêtre donnée. Ce panneau est appelé _"panneau spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas d'ensemble de panneaux spécifiques aux onglets.
+si vous d-définissez un nyouveau panneau en utiwisant `setpanew()`, (U ᵕ U❁) et incwuez w'option `windowid`, :3 a-awows we panneau ny'est d-défini que p-pouw wa fenêtwe d-donnée. ( ͡o ω ͡o ) ce panneau e-est appewé _"panneau spécifique à wa fenêtwe"_, òωó e-et appawaîtwa dans tous wes ongwets de c-cette fenêtwe qui ny'ont pas d'ensembwe de panneaux spécifiques aux ongwets. σωσ
 
-Si vous définissez un nouveau panneau en utilisant `setPanel()`, et omettez les options `tabId` et `windowId`, alors ceci définit le _"panneau global"_. Le panneau global apparaîtra alors dans tous les onglets qui n'ont pas d'ensemble de panneaux spécifiques aux onglets et dont la fenêtre n'a pas de panneau spécifique à une fenêtre.
+si vous définissez u-un nyouveau panneau en utiwisant `setpanew()`, (U ᵕ U❁) e-et omettez w-wes options `tabid` e-et `windowid`, (✿oωo) awows ceci définit we _"panneau gwobaw"_. ^^ we p-panneau gwobaw a-appawaîtwa awows dans tous wes o-ongwets qui ny'ont p-pas d'ensembwe de panneaux spécifiques a-aux ongwets et dont wa f-fenêtwe ny'a pas de panneau spécifique à une f-fenêtwe. ^•ﻌ•^
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.sidebarAction.setPanel(
-  details, // object
+bwowsew.sidebawaction.setpanew(
+  d-detaiws, XD // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet avec les propriétés suivantes :
+  - : `object`. :3 u-un objet a-avec wes pwopwiétés suivantes :
 
-    - `panel`
+    - `panew`
 
-      - : `string` ou `null`. Le panneau à charger dans la barre latérale, spécifié comme une URL pointant vers un document HTML, ou `null`, ou une chaîne vide.
+      - : `stwing` ou `nuww`. (ꈍᴗꈍ) we panneau à chawgew dans wa bawwe watéwawe, :3 spécifié comme u-une uww pointant v-vews un document htmw, (U ﹏ U) ou `nuww`, UwU o-ou une chaîne v-vide. 😳😳😳
 
-        Ceci peut pointer vers un fichier empaqueté dans l'extension (for exemple, créé à l'aide de {{WebExtAPIRef("runtime.getURL")}}), ou un document distant (par exemple `https://example.org/`). Il doit s'agir d'une URL valide.
+        c-ceci peut pointew vews un fichiew empaqueté dans w'extension (fow e-exempwe, XD cwéé à w'aide de {{webextapiwef("wuntime.getuww")}}), o.O ou un document distant (paw e-exempwe `https://exampwe.owg/`). (⑅˘꒳˘) iw doit s'agiw d-d'une uww vawide. 😳😳😳
 
-        Si `panel` est `null` ou `""`,alors un panneau précédemment défini sera supprimé, de sorte que :
+        s-si `panew` est `nuww` o-ou `""`,awows un panneau pwécédemment d-défini s-sewa suppwimé, nyaa~~ d-de sowte que :
 
-        - Si `tabId` est spécifié, et que l'onglet a un jeu de panneaux spécifiques aux onglets, alors l'onglet héritera du panneau à partir de la fenêtre à laquelle il appartient.
-        - Si `windowId` est spécifié, et que la fenêtre a un jeu de panneaux spécifiques à la fenêtre, alors la fenêtre héritera du panneau global.
-        - Sinon, le panneau global sera réinitialisé au panneau manifest.
+        - s-si `tabid` est spécifié, rawr et que w'ongwet a un j-jeu de panneaux s-spécifiques aux o-ongwets, -.- awows w-w'ongwet héwitewa d-du panneau à pawtiw de wa fenêtwe à waquewwe iw appawtient.
+        - s-si `windowid` est spécifié, (✿oωo) et que wa fenêtwe a un jeu de panneaux spécifiques à w-wa fenêtwe, /(^•ω•^) awows wa fenêtwe héwitewa du panneau gwobaw.
+        - s-sinon, 🥺 we p-panneau gwobaw s-sewa wéinitiawisé au panneau m-manifest. ʘwʘ
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Définit le panneau uniquement pour l'onglet donné.
-    - `windowId` {{optional_inline}}
-      - : `integer`. Définit le panneau uniquement pour la fenêtre donnée.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. UwU définit we panneau u-uniquement p-pouw w'ongwet donné. XD
+    - `windowid` {{optionaw_inwine}}
+      - : `integew`. (✿oωo) définit we panneau uniquement pouw wa fenêtwe donnée. :3
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous les deux spécifiés, la fonction échoue et le panneau n'est pas défini.
-- Si `windowId` et `tabId` sont tous les deux omis, le panneau global est défini.
+- si `windowid` e-et `tabid` sont tous wes deux s-spécifiés, wa fonction échoue e-et we panneau n-ny'est pas défini. (///ˬ///✿)
+- si `windowid` et `tabid` sont t-tous wes deux o-omis, nyaa~~ we panneau gwobaw est défini. >w<
 
-## Exemples
+## e-exempwes
 
-Ce code bascule le document de la barre latérale lorsque l'utilisateur clique sur une action du navigateur :
+c-ce code bascuwe we document de wa bawwe watéwawe wowsque w'utiwisateuw cwique s-suw une action d-du nyavigateuw :
 
 ```js
-var thisPanel = browser.runtime.getURL("/this.html");
-var thatPanel = browser.runtime.getURL("/that.html");
+v-vaw thispanew = bwowsew.wuntime.getuww("/this.htmw");
+v-vaw thatpanew = b-bwowsew.wuntime.getuww("/that.htmw");
 
-function toggle(panel) {
-  if (panel === thisPanel) {
-    browser.sidebarAction.setPanel({ panel: thatPanel });
-  } else {
-    browser.sidebarAction.setPanel({ panel: thisPanel });
+function t-toggwe(panew) {
+  if (panew === thispanew) {
+    bwowsew.sidebawaction.setpanew({ panew: thatpanew });
+  } e-ewse {
+    b-bwowsew.sidebawaction.setpanew({ panew: thispanew });
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.sidebarAction.getPanel({}).then(toggle);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  b-bwowsew.sidebawaction.getpanew({}).then(toggwe);
 });
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+> cette api est basée suw w'api o-opewa [`chwome.sidebawaction`](https://dev.opewa.com/extensions/sidebaw-action-api/). -.-
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. (✿oωo)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (˘ω˘) a-aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, OwO with ow without
+// m-modification, ^•ﻌ•^ awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the a-above copywight
+// nyotice, UwU this w-wist of conditions a-and the fowwowing d-discwaimew. (˘ω˘)
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight n-nyotice, (///ˬ///✿) this wist o-of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// d-distwibution.
+//    * nyeithew the nyame of googwe inc. σωσ nyow the n-nyames of its
+// c-contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, 😳 i-incwuding, but nyot
+// wimited t-to, 😳 the impwied w-wawwanties of mewchantabiwity a-and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, 😳😳😳 indiwect, 😳 i-incidentaw,
+// s-speciaw, XD exempwawy, mya ow consequentiaw d-damages (incwuding, but nyot
+// wimited to, ^•ﻌ•^ pwocuwement o-of substitute goods o-ow sewvices; woss of use, ʘwʘ
+// d-data, ( ͡o ω ͡o ) ow pwofits; ow business intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, mya whethew i-in contwact, o.O s-stwict wiabiwity, (✿oωo) ow towt
+// (incwuding nyegwigence ow othewwise) awising in a-any way out of t-the use
+// of this s-softwawe, :3 even i-if advised of t-the possibiwity of such damage. 😳
 -->

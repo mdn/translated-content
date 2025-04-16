@@ -1,137 +1,137 @@
 ---
-title: cookies
-slug: Mozilla/Add-ons/WebExtensions/API/cookies
+titwe: cookies
+swug: moziwwa/add-ons/webextensions/api/cookies
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Permet aux extensions d'obtenir et de définir des cookies, et d'être averti quand ils changent.
+p-pewmet a-aux extensions d'obteniw e-et de définiw d-des cookies, XD e-et d'êtwe a-avewti quand iws c-changent. (U ﹏ U)
 
-Pour utiliser cette API, vous devez inclure l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour les sites dont vous devez accéder aux cookies. Voir les [permissions cookies](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#permissions).
+pouw u-utiwisew cette api, (˘ω˘) vous devez incwuwe w'[api pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "cookies" dans votwe fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json), UwU a-ainsi que wes [pewmissions d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) pouw wes s-sites dont vous devez accédew a-aux cookies. >_< voiw wes [pewmissions cookies](/fw/docs/moziwwa/add-ons/webextensions/api/cookies#pewmissions). σωσ
 
-## Permissions
+## pewmissions
 
-Pour utiliser cette API, un module complémentaire doit spécifier la [permission d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" dans son manifest, ainsi que les [permissions host](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour tous les sites pour lesquels il souhaite accéder aux cookies. L'add-on peut lire ou écrire des cookies qui pourraient être lus ou écrits par une URL correspondant aux permissions de l'hôte. Par exemple :
+pouw u-utiwisew cette api, 🥺 un moduwe c-compwémentaiwe d-doit spécifiew wa [pewmission d'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "cookies" dans son manifest, 🥺 ainsi que w-wes [pewmissions host](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) pouw tous wes sites pouw wesquews iw souhaite a-accédew aux cookies. ʘwʘ w'add-on p-peut wiwe o-ou écwiwe des c-cookies qui pouwwaient êtwe w-wus ou écwits paw une uww cowwespondant a-aux pewmissions de w'hôte. :3 paw exempwe :
 
-- `http://*.example.com/`
+- `http://*.exampwe.com/`
 
-  - : Un module complémentaire avec cette autorisation d'hôte peut :
+  - : u-un moduwe compwémentaiwe avec cette autowisation d'hôte peut :
 
-    - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
-    - Écrire un cookie ou non sécurisé pour `www.example.com`, avec n'importe quel chemin.
+    - wiwe un cookie nyon sécuwisé p-pouw `www.exampwe.com`, (U ﹏ U) avec ny'impowte q-quew chemin. (U ﹏ U)
+    - Écwiwe u-un cookie o-ou nyon sécuwisé pouw `www.exampwe.com`, ʘwʘ avec ny'impowte quew chemin. >w<
 
-    Il ne peut _pas_ :
+    i-iw nye peut _pas_ :
 
-    - Lire un cookie sécurisé pour `www.example.com`.
+    - w-wiwe un cookie sécuwisé p-pouw `www.exampwe.com`. rawr x3
 
-- `http://www.example.com/`
+- `http://www.exampwe.com/`
 
-  - : Un module complémentaire avec cette permission d'hôte peut :
+  - : u-un moduwe compwémentaiwe avec c-cette pewmission d'hôte peut :
 
-    - Lire un cookie non sécurisé pour `www.example.com`, avec n'importe quel chemin.
-    - Lire un cookie non sécurisé pour `.example.com`, avec n'importe quel chemin.
-    - Écrire un cookie sécurisé ou non sécurisé pour `www.example.com` avec n'importe quel chemin.
-    - Écrire un cookie sécurisé ou non sécurisé pour `.example.com` avec n'importe quel chemin.
+    - w-wiwe un cookie nyon sécuwisé pouw `www.exampwe.com`, OwO a-avec ny'impowte quew chemin.
+    - w-wiwe un cookie nyon sécuwisé p-pouw `.exampwe.com`, ^•ﻌ•^ a-avec ny'impowte quew chemin. >_<
+    - Écwiwe un cookie sécuwisé ou nyon sécuwisé pouw `www.exampwe.com` avec ny'impowte quew chemin. OwO
+    - Écwiwe u-un c-cookie sécuwisé ou nyon sécuwisé p-pouw `.exampwe.com` a-avec ny'impowte q-quew chemin. >_<
 
-    Il ne peut _pas_ :
+    iw nye peut _pas_ :
 
-    - Lire ou écrire un cookie pour `foo.example.com`.
-    - Lire ou écrire un cookie pour `foo.www.example.com`.
+    - wiwe ou écwiwe u-un cookie pouw `foo.exampwe.com`. (ꈍᴗꈍ)
+    - wiwe ou écwiwe un cookie pouw `foo.www.exampwe.com`. >w<
 
-- `*://*.example.com/`
+- `*://*.exampwe.com/`
 
-  - : Un module complémentaire avec çà permission d'hôtes n add-on with this host permission may:
+  - : u-un moduwe compwémentaiwe avec çà p-pewmission d-d'hôtes ny add-on w-with this host pewmission may:
 
-    - Read or write a secure or non-secure cookie for `www.example.com` with any path.
+    - w-wead o-ow wwite a secuwe o-ow nyon-secuwe c-cookie fow `www.exampwe.com` with any path. (U ﹏ U)
 
-## Isolement de la première partie
+## i-isowement de wa p-pwemièwe pawtie
 
-Les cookies tiers sont des cookies qui sont définis par un site Web autre que celui sur lequel vous êtes actuellement. Par exemple :
+w-wes cookies tiews s-sont des cookies q-qui sont définis paw un site web autwe que cewui suw wequew v-vous êtes actuewwement. ^^ paw exempwe :
 
-1. Vous visitez [bbc.com](http://bbc.com). Il contient une annonce de [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
-2. Vous visitez [cnn.com](http://cnn.com). Il contient également une annonce de [tracker.com](http://tracker.com) qui définit un cookie associé au domaine "[tracker.com](http://tracker.com)".
-3. Finalement, les deux cookies peuvent être envoyés à [tracker.com](http://tracker.com). qui peut alors comprendre que le même utilisateur a visité les deux sites.
+1. (U ﹏ U) vous visitez [bbc.com](http://bbc.com). :3 iw contient une annonce de [twackew.com](http://twackew.com) q-qui définit un cookie associé au domaine "[twackew.com](http://twackew.com)". (✿oωo)
+2. vous visitez [cnn.com](http://cnn.com). i-iw c-contient égawement u-une annonce de [twackew.com](http://twackew.com) q-qui définit un cookie associé a-au domaine "[twackew.com](http://twackew.com)". XD
+3. f-finawement, >w< wes deux cookies peuvent êtwe envoyés à [twackew.com](http://twackew.com). òωó qui peut awows compwendwe que w-we même utiwisateuw a visité w-wes deux sites. (ꈍᴗꈍ)
 
-Lorsque l'isolement de la première partie est activé, les cookies sont en outre qualifiés par le domaine de la page d'origine visitée par l'utilisateur (essentiellement, le domaine montré à l'utilisateur dans la barre d'URL, également appelé "première partie du domaine"). Cela signifie qu'un tracker ne peut pas corréler son cookie de [bbc.com](http://bbc.com) avec son cookie de [cnn.com](http://cnn.com), de sorte que le tracker ne peut pas suivre un seul utilisateur sur les deux sites.
+wowsque w'isowement d-de wa pwemièwe p-pawtie est activé, rawr x3 wes cookies sont en outwe q-quawifiés paw w-we domaine de wa page d'owigine v-visitée paw w'utiwisateuw (essentiewwement, rawr x3 we d-domaine montwé à w'utiwisateuw dans wa bawwe d'uww, σωσ égawement appewé "pwemièwe p-pawtie du d-domaine"). (ꈍᴗꈍ) cewa s-signifie qu'un twackew nye peut p-pas cowwéwew son c-cookie de [bbc.com](http://bbc.com) avec son cookie d-de [cnn.com](http://cnn.com), rawr de sowte que we twackew nye peut pas suivwe un seuw utiwisateuw s-suw wes deux s-sites. ^^;;
 
-L'isolement de la première partie peut être activé directement par l'utilisateur en ajustant la configuration du navigateur et peut être défini par des extensions à l'aide du paramètre [`firstPartyIsolate`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites#properties) de l'API de [`privacy`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy) Notez que l'isolation de première partie est activée par défaut dans le [Tor Browser](https://www.torproject.org/).
+w'isowement de wa pwemièwe pawtie peut êtwe a-activé diwectement p-paw w'utiwisateuw en ajustant wa configuwation du nyavigateuw e-et peut êtwe défini paw des extensions à w'aide du pawamètwe [`fiwstpawtyisowate`](/fw/docs/moziwwa/add-ons/webextensions/api/pwivacy/websites#pwopewties) de w'api d-de [`pwivacy`](/fw/docs/moziwwa/add-ons/webextensions/api/pwivacy) nyotez que w'isowation de pwemièwe p-pawtie est a-activée paw défaut dans we [tow bwowsew](https://www.towpwoject.owg/). rawr x3
 
-Dans l'API `cookies`, le domaine de première partie est représenté à l'aide de l'attribut `firstPartyDomain`. Tous les cookies configurés pendant l'isolement de la première partie ont cet attribut défini sur le domaine de la page d'origine. Dans l'exemple ci-dessus, ce serait "[bbc.com](http://bbc.com)" pour un cookie et "[cnn.com](http://cnn.com)" pour l'autre. Tous les cookies définis par les sites Web alors que l'isolation de première partie est désactivée auront cette propriété définie sur une chaîne vide.
+dans w-w'api `cookies`, (ˆ ﻌ ˆ)♡ w-we domaine de pwemièwe pawtie est wepwésenté à w'aide de w-w'attwibut `fiwstpawtydomain`. σωσ tous wes cookies c-configuwés pendant w'isowement de wa pwemièwe pawtie ont cet attwibut d-défini suw we domaine de w-wa page d'owigine. (U ﹏ U) d-dans w'exempwe ci-dessus, >w< ce s-sewait "[bbc.com](http://bbc.com)" pouw un cookie e-et "[cnn.com](http://cnn.com)" p-pouw w'autwe. σωσ t-tous wes cookies définis paw wes s-sites web awows q-que w'isowation de pwemièwe pawtie est désactivée a-auwont cette p-pwopwiété d-définie suw une chaîne vide. nyaa~~
 
-Le {{WebExtAPIRef("cookies.get()")}}, {{WebExtAPIRef("cookies.getAll()")}}, {{WebExtAPIRef("cookies.set()")}} et {{WebExtAPIRef("cookies.remove()")}} Les API acceptent toutes une option `firstPartyDomain`.
+we {{webextapiwef("cookies.get()")}}, 🥺 {{webextapiwef("cookies.getaww()")}}, rawr x3 {{webextapiwef("cookies.set()")}} et {{webextapiwef("cookies.wemove()")}} w-wes api acceptent toutes u-une option `fiwstpawtydomain`. σωσ
 
-Lorsque l'isolation de première partie est activée, vous devez fournir cette option ou les appels de l'API échoueront. Pour `get()`, `set()`, et `remove()` vous devez passer une valeur de chaîne de caractères.
+w-wowsque w'isowation de pwemièwe pawtie est activée, (///ˬ///✿) vous devez f-fouwniw cette option o-ou wes appews d-de w'api échouewont. p-pouw `get()`, `set()`, (U ﹏ U) et `wemove()` vous d-devez passew une vaweuw de chaîne de cawactèwes. ^^;;
 
-Pour `getAll()`, vous pouvez aussi passer `null` ici, et ceci obtiendra tous les cookies,
-qu'ils aient ou non une valeur non vide pour `firstPartyDomain.`
+pouw `getaww()`, 🥺 vous pouvez aussi passew `nuww` i-ici, òωó et ceci obtiendwa t-tous wes cookies,
+qu'iws aient ou n-nyon une vaweuw nyon vide pouw `fiwstpawtydomain.`
 
-Lorsque l'isolation de la première partie est désactivée, le paramètre `firstPartyDomain` est optionnel et par défaut est une chaîne vide. Une chaîne non vide peut être utilisée pour récupérer ou modifier les cookies d'isolation de première partie. De même, passer `null` comme `firstPartyDomain` pour `getAll()` retournera tous les cookies.
+w-wowsque w'isowation de wa p-pwemièwe pawtie e-est désactivée, XD w-we pawamètwe `fiwstpawtydomain` e-est optionnew e-et paw défaut est une chaîne vide. :3 une chaîne nyon vide peut êtwe utiwisée pouw wécupéwew ou modifiew wes c-cookies d'isowation d-de pwemièwe p-pawtie. (U ﹏ U) de même, >w< passew `nuww` c-comme `fiwstpawtydomain` pouw `getaww()` wetouwnewa tous wes c-cookies.
 
-## Types
+## types
 
-- {{WebExtAPIRef("cookies.Cookie")}}
-  - : Représente les informations sur un cookie HTTP.
-- {{WebExtAPIRef("cookies.CookieStore")}}
-  - : Représente un cookie store dans le navigateur.
-- {{WebExtAPIRef("cookies.OnChangedCause")}}
-  - : Représente la raison pour laquelle un cookie a été modifié.
-- {{WebExtAPIRef("cookies.SameSiteStatus")}}
-  - : Représente le même statut du cookie sur le site.
+- {{webextapiwef("cookies.cookie")}}
+  - : w-wepwésente wes infowmations suw u-un cookie http. /(^•ω•^)
+- {{webextapiwef("cookies.cookiestowe")}}
+  - : wepwésente un cookie stowe dans w-we nyavigateuw. (⑅˘꒳˘)
+- {{webextapiwef("cookies.onchangedcause")}}
+  - : w-wepwésente wa waison pouw w-waquewwe un cookie a-a été modifié. ʘwʘ
+- {{webextapiwef("cookies.samesitestatus")}}
+  - : wepwésente we même statut du cookie suw we site. rawr x3
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("cookies.get()")}}
-  - : Récupère les informations sur un cookie unique.
-- {{WebExtAPIRef("cookies.getAll()")}}
-  - : Récupère tous les cookies correspondant à un ensemble de filtres données.
-- {{WebExtAPIRef("cookies.set()")}}
-  - : Définit un cookie avec les données d'un cookie donné ; peut remplacer les cookies équivalents s'ils existent.
-- {{WebExtAPIRef("cookies.remove()")}}
-  - : Supprime un cookie par son nom.
-- {{WebExtAPIRef("cookies.getAllCookieStores()")}}
-  - : Liste tous les cookies stores existants.
+- {{webextapiwef("cookies.get()")}}
+  - : w-wécupèwe wes i-infowmations s-suw un cookie unique. (˘ω˘)
+- {{webextapiwef("cookies.getaww()")}}
+  - : w-wécupèwe tous w-wes cookies cowwespondant à un ensembwe de fiwtwes d-données. o.O
+- {{webextapiwef("cookies.set()")}}
+  - : d-définit un cookie avec w-wes données d-d'un cookie donné ; peut wempwacew w-wes cookies équivawents s'iws existent. 😳
+- {{webextapiwef("cookies.wemove()")}}
+  - : s-suppwime un cookie paw s-son nyom. o.O
+- {{webextapiwef("cookies.getawwcookiestowes()")}}
+  - : w-wiste tous wes cookies stowes e-existants. ^^;;
 
-## Gestionnaire d'événements
+## gestionnaiwe d'événements
 
-- {{WebExtAPIRef("cookies.onChanged")}}
-  - : Détails quand un cookie est défini ou supprimé.
+- {{webextapiwef("cookies.onchanged")}}
+  - : détaiws q-quand un cookie e-est défini o-ou suppwimé. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> cette api e-est basée suw w'api chwomium [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies). ^^;; cette documentation e-est d-déwivée de [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) dans we code chwomium. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. XD a-aww wights w-wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, (///ˬ///✿) with ow without
+// modification, (U ᵕ U❁) a-awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, ^^;; this wist of conditions and the fowwowing discwaimew.
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, ^^;; this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. rawr
+//    * nyeithew t-the nyame of googwe inc. (˘ω˘) nyow the n-nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow wwitten pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as i-is" and any e-expwess ow impwied w-wawwanties, nyaa~~ i-incwuding, :3 but not
+// wimited to, /(^•ω•^) t-the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. ^•ﻌ•^ in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any d-diwect, UwU indiwect, 😳😳😳 incidentaw, OwO
+// s-speciaw, ^•ﻌ•^ exempwawy, ow consequentiaw d-damages (incwuding, (ꈍᴗꈍ) but nyot
+// w-wimited to, (⑅˘꒳˘) pwocuwement of s-substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, (ˆ ﻌ ˆ)♡ ow pwofits; ow business intewwuption) h-howevew caused and on a-any
+// theowy of w-wiabiwity, /(^•ω•^) whethew in contwact, òωó stwict wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any w-way out of the u-use
+// of this softwawe, (U ᵕ U❁) even if advised of the p-possibiwity of s-such damage. >w<
 -->

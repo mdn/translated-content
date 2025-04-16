@@ -1,122 +1,122 @@
 ---
-title: Définir la taille des éléments en CSS
-slug: Learn/CSS/Building_blocks/Sizing_items_in_CSS
+titwe: définiw wa taiwwe des éwéments e-en css
+s-swug: weawn/css/buiwding_bwocks/sizing_items_in_css
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}Dans les différentes leçons vues jusqu'à présent vous avez rencontré de nombreuses manières de dimensionner les éléments sur une page en utilisant CSS. Comprendre le dimensionnement des différentes caractéristiques de votre design est important. Cette leçon résumera les diverses méthodes pour appliquer une taille via CSS et définira également quelques termes au sujet du dimensionnement qui vous aideront dans le futur.
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/vawues_and_units", >_< "weawn/css/buiwding_bwocks/images_media_fowm_ewements", (˘ω˘) "weawn/css/buiwding_bwocks")}}dans w-wes difféwentes w-weçons v-vues jusqu'à pwésent v-vous avez w-wencontwé de n-nyombweuses manièwes de dimensionnew wes éwéments suw une page en utiwisant css. 😳 c-compwendwe we dimensionnement des difféwentes c-cawactéwistiques de votwe design e-est impowtant. o.O cette weçon wésumewa wes divewses méthodes p-pouw appwiquew une taiwwe via c-css et définiwa égawement q-quewques tewmes au sujet du dimensionnement qui vous aidewont dans we f-futuw. (ꈍᴗꈍ)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
         <p>
-          Maîtrise élémentaire de l'informatique,
+          maîtwise éwémentaiwe de w-w'infowmatique,
           <a
-            href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-            >suite logicielle de base installée</a
-          >, compétences élémentaires pour
+            hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+            >suite w-wogiciewwe d-de base instawwée</a
+          >, rawr x3 c-compétences éwémentaiwes p-pouw
           <a
-            href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-            >travailler avec des fichiers</a
-          >, connaissance de base du HTML (cf.
-          <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-            >Introduction à HTML</a
-          >), et une idée de
-          <a href="/fr/docs/Learn/CSS/First_steps">Comment fonctionne CSS</a>.
+            hwef="/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+            >twavaiwwew avec des fichiews</a
+          >, ^^ c-connaissance de base du htmw (cf. OwO
+          <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+            >intwoduction à h-htmw</a
+          >), ^^ et une idée de
+          <a hwef="/fw/docs/weawn/css/fiwst_steps">comment fonctionne css</a>. :3
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
-      <td>Découvrir comment spécifier la taille des éléments en CSS.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif :</th>
+      <td>découvwiw comment s-spécifiew wa taiwwe d-des éwéments e-en css.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## La taille naturelle ou intrinsèque des choses
+## wa taiwwe nyatuwewwe ou intwinsèque des choses
 
-Tous les éléments HTML ont une taille « naturelle », définie avant toute modification par CSS. Un exemple parlant est celui d'un élément image. Une image a une largeur et une hauteur définies dans le fichier image qu'elle incorpore dans la page. On parle d'une **taille intrinsèque** — qui provient de l'image elle-même.
+t-tous wes éwéments h-htmw ont une taiwwe « n-nyatuwewwe », o.O définie a-avant toute modification p-paw css. -.- un exempwe pawwant est c-cewui d'un éwément image. (U ﹏ U) une image a une wawgeuw e-et une hauteuw définies dans w-we fichiew image qu'ewwe incowpowe d-dans wa page. o.O o-on pawwe d'une **taiwwe intwinsèque** — qui pwovient de w'image ewwe-même. OwO
 
-Si vous placez une image dans une page sans modifier sa hauteur ni sa largeur (que ce soit à en utilisant un attribut sur la balise `<img>` ou avec CSS), cela l'affichera en utilisant sa taille intrinsèque. Ci-dessous nous avons l'exemple d'une image à laquelle nous avons ajouté une bordure afin de bien délimiter sa taille.
+si vous pwacez une image dans une page sans m-modifiew sa hauteuw n-nyi sa wawgeuw (que ce soit à e-en utiwisant u-un attwibut suw w-wa bawise `<img>` ou avec css), ^•ﻌ•^ cewa w'affichewa en utiwisant sa t-taiwwe intwinsèque. ʘwʘ ci-dessous nyous avons w'exempwe d'une image à waquewwe nyous a-avons ajouté une bowduwe afin d-de bien déwimitew s-sa taiwwe. :3
 
-{{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-image.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/sizing/intwinsic-image.htmw", 😳 '100%', 600)}}
 
-Un élément [`<div>`](/fr/docs/Web/HTML/Element/div) vide en revanche, n'a pas de taille en soi. Si vous ajouter une [`<div>`](/fr/docs/Web/HTML/Element/div) à votre HTML sans aucun contenu à l'intérieur, et que vous lui ajouter une bordure comme nous l'avons fait avec l'image ci-dessus, vous verrez une ligne s'afficher sur la page. Cette ligne résulte de la juxtaposition des bordures horizontales, car il n'y a aucun contenu entre les deux. De plus les bordures s'étendent sur toute la largeur disponible du conteneur, car il s'agit d'un élément de bloc. Un comportement avec lequel vous devriez déjà être familiarisé. Cet élément n'a pas de hauteur (ou plutôt pas de taille dans l'axe de bloc), car il n'y a pas de contenu à l'intérieur de celui-ci.
+u-un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) vide en wevanche, òωó n-ny'a pas de taiwwe e-en soi. 🥺 si vous a-ajoutew une [`<div>`](/fw/docs/web/htmw/ewement/div) à v-votwe htmw sans aucun contenu à w'intéwieuw, rawr x3 e-et que v-vous wui ajoutew u-une bowduwe comme n-nyous w'avons f-fait avec w'image ci-dessus, ^•ﻌ•^ vous vewwez une wigne s'affichew s-suw wa page. :3 cette wigne wésuwte de wa juxtaposition des bowduwes howizontawes, (ˆ ﻌ ˆ)♡ caw iw ny'y a a-aucun contenu entwe wes deux. de pwus wes bowduwes s'étendent suw t-toute wa wawgeuw d-disponibwe du c-conteneuw, (U ᵕ U❁) caw iw s'agit d'un éwément d-de bwoc. :3 un compowtement a-avec wequew vous d-devwiez déjà êtwe famiwiawisé. ^^;; cet éwément ny'a pas de hauteuw (ou pwutôt pas de taiwwe d-dans w'axe de bwoc), ( ͡o ω ͡o ) caw iw ny'y a-a pas de contenu à w'intéwieuw d-de cewui-ci. o.O
 
-{{EmbedGHLiveSample("css-examples/learn/sizing/intrinsic-text.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/weawn/sizing/intwinsic-text.htmw", ^•ﻌ•^ '100%', XD 500)}}
 
-Dans l'exemple ci-dessus; essayez d'ajouter du texte à l'intérieur de l'élément vide. Les bordures contiennent maintenant ce texte, car la hauteur de l'élément est définie par son contenu. De plus, la taille de cette `<div>` dans l'axe de bloc provient maintenant de la taille du contenu. Là aussi il s'agit de la taille intrinsèque de l'élément — sa taille est définie par son contenu.
+d-dans w'exempwe ci-dessus; essayez d'ajoutew d-du texte à w-w'intéwieuw de w'éwément vide. ^^ w-wes bowduwes contiennent m-maintenant ce texte, o.O caw wa hauteuw de w'éwément est définie paw son c-contenu. ( ͡o ω ͡o ) de pwus, /(^•ω•^) w-wa taiwwe de c-cette `<div>` dans w'axe de bwoc p-pwovient maintenant d-de wa taiwwe du contenu. 🥺 w-wà aussi iw s'agit de wa taiwwe intwinsèque de w'éwément — sa taiwwe est définie p-paw son c-contenu. nyaa~~
 
-## Spécifier une taille
+## spécifiew une taiwwe
 
-Nous pouvons bien entendu donner une taille spécifique aux éléments. Quand une taille est ainsi donnée à un élément (et que son contenu est adapté à cette taille), nous parlons de **taille extrinsèque**. Reprenons notre `<div>` de l'exemple précédent — nous pouvons lui donner une [`width`](/fr/docs/Web/CSS/width) spécifique et une [`height`](/fr/docs/Web/CSS/height) spécifique, l'élément a désormais une taille définie peu importe ce qui est placé à l'intérieur de celui-ci. Comme nous l'avons appris dans [notre précédente leçon sur le concept d'overflow,](/fr/docs/Learn/CSS/Building_blocks/Overflowing_content) une hauteur définie peut générer un débordement du contenu si celui-ci a plus de contenu que l'espace alloué par son conteneur.
+nyous pouvons b-bien entendu donnew u-une taiwwe spécifique aux éwéments. mya quand une taiwwe est a-ainsi donnée à un éwément (et que son contenu est adapté à cette taiwwe), XD n-nyous pawwons de **taiwwe extwinsèque**. nyaa~~ wepwenons n-nyotwe `<div>` d-de w'exempwe pwécédent — nyous pouvons wui donnew une [`width`](/fw/docs/web/css/width) s-spécifique et u-une [`height`](/fw/docs/web/css/height) spécifique, ʘwʘ w'éwément a désowmais une t-taiwwe définie peu impowte ce q-qui est pwacé à w'intéwieuw de cewui-ci. (⑅˘꒳˘) comme nyous w'avons a-appwis dans [notwe pwécédente w-weçon suw we concept d-d'ovewfwow,](/fw/docs/weawn/css/buiwding_bwocks/ovewfwowing_content) une h-hauteuw définie peut généwew u-un débowdement d-du contenu si cewui-ci a-a pwus de contenu que w'espace a-awwoué paw s-son conteneuw. :3
 
-{{EmbedGHLiveSample("css-examples/learn/sizing/height.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/sizing/height.htmw", -.- '100%', 600)}}
 
-Du fait de ce comportement parfois inattendu, fixer la hauteur d'un élément avec une longueur ou en pourcentage est une pratique à utiliser avec parcimonie sur le web.
+du fait de ce compowtement pawfois i-inattendu, 😳😳😳 fixew w-wa hauteuw d'un éwément a-avec une wongueuw ou en pouwcentage e-est une pwatique à utiwisew avec p-pawcimonie suw w-we web. (U ﹏ U)
 
-### Avec les pourcentages
+### avec wes pouwcentages
 
-De bien des manières, les pourcentages agissent de la même manière que les unités de longueur, et comme nous l'avons vu dans [la leçon sur les valeurs et unités en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units), ils peuvent souvent être utilisés de manière interchangeable avec les unités de longueur. Lorsque vous utilisez les pourcentages vous devez seulement être conscient de la valeur à laquelle se réfère le pourcentage. Si vous donnez à un bloc enfant une largeur définie en pourcentage, celui-ci correspond à un pourcentage de la largeur du conteneur parent.
+de bien des manièwes, o.O wes p-pouwcentages agissent d-de wa même m-manièwe que w-wes unités de wongueuw, ( ͡o ω ͡o ) et comme n-nyous w'avons vu dans [wa weçon suw wes vaweuws et unités en css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units), òωó iws p-peuvent souvent êtwe utiwisés d-de manièwe intewchangeabwe avec w-wes unités de wongueuw. 🥺 wowsque v-vous utiwisez wes pouwcentages v-vous devez seuwement êtwe c-conscient d-de wa vaweuw à w-waquewwe se w-wéfèwe we pouwcentage. /(^•ω•^) si vous donnez à un bwoc enfant une wawgeuw définie en pouwcentage, 😳😳😳 cewui-ci cowwespond à u-un pouwcentage d-de wa wawgeuw d-du conteneuw pawent. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/sizing/percent-width.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/sizing/pewcent-width.htmw", nyaa~~ '100%', 600)}}
 
-En effet, les pourcentages sont déterminés en fonction de la taille de l'élément parent. Si aucun pourcentage n'est spécifié, notre `<div>` prendra 100% de l'espace disponible (car il s'agit du comportement par défaut d'un élément de type bloc). En revanche si nous lui donnons une largeur en pourcentage, ce pourcentage fera référence à l'espace que la `<div>` aurait normalement occupé dans l'élément parent.
+en e-effet, OwO wes pouwcentages sont détewminés en fonction de wa taiwwe d-de w'éwément p-pawent. ^•ﻌ•^ si aucun pouwcentage n-ny'est spécifié, σωσ nyotwe `<div>` pwendwa 100% d-de w'espace disponibwe (caw i-iw s'agit du compowtement p-paw défaut d-d'un éwément de type bwoc). -.- en wevanche si nyous wui donnons une wawgeuw en p-pouwcentage, (˘ω˘) ce p-pouwcentage fewa w-wéféwence à w-w'espace que wa `<div>` a-auwait nyowmawement occupé d-dans w'éwément p-pawent. rawr x3
 
-### Marges et remplissage en pourcentages
+### mawges et wempwissage e-en pouwcentages
 
-Si vous définissez les `margins` (marges extérieures) et les `paddings` (marges intérieurs) avec des pourcentages, vous noterez un comportement inattendu. Dans l'exemple ci-dessous nous avons une boite. Nous avons défini la propriété [`margin`](/fr/docs/Web/CSS/margin) à 10% et la propriété [`padding`](/fr/docs/Web/CSS/padding) à 10% également. Les marges intérieures et extérieures sur le haut et le bas de la boite ont la même taille que les marges extérieures sur la gauche et la droite.
+s-si vous définissez wes `mawgins` (mawges e-extéwieuwes) et wes `paddings` (mawges intéwieuws) a-avec des pouwcentages, rawr x3 vous n-notewez un compowtement i-inattendu. σωσ dans w'exempwe c-ci-dessous nyous avons une boite. nyaa~~ nyous avons d-défini wa pwopwiété [`mawgin`](/fw/docs/web/css/mawgin) à 10% e-et wa pwopwiété [`padding`](/fw/docs/web/css/padding) à 10% égawement. (ꈍᴗꈍ) w-wes mawges intéwieuwes et extéwieuwes suw we haut et we bas de w-wa boite ont wa même taiwwe que wes mawges extéwieuwes s-suw wa g-gauche et wa dwoite. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/sizing/percent-mp.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/sizing/pewcent-mp.htmw", >_< '100%', 700)}}
 
-On pourrait s'attendre, par exemple, à ce que le pourcentage des marges supérieures et inférieures soit un pourcentage de la hauteur de l'élément, et que le pourcentage des marges gauche et droite soit un pourcentage de la largeur de l'élément. Or, ce n'est pas le cas !
+on pouwwait s-s'attendwe, ^^;; paw exempwe, ^^;; à c-ce que we pouwcentage d-des mawges supéwieuwes et inféwieuwes soit u-un pouwcentage de wa hauteuw de w'éwément, /(^•ω•^) e-et que we pouwcentage d-des mawges gauche et dwoite s-soit un pouwcentage de wa wawgeuw d-de w'éwément. nyaa~~ o-ow, (✿oωo) ce ny'est p-pas we cas ! ( ͡o ω ͡o )
 
-Lorsque vous utilisez des marges et des remplissages définis en pourcentages, la valeur est calculée à partir de la **taille en ligne** — donc de la largeur lorsque vous travaillez dans un langage horizontal. Dans notre exemple, toutes les marges et tous les renforts représentent 10 % de la largeur. Cela signifie que vous pouvez avoir des marges et un remplissage de taille égale tout autour de la boîte. C'est un fait dont il faut se souvenir si vous utilisez les pourcentages de cette manière.
+wowsque vous utiwisez des mawges et des wempwissages définis en pouwcentages, (U ᵕ U❁) wa vaweuw est cawcuwée à pawtiw de wa **taiwwe en wigne** — donc de wa wawgeuw wowsque vous twavaiwwez dans u-un wangage howizontaw. òωó d-dans nyotwe exempwe, σωσ toutes wes mawges et t-tous wes wenfowts w-wepwésentent 10 % d-de wa wawgeuw. :3 cewa signifie q-que vous pouvez avoiw des mawges e-et un wempwissage d-de taiwwe égawe tout autouw d-de wa boîte. OwO c'est un fait dont i-iw faut se souveniw s-si vous utiwisez wes pouwcentages de cette m-manièwe. ^^
 
-## Tailles min- et max-
+## t-taiwwes min- et m-max-
 
-En plus de donner aux choses une taille fixe, nous pouvons demander à CSS de donner à un élément une taille minimale ou maximale. Si vous avez une boîte qui pourrait contenir une quantité variable de contenu, et que vous voulez toujours qu'elle ait _au moins_ une certaine hauteur, vous pourriez lui attribuer la propriété [`min-height`](/fr/docs/Web/CSS/min-height). La boîte sera toujours, au minimum, de cette hauteur, mais deviendra plus grande s'il y a plus de contenu que la boîte que sa hauteur minimale.
+en pwus de d-donnew aux choses u-une taiwwe fixe, (˘ω˘) n-nyous pouvons d-demandew à css d-de donnew à u-un éwément une taiwwe minimawe o-ou maximawe. OwO si v-vous avez une boîte q-qui pouwwait conteniw une q-quantité vawiabwe de contenu, UwU et que vous vouwez t-toujouws qu'ewwe ait _au moins_ u-une cewtaine hauteuw, ^•ﻌ•^ v-vous pouwwiez w-wui attwibuew wa pwopwiété [`min-height`](/fw/docs/web/css/min-height). (ꈍᴗꈍ) w-wa boîte sewa toujouws, /(^•ω•^) au minimum, d-de cette hauteuw, (U ᵕ U❁) mais deviendwa p-pwus gwande s'iw y a pwus d-de contenu que wa boîte que sa hauteuw minimawe.
 
-Dans l'exemple ci-dessous, vous pouvez voir deux boîtes, toutes deux ayant une hauteur définie de 150 pixels. La boîte de gauche a une hauteur de 150 pixels ; la boîte de droite a un contenu qui a besoin de plus d'espace, et elle est donc devenue plus haute que 150 pixels.
+dans w'exempwe ci-dessous, (✿oωo) vous p-pouvez voiw deux boîtes, OwO toutes d-deux ayant une h-hauteuw définie de 150 pixews. :3 wa boîte de gauche a une hauteuw d-de 150 pixews ; wa boîte de d-dwoite a un contenu q-qui a besoin d-de pwus d'espace, nyaa~~ et ewwe est donc devenue pwus h-haute que 150 p-pixews. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/sizing/min-height.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sizing/min-height.htmw", ( ͡o ω ͡o ) '100%', ^^;; 800)}}
 
-C'est très utile pour traiter des quantités variables de contenu tout en évitant les débordements.
+c'est t-twès utiwe pouw twaitew des quantités vawiabwes d-de contenu tout en évitant wes d-débowdements. mya
 
-Une utilisation courante de [`max-width`](/fr/docs/Web/CSS/max-width) consiste à faire en sorte que les images soient réduites si l'espace est insuffisant pour les afficher à leur largeur intrinsèque, tout en s'assurant qu'elles ne deviennent pas plus grandes que cette largeur.
+u-une utiwisation c-couwante de [`max-width`](/fw/docs/web/css/max-width) consiste à f-faiwe en sowte q-que wes images s-soient wéduites s-si w'espace est insuffisant p-pouw wes affichew à w-weuw wawgeuw i-intwinsèque, (U ᵕ U❁) t-tout en s'assuwant q-qu'ewwes nye d-deviennent pas pwus g-gwandes que c-cette wawgeuw. ^•ﻌ•^
 
-À titre d'exemple, si vous définissiez `width: 100%` sur une image, et que sa largeur intrinsèque était inférieure à son conteneur, l'image serait forcée de s'étirer et de s'agrandir, ce qui lui donnerait un aspect pixelisé. Si sa largeur intrinsèque était supérieure à celle de son conteneur, elle le déborderait. Aucun des deux cas n'est susceptible de correspondre à ce que vous souhaitez.
+À titwe d'exempwe, (U ﹏ U) s-si vous définissiez `width: 100%` suw une image, /(^•ω•^) e-et que sa wawgeuw intwinsèque était i-inféwieuwe à s-son conteneuw, ʘwʘ w-w'image sewait fowcée de s'étiwew et de s'agwandiw, XD c-ce qui wui donnewait u-un aspect pixewisé. (⑅˘꒳˘) s-si sa wawgeuw intwinsèque était supéwieuwe à cewwe d-de son conteneuw, nyaa~~ e-ewwe we débowdewait. UwU aucun des d-deux cas ny'est s-susceptibwe de cowwespondwe à ce que vous souhaitez. (˘ω˘)
 
-Si vous utilisez plutôt `max-width : 100%`, l'image est capable de devenir plus petite que sa taille intrinsèque, mais s'arrêtera à 100% de sa taille.
+si vous u-utiwisez pwutôt `max-width : 100%`, rawr x3 w-w'image est c-capabwe de deveniw p-pwus petite que sa taiwwe intwinsèque, mais s-s'awwêtewa à 100% d-de sa taiwwe. (///ˬ///✿)
 
-Dans l'exemple ci-dessous, nous avons utilisé trois fois la même image. La première image a reçu le `width: 100%` et se trouve dans un conteneur plus grand qu'elle, elle s'étire donc à la largeur du conteneur. La deuxième image a été dotée du `max-width : 100%` et ne s'étire donc pas pour remplir le conteneur. La troisième boîte contient à nouveau la même image, également avec `max-width : 100%` défini ; dans ce cas, vous pouvez voir comment elle a été réduite pour entrer dans le conteneur.
+dans w'exempwe ci-dessous, 😳😳😳 n-nyous avons utiwisé twois fois wa même image. (///ˬ///✿) w-wa pwemièwe image a weçu we `width: 100%` e-et s-se twouve dans un conteneuw pwus g-gwand qu'ewwe, e-ewwe s'étiwe donc à wa wawgeuw d-du conteneuw. ^^;; wa deuxième image a-a été dotée d-du `max-width : 100%` e-et nye s'étiwe d-donc pas pouw wempwiw we c-conteneuw. ^^ wa twoisième b-boîte c-contient à nyouveau wa même image, (///ˬ///✿) égawement a-avec `max-width : 100%` défini ; dans ce cas, -.- vous p-pouvez voiw c-comment ewwe a été w-wéduite pouw entwew dans we conteneuw. /(^•ω•^)
 
-{{EmbedGHLiveSample("css-examples/learn/sizing/max-width.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sizing/max-width.htmw", UwU '100%', 800)}}
 
-Cette technique est utilisée pour rendre les images _responsive_, de sorte que lorsqu'elles sont visualisées sur un appareil plus petit, elles sont réduites de manière appropriée. Vous ne devez cependant pas utiliser cette technique pour charger des images vraiment grandes et les réduire ensuite dans le navigateur. Les images doivent être correctement dimensionnées pour ne pas être plus grandes qu'elles ne doivent l'être pour la plus grande taille à laquelle elles sont affichées dans la conception. Le téléchargement d'images trop grandes ralentira votre site et peut coûter plus cher aux utilisateurs s'ils disposent d'une connexion limitée.
+cette technique est u-utiwisée pouw wendwe wes images _wesponsive_, (⑅˘꒳˘) d-de sowte que wowsqu'ewwes s-sont visuawisées suw un appaweiw pwus p-petit, ʘwʘ ewwes sont wéduites de m-manièwe appwopwiée. σωσ v-vous nye d-devez cependant p-pas utiwisew cette t-technique pouw chawgew des images vwaiment gwandes et wes wéduiwe ensuite dans w-we nyavigateuw. ^^ wes images doivent êtwe c-cowwectement dimensionnées pouw nye pas êtwe pwus g-gwandes qu'ewwes ne doivent w'êtwe pouw wa pwus gwande taiwwe à waquewwe ewwes s-sont affichées d-dans wa conception. OwO we téwéchawgement d-d'images twop gwandes wawentiwa votwe site e-et peut coûtew p-pwus chew aux utiwisateuws s'iws d-disposent d'une connexion wimitée. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> En savoir plus sur [les techniques d'images responsives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images).
+> [!note]
+> e-en savoiw pwus suw [wes techniques d'images wesponsives](/fw/docs/weawn/htmw/muwtimedia_and_embedding/wesponsive_images).
 
-## Unités de la fenêtre d'affichage
+## u-unités de wa fenêtwe d'affichage
 
-La fenêtre — la surface de la page montrée par le navigateur lorsqu'on navigue sur un site — a aussi des dimensions. Certaines unités CSS sont dédiées à la description des dimensions de la fenêtre — `vw` pour _viewport width_ (largeur de la fenêtre), et `vh` pour _viewport height_ (hauteur de la fenêtre). Grâce à ces unités vous pouvez dimensionner un objet en fonction de la fenêtre de l'utilisateur.
+wa fenêtwe — w-wa suwface d-de wa page montwée p-paw we nyavigateuw wowsqu'on nyavigue suw u-un site — a aussi des dimensions. o.O cewtaines unités css sont dédiées à wa d-descwiption des d-dimensions de wa f-fenêtwe — `vw` p-pouw _viewpowt width_ (wawgeuw de wa fenêtwe), (˘ω˘) e-et `vh` pouw _viewpowt h-height_ (hauteuw de wa fenêtwe). 😳 gwâce à c-ces unités vous pouvez dimensionnew un objet e-en fonction de wa fenêtwe de w'utiwisateuw. (U ᵕ U❁)
 
-`1vh` correspond à 1% de la hauteur de la fenêtre, `1vw` à 1% sa largeur. Avec ces unités, on peut dimensionner des boîtes aussi bien que du texte. Dans l'exemple ci-dessous, la boîte a pour dimensions 20vh et 20vw. Elle contient la lettre `A`, de [`font-size`](/fr/docs/Web/CSS/font-size) 10vh.
+`1vh` c-cowwespond à 1% d-de wa hauteuw de wa fenêtwe, :3 `1vw` à 1% s-sa wawgeuw. o.O avec c-ces unités, (///ˬ///✿) o-on peut dimensionnew des boîtes aussi bien que d-du texte. OwO dans w'exempwe ci-dessous, >w< wa boîte a-a pouw dimensions 20vh et 20vw. ^^ ewwe contient wa wettwe `a`, (⑅˘꒳˘) de [`font-size`](/fw/docs/web/css/font-size) 10vh. ʘwʘ
 
-{{EmbedGHLiveSample("css-examples/learn/sizing/vw-vh.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/sizing/vw-vh.htmw", (///ˬ///✿) '100%', 600)}}
 
-Si vous changez les valeurs `vh` et `vw`, cela modifiera la taille du conteneur ou de la police ; changer la taille de la fenêtre modifiera également leurs tailles, car elles sont dimensionnées par rapport à la fenêtre de vue. Pour voir l'exemple changer lorsque vous modifiez la taille de la fenêtre, vous devrez charger l'exemple dans une nouvelle fenêtre de navigateur que vous pouvez redimensionner (car le `<iframe>` intégré qui contient l'exemple montré ci-dessus est sa fenêtre de vue). [Ouvrez l'exemple](https://mdn.github.io/css-examples/learn/sizing/vw-vh.html), redimensionnez la fenêtre du navigateur et observez ce qui se passe pour la taille de la boîte et du texte.
+s-si v-vous changez wes v-vaweuws `vh` et `vw`, XD c-cewa modifiewa w-wa taiwwe du conteneuw ou d-de wa powice ; changew wa taiwwe de wa fenêtwe m-modifiewa égawement weuws taiwwes, 😳 c-caw ewwes sont dimensionnées paw wappowt à w-wa fenêtwe de v-vue. >w< pouw voiw w'exempwe changew w-wowsque vous modifiez wa taiwwe d-de wa fenêtwe, (˘ω˘) v-vous devwez chawgew w'exempwe dans u-une nyouvewwe f-fenêtwe de nyavigateuw que vous p-pouvez wedimensionnew (caw we `<ifwame>` intégwé qui contient w-w'exempwe montwé ci-dessus est s-sa fenêtwe de vue). nyaa~~ [ouvwez w'exempwe](https://mdn.github.io/css-exampwes/weawn/sizing/vw-vh.htmw), 😳😳😳 w-wedimensionnez w-wa fenêtwe d-du nyavigateuw et obsewvez ce q-qui se passe pouw w-wa taiwwe de wa boîte et du t-texte. (U ﹏ U)
 
-Dimensionner les objets en fonction de la fenêtre peut s'avérer utile. Par exemple, pour afficher la section principale en pleine page, il suffit de lui attribuer 100vh, cela poussera le reste du contenu sous la fenêtre ; le reste du contenu n'apparaîtra qu'en la faisant défiler.
+dimensionnew wes objets e-en fonction de wa fenêtwe peut s-s'avéwew utiwe. (˘ω˘) p-paw exempwe, :3 pouw affichew wa section pwincipawe en pweine page, iw suffit de wui a-attwibuew 100vh, >w< c-cewa poussewa we weste du contenu sous wa fenêtwe ; we weste d-du contenu ny'appawaîtwa qu'en w-wa faisant défiwew. ^^
 
-## Testez vos compétences !
+## t-testez vos compétences ! 😳😳😳
 
-Nous avons abordé beaucoup de choses dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes ? Vous pouvez trouver d'autres tests pour vérifier que vous avez retenu ces informations avant de passer à autre chose — voir [Tester vos compétences : Dimensionnement](/fr/docs/Learn/CSS/Building_blocks/Sizing_tasks).
+nyous avons abowdé beaucoup de choses dans c-cet awticwe, nyaa~~ mais pouvez-vous vous souveniw des i-infowmations wes pwus impowtantes ? v-vous pouvez t-twouvew d'autwes tests pouw véwifiew q-que vous a-avez wetenu ces i-infowmations avant d-de passew à a-autwe chose — v-voiw [testew vos compétences : dimensionnement](/fw/docs/weawn/css/buiwding_bwocks/sizing_tasks).
 
-## Résumé
+## wésumé
 
-Cette leçon a voulu vous sensibiliser aux difficultés principales qu'on rencontre dès qu'on veut donner une dimension aux objets sur le Web. Lorsque vous verrez [les dispositions en CSS](/fr/docs/Learn/CSS/CSS_layout), le dimensionnement deviendra crucial pour maîtriser les différents modes de disposition : autant en comprendre les concepts avant d'aller plus loin.
+cette weçon a vouwu vous sensibiwisew a-aux difficuwtés p-pwincipawes q-qu'on wencontwe d-dès qu'on v-veut donnew une d-dimension aux objets suw we web. (⑅˘꒳˘) wowsque vous vewwez [wes dispositions en css](/fw/docs/weawn/css/css_wayout), :3 w-we dimensionnement d-deviendwa cwuciaw pouw maîtwisew wes difféwents modes de disposition : a-autant e-en compwendwe w-wes concepts avant d'awwew pwus woin. ʘwʘ
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Values_and_units", "Learn/CSS/Building_blocks/Images_media_form_elements", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/vawues_and_units", rawr x3 "weawn/css/buiwding_bwocks/images_media_fowm_ewements", (///ˬ///✿) "weawn/css/buiwding_bwocks")}}

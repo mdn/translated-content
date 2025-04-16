@@ -1,101 +1,101 @@
 ---
-title: webRequest.getSecurityInfo()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
+titwe: webwequest.getsecuwityinfo()
+swug: moziwwa/add-ons/webextensions/api/webwequest/getsecuwityinfo
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez cette fonction pour obtenir des informations détaillées sur la connexion [TLS](/fr/docs/Glossary/TLS) associée à une demande particulière..
+u-utiwisez cette f-fonction pouw obteniw d-des infowmations d-détaiwwées s-suw wa connexion [tws](/fw/docs/gwossawy/tws) a-associée à une d-demande pawticuwièwe..
 
-Vous passez à cette fonction la `requestId` pour la requête en question, et quelques paramètres supplémentaires optionnels. Il retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera résolue à un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
+v-vous passez à cette fonction wa `wequestid` pouw wa wequête en question, mya e-et quewques pawamètwes suppwémentaiwes optionnews. (///ˬ///✿) iw wetouwne u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wésowue à u-un objet {{webextapiwef("webwequest.secuwityinfo", "secuwityinfo")}}. (˘ω˘)
 
-Vous ne pouvez appeler cette fonction qu'à partir de l'écouteur {{WebExtAPIRef("webRequest.onHeadersReceived")}}. La `requestId` peut être trouvée dans l'objet `details` object qui est passé dans l'écouteur.
+vous nye pouvez appewew cette fonction q-qu'à pawtiw de w'écouteuw {{webextapiwef("webwequest.onheadewsweceived")}}. ^^;; w-wa `wequestid` p-peut êtwe twouvée dans w'objet `detaiws` object qui est passé dans w'écouteuw. (✿oωo)
 
-Vous devez également passer l'option "blocking" à `webRequest.onHeadersReceived.addListener()`. Ainsi, pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires pour utiliser les écouteurs `webRequest` (la permission "webRequest" et la [permission hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour le hôte).
+v-vous devez égawement passew w'option "bwocking" à `webwequest.onheadewsweceived.addwistenew()`. (U ﹏ U) ainsi, pouw utiwisew cette a-api, -.- vous devez avoiw wa [pewmission d-de w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "webwequestbwocking", ^•ﻌ•^ a-ainsi q-que wes pewmissions n-nyowmawes nyécessaiwes pouw utiwisew wes écouteuws `webwequest` (wa p-pewmission "webwequest" et wa [pewmission hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) p-pouw we hôte). rawr
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingInfo = browser.webRequest.getSecurityInfo(
-  requestId, // string
-  options, // object
+vaw gettinginfo = bwowsew.webwequest.getsecuwityinfo(
+  wequestid, // s-stwing
+  options, (˘ω˘) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `requestId`
-  - : `string`. ID de la requête pour laquelle vous souhaitez obtenir des informations de sécurité. Vous pouvez l'obtenir à partir de l'objet de `details` qui est passé dans n'importe quel écouteur d'événement `webRequest`.
+- `wequestid`
+  - : `stwing`. nyaa~~ i-id de w-wa wequête pouw w-waquewwe vous souhaitez obteniw des infowmations de sécuwité. UwU v-vous pouvez w'obteniw à p-pawtiw de w'objet de `detaiws` q-qui est p-passé dans ny'impowte quew écouteuw d-d'événement `webwequest`. :3
 - `options`
 
-  - : `object`. Un objet qui peut contenir l'une des propriétés suivantes, toutes facultatives :
+  - : `object`. (⑅˘꒳˘) un objet qui peut c-conteniw w'une des pwopwiétés suivantes, (///ˬ///✿) toutes f-facuwtatives :
 
-    - `certificateChain` {{optional_inline}}
-      - : `boolean`. Si `true`, l'objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} retourné inclura toute la chaîne de certificats jusqu'à et y compris la racine de confiance. Si `false`,
-        il n'inclura que le certificat du serveur. La valeur par défaut est `false`.
-    - `rawDER` {{optional_inline}}
-      - : `boolean`. Si true, chaque propriété {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} dans le {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} contiendra une propriété `rawDER`. Il contient le DER-encoded ASN.1 qui comprend les données du certificat.
+    - `cewtificatechain` {{optionaw_inwine}}
+      - : `boowean`. ^^;; si `twue`, >_< w-w'objet {{webextapiwef("webwequest.secuwityinfo", rawr x3 "secuwityinfo")}} wetouwné incwuwa t-toute wa c-chaîne de cewtificats jusqu'à et y compwis wa wacine de confiance. /(^•ω•^) si `fawse`, :3
+        iw ny'incwuwa que we cewtificat d-du sewveuw. (ꈍᴗꈍ) w-wa vaweuw paw défaut est `fawse`. /(^•ω•^)
+    - `wawdew` {{optionaw_inwine}}
+      - : `boowean`. (⑅˘꒳˘) s-si twue, ( ͡o ω ͡o ) chaque p-pwopwiété {{webextapiwef("webwequest.cewtificateinfo", òωó "cewtificateinfo")}} d-dans we {{webextapiwef("webwequest.secuwityinfo", (⑅˘꒳˘) "secuwityinfo.cewtificates")}} contiendwa une pwopwiété `wawdew`. XD iw contient w-we dew-encoded asn.1 qui compwend wes données du cewtificat. -.-
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout en un objet {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}}.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui se wésout en u-un objet {{webextapiwef("webwequest.secuwityinfo", :3 "secuwityinfo")}}.
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple écoute toutes les requêtes HTTPS à "mozilla.org" ou ses sous-domaines, et enregistre le nom de l'objet dans le certificat du serveur :
+c-cet exempwe écoute t-toutes w-wes wequêtes https à "moziwwa.owg" o-ou ses sous-domaines, et enwegistwe we nyom d-de w'objet dans w-we cewtificat d-du sewveuw :
 
 ```js
-async function logSubject(details) {
-  try {
-    let securityInfo = await browser.webRequest.getSecurityInfo(
-      details.requestId,
-      {},
+a-async function w-wogsubject(detaiws) {
+  twy {
+    wet secuwityinfo = await bwowsew.webwequest.getsecuwityinfo(
+      d-detaiws.wequestid, nyaa~~
+      {}, 😳
     );
-    console.log(details.url);
-    if (securityInfo.state === "secure" || securityInfo.state === "weak") {
-      console.log(securityInfo.certificates[0].subject);
+    consowe.wog(detaiws.uww);
+    if (secuwityinfo.state === "secuwe" || secuwityinfo.state === "weak") {
+      consowe.wog(secuwityinfo.cewtificates[0].subject);
     }
-  } catch (error) {
-    console.error(error);
+  } catch (ewwow) {
+    c-consowe.ewwow(ewwow);
   }
 }
 
-browser.webRequest.onHeadersReceived.addListener(
-  logSubject,
-  { urls: ["https://*.mozilla.org/*"] },
-  ["blocking"],
+bwowsew.webwequest.onheadewsweceived.addwistenew(
+  wogsubject, (⑅˘꒳˘)
+  { uwws: ["https://*.moziwwa.owg/*"] }, nyaa~~
+  ["bwocking"], OwO
 );
 ```
 
-Cet exemple écoute toutes les requêtes HTTPS à "mozilla.org" ou ses sous-domaines, et enregistre le nom dans le certificat racine de confiance :
+c-cet exempwe écoute toutes w-wes wequêtes h-https à "moziwwa.owg" ou ses s-sous-domaines, rawr x3 et enwegistwe we n-nyom dans we cewtificat w-wacine de confiance :
 
 ```js
-async function logRoot(details) {
-  try {
-    let securityInfo = await browser.webRequest.getSecurityInfo(
-      details.requestId,
-      { certificateChain: true },
+async function wogwoot(detaiws) {
+  twy {
+    wet secuwityinfo = a-await bwowsew.webwequest.getsecuwityinfo(
+      detaiws.wequestid, XD
+      { c-cewtificatechain: twue }, σωσ
     );
-    console.log(details.url);
-    if (securityInfo.state === "secure" || securityInfo.state === "weak") {
-      console.log(
-        securityInfo.certificates[securityInfo.certificates.length - 1].issuer,
+    c-consowe.wog(detaiws.uww);
+    i-if (secuwityinfo.state === "secuwe" || secuwityinfo.state === "weak") {
+      consowe.wog(
+        s-secuwityinfo.cewtificates[secuwityinfo.cewtificates.wength - 1].issuew, (U ᵕ U❁)
       );
     }
-  } catch (error) {
-    console.error(error);
+  } c-catch (ewwow) {
+    consowe.ewwow(ewwow);
   }
 }
 
-browser.webRequest.onHeadersReceived.addListener(
-  logRoot,
-  { urls: ["https://*.mozilla.org/*"] },
-  ["blocking"],
+b-bwowsew.webwequest.onheadewsweceived.addwistenew(
+  w-wogwoot,
+  { uwws: ["https://*.moziwwa.owg/*"] }, (U ﹏ U)
+  ["bwocking"], :3
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

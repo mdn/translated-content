@@ -1,87 +1,87 @@
 ---
-title: browsingData.removeCache()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCache
+titwe: bwowsingdata.wemovecache()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovecache
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Effacer le cache du navigateur.
+e-effacew w-we cache du n-nyavigateuw. ^•ﻌ•^
 
-Notez que cette fonction puisse prendre un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, elle sera ignorée. Le cache entier est toujours effacé lors de l'utilisation de cette fonction.
+nyotez q-que cette f-fonction puisse p-pwendwe un objet {{webextapiwef("bwowsingdata.wemovawoptions")}}, rawr e-ewwe sewa ignowée. (˘ω˘) w-we cache entiew est toujouws effacé wows de w'utiwisation de cette fonction. nyaa~~
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). UwU
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var removing = browser.browsingData.removeCache(
-  removalOptions, // RemovalOptions object
+vaw w-wemoving = bwowsew.bwowsingdata.wemovecache(
+  wemovawoptions, :3 // wemovawoptions object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `removalOptions` {{optional_inline}}
-  - : `object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}. Ce paramètre n'a aucun effet
+- `wemovawoptions` {{optionaw_inwine}}
+  - : `object`. (⑅˘꒳˘) un objet {{webextapiwef("bwowsingdata.wemovawoptions")}}. (///ˬ///✿) c-ce pawamètwe n-n'a aucun effet
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwi sans awguments w-wowsque wa suppwession est tewminée. ^^;; si une ewweuw se pwoduit, wa pwomesse sewa w-wejetée avec un message d'ewweuw. >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Effacer le cache du navigateur :
+e-effacew we cache du nyavigateuw :
 
 ```js
-function onRemoved() {
-  console.log("removed");
+function o-onwemoved() {
+  consowe.wog("wemoved");
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeCache({}).then(onRemoved, onError);
+bwowsew.bwowsingdata.wemovecache({}).then(onwemoved, rawr x3 onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> cette api est basée suw w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. aww wights wesewved. (ꈍᴗꈍ)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and b-binawy fowms, /(^•ω•^) with ow without
+// m-modification, (⑅˘꒳˘) awe pewmitted pwovided t-that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, t-this wist o-of conditions and the fowwowing d-discwaimew. ( ͡o ω ͡o )
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, òωó t-this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (⑅˘꒳˘)
+//    * n-nyeithew the n-nyame of googwe inc. XD nyow the nyames o-of its
+// contwibutows m-may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, :3 incwuding, nyaa~~ but nyot
+// wimited to, 😳 the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, nyaa~~ indiwect, OwO incidentaw, rawr x3
+// s-speciaw, XD e-exempwawy, ow consequentiaw damages (incwuding, σωσ but not
+// wimited to, (U ᵕ U❁) pwocuwement of substitute g-goods ow sewvices; woss o-of use, (U ﹏ U)
+// data, :3 ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) w-whethew i-in contwact, σωσ stwict wiabiwity, >w< o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, 😳😳😳 e-even if advised o-of the possibiwity o-of such damage. OwO
 -->

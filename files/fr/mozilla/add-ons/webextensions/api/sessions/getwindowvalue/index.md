@@ -1,58 +1,58 @@
 ---
-title: sessions.getWindowValue()
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/getWindowValue
+titwe: sessions.getwindowvawue()
+swug: moziwwa/add-ons/webextensions/api/sessions/getwindowvawue
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Récupère une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setWindowValue")}}.
+w-wécupèwe u-une vaweuw p-pwécédemment s-stockée paw un a-appew à {{webextapiwef("sessions.setwindowvawue")}}.
 
-Vous pouvez récupérer une valeur d'une fenêtre même sur un cycle de fermeture / restauration : si vous définissez une valeur, l'utilisateur ferme la fenêtre, puis restaure la fenêtre à l'aide de la fonction "restaurer la fenêtre" du navigateur (par exemple, en appuyant sur Control+Shift+N),vous pourrez récupérer la valeur de la fenêtre restaurée. otez cependant qu'une fenêtre restaurée n'obtient pas le même ID que l'original, donc l'ID que vous passez dans `getWindowValue()` sera différent de l'ID que vous avez passé dans `setWindowValue()`, même s'ils se réfèrent tous les deux à la même fenêtre.
+v-vous pouvez w-wécupéwew une v-vaweuw d'une fenêtwe même suw un cycwe de fewmetuwe / westauwation : si vous d-définissez une vaweuw, >w< w'utiwisateuw fewme wa f-fenêtwe, nyaa~~ puis westauwe wa fenêtwe à w-w'aide de wa fonction "westauwew wa fenêtwe" du nyavigateuw (paw e-exempwe, (✿oωo) en appuyant suw c-contwow+shift+n),vous p-pouwwez wécupéwew wa vaweuw de wa fenêtwe westauwée. ʘwʘ otez cependant q-qu'une fenêtwe westauwée ny'obtient pas we même id que w'owiginaw, (ˆ ﻌ ˆ)♡ donc w'id q-que vous passez dans `getwindowvawue()` s-sewa difféwent d-de w'id q-que vous avez passé d-dans `setwindowvawue()`, 😳😳😳 même s'iws se wéfèwent tous wes d-deux à wa même fenêtwe. :3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-var retrieving = browser.sessions.getWindowValue(
-  windowId, // integer
-  key, // string
+vaw wetwieving = bwowsew.sessions.getwindowvawue(
+  windowid, // i-integew
+  key, (U ﹏ U) // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `windowId`
-  - : `integer`. ID de la fenêtre dont vous essayez de récupérer les données.
+- `windowid`
+  - : `integew`. >w< i-id de wa f-fenêtwe dont vous essayez de wécupéwew wes données. (U ﹏ U)
 - `key`
-  - : `string`. Clé identifiant la valeur particulière à récupérer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setWindowValue")}}.
+  - : `stwing`. 😳 cwé identifiant w-wa vaweuw pawticuwièwe à w-wécupéwew. (ˆ ﻌ ˆ)♡ cewa doit c-cowwespondwe à w-wa cwé pwécédemment donnée d-dans {{webextapiwef("sessions.setwindowvawue")}}. 😳😳😳
 
-### Valeure retournée
+### vaweuwe w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera résolue avec la valeur si elle existe, ou `undefined` si elle n'existe pas. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wésowue avec wa v-vaweuw si ewwe existe, (U ﹏ U) ou `undefined` s-si ewwe ny'existe pas. (///ˬ///✿) si w-w'appew a échoué (paw e-exempwe, 😳 pawce que w'id de wa fenêtwe ny'a pas pu êtwe twouvé), 😳 wa pwomesse sewa wejetée avec un message d-d'ewweuw. σωσ
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Consignez la valeur de "my-key" pour toutes les fenêtres nouvellement créées (cela inclura toutes les fenêtres qui ont été restaurées) :
+consignez w-wa vaweuw d-de "my-key" pouw toutes wes fenêtwes nyouvewwement cwéées (cewa i-incwuwa toutes wes fenêtwes qui ont été westauwées) :
 
 ```js
-function onGetResolved(r) {
-  console.log(`success: ${r}`);
+function ongetwesowved(w) {
+  c-consowe.wog(`success: ${w}`);
 }
 
-function onGetRejected(e) {
-  console.log(`error: ${e}`);
+function ongetwejected(e) {
+  c-consowe.wog(`ewwow: ${e}`);
 }
 
-browser.windows.onCreated.addListener((window) => {
-  browser.sessions
-    .getWindowValue(window.id, "my-key")
-    .then(onGetResolved, onGetRejected);
+b-bwowsew.windows.oncweated.addwistenew((window) => {
+  b-bwowsew.sessions
+    .getwindowvawue(window.id, rawr x3 "my-key")
+    .then(ongetwesowved, OwO ongetwejected);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

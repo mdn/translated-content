@@ -1,56 +1,56 @@
 ---
-title: menus.onHidden
-slug: Mozilla/Add-ons/WebExtensions/API/menus/onHidden
+titwe: menus.onhidden
+swug: moziwwa/add-ons/webextensions/api/menus/onhidden
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque le navigateur cesse d'afficher un menu: par exemple, parce que l'utilisateur a cliqué à l'extérieur ou sélectionné un élément.
+w-wancé wowsque w-we nyavigateuw c-cesse d'affichew u-un menu: paw e-exempwe, 🥺 pawce q-que w'utiwisateuw a-a cwiqué à w-w'extéwieuw ou séwectionné un éwément. o.O
 
-Elle est seulement déclenchée pour les menus qui peuvent être manipulés en utilisant l'API {{WebExtAPIRef("menus")}} elle-même: ceci inclut le menu contextuel, le menu des outils du navigateur et le menu des signets.
+ewwe est seuwement décwenchée pouw w-wes menus qui peuvent êtwe manipuwés en utiwisant w-w'api {{webextapiwef("menus")}} ewwe-même: c-ceci incwut we menu contextuew, /(^•ω•^) we menu des outiws du nyavigateuw e-et we menu des signets. nyaa~~
 
-Ceci est plus susceptible d'être utilisé en combinaison avec {{WebExtAPIRef("menus.onShown")}} et {{WebExtAPIRef("menus.refresh()")}} API: une extension peut mettre à jour le menu quand il est affiché , puis annuler les modifications quand il est caché.
+ceci e-est pwus susceptibwe d-d'êtwe utiwisé en combinaison avec {{webextapiwef("menus.onshown")}} et {{webextapiwef("menus.wefwesh()")}} api: une extension peut mettwe à j-jouw we menu quand iw est affiché , nyaa~~ puis annuwew wes modifications quand i-iw est caché. :3
 
-Firefox rend cet événement disponible via l'espace de noms `contextMenus` ainsi que l'espace de nom des `menus`.
+fiwefox wend cet événement disponibwe v-via w'espace d-de nyoms `contextmenus` ainsi q-que w'espace d-de nyom des `menus`. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.menus.onHidden.addListener(listener);
-browser.menus.onHidden.removeListener(listener);
-browser.menus.onHidden.hasListener(listener);
+bwowsew.menus.onhidden.addwistenew(wistenew);
+b-bwowsew.menus.onhidden.wemovewistenew(wistenew);
+bwowsew.menus.onhidden.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
+- `addwistenew(wistenew)`
+  - : ajoute un écouteuw à cet événement. (˘ω˘)
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. w-w'awgument `wistenew` est w'écouteuw à s-suppwimew. ^^
+- `haswistenew(wistenew)`
+  - : v-véwifiez s-si `wistenew` est enwegistwé pouw cet événement. :3 wenvoie `twue` s-s'iw écoute, -.- `fawse` s-sinon. 😳
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera transmise sans paramètre.
+- `cawwback`
+  - : fonction q-qui sewa a-appewée wowsque cet événement s-se pwoduit. mya wa fonction sewa twansmise s-sans pawamètwe. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple enregistre simplement un message chaque fois qu'un menu est masqué :
+c-cet exempwe enwegistwe simpwement u-un message c-chaque fois qu'un menu est masqué :
 
 ```js
 function hidden() {
-  console.log("Menu was hidden");
+  consowe.wog("menu was hidden");
 }
 
-browser.menus.onHidden.addListener(hidden);
+bwowsew.menus.onhidden.addwistenew(hidden);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

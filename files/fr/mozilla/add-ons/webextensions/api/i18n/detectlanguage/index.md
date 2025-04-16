@@ -1,96 +1,96 @@
 ---
-title: i18n.detectLanguage()
-slug: Mozilla/Add-ons/WebExtensions/API/i18n/detectLanguage
+titwe: i18n.detectwanguage()
+swug: moziwwa/add-ons/webextensions/api/i18n/detectwanguage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Détecte la langue du texte fourni à l'aide du [détecteur de langue compact](https://github.com/CLD2Owners/cld2) (CLD).
+d-détecte wa wangue d-du texte fouwni à w-w'aide d-du [détecteuw de w-wangue compact](https://github.com/cwd2ownews/cwd2) (cwd). (⑅˘꒳˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est u-une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var detectingLanguages = browser.i18n.detectLanguage(
-  text, // string
+vaw detectingwanguages = bwowsew.i18n.detectwanguage(
+  text, òωó // s-stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `text`
-  - : `string`. Chaîne d'entrée de l'utilisateur à traduire.
+  - : `stwing`. (⑅˘꒳˘) chaîne d'entwée d-de w'utiwisateuw à twaduiwe. XD
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet résultat. L'objet résultat a deux propriétés :
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un objet w-wésuwtat. -.- w'objet wésuwtat a d-deux pwopwiétés :
 
-- `isReliable`
-  - : `boolean`. Si la langue a été détectée de manière fiable.
-- `languages`
+- `iswewiabwe`
+  - : `boowean`. :3 s-si wa wangue a été détectée de manièwe fiabwe. nyaa~~
+- `wanguages`
 
-  - : `array` d'objets, dont chacun a deux propriétés:
+  - : `awway` d'objets, 😳 d-dont chacun a deux pwopwiétés:
 
-    - `language`
-      - : {{WebExtAPIRef('i18n.LanguageCode')}}. La langue détectée.
-    - `percentage`
-      - : `integer`. Le pourcentage de la chaîne d'entrée qui était dans la langue détectée.
+    - `wanguage`
+      - : {{webextapiwef('i18n.wanguagecode')}}. (⑅˘꒳˘) wa wangue détectée. nyaa~~
+    - `pewcentage`
+      - : `integew`. we pouwcentage de wa chaîne d'entwée q-qui était dans wa wangue d-détectée. OwO
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-function onLanguageDetected(langInfo) {
-  for (lang of langInfo.languages) {
-    console.log("Le langage est : " + lang.language);
-    console.log("Le pourcentage est : " + lang.percentage);
+function onwanguagedetected(wanginfo) {
+  fow (wang o-of wanginfo.wanguages) {
+    consowe.wog("we wangage est : " + w-wang.wanguage);
+    consowe.wog("we pouwcentage est : " + wang.pewcentage);
   }
 }
 
-var text = "L'homme est né libre, et partout il est dans les fers.";
+vaw text = "w'homme e-est nyé wibwe, rawr x3 et p-pawtout iw est dans w-wes fews.";
 
-var detecting = browser.i18n.detectLanguage(text);
-detecting.then(onLanguageDetected);
+v-vaw detecting = bwowsew.i18n.detectwanguage(text);
+detecting.then(onwanguagedetected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api chwomium [`chwome.i18n`](https://devewopew.chwome.com/docs/extensions/wefewence/api/i18n). XD c-cette documentation est d-déwivée de [`i18n.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/i18n.json) d-dans we code de chwomium c-code. σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation e-et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. (U ᵕ U❁)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (U ﹏ U) aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy fowms, ( ͡o ω ͡o ) with ow without
+// m-modification, σωσ a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, >w< this w-wist of conditions and the fowwowing d-discwaimew. 😳😳😳
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight n-nyotice, OwO this wist o-of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. 😳
+//    * nyeithew the nyame of googwe inc. 😳😳😳 nyow the n-nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without specific pwiow wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, ʘwʘ i-incwuding, ( ͡o ω ͡o ) but nyot
+// wimited to, o.O the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. >w< i-in nyo event shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow any diwect, indiwect, 😳 i-incidentaw, 🥺
+// s-speciaw, rawr x3 exempwawy, o.O ow consequentiaw d-damages (incwuding, rawr b-but nyot
+// wimited to, ʘwʘ pwocuwement of substitute goods ow sewvices; w-woss of use, 😳😳😳
+// d-data, ^^;; ow pwofits; o-ow business intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, o.O whethew i-in contwact, (///ˬ///✿) stwict wiabiwity, ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in a-any way out of the use
+// of this softwawe, σωσ even i-if advised of t-the possibiwity of such damage. nyaa~~
 -->

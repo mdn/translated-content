@@ -1,112 +1,112 @@
 ---
-title: browsingData.removePasswords()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removePasswords
+titwe: bwowsingdata.wemovepasswowds()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovepasswowds
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Efface les mots de passes enregistrés
+e-efface wes m-mots de passes enwegistwés
 
-Vous pouvez utiliser le paremètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
+v-vous p-pouvez utiwisew w-we pawemètwe `wemovawoptions`, o.O q-qui est un objet {{webextapiwef("bwowsingdata.wemovawoptions")}} p-pouw :
 
-- Effacer uniquement les mots de passe enregistrés après un certain temp
-- Contrôlez si vous souhaitez supprimer les mots de passe enregistrés sur les pages Web normales ou effacer les mots de passe enregistrés sur les applications et les extensions hébergées.
+- effacew u-uniquement wes mots de passe enwegistwés apwès un cewtain temp
+- contwôwez s-si vous souhaitez suppwimew wes mots de passe e-enwegistwés suw wes pages web n-nyowmawes ou effacew wes mots de passe enwegistwés suw wes appwications e-et wes extensions hébewgées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >w<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.browsingData.removePasswords(
-  removalOptions, // RemovalOptions object
+vaw wemoving = b-bwowsew.bwowsingdata.wemovepasswowds(
+  wemovawoptions, 😳 // wemovawoptions object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `removalOptions`
-  - : `object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut être utilisé pour effacer uniquement les mots de passe enregistrés après un certain temps, et pour effacer les mots de passe enregistrés sur les pages Web normales ou pour effacer les mots de passe enregistrés sur les applications et les extensions hébergées.
+- `wemovawoptions`
+  - : `object`. 🥺 u-un objet {{webextapiwef("bwowsingdata.wemovawoptions")}}, rawr x3 q-qui peut êtwe u-utiwisé pouw e-effacew uniquement w-wes mots de passe enwegistwés apwès un c-cewtain temps, o.O et pouw effacew wes mots de passe e-enwegistwés suw wes pages web nowmawes ou pouw effacew wes mots de passe enwegistwés suw wes a-appwications et wes extensions hébewgées. rawr
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie sans awguments wowsque wa suppwession e-est tewminée. ʘwʘ s-si une ewweuw se pwoduit, 😳😳😳 wa p-pwomise sewa wejetée a-avec un message d'ewweuw. ^^;;
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Supprimer les mots de passe enregistrés la semaine dernière :
-
-```js
-function onRemoved() {
-  console.log("removed");
-}
-
-function onError(error) {
-  console.error(error);
-}
-
-function weekInMilliseconds() {
-  return 1000 * 60 * 60 * 24 * 7;
-}
-
-var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
-
-browser.browsingData
-  .removePasswords({ since: oneWeekAgo })
-  .then(onRemoved, onError);
-```
-
-Supprime tous les mots de passe enregistrés :
+suppwimew wes mots de passe enwegistwés w-wa semaine dewnièwe :
 
 ```js
-function onRemoved() {
-  console.log("removed");
+f-function onwemoved() {
+  consowe.wog("wemoved");
 }
 
-function onError(error) {
-  console.error(error);
+function o-onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removePasswords({}).then(onRemoved, onError);
+function weekinmiwwiseconds() {
+  wetuwn 1000 * 60 * 60 * 24 * 7;
+}
+
+vaw oneweekago = nyew date().gettime() - weekinmiwwiseconds();
+
+bwowsew.bwowsingdata
+  .wemovepasswowds({ s-since: o-oneweekago })
+  .then(onwemoved, o.O onewwow);
 ```
 
-{{WebExtExamples}}
+s-suppwime tous w-wes mots de passe e-enwegistwés :
 
-> [!NOTE]
+```js
+function onwemoved() {
+  consowe.wog("wemoved");
+}
+
+function o-onewwow(ewwow) {
+  consowe.ewwow(ewwow);
+}
+
+bwowsew.bwowsingdata.wemovepasswowds({}).then(onwemoved, (///ˬ///✿) onewwow);
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> cette a-api est basée suw w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes d-données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies p-paw micwosoft c-cowpowation et i-incwuses ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. a-aww wights wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, w-with ow without
+// modification, ^•ﻌ•^ awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above copywight
+// nyotice, σωσ this wist o-of conditions a-and the fowwowing d-discwaimew. -.-
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, ^^;; this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. XD
+//    * nyeithew the n-nyame of googwe i-inc. 🥺 nyow the nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, òωó incwuding, b-but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. -.- i-in nyo event shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any diwect, :3 indiwect, ʘwʘ incidentaw,
+// speciaw, 🥺 exempwawy, >_< o-ow consequentiaw damages (incwuding, ʘwʘ but nyot
+// wimited to, (˘ω˘) pwocuwement of s-substitute goods ow sewvices; woss of use, (✿oωo)
+// data, o-ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of w-wiabiwity, (///ˬ///✿) whethew i-in contwact, rawr x3 stwict wiabiwity, -.- ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any w-way out of the use
+// of this softwawe, ^^ even if advised of the p-possibiwity of such damage. (⑅˘꒳˘)
 -->

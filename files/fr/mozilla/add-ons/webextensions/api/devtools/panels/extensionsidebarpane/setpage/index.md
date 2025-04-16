@@ -1,78 +1,78 @@
 ---
-title: devtools.panels.ExtensionSidebarPane.setPage()
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setPage
+titwe: devtoows.panews.extensionsidebawpane.setpage()
+swug: moziwwa/add-ons/webextensions/api/devtoows/panews/extensionsidebawpane/setpage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit une page HTML à afficher dans le volet latéral.
+d-définit une p-page htmw à affichew d-dans we v-vowet watéwaw. (⑅˘꒳˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone qui w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.devtools.panels.setPage(
-  path, // string containing relative path to page
+bwowsew.devtoows.panews.setpage(
+  path, :3 // stwing containing wewative p-path to page
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- extensionPageURL
-  - : `string`. Le chemin relatif d'une page HTML à afficher dans la barre latérale.
+- extensionpageuww
+  - : `stwing`. ( ͡o ω ͡o ) w-we chemin wewatif d'une p-page htmw à affichew dans wa bawwe watéwawe. mya
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera tenue sans arguments, une fois l'URL définie.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa tenue s-sans awguments, (///ˬ///✿) u-une fois w'uww définie. (˘ω˘)
 
-La page sélectionnée ne sera pas chargée tant que l'utilisateur n'aura pas sélectionné la barre latérale devtools.
+wa page séwectionnée nye sewa pas chawgée tant que w-w'utiwisateuw ny'auwa pas séwectionné wa bawwe watéwawe devtoows. ^^;;
 
-## Exemples
+## exempwes
 
-Créez un nouveau volet et remplissez-le d'une page HTML. Vous pouvez exécuter ce code dans un script chargé par la [page devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) de votre extension.
+c-cwéez un nyouveau vowet et w-wempwissez-we d'une p-page htmw. (✿oωo) vous p-pouvez exékawaii~w c-ce code dans un scwipt chawgé paw wa [page d-devtoows](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page) de votwe extension.
 
 ```js
-function onCreated(sidebarPane) {
-  sidebarPane.setPage("sidebar/sidebar.html");
+function o-oncweated(sidebawpane) {
+  sidebawpane.setpage("sidebaw/sidebaw.htmw");
 }
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> cette api est basée suw w-w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. -.- a-aww wights wesewved. ^•ﻌ•^
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, rawr w-with ow without
+// modification, (˘ω˘) a-awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above c-copywight
+// nyotice, nyaa~~ this wist o-of conditions and the fowwowing d-discwaimew. UwU
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, :3 this wist of conditions and t-the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided w-with the
+// distwibution. (⑅˘꒳˘)
+//    * nyeithew the nyame of googwe inc. (///ˬ///✿) nyow the nyames o-of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, incwuding, >_< but nyot
+// w-wimited to, rawr x3 the i-impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. /(^•ω•^) in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, :3 indiwect, incidentaw, (ꈍᴗꈍ)
+// speciaw, /(^•ω•^) e-exempwawy, (⑅˘꒳˘) ow consequentiaw damages (incwuding, ( ͡o ω ͡o ) but not
+// w-wimited to, òωó pwocuwement o-of substitute g-goods ow sewvices; woss o-of use, (⑅˘꒳˘)
+// data, ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, XD whethew in contwact, -.- stwict wiabiwity, :3 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, nyaa~~ even if advised of the possibiwity o-of such d-damage. 😳

@@ -1,42 +1,42 @@
 ---
-title: tabs.printPreview()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/printPreview
+titwe: tabs.pwintpweview()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/pwintpweview
 ---
 
-{{AddonSidebar}}Ouvre l'aperçu avant impression pour l'onglet actif.C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).Une extension peut détecter lorsque l'aperçu d'impression a été fermé en écoutant l'événement [afterprint](/fr/docs/Web/API/Window/afterprint_event) :
+{{addonsidebaw}}ouvwe w-w'apewçu avant i-impwession pouw w-w'ongwet actif.c'est u-une fonction a-asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise).une e-extension peut détectew wowsque w'apewçu d'impwession a été fewmé e-en écoutant w'événement [aftewpwint](/fw/docs/web/api/window/aftewpwint_event) :
 
 ```js
-window.addEventListener("afterprint", resumeFunction, false);
+window.addeventwistenew("aftewpwint", (✿oωo) wesumefunction, (ˆ ﻌ ˆ)♡ f-fawse);
 ```
 
-## Syntaxe
+## syntaxe
 
 ```js
-var openingPreview = browser.tabs.printPreview();
+v-vaw openingpweview = bwowsew.tabs.pwintpweview();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+nyone. (˘ω˘)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la page d'aperçu est ouverte.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie s-sans awgument wowsque wa page d'apewçu est ouvewte. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), puis ouvre l'aperçu avant impression pour l'onglet actuellement actif :
+dans cet exempwe, (///ˬ///✿) u-un scwipt d'awwièwe-pwan écoute un cwic suw une [action de nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions_2), 😳😳😳 p-puis ouvwe w'apewçu avant i-impwession pouw w-w'ongwet actuewwement a-actif :
 
 ```js
-browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.printPreview().then(() => {
-    console.log("Entered print preview");
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  bwowsew.tabs.pwintpweview().then(() => {
+    consowe.wog("entewed pwint p-pweview");
   });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

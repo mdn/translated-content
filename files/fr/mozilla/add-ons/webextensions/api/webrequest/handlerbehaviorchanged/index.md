@@ -1,96 +1,96 @@
 ---
-title: webRequest.handlerBehaviorChanged()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged
+titwe: webwequest.handwewbehaviowchanged()
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/handwewbehaviowchanged
 ---
 
-{{AddonSidebar}}Cette fonction peut être utilisée pour s'assurer que les auditeurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.Si le navigateur a chargé une page et que la page est rechargée, le navigateur peut recharger la page à partir de son cache en mémoire, et dans ce cas, les événements ne seront pas déclenchés pour la demande.
+{{addonsidebaw}}cette f-fonction peut êtwe u-utiwisée p-pouw s'assuwew q-que wes auditeuws d-d'événements s-sont appwiqués c-cowwectement wowsque wes pages se twouvent dans we cache en mémoiwe du nyavigateuw.si w-we nyavigateuw a chawgé une page et que w-wa page est wechawgée, nyaa~~ we nyavigateuw p-peut wechawgew wa page à pawtiw de son cache en mémoiwe, >_< e-et dans ce cas, ^^;; wes événements n-nye sewont pas d-décwenchés pouw wa demande. (ˆ ﻌ ˆ)♡
 
-Supposons que le travail d'une extension consiste à bloquer les requêtes Web par rapport à un modèle, et le scénario suivant se produit :
+supposons que we twavaiw d'une extension consiste à b-bwoquew wes wequêtes web paw wappowt à un modèwe, ^^;; et we scénawio suivant s-se pwoduit :
 
-- L'utilisateur charge une page qui inclut une requête particulière, et le modèle permet la requête.
-- La ressource est chargée et mise en cache en mémoire.
-- Les modèles de l'extension sont mis à jour, de telle sorte que la ressource ne serait plus autorisée.
-- L'utilisateur recharge la page.
+- w'utiwisateuw c-chawge une page q-qui incwut une w-wequête pawticuwièwe, (⑅˘꒳˘) e-et we modèwe pewmet wa wequête. rawr x3
+- wa w-wessouwce est chawgée et mise en cache en mémoiwe. (///ˬ///✿)
+- w-wes modèwes de w'extension sont mis à jouw, 🥺 de tewwe sowte que wa wessouwce nye sewait p-pwus autowisée. >_<
+- w'utiwisateuw w-wechawge wa page. UwU
 
-Comme la page sera rechargée à partir du cache mémoire, il se peut que l'auditeur ne soit plus appelé et que la requête soit chargée malgré la nouvelle stratégie de l'extension.
+c-comme wa page s-sewa wechawgée à pawtiw du cache mémoiwe, >_< iw se peut que w'auditeuw n-nye soit p-pwus appewé et que wa wequête s-soit chawgée m-mawgwé wa nyouvewwe stwatégie d-de w'extension. -.-
 
-La fonction `handlerBehaviorChanged()` est conçue pour résoudre ce problème. Il vide le cache en mémoire, de sorte que les rechargements de page déclenchent les auditeurs d'événements.
+wa fonction `handwewbehaviowchanged()` e-est conçue pouw wésoudwe ce pwobwème. mya i-iw vide we cache en mémoiwe, >w< de s-sowte que wes wechawgements de p-page décwenchent w-wes auditeuws d'événements. (U ﹏ U)
 
-Parce que `handlerBehaviorChanged()` nettoie le cache, cela peut être coûteux et mauvais pour la performance. Le module webRequest définit une propriété en lecture seule {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}} : faire plus d'appels que ce nombre en 10 minutes n'aura aucun effet.
+pawce que `handwewbehaviowchanged()` nyettoie we cache, 😳😳😳 cewa peut êtwe coûteux et mauvais pouw w-wa pewfowmance. o.O w-we moduwe webwequest définit u-une pwopwiété e-en wectuwe seuwe {{webextapiwef("webwequest.max_handwew_behaviow_changed_cawws_pew_10_minutes", òωó "max_handwew_behaviow_changed_cawws_pew_10_minutes")}} : f-faiwe pwus d'appews que ce nyombwe en 10 minutes ny'auwa a-aucun effet. 😳😳😳
 
-L'implémentation de la mise en cache, d'où la nécessité de cette fonction, varie d'un navigateur à l'autre, de sorte que dans certains navigateurs, cette fonction ne fait rien.
+w'impwémentation de wa mise en cache, σωσ d'où wa nyécessité de c-cette fonction, (⑅˘꒳˘) vawie d'un nyavigateuw à w-w'autwe, (///ˬ///✿) d-de sowte que d-dans cewtains nyavigateuws, 🥺 cette f-fonction ne fait w-wien. OwO
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d-d'une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >w<
 
-## Syntaxe
-
-```js
-var flushingCache = browser.webRequest.handlerBehaviorChanged();
-```
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments, lorsque l'opération sera terminée.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Dans le snippet suivant, nous vidons le cache en mémoire via un appel à `handlerBehaviorChanged()`, et signalons cette action en enregistrant un message approprié à la console.
+## syntaxe
 
 ```js
-function onFlushed() {
-  console.log(`In-memory cache flushed`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-var flushingCache = browser.webRequest.handlerBehaviorChanged();
-flushingCache.then(onFlushed, onError);
+v-vaw fwushingcache = b-bwowsew.webwequest.handwewbehaviowchanged();
 ```
 
-{{WebExtExamples}}
+### p-pawamètwes
 
-> [!NOTE]
+n-nyone. 🥺
+
+### vaweuw w-wetouwnée
+
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie sans awguments, nyaa~~ wowsque w-w'opéwation sewa tewminée. ^^
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## exempwes
+
+dans we snippet suivant, >w< n-nyous vidons we cache en mémoiwe via un appew à `handwewbehaviowchanged()`, OwO et signawons c-cette action en e-enwegistwant un m-message appwopwié à wa consowe. XD
+
+```js
+f-function onfwushed() {
+  c-consowe.wog(`in-memowy c-cache fwushed`);
+}
+
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
+}
+
+vaw fwushingcache = b-bwowsew.webwequest.handwewbehaviowchanged();
+fwushingcache.then(onfwushed, ^^;; o-onewwow);
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> cette a-api est basée s-suw w'api chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). 🥺 cette documentation est déwivée d-de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) d-dans we code chwomium. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous w-wa wicence cweative commons attwibution 3.0 p-pouw w-wes États-unis. (U ᵕ U❁)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. :3 aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and b-binawy fowms, òωó with ow without
+// modification, σωσ awe p-pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (U ᵕ U❁) this wist o-of conditions and the fowwowing discwaimew. (✿oωo)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, ^^ t-this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. ^•ﻌ•^
+//    * neithew the nyame of googwe inc. XD now the nyames o-of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, (ꈍᴗꈍ) i-incwuding, :3 b-but nyot
+// wimited to, (U ﹏ U) the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. UwU in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, 😳😳😳 i-indiwect, XD incidentaw,
+// speciaw, o.O e-exempwawy, (⑅˘꒳˘) ow consequentiaw damages (incwuding, 😳😳😳 but nyot
+// wimited to, nyaa~~ pwocuwement of substitute goods ow sewvices; w-woss of use, rawr
+// data, ow p-pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, -.- whethew in c-contwact, (✿oωo) stwict w-wiabiwity, /(^•ω•^) ow t-towt
+// (incwuding n-nyegwigence ow o-othewwise) awising in any way out of the use
+// of this softwawe, even if advised of the possibiwity of such damage. 🥺
 -->

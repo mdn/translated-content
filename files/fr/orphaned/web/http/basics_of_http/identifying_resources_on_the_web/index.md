@@ -1,113 +1,113 @@
 ---
-title: Identifier des ressources sur le Web
-slug: orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
-original_slug: Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web
+titwe: identifiew des wessouwces s-suw we web
+swug: o-owphaned/web/http/basics_of_http/identifying_wesouwces_on_the_web
+o-owiginaw_swug: w-web/http/basics_of_http/identifying_wesouwces_on_the_web
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La cible d'une requête HTTP est appelée une "ressource", elle ne possède pas de type particulier. Il peut s'agir d'un document, d'une photo ou de n'importe quoi d'autre. Chaque ressource est identifiée à l'aide d'une _Uniform Resource Identifier_ ({{Glossary("URI")}}) utilisé au sein de HTTP pour identifier les ressources.
+w-wa cibwe d'une w-wequête http e-est appewée une "wessouwce", o.O e-ewwe nye possède pas de type pawticuwiew. (⑅˘꒳˘) iw peut s'agiw d'un document, 😳😳😳 d'une photo o-ou de ny'impowte quoi d'autwe. nyaa~~ chaque wessouwce e-est identifiée à w'aide d'une _unifowm w-wesouwce identifiew_ ({{gwossawy("uwi")}}) utiwisé au sein de http p-pouw identifiew wes wessouwces. rawr
 
-L'identité et l'emplacement d'une ressource sur le Web sont souvent déterminées via une URL (*Uniform Resource Locator*° un type d'URI. Il existe des cas valides où l'identité et l'emplacement d'une ressource ne sont pas obtenus par la même URI comme lorsque l'en-tête {{HTTPHeader("Alt-Svc")}} est utilisé. La ressource requise par le client doit alors être récupérée à partir d'un emplacement différent.
+w-w'identité et w-w'empwacement d'une wessouwce suw we web sont souvent détewminées via une uww (*unifowm w-wesouwce wocatow*° un type d'uwi. -.- iw existe des cas vawides où w'identité e-et w'empwacement d'une w-wessouwce nye sont p-pas obtenus paw w-wa même uwi c-comme wowsque w'en-tête {{httpheadew("awt-svc")}} est utiwisé. (✿oωo) wa wessouwce wequise p-paw we cwient doit awows êtwe wécupéwée à p-pawtiw d'un empwacement difféwent. /(^•ω•^)
 
-## URLs et URNs
+## uwws et uwns
 
-### URLs
+### uwws
 
-La forme la plus commune des URI est l'URL (_Uniform Resource Locator_ ({{Glossary("URL")}})) que l'on connaît sous le nom d'adresse web.
-
-```
-https://developer.mozilla.org
-https://developer.mozilla.org/fr/docs/Learn/
-https://developer.mozilla.org/fr/search?q=URL
-```
-
-Vous pouvez entrer chacune de ces URLs dans votre navigateur pour lui demander de charger la page associée (il s'agit ici de la ressource).
-
-Une URL est composée de différentes parties, certaines obligatoires et d'autres facultatives. Voici un exemple plus complet :
+wa fowme wa pwus commune des u-uwi est w'uww (_unifowm wesouwce w-wocatow_ ({{gwossawy("uww")}})) q-que w'on connaît s-sous we nyom d'adwesse web. 🥺
 
 ```
-http://www.example.com:80/path/to/myfile.html?key1=value1&key2=value2#SomewhereInTheDocument
+https://devewopew.moziwwa.owg
+https://devewopew.moziwwa.owg/fw/docs/weawn/
+h-https://devewopew.moziwwa.owg/fw/seawch?q=uww
 ```
 
-### URNs
+v-vous pouvez entwew chacune de c-ces uwws dans v-votwe nyavigateuw pouw wui demandew d-de chawgew wa page associée (iw s-s'agit ici de wa wessouwce). ʘwʘ
 
-Une URN ou _Uniform Resource Name_ est une URI qui identifie une ressource à l'aide d'un nom dans un espace de noms (namespace) particulier.
+une uww est composée d-de difféwentes pawties, UwU c-cewtaines obwigatoiwes et d'autwes f-facuwtatives. XD v-voici un exempwe pwus compwet :
 
 ```
-urn:isbn:9780141036144
-urn:ietf:rfc:7230
+http://www.exampwe.com:80/path/to/myfiwe.htmw?key1=vawue1&key2=vawue2#somewheweinthedocument
 ```
 
-Ces deux URNs correspondent :
+### uwns
 
-- au livre 1984 de George Orwell,
-- La spécification IETF 7230, Hypertext Transfer Protocol (HTTP/1.1): Message Syntax and Routing.
+une uwn ou _unifowm wesouwce nyame_ est une u-uwi qui identifie u-une wessouwce à w'aide d'un nyom d-dans un espace d-de noms (namespace) p-pawticuwiew. (✿oωo)
 
-## Syntaxe des URIs (Uniform Resource Identifiers)
+```
+uwn:isbn:9780141036144
+uwn:ietf:wfc:7230
+```
 
-### Schéma ou protocole
+ces deux u-uwns cowwespondent :
 
-- ![Protocole](mdn-url-protocol@x2.png)
-  - : `http://` constitue le protocole, il indique le protocole qui doit être utilisé par le navigateur. Il s'agit généralement de HTTP ou de sa variante sécurisée HTTPS. Le Web nécessite l'un ou l'autre de ces protocoles néanmoins, les navigateurs sont capables de gérer d'autres protocoles tels que `mailto:` (pour ouvrir un client mail) ou `ftp:` pour gérer un transfert de fichier. Essayez, lorsque vous naviguez, d'identifier les protocoles utilisés. Les schémas usuels sont :
+- au wivwe 1984 de geowge owweww, :3
+- wa spécification ietf 7230, (///ˬ///✿) h-hypewtext twansfew pwotocow (http/1.1): message s-syntax and w-wouting. nyaa~~
 
-| Schéma      | Description                                                         |
+## syntaxe d-des uwis (unifowm wesouwce i-identifiews)
+
+### s-schéma ou pwotocowe
+
+- ![pwotocowe](mdn-uww-pwotocow@x2.png)
+  - : `http://` c-constitue we pwotocowe, >w< i-iw indique we pwotocowe qui doit êtwe u-utiwisé paw we n-nyavigateuw. -.- iw s-s'agit généwawement d-de http ou d-de sa vawiante sécuwisée https. (✿oωo) we web nyécessite w'un ou w'autwe d-de ces pwotocowes nyéanmoins, (˘ω˘) wes nyavigateuws sont capabwes de géwew d'autwes pwotocowes t-tews que `maiwto:` (pouw ouvwiw un cwient maiw) ou `ftp:` pouw g-géwew un twansfewt d-de fichiew. rawr e-essayez, OwO wowsque vous nyaviguez, ^•ﻌ•^ d-d'identifiew wes pwotocowes utiwisés. UwU w-wes schémas u-usuews sont :
+
+| schéma      | descwiption                                                         |
 | ----------- | ------------------------------------------------------------------- |
-| data        | [URIs de données](/fr/docs/Web/URI/Schemes/data)       |
-| file        | Fichiers du système hôte sur lequel est installé le navigateur      |
-| ftp         | [File Transfer Protocol](/fr/docs/Glossary/FTP)                     |
-| http/https  | [Hyper text transfer protocol (sécurisé)](/fr/docs/Glossary/HTTP)   |
-| mailto      | Adresse électronique                                                |
-| ssh         | Secure shell                                                        |
-| tel         | téléphone                                                           |
-| urn         | Uniform Resource Names                                              |
-| view-source | code source de la ressource                                         |
-| ws/wss      | connexions (chiffrées) [WebSocket](/fr/docs/Web/API/WebSockets_API) |
+| data        | [uwis de données](/fw/docs/web/uwi/schemes/data)       |
+| fiwe        | fichiews d-du système hôte suw wequew e-est instawwé we nyavigateuw      |
+| f-ftp         | [fiwe t-twansfew pwotocow](/fw/docs/gwossawy/ftp)                     |
+| http/https  | [hypew text twansfew p-pwotocow (sécuwisé)](/fw/docs/gwossawy/http)   |
+| m-maiwto      | adwesse éwectwonique                                                |
+| s-ssh         | s-secuwe sheww                                                        |
+| tew         | téwéphone                                                           |
+| uwn         | u-unifowm w-wesouwce nyames                                              |
+| v-view-souwce | code souwce de w-wa wessouwce                                         |
+| w-ws/wss      | connexions (chiffwées) [websocket](/fw/docs/web/api/websockets_api) |
 
-### Autorité
+### a-autowité
 
-- ![Nom de domaine](mdn-url-domain@x2.png)
-  - : `www.exemple.com` est le nom de domaine ou l'autorité qui gère cet espace de noms. Il indique quel serveur Web est appelé. Il est aussi possible d'utiliser directement une adresse IP ({{Glossary("IP address")}}), néanmoins elles sont moins pratiques à manipuler pour des humains et sont donc moins fréquemment utilisées pour accéder à une ressource sur le Web.
+- ![nom de domaine](mdn-uww-domain@x2.png)
+  - : `www.exempwe.com` est we nyom de domaine ou w'autowité qui gèwe c-cet espace de nyoms. (˘ω˘) i-iw indique quew sewveuw web est appewé. (///ˬ///✿) iw e-est aussi possibwe d-d'utiwisew diwectement une adwesse ip ({{gwossawy("ip addwess")}}), σωσ n-nyéanmoins ewwes sont moins pwatiques à manipuwew pouw des humains et s-sont donc moins fwéquemment utiwisées pouw accédew à u-une wessouwce s-suw we web. /(^•ω•^)
 
-### Port
+### powt
 
-- ![Port](mdn-url-port@x2.png)
-  - : `:80` constitue le port. Il indique la "porte" technique à utiliser pour accéder à une ressource sur un serveur web. Il est généralement omis puisque le serveur web utilisera par défaut les ports standards pour HTTP (port 80 pour HTTP et 443 pour HTTPS) pour permettre l'accès aux ressources qu'il héberge. Dans le cas où le port par défaut n'est pas celui utilisé, il est obligatoire de le spécifier.
+- ![powt](mdn-uww-powt@x2.png)
+  - : `:80` constitue we powt. 😳 iw i-indique wa "powte" t-technique à utiwisew pouw accédew à une wessouwce suw un sewveuw w-web. 😳 iw est généwawement o-omis puisque we sewveuw web utiwisewa paw défaut wes powts standawds p-pouw http (powt 80 pouw h-http et 443 pouw h-https) pouw pewmettwe w'accès a-aux wessouwces qu'iw hébewge. (⑅˘꒳˘) dans w-we cas où we p-powt paw défaut n-ny'est pas cewui utiwisé, 😳😳😳 iw e-est obwigatoiwe d-de we spécifiew. 😳
 
-### Chemin
+### chemin
 
-- ![Chemin du fichier](mdn-url-path@x2.png)
-  - : `/chemin/du/fichier.html` constitue le chemin d'accès à la ressource sur le serveur web. Au début du Web, le chemin représentait un emplacement physique où le fichier était stocké, à l'heure actuelle il s'agit d'une abstraction gérée par le serveur web sans réelle existence physique..
+- ![chemin du fichiew](mdn-uww-path@x2.png)
+  - : `/chemin/du/fichiew.htmw` c-constitue w-we chemin d-d'accès à wa wessouwce suw we sewveuw web. XD au d-début du web, mya we chemin wepwésentait u-un empwacement p-physique où we fichiew était stocké, ^•ﻌ•^ à w'heuwe actuewwe i-iw s'agit d'une a-abstwaction géwée p-paw we sewveuw w-web sans wéewwe existence p-physique..
 
-### Requête
+### wequête
 
-- ![Paramètres](mdn-url-parameters@x2.png)
-  - : `?key1=value1&key2=value2` sont des paramètres additionnels fournis au serveur web. Ces paramètres sont un ensemble de clés/valeurs séparé par le symbole `&`. Le serveur web peut utiliser ces paramètres pour effectuer des tâches avant de retourner une ressource au client. Chaque serveur web possède ses propres règles en ce qui concerne la gestion des paramètres.
+- ![pawamètwes](mdn-uww-pawametews@x2.png)
+  - : `?key1=vawue1&key2=vawue2` sont des pawamètwes additionnews fouwnis au sewveuw web. ʘwʘ c-ces pawamètwes sont un ensembwe d-de cwés/vaweuws sépawé paw w-we symbowe `&`. we sewveuw web peut u-utiwisew ces pawamètwes pouw e-effectuew des t-tâches avant de w-wetouwnew une wessouwce a-au cwient. ( ͡o ω ͡o ) c-chaque sewveuw web possède ses pwopwes wègwes en ce qui concewne wa gestion des pawamètwes. mya
 
-### Fragment
+### fwagment
 
-- ![Ancre](mdn-url-anchor@x2.png)
-  - : `#QuelquePartDansLeDocument` est une ancre vers un morceau de la ressource en particulier, elle constitue une sorte de marque-page à l'intérieur de la ressource. Cela permet au navigateur de savoir où aller pour afficher le contenu à l'emplacement de l'ancre. Au sein d'une page HTML par exemple, le navigateur défilera jusqu'à ce point. Pour un document vidéo ou audio, le navigateur essaiera d'accéder au temps indiqué par l'ancre. On notera que la partie située après le caractère #, aussi appelé le fragment, n'est jamais envoyé au serveur avec la requête.
+- ![ancwe](mdn-uww-anchow@x2.png)
+  - : `#quewquepawtdanswedocument` e-est une ancwe v-vews un mowceau d-de wa wessouwce en pawticuwiew, o.O e-ewwe constitue une sowte de mawque-page à w'intéwieuw de w-wa wessouwce. (✿oωo) cewa p-pewmet au nyavigateuw de savoiw o-où awwew pouw affichew we contenu à w'empwacement d-de w'ancwe. :3 a-au sein d'une page htmw paw exempwe, 😳 w-we nyavigateuw d-défiwewa jusqu'à ce point. (U ﹏ U) pouw un document vidéo ou audio, mya we nyavigateuw e-essaiewa d'accédew a-au temps i-indiqué paw w'ancwe. o-on nyotewa q-que wa pawtie située apwès w-we cawactèwe #, (U ᵕ U❁) a-aussi appewé we fwagment, :3 ny'est j-jamais envoyé a-au sewveuw avec wa wequête. mya
 
-## Exemples
+## e-exempwes
 
 ```
-https://developer.mozilla.org/fr/docs/Learn
-tel:+1-816-555-1212
-git@github.com:mdn/browser-compat-data.git
-ftp://example.org/resource.txt
-urn:isbn:9780141036144
+https://devewopew.moziwwa.owg/fw/docs/weawn
+tew:+1-816-555-1212
+g-git@github.com:mdn/bwowsew-compat-data.git
+ftp://exampwe.owg/wesouwce.txt
+u-uwn:isbn:9780141036144
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Qu'est-ce qu'une URL ?](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL)
-- [La liste des différents schémas des URIs, maintenue par l'IANA](https://www.iana.org/assignments/uri-schemes/uri-schemes.xhtml)
+- [qu'est-ce qu'une u-uww ?](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_uww)
+- [wa w-wiste d-des difféwents schémas des uwis, OwO maintenue paw w'iana](https://www.iana.owg/assignments/uwi-schemes/uwi-schemes.xhtmw)

@@ -1,88 +1,88 @@
 ---
-title: windows.onCreated
-slug: Mozilla/Add-ons/WebExtensions/API/windows/onCreated
+titwe: windows.oncweated
+swug: m-moziwwa/add-ons/webextensions/api/windows/oncweated
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancer quand la fenêtre est créée
+w-wancew q-quand wa fenêtwe e-est cwéée
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.windows.onCreated.addListener(listener);
-browser.windows.onCreated.removeListener(listener);
-browser.windows.onCreated.hasListener(listener);
+b-bwowsew.windows.oncweated.addwistenew(wistenew);
+b-bwowsew.windows.oncweated.wemovewistenew(wistenew);
+b-bwowsew.windows.oncweated.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un auditeur à cet événement.
-- `removeListener(listener)`
-  - : Arrêter d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si un auditeur est enregistré pour cet événement. Renvoie vrai si elle répond, Faux sinon.
+- `addwistenew(cawwback)`
+  - : ajoute un auditeuw à cet événement. ^^;;
+- `wemovewistenew(wistenew)`
+  - : a-awwêtew d'écoutew cet événement. >_< w'awgument d-de w'auditeuw est w'auditeuw à s-suppwimew. rawr x3
+- `haswistenew(wistenew)`
+  - : véwifiez si un auditeuw est enwegistwé p-pouw cet événement. /(^•ω•^) wenvoie v-vwai si ewwe w-wépond, :3 faux sinon. (ꈍᴗꈍ)
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
+  - : fonction qui s-sewa appewée wows de w'événement. /(^•ω•^) wa fonction passewa wes awguments suivants :
 
     - `window`
-      - : Un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre qui a été créée.
+      - : u-un objet {{webextapiwef('windows.window')}} c-contenant w-wes détaiws d-de wa fenêtwe qui a-a été cwéée. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Enregistrez les ID des nouvelles fenêtres lorsqu'elles sont créées
+enwegistwez wes id des nyouvewwes f-fenêtwes wowsqu'ewwes sont cwéées
 
 ```js
-browser.windows.onCreated.addListener((window) => {
-  console.log("New window: " + window.id);
+bwowsew.windows.oncweated.addwistenew((window) => {
+  consowe.wog("new window: " + w-window.id);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> cette a-api est basée suw w-w'api de chwomnium [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows). c-cette documentation pwovient de [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) dans we code de c-chwomium. ( ͡o ω ͡o )
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> w-wes données de compatibiwité micwosoft e-edge sont f-fouwnies paw micwosoft cowpowation e-et sont incwuses ici sous w-wa wicence cweative commons attwibution 3.0 united s-states. òωó
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (⑅˘꒳˘) aww wights w-wesewved. XD
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, -.- with ow without
+// modification, awe pewmitted pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, :3 this wist of conditions a-and the fowwowing discwaimew. nyaa~~
+//    * wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight n-notice, 😳 this wist o-of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (⑅˘꒳˘)
+//    * nyeithew t-the nyame of googwe i-inc. nyaa~~ nyow t-the nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without specific pwiow wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, rawr x3 i-incwuding, XD but n-nyot
+// wimited to, σωσ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. (U ᵕ U❁) in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, (U ﹏ U) indiwect, :3 incidentaw, ( ͡o ω ͡o )
+// s-speciaw, exempwawy, σωσ ow consequentiaw d-damages (incwuding, >w< b-but nyot
+// wimited to, 😳😳😳 pwocuwement o-of substitute goods o-ow sewvices; woss of use, OwO
+// d-data, 😳 ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, 😳😳😳 w-whethew in contwact, (˘ω˘) s-stwict wiabiwity, ʘwʘ o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of t-the use
+// of this softwawe, ( ͡o ω ͡o ) even if advised of the possibiwity of such damage. o.O
 -->

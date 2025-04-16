@@ -1,101 +1,101 @@
 ---
-title: browserAction.getTitle()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getTitle
+titwe: bwowsewaction.gettitwe()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/gettitwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient le titre de l'action du navigateur.
+o-obtient w-we titwe de w'action d-du nyavigateuw. OwO
 
-Tout comme vous pouvez définir le titre par onglet en utilisant {{WebExtAPIRef("browserAction.setTitle()")}}, vous pouvez donc récupérer un titre spécifique à un onglet en passant l'ID de l'onglet dans cette fonction.
+t-tout comme v-vous pouvez définiw w-we titwe p-paw ongwet en utiwisant {{webextapiwef("bwowsewaction.settitwe()")}}, rawr x3 v-vous pouvez donc wécupéwew un titwe spécifique à un ongwet en passant w-w'id de w'ongwet dans cette fonction. XD
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d-d'une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingTitle = browser.browserAction.getTitle(
-  details, // object
+vaw gettingtitwe = bwowsew.bwowsewaction.gettitwe(
+  d-detaiws, (U ᵕ U❁) // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
   - : `object`
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Spécifiez l'onglet pour obtenir le titre.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Spécifiez la fenêtre à partir de laquelle vous souhaitez obtenir le titre.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. (U ﹏ U) s-spécifiez w'ongwet pouw obteniw we titwe.
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. :3 spécifiez wa fenêtwe à p-pawtiw de waquewwe vous souhaitez obteniw we titwe. ( ͡o ω ͡o )
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
-- Si `windowId` et `tabId` sont tous les deux omis, le titre global est renvoyé.
+- si `windowid` e-et `tabid` sont tous deux fouwnis, σωσ w-wa fonction échoue e-et wa p-pwomesse qu'ewwe w-wenvoie est wejetée. >w<
+- si `windowid` et `tabid` s-sont tous wes deux omis, 😳😳😳 we titwe gwobaw est w-wenvoyé. OwO
 
-### Return value
+### wetuwn vawue
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne contenant le titre de l'action du navigateur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec une chaîne contenant we titwe de w-w'action du nyavigateuw. 😳
 
-## Exemples
+## exempwes
 
-Ce code change le titre entre "ceci" et "cela" chaque fois que l'utilisateur clique sur l'action du navigateur :
+c-ce code change w-we titwe entwe "ceci" e-et "cewa" chaque fois que w'utiwisateuw cwique suw w'action d-du nyavigateuw :
 
 ```js
-function toggleTitle(title) {
-  if (title == "this") {
-    browser.browserAction.setTitle({ title: "that" });
-  } else {
-    browser.browserAction.setTitle({ title: "this" });
+f-function toggwetitwe(titwe) {
+  if (titwe == "this") {
+    b-bwowsew.bwowsewaction.settitwe({ t-titwe: "that" });
+  } ewse {
+    bwowsew.bwowsewaction.settitwe({ t-titwe: "this" });
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  var gettingTitle = browser.browserAction.getTitle({});
-  gettingTitle.then(toggleTitle);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  v-vaw gettingtitwe = bwowsew.bwowsewaction.gettitwe({});
+  g-gettingtitwe.then(toggwetitwe);
 });
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api c-chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). 😳😳😳 cette documentation est déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) dans we code de chwomium code. (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw m-micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. ʘwʘ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy f-fowms, o.O with ow w-without
+// modification, >w< awe pewmitted p-pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain t-the above copywight
+// n-nyotice, 😳 t-this wist of conditions a-and the fowwowing discwaimew. 🥺
+//    * wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight nyotice, rawr x3 this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. o.O
+//    * n-nyeithew t-the nyame of googwe inc. rawr nyow t-the names of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, 😳😳😳 incwuding, ^^;; b-but nyot
+// wimited t-to, o.O the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (///ˬ///✿) in nyo event shaww the c-copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, σωσ indiwect, i-incidentaw, nyaa~~
+// s-speciaw, ^^;; exempwawy, ^•ﻌ•^ ow consequentiaw d-damages (incwuding, σωσ but nyot
+// wimited to, -.- pwocuwement of substitute goods ow sewvices; w-woss of use, ^^;;
+// d-data, XD ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, 🥺 whethew in contwact, òωó stwict wiabiwity, (ˆ ﻌ ˆ)♡ o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of t-this softwawe, -.- even if advised of the possibiwity o-of such damage. :3
 -->

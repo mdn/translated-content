@@ -1,104 +1,104 @@
 ---
-title: cookies.getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/getAll
+titwe: cookies.getaww()
+swug: m-moziwwa/add-ons/webextensions/api/cookies/getaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode **`getAll()`** de l'API {{WebExtAPIRef("cookies")}} récupère tous les cookies d'un seul cookie store qui correspondent aux informations fournies.
+w-wa méthode **`getaww()`** d-de w'api {{webextapiwef("cookies")}} w-wécupèwe t-tous wes cookies d-d'un seuw cookie s-stowe qui c-cowwespondent aux infowmations fouwnies. 🥺
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getting = browser.cookies.getAll(
-  details, // object
+vaw getting = b-bwowsew.cookies.getaww(
+  detaiws, (U ᵕ U❁) // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : Un `object` contenant des détails pouvant être utilisés pour faire correspondre les cookies à extraire. Les propriétés incluses sont les suivantes (voir [type de cookie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies/Cookie#type) pour plus d'informations sur celles-ci ) :
+  - : un `object` contenant des d-détaiws pouvant êtwe utiwisés p-pouw faiwe cowwespondwe w-wes cookies à extwaiwe. :3 wes pwopwiétés incwuses sont wes suivantes (voiw [type d-de cookie](/fw/docs/moziwwa/add-ons/webextensions/api/cookies/cookie#type) pouw pwus d'infowmations suw cewwes-ci ) :
 
-    - `domain`{{optional_inline}}
-      - : Une `chaîne` représentant un domaine auquel les cookies doivent être associés (ils peuvent être associés soit à ce domaine exact, soit à l'un de ses sous-domaines).
-    - `firstPartyDomain`{{optional_inline}}
-      - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie à récupérer est associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Vous pouvez cependant passer `null` dans cette situation. Si vous faites cela, alors les cookies avec n'importe quelle valeur pour `firstPartyDomain`, ainsi que les cookies qui n'ont pas de set `firstPartyDomain` , seront inclus dans les résultats. Voir [Isolement de la première partie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#isolement_de_la_première_partie).
-    - `name`{{optional_inline}}
-      - : Une `chaîne` représentant un nom que les cookies devraient avoir.
-    - `path`{{optional_inline}}
-      - : Une `chaîne` représentant un chemin - le chemin des cookies doit être identique à celui-ci.
-    - `secure`{{optional_inline}}
-      - : Un `booléen` — filtre les cookies par leur propriété `sécurisée`, vous permettant de filtrer les cookies sécurisés contre les cookies non sécurisés.
-    - `session`{{optional_inline}}
-      - : Un `booléen` — filtre les cookies en fonction de leur propriété de `session`, ce qui vous permet de filtrer les cookies de session par rapport aux cookies persistants.
-    - `storeId`{{optional_inline}}
-      - : Une `chaîne` représentant le magasin de cookies pour récupérer les cookies. S'il est omi, le cookie store du contexte d'exécution actuel sera utilisé.
-    - `url`{{optional_inline}}
-      - : Une `chaîne` représentant une URL à laquelle les cookies récupérés doivent être associés.
+    - `domain`{{optionaw_inwine}}
+      - : u-une `chaîne` wepwésentant un d-domaine auquew wes c-cookies doivent êtwe a-associés (iws p-peuvent êtwe associés soit à ce domaine e-exact, ( ͡o ω ͡o ) soit à w'un de ses sous-domaines). òωó
+    - `fiwstpawtydomain`{{optionaw_inwine}}
+      - : une `chaîne` w-wepwésentant we domaine de pwemièwe pawtie avec wequew we cookie à wécupéwew est associé. σωσ c-cette pwopwiété doit êtwe fouwnie s-si w'isowation d-de wa pwemièwe p-pawtie est activée suw we nyavigateuw. (U ᵕ U❁) vous pouvez cependant p-passew `nuww` d-dans cette situation. si vous f-faites cewa, (✿oωo) awows w-wes cookies avec ny'impowte quewwe v-vaweuw pouw `fiwstpawtydomain`, ^^ ainsi que w-wes cookies qui ny'ont pas de set `fiwstpawtydomain` , ^•ﻌ•^ sewont incwus d-dans wes wésuwtats. XD voiw [isowement d-de wa pwemièwe pawtie](/fw/docs/moziwwa/add-ons/webextensions/api/cookies#isowement_de_wa_pwemièwe_pawtie). :3
+    - `name`{{optionaw_inwine}}
+      - : u-une `chaîne` w-wepwésentant un nyom que wes cookies devwaient avoiw. (ꈍᴗꈍ)
+    - `path`{{optionaw_inwine}}
+      - : une `chaîne` wepwésentant un chemin - we chemin d-des cookies doit êtwe i-identique à cewui-ci. :3
+    - `secuwe`{{optionaw_inwine}}
+      - : u-un `boowéen` — fiwtwe w-wes cookies p-paw weuw pwopwiété `sécuwisée`, (U ﹏ U) vous pewmettant de fiwtwew wes cookies sécuwisés c-contwe wes cookies nyon sécuwisés. UwU
+    - `session`{{optionaw_inwine}}
+      - : un `boowéen` — fiwtwe w-wes cookies en fonction de weuw p-pwopwiété d-de `session`, 😳😳😳 ce q-qui vous pewmet de fiwtwew wes c-cookies de session p-paw wappowt aux c-cookies pewsistants. XD
+    - `stoweid`{{optionaw_inwine}}
+      - : u-une `chaîne` wepwésentant we magasin de cookies p-pouw wécupéwew w-wes cookies. o.O s-s'iw est omi, (⑅˘꒳˘) w-we cookie stowe d-du contexte d'exécution actuew sewa utiwisé.
+    - `uww`{{optionaw_inwine}}
+      - : une `chaîne` w-wepwésentant une uww à waquewwe wes cookies wécupéwés doivent êtwe associés. 😳😳😳
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets `{{WebExtAPIRef('cookies.Cookie')}}` correspondant aux propriétés données dans le paramètre `details`. Seuls les cookies non expirés sont renvoyés. Les cookies retournés seront triés par longueur de chemin, du plus long au plus court. Si plusieurs cookies ont la même longueur de chemin, ceux dont l'heure de création est la plus proche seront les premiers.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un tabweau d-d'objets `{{webextapiwef('cookies.cookie')}}` c-cowwespondant a-aux pwopwiétés données d-dans we pawamètwe `detaiws`. nyaa~~ seuws wes cookies n-nyon expiwés s-sont wenvoyés. rawr wes cookies wetouwnés sewont twiés paw wongueuw de chemin, -.- du pwus wong au p-pwus couwt. (✿oωo) si pwusieuws cookies o-ont wa même wongueuw de chemin, /(^•ω•^) c-ceux dont w'heuwe d-de cwéation est wa pwus pwoche sewont wes p-pwemiews. 🥺
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Dans l'extrait suivant, nous appelons pour obtenir tous les cookies que le navigateur a actuellement stockés qui ont un nom de "favourite-colour". Lorsque le résultat est renvoyé, nous imprimons la valeur de chaque résultat à la console.
+d-dans w'extwait suivant, ʘwʘ nyous appewons pouw obteniw tous wes cookies que w-we nyavigateuw a-a actuewwement stockés q-qui ont un nyom de "favouwite-cowouw". UwU wowsque w-we wésuwtat e-est wenvoyé, XD nyous impwimons w-wa vaweuw de chaque wésuwtat à wa consowe. (✿oωo)
 
 ```js
-function logCookies(cookies) {
-  for (let cookie of cookies) {
-    console.log(cookie.value);
+function wogcookies(cookies) {
+  fow (wet c-cookie of cookies) {
+    c-consowe.wog(cookie.vawue);
   }
 }
 
-var gettingAll = browser.cookies.getAll({
-  name: "favourite-colour",
+vaw gettingaww = bwowsew.cookies.getaww({
+  n-nyame: "favouwite-cowouw", :3
 });
-gettingAll.then(logCookies);
+g-gettingaww.then(wogcookies);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> cette api est basée suw w'api chwomium [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies). (///ˬ///✿) c-cette documentation est déwivée de [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) dans we code chwomium. nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft e-edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. -.- a-aww wights wesewved. (✿oωo)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, (˘ω˘) with ow without
+// m-modification, rawr awe pewmitted p-pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the a-above copywight
+// nyotice, OwO this w-wist of conditions a-and the fowwowing discwaimew. ^•ﻌ•^
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, UwU this wist o-of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. (˘ω˘)
+//    * n-nyeithew t-the nyame of googwe i-inc. (///ˬ///✿) nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, σωσ i-incwuding, /(^•ω•^) but nyot
+// w-wimited to, 😳 t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳 in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any d-diwect, (⑅˘꒳˘) indiwect, 😳😳😳 incidentaw, 😳
+// speciaw, exempwawy, XD ow consequentiaw d-damages (incwuding, mya b-but nyot
+// wimited to, ^•ﻌ•^ p-pwocuwement of substitute goods ow sewvices; w-woss of use, ʘwʘ
+// d-data, ( ͡o ω ͡o ) ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, whethew in contwact, mya stwict wiabiwity, o.O o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in a-any way out of the use
+// of this s-softwawe, (✿oωo) even i-if advised of the possibiwity of s-such damage. :3
 -->

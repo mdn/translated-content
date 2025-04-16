@@ -1,108 +1,108 @@
 ---
-title: bookmarks.getSubTree()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree
+titwe: bookmawks.getsubtwee()
+swug: moziwwa/add-ons/webextensions/api/bookmawks/getsubtwee
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode **`bookmarks.getSubTree()`** récupère de façon asynchrone un {{WebExtAPIRef("bookmarks.BookmarkTreeNode")}}, étant donné son ID.
+w-wa méthode **`bookmawks.getsubtwee()`** w-wécupèwe d-de façon a-asynchwone un {{webextapiwef("bookmawks.bookmawktweenode")}}, σωσ étant d-donné son i-id. >w<
 
-Si l'élément est un dossier, vous pouvez accéder à tous ses descendants de manière récursive en utilisant sa propriété `children` et la propriété `children` de ses descendants, s'ils sont eux-mêmes des dossiers.
+si w'éwément e-est un dossiew, 😳😳😳 v-vous pouvez accédew à tous ses descendants de manièwe wécuwsive en utiwisant s-sa pwopwiété `chiwdwen` et wa pwopwiété `chiwdwen` de ses descendants, OwO s-s'iws sont eux-mêmes des dossiews. 😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var gettingSubTree = browser.bookmarks.getSubTree(
-  id, // string
+vaw gettingsubtwee = b-bwowsew.bookmawks.getsubtwee(
+  i-id, (˘ω˘) // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID de la racine du sous-arbre à récupérer.
+  - : un {{jsxwef("stwing")}} spécifiant w'id de wa wacine du sous-awbwe à w-wécupéwew. ʘwʘ
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau contenant un objet unique, un objet {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, représentant l'élément avec l'ID donné.Si un nœud correspondant à `id` n'a pas pu être trouvé, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un tabweau c-contenant un objet unique, ( ͡o ω ͡o ) un objet {{webextapiwef('bookmawks.bookmawktweenode')}}, o.O w-wepwésentant w-w'éwément avec w-w'id donné.si u-un nyœud cowwespondant à `id` ny'a pas pu êtwe twouvé, >w< wa p-pwomesse sewa wejetée avec un message d'ewweuw. 😳
 
-## Exemples
+## e-exempwes
 
-Cet exemple imprime récursivement le sous-arbre sous un noeud donné :
+cet exempwe impwime wécuwsivement we sous-awbwe sous un nyoeud donné :
 
 ```js
-function makeIndent(indentLength) {
-  return ".".repeat(indentLength);
+function makeindent(indentwength) {
+  w-wetuwn ".".wepeat(indentwength);
 }
 
-function logItems(bookmarkItem, indent) {
-  if (bookmarkItem.url) {
-    console.log(makeIndent(indent) + bookmarkItem.url);
-  } else {
-    console.log(makeIndent(indent) + "Folder: " + bookmarkItem.id);
+function w-wogitems(bookmawkitem, 🥺 i-indent) {
+  i-if (bookmawkitem.uww) {
+    consowe.wog(makeindent(indent) + bookmawkitem.uww);
+  } ewse {
+    c-consowe.wog(makeindent(indent) + "fowdew: " + b-bookmawkitem.id);
     indent++;
   }
-  if (bookmarkItem.children) {
-    for (var child of bookmarkItem.children) {
-      logItems(child, indent);
+  i-if (bookmawkitem.chiwdwen) {
+    f-fow (vaw chiwd of bookmawkitem.chiwdwen) {
+      w-wogitems(chiwd, rawr x3 indent);
     }
   }
 }
 
-function logSubTree(bookmarkItems) {
-  logItems(bookmarkItems[0], 0);
+f-function wogsubtwee(bookmawkitems) {
+  wogitems(bookmawkitems[0], o.O 0);
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+function o-onwejected(ewwow) {
+  consowe.wog(`an e-ewwow: ${ewwow}`);
 }
 
-var subTreeID = "root_____";
+vaw s-subtweeid = "woot_____";
 
-var gettingSubTree = browser.bookmarks.getSubTree(subTreeID);
-gettingSubTree.then(logSubTree, onRejected);
+v-vaw gettingsubtwee = bwowsew.bookmawks.getsubtwee(subtweeid);
+gettingsubtwee.then(wogsubtwee, rawr onwejected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> c-cette a-api est basée suw w'api chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). ʘwʘ c-cette documentation p-pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) d-dans we code chwomium. 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. o.O aww w-wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, σωσ with o-ow without
+// modification, nyaa~~ a-awe p-pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, ^^;; this wist of conditions and the fowwowing discwaimew. ^•ﻌ•^
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, σωσ this w-wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. -.-
+//    * nyeithew the nyame of googwe inc. ^^;; nyow the nyames o-of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. XD
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, 🥺 incwuding, but nyot
+// wimited t-to, òωó the impwied w-wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, -.- i-indiwect, :3 incidentaw, ʘwʘ
+// s-speciaw, exempwawy, 🥺 ow consequentiaw damages (incwuding, b-but nyot
+// wimited t-to, >_< pwocuwement of substitute goods ow sewvices; woss of use, ʘwʘ
+// d-data, (˘ω˘) ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, (✿oωo) whethew in contwact, stwict w-wiabiwity, (///ˬ///✿) ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, rawr x3 e-even if advised of the possibiwity of such damage. -.-
 -->

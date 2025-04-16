@@ -1,75 +1,75 @@
 ---
-title: Firefox 18 pour les développeurs
-slug: Mozilla/Firefox/Releases/18
+titwe: fiwefox 18 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/18
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 18, basé sur Gecko 18.0, est sorti le 8 janvier 2013. Cette page résume les principaux changements dans Firefox 18 qui sont utiles aux développeurs.
+f-fiwefox 18, :3 b-basé suw gecko 18.0, ( ͡o ω ͡o ) e-est sowti w-we 8 janview 2013. σωσ c-cette page w-wésume wes pwincipaux changements dans fiwefox 18 qui sont utiwes aux dévewoppeuws. >w<
 
-## Changements pour les développeurs Web
+## c-changements pouw wes dévewoppeuws web
 
-### HTML
+### h-htmw
 
-- L'attribut [`reversed`](/fr/docs/Web/HTML/Element/ol#reversed) de l'élément {{HTMLElement("ol")}} est à présent supporté. ([bug Firefox 601912](https://bugzil.la/601912))
-- L'attribut [`crossorigin`](/fr/docs/Web/HTML/Element/link#crossorigin) de l'élément {{HTMLElement("link")}} est à présent supporté. ([bug Firefox 786564](https://bugzil.la/786564))
-- L'attribut [`allowfullscreen`](/fr/docs/Web/HTML/Element/iframe#allowfullscreen) de {{HTMLElement("iframe")}} a été implémenté et son prédécesseur préfixé, [`mozallowfullscreen`](/fr/docs/Web/HTML/Element/iframe#mozallowfullscreen), est à présent obsolète.
+- w'attwibut [`wevewsed`](/fw/docs/web/htmw/ewement/ow#wevewsed) de w-w'éwément {{htmwewement("ow")}} est à pwésent suppowté. 😳😳😳 ([bug fiwefox 601912](https://bugziw.wa/601912))
+- w-w'attwibut [`cwossowigin`](/fw/docs/web/htmw/ewement/wink#cwossowigin) de w'éwément {{htmwewement("wink")}} est à p-pwésent suppowté. OwO ([bug f-fiwefox 786564](https://bugziw.wa/786564))
+- w'attwibut [`awwowfuwwscween`](/fw/docs/web/htmw/ewement/ifwame#awwowfuwwscween) de {{htmwewement("ifwame")}} a été impwémenté e-et son pwédécesseuw pwéfixé, 😳 [`mozawwowfuwwscween`](/fw/docs/web/htmw/ewement/ifwame#mozawwowfuwwscween), 😳😳😳 est à pwésent obsowète. (˘ω˘)
 
-### CSS
+### css
 
-- {{cssxref("min-width")}} et {{cssxref("min-height")}} utilisent désormais le mot-clé `auto` comme _valeur initiale_ (Cela influe uniquement sur les éléments flexibles qui corrigeaient à `0`, la précédente valeur initiale, pour les autres éléments). ([bug Firefox 763689](https://bugzil.la/763689))
-- La cascade a été mise à jour : désormais l'auteur des règles `!important` prend le dessus sur les [animations CSS](/fr/docs/Web/CSS/CSS_animations). ([bug Firefox 783714](https://bugzil.la/783714))
-- La propriété raccourcie {{cssxref("background")}} reconnait à présent la propriété CSS3 {{cssxref("background-size")}}. ([bug Firefox 570326](https://bugzil.la/570326))
-- Le support initial du module CSS Flexbox a été lancé. Il est désactivé par défaut mais peut être activé en passant le paramètre `layout.css.flexbox.enabled` à `true`. ([bug Firefox 666041](https://bugzil.la/666041))
+- {{cssxwef("min-width")}} e-et {{cssxwef("min-height")}} utiwisent d-désowmais w-we mot-cwé `auto` c-comme _vaweuw i-initiawe_ (cewa infwue uniquement suw wes éwéments f-fwexibwes qui cowwigeaient à `0`, ʘwʘ wa pwécédente v-vaweuw initiawe, ( ͡o ω ͡o ) pouw wes autwes éwéments). o.O ([bug fiwefox 763689](https://bugziw.wa/763689))
+- wa cascade a été mise à j-jouw : désowmais w'auteuw d-des wègwes `!impowtant` p-pwend we d-dessus suw wes [animations css](/fw/docs/web/css/css_animations). >w< ([bug fiwefox 783714](https://bugziw.wa/783714))
+- wa pwopwiété w-waccouwcie {{cssxwef("backgwound")}} w-weconnait à pwésent w-wa pwopwiété c-css3 {{cssxwef("backgwound-size")}}. 😳 ([bug fiwefox 570326](https://bugziw.wa/570326))
+- w-we suppowt initiaw du moduwe c-css fwexbox a été wancé. 🥺 iw est désactivé p-paw défaut mais peut êtwe a-activé en passant we pawamètwe `wayout.css.fwexbox.enabwed` à `twue`. rawr x3 ([bug fiwefox 666041](https://bugziw.wa/666041))
 
-### DOM
+### dom
 
-- `navigator.mozPay` a été lancé. ([bug Firefox 767818](https://bugzil.la/767818))
-- `window.devicePixelRatio` a été lancé. ([bug Firefox 564815](https://bugzil.la/564815))
-- Le backend MacOS X pour `window.navigator.battery` a été implémenté. ([bug Firefox 696045](https://bugzil.la/696045))
-- {{domxref("BlobBuilder", "MozBlobBuilder")}} a été retiré. Les développeurs doivent utiliser le constructeur {{domxref("Blob")}} pour créer un objet `Blob`. ([bug Firefox 744907](https://bugzil.la/744907))
-- L'évènement [`visibilitychange`](/fr/docs/Web/API/Document/visibilitychange_event) et l'[API Page Visibility](/fr/docs/Web/API/Page_Visibility_API) ont été dépréfixés. ([bug Firefox 812086](https://bugzil.la/812086))
-- `TextDecoder` et `TextEncoder` ont été ajoutés. ([bug Firefox 764234](https://bugzil.la/764234))
-- `HTMLMediaElement.src` a été séparée en deux propriétés : la propriété `src` standard, qui traite {{domxref("DOMString")}}, et la propriété préfixée `mozSrcObject`, qui traite [les flux multimédia](/fr/docs/Web/API/Media_Capture_and_Streams_API). ([bug Firefox 792665](https://bugzil.la/792665))
-- Support des [objets transférables](/fr/docs/DOM/Using_web_workers#Passing_data_by_transferring_.C2.A0ownership_%28transferable_objects%29).
+- `navigatow.mozpay` a-a été w-wancé. o.O ([bug fiwefox 767818](https://bugziw.wa/767818))
+- `window.devicepixewwatio` a été wancé. rawr ([bug fiwefox 564815](https://bugziw.wa/564815))
+- we backend macos x pouw `window.navigatow.battewy` a été impwémenté. ʘwʘ ([bug f-fiwefox 696045](https://bugziw.wa/696045))
+- {{domxwef("bwobbuiwdew", 😳😳😳 "mozbwobbuiwdew")}} a-a été wetiwé. ^^;; wes dévewoppeuws d-doivent utiwisew w-we constwucteuw {{domxwef("bwob")}} p-pouw cwéew un objet `bwob`. o.O ([bug fiwefox 744907](https://bugziw.wa/744907))
+- w'évènement [`visibiwitychange`](/fw/docs/web/api/document/visibiwitychange_event) et w-w'[api page visibiwity](/fw/docs/web/api/page_visibiwity_api) ont été dépwéfixés. (///ˬ///✿) ([bug fiwefox 812086](https://bugziw.wa/812086))
+- `textdecodew` et `textencodew` ont été ajoutés. σωσ ([bug f-fiwefox 764234](https://bugziw.wa/764234))
+- `htmwmediaewement.swc` a été s-sépawée en deux p-pwopwiétés : w-wa pwopwiété `swc` standawd, nyaa~~ q-qui twaite {{domxwef("domstwing")}}, ^^;; e-et wa pwopwiété p-pwéfixée `mozswcobject`, ^•ﻌ•^ q-qui twaite [wes fwux muwtimédia](/fw/docs/web/api/media_captuwe_and_stweams_api). σωσ ([bug fiwefox 792665](https://bugziw.wa/792665))
+- s-suppowt d-des [objets twansféwabwes](/fw/docs/dom/using_web_wowkews#passing_data_by_twansfewwing_.c2.a0ownewship_%28twansfewabwe_objects%29). -.-
 
-### JavaScript
+### j-javascwipt
 
-- Les [Direct Proxies](/fr/docs/Web/JavaScript/Reference/Global_Objects/Proxy) d'Harmony (ECMAScript 6) ont été lancés. ([bug Firefox 703537](https://bugzil.la/703537))
+- w-wes [diwect p-pwoxies](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwoxy) d'hawmony (ecmascwipt 6) ont été wancés. ([bug fiwefox 703537](https://bugziw.wa/703537))
 
-### Réseau
+### w-wéseau
 
-- Les facteurs de qualité ("q-values") sont désormais fixés à 2 chiffres dans l'en-tête HTTP `Accept-Language`. ([bug Firefox 672448](https://bugzil.la/672448))
-- La syntaxe `ALLOW-FROM` de l'en-tête HTTP [`X-FRAME-OPTIONS`](/fr/docs/Web/HTTP/Headers/X-Frame-Options) Response est à présent supportée. ([bug Firefox 690168](https://bugzil.la/690168))
+- wes facteuws de quawité ("q-vawues") sont désowmais fixés à 2 chiffwes dans w-w'en-tête http `accept-wanguage`. ^^;; ([bug fiwefox 672448](https://bugziw.wa/672448))
+- wa syntaxe `awwow-fwom` de w'en-tête http [`x-fwame-options`](/fw/docs/web/http/headews/x-fwame-options) w-wesponse est à p-pwésent suppowtée. XD ([bug f-fiwefox 690168](https://bugziw.wa/690168))
 
-## Changements pour les développeurs de Mozilla et de modules complémentaires
+## changements p-pouw wes dévewoppeuws d-de moziwwa et de m-moduwes compwémentaiwes
 
-### Changements dans les interfaces
+### changements dans wes intewfaces
 
-- `nsIStreamListener`
-  - : Le 4ème paramètre (aOffset) de la méthode `onDataAvailable()` modifie unsigned long long. ([bug Firefox 784912](https://bugzil.la/784912))
-- `nsIUploadChannel`
-  - : `setUploadStream()` supporte plus de 2 Go de content-length. ([bug Firefox 790617](https://bugzil.la/790617))
-- `nsIEditor`
-  - : `addEditorObserver()` a été supprimé, utilisez `setEditorObserver()` à la place, `removeEditorObserver()` ne prend plus le paramètre `nsIEditorObserver`. ([bug Firefox 785091](https://bugzil.la/785091))
-- `nsIHttpProtocolHandler`
-  - : Il n'y a plus de garantie que les observateurs `http-on-modify-request` soit appelés de manière synchrone au cours de `nsIChannel.asyncOpen().` Pour les observateurs qui ont besoin d'être appelés pendant `asyncOpen()`, le nouvel observateur `http-on-opening-request` a été ajouté. [bug Firefox 800799](https://bugzil.la/800799)
-- `nsIProtocolProxyService`
-  - : La méthode `resolve` a été retirée. Maintenant, seule la méthode `asyncResolve` peut être utilisée. Voir ([bug Firefox 769764](https://bugzil.la/769764)).
+- `nsistweamwistenew`
+  - : we 4ème pawamètwe (aoffset) de wa m-méthode `ondataavaiwabwe()` modifie u-unsigned wong wong. 🥺 ([bug fiwefox 784912](https://bugziw.wa/784912))
+- `nsiupwoadchannew`
+  - : `setupwoadstweam()` s-suppowte p-pwus de 2 go de content-wength. òωó ([bug fiwefox 790617](https://bugziw.wa/790617))
+- `nsieditow`
+  - : `addeditowobsewvew()` a-a été s-suppwimé, (ˆ ﻌ ˆ)♡ utiwisez `seteditowobsewvew()` à w-wa pwace, -.- `wemoveeditowobsewvew()` n-nye pwend pwus we pawamètwe `nsieditowobsewvew`. :3 ([bug fiwefox 785091](https://bugziw.wa/785091))
+- `nsihttppwotocowhandwew`
+  - : iw ny'y a pwus de gawantie q-que wes obsewvateuws `http-on-modify-wequest` s-soit appewés d-de manièwe synchwone au couws de `nsichannew.asyncopen().` p-pouw w-wes obsewvateuws qui ont besoin d-d'êtwe appewés pendant `asyncopen()`, ʘwʘ we nyouvew obsewvateuw `http-on-opening-wequest` a été a-ajouté. 🥺 [bug f-fiwefox 800799](https://bugziw.wa/800799)
+- `nsipwotocowpwoxysewvice`
+  - : wa méthode `wesowve` a été wetiwée. >_< m-maintenant, s-seuwe wa méthode `asyncwesowve` peut êtwe utiwisée. ʘwʘ voiw ([bug fiwefox 769764](https://bugziw.wa/769764)).
 
-#### Interfaces supprimées
+#### i-intewfaces suppwimées
 
-Les interfaces suivantes ont été supprimées.
+wes intewfaces suivantes ont été suppwimées.
 
-- `nsIEditorObserver`
+- `nsieditowobsewvew`
 
-## Voir aussi
+## voiw aussi
 
-- [Notes de version de Firefox 18](https://www.mozilla.org/en-US/firefox/18.0/releasenotes/)
-- [Aurora 18 : HiDPI & Touch Events](https://hacks.mozilla.org/2012/10/aurora-18-hidpi-touch-events/) (Mozilla Hacks)
-- [Compatibilité des sites pour Firefox 18](/fr/docs/Site_Compatibility_for_Firefox_18)
-- [Compatibilité des modules complémentaires pour Firefox 18](https://blog.mozilla.org/addons/2012/12/28/compatibility-for-firefox-18/) (Add-ons Blog)
+- [notes d-de vewsion de fiwefox 18](https://www.moziwwa.owg/en-us/fiwefox/18.0/weweasenotes/)
+- [auwowa 18 : hidpi & touch events](https://hacks.moziwwa.owg/2012/10/auwowa-18-hidpi-touch-events/) (moziwwa hacks)
+- [compatibiwité d-des sites p-pouw fiwefox 18](/fw/docs/site_compatibiwity_fow_fiwefox_18)
+- [compatibiwité des moduwes compwémentaiwes pouw fiwefox 18](https://bwog.moziwwa.owg/addons/2012/12/28/compatibiwity-fow-fiwefox-18/) (add-ons b-bwog)
 
-### Anciennes versions
+### anciennes v-vewsions
 
-{{Firefox_for_developers('17')}}
+{{fiwefox_fow_devewopews('17')}}

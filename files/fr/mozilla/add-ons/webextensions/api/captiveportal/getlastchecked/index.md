@@ -1,54 +1,54 @@
 ---
-title: getLastChecked
-slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getLastChecked
+titwe: getwastchecked
+swug: moziwwa/add-ons/webextensions/api/captivepowtaw/getwastchecked
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Retourne le temps écoulé depuis que la dernière demande a été complétée.
+w-wetouwne we t-temps écouwé d-depuis que wa dewnièwe d-demande a-a été compwétée. (ˆ ﻌ ˆ)♡
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var state = browser.captivePortal.getLastChecked();
+v-vaw state = b-bwowsew.captivepowtaw.getwastchecked();
 ```
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est remplie avec un nombre entier représentant le temps en millisecondes.
+une [pwomise](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui est wempwie avec un nyombwe e-entiew wepwésentant we temps en miwwisecondes. 😳😳😳
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (U ﹏ U) aww wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and u-use in souwce and b-binawy fowms, 😳 with ow without
+// modification, 😳 awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// nyotice, σωσ t-this wist o-of conditions a-and the fowwowing d-discwaimew. rawr x3
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, OwO t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. /(^•ω•^)
+//    * n-neithew the nyame o-of googwe inc. 😳😳😳 n-now the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, >_< incwuding, >w< b-but nyot
+// wimited to, rawr the i-impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳 in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, >w< i-indiwect, (⑅˘꒳˘) incidentaw, OwO
+// s-speciaw, (ꈍᴗꈍ) e-exempwawy, 😳 ow consequentiaw damages (incwuding, 😳😳😳 but nyot
+// w-wimited to, mya pwocuwement of substitute goods ow sewvices; woss of use, mya
+// data, (⑅˘꒳˘) o-ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// t-theowy of wiabiwity, (U ﹏ U) whethew i-in contwact, mya stwict w-wiabiwity, ʘwʘ ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, (˘ω˘) e-even if advised o-of the possibiwity o-of such damage. (U ﹏ U)
 -->

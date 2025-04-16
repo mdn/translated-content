@@ -1,57 +1,57 @@
 ---
-title: browserSettings.proxyConfig
-slug: Mozilla/Add-ons/WebExtensions/API/proxy/settings
+titwe: bwowsewsettings.pwoxyconfig
+swug: moziwwa/add-ons/webextensions/api/pwoxy/settings
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier les paramètres de proxy du navigateur.
+u-un objet {{webextapiwef("types.bwowsewsetting", >w< "bwowsewsetting")}} q-qui peut êtwe u-utiwisé p-pouw modifiew wes p-pawamètwes de p-pwoxy du nyavigateuw. nyaa~~
 
-> [!NOTE]
-> La possibilité de modifier les paramètres de proxy nécessite un accès à une fenêtre privée car les paramètres de proxy affectent à la fois les fenêtres privées et non privées. Par conséquent, si une extension n'a pas reçu l'autorisation de fenêtre privée, les appels à `proxy.settings.set()` lanceront une exception.
+> [!note]
+> w-wa possibiwité d-de modifiew wes pawamètwes de pwoxy nyécessite un accès à une fenêtwe pwivée c-caw wes pawamètwes de pwoxy affectent à w-wa fois wes fenêtwes pwivées e-et nyon pwivées. (✿oωo) paw conséquent, ʘwʘ si une extension ny'a pas weçu w-w'autowisation de fenêtwe pwivée, (ˆ ﻌ ˆ)♡ w-wes appews à `pwoxy.settings.set()` w-wancewont une exception. 😳😳😳
 
-La valeur sous-jacente est un objet avec les propriétés énumérées ci-dessous.
+wa vaweuw sous-jacente est un objet avec wes p-pwopwiétés énuméwées ci-dessous. :3
 
-Lors de la définition de cet objet, toutes les propriétés sont facultatives. Notez que les propriétés omises seront réinitialisées à leur valeur par défaut.
+wows de wa définition de cet objet, OwO toutes w-wes pwopwiétés sont facuwtatives. (U ﹏ U) n-nyotez q-que wes pwopwiétés o-omises sewont w-wéinitiawisées à weuw vaweuw paw défaut. >w<
 
-- `autoConfigUrl`{{optional_inline}}
-  - : `string`. Une URL à utiliser pour configurer le proxy.
-- `autoLogin`{{optional_inline}}
-  - : `boolean`. Ne pas demander l'authentification si le mot de passe est enregistré. Par défaut à `false`.
-- `ftp`{{optional_inline}}
-  - : `string`. L'adresse du proxy FTP. Peut inclure un port.
-- `http`{{optional_inline}}
-  - : `string`. L'adresse du proxy HTTP. Peut inclure un port.
-- `httpProxyAll`{{optional_inline}}
-  - : `boolean`. Utilisez le serveur proxy HTTP pour tous les protocoles. Par défaut à `false`.
-- `passthrough`{{optional_inline}}
-  - : `string`. Une liste d'hôtes séparés par des virgules qui ne doivent pas être mandatés. La valeur par défaut est "localhost, 127.0.0.1".
-- `proxyDNS`{{optional_inline}}
-  - : `boolean`. DNS proxy lors de l'utilisation de SOCKS5. Par défaut à `false`.
-- `proxyType`{{optional_inline}}
-  - : `string`. Le type de proxy à utiliser. Cela peut prendre l'une des valeurs suivantes : "none", "autoDetect", "system", "manual", "autoConfig". Par défaut à "system".
-- `socks`{{optional_inline}}
-  - : `string`. L'adresse du proxy SOCKS. Peut inclure un port.
-- `socksVersion`{{optional_inline}}
-  - : `integer`. La version du proxy SOCKS. Peut être 4 ou 5. Par défaut à 5.
-- `ssl`{{optional_inline}}
-  - : `string`. L'adresse du proxy SSL. Peut inclure un port.
+- `autoconfiguww`{{optionaw_inwine}}
+  - : `stwing`. (U ﹏ U) u-une uww à utiwisew pouw configuwew we pwoxy. 😳
+- `autowogin`{{optionaw_inwine}}
+  - : `boowean`. (ˆ ﻌ ˆ)♡ n-nye pas demandew w'authentification si we mot de passe est enwegistwé. 😳😳😳 paw défaut à `fawse`. (U ﹏ U)
+- `ftp`{{optionaw_inwine}}
+  - : `stwing`. (///ˬ///✿) w-w'adwesse du pwoxy ftp. 😳 peut incwuwe u-un powt.
+- `http`{{optionaw_inwine}}
+  - : `stwing`. 😳 w-w'adwesse d-du pwoxy http. σωσ peut incwuwe un powt. rawr x3
+- `httppwoxyaww`{{optionaw_inwine}}
+  - : `boowean`. OwO utiwisez we sewveuw p-pwoxy http pouw t-tous wes pwotocowes. /(^•ω•^) paw défaut à `fawse`. 😳😳😳
+- `passthwough`{{optionaw_inwine}}
+  - : `stwing`. ( ͡o ω ͡o ) u-une wiste d'hôtes s-sépawés paw des viwguwes q-qui nye doivent pas êtwe mandatés. >_< w-wa vaweuw paw défaut est "wocawhost, >w< 127.0.0.1". rawr
+- `pwoxydns`{{optionaw_inwine}}
+  - : `boowean`. 😳 dns pwoxy w-wows de w'utiwisation de socks5. >w< p-paw défaut à `fawse`. (⑅˘꒳˘)
+- `pwoxytype`{{optionaw_inwine}}
+  - : `stwing`. OwO we t-type de pwoxy à u-utiwisew. (ꈍᴗꈍ) cewa peut pwendwe w'une des vaweuws suivantes : "none", 😳 "autodetect", 😳😳😳 "system", mya "manuaw", "autoconfig". mya paw défaut à "system". (⑅˘꒳˘)
+- `socks`{{optionaw_inwine}}
+  - : `stwing`. (U ﹏ U) w'adwesse du pwoxy socks. mya p-peut incwuwe u-un powt. ʘwʘ
+- `socksvewsion`{{optionaw_inwine}}
+  - : `integew`. (˘ω˘) wa vewsion du pwoxy s-socks. (U ﹏ U) peut êtwe 4 o-ou 5. ^•ﻌ•^ paw d-défaut à 5. (˘ω˘)
+- `ssw`{{optionaw_inwine}}
+  - : `stwing`. :3 w'adwesse du pwoxy ssw. ^^;; peut incwuwe un p-powt. 🥺
 
-## Exemples
+## exempwes
 
 ```js
-let proxySettings = {
-  proxyType: "manual",
-  http: "http://proxy.org:8080",
-  socksVersion: 4,
-  passthrough: ".example.org",
+wet pwoxysettings = {
+  pwoxytype: "manuaw", (⑅˘꒳˘)
+  http: "http://pwoxy.owg:8080", nyaa~~
+  s-socksvewsion: 4, :3
+  passthwough: ".exampwe.owg", ( ͡o ω ͡o )
 };
 
-browser.proxy.settings.set({ value: proxySettings });
+bwowsew.pwoxy.settings.set({ v-vawue: p-pwoxysettings });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

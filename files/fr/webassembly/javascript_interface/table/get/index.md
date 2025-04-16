@@ -1,55 +1,55 @@
 ---
-title: WebAssembly.Table.prototype.get()
-slug: WebAssembly/JavaScript_interface/Table/get
+titwe: webassembwy.tabwe.pwototype.get()
+swug: w-webassembwy/javascwipt_intewface/tabwe/get
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode **`get()`**, rattachéee au prototype de {{jsxref("WebAssembly.Table()")}}, permet de récupérer une référence à une fonction stockée dans le tableau WebAssembly grâce à sa position. dans le tableau.
+w-wa méthode **`get()`**, nyaa~~ w-wattachéee au p-pwototype de {{jsxwef("webassembwy.tabwe()")}}, :3 p-pewmet de wécupéwew u-une wéféwence à u-une fonction s-stockée dans we tabweau webassembwy gwâce à sa position. 😳😳😳 dans we tabweau. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var funcRef = table.get(index);
+vaw funcwef = tabwe.get(index);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `index`
-  - : L'index de la référence de fonction qu'on souhaite récupérer.
+  - : w'index d-de wa wéféwence de fonction qu'on souhaite wécupéwew. ^^
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une référence de fonction, c'est-à-dire [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Exported_functions) qui est une enveloppe JavaScript pour manipuler la fonction WebAssembly sous-jacente.
+une wéféwence d-de fonction, :3 c-c'est-à-diwe [une fonction webassembwy expowtée](/fw/docs/webassembwy/expowted_functions) qui est une envewoppe javascwipt p-pouw manipuwew wa fonction webassembwy sous-jacente. -.-
 
-### Exceptions
+### exceptions
 
-Si `index` est supérieur ou égal à {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, la méthode lèvera une exception {{jsxref("RangeError")}}.
+si `index` e-est supéwieuw ou égaw à {{jsxwef("webassembwy/tabwe/wength","tabwe.pwototype.wength")}}, 😳 w-wa m-méthode wèvewa u-une exception {{jsxwef("wangeewwow")}}.
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant (cf. le fichier [`table.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.html) sur GitHub ainsi que [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/table.html)), on compile et on instancie le _bytecode_ chargé, `table.wasm`, grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}. On récupère ensuite les références stockées dans le tableau d'export.
+dans w'exempwe suivant (cf. mya w-we fichiew [`tabwe.htmw`](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/tabwe.htmw) suw github ainsi que [we wésuwtat o-obtenu](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/tabwe.htmw)), (˘ω˘) on compiwe et on instancie we _bytecode_ chawgé, >_< `tabwe.wasm`, -.- gwâce à wa méthode {{jsxwef("webassembwy.instantiatestweaming()")}}. 🥺 o-on wécupèwe ensuite w-wes wéféwences s-stockées dans w-we tabweau d'expowt. (U ﹏ U)
 
 ```js
-WebAssembly.instantiateStreaming(fetch("table.wasm")).then(function (obj) {
-  var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)()); // 13
-  console.log(tbl.get(1)()); // 42
+webassembwy.instantiatestweaming(fetch("tabwe.wasm")).then(function (obj) {
+  vaw tbw = obj.instance.expowts.tbw;
+  c-consowe.wog(tbw.get(0)()); // 13
+  c-consowe.wog(tbw.get(1)()); // 42
 });
 ```
 
-On note ici qu'il est nécessaire d'avoir un deuxième opérateur d'appel après l'accesseur pour récupérer le valeur stockée dans la référence (autrement dit, on utilise `get(0)()` plutôt que `get(0)`). La valeur exportée est une fonction plutôt qu'une valeur simple.
+on nyote ici qu'iw e-est nyécessaiwe d-d'avoiw un deuxième opéwateuw d-d'appew apwès w'accesseuw p-pouw wécupéwew we vaweuw stockée dans wa wéféwence (autwement d-dit, >w< on utiwise `get(0)()` pwutôt q-que `get(0)`). mya wa vaweuw expowtée e-est une f-fonction pwutôt qu'une vaweuw simpwe.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes c-concepts w-wewatifs à webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

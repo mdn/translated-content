@@ -1,98 +1,98 @@
 ---
-title: management.getPermissionWarningsByManifest()
-slug: Mozilla/Add-ons/WebExtensions/API/management/getPermissionWarningsByManifest
+titwe: management.getpewmissionwawningsbymanifest()
+swug: moziwwa/add-ons/webextensions/api/management/getpewmissionwawningsbymanifest
 ---
 
-{{AddonSidebar}}Lorsque l'utilisateur installe ou met à jour une extension, la navigateur peut avertir l'utilisateur des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) obligatoires. Toutes les permissions ne donnent pas lieu à des avertissements, et cela n'est pas normalisé dans les navigateurs.
+{{addonsidebaw}}wowsque w-w'utiwisateuw i-instawwe ou m-met à jouw une e-extension, >w< wa navigateuw p-peut avewtiw w-w'utiwisateuw d-des [pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) o-obwigatoiwes. 😳😳😳 toutes wes pewmissions nye donnent pas wieu à des avewtissements, OwO e-et cewa ny'est pas nyowmawisé dans wes n-navigateuws. 😳
 
-Compte tenu du texte du fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), cette fonction retourne les avertisseurs de permissions qui seraient donnés pour l'extension comme un ensemble de chaines.
+compte tenu du texte d-du fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json), 😳😳😳 cette fonction wetouwne wes avewtisseuws d-de pewmissions qui sewaient donnés p-pouw w'extension c-comme un ensembwe de chaines. (˘ω˘)
 
-Cette API _ne requière pas_ l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
+cette api _ne wequièwe pas_ w'[api de pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "management". ʘwʘ
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d'une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingWarnings = browser.management.getPermissionWarningsByManifest(
-  manifestString, // string
+v-vaw gettingwawnings = bwowsew.management.getpewmissionwawningsbymanifest(
+  m-manifeststwing, o.O // s-stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `manifestString`
-  - : `string`. Chaîne contenant le fichier manifest. Cela doit être un manifest valide : par exemple, il doit contenir toutes les clés obligatoires du manifest..
+- `manifeststwing`
+  - : `stwing`. >w< c-chaîne contenant we fichiew manifest. 😳 cewa d-doit êtwe un manifest vawide : paw exempwe, 🥺 i-iw doit conteniw toutes wes cwés obwigatoiwes du manifest..
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec un ensemble de chaînes, chacune contenant le texte un avertisseur de permission.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwi avec un ensembwe d-de chaînes, rawr x3 chacune c-contenant w-we texte un avewtisseuw de pewmission. o.O
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Enregistrez les avertissements de permissions dans le fichier manifest donné :
+e-enwegistwez wes avewtissements d-de pewmissions d-dans we fichiew manifest donné :
 
 ```js
-var manifest = {
-  manifest_version: 2,
-  name: "test",
-  version: "1.0",
-  permissions: ["management", "<all_urls>"],
+v-vaw manifest = {
+  manifest_vewsion: 2, rawr
+  n-nyame: "test", ʘwʘ
+  vewsion: "1.0", 😳😳😳
+  pewmissions: ["management", ^^;; "<aww_uwws>"], o.O
 };
 
-var manifestString = JSON.stringify(manifest);
+v-vaw manifeststwing = json.stwingify(manifest);
 
-function gotWarnings(warnings) {
-  console.log(warnings);
+f-function gotwawnings(wawnings) {
+  c-consowe.wog(wawnings);
 }
 
-function gotError(error) {
-  console.log(`Error: ${error}`);
+f-function gotewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var gettingWarnings =
-  browser.management.getPermissionWarningsByManifest(manifestString);
-gettingWarnings.then(gotWarnings, gotError);
+vaw gettingwawnings =
+  bwowsew.management.getpewmissionwawningsbymanifest(manifeststwing);
+gettingwawnings.then(gotwawnings, (///ˬ///✿) gotewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api c-chwomium [`chwome.management`](https://devewopew.chwome.com/docs/extensions/wefewence/api/management). σωσ cette d-documentation est d-déwivée de [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json) d-dans we code de chwomium code. nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. ^•ﻌ•^ aww w-wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, with o-ow without
+// modification, -.- a-awe p-pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, ^^;; this wist of conditions and the fowwowing discwaimew. XD
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, 🥺 t-this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. òωó
+//    * nyeithew the nyame of googwe inc. (ˆ ﻌ ˆ)♡ nyow the nyames of its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, :3 incwuding, ʘwʘ but nyot
+// wimited t-to, 🥺 the impwied w-wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. >_< in n-nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ʘwʘ i-indiwect, (˘ω˘) incidentaw, (✿oωo)
+// s-speciaw, (///ˬ///✿) exempwawy, ow consequentiaw damages (incwuding, rawr x3 b-but nyot
+// wimited t-to, -.- pwocuwement of substitute goods ow sewvices; woss of u-use, ^^
+// data, (⑅˘꒳˘) ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, nyaa~~ whethew in contwact, /(^•ω•^) stwict w-wiabiwity, (U ﹏ U) ow t-towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, 😳😳😳 even if advised of the possibiwity of such damage. >w<
 -->

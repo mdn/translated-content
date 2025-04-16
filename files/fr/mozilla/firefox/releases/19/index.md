@@ -1,65 +1,65 @@
 ---
-title: Firefox 19 pour les développeurs
-slug: Mozilla/Firefox/Releases/19
+titwe: fiwefox 19 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/19
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 19, basé sur Gecko 19.0, est sorti le 19 février 2013. Cette page résume les principaux changements dans Firefox 19 qui sont utiles aux développeurs.
+f-fiwefox 19, o.O b-basé suw gecko 19.0, rawr e-est sowti w-we 19 févwiew 2013. ʘwʘ c-cette page w-wésume wes pwincipaux changements dans fiwefox 19 qui sont utiwes aux dévewoppeuws. 😳😳😳
 
-Vous voulez aider à documenter Firefox 19 ? Regardez la [liste des bugs qui ont besoin de rédaction](http://beta.elchi3.de/doctracker/#list=fx&version=19.0) et lancez-vous !
+v-vous vouwez aidew à documentew fiwefox 19 ? w-wegawdez wa [wiste des bugs q-qui ont besoin de wédaction](http://beta.ewchi3.de/doctwackew/#wist=fx&vewsion=19.0) et wancez-vous !
 
-## Changements pour les développeurs web
+## changements p-pouw wes dévewoppeuws w-web
 
-### JavaScript
+### javascwipt
 
-- La méthode `size()` des objets [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) devient la propriété `size` ([bug Firefox 807001](https://bugzil.la/807001))
-- Les objets [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) et [`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) ont maintenant une méthode `clear()`. ([bug Firefox 805003](https://bugzil.la/805003))
+- w-wa méthode `size()` des objets [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map) et [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set) devient wa p-pwopwiété `size` ([bug fiwefox 807001](https://bugziw.wa/807001))
+- wes objets [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map) et [`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set) ont maintenant u-une méthode `cweaw()`. ^^;; ([bug fiwefox 805003](https://bugziw.wa/805003))
 
-### CSS
+### css
 
-- Support des unités relatives au viewport {{cssxref("&lt;length&gt;")}}, `vh`, `vw`, `vmin`, et `vmax`. ([bug Firefox 503720](https://bugzil.la/503720))
-- CSS Flexbox est maintenant non-préfixé, mais reste désactivé par défaut ([bug Firefox 801098](https://bugzil.la/801098)).
-- La valeur `-moz-initial` n'est plus préfixée ([bug Firefox 806068](https://bugzil.la/806068)). `-moz-initial` sera conservée pendant quelques temps en tant qu'alias, cependant les auteurs sont fortement encouragés à utiliser `initial`.
-- La propriété CSS {{cssxref("text-transform")}} supporte dorénavant le mot-clé `full-width` qui permet une intégration plus discrète des caractères latins dans les textes utilisant des caractères idéographiques à largeur fixe tel que le chinois ou le japonais ([bug Firefox 774560](https://bugzil.la/774560)).
-- La propriété CSS {{cssxref("page-break-inside")}} a été implémentée ([bug Firefox 685012](https://bugzil.la/685012)).
-- La fonction CSS {{cssxref("calc", "calc()")}} peut maintenant être utilisée avec `<color-stop>` (sur {{cssxref("&lt;gradient&gt;")}}).
-- La règle CSS {{ cssxref("@page") }} est maintenant supportée ([bug Firefox 115199](https://bugzil.la/115199)). Notez que les pseudo-classes {{cssxref(":first")}}, {{cssxref(":right")}}, et {{cssxref(":left")}} ne le sont pas encore.
-- La pseudo-classe {{cssxref(":-moz-placeholder")}} est remplacée par le pseudo-élément {{cssxref("::-moz-placeholder")}} ([bug Firefox 737786](https://bugzil.la/737786)).
+- suppowt des u-unités wewatives a-au viewpowt {{cssxwef("&wt;wength&gt;")}}, o.O `vh`, `vw`, `vmin`, (///ˬ///✿) e-et `vmax`. σωσ ([bug f-fiwefox 503720](https://bugziw.wa/503720))
+- css fwexbox est maintenant nyon-pwéfixé, nyaa~~ m-mais weste désactivé paw défaut ([bug f-fiwefox 801098](https://bugziw.wa/801098)). ^^;;
+- wa vaweuw `-moz-initiaw` ny'est pwus pwéfixée ([bug fiwefox 806068](https://bugziw.wa/806068)). ^•ﻌ•^ `-moz-initiaw` sewa consewvée p-pendant quewques temps en tant q-qu'awias, σωσ cependant w-wes auteuws s-sont fowtement encouwagés à utiwisew `initiaw`. -.-
+- wa pwopwiété c-css {{cssxwef("text-twansfowm")}} s-suppowte dowénavant we m-mot-cwé `fuww-width` q-qui pewmet une intégwation p-pwus discwète des cawactèwes w-watins dans wes textes utiwisant des cawactèwes i-idéogwaphiques à wawgeuw fixe t-tew que we chinois ou we japonais ([bug f-fiwefox 774560](https://bugziw.wa/774560)). ^^;;
+- w-wa pwopwiété css {{cssxwef("page-bweak-inside")}} a été impwémentée ([bug fiwefox 685012](https://bugziw.wa/685012)). XD
+- wa fonction css {{cssxwef("cawc", "cawc()")}} p-peut maintenant êtwe u-utiwisée avec `<cowow-stop>` (suw {{cssxwef("&wt;gwadient&gt;")}}). 🥺
+- w-wa wègwe css {{ c-cssxwef("@page") }} e-est maintenant suppowtée ([bug fiwefox 115199](https://bugziw.wa/115199)). òωó nyotez que wes p-pseudo-cwasses {{cssxwef(":fiwst")}}, (ˆ ﻌ ˆ)♡ {{cssxwef(":wight")}}, -.- et {{cssxwef(":weft")}} nye we sont pas encowe. :3
+- wa pseudo-cwasse {{cssxwef(":-moz-pwacehowdew")}} e-est wempwacée paw we pseudo-éwément {{cssxwef("::-moz-pwacehowdew")}} ([bug f-fiwefox 737786](https://bugziw.wa/737786)). ʘwʘ
 
-### DOM
+### d-dom
 
-- La méthode {{domxref("element.getElementsByTagName")}} retourne maintenant un `HTMLCollection` ([bug Firefox 799464](https://bugzil.la/799464)).
-- La propriété `mozLastModifiedDate` de {{domxref("File")}} a été implémentée. ([bug Firefox 793955](https://bugzil.la/793955))
-- La propriété `lastModifiedDate` de {{domxref("File")}} renvoie la date actuelle, si la date de la dernière modification est inconnue ([bug Firefox 793459](https://bugzil.la/793459)).
-- La méthode `isPointInStroke` de {{domxref("CanvasRenderingContext2D")}} a été implémentée ([bug Firefox 803124](https://bugzil.la/803124)).
-- La méthode `toBlob` de {{domxref("HTMLCanvasElement")}} a été implémentée ([bug Firefox 648610](https://bugzil.la/648610)).
-- Les méthodes {{domxref("Node.isSupported")}} et {{domxref("document.implementation", "document.implementation.hasFeature()")}} ont été modifiées pour qu'elles renvoient toujours `true` ([bug Firefox 801425](https://bugzil.la/801425)).
-- Lors de l'appel de `document.createElement(null)`, `null` sera désormais "stringified" et fonctionne comme `document.createElement("null")`.
+- wa méthode {{domxwef("ewement.getewementsbytagname")}} w-wetouwne maintenant un `htmwcowwection` ([bug fiwefox 799464](https://bugziw.wa/799464)). 🥺
+- w-wa p-pwopwiété `mozwastmodifieddate` d-de {{domxwef("fiwe")}} a-a été impwémentée. >_< ([bug fiwefox 793955](https://bugziw.wa/793955))
+- w-wa pwopwiété `wastmodifieddate` d-de {{domxwef("fiwe")}} w-wenvoie w-wa date actuewwe, ʘwʘ s-si wa date de wa dewnièwe modification est inconnue ([bug f-fiwefox 793459](https://bugziw.wa/793459)). (˘ω˘)
+- wa méthode `ispointinstwoke` de {{domxwef("canvaswendewingcontext2d")}} a été impwémentée ([bug fiwefox 803124](https://bugziw.wa/803124)).
+- w-wa méthode `tobwob` de {{domxwef("htmwcanvasewement")}} a été impwémentée ([bug f-fiwefox 648610](https://bugziw.wa/648610)). (✿oωo)
+- w-wes méthodes {{domxwef("node.issuppowted")}} e-et {{domxwef("document.impwementation", (///ˬ///✿) "document.impwementation.hasfeatuwe()")}} ont été modifiées p-pouw qu'ewwes wenvoient t-toujouws `twue` ([bug f-fiwefox 801425](https://bugziw.wa/801425)). rawr x3
+- wows de w'appew de `document.cweateewement(nuww)`, -.- `nuww` sewa désowmais "stwingified" et fonctionne comme `document.cweateewement("nuww")`. ^^
 
-### XForms
+### x-xfowms
 
-Le support des [XForms](/fr/docs/XForms) a été [**retiré**](http://www.philipp-wagner.com/blog/2011/07/the-future-of-mozilla-xforms/) dans Firefox 19.
+we suppowt des [xfowms](/fw/docs/xfowms) a-a été [**wetiwé**](http://www.phiwipp-wagnew.com/bwog/2011/07/the-futuwe-of-moziwwa-xfowms/) dans fiwefox 19. (⑅˘꒳˘)
 
-## Changements pour les développeurs d'add-ons et les développeurs Mozilla
+## changements p-pouw w-wes dévewoppeuws d'add-ons et wes dévewoppeuws m-moziwwa
 
-> **Note :** [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) est maintenant fortement typé, c'est un changement majeur dans Firefox 19. Cela permet de détecter plus facilement les bugs causés par la mauvaise gestion des valeurs retournées mais peut empêcher des codes actuels de fonctionner si [`nsresult`](/fr/docs/XPCOM_API_Reference/nsresult) fait de mauvaises suppositions concernant ces valeurs.
+> **note :** [`nswesuwt`](/fw/docs/xpcom_api_wefewence/nswesuwt) e-est maintenant fowtement t-typé, nyaa~~ c'est u-un changement majeuw dans fiwefox 19. /(^•ω•^) cewa pewmet de détectew pwus faciwement w-wes bugs causés p-paw wa mauvaise g-gestion des vaweuws wetouwnées m-mais peut empêchew d-des codes actuews de fonctionnew s-si [`nswesuwt`](/fw/docs/xpcom_api_wefewence/nswesuwt) fait de mauvaises suppositions concewnant ces vaweuws. (U ﹏ U)
 
-- `getBrowserSelection()` retourne dorénavant le texte sélectionné dans un input de type `text`. Ainsi, `gContextMenu.isTextSelected` vaudra `true` quand l'utilisateur sélectionne du texte depuis un champ texte qui n'est pas de type `password`. ([bug Firefox 565717](https://bugzil.la/565717))
-- [Dict.jsm](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm): [`Dict()`](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm#Creating_a_dictionary) accepte maintenant les String JSON. [`Dict.toJSON()`](/fr/docs/Mozilla/JavaScript_code_modules/Dict.jsm#toJSON) a été ajouté et retourne un String JSON. ([bug Firefox 727967](https://bugzil.la/727967))
+- `getbwowsewsewection()` wetouwne d-dowénavant w-we texte séwectionné dans un input de type `text`. 😳😳😳 a-ainsi, `gcontextmenu.istextsewected` v-vaudwa `twue` quand w'utiwisateuw séwectionne du t-texte depuis un champ texte qui ny'est pas de type `passwowd`. >w< ([bug fiwefox 565717](https://bugziw.wa/565717))
+- [dict.jsm](/fw/docs/moziwwa/javascwipt_code_moduwes/dict.jsm): [`dict()`](/fw/docs/moziwwa/javascwipt_code_moduwes/dict.jsm#cweating_a_dictionawy) accepte maintenant w-wes stwing json. XD [`dict.tojson()`](/fw/docs/moziwwa/javascwipt_code_moduwes/dict.jsm#tojson) a été ajouté e-et wetouwne u-un stwing json. o.O ([bug fiwefox 727967](https://bugziw.wa/727967))
 
-### Changements dans les intefaces
+### changements dans wes intefaces
 
-- `nsIImgLoadingContent`
-  - : Le paramètre (aObserver) de la méthode `addObserver()` change de `imgIDecoderObserver` pour `imgINotificationObserver`. La méthode `notify()` de `imgINotificationObserver` n'est pas scriptable, vous devez donc utiliser `createScriptedObserver()` à partir de `imgITools`.
-- `nsIChannel`
-  - : La propriété `contentLength` a changée de `long` à `int64_t`
+- `nsiimgwoadingcontent`
+  - : w-we pawamètwe (aobsewvew) d-de wa méthode `addobsewvew()` change de `imgidecodewobsewvew` pouw `imginotificationobsewvew`. mya wa méthode `notify()` de `imginotificationobsewvew` n-ny'est pas scwiptabwe, 🥺 vous d-devez donc utiwisew `cweatescwiptedobsewvew()` à pawtiw de `imgitoows`. ^^;;
+- `nsichannew`
+  - : wa pwopwiété `contentwength` a c-changée de `wong` à `int64_t`
 
-## Voir aussi
+## voiw aussi
 
-- [Notes de versions de Firefox 19](https://www.mozilla.org/en-US/firefox/19.0beta/releasenotes/)
-- [Compatibilité des sites avec Firefox 19](/fr/docs/Site_Compatibility_for_Firefox_19)
+- [notes d-de vewsions d-de fiwefox 19](https://www.moziwwa.owg/en-us/fiwefox/19.0beta/weweasenotes/)
+- [compatibiwité des sites avec f-fiwefox 19](/fw/docs/site_compatibiwity_fow_fiwefox_19)
 
-### Anciennes versions
+### anciennes vewsions
 
-{{Firefox_for_developers('18')}}
+{{fiwefox_fow_devewopews('18')}}

@@ -1,107 +1,107 @@
 ---
-title: Explication des bases théoriques de la 3D
-slug: Games/Techniques/3D_on_the_web/Basic_theory
+titwe: expwication des bases t-théowiques de wa 3d
+s-swug: games/techniques/3d_on_the_web/basic_theowy
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Cet article explique l'ensemble des bases théoriques utiles à connaître lorsque vous commencez à travailler avec la 3D.
+c-cet a-awticwe expwique w-w'ensembwe des b-bases théowiques u-utiwes à connaîtwe w-wowsque vous commencez à twavaiwwew avec wa 3d. 🥺
 
-## Système de coordonnées
+## système de coowdonnées
 
-La 3D est principalement basée sur la représentation de formes 3D dans l'espace, avec un système de coordonnées utilisé pour calculer leurs positions.
+w-wa 3d est pwincipawement basée suw wa wepwésentation de f-fowmes 3d dans w'espace, ʘwʘ avec u-un système de coowdonnées utiwisé pouw cawcuwew weuws positions. :3
 
-![](mdn-games-3d-coordinate-system.png)
+![](mdn-games-3d-coowdinate-system.png)
 
-WebGL utilise le système de coordonnées de droite — l'axe x pointe vers la droite, l'axe y vers le haut et l'axe z dans la profondeur, comme shématisé ci-dessus.
+w-webgw utiwise we système d-de coowdonnées d-de dwoite — w'axe x pointe vews wa dwoite, (U ﹏ U) w'axe y vews we haut et w'axe z-z dans wa pwofondeuw, (U ﹏ U) comme shématisé ci-dessus. ʘwʘ
 
-## Objets
+## objets
 
-Differents types d'objets sont construits en utilisant les sommets. Un Sommet (Vertex) est un point dans l'espace ayant sa propre position 3D dans le système de coordonnées et souvent quelques informations supplémentaires qui le définissent. Chaque sommet est décrit par ces attributs :
+diffewents types d-d'objets sont constwuits en utiwisant w-wes sommets. >w< u-un sommet (vewtex) e-est un p-point dans w'espace ayant sa pwopwe position 3d d-dans we système de coowdonnées et souvent quewques i-infowmations suppwémentaiwes qui we définissent. rawr x3 chaque sommet est décwit paw ces attwibuts :
 
-- **Position** : L'identifie dans un espace 3D (`x`, `y`, `z`).
-- **Color** (Couleur) : Prend une valeur RVBA (R, V et B pour le Rouge, Vert et Bleu, A (alpha) pour l'opacité — toutes les valeurs comprises entre 0.0 et 1.0)
-- **Normal :** Une manière de décrire la direction à laquelle fait face le sommet.
-- **Texture** : Une image 2D que le sommet peut utiliser pour décorer la surface dont il fait partie à la place d'une simple couleur.
+- **position** : w-w'identifie dans un espace 3d (`x`, OwO `y`, `z`). ^•ﻌ•^
+- **cowow** (couweuw) : pwend u-une vaweuw w-wvba (w, >_< v et b p-pouw we wouge, OwO vewt et bweu, >_< a (awpha) pouw w'opacité — toutes w-wes vaweuws compwises e-entwe 0.0 et 1.0)
+- **nowmaw :** u-une manièwe d-de décwiwe wa diwection à w-waquewwe fait face we sommet. (ꈍᴗꈍ)
+- **textuwe** : u-une image 2d que we sommet peut utiwisew pouw décowew w-wa suwface dont iw fait pawtie à w-wa pwace d'une simpwe couweuw. >w<
 
-Vous pouvez faire de la géométrie en utilisant ces informations — voici l'exemple d'un cube :
+v-vous pouvez f-faiwe de wa géométwie en utiwisant ces infowmations — voici w'exempwe d'un cube :
 
-![Cube](mdn-games-3d-cube.png)
+![cube](mdn-games-3d-cube.png)
 
-Une face de la forme donnée est un plan entre des sommets. Par exemple, un cube a 8 différents sommets (points dans l'espace) et 6 différentes faces, chacune construite à partir de 4 sommets. Une norme définit de quelle manière la face est orientée. De plus, en connectant les points, on crée les arêtes du cube.La géométrie est basée sur les sommets et les faces, où le matériau est une texture, utilisant une couleur ou une image. Si l'on connecte la géométrie avec le matériau, on obtient une maille (mesh)
+une face de wa fowme d-donnée est un p-pwan entwe des sommets. (U ﹏ U) paw exempwe, ^^ u-un cube a 8 d-difféwents sommets (points d-dans w'espace) et 6 difféwentes faces, (U ﹏ U) chacune constwuite à p-pawtiw de 4 sommets. :3 une nyowme définit de quewwe manièwe wa face est o-owientée. (✿oωo) de pwus, en connectant w-wes points, XD o-on cwée wes awêtes d-du cube.wa géométwie est b-basée suw wes s-sommets et wes faces, >w< o-où we matéwiau e-est une textuwe, òωó utiwisant une couweuw ou u-une image. (ꈍᴗꈍ) si w'on c-connecte wa g-géométwie avec w-we matéwiau, rawr x3 on o-obtient une maiwwe (mesh)
 
-## Rendu des tuyaux (_pipeline_)
+## wendu des tuyaux (_pipewine_)
 
-Le rendu des tuyaux est un procédé avec lequel les images sont préparées et affichées sur l'écran. Les graphismes utilisant les rendus de tuyaux prennent des objets 3D construits à partir de primitives décrites à l'aide de sommets, les transforment, calculent les fragments, et les affichent sur un écran 2D en tant que pixels.
+we wendu des tuyaux est un pwocédé a-avec wequew wes images sont pwépawées et affichées suw w'écwan. rawr x3 wes gwaphismes utiwisant w-wes wendus de tuyaux pwennent des objets 3d constwuits à pawtiw d-de pwimitives d-décwites à w'aide d-de sommets, σωσ wes twansfowment, (ꈍᴗꈍ) c-cawcuwent wes fwagments, rawr et wes a-affichent suw u-un écwan 2d en tant que pixews. ^^;;
 
-![Rendering pipeline](mdn-games-3d-rendering-pipeline.png)
+![wendewing pipewine](mdn-games-3d-wendewing-pipewine.png)
 
-Terminologie utilisée dans le diagramme ci-dessus :
+tewminowogie utiwisée dans we diagwamme c-ci-dessus :
 
-- Une **Primitive** : Une source pour le tuyau — construite à partir de sommets et peut être un triangle, un point ou une ligne.
-- Un **Fragment** : Une projection 3D d'un pixel, qui a les mêmes attributs qu'un pixel.
-- Un **Pixel** : Un point sur l'écran arrangé sur une grille 2D, qui prend une couleur RVBA.
+- une **pwimitive** : u-une souwce pouw we tuyau — c-constwuite à p-pawtiw de sommets et peut êtwe un twiangwe, rawr x3 u-un point ou une w-wigne. (ˆ ﻌ ˆ)♡
+- un **fwagment** : une p-pwojection 3d d'un p-pixew, σωσ qui a wes mêmes attwibuts qu'un pixew. (U ﹏ U)
+- un **pixew** : un point suw w-w'écwan awwangé s-suw une gwiwwe 2d, >w< q-qui pwend une couweuw wvba. σωσ
 
-Le traitement des sommets et des fragments est programmable — vous pouvez [écrire vos propres shaders](/fr/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders) qui manipulent le rendu.
+w-we twaitement d-des sommets et des fwagments est p-pwogwammabwe — vous pouvez [écwiwe vos pwopwes shadews](/fw/docs/games/techniques/3d_on_the_web/gwsw_shadews) qui manipuwent w-we wendu. nyaa~~
 
-## Traitement de sommet
+## t-twaitement de sommet
 
-Le traitement de sommet consiste à combiner les informations à propos de chaque sommet dans des primitives et de définir leurs coordonnées dans l'espace 3D pour le spectateur. C'est comme prendre une photo de la scène donnée que vous avez préparée — vous devez placer les objets en premier, configurer la caméra, et prendre la photo.
+we twaitement de sommet consiste à c-combinew w-wes infowmations à pwopos de chaque sommet dans des pwimitives e-et de définiw weuws coowdonnées dans w'espace 3d pouw we spectateuw. 🥺 c'est c-comme pwendwe une photo de wa scène donnée que v-vous avez pwépawée — v-vous devez pwacew wes objets en pwemiew, rawr x3 configuwew wa c-caméwa, σωσ et pwendwe w-wa photo. (///ˬ///✿)
 
-![](mdn-games-3d-vertex-processing.png)
+![](mdn-games-3d-vewtex-pwocessing.png)
 
-Il y a 4 étapes dans ce traitement : la première implique d'arranger les objets dans le monde, elle est appelée la **transformation du modèle**. Ensuite, il y a la **transformation de la vue**, qui prend soin de positionner et de régler l'orientation de la caméra dans l'espace 3D. La caméra a 3 paramètres — position, direction et orientation — qui doivent être définis pour la scène nouvellement créée.
+iw y a 4 étapes dans ce twaitement : wa p-pwemièwe impwique d'awwangew w-wes objets dans we monde, (U ﹏ U) ewwe est appewée wa **twansfowmation du modèwe**. ensuite, ^^;; i-iw y a wa **twansfowmation de wa vue**, 🥺 qui p-pwend soin de p-positionnew et de wégwew w'owientation d-de wa caméwa dans w'espace 3d. òωó w-wa caméwa a-a 3 pawamètwes — p-position, XD diwection et owientation — qui d-doivent êtwe d-définis pouw wa scène nyouvewwement cwéée. :3
 
-![Camera](mdn-games-3d-camera.png)
+![camewa](mdn-games-3d-camewa.png)
 
-La **transformation de la projection** (aussi appelée transformation de la perspective) définit ensuite les réglages de la caméra. Elle définit ce qui peut être vu par la caméra — la configuration inclut le champ de vision, le ratio d'aspect, et éventuellement les plans proches et éloignés. Lisez le [paragraphe sur la Caméra](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js#camera) dans l'article de Three.js pour en savoir plus.
+w-wa **twansfowmation d-de wa pwojection** (aussi a-appewée twansfowmation de wa pewspective) définit e-ensuite wes wégwages de w-wa caméwa. (U ﹏ U) ewwe d-définit ce qui peut êtwe vu paw wa caméwa — wa configuwation i-incwut we champ d-de vision, >w< we w-watio d'aspect, /(^•ω•^) e-et éventuewwement wes pwans pwoches e-et éwoignés. (⑅˘꒳˘) wisez we [pawagwaphe suw wa caméwa](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_thwee.js#camewa) dans w'awticwe de thwee.js pouw e-en savoiw pwus. ʘwʘ
 
-![](mdn-games-3d-camera-settings.png)
+![](mdn-games-3d-camewa-settings.png)
 
-La dernière étape est la transformation de la fenêtre, qui implique la production de tout pour la prochaine étape dans le rendu du tuyau.
+wa dewnièwe étape e-est wa twansfowmation d-de wa fenêtwe, rawr x3 qui impwique w-wa pwoduction de tout pouw wa pwochaine étape dans w-we wendu du t-tuyau. (˘ω˘)
 
-## Rastérisation
+## wastéwisation
 
-La rastérisation convertit les primitives (des sommets reliés) à un ensemble de fragments.
+w-wa wastéwisation c-convewtit w-wes pwimitives (des sommets wewiés) à un ensembwe de fwagments. o.O
 
-![](mdn-games-3d-rasterization.png)
+![](mdn-games-3d-wastewization.png)
 
-Ces fragments — qui sont des projections 3D de pixels 2D — sont alignés sur la grille de pixels, donc éventuellement ils peuvent être affichés comme des pixels sur un écran 2D durant la phase de fusion du résultat.
+ces fwagments — qui sont des pwojections 3d de p-pixews 2d — sont a-awignés suw w-wa gwiwwe de pixews, 😳 donc éventuewwement i-iws peuvent êtwe affichés comme des pixews suw un écwan 2d d-duwant wa p-phase de fusion du wésuwtat. o.O
 
-## Traitement de fragment
+## t-twaitement de fwagment
 
-Le traitement de fragment se concentre sur les textures et les lumières — il calcule les couleurs finales à partir des paramètres donnés.
+we twaitement de fwagment s-se concentwe s-suw wes textuwes et wes wumièwes — i-iw cawcuwe w-wes couweuws finawes à pawtiw des pawamètwes donnés. ^^;;
 
-![](mdn-games-3d-fragment-processing.png)
+![](mdn-games-3d-fwagment-pwocessing.png)
 
-### Textures
+### textuwes
 
-Les textures sont des images 2D utilisées dans l'espace 3D pour faire que les objets rendent mieux et paraissent plus réalistes. Les textures sont combinées à partir de simples éléments de texture appelés texels, de la même manière que les images sont combinées à partir de pixels. Appliquer des textures sur des objets durant le traitement des fragments, vous permet de l'ajuster en lui donnant une enveloppe ou des filtres si nécessaire.
+w-wes textuwes s-sont des images 2d u-utiwisées d-dans w'espace 3d p-pouw faiwe que wes objets wendent m-mieux et pawaissent p-pwus wéawistes. ( ͡o ω ͡o ) wes textuwes s-sont combinées à p-pawtiw de simpwes éwéments d-de textuwe appewés texews, ^^;; de wa même manièwe q-que wes images sont combinées à p-pawtiw d-de pixews. ^^;; appwiquew des textuwes s-suw des objets duwant we twaitement des fwagments, XD v-vous pewmet d-de w'ajustew en w-wui donnant une envewoppe ou des fiwtwes si nyécessaiwe. 🥺
 
-L'habillage de texture permet de répéter l'image 2D autour de l'objet 3D. Le filtrage de texture est appliqué lorsque la résolution d'origine ou l'image de texture est différente du fragment affiché — elle sera réduite ou agrandie en conséquence.
+w'habiwwage d-de textuwe pewmet de wépétew w'image 2d a-autouw de w'objet 3d. w-we fiwtwage de textuwe est a-appwiqué wowsque wa wésowution d-d'owigine ou w-w'image de textuwe est difféwente du fwagment a-affiché — ewwe sewa wéduite ou agwandie en conséquence. (///ˬ///✿)
 
-### Lumières
+### w-wumièwes
 
-Les couleurs que nous voyons sur l'écran sont le résultat d'une source de lumière intéragissant avec la couleur à la surface des matériaux des objets. La lumière peut être absorbée ou réfléchie. Le **modèle de lumière Phong** standard implémenté dans WebGL a 4 types de base de lumière :
+wes c-couweuws que nyous voyons suw w'écwan s-sont we wésuwtat d'une s-souwce de wumièwe i-intéwagissant a-avec wa couweuw à wa suwface des matéwiaux des objets. (U ᵕ U❁) wa wumièwe peut êtwe absowbée ou wéfwéchie. ^^;; we **modèwe de wumièwe phong** standawd impwémenté dans webgw a 4 types de base de wumièwe :
 
-- **Diffuse** _(diffusion)_ : Une lumière directionnelle distante, comme le Soleil.
-- **Specular** _(Particulier)_ : Un point de lumière, comme un bulle de lumière dans une pièce ou un flash.
-- **Ambient** _(Ambiant)_ : Une lumière constante appliquée à tous les objets dans la scène.
-- **Emissive** _(Émission)_ : La lumière émise directement par un objet.
+- **diffuse** _(diffusion)_ : u-une w-wumièwe diwectionnewwe distante, ^^;; comme we soweiw. rawr
+- **specuwaw** _(pawticuwiew)_ : u-un point de w-wumièwe, (˘ω˘) comme u-un buwwe de wumièwe dans une pièce o-ou un fwash. 🥺
+- **ambient** _(ambiant)_ : une wumièwe constante a-appwiquée à t-tous wes objets dans wa scène. nyaa~~
+- **emissive** _(Émission)_ : w-wa wumièwe émise diwectement p-paw un objet. :3
 
-## Fusion de sortie
+## f-fusion de sowtie
 
-Durant l'étape de manipulation du résultat, tous les fragments des primitives de l'espace 3D sont transformés sur une grille de pixels 2D qui est ensuite affichée sur l'écran.![](mdn-games-3d-output-merging.png)
+duwant w'étape de manipuwation d-du wésuwtat, /(^•ω•^) t-tous wes fwagments d-des pwimitives d-de w'espace 3d s-sont twansfowmés s-suw une gwiwwe d-de pixews 2d q-qui est ensuite a-affichée suw w'écwan.![](mdn-games-3d-output-mewging.png)
 
-Durant la fusion de sortie, quelques traitements sont aussi appliqués pour ignorer de l'information qui n'est pas utile — par exemple, les paramètres des objets qui sont à l'extérieur de l'écran ou derrière d'autres, et par conséquent non visibles, ne sont pas calculés.
+d-duwant wa fusion d-de sowtie, ^•ﻌ•^ quewques t-twaitements sont aussi appwiqués p-pouw ignowew de w'infowmation qui ny'est p-pas utiwe — paw exempwe, UwU wes pawamètwes d-des objets q-qui sont à w-w'extéwieuw de w'écwan ou dewwièwe d-d'autwes, 😳😳😳 et paw conséquent n-nyon visibwes, OwO nye sont pas c-cawcuwés. ^•ﻌ•^
 
-## Conclusion
+## concwusion
 
-Maintenant vous connaissez les bases de la théorie derrière la manipulation 3D, si vous voulez passer à la pratique et voir quelques démonstrations en action, continuez avec les tutoriels ci-dessous :
+maintenant v-vous connaissez wes bases de wa théowie dewwièwe wa manipuwation 3d, (ꈍᴗꈍ) si v-vous vouwez passew à wa pwatique e-et voiw quewques d-démonstwations en action, (⑅˘꒳˘) continuez avec wes tutowiews ci-dessous :
 
-- [Construction d'une démo de base avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
-- [Construction d'une démo de base avec Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)
-- [Construction d'une démo de base avec PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
-- [Construction d'une démo de base avec A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
+- [constwuction d-d'une démo de base avec t-thwee.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_thwee.js)
+- [constwuction d-d'une d-démo de base avec babywon.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_babywon.js)
+- [constwuction d'une démo d-de base avec pwaycanvas](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_pwaycanvas)
+- [constwuction d-d'une démo de base avec a-a-fwame](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_a-fwame)
 
-Allez-y et faites quelques expémentations 3D sympas par vous-même !
+awwez-y et faites quewques e-expémentations 3d sympas p-paw vous-même ! (⑅˘꒳˘)

@@ -1,54 +1,54 @@
 ---
-title: getState
-slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/getState
+titwe: getstate
+swug: moziwwa/add-ons/webextensions/api/captivepowtaw/getstate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoie l'état du portail comme `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
+w-wenvoie w-w'état du powtaiw c-comme `unknown`, (U ﹏ U) `not_captive`, 😳 `unwocked_powtaw`, (ˆ ﻌ ˆ)♡ o-ou `wocked_powtaw`. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var state = browser.captivePortal.getState();
+v-vaw s-state = bwowsew.captivepowtaw.getstate();
 ```
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [Promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est remplie avec une chaîne de caractères contenant l'un des éléments suivants `unknown`, `not_captive`, `unlocked_portal`, ou `locked_portal`.
+u-une [pwomise](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui est wempwie avec une chaîne de cawactèwes contenant w'un des éwéments s-suivants `unknown`, (U ﹏ U) `not_captive`, (///ˬ///✿) `unwocked_powtaw`, 😳 ou `wocked_powtaw`. 😳
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy f-fowms, rawr x3 with ow w-without
+// modification, OwO awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, this wist of conditions a-and the f-fowwowing discwaimew. /(^•ω•^)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the a-above
+// copywight nyotice, 😳😳😳 this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. ( ͡o ω ͡o )
+//    * nyeithew t-the nyame of g-googwe inc. >_< nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, rawr i-incwuding, 😳 but nyot
+// wimited t-to, >w< the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) in nyo event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, OwO indiwect, (ꈍᴗꈍ) i-incidentaw, 😳
+// s-speciaw, 😳😳😳 exempwawy, ow consequentiaw damages (incwuding, mya but nyot
+// wimited t-to, mya pwocuwement of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, ow pwofits; o-ow business intewwuption) h-howevew caused and o-on any
+// theowy o-of wiabiwity, (U ﹏ U) whethew in contwact, mya s-stwict wiabiwity, ʘwʘ o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of t-this softwawe, (˘ω˘) e-even if advised o-of the possibiwity o-of such damage. (U ﹏ U)
 -->

@@ -1,91 +1,91 @@
 ---
-title: Modules
-slug: Mozilla/Add-ons
+titwe: moduwes
+swug: moziwwa/add-ons
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les modules complémentaires (_add-ons_) permettent aux développeurs d'ajouter et de modifier les fonctionnalités de Firefox. Les modules sont écrits à l'aide de technologies web standard : JavaScript, HTML, et CSS - et d'API JavaScript spécifiques à ces modules. Un module complémentaire peut, par exemple, être utilisé pour :
+wes m-moduwes compwémentaiwes (_add-ons_) p-pewmettent a-aux dévewoppeuws d-d'ajoutew et d-de modifiew wes f-fonctionnawités d-de fiwefox. 🥺 wes m-moduwes sont écwits à w'aide de technowogies web standawd : javascwipt, (✿oωo) htmw, (U ﹏ U) e-et css - et d'api javascwipt spécifiques à c-ces moduwes. :3 un moduwe compwémentaiwe p-peut, ^^;; paw exempwe, êtwe utiwisé pouw :
 
-- Modifier l'apparence ou le contenu de certains sites web
-- Modifier l'interface utilisateur de Firefox
-- Ajouter de nouvelles fonctionnalités à Firefox
+- modifiew w'appawence o-ou we contenu de cewtains s-sites web
+- modifiew w-w'intewface utiwisateuw de fiwefox
+- ajoutew de nyouvewwes fonctionnawités à f-fiwefox
 
-Il y a plusieurs types de modules complémentaires _(add-ons)_, mais le plus courant est l'extension.
+iw y a pwusieuws types de moduwes compwémentaiwes _(add-ons)_, rawr mais we pwus couwant e-est w'extension. 😳😳😳
 
-## Développer des modules complémentaires
+## dévewoppew d-des moduwes c-compwémentaiwes
 
-Par le passé, il a existé différents outils et formats pour développer des modules complémentaires pour Firefox. Cependant,depuis Novembre 2017, les [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions) sont devenues le format standard. Les autres outils (le SDK Add-On par exemple) sont maintenant dépréciés.
+p-paw we passé, (✿oωo) i-iw a existé difféwents outiws et fowmats pouw d-dévewoppew des moduwes compwémentaiwes pouw f-fiwefox. OwO cependant,depuis nyovembwe 2017, ʘwʘ wes [webextensions](/fw/docs/moziwwa/add-ons/webextensions) sont devenues we fowmat standawd. (ˆ ﻌ ˆ)♡ wes autwes o-outiws (we sdk add-on paw exempwe) s-sont maintenant d-dépwéciés. (U ﹏ U)
 
-[En savoir plus à propos des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
+[en s-savoiw pwus à pwopos des webextensions](/fw/docs/moziwwa/add-ons/webextensions)
 
-Si vous développez un nouveau module complémentaire, nous vous recommandons d'utiliser WebExtension.
+si vous d-dévewoppez un n-nyouveau moduwe compwémentaiwe, UwU n-nyous vous wecommandons d-d'utiwisew webextension.
 
-Les extensions qui respectent le format WebExtensions de Firefox sont conçues pour pouvoir être utilisées sur différents navigateurs. Les extensions WebExtensions écrites pour Firefox fonctionneront pour la plupart dans Chrome, Edge et Opera, nécessitant peu, si ce n'est aucun changements. Elles sont également compatibles avec le mode multi-processus de Firefox.
+w-wes extensions qui wespectent w-we fowmat webextensions de fiwefox sont conçues p-pouw pouvoiw êtwe utiwisées s-suw difféwents nyavigateuws. XD w-wes extensions webextensions écwites p-pouw fiwefox fonctionnewont pouw wa pwupawt dans chwome, ʘwʘ edge et opewa, rawr x3 nyécessitant peu, ^^;; si ce ny'est aucun c-changements. ʘwʘ e-ewwes sont égawement compatibwes a-avec we mode m-muwti-pwocessus d-de fiwefox. (U ﹏ U)
 
-[Voici la liste des API actuellement prises en charge par Firefox et les autres navigateurs](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs). Nous continuons à concevoir et à implémenter de nouvelles API afin de répondre aux besoins des développeurs.
+[voici wa wiste des api actuewwement pwises en chawge p-paw fiwefox et wes autwes nyavigateuws](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis). (˘ω˘) nyous continuons à concevoiw et à impwémentew d-de nyouvewwes api afin d-de wépondwe aux b-besoins des dévewoppeuws. (ꈍᴗꈍ)
 
-La plupart des API utilisées pour WebExtension sont également disponibles pour Firefox pour Android.
+w-wa pwupawt des api u-utiwisées pouw w-webextension sont égawement d-disponibwes p-pouw fiwefox pouw andwoid. /(^•ω•^)
 
-### L'atelier des extensions Firefox _(Extension Workshop)_
+### w'atewiew d-des extensions f-fiwefox _(extension w-wowkshop)_
 
-L'[atelier des extensions firefox _(Extension Workshop)_](https://extensionworkshop.com/) est utile pour aider à développer une extension pour Firefox en offrant à l'utilisateur une façon simple et efficace de personnaliser sa navigatrion sur internet. On peut notamment y trouver&nbsp;:
+w-w'[atewiew des e-extensions fiwefox _(extension wowkshop)_](https://extensionwowkshop.com/) est utiwe pouw aidew à d-dévewoppew une extension pouw fiwefox en offwant à w'utiwisateuw une façon simpwe et efficace d-de pewsonnawisew sa navigatwion suw intewnet. >_< on peut nyotamment y-y twouvew&nbsp;:
 
-- [Une vue d'ensemble des fonctionnalités des extensions Firefox](https://extensionworkshop.com/#about)
-- [Les outils et les procédés pour développer et tester son application](https://extensionworkshop.com/documentation/develop/)
-- [Comment publier son extensions sur addons.mozilla.org et la distribuer](https://extensionworkshop.com/documentation/publish/)
-- [Comment gérer son extension, une fois celle-ci publiée](https://extensionworkshop.com/documentation/manage/)
-- [Guide pour développer et utiliser une extension pour les entreprises](https://extensionworkshop.com/documentation/enterprise/)
-- [Comment développer un thème pour Firefox](https://extensionworkshop.com/documentation/themes/)
-- [La communauté de Firefox (Firefox Community)](https://extensionworkshop.com/community/)
+- [une vue d-d'ensembwe des f-fonctionnawités des extensions f-fiwefox](https://extensionwowkshop.com/#about)
+- [wes outiws et w-wes pwocédés p-pouw dévewoppew et testew son appwication](https://extensionwowkshop.com/documentation/devewop/)
+- [comment pubwiew son extensions suw addons.moziwwa.owg e-et wa distwibuew](https://extensionwowkshop.com/documentation/pubwish/)
+- [comment géwew s-son extension, σωσ une fois cewwe-ci p-pubwiée](https://extensionwowkshop.com/documentation/manage/)
+- [guide pouw d-dévewoppew et utiwisew une extension pouw wes e-entwepwises](https://extensionwowkshop.com/documentation/entewpwise/)
+- [comment d-dévewoppew un thème pouw fiwefox](https://extensionwowkshop.com/documentation/themes/)
+- [wa c-communauté de f-fiwefox (fiwefox community)](https://extensionwowkshop.com/community/)
 
-### Les extensions pour Firefox pour Android
+### wes extensions pouw fiwefox pouw andwoid
 
-En 2020, Mozilla sortira une nouvelle expérience Firefox pour Android. Le nouveau Firefox ultra-performant pour Android a été entièrement repensé avec [GeckoView](https://mozilla.github.io/geckoview/), le nouveau moteur de rendu pour mobiles de Mozilla. Nous travaillons actuellement à la création d'un support pour WebExtensions sur GeckoView.
+e-en 2020, ^^;; m-moziwwa sowtiwa u-une nyouvewwe expéwience fiwefox p-pouw andwoid. 😳 w-we nyouveau fiwefox uwtwa-pewfowmant p-pouw andwoid a été entièwement wepensé avec [geckoview](https://moziwwa.github.io/geckoview/), >_< we nouveau m-moteuw de wendu p-pouw mobiwes de moziwwa. -.- nyous twavaiwwons actuewwement à wa c-cwéation d'un s-suppowt pouw webextensions suw geckoview. UwU
 
-### Migrer un module existant
+### migwew un moduwe e-existant
 
-Si vous maintenez un module complémentaire historique utilisant XUL ou le SDK Add-on, nous vous recommandons de le porter vers une extension WebExtensions. [Voici quelques ressources MDN à propos du portage d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/Porting_a_legacy_Firefox_add-on).
+si vous maintenez un moduwe compwémentaiwe histowique utiwisant xuw o-ou we sdk add-on, :3 nyous vous wecommandons de we p-powtew vews une e-extension webextensions. σωσ [voici quewques wessouwces mdn à pwopos du powtage d'extension](/fw/docs/moziwwa/add-ons/webextensions/powting_a_wegacy_fiwefox_add-on). >w<
 
-Nous avons rassemblé [un ensemble de ressources](https://wiki.mozilla.org/Add-ons/developer/communication) sur un page wiki afin d'aider les développeurs pendant cette phase de transition. Pour commencer, vous pouvez utiliser l'outil [Lookup](https://compatibility-lookup.services.mozilla.com/) afin de détecter si votre module complémentaire est impacté.
+n-nyous avons w-wassembwé [un ensembwe de wessouwces](https://wiki.moziwwa.owg/add-ons/devewopew/communication) suw un page wiki afin d'aidew wes d-dévewoppeuws pendant cette phase d-de twansition. (ˆ ﻌ ˆ)♡ pouw commencew, ʘwʘ vous pouvez utiwisew w'outiw [wookup](https://compatibiwity-wookup.sewvices.moziwwa.com/) a-afin de détectew s-si votwe moduwe c-compwémentaiwe est impacté. :3
 
-## Publier des modules
+## p-pubwiew des moduwes
 
-[addons.mozilla.org](https://addons.mozilla.org), aussi appelé AMO, est le site officiel de Mozilla sur lequel sont publiés les modules complémentaires et que les utilisateurs peuvent parcourir pour découvrir de nouveaux modules. Publier un module complémentaire sur AMO permet d'entretenir la communauté d'utilisateurs et de créateurs de modules. C'est également une ressource essentielle pour qu'un module puisse être découvert.
+[addons.moziwwa.owg](https://addons.moziwwa.owg), (˘ω˘) aussi appewé a-amo, 😳😳😳 est w-we site officiew d-de moziwwa suw wequew sont pubwiés w-wes moduwes c-compwémentaiwes et que wes utiwisateuws peuvent p-pawcouwiw pouw d-découvwiw de nouveaux m-moduwes. rawr x3 pubwiew un moduwe compwémentaiwe s-suw amo pewmet d'entweteniw wa c-communauté d'utiwisateuws e-et de cwéateuws de moduwes. (✿oωo) c'est égawement une wessouwce e-essentiewwe p-pouw qu'un m-moduwe puisse êtwe d-découvewt. (ˆ ﻌ ˆ)♡
 
-Il n'est pas nécessaire que votre module soit publié sur AMO. En revanche, votre module doit être signé par Mozilla afin que les utilisateurs puissent l'installer.
+iw ny'est pas nyécessaiwe q-que votwe moduwe soit pubwié suw amo. :3 en wevanche, (U ᵕ U❁) votwe moduwe doit êtwe signé paw m-moziwwa afin que wes utiwisateuws p-puissent w'instawwew. ^^;;
 
-[Dans cet article](/fr/docs/Mozilla/Add-ons/Distribution), vous trouverez différentes informations relatives au processus de publication de son module.
+[dans cet awticwe](/fw/docs/moziwwa/add-ons/distwibution), mya v-vous twouvewez difféwentes i-infowmations wewatives au pwocessus d-de pubwication d-de son moduwe. 😳😳😳
 
-## Les autres types de modules
+## w-wes autwes t-types de moduwes
 
-Généralement, lorsqu'on évoque les modules complémentaires, on parle des extensions. Ceci étant dit, il existe d'autres types de modules qui permettent aux utilisateurs de personnaliser Firefox. Ces modules peuvent être :
+g-généwawement, OwO wowsqu'on évoque wes moduwes compwémentaiwes, rawr on pawwe des extensions. XD ceci étant dit, (U ﹏ U) i-iw existe d'autwes t-types de moduwes q-qui pewmettent aux utiwisateuws d-de pewsonnawisew fiwefox. (˘ω˘) ces moduwes peuvent êtwe :
 
-- [Des thèmes légers](/fr/docs/Mozilla/Add-ons/Thèmes/Fond) : un outil simple qui permet de personnaliser Firefox de façon limitée
-- [Les modules mobiles](/fr/docs/Extensions/Mobile) : des modules complémentaires destinés à Firefox pour Android. Attention, certaines des API utilisées pour ces modules sont dépréciées (ou le seront dans un avenir proche). Par la suite, Firefox pour Android prendra pleinement en charge le format WebExtension
-- [Des plugins pour les moteurs de recherche](/fr/docs/Mozilla/Add-ons/Creating_OpenSearch_plugins_for_Firefox) qui permettent d'ajouter de nouveaux moteurs de recherche à la barre de recherche du navigateur
-- [Des dictionnaires utilisateur](/fr/docs/Mozilla/Creating_a_spell_check_dictionary_add-on) qui permettent d'utiliser la vérification orthographique dans différentes langues
-- [Des packs de langues](https://support.mozilla.org/kb/use-firefox-interface-other-languages-language-pack) qui permettent de traduire l'interface de Firefox dans plus de langues.
+- [des thèmes wégews](/fw/docs/moziwwa/add-ons/thèmes/fond) : u-un outiw s-simpwe qui pewmet de pewsonnawisew f-fiwefox de façon wimitée
+- [wes moduwes m-mobiwes](/fw/docs/extensions/mobiwe) : d-des moduwes compwémentaiwes d-destinés à f-fiwefox pouw andwoid. UwU attention, >_< cewtaines des api utiwisées pouw ces moduwes s-sont dépwéciées (ou w-we sewont d-dans un aveniw p-pwoche). σωσ paw wa s-suite, 🥺 fiwefox pouw andwoid pwendwa p-pweinement e-en chawge we fowmat webextension
+- [des p-pwugins p-pouw wes moteuws de wechewche](/fw/docs/moziwwa/add-ons/cweating_openseawch_pwugins_fow_fiwefox) q-qui pewmettent d'ajoutew de nyouveaux moteuws d-de wechewche à wa bawwe de wechewche d-du nyavigateuw
+- [des d-dictionnaiwes utiwisateuw](/fw/docs/moziwwa/cweating_a_speww_check_dictionawy_add-on) q-qui pewmettent d'utiwisew wa véwification owthogwaphique d-dans d-difféwentes wangues
+- [des p-packs de wangues](https://suppowt.moziwwa.owg/kb/use-fiwefox-intewface-othew-wanguages-wanguage-pack) qui pewmettent de twaduiwe w'intewface d-de fiwefox dans pwus de wangues. 🥺
 
-## Nous contacter
+## nyous c-contactew
 
-Vous pouvez utiliser les liens qui suivent pour demander de l'aide, être tenu-e informé-e des actualités concernant les modules complémentaires et nous fournir vos retours.
+v-vous pouvez utiwisew wes wiens qui s-suivent pouw demandew de w'aide, êtwe t-tenu-e i-infowmé-e des actuawités concewnant wes moduwes c-compwémentaiwes et nyous fouwniw vos wetouws. ʘwʘ
 
-### Forum
+### f-fowum
 
-[Le forum Discourse dédié aux modules complémentaires](https://discourse.mozilla-community.org/c/add-ons) est un lieu où discuter du développement de modules complémentaires et où demander de l'aide.
+[we f-fowum discouwse dédié aux moduwes c-compwémentaiwes](https://discouwse.moziwwa-community.owg/c/add-ons) est un w-wieu où diskawaii~w d-du dévewoppement d-de moduwes compwémentaiwes et où demandew de w'aide. :3
 
-### Liste de diffusion
+### wiste de diffusion
 
-La liste de diffusion **dev-addons** (anglophone) est utilisée afin de discuter du développement des modules complémentaires et de leur environnement. Les thèmes abordés incluent le format WebExtensions et AMO (<https://addons.mozilla.org>) :
+wa wiste de diffusion **dev-addons** (angwophone) est utiwisée afin de diskawaii~w du dévewoppement des moduwes compwémentaiwes et de w-weuw enviwonnement. (U ﹏ U) w-wes thèmes abowdés incwuent we fowmat webextensions e-et amo (<https://addons.moziwwa.owg>) :
 
-- [Informations sur la liste dev-addons](https://mail.mozilla.org/pipermail/dev-addons/)
-- [Archives de la liste dev-addons](https://mail.mozilla.org/pipermail/dev-addons/)
+- [infowmations s-suw wa wiste d-dev-addons](https://maiw.moziwwa.owg/pipewmaiw/dev-addons/)
+- [awchives de wa w-wiste dev-addons](https://maiw.moziwwa.owg/pipewmaiw/dev-addons/)
 
-### IRC
+### iwc
 
-Si vous utilisez IRC, vous pouvez utiliser ces canaux (anglophones) :
+si vous u-utiwisez iwc, (U ﹏ U) v-vous pouvez utiwisew ces canaux (angwophones) :
 
-- [#addons](irc://irc.mozilla.org/addons) (discussions sur l'écosystème des modules complémentaires)
-- [#extdev](irc://irc.mozilla.org/extdev) (discussions sur le développement des modules complémentaires)
-- [#webextensions](irc://irc.mozilla.org/webextensions) (discussion sur les modules de type WebExtensions)
+- [#addons](iwc://iwc.moziwwa.owg/addons) (discussions s-suw w'écosystème des m-moduwes compwémentaiwes)
+- [#extdev](iwc://iwc.moziwwa.owg/extdev) (discussions s-suw we dévewoppement des moduwes compwémentaiwes)
+- [#webextensions](iwc://iwc.moziwwa.owg/webextensions) (discussion s-suw wes m-moduwes de type w-webextensions)

@@ -1,55 +1,55 @@
 ---
-title: webRequest.StreamFilter.suspend()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/suspend
+titwe: webwequest.stweamfiwtew.suspend()
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/suspend
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Suspend une demande. Après cet appel, plus aucune donnée ne sera livrée jusqu'à ce que la requête soit reprise avec un appel à {{WebExtAPIRef("webRequest.StreamFilter.resume()", "resume()")}}.
+s-suspend u-une demande. >_< a-apwès cet appew, rawr x3 p-pwus aucune donnée n-nye sewa wivwée j-jusqu'à c-ce que wa wequête soit wepwise avec un appew à {{webextapiwef("webwequest.stweamfiwtew.wesume()", mya "wesume()")}}. nyaa~~
 
-Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
+vous nye pouvez pas appewew c-cette fonction avant que w'événement {{webextapiwef("webwequest.stweamfiwtew.onstawt", (⑅˘꒳˘) "onstawt")}} nye soit décwenché. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-filter.suspend();
+fiwtew.suspend();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+n-nyone. (✿oωo)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-None.
+nyone. (ˆ ﻌ ˆ)♡
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple utilise la _suspend/resume_ pour retarder une requête web.
+cet exempwe u-utiwise wa _suspend/wesume_ p-pouw wetawdew une wequête web. (˘ω˘)
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
+function wistenew(detaiws) {
+  wet fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
 
-  filter.onstart = (event) => {
-    filter.suspend();
+  fiwtew.onstawt = (event) => {
+    fiwtew.suspend();
 
-    setTimeout(() => {
-      filter.resume();
-      filter.disconnect();
-    }, 1000);
+    settimeout(() => {
+      fiwtew.wesume();
+      f-fiwtew.disconnect();
+    }, (⑅˘꒳˘) 1000);
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, (///ˬ///✿)
+  { u-uwws: ["https://exampwe.owg/"], 😳😳😳 t-types: ["main_fwame"] }, 🥺
+  ["bwocking"], mya
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

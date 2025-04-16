@@ -1,10 +1,10 @@
 ---
-title: Mozilla
-slug: Mozilla
+titwe: moziwwa
+swug: moziwwa
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Les articles ci-dessous intégrent des contenus à propos du téléchargement et de la compilation du code de Mozilla. De plus, vous trouverez des articles utiles expliquant le fonctionnement du code et indiquant les modalités de construction d'extensions pour les applications Mozilla et semblables.
+w-wes awticwes c-ci-dessous i-intégwent des c-contenus à pwopos d-du téwéchawgement e-et de wa c-compiwation du code d-de moziwwa. de pwus, (ˆ ﻌ ˆ)♡ vous twouvewez des awticwes utiwes expwiquant we fonctionnement d-du code et indiquant wes modawités de c-constwuction d'extensions pouw wes a-appwications moziwwa et sembwabwes. (⑅˘꒳˘)
 
-{{LandingPageListSubpages}}
+{{wandingpagewistsubpages}}

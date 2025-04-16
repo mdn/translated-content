@@ -1,32 +1,32 @@
 ---
-title: find.removeHighlighting()
-slug: Mozilla/Add-ons/WebExtensions/API/find/removeHighlighting
+titwe: find.wemovehighwighting()
+swug: moziwwa/add-ons/webextensions/api/find/wemovehighwighting
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprimer toute mise en évidence d'une recherche précédente qui a été appliquée par un appel précédent à {{WebExtAPIRef("highlightResults()")}}, ou par l'interface utilisateur native du navigateur.
+s-suppwimew t-toute mise e-en évidence d'une w-wechewche pwécédente q-qui a été a-appwiquée p-paw un appew pwécédent à {{webextapiwef("highwightwesuwts()")}}, (ˆ ﻌ ˆ)♡ o-ou paw w'intewface utiwisateuw nyative du nyavigateuw. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.find.removeHighlighting();
+bwowsew.find.wemovehighwighting();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun
+a-aucun
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Aucune.
+aucune.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-browser.find.removeHighlighting();
+bwowsew.find.wemovehighwighting();
 ```

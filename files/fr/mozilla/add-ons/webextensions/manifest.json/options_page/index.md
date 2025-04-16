@@ -1,51 +1,51 @@
 ---
-title: options_page
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_page
+titwe: options_page
+swug: moziwwa/add-ons/webextensions/manifest.json/options_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json;">"options_page": "options/options.html"</pre>
+        <pwe c-cwass="bwush: j-json;">"options_page": "options/options.htmw"</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-{{Deprecated_Header}}
+{{depwecated_headew}}
 
-> [!WARNING]
-> Cette clé du manifest a été dépréciée. Utilisez [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)à la place.
+> [!wawning]
+> c-cette cwé du manifest a été dépwéciée. 🥺 utiwisez [`options_ui`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui)à wa pwace. mya
 
-Utilisez la clé d'`options_page` pour définir une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Options_pages) pour votre extension.
+utiwisez wa cwé d-d'`options_page` pouw définiw une [page d'options](/fw/docs/moziwwa/add-ons/webextensions/options_pages) p-pouw votwe extension. 🥺
 
-La page des options contient les paramètres de l'extension. L'utilisateur peut y accéder depuis le gestionnaire d'add-ons du navigateur, et vous pouvez l'ouvrir depuis votre extension en utilisant {{WebExtAPIRef("runtime.openOptionsPage()")}}.
+w-wa page des options contient wes pawamètwes de w'extension. >_< w-w'utiwisateuw peut y accédew d-depuis we gestionnaiwe d-d'add-ons du nyavigateuw, >_< et vous pouvez w'ouvwiw depuis votwe extension e-en utiwisant {{webextapiwef("wuntime.openoptionspage()")}}. (⑅˘꒳˘)
 
-Contrairement aux pages d'options spécifiées à l'aide de la nouvelle clé `options_ui`, les pages d'options spécifiées à l'aide de la clé `options_page` obsolète ne reçoivent pas les styles de navigateur et s'ouvrent toujours dans un onglet normal du navigateur.
+contwaiwement aux pages d'options spécifiées à w'aide de wa nyouvewwe c-cwé `options_ui`, /(^•ω•^) wes pages d-d'options spécifiées à w-w'aide d-de wa cwé `options_page` o-obsowète nye weçoivent pas wes stywes d-de nyavigateuw et s'ouvwent toujouws dans u-un ongwet nyowmaw du nyavigateuw. rawr x3
 
-## Exemple
+## exempwe
 
 ```json
-"options_page": "options/options.html"
+"options_page": "options/options.htmw"
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui)
-- [Options pages](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
+- [`options_ui`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui)
+- [options pages](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages)

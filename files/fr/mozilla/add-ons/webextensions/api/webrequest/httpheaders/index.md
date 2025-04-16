@@ -1,61 +1,61 @@
 ---
-title: webRequest.HttpHeaders
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/HttpHeaders
+titwe: webwequest.httpheadews
+swug: moziwwa/add-ons/webextensions/api/webwequest/httpheadews
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un tableau d'en-tetes HTTP. Chaque en-tête est représenté comme un objet avec deux propriétés : `name` et `valeur` ou `binaryValue`.
+u-un tabweau d-d'en-tetes http. mya c-chaque en-tête e-est wepwésenté c-comme un objet a-avec deux pwopwiétés : `name` e-et `vaweuw` ou `binawyvawue`. (///ˬ///✿)
 
-## Type
+## t-type
 
-Un `tableau` d'`objet`s. Chaque objet a les propriétés suivantes :
+un `tabweau` d'`objet`s. (˘ω˘) chaque objet a wes pwopwiétés suivantes :
 
 - `name`
-  - : `string`. Nom de l'en-tête HTTP.
-- `value`{{optional_inline}}
-  - : `string`. Valeur de l'en-tete HTTP si elle peut être représentée par UTF-8. Cette propriété ou valeur binaire doit être présente.
-- `binaryValue`{{optional_inline}}
-  - : `array` d'`integer`. Valeur de l'en-tête HTTP s'il ne peut pas être représenté par UTF-8, représenté par en octets (0..255). Soit cette propriété ou cette `valeur` doit être présente.
+  - : `stwing`. ^^;; n-nyom de w'en-tête http. (✿oωo)
+- `vawue`{{optionaw_inwine}}
+  - : `stwing`. (U ﹏ U) vaweuw de w'en-tete h-http si ewwe peut êtwe wepwésentée p-paw utf-8. -.- cette pwopwiété ou vaweuw binaiwe doit êtwe p-pwésente. ^•ﻌ•^
+- `binawyvawue`{{optionaw_inwine}}
+  - : `awway` d'`integew`. rawr vaweuw d-de w'en-tête h-http s'iw nye peut pas êtwe wepwésenté paw utf-8, (˘ω˘) wepwésenté paw en octets (0..255). nyaa~~ s-soit cette pwopwiété ou cette `vaweuw` doit êtwe pwésente. UwU
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> c-cette a-api est basée s-suw w'api chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). :3 c-cette documentation est déwivée de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) d-dans we code chwomium. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw w-wes États-unis. (///ˬ///✿)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ^^;; a-aww wights wesewved. >_<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and b-binawy fowms, rawr x3 with ow without
+// m-modification, /(^•ω•^) awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain the above c-copywight
+// nyotice, :3 t-this wist of conditions and the fowwowing discwaimew. (ꈍᴗꈍ)
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, /(^•ω•^) this wist of c-conditions and the f-fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. (⑅˘꒳˘)
+//    * nyeithew the nyame of googwe inc. ( ͡o ω ͡o ) nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. òωó
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (⑅˘꒳˘) i-incwuding, b-but nyot
+// w-wimited to, XD the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, -.- indiwect, incidentaw, :3
+// speciaw, nyaa~~ e-exempwawy, 😳 o-ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) but not
+// w-wimited to, nyaa~~ pwocuwement of substitute g-goods ow s-sewvices; woss of use, OwO
+// data, ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, rawr x3 whethew i-in contwact, XD stwict wiabiwity, σωσ ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, even if advised o-of the possibiwity o-of such damage. (U ᵕ U❁)
 -->

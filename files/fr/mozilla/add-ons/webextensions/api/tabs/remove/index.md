@@ -1,101 +1,101 @@
 ---
-title: tabs.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/remove
+titwe: tabs.wemove()
+swug: moziwwa/add-ons/webextensions/api/tabs/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ferme un ou plusieurs onglets.
+f-fewme un ou pwusieuws o-ongwets. :3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (ꈍᴗꈍ)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var removing = browser.tabs.remove(
-  tabIds, // integer or integer array
+v-vaw wemoving = b-bwowsew.tabs.wemove(
+  tabids, /(^•ω•^) // integew ow integew awway
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabIds`
-  - : `integer` or `array of integer`. Les identifiants de l'onglet ou des onglets à fermer.
+- `tabids`
+  - : `integew` ow `awway o-of integew`. (⑅˘꒳˘) wes identifiants de w'ongwet ou d-des ongwets à fewmew. ( ͡o ω ͡o )
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque tous les onglets spécifiés ont été supprimés ou que leurs invites `beforeunload` ont été traitées. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie sans awguments wowsque t-tous wes ongwets spécifiés ont été s-suppwimés o-ou que weuws invites `befoweunwoad` ont été twaitées. òωó si une ewweuw se pwoduit, (⑅˘꒳˘) w-wa pwomesse sewa wejetée avec un message d'ewweuw. XD
 
-## Exemples
+## exempwes
 
-Fermer un seul onglet :
-
-```js
-function onRemoved() {
-  console.log(`Removed`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-var removing = browser.tabs.remove(2);
-removing.then(onRemoved, onError);
-```
-
-Fermer plusieurs onglets :
+fewmew un s-seuw ongwet :
 
 ```js
-function onRemoved() {
-  console.log(`Removed`);
+function o-onwemoved() {
+  c-consowe.wog(`wemoved`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var removing = browser.tabs.remove([15, 14, 1]);
-removing.then(onRemoved, onError);
+vaw wemoving = b-bwowsew.tabs.wemove(2);
+wemoving.then(onwemoved, -.- onewwow);
 ```
 
-{{WebExtExamples}}
+f-fewmew pwusieuws ongwets :
 
-## Compatibilité des navigateurs
+```js
+function onwemoved() {
+  consowe.wog(`wemoved`);
+}
 
-{{Compat}}
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
+}
 
-> [!NOTE]
+vaw w-wemoving = bwowsew.tabs.wemove([15, :3 14, 1]);
+wemoving.then(onwemoved, nyaa~~ o-onewwow);
+```
+
+{{webextexampwes}}
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api e-est basée suw w-w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) de chwomium. 😳 cette d-documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code de chwomium code. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw m-micwosoft cowpowation et incwuses i-ici sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. OwO aww wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy f-fowms, XD with ow w-without
+// modification, σωσ a-awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, (U ᵕ U❁) this wist of conditions a-and the f-fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight n-nyotice, this w-wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. :3
+//    * nyeithew the nyame of googwe inc. ( ͡o ω ͡o ) nyow t-the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the c-copywight howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, i-incwuding, >w< b-but nyot
+// wimited to, 😳😳😳 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. OwO in nyo e-event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, 😳 indiwect, incidentaw, 😳😳😳
+// s-speciaw, (˘ω˘) e-exempwawy, ʘwʘ ow consequentiaw damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// wimited t-to, o.O pwocuwement of substitute goods ow sewvices; woss of use, >w<
+// data, ow pwofits; o-ow business i-intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, 😳 w-whethew in contwact, 🥺 stwict w-wiabiwity, rawr x3 ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, o.O e-even if advised of the possibiwity of such damage. rawr
 -->

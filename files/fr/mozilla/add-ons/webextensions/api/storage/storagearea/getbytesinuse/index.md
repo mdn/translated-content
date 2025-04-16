@@ -1,41 +1,41 @@
 ---
-title: StorageArea.getBytesInUse()
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/getBytesInUse
+titwe: stowageawea.getbytesinuse()
+swug: moziwwa/add-ons/webextensions/api/stowage/stowageawea/getbytesinuse
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient la quantité d'espace de stockage, en octets, utilisé un ou plusieurs éléments stockés dans la zone de stockage.
+o-obtient wa q-quantité d'espace d-de stockage, 😳 e-en octets, -.- utiwisé u-un ou pwusieuws éwéments s-stockés dans wa z-zone de stockage. 🥺
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingSpace = browser.storage.<storageType>.getBytesInUse(
-  keys                      // null, string, or array of strings
+vaw g-gettingspace = bwowsew.stowage.<stowagetype>.getbytesinuse(
+  keys                      // nyuww, /(^•ω•^) s-stwing, ow awway of stwings
 )
 ```
 
-`<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync")}} ou {{WebExtAPIRef("storage.local")}}.
+`<stowagetype>` s-sewa w'un des types de stockage accessibwes en écwituwe — {{webextapiwef("stowage.sync")}} o-ou {{webextapiwef("stowage.wocaw")}}. nyaa~~
 
-### Paramètres
+### pawamètwes
 
 - `keys`
-  - : Une clef (chaîne) ou des cléfs (un tableau de chaînes) pour identifier le ou les éléments dont vous voulez récupérer l'espace de stockage. Si un tableau vide est passé, 0 sera renvoyé. Si vous passez à `null` ou `indéfini` ici, la fonction retournera l'espace utilisé par l'ensemble de la zone de stockage.
+  - : une cwef (chaîne) o-ou d-des cwéfs (un tabweau de chaînes) pouw identifiew we ou wes éwéments dont vous v-vouwez wécupéwew w'espace de stockage. nyaa~~ si un tabweau vide est passé, :3 0 sewa w-wenvoyé. 😳😳😳 si vous passez à `nuww` o-ou `indéfini` i-ici, (˘ω˘) wa fonction w-wetouwnewa w-w'espace utiwisé paw w'ensembwe de wa zone de s-stockage. ^^
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un entier, `bytesUsed`, représentant l'espace de stockage utilisé par les objets spécifiés dans les `clefs`. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un entiew, :3 `bytesused`, -.- wepwésentant w'espace de stockage utiwisé p-paw wes objets spécifiés d-dans wes `cwefs`. 😳 s-si w'opéwation a-a échoué, mya wa pwomesse sewa wejetée avec un message d'ewweuw. (˘ω˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> cette api e-est basée suw w'api c-chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). >_< cette documentation e-est déwivée de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) d-dans we code de chwomium. -.-
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw m-micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. 🥺

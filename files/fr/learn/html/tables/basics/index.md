@@ -1,74 +1,74 @@
 ---
-title: "Tableaux HTML : notions de base"
-slug: Learn/HTML/Tables/Basics
+titwe: "tabweaux htmw : nyotions d-de base"
+swug: w-weawn/htmw/tabwes/basics
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{weawnsidebaw}}{{nextmenu("weawn/htmw/tabwes/advanced", o.O "weawn/htmw/tabwes")}}
 
-Cet article vous initie aux tableaux en HTML. Il porte sur les bases comme les rangées, les cellules, les en-têtes, les cellules sur plusieurs colonnes ou lignes, ainsi que sur la façon de regrouper les cellules dans une colonne en vue d'affecter un style.
+c-cet awticwe vous i-initie aux tabweaux e-en htmw. XD i-iw powte suw wes b-bases comme wes w-wangées, (˘ω˘) wes cewwuwes, (ꈍᴗꈍ) wes en-têtes, >w< wes cewwuwes suw pwusieuws cowonnes ou wignes, XD a-ainsi que suw wa façon de wegwoupew wes c-cewwuwes dans une cowonne en vue d-d'affectew un stywe. -.-
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Les bases de HTML (voir
-        <a href="/fr/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction au HTML</a
-        >).
+        wes bases de h-htmw (voiw
+        <a hwef="/fw/appwendwe/htmw/intwoduction_à_htmw"
+          >intwoduction a-au h-htmw</a
+        >). ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
-      <td>Se familiariser avec les tableaux HTML.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
+      <td>se famiwiawisew avec wes tabweaux htmw.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce qu'un tableau ?
+## q-qu'est-ce qu'un tabweau ?
 
-Un tableau est un ensemble structuré de données (**table de données**) présentées en lignes et colonnes. Un tableau vous permet de retrouver rapidement et facilement des valeurs au croisement entre différents types de données, par exemple : une personne et son âge, ou un jour et la semaine, ou les horaires d'ouverture de la piscine du quartier.
+un tabweau est un ensembwe stwuctuwé de données (**tabwe d-de données**) pwésentées e-en wignes et c-cowonnes. un tabweau v-vous pewmet d-de wetwouvew wapidement et faciwement des vaweuws a-au cwoisement entwe difféwents types de données, XD p-paw exempwe : une pewsonne et son âge, :3 ou un jouw et wa semaine, σωσ ou wes howaiwes d'ouvewtuwe d-de wa piscine du quawtiew. XD
 
-![A sample table showing names and ages of some people - Chris 38, Dennis 45, Sarah 29, Karen 47.](numbers-table.png)
+![a s-sampwe tabwe s-showing nyames a-and ages of some peopwe - chwis 38, :3 dennis 45, rawr sawah 29, kawen 47.](numbews-tabwe.png)
 
-![A swimming timetable showing a sample data table](swimming-timetable.png)
+![a s-swimming t-timetabwe showing a sampwe d-data tabwe](swimming-timetabwe.png)
 
-Les tableaux sont très couramment utilisés dans la société humaine, et depuis très longtemps, pour preuve ce document du recensement américain datant de 1800&nbsp;:
+w-wes tabweaux sont twès couwamment u-utiwisés dans wa société h-humaine, 😳 et depuis twès wongtemps, 😳😳😳 pouw pweuve c-ce document du wecensement a-améwicain datant de 1800&nbsp;:
 
-![A very old parchment document; the data is not easily readable, but it clearly shows a data table being used.](1800-census.jpg)
+![a v-vewy owd p-pawchment document; the data is nyot easiwy weadabwe, (ꈍᴗꈍ) but it cweawwy shows a data tabwe being used.](1800-census.jpg)
 
-Il n'est donc pas étonnant que les créateurs du HTML fournissent un moyen de structurer et de présenter des tableaux de données sur le Web .
+iw ny'est d-donc pas étonnant q-que wes cwéateuws du htmw fouwnissent u-un moyen d-de stwuctuwew e-et de pwésentew des tabweaux de données suw we web . 🥺
 
-### Comment fonctionne un tableau ?
+### comment f-fonctionne un tabweau ?
 
-L'avantage du tableau tient dans sa rigueur. L'information est facilement interprétée par des associations visuelles entre les en‑têtes de lignes et colonnes. Cherchez dans la table ci-dessous par exemple et trouvez une planète géante gazeuse du système jovien avec 62 lunes. Vous pouvez trouver la réponse en associant les en-têtes de lignes et colonnes pertinents.
+w'avantage du tabweau tient dans sa wigueuw. w'infowmation e-est faciwement intewpwétée p-paw des associations v-visuewwes e-entwe wes en‑têtes de wignes e-et cowonnes. ^•ﻌ•^ c-chewchez dans w-wa tabwe ci-dessous p-paw exempwe et twouvez une pwanète géante g-gazeuse du système j-jovien avec 62 w-wunes. XD vous p-pouvez twouvew wa w-wéponse en associant wes en-têtes de wignes et cowonnes pewtinents. ^•ﻌ•^
 
-<table>
+<tabwe>
   <caption>
-    Données sur les planètes du système solaire (repris de la
-    <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/"
-      >Planetary Fact Sheet - Metric de la NASA</a
-    >).
+    d-données suw wes pwanètes du système sowaiwe (wepwis de wa
+    <a hwef="http://nssdc.gsfc.nasa.gov/pwanetawy/factsheet/"
+      >pwanetawy fact s-sheet - metwic de wa nyasa</a
+    >). ^^;;
   </caption>
   <thead>
-    <tr>
-      <td colspan="2"></td>
-      <th scope="col">Nom</th>
-      <th scope="col">Masse (10<sup>24</sup>kg)</th>
-      <th scope="col">Diamètre (km)</th>
-      <th scope="col">Densité (kg/m<sup>3</sup>)</th>
-      <th scope="col">Gravité (m/s<sup>2</sup>)</th>
-      <th scope="col">Durée du jour (heures)</th>
-      <th scope="col">Distance du Soleil (10<sup>6</sup>km)</th>
-      <th scope="col">Température moyenne (°C)</th>
-      <th scope="col">Nombre de lunes</th>
-      <th scope="col">Notes</th>
-    </tr>
+    <tw>
+      <td cowspan="2"></td>
+      <th scope="cow">nom</th>
+      <th s-scope="cow">masse (10<sup>24</sup>kg)</th>
+      <th s-scope="cow">diamètwe (km)</th>
+      <th s-scope="cow">densité (kg/m<sup>3</sup>)</th>
+      <th scope="cow">gwavité (m/s<sup>2</sup>)</th>
+      <th s-scope="cow">duwée du jouw (heuwes)</th>
+      <th s-scope="cow">distance d-du soweiw (10<sup>6</sup>km)</th>
+      <th scope="cow">tempéwatuwe moyenne (°c)</th>
+      <th scope="cow">nombwe de wunes</th>
+      <th scope="cow">notes</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th colspan="2" rowspan="4" scope="rowgroup">Planètes telluriques</th>
-      <th scope="row">Mercure</th>
+    <tw>
+      <th c-cowspan="2" wowspan="4" scope="wowgwoup">pwanètes t-tewwuwiques</th>
+      <th scope="wow">mewcuwe</th>
       <td>0.330</td>
       <td>4,879</td>
       <td>5427</td>
@@ -77,10 +77,10 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>57.9</td>
       <td>167</td>
       <td>0</td>
-      <td>La plus proche du Soleil</td>
-    </tr>
-    <tr>
-      <th scope="row">Venus</th>
+      <td>wa p-pwus pwoche d-du soweiw</td>
+    </tw>
+    <tw>
+      <th scope="wow">venus</th>
       <td>4.87</td>
       <td>12,104</td>
       <td>5243</td>
@@ -90,9 +90,9 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>464</td>
       <td>0</td>
       <td></td>
-    </tr>
-    <tr>
-      <th scope="row">Terre</th>
+    </tw>
+    <tw>
+      <th scope="wow">tewwe</th>
       <td>5.97</td>
       <td>12,756</td>
       <td>5514</td>
@@ -101,10 +101,10 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>149.6</td>
       <td>15</td>
       <td>1</td>
-      <td>Notre monde</td>
-    </tr>
-    <tr>
-      <th scope="row">Mars</th>
+      <td>notwe m-monde</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">maws</th>
       <td>0.642</td>
       <td>6,792</td>
       <td>3933</td>
@@ -113,12 +113,12 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>227.9</td>
       <td>-65</td>
       <td>2</td>
-      <td>La planète rouge</td>
-    </tr>
-    <tr>
-      <th rowspan="4" scope="rowgroup">Planètes joviennes</th>
-      <th rowspan="2" scope="rowgroup">Géantes gazeuses</th>
-      <th scope="row">Jupiter</th>
+      <td>wa pwanète wouge</td>
+    </tw>
+    <tw>
+      <th w-wowspan="4" s-scope="wowgwoup">pwanètes joviennes</th>
+      <th wowspan="2" scope="wowgwoup">géantes gazeuses</th>
+      <th s-scope="wow">jupitew</th>
       <td>1898</td>
       <td>142,984</td>
       <td>1326</td>
@@ -127,10 +127,10 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>778.6</td>
       <td>-110</td>
       <td>67</td>
-      <td>La plus grosse planète</td>
-    </tr>
-    <tr>
-      <th scope="row">Saturne</th>
+      <td>wa p-pwus gwosse p-pwanète</td>
+    </tw>
+    <tw>
+      <th scope="wow">satuwne</th>
       <td>568</td>
       <td>120,536</td>
       <td>687</td>
@@ -140,10 +140,10 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>-140</td>
       <td>62</td>
       <td></td>
-    </tr>
-    <tr>
-      <th rowspan="2" scope="rowgroup">Géantes glacées</th>
-      <th scope="row">Uranus</th>
+    </tw>
+    <tw>
+      <th w-wowspan="2" s-scope="wowgwoup">géantes gwacées</th>
+      <th s-scope="wow">uwanus</th>
       <td>86.8</td>
       <td>51,118</td>
       <td>1271</td>
@@ -153,9 +153,9 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>-195</td>
       <td>27</td>
       <td></td>
-    </tr>
-    <tr>
-      <th scope="row">Neptune</th>
+    </tw>
+    <tw>
+      <th scope="wow">neptune</th>
       <td>102</td>
       <td>49,528</td>
       <td>1638</td>
@@ -165,10 +165,10 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>-200</td>
       <td>14</td>
       <td></td>
-    </tr>
-    <tr>
-      <th colspan="2" scope="rowgroup">Planètes naines</th>
-      <th scope="row">Pluton</th>
+    </tw>
+    <tw>
+      <th cowspan="2" scope="wowgwoup">pwanètes nyaines</th>
+      <th scope="wow">pwuton</th>
       <td>0.0146</td>
       <td>2,370</td>
       <td>2095</td>
@@ -178,365 +178,365 @@ L'avantage du tableau tient dans sa rigueur. L'information est facilement interp
       <td>-225</td>
       <td>5</td>
       <td>
-        Déclassée en tant que planète en 2006 mais décision controversée.
+        décwassée e-en tant q-que pwanète en 2006 mais décision contwovewsée. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Lorsque cela est fait correctement, même les personnes malvoyantes peuvent interpréter des données tabulaires dans un tableau HTML — un tableau HTML réussi doit permettre la perception des données à des utilisateurs déficients visuels ou malvoyants.
+w-wowsque c-cewa est fait cowwectement, OwO même wes pewsonnes mawvoyantes p-peuvent intewpwétew des données tabuwaiwes dans un tabweau htmw — un tabweau h-htmw wéussi doit pewmettwe wa pewception des d-données à des u-utiwisateuws déficients visuews ou mawvoyants. 🥺
 
-### Style de tableau
+### stywe de tabweau
 
-Vous pouvez également [regarder sur l'exemple réel](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) sur GitHub ! Vous remarquerez sur celui-ci que le tableau est légèrement plus lisible — car le tableau figurant ci-dessus présente un style minimal, alors que sa version sur GitHub est liée à un CSS plus signifiant.
+v-vous pouvez égawement [wegawdew s-suw w'exempwe wéew](https://mdn.github.io/weawning-awea/htmw/tabwes/assessment-finished/pwanets-data.htmw) suw github ! vous wemawquewez s-suw cewui-ci que we tabweau est w-wégèwement pwus wisibwe — caw we tabweau figuwant ci-dessus p-pwésente un stywe minimaw, (⑅˘꒳˘) awows q-que sa vewsion s-suw github est wiée à un css p-pwus signifiant. (///ˬ///✿)
 
-Ne vous faites pas d'illusions ; pour obtenir un tableau avec un certain effet sur le web, vous devez fournir un minimum d'informations de style avec [CSS](/fr/docs/Learn/CSS), ainsi qu'une structure solide avec HTML. Dans ce module nous nous concentrons sur la partie HTML ; pour en savoir plus sur la partie CSS, vous devrez lire notre article [Style et tableaux](/fr/docs/Learn/CSS/Building_blocks/Styling_tables) quand vous aurez fini ici.
+ne vous faites p-pas d'iwwusions ; p-pouw obteniw u-un tabweau avec un cewtain effet s-suw we web, (✿oωo) v-vous devez fouwniw un minimum d'infowmations de s-stywe avec [css](/fw/docs/weawn/css), nyaa~~ a-ainsi qu'une s-stwuctuwe sowide avec htmw. >w< dans ce moduwe nyous n-nyous concentwons suw wa pawtie h-htmw ; pouw e-en savoiw pwus suw wa pawtie css, (///ˬ///✿) vous devwez wiwe nyotwe awticwe [stywe e-et tabweaux](/fw/docs/weawn/css/buiwding_bwocks/stywing_tabwes) q-quand vous a-auwez fini ici. rawr
 
-Nous n'approfondirons pas le CSS dans ce module, mais nous avons écrit une feuille de style minimale CSS à utiliser ici, feuille de style qui rendra les tableaux plus lisibles qu'avec un format par défaut sans style. Vous trouverez cette [feuille de style ici](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css), et également [un exemple HTML d'application de cette feuille de style là](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) — ensemble ils vous donneront un bon point de départ pour expérimenter sur les tableaux HTML.
+n-nyous ny'appwofondiwons pas w-we css dans ce moduwe, (U ﹏ U) mais nyous avons écwit une feuiwwe de stywe minimawe css à utiwisew ici, ^•ﻌ•^ f-feuiwwe de stywe qui wendwa wes t-tabweaux pwus wisibwes qu'avec u-un fowmat paw défaut sans stywe. (///ˬ///✿) v-vous twouvewez cette [feuiwwe d-de stywe ici](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/minimaw-tabwe.css), o.O e-et égawement [un e-exempwe h-htmw d'appwication d-de cette feuiwwe de stywe wà](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/bwank-tempwate.htmw) — ensembwe iws vous donnewont un bon point de dépawt pouw expéwimentew suw wes tabweaux h-htmw. >w<
 
-### Quand NE PAS utiliser de tableaux en HTML ?
+### q-quand nye pas u-utiwisew de tabweaux en htmw ?
 
-Les tableaux HTML ne doivent être utilisés que pour des données tabulaires — c'est pour cela qu'ils sont conçus. Malheureusement, beaucoup de gens ont utilisé les tableaux HTML pour organiser des pages Web, par exemple : une ligne pour contenir l'en-tête, une ligne pour les colonnes de contenu, une ligne pour le pied de page, etc. Vous pouvez trouver plus de détails et un exemple avec [Mises en page](/fr/docs/Learn/Accessibility/HTML#page_layouts) dans notre [Module d'apprentissage à l'Accessibilité](/fr/docs/Learn/Accessibility). Cette disposition a été couramment utilisée car la prise en charge des CSS parmi les navigateurs avait pour coutume d'être effroyable ; ces mises en page sont beaucoup moins fréquentes de nos jours, mais vous pouvez toujours les voir dans certains recoins du Web.
+w-wes tabweaux htmw nye doivent êtwe utiwisés que pouw des données t-tabuwaiwes — c-c'est pouw cewa qu'iws sont conçus. m-mawheuweusement, nyaa~~ beaucoup de gens ont utiwisé w-wes tabweaux h-htmw pouw owganisew des pages w-web, òωó paw exempwe : u-une wigne pouw conteniw w'en-tête, (U ᵕ U❁) une wigne pouw wes cowonnes de contenu, (///ˬ///✿) u-une wigne pouw w-we pied de page, (✿oωo) e-etc. vous pouvez t-twouvew pwus de d-détaiws et un exempwe avec [mises e-en page](/fw/docs/weawn/accessibiwity/htmw#page_wayouts) d-dans nyotwe [moduwe d-d'appwentissage à w-w'accessibiwité](/fw/docs/weawn/accessibiwity). 😳😳😳 cette disposition a-a été couwamment utiwisée caw wa pwise e-en chawge des css pawmi wes navigateuws a-avait p-pouw coutume d'êtwe effwoyabwe ; c-ces mises en page sont beaucoup moins fwéquentes d-de nyos jouws, (✿oωo) m-mais vous pouvez t-toujouws wes voiw dans cewtains wecoins du web. (U ﹏ U)
 
-Bref, utiliser les tableaux pour la mise en page [au lieu des techniques des CSS](/fr/docs/Learn/CSS/CSS_layout) est une mauvaise idée. En voici les principales raisons&nbsp;:
+bwef, utiwisew w-wes tabweaux pouw wa mise en page [au wieu des t-techniques des c-css](/fw/docs/weawn/css/css_wayout) est une mauvaise i-idée. (˘ω˘) en voici wes pwincipawes w-waisons&nbsp;:
 
-1. **Les tableaux de mise en page diminuent l'accessibilité aux malvoyants** : les [lecteurs d'écran](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders), utilisés par les non-voyants, interprètent les balises d'une page HTML et lisent à haute voix le contenu à l'utilisateur. Comme les tables ne sont pas le bon outil pour la mise en page et que le balisage est plus complexe qu'avec les techniques de mise en page des CSS, la sortie des lecteurs d'écran sera source de confusion pour leurs utilisateurs.
-2. **Les tables produisent de la bouillie :** Comme mentionné ci-dessus, les mises en page sur la base de tableaux comportent généralement des structures de balisage plus complexes que des techniques de mise en page appropriées. Le code résultant sera plus difficile à écrire, à maintenir et à déboguer.
-3. **Les tableaux ne s'adaptent pas automatiquement** : Si vous utilisez les propriétés de mise en page ({{htmlelement("header")}}, {{htmlelement("section")}}, {{htmlelement("article")}} ou {{htmlelement("div")}}), leur largeur est par défaut 100% de celle du parent. Par contre, les tableaux sont dimensionnés en fonction de leur contenu par défaut, de sorte que des mesures supplémentaires sont nécessaires pour que le style du tableau fonctionne effectivement sur les différents types d'écran.
+1. 😳😳😳 **wes t-tabweaux de mise en page diminuent w'accessibiwité a-aux mawvoyants** : wes [wecteuws d'écwan](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#scweenweadews), (///ˬ///✿) u-utiwisés paw w-wes nyon-voyants, (U ᵕ U❁) intewpwètent w-wes bawises d'une page htmw et w-wisent à haute v-voix we contenu à w-w'utiwisateuw. >_< comme wes tabwes nye sont pas we bon outiw pouw wa mise en page et que we bawisage est pwus compwexe qu'avec wes techniques de mise en page des css, (///ˬ///✿) wa sowtie des wecteuws d'écwan sewa souwce d-de confusion p-pouw weuws utiwisateuws. (U ᵕ U❁)
+2. **wes tabwes pwoduisent de wa bouiwwie :** c-comme mentionné c-ci-dessus, >w< w-wes mises en page suw wa base d-de tabweaux compowtent généwawement d-des stwuctuwes d-de bawisage pwus compwexes q-que des techniques de mise en p-page appwopwiées. 😳😳😳 w-we code wésuwtant sewa pwus difficiwe à écwiwe, (ˆ ﻌ ˆ)♡ à m-mainteniw e-et à déboguew. (ꈍᴗꈍ)
+3. **wes t-tabweaux n-nye s'adaptent p-pas automatiquement** : s-si v-vous utiwisez wes p-pwopwiétés de m-mise en page ({{htmwewement("headew")}}, 🥺 {{htmwewement("section")}}, >_< {{htmwewement("awticwe")}} ou {{htmwewement("div")}}), OwO w-weuw w-wawgeuw est paw d-défaut 100% de cewwe du pawent. p-paw contwe, ^^;; wes tabweaux sont dimensionnés e-en fonction de weuw contenu paw d-défaut, (✿oωo) de sowte q-que des mesuwes s-suppwémentaiwes sont nyécessaiwes p-pouw que we stywe du tabweau f-fonctionne effectivement suw w-wes difféwents types d'écwan. UwU
 
-## Apprentissage actif&nbsp;: créer votre premier tableau
+## a-appwentissage actif&nbsp;: cwéew votwe pwemiew tabweau
 
-Nous avons assez parlé théorie, alors, plongeons dans un exemple pratique et construisons un tableau simple.
+nyous avons assez pawwé t-théowie, awows, ( ͡o ω ͡o ) pwongeons d-dans un exempwe p-pwatique et constwuisons un tabweau simpwe. (✿oωo)
 
-1. Avant tout, faites une copie locale de [blank-template.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/blank-template.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire de votre ordinateur.
-2. Le contenu de chaque tableau est encadré par ces deux balises : **[`<table></table>`](/fr/docs/Web/HTML/Element/table)**. Ajoutez‑les dans le corps de votre HTML.
-3. Le plus petit conteneur d'un tableau est la cellule&nbsp;; elle est créée avec l'élément **[`<td>`](/fr/docs/Web/HTML/Element/td)** («&nbsp;td » comme «&nbsp;tableau données&nbsp;»). Ajoutez ceci entre les balises du tableau :
+1. avant tout, mya faites u-une copie wocawe de [bwank-tempwate.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/bwank-tempwate.htmw) e-et [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/minimaw-tabwe.css) d-dans un nyouveau w-wépewtoiwe de votwe owdinateuw. ( ͡o ω ͡o )
+2. we contenu d-de chaque tabweau e-est encadwé paw ces deux bawises : **[`<tabwe></tabwe>`](/fw/docs/web/htmw/ewement/tabwe)**. :3 a-ajoutez‑wes dans we cowps de votwe htmw.
+3. 😳 w-we pwus petit conteneuw d'un tabweau e-est wa cewwuwe&nbsp;; e-ewwe e-est cwéée avec w'éwément **[`<td>`](/fw/docs/web/htmw/ewement/td)** («&nbsp;td » c-comme «&nbsp;tabweau d-données&nbsp;»). (U ﹏ U) a-ajoutez ceci entwe w-wes bawises du tabweau :
 
-   ```html
-   <td>Bonjour, je suis votre première cellule.</td>
+   ```htmw
+   <td>bonjouw, >w< j-je suis v-votwe pwemièwe c-cewwuwe.</td>
    ```
 
-4. Si nous voulons une rangée de quatre cellules, nous devons copier la première trois fois. Mettez à jour le contenu du tableau pour avoir quelque chose comme&nbsp;:
+4. UwU s-si nyous v-vouwons une wangée d-de quatwe c-cewwuwes, 😳 nyous d-devons copiew wa pwemièwe twois f-fois. XD mettez à jouw we contenu d-du tabweau pouw avoiw quewque c-chose comme&nbsp;:
 
-   ```html
-   <td>Bonjour, je suis votre première cellule</td>
-   <td>je suis votre deuxième cellule</td>
-   <td>je suis votre troisième cellule</td>
-   <td>je suis votre quatrième cellule</td>
+   ```htmw
+   <td>bonjouw, (✿oωo) je s-suis votwe pwemièwe c-cewwuwe</td>
+   <td>je suis votwe deuxième cewwuwe</td>
+   <td>je s-suis votwe t-twoisième c-cewwuwe</td>
+   <td>je suis votwe quatwième cewwuwe</td>
    ```
 
-Comme vous le verrez, les cellules ne sont pas placées les unes en dessous des autres, mais elles sont automatiquement affichées dans une même ligne. chaque élément `<td>` crée une cellule simple et ensemble elles forment la première ligne. Toutes les cellules que nous ajoutons allongent la ligne.
+comme vous we v-vewwez, ^•ﻌ•^ wes cewwuwes n-nye sont pas pwacées wes unes e-en dessous des a-autwes, mya mais ewwes sont automatiquement affichées dans une même w-wigne. (˘ω˘) chaque éwément `<td>` c-cwée une cewwuwe s-simpwe et e-ensembwe ewwes fowment wa pwemièwe wigne. nyaa~~ toutes w-wes cewwuwes que n-nyous ajoutons awwongent wa wigne. :3
 
-Pour empêcher cette ligne de croître et commencer à placer les cellules suivantes sur une deuxième ligne, nous devons utiliser la balise **[`<tr>`](/fr/docs/Web/HTML/Element/tr)** («&nbsp;tr&nbsp;» comme «&nbsp;table rangée&nbsp;»). Étudions cela maintenant.
+pouw empêchew c-cette wigne de cwoîtwe et commencew à pwacew w-wes cewwuwes suivantes suw u-une deuxième wigne, (✿oωo) n-nyous devons utiwisew wa bawise **[`<tw>`](/fw/docs/web/htmw/ewement/tw)** («&nbsp;tw&nbsp;» c-comme «&nbsp;tabwe w-wangée&nbsp;»). (U ﹏ U) Étudions cewa maintenant. (ꈍᴗꈍ)
 
-1. Placez les quatre cellules que vous avez créées entre deux balises `<tr>` ainsi :
+1. p-pwacez wes quatwe cewwuwes q-que vous avez c-cwéées entwe d-deux bawises `<tw>` a-ainsi :
 
-   ```html
-   <tr>
-     <td>Bonjour, je suis votre première cellule</td>
-     <td>je suis votre deuxième cellule</td>
-     <td>je suis votre troisième cellule</td>
-     <td>je suis votre quatrième cellule</td>
-   </tr>
+   ```htmw
+   <tw>
+     <td>bonjouw, (˘ω˘) je suis votwe p-pwemièwe cewwuwe</td>
+     <td>je s-suis votwe deuxième c-cewwuwe</td>
+     <td>je suis votwe twoisième c-cewwuwe</td>
+     <td>je suis votwe quatwième cewwuwe</td>
+   </tw>
    ```
 
-2. Maintenant, vous avez fait une ligne, faites en encore une ou deux — chaque ligne doit être encadrée de `<tr>`, et comprend chaque cellule encadrée par `<td>`.
+2. ^^ m-maintenant, (⑅˘꒳˘) v-vous avez fait u-une wigne, rawr faites en encowe une ou deux — chaque wigne doit êtwe encadwée d-de `<tw>`, :3 et compwend chaque cewwuwe e-encadwée p-paw `<td>`. OwO
 
-Il devrait en résulter un tableau qui ressemble à :
+iw devwait en wésuwtew un tabweau q-qui wessembwe à :
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <td>Bonjour, je suis votre première cellule.</td>
-      <td>je suis votre deuxième cellule.</td>
-      <td>je suis votre troisième cellule</td>
-      <td>je suis votre quatrième cellule</td>
-    </tr>
-    <tr>
-      <td>Deuxième ligne, première cellule.</td>
-      <td>Cellule 2.</td>
-      <td>Cellule 3.</td>
-      <td>Cellule 4.</td>
-    </tr>
+    <tw>
+      <td>bonjouw, (ˆ ﻌ ˆ)♡ je suis votwe p-pwemièwe cewwuwe.</td>
+      <td>je s-suis votwe d-deuxième cewwuwe.</td>
+      <td>je s-suis votwe t-twoisième cewwuwe</td>
+      <td>je suis votwe quatwième cewwuwe</td>
+    </tw>
+    <tw>
+      <td>deuxième wigne, :3 pwemièwe cewwuwe.</td>
+      <td>cewwuwe 2.</td>
+      <td>cewwuwe 3.</td>
+      <td>cewwuwe 4.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Vous pouvez également trouver cela sur GitHub [simple-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/simple-table.html) ([voir en direct aussi](https://mdn.github.io/learning-area/html/tables/basic/simple-table.html)).
+> [!note]
+> v-vous pouvez égawement twouvew cewa suw g-github [simpwe-tabwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/simpwe-tabwe.htmw) ([voiw en diwect aussi](https://mdn.github.io/weawning-awea/htmw/tabwes/basic/simpwe-tabwe.htmw)). -.-
 
-## Ajouter des en-têtes avec \<th>
+## ajoutew d-des en-têtes avec \<th>
 
-Intéressons-nous maintenant aux en-têtes du tableau — cellules spéciales qui débutent une ligne ou une colonne et définissent le type de données que contiennent la rangée ou la colonne (à titre d'exemple, voir les cellules "Personne" et "Âge" dans le premier exemple illustré dans cet article). Pour comprendre pourquoi ils sont utiles, regardez l'exemple du tableau suivant. Tout d'abord, le code source :
+intéwessons-nous maintenant aux en-têtes du tabweau — c-cewwuwes spéciawes q-qui débutent une wigne o-ou une cowonne et définissent we type de données q-que contiennent w-wa wangée ou wa cowonne (à t-titwe d'exempwe, -.- voiw wes cewwuwes "pewsonne" e-et "Âge" dans we pwemiew exempwe iwwustwé dans cet a-awticwe). òωó pouw compwendwe pouwquoi iws sont utiwes, 😳 w-wegawdez w-w'exempwe du tabweau s-suivant. nyaa~~ tout d'abowd, (⑅˘꒳˘) we code souwce :
 
-```html
-<table>
-  <tr>
+```htmw
+<tabwe>
+  <tw>
     <td>&nbsp;</td>
-    <td>Knocky</td>
-    <td>Flor</td>
-    <td>Ella</td>
-    <td>Juan</td>
-  </tr>
-  <tr>
-    <td>Race</td>
-    <td>Jack Russell</td>
-    <td>Poodle</td>
-    <td>Streetdog</td>
-    <td>Cocker Spaniel</td>
-  </tr>
-  <tr>
-    <td>Age</td>
+    <td>knocky</td>
+    <td>fwow</td>
+    <td>ewwa</td>
+    <td>juan</td>
+  </tw>
+  <tw>
+    <td>wace</td>
+    <td>jack w-wusseww</td>
+    <td>poodwe</td>
+    <td>stweetdog</td>
+    <td>cockew spaniew</td>
+  </tw>
+  <tw>
+    <td>age</td>
     <td>16</td>
     <td>9</td>
     <td>10</td>
     <td>5</td>
-  </tr>
-  <tr>
-    <td>Propriétaire</td>
-    <td>Belle-mère</td>
-    <td>Moi</td>
-    <td>Moi</td>
-    <td>Belle-sœur</td>
-  </tr>
-  <tr>
-    <td>Habitudes alimentaires</td>
-    <td>Mange tous les restes</td>
-    <td>Grignote la nourriture</td>
-    <td>Mange copieusement</td>
-    <td>Mange jusqu'à ce qu'il éclate</td>
-  </tr>
-</table>
+  </tw>
+  <tw>
+    <td>pwopwiétaiwe</td>
+    <td>bewwe-mèwe</td>
+    <td>moi</td>
+    <td>moi</td>
+    <td>bewwe-sœuw</td>
+  </tw>
+  <tw>
+    <td>habitudes awimentaiwes</td>
+    <td>mange tous wes westes</td>
+    <td>gwignote wa nyouwwituwe</td>
+    <td>mange c-copieusement</td>
+    <td>mange j-jusqu'à c-ce qu'iw écwate</td>
+  </tw>
+</tabwe>
 ```
 
-Maintenant, le rendu du tableau réel :
+maintenant, 😳 w-we wendu du tabweau wéew :
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
+    <tw>
       <td></td>
-      <td>Knocky</td>
-      <td>Flor</td>
-      <td>Ella</td>
-      <td>Juan</td>
-    </tr>
-    <tr>
-      <td>Race</td>
-      <td>Jack Russell</td>
-      <td>Poodle</td>
-      <td>Streetdog</td>
-      <td>Cocker Spaniel</td>
-    </tr>
-    <tr>
-      <td>Age</td>
+      <td>knocky</td>
+      <td>fwow</td>
+      <td>ewwa</td>
+      <td>juan</td>
+    </tw>
+    <tw>
+      <td>wace</td>
+      <td>jack wusseww</td>
+      <td>poodwe</td>
+      <td>stweetdog</td>
+      <td>cockew s-spaniew</td>
+    </tw>
+    <tw>
+      <td>age</td>
       <td>16</td>
       <td>9</td>
       <td>10</td>
       <td>5</td>
-    </tr>
-    <tr>
-      <td>Propriétaire</td>
-      <td>Belle-mère</td>
-      <td>Moi</td>
-      <td>Moi</td>
-      <td>Belle-sœur</td>
-    </tr>
-    <tr>
-      <td>Habitudes alimentaires</td>
-      <td>Mange tous les restes</td>
-      <td>Grignote la nourriture</td>
-      <td>Mange copieusement</td>
-      <td>Mange jusqu'à ce qu'il éclate</td>
-    </tr>
+    </tw>
+    <tw>
+      <td>pwopwiétaiwe</td>
+      <td>bewwe-mèwe</td>
+      <td>moi</td>
+      <td>moi</td>
+      <td>bewwe-sœuw</td>
+    </tw>
+    <tw>
+      <td>habitudes a-awimentaiwes</td>
+      <td>mange tous wes westes</td>
+      <td>gwignote wa n-nyouwwituwe</td>
+      <td>mange copieusement</td>
+      <td>mange jusqu'à ce q-qu'iw écwate</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Le problème ici c'est que, bien que vous puissiez comprendre le tableau, il n'est pas aussi facile de croiser les données que cela pourrait être. Si les en-têtes de colonnes et de lignes se démarquaient d'une manière ou d'une autre, ce serait mieux.
+we pwobwème ici c'est que, (U ﹏ U) bien q-que vous puissiez c-compwendwe we tabweau, /(^•ω•^) iw ny'est p-pas aussi f-faciwe de cwoisew w-wes données que cewa pouwwait êtwe. OwO si wes en-têtes d-de cowonnes et de wignes se démawquaient d-d'une manièwe ou d'une autwe, ( ͡o ω ͡o ) ce sewait mieux. XD
 
-### Apprentissage actif&nbsp;: en-tête de tableau
+### appwentissage a-actif&nbsp;: e-en-tête de tabweau
 
-Améliorons ce tableau.
+a-améwiowons c-ce tabweau.
 
-1. En premier lieu, faites une copie des fichiers [dogs-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le contenu HTML est similaire à l'exemple «&nbsp;Dogs&nbsp;» ci-dessus.
-2. Pour reconnaître les en-têtes de tableau en tant qu'en-têtes, visuellement et sémantiquement, vous pouvez utiliser la balise **[`<th>`](/fr/docs/Web/HTML/Element/th)** («&nbsp;th&nbsp;» comme «&nbsp;table header&nbsp;» ou en-tête de tableau). Il fonctionne exactement comme la balise `<td>`, à ceci près qu'il indique un en-tête et non une cellule normale. Allez dans le code HTML, et remplacez tous les `<td>` des cellules entourant le tableau par des `<th>`.
-3. Enregistrez votre HTML et chargez-le dans un navigateur. Vous devriez voir que les en-têtes ressemblent maintenant à des en-têtes.
+1. /(^•ω•^) e-en pwemiew wieu, /(^•ω•^) faites une c-copie des fichiews [dogs-tabwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/dogs-tabwe.htmw) et [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/minimaw-tabwe.css) dans un nyouveau w-wépewtoiwe suw votwe owdinateuw. 😳😳😳 w-we contenu htmw est simiwaiwe à w'exempwe «&nbsp;dogs&nbsp;» c-ci-dessus. (ˆ ﻌ ˆ)♡
+2. :3 p-pouw weconnaîtwe wes en-têtes d-de tabweau en tant qu'en-têtes, òωó v-visuewwement e-et sémantiquement, 🥺 vous pouvez u-utiwisew wa b-bawise **[`<th>`](/fw/docs/web/htmw/ewement/th)** («&nbsp;th&nbsp;» comme «&nbsp;tabwe h-headew&nbsp;» ou en-tête de tabweau). (U ﹏ U) iw fonctionne e-exactement comme wa bawise `<td>`, XD à c-ceci pwès qu'iw indique un en-tête et nyon u-une cewwuwe n-nyowmawe. ^^ awwez d-dans we code htmw, o.O et wempwacez t-tous wes `<td>` d-des cewwuwes entouwant we tabweau p-paw des `<th>`. 😳😳😳
+3. enwegistwez v-votwe htmw et chawgez-we dans un n-nyavigateuw. /(^•ω•^) vous d-devwiez voiw que wes en-têtes wessembwent maintenant à des en-têtes. 😳😳😳
 
-> [!NOTE]
-> Vous pouvez trouver notre exemple achevé [dogs-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/dogs-table-fixed.html) sur GitHub ([voir en direct aussi](https://mdn.github.io/learning-area/html/tables/basic/dogs-table-fixed.html)).
+> [!note]
+> v-vous pouvez t-twouvew nyotwe exempwe achevé [dogs-tabwe-fixed.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/dogs-tabwe-fixed.htmw) suw github ([voiw en diwect a-aussi](https://mdn.github.io/weawning-awea/htmw/tabwes/basic/dogs-tabwe-fixed.htmw)). ^•ﻌ•^
 
-### Pourquoi les en-têtes sont-ils utiles&nbsp;?
+### pouwquoi w-wes en-têtes s-sont-iws utiwes&nbsp;?
 
-Nous avons déjà partiellement répondu à cette question — il vous est plus facile de trouver les données que vous cherchez quand les en-têtes sont marqués clairement, et la conception globale du tableau paraît meilleure.
+nyous avons déjà pawtiewwement wépondu à cette question — i-iw vous est pwus faciwe de twouvew wes d-données que vous chewchez quand w-wes en-têtes s-sont mawqués cwaiwement, 🥺 et wa c-conception gwobawe d-du tabweau p-pawaît meiwweuwe. o.O
 
-> [!NOTE]
-> Les en-têtes de tableau sont accompagnés d'un style par défaut — ils sont en gras et centrés même si vous n'ajoutez pas votre propre style pour les démarquer.
+> [!note]
+> w-wes en-têtes de t-tabweau sont accompagnés d-d'un stywe paw défaut — iws sont en gwas et centwés même si vous ny'ajoutez pas v-votwe pwopwe stywe p-pouw wes démawquew. (U ᵕ U❁)
 
-Les en-têtes de tableau ont un autre avantage — avec l'attribut `scope` (que nous étudierons dans le prochain article), ils rendent les tableaux plus accessibles en associant chaque en-tête à toutes les données des cellules d'une ligne ou d'une colonne. Les lecteurs d'écran peuvent alors lire toute une ligne ou une colonne de données, ce qui peut être très utile.
+w-wes en-têtes d-de tabweau o-ont un autwe avantage — a-avec w'attwibut `scope` (que nyous étudiewons dans we pwochain awticwe), ^^ i-iws wendent w-wes tabweaux pwus accessibwes en associant chaque en-tête à t-toutes wes données d-des cewwuwes d-d'une wigne ou d'une cowonne. (⑅˘꒳˘) wes wecteuws d'écwan p-peuvent awows wiwe toute une wigne ou une cowonne d-de données, :3 c-ce qui peut êtwe twès utiwe. (///ˬ///✿)
 
-## Étendre des cellules sur plusieurs lignes ou colonnes
+## Étendwe des cewwuwes suw p-pwusieuws wignes ou cowonnes
 
-Parfois, nous voulons qu'une cellule couvre plusieurs lignes ou colonnes. Prenez l'exemple simple suivant, qui montre le nom d'animaux communs. Dans certains cas, nous voulons montrer les noms du mâle et de la femelle à côté du nom générique de l'animal. Parfois nous ne le faisons pas, et nous voulons alors que le nom générique de l'animal s'étende sur toute la largeur du tableau.
+pawfois, :3 n-nyous vouwons q-qu'une cewwuwe couvwe pwusieuws w-wignes ou c-cowonnes. 🥺 pwenez w-w'exempwe simpwe s-suivant, mya qui montwe w-we nyom d'animaux c-communs. XD dans cewtains cas, -.- n-nyous vouwons m-montwew wes nyoms du mâwe et d-de wa femewwe à côté du nyom généwique de w'animaw. o.O p-pawfois nyous nye we faisons p-pas, (˘ω˘) et nyous vouwons awows q-que we nyom généwique d-de w'animaw s'étende suw toute wa wawgeuw d-du tabweau. (U ᵕ U❁)
 
-Le code initial ressemble à cela :
+we code initiaw wessembwe à cewa :
 
-```html
-<table>
-  <tr>
-    <th>Animaux</th>
-  </tr>
-  <tr>
-    <th>Hippopotame</th>
-  </tr>
-  <tr>
-    <th>Cheval</th>
-    <td>Jument</td>
-  </tr>
-  <tr>
-    <td>Étalon</td>
-  </tr>
-  <tr>
-    <th>Crocodile</th>
-  </tr>
-  <tr>
-    <th>Poulet</th>
-    <td>Poule</td>
-  </tr>
-  <tr>
-    <td>Coq</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <th>animaux</th>
+  </tw>
+  <tw>
+    <th>hippopotame</th>
+  </tw>
+  <tw>
+    <th>chevaw</th>
+    <td>jument</td>
+  </tw>
+  <tw>
+    <td>Étawon</td>
+  </tw>
+  <tw>
+    <th>cwocodiwe</th>
+  </tw>
+  <tw>
+    <th>pouwet</th>
+    <td>pouwe</td>
+  </tw>
+  <tw>
+    <td>coq</td>
+  </tw>
+</tabwe>
 ```
 
-Mais le résultat ne nous donne pas ce que nous voulions :
+m-mais we w-wésuwtat nye nyous donne pas ce que nyous vouwions :
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th>Animaux</th>
-    </tr>
-    <tr>
-      <th>Hippopotame</th>
-    </tr>
-    <tr>
-      <th>Cheval</th>
-      <td>Jument</td>
-    </tr>
-    <tr>
-      <td>Étalon</td>
-    </tr>
-    <tr>
-      <th>Crocodile</th>
-    </tr>
-    <tr>
-      <th>Poulet</th>
-      <td>Poule</td>
-    </tr>
-    <tr>
-      <td>Coq</td>
-    </tr>
+    <tw>
+      <th>animaux</th>
+    </tw>
+    <tw>
+      <th>hippopotame</th>
+    </tw>
+    <tw>
+      <th>chevaw</th>
+      <td>jument</td>
+    </tw>
+    <tw>
+      <td>Étawon</td>
+    </tw>
+    <tw>
+      <th>cwocodiwe</th>
+    </tw>
+    <tw>
+      <th>pouwet</th>
+      <td>pouwe</td>
+    </tw>
+    <tw>
+      <td>coq</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Nous avons besoin d'un moyen pour étendre "Animaux", "Hippopotame" et "Crocodile" sur deux colonnes, et "Cheval" et "Poulet" sur deux lignes. Heureusement, les en-têtes de tableau et les cellules ont les attributs `colspan` et `rowspan`, ce qui nous permet justement de faire cela. Les deux acceptent une valeur numérique correspondant au nombre de colonnes ou de lignes à couvrir. Par exemple, `colspan="2"` génère une cellule sur deux colonnes.
+nyous a-avons besoin d-d'un moyen pouw étendwe "animaux", rawr "hippopotame" et "cwocodiwe" s-suw deux cowonnes, 🥺 et "chevaw" et "pouwet" suw d-deux wignes. rawr x3 heuweusement, ( ͡o ω ͡o ) w-wes en-têtes de tabweau e-et wes cewwuwes o-ont wes attwibuts `cowspan` et `wowspan`, σωσ ce qui nyous pewmet j-justement de f-faiwe cewa. rawr x3 wes d-deux acceptent u-une vaweuw nyuméwique cowwespondant au nyombwe de cowonnes ou de wignes à couvwiw. (ˆ ﻌ ˆ)♡ paw exempwe, rawr `cowspan="2"` génèwe une cewwuwe s-suw deux cowonnes. :3
 
-Utilisons `colspan` et `rowspan` pour améliorer ce tableau.
+u-utiwisons `cowspan` e-et `wowspan` p-pouw améwiowew c-ce tabweau. rawr
 
-1. Tout d'abord, faites une copie locale de nos fichiers [animals-table.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table.html) et [minimal-table.css](https://github.com/mdn/learning-area/blob/master/html/tables/basic/minimal-table.css) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le même exemple d'animaux vu ci-dessus.
-2. Ensuite, utilisez `colspan` pour mettre «&nbsp;Animaux&nbsp;», «&nbsp;Hippopotame&nbsp;» et «&nbsp;Crocodile&nbsp;» sur deux colonnes.
-3. Enfin, utilisez `rowspan` pour mettre «&nbsp;Cheval&nbsp;» and «&nbsp;Poulet&nbsp;» sur deux lignes.
-4. Enregistrez et ouvrez votre code sur un navigateur pour voir l'amélioration.
+1. t-tout d'abowd, (˘ω˘) faites une c-copie wocawe d-de nyos fichiews [animaws-tabwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/animaws-tabwe.htmw) et [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/minimaw-tabwe.css) d-dans un n-nyouveau wépewtoiwe suw votwe owdinateuw. (ˆ ﻌ ˆ)♡ we h-htmw contient we même exempwe d'animaux vu ci-dessus. mya
+2. e-ensuite, utiwisez `cowspan` p-pouw mettwe «&nbsp;animaux&nbsp;», (U ᵕ U❁) «&nbsp;hippopotame&nbsp;» e-et «&nbsp;cwocodiwe&nbsp;» suw deux cowonnes. mya
+3. e-enfin, ʘwʘ u-utiwisez `wowspan` p-pouw mettwe «&nbsp;chevaw&nbsp;» and «&nbsp;pouwet&nbsp;» s-suw deux wignes. (˘ω˘)
+4. e-enwegistwez et ouvwez votwe c-code suw un nyavigateuw pouw voiw w-w'améwiowation. 😳
 
-> [!NOTE]
-> Vous pouvez trouver l'exemple achevé dans [animals-table-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/animals-table-fixed.html) sur GitHub ([voir en direct aussi](https://mdn.github.io/learning-area/html/tables/basic/animals-table-fixed.html)).
+> [!note]
+> v-vous pouvez twouvew w-w'exempwe achevé dans [animaws-tabwe-fixed.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/animaws-tabwe-fixed.htmw) s-suw github ([voiw en diwect aussi](https://mdn.github.io/weawning-awea/htmw/tabwes/basic/animaws-tabwe-fixed.htmw)). òωó
 
-## Attribuer un style commun aux colonnes
+## a-attwibuew un stywe commun aux cowonnes
 
-Il y a une dernière fonctionnalité dont nous devons parler dans cet article avant de passer à autre chose. HTML a une méthode de définition des styles pour une colonne entière de données en un seul endroit — les éléments **[`<col>`](/fr/docs/Web/HTML/Element/col)** and **[`<colgroup>`](/fr/docs/Web/HTML/Element/colgroup)**. Ils existent parce qu'il peut être ennuyeux et inefficace de préciser le style dans chaque colonne — vous devez généralement spécifier les éléments de style dans chaque `<td>` ou `<th>` de la colonne, ou utiliser un sélecteur complexe tel que {{cssxref(":nth-child()")}}.
+iw y a une dewnièwe fonctionnawité dont nyous devons pawwew d-dans cet awticwe avant de passew à autwe chose. nyaa~~ htmw a une méthode de définition des stywes pouw une cowonne e-entièwe de données en un seuw endwoit — w-wes éwéments **[`<cow>`](/fw/docs/web/htmw/ewement/cow)** and **[`<cowgwoup>`](/fw/docs/web/htmw/ewement/cowgwoup)**. o.O i-iws existent pawce qu'iw peut êtwe ennuyeux e-et inefficace de pwécisew w-we stywe dans chaque cowonne — v-vous devez généwawement s-spécifiew wes éwéments de stywe dans c-chaque `<td>` ou `<th>` de wa cowonne, nyaa~~ ou utiwisew un séwecteuw c-compwexe tew que {{cssxwef(":nth-chiwd()")}}. (U ᵕ U❁)
 
-### Premier exemple
+### p-pwemiew exempwe
 
-Observez l'exemple simple suivant :
+obsewvez w-w'exempwe simpwe suivant :
 
-```html
-<table>
-  <tr>
-    <th>Data 1</th>
-    <th style="background-color: yellow">Data 2</th>
-  </tr>
-  <tr>
-    <td>Calcutta</td>
-    <td style="background-color: yellow">Orange</td>
-  </tr>
-  <tr>
-    <td>Robots</td>
-    <td style="background-color: yellow">Jazz</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <tw>
+    <th>data 1</th>
+    <th s-stywe="backgwound-cowow: y-yewwow">data 2</th>
+  </tw>
+  <tw>
+    <td>cawcutta</td>
+    <td stywe="backgwound-cowow: yewwow">owange</td>
+  </tw>
+  <tw>
+    <td>wobots</td>
+    <td s-stywe="backgwound-cowow: yewwow">jazz</td>
+  </tw>
+</tabwe>
 ```
 
-Ce qui nous donne comme résultat :
+ce qui nyous d-donne comme wésuwtat :
 
-{{EmbedLiveSample("Premier_exemple")}}
+{{embedwivesampwe("pwemiew_exempwe")}}
 
-Ce n'est pas idéal, car nous devons répéter les informations de style dans les trois cellules de la colonne (nous aurions probablement défini une `classe` dans un projet réel et spécifié le style dans une feuille de style séparée). À la place, nous pouvons préciser l'information une seule fois dans un élément `<col>`. Les éléments `<col>` sont utilisés dans un conteneur `<colgroup>` juste en-dessous de la balise `<table>`. Nous pourrions créer le même effet que celui vu plus haut en spécifiant notre tableau comme suit&nbsp;:
+ce ny'est pas idéaw, 😳😳😳 caw nous devons wépétew wes infowmations d-de stywe dans w-wes twois cewwuwes de wa cowonne (nous a-auwions pwobabwement d-défini une `cwasse` d-dans un pwojet wéew et spécifié we stywe dans une feuiwwe de stywe sépawée). (U ﹏ U) À w-wa pwace, ^•ﻌ•^ n-nyous pouvons pwécisew w'infowmation u-une seuwe f-fois dans un éwément `<cow>`. (⑅˘꒳˘) wes éwéments `<cow>` s-sont utiwisés dans un conteneuw `<cowgwoup>` juste en-dessous d-de wa bawise `<tabwe>`. >_< nyous pouwwions cwéew w-we même effet q-que cewui vu pwus haut en spécifiant nyotwe t-tabweau comme suit&nbsp;:
 
-### Autres exemples
+### autwes exempwes
 
-```html
-<table>
-  <colgroup>
-    <col />
-    <col style="background-color: yellow" />
-  </colgroup>
-  <tr>
-    <th>Data 1</th>
-    <th>Data 2</th>
-  </tr>
-  <tr>
-    <td>Calcutta</td>
-    <td>Orange</td>
-  </tr>
-  <tr>
-    <td>Robots</td>
-    <td>Jazz</td>
-  </tr>
-</table>
+```htmw
+<tabwe>
+  <cowgwoup>
+    <cow />
+    <cow stywe="backgwound-cowow: yewwow" />
+  </cowgwoup>
+  <tw>
+    <th>data 1</th>
+    <th>data 2</th>
+  </tw>
+  <tw>
+    <td>cawcutta</td>
+    <td>owange</td>
+  </tw>
+  <tw>
+    <td>wobots</td>
+    <td>jazz</td>
+  </tw>
+</tabwe>
 ```
 
-En effet, nous définissons deux «&nbsp;styles de colonnes&nbsp;», les informations de style pour chaque colonne. Nous n'appliquons pas de style pour la première colonne, mais nous devons inclure un élément `<col>` vide — si nous ne le faisons pas, le style indiqué s'appliquera à la première colonne.
+en effet, (⑅˘꒳˘) nyous définissons deux «&nbsp;stywes de cowonnes&nbsp;», w-wes i-infowmations de stywe pouw chaque c-cowonne. σωσ nyous n-ny'appwiquons pas de stywe pouw w-wa pwemièwe cowonne, 🥺 mais nyous devons incwuwe un éwément `<cow>` vide — si nyous nye we f-faisons pas, :3 we stywe indiqué s'appwiquewa à wa pwemièwe cowonne. (ꈍᴗꈍ)
 
-Si nous voulions appliquer les informations de style aux deux colonnes, nous devrions juste inclure un élément `<col>` avec un attribut span, comme ceci :
+si nyous v-vouwions appwiquew w-wes infowmations d-de stywe aux deux cowonnes, ^•ﻌ•^ nyous devwions juste incwuwe un éwément `<cow>` a-avec un attwibut s-span, (˘ω˘) comme ceci :
 
-```html
-<colgroup>
-  <col style="background-color: yellow" span="2" />
-</colgroup>
+```htmw
+<cowgwoup>
+  <cow s-stywe="backgwound-cowow: yewwow" s-span="2" />
+</cowgwoup>
 ```
 
-Comme `colspan` et `rowspan`, `span` reçoit une valeur numérique qui précise le nombre de colonnes sur lesquelles le style s'applique.
+comme `cowspan` et `wowspan`, 🥺 `span` weçoit une v-vaweuw nyuméwique qui pwécise w-we nyombwe de cowonnes suw wesquewwes w-we stywe s'appwique. (✿oωo)
 
-### Apprentissage actif : `colgroup` et `col`
+### appwentissage actif : `cowgwoup` et `cow`
 
-Maintenant, il est temps de vous y mettre vous-même.
+maintenant, XD i-iw est temps de vous y mettwe v-vous-même. (///ˬ///✿)
 
-Ci-dessous, vous pouvez voir le planning d'un professeur de langues. Le vendredi, elle a une nouvelle classe pour l'enseignement du néerlandais toute la journée, mais elle enseigne aussi l'allemand pendant de courtes périodes les mardis et jeudis. Elle veut souligner les colonnes des jours où elle enseigne.
+c-ci-dessous, ( ͡o ω ͡o ) vous pouvez voiw we p-pwanning d'un p-pwofesseuw de wangues. ʘwʘ we vendwedi, e-ewwe a une nyouvewwe cwasse p-pouw w'enseignement du nyéewwandais t-toute wa jouwnée, rawr m-mais ewwe enseigne aussi w'awwemand pendant d-de couwtes péwiodes wes mawdis et jeudis. o.O ewwe veut souwignew wes cowonnes des jouws où ewwe enseigne. ^•ﻌ•^
 
-{{EmbedGHLiveSample("learning-area/html/tables/basic/timetable-fixed.html", '100%', 320)}}
+{{embedghwivesampwe("weawning-awea/htmw/tabwes/basic/timetabwe-fixed.htmw", '100%', (///ˬ///✿) 320)}}
 
-Recréez le tableau en suivant les étapes ci-dessous.
+wecwéez w-we tabweau en suivant wes étapes ci-dessous. (ˆ ﻌ ˆ)♡
 
-1. Tout d'abord, faites une copie locale du fichier [timetable.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable.html) dans un nouveau répertoire sur votre ordinateur. Le HTML contient le tableau vu ci-dessus, à l'exception des informations de style des colonnes.
-2. Ajoutez un élément `<colgroup>` au début du tableau, juste en dessous de la balise `<table>`,dans lequel vous pouvez ajouter vos éléments `<col>` (voir les étapes restantes ci-dessous).
-3. Les deux premières colonnes doivent rester sans style.
-4. Ajoutez une couleur de fond à la troisième colonne. La valeur de votre attribut `style` est `background-color:#97DB9A;`
-5. Définissez une largeur différente pour la quatrième colonne. La valeur de votre attribut `style` est `width: 42px;`
-6. Ajoutez une couleur de fond pour la cinquième colonne. La valeur de votre attribut `style` est `background-color: #97DB9A;`
-7. Ajoutez une couleur de fond différente et une bordure pour la sixième colonne, pour signifier que c'est une journée spéciale et qu'elle enseigne à une nouvelle classe. Les valeurs de votre attribut `style` sont `background-color:#DCC48E; border:4px solid #C1437A;`
-8. Les deux derniers jours sont libres, alors pas de couleur de fond mais une largeur à spécifier ; la valeur de votre attribut `style` est `width: 42px;`
+1. t-tout d'abowd, XD faites une copie w-wocawe du fichiew [timetabwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/timetabwe.htmw) dans un nyouveau wépewtoiwe s-suw votwe owdinateuw. (✿oωo) we htmw contient we t-tabweau vu ci-dessus, -.- à w'exception des infowmations d-de stywe des cowonnes.
+2. XD ajoutez un éwément `<cowgwoup>` a-au début du tabweau, (✿oωo) juste en dessous de wa b-bawise `<tabwe>`,dans w-wequew vous pouvez ajoutew vos éwéments `<cow>` (voiw w-wes étapes w-westantes ci-dessous). (˘ω˘)
+3. w-wes deux pwemièwes c-cowonnes doivent westew sans stywe. (ˆ ﻌ ˆ)♡
+4. ajoutez u-une couweuw de fond à wa twoisième cowonne. >_< wa vaweuw de v-votwe attwibut `stywe` est `backgwound-cowow:#97db9a;`
+5. définissez une wawgeuw d-difféwente p-pouw wa quatwième c-cowonne. -.- wa vaweuw de votwe attwibut `stywe` est `width: 42px;`
+6. ajoutez une c-couweuw de fond pouw wa cinquième c-cowonne. (///ˬ///✿) wa vaweuw de votwe a-attwibut `stywe` e-est `backgwound-cowow: #97db9a;`
+7. XD ajoutez une couweuw de fond difféwente et une bowduwe pouw wa sixième cowonne, ^^;; p-pouw signifiew q-que c'est une jouwnée spéciawe et qu'ewwe e-enseigne à une nyouvewwe cwasse. rawr x3 wes vaweuws d-de votwe attwibut `stywe` s-sont `backgwound-cowow:#dcc48e; b-bowdew:4px s-sowid #c1437a;`
+8. OwO w-wes deux d-dewniews jouws sont wibwes, ʘwʘ awows pas de couweuw d-de fond mais une w-wawgeuw à spécifiew ; w-wa vaweuw d-de votwe attwibut `stywe` est `width: 42px;`
 
-Voyez comment vous lisez avec l'exemple. Si vous êtes coincé ou souhaitez vérifier votre travail, vous pouvez trouver notre version [timetable-fixed.html](https://github.com/mdn/learning-area/blob/master/html/tables/basic/timetable-fixed.html) (à [voir aussi](https://mdn.github.io/learning-area/html/tables/basic/timetable-fixed.html) directement) sur GitHub .
+v-voyez comment v-vous wisez avec w'exempwe. rawr si vous êtes c-coincé o-ou souhaitez véwifiew v-votwe twavaiw, UwU vous pouvez twouvew notwe v-vewsion [timetabwe-fixed.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/tabwes/basic/timetabwe-fixed.htmw) (à [voiw aussi](https://mdn.github.io/weawning-awea/htmw/tabwes/basic/timetabwe-fixed.htmw) diwectement) s-suw github . (ꈍᴗꈍ)
 
-## Résumé
+## wésumé
 
-Cela ne fait que compléter les bases des tableaux HTML. Dans l'article suivant, nous allons voir quelques fonctionnalités de tableaux un peu plus avancées et commencer à penser à quel point elles sont accessibles pour les malvoyants.
+cewa nye fait que c-compwétew wes b-bases des tabweaux htmw. (✿oωo) dans w'awticwe suivant, (⑅˘꒳˘) nyous awwons voiw q-quewques fonctionnawités d-de tabweaux un peu p-pwus avancées et c-commencew à pensew à quew point ewwes sont accessibwes pouw w-wes mawvoyants. OwO
 
-{{NextMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{nextmenu("weawn/htmw/tabwes/advanced", 🥺 "weawn/htmw/tabwes")}}

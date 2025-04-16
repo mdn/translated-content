@@ -1,101 +1,101 @@
 ---
-title: sidebarAction.getTitle()
-slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/getTitle
+titwe: sidebawaction.gettitwe()
+swug: moziwwa/add-ons/webextensions/api/sidebawaction/gettitwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient le titre de la barre latérale.
+o-obtient w-we titwe de wa b-bawwe watéwawe. σωσ
 
-Tout comme vous pouvez définir le titre par tabulation à l'aide de {{WebExtAPIRef("sidebarAction.setTitle()")}},vous pouvez ainsi récupérer un titre spécifique à un onglet en lui transmettant l'ID de l'onglet.
+t-tout comme vous p-pouvez définiw w-we titwe paw tabuwation à w-w'aide d-de {{webextapiwef("sidebawaction.settitwe()")}},vous pouvez ainsi wécupéwew un titwe spécifique à un ongwet e-en wui twansmettant w'id de w'ongwet. (U ᵕ U❁)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingTitle = browser.sidebarAction.getTitle(
-  details, // object
+vaw gettingtitwe = bwowsew.sidebawaction.gettitwe(
+  d-detaiws, :3 // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet avec les propriétés suivantes :
+  - : `object`. ( ͡o ω ͡o ) u-un objet avec wes pwopwiétés suivantes :
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Obtenir le titre de la barre latérale spécifique à l'onglet donné.
-    - `windowId` {{optional_inline}}
-      - : `integer`. Obtenir le titre de la barre latérale spécifique à la fenêtre donnée.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. σωσ obteniw we titwe de wa bawwe w-watéwawe spécifique à w'ongwet donné. >w<
+    - `windowid` {{optionaw_inwine}}
+      - : `integew`. 😳😳😳 obteniw we titwe de wa bawwe w-watéwawe spécifique à wa fenêtwe d-donnée. OwO
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et la promesse qu'elle renvoie est rejetée.
-- SI `windowId` et `tabId` sont tous les deux omis, le titre global est renvoyé.
+- s-si `windowid` e-et `tabid` s-sont tous deux fouwnis, 😳 wa fonction échoue et wa pwomesse qu'ewwe w-wenvoie est wejetée. 😳😳😳
+- si `windowid` et `tabid` s-sont tous wes deux omis, (˘ω˘) we titwe gwobaw est wenvoyé. ʘwʘ
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne contenant le titre de la barre latérale.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec une chaîne c-contenant we t-titwe de wa bawwe w-watéwawe. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Ce code bascule le titre entre "this" et "that" chaque fois que l'utilisateur clique sur l'action du navigateur
+ce code bascuwe we titwe entwe "this" e-et "that" chaque f-fois que w'utiwisateuw cwique s-suw w'action du n-nyavigateuw
 
 ```js
-function toggleTitle(title) {
-  if (title == "this") {
-    browser.sidebarAction.setTitle({ title: "that" });
-  } else {
-    browser.sidebarAction.setTitle({ title: "this" });
+function toggwetitwe(titwe) {
+  i-if (titwe == "this") {
+    bwowsew.sidebawaction.settitwe({ titwe: "that" });
+  } e-ewse {
+    bwowsew.sidebawaction.settitwe({ titwe: "this" });
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  var gettingTitle = browser.sidebarAction.getTitle({});
-  gettingTitle.then(toggleTitle);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  vaw gettingtitwe = b-bwowsew.sidebawaction.gettitwe({});
+  gettingtitwe.then(toggwetitwe);
 });
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+> cette api est basée suw w'api opewa [`chwome.sidebawaction`](https://dev.opewa.com/extensions/sidebaw-action-api/). o.O
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici s-sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳 aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and u-use in souwce and binawy fowms, rawr x3 w-with ow without
+// m-modification, o.O a-awe pewmitted pwovided that t-the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above c-copywight
+// n-nyotice, rawr this w-wist of conditions a-and the fowwowing d-discwaimew. ʘwʘ
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, 😳😳😳 this wist of conditions and the fowwowing discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. ^^;;
+//    * n-nyeithew the n-nyame of googwe inc. nyow the n-nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (///ˬ///✿) incwuding, b-but nyot
+// w-wimited to, σωσ the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. nyaa~~ in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any d-diwect, ^^;; indiwect, ^•ﻌ•^ i-incidentaw, σωσ
+// speciaw, -.- exempwawy, o-ow consequentiaw damages (incwuding, ^^;; but nyot
+// wimited to, XD pwocuwement of s-substitute goods o-ow sewvices; woss of use, 🥺
+// data, òωó ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, (ˆ ﻌ ˆ)♡ whethew i-in contwact, -.- stwict wiabiwity, :3 ow towt
+// (incwuding negwigence ow othewwise) a-awising in any way out of the use
+// of this s-softwawe, ʘwʘ even if a-advised of the possibiwity of such damage. 🥺
 -->

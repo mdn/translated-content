@@ -1,93 +1,93 @@
 ---
-title: browserAction.getBadgeText()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeText
+titwe: bwowsewaction.getbadgetext()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/getbadgetext
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient le texte du badge de l'action du navigateur.
+o-obtient we texte d-du badge de w'action d-du nyavigateuw. (⑅˘꒳˘)
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d-d'une fonction a-asynchwone qui w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (///ˬ///✿)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var gettingText = browser.browserAction.getBadgeText(
-  details, // object
+vaw gettingtext = bwowsew.bwowsewaction.getbadgetext(
+  detaiws, ^^;; // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
   - : `object`
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Spécifie l'onglet pour obtenir le texte du badge.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Spécifie la fenêtre à partir de laquelle obtenir le texte du badge.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. >_< spécifie w'ongwet p-pouw obteniw we texte du badge. rawr x3
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. /(^•ω•^) s-spécifie wa fenêtwe à pawtiw de waquewwe obteniw we t-texte du badge. :3
 
 <!---->
 
-- Si windowId et tabId sont tous les deux fournis, la fonction échoue.
-- Si windowId et tabId sont tous les deux omis, le texte global du badge est renvoyé.
+- si windowid e-et tabid s-sont tous wes deux fouwnis, (ꈍᴗꈍ) wa fonction échoue. /(^•ω•^)
+- si windowid et tabid sont tous w-wes deux omis, we texte gwobaw du badge est wenvoyé. (⑅˘꒳˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne contenant le texte du badge.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwie avec u-une chaîne contenant w-we texte du b-badge. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Enregistrez le texte du badge :
+enwegistwez we texte du badge :
 
 ```js
-function gotBadgeText(text) {
-  console.log(text);
+f-function gotbadgetext(text) {
+  consowe.wog(text);
 }
 
-var gettingBadgeText = browser.browserAction.getBadgeText({});
-gettingBadgeText.then(gotBadgeText);
+v-vaw gettingbadgetext = bwowsew.bwowsewaction.getbadgetext({});
+gettingbadgetext.then(gotbadgetext);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). òωó cette documentation e-est d-déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) dans w-we code de chwomium code. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. XD
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. -.- aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy f-fowms, with ow without
+// modification, nyaa~~ awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, t-this wist of conditions and the fowwowing discwaimew. 😳
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided with the
+// d-distwibution. (⑅˘꒳˘)
+//    * n-nyeithew t-the nyame of googwe inc. nyaa~~ nyow the names of its
+// c-contwibutows m-may be used to e-endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, rawr x3 incwuding, but nyot
+// wimited t-to, XD the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. σωσ i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (U ᵕ U❁) indiwect, (U ﹏ U) incidentaw,
+// s-speciaw, :3 exempwawy, ( ͡o ω ͡o ) ow consequentiaw d-damages (incwuding, but n-nyot
+// wimited t-to, σωσ pwocuwement of substitute goods ow sewvices; w-woss of use, >w<
+// d-data, 😳😳😳 ow pwofits; ow business i-intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, OwO whethew in contwact, 😳 stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising i-in any way out of t-the use
+// of this softwawe, (˘ω˘) even i-if advised of the possibiwity of such damage. ʘwʘ
 -->

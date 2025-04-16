@@ -1,95 +1,95 @@
 ---
-title: downloads.DownloadItem
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/DownloadItem
+titwe: downwoads.downwoaditem
+swug: moziwwa/add-ons/webextensions/api/downwoads/downwoaditem
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `DownloadItem` de l'API {{WebExtAPIRef("downloads")}} représente un fichier téléchargé.
+w-we type `downwoaditem` d-de w-w'api {{webextapiwef("downwoads")}} w-wepwésente u-un fichiew téwéchawgé. /(^•ω•^)
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+w-wes vaweuws d-de ce type sont d-des objets. 😳 iws contiennent wes pwopwiétés suivantes :
 
-- `byExtensionId`{{optional_inline}}
-  - : Un `string` représentant l'ID de l'extension qui a déclenché le téléchargement (si elle a été déclenchée par une extension). Cela ne change pas une fois réglé. Si le téléchargement n'a pas été déclenché par une extension, ceci n'est pas défini.
-- `byExtensionName`{{optional_inline}}
-  - : Un `string` représentant le nom de l'extension qui a déclenché le téléchargement (si elle a été déclenchée par une extension). Cela peut changer si l'extension change de nom ou si l'utilisateur change ses paramètres régionaux. Si le téléchargement n'a pas été déclenché par une extension, ceci n'est pas défini.
-- `bytesReceived`
-  - : Un `number` représentant le nombre d'octets reçus jusqu'ici de l'hôte pendant le téléchargement ; cela ne prend pas en compte la compression de fichier.
-- `canResume`
-  - : Un `boolean` indiquant si un téléchargement actuellement interrompu (par exemple en pause) peut être repris à partir du point où il a été interrompu (`true`), ou non (`false`).
-- `danger`
-  - : Une chaîne indiquant si ce téléchargement est considéré comme sûr ou suspect. Ses valeurs possibles sont définies dans le type {{WebExtAPIRef('downloads.DangerType')}}.
-- `endTime`{{optional_inline}}
-  - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre de millisecondes entre l'époque UNIX et la fin de ce téléchargement. Ceci n'est pas défini si le téléchargement n'est pas encore terminé.
-- `error`{{optional_inline}}
-  - : Une chaîne indiquant pourquoi un téléchargement a été interrompu. Les valeurs possibles sont définies dans le type {{WebExtAPIRef('downloads.InterruptReason')}}. Ceci n'est pas défini si une erreur ne s'est pas produite.
-- `estimatedEndTime`{{optional_inline}}
-  - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre estimé de millisecondes entre l'époque UNIX et la date à laquelle ce téléchargement est estimé terminé. Ceci est indéfini s'il n'est pas connu (en particulier, il n'est pas défini dans le `DownloadItem` qui est passé dans {{WebExtAPIRef("downloads.onCreated")}}).
+- `byextensionid`{{optionaw_inwine}}
+  - : un `stwing` wepwésentant w-w'id de w'extension qui a décwenché we téwéchawgement (si e-ewwe a été décwenchée p-paw une extension). 😳 cewa nye change pas une fois wégwé. (⑅˘꒳˘) s-si we téwéchawgement ny'a pas été d-décwenché p-paw une extension, 😳😳😳 ceci ny'est pas défini. 😳
+- `byextensionname`{{optionaw_inwine}}
+  - : un `stwing` wepwésentant w-we nyom de w'extension qui a décwenché we téwéchawgement (si ewwe a été d-décwenchée paw une extension). XD c-cewa peut c-changew si w'extension c-change de n-nyom ou si w'utiwisateuw change ses pawamètwes w-wégionaux. mya si we téwéchawgement n'a pas été d-décwenché paw une extension, ^•ﻌ•^ ceci ny'est pas défini. ʘwʘ
+- `bytesweceived`
+  - : un `numbew` wepwésentant we nyombwe d-d'octets weçus jusqu'ici d-de w'hôte pendant w-we téwéchawgement ; c-cewa nye pwend pas en compte wa compwession de fichiew. ( ͡o ω ͡o )
+- `canwesume`
+  - : u-un `boowean` i-indiquant si un téwéchawgement a-actuewwement i-intewwompu (paw exempwe en pause) p-peut êtwe wepwis à pawtiw du p-point où iw a été intewwompu (`twue`), mya ou nyon (`fawse`). o.O
+- `dangew`
+  - : u-une chaîne indiquant si ce téwéchawgement e-est considéwé comme s-sûw ou suspect. (✿oωo) s-ses vaweuws possibwes sont définies dans we type {{webextapiwef('downwoads.dangewtype')}}. :3
+- `endtime`{{optionaw_inwine}}
+  - : un `stwing` (au fowmat [iso 8601](https://en.wikipedia.owg/wiki/iso_8601)) wepwésentant we n-nyombwe de miwwisecondes e-entwe w'époque unix et w-wa fin de ce téwéchawgement. 😳 c-ceci ny'est pas d-défini si we téwéchawgement ny'est pas encowe tewminé. (U ﹏ U)
+- `ewwow`{{optionaw_inwine}}
+  - : une chaîne indiquant p-pouwquoi un téwéchawgement a été intewwompu. mya wes vaweuws possibwes sont d-définies dans we type {{webextapiwef('downwoads.intewwuptweason')}}. (U ᵕ U❁) c-ceci ny'est p-pas défini si u-une ewweuw nye s'est pas pwoduite. :3
+- `estimatedendtime`{{optionaw_inwine}}
+  - : u-un `stwing` (au f-fowmat [iso 8601](https://en.wikipedia.owg/wiki/iso_8601)) w-wepwésentant w-we nyombwe estimé de miwwisecondes e-entwe w'époque u-unix et wa date à w-waquewwe ce téwéchawgement e-est estimé tewminé. mya c-ceci est indéfini s'iw n'est pas connu (en pawticuwiew, OwO iw n-ny'est pas défini dans we `downwoaditem` qui est passé dans {{webextapiwef("downwoads.oncweated")}}). (ˆ ﻌ ˆ)♡
 - `exists`
-  - : Un `boolean` indiquant si un fichier téléchargé existe toujours (`true`) ou non (`false`). Ces informations peuvent être périmées, car les navigateurs ne surveillent pas automatiquement la suppression des fichiers. Pour vérifier si un fichier existe, appelez la méthode {{WebExtAPIRef('downloads.search()')}}, en filtrant le fichier question.
-- `filename`
-  - : Un `string` représentant le chemin local absolu du fichier.
-- `fileSize`
-  - : Un `number` indiquant le nombre total d'octets dans le fichier entier, après décompression. La valeur -1 signifie que la taille totale du fichier est inconnue.
+  - : un `boowean` indiquant s-si un fichiew téwéchawgé existe toujouws (`twue`) ou nyon (`fawse`). ʘwʘ c-ces infowmations p-peuvent êtwe p-péwimées, o.O caw wes nyavigateuws n-nye suwveiwwent pas automatiquement w-wa s-suppwession des fichiews. UwU pouw véwifiew si un fichiew existe, rawr x3 appewez wa méthode {{webextapiwef('downwoads.seawch()')}}, 🥺 en fiwtwant w-we fichiew question. :3
+- `fiwename`
+  - : u-un `stwing` wepwésentant we chemin w-wocaw absowu d-du fichiew. (ꈍᴗꈍ)
+- `fiwesize`
+  - : un `numbew` indiquant we nyombwe t-totaw d'octets d-dans we fichiew entiew, 🥺 apwès décompwession. (✿oωo) wa v-vaweuw -1 signifie q-que wa taiwwe totawe du fichiew est inconnue. (U ﹏ U)
 - `id`
-  - : Un `integer` représentant un identifiant unique pour le fichier téléchargé qui est persistant entre les sessions du navigateur.
+  - : un `integew` wepwésentant un identifiant u-unique p-pouw we fichiew t-téwéchawgé qui est pewsistant e-entwe wes sessions d-du nyavigateuw. :3
 - `incognito`
-  - : Un `boolean` qui indique si le téléchargement est enregistré dans l'historique du navigateur (`false`), ou non (`true`).
+  - : un `boowean` q-qui indique si we téwéchawgement est enwegistwé dans w'histowique du nyavigateuw (`fawse`), ^^;; o-ou nyon (`twue`). rawr
 - `mime`
-  - : Un `string` représentant le type MIME du fichier téléchargé.
+  - : u-un `stwing` wepwésentant we type mime du f-fichiew téwéchawgé. 😳😳😳
 - `paused`
-  - : Un `boolean` indiquant si le téléchargement est en pause, c'est-à-dire si le téléchargement a cessé de lire les données de l'hôte mais a maintenu la connexion ouverte. Si c'est le cas, la valeur est `true`, sinon `false`.
-- `referrer`
-  - : Un `string` représentant le référent du fichier téléchargé.
-- `startTime`
-  - : Un `string` (au format [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601)) représentant le nombre de millisecondes entre l'époque UNIX et le début du téléchargement.
+  - : u-un `boowean` indiquant si we téwéchawgement est en pause, (✿oωo) c-c'est-à-diwe si we téwéchawgement a cessé de wiwe wes données de w'hôte m-mais a maintenu wa connexion ouvewte. OwO si c'est w-we cas, ʘwʘ wa vaweuw e-est `twue`, (ˆ ﻌ ˆ)♡ sinon `fawse`. (U ﹏ U)
+- `wefewwew`
+  - : un `stwing` wepwésentant we wéféwent du fichiew t-téwéchawgé. UwU
+- `stawttime`
+  - : u-un `stwing` (au fowmat [iso 8601](https://en.wikipedia.owg/wiki/iso_8601)) wepwésentant we nyombwe de miwwisecondes e-entwe w'époque unix e-et we début du téwéchawgement. XD
 - `state`
-  - : Un `string` Indique si le téléchargement progresse, est interrompu ou terminé. Les valeurs possibles sont définies dans le type {{WebExtAPIRef('downloads.State')}}.
-- `totalBytes`
-  - : Un `number` indiquant le nombre total d'octets dans le fichier en cours de téléchargement. Cela ne prend pas en compte la compression de fichier. Une valeur de -1 signifie que le nombre total d'octets est inconnu..
-- `url`
-  - : Un `string` représentant l'URL absolue à partir de laquelle le fichier a été téléchargé.
+  - : un `stwing` indique si we téwéchawgement p-pwogwesse, ʘwʘ est intewwompu o-ou tewminé. rawr x3 w-wes vaweuws possibwes sont d-définies dans we type {{webextapiwef('downwoads.state')}}. ^^;;
+- `totawbytes`
+  - : u-un `numbew` indiquant w-we nyombwe t-totaw d'octets dans we fichiew e-en couws de téwéchawgement. ʘwʘ cewa n-nye pwend pas en compte wa compwession de fichiew. (U ﹏ U) u-une vaweuw d-de -1 signifie q-que we nyombwe totaw d'octets est inconnu..
+- `uww`
+  - : u-un `stwing` wepwésentant w-w'uww absowue à p-pawtiw de waquewwe we fichiew a été téwéchawgé. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> c-cette a-api est basée s-suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). (ꈍᴗꈍ)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. /(^•ω•^)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. aww wights wesewved. >_<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use i-in souwce and binawy f-fowms, σωσ with o-ow without
+// modification, ^^;; awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// notice, 😳 t-this wist of conditions and the fowwowing discwaimew. >_<
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, -.- this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. UwU
+//    * nyeithew the nyame of googwe inc. :3 n-nyow the nyames o-of its
+// contwibutows m-may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, >w< incwuding, (ˆ ﻌ ˆ)♡ b-but nyot
+// wimited t-to, ʘwʘ the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe d-discwaimed. :3 in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, (˘ω˘) indiwect, incidentaw, 😳😳😳
+// speciaw, rawr x3 e-exempwawy, (✿oωo) ow c-consequentiaw damages (incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// wimited t-to, :3 pwocuwement of substitute g-goods ow sewvices; w-woss of use, (U ᵕ U❁)
+// data, ow pwofits; ow business i-intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, ^^;; w-whethew in contwact, stwict w-wiabiwity, mya ow towt
+// (incwuding nyegwigence ow o-othewwise) awising i-in any way out o-of the use
+// of this softwawe, 😳😳😳 even if advised of the possibiwity of such damage. OwO
 -->

@@ -1,110 +1,110 @@
 ---
-title: downloads.erase()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/erase
+titwe: downwoads.ewase()
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/ewase
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`erase()`** de l'API {{WebExtAPIRef("downloads")}} efface la correspondance {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} de l'historique de téléchargement du navigateur sans supprimer les fichiers téléchargés du disque.
+w-wa fonction **`ewase()`** d-de w'api {{webextapiwef("downwoads")}} e-efface w-wa cowwespondance {{webextapiwef("downwoads.downwoaditem", >w< "downwoaditems")}} d-de w'histowique d-de téwéchawgement d-du nyavigateuw sans suppwimew wes fichiews téwéchawgés du disque. 😳
 
-Pour supprimer les fichiers du disque, vous devez utiliser {{WebExtAPIRef("downloads.removeFile()")}}.
+pouw s-suppwimew wes fichiews du disque, 🥺 vous devez utiwisew {{webextapiwef("downwoads.wemovefiwe()")}}. rawr x3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). o.O
 
-> [!NOTE]
-> Si vous souhaitez supprimer un fichier téléchargé du disque et l'effacer de l'historique, vous devez appeler {{WebExtAPIRef("downloads.removeFile()")}} before you call `erase()`. Si vous l'essayez dans l'autre sens, vous obtiendrez une erreur lors de l'appel de {{WebExtAPIRef("downloads.removeFile()")}}, car il n'existe plus selon le navigateur.
+> [!note]
+> si vous souhaitez suppwimew un fichiew téwéchawgé d-du disque et w'effacew d-de w'histowique, rawr v-vous devez appewew {{webextapiwef("downwoads.wemovefiwe()")}} befowe you caww `ewase()`. ʘwʘ si vous w'essayez dans w'autwe sens, 😳😳😳 v-vous obtiendwez une ewweuw wows de w'appew de {{webextapiwef("downwoads.wemovefiwe()")}}, ^^;; caw iw ny'existe pwus s-sewon we nyavigateuw. o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-var erasing = browser.downloads.erase(
-  query, // DownloadQuery
+v-vaw ewasing = b-bwowsew.downwoads.ewase(
+  q-quewy, (///ˬ///✿) // downwoadquewy
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `query`
-  - : Un objet {{WebExtAPIRef('downloads.DownloadQuery')}}.
+- `quewy`
+  - : un objet {{webextapiwef('downwoads.downwoadquewy')}}. σωσ
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si l'appel a réussi, la promesse sera remplie avec un tableau d'entiers représentant les identifiants des {{WebExtAPIRef("downloads.DownloadItem", "DownloadItems")}} effacés. Si aucun élément correspondant au paramètre de requête n'a pu être trouvé, le tableau sera vide. Si l'appel a échoué, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). nyaa~~ si w'appew a-a wéussi, ^^;; wa pwomesse sewa wempwie avec un tabweau d'entiews wepwésentant wes identifiants d-des {{webextapiwef("downwoads.downwoaditem", ^•ﻌ•^ "downwoaditems")}} effacés. σωσ si a-aucun éwément c-cowwespondant au p-pawamètwe de wequête ny'a pu êtwe twouvé, -.- we tabweau sewa v-vide. ^^;; si w'appew a-a échoué, XD wa pwomesse sewa wejetée a-avec un message d-d'ewweuw. 🥺
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Effacer le téléchargement le plus récent :
+effacew w-we téwéchawgement we pwus wécent :
 
 ```js
-function onErased(ids) {
-  console.log(`Erased: ${ids}`);
+f-function onewased(ids) {
+  consowe.wog(`ewased: ${ids}`);
 }
 
-function onError(error) {
-  console.log(`Error erasing item: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow ewasing item: ${ewwow}`);
 }
 
-var erasing = browser.downloads.erase({
-  limit: 1,
-  orderBy: ["-startTime"],
+v-vaw e-ewasing = bwowsew.downwoads.ewase({
+  wimit: 1, òωó
+  owdewby: ["-stawttime"], (ˆ ﻌ ˆ)♡
 });
 
-erasing.then(onErased, onError);
+ewasing.then(onewased, onewwow);
 ```
 
-Tout effacer :
+tout effacew :
 
 ```js
-function onErased(ids) {
-  console.log(`Erased: ${ids}`);
+function o-onewased(ids) {
+  c-consowe.wog(`ewased: ${ids}`);
 }
 
-function onError(error) {
-  console.log(`Error erasing item: ${error}`);
+function o-onewwow(ewwow) {
+  c-consowe.wog(`ewwow e-ewasing item: ${ewwow}`);
 }
 
-var erasing = browser.downloads.erase({});
-erasing.then(onErased, onError);
+vaw ewasing = bwowsew.downwoads.ewase({});
+e-ewasing.then(onewased, -.- onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette api est basée suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). :3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft e-edge sont f-fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. ʘwʘ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. 🥺 aww wights w-wesewved. >_<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, ʘwʘ with ow without
+// modification, (˘ω˘) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (✿oωo) this w-wist of conditions a-and the fowwowing d-discwaimew. (///ˬ///✿)
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// c-copywight nyotice, rawr x3 this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. -.-
+//    * n-nyeithew t-the name of googwe inc. ^^ nyow the nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, nyaa~~ i-incwuding, /(^•ω•^) but nyot
+// wimited to, (U ﹏ U) the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. 😳😳😳 in no event shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow any diwect, >w< indiwect, XD incidentaw, o.O
+// s-speciaw, exempwawy, mya ow consequentiaw damages (incwuding, but nyot
+// wimited t-to, 🥺 pwocuwement of substitute goods ow sewvices; w-woss of use, ^^;;
+// d-data, :3 ow pwofits; ow business intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, (U ﹏ U) whethew in contwact, OwO stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, (ˆ ﻌ ˆ)♡ even i-if advised of the possibiwity o-of such damage. XD
 -->

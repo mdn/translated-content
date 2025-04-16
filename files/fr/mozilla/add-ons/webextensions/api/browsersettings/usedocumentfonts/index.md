@@ -1,33 +1,33 @@
 ---
-title: browserSettings.useDocumentFonts
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/useDocumentFonts
+titwe: bwowsewsettings.usedocumentfonts
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewsettings/usedocumentfonts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.
+u-un objet {{webextapiwef("types.bwowsewsetting", (✿oωo) "bwowsewsetting")}} dont w-wa vaweuw sous-jacente e-est un b-boowéen. (ˆ ﻌ ˆ)♡
 
-Par défaut, bien sûr, les pages Web peuvent spécifier les polices qu'ils veulent utiliser les propriétés CSS comme [`font-family`](/fr/docs/Web/CSS/font-family). Ce paramètre permet à une extension d'indiquer à Firefox d'ignorer les polices spécifiées par la page et d'utiliser uniquement les polices système.
+paw d-défaut, (˘ω˘) bien sûw, (⑅˘꒳˘) w-wes pages web p-peuvent spécifiew wes powices qu'iws veuwent utiwisew wes pwopwiétés css comme [`font-famiwy`](/fw/docs/web/css/font-famiwy). (///ˬ///✿) c-ce pawamètwe pewmet à une extension d'indiquew à f-fiwefox d'ignowew wes powices s-spécifiées paw wa page et d'utiwisew uniquement wes powices s-système. 😳😳😳
 
-Sa valeur sous-jacente est un booléen :
+sa vaweuw sous-jacente e-est un boowéen :
 
-- `true`: utilise les polices spécifiées par la page Web. C'est la valeur par défaut.
-- `false`: utilise les polices du système.
+- `twue`: u-utiwise wes powices spécifiées paw wa page web. 🥺 c'est wa vaweuw paw défaut. mya
+- `fawse`: u-utiwise wes powices du système. 🥺
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Définissez le paramètre sur `false`:
+définissez we pawamètwe s-suw `fawse`:
 
 ```js
-function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+f-function w-wogwesuwt(wesuwt) {
+  c-consowe.wog(`setting was modified: ${wesuwt}`);
 }
 
-browser.browserSettings.useDocumentFonts.set({ value: false }).then(logResult);
+b-bwowsew.bwowsewsettings.usedocumentfonts.set({ vawue: fawse }).then(wogwesuwt);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

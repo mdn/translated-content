@@ -1,59 +1,59 @@
 ---
-title: contextualIdentitities.ContextualIdentity
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/ContextualIdentity
+titwe: contextuawidentitities.contextuawidentity
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities/contextuawidentity
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type **`contextualIdentities.ContextualIdentity`** décrit une identité contextuelle unique.
+w-we type **`contextuawidentities.contextuawidentity`** d-décwit une identité c-contextuewwe u-unique. o.O
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws d-de ce type sont d-des objets. /(^•ω•^) iws c-contiennent wes pwopwiétés suivantes :
 
-- `cookieStoreId`
-  - : `string`. L'ID du magasin de cookies pour l'identité. Puisque les identités contextuelles ne partagent pas les banques de cookies, elles servent d'identificateur unique.
-- `color`
+- `cookiestoweid`
+  - : `stwing`. nyaa~~ w'id du magasin de cookies pouw w'identité. nyaa~~ p-puisque wes identités contextuewwes n-nye pawtagent pas wes banques de c-cookies, ewwes sewvent d'identificateuw unique. :3
+- `cowow`
 
-  - : `string`. La couleur pour l'identité. Cela sera montré dans les onglets appartenant à cette identité. Les valeurs suivantes sont valides :
+  - : `stwing`. 😳😳😳 wa couweuw p-pouw w'identité. (˘ω˘) cewa sewa m-montwé dans w-wes ongwets appawtenant à cette identité. ^^ wes vaweuws suivantes sont vawides :
 
-    - "blue"
-    - "turquoise"
-    - "green"
-    - "yellow"
-    - "orange"
-    - "red"
+    - "bwue"
+    - "tuwquoise"
+    - "gween"
+    - "yewwow"
+    - "owange"
+    - "wed"
     - "pink"
-    - "purple"
-    - "toolbar"
+    - "puwpwe"
+    - "toowbaw"
 
-    La valeur "toolbar" représente une couleur dépendant du thème. Les identités avec la couleur "toolbar" seront affichées dans la même couleur que le texte de la barre d'outils (correspondant à la [clé thème](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors) `"toolbar_field_text"`).
+    w-wa vaweuw "toowbaw" wepwésente une couweuw dépendant du thème. :3 wes i-identités avec wa couweuw "toowbaw" s-sewont affichées d-dans wa même c-couweuw que w-we texte de wa bawwe d'outiws (cowwespondant à wa [cwé thème](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme#cowows) `"toowbaw_fiewd_text"`). -.-
 
-- `colorCode`
-  - : `string`. Un code hexadécimal représentant la couleur exacte utilisée pour l'identité. Par exemple : `"#37adff"`. Dans le cas particulier de la couleur "toolbar", `colorCode` est toujours `"#7c7c7d"`, quelle que soit la couleur affichée.
+- `cowowcode`
+  - : `stwing`. 😳 u-un code hexadécimaw wepwésentant w-wa couweuw exacte utiwisée pouw w'identité. mya paw exempwe : `"#37adff"`. (˘ω˘) dans we cas pawticuwiew d-de wa couweuw "toowbaw", >_< `cowowcode` est toujouws `"#7c7c7d"`, -.- q-quewwe que soit w-wa couweuw affichée. 🥺
 - `icon`
 
-  - : `string`. Le nom d'une icône pour l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Les valeurs suivantes sont valides :
+  - : `stwing`. (U ﹏ U) w-we nyom d'une icône pouw w'identité. >w< cewa s'affichewa dans wa b-bawwe d'uww pouw w-wes ongwets appawtenant à cette i-identité. mya wes v-vaweuws suivantes sont vawides :
 
-    - "fingerprint"
-    - "briefcase"
-    - "dollar"
-    - "cart"
-    - "circle"
+    - "fingewpwint"
+    - "bwiefcase"
+    - "dowwaw"
+    - "cawt"
+    - "ciwcwe"
     - "gift"
     - "vacation"
     - "food"
-    - "fruit"
+    - "fwuit"
     - "pet"
-    - "tree"
-    - "chill"
+    - "twee"
+    - "chiww"
     - "fence"
 
-- `iconUrl`
-  - : `string`. Une URL complète resource:// pointant vers l'icône de l'identité. Par exemple : "resource://usercontext-content/fingerprint.svg".
+- `iconuww`
+  - : `stwing`. >w< une u-uww compwète wesouwce:// pointant v-vews w'icône de w'identité. nyaa~~ paw exempwe : "wesouwce://usewcontext-content/fingewpwint.svg". (✿oωo)
 - `name`
-  - : `string`. Nom de l'identité. Cela s'affichera dans la barre d'URL pour les onglets appartenant à cette identité. Notez que les noms ne doivent pas nécessairement être uniques .
+  - : `stwing`. ʘwʘ n-nyom de w'identité. (ˆ ﻌ ˆ)♡ c-cewa s'affichewa dans wa bawwe d-d'uww pouw wes o-ongwets appawtenant à cette identité. nyotez que wes nyoms nye doivent pas nyécessaiwement êtwe uniques . 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

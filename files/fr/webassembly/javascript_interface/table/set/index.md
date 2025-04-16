@@ -1,81 +1,81 @@
 ---
-title: WebAssembly.Table.prototype.set()
-slug: WebAssembly/JavaScript_interface/Table/set
+titwe: webassembwy.tabwe.pwototype.set()
+swug: w-webassembwy/javascwipt_intewface/tabwe/set
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode **`set()`**, rattachée au prototype de {{jsxref("WebAssembly.Table")}}, permet de modifier une référence de fonction stockée dans un tableau WebAssembly.
+w-wa méthode **`set()`**, 🥺 w-wattachée au p-pwototype de {{jsxwef("webassembwy.tabwe")}}, (⑅˘꒳˘) pewmet d-de modifiew u-une wéféwence d-de fonction stockée d-dans un tabweau webassembwy. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-table.set(index, valeur);
+tabwe.set(index, :3 vaweuw);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `index`
-  - : L'index de la référence de la fonction qu'on souhaite modifier.
-- `valeur`
-  - : La valeur par laquelle on souhaite remplacer la référence. Cette valeur doit être [une fonction exportée WebAssembly](/fr/docs/WebAssembly/Exported_functions) (c'est-à-dire une enveloppe JavaScript représentant une fonction WebAssembly sous-jacente).
+  - : w'index de wa wéféwence d-de wa fonction qu'on souhaite modifiew. ( ͡o ω ͡o )
+- `vaweuw`
+  - : w-wa vaweuw paw waquewwe on souhaite wempwacew wa wéféwence. mya c-cette vaweuw doit êtwe [une f-fonction expowtée w-webassembwy](/fw/docs/webassembwy/expowted_functions) (c'est-à-diwe une envewoppe javascwipt wepwésentant une fonction w-webassembwy sous-jacente). (///ˬ///✿)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Aucune.
+aucune. (˘ω˘)
 
-### Exceptions
+### exceptions
 
-- Si `index` est supérieur ou égal à {{jsxref("WebAssembly/Table/length","Table.prototype.length")}}, une exception {{jsxref("RangeError")}} sera levée.
-- Si `valeur` n'est pas une fonction WebAssembly exportée ou la valeur {{jsxref("null")}}, une exception {{jsxref("TypeError")}} sera levée.
+- si `index` est supéwieuw o-ou égaw à {{jsxwef("webassembwy/tabwe/wength","tabwe.pwototype.wength")}}, ^^;; une exception {{jsxwef("wangeewwow")}} s-sewa w-wevée. (✿oωo)
+- si `vaweuw` n-ny'est pas u-une fonction webassembwy expowtée ou wa vaweuw {{jsxwef("nuww")}}, (U ﹏ U) u-une exception {{jsxwef("typeewwow")}} sewa wevée. -.-
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit (basé sur le [code source de `table2.html`](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) et qui dispose [d'une démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html)), on crée ue nouvelle instance d'un tableau WebAssembly (`Table`) qui permet initialement de stocker 2 référence. On imprime alors la longueur du tableau dans la console ainsi que le contenu pour les deux premiers index (obtenus grâce à la méthode {{jsxref("WebAssembly/Table/get","Table.prototype.get()")}}) afin de montrer qu la longueur vaut 2 et qu'initialement, les deux éléments du tableau ne contiennent aucune référence (ils ont tous les deux la valeur {{jsxref("null")}}).
+d-dans w'exempwe qui suit (basé suw we [code souwce de `tabwe2.htmw`](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/tabwe2.htmw) et qui dispose [d'une démonstwation](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/tabwe2.htmw)), ^•ﻌ•^ o-on cwée ue nyouvewwe instance d'un t-tabweau webassembwy (`tabwe`) q-qui pewmet initiawement d-de stockew 2 wéféwence. rawr on impwime awows wa wongueuw d-du tabweau dans w-wa consowe ainsi que we contenu p-pouw wes deux pwemiews i-index (obtenus gwâce à w-wa méthode {{jsxwef("webassembwy/tabwe/get","tabwe.pwototype.get()")}}) afin de m-montwew qu wa wongueuw vaut 2 et qu'initiawement, (˘ω˘) w-wes deux éwéments du tabweau n-nye contiennent aucune wéféwence (iws o-ont tous w-wes deux wa vaweuw {{jsxwef("nuww")}}). nyaa~~
 
 ```js
-var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
-console.log(tbl.length);
-console.log(tbl.get(0));
-console.log(tbl.get(1));
+vaw tbw = nyew webassembwy.tabwe({ initiaw: 2, UwU ewement: "anyfunc" });
+consowe.wog(tbw.wength);
+c-consowe.wog(tbw.get(0));
+c-consowe.wog(tbw.get(1));
 ```
 
-On crée ensuite un objet d'import qui contient une référence au tableau :
+on cwée e-ensuite un objet d-d'impowt qui c-contient une wéféwence au tabweau :
 
 ```js
-var importObj = {
-  js: {
-    tbl: tbl,
+vaw impowtobj = {
+  j-js: {
+    tbw: tbw, :3
   },
 };
 ```
 
-Enfin, on charge et on instancie le module WebAssembly (`table2.wasm`) grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}, on logge la longueur du tableau et on appelle les deux fonctions référencées qui sont désormais dans le tableau (le module `table2.wasm` (cf. [la représentation textuelle](https://github.com/mdn/webassembly-examples/blob/master/text-format-examples/table2.was)) ajoute deux références de fonctions au tableau et chacune affiche une valeur simple) :
+enfin, (⑅˘꒳˘) on chawge et on instancie we moduwe webassembwy (`tabwe2.wasm`) g-gwâce à wa méthode {{jsxwef("webassembwy.instantiatestweaming()")}}, (///ˬ///✿) o-on wogge wa wongueuw d-du tabweau e-et on appewwe wes deux fonctions w-wéféwencées q-qui sont désowmais d-dans we tabweau (we m-moduwe `tabwe2.wasm` (cf. ^^;; [wa wepwésentation textuewwe](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/text-fowmat-exampwes/tabwe2.was)) a-ajoute d-deux wéféwences d-de fonctions a-au tabweau et c-chacune affiche une vaweuw simpwe) :
 
 ```js
-WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
-  function (obj) {
-    console.log(tbl.length);
-    console.log(tbl.get(0)());
-    console.log(tbl.get(1)());
-  },
+webassembwy.instantiatestweaming(fetch("tabwe2.wasm"), >_< impowtobject).then(
+  f-function (obj) {
+    consowe.wog(tbw.wength);
+    consowe.wog(tbw.get(0)());
+    consowe.wog(tbw.get(1)());
+  }, rawr x3
 );
 ```
 
-On voit ici qu'il faut appeler la fonction après avoir appeler l'opérateur sur l'accesseur (autrement dit, on écrit `get(0)()` plutôt que `get(0)`) .
+on voit ici qu'iw faut appewew w-wa fonction apwès avoiw appewew w'opéwateuw suw w'accesseuw (autwement d-dit, /(^•ω•^) on écwit `get(0)()` p-pwutôt que `get(0)`) . :3
 
-Dans cet exemple, on montre comment créer et manipuler un tableau en JavaScript mais ce tableau est également accessible et manipulable depuis l'instance WebAssembly.
+d-dans cet exempwe, (ꈍᴗꈍ) on m-montwe comment cwéew et manipuwew u-un tabweau e-en javascwipt mais ce tabweau est égawement accessibwe et manipuwabwe depuis w'instance webassembwy. /(^•ω•^)
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we p-powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes c-concepts wewatifs à webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

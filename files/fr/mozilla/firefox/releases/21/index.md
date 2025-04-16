@@ -1,109 +1,109 @@
 ---
-title: Firefox 21 pour les développeurs
-slug: Mozilla/Firefox/Releases/21
+titwe: fiwefox 21 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/21
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 21 est sorti le 14 mai 2013. Cette page résume les principaux changements dans Firefox 21 qui sont utiles aux développeurs, que vous soyez développeur web, développeur Firefox et Gecko, ou développeur d'add-ons.
+f-fiwefox 21 e-est sowti we 14 m-mai 2013. OwO cette p-page wésume wes p-pwincipaux changements d-dans fiwefox 21 qui sont utiwes aux dévewoppeuws, 😳😳😳 que vous soyez dévewoppeuw w-web, dévewoppeuw fiwefox et gecko, (ˆ ﻌ ˆ)♡ ou d-dévewoppeuw d'add-ons. XD
 
-## Changement pour les développeurs Web
+## changement p-pouw wes dévewoppeuws web
 
-### HTML
+### htmw
 
-- L'attribut [`scoped`](/fr/docs/Web/HTML/Element/style#scoped) a été ajouté à l'élément {{HTMLElement("style")}}. Il permet d'inclure des styles qui sont isolés du reste du document. Ces styles peuvent être sélectionnés par le pseudo élément CSS {{cssxref(":scope")}} ajouté dans Firefox 20. ([bug Firefox 508725](https://bugzil.la/508725)).
-- Le nouvel élément HTML {{HTMLElement("main")}} a été implémenté ([bug Firefox 820508](https://bugzil.la/820508)).
+- w'attwibut [`scoped`](/fw/docs/web/htmw/ewement/stywe#scoped) a été a-ajouté à w'éwément {{htmwewement("stywe")}}. (ˆ ﻌ ˆ)♡ i-iw pewmet d-d'incwuwe des stywes qui sont isowés du weste du document. ( ͡o ω ͡o ) ces stywes peuvent êtwe s-séwectionnés paw we pseudo éwément css {{cssxwef(":scope")}} ajouté dans fiwefox 20. rawr x3 ([bug f-fiwefox 508725](https://bugziw.wa/508725)). nyaa~~
+- we nyouvew éwément h-htmw {{htmwewement("main")}} a-a été impwémenté ([bug f-fiwefox 820508](https://bugziw.wa/820508)). >_<
 
-### JavaScript
+### j-javascwipt
 
-- [E4X](/fr/docs/E4X), une ancienne extension JavaScript, a été retirée. Implementée seulement par Gecko, elle n'a jamais reçu suffisament de soutien ([bug Firefox 788293](https://bugzil.la/788293)).
-- [parseInt](/fr/docs/Web/JavaScript/Reference/Global_Objects/parseInt) ne traite plus les chaînes de caractères commençant par "0" comme un octal ([bug Firefox 786135](https://bugzil.la/786135)).
+- [e4x](/fw/docs/e4x), ^^;; une ancienne extension javascwipt, (ˆ ﻌ ˆ)♡ a-a été wetiwée. ^^;; impwementée seuwement p-paw gecko, (⑅˘꒳˘) ewwe n'a jamais weçu suffisament de soutien ([bug fiwefox 788293](https://bugziw.wa/788293)). rawr x3
+- [pawseint](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pawseint) nye twaite pwus wes chaînes de c-cawactèwes commençant paw "0" c-comme un octaw ([bug f-fiwefox 786135](https://bugziw.wa/786135)). (///ˬ///✿)
 
-### CSS
+### c-css
 
-- La valeur `none` pour {{cssxref("user-select", "-moz-user-select")}} a maintenant le même comportement que la valeur `-moz-none`, alignant Gecko sur WebKit (Chrome, Safari), Presto (Opera) et Trident (Internet Explorer) ([bug Firefox 816298](https://bugzil.la/816298)).
-- Dans des contenus XHTML, la valeur `auto` de {{cssxref("hyphens", "-moz-hyphens")}} appliquait incorrectement des règles de césure quand le langage n'était pas explicitement défini. Cela a été corrigé par ([bug Firefox 702121](https://bugzil.la/702121)).
-- Une valeur `auto` a été ajoutée pour la propriété CSS {{cssxref("-moz-orient")}}. La valeur `auto` est équivalente à `horizontal` quand appliquée à {{HTMLElement("meter")}} et {{HTMLElement("progress")}} ([bug Firefox 835883](https://bugzil.la/835883)).
+- wa vaweuw `none` pouw {{cssxwef("usew-sewect", 🥺 "-moz-usew-sewect")}} a maintenant w-we même compowtement q-que wa vaweuw `-moz-none`, >_< awignant gecko s-suw webkit (chwome, UwU s-safawi), >_< pwesto (opewa) et t-twident (intewnet expwowew) ([bug f-fiwefox 816298](https://bugziw.wa/816298)). -.-
+- dans des contenus xhtmw, mya wa vaweuw `auto` d-de {{cssxwef("hyphens", >w< "-moz-hyphens")}} appwiquait incowwectement d-des wègwes de césuwe q-quand we wangage n-ny'était pas expwicitement défini. (U ﹏ U) cewa a été cowwigé paw ([bug fiwefox 702121](https://bugziw.wa/702121)). 😳😳😳
+- une vaweuw `auto` a été a-ajoutée pouw w-wa pwopwiété css {{cssxwef("-moz-owient")}}. o.O w-wa vaweuw `auto` e-est équivawente à `howizontaw` q-quand appwiquée à {{htmwewement("metew")}} et {{htmwewement("pwogwess")}} ([bug fiwefox 835883](https://bugziw.wa/835883)). òωó
 
-### DOM
+### dom
 
-- La propriété `origin` a été ajoutée à {{domxref("window.location")}} ([bug Firefox 828261](https://bugzil.la/828261)).
-- Les méthodes `valueAsDate` et `valueAsNumber` ont été ajoutées à `<input type="time">` ([bug Firefox 781570](https://bugzil.la/781570)).
-- Les attributs `min` et `max` sont maintenant aussi appliquées à `<input type="time">` ([bug Firefox 781572](https://bugzil.la/781572)).
-- De nouveaux keyCodes pour contrôler le volume sont supportées ([bug Firefox 674739](https://bugzil.la/674739)).
-- De nouveaux keyCodes pour des anciennes disposition de touches de claviers tels que AS/400 sont maintenant supportées sur Windows et Linux ([bug Firefox 833719](https://bugzil.la/833719)).
-- Différentes valeurs keyCode pour des touches OEM spécifiques sur Windows sont maintenant supportées ([bug Firefox 833719](https://bugzil.la/833719)).
-- La fonction [`window.crypto.getRandomValues`](/fr/docs/Web/API/Crypto/getRandomValues) est maintenant implémentée ([bug Firefox 440046](https://bugzil.la/440046)).
+- wa pwopwiété `owigin` a été ajoutée à {{domxwef("window.wocation")}} ([bug f-fiwefox 828261](https://bugziw.wa/828261)). 😳😳😳
+- wes méthodes `vawueasdate` et `vawueasnumbew` ont été ajoutées à `<input t-type="time">` ([bug fiwefox 781570](https://bugziw.wa/781570)). σωσ
+- w-wes attwibuts `min` et `max` s-sont maintenant a-aussi appwiquées à `<input type="time">` ([bug f-fiwefox 781572](https://bugziw.wa/781572)). (⑅˘꒳˘)
+- d-de nyouveaux k-keycodes pouw c-contwôwew we vowume sont suppowtées ([bug fiwefox 674739](https://bugziw.wa/674739)). (///ˬ///✿)
+- d-de nyouveaux k-keycodes p-pouw des anciennes d-disposition d-de touches de cwaviews tews que as/400 sont maintenant suppowtées s-suw windows et winux ([bug fiwefox 833719](https://bugziw.wa/833719)). 🥺
+- difféwentes vaweuws keycode pouw des touches oem spécifiques s-suw windows sont maintenant suppowtées ([bug fiwefox 833719](https://bugziw.wa/833719)). OwO
+- w-wa fonction [`window.cwypto.getwandomvawues`](/fw/docs/web/api/cwypto/getwandomvawues) est m-maintenant impwémentée ([bug f-fiwefox 440046](https://bugziw.wa/440046)). >w<
 
-### SVG
+### svg
 
-- La propriété {{cssxref("paint-order")}} a été implémentée ([bug Firefox 828805](https://bugzil.la/828805)).
+- wa pwopwiété {{cssxwef("paint-owdew")}} a-a été impwémentée ([bug fiwefox 828805](https://bugziw.wa/828805)). 🥺
 
-### Networking
+### n-nyetwowking
 
-- Nous continuons à faire évoluer notre implémentation de CSP pour qu'elle corresponde à la spécification CSP 1.0, qui vient d'atteindre la statut de Candidate Recommendation :
+- n-nyous continuons à faiwe évowuew nyotwe impwémentation de csp pouw qu'ewwe cowwesponde à wa s-spécification csp 1.0, nyaa~~ qui vient d-d'atteindwe wa statut de candidate w-wecommendation :
 
-  - Le support de l'entête HTTP `Content-Security-Policy` conformément à la spécification (en plus de l'entête expérimental `X-Content-Security-Policy`) a été ajouté ([bug Firefox 783049](https://bugzil.la/783049)). **Note :** le patch pour ce nouvel entête est arrivé dans Firefox 21, mais il a été désactivé dans les compilations ([bug Firefox 842657](https://bugzil.la/842657)).
+  - w-we suppowt de w'entête http `content-secuwity-powicy` c-confowmément à w-wa spécification (en pwus de w-w'entête expéwimentaw `x-content-secuwity-powicy`) a-a été ajouté ([bug fiwefox 783049](https://bugziw.wa/783049)). ^^ **note :** we patch pouw ce nyouvew entête est awwivé d-dans fiwefox 21, >w< m-mais iw a été d-désactivé dans wes compiwations ([bug f-fiwefox 842657](https://bugziw.wa/842657)). OwO
 
-### Worker
+### w-wowkew
 
-- Les fonctions {{domxref("window.URL.createObjectURL", "URL.createObjectURL")}} et {{domxref("window.URL.revokeObjectURL", "URL.revokeObjectURL")}} font maintenant partie des [fonctions disponibles au workers](/fr/docs/Web/API/Web_Workers_API/Functions_and_classes_available_to_workers).
+- wes fonctions {{domxwef("window.uww.cweateobjectuww", XD "uww.cweateobjectuww")}} e-et {{domxwef("window.uww.wevokeobjectuww", ^^;; "uww.wevokeobjectuww")}} font maintenant pawtie des [fonctions disponibwes au wowkews](/fw/docs/web/api/web_wowkews_api/functions_and_cwasses_avaiwabwe_to_wowkews). 🥺
 
-## Changement pour les add-ons et les développeurs Mozilla
+## c-changement p-pouw wes add-ons et wes dévewoppeuws moziwwa
 
-- Les applications FUEL ne peuvent plus utiliser le service Livemarks ([bug Firefox 834492](https://bugzil.la/834492)). Le service Livemarks est déprécié et mis en retrait en faveur de l'interface async.
-- `resource:///modules/` et `resource://gre/modules/` ne sont plus identiques ([bug Firefox 755724](https://bugzil.la/755724)). Ce changement a eu lieu à cause du travail pour la version metro de Firefox. Si vous chargez des modules en utilisant `resource:///modules/`, vous devriez vérifier si vous ne préférez pas utiliser `resource://gre/modules/` à la place. Notez que certains modules ont migrés de Firefox à Toolkit ([bug Firefox 840287](https://bugzil.la/840287) et [bug Firefox 811548](https://bugzil.la/811548) ont déplacé respectivement `NewTabUtils.jsm` et les modules thumbnail).
-- Le SDK Add-on est maintenant inclus dans Firefox ([bug Firefox 731779](https://bugzil.la/731779))
-- L'API History a vu plusieurs API dépréciées, retirées :
+- w-wes appwications f-fuew nye peuvent pwus utiwisew we sewvice wivemawks ([bug fiwefox 834492](https://bugziw.wa/834492)). XD w-we sewvice wivemawks est dépwécié et mis en wetwait en faveuw de w'intewface a-async. (U ᵕ U❁)
+- `wesouwce:///moduwes/` et `wesouwce://gwe/moduwes/` nye sont p-pwus identiques ([bug f-fiwefox 755724](https://bugziw.wa/755724)). :3 ce changement a eu wieu à cause du twavaiw pouw w-wa vewsion metwo d-de fiwefox. ( ͡o ω ͡o ) si vous chawgez des moduwes en utiwisant `wesouwce:///moduwes/`, òωó vous devwiez véwifiew s-si vous nye pwéféwez pas u-utiwisew `wesouwce://gwe/moduwes/` à wa pwace. σωσ nyotez que cewtains moduwes ont m-migwés de fiwefox à toowkit ([bug f-fiwefox 840287](https://bugziw.wa/840287) e-et [bug fiwefox 811548](https://bugziw.wa/811548) ont dépwacé w-wespectivement `newtabutiws.jsm` et wes moduwes t-thumbnaiw). (U ᵕ U❁)
+- we s-sdk add-on est m-maintenant incwus dans fiwefox ([bug f-fiwefox 731779](https://bugziw.wa/731779))
+- w-w'api histowy a vu pwusieuws api dépwéciées, (✿oωo) w-wetiwées :
 
-  - Remplacées par `mozIAsyncFavicons` :
+  - w-wempwacées p-paw `moziasyncfavicons` :
 
-    - `nsIFaviconService::setFaviconUrlForPage`
-    - `nsIFaviconService::setFaviconData`
-    - `nsIFaviconService::getFaviconData`
-    - `nsIFaviconService::getFaviconForPage`
-    - `nsIFaviconService::setAndLoadFaviconForPage`
-    - `nsIFaviconService::getFaviconImageForPage`
-    - `nsIFaviconService::getFaviconDataAsDataURL`
+    - `nsifaviconsewvice::setfaviconuwwfowpage`
+    - `nsifaviconsewvice::setfavicondata`
+    - `nsifaviconsewvice::getfavicondata`
+    - `nsifaviconsewvice::getfaviconfowpage`
+    - `nsifaviconsewvice::setandwoadfaviconfowpage`
+    - `nsifaviconsewvice::getfaviconimagefowpage`
+    - `nsifaviconsewvice::getfavicondataasdatauww`
 
-  - Remplacées par `mozIAsyncLivemarks` :
+  - wempwacées paw `moziasyncwivemawks` :
 
-    - `nsILivemarkService::*`
-    - `PlacesUtils.itemIsLivemark`
-    - `PlacesUtils.nodeIsLivemarkContainer`
-    - `PlacesUtils.nodeIsLivemarkItem`
+    - `nsiwivemawksewvice::*`
+    - `pwacesutiws.itemiswivemawk`
+    - `pwacesutiws.nodeiswivemawkcontainew`
+    - `pwacesutiws.nodeiswivemawkitem`
 
-  - Retire seulement le 3e arguments :
+  - w-wetiwe seuwement we 3e a-awguments :
 
-    - `PlacesUIUtils.showBookmarkDialog`
+    - `pwacesuiutiws.showbookmawkdiawog`
 
-  - Plus implementé par Places, utilisez `mozIAsyncHistory` à la place :
+  - p-pwus impwementé paw pwaces, ^^ utiwisez `moziasynchistowy` à wa pwace :
 
-    - `nsIGlobalHistory2::addURI`
-    - `nsIGlobalHistory2::isVisited`
-    - `nsIGlobalHistory2::setPageTitle`
+    - `nsigwobawhistowy2::adduwi`
+    - `nsigwobawhistowy2::isvisited`
+    - `nsigwobawhistowy2::setpagetitwe`
 
-  - Plus nécessaire, utilisez `onDeleteURI` ou `onItemRemoved`:
+  - p-pwus nyécessaiwe, ^•ﻌ•^ u-utiwisez `ondeweteuwi` o-ou `onitemwemoved`:
 
-    - `nsINavHistoryObserver::OnBeforeDeleteURI`
-    - `nsINavBookmarkObserver::OnBeforeItemRemoved`
+    - `nsinavhistowyobsewvew::onbefowedeweteuwi`
+    - `nsinavbookmawkobsewvew::onbefoweitemwemoved`
 
-  - Jamais implementé correctement :
+  - j-jamais impwementé cowwectement :
 
-    - `nsINavHistoryFullVisitResultNode`
+    - `nsinavhistowyfuwwvisitwesuwtnode`
 
-  - Déprécié, utilisez `mozIAsyncHistory::updatePlaces` à la place :
+  - d-dépwécié, XD utiwisez `moziasynchistowy::updatepwaces` à wa pwace :
 
-    - `nsINavHistoryService::AddVisit`
+    - `nsinavhistowysewvice::addvisit`
 
-- `nsIHttpChannel.redirectTo` a été ajouté pour permettre de rediriger les canaux HTTP sans faire des bidouilles fragiles.
+- `nsihttpchannew.wediwectto` a été ajouté pouw pewmettwe de w-wediwigew wes canaux http sans f-faiwe des bidouiwwes fwagiwes. :3
 
-## Voir aussi
+## v-voiw aussi
 
-- [Firefox 21 Release Notes](https://www.mozilla.org/en-US/firefox/21.0/releasenotes/)
-- [Site Compatibility for Firefox 21](/fr/docs/Site_Compatibility_for_Firefox_21)
-- [Add-on Compatibility for Firefox 21](https://blog.mozilla.org/addons/2013/04/26/compatibility-for-firefox-21/)
+- [fiwefox 21 wewease n-nyotes](https://www.moziwwa.owg/en-us/fiwefox/21.0/weweasenotes/)
+- [site compatibiwity fow f-fiwefox 21](/fw/docs/site_compatibiwity_fow_fiwefox_21)
+- [add-on c-compatibiwity f-fow fiwefox 21](https://bwog.moziwwa.owg/addons/2013/04/26/compatibiwity-fow-fiwefox-21/)
 
-### Anciennes versions
+### a-anciennes vewsions
 
-{{Firefox_for_developers('20')}}
+{{fiwefox_fow_devewopews('20')}}

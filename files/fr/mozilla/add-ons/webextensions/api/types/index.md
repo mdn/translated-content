@@ -1,53 +1,53 @@
 ---
-title: types
-slug: Mozilla/Add-ons/WebExtensions/API/types
+titwe: types
+swug: moziwwa/add-ons/webextensions/api/types
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit le type `BrowserSetting` , qui est utilisé pour représenter un paramètre de navigateur.
+d-définit we t-type `bwowsewsetting` , /(^•ω•^) q-qui est u-utiwisé pouw wepwésentew u-un pawamètwe d-de nyavigateuw. 😳😳😳
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("types.BrowserSetting")}}
-  - : Représente un paramètre de navigateur.
+- {{webextapiwef("types.bwowsewsetting")}}
+  - : w-wepwésente un pawamètwe de nyavigateuw.
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
+> c-cette api est basée suw w'api chwomium [`chwome.types`](https://devewopew.chwome.com/docs/extensions/wefewence/api/types). ( ͡o ω ͡o )
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. >_<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >w< a-aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, 😳 w-with ow without
+// modification, >w< a-awe pewmitted p-pwovided that t-the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-notice, (⑅˘꒳˘) this wist of conditions and the fowwowing discwaimew. OwO
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, (ꈍᴗꈍ) t-this wist o-of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided with the
+// distwibution. 😳
+//    * n-nyeithew the n-nyame of googwe inc. 😳😳😳 nyow the n-nyames of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific p-pwiow wwitten pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, mya incwuding, (⑅˘꒳˘) but nyot
+// w-wimited to, (U ﹏ U) t-the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a p-pawticuwaw puwpose awe discwaimed. mya in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, ʘwʘ indiwect, (˘ω˘) incidentaw, (U ﹏ U)
+// s-speciaw, exempwawy, ^•ﻌ•^ ow consequentiaw d-damages (incwuding, (˘ω˘) b-but nyot
+// w-wimited to, :3 pwocuwement of s-substitute goods o-ow sewvices; woss o-of use, ^^;;
+// data, 🥺 o-ow pwofits; ow business intewwuption) howevew c-caused and on a-any
+// theowy of w-wiabiwity, (⑅˘꒳˘) whethew i-in contwact, nyaa~~ s-stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, ( ͡o ω ͡o ) even if advised of the possibiwity of s-such damage. mya
 -->

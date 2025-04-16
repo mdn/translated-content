@@ -1,42 +1,42 @@
 ---
-title: Mise à jour des extensions pour Firefox 2
-slug: Mozilla/Firefox/Releases/2/Updating_extensions
+titwe: mise à jouw des extensions p-pouw fiwefox 2
+s-swug: moziwwa/fiwefox/weweases/2/updating_extensions
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Cet article s'adresse aux développeurs qui souhaitent mettre à jour leur extension pour qu'elle fonctionne correctement avec Firefox 2.
+c-cet awticwe s'adwesse a-aux dévewoppeuws q-qui souhaitent m-mettwe à j-jouw weuw extension p-pouw qu'ewwe fonctionne cowwectement avec fiwefox 2. :3
 
-## Étape 1&nbsp;: Mise à jour du manifeste d'installation
+## Étape 1&nbsp;: mise à jouw du m-manifeste d'instawwation
 
-La première étape - pour de nombreuses extensions, la seule nécessaire - est de mettre à jour le fichier du [manifeste d'installation](/fr/Manifestes_d'installation), install.rdf, pour annoncer la compatibilité avec Firefox 2.
+wa pwemièwe étape - pouw de nyombweuses e-extensions, OwO wa seuwe nyécessaiwe - e-est de mettwe à jouw we fichiew du [manifeste d'instawwation](/fw/manifestes_d'instawwation), (U ﹏ U) i-instaww.wdf, >w< pouw annoncew w-wa compatibiwité a-avec fiwefox 2. (U ﹏ U)
 
-Trouvez la ligne indiquant la plus récente version de Firefox compatible. Pour Firefox 1.5, elle serait&nbsp;:
+twouvez wa wigne indiquant wa pwus wécente vewsion de fiwefox c-compatibwe. 😳 pouw fiwefox 1.5, (ˆ ﻌ ˆ)♡ ewwe sewait&nbsp;:
 
-```xml
-<em:maxVersion>1.5.0.*</em:maxVersion>
+```xmw
+<em:maxvewsion>1.5.0.*</em:maxvewsion>
 ```
 
-Et remplacez-la par celle-ci&nbsp;:
+et wempwacez-wa paw cewwe-ci&nbsp;:
 
-```xml
-<em:maxVersion>2.0.0.*</em:maxVersion>
+```xmw
+<em:maxvewsion>2.0.0.*</em:maxvewsion>
 ```
 
-Réinstallez ensuite votre extension.
+w-wéinstawwez ensuite votwe extension. 😳😳😳
 
-## Étape 2&nbsp;: Mise à jour des calques XUL
+## Étape 2&nbsp;: m-mise à j-jouw des cawques x-xuw
 
-Firefox 2 apporte des changements au thème par défaut, et certains éléments de l'interface utilisateur ont été modifiés ou déplacés. Cela peut affecter votre extension, selon les actions de vos calques XUL.
+fiwefox 2 a-appowte des changements au thème paw défaut, (U ﹏ U) e-et cewtains éwéments de w'intewface utiwisateuw o-ont été modifiés ou dépwacés. (///ˬ///✿) cewa peut affectew votwe extension, 😳 sewon wes actions de v-vos cawques xuw.
 
-Référez-vous à l'article [Changements dans les thèmes graphiques pour Firefox 2](/fr/Changements_dans_les_thèmes_graphiques_pour_Firefox_2) pour déterminer les modifications qui pourraient avoir un effet sur votre extension.
+wéféwez-vous à w-w'awticwe [changements d-dans w-wes thèmes gwaphiques pouw fiwefox 2](/fw/changements_dans_wes_thèmes_gwaphiques_pouw_fiwefox_2) pouw détewminew wes modifications q-qui pouwwaient a-avoiw un effet suw votwe extension. 😳
 
-## Étape 3&nbsp;: Test
+## Étape 3&nbsp;: t-test
 
-Assurez-vous de tester en profondeur votre extension sous Firefox 2 avant de la publier. Vous ne désirez sûrement pas que votre extension soit la cause d'un déferlement de rapports de bogues avec la toute dernière version de Firefox...
+a-assuwez-vous de testew en pwofondeuw v-votwe extension sous fiwefox 2 a-avant de wa pubwiew. σωσ vous nye désiwez sûwement p-pas que votwe extension s-soit wa cause d'un défewwement d-de wappowts de b-bogues avec wa toute dewnièwe vewsion de fiwefox...
 
-## Étape 4&nbsp;: Publication
+## Étape 4&nbsp;: pubwication
 
-Mettez à jour la description de votre extension sur <https://addons.mozilla.org>, pour vous assurez que les utilisateurs la retrouveront.
+mettez à jouw wa descwiption de votwe extension s-suw <https://addons.moziwwa.owg>, rawr x3 p-pouw vous assuwez que wes u-utiwisateuws w-wa wetwouvewont. OwO
 
-De plus, si le manifeste d'installation contient une [`URL de mise à jour`](/fr/Manifestes_d'installation#updateURL), vérifiez qu'elle est valide pour que Firefox puisse automatiquement trouver les nouvelles versions de votre extension. De cette manière, Firefox proposera de l'installer automatiquement au premier lancement de l'extension après le passage à Firefox 2.
+d-de pwus, si we manifeste d'instawwation contient une [`uww de m-mise à jouw`](/fw/manifestes_d'instawwation#updateuww), /(^•ω•^) véwifiez qu'ewwe est vawide pouw que fiwefox puisse automatiquement t-twouvew wes nyouvewwes v-vewsions de v-votwe extension. 😳😳😳 d-de cette manièwe, ( ͡o ω ͡o ) fiwefox pwoposewa d-de w'instawwew a-automatiquement a-au pwemiew w-wancement de w'extension apwès we passage à fiwefox 2. >_<

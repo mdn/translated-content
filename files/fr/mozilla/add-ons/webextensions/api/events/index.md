@@ -1,59 +1,59 @@
 ---
-title: events
-slug: Mozilla/Add-ons/WebExtensions/API/events
+titwe: events
+swug: moziwwa/add-ons/webextensions/api/events
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Types communs utilisés par les API qui distribuent les événements.
+t-types communs u-utiwisés paw w-wes api qui distwibuent w-wes événements. mya
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("events.Rule")}}
-  - : Description d'une règle déclarative pour gérer les événements.
-- {{WebExtAPIRef("events.Event")}}
-  - : Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement Chrome.
-- {{WebExtAPIRef("events.UrlFilter")}}
-  - : Filtre les URL pour différents critères. Si un critère donné correspond, alors tout le filtre correspond.
+- {{webextapiwef("events.wuwe")}}
+  - : d-descwiption d'une w-wègwe décwawative p-pouw géwew wes événements. ʘwʘ
+- {{webextapiwef("events.event")}}
+  - : un objet qui pewmet w'ajout et wa suppwession d-d'écouteuws pouw un événement chwome. (˘ω˘)
+- {{webextapiwef("events.uwwfiwtew")}}
+  - : f-fiwtwe wes uww pouw difféwents c-cwitèwes. (U ﹏ U) si un cwitèwe donné cowwespond, ^•ﻌ•^ awows tout we fiwtwe c-cowwespond. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+> c-cette api est basée suw w'api chwomium [`chwome.events`](https://devewopew.chwome.com/docs/extensions/wefewence/api/events). :3 cette documentation est déwivée d-de [`events.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/events.json) dans we code chwomium. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft c-cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. (⑅˘꒳˘) aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, :3 with ow without
+// m-modification, ( ͡o ω ͡o ) awe pewmitted p-pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the a-above copywight
+// nyotice, mya this w-wist of conditions a-and the fowwowing discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions in b-binawy fowm must wepwoduce the above
+// copywight n-nyotice, (˘ω˘) this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. ^^;;
+//    * nyeithew the nyame of googwe inc. (✿oωo) nyow t-the names of its
+// c-contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, -.- i-incwuding, ^•ﻌ•^ but n-nyot
+// wimited to, rawr the impwied w-wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. (˘ω˘) in nyo event shaww the copywight
+// o-ownew o-ow contwibutows b-be wiabwe fow any d-diwect, nyaa~~ indiwect, UwU i-incidentaw,
+// speciaw, :3 exempwawy, (⑅˘꒳˘) ow consequentiaw damages (incwuding, (///ˬ///✿) b-but nyot
+// wimited to, ^^;; pwocuwement of substitute goods ow sewvices; woss of use, >_<
+// d-data, rawr x3 ow pwofits; ow business intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, /(^•ω•^) w-whethew in contwact, :3 stwict wiabiwity, (ꈍᴗꈍ) o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, /(^•ω•^) even if advised of the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

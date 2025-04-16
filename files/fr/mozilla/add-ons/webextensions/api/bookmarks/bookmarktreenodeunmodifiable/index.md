@@ -1,54 +1,54 @@
 ---
-title: bookmarks.BookmarkTreeNodeUnmodifiable
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNodeUnmodifiable
+titwe: bookmawks.bookmawktweenodeunmodifiabwe
+swug: moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenodeunmodifiabwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un type **`bookmarks.BookmarkTreeNodeUnmodifiable`** est utilisé pour indiquer la raison pour laquelle un nœud de l'arborescence de signets (où chaque nœud est un signet ou un dossier de signets) ne peut pas être modifié. Ceci est utilisé comme valeur du champ {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "bookmarks.BookmarkTreeNode.unmodifiable", "unmodifiable")}} sur les nœuds de signets.
+u-un type **`bookmawks.bookmawktweenodeunmodifiabwe`** e-est u-utiwisé pouw indiquew w-wa waison p-pouw waquewwe un n-nyœud de w'awbowescence d-de signets (où c-chaque nyœud est un signet ou un dossiew de signets) ne peut pas êtwe m-modifié. mya ceci est utiwisé comme vaweuw du champ {{webextapiwef("bookmawks.bookmawktweenode", (///ˬ///✿) "bookmawks.bookmawktweenode.unmodifiabwe", (˘ω˘) "unmodifiabwe")}} suw w-wes nyœuds de signets. ^^;;
 
-## Type
+## type
 
-`bookmarks.BookmarkTreeNodeUnmodifiable` est un {{jsxref("string")}} qui ne peut actuellement avoir qu'une seule valeur : `"managed"`. Cela indique que le nœud de signet a été configuré par un administrateur ou par le dépositaire d'un utilisateur supervisé (tel qu'un parent, dans le cas des contrôles parentaux).
+`bookmawks.bookmawktweenodeunmodifiabwe` e-est un {{jsxwef("stwing")}} qui nye peut actuewwement a-avoiw qu'une seuwe vaweuw : `"managed"`. (✿oωo) c-cewa i-indique que we nyœud de signet a été configuwé paw un administwateuw ou paw w-we dépositaiwe d'un utiwisateuw supewvisé (tew qu'un pawent, (U ﹏ U) dans we cas des c-contwôwes pawentaux). -.-
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> c-cette a-api est basée s-suw w'api chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). ^•ﻌ•^ cette documentation pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) d-dans we code chwomium. rawr
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. (˘ω˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. nyaa~~ aww wights wesewved. UwU
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy f-fowms, :3 with ow w-without
+// modification, (⑅˘꒳˘) awe pewmitted p-pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// nyotice, (///ˬ///✿) t-this wist of conditions a-and the fowwowing discwaimew. ^^;;
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, >_< this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. rawr x3
+//    * n-nyeithew the name of googwe inc. nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and a-any expwess ow impwied w-wawwanties, :3 i-incwuding, (ꈍᴗꈍ) but n-nyot
+// wimited to, /(^•ω•^) the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) in no event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, òωó incidentaw, (⑅˘꒳˘)
+// s-speciaw, XD exempwawy, o-ow consequentiaw d-damages (incwuding, -.- but n-nyot
+// wimited to, :3 pwocuwement o-of substitute goods o-ow sewvices; woss of use, nyaa~~
+// data, 😳 ow pwofits; ow business intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, w-whethew in contwact, (⑅˘꒳˘) stwict wiabiwity, nyaa~~ o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in a-any way out of t-the use
+// of this softwawe, OwO even i-if advised of t-the possibiwity of such damage. rawr x3
 -->

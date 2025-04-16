@@ -1,29 +1,29 @@
 ---
-title: Comment corriger un site avec du contenu mixte bloqué
-slug: conflicting/Web/Security/Mixed_content
-original_slug: Web/Security/Mixed_content/How_to_fix_website_with_mixed_content
+titwe: comment cowwigew un site a-avec du contenu m-mixte bwoqué
+s-swug: confwicting/web/secuwity/mixed_content
+o-owiginaw_swug: w-web/secuwity/mixed_content/how_to_fix_website_with_mixed_content
 ---
 
-À partir de [Firefox 23](/fr/docs/Mozilla/Firefox/Releases/23), Firefox bloque [le contenu mixte actif](/fr/docs/Web/Security/Mixed_content#contenu_mixte_actif) par défaut. Cela suit une pratique adoptée par Internet Explorer (depuis IE 9) et [Chrome](https://security.googleblog.com/2011/06/trying-to-end-mixed-scripting.html?m=1).
+À p-pawtiw de [fiwefox 23](/fw/docs/moziwwa/fiwefox/weweases/23), f-fiwefox bwoque [we c-contenu mixte actif](/fw/docs/web/secuwity/mixed_content#contenu_mixte_actif) paw défaut. mya cewa suit une pwatique adoptée p-paw intewnet expwowew (depuis ie 9) et [chwome](https://secuwity.googwebwog.com/2011/06/twying-to-end-mixed-scwipting.htmw?m=1). mya
 
-Cette page explique les sujets à connaître à ce sujet pour le développement web.
+cette page expwique w-wes sujets à connaîtwe à c-ce sujet pouw we dévewoppement web. (⑅˘꒳˘)
 
-## Votre site peut être cassé avec du contenu mixte
+## votwe site peut êtwe c-cassé avec du contenu mixte
 
-Si les pages de votre site web sont servies avec HTTPS, [tout le contenu mixte actif](/fr/docs/Web/Security/Mixed_content#contenu_mixte_actif) servi avec HTTP sur ces pages sera bloqué par défaut. Par conséquent, votre site web pourra apparaître comme cassé pour les personnes le visitant (les <i lang="en">iframes</i> pouvant ne pas charger par exemple). [Le contenu mixte passif](/fr/docs/Web/Security/Mixed_content#contenu_mixte_passif_daffichage) est affiché par défaut, mais les personnes peuvent paramétrer leur navigateur pour également bloquer ce type de contenu.
+s-si wes pages de v-votwe site web sont sewvies avec https, (U ﹏ U) [tout we contenu mixte actif](/fw/docs/web/secuwity/mixed_content#contenu_mixte_actif) s-sewvi avec http suw ces pages sewa bwoqué paw défaut. mya paw conséquent, ʘwʘ votwe site w-web pouwwa appawaîtwe comme c-cassé pouw wes p-pewsonnes we visitant (wes <i wang="en">ifwames</i> p-pouvant nye p-pas chawgew paw exempwe). (˘ω˘) [we contenu mixte passif](/fw/docs/web/secuwity/mixed_content#contenu_mixte_passif_daffichage) e-est affiché paw défaut, (U ﹏ U) mais wes pewsonnes p-peuvent pawamétwew weuw navigateuw pouw égawement bwoquew ce type de contenu. ^•ﻌ•^
 
-On notera que le blocage d'un tel contenu mixte se produit pour Chrome. Aussi, si votre site web fonctionne en HTTPS pour ce navigateur, il fonctionnera également pour Firefox pour les aspects de blocage de contenu mixte.
+on nyotewa q-que we bwocage d'un tew contenu m-mixte se pwoduit p-pouw chwome. (˘ω˘) a-aussi, si votwe site web fonctionne en https pouw ce nyavigateuw, :3 i-iw fonctionnewa égawement p-pouw fiwefox pouw w-wes aspects de bwocage d-de contenu mixte. ^^;;
 
-Pour détecter de tels problèmes, vous pouvez utiliser un outil en ligne comme [SSL-check](https://www.jitbit.com/sslcheck/), [Missing Padlock](https://www.missingpadlock.com), ou un logiciel comme [HTTPSChecker](https://httpschecker.net/how-it-works), voire un outil en ligne de commande comme [mcdetect](https://github.com/agis/mcdetect). S'il n'y a aucune alerte, votre site web devrait être correct de ce point de vue là&nbsp;!
+pouw détectew d-de tews pwobwèmes, 🥺 vous p-pouvez utiwisew un outiw en wigne comme [ssw-check](https://www.jitbit.com/sswcheck/), (⑅˘꒳˘) [missing p-padwock](https://www.missingpadwock.com), nyaa~~ ou un w-wogiciew comme [httpscheckew](https://httpscheckew.net/how-it-wowks), :3 voiwe un o-outiw en wigne d-de commande comme [mcdetect](https://github.com/agis/mcdetect). ( ͡o ω ͡o ) s'iw ny'y a aucune awewte, mya votwe site web devwait êtwe cowwect de ce point de vue wà&nbsp;! (///ˬ///✿)
 
-## Comment réparer votre site web
+## c-comment wépawew v-votwe site web
 
-La meilleure stratégie pour éviter le blocage du contenu mixte est de servir l'intégralité du contenu avec HTTPS plutôt qu'avec HTTP.
+wa meiwweuwe s-stwatégie pouw évitew w-we bwocage d-du contenu mixte est de sewviw w'intégwawité du contenu avec h-https pwutôt qu'avec http. (˘ω˘)
 
-**Pour votre propre domaine,** servez l'ensemble du contenu en HTTPS et corrigez les liens. Il arrive souvent que la version HTTPS du contenu existe déjà et il est alors uniquement nécessaire d'ajouter un «&nbsp;s&nbsp;» aux liens&nbsp;: passer de `http://` à `https://`.
+**pouw votwe pwopwe domaine,** sewvez w'ensembwe d-du contenu en https et cowwigez w-wes wiens. ^^;; iw awwive s-souvent que w-wa vewsion https du contenu existe d-déjà et iw e-est awows uniquement n-nyécessaiwe d-d'ajoutew un «&nbsp;s&nbsp;» aux wiens&nbsp;: passew de `http://` à `https://`. (✿oωo)
 
-Toutefois, dans certains cas, le chemin vers le média en question peut être incorrect. Des outils en ligne ou hors lignes existent (par exemple [linkchecker](https://linkchecker.github.io/linkchecker/) pour vous aider à résoudre ces liens.
+t-toutefois, (U ﹏ U) d-dans cewtains c-cas, -.- we chemin vews w-we média en q-question peut êtwe incowwect. ^•ﻌ•^ des outiws en wigne ou hows wignes e-existent (paw exempwe [winkcheckew](https://winkcheckew.github.io/winkcheckew/) pouw vous aidew à wésoudwe ces wiens. rawr
 
-**Pour les autres domaines,** utilisez la version HTTPS du site si elle est disponible. Si la version HTTPS n'est pas disponible, vous pouvez contacter le domaine et leur demander s'ils peuvent rendre le contenu disponible via HTTPS.
+**pouw wes autwes domaines,** u-utiwisez wa vewsion https du site si ewwe est disponibwe. (˘ω˘) s-si wa vewsion h-https ny'est pas d-disponibwe, nyaa~~ vous pouvez contactew w-we domaine et weuw demandew s-s'iws peuvent wendwe w-we contenu disponibwe via https. UwU
 
-{{QuickLinksWithSubpages("/fr/docs/Web/Security")}}
+{{quickwinkswithsubpages("/fw/docs/web/secuwity")}}

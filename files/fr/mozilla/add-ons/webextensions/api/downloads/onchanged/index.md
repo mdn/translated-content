@@ -1,129 +1,129 @@
 ---
-title: downloads.onChanged
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/onChanged
+titwe: downwoads.onchanged
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/onchanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'événement **`onChanged()`** de l'API {{WebExtAPIRef("downloads")}} est déclenché lorsque l'une des propriétés de {{WebExtAPIRef('downloads.DownloadItem')}} change (à l'exception de `bytesReceived`).
+w-w'événement **`onchanged()`** d-de w'api {{webextapiwef("downwoads")}} e-est décwenché w-wowsque w-w'une des pwopwiétés d-de {{webextapiwef('downwoads.downwoaditem')}} c-change (à w'exception de `bytesweceived`). XD
 
-L'écouteur reçoit un fichier `downloadDelta` en tant que paramètre — un objet contenant le `downloadId` de l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question, plus le statut de toutes les propriétés qui ont changé.
+w'écouteuw weçoit un fichiew `downwoaddewta` en tant que pawamètwe — u-un objet contenant we `downwoadid` de w'objet {{webextapiwef('downwoads.downwoaditem')}} e-en question, o.O pwus we statut d-de toutes wes pwopwiétés qui ont changé. mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.downloads.onChanged.addListener(listener);
-browser.downloads.onChanged.removeListener(listener);
-browser.downloads.onChanged.hasListener(listener);
+b-bwowsew.downwoads.onchanged.addwistenew(wistenew);
+bwowsew.downwoads.onchanged.wemovewistenew(wistenew);
+b-bwowsew.downwoads.onchanged.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+w-wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si un `listener` donné est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à cet événement. 🥺
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. ^^;; w'awgument `wistenew` est w'écouteuw à suppwimew. :3
+- `haswistenew(wistenew)`
+  - : v-véwifiez si un `wistenew` d-donné est e-enwegistwé pouw c-cet événement. (U ﹏ U) w-wenvoie `twue` s'iw écoute, OwO sinon `fawse`. 😳😳😳
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Parameters
+### pawametews
 
-- `callback`
+- `cawwback`
 
-  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
+  - : une f-fonction de wappew qui sewa appewée wowsque cet événement se pwoduiwa. (ˆ ﻌ ˆ)♡ cette fonction wecevwa wes awguments s-suivants :
 
-    - `downloadDelta`
-      - : Un [`objet`](#downloaddelta) représentant l'objet {{WebExtAPIRef('downloads.DownloadItem')}} qui a été modifié, ainsi que l'état de toutes les propriétés qui y ont été modifiées.
+    - `downwoaddewta`
+      - : un [`objet`](#downwoaddewta) w-wepwésentant w-w'objet {{webextapiwef('downwoads.downwoaditem')}} q-qui a été modifié, XD ainsi que w'état de toutes wes p-pwopwiétés qui y-y ont été modifiées. (ˆ ﻌ ˆ)♡
 
-## Objets supplémentaires
+## objets s-suppwémentaiwes
 
-### downloadDelta
+### d-downwoaddewta
 
-L'objet `downloadDelta` a les propriétés suivantes disponibles :
+w'objet `downwoaddewta` a-a wes pwopwiétés suivantes disponibwes :
 
 - `id`
-  - : Un `integer` représentant l'identifiant de l'`id` {{WebExtAPIRef('downloads.DownloadItem')}} qui a changé.
-- `url`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant une modification d'une `url` {{WebExtAPIRef('downloads.DownloadItem')}}.
-- `filename`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `filename` {{WebExtAPIRef('downloads.DownloadItem')}}
-- `danger`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `danger` {{WebExtAPIRef('downloads.DownloadItem')}}.
-- `mime`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `mime` {{WebExtAPIRef('downloads.DownloadItem')}}
-- `startTime`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `startTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
-- `endTime`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `endTime` {{WebExtAPIRef('downloads.DownloadItem')}}.
-- `state`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un `état` {{WebExtAPIRef('downloads.DownloadItem')}}
-- `canResume`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}} `canResume`.
-- `paused`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état en `pause` {{WebExtAPIRef('downloads.DownloadItem')}}.
-- `error`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.StringDelta')}} décrivant un changement dans un état d'`erreur` {{WebExtAPIRef('downloads.DownloadItem')}}.
-- `totalBytes`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant un changement dans un `totalBytes` {{WebExtAPIRef('downloads.DownloadItem')}}.
-- `fileSize`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.DoubleDelta')}} décrivant une modification d'un `fileSize` {{WebExtAPIRef('downloads.DownloadItem')}}.
-- `exists`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef('downloads.BooleanDelta')}} décrivant un changement dans un état {{WebExtAPIRef('downloads.DownloadItem')}}.
+  - : u-un `integew` wepwésentant w'identifiant d-de w'`id` {{webextapiwef('downwoads.downwoaditem')}} qui a changé. ( ͡o ω ͡o )
+- `uww`{{optionaw_inwine}}
+  - : u-un objet {{webextapiwef('downwoads.stwingdewta')}} décwivant u-une modification d-d'une `uww` {{webextapiwef('downwoads.downwoaditem')}}. rawr x3
+- `fiwename`{{optionaw_inwine}}
+  - : un objet {{webextapiwef('downwoads.stwingdewta')}} décwivant un changement dans un `fiwename` {{webextapiwef('downwoads.downwoaditem')}}
+- `dangew`{{optionaw_inwine}}
+  - : un objet {{webextapiwef('downwoads.stwingdewta')}} décwivant u-un changement d-dans un `dangew` {{webextapiwef('downwoads.downwoaditem')}}. nyaa~~
+- `mime`{{optionaw_inwine}}
+  - : un objet {{webextapiwef('downwoads.stwingdewta')}} d-décwivant un c-changement dans u-un `mime` {{webextapiwef('downwoads.downwoaditem')}}
+- `stawttime`{{optionaw_inwine}}
+  - : un objet {{webextapiwef('downwoads.stwingdewta')}} décwivant un changement dans un `stawttime` {{webextapiwef('downwoads.downwoaditem')}}. >_<
+- `endtime`{{optionaw_inwine}}
+  - : u-un objet {{webextapiwef('downwoads.stwingdewta')}} décwivant un changement dans un `endtime` {{webextapiwef('downwoads.downwoaditem')}}. ^^;;
+- `state`{{optionaw_inwine}}
+  - : un objet {{webextapiwef('downwoads.stwingdewta')}} d-décwivant un changement d-dans un `état` {{webextapiwef('downwoads.downwoaditem')}}
+- `canwesume`{{optionaw_inwine}}
+  - : u-un objet {{webextapiwef('downwoads.booweandewta')}} d-décwivant un changement d-dans un état {{webextapiwef('downwoads.downwoaditem')}} `canwesume`. (ˆ ﻌ ˆ)♡
+- `paused`{{optionaw_inwine}}
+  - : un o-objet {{webextapiwef('downwoads.booweandewta')}} d-décwivant un c-changement dans un état en `pause` {{webextapiwef('downwoads.downwoaditem')}}. ^^;;
+- `ewwow`{{optionaw_inwine}}
+  - : un objet {{webextapiwef('downwoads.stwingdewta')}} d-décwivant u-un changement d-dans un état d'`ewweuw` {{webextapiwef('downwoads.downwoaditem')}}. (⑅˘꒳˘)
+- `totawbytes`{{optionaw_inwine}}
+  - : u-un o-objet {{webextapiwef('downwoads.doubwedewta')}} décwivant un changement dans un `totawbytes` {{webextapiwef('downwoads.downwoaditem')}}. rawr x3
+- `fiwesize`{{optionaw_inwine}}
+  - : un objet {{webextapiwef('downwoads.doubwedewta')}} d-décwivant une modification d'un `fiwesize` {{webextapiwef('downwoads.downwoaditem')}}. (///ˬ///✿)
+- `exists`{{optionaw_inwine}}
+  - : un objet {{webextapiwef('downwoads.booweandewta')}} décwivant un changement dans un état {{webextapiwef('downwoads.downwoaditem')}}. 🥺
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Enregistrez un message lorsque les téléchargements sont terminés :
+enwegistwez u-un message wowsque w-wes téwéchawgements s-sont tewminés :
 
 ```js
-function handleChanged(delta) {
-  if (delta.state && delta.state.current === "complete") {
-    console.log(`Download ${delta.id} has completed.`);
+function handwechanged(dewta) {
+  i-if (dewta.state && dewta.state.cuwwent === "compwete") {
+    c-consowe.wog(`downwoad ${dewta.id} h-has compweted.`);
   }
 }
 
-browser.downloads.onChanged.addListener(handleChanged);
+bwowsew.downwoads.onchanged.addwistenew(handwechanged);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> This API is based on Chromium's [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads#event-onChanged) API.
+> this api is based on chwomium's [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads#event-onchanged) api. >_<
 >
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> micwosoft edge compatibiwity d-data is suppwied by micwosoft c-cowpowation and is incwuded h-hewe undew t-the cweative commons attwibution 3.0 united states w-wicense. UwU
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. >_< aww wights w-wesewved. -.-
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, mya with ow w-without
+// modification, >w< a-awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this wist of conditions a-and the f-fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// copywight nyotice, o.O this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. òωó
+//    * nyeithew t-the nyame of g-googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows may be used t-to endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, (⑅˘꒳˘) i-incwuding, (///ˬ///✿) but nyot
+// wimited t-to, 🥺 the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. OwO i-in nyo e-event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, >w< indiwect, i-incidentaw, 🥺
+// speciaw, nyaa~~ exempwawy, ^^ ow consequentiaw d-damages (incwuding, >w< but nyot
+// wimited t-to, OwO pwocuwement o-of substitute goods ow sewvices; woss of use, XD
+// data, ow pwofits; o-ow business i-intewwuption) h-howevew caused and o-on any
+// theowy of wiabiwity, ^^;; w-whethew in contwact, 🥺 stwict wiabiwity, XD ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, (U ᵕ U❁) e-even if advised of the possibiwity o-of such damage. :3
 -->

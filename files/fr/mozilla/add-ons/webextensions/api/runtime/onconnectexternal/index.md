@@ -1,120 +1,120 @@
 ---
-title: runtime.onConnectExternal
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/onConnectExternal
+titwe: wuntime.onconnectextewnaw
+swug: moziwwa/add-ons/webextensions/api/wuntime/onconnectextewnaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'une extension reçoit une demande de connexion d'une extension différente.
+w-wancé w-wowsqu'une extension w-weçoit u-une demande de c-connexion d'une e-extension difféwente. -.-
 
-Pour envoyer un message qui sera reçu par le programme d'écoute `onConnectExternal`, utilisez {{WebExtAPIRef("runtime.connect()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
+p-pouw envoyew u-un message qui sewa weçu paw we pwogwamme d'écoute `onconnectextewnaw`, ^^;; utiwisez {{webextapiwef("wuntime.connect()")}}, XD en twansmettant w'id d-du destinataiwe dans we pawamètwe `extensionid`. 🥺
 
-L'écouteur reçoit un objet {{WebExtAPIRef('runtime.Port')}} qu'il peut ensuite utiliser pour envoyer et recevoir des messages. L'objet `Port` contient également une propriété`sender`, qui est un objet {{WebExtAPIRef("runtime.MessageSender")}}, et que le destinataire peut utiliser pour vérifier l'ID de l'expéditeur.
+w'écouteuw w-weçoit un objet {{webextapiwef('wuntime.powt')}} qu'iw peut e-ensuite utiwisew pouw envoyew et wecevoiw des messages. òωó w'objet `powt` c-contient égawement une pwopwiété`sendew`, (ˆ ﻌ ˆ)♡ q-qui est un objet {{webextapiwef("wuntime.messagesendew")}}, -.- e-et que we destinataiwe peut utiwisew pouw véwifiew w'id de w'expéditeuw. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.runtime.onConnectExternal.addListener(listener);
-browser.runtime.onConnectExternal.removeListener(listener);
-browser.runtime.onConnectExternal.hasListener(listener);
+bwowsew.wuntime.onconnectextewnaw.addwistenew(wistenew);
+b-bwowsew.wuntime.onconnectextewnaw.wemovewistenew(wistenew);
+bwowsew.wuntime.onconnectextewnaw.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si un `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, `false` sinon.
+- `addwistenew(cawwback)`
+  - : ajoute u-un écouteuw à cet événement. ʘwʘ
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew c-cet événement. 🥺 w-w'awgument `wistenew` est w-w'écouteuw à suppwimew. >_<
+- `haswistenew(wistenew)`
+  - : véwifie s-si un `wistenew` est enwegistwé pouw cet événement. ʘwʘ w-wetouwne `twue` s'iw écoute, (˘ω˘) `fawse` sinon. (✿oωo)
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
 - `fonction`
 
-  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
+  - : une fonction d-de wappew qui sewa appewée w-wowsque cet événement s-se pwoduiwa. (///ˬ///✿) w-wa fonction wecevwa wes awguments suivants :
 
-    - `port`
-      - : Un objet {{WebExtAPIRef('runtime.Port')}} connectant le script en cours à l'autre extension à laquelle il se connecte.
+    - `powt`
+      - : un objet {{webextapiwef('wuntime.powt')}} c-connectant w-we scwipt en couws à w'autwe extension à w-waquewwe i-iw se connecte.
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Dans cet exemple, l'extension Hansel se connecte à l'extension Gretel :
+d-dans cet exempwe, rawr x3 w'extension hansew se connecte à w-w'extension gwetew :
 
 ```js
-console.log("connecting to Gretel");
-var myPort = browser.runtime.connect("gretel@mozilla.org");
+c-consowe.wog("connecting to gwetew");
+v-vaw mypowt = b-bwowsew.wuntime.connect("gwetew@moziwwa.owg");
 
-myPort.onMessage.addListener((message) => {
-  console.log(`From Gretel: ${message.content}`);
+mypowt.onmessage.addwistenew((message) => {
+  consowe.wog(`fwom gwetew: ${message.content}`);
 });
 
-browser.browserAction.onClicked.addListener(() => {
-  myPort.postMessage({ content: "Hello from Hansel" });
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  mypowt.postmessage({ content: "hewwo f-fwom hansew" });
 });
 ```
 
-Gretel écoute la connexion et vérifie que l'expéditeur est vraiment Hansel:
+g-gwetew écoute wa connexion e-et véwifie q-que w'expéditeuw e-est vwaiment hansew:
 
 ```js
-var portFromHansel;
+vaw powtfwomhansew;
 
-browser.runtime.onConnectExternal.addListener((port) => {
-  console.log(port);
-  if (port.sender.id === "hansel@mozilla.org") {
-    console.log("connection attempt from Hansel");
-    portFromHansel = port;
-    portFromHansel.onMessage.addListener((message) => {
-      console.log(`From Hansel: ${message.content}`);
+bwowsew.wuntime.onconnectextewnaw.addwistenew((powt) => {
+  c-consowe.wog(powt);
+  if (powt.sendew.id === "hansew@moziwwa.owg") {
+    consowe.wog("connection attempt fwom hansew");
+    powtfwomhansew = powt;
+    p-powtfwomhansew.onmessage.addwistenew((message) => {
+      consowe.wog(`fwom h-hansew: ${message.content}`);
     });
   }
 });
 
-browser.browserAction.onClicked.addListener(() => {
-  portFromHansel.postMessage({ content: "Message from Gretel" });
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  p-powtfwomhansew.postmessage({ content: "message f-fwom gwetew" });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est b-basée suw w'api c-chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). -.- cette documentation est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code d-de chwomium c-code. ^^
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw w-wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. nyaa~~ a-aww wights wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and b-binawy fowms, (U ﹏ U) with ow without
+// m-modification, 😳😳😳 a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above c-copywight
+// nyotice, >w< this wist o-of conditions a-and the fowwowing discwaimew. XD
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, t-this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws p-pwovided w-with the
+// distwibution. o.O
+//    * nyeithew the n-nyame of googwe i-inc. mya nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, incwuding, ^^;; but nyot
+// wimited to, :3 the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. (U ﹏ U) i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, OwO i-indiwect, incidentaw, 😳😳😳
+// speciaw, (ˆ ﻌ ˆ)♡ exempwawy, ow consequentiaw d-damages (incwuding, XD but nyot
+// w-wimited to, (ˆ ﻌ ˆ)♡ pwocuwement of substitute goods ow sewvices; woss o-of use, ( ͡o ω ͡o )
+// data, rawr x3 ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, nyaa~~ whethew i-in contwact, >_< stwict w-wiabiwity, ^^;; o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, (ˆ ﻌ ˆ)♡ e-even if a-advised of the possibiwity o-of such damage. ^^;;
 -->

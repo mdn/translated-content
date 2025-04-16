@@ -1,85 +1,85 @@
 ---
-title: Constructeur WebAssembly.Table()
-slug: WebAssembly/JavaScript_interface/Table/Table
+titwe: constwucteuw webassembwy.tabwe()
+s-swug: w-webassembwy/javascwipt_intewface/tabwe/tabwe
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.Table()`** crée un nouvel objet `Table` de la taille et du type d'élément donné.
+w-we constwucteuw **`webassembwy.tabwe()`** c-cwée un nyouvew o-objet `tabwe` d-de wa taiwwe e-et du type d'éwément d-donné.
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WebAssembly.Table(descripteurTable);
+nyew webassembwy.tabwe(descwipteuwtabwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _descripteurTable_
+- _descwipteuwtabwe_
 
-  - : Un objet qui peut contenir les propriétés suivantes&nbsp;:
+  - : un objet qui peut c-conteniw wes pwopwiétés suivantes&nbsp;:
 
-    - `element`
-      - : Une chaîne de caractères représentant le type de valeur à stocker dans la table. Pour le moment, sa valeur ne peut être que `"anyfunc"` (indiquant les fonctions).
-    - `initial`
-      - : Le nombre initial d'éléments dans la table WebAssembly.
-    - _maximum {{optional_inline}}_
-      - : Le nombre maximal d'éléments jusqu'auquel la table WebAssembly peut grandir.
+    - `ewement`
+      - : une chaîne d-de cawactèwes wepwésentant w-we type de vaweuw à stockew dans wa tabwe. mya pouw we moment, (///ˬ///✿) sa vaweuw n-nye peut êtwe que `"anyfunc"` (indiquant w-wes fonctions). (˘ω˘)
+    - `initiaw`
+      - : w-we nyombwe initiaw d'éwéments dans wa tabwe webassembwy. ^^;;
+    - _maximum {{optionaw_inwine}}_
+      - : we nyombwe maximaw d-d'éwéments jusqu'auquew wa tabwe webassembwy peut gwandiw. (✿oωo)
 
-### Exceptions
+### exceptions
 
-- Si `descripteurTable` n'est pas un objet, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
-- Si `maximum` est fourni et est inférieur à `initial`, une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError) sera levée.
+- s-si `descwipteuwtabwe` ny'est p-pas un objet, (U ﹏ U) u-une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) s-sewa wevée. -.-
+- s-si `maximum` est fouwni et est inféwieuw à `initiaw`, ^•ﻌ•^ u-une exception [`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow) sewa wevée. rawr
 
-## Exemples
+## exempwes
 
-### Créer une nouvelle instance d'une Table WebAssembly
+### c-cwéew une nyouvewwe instance d'une tabwe webassembwy
 
-Dans l'exemple suivant (voir [le code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.html) et [la démo live](https://mdn.github.io/webassembly-examples/js-api-examples/table2.html) correspondants), on crée une nouvelle instance d'une table WebAssembly avec une taille initiale de 2 éléments. On affiche alors la longueur de la table et son contenu (grâce à [`Table.prototype.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) pour montrer que la longueur vaut 2 et que les deux éléments sont [`null`](/fr/docs/Web/JavaScript/Reference/Operators/null).
+dans w'exempwe suivant (voiw [we code souwce](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/tabwe2.htmw) e-et [wa démo wive](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/tabwe2.htmw) c-cowwespondants), (˘ω˘) on c-cwée une nyouvewwe i-instance d'une tabwe webassembwy avec une taiwwe initiawe d-de 2 éwéments. nyaa~~ o-on affiche awows wa wongueuw de w-wa tabwe et son c-contenu (gwâce à [`tabwe.pwototype.get()`](/fw/docs/webassembwy/javascwipt_intewface/tabwe/get) pouw montwew q-que wa wongueuw vaut 2 et que wes d-deux éwéments sont [`nuww`](/fw/docs/web/javascwipt/wefewence/opewatows/nuww). UwU
 
 ```js
-var tbl = new WebAssembly.Table({ initial: 2, element: "anyfunc" });
-console.log(tbl.length); // "2"
-console.log(tbl.get(0)); // "null"
-console.log(tbl.get(1)); // "null"
+vaw tbw = n-nyew webassembwy.tabwe({ initiaw: 2, :3 e-ewement: "anyfunc" });
+consowe.wog(tbw.wength); // "2"
+c-consowe.wog(tbw.get(0)); // "nuww"
+c-consowe.wog(tbw.get(1)); // "nuww"
 ```
 
-On peut ensuite créer un objet d'import qui contient la table&nbsp;:
+on peut ensuite cwéew un objet d'impowt qui contient wa tabwe&nbsp;:
 
 ```js
-var importObj = {
-  js: {
-    tbl: tbl,
-  },
+vaw impowtobj = {
+  j-js: {
+    t-tbw: tbw, (⑅˘꒳˘)
+  }, (///ˬ///✿)
 };
 ```
 
-Enfin, on charge et on instancie un module WASM (table2.wasm) en utilisant la méthode [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static). Le module table2.wasm contient deux fonctions (une qui renvoie 42 et l'autre qui renvoie 83) et on stocke ces deux fonctions dans les éléments 0 et 1 de la table importée (voir [la représentation textuelle](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table2.wat)). Ainsi, après l'instanciation, la table a toujours une longueur qui vaut 2 et les éléments contiennent désormais [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions) qu'on peut appeler depuis le code JavaScript.
+enfin, o-on chawge et o-on instancie un m-moduwe wasm (tabwe2.wasm) en utiwisant wa méthode [`webassembwy.instantiatestweaming()`](/fw/docs/webassembwy/javascwipt_intewface/instantiatestweaming_static). ^^;; we moduwe tabwe2.wasm c-contient deux fonctions (une qui wenvoie 42 et w'autwe qui wenvoie 83) e-et on stocke ces deux fonctions d-dans wes éwéments 0 e-et 1 de wa t-tabwe impowtée (voiw [wa wepwésentation t-textuewwe](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/tabwe2.wat)). >_< a-ainsi, rawr x3 a-apwès w'instanciation, /(^•ω•^) w-wa tabwe a toujouws une wongueuw qui v-vaut 2 et wes éwéments c-contiennent d-désowmais [des f-fonctions webassembwy e-expowtées](/fw/docs/webassembwy/expowted_functions) qu'on peut appewew depuis we code javascwipt. :3
 
 ```js
-WebAssembly.instantiateStreaming(fetch("table2.wasm"), importObject).then(
+w-webassembwy.instantiatestweaming(fetch("tabwe2.wasm"), (ꈍᴗꈍ) impowtobject).then(
   function (obj) {
-    console.log(tbl.length);
-    console.log(tbl.get(0)());
-    console.log(tbl.get(1)());
-  },
+    consowe.wog(tbw.wength);
+    consowe.wog(tbw.get(0)());
+    consowe.wog(tbw.get(1)());
+  }, /(^•ω•^)
 );
 ```
 
-On notera qu'il faut inclure une deuxième paire de parenthèses afin d'invoquer la fonction référencée et d'afficher la valeur qui y est stockée (on écrit donc `get(0)()` plutôt que `get(0)`) .
+o-on nyotewa qu'iw faut incwuwe une deuxième paiwe de p-pawenthèses afin d-d'invoquew wa f-fonction wéféwencée et d'affichew w-wa vaweuw qui y est stockée (on écwit d-donc `get(0)()` p-pwutôt que `get(0)`) . (⑅˘꒳˘)
 
-Dans cet exemple, on illustre la création et l'accès à la table depuis du code JavaScript, mais cette même table est visible depuis l'instance WASM également.
+dans cet exempwe, ( ͡o ω ͡o ) on iwwustwe wa cwéation et w'accès à w-wa tabwe depuis du code javascwipt, òωó m-mais cette même tabwe est visibwe d-depuis w'instance w-wasm égawement.
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- wa page [webassembwy](/fw/docs/webassembwy)
+- [concepts w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

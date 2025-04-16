@@ -1,17 +1,17 @@
 ---
-title: dns
-slug: Mozilla/Add-ons/WebExtensions/API/dns
+titwe: dns
+swug: moziwwa/add-ons/webextensions/api/dns
 ---
 
-{{AddonSidebar}}Active une extension pour résoudre les noms de domaine.Pour utiliser cette API, une extension doit demander la permission "dns" [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans son fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) .
+{{addonsidebaw}}active u-une extension p-pouw wésoudwe w-wes nyoms de d-domaine.pouw utiwisew c-cette api, >_< u-une extension doit d-demandew wa p-pewmission "dns" [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) dans son fichiew [`manifest.json`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) . :3
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("dns.resolve()")}}
-  - : Résout le nom d'hôte donné en un enregistrement DNS
+- {{webextapiwef("dns.wesowve()")}}
+  - : wésout we nyom d'hôte donné en un enwegistwement d-dns
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}

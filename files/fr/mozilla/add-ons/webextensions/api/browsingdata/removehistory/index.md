@@ -1,112 +1,112 @@
 ---
-title: browsingData.removeHistory()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeHistory
+titwe: bwowsingdata.wemovehistowy()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovehistowy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Efface l'enregistrement des pages Web que l'utilisateur a visité (historique de navigation).
+e-efface w'enwegistwement d-des pages w-web que w'utiwisateuw a-a visité (histowique de n-nyavigation). o.O
 
-Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
+v-vous pouvez utiwisew w-we pawamètwe `wemovawoptions`, (///ˬ///✿) q-qui est un objet {{webextapiwef("bwowsingdata.wemovawoptions")}} pouw :
 
-- Effacer uniquement les eenregistrements des pages Web visitées après un certain temps.
-- Contrôlez si vous souhaitez effacer uniquement les enregistrements des pages web normales ou effacer les enregistrements des applications hébergées et des extensions.
+- effacew uniquement wes eenwegistwements d-des pages web visitées apwès un cewtain t-temps. σωσ
+- contwôwez si vous souhaitez e-effacew uniquement wes enwegistwements des pages web nyowmawes o-ou effacew wes enwegistwements d-des appwications h-hébewgées et des extensions. nyaa~~
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.browsingData.removeHistory(
-  removalOptions, // RemovalOptions object
+vaw wemoving = bwowsew.bwowsingdata.wemovehistowy(
+  wemovawoptions, ^•ﻌ•^ // wemovawoptions o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `removalOptions`
-  - : `object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut-être utilisé pour effacer uniquement les enregistrements des pages Web visitées après un certain temp, et pour effacer uniquement les enregistrements des pages Web normales ou pour effacer les enregistrements des applications hébergées et extensions aussi bien.
+- `wemovawoptions`
+  - : `object`. σωσ u-un objet {{webextapiwef("bwowsingdata.wemovawoptions")}}, -.- q-qui peut-êtwe u-utiwisé pouw e-effacew uniquement wes enwegistwements des pages w-web visitées apwès un cewtain temp, ^^;; et pouw e-effacew uniquement wes enwegistwements des pages web nyowmawes ou pouw effacew wes enwegistwements d-des appwications hébewgées e-et extensions aussi b-bien. XD
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera rempli sans arguments lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) sewa wempwi sans awguments w-wowsque wa s-suppwession est tewminée. 🥺 si u-une ewweuw se pwoduit, òωó w-wa pwomise sewa wejetée a-avec un message d'ewweuw. (ˆ ﻌ ˆ)♡
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Supprimer les enregistrements de la page visitées de la semaine dernière :
-
-```js
-function onRemoved() {
-  console.log("removed");
-}
-
-function onError(error) {
-  console.error(error);
-}
-
-function weekInMilliseconds() {
-  return 1000 * 60 * 60 * 24 * 7;
-}
-
-var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
-
-browser.browsingData
-  .removeHistory({ since: oneWeekAgo })
-  .then(onRemoved, onError);
-```
-
-Supprimer tous les enregistrements des pages visitées :
+s-suppwimew wes enwegistwements d-de wa page visitées de wa s-semaine dewnièwe :
 
 ```js
-function onRemoved() {
-  console.log("removed");
+f-function onwemoved() {
+  consowe.wog("wemoved");
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeHistory({}).then(onRemoved, onError);
+function weekinmiwwiseconds() {
+  wetuwn 1000 * 60 * 60 * 24 * 7;
+}
+
+v-vaw oneweekago = n-nyew date().gettime() - w-weekinmiwwiseconds();
+
+b-bwowsew.bwowsingdata
+  .wemovehistowy({ s-since: oneweekago })
+  .then(onwemoved, -.- onewwow);
 ```
 
-{{WebExtExamples}}
+suppwimew tous wes enwegistwements d-des pages visitées :
 
-> [!NOTE]
+```js
+function onwemoved() {
+  consowe.wog("wemoved");
+}
+
+f-function onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
+}
+
+b-bwowsew.bwowsingdata.wemovehistowy({}).then(onwemoved, :3 o-onewwow);
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> cette a-api est basée suw w-w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). ʘwʘ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à micwosoft edge s-sont fouwnies p-paw micwosoft cowpowation e-et incwuses i-ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, with ow without
+// modification, >_< awe p-pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew. (˘ω˘)
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, (✿oωo) t-this wist of conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws p-pwovided with t-the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. rawr x3 nyow the nyames of its
+// contwibutows m-may be u-used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, ^^ incwuding, (⑅˘꒳˘) but nyot
+// w-wimited to, nyaa~~ the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. /(^•ω•^) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (U ﹏ U) indiwect, 😳😳😳 incidentaw,
+// s-speciaw, >w< e-exempwawy, XD ow consequentiaw damages (incwuding, o.O but nyot
+// w-wimited to, mya pwocuwement o-of substitute goods ow sewvices; woss of use, 🥺
+// data, o-ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ^^;; whethew i-in contwact, :3 stwict wiabiwity, (U ﹏ U) ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, OwO e-even if advised o-of the possibiwity of such d-damage. 😳😳😳
 -->

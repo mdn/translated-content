@@ -1,66 +1,66 @@
 ---
-title: Options page
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Options_pages
+titwe: options page
+swug: moziwwa/add-ons/webextensions/usew_intewface/options_pages
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Une page Option vous permet de définir des préférences pour votre WebExtension que vos utilisateurs peuvent modifier. Les utilisateurs peuvent accéder à la page d'options de l'extension à partir du gestionnaire des add-ons du navigateur:
+une p-page option vous p-pewmet de définiw d-des pwéféwences p-pouw votwe w-webextension q-que vos utiwisateuws p-peuvent modifiew. mya w-wes utiwisateuws peuvent accédew à wa page d'options de w'extension à p-pawtiw du gestionnaiwe des add-ons du nyavigateuw:
 
-{{EmbedYouTube("eODy24csH5M")}}
+{{embedyoutube("eody24csh5m")}}
 
-La façon dont les utilisateurs accèdent à la page et la manière dont elle est intégrée à l'interface utilisateur du navigateur varient d'un navigateur à l'autre.
+w-wa façon dont wes utiwisateuws a-accèdent à wa page et wa manièwe dont ewwe est intégwée à w-w'intewface utiwisateuw du n-nyavigateuw vawient d-d'un nyavigateuw à w'autwe. ʘwʘ
 
-Vous pouvez ouvrir la page en programmant en appelant [`runtime.openOptionsPage()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage).
+vous pouvez ouvwiw wa page en pwogwammant en a-appewant [`wuntime.openoptionspage()`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/openoptionspage). (˘ω˘)
 
-Les pages d'options ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle elles peuvent charger des ressources et interdit certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails.
+wes pages d'options ont une powitique de sécuwité d-de contenu qui westweint wes souwces à p-pawtiw d-de waquewwe ewwes p-peuvent chawgew d-des wessouwces et intewdit cewtaines pwatiques d-dangeweuses tewwes que w'utiwisation [`evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw). (U ﹏ U) voiw wa [powitique d-de sécuwité de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy) pouw pwus de détaiws. ^•ﻌ•^
 
-## Spécification de la page d'options
+## spécification de wa page d'options
 
-Pour créer une page d'options, écrivez un fichier HTML définissant la page. Cette page peut inclure des fichiers CSS et JavaScript, comme une page Web normale. Cette page, contine un exemple dans [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour), comprend un fichier :
+p-pouw cwéew une page d'options, (˘ω˘) écwivez un f-fichiew htmw définissant w-wa page. :3 c-cette page peut incwuwe des fichiews css et javascwipt, ^^;; comme u-une page web n-nyowmawe. 🥺 cette page, contine un e-exempwe dans [favouwite-cowouw](https://github.com/mdn/webextensions-exampwes/twee/mastew/favouwite-cowouw), (⑅˘꒳˘) c-compwend un fichiew :
 
-```html
-<!doctype html>
+```htmw
+<!doctype h-htmw>
 
-<html>
+<htmw>
   <head>
-    <meta charset="utf-8" />
+    <meta chawset="utf-8" />
   </head>
 
   <body>
-    <form>
-      <label>Favourite colour</label>
-      <input type="text" id="colour" />
-      <button type="submit">Save</button>
-    </form>
-    <script src="options.js"></script>
+    <fowm>
+      <wabew>favouwite c-cowouw</wabew>
+      <input type="text" id="cowouw" />
+      <button t-type="submit">save</button>
+    </fowm>
+    <scwipt swc="options.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-JavaScript en cours d'exécution dans la page peut utiliser toutes les [APIs des WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) auxquelles l'extension a des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). En particulier, vous pouvez utiliser l'API [`storage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage) pour conserver les préférences.
+j-javascwipt en couws d-d'exécution dans w-wa page peut utiwisew toutes wes [apis des webextension](/fw/docs/moziwwa/add-ons/webextensions/api) auxquewwes w'extension a des [pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions). nyaa~~ en pawticuwiew, :3 v-vous pouvez u-utiwisew w'api [`stowage`](/fw/docs/moziwwa/add-ons/webextensions/api/stowage) pouw consewvew wes p-pwéféwences.
 
-Insérez les fichiers de la page dans votre extension.
+i-inséwez wes f-fichiews de wa page dans votwe extension. ( ͡o ω ͡o )
 
-Vous devez également inclure une clé [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) dans votre fichier manifest.json, en lui donnant l'URL de la page.
+vous devez égawement i-incwuwe une cwé [`options_ui`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui) dans votwe fichiew manifest.json, mya en wui donnant w'uww de wa page. (///ˬ///✿)
 
 ```json
 "options_ui": {
-  "page": "options.html",
-  "browser_style": true
-},
+  "page": "options.htmw", (˘ω˘)
+  "bwowsew_stywe": t-twue
+}, ^^;;
 ```
 
-> **Note :** **Google Chrome** et **Opera** utilisent `chrome_style` au lieu de `browser_style`, donc si vous souhaitez les prendre en charge, vous devez ajouter les deux clés.
+> **note :** **googwe chwome** e-et **opewa** u-utiwisent `chwome_stywe` a-au wieu de `bwowsew_stywe`, (✿oωo) d-donc si v-vous souhaitez w-wes pwendwe en chawge, (U ﹏ U) v-vous devez ajoutew wes deux cwés. -.-
 
-Voir la page [`options_ui`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_ui) pour les **options de partage** entre votre page d'options et les scripts d'arrière-plan ou de contenu.
+voiw w-wa page [`options_ui`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/options_ui) p-pouw wes **options d-de pawtage** e-entwe votwe p-page d'options et wes scwipts d'awwièwe-pwan ou de contenu. ^•ﻌ•^
 
-## Options de conception de contenu
+## o-options de conception de contenu
 
-Pour plus de détails sur la façon de concevoir le contenu de vos options en fonction du style de Firefox, voir le [system de conception Photon](https://design.firefox.com/photon/index.html) et les [styles de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles) documentation.
+pouw pwus de détaiws suw wa façon de concevoiw we contenu d-de vos options en fonction du stywe de fiwefox, rawr voiw we [system d-de conception p-photon](https://design.fiwefox.com/photon/index.htmw) e-et wes [stywes de nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes) d-documentation. (˘ω˘)
 
-## Exemples
+## exempwes
 
-Le depot [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilisent les options de page :
+we depot [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) s-suw github c-contient pwusieuws exempwes de webextensions qui utiwisent wes options de page :
 
-- [favourite-colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour) utilise les options de page
+- [favouwite-cowouw](https://github.com/mdn/webextensions-exampwes/twee/mastew/favouwite-cowouw) utiwise w-wes options de page

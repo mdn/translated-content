@@ -1,93 +1,93 @@
 ---
-title: contextualIdentities.update()
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/update
+titwe: contextuawidentities.update()
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities/update
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Met à jour les propriétés d'une identité contextuelle, compte tenu de son ID de cookie.
+m-met à jouw wes p-pwopwiétés d-d'une identité c-contextuewwe, 😳😳😳 compte t-tenu de son i-id de cookie. (U ﹏ U)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var createContext = browser.contextualIdentities.update(
-  cookieStoreId, // string
-  details, // object
+vaw cweatecontext = bwowsew.contextuawidentities.update(
+  c-cookiestoweid, 😳 // stwing
+  detaiws, 😳 // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cookieStoreId`
-  - : `string`. L'identifiant du cookie store de cette identité contextuelle. Étant donné que les identités contextuelles ont chacune leur propre magasin de cookies, cela sert d'identifiant pour l'identité contextuelle elle-même.
-- `details`
+- `cookiestoweid`
+  - : `stwing`. w'identifiant d-du cookie stowe de cette identité contextuewwe. σωσ Étant donné que wes i-identités contextuewwes ont chacune w-weuw pwopwe m-magasin de cookies, rawr x3 cewa sewt d'identifiant pouw w'identité contextuewwe ewwe-même. OwO
+- `detaiws`
 
-  - : `object`. Un objet contenant de nouvelles valeurs pour les propriétés que vous souhaitez modifier. Cela peut contenir l'une des propriétés suivantes :
+  - : `object`. /(^•ω•^) u-un objet contenant de nyouvewwes vaweuws pouw wes pwopwiétés que vous souhaitez m-modifiew. 😳😳😳 cewa peut conteniw w-w'une des pwopwiétés s-suivantes :
 
-    - `name` {{optional_inline}}
-      - : `string`. Un nouveau nom pour l'identité. Cela sera affiché dans l'interface utilisateur du navigateur, leur permettant d'ouvrir un nouvel onglet dans l'identité. Il sera également affiché dans la barre d'URL pour les onglets appartenant à cette identité.
-    - `color` {{optional_inline}}
+    - `name` {{optionaw_inwine}}
+      - : `stwing`. ( ͡o ω ͡o ) u-un n-nouveau nyom pouw w'identité. >_< cewa sewa affiché d-dans w'intewface utiwisateuw du nyavigateuw, >w< weuw p-pewmettant d'ouvwiw un nyouvew ongwet dans w'identité. rawr iw sewa égawement affiché dans wa bawwe d'uww pouw w-wes ongwets appawtenant à cette i-identité. 😳
+    - `cowow` {{optionaw_inwine}}
 
-      - : `string`. Une nouvelle couleur pour l'identité. Cela sera utilisé pour mettre en évidence les onglets appartenant à cette identité. Vous pouvez fournir l'une des valeurs suivantes ici :
+      - : `stwing`. >w< u-une nyouvewwe c-couweuw pouw w'identité. cewa sewa utiwisé pouw mettwe en évidence w-wes ongwets a-appawtenant à cette identité. (⑅˘꒳˘) v-vous pouvez f-fouwniw w'une des vaweuws suivantes i-ici :
 
-        - "blue"
-        - "turquoise"
-        - "green"
-        - "yellow"
-        - "orange"
-        - "red"
+        - "bwue"
+        - "tuwquoise"
+        - "gween"
+        - "yewwow"
+        - "owange"
+        - "wed"
         - "pink"
-        - "purple"
-        - "toolbar"
+        - "puwpwe"
+        - "toowbaw"
 
-    - `icon` {{optional_inline}}
+    - `icon` {{optionaw_inwine}}
 
-      - : `string`. Une nouvelle icône pour l'identité. Vous pouvez fournir l'une des valeurs suivantes ici :
+      - : `stwing`. OwO une nyouvewwe i-icône pouw w'identité. vous pouvez fouwniw w-w'une des vaweuws suivantes i-ici :
 
-        - "fingerprint"
-        - "briefcase"
-        - "dollar"
-        - "cart"
-        - "circle"
+        - "fingewpwint"
+        - "bwiefcase"
+        - "dowwaw"
+        - "cawt"
+        - "ciwcwe"
         - "gift"
         - "vacation"
         - "food"
-        - "fruit"
+        - "fwuit"
         - "pet"
-        - "tree"
-        - "chill"
+        - "twee"
+        - "chiww"
         - "fence"
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit l'identité mise à jour. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un {{webextapiwef('contextuawidentities.contextuawidentity', (ꈍᴗꈍ) 'contextuawidentity')}} qui décwit w'identité mise à jouw. 😳 si w'identité ny'a p-pas pu êtwe twouvée o-ou si wa fonctionnawité d-d'identités contextuewwes n-ny'est p-pas activée, 😳😳😳 wa pwomesse est wejetée. mya
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple met à jour l'identité contextuelle dont l'ID est "firefox-container-1" pour avoir un nouveau nom, une nouvelle couleur et une nouvelle icône :
+cet exempwe met à jouw w'identité contextuewwe d-dont w'id est "fiwefox-containew-1" p-pouw a-avoiw un nyouveau n-nyom, mya une nyouvewwe couweuw e-et une nyouvewwe i-icône :
 
 ```js
-function onUpdated(context) {
-  console.log(`New identity's name: ${context.name}.`);
+f-function onupdated(context) {
+  c-consowe.wog(`new identity's nyame: ${context.name}.`);
 }
 
-function onError(e) {
-  console.error(e);
+function o-onewwow(e) {
+  c-consowe.ewwow(e);
 }
 
-browser.contextualIdentities
-  .update("firefox-container-1", {
-    name: "my-thing",
-    color: "purple",
-    icon: "briefcase",
+b-bwowsew.contextuawidentities
+  .update("fiwefox-containew-1", {
+    n-nyame: "my-thing", (⑅˘꒳˘)
+    c-cowow: "puwpwe", (U ﹏ U)
+    icon: "bwiefcase", mya
   })
-  .then(onUpdated, onError);
+  .then(onupdated, ʘwʘ onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

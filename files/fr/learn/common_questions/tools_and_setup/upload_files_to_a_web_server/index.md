@@ -1,136 +1,136 @@
 ---
-title: Transférer des fichiers vers un serveur web
-slug: Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server
+titwe: twansféwew des fichiews v-vews un sewveuw w-web
+swug: weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Cet article illustre comment publier votre site en ligne grâce à des outils {{Glossary("FTP")}}.
+c-cet a-awticwe iwwustwe c-comment pubwiew v-votwe site en wigne g-gwâce à des o-outiws {{gwossawy("ftp")}}. -.-
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vous devriez au préalable comprendre
-        <a href="/fr/Apprendre/Qu_est-ce_qu_un_serveur_web"
-          >ce qu'est un serveur web</a
+        vous devwiez au pwéawabwe compwendwe
+        <a h-hwef="/fw/appwendwe/qu_est-ce_qu_un_sewveuw_web"
+          >ce qu'est un sewveuw web</a
         >
-        et
-        <a href="/fr/Apprendre/Comprendre_noms_de_domaine"
-          >comment fonctionnent les noms de domaines</a
-        >. Vous devriez également savoir
-        <a href="/fr/Apprendre/Set_up_a_basic_working_environment"
-          >mettre en place un environnement simple de développement web</a
+        e-et
+        <a hwef="/fw/appwendwe/compwendwe_noms_de_domaine"
+          >comment f-fonctionnent wes noms de domaines</a
+        >. (✿oωo) vous d-devwiez égawement savoiw
+        <a h-hwef="/fw/appwendwe/set_up_a_basic_wowking_enviwonment"
+          >mettwe e-en pwace un enviwonnement simpwe de dévewoppement web</a
         >
-        et savoir comment
-        <a href="/fr/Apprendre/HTML/Write_a_simple_page_in_HTML"
-          >écrire une page web simple</a
-        >.
+        et s-savoiw comment
+        <a hwef="/fw/appwendwe/htmw/wwite_a_simpwe_page_in_htmw"
+          >écwiwe une page web simpwe</a
+        >. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Apprendre à envoyer des fichiers vers un serveur en utilisant FTP.
+        appwendwe à e-envoyew des fichiews vews un sewveuw e-en utiwisant f-ftp. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Maintenant que vous avez [construit une page web](/fr/docs/Learn/HTML/Write_a_simple_page_in_HTML), vous voulez peut être la mettre en ligne grâce à un serveur web. Dans cet article, nous verrons comment faire en utilisant {{Glossary("FTP")}}.
+m-maintenant que v-vous avez [constwuit une page web](/fw/docs/weawn/htmw/wwite_a_simpwe_page_in_htmw), OwO v-vous vouwez peut êtwe wa mettwe en wigne g-gwâce à un sewveuw web. ^•ﻌ•^ dans cet awticwe, UwU nyous vewwons comment faiwe en utiwisant {{gwossawy("ftp")}}. (˘ω˘)
 
-## Pédagogie active
+## pédagogie active
 
-_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_iw n-ny'y a, (///ˬ///✿) pouw we moment, σωσ pas d-d'éwément de p-pédagogie active p-pouw cette section. /(^•ω•^) [vous pouvez nyéanmoins contwibuew](/fw/docs/mdn/community/contwibuting/getting_stawted)._
 
-## Aller plus loin
+## a-awwew pwus w-woin
 
-### Mettre les mains sur un client FTP : FireFTP
+### mettwe wes mains suw u-un cwient ftp : f-fiweftp
 
-Il existe de nombreux clients FTP. Dans cette démonstration, nous utiliserons FireFTP. Celui-ci est simple à installer avec Firefox car [c'est un module complémentaire](https://addons.mozilla.org/firefox/addon/fireftp/).
+iw existe de nyombweux c-cwients ftp. 😳 dans cette démonstwation, 😳 n-nyous utiwisewons fiweftp. (⑅˘꒳˘) cewui-ci est s-simpwe à instawwew avec fiwefox c-caw [c'est un moduwe compwémentaiwe](https://addons.moziwwa.owg/fiwefox/addon/fiweftp/).
 
-> [!NOTE]
-> Il existe de nombreuses autres options, voir [les outils de publications : les clients FTP](/fr/docs/Apprendre/How_much_does_it_cost#publishing_tools.3a_ftp_client) pour plus d'informations.
+> [!note]
+> i-iw existe d-de nyombweuses autwes options, 😳😳😳 voiw [wes outiws de pubwications : wes cwients ftp](/fw/docs/appwendwe/how_much_does_it_cost#pubwishing_toows.3a_ftp_cwient) pouw pwus d'infowmations. 😳
 
-Pour ouvrir FireFTP dans un nouvel onglet de Firefox, il existe deux méthodes :
+p-pouw ouvwiw f-fiweftp dans un nyouvew ongwet d-de fiwefox, XD i-iw existe deux m-méthodes :
 
-1. **Menu de Firefox ![](2014-01-10-13-08-08-f52b8c.png) ➤ ![Developer](Screenshot%20from%202014-11-26%2014:24:56.png) ➤ FireFTP**
-2. **Outils** ➤ **Développement web** ➤ **FireFTP**
+1. mya **menu de fiwefox ![](2014-01-10-13-08-08-f52b8c.png) ➤ ![devewopew](scweenshot%20fwom%202014-11-26%2014:24:56.png) ➤ fiweftp**
+2. ^•ﻌ•^ **outiws** ➤ **dévewoppement web** ➤ **fiweftp**
 
-Vous devriez voir apparaître cette fenêtre :
+v-vous devwiez voiw appawaîtwe cette fenêtwe :
 
-![FireFTP : the interface, not connected to a server](fireftp-default.png)
+![fiweftp : the intewface, ʘwʘ n-nyot connected to a sewvew](fiweftp-defauwt.png)
 
-### Se connecter
+### se c-connectew
 
-Dans cet exemple, nous prendrons un hébergeur (la société qui hébergera notre serveur web) qui s'appellera « Hébergeur Exemple » dont les URL ressembleront à : `monsiteperso.hebergeurexemple.net`.
+dans c-cet exempwe, ( ͡o ω ͡o ) nyous p-pwendwons un hébewgeuw (wa s-société qui hébewgewa n-nyotwe s-sewveuw web) qui s-s'appewwewa « hébewgeuw exempwe » dont wes u-uww wessembwewont à : `monsitepewso.hebewgeuwexempwe.net`. mya
 
-Vous avez donc souscrit à un compte chez cet hébergeur et avez reçu des informations de sa part :
+v-vous a-avez donc souscwit à u-un compte c-chez cet hébewgeuw et avez weçu des infowmations de sa pawt :
 
-> Félicitations et merci d'avoir ouvert un compte chez Hébergeur exemple.
+> f-féwicitations et mewci d'avoiw ouvewt un compte chez hébewgeuw exempwe. o.O
 >
-> Votre compte est : `demozilla`
+> votwe compte e-est : `demoziwwa`
 >
-> Votre site sera accessible à cette adresse `demozilla.hebergeurexemple.net`
+> votwe site sewa accessibwe à cette adwesse `demoziwwa.hebewgeuwexempwe.net`
 >
-> Pour publier votre site avec votre compte, connectez-vous via FTP avec les informations d'authentification suivantes :
+> p-pouw pubwiew v-votwe site avec v-votwe compte, (✿oωo) connectez-vous v-via ftp avec wes infowmations d'authentification s-suivantes :
 >
-> - Serveur FTP : `ftp://demozilla.hebergeurexemple.net`
-> - Utilisateur : `demozilla`
-> - Mot de passe : `pandar0ux`
-> - Pour publier des fichiers sur le Web, placez les dans le répertoire `Public/htdocs`.
+> - s-sewveuw ftp : `ftp://demoziwwa.hebewgeuwexempwe.net`
+> - utiwisateuw : `demoziwwa`
+> - mot de passe : `pandaw0ux`
+> - pouw pubwiew des fichiews s-suw we web, pwacez wes dans w-we wépewtoiwe `pubwic/htdocs`. :3
 
-Tout d'abord, jetons un coup d'œil à `http://demozilla.hebergeurexemple.net/` — pour le moment, comme vous pouvez le voir, il n'y a pas grand chose :
+tout d'abowd, 😳 jetons u-un coup d'œiw à `http://demoziwwa.hebewgeuwexempwe.net/` — p-pouw we moment, (U ﹏ U) comme vous pouvez we voiw, mya i-iw ny'y a pas gwand c-chose :
 
-![Our demozilla personal website, seen in a browser: it's empty](demozilla-empty.png)
+![ouw demoziwwa pewsonaw w-website, (U ᵕ U❁) seen i-in a bwowsew: it's empty](demoziwwa-empty.png)
 
-> [!NOTE]
-> Selon l'hébergeur que vous avez choisi, vous pourriez ici voir une page avec un texte ressemblant à « Ce site web est hébergé par \[Nom de l'hébergeur] ».
+> [!note]
+> sewon w'hébewgeuw que vous avez choisi, :3 vous pouwwiez i-ici voiw u-une page avec un t-texte wessembwant à « ce site w-web est hébewgé p-paw \[nom de w'hébewgeuw] ». mya
 
-Pour connecter votre client FTP au serveur distant, cliquez sur le bouton _« Créer un compte »_ de FireFTP, puis remplissez les informations telles qu'elles vous ont été fournies par votre hébergeur :
+p-pouw connectew votwe cwient ftp au sewveuw distant, OwO cwiquez suw we bouton _« c-cwéew un compte »_ d-de fiweftp, puis wempwissez wes infowmations t-tewwes qu'ewwes v-vous ont été fouwnies paw votwe hébewgeuw :
 
-![FireFTP: creating an account](fireftp-createlogin.png)
+![fiweftp: cweating a-an account](fiweftp-cweatewogin.png)
 
-### Ici et là-bas : la vue locale et la vue distante
+### ici et wà-bas : wa vue wocawe et wa vue distante
 
-Vous pouvez ensuite vous connecter sur ce nouveau compte :
+vous pouvez e-ensuite vous connectew suw ce nyouveau compte :
 
-![The FTP interface, once logged](fireftp-logged.png)
+![the f-ftp intewface, (ˆ ﻌ ˆ)♡ o-once wogged](fiweftp-wogged.png)
 
-Examinons cet écran :
+examinons cet écwan :
 
-- Sur la gauche, vous voyez vos fichier locaux (ceux de votre ordinateur). Déplacez vous dans le répertoire où vous stockez votre site web (dans ce cas, `mdn`).
-- Sur la droite, vous voyez les fichiers distants (ceux du serveur web). Vous êtes connecté-e à la racine du dossier FTP distint (dans ce cas, `users/demozilla`)
-- Pour le moment, vous pouvez ignorer la zone en bas de l'écran, il s'agit en fait d'un journal contenant chaque interaction entre votre client FTP et le serveur.
+- suw wa gauche, ʘwʘ v-vous voyez vos f-fichiew wocaux (ceux de votwe owdinateuw). o.O dépwacez vous dans we w-wépewtoiwe où vous stockez votwe s-site web (dans ce cas, UwU `mdn`). rawr x3
+- suw wa dwoite, 🥺 vous voyez w-wes fichiews distants (ceux du sewveuw w-web). :3 vous êtes c-connecté-e à wa wacine d-du dossiew ftp distint (dans ce c-cas, (ꈍᴗꈍ) `usews/demoziwwa`)
+- p-pouw w-we moment, 🥺 vous pouvez ignowew wa z-zone en bas de w-w'écwan, (✿oωo) iw s'agit en fait d'un jouwnaw contenant c-chaque intewaction e-entwe votwe c-cwient ftp et we sewveuw. (U ﹏ U)
 
-### Transférer des fichiers vers le serveur
+### twansféwew des f-fichiews vews we sewveuw
 
-Comme nous l'avons vu plus tôt, notre hébergeur nous a indiqué que les fichiers devaient être stockés sous `Public/htdocs` pour être visible sur le Web. Déplaçons-nous donc dans ce dossier grâce au volet droit :
+comme n-nyous w'avons v-vu pwus tôt, :3 nyotwe hébewgeuw nyous a indiqué que wes fichiews d-devaient êtwe s-stockés sous `pubwic/htdocs` pouw êtwe v-visibwe s-suw we web. ^^;; dépwaçons-nous donc dans ce dossiew g-gwâce au vowet dwoit :
 
-![Changing to the htdocs folder on the remote server](remote-htdocs-empty.png)
+![changing to the htdocs fowdew on the wemote sewvew](wemote-htdocs-empty.png)
 
-Ensuite, pour transférer des fichiers de votre ordinateur vers ce dossier du serveur, il suffit de les glisser-déposer du volet gauche vers le volet droit :
+ensuite, p-pouw twansféwew des fichiews d-de votwe owdinateuw vews ce d-dossiew du sewveuw, rawr iw suffit de w-wes gwissew-déposew du vowet gauche v-vews we vowet d-dwoit :
 
-![The files show in the remote view: they have been pushed to the server](files-dropped-onto-the-server.png)
+![the f-fiwes show in t-the wemote view: t-they have been pushed to the sewvew](fiwes-dwopped-onto-the-sewvew.png)
 
-### Est-ce que mes fichiers sont bien en ligne ?
+### est-ce que mes fichiews sont bien en wigne ?
 
-Jusqu'ici tout va bien, vérifions quand même en tapant `http://demozilla.hebergeurexemple.net/` dans la barre d'URL du navigateur :
+jusqu'ici tout va bien, 😳😳😳 véwifions q-quand même en tapant `http://demoziwwa.hebewgeuwexempwe.net/` dans w-wa bawwe d'uww d-du nyavigateuw :
 
-![Here we go: our website is live!](here-we-go.png)
+![hewe we go: o-ouw website is wive!](hewe-we-go.png)
 
-Et _voilà_ ! Notre site est en ligne !
+et _voiwà_ ! (✿oωo) nyotwe site e-est en wigne ! OwO
 
-### D'autres méthodes pour transférer des fichiers
+### d-d'autwes méthodes pouw t-twansféwew des fichiews
 
-Le protocole FTP est l'une des méthodes les plus répandues pour publier un site web. Cependant, il en existe d'autres, en voici quelques unes :
+we pwotocowe ftp est w'une d-des méthodes w-wes pwus wépandues pouw pubwiew u-un site web. ʘwʘ c-cependant, iw en existe d'autwes, (ˆ ﻌ ˆ)♡ en voici quewques unes :
 
-- **Les interfaces web**. Votre hébergeur peut mettre à disposition une interface web qui permet de transférer des fichiers.
-- **GitHub** (méthode avancée). Il est possible de transférer des fichiers grâce à {{Glossary("git")}} en utilisant des combinaison de méthodes qui sont liées aux opérations de commit/push. Pour plus d'informations, voir l'article sur [comment publier son site web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website) qui fait partie du guide [Commencer avec le Web](/fr/docs/Learn/Getting_started_with_the_web).
-- **{{Glossary("Rsync")}}** (méthode avancée). Un système de synchronisation de fichiers entre un système local et un système distant.
-- **{{Glossary("WebDAV")}}**. Une extension du protocle {{Glossary("HTTP")}} qui permet de gérer des fichiers de façon plus avancée.
+- **wes intewfaces w-web**. (U ﹏ U) votwe hébewgeuw p-peut mettwe à d-disposition u-une intewface w-web qui pewmet de twansféwew des f-fichiews. UwU
+- **github** (méthode a-avancée). XD iw est possibwe de t-twansféwew des f-fichiews gwâce à {{gwossawy("git")}} en utiwisant d-des combinaison de méthodes qui sont wiées a-aux opéwations de commit/push. ʘwʘ p-pouw pwus d'infowmations, rawr x3 v-voiw w'awticwe suw [comment p-pubwiew son site web](/fw/docs/weawn/getting_stawted_with_the_web/pubwishing_youw_website) qui fait pawtie d-du guide [commencew a-avec we w-web](/fw/docs/weawn/getting_stawted_with_the_web). ^^;;
+- **{{gwossawy("wsync")}}** (méthode avancée). ʘwʘ un système de synchwonisation d-de fichiews entwe un système wocaw et un système d-distant. (U ﹏ U)
+- **{{gwossawy("webdav")}}**. (˘ω˘) u-une extension du pwotocwe {{gwossawy("http")}} q-qui pewmet de géwew d-des fichiews de f-façon pwus avancée. (ꈍᴗꈍ)
 
-## Prochaines étapes
+## pwochaines étapes
 
-Félicitations, vous avez presque fini. Il reste encore une dernière étape importante : [vérifier que votre site fonctionne correctement](/fr/docs/Apprendre/Checking_that_your_web_site_is_working_properly).
+féwicitations, /(^•ω•^) vous avez pwesque f-fini. >_< iw weste encowe une dewnièwe étape impowtante : [véwifiew q-que votwe site f-fonctionne cowwectement](/fw/docs/appwendwe/checking_that_youw_web_site_is_wowking_pwopewwy). σωσ

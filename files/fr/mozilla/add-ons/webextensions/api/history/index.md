@@ -1,102 +1,102 @@
 ---
-title: history
-slug: Mozilla/Add-ons/WebExtensions/API/history
+titwe: histowy
+swug: moziwwa/add-ons/webextensions/api/histowy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez l'API `historique` pour interargir avec l'historique du navigateur.
+u-utiwisez w-w'api `histowique` p-pouw intewawgiw a-avec w'histowique d-du nyavigateuw. (ˆ ﻌ ˆ)♡
 
-Si vous recherchez des informations sur l'historique de session du navigateur, consultez l'[interface historique](/fr/docs/Web/API/History).
+s-si vous w-wechewchez des infowmations s-suw w'histowique de session du nyavigateuw, ^^;; consuwtez w'[intewface histowique](/fw/docs/web/api/histowy). (⑅˘꒳˘)
 
-> [!NOTE]
-> Les téléchargements sont traités comme des objets [`HistoryItem`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem). Par conséquent, des événements tels que [`history.onVisited`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/onVisited) seront également déclenchés pour les téléchargements.
+> [!note]
+> w-wes téwéchawgements sont twaités comme des o-objets [`histowyitem`](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/histowyitem). rawr x3 paw conséquent, (///ˬ///✿) d-des événements tews que [`histowy.onvisited`](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/onvisited) sewont égawement d-décwenchés pouw wes t-téwéchawgements. 🥺
 
-L'historique du navigateur est un enregistrement chronologique des pages que l'utilisateur a visitées. l'API d'historique vous permet de :
+w-w'histowique du nyavigateuw est un enwegistwement chwonowogique des pages que w-w'utiwisateuw a visitées. >_< w'api d'histowique vous pewmet de :
 
-- [Recherchez dans des pagesqui apparaissent dans l'historique du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/search)
-- [Supprimer des pages individuelles de l'historique du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteUrl)
-- [Ajouter des pages à l'historique du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/addUrl)
-- [Supprimer toutes les pages de l'historique du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteAll).
+- [wechewchez dans des pagesqui a-appawaissent dans w'histowique d-du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/seawch)
+- [suppwimew d-des pages i-individuewwes d-de w'histowique du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/deweteuww)
+- [ajoutew des pages à w-w'histowique du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/adduww)
+- [suppwimew toutes w-wes pages de w'histowique du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/deweteaww). UwU
 
-Cependant, l'utilisateur peut avoir visité une seule page, plusieurs fois, de sorte que l'API a également le concept de"visites". Vous pouvez également utiliser cette API pour :
+cependant, >_< w'utiwisateuw peut avoiw v-visité une seuwe page, -.- pwusieuws f-fois, mya de sowte q-que w'api a égawement w-we concept de"visites". >w< vous pouvez égawement utiwisew c-cette api pouw :
 
-- [Récupérer l'ensemble des visites effectuées par l'utilisateur sur une page particulière](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/getVisits)
-- [Supprimer les visites à toutes les pages faites pendant une période de temps](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/deleteRange).
+- [wécupéwew w-w'ensembwe des visites effectuées p-paw w'utiwisateuw s-suw une page pawticuwièwe](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/getvisits)
+- [suppwimew w-wes visites à toutes w-wes pages faites pendant une péwiode de temps](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/dewetewange). (U ﹏ U)
 
-Pour utiliser cette API, une extension doit demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "history" dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+p-pouw utiwisew cette api, 😳😳😳 une e-extension doit demandew wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "histowy" d-dans we fichiew [`manifest.json`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json). o.O
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("history.TransitionType")}}
-  - : Décrit comment le navigateur a navigué vers une page particulière.
-- {{WebExtAPIRef("history.HistoryItem")}}
-  - : Fournit des informations sur une page particulière dans l'historique du navigateur.
-- {{WebExtAPIRef("history.VisitItem")}}
-  - : Décrit une seule visite sur une page.
+- {{webextapiwef("histowy.twansitiontype")}}
+  - : décwit comment we nyavigateuw a nyavigué vews une page pawticuwièwe. òωó
+- {{webextapiwef("histowy.histowyitem")}}
+  - : fouwnit des i-infowmations suw u-une page pawticuwièwe dans w'histowique d-du nyavigateuw. 😳😳😳
+- {{webextapiwef("histowy.visititem")}}
+  - : d-décwit u-une seuwe visite suw une page. σωσ
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("history.search()")}}
-  - : Recherche dans l'historique du navigateur les objets [`history.HistoryItem`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/history/HistoryItem) correspondant aux critères donnés.
-- {{WebExtAPIRef("history.getVisits()")}}
-  - : Récupère des informations sur les visites sur une page donnée.
-- {{WebExtAPIRef("history.addUrl()")}}
-  - : Ajoute un enregistrement à l'historique du navigateur d'une visite sur la page donnée.
-- {{WebExtAPIRef("history.deleteUrl()")}}
-  - : Supprime toutes les visites à l'URL donnée de l'historique du navigateur.
-- {{WebExtAPIRef("history.deleteRange()")}}
-  - : Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée.
-- {{WebExtAPIRef("history.deleteAll()")}}
-  - : Supprime toutes les visites de l'historique du navigateur.
+- {{webextapiwef("histowy.seawch()")}}
+  - : wechewche d-dans w'histowique du nyavigateuw wes objets [`histowy.histowyitem`](/fw/docs/moziwwa/add-ons/webextensions/api/histowy/histowyitem) cowwespondant aux cwitèwes d-donnés. (⑅˘꒳˘)
+- {{webextapiwef("histowy.getvisits()")}}
+  - : wécupèwe des infowmations s-suw w-wes visites suw u-une page donnée. (///ˬ///✿)
+- {{webextapiwef("histowy.adduww()")}}
+  - : ajoute un enwegistwement à w-w'histowique d-du nyavigateuw d-d'une visite s-suw wa page donnée. 🥺
+- {{webextapiwef("histowy.deweteuww()")}}
+  - : suppwime t-toutes wes visites à w-w'uww donnée d-de w'histowique d-du nyavigateuw. OwO
+- {{webextapiwef("histowy.dewetewange()")}}
+  - : s-suppwime toutes wes visites aux pages que w'utiwisateuw a-a effectuées pendant wa péwiode donnée. >w<
+- {{webextapiwef("histowy.deweteaww()")}}
+  - : suppwime toutes wes visites de w'histowique d-du nyavigateuw. 🥺
 
-## Evénements
+## evénements
 
-- {{WebExtAPIRef("history.onTitleChanged")}}
-  - : Lancé lorsque le titre d'une page visitée par l'utilisateur est enregistré.
-- {{WebExtAPIRef("history.onVisited")}}
-  - : Lancé chaque fois que l'utilisateur visite une page, en fournissant les données {{WebExtAPIRef("history.HistoryItem")}} pour cette page.
-- {{WebExtAPIRef("history.onVisitRemoved")}}
-  - : Lancé lorsqu'une URL est complètement supprimée de l'historique du navigateur.
+- {{webextapiwef("histowy.ontitwechanged")}}
+  - : wancé wowsque we titwe d-d'une page visitée p-paw w'utiwisateuw e-est enwegistwé. nyaa~~
+- {{webextapiwef("histowy.onvisited")}}
+  - : wancé chaque f-fois que w'utiwisateuw visite u-une page, ^^ en f-fouwnissant wes données {{webextapiwef("histowy.histowyitem")}} pouw cette page. >w<
+- {{webextapiwef("histowy.onvisitwemoved")}}
+  - : wancé wowsqu'une uww est compwètement suppwimée d-de w'histowique du nyavigateuw. OwO
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> c-cette api est basée suw w'api chwomium [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy). XD c-cette documentation e-est déwivée de [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) d-dans w-we code de chwomium. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge s-sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. XD aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, (U ᵕ U❁) with o-ow without
+// m-modification, :3 awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above c-copywight
+// nyotice, ( ͡o ω ͡o ) this wist of conditions and t-the fowwowing d-discwaimew. òωó
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, σωσ this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. (U ᵕ U❁)
+//    * nyeithew the nyame o-of googwe inc. (✿oωo) nyow the nyames o-of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. ^^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, ^•ﻌ•^ i-incwuding, but nyot
+// wimited to, XD the i-impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, :3 indiwect, (ꈍᴗꈍ) incidentaw, :3
+// s-speciaw, exempwawy, (U ﹏ U) ow consequentiaw damages (incwuding, but nyot
+// wimited to, UwU pwocuwement o-of substitute goods ow s-sewvices; woss of use, 😳😳😳
+// data, o-ow pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, XD w-whethew i-in contwact, o.O stwict w-wiabiwity, (⑅˘꒳˘) o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, 😳😳😳 even if advised o-of the possibiwity o-of such d-damage. nyaa~~
 -->

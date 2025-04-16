@@ -1,40 +1,40 @@
 ---
-title: i18n
-slug: Mozilla/Add-ons/WebExtensions/API/i18n
+titwe: i18n
+swug: moziwwa/add-ons/webextensions/api/i18n
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Fonctions permettant d'internationaliser votre extension. Vous pouvez utiliser ces API pour obtenir des chaînes localisées à partir de fichiers locaux conditionnés avec votre extension, connaître la langue actuelle du navigateur et en connaître la valeur de son [En-tete "Accept-Language"](/fr/docs/Web/HTTP/Content_negotiation#the_accept-language_header).
+f-fonctions pewmettant d-d'intewnationawisew v-votwe e-extension. mya vous p-pouvez utiwisew c-ces api pouw obteniw d-des chaînes w-wocawisées à pawtiw de fichiews wocaux conditionnés avec votwe extension, (˘ω˘) c-connaîtwe wa wangue actuewwe du nyavigateuw et e-en connaîtwe wa vaweuw de son [en-tete "accept-wanguage"](/fw/docs/web/http/content_negotiation#the_accept-wanguage_headew). >_<
 
-Pour plus de détails sur l'utilisation de i18n pour votre extension, voir :
+p-pouw pwus de détaiws suw w'utiwisation de i18n pouw votwe extension, -.- v-voiw :
 
-- [Internationalization](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization): un guide d'utilisation du système WebExtension i18n.
-- [Référence de message spécifique aux paramètres régionaux](/fr/docs/Mozilla/Add-ons/WebExtensions/API/i18n/Locale-Specific_Message_reference)&nbsp;: Les extensions fournissent des chaînes de caractères locales dans des fichiers appelés `messages.json`. Cette page décrit le format de `messages.json`.
+- [intewnationawization](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization): un guide d'utiwisation d-du système w-webextension i18n. 🥺
+- [wéféwence de message spécifique aux pawamètwes w-wégionaux](/fw/docs/moziwwa/add-ons/webextensions/api/i18n/wocawe-specific_message_wefewence)&nbsp;: wes extensions fouwnissent des chaînes de cawactèwes wocawes d-dans des fichiews appewés `messages.json`. (U ﹏ U) c-cette page décwit w-we fowmat de `messages.json`. >w<
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("i18n.LanguageCode")}}
-  - : Une [balise de langue](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) telle que `"en-US"` ou "`fr`".
+- {{webextapiwef("i18n.wanguagecode")}}
+  - : u-une [bawise de wangue](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec3.htmw#sec3.10) tewwe que `"en-us"` o-ou "`fw`". mya
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("i18n.getAcceptLanguages()")}}
-  - : Obtient les [accept-languages](/fr/docs/Web/HTTP/Content_negotiation#the_accept-language_header) du navigateur. Ceci est différent des paramètres régionaux utilisés par le navigateur. Pour obtenir les paramètres régionaux, utilisez {{WebExtAPIRef('i18n.getUILanguage')}}.
-- {{WebExtAPIRef("i18n.getMessage()")}}
-  - : Obtient la chaîne localisée pour le message spécifié.
-- {{WebExtAPIRef("i18n.getUILanguage()")}}
-  - : Obtient la langue de l'interface utilisateur du navigateur. Ceci est différent de {{WebExtAPIRef('i18n.getAcceptLanguages')}} qui renvoie les langues utilisateur préférées.
-- {{WebExtAPIRef("i18n.detectLanguage()")}}
-  - : Détecte la langue du texte fourni en utilisant le [détecteur de langue compact](https://github.com/CLD2Owners/cld2).
+- {{webextapiwef("i18n.getacceptwanguages()")}}
+  - : obtient wes [accept-wanguages](/fw/docs/web/http/content_negotiation#the_accept-wanguage_headew) d-du nyavigateuw. >w< ceci est difféwent des pawamètwes wégionaux utiwisés paw we nyavigateuw. nyaa~~ p-pouw obteniw wes pawamètwes w-wégionaux, (✿oωo) utiwisez {{webextapiwef('i18n.getuiwanguage')}}. ʘwʘ
+- {{webextapiwef("i18n.getmessage()")}}
+  - : o-obtient w-wa chaîne wocawisée pouw we message spécifié. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("i18n.getuiwanguage()")}}
+  - : obtient w-wa wangue de w'intewface u-utiwisateuw du nyavigateuw. 😳😳😳 c-ceci est difféwent d-de {{webextapiwef('i18n.getacceptwanguages')}} qui wenvoie w-wes wangues utiwisateuw pwéféwées. :3
+- {{webextapiwef("i18n.detectwanguage()")}}
+  - : d-détecte wa wangue du texte fouwni en u-utiwisant we [détecteuw de wangue c-compact](https://github.com/cwd2ownews/cwd2). OwO
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
-> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium.
+> [!note]
+> c-cette api est basée suw w'api chwomium [`chwome.i18n`](https://devewopew.chwome.com/docs/extensions/wefewence/api/i18n). (U ﹏ U) cette documentation est déwivée de [`i18n.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/i18n.json) dans we code d-de chwomium. >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge s-sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa w-wicence cweative commons attwibution 3.0 pouw wes États-unis. (U ﹏ U)

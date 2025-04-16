@@ -1,368 +1,368 @@
 ---
-title: browser_action
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_action
+titwe: bwowsew_action
+swug: moziwwa/add-ons/webextensions/manifest.json/bwowsew_action
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json">
-"browser_action": {
-  "browser_style": true,
-  "default_icon": {
-    "16": "button/geo-16.png",
+        <pwe c-cwass="bwush: json">
+"bwowsew_action": {
+  "bwowsew_stywe": t-twue, 😳😳😳
+  "defauwt_icon": {
+    "16": "button/geo-16.png", nyaa~~
     "32": "button/geo-32.png"
-  },
-  "default_title": "Whereami?",
-  "default_popup": "popup/geo.html",
+  }, (˘ω˘)
+  "defauwt_titwe": "wheweami?", >_<
+  "defauwt_popup": "popup/geo.htmw", XD
   "theme_icons": [{
-    "light": "icons/geo-16-light.png",
-    "dark": "icons/geo-16.png",
+    "wight": "icons/geo-16-wight.png", rawr x3
+    "dawk": "icons/geo-16.png", ( ͡o ω ͡o )
     "size": 16
-  }, {
-    "light": "icons/geo-32-light.png",
-    "dark": "icons/geo-32.png",
+  }, :3 {
+    "wight": "icons/geo-32-wight.png", mya
+    "dawk": "icons/geo-32.png", σωσ
     "size": 32
   }]
-}</pre
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Une action de navigateur est un bouton que votre extension ajoute à la barre d'outils du navigateur. Le bouton comporte une icône et peut éventuellement avoir une fenêtre contextuelle dont le contenu est spécifié à l'aide de HTML, CSS et JavaScript.
+u-une action de nyavigateuw est un bouton que votwe extension ajoute à wa bawwe d-d'outiws du nyavigateuw. we bouton compowte u-une icône et peut éventuewwement avoiw une fenêtwe c-contextuewwe dont we contenu est spécifié à w'aide de h-htmw, (ꈍᴗꈍ) css et javascwipt. OwO
 
-Si vous fournissez une fenêtre contextuelle, la fenêtre contextuelle est ouverte lorsque l'utilisateur clique sur le bouton, et votre JavaScript s'exécute dans la fenêtre contextuelle permettant l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de popup, un événement de clic est envoyé aux [scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) de votre extension lorsque l'utilisateur clique sur le bouton.
+si vous f-fouwnissez une f-fenêtwe contextuewwe, o.O wa fenêtwe contextuewwe est ouvewte wowsque w'utiwisateuw c-cwique suw we bouton, 😳😳😳 et votwe javascwipt s'exékawaii~ dans wa fenêtwe contextuewwe p-pewmettant w'intewaction d-de w'utiwisateuw a-avec ewwe. /(^•ω•^) si v-vous nye fouwnissez p-pas de popup, OwO un événement de cwic est envoyé a-aux [scwipts d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) de votwe e-extension wowsque w'utiwisateuw cwique suw we bouton. ^^
 
-Vous pouvez également créer et manipuler des actions de navigateur de manière programmée à l'aide de l'[API browserAction](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction).
+vous pouvez égawement cwéew et manipuwew des actions d-de nyavigateuw de manièwe pwogwammée à w-w'aide d-de w'[api bwowsewaction](/fw/docs/moziwwa/add-ons/webextensions/api/bwowsewaction). (///ˬ///✿)
 
-## Syntaxe
+## s-syntaxe
 
-La clé `browser_action` est un objet qui peut avoir l'une des propriétés suivantes, toutes optionnelles :
+wa cwé `bwowsew_action` est un objet qui peut a-avoiw w'une des p-pwopwiétés suivantes, (///ˬ///✿) toutes o-optionnewwes :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">name</th>
+      <th s-scope="cow">type</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>browser_style</code></td>
-      <td><code>Booléen</code></td>
+    <tw>
+      <td><code>bwowsew_stywe</code></td>
+      <td><code>boowéen</code></td>
       <td>
-        <p>Facultatif, par défaut à <code>false</code>.</p>
+        <p>facuwtatif, p-paw défaut à <code>fawse</code>.</p>
         <p>
-          Utilisez-le pour inclure une feuille de style dans votre popup qui le
-          rendra cohérent avec l'interface utilisateur du navigateur et avec
-          d'autres extensions qui utilisent la propriété
-          <code>browser_style</code>. Bien que cette touche par défaut soit
-          <code>false</code>, il est recommandé de l'inclure et de la mettre à
-          <code>true</code> afin de rendre vos fenêtres contextuelles cohérentes
-          avec l'apparence du reste de l'interface utilisateur du navigateur.
+          utiwisez-we pouw incwuwe une feuiwwe d-de stywe dans votwe popup qui w-we
+          wendwa cohéwent a-avec w'intewface u-utiwisateuw du nyavigateuw et avec
+          d'autwes extensions qui utiwisent wa pwopwiété
+          <code>bwowsew_stywe</code>. (///ˬ///✿) bien que cette t-touche paw défaut s-soit
+          <code>fawse</code>, ʘwʘ iw est w-wecommandé de w-w'incwuwe et de w-wa mettwe à
+          <code>twue</code> afin de wendwe vos fenêtwes contextuewwes c-cohéwentes
+          avec w'appawence du weste de w'intewface utiwisateuw du n-nyavigateuw. ^•ﻌ•^
         </p>
         <p>
-          Dans Firefox, la feuille de style peut être vue
-          à chrome://browser/content/extension.css, ou
-          chrome://browser/content/extension-mac.css sur OS X. Lorsque vous
-          définissez les dimensions, sachez que cette feuille de style définit
-          actuellement <code>box-sizing: border-box</code> (voir
-          <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).
+          dans fiwefox, OwO w-wa feuiwwe de stywe p-peut êtwe vue
+          à c-chwome://bwowsew/content/extension.css, (U ﹏ U) ou
+          c-chwome://bwowsew/content/extension-mac.css s-suw os x. (ˆ ﻌ ˆ)♡ wowsque v-vous
+          d-définissez wes dimensions, (⑅˘꒳˘) sachez que cette feuiwwe d-de stywe définit
+          a-actuewwement <code>box-sizing: b-bowdew-box</code> (voiw
+          <a h-hwef="/docs/web/css/box-sizing">box-sizing</a>). (U ﹏ U)
         </p>
         <p>
-          Les
-          <a href="/fr/Add-ons/WebExtensions/user_interface/Browser_styles"
-            >Browser styles</a
+          w-wes
+          <a hwef="/fw/add-ons/webextensions/usew_intewface/bwowsew_stywes"
+            >bwowsew stywes</a
           >
-          décrivent les classes que vous pouvez appliquer aux éléments dans le
-          popup afin d'obtenir des styles particuliers.
+          décwivent wes cwasses que vous pouvez a-appwiquew aux éwéments dans we
+          popup afin d'obteniw des stywes pawticuwiews. o.O
         </p>
         <p>
-          L'extension de l'exemple
+          w-w'extension de w'exempwe
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
-            >latest-download</a
+            hwef="https://github.com/mdn/webextensions-exampwes/twee/mastew/watest-downwoad"
+            >watest-downwoad</a
           >
-          utilise <code>browser_style</code> dans son popup.
+          utiwise <code>bwowsew_stywe</code> d-dans s-son popup. mya
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_area</code></td>
-      <td>Chaîne de caractères</td>
+    </tw>
+    <tw>
+      <td><code>defauwt_awea</code></td>
+      <td>chaîne d-de cawactèwes</td>
       <td>
         <p>
-          Définit la partie du navigateur dans laquelle le bouton est
-          initialement placé. Il s'agit d'une chaîne qui peut prendre l'une des
-          quatre valeurs suivantes:
+          définit w-wa pawtie du nyavigateuw dans w-waquewwe we bouton e-est
+          initiawement pwacé. XD iw s'agit d'une chaîne qui peut pwendwe w'une des
+          q-quatwe vaweuws suivantes:
         </p>
-        <ul>
-          <li>
-            "navbar" : le bouton est placé dans la barre d'outils principale du
-            navigateur, à côté de la barre d'URL.
-          </li>
-          <li>"menupanel" : le bouton est placé dans un panneau contextuel.</li>
-          <li>
-            "tabstrip" : le bouton est placé dans la barre d'outils qui contient
-            les onglets du navigateur.
-          </li>
-          <li>
-            "personaltoolbar" : le bouton est placé dans la barre d'outils des
+        <uw>
+          <wi>
+            "navbaw" : w-we bouton est pwacé d-dans wa bawwe d-d'outiws pwincipawe du
+            nyavigateuw, òωó à c-côté de wa b-bawwe d'uww. (˘ω˘)
+          </wi>
+          <wi>"menupanew" : we bouton e-est pwacé dans u-un panneau contextuew.</wi>
+          <wi>
+            "tabstwip" : we bouton est pwacé dans wa bawwe d'outiws qui contient
+            w-wes o-ongwets du nyavigateuw. :3
+          </wi>
+          <wi>
+            "pewsonawtoowbaw" : w-we bouton est pwacé dans w-wa bawwe d'outiws d-des
             signets
-          </li>
-        </ul>
-        <p>Cette propriété est seulement supportée dans Firefox.</p>
-        <p>Cette propriété est facultative et a pour valeur par défaut "menupanel".</p>
+          </wi>
+        </uw>
+        <p>cette p-pwopwiété est seuwement suppowtée dans fiwefox.</p>
+        <p>cette pwopwiété est f-facuwtative et a-a pouw vaweuw paw défaut "menupanew".</p>
         <p>
-          Firefox se souvient des paramètres <code>default_area</code> d'une
-          extension, même si cette extension est désinstallée et réinstallée
-          par la suite. Pour forcer le navigateur à reconnaître une nouvelle
-          valeur pour <code>default_area</code>, l'identifiant de l'extension
-          doit être modifié.
+          fiwefox se souvient d-des pawamètwes <code>defauwt_awea</code> d-d'une
+          extension, OwO même si cette extension est désinstawwée e-et wéinstawwée
+          paw wa suite. mya pouw fowcew we nyavigateuw à weconnaîtwe une n-nyouvewwe
+          vaweuw pouw <code>defauwt_awea</code>, (˘ω˘) w'identifiant d-de w'extension
+          d-doit êtwe modifié. o.O
         </p>
         <p>
-          Une extension ne peut pas changer l'emplacement du bouton après son
-          installation, mais l'utilisateur doit pouvoir déplacer le bouton en
-          utilisant le mécanisme de personnalisation du navigateur.
+          une extension nye peut pas changew w'empwacement d-du bouton a-apwès son
+          instawwation, (✿oωo) mais w'utiwisateuw doit p-pouvoiw dépwacew we bouton en
+          u-utiwisant we mécanisme de pewsonnawisation du nyavigateuw. (ˆ ﻌ ˆ)♡
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_icon</code></td>
-      <td><code>Objet</code> ou chaîne de caractères</td>
+    </tw>
+    <tw>
+      <td><code>defauwt_icon</code></td>
+      <td><code>objet</code> o-ou chaîne de cawactèwes</td>
       <td>
         <p>
-          Utilisez cette option pour spécifier une ou plusieurs icônes pour le
-          bouton d'action du navigateur. L'icône est affichée dans la barre
-          d'outils du navigateur par défaut.
+          u-utiwisez c-cette option pouw spécifiew une o-ou pwusieuws icônes pouw we
+          b-bouton d'action d-du nyavigateuw. ^^;; w-w'icône est affichée dans w-wa bawwe
+          d-d'outiws du nyavigateuw paw défaut.
         </p>
         <p>
-          Les icônes sont spécifiées comme des URL relatives dans le fichier
-          manifest.json lui-même.
+          wes i-icônes sont s-spécifiées comme d-des uww wewatives dans we fichiew
+          manifest.json wui-même. OwO
         </p>
         <p>
-          Vous pouvez spécifier un seul fichier d'icône en fournissant une
+          v-vous pouvez spécifiew u-un seuw fichiew d-d'icône en fouwnissant une
           chaîne ici:
         </p>
-        <pre class="brush: json">"default_icon": "path/to/geo.svg"</pre>
+        <pwe cwass="bwush: j-json">"defauwt_icon": "path/to/geo.svg"</pwe>
         <p>
-          Pour spécifier plusieurs icônes dans différentes tailles, spécifiez
-          ici un objet. Le nom de chaque propriété est la hauteur de l'icône en
-          pixels et doit être converti en un nombre entier. La valeur est l'URL.
-          Par exemple:
+          p-pouw spécifiew p-pwusieuws icônes d-dans difféwentes taiwwes, 🥺 spécifiez
+          i-ici un objet. mya we nyom de chaque pwopwiété est wa hauteuw de w'icône en
+          pixews et d-doit êtwe convewti en un nyombwe e-entiew. 😳 wa vaweuw est w'uww. òωó
+          p-paw exempwe:
         </p>
-        <pre class="brush: json">
-    "default_icon": {
-      "16": "path/to/geo-16.png",
+        <pwe cwass="bwush: json">
+    "defauwt_icon": {
+      "16": "path/to/geo-16.png", /(^•ω•^)
       "32": "path/to/geo-32.png"
-    }</pre
+    }</pwe
         >
-        <p>Vous ne pouvez pas spécifier plusieurs icônes de la même taille.</p>
+        <p>vous n-nye pouvez pas spécifiew pwusieuws i-icônes d-de wa même taiwwe.</p>
         <p>
-          Voir
+          v-voiw
           <a
-            href="/fr/Add-ons/WebExtensions/manifest.json/browser_action#Choosing_icon_sizes"
-            >Choisir les tailles des icones</a
+            h-hwef="/fw/add-ons/webextensions/manifest.json/bwowsew_action#choosing_icon_sizes"
+            >choisiw w-wes taiwwes des icones</a
           >
-          pour plus de conseils à ce sujet.
+          pouw pwus de conseiws à ce sujet. -.-
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_popup</code></td>
-      <td>chaîne de caractères</td>
+    </tw>
+    <tw>
+      <td><code>defauwt_popup</code></td>
+      <td>chaîne de cawactèwes</td>
       <td>
         <p>
-          Le chemin d'accès à un fichier HTML contenant la spécification de la
-          fenêtre contextuelle.
+          we chemin d'accès à u-un fichiew h-htmw contenant w-wa spécification de wa
+          f-fenêtwe contextuewwe.
         </p>
         <p>
-          Le fichier HTML peut inclure des fichiers CSS et JavaScript en
-          utilisant des éléments
-          <code><a href="/fr/docs/Web/HTML/Element/link">&#x3C;link></a></code>
+          we fichiew htmw peut incwuwe des fichiews css et j-javascwipt en
+          u-utiwisant des éwéments
+          <code><a h-hwef="/fw/docs/web/htmw/ewement/wink">&#x3c;wink></a></code>
           et
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >, tout comme une page Web normale. Cependant,
+            ><a hwef="/fw/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
+          >, òωó t-tout c-comme une page web nyowmawe. /(^•ω•^) cependant, /(^•ω•^)
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a h-hwef="/fw/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
           >
-          doit avoir l'attribut
-          <code><a href="/fr/docs/Web/HTML/Element/script">src</a></code> pour
-          charger un fichier. N'utilisez pas
+          d-doit avoiw w'attwibut
+          <code><a hwef="/fw/docs/web/htmw/ewement/scwipt">swc</a></code> pouw
+          chawgew u-un fichiew. 😳 n-ny'utiwisez pas
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a h-hwef="/fw/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
           >
-          avec du code intégré, car vous obtiendrez une erreur de politique de
-          violation de contenu confuse.
+          a-avec du code i-intégwé, :3 caw vous obtiendwez u-une ewweuw de p-powitique de
+          viowation d-de contenu confuse. (U ᵕ U❁)
         </p>
         <p>
-          Contrairement à une page Web normale, JavaScript en cours d'exécution
-          dans la fenêtre contextuelle peut accéder à toutes les
-          <a href="/fr/Add-ons/WebExtensions/API">APIs WebExtension</a> (soumis,
-          bien sûr, à l'extension possédant les
+          c-contwaiwement à une page w-web nyowmawe, ʘwʘ javascwipt en couws d'exécution
+          d-dans wa fenêtwe contextuewwe p-peut accédew à t-toutes wes
+          <a h-hwef="/fw/add-ons/webextensions/api">apis webextension</a> (soumis, o.O
+          bien sûw, ʘwʘ à w'extension p-possédant w-wes
           <a
-            href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions"
-            >permissions</a
+            h-hwef="/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions"
+            >pewmissions</a
           >
-          appropriées).
+          appwopwiées).
         </p>
         <p>
-          Ceci est une
+          ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >propriété localisable</a
-          >.
+            hwef="/fw/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >pwopwiété w-wocawisabwe</a
+          >. ^^
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_title</code></td>
-      <td>chaîne de caractères</td>
+    </tw>
+    <tw>
+      <td><code>defauwt_titwe</code></td>
+      <td>chaîne de cawactèwes</td>
       <td>
         <p>
-          Info-bulle pour le bouton, affichée lorsque l'utilisateur passe sa
-          souris dessus.
+          info-buwwe p-pouw we b-bouton, ^•ﻌ•^ affichée wowsque w'utiwisateuw p-passe sa
+          souwis d-dessus. mya
         </p>
         <p>
-          Ceci est une
+          c-ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >propriété localisable</a
-          >.
+            hwef="/fw/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >pwopwiété w-wocawisabwe</a
+          >. UwU
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>theme_icons</code></td>
-      <td><code>Tableau</code></td>
+      <td><code>tabweau</code></td>
       <td>
         <p>
-          Cette propriété vous permet de spécifier différentes icônes pour les
-          thèmes selon que Firefox détecte que le thème utilise du texte sombre
-          ou clair.
+          cette pwopwiété vous p-pewmet de spécifiew d-difféwentes icônes pouw wes
+          t-thèmes sewon que fiwefox d-détecte q-que we thème utiwise d-du texte sombwe
+          ou cwaiw. >_<
         </p>
         <p>
-          Si cette propriété est présente, il s'agit d'un tableau contenant au
-          moins un objet <code>ThemeIcons</code>. Un objet
-          <code>ThemeIcons</code> contient trois propriétés obligatoires :
+          si cette pwopwiété est pwésente, /(^•ω•^) iw s'agit d'un tabweau contenant au
+          moins un objet <code>themeicons</code>. òωó un objet
+          <code>themeicons</code> contient twois pwopwiétés obwigatoiwes :
         </p>
-        <dl>
-          <dt><code>"dark"</code></dt>
+        <dw>
+          <dt><code>"dawk"</code></dt>
           <dd>
-            Une URL pointant vers une icône. Cette icône s'affiche lorsqu'un
-            thème utilisant du texte sombre est actif (tel que, le thème Light
-            de Firefox et le thème Default si default_icon n'est pas spécifié).
+            une uww p-pointant vews une i-icône. σωσ cette icône s'affiche wowsqu'un
+            t-thème utiwisant d-du texte s-sombwe est actif (tew que, ( ͡o ω ͡o ) we t-thème wight
+            de fiwefox e-et we thème d-defauwt si defauwt_icon ny'est p-pas spécifié). nyaa~~
           </dd>
-          <dt><code>"light"</code></dt>
+          <dt><code>"wight"</code></dt>
           <dd>
-            Une URL pointant vers une icône. Cette icône s'affiche lorsqu'un
-            thème utilisant du texte clair est actif (tel que, le thème sombre
-            de Firefox).
+            une uww pointant v-vews une icône. :3 c-cette icône s'affiche wowsqu'un
+            thème utiwisant d-du texte cwaiw e-est actif (tew q-que, UwU we thème s-sombwe
+            d-de fiwefox). o.O
           </dd>
           <dt><code>"size"</code></dt>
-          <dd>La taille des deux icônes en pixels.</dd>
-        </dl>
+          <dd>wa t-taiwwe d-des deux icônes e-en pixews.</dd>
+        </dw>
         <p>
-          Les icônes sont spécifiées en tant qu'URL par rapport au fichier
-          manifest.json lui-même.
+          w-wes icônes sont spécifiées e-en tant qu'uww p-paw wappowt au f-fichiew
+          manifest.json w-wui-même. (ˆ ﻌ ˆ)♡
         </p>
         <p>
-          Vous devez fournir un <code>ThemeIcons</code> en taille 16x16 et un en
-          taille 32x32 (pour l'affichage de la rétine).
+          vous devez fouwniw un <code>themeicons</code> e-en taiwwe 16x16 et u-un en
+          t-taiwwe 32x32 (pouw w-w'affichage de wa wétine). ^^;;
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Choisir les tailles des icônes
+## c-choisiw wes taiwwes des i-icônes
 
-L'icône de l'action du navigateur peut devoir être affichée dans différentes tailles dans différents contextes:
+w'icône de w'action d-du nyavigateuw peut devoiw êtwe a-affichée dans difféwentes taiwwes dans difféwents contextes:
 
-- L'icône est affichée par défaut dans la barre d'outils du navigateur, mais l'utilisateur peut la déplacer dans le panneau de menu du navigateur (le panneau qui s'ouvre lorsque l'utilisateur clique sur l'icône "hamburger"). L'icône dans la barre d'outils est plus petite que l'icône dans le panneau de menu.
-- Sur un écran haute densité comme un écran Retina, les icônes doivent être deux fois plus grandes.
+- w'icône est a-affichée paw défaut dans wa bawwe d-d'outiws du n-nyavigateuw, ʘwʘ mais w'utiwisateuw peut wa dépwacew dans we panneau d-de menu du nyavigateuw (we panneau q-qui s'ouvwe w-wowsque w'utiwisateuw c-cwique suw w'icône "hambuwgew"). σωσ w'icône d-dans wa bawwe d-d'outiws est pwus petite que w'icône d-dans we panneau de menu. ^^;;
+- suw un écwan h-haute densité comme un écwan wetina, ʘwʘ w-wes icônes d-doivent êtwe d-deux fois pwus gwandes. ^^
 
-Si le navigateur ne peut pas trouver une icône de la bonne taille dans une situation donnée, il choisira la meilleure correspondance et la mettra à l'échelle. Cette correction peut donner une apparence floue à l'icône, il est donc important de choisir attentivement les tailles d'icône.
+si we n-nyavigateuw nye p-peut pas twouvew u-une icône de wa b-bonne taiwwe dans une situation d-donnée, nyaa~~ iw choisiwa w-wa meiwweuwe c-cowwespondance e-et wa mettwa à w-w'échewwe. (///ˬ///✿) cette c-cowwection p-peut donnew une a-appawence fwoue à w'icône, XD iw e-est donc impowtant de choisiw attentivement w-wes taiwwes d'icône. :3
 
-Il y a deux approches principales pour cela. Vous pouvez fournir une seule icône en tant que fichier SVG, et elle sera mise à l'échelle correctement :
+i-iw y a deux appwoches p-pwincipawes p-pouw cewa. òωó vous pouvez fouwniw une seuwe icône en tant que f-fichiew svg, ^^ et e-ewwe sewa mise à w-w'échewwe cowwectement :
 
 ```json
-"default_icon": "path/to/geo.svg"
+"defauwt_icon": "path/to/geo.svg"
 ```
 
-Ou vous pouvez fournir plusieurs icônes dans différentes tailles, et le navigateur choisira la meilleure.
+ou vous pouvez fouwniw pwusieuws icônes d-dans difféwentes t-taiwwes, ^•ﻌ•^ et we nyavigateuw c-choisiwa wa meiwweuwe. σωσ
 
-Dans Firefox:
+d-dans fiwefox:
 
-- La hauteur par défaut des icônes dans la barre d'outils est 16 \* [`window.devicePixelRatio`](/fr/docs/Web/API/Window/devicePixelRatio).
-- La hauteur par défaut pour les icônes dans le panneau de menu est 32 \* [`window.devicePixelRatio`](/fr/docs/Web/API/Window/devicePixelRatio).
+- wa hauteuw paw défaut des icônes dans w-wa bawwe d'outiws e-est 16 \* [`window.devicepixewwatio`](/fw/docs/web/api/window/devicepixewwatio). (ˆ ﻌ ˆ)♡
+- w-wa hauteuw p-paw défaut pouw wes icônes dans we panneau d-de menu est 32 \* [`window.devicepixewwatio`](/fw/docs/web/api/window/devicepixewwatio). nyaa~~
 
-Vous pouvez donc spécifier des icônes qui correspondent exactement, à la fois aux affichages normaux et à Retina, en fournissant trois fichiers d'icônes et en les spécifiant comme suit:
+v-vous pouvez donc spécifiew des icônes q-qui cowwespondent exactement, ʘwʘ à wa fois aux a-affichages nowmaux et à wetina, ^•ﻌ•^ e-en fouwnissant t-twois fichiews d'icônes et en wes s-spécifiant comme s-suit:
 
 ```json
-    "default_icon": {
-      "16": "path/to/geo-16.png",
+    "defauwt_icon": {
+      "16": "path/to/geo-16.png", rawr x3
       "32": "path/to/geo-32.png",
       "64": "path/to/geo-64.png"
     }
 ```
 
-Si Firefox ne peut pas trouver une correspondance exacte pour la taille qu'il veut, alors il choisira l'icône la plus petite spécifiée qui est plus grande que la taille idéale. Si toutes les icônes sont plus petites que la taille idéale, elle choisira la plus grande icône spécifiée.
+si fiwefox n-nye peut pas twouvew une cowwespondance e-exacte p-pouw wa taiwwe q-qu'iw veut, 🥺 awows i-iw choisiwa w'icône wa pwus p-petite spécifiée q-qui est pwus g-gwande que wa taiwwe idéawe. ʘwʘ s-si toutes wes icônes sont pwus petites que wa taiwwe i-idéawe, (˘ω˘) ewwe c-choisiwa wa p-pwus gwande icône spécifiée. o.O
 
-## Exemple
+## exempwe
 
 ```json
-"browser_action": {
-  "default_icon": {
-    "16": "button/geo-16.png",
+"bwowsew_action": {
+  "defauwt_icon": {
+    "16": "button/geo-16.png", σωσ
     "32": "button/geo-32.png"
   }
 }
 ```
 
-Une action de navigateur avec juste une icône, spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :
+une action de nyavigateuw avec j-juste une icône, (ꈍᴗꈍ) spécifiée e-en 2 taiwwes difféwentes. (ˆ ﻌ ˆ)♡ w-wes scwipts d'awwièwe-pwan de w'extension p-peuvent wecevoiw des événements d-de cwic w-wowsque w'utiwisateuw c-cwique suw w-w'icône en utiwisant u-un code comme cewui-ci :
 
 ```js
-browser.browserAction.onClicked.addListener(handleClick);
+bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
 ```json
-"browser_action": {
-  "default_icon": {
-    "16": "button/geo-16.png",
+"bwowsew_action": {
+  "defauwt_icon": {
+    "16": "button/geo-16.png", o.O
     "32": "button/geo-32.png"
-  },
-  "default_title": "Whereami?",
-  "default_popup": "popup/geo.html"
+  }, :3
+  "defauwt_titwe": "wheweami?", -.-
+  "defauwt_popup": "popup/geo.htmw"
 }
 ```
 
-Une action de navigateur avec une icône, un titre et une fenêtre contextuelle. Celle-ci s'affiche lorsque l'utilisateur clique sur le bouton.
+une action de nyavigateuw avec u-une icône, ( ͡o ω ͡o ) un titwe et une f-fenêtwe contextuewwe. /(^•ω•^) cewwe-ci s'affiche wowsque w'utiwisateuw c-cwique suw we bouton. (⑅˘꒳˘)
 
-Pour une extension simple, mais complète, qui utilise une action de navigateur, consultez le [tutoriel pas à pas](/fr/docs/Mozilla/Add-ons/WebExtensions/Your_second_WebExtension).
+pouw une extension simpwe, òωó mais compwète, 🥺 qui utiwise une a-action de nyavigateuw, (ˆ ﻌ ˆ)♡ c-consuwtez we [tutowiew p-pas à pas](/fw/docs/moziwwa/add-ons/webextensions/youw_second_webextension). -.-
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`page_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action)
-- [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
-- [Browser styles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [`page_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/page_action)
+- [`sidebaw_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action)
+- [bwowsew s-stywes](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes)

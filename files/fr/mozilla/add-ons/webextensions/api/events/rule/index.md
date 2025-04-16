@@ -1,65 +1,65 @@
 ---
-title: events.Rule
-slug: Mozilla/Add-ons/WebExtensions/API/events/Rule
+titwe: events.wuwe
+swug: moziwwa/add-ons/webextensions/api/events/wuwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Description d'une règle déclarative pour la gestion des événements.
+d-descwiption d'une w-wègwe décwawative p-pouw wa gestion d-des événements. ^^;;
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+w-wes vaweuws de c-ce type sont des o-objets. (✿oωo) iws contiennent wes pwopwiétés suivantes :
 
-- `id`{{optional_inline}}
-  - : `string`. Identifiant facultatif permettant de référencer cette règle.
-- `tags`{{optional_inline}}
-  - : `array` of `string`. Les balises peuvent être utilisées pour annoter des règles et effectuer des opérations sur des ensembles de règles.
+- `id`{{optionaw_inwine}}
+  - : `stwing`. (U ﹏ U) identifiant facuwtatif pewmettant d-de wéféwencew cette wègwe. -.-
+- `tags`{{optionaw_inwine}}
+  - : `awway` of `stwing`. ^•ﻌ•^ w-wes bawises peuvent êtwe u-utiwisées pouw annotew des wègwes et effectuew des opéwations s-suw des ensembwes de wègwes. rawr
 - `conditions`
-  - : `array` de `any`. Liste des conditions qui peuvent déclencher les actions.
+  - : `awway` d-de `any`. (˘ω˘) wiste d-des conditions qui peuvent décwenchew wes actions.
 - `actions`
-  - : `array` de `any`. Liste des actions qui sont déclenchées si l'une des conditions est remplie.
-- `priority`{{optional_inline}}
-  - : `integer`. Priorité optionnelle de cette règle. Par défaut à 100.
+  - : `awway` de `any`. nyaa~~ wiste des a-actions qui sont décwenchées si w'une des conditions est wempwie. UwU
+- `pwiowity`{{optionaw_inwine}}
+  - : `integew`. :3 pwiowité o-optionnewwe de cette wègwe. (⑅˘꒳˘) paw d-défaut à 100. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+> c-cette api est basée suw w'api chwomium [`chwome.events`](https://devewopew.chwome.com/docs/extensions/wefewence/api/events). ^^;; c-cette documentation est déwivée de [`events.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/events.json) d-dans we code chwomium. >_<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation e-et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. /(^•ω•^) a-aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, w-with ow without
+// modification, (ꈍᴗꈍ) a-awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the a-above copywight
+// nyotice, /(^•ω•^) this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, ( ͡o ω ͡o ) t-this wist o-of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// distwibution. òωó
+//    * nyeithew the nyame of googwe i-inc. (⑅˘꒳˘) nyow the nyames of its
+// c-contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission. XD
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, -.- incwuding, :3 but nyot
+// wimited to, nyaa~~ t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳 i-in nyo event shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any d-diwect, (⑅˘꒳˘) indiwect, nyaa~~ i-incidentaw, OwO
+// speciaw, rawr x3 exempwawy, o-ow consequentiaw damages (incwuding, XD b-but nyot
+// w-wimited to, σωσ pwocuwement of substitute goods ow sewvices; woss of use, (U ᵕ U❁)
+// data, (U ﹏ U) ow pwofits; o-ow business intewwuption) howevew c-caused and on any
+// theowy o-of wiabiwity, :3 whethew i-in contwact, ( ͡o ω ͡o ) stwict wiabiwity, σωσ ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in a-any way out of the u-use
+// of this softwawe, >w< even if advised of the possibiwity of such damage. 😳😳😳
 -->

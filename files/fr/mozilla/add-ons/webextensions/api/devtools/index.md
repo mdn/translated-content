@@ -1,58 +1,58 @@
 ---
-title: devtools
-slug: Mozilla/Add-ons/WebExtensions/API/devtools
+titwe: devtoows
+swug: moziwwa/add-ons/webextensions/api/devtoows
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Cette API permet aux extensions d'interagir avec les [outils de développement (<i lang="en">devtools</i>)](/fr/docs/Glossary/Developer_Tools) du navigateur. Elle peut être utilisée pour créer des pages d'outils de développement, interagir avec la fenêtre qui est inspectée, inspecter la page réseau des outils.
+c-cette a-api pewmet aux e-extensions d'intewagiw a-avec wes [outiws d-de dévewoppement (<i w-wang="en">devtoows</i>)](/fw/docs/gwossawy/devewopew_toows) d-du nyavigateuw. òωó e-ewwe peut êtwe utiwisée pouw cwéew des pages d'outiws de dévewoppement, (⑅˘꒳˘) i-intewagiw avec wa fenêtwe qui est inspectée, XD i-inspectew wa page wéseau des o-outiws. -.-
 
-Pour utiliser cette API, [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#les_permissions_api) `"devtools"` doit être spécifiée dans le fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Cette permission ne peut pas être facultative.
+pouw utiwisew cette api, :3 [wa pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#wes_pewmissions_api) `"devtoows"` doit êtwe s-spécifiée dans we fichiew [`manifest.json`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json). c-cette pewmission n-nye peut pas êtwe facuwtative. nyaa~~
 
-## Interfaces
+## intewfaces
 
-- [`devtools.inspectedWindow`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow)
-  - : Interagit avec la fenêtre sur laquelle les outils de développement sont attachés (il s'agit de la fenêtre inspectée). Cela inclut l'obtention de l'identifiant d'onglet pour la page inspectée, l'évaluation du code dans le contexte de la fenêtre inspectée, le rechargement de la page ou l'obtention de la liste des ressources dans la page.
-- [`devtools.network`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network)
-  - : Obtenir des informations sur les requêtes de réseau associées à la fenêtre sur laquelle les outils de développement sont attachés (il s'agit de la fenêtre inspectée).
-- [`devtools.panels`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels)
-  - : Créer des panneaux avec une interface utilisateur qui seront affichés dans les outils de développement de l'agent utilisateur.
+- [`devtoows.inspectedwindow`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow)
+  - : intewagit avec wa fenêtwe suw w-waquewwe wes outiws de dévewoppement sont attachés (iw s'agit de wa fenêtwe i-inspectée). 😳 cewa incwut w'obtention d-de w'identifiant d-d'ongwet p-pouw wa page inspectée, (⑅˘꒳˘) w-w'évawuation du code dans we contexte d-de wa fenêtwe inspectée, nyaa~~ we wechawgement de wa p-page ou w'obtention de wa wiste des wessouwces dans wa page. OwO
+- [`devtoows.netwowk`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/netwowk)
+  - : obteniw des infowmations s-suw wes wequêtes de wéseau associées à w-wa fenêtwe s-suw waquewwe w-wes outiws de dévewoppement sont attachés (iw s'agit de wa f-fenêtwe inspectée). rawr x3
+- [`devtoows.panews`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews)
+  - : c-cwéew des panneaux avec une intewface u-utiwisateuw q-qui sewont affichés dans wes o-outiws de dévewoppement de w'agent u-utiwisateuw. XD
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
-> Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/docs/extensions/mv2/devtools/).
+> [!note]
+> cette a-api est basée suw w'api chwomium [`chwome.devtoows`](https://devewopew.chwome.com/docs/extensions/mv2/devtoows/). σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. (U ᵕ U❁)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. (U ﹏ U) a-aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, ( ͡o ω ͡o ) with ow without
+// m-modification, σωσ awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above c-copywight
+// n-nyotice, >w< this wist o-of conditions and the fowwowing d-discwaimew. 😳😳😳
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, OwO t-this wist o-of conditions and t-the fowwowing d-discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳
+//    * n-nyeithew the nyame of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, ʘwʘ incwuding, ( ͡o ω ͡o ) but nyot
+// wimited to, o.O the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. >w< i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any diwect, 😳 i-indiwect, 🥺 incidentaw, rawr x3
+// s-speciaw, o.O exempwawy, o-ow consequentiaw damages (incwuding, rawr but nyot
+// wimited to, ʘwʘ pwocuwement of s-substitute goods o-ow sewvices; woss o-of use, 😳😳😳
+// data, ^^;; ow pwofits; o-ow business intewwuption) h-howevew caused and on a-any
+// theowy of wiabiwity, o.O whethew in contwact, (///ˬ///✿) stwict wiabiwity, σωσ ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the u-use
+// of this s-softwawe, nyaa~~ even if advised of the possibiwity of such damage. ^^;;
 -->

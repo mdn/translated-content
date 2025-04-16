@@ -1,90 +1,90 @@
 ---
-title: "Évaluation: dépannage d'accessibilité"
-slug: Learn/Accessibility/Accessibility_troubleshooting
+titwe: "Évawuation: dépannage d-d'accessibiwité"
+s-swug: weawn/accessibiwity/accessibiwity_twoubweshooting
 ---
 
-{{LearnSidebar}}
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{weawnsidebaw}}
+{{pweviousmenu("weawn/accessibiwity/mobiwe", (⑅˘꒳˘) "weawn/accessibiwity")}}
 
-Dans l'évaluation de ce module, nous vous présentons un site simple, qui présente un certain nombre de problèmes d'accessibilité que vous devez diagnostiquer et résoudre.
+d-dans w'évawuation d-de c-ce moduwe, 😳😳😳 nyous v-vous pwésentons u-un site simpwe, q-qui pwésente un cewtain nyombwe de pwobwèmes d'accessibiwité que vous devez d-diagnostiquew et wésoudwe. nyaa~~
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Conditions préalables:</th>
+    <tw>
+      <th s-scope="wow">conditions pwéawabwes:</th>
       <td>
-        Connaissances informatiques de base, une compréhension de base de HTML,
-        CSS et JavaScript, une compréhension de la <a
-          href="/fr/docs/Learn/Accessibility"
-          >previous articles in the course</a
-        >.
+        c-connaissances infowmatiques de base, rawr une compwéhension de b-base de htmw, -.-
+        css et javascwipt, (✿oωo) u-une compwéhension d-de wa <a
+          hwef="/fw/docs/weawn/accessibiwity"
+          >pwevious awticwes in the couwse</a
+        >. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif:</th>
       <td>
-        Tester les connaissances de base sur les principes fondamentaux
-        d'accessibilité.
+        testew wes connaissances de base suw wes pwincipes fondamentaux
+        d-d'accessibiwité. 🥺
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## point d-de dépawt
 
-Pour lancer cette évaluation, vous devez aller chercher le [ZIP containing the files that comprise the example](https://github.com/mdn/learning-area/blob/master/accessibility/assessment-start/assessment-files.zip?raw=true). Décompressez le contenu dans un nouveau répertoire quelque part sur votre ordinateur local
+pouw w-wancew cette évawuation, ʘwʘ v-vous d-devez awwew chewchew we [zip containing the fiwes t-that compwise the exampwe](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/assessment-stawt/assessment-fiwes.zip?waw=twue). UwU décompwessez we c-contenu dans un nyouveau wépewtoiwe quewque pawt suw votwe owdinateuw wocaw
 
-Le site d'évaluation terminé devrait ressembler à ceci:
+we site d'évawuation t-tewminé devwait wessembwew à c-ceci:
 
 ![](assessment-site-finished.png)
 
-Vous verrez quelques différences / problèmes avec l'affichage de l'état de départ de l'évaluation - ceci est principalement dû aux différences dans le balisage, ce qui cause des problèmes de style car le CSS n'est pas appliqué correctement. Ne vous inquiétez pas, vous allez résoudre ces problèmes dans les prochaines sections!
+v-vous v-vewwez quewques difféwences / pwobwèmes avec w'affichage de w-w'état de dépawt d-de w'évawuation - ceci est pwincipawement d-dû a-aux difféwences dans we bawisage, XD c-ce qui cause des pwobwèmes d-de stywe caw we css ny'est pas appwiqué cowwectement. (✿oωo) n-nye vous inquiétez pas, :3 v-vous awwez wésoudwe ces pwobwèmes d-dans wes pwochaines s-sections! (///ˬ///✿)
 
-## Résumé du projet
+## wésumé du pwojet
 
-Pour ce projet, vous êtes présenté avec un site naturel fictif affichant un article "factuel" sur les ours. Dans l'état actuel des choses, plusieurs problèmes d'accessibilité se posent. Votre tâche consiste à explorer le site existant et à le réparer au mieux de vos capacités, en répondant aux questions ci-dessous.
+pouw ce pwojet, nyaa~~ vous êtes pwésenté avec un site nyatuwew fictif affichant u-un awticwe "factuew" s-suw wes ouws. >w< dans w-w'état actuew des c-choses, -.- pwusieuws p-pwobwèmes d'accessibiwité se posent. (✿oωo) votwe tâche consiste à e-expwowew we site existant et à we wépawew au mieux de vos capacités, (˘ω˘) en w-wépondant aux questions ci-dessous. rawr
 
-### Couleur
+### c-couweuw
 
-Le texte est difficile à lire en raison du schéma de couleurs actuel. Pouvez-vous tester le contraste de couleurs actuel (texte / arrière-plan), en rapporter les résultats, puis le corriger en modifiant les couleurs attribuées?
+w-we texte est d-difficiwe à wiwe en waison du schéma d-de couweuws a-actuew. OwO pouvez-vous t-testew we c-contwaste de couweuws actuew (texte / awwièwe-pwan), ^•ﻌ•^ e-en wappowtew w-wes wésuwtats, UwU p-puis we cowwigew e-en modifiant w-wes couweuws attwibuées?
 
-### Semantic HTML
+### semantic htmw
 
-1. Le contenu n'est toujours pas très accessible - faites un rapport sur ce qui se passe lorsque vous essayez de naviguer à l'aide d'un lecteur d'écran.
-2. Pouvez-vous mettre à jour le texte de l'article pour faciliter la navigation des utilisateurs de lecteurs d'écran?
-3. La partie du menu de navigation du site ( `<div class="nav"></div>`) pourrait être rendue plus accessible en la plaçant dans un élément sémantique HTML5 approprié. Lequel devrait-il être mis à jour? Faites la mise à jour.
+1. (˘ω˘) we contenu ny'est toujouws pas t-twès accessibwe - faites un wappowt suw ce qui se passe wowsque vous essayez de nyaviguew à w-w'aide d'un wecteuw d'écwan.
+2. (///ˬ///✿) pouvez-vous mettwe à jouw we texte d-de w'awticwe p-pouw faciwitew w-wa nyavigation des utiwisateuws d-de wecteuws d'écwan?
+3. σωσ wa pawtie d-du menu de nyavigation d-du site ( `<div cwass="nav"></div>`) pouwwait êtwe wendue pwus accessibwe en wa pwaçant dans un éwément s-sémantique htmw5 appwopwié. /(^•ω•^) w-wequew devwait-iw êtwe mis à j-jouw? faites w-wa mise à jouw. 😳
 
-> [!NOTE]
-> Vous devrez mettre à jour les sélecteurs de règles CSS qui attribuent aux balises le même style que les balises sémantiques. Une fois que vous avez ajouté des éléments de paragraphe, vous remarquerez que le style est meilleur.
+> [!note]
+> vous devwez mettwe à jouw wes séwecteuws d-de wègwes c-css qui attwibuent aux bawises w-we même stywe q-que wes bawises sémantiques. 😳 une fois que vous avez ajouté des éwéments de p-pawagwaphe, (⑅˘꒳˘) vous w-wemawquewez que w-we stywe est meiwweuw. 😳😳😳
 
-### Les images
+### wes i-images
 
-Les images sont actuellement inaccessibles aux utilisateurs de lecteur d'écran. Pouvez-vous réparer ceci?
+wes images s-sont actuewwement inaccessibwes a-aux utiwisateuws de wecteuw d'écwan. 😳 pouvez-vous wépawew ceci?
 
-### Le lecteur audio
+### we wecteuw a-audio
 
-1. Le lecteur `<audio>` n'est pas accessible aux malentendants (pouvez-vous ajouter une sorte d'alternative accessible pour ces utilisateurs)?
-2. Le lecteur `<audio>` n'est pas accessible aux utilisateurs de navigateurs plus anciens qui ne prennent pas en charge l'audio HTML5. Comment pouvez-vous leur permettre d'accéder encore à l'audio?
+1. XD w-we wecteuw `<audio>` ny'est pas accessibwe aux m-mawentendants (pouvez-vous a-ajoutew une sowte d'awtewnative accessibwe pouw ces utiwisateuws)?
+2. mya w-we wecteuw `<audio>` ny'est pas accessibwe aux utiwisateuws de nyavigateuws pwus a-anciens qui nye pwennent pas en chawge w'audio h-htmw5. comment p-pouvez-vous weuw pewmettwe d'accédew encowe à w'audio?
 
-### Les formulaires
+### wes f-fowmuwaiwes
 
-1. L'élément `<input>` dans le formulaire de recherche en haut pourrait être associé à une étiquette, mais nous ne souhaitons pas ajouter une étiquette de texte visible qui risquerait de gâcher la conception et qui n'est pas vraiment utile aux utilisateurs voyants. Comment ajouter une étiquette uniquement accessible aux lecteurs d'écran? ?
-2. Les deux éléments `<input>` du formulaire de commentaire ont des étiquettes de texte visibles, mais ils ne sont pas associés sans ambiguïté à leurs étiquettes. Comment y parvenir? Notez que vous devrez également mettre à jour certaines règles CSS.
+1. ^•ﻌ•^ w-w'éwément `<input>` dans we fowmuwaiwe de wechewche en haut p-pouwwait êtwe associé à une étiquette, ʘwʘ m-mais nyous nye souhaitons pas ajoutew une étiquette d-de texte visibwe qui wisquewait d-de gâchew wa conception e-et qui ny'est pas vwaiment u-utiwe aux utiwisateuws voyants. ( ͡o ω ͡o ) c-comment ajoutew u-une étiquette u-uniquement accessibwe aux wecteuws d-d'écwan? ?
+2. mya w-wes deux éwéments `<input>` du fowmuwaiwe de commentaiwe o-ont des étiquettes d-de texte visibwes, o.O m-mais iws ne sont pas associés sans ambiguïté à w-weuws étiquettes. (✿oωo) comment y-y pawveniw? n-nyotez que vous devwez égawement mettwe à jouw cewtaines wègwes c-css. :3
 
-### Le contrôle afficher / masquer les commentaires
+### we c-contwôwe affichew / m-masquew wes c-commentaiwes
 
-Le bouton de commande afficher / masquer les commentaires n'est pas actuellement accessible au clavier. Pouvez-vous le rendre accessible au clavier, à la fois en termes de focalisation à l'aide de la touche de tabulation et d'activation à l'aide de la touche de retour?
+we bouton de commande a-affichew / masquew wes commentaiwes ny'est pas actuewwement accessibwe au cwaview. 😳 pouvez-vous w-we wendwe accessibwe au cwaview, (U ﹏ U) à w-wa fois en tewmes de focawisation à w-w'aide de wa touche d-de tabuwation et d'activation à w-w'aide de wa t-touche de wetouw?
 
-### La table
+### w-wa tabwe
 
-Le tableau de données (data table ) n'est pas très accessible actuellement. Il est difficile pour les utilisateurs de lecteur d'écran d'associer des lignes et des colonnes de données. De plus, le tableau ne contient aucun type de résumé permettant de clarifier ce qu'il montre. Pouvez-vous ajouter des fonctionnalités à votre code HTML pour résoudre ce problème?
+w-we tabweau de données (data t-tabwe ) ny'est pas twès accessibwe actuewwement. mya iw est difficiwe pouw wes utiwisateuws de wecteuw d-d'écwan d'associew d-des wignes e-et des cowonnes de données. de p-pwus, (U ᵕ U❁) we tabweau nye contient aucun type de wésumé pewmettant d-de cwawifiew ce q-qu'iw montwe. :3 pouvez-vous ajoutew d-des fonctionnawités à votwe code htmw pouw w-wésoudwe ce pwobwème?
 
-### Autres considérations?
+### a-autwes considéwations?
 
-Pouvez-vous énumérer deux autres idées d'amélioration qui rendraient le site Web plus accessible?
+p-pouvez-vous énuméwew d-deux autwes idées d'améwiowation qui wendwaient we site web pwus a-accessibwe?
 
-## Évaluation
+## Évawuation
 
-Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre enseignant / mentor pour qu'il la corrige. Si vous vous auto-apprenez, vous pouvez obtenir le guide de notation assez facilement en le demandant sur la [discussion thread for this exercise](https://discourse.mozilla.org/t/accessibility-troubleshooting-assessment/24691), ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez d'abord l'exercice - il n'y a rien à gagner à tricher!
+s-si v-vous suivez cette évawuation d-dans w-we cadwe d'un couws owganisé, mya v-vous devwiez pouvoiw d-donnew votwe twavaiw à votwe e-enseignant / m-mentow pouw qu'iw wa cowwige. OwO s-si vous vous auto-appwenez, (ˆ ﻌ ˆ)♡ vous pouvez obteniw w-we guide de nyotation assez faciwement e-en we demandant s-suw wa [discussion thwead f-fow this exewcise](https://discouwse.moziwwa.owg/t/accessibiwity-twoubweshooting-assessment/24691), ʘwʘ ou suw we canaw iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) s-suw [moziwwa i-iwc](https://wiki.moziwwa.owg/iwc). o.O e-essayez d'abowd w'exewcice - iw ny'y a wien à gagnew à t-twichew! UwU
 
-{{PreviousMenu("Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{pweviousmenu("weawn/accessibiwity/mobiwe", rawr x3 "weawn/accessibiwity")}}

@@ -1,133 +1,133 @@
 ---
-title: browserAction.setPopup()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setPopup
+titwe: bwowsewaction.setpopup()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/setpopup
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit le document HTML qui sera ouvert en tant que popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur. Les onglets sans popup spécifique hériteront de la popup globale, qui par défaut est la [`default_popup`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) spécifiée dans le manifest.
+d-définit w-we document htmw q-qui sewa ouvewt e-en tant que popup w-wowsque w'utiwisateuw c-cwique s-suw w'icône de w-w'action du nyavigateuw. ^^;; wes ongwets sans popup spécifique héwitewont de wa p-popup gwobawe, (ˆ ﻌ ˆ)♡ qui paw défaut est wa [`defauwt_popup`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) s-spécifiée dans we m-manifest. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.browserAction.setPopup(
-  details, // object
+bwowsew.bwowsewaction.setpopup(
+  detaiws, (⑅˘꒳˘) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`.
+  - : `object`. rawr x3
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Définit la fenêtre contextuelle uniquement pour un onglet spécifique. La fenêtre contextuelle est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Définit le popup uniquement pour la fenêtre spécifiée.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. (///ˬ///✿) définit wa fenêtwe c-contextuewwe uniquement pouw u-un ongwet spécifique. 🥺 w-wa fenêtwe contextuewwe est wéinitiawisée wowsque w'utiwisateuw nyavigue d-dans cet ongwet vews une nyouvewwe page. >_<
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. UwU définit we popup uniquement p-pouw wa fenêtwe spécifiée. >_<
     - `popup`
 
-      - : `string` ou `null`. Le fichier HTML à afficher dans un popup, spécifié comme URL.
+      - : `stwing` o-ou `nuww`. -.- we f-fichiew htmw à a-affichew dans u-un popup, mya spécifié comme uww. >w<
 
-        Ceci peut pointer vers un fichier empaqueté dans l'extension (par exemple, créé à l'aide de {{WebExtAPIRef("extension.getURL")}}), ou un document distant (par exemple `https://example.org/`).
+        ceci peut p-pointew vews un fichiew empaqueté dans w'extension (paw e-exempwe, (U ﹏ U) cwéé à w'aide de {{webextapiwef("extension.getuww")}}), 😳😳😳 ou un document distant (paw exempwe `https://exampwe.owg/`). o.O
 
-        Si une chaîne vide (`""`) est passée ici, le popup est désactivé, et l'extension recevra les événements {{WebExtAPIRef("browserAction.onClicked")}}.
+        si une chaîne v-vide (`""`) est passée ici, w-we popup est désactivé, òωó e-et w'extension w-wecevwa wes événements {{webextapiwef("bwowsewaction.oncwicked")}}. 😳😳😳
 
-        Si le `popup` est `null`:
+        si we `popup` est `nuww`:
 
-        Si `tabId` est spécifié, supprime la fenêtre popup spécifique à l'onglet afin que l'onglet hérite de la fenêtre popup globale..
+        s-si `tabid` e-est spécifié, suppwime w-wa fenêtwe popup s-spécifique à w'ongwet afin q-que w'ongwet héwite de wa fenêtwe p-popup gwobawe..
 
-        Si `windowId` est spécifié, supprime le popup spécifique à la fenêtre afin que la fenêtre hérite du popup global.
+        si `windowid` est spécifié, σωσ s-suppwime we popup spécifique à w-wa fenêtwe afin que w-wa fenêtwe héwite d-du popup gwobaw. (⑅˘꒳˘)
 
-        Sinon, la fenêtre contextuelle globale revient à la valeur par défaut.
+        sinon, (///ˬ///✿) wa fenêtwe contextuewwe gwobawe wevient à wa vaweuw paw défaut. 🥺
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue et le popup n'est pas défini.
-- Si `windowId` et `tabId` sont tous les deux omis, la fenêtre contextuelle globale est définie.
+- si `windowid` e-et `tabid` sont t-tous wes deux fouwnis, OwO wa fonction échoue e-et w-we popup ny'est p-pas défini.
+- si `windowid` et `tabid` sont tous wes deux omis, >w< w-wa fenêtwe contextuewwe gwobawe est définie. 🥺
 
-## Exemples
+## exempwes
 
-Ce code ajoute une paire d'éléments de menu contextuel que vous pouvez utiliser pour basculer entre deux fenêtres contextuelles. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "contextMenus" définie dans le manifest de l'extension pour créer des éléments du menu contextuel.
+ce code ajoute une p-paiwe d'éwéments de menu contextuew q-que vous p-pouvez utiwisew p-pouw bascuwew entwe deux fenêtwes c-contextuewwes. nyaa~~ n-notez que vous a-auwez besoin de w-wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "contextmenus" définie dans we manifest de w-w'extension pouw c-cwéew des éwéments d-du menu contextuew. ^^
 
 ```js
-function onCreated() {
-  if (browser.runtime.lastError) {
-    console.log("error creating item:" + browser.runtime.lastError);
-  } else {
-    console.log("item created successfully");
+f-function oncweated() {
+  i-if (bwowsew.wuntime.wastewwow) {
+    consowe.wog("ewwow cweating item:" + bwowsew.wuntime.wastewwow);
+  } e-ewse {
+    consowe.wog("item cweated successfuwwy");
   }
 }
 
-browser.contextMenus.create(
+bwowsew.contextmenus.cweate(
   {
-    id: "popup-1",
-    type: "radio",
-    title: "Popup 1",
-    contexts: ["all"],
-    checked: true,
+    id: "popup-1", >w<
+    type: "wadio", OwO
+    t-titwe: "popup 1",
+    contexts: ["aww"], XD
+    checked: twue, ^^;;
   },
-  onCreated,
+  oncweated, 🥺
 );
 
-browser.contextMenus.create(
+b-bwowsew.contextmenus.cweate(
   {
-    id: "popup-2",
-    type: "radio",
-    title: "Popup 2",
-    contexts: ["all"],
-    checked: false,
-  },
-  onCreated,
+    i-id: "popup-2", XD
+    t-type: "wadio", (U ᵕ U❁)
+    titwe: "popup 2", :3
+    contexts: ["aww"], ( ͡o ω ͡o )
+    c-checked: fawse,
+  }, òωó
+  oncweated, σωσ
 );
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "popup-1") {
-    browser.browserAction.setPopup({ popup: "/popup/popup1.html" });
-  } else if (info.menuItemId == "popup-2") {
-    browser.browserAction.setPopup({ popup: "/popup/popup2.html" });
+b-bwowsew.contextmenus.oncwicked.addwistenew(function (info, (U ᵕ U❁) t-tab) {
+  if (info.menuitemid == "popup-1") {
+    bwowsew.bwowsewaction.setpopup({ popup: "/popup/popup1.htmw" });
+  } ewse if (info.menuitemid == "popup-2") {
+    b-bwowsew.bwowsewaction.setpopup({ popup: "/popup/popup2.htmw" });
   }
 });
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> c-cette a-api est basée suw w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). (✿oωo) cette documentation e-est déwivée d-de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) dans we c-code de chwomium c-code. ^^
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. ^•ﻌ•^
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. XD aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce a-and binawy fowms, (ꈍᴗꈍ) with ow without
+// modification, :3 a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this w-wist of conditions and the fowwowing discwaimew. UwU
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, 😳😳😳 t-this wist o-of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution.
+//    * neithew the nyame of googwe i-inc. XD now the nyames of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, (⑅˘꒳˘) incwuding, b-but nyot
+// wimited to, 😳😳😳 the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. nyaa~~ in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, rawr i-indiwect, -.- incidentaw, (✿oωo)
+// speciaw, e-exempwawy, /(^•ω•^) ow consequentiaw damages (incwuding, 🥺 but nyot
+// wimited to, ʘwʘ pwocuwement of substitute g-goods ow sewvices; woss o-of use, UwU
+// data, XD ow pwofits; ow b-business intewwuption) howevew c-caused and on any
+// theowy of w-wiabiwity, (✿oωo) whethew i-in contwact, :3 s-stwict wiabiwity, (///ˬ///✿) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, nyaa~~ even if advised of the p-possibiwity of such d-damage. >w<
 -->

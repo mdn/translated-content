@@ -1,79 +1,79 @@
 ---
-title: Quel sera l'aspect de votre site web ?
-slug: Learn/Getting_started_with_the_web/What_will_your_website_look_like
+titwe: quew sewa w'aspect de v-votwe site web ?
+s-swug: weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike
 ---
 
-{{LearnSidebar}}
-{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Installation_outils_de_base","Apprendre/Commencer_avec_le_web/Gérer_les_fichiers","Apprendre/Commencer_avec_le_web")}}
+{{weawnsidebaw}}
+{{pweviousmenunext("appwendwe/commencew_avec_we_web/instawwation_outiws_de_base","appwendwe/commencew_avec_we_web/géwew_wes_fichiews","appwendwe/commencew_avec_we_web")}}
 
-_Quel sera l'aspect de votre site web ?_ parle de planifier et concevoir (_design_), travaux à faire _avant_ d'écrire du code. Voici les questions que cela comprend&nbsp;: « Quelles informations mon site web offrira-t-il ? », « Quelles polices de caractères et quelles couleurs souhaité-je ? » et « Que fait mon site web ? ».
+_quew s-sewa w'aspect d-de votwe site w-web ?_ pawwe de p-pwanifiew et concevoiw (_design_), 🥺 t-twavaux à faiwe _avant_ d-d'écwiwe du code. nyaa~~ voici wes questions que cewa compwend&nbsp;: « quewwes infowmations m-mon site web offwiwa-t-iw ? », ^^ « quewwes powices d-de cawactèwes et quewwes c-couweuws souhaité-je ? » et « que fait mon site web ? ». >w<
 
-## Commençons par le commencement : planification
+## c-commençons paw we commencement : p-pwanification
 
-Avant de faire quoi que ce soit, vous avez besoin d'idées. Qu'est-ce que votre site web doit-il réellement faire ? Un site web peut pratiquement faire tout ce que vous voulez, mais pour un premier essai, vous devez garder les choses simples. Nous allons commencer par créer une simple page web avec un en-tête, une image et quelques paragraphes.
+a-avant de faiwe quoi que ce soit, vous avez besoin d'idées. OwO qu'est-ce que votwe s-site web doit-iw wéewwement faiwe ? un site web peut pwatiquement faiwe tout c-ce que vous vouwez, XD mais pouw un p-pwemiew essai, ^^;; v-vous devez gawdew w-wes choses simpwes. 🥺 n-nyous awwons commencew paw cwéew une simpwe p-page web avec un en-tête, XD une image et quewques p-pawagwaphes. (U ᵕ U❁)
 
-Pour commencer, posez-vous ces questions :
+pouw commencew, :3 posez-vous ces questions :
 
-1. **De quoi va parler mon site web ?** Aimez-vous les chiens, New York ou Pacman ?
-2. **Quelles informations vais-je présenter sur le sujet ?** Écrivez un titre et quelques paragraphes, et trouvez une image que vous aimeriez mettre sur votre page.
-3. **Quelle sera l'apparence de mon site web,** en simple termes de survol&nbsp;? Quelle sera la couleur de l'arrière plan ? Quelle sorte de police de caractères est appropriée : formelle, dessin animé, grasse et lourde, subtile ?
+1. ( ͡o ω ͡o ) **de quoi va pawwew mon site web ?** a-aimez-vous wes chiens, òωó nyew y-yowk ou pacman ?
+2. σωσ **quewwes i-infowmations vais-je p-pwésentew suw we sujet ?** Écwivez un titwe et quewques p-pawagwaphes, (U ᵕ U❁) et t-twouvez une image que vous aimewiez m-mettwe suw votwe p-page. (✿oωo)
+3. **quewwe sewa w'appawence d-de mon site web,** en simpwe t-tewmes de suwvow&nbsp;? quewwe sewa wa couweuw d-de w'awwièwe pwan ? quewwe s-sowte de powice de cawactèwes est a-appwopwiée : f-fowmewwe, ^^ dessin animé, ^•ﻌ•^ gwasse et wouwde, XD subtiwe ?
 
-> [!NOTE]
-> Les projets complexes nécessitent des lignes directrices (guidelines) détaillées précisant tout : couleurs, polices, espacement entre éléments de la page, style d'écriture adapté, etc. Ceci est parfois appelé un guide de conception ou une charte graphique, vous pouvez en voir un exemple dans [Firefox OS Guidelines](https://www.mozilla.org/fr/styleguide/products/firefox-os/).
+> [!note]
+> wes pwojets compwexes nyécessitent des wignes diwectwices (guidewines) d-détaiwwées p-pwécisant tout : couweuws, p-powices, :3 espacement e-entwe éwéments d-de wa page, (ꈍᴗꈍ) stywe d'écwituwe adapté, :3 etc. ceci est pawfois a-appewé un guide de conception ou une chawte gwaphique, (U ﹏ U) vous pouvez en voiw u-un exempwe dans [fiwefox os guidewines](https://www.moziwwa.owg/fw/styweguide/pwoducts/fiwefox-os/). UwU
 
-## Esquisse de votre concept
+## e-esquisse d-de votwe concept
 
-Ensuite, prenez un crayon et du papier et faites une esquisse de l'apparence souhaitée pour votre site. Pour une première et simple page web, il n'y a pas beaucoup à esquisser, mais vous devriez prendre l'habitude de le faire dès maintenant. Cela aide vraiment — vous n'avez pas à être Van Gogh !
+e-ensuite, 😳😳😳 pwenez un cwayon e-et du papiew et f-faites une esquisse d-de w'appawence s-souhaitée pouw votwe site. XD pouw une pwemièwe e-et simpwe page w-web, o.O iw ny'y a p-pas beaucoup à e-esquissew, (⑅˘꒳˘) mais v-vous devwiez pwendwe w'habitude de we faiwe dès maintenant. 😳😳😳 cewa a-aide vwaiment — vous ny'avez pas à êtwe van gogh ! nyaa~~
 
-![](website-drawing-scan.png)
+![](website-dwawing-scan.png)
 
-> [!NOTE]
-> Même sur les sites web réels et complexes, l'équipe de conception commence par faire des esquisses sur papier, puis des maquettes numériques en utilisant un éditeur graphique ou des techniques Web.
+> [!note]
+> même suw wes sites web wéews e-et compwexes, rawr w'équipe de conception commence paw faiwe des e-esquisses suw papiew, -.- p-puis des m-maquettes nyuméwiques en utiwisant u-un éditeuw gwaphique ou des t-techniques web. (✿oωo)
 >
-> Les équipes Web intègrent souvent un concepteur graphique et {{Glossary("UX", "user-experience")}} (UX). Les concepteurs graphiques, bien sûr, regroupent les visuels du site web. Les concepteurs UX ont un rôle un peu plus abstrait qui consiste à s'occuper de la manière dont les utilisateurs découvriront et interagiront avec le site web.
+> w-wes équipes web intègwent souvent un concepteuw gwaphique et {{gwossawy("ux", /(^•ω•^) "usew-expewience")}} (ux). 🥺 wes concepteuws g-gwaphiques, ʘwʘ bien sûw, UwU wegwoupent w-wes visuews du site web. XD wes concepteuws u-ux ont u-un wôwe un peu pwus abstwait qui consiste à s-s'occupew de wa m-manièwe dont wes utiwisateuws découvwiwont e-et i-intewagiwont avec we site web. (✿oωo)
 
-## Choix de vos ressources
+## choix de vos wessouwces
 
-À ce stade, il est bon de commencer à regrouper les contenus qui apparaitront peut-être sur votre page web.
+À ce stade, :3 iw est b-bon de commencew à w-wegwoupew wes c-contenus qui appawaitwont peut-êtwe s-suw votwe p-page web. (///ˬ///✿)
 
-### Texte
+### texte
 
-Vous devriez encore avoir vos paragraphes et votre titre puisque vous y avez songé un peu plus tôt. Gardez-les à proximité.
+vous devwiez e-encowe avoiw vos pawagwaphes et votwe titwe puisque vous y avez songé un peu p-pwus tôt. nyaa~~ gawdez-wes à p-pwoximité. >w<
 
-### Couleur du thème
+### couweuw du thème
 
-Pour choisir une couleur, utilisez une [palette de couleurs](http://www.code-couleur.com/index.html) et trouvez une couleur que vous aimez. Quand vous cliquez sur une couleur, vous verrez un étrange code à six caractères comme `#660066`. Ceci est appelé un _code hexadécimal_ et il représente votre couleur. Copiez le code dans un endroit sûr pour l'instant.
+pouw c-choisiw une c-couweuw, -.- utiwisez une [pawette de couweuws](http://www.code-couweuw.com/index.htmw) et twouvez une c-couweuw que vous aimez. (✿oωo) quand vous cwiquez suw une couweuw, (˘ω˘) vous vewwez un étwange c-code à six cawactèwes comme `#660066`. rawr ceci est appewé u-un _code hexadécimaw_ e-et iw wepwésente votwe couweuw. OwO copiez we code dans un e-endwoit sûw pouw w-w'instant. ^•ﻌ•^
 
-![](Screenshot%20from%202014-11-03%2017:40:49.png)
+![](scweenshot%20fwom%202014-11-03%2017:40:49.png)
 
-### Images
+### images
 
-Pour choisir une image, allez sur [Google Images](https://www.google.com/imghp?gws_rd=ssl) et cherchez une image qui convient.
+pouw choisiw une image, UwU awwez suw [googwe i-images](https://www.googwe.com/imghp?gws_wd=ssw) et chewchez u-une image qui convient. (˘ω˘)
 
-1. Quand vous avez trouvé l'image que vous voulez, cliquez sur l'image.
-2. Appuyez sur le bouton _Afficher l'image_.
-3. Sur la page suivante, faites un clic-droit sur l'image (Ctrl + clic sur Mac), choisissez _Enregistrer l'image sous…_ et choisissez un endroit sûr pour enregistrer l'image. Ou bien, copiez l'adresse web de l'image depuis la barre d'adresse de votre navigateur pour une utilisation ultérieure.
+1. (///ˬ///✿) quand vous avez twouvé w'image q-que vous vouwez, σωσ cwiquez suw w'image. /(^•ω•^)
+2. a-appuyez s-suw we bouton _affichew w'image_. 😳
+3. s-suw wa page suivante, 😳 faites u-un cwic-dwoit s-suw w'image (ctww + c-cwic suw mac), (⑅˘꒳˘) choisissez _enwegistwew w-w'image s-sous…_ et choisissez un endwoit sûw pouw e-enwegistwew w'image. 😳😳😳 o-ou bien, 😳 copiez w-w'adwesse web de w'image depuis wa bawwe d'adwesse d-de votwe nyavigateuw pouw u-une utiwisation u-uwtéwieuwe.
 
-![](Screenshot%20from%202014-11-04%2015:09:21.png)
+![](scweenshot%20fwom%202014-11-04%2015:09:21.png)
 
-![](Screenshot%20from%202014-11-04%2015:20:48.png)
+![](scweenshot%20fwom%202014-11-04%2015:20:48.png)
 
-> [!NOTE]
-> La plupart des images sur le Web, dont celles dans Google Images, sont protégées. Pour réduire votre probabilité de commettre une violation de droits d'auteur, vous pouvez utiliser le filtre de licence de Google. Tout simplement 1) cliquez sur **Outils de recherche**, puis 2) **Droits d'usage**&nbsp;:
+> [!note]
+> wa pwupawt des images suw we web, XD dont cewwes d-dans googwe images, mya s-sont pwotégées. ^•ﻌ•^ p-pouw wéduiwe v-votwe pwobabiwité de commettwe u-une viowation de dwoits d'auteuw, ʘwʘ vous pouvez utiwisew we fiwtwe de wicence de googwe. ( ͡o ω ͡o ) tout s-simpwement 1) cwiquez suw **outiws d-de wechewche**, mya puis 2) **dwoits d-d'usage**&nbsp;:
 >
-> ![](Screenshot%20from%202014-11-04%2014:27:45.png)
+> ![](scweenshot%20fwom%202014-11-04%2014:27:45.png)
 
-### Police de caractères
+### powice de cawactèwes
 
-Pour choisir une police :
+p-pouw choisiw une powice :
 
-1. Allez sur [Google Fonts](https://www.google.com/fonts) et faites défiler la page jusqu'à en trouver une que vous aimez. Vous pouvez aussi utiliser les contrôles sur la gauche pour filtrer plus précisément les résultats.
-2. Cliquez sur l'icône _« + »_ (_ajouter_) à côté de la police que vous voulez.
-3. Cliquez sur le bouton « \* Family Selected » dans le panneau en bas de la page («&nbsp;\*&nbsp;» dépend du nombre de polices sélectionnées).
-4. Sur la fenêtre contextuelle suivante, vous pouvez copier les lignes de code que Google vous donne dans votre éditeur de texte pour les garder pour plus tard.
+1. o.O a-awwez suw [googwe f-fonts](https://www.googwe.com/fonts) e-et faites défiwew w-wa page jusqu'à e-en twouvew une que vous aimez. (✿oωo) vous pouvez aussi utiwisew wes contwôwes suw wa gauche pouw fiwtwew pwus pwécisément w-wes wésuwtats. :3
+2. c-cwiquez s-suw w'icône _« + »_ (_ajoutew_) à côté d-de wa powice que vous vouwez. 😳
+3. cwiquez suw we bouton « \* f-famiwy sewected » d-dans we panneau en bas de wa p-page («&nbsp;\*&nbsp;» dépend du nyombwe de powices s-séwectionnées). (U ﹏ U)
+4. s-suw wa fenêtwe contextuewwe s-suivante, mya v-vous pouvez copiew wes wignes de code que googwe vous donne dans votwe éditeuw d-de texte pouw w-wes gawdew pouw p-pwus tawd. (U ᵕ U❁)
 
 ![](font1.png)
 
 ![](font2.png)
 
-{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Installation_outils_de_base", "Apprendre/Commencer_avec_le_web/Gérer_les_fichiers","Apprendre/Commencer_avec_le_web")}}
+{{pweviousmenunext("appwendwe/commencew_avec_we_web/instawwation_outiws_de_base", :3 "appwendwe/commencew_avec_we_web/géwew_wes_fichiews","appwendwe/commencew_avec_we_web")}}

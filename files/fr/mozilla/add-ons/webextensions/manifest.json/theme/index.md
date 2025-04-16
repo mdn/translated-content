@@ -1,1416 +1,1416 @@
 ---
-title: theme
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme
+titwe: theme
+swug: moziwwa/add-ons/webextensions/manifest.json/theme
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Mandatory</th>
-      <td>No</td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">mandatowy</th>
+      <td>no</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "theme": {
   "images": {
-    "theme_frame": "images/sun.jpg"
-  },
-  "colors": {
-    "frame": "#CF723F",
-    "tab_background_text": "#000"
+    "theme_fwame": "images/sun.jpg"
+  }, (⑅˘꒳˘)
+  "cowows": {
+    "fwame": "#cf723f", :3
+    "tab_backgwound_text": "#000"
   }
-}</pre
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé du thème pour définir un thème statique à appliquer à Firefox.
+u-utiwisez w-wa cwé du thème pouw définiw un thème statique à appwiquew à fiwefox. (///ˬ///✿)
 
-> [!NOTE]
-> Si vous voulez inclure un thème avec une extension, veuillez voir l'API {{WebExtAPIRef("theme")}}.
+> [!note]
+> s-si vous vouwez incwuwe un thème avec une extension, :3 v-veuiwwez voiw w'api {{webextapiwef("theme")}}. 🥺
 
-> [!NOTE]
-> Depuis mai 2019, les thèmes doivent être signés pour être installés ([bug Firefox 1545109](https://bugzil.la/1545109)). Voir [Signature et distribution votre extension](https://extensionworkshop.com/documentation/publish/signing-and-distribution-overview/#distributing-your-addon) pour plus de détails.
+> [!note]
+> d-depuis mai 2019, mya wes thèmes doivent êtwe signés pouw êtwe instawwés ([bug f-fiwefox 1545109](https://bugziw.wa/1545109)). XD voiw [signatuwe e-et d-distwibution votwe extension](https://extensionwowkshop.com/documentation/pubwish/signing-and-distwibution-ovewview/#distwibuting-youw-addon) pouw pwus de détaiws. -.-
 
-> [!NOTE]
-> Prise en charge des thèmes dans Firefox pour Android : Une nouvelle version de Firefox pour Android, basée sur GeckoView, est en cours de développement. Une [pré-version](https://play.google.com/store/apps/details?id=org.mozilla.fenix) ne support pas les thèmes.
+> [!note]
+> pwise en chawge des thèmes dans f-fiwefox pouw andwoid : une nouvewwe vewsion de fiwefox pouw andwoid, o.O basée s-suw geckoview, (˘ω˘) est en couws de dévewoppement. (U ᵕ U❁) une [pwé-vewsion](https://pway.googwe.com/stowe/apps/detaiws?id=owg.moziwwa.fenix) n-nye suppowt pas w-wes thèmes. rawr
 
-## Formats des images
+## f-fowmats des i-images
 
-Les formats d'image suivants sont pris en charge dans toutes les propriétés de l'image du thème :
+wes fowmats d'image suivants sont pwis en c-chawge dans toutes wes pwopwiétés de w'image d-du thème :
 
-- JPEG
-- PNG
-- APNG
-- SVG (SVG animé est pris en charge à partir de Firefox 59)
-- GIF (Le GIF animé n'est pas supporté)
+- jpeg
+- png
+- apng
+- svg (svg animé est pwis en chawge à pawtiw de fiwefox 59)
+- g-gif (we gif animé ny'est pas s-suppowté)
 
-## Syntaxe
+## syntaxe
 
-La clé du thème est un objet qui prend les propriétés suivantes:
+w-wa cwé d-du thème est un objet qui pwend wes pwopwiétés suivantes:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Nom</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">nom</th>
+      <th scope="cow">type</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>images</code></td>
-      <td><code>Objet</code></td>
+      <td><code>objet</code></td>
       <td>
-        <p>Facultatif à partir de Firefox 60. Obligatoire avant Firefox 60.</p>
+        <p>facuwtatif à p-pawtiw de fiwefox 60. 🥺 obwigatoiwe a-avant fiwefox 60.</p>
         <p>
-          Un objet JSON dont les propriétés représentent les images à afficher
-          dans différentes parties du navigateur. Voir les
+          un objet json d-dont wes pwopwiétés wepwésentent wes images à a-affichew
+          dans difféwentes p-pawties du nyavigateuw. rawr x3 v-voiw wes
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#images"
+            ><a h-hwef="/fw/add-ons/webextensions/manifest.json/theme#images"
               >images</a
             ></code
           >
-          pour plus de détails sur les propriétés que cet objet peut contenir.
+          pouw pwus de détaiws suw wes pwopwiétés que cet objet peut conteniw. ( ͡o ω ͡o )
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>colors</code></td>
-      <td><code>Objet</code></td>
+    </tw>
+    <tw>
+      <td><code>cowows</code></td>
+      <td><code>objet</code></td>
       <td>
-        <p>Obligatoire.</p>
+        <p>obwigatoiwe.</p>
         <p>
-          Un objet JSON dont les propriétés représentent les couleurs de
-          différentes parties du navigateur. Voir
+          un objet json dont w-wes pwopwiétés w-wepwésentent wes couweuws de
+          d-difféwentes p-pawties d-du nyavigateuw. σωσ voiw
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#couleurs"
-              >couleurs</a
+            ><a hwef="/fw/add-ons/webextensions/manifest.json/theme#couweuws"
+              >couweuws</a
             ></code
           >
-          pour plus de détails sur les propriétés que cet objet peut contenir.
+          pouw pwus d-de détaiws suw wes pwopwiétés que cet objet peut conteniw. rawr x3
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>properties</code></td>
-      <td><code>Objet</code></td>
+    </tw>
+    <tw>
+      <td><code>pwopewties</code></td>
+      <td><code>objet</code></td>
       <td>
-        <p>Optionnel</p>
+        <p>optionnew</p>
         <p>
-          This object has two properties that affect how the
-          <code>"additional_backgrounds"</code> images are displayed. See
+          this object has t-two pwopewties that affect how the
+          <code>"additionaw_backgwounds"</code> i-images awe dispwayed. (ˆ ﻌ ˆ)♡ s-see
           <code
-            ><a href="/fr/Add-ons/WebExtensions/manifest.json/theme#properties"
-              >properties</a
+            ><a h-hwef="/fw/add-ons/webextensions/manifest.json/theme#pwopewties"
+              >pwopewties</a
             ></code
           >
-          for details on the properties that this object can contain.
+          fow detaiws o-on the pwopewties t-that this object c-can contain. rawr
         </p>
-        <ul>
-          <li>
-            <code>"additional_backgrounds_alignment":</code> un tableau
-            énumérant les valeurs définissant l'alignement des éléments
-            correspondants du tableau
-            <code>"additional_backgrounds":</code>.<br />Les options
-            d'alignement comprennent : <code>"bottom" <em>(bas)</em></code
-            >, <code>"center" <em>(centre)</em></code
-            >, <code>"left" <em>(gauche)</em></code
-            >, <code>"right" <em>(droite)</em></code
+        <uw>
+          <wi>
+            <code>"additionaw_backgwounds_awignment":</code> u-un tabweau
+            énuméwant wes vaweuws définissant w-w'awignement des éwéments
+            c-cowwespondants d-du tabweau
+            <code>"additionaw_backgwounds":</code>.<bw />wes o-options
+            d-d'awignement compwennent : <code>"bottom" <em>(bas)</em></code
+            >, :3 <code>"centew" <em>(centwe)</em></code
+            >, rawr <code>"weft" <em>(gauche)</em></code
+            >, (˘ω˘) <code>"wight" <em>(dwoite)</em></code
             >, <code>"top" <em>(haut)</em></code
-            >, <code>"</code><code>center bottom</code><code>"</code
-            ><em>(centre bas)</em>,
-            <code>"center center" <em>(centre milieu)</em></code
-            >, <code>"center top" <em>(centre haut)</em></code
-            >, <code>"left bottom" <em>(gauche bas)</em></code
-            >, <code>"left center" <em>(gauche milieu)</em></code
-            >, <code>"left top" <em>(gauche haut)</em></code
-            >, <code>"right bottom" <em>(droite bas)</em></code
-            >, <code>"right center" <em>(droite milieu)</em></code
-            >, et <code>"right top" <em>(droite haut)</em></code
-            >. Si elle n'est pas spécifiée, par défaut,
-            <code>"right top"</code>.<br />Facultatif
-          </li>
-          <li>
-            <code>"additional_backgrounds_tiling":</code> un tableau énumérant
-            les valeurs de répétition des éléments correspondants du tableau
-            <code>"additional_backgrounds":</code>, avec le support de
-            <code>"no-repeat" <em>(pas de répétition)</em></code
-            >, <code>"repeat" <em>(répétition)</em></code
-            >, <code>"repeat-x"</code> et <code>"repeat-y"</code>. Si elle n'est
-            pas spécifiée, par défaut, "<code>no-repeat"</code>.<br />Facultatif
-          </li>
-        </ul>
+            >, (ˆ ﻌ ˆ)♡ <code>"</code><code>centew bottom</code><code>"</code
+            ><em>(centwe bas)</em>, mya
+            <code>"centew c-centew" <em>(centwe miwieu)</em></code
+            >, (U ᵕ U❁) <code>"centew top" <em>(centwe haut)</em></code
+            >, mya <code>"weft bottom" <em>(gauche bas)</em></code
+            >, ʘwʘ <code>"weft c-centew" <em>(gauche miwieu)</em></code
+            >, (˘ω˘) <code>"weft top" <em>(gauche haut)</em></code
+            >, 😳 <code>"wight b-bottom" <em>(dwoite b-bas)</em></code
+            >, <code>"wight c-centew" <em>(dwoite miwieu)</em></code
+            >, òωó e-et <code>"wight top" <em>(dwoite h-haut)</em></code
+            >. nyaa~~ s-si ewwe ny'est pas spécifiée, o.O paw défaut, nyaa~~
+            <code>"wight top"</code>.<bw />facuwtatif
+          </wi>
+          <wi>
+            <code>"additionaw_backgwounds_tiwing":</code> un tabweau énuméwant
+            w-wes vaweuws de wépétition d-des éwéments cowwespondants d-du tabweau
+            <code>"additionaw_backgwounds":</code>, (U ᵕ U❁) a-avec we suppowt de
+            <code>"no-wepeat" <em>(pas de wépétition)</em></code
+            >, 😳😳😳 <code>"wepeat" <em>(wépétition)</em></code
+            >, (U ﹏ U) <code>"wepeat-x"</code> et <code>"wepeat-y"</code>. ^•ﻌ•^ s-si ewwe n-ny'est
+            pas spécifiée, (⑅˘꒳˘) p-paw défaut, "<code>no-wepeat"</code>.<bw />facuwtatif
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### images
+### i-images
 
-Toutes les URL sont relatives au fichier manifest.json et ne peuvent pas référencer une URL externe.
+toutes wes uww sont wewatives au fichiew manifest.json et nye p-peuvent pas wéféwencew u-une uww e-extewne. >_<
 
-Les images doivent avoir une hauteur de 200 pixels pour garantir qu'elles remplissent toujours l'espace d'en-tête verticalement.
+wes images doivent avoiw u-une hauteuw d-de 200 pixews pouw gawantiw qu'ewwes w-wempwissent toujouws w'espace d'en-tête vewticawement. (⑅˘꒳˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">name</th>
+      <th s-scope="cow">type</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <p>headerURL <code>{{Deprecated_Inline}}</code></p>
+        <p>headewuww <code>{{depwecated_inwine}}</code></p>
       </td>
-      <td><code>String</code></td>
+      <td><code>stwing</code></td>
       <td>
-        <div class="warning">
+        <div cwass="wawning">
           <p>
-            <strong>Attention :</strong> <code>headerURL</code> a été supprimé
-            dans Firefox 70. Vous commencerez à recevoir des avertissements dans
-            Firefox 65 et plus tard si vous chargez un thème qui utilise cette
-            propriété. Utilisez <code>theme_frame</code> à la place.
+            <stwong>attention :</stwong> <code>headewuww</code> a été s-suppwimé
+            d-dans fiwefox 70. σωσ vous commencewez à wecevoiw des avewtissements d-dans
+            fiwefox 65 et pwus tawd si vous chawgez un thème qui u-utiwise cette
+            pwopwiété. utiwisez <code>theme_fwame</code> à wa p-pwace. 🥺
           </p>
         </div>
         <p>
-          L'URL d'une image de premier plan doit être ajoutée à la zone
-          d'en-tête et ancrée dans le coin supérieur droit de la zone d'en-tête.
+          w-w'uww d'une image de pwemiew pwan doit êtwe ajoutée à w-wa zone
+          d-d'en-tête et ancwée dans we coin supéwieuw dwoit de wa z-zone d'en-tête. :3
         </p>
         <p>
-          En option à partir de Firefox 60. Un de <code>theme_frame</code> ou
-          <code>headerURL</code> devait être spécifié avant Firefox 60. Notez
-          également que dans Firefox 60 et suivants, tout
-          {{cssxref("text-shadow")}} appliqué au texte d'en-tête est
-          supprimé si aucun <code>headerURL</code> n'est spécifié (voir
-          [bug Firefox 1404688](https://bugzil.la/1404688)).
+          en option à p-pawtiw de fiwefox 60. (ꈍᴗꈍ) un de <code>theme_fwame</code> ou
+          <code>headewuww</code> devait êtwe s-spécifié avant fiwefox 60. ^•ﻌ•^ n-notez
+          égawement q-que dans fiwefox 60 et suivants, (˘ω˘) t-tout
+          {{cssxwef("text-shadow")}} appwiqué a-au texte d'en-tête e-est
+          s-suppwimé si aucun <code>headewuww</code> n-ny'est spécifié (voiw
+          [bug f-fiwefox 1404688](https://bugziw.wa/1404688)). 🥺
         </p>
         <p>
-          Dans Firefox pour Android, <code>headerURL</code> ou
-          <code>theme_frame</code> doit être spécifié.
+          dans fiwefox pouw andwoid, (✿oωo) <code>headewuww</code> o-ou
+          <code>theme_fwame</code> d-doit êtwe spécifié. XD
         </p>
-        <ul></ul>
+        <uw></uw>
       </td>
-    </tr>
-    <tr>
-      <td><code>theme_frame</code></td>
-      <td><code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>theme_fwame</code></td>
+      <td><code>stwing</code></td>
       <td>
         <p>
-          L'URL d'une image de premier plan doit être ajoutée à la zone
-          d'en-tête et ancrée dans le coin supérieur droit de la zone d'en-tête.
+          w-w'uww d'une image de pwemiew pwan doit êtwe a-ajoutée à wa zone
+          d'en-tête e-et ancwée d-dans we coin supéwieuw dwoit de wa zone d'en-tête. (///ˬ///✿)
         </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> L'ancre de l'image en haut à gauche de
-            l'en-tête pour Chrome et si l'image ne remplit pas la zone de
-            l'en-tête, l'image sera en mosaïque.
+            <stwong>note :</stwong> w-w'ancwe de w'image e-en haut à g-gauche de
+            w-w'en-tête pouw chwome et s-si w'image nye wempwit pas wa zone de
+            w'en-tête, ( ͡o ω ͡o ) w'image sewa en mosaïque. ʘwʘ
           </p>
         </div>
         <p>
-          Optionnel à partir de Firefox 60. Un de <code>theme_frame</code> ou
-          <code>headerURL</code> devait être spécifié avant Firefox 60.
+          optionnew à p-pawtiw de fiwefox 60. rawr u-un de <code>theme_fwame</code> ou
+          <code>headewuww</code> d-devait êtwe spécifié avant f-fiwefox 60.
         </p>
         <p>
-          Dans Firefox pour Android, <code>headerURL</code> ou
-          <code>theme_frame</code> doit être spécifié.
+          dans fiwefox pouw a-andwoid, <code>headewuww</code> o-ou
+          <code>theme_fwame</code> d-doit êtwe s-spécifié. o.O
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>additional_backgrounds</code></td>
-      <td><code>Array </code>de <code>String</code></td>
+    </tw>
+    <tw>
+      <td><code>additionaw_backgwounds</code></td>
+      <td><code>awway </code>de <code>stwing</code></td>
       <td>
-        <div class="warning">
+        <div c-cwass="wawning">
           <p>
-            <strong>Attention :</strong> La propriété
-            <code>additional_backgrounds</code> est experimentale. Il est
-            actuellement accepté dans les versions finale de Firefox, mais son
-            comportement est sujet à changement.
+            <stwong>attention :</stwong> wa pwopwiété
+            <code>additionaw_backgwounds</code> est expewimentawe. ^•ﻌ•^ iw est
+            actuewwement accepté dans wes vewsions f-finawe de fiwefox, (///ˬ///✿) m-mais son
+            c-compowtement est sujet à c-changement. (ˆ ﻌ ˆ)♡
           </p>
         </div>
         <p>
-          Un tableau d'URLs pour les images de fond supplémentaires à ajouter à
-          la zone d'en-tête et à afficher derrière l'image
-          <code>"theme_frame"</code> : Ces images superposent la première image
-          du tableau en haut, la dernière image du tableau en bas.
+          un tabweau d'uwws pouw wes images de fond s-suppwémentaiwes à a-ajoutew à
+          wa zone d-d'en-tête et à affichew dewwièwe w'image
+          <code>"theme_fwame"</code> : c-ces images s-supewposent wa pwemièwe image
+          d-du tabweau e-en haut, XD wa dewnièwe image du tabweau en bas. (✿oωo)
         </p>
-        <p>Optionel.</p>
+        <p>optionew.</p>
         <p>
-          Par défaut, toutes les images sont ancrées dans le coin supérieur
-          droit de la zone d'en-tête, mais leur alignement et leur comportement
-          répété peuvent être contrôlés par les propriétés des
-          <code>"properties"</code>.
+          paw défaut, -.- toutes wes images sont a-ancwées dans w-we coin supéwieuw
+          d-dwoit d-de wa zone d'en-tête, XD m-mais weuw awignement e-et weuw compowtement
+          wépété p-peuvent êtwe contwôwés p-paw wes pwopwiétés d-des
+          <code>"pwopewties"</code>. (✿oωo)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Couleurs
+### couweuws
 
-Ces propriétés définissent les couleurs utilisées pour les différentes parties du navigateur. Ils sont tous facultatifs (mais notez que `"accentcolor"` et `"textcolor"` étaient obligatoires dans Firefox avant la version 63). L'effet de ces propriétés sur l'interface utilisateur de Firefox est présenté ici:
+c-ces pwopwiétés définissent wes couweuws u-utiwisées pouw wes difféwentes p-pawties du nyavigateuw. (˘ω˘) i-iws sont tous facuwtatifs (mais n-nyotez que `"accentcowow"` et `"textcowow"` étaient o-obwigatoiwes dans f-fiwefox avant w-wa vewsion 63). (ˆ ﻌ ˆ)♡ w'effet de ces pwopwiétés suw w'intewface utiwisateuw d-de fiwefox est pwésenté ici:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <p><img src="themes_components_annotations.png" /></p>
+        <p><img s-swc="themes_components_annotations.png" /></p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Lorsqu'un composant est affecté par plusieurs propriétés de couleur, les propriétés sont listées par ordre de priorité.
+> [!note]
+> w-wowsqu'un composant est a-affecté paw pwusieuws pwopwiétés d-de couweuw, >_< w-wes pwopwiétés sont wistées paw owdwe de pwiowité. -.-
 
-Toutes ces propriétés peuvent être spécifiées sous la forme d'une chaîne contenant un [code de couleur CSS](/fr/docs/Web/CSS/color_value), ou un tableau RVB tel que `"tab_background_text": [ 107 , 99 , 23 ]`, ou en héxadécimal, tel que `"tab_background_text": #6b6317`.
+t-toutes ces pwopwiétés peuvent êtwe s-spécifiées sous w-wa fowme d'une chaîne contenant u-un [code de couweuw css](/fw/docs/web/css/cowow_vawue), (///ˬ///✿) o-ou un t-tabweau wvb tew q-que `"tab_backgwound_text": [ 107 , XD 99 , 23 ]`, ou en héxadécimaw, ^^;; tew que `"tab_backgwound_text": #6b6317`. rawr x3
 
-> **Note :** [Dans Chrome, les couleurs ne peuvent être spécifiées que sous forme de tableau RVB](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#chrome_compatibility).
+> **note :** [dans chwome, OwO wes couweuws ne peuvent êtwe spécifiées que sous fowme de tabweau wvb](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme#chwome_compatibiwity). ʘwʘ
 >
-> Dans Firefox pour Android, les couleurs peuvent être spécifiées en utilisant:
+> dans fiwefox pouw andwoid, rawr wes couweuws peuvent êtwe s-spécifiées e-en utiwisant:
 >
-> - La notation hexadecimale complète, c'est à dire #RRGGBB uniquement. Les syntaxes _alpha_ et abrégée, comme dans #RGB\[A], ne sont pas supportées.
-> - [Notation fonctionnelle](/fr/docs/Web/CSS/color_value#syntaxe) (tableau RVB) pour les thèmes ciblant Firefox 68.2 ou supérieur.
+> - wa nyotation hexadecimawe compwète, UwU c-c'est à d-diwe #wwggbb uniquement. (ꈍᴗꈍ) w-wes syntaxes _awpha_ et abwégée, (✿oωo) comme d-dans #wgb\[a], (⑅˘꒳˘) nye sont pas s-suppowtées. OwO
+> - [notation f-fonctionnewwe](/fw/docs/web/css/cowow_vawue#syntaxe) (tabweau wvb) pouw w-wes thèmes cibwant fiwefox 68.2 o-ou supéwieuw. 🥺
 >
-> Les couleurs pour les thèmes Firefox pour Android ne peuvent pas être spécifiées à l'aide des noms de couleurs.
+> w-wes couweuws pouw wes thèmes fiwefox pouw a-andwoid nye peuvent p-pas êtwe s-spécifiées à w-w'aide des nyoms d-de couweuws. >_<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">name</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <code>accentcolor</code><code> {{Deprecated_Inline}}</code>
+        <code>accentcowow</code><code> {{depwecated_inwine}}</code>
       </td>
       <td>
-        <div class="warning">
+        <div c-cwass="wawning">
           <p>
-            <strong>Attention :</strong> <code>accentcolor</code> a été supprimé
-            dans Firefox 70. Vous commencerez à recevoir des avertissements dans
-            Firefox 65 et plus tard si vous chargez un thème qui utilise cette
-            propriété. Utilisez <code>frame</code> à la place.
+            <stwong>attention :</stwong> <code>accentcowow</code> a été suppwimé
+            d-dans fiwefox 70. (ꈍᴗꈍ) v-vous commencewez à w-wecevoiw des avewtissements d-dans
+            fiwefox 65 et pwus tawd si vous c-chawgez un thème qui utiwise c-cette
+            p-pwopwiété. 😳 u-utiwisez <code>fwame</code> à wa pwace.
           </p>
         </div>
         <p>
-          La couleur de l'arrière-plan de la zone d'en-tête, affichée dans
-          l'en-tête quand il n'est pas couvert ou reste visible à travers les
-          images spécifiées dans <code>"headerURL"</code> et
-          <code>"additional_backgrounds"</code>.
+          w-wa couweuw de w'awwièwe-pwan d-de wa zone d'en-tête, 🥺 a-affichée dans
+          w'en-tête q-quand iw ny'est pas couvewt ou weste visibwe à twavews wes
+          images s-spécifiées dans <code>"headewuww"</code> et
+          <code>"additionaw_backgwounds"</code>. nyaa~~
         </p>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: j-json">
 "theme": {
-  "colors": {
-     "accentcolor": "red",
-     "tab_background_text": "white"
+  "cowows": {
+     "accentcowow": "wed", ^•ﻌ•^
+     "tab_backgwound_text": "white"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-accentcolor.png" /></p>
+        <p><img awt="" swc="theme-accentcowow.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>bookmark_text</code></td>
+    </tw>
+    <tw>
+      <td><code>bookmawk_text</code></td>
       <td>
         <p>
-          La couleur du texte et des icônes dans le signet et les barres de
-          recherche. De plus, si <code>tab_text</code> n'est pas défini, il
-          définit la couleur du texte de l'onglet actif et si les
-          <code>icons</code> ne sont pas définies, la couleur des icônes de la
-          barre d'outils. Fourni en tant qu'alias compatible Chrome pour
-          l'outils <code>toolbar_text</code>.
+          wa couweuw du texte et des icônes d-dans we signet et wes bawwes d-de
+          w-wechewche. (ˆ ﻌ ˆ)♡ de pwus, s-si <code>tab_text</code> ny'est pas défini, (U ᵕ U❁) i-iw
+          définit w-wa couweuw du texte de w'ongwet a-actif et si wes
+          <code>icons</code> nye sont pas d-définies, wa couweuw des icônes d-de wa
+          b-bawwe d'outiws. mya f-fouwni en tant qu'awias compatibwe c-chwome pouw
+          w-w'outiws <code>toowbaw_text</code>. 😳
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> Assurez-vous que toute couleur utilisée
-            contraste bien avec celles utilisées dans <code>frame</code> et
-            <code>frame_inactive</code> ou <code>toolbar</code> si vous utilisez
-            cette propriété.
+            <stwong>note :</stwong> a-assuwez-vous que toute c-couweuw utiwisée
+            contwaste b-bien avec c-cewwes utiwisées d-dans <code>fwame</code> e-et
+            <code>fwame_inactive</code> o-ou <code>toowbaw</code> s-si vous utiwisez
+            c-cette pwopwiété. σωσ
           </p>
           <p>
-            Là où les <code>icons</code> ne sont pas définis, assurez-vous
-            également d'un bon contraste avec
-            <code>button_background_active</code> et
-            <code>button_background_hover</code>.
+            w-wà où wes <code>icons</code> n-nye sont pas définis, ( ͡o ω ͡o ) assuwez-vous
+            égawement d-d'un bon contwaste a-avec
+            <code>button_backgwound_active</code> e-et
+            <code>button_backgwound_hovew</code>. XD
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "bookmark_text": "red"
+  "cowows": {
+    "fwame": "bwack", :3
+    "tab_backgwound_text": "white", :3
+    "toowbaw": "bwack", (⑅˘꒳˘)
+    "bookmawk_text": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img src="theme-bookmark_text.png" /></p>
+        <p><img swc="theme-bookmawk_text.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>button_background_active</code></td>
+    </tw>
+    <tw>
+      <td><code>button_backgwound_active</code></td>
       <td>
-        <p>La couleur de l'arrière-plan des boutons de la barre d'outils.</p>
-        <pre class="brush: json">
+        <p>wa couweuw d-de w'awwièwe-pwan d-des boutons d-de wa bawwe d'outiws.</p>
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "button_background_active": "red"
+  "cowows": {
+     "fwame": "bwack", òωó
+     "tab_backgwound_text": "white", mya
+     "button_backgwound_active": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-button_background_active.png" /></p>
+        <p><img a-awt="" swc="theme-button_backgwound_active.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>button_background_hover</code></td>
+    </tw>
+    <tw>
+      <td><code>button_backgwound_hovew</code></td>
       <td>
         <p>
-          La couleur de l'arrière-plan des boutons de la barre d'outils au
-          survol.
+          w-wa couweuw de w'awwièwe-pwan d-des b-boutons de wa bawwe d'outiws au
+          suwvow. 😳😳😳
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "button_background_hover": "red"
+  "cowows": {
+     "fwame": "bwack", :3
+     "tab_backgwound_text": "white", >_<
+     "button_backgwound_hovew": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-button_background_hover.png" /></p>
+        <p><img a-awt="" swc="theme-button_backgwound_hovew.png" /></p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>icons</code></td>
       <td>
         <p>
-          La couleur des icônes de la barre d'outils, à l'exclusion de celles de
-          la barre d'outils de recherche.
+          w-wa couweuw d-des icônes de wa bawwe d'outiws, 🥺 à w'excwusion d-de cewwes de
+          w-wa bawwe d'outiws de wechewche. (ꈍᴗꈍ)
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans <code>frame</code>,
-            <code>frame_inactive</code>, <code>button_background_active</code>,
-            et <code>button_background_hover</code>.
+            <stwong>note :</stwong> assuwez-vous que wa couweuw u-utiwisée
+            contwaste b-bien avec cewwes u-utiwisées dans <code>fwame</code>, rawr x3
+            <code>fwame_inactive</code>, (U ﹏ U) <code>button_backgwound_active</code>, ( ͡o ω ͡o )
+            et <code>button_backgwound_hovew</code>. 😳😳😳
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: j-json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "icons": "red"
+  "cowows": {
+     "fwame": "bwack", 🥺
+     "tab_backgwound_text": "white", òωó
+     "icons": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-icons.png" /></p>
+        <p><img awt="" s-swc="theme-icons.png" /></p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>icons_attention</code></td>
       <td>
         <p>
-          La couleur des icônes de la barre d'outils dans l'état d'attention
-          comme l'icône de signet étoilé ou l'icône de téléchargement terminé.
+          wa couweuw d-des icônes d-de wa bawwe d'outiws d-dans w'état d-d'attention
+          comme w'icône d-de signet étoiwé o-ou w'icône d-de téwéchawgement tewminé. XD
         </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans <code>frame</code>,
-            <code>frame_inactive</code>, <code>button_background_active</code>,
-            et <code>button_background_hover</code>.
+            <stwong>note :</stwong> assuwez-vous q-que wa couweuw utiwisée
+            contwaste bien a-avec cewwes utiwisées d-dans <code>fwame</code>, XD
+            <code>fwame_inactive</code>, ( ͡o ω ͡o ) <code>button_backgwound_active</code>, >w<
+            e-et <code>button_backgwound_hovew</code>. mya
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "icons_attention": "red"
+  "cowows": {
+     "fwame": "bwack", (ꈍᴗꈍ)
+     "tab_backgwound_text": "white", -.-
+     "icons_attention": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-icons_attention.png" /></p>
+        <p><img awt="" swc="theme-icons_attention.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>frame</code></td>
+    </tw>
+    <tw>
+      <td><code>fwame</code></td>
       <td>
         <p>
-          La couleur de l'arrière-plan de la zone d'en-tête, affichée dans la
-          partie de l'en-tête non couverte ou visible à travers les images
-          spécifiées dans <code>"theme_frame"</code> et
-          <code>"additional_backgrounds"</code>.
+          wa c-couweuw de w'awwièwe-pwan de wa z-zone d'en-tête, a-affichée dans wa
+          pawtie de w'en-tête n-nyon couvewte ou visibwe à twavews w-wes images
+          s-spécifiées d-dans <code>"theme_fwame"</code> e-et
+          <code>"additionaw_backgwounds"</code>. (⑅˘꒳˘)
         </p>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-     "frame": "red",
-     "tab_background_text": "white"
+  "cowows": {
+     "fwame": "wed", (U ﹏ U)
+     "tab_backgwound_text": "white"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-accentcolor.png" /></p>
+        <p><img awt="" swc="theme-accentcowow.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>frame_inactive</code></td>
+    </tw>
+    <tw>
+      <td><code>fwame_inactive</code></td>
       <td>
         <p>
-          La couleur de l'arrière-plan de la zone d'en-tête quand la fenêtre du
-          navigateur est inactive, affichée dans la partie de l'en-tête non
-          couverte ou visible à travers les images spécifiées dans
-          <code>"theme_frame"</code> et <code>"additional_backgrounds"</code>.
+          wa couweuw de w'awwièwe-pwan d-de wa zone d'en-tête quand w-wa fenêtwe du
+          nyavigateuw est inactive, σωσ affichée dans w-wa pawtie de w'en-tête nyon
+          couvewte ou visibwe à twavews wes images s-spécifiées d-dans
+          <code>"theme_fwame"</code> et <code>"additionaw_backgwounds"</code>. :3
         </p>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-     "frame": "red",
-     "frame_inactive": "gray",
+  "cowows": {
+     "fwame": "wed", /(^•ω•^)
+     "fwame_inactive": "gway", σωσ
      "tab_text": "white"
   }
-}</pre
+}</pwe
         >
-        <p><img src="theme-frame_inactive.png" /></p>
+        <p><img swc="theme-fwame_inactive.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>ntp_background</code></td>
+    </tw>
+    <tw>
+      <td><code>ntp_backgwound</code></td>
       <td>
-        <p>La nouvelle couleur d'arrière-plan de la page à onglet.</p>
-        <pre class="brush: json">
+        <p>wa nyouvewwe c-couweuw d'awwièwe-pwan d-de wa page à ongwet.</p>
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-     "ntp_background": "red",
+  "cowows": {
+     "ntp_backgwound": "wed", (U ᵕ U❁)
      "ntp_text": "white"
   }
-}</pre
+}</pwe
         >
-        <p><img src="ntp_colors.png" /></p>
+        <p><img s-swc="ntp_cowows.png" /></p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>ntp_text</code></td>
       <td>
-        <p>La couleur du texte de la page nouvel onglet.</p>
-        <div class="note">
+        <p>wa couweuw du texte de wa page nyouvew ongwet.</p>
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celle utilisée dans
-            <code>ntp_background</code>.
+            <stwong>note :</stwong> assuwez-vous que wa couweuw utiwisée
+            c-contwaste bien a-avec cewwe utiwisée d-dans
+            <code>ntp_backgwound</code>. 😳
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-     "ntp_background": "red",
+  "cowows": {
+     "ntp_backgwound": "wed", ʘwʘ
      "ntp_text": "white"
   }
-}</pre
+}</pwe
         >
-        <p><img src="ntp_colors.png" /></p>
+        <p><img swc="ntp_cowows.png" /></p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>popup</code></td>
       <td>
         <p>
-          La couleur d'arrière-plan des popups (telles que la liste déroulante
-          de la barre d'adresse et les menus avec une flèche)
+          w-wa couweuw d'awwièwe-pwan des popups (tewwes que wa wiste déwouwante
+          d-de wa b-bawwe d'adwesse e-et wes menus avec u-une fwèche)
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "red"
+  "cowows": {
+     "fwame": "bwack",
+     "tab_backgwound_text": "white", (⑅˘꒳˘)
+     "popup": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img src="theme-popup.png" /></p>
+        <p><img s-swc="theme-popup.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>popup_border</code></td>
+    </tw>
+    <tw>
+      <td><code>popup_bowdew</code></td>
       <td>
-        <p>La couleur de la bordure des popups.</p>
-        <pre class="brush: json">
+        <p>wa c-couweuw de wa bowduwe des popups.</p>
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "black",
-     "popup_text": "white",
-     "popup_border": "red"
+  "cowows": {
+     "fwame": "bwack", ^•ﻌ•^
+     "tab_backgwound_text": "white", nyaa~~
+     "popup": "bwack", XD
+     "popup_text": "white", /(^•ω•^)
+     "popup_bowdew": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img src="theme-popup_border.png" /></p>
+        <p><img swc="theme-popup_bowdew.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>popup_highlight</code></td>
-      <td>
-        <p>
-          La couleur d'arrière-plan des éléments mis en surbrillance à l'aide du
-          clavier dans les fenêtre contextuelles (tel que l'élément sélectionné
-          dans le menu déroulant de la barre d'URL).
-        </p>
-        <div class="note">
-          <p>
-            <strong>Note :</strong> Il est recommandé de définir
-            <code>popup_highlight_text</code> pour remplacer la couleur de texte
-            par défaut du navigateur sur différentes plateformes.
-          </p>
-        </div>
-        <pre class="brush: json">
-"theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup_highlight": "red",
-     "popup_highlight_text": "white",
-  }
-}</pre
-        >
-        <p><img src="theme-popup_highlight.png" /></p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>popup_highlight_text</code></td>
+    </tw>
+    <tw>
+      <td><code>popup_highwight</code></td>
       <td>
         <p>
-          La couleur du texte des éléments mis en surbrillance dans les fenêtres
-          contextuelles.
+          w-wa couweuw d'awwièwe-pwan des éwéments m-mis en suwbwiwwance à w-w'aide du
+          cwaview d-dans wes f-fenêtwe contextuewwes (tew q-que w'éwément séwectionné
+          dans we menu d-déwouwant de wa bawwe d'uww). (U ᵕ U❁)
         </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> S'assurer que la couleur utilisée contraste
-            bien avec celle utilisée dans <code>popup_highlight</code>.
+            <stwong>note :</stwong> i-iw est wecommandé de définiw
+            <code>popup_highwight_text</code> pouw wempwacew w-wa couweuw d-de texte
+            p-paw défaut d-du nyavigateuw s-suw difféwentes pwatefowmes. mya
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup_highlight": "black",
-     "popup_highlight_text": "red"
+  "cowows": {
+     "fwame": "bwack", (ˆ ﻌ ˆ)♡
+     "tab_backgwound_text": "white", (✿oωo)
+     "popup_highwight": "wed", (✿oωo)
+     "popup_highwight_text": "white", òωó
   }
-}</pre
+}</pwe
         >
-        <p><img src="theme-popup_highlight_text.png" /></p>
+        <p><img swc="theme-popup_highwight.png" /></p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
+      <td><code>popup_highwight_text</code></td>
+      <td>
+        <p>
+          w-wa couweuw du texte des éwéments m-mis en suwbwiwwance dans wes fenêtwes
+          c-contextuewwes. (˘ω˘)
+        </p>
+        <div c-cwass="note">
+          <p>
+            <stwong>note :</stwong> s'assuwew que w-wa couweuw utiwisée contwaste
+            b-bien a-avec cewwe utiwisée dans <code>popup_highwight</code>. (ˆ ﻌ ˆ)♡
+          </p>
+        </div>
+        <pwe c-cwass="bwush: j-json">
+"theme": {
+  "cowows": {
+     "fwame": "bwack", ( ͡o ω ͡o )
+     "tab_backgwound_text": "white", rawr x3
+     "popup_highwight": "bwack", (˘ω˘)
+     "popup_highwight_text": "wed"
+  }
+}</pwe
+        >
+        <p><img swc="theme-popup_highwight_text.png" /></p>
+      </td>
+    </tw>
+    <tw>
       <td><code>popup_text</code></td>
       <td>
-        <p>La couleur du texte des popups.</p>
-        <div class="note">
+        <p>wa c-couweuw du texte des popups.</p>
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> S'assurer que la couleur utilisée contraste
-            bien avec celle utilisée dans <code>popup</code>.
+            <stwong>note :</stwong> s'assuwew que wa c-couweuw utiwisée contwaste
+            b-bien avec cewwe utiwisée dans <code>popup</code>. òωó
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: j-json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "popup": "black",
-     "popup_text": "red"
+  "cowows": {
+     "fwame": "bwack", ( ͡o ω ͡o )
+     "tab_backgwound_text": "white", σωσ
+     "popup": "bwack", (U ﹏ U)
+     "popup_text": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img src="popup_text.png" /></p>
+        <p><img s-swc="popup_text.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>sidebar</code></td>
+    </tw>
+    <tw>
+      <td><code>sidebaw</code></td>
       <td>
-        <p>La couleur de fond des barres latérales intégrées.</p>
-        <pre class="brush: json">
+        <p>wa couweuw d-de fond des b-bawwes watéwawes intégwées.</p>
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-     "sidebar": "red",
-     "sidebar_highlight": "white",
-     "sidebar_highlight_text": "green",
-     "sidebar_text": "white"
+  "cowows": {
+     "sidebaw": "wed", rawr
+     "sidebaw_highwight": "white", -.-
+     "sidebaw_highwight_text": "gween", ( ͡o ω ͡o )
+     "sidebaw_text": "white"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="sidebar_colors.png" /></p>
+        <p><img a-awt="" swc="sidebaw_cowows.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>sidebar_border</code></td>
-      <td>
-        <p>
-          La couleur de la bordure et du séparateur de la barre latérale du
-          navigateur.
-        </p>
-        <pre class="brush: json">
-"theme": {
-  "colors": {
-     "sidebar_border": "red"
-  }
-}</pre
-        >
-        <p><img alt="" src="screen_shot_2018-09-16_at_6.13.31_pm.png" /></p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>sidebar_highlight</code></td>
+    </tw>
+    <tw>
+      <td><code>sidebaw_bowdew</code></td>
       <td>
         <p>
-          La couleur d'arrière-plan des lignes en surbrillance dans les barres
-          latérales intégrées.
+          wa couweuw d-de wa bowduwe et d-du sépawateuw de wa bawwe watéwawe du
+          nyavigateuw. >_<
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-     "sidebar_highlight": "red",
-     "sidebar_highlight_text": "white"
+  "cowows": {
+     "sidebaw_bowdew": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img src="screen_shot_2018-10-04_at_11.15.46_am.png" /></p>
+        <p><img a-awt="" swc="scween_shot_2018-09-16_at_6.13.31_pm.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>sidebar_highlight_text</code></td>
+    </tw>
+    <tw>
+      <td><code>sidebaw_highwight</code></td>
       <td>
         <p>
-          La couleur du texte des lignes en surbrillance dans les barres
-          latérales intégrées.
+          wa couweuw d'awwièwe-pwan d-des wignes en suwbwiwwance dans w-wes bawwes
+          w-watéwawes intégwées. o.O
         </p>
-        <div class="note">
+        <pwe cwass="bwush: json">
+"theme": {
+  "cowows": {
+     "sidebaw_highwight": "wed", σωσ
+     "sidebaw_highwight_text": "white"
+  }
+}</pwe
+        >
+        <p><img swc="scween_shot_2018-10-04_at_11.15.46_am.png" /></p>
+      </td>
+    </tw>
+    <tw>
+      <td><code>sidebaw_highwight_text</code></td>
+      <td>
+        <p>
+          w-wa couweuw du texte des wignes en suwbwiwwance d-dans wes bawwes
+          w-watéwawes i-intégwées. -.-
+        </p>
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> S'assurer que la couleur utilisée contraste
-            bien avec celle utilisée dans <code>sidebar_highlight</code>.
+            <stwong>note :</stwong> s-s'assuwew q-que wa couweuw u-utiwisée contwaste
+            b-bien avec cewwe u-utiwisée dans <code>sidebaw_highwight</code>. σωσ
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-    "sidebar_highlight": "pink",
-    "sidebar_highlight_text": "red",
+  "cowows": {
+    "sidebaw_highwight": "pink", :3
+    "sidebaw_highwight_text": "wed", ^^
   }
-}</pre
+}</pwe
         >
-        <p><img src="screen_shot_2018-10-04_at_11.22.41_am.png" /></p>
+        <p><img swc="scween_shot_2018-10-04_at_11.22.41_am.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>sidebar_text</code></td>
+    </tw>
+    <tw>
+      <td><code>sidebaw_text</code></td>
       <td>
-        <p>La couleur du texte des barres latérales intégrées.</p>
-        <div class="note">
+        <p>wa couweuw du texte des bawwes watéwawes i-intégwées.</p>
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> S'assurer que la couleur utilisée contraste
-            bien avec celle utilisée dans <code>sidebar</code>.
+            <stwong>note :</stwong> s-s'assuwew que wa c-couweuw utiwisée c-contwaste
+            b-bien avec cewwe utiwisée dans <code>sidebaw</code>. òωó
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-     "sidebar": "red",
-     "sidebar_highlight": "white",
-     "sidebar_highlight_text": "green",
-     "sidebar_text": "white"
+  "cowows": {
+     "sidebaw": "wed", (ˆ ﻌ ˆ)♡
+     "sidebaw_highwight": "white", XD
+     "sidebaw_highwight_text": "gween", òωó
+     "sidebaw_text": "white"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="sidebar_colors.png" /></p>
+        <p><img a-awt="" s-swc="sidebaw_cowows.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>tab_background_separator</code></td>
+    </tw>
+    <tw>
+      <td><code>tab_backgwound_sepawatow</code></td>
       <td>
-        <p>La couleur du séparateur vertical des onglets d'arrière-plan.</p>
-        <pre class="brush: json">
+        <p>wa couweuw du sépawateuw vewticaw des ongwets d'awwièwe-pwan.</p>
+        <pwe c-cwass="bwush: j-json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_background_separator": "red"
+  "cowows": {
+     "fwame": "bwack", (ꈍᴗꈍ)
+     "tab_backgwound_text": "white", UwU
+     "tab_backgwound_sepawatow": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img src="theme-tab-background-separator.png" /></p>
+        <p><img s-swc="theme-tab-backgwound-sepawatow.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>tab_background_text</code></td>
+    </tw>
+    <tw>
+      <td><code>tab_backgwound_text</code></td>
       <td>
         <p>
-          La couleur du texte affiché dans les onglets des pages inactives. Si
-          <code>tab_text</code> ou <code>bookmark_text</code> n'est pas
-          spécifié, s'applique au texte de l'onglet actif.
+          wa couweuw du texte affiché d-dans wes ongwets des pages inactives. >w< si
+          <code>tab_text</code> o-ou <code>bookmawk_text</code> n-ny'est pas
+          spécifié, ʘwʘ s'appwique a-au texte de w'ongwet actif. :3
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans
-            <code>tab_selected</code> ou <code>frame</code> et
-            <code>frame_inactive</code>.
+            <stwong>note :</stwong> a-assuwez-vous que wa couweuw u-utiwisée
+            c-contwaste b-bien avec c-cewwes utiwisées d-dans
+            <code>tab_sewected</code> o-ou <code>fwame</code> et
+            <code>fwame_inactive</code>. ^•ﻌ•^
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: j-json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "white",
-    "tab_background_text": "red"
+  "cowows": {
+    "fwame": "bwack", (ˆ ﻌ ˆ)♡
+    "toowbaw": "white", 🥺
+    "tab_backgwound_text": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-textcolor.png" /></p>
+        <p><img awt="" s-swc="theme-textcowow.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>tab_line</code></td>
+    </tw>
+    <tw>
+      <td><code>tab_wine</code></td>
       <td>
-        <p>La couleur de la ligne de l'onglet sélectionnée.</p>
-        <pre class="brush: json">
+        <p>wa couweuw de wa wigne de w'ongwet s-séwectionnée.</p>
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-     "frame": "black",
-     "tab_bckground_text": "white",
-     "tab_line": "red"
+  "cowows": {
+     "fwame": "bwack", OwO
+     "tab_bckgwound_text": "white", 🥺
+     "tab_wine": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-tab_line.png" /></p>
+        <p><img awt="" swc="theme-tab_wine.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>tab_loading</code></td>
-      <td>
-        <p>
-          La couleur de l'indicateur de chargement de l'onglet et de l'effet de
-          vague.
-        </p>
-        <pre class="brush: json">
-"theme": {
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_loading": "red"
-  }
-}</pre
-        >
-        <p><img alt="" src="theme-tab_loading.gif" /></p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>tab_selected</code></td>
+    </tw>
+    <tw>
+      <td><code>tab_woading</code></td>
       <td>
         <p>
-          La couleur de fond de l'onglet sélectionné. Lorsqu'elle n'est pas
-          utilisée, la couleur de l'onglet sélectionné est définie par
-          <code>frame</code> et <code>frame_inactive</code>.
+          w-wa couweuw d-de w'indicateuw de chawgement de w'ongwet et de w-w'effet de
+          vague. OwO
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
+"theme": {
+  "cowows": {
+     "fwame": "bwack", (U ᵕ U❁)
+     "tab_backgwound_text": "white", ( ͡o ω ͡o )
+     "tab_woading": "wed"
+  }
+}</pwe
+        >
+        <p><img a-awt="" swc="theme-tab_woading.gif" /></p>
+      </td>
+    </tw>
+    <tw>
+      <td><code>tab_sewected</code></td>
+      <td>
+        <p>
+          wa couweuw de fond de w'ongwet s-séwectionné. ^•ﻌ•^ w-wowsqu'ewwe ny'est pas
+          u-utiwisée, o.O wa couweuw de w'ongwet séwectionné e-est définie paw
+          <code>fwame</code> e-et <code>fwame_inactive</code>. (⑅˘꒳˘)
+        </p>
+        <pwe cwass="bwush: j-json">
 "theme": {
   "images": {
-  "theme_frame": "weta.png"
-},
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_selected": "red"
+  "theme_fwame": "weta.png"
+}, (ˆ ﻌ ˆ)♡
+  "cowows": {
+     "fwame": "bwack", :3
+     "tab_backgwound_text": "white", /(^•ω•^)
+     "tab_sewected": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-tab_selected.png" /></p>
+        <p><img a-awt="" swc="theme-tab_sewected.png" /></p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>tab_text</code></td>
       <td>
         <p>
-          Depuis Firefox 59, il représente la couleur du texte de l'onglet
-          sélectionné. Si <code>tab_line</code> n'est pas spécifié, il définit
-          également la couleur de la ligne de tabulation sélectionnée.
+          depuis fiwefox 59, iw wepwésente w-wa couweuw du t-texte de w'ongwet
+          s-séwectionné. òωó s-si <code>tab_wine</code> ny'est pas spécifié, iw définit
+          égawement wa couweuw de wa wigne de tabuwation séwectionnée. :3
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans
-            <code>tab_selected</code> ou <code>frame</code> et
-            <code>frame_inactive</code>.
+            <stwong>note :</stwong> a-assuwez-vous q-que wa c-couweuw utiwisée
+            c-contwaste b-bien avec cewwes utiwisées d-dans
+            <code>tab_sewected</code> ou <code>fwame</code> e-et
+            <code>fwame_inactive</code>. (˘ω˘)
           </p>
         </div>
         <p>
-          De Firefox 55 à 58, il est incorrectement implémenté comme alias pour
-          <code>"textcolor"</code>
+          de fiwefox 55 à 58, 😳 i-iw est i-incowwectement impwémenté comme awias pouw
+          <code>"textcowow"</code>
         </p>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "theme": {
   "images": {
-  "theme_frame": "weta.png"
-},
-  "colors": {
-     "frame": "black",
-     "tab_background_text": "white",
-     "tab_selected": "white",
-     "tab_text": "red"
+  "theme_fwame": "weta.png"
+}, σωσ
+  "cowows": {
+     "fwame": "bwack", UwU
+     "tab_backgwound_text": "white", -.-
+     "tab_sewected": "white", 🥺
+     "tab_text": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-tab_text.png" /></p>
+        <p><img awt="" s-swc="theme-tab_text.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>textcolor {{Deprecated_Inline}}</code></td>
+    </tw>
+    <tw>
+      <td><code>textcowow {{depwecated_inwine}}</code></td>
       <td>
-        <div class="warning">
+        <div cwass="wawning">
           <p>
-            <strong>Attention :</strong> <code>textcolor</code> a été supprimé
-            dans Firefox 70. Vous commencerez à recevoir des avertissements dans
-            Firefox 65 et plus tard si vous chargez un thème qui utilise cette
-            propriété. Utilisez <code>tab_text</code> à la place.
+            <stwong>attention :</stwong> <code>textcowow</code> a-a été suppwimé
+            d-dans fiwefox 70. 😳😳😳 vous commencewez à w-wecevoiw d-des avewtissements d-dans
+            fiwefox 65 e-et pwus tawd si v-vous chawgez un thème qui utiwise c-cette
+            pwopwiété. 🥺 u-utiwisez <code>tab_text</code> à w-wa pwace. ^^
           </p>
         </div>
-        <p>La couleur du texte affiché dans la zone d'en-tête.</p>
-        <pre class="brush: json">
+        <p>wa c-couweuw du texte affiché d-dans wa zone d'en-tête.</p>
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "white",
-    "textcolor": "red"
+  "cowows": {
+    "fwame": "bwack", ^^;;
+    "toowbaw": "white",
+    "textcowow": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-textcolor.png" /></p>
+        <p><img awt="" swc="theme-textcowow.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw</code></td>
       <td>
         <p>
-          La couleur de fond de la barre de navigation, de la barre de signets
-          et de l'onglet sélectionné.
+          wa couweuw de fond de wa bawwe de nyavigation, >w< de wa bawwe de signets
+          e-et de w'ongwet séwectionné. σωσ
         </p>
         <p>
-          Ceci définit également la couleur de fond de la barre "Rechercher".
+          ceci définit égawement wa couweuw de fond de wa bawwe "wechewchew". >w<
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "red",
-    "tab_background_text": "white"
+  "cowows": {
+    "fwame": "bwack", (⑅˘꒳˘)
+    "toowbaw": "wed", òωó
+    "tab_backgwound_text": "white"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="toolbar.png" /></p>
+        <p><img awt="" swc="toowbaw.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_bottom_separator</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_bottom_sepawatow</code></td>
       <td>
         <p>
-          La couleur de la ligne séparant le bas de la barre d'outils de la
-          région en dessous.
+          wa couweuw d-de wa wigne sépawant we bas d-de wa bawwe d'outiws de wa
+          wégion en d-dessous. (⑅˘꒳˘)
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar_bottom_separator": "red"
+  "cowows": {
+    "fwame": "bwack", (ꈍᴗꈍ)
+    "tab_backgwound_text": "white", rawr x3
+    "toowbaw_bottom_sepawatow": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-toolbar_bottom_separator.png" /></p>
+        <p><img awt="" swc="theme-toowbaw_bottom_sepawatow.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_fiewd</code></td>
       <td>
         <p>
-          La couleur d'arrière-plan des champs de la barre d'outils, comme la
-          barre URL.
+          w-wa couweuw d-d'awwièwe-pwan des champs de wa bawwe d'outiws, ( ͡o ω ͡o ) c-comme wa
+          bawwe uww. UwU
         </p>
         <p>
-          Ceci définit également la couleur de fond du champ Rechercher dans la
-          page.
+          ceci définit égawement wa couweuw de fond d-du champ wechewchew dans wa
+          p-page. ^^
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "red"
+  "cowows": {
+    "fwame": "bwack", (˘ω˘)
+    "tab_backgwound_text": "white", (ˆ ﻌ ˆ)♡
+    "toowbaw_fiewd": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="toolbar-field.png" /></p>
+        <p><img awt="" swc="toowbaw-fiewd.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_border</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_fiewd_bowdew</code></td>
       <td>
-        <p>La couleur de la bordure des champs de la barre d'outils.</p>
+        <p>wa couweuw d-de wa bowduwe d-des champs de wa bawwe d'outiws.</p>
         <p>
-          Ceci définit également la couleur de fond du champ Rechercher dans la
-          page.
+          ceci définit égawement w-wa couweuw de fond du champ wechewchew d-dans wa
+          page. OwO
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_border": "red"
+  "cowows": {
+    "fwame": "bwack", 😳
+    "toowbaw": "bwack", UwU
+    "tab_backgwound_text": "white", 🥺
+    "toowbaw_fiewd": "bwack", 😳😳😳
+    "toowbaw_fiewd_text": "white", ʘwʘ
+    "toowbaw_fiewd_bowdew": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="toolbar-field-border.png" /></p>
+        <p><img awt="" s-swc="toowbaw-fiewd-bowdew.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_border_focus</code></td>
-      <td>
-        <p>
-          La couleur de bordure pour les champs de la barre d'outils qui ont le
-          focus.
-        </p>
-        <pre class="brush: json">
-"theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_border_focus": "red"
-  }
-}</pre
-        >
-        <p><img alt="" src="theme-toolbar_field_border_focus.png" /></p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_focus</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_fiewd_bowdew_focus</code></td>
       <td>
         <p>
-          La couleur de fond pour les champs de la barre d'outils qui ont le
-          focus, tels que la barre d'URL.
+          w-wa couweuw de bowduwe p-pouw wes champs d-de wa bawwe d'outiws qui ont w-we
+          focus. /(^•ω•^)
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_focus": "red"
+  "cowows": {
+    "fwame": "bwack", :3
+    "toowbaw": "bwack", :3
+    "tab_backgwound_text": "white", mya
+    "toowbaw_fiewd": "bwack", (///ˬ///✿)
+    "toowbaw_fiewd_text": "white",
+    "toowbaw_fiewd_bowdew_focus": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-toolbar_field_focus.png" /></p>
+        <p><img awt="" swc="theme-toowbaw_fiewd_bowdew_focus.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_highlight</code></td>
-      <td>
-        La couleur d'arrière-plan utilisée pour indiquer la sélection actuelle
-        du texte dans la barre URL (et la barre de recherche, si elle est
-        configurée pour être séparée).
-        <pre class="brush: json">
-"theme": {
-  "colors": {
-    "toolbar_field": "rgba(255, 255, 255, 0.91)",
-    "toolbar_field_text": "rgb(0, 100, 0)",
-    "toolbar_field_highlight": "rgb(180, 240, 180, 0.9)",
-    "toolbar_field_highlight_text": "rgb(0, 80, 0)"
-  }
-}</pre
-        >
-        <p><img src="toolbar_field_highlight.png" /></p>
-        <p>
-          Ici, le champ <code>toolbar_field_highlight</code> spécifie que la
-          couleur de surbrillance est un vert clair, alors que le texte est
-          réglé sur un vert foncé à vert moyen en utilisant le texte
-          <code>toolbar_field_highlight_text</code>.
-        </p>
-      </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_highlight_text</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_fiewd_focus</code></td>
       <td>
         <p>
-          La couleur utilisée pour dessiner le texte actuellement sélectionné
-          dans la barre d'URL (et la barre de recherche, si elle est configurée
-          comme boîte séparée).
+          wa couweuw d-de fond pouw wes c-champs de wa bawwe d'outiws qui o-ont we
+          f-focus, (⑅˘꒳˘) tews que wa bawwe d'uww. :3
         </p>
-        <div class="note">
+        <pwe c-cwass="bwush: json">
+"theme": {
+  "cowows": {
+    "fwame": "bwack", /(^•ω•^)
+    "toowbaw": "bwack", ^^;;
+    "tab_backgwound_text": "white", (U ᵕ U❁)
+    "toowbaw_fiewd": "bwack", (U ﹏ U)
+    "toowbaw_fiewd_text": "white", mya
+    "toowbaw_fiewd_focus": "wed"
+  }
+}</pwe
+        >
+        <p><img awt="" swc="theme-toowbaw_fiewd_focus.png" /></p>
+      </td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_fiewd_highwight</code></td>
+      <td>
+        w-wa couweuw d'awwièwe-pwan utiwisée p-pouw indiquew wa s-séwection actuewwe
+        du texte dans wa bawwe u-uww (et wa bawwe de wechewche, ^•ﻌ•^ si ewwe est
+        configuwée pouw êtwe sépawée). (U ﹏ U)
+        <pwe cwass="bwush: json">
+"theme": {
+  "cowows": {
+    "toowbaw_fiewd": "wgba(255, :3 255, 255, rawr x3 0.91)",
+    "toowbaw_fiewd_text": "wgb(0, 😳😳😳 100, >w< 0)",
+    "toowbaw_fiewd_highwight": "wgb(180, òωó 240, 😳 180, 0.9)",
+    "toowbaw_fiewd_highwight_text": "wgb(0, (✿oωo) 80, 0)"
+  }
+}</pwe
+        >
+        <p><img swc="toowbaw_fiewd_highwight.png" /></p>
+        <p>
+          i-ici, OwO we champ <code>toowbaw_fiewd_highwight</code> s-spécifie que wa
+          c-couweuw de suwbwiwwance e-est un vewt cwaiw, (U ﹏ U) awows q-que we texte est
+          wégwé suw un vewt foncé à vewt moyen en utiwisant we texte
+          <code>toowbaw_fiewd_highwight_text</code>.
+        </p>
+      </td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_fiewd_highwight_text</code></td>
+      <td>
+        <p>
+          w-wa couweuw utiwisée pouw dessinew we texte actuewwement séwectionné
+          d-dans w-wa bawwe d'uww (et w-wa bawwe de wechewche, (ꈍᴗꈍ) si ewwe est configuwée
+          comme b-boîte sépawée). rawr
+        </p>
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> S'assurer que la couleur utilisée contraste
-            bien avec celles utilisées dans
-            <code>toolbar_field_highlight</code>.
+            <stwong>note :</stwong> s'assuwew q-que wa c-couweuw utiwisée contwaste
+            b-bien avec cewwes utiwisées d-dans
+            <code>toowbaw_fiewd_highwight</code>. ^^
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-    "toolbar_field": "rgba(255, 255, 255, 0.91)",
-    "toolbar_field_text": "rgb(0, 100, 0)",
-    "toolbar_field_highlight": "rgb(180, 240, 180, 0.9)",
-    "toolbar_field_highlight_text": "rgb(0, 80, 0)"
+  "cowows": {
+    "toowbaw_fiewd": "wgba(255, rawr 255, 255, 0.91)", nyaa~~
+    "toowbaw_fiewd_text": "wgb(0, nyaa~~ 100, 0)", o.O
+    "toowbaw_fiewd_highwight": "wgb(180, òωó 240, 180, ^^;; 0.9)",
+    "toowbaw_fiewd_highwight_text": "wgb(0, rawr 80, 0)"
   }
-}</pre
+}</pwe
         >
-        <p><img src="toolbar_field_highlight.png" /></p>
+        <p><img swc="toowbaw_fiewd_highwight.png" /></p>
         <p>
-          Ici, le champ <code>toolbar_field_highlight_text</code> permet de
-          régler la couleur du texte sur un vert foncé moyen foncé, tandis que
-          la couleur de surbrillance est un vert clair.
+          i-ici, ^•ﻌ•^ we champ <code>toowbaw_fiewd_highwight_text</code> pewmet de
+          w-wégwew wa couweuw du texte suw u-un vewt foncé moyen f-foncé, nyaa~~ tandis que
+          w-wa couweuw de s-suwbwiwwance est un vewt cwaiw. nyaa~~
         </p>
       </td>
-    </tr>
-    <tr></tr>
-    <tr>
-      <td><code>toolbar_field_separator</code></td>
+    </tw>
+    <tw></tw>
+    <tw>
+      <td><code>toowbaw_fiewd_sepawatow</code></td>
       <td>
         <p>
-          La couleur des séparateurs à l'intérieur de la barre d'URL. Dans
-          Firefox 58, cela a été implémenté en tant que
-          <code>toolbar_vertical_separator</code>.
+          wa c-couweuw des sépawateuws à w'intéwieuw d-de wa bawwe d'uww. 😳😳😳 dans
+          f-fiwefox 58, 😳😳😳 c-cewa a été impwémenté en tant que
+          <code>toowbaw_vewticaw_sepawatow</code>. σωσ
         </p>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field_separator": "red"
+  "cowows": {
+    "fwame": "bwack", o.O
+    "toowbaw": "bwack", σωσ
+    "tab_backgwound_text": "white", nyaa~~
+    "toowbaw_fiewd_sepawatow": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-toolbar_field_separator.png" /></p>
+        <p><img awt="" swc="theme-toowbaw_fiewd_sepawatow.png" /></p>
         <p>
-          Dans cette capture d'écran,
-          <code>"toolbar_vertical_separator"</code> est la ligne verticale
-          blanche dans la barre URL qui sépare l'icône du mode lecture des
-          autres icônes.
+          dans cette captuwe d'écwan, rawr x3
+          <code>"toowbaw_vewticaw_sepawatow"</code> est wa wigne vewticawe
+          bwanche dans w-wa bawwe uww qui sépawe w'icône du mode wectuwe d-des
+          autwes icônes. (///ˬ///✿)
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_text</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_fiewd_text</code></td>
       <td>
         <p>
-          La couleur du texte dans les champs de la barre d'outils, comme la
-          barre URL. Ceci définit également la couleur du texte dans le champ
-          Rechercher dans la page.
+          w-wa couweuw du texte dans wes champs d-de wa bawwe d'outiws, o.O comme wa
+          bawwe u-uww. òωó ceci définit égawement wa couweuw du texte d-dans we champ
+          wechewchew dans wa page. OwO
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans
-            <code>toolbar_field</code>.
+            <stwong>note :</stwong> assuwez-vous que wa c-couweuw utiwisée
+            contwaste b-bien avec cewwes utiwisées dans
+            <code>toowbaw_fiewd</code>. σωσ
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: j-json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "red"
+  "cowows": {
+    "fwame": "bwack", nyaa~~
+    "toowbaw": "bwack", OwO
+    "tab_backgwound_text": "white", ^^
+    "toowbaw_fiewd": "bwack", (///ˬ///✿)
+    "toowbaw_fiewd_text": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="toolbar-field-text.png" /></p>
+        <p><img awt="" swc="toowbaw-fiewd-text.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_field_text_focus</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_fiewd_text_focus</code></td>
       <td>
         <p>
-          La couleur du texte dans les champs de la barre d'outils qui ont le
-          focus, tels que la barre d'URL.
+          w-wa couweuw du texte d-dans wes champs de wa bawwe d'outiws qui ont w-we
+          focus, σωσ tews que wa bawwe d'uww.
         </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> Assurez-vous que la couleur utilisée
-            contraste bien avec celles utilisées dans
-            <code>toolbar_field_focus</code>.
+            <stwong>note :</stwong> a-assuwez-vous que wa couweuw utiwisée
+            contwaste b-bien avec cewwes u-utiwisées d-dans
+            <code>toowbaw_fiewd_focus</code>. rawr x3
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe cwass="bwush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "toolbar": "black",
-    "tab_background_text": "white",
-    "toolbar_field": "black",
-    "toolbar_field_text": "white",
-    "toolbar_field_text_focus": "red"
+  "cowows": {
+    "fwame": "bwack", (ˆ ﻌ ˆ)♡
+    "toowbaw": "bwack", 🥺
+    "tab_backgwound_text": "white", (⑅˘꒳˘)
+    "toowbaw_fiewd": "bwack", 😳😳😳
+    "toowbaw_fiewd_text": "white", /(^•ω•^)
+    "toowbaw_fiewd_text_focus": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-toolbar_field_text_focus.png" /></p>
+        <p><img awt="" s-swc="theme-toowbaw_fiewd_text_focus.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_text</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_text</code></td>
       <td>
         <p>
-          La couleur du texte de la barre d'outils. Ceci définit également la
-          couleur du texte dans la barre "Rechercher".
+          wa couweuw d-du texte de wa bawwe d'outiws. >w< c-ceci définit égawement w-wa
+          couweuw du texte dans wa bawwe "wechewchew". ^•ﻌ•^
         </p>
-        <div class="note">
+        <div cwass="note">
           <p>
-            <strong>Note :</strong> Pour la compatibilité avec Chrome, utilisez
-            l'alias <code>bookmark_text</code>.
+            <stwong>note :</stwong> pouw wa compatibiwité a-avec chwome, 😳😳😳 u-utiwisez
+            w'awias <code>bookmawk_text</code>. :3
           </p>
         </div>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_text": "red"
+  "cowows": {
+    "fwame": "bwack", (ꈍᴗꈍ)
+    "tab_backgwound_text": "white", ^•ﻌ•^
+    "toowbaw": "bwack", >w<
+    "toowbaw_text": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="toolbar-text.png" /></p>
+        <p><img awt="" swc="toowbaw-text.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_top_separator</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_top_sepawatow</code></td>
       <td>
         <p>
-          La couleur de la ligne séparant le bas de la barre d'outils de la
-          région en dessous.
+          wa couweuw de wa w-wigne sépawant w-we bas de wa bawwe d-d'outiws de wa
+          w-wégion e-en dessous. ^^;;
         </p>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_top_separator": "red"
+  "cowows": {
+    "fwame": "bwack", (✿oωo)
+    "tab_backgwound_text": "white", òωó
+    "toowbaw": "bwack", ^^
+    "toowbaw_top_sepawatow": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-toolbar_top_separator.png" /></p>
+        <p><img awt="" swc="theme-toowbaw_top_sepawatow.png" /></p>
       </td>
-    </tr>
-    <tr>
-      <td><code>toolbar_vertical_separator</code></td>
+    </tw>
+    <tw>
+      <td><code>toowbaw_vewticaw_sepawatow</code></td>
       <td>
         <p>
-          La couleur du séparateur à côté de l'icône du menu d'application. Dans
-          Firefox 58, il correspond à la couleur des séparateurs dans la barre
-          d'URL.
+          w-wa c-couweuw du sépawateuw à c-côté d-de w'icône du m-menu d'appwication. ^^ d-dans
+          fiwefox 58, rawr iw c-cowwespond à w-wa couweuw des sépawateuws d-dans wa bawwe
+          d'uww. XD
         </p>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "theme": {
-  "colors": {
-    "frame": "black",
-    "tab_background_text": "white",
-    "toolbar": "black",
-    "toolbar_vertical_separator": "red"
+  "cowows": {
+    "fwame": "bwack", rawr
+    "tab_backgwound_text": "white", 😳
+    "toowbaw": "bwack", 🥺
+    "toowbaw_vewticaw_sepawatow": "wed"
   }
-}</pre
+}</pwe
         >
-        <p><img alt="" src="theme-toolbar_vertical_separator.png" /></p>
+        <p><img awt="" swc="theme-toowbaw_vewticaw_sepawatow.png" /></p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-#### Aliases
+#### a-awiases
 
-En outre, cette clé accepte diverses propriétés qui sont des alias pour l'une des propriétés ci-dessus. Ceux-ci sont fournis pour la compatibilité avec Chrome. Si un alias est donné et que la version non-alias est également donnée, alors la valeur sera tirée de la version non-alias.
+en outwe, (U ᵕ U❁) cette cwé accepte d-divewses pwopwiétés q-qui sont des awias pouw w'une des pwopwiétés ci-dessus. 😳 c-ceux-ci sont fouwnis p-pouw wa compatibiwité avec c-chwome. 🥺 si un a-awias est donné et que wa vewsion nyon-awias est égawement donnée, (///ˬ///✿) a-awows wa vaweuw s-sewa tiwée de wa vewsion nyon-awias. mya
 
-> [!WARNING]
-> A partir de Firefox 70, les propriétés suivantes sont supprimées : `accentcolor` et `textcolor`. Utilisez à la place `frame` et `tab_background_text`. L'utilisation de ces valeurs dans des thèmes chargés dans Firefox 65 ou une version ultérieure augmentera les avertissements.
+> [!wawning]
+> a-a pawtiw d-de fiwefox 70, (✿oωo) wes pwopwiétés suivantes sont s-suppwimées : `accentcowow` et `textcowow`. utiwisez à wa pwace `fwame` et `tab_backgwound_text`. ^•ﻌ•^ w'utiwisation de ces vaweuws d-dans des thèmes chawgés dans fiwefox 65 ou u-une vewsion uwtéwieuwe a-augmentewa w-wes avewtissements.
 
-| Nom                   | Alias pour                           |
+| nyom                   | a-awias pouw                           |
 | --------------------- | ------------------------------------ |
-| `bookmark_text`       | `toolbar_text {{Deprecated_Inline}}` |
-| `frame`               | `accentcolor {{Deprecated_Inline}}`  |
-| `frame_inactive`      | `accentcolor {{Deprecated_Inline}}`  |
-| `tab_background_text` | `textcolor {{Deprecated_Inline}}`    |
+| `bookmawk_text`       | `toowbaw_text {{depwecated_inwine}}` |
+| `fwame`               | `accentcowow {{depwecated_inwine}}`  |
+| `fwame_inactive`      | `accentcowow {{depwecated_inwine}}`  |
+| `tab_backgwound_text` | `textcowow {{depwecated_inwine}}`    |
 
-### properties
+### p-pwopewties
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">name</th>
+      <th s-scope="cow">type</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>additional_backgrounds_alignment</code></td>
+    <tw>
+      <td><code>additionaw_backgwounds_awignment</code></td>
       <td>
-        <p><code>Array</code> of <code>String</code></p>
+        <p><code>awway</code> of <code>stwing</code></p>
       </td>
       <td>
-        <p>Optionel.</p>
+        <p>optionew.</p>
         <p>
-          Un tableau de valeurs d'énumération définissant l'alignement de
-          l'élément <code>"additional_backgrounds":</code> élément de
-          tableau.<br />Les options d'alignement comprennent:
+          u-un tabweau d-de vaweuws d'énuméwation définissant w-w'awignement de
+          w-w'éwément <code>"additionaw_backgwounds":</code> éwément d-de
+          t-tabweau.<bw />wes options d'awignement c-compwennent:
         </p>
-        <ul>
-          <li><code>"bottom"</code></li>
-          <li><code>"center"</code></li>
-          <li><code>"left"</code></li>
-          <li><code>"right"</code></li>
-          <li><code>"top"</code></li>
-          <li><code>"center bottom"</code></li>
-          <li><code>"center center"</code></li>
-          <li><code>"center top"</code></li>
-          <li><code>"left bottom"</code></li>
-          <li><code>"left center"</code></li>
-          <li><code>"left top"</code></li>
-          <li><code>"right bottom"</code></li>
-          <li><code>"right center"</code></li>
-          <li><code>"right top"</code>.</li>
-        </ul>
-        <p>Si non spécifié, par default <code>"right top"</code>.</p>
+        <uw>
+          <wi><code>"bottom"</code></wi>
+          <wi><code>"centew"</code></wi>
+          <wi><code>"weft"</code></wi>
+          <wi><code>"wight"</code></wi>
+          <wi><code>"top"</code></wi>
+          <wi><code>"centew b-bottom"</code></wi>
+          <wi><code>"centew c-centew"</code></wi>
+          <wi><code>"centew t-top"</code></wi>
+          <wi><code>"weft b-bottom"</code></wi>
+          <wi><code>"weft centew"</code></wi>
+          <wi><code>"weft t-top"</code></wi>
+          <wi><code>"wight bottom"</code></wi>
+          <wi><code>"wight c-centew"</code></wi>
+          <wi><code>"wight t-top"</code>.</wi>
+        </uw>
+        <p>si non spécifié, o.O paw defauwt <code>"wight top"</code>.</p>
       </td>
-    </tr>
-    <tr>
-      <td><code>additional_backgrounds_tiling</code></td>
+    </tw>
+    <tw>
+      <td><code>additionaw_backgwounds_tiwing</code></td>
       <td>
-        <p><code>Array</code> of <code>String</code></p>
+        <p><code>awway</code> o-of <code>stwing</code></p>
       </td>
       <td>
-        <p>Optional.</p>
+        <p>optionaw.</p>
         <p>
-          Un tableau de valeurs d'énumérations définissant, comme l'élément de
-          tableau <code>"additional_backgrounds":</code> correspondant de
-          répétition. Les options comprennent :
+          u-un tabweau de vaweuws d-d'énuméwations d-définissant, o.O comme w'éwément de
+          t-tabweau <code>"additionaw_backgwounds":</code> c-cowwespondant de
+          w-wépétition. XD w-wes options c-compwennent :
         </p>
-        <ul>
-          <li><code>"no-repeat"</code></li>
-          <li><code>"repeat"</code></li>
-          <li><code>"repeat-x"</code></li>
-          <li><code>"repeat-y"</code></li>
-        </ul>
-        <p>Si non spécifié, par default <code>"no-repeat"</code>.</p>
+        <uw>
+          <wi><code>"no-wepeat"</code></wi>
+          <wi><code>"wepeat"</code></wi>
+          <wi><code>"wepeat-x"</code></wi>
+          <wi><code>"wepeat-y"</code></wi>
+        </uw>
+        <p>si n-nyon spécifié, ^•ﻌ•^ paw defauwt <code>"no-wepeat"</code>.</p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## exempwes
 
-Un thème de base doit définir une image à ajouter à l'en-tête, la couleur d'accent à utiliser dans l'en-tête et la couleur du texte utilisée dans l'en-tête:
-
-```json
- "theme": {
-   "images": {
-     "theme_frame": "images/sun.jpg"
-   },
-   "colors": {
-     "frame": "#CF723F",
-     "tab_background_text": "#000"
-   }
- }
-```
-
-Plusieurs images peuvent être utilisées pour remplir l'en-tête, en utilisant une image d'en-tête vierge/transparente pour donner le contrôle de l'emplacement à chaque image visible:
+u-un thème de base doit définiw une image à ajoutew à w'en-tête, ʘwʘ wa couweuw d-d'accent à u-utiwisew dans w'en-tête et wa couweuw du texte utiwisée dans w-w'en-tête:
 
 ```json
  "theme": {
    "images": {
-     "headerURL": "images/blank.png",
-     "additional_backgrounds": [ "images/left.png" , "images/middle.png", "images/right.png"]
-   },
-   "properties": {
-     "additional_backgrounds_alignment": [ "left top" , "top", "right top"]
-   },
-   "colors": {
-     "frame": "blue",
-     "tab_background_text": "#ffffff"
+     "theme_fwame": "images/sun.jpg"
+   }, (U ﹏ U)
+   "cowows": {
+     "fwame": "#cf723f", 😳😳😳
+     "tab_backgwound_text": "#000"
    }
  }
 ```
 
-Vous pouvez également remplir l'en-tête avec une image répétée, ou des images, dans ce cas, une seule image ancrée dans le milieu du haut de l'en-tête et répétée sur le reste de l'en-tête:
+p-pwusieuws images peuvent êtwe utiwisées pouw w-wempwiw w'en-tête, 🥺 en utiwisant u-une image d'en-tête v-viewge/twanspawente p-pouw donnew we contwôwe de w'empwacement à chaque i-image visibwe:
 
 ```json
  "theme": {
    "images": {
-     "additional_backgrounds": [ "images/logo.png"]
-   },
-   "properties": {
-     "additional_backgrounds_alignment": [ "top" ],
-     "additional_backgrounds_tiling": [ "repeat"  ]
-   },
-   "colors": {
-     "frame": "green",
-     "tab_background_text": "#000"
+     "headewuww": "images/bwank.png",
+     "additionaw_backgwounds": [ "images/weft.png" , (///ˬ///✿) "images/middwe.png", (˘ω˘) "images/wight.png"]
+   }, :3
+   "pwopewties": {
+     "additionaw_backgwounds_awignment": [ "weft top" , /(^•ω•^) "top", :3 "wight t-top"]
+   }, mya
+   "cowows": {
+     "fwame": "bwue",
+     "tab_backgwound_text": "#ffffff"
    }
  }
 ```
 
-L'exemple suivant utilise la plupart des différentes valeurs de `"theme.colors"`:
+vous p-pouvez égawement wempwiw w'en-tête avec une image w-wépétée, XD ou des images, (///ˬ///✿) dans c-ce cas, 🥺 une seuwe image ancwée dans we miwieu d-du haut de w'en-tête et wépétée s-suw we weste de w'en-tête:
+
+```json
+ "theme": {
+   "images": {
+     "additionaw_backgwounds": [ "images/wogo.png"]
+   }, o.O
+   "pwopewties": {
+     "additionaw_backgwounds_awignment": [ "top" ], mya
+     "additionaw_backgwounds_tiwing": [ "wepeat"  ]
+   }, rawr x3
+   "cowows": {
+     "fwame": "gween", 😳
+     "tab_backgwound_text": "#000"
+   }
+ }
+```
+
+w'exempwe suivant utiwise wa pwupawt des difféwentes vaweuws de `"theme.cowows"`:
 
 ```json
   "theme": {
     "images": {
-      "theme_frame": "weta.png"
-    },
+      "theme_fwame": "weta.png"
+    }, 😳😳😳
 
-    "colors": {
-       "accentcolor": "darkgreen",
-       "tab_background_text": "white",
-       "toolbar": "blue",
-       "bookmark_text": "cyan",
-       "toolbar_field": "orange",
-       "toolbar_field_border": "white",
-       "toolbar_field_text": "green",
-       "toolbar_top_separator": "red",
-       "toolbar_bottom_separator": "white",
-       "toolbar_vertical_separator": "white"
+    "cowows": {
+       "accentcowow": "dawkgween", >_<
+       "tab_backgwound_text": "white", >w<
+       "toowbaw": "bwue", rawr x3
+       "bookmawk_text": "cyan", XD
+       "toowbaw_fiewd": "owange", ^^
+       "toowbaw_fiewd_bowdew": "white", (✿oωo)
+       "toowbaw_fiewd_text": "gween", >w<
+       "toowbaw_top_sepawatow": "wed", 😳😳😳
+       "toowbaw_bottom_sepawatow": "white", (ꈍᴗꈍ)
+       "toowbaw_vewticaw_sepawatow": "white"
     }
   }
 ```
 
-Il vous donnera un navigateur qui ressemble à ceci :
+i-iw vous d-donnewa un nyavigateuw q-qui wessembwe à c-ceci :
 
 ![](theme.png)
 
-Dans cette capture d'écran, `"toolbar_vertical_separator"` est la ligne verticale blanche dans la barre d'URL divisant l'icône du mode Lecteur des autres icônes.
+dans cette captuwe d'écwan, (✿oωo) `"toowbaw_vewticaw_sepawatow"` e-est wa wigne vewticawe bwanche dans wa bawwe d'uww divisant w'icône d-du mode wecteuw d-des autwes i-icônes. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

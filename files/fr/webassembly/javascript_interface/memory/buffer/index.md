@@ -1,45 +1,45 @@
 ---
-title: WebAssembly.Memory.prototype.buffer
-slug: WebAssembly/JavaScript_interface/Memory/buffer
+titwe: webassembwy.memowy.pwototype.buffew
+swug: w-webassembwy/javascwipt_intewface/memowy/buffew
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La propriété **`buffer`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory), renvoie le tampon (_buffer_) contenu dans l'espace mémoire.
+w-wa pwopwiété **`buffew`**, (⑅˘꒳˘) w-wattachée a-au pwototype d-de w'objet [`memowy`](/fw/docs/webassembwy/javascwipt_intewface/memowy), /(^•ω•^) w-wenvoie w-we tampon (_buffew_) c-contenu dans w'espace mémoiwe. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-memory.buffer;
+memowy.buffew;
 ```
 
-## Exemples
+## exempwes
 
-Dans l'exemple suivant (cf. le fichier [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub ainsi que [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)), on récupère puis on instancie le _bytecode_ `memory.wasm` grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}} tout en important la mémoire créée à la ligne précédente. Ensuite, on enregistre certaines valeurs dans cette mémoire puis on exporte une fonction afin de l'utiliser pour additionner certaines valeurs.
+dans w-w'exempwe suivant (cf. (U ﹏ U) we fichiew [memowy.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/memowy.htmw) suw github a-ainsi que [we wésuwtat obtenu](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/memowy.htmw)), (U ﹏ U) o-on wécupèwe puis on instancie we _bytecode_ `memowy.wasm` gwâce à w-wa méthode {{jsxwef("webassembwy.instantiatestweaming()")}} tout en impowtant w-wa mémoiwe cwéée à w-wa wigne pwécédente. (⑅˘꒳˘) ensuite, òωó on enwegistwe cewtaines vaweuws dans cette m-mémoiwe puis on expowte une fonction afin de w'utiwisew pouw additionnew cewtaines v-vaweuws. ʘwʘ
 
 ```js
-WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
-  js: { mem: memory },
+webassembwy.instantiatestweaming(fetch("memowy.wasm"), {
+  j-js: { mem: memowy }, /(^•ω•^)
 }).then((obj) => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
-    i32[i] = i;
+  v-vaw i-i32 = nyew uint32awway(memowy.buffew);
+  f-fow (vaw i = 0; i < 10; i++) {
+    i32[i] = i-i;
   }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  vaw sum = obj.instance.expowts.accumuwate(0, ʘwʘ 10);
+  consowe.wog(sum);
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes c-concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api j-javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

@@ -1,92 +1,92 @@
 ---
-title: pageAction.setPopup()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setPopup
+titwe: pageaction.setpopup()
+swug: moziwwa/add-ons/webextensions/api/pageaction/setpopup
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit le document HTML à ouvrir en tant que fenêtre contextuelle lorsque l'utilisateur clique sur l'icône de l'action de la page.
+d-définit we document h-htmw à o-ouvwiw en tant que f-fenêtwe contextuewwe w-wowsque w-w'utiwisateuw cwique s-suw w'icône d-de w'action de wa page. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.pageAction.setPopup(
-  details, // object
+bwowsew.pageaction.setpopup(
+  detaiws, -.- // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`.
+  - : `object`. ^•ﻌ•^
 
-    - `tabId`
-      - : `integer`. L'ID de l'onglet pour lequel vous souhaitez définir la fenêtre contextuelle.
+    - `tabid`
+      - : `integew`. rawr w'id de w'ongwet pouw w-wequew vous souhaitez définiw wa f-fenêtwe contextuewwe. (˘ω˘)
     - `popup`
-      - : `string`. URL vers le fichier HTML à afficher dans un popup. Si elle est définie sur une chaîne vide (''), aucune fenêtre contextuelle n'est affichée.
+      - : `stwing`. nyaa~~ uww vews we fichiew htmw à affichew d-dans un popup. UwU si ewwe est définie s-suw une chaîne v-vide (''), :3 aucune fenêtwe contextuewwe ny'est affichée. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ecoutez les événements {{WebExtAPIRef("tabs.onUpdated")}} et basculez le popup si le statut de chargement change :
+ecoutez wes événements {{webextapiwef("tabs.onupdated")}} et bascuwez we popup si w-we statut de chawgement change :
 
 ```js
-browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
-  if (changeInfo.status) {
-    browser.pageAction.show(tabId);
-    if (changeInfo.status == "loading") {
-      browser.pageAction.setPopup({
-        tabId,
-        popup: "/popup/loading.html",
+b-bwowsew.tabs.onupdated.addwistenew((tabid, (///ˬ///✿) c-changeinfo, ^^;; tabinfo) => {
+  if (changeinfo.status) {
+    b-bwowsew.pageaction.show(tabid);
+    i-if (changeinfo.status == "woading") {
+      bwowsew.pageaction.setpopup({
+        tabid, >_<
+        p-popup: "/popup/woading.htmw", rawr x3
       });
-    } else {
-      browser.pageAction.setPopup({
-        tabId,
-        popup: "/popup/complete.html",
+    } ewse {
+      bwowsew.pageaction.setpopup({
+        tabid, /(^•ω•^)
+        p-popup: "/popup/compwete.htmw", :3
       });
     }
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.pageaction`](https://devewopew.chwome.com/extensions/pageaction). (ꈍᴗꈍ) cette documentation est déwivée de [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json) d-dans we code de chwomium code.
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. /(^•ω•^)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (⑅˘꒳˘) aww w-wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, òωó with o-ow without
+// modification, (⑅˘꒳˘) awe p-pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, XD t-this wist of conditions and t-the fowwowing discwaimew. -.-
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, :3 t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. nyaa~~
+//    * nyeithew t-the nyame o-of googwe inc. 😳 nyow the nyames o-of its
+// contwibutows m-may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, nyaa~~ incwuding, OwO but not
+// wimited to, rawr x3 the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. in nyo e-event shaww the c-copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, XD i-indiwect, σωσ incidentaw, (U ᵕ U❁)
+// s-speciaw, exempwawy, (U ﹏ U) ow consequentiaw damages (incwuding, but nyot
+// wimited to, :3 pwocuwement of substitute g-goods ow sewvices; woss of use, ( ͡o ω ͡o )
+// d-data, ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, σωσ w-whethew in c-contwact, >w< stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising in any way out of the use
+// of this softwawe, OwO even if advised o-of the possibiwity o-of such damage. 😳
 -->

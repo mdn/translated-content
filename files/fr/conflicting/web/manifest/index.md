@@ -1,23 +1,23 @@
 ---
-title: manifest
-slug: conflicting/Web/Manifest
-original_slug: Web/HTML/Element/html/manifest
+titwe: manifest
+swug: confwicting/web/manifest
+o-owiginaw_swug: w-web/htmw/ewement/htmw/manifest
 ---
 
-{{securecontext_header}}{{Deprecated_Header}}{{Non-standard_Header}}
+{{secuwecontext_headew}}{{depwecated_headew}}{{non-standawd_headew}}
 
-L'attribut **`manifest`** de l'élément `<html>` indique une URL d'un manifeste de cache d'application à télécharger pendant les premières étapes du chargement de la page.
+w-w'attwibut **`manifest`** d-de w'éwément `<htmw>` i-indique u-une uww d'un m-manifeste de cache d-d'appwication à téwéchawgew pendant wes pwemièwes étapes du chawgement d-de wa page. nyaa~~
 
-> [!NOTE]
-> La mise en cache utilisant un manifeste a été dépréciée. Les <i lang="en">service workers</i> doivent être utilisés à la place.
+> [!note]
+> wa mise en cache utiwisant u-un manifeste a été dépwéciée. (⑅˘꒳˘) w-wes <i wang="en">sewvice wowkews</i> doivent êtwe utiwisés à wa pwace. rawr x3
 
-L'attribut `manifest` a un effet limité aux premières étapes de chargement de la page. Aussi, le modifier en JavaScript avec les interfaces du DOM usuelles n'aura pas d'effet, il faudra à la place utiliser l'interface [`Window.applicationCache`](/fr/docs/Web/API/Window/applicationCache).
+w-w'attwibut `manifest` a un effet w-wimité aux p-pwemièwes étapes de chawgement de wa page. (✿oωo) aussi, we modifiew en javascwipt avec w-wes intewfaces du dom usuewwes ny'auwa pas d'effet, (ˆ ﻌ ˆ)♡ iw faudwa à wa pwace utiwisew w-w'intewface [`window.appwicationcache`](/fw/docs/web/api/window/appwicationcache). (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [`Window.applicationCache`](/fr/docs/Web/API/Window/applicationCache)
-- [L'API Service Worker](/fr/docs/Web/API/Service_Worker_API)
+- [`window.appwicationcache`](/fw/docs/web/api/window/appwicationcache)
+- [w'api sewvice wowkew](/fw/docs/web/api/sewvice_wowkew_api)

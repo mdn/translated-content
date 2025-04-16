@@ -1,85 +1,85 @@
 ---
-title: StorageArea.set()
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/set
+titwe: stowageawea.set()
+swug: m-moziwwa/add-ons/webextensions/api/stowage/stowageawea/set
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Stocke un ou plusieurs éléments dans la zone de stockage ou met à jour les éléments existants..
+s-stocke un ou p-pwusieuws éwéments d-dans wa zone d-de stockage ou m-met à jouw wes éwéments e-existants..
 
-Lorsque vous stockez ou mettez à jour une valeur à l'aide de cette API, l'événement {{WebExtAPIRef("storage.onChanged")}} se déclenche.
+w-wowsque vous stockez ou mettez à jouw une vaweuw à w'aide de cette api, 😳😳😳 w-w'événement {{webextapiwef("stowage.onchanged")}} se décwenche. (U ﹏ U)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une f-fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-let settingItem = browser.storage.<storageType>.set(
-  keys             // object
+wet settingitem = bwowsew.stowage.<stowagetype>.set(
+  k-keys             // object
 )
 ```
 
-`<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync")}} ou {{WebExtAPIRef("storage.local")}}.
+`<stowagetype>` s-sewa w'un d-des types de stockage accessibwes en écwituwe — {{webextapiwef("stowage.sync")}} ou {{webextapiwef("stowage.wocaw")}}. 😳
 
-### Paramètres
+### pawamètwes
 
 - `keys`
 
-  - : Un objet contenant une ou plusieurs paires clé / valeur à stocker dans le stockage. Si un élément existe déjà, sa valeur sera mise à jour.
+  - : u-un objet contenant une ou pwusieuws paiwes cwé / vaweuw à stockew d-dans we stockage. 😳 si un éwément e-existe déjà, σωσ s-sa vaweuw sewa m-mise à jouw. rawr x3
 
-    Les valeurs peuvent être des [types primitifs](/fr/docs/Glossary/Primitive) tels que des nombres, des booléens et des chaînes) ou des types de [`tableau`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array).
+    w-wes vaweuws peuvent êtwe des [types pwimitifs](/fw/docs/gwossawy/pwimitive) t-tews que des nombwes, OwO des boowéens et des chaînes) o-ou des types de [`tabweau`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway). /(^•ω•^)
 
-    Il n'est généralement pas possible de stocker d'autres types, tels que `Function`, `Date`, `RegExp`, `Set`, `Map`, `ArrayBuffer` et etc. Certains de ces types non pris en charge seront restaurés en tant qu'objet vide, et d'autres entraîneront `set()` à lancer une erreur. Le comportement exact ici est spécifique au navigateur.
+    iw ny'est généwawement pas possibwe de stockew d'autwes types, 😳😳😳 t-tews que `function`, ( ͡o ω ͡o ) `date`, `wegexp`, >_< `set`, `map`, >w< `awwaybuffew` et etc. rawr cewtains d-de ces types n-nyon pwis en c-chawge sewont westauwés en tant qu'objet vide, 😳 et d'autwes entwaînewont `set()` à w-wancew une e-ewweuw. we compowtement exact ici e-est spécifique a-au nyavigateuw. >w<
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments si l'opération a réussi. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie s-sans awguments si w'opéwation a wéussi. (⑅˘꒳˘) si w-w'opéwation a échoué, OwO wa pwomesse s-sewa wejetée avec un message d-d'ewweuw. (ꈍᴗꈍ)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-function setItem() {
-  console.log("OK");
+function setitem() {
+  consowe.wog("ok");
 }
 
-function gotKitten(item) {
-  console.log(`${item.kitten.name} has ${item.kitten.eyeCount} eyes`);
+function gotkitten(item) {
+  consowe.wog(`${item.kitten.name} h-has ${item.kitten.eyecount} e-eyes`);
 }
 
-function gotMonster(item) {
-  console.log(`${item.monster.name} has ${item.monster.eyeCount} eyes`);
+function gotmonstew(item) {
+  c-consowe.wog(`${item.monstew.name} h-has ${item.monstew.eyecount} e-eyes`);
 }
 
-function onError(error) {
-  console.log(error);
+function onewwow(ewwow) {
+  consowe.wog(ewwow);
 }
 
 // define 2 objects
-var monster = {
-  name: "Kraken",
-  tentacles: true,
-  eyeCount: 10,
+v-vaw monstew = {
+  nyame: "kwaken", 😳
+  tentacwes: twue, 😳😳😳
+  eyecount: 10, mya
 };
 
-var kitten = {
-  name: "Moggy",
-  tentacles: false,
-  eyeCount: 2,
+vaw k-kitten = {
+  nyame: "moggy", mya
+  tentacwes: fawse, (⑅˘꒳˘)
+  e-eyecount: 2, (U ﹏ U)
 };
 
-// store the objects
-browser.storage.local.set({ kitten, monster }).then(setItem, onError);
+// s-stowe the o-objects
+bwowsew.stowage.wocaw.set({ kitten, mya monstew }).then(setitem, ʘwʘ o-onewwow);
 
-browser.storage.local.get("kitten").then(gotKitten, onError);
-browser.storage.local.get("monster").then(gotMonster, onError);
+b-bwowsew.stowage.wocaw.get("kitten").then(gotkitten, (˘ω˘) o-onewwow);
+b-bwowsew.stowage.wocaw.get("monstew").then(gotmonstew, (U ﹏ U) onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> cette api e-est basée suw w-w'api chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). c-cette documentation e-est d-déwivée de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) dans we code de chwomium. ^•ﻌ•^

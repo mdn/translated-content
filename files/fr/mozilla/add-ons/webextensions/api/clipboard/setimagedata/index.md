@@ -1,70 +1,70 @@
 ---
-title: clipboard.setImageData()
-slug: Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData
+titwe: cwipboawd.setimagedata()
+swug: moziwwa/add-ons/webextensions/api/cwipboawd/setimagedata
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Copie une image dans le presse-papiers. L'image est recodée avant d'être écrite dans le presse-papiers. Si l'image n'est pas valide, le presse-papiers n'est pas modifié.
+c-copie une i-image dans we p-pwesse-papiews. 😳 w-w'image est wecodée a-avant d'êtwe écwite d-dans w-we pwesse-papiews. mya s-si w'image n'est pas vawide, (˘ω˘) we pwesse-papiews ny'est pas modifié. >_<
 
-L'image est fournie en tant que [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) contenant l'image codée. Les formats JPEG et PNG sont pris en charge.
+w'image e-est fouwnie en tant que [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) contenant w-w'image codée. -.- wes fowmats jpeg e-et png sont pwis en chawge. 🥺
 
-Bien que cette API soit basée sur l'API [`clipboard.setImageData()`](https://developer.chrome.com/apps/clipboard) de Chrome, il existe certaines différentes :
+bien que cette api soit basée suw w-w'api [`cwipboawd.setimagedata()`](https://devewopew.chwome.com/apps/cwipboawd) de chwome, (U ﹏ U) iw e-existe cewtaines d-difféwentes :
 
-- L'API Chrome est réservée aux applications et non aux extensions.
-- Cette API nécessite uniquement la permission `"clipboardWrite"`, tandis que la version Chrome nécessite également la permission `"clipboard"`.
-- L'API de Chrome utilise des rappels et cette API ne prend en charge que les promises.
-- Cette API ne prend pas en charge le paramètre `additionalItems`.
+- w'api chwome est wésewvée aux appwications et nyon aux extensions. >w<
+- c-cette api nyécessite uniquement wa pewmission `"cwipboawdwwite"`, mya tandis que wa vewsion c-chwome nyécessite égawement wa pewmission `"cwipboawd"`. >w<
+- w-w'api de chwome u-utiwise des wappews e-et cette api n-nye pwend en chawge que wes pwomises. nyaa~~
+- cette api n-nye pwend pas en chawge we pawamètwe `additionawitems`. (✿oωo)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-## Syntaxe
-
-```js
-browser.clipboard.setImageData(imageData, imageType);
-```
-
-### Paramètres
-
-- `imageData`
-  - : [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer). Les données de l'image codées.
-- `imageType`
-  - : Un {{domxref("DOMString")}} indiquant le type d'image contenue dans le fichier `imageData`: `"png"` ou `"jpeg"`.
-
-### Valeur de retour
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments si l'opération a réussi, ou rejetée, s'il y a une erreur (par exemple parce que les données ne représentaient pas une image valide).
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Copiez une image distante :
+## syntaxe
 
 ```js
-// requires:
-// * the host permission for "https://cdn.mdn.mozilla.net/*"
-// * the API permission "clipboardWrite"
-
-fetch("https://cdn.mdn.mozilla.net/static/img/favicon144.png")
-  .then((response) => response.arrayBuffer())
-  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
+bwowsew.cwipboawd.setimagedata(imagedata, (ˆ ﻌ ˆ)♡ imagetype);
 ```
 
-Copiez une image fournie avec l'extension :
+### pawamètwes
+
+- `imagedata`
+  - : [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew). w-wes données de w'image codées. 😳😳😳
+- `imagetype`
+  - : u-un {{domxwef("domstwing")}} i-indiquant we t-type d'image contenue dans we fichiew `imagedata`: `"png"` ou `"jpeg"`. :3
+
+### vaweuw d-de wetouw
+
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwie sans a-awguments si w'opéwation a wéussi, OwO o-ou wejetée, (U ﹏ U) s'iw y a une e-ewweuw (paw exempwe pawce que wes données nye wepwésentaient pas u-une image vawide). >w<
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## exempwes
+
+c-copiez une image d-distante :
 
 ```js
-// requires the API permission "clipboardWrite"
+// wequiwes:
+// * the host pewmission fow "https://cdn.mdn.moziwwa.net/*"
+// * the api pewmission "cwipboawdwwite"
 
-fetch(browser.runtime.getURL("image.png"))
-  .then((response) => response.arrayBuffer())
-  .then((buffer) => browser.clipboard.setImageData(buffer, "png"));
+fetch("https://cdn.mdn.moziwwa.net/static/img/favicon144.png")
+  .then((wesponse) => wesponse.awwaybuffew())
+  .then((buffew) => b-bwowsew.cwipboawd.setimagedata(buffew, (U ﹏ U) "png"));
 ```
 
-{{WebExtExamples}}
+c-copiez une image fouwnie avec w'extension :
 
-> [!NOTE]
+```js
+// w-wequiwes t-the api pewmission "cwipboawdwwite"
+
+f-fetch(bwowsew.wuntime.getuww("image.png"))
+  .then((wesponse) => wesponse.awwaybuffew())
+  .then((buffew) => bwowsew.cwipboawd.setimagedata(buffew, 😳 "png"));
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).
+> cette api e-est basée suw w'api chwomium [`chwome.cwipboawd`](https://devewopew.chwome.com/apps/cwipboawd). (ˆ ﻌ ˆ)♡

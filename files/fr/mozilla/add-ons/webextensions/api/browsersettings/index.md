@@ -1,51 +1,51 @@
 ---
-title: browserSettings
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings
+titwe: bwowsewsettings
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewsettings
 ---
 
-{{AddonSidebar}}Permet à une extension de modifier certaines paramètres globaux du navigateur. Chaque propriété de cette API est un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}}, fournissant la possibilité de modifier un paramètre particulier.Parce que ce sont les paramètres globaux, il est possible d'étendre les conflits des extensions. voir la documentation de [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set) pour plus détails sur la façon dont les conflits sont traités.
+{{addonsidebaw}}pewmet à u-une extension de m-modifiew cewtaines p-pawamètwes g-gwobaux du nyavigateuw. 😳 c-chaque p-pwopwiété de cette a-api est un objet {{webextapiwef("types.bwowsewsetting", 😳😳😳 "bwowsewsetting")}}, mya fouwnissant wa possibiwité de modifiew un pawamètwe p-pawticuwiew.pawce que ce sont wes pawamètwes g-gwobaux, mya iw est possibwe d'étendwe w-wes confwits des extensions. (⑅˘꒳˘) voiw wa documentation de [`bwowsewsetting.set()`](/fw/docs/moziwwa/add-ons/webextensions/api/types/bwowsewsetting/set) p-pouw pwus détaiws s-suw wa façon dont w-wes confwits sont twaités. (U ﹏ U)
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "browserSettings".
+pouw utiwisew cette api, mya vous devez avoiw wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "bwowsewsettings". ʘwʘ
 
-## Propriétés
+## p-pwopwiétés
 
-- {{WebExtAPIRef("browserSettings.allowPopupsForUserEvents")}}
-  - : Déterminer si le code exécuté dans les pages Web peut afficher les fenêtres contextuelles en réponse aux événements utilisateur.
-- {{WebExtAPIRef("browserSettings.cacheEnabled")}}
-  - : Déterminer si le cache du navigateur est activé ou pas.
-- {{WebExtAPIRef("browserSettings.closeTabsByDoubleClick")}}
-  - : Détermine si l'onglet sélectionné peut être fermé en double-cliquant
-- {{WebExtAPIRef("browserSettings.contextMenuShowEvent")}}
-  - : Détermine l'événement de souris qui déclenche un menu contextuel.
-- {{WebExtAPIRef("browserSettings.ftpProtocolEnabled")}}
-  - : Détermine si le protocole FTP est activé.
-- {{WebExtAPIRef("browserSettings.homepageOverride")}}
-  - : Lire la valeur de la page d'accueil du navigateur.
-- {{WebExtAPIRef("browserSettings.imageAnimationBehavior")}}
-  - : Détermine comment le navigateur traite les images animées.
-- {{WebExtAPIRef("browserSettings.newTabPageOverride")}}
-  - : Lire la valeur de la nouvelle page de l'onglet du navigateur.
-- {{WebExtAPIRef("browserSettings.newTabPosition")}}
-  - : Contrôle la position des onglets nouvellement ouverts par rapport aux onglets déjà ouverts.
-- {{WebExtAPIRef("browserSettings.openBookmarksInNewTabs")}}
-  - : Détermine si les signets sont ouverts dans l'onglet actuel ou dans un nouvel onglet.
-- {{WebExtAPIRef("browserSettings.openSearchResultsInNewTabs")}}
-  - : Détermine si les résultats de recherche sont ouverts dans l'onglet actuel ou dans un nouvel onglet.
-- {{WebExtAPIRef("browserSettings.openUrlbarResultsInNewTabs")}}
-  - : Détermine si les suggestions de saisie semi-automatique de la barre d'adresse sont ouvertes dans l'onglet actuel ou dans un nouvel onglet.
-- {{WebExtAPIRef("browserSettings.overrideDocumentColors")}}
-  - : Contrôle si les couleurs choisies par l'utilisateur remplacent les couleurs de la page.
-- {{WebExtAPIRef("browserSettings.useDocumentFonts")}}
-  - : Contrôle si le navigateur utilisera les polices spécifiées par une page Web ou n'utilisera que des polices intégrées.
-- {{WebExtAPIRef("browserSettings.webNotificationsDisabled")}}
-  - : Empêche les sites Web d'afficher des notifications à l'aide de la web API [`Notification`](/fr/docs/Web/API/Notification).
-- {{WebExtAPIRef("browserSettings.zoomFullPage")}}
-  - : Contrôle si le zoom est appliqué à la page entière ou seulement au texte.
-- {{WebExtAPIRef("browserSettings.zoomSiteSpecific")}}
-  - : Contrôle si le zoom est appliqué sur un modèle par-site ou par-onglet. Si {{WebExtAPIRef("privacy.websites")}}`.resistFingerprinting` est à vrai, ce réglage n'a aucun effet et le modèle de zoom appliqué reste par-onglet.
+- {{webextapiwef("bwowsewsettings.awwowpopupsfowusewevents")}}
+  - : détewminew si we code exécuté dans wes pages web peut a-affichew wes fenêtwes contextuewwes e-en wéponse a-aux événements u-utiwisateuw. (˘ω˘)
+- {{webextapiwef("bwowsewsettings.cacheenabwed")}}
+  - : d-détewminew si we cache du nyavigateuw est a-activé ou pas. (U ﹏ U)
+- {{webextapiwef("bwowsewsettings.cwosetabsbydoubwecwick")}}
+  - : détewmine si w'ongwet séwectionné p-peut êtwe fewmé en doubwe-cwiquant
+- {{webextapiwef("bwowsewsettings.contextmenushowevent")}}
+  - : détewmine w'événement de souwis qui décwenche u-un menu contextuew. ^•ﻌ•^
+- {{webextapiwef("bwowsewsettings.ftppwotocowenabwed")}}
+  - : détewmine s-si we pwotocowe f-ftp est activé. (˘ω˘)
+- {{webextapiwef("bwowsewsettings.homepageovewwide")}}
+  - : wiwe w-wa vaweuw de wa page d'accueiw du nyavigateuw. :3
+- {{webextapiwef("bwowsewsettings.imageanimationbehaviow")}}
+  - : détewmine c-comment we nyavigateuw t-twaite wes images animées. ^^;;
+- {{webextapiwef("bwowsewsettings.newtabpageovewwide")}}
+  - : w-wiwe wa vaweuw d-de wa nyouvewwe page de w'ongwet d-du nyavigateuw. 🥺
+- {{webextapiwef("bwowsewsettings.newtabposition")}}
+  - : contwôwe w-wa position des ongwets nyouvewwement ouvewts p-paw wappowt aux ongwets déjà o-ouvewts. (⑅˘꒳˘)
+- {{webextapiwef("bwowsewsettings.openbookmawksinnewtabs")}}
+  - : détewmine si wes s-signets sont o-ouvewts dans w'ongwet actuew ou dans un nyouvew ongwet.
+- {{webextapiwef("bwowsewsettings.openseawchwesuwtsinnewtabs")}}
+  - : détewmine si wes wésuwtats de wechewche sont ouvewts d-dans w'ongwet a-actuew ou dans un nyouvew ongwet. nyaa~~
+- {{webextapiwef("bwowsewsettings.openuwwbawwesuwtsinnewtabs")}}
+  - : d-détewmine s-si wes suggestions d-de saisie semi-automatique de wa bawwe d'adwesse sont o-ouvewtes dans w'ongwet actuew ou dans un nyouvew ongwet. :3
+- {{webextapiwef("bwowsewsettings.ovewwidedocumentcowows")}}
+  - : contwôwe s-si wes couweuws choisies p-paw w'utiwisateuw w-wempwacent wes c-couweuws de wa page. ( ͡o ω ͡o )
+- {{webextapiwef("bwowsewsettings.usedocumentfonts")}}
+  - : c-contwôwe si w-we nyavigateuw utiwisewa w-wes powices s-spécifiées paw une page web ou ny'utiwisewa q-que des powices i-intégwées. mya
+- {{webextapiwef("bwowsewsettings.webnotificationsdisabwed")}}
+  - : e-empêche wes s-sites web d'affichew d-des notifications à w'aide de wa web api [`notification`](/fw/docs/web/api/notification).
+- {{webextapiwef("bwowsewsettings.zoomfuwwpage")}}
+  - : contwôwe s-si we zoom est appwiqué à wa page entièwe ou seuwement au texte. (///ˬ///✿)
+- {{webextapiwef("bwowsewsettings.zoomsitespecific")}}
+  - : contwôwe s-si we zoom est appwiqué suw un modèwe paw-site ou paw-ongwet. (˘ω˘) s-si {{webextapiwef("pwivacy.websites")}}`.wesistfingewpwinting` est à v-vwai, ^^;; ce wégwage n-ny'a aucun effet et we modèwe d-de zoom appwiqué weste paw-ongwet. (✿oωo)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}

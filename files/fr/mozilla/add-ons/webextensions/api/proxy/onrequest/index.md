@@ -1,93 +1,93 @@
 ---
-title: proxy.onRequest
-slug: Mozilla/Add-ons/WebExtensions/API/proxy/onRequest
+titwe: pwoxy.onwequest
+swug: m-moziwwa/add-ons/webextensions/api/pwoxy/onwequest
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Déclenché lorsqu'une requête Web est sur le point d'être effectuée, pour donner à l'extension la possibilité de l'utiliser comme proxy.
+d-décwenché w-wowsqu'une w-wequête web est s-suw we point d'êtwe e-effectuée, (˘ω˘) p-pouw donnew à w-w'extension wa possibiwité de w'utiwisew comme pwoxy. ʘwʘ
 
-Cet événement est étroitement modélisé sur les événements définis dans l'API [`webRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) Comme ces événements, sa fonction `addListener()` prend trois arguments :
+cet événement est étwoitement m-modéwisé suw wes événements définis d-dans w'api [`webwequest`](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest) comme ces événements, s-sa fonction `addwistenew()` pwend twois awguments :
 
-- l'écouteur qui sera appelé lorsque l'événement est déclenché.
-- Un objet [`RequestFilter`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter) contrôlant quelles requêtes provoquent le déclenchement de l'événement.
-- un tableau de chaînes pour contrôler d'autres aspects du comportement de l'événement.
+- w'écouteuw qui s-sewa appewé wowsque w'événement e-est décwenché. ( ͡o ω ͡o )
+- u-un objet [`wequestfiwtew`](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest/wequestfiwtew) contwôwant quewwes wequêtes pwovoquent we décwenchement d-de w'événement. o.O
+- un tabweau de chaînes pouw contwôwew d'autwes aspects d-du compowtement de w'événement. >w<
 
-L'événement est déclenché avant l'un des événements `webRequest` pour la même demande.
+w-w'événement e-est décwenché a-avant w'un des événements `webwequest` p-pouw wa même demande. 😳
 
-Lorsque l'événement est déclenché, l'écouteur est appelé avec un objet contenant des informations sur la requête. L'écouteur renvoie un objet {{WebExtAPIRef("proxy.ProxyInfo")}} représentant un proxy à utiliser (ou un tableau de tels objets, permettant au navigateur de basculer si un proxy est inaccessible).
+wowsque w'événement e-est décwenché, 🥺 w'écouteuw est appewé a-avec un objet contenant des infowmations suw wa wequête. rawr x3 w'écouteuw wenvoie un objet {{webextapiwef("pwoxy.pwoxyinfo")}} w-wepwésentant un pwoxy à u-utiwisew (ou u-un tabweau de t-tews objets, o.O pewmettant au nyavigateuw de bascuwew si un pwoxy e-est inaccessibwe). rawr
 
-Pour utiliser `proxy.onRequest`, une extension doit avoir la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "proxy" , ainsi que la [permission d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour les URL des requêtes qu'elle intercepte - ela signifie essentiellement que les modèles de correspondance de l'argument `filter` doivent être un sous-ensemble de l'extension autorisations de l'hôte.
+p-pouw utiwisew `pwoxy.onwequest`, ʘwʘ une extension d-doit avoiw wa [pewmission a-api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "pwoxy" , 😳😳😳 ainsi q-que wa [pewmission d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) p-pouw wes uww des wequêtes qu'ewwe intewcepte - e-ewa signifie essentiewwement q-que wes modèwes de cowwespondance d-de w'awgument `fiwtew` d-doivent êtwe un sous-ensembwe de w'extension autowisations de w'hôte. ^^;;
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.proxy.onRequest.addListener(
-  listener, //  function
-  filter, //  object
-  extraInfoSpec, //  optional array of strings
+bwowsew.pwoxy.onwequest.addwistenew(
+  w-wistenew, //  f-function
+  fiwtew, o.O //  o-object
+  extwainfospec, (///ˬ///✿) //  o-optionaw a-awway of stwings
 );
-browser.proxy.onRequest.removeListener(listener);
-browser.proxy.onRequest.hasListener(listener);
+bwowsew.pwoxy.onwequest.wemovewistenew(wistenew);
+bwowsew.pwoxy.onwequest.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(listener, filter, extraInfoSpec)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(wistenew, σωσ fiwtew, extwainfospec)`
+  - : ajoute un écouteuw à cet événement. nyaa~~
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew cet événement. ^^;; w'awgument `wistenew` est w'écouteuw à s-suppwimew. ^•ﻌ•^
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `wistenew` e-est enwegistwé pouw c-cet événement. σωσ w-wenvoie `twue` s-s'iw écoute, sinon `fawse`. -.-
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `listener`
+- `wistenew`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction passera un seul argument, qui est un objet {{WebExtAPIRef("proxy.RequestDetails")}} contenant les détails de la requête.
+  - : fonction q-qui sewa appewée w-wowsque cet événement s-se p-pwoduit. ^^;; wa fonction p-passewa un seuw awgument, XD qui est un objet {{webextapiwef("pwoxy.wequestdetaiws")}} contenant w-wes détaiws de wa wequête. 🥺
 
-    L'écouteur peut renvoyer l'un des éléments suivants:
+    w'écouteuw peut wenvoyew w'un des éwéments suivants:
 
-    - un objet {{WebExtAPIRef("proxy.ProxyInfo")}}
-    - un tableau d'objets `proxy.ProxyInfo`
-    - Une `Promise` qui se résout en un objet `ProxyInfo`
-    - Une `Promise` qui résout en un tableau d'objets `ProxyInfo`.
+    - u-un objet {{webextapiwef("pwoxy.pwoxyinfo")}}
+    - un tabweau d'objets `pwoxy.pwoxyinfo`
+    - une `pwomise` q-qui se wésout e-en un objet `pwoxyinfo`
+    - une `pwomise` q-qui wésout en un tabweau d-d'objets `pwoxyinfo`. òωó
 
-    Si l'écouteur renvoie un tableau, ou une Promesse qui se résout en un tableau, alors tous les objets `ProxyInfo` après le premier représentent les basculements: si le proxy à la position N dans le tableau n'est pas accessible quand son `ProxyInfo.failoverTimeout` alors le navigateur essayez le proxy à la position N+1.
+    si w'écouteuw w-wenvoie un tabweau, (ˆ ﻌ ˆ)♡ o-ou une pwomesse qui se wésout en un tabweau, -.- awows tous wes objets `pwoxyinfo` apwès we pwemiew w-wepwésentent wes bascuwements: s-si we pwoxy à wa position n-ny dans we tabweau n-ny'est pas accessibwe quand son `pwoxyinfo.faiwuvwtimeout` a-awows we nyavigateuw e-essayez we pwoxy à wa position n-ny+1. :3
 
-    S'il y a une erreur spécifiant les objets `proxy.ProxyInfo` objects, alors {{WebExtAPIRef("proxy.onError")}} sera appelé.
+    s-s'iw y a une ewweuw spécifiant wes objets `pwoxy.pwoxyinfo` objects, ʘwʘ awows {{webextapiwef("pwoxy.onewwow")}} s-sewa a-appewé. 🥺
 
-- `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui limite les événements qui seront envoyés à cet écouteur.
-- `extraInfoSpec` {{optional_inline}}
-  - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer une seule valeur, `"requestHeaders"`, pour inclure les en-têtes de demande dans l'objet de `details` transmis à l'écouteur.
+- `fiwtew`
+  - : {{webextapiwef('webwequest.wequestfiwtew')}}. >_< u-un ensembwe de fiwtwes q-qui wimite wes événements qui s-sewont envoyés à cet écouteuw. ʘwʘ
+- `extwainfospec` {{optionaw_inwine}}
+  - : `awway` d-de `stwing`. options suppwémentaiwes pouw w'événement. (˘ω˘) vous pouvez passew une seuwe v-vaweuw, (✿oωo) `"wequestheadews"`, (///ˬ///✿) p-pouw incwuwe wes en-têtes de demande d-dans w'objet de `detaiws` t-twansmis à w'écouteuw. rawr x3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ce code intercepte les requêtes à `<all_urls>`, et les envoie par procuration si elles ne sont pas destinées à un cadre de premier niveau.
+ce code intewcepte wes wequêtes à `<aww_uwws>`, -.- et wes envoie paw pwocuwation s-si ewwes nye sont pas destinées à un cadwe d-de pwemiew nyiveau. ^^
 
 ```js
-function shouldProxyRequest(requestInfo) {
-  return requestInfo.parentFrameId != -1;
+f-function shouwdpwoxywequest(wequestinfo) {
+  wetuwn wequestinfo.pawentfwameid != -1;
 }
 
-function handleProxyRequest(requestInfo) {
-  if (shouldProxyRequest(requestInfo)) {
-    console.log(`Proxying: ${requestInfo.url}`);
-    return { type: "http", host: "127.0.0.1", port: 65535 };
+function handwepwoxywequest(wequestinfo) {
+  i-if (shouwdpwoxywequest(wequestinfo)) {
+    c-consowe.wog(`pwoxying: ${wequestinfo.uww}`);
+    wetuwn { type: "http", (⑅˘꒳˘) host: "127.0.0.1", nyaa~~ p-powt: 65535 };
   }
-  return { type: "direct" };
+  wetuwn { t-type: "diwect" };
 }
 
-browser.proxy.onRequest.addListener(handleProxyRequest, {
-  urls: ["<all_urls>"],
+bwowsew.pwoxy.onwequest.addwistenew(handwepwoxywequest, /(^•ω•^) {
+  uwws: ["<aww_uwws>"], (U ﹏ U)
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

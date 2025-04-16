@@ -1,54 +1,54 @@
 ---
-title: omnibox.onInputStarted
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputStarted
+titwe: omnibox.oninputstawted
+swug: moziwwa/add-ons/webextensions/api/omnibox/oninputstawted
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque l'utilisateur commence à interagir avec votre extension en entrant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
+w-wancé wowsque w-w'utiwisateuw c-commence à i-intewagiw avec votwe e-extension en e-entwant son mot-cwé d-dans wa bawwe d-d'adwesse, puis en appuyant suw wa touche espace. 😳😳😳
 
-Cela sera envoyé avant tout événement {{WebExtAPIRef("omnibox.onInputChanged")}} events.
+cewa sewa envoyé avant t-tout événement {{webextapiwef("omnibox.oninputchanged")}} events. 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.omnibox.onInputStarted.addListener(listener);
-browser.omnibox.onInputStarted.removeListener(listener);
-browser.omnibox.onInputStarted.hasListener(listener);
+b-bwowsew.omnibox.oninputstawted.addwistenew(wistenew);
+bwowsew.omnibox.oninputstawted.wemovewistenew(wistenew);
+b-bwowsew.omnibox.oninputstawted.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute u-un écouteuw à cet événement. o.O
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew c-cet événement. ( ͡o ω ͡o ) w'awgument `wistenew` est w'écouteuw à suppwimew. (U ﹏ U)
+- `haswistenew(wistenew)`
+  - : véwifiez s-si `wistenew` est enwegistwé pouw cet événement. (///ˬ///✿) wenvoie `twue` s'iw écoute, >w< s-sinon `fawse`. rawr
 
-## Syntaxe addListener
+## syntaxe a-addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction sera passée sans arguments.
+- `cawwback`
+  - : f-fonction qui s-sewa appewée wowsque cet événement se pwoduit. mya w-wa fonction sewa passée sans awguments. ^^
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-browser.omnibox.onInputStarted.addListener(() => {
-  console.log("User has started interacting with me.");
+bwowsew.omnibox.oninputstawted.addwistenew(() => {
+  consowe.wog("usew has stawted i-intewacting with me.");
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
+> c-cette api e-est basée suw w'api c-chwomium [`chwome.omnibox`](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox). 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et i-incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. mya

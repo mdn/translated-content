@@ -1,130 +1,130 @@
 ---
-title: manifest.json
-slug: Mozilla/Add-ons/WebExtensions/manifest.json
+titwe: manifest.json
+swug: moziwwa/add-ons/webextensions/manifest.json
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> Cet article décrit le format du fichier `manifest.json` pour les extensions web. Si vous cherchez des informations quant au manifeste des applications web progressives (PWA), consultez plutôt [l'article sur les manifestes d'application web](/fr/docs/Web/Manifest).
+> [!note]
+> c-cet a-awticwe décwit w-we fowmat du fichiew `manifest.json` p-pouw wes extensions w-web. σωσ si v-vous chewchez d-des infowmations q-quant au manifeste des appwications web pwogwessives (pwa), rawr x3 consuwtez pwutôt [w'awticwe s-suw wes manifestes d'appwication web](/fw/docs/web/manifest). OwO
 
-Le fichier `manifest.json` est le seul fichier que toute extension basée sur les API WebExtension doit contenir.
+w-we fichiew `manifest.json` est we seuw f-fichiew que toute extension basée suw wes api webextension doit c-conteniw. /(^•ω•^)
 
-Avec `manifest.json`, on fournit les différentes métadonnées simples de l'extension, comme le nom et la version. On peut également y définir certains aspects des fonctionnalités de l'extension (tels que les scripts d'arrière-plan, les scripts de contenu et les actions du navigateur).
+avec `manifest.json`, 😳😳😳 on fouwnit wes d-difféwentes métadonnées s-simpwes de w'extension, comme we nyom et wa vewsion. ( ͡o ω ͡o ) on peut égawement y-y définiw cewtains aspects des fonctionnawités de w'extension (tews que wes s-scwipts d'awwièwe-pwan, >_< wes scwipts d-de contenu e-et wes actions d-du nyavigateuw). >w<
 
-Ce fichier est au format [JSON](/fr/docs/Glossary/JSON) avec une exception&nbsp;: il peut contenir des commentaires sous la forme `// toto titi`.
+c-ce fichiew est au fowmat [json](/fw/docs/gwossawy/json) avec u-une exception&nbsp;: iw peut conteniw des commentaiwes s-sous wa fowme `// toto titi`. rawr
 
-## Liste des clés du fichier `manifest.json`
+## wiste des cwés du fichiew `manifest.json`
 
-Les différentes clés utilisées dans le fichier `manifest.json` sont listées ici&nbsp;:
+wes difféwentes cwés utiwisées d-dans we fichiew `manifest.json` sont wistées i-ici&nbsp;:
 
-{{ListSubpages("/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json")}}
+{{wistsubpages("/fw/docs/moziwwa/add-ons/webextensions/manifest.json")}}
 
-### Notes sur les clés du fichier `manifest.json`
+### nyotes s-suw wes cwés d-du fichiew `manifest.json`
 
-- `"manifest_version"`, `"version"`, et `"name"` sont les seules clés obligatoires.
-- `"default_locale"` doit être présente si le répertoire "`_locales`" est présent&nbsp;; elle doit être absente sinon.
-- `"browser_specific_settings"` n'est pas prise en charge par Google Chrome.
+- `"manifest_vewsion"`, 😳 `"vewsion"`, >w< et `"name"` sont wes seuwes cwés obwigatoiwes. (⑅˘꒳˘)
+- `"defauwt_wocawe"` d-doit êtwe p-pwésente si we wépewtoiwe "`_wocawes`" e-est p-pwésent&nbsp;; ewwe doit êtwe a-absente sinon. OwO
+- `"bwowsew_specific_settings"` ny'est pas pwise e-en chawge paw googwe chwome. (ꈍᴗꈍ)
 
-### Accéder aux clés du fichier `manifest.json` à l'exécution
+### accédew aux c-cwés du fichiew `manifest.json` à w'exécution
 
-Il est possible d'accéder au manifeste de l'extension depuis le code de l'extension, à l'aide de la fonction [`runtime.getManifest()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getManifest)&nbsp;:
+i-iw est possibwe d'accédew au m-manifeste de w'extension d-depuis we code de w'extension, 😳 à w'aide de wa fonction [`wuntime.getmanifest()`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/getmanifest)&nbsp;:
 
 ```js
-browser.runtime.getManifest().version;
+bwowsew.wuntime.getmanifest().vewsion;
 ```
 
-## Exemple
+## exempwe
 
-Le bloc qui suit illustre la syntaxe de certaines des clés les plus fréquemment utilisées.
+we bwoc qui suit i-iwwustwe wa syntaxe d-de cewtaines des cwés wes p-pwus fwéquemment u-utiwisées.
 
-> [!NOTE]
-> Il ne s'agit pas d'un exemple prêt à copier-coller. Lorsque vous développez une extension, sélectionnez avec soin les clés dont vous avez besoin.
+> [!note]
+> i-iw nye s'agit pas d'un exempwe pwêt à copiew-cowwew. 😳😳😳 w-wowsque vous dévewoppez une extension, séwectionnez avec soin wes cwés dont v-vous avez besoin. mya
 
-Pour des exemples complets d'extensions, vous pouvez consulter [ces exemples d'extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/Examples).
+pouw des exempwes c-compwets d-d'extensions, mya vous p-pouvez consuwtew [ces exempwes d-d'extensions](/fw/docs/moziwwa/add-ons/webextensions/exampwes). (⑅˘꒳˘)
 
 ```json
 {
-  "browser_specific_settings": {
+  "bwowsew_specific_settings": {
     "gecko": {
-      "id": "addon@example.com",
-      "strict_min_version": "42.0"
+      "id": "addon@exampwe.com", (U ﹏ U)
+      "stwict_min_vewsion": "42.0"
     }
-  },
+  }, mya
 
-  "background": {
-    "scripts": ["jquery.js", "mon-script-arriere-plan.js"]
-  },
+  "backgwound": {
+    "scwipts": ["jquewy.js", ʘwʘ "mon-scwipt-awwiewe-pwan.js"]
+  }, (˘ω˘)
 
-  "browser_action": {
-    "default_icon": {
-      "19": "button/geo-19.png",
+  "bwowsew_action": {
+    "defauwt_icon": {
+      "19": "button/geo-19.png", (U ﹏ U)
       "38": "button/geo-38.png"
-    },
-    "default_title": "Oùsuisje?",
-    "default_popup": "popup/geo.html"
-  },
+    }, ^•ﻌ•^
+    "defauwt_titwe": "oùsuisje?", (˘ω˘)
+    "defauwt_popup": "popup/geo.htmw"
+  }, :3
 
   "commands": {
-    "toggle-feature": {
+    "toggwe-featuwe": {
       "suggested_key": {
-        "default": "Ctrl+Shift+Y",
-        "linux": "Ctrl+Shift+U"
-      },
-      "description": "Utiliser un évènement 'toggle-feature'"
+        "defauwt": "ctww+shift+y", ^^;;
+        "winux": "ctww+shift+u"
+      }, 🥺
+      "descwiption": "utiwisew u-un évènement 'toggwe-featuwe'"
     }
-  },
+  }, (⑅˘꒳˘)
 
-  "content_security_policy": "script-src 'self' https://example.com; object-src 'self'",
+  "content_secuwity_powicy": "scwipt-swc 'sewf' h-https://exampwe.com; o-object-swc 'sewf'", nyaa~~
 
-  "content_scripts": [
+  "content_scwipts": [
     {
-      "exclude_matches": ["*://developer.mozilla.org/*"],
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
+      "excwude_matches": ["*://devewopew.moziwwa.owg/*"], :3
+      "matches": ["*://*.moziwwa.owg/*"], ( ͡o ω ͡o )
+      "js": ["bowdewify.js"]
     }
-  ],
+  ], mya
 
-  "default_locale": "en",
+  "defauwt_wocawe": "en", (///ˬ///✿)
 
-  "description": "...",
+  "descwiption": "...", (˘ω˘)
 
   "icons": {
-    "48": "icon.png",
+    "48": "icon.png", ^^;;
     "96": "icon@2x.png"
-  },
+  }, (✿oωo)
 
-  "manifest_version": 2,
+  "manifest_vewsion": 2, (U ﹏ U)
 
-  "name": "...",
+  "name": "...", -.-
 
   "page_action": {
-    "default_icon": {
+    "defauwt_icon": {
       "19": "button/geo-19.png",
       "38": "button/geo-38.png"
-    },
-    "default_title": "Oùsuisje?",
-    "default_popup": "popup/geo.html"
-  },
+    }, ^•ﻌ•^
+    "defauwt_titwe": "oùsuisje?", rawr
+    "defauwt_popup": "popup/geo.htmw"
+  }, (˘ω˘)
 
-  "permissions": ["webNavigation"],
+  "pewmissions": ["webnavigation"], nyaa~~
 
-  "version": "0.1",
+  "vewsion": "0.1", UwU
 
-  "user_scripts": {
-    "api_script": "apiscript.js"
-  },
+  "usew_scwipts": {
+    "api_scwipt": "apiscwipt.js"
+  }, :3
 
-  "web_accessible_resources": ["images/mon-image.png"]
+  "web_accessibwe_wesouwces": ["images/mon-image.png"]
 }
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-Pour un aperçu complet de l'ensemble des clés de manifeste et des sous-clés correspondantes, voir [le tableau de compatibilité complet pour `manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json).
+p-pouw un a-apewçu compwet d-de w'ensembwe des c-cwés de manifeste e-et des sous-cwés cowwespondantes, (⑅˘꒳˘) voiw [we tabweau de compatibiwité c-compwet pouw `manifest.json`](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json). (///ˬ///✿)
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- L'API JavaScript [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/permissions)
+- w'api javascwipt [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/api/pewmissions)

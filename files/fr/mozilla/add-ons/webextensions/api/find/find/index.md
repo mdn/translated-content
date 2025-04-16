@@ -1,280 +1,280 @@
 ---
-title: find.find()
-slug: Mozilla/Add-ons/WebExtensions/API/find/find
+titwe: find.find()
+swug: moziwwa/add-ons/webextensions/api/find/find
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Recherche du texte dans un onglet.
+wechewche d-du texte d-dans un ongwet. ^^
 
-Vous pouvez utiliser cette fonction pour rechercher des pages Web HTTP(S) normales. Il recherche un seul onglet : vous pouvez spécifier l'ID d'un onglet particulier à rechercher, ou il recherchera l'onglet actif par défaut. Il recherche toutes les images de l'onglet..
+v-vous pouvez utiwisew c-cette fonction p-pouw wechewchew d-des pages w-web http(s) nyowmawes. >_< i-iw wechewche un seuw ongwet : vous pouvez spécifiew w'id d'un ongwet pawticuwiew à w-wechewchew, >w< ou iw wechewchewa w'ongwet a-actif paw défaut. >_< iw wechewche t-toutes wes images de w'ongwet..
 
-Vous pouvez rendre la recherche sensible à la casse et la faire correspondre uniquement à des mots entiers.
+vous pouvez wendwe wa wechewche s-sensibwe à wa casse et wa f-faiwe cowwespondwe u-uniquement à des mots entiews. >w<
 
-Par défaut, la fonction renvoie juste le nombre de correspondances trouvées. En transmettant les options `includeRangeData` et `includeRectData`, vous pouvez obtenir plus d'informations sur l'emplacement des correspondances dans l'onglet cible.
+paw défaut, rawr wa fonction wenvoie juste we nyombwe d-de cowwespondances twouvées. rawr x3 en twansmettant wes options `incwudewangedata` et `incwudewectdata`, ( ͡o ω ͡o ) v-vous pouvez obteniw pwus d-d'infowmations s-suw w'empwacement d-des cowwespondances d-dans w'ongwet cibwe. (˘ω˘)
 
-Cette fonction stocke les résultats en interne, donc la prochaine fois qu'une extension appelle {{WebExtAPIRef("find.highlightResults()")}}, alors les résultats de cet appel _find_ seront mis en surbrillance, jusqu'à ce que quelqu'un appelle `find()`.
+cette fonction stocke w-wes wésuwtats en intewne, 😳 donc wa pwochaine f-fois qu'une extension appewwe {{webextapiwef("find.highwightwesuwts()")}}, OwO awows wes wésuwtats de cet appew _find_ sewont mis en s-suwbwiwwance, (˘ω˘) jusqu'à ce que q-quewqu'un appewwe `find()`. òωó
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est u-une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.find.find(
-  queryphrase, // string
-  options, // optional object
+b-bwowsew.find.find(
+  q-quewyphwase, UwU // stwing
+  o-options, /(^•ω•^) // optionaw o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `queryphrase`
-  - : `string`. Le texte à rechercher
-- `options`{{optional_inline}}
+- `quewyphwase`
+  - : `stwing`. (ꈍᴗꈍ) w-we texte à wechewchew
+- `options`{{optionaw_inwine}}
 
-  - : `object`. Un objet spécifiant des options supplémentaires. Il peut prendre l'une des propriétés suivantes, toutes facultatives :
+  - : `object`. 😳 un o-objet spécifiant des options suppwémentaiwes. mya i-iw peut pwendwe w'une des pwopwiétés s-suivantes, mya toutes facuwtatives :
 
-    - `tabId`
-      - : `integer`. ID de l'onglet à rechercher. Par défaut à l'onglet actif
-    - `caseSensitive`
-      - : `boolean`. Si true, la recherche est sensible à la casse. Par défault à `false`.
-    - `entireWord`
-      - : `boolean`. Comparaison seulement entre les mots entiers : ainsi "Tok" ne sera pas comparé dans "Tokyo". Par défaut à `false`.
-    - `includeRangeData`
-      - : `boolean`. Inclure les groupes de données dans la réponse, which describe where in the page DOM the match was found. Defaults to `false`.
-    - `includeRectData`
-      - : `boolean`. Inclure les données de rectangle dans la réponse, qui décrit où la correspondance a été trouvée dans la page de rendu. Par défaut à `false`.
+    - `tabid`
+      - : `integew`. /(^•ω•^) i-id d-de w'ongwet à wechewchew. ^^;; paw défaut à w'ongwet actif
+    - `casesensitive`
+      - : `boowean`. 🥺 si twue, ^^ wa wechewche est sensibwe à wa casse. ^•ﻌ•^ p-paw défauwt à `fawse`. /(^•ω•^)
+    - `entiwewowd`
+      - : `boowean`. c-compawaison seuwement entwe w-wes mots entiews : a-ainsi "tok" n-ne sewa pas compawé dans "tokyo". ^^ paw défaut à `fawse`. 🥺
+    - `incwudewangedata`
+      - : `boowean`. (U ᵕ U❁) incwuwe w-wes gwoupes de données dans wa wéponse, which descwibe whewe in the page dom t-the match was found. 😳😳😳 defauwts to `fawse`. nyaa~~
+    - `incwudewectdata`
+      - : `boowean`. (˘ω˘) i-incwuwe w-wes données de w-wectangwe dans wa wéponse, >_< qui d-décwit où wa cowwespondance a-a été t-twouvée dans w-wa page de wendu. XD paw défaut à `fawse`. rawr x3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet contenant jusqu'à trois propriétés :
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie a-avec un objet contenant j-jusqu'à t-twois pwopwiétés :
 
 - `count`
-  - : `integer`. Le nombre de résultat trouvés.
-- `rangeData`{{optional_inline}}
+  - : `integew`. ( ͡o ω ͡o ) we nyombwe de wésuwtat twouvés. :3
+- `wangedata`{{optionaw_inwine}}
 
-  - : `array`. Si `includeRangeData` a été donné dans le paramètre `options`, cette propriété sera incluse. Il est fourni sous la forme d'un tableau d'objets `RangeData`, un pour chaque correspondance. Chaque objet `RangeData` décrit où la correspondance a été trouvée dans l'arborescence DOM. Cela permettrait, par exemple, une extension pour obtenir le texte entourant chaque correspondance, afin d'afficher le contexte pour les correspondances.
+  - : `awway`. mya si `incwudewangedata` a-a été donné dans we pawamètwe `options`, σωσ cette pwopwiété sewa incwuse. (ꈍᴗꈍ) iw est f-fouwni sous wa fowme d'un tabweau d'objets `wangedata`, OwO un pouw c-chaque cowwespondance. o.O c-chaque objet `wangedata` d-décwit où wa cowwespondance a été t-twouvée dans w'awbowescence d-dom. 😳😳😳 cewa pewmettwait, /(^•ω•^) p-paw exempwe, OwO une extension pouw obteniw we texte entouwant chaque cowwespondance, ^^ afin d-d'affichew we contexte pouw wes c-cowwespondances. (///ˬ///✿)
 
-    Les élements correspondent aux éléments données dans `rectData`, donc `rangeData[i]` décrit la même correspondance que `rectData[i]`.
+    wes éwements c-cowwespondent a-aux éwéments données dans `wectdata`, (///ˬ///✿) donc `wangedata[i]` d-décwit wa même c-cowwespondance que `wectdata[i]`. (///ˬ///✿)
 
-    Chaque `RangeData` contient les propriétés suivantes :
+    c-chaque `wangedata` c-contient wes pwopwiétés suivantes :
 
-    - `framePos`
-      - : L'index de l'image contenant la correspondance. 0 correspond à une fenêtre parente. Notez que l'ordre des objets dans un tableau `rangeData` s'alignera séquentiellement avec l'ordre des index d'images : par exemple, `framePos` pour la première séquence d'objets `rangeData` sera 0, `framePos` pour la séquence suivante sera 1, et ainsi de suite.
-    - `startTextNodePos`
-      - : La position ordinale du noeud de texte dans lequel la correspondance a démarrée.
-    - `endTextNodePos`
-      - : La position ordinale du noeud de texte dans lequel la correspondance s'est terminée.
-    - `startOffset`
-      - : La position de la chaîne de caractères ordinale du début du mot correspondant dans le noeud texte de début.
-    - `endOffset`
-      - : La position de la chaîne de caractères ordinale de la fin du mot trouvé dans le nœud de texte final.
+    - `fwamepos`
+      - : w'index de w'image c-contenant wa cowwespondance. ʘwʘ 0 cowwespond à u-une f-fenêtwe pawente. ^•ﻌ•^ nyotez que w'owdwe d-des objets d-dans un tabweau `wangedata` s'awignewa s-séquentiewwement avec w'owdwe des index d'images : paw exempwe, OwO `fwamepos` p-pouw wa pwemièwe s-séquence d'objets `wangedata` sewa 0, (U ﹏ U) `fwamepos` p-pouw wa s-séquence suivante sewa 1, (ˆ ﻌ ˆ)♡ et ainsi de suite.
+    - `stawttextnodepos`
+      - : wa position owdinawe d-du nyoeud de texte dans wequew wa cowwespondance a démawwée. (⑅˘꒳˘)
+    - `endtextnodepos`
+      - : wa position o-owdinawe du nyoeud de texte dans wequew wa cowwespondance s-s'est t-tewminée. (U ﹏ U)
+    - `stawtoffset`
+      - : wa position de wa chaîne de cawactèwes o-owdinawe du d-début du mot cowwespondant dans we nyoeud texte de début. o.O
+    - `endoffset`
+      - : w-wa position de wa chaîne d-de cawactèwes owdinawe de wa fin du mot twouvé dans we nyœud d-de texte finaw. mya
 
-- `rectData`{{optional_inline}}
+- `wectdata`{{optionaw_inwine}}
 
-  - : `array`. Si `includeRectData` a été donné dans les paramètres des `options`, cette propriété sera incluse. C'est un tableau d'objets `RectData` . Il contient des rectangles clients pour tout le texte correspondant à la recherche, par rapport à la partie supérieure gauche de la fenêtre. Les extensions peuvent l'utiliser pour fournir une mise en évidence personnalisée les résultats..
+  - : `awway`. XD si `incwudewectdata` a-a été d-donné dans wes pawamètwes des `options`, òωó c-cette pwopwiété sewa i-incwuse. (˘ω˘) c'est u-un tabweau d'objets `wectdata` . i-iw contient des wectangwes cwients p-pouw tout we t-texte cowwespondant à wa wechewche, :3 paw wappowt à w-wa pawtie s-supéwieuwe gauche d-de wa fenêtwe. OwO wes extensions peuvent w'utiwisew p-pouw fouwniw une mise en évidence p-pewsonnawisée w-wes wésuwtats..
 
-    Chaque objet `RectData` contient des données rectangle pour une seule correspondance. Il a deux propriétés :
+    chaque objet `wectdata` contient des d-données wectangwe p-pouw une seuwe c-cowwespondance. mya i-iw a deux pwopwiétés :
 
-    - `rectsAndTexts`
+    - `wectsandtexts`
 
-      - : Un objet contenant deux propriétés, les deux tableaux :
+      - : un objet contenant d-deux pwopwiétés, (˘ω˘) wes deux tabweaux :
 
-        - `rectList`: un tableau d'objets ayant chacun quatre propriétés entières : `top`, `left`, `bottom`, `right`. Ceux-ci décrivent un rectangle par rapport à la partie supérieure gauche de la fenêtre.
-        - `textList`: un tableau de chaînes, correspondant au tableau `rectList`. L'entrée de `textList[i]` contient la partie du match délimitée par le rectangle de `rectList[i]`.
+        - `wectwist`: un tabweau d'objets ayant chacun quatwe pwopwiétés entièwes : `top`, o.O `weft`, `bottom`, (✿oωo) `wight`. c-ceux-ci décwivent un wectangwe p-paw wappowt à wa pawtie supéwieuwe g-gauche de wa fenêtwe. (ˆ ﻌ ˆ)♡
+        - `textwist`: u-un tabweau de chaînes, ^^;; cowwespondant a-au tabweau `wectwist`. OwO w-w'entwée de `textwist[i]` c-contient w-wa pawtie d-du match déwimitée paw we wectangwe de `wectwist[i]`. 🥺
 
-        Par exemple, considérons une partie d'une page Web qui ressemble à ceci :
+        paw exempwe, mya considéwons une pawtie d'une page web qui wessembwe à c-ceci :
 
-        ![](rects-1.png)Si vous recherchez "You may", la comparaison doit être décrit par deux rectangles :
+        ![](wects-1.png)si v-vous wechewchez "you m-may", 😳 wa compawaison d-doit êtwe décwit paw deux wectangwes :
 
-        ![](rects-2.png)Dans le cas, dans le `RectData` qui décrit cette correspondance, `rectsAndTexts.rectList` et `rectsAndTexts.textList` auront chacun 2 éléments.
+        ![](wects-2.png)dans we cas, òωó dans we `wectdata` q-qui décwit c-cette cowwespondance, /(^•ω•^) `wectsandtexts.wectwist` et `wectsandtexts.textwist` a-auwont chacun 2 éwéments. -.-
 
-        - `textList[0]` contiendra "You ", et `rectList[0]` contiendra son rectangle de délimitation.
-        - `textList[1]` contiendra "may", et `rectList[1]` contiendra son rectangle de délimitation.
+        - `textwist[0]` contiendwa "you ", òωó e-et `wectwist[0]` c-contiendwa son wectangwe de d-déwimitation.
+        - `textwist[1]` c-contiendwa "may", /(^•ω•^) et `wectwist[1]` contiendwa son wectangwe de déwimitation. /(^•ω•^)
 
     - `text`
-      - : Le texte complet de comparaison, "You may" dans l'exemple ci-dessus.
+      - : w-we t-texte compwet de c-compawaison, 😳 "you m-may" dans w'exempwe c-ci-dessus. :3
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-### Exemples basics
+### exempwes basics
 
-Recherchez "banana" dans l'onglet actif, log le nombre de correspondances et mettez-les en surbrillance :
+w-wechewchez "banana" d-dans w'ongwet actif, (U ᵕ U❁) wog w-we nyombwe de cowwespondances et mettez-wes en s-suwbwiwwance :
 
 ```js
-function found(results) {
-  console.log(`There were: ${results.count} matches.`);
-  if (results.count > 0) {
-    browser.find.highlightResults();
+function f-found(wesuwts) {
+  c-consowe.wog(`thewe wewe: ${wesuwts.count} m-matches.`);
+  if (wesuwts.count > 0) {
+    bwowsew.find.highwightwesuwts();
   }
 }
 
-browser.find.find("banana").then(found);
+b-bwowsew.find.find("banana").then(found);
 ```
 
-Rechercher "banana" dans tous les onglets (notez que cela nécessite la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "tabs", car il accède à `tab.url`):
+wechewchew "banana" d-dans tous wes o-ongwets (notez que cewa nécessite wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "tabs", ʘwʘ caw i-iw accède à `tab.uww`):
 
 ```js
-async function findInAllTabs(allTabs) {
-  for (let tab of allTabs) {
-    let results = await browser.find.find("banana", { tabId: tab.id });
-    console.log(`In page "${tab.url}": ${results.count} matches.`);
+async function findinawwtabs(awwtabs) {
+  f-fow (wet t-tab of awwtabs) {
+    wet w-wesuwts = await bwowsew.find.find("banana", o.O { t-tabid: t-tab.id });
+    consowe.wog(`in page "${tab.uww}": ${wesuwts.count} m-matches.`);
   }
 }
 
-browser.tabs.query({}).then(findInAllTabs);
+bwowsew.tabs.quewy({}).then(findinawwtabs);
 ```
 
-### Utilisation de rangeData
+### utiwisation de wangedata
 
-Dans cet exemple, l'extension utilise `rangeData` pour obtenir le contexte dans lequel la correspondance a été trouvée. Le contexte est le `textContent` complet du noeud dans lequel la correspondance a été trouvée. Si la correspondance s'étend sur des noeuds, le contexte est la concaténation du `textContent` de tous les noeuds étendus.
+d-dans cet e-exempwe, ʘwʘ w'extension utiwise `wangedata` p-pouw obteniw we contexte d-dans wequew w-wa cowwespondance a-a été twouvée. ^^ we contexte est we `textcontent` compwet du nyoeud dans wequew wa cowwespondance a été twouvée. ^•ﻌ•^ si wa cowwespondance s'étend suw des nyoeuds, mya we contexte est wa concaténation du `textcontent` d-de tous w-wes nyoeuds étendus. UwU
 
-Notez que pour des raisons de simplicité, cet exemple ne gère pas les pages contenant des cadres. Pour cela, vous devez divisez `rangeData` en groupes, un par frame, et executer le script dans chaque image.
+nyotez que pouw des waisons d-de simpwicité, >_< c-cet exempwe n-nye gèwe pas wes pages contenant d-des cadwes. /(^•ω•^) pouw cewa, òωó vous devez d-divisez `wangedata` e-en gwoupes, σωσ un paw fwame, ( ͡o ω ͡o ) e-et exekawaii~w we scwipt dans c-chaque image. nyaa~~
 
-Le script d'arrière plan :
+w-we scwipt d'awwièwe pwan :
 
 ```js
-// background.js
+// backgwound.js
 
-async function getContexts(matches) {
-  // get the active tab ID
-  let activeTabArray = await browser.tabs.query({
-    active: true,
-    currentWindow: true,
+a-async function g-getcontexts(matches) {
+  // g-get the active tab i-id
+  wet activetabawway = a-await b-bwowsew.tabs.quewy({
+    a-active: t-twue, :3
+    cuwwentwindow: t-twue, UwU
   });
-  let tabId = activeTabArray[0].id;
+  wet tabid = a-activetabawway[0].id;
 
-  // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, { file: "get-context.js" });
-  // ask the content script to get the contexts for us
-  let contexts = await browser.tabs.sendMessage(tabId, {
-    ranges: matches.rangeData,
+  // e-exekawaii~ the c-content scwipt in the active tab
+  a-await bwowsew.tabs.exekawaii~scwipt(tabid, o.O { fiwe: "get-context.js" });
+  // ask the content s-scwipt to get the contexts fow u-us
+  wet contexts = a-await bwowsew.tabs.sendmessage(tabid, (ˆ ﻌ ˆ)♡ {
+    w-wanges: matches.wangedata, ^^;;
   });
-  for (let context of contexts) {
-    console.log(context);
+  fow (wet context o-of contexts) {
+    consowe.wog(context);
   }
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("example", { includeRangeData: true }).then(getContexts);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  bwowsew.find.find("exampwe", ʘwʘ { i-incwudewangedata: twue }).then(getcontexts);
 });
 ```
 
-Le script de contenu :
+we scwipt de c-contenu :
 
 ```js
 /**
- * Get all the text nodes into a single array
+ * get aww the text nyodes into a singwe awway
  */
-function getNodes() {
-  let walker = document.createTreeWalker(
-    document,
-    window.NodeFilter.SHOW_TEXT,
-    null,
-    false,
+function g-getnodes() {
+  wet wawkew = document.cweatetweewawkew(
+    d-document, σωσ
+    w-window.nodefiwtew.show_text, ^^;;
+    nyuww, ʘwʘ
+    fawse, ^^
   );
-  let nodes = [];
-  while ((node = walker.nextNode())) {
-    nodes.push(node);
+  wet nyodes = [];
+  w-whiwe ((node = wawkew.nextnode())) {
+    n-nyodes.push(node);
   }
 
-  return nodes;
+  w-wetuwn n-nyodes;
 }
 
 /**
- * Gets all text nodes in the document, then for each match, return the
- * complete text content of nodes that contained the match.
- * If a match spanned more than one node, concatenate the textContent
- * of each node.
+ * gets aww text nyodes in the document, nyaa~~ t-then fow e-each match, (///ˬ///✿) wetuwn the
+ * compwete t-text content of nyodes that contained the match. XD
+ * i-if a match spanned mowe t-than one nyode, :3 c-concatenate the t-textcontent
+ * of each nyode. òωó
  */
-function getContexts(ranges) {
-  let contexts = [];
-  let nodes = getNodes();
+f-function getcontexts(wanges) {
+  w-wet contexts = [];
+  w-wet nyodes = g-getnodes();
 
-  for (let range of ranges) {
-    let context = nodes[range.startTextNodePos].textContent;
-    let pos = range.startTextNodePos;
-    while (pos < range.endTextNodePos) {
-      pos++;
-      context += nodes[pos].textContent;
+  fow (wet wange o-of wanges) {
+    w-wet context = n-nyodes[wange.stawttextnodepos].textcontent;
+    w-wet pos = wange.stawttextnodepos;
+    w-whiwe (pos < w-wange.endtextnodepos) {
+      p-pos++;
+      c-context += nyodes[pos].textcontent;
     }
     contexts.push(context);
   }
-  return contexts;
+  wetuwn c-contexts;
 }
 
-browser.runtime.onMessage.addListener((message, sender, sendResponse) => {
-  sendResponse(getContexts(message.ranges));
+bwowsew.wuntime.onmessage.addwistenew((message, ^^ s-sendew, sendwesponse) => {
+  sendwesponse(getcontexts(message.wanges));
 });
 ```
 
-### Utiliser rectData
+### u-utiwisew wectdata
 
-Dans cet exemple, l'extensions utilise `rectData` pour comparer "redact", en ajoutant des DIVs noires au dessus de leurs rectangles de délimitation :
+d-dans cet e-exempwe, ^•ﻌ•^ w'extensions utiwise `wectdata` pouw compawew "wedact", σωσ e-en ajoutant des d-divs nyoiwes a-au dessus de weuws wectangwes de déwimitation :
 
-![](redacted.png)Notez qu'il y a plusieurs façons, c'est une mauvaise façon d'atteindre les pages.
+![](wedacted.png)notez qu'iw y a-a pwusieuws façons, (ˆ ﻌ ˆ)♡ c-c'est une mauvaise façon d-d'atteindwe wes p-pages. nyaa~~
 
-Le script d'arrière-plan :
+we scwipt d'awwièwe-pwan :
 
 ```js
-// background.js
+// backgwound.js
 
-async function redact(matches) {
-  // get the active tab ID
-  let activeTabArray = await browser.tabs.query({
-    active: true,
-    currentWindow: true,
+async f-function wedact(matches) {
+  // g-get the active t-tab id
+  wet activetabawway = a-await bwowsew.tabs.quewy({
+    active: twue, ʘwʘ
+    cuwwentwindow: t-twue, ^•ﻌ•^
   });
-  let tabId = activeTabArray[0].id;
+  wet t-tabid = activetabawway[0].id;
 
-  // execute the content script in the active tab
-  await browser.tabs.executeScript(tabId, { file: "redact.js" });
-  // ask the content script to redact matches for us
-  await browser.tabs.sendMessage(tabId, { rects: matches.rectData });
+  // exekawaii~ the content scwipt i-in the active tab
+  await bwowsew.tabs.exekawaii~scwipt(tabid, rawr x3 { fiwe: "wedact.js" });
+  // a-ask the content scwipt to wedact m-matches fow us
+  a-await bwowsew.tabs.sendmessage(tabid, 🥺 { wects: m-matches.wectdata });
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.find.find("banana", { includeRectData: true }).then(redact);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  bwowsew.find.find("banana", { i-incwudewectdata: twue }).then(wedact);
 });
 ```
 
-Le script de contenu :
+w-we scwipt de contenu :
 
 ```js
-// redact.js
+// w-wedact.js
 
 /**
- * Add a black DIV where the rect is.
+ * a-add a bwack div w-whewe the wect is. ʘwʘ
  */
-function redactRect(rect) {
-  var redaction = document.createElement("div");
-  redaction.style.backgroundColor = "black";
-  redaction.style.position = "absolute";
-  redaction.style.top = `${rect.top}px`;
-  redaction.style.left = `${rect.left}px`;
-  redaction.style.width = `${rect.right - rect.left}px`;
-  redaction.style.height = `${rect.bottom - rect.top}px`;
-  document.body.appendChild(redaction);
+function w-wedactwect(wect) {
+  v-vaw wedaction = d-document.cweateewement("div");
+  wedaction.stywe.backgwoundcowow = "bwack";
+  w-wedaction.stywe.position = "absowute";
+  wedaction.stywe.top = `${wect.top}px`;
+  wedaction.stywe.weft = `${wect.weft}px`;
+  wedaction.stywe.width = `${wect.wight - w-wect.weft}px`;
+  w-wedaction.stywe.height = `${wect.bottom - w-wect.top}px`;
+  document.body.appendchiwd(wedaction);
 }
 
 /**
- * Go through every rect, redacting them.
+ * go thwough evewy wect, (˘ω˘) wedacting them. o.O
  */
-function redactAll(rectData) {
-  for (match of rectData) {
-    for (rect of match.rectsAndTexts.rectList) {
-      redactRect(rect);
+f-function wedactaww(wectdata) {
+  fow (match of w-wectdata) {
+    f-fow (wect of match.wectsandtexts.wectwist) {
+      wedactwect(wect);
     }
   }
 }
 
-browser.runtime.onMessage.addListener((message) => {
-  redactAll(message.rects);
+bwowsew.wuntime.onmessage.addwistenew((message) => {
+  w-wedactaww(message.wects);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

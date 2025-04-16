@@ -1,162 +1,162 @@
 ---
-title: tabs.move()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/move
+titwe: tabs.move()
+swug: moziwwa/add-ons/webextensions/api/tabs/move
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Déplace un ou plusieurs onglets vers une nouvelle position dans la même fenêtre ou vers une autre fenêtre.
+dépwace u-un ou pwusieuws o-ongwets v-vews une nyouvewwe p-position dans w-wa même fenêtwe o-ou vews une autwe f-fenêtwe. (˘ω˘)
 
-Vous pouvez uniquement déplacer des onglets vers et à partir de fenêtres dont {{WebExtAPIRef('windows.WindowType', 'WindowType')}} est `"normal"`.
+v-vous pouvez uniquement dépwacew des ongwets vews et à pawtiw de fenêtwes dont {{webextapiwef('windows.windowtype', (///ˬ///✿) 'windowtype')}} e-est `"nowmaw"`. σωσ
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise).
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var moving = browser.tabs.move(
-  tabIds, // integer or integer array
-  moveProperties, // object
+vaw moving = bwowsew.tabs.move(
+  tabids, /(^•ω•^) // integew ow integew awway
+  m-movepwopewties, 😳 // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabIds`
-  - : `integer` ou `array` d'`integer`. ID du {{WebExtAPIRef('tabs.Tab', 'tab')}}à déplacer, ou un tableau d'ID d'onglet.
-- `moveProperties`
+- `tabids`
+  - : `integew` o-ou `awway` d'`integew`. 😳 id du {{webextapiwef('tabs.tab', (⑅˘꒳˘) 'tab')}}à dépwacew, ou un tabweau d-d'id d'ongwet. 😳😳😳
+- `movepwopewties`
 
-  - : `object`. Un objet qui spécifie où déplacer le(s) onglet(s).
+  - : `object`. 😳 un objet qui spécifie où dépwacew we(s) ongwet(s). XD
 
-    - `windowId`{{optional_inline}}
-      - : `integer`. 'ID de la fenêtre dans laquelle vous souhaitez déplacer les onglet(s). Si vous omettez cela, chaque onglet de `tabIds` sera déplacé vers l' `index` dans sa fenêtre actuelle. Si vous incluez ceci, et `tabIds` contient plus d'un onglet, alors le premier onglet de `tabIds` sera déplacé vers l'`index`, et les autres onglets le suivront dans l'ordre donné dans `tabIds`.
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. mya 'id d-de wa fenêtwe dans waquewwe v-vous souhaitez d-dépwacew wes o-ongwet(s). ^•ﻌ•^ si v-vous omettez cewa, ʘwʘ chaque ongwet de `tabids` sewa d-dépwacé vews w' `index` dans sa fenêtwe actuewwe. ( ͡o ω ͡o ) s-si vous incwuez ceci, mya et `tabids` contient pwus d'un ongwet, o.O awows we pwemiew ongwet de `tabids` s-sewa dépwacé vews w'`index`, (✿oωo) e-et wes autwes o-ongwets we s-suivwont dans w'owdwe donné dans `tabids`. :3
     - `index`
 
-      - : `integer`. La position de l'index pour déplacer la tabulation à, en commençant à 0. Une valeur de -1 placera la tabulation à la fin de la fenêtre.
+      - : `integew`. 😳 wa position de w'index pouw dépwacew w-wa tabuwation à, (U ﹏ U) e-en commençant à 0. mya une v-vaweuw de -1 pwacewa w-wa tabuwation à wa fin de w-wa fenêtwe. (U ᵕ U❁)
 
-        Si vous passez une valeur inférieure à -1, la fonction renvoie une erreur.
+        si vous p-passez une vaweuw inféwieuwe à -1, :3 wa fonction w-wenvoie une ewweuw. mya
 
-        Notez que vous ne pouvez pas déplacer les onglets épinglés sur une position après les onglets non épinglés d'une fenêtre, ou déplacer les onglets non épinglés à une position avant les onglets épinglés. Par exemple, si vous avez un ou plusieurs onglets épinglés dans la fenêtre cible et si tabIds fait référence à un onglet non épinglé, vous ne pouvez pas passer 0 ici. Si vous essayez de le faire, la fonction échouera silencieusement (elle ne produira pas d'erreur).
+        nyotez q-que vous nye pouvez pas dépwacew w-wes ongwets épingwés s-suw une position apwès wes ongwets non épingwés d'une fenêtwe, OwO ou dépwacew wes ongwets nyon épingwés à u-une p-position avant wes ongwets épingwés. (ˆ ﻌ ˆ)♡ p-paw exempwe, ʘwʘ s-si vous avez u-un ou pwusieuws ongwets épingwés dans wa fenêtwe cibwe et si t-tabids fait wéféwence à un ongwet nyon épingwé, o.O vous nye pouvez pas passew 0 i-ici. UwU si vous essayez de we faiwe, rawr x3 w-wa fonction échouewa s-siwencieusement (ewwe n-nye pwoduiwa pas d'ewweuw). 🥺
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera satisfaite avec un objet `{{WebExtAPIRef('tabs.Tab')}}` ou un `tableau` d'objets `{{WebExtAPIRef('tabs.Tab')}}`, contenant des détails sur les onglets déplacés. Si aucun onglet n'a été déplacé (par exemple, parce que vous avez essayé de déplacer un onglet non épinglé avant un onglet épinglé), il s'agira d'un tableau vide. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa satisfaite a-avec un objet `{{webextapiwef('tabs.tab')}}` ou un `tabweau` d'objets `{{webextapiwef('tabs.tab')}}`, :3 c-contenant d-des détaiws s-suw wes ongwets d-dépwacés. (ꈍᴗꈍ) si a-aucun ongwet ny'a été dépwacé (paw exempwe, 🥺 pawce que vous avez e-essayé de dépwacew un ongwet nyon épingwé avant un ongwet épingwé), (✿oωo) iw s'agiwa d'un tabweau v-vide. (U ﹏ U) si une ewweuw se pwoduit, :3 wa pwomesse sewa wejetée a-avec un message d-d'ewweuw.
 
-## Exemples
+## exempwes
 
-Déplacer le premier onglet de la fenêtre en cours vers la dernière position de la fenêtre en cours :
+d-dépwacew we pwemiew ongwet d-de wa fenêtwe en couws vews w-wa dewnièwe position d-de wa fenêtwe en couws :
 
 ```js
-function onMoved(tab) {
-  console.log(`Moved: ${tab}`);
+function onmoved(tab) {
+  consowe.wog(`moved: ${tab}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function firstToLast(windowInfo) {
-  if (windowInfo.tabs.length == 0) {
-    return;
+f-function fiwsttowast(windowinfo) {
+  if (windowinfo.tabs.wength == 0) {
+    w-wetuwn;
   }
-  var moving = browser.tabs.move(windowInfo.tabs[0].id, { index: -1 });
-  moving.then(onMoved, onError);
+  vaw m-moving = bwowsew.tabs.move(windowinfo.tabs[0].id, ^^;; { i-index: -1 });
+  moving.then(onmoved, rawr onewwow);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var gettingCurrent = browser.windows.getCurrent({ populate: true });
-  gettingCurrent.then(firstToLast, onError);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  v-vaw gettingcuwwent = bwowsew.windows.getcuwwent({ p-popuwate: twue });
+  g-gettingcuwwent.then(fiwsttowast, 😳😳😳 onewwow);
 });
 ```
 
-Déplacer tous les onglets servis via HTTP ou HTTPS depuis \* .mozilla.org jusqu'à la fin de leur fenêtre :
+dépwacew tous wes ongwets sewvis via h-http ou https d-depuis \* .moziwwa.owg j-jusqu'à wa fin de weuw f-fenêtwe :
 
 ```js
-function onMoved(tab) {
-  console.log(`Moved: ${tab}`);
+f-function onmoved(tab) {
+  consowe.wog(`moved: ${tab}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function moveMoz(tabs) {
-  var mozTabIds = tabs.map((tabInfo) => tabInfo.id);
-  var moving = browser.tabs.move(mozTabIds, { index: -1 });
-  moving.then(onMoved, onError);
+function movemoz(tabs) {
+  v-vaw moztabids = t-tabs.map((tabinfo) => tabinfo.id);
+  vaw m-moving = bwowsew.tabs.move(moztabids, (✿oωo) { i-index: -1 });
+  moving.then(onmoved, OwO onewwow);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var gettingMozTabs = browser.tabs.query({ url: "*://*.mozilla.org/*" });
-  gettingMozTabs.then(moveMoz, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  v-vaw gettingmoztabs = bwowsew.tabs.quewy({ uww: "*://*.moziwwa.owg/*" });
+  gettingmoztabs.then(movemoz, ʘwʘ onewwow);
 });
 ```
 
-Déplacer tous les onglets servis via HTTP ou HTTPS de \* .mozilla.org vers la fenêtre qui héberge le premier onglet de ce type, en commençant à la position 0 :
+d-dépwacew tous wes ongwets sewvis via http ou https d-de \* .moziwwa.owg v-vews wa fenêtwe qui hébewge we pwemiew ongwet de ce type, (ˆ ﻌ ˆ)♡ e-en commençant à w-wa position 0 :
 
 ```js
-function onMoved(tab) {
-  console.log(`Moved: ${tab}`);
+function onmoved(tab) {
+  consowe.wog(`moved: ${tab}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function moveMoz(tabs) {
-  var mozTabIds = tabs.map((tabInfo) => tabInfo.id);
-  var targetWindow = tabs[0].windowId;
-  var moving = browser.tabs.move(mozTabIds, {
-    windowId: targetWindow,
-    index: 0,
+function movemoz(tabs) {
+  vaw moztabids = t-tabs.map((tabinfo) => tabinfo.id);
+  v-vaw tawgetwindow = t-tabs[0].windowid;
+  vaw m-moving = bwowsew.tabs.move(moztabids, (U ﹏ U) {
+    windowid: t-tawgetwindow, UwU
+    i-index: 0, XD
   });
-  moving.then(onMoved, onError);
+  m-moving.then(onmoved, ʘwʘ onewwow);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var gettingMozTabs = browser.tabs.query({ url: "*://*.mozilla.org/*" });
-  gettingMozTabs.then(moveMoz, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  v-vaw gettingmoztabs = bwowsew.tabs.quewy({ u-uww: "*://*.moziwwa.owg/*" });
+  gettingmoztabs.then(movemoz, rawr x3 onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) de c-chwomium. ^^;; cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans w-we code de chwomium code. ʘwʘ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont f-fouwnies paw micwosoft c-cowpowation et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. (˘ω˘) aww wights wesewved. (ꈍᴗꈍ)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, /(^•ω•^) with ow w-without
+// modification, >_< awe pewmitted p-pwovided t-that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, σωσ this wist of conditions and the f-fowwowing discwaimew. ^^;;
+//    * w-wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// copywight nyotice, this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// d-distwibution. 😳
+//    * n-neithew the nyame of g-googwe inc. >_< now t-the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, -.- i-incwuding, UwU but nyot
+// wimited to, :3 the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. σωσ in nyo event s-shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any d-diwect, >w< indiwect, (ˆ ﻌ ˆ)♡ i-incidentaw, ʘwʘ
+// speciaw, :3 exempwawy, ow consequentiaw damages (incwuding, (˘ω˘) b-but nyot
+// wimited to, 😳😳😳 pwocuwement o-of substitute goods o-ow sewvices; woss of use, rawr x3
+// d-data, (✿oωo) ow pwofits; ow business i-intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, w-whethew in contwact, (ˆ ﻌ ˆ)♡ stwict wiabiwity, :3 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in a-any way out of the use
+// of this s-softwawe, (U ᵕ U❁) even i-if advised of t-the possibiwity of such damage. ^^;;
 -->

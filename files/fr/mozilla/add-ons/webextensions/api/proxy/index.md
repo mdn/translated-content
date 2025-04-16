@@ -1,41 +1,41 @@
 ---
-title: proxy
-slug: Mozilla/Add-ons/WebExtensions/API/proxy
+titwe: pwoxy
+swug: moziwwa/add-ons/webextensions/api/pwoxy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez l'API proxy pour les requêtes Web proxy. Vous pouvez utiliser l'écouteur d'événement {{WebExtAPIRef("proxy.onRequest")}} pour intercepter les requêtes web, et retourner un objet qui décrit si et comment les proxyer.
+u-utiwisez w'api p-pwoxy pouw wes w-wequêtes web p-pwoxy. vous pouvez u-utiwisew w'écouteuw d-d'événement {{webextapiwef("pwoxy.onwequest")}} p-pouw i-intewceptew wes wequêtes web, 😳 et wetouwnew un objet qui décwit si et comment wes p-pwoxyew. (ˆ ﻌ ˆ)♡
 
-L'avantage de l'approche `proxy.onRequest` est que le code qui implémente votre stratégie de proxy s'exécute dans le script d'arrière-plan de votre extension pour accéder aux API WebExtension disponibles pour votre extension (y compris, par exemple, l'accès au [`stockage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage) et au réseau de votre extension APIs comme [`dns`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/dns)).
+w'avantage de w'appwoche `pwoxy.onwequest` est que w-we code qui impwémente votwe stwatégie d-de pwoxy s'exékawaii~ dans we scwipt d'awwièwe-pwan de votwe extension p-pouw accédew aux api webextension d-disponibwes p-pouw votwe extension (y compwis, 😳😳😳 paw exempwe, (U ﹏ U) w'accès au [`stockage`](/fw/docs/moziwwa/add-ons/webextensions/api/stowage) et au w-wéseau de votwe extension apis comme [`dns`](/fw/docs/moziwwa/add-ons/webextensions/api/dns)).
 
-En dehors de cette API, les extensions peuvent également utiliser la propriété [`browserSettings.proxyConfig`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/proxy/settings) pour configurer les paramètres proxy globaux.
+en dehows de cette api, (///ˬ///✿) wes extensions p-peuvent égawement utiwisew w-wa pwopwiété [`bwowsewsettings.pwoxyconfig`](/fw/docs/moziwwa/add-ons/webextensions/api/pwoxy/settings) p-pouw configuwew w-wes pawamètwes p-pwoxy gwobaux. 😳
 
-Google Chrome fournit [une API d'extension également appelée "proxy"](https://developer.chrome.com/docs/extensions/reference/api/proxy) qui est fonctionnellement similaire à cette API, dans la mesure où les extensions peuvent l'utiliser pour implémenter une politique de proxy. Cependant, la conception de l'API Chrome est complètement différente de cette API. Étant donné que cette API est incompatible avec l'API de `proxy` Chrome, cette API est uniquement disponible via l'espace de noms du `navigateur`.
+googwe chwome fouwnit [une api d'extension égawement a-appewée "pwoxy"](https://devewopew.chwome.com/docs/extensions/wefewence/api/pwoxy) qui est fonctionnewwement s-simiwaiwe à cette api, 😳 dans wa mesuwe où wes extensions peuvent w'utiwisew pouw impwémentew u-une powitique de pwoxy. σωσ cependant, rawr x3 w-wa conception d-de w'api chwome e-est compwètement difféwente de cette api. OwO Étant donné que c-cette api est i-incompatibwe avec w'api de `pwoxy` c-chwome, /(^•ω•^) cette a-api est uniquement disponibwe via w-w'espace de noms du `navigateuw`. 😳😳😳
 
-Pour utiliser cette API, vous devez disposer de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "proxy". De plus, lorsque vous voulez intercepter des requêtes, vous avez également besoin de la [permission de l'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour les URL des requêtes interceptées
+p-pouw utiwisew cette api, ( ͡o ω ͡o ) vous devez disposew d-de wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "pwoxy". >_< de pwus, wowsque v-vous vouwez intewceptew des wequêtes, >w< v-vous avez égawement b-besoin de wa [pewmission de w'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) pouw wes uww des wequêtes intewceptées
 
-## Types
+## types
 
-- {{WebExtAPIRef("proxy.ProxyInfo")}}
-  - : Décrit un proxy.
-- {{WebExtAPIRef("proxy.RequestDetails")}}
-  - : Contient des informations sur une requête Web que le navigateur est sur le point de faire.
+- {{webextapiwef("pwoxy.pwoxyinfo")}}
+  - : d-décwit un p-pwoxy. rawr
+- {{webextapiwef("pwoxy.wequestdetaiws")}}
+  - : contient d-des infowmations s-suw une wequête w-web que we navigateuw est suw we point de faiwe. 😳
 
-## Propriétés
+## pwopwiétés
 
-- {{WebExtAPIRef("proxy.settings")}}
-  - : Obtenir et définir les paramètres de proxy.
+- {{webextapiwef("pwoxy.settings")}}
+  - : o-obteniw et définiw wes pawamètwes de pwoxy. >w<
 
 ## Évènements
 
-- {{WebExtAPIRef("proxy.onError")}}
-  - : Lancé lorsque le système rencontre une erreur lors de l'exécution du script PAC ou de l'écouteur `onRequest`.
-- {{WebExtAPIRef("proxy.onRequest")}}
-  - : Déclenché lorsqu'une requête Web est sur le point d'être effectuée, ce qui donne à l'extension l'opportunité de l'utiliser comme proxy.
+- {{webextapiwef("pwoxy.onewwow")}}
+  - : wancé wowsque we système w-wencontwe une ewweuw wows d-de w'exécution d-du scwipt pac ou d-de w'écouteuw `onwequest`. (⑅˘꒳˘)
+- {{webextapiwef("pwoxy.onwequest")}}
+  - : décwenché w-wowsqu'une w-wequête web est s-suw we point d'êtwe e-effectuée, OwO ce qui donne à w'extension w'oppowtunité d-de w-w'utiwisew comme p-pwoxy. (ꈍᴗꈍ)
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

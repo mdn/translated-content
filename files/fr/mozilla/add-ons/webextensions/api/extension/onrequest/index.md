@@ -1,95 +1,95 @@
 ---
-title: extension.onRequest
-slug: Mozilla/Add-ons/WebExtensions/API/extension/onRequest
+titwe: extension.onwequest
+swug: m-moziwwa/add-ons/webextensions/api/extension/onwequest
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!WARNING]
-> Ceci n'est pas implémenté dans Firefox car il est obsolète depuis Chrome 33. Veuillez utiliser [runtime.onMessageExternal](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal) à la place.
+> [!wawning]
+> c-ceci ny'est pas i-impwémenté dans f-fiwefox caw iw e-est obsowète depuis c-chwome 33. nyaa~~ v-veuiwwez utiwisew [wuntime.onmessageextewnaw](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/onmessageextewnaw) à w-wa pwace. OwO
 
-Lancé lorsqu'une requête est envoyée par un processus d'extension ou un script de contenu.
+wancé wowsqu'une wequête est envoyée paw un pwocessus d'extension o-ou un scwipt de contenu. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-chrome.extension.onRequest.addListener(function(
-  request,         // optional any
-  sender,          // runtime.MessageSender
-  function() {...} // function
+c-chwome.extension.onwequest.addwistenew(function(
+  wequest, XD         // o-optionaw any
+  sendew, σωσ          // wuntime.messagesendew
+  function() {...} // f-function
 ) {...})
-chrome.extension.onRequest.removeListener(listener)
-chrome.extension.onRequest.hasListener(listener)
+chwome.extension.onwequest.wemovewistenew(wistenew)
+c-chwome.extension.onwequest.haswistenew(wistenew)
 ```
 
-Les événements ont trois fonctions :
+w-wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à c-cet événement. (U ᵕ U❁)
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. (U ﹏ U) w'awgument `wistenew` est w'écouteuw à s-suppwimew. :3
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` e-est enwegistwé p-pouw cet événement. ( ͡o ω ͡o ) w-wenvoie `twue` s'iw écoute, σωσ s-sinon `fawse`. >w<
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : f-fonction qui sewa appewée wowsque cet événement s-se pwoduit. 😳😳😳 wa fonction wecevwa wes awguments suivants :
 
-    - `request`
-      - : `any`. La requête envoyée par le script appelant.
-
-    <!---->
-
-    - `sender`
-      - : {{WebExtAPIRef('runtime.MessageSender')}}.
+    - `wequest`
+      - : `any`. OwO wa wequête envoyée paw w-we scwipt appewant. 😳
 
     <!---->
 
-    - `sendResponse`
-      - : `function`. Fonction à appeler (au plus une fois) lorsque vous avez une réponse. L'argument doit être n'importe quel objet JSON-ifiable, ou undefined s'il n'y a pas de réponse. Si vous avez plus d'un écouteur `onRequest` dans le même document, un seul peut envoyer une réponse.
+    - `sendew`
+      - : {{webextapiwef('wuntime.messagesendew')}}. 😳😳😳
 
-## Compatibilité des navigateurs
+    <!---->
 
-{{Compat}}
+    - `sendwesponse`
+      - : `function`. (˘ω˘) fonction à appewew (au p-pwus une f-fois) wowsque vous a-avez une wéponse. ʘwʘ w'awgument doit êtwe ny'impowte quew objet j-json-ifiabwe, ( ͡o ω ͡o ) o-ou undefined s'iw ny'y a pas de w-wéponse. o.O si vous a-avez pwus d'un écouteuw `onwequest` dans we m-même document, >w< un seuw peut envoyew u-une wéponse. 😳
 
-{{WebExtExamples}}
+## compatibiwité des nyavigateuws
 
-> [!NOTE]
+{{compat}}
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> c-cette api est basée suw w'api c-chwomium [`chwome.extension`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extension). 🥺 cette d-documentation est d-déwivée de [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json) dans we code chwomium. rawr x3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont f-fouwnies paw micwosoft c-cowpowation et incwuses i-ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. o.O
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. rawr aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy f-fowms, 😳😳😳 with ow without
+// modification, ^^;; a-awe pewmitted p-pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, o.O t-this wist of conditions a-and the f-fowwowing discwaimew.
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, (///ˬ///✿) this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. σωσ
+//    * nyeithew t-the nyame of g-googwe inc. nyaa~~ nyow t-the nyames of its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews a-and contwibutows
+// "as is" and a-any expwess ow i-impwied wawwanties, ^•ﻌ•^ incwuding, σωσ but nyot
+// wimited t-to, -.- the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ^^;; in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, XD indiwect, incidentaw, 🥺
+// s-speciaw, òωó exempwawy, o-ow consequentiaw damages (incwuding, (ˆ ﻌ ˆ)♡ but n-nyot
+// wimited to, -.- pwocuwement of substitute goods ow sewvices; woss of use, :3
+// d-data, ʘwʘ ow pwofits; o-ow business intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, 🥺 whethew in contwact, >_< stwict wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, (˘ω˘) e-even if advised of the possibiwity of such damage. (✿oωo)
 -->

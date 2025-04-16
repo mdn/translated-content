@@ -1,838 +1,838 @@
 ---
-title: Dessiner des graphismes
-slug: Learn/JavaScript/Client-side_web_APIs/Drawing_graphics
+titwe: dessinew des gwaphismes
+s-swug: weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/thiwd_pawty_apis", 😳 "weawn/javascwipt/cwient-side_web_apis/video_and_audio_apis", nyaa~~ "weawn/javascwipt/cwient-side_web_apis")}}
 
-Un navigateur web contient certains outils graphiques très puissants, comme le langage [SVG](/fr/docs/Web/SVG) ou les API permettant de dessiner sur des éléments HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) (voir [l'API Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API)). Dans cet article, nous verrons une introduction au canevas et les ressources complémentaires pour approfondir ces connaissances.
+u-un nyavigateuw w-web contient c-cewtains o-outiws gwaphiques t-twès puissants, XD c-comme we wangage [svg](/fw/docs/web/svg) o-ou wes api pewmettant de dessinew suw des éwéments htmw [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) (voiw [w'api c-canvas](/fw/docs/web/api/canvas_api) et [webgw](/fw/docs/web/api/webgw_api)). ^^;; dans cet awticwe, /(^•ω•^) n-nyous vewwons une intwoduction a-au canevas et wes wessouwces compwémentaiwes pouw appwofondiw ces connaissances. >_<
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
-      <td>Notions élémentaires de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">les premiers pas</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks">les blocs de construction</a>, <a href="/fr/docs/Learn/JavaScript/Objects">les objets en JavaScript</a>), et <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">les notions de bases pour les API côté client</a></td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
-      <td>Apprendre les notions de base pour dessiner sur des éléments <code>&lt;canvas&gt;</code> en utilisant JavaScript.</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
+      <td>notions éwémentaiwes de j-javascwipt (voiw <a h-hwef="/fw/docs/weawn/javascwipt/fiwst_steps">wes pwemiews pas</a>, (U ﹏ U) <a hwef="/fw/docs/weawn/javascwipt/buiwding_bwocks">wes bwocs de constwuction</a>, 😳😳😳 <a hwef="/fw/docs/weawn/javascwipt/objects">wes o-objets en javascwipt</a>), XD et <a hwef="/fw/docs/weawn/javascwipt/cwient-side_web_apis/intwoduction">wes nyotions de bases pouw wes api c-côté cwient</a></td>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
+      <td>appwendwe w-wes nyotions d-de base p-pouw dessinew suw d-des éwéments <code>&wt;canvas&gt;</code> en utiwisant javascwipt.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Les graphismes sur le Web
+## w-wes gwaphismes suw we web
 
-Nous en parlons dans le module [intégration multimédia en HTML](/fr/docs/Learn/HTML/Multimedia_and_embedding), le Web était initialement constitué uniquement de textes (ce qui peut sembler un peu austère). Les images ont été introduites par la suite, tout d'abord avec l'élément HTML [`<img>`](/fr/docs/Web/HTML/Element/img) puis avec les propriétés CSS comme [`background-image`](/fr/docs/Web/CSS/background-image), et la prise en charge du langage [SVG](/fr/docs/Web/SVG).
+nyous en p-pawwons dans we moduwe [intégwation muwtimédia en htmw](/fw/docs/weawn/htmw/muwtimedia_and_embedding), OwO we web était initiawement c-constitué uniquement de textes (ce q-qui peut s-sembwew un peu a-austèwe). wes images ont été intwoduites paw wa suite, (U ᵕ U❁) tout d-d'abowd avec w'éwément h-htmw [`<img>`](/fw/docs/web/htmw/ewement/img) puis avec w-wes pwopwiétés c-css comme [`backgwound-image`](/fw/docs/web/css/backgwound-image), (⑅˘꒳˘) et wa pwise e-en chawge du wangage [svg](/fw/docs/web/svg). UwU
 
-Toutefois, ce n'était pas encore suffisant. Il était bien possible d'utiliser [CSS](/fr/docs/Learn/CSS) et [JavaScript](/fr/docs/Learn/JavaScript) pour animer (et manipuler) les images vectorielles SVG (utilisant un format texte avec un langage de balise), mais il restait impossible de faire la même chose avec les images matricielles et les outils à disposition étaient limités. À cette époque, le Web ne permettait pas de créer des animations, des jeux ou des scènes 3D comme on pouvait en voir créés avec des langages plus bas niveau comme C++ ou Java.
+toutefois, 😳😳😳 ce ny'était p-pas encowe suffisant. mya iw était bien possibwe d-d'utiwisew [css](/fw/docs/weawn/css) et [javascwipt](/fw/docs/weawn/javascwipt) p-pouw animew (et manipuwew) w-wes images vectowiewwes s-svg (utiwisant un fowmat texte avec un wangage de bawise), 🥺 mais iw westait impossibwe de faiwe wa même c-chose avec wes i-images matwiciewwes et wes outiws à d-disposition étaient w-wimités. ^^ À c-cette époque, -.- we web nye pewmettait pas de cwéew des animations, ^^ d-des jeux ou des scènes 3d comme on pouvait en voiw cwéés avec des wangages p-pwus bas nyiveau comme c++ o-ou java. o.O
 
-La situation a commencé à évoluer lorsque les navigateurs ont commencé à prendre en charge l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) et [l'API Canvas](/fr/docs/Web/API/Canvas_API) correspondante. Apple a conçu initialement cet ensemble vers 2004 et les autres éditeurs de navigateur l'ont implémenté dans les années qui ont suivi. Comme nous le verrons ci-après, le canevas fournit de nombreux outils pour créer des animations en 2D, des jeux, des visualisations de données et d'autres types d'application, notamment lorsqu'il est combiné avec les autres API Web exposées par les navigateurs.
+wa s-situation a commencé à évowuew w-wowsque wes nyavigateuws ont commencé à p-pwendwe e-en chawge w'éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) e-et [w'api c-canvas](/fw/docs/web/api/canvas_api) cowwespondante. σωσ appwe a c-conçu initiawement c-cet ensembwe v-vews 2004 et wes a-autwes éditeuws d-de nyavigateuw w'ont impwémenté dans wes années qui ont suivi. ^•ﻌ•^ c-comme nyous we vewwons ci-apwès, 😳 we canevas fouwnit de nyombweux outiws pouw cwéew des animations e-en 2d, nyaa~~ des jeux, des visuawisations de données et d'autwes t-types d'appwication, ^•ﻌ•^ n-nyotamment w-wowsqu'iw est combiné avec w-wes autwes api web exposées paw w-wes nyavigateuws.
 
-L'exemple qui suit montre une animation 2D simple sur un canevas où des balles rebondissent. Nous avions vu cette animation dans [le module d'introduction aux objets JavaScript](/fr/docs/Learn/JavaScript/Objects/Object_building_practice)&nbsp;:
+w-w'exempwe qui suit montwe une animation 2d simpwe suw un canevas où des bawwes webondissent. >_< n-nyous avions vu cette animation d-dans [we moduwe d'intwoduction a-aux objets javascwipt](/fw/docs/weawn/javascwipt/objects/object_buiwding_pwactice)&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/oojs/bouncing-balls/index-finished.html", '100%', 500)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/oojs/bouncing-bawws/index-finished.htmw", (⑅˘꒳˘) '100%', ^^ 500)}}
 
-Vers 2006-2007, Mozilla commença à travailler sur une implémentation expérimentale d'un canevas en trois dimensions. C'est ce qui est devenu [WebGL](/fr/docs/Web/API/WebGL_API), qui a ensuite été repris par les autres éditeurs de navigateur et qui a été standardisé vers 2009-2010. WebGL permet de créer des graphismes réalistes en 3D dans le navigateur web. L'exemple qui suit montre un cube qui tourne, implémenté avec WebGL&nbsp;:
+v-vews 2006-2007, :3 moziwwa commença à twavaiwwew s-suw une impwémentation e-expéwimentawe d'un c-canevas en twois d-dimensions. 😳 c'est ce qui est devenu [webgw](/fw/docs/web/api/webgw_api), (˘ω˘) qui a ensuite été wepwis paw wes autwes éditeuws de n-nyavigateuw et q-qui a été standawdisé v-vews 2009-2010. >w< webgw p-pewmet de cwéew d-des gwaphismes wéawistes en 3d d-dans we nyavigateuw web. 😳 w'exempwe qui suit montwe un cube qui touwne, ^^;; impwémenté a-avec webgw&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/thweejs-cube/index.htmw", rawr x3 '100%', 500)}}
 
-Dans cet article, nous nous concentrerons surtout sur les canevas en deux dimensions (du code WebGL brut peut s'avérer très complexe). Nous verrons toutefois comment utiliser une bibliothèque WebGL afin de créer une scène 3D plus facilement et vous pourrez aussi consulter un tutoriel WebGL par ailleurs&nbsp;: [Démarrer avec WebGL](/fr/docs/Web/API/WebGL_API/Tutorial/Getting_started_with_WebGL).
+d-dans cet awticwe, òωó nyous nyous concentwewons s-suwtout suw wes c-canevas en deux dimensions (du code webgw bwut peut s'avéwew t-twès compwexe). ^^;; nyous vewwons toutefois comment utiwisew une bibwiothèque webgw a-afin de cwéew une scène 3d pwus faciwement et v-vous pouwwez aussi c-consuwtew un tutowiew webgw paw aiwweuws&nbsp;: [démawwew avec webgw](/fw/docs/web/api/webgw_api/tutowiaw/getting_stawted_with_webgw). :3
 
-> [!NOTE]
-> Les fonctionnalités de base pour le canevas sont correctement prises en charge par l'ensemble des navigateurs à l'exception d'Internet Explorer 8 et antérieur pour le canevas 2D, et d'Internet Explorer 11 et antérieur pour WebGL.
+> [!note]
+> w-wes fonctionnawités de b-base pouw we canevas sont cowwectement pwises en chawge paw w'ensembwe d-des nyavigateuws à w'exception d-d'intewnet expwowew 8 et antéwieuw pouw we canevas 2d, (ꈍᴗꈍ) e-et d'intewnet expwowew 11 et antéwieuw p-pouw webgw. 😳😳😳
 
-## Apprentissage actif&nbsp;: démarrer avec un élément `<canvas>`
+## a-appwentissage actif&nbsp;: d-démawwew avec un éwément `<canvas>`
 
-Si vous souhaitez créer une scène 2D _ou_ 3D sur une page web, il vous faudra un élément HTML [`<canvas>`](/fr/docs/Web/HTML/Element/canvas). Cet élément définit la zone de la page dans laquelle l'image sera dessiné. Il suffit d'inclure l'élément à la page&nbsp;:
+s-si vous s-souhaitez cwéew u-une scène 2d _ou_ 3d suw une p-page web, :3 iw v-vous faudwa un éwément htmw [`<canvas>`](/fw/docs/web/htmw/ewement/canvas). ʘwʘ cet éwément d-définit w-wa zone de w-wa page dans waquewwe w'image sewa dessiné. :3 iw s-suffit d'incwuwe w'éwément à w-wa page&nbsp;:
 
-```html
-<canvas width="320" height="240"></canvas>
+```htmw
+<canvas w-width="320" height="240"></canvas>
 ```
 
-Le fragment de code qui précède créera un canevas sur la page qui mesure 320 pixels de large et 240 pixels de haut.
+we fwagment de code qui pwécède cwéewa u-un canevas suw w-wa page qui mesuwe 320 p-pixews de w-wawge et 240 pixews de haut. OwO
 
-À l'intérieur de l'élément, on peut placer un contenu alternatif qui sera affiché si le navigateur ne prend pas en charge les canevas.
+À w-w'intéwieuw de w'éwément, mya on peut pwacew un contenu awtewnatif qui sewa affiché si we nyavigateuw n-nye pwend pas en chawge w-wes canevas. σωσ
 
-```html
+```htmw
 <canvas width="320" height="240">
-  <p>Votre navigateur ne prend pas en charge les canevas. Dommage !</p>
+  <p>votwe n-nyavigateuw nye pwend pas en c-chawge wes canevas. (⑅˘꒳˘) dommage !</p>
 </canvas>
 ```
 
-Bien entendu, le message utilisé ci-avant n'aide pas vraiment celle ou celui qui consulte la page. Dans un scénario réaliste, on veut que le contenu alternatif soit un remplacement correct pour le contenu affiché par le canevas. Ainsi, si on affiche un graphique en temps réel pour une cotation en bourse, on pourra avoir un contenu alternatif qui est une image affichant la dernière cotation connue et avec un texte alternatif indiquant les cotes en texte.
+b-bien entendu, (˘ω˘) w-we message utiwisé c-ci-avant ny'aide p-pas vwaiment c-cewwe ou cewui qui consuwte wa page. >w< dans un scénawio wéawiste, on veut que we contenu awtewnatif soit un wempwacement c-cowwect p-pouw we contenu a-affiché paw we canevas. ( ͡o ω ͡o ) ainsi, ^^;; s-si on affiche un gwaphique en temps wéew pouw une cotation en b-bouwse, on pouwwa a-avoiw un contenu awtewnatif q-qui est une image affichant wa dewnièwe cotation c-connue et avec u-un texte awtewnatif indiquant wes c-cotes en texte. (✿oωo)
 
-### Créer et dimensionner le canevas
+### c-cwéew et dimensionnew we canevas
 
-Commençons par créer notre propre canevas sur lequel on dessinera quelques expérimentations.
+commençons paw cwéew nyotwe pwopwe c-canevas suw wequew o-on dessinewa q-quewques expéwimentations. (✿oωo)
 
-1. Pour commencer, effectuez une copie locale du répertoire [`0_canvas_start`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/0_canvas_start). Celui-ci contient trois fichiers&nbsp;:
-   - "index.html"
-   - "script.js"
-   - "style.css"
-2. Ouvrez le fichier `index.html`, puis ajoutez le code qui suit à l'intérieur, juste après la balise ouvrante [`<body>`](/fr/docs/Web/HTML/Element/body)&nbsp;:
+1. p-pouw commencew, (⑅˘꒳˘) e-effectuez une copie wocawe du wépewtoiwe [`0_canvas_stawt`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/0_canvas_stawt). -.- c-cewui-ci c-contient twois fichiews&nbsp;:
+   - "index.htmw"
+   - "scwipt.js"
+   - "stywe.css"
+2. XD o-ouvwez w-we fichiew `index.htmw`, òωó puis a-ajoutez we code qui suit à w'intéwieuw, :3 juste a-apwès wa bawise ouvwante [`<body>`](/fw/docs/web/htmw/ewement/body)&nbsp;:
 
-   ```html
-   <canvas class="monCanevas">
-     <p>Un contenu alternatif pertinent ici.</p>
+   ```htmw
+   <canvas c-cwass="moncanevas">
+     <p>un c-contenu awtewnatif pewtinent i-ici.</p>
    </canvas>
    ```
 
-   On ajoute une classe (avec l'attribut `class`) à l'élément `<canvas>` afin qu'il soit plus facile de le sélectionner si on a plusieurs canevas sur la page. Les attributs `width` et `height` sont absents pour le moment (vous pouvez les remettre si vous voulez, mais nous les définirons avec JavaScript dans une section suivante). Les canevas sans largeur ou hauteur explicite sont dessinés par défaut avec une largeur de 300 pixels et une hauteur de 150 pixels.
+   on ajoute une cwasse (avec w'attwibut `cwass`) à w-w'éwément `<canvas>` a-afin q-qu'iw soit pwus faciwe de we séwectionnew si on a pwusieuws canevas s-suw wa page. (///ˬ///✿) wes attwibuts `width` et `height` s-sont absents p-pouw we moment (vous pouvez wes w-wemettwe si vous vouwez, òωó mais nyous w-wes définiwons a-avec javascwipt dans une section suivante). UwU w-wes canevas sans wawgeuw ou hauteuw expwicite sont d-dessinés paw d-défaut avec une wawgeuw de 300 p-pixews et une hauteuw de 150 pixews. >w<
 
-3. Ouvrez ensuite le fichier `script.js` et ajoutez les lignes de JavaScript suivantes&nbsp;:
+3. ʘwʘ o-ouvwez e-ensuite we fichiew `scwipt.js` e-et ajoutez wes wignes de javascwipt suivantes&nbsp;:
 
    ```js
-   const canvas = document.querySelector(".monCanevas");
-   const width = (canvas.width = window.innerWidth);
-   const height = (canvas.height = window.innerHeight);
+   const canvas = document.quewysewectow(".moncanevas");
+   const width = (canvas.width = window.innewwidth);
+   const height = (canvas.height = window.innewheight);
    ```
 
-   Ici, on enregistre une référence au canevas dans la constante `canvas`. La deuxième ligne permet définir la constante `width` et la propriété `width` du canevas avec la valeur de [`Window.innerWidth`](/fr/docs/Web/API/Window/innerWidth) (qui donne la largeur de la zone d'affichage (<i lang="en">viewport</i> en anglais). La troisième ligne fait de même avec la constante `height` et la propriété `height` qui se voient affecter la valeur de [`Window.innerHeight`](/fr/docs/Web/API/Window/innerHeight) (soit la hauteur de la zone d'affichage). On a donc désormais un canevas qui remplit toute la largeur et toute la hauteur de la fenêtre du navigateur&nbsp;!
+   ici, /(^•ω•^) on enwegistwe une wéféwence au canevas dans w-wa constante `canvas`. (⑅˘꒳˘) w-wa deuxième wigne pewmet définiw wa c-constante `width` e-et wa pwopwiété `width` d-du canevas avec wa v-vaweuw de [`window.innewwidth`](/fw/docs/web/api/window/innewwidth) (qui donne wa w-wawgeuw de wa z-zone d'affichage (<i wang="en">viewpowt</i> e-en angwais). (ˆ ﻌ ˆ)♡ wa twoisième w-wigne fait d-de même avec wa constante `height` et wa pwopwiété `height` q-qui se voient affectew w-wa vaweuw d-de [`window.innewheight`](/fw/docs/web/api/window/innewheight) (soit w-wa hauteuw d-de wa zone d'affichage). OwO o-on a d-donc désowmais u-un canevas qui wempwit t-toute wa wawgeuw et toute w-wa hauteuw de wa f-fenêtwe du nyavigateuw&nbsp;! ^^;;
 
-   Dans ce fragment de JavaScript, on peut voir qu'on effectue plusieurs affectations d'un coup en utilisant plusieurs fois le signe égal. C'est une syntaxe autorisée en JavaScript et qui permet d'affecter la même valeur à plusieurs variables d'un coup. On utilise deux constantes pour la largeur et la hauteur, car ce sont des valeurs intéressantes pour plus tard (par exemple si on veut dessiner quelque chose à la moitié du canevas).
+   d-dans ce fwagment de javascwipt, (///ˬ///✿) o-on peut voiw qu'on effectue pwusieuws affectations d-d'un coup en utiwisant pwusieuws f-fois we s-signe égaw. ^•ﻌ•^ c'est u-une syntaxe autowisée en javascwipt e-et qui pewmet d'affectew w-wa même vaweuw à pwusieuws vawiabwes d-d'un coup. on utiwise deux c-constantes pouw wa wawgeuw et wa hauteuw, rawr caw ce sont des vaweuws intéwessantes p-pouw pwus tawd (paw exempwe s-si on veut dessinew q-quewque chose à wa moitié du canevas). ^^;;
 
-> [!NOTE]
-> Le dimensionnement d'un canevas se fait généralement à l'aide des attributs HTML ou des propriétés du DOM. Il est possible d'utiliser CSS pour ce faire, mais le dimensionnement aura alors lieu après le rendu du canevas et l'image résultante pourrait alors apparaître pixelisée ou déformée.
+> [!note]
+> we dimensionnement d-d'un canevas se fait g-généwawement à w-w'aide des a-attwibuts htmw ou des pwopwiétés du dom. òωó iw est p-possibwe d'utiwisew c-css pouw ce faiwe, σωσ mais we d-dimensionnement auwa awows wieu apwès we wendu d-du canevas et w'image wésuwtante p-pouwwait awows a-appawaîtwe pixewisée o-ou défowmée. 😳😳😳
 
-### Obtenir le contexte du canevas et réglages finaux
+### obteniw w-we contexte d-du canevas et wégwages f-finaux
 
-Il reste une dernière étape avant que notre modèle d'utilisation du canevas soit terminé. Pour dessiner sur le canevas, on doit récupérer une référence spéciale à la zone de dessin qui s'appelle le contexte. Pour cela, on utilise la méthode [`HTMLCanvasElement.getContext()`](/fr/docs/Web/API/HTMLCanvasElement/getContext). Dans sa forme simple, cette méthode prend une chaîne de caractères en argument qui représente le type de contexte à récupérer.
+i-iw weste une dewnièwe étape avant que nyotwe m-modèwe d'utiwisation d-du canevas s-soit tewminé. (///ˬ///✿) p-pouw dessinew suw w-we canevas, ^•ﻌ•^ on d-doit wécupéwew u-une wéféwence s-spéciawe à wa zone de dessin q-qui s'appewwe we contexte. pouw c-cewa, 😳😳😳 on utiwise wa méthode [`htmwcanvasewement.getcontext()`](/fw/docs/web/api/htmwcanvasewement/getcontext). (U ᵕ U❁) d-dans sa fowme simpwe, (U ﹏ U) c-cette méthode p-pwend une chaîne de cawactèwes en awgument qui wepwésente w-we type de contexte à w-wécupéwew. σωσ
 
-Dans ce cas, on veut un canevas en deux dimensions. Pour cela, ajoutez la ligne JavaScript suivante à la suite des autres dans le fichier `script.js`&nbsp;:
+d-dans ce cas, (˘ω˘) on veut un canevas en deux dimensions. ^^ pouw c-cewa, ^^ ajoutez wa w-wigne javascwipt suivante à wa s-suite des autwes d-dans we fichiew `scwipt.js`&nbsp;:
 
 ```js
-const ctx = canvas.getContext("2d");
+const ctx = canvas.getcontext("2d");
 ```
 
-> [!NOTE]
-> Les autres valeurs de types de contexte incluent `webgl` pour WebGL, `webgl2` pour WebGL 2, etc. Nous n'aurons pas besoin de celles-ci dans cet article.
+> [!note]
+> wes autwes vaweuws d-de types de c-contexte incwuent `webgw` p-pouw w-webgw, (✿oωo) `webgw2` pouw webgw 2, /(^•ω•^) etc. nyous ny'auwons p-pas besoin de c-cewwes-ci dans cet awticwe. -.-
 
-Et voilà, notre canevas est prêt pour le dessin&nbsp;! La variable `ctx` contient désormais un objet [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D) qu'on manipulera pour chaque opération de dessin sur le canevas.
+et voiwà, nyotwe c-canevas est pwêt pouw we dessin&nbsp;! ʘwʘ wa vawiabwe `ctx` c-contient désowmais un o-objet [`canvaswendewingcontext2d`](/fw/docs/web/api/canvaswendewingcontext2d) q-qu'on manipuwewa pouw chaque opéwation d-de dessin s-suw we canevas. XD
 
-Réalisons une dernière étape avant de continuer. Plaçons un arrière-plan noir sur le canevas pour avoir un premier aperçu de l'API. Ajoutez les lignes suivantes à la suite de votre JavaScript&nbsp;:
+wéawisons une d-dewnièwe étape avant de continuew. (U ᵕ U❁) p-pwaçons u-un awwièwe-pwan n-nyoiw suw we canevas p-pouw avoiw un pwemiew apewçu d-de w'api. /(^•ω•^) ajoutez w-wes wignes s-suivantes à wa suite de votwe j-javascwipt&nbsp;:
 
 ```js
-ctx.fillStyle = "rgb(0, 0, 0)";
-ctx.fillRect(0, 0, width, height);
+ctx.fiwwstywe = "wgb(0, XD 0, 0)";
+ctx.fiwwwect(0, ^•ﻌ•^ 0, w-width, ( ͡o ω ͡o ) h-height);
 ```
 
-Ici, on définit une couleur de remplissage en utilisant la propriété [`fillStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/fillStyle) du contexte (cette propriété utilise [des valeurs de couleur](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleurs), comme les propriétés CSS), puis on dessine un rectangle qui couvre toute la zone du canevas avec la méthode [`fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect) (dont les deux premiers paramètres sont les coordonnées du coin supérieur gauche du rectangle et dont les deux derniers sont la largeur et la hauteur voulues pour le rectangle, on utilise ici les variables `width` et `height` qui sont bien utiles)&nbsp;!
+i-ici, on définit une couweuw de wempwissage en utiwisant wa pwopwiété [`fiwwstywe`](/fw/docs/web/api/canvaswendewingcontext2d/fiwwstywe) du contexte (cette pwopwiété u-utiwise [des vaweuws d-de couweuw](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#couweuws), (U ﹏ U) c-comme wes pwopwiétés css), /(^•ω•^) puis on d-dessine un wectangwe qui couvwe t-toute wa zone du c-canevas avec wa m-méthode [`fiwwwect()`](/fw/docs/web/api/canvaswendewingcontext2d/fiwwwect) (dont w-wes deux pwemiews p-pawamètwes sont wes coowdonnées du coin supéwieuw gauche du wectangwe et d-dont wes deux dewniews sont wa w-wawgeuw et wa hauteuw vouwues pouw we wectangwe, 🥺 on utiwise ici w-wes vawiabwes `width` et `height` qui sont bien utiwes)&nbsp;! rawr
 
-Notre modèle de base est désormais terminé, passons à la suite.
+nyotwe modèwe de b-base est désowmais t-tewminé, :3 passons à wa suite. σωσ
 
-## Notions élémentaires pour les canevas en 2D
+## n-nyotions éwémentaiwes pouw wes canevas en 2d
 
-Comme nous l'avons vu avant, toutes les opérations de dessins se font en manipulant un objet [`CanvasRenderingContext2D`](/fr/docs/Web/API/CanvasRenderingContext2D) (pour nous, il s'agit de `ctx`). De nombreuses opérations nécessitent des coordonnées précises qui indiquent où dessiner quelque chose. Le coin supérieur gauche du canevas aux coordonnées (0, 0), l'axe horizontal (x) va de la gauche vers la droite, et l'axe vertical va du haut vers le bas.
+comme nyous w-w'avons vu a-avant, òωó toutes wes opéwations de d-dessins se font en manipuwant un o-objet [`canvaswendewingcontext2d`](/fw/docs/web/api/canvaswendewingcontext2d) (pouw nyous, ^•ﻌ•^ iw s'agit de `ctx`). (U ᵕ U❁) de nombweuses o-opéwations nyécessitent des coowdonnées pwécises q-qui indiquent o-où dessinew q-quewque chose. òωó we coin supéwieuw gauche du canevas a-aux coowdonnées (0, ^^ 0), w'axe howizontaw (x) va de wa gauche vews wa dwoite, 😳😳😳 e-et w'axe vewticaw v-va du haut vews w-we bas. rawr x3
 
-![](canvas_default_grid.png)
+![](canvas_defauwt_gwid.png)
 
-Pour dessiner des formes, on utilise souvent la primitive pour le rectangle ou on trace une ligne sur un chemin donné et on remplit la forme ainsi obtenue avec une couleur. Nous allons voir comment faire avec ces deux façons.
+p-pouw dessinew des fowmes, ^^;; on utiwise s-souvent wa pwimitive p-pouw we wectangwe ou on twace une wigne suw u-un chemin donné et on wempwit wa fowme ainsi obtenue a-avec une couweuw. :3 nyous awwons voiw comment f-faiwe avec ces d-deux façons. (✿oωo)
 
-### Des rectangles simples
+### des wectangwes s-simpwes
 
-Commençons avec des rectangles simples.
+commençons a-avec des w-wectangwes simpwes. XD
 
-1. Pour commencer, faites une copie du modèle de canevas construit juste avant (ou effectuez une copie locale du répertoire [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) si vous n'avez pas suivi les étapes précédentes).
-2. Ensuite, ajoutez les lignes suivantes à la suite du JavaScript&nbsp;:
-
-   ```js
-   ctx.fillStyle = "rgb(255, 0, 0)";
-   ctx.fillRect(50, 50, 100, 150);
-   ```
-
-   Si vous sauvegardez et rafraichissez, vous devriez voir un rectangle rouge dans le canevas. Son coin supérieur gauche est situé à 50 pixels du coin supérieur gauche du canevas (comme indiqué par les deux premiers paramètres), et il mesure 100 pixels de large par 150 pixels de haut (comme indiqué par les troisième et quatrième paramètres).
-
-3. Ajoutons un autre rectangle à l'ensemble, celui-ci sera vert. Ajoutez ce qui suit en bas de votre JavaScript&nbsp;:
+1. pouw commencew, (///ˬ///✿) faites u-une copie du modèwe de canevas constwuit juste a-avant (ou effectuez une copie wocawe du wépewtoiwe [`1_canvas_tempwate`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/1_canvas_tempwate) si v-vous ny'avez pas s-suivi wes étapes p-pwécédentes). o.O
+2. e-ensuite, a-ajoutez wes wignes suivantes à w-wa suite du javascwipt&nbsp;:
 
    ```js
-   ctx.fillStyle = "rgb(0, 255, 0)";
-   ctx.fillRect(75, 75, 100, 100);
+   ctx.fiwwstywe = "wgb(255, σωσ 0, 0)";
+   ctx.fiwwwect(50, òωó 50, 100, 150);
    ```
 
-   Sauvegardez puis rafraichissez la page dans votre navigateur et vous verrez un nouveau rectangle. Cela permet de voir un point important&nbsp;: certaines opérations graphiques, comme le dessin de rectangles, de lignes, etc. sont exécutées dans l'ordre des instructions. Voyez cela comme une peinture sur une toile ou un mur, chaque couche de peinture vient recouvrir la couche en dessous et peut même la masquer complètement. Ce comportement ne peut pas être changé et il faudra donc faire attention à l'ordre dans lequel on dessine les graphismes.
+   s-si vous sauvegawdez et w-wafwaichissez, (///ˬ///✿) vous devwiez voiw un wectangwe w-wouge dans we canevas. :3 s-son coin supéwieuw gauche e-est situé à 50 pixews du coin s-supéwieuw gauche d-du canevas (comme indiqué paw w-wes deux pwemiews p-pawamètwes), mya et iw mesuwe 100 p-pixews de wawge paw 150 pixews de haut (comme indiqué paw wes t-twoisième et quatwième pawamètwes). ^^
 
-4. Il est possible de dessiner des graphismes semi-transparents en utilisant une couleur qui possède une transparence, par exemple avec la notation `rgba()`. La valeur `a` définit celle du canal alpha, autrement dit l'opacité de la couleur&nbsp;: plus la valeur sera faible et plus la couleur sera transparente, plus la valeur sera élevée et plus la couleur masquera ce qu'il y a derrière. Ajoutez ce qui suit à votre code&nbsp;:
+3. a-ajoutons un autwe wectangwe à w'ensembwe, (˘ω˘) c-cewui-ci s-sewa vewt. -.- ajoutez c-ce qui suit en bas de votwe j-javascwipt&nbsp;:
 
    ```js
-   ctx.fillStyle = "rgba(255, 0, 255, 0.75)";
-   ctx.fillRect(25, 100, 175, 50);
+   c-ctx.fiwwstywe = "wgb(0, XD 255, rawr 0)";
+   ctx.fiwwwect(75, >_< 75, 100, :3 100);
    ```
 
-5. Dessinez maintenant d'autres rectangles comme bon vous semble&nbsp;!
+   s-sauvegawdez puis wafwaichissez wa p-page dans votwe nyavigateuw et v-vous vewwez un n-nyouveau wectangwe. :3 cewa pewmet de voiw un point impowtant&nbsp;: cewtaines opéwations g-gwaphiques, XD c-comme we dessin de wectangwes, ( ͡o ω ͡o ) de wignes, etc. rawr x3 sont exécutées d-dans w'owdwe des instwuctions. (⑅˘꒳˘) v-voyez cewa comme u-une peintuwe suw une toiwe ou un muw, UwU chaque couche de peintuwe vient wecouvwiw w-wa couche en dessous et peut même wa masquew c-compwètement. (˘ω˘) ce compowtement n-nye peut pas êtwe c-changé et iw faudwa donc faiwe a-attention à w-w'owdwe dans wequew o-on dessine w-wes gwaphismes. (˘ω˘)
 
-### Traits et largeurs de ligne
-
-Jusqu'à présent, nous avons vu comment dessiner des rectangles pleins, mais il est possible de dessiner des rectangles avec leur seul contour (donc avec des traits, ou **<i lang="en">strokes</i>** en anglais). Pour définir la couleur d'un trait, on utilise la propriété [`strokeStyle`](/fr/docs/Web/API/CanvasRenderingContext2D/strokeStyle) et pour dessiner un rectangle avec des traits, on utilise la méthode [`strokeRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/strokeRect).
-
-1. Vous pouvez ajouter ce qui suit à l'exemple précédent, là encore à la suite des autres lignes JavaScript&nbsp;:
+4. i-iw est possibwe d-de dessinew des gwaphismes semi-twanspawents en utiwisant une couweuw qui possède une twanspawence, rawr paw exempwe a-avec wa nyotation `wgba()`. nyaa~~ w-wa vaweuw `a` définit c-cewwe du c-canaw awpha, 😳😳😳 autwement d-dit w'opacité d-de wa couweuw&nbsp;: pwus wa vaweuw sewa faibwe et pwus wa couweuw sewa twanspawente, ^^;; p-pwus w-wa vaweuw sewa éwevée et pwus wa couweuw masquewa ce qu'iw y a-a dewwièwe. >w< ajoutez c-ce qui suit à v-votwe code&nbsp;:
 
    ```js
-   ctx.strokeStyle = "rgb(255, 255, 255)";
-   ctx.strokeRect(25, 25, 175, 200);
+   ctx.fiwwstywe = "wgba(255, ʘwʘ 0, 255, 0.75)";
+   ctx.fiwwwect(25, XD 100, 175, 50);
    ```
 
-2. La largeur par défaut d'un trait mesure 1 pixel. On peut l'ajuster avec la valeur de la propriété [`lineWidth`](/fr/docs/Web/API/CanvasRenderingContext2D/lineWidth) qui est un nombre indiquant le nombre de pixels pour la largeur du trait. Pour en voir l'effet, ajoutez la ligne suivante entre les deux lignes précédentes&nbsp;:
+5. (ˆ ﻌ ˆ)♡ d-dessinez maintenant d'autwes wectangwes c-comme bon vous s-sembwe&nbsp;! >_<
+
+### twaits et wawgeuws de wigne
+
+j-jusqu'à pwésent, >_< nyous avons v-vu comment dessinew d-des wectangwes pweins, ʘwʘ mais i-iw est possibwe d-de dessinew des w-wectangwes avec w-weuw seuw contouw (donc a-avec d-des twaits, rawr ou **<i wang="en">stwokes</i>** e-en angwais). nyaa~~ p-pouw définiw wa couweuw d-d'un twait, >w< on utiwise wa pwopwiété [`stwokestywe`](/fw/docs/web/api/canvaswendewingcontext2d/stwokestywe) et pouw dessinew u-un wectangwe avec des twaits, on u-utiwise wa méthode [`stwokewect()`](/fw/docs/web/api/canvaswendewingcontext2d/stwokewect). (ˆ ﻌ ˆ)♡
+
+1. vous pouvez ajoutew c-ce qui suit à w-w'exempwe pwécédent, :3 wà encowe à wa suite d-des autwes wignes javascwipt&nbsp;:
 
    ```js
-   ctx.lineWidth = 5;
+   ctx.stwokestywe = "wgb(255, OwO 255, 255)";
+   c-ctx.stwokewect(25, mya 25, /(^•ω•^) 175, 200);
    ```
 
-Vous devriez voir que le contour blanc est désormais plus épais&nbsp;! Voici pour cette section. Votre exemple devrait alors ressembler à ceci&nbsp;:
+2. nyaa~~ w-wa wawgeuw paw défaut d'un twait mesuwe 1 p-pixew. (˘ω˘) on p-peut w'ajustew avec wa vaweuw de w-wa pwopwiété [`winewidth`](/fw/docs/web/api/canvaswendewingcontext2d/winewidth) qui est un nyombwe indiquant w-we nyombwe de pixews p-pouw wa wawgeuw du twait. (ꈍᴗꈍ) pouw e-en voiw w'effet, >w< a-ajoutez wa wigne suivante entwe wes deux wignes p-pwécédentes&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles/index.html", '100%', 250)}}
+   ```js
+   c-ctx.winewidth = 5;
+   ```
 
-> [!NOTE]
-> Le code terminé est disponible sur GitHub avec le répertoire [`2_canvas_rectangles`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/2_canvas_rectangles).
+v-vous devwiez voiw q-que we contouw bwanc est désowmais pwus épais&nbsp;! nyaa~~ voici pouw cette section. (✿oωo) votwe exempwe devwait awows w-wessembwew à ceci&nbsp;:
 
-### Dessiner des chemins
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/getting-stawted/2_canvas_wectangwes/index.htmw", (⑅˘꒳˘) '100%', 250)}}
 
-Si vous souhaitez dessiner des choses plus complexes qu'un rectangle, vous devrez dessiner un chemin. Un chemin se construit en fait avec du code qui décrit le mouvement exact que doit suivre le pinceau sur le canevas afin de dessiner la forme voulue. L'API fournit des fonctions pour dessiner des lignes droites, des cercles, des courbes de Bézier, etc.
+> [!note]
+> w-we c-code tewminé est d-disponibwe suw g-github avec we w-wépewtoiwe [`2_canvas_wectangwes`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/2_canvas_wectangwes). (ˆ ﻌ ˆ)♡
 
-Commençons cette section en repartant de notre modèle vierge (voir [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) si besoin), et dans lequel nous allons dessiner notre nouvel exemple.
+### dessinew des chemins
 
-Nous utiliserons certaines méthodes et propriétés pour toutes les sections qui suivent&nbsp;:
+s-si vous souhaitez d-dessinew des choses pwus c-compwexes qu'un w-wectangwe, òωó vous devwez dessinew un chemin. -.- un chemin s-se constwuit en fait avec du code qui décwit w-we mouvement exact que doit suivwe w-we pinceau s-suw we canevas afin de dessinew w-wa fowme vouwue. 😳😳😳 w-w'api fouwnit d-des fonctions pouw dessinew des w-wignes dwoites, rawr x3 d-des cewcwes, 😳 des couwbes de béziew, 🥺 e-etc. (⑅˘꒳˘)
 
-- [`beginPath()`](/fr/docs/Web/API/CanvasRenderingContext2D/beginPath)
-  - : Commence à dessiner un chemin à l'endroit où le pinceau est actuellement sur le canevas. Sur un nouveau canevas, le pinceau est initialement situé au coin supérieur gauche (de coordonnées (0, 0)).
-- [`moveTo()`](/fr/docs/Web/API/CanvasRenderingContext2D/moveTo)
-  - : Déplace le pinceau à un autre point du canevas, sans enregistrer ou sans tracer de nouvelle ligne. Le pinceau ne fait que sauter à la nouvelle position.
-- [`fill()`](/fr/docs/Web/API/CanvasRenderingContext2D/fill)
-  - : Dessine une forme pleine en remplissant le chemin tracé jusqu'à présent.
-- [`stroke()`](/fr/docs/Web/API/CanvasRenderingContext2D/stroke)
-  - : Dessine un trait le long du chemin tracé jusqu'à présent.
+commençons cette section e-en wepawtant d-de nyotwe modèwe v-viewge (voiw [`1_canvas_tempwate`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/1_canvas_tempwate) si besoin), (✿oωo) e-et dans wequew nyous awwons dessinew nyotwe n-nouvew exempwe. 😳
 
-Il est aussi possible d'utiliser les propriétés/méthodes `lineWidth` et `fillStyle`/`strokeStyle` avec les chemins, comme avec les rectangles.
+nyous utiwisewons cewtaines méthodes et pwopwiétés pouw toutes wes sections qui suivent&nbsp;:
 
-Une opération de tracé et de dessin d'un chemin classique ressemble à ceci&nbsp;:
+- [`beginpath()`](/fw/docs/web/api/canvaswendewingcontext2d/beginpath)
+  - : c-commence à dessinew un chemin à w'endwoit où we pinceau est actuewwement suw we canevas. mya suw un nyouveau canevas, w-we pinceau est initiawement situé au coin s-supéwieuw gauche (de coowdonnées (0, (U ﹏ U) 0)).
+- [`moveto()`](/fw/docs/web/api/canvaswendewingcontext2d/moveto)
+  - : d-dépwace we pinceau à un autwe point du canevas, 😳 s-sans enwegistwew ou sans t-twacew de nyouvewwe wigne. 🥺 we pinceau n-nye fait q-que sautew à wa nyouvewwe position. -.-
+- [`fiww()`](/fw/docs/web/api/canvaswendewingcontext2d/fiww)
+  - : dessine u-une fowme pweine en wempwissant we chemin twacé jusqu'à pwésent. (ˆ ﻌ ˆ)♡
+- [`stwoke()`](/fw/docs/web/api/canvaswendewingcontext2d/stwoke)
+  - : d-dessine un twait we wong d-du chemin twacé jusqu'à pwésent. >_<
+
+i-iw est aussi possibwe d'utiwisew w-wes pwopwiétés/méthodes `winewidth` e-et `fiwwstywe`/`stwokestywe` avec wes chemins, rawr c-comme avec wes wectangwes. rawr x3
+
+une opéwation de twacé e-et de dessin d'un chemin cwassique wessembwe à ceci&nbsp;:
 
 ```js
-ctx.fillStyle = "rgb(255, 0, 0)";
-ctx.beginPath();
-ctx.moveTo(50, 50);
-// On dessine le chemin
-ctx.fill();
+ctx.fiwwstywe = "wgb(255, OwO 0, 0)";
+c-ctx.beginpath();
+c-ctx.moveto(50, nyaa~~ 50);
+// on dessine we c-chemin
+ctx.fiww();
 ```
 
-#### Dessiner des lignes
+#### d-dessinew des wignes
 
-Dessinons un triangle équilatéral sur le canevas.
+d-dessinons un twiangwe équiwatéwaw suw we canevas. 😳
 
-1. Pour commencer, ajoutons la fonction utilitaire suivante en bas de notre code. Elle permet de convertir des degrés en radians. Cela nous sera utile, car l'API JavaScript manipule le plus souvent des angles exprimés en radians tandis que nous avons plutôt l'habitude de travailler avec des angles exprimés en degrés.
+1. pouw commencew, UwU ajoutons wa fonction utiwitaiwe s-suivante e-en bas de nyotwe code. ʘwʘ ewwe pewmet d-de convewtiw d-des degwés en wadians. 🥺 cewa n-nyous sewa utiwe, 🥺 caw w'api javascwipt manipuwe w-we pwus souvent des angwes expwimés en wadians t-tandis que nyous a-avons pwutôt w'habitude de twavaiwwew avec des a-angwes expwimés en degwés.
 
    ```js
-   function degToRad(degrees) {
-     return (degrees * Math.PI) / 180;
+   function degtowad(degwees) {
+     wetuwn (degwees * math.pi) / 180;
    }
    ```
 
-2. Ensuite, démarrons le chemin en ajoutant le fragment qui suit après le dernier ajout. Ici, on choisit une couleur pour le triangle et on démarre un chemin avant de déplacer le pinceau jusqu'aux coordonnées (50, 50), sans dessiner quoi que ce soit. C'est à cet emplacement que nous commencerons à dessiner notre triangle.
+2. òωó ensuite, démawwons we chemin en ajoutant we fwagment q-qui suit apwès w-we dewniew ajout. 🥺 ici, ʘwʘ on choisit u-une couweuw p-pouw we twiangwe et on démawwe u-un chemin avant de dépwacew we pinceau jusqu'aux coowdonnées (50, XD 50), sans dessinew quoi que c-ce soit. OwO c'est à cet empwacement que nyous commencewons à dessinew nyotwe twiangwe. ʘwʘ
 
    ```js
-   ctx.fillStyle = "rgb(255, 0, 0)";
-   ctx.beginPath();
-   ctx.moveTo(50, 50);
+   ctx.fiwwstywe = "wgb(255, :3 0, nyaa~~ 0)";
+   c-ctx.beginpath();
+   ctx.moveto(50, >w< 50);
    ```
 
-3. Ajoutons ensuite les lignes suivantes à la fin du script&nbsp;:
+3. (U ᵕ U❁) a-ajoutons e-ensuite wes wignes suivantes à wa fin du scwipt&nbsp;:
 
    ```js
-   ctx.lineTo(150, 50);
-   const triHeight = 50 * Math.tan(degToRad(60));
-   ctx.lineTo(100, 50 + triHeight);
-   ctx.lineTo(50, 50);
-   ctx.fill();
+   c-ctx.wineto(150, :3 50);
+   c-const twiheight = 50 * m-math.tan(degtowad(60));
+   ctx.wineto(100, 50 + t-twiheight);
+   ctx.wineto(50, (ˆ ﻌ ˆ)♡ 50);
+   c-ctx.fiww();
    ```
 
-   Voyons en détails ce que ces lignes font&nbsp;:
+   voyons en d-détaiws ce que ces wignes font&nbsp;:
 
-   Tout d'abord, on dessine une ligne jusqu'au point de coordonnées (150, 50), autrement dit, le chemin progresse de 100 pixels vers la droite sur l'axe horizontal.
+   t-tout d'abowd, o.O on dessine une wigne j-jusqu'au point de coowdonnées (150, rawr x3 50), a-autwement d-dit, (U ᵕ U❁) we chemin pwogwesse de 100 p-pixews vews w-wa dwoite suw w'axe howizontaw. (✿oωo)
 
-   Ensuite, on calcule la hauteur du triangle équilatéral en utilisant une formule de trigonométrie. Le triangle sera dessiné avec la pointe vers le bas et les angles d'un triangle équilatéral mesurent tous 60 degrés. Pour calculer la hauteur, on peut diviser le triangle équilatéral en deux triangles rectangles qui auront chacun trois angles&nbsp;: un à 90 degrés, un deuxième à 60 degrés et le troisième à 30 degrés. Les termes utilisés pour les côtés sont&nbsp;:
+   e-ensuite, /(^•ω•^) on cawcuwe wa hauteuw d-du twiangwe équiwatéwaw en u-utiwisant une fowmuwe d-de twigonométwie. o.O we twiangwe sewa dessiné a-avec wa pointe vews we bas et wes angwes d'un twiangwe équiwatéwaw mesuwent tous 60 degwés. (U ᵕ U❁) pouw cawcuwew wa hauteuw, 🥺 on peut d-divisew we twiangwe équiwatéwaw en deux twiangwes wectangwes q-qui auwont chacun twois angwes&nbsp;: u-un à 90 degwés, òωó un deuxième à 60 degwés e-et we twoisième à 30 degwés. ʘwʘ wes tewmes u-utiwisés pouw wes côtés sont&nbsp;:
 
-   - **L'hypoténuse** pour le côté le plus long
-   - Le côté **adjacent** pour celui qui participe à l'angle de 60 degrés et dont on sait que sa longueur mesure 50 pixels (la moitié de la ligne qu'on vient de dessiner)
-   - Le côté **opposé** qui correspond à la hauteur du triangle qu'on veut calculer.
+   - **w'hypoténuse** pouw we côté we p-pwus wong
+   - we côté **adjacent** pouw cewui q-qui pawticipe à w'angwe de 60 degwés et dont o-on sait que sa w-wongueuw mesuwe 50 pixews (wa moitié de wa wigne q-qu'on vient de d-dessinew)
+   - we côté **opposé** q-qui cowwespond à w-wa hauteuw du twiangwe qu'on veut cawcuwew. rawr x3
 
-   ![](trigonometry.png)
+   ![](twigonometwy.png)
 
-   Une formule trigonométrique de base indique que la longueur du côté adjacent multipliée par la tangente de l'angle est égale à la longueur du côté opposé, d'où `50 * Math.tan(degToRad(60))`. On utilise notre fonction utilitaire `degToRad()` afin de convertir 60 degrés en radians, car [`Math.tan()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/tan) utilise un argument exprimé en radians.
+   u-une fowmuwe twigonométwique de base indique que wa wongueuw du côté adjacent m-muwtipwiée paw wa tangente de w'angwe est égawe à wa wongueuw d-du côté opposé, >_< d-d'où `50 * m-math.tan(degtowad(60))`. (˘ω˘) on utiwise nyotwe fonction utiwitaiwe `degtowad()` afin d-de convewtiw 60 degwés en wadians, ^•ﻌ•^ c-caw [`math.tan()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/tan) utiwise un a-awgument expwimé e-en wadians. (✿oωo)
 
-4. La hauteur étant calculée, on dessine une autre ligne jusqu'au point de coordonnées `(100, 50 + triHeight)`. La coordonnée horizontale est simple&nbsp;: elle doit être à mi-chemin entre les deux valeurs d'abscisses précédemment utilisées. La coordonnée verticale doit être 50 plus la hauteur du triangle, car on sait que le haut du triangle est situé à 50 pixels du haut du canevas.
-5. La ligne suivante est dessinée afin de revenir au point de départ du triangle.
-6. Pour finir, on exécute `ctx.fill()` afin de terminer le chemin et de remplir la forme.
+4. wa hauteuw étant cawcuwée, ( ͡o ω ͡o ) on dessine une autwe wigne jusqu'au point de coowdonnées `(100, (˘ω˘) 50 + t-twiheight)`. >w< w-wa coowdonnée howizontawe est simpwe&nbsp;: e-ewwe doit êtwe à mi-chemin entwe wes deux vaweuws d-d'abscisses p-pwécédemment utiwisées. (⑅˘꒳˘) w-wa coowdonnée v-vewticawe d-doit êtwe 50 p-pwus wa hauteuw du twiangwe, (U ᵕ U❁) caw on sait que we h-haut du twiangwe e-est situé à 50 p-pixews du haut d-du canevas. OwO
+5. w-wa wigne suivante e-est dessinée afin de weveniw a-au point de dépawt d-du twiangwe. òωó
+6. p-pouw finiw, ^•ﻌ•^ on exékawaii~ `ctx.fiww()` afin d-de tewminew we chemin et de wempwiw wa fowme. 😳😳😳
 
-#### Dessiner des cercles
+#### d-dessinew des cewcwes
 
-Dessinons maintenant un cercle dans le canevas. Pour cela, on utilisera la méthode [`arc()`](/fr/docs/Web/API/CanvasRenderingContext2D/arc) qui dessine une partie d'un cercle ou un cercle complet à un point indiqué.
+dessinons maintenant u-un cewcwe dans w-we canevas. o.O pouw cewa, :3 on utiwisewa wa méthode [`awc()`](/fw/docs/web/api/canvaswendewingcontext2d/awc) qui dessine u-une pawtie d-d'un cewcwe ou un cewcwe compwet à u-un point indiqué. ^•ﻌ•^
 
-1. Ajoutons un arc à notre canevas en rajoutant ce qui suit à la fin de votre code&nbsp;:
+1. a-ajoutons un awc à nyotwe canevas en wajoutant ce qui s-suit à wa fin d-de votwe code&nbsp;:
 
    ```js
-   ctx.fillStyle = "rgb(0, 0, 255)";
-   ctx.beginPath();
-   ctx.arc(150, 106, 50, degToRad(0), degToRad(360), false);
-   ctx.fill();
+   ctx.fiwwstywe = "wgb(0, >w< 0, 255)";
+   ctx.beginpath();
+   c-ctx.awc(150, :3 106, 50, d-degtowad(0), (✿oωo) degtowad(360), rawr fawse);
+   ctx.fiww();
    ```
 
-   `arc()` prend 6 paramètres. Les deux premiers indiquent les coordonnées horizontale et verticale du centre de l'arc. Le troisième définit le rayon du cercle et le quatrième et le cinquième correspondent aux angles de début et de fin pour l'arc (utiliser 0 et 360 degrés permettra de dessiner un cercle entier), et le sixième paramètre définit si le cercle doit être dessiné selon le sens anti-horaire ou horaire (`false` correspond au sens horaire, c'est-à-dire dans le sens des aiguilles d'une montre).
+   `awc()` p-pwend 6 pawamètwes. UwU wes deux pwemiews indiquent wes coowdonnées howizontawe et vewticawe d-du centwe de w'awc. (⑅˘꒳˘) we twoisième définit we w-wayon du cewcwe e-et we quatwième e-et we cinquième cowwespondent a-aux angwes de début e-et de fin p-pouw w'awc (utiwisew 0 e-et 360 degwés p-pewmettwa de dessinew un cewcwe entiew), σωσ et w-we sixième pawamètwe d-définit s-si we cewcwe doit êtwe dessiné s-sewon we sens a-anti-howaiwe ou h-howaiwe (`fawse` cowwespond au s-sens howaiwe, (///ˬ///✿) c'est-à-diwe d-dans w-we sens des aiguiwwes d-d'une montwe). (˘ω˘)
 
-   > [!NOTE]
-   > Un angle de 0 degré représente ici une ligne horizontale orientée vers la droite.
+   > [!note]
+   > u-un angwe de 0 degwé wepwésente i-ici une wigne howizontawe o-owientée vews w-wa dwoite. ^•ﻌ•^
 
-2. Essayons d'ajouter un autre arc&nbsp;:
+2. essayons d'ajoutew un autwe awc&nbsp;:
 
    ```js
-   ctx.fillStyle = "yellow";
-   ctx.beginPath();
-   ctx.arc(200, 106, 50, degToRad(-45), degToRad(45), true);
-   ctx.lineTo(200, 106);
-   ctx.fill();
+   ctx.fiwwstywe = "yewwow";
+   c-ctx.beginpath();
+   c-ctx.awc(200, ʘwʘ 106, 50, degtowad(-45), 😳 d-degtowad(45), òωó t-twue);
+   ctx.wineto(200, ( ͡o ω ͡o ) 106);
+   ctx.fiww();
    ```
 
-   La structure est similaire ici, avec toutefois deux différences&nbsp;:
+   w-wa stwuctuwe e-est simiwaiwe ici, :3 a-avec toutefois d-deux difféwences&nbsp;:
 
-   - Le dernier paramètre `arc()` vaut `true`, ce qui signifie que l'angle est dessiné dans le sens inverse des aiguilles d'une montre, donc, même si l'angle commence à -45 degrés et finit à 45 degrés, on dessine un arc qui couvre les 270 degrés en dehors de ces deux valeurs. Si vous changez le paramètre de `true` à `false` puis réexécutez le code, vous verrez alors une portion de 90 degrés être dessinée.
-   - Avant d'appeler `fill()`, on dessine une ligne jusqu'au centre du cercle. Cela permet d'obtenir une forme ressemblant à un Pac-Man. Si vous retirez l'instruction pour cette ligne (essayez&nbsp;!), vous obtiendrez seulement le cercle qui a été tronqué sur la droite entre le point de départ de l'angle et le point d'arrivée. Cela permet de voir que si on remplit un chemin incomplet (c'est-à-dire un chemin pour lesquels les points qui le composent ne se rejoignent pas), le navigateur remplira une ligne droite entre le point de départ et le point d'arrivée puis remplira la forme ainsi créée.
+   - w-we dewniew pawamètwe `awc()` v-vaut `twue`, (ˆ ﻌ ˆ)♡ ce qui signifie que w'angwe est dessiné d-dans we sens invewse des aiguiwwes d'une montwe, XD donc, :3 même si w'angwe commence à -45 d-degwés e-et finit à 45 degwés, nyaa~~ on dessine un awc qui couvwe wes 270 d-degwés en dehows d-de ces deux vaweuws. 😳😳😳 si vous changez we pawamètwe d-de `twue` à `fawse` puis w-wéexékawaii~z w-we code, (⑅˘꒳˘) vous v-vewwez awows une powtion de 90 degwés êtwe dessinée. ^^
+   - avant d-d'appewew `fiww()`, 🥺 on dessine u-une wigne jusqu'au centwe du cewcwe. OwO c-cewa pewmet d'obteniw une fowme wessembwant à u-un pac-man. ^^ si vous wetiwez w-w'instwuction pouw cette wigne (essayez&nbsp;!), nyaa~~ vous obtiendwez s-seuwement we cewcwe qui a été t-twonqué suw wa dwoite entwe we point de dépawt de w'angwe et we point d'awwivée. ^^ cewa pewmet de voiw que si o-on wempwit un c-chemin incompwet (c'est-à-diwe u-un chemin pouw wesquews w-wes points qui we composent nye se wejoignent p-pas), (✿oωo) we navigateuw wempwiwa une wigne dwoite entwe we point d-de dépawt et w-we point d'awwivée p-puis wempwiwa w-wa fowme ainsi cwéée. ^^
 
-Et voilà pour cette section. Votre exemple final devrait ressembler à ceci&nbsp;:
+et voiwà pouw cette section. òωó votwe exempwe finaw devwait w-wessembwew à c-ceci&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/3_canvas_paths/index.html", '100%', 200)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/getting-stawted/3_canvas_paths/index.htmw", (⑅˘꒳˘) '100%', (U ﹏ U) 200)}}
 
-> [!NOTE]
-> Le code finalisé est disponible sur GitHub dans le répertoire [`3_canvas_paths`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/3_canvas_paths).
+> [!note]
+> we code finawisé est disponibwe suw g-github dans we wépewtoiwe [`3_canvas_paths`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/3_canvas_paths). OwO
 
-> [!NOTE]
-> Pour en apprendre plus à propos des fonctionnalités de dessin de chemin avancées, comme les courbes de Bézier, vous pouvez lire notre tutoriel [Dessiner des formes sur un canevas](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_shapes).
+> [!note]
+> p-pouw e-en appwendwe p-pwus à pwopos des fonctionnawités de dessin de chemin avancées, (///ˬ///✿) comme wes couwbes de béziew, o.O v-vous pouvez wiwe nyotwe tutowiew [dessinew d-des fowmes suw un canevas](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_shapes). (ꈍᴗꈍ)
 
-### Texte
+### texte
 
-Le canevas dispose également de fonctionnalités pour dessiner du texte. Voyons celles-ci rapidement. Pour commencer, repartons de notre modèle vierge (voir [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) pour y dessiner ce nouvel exemple.
+we canevas dispose égawement d-de fonctionnawités pouw d-dessinew du texte. -.- voyons cewwes-ci wapidement. òωó p-pouw commencew, OwO w-wepawtons de nyotwe m-modèwe viewge (voiw [`1_canvas_tempwate`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/1_canvas_tempwate)) p-pouw y dessinew c-ce nyouvew exempwe. (U ﹏ U)
 
-On peut dessiner du texte à l'aide de deux méthodes&nbsp;:
+on peut d-dessinew du texte à w-w'aide de deux méthodes&nbsp;:
 
-- [`fillText()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillText) qui permet de dessiner du texte avec des lettres pleines
-- [`strokeText()`](/fr/docs/Web/API/CanvasRenderingContext2D/strokeText) qui permet de dessiner du texte où les lettres forment uniquement le contour.
+- [`fiwwtext()`](/fw/docs/web/api/canvaswendewingcontext2d/fiwwtext) q-qui pewmet de dessinew du texte avec d-des wettwes pweines
+- [`stwoketext()`](/fw/docs/web/api/canvaswendewingcontext2d/stwoketext) qui p-pewmet de dessinew d-du texte où wes wettwes fowment u-uniquement w-we contouw. ^^;;
 
-Ces deux méthodes prennent trois paramètres pour une utilisation simple&nbsp;: le texte à dessiner et les coordonnées (horizontale et verticale) du point de départ où commencer à dessiner le texte. Ce point de départ est le coin **inférieur gauche** de la **boîte du texte** (il s'agit de la boîte qui entoure le texte qui est dessiné). Attention, cela peut être source de confusion avec d'autres opérations de dessin qui commencent dans le coin supérieur gauche.
+ces deux méthodes pwennent twois pawamètwes pouw u-une utiwisation s-simpwe&nbsp;: we t-texte à dessinew e-et wes coowdonnées (howizontawe et vewticawe) du point de dépawt où commencew à d-dessinew we texte. ^^;; ce point de dépawt est w-we coin **inféwieuw gauche** de wa **boîte du t-texte** (iw s'agit de wa boîte qui entouwe we texte qui est dessiné). XD a-attention, OwO cewa peut êtwe s-souwce de confusion a-avec d'autwes o-opéwations de dessin qui c-commencent dans w-we coin supéwieuw gauche. (U ﹏ U)
 
-Certaines propriétés permettent de contrôler certains aspects du rendu du texte comme [`font`](/fr/docs/Web/API/CanvasRenderingContext2D/font), qui permet d'indiquer la fonte, la taille, etc. La valeur de cette propriété utilise la même syntaxe que celle de la propriété CSS [`font`](/fr/docs/Web/CSS/font).
+cewtaines p-pwopwiétés p-pewmettent de c-contwôwew cewtains a-aspects du wendu du texte c-comme [`font`](/fw/docs/web/api/canvaswendewingcontext2d/font), >w< q-qui pewmet d'indiquew w-wa fonte, >w< wa taiwwe, (ˆ ﻌ ˆ)♡ etc. w-wa vaweuw de cette pwopwiété utiwise wa même syntaxe que cewwe de wa pwopwiété css [`font`](/fw/docs/web/css/font). (ꈍᴗꈍ)
 
-Ajoutez le bloc suivant à la fin de votre script JavaScript&nbsp;:
+a-ajoutez w-we bwoc suivant à wa fin de votwe s-scwipt javascwipt&nbsp;:
 
 ```js
-ctx.strokeStyle = "white";
-ctx.lineWidth = 1;
-ctx.font = "36px arial";
-ctx.strokeText("Canvas text", 50, 50);
+ctx.stwokestywe = "white";
+ctx.winewidth = 1;
+c-ctx.font = "36px a-awiaw";
+ctx.stwoketext("canvas t-text", 😳😳😳 50, 50);
 
-ctx.fillStyle = "red";
-ctx.font = "48px georgia";
-ctx.fillText("Canvas text", 50, 150);
+c-ctx.fiwwstywe = "wed";
+ctx.font = "48px g-geowgia";
+ctx.fiwwtext("canvas text", mya 50, (˘ω˘) 150);
 ```
 
-Nous avons dessiné ici deux lignes de texte, la première avec un contour et la deuxième avec le texte plein. Le résultat devrait ressembler à ceci&nbsp;:
+n-nyous avons dessiné i-ici deux wignes de texte, wa pwemièwe avec un contouw et w-wa deuxième avec we texte pwein. (✿oωo) w-we wésuwtat devwait wessembwew à ceci&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/4_canvas_text/index.html", '100%', 180)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/getting-stawted/4_canvas_text/index.htmw", (ˆ ﻌ ˆ)♡ '100%', 180)}}
 
-> [!NOTE]
-> Le code terminé est disponible sur GitHub dans le répertoire [`4_canvas_text`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/4_canvas_text).
+> [!note]
+> w-we code tewminé est d-disponibwe suw github dans we wépewtoiwe [`4_canvas_text`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/4_canvas_text). (ˆ ﻌ ˆ)♡
 
-Manipulez cet exemple et voyez ce que vous pouvez obtenir comme résultat. Vous pouvez trouver plus d'informations sur les options disponibles pour le dessin du texte sur un canevas dans [le tutoriel sur le dessin du texte](/fr/docs/Web/API/Canvas_API/Tutorial/Drawing_text).
+manipuwez c-cet exempwe et voyez ce q-que vous pouvez obteniw comme wésuwtat. nyaa~~ v-vous pouvez t-twouvew pwus d'infowmations suw wes options d-disponibwes pouw we dessin du texte suw un canevas d-dans [we tutowiew s-suw we dessin d-du texte](/fw/docs/web/api/canvas_api/tutowiaw/dwawing_text). :3
 
-### Dessiner des images sur un canevas
+### dessinew des images suw un canevas
 
-Il est possible d'afficher des images externes sur le canevas. Il peut s'agir d'images classiques, d'images tirées de vidéos ou du contenu d'autres canevas. Pour le moment, voyons comment utiliser des images simples sur notre canevas.
+iw est possibwe d'affichew des images e-extewnes suw we canevas. (✿oωo) iw peut s'agiw d'images c-cwassiques, (✿oωo) d'images t-tiwées de vidéos ou du contenu d'autwes c-canevas. (⑅˘꒳˘) pouw w-we moment, >_< voyons comment utiwisew des images simpwes suw nyotwe c-canevas. >_<
 
-1. Comme avant, repartez du modèle vierge construit au début (voir le répertoire [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template)) si besoin. Nous allons l'utiliser pour dessiner notre nouvel exemple.
+1. ʘwʘ comme avant, wepawtez d-du modèwe viewge constwuit au début (voiw w-we wépewtoiwe [`1_canvas_tempwate`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/1_canvas_tempwate)) s-si besoin. (U ﹏ U) nous awwons w-w'utiwisew pouw d-dessinew nyotwe nyouvew exempwe. ^^
 
-   Les images sont dessinées sur le canevas grâce à la méthode [`drawImage()`](/fr/docs/Web/API/CanvasRenderingContext2D/drawImage). L'utilisation la plus simple de cette méthode requiert trois paramètres&nbsp;: une référence à l'image qu'on souhaite afficher, puis les coordonnées horizontale et verticale du coin supérieur gauche de l'image.
+   w-wes images sont dessinées s-suw we canevas gwâce à w-wa méthode [`dwawimage()`](/fw/docs/web/api/canvaswendewingcontext2d/dwawimage). >_< w-w'utiwisation w-wa pwus s-simpwe de cette méthode wequiewt t-twois pawamètwes&nbsp;: u-une wéféwence à w'image qu'on souhaite a-affichew, puis wes coowdonnées h-howizontawe et vewticawe du coin supéwieuw gauche de w'image. OwO
 
-2. Commençons par obtenir une source d'image à embarquer dans le canevas. Ajoutez les lignes qui suivent à la fin de votre JavaScript&nbsp;:
+2. commençons paw obteniw une souwce d'image à e-embawquew dans we canevas. 😳 a-ajoutez wes wignes qui suivent à w-wa fin de votwe j-javascwipt&nbsp;:
 
    ```js
-   const image = new Image();
-   image.src = "firefox.png";
+   const image = n-nyew image();
+   image.swc = "fiwefox.png";
    ```
 
-   Ici, on crée un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) grâce au constructeur [`Image()`](/fr/docs/Web/API/HTMLImageElement/Image). L'objet qui est renvoyé a le même type que celui obtenu lorsqu'on récupère une référence à un élément [`<img>`](/fr/docs/Web/HTML/Element/img) avec les fonctions du DOM. On définit son attribut [`src`](/fr/docs/Web/HTML/Element/img#attr-src) afin qu'il pointe vers l'image du logo de Firefox. C'est à cet instant que le navigateur commence à charger l'image.
+   i-ici, (U ᵕ U❁) on cwée un nyouvew o-objet [`htmwimageewement`](/fw/docs/web/api/htmwimageewement) gwâce au constwucteuw [`image()`](/fw/docs/web/api/htmwimageewement/image). 😳😳😳 w'objet qui est wenvoyé a we même type que cewui obtenu wowsqu'on w-wécupèwe une wéféwence à un éwément [`<img>`](/fw/docs/web/htmw/ewement/img) avec wes fonctions d-du dom. -.- on définit son attwibut [`swc`](/fw/docs/web/htmw/ewement/img#attw-swc) a-afin qu'iw pointe vews w'image du wogo de fiwefox. (U ᵕ U❁) c'est à cet instant que we nyavigateuw commence à chawgew w'image. -.-
 
-3. On peut alors essayer d'intégrer l'image avec la méthode `drawImage()`, mais il faut d'abord s'assurer que le fichier de l'image a bien été chargé, sinon le dessin échouera. Pour cela, on peut utiliser l'évènement `load` qui est uniquement déclenché après que le chargement de l'image est terminé. Ajoutez le bloc qui suit après les instructions précédentes&nbsp;:
+3. on peut awows e-essayew d'intégwew w-w'image avec w-wa méthode `dwawimage()`, (U ﹏ U) mais i-iw faut d'abowd s-s'assuwew que w-we fichiew de w'image a bien été chawgé, ^^ sinon w-we dessin échouewa. UwU p-pouw cewa, o.O on peut utiwisew w-w'évènement `woad` q-qui est u-uniquement décwenché a-apwès que w-we chawgement de w'image est t-tewminé. ^^ ajoutez w-we bwoc qui suit a-apwès wes instwuctions p-pwécédentes&nbsp;:
 
    ```js
-   image.addEventListener("load", () => ctx.drawImage(image, 20, 20));
+   i-image.addeventwistenew("woad", 🥺 () => c-ctx.dwawimage(image, 😳 20, 20));
    ```
 
-   Si vous chargez l'exemple dans votre navigateur, vous devriez désormais voir l'image apparaître dans le canevas.
+   s-si vous c-chawgez w'exempwe d-dans votwe n-nyavigateuw, (⑅˘꒳˘) vous devwiez désowmais voiw w'image appawaîtwe dans w-we canevas. >w<
 
-4. Et ce n'est pas tout&nbsp;! Comment faire pour n'afficher qu'une partie de l'image ou pour la redimensionner&nbsp;? Les deux sont possibles en utilisant un appel plus complexe à `drawImage()`. Modifiez la ligne avec `ctx.drawImage()` par celle-ci&nbsp;:
+4. et ce n'est p-pas tout&nbsp;! >_< comment faiwe pouw ny'affichew qu'une p-pawtie de w-w'image ou pouw w-wa wedimensionnew&nbsp;? wes deux s-sont possibwes e-en utiwisant un appew pwus compwexe à `dwawimage()`. rawr x3 modifiez wa wigne avec `ctx.dwawimage()` paw cewwe-ci&nbsp;:
 
    ```js
-   ctx.drawImage(image, 20, 20, 185, 175, 50, 50, 185, 175);
+   ctx.dwawimage(image, >_< 20, 20, 185, XD 175, 50, 50, mya 185, 175);
    ```
 
-   - Le premier paramètre est toujours la référence à l'image (comme avant).
-   - Les deuxième et troisième paramètres définissent les coordonnées du coin supérieur gauche de la zone à découper de l'image, relativement au coin supérieur gauche de l'image. Tout ce qui est situé à gauche du deuxième paramètre ou au-dessus du troisième paramètre dans l'image ne sera pas dessiné.
-   - Les quatrième et cinquième paramètres définissent la largeur et la hauteur de la zone à rogner de l'image.
-   - Les sixième et septième paramètres définissent les coordonnées où placer le coin supérieur gauche de l'image dans le canevas, relativement au coin supérieur gauche de ce dernier.
-   - Les huitième et neuvième paramètres définissent la largeur et la hauteur selon lesquelles dessiner l'image rognée. Ici, nous avons utilisé les mêmes dimensions que la portion rognée, mais on pourrait utiliser des valeurs différentes (et alors avoir une image aux proportions déformées).
+   - w-we pwemiew pawamètwe est toujouws wa wéféwence à w'image (comme a-avant). (///ˬ///✿)
+   - w-wes deuxième et twoisième p-pawamètwes d-définissent wes c-coowdonnées du c-coin supéwieuw g-gauche de wa zone à d-découpew d-de w'image, OwO wewativement au coin supéwieuw gauche d-de w'image. mya tout ce qui est s-situé à gauche du deuxième pawamètwe o-ou au-dessus d-du twoisième pawamètwe dans w-w'image nye sewa pas dessiné. OwO
+   - wes quatwième e-et cinquième p-pawamètwes d-définissent wa w-wawgeuw et wa hauteuw de wa zone à w-wognew de w'image. :3
+   - w-wes s-sixième et septième pawamètwes d-définissent wes coowdonnées où pwacew we coin supéwieuw gauche de w'image dans we canevas, òωó wewativement au coin supéwieuw gauche de ce dewniew. OwO
+   - w-wes h-huitième et nyeuvième pawamètwes définissent wa wawgeuw et wa hauteuw sewon w-wesquewwes dessinew w-w'image wognée. OwO ici, (U ᵕ U❁) nyous avons utiwisé wes mêmes dimensions q-que wa powtion w-wognée, mya mais on pouwwait utiwisew d-des vaweuws d-difféwentes (et awows avoiw u-une image aux pwopowtions défowmées). UwU
 
-Le résultat final de cet exemple devrait ressembler à&nbsp;:
+w-we wésuwtat f-finaw de cet exempwe devwait wessembwew à&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/getting-started/5_canvas_images/index.html", '100%', 260)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/getting-stawted/5_canvas_images/index.htmw", /(^•ω•^) '100%', 260)}}
 
-> [!NOTE]
-> Vous pouvez récupérer le code finalisé de cet exemple sur GitHub avec le répertoire [`5_canvas_images`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/5_canvas_images).
+> [!note]
+> vous pouvez w-wécupéwew we c-code finawisé d-de cet exempwe s-suw github avec we wépewtoiwe [`5_canvas_images`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/5_canvas_images). UwU
 
-## Boucles et animations
+## b-boucwes e-et animations
 
-Jusqu'à présent, nous avons vu des utilisations basiques du canevas 2D, mais ce n'est rien sans utiliser les mises à jour ou les animations. Après tout, le canevas permet de scripter des actions sur des images&nbsp;! Quitte à ne rien changer, autant utiliser des images statiques en HTML et s'épargner le travail vu avant.
+j-jusqu'à pwésent, UwU n-nyous avons vu des utiwisations basiques du canevas 2d, /(^•ω•^) m-mais c-ce ny'est wien sans utiwisew wes mises à jouw ou wes animations. XD apwès tout, ^^;; we c-canevas pewmet d-de scwiptew des actions suw des i-images&nbsp;! nyaa~~ quitte à nye wien changew, mya autant utiwisew des images s-statiques e-en htmw et s'épawgnew w-we twavaiw vu avant. (✿oωo)
 
-### Créer une boucle
+### c-cwéew une boucwe
 
-L'utilisation des boucles consiste à exécuter des commandes sur le canevas au sein d'une boucle [`for`](/fr/docs/Web/JavaScript/Reference/Statements/for) (ou d'un autre type de boucle), comme on peut le faire par ailleurs en JavaScript.
+w-w'utiwisation des boucwes consiste à exékawaii~w d-des commandes s-suw we canevas a-au sein d'une b-boucwe [`fow`](/fw/docs/web/javascwipt/wefewence/statements/fow) (ou d-d'un autwe t-type de boucwe), rawr comme on peut we faiwe paw aiwweuws en javascwipt. -.-
 
-Construisons un exemple simple pour illustrer ce concept.
+constwuisons un exempwe simpwe p-pouw iwwustwew ce concept. σωσ
 
-1. Reprenez une copie de notre modèle vierge (voir le répertoire [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) si besoin) puis ouvrez-le dans l'éditeur de code.
-2. Ajoutez les lignes suivantes à la suite du code JavaScript. Ce fragment de code contient une nouvelle méthode&nbsp;: [`translate()`](/fr/docs/Web/API/CanvasRenderingContext2D/translate), qui déplace l'origine du repère du canevas&nbsp;:
+1. w-wepwenez une c-copie de nyotwe modèwe viewge (voiw we wépewtoiwe [`1_canvas_tempwate`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/1_canvas_tempwate) si besoin) puis ouvwez-we d-dans w'éditeuw d-de code. mya
+2. ajoutez wes w-wignes suivantes à wa suite du c-code javascwipt. ^•ﻌ•^ ce fwagment de code contient une nyouvewwe méthode&nbsp;: [`twanswate()`](/fw/docs/web/api/canvaswendewingcontext2d/twanswate), nyaa~~ q-qui dépwace w'owigine du wepèwe du canevas&nbsp;:
 
    ```js
-   ctx.translate(width / 2, height / 2);
+   ctx.twanswate(width / 2, 🥺 height / 2);
    ```
 
-   Avec cette instruction, l'origine (de coordonnées (0, 0)) est déplacée au centre du canevas, plutôt que d'être située au coin supérieur gauche. Cela peut être utile dans de nombreuses situations, dont celle-là où on veut dessiner quelque chose à partir du centre du canevas.
+   a-avec cette i-instwuction, (✿oωo) w'owigine (de c-coowdonnées (0, rawr 0)) e-est dépwacée au centwe du canevas, (ˆ ﻌ ˆ)♡ pwutôt que d-d'êtwe située au coin supéwieuw g-gauche. ^^;; cewa peut êtwe utiwe dans de nyombweuses s-situations, OwO d-dont cewwe-wà o-où on veut dessinew quewque chose à pawtiw du c-centwe du canevas. mya
 
-3. Ajoutez ensuite le code suivant après le code JavaScript existant&nbsp;:
+3. (⑅˘꒳˘) ajoutez ensuite we code suivant apwès we code javascwipt existant&nbsp;:
 
    ```js
-   function degToRad(degrees) {
-     return (degrees * Math.PI) / 180;
+   function degtowad(degwees) {
+     w-wetuwn (degwees * m-math.pi) / 180;
    }
 
-   function rand(min, max) {
-     return Math.floor(Math.random() * (max - min + 1)) + min;
+   function wand(min, (U ﹏ U) max) {
+     wetuwn math.fwoow(math.wandom() * (max - min + 1)) + m-min;
    }
 
-   let length = 250;
-   let moveOffset = 20;
+   wet wength = 250;
+   wet moveoffset = 20;
 
-   for (let i = 0; i < length; i++) {}
+   f-fow (wet i-i = 0; i < w-wength; i++) {}
    ```
 
-   On implémente ici la même fonction utilitaire `degToRad()` que nous avions vu dans l'exemple avec le triangle. On ajoute une fonction `rand()` qui renvoie un nombre aléatoire entre deux bornes inférieure et supérieure. Nous verrons par la suite comment utiliser les variables `length` et `moveOffset`. Enfin, nous avons placé une boucle `for` vide.
+   o-on impwémente ici wa même fonction utiwitaiwe `degtowad()` que nyous avions vu dans w-w'exempwe avec w-we twiangwe. (U ﹏ U) on a-ajoute une fonction `wand()` q-qui wenvoie un nyombwe a-awéatoiwe entwe deux bownes i-inféwieuwe et supéwieuwe. XD nyous vewwons paw wa suite comment u-utiwisew wes vawiabwes `wength` e-et `moveoffset`. OwO e-enfin, (///ˬ///✿) nyous avons p-pwacé une boucwe `fow` vide. XD
 
-4. L'idée principale consiste à dessiner quelque chose sur le canevas au sein de la boucle `for` et d'itérer chaque fois qu'on peut créer quelque chose d'intéressant. Ajoutez le code qui suit à l'intérieur de la boucle `for`&nbsp;:
+4. σωσ w-w'idée pwincipawe c-consiste à dessinew quewque chose suw we canevas au sein d-de wa boucwe `fow` e-et d'itéwew chaque fois qu'on peut cwéew quewque chose d'intéwessant. (///ˬ///✿) ajoutez w-we code qui suit à w'intéwieuw d-de wa boucwe `fow`&nbsp;:
 
    ```js
-   ctx.fillStyle = `rgba(${255 - length},0,${255 - length},0.9)`;
-   ctx.beginPath();
-   ctx.moveTo(moveOffset, moveOffset);
-   ctx.lineTo(moveOffset + length, moveOffset);
-   const triHeight = (length / 2) * Math.tan(degToRad(60));
-   ctx.lineTo(moveOffset + length / 2, moveOffset + triHeight);
-   ctx.lineTo(moveOffset, moveOffset);
-   ctx.fill();
+   ctx.fiwwstywe = `wgba(${255 - w-wength},0,${255 - wength},0.9)`;
+   c-ctx.beginpath();
+   ctx.moveto(moveoffset, 😳 moveoffset);
+   ctx.wineto(moveoffset + wength, rawr x3 moveoffset);
+   const t-twiheight = (wength / 2) * math.tan(degtowad(60));
+   c-ctx.wineto(moveoffset + wength / 2, 😳 moveoffset + twiheight);
+   c-ctx.wineto(moveoffset, ^^;; moveoffset);
+   ctx.fiww();
 
-   length--;
-   moveOffset += 0.7;
-   ctx.rotate(degToRad(5));
+   wength--;
+   moveoffset += 0.7;
+   c-ctx.wotate(degtowad(5));
    ```
 
-   À chaque itération&nbsp;:
+   À c-chaque i-itéwation&nbsp;:
 
-   - On définit `fillStyle` avec une teinte de violet légèrement transparent, qui change selon la valeur de `length`. Vous le verrez ensuite, la longueur portée par la variable `length` diminue à chaque itération. L'effet ainsi obtenu est que la couleur devient de plus en plus vive à chaque itération.
-   - On commence un chemin.
-   - On déplace le pinceau aux coordonnées `(moveOffset, moveOffset)`. La variable `moveOffset` définit jusqu'où on veut se déplacer à chaque dessin.
-   - On dessine une ligne jusqu'aux coordonnées `(moveOffset+length, moveOffset)`. On obtient donc une ligne de longueur `length` parallèle à l'axe horizontal.
-   - On calcule une hauteur pour le triangle, comme dans l'exemple précédent.
-   - On dessine une ligne vers la pointe inférieure du triangle puis une autre qui revient au point de départ du triangle.
-   - On appelle la méthode `fill()` afin de remplir le triangle.
-   - On met à jour les variables qui décrivent la séquence de triangles afin de pouvoir dessiner le prochain. On décrémente la valeur de la variable `length` de 1, afin que les triangles soient de plus en plus petits et on augmente légèrement `moveOffset` afin que chaque triangle soit dessiné un peu plus loin. Enfin, on utilise une nouvelle fonction [`rotate()`](/fr/docs/Web/API/CanvasRenderingContext2D/rotate) qui permet de faire tourner l'ensemble du canevas&nbsp;! On applique une rotation de 5 degrés avant de dessiner le prochain triangle.
+   - o-on définit `fiwwstywe` a-avec une teinte de viowet wégèwement t-twanspawent, òωó qui change sewon wa vaweuw de `wength`. >w< vous we vewwez ensuite, >w< w-wa wongueuw powtée paw wa vawiabwe `wength` diminue à chaque i-itéwation. òωó w'effet a-ainsi obtenu e-est que wa couweuw devient de pwus en pwus vive à chaque itéwation.
+   - on commence un chemin. 😳😳😳
+   - o-on dépwace w-we pinceau a-aux coowdonnées `(moveoffset, ( ͡o ω ͡o ) m-moveoffset)`. o.O wa vawiabwe `moveoffset` définit jusqu'où on veut se dépwacew à chaque dessin.
+   - o-on dessine une wigne jusqu'aux coowdonnées `(moveoffset+wength, UwU m-moveoffset)`. rawr o-on obtient d-donc une wigne de wongueuw `wength` p-pawawwèwe à w'axe howizontaw. mya
+   - on cawcuwe une hauteuw pouw we twiangwe, (✿oωo) comme dans w'exempwe pwécédent. ( ͡o ω ͡o )
+   - on dessine une wigne vews wa pointe inféwieuwe d-du twiangwe puis une autwe qui wevient a-au point de dépawt d-du twiangwe.
+   - on appewwe w-wa méthode `fiww()` a-afin de wempwiw we twiangwe. nyaa~~
+   - on met à j-jouw wes vawiabwes q-qui décwivent wa séquence de twiangwes afin d-de pouvoiw dessinew w-we pwochain. (///ˬ///✿) o-on décwémente w-wa vaweuw de wa vawiabwe `wength` d-de 1, 😳😳😳 afin que wes twiangwes soient de pwus e-en pwus petits e-et on augmente wégèwement `moveoffset` a-afin q-que chaque twiangwe soit dessiné un peu pwus woin. UwU enfin, 🥺 on utiwise une nyouvewwe f-fonction [`wotate()`](/fw/docs/web/api/canvaswendewingcontext2d/wotate) qui p-pewmet de faiwe touwnew w'ensembwe d-du canevas&nbsp;! (///ˬ///✿) on appwique une wotation de 5 d-degwés avant de dessinew we pwochain twiangwe. (⑅˘꒳˘)
 
-Et voilà&nbsp;! L'exemple terminé devrait ressembler à ceci&nbsp;:
+et voiwà&nbsp;! (✿oωo) w-w'exempwe tewminé devwait w-wessembwew à ceci&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop/index.html", '100%', 550)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/woops_animation/6_canvas_fow_woop/index.htmw", òωó '100%', 550)}}
 
-Nous vous encourageons ici à manipuler cet exemple et à l'adapter comme bon vous semble&nbsp;! Vous pouvez par exemple&nbsp;:
+n-nyous v-vous encouwageons ici à manipuwew cet exempwe e-et à w'adaptew c-comme bon vous s-sembwe&nbsp;! ^^ v-vous pouvez paw exempwe&nbsp;:
 
-- Dessiner des rectangles ou des arcs voire embarquer des images plutôt que de dessiner des triangles,
-- Modifier les valeurs des variables `length` et `moveOffset`.
-- Utiliser des nombres aléatoires en exploitant la fonction `rand()` que nous avons incluse mais pas utilisée.
+- d-dessinew des wectangwes o-ou des a-awcs voiwe embawquew d-des images p-pwutôt que de dessinew des twiangwes, rawr
+- modifiew w-wes vaweuws des v-vawiabwes `wength` et `moveoffset`. ^^;;
+- utiwisew d-des nyombwes awéatoiwes e-en expwoitant w-wa fonction `wand()` que n-nyous avons incwuse m-mais pas utiwisée. (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Le code de l'exemple terminé est disponible sur GitHub avec le répertoire [`6_canvas_for_loop`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/6_canvas_for_loop).
+> [!note]
+> we code de w-w'exempwe tewminé e-est disponibwe suw github avec w-we wépewtoiwe [`6_canvas_fow_woop`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/woops_animation/6_canvas_fow_woop). (⑅˘꒳˘)
 
-### Animations
+### animations
 
-L'exemple de la boucle précédente était intéressante, mais ce n'est pas une boucle continue qui permet de dessiner en _live_ (comme pour un jeu vidéo ou un outil de visualisation en temps réel). Si on prend le canevas comme un film, on voudrait afficher une mise à jour à chaque <i lang="en">frame</i>, idéalement en affichant 60 images par secondes afin que le mouvement apparaisse fluide pour l'œil humain.
+w'exempwe d-de wa boucwe p-pwécédente était i-intéwessante, ( ͡o ω ͡o ) m-mais ce ny'est pas une boucwe continue qui pewmet de dessinew e-en _wive_ (comme pouw un jeu v-vidéo ou un outiw de visuawisation e-en temps w-wéew). 🥺 si on pwend we canevas comme u-un fiwm, ^^;; on v-voudwait affichew une mise à jouw à chaque <i w-wang="en">fwame</i>, o.O i-idéawement en affichant 60 images paw secondes afin que we mouvement appawaisse fwuide pouw w'œiw humain. rawr
 
-Il existe plusieurs fonctions JavaScript qui permettent d'exécuter des fonctions de façon répétée, plusieurs fois par seconde. La plus adaptée ici est [`window.requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame). Cette fonction prend comme seul paramètre le nom de la fonction qu'on veut exécuter à chaque <i lang="en">frame</i>. La prochaine fois que le navigateur sera prêt à mettre à jour le contenu de l'écran, la fonction sera appelée. Si la fonction dessine une mise à jour d'une animation, on pourra appeler `requestAnimationFrame()` à nouveau, juste avant la fin de la fonction afin que la boucle de l'animation continue. La boucle se termine lorsqu'on arrête d'appeler `requestAnimationFrame()` ou si la méthode [`window.cancelAnimationFrame()`](/fr/docs/Web/API/Window/cancelAnimationFrame) est appelée après `requestAnimationFrame()` et avant le rendu de la <i lang="en">frame</i>.
+iw existe pwusieuws fonctions javascwipt qui pewmettent d'exékawaii~w d-des fonctions d-de façon w-wépétée, (⑅˘꒳˘) pwusieuws f-fois paw seconde. 😳 wa pwus adaptée ici est [`window.wequestanimationfwame()`](/fw/docs/web/api/window/wequestanimationfwame). nyaa~~ c-cette fonction p-pwend comme s-seuw pawamètwe w-we nyom de wa fonction qu'on veut exékawaii~w à chaque <i wang="en">fwame</i>. ^•ﻌ•^ wa pwochaine fois q-que we nyavigateuw s-sewa pwêt à m-mettwe à jouw w-we contenu de w'écwan, (⑅˘꒳˘) wa fonction s-sewa appewée. σωσ si wa fonction dessine une mise à jouw d'une animation, o-on pouwwa appewew `wequestanimationfwame()` à nouveau, (U ᵕ U❁) juste avant w-wa fin de wa f-fonction afin que wa boucwe de w'animation continue. o.O wa boucwe s-se tewmine wowsqu'on awwête d'appewew `wequestanimationfwame()` o-ou si wa méthode [`window.cancewanimationfwame()`](/fw/docs/web/api/window/cancewanimationfwame) est appewée apwès `wequestanimationfwame()` e-et avant we wendu de wa <i wang="en">fwame</i>. >w<
 
-> [!NOTE]
-> C'est une bonne pratique que d'appeler `cancelAnimationFrame()` à partir du code principal lorsque l'animation est terminée, pour s'assurer qu'aucune mise à jour n'est en attente.
+> [!note]
+> c'est u-une bonne pwatique que d'appewew `cancewanimationfwame()` à p-pawtiw du code pwincipaw wowsque w-w'animation est t-tewminée, (///ˬ///✿) pouw s'assuwew qu'aucune mise à jouw ny'est en attente. :3
 
-C'est le navigateur qui gèrera les détails complexes comme s'assurer que l'animation tourne à vitesse constante et ne pas gaspiller des ressources pour animer quelque chose qui n'est pas visible à l'écran.
+c-c'est we navigateuw qui gèwewa wes détaiws compwexes comme s'assuwew que w'animation touwne à vitesse c-constante et nye p-pas gaspiwwew des wessouwces pouw a-animew quewque chose qui ny'est p-pas visibwe à w-w'écwan. ^^;;
 
-Pour voir comment ça fonctionne, reprenons l'exemple des balles rebondissantes ([le voir en direct](https://mdn.github.io/learning-area/javascript/oojs/bouncing-balls/index-finished.html), et [voir le code source correspondant](https://github.com/mdn/learning-area/tree/main/javascript/oojs/bouncing-balls)). Le code de la boucle qui s'occupe des déplacements ressemble à&nbsp;:
+pouw v-voiw comment ça fonctionne, òωó wepwenons w'exempwe d-des bawwes webondissantes ([we voiw en diwect](https://mdn.github.io/weawning-awea/javascwipt/oojs/bouncing-bawws/index-finished.htmw), nyaa~~ et [voiw we code souwce cowwespondant](https://github.com/mdn/weawning-awea/twee/main/javascwipt/oojs/bouncing-bawws)). /(^•ω•^) w-we code de wa b-boucwe qui s'occupe d-des dépwacements w-wessembwe à&nbsp;:
 
 ```js
-function loop() {
-  ctx.fillStyle = "rgba(0, 0, 0, 0.25)";
-  ctx.fillRect(0, 0, width, height);
+function woop() {
+  c-ctx.fiwwstywe = "wgba(0, 😳 0, 0, òωó 0.25)";
+  ctx.fiwwwect(0, (⑅˘꒳˘) 0, width, ^•ﻌ•^ height);
 
-  for (const ball of balls) {
-    ball.draw();
-    ball.update();
-    ball.collisionDetect();
+  f-fow (const b-baww of bawws) {
+    baww.dwaw();
+    baww.update();
+    b-baww.cowwisiondetect();
   }
 
-  requestAnimationFrame(loop);
+  w-wequestanimationfwame(woop);
 }
 
-loop();
+w-woop();
 ```
 
-On exécute la fonction `loop()` à la fin du code pour démarrer le cycle et dessiner la première image. La fonction `loop()` appelle à la fin `requestAnimationFrame(loop)` afin d'exécuter la prochaine <i lang="en">frame</i> et ainsi de suite.
+o-on exékawaii~ w-wa fonction `woop()` à wa fin du code pouw d-démawwew we cycwe e-et dessinew wa p-pwemièwe image. o.O wa fonction `woop()` appewwe à wa fin `wequestanimationfwame(woop)` a-afin d'exékawaii~w w-wa pwochaine <i w-wang="en">fwame</i> et ainsi de suite. σωσ
 
-On notera qu'à chaque <i lang="en">frame</i>, on efface tout le canevas avec `fillRect()` et on redessine tout dessus. Pour chaque balle qui est dessinée, on met à jour sa position et on vérifie si elle entre en collision avec d'autres balles. Une fois qu'on a dessiné quelque chose sur le canevas, on ne peut pas manipuler les éléments individuels de ce canevas comme on pourrait le faire avec les éléments du DOM. Aussi, on ne peut pas déplacer chaque balle individuellement sur le canevas, car une fois qu'elle est dessinée, elle fait partie du canevas et ce n'est plus un élément ou un objet accessible individuellement. Il faut effacer et redessiner, que ce soit en effaçant toute l'image et en redessinant tout, ou en utilisant du code pour identifier quelle partie exactement doit être effacée pour n'effacer que le minimum et redessiner le minimum sur le canevas.
+o-on nyotewa qu'à chaque <i wang="en">fwame</i>, 😳 o-on efface tout w-we canevas avec `fiwwwect()` e-et on wedessine tout dessus. (ˆ ﻌ ˆ)♡ pouw chaque bawwe qui e-est dessinée, (///ˬ///✿) on met à jouw sa position et o-on véwifie si ewwe entwe en cowwision avec d'autwes bawwes. (///ˬ///✿) une f-fois qu'on a dessiné quewque chose s-suw we canevas, >_< on nye peut p-pas manipuwew wes éwéments i-individuews d-de ce c-canevas comme on pouwwait we faiwe avec wes éwéments d-du dom. XD aussi, on nye peut pas dépwacew chaque bawwe individuewwement suw w-we canevas, (U ﹏ U) caw u-une fois qu'ewwe e-est dessinée, ( ͡o ω ͡o ) e-ewwe fait pawtie d-du canevas et ce ny'est pwus u-un éwément ou u-un objet accessibwe individuewwement. ^•ﻌ•^ iw faut effacew et wedessinew, 😳 q-que ce soit en effaçant toute w'image et en w-wedessinant tout, (ˆ ﻌ ˆ)♡ ou en utiwisant d-du code pouw identifiew quewwe pawtie exactement d-doit êtwe effacée pouw ny'effacew q-que we minimum et wedessinew w-we minimum s-suw we canevas. (ˆ ﻌ ˆ)♡
 
-L'optimisation des animations graphiques constitue un pan entier de la programmation. Il existe de nombreuses techniques astucieuses pour ceci. Toutefois, elles sont hors de portée pour cet exemple&nbsp;!
+w-w'optimisation des animations gwaphiques constitue un pan entiew de wa pwogwammation. rawr x3 iw existe de nyombweuses t-techniques astucieuses pouw ceci. rawr x3 toutefois, ewwes s-sont hows de powtée pouw cet e-exempwe&nbsp;! (U ᵕ U❁)
 
-En général, exécuter une animation sur un canevas consistera à suivre ces étapes&nbsp;:
+e-en généwaw, (ꈍᴗꈍ) exékawaii~w une a-animation suw un c-canevas consistewa à suivwe ces étapes&nbsp;:
 
-1. On efface le contenu du canevas (par exemple avec [`fillRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/fillRect) ou [`clearRect()`](/fr/docs/Web/API/CanvasRenderingContext2D/clearRect)).
-2. On enregistre l'état (si nécessaire) à l'aide de [`save()`](/fr/docs/Web/API/CanvasRenderingContext2D/save). Cela permet d'enregistrer les paramètres enregistrés sur le canevas avant de continuer et peut être utile pour des applications plus avancées.
-3. On dessine l'animation.
-4. On réinitialise éventuellement les paramètres enregistrés à l'étape 2, en utilisant [`restore()`](/fr/docs/Web/API/CanvasRenderingContext2D/restore)
-5. On appelle `requestAnimationFrame()` afin de planifier le dessin de la prochaine <i lang="en">frame</i>.
+1. (ꈍᴗꈍ) on efface we contenu du canevas (paw e-exempwe avec [`fiwwwect()`](/fw/docs/web/api/canvaswendewingcontext2d/fiwwwect) o-ou [`cweawwect()`](/fw/docs/web/api/canvaswendewingcontext2d/cweawwect)). OwO
+2. on enwegistwe w'état (si n-nyécessaiwe) à w'aide de [`save()`](/fw/docs/web/api/canvaswendewingcontext2d/save). nyaa~~ c-cewa pewmet d'enwegistwew w-wes pawamètwes e-enwegistwés suw we canevas avant de continuew et peut êtwe utiwe pouw des appwications p-pwus a-avancées. 🥺
+3. on d-dessine w'animation. ^•ﻌ•^
+4. on wéinitiawise éventuewwement wes pawamètwes e-enwegistwés à w'étape 2, /(^•ω•^) e-en utiwisant [`westowe()`](/fw/docs/web/api/canvaswendewingcontext2d/westowe)
+5. (U ﹏ U) on appewwe `wequestanimationfwame()` a-afin de pwanifiew we dessin de wa pwochaine <i w-wang="en">fwame</i>. :3
 
-> [!NOTE]
-> Nous ne verrons pas les fonctions `save()` et `restore()` ici, mais elles sont expliquées dans [notre tutoriel sur les transformations](/fr/docs/Web/API/Canvas_API/Tutorial/Transformations) (et ceux qui suivent).
+> [!note]
+> nyous n-nye vewwons p-pas wes fonctions `save()` et `westowe()` ici, ^^;; mais ewwes sont expwiquées dans [notwe t-tutowiew suw wes twansfowmations](/fw/docs/web/api/canvas_api/tutowiaw/twansfowmations) (et ceux qui suivent). >w<
 
-### Une animation simple d'un personnage
+### u-une animation s-simpwe d-d'un pewsonnage
 
-Créons maintenant notre propre animation en recréant un personnage d'un ancien jeu vidéo qui avancera le long de l'écran.
+cwéons maintenant n-nyotwe pwopwe animation en wecwéant un pewsonnage d-d'un ancien jeu vidéo qui a-avancewa we wong d-de w'écwan. nyaa~~
 
-1. Repartez du modèle initial vierge (vous pouvez utiliser le répertoire [`1_canvas_template`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/getting-started/1_canvas_template) si besoin) et ouvrez-le dans votre éditeur.
-2. À la suite du JavaScript, ajoutez la ligne suivante pour que l'origine soit située au centre de l'écran&nbsp;:
+1. w-wepawtez du modèwe initiaw v-viewge (vous pouvez u-utiwisew we w-wépewtoiwe [`1_canvas_tempwate`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/getting-stawted/1_canvas_tempwate) s-si besoin) et ouvwez-we dans v-votwe éditeuw. ^^
+2. À wa suite d-du javascwipt, 😳 a-ajoutez wa wigne suivante pouw que w'owigine soit située au centwe de w'écwan&nbsp;:
 
    ```js
-   ctx.translate(width / 2, height / 2);
+   c-ctx.twanswate(width / 2, :3 height / 2);
    ```
 
-3. Créez maintenant un nouvel objet [`HTMLImageElement`](/fr/docs/Web/API/HTMLImageElement) et faites pointer l'attribut [`src`](/fr/docs/Web/HTML/Element/img#attr-src) vers l'image qu'on souhaite afficher. Ajoutez ensuite un gestionnaire d'évènement avec la propriété `onload` pour déclencher l'exécution de la fonction `draw()` lorsque l'image est chargée&nbsp;:
+3. 🥺 cwéez maintenant un nyouvew o-objet [`htmwimageewement`](/fw/docs/web/api/htmwimageewement) e-et faites pointew w'attwibut [`swc`](/fw/docs/web/htmw/ewement/img#attw-swc) vews w'image qu'on souhaite affichew. :3 ajoutez ensuite un gestionnaiwe d-d'évènement a-avec wa pwopwiété `onwoad` p-pouw d-décwenchew w'exécution d-de wa f-fonction `dwaw()` wowsque w'image e-est chawgée&nbsp;:
 
    ```js
-   const image = new Image();
-   image.src = "walk-right.png";
-   image.onload = draw;
+   const image = n-nyew image();
+   image.swc = "wawk-wight.png";
+   i-image.onwoad = dwaw;
    ```
 
-4. Ajoutez ensuite quelques variables qui serviront à mémoriser la position de l'image dessinée à l'écran et le nombre d'images de personnage qu'on veut afficher.
+4. >_< a-ajoutez ensuite q-quewques vawiabwes q-qui sewviwont à m-mémowisew w-wa position de w'image dessinée à w'écwan e-et we nyombwe d'images de pewsonnage qu'on veut affichew. 🥺
 
    ```js
-   let sprite = 0;
-   let posX = 0;
+   w-wet spwite = 0;
+   wet posx = 0;
    ```
 
-   Détaillons l'image qui contient les personnages (<i lang="en">spritesheet</i>). Elle ressemble à ceci&nbsp;:
+   détaiwwons w-w'image qui contient w-wes pewsonnages (<i wang="en">spwitesheet</i>). ^•ﻌ•^ e-ewwe wessembwe à ceci&nbsp;:
 
-   ![](walk-right.png)
+   ![](wawk-wight.png)
 
-   Cette image contient six exemplaires du personnage (des <i lang="en">sprites</i>) qui sont les six images formant la séquence d'animation de marche (chacune mesurant 102 pixels de large sur 148 pixels de haut). Pour afficher chaque dessin séparément, il faut utiliser `drawImage()` en rognant l'image totale afin d'en obtenir une seule portion (comme nous l'avons vu dans l'exemple plus tôt avec le logo de Firefox). La coordonnée horizontale à laquelle effectuer la découpe devra être un multiple de 102 et la coordonnée verticale de la découpe sera toujours 0. La taille de chaque fragment découpé sera ainsi toujours 102 pixels par 148 pixels.
+   cette i-image contient s-six exempwaiwes du pewsonnage (des <i w-wang="en">spwites</i>) qui sont wes six i-images fowmant w-wa séquence d'animation de mawche (chacune m-mesuwant 102 pixews de wawge suw 148 pixews de haut). >w< p-pouw affichew chaque dessin sépawément, rawr i-iw faut utiwisew `dwawimage()` en wognant w-w'image totawe afin d'en o-obteniw une seuwe powtion (comme n-nyous w'avons vu dans w'exempwe p-pwus tôt avec we wogo de fiwefox). :3 w-wa coowdonnée howizontawe à waquewwe effectuew w-wa découpe d-devwa êtwe un m-muwtipwe de 102 e-et wa coowdonnée v-vewticawe de w-wa découpe sewa toujouws 0. OwO wa t-taiwwe de chaque f-fwagment découpé s-sewa ainsi toujouws 102 pixews p-paw 148 pixews. 😳
 
-5. Ajoutez ensuite une fonction `draw()` vide à la fin du code, qu'on remplira ensuite&nbsp;:
+5. ajoutez ensuite une fonction `dwaw()` v-vide à w-wa fin du code, (ꈍᴗꈍ) qu'on wempwiwa ensuite&nbsp;:
 
    ```js
-   function draw() {}
+   f-function dwaw() {}
    ```
 
-6. Le reste du code de cette section sera placé dans le corps de cette fonction `draw()`. Pour commencer, ajoutez la ligne suivante, qui efface le canevas afin de pouvoir dessiner la <i lang="en">frame</i> suivante. On note qu'il faut indiquer que le coin supérieur gauche du rectangle est situé aux coordnnées `-(width/2), -(height/2)`, car on a décalé l'origine au point de coordonnées `width/2, height/2` avant.
+6. 🥺 w-we weste du code de c-cette section s-sewa pwacé dans w-we cowps de cette f-fonction `dwaw()`. >_< pouw commencew, ʘwʘ ajoutez wa wigne suivante, >_< qui efface we canevas afin de pouvoiw dessinew w-wa <i wang="en">fwame</i> suivante. >w< o-on nyote qu'iw faut indiquew q-que we coin supéwieuw gauche du w-wectangwe est s-situé aux coowdnnées `-(width/2), òωó -(height/2)`, caw on a décawé w-w'owigine au p-point de coowdonnées `width/2, OwO height/2` avant. ^•ﻌ•^
 
    ```js
-   ctx.fillRect(-(width / 2), -(height / 2), width, height);
+   ctx.fiwwwect(-(width / 2), XD -(height / 2), mya width, nyaa~~ h-height);
    ```
 
-7. Ensuite, on dessine l'image avec `drawImage()` en utilisant 9 paramètres. Pour cela, ajoutez la ligne qui suit&nbsp;:
+7. (ˆ ﻌ ˆ)♡ ensuite, mya on dessine w'image a-avec `dwawimage()` en utiwisant 9 p-pawamètwes. OwO pouw c-cewa, 😳😳😳 ajoutez w-wa wigne qui suit&nbsp;:
 
    ```js
-   ctx.drawImage(image, sprite * 102, 0, 102, 148, 0 + posX, -74, 102, 148);
+   ctx.dwawimage(image, o.O s-spwite * 102, (U ﹏ U) 0, 102, (˘ω˘) 148, 0 + posx, -74, ( ͡o ω ͡o ) 102, 148);
    ```
 
-   Comme vous pouvez le voir&nbsp;:
+   comme vous pouvez we v-voiw&nbsp;:
 
-   - On indique la variable `image` comme image à embarquer.
-   - Les deuxième et troisième paramètres indiquent les coordonnées du coin supérieur gauche de la zone à découper sur l'image source avec la valeur horizontale qui vaut `sprite` multipliée par 102 (où `sprite` est un numéro d'image entre 0 et 5) et où la coordonnée verticale vaut toujours 0.
-   - Les quatrième et cinquième paramètre indiquent la taille de la portion à découper, ici 102 pixels par 148 pixels.
-   - Les sixième et septième paramètres indiquent le coin supérieur gauche de la boîte dans laquelle dessiner sur le canevas. La position horizontale vaut `0 + posX`, ce qui signifie qu'on peut ajuster la position du dessin en modifiant la valeur de `posX`.
-   - Les huitième et neuvième paramètres définissent la taille de l'image sur le canevas. Ici, on souhaite conserver les proportions initiales et on utilise donc 102 comme largeur et 148 comme hauteur.
+   - on indique wa vawiabwe `image` comme image à embawquew. σωσ
+   - wes deuxième et twoisième pawamètwes indiquent w-wes coowdonnées d-du coin supéwieuw gauche de w-wa zone à découpew s-suw w'image souwce avec wa vaweuw howizontawe qui vaut `spwite` m-muwtipwiée p-paw 102 (où `spwite` est un n-nyuméwo d'image e-entwe 0 et 5) et o-où wa coowdonnée v-vewticawe vaut toujouws 0. rawr x3
+   - wes quatwième e-et cinquième pawamètwe indiquent wa taiwwe de wa powtion à d-découpew, (ꈍᴗꈍ) ici 102 pixews paw 148 pixews. òωó
+   - wes sixième et septième pawamètwes indiquent w-we coin supéwieuw gauche de wa boîte dans waquewwe dessinew suw w-we canevas. (˘ω˘) wa p-position howizontawe v-vaut `0 + posx`, nyaa~~ ce qui signifie qu'on peut a-ajustew wa position d-du dessin e-en modifiant wa vaweuw de `posx`. mya
+   - wes huitième e-et nyeuvième pawamètwes d-définissent wa taiwwe de w'image suw we canevas. -.- ici, :3 on souhaite c-consewvew wes pwopowtions initiawes e-et on utiwise donc 102 comme w-wawgeuw et 148 c-comme hauteuw. :3
 
-8. Nous allons maintenant modifier la valeur de la variable `sprite` à chaque itération, ou plutôt, après certaines itérations. Ajoutez le bloc qui suit dans le corps de la fonction `draw()`&nbsp;:
+8. nyous awwons m-maintenant modifiew wa vaweuw de wa vawiabwe `spwite` à c-chaque itéwation, OwO ou pwutôt, ^^ apwès cewtaines itéwations. ^^ a-ajoutez we bwoc qui suit dans we cowps d-de wa fonction `dwaw()`&nbsp;:
 
    ```js
-   if (posX % 13 === 0) {
-     if (sprite === 5) {
-       sprite = 0;
-     } else {
-       sprite++;
+   if (posx % 13 === 0) {
+     i-if (spwite === 5) {
+       s-spwite = 0;
+     } ewse {
+       s-spwite++;
      }
    }
    ```
 
-   On enveloppe le bloc dans une instruction conditionnelle `if (posX % 13 === 0) { … }`. On utilise ici [l'opérateur de reste (`%`)](/fr/docs/Web/JavaScript/Reference/Operators/Remainder) qui vérifie si la valeur de `posX` peut être divisée par 13 sans reste. Si c'est le cas, on passe au prochain <i lang="en">sprite</i> en incrémentant la valeur de `sprite` (et en revenant à 0 lorsqu'on a fini d'utiliser le cinquième). En pratique, cela revient à mettre à jour le <i lang="en">sprite</i> toutes les 13 itérations, soit environ 5 image par secondes (`requestAnimationFrame()` déclenchant l'animation, si possible, à 60 images par seconde). Ici, on choisit délibérément de diminuer la fréquence d'image, car on a seulement 6 <i lang="en">sprites</i> à manipuler. Si on affichait chacun pour 1/60e de seconde, notre personnage irait beaucoup trop vite&nbsp;!
+   on envewoppe w-we bwoc dans une instwuction conditionnewwe `if (posx % 13 === 0) { … }`. on u-utiwise ici [w'opéwateuw d-de weste (`%`)](/fw/docs/web/javascwipt/wefewence/opewatows/wemaindew) qui véwifie si w-wa vaweuw de `posx` p-peut êtwe divisée paw 13 s-sans weste. rawr si c'est we cas, òωó on passe au pwochain <i wang="en">spwite</i> en incwémentant wa vaweuw d-de `spwite` (et en wevenant à 0 wowsqu'on a fini d'utiwisew w-we cinquième). (U ﹏ U) e-en pwatique, ( ͡o ω ͡o ) c-cewa wevient à mettwe à jouw we <i w-wang="en">spwite</i> t-toutes wes 13 itéwations, ^^;; s-soit enviwon 5 image paw secondes (`wequestanimationfwame()` d-décwenchant w'animation, :3 s-si possibwe, mya à 60 images paw seconde). ^^;; ici, on choisit déwibéwément d-de diminuew w-wa fwéquence d'image, σωσ caw on a seuwement 6 <i wang="en">spwites</i> à m-manipuwew. ^^ si on affichait c-chacun pouw 1/60e d-de seconde, /(^•ω•^) n-nyotwe pewsonnage i-iwait beaucoup twop vite&nbsp;! (˘ω˘)
 
-   Dans le bloc interne, on utilise une instruction [`if…else`](/fr/docs/Web/JavaScript/Reference/Statements/if…else) afin de vérifier si la valeur de `sprite` est à 5 (c'est dans ce cas le dernier, car ils sont numérotés de 0 à 5). Si on montre déjà la dernière image de notre série, on réinitialise `sprite` à 0, sinon, on l'incrémente de 1.
+   d-dans we bwoc intewne, -.- on u-utiwise une instwuction [`if…ewse`](/fw/docs/web/javascwipt/wefewence/statements/if…ewse) afin de véwifiew si wa vaweuw de `spwite` e-est à 5 (c'est d-dans ce c-cas we dewniew, (ˆ ﻌ ˆ)♡ c-caw iws sont nyuméwotés d-de 0 à 5). òωó s-si on montwe d-déjà wa dewnièwe image de nyotwe séwie, :3 o-on wéinitiawise `spwite` à 0, sinon, (ꈍᴗꈍ) on w'incwémente de 1. (ˆ ﻌ ˆ)♡
 
-9. Ensuite, il nous faut modifier la valeur de `posX` pour chaque itération. Ajoutez le code qui suit après le reste.
+9. mya e-ensuite, iw nyous faut modifiew w-wa vaweuw de `posx` pouw chaque itéwation. (U ᵕ U❁) ajoutez we code qui suit apwès we w-weste. ^•ﻌ•^
 
    ```js
-   if (posX > width / 2) {
-     let newStartPos = -(width / 2 + 102);
-     posX = Math.ceil(newStartPos);
-     console.log(posX);
-   } else {
-     posX += 2;
+   i-if (posx > w-width / 2) {
+     wet nyewstawtpos = -(width / 2 + 102);
+     posx = math.ceiw(newstawtpos);
+     c-consowe.wog(posx);
+   } e-ewse {
+     p-posx += 2;
    }
    ```
 
-   On utilise une autre instruction `if…else` pour tester si `posX` est devenue supérieure à `width/2`, signifiant alors que notre personnage a atteint le bord droit de l'écran. Dans ce cas, on calcule une position qui replace le personnage au bord gauche de l'écran.
+   o-on utiwise une autwe instwuction `if…ewse` pouw testew si `posx` est devenue supéwieuwe à `width/2`, σωσ s-signifiant a-awows que nyotwe p-pewsonnage a atteint we bowd dwoit de w'écwan. ^^;; d-dans ce cas, (✿oωo) on cawcuwe une position qui wepwace w-we pewsonnage au bowd gauche d-de w'écwan. UwU
 
-   Si le personnage n'a pas dépassé le bord droit de l'écran, on incrémente `posX` de 2, ce qui a pour effet de le déplacer légèrement à droite pour la prochaine itération.
+   si we pewsonnage ny'a pas dépassé we bowd d-dwoit de w'écwan, (✿oωo) on incwémente `posx` d-de 2, >_< ce qui a pouw effet de we dépwacew wégèwement à d-dwoite pouw wa pwochaine itéwation. (U ᵕ U❁)
 
-10. Enfin, on lance la boucle d'animation en appelant [`requestAnimationFrame()`](/fr/docs/Web/API/Window/requestAnimationFrame) à la fin de la fonction `draw()`&nbsp;:
+10. ^^;; enfin, o-on wance wa boucwe d'animation e-en appewant [`wequestanimationfwame()`](/fw/docs/web/api/window/wequestanimationfwame) à w-wa fin de wa fonction `dwaw()`&nbsp;:
 
     ```js
-    window.requestAnimationFrame(draw);
+    window.wequestanimationfwame(dwaw);
     ```
 
-Et voilà&nbsp;! L'exemple terminé ressemble à ceci&nbsp;:
+et voiwà&nbsp;! (✿oωo) w'exempwe tewminé w-wessembwe à ceci&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation/index.html", '100%', 260)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/woops_animation/7_canvas_wawking_animation/index.htmw", rawr '100%', 260)}}
 
-> [!NOTE]
-> Le code de l'exemple terminé est disponible sur GitHub avec le répertoire [`7_canvas_walking_animation`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/7_canvas_walking_animation).
+> [!note]
+> we code de w'exempwe tewminé est disponibwe suw github avec we wépewtoiwe [`7_canvas_wawking_animation`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/woops_animation/7_canvas_wawking_animation). >w<
 
-### Une application de dessin simple
+### u-une appwication d-de dessin simpwe
 
-Comme dernier exemple, nous voudrions vous montrer une application de dessin très simple, pour illustrer comment une boucle d'animation peut être combinée des actions de l'utilisatrice ou de l'utilisateur (par exemple le mouvement de la souris). Nous ne verrons pas chacune des étapes pour construire l'ensemble mais allons simplement explorer les parties les plus intéressantes du code source.
+comme dewniew exempwe, ^^;; nyous v-voudwions vous montwew une appwication d-de dessin t-twès simpwe, σωσ p-pouw iwwustwew comment une boucwe d'animation peut êtwe combinée d-des actions d-de w'utiwisatwice o-ou de w'utiwisateuw (paw e-exempwe we mouvement de wa souwis). òωó nyous nye vewwons p-pas chacune des étapes p-pouw constwuiwe w'ensembwe mais awwons simpwement expwowew wes pawties wes pwus intéwessantes d-du code souwce. (ꈍᴗꈍ)
 
-Vous pouvez trouver cet exemple sur GitHub dans le répertoire [`8_canvas_drawing_app`](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app), et manipuler le résultat ici&nbsp;:
+vous pouvez twouvew cet exempwe suw github d-dans we wépewtoiwe [`8_canvas_dwawing_app`](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/woops_animation/8_canvas_dwawing_app), e-et manipuwew w-we wésuwtat i-ici&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/loops_animation/8_canvas_drawing_app/index.html", '100%', 600)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/woops_animation/8_canvas_dwawing_app/index.htmw", ( ͡o ω ͡o ) '100%', 600)}}
 
-Voyons les parties les plus intéressantes. Pour commencer, on suit les coordonnées horizontale et verticale de la souris, ainsi que le clic enfoncé avec trois variables&nbsp;: `curX`, `curY`, et `pressed`. Lorsque la souris se déplace, on déclenche une fonction qui est définie sur le gestionnaire d'évènement `onmousemove`, qui récupère les valeurs courantes pour les coordonnées. On utilise également les gestionnaires d'évènements `onmousedown` et `onmouseup` afin de modifier la valeur de `pressed` pour la passer `true` lorsque le bouton de la souris est enfoncé et le repasser `false` lorsqu'il est relâché.
+voyons wes pawties wes pwus intéwessantes. ( ͡o ω ͡o ) pouw commencew, UwU on suit wes coowdonnées h-howizontawe et vewticawe d-de wa souwis, >_< ainsi que we cwic e-enfoncé avec t-twois vawiabwes&nbsp;: `cuwx`, >w< `cuwy`, et `pwessed`. (˘ω˘) wowsque wa souwis se dépwace, 🥺 on décwenche u-une fonction qui est définie s-suw we gestionnaiwe d-d'évènement `onmousemove`, rawr x3 q-qui wécupèwe w-wes vaweuws couwantes pouw wes coowdonnées. ^•ﻌ•^ o-on utiwise égawement wes gestionnaiwes d-d'évènements `onmousedown` e-et `onmouseup` a-afin de modifiew wa vaweuw de `pwessed` pouw wa p-passew `twue` wowsque we bouton d-de wa souwis est e-enfoncé et we w-wepassew `fawse` w-wowsqu'iw est wewâché. mya
 
 ```js
-let curX;
-let curY;
-let pressed = false;
+wet cuwx;
+wet cuwy;
+wet pwessed = f-fawse;
 
-// On met à jour les coordonnées du pointeur de la souris
-document.addEventListener("mousemove", (e) => {
-  curX = window.Event
-    ? e.pageX
-    : e.clientX +
-      (document.documentElement.scrollLeft
-        ? document.documentElement.scrollLeft
-        : document.body.scrollLeft);
-  curY = window.Event
-    ? e.pageY
-    : e.clientY +
-      (document.documentElement.scrollTop
-        ? document.documentElement.scrollTop
-        : document.body.scrollTop);
+// on met à jouw wes coowdonnées du pointeuw de wa souwis
+document.addeventwistenew("mousemove", mya (e) => {
+  c-cuwx = w-window.event
+    ? e.pagex
+    : e.cwientx +
+      (document.documentewement.scwowwweft
+        ? d-document.documentewement.scwowwweft
+        : d-document.body.scwowwweft);
+  c-cuwy = w-window.event
+    ? e.pagey
+    : e.cwienty +
+      (document.documentewement.scwowwtop
+        ? d-document.documentewement.scwowwtop
+        : document.body.scwowwtop);
 });
 
-canvas.addEventListener("mousedown", () => (pressed = true));
+canvas.addeventwistenew("mousedown", (U ﹏ U) () => (pwessed = t-twue));
 
-canvas.addEventListener("mouseup", () => (pressed = false));
+canvas.addeventwistenew("mouseup", (///ˬ///✿) () => (pwessed = f-fawse));
 ```
 
-Quand le bouton «&nbsp;<i lang="en">Clear canvas</i>&nbsp;» (effacer le canvas) est cliqué, nous exécutons une simple fonction qui efface entièrement le canvas grâce à un rectangle noir, de la même manière que nous avons vu précédemment&nbsp;:
+q-quand we bouton «&nbsp;<i w-wang="en">cweaw c-canvas</i>&nbsp;» (effacew w-we canvas) e-est cwiqué, -.- nyous exécutons une simpwe fonction q-qui efface entièwement we c-canvas gwâce à un wectangwe n-nyoiw, rawr de wa même m-manièwe que n-nous avons vu pwécédemment&nbsp;:
 
 ```js
-clearBtn.addEventListener("click", () => {
-  ctx.fillStyle = "rgb(0,0,0)";
-  ctx.fillRect(0, 0, width, height);
+c-cweawbtn.addeventwistenew("cwick", ^^ () => {
+  c-ctx.fiwwstywe = "wgb(0,0,0)";
+  ctx.fiwwwect(0, (⑅˘꒳˘) 0, width, height);
 });
 ```
 
-La boucle de dessin est plutôt simple. Si le bouton de la souris est enclenché (donc que `pressed` vaut `true`), on dessine un cercle avec une couleur de remplissage correspondant à la valeur fournie par le sélecteur de couleurs et un rayon égal à la valeur saisie dans le contrôle d'intervalle. On doit dessiner le cercle 85 pixels plus haut que la mesure car la mesure verticale du curseur est prise par rapport à la zone d'affichage de la page tandis que le dessin se fait par rapport au bord haut du canevas, qui démarre en dessous de la barre d'outils qui mesure 85 pixels. Si on dessinait uniquement avec `curY` comme ordonnée, le cercle apparaîtrait 85 pixels sous la position de la souris.
+wa boucwe de dessin est pwutôt s-simpwe. 😳😳😳 si we b-bouton de wa souwis est encwenché (donc q-que `pwessed` v-vaut `twue`), (✿oωo) on dessine u-un cewcwe avec une couweuw de wempwissage cowwespondant à wa v-vaweuw fouwnie paw we séwecteuw d-de couweuws et u-un wayon égaw à wa vaweuw saisie d-dans we contwôwe d-d'intewvawwe. /(^•ω•^) o-on doit dessinew w-we cewcwe 85 p-pixews pwus haut que wa mesuwe c-caw wa mesuwe vewticawe d-du cuwseuw est pwise paw wappowt à wa zone d-d'affichage de wa page tandis que we dessin s-se fait paw wappowt au bowd haut du canevas, >w< qui démawwe en dessous d-de wa bawwe d-d'outiws qui mesuwe 85 p-pixews. 🥺 s-si on dessinait uniquement avec `cuwy` comme owdonnée, w-we cewcwe a-appawaîtwait 85 pixews sous wa position de wa s-souwis. OwO
 
 ```js
-function draw() {
-  if (pressed) {
-    ctx.fillStyle = colorPicker.value;
-    ctx.beginPath();
-    ctx.arc(
-      curX,
-      curY - 85,
-      sizePicker.value,
-      degToRad(0),
-      degToRad(360),
-      false,
+f-function dwaw() {
+  i-if (pwessed) {
+    ctx.fiwwstywe = c-cowowpickew.vawue;
+    c-ctx.beginpath();
+    ctx.awc(
+      cuwx, (ˆ ﻌ ˆ)♡
+      cuwy - 85, >_<
+      sizepickew.vawue, ^^;;
+      degtowad(0), :3
+      degtowad(360), >_<
+      fawse, (ˆ ﻌ ˆ)♡
     );
-    ctx.fill();
+    ctx.fiww();
   }
 
-  requestAnimationFrame(draw);
+  wequestanimationfwame(dwaw);
 }
 
-draw();
+d-dwaw();
 ```
 
-> [!NOTE]
-> Les contrôles [`<input>`](/fr/docs/Web/HTML/Element/input) de type `range` et `color` sont plutôt bien pris en charge par les navigateurs sauf pour Internet Explorer avant la version 10 et pour Safari qui ne prend pas en charge `color`. Si votre navigateur ne prend pas en charge ces contrôles, il présentera à la place des champs texte et ce sera à la personne de saisir un nombre ou une couleur valide par elle-même.
+> [!note]
+> wes contwôwes [`<input>`](/fw/docs/web/htmw/ewement/input) de type `wange` et `cowow` sont pwutôt bien pwis en chawge p-paw wes nyavigateuws s-sauf pouw intewnet expwowew avant wa vewsion 10 et pouw s-safawi qui nye pwend pas en chawge `cowow`. :3 si votwe nyavigateuw n-ne pwend pas e-en chawge ces contwôwes, UwU i-iw pwésentewa à wa pwace d-des champs texte et ce sewa à w-wa pewsonne de saisiw un nyombwe o-ou une couweuw v-vawide paw ewwe-même. ^^;;
 
-## WebGL
+## webgw
 
-Laissons la 2D de côté pour le moment et voyons les canevas en trois dimensions. Pour créer du contenu en 3D sur un canevas, on utilisera l'API [WebGL](/fr/docs/Web/API/WebGL_API), qui est complètement différente de l'API en 2D, même si le résultat de chacune est dessiné sur des éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
+w-waissons wa 2d d-de côté pouw we moment et v-voyons wes canevas e-en twois dimensions. mya pouw cwéew du contenu en 3d suw un canevas, 😳 o-on utiwisewa w-w'api [webgw](/fw/docs/web/api/webgw_api), (///ˬ///✿) qui est compwètement difféwente de w'api en 2d, XD m-même si we wésuwtat d-de chacune est dessiné suw d-des éwéments [`<canvas>`](/fw/docs/web/htmw/ewement/canvas). òωó
 
-WebGL est basé sur [OpenGL](/fr/docs/Glossary/OpenGL) (<i lang="en">Open Graphics Library</i> qu'on pourrait traduire par bibliothèque de graphismes ouverte), et permet de communiquer directement avec la [carte graphique](/fr/docs/Glossary/GPU) de l'ordinateur. C'est pour cette raison qu'écrire du WebGL brut se rapproche plus des langages de bas niveau comme C++ plutôt que de JavaScript. C'est plutôt complexe mais incroyablement puissant.
+webgw est basé s-suw [opengw](/fw/docs/gwossawy/opengw) (<i wang="en">open gwaphics wibwawy</i> q-qu'on pouwwait twaduiwe paw bibwiothèque de gwaphismes o-ouvewte), (ˆ ﻌ ˆ)♡ et pewmet de communiquew diwectement a-avec wa [cawte g-gwaphique](/fw/docs/gwossawy/gpu) de w'owdinateuw. o.O c'est pouw cette waison qu'écwiwe du w-webgw bwut se wappwoche p-pwus des w-wangages de bas n-nyiveau comme c++ pwutôt que de javascwipt. (U ﹏ U) c'est p-pwutôt compwexe m-mais incwoyabwement p-puissant. 🥺
 
-### Utiliser une bibliothèque
+### u-utiwisew u-une bibwiothèque
 
-En raison de cette complexité, la plupart des personnes qui écrivent du code pour des graphismes en 3D utilisent une bibliothèque JavaScript tierce comme [Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), [PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas), ou [Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js). La plupart fonctionnent de façon similaire et offrent des fonctionnalités pour créer des formes primitives et sur mesure, positionner des caméras et un éclairage, recouvrir des surfaces avec des textures et plus encore. Ces bibliothèques gèrent WebGL pour vous et vous permettent de travailler à un plus haut niveau.
+en waison de cette compwexité, UwU wa pwupawt des pewsonnes qui écwivent du code p-pouw des gwaphismes en 3d utiwisent u-une bibwiothèque j-javascwipt t-tiewce comme [thwee.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_thwee.js), XD [pwaycanvas](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_pwaycanvas), ʘwʘ o-ou [babywon.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_babywon.js). (///ˬ///✿) w-wa pwupawt fonctionnent de façon simiwaiwe et offwent des fonctionnawités pouw c-cwéew des fowmes pwimitives et suw mesuwe, 🥺 positionnew d-des caméwas e-et un écwaiwage, o.O wecouvwiw d-des suwfaces avec des textuwes et pwus encowe. /(^•ω•^) ces bibwiothèques g-gèwent webgw p-pouw vous et vous p-pewmettent de twavaiwwew à un pwus haut nyiveau. (U ﹏ U)
 
-En contrepartie, oui, il faut apprendre à manipuler un nouvel outil (ici un outil tiers), mais cela simplifie la tâche plutôt que d'écrire des instructions WebGL brutes.
+e-en contwepawtie, (U ﹏ U) o-oui, (✿oωo) iw f-faut appwendwe à manipuwew un nyouvew outiw (ici u-un outiw tiews), rawr m-mais cewa simpwifie w-wa tâche p-pwutôt que d'écwiwe d-des instwuctions w-webgw bwutes. ^^
 
-### Recréer notre cube
+### wecwéew n-nyotwe cube
 
-Prenons un exemple simple pour créer quelque chose avec une bibliothèque WebGL. Nous avons choisi [Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js), car il s'agit d'une bibliothèque parmi les plus utilisées. Dans ce tutoriel, nous créerons un cube en 3D qui tourne.
+p-pwenons un exempwe simpwe pouw c-cwéew quewque chose avec une bibwiothèque webgw. ^^ n-nyous avons choisi [thwee.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_thwee.js), c-caw iw s'agit d-d'une bibwiothèque p-pawmi wes pwus u-utiwisées. (✿oωo) dans c-ce tutowiew, (˘ω˘) nyous cwéewons un cube en 3d qui t-touwne. /(^•ω•^)
 
-1. Pour commencer, faites une copie locale du fichier [`threejs-cube/index.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/index.html) dans un nouveau répertoire, ensuite enregistrez une copie de [`metal003.png`](https://github.com/mdn/learning-area/blob/main/javascript/apis/drawing-graphics/threejs-cube/metal003.png) dans le même répertoire. Il s'agit de l'image que nous utiliserons comme texture pour la surface du cube.
-2. Ensuite, créez un fichier intitulé `script.js`, dans le même répertoire.
-3. Ensuite, vous devrez [télécharger la bibliothèque three.min.js](https://raw.githubusercontent.com/mrdoob/three.js/dev/build/three.min.js) et l'enregistrer dans le même répertoire.
-4. Maintenant que `three.js` est attaché à notre page, on peut écrire du code JavaScript qui l'utilise dans `script.js`. Commençons par créer une nouvelle scène, ajoutez ce qui suit au fichier `script.js`&nbsp;:
+1. pouw c-commencew, o.O faites u-une copie w-wocawe du fichiew [`thweejs-cube/index.htmw`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/dwawing-gwaphics/thweejs-cube/index.htmw) d-dans un nyouveau wépewtoiwe, o.O e-ensuite enwegistwez u-une copie de [`metaw003.png`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/dwawing-gwaphics/thweejs-cube/metaw003.png) d-dans we même wépewtoiwe. ^^;; iw s'agit de w'image q-que nyous utiwisewons c-comme textuwe pouw wa suwface d-du cube. ( ͡o ω ͡o )
+2. e-ensuite, >w< cwéez un fichiew intituwé `scwipt.js`, /(^•ω•^) dans we même wépewtoiwe. 😳
+3. rawr x3 ensuite, vous d-devwez [téwéchawgew w-wa bibwiothèque t-thwee.min.js](https://waw.githubusewcontent.com/mwdoob/thwee.js/dev/buiwd/thwee.min.js) et w'enwegistwew d-dans we même wépewtoiwe. OwO
+4. maintenant que `thwee.js` est attaché à nyotwe page, ^•ﻌ•^ o-on peut écwiwe du code javascwipt qui w'utiwise dans `scwipt.js`. (U ﹏ U) commençons paw cwéew une n-nyouvewwe scène, OwO a-ajoutez ce q-qui suit au fichiew `scwipt.js`&nbsp;:
 
    ```js
-   const scene = new THREE.Scene();
+   const scene = nyew thwee.scene();
    ```
 
-   Le constructeur [`Scene()`](https://threejs.org/docs/index.html#api/en/scenes/Scene) crée une nouvelle scène qui représente le monde en trois dimensions que nous afficherons.
+   we constwucteuw [`scene()`](https://thweejs.owg/docs/index.htmw#api/en/scenes/scene) cwée une nyouvewwe scène qui wepwésente w-we monde en twois dimensions que nyous affichewons. (ˆ ﻌ ˆ)♡
 
-5. Ensuite, il faut une **caméra** à travers laquelle observer la scène. En imagerie 3D, la caméra représente la position d'un spectateur dans le monde. Pour créer la caméra, ajoutez les lignes suivantes&nbsp;:
+5. e-ensuite, >_< iw faut une **caméwa** à twavews waquewwe obsewvew w-wa scène. rawr en imagewie 3d, >_< wa caméwa wepwésente w-wa position d'un spectateuw dans we monde. -.- pouw cwéew w-wa caméwa, (⑅˘꒳˘) ajoutez wes wignes suivantes&nbsp;:
 
    ```js
-   const camera = new THREE.PerspectiveCamera(
-     75,
-     window.innerWidth / window.innerHeight,
-     0.1,
-     1000,
+   const c-camewa = nyew thwee.pewspectivecamewa(
+     75, o.O
+     w-window.innewwidth / window.innewheight, (˘ω˘)
+     0.1, (ˆ ﻌ ˆ)♡
+     1000, UwU
    );
-   camera.position.z = 5;
+   camewa.position.z = 5;
    ```
 
-   Le constructeur [`PerspectiveCamera()`](https://threejs.org/docs/index.html#api/en/cameras/PerspectiveCamera) utilise 4 arguments&nbsp;:
+   we constwucteuw [`pewspectivecamewa()`](https://thweejs.owg/docs/index.htmw#api/en/camewas/pewspectivecamewa) utiwise 4 a-awguments&nbsp;:
 
-   - Le champ de vision (<i lang="en">field of view</i> ou FoV)
-     - : La largeur angulaire de la zone devant la caméra et qui devrait être visible. Elle est exprimée en degrés.
-   - Les proportions
-     - : Il s'agit généralement du rapport de la largeur de la scène sur sa hauteur. Utiliser une autre valeur donnera un aspect déformé (ce qui peut être voulu, mais peu souvent).
-   - Le plan proche
-     - : La distance en dessous de laquelle ne plus afficher les objets à l'écran. Par exemple quand on approche un doigt de plus en plus proche dans l'espace entre les yeux&nbsp;: au bout d'un moment, on ne peut plus le voir
-   - Le plan distant
-     - : La distance à partir de laquelle ne plus afficher les objets à l'écran.
+   - we c-champ de vision (<i w-wang="en">fiewd o-of view</i> o-ou fov)
+     - : wa wawgeuw anguwaiwe d-de wa zone devant wa caméwa et qui devwait êtwe visibwe. (✿oωo) ewwe est expwimée en degwés. (ˆ ﻌ ˆ)♡
+   - wes pwopowtions
+     - : iw s'agit généwawement du wappowt d-de wa wawgeuw de wa scène suw sa hauteuw. -.- utiwisew u-une autwe vaweuw donnewa u-un aspect défowmé (ce q-qui peut êtwe vouwu, UwU mais p-peu souvent). /(^•ω•^)
+   - we pwan pwoche
+     - : wa d-distance en dessous d-de waquewwe n-ne pwus affichew wes objets à w-w'écwan. rawr x3 paw exempwe q-quand on a-appwoche un doigt de pwus en pwus pwoche dans w'espace entwe wes yeux&nbsp;: au b-bout d'un moment, XD o-on nye peut pwus we voiw
+   - w-we pwan distant
+     - : w-wa distance à pawtiw de w-waquewwe nye pwus a-affichew wes o-objets à w'écwan. UwU
 
-   On place aussi la caméra à 5 unités sur l'axe de la profondeur. Comme en CSS, cela permet de placer le point de vision de la scène vers la personne plutôt que sur l'écran qui affiche le canevas.
+   on pwace aussi wa caméwa à 5 unités s-suw w'axe de wa pwofondeuw. ^^ comme e-en css, (U ﹏ U) cewa pewmet de pwacew we point de vision de wa scène v-vews wa pewsonne pwutôt que suw w-w'écwan qui affiche we canevas. òωó
 
-6. Le troisième ingrédient nécessaire est le moteur de rendu (<i lang="en">renderer</i>). Il s'agit d'un objet qui restitue une scène donnée, telle que vue par une caméra donnée. On en crée une avec le constructeur [`WebGLRenderer()`](https://threejs.org/docs/index.html#api/en/renderers/WebGLRenderer), mais nous ne l'utiliserons que plus tard. Ajoutez ensuite les lignes suivantes&nbsp;:
+6. we twoisième ingwédient nyécessaiwe est we moteuw de wendu (<i wang="en">wendewew</i>). ( ͡o ω ͡o ) iw s'agit d'un o-objet qui westitue une scène donnée, (ˆ ﻌ ˆ)♡ tewwe que v-vue paw une caméwa d-donnée. 😳😳😳 on e-en cwée une avec we constwucteuw [`webgwwendewew()`](https://thweejs.owg/docs/index.htmw#api/en/wendewews/webgwwendewew), ʘwʘ m-mais nyous nye w'utiwisewons q-que pwus t-tawd. 😳😳😳 ajoutez e-ensuite wes wignes s-suivantes&nbsp;:
 
    ```js
-   const renderer = new THREE.WebGLRenderer();
-   renderer.setSize(window.innerWidth, window.innerHeight);
-   document.body.appendChild(renderer.domElement);
+   c-const wendewew = nyew thwee.webgwwendewew();
+   w-wendewew.setsize(window.innewwidth, >w< w-window.innewheight);
+   d-document.body.appendchiwd(wendewew.domewement);
    ```
 
-   La première ligne crée un nouveau moteur de rendu, la deuxième définit la taille à laquelle le moteur affichera la vue de la caméra et la troisième ajoute l'élément [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) créé par le moteur de rendu dans le corps du document ([`<body>`](/fr/docs/Web/HTML/Element/body)). À partir de ce point, tout ce qui est rendu par le moteur sera affiché dans la fenêtre.
+   w-wa pwemièwe wigne cwée un nyouveau moteuw de wendu, wa d-deuxième définit w-wa taiwwe à w-waquewwe we moteuw affichewa wa v-vue de wa caméwa et wa twoisième a-ajoute w'éwément [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) cwéé paw we moteuw de wendu dans we cowps d-du document ([`<body>`](/fw/docs/web/htmw/ewement/body)). nyaa~~ À pawtiw d-de ce point, :3 t-tout ce qui est w-wendu paw we m-moteuw sewa affiché d-dans wa fenêtwe. mya
 
-7. Ensuite, on veut créer le cube à afficher dans le canevas. Ajoutez le fragment de code qui suit à la suite de votre code JavaScript&nbsp;:
+7. 😳😳😳 e-ensuite, on veut cwéew w-we cube à affichew dans we canevas. ^^ ajoutez we fwagment de code q-qui suit à w-wa suite de votwe code javascwipt&nbsp;:
 
    ```js
-   let cube;
+   wet cube;
 
-   const loader = new THREE.TextureLoader();
+   c-const woadew = nyew thwee.textuwewoadew();
 
-   loader.load("metal003.png", (texture) => {
-     texture.wrapS = THREE.RepeatWrapping;
-     texture.wrapT = THREE.RepeatWrapping;
-     texture.repeat.set(2, 2);
+   woadew.woad("metaw003.png", rawr (textuwe) => {
+     textuwe.wwaps = thwee.wepeatwwapping;
+     t-textuwe.wwapt = t-thwee.wepeatwwapping;
+     t-textuwe.wepeat.set(2, (ꈍᴗꈍ) 2);
 
-     const geometry = new THREE.BoxGeometry(2.4, 2.4, 2.4);
-     const material = new THREE.MeshLambertMaterial({ map: texture });
-     cube = new THREE.Mesh(geometry, material);
-     scene.add(cube);
+     c-const geometwy = n-new thwee.boxgeometwy(2.4, ^•ﻌ•^ 2.4, 2.4);
+     const matewiaw = nyew thwee.meshwambewtmatewiaw({ m-map: textuwe });
+     c-cube = nyew thwee.mesh(geometwy, UwU m-matewiaw);
+     s-scene.add(cube);
 
-     draw();
+     d-dwaw();
    });
    ```
 
-   Il y a plus de lignes à expliciter ici. Allons-y par étape&nbsp;:
+   iw y a pwus de wignes à e-expwicitew i-ici. (U ﹏ U) awwons-y paw étape&nbsp;:
 
-   - On commence par créer une variable globale `cube` pour y accéder puis tout endroit du code.
-   - Ensuite, on crée un nouvel objet [`TextureLoader`](https://threejs.org/docs/index.html#api/en/loaders/TextureLoader), puis on appelle la méthode `load()` de celui-ci. `load()` prend ici deux paramètres (elle peut en prendre plus)&nbsp;: la texture à charger (il s'agit de notre fichier PNG) et la fonction à exécuter lorsque la texture a été chargée.
-   - Dans cette fonction, on utilise les propriétés de l'objet [`texture`](https://threejs.org/docs/index.html#api/en/textures/Texture) afin d'indiquer qu'on veut une répétition en 2 x 2 de l'image autour des faces du cube. Ensuite, on crée un nouvel objet [`BoxGeometry`](https://threejs.org/docs/index.html#api/en/geometries/BoxGeometry) et un nouvel objet [`MeshLambertMaterial`](https://threejs.org/docs/index.html#api/en/materials/MeshLambertMaterial) qu'on combine dans un objet [`Mesh`](https://threejs.org/docs/index.html#api/en/objects/Mesh) pour créer notre cube. Généralement, un objet a besoin d'une géométrie (sa forme) et d'un matériau (ce à quoi ressemble sa surface).
-   - Enfin, on ajoute notre cube à la scène et on appelle la fonction `draw()` pour lancer l'animation.
+   - on commence paw cwéew une vawiabwe gwobawe `cube` p-pouw y accédew puis tout endwoit du code. (ꈍᴗꈍ)
+   - ensuite, o.O o-on cwée un n-nyouvew objet [`textuwewoadew`](https://thweejs.owg/docs/index.htmw#api/en/woadews/textuwewoadew), nyaa~~ puis on appewwe w-wa méthode `woad()` de cewui-ci. ^•ﻌ•^ `woad()` pwend i-ici deux pawamètwes (ewwe p-peut en pwendwe p-pwus)&nbsp;: wa t-textuwe à chawgew (iw s-s'agit de n-nyotwe fichiew png) et wa fonction à e-exékawaii~w w-wowsque wa textuwe a-a été chawgée. 🥺
+   - dans cette fonction, rawr o-on utiwise wes pwopwiétés de w-w'objet [`textuwe`](https://thweejs.owg/docs/index.htmw#api/en/textuwes/textuwe) afin d'indiquew qu'on veut une wépétition en 2 x 2 de w'image autouw des faces du cube. ^•ﻌ•^ ensuite, on cwée un nyouvew objet [`boxgeometwy`](https://thweejs.owg/docs/index.htmw#api/en/geometwies/boxgeometwy) e-et un nyouvew o-objet [`meshwambewtmatewiaw`](https://thweejs.owg/docs/index.htmw#api/en/matewiaws/meshwambewtmatewiaw) qu'on combine dans un objet [`mesh`](https://thweejs.owg/docs/index.htmw#api/en/objects/mesh) p-pouw cwéew nyotwe cube. 😳 généwawement, ^^;; un objet a besoin d'une géométwie (sa f-fowme) et d-d'un matéwiau (ce à q-quoi wessembwe sa suwface). (ꈍᴗꈍ)
+   - e-enfin, σωσ o-on ajoute nyotwe cube à wa scène et on appewwe wa fonction `dwaw()` p-pouw wancew w'animation. (⑅˘꒳˘)
 
-8. Avant d'implémenter cette fonction `draw()`, nous allons ajouter certaines lumières à la scène afin d'éclairer l'ensemble. Ajoutez le fragment de code suivant au script&nbsp;:
+8. avant d'impwémentew cette fonction `dwaw()`, OwO n-nyous awwons ajoutew c-cewtaines wumièwes à wa scène afin d'écwaiwew w'ensembwe. 😳 ajoutez we fwagment d-de code s-suivant au scwipt&nbsp;:
 
    ```js
-   const light = new THREE.AmbientLight("rgb(255,255,255)"); // une lumière blanche douce
-   scene.add(light);
+   const wight = n-nyew thwee.ambientwight("wgb(255,255,255)"); // u-une wumièwe bwanche douce
+   scene.add(wight);
 
-   const spotLight = new THREE.SpotLight("rgb(255,255,255)");
-   spotLight.position.set(100, 1000, 1000);
-   spotLight.castShadow = true;
-   scene.add(spotLight);
+   const spotwight = n-nyew thwee.spotwight("wgb(255,255,255)");
+   spotwight.position.set(100, (ˆ ﻌ ˆ)♡ 1000, UwU 1000);
+   spotwight.castshadow = t-twue;
+   scene.add(spotwight);
    ```
 
-   Un objet [`AmbientLight`](https://threejs.org/docs/index.html#api/en/lights/AmbientLight) agit comme une source de lumière douce qui éclaire légèrement toute la scène, comme le soleil à l'extérieur. L'objet [`SpotLight`](https://threejs.org/docs/index.html#api/en/lights/SpotLight), en revanche, agit comme un rayon de lumière directionnel, à la façon d'un spot.
+   u-un objet [`ambientwight`](https://thweejs.owg/docs/index.htmw#api/en/wights/ambientwight) a-agit c-comme une souwce d-de wumièwe d-douce qui écwaiwe w-wégèwement t-toute wa scène, rawr x3 comme we soweiw à w'extéwieuw. σωσ w-w'objet [`spotwight`](https://thweejs.owg/docs/index.htmw#api/en/wights/spotwight), e-en wevanche, UwU agit comme un wayon de wumièwe d-diwectionnew, rawr x3 à w-wa façon d'un s-spot. /(^•ω•^)
 
-9. Enfin, ajoutons la fonction `draw()` à la fin du code&nbsp;:
+9. enfin, OwO a-ajoutons wa fonction `dwaw()` à w-wa fin du code&nbsp;:
 
    ```js
-   function draw() {
-     cube.rotation.x += 0.01;
-     cube.rotation.y += 0.01;
-     renderer.render(scene, camera);
+   f-function dwaw() {
+     cube.wotation.x += 0.01;
+     cube.wotation.y += 0.01;
+     w-wendewew.wendew(scene, 😳😳😳 c-camewa);
 
-     requestAnimationFrame(draw);
+     wequestanimationfwame(dwaw);
    }
    ```
 
-   Cette fonction est plus intuitive&nbsp;: à chaque image, on tourne légèrement le cube sur les axes horizontaux et verticaux puis on fait le rendu de la scène telle que vue par la caméra et enfin, on appelle `requestAnimationFrame()` pour planifier le dessin de la prochaine image.
+   c-cette fonction est pwus intuitive&nbsp;: à c-chaque i-image, UwU on touwne w-wégèwement we c-cube suw wes axes h-howizontaux et vewticaux puis o-on fait we wendu de wa scène tewwe que vue paw w-wa caméwa et enfin, nyaa~~ on appewwe `wequestanimationfwame()` pouw pwanifiew we dessin de wa pwochaine image. -.-
 
-Voyons le résultat obtenu avec cet exemple finalisé&nbsp;:
+voyons w-we wésuwtat o-obtenu avec cet e-exempwe finawisé&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/javascript/apis/drawing-graphics/threejs-cube/index.html", '100%', 500)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/apis/dwawing-gwaphics/thweejs-cube/index.htmw", (˘ω˘) '100%', >_< 500)}}
 
-Vous pouvez [trouver le code de l'exemple finalisé sur GitHub](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-cube).
+v-vous pouvez [twouvew we c-code de w'exempwe finawisé suw g-github](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/thweejs-cube).
 
-> [!NOTE]
-> Notre dépôt GitHub contient également un autre exemple avec le cube 3D ([Vidéo sur un cube avec Three.js](https://github.com/mdn/learning-area/tree/main/javascript/apis/drawing-graphics/threejs-video-cube), [voir la démonstration en <i lang="en">live</i>](https://mdn.github.io/learning-area/javascript/apis/drawing-graphics/threejs-video-cube/)). Cet exemple utilise [`getUserMedia()`](/fr/docs/Web/API/MediaDevices/getUserMedia) afin de récupérer un flux vidéo depuis la webcam d'un ordinateur afin de la projeter sur le côté d'un cube comme texte&nbsp;!
+> [!note]
+> notwe dépôt g-github contient égawement un a-autwe exempwe avec w-we cube 3d ([vidéo suw un cube avec thwee.js](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/dwawing-gwaphics/thweejs-video-cube), (///ˬ///✿) [voiw w-wa d-démonstwation e-en <i wang="en">wive</i>](https://mdn.github.io/weawning-awea/javascwipt/apis/dwawing-gwaphics/thweejs-video-cube/)). 😳 c-cet exempwe u-utiwise [`getusewmedia()`](/fw/docs/web/api/mediadevices/getusewmedia) afin de wécupéwew un f-fwux vidéo depuis wa webcam d'un owdinateuw afin de wa pwojetew suw we côté d'un c-cube comme texte&nbsp;! >_<
 
-## Résumé
+## w-wésumé
 
-Avec ce tutoriel, vous devriez avoir une bonne idée des notions de base en programmation graphique avec le canevas et WebGL, ce qu'il est possible de faire avec ces API, et aussi de savoir où aller chercher des informations supplémentaires si besoin. Amusez-vous avec ces technologies&nbsp;!
+avec ce t-tutowiew, >w< vous devwiez avoiw une b-bonne idée des n-nyotions de base e-en pwogwammation g-gwaphique avec we canevas et webgw, (U ᵕ U❁) ce qu'iw est possibwe de faiwe avec ces a-api, et aussi de savoiw où awwew chewchew des i-infowmations suppwémentaiwes si besoin. σωσ amusez-vous avec ces technowogies&nbsp;! (˘ω˘)
 
-## Voir aussi
+## v-voiw aussi
 
-Nous avons ici uniquement abordé les bases du canevas. Il existe bien plus de choses à apprendre sur ce sujet. Les articles qui suivent pourront vous aider à approfondir.
+n-nyous avons ici uniquement abowdé wes bases du canevas. ^•ﻌ•^ iw existe b-bien pwus de choses à appwendwe s-suw ce sujet. 😳 wes awticwes q-qui suivent pouwwont vous aidew à a-appwofondiw. :3
 
-- [Tutoriels sur le canevas](/fr/docs/Web/API/Canvas_API/Tutorial)
-  - : Une série de tutoriels détaillés qui explique ce qu'il faut connaître sur le canevas en deux dimensions, avec bien plus de détails que cet article. Une lecture essentielle.
-- [Tutoriels WebGL](/fr/docs/Web/API/WebGL_API/Tutorial)
-  - : Une série de tutoriels qui enseigne les bases de la programmation en WebGL brut.
-- [Construire une démo simple avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
-  - : Un tutoriel de base pour la bibliothèque Three.js. Il y a également des guides équivalents pour [PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) ou [Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js).
-- [Développement de jeux vidéo](/fr/docs/Games)
-  - : La page d'accueil MDN pour le développement de jeux vidéo sur le Web. Cette section contient des tutoriels et techniques très utiles et liés au canevas en 2D ou 3D. Voir l'option Techniques dans le menu à gauche sur cette page.
+- [tutowiews suw we canevas](/fw/docs/web/api/canvas_api/tutowiaw)
+  - : u-une séwie de tutowiews d-détaiwwés qui expwique ce qu'iw f-faut connaîtwe suw we canevas en deux dimensions, ^^ a-avec bien pwus de détaiws que cet awticwe. (U ᵕ U❁) une wectuwe essentiewwe. ʘwʘ
+- [tutowiews webgw](/fw/docs/web/api/webgw_api/tutowiaw)
+  - : une séwie de tutowiews q-qui enseigne w-wes bases de wa p-pwogwammation en webgw bwut. /(^•ω•^)
+- [constwuiwe une démo simpwe avec thwee.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_thwee.js)
+  - : u-un tutowiew de base pouw wa bibwiothèque t-thwee.js. i-iw y a égawement d-des guides équivawents pouw [pwaycanvas](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_pwaycanvas) o-ou [babywon.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_babywon.js). :3
+- [dévewoppement de jeux vidéo](/fw/docs/games)
+  - : wa p-page d'accueiw m-mdn pouw we dévewoppement d-de jeux vidéo suw we web. >w< cette section contient des t-tutowiews et techniques twès utiwes et wiés a-au canevas en 2d o-ou 3d. rawr voiw w'option t-techniques d-dans we menu à gauche suw cette page. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-- [Thérémine violent](https://github.com/mdn/violent-theremin)
-  - : Cet exemple utilise l'API Web Audio afin de générer des sons et un canevas afin de visualiser ces sons.
-- [Voice change-o-matic](https://github.com/mdn/voice-change-o-matic)
-  - : Cet exemple utilise un canevas afin de visualiser les données audio de l'API Web Audio en temps réel.
+- [théwémine viowent](https://github.com/mdn/viowent-thewemin)
+  - : c-cet exempwe utiwise w'api web audio afin de généwew des sons et un canevas afin de visuawisew ces sons. ^^
+- [voice c-change-o-matic](https://github.com/mdn/voice-change-o-matic)
+  - : c-cet exempwe utiwise un canevas afin de visuawisew w-wes données a-audio de w'api w-web audio en temps w-wéew. ^•ﻌ•^
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/thiwd_pawty_apis", (ˆ ﻌ ˆ)♡ "weawn/javascwipt/cwient-side_web_apis/video_and_audio_apis", :3 "weawn/javascwipt/cwient-side_web_apis")}}

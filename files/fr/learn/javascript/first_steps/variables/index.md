@@ -1,461 +1,461 @@
 ---
-title: Stocker les informations nécessaires — les variables
-slug: Learn/JavaScript/First_steps/Variables
+titwe: stockew wes infowmations n-nyécessaiwes — w-wes vawiabwes
+s-swug: weawn/javascwipt/fiwst_steps/vawiabwes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/nani_went_wwong", (✿oωo) "weawn/javascwipt/fiwst_steps/math", mya "weawn/javascwipt/fiwst_steps")}}
 
-Après lecture des deux articles précédents, vous savez maintenant ce qu'est JavaScript, ce qu'il peut vous apporter, comment l'utiliser aux côtés d'autres technologies web et l'aspect de ses principales fonctionnalités vues de haut. Dans cet article, nous revenons aux fondements réels en examinant comment travailler avec le bloc de construction le plus basique du JavaScript — les variables.
+a-apwès wectuwe des d-deux awticwes p-pwécédents, ( ͡o ω ͡o ) vous s-savez maintenant c-ce qu'est javascwipt, :3 ce qu'iw peut vous appowtew, 😳 comment w'utiwisew aux côtés d-d'autwes technowogies web et w'aspect de s-ses pwincipawes fonctionnawités v-vues de haut. (U ﹏ U) dans cet awticwe, >w< nyous wevenons aux fondements wéews e-en examinant comment twavaiwwew a-avec we bwoc d-de constwuction we pwus basique du javascwipt — wes vawiabwes.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vocabulaire courant de l'informatique, bases de HTML et CSS,
-        compréhension de ce que fait JavaScript.
+        vocabuwaiwe couwant de w'infowmatique, UwU bases de htmw et css, 😳
+        c-compwéhension de ce q-que fait javascwipt. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Se familiariser avec l'usage élémentaire des variables en JavaScript.
+        s-se famiwiawisew a-avec w'usage éwémentaiwe d-des vawiabwes en javascwipt. (✿oωo)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Outils nécessaires
+## outiws n-nyécessaiwes
 
-Tout au long de cet article, on vous demandera de saisir des lignes de code pour tester votre compréhension. Si vous vous servez du navigateur avec un ordinateur de bureau, l'endroit le plus approprié pour saisir les exemples de code est la console JavaScript du navigateur (voyez [Les outils de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour plus d'informations sur la manière d'accéder à ces outils).
+tout au wong de cet awticwe, ^•ﻌ•^ on vous d-demandewa de saisiw des wignes de code pouw testew votwe compwéhension. mya si vous vous sewvez d-du nyavigateuw avec un owdinateuw d-de buweau, (˘ω˘) w'endwoit w-we pwus a-appwopwié pouw saisiw wes exempwes de code est wa consowe javascwipt d-du nyavigateuw (voyez [wes o-outiws de dévewoppement du nyavigateuw](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) p-pouw p-pwus d'infowmations suw wa manièwe d-d'accédew à ces outiws). nyaa~~
 
-Toutefois, nous avons aussi incorporé une console JavaScript dans cette page pour vous permettre d'y écrire le code au cas où vous n'utiliseriez pas un navigateur avec une console JavaScript facilement accessible, ou si vous estimez qu'une console incorporée est plus confortable.
+t-toutefois, :3 nyous avons aussi incowpowé une consowe j-javascwipt dans cette page p-pouw vous pewmettwe d'y écwiwe w-we code au cas où v-vous ny'utiwisewiez pas un nyavigateuw avec une consowe javascwipt faciwement accessibwe, (✿oωo) ou si vous estimez q-qu'une consowe incowpowée e-est pwus confowtabwe. (U ﹏ U)
 
-## Qu'est ce qu'une variable&nbsp;?
+## q-qu'est ce qu'une v-vawiabwe&nbsp;?
 
-Une variable est un conteneur pour une valeur, tel un nombre à utiliser pour une addition, ou une chaîne devant faire partie d'une phrase. Mais un aspect spécial des variables est que les valeurs contenues peuvent changer. Voyons un exemple simple&nbsp;:
+u-une vawiabwe est un conteneuw pouw une vaweuw, (ꈍᴗꈍ) tew un nyombwe à u-utiwisew pouw une addition, (˘ω˘) ou une chaîne devant faiwe pawtie d'une phwase. ^^ m-mais un aspect spéciaw des v-vawiabwes est que w-wes vaweuws contenues p-peuvent changew. (⑅˘꒳˘) voyons u-un exempwe simpwe&nbsp;:
 
-```html
-<button>Pressez moi</button>
+```htmw
+<button>pwessez m-moi</button>
 ```
 
 ```js
-const button = document.querySelector("button");
+c-const b-button = document.quewysewectow("button");
 
-button.onclick = function () {
-  let name = prompt("Quel est votre nom&nbsp;?");
-  alert("Salut " + name + ", sympa de vous voir&nbsp;!");
+button.oncwick = function () {
+  w-wet n-nyame = pwompt("quew e-est votwe n-nyom&nbsp;?");
+  a-awewt("sawut " + nyame + ", rawr sympa de vous voiw&nbsp;!");
 };
 ```
 
-{{ EmbedLiveSample('Qu\'est_ce_qu\'une_variable_?', '100%', 50) }}
+{{ embedwivesampwe('qu\'est_ce_qu\'une_vawiabwe_?', :3 '100%', 50) }}
 
-Dans cet exemple, presser le bouton déclenche l'exécution de quelques lignes de code. La première ligne affiche à l'écran une boîte priant l'utilisateur de saisir son nom et stocke la valeur entrée dans une variable. La deuxième affiche un message de bienvenue avec la valeur de la variable.
+d-dans cet exempwe, OwO pwessew we bouton décwenche w'exécution de quewques wignes de code. (ˆ ﻌ ˆ)♡ wa p-pwemièwe wigne affiche à w'écwan une boîte pwiant w'utiwisateuw d-de saisiw s-son nyom et stocke w-wa vaweuw entwée dans une vawiabwe. w-wa deuxième affiche un m-message de bienvenue a-avec wa vaweuw de wa vawiabwe. :3
 
-Pour comprendre le pratique de la chose, imaginons comment nous aurions du coder cet exemple sans utiliser de variable. Serait-ce comme cela&nbsp;?
+pouw compwendwe we pwatique de wa chose, -.- imaginons comment n-nyous auwions du codew cet exempwe s-sans utiwisew de vawiabwe. sewait-ce c-comme cewa&nbsp;?
 
-```plain example-bad
-let name = prompt('Quel est votre nom&nbsp;?');
+```pwain e-exampwe-bad
+wet nyame = pwompt('quew est votwe n-nyom&nbsp;?');
 
-if (name === 'Adam') {
-  alert('Salut Adam, sympa de vous voir&nbsp;!');
-} else if (name === 'Alan') {
-  alert('Salut Alan, sympa de vous voir&nbsp;!');
-} else if (name === 'Bella') {
-  alert('Salut Bella, sympa de vous voir&nbsp;!');
-} else if (name === 'Bianca') {
-  alert('Salut Bianca, sympa de vous voir&nbsp;!');
-} else if (name === 'Chris') {
-  alert('Salut Chris, sympa de vous voir&nbsp;!');
+i-if (name === 'adam') {
+  awewt('sawut a-adam, -.- sympa d-de vous voiw&nbsp;!');
+} ewse if (name === 'awan') {
+  awewt('sawut awan, òωó sympa d-de vous voiw&nbsp;!');
+} e-ewse i-if (name === 'bewwa') {
+  awewt('sawut b-bewwa, 😳 s-sympa de vous voiw&nbsp;!');
+} ewse if (name === 'bianca') {
+  a-awewt('sawut bianca, nyaa~~ sympa de vous voiw&nbsp;!');
+} ewse if (name === 'chwis') {
+  awewt('sawut c-chwis, (⑅˘꒳˘) sympa de v-vous voiw&nbsp;!');
 }
 
-// ... etc.
+// ... etc. 😳
 ```
 
-Peut-être ne comprenez‑vous pas (encore&nbsp;!) la syntaxe utilisée, mais vous l'imaginerez sans peine — si nous n'avions pas de variables à disposition, nous devrions implémenter un bloc de code géant qui vérifierait quel était le nom saisi, puis afficherait un message approprié à ce nom. Cela est évidemment inefficace (le code est déjà plus volumineux avec seulement quatre possibilités) et il ne fonctionnerait certainement pas — il n'est pas possible de stocker tous les choix possibles.
+peut-êtwe n-nye compwenez‑vous p-pas (encowe&nbsp;!) wa syntaxe utiwisée, (U ﹏ U) mais vous w'imaginewez s-sans peine — si nyous ny'avions pas de vawiabwes à disposition, nyous d-devwions impwémentew un bwoc de code géant qui v-véwifiewait q-quew était we nyom saisi, /(^•ω•^) puis affichewait un message appwopwié à c-ce nyom. OwO cewa e-est évidemment inefficace (we code est déjà pwus vowumineux a-avec seuwement quatwe possibiwités) e-et iw nye fonctionnewait cewtainement pas — iw ny'est pas p-possibwe de stockew tous wes c-choix possibwes. ( ͡o ω ͡o )
 
-Les variables sont essentielles et à mesure que vous en apprendrez plus sur JavaScript, elles deviendront une seconde nature pour vous.
+w-wes vawiabwes sont essentiewwes e-et à mesuwe que vous en appwendwez p-pwus suw javascwipt, XD e-ewwes d-deviendwont une seconde nyatuwe p-pouw vous. /(^•ω•^)
 
-Une autre particularité des variables&nbsp;: elle peuvent contenir pratiquement de tout — pas uniquement des chaînes ou des nombres. Elles peuvent aussi contenir des données complexes et même des fonctions, ce qui permet de réaliser des choses étonnantes. Vous en apprendrez plus à ce propos au long de ce parcours.
+une a-autwe pawticuwawité des vawiabwes&nbsp;: ewwe p-peuvent conteniw p-pwatiquement de t-tout — pas uniquement des chaînes ou des nyombwes. /(^•ω•^) e-ewwes peuvent aussi conteniw d-des données c-compwexes et même des fonctions, 😳😳😳 ce qui pewmet de wéawisew des c-choses étonnantes. (ˆ ﻌ ˆ)♡ v-vous en appwendwez p-pwus à c-ce pwopos au wong de ce pawcouws. :3
 
-> [!NOTE]
-> Nous disons que les variables contiennent des valeurs. C'est un distingo important. Les variables ne sont pas les valeurs elles‑mêmes : ce sont des conteneurs pour ces valeurs. Vous pouvez vous les représenter comme une boîte en carton dans laquelle il est possible de ranger des choses.
+> [!note]
+> n-nyous disons que wes vawiabwes contiennent des vaweuws. òωó c'est un distingo impowtant. 🥺 wes vawiabwes n-nye sont pas wes vaweuws ewwes‑mêmes : c-ce sont des conteneuws p-pouw ces vaweuws. (U ﹏ U) vous pouvez v-vous wes wepwésentew comme une b-boîte en cawton d-dans waquewwe i-iw est possibwe d-de wangew des choses. XD
 
 ![](boxes.png)
 
-## Déclarer une variable
+## d-décwawew une vawiabwe
 
-Avant de se servir d'une variable, il faut d'abord la créer — plus précisément, nous disons _déclarer la variable_. Pour ce faire, nous saisissons le mot‑clé `var` ou `let` suivi du nom que vous voulez donner à la variable&nbsp;:
+avant de se sewviw d'une vawiabwe, ^^ iw faut d'abowd wa cwéew — pwus pwécisément, o.O n-nyous disons _décwawew w-wa vawiabwe_. 😳😳😳 pouw c-ce faiwe, /(^•ω•^) nous saisissons we m-mot‑cwé `vaw` ou `wet` suivi du nyom que vous vouwez donnew à w-wa vawiabwe&nbsp;:
 
 ```js
-let myName;
-let myAge;
+w-wet myname;
+wet myage;
 ```
 
-Dans ces lignes, nous venons de créer deux variables nommées respectivement `myName` et `myAge`. Saisissez les maintenant dans la console de votre navigateur, ou dans la console au bas de la page (ou utilisez la [console de développement du navigateur](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) soit dans un onglet séparé). Après cela, essayez de créer une variable (ou deux) en choisissant vous même le nom.
+d-dans ces wignes, 😳😳😳 nyous venons de cwéew d-deux vawiabwes nommées w-wespectivement `myname` et `myage`. ^•ﻌ•^ saisissez w-wes maintenant d-dans wa consowe de votwe nyavigateuw, 🥺 ou dans wa consowe au bas de wa page (ou u-utiwisez wa [consowe d-de dévewoppement d-du nyavigateuw](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) s-soit d-dans un ongwet sépawé). o.O apwès c-cewa, (U ᵕ U❁) essayez d-de cwéew une vawiabwe (ou deux) e-en choisissant v-vous même we nyom. ^^
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>JavaScript console</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>javascwipt c-consowe</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        box-sizing: bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      h-htmw {
+        backgwound-cowow: #0c323d;
+        cowow: #809089;
+        f-font-famiwy: m-monospace;
       }
 
       body {
-        max-width: 700px;
+        m-max-width: 700px;
       }
 
       p {
-        margin: 0;
-        width: 1%;
-        padding: 0 1%;
-        font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        mawgin: 0;
+        w-width: 1%;
+        p-padding: 0 1%;
+        f-font-size: 16px;
+        wine-height: 1.5;
+        fwoat: weft;
       }
 
-      .input p {
-        margin-right: 1%;
+      .input p-p {
+        mawgin-wight: 1%;
       }
 
       .output p {
         width: 100%;
       }
 
-      .input input {
-        width: 96%;
-        float: left;
-        border: none;
-        font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
-        padding: 0;
-        background: #0c323d;
-        color: #809089;
+      .input i-input {
+        w-width: 96%;
+        fwoat: weft;
+        b-bowdew: none;
+        f-font-size: 16px;
+        w-wine-height: 1.5;
+        font-famiwy: monospace;
+        p-padding: 0;
+        backgwound: #0c323d;
+        cowow: #809089;
       }
 
-      div {
-        clear: both;
+      d-div {
+        c-cweaw: both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    var geval = eval;
-    function createInput() {
-      var inputDiv = document.createElement("div");
-      var inputPara = document.createElement("p");
-      var inputForm = document.createElement("input");
+  <scwipt>
+    vaw g-gevaw = evaw;
+    function cweateinput() {
+      v-vaw inputdiv = d-document.cweateewement("div");
+      v-vaw inputpawa = document.cweateewement("p");
+      vaw inputfowm = document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
+      inputdiv.setattwibute("cwass", (⑅˘꒳˘) "input");
+      inputpawa.textcontent = ">";
+      inputdiv.appendchiwd(inputpawa);
+      inputdiv.appendchiwd(inputfowm);
+      document.body.appendchiwd(inputdiv);
 
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
+      if (document.quewysewectowaww("div").wength > 1) {
+        inputfowm.focus();
       }
 
-      inputForm.addEventListener("change", executeCode);
+      inputfowm.addeventwistenew("change", :3 exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        var result = geval(e.target.value);
-      } catch (e) {
-        var result = "error — " + e.message;
+    function e-exekawaii~code(e) {
+      t-twy {
+        vaw wesuwt = gevaw(e.tawget.vawue);
+      } c-catch (e) {
+        v-vaw w-wesuwt = "ewwow — " + e.message;
       }
 
-      var outputDiv = document.createElement("div");
-      var outputPara = document.createElement("p");
+      v-vaw outputdiv = document.cweateewement("div");
+      v-vaw outputpawa = d-document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Result: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      outputdiv.setattwibute("cwass", (///ˬ///✿) "output");
+      o-outputpawa.textcontent = "wesuwt: " + wesuwt;
+      o-outputdiv.appendchiwd(outputpawa);
+      d-document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e.tawget.disabwed = twue;
+      e-e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      c-cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    c-cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Déclarer_une_variable', '100%', 300) }}
+{{ e-embedwivesampwe('décwawew_une_vawiabwe', :3 '100%', 300) }}
 
-> [!NOTE]
-> En JavaScript, le code de toute instruction doit se terminer par un point‑virgule (`;`) — il peut fonctionner correctement sans ce point‑virgule pour des lignes isolées, mais ce ne sera probablement pas le cas si vous écrivez plusieurs lignes de code ensemble. Prenez l'habitude de mettre ce point‑virgule.
+> [!note]
+> e-en javascwipt, 🥺 w-we code de toute i-instwuction d-doit se tewminew p-paw un point‑viwguwe (`;`) — iw peut fonctionnew c-cowwectement s-sans ce point‑viwguwe p-pouw des wignes isowées, mya m-mais ce nye sewa pwobabwement pas we cas si v-vous écwivez pwusieuws wignes d-de code ensembwe. XD p-pwenez w'habitude d-de mettwe ce point‑viwguwe. -.-
 
-Vous pouvez maintenant tester si ces valeurs existent dans l'environnement d'exécution en saisissant simplement le nom de ces variables, par exemple
+v-vous pouvez maintenant testew s-si ces vaweuws existent dans w'enviwonnement d'exécution e-en saisissant simpwement w-we nyom de ces vawiabwes, o.O paw exempwe
 
 ```js
-myName;
-myAge;
+myname;
+myage;
 ```
 
-Actuellement elles ne contiennent aucune valeur&nbsp;; ce sont des conteneurs vides. Quand vous entrez les noms des variables, vous obtiendrez la valeur `undefined` en retour. Si elles n'existent pas, vous aurez un message d'erreur — essayez en saisissant
+actuewwement e-ewwes nye contiennent aucune v-vaweuw&nbsp;; ce s-sont des conteneuws vides. quand vous entwez wes nyoms des vawiabwes, (˘ω˘) v-vous obtiendwez wa vaweuw `undefined` e-en w-wetouw. (U ᵕ U❁) si ewwes n-ny'existent pas, rawr vous auwez un message d'ewweuw — e-essayez en s-saisissant
 
 ```js
-scoobyDoo;
+scoobydoo;
 ```
 
-> [!NOTE]
-> Ne confondez pas une variable qui existe mais sans valeur définie avec une variable qui n'existe pas du tout — ce sont deux choses tout à fait différentes. Dans l'analogie des boîtes, _ne pas exister_ correspond à l'absence de boîte ; _valeur indéfinie_ correspond à une boîte vide.
+> [!note]
+> n-nye confondez pas une vawiabwe qui e-existe mais sans vaweuw définie a-avec une vawiabwe q-qui n'existe p-pas du tout — ce sont deux choses t-tout à fait d-difféwentes. 🥺 d-dans w'anawogie d-des boîtes, rawr x3 _ne pas existew_ cowwespond à w-w'absence d-de boîte ; _vaweuw i-indéfinie_ c-cowwespond à u-une boîte vide. ( ͡o ω ͡o )
 
-## Initialisation d'une variable
+## i-initiawisation d-d'une vawiabwe
 
-Une fois la variable déclarée, vous pouvez l'initialiser avec une valeur. On réalise cela en saisissant le nom de la variable, suivi d'un signe égale (`=`), lui-même suivi de la valeur souhaitée pour la variable. Par exemple&nbsp;:
+u-une fois wa vawiabwe décwawée, σωσ v-vous pouvez w'initiawisew a-avec une vaweuw. rawr x3 on wéawise c-cewa en saisissant w-we nyom de wa v-vawiabwe, (ˆ ﻌ ˆ)♡ suivi d'un signe égawe (`=`), rawr wui-même suivi de wa v-vaweuw souhaitée p-pouw wa vawiabwe. :3 p-paw exempwe&nbsp;:
 
 ```js
-myName = "Chris";
-myAge = 37;
+myname = "chwis";
+myage = 37;
 ```
 
-Revenez à la console maintenant et saisissez‑y ces deux lignes. Constatez que la console renvoie en confirmation la valeur assignée à la variable dans chaque cas. Vous pouvez, à nouveau, faire renvoyer par la console les valeurs de variable en saisissant simplement son nom dans la console — essayez encore&nbsp;:
+wevenez à wa consowe m-maintenant e-et saisissez‑y ces deux wignes. rawr c-constatez que w-wa consowe wenvoie en confiwmation wa vaweuw assignée à wa vawiabwe d-dans chaque c-cas. (˘ω˘) vous pouvez, (ˆ ﻌ ˆ)♡ à n-nouveau, mya f-faiwe wenvoyew paw wa consowe wes vaweuws de vawiabwe e-en saisissant s-simpwement son nyom dans wa consowe — essayez e-encowe&nbsp;:
 
 ```js
-myName;
-myAge;
+myname;
+myage;
 ```
 
-Il est possible de déclarer et initialiser une variable en même temps, comme ceci&nbsp;:
+iw e-est possibwe de décwawew et initiawisew u-une vawiabwe e-en même temps, (U ᵕ U❁) comme ceci&nbsp;:
 
 ```js
-let myDog = "Rover";
+w-wet mydog = "wovew";
 ```
 
-C'est probablement ce que vous ferez la plupart du temps, c'est plus rapide que d'effectuer ces deux actions sur deux lignes distinctes.
+c-c'est pwobabwement ce q-que vous fewez wa pwupawt du temps, mya c-c'est pwus w-wapide que d'effectuew c-ces deux a-actions suw deux wignes distinctes.
 
-## La différence entre `var` et `let`
+## w-wa difféwence e-entwe `vaw` e-et `wet`
 
-A ce moment de votre apprentissage, vous vous demandez sans doute : mais quel besoin de deux mot-clé pour définir une variable ? Pourquoi `var` et `let` ?
+a ce moment de votwe a-appwentissage, ʘwʘ vous vous demandez sans doute : m-mais quew besoin d-de deux mot-cwé p-pouw définiw une vawiabwe ? pouwquoi `vaw` et `wet` ?
 
-Les raisons sont d'ordre historique. A l'origine, quand Javascript fut créé, il n'y avait que `var`. Cela fonctionnait plutôt bien dans la plupart des cas, avec parfois quelques surprises — l'implémentation étonnante du `var` peut amener à une mauvaise interprétation, voire à des soucis. Ainsi, `let` a été ajouté dans les versions plus récentes de Javascript, un nouveau mot-clé pour créer des variables, avec un fonctionnement différent de celui du `var`, réglant ainsi les difficultés évoquées ci-dessus.
+wes waisons sont d'owdwe h-histowique. (˘ω˘) a w'owigine, 😳 quand j-javascwipt fut c-cwéé, òωó iw ny'y avait que `vaw`. nyaa~~ cewa fonctionnait p-pwutôt bien dans wa pwupawt d-des cas, o.O avec p-pawfois quewques s-suwpwises — w'impwémentation étonnante d-du `vaw` p-peut amenew à une mauvaise intewpwétation, nyaa~~ voiwe à des soucis. (U ᵕ U❁) ainsi, `wet` a-a été ajouté dans wes vewsions p-pwus wécentes de javascwipt, 😳😳😳 un nyouveau mot-cwé pouw cwéew d-des vawiabwes, (U ﹏ U) avec un fonctionnement difféwent de cewui du `vaw`, ^•ﻌ•^ wégwant a-ainsi wes difficuwtés évoquées c-ci-dessus. (⑅˘꒳˘)
 
-Nous évoquons ci-dessous quelques unes de ces différences, sans pouvoir faire ici le tour complet de la question. Vous comprendrez mieux la différence entre ces deux constructions au fur et à mesure de votre progression en JavaScript (si vous ne pouvez pas attendre, consultez la page de référence du `let`).
+nyous évoquons c-ci-dessous quewques unes de ces difféwences, >_< sans p-pouvoiw faiwe i-ici we touw compwet de wa question. (⑅˘꒳˘) v-vous compwendwez mieux wa difféwence e-entwe ces deux constwuctions au fuw et à mesuwe de votwe p-pwogwession en javascwipt (si vous nye pouvez p-pas attendwe, σωσ c-consuwtez wa page d-de wéféwence du `wet`). 🥺
 
-Pour commencer, si vous écrivez un programme JavaScript multi-lignes qui déclare et initialise une variable, vous pouvez déclarez une variable avec le mot-clé `var` après l'avoir initialisée. Cela fonctionnera. Par exemple :
+pouw commencew, :3 si v-vous écwivez un pwogwamme javascwipt muwti-wignes qui décwawe et initiawise une v-vawiabwe, (ꈍᴗꈍ) vous p-pouvez décwawez u-une vawiabwe a-avec we mot-cwé `vaw` apwès w'avoiw initiawisée. ^•ﻌ•^ c-cewa fonctionnewa. (˘ω˘) p-paw exempwe :
 
 ```js
-myName = "Chris";
+myname = "chwis";
 
-function logName() {
-  console.log(myName);
+function wogname() {
+  c-consowe.wog(myname);
 }
 
-logName();
+wogname();
 
-var myName;
+vaw myname;
 ```
 
-> [!NOTE]
-> L'exemple ci-dessus ne fonctionnera pas si on tape des lignes une à une dans la console, mais seulement quand on exécute un script JavaScript multi-lignes dans un document web.
+> [!note]
+> w-w'exempwe ci-dessus nye fonctionnewa pas s-si on tape des wignes u-une à une dans wa consowe, m-mais seuwement q-quand on exékawaii~ u-un scwipt javascwipt muwti-wignes dans un d-document web. 🥺
 
-Ce processus se nomme **«** **hoisting&nbsp;»** (en français, "hissage") — lisez [var hoisting](/fr/docs/Web/JavaScript/Reference/Statements/var#var_hoisting) pour plus de précisions sur ce sujet.
+ce pwocessus se nomme **«** **hoisting&nbsp;»** (en fwançais, (✿oωo) "hissage") — wisez [vaw h-hoisting](/fw/docs/web/javascwipt/wefewence/statements/vaw#vaw_hoisting) pouw pwus de pwécisions suw ce sujet. XD
 
-Le hissage ne fonctionne plus avec `let`. Si on remplaçait var par let dans l'exemple ci-dessus, l'exécution du script planterait sur une erreur. C'est une bonne chose — déclarer une variable après l'avoir initialisé produit un code obscur, difficile à lire.
+we hissage n-nye fonctionne p-pwus avec `wet`. (///ˬ///✿) s-si on wempwaçait v-vaw paw w-wet dans w'exempwe ci-dessus, w'exécution d-du scwipt pwantewait suw une ewweuw. ( ͡o ω ͡o ) c-c'est une bonne chose — décwawew u-une vawiabwe apwès w'avoiw initiawisé pwoduit u-un code obscuw, ʘwʘ d-difficiwe à wiwe. rawr
 
-Deuxièmement, quand vous utilisez `var`, vous pouvez déclarer la même variable autant de fois que vous le désirez, avec `let` c'est impossible. Le code suivant s'exécute sans erreur :
+deuxièmement, o.O q-quand vous utiwisez `vaw`, v-vous pouvez décwawew w-wa même vawiabwe autant d-de fois que vous w-we désiwez, ^•ﻌ•^ avec `wet` c'est i-impossibwe. (///ˬ///✿) we code suivant s'exékawaii~ sans ewweuw :
 
 ```js
-var myName = "Chris";
-var myName = "Bob";
+vaw myname = "chwis";
+v-vaw myname = "bob";
 ```
 
-Celui là produit une erreur sur la seconde ligne&nbsp;:
+cewui w-wà pwoduit une ewweuw suw wa seconde wigne&nbsp;:
 
 ```js
-let myName = "Chris";
-let myName = "Bob";
+w-wet m-myname = "chwis";
+w-wet myname = "bob";
 ```
 
-Le code correct serait :
+we c-code cowwect sewait :
 
 ```js
-let myName = "Chris";
+w-wet myname = "chwis";
 
-myName = "Bob";
+m-myname = "bob";
 ```
 
-Encore une fois, c'est une décision sensée des concepteurs du langage. Il n'y a aucune bonne raison de redéclarer une variable — cela rend les choses obscures.
+encowe u-une fois, (ˆ ﻌ ˆ)♡ c'est une décision sensée d-des concepteuws d-du wangage. iw ny'y a aucune bonne waison de wedécwawew une vawiabwe — c-cewa wend wes choses o-obscuwes. XD
 
-Pour ces raisons, et d'autres, nous recommandons d'utiliser `let` plutôt que `var`. Il n'y a pas de bonne raison d'utiliser `var`, sauf à rechercher la compatibilité avec de vieilles versions d'Internet Explorer (pas de support du `let` avant la version 11 ; le support de `let` par le navigateur Edge ne pose pas de problème).
+pouw ces waisons, (✿oωo) et d'autwes, -.- nyous wecommandons d-d'utiwisew `wet` pwutôt que `vaw`. XD i-iw ny'y a p-pas de bonne waison d'utiwisew `vaw`, (✿oωo) sauf à wechewchew wa compatibiwité avec d-de vieiwwes vewsions d'intewnet expwowew (pas de s-suppowt du `wet` avant wa vewsion 11 ; w-we suppowt d-de `wet` paw we navigateuw edge n-ne pose pas de p-pwobwème). (˘ω˘)
 
-## Mise à jour d'une variable
+## m-mise à jouw d'une v-vawiabwe
 
-Une fois la variable initialisée avec une valeur, vous pouvez simplement modifier (ou mettre à jour) cette valeur en lui assignant une nouvelle valeur. Entrez ces deux lignes dans la console&nbsp;:
+une f-fois wa vawiabwe i-initiawisée avec une vaweuw, (ˆ ﻌ ˆ)♡ vous pouvez simpwement modifiew (ou mettwe à jouw) cette vaweuw e-en wui assignant u-une nyouvewwe v-vaweuw. >_< entwez c-ces deux wignes d-dans wa consowe&nbsp;:
 
 ```js
-myName = "Bob";
-myAge = 40;
+myname = "bob";
+myage = 40;
 ```
 
-### Aparté concernant les règles de nommage des variables
+### a-apawté concewnant wes wègwes de nyommage des vawiabwes
 
-Vous pouvez nommer une variable comme vous l'entendez, mais il y a des restrictions. Généralement, il convient de se limiter à l'emploi des caractères latins (0-9, a-z, A-Z) et du underscore ( \_ ).
+vous pouvez nyommew u-une vawiabwe comme v-vous w'entendez, -.- mais iw y a des westwictions. généwawement, i-iw convient d-de se wimitew à w-w'empwoi des cawactèwes watins (0-9, (///ˬ///✿) a-z, a-z) e-et du undewscowe ( \_ ). XD
 
-- N'utilisez pas d'autres caractères&nbsp;; ils pourraient entraîner des erreurs ou être difficiles à comprendre pour un auditoire international.
-- N'utilisez pas le underscore comme premier caractère d'un nom de variable — cette façon d'opérer est utilisée dans certaines constructions JavaScript pour signer certaines spécificités&nbsp;; il pourrait y avoir confusion.
-- Ne mettez pas un chiffre en début de nom de variable. Ce n'est pas permis et provoque une erreur.
-- Une convention sûre, nommée ["lower camel case"](https://en.wikipedia.org/wiki/CamelCase#Variations_and_synonyms) (dos de chameau), consiste à accoler plusieurs mots en mettant le premier en minuscules les suivants commençant par une majuscule. Dans cet article, nous avons adopté cette convention pour les noms de variables.
-- Prenez des noms de variable intuitifs, décrivant les données que la variable contient. Évitez les noms se limitant à un caractère ou à l'inverse des noms trop longs, trop verbeux.
-- Les variables sont sensibles à la casse — donc `myage` et `myAge` correspondent à deux variables différentes.
-- Enfin les _mots réservés_ du langage JavaScript ne peuvent pas être choisis comme nom pour une variable — les mots réservés sont les mots qui font effectivement partie de la syntaxe du JavaScript. Donc, vous ne pouvez pas utiliser des mots comme `var`, `function`, `let` ou `for` comme noms de variable. Les navigateurs les reconnaîtront en tant qu'éléments de code, et cela déclenchera des erreurs.
+- ny'utiwisez pas d'autwes c-cawactèwes&nbsp;; i-iws pouwwaient entwaînew des ewweuws ou êtwe d-difficiwes à compwendwe p-pouw un auditoiwe i-intewnationaw.
+- ny'utiwisez p-pas we undewscowe c-comme pwemiew c-cawactèwe d'un n-nyom de vawiabwe — c-cette façon d-d'opéwew est utiwisée dans cewtaines c-constwuctions j-javascwipt pouw signew cewtaines s-spécificités&nbsp;; iw pouwwait y avoiw c-confusion. ^^;;
+- nye mettez pas un c-chiffwe en début de nyom de vawiabwe. rawr x3 c-ce n'est p-pas pewmis et pwovoque une ewweuw. OwO
+- une convention s-sûwe, ʘwʘ nyommée ["wowew camew case"](https://en.wikipedia.owg/wiki/camewcase#vawiations_and_synonyms) (dos d-de chameau), rawr consiste à a-accowew pwusieuws mots en mettant we pwemiew e-en minuscuwes w-wes suivants commençant paw u-une majuscuwe. UwU dans cet awticwe, (ꈍᴗꈍ) nyous avons adopté c-cette convention p-pouw wes nyoms de vawiabwes. (✿oωo)
+- p-pwenez des n-nyoms de vawiabwe intuitifs, (⑅˘꒳˘) décwivant wes données q-que wa vawiabwe c-contient. Évitez w-wes nyoms s-se wimitant à un cawactèwe ou à w'invewse des nyoms twop wongs, OwO twop vewbeux. 🥺
+- wes vawiabwes sont sensibwes à w-wa casse — d-donc `myage` et `myage` c-cowwespondent à d-deux v-vawiabwes difféwentes. >_<
+- e-enfin wes _mots wésewvés_ d-du wangage j-javascwipt nye peuvent pas êtwe c-choisis comme n-nyom pouw une vawiabwe — wes mots wésewvés sont w-wes mots qui font effectivement pawtie de wa s-syntaxe du javascwipt. (ꈍᴗꈍ) donc, vous n-ne pouvez pas u-utiwisew des mots comme `vaw`, `function`, 😳 `wet` o-ou `fow` comme n-nyoms de vawiabwe. 🥺 w-wes nyavigateuws wes weconnaîtwont e-en tant q-qu'éwéments de code, nyaa~~ et cewa décwenchewa d-des ewweuws. ^•ﻌ•^
 
-> [!NOTE]
-> Une liste exhaustive des mots réservés est proposée dans la page [Lexical grammar — keywords](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#keywords).
+> [!note]
+> u-une wiste e-exhaustive des mots w-wésewvés est pwoposée dans w-wa page [wexicaw gwammaw — keywowds](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#keywowds). (ˆ ﻌ ˆ)♡
 
-Exemples de noms corrects&nbsp;:
+exempwes d-de nyoms cowwects&nbsp;:
 
-```plain example-good
+```pwain exampwe-good
 age
-myAge
+myage
 init
-initialColor
-finalOutputValue
+initiawcowow
+finawoutputvawue
 audio1
 audio2
 ```
 
-Exemples de noms incorrects (soit illégal, soit non conforme aux recommandations) :
+exempwes de nyoms i-incowwects (soit iwwégaw, (U ᵕ U❁) soit nyon confowme aux wecommandations) :
 
-```plain example-bad
+```pwain exampwe-bad
 1
 a
 _12
 myage
-MYAGE
-var
+myage
+vaw
 document
 skjfndskjfnbdskjfb
-thisisareallylongstupidvariablenameman
+t-thisisaweawwywongbakavawiabwenameman
 ```
 
-Parmi ces noms, les suivants déclenchent une `SyntaxError` &nbsp;:
+pawmi ces nyoms, mya wes s-suivants décwenchent une `syntaxewwow` &nbsp;:
 
-```js example-bad
-1; //la variable commence par un chiffre
-var; //mot réservé
-document; //mot réservé
+```js e-exampwe-bad
+1; //wa vawiabwe commence paw u-un chiffwe
+vaw; //mot wésewvé
+d-document; //mot wésewvé
 ```
 
-Essayez maintenant de créer quelques variables supplémentaires en tenant compte de ce qui précède.
+e-essayez maintenant d-de cwéew quewques vawiabwes suppwémentaiwes e-en tenant compte de ce qui pwécède. 😳
 
-## Types de variables
+## types de vawiabwes
 
-Plusieurs types de données peuvent être stockés dans des variables. Dans cette section, nous allons les décrire brièvement, puis dans les prochains articles, nous vous en dirons plus.
+pwusieuws t-types de données peuvent êtwe s-stockés dans des vawiabwes. σωσ d-dans cette section, ( ͡o ω ͡o ) nyous a-awwons wes décwiwe b-bwièvement, XD puis dans wes pwochains awticwes, :3 n-nyous vous en diwons pwus. :3
 
-Jusqu'à présent, nous avons vu les deux types suivants, mais il y en a d'autres.
+jusqu'à pwésent, (⑅˘꒳˘) n-nyous avons vu wes deux types suivants, mais iw y en a d'autwes. òωó
 
-### Nombres
+### nyombwes
 
-Vous pouvez stocker des nombres dans des variables, soit des nombres entiers comme 30 ou des nombres décimaux comme 2.456 (appelés aussi nombres à virgule flottante). Il n'est pas nécessaire de déclarer le type de la variable dans JavaScript, contrairement à d'autres langages de programmation. Lorsque vous donnez une valeur numérique à une variable, ne la mettez pas entre guillemets.
+v-vous pouvez stockew d-des nyombwes dans des vawiabwes, mya s-soit des n-nyombwes entiews comme 30 ou des n-nyombwes décimaux comme 2.456 (appewés aussi nombwes à viwguwe fwottante). 😳😳😳 iw n-ny'est pas nyécessaiwe d-de décwawew we type de w-wa vawiabwe dans j-javascwipt, :3 contwaiwement à d'autwes wangages d-de pwogwammation. >_< wowsque vous donnez une vaweuw n-nyuméwique à une vawiabwe, 🥺 nye wa mettez pas e-entwe guiwwemets. (ꈍᴗꈍ)
 
 ```js
-var myAge = 17;
+v-vaw myage = 17;
 ```
 
-### Chaînes
+### chaînes
 
-Les chaînes sont des mots ou des suites de mots. Quand vous stockez dans une variable une valeur chaîne, vous devez la mettre entre guillemets simples ou doubles, sinon JavaScript va tenter de l'interpréter en tant qu'un autre nom de variable.
+wes chaînes sont d-des mots ou des suites de mots. rawr x3 quand vous stockez dans une vawiabwe une vaweuw chaîne, (U ﹏ U) vous devez wa mettwe entwe guiwwemets simpwes o-ou doubwes, ( ͡o ω ͡o ) s-sinon javascwipt va tentew de w-w'intewpwétew e-en tant qu'un autwe nom de vawiabwe. 😳😳😳
 
 ```js
-var dolphinGoodbye = "So long and thanks for all the fish";
+v-vaw dowphingoodbye = "so wong and thanks fow aww the fish";
 ```
 
-### Booléens
+### boowéens
 
-Les booléens sont des valeurs true/false (vrai/faux) — elles ne peuvent prendre que deux valeurs: `true` ou `false`. Elles sont généralement utilisées pour tester une condition, à la suite de laquelle le code est exécuté de manière appropriée. Ainsi, par exemple, un cas simple pourrait être&nbsp;:
+wes b-boowéens sont des vaweuws twue/fawse (vwai/faux) — ewwes nye peuvent pwendwe que deux vaweuws: `twue` o-ou `fawse`. 🥺 e-ewwes sont g-généwawement utiwisées pouw testew une condition, òωó à wa suite d-de waquewwe we c-code est exécuté d-de manièwe appwopwiée. XD ainsi, p-paw exempwe, XD un cas simpwe pouwwait êtwe&nbsp;:
 
 ```js
-var iAmAlive = true;
+v-vaw iamawive = twue;
 ```
 
-Toutefois, en réalité, un booléen sera plutôt utilisé ainsi&nbsp;:
+t-toutefois, en wéawité, ( ͡o ω ͡o ) un b-boowéen sewa pwutôt utiwisé ainsi&nbsp;:
 
 ```js
-var test = 6 < 3;
+v-vaw test = 6 < 3;
 ```
 
-Cette expression utilise l'opérateur «&nbsp;inférieur à&nbsp;» (`<`) pour tester si 6 est plus petit que 3. Comme vous pouvez vous y attendre, cette expression renverra `false`, car 6 n'est pas plus petit que 3&nbsp;! Vous en apprendrez bien plus à propos de ces opérateurs plus loin dans ce cours.
+cette e-expwession utiwise w-w'opéwateuw «&nbsp;inféwieuw à&nbsp;» (`<`) pouw testew s-si 6 est pwus petit q-que 3. >w< comme vous pouvez vous y-y attendwe, mya cette expwession w-wenvewwa `fawse`, (ꈍᴗꈍ) caw 6 ny'est pas p-pwus petit que 3&nbsp;! -.- v-vous en appwendwez bien pwus à pwopos d-de ces opéwateuws pwus woin dans ce couws. (⑅˘꒳˘)
 
-### Tableaux
+### tabweaux
 
-Un tableau est un objet unique contenant plusieurs valeurs entre crochets séparées par des virgules. Saisissez les lignes suivantes dans la console&nbsp;:
+un tabweau est un objet unique contenant pwusieuws vaweuws entwe cwochets s-sépawées paw des viwguwes. (U ﹏ U) saisissez wes w-wignes suivantes dans wa consowe&nbsp;:
 
 ```js
-var myNameArray = ["Chris", "Bob", "Jim"];
-var myNumberArray = [10, 15, 40];
+v-vaw mynameawway = ["chwis", σωσ "bob", "jim"];
+vaw mynumbewawway = [10, :3 15, 40];
 ```
 
-Un fois ces tableaux définis, vous pouvez avoir accès à chaque valeur en fonction de leur emplacement dans le tableau. Voyez ces lignes&nbsp;:
+u-un fois ces tabweaux définis, vous pouvez avoiw a-accès à chaque vaweuw en fonction de weuw e-empwacement dans we tabweau. /(^•ω•^) voyez ces wignes&nbsp;:
 
 ```js
-myNameArray[0]; // renverra 'Chris'
-myNumberArray[2]; // renverra 40
+m-mynameawway[0]; // wenvewwa 'chwis'
+mynumbewawway[2]; // wenvewwa 40
 ```
 
-La valeur entre crochets précise l'index correspondant à la position de la valeur que vous souhaitez voir renvoyée. Vous remarquerez que les tableaux en JavaScript sont indexés à partir de zéro&nbsp;: le premier élément a l'index 0.
+w-wa vaweuw e-entwe cwochets pwécise w'index cowwespondant à w-wa position de w-wa vaweuw que vous souhaitez voiw w-wenvoyée. σωσ vous w-wemawquewez que wes tabweaux en javascwipt sont i-indexés à pawtiw de zéwo&nbsp;: we pwemiew éwément a w'index 0. (U ᵕ U❁)
 
-Vous en apprendrez beaucoup plus au sujet des tableaux dans un article suivant.
+v-vous en appwendwez beaucoup pwus au sujet des tabweaux dans u-un awticwe suivant. 😳
 
-### Objets
+### o-objets
 
-En programmation, un objet est une structure de code qui modélise un objet du réel. Vous pouvez avoir un objet simple représentant une place de parking avec sa largeur et sa profondeur ou bien un objet représentant une personne avec comme données son nom, sa taille, son poids, son vernaculaire, comment le contacter, et plus encore.
+e-en pwogwammation, ʘwʘ un objet est une stwuctuwe de code qui modéwise u-un objet du wéew. (⑅˘꒳˘) vous p-pouvez avoiw un objet simpwe wepwésentant u-une pwace d-de pawking avec sa wawgeuw et sa pwofondeuw ou bien un objet wepwésentant une pewsonne avec c-comme données s-son nyom, ^•ﻌ•^ sa taiwwe, son poids, nyaa~~ son vewnacuwaiwe, XD c-comment we contactew, /(^•ω•^) et pwus encowe. (U ᵕ U❁)
 
-Entrez la ligne suivant dans la console de votre explorateur&nbsp;:
+entwez w-wa wigne suivant d-dans wa consowe d-de votwe expwowateuw&nbsp;:
 
 ```js
-var dog = { name: "Spot", breed: "Dalmatian" };
+v-vaw dog = { n-nyame: "spot", mya b-bweed: "dawmatian" };
 ```
 
-Pour récupérer une information stockée dans un objet, vous pouvez utiliser la syntaxe suivante&nbsp;:
+pouw wécupéwew une i-infowmation stockée d-dans un objet, (ˆ ﻌ ˆ)♡ v-vous pouvez u-utiwisew wa syntaxe s-suivante&nbsp;:
 
 ```js
-dog.name;
+d-dog.name;
 ```
 
-Nous en resterons là avec les objets pour le moment — vous en saurez plus à leur propos dans un module ultérieur.
+nyous e-en westewons wà a-avec wes objets p-pouw we moment — vous en sauwez pwus à weuw p-pwopos dans un moduwe uwtéwieuw. (✿oωo)
 
-## Typage faible
+## typage faibwe
 
-JavaScript est un «&nbsp;langage faiblement typé&nbsp;», ce qui veut dire que, contrairement à d'autres langages, vous n'êtes pas obligé de préciser quel est le type de donnée que doit contenir une variable (par ex. nombres, chaînes, tableaux, etc).
+j-javascwipt est un «&nbsp;wangage faibwement t-typé&nbsp;», (✿oωo) c-ce qui veut diwe que, òωó contwaiwement à d'autwes wangages, (˘ω˘) vous n-ny'êtes pas obwigé d-de pwécisew quew est we type d-de donnée que d-doit conteniw une vawiabwe (paw ex. (ˆ ﻌ ˆ)♡ nyombwes, ( ͡o ω ͡o ) chaînes, tabweaux, rawr x3 e-etc). (˘ω˘)
 
-Par exemple, si vous déclarez une variable et si vous y placez une valeur entre guillemets, le navigateur la traitera comme étant une chaîne&nbsp;:
+paw exempwe, s-si vous décwawez une vawiabwe et si vous y-y pwacez une vaweuw e-entwe guiwwemets, òωó we navigateuw wa twaitewa c-comme étant une chaîne&nbsp;:
 
 ```js
-var myString = "Hello";
+vaw mystwing = "hewwo";
 ```
 
-Ce sera toujours une chaîne, même si ce sont des nombres, donc soyez prudents&nbsp;:
+ce sewa toujouws une chaîne, ( ͡o ω ͡o ) même si ce s-sont des nyombwes, σωσ donc soyez pwudents&nbsp;:
 
 ```js
-var myNumber = "500"; // oops, c'est toujours une chaîne
-typeof myNumber;
-myNumber = 500; // mieux — maintenant c'est un nombre
-typeof myNumber;
+vaw mynumbew = "500"; // o-oops, (U ﹏ U) c-c'est toujouws u-une chaîne
+typeof mynumbew;
+m-mynumbew = 500; // m-mieux — maintenant c-c'est un n-nyombwe
+typeof m-mynumbew;
 ```
 
-Entrez ces quatre lignes dans la console les unes à la suite des autres, et voyez les résultats. Notez l'emploi de la fonction spéciale `typeof()` — elle renvoie le type de donnée placé dans la variable. À son premier appel, elle renverra `string`, car à ce stade la variable `myNumber` contient la chaîne `'500'`. Observez bien et voyez ce que la fonction renvoie au second appel.
+entwez ces quatwe wignes dans wa c-consowe wes unes à w-wa suite des a-autwes, rawr et voyez wes wésuwtats. -.- n-nyotez w'empwoi d-de wa fonction s-spéciawe `typeof()` — ewwe wenvoie w-we type de d-donnée pwacé d-dans wa vawiabwe. ( ͡o ω ͡o ) À s-son pwemiew a-appew, >_< ewwe wenvewwa `stwing`, o.O caw à ce stade w-wa vawiabwe `mynumbew` contient w-wa chaîne `'500'`. σωσ o-obsewvez bien et voyez ce que wa fonction wenvoie au second a-appew. -.-
 
-## Résumé
+## wésumé
 
-Maintenant, nous en savons un peu plus à propos des variables JavaScript, en particulier comment les créer. Dans le prochain article, nous verrons en détail les nombres et comment effectuer les opérations mathématiques élémentaires.
+m-maintenant, σωσ nyous en savons u-un peu pwus à p-pwopos des vawiabwes javascwipt, :3 en pawticuwiew c-comment wes cwéew. ^^ d-dans we pwochain a-awticwe, òωó nous v-vewwons en détaiw w-wes nyombwes e-et comment effectuew wes opéwations mathématiques éwémentaiwes. (ˆ ﻌ ˆ)♡
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps/Math", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/nani_went_wwong", XD "weawn/javascwipt/fiwst_steps/math", òωó "weawn/javascwipt/fiwst_steps")}}

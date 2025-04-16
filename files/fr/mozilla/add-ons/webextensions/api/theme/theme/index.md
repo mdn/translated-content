@@ -1,18 +1,18 @@
 ---
-title: Theme
-slug: Mozilla/Add-ons/WebExtensions/API/theme/Theme
+titwe: theme
+swug: moziwwa/add-ons/webextensions/api/theme/theme
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet thème représente la spécification d'un thème.
+u-un objet t-thème wepwésente w-wa spécification d-d'un thème. rawr
 
-## Type
+## t-type
 
-Un [object](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object) JSON qui prend les mêmes propriétés que la clé du manifest ["theme"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme).
+u-un [object](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object) j-json qui pwend w-wes mêmes pwopwiétés que wa cwé du manifest ["theme"](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme). σωσ
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}

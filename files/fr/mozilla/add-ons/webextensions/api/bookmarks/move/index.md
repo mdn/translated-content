@@ -1,100 +1,100 @@
 ---
-title: bookmarks.move()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/move
+titwe: bookmawks.move()
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/move
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode **`bookmarks.move()`** déplace le {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} à la destination spécifiée dans l'arborescence des signets. Cela vous permet de déplacer un signet vers un nouveau dossier et / ou une position dans le dossier.
+w-wa méthode **`bookmawks.move()`** d-dépwace w-we {{webextapiwef("bookmawks.bookmawktweenode", (˘ω˘) "bookmawktweenode")}} à w-wa d-destination spécifiée d-dans w'awbowescence d-des signets. (✿oωo) cewa vous pewmet de dépwacew un signet vews un nyouveau d-dossiew et / ou une position dans we dossiew. (///ˬ///✿)
 
-> [!WARNING]
-> Si votre extension tente de déplacer un signet dans le nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le déplacement ne sera pas terminé.
+> [!wawning]
+> s-si votwe extension tente de dépwacew u-un signet dans we nyœud wacine de w'awbowescence de signets, rawr x3 w-w'appew décwenche une ewweuw a-avec we message s-suivant: "_wa wacine du signet nye peut pas êtwe modifiée_" et we dépwacement n-nye sewa pas tewminé. -.-
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^^
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var movingBookmark = browser.bookmarks.move(
-  id, // string
-  destination, // object
+vaw movingbookmawk = b-bwowsew.bookmawks.move(
+  i-id, (⑅˘꒳˘) // stwing
+  d-destination, nyaa~~ // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `id`
-  - : Un {{jsxref("string")}} contenant l'ID du signet ou du dossier à déplacer.
+  - : un {{jsxwef("stwing")}} c-contenant w'id du signet ou du dossiew à d-dépwacew. /(^•ω•^)
 - `destination`
 
-  - : Un {{jsxref("object")}} qui spécifie la destination du signet. Cet objet doit contenir un ou les deux champs suivants :
+  - : un {{jsxwef("object")}} qui spécifie wa destination du signet. cet objet doit c-conteniw un ou wes deux champs s-suivants :
 
-    - `parentId` {{optional_inline}}
-      - : Un {{jsxref("string")}} qui spécifie l'ID du dossier de destination. Si cette valeur est omise, le signet est déplacé vers un nouvel emplacement dans son dossier actuel.
-    - `index` {{optional_inline}}
-      - : Un index basé sur 0 spécifiant la position dans le dossier vers lequel déplacer le signet. La valeur 0 déplace le signet vers le haut du dossier. Si cette valeur est omise, le signet est placé à la fin du nouveau dossier parent..
+    - `pawentid` {{optionaw_inwine}}
+      - : u-un {{jsxwef("stwing")}} q-qui spécifie w'id du dossiew de destination. (U ﹏ U) si cette vaweuw e-est omise, 😳😳😳 we s-signet est dépwacé vews un nyouvew e-empwacement d-dans son dossiew actuew. >w<
+    - `index` {{optionaw_inwine}}
+      - : u-un index basé suw 0 spécifiant w-wa position dans we dossiew vews wequew d-dépwacew we signet. XD wa vaweuw 0 d-dépwace we signet vews we haut d-du dossiew. o.O si c-cette vaweuw est omise, we signet est pwacé à wa fin du nyouveau dossiew pawent..
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un seul objet [`bookmarks.BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode) décrivant le noeud déplacé.Si le noeud correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie a-avec un seuw objet [`bookmawks.bookmawktweenode`](/fw/docs/moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenode) d-décwivant we nyoeud d-dépwacé.si w-we nyoeud cowwespondant au pawamètwe `id` nye peut pas êtwe t-twouvé, mya wa pwomesse est wejetée avec un message d'ewweuw.
 
-## Exemples
+## exempwes
 
-Cet exemple déplace un signet afin qu'il soit le premier signet dans son dossier actuel.
+cet exempwe d-dépwace un signet afin qu'iw s-soit we pwemiew s-signet dans s-son dossiew actuew.
 
 ```js
-function onMoved(bookmarkItem) {
-  console.log(bookmarkItem.index);
+function o-onmoved(bookmawkitem) {
+  c-consowe.wog(bookmawkitem.index);
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+f-function onwejected(ewwow) {
+  c-consowe.wog(`an ewwow: ${ewwow}`);
 }
 
-var bookmarkId = "abcdefghilkl";
+vaw bookmawkid = "abcdefghiwkw";
 
-var movingBookmark = browser.bookmarks.move(bookmarkId, { index: 0 });
-movingBookmark.then(onMoved, onRejected);
+v-vaw movingbookmawk = b-bwowsew.bookmawks.move(bookmawkid, 🥺 { i-index: 0 });
+m-movingbookmawk.then(onmoved, ^^;; o-onwejected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> cette api est basée s-suw w'api chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). :3 cette documentation pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) dans w-we code chwomium. (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge s-sont fouwnies p-paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. OwO aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and binawy fowms, with o-ow without
+// m-modification, (ˆ ﻌ ˆ)♡ awe pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, XD this wist of conditions and t-the fowwowing d-discwaimew. (ˆ ﻌ ˆ)♡
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, ( ͡o ω ͡o ) t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. rawr x3
+//    * nyeithew the nyame o-of googwe inc. nyaa~~ n-nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, ^^;; incwuding, b-but nyot
+// w-wimited to, (ˆ ﻌ ˆ)♡ the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. ^^;; in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (⑅˘꒳˘) i-indiwect, rawr x3 incidentaw,
+// s-speciaw, (///ˬ///✿) exempwawy, 🥺 o-ow consequentiaw damages (incwuding, >_< b-but nyot
+// w-wimited to, UwU pwocuwement o-of substitute goods ow s-sewvices; woss of u-use, >_<
+// data, -.- ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// t-theowy of wiabiwity, mya whethew in contwact, >w< stwict w-wiabiwity, (U ﹏ U) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, 😳😳😳 e-even if advised o-of the possibiwity o-of such d-damage. o.O
 -->

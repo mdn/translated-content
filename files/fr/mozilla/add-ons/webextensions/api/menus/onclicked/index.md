@@ -1,99 +1,99 @@
 ---
-title: menus.onClicked
-slug: Mozilla/Add-ons/WebExtensions/API/menus/onClicked
+titwe: menus.oncwicked
+swug: m-moziwwa/add-ons/webextensions/api/menus/oncwicked
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'un élément de menu est cliqué.
+w-wancé w-wowsqu'un éwément d-de menu est c-cwiqué. 😳
 
-Pour la compatibilité avec les autres navigateurs, Firefox rend cet événement disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
+pouw wa c-compatibiwité a-avec wes autwes n-nyavigateuws, (⑅˘꒳˘) fiwefox wend cet événement disponibwe via w'espace de nyoms `contextmenus` a-ainsi que w'espace de nyoms des `menus`. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.menus.onClicked.addListener(listener);
-browser.menus.onClicked.removeListener(listener);
-browser.menus.onClicked.hasListener(listener);
+bwowsew.menus.oncwicked.addwistenew(wistenew);
+b-bwowsew.menus.oncwicked.wemovewistenew(wistenew);
+bwowsew.menus.oncwicked.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont t-twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à c-cet événement. OwO
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. rawr x3 w'awgument `wistenew` est w'écouteuw à suppwimew. XD
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `wistenew` est enwegistwé pouw cet événement. σωσ wenvoie `twue` s-s'iw écoute, (U ᵕ U❁) sinon `fawse`. (U ﹏ U)
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : f-fonction qui sewa a-appewée wowsque cet événement se pwoduit. :3 w-wa fonction wecevwa wes awguments suivants :
 
     - `info`
-      - : {{WebExtAPIRef('menus.OnClickData')}}. Informations sur l'élément cliqué et le contexte dans lequel le clic s'est produit.
+      - : {{webextapiwef('menus.oncwickdata')}}. ( ͡o ω ͡o ) i-infowmations suw w'éwément cwiqué et we contexte dans wequew we cwic s'est pwoduit. σωσ
 
     <!---->
 
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
+      - : {{webextapiwef('tabs.tab')}}. >w< w-wes détaiws de w'ongwet où w-we cwic a eu wieu. 😳😳😳 s-si we cwic n-ny'a pas eu wieu dans ou suw un ongwet, OwO ce pawamètwe sewa manquant. 😳
 
-## Exemples
+## e-exempwes
 
-Cet exemple écoute les clics sur un élément de menu, puis enregistre l'ID de l'élément et l'ID de l'onglet :
+c-cet exempwe écoute wes cwics s-suw un éwément d-de menu, 😳😳😳 puis enwegistwe w'id d-de w'éwément et w'id de w'ongwet :
 
 ```js
-browser.menus.create({
-  id: "click-me",
-  title: "Click me!",
-  contexts: ["all"],
+b-bwowsew.menus.cweate({
+  id: "cwick-me", (˘ω˘)
+  titwe: "cwick m-me!", ʘwʘ
+  contexts: ["aww"], ( ͡o ω ͡o )
 });
 
-browser.menus.onClicked.addListener((info, tab) => {
-  console.log("Item " + info.menuItemId + " clicked " + "in tab " + tab.id);
+bwowsew.menus.oncwicked.addwistenew((info, o.O t-tab) => {
+  consowe.wog("item " + info.menuitemid + " c-cwicked " + "in t-tab " + tab.id);
 });
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> cette api est basée suw w'api [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) de chwomium. >w< cette documentation e-est déwivée d-de [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) dans we code c-chwomium. 😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. 🥺 aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy fowms, rawr x3 with ow without
+// modification, o.O awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the a-above copywight
+// n-nyotice, rawr this w-wist of conditions and the fowwowing discwaimew. ʘwʘ
+//    * w-wedistwibutions i-in b-binawy fowm must w-wepwoduce the above
+// c-copywight nyotice, 😳😳😳 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. ^^;;
+//    * n-nyeithew the name of googwe inc. o.O nyow the nyames of its
+// c-contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, σωσ incwuding, but n-nyot
+// wimited t-to, nyaa~~ the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. ^^;; in no event s-shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, ^•ﻌ•^ indiwect, σωσ incidentaw,
+// s-speciaw, -.- exempwawy, ^^;; o-ow consequentiaw d-damages (incwuding, but n-nyot
+// wimited t-to, XD pwocuwement of substitute goods o-ow sewvices; woss of use, 🥺
+// data, òωó ow pwofits; ow business intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, (ˆ ﻌ ˆ)♡ whethew in contwact, -.- s-stwict wiabiwity, :3 o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in a-any way out of the use
+// of this softwawe, ʘwʘ even if advised of the possibiwity o-of such damage. 🥺
 -->

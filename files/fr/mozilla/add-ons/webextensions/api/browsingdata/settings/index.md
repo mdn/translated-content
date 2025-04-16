@@ -1,97 +1,97 @@
 ---
-title: browsingData.settings()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/settings
+titwe: bwowsingdata.settings()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/settings
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les navigateurs disposent d'une fonction "Effacer l'historique" intégrée, qui permet à l'utilisateur d'effacer différents types de données de navigation. Cela a une interface utilisateur qui permet à l'utilisateur de sélectionner le type de données à supprimer (par exemple l'historique, les téléchargements, ...) et à quelle distance remonter dans le temps pour supprimer des données.
+w-wes nyavigateuws d-disposent d-d'une fonction "effacew w-w'histowique" i-intégwée, òωó q-qui pewmet à w-w'utiwisateuw d-d'effacew difféwents types de données de nyavigation. (ˆ ﻌ ˆ)♡ cewa a une intewface utiwisateuw q-qui pewmet à w'utiwisateuw de séwectionnew w-we type de données à suppwimew (paw e-exempwe w'histowique, -.- wes téwéchawgements, :3 ...) et à q-quewwe distance wemontew dans w-we temps pouw s-suppwimew des données. ʘwʘ
 
-Cette fonction renvoie la valeur actuelle de ces paramètres.
+cette fonction wenvoie wa vaweuw actuewwe de ces pawamètwes. 🥺
 
-Notez que tous les types de données ne peuvent pas toujours être supprimés via l'interface utilisateur et certaines options d'interface utilisateur peuvent correspondre à plusieurs types de données.
+n-nyotez que tous wes types de données nye peuvent pas toujouws êtwe suppwimés v-via w'intewface utiwisateuw e-et cewtaines o-options d'intewface u-utiwisateuw p-peuvent cowwespondwe à pwusieuws types de données. >_<
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getSettings = browser.browsingData.settings();
+vaw getsettings = bwowsew.bwowsingdata.settings();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. (˘ω˘)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet contenant les informations sur les paramètres. Cet objet a trois propriétés :
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie a-avec un objet c-contenant wes infowmations suw wes pawamètwes. (✿oωo) cet objet a twois p-pwopwiétés :
 
 - `options`
-  - : `{{WebExtAPIRef("browsingData.RemovalOptions")}}`. Un objet `RemovalOptions` décrivant les options de suppression actuellement sélectionnées.
-- `dataToRemove`
-  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chaque propriété aura une valeur `true` si ce type est sélectionné pour la suppression et `false` dans le cas contraire.
-- `dataRemovalPermitted`
-  - : `{{WebExtAPIRef("browsingData.DataTypeSet")}}`. Cela contiendra une propriété pour chaque type de données pouvant être basculé dans l'interface utilisateur du navigateur. Chacune aura la valeur `true` si l'administrateur du périphérique a autorisé l'utilisateur à supprimer ce type, et `false` dans le cas contraire.
+  - : `{{webextapiwef("bwowsingdata.wemovawoptions")}}`. (///ˬ///✿) u-un objet `wemovawoptions` décwivant wes o-options de suppwession a-actuewwement séwectionnées. rawr x3
+- `datatowemove`
+  - : `{{webextapiwef("bwowsingdata.datatypeset")}}`. -.- c-cewa contiendwa une p-pwopwiété pouw chaque type de données pouvant êtwe b-bascuwé dans w'intewface u-utiwisateuw du nyavigateuw. ^^ chaque p-pwopwiété a-auwa une vaweuw `twue` si ce type est séwectionné pouw wa suppwession et `fawse` dans we cas contwaiwe. (⑅˘꒳˘)
+- `datawemovawpewmitted`
+  - : `{{webextapiwef("bwowsingdata.datatypeset")}}`. nyaa~~ cewa contiendwa u-une pwopwiété p-pouw chaque type de données p-pouvant êtwe b-bascuwé dans w-w'intewface utiwisateuw du nyavigateuw. /(^•ω•^) chacune auwa wa vaweuw `twue` s-si w'administwateuw du péwiphéwique a autowisé w'utiwisateuw à suppwimew c-ce type, (U ﹏ U) et `fawse` dans we c-cas contwaiwe. 😳😳😳
 
-Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+s-si une ewweuw se p-pwoduit, >w< wa pwomise sewa wejetée a-avec un message d-d'ewweuw. XD
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Paramètres des Logs courrants :
+pawamètwes des wogs c-couwwants :
 
 ```js
-function onGotSettings(settings) {
-  console.log(settings.options);
-  console.log(settings.dataToRemove);
-  console.log(settings.dataRemovalPermitted);
+f-function ongotsettings(settings) {
+  c-consowe.wog(settings.options);
+  c-consowe.wog(settings.datatowemove);
+  consowe.wog(settings.datawemovawpewmitted);
 }
 
-function onError(error) {
-  console.error(error);
+f-function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.settings().then(onGotSettings, onError);
+bwowsew.bwowsingdata.settings().then(ongotsettings, o.O o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> cette api est basée suw w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa w-wicence cweative commons attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. ^^;; aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, (U ﹏ U) with o-ow without
+// modification, OwO awe p-pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, 😳😳😳 t-this wist of c-conditions and the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight n-nyotice, XD t-this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * nyeithew the nyame of googwe inc. ( ͡o ω ͡o ) n-nyow the names o-of its
+// contwibutows may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, nyaa~~ incwuding, >_< b-but nyot
+// wimited t-to, ^^;; the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, ^^;; indiwect, incidentaw, (⑅˘꒳˘)
+// speciaw, rawr x3 exempwawy, ow c-consequentiaw damages (incwuding, (///ˬ///✿) but nyot
+// wimited t-to, pwocuwement o-of substitute goods ow sewvices; w-woss of use, 🥺
+// data, >_< ow p-pwofits; ow business i-intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, UwU w-whethew in contwact, >_< stwict wiabiwity, ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising i-in any way out of the use
+// of this softwawe, -.- e-even if advised of the possibiwity o-of such damage. mya
 -->

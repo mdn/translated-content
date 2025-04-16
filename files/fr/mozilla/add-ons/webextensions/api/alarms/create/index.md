@@ -1,82 +1,82 @@
 ---
-title: alarms.create()
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/create
+titwe: awawms.cweate()
+swug: m-moziwwa/add-ons/webextensions/api/awawms/cweate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Cette méthode permet de créer une nouvelle alarme pour la session de navigation en cours. Une alarme peut se déclencher une ou plusieurs fois. Une alarme est effacée après qu'elle se soit déclenchée pour la dernière fois.
+c-cette méthode p-pewmet de c-cwéew une nyouvewwe a-awawme pouw w-wa session de nyavigation e-en couws. 😳😳😳 u-une awawme peut se décwenchew une ou pwusieuws fois. (˘ω˘) une awawme est effacée a-apwès qu'ewwe se soit décwenchée pouw wa dewnièwe f-fois. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.alarms.create(
-  name, // une valeur string optionnelle
-  alarmInfo, // une valeur object optionnelle
+b-bwowsew.awawms.cweate(
+  nyame, ( ͡o ω ͡o ) // une vaweuw stwing optionnewwe
+  a-awawminfo, o.O // une vaweuw object o-optionnewwe
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `name`{{optional_inline}}
-  - : `string`. Le nom utilisé pour l'alarme. Par défaut, la chaîne utilisée sera la chaîne vide. Cette valeur pourra être utilisée pour indiquer une alarme donnée avec les méthodes {{WebExtAPIRef('alarms.get()')}} et {{WebExtAPIRef('alarms.clear()')}}. Il sera également disponible pour {{WebExtAPIRef('alarms.onAlarm')}} sous la forme de la propriété `name` de l'objet {{WebExtAPIRef('alarms.Alarm')}} passé au gestionnaire d'évènement. Pour une extension donnée, les noms d'alarmes sont toujours uniques (dans le cadre d'une seule extension). Si le nom donné ici correspond à une alarme existante pour cette extension, l'alarme existante sera supprimée et ne se déclenchera pas.
-- `alarmInfo`{{optional_inline}}
+- `name`{{optionaw_inwine}}
+  - : `stwing`. >w< we nyom utiwisé pouw w'awawme. 😳 paw défaut, wa chaîne utiwisée s-sewa wa chaîne vide. 🥺 cette vaweuw pouwwa êtwe utiwisée pouw indiquew u-une awawme donnée avec wes méthodes {{webextapiwef('awawms.get()')}} e-et {{webextapiwef('awawms.cweaw()')}}. i-iw s-sewa égawement d-disponibwe pouw {{webextapiwef('awawms.onawawm')}} sous wa fowme de wa pwopwiété `name` d-de w'objet {{webextapiwef('awawms.awawm')}} passé au gestionnaiwe d'évènement. rawr x3 p-pouw une extension donnée, o.O wes nyoms d'awawmes sont toujouws uniques (dans we cadwe d-d'une seuwe extension). rawr si we n-nyom donné ici c-cowwespond à une a-awawme existante pouw cette extension, ʘwʘ w'awawme existante sewa s-suppwimée et nye s-se décwenchewa pas.
+- `awawminfo`{{optionaw_inwine}}
 
-  - : `object`. Un objet de configuration qui indique le moment du premier déclenchement comme valeur absolue (`when`) ou relative (`delayInMinutes`). Pour que l'alarme se repète, on utilisera le champ `periodInMinutes`.
+  - : `object`. 😳😳😳 u-un objet d-de configuwation qui indique w-we moment du pwemiew décwenchement c-comme vaweuw absowue (`when`) ou wewative (`dewayinminutes`). ^^;; p-pouw que w'awawme se wepète, o.O o-on utiwisewa we champ `pewiodinminutes`. (///ˬ///✿)
 
-    Sur Chrome, à moins que l'extension ne soit chargée, les alarmes créées ne sont pas autorisées à se déclencher plus d'une fois par minute. Si une extension tente de définir `delayInMinutes` avec une valeur strictement inférieure à 1 ou avec une valeur strictement inférieure à 1 dans le futur, l'alarme se déclenchera 1 minute après ce délai. Si une extension essaie de définir `periodInMinutes` avec une valeur strictement inférieure à 1, l'alarme se déclenchera alors chaque minute.
+    s-suw c-chwome, σωσ à moins que w'extension nye soit chawgée, nyaa~~ wes awawmes cwéées nye sont pas autowisées à se décwenchew p-pwus d'une f-fois paw minute. ^^;; si une extension t-tente de définiw `dewayinminutes` a-avec une vaweuw s-stwictement inféwieuwe à 1 ou avec une vaweuw stwictement i-inféwieuwe à 1 dans we futuw, ^•ﻌ•^ w'awawme se décwenchewa 1 minute apwès ce déwai. σωσ s-si une extension essaie de d-définiw `pewiodinminutes` a-avec u-une vaweuw stwictement inféwieuwe à 1, -.- w-w'awawme s-se décwenchewa a-awows chaque m-minute. ^^;;
 
-    L'objet `alarmInfo` peut contenir les propriétés suivantes :
+    w'objet `awawminfo` peut conteniw wes pwopwiétés s-suivantes :
 
-    - `when`{{optional_inline}}
-      - : `double`. Le moment où l'alarme se déclenchera en premier. L'instant est indiquée comme une valeur absolue, exprimée en [millisecondes depuis epoch](https://fr.wikipedia.org/wiki/Heure_Unix). Pour obtenir le nombre de millisecondes entre l'époque et l'heure actuelle, on pourra utiliser {{jsxref("Date.now")}}. Si cette valeur est utilisée, il ne faut pas fournir `delayInMinutes`.
-    - `delayInMinutes`{{optional_inline}}
-      - : `double`. Le moment où l'alarme se déclenchera en premier exprimée de façon relative au moment où l'alarme est créée. Si cette option est utilisée, il ne faut pas fournir `when`.
-    - `periodInMinutes`{{optional_inline}}
-      - : `double`. Si cette valeur est indiquée, l'alarme sera répétée périodiquement (toutes les `periodInMinutes` minutes) après le premier déclenchement. Si cette valeur est indiquée, il n'est pas obligatoire de fournir `when` ou `delayInMinutes` : l'alarme se déclenchera au bout de `periodInMinutes`. Si `periodInMinutes` n'est pas indiquée, l'alarme ne se déclenchera qu'une seule fois.
+    - `when`{{optionaw_inwine}}
+      - : `doubwe`. XD w-we moment où w'awawme s-se décwenchewa e-en pwemiew. w-w'instant est indiquée comme une vaweuw absowue, 🥺 expwimée e-en [miwwisecondes depuis epoch](https://fw.wikipedia.owg/wiki/heuwe_unix). òωó pouw obteniw we nyombwe de miwwisecondes entwe w'époque e-et w'heuwe actuewwe, (ˆ ﻌ ˆ)♡ on pouwwa utiwisew {{jsxwef("date.now")}}. -.- si cette vaweuw e-est utiwisée, :3 i-iw nye faut pas f-fouwniw `dewayinminutes`. ʘwʘ
+    - `dewayinminutes`{{optionaw_inwine}}
+      - : `doubwe`. 🥺 we moment o-où w'awawme se décwenchewa e-en pwemiew expwimée d-de façon wewative au moment où w'awawme est cwéée. >_< si cette option est utiwisée, ʘwʘ iw n-nye faut pas fouwniw `when`. (˘ω˘)
+    - `pewiodinminutes`{{optionaw_inwine}}
+      - : `doubwe`. (✿oωo) si cette v-vaweuw est indiquée, (///ˬ///✿) w'awawme s-sewa wépétée p-péwiodiquement (toutes wes `pewiodinminutes` minutes) apwès w-we pwemiew décwenchement. rawr x3 s-si cette vaweuw est i-indiquée, -.- iw ny'est p-pas obwigatoiwe de fouwniw `when` ou `dewayinminutes` : w'awawme se décwenchewa a-au bout de `pewiodinminutes`. ^^ s-si `pewiodinminutes` n-ny'est pas indiquée, (⑅˘꒳˘) w-w'awawme nye se d-décwenchewa qu'une seuwe fois. nyaa~~
 
-## Exemples
+## e-exempwes
 
-### Alarme vide
+### awawme vide
 
 ```js
-const delayInMinutes = 5;
+const dewayinminutes = 5;
 
-browser.alarms.create({
-  delayInMinutes,
+bwowsew.awawms.cweate({
+  dewayinminutes, /(^•ω•^)
 });
 ```
 
-### Alarme relative périodique
+### a-awawme wewative p-péwiodique
 
 ```js
-const delayInMinutes = 5;
-const periodInMinutes = 2;
+const dewayinminutes = 5;
+c-const pewiodinminutes = 2;
 
-browser.alarms.create("my-periodic-alarm", {
-  delayInMinutes,
-  periodInMinutes,
+b-bwowsew.awawms.cweate("my-pewiodic-awawm", (U ﹏ U) {
+  dewayinminutes, 😳😳😳
+  pewiodinminutes, >w<
 });
 ```
 
-### Alarme périodique absolue
+### awawme péwiodique absowue
 
 ```js
-const when = 1545696000;
-const periodInMinutes = 2;
+c-const when = 1545696000;
+const pewiodinminutes = 2;
 
-browser.alarms.create("my-periodic-alarm", {
+bwowsew.awawms.cweate("my-pewiodic-awawm", XD {
   when,
-  periodInMinutes,
+  pewiodinminutes, o.O
 });
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
+> cette api est b-basée suw w'api c-chwomium [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms). mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge s-sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa w-wicence cweative commons attwibution 3.0 p-pouw wes États-unis. 🥺

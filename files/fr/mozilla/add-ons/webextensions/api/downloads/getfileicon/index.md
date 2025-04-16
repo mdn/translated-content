@@ -1,109 +1,109 @@
 ---
-title: downloads.getFileIcon()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/getFileIcon
+titwe: downwoads.getfiweicon()
+swug: moziwwa/add-ons/webextensions/api/downwoads/getfiweicon
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`getFileIcon()`** de l'API {{WebExtAPIRef("downloads")}} récupère une icône pour le téléchargement spécifié.
+w-wa fonction **`getfiweicon()`** d-de w'api {{webextapiwef("downwoads")}} w-wécupèwe u-une icône p-pouw we téwéchawgement s-spécifié. (ˆ ﻌ ˆ)♡
 
-Pour les nouveaux téléchargements, les icônes de fichiers sont disponibles après la réception de l'événement {{WebExtAPIRef("downloads.onCreated")}}. L'image renvoyée par cette fonction pendant le téléchargement peut être différente de l'image renvoyée une fois le téléchargement terminé.
+p-pouw wes n-nyouveaux téwéchawgements, wes icônes de fichiews sont disponibwes apwès wa wéception de w-w'événement {{webextapiwef("downwoads.oncweated")}}. -.- w'image wenvoyée paw cette f-fonction pendant we téwéchawgement p-peut êtwe difféwente de w'image wenvoyée une fois we t-téwéchawgement tewminé. :3
 
-La récupération d'icônes s'effectue en interrogeant la plateforme sous-jacente. L'icône renvoyée dépendra donc d'un certain nombre de facteurs, notamment l'état du téléchargement, la plate-forme, les types de fichiers enregistrés et le thème visuel.
+wa w-wécupéwation d'icônes s-s'effectue en intewwogeant wa pwatefowme sous-jacente. ʘwʘ w'icône wenvoyée d-dépendwa donc d'un cewtain nyombwe de facteuws, 🥺 nyotamment w'état du téwéchawgement, >_< w-wa pwate-fowme, ʘwʘ wes t-types de fichiews e-enwegistwés et w-we thème visuew. (˘ω˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (✿oωo)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var gettingIcon = browser.downloads.getFileIcon(
-  downloadId, // integer
-  options, // optional object
+vaw gettingicon = bwowsew.downwoads.getfiweicon(
+  d-downwoadid, (///ˬ///✿) // integew
+  options, rawr x3 // optionaw object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `downloadId`
-  - : Un `integer` eprésentant l'ID du téléchargement.
-- `options`{{optional_inline}}
+- `downwoadid`
+  - : un `integew` epwésentant w'id d-du téwéchawgement. -.-
+- `options`{{optionaw_inwine}}
 
-  - : Un `object` d'options représentant les préférences pour l'icône à extraire. Il peut prendre les propriétés suivantes :
+  - : un `object` d-d'options w-wepwésentant w-wes pwéféwences pouw w'icône à extwaiwe. ^^ iw peut pwendwe wes p-pwopwiétés suivantes :
 
-    - `size`{{optional_inline}}
-      - : Un `integer` représentant la taille de l'icône. La taille de l'icône retournée sera la taille fournie au carré (en pixels). Si elle est omise, la taille par défaut de l'icône est 32x32 pixels.
+    - `size`{{optionaw_inwine}}
+      - : u-un `integew` wepwésentant w-wa taiwwe de w'icône. (⑅˘꒳˘) w-wa taiwwe de w'icône wetouwnée s-sewa wa taiwwe fouwnie a-au cawwé (en pixews). nyaa~~ si ewwe est omise, /(^•ω•^) wa taiwwe p-paw défaut de w'icône est 32x32 p-pixews. (U ﹏ U)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la requête réussit, la promesse sera remplie avec une chaîne représentant l'URL absolue de l'icône. Si la requête échoue, la promesse sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳😳😳 s-si wa wequête wéussit, >w< wa pwomesse sewa wempwie avec une chaîne wepwésentant w'uww absowue de w'icône. XD si w-wa wequête échoue, o.O w-wa pwomesse sewa wejetée avec u-un message d'ewweuw. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple enregistre l'URL de l'icône pour le téléchargement le plus récent :
+cet exempwe e-enwegistwe w'uww de w'icône pouw we téwéchawgement we pwus wécent :
 
 ```js
-function gotIcon(iconUrl) {
-  console.log(iconUrl);
+f-function goticon(iconuww) {
+  consowe.wog(iconuww);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function o-onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function getIcon(downloadItems) {
-  if (downloadItems.length > 0) {
-    latestDownloadId = downloadItems[0].id;
-    var gettingIcon = browser.downloads.getFileIcon(latestDownloadId);
-    gettingIcon.then(gotIcon, onError);
+function g-geticon(downwoaditems) {
+  i-if (downwoaditems.wength > 0) {
+    w-watestdownwoadid = d-downwoaditems[0].id;
+    vaw gettingicon = bwowsew.downwoads.getfiweicon(watestdownwoadid);
+    g-gettingicon.then(goticon, 🥺 o-onewwow);
   }
 }
 
-var searching = browser.downloads.search({
-  limit: 1,
-  orderBy: ["-startTime"],
+v-vaw s-seawching = bwowsew.downwoads.seawch({
+  w-wimit: 1, ^^;;
+  owdewby: ["-stawttime"], :3
 });
 
-searching.then(getIcon, onError);
+seawching.then(geticon, (U ﹏ U) onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> c-cette api est basée suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa w-wicence cweative c-commons attwibution 3.0 pouw wes États-unis. 😳😳😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. (ˆ ﻌ ˆ)♡ aww w-wights wesewved. XD
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, (ˆ ﻌ ˆ)♡ with ow without
+// modification, ( ͡o ω ͡o ) a-awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// n-nyotice, rawr x3 this wist of c-conditions and t-the fowwowing discwaimew. nyaa~~
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, t-this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. >_<
+//    * nyeithew the nyame of googwe inc. ^^;; nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, ^^;; incwuding, (⑅˘꒳˘) b-but nyot
+// wimited t-to, rawr x3 the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. (///ˬ///✿) in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, 🥺 indiwect, incidentaw, >_<
+// speciaw, UwU exempwawy, ow c-consequentiaw damages (incwuding, >_< but nyot
+// wimited t-to, -.- pwocuwement o-of substitute goods ow sewvices; w-woss of use, mya
+// data, >w< ow p-pwofits; ow business i-intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, (U ﹏ U) w-whethew in contwact, 😳😳😳 stwict wiabiwity, o.O ow t-towt
+// (incwuding n-nyegwigence ow o-othewwise) awising in any way out of the use
+// o-of this softwawe, even if advised o-of the possibiwity o-of such damage. òωó
 -->

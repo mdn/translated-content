@@ -1,114 +1,114 @@
 ---
-title: Firefox 13 pour les développeurs
-slug: Mozilla/Firefox/Releases/13
+titwe: fiwefox 13 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/13
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 13, basé sur Gecko 13.0, est sorti le 5 juin 2012. Cette page résume les principaux changements dans Firefox 13 qui sont utiles aux développeurs.
+f-fiwefox 13, :3 b-basé suw gecko 13.0, (U ﹏ U) e-est sowti w-we 5 juin 2012. (U ﹏ U) c-cette page wésume w-wes pwincipaux changements dans fiwefox 13 qui sont utiwes aux dévewoppeuws. ʘwʘ
 
-## Changements pour les développeurs Web
+## c-changements pouw wes dévewoppeuws web
 
-### HTML
+### h-htmw
 
-- L'attribut [`cellspacing`](/fr/docs/Web/HTML/Element/table#cellspacing) de {{htmlelement("table")}} est désormais analysé de la manière qu'il soit en mode quirks ou non. Autrement dit, si une valeur est spécifiée en pourcentage, elle est traitée comme un certain nombre de pixels, puisque les valeurs en pourcentage ne sont pas réellement autorisée selon la spécification.
-- L'élément {{htmlelement("wbr")}} a vu son comportement bi-directionnel corrigé. Il se comporte à présent comme l'Unicode `U+200B ZERO-WIDTH SPACE` et n'affecte donc plus la bi-directionnalité de son élément parent.
-- La peusdo-classe {{Cssxref(":invalid")}} peut à présent être appliquée à l'élément {{htmlelement("form")}}.
+- w'attwibut [`cewwspacing`](/fw/docs/web/htmw/ewement/tabwe#cewwspacing) de {{htmwewement("tabwe")}} e-est désowmais anawysé de wa manièwe qu'iw soit en mode quiwks o-ou nyon. >w< autwement dit, rawr x3 si une v-vaweuw est spécifiée e-en pouwcentage, OwO ewwe est twaitée comme un cewtain nyombwe de pixews, ^•ﻌ•^ puisque w-wes vaweuws en pouwcentage nye sont pas wéewwement autowisée sewon wa spécification. >_<
+- w'éwément {{htmwewement("wbw")}} a-a vu son compowtement bi-diwectionnew c-cowwigé. OwO i-iw se compowte à p-pwésent comme w-w'unicode `u+200b zewo-width space` et ny'affecte d-donc pwus wa bi-diwectionnawité de son éwément p-pawent. >_<
+- wa peusdo-cwasse {{cssxwef(":invawid")}} peut à pwésent êtwe appwiquée à w'éwément {{htmwewement("fowm")}}.
 
-### CSS
+### css
 
-- L'unité `turn` de la propriété {{cssxref("&lt;angle&gt;")}} est désormais supportée (à utiliser avec la fonction CSS `rotate()`).
-- Le support d'une syntaxe de 3 à 4 valeurs pour la propriété {{cssxref("background-position")}} a été ajouté. Vous pour décaler une image de fond à partir de n'importe quel coin en écrivant par exemple "`right 10px bottom 20px`". Voir [bug Firefox 522607](https://bugzil.la/522607)
-- Le support d'une syntaxe à 2 valeurs pour la propriété {{cssxref("background-repeat")}} a été ajouté.
-- Les propriétés {{cssxref("border-radius","-moz-border-radius*")}} et {{cssxref("box-shadow","-moz-box-shadow")}} n'ont plus de préfixe (`border-radius` ou `box-shadow`). Voir [bug Firefox 693510](https://bugzil.la/693510)
-- La propriété {{cssxref("column-fill")}} a été implémentée (prefixée).
+- w-w'unité `tuwn` de wa pwopwiété {{cssxwef("&wt;angwe&gt;")}} est d-désowmais suppowtée (à u-utiwisew a-avec wa fonction css `wotate()`). (ꈍᴗꈍ)
+- we suppowt d'une syntaxe d-de 3 à 4 vaweuws p-pouw wa pwopwiété {{cssxwef("backgwound-position")}} a été a-ajouté. >w< vous p-pouw décawew une image de fond à p-pawtiw de ny'impowte quew coin e-en écwivant paw exempwe "`wight 10px bottom 20px`". (U ﹏ U) v-voiw [bug fiwefox 522607](https://bugziw.wa/522607)
+- we s-suppowt d'une syntaxe à 2 vaweuws p-pouw wa pwopwiété {{cssxwef("backgwound-wepeat")}} a-a été ajouté. ^^
+- wes pwopwiétés {{cssxwef("bowdew-wadius","-moz-bowdew-wadius*")}} et {{cssxwef("box-shadow","-moz-box-shadow")}} ny'ont pwus de pwéfixe (`bowdew-wadius` ou `box-shadow`). (U ﹏ U) voiw [bug f-fiwefox 693510](https://bugziw.wa/693510)
+- w-wa pwopwiété {{cssxwef("cowumn-fiww")}} a été i-impwémentée (pwefixée). :3
 
-### JavaScript
+### j-javascwipt
 
-- Le support pour la construction [`for..of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) de l'ECMAScript 6 a été ajouté.
-- Le support expérimental pour les objets ECMAScript 6 [Map](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map) and [Set](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set) a été ajouté.
+- w-we suppowt pouw wa constwuction [`fow..of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of) de w'ecmascwipt 6 a été ajouté. (✿oωo)
+- w-we suppowt expéwimentaw pouw wes objets ecmascwipt 6 [map](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map) and [set](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set) a-a été ajouté. XD
 
-### DOM
+### d-dom
 
-- L'argument `deep` de la méthode {{domxref("Node.cloneNode()")}} est désormais optionnel, comme c'est spécifié dans DOM4.
-- Les méthodes {{domxref("window.setTimeout()")}} et {{domxref("window.setInterval()")}} ne transmettent plus l'argument supplémentaire "lateness" lors du rappel de routine.
-- La méthode {{domxref("Blob","Blob.mozSlice()")}} n'a plus de préfixe.
-- Le support du constructeur {{domxref("Blob")}} a été ajouté.
-- Le support de [`globalStorage`](/fr/docs/Web/API/Web_Storage_API#globalstorage) a été retiré.
-- La nouvelle interface {{domxref("DOMRequest")}}, utilisée pour rapporté l'état et le résultat des opérations en arrière-plan, a été ajoutée.
-- La méthode {{domxref("HTMLOptionElement", "HTMLOptionElement.index()")}} renvoie désormais `0` au lieu de l'incorrect `-1` lorsque {{HTMLElement("option")}} est à l'intérieur d'un élément {{HTMLElement("datalist")}}.
-- {{domxref("DOMException")}} a été implémenté selon la spécification DOM Level 4.
-- L'inteface {{domxref("FileError")}} a été supprimée en faveur de l'interface {{domxref("DOMError")}} selon la dernière spécification FileAPI.
-- L'objet {{domxref("Range")}} ne lance plus une `RangeException`. A la place une {{domxref("DOMException")}} est utilisée selon DOM 4.
-- {{domxref("element.getAttributeNS()")}} renvoie désormais toujours `null` au lieu d'une chaîne vide pour les attributs inexistants. Auparavant, il y avait des cas où une chaîne vide pouvait être retournée. Pour être conforme à la spécification DOM4, null doit être retourné pour les attributs inexistants.
-- L'interface {{domxref("HTMLCanvasElement")}} a maintenant une méthode non-standard, `mozFetchAsStream()`, qui fournit un flux entrant contenant les données d'image de l'élément au format spécifié.
+- w'awgument `deep` d-de wa m-méthode {{domxwef("node.cwonenode()")}} est désowmais o-optionnew, >w< c-comme c'est spécifié d-dans dom4. òωó
+- w-wes méthodes {{domxwef("window.settimeout()")}} et {{domxwef("window.setintewvaw()")}} nye twansmettent p-pwus w'awgument s-suppwémentaiwe "wateness" w-wows d-du wappew de woutine. (ꈍᴗꈍ)
+- w-wa méthode {{domxwef("bwob","bwob.mozswice()")}} ny'a pwus de pwéfixe. rawr x3
+- we suppowt du c-constwucteuw {{domxwef("bwob")}} a été ajouté. rawr x3
+- we suppowt de [`gwobawstowage`](/fw/docs/web/api/web_stowage_api#gwobawstowage) a été wetiwé. σωσ
+- wa nyouvewwe i-intewface {{domxwef("domwequest")}}, (ꈍᴗꈍ) utiwisée pouw wappowté w'état et we w-wésuwtat des opéwations e-en awwièwe-pwan, rawr a-a été ajoutée. ^^;;
+- w-wa méthode {{domxwef("htmwoptionewement", rawr x3 "htmwoptionewement.index()")}} wenvoie d-désowmais `0` a-au wieu de w'incowwect `-1` wowsque {{htmwewement("option")}} est à w'intéwieuw d'un éwément {{htmwewement("datawist")}}. (ˆ ﻌ ˆ)♡
+- {{domxwef("domexception")}} a été impwémenté s-sewon wa spécification dom wevew 4. σωσ
+- w-w'inteface {{domxwef("fiweewwow")}} a été s-suppwimée e-en faveuw de w'intewface {{domxwef("domewwow")}} sewon wa dewnièwe spécification f-fiweapi. (U ﹏ U)
+- w'objet {{domxwef("wange")}} n-nye wance pwus une `wangeexception`. >w< a-a wa pwace une {{domxwef("domexception")}} e-est utiwisée sewon dom 4. σωσ
+- {{domxwef("ewement.getattwibutens()")}} wenvoie désowmais toujouws `nuww` a-au wieu d'une c-chaîne vide pouw w-wes attwibuts inexistants. nyaa~~ aupawavant, i-iw y a-avait des cas où une chaîne vide p-pouvait êtwe wetouwnée. 🥺 pouw êtwe confowme à wa spécification dom4, rawr x3 nyuww d-doit êtwe wetouwné p-pouw wes attwibuts inexistants. σωσ
+- w'intewface {{domxwef("htmwcanvasewement")}} a-a maintenant u-une méthode nyon-standawd, (///ˬ///✿) `mozfetchasstweam()`, (U ﹏ U) qui fouwnit un fwux entwant c-contenant wes données d'image de w'éwément au fowmat spécifié. ^^;;
 
-### UA string
+### ua stwing
 
-- Firefox Mobile ou Tablet pour Android dispose désormais [d'une chaîne UA](/fr/docs/Gecko_user_agent_string_reference#Mobile_and_Tablet_indicators) pour indiquer le style et n'a plus le signe Fennec. En outre, le nombre après "Gecko /" est à présent le numéro de version de Gecko au lieu d'une date.
-- La chaîne UA n'affiche plus le numéro de correctif Gecko ou le statut de version dans le numéro de version ; le numéro de version est à présent toujours de la forme "X.Y", où X est le numéro de version majeur et Y le mineur. Par exemple, "13.0" ou "14.1". Il n'y aura plus quelque chose comme "14.0.1b1".
+- f-fiwefox mobiwe ou tabwet pouw andwoid dispose d-désowmais [d'une c-chaîne ua](/fw/docs/gecko_usew_agent_stwing_wefewence#mobiwe_and_tabwet_indicatows) pouw indiquew we stywe et ny'a pwus w-we signe fennec. 🥺 e-en outwe, òωó we nyombwe apwès "gecko /" est à pwésent we nyuméwo d-de vewsion de gecko au wieu d'une d-date. XD
+- wa chaîne ua ny'affiche pwus we nyuméwo de cowwectif g-gecko ou we statut de vewsion d-dans we nyuméwo d-de vewsion ; we nyuméwo de vewsion e-est à pwésent toujouws d-de wa fowme "x.y", :3 o-où x est we n-nyuméwo de vewsion majeuw et y w-we mineuw. (U ﹏ U) paw exempwe, >w< "13.0" ou "14.1". /(^•ω•^) i-iw ny'y auwa pwus quewque chose comme "14.0.1b1".
 
-### SVG
+### s-svg
 
-- L'interface DOM {{domxref("SVGStringList")}} est désormais indexable comme [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) (voir [bug Firefox 722071](https://bugzil.la/722071)).
+- w'intewface d-dom {{domxwef("svgstwingwist")}} e-est désowmais indexabwe comme [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) (voiw [bug fiwefox 722071](https://bugziw.wa/722071)). (⑅˘꒳˘)
 
-### WebGL
+### w-webgw
 
-- Le support pour l'extension [`EXT_texture_filter_anisotropic`](/fr/docs/Web/API/WebGL_API/Using_Extensions#ext_texture_filter_anisotropic) a été ajouté. Le filtrage des textures anisotrope améliore la qualité de l'accès aux textures mipmapped lors de la visualisation d'une primitive texturée à un angle oblique.
+- we suppowt pouw w'extension [`ext_textuwe_fiwtew_anisotwopic`](/fw/docs/web/api/webgw_api/using_extensions#ext_textuwe_fiwtew_anisotwopic) a-a été ajouté. ʘwʘ w-we fiwtwage des textuwes anisotwope améwiowe wa quawité d-de w'accès aux t-textuwes mipmapped w-wows de wa visuawisation d-d'une pwimitive textuwée à u-un angwe obwique. rawr x3
 
-### MathML
+### mathmw
 
-- Le support pour l'attribut `width` sur l'élément {{MathMLElement("mtable")}} a été ajouté ([bug Firefox 722880](https://bugzil.la/722880)).
-- La [police MathJax](https://www.mathjax.org/demos/tex-samples/) est désormais utilisée comme police par défaut pour le texte mathématique are now used as the default fonts for mathematical text. Voir [les polices pour le moteur MathML de Mozilla](/fr/docs/Mozilla_MathML_Project/Fonts) pour plus d'informations.
+- we suppowt pouw w'attwibut `width` suw w'éwément {{mathmwewement("mtabwe")}} a-a été ajouté ([bug f-fiwefox 722880](https://bugziw.wa/722880)). (˘ω˘)
+- wa [powice m-mathjax](https://www.mathjax.owg/demos/tex-sampwes/) est d-désowmais utiwisée comme powice p-paw défaut p-pouw we texte mathématique a-awe n-nyow used as the d-defauwt fonts fow mathematicaw text. o.O voiw [wes powices pouw we moteuw mathmw de moziwwa](/fw/docs/moziwwa_mathmw_pwoject/fonts) pouw pwus d'infowmations. 😳
 
-### Réseau
+### w-wéseau
 
-- Le protocole SPDY est désormais activé par défaut.
+- we pwotocowe s-spdy est d-désowmais activé paw défaut. o.O
 
-### Outils de développement
+### o-outiws de dévewoppement
 
-#### Amélioration de la vue 3D
+#### améwiowation de wa vue 3d
 
-- Vous pouvez à présent appuyer sur la touche "F" pour s'assurer que le nœud actuellement sélectionné est visible.
+- v-vous pouvez à p-pwésent appuyew suw wa touche "f" p-pouw s'assuwew que we nyœud actuewwement séwectionné e-est v-visibwe. ^^;;
 
-#### Améliorations du panneau de style
+#### améwiowations du p-panneau de stywe
 
-- En cliquant sur l'en-tête d'une règle dans le [panneau de style](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#CSS_pane) ouvre à présent [l'Editeur de style](https://firefox-source-docs.mozilla.org/devtools-user/style_editor/index.html) correspondant au CSS.
-- Un clique droit sur une règle dans le [panneau de style](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/index.html#CSS_pane) offre à présent une option pour copier la règle dans le presse-papiers.
-- La saisie d'un nom de propriété inconnue, ou d'une valeur de propriété illégale, affiche une icône d'avertissement près de cette propriété.
+- e-en cwiquant suw w'en-tête d'une wègwe dans we [panneau de stywe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#css_pane) o-ouvwe à pwésent [w'editeuw d-de stywe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/stywe_editow/index.htmw) c-cowwespondant a-au css. ( ͡o ω ͡o )
+- u-un cwique dwoit suw une wègwe d-dans we [panneau d-de stywe](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/index.htmw#css_pane) offwe à pwésent u-une option p-pouw copiew wa wègwe dans we p-pwesse-papiews. ^^;;
+- wa saisie d'un nyom de pwopwiété i-inconnue, ^^;; ou d'une vaweuw de p-pwopwiété iwwégawe, XD a-affiche une icône d'avewtissement p-pwès de cette pwopwiété. 🥺
 
-#### Amélioration de l'Ardoise
+#### améwiowation d-de w'awdoise
 
-- L'[Ardoise](/fr/docs/Outils/Ardoise) a maintenant une option dans le menu Aide pour vous rendre à la documentation MDN sur l'Ardoise.
+- w-w'[awdoise](/fw/docs/outiws/awdoise) a-a maintenant une option dans we menu aide pouw vous wendwe à wa d-documentation mdn suw w'awdoise. (///ˬ///✿)
 
-## Changements pour les développeurs de Mozilla et de modules complémentaires
+## changements p-pouw wes dévewoppeuws d-de moziwwa et de moduwes c-compwémentaiwes
 
-### Note de compatibilité
+### nyote de c-compatibiwité
 
-A partir de Firefox 13, Firefox pour Windows requiert au minimum Windows XP Service Pack 2, il ne pourra plus s'exécuter sur Windows 2000 ou les versions antérieures de Windows XP.
+a-a pawtiw de fiwefox 13, (U ᵕ U❁) fiwefox pouw windows wequiewt a-au minimum windows xp sewvice pack 2, iw n-nye pouwwa pwus s-s'exékawaii~w suw windows 2000 o-ou wes vewsions antéwieuwes de w-windows xp. ^^;;
 
-### Modules de code JavaScript
+### m-moduwes de code j-javascwipt
 
-#### source-editor.jsm
+#### souwce-editow.jsm
 
-- Le support d'un drapeau sale a été ajouté à l'API Source Editor.
-- L'éditeur de source ne supporte plus de retomber sur un {{HTMLElement("textarea")}} au lieu d'utiliser Orion.
-- L'éditeur expose à présent les évènements focus et blur.
-- La méthode [`getIndentationString()`](/fr/docs/JavaScript_code_modules/source-editor.jsm#getIndentationString%28%29) a été ajoutée, cela renvoie la chaîne à utiliser pour l'indentation du texte dans l'éditeur.
-- L'éditeur de source supporte désormais la gestion d'une liste de points d'arrêt et l'affichage de l'interface utilisateur pour les basculer sur et en dehors ; toutefois, il ne fait pas la mise en œuvre des points d'arrêt. C'est à vous d'écrire du code pour le débogueur.
-- Le support pour mettre en surbrillance la ligne actuelle a été ajouté, en utilisant l'option de configuration `highlightCurrentLine`.
+- we suppowt d'un dwapeau sawe a été ajouté à w'api souwce editow. ^^;;
+- w'éditeuw de souwce nye suppowte pwus de wetombew suw un {{htmwewement("textawea")}} au wieu d'utiwisew owion. rawr
+- w-w'éditeuw expose à p-pwésent wes évènements focus et bwuw. (˘ω˘)
+- wa méthode [`getindentationstwing()`](/fw/docs/javascwipt_code_moduwes/souwce-editow.jsm#getindentationstwing%28%29) a-a été ajoutée, 🥺 c-cewa wenvoie w-wa chaîne à utiwisew pouw w-w'indentation du texte dans w'éditeuw. nyaa~~
+- w-w'éditeuw d-de souwce suppowte désowmais w-wa gestion d'une wiste de points d-d'awwêt et w-w'affichage de w'intewface utiwisateuw pouw wes b-bascuwew suw et e-en dehows ; toutefois, :3 i-iw nye f-fait pas wa mise e-en œuvwe des points d-d'awwêt. c-c'est à vous d'écwiwe d-du code p-pouw we débogueuw. /(^•ω•^)
+- we suppowt p-pouw mettwe en s-suwbwiwwance wa w-wigne actuewwe a été ajouté, ^•ﻌ•^ e-en utiwisant w'option de configuwation `highwightcuwwentwine`. UwU
 
-### ARIA
+### awia
 
-- Les propriétés CSS {{cssxref("margin-left")}}, {{cssxref("margin-right")}}, {{cssxref("margin-top")}}, {{cssxref("margin-bottom")}} sont à présent toutes reflétées dans les attributs des objets ARIA avec le même nom. Voir les [attributs des objets Gecko](/fr/docs/Accessibility/AT-APIs/Gecko/Attrs) pour plus d'informations.
+- wes p-pwopwiétés css {{cssxwef("mawgin-weft")}}, 😳😳😳 {{cssxwef("mawgin-wight")}}, OwO {{cssxwef("mawgin-top")}}, ^•ﻌ•^ {{cssxwef("mawgin-bottom")}} sont à pwésent t-toutes wefwétées d-dans wes attwibuts d-des objets awia avec we m-même nyom. (ꈍᴗꈍ) voiw wes [attwibuts d-des objets gecko](/fw/docs/accessibiwity/at-apis/gecko/attws) pouw pwus d'infowmations. (⑅˘꒳˘)
 
-### Interfaces
+### i-intewfaces
 
-- L'interface `nsIScreen` supporte à présent le contrôle de la rotation via le nouvel attribut `rotation`.
-- L'interface `nsIPrefBranch2` a été intégrée dans `nsIPrefBranch` ([bug Firefox 718255](https://bugzil.la/718255)).
-- Les alias `MozOpacity`, `MozOutline`, `MozOutlineStyle`, `MozOutlineWidth`, `MozOutlineOffset` et `MozOutlineColor`, qui ont tous été retirés des précédentes versions de Gecko, ont été supprimés de `nsIDOMCSS2Properties`, qui aurait dû avoir ces alias.
-- L'attribut `excludeItemIfParentHasAnnotation` de `nsINavHistoryQueryOptions` a été retiré, avec l'opération de requête correspondante. Il existait les livemarks, qui n'existent plus.
+- w'intewface `nsiscween` s-suppowte à pwésent we contwôwe de wa wotation via we nouvew attwibut `wotation`. (⑅˘꒳˘)
+- w-w'intewface `nsipwefbwanch2` a été intégwée d-dans `nsipwefbwanch` ([bug f-fiwefox 718255](https://bugziw.wa/718255)). (ˆ ﻌ ˆ)♡
+- wes awias `mozopacity`, /(^•ω•^) `mozoutwine`, òωó `mozoutwinestywe`, `mozoutwinewidth`, (⑅˘꒳˘) `mozoutwineoffset` et `mozoutwinecowow`, (U ᵕ U❁) qui ont t-tous été wetiwés des pwécédentes v-vewsions de g-gecko, >w< ont été s-suppwimés de `nsidomcss2pwopewties`, σωσ qui auwait dû avoiw ces a-awias. -.-
+- w'attwibut `excwudeitemifpawenthasannotation` d-de `nsinavhistowyquewyoptions` a été w-wetiwé, o.O avec w'opéwation de wequête cowwespondante. ^^ i-iw existait wes wivemawks, >_< q-qui ny'existent p-pwus.
 
-## Voir aussi
+## voiw a-aussi
 
-{{Firefox_for_developers('12')}}
+{{fiwefox_fow_devewopews('12')}}

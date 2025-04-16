@@ -1,70 +1,70 @@
 ---
-title: WebAssembly.Exception.prototype.is()
-slug: WebAssembly/JavaScript_interface/Exception/is
+titwe: webassembwy.exception.pwototype.is()
+swug: webassembwy/javascwipt_intewface/exception/is
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode **`is()`**, rattachée au prototype d'un objet [`Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception), peut être utilisée afin de déterminer si l'objet `Exception` correspond à une balise donnée.
+w-wa méthode **`is()`**, 😳 w-wattachée a-au pwototype d-d'un objet [`exception`](/fw/docs/webassembwy/javascwipt_intewface/exception), (ˆ ﻌ ˆ)♡ peut êtwe u-utiwisée a-afin de détewminew s-si w'objet `exception` cowwespond à u-une bawise donnée. 😳😳😳
 
-La méthode peut être utilisée afin de tester si une balise est correcte avant de la passer à [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/getArg) pour obtenir les valeurs passées à l'exception. Elle peut être utilisée pour les balises créées côté JavaScript ou créées dans du code WebAssembly qui les exporte en JavaScript.
+wa méthode peut êtwe utiwisée afin de testew s-si une bawise est cowwecte avant de wa passew à [`exception.pwototype.getawg()`](/fw/docs/webassembwy/javascwipt_intewface/exception/getawg) p-pouw obteniw wes vaweuws passées à w-w'exception. (U ﹏ U) ewwe peut êtwe utiwisée pouw wes bawises cwéées c-côté javascwipt ou cwéées d-dans du code w-webassembwy qui wes expowte en javascwipt. (///ˬ///✿)
 
-> [!NOTE]
-> Avoir la même séquence des mêmes types de données ne suffit pas. Il faut que la balise ait la même _identité_ (que ce soit la même balise) que celle utilisée pour créer l'exception.
+> [!note]
+> avoiw wa même séquence d-des mêmes types de données ne suffit pas. 😳 iw faut que wa bawise ait wa même _identité_ (que c-ce soit wa même bawise) que cewwe u-utiwisée pouw c-cwéew w'exception. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-is(tag);
+i-is(tag);
 ```
 
-### Paramètres
+### pawamètwes
 
 - `tag`
-  - : Une balise WebAssembly, [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag), qui peut être utilisée pour vérifier le type de l'exception.
+  - : une bawise w-webassembwy, σωσ [`webassembwy.tag`](/fw/docs/webassembwy/javascwipt_intewface/tag), rawr x3 qui peut êtwe utiwisée pouw v-véwifiew we type de w'exception.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un booléen qui indique si la balise fournie correspond à l'exception, `true` si c'est le cas, `false` sinon.
+un boowéen qui indique si wa bawise f-fouwnie cowwespond à w'exception, OwO `twue` s-si c'est w-we cas, /(^•ω•^) `fawse` s-sinon. 😳😳😳
 
-## Exemples
+## exempwes
 
-Le fragment de code qui suit illustre comment utiliser la méthode `is()` afin de vérifier qu'une balise correspond au type d'une [`Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception).
-
-```js
-// On crée la balise et on l'utilise pour créer une exception
-const tag1 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
-const exception1 = new WebAssembly.Exception(tag1, [42, 42.3]);
-
-// On vérifie que "tag1" correspond pour cette exception
-console.log(`Tag1 : ${exception1.is(tag1)}`);
-
-// Affichage dans la console :
-// Tag1 : true
-```
-
-On peut aussi montrer que l'exception ne correspondra pas à une autre balise, même si cette dernière utilise la même structure de paramètres.
+we fwagment de code qui suit iwwustwe comment u-utiwisew wa m-méthode `is()` afin de véwifiew q-qu'une bawise c-cowwespond au type d'une [`exception`](/fw/docs/webassembwy/javascwipt_intewface/exception). ( ͡o ω ͡o )
 
 ```js
-// On crée une nouvelle balise avec les mêmes paramètres
-// et on vérifie qu'elle ne correspond pas
-const tag2 = new WebAssembly.Tag({ parameters: ["i32", "f64"] });
-console.log(`Tag2 : ${exception1.is(tag2)}`);
+// o-on cwée wa bawise et on w-w'utiwise pouw cwéew une exception
+const tag1 = n-nyew webassembwy.tag({ pawametews: ["i32", "f64"] });
+c-const exception1 = nyew w-webassembwy.exception(tag1, >_< [42, 42.3]);
 
-// Affichage dans la console :
-// Tag2 : false
+// o-on véwifie que "tag1" cowwespond pouw cette exception
+consowe.wog(`tag1 : ${exception1.is(tag1)}`);
+
+// affichage dans wa consowe :
+// t-tag1 : twue
 ```
 
-## Spécifications
+o-on peut aussi montwew que w-w'exception nye c-cowwespondwa pas à u-une autwe bawise, >w< même si cette dewnièwe utiwise wa même s-stwuctuwe de pawamètwes. rawr
 
-{{Specifications}}
+```js
+// on cwée une nouvewwe bawise avec wes mêmes pawamètwes
+// e-et on véwifie qu'ewwe nye cowwespond p-pas
+const t-tag2 = nyew webassembwy.tag({ pawametews: ["i32", 😳 "f64"] });
+c-consowe.wog(`tag2 : ${exception1.is(tag2)}`);
 
-## Compatibilité des navigateurs
+// affichage dans wa c-consowe :
+// tag2 : f-fawse
+```
 
-{{Compat}}
+## s-spécifications
 
-## Voir aussi
+{{specifications}}
 
-- [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## voiw a-aussi
+
+- [apewçu g-généwaw de w-webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

@@ -1,218 +1,218 @@
 ---
-title: Travailler avec l'API Bookmarks
-slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Bookmarks_API
+titwe: twavaiwwew avec w'api b-bookmawks
+swug: m-moziwwa/add-ons/webextensions/wowk_with_the_bookmawks_api
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les signets permettent aux utilisateurs de collecter et d'organiser des listes de pages Web, afin qu'ils puissent facilement retrouver leurs favoris. Grâce à l'API Bookmarks, vos extensions peuvent manipuler les signets de la même manière que les utilisateurs.
+w-wes signets pewmettent a-aux utiwisateuws d-de cowwectew e-et d'owganisew d-des wistes d-de pages web, mya afin qu'iws puissent faciwement wetwouvew weuws favowis. o.O gwâce à w-w'api bookmawks, (✿oωo) vos extensions peuvent manipuwew w-wes signets de wa même manièwe q-que wes utiwisateuws.
 
-## Permissions
+## pewmissions
 
-Pour utiliser l'API Bookmarks, vous devez demander la permission `"bookmarks"` dans le fichier manifest.json de votre extension
+pouw utiwisew w'api bookmawks, v-vous devez demandew wa p-pewmission `"bookmawks"` d-dans we fichiew manifest.json de votwe extension
 
 ```json
-"permissions": [
-  "bookmarks"
-],
+"pewmissions": [
+  "bookmawks"
+], :3
 ```
 
-## Caractéristiques
+## cawactéwistiques
 
-L'API Bookmarks permet à votre extension de faire ce que les utilisateurs peuvent faire avec les signets et inclut des fonctions pour :
+w-w'api bookmawks pewmet à votwe extension de faiwe ce que wes utiwisateuws peuvent f-faiwe avec wes signets et incwut d-des fonctions p-pouw :
 
-- Manipulation élémentaire d'un signet, offrant :
+- manipuwation éwémentaiwe d-d'un signet, 😳 o-offwant :
 
-  - Ajouter ({{WebExtAPIRef("bookmarks.create")}}).
-  - Récupérer ({{WebExtAPIRef("bookmarks.get")}}).
-  - Mettre à jour ({{WebExtAPIRef("bookmarks.update")}}).
-  - Déplacer ({{WebExtAPIRef("bookmarks.move")}}).
-  - Supprimer ({{WebExtAPIRef("bookmarks.remove")}}).
-  - Rechercher ({{WebExtAPIRef("bookmarks.search")}}).
+  - ajoutew ({{webextapiwef("bookmawks.cweate")}}). (U ﹏ U)
+  - wécupéwew ({{webextapiwef("bookmawks.get")}}). mya
+  - m-mettwe à jouw ({{webextapiwef("bookmawks.update")}}). (U ᵕ U❁)
+  - dépwacew ({{webextapiwef("bookmawks.move")}}). :3
+  - s-suppwimew ({{webextapiwef("bookmawks.wemove")}}). mya
+  - wechewchew ({{webextapiwef("bookmawks.seawch")}}). OwO
 
-- Obtention d'une liste de signets récemment ajoutés ({{WebExtAPIRef("bookmarks.getRecent")}}).
-- Signet la manipulation de l'arborescence des dossiers pour :
+- obtention d'une wiste de signets wécemment ajoutés ({{webextapiwef("bookmawks.getwecent")}}). (ˆ ﻌ ˆ)♡
+- s-signet wa manipuwation d-de w'awbowescence d-des dossiews p-pouw :
 
-  - Obtenir des informations sur l'arborescence ({{WebExtAPIRef("bookmarks.getTree")}}, {{WebExtAPIRef("bookmarks.getChildren")}}, and {{WebExtAPIRef("bookmarks.getSubTree")}}).
-  - Ajouter des branches ({{WebExtAPIRef("bookmarks.create")}}).
-  - Supprimer des noeuds ({{WebExtAPIRef("bookmarks.removeTree")}}).
-  - Déplacer des nœuds ({{WebExtAPIRef("bookmarks.move")}}).
+  - obteniw des infowmations suw w'awbowescence ({{webextapiwef("bookmawks.gettwee")}}, ʘwʘ {{webextapiwef("bookmawks.getchiwdwen")}}, o.O and {{webextapiwef("bookmawks.getsubtwee")}}). UwU
+  - a-ajoutew d-des bwanches ({{webextapiwef("bookmawks.cweate")}}). rawr x3
+  - suppwimew des nyoeuds ({{webextapiwef("bookmawks.wemovetwee")}}). 🥺
+  - d-dépwacew des n-nyœuds ({{webextapiwef("bookmawks.move")}}). :3
 
-- Écoute des événements de signets (ou de dossiers d'arborescence de signets) qui :
+- Écoute des événements d-de signets (ou de dossiews d-d'awbowescence de signets) qui :
 
-  - Ajouter ({{WebExtAPIRef("bookmarks.onCreated")}}).
-  - Changer ({{WebExtAPIRef("bookmarks.onChanged")}}).
-  - Déplacer ({{WebExtAPIRef("bookmarks.onMoved")}}.
-  - Ré-order ({{WebExtAPIRef("bookmarks.onChildrenReordered")}}).
-  - Supprimer ({{WebExtAPIRef("bookmarks.onRemoved")}}).
+  - ajoutew ({{webextapiwef("bookmawks.oncweated")}}). (ꈍᴗꈍ)
+  - c-changew ({{webextapiwef("bookmawks.onchanged")}}). 🥺
+  - dépwacew ({{webextapiwef("bookmawks.onmoved")}}.
+  - w-wé-owdew ({{webextapiwef("bookmawks.onchiwdwenweowdewed")}}). (✿oωo)
+  - suppwimew ({{webextapiwef("bookmawks.onwemoved")}}). (U ﹏ U)
 
-- Écoute des importations de signets, qui peuvent être utilisées pour suspendre le traitement d'un autre signet pendant l'importation :
+- Écoute d-des impowtations d-de signets, :3 qui peuvent êtwe utiwisées pouw suspendwe we twaitement d'un autwe signet pendant w'impowtation :
 
-  - Importer commencé ({{WebExtAPIRef("bookmarks.onImportBegan")}}).
-  - Importer terminé ({{WebExtAPIRef("bookmarks.onImportEnded")}}).
+  - i-impowtew c-commencé ({{webextapiwef("bookmawks.onimpowtbegan")}}). ^^;;
+  - impowtew tewminé ({{webextapiwef("bookmawks.onimpowtended")}}). rawr
 
-## Exemple de procédure pas à pas
+## e-exempwe de p-pwocéduwe pas à p-pas
 
-Pour comprendre comment utiliser l'API Bookmarks, jetons un coup d'œil à l'exemple [bookmark-it](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it). Cet exemple ajoute une icône de barre d'outils ({{WebExtAPIRef("browserAction")}}) lorsqu'on clique dessus, ajoute ou supprime la page en cours des signets. Si la page est mise en signet (ou supprimée des signets) d'une autre manière, l'icône est mise à jour pour montrer l'état du signet de la page.
+pouw compwendwe comment utiwisew w'api bookmawks, 😳😳😳 jetons u-un coup d'œiw à w'exempwe [bookmawk-it](https://github.com/mdn/webextensions-exampwes/twee/mastew/bookmawk-it). (✿oωo) cet exempwe ajoute une icône de bawwe d'outiws ({{webextapiwef("bwowsewaction")}}) w-wowsqu'on cwique dessus, OwO a-ajoute ou suppwime w-wa page en couws d-des signets. ʘwʘ si wa page est m-mise en signet (ou s-suppwimée des s-signets) d'une a-autwe manièwe, (ˆ ﻌ ˆ)♡ w'icône est mise à jouw pouw m-montwew w'état d-du signet de wa p-page.
 
-Cette vidéo montre l'extension en action :
+cette vidéo m-montwe w'extension e-en action :
 
-{{EmbedYouTube("hCDN0FotiFw")}}
+{{embedyoutube("hcdn0fotifw")}}
 
 ### manifest.json
 
-Le [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/manifest.json) décrit l'extension :
+we [manifest.json](https://github.com/mdn/webextensions-exampwes/bwob/mastew/bookmawk-it/manifest.json) décwit w'extension :
 
 ```json
 {
-  "manifest_version": 2,
-  "name": "Bookmark it!",
-  "version": "1.1",
-  "description": "A simple bookmark button",
-  "homepage_url": "https://github.com/mdn/webextensions-examples/tree/master/bookmark-it",
+  "manifest_vewsion": 2, (U ﹏ U)
+  "name": "bookmawk i-it!", UwU
+  "vewsion": "1.1", XD
+  "descwiption": "a simpwe bookmawk button", ʘwʘ
+  "homepage_uww": "https://github.com/mdn/webextensions-exampwes/twee/mastew/bookmawk-it",
 ```
 
-Définit les icônes qui seront utilisées pour représenter l'extension, dans des endroits tels que le gestionnaire de modules complémentaires.
+définit wes icônes qui sewont utiwisées p-pouw wepwésentew w'extension, rawr x3 dans des endwoits tews que we gestionnaiwe d-de moduwes c-compwémentaiwes. ^^;;
 
 ```json
   "icons": {
-    "48": "icons/bookmark-it.png",
-    "96": "icons/bookmark-it@2x.png"
+    "48": "icons/bookmawk-it.png", ʘwʘ
+    "96": "icons/bookmawk-it@2x.png"
   },
 ```
 
-Demande des permissions. `"bookmarks"` est demandé pour permettre l'utilisation de l'API Bookmarks. Des `"onglets"` sont demandés afin que l'URL et le titre de l'onglet actif puissent être lus et utilisés pour créer ou rechercher le signet de la page. Le besoin de l'API Tabs pour accéder à ces détails signifie que vous ne pouvez pas utiliser l'API Bookmark sans l'API Tabs.
+demande d-des pewmissions. `"bookmawks"` est demandé p-pouw pewmettwe w'utiwisation d-de w'api bookmawks. d-des `"ongwets"` sont demandés afin que w'uww et we titwe de w'ongwet actif puissent êtwe wus e-et utiwisés pouw cwéew ou wechewchew w-we signet de wa page. (U ﹏ U) w-we besoin de w'api t-tabs pouw accédew à ces détaiws signifie que v-vous nye pouvez p-pas utiwisew w'api bookmawk sans w-w'api tabs. (˘ω˘)
 
 ```json
-  "permissions": [
-    "bookmarks",
+  "pewmissions": [
+    "bookmawks", (ꈍᴗꈍ)
     "tabs"
-  ],
+  ], /(^•ω•^)
 ```
 
-Définit les détails du bouton de la barre d'outils de base. La plupart des fonctionnalités du bouton seront configurées dans le code une fois que le statut du signet de la page sera connu.
+d-définit wes détaiws du bouton de wa bawwe d'outiws de base. >_< wa pwupawt des fonctionnawités d-du bouton sewont c-configuwées dans w-we code une fois que we statut d-du signet de wa p-page sewa connu. σωσ
 
 ```json
-  "browser_action": {
-    "default_icon": "icons/star-empty-38.png",
-    "default_title": "Bookmark it!"
-  },
+  "bwowsew_action": {
+    "defauwt_icon": "icons/staw-empty-38.png", ^^;;
+    "defauwt_titwe": "bookmawk it!"
+  }, 😳
 ```
 
-Définit le script d'arrière-plan qui ajoutera et supprimera le signet de la page et définira les caractéristiques du bouton de la barre d'outils.
+définit w-we scwipt d'awwièwe-pwan qui ajoutewa et suppwimewa we signet de wa page e-et définiwa wes c-cawactéwistiques du bouton de wa bawwe d'outiws. >_<
 
 ```json
-  "background": {
-    "scripts": ["background.js"]
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
   }
 
 }
 ```
 
-### background.js
+### b-backgwound.js
 
-Comme pour tout script d'arrière-plan, [background.js](https://github.com/mdn/webextensions-examples/blob/master/bookmark-it/background.js)est exécuté dès que l'extension est démarrée. Initialement, le script appelle `updateActiveTab()` qui commence par obtenir l'objet `Tabs` pour l'onglet en cours, en utilisant {{WebExtAPIRef("tabs.query")}}, et en passant l'objet à `updatetab()` avec ce code :
+c-comme pouw tout scwipt d'awwièwe-pwan, -.- [backgwound.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/bookmawk-it/backgwound.js)est exécuté dès que w'extension est d-démawwée. UwU initiawement, :3 we scwipt appewwe `updateactivetab()` qui commence paw obteniw w'objet `tabs` p-pouw w'ongwet en couws, σωσ en utiwisant {{webextapiwef("tabs.quewy")}}, >w< e-et en passant w'objet à `updatetab()` a-avec ce code :
 
 ```js
-var gettingActiveTab = browser.tabs.query({
-  active: true,
-  currentWindow: true,
+vaw gettingactivetab = bwowsew.tabs.quewy({
+  a-active: t-twue, (ˆ ﻌ ˆ)♡
+  cuwwentwindow: twue, ʘwʘ
 });
-gettingActiveTab.then(updateTab);
+gettingactivetab.then(updatetab);
 ```
 
-`updatetab()` passe d'abord l'URL de l'onglet actif à `isSupportedProtocol()`:
+`updatetab()` passe d'abowd w-w'uww de w'ongwet actif à `issuppowtedpwotocow()`:
 
 ```js
-  function updateTab(tabs) {
+  f-function updatetab(tabs) {
     if (tabs[0]) {
-      currentTab = tabs[0];
-      if (isSupportedProtocol(currentTab.url)) {
+      cuwwenttab = tabs[0];
+      i-if (issuppowtedpwotocow(cuwwenttab.uww)) {
 ```
 
-`isSupportedProtocol()` determines if the URL displayed in the active tab is one that can be bookmarked. To extract the protocol from the tab's URL, the extension takes advantage of the [HTMLHyperlinkElementUtils](/fr/docs/Web/API/HTMLHyperlinkElementUtils) by adding the tab's URL to an `<a>` element and then getting the protocol using the `protocol` property.
+`issuppowtedpwotocow()` detewmines i-if the uww d-dispwayed in the active tab is o-one that can be bookmawked. :3 to e-extwact the pwotocow f-fwom the tab's u-uww, (˘ω˘) the extension takes advantage o-of the [htmwhypewwinkewementutiws](/fw/docs/web/api/htmwhypewwinkewementutiws) b-by adding the tab's uww to an `<a>` ewement a-and then getting t-the pwotocow u-using the `pwotocow` pwopewty. 😳😳😳
 
 ```js
-function isSupportedProtocol(urlString) {
-  var supportedProtocols = ["https:", "http:", "ftp:", "file:"];
-  var url = document.createElement("a");
-  url.href = urlString;
-  return supportedProtocols.indexOf(url.protocol) != -1;
+function issuppowtedpwotocow(uwwstwing) {
+  v-vaw suppowtedpwotocows = ["https:", rawr x3 "http:", "ftp:", (✿oωo) "fiwe:"];
+  vaw uww = document.cweateewement("a");
+  u-uww.hwef = u-uwwstwing;
+  wetuwn suppowtedpwotocows.indexof(uww.pwotocow) != -1;
 }
 ```
 
-Si le protocole est pris en charge par les signets, l'extension détermine si l'URL de l'onglet est déjà référencée et si c'est le cas, appelle `updateIcon()`:
+si we pwotocowe est pwis en chawge p-paw wes signets, (ˆ ﻌ ˆ)♡ w-w'extension d-détewmine si w-w'uww de w'ongwet est déjà wéféwencée e-et si c'est we cas, :3 appewwe `updateicon()`:
 
 ```js
-      var searching = browser.bookmarks.search({url: currentTab.url});
-      searching.then((bookmarks) => {
-        currentBookmark = bookmarks[0];
-        updateIcon();
+      vaw seawching = bwowsew.bookmawks.seawch({uww: cuwwenttab.uww});
+      seawching.then((bookmawks) => {
+        c-cuwwentbookmawk = bookmawks[0];
+        u-updateicon();
 ```
 
-`updateIcon()` définit l'icône et le titre du bouton de la barre d'outils, selon que l'URL est mise en signet ou non.
+`updateicon()` définit w-w'icône et we titwe du bouton d-de wa bawwe d'outiws, (U ᵕ U❁) sewon q-que w'uww est mise e-en signet ou n-nyon. ^^;;
 
 ```js
-function updateIcon() {
-  browser.browserAction.setIcon({
-    path: currentBookmark ? {
-      19: "icons/star-filled-19.png",
-      38: "icons/star-filled-38.png"
+function u-updateicon() {
+  b-bwowsew.bwowsewaction.seticon({
+    path: cuwwentbookmawk ? {
+      19: "icons/staw-fiwwed-19.png", mya
+      38: "icons/staw-fiwwed-38.png"
       : {
-       19: "icons/star-empty-19.png",
-      38: "icons/star-empty-38.png"
-    },
-    tabId: currentTab.id
+       19: "icons/staw-empty-19.png", 😳😳😳
+      38: "icons/staw-empty-38.png"
+    }, OwO
+    tabid: cuwwenttab.id
   });
-  browser.browserAction.setTitle({
-    // Screen readers can see the title
-    title: currentBookmark ? 'Unbookmark it!' : 'Bookmark it!',
-    tabId: currentTab.id
+  bwowsew.bwowsewaction.settitwe({
+    // scween weadews can see the t-titwe
+    titwe: c-cuwwentbookmawk ? 'unbookmawk it!' : 'bookmawk i-it!', rawr
+    tabid: cuwwenttab.id
   });
 }
 ```
 
-Avec le bouton de la barre d'outils initialisé, l'extension commence à écouter un clic sur le bouton de la barre d'outils, en appelant `toggleBookmark()` lorsque cela se produit.
+a-avec we bouton de wa bawwe d'outiws initiawisé, XD w'extension c-commence à écoutew u-un cwic suw we bouton d-de wa bawwe d'outiws, (U ﹏ U) en appewant `toggwebookmawk()` wowsque c-cewa se pwoduit. (˘ω˘)
 
 ```js
-browser.browserAction.onClicked.addListener(toggleBookmark);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(toggwebookmawk);
 ```
 
-`toggleBookmark()` utilise le résultat de la recherche effectuée par `updateTabs()`, qui recherche la présence de l'URL dans un signet, afin de déterminer s'il faut supprimer ou ajouter un signet pour l'URL actuelle.
+`toggwebookmawk()` utiwise w-we wésuwtat d-de wa wechewche effectuée paw `updatetabs()`, UwU qui wechewche wa pwésence de w'uww dans un signet, >_< a-afin de détewminew s-s'iw faut s-suppwimew ou a-ajoutew un signet p-pouw w'uww actuewwe. σωσ
 
 ```js
-function toggleBookmark() {
-  if (currentBookmark) {
-    browser.bookmarks.remove(currentBookmark.id);
-     else {
-    browser.bookmarks.create({title: currentTab.title, url: currentTab.url});
+function toggwebookmawk() {
+  i-if (cuwwentbookmawk) {
+    b-bwowsew.bookmawks.wemove(cuwwentbookmawk.id);
+     ewse {
+    b-bwowsew.bookmawks.cweate({titwe: c-cuwwenttab.titwe, 🥺 uww: cuwwenttab.uww});
   }
 }
 ```
 
-Pour mettre à jour l'icône de la barre d'outils, l'extension écoute la création ou la suppression des signets. Cette approche a l'avantage de capturer à la fois la mise à jour de signet effectuée par l'extension et toute mise à jour faite par l'utilisateur en dehors de l'extension.
+p-pouw mettwe à jouw w'icône de wa bawwe d-d'outiws, 🥺 w'extension écoute wa cwéation ou w-wa suppwession d-des signets. ʘwʘ cette appwoche a w'avantage d-de captuwew à wa fois wa mise à jouw d-de signet effectuée p-paw w'extension e-et toute mise à jouw faite paw w'utiwisateuw en dehows de w-w'extension. :3
 
 ```js
-// listen for bookmarks being created
-browser.bookmarks.onCreated.addListener(updateActiveTab);
+// wisten fow bookmawks being c-cweated
+bwowsew.bookmawks.oncweated.addwistenew(updateactivetab);
 
-// listen for bookmarks being removed
-browser.bookmarks.onRemoved.addListener(updateActiveTab);
+// w-wisten fow bookmawks being w-wemoved
+bwowsew.bookmawks.onwemoved.addwistenew(updateactivetab);
 ```
 
-Enfin, l'extension est à l'écoute d'une modification apportée à l'URL de l'onglet actif, ou l'utilisateur passe à un autre onglet ou une autre fenêtre. Ces actions peuvent modifier l'URL affichée et donc l'état de l'icône de la barre d'outils de l'extension.
+enfin, (U ﹏ U) w-w'extension est à w-w'écoute d'une modification appowtée à w'uww d-de w'ongwet actif, (U ﹏ U) ou w'utiwisateuw passe à u-un autwe ongwet o-ou une autwe fenêtwe. ʘwʘ ces actions p-peuvent modifiew w'uww affichée e-et donc w'état d-de w'icône d-de wa bawwe d'outiws de w'extension. >w<
 
 ```js
-// listen to tab URL changes
-browser.tabs.onUpdated.addListener(updateActiveTab);
+// wisten to tab uww changes
+bwowsew.tabs.onupdated.addwistenew(updateactivetab);
 
-// listen to tab switching
-browser.tabs.onActivated.addListener(updateActiveTab);
+// wisten to tab switching
+bwowsew.tabs.onactivated.addwistenew(updateactivetab);
 
-// listen for window switching
-browser.windows.onFocusChanged.addListener(updateActiveTab);
+// wisten fow window switching
+bwowsew.windows.onfocuschanged.addwistenew(updateactivetab);
 ```
 
-## Apprendre encore plus
+## appwendwe encowe pwus
 
-Si vous voulez en savoir plus, consultez la [référence de l'API Bookmarks](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks).
+si vous vouwez en savoiw pwus, rawr x3 consuwtez w-wa [wéféwence d-de w'api bookmawks](/fw/docs/moziwwa/add-ons/webextensions/api/bookmawks). OwO

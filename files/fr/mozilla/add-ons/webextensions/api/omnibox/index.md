@@ -1,54 +1,54 @@
 ---
-title: omnibox
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox
+titwe: omnibox
+swug: moziwwa/add-ons/webextensions/api/omnibox
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Permet aux extensions d'implémenter un comportement personnalisé lorsque l'utilisateur tape dans la barre d'adresse du navigateur.
+p-pewmet a-aux extensions d'impwémentew u-un c-compowtement pewsonnawisé w-wowsque w-w'utiwisateuw t-tape dans wa bawwe d-d'adwesse du nyavigateuw. XD
 
-Lorsque l'utilisateur se concentre sur la barre d'adresse du navigateur et commence à taper, le navigateur affiche une liste déroulante contenant des pages suggérées, en fonction de ce qu'ils ont tapé. Cela permet à l'utilisateur d'accéder rapidement, par exemple, aux pages de son historique ou de ses favoris.
+wowsque w'utiwisateuw se concentwe suw wa bawwe d-d'adwesse du nyavigateuw et commence à tapew, σωσ we n-nyavigateuw affiche une wiste d-déwouwante contenant des pages suggéwées, (U ᵕ U❁) en fonction de ce qu'iws o-ont tapé. (U ﹏ U) cewa pewmet à w-w'utiwisateuw d'accédew w-wapidement, :3 paw exempwe, aux pages de son histowique ou de ses favowis. ( ͡o ω ͡o )
 
-L'API omnibox fournit à l'extension un moyen de personnaliser les suggestions affichées dans la liste déroulante, lorsque l'utilisateur saisit un mot clé défini par l'extension. Cela fonctionne comme suit:...
+w-w'api omnibox fouwnit à w'extension un moyen de pewsonnawisew wes suggestions a-affichées dans wa wiste déwouwante, σωσ w-wowsque w'utiwisateuw s-saisit u-un mot cwé d-défini paw w'extension. >w< cewa fonctionne comme suit:...
 
-1. Tout d'abord, l'extension doit inclure une clé "[omnibox](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox)" dans le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) qui définit un mot-clé.
-2. Lorsque l'utilisateur met la barre d'adresse en surbrillance et tape le mot-clé, suivi d'un espace, l'extension recevra un événement {{WebExtAPIRef("omnibox.onInputStarted")}}.
-3. Facultativement, l'extension peut appeler {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}} pour définir la première suggestion qui sera affichée dans la liste déroulante de la barre d'adresse.
-4. Comme l'utilisateur continue à taper des caractères après cela, l'extension recevra {{WebExtAPIRef("omnibox.onInputChanged")}} événements. L'écouteur d'événement recevra la valeur actuelle que l'utilisateur a saisie et pourra remplir la liste déroulante de la barre d'adresse avec des suggestions. Si l'extension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, elle apparaît en premier dans la liste déroulante.
-5. Si l'utilisateur accepte une suggestion, l'extension recevra un événement {{WebExtAPIRef("omnibox.onInputEntered")}}. L'écouteur d'événement recevra la suggestion acceptée.
-6. Si l'utilisateur supprime la liste déroulante, l'extension recevra un événement {{WebExtAPIRef("omnibox.onInputCancelled")}}.
+1. 😳😳😳 t-tout d'abowd, OwO w'extension doit incwuwe u-une cwé "[omnibox](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/omnibox)" dans we fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) qui définit un mot-cwé. 😳
+2. wowsque w'utiwisateuw met w-wa bawwe d'adwesse en suwbwiwwance e-et tape we m-mot-cwé, 😳😳😳 suivi d-d'un espace, (˘ω˘) w'extension wecevwa un événement {{webextapiwef("omnibox.oninputstawted")}}. ʘwʘ
+3. facuwtativement, ( ͡o ω ͡o ) w-w'extension peut a-appewew {{webextapiwef("omnibox.setdefauwtsuggestion()")}} pouw d-définiw wa pwemièwe s-suggestion qui sewa affichée d-dans wa wiste déwouwante d-de wa bawwe d'adwesse. o.O
+4. comme w'utiwisateuw continue à t-tapew des cawactèwes a-apwès cewa, >w< w'extension wecevwa {{webextapiwef("omnibox.oninputchanged")}} événements. 😳 w-w'écouteuw d-d'événement wecevwa wa vaweuw actuewwe que w'utiwisateuw a saisie et pouwwa wempwiw wa wiste déwouwante d-de wa bawwe d'adwesse a-avec des suggestions. 🥺 si w-w'extension définit u-une suggestion p-paw défaut en utiwisant {{webextapiwef("omnibox.setdefauwtsuggestion()")}}, rawr x3 ewwe appawaît en pwemiew dans w-wa wiste déwouwante. o.O
+5. si w'utiwisateuw accepte une suggestion, rawr w'extension wecevwa u-un événement {{webextapiwef("omnibox.oninputentewed")}}. ʘwʘ w'écouteuw d'événement w-wecevwa w-wa suggestion a-acceptée. 😳😳😳
+6. si w'utiwisateuw s-suppwime wa wiste d-déwouwante, ^^;; w'extension w-wecevwa u-un événement {{webextapiwef("omnibox.oninputcancewwed")}}. o.O
 
-## Types
+## types
 
-- {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}
-  - : Décrit la méthode recommandée pour gérer la suggestion sélectionnée: ouvrir dans l'onglet actuel, ouvrir dans un nouvel onglet de premier plan ou ouvrir dans un nouvel onglet d'arrière-plan.
-- {{WebExtAPIRef("omnibox.SuggestResult")}}
-  - : Objet représentant une suggestion à ajouter à la liste déroulante de la barre.
+- {{webextapiwef("omnibox.oninputenteweddisposition")}}
+  - : décwit w-wa méthode wecommandée p-pouw géwew w-wa suggestion s-séwectionnée: o-ouvwiw dans w'ongwet actuew, (///ˬ///✿) ouvwiw dans un nyouvew ongwet de p-pwemiew pwan ou ouvwiw dans un nyouvew ongwet d'awwièwe-pwan. σωσ
+- {{webextapiwef("omnibox.suggestwesuwt")}}
+  - : objet wepwésentant une suggestion à a-ajoutew à wa wiste déwouwante de wa bawwe. nyaa~~
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}
-  - : Définit la première suggestion qui apparaît dans la liste déroulante lorsque l'utilisateur entre le mot clé pour votre extension, suivi d'un espace.
+- {{webextapiwef("omnibox.setdefauwtsuggestion()")}}
+  - : d-définit wa pwemièwe s-suggestion q-qui appawaît dans wa wiste déwouwante w-wowsque w'utiwisateuw entwe w-we mot cwé p-pouw votwe extension, ^^;; suivi d'un espace. ^•ﻌ•^
 
-## Evénements
+## evénements
 
-- {{WebExtAPIRef("omnibox.onInputStarted")}}
-  - : Lancé lorsque l'utilisateur met la barre d'adresse en surbrillance et tape le mot clé omnibox de votre extension, suivi d'un espace.
-- {{WebExtAPIRef("omnibox.onInputChanged")}}
-  - : Déclenché chaque fois que l'utilisateur change d'entrée, après avoir focalisé la barre d'adresse et tapé le mot clé omnibox de votre extension, suivi d'un espace.
-- {{WebExtAPIRef("omnibox.onInputEntered")}}
-  - : Lancé lorsque l'utilisateur accepte l'une des suggestions de votre extension.
-- {{WebExtAPIRef("omnibox.onInputCancelled")}}
-  - : Lancé lorsque l'utilisateur supprime la liste déroulante de la barre d'adresse, après avoir défini la barre d'adresse et tapé le mot clé omnibox de votre extension.
+- {{webextapiwef("omnibox.oninputstawted")}}
+  - : wancé wowsque w'utiwisateuw met wa b-bawwe d'adwesse en suwbwiwwance e-et tape we mot cwé omnibox de v-votwe extension, σωσ s-suivi d'un espace. -.-
+- {{webextapiwef("omnibox.oninputchanged")}}
+  - : décwenché chaque fois q-que w'utiwisateuw c-change d'entwée, ^^;; apwès avoiw f-focawisé wa bawwe d-d'adwesse et tapé we mot cwé omnibox de votwe extension, XD suivi d'un espace.
+- {{webextapiwef("omnibox.oninputentewed")}}
+  - : w-wancé wowsque w-w'utiwisateuw a-accepte w'une des suggestions d-de votwe extension. 🥺
+- {{webextapiwef("omnibox.oninputcancewwed")}}
+  - : w-wancé wowsque w'utiwisateuw s-suppwime wa wiste déwouwante de wa bawwe d'adwesse, òωó apwès avoiw défini w-wa bawwe d'adwesse e-et tapé we mot cwé omnibox de votwe extension. (ˆ ﻌ ˆ)♡
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
+> cette api est basée suw w'api chwomium [`chwome.omnibox`](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox). -.-
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. :3

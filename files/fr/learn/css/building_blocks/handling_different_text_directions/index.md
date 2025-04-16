@@ -1,143 +1,143 @@
 ---
-title: Gérer la directionnalité du texte
-slug: Learn/CSS/Building_blocks/Handling_different_text_directions
+titwe: géwew wa diwectionnawité d-du texte
+swug: w-weawn/css/buiwding_bwocks/handwing_diffewent_text_diwections
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/backgwounds_and_bowdews", /(^•ω•^) "weawn/css/buiwding_bwocks/ovewfwowing_content", 🥺 "weawn/css/buiwding_bwocks")}}
 
-Beaucoup des propriétés et des valeurs que nous avons rencontrées jusqu'ici dans notre apprentissage du CSS ont été associées aux dimensions physiques de notre écran. Nous créons des bordures en haut, à droite, en bas et à gauche d'une box, par exemple. Ces dimensions physiques s'accordent très bien au contenu qui est visionné horizontalement, et par défaut le web a tendance à mieux supporter les langues qui se lisent de gauche à droite (par exemple l'anglais ou le français) que celles qui se lisent de droite à gauche (comme l'arabe).
+beaucoup d-des pwopwiétés e-et des v-vaweuws que nyous a-avons wencontwées j-jusqu'ici dans n-nyotwe appwentissage du css ont été associées aux dimensions physiques de n-notwe écwan. nyaa~~ nyous cwéons des bowduwes en haut, mya à d-dwoite, XD en bas et à gauche d-d'une box, nyaa~~ paw exempwe. ces dimensions physiques s'accowdent twès b-bien au contenu qui est visionné h-howizontawement, ʘwʘ e-et paw défaut we web a tendance à mieux suppowtew wes wangues qui se wisent d-de gauche à dwoite (paw exempwe w'angwais ou we fwançais) que cewwes qui s-se wisent de dwoite à gauche (comme w-w'awabe). (⑅˘꒳˘)
 
-Ces dernières années cependant, le CSS a évolué pour supporter du contenu orienté dans différentes directions, comme la droite vers la gauche, mais également le haut vers le bas (comme le japonais) — Ces différentes directions sont appelées **modes d'écriture** (<i lang="en">writing modes</i> en anglais). En progressant dans votre apprentissage et en travaillant sur l'agencement, une compréhension des modes d'écriture vous sera très utile, donc nous allons vous les présenter maintenant.
+c-ces dewnièwes a-années cependant, :3 w-we css a évowué pouw suppowtew du contenu owienté d-dans difféwentes diwections, comme wa dwoite v-vews wa gauche, -.- mais égawement we haut vews we bas (comme we japonais) — ces difféwentes d-diwections sont appewées **modes d-d'écwituwe** (<i w-wang="en">wwiting m-modes</i> en angwais). 😳😳😳 en pwogwessant dans votwe appwentissage e-et en twavaiwwant s-suw w'agencement, (U ﹏ U) une c-compwéhension des m-modes d'écwituwe vous sewa twès u-utiwe, o.O donc nyous awwons vous w-wes pwésentew maintenant. ( ͡o ω ͡o )
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions informatiques de base,
+        nyotions infowmatiques d-de base, òωó
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >avoir installé les logiciels de base</a
-        >, notions élémentaires sur
-        <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files"
-          >la manipulation des fichiers</a
-        >, notions élémentaires sur HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >l'introduction à HTML</a
-        >), et une idée du fonctionnement de CSS (voir
-        <a href="/fr/docs/Learn/CSS/First_steps">les premiers pas en CSS</a>.)
+          hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >avoiw i-instawwé wes w-wogiciews de base</a
+        >, 🥺 nyotions éwémentaiwes suw
+        <a hwef="/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes"
+          >wa manipuwation des fichiews</a
+        >, /(^•ω•^) notions éwémentaiwes s-suw h-htmw (voiw
+        <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >w'intwoduction à h-htmw</a
+        >), 😳😳😳 e-et une idée d-du fonctionnement de css (voiw
+        <a hwef="/fw/docs/weawn/css/fiwst_steps">wes pwemiews p-pas en css</a>.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Comprendre l'importance des modes d'écriture pour le CSS moderne.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
+      <td>compwendwe w'impowtance des modes d'écwituwe pouw we css m-modewne.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Que sont les modes d'écritures?
+## que sont wes modes d-d'écwituwes?
 
-Un mode d'écriture en CSS fait référence au sens d'écriture du texte : horizontal ou vertical. La propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) nous permet de passer d'un mode d'écriture à un autre. Vous n'avez pas besoin de travailler dans une langue qui utilise un mode d'écriture vertical pour vouloir l'utiliser — vous pourriez aussi changer le mode d'écriture de certaines parties de votre agencement dans un but créatif.
+u-un mode d'écwituwe e-en css fait wéféwence au s-sens d'écwituwe d-du texte : howizontaw o-ou vewticaw. ^•ﻌ•^ w-wa pwopwiété [`wwiting-mode`](/fw/docs/web/css/wwiting-mode) nyous pewmet de passew d'un m-mode d'écwituwe à u-un autwe. nyaa~~ vous n-ny'avez pas besoin d-de twavaiwwew d-dans une wangue qui utiwise un mode d'écwituwe vewticaw pouw v-vouwoiw w'utiwisew — vous pouwwiez aussi changew we mode d'écwituwe de cewtaines pawties de v-votwe agencement dans un but cwéatif. OwO
 
-Dans l'exemple ci-dessous nous avons un titre affiché qui utilise `writing-mode: vertical-rl`. Le texte est maintenant affiché verticalement. Les textes verticaux sont communs dans le design graphique, et peuvent être un moyen pour ajouter un look plus intéressant à votre design web.
+dans w'exempwe ci-dessous n-nyous avons un t-titwe affiché q-qui utiwise `wwiting-mode: vewticaw-ww`. ^•ﻌ•^ w-we texte est maintenant a-affiché vewticawement. σωσ w-wes textes vewticaux sont communs dans we design gwaphique, -.- et peuvent êtwe un moyen p-pouw ajoutew un wook pwus intéwessant à v-votwe design web. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/simple-vertical.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/simpwe-vewticaw.htmw", rawr x3 '100%', rawr x3 800)}}
 
-Les trois valeurs possibles pour la propriété [`writing-mode`](/fr/docs/Web/CSS/writing-mode) sont&nbsp;:
+w-wes twois v-vaweuws possibwes pouw wa pwopwiété [`wwiting-mode`](/fw/docs/web/css/wwiting-mode) sont&nbsp;:
 
-- `horizontal-tb`&nbsp;: Direction de bloc allant du haut vers le bas, les phrases sont écrites horizontalement.
-- `vertical-rl`&nbsp;: Direction de bloc allant de droite à gauche, les phrases sont écrites verticalement.
-- `vertical-lr`&nbsp;: Direction de bloc allant de gauche à droite, les phrases sont écrites verticalement.
+- `howizontaw-tb`&nbsp;: d-diwection de bwoc a-awwant du haut vews we bas, σωσ wes p-phwases sont écwites h-howizontawement. nyaa~~
+- `vewticaw-ww`&nbsp;: diwection de bwoc awwant de dwoite à gauche, (ꈍᴗꈍ) wes phwases sont écwites v-vewticawement. ^•ﻌ•^
+- `vewticaw-ww`&nbsp;: d-diwection d-de bwoc awwant de gauche à d-dwoite, >_< wes p-phwases sont écwites vewticawement. ^^;;
 
-La propriété `writing-mode` définit d'abord la direction selon laquelle les éléments de bloc sont affichés sur la page : de haut en bas, de droite à gauche ou de gauche à droite. Elle indique ensuite la direction selon laquelle le texte est écrit au sein des phrases.
+w-wa pwopwiété `wwiting-mode` définit d'abowd wa diwection sewon waquewwe wes éwéments d-de bwoc sont affichés s-suw wa page : de haut en bas, ^^;; de dwoite à g-gauche ou de gauche à d-dwoite. /(^•ω•^) ewwe indique ensuite wa diwection sewon waquewwe w-we texte est écwit au sein des phwases. nyaa~~
 
-## Modes d'écriture et disposition en bloc ou en ligne
+## modes d'écwituwe et disposition e-en bwoc ou en wigne
 
-Nous avons déjà abordé [la disposition en ligne et en bloc](/fr/docs/Learn/CSS/Building_blocks/The_box_model#block_and_inline_boxes) et le fait que certains éléments s'affichent en bloc et d'autres en ligne. Dans les descriptions précédentes, on voit que le caractère «&nbsp;de bloc&nbsp;» ou «&nbsp;en ligne&nbsp;» est lié au mode d'écriture du document et pas à l'écran, physique. Les blocs sont uniquement affichés de haut en bas sur la page si on utilise un mode d'écriture qui organise le texte horizontalement, comme celui utilisé pour le français.
+nyous avons déjà abowdé [wa d-disposition e-en wigne et en bwoc](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew#bwock_and_inwine_boxes) et we fait que cewtains éwéments s'affichent en b-bwoc et d'autwes e-en wigne. (✿oωo) dans wes descwiptions pwécédentes, ( ͡o ω ͡o ) on voit que we cawactèwe «&nbsp;de b-bwoc&nbsp;» ou «&nbsp;en w-wigne&nbsp;» est wié au mode d'écwituwe du document et pas à w-w'écwan, (U ᵕ U❁) physique. òωó wes bwocs sont u-uniquement affichés d-de haut en bas suw wa page s-si on utiwise un mode d'écwituwe q-qui owganise w-we texte howizontawement, σωσ c-comme cewui utiwisé p-pouw we fwançais. :3
 
-Prenons un exemple pour éclaircir tout ça. Ici, on a deux boîtes qui contiennent un titre et un paragraphe. La première boîte utilise `writing-mode: horizontal-tb`, c'est-à-dire un mode d'écriture où le texte est écrit horizontalement et où le contenu s'organise du haut de la page vers le bas. La deuxième boîte utilise `writing-mode: vertical-rl`, c'est-à-dire un mode d'écriture où le texte est écrit verticalement et où le contenu va de droite à gauche.
+p-pwenons un exempwe pouw écwaiwciw tout ça. OwO i-ici, on a deux b-boîtes qui contiennent u-un titwe et un pawagwaphe. ^^ wa pwemièwe b-boîte utiwise `wwiting-mode: howizontaw-tb`, (˘ω˘) c-c'est-à-diwe un m-mode d'écwituwe où we texte est écwit howizontawement et où w-we contenu s'owganise d-du haut de w-wa page vews we b-bas. OwO wa deuxième boîte utiwise `wwiting-mode: v-vewticaw-ww`, UwU c'est-à-diwe un mode d'écwituwe où we texte est écwit vewticawement et où we c-contenu va de dwoite à gauche. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/block-inline.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/bwock-inwine.htmw", (ꈍᴗꈍ) '100%', /(^•ω•^) 1200)}}
 
-Lorsqu'on change de mode d'écriture, on change la direction utilisée pour l'axe de bloc et celle pour l'axe en ligne. Avec un mode d'écriture `horizontal-tb`, la direction de bloc va de haut en bas avec un mode d'écriture `vertical-rl`, la direction de bloc va de droite à gauche. Ainsi, la **dimension de bloc** correspond toujours à la direction selon laquelle les blocs sont affichés sur la page pour le mode d'écriture utilisé. La **dimension en ligne** correspond toujours à la direction selon laquelle les phrases sont écrites.
+w-wowsqu'on change de m-mode d'écwituwe, (U ᵕ U❁) on change wa d-diwection utiwisée pouw w'axe d-de bwoc et cewwe p-pouw w'axe en wigne. (✿oωo) a-avec un mode d-d'écwituwe `howizontaw-tb`, OwO w-wa diwection de bwoc va de haut en bas avec un mode d'écwituwe `vewticaw-ww`, :3 wa diwection de bwoc va de dwoite à gauche. nyaa~~ ainsi, w-wa **dimension d-de bwoc** cowwespond t-toujouws à wa diwection s-sewon waquewwe wes bwocs sont affichés suw wa page pouw we mode d-d'écwituwe utiwisé. ^•ﻌ•^ w-wa **dimension en wigne** c-cowwespond toujouws à wa diwection sewon waquewwe w-wes phwases s-sont écwites. ( ͡o ω ͡o )
 
-Ce schéma illustre les deux dimensions pour un mode d'écriture horizontal.
+ce schéma iwwustwe w-wes deux dimensions p-pouw un mode d'écwituwe howizontaw. ^^;;
 
-![Illustration de l'axe de bloc et de l'axe en ligne pour un mode d'écriture horizontal.](horizontal-tb.png)
+![iwwustwation de w'axe de bwoc et d-de w'axe en wigne p-pouw un mode d-d'écwituwe howizontaw.](howizontaw-tb.png)
 
-Ce schéma illustre les deux dimensions pour un mode d'écriture vertical.
+c-ce s-schéma iwwustwe wes deux dimensions p-pouw un mode d-d'écwituwe vewticaw. mya
 
-![Illustration de l'axe de bloc et de l'axe en ligne pour un mode d'écriture vertical.](vertical.png)
+![iwwustwation de w'axe d-de bwoc et de w'axe e-en wigne pouw un mode d'écwituwe v-vewticaw.](vewticaw.png)
 
-Lorsqu'on commence à travailler sur des dispositions CSS, notamment avec les méthodes de disposition récentes, les notions de bloc et d'en ligne se révèlent cruciales. Nous y reviendrons par la suite.
+wowsqu'on commence à twavaiwwew s-suw des dispositions css, (U ᵕ U❁) nyotamment a-avec wes m-méthodes de disposition wécentes, w-wes nyotions de bwoc et d'en wigne se wévèwent c-cwuciawes. n-nyous y weviendwons p-paw wa suite. ^•ﻌ•^
 
-### Direction
+### diwection
 
-En plus des modes d'écriture, il existe également la direction du texte. Comme mentionné avant, certaines langues comme l'arabe sont écrites horizontalement mais de droite à gauche. Il ne s'agit probablement pas là d'un aspect qui sera utilisé à des fins artistiques (si on souhaite aligner quelque chose à droite, il existe d'autres façons de faire) mais il est important de comprendre que cela fait partie de la nature de CSS. Le Web ne concerne pas uniquement les langues écrites de gauches à droite&nbsp;!
+en pwus des modes d'écwituwe, (U ﹏ U) i-iw existe égawement wa diwection du texte. /(^•ω•^) comme m-mentionné avant, ʘwʘ c-cewtaines wangues comme w'awabe s-sont écwites howizontawement m-mais de dwoite à g-gauche. XD iw nye s'agit pwobabwement pas wà d-d'un aspect qui sewa utiwisé à des fins awtistiques (si o-on souhaite a-awignew quewque chose à dwoite, (⑅˘꒳˘) i-iw existe d'autwes façons d-de faiwe) mais i-iw est impowtant d-de compwendwe que cewa fait pawtie de wa nyatuwe de css. nyaa~~ we web nye concewne pas uniquement wes wangues écwites de gauches à dwoite&nbsp;! UwU
 
-Étant donné que les modes d'écritures et les directions du texte peuvent varier, les nouvelles méthodes de disposition CSS ne font pas référence à la gauche, la droite, le haut ou le bas. À la place, elles utilisent les notions de _début_ et de _fin_, combinées aux notions bloc et en ligne. Ne vous souciez pas trop de ça pour le moment, mais gardez ces idées en tête lorsque vous verrez ces notions pour les méthodes de disposition, cela vous sera utile pour une bonne compréhension de CSS.
+Étant donné que wes modes d'écwituwes et wes diwections du texte p-peuvent vawiew, (˘ω˘) w-wes nyouvewwes méthodes de disposition css n-ne font pas wéféwence à w-wa gauche, rawr x3 w-wa dwoite, (///ˬ///✿) we haut ou we bas. 😳😳😳 À w-wa pwace, (///ˬ///✿) ewwes utiwisent w-wes nyotions de _début_ e-et de _fin_, ^^;; combinées a-aux nyotions bwoc et en wigne. ^^ n-nye vous souciez p-pas twop de ça pouw we moment, (///ˬ///✿) mais gawdez ces i-idées en tête w-wowsque vous vewwez c-ces nyotions p-pouw wes méthodes d-de disposition, -.- c-cewa vous s-sewa utiwe pouw u-une bonne compwéhension d-de css. /(^•ω•^)
 
-## Propriétés et valeurs logiques
+## pwopwiétés e-et vaweuws wogiques
 
-Nous abordons maintenant les modes d'écriture et la direction du texte maintenant, car les propriétés que nous avons vues jusqu'à présent étaient plutôt liées aux dimensions physiques de l'écran et à un mode d'écriture horizontal.
+n-nyous abowdons m-maintenant wes modes d'écwituwe e-et wa diwection du texte maintenant, UwU caw w-wes pwopwiétés que nous avons v-vues jusqu'à pwésent étaient p-pwutôt wiées aux d-dimensions physiques de w'écwan e-et à un mode d'écwituwe howizontaw. (⑅˘꒳˘)
 
-Reprenons nos deux boîtes&nbsp;: celle avec le mode d'écriture `horizontal-tb` et celle avec le mode d'écriture `vertical-rl`. Pour ces deux boîtes, on a défini [`width`](/fr/docs/Web/CSS/width). Pour la boîte avec le mode d'écriture vertical, cela provoque un dépassement du texte.
+w-wepwenons nos deux boîtes&nbsp;: c-cewwe avec we mode d-d'écwituwe `howizontaw-tb` et cewwe avec we mode d'écwituwe `vewticaw-ww`. ʘwʘ pouw c-ces deux boîtes, σωσ on a défini [`width`](/fw/docs/web/css/width). ^^ p-pouw wa boîte a-avec we mode d'écwituwe vewticaw, OwO cewa pwovoque un dépassement d-du texte. (ˆ ﻌ ˆ)♡
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/width.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/width.htmw", o.O '100%', 1200)}}
 
-Ce qu'on veut plus probablement dans ce scénario, c'est de passer de la largeur à la hauteur selon le mode d'écriture&nbsp;: quand on utilise un mode d'écriture vertical, on souhaite que la boîte soit redimensionnée selon l'axe de bloc, comme pour le mode horizontal.
+ce qu'on veut p-pwus pwobabwement d-dans ce scénawio, c-c'est de passew de wa wawgeuw à wa hauteuw s-sewon we mode d-d'écwituwe&nbsp;: quand on utiwise u-un mode d'écwituwe vewticaw, (˘ω˘) on souhaite que w-wa boîte soit wedimensionnée s-sewon w'axe de b-bwoc, 😳 comme pouw w-we mode howizontaw. (U ᵕ U❁)
 
-Pour faciliter cela, CSS est désormais doté d'un ensemble de propriétés correspondantes. Dans l'ensemble, ces propriétés remplacent les propriétés physiques comme `width` ou `height` par des versions **logiques** ou **relatives au flux**.
+pouw faciwitew c-cewa, :3 css est d-désowmais doté d-d'un ensembwe d-de pwopwiétés cowwespondantes. o.O d-dans w'ensembwe, (///ˬ///✿) c-ces pwopwiétés w-wempwacent w-wes pwopwiétés p-physiques comme `width` o-ou `height` p-paw des vewsions **wogiques** o-ou **wewatives au fwux**. OwO
 
-La propriété logique qui correspond à `width` lorsqu'on utilise un mode d'écriture horizontal est appelée [`inline-size`](/fr/docs/Web/CSS/inline-size)&nbsp;: elle fait référence à la dimension selon l'axe en ligne. La propriété correspondant à `height` est quant à elle intitulée [`block-size`](/fr/docs/Web/CSS/block-size) et représente la taille selon la dimension de bloc. Vous pouvez observer leur fonctionnement dans l'exemple qui suit où nous avons remplacé `width` par `inline-size`.
+wa p-pwopwiété wogique qui cowwespond à `width` wowsqu'on u-utiwise un mode d'écwituwe h-howizontaw e-est appewée [`inwine-size`](/fw/docs/web/css/inwine-size)&nbsp;: e-ewwe fait wéféwence à wa dimension sewon w'axe en wigne. >w< wa p-pwopwiété cowwespondant à `height` e-est quant à e-ewwe intituwée [`bwock-size`](/fw/docs/web/css/bwock-size) et wepwésente wa taiwwe sewon wa dimension de bwoc. ^^ v-vous pouvez o-obsewvew weuw fonctionnement dans w-w'exempwe qui s-suit où nyous avons wempwacé `width` paw `inwine-size`. (⑅˘꒳˘)
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/inline-size.html", '100%', 950)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/inwine-size.htmw", ʘwʘ '100%', (///ˬ///✿) 950)}}
 
-### Propriétés logiques pour les marges, bordures et remplissages
+### pwopwiétés w-wogiques pouw w-wes mawges, XD b-bowduwes et wempwissages
 
-Dans les deux précédentes leçons, nous avons abordé le modèle de boîte CSS et les bordures. Pour les propriétés qui régissent les marges, bordures et le remplissage, vous verrez de nombreuses propriétés physiques comme [`margin-top`](/fr/docs/Web/CSS/margin-top), [`padding-left`](/fr/docs/Web/CSS/padding-left), et [`border-bottom`](/fr/docs/Web/CSS/border-bottom). À l'instar de la hauteur et de la largeur, ces propriétés disposent de propriétés logiques équivalentes.
+d-dans wes deux pwécédentes weçons, 😳 nyous a-avons abowdé w-we modèwe de boîte css et wes bowduwes. >w< pouw w-wes pwopwiétés qui wégissent wes mawges, (˘ω˘) bowduwes e-et we wempwissage, nyaa~~ vous vewwez d-de nyombweuses p-pwopwiétés physiques comme [`mawgin-top`](/fw/docs/web/css/mawgin-top), 😳😳😳 [`padding-weft`](/fw/docs/web/css/padding-weft), (U ﹏ U) e-et [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom). (˘ω˘) À w-w'instaw de wa hauteuw e-et de wa wawgeuw, :3 ces pwopwiétés d-disposent de p-pwopwiétés wogiques équivawentes. >w<
 
-La propriété physique `margin-top` correspond à la propriété logique [`margin-block-start`](/fr/docs/Web/CSS/margin-block-start) pour un mode d'écriture horizontal. Cette propriété logique fera toujours référence à la marge située au début de la dimension de bloc.
+w-wa pwopwiété p-physique `mawgin-top` cowwespond à w-wa pwopwiété w-wogique [`mawgin-bwock-stawt`](/fw/docs/web/css/mawgin-bwock-stawt) p-pouw un mode d'écwituwe h-howizontaw. ^^ cette pwopwiété wogique fewa t-toujouws wéféwence à w-wa mawge s-située au début de wa dimension de bwoc. 😳😳😳
 
-La propriété physique [`padding-left`](/fr/docs/Web/CSS/padding-left) trouve son équivalent avec [`padding-inline-start`](/fr/docs/Web/CSS/padding-inline-start), le remplissage (<i lang="en">padding</i>) appliqué au début de la direction en ligne. Cela correspond à l'endroit où les phrases commencent pour le mode d'écriture courant. La propriété [`border-bottom`](/fr/docs/Web/CSS/border-bottom) a quant à elle l'équivalent [`border-block-end`](/fr/docs/Web/CSS/border-block-end) qui représente la bordure sur à la fin de la dimension de bloc.
+wa pwopwiété physique [`padding-weft`](/fw/docs/web/css/padding-weft) twouve son équivawent a-avec [`padding-inwine-stawt`](/fw/docs/web/css/padding-inwine-stawt), nyaa~~ we wempwissage (<i w-wang="en">padding</i>) a-appwiqué au début de wa diwection e-en wigne. (⑅˘꒳˘) cewa cowwespond à w'endwoit o-où wes phwases c-commencent p-pouw we mode d'écwituwe c-couwant. :3 w-wa pwopwiété [`bowdew-bottom`](/fw/docs/web/css/bowdew-bottom) a quant à ewwe w'équivawent [`bowdew-bwock-end`](/fw/docs/web/css/bowdew-bwock-end) qui wepwésente wa bowduwe s-suw à wa fin de wa dimension d-de bwoc. ʘwʘ
 
-Vous pouvez voir une comparaison entre les propriétés physiques et logiques ci-après.
+vous pouvez voiw une compawaison entwe wes pwopwiétés p-physiques et wogiques ci-apwès. rawr x3
 
-**Si vous changez le mode d'écriture des boîtes en modifiant la valeur de `writing-mode` sur le sélecteur `.box` afin de la passer à `vertical-rl`, vous pourrez voir que les propriétés physiques restent liées aux directions physiques tandis que les propriétés logiques s'adaptent en fonction du mode d'écriture.**
+**si vous changez we mode d'écwituwe des b-boîtes en modifiant w-wa vaweuw de `wwiting-mode` s-suw we séwecteuw `.box` afin de wa passew à `vewticaw-ww`, (///ˬ///✿) v-vous pouwwez voiw q-que wes pwopwiétés physiques w-westent wiées aux diwections physiques t-tandis que wes pwopwiétés wogiques s'adaptent en fonction d-du mode d'écwituwe.**
 
-**Vous pouvez également voir que [`<h2>`](/fr/docs/Web/HTML/Element/Heading_Elements) a une bordure avec `border-bottom`. Pouvez-vous adapter le code afin que la bordure sous le texte suive cette direction, quel que soit le mode d'écriture&nbsp;?**
+**vous pouvez égawement voiw que [`<h2>`](/fw/docs/web/htmw/ewement/heading_ewements) a-a une bowduwe a-avec `bowdew-bottom`. 😳😳😳 p-pouvez-vous adaptew we code afin que wa b-bowduwe sous we texte suive cette diwection, XD quew que soit we mode d'écwituwe&nbsp;?**
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/logical-mbp.html", '100%', 1200)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/wogicaw-mbp.htmw", >_< '100%', >w< 1200)}}
 
-Il existe de nombreuses propriétés détaillées pour gérer les différents aspects des bordures, vous pouvez voir l'ensemble des correspondances sur la page MDN des [propriétés et valeurs logiques](/fr/docs/Web/CSS/CSS_logical_properties_and_values).
+i-iw existe de n-nyombweuses pwopwiétés d-détaiwwées p-pouw géwew wes difféwents aspects des bowduwes, /(^•ω•^) v-vous pouvez v-voiw w'ensembwe des cowwespondances suw wa page m-mdn des [pwopwiétés et vaweuws wogiques](/fw/docs/web/css/css_wogicaw_pwopewties_and_vawues). :3
 
-### Valeurs logiques
+### v-vaweuws wogiques
 
-Jusqu'à présent, nous avons étudié les noms des propriétés logiques. Il existe également des propriétés dont les valeurs sont caractérisées physiquement comme `top`, `right`, `bottom`, et `left`. Ces valeurs disposent également d'équivalences logiques&nbsp;: `block-start`, `inline-end`, `block-end`, et `inline-start`.
+jusqu'à pwésent, ʘwʘ nyous a-avons étudié w-wes nyoms des pwopwiétés wogiques. (˘ω˘) i-iw existe égawement d-des p-pwopwiétés dont wes vaweuws sont cawactéwisées p-physiquement comme `top`, (ꈍᴗꈍ) `wight`, `bottom`, ^^ et `weft`. ^^ ces v-vaweuws disposent égawement d'équivawences wogiques&nbsp;: `bwock-stawt`, ( ͡o ω ͡o ) `inwine-end`, -.- `bwock-end`, et `inwine-stawt`. ^^;;
 
-Ainsi, on peut faire flotter une image à gauche pour que le texte soit écrit autour de l'image. Dans l'exemple qui suit, vous pouvez remplacer `left` avec `inline-start`.
+a-ainsi, o-on peut faiwe f-fwottew une image à g-gauche pouw q-que we texte soit écwit autouw d-de w'image. ^•ﻌ•^ dans w'exempwe qui suit, (˘ω˘) vous pouvez w-wempwacew `weft` avec `inwine-stawt`. o.O
 
-**Modifiez le mode d'écriture de cet exemple afin de le passer à `vertical-rl` pour voir ce qui se produit sur l'image. Modifiez `inline-start` à `inline-end` pour changer l'emplacement du flottement.**
+**modifiez w-we mode d'écwituwe de cet exempwe afin de we p-passew à `vewticaw-ww` p-pouw voiw ce qui se pwoduit s-suw w'image. (✿oωo) modifiez `inwine-stawt` à `inwine-end` p-pouw c-changew w'empwacement du fwottement.**
 
-{{EmbedGHLiveSample("css-examples/learn/writing-modes/float.html", '100%', 850)}}
+{{embedghwivesampwe("css-exampwes/weawn/wwiting-modes/fwoat.htmw", 😳😳😳 '100%', (ꈍᴗꈍ) 850)}}
 
-Ici, on utilise aussi les valeurs logiques pour les marges afin de s'assurer que les marges sont correctement positionnées, quel que soit le mode d'écriture.
+i-ici, σωσ o-on utiwise aussi wes vaweuws wogiques p-pouw wes mawges afin de s'assuwew que wes mawges sont cowwectement p-positionnées, UwU quew que s-soit we mode d'écwituwe. ^•ﻌ•^
 
-> [!NOTE]
-> Actuellement, seul Firefox prend en charge les valeurs relatives de flux pour `float`. Si vous utilisez **Google Chrome** ou **Microsoft Edge**, vous obtiendrez vraisemblablement un résultat où l'image ne flotte pas.
+> [!note]
+> actuewwement, mya seuw fiwefox p-pwend en chawge w-wes vaweuws wewatives d-de fwux pouw `fwoat`. /(^•ω•^) si v-vous utiwisez **googwe c-chwome** ou **micwosoft e-edge**, rawr vous obtiendwez vwaisembwabwement u-un wésuwtat où w'image n-nye fwotte pas.
 
-### Faut-il utiliser les propriétés physiques ou logiques&nbsp;?
+### f-faut-iw utiwisew wes pwopwiétés physiques ou wogiques&nbsp;?
 
-Les propriétés logiques et les valeurs correspondantes sont plus récentes que leurs équivalents physiques et l'implémentation de ces premières est donc également plus récente. Vous pouvez consulter la page de chaque propriété sur MDN pour vérifier le tableau de compatibilité des navigateurs. Si vous n'utilisez pas plusieurs modes d'écriture, vous pourrez préférer les versions physiques. Toutefois, on s'attend à terme que les personnes utilisent les versions logiques dans la majorité des cas étant donné leur pertinence pour certaines méthodes de dispositions comme les grilles CSS ou <i lang="en">flexbox</i>.
+wes pwopwiétés w-wogiques e-et wes vaweuws cowwespondantes sont pwus wécentes que weuws équivawents p-physiques et w'impwémentation d-de ces p-pwemièwes est donc égawement pwus wécente. nyaa~~ vous pouvez consuwtew wa page de c-chaque pwopwiété suw mdn pouw véwifiew we tabweau d-de compatibiwité des nyavigateuws. ( ͡o ω ͡o ) s-si vous n-ny'utiwisez pas pwusieuws modes d-d'écwituwe, σωσ v-vous pouwwez pwéféwew w-wes vewsions p-physiques. (✿oωo) t-toutefois, (///ˬ///✿) on s'attend à t-tewme que wes pewsonnes utiwisent wes vewsions wogiques dans wa majowité des cas étant d-donné weuw pewtinence p-pouw cewtaines m-méthodes d-de dispositions c-comme wes gwiwwes c-css ou <i wang="en">fwexbox</i>. σωσ
 
-## Testez vos compétences&nbsp;!
+## testez vos compétences&nbsp;! UwU
 
-Nous avons abordé de nombreux concepts dans cet article, mais avez-vous retenu les informations fondamentales ? Vous pourrez trouver différents tests sur le sujet pour vérifier que vous avez assimilé les bonnes informations&nbsp;: voir [Testez vos compétences&nbsp;: les modes d'écriture](/fr/docs/Learn/CSS/Building_blocks/Writing_Modes_Tasks).
+nyous avons abowdé de n-nyombweux concepts d-dans cet awticwe, (⑅˘꒳˘) mais avez-vous wetenu wes infowmations fondamentawes ? v-vous p-pouwwez twouvew d-difféwents tests suw we sujet pouw véwifiew q-que vous avez assimiwé wes bonnes infowmations&nbsp;: v-voiw [testez v-vos compétences&nbsp;: wes modes d'écwituwe](/fw/docs/weawn/css/buiwding_bwocks/wwiting_modes_tasks). /(^•ω•^)
 
-## Résumé
+## w-wésumé
 
-Les concepts expliqués ici revêtent une importance croissante en CSS. Comprendre les directions en ligne et de bloc, ainsi que la façon dont le flux de texte change selon le mode d'écriture vous sera désormais très utile. Vous aurez une meilleure compréhension de CSS, même si vous n'utilisez qu'un seul mode d'écriture horizontal.
+wes concepts expwiqués i-ici wevêtent u-une impowtance cwoissante en css. c-compwendwe wes d-diwections en wigne e-et de bwoc, -.- a-ainsi que wa façon d-dont we fwux d-de texte change sewon we mode d-d'écwituwe vous s-sewa désowmais twès utiwe. (ˆ ﻌ ˆ)♡ vous a-auwez une meiwweuwe compwéhension de css, nyaa~~ même s-si vous ny'utiwisez qu'un seuw m-mode d'écwituwe howizontaw. ʘwʘ
 
-Dans le prochain module, nous verrons comment les dépassements sont gérés en CSS.
+d-dans we pwochain m-moduwe, :3 nyous vewwons comment wes dépassements s-sont géwés en css. (U ᵕ U❁)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Backgrounds_and_borders", "Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/backgwounds_and_bowdews", (U ﹏ U) "weawn/css/buiwding_bwocks/ovewfwowing_content", ^^ "weawn/css/buiwding_bwocks")}}

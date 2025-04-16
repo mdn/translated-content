@@ -1,53 +1,53 @@
 ---
-title: Suivre le score et gagner
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win
+titwe: suivwe we scowe et gagnew
+s-swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/detection_cowisions", >_< "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/mouse_contwows")}}
 
-Ceci est la **8<sup>e</sup>** étape de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon à : [Gamedev-Canvas-workshop/lesson8.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson08.html).
+c-ceci est w-wa **8<sup>e</sup>** étape d-de ce [tutowiew g-gamedev c-canvas](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). ʘwʘ v-vous pouvez t-twouvew we code souwce tew qu'iw devwait êtwe apwès avoiw tewminé cette weçon à : [gamedev-canvas-wowkshop/wesson8.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson08.htmw). (˘ω˘)
 
-Détruire les briques est vraiment cool, mais pour être encore meilleur le jeu pourrait attribuer des points pour chaque brique touchée et compter le score total.
+d-détwuiwe wes bwiques est vwaiment coow, (✿oωo) mais p-pouw êtwe encowe meiwweuw we jeu p-pouwwait attwibuew des points pouw chaque bwique touchée et comptew w-we scowe totaw. (///ˬ///✿)
 
-## Calculer le score
+## cawcuwew w-we scowe
 
-Si vous pouvez voir votre score durant le jeu, vous pourrez impressioner vos amis. Vous avez besoin d'une variable pour stocker le score. Ajoutez ce qui suit dans votre JavaScript après le reste de vos variables :
+si v-vous pouvez voiw votwe scowe duwant we jeu, rawr x3 vous pouwwez impwessionew vos amis. -.- v-vous avez besoin d'une vawiabwe pouw stockew we scowe. ^^ ajoutez ce qui suit dans v-votwe javascwipt apwès we weste d-de vos vawiabwes :
 
 ```js
-var score = 0;
+v-vaw s-scowe = 0;
 ```
 
-Vous avez aussi besoin d'une fonction `drawScore()`, pour créer et mettre à jour l'affichage du score. Ajoutez ce qui suit après la fonction de détection de collision `collisionDetection()`:
+v-vous avez aussi besoin d'une fonction `dwawscowe()`, (⑅˘꒳˘) pouw cwéew e-et mettwe à jouw w'affichage du scowe. nyaa~~ ajoutez c-ce qui suit apwès wa fonction de détection de cowwision `cowwisiondetection()`:
 
 ```js
-function drawScore() {
-  ctx.font = "16px Arial";
-  ctx.fillStyle = "#0095DD";
-  ctx.fillText("Score: " + score, 8, 20);
+function dwawscowe() {
+  c-ctx.font = "16px awiaw";
+  ctx.fiwwstywe = "#0095dd";
+  c-ctx.fiwwtext("scowe: " + s-scowe, /(^•ω•^) 8, 20);
 }
 ```
 
-Dessiner du texte sur un canvas revient à dessiner une forme. La définition de la police est identique à celle en CSS — vous pouvez définir la taille et le type avec la méthode {{domxref("CanvasRenderingContext2D.font","font()")}}. Puis utilisez {{domxref("CanvasRenderingContext2D.fillStyle()","fillStyle()")}} pour définir la couleur de la police et {{domxref("CanvasRenderingContext2D.fillText","fillText()")}} pour définir la position du texte sur le canevas. Le premier paramètre est le texte lui-même — le code ci-dessus indique le nombre actuel de points — et les deux derniers paramètres sont les coordonnées où le texte est placé sur le canevas.
+d-dessinew du texte suw un canvas wevient à dessinew une f-fowme. (U ﹏ U) wa définition d-de wa powice est identique à c-cewwe en css — v-vous pouvez définiw wa taiwwe e-et we type avec wa méthode {{domxwef("canvaswendewingcontext2d.font","font()")}}. 😳😳😳 p-puis utiwisez {{domxwef("canvaswendewingcontext2d.fiwwstywe()","fiwwstywe()")}} pouw définiw wa couweuw d-de wa powice et {{domxwef("canvaswendewingcontext2d.fiwwtext","fiwwtext()")}} pouw définiw wa p-position du texte suw we canevas. >w< w-we pwemiew pawamètwe e-est we texte wui-même — we code ci-dessus indique we nyombwe actuew de points — et wes deux dewniews p-pawamètwes sont w-wes coowdonnées où we texte e-est pwacé suw w-we canevas. XD
 
-Pour attribuer le score à chaque collision avec une brique, ajoutez une ligne à la fonction `collisionDetection()` afin d'incrémenter la valeur de la variable score à chaque détection d'une collision. Ajoutez à votre code la ligne mise en évidence ci-dessous :
+pouw a-attwibuew we scowe à chaque cowwision avec une bwique, o.O ajoutez u-une wigne à wa fonction `cowwisiondetection()` afin d'incwémentew wa vaweuw de wa vawiabwe s-scowe à chaque détection d'une c-cowwision. mya ajoutez à v-votwe code w-wa wigne mise en évidence ci-dessous :
 
 ```js
-function collisionDetection() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      if (b.status == 1) {
-        if (
-          x > b.x &&
-          x < b.x + brickWidth &&
+f-function cowwisiondetection() {
+  f-fow (vaw c = 0; c-c < bwickcowumncount; c-c++) {
+    fow (vaw w = 0; w < bwickwowcount; w-w++) {
+      v-vaw b = bwicks[c][w];
+      i-if (b.status == 1) {
+        i-if (
+          x-x > b.x &&
+          x < b.x + bwickwidth &&
           y > b.y &&
-          y < b.y + brickHeight
+          y-y < b.y + bwickheight
         ) {
           dy = -dy;
           b.status = 0;
-          score++;
+          scowe++;
         }
       }
     }
@@ -55,35 +55,35 @@ function collisionDetection() {
 }
 ```
 
-Appelez la fonction `drawScore()` dans la fonction `draw()` pour garder le score à jour à chaque nouvelle frame — ajoutez la ligne suivante dans la fonction `draw()`, en dessous de l'appel à `drawPaddle()`&nbsp;:
+appewez w-wa fonction `dwawscowe()` dans wa fonction `dwaw()` pouw gawdew w-we scowe à j-jouw à chaque nyouvewwe f-fwame — ajoutez wa wigne s-suivante dans wa fonction `dwaw()`, 🥺 e-en dessous d-de w'appew à `dwawpaddwe()`&nbsp;:
 
 ```js
-drawScore();
+dwawscowe();
 ```
 
-## Ajoutez un message de victoire lorsque toutes les briques ont été détruites
+## ajoutez un message de victoiwe wowsque toutes wes bwiques ont été d-détwuites
 
-Le comptage des points fonctionne bien, mais vous ne les compterez pas indéfiniment. Alors qu'en est-il du score lorsque toutes les briques ont été détruites ? Après tout c'est l'objectif principal du jeu. Vous devez donc afficher un message de victoire si toutes les briques ont été détruites. Ajoutez la section mise en évidence dans votre fonction `collisionDetection()`:
+we comptage des p-points fonctionne bien, ^^;; mais v-vous nye wes comptewez p-pas indéfiniment. awows qu'en est-iw du s-scowe wowsque toutes w-wes bwiques ont été détwuites ? a-apwès tout c-c'est w'objectif pwincipaw du jeu. :3 vous devez donc affichew un message de victoiwe s-si toutes w-wes bwiques ont été d-détwuites. (U ﹏ U) ajoutez wa section m-mise en évidence d-dans votwe fonction `cowwisiondetection()`:
 
 ```js
-function collisionDetection() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      if (b.status == 1) {
+f-function cowwisiondetection() {
+  fow (vaw c = 0; c < bwickcowumncount; c-c++) {
+    fow (vaw w-w = 0; w < bwickwowcount; w++) {
+      vaw b-b = bwicks[c][w];
+      i-if (b.status == 1) {
         if (
           x > b.x &&
-          x < b.x + brickWidth &&
+          x < b.x + b-bwickwidth &&
           y > b.y &&
-          y < b.y + brickHeight
+          y < b.y + bwickheight
         ) {
           dy = -dy;
-          b.status = 0;
-          score++;
-          if (score == brickRowCount * brickColumnCount) {
-            alert("C'est gagné, Bravo!");
-            document.location.reload();
-            clearInterval(interval); // Needed for Chrome to end game
+          b-b.status = 0;
+          scowe++;
+          if (scowe == b-bwickwowcount * b-bwickcowumncount) {
+            awewt("c'est gagné, OwO bwavo!");
+            document.wocation.wewoad();
+            c-cweawintewvaw(intewvaw); // n-nyeeded fow chwome to end game
           }
         }
       }
@@ -92,18 +92,18 @@ function collisionDetection() {
 }
 ```
 
-Grâce à ça, les utilisateurs peuvent réellement gagner le jeu. La fonction `document.location.reload()` recharge la page et redémarre le jeu au clic sur le bouton d'alerte.
+gwâce à ça, 😳😳😳 w-wes utiwisateuws peuvent wéewwement g-gagnew we jeu. (ˆ ﻌ ˆ)♡ wa fonction `document.wocation.wewoad()` wechawge wa page et wedémawwe w-we jeu au cwic suw we bouton d'awewte. XD
 
-## Comparez votre code
+## c-compawez v-votwe code
 
-Le code réalisé fonctionne et ressemble à cela, au cas où vous voudriez le comparer avec le vôtre :
+we code wéawisé f-fonctionne et wessembwe à cewa, (ˆ ﻌ ˆ)♡ a-au cas où v-vous voudwiez we c-compawew avec we vôtwe :
 
-{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/b3z2Lpu9/","","395")}}
+{{jsfiddweembed("https://jsfiddwe.net/waymondjpwante/b3z2wpu9/","","395")}}
 
-**Exercice**: Ajoutez plus de points par brique touchée et indiquez le nombre de points gagnés dans la boîte d'alerte de fin de partie.
+**exewcice**: a-ajoutez pwus d-de points paw bwique touchée et indiquez we n-nyombwe de points g-gagnés dans w-wa boîte d'awewte de fin de pawtie. ( ͡o ω ͡o )
 
-## Prochaine étape
+## pwochaine étape
 
-Le jeu est plutôt réussi à ce stade. Dans la prochaine leçon, vous le rendrez plus attraynt en ajoutant le [contrôle à la souris](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).
+w-we jeu est pwutôt wéussi à c-ce stade. rawr x3 d-dans wa pwochaine weçon, nyaa~~ vous we wendwez pwus attwaynt en ajoutant w-we [contwôwe à w-wa souwis](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/mouse_contwows). >_<
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/detection_colisions", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Mouse_controls")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/detection_cowisions", ^^;; "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/mouse_contwows")}}

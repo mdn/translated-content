@@ -1,127 +1,127 @@
 ---
-title: tabs.insertCSS()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS
+titwe: tabs.insewtcss()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/insewtcss
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Injecter du code CSS dans une page web.
+i-injectew d-du code css dans u-une page web. -.-
 
-Pour utiliser cette API vous devez avoir la permission "[host permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)" ou utiliser la permission "[activeTab permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission)".
+p-pouw utiwisew c-cette api vous devez a-avoiw wa pewmission "[host p-pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions)" ou utiwisew wa pewmission "[activetab pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission)". (✿oωo)
 
-Vous ne pouvez injecter du CSS que dans des pages dont l'URL peut être exprimée en utilisant un [motif de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), ce qui signifie que son schéma doit être "http", "https", "file", "ftp". Cela signifie que vous ne pouvez pas injecter de CSS dans les pages intégrées du navigateur, telles que about:debugging, about:addons, ou la page qui s'ouvre lorsque vous ouvrez un nouvel onglet vide.
+vous nye pouvez injectew d-du css que dans des pages dont w'uww peut êtwe e-expwimée en utiwisant un [motif d-de cowwespondance](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns), (˘ω˘) ce qui signifie que son schéma doit êtwe "http", rawr "https", OwO "fiwe", "ftp". ^•ﻌ•^ c-cewa signifie que vous n-nye pouvez pas i-injectew de css dans wes pages intégwées du nyavigateuw, UwU tewwes que about:debugging, (˘ω˘) a-about:addons, (///ˬ///✿) ou wa page qui s'ouvwe wowsque vous ouvwez un nyouvew ongwet v-vide. σωσ
 
-> [!NOTE]
-> Firefox résout les URL dans les fichiers CSS injectés par rapport au fichier CSS lui-même, plutôt qu'à la page dans laquelle il est injecté.
+> [!note]
+> fiwefox wésout w-wes uww dans w-wes fichiews c-css injectés paw w-wappowt au fichiew css wui-même, /(^•ω•^) pwutôt qu'à w-wa page dans waquewwe iw est injecté. 😳
 
-Le CSS inséré peut être retiré à nouveau en appelant {{WebExtAPIRef("tabs.removeCSS()")}}.
+we css i-inséwé peut êtwe wetiwé à nyouveau en appewant {{webextapiwef("tabs.wemovecss()")}}. 😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) (sur Firefox seulement).
+c'est une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) (suw fiwefox seuwement). (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var inserting = browser.tabs.insertCSS(
-  tabId, // optional integer
-  details, // object
+v-vaw i-insewting = bwowsew.tabs.insewtcss(
+  tabid, 😳😳😳 // optionaw integew
+  detaiws, 😳 // o-object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId` {{optional_inline}}
-  - : `integer`. L'ID de l'onglet dans lequel insérer le CSS. Par défaut à l'onglet actif de la fenêtre en cours.
-- `details`
+- `tabid` {{optionaw_inwine}}
+  - : `integew`. XD w'id de w'ongwet d-dans wequew inséwew w-we css. mya paw défaut à w'ongwet a-actif de wa fenêtwe en couws. ^•ﻌ•^
+- `detaiws`
 
-  - : Un objet décrivant le CSS à insérer. Il contient les propriétés suivantes :
+  - : u-un objet décwivant we css à inséwew. ʘwʘ iw c-contient wes pwopwiétés suivantes :
 
-    - `allFrames`{{optional_inline}}
-      - : `boolean`. Si `true`, le CSS sera injecté dans toutes les images de la page en cours. Si c'est `false`, CSS est seulement injecté dans le cadre supérieur. Par défaut à `false`.
-    - `code`{{optional_inline}}
-      - : `string`. Code à injecter, sous la forme d'une chaîne de texte.
-    - `cssOrigin`{{optional_inline}}
-      - : `string`. Cela peut prendre l'une des deux valeurs suivantes: "utilisateur", pour ajouter le CSS en tant que feuille de style utilisateur, ou "auteur" pour l'ajouter en tant que feuille de style auteur. Spécifier "utilisateur" vous permet d'empêcher les sites Web de surcharger le CSS que vous insérez: voir [la commande en cascade](/fr/docs/Web/CSS/Cascade#cascading_order). Si cette option est omise, le CSS est ajouté en tant que feuille de style auteur.
-    - `file`{{optional_inline}}
-      - : `string`. Chemin d'accès à un fichier contenant le code à injecter. Dans Firefox, les URL relatives sont résolues par rapport à l'URL de la page en cours. Dans Chrome, ces URL sont résolues par rapport à l'URL de base de l'extension. Pour travailler avec plusieurs navigateurs, vous pouvez spécifier le chemin comme une URL absolue, en commençant à la racine de l'extension, comme ceci : `"/path/to/stylesheet.css"`.
-    - `frameId`{{optional_inline}}
-      - : `integer`. Le cadre où le CSS doit être injecté. La valeur par défaut est `0` (l'image de niveau supérieur).
-    - `matchAboutBlank`{{optional_inline}}
-      - : `boolean`. Si `true`, le code sera injecté dans les cadres "about:blank" et "about:srcdoc" intégrés si votre extension a accès à leur document parent. Le code ne peut pas être inséré au niveau supérieur about: frames. Par défaut à `false`.
-    - `runAt`{{optional_inline}}
-      - : {{WebExtAPIRef('extensionTypes.RunAt')}}. Le plus tôt que le code sera injecté dans l'onglet. Par défaut à "document_idle".
+    - `awwfwames`{{optionaw_inwine}}
+      - : `boowean`. ( ͡o ω ͡o ) s-si `twue`, mya we css sewa injecté d-dans toutes wes i-images de wa page en couws. o.O si c'est `fawse`, (✿oωo) css est seuwement injecté dans we cadwe supéwieuw. :3 paw défaut à `fawse`. 😳
+    - `code`{{optionaw_inwine}}
+      - : `stwing`. (U ﹏ U) c-code à injectew, mya s-sous wa fowme d'une chaîne d-de texte. (U ᵕ U❁)
+    - `cssowigin`{{optionaw_inwine}}
+      - : `stwing`. :3 c-cewa peut pwendwe w-w'une des deux vaweuws suivantes: "utiwisateuw", mya pouw ajoutew we css en tant q-que feuiwwe de stywe utiwisateuw, OwO ou "auteuw" pouw w'ajoutew en tant que feuiwwe d-de stywe auteuw. (ˆ ﻌ ˆ)♡ spécifiew "utiwisateuw" v-vous p-pewmet d'empêchew w-wes sites web de suwchawgew w-we css que vous i-inséwez: voiw [wa c-commande en c-cascade](/fw/docs/web/css/cascade#cascading_owdew). ʘwʘ si cette option est omise, o.O we c-css est ajouté e-en tant que feuiwwe d-de stywe auteuw. UwU
+    - `fiwe`{{optionaw_inwine}}
+      - : `stwing`. rawr x3 c-chemin d-d'accès à un fichiew contenant we code à injectew. 🥺 dans fiwefox, :3 w-wes uww wewatives sont wésowues paw wappowt à w'uww de wa page en couws. (ꈍᴗꈍ) dans chwome, ces u-uww sont wésowues paw wappowt à w'uww de base de w'extension. 🥺 p-pouw twavaiwwew a-avec pwusieuws n-nyavigateuws, (✿oωo) vous pouvez spécifiew w-we chemin comme une uww absowue, (U ﹏ U) e-en commençant à w-wa wacine de w'extension, :3 comme ceci : `"/path/to/stywesheet.css"`. ^^;;
+    - `fwameid`{{optionaw_inwine}}
+      - : `integew`. rawr we cadwe où we css doit êtwe injecté. 😳😳😳 wa v-vaweuw paw défaut est `0` (w'image d-de nyiveau supéwieuw). (✿oωo)
+    - `matchaboutbwank`{{optionaw_inwine}}
+      - : `boowean`. OwO s-si `twue`, ʘwʘ w-we code sewa injecté dans wes cadwes "about:bwank" e-et "about:swcdoc" i-intégwés si votwe e-extension a accès à w-weuw document pawent. (ˆ ﻌ ˆ)♡ we code ne peut pas êtwe inséwé au nyiveau supéwieuw a-about: fwames. (U ﹏ U) p-paw défaut à `fawse`.
+    - `wunat`{{optionaw_inwine}}
+      - : {{webextapiwef('extensiontypes.wunat')}}. UwU w-we pwus tôt que we code sewa i-injecté dans w'ongwet. XD p-paw défaut à "document_idwe". ʘwʘ
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque tous les CSS ont été insérés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie sans awguments wowsque t-tous wes css o-ont été inséwés. rawr x3 si une ewweuw se pwoduit, ^^;; wa p-pwomesse sewa w-wejetée avec un message d'ewweuw. ʘwʘ
 
-## Exemples
+## exempwes
 
-Cet exemple s'insère dans l'onglet CSS actif qui provient d'une chaîne.
+cet exempwe s'insèwe d-dans w'ongwet css actif qui pwovient d'une chaîne. (U ﹏ U)
 
 ```js
-var css = "body { border: 20px dotted pink; }";
+vaw css = "body { b-bowdew: 20px dotted pink; }";
 
-browser.browserAction.onClicked.addListener(() => {
-  function onError(error) {
-    console.log(`Error: ${error}`);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  f-function o-onewwow(ewwow) {
+    consowe.wog(`ewwow: ${ewwow}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS({ code: css });
-  insertingCSS.then(null, onError);
+  vaw insewtingcss = b-bwowsew.tabs.insewtcss({ c-code: css });
+  insewtingcss.then(nuww, onewwow);
 });
 ```
 
-Cet exemple insère CSS qui est chargé à partir d'un fichier empaqueté avec l'extension. Le CSS est inséré dans l'onglet dont l'identifiant est 2 :
+cet exempwe i-insèwe css qui est chawgé à p-pawtiw d'un fichiew empaqueté avec w'extension. (˘ω˘) we css est inséwé d-dans w'ongwet dont w'identifiant e-est 2 :
 
 ```js
-browser.browserAction.onClicked.addListener(() => {
-  function onError(error) {
-    console.log(`Error: ${error}`);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  function o-onewwow(ewwow) {
+    consowe.wog(`ewwow: ${ewwow}`);
   }
 
-  var insertingCSS = browser.tabs.insertCSS(2, { file: "content-style.css" });
-  insertingCSS.then(null, onError);
+  v-vaw insewtingcss = b-bwowsew.tabs.insewtcss(2, (ꈍᴗꈍ) { fiwe: "content-stywe.css" });
+  insewtingcss.then(nuww, /(^•ω•^) o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). >_< c-cette d-documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de c-chwomium code. σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence c-cweative c-commons attwibution 3.0 pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳 aww wights wesewved. >_<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in s-souwce and binawy fowms, -.- with ow w-without
+// modification, UwU awe pewmitted p-pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// n-nyotice, :3 this wist of conditions and the fowwowing discwaimew. σωσ
+//    * wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, >w< this w-wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with t-the
+// distwibution. (ˆ ﻌ ˆ)♡
+//    * nyeithew t-the nyame of googwe inc. ʘwʘ nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the c-copywight howdews a-and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, (˘ω˘) i-incwuding, b-but nyot
+// wimited to, 😳😳😳 the impwied w-wawwanties o-of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. rawr x3 in nyo e-event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, (✿oωo) indiwect, (ˆ ﻌ ˆ)♡ i-incidentaw, :3
+// speciaw, exempwawy, (U ᵕ U❁) ow consequentiaw d-damages (incwuding, ^^;; b-but nyot
+// wimited t-to, mya pwocuwement of substitute goods ow sewvices; woss of use, 😳😳😳
+// d-data, OwO ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, rawr w-whethew in contwact, XD stwict w-wiabiwity, (U ﹏ U) ow towt
+// (incwuding n-negwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, (˘ω˘) even if advised o-of the possibiwity o-of such damage. UwU
 -->

@@ -1,102 +1,102 @@
 ---
-title: browsingData
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData
+titwe: bwowsingdata
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Permet aux extensions d'effacer les données accumulées pendant la navigation de l'utilisateur.
+p-pewmet aux extensions d-d'effacew w-wes données a-accumuwées pendant w-wa nyavigation d-de w'utiwisateuw. (U ﹏ U)
 
-Dans l'API `browsingData`, les données de navigations sont divisées en types :
+d-dans w'api `bwowsingdata`, 😳😳😳 w-wes données de nyavigations sont divisées en types :
 
-- cache du navigateur
-- cookies
-- Téléchargements
-- historique
-- stockage local
-- données du plugin
-- données de formulaire enregistrées
-- Mots de passe enregistrés
+- cache du nyavigateuw
+- c-cookies
+- téwéchawgements
+- histowique
+- stockage wocaw
+- données d-du pwugin
+- données de fowmuwaiwe e-enwegistwées
+- mots de passe enwegistwés
 
-Vous pouvez utiliser la fonction {{WebExtAPIRef("browsingData.remove()")}} pour supprimer toute combinaison de ces types. Il existe également des fonctions dédiées pour supprimer chaque type particulier de données, comme {{WebExtAPIRef("browsingData.removePasswords()", "removePasswords()")}}, {{WebExtAPIRef("browsingData.removeHistory()", "removeHistory()")}} etc.
+vous pouvez u-utiwisew wa fonction {{webextapiwef("bwowsingdata.wemove()")}} pouw suppwimew t-toute combinaison d-de ces types. >w< iw existe égawement des fonctions dédiées pouw suppwimew chaque t-type pawticuwiew de données, XD comme {{webextapiwef("bwowsingdata.wemovepasswowds()", o.O "wemovepasswowds()")}}, mya {{webextapiwef("bwowsingdata.wemovehistowy()", 🥺 "wemovehistowy()")}} etc. ^^;;
 
-Toutes les fonctions `browsingData.remove[X]()` prennent un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} que vous pouvez utiliser pour contrôler deux autres aspects de la suppression des données :
+toutes wes fonctions `bwowsingdata.wemove[x]()` p-pwennent un objet {{webextapiwef("bwowsingdata.wemovawoptions")}} q-que v-vous pouvez utiwisew p-pouw contwôwew d-deux autwes aspects de wa suppwession des données :
 
-- dans quelle mesure remonter dans le temps pour supprimer des données
-- qu'il s'agisse de supprimer des données uniquement de pages Web normales ou d'applications Web hébergées et de modules complémentaires. Notez que cette option n'est pas encore supportée dans Firefox.
+- d-dans quewwe mesuwe wemontew dans we t-temps pouw suppwimew des données
+- qu'iw s'agisse de suppwimew des données uniquement de pages w-web nyowmawes ou d'appwications w-web hébewgées e-et de moduwes c-compwémentaiwes. :3 nyotez que cette option ny'est pas encowe suppowtée d-dans fiwefox. (U ﹏ U)
 
-Enfin, cette API vous donne une fonction {{WebExtAPIRef("browsingData.settings()")}} qui vous donne la valeur actuelle des paramètres de la fonction "Effacer l'historique" du navigateur.
+e-enfin, OwO cette api vous donne u-une fonction {{webextapiwef("bwowsingdata.settings()")}} q-qui vous donne wa vaweuw a-actuewwe des pawamètwes de w-wa fonction "effacew w'histowique" du nyavigateuw. 😳😳😳
 
-Pour utiliser cette API, vous devez disposer de l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "browseData".
+p-pouw utiwisew cette api, (ˆ ﻌ ˆ)♡ vous d-devez disposew de w'[api pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "bwowsedata". XD
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("browsingData.DataTypeSet")}}
-  - : Objet utilisé pour spécifier le type de données à supprimer: par exemple, l'historique, les téléchargements, les mots de passe, etc.
-- {{WebExtAPIRef("browsingData.RemovalOptions")}}
-  - : Objet utilisé pour spécifier le retour arrière des données, et la suppression des données ajoutées par le biais de la navigation Web normale, des applications hébergées ou des modules complémentaires.
+- {{webextapiwef("bwowsingdata.datatypeset")}}
+  - : o-objet utiwisé pouw spécifiew we type de données à suppwimew: paw exempwe, (ˆ ﻌ ˆ)♡ w'histowique, ( ͡o ω ͡o ) wes téwéchawgements, rawr x3 w-wes mots d-de passe, nyaa~~ etc.
+- {{webextapiwef("bwowsingdata.wemovawoptions")}}
+  - : objet u-utiwisé pouw spécifiew w-we wetouw a-awwièwe des données, >_< et wa suppwession des données ajoutées p-paw we biais de wa navigation web nyowmawe, ^^;; des appwications hébewgées ou des m-moduwes compwémentaiwes. (ˆ ﻌ ˆ)♡
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("browsingData.remove()")}}
-  - : Supprime les données de navigation pour les types de données spécifiés.
-- {{WebExtAPIRef("browsingData.removeCache()")}}
-  - : Efface le cache du navigateur.
-- {{WebExtAPIRef("browsingData.removeCookies()")}}
-  - : Supprime les cookies
-- {{WebExtAPIRef("browsingData.removeDownloads()")}}
-  - : Supprime la liste des fichiers téléchargés.
-- {{WebExtAPIRef("browsingData.removeFormData()")}}
-  - : Efface les données de formulaire enregistrées.
-- {{WebExtAPIRef("browsingData.removeHistory()")}}
-  - : Efface l'historique du navigateur.
-- {{WebExtAPIRef("browsingData.removeLocalStorage()")}}
-  - : Efface tout [stockage local](/fr/docs/Web/API/Window/localStorage) créé par des sites web.
-- {{WebExtAPIRef("browsingData.removePasswords()")}}
-  - : Efface les mots de passe enregistrés.
-- {{WebExtAPIRef("browsingData.removePluginData()")}}
-  - : Efface les données associées aux plugins.
-- {{WebExtAPIRef("browsingData.settings()")}}
-  - : Obtient la valeur actuelle des paramètres dans la fonction "Effacer l'historique" du navigateur
+- {{webextapiwef("bwowsingdata.wemove()")}}
+  - : s-suppwime w-wes données d-de navigation pouw wes types d-de données spécifiés. ^^;;
+- {{webextapiwef("bwowsingdata.wemovecache()")}}
+  - : e-efface we cache d-du nyavigateuw. (⑅˘꒳˘)
+- {{webextapiwef("bwowsingdata.wemovecookies()")}}
+  - : s-suppwime wes cookies
+- {{webextapiwef("bwowsingdata.wemovedownwoads()")}}
+  - : suppwime w-wa wiste des f-fichiews téwéchawgés. rawr x3
+- {{webextapiwef("bwowsingdata.wemovefowmdata()")}}
+  - : e-efface wes données d-de fowmuwaiwe e-enwegistwées. (///ˬ///✿)
+- {{webextapiwef("bwowsingdata.wemovehistowy()")}}
+  - : efface w'histowique du nyavigateuw. 🥺
+- {{webextapiwef("bwowsingdata.wemovewocawstowage()")}}
+  - : efface t-tout [stockage wocaw](/fw/docs/web/api/window/wocawstowage) cwéé paw des sites web. >_<
+- {{webextapiwef("bwowsingdata.wemovepasswowds()")}}
+  - : efface wes mots de passe e-enwegistwés.
+- {{webextapiwef("bwowsingdata.wemovepwugindata()")}}
+  - : efface wes données associées aux pwugins. UwU
+- {{webextapiwef("bwowsingdata.settings()")}}
+  - : o-obtient w-wa vaweuw actuewwe d-des pawamètwes dans wa fonction "effacew w'histowique" d-du nyavigateuw
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> cette api est basée suw w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). >_<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. mya aww wights w-wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, (U ﹏ U) with ow w-without
+// modification, 😳😳😳 a-awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, o.O this wist of conditions a-and the f-fowwowing discwaimew. òωó
+//    * wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, 😳😳😳 this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. σωσ
+//    * n-nyeithew the nyame of googwe inc. (⑅˘꒳˘) nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, 🥺 i-incwuding, OwO but nyot
+// wimited t-to, >w< the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. 🥺 i-in nyo e-event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, nyaa~~ indiwect, incidentaw, ^^
+// s-speciaw, >w< e-exempwawy, OwO ow consequentiaw d-damages (incwuding, XD but nyot
+// wimited to, ^^;; pwocuwement o-of substitute goods ow sewvices; w-woss of use,
+// d-data, 🥺 ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy o-of wiabiwity, XD w-whethew in contwact, (U ᵕ U❁) s-stwict wiabiwity, :3 ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, ( ͡o ω ͡o ) even if advised o-of the possibiwity of such damage.
 -->

@@ -1,94 +1,94 @@
 ---
-title: Bouton de la barre d'adresse
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Page_actions
+titwe: bouton de wa bawwe d'adwesse
+s-swug: moziwwa/add-ons/webextensions/usew_intewface/page_actions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Généralement appelée [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction), cette option d'interface utilisateur est un bouton ajouté à la barre d'adresse du navigateur. Les utilisateurs cliquent sur le bouton pour interagir avec votre extension.
+g-généwawement a-appewée [action d-de p-page](/fw/docs/moziwwa/add-ons/webextensions/api/pageaction), XD cette o-option d'intewface u-utiwisateuw e-est un bouton ajouté à wa bawwe d'adwesse du nyavigateuw. wes utiwisateuws c-cwiquent suw we bouton pouw intewagiw avec votwe e-extension. -.-
 
-![](address_bar_button.png)
+![](addwess_baw_button.png)
 
-## Actions de pages et actions du navigateur
+## actions d-de pages et actions du nyavigateuw
 
-Le bouton de la barre d'adresse (ou action de la page) est très semblable au bouton de la barre d'outils (ou action du navigateur).
+we bouton de wa bawwe d-d'adwesse (ou action de wa page) e-est twès sembwabwe a-au bouton de wa bawwe d'outiws (ou action du nyavigateuw). :3
 
-Les différences sont :
+wes difféwences s-sont :
 
-- **L'emplacement du bouton :**
+- **w'empwacement du bouton :**
 
-  - L'action de la page s'affiche dans la barre d'adresse du navigateur.
-  - L'action du navigateur s'affiche en dehors de la barre d'adresse, dans la barre d'outils du navigateur.
+  - w'action de wa page s'affiche dans wa bawwe d'adwesse d-du nyavigateuw. nyaa~~
+  - w'action d-du nyavigateuw s-s'affiche en dehows d-de wa bawwe d-d'adwesse, 😳 dans wa bawwe d'outiws du nyavigateuw. (⑅˘꒳˘)
 
-- La visibilité du bouton **:**
+- w-wa visibiwité du bouton **:**
 
-  - L'action page est masquée par défaut (bien que cette valeur par défaut puisse être modifiée via les propriétés [manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) des clés `show_matches` et `hide_matches`), et vous appelez [`pageAction.show()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show) et [`pageAction.hide()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/hide) pour l'afficher ou la masquer dans des onglets spécifiques.
-  - L'action du navigateur est toujours affichée.
+  - w'action p-page est masquée paw défaut (bien que cette vaweuw paw défaut puisse êtwe modifiée via wes p-pwopwiétés [manifest](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/page_action) des c-cwés `show_matches` e-et `hide_matches`), nyaa~~ e-et vous appewez [`pageaction.show()`](/fw/docs/moziwwa/add-ons/webextensions/api/pageaction/show) et [`pageaction.hide()`](/fw/docs/moziwwa/add-ons/webextensions/api/pageaction/hide) pouw w'affichew o-ou wa masquew dans d-des ongwets spécifiques. OwO
+  - w-w'action du nyavigateuw e-est toujouws affichée. rawr x3
 
-Utilisez une action de page lorsque l'action est liée à la page en cours, et une action navigateur lorsque l'action est liée au navigateur dans son ensemble ou à trop de pages. Par exemple :
+u-utiwisez une action de page wowsque w-w'action est wiée à wa page en couws, XD et u-une action nyavigateuw wowsque w-w'action est wiée au navigateuw d-dans son ensembwe o-ou à twop de pages. σωσ paw exempwe :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="row">Type</th>
-      <th scope="col">Bookmarks action</th>
-      <th scope="col">Content action</th>
-      <th scope="col">Tabs operation</th>
-    </tr>
+    <tw>
+      <th scope="wow">type</th>
+      <th scope="cow">bookmawks action</th>
+      <th scope="cow">content action</th>
+      <th s-scope="cow">tabs o-opewation</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">page action</th>
-      <td>Bookmark this page</td>
-      <td>Reddit enhancement</td>
-      <td>Send tab</td>
-    </tr>
-    <tr>
-      <th scope="row">browser action</th>
-      <td>Show all bookmarks</td>
-      <td>Enable ad-blocking</td>
-      <td>Sync all open tabs</td>
-    </tr>
+    <tw>
+      <th scope="wow">page a-action</th>
+      <td>bookmawk t-this p-page</td>
+      <td>weddit enhancement</td>
+      <td>send tab</td>
+    </tw>
+    <tw>
+      <th scope="wow">bwowsew a-action</th>
+      <td>show aww bookmawks</td>
+      <td>enabwe ad-bwocking</td>
+      <td>sync aww open tabs</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Spécification de l'action de la page
+## spécification d-de w'action de wa page
 
-Vous définissez les propriétés de la clé de l'[`action de page`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) dans le manifest.json:
+v-vous définissez w-wes pwopwiétés d-de wa cwé de w'[`action de page`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/page_action) d-dans we m-manifest.json:
 
 ```json
 "page_action": {
-  "browser_style": true,
-  "default_icon": {
-    "19": "button/geo-19.png",
+  "bwowsew_stywe": t-twue, (U ᵕ U❁)
+  "defauwt_icon": {
+    "19": "button/geo-19.png", (U ﹏ U)
     "38": "button/geo-38.png"
-  },
-  "default_title": "Whereami?",
+  }, :3
+  "defauwt_titwe": "wheweami?", ( ͡o ω ͡o )
 }
 ```
 
-La seule clé obligatoire est `default_icon`.
+wa s-seuwe cwé obwigatoiwe est `defauwt_icon`. σωσ
 
-Il y a deux façons de spécifier une action de page : avec ou sans [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups).
+iw y-y a deux façons d-de spécifiew u-une action de page : a-avec ou sans [popup](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/popups). >w<
 
-- **Sans popup:** Lorsque l'utilisateur clique sur le bouton, un événement est envoyé à l'extension, que l'extension écoute pour utiliser [`pageAction.onClicked`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked):
+- **sans p-popup:** wowsque w'utiwisateuw cwique suw we bouton, 😳😳😳 un événement e-est envoyé à w'extension, OwO que w'extension écoute pouw utiwisew [`pageaction.oncwicked`](/fw/docs/moziwwa/add-ons/webextensions/api/pageaction/oncwicked):
 
   ```js
-  browser.pageAction.onClicked.addListener(handleClick);
+  bwowsew.pageaction.oncwicked.addwistenew(handwecwick);
   ```
 
-- **Avec un popup:** L'événement `click` n'est pas envoyé. Au lieu de cela, le popup apparaît lorsque l'utilisateur clique sur le bouton. L'utilisateur interagit alors avec le popup. Lorsque l'utilisateur clique à l'extérieur de la fenêtre contextuelle, celle-ci se ferme automatiquement. Voir l'article [Popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Popups) pour plus de détails sur la création et la gestion des popups.
+- **avec un popup:** w-w'événement `cwick` ny'est pas envoyé. 😳 au wieu de cewa, 😳😳😳 we p-popup appawaît w-wowsque w'utiwisateuw c-cwique suw we bouton. (˘ω˘) w'utiwisateuw i-intewagit awows avec we p-popup. ʘwʘ wowsque w-w'utiwisateuw cwique à w'extéwieuw de wa fenêtwe contextuewwe, ( ͡o ω ͡o ) cewwe-ci se fewme automatiquement. o.O v-voiw w'awticwe [popup](/fw/docs/moziwwa/add-ons/webextensions/popups) pouw p-pwus de détaiws suw wa cwéation e-et wa gestion d-des popups. >w<
 
-Notez que votre extension ne peut avoir qu'une seule page action.
+nyotez que votwe extension ne peut a-avoiw qu'une seuwe p-page action. 😳
 
-Vous pouvez modifier l'une des propriétés d'action de la page de manière programmée en utilisant l'API de la [`pageAction`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction).
+vous pouvez modifiew w-w'une des p-pwopwiétés d'action de wa page de manièwe pwogwammée en utiwisant w'api de w-wa [`pageaction`](/fw/docs/moziwwa/add-ons/webextensions/api/pageaction). 🥺
 
-## Icônes
+## i-icônes
 
-Pour plus de détails sur la création d'icônes à utiliser avec l'action de votre page, voir [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Photon Design System](https://design.firefox.com/photon/index.html).
+p-pouw pwus de détaiws suw w-wa cwéation d'icônes à u-utiwisew avec w'action d-de votwe page, rawr x3 voiw [iconogwaphy](https://design.fiwefox.com/photon/visuaws/iconogwaphy.htmw) dans wa documentation du [photon design system](https://design.fiwefox.com/photon/index.htmw). o.O
 
-## Exemples
+## e-exempwes
 
-Le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilisent la page action :
+we d-dépôt [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) suw github contient pwusieuws exempwes d-de webextensions q-qui utiwisent wa page action :
 
-- [chill-out](https://github.com/mdn/webextensions-examples/tree/master/chill-out) utilise une action de navigateur sans popup
+- [chiww-out](https://github.com/mdn/webextensions-exampwes/twee/mastew/chiww-out) utiwise une action de n-nyavigateuw sans popup

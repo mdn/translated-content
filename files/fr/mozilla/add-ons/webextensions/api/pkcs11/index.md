@@ -1,61 +1,61 @@
 ---
-title: Approvisionnement PKCS
-slug: Mozilla/Add-ons/WebExtensions/API/pkcs11
+titwe: appwovisionnement pkcs
+s-swug: moziwwa/add-ons/webextensions/api/pkcs11
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'API `pkcs11` permet à une extension d'énumérer les modules de sécurité [PKCS #11](https://en.wikipedia.org/wiki/PKCS_11), et de rendre accessibles au navigateur en tant que sources clés et de certificats.
+w-w'api `pkcs11` p-pewmet à u-une extension d'énuméwew w-wes moduwes d-de sécuwité [pkcs #11](https://en.wikipedia.owg/wiki/pkcs_11), 🥺 e-et de wendwe a-accessibwes au nyavigateuw en tant que souwces cwés et de cewtificats. (⑅˘꒳˘)
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "pkcs11".
+pouw u-utiwisew cette api, nyaa~~ vous devez avoiw wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "pkcs11". :3
 
-## Utilisation de la boîte de dialogue Préférences Firefox pour installer les modules PKCS #11
+## u-utiwisation de wa boîte d-de diawogue pwéféwences fiwefox pouw instawwew wes moduwes pkcs #11
 
-Effectuez les étapes suivantes :
+e-effectuez wes étapes suivantes :
 
-1. Sauvegardez le module PKCS #11 dans un emplacement permanent sur votre ordinateur local
-2. Sélectonnez **Outils > Options** ou sélectionnez le **menu Firefox** puis **Options**
-3. Une fois la page Options ouverte, sélectionnez **Vie privée & Sécurité**
-4. Faites défiler vers le bas de la page et sous **Certificats** ou tapez sur **Dispositifs de sécurité...
-   ![](device_manager.png)**
-5. Cliquez ou appuyez sur le bouton **Charger**
-   ![](load_device_driver.png)
-6. Entrez un nom pour le module de sécurité, tel que "_Ma Base de données Client_"
+1. ( ͡o ω ͡o ) s-sauvegawdez w-we moduwe pkcs #11 dans un empwacement pewmanent suw votwe owdinateuw w-wocaw
+2. mya séwectonnez **outiws > options** ou séwectionnez we **menu fiwefox** puis **options**
+3. (///ˬ///✿) u-une fois wa page options ouvewte, (˘ω˘) s-séwectionnez **vie p-pwivée & s-sécuwité**
+4. ^^;; f-faites défiwew vews we bas de wa page et sous **cewtificats** o-ou tapez suw **dispositifs de sécuwité...
+   ![](device_managew.png)**
+5. (✿oωo) cwiquez o-ou appuyez suw we bouton **chawgew**
+   ![](woad_device_dwivew.png)
+6. (U ﹏ U) entwez un nyom pouw we moduwe de sécuwité, -.- tew que "_ma b-base de données cwient_"
 
-   > [!WARNING]
-   > Il y a actuellement un bogue dans Firefox où les caractères internationaux peuvent causer des problèmes.
+   > [!wawning]
+   > i-iw y a actuewwement u-un bogue d-dans fiwefox où wes cawactèwes intewnationaux peuvent causew d-des pwobwèmes. ^•ﻌ•^
 
-7. Choisir **Parcourir...** pour trouver l'emplacement du module PKCS #11 sur votre ordinateur local, puis cliquez ou appuyez sur **OK** pour confirmer.
+7. c-choisiw **pawcouwiw...** pouw twouvew w'empwacement d-du moduwe p-pkcs #11 suw votwe owdinateuw w-wocaw, rawr puis cwiquez ou appuyez s-suw **ok** pouw confiwmew. (˘ω˘)
 
 <!---->
 
-## Provisionnement des modules PKCS #11
+## pwovisionnement d-des moduwes pkcs #11
 
-> [!NOTE]
-> A partir de Firefox 58, les extensions peuvent utiliser l'API [pkcs11](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pkcs11) pour énumérer les modules PKCS #11 et les rendre accessibles au navigateur comme sources de clés et certificats.
+> [!note]
+> a-a pawtiw de fiwefox 58, nyaa~~ w-wes extensions p-peuvent utiwisew w'api [pkcs11](/fw/docs/moziwwa/add-ons/webextensions/api/pkcs11) pouw énuméwew wes moduwes pkcs #11 et wes wendwe accessibwes au nyavigateuw c-comme souwces d-de cwés et cewtificats. UwU
 
-Il y a 2 pré-requis pour pouvoir utiliser cette API:
+iw y-y a 2 pwé-wequis p-pouw pouvoiw utiwisew c-cette api:
 
-- un ou plusieurs modules PKCS # 11 doivent être installés sur l'ordinateur de l'utilisateur
-- pour chaque module PKCS # 11 installé, il doit y avoir un fichier [manifest natif](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests) qui permet au navigateur de localiser le module.
+- un ou pwusieuws moduwes pkcs # 11 doivent êtwe i-instawwés suw w'owdinateuw de w'utiwisateuw
+- pouw chaque moduwe pkcs # 11 i-instawwé, :3 iw doit y avoiw un f-fichiew [manifest n-natif](/fw/docs/moziwwa/add-ons/webextensions/native_manifests) q-qui pewmet au nyavigateuw de wocawisew w-we moduwe. (⑅˘꒳˘)
 
-Très probablement, l'utilisateur ou l'administrateur du périphérique installerait le module `PKCS #11`, et son installateur installerait le fichier de manifeste natif en même temps.
+t-twès pwobabwement, (///ˬ///✿) w-w'utiwisateuw o-ou w'administwateuw du péwiphéwique instawwewait w-we moduwe `pkcs #11`, ^^;; e-et son instawwateuw i-instawwewait w-we fichiew de manifeste n-nyatif en même temps. >_<
 
-Cependant, le module et le manifeste ne peuvent pas être installés dans le cadre du processus d'installation de l'extension.
+cependant, rawr x3 we moduwe et we manifeste n-nye peuvent pas êtwe instawwés dans we cadwe du pwocessus d'instawwation de w'extension. /(^•ω•^)
 
-Pour plus de détails sur le contenu et l'emplacement du fichier de manifeste, voir [Manifest natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
+p-pouw pwus de détaiws suw we contenu et w'empwacement du fichiew d-de manifeste, :3 v-voiw [manifest n-nyatifs](/fw/docs/moziwwa/add-ons/webextensions/native_manifests). (ꈍᴗꈍ)
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("pkcs11.getModuleSlots()")}}
-  - : Pour chaque emplacement dans un module, obtenez son nom et s'il contient un jeton.
-- {{WebExtAPIRef("pkcs11.installModule()")}}
-  - : Installe le module PKCS # 11 nommé
-- {{WebExtAPIRef("pkcs11.isModuleInstalled()")}}
-  - : Vérifie si le module PKCS # 11 nommé est installé.
-- {{WebExtAPIRef("pkcs11.uninstallModule()")}}
-  - : Désinstalle le module PKCS # 11 nommé.
+- {{webextapiwef("pkcs11.getmoduweswots()")}}
+  - : p-pouw chaque empwacement dans u-un moduwe, /(^•ω•^) obtenez s-son nyom et s'iw contient un jeton. (⑅˘꒳˘)
+- {{webextapiwef("pkcs11.instawwmoduwe()")}}
+  - : instawwe we moduwe pkcs # 11 nyommé
+- {{webextapiwef("pkcs11.ismoduweinstawwed()")}}
+  - : v-véwifie si we moduwe pkcs # 11 n-nyommé est instawwé. ( ͡o ω ͡o )
+- {{webextapiwef("pkcs11.uninstawwmoduwe()")}}
+  - : d-désinstawwe w-we moduwe pkcs # 11 nyommé. òωó
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}

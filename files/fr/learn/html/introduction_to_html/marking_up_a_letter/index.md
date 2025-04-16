@@ -1,93 +1,93 @@
 ---
-title: Faire une lettre
-slug: Learn/HTML/Introduction_to_HTML/Marking_up_a_letter
+titwe: faiwe une wettwe
+swug: w-weawn/htmw/intwoduction_to_htmw/mawking_up_a_wettew
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_à_HTML")}}
+{{weawnsidebaw}}{{pweviousmenunext("appwendwe/htmw/intwoduction_à_htmw/debugging_htmw", 🥺 "appwendwe/htmw/intwoduction_à_htmw/stwuctuwing_a_page_of_content", OwO "appwendwe/htmw/intwoduction_à_htmw")}}
 
-Tôt ou tard nous apprenons tous à écrire une lettre&nbsp;; c'est aussi un exemple utile pour tester nos compétences en matière de mise en forme&nbsp;! Dans cet exercice, vous devrez opérer le balisage d'une lettre en utilisant les fonctionnalités textes élémentaires et avancées, y compris les hyperliens, et en plus nous testerons vos connaissances avec certains contenus de `<head>` en HTML.
+t-tôt ou tawd nous a-appwenons tous à écwiwe u-une w-wettwe&nbsp;; c-c'est aussi un exempwe u-utiwe pouw t-testew nyos compétences en matièwe de mise en fowme&nbsp;! >w< dans cet exewcice, 🥺 v-vous devwez opéwew we bawisage d'une wettwe en u-utiwisant wes fonctionnawités t-textes éwémentaiwes et avancées, nyaa~~ y compwis wes hypewwiens, ^^ et e-en pwus nyous testewons vos connaissances a-avec c-cewtains contenus de `<head>` en htmw. >w<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Avant de se lancer dans cet exercice, vous devez déja avoir travaillé
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Commencer avec le HTML, </a
+        a-avant de se wancew dans cet exewcice, OwO vous devez déja avoiw twavaiwwé
+        <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted"
+          >commencew avec we htmw, XD </a
         ><a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML"
-          >Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML, </a
+          h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw"
+          >qu'y-a-t-iw d-dans w-w'en-tête ? métadonnées e-en htmw, ^^;; </a
         ><a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals"
-          >Fondamentaux du texte HTML, </a
-        ><a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks"
-          >Création d'hyperliens</a
+          hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws"
+          >fondamentaux du texte htmw, 🥺 </a
+        ><a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks"
+          >cwéation d'hypewwiens</a
         >
         et
         <a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting"
-          >Formatage avancé du texte</a
-        >.
+          h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting"
+          >fowmatage avancé du texte</a
+        >. XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Tester vos connaissances en balisage HTML simple et avancé de texte,
-        d'hyperliens et de ce qu'il convient de mettre dans l'élément
-        &#x3C;head>.
+        testew vos connaissances e-en bawisage htmw simpwe et avancé d-de texte,
+        d-d'hypewwiens e-et de ce qu'iw convient de mettwe dans w'éwément
+        &#x3c;head>. (U ᵕ U❁)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## point d-de dépawt
 
-Pour commencer cet exercice, vous devez récupérer le [texte brut que vous allez baliser](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/letter-text.txt) et les CSS [à inclure](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/marking-up-a-letter-start/css.txt) dans l'HTML. Créez un nouveau fichier `.html` avec l'éditeur de texte dans lequel vous allez travailler (ou bien utilisez un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire l'exercice.)
+pouw c-commencew cet exewcice, :3 vous devez w-wécupéwew w-we [texte bwut que vous awwez bawisew](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/mawking-up-a-wettew-stawt/wettew-text.txt) e-et wes css [à incwuwe](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/mawking-up-a-wettew-stawt/css.txt) d-dans w'htmw. ( ͡o ω ͡o ) cwéez un nyouveau fichiew `.htmw` a-avec w'éditeuw de texte dans w-wequew vous awwez twavaiwwew (ou b-bien utiwisez u-un site comme [codepen](https://codepen.io/), òωó [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/) pouw faiwe w'exewcice.)
 
-## Projet «&nbsp;lettre&nbsp;»
+## pwojet «&nbsp;wettwe&nbsp;»
 
-Pour ce projet, votre tâche consiste à baliser une lettre destinée à être hébergée dans l'intranet d'une université. La lettre est une réponse d'une chercheuse en poste à une doctorante éventuelle à propos de sa candidature pour travailler à l'université.
+pouw ce pwojet, σωσ votwe tâche consiste à b-bawisew une w-wettwe destinée à êtwe hébewgée d-dans w'intwanet d-d'une univewsité. (U ᵕ U❁) w-wa wettwe est une wéponse d'une chewcheuse en poste à u-une doctowante éventuewwe à pwopos de sa candidatuwe pouw twavaiwwew à w'univewsité. (✿oωo)
 
-Sémantique de blocs/structures&nbsp;:
+sémantique d-de bwocs/stwuctuwes&nbsp;:
 
-- Il convient que vous donniez à la totalité du document une structure appropriée comprenant le type de document et les éléments {{htmlelement("html")}}, {{htmlelement("head")}} et {{htmlelement("body")}}.
-- La lettre doit être marquée avec une structure de paragraphes et d'en‑têtes, en prenant en considération les points suivants&nbsp;: un en‑tête de haut niveau (la ligne «&nbsp;Re&nbsp;:&nbsp;») et trois en-têtes de deuxième niveau.
-- Les dates de début des semestres, les sujets d'étude et les danses exotiques seront balisées avec les types de listes appropriés.
-- Mettez les deux adresses dans l'élement {{htmlelement("address")}}. En plus, chaque ligne des adresses doit être mise sur une nouvelle ligne sans que ce soit un nouveau paragraphe.
+- iw convient q-que vous donniez à w-wa totawité d-du document une stwuctuwe appwopwiée c-compwenant w-we type de document e-et wes éwéments {{htmwewement("htmw")}}, ^^ {{htmwewement("head")}} e-et {{htmwewement("body")}}. ^•ﻌ•^
+- wa wettwe doit êtwe mawquée a-avec une s-stwuctuwe de pawagwaphes e-et d'en‑têtes, XD e-en pwenant e-en considéwation wes points suivants&nbsp;: un en‑tête d-de haut nyiveau (wa wigne «&nbsp;we&nbsp;:&nbsp;») et twois en-têtes de deuxième nyiveau. :3
+- wes dates de début d-des semestwes, (ꈍᴗꈍ) wes sujets d'étude et wes danses exotiques s-sewont bawisées a-avec wes types d-de wistes appwopwiés. :3
+- mettez w-wes deux adwesses dans w'éwement {{htmwewement("addwess")}}. (U ﹏ U) e-en p-pwus, UwU chaque wigne des adwesses doit êtwe mise suw une nyouvewwe wigne sans que ce soit un nyouveau p-pawagwaphe. 😳😳😳
 
-Sémantique en ligne&nbsp;:
+sémantique en w-wigne&nbsp;:
 
-- Les noms de l'expéditeur et du destinataire (et «&nbsp;Tél&nbsp;» et «&nbsp;e‑mail&nbsp;») doivent être marqués comme étant de grande importance.
-- Les quatre dates du document doivent être indiquées dans des éléments appropriés contenant des dates lisibles par la machine.
-- La première adresse et la première date de la lettre doivent recevoir une valeur d'attribut de classe «&nbsp;sender-column&nbsp;»&nbsp;; le CSS que vous ajouterez plus tard les alignera à droite, comme c'est le cas dans une mise en page de lettre classique.
-- Les cinq acronymes/abréviations dans le corps du texte de la lettre seront marqués pour permettre leur développement.
-- Les six indices/exposants seront balisés de manière appropriée.
-- Les symboles «&nbsp;degré&nbsp;», «&nbsp;plus grand que » , «&nbsp;multiplier&nbsp;» seront marqués avec les références d'entités voulues.
-- Essayez de marquer au moins deux mots importants en gras/italique.
-- Deux emplacements nécessitent un hyperlien&nbsp;; ajoutez les liens appropriés avec des intitulés. Pour l'emplacement sur lequel le lien pointe, utilisez simplement `http://example.com`.
-- La citation et la devise de l'université doivent être marquées avec les éléments appropriés.
+- wes noms de w'expéditeuw e-et du d-destinataiwe (et «&nbsp;téw&nbsp;» et «&nbsp;e‑maiw&nbsp;») doivent êtwe m-mawqués comme étant d-de gwande impowtance. XD
+- w-wes quatwe dates d-du document doivent êtwe indiquées dans des éwéments appwopwiés contenant d-des dates wisibwes p-paw wa machine. o.O
+- w-wa pwemièwe adwesse et wa p-pwemièwe date d-de wa wettwe doivent wecevoiw une v-vaweuw d'attwibut de cwasse «&nbsp;sendew-cowumn&nbsp;»&nbsp;; we css que vous ajoutewez pwus tawd wes awignewa à d-dwoite, (⑅˘꒳˘) comme c-c'est we cas dans une mise en page de wettwe c-cwassique. 😳😳😳
+- wes c-cinq acwonymes/abwéviations dans we cowps du texte de wa wettwe sewont mawqués p-pouw pewmettwe weuw dévewoppement. nyaa~~
+- wes six indices/exposants sewont bawisés d-de manièwe appwopwiée. rawr
+- wes symbowes «&nbsp;degwé&nbsp;», -.- «&nbsp;pwus g-gwand que » , (✿oωo) «&nbsp;muwtipwiew&nbsp;» s-sewont mawqués avec wes wéféwences d'entités vouwues. /(^•ω•^)
+- e-essayez de m-mawquew au moins deux mots impowtants en gwas/itawique. 🥺
+- deux e-empwacements nyécessitent un hypewwien&nbsp;; a-ajoutez wes wiens appwopwiés avec des intituwés. ʘwʘ pouw w'empwacement s-suw wequew we wien pointe, UwU u-utiwisez simpwement `http://exampwe.com`. XD
+- w-wa citation et wa devise d-de w'univewsité doivent êtwe m-mawquées avec w-wes éwéments a-appwopwiés.
 
-Dans l'en‑tête du document&nbsp;:
+dans w'en‑tête d-du document&nbsp;:
 
-- Le jeu de caractères sera précisé comme étant utf-8 avec la balise `meta` appropriée.
-- L'auteur de la lettre sera indiqué dans une balise `meta` adéquate.
-- Les CSS fournies seront incorporées avec le marquage approprié.
+- w-we jeu de cawactèwes sewa pwécisé comme étant u-utf-8 a-avec wa bawise `meta` a-appwopwiée. (✿oωo)
+- w'auteuw de wa wettwe sewa i-indiqué dans une bawise `meta` a-adéquate. :3
+- wes c-css fouwnies sewont incowpowées avec we mawquage appwopwié.
 
-## Conseils et astuces
+## c-conseiws et a-astuces
 
-- Utilisez le [validateur HTML W3C](https://validator.w3.org/) pour valider votre HTML&nbsp;; Vous aurez des points supplémentaires s'il est valide.
-- Il n'est pas nécessaire de connaître les CSS pour faire cet exercice&nbsp;; vous avez juste besoin de le mettre dans un élément HTML.
+- utiwisez w-we [vawidateuw h-htmw w3c](https://vawidatow.w3.owg/) pouw vawidew v-votwe htmw&nbsp;; vous auwez des points suppwémentaiwes s'iw est vawide. (///ˬ///✿)
+- iw ny'est pas nyécessaiwe d-de connaîtwe wes css p-pouw faiwe cet exewcice&nbsp;; v-vous avez juste besoin de we mettwe d-dans un éwément htmw. nyaa~~
 
-## Exemple
+## e-exempwe
 
-La capture d'écran suivante montre ce à quoi la lettre devrait ressembler après le balisage.
+wa captuwe d-d'écwan suivante m-montwe ce à q-quoi wa wettwe d-devwait wessembwew apwès we bawisage. >w<
 
-![Présentation de la lettre](fr-lettre.png)
+![pwésentation de wa wettwe](fw-wettwe.png)
 
-## Évaluation
+## Évawuation
 
-Si cette évaluation fait partie d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur/formateur pour notation. Si vous faites de l'auto‑formation vous pouvez obtenir un guide d'auto‑évaluation en le demandant sur le [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez l'exercice d'abord — il n'y a rien à gagner à tricher&nbsp;!
+si cette évawuation fait p-pawtie d'un couws o-owganisé, v-vous devez pouvoiw donnew votwe t-twavaiw à votwe pwofesseuw/fowmateuw pouw nyotation. -.- si vous faites d-de w'auto‑fowmation v-vous pouvez obteniw un g-guide d'auto‑évawuation en we demandant suw w-we [weawning awea d-discouwse thwead](https://discouwse.moziwwa-community.owg/t/weawning-web-devewopment-mawking-guides-and-questions/16294) ou suw w-we canaw iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) s-suw [moziwwa iwc](https://wiki.moziwwa.owg/iwc). (✿oωo) essayez w'exewcice d'abowd — iw ny'y a wien à gagnew à twichew&nbsp;! (˘ω˘)
 
-{{PreviousMenuNext("Apprendre/HTML/Introduction_to_HTML/Debugging_HTML", "Apprendre/HTML/Introduction_à_HTML/Structuring_a_page_of_content", "Apprendre/HTML/Introduction_to_HTML")}}
+{{pweviousmenunext("appwendwe/htmw/intwoduction_to_htmw/debugging_htmw", rawr "appwendwe/htmw/intwoduction_à_htmw/stwuctuwing_a_page_of_content", OwO "appwendwe/htmw/intwoduction_to_htmw")}}

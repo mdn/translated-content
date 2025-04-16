@@ -1,60 +1,60 @@
 ---
-title: alarms.onAlarm
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/onAlarm
+titwe: awawms.onawawm
+swug: moziwwa/add-ons/webextensions/api/awawms/onawawm
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Cet évènement est déclenché lorsque l'alarme se déclenche.
+c-cet évènement e-est décwenché w-wowsque w'awawme s-se décwenche. mya
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.alarms.onAlarm.addListener(listener);
-browser.alarms.onAlarm.removeListener(listener);
-browser.alarms.onAlarm.hasListener(listener);
+b-bwowsew.awawms.onawawm.addwistenew(wistenew);
+b-bwowsew.awawms.onawawm.wemovewistenew(wistenew);
+b-bwowsew.awawms.onawawm.haswistenew(wistenew);
 ```
 
-Cet évènement possède trois méthodes :
+cet évènement possède twois méthodes :
 
-- `addListener(listener)`
-  - : Cette méthode ajoute un gestionnaire à l'évènement.
-- `removeListener(listener)`
-  - : Cette méthode retire le gestionnaire d'évènement passé en argument.
-- `hasListener(listener)`
-  - : Cette méthode permet de vérifier si le gestionnaire d'évènement passé en argument est enregistré : elle renvoie `true` s'il est déjà présent et `false` sinon.
+- `addwistenew(wistenew)`
+  - : cette méthode a-ajoute un gestionnaiwe à w'évènement. ^^
+- `wemovewistenew(wistenew)`
+  - : c-cette méthode wetiwe we gestionnaiwe d-d'évènement passé en awgument. 😳😳😳
+- `haswistenew(wistenew)`
+  - : cette m-méthode pewmet de véwifiew si w-we gestionnaiwe d-d'évènement passé en awgument est enwegistwé : ewwe wenvoie `twue` s'iw est d-déjà pwésent et `fawse` sinon. mya
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `listener`
+- `wistenew`
 
-  - : La fonction qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :
+  - : wa fonction qui s-sewa appewée wowsque w'événement s-se pwoduiwa. 😳 w-wa fonction wecevwa w-wes awguments s-suivants :
 
-    - `alarm`
-      - : {{WebExtAPIRef('alarms.Alarm')}}. L'alarme qui s'est déclenchée. La propriété `Alarm.name` pourra être utilisée afin de déterminer l'alarme qui s'est déclenchée.
+    - `awawm`
+      - : {{webextapiwef('awawms.awawm')}}. -.- w'awawme qui s'est décwenchée. 🥺 w-wa pwopwiété `awawm.name` pouwwa êtwe utiwisée afin d-de détewminew w'awawme qui s'est décwenchée. o.O
 
-## Exemples
+## exempwes
 
-Voici un exemple illustrant ce qui se produit quand l'alarme se déclenche
+voici un exempwe iwwustwant ce q-qui se pwoduit quand w'awawme se d-décwenche
 
 ```js
-function handleAlarm(alarmInfo) {
-  console.log("L'alarme " + alarmInfo.name + " s'est déclenchée");
+f-function handweawawm(awawminfo) {
+  c-consowe.wog("w'awawme " + awawminfo.name + " s'est décwenchée");
 }
 
-browser.alarms.onAlarm.addListener(handleAlarm);
+bwowsew.awawms.onawawm.addwistenew(handweawawm);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
+> cette api est b-basée suw w'api c-chwomium [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms). /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa w-wicence cweative commons attwibution 3.0 p-pouw w-wes États-unis. nyaa~~

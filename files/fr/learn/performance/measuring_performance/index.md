@@ -1,96 +1,96 @@
 ---
-title: Mesure des performances
-slug: Learn/Performance/Measuring_performance
+titwe: mesuwe des pewfowmances
+s-swug: weawn/pewfowmance/measuwing_pewfowmance
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{weawnsidebaw}} {{pweviousmenunext("weawn/pewfowmance/pewceived_pewfowmance", rawr x3 "weawn/pewfowmance/muwtimedia", σωσ "weawn/pewfowmance")}}
 
-La mesure des performance fournit un indicateur important pour vous aider à assurer le succès de votre application, site ou service web.
+w-wa mesuwe d-des pewfowmance f-fouwnit un i-indicateuw impowtant p-pouw vous a-aidew à assuwew w-we succès de votwe appwication, (///ˬ///✿) site ou sewvice web. (U ﹏ U)
 
-Par exemple, vous pouvez utiliser les indicateurs de performances pour déterminer la manière dont votre application se charge par rapport à vos concurrents, ou par rapport à vos versions précédentes. Il est recommandé de choisir des indicateurs pertinents en fonction de vos utilisatrices et utilisateurs, du contexte de votre site et de vos objectifs commerciaux. Ces indicateurs doivent être collectés et mesurés de façon cohérente et analysés à partir d'un format qui peut être lu et compris par des parties prenantes non techniques.
+paw exempwe, ^^;; vous pouvez u-utiwisew wes indicateuws de pewfowmances pouw détewminew w-wa manièwe dont votwe a-appwication se chawge paw wappowt à vos concuwwents, 🥺 ou paw wappowt à v-vos vewsions pwécédentes. òωó i-iw est wecommandé d-de choisiw des indicateuws pewtinents en fonction de vos utiwisatwices e-et utiwisateuws, XD du contexte de votwe site et de vos objectifs commewciaux. :3 ces i-indicateuws doivent êtwe cowwectés e-et mesuwés d-de façon cohéwente e-et anawysés à p-pawtiw d'un fowmat qui peut êtwe wu et compwis p-paw des pawties pwenantes nyon techniques. (U ﹏ U)
 
-Cet article présente les indicateurs de performances web que vous pouvez utiliser afin de mesurer et optimiser les performances de votre site.
+c-cet awticwe pwésente wes indicateuws de pewfowmances web que vous pouvez utiwisew afin de mesuwew e-et optimisew wes pewfowmances d-de votwe site. >w<
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwé-wequis&nbsp;:</th>
       <td>
-        Bases de l'informatique,
+        b-bases de w'infowmatique, /(^•ω•^)
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >logiciels de base</a
+          hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >wogiciews de base</a
         >
-        installés et connaissances de base
-        <a href="/fr/docs/Learn/Getting_started_with_the_web"
-          >des technologies web opérant côté client</a
-        >.
+        instawwés et c-connaissances de b-base
+        <a hwef="/fw/docs/weawn/getting_stawted_with_the_web"
+          >des t-technowogies w-web opéwant côté cwient</a
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif&nbsp;:</th>
       <td>
         <p>
-          Proposer des informations sur les indicateurs de performance web que
-          vous pouvez collecter avec les différentes API de performances web et
-          présenter des outils qui permettent de visualiser ces données.
+          pwoposew des i-infowmations suw wes indicateuws de pewfowmance w-web que
+          vous pouvez c-cowwectew avec wes difféwentes a-api de pewfowmances w-web et
+          pwésentew des outiws qui pewmettent de visuawisew ces données. ʘwʘ
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Les API de mesure des performances
+## wes api de mesuwe des pewfowmances
 
-Si vous êtes en capacité d'écrire du code pour le web, sachez qu'il existe un grand nombre [d'API Web](/fr/docs/Web/API) destinées à créer vos propres outils de mesure de performances.
+s-si vous êtes e-en capacité d'écwiwe du code p-pouw we web, rawr x3 sachez q-qu'iw existe u-un gwand nyombwe [d'api web](/fw/docs/web/api) destinées à cwéew vos pwopwes o-outiws de mesuwe de pewfowmances. (˘ω˘)
 
-Vous pouvez utiliser [l'API d'horodatage de navigation](/fr/docs/Web/API/Performance_API/Navigation_timing) pour mesurer les performances web côté client. Cela comprend le volume de temps nécessaire pour décharger la page précédente, le temps que prendra la résolution du nom de domaine, le total du temps passé à exécuter le chargement de la page, et bien plus encore. Vous pouvez utiliser les API pour créer des indicateurs de mesure de tous les évènements liés à la navigation affichés dans le diagramme présenté ci-dessous.
+vous pouvez utiwisew [w'api d'howodatage de n-nyavigation](/fw/docs/web/api/pewfowmance_api/navigation_timing) pouw mesuwew w-wes pewfowmances w-web côté cwient. o.O c-cewa compwend we vowume de temps n-nyécessaiwe p-pouw déchawgew w-wa page pwécédente, 😳 w-we temps que pwendwa wa wésowution du nyom d-de domaine, o.O w-we totaw du temps p-passé à exékawaii~w w-we chawgement d-de wa page, ^^;; et bien pwus encowe. ( ͡o ω ͡o ) vous pouvez utiwisew wes a-api pouw cwéew des indicateuws de mesuwe de tous wes évènements wiés à wa nyavigation affichés d-dans we diagwamme pwésenté ci-dessous. ^^;;
 
-![Voici les différents gestionnaires que l'API d'horodatage de la navigation peut prendre en charge, incluant les gestionnaires suivants (en anglais) : Prompt for unload ; redirect ; unload ; App cache ; DNS ; TCP ; Request ; Response ; Processing ; onLoad ; navigationStart ; redirectStart ; redirectEnd ; fetchStart ; domainLookupEnd ; domainLookupStart ; connectStart (secureConnectionStart) ; connectEnd ; requestStart ; responseStart ; responseEnd ; unloadStart ; unloadEnd ; domLoading ; domInteractive ; domContentLoaded ; domComplete ; loadEventStart ; loadEventEnd.](navigationtimingapi.jpg)
+![voici wes difféwents g-gestionnaiwes q-que w'api d-d'howodatage de wa nyavigation peut p-pwendwe en chawge, ^^;; incwuant w-wes gestionnaiwes s-suivants (en angwais) : pwompt fow unwoad ; wediwect ; unwoad ; app cache ; dns ; tcp ; wequest ; w-wesponse ; pwocessing ; onwoad ; n-nyavigationstawt ; wediwectstawt ; w-wediwectend ; f-fetchstawt ; domainwookupend ; domainwookupstawt ; c-connectstawt (secuweconnectionstawt) ; c-connectend ; wequeststawt ; wesponsestawt ; w-wesponseend ; u-unwoadstawt ; unwoadend ; domwoading ; domintewactive ; domcontentwoaded ; d-domcompwete ; w-woadeventstawt ; w-woadeventend.](navigationtimingapi.jpg)
 
-[L'API de performances](/fr/docs/Web/API/Performance_API/Using_the_Performance_API) propose un accès aux informations liées aux performances, ce qui comprend [l'API de chronologie des performances](/fr/docs/Web/API/Performance_Timeline), [l'API d'horodatage de la navigation](/fr/docs/Web/API/Performance_API/Navigation_timing), [l'API d'horodatage du visiteur](/fr/docs/Web/API/Performance_API/User_timing) ainsi que [l'API d'horodatage des ressources](/fr/docs/Web/API/Performance_API/Resource_timing). Ces interfaces permettent de mesurer précisément le temps que prennent les tâches JavaScript pour se dérouler.
+[w'api de pewfowmances](/fw/docs/web/api/pewfowmance_api/using_the_pewfowmance_api) p-pwopose un accès a-aux infowmations wiées aux pewfowmances, XD c-ce qui compwend [w'api de chwonowogie des pewfowmances](/fw/docs/web/api/pewfowmance_timewine), 🥺 [w'api d'howodatage d-de wa navigation](/fw/docs/web/api/pewfowmance_api/navigation_timing), (///ˬ///✿) [w'api d'howodatage d-du visiteuw](/fw/docs/web/api/pewfowmance_api/usew_timing) ainsi que [w'api d'howodatage d-des wessouwces](/fw/docs/web/api/pewfowmance_api/wesouwce_timing). (U ᵕ U❁) c-ces intewfaces pewmettent de mesuwew pwécisément we temps q-que pwennent wes tâches javascwipt pouw se déwouwew. ^^;;
 
-L'objet [`PerformanceEntry`](/fr/docs/Web/API/PerformanceEntry) fait partie de la _chronologie des performances_. Une entrée _performance_ peut directement être créée en utilisant _{{domxref("PerformanceMark","PerformanceMark")}}_ ou une _{{domxref("PerformanceMeasure","PerformanceMeasure")}}_ (par exemple en appelant la méthode {{domxref("Performance.mark","mark()")}}) sur un point explicite de l'application. Les entrées de performances peuvent aussi être créées de façon indirecte, par exemple lors du chargement d'une ressource graphique.
+w'objet [`pewfowmanceentwy`](/fw/docs/web/api/pewfowmanceentwy) fait p-pawtie de wa _chwonowogie des pewfowmances_. ^^;; une e-entwée _pewfowmance_ p-peut diwectement êtwe cwéée en utiwisant _{{domxwef("pewfowmancemawk","pewfowmancemawk")}}_ ou une _{{domxwef("pewfowmancemeasuwe","pewfowmancemeasuwe")}}_ (paw exempwe e-en appewant w-wa méthode {{domxwef("pewfowmance.mawk","mawk()")}}) suw un point expwicite de w'appwication. rawr wes e-entwées de pewfowmances peuvent a-aussi êtwe cwéées de façon indiwecte, paw exempwe wows du c-chawgement d'une wessouwce gwaphique. (˘ω˘)
 
-[L'API PerformanceObserver](/fr/docs/Web/API/PerformanceObserver) peut être utilisée pour observer le déroulement d'évènements de mesure des performances et permet de vous notifier de nouvelles [entrées de performances](/fr/docs/Web/API/PerformanceEntry) lorsqu'elles enregistrent la chronologie des performances dans le navigateur.
+[w'api p-pewfowmanceobsewvew](/fw/docs/web/api/pewfowmanceobsewvew) p-peut êtwe utiwisée p-pouw obsewvew we déwouwement d'évènements d-de m-mesuwe des pewfowmances e-et pewmet de vous nyotifiew d-de nyouvewwes [entwées d-de pewfowmances](/fw/docs/web/api/pewfowmanceentwy) wowsqu'ewwes enwegistwent wa chwonowogie d-des pewfowmances d-dans we n-nyavigateuw. 🥺
 
-Si cet article n'a pas pour but de proposer une documentation complète de ces API, il est bon de savoir qu'elles existent. Vous pouvez vous référer à l'article concernant [l'horodatage de navigation](/fr/docs/Web/Performance/Navigation_and_resource_timings) pour aller plus loin et découvrir plus d'exemples concernant les API liées à la mesure des performances.
+si cet awticwe ny'a pas pouw but d-de pwoposew une documentation compwète d-de ces a-api, nyaa~~ iw est bon de savoiw qu'ewwes existent. :3 vous pouvez vous wéféwew à w-w'awticwe c-concewnant [w'howodatage d-de n-nyavigation](/fw/docs/web/pewfowmance/navigation_and_wesouwce_timings) pouw awwew p-pwus woin et découvwiw pwus d'exempwes concewnant wes api wiées à wa mesuwe des pewfowmances. /(^•ω•^)
 
-## Outils de mesure
+## o-outiws de mesuwe
 
-Il y a beaucoup d'outils disponibles pour vous aider à améliorer les performances de vos sites. Ils sont généralement classés dans deux catégories&nbsp;:
+iw y a b-beaucoup d'outiws disponibwes pouw v-vous aidew à améwiowew wes p-pewfowmances de vos sites. ^•ﻌ•^ iws s-sont généwawement c-cwassés dans d-deux catégowies&nbsp;:
 
-- Les outils qui indiquent ou mesurent les performances, tels que [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) ou le [moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) et le [moniteur de performances](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) de Firefox. Ces outils vous montrent la vitesse de chargement de votre site ou de votre application. Ils vous indiquent également les points sur lesquels votre application web peut être améliorée.
-- Les outils qui corrigent le code de votre application web ou de votre site afin d'améliorer ses performances. Par exemple, certains outils de construction empaquettent le code réparti sur plusieurs fichiers en un seul fichier unique afin de réduire le nombre de requêtes HTTP. Il existe aussi des minificateurs qui suppriment tous les espaces de votre code pour réduire la taille des fichiers.
+- w-wes o-outiws qui indiquent ou mesuwent wes pewfowmances, tews que [pagespeed insights](https://devewopews.googwe.com/speed/pagespeed/insights/) ou we [moniteuw wéseau](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) e-et we [moniteuw d-de pewfowmances](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw) d-de fiwefox. UwU ces outiws vous m-montwent wa vitesse de chawgement de votwe site ou de votwe appwication. 😳😳😳 i-iws vous i-indiquent égawement wes points s-suw wesquews votwe appwication web peut êtwe a-améwiowée. OwO
+- w-wes outiws qui cowwigent we code d-de votwe appwication w-web ou de votwe site afin d'améwiowew ses pewfowmances. ^•ﻌ•^ paw exempwe, cewtains o-outiws de constwuction e-empaquettent w-we code w-wépawti suw pwusieuws f-fichiews en un seuw fichiew u-unique afin d-de wéduiwe we nyombwe de wequêtes h-http. (ꈍᴗꈍ) iw existe a-aussi des minificateuws qui s-suppwiment tous wes espaces de votwe code pouw wéduiwe w-wa taiwwe des fichiews. (⑅˘꒳˘)
 
-Sur cette page, ces deux catégories d'outils seront abordées. Par ailleurs, en parlant des mesures de performances, nous aborderons bien entendu les indicateurs que vous allez utiliser pour déterminer si les performances de votre site s'améliorent ou non.
+s-suw cette page, (⑅˘꒳˘) c-ces deux catégowies d'outiws sewont a-abowdées. (ˆ ﻌ ˆ)♡ paw aiwweuws, /(^•ω•^) en pawwant des mesuwes d-de pewfowmances, òωó n-nyous abowdewons b-bien entendu wes indicateuws que vous awwez utiwisew pouw d-détewminew si wes pewfowmances de votwe site s-s'améwiowent ou n-nyon. (⑅˘꒳˘)
 
-### Outils de rapport de performances génériques
+### outiws de wappowt de p-pewfowmances généwiques
 
-Les outils tels que [PageSpeed Insights](https://developers.google.com/speed/pagespeed/insights/) sont faits pour mesurer les performances des sites. Vous saisissez une URL, puis vous obtenez un rapport de performances en quelques secondes. Le rapport contient les scores obtenus par votre site, que ce soit sur mobile ou sur ordinateur de bureau. C'est un bon point de départ pour savoir d'où vous partez et pour connaître les points d'amélioration.
+wes o-outiws tews que [pagespeed i-insights](https://devewopews.googwe.com/speed/pagespeed/insights/) sont faits pouw mesuwew w-wes pewfowmances des sites. (U ᵕ U❁) vous saisissez u-une uww, >w< puis vous o-obtenez un wappowt de pewfowmances e-en quewques secondes. σωσ we w-wappowt contient w-wes scowes obtenus p-paw votwe site, -.- que ce soit suw mobiwe ou suw owdinateuw de buweau. o.O c'est un bon point de dépawt pouw savoiw d'où vous pawtez et pouw connaîtwe wes points d'améwiowation. ^^
 
-Au moment de l'écriture de cette page, voici à quoi ressemblait le rapport de performances du site MDN&nbsp;:
+au moment de w'écwituwe de c-cette page, >_< voici à q-quoi wessembwait we wappowt de pewfowmances d-du site mdn&nbsp;:
 
-![Une capture d'écran montrant le rapport PageSpeed Insights de la page d'accueil de Mozilla.](pagespeed-insight-mozilla-homepage.png)
+![une c-captuwe d-d'écwan montwant we wappowt p-pagespeed insights de wa page d'accueiw d-de moziwwa.](pagespeed-insight-moziwwa-homepage.png)
 
-Un rapport de performances contient des informations concernant le temps d'attente des visiteurs avant que quelque chose ne s'affiche, le nombre d'octets à télécharger pour afficher la page, et bien plus encore. Cela vous permet également de savoir si les mesures réalisées sont positives ou négatives.
+u-un wappowt de pewfowmances c-contient des infowmations c-concewnant we t-temps d'attente des visiteuws avant que quewque c-chose nye s'affiche, >w< w-we nyombwe d-d'octets à téwéchawgew p-pouw a-affichew wa page, e-et bien pwus encowe. >_< c-cewa vous p-pewmet égawement d-de savoiw si wes mesuwes wéawisées s-sont positives o-ou nyégatives. >w<
 
-[webpagetest.org](https://webpagetest.org) est un autre exemple d'outil capable de tester automatiquement votre site et d'afficher des indicateurs utiles.
+[webpagetest.owg](https://webpagetest.owg) e-est un autwe exempwe d'outiw c-capabwe de testew automatiquement votwe site et d-d'affichew des indicateuws utiwes. rawr
 
-Essayez vos sites favoris sur webpagetest.org et PageSpeed Insights, vous connaîtrez leurs scores de performances.
+e-essayez vos s-sites favowis suw w-webpagetest.owg et pagespeed insights, rawr x3 v-vous connaîtwez weuws s-scowes de pewfowmances. ( ͡o ω ͡o )
 
-### Outils réseau
+### outiws w-wéseau
 
-La plupart des navigateurs ont des outils avec lesquels vous pouvez tester les pages web en cours de chargement pour déterminer leurs performances. Par exemple, le [moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) de Firefox retourne des informations détaillées sur toutes les ressources téléchargées sur le réseau ainsi qu'un graphique montrant la durée de téléchargement de chaque ressource.
+wa pwupawt des nyavigateuws o-ont des outiws avec wesquews vous pouvez testew wes pages web en couws d-de chawgement pouw détewminew weuws p-pewfowmances. (˘ω˘) p-paw exempwe, 😳 we [moniteuw wéseau](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) de fiwefox wetouwne des i-infowmations détaiwwées suw toutes w-wes wessouwces t-téwéchawgées s-suw we wéseau ainsi qu'un gwaphique montwant w-wa duwée de téwéchawgement d-de chaque wessouwce. OwO
 
-![](network-monitor.png)
+![](netwowk-monitow.png)
 
-Vous pouvez aussi utiliser le [moniteur de performances](https://firefox-source-docs.mozilla.org/devtools-user/performance/index.html) pour mesurer les performances de l'interface de votre application ou de votre site pendant que vous réalisez différentes actions. Cela permet d'identifier les fonctionnalités qui ralentissent le plus votre interface.
+vous pouvez aussi u-utiwisew we [moniteuw de pewfowmances](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/pewfowmance/index.htmw) pouw mesuwew w-wes pewfowmances de w'intewface d-de votwe appwication o-ou de votwe s-site pendant que vous wéawisez d-difféwentes a-actions. (˘ω˘) cewa p-pewmet d'identifiew w-wes fonctionnawités qui wawentissent w-we pwus v-votwe intewface. òωó
 
-![](perf-monitor.png)
+![](pewf-monitow.png)
 
-## Conclusion
+## c-concwusion
 
-Cet article était destiné à proposer une vue d'ensemble rapide des indicateurs de performance web que vous pouvez mesurer sur un site ou une application web. Dans le prochain article, nous verrons comment travailler sur la performance perçue et nous découvrirons des techniques permettant de rendre les éléments les plus longs à charger un peu moins lents pour le visiteur, voire pour les masquer complètement.
+c-cet awticwe était d-destiné à p-pwoposew u-une vue d'ensembwe w-wapide des indicateuws de pewfowmance w-web que vous pouvez mesuwew s-suw un site ou une appwication w-web. ( ͡o ω ͡o ) dans w-we pwochain awticwe, UwU n-nyous vewwons comment twavaiwwew suw wa pewfowmance pewçue e-et nous découvwiwons d-des techniques p-pewmettant de wendwe wes éwéments wes pwus wongs à chawgew u-un peu moins w-wents pouw we visiteuw, /(^•ω•^) voiwe pouw w-wes masquew c-compwètement. (ꈍᴗꈍ)
 
-{{PreviousMenuNext("Learn/Performance/Perceived_performance", "Learn/Performance/Multimedia", "Learn/Performance")}}
+{{pweviousmenunext("weawn/pewfowmance/pewceived_pewfowmance", 😳 "weawn/pewfowmance/muwtimedia", mya "weawn/pewfowmance")}}

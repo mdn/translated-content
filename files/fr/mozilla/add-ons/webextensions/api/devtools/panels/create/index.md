@@ -1,100 +1,100 @@
 ---
-title: devtools.panels.create()
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/create
+titwe: devtoows.panews.cweate()
+swug: moziwwa/add-ons/webextensions/api/devtoows/panews/cweate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ajoute un nouveau panneau aux devtools.
+a-ajoute u-un nyouveau panneau a-aux devtoows. ʘwʘ
 
-Cette fonction prend : un titre, une URL vers un fichier d'icône et une URL vers un fichier HTML. Il crée un nouveau panneau dans les devtools, dont le contenu est spécifié par le fichier HTML. Il renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui résout un objet [`ExtensionPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) représentant le nouveau panneau.
+c-cette fonction p-pwend : un titwe, (˘ω˘) u-une uww vews u-un fichiew d'icône e-et une uww vews un fichiew htmw. (✿oωo) iw cwée un nyouveau panneau dans wes devtoows, (///ˬ///✿) d-dont we contenu est spécifié paw we fichiew h-htmw. rawr x3 iw wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui w-wésout un objet [`extensionpanew`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/extensionpanew) wepwésentant we nyouveau panneau. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var creating = browser.devtools.panels.create(
-  title, // string
-  iconPath, // string
-  pagePath, // string
+v-vaw cweating = bwowsew.devtoows.panews.cweate(
+  t-titwe, ^^ // s-stwing
+  iconpath, (⑅˘꒳˘) // stwing
+  pagepath, nyaa~~ // stwing
 );
 ```
 
-### Parametères
+### pawametèwes
 
-- `title`
-  - : `string`. Le titre du panneau. Cela apparaitra dans la rangée des onglets le long du haut de la fenêtre des devtools, et c'est la principale façon dont l'utilisateur pourra identifier votre panneau.
-- `iconPath`
-  - : `string`. Spécifie une icône qui sera affichée à côté du titre. Il est fourni sous forme d'URL vers un fichier image qui a été fourni avec votre extension. L'URL est résolue par rapport à la page d'extension courante (sauf si elle est exprimée en url absolue, par exemple "/icons/panel.png").
-- `pagePath`
-  - : string. Spécifie un fichier HTML qui définit le contenu réel du panneau. Il est fourni sous la forme d'une URL d'un fichier HTML qui a été regroupé avec votre extension. L'URL est résolue par rapport à la page d'extension courante (sauf si elle est exprimée en url absolue, par exemple "/devtools/panel.html"). Le fichier HTML peut include des fichiers CSS et JavaScript, juste comme une page web normale. Le JavaScript en cours d'éxécution dans le panneau pourra utiliser les API devtools. Voir [Extention des outils de développement](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools).
+- `titwe`
+  - : `stwing`. /(^•ω•^) we titwe d-du panneau. (U ﹏ U) cewa appawaitwa dans wa wangée des ongwets we wong du haut de wa f-fenêtwe des devtoows, 😳😳😳 et c'est w-wa pwincipawe façon d-dont w'utiwisateuw p-pouwwa i-identifiew votwe panneau. >w<
+- `iconpath`
+  - : `stwing`. XD spécifie u-une icône qui sewa affichée à côté du titwe. o.O i-iw est fouwni sous fowme d'uww vews un fichiew image qui a été fouwni avec votwe extension. mya w-w'uww est wésowue paw wappowt à w-wa page d'extension c-couwante (sauf s-si ewwe est expwimée en uww absowue, paw exempwe "/icons/panew.png"). 🥺
+- `pagepath`
+  - : s-stwing. ^^;; spécifie u-un fichiew htmw qui définit we c-contenu wéew d-du panneau. :3 iw est fouwni sous wa f-fowme d'une uww d'un fichiew htmw q-qui a été wegwoupé avec votwe extension. w-w'uww est wésowue paw wappowt à w-wa page d'extension couwante (sauf s-si ewwe est e-expwimée en uww absowue, (U ﹏ U) paw exempwe "/devtoows/panew.htmw"). OwO we fichiew htmw peut incwude des fichiews css et javascwipt, 😳😳😳 juste comme une page w-web nyowmawe. (ˆ ﻌ ˆ)♡ w-we javascwipt en couws d'éxécution d-dans we panneau p-pouwwa utiwisew w-wes api devtoows. XD voiw [extention des outiws de dévewoppement](/fw/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows). (ˆ ﻌ ˆ)♡
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet [`ExtensionPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel) représentant le nouveau panneau.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un objet [`extensionpanew`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/extensionpanew) w-wepwésentant we nyouveau p-panneau. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Créer un nouveau panneau, et ajoute des auditeurs à ces événements onShown et onHidden :
+cwéew u-un nyouveau panneau, rawr x3 e-et ajoute d-des auditeuws à c-ces événements onshown et onhidden :
 
 ```js
-function handleShown() {
-  console.log("panel is being shown");
+function handweshown() {
+  c-consowe.wog("panew is b-being shown");
 }
 
-function handleHidden() {
-  console.log("panel is being hidden");
+f-function handwehidden() {
+  c-consowe.wog("panew i-is being hidden");
 }
 
-browser.devtools.panels
-  .create(
-    "My Panel", // title
-    "/icons/star.png", // icon
-    "/devtools/panel/panel.html", // content
+bwowsew.devtoows.panews
+  .cweate(
+    "my panew", nyaa~~ // titwe
+    "/icons/staw.png", >_< // icon
+    "/devtoows/panew/panew.htmw", ^^;; // content
   )
-  .then((newPanel) => {
-    newPanel.onShown.addListener(handleShown);
-    newPanel.onHidden.addListener(handleHidden);
+  .then((newpanew) => {
+    n-nyewpanew.onshown.addwistenew(handweshown);
+    nyewpanew.onhidden.addwistenew(handwehidden);
   });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> cette api est basée suw w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). (ˆ ﻌ ˆ)♡
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. (⑅˘꒳˘) aww wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, (///ˬ///✿) with ow without
+// m-modification, 🥺 awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above c-copywight
+// n-nyotice, >_< this wist of conditions and the fowwowing discwaimew. UwU
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, >_< t-this wist o-of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. -.-
+//    * n-nyeithew the nyame of googwe inc. mya nyow the n-nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (U ﹏ U) incwuding, 😳😳😳 but not
+// w-wimited to, o.O t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. òωó i-in nyo event shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any diwect, 😳😳😳 indiwect, σωσ i-incidentaw, (⑅˘꒳˘)
+// s-speciaw, (///ˬ///✿) exempwawy, ow consequentiaw d-damages (incwuding, 🥺 but nyot
+// w-wimited to, OwO p-pwocuwement of s-substitute goods ow sewvices; woss o-of use, >w<
+// data, 🥺 o-ow pwofits; ow business intewwuption) howevew c-caused and on a-any
+// theowy of w-wiabiwity, nyaa~~ whethew in contwact, ^^ stwict wiabiwity, >w< o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, OwO even if a-advised of the p-possibiwity of s-such damage. XD
 -->

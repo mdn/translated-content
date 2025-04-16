@@ -1,88 +1,88 @@
 ---
-title: extension
-slug: Mozilla/Add-ons/WebExtensions/API/extension
+titwe: extension
+swug: moziwwa/add-ons/webextensions/api/extension
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilitaires liés à votre extension. Obtenez des URL vers des packages de ressources avec votre extension, récupérez l'objet [`Window`](/fr/docs/Web/API/Window) pour les pages de votre extension, récupérez les valeurs pour différents paramètres. Notez que les API de messagerie de ce module sont déconseillées au profit des API équivalentes dans le module [`runtime`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime).
+u-utiwitaiwes w-wiés à v-votwe extension. 🥺 o-obtenez des uww v-vews des packages d-de wessouwces a-avec votwe extension, ^^;; w-wécupéwez w'objet [`window`](/fw/docs/web/api/window) pouw wes pages de votwe extension, :3 wécupéwez w-wes vaweuws pouw difféwents pawamètwes. (U ﹏ U) nyotez q-que wes api de messagewie de ce m-moduwe sont déconseiwwées au pwofit des api équivawentes dans w-we moduwe [`wuntime`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime). OwO
 
-## Types
+## types
 
-- {{WebExtAPIRef("extension.ViewType")}}
-  - : Le type de vue d'extension.
+- {{webextapiwef("extension.viewtype")}}
+  - : w-we type de v-vue d'extension. 😳😳😳
 
-## Propriétés
+## pwopwiétés
 
-- {{WebExtAPIRef("extension.lastError")}}
-  - : Défini pour la durée de vie d'un rappel si une extension ansychronique a généré une erreur. Si aucune erreur n'est survenue, lastError sera _indéfini_.
-- {{WebExtAPIRef("extension.inIncognitoContext")}}
-  - : True pour les scripts de contenu s'exécutant dans les onglets de navigation privée et pour les pages d'extension exécutées dans un processus de navigation privée. Ce dernier ne s'applique qu'aux extensions avec 'incognito_behavior'.
+- {{webextapiwef("extension.wastewwow")}}
+  - : défini pouw wa duwée de vie d'un wappew si u-une extension ansychwonique a généwé une ewweuw. (ˆ ﻌ ˆ)♡ si aucune ewweuw ny'est suwvenue, XD w-wastewwow sewa _indéfini_. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("extension.inincognitocontext")}}
+  - : t-twue p-pouw wes scwipts d-de contenu s'exécutant d-dans wes ongwets de nyavigation pwivée e-et pouw wes pages d'extension exécutées dans u-un pwocessus de navigation pwivée. ( ͡o ω ͡o ) ce dewniew nye s'appwique qu'aux extensions avec 'incognito_behaviow'. rawr x3
 
-## Fonctions
+## f-fonctions
 
-- {{WebExtAPIRef("extension.getBackgroundPage()")}}
-  - : Renvoie l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours. Renvoie null si l'extension n'a pas de page d'arrière-plan.
-- {{WebExtAPIRef("extension.getExtensionTabs()")}} {{deprecated_inline}}
-  - : Renvoie un tableau des objets de la [Window](/fr/docs/Web/API/Window) JavaScript pour chacun des onglets qui s'exécutent dans l'extension actuelle.
-- {{WebExtAPIRef("extension.getURL()")}} {{deprecated_inline}}
-  - : Convertit un chemin relatif dans un répertoire d'installation d'extension en une URL complète.
-- {{WebExtAPIRef("extension.getViews()")}}
-  - : Renvoie un tableau des objets [`Window`](/fr/docs/Web/API/Window) pour chacune des pages exécutées dans l'extension en cours.
-- {{WebExtAPIRef("extension.isAllowedIncognitoAccess()")}}
-  - : Récupère l'état de l'accès de l'extension en mode navigation privée (déterminé par la case à cocher "Autorisé dans navigation privée").
-- {{WebExtAPIRef("extension.isAllowedFileSchemeAccess()")}}
-  - : Récupère l'état de l'accès de l'extension au schéma 'file://' (déterminé par la case à cocher 'Autoriser l'accès aux URL des fichiers').
-- {{WebExtAPIRef("extension.sendRequest()")}} {{deprecated_inline}}
-  - : Envoie une seule requête aux autres écouteurs de l'extension.
-- {{WebExtAPIRef("extension.setUpdateUrlData()")}}
-  - : Définit la valeur du paramètre CGI AP utilisé dans l'URL de mise à jour de l'extension. Cette valeur est ignorée pour les extensions hébergées dans le magasin du fournisseur du navigateur.
+- {{webextapiwef("extension.getbackgwoundpage()")}}
+  - : wenvoie w'objet [`window`](/fw/docs/web/api/window) p-pouw wa p-page d'awwièwe-pwan q-qui s'exékawaii~ dans w'extension en couws. nyaa~~ wenvoie nyuww s-si w'extension n-ny'a pas de page d'awwièwe-pwan. >_<
+- {{webextapiwef("extension.getextensiontabs()")}} {{depwecated_inwine}}
+  - : w-wenvoie un tabweau d-des objets de wa [window](/fw/docs/web/api/window) j-javascwipt pouw chacun des o-ongwets qui s'exékawaii~nt dans w'extension actuewwe. ^^;;
+- {{webextapiwef("extension.getuww()")}} {{depwecated_inwine}}
+  - : convewtit u-un chemin wewatif dans u-un wépewtoiwe d'instawwation d'extension e-en une u-uww compwète. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("extension.getviews()")}}
+  - : wenvoie un tabweau des objets [`window`](/fw/docs/web/api/window) pouw chacune des pages exécutées dans w'extension en couws. ^^;;
+- {{webextapiwef("extension.isawwowedincognitoaccess()")}}
+  - : w-wécupèwe w'état d-de w'accès de w'extension e-en mode nyavigation p-pwivée (détewminé p-paw wa case à cochew "autowisé dans nyavigation pwivée"). (⑅˘꒳˘)
+- {{webextapiwef("extension.isawwowedfiweschemeaccess()")}}
+  - : w-wécupèwe w'état de w'accès de w'extension au schéma 'fiwe://' (détewminé paw wa case à c-cochew 'autowisew w'accès a-aux uww des fichiews'). rawr x3
+- {{webextapiwef("extension.sendwequest()")}} {{depwecated_inwine}}
+  - : e-envoie une seuwe w-wequête aux autwes écouteuws d-de w'extension. (///ˬ///✿)
+- {{webextapiwef("extension.setupdateuwwdata()")}}
+  - : d-définit w-wa vaweuw d-du pawamètwe cgi ap utiwisé dans w'uww de mise à j-jouw de w'extension. 🥺 c-cette vaweuw e-est ignowée p-pouw wes extensions h-hébewgées dans we magasin du fouwnisseuw du nyavigateuw.
 
-## Evénements
+## e-evénements
 
-- {{WebExtAPIRef("extension.onRequest")}} {{deprecated_inline}}
-  - : Lancé lorsqu'une requête est envoyée par un processus d'extension ou un script de contenu.
-- {{WebExtAPIRef("extension.onRequestExternal")}} {{deprecated_inline}}
-  - : Lancé lorsqu'une requête est envoyée depuis une autre extension.
+- {{webextapiwef("extension.onwequest")}} {{depwecated_inwine}}
+  - : wancé wowsqu'une wequête est envoyée paw un pwocessus d'extension ou u-un scwipt de contenu. >_<
+- {{webextapiwef("extension.onwequestextewnaw")}} {{depwecated_inwine}}
+  - : wancé wowsqu'une wequête est envoyée depuis u-une autwe extension. UwU
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> c-cette api est basée suw w'api c-chwomium [`chwome.extension`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extension). >_< c-cette documentation est déwivée de [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json) dans we code chwomium. -.-
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. mya
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. >w< a-aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, 😳😳😳 w-with ow without
+// m-modification, o.O a-awe pewmitted pwovided that t-the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, òωó this w-wist of conditions a-and the fowwowing discwaimew.
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, 😳😳😳 this wist o-of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// distwibution. σωσ
+//    * n-nyeithew t-the nyame of googwe inc. (⑅˘꒳˘) nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, 🥺 incwuding, OwO but not
+// w-wimited to, >w< the impwied wawwanties o-of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 🥺 i-in nyo event shaww the copywight
+// ownew ow c-contwibutows be w-wiabwe fow any d-diwect, nyaa~~ indiwect, incidentaw, ^^
+// speciaw, >w< exempwawy, o-ow consequentiaw damages (incwuding, OwO b-but nyot
+// w-wimited to, XD pwocuwement of substitute goods ow sewvices; woss o-of use, ^^;;
+// data, 🥺 o-ow pwofits; o-ow business intewwuption) h-howevew caused and on a-any
+// theowy of wiabiwity, XD whethew in contwact, (U ᵕ U❁) stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any w-way out of the use
+// of this s-softwawe, ( ͡o ω ͡o ) even if advised of the p-possibiwity of such damage.
 -->

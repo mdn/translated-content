@@ -1,90 +1,90 @@
 ---
-title: devtools.panels.ElementsPanel.setExpression()
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane/setExpression
+titwe: devtoows.panews.ewementspanew.setexpwession()
+swug: moziwwa/add-ons/webextensions/api/devtoows/panews/extensionsidebawpane/setexpwession
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Evalue une expression dans le contexte de la page inspectée et affiche le résultat dans le volet de la barre latérale d'extension.
+e-evawue u-une expwession d-dans we contexte d-de wa page inspectée e-et affiche w-we wésuwtat dans w-we vowet de w-wa bawwe watéwawe d'extension.
 
-Le contexte d'exécution de l'expression est le même que celui de [`inspectedWindow.eval()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval).
+we contexte d'exécution de w'expwession est we m-même que cewui de [`inspectedwindow.evaw()`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/evaw). (⑅˘꒳˘)
 
-Les objets JSON et les noeuds DOM sont affichés en tant qu'arborescence extensible, comme dans la [visionneuse jSON](https://firefox-source-docs.mozilla.org/devtools-user/json_viewer/index.html) dans Firefox. Vous pouvez éventuellement spécifier une chaîne `rootTitle` : elle sera affichée comme le titre de la racine de l'arbre.
+wes objets j-json et wes nyoeuds dom sont a-affichés en tant qu'awbowescence extensibwe, ( ͡o ω ͡o ) comme dans wa [visionneuse j-json](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/json_viewew/index.htmw) dans fiwefox. òωó vous p-pouvez éventuewwement s-spécifiew une chaîne `woottitwe` : ewwe sewa affichée comme we titwe de wa wacine de w-w'awbwe. (⑅˘꒳˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-var evaluating = browser.devtools.panels.setExpression(
-  expression, // string
-  rootTitle, // string
+v-vaw evawuating = bwowsew.devtoows.panews.setexpwession(
+  e-expwession, -.- // s-stwing
+  w-woottitwe, :3 // s-stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `expression`
-  - : `string`. L'expression à évaluer.
-- `rootTitle` {{optional_inline}}
-  - : string. Le titre de la racine de l'arbre dans lequel les résultats sont affichés.
+- `expwession`
+  - : `stwing`. nyaa~~ w'expwession à évawuew. 😳
+- `woottitwe` {{optionaw_inwine}}
+  - : s-stwing. (⑅˘꒳˘) we titwe de wa wacine de w'awbwe dans w-wequew wes wésuwtats sont affichés. nyaa~~
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans arguments, une fois l'expression évaluée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) sewa w-wempwie sans awguments, OwO une fois w-w'expwession évawuée. rawr x3
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code crée un volet de barre latérale qui affiche le [`tagName`](/fr/docs/Web/API/Element/tagName) de l'élément actuellement sélectionné :
+ce code cwée u-un vowet de b-bawwe watéwawe qui affiche we [`tagname`](/fw/docs/web/api/ewement/tagname) d-de w-w'éwément actuewwement séwectionné :
 
 ```js
-function onCreated(sidebarPane) {
-  browser.devtools.panels.elements.onSelectionChanged.addListener(() => {
-    const exp = "$0 && $0.tagName";
-    const title = "Selected Element tagName";
-    sidebarPane.setExpression(exp, title);
+f-function oncweated(sidebawpane) {
+  bwowsew.devtoows.panews.ewements.onsewectionchanged.addwistenew(() => {
+    c-const exp = "$0 && $0.tagname";
+    const titwe = "sewected ewement t-tagname";
+    sidebawpane.setexpwession(exp, XD t-titwe);
   });
 }
 
-browser.devtools.panels.elements.createSidebarPane("My pane").then(onCreated);
+bwowsew.devtoows.panews.ewements.cweatesidebawpane("my p-pane").then(oncweated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> c-cette api est basée suw w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (U ᵕ U❁) aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and b-binawy fowms, (U ﹏ U) w-with ow without
+// m-modification, :3 awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above c-copywight
+// notice, ( ͡o ω ͡o ) this wist o-of conditions a-and the fowwowing d-discwaimew. σωσ
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// c-copywight nyotice, >w< this wist of conditions and t-the fowwowing discwaimew
+// i-in the d-documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe i-inc. OwO nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, 😳😳😳 incwuding, (˘ω˘) b-but nyot
+// wimited to, ʘwʘ the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ( ͡o ω ͡o ) i-in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, o.O indiwect, >w< incidentaw, 😳
+// s-speciaw, e-exempwawy, 🥺 ow consequentiaw d-damages (incwuding, rawr x3 b-but nyot
+// wimited to, o.O pwocuwement of substitute goods ow sewvices; woss o-of use, rawr
+// data, ʘwʘ o-ow pwofits; ow b-business intewwuption) howevew c-caused and on any
+// t-theowy of wiabiwity, 😳😳😳 whethew i-in contwact, ^^;; stwict wiabiwity, o.O ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, (///ˬ///✿) even if a-advised of the possibiwity o-of such damage. σωσ
 -->

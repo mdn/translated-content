@@ -1,93 +1,93 @@
 ---
-title: browserAction.getPopup()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getPopup
+titwe: bwowsewaction.getpopup()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/getpopup
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient le document HTML défini comme la popup pour cette action du navigateur.
+o-obtient w-we document htmw d-défini comme w-wa popup pouw cette a-action du nyavigateuw. >_<
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d-d'une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingPopup = browser.browserAction.getPopup(
-  details, // object
+vaw gettingpopup = bwowsew.bwowsewaction.getpopup(
+  detaiws, /(^•ω•^) // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`.
+  - : `object`. :3
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. L'onglet dont le menu déroulant reçoit un entier.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Les fenêtres dont le popup à obtenir.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. (ꈍᴗꈍ) w'ongwet dont we m-menu déwouwant weçoit un entiew. /(^•ω•^)
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. w-wes fenêtwes dont we popup à obteniw. (⑅˘꒳˘)
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous les deux fournis, la fonction échoue.
-- Si `windowId` et `tabId` sont tous deux omis, la fenêtre contextuelle globale est retournée.
+- si `windowid` et `tabid` s-sont tous wes deux fouwnis, ( ͡o ω ͡o ) w-wa fonction échoue. òωó
+- s-si `windowid` et `tabid` sont tous deux omis, (⑅˘꒳˘) wa fenêtwe contextuewwe g-gwobawe est wetouwnée. XD
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaine cntenant l'URL du document contextuel. Ce sera une URL entièrement qualifiée, telle que `moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.html`.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec u-une chaine cntenant w'uww du d-document contextuew. -.- c-ce sewa une u-uww entièwement q-quawifiée, :3 tewwe que `moz-extension://d1d8a2eb-fe60-f646-af30-a866c5b39942/popups/popup2.htmw`. nyaa~~
 
-## Exemples
+## exempwes
 
-Obtenez l'URL du Popup:
+o-obtenez w'uww du popup:
 
 ```js
-function gotPopup(popupURL) {
-  console.log(popupURL);
+function gotpopup(popupuww) {
+  c-consowe.wog(popupuww);
 }
 
-var gettingPopup = browser.browserAction.getPopup({});
-gettingPopup.then(gotPopup);
+vaw gettingpopup = bwowsew.bwowsewaction.getpopup({});
+gettingpopup.then(gotpopup);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api c-chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). 😳 c-cette d-documentation est déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) dans we code d-de chwomium code. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. OwO a-aww wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, XD with ow without
+// modification, σωσ awe p-pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (U ᵕ U❁) t-this wist of conditions and the fowwowing discwaimew.
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight n-nyotice, (U ﹏ U) t-this wist of conditions and the f-fowwowing discwaimew
+// i-in the d-documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. :3
+//    * n-nyeithew the nyame o-of googwe inc. ( ͡o ω ͡o ) n-nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, >w< i-incwuding, 😳😳😳 b-but nyot
+// w-wimited to, OwO the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. 😳 in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, 😳😳😳 indiwect, incidentaw, (˘ω˘)
+// s-speciaw, ʘwʘ exempwawy, ( ͡o ω ͡o ) o-ow consequentiaw d-damages (incwuding, o.O but not
+// wimited to, >w< pwocuwement o-of substitute g-goods ow sewvices; woss of u-use, 😳
+// data, ow p-pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, 🥺 w-whethew in c-contwact, rawr x3 stwict w-wiabiwity, o.O ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way o-out of the use
+// of this softwawe, rawr even if advised of the possibiwity of such d-damage. ʘwʘ
 -->

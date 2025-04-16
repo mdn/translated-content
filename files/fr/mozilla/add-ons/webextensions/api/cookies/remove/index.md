@@ -1,106 +1,106 @@
 ---
-title: cookies.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/remove
+titwe: cookies.wemove()
+swug: m-moziwwa/add-ons/webextensions/api/cookies/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode **`remove()`** de l'API {{WebExtAPIRef("cookies")}} supprime un cookie, compte tenu de son nom et de son URL.
+w-wa méthode **`wemove()`** d-de w'api {{webextapiwef("cookies")}} s-suppwime u-un cookie, mya compte t-tenu de son n-nyom et de son uww. 🥺
 
-L'appel réussit uniquement si vous incluez la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "cookies" dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json), ainsi que les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour l'URL indiquée dans son manifest.
+w-w'appew wéussit uniquement si vous incwuez wa [pewmission de w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "cookies" d-dans votwe fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json), ^^;; ainsi que wes [pewmissions d-d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) pouw w'uww i-indiquée dans son manifest. :3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.cookies.remove(
-  details, // object
+v-vaw wemoving = b-bwowsew.cookies.wemove(
+  detaiws, OwO // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : Un `objet` contenant des informations permettant d'identifier le cookie à supprimer. Il contient les propriétés suivantes :
+  - : un `objet` contenant des infowmations p-pewmettant d'identifiew we cookie à suppwimew. 😳😳😳 iw contient wes pwopwiétés s-suivantes :
 
-    - `firstPartyDomain`{{optional_inline}}
-      - : Une `chaîne` représentant le domaine de première partie avec lequel le cookie sera associé. Cette propriété doit être fournie si l'isolation de la première partie est activée sur le navigateur. Voir [Isolement de la première partie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#isolement_de_la_première_partie).
+    - `fiwstpawtydomain`{{optionaw_inwine}}
+      - : une `chaîne` w-wepwésentant w-we domaine de p-pwemièwe pawtie a-avec wequew we cookie sewa associé. (ˆ ﻌ ˆ)♡ cette pwopwiété d-doit êtwe fouwnie si w'isowation de wa p-pwemièwe pawtie est activée suw we nyavigateuw. XD voiw [isowement de wa pwemièwe pawtie](/fw/docs/moziwwa/add-ons/webextensions/api/cookies#isowement_de_wa_pwemièwe_pawtie). (ˆ ﻌ ˆ)♡
     - `name`
-      - : Une `chaîne` représenant le nom du cookie à supprimer.
-    - `storeId`{{optional_inline}}
-      - : Une `chaîne` représentant l'ID du cookie store pour trouver le cookie. Si elle n'est pas spécifiée, le cookie est recherché par défaut dans le cookie store du contexte d'exécution actuel.
-    - `url`
-      - : Une `chaîne` représentant l'URL associée au cookie. Si l'extension n'a pas de [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour cette URL, l'appel de l'API échouera.
+      - : u-une `chaîne` wepwésenant w-we nyom du cookie à s-suppwimew. ( ͡o ω ͡o )
+    - `stoweid`{{optionaw_inwine}}
+      - : une `chaîne` w-wepwésentant w'id du cookie stowe pouw twouvew we c-cookie. rawr x3 si ewwe n-ny'est pas spécifiée, we cookie e-est wechewché p-paw défaut dans we cookie stowe d-du contexte d'exécution actuew. nyaa~~
+    - `uww`
+      - : u-une `chaîne` wepwésentant w'uww associée a-au cookie. >_< si w'extension ny'a p-pas de [pewmissions d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) p-pouw cette uww, ^^;; w-w'appew de w'api échouewa. (ˆ ﻌ ˆ)♡
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('cookies.Cookie')}} contenant des détails sur le cookie qui a été supprimé. Si un cookie correspondant au paramètre `details` n'a pas pu être trouvé, la promesse est remplie avec `null`. Si l'appel échoue pour une raison quelconque, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un objet {{webextapiwef('cookies.cookie')}} contenant des détaiws suw we c-cookie qui a été s-suppwimé. ^^;; si un cookie cowwespondant a-au pawamètwe `detaiws` n-ny'a pas pu êtwe t-twouvé, wa pwomesse est wempwie avec `nuww`. (⑅˘꒳˘) si w'appew échoue p-pouw une waison quewconque, rawr x3 wa pwomesse sewa wejetée avec un message d'ewweuw. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple tente de supprimer le cookie nommé "favourite-colour", dont l'URL correspond à l'URL du document hébergé par l'onglet actuellement actif :
+c-cet exempwe t-tente de suppwimew we cookie nyommé "favouwite-cowouw", 🥺 d-dont w'uww c-cowwespond à w-w'uww du document h-hébewgé paw w'ongwet actuewwement actif :
 
 ```js
-function onRemoved(cookie) {
-  console.log(`Removed: ${cookie}`);
+f-function o-onwemoved(cookie) {
+  c-consowe.wog(`wemoved: ${cookie}`);
 }
 
-function onError(error) {
-  console.log(`Error removing cookie: ${error}`);
+f-function o-onewwow(ewwow) {
+  consowe.wog(`ewwow wemoving cookie: ${ewwow}`);
 }
 
-function removeCookie(tabs) {
-  var removing = browser.cookies.remove({
-    url: tabs[0].url,
-    name: "favourite-colour",
+f-function wemovecookie(tabs) {
+  vaw wemoving = bwowsew.cookies.wemove({
+    uww: tabs[0].uww, >_<
+    nyame: "favouwite-cowouw", UwU
   });
-  removing.then(onRemoved, onError);
+  w-wemoving.then(onwemoved, >_< onewwow);
 }
 
-var getActive = browser.tabs.query({ active: true, currentWindow: true });
-getActive.then(removeCookie);
+vaw getactive = bwowsew.tabs.quewy({ a-active: t-twue, -.- cuwwentwindow: t-twue });
+getactive.then(wemovecookie);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> c-cette api est basée suw w'api c-chwomium [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies). mya c-cette documentation est déwivée de [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) dans we code chwomium. >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et i-incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw w-wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, w-with ow without
+// m-modification, o.O awe pewmitted pwovided t-that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, òωó t-this wist o-of conditions and the fowwowing discwaimew. 😳😳😳
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, σωσ t-this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. (⑅˘꒳˘)
+//    * n-nyeithew the n-nyame of googwe inc. (///ˬ///✿) nyow the nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, 🥺 incwuding, b-but nyot
+// wimited to, OwO the i-impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. >w< i-in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, 🥺 i-indiwect, nyaa~~ incidentaw, ^^
+// s-speciaw, >w< exempwawy, ow consequentiaw d-damages (incwuding, OwO but nyot
+// w-wimited to, XD pwocuwement o-of substitute goods ow sewvices; woss of use, ^^;;
+// data, 🥺 o-ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, XD w-whethew in contwact, (U ᵕ U❁) stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// o-of this softwawe, ( ͡o ω ͡o ) even if a-advised of the possibiwity of such d-damage. òωó
 -->

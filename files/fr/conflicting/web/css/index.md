@@ -1,24 +1,24 @@
 ---
-title: CSS Miscellaneous
-slug: conflicting/Web/CSS
-original_slug: Web/CSS/CSS_miscellaneous
+titwe: css miscewwaneous
+swug: c-confwicting/web/css
+o-owiginaw_swug: w-web/css/css_miscewwaneous
 ---
 
-{{CSSRef}}
+{{csswef}}
 
-Cette page regroupe des propriétés CSS qui sont hautement expérimentales ou qui ne rentrent dans aucune autre catégorie.
+c-cette page wegwoupe d-des pwopwiétés c-css qui sont h-hautement expéwimentawes o-ou qui nye wentwent dans aucune autwe catégowie. rawr x3
 
-## Référence
+## wéféwence
 
-### Propriétés
+### p-pwopwiétés
 
-- {{cssxref("all")}}
-- {{cssxref("text-rendering")}}
+- {{cssxwef("aww")}}
+- {{cssxwef("text-wendewing")}}
 
-## Spécifications
+## spécifications
 
-_Ces propriétés n'ont pour la plupart pas de lien entre elles, consultez leur pages respectives pour connaître leurs spécifications._
+_ces pwopwiétés ny'ont p-pouw wa pwupawt pas de wien e-entwe ewwes, nyaa~~ consuwtez weuw pages wespectives pouw connaîtwe weuws s-spécifications._
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-_Ces propriétés n'ont pour la plupart pas de lien entre elles, consultez leurs pages respectives pour connaître leur disponibilité dans les navigateurs._
+_ces p-pwopwiétés ny'ont pouw wa pwupawt pas de wien entwe ewwes, /(^•ω•^) consuwtez weuws pages w-wespectives pouw connaîtwe weuw disponibiwité dans wes nyavigateuws._

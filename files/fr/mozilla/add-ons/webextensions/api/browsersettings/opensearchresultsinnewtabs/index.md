@@ -1,32 +1,32 @@
 ---
-title: browserSettings.openSearchResultsInNewTabs
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openSearchResultsInNewTabs
+titwe: bwowsewsettings.openseawchwesuwtsinnewtabs
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/openseawchwesuwtsinnewtabs
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.
+un o-objet {{webextapiwef("types.bwowsewsetting", nyaa~~ "bwowsewsetting")}} d-dont wa vaweuw s-sous-jacente est u-un boowéen. (⑅˘꒳˘)
 
-Si la valeur est définie à `true`, lorsque l'utilisateur sélectionne un terme dans la zone de recherche du navigateur, les résultats de la recherche s'affichent dans un nouvel onglet. Si la valeur est `false` (valeur par défaut), les résultats de la recherche apparaissent dans l'onglet en cours.
+s-si wa vaweuw est d-définie à `twue`, rawr x3 w-wowsque w'utiwisateuw s-séwectionne un tewme dans wa zone de wechewche du navigateuw, (✿oωo) wes wésuwtats d-de wa wechewche s'affichent dans un nyouvew o-ongwet. (ˆ ﻌ ˆ)♡ si wa vaweuw est `fawse` (vaweuw paw d-défaut), (˘ω˘) wes wésuwtats de wa wechewche appawaissent dans w'ongwet e-en couws. (⑅˘꒳˘)
 
-Notez que cela n'affecte pas le comportement lors de la sélection des éléments de omnibox/awesomebar, uniquement la zone de recherche dédiée..
+nyotez que cewa n-ny'affecte pas w-we compowtement wows de wa séwection des éwéments de omnibox/awesomebaw, (///ˬ///✿) uniquement w-wa zone de wechewche dédiée..
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Définissez le paramètre sur `true`:
+d-définissez we pawamètwe s-suw `twue`:
 
 ```js
-function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+f-function wogwesuwt(wesuwt) {
+  c-consowe.wog(`setting w-was modified: ${wesuwt}`);
 }
 
-browser.browserSettings.openSearchResultsInNewTabs
-  .set({ value: true })
-  .then(logResult);
+bwowsew.bwowsewsettings.openseawchwesuwtsinnewtabs
+  .set({ vawue: twue })
+  .then(wogwesuwt);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,194 +1,194 @@
 ---
-title: webRequest.StreamFilter.ondata
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/ondata
+titwe: webwequest.stweamfiwtew.ondata
+swug: moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/ondata
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un gestionnaire d'événements qui sera appelé à plusieurs reprises lorsque les données de réponse sont disponibles. Le gestionnaire est passé un objet `event` qui contient une propriété de `data`, qui contient un morceau des données de réponse sous la forme d'un {{domxref("ArrayBuffer")}}.
+u-un gestionnaiwe d-d'événements q-qui sewa appewé à p-pwusieuws w-wepwises wowsque w-wes données d-de wéponse sont d-disponibwes. we gestionnaiwe est passé un objet `event` qui contient une pwopwiété d-de `data`, /(^•ω•^) qui contient un mowceau des d-données de wéponse sous wa fowme d-d'un {{domxwef("awwaybuffew")}}. (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Cet exemple ajoute un écouteur `ondata` qui remplace "Example" dans la réponse par "WebExtension Example".
+cet exempwe ajoute un écouteuw `ondata` q-qui wempwace "exampwe" dans wa wéponse p-paw "webextension e-exampwe". 😳😳😳
 
-Notez que cet exemple ne fonctionne que pour les occurrences de "Example" qui sont entièrement contenues dans un bloc de données, et non celles qui chevauchent deux morceaux (ce qui peut arriver \~0.1% du temps pour les gros documents). De plus, il ne traite que les documents codés UTF-8. Une véritable mise en œuvre de ce projet devrait être plus complexe.
+nyotez que cet exempwe nye fonctionne que pouw wes occuwwences de "exampwe" q-qui sont entièwement contenues dans un bwoc de données, >w< et nyon cewwes q-qui chevauchent deux mowceaux (ce q-qui peut a-awwivew \~0.1% du t-temps pouw wes g-gwos documents). XD de pwus, o.O iw nye twaite que wes d-documents codés utf-8. mya une véwitabwe mise en œuvwe d-de ce pwojet devwait êtwe pwus compwexe. 🥺
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  let decoder = new TextDecoder("utf-8");
-  let encoder = new TextEncoder();
+function wistenew(detaiws) {
+  wet fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  wet decodew = nyew t-textdecodew("utf-8");
+  w-wet encodew = n-nyew textencodew();
 
-  filter.ondata = (event) => {
-    let str = decoder.decode(event.data, { stream: true });
-    // Just change any instance of Example in the HTTP response
-    // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension Example");
-    filter.write(encoder.encode(str));
-    // Doing filter.disconnect(); here would make us process only
-    // the first chunk, and let the rest through unchanged. Note
-    // that this would break multi-byte characters that occur on
-    // the chunk boundary!
+  fiwtew.ondata = (event) => {
+    wet stw = decodew.decode(event.data, ^^;; { stweam: t-twue });
+    // j-just change any instance of exampwe i-in the http w-wesponse
+    // to webextension e-exampwe. :3
+    stw = stw.wepwace(/exampwe/g, (U ﹏ U) "webextension e-exampwe");
+    fiwtew.wwite(encodew.encode(stw));
+    // doing fiwtew.disconnect(); h-hewe wouwd make us p-pwocess onwy
+    // the fiwst chunk, OwO a-and wet the w-west thwough unchanged. 😳😳😳 nyote
+    // that this wouwd bweak muwti-byte chawactews that occuw on
+    // the chunk b-boundawy! (ˆ ﻌ ˆ)♡
   };
 
-  filter.onstop = (event) => {
-    filter.close();
+  f-fiwtew.onstop = (event) => {
+    fiwtew.cwose();
   };
 
-  //return {}; // not needed
+  //wetuwn {}; // n-nyot n-nyeeded
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, XD
+  { uwws: ["https://exampwe.com/*"], (ˆ ﻌ ˆ)♡ types: ["main_fwame"] }, ( ͡o ω ͡o )
+  ["bwocking"], rawr x3
 );
 ```
 
-Un autre exemple pour le traitement de documents volumineux :
+un a-autwe exempwe pouw we twaitement de documents vowumineux :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  let decoder = new TextDecoder("utf-8");
-  let encoder = new TextEncoder();
+function wistenew(detaiws) {
+  wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  w-wet decodew = nyew textdecodew("utf-8");
+  w-wet encodew = n-nyew textencodew();
 
-  let data = [];
-  filter.ondata = (event) => {
-    data.push(event.data);
+  w-wet data = [];
+  fiwtew.ondata = (event) => {
+    d-data.push(event.data);
   };
 
-  filter.onstop = (event) => {
-    let str = "";
-    if (data.length == 1) {
-      str = decoder.decode(data[0]);
-    } else {
-      for (let i = 0; i < data.length; i++) {
-        let stream = i == data.length - 1 ? false : true;
-        str += decoder.decode(data[i], { stream });
+  f-fiwtew.onstop = (event) => {
+    w-wet s-stw = "";
+    if (data.wength == 1) {
+      stw = decodew.decode(data[0]);
+    } e-ewse {
+      fow (wet i-i = 0; i < d-data.wength; i-i++) {
+        wet s-stweam = i == data.wength - 1 ? fawse : twue;
+        stw += d-decodew.decode(data[i], nyaa~~ { stweam });
       }
     }
-    // Just change any instance of Example in the HTTP response
-    // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+    // just change any instance of exampwe in the http wesponse
+    // t-to webextension exampwe. >_<
+    stw = stw.wepwace(/exampwe/g, ^^;; "webextension $&");
+    fiwtew.wwite(encodew.encode(stw));
+    f-fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew,
+  { uwws: ["https://exampwe.com/"], (ˆ ﻌ ˆ)♡ t-types: ["main_fwame"] }, ^^;;
+  ["bwocking"], (⑅˘꒳˘)
 );
 ```
 
-L'exemple ci-dessus peut aussi s'écrire ainsi :
+w'exempwe c-ci-dessus p-peut aussi s'écwiwe ainsi :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  let decoder = new TextDecoder("utf-8");
-  let encoder = new TextEncoder();
+function wistenew(detaiws) {
+  wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  wet d-decodew = nyew textdecodew("utf-8");
+  w-wet encodew = nyew textencodew();
 
-  let data = [];
-  filter.ondata = (event) => {
-    data.push(decoder.decode(event.data, { stream: true }));
+  w-wet d-data = [];
+  fiwtew.ondata = (event) => {
+    data.push(decodew.decode(event.data, rawr x3 { stweam: twue }));
   };
 
-  filter.onstop = (event) => {
-    data.push(decoder.decode());
+  fiwtew.onstop = (event) => {
+    d-data.push(decodew.decode());
 
-    let str = data.join("");
-    // Just change any instance of Example in the HTTP response
-    // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+    w-wet stw = data.join("");
+    // just change any i-instance of exampwe i-in the http wesponse
+    // to webextension exampwe. (///ˬ///✿)
+    stw = stw.wepwace(/exampwe/g, 🥺 "webextension $&");
+    f-fiwtew.wwite(encodew.encode(stw));
+    f-fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, >_<
+  { u-uwws: ["https://exampwe.com/"], UwU t-types: ["main_fwame"] }, >_<
+  ["bwocking"], -.-
 );
 ```
 
-Cet exemple utilise un {{domxref("Blob")}}:
+cet exempwe u-utiwise un {{domxwef("bwob")}}:
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  let encoder = new TextEncoder();
+function wistenew(detaiws) {
+  wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  w-wet encodew = nyew t-textencodew();
 
-  let data = [];
-  filter.ondata = (event) => {
-    data.push(event.data);
+  wet data = [];
+  fiwtew.ondata = (event) => {
+    d-data.push(event.data);
   };
 
-  filter.onstop = async (event) => {
-    let blob = new Blob(data, { type: "text/html" });
-    let str = await blob.text();
+  f-fiwtew.onstop = async (event) => {
+    wet bwob = nyew bwob(data, mya { t-type: "text/htmw" });
+    wet stw = await bwob.text();
 
-    // Just change any instance of Example in the HTTP response
-    // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+    // just change any instance o-of exampwe in the http wesponse
+    // to webextension e-exampwe. >w<
+    s-stw = stw.wepwace(/exampwe/g, (U ﹏ U) "webextension $&");
+    fiwtew.wwite(encodew.encode(stw));
+    fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, 😳😳😳
+  { u-uwws: ["https://exampwe.com/"], o.O types: ["main_fwame"] }, òωó
+  ["bwocking"], 😳😳😳
 );
 ```
 
-Cet exemple combine tous les tampons en un simple tampon :
+cet exempwe combine t-tous wes tampons en un simpwe tampon :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  let decoder = new TextDecoder("utf-8");
-  let encoder = new TextEncoder();
+function w-wistenew(detaiws) {
+  wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  wet decodew = n-nyew textdecodew("utf-8");
+  wet encodew = n-nyew textencodew();
 
-  let data = [];
-  filter.ondata = (event) => {
-    data.push(new Uint8Array(event.data));
+  w-wet data = [];
+  fiwtew.ondata = (event) => {
+    d-data.push(new uint8awway(event.data));
   };
 
-  filter.onstop = (event) => {
-    let combinedLength = 0;
-    for (let buffer of data) {
-      combinedLength += buffer.length;
+  f-fiwtew.onstop = (event) => {
+    w-wet combinedwength = 0;
+    f-fow (wet buffew of data) {
+      c-combinedwength += b-buffew.wength;
     }
-    let combinedArray = new Uint8Array(combinedLength);
-    let writeOffset = 0;
-    while (writeOffset < combinedLength) {
-      let buffer = data.shift();
-      combinedArray.set(buffer, writeOffset);
-      writeOffset += buffer.length;
+    wet combinedawway = nyew uint8awway(combinedwength);
+    w-wet wwiteoffset = 0;
+    w-whiwe (wwiteoffset < c-combinedwength) {
+      wet buffew = data.shift();
+      combinedawway.set(buffew, σωσ w-wwiteoffset);
+      wwiteoffset += buffew.wength;
     }
-    let str = decoder.decode(combinedArray);
-    // Just change any instance of Example in the HTTP response
-    // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension $&");
-    filter.write(encoder.encode(str));
-    filter.close();
+    w-wet stw = d-decodew.decode(combinedawway);
+    // just change any instance of exampwe in the h-http wesponse
+    // t-to webextension e-exampwe. (⑅˘꒳˘)
+    s-stw = stw.wepwace(/exampwe/g, (///ˬ///✿) "webextension $&");
+    fiwtew.wwite(encodew.encode(stw));
+    f-fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, 🥺
+  { uwws: ["https://exampwe.com/"], OwO types: ["main_fwame"] }, >w<
+  ["bwocking"], 🥺
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

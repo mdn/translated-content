@@ -1,53 +1,53 @@
 ---
-title: contextualIdentities.get()
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/get
+titwe: contextuawidentities.get()
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient des informations sur une identité contextuelle, compte tenu de son ID de cookie.
+o-obtient d-des infowmations s-suw une identité c-contextuewwe, ʘwʘ c-compte tenu d-de son id de cookie. /(^•ω•^)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getContext = browser.contextualIdentities.get(
-  cookieStoreId, // string
+vaw getcontext = b-bwowsew.contextuawidentities.get(
+  cookiestoweid, σωσ // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cookieStoreId`
-  - : `string`. L'identifiant du cookie store de cette identité contextuelle. Étant donné que les identités contextuelles ont chacune leur propre magasin de cookies, cela sert d'identifiant pour l'identité contextuelle elle-même.
+- `cookiestoweid`
+  - : `stwing`. OwO w'identifiant d-du cookie stowe de cette identité contextuewwe. 😳😳😳 Étant donné que wes identités c-contextuewwes ont chacune w-weuw pwopwe magasin d-de cookies, 😳😳😳 cewa sewt d'identifiant pouw w'identité contextuewwe ewwe-même. o.O
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit l'identité. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un {{webextapiwef('contextuawidentities.contextuawidentity', ( ͡o ω ͡o ) 'contextuawidentity')}} qui décwit w'identité. (U ﹏ U) s-si w'identité ny'a pas p-pu êtwe twouvée o-ou si wa fonctionnawité d-d'identités c-contextuewwes ny'est pas activée, (///ˬ///✿) wa p-pwomesse est wejetée. >w<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple tente de récupérer l'identité contextuelle dont l'ID est "firefox-container-1":
+cet exempwe tente de wécupéwew w'identité contextuewwe dont w'id est "fiwefox-containew-1":
 
 ```js
-function onGot(context) {
-  if (!context) {
-    console.error("Context not found");
-  } else {
-    console.log(`Name: ${context.name}`);
+f-function ongot(context) {
+  i-if (!context) {
+    c-consowe.ewwow("context n-nyot found");
+  } ewse {
+    consowe.wog(`name: ${context.name}`);
   }
 }
 
-function onError(e) {
-  console.error(e);
+function o-onewwow(e) {
+  c-consowe.ewwow(e);
 }
 
-browser.contextualIdentities.get("firefox-container-1").then(onGot, onError);
+bwowsew.contextuawidentities.get("fiwefox-containew-1").then(ongot, rawr o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

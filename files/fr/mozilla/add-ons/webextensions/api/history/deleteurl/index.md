@@ -1,129 +1,129 @@
 ---
-title: history.deleteUrl()
-slug: Mozilla/Add-ons/WebExtensions/API/history/deleteUrl
+titwe: histowy.deweteuww()
+swug: m-moziwwa/add-ons/webextensions/api/histowy/deweteuww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime toutes les visites à l'URL donnée de l'historique du navigateur.
+suppwime t-toutes wes v-visites à w'uww d-donnée de w'histowique d-du navigateuw. 😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est u-une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var deletingUrl = browser.history.deleteUrl(
-  details, // object
+vaw dewetinguww = bwowsew.histowy.deweteuww(
+  d-detaiws, (˘ω˘) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Objet contenant l'URL dont les visites doivent être supprimées.
+  - : `object`. ʘwʘ objet c-contenant w'uww dont wes visites d-doivent êtwe suppwimées. ( ͡o ω ͡o )
 
-    - `url`
-      - : `string`. L'URL dont les visites doivent être supprimées.
+    - `uww`
+      - : `stwing`. o.O w'uww dont wes visites doivent êtwe s-suppwimées. >w<
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans paramètres lorsque les visites auront été supprimées.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) s-sewa wempwie sans pawamètwes wowsque wes visites auwont été suppwimées. 😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Supprimez toutes les visites de "https\://example.org/" de l'historique, puis vérifiez que cette URL n'est plus renvoyée par {{WebExtAPIRef("history.search()")}}:
+suppwimez toutes wes visites de "https\://exampwe.owg/" d-de w'histowique, 🥺 puis véwifiez q-que cette uww n-ny'est pwus wenvoyée p-paw {{webextapiwef("histowy.seawch()")}}:
 
 ```js
-var urlToRemove = "https://example.org/";
+v-vaw uwwtowemove = "https://exampwe.owg/";
 
-function onGot(results) {
-  if (!results.length) {
-    console.log(urlToRemove + " was removed");
-  } else {
-    console.log(urlToRemove + " was not removed");
+function ongot(wesuwts) {
+  if (!wesuwts.wength) {
+    c-consowe.wog(uwwtowemove + " was wemoved");
+  } ewse {
+    c-consowe.wog(uwwtowemove + " was nyot wemoved");
   }
 }
 
-function onRemoved() {
-  var searching = browser.history.search({
-    text: urlToRemove,
-    startTime: 0,
+function onwemoved() {
+  vaw seawching = bwowsew.histowy.seawch({
+    t-text: uwwtowemove, rawr x3
+    stawttime: 0, o.O
   });
 
-  searching.then(onGot);
+  s-seawching.then(ongot);
 }
 
-var deletingUrl = browser.history.deleteUrl({ url: urlToRemove });
+v-vaw dewetinguww = b-bwowsew.histowy.deweteuww({ uww: uwwtowemove });
 
-deletingUrl.then(onRemoved);
+dewetinguww.then(onwemoved);
 ```
 
-Supprimez la dernière page visitée de l'historique, avec un écouteur à {{WebExtAPIRef("history.onVisitRemoved")}} pour consigner l'URL de la page supprimée :
+suppwimez wa dewnièwe page visitée d-de w'histowique, rawr a-avec un écouteuw à {{webextapiwef("histowy.onvisitwemoved")}} pouw consignew w-w'uww de wa p-page suppwimée :
 
 ```js
-function onRemoved(removeInfo) {
-  if (removeInfo.urls.length) {
-    console.log("Removed: " + removeInfo.urls[0]);
+function o-onwemoved(wemoveinfo) {
+  if (wemoveinfo.uwws.wength) {
+    c-consowe.wog("wemoved: " + wemoveinfo.uwws[0]);
   }
 }
 
-browser.history.onVisitRemoved.addListener(onRemoved);
+bwowsew.histowy.onvisitwemoved.addwistenew(onwemoved);
 
-function onGot(results) {
-  if (results.length) {
-    console.log("Removing: " + results[0].url);
-    browser.history.deleteUrl({ url: results[0].url });
+f-function ongot(wesuwts) {
+  i-if (wesuwts.wength) {
+    consowe.wog("wemoving: " + wesuwts[0].uww);
+    b-bwowsew.histowy.deweteuww({ u-uww: wesuwts[0].uww });
   }
 }
 
-var searching = browser.history.search({
-  text: "",
-  startTime: 0,
-  maxResults: 1,
+vaw seawching = bwowsew.histowy.seawch({
+  text: "", ʘwʘ
+  stawttime: 0, 😳😳😳
+  maxwesuwts: 1, ^^;;
 });
 
-searching.then(onGot);
+seawching.then(ongot);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> cette api e-est basée suw w-w'api chwomium [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy). o.O cette documentation e-est d-déwivée de [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) d-dans we code de chwomium. (///ˬ///✿)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. nyaa~~ a-aww wights w-wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, ^•ﻌ•^ with ow without
+// m-modification, σωσ a-awe pewmitted p-pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// nyotice, -.- this wist of conditions and the fowwowing discwaimew. ^^;;
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight n-nyotice, XD this wist o-of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided with the
+// distwibution. 🥺
+//    * nyeithew the name of googwe inc. òωó nyow the n-nyames of its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow w-wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, -.- i-incwuding, :3 but nyot
+// w-wimited to, ʘwʘ t-the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 🥺 in no event shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any d-diwect, >_< indiwect, incidentaw, ʘwʘ
+// speciaw, (˘ω˘) exempwawy, (✿oωo) o-ow consequentiaw d-damages (incwuding, (///ˬ///✿) but nyot
+// wimited to, rawr x3 pwocuwement of s-substitute goods ow sewvices; woss of use,
+// data, -.- ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of w-wiabiwity, ^^ whethew i-in contwact, (⑅˘꒳˘) stwict wiabiwity, nyaa~~ ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, /(^•ω•^) even i-if advised of the possibiwity of s-such damage.
 -->

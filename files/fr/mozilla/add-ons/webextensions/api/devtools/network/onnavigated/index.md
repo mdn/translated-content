@@ -1,88 +1,88 @@
 ---
-title: devtools.network.onNavigated
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated
+titwe: devtoows.netwowk.onnavigated
+swug: moziwwa/add-ons/webextensions/api/devtoows/netwowk/onnavigated
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Mise en place lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page
+m-mise en pwace w-wowsque w'utiwisateuw n-nyavigue d-dans wa fenêtwe i-inspectée vews u-une nyouvewwe page
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.devtools.network.onNavigated.addListener(listener);
-browser.devtools.network.onNavigated.removeListener(listener);
-browser.devtools.network.onNavigated.hasListener(listener);
+b-bwowsew.devtoows.netwowk.onnavigated.addwistenew(wistenew);
+bwowsew.devtoows.netwowk.onnavigated.wemovewistenew(wistenew);
+bwowsew.devtoows.netwowk.onnavigated.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajouter un auditeur à cet événement.
-- `removeListener(listener)`
-  - : Arrêter d'écouter un événement. L'argument de l'auditeur est l'auditeur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie **vrai** si elle écoute, sinon **faux**.
+- `addwistenew(wistenew)`
+  - : a-ajoutew un auditeuw à cet événement. (U ﹏ U)
+- `wemovewistenew(wistenew)`
+  - : a-awwêtew d'écoutew un événement. -.- w-w'awgument de w'auditeuw est w'auditeuw à suppwimew. ^•ﻌ•^
+- `haswistenew(wistenew)`
+  - : v-véwifiez si w'auditeuw est enwegistwé p-pouw cet événement. rawr w-wenvoie **vwai** si ewwe écoute, (˘ω˘) sinon **faux**. nyaa~~
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
+  - : f-fonction qui sewa appewée wows de w'événement. UwU wa fonction passewa w-wes awguments suivants :
 
-    - `url`
-      - : `string`. La nouvelle URL pour la fenêtre.
+    - `uww`
+      - : `stwing`. :3 w-wa n-nouvewwe uww pouw w-wa fenêtwe. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-function handleNavigated(url) {
-  console.log(url);
+f-function handwenavigated(uww) {
+  consowe.wog(uww);
 }
 
-browser.devtools.network.onNavigated.addListener(handleNavigated);
+bwowsew.devtoows.netwowk.onnavigated.addwistenew(handwenavigated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
+> c-cette api est basée suw w'api [`chwome.devtoows`](https://devewopew.chwome.com/extensions/devtoows) de chwomium. (///ˬ///✿)
 >
-> Les données de compatibilité de Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> wes données de compatibiwité de micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et sont incwuses i-ici sous wa wicence cweative commons attwibution 3.0 united s-states. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. >_< a-aww wights w-wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, /(^•ω•^) w-with ow without
+// modification, :3 awe pewmitted p-pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (ꈍᴗꈍ) this wist of conditions and the fowwowing discwaimew. /(^•ω•^)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight n-nyotice, (⑅˘꒳˘) this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. ( ͡o ω ͡o )
+//    * n-nyeithew the name of googwe i-inc. òωó nyow the n-nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as is" and any expwess ow impwied wawwanties, XD i-incwuding, -.- but nyot
+// wimited to, :3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. nyaa~~ in no event shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, indiwect, 😳 i-incidentaw, (⑅˘꒳˘)
+// speciaw, nyaa~~ exempwawy, o-ow consequentiaw d-damages (incwuding, OwO but nyot
+// wimited to, pwocuwement of substitute goods ow sewvices; woss o-of use, rawr x3
+// data, XD ow pwofits; o-ow business intewwuption) howevew c-caused and on a-any
+// theowy of wiabiwity, σωσ whethew in contwact, (U ᵕ U❁) s-stwict wiabiwity, (U ﹏ U) o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, :3 even if advised of the p-possibiwity of s-such damage.
 -->

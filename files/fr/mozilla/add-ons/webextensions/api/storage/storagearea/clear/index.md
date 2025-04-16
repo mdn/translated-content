@@ -1,53 +1,53 @@
 ---
-title: StorageArea.clear()
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/clear
+titwe: stowageawea.cweaw()
+swug: m-moziwwa/add-ons/webextensions/api/stowage/stowageawea/cweaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime tous les éléments de la zone de stockage.
+s-suppwime t-tous wes éwéments d-de wa zone de s-stockage. òωó
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction a-asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-## Syntaxe
-
-```js
-var clearing = browser.storage.<storageType>.clear()
-```
-
-`<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync")}} or {{WebExtAPIRef("storage.local")}}.
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments si l'opération a réussi. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur..
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
+## syntaxe
 
 ```js
-function onCleared() {
-  console.log("OK");
-}
-
-function onError(e) {
-  console.log(e);
-}
-
-var clearStorage = browser.storage.local.clear();
-clearStorage.then(onCleared, onError);
+vaw cweawing = bwowsew.stowage.<stowagetype>.cweaw()
 ```
 
-{{WebExtExamples}}
+`<stowagetype>` sewa w'un des types d-de stockage accessibwes en écwituwe — {{webextapiwef("stowage.sync")}} ow {{webextapiwef("stowage.wocaw")}}. /(^•ω•^)
 
-> [!NOTE]
+### p-pawamètwes
+
+nyone.
+
+### v-vaweuw wetouwnée
+
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie sans a-awguments si w'opéwation a w-wéussi. ʘwʘ si w'opéwation a-a échoué, σωσ wa pwomesse sewa wejetée avec un message d'ewweuw..
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## exempwes
+
+```js
+function oncweawed() {
+  c-consowe.wog("ok");
+}
+
+function o-onewwow(e) {
+  c-consowe.wog(e);
+}
+
+v-vaw cweawstowage = b-bwowsew.stowage.wocaw.cweaw();
+cweawstowage.then(oncweawed, OwO onewwow);
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> c-cette api est basée suw w'api chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). 😳😳😳 c-cette documentation est déwivée de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) dans we code de chwomium.
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge s-sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. 😳😳😳

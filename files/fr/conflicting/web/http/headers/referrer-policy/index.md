@@ -1,54 +1,54 @@
 ---
-title: "CSP: referrer"
-slug: conflicting/Web/HTTP/Headers/Referrer-Policy
-original_slug: Web/HTTP/Headers/Content-Security-Policy/referrer
+titwe: "csp: wefewwew"
+swug: c-confwicting/web/http/headews/wefewwew-powicy
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/wefewwew
 ---
 
-{{HTTPSidebar}} {{deprecated_header}}
+{{httpsidebaw}} {{depwecated_headew}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`referrer`** spécifie des informations dans l'en-tête HTTP {{HTTPHeader("Referer")}} (avec un seul r) pour les liens externes d'une page. Cette API est dépréciée et supprimée des navigateurs.
+w-wa diwective h-http {{httpheadew("content-secuwity-powicy")}} (csp) **`wefewwew`** s-spécifie d-des infowmations d-dans w'en-tête http {{httpheadew("wefewew")}} (avec un seuw w) pouw wes wiens extewnes d'une p-page. nyaa~~ cette api est dépwéciée et suppwimée d-des nyavigateuws. (✿oωo)
 
-> [!NOTE]
-> Utilisez plutôt l'en-tête HTTP {{HTTPHeader("Referrer-Policy")}}.
+> [!note]
+> utiwisez pwutôt w-w'en-tête http {{httpheadew("wefewwew-powicy")}}. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
-Soit cet en-tête CSP :
-
-```
-Content-Security-Policy: referrer <referrer-policy>;
-```
-
-Où `<referrer-policy>` peut être une valeur parmi :
-
-- "no-referrer"
-  - : L'en-tête HTTP {{HTTPHeader("Referer")}} sera omise. Aucune information de référent ne sera envoyée avec les requêtes.
-- "none-when-downgrade"
-  - : C'est le comportement par défaut des agents d'utilisateur si la directive n'est pas spécifiée. L'origine est envoyée comme référent pour une destination a priori aussi bien sécurisée (HTTP vers HTTP ou HTTPS vers HTTPS), mais n'est pas envoyée vers une destination qui l'est moins (HTTPS vers HTTP).
-- "origin"
-  - : Envoie l'origine du document comme référent dans tous les cas.
-    Le document `https://example.com/page.html` enverra `https://example.com/` comme référent.
-- "origin-when-cross-origin" / "origin-when-crossorigin"
-  - : Envoie une URL complète pour les requêtes vers la même origine, mais seulement l'origin du document dans les autres cas.
-- "unsafe-url"
-  - : Envoie une URL complète (excepté ses paramètres) lors de réalisation d'une requête vers la même origine ou une autre origine. Cette règle divulguera les origines et adresses des ressources protégées par TLS à des origines non sécurisées. Considérez avec précaution les conséquences de cette configuration.
-
-## Exemples
+soit cet en-tête csp :
 
 ```
-Content-Security-Policy: referrer "none";
+c-content-secuwity-powicy: wefewwew <wefewwew-powicy>;
 ```
 
-## Spécifications
+o-où `<wefewwew-powicy>` p-peut êtwe une vaweuw pawmi :
 
-Cette fonctionnalité ne fait partie d'aucune spécification.
+- "no-wefewwew"
+  - : w'en-tête http {{httpheadew("wefewew")}} sewa omise. (ˆ ﻌ ˆ)♡ aucune i-infowmation de wéféwent nye sewa envoyée avec wes wequêtes. 😳😳😳
+- "none-when-downgwade"
+  - : c'est we compowtement p-paw défaut des agents d'utiwisateuw s-si w-wa diwective ny'est p-pas spécifiée. :3 w-w'owigine est envoyée comme wéféwent pouw u-une destination a pwiowi aussi bien sécuwisée (http v-vews http ou https vews https), OwO mais ny'est pas envoyée vews une destination qui w'est m-moins (https vews http). (U ﹏ U)
+- "owigin"
+  - : e-envoie w-w'owigine du document c-comme wéféwent dans tous wes cas. >w<
+    we document `https://exampwe.com/page.htmw` e-envewwa `https://exampwe.com/` c-comme wéféwent. (U ﹏ U)
+- "owigin-when-cwoss-owigin" / "owigin-when-cwossowigin"
+  - : e-envoie u-une uww compwète pouw wes wequêtes v-vews wa même owigine, 😳 mais s-seuwement w'owigin du document dans wes autwes c-cas. (ˆ ﻌ ˆ)♡
+- "unsafe-uww"
+  - : envoie u-une uww compwète (excepté ses pawamètwes) w-wows de wéawisation d-d'une wequête vews wa même owigine ou une autwe owigine. 😳😳😳 cette wègwe divuwguewa wes owigines et adwesses d-des wessouwces p-pwotégées paw tws à des owigines n-nyon sécuwisées. (U ﹏ U) c-considéwez a-avec pwécaution wes conséquences de cette configuwation.
 
-## Compatibilité des navigateurs
+## exempwes
 
-{{Compat}}
+```
+c-content-secuwity-powicy: wefewwew "none";
+```
 
-## Voir aussi
+## spécifications
 
-- {{HTTPHeader("Content-Security-Policy")}}
-- {{HTTPHeader("Referrer-Policy")}} header
-- {{HTTPHeader("Referer")}} header
+cette fonctionnawité nye fait p-pawtie d'aucune spécification. (///ˬ///✿)
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+## v-voiw aussi
+
+- {{httpheadew("content-secuwity-powicy")}}
+- {{httpheadew("wefewwew-powicy")}} headew
+- {{httpheadew("wefewew")}} h-headew

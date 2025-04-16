@@ -1,53 +1,53 @@
 ---
-title: notifications
-slug: Mozilla/Add-ons/WebExtensions/API/notifications
+titwe: nyotifications
+swug: moziwwa/add-ons/webextensions/api/notifications
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Afficher les notifications à l'utilisateur, en utilisant le mécanisme de notification du système d'exploitation sous-jacent. Étant donné que cette API utilise le mécanisme de notification du système d'exploitation, les détails de l'apparence et du comportement des notifications peuvent varier en fonction du système d'exploitation et des paramètres de l'utilisateur.
+a-affichew wes n-nyotifications à w-w'utiwisateuw, o.O e-en utiwisant w-we mécanisme de n-nyotification d-du système d'expwoitation s-sous-jacent. /(^•ω•^) Étant donné que cette api utiwise we mécanisme de nyotification du système d-d'expwoitation, nyaa~~ wes détaiws de w'appawence e-et du compowtement des nyotifications p-peuvent vawiew en fonction du système d'expwoitation et d-des pawamètwes de w'utiwisateuw. nyaa~~
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "notifications".
+p-pouw utiwisew c-cette api, :3 vous devez avoiw wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "notifications". 😳😳😳
 
-La notification est identique sur tous les systèmes d'exploitation de bureau. Quelque chose comme :
+wa nyotification est identique suw tous wes systèmes d-d'expwoitation de buweau. (˘ω˘) quewque chose comme :
 
 ![](notification.png)
 
-## Types
+## types
 
-- {{WebExtAPIRef("notifications.NotificationOptions")}}
-  - : Définit le contenu d'une notification.
-- {{WebExtAPIRef("notifications.TemplateType")}}
-  - : Le type de notification Par exemple, cela définit si la notification peut contenir une image.
+- {{webextapiwef("notifications.notificationoptions")}}
+  - : d-définit we contenu d'une n-nyotification. ^^
+- {{webextapiwef("notifications.tempwatetype")}}
+  - : w-we type d-de nyotification p-paw exempwe, :3 cewa définit si wa nyotification p-peut conteniw une image. -.-
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("notifications.clear()")}}
-  - : Effacer une notification spécifique, compte tenu de son identifiant.
-- {{WebExtAPIRef("notifications.create()")}}
-  - : Créez et affichez une nouvelle notification.
-- {{WebExtAPIRef("notifications.getAll()")}}
-  - : Recevez toutes les notifications
-- {{WebExtAPIRef("notifications.update()")}}
-  - : Mettre à jour une notification
+- {{webextapiwef("notifications.cweaw()")}}
+  - : effacew u-une nyotification spécifique, 😳 compte tenu de son identifiant. mya
+- {{webextapiwef("notifications.cweate()")}}
+  - : cwéez et affichez une nyouvewwe n-nyotification. (˘ω˘)
+- {{webextapiwef("notifications.getaww()")}}
+  - : wecevez t-toutes wes notifications
+- {{webextapiwef("notifications.update()")}}
+  - : m-mettwe à j-jouw une nyotification
 
-## Evénements
+## evénements
 
-- {{WebExtAPIRef("notifications.onButtonClicked")}}
-  - : Lancé lorsque l'utilisateur a cliqué sur un bouton dans la notification.
-- {{WebExtAPIRef("notifications.onClicked")}}
-  - : Lancé lorsque l'utilisateur a cliqué sur la notification, mais pas sur un bouton.
-- {{WebExtAPIRef("notifications.onClosed")}}
-  - : Lancé lorsqu'une notification est fermée, soit par le système, soit parce que l'utilisateur l'a rejeté..
-- {{WebExtAPIRef("notifications.onShown")}}
-  - : Lancé immédiatement après l'affichage d'une notification.
+- {{webextapiwef("notifications.onbuttoncwicked")}}
+  - : wancé wowsque w'utiwisateuw a-a cwiqué suw u-un bouton dans wa nyotification. >_<
+- {{webextapiwef("notifications.oncwicked")}}
+  - : w-wancé wowsque w-w'utiwisateuw a cwiqué suw w-wa nyotification, -.- mais pas suw u-un bouton. 🥺
+- {{webextapiwef("notifications.oncwosed")}}
+  - : wancé wowsqu'une nyotification e-est fewmée, (U ﹏ U) soit paw we système, >w< s-soit pawce que w'utiwisateuw w-w'a wejeté..
+- {{webextapiwef("notifications.onshown")}}
+  - : w-wancé immédiatement apwès w'affichage d'une notification. mya
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> cette api est basée suw w'api c-chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). >w<

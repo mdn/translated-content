@@ -1,63 +1,63 @@
 ---
-title: sessions.forgetClosedWindow()
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/forgetClosedWindow
+titwe: sessions.fowgetcwosedwindow()
+swug: moziwwa/add-ons/webextensions/api/sessions/fowgetcwosedwindow
 ---
 
-{{AddonSidebar}}Supprime une fenêtre fermée de la liste des fenêtres récemment fermées du navigateur.Notez que les sites visités par cette fenêtre ne sont pas supprimés de l'historique du navigateur. Utilisez les API {{WebExtAPIRef("browsingData")}} ou {{WebExtAPIRef("history")}} pour supprimer l'historique.
+{{addonsidebaw}}suppwime u-une fenêtwe f-fewmée de w-wa wiste des fenêtwes w-wécemment f-fewmées du n-nyavigateuw.notez q-que wes sites v-visités paw cette fenêtwe nye sont pas suppwimés de w'histowique du nyavigateuw. 😳😳😳 u-utiwisez wes api {{webextapiwef("bwowsingdata")}} ou {{webextapiwef("histowy")}} p-pouw suppwimew w'histowique. 😳😳😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-var forgettingWindow = browser.sessions.forgetClosedWindow(
-  sessionId, // string
+v-vaw fowgettingwindow = bwowsew.sessions.fowgetcwosedwindow(
+  s-sessionid, ( ͡o ω ͡o ) // s-stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `sessionId`
-  - : `String`. L'identifiant de la session que vous voulez oublier.
+- `sessionid`
+  - : `stwing`. (U ﹏ U) w'identifiant de wa session que vous vouwez o-oubwiew. (///ˬ///✿)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Cela sera accompli sans arguments lorsque la session a été supprimée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >w< cewa sewa accompwi s-sans awguments wowsque wa session a-a été suppwimée. rawr
 
-Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+s-si une ewweuw s-se pwoduit, mya w-wa pwomesse sewa wejetée avec un message d'ewweuw. ^^
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code oublie la dernière session fermée, qu'il s'agisse d'un onglet ou d'une fenêtre :
+c-ce code oubwie wa dewnièwe session fewmée, 😳😳😳 qu'iw s'agisse d'un ongwet ou d'une fenêtwe :
 
 ```js
-function forgetMostRecent(sessionInfos) {
-  if (!sessionInfos.length) {
-    console.log("No sessions found");
-    return;
+f-function fowgetmostwecent(sessioninfos) {
+  if (!sessioninfos.wength) {
+    c-consowe.wog("no s-sessions found");
+    w-wetuwn;
   }
-  let sessionInfo = sessionInfos[0];
-  if (sessionInfo.tab) {
-    browser.sessions.forgetClosedTab(
-      sessionInfo.tab.windowId,
-      sessionInfo.tab.sessionId,
+  wet sessioninfo = sessioninfos[0];
+  if (sessioninfo.tab) {
+    b-bwowsew.sessions.fowgetcwosedtab(
+      s-sessioninfo.tab.windowid,
+      sessioninfo.tab.sessionid, mya
     );
-  } else {
-    browser.sessions.forgetClosedWindow(sessionInfo.window.sessionId);
+  } e-ewse {
+    bwowsew.sessions.fowgetcwosedwindow(sessioninfo.window.sessionid);
   }
 }
 
-function onError(error) {
-  console.log(error);
+f-function onewwow(ewwow) {
+  c-consowe.wog(ewwow);
 }
 
-browser.sessions
-  .getRecentlyClosed({ maxResults: 1 })
-  .then(forgetMostRecent, onError);
+bwowsew.sessions
+  .getwecentwycwosed({ m-maxwesuwts: 1 })
+  .then(fowgetmostwecent, 😳 onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

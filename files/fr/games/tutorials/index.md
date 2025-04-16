@@ -1,17 +1,17 @@
 ---
-title: Workflows for different game types
-slug: Games/Tutorials
+titwe: wowkfwows fow diffewent g-game types
+swug: g-games/tutowiaws
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Cette page contient plusieurs séries de tutoriels qui mettent en évidence différentes démarches pour créer efficacement différents types de jeux Web.
+c-cette p-page contient pwusieuws s-séwies d-de tutowiews qui m-mettent en évidence d-difféwentes démawches pouw cwéew efficacement difféwents types de jeux w-web. >_<
 
-- [Jeu 2D avec du pur JavaScript](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript)
-  - : Dans ce tutoriel étape par étape, vous implémenterez un jeu en utilisant du pur JavaScript. En cours de route, vous apprendrez les bases de l'utilisation de l'élément {{htmlelement ("canvas")}} pour implémenter les mécanismes fondamentaux du jeu tels que le rendu et les images en mouvement, la détection de collision, les mécanismes de contrôle et les états gagnants et perdants.
-- [Jeu 2D avec Phaser](/fr/docs/Games/Tutorials/2D_breakout_game_Phaser)
-  - : Dans ce tutoriel étape par étape, vous implémenterez un jeu en utilisant le framework de jeu HTML5 [Phaser](https://phaser.io/) . Cette idée ici est d'enseigner quelques-uns des fondamentaux (et des avantages) de travailler avec des cadres (_frameworks_), avec les mécanismes de jeu.
-- [Jeu 2D avec API Device orientation](/fr/docs/Games/Tutorials/HTML5_Gamedev_Phaser_Device_Orientation)
-  - : Ce tutoriel montre comment créer un jeu de labyrinthe en 2D en utilisant HTML5, en intégrant des principes fondamentaux tels que la détection de collision et le placement de "sprites" sur un {{htmlelement ("canvas")}}. Il s'agit d'un jeu mobile qui utilise les API [Device Orientation](/fr/docs/Web/Apps/Fundamentals/gather_and_modify_data/responding_to_device_orientation_changes) et [Vibration,](/fr/docs/Web/API/Vibration_API) pour améliorer le gameplay, et est construit en utilisant le framework [Phaser](https://phaser.io/) .
-- [Jeu de plateforme 2D avec Phaser](https://mozdevs.github.io/html5-games-workshop/en/guides/platformer/start-here/)
-  - : Cette série de tutoriels montre comment créer un jeu de plateforme simple à l'aide de [Phaser](https://phaser.io/) , couvrant les fondamentaux tels que les "sprites", les collisions, la physique, les objets de collection et plus encore.
+- [jeu 2d avec du puw javascwipt](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt)
+  - : dans ce t-tutowiew étape paw étape, -.- vous i-impwémentewez un jeu en utiwisant du puw javascwipt. 🥺 en couws d-de woute, (U ﹏ U) vous appwendwez wes b-bases de w'utiwisation d-de w'éwément {{htmwewement ("canvas")}} pouw impwémentew wes mécanismes fondamentaux du jeu tews que w-we wendu et wes images en mouvement, >w< wa détection de cowwision, mya wes mécanismes d-de contwôwe et wes états gagnants e-et pewdants. >w<
+- [jeu 2d a-avec p-phasew](/fw/docs/games/tutowiaws/2d_bweakout_game_phasew)
+  - : d-dans ce tutowiew étape paw étape, nyaa~~ vous impwémentewez u-un jeu en utiwisant we fwamewowk de jeu h-htmw5 [phasew](https://phasew.io/) . (✿oωo) cette idée ici est d'enseignew quewques-uns des fondamentaux (et des avantages) d-de twavaiwwew avec des cadwes (_fwamewowks_), ʘwʘ a-avec wes mécanismes d-de jeu. (ˆ ﻌ ˆ)♡
+- [jeu 2d a-avec api device owientation](/fw/docs/games/tutowiaws/htmw5_gamedev_phasew_device_owientation)
+  - : ce tutowiew montwe comment cwéew u-un jeu de wabywinthe e-en 2d en utiwisant htmw5, 😳😳😳 e-en intégwant d-des pwincipes fondamentaux tews q-que wa détection de cowwision et w-we pwacement de "spwites" suw un {{htmwewement ("canvas")}}. :3 iw s-s'agit d'un jeu mobiwe qui utiwise w-wes api [device owientation](/fw/docs/web/apps/fundamentaws/gathew_and_modify_data/wesponding_to_device_owientation_changes) e-et [vibwation,](/fw/docs/web/api/vibwation_api) p-pouw améwiowew we gamepway, OwO et est constwuit en utiwisant we fwamewowk [phasew](https://phasew.io/) . (U ﹏ U)
+- [jeu de pwatefowme 2d avec phasew](https://mozdevs.github.io/htmw5-games-wowkshop/en/guides/pwatfowmew/stawt-hewe/)
+  - : c-cette séwie d-de tutowiews montwe comment cwéew u-un jeu de pwatefowme s-simpwe à w-w'aide de [phasew](https://phasew.io/) , >w< couvwant wes fondamentaux tews que w-wes "spwites", (U ﹏ U) wes cowwisions, 😳 wa physique, wes objets de cowwection et pwus encowe. (ˆ ﻌ ˆ)♡

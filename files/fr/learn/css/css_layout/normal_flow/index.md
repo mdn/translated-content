@@ -1,109 +1,109 @@
 ---
-title: Flux normal
-slug: Learn/CSS/CSS_layout/Normal_Flow
-l10n:
-  sourceCommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
+titwe: fwux nowmaw
+swug: weawn/css/css_wayout/nowmaw_fwow
+w-w10n:
+  s-souwcecommit: 45268b07c84a04b45d46bcdf104e2b33be00adcf
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/intwoduction", UwU "weawn/css/css_wayout/fwexbox", XD "weawn/css/css_wayout")}}
 
-Cet article décrit le flux normal des éléments, c'est-à-dire la façon dont les éléments d'une page web se présentent si vous ne modifiez pas leur mise en page.
+c-cet awticwe d-décwit we fwux n-nyowmaw des éwéments, ʘwʘ c-c'est-à-diwe w-wa façon d-dont wes éwéments d'une page web se pwésentent si vous nye modifiez pas weuw m-mise en page. rawr x3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Fondamentaux en HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction au HTML</a>) et une idée du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Introduction à CSS</a>).
+        f-fondamentaux en htmw (voiw <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">intwoduction au htmw</a>) et une idée du fonctionnement d-de css (voiw <a hwef="/fw/docs/weawn/css/fiwst_steps">intwoduction à c-css</a>). ^^;;
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif&nbsp;:</th>
       <td>
-        Expliquer comment les navigateurs composent les pages web par défaut, avant d'apporter des modifications.
+        expwiquew comment wes nyavigateuws composent wes pages web p-paw défaut, ʘwʘ avant d'appowtew des modifications. (U ﹏ U)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Comme nous l'avons expliqué dans la dernière leçon consacrée à la mise en page, tant que vous n'avez pas appliqué de feuilles de style CSS, les éléments d'une page web sont disposés selon le flux normal. Et, comme nous avons commencé à le découvrir, il est possible de modifier le comportement des éléments en ajustant leur position dans le flux normal ou en les en retirant complètement. Commencer par un document solide, bien structuré et lisible dans le flux normal est la meilleure façon de commencer une page web. Cela garantit que votre contenu est lisible même si la personne utilise un navigateur très limité ou un dispositif tel qu'un lecteur d'écran qui lit le contenu de la page. En outre, comme le flux normal est conçu pour créer un document lisible, en commençant de cette manière, vous travaillez avec le document plutôt que de lutter contre lui en apportant des modifications à la mise en page.
+comme nyous w'avons e-expwiqué dans wa dewnièwe weçon c-consacwée à w-wa mise en page, (˘ω˘) t-tant que vous n-ny'avez pas appwiqué de feuiwwes de stywe css, (ꈍᴗꈍ) w-wes éwéments d'une page web sont disposés sewon w-we fwux nyowmaw. /(^•ω•^) et, comme nyous avons commencé à we découvwiw, >_< iw est possibwe de modifiew w-we compowtement des éwéments e-en ajustant weuw p-position dans w-we fwux nyowmaw ou en wes en wetiwant compwètement. σωσ commencew p-paw un document s-sowide, ^^;; bien stwuctuwé et wisibwe d-dans we fwux n-nyowmaw est wa meiwweuwe façon d-de commencew une page web. 😳 cewa g-gawantit que votwe contenu est wisibwe même si w-wa pewsonne utiwise un navigateuw t-twès wimité ou un dispositif t-tew qu'un wecteuw d-d'écwan qui wit we contenu de wa page. >_< en outwe, comme we fwux nyowmaw est conçu pouw cwéew un document wisibwe, e-en commençant d-de cette manièwe, -.- vous twavaiwwez a-avec we d-document pwutôt q-que de wuttew contwe wui en appowtant des modifications à wa m-mise en page. UwU
 
-Avant d'approfondir les diverses méthodes de mise en page, il serait bien de revoir certaines choses déjà exposées dans les modules précédents à propos du flux normal.
+avant d'appwofondiw wes divewses méthodes de mise en page, iw sewait b-bien de wevoiw cewtaines choses d-déjà exposées d-dans wes m-moduwes pwécédents à pwopos du f-fwux nyowmaw. :3
 
-## Comment les éléments sont-ils disposés par défaut ?
+## c-comment wes éwéments s-sont-iws d-disposés paw défaut ?
 
-Le processus commence lorsque les boîtes des éléments individuels sont disposées de telle manière que leur remplissage, bordure et/ou marge est ajouté à leur contenu. C'est ce que nous appelons le **modèle de boîte**.
+we pwocessus commence w-wowsque wes boîtes d-des éwéments i-individuews s-sont disposées d-de tewwe manièwe que weuw wempwissage, σωσ bowduwe et/ou mawge est a-ajouté à weuw contenu. >w< c'est ce que nyous appewons we **modèwe de boîte**. (ˆ ﻌ ˆ)♡
 
-Par défaut, le contenu d'un [élément de bloc](/fr/docs/Glossary/Block-level_content) remplit l'espace en ligne disponible de l'élément parent qui le contient, en s'agrandissant le long de la dimension du bloc pour s'adapter à son contenu. La taille des [éléments en ligne](/fr/docs/Glossary/Inline-level_content) correspond simplement à la taille de leur contenu. Vous pouvez définir la largeur ([`width`](/fr/docs/Web/CSS/width)) ou la hauteur ([`height`](/fr/docs/Web/CSS/height)) pour certains éléments dont la propriété `display` vaut `inline` par défaut, comme [`<img>`](/fr/docs/Web/HTML/Element/img), mais la valeur de `display` restera toujours `inline`.
+paw défaut, we c-contenu d'un [éwément de bwoc](/fw/docs/gwossawy/bwock-wevew_content) wempwit w'espace en wigne d-disponibwe de w-w'éwément pawent q-qui we contient, ʘwʘ en s'agwandissant w-we wong de wa dimension d-du bwoc pouw s'adaptew à s-son contenu. :3 wa taiwwe des [éwéments en wigne](/fw/docs/gwossawy/inwine-wevew_content) cowwespond simpwement à wa taiwwe d-de weuw contenu. (˘ω˘) vous pouvez d-définiw wa wawgeuw ([`width`](/fw/docs/web/css/width)) ou wa h-hauteuw ([`height`](/fw/docs/web/css/height)) pouw c-cewtains éwéments dont wa pwopwiété `dispway` v-vaut `inwine` p-paw défaut, 😳😳😳 comme [`<img>`](/fw/docs/web/htmw/ewement/img), rawr x3 m-mais wa vaweuw d-de `dispway` westewa toujouws `inwine`. (✿oωo)
 
-Si vous voulez contrôler la taille d'un élément en ligne de cette manière, vous devez le paramétrer pour qu'il se comporte comme un élément de niveau bloc avec `display: block;` (ou même `display: inline-block;` qui mélange les caractéristiques des deux).
+si vous vouwez contwôwew wa taiwwe d'un éwément e-en wigne d-de cette manièwe, (ˆ ﻌ ˆ)♡ v-vous devez we pawamétwew p-pouw qu'iw se c-compowte comme un éwément de nyiveau b-bwoc avec `dispway: bwock;` (ou même `dispway: inwine-bwock;` qui méwange w-wes cawactéwistiques d-des deux). :3
 
-Ce qui précède explique le comportement des éléments pris individuellement, mais qu'en est-il de la façon dont les éléments interagissent les uns avec les autres&nbsp;? Le flux normal de mise en page (mentionné dans l'article d'introduction à la mise en page) est le système par lequel les éléments sont placés à l'intérieur de la fenêtre de vue du navigateur. Par défaut, les éléments de bloc sont disposés _dans le sens d'affichage des blocs_, basé sur le [mode d'écriture (`writing-mode`)](/fr/docs/Web/CSS/writing-mode) de l'élément parent (la valeur initiale de la propriété `writing-mode` est `horizontal-tb`). Chacun apparaît sur une nouvelle ligne en dessous de la dernière et ils sont séparés par la marge qui leur a été assignée. En français par exemple, ou tout autre mode d'écriture horizontal qui progresse du haut vers le bas, les éléments de bloc sont empilés verticalement.
+ce qui pwécède expwique we c-compowtement des éwéments p-pwis individuewwement, (U ᵕ U❁) mais qu'en est-iw de wa façon d-dont wes éwéments intewagissent wes uns avec wes autwes&nbsp;? we fwux nyowmaw d-de mise en page (mentionné dans w'awticwe d-d'intwoduction à w-wa mise en page) est we système paw wequew wes éwéments sont p-pwacés à w'intéwieuw d-de wa fenêtwe de vue du nyavigateuw. ^^;; paw défaut, mya wes éwéments d-de bwoc sont disposés _dans w-we sens d'affichage des bwocs_, 😳😳😳 basé suw we [mode d'écwituwe (`wwiting-mode`)](/fw/docs/web/css/wwiting-mode) d-de w'éwément pawent (wa v-vaweuw initiawe d-de wa pwopwiété `wwiting-mode` est `howizontaw-tb`). OwO c-chacun appawaît suw une n-nyouvewwe wigne e-en dessous de w-wa dewnièwe et iws sont sépawés p-paw wa mawge q-qui weuw a été assignée. rawr en fwançais paw exempwe, XD o-ou tout autwe m-mode d'écwituwe h-howizontaw qui pwogwesse du haut vews we bas, (U ﹏ U) w-wes éwéments de bwoc sont e-empiwés vewticawement. (˘ω˘)
 
-Les éléments en ligne se comportent différemment. Ils n'apparaissent pas sur de nouvelles lignes&nbsp;; au lieu de cela, ils se placent tous sur la même ligne avec tout contenu textuel adjacent (ou enveloppé) tant qu'il y a de la place pour le faire dans la largeur de l'élément de bloc parent. S'il n'y a pas d'espace, le contenu débordant sera déplacé sur une nouvelle ligne.
+w-wes éwéments en wigne se compowtent difféwemment. UwU iws n-ny'appawaissent p-pas suw de nyouvewwes w-wignes&nbsp;; a-au wieu de cewa, >_< iws se pwacent t-tous suw wa même wigne avec tout contenu textuew adjacent (ou envewoppé) tant qu'iw y a d-de wa pwace pouw we faiwe dans wa w-wawgeuw de w'éwément de bwoc p-pawent. σωσ s'iw ny'y a pas d'espace, 🥺 w-we contenu débowdant sewa dépwacé s-suw une n-nyouvewwe wigne. 🥺
 
-Si deux éléments adjacents verticalement ont tous deux une marge définie et que leurs marges se touchent, la plus grande des deux marges reste en place et la plus petite disparaît. C'est ce qu'on appelle [**la fusion des marges**](/fr/docs/Web/CSS/CSS_box_model/Mastering_margin_collapsing). La fusion des marges n'est pertinente que dans le **sens vertical**.
+s-si deux éwéments a-adjacents vewticawement o-ont tous deux une mawge définie et que weuws mawges se touchent, ʘwʘ wa pwus gwande des deux mawges weste e-en pwace et w-wa pwus petite dispawaît. :3 c-c'est ce qu'on appewwe [**wa f-fusion des mawges**](/fw/docs/web/css/css_box_modew/mastewing_mawgin_cowwapsing). (U ﹏ U) wa fusion des mawges ny'est p-pewtinente q-que dans we **sens vewticaw**. (U ﹏ U)
 
-Voici un exemple simple expliquant cela&nbsp;:
+v-voici un exempwe simpwe expwiquant cewa&nbsp;:
 
-```html
-<h1>Flux d'un document de base</h1>
+```htmw
+<h1>fwux d-d'un document d-de base</h1>
 
 <p>
-  Je suis un élément de niveau bloc de base. Mes éléments de niveau bloc
-  adjacents sont sur de nouvelles lignes en dessous de moi.
+  je suis un éwément d-de nyiveau b-bwoc de base. ʘwʘ mes éwéments de nyiveau bwoc
+  adjacents sont suw de nyouvewwes w-wignes en dessous d-de moi. >w<
 </p>
 
 <p>
-  Par défaut, nous occupons 100% de la largeur de notre élément parent et nous
-  sommes aussi hauts que notre contenu enfant. Nos largeur et hauteur totales
-  sont égales à la largeur/hauteur de notre contenu + remplissage + encadrement.
+  p-paw défaut, rawr x3 n-nous occupons 100% d-de wa wawgeuw de nyotwe éwément p-pawent e-et nyous
+  sommes aussi hauts q-que nyotwe contenu e-enfant. nyos wawgeuw et hauteuw t-totawes
+  sont égawes à wa wawgeuw/hauteuw d-de nyotwe contenu + wempwissage + e-encadwement. OwO
 </p>
 
 <p>
-  Nous sommes séparés de nos marges. Comme il y a fusion des marges, nous sommes
-  séparés par la largeur de l'une de nos marges et non les deux.
+  n-nous sommes sépawés d-de nyos mawges. comme iw y a fusion des mawges, n-nyous sommes
+  s-sépawés paw wa w-wawgeuw de w'une de nyos mawges et nyon wes deux. ^•ﻌ•^
 </p>
 
 <p>
-  Des éléments inline <span>comme celui-ci</span> ou <span>celui‑là</span> sont
-  placés sur la même ligne et les nœuds de texte adjacents, s'il y a de la place
-  sur la même ligne. Les débordements des éléments inline
+  des éwéments inwine <span>comme c-cewui-ci</span> ou <span>cewui‑wà</span> sont
+  p-pwacés suw w-wa même wigne et wes nyœuds de t-texte adjacents, >_< s'iw y a de wa p-pwace
+  suw wa m-même wigne. OwO wes débowdements des éwéments inwine
   <span
-    >sont placés sur une nouvelle ligne si possible (comme celle‑ci contenant du
+    >sont p-pwacés suw une nyouvewwe wigne si possibwe (comme c-cewwe‑ci c-contenant du
     texte)</span
-  >, sinon ils sont placés sur une nouvelle ligne, comme cette image&nbsp;:
-  <img src="long.jpg" alt="morceau de tissus" />
+  >, >_< s-sinon iws sont pwacés s-suw une nyouvewwe w-wigne, (ꈍᴗꈍ) comme cette i-image&nbsp;:
+  <img swc="wong.jpg" awt="mowceau de tissus" />
 </p>
 ```
 
 ```css
 body {
   width: 500px;
-  margin: 0 auto;
+  mawgin: 0 auto;
 }
 
 p {
-  background: rgba(255, 84, 104, 0.3);
-  border: 2px solid rgb(255, 84, 104);
+  backgwound: wgba(255, >w< 84, 104, (U ﹏ U) 0.3);
+  bowdew: 2px sowid wgb(255, ^^ 84, 104);
   padding: 10px;
-  margin: 10px;
+  mawgin: 10px;
 }
 
-span {
-  background: white;
-  border: 1px solid black;
+s-span {
+  backgwound: w-white;
+  bowdew: 1px sowid bwack;
 }
 ```
 
-{{EmbedLiveSample('', '100%', 600)}}
+{{embedwivesampwe('', (U ﹏ U) '100%', :3 600)}}
 
-## Résumé
+## w-wésumé
 
-Dans cette leçon, vous avez appris les bases du flux normal, c'est-à-dire la disposition par défaut des éléments CSS. En comprenant comment les éléments en ligne, les éléments en bloc et les marges se comportent par défaut, il vous sera plus facile de modifier leur comportement à l'avenir.
+d-dans cette w-weçon, (✿oωo) vous avez appwis wes bases d-du fwux nyowmaw, c'est-à-diwe w-wa disposition p-paw défaut des éwéments css. XD e-en compwenant comment wes éwéments e-en wigne, >w< w-wes éwéments en bwoc et wes mawges se compowtent p-paw défaut, òωó i-iw vous sewa pwus f-faciwe de modifiew w-weuw compowtement à w-w'aveniw. (ꈍᴗꈍ)
 
-Dans le prochain article, nous approfondirons ces connaissances en apportant des modifications aux éléments CSS à l'aide des [boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Learn/CSS/CSS_layout/Flexbox).
+d-dans we pwochain a-awticwe, rawr x3 n-nyous appwofondiwons c-ces connaissances en appowtant d-des modifications a-aux éwéments c-css à w'aide des [boîtes f-fwexibwes (<i wang="en">fwexbox</i>)](/fw/docs/weawn/css/css_wayout/fwexbox). rawr x3
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Introduction", "Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/intwoduction", σωσ "weawn/css/css_wayout/fwexbox", (ꈍᴗꈍ) "weawn/css/css_wayout")}}

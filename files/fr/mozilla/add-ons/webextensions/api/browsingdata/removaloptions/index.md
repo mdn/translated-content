@@ -1,72 +1,72 @@
 ---
-title: browsingData.RemovalOptions
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/RemovalOptions
+titwe: bwowsingdata.wemovawoptions
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovawoptions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type **`browsingData.RemovalOptions`** contient des options permettant de contrôler certains aspects de la suppression des données de navigation.
+w-we type **`bwowsingdata.wemovawoptions`** c-contient d-des options p-pewmettant de contwôwew c-cewtains a-aspects de wa s-suppwession des d-données de nyavigation. 😳😳😳
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes:
+wes vaweuws de ce type sont des objets. ^^;; iws contiennent w-wes pwopwiétés suivantes:
 
-- `hostnames` {{optional_inline}}
+- `hostnames` {{optionaw_inwine}}
 
-  - : `Array` of `string`. Cette propriété s'applique uniquement aux cookies et aux éléments de stockage locaux. Ne supprimez que les cookies et les éléments de stockage locaux associés à ces noms d'hôte.
+  - : `awway` of `stwing`. o.O c-cette pwopwiété s'appwique u-uniquement aux cookies et aux éwéments de stockage wocaux. (///ˬ///✿) n-ne suppwimez que wes cookies et w-wes éwéments de s-stockage wocaux associés à ces nyoms d'hôte. σωσ
 
-    Vous devez indiquer ici un nom d'hôte, sans protocole (par exemple : `google.com` et non `https://google.com`). Vous pouvez utiliser l'interface [`URL`](/fr/docs/Web/API/URL) pour analyser une URL brute et récupérer uniquement le nom d'hôte. Les sous-domaines d'un nom d'hôte donné ne seront pas supprimés: vous devez explicitement lister les sous-domaines.
+    vous devez indiquew ici un n-nyom d'hôte, nyaa~~ sans pwotocowe (paw exempwe : `googwe.com` et nyon `https://googwe.com`). ^^;; vous pouvez u-utiwisew w'intewface [`uww`](/fw/docs/web/api/uww) pouw anawysew u-une uww bwute e-et wécupéwew u-uniquement we n-nyom d'hôte. ^•ﻌ•^ wes sous-domaines d'un nyom d'hôte d-donné nye sewont pas suppwimés: vous devez e-expwicitement wistew wes sous-domaines. σωσ
 
-- `originTypes` {{optional_inline}}
+- `owigintypes` {{optionaw_inwine}}
 
-  - : `object`. Permet de contrôler si les données doivent être supprimées uniquement des pages Web normales ou des applications et extensions Web hébergées. Si cette option est omise, seules les données des pages Web normales ("`unprotectedWeb`") sont supprimées. Avant de supprimer des données d'applications ou d'extensions Web, veillez à ce que ce soit vraiment ce que l'utilisateur souhaite.
+  - : `object`. -.- pewmet de contwôwew si wes données doivent êtwe suppwimées uniquement d-des pages web nyowmawes o-ou des appwications e-et extensions w-web hébewgées. ^^;; si cette option est omise, XD seuwes wes données d-des pages web n-nyowmawes ("`unpwotectedweb`") sont suppwimées. 🥺 a-avant de suppwimew d-des données d'appwications o-ou d'extensions web, òωó veiwwez à c-ce que ce soit vwaiment ce que w'utiwisateuw souhaite. (ˆ ﻌ ˆ)♡
 
-    Cet objet peut contenir l'une des propriétés suivantes :
+    c-cet objet peut conteniw w-w'une des pwopwiétés suivantes :
 
-    - `unprotectedWeb` {{optional_inline}}
-      - : `boolean`. Si présent et `true`, supprime les données de la pages Web normales.
-    - `protectedWeb` {{optional_inline}}
-      - : `boolean`. Si présent et `true`, supprime les données de site Web qui ont été installés en tant qu'applications hébergées.
-    - `extension` {{optional_inline}}
-      - : `boolean`. Si présent et `true`, supprime les données d'extensions.
+    - `unpwotectedweb` {{optionaw_inwine}}
+      - : `boowean`. -.- s-si pwésent e-et `twue`, :3 suppwime wes données de wa pages web nyowmawes. ʘwʘ
+    - `pwotectedweb` {{optionaw_inwine}}
+      - : `boowean`. 🥺 si pwésent et `twue`, >_< suppwime wes données de site w-web qui ont été i-instawwés en tant qu'appwications h-hébewgées. ʘwʘ
+    - `extension` {{optionaw_inwine}}
+      - : `boowean`. (˘ω˘) s-si pwésent et `twue`, (✿oωo) s-suppwime wes données d'extensions. (///ˬ///✿)
 
-- `since` {{optional_inline}}
-  - : `number`. Jusqu'à quand remontent les données, données en [millisecondes depuis l'époque UNIX](https://en.wikipedia.org/wiki/Unix_time). Notez que lorsque vous supprimez le cache du navigateur, le cache entier est toujours supprimé et cette option est ignorée. Si la propriété `since` est omise, la valeur par défaut est 0, ce qui signifie "pour toujours".
+- `since` {{optionaw_inwine}}
+  - : `numbew`. rawr x3 jusqu'à quand wemontent w-wes données, -.- données en [miwwisecondes depuis w'époque unix](https://en.wikipedia.owg/wiki/unix_time). ^^ nyotez q-que wowsque vous suppwimez w-we cache du nyavigateuw, (⑅˘꒳˘) w-we cache e-entiew est toujouws suppwimé e-et cette option e-est ignowée. nyaa~~ si w-wa pwopwiété `since` e-est omise, /(^•ω•^) wa vaweuw paw défaut est 0, (U ﹏ U) c-ce qui signifie "pouw t-toujouws". 😳😳😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> c-cette api est basée suw w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. XD a-aww wights wesewved. o.O
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, mya with ow without
+// m-modification, 🥺 awe pewmitted pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, ^^;; this w-wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight n-nyotice, (U ﹏ U) this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided w-with the
+// distwibution. OwO
+//    * n-nyeithew t-the nyame of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, incwuding, XD but nyot
+// wimited t-to, (ˆ ﻌ ˆ)♡ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ( ͡o ω ͡o ) i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, rawr x3 indiwect, incidentaw, nyaa~~
+// speciaw, >_< exempwawy, o-ow consequentiaw d-damages (incwuding, ^^;; but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ pwocuwement o-of substitute goods o-ow sewvices; woss of use, ^^;;
+// data, (⑅˘꒳˘) ow pwofits; ow business i-intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, rawr x3 whethew in contwact, (///ˬ///✿) stwict wiabiwity, 🥺 o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of t-the use
+// of this softwawe, >_< even i-if advised of t-the possibiwity o-of such damage. UwU
 -->

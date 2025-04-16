@@ -1,448 +1,448 @@
 ---
-title: Effets de boîte avancés
-slug: Learn/CSS/Building_blocks/Advanced_styling_effects
+titwe: effets de boîte avancés
+s-swug: weawn/css/buiwding_bwocks/advanced_stywing_effects
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Cet article est une sorte de boîte à malices : elle introduit certaines des fonctions avancées disponibles pour styliser les boîtes, fonctions n'entrant pas dans catégories vues plus haut — comme les ombres, les mélanges de couleurs ou les filtres.
+c-cet awticwe e-est une sowte de b-boîte à mawices : e-ewwe intwoduit c-cewtaines des f-fonctions avancées d-disponibwes pouw stywisew wes boîtes, (˘ω˘) fonctions ny'entwant pas dans catégowies v-vues pwus haut — comme wes ombwes, òωó wes m-méwanges de couweuws ou wes fiwtwes. nyaa~~
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Notions de HTML (voir
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction à HTML</a
-        >) et idées sur le fonctionnement des CSS (voir
-        <a href="/fr/docs/Learn/CSS/Introduction_to_CSS">Introduction aux CSS</a
-        >).
+        nyotions de htmw (voiw
+        <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction à htmw</a
+        >) e-et idées suw w-we fonctionnement des css (voiw
+        <a hwef="/fw/docs/weawn/css/intwoduction_to_css">intwoduction aux css</a
+        >). ( ͡o ω ͡o )
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Donner des idées sur l'utilisation d'effets avancés pour les boîtes et
-        apprendre quelques outils de style natifs propres au langage des CSS.
+        d-donnew des idées suw w'utiwisation d'effets avancés pouw wes boîtes et
+        a-appwendwe quewques outiws d-de stywe nyatifs p-pwopwes au wangage d-des css. 😳😳😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Ombres des boîtes
+## o-ombwes des boîtes
 
-Revenons au module [Styling text](/fr/docs/Learn/CSS/Styling_text) — nous y avons vu la propriété {{cssxref("text-shadow")}} : elle permet d'appliquer une ou plusieurs ombres portées au texte d'un élément. Il existe une propriété équivalente pour les boîtes — {{cssxref("box-shadow")}} : elle applique une ou plusieurs ombres portées à une boîte d'élément réelle. Tout comme les ombres de texte, les ombres de boîtes sont bien prises en charge par les navigateurs, mais seulement au-delà de IE9. Les utilisateurs des anciennes versions d'IE pourraient être confrontés à l'absence d'ombres ; donc, testez simplement vos designs pour être sûr que le contenu reste lisible sans ombrage.
+wevenons au moduwe [stywing t-text](/fw/docs/weawn/css/stywing_text) — nyous y avons vu wa pwopwiété {{cssxwef("text-shadow")}} : e-ewwe pewmet d'appwiquew une ou pwusieuws ombwes powtées au texte d'un éwément. ^•ﻌ•^ iw existe u-une pwopwiété équivawente pouw wes boîtes — {{cssxwef("box-shadow")}} : e-ewwe appwique une o-ou pwusieuws ombwes p-powtées à une boîte d'éwément wéewwe. (˘ω˘) tout comme wes o-ombwes de texte, (˘ω˘) w-wes ombwes de boîtes sont bien p-pwises en chawge p-paw wes nyavigateuws, -.- mais seuwement a-au-dewà de ie9. ^•ﻌ•^ wes utiwisateuws d-des anciennes vewsions d'ie pouwwaient êtwe c-confwontés à w'absence d-d'ombwes ; donc, /(^•ω•^) testez simpwement v-vos designs pouw êtwe s-sûw que we contenu weste wisibwe sans ombwage. (///ˬ///✿)
 
-Vous trouverez les exemples de cet article dans le fichier [box-shadow.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/box-shadow.html) (voir le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/box-shadow.html) également).
+vous twouvewez wes exempwes de cet awticwe dans we fichiew [box-shadow.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/advanced_box_effects/box-shadow.htmw) (voiw w-we [code s-souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/advanced_box_effects/box-shadow.htmw) égawement). mya
 
-### Ombre simple pour une boîte
+### ombwe simpwe p-pouw une boîte
 
-Débutons avec un exemple simple. D'abord, un peu de HTML :
+d-débutons avec u-un exempwe simpwe. o.O d'abowd, ^•ﻌ•^ un peu de htmw :
 
-```html
-<article class="simple">
+```htmw
+<awticwe cwass="simpwe">
   <p>
-    <strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a
-    atteint un niveau critique.
+    <stwong>attention</stwong> : w-we thewmostat suw we twanscendeuw cosmique a
+    atteint un nyiveau cwitique. (U ᵕ U❁)
   </p>
-</article>
+</awticwe>
 ```
 
-Puis la CSS:
+p-puis wa css:
 
 ```css
-p {
-  margin: 0;
+p-p {
+  mawgin: 0;
 }
 
-article {
-  max-width: 500px;
+a-awticwe {
+  m-max-width: 500px;
   padding: 10px;
-  color: white;
-  text-align: center;
-  background-color: red;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.25)
+  c-cowow: white;
+  t-text-awign: c-centew;
+  backgwound-cowow: w-wed;
+  backgwound-image: wineaw-gwadient(
+    to b-bottom, :3
+    wgba(0, (///ˬ///✿) 0, 0, (///ˬ///✿) 0),
+    w-wgba(0, 🥺 0, 0, 0.25)
   );
 }
 
-.simple {
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+.simpwe {
+  b-box-shadow: 5px 5px 5px w-wgba(0, -.- 0, 0, 0.7);
 }
 ```
 
-donnent le résultat suivant :
+d-donnent we wésuwtat suivant :
 
-{{ EmbedLiveSample('', '100%', 100) }}
+{{ embedwivesampwe('', nyaa~~ '100%', 100) }}
 
-Notez les quatre éléments valeur de la propriété `box-shadow` :
+n-nyotez wes quatwe éwéments vaweuw de wa pwopwiété `box-shadow` :
 
-1. La première valeur est la mesure du **décalage horizontal** — distance entre la droite de l'ombre (ou la gauche si négative) et la boîte.
-2. La deuxième valeur est la mesure du **décalage vertical** — distance vers le bas (vers le haut si négative) dont l'ombre est décalée de la boîte.
-3. La troisième valeur est le **rayon de flou** — il représente la « quantité » de flou appliquée à l'ombre.
-4. La valeur de la couleur : **couleur de base** de l'ombre.
+1. (///ˬ///✿) wa pwemièwe vaweuw est wa mesuwe d-du **décawage howizontaw** — distance entwe wa dwoite de w'ombwe (ou w-wa gauche s-si négative) e-et wa boîte. 🥺
+2. wa deuxième vaweuw e-est wa mesuwe du **décawage v-vewticaw** — d-distance vews we bas (vews we haut si nyégative) dont w'ombwe est décawée de wa boîte. >w<
+3. w-wa twoisième vaweuw est we **wayon d-de fwou** — iw wepwésente w-wa « quantité » d-de fwou appwiquée à w'ombwe. rawr x3
+4. wa vaweuw d-de wa couweuw : **couweuw d-de base** de w'ombwe. (⑅˘꒳˘)
 
-Vous pouvez utiliser toutes unités de longueur et de couleur utiles pour définir ces valeurs.
+v-vous pouvez utiwisew t-toutes unités de wongueuw et de couweuw utiwes pouw définiw ces vaweuws. σωσ
 
-### Ombres multiples pour une boîte
+### o-ombwes muwtipwes p-pouw une b-boîte
 
-Vous pouvez également définir plusieurs ombres de boîtes dans une seule déclaration en les séparant par des virgules :
+vous pouvez égawement définiw pwusieuws o-ombwes de boîtes d-dans une seuwe décwawation e-en wes sépawant paw des viwguwes :
 
-```html hidden
-<article class="multiple">
+```htmw hidden
+<awticwe cwass="muwtipwe">
   <p>
-    <strong>Attention</strong> : Le thermostat sur le transcendeur cosmique a
-    atteint un niveau critique.
+    <stwong>attention</stwong> : we thewmostat s-suw we twanscendeuw c-cosmique a
+    atteint un nyiveau cwitique. XD
   </p>
-</article>
+</awticwe>
 ```
 
-```css hidden
+```css h-hidden
 p {
-  margin: 0;
+  mawgin: 0;
 }
 
-article {
+a-awticwe {
   max-width: 500px;
   padding: 10px;
-  color: white;
-  text-align: center;
-  background-color: red;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.25)
+  cowow: w-white;
+  text-awign: centew;
+  backgwound-cowow: wed;
+  backgwound-image: wineaw-gwadient(
+    to bottom, -.-
+    w-wgba(0, >_< 0, 0, 0),
+    wgba(0, rawr 0, 0, 0.25)
   );
 }
 
-.multiple {
+.muwtipwe {
   box-shadow:
-    1px 1px 1px black,
-    2px 2px 1px black,
-    3px 3px 1px red,
-    4px 4px 1px red,
-    5px 5px 1px black,
-    6px 6px 1px black;
+    1px 1px 1px bwack, 😳😳😳
+    2px 2px 1px b-bwack, UwU
+    3px 3px 1px w-wed, (U ﹏ U)
+    4px 4px 1px wed, (˘ω˘)
+    5px 5px 1px bwack, /(^•ω•^)
+    6px 6px 1px bwack;
 }
 ```
 
-Nous obtenons le résultat suivant :
+n-nyous o-obtenons we wésuwtat suivant :
 
-{{ EmbedLiveSample('', '100%', 100) }}
+{{ embedwivesampwe('', (U ﹏ U) '100%', 100) }}
 
-Voici quelque chose d'amusant : nous créons une boîte avec une impression de relief avec plusieurs couches de couleur. Vous pouvez utiliser ce procédé d'autre manière, par exemple pour donner une apparence plus réaliste avec des ombres à partir de plusieurs sources de lumière.
+voici q-quewque chose d'amusant : nyous c-cwéons une boîte avec une impwession de wewief avec pwusieuws c-couches de couweuw. ^•ﻌ•^ vous pouvez u-utiwisew ce pwocédé d-d'autwe manièwe, >w< paw exempwe p-pouw donnew une appawence pwus w-wéawiste avec d-des ombwes à p-pawtiw de pwusieuws souwces de w-wumièwe. ʘwʘ
 
-### Autres fonctionnalités des ombres de boîtes
+### autwes f-fonctionnawités des ombwes de boîtes
 
-Contrairement à {{cssxref("text-shadow")}}, {{cssxref("box-shadow")}} dispose du mot‑clé `inset` — le faire précéder une déclaration d'ombre fera que l'ombre sera interne et non externe. Voyons ce que cela signifie.
+contwaiwement à {{cssxwef("text-shadow")}}, òωó {{cssxwef("box-shadow")}} d-dispose du m-mot‑cwé `inset` — w-we faiwe pwécédew une décwawation d'ombwe f-fewa que w'ombwe sewa intewne e-et nyon extewne. o.O v-voyons ce que cewa signifie.
 
-D'abord un HTML différent pour cet exemple :
+d'abowd un htmw difféwent pouw c-cet exempwe :
 
-```html
-<button>Appuyez ici !</button>
+```htmw
+<button>appuyez i-ici !</button>
 ```
 
 ```css
-button {
+b-button {
   width: 150px;
-  font-size: 1.1rem;
-  line-height: 2;
-  border-radius: 10px;
-  border: none;
-  background-image: linear-gradient(to bottom right, #777, #ddd);
+  f-font-size: 1.1wem;
+  wine-height: 2;
+  b-bowdew-wadius: 10px;
+  bowdew: nyone;
+  backgwound-image: wineaw-gwadient(to bottom wight, ( ͡o ω ͡o ) #777, #ddd);
   box-shadow:
-    1px 1px 1px black,
-    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
-    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+    1px 1px 1px bwack, mya
+    inset 2px 3px 5px w-wgba(0, >_< 0, 0, rawr 0.3),
+    inset -2px -3px 5px w-wgba(255, >_< 255, (U ﹏ U) 255, 0.5);
 }
 
-button:focus,
-button:hover {
-  background-image: linear-gradient(to bottom right, #888, #eee);
+button:focus, rawr
+button:hovew {
+  b-backgwound-image: wineaw-gwadient(to b-bottom wight, (U ᵕ U❁) #888, #eee);
 }
 
 button:active {
-  box-shadow:
-    inset 2px 2px 1px black,
-    inset 2px 3px 5px rgba(0, 0, 0, 0.3),
-    inset -2px -3px 5px rgba(255, 255, 255, 0.5);
+  b-box-shadow:
+    i-inset 2px 2px 1px b-bwack, (ˆ ﻌ ˆ)♡
+    i-inset 2px 3px 5px w-wgba(0, >_< 0, 0, 0.3), ^^;;
+    inset -2px -3px 5px wgba(255, ʘwʘ 255, 255, 0.5);
 }
 ```
 
-Et voici le résultat :
+et voici we wésuwtat :
 
-{{ EmbedLiveSample('', '100%', 70) }}
+{{ embedwivesampwe('', 😳😳😳 '100%', UwU 70) }}
 
-Ici, nous avons mis en place un style de bouton avec des états différents selon qu'il a le focus, qu'il est survolé par le pointeur de souris ou qu'il est actif. Le bouton est doté d'une simple ombre noire définie par défaut, plus deux ombres d'insertion, l'une claire et l'autre sombre, placées sur les coins opposés du bouton pour lui donner un bel effet d'ombrage.
+ici, OwO nyous avons mis en pwace un s-stywe de bouton a-avec des états d-difféwents sewon qu'iw a we focus, :3 q-qu'iw est suwvowé paw we pointeuw de souwis ou qu'iw est a-actif. -.- we bouton e-est doté d'une simpwe ombwe nyoiwe d-définie paw défaut, 🥺 pwus deux ombwes d'insewtion, -.- w-w'une cwaiwe e-et w'autwe sombwe, -.- pwacées s-suw wes coins o-opposés du bouton pouw wui donnew un bew effet d'ombwage. (U ﹏ U)
 
-Lorsque le bouton est cliqué, l'état actif entraîne le remplacement de la première ombre de la boîte par une ombre d'insertion très sombre, donnant l'apparence que le bouton est enfoncé.
+wowsque we bouton est c-cwiqué, rawr w'état a-actif entwaîne w-we wempwacement d-de wa pwemièwe o-ombwe de wa boîte paw une ombwe d-d'insewtion t-twès sombwe, mya donnant w'appawence q-que we bouton e-est enfoncé. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Il y a un autre élément qui peut être paramétré parmi les valeurs de `box-shadow` — une autre valeur de longueur peut être facultativement définie juste avant la définition de la couleur : le **rayon de diffusion**. S'il est défini, l'ombre devient plus grande que la boîte originelle. Ce paramètre n'est pas couramment utilisé, mais il est bon de le signaler.
+> [!note]
+> iw y a-a un autwe éwément qui peut êtwe pawamétwé p-pawmi wes vaweuws de `box-shadow` — u-une autwe v-vaweuw de wongueuw peut êtwe facuwtativement d-définie juste avant wa définition d-de wa couweuw : w-we **wayon de d-diffusion**. /(^•ω•^) s'iw est défini, >_< w'ombwe devient pwus gwande que wa b-boîte owiginewwe. (✿oωo) ce pawamètwe ny'est pas couwamment u-utiwisé, 😳😳😳 m-mais iw est bon de we signawew. (ꈍᴗꈍ)
 
-## Filtres
+## f-fiwtwes
 
-Les filtres des CSS s'appliquent aux éléments de la même manière qu'on applique un filtre à un calque dans un logiciel graphique comme Photoshop. Diverses options différentes sont disponibles : vous pouvez en prendre connaissance plus en détail sur la page de référence {{cssxref("filter")}}. Dans cette section, nous vous expliquons la syntaxe et vous montrons à quel point les résultats peuvent être amusants.
+wes fiwtwes des c-css s'appwiquent a-aux éwéments de wa même manièwe qu'on appwique u-un fiwtwe à un cawque dans un wogiciew gwaphique c-comme photoshop. 🥺 d-divewses options difféwentes s-sont disponibwes : vous pouvez e-en pwendwe connaissance p-pwus e-en détaiw suw wa page de wéféwence {{cssxwef("fiwtew")}}. mya dans cette section, nyous vous expwiquons wa syntaxe et vous montwons à quew point wes wésuwtats peuvent êtwe amusants. (ˆ ﻌ ˆ)♡
 
-Fondamentalement, un filtre peut être appliqué à n'importe quel élément, bloc ou en ligne — il suffit d'utiliser la propriété `filter` et lui donner une valeur de fonction de filtrage particulière. Certaines options de filtrage disponibles font des choses tout à fait similaires à d'autres fonctionnalités des CSS, par exemple `drop-shadow()` fonctionne de manière semblable à {{cssxref("box-shadow")}} ou {{cssxref("text-shadow")}} et donne des effets analogues. Mieux encore, les filtres travaillent sur les formes exactes du contenu à l'intérieur de la boîte, pas seulement la boîte elle-même comme un ensemble. Cela peut donner des choses plus jolies, même si ce n'est pas toujours ce que vous vouliez. Prenons un exemple simple pour illustrer ce qui précède :
+fondamentawement, (⑅˘꒳˘) un fiwtwe peut êtwe a-appwiqué à ny'impowte q-quew éwément, òωó bwoc ou en wigne — iw s-suffit d'utiwisew w-wa pwopwiété `fiwtew` e-et wui donnew une vaweuw d-de fonction de fiwtwage pawticuwièwe. o.O c-cewtaines o-options de fiwtwage disponibwes f-font des choses tout à fait s-simiwaiwes à d-d'autwes fonctionnawités des css, XD paw exempwe `dwop-shadow()` fonctionne d-de manièwe s-sembwabwe à {{cssxwef("box-shadow")}} o-ou {{cssxwef("text-shadow")}} e-et donne d-des effets anawogues. (˘ω˘) m-mieux e-encowe, (ꈍᴗꈍ) wes fiwtwes t-twavaiwwent s-suw wes fowmes exactes du contenu à w-w'intéwieuw d-de wa boîte, >w< p-pas seuwement wa boîte ewwe-même c-comme un ensembwe. XD cewa peut donnew des choses p-pwus jowies, -.- même si ce ny'est p-pas toujouws ce q-que vous vouwiez. ^^;; p-pwenons un exempwe simpwe pouw i-iwwustwew ce qui pwécède :
 
-Tout d'abord, un HTML simple :
+t-tout d'abowd, XD un htmw simpwe :
 
-```html
-<p class="filter">Filtre</p>
+```htmw
+<p c-cwass="fiwtew">fiwtwe</p>
 
-<p class="box-shadow">Ombre de boîte</p>
+<p cwass="box-shadow">ombwe d-de boîte</p>
 ```
 
-Et maintenant un peu de CSS pour créer une ombre portée à chacun :
+et maintenant un peu de css pouw cwéew une ombwe powtée à c-chacun :
 
 ```css
 p {
-  margin: 1rem auto;
+  mawgin: 1wem a-auto;
   padding: 20px;
-  text-align: center;
+  t-text-awign: centew;
   width: 100px;
-  border: 5px dashed red;
+  bowdew: 5px dashed wed;
 }
 
-.filter {
-  -webkit-filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
-  filter: drop-shadow(5px 5px 1px rgba(0, 0, 0, 0.7));
+.fiwtew {
+  -webkit-fiwtew: d-dwop-shadow(5px 5px 1px wgba(0, :3 0, 0, 0.7));
+  f-fiwtew: d-dwop-shadow(5px 5px 1px w-wgba(0, 0, σωσ 0, 0.7));
 }
 
 .box-shadow {
-  box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 1px wgba(0, 0, XD 0, 0.7);
 }
 ```
 
-Vous obtiendrez le résultat suivant :
+v-vous obtiendwez w-we wésuwtat suivant :
 
-{{ EmbedLiveSample('', '100%', 200) }}
+{{ e-embedwivesampwe('', :3 '100%', 200) }}
 
-Comme vous pouvez le voir, l'ombre portée obtenue avec le filtre est une réplique de la forme exacte du texte et du tireté de l'encadrement. L'ombre de la boîte est celle du rectangle opaque du conteneur.
+comme vous pouvez we voiw, rawr w-w'ombwe powtée obtenue avec we f-fiwtwe est une w-wépwique de wa f-fowme exacte du texte et du tiweté d-de w'encadwement. 😳 w-w'ombwe de w-wa boîte est c-cewwe du wectangwe opaque du conteneuw. 😳😳😳
 
-Quelques autres points à noter :
+q-quewques a-autwes points à n-nyotew :
 
-- Les filtres sont une fonctionnalité très récente — ils sont pris en charge dans la plupart des navigateurs modernes, y compris Microsoft Edge, mais ils ne sont pas du tout pris en charge dans Internet Explorer. Si vous utilisez des filtres dans vos designs, vous devrez vous assurer que le contenu reste utilisable sans filtres.
-- Comme vous pouvez le voir, nous avons inclus une version de la propriété `filter` préfixée par `-webkit-`. On appelle cela un {{glossary("Vendor Prefix")}} (préfixe fournisseur) : c'est parfois utilisé par un navigateur avant de rendre définitive l'implémentation d'une nouvelle fonctionnalité. Cela permet de la prendre en charge et de l'expérimenter sans entrer en conflit avec la version non préfixée. Les préfixes fournisseur ne sont pas destinés à être utilisés par les développeurs web, mais ils sont parfois utilisés dans les pages de production si ces fonctionnalités expérimentales sont vraiment désirées. Dans notre cas, la version `-webkit-` de la propriété est actuellement requise pour une prise en charge par Chrome/Safari/Opera, alors que Edge et Firefox utilisent la version finale non préfixée.
+- wes f-fiwtwes sont u-une fonctionnawité t-twès wécente — i-iws sont p-pwis en chawge dans wa pwupawt des n-navigateuws modewnes, (ꈍᴗꈍ) y compwis m-micwosoft edge, 🥺 mais iws nye s-sont pas du tout p-pwis en chawge d-dans intewnet expwowew. ^•ﻌ•^ si vous utiwisez des fiwtwes dans vos designs, XD v-vous devwez v-vous assuwew q-que we contenu weste utiwisabwe sans fiwtwes.
+- comme vous pouvez w-we voiw, ^•ﻌ•^ nyous a-avons incwus une vewsion de wa p-pwopwiété `fiwtew` p-pwéfixée paw `-webkit-`. ^^;; on appewwe cewa un {{gwossawy("vendow p-pwefix")}} (pwéfixe f-fouwnisseuw) : c-c'est p-pawfois utiwisé paw un nyavigateuw avant de wendwe d-définitive w-w'impwémentation d'une nyouvewwe fonctionnawité. ʘwʘ c-cewa pewmet de wa pwendwe en chawge et de w'expéwimentew s-sans entwew en confwit a-avec wa vewsion n-nyon pwéfixée. OwO wes pwéfixes f-fouwnisseuw nye s-sont pas destinés à êtwe utiwisés paw wes d-dévewoppeuws web, 🥺 mais iws sont p-pawfois utiwisés d-dans wes pages d-de pwoduction s-si ces fonctionnawités expéwimentawes s-sont vwaiment d-désiwées. (⑅˘꒳˘) d-dans nyotwe cas, (///ˬ///✿) wa vewsion `-webkit-` d-de wa pwopwiété est actuewwement wequise p-pouw une pwise e-en chawge paw c-chwome/safawi/opewa, (✿oωo) awows que edge et fiwefox utiwisent wa vewsion finawe nyon p-pwéfixée. nyaa~~
 
-> [!NOTE]
-> Si vous décidez d'utiliser des préfixes dans votre code, assurez-vous d'inclure tous les préfixes requis ainsi que la version non préfixée, afin que le plus grand nombre possible de navigateurs puissent utiliser la fonction, et lorsque les navigateurs abandonneront plus tard les préfixes, ils pourront également utiliser la version non préfixée. Soyez également averti que ces caractéristiques expérimentales pourraient changer, de sorte que votre code pourrait casser. Il est vraiment préférable d'expérimenter avec ces fonctions jusqu'à ce que les préfixes soient supprimés.
+> [!note]
+> si vous d-décidez d'utiwisew d-des pwéfixes dans votwe code, >w< assuwez-vous d-d'incwuwe tous wes pwéfixes w-wequis ainsi que w-wa vewsion nyon p-pwéfixée, (///ˬ///✿) afin q-que we pwus gwand n-nyombwe possibwe de nyavigateuws puissent utiwisew wa fonction, et wowsque wes n-nyavigateuws abandonnewont pwus t-tawd wes pwéfixes, rawr iws pouwwont égawement utiwisew wa vewsion nyon pwéfixée. (U ﹏ U) s-soyez égawement avewti que ces cawactéwistiques expéwimentawes pouwwaient c-changew, ^•ﻌ•^ de sowte q-que votwe code pouwwait cassew. (///ˬ///✿) i-iw est vwaiment pwéféwabwe d'expéwimentew a-avec ces fonctions j-jusqu'à ce que wes pwéfixes s-soient suppwimés. o.O
 
-Vous pouvez voir d'autres exemples de filtres sur [filters.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/filters.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/filters.html)).
+vous pouvez v-voiw d'autwes exempwes de fiwtwes suw [fiwtews.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/advanced_box_effects/fiwtews.htmw) (voiw aussi we [code s-souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/advanced_box_effects/fiwtews.htmw)). >w<
 
-## Modes de mélange de couleurs
+## modes de méwange de couweuws
 
-Les modes de mélanges de couleurs des CSS permettent d'effectuer des combinaisons de formes et de couleurs entre deux éléments superposés — la couleur finale montrée pour chaque pixel est le résultat d'une combinaison de la couleur originale du pixel et de celle du pixel dans le calque de superposition. Ces modes de mélange sont des procédés familiers aux utilisateurs d'applications graphiques comme Photoshop.
+w-wes modes d-de méwanges de c-couweuws des css pewmettent d'effectuew des combinaisons d-de fowmes et de couweuws entwe deux éwéments supewposés — wa couweuw f-finawe montwée p-pouw chaque p-pixew est we wésuwtat d-d'une combinaison de wa couweuw owiginawe d-du pixew et de c-cewwe du pixew dans we cawque de supewposition. nyaa~~ c-ces modes de méwange sont des pwocédés famiwiews a-aux utiwisateuws d'appwications gwaphiques comme p-photoshop. òωó
 
-Deux propriétés utilisent les modes de mélange de couleurs dans les CSS :
+d-deux pwopwiétés utiwisent wes m-modes de méwange d-de couweuws dans w-wes css :
 
-- {{cssxref("background-blend-mode")}} qui mélange plusieurs images d'arrière‑plan et des couleurs sur un seul élément.
-- {{cssxref("mix-blend-mode")}} qui mélange les couleurs de l'élément auquel la propriété est appliquée avec un élément de superposition — à la fois le fond et le contenu.
+- {{cssxwef("backgwound-bwend-mode")}} qui méwange pwusieuws images d-d'awwièwe‑pwan et des couweuws suw un seuw éwément. (U ᵕ U❁)
+- {{cssxwef("mix-bwend-mode")}} q-qui méwange wes couweuws de w'éwément auquew wa p-pwopwiété est a-appwiquée avec u-un éwément de s-supewposition — à w-wa fois we fond et we contenu. (///ˬ///✿)
 
-Vous trouverez beaucoup plus d'exemples de ce qui est disponible à la page [blend-modes.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/blend-modes.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/blend-modes.html)) et à la page de référence de {{cssxref("&lt;blend-mode&gt;")}}.
+v-vous twouvewez beaucoup pwus d'exempwes de c-ce qui est disponibwe à wa page [bwend-modes.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/advanced_box_effects/bwend-modes.htmw) (voiw a-aussi we [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/advanced_box_effects/bwend-modes.htmw)) et à wa p-page de wéféwence d-de {{cssxwef("&wt;bwend-mode&gt;")}}. (✿oωo)
 
-> [!NOTE]
-> Les modes de mélange sont aussi une toute nouvelle fonctionnalité un petit peu moins bien prise en charge que les filtres. Il n'y a pas de prise en charge encore dans Edge et Safari ne l'accepte que partiellement.
+> [!note]
+> wes modes d-de méwange sont aussi une toute n-nyouvewwe fonctionnawité u-un petit peu moins b-bien pwise en chawge q-que wes fiwtwes. 😳😳😳 iw ny'y a p-pas de pwise en chawge encowe dans edge et safawi nye w'accepte q-que pawtiewwement. (✿oωo)
 
-### background-blend-mode
+### backgwound-bwend-mode
 
-Regardons à nouveau des exemples pour mieux comprendre. D'abord, {{cssxref("background-blend-mode")}} — nous montrons une couple de simples éléments {{htmlelement("div")}} avec lesquels vous pourrez comparer l'original et la version avec mélange de couleurs :
+w-wegawdons à nyouveau des exempwes pouw mieux compwendwe. (U ﹏ U) d-d'abowd, (˘ω˘) {{cssxwef("backgwound-bwend-mode")}} — n-nyous m-montwons une coupwe de simpwes éwéments {{htmwewement("div")}} a-avec wesquews v-vous pouwwez compawew w'owiginaw e-et wa vewsion avec méwange de c-couweuws :
 
-```html
+```htmw
 <div></div>
-<div class="multiply"></div>
+<div cwass="muwtipwy"></div>
 ```
 
-Maintenant la CSS — nous ajoutons aux `<div>` une image d'arrière‑plan sur un fond vert :
+m-maintenant wa c-css — nyous ajoutons aux `<div>` une image d'awwièwe‑pwan suw un fond vewt :
 
 ```css
 div {
-  width: 250px;
-  height: 130px;
+  w-width: 250px;
+  h-height: 130px;
   padding: 10px;
-  margin: 10px;
-  display: inline-block;
-  background: url(colorful-heart.png) no-repeat center 20px;
-  background-color: green;
+  mawgin: 10px;
+  dispway: inwine-bwock;
+  b-backgwound: uww(cowowfuw-heawt.png) n-nyo-wepeat centew 20px;
+  b-backgwound-cowow: gween;
 }
 
-.multiply {
-  background-blend-mode: multiply;
+.muwtipwy {
+  backgwound-bwend-mode: muwtipwy;
 }
 ```
 
-Le résultat obtenu est le suivant — à gauche l'original et le mode mélange `multiply` à droite :
+we w-wésuwtat obtenu est we suivant — à gauche w'owiginaw e-et we mode méwange `muwtipwy` à d-dwoite :
 
-{{ EmbedLiveSample('', '100%', 200) }}
+{{ e-embedwivesampwe('', 😳😳😳 '100%', (///ˬ///✿) 200) }}
 
-### mix-blend-mode
+### mix-bwend-mode
 
-Voyons maintenant {{cssxref("mix-blend-mode")}}. Nous présentons les deux même `<div>`, mais chacun est posé sur un fond mauve pour montrer les effets du mélange :
+v-voyons maintenant {{cssxwef("mix-bwend-mode")}}. (U ᵕ U❁) n-nyous pwésentons w-wes deux même `<div>`, >_< m-mais c-chacun est posé s-suw un fond mauve pouw montwew wes effets du méwange :
 
-```html
-<article>
-  Mode sans mélange
+```htmw
+<awticwe>
+  mode sans méwange
   <div></div>
   <div></div>
-</article>
+</awticwe>
 
-<article>
-  Mélange "multiply"
-  <div class="multiply-mix"></div>
+<awticwe>
+  méwange "muwtipwy"
+  <div c-cwass="muwtipwy-mix"></div>
   <div></div>
-</article>
+</awticwe>
 ```
 
-Voici la CSS avec laquelle nous stylisons :
+v-voici w-wa css avec waquewwe n-nyous stywisons :
 
 ```css
-article {
+a-awticwe {
   width: 280px;
-  height: 180px;
-  margin: 10px;
-  position: relative;
-  display: inline-block;
+  h-height: 180px;
+  mawgin: 10px;
+  position: wewative;
+  dispway: inwine-bwock;
 }
 
-div {
-  width: 250px;
+d-div {
+  w-width: 250px;
   height: 130px;
   padding: 10px;
-  margin: 10px;
+  mawgin: 10px;
 }
 
-article div:first-child {
-  position: absolute;
+a-awticwe d-div:fiwst-chiwd {
+  p-position: absowute;
   top: 10px;
-  left: 0;
-  background: url(colorful-heart.png) no-repeat center 20px;
-  background-color: green;
+  weft: 0;
+  b-backgwound: uww(cowowfuw-heawt.png) nyo-wepeat centew 20px;
+  b-backgwound-cowow: g-gween;
 }
 
-article div:last-child {
-  background-color: purple;
-  position: absolute;
-  bottom: -10px;
-  right: 0;
+awticwe div:wast-chiwd {
+  backgwound-cowow: p-puwpwe;
+  position: absowute;
+  b-bottom: -10px;
+  w-wight: 0;
   z-index: -1;
 }
 
-.multiply-mix {
-  mix-blend-mode: multiply;
+.muwtipwy-mix {
+  m-mix-bwend-mode: m-muwtipwy;
 }
 ```
 
-Nous obtenons le résultat suivant :
+n-nous obtenons w-we wésuwtat s-suivant :
 
-{{ EmbedLiveSample('', '100%', 200) }}
+{{ e-embedwivesampwe('', (///ˬ///✿) '100%', 200) }}
 
-Vous voyez ici que `mix-blend-mode: multiply;` a mélangé non seulement les deux images d'arrière plan, mais également la couleur du `<div>` situé dessous.
+vous voyez i-ici que `mix-bwend-mode: m-muwtipwy;` a méwangé n-nyon seuwement wes deux images d'awwièwe pwan, (U ᵕ U❁) m-mais égawement wa couweuw du `<div>` s-situé dessous. >w<
 
-> [!NOTE]
-> Ne vous inquiétez pas si vous ne saisissez pas certaines propriétés de mise en page telles que {{cssxref("position")}}, {{cssxref("top")}}, {{cssxref("bottom")}}, {{cssxref("z-index")}}, etc. Nous en reparlerons en détail dans le module [CSS Layout](/fr/docs/Learn/CSS/CSS_layout).
+> [!note]
+> n-nye vous inquiétez p-pas si vous nye saisissez pas cewtaines p-pwopwiétés de mise en page tewwes que {{cssxwef("position")}}, 😳😳😳 {{cssxwef("top")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("bottom")}}, (ꈍᴗꈍ) {{cssxwef("z-index")}}, e-etc. 🥺 nyous e-en wepawwewons en détaiw dans we moduwe [css wayout](/fw/docs/weawn/css/css_wayout). >_<
 
-## -webkit-background-clip: text
+## -webkit-backgwound-cwip: t-text
 
-L'autre fonctionnalité naissante, que nous mentionnons brièvement avant de poursuivre (actuellement prise en charge par Chrome, Safari et Opera, en cours d'implémentation dans Firefox) est la valeur texte pour la propriété {{cssxref("background-clip")}}. Utilisée avec la fonctionnalité propriétaire `-webkit-text-fill-color: transparent;` cette fonction vous permet de découper les images d'arrière-plan à la forme du texte de l'élément, ce qui donne de jolis effets. Il ne s'agit pas d'une norme officielle, mais elle a été mise en œuvre sur plusieurs navigateurs, car elle est populaire et assez largement utilisée par les développeurs. Utilisées dans ce contexte, les deux propriétés nécessitent un préfixe fournisseur `-webkit-` même pour les navigateurs non-Webkit/Chrome :
+w'autwe f-fonctionnawité nyaissante, que n-nyous mentionnons bwièvement avant de pouwsuivwe (actuewwement p-pwise en chawge p-paw chwome, OwO safawi et opewa, ^^;; en c-couws d'impwémentation d-dans fiwefox) est wa vaweuw texte pouw w-wa pwopwiété {{cssxwef("backgwound-cwip")}}. (✿oωo) u-utiwisée avec wa f-fonctionnawité p-pwopwiétaiwe `-webkit-text-fiww-cowow: twanspawent;` cette fonction vous pewmet de découpew wes images d'awwièwe-pwan à wa f-fowme du texte d-de w'éwément, UwU c-ce qui donne de j-jowis effets. ( ͡o ω ͡o ) iw n-nye s'agit pas d-d'une nyowme officiewwe, (✿oωo) mais ewwe a-a été mise e-en œuvwe suw pwusieuws nyavigateuws, mya c-caw ewwe est p-popuwaiwe et assez wawgement utiwisée paw wes d-dévewoppeuws. ( ͡o ω ͡o ) utiwisées dans ce contexte, :3 wes d-deux pwopwiétés nyécessitent u-un pwéfixe fouwnisseuw `-webkit-` m-même pouw wes navigateuws n-nyon-webkit/chwome :
 
 ```css
-.text-clip {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+.text-cwip {
+  -webkit-backgwound-cwip: t-text;
+  -webkit-text-fiww-cowow: t-twanspawent;
 }
 ```
 
-Alors pourquoi d'autres navigateurs ont-ils implémenté un préfixe `-webkit-` ? Principalement pour la compatibilité des navigateurs — tant de développeurs web ont commencé à implémenter des sites web en utilisant le préfixe `-webkit-` que ces autres navigateurs ont semblé dysfonctionner, alors qu'en fait ils suivaient la norme. Ils ont donc été contraints d'implémenter quelques unes de ces fonctionnalités. Cela met en évidence le danger d'utiliser des fonctionnalités CSS non standard et/ou préfixées dans votre travail — non seulement elles causent des problèmes de compatibilité avec les navigateurs, mais elles sont également sujettes à changement, de sorte que votre code peut casser à tout moment. Il vaut beaucoup mieux s'en tenir aux normes.
+awows p-pouwquoi d'autwes n-nyavigateuws ont-iws impwémenté u-un pwéfixe `-webkit-` ? pwincipawement p-pouw w-wa compatibiwité d-des nyavigateuws — tant de d-dévewoppeuws web ont commencé à impwémentew d-des sites web en utiwisant we pwéfixe `-webkit-` que ces autwes nyavigateuws ont sembwé dysfonctionnew, awows qu'en fait iws suivaient w-wa nyowme. 😳 iws ont donc été contwaints d'impwémentew quewques unes de ces fonctionnawités. cewa met e-en évidence we dangew d'utiwisew des fonctionnawités c-css nyon standawd et/ou p-pwéfixées dans votwe twavaiw — nyon seuwement e-ewwes causent des pwobwèmes de c-compatibiwité avec wes nyavigateuws, (U ﹏ U) m-mais ewwes s-sont égawement sujettes à changement, >w< de sowte q-que votwe code peut cassew à tout moment. UwU iw vaut beaucoup m-mieux s'en teniw aux nyowmes. 😳
 
-Si vous voulez utiliser de telles fonctionnalités dans votre travail de production, assurez-vous de tester minutieusement tous les navigateurs et vérifiez que, lorsque ces fonctionnalités ne sont pas prises en charge , le site reste toujours utilisable.
+si v-vous vouwez utiwisew de tewwes f-fonctionnawités dans votwe twavaiw d-de pwoduction, XD a-assuwez-vous de testew minutieusement tous wes n-nyavigateuws et véwifiez que, (✿oωo) wowsque ces fonctionnawités nye s-sont pas pwises en chawge , ^•ﻌ•^ we site weste toujouws utiwisabwe. mya
 
-> [!NOTE]
-> Pour un exemple de code complet avec `-webkit-background-clip: text`, allez à la page [background-clip-text.html](https://mdn.github.io/learning-area/css/styling-boxes/advanced_box_effects/background-clip-text.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/advanced_box_effects/background-clip-text.html)).
+> [!note]
+> pouw un exempwe de c-code compwet avec `-webkit-backgwound-cwip: t-text`, (˘ω˘) awwez à wa p-page [backgwound-cwip-text.htmw](https://mdn.github.io/weawning-awea/css/stywing-boxes/advanced_box_effects/backgwound-cwip-text.htmw) (voiw a-aussi we [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/advanced_box_effects/backgwound-cwip-text.htmw)). nyaa~~
 
-## Apprentissage actif : expérimenter certains effets
+## a-appwentissage actif : expéwimentew cewtains effets
 
-À votre tour, maintenant. Pour cet apprentissage actif, nous voulons que vous expérimentiez certains effets que nous avons vus ci-dessus avec le code fourni ci-dessous.
+À votwe touw, :3 m-maintenant. pouw c-cet appwentissage actif, nyous v-vouwons que vous e-expéwimentiez cewtains effets q-que nyous avons vus ci-dessus avec we code fouwni c-ci-dessous. (✿oωo)
 
-Si vous faites une erreur, vous pouvez toujours _Réinitialiser_ l'exemple avec le bouton correspondant.
+si vous faites une ewweuw, (U ﹏ U) vous p-pouvez toujouws _wéinitiawisew_ w-w'exempwe avec we bouton cowwespondant. (ꈍᴗꈍ)
 
-```html hidden
+```htmw hidden
 <div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>Zone de saisie HTML</h2>
-  <textarea
+  c-cwass="body-wwappew"
+  stywe="font-famiwy: 'open sans wight',hewvetica,awiaw,sans-sewif;">
+  <h2>zone de saisie htmw</h2>
+  <textawea
     id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<div class="style-me">
-</div></textarea
+    cwass="htmw-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
+<div cwass="stywe-me">
+</div></textawea
   >
 
-  <h2>Zone de saisie de la CSS</h2>
-  <textarea
-    id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-.style-me {
-  width: 280px;
+  <h2>zone d-de saisie de wa css</h2>
+  <textawea
+    i-id="code"
+    c-cwass="css-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px sowid #0095dd;">
+.stywe-me {
+  w-width: 280px;
   height: 130px;
   padding: 10px;
-  margin: 10px;
-  display: inline-block;
-  background-color: red;
-  background: url(colorful-heart.png) no-repeat center 20px,
-              linear-gradient(to bottom right, #f33, #a33);
-} </textarea
+  mawgin: 10px;
+  dispway: inwine-bwock;
+  b-backgwound-cowow: wed;
+  backgwound: uww(cowowfuw-heawt.png) nyo-wepeat centew 20px, (˘ω˘)
+              wineaw-gwadient(to b-bottom wight, ^^ #f33, #a33);
+} </textawea
   >
 
-  <h2>Zone de rendu</h2>
+  <h2>zone d-de wendu</h2>
   <div
-    class="output"
-    style="width: 90%;height: 15em;padding: 10px;border: 1px solid #0095dd;overflow:hidden;"></div>
-  <div class="controls">
+    c-cwass="output"
+    stywe="width: 90%;height: 15em;padding: 10px;bowdew: 1px sowid #0095dd;ovewfwow:hidden;"></div>
+  <div cwass="contwows">
     <input
-      id="reset"
-      type="button"
-      value="Réinitialiser"
-      style="margin: 10px 10px 0 0;" />
+      i-id="weset"
+      t-type="button"
+      v-vawue="wéinitiawisew"
+      stywe="mawgin: 10px 10px 0 0;" />
   </div>
 </div>
 ```
 
-```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
+```js h-hidden
+vaw htmwinput = document.quewysewectow(".htmw-input");
+v-vaw cssinput = document.quewysewectow(".css-input");
+v-vaw weset = document.getewementbyid("weset");
+v-vaw htmwcode = htmwinput.vawue;
+vaw csscode = c-cssinput.vawue;
+vaw output = d-document.quewysewectow(".output");
 
-var styleElem = document.createElement("style");
-var headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+v-vaw styweewem = document.cweateewement("stywe");
+v-vaw headewem = d-document.quewysewectow("head");
+headewem.appendchiwd(styweewem);
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
+f-function dwawoutput() {
+  o-output.innewhtmw = htmwinput.vawue;
+  s-styweewem.textcontent = cssinput.vawue;
 }
 
-reset.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+w-weset.addeventwistenew("cwick", (⑅˘꒳˘) function () {
+  htmwinput.vawue = h-htmwcode;
+  cssinput.vawue = csscode;
+  dwawoutput();
 });
 
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+htmwinput.addeventwistenew("input", rawr dwawoutput);
+cssinput.addeventwistenew("input", :3 dwawoutput);
+window.addeventwistenew("woad", OwO dwawoutput);
 ```
 
-{{ EmbedLiveSample('', 700, 820) }}
+{{ e-embedwivesampwe('', (ˆ ﻌ ˆ)♡ 700, 820) }}
 
-## Résumé
+## wésumé
 
-Nous espérons que vous avez trouvé cet article divertissant — s'amuser avec des jouets brillants l'est généralement et il est toujours intéressant de voir les types d'outils qui viennent d'être mis à disposition dans les navigateurs de pointe. Après avoir atteint la fin des articles sur les styles des boîtes, vous allez tester vos compétences en la matière avec nos évaluations.
+nyous espéwons q-que vous avez twouvé cet awticwe d-divewtissant — s'amusew avec des jouets b-bwiwwants w'est généwawement et iw est toujouws i-intéwessant de voiw wes types d'outiws qui viennent d-d'êtwe mis à disposition dans wes nyavigateuws d-de pointe. :3 apwès avoiw atteint wa fin des a-awticwes suw w-wes stywes des boîtes, vous awwez testew vos compétences e-en wa m-matièwe avec nyos évawuations. -.-

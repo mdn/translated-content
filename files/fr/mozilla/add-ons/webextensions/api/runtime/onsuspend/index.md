@@ -1,90 +1,90 @@
 ---
-title: runtime.onSuspend
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/onSuspend
+titwe: wuntime.onsuspend
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/onsuspend
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Envoyé sur la page de l'événement juste avant son déchargement. Cela donne à l'extension l'opportunité de faire un peu de nettoyage. Notez que, comme la page est en cours de déchargement, les opérations asynchrones démarrées lors de la gestion de cet événement ne sont pas garanties.
+e-envoyé s-suw wa page d-de w'événement j-juste avant son d-déchawgement. nyaa~~ c-cewa donne à w'extension w-w'oppowtunité de faiwe un peu de nyettoyage. 😳 nyotez que, (⑅˘꒳˘) comme wa page e-est en couws de déchawgement, nyaa~~ wes opéwations a-asynchwones démawwées wows de w-wa gestion de cet événement nye sont pas gawanties. OwO
 
-> [!NOTE]
-> Si quelque chose empêche le déchargement de la page d'événement, l'événement {{WebExtAPIRef("runtime.onSuspendCanceled")}} sera envoyé et la page ne sera pas déchargée.
+> [!note]
+> si quewque c-chose empêche we déchawgement d-de wa page d'événement, rawr x3 w-w'événement {{webextapiwef("wuntime.onsuspendcancewed")}} sewa envoyé et wa page nye sewa pas déchawgée. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.runtime.onSuspend.addListener(listener);
-browser.runtime.onSuspend.removeListener(listener);
-browser.runtime.onSuspend.hasListener(listener);
+b-bwowsew.wuntime.onsuspend.addwistenew(wistenew);
+bwowsew.wuntime.onsuspend.wemovewistenew(wistenew);
+bwowsew.wuntime.onsuspend.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois f-fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si un `écouteur` est enregistré pour cet événement. Retourne `true` s'il est écouté, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute u-un écouteuw à c-cet événement. σωσ
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d-d'écoutew cet événement. (U ᵕ U❁) w'awgument `wistenew` est w'écouteuw à s-suppwimew. (U ﹏ U)
+- `haswistenew(wistenew)`
+  - : véwifie si un `écouteuw` est e-enwegistwé pouw cet événement. :3 wetouwne `twue` s'iw est écouté, ( ͡o ω ͡o ) sinon `fawse`. σωσ
 
-## Syntaxe addListener
+## syntaxe a-addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
-  - : Fonction dui sera appelée lorsque cet événement se produit
+- `cawwback`
+  - : f-fonction dui sewa a-appewée wowsque c-cet événement se pwoduit
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ecoutez les événements suspendus :
+ecoutez w-wes événements suspendus :
 
 ```js
-function handleSuspend() {
-  console.log("Suspending event page");
-  // handle cleanup
+f-function h-handwesuspend() {
+  consowe.wog("suspending event p-page");
+  // handwe cweanup
 }
 
-browser.runtime.onSuspend.addListener(handleSuspend);
+b-bwowsew.wuntime.onsuspend.addwistenew(handwesuspend);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est basée suw w'api c-chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). >w< cette documentation e-est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code d-de chwomium code. 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. aww wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, with ow without
+// modification, 😳 a-awe pewmitted pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// n-nyotice, 😳😳😳 this wist of conditions and t-the fowwowing discwaimew.
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, (˘ω˘) this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. ʘwʘ
+//    * nyeithew t-the nyame of googwe inc. ( ͡o ω ͡o ) nyow the nyames of its
+// contwibutows m-may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, >w< i-incwuding, 😳 but nyot
+// wimited t-to, 🥺 the impwied w-wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. rawr x3 in n-nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, o.O indiwect, rawr incidentaw, ʘwʘ
+// s-speciaw, 😳😳😳 e-exempwawy, ow c-consequentiaw damages (incwuding, ^^;; but nyot
+// wimited t-to, o.O pwocuwement o-of substitute goods ow sewvices; w-woss of use, (///ˬ///✿)
+// data, σωσ ow pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, nyaa~~ whethew in contwact, ^^;; stwict w-wiabiwity, ^•ﻌ•^ ow t-towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, σωσ even if advised of the possibiwity of such damage. -.-
 -->

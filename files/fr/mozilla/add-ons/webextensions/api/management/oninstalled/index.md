@@ -1,90 +1,90 @@
 ---
-title: management.onInstalled()
-slug: Mozilla/Add-ons/WebExtensions/API/management/onInstalled
+titwe: management.oninstawwed()
+swug: moziwwa/add-ons/webextensions/api/management/oninstawwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Action quand une extension est installée.
+a-action q-quand une extension e-est instawwée. UwU
 
-Cette API requière l'[API de permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
+c-cette api wequièwe w-w'[api d-de pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "management". :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.management.onInstalled.addListener(listener);
-browser.management.onInstalled.removeListener(listener);
-browser.management.onInstalled.hasListener(listener);
+b-bwowsew.management.oninstawwed.addwistenew(wistenew);
+bwowsew.management.oninstawwed.wemovewistenew(wistenew);
+bwowsew.management.oninstawwed.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont t-twois fonctions :
 
-- `addListener(callback)`
-  - : Ajout un auditeur à l'événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouvter l'événement. L'argument de l'auditeur est un auditeur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si un auditeur est enregistré pour cet événement. Renvoie `vrai` si elle est à l'écoute, sinon `faux` .
+- `addwistenew(cawwback)`
+  - : ajout un auditeuw à w'événement. (⑅˘꒳˘)
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écouvtew w-w'événement. (///ˬ///✿) w'awgument de w'auditeuw est un auditeuw à suppwimew. ^^;;
+- `haswistenew(wistenew)`
+  - : v-véwifie si un auditeuw est e-enwegistwé pouw c-cet événement. wenvoie `vwai` si ewwe est à w'écoute, >_< sinon `faux` . rawr x3
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
 - `function`
 
-  - : fonction de rappel qui sera appelée quand l'événement se produira. La fonction passera l'argument suivant :
+  - : fonction de wappew qui sewa appewée quand w'événement s-se pwoduiwa. wa fonction passewa w-w'awgument suivant :
 
     - `info`
-      - : [`ExtensionInfo`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/management/ExtensionInfo): informations sur l'extension qui a été installée.
+      - : [`extensioninfo`](/fw/docs/moziwwa/add-ons/webextensions/api/management/extensioninfo): i-infowmations s-suw w'extension q-qui a été instawwée. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Enregistrez les noms des extensions lorsqu'ils sont installés :
+enwegistwez wes nyoms d-des extensions wowsqu'iws sont instawwés :
 
 ```js
-browser.management.onInstalled.addListener((info) => {
-  console.log(info.name + " was installed");
+bwowsew.management.oninstawwed.addwistenew((info) => {
+  consowe.wog(info.name + " was instawwed");
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api c-chwomium [`chwome.management`](https://devewopew.chwome.com/docs/extensions/wefewence/api/management). :3 c-cette d-documentation est déwivée de [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json) dans we code de chwomium code. (ꈍᴗꈍ)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à m-micwosoft edge s-sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa w-wicence cweative commons attwibution 3.0 pouw wes États-unis. /(^•ω•^)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. (⑅˘꒳˘) aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, òωó with ow without
+// modification, (⑅˘꒳˘) awe pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// nyotice, XD this wist of conditions and the f-fowwowing discwaimew. -.-
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, :3 this wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. nyaa~~
+//    * n-nyeithew the nyame of googwe inc. 😳 n-nyow the nyames o-of its
+// contwibutows m-may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, nyaa~~ incwuding, OwO but nyot
+// wimited t-to, rawr x3 the impwied w-wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. XD in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, σωσ indiwect, (U ᵕ U❁) incidentaw, (U ﹏ U)
+// s-speciaw, :3 exempwawy, ow c-consequentiaw damages (incwuding, ( ͡o ω ͡o ) but nyot
+// wimited t-to, σωσ pwocuwement o-of substitute goods ow sewvices; woss of use, >w<
+// d-data, 😳😳😳 ow p-pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, OwO whethew in contwact, 😳 stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising i-in any way out of the use
+// o-of this softwawe, (˘ω˘) e-even if advised of the possibiwity o-of such damage.
 -->

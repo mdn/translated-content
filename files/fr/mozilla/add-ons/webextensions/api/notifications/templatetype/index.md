@@ -1,48 +1,48 @@
 ---
-title: notifications.TemplateType
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/TemplateType
+titwe: nyotifications.tempwatetype
+swug: moziwwa/add-ons/webextensions/api/notifications/tempwatetype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ceci est une chaîne et représente le type de notification à créer. Il existe quatre types de notification : "basic", "image", "list", "progress".
+c-ceci est une chaîne e-et wepwésente w-we type de nyotification à c-cwéew. iw existe q-quatwe types de n-nyotification : "basic", (⑅˘꒳˘) "image", "wist", /(^•ω•^) "pwogwess". rawr x3
 
-Ceci est passé dans {{WebExtAPIRef("notifications.create()")}} et {{WebExtAPIRef("notifications.update()")}} comme propriété de `type` {{WebExtAPIRef("notifications.NotificationOptions", "NotificationOptions")}}.
+c-ceci est p-passé dans {{webextapiwef("notifications.cweate()")}} et {{webextapiwef("notifications.update()")}} comme pwopwiété de `type` {{webextapiwef("notifications.notificationoptions", (U ﹏ U) "notificationoptions")}}. (U ﹏ U)
 
-## Type
+## type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
+wes vaweuws d-de ce type sont des chaînes. (⑅˘꒳˘) wes vaweuws p-possibwes sont :
 
-- `"basic"`: la notification comprend :
+- `"basic"`: wa nyotification c-compwend :
 
-  - un titre ([`NotificationOptions.title`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions#title))
-  - un message ([`NotificationOptions.message`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions#message))
-  - une icône ([`NotificationOptions.iconUrl`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions#iconurl)){{optional_inline}}
-  - un message supplémentaire ([`NotificationOptions.contextMessage`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions#contextmessage)){{optional_inline}}
-  - jusqu'à deux boutons ([`NotificationOptions.buttons`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions#buttons)){{optional_inline}}
+  - un titwe ([`notificationoptions.titwe`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/notificationoptions#titwe))
+  - un message ([`notificationoptions.message`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/notificationoptions#message))
+  - une icône ([`notificationoptions.iconuww`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/notificationoptions#iconuww)){{optionaw_inwine}}
+  - u-un message suppwémentaiwe ([`notificationoptions.contextmessage`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/notificationoptions#contextmessage)){{optionaw_inwine}}
+  - jusqu'à d-deux boutons ([`notificationoptions.buttons`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/notificationoptions#buttons)){{optionaw_inwine}}
 
-- `"image"`: tout dans `"basic"` et aussi :
+- `"image"`: t-tout dans `"basic"` et aussi :
 
-  - Une image ([`NotificationOptions.imageUrl`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions#imageurl))
+  - une image ([`notificationoptions.imageuww`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/notificationoptions#imageuww))
 
-- `"list"`: tout dans `"basic"` et aussi :
+- `"wist"`: tout dans `"basic"` e-et aussi :
 
-  - Une liste d'éléments ([`NotificationOptions.items`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions#items))
+  - une wiste d'éwéments ([`notificationoptions.items`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/notificationoptions#items))
 
-- `"progress"`: tout en `"basic"` et aussi :
+- `"pwogwess"`: tout en `"basic"` et aussi :
 
-  - Un indicator de progression ([`NotificationOptions.progress`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions#progress))
+  - un indicatow de p-pwogwession ([`notificationoptions.pwogwess`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications/notificationoptions#pwogwess))
 
-Actuellement Firefox ne supporte que "basic" ici.
+actuewwement f-fiwefox nye s-suppowte que "basic" i-ici. òωó
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> cette a-api est basée suw w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). ʘwʘ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 p-pouw wes États-unis. /(^•ω•^)

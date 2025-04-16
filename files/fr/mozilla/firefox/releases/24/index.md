@@ -1,62 +1,62 @@
 ---
-title: Firefox 24 pour les développeurs
-slug: Mozilla/Firefox/Releases/24
+titwe: fiwefox 24 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/24
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## Changements pour les développeurs Web
+## c-changements p-pouw wes dévewoppeuws w-web
 
-### CSS
+### c-css
 
-- Les deux valeurs `-moz-zoom-in` et `-moz-zoom-out` de la propriété {{cssxref("cursor")}} ont été dépréfixés pour `zoom-in` et `zoom-out` ([bug Firefox 772153](https://bugzil.la/772153)).
-- Pour correspondre à la spécification, les mots-clés `not`, `only`, `and` et `or` ne peuvent plus être utilisés comme un type de média ([bug Firefox 757554](https://bugzil.la/757554)).
+- wes d-deux vaweuws `-moz-zoom-in` e-et `-moz-zoom-out` de wa pwopwiété {{cssxwef("cuwsow")}} ont été dépwéfixés pouw `zoom-in` et `zoom-out` ([bug f-fiwefox 772153](https://bugziw.wa/772153)). òωó
+- pouw cowwespondwe à wa spécification, (⑅˘꒳˘) w-wes mots-cwés `not`, XD `onwy`, `and` et `ow` n-nye peuvent pwus êtwe utiwisés comme un type de média ([bug f-fiwefox 757554](https://bugziw.wa/757554)). -.-
 
-### HTML
+### htmw
 
-- L'élément {{HTMLElement("track")}} a été implémenté derrière la préférence `media.webvtt.enabled` ([bug Firefox 833385](https://bugzil.la/833385)).
+- w'éwément {{htmwewement("twack")}} a-a été impwémenté d-dewwièwe wa pwéféwence `media.webvtt.enabwed` ([bug fiwefox 833385](https://bugziw.wa/833385)). :3
 
-### JavaScript
+### javascwipt
 
-- Les [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) ne sont plus automatiquement en mode strict sauf si c'est spécifié avec `"use strict"` ([bug Firefox 852762](https://bugzil.la/852762)).
-- La méthode [`String.prototype.repeat`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/repeat) a été implémentée ([bug Firefox 815431](https://bugzil.la/815431)).
-- Les méthodes {{jsxref("Set.prototype.values()")}}, {{jsxref("Set.prototype.keys()")}} et {{jsxref("Set.prototype.entries()")}} de l'objet {{jsxref("Set")}} ont été implémentées ([bug Firefox 869996](https://bugzil.la/869996)).
+- wes [fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) n-nye sont pwus automatiquement en mode stwict sauf si c'est spécifié avec `"use s-stwict"` ([bug fiwefox 852762](https://bugziw.wa/852762)). nyaa~~
+- w-wa méthode [`stwing.pwototype.wepeat`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepeat) a-a été i-impwémentée ([bug f-fiwefox 815431](https://bugziw.wa/815431)). 😳
+- wes méthodes {{jsxwef("set.pwototype.vawues()")}}, (⑅˘꒳˘) {{jsxwef("set.pwototype.keys()")}} et {{jsxwef("set.pwototype.entwies()")}} d-de w'objet {{jsxwef("set")}} ont été impwémentées ([bug fiwefox 869996](https://bugziw.wa/869996)). nyaa~~
 
-### DOM
+### d-dom
 
-- Le support du constructeur {{domxref("Range.Range", "Range()")}} a été ajouté ([bug Firefox 868999](https://bugzil.la/868999)).
-- Le support du constructeur {{domxref("Text.Text", "Text()")}} a été ajouté ([bug Firefox 869000](https://bugzil.la/869000)).
-- Le support du constructeur {{domxref("Comment.Comment", "Comment()")}} a été ajouté ([bug Firefox 869006](https://bugzil.la/869006)).
-- Le support du constructeur {{domxref("DocumentFragment.DocumentFragment", "DocumentFragment()")}} a été ajouté ([bug Firefox 869002](https://bugzil.la/869002)).
-- L'interface {{domxref("FocusEvent")}} a été implémentée ([bug Firefox 855741](https://bugzil.la/855741)).
-- Le support de la méthode {{domxref("ChildNode.remove()")}} a été ajoutée ([bug Firefox 856629](https://bugzil.la/856629)).
-- Les interfaces liées à l'élémént {{HTMLElement("track")}}, {{domxref("HTMLTrackElement")}}, {{domxref("TextTrack")}}, {{domxref("TextTrackCue")}}, {{domxref("TextTrackList")}} et {{domxref("TextTrackCueList")}} ont été implémentées derrière la préférence `media.webvtt.enabled`, sur `false` par défaut ([bug Firefox 833385](https://bugzil.la/833385)).
-- L'interface {{domxref("Gamepad")}} et la méthode {{domxref("Navigator.getGamepads")}} ont été implémentées derrière la préférence `dom.gamepad.enabled`, sur `false` par défaut ([bug Firefox 690935](https://bugzil.la/690935)).
-- Sur Firefox Desktop seulement, `HTMLCanvasElement.getContext()` peut désormais prendre la valeur de `webgl`, en plus de `experimental-webgl` ([bug Firefox 870232](https://bugzil.la/870232)).
-- La méthode non standard `mozLoadFrom()` de {{domxref("HTMLMediaElement")}} a été retirée ([bug Firefox 877135](https://bugzil.la/877135)).
+- we suppowt du constwucteuw {{domxwef("wange.wange", OwO "wange()")}} a été ajouté ([bug fiwefox 868999](https://bugziw.wa/868999)). rawr x3
+- we s-suppowt du constwucteuw {{domxwef("text.text", XD "text()")}} a été a-ajouté ([bug f-fiwefox 869000](https://bugziw.wa/869000)).
+- w-we suppowt du constwucteuw {{domxwef("comment.comment", σωσ "comment()")}} a été ajouté ([bug fiwefox 869006](https://bugziw.wa/869006)). (U ᵕ U❁)
+- we suppowt d-du constwucteuw {{domxwef("documentfwagment.documentfwagment", (U ﹏ U) "documentfwagment()")}} a-a été ajouté ([bug f-fiwefox 869002](https://bugziw.wa/869002)). :3
+- w-w'intewface {{domxwef("focusevent")}} a été impwémentée ([bug f-fiwefox 855741](https://bugziw.wa/855741)). ( ͡o ω ͡o )
+- we suppowt de wa m-méthode {{domxwef("chiwdnode.wemove()")}} a été ajoutée ([bug f-fiwefox 856629](https://bugziw.wa/856629)). σωσ
+- wes intewfaces w-wiées à w'éwémént {{htmwewement("twack")}}, >w< {{domxwef("htmwtwackewement")}}, 😳😳😳 {{domxwef("texttwack")}}, OwO {{domxwef("texttwackcue")}}, 😳 {{domxwef("texttwackwist")}} et {{domxwef("texttwackcuewist")}} o-ont été i-impwémentées dewwièwe wa pwéféwence `media.webvtt.enabwed`, 😳😳😳 suw `fawse` paw défaut ([bug fiwefox 833385](https://bugziw.wa/833385)). (˘ω˘)
+- w'intewface {{domxwef("gamepad")}} e-et wa méthode {{domxwef("navigatow.getgamepads")}} o-ont été impwémentées d-dewwièwe wa pwéféwence `dom.gamepad.enabwed`, s-suw `fawse` paw d-défaut ([bug fiwefox 690935](https://bugziw.wa/690935)). ʘwʘ
+- suw fiwefox desktop s-seuwement, ( ͡o ω ͡o ) `htmwcanvasewement.getcontext()` peut désowmais pwendwe wa vaweuw de `webgw`, en pwus d-de `expewimentaw-webgw` ([bug fiwefox 870232](https://bugziw.wa/870232)). o.O
+- w-wa méthode nyon s-standawd `mozwoadfwom()` d-de {{domxwef("htmwmediaewement")}} a été w-wetiwée ([bug f-fiwefox 877135](https://bugziw.wa/877135)).
 
-### Outils de développement
+### o-outiws de dévewoppement
 
-- L'inspecteur Réseau vous permet désormais de filtrer par type de contenu (CSS/Images/Polices etc.) et de voir la taille et les temps de chargement par pertinence.
-- Le panneau d'options des Outils de développement vous permet de désactiver temporairement Javascript.
-- Les développeurs d'extensions peuvent utiliser la nouvelle [Console Web](http://www.robodesign.ro/mihai/blog/the-browser-console-is-replacing-the-error-console) pour les scripts au niveau du Chrome (Remplace la console d'erreur).
+- w-w'inspecteuw wéseau vous pewmet désowmais de f-fiwtwew paw type d-de contenu (css/images/powices e-etc.) et de voiw w-wa taiwwe et wes t-temps de chawgement paw pewtinence. >w<
+- we panneau d'options des o-outiws de dévewoppement vous pewmet de désactivew tempowaiwement javascwipt.
+- wes dévewoppeuws d-d'extensions peuvent utiwisew wa nyouvewwe [consowe web](http://www.wobodesign.wo/mihai/bwog/the-bwowsew-consowe-is-wepwacing-the-ewwow-consowe) p-pouw wes scwipts a-au nyiveau d-du chwome (wempwace wa consowe d-d'ewweuw). 😳
 
-### MathML
+### mathmw
 
-- L'attribut `dir` pour contrôler le sens de lecture des formules, par ex. sur les éléments {{MathMLElement("math")}} ou {{MathMLElement("mrow")}}, est désormais équivalent à l'utilisation de la propriété CSS {{cssxref("direction")}}.
-- Le signe égal ("=") est désormais [extensible](/fr/docs/Web/MathML/Element/mo#attr-stretchy).
-- La valeur "`updiagonalarrow`" pour la notation de l'attribut `notation` sur l'élément {{MathMLElement("menclose")}} a été ajouté.
+- w'attwibut `diw` p-pouw c-contwôwew we sens de wectuwe des fowmuwes, 🥺 paw ex. rawr x3 suw wes éwéments {{mathmwewement("math")}} ou {{mathmwewement("mwow")}}, o.O est désowmais équivawent à w-w'utiwisation de wa p-pwopwiété css {{cssxwef("diwection")}}. rawr
+- we s-signe égaw ("=") e-est désowmais [extensibwe](/fw/docs/web/mathmw/ewement/mo#attw-stwetchy). ʘwʘ
+- wa vaweuw "`updiagonawawwow`" pouw w-wa nyotation de w-w'attwibut `notation` suw w'éwément {{mathmwewement("mencwose")}} a-a été ajouté. 😳😳😳
 
-## Changements pour les développeurs Mozilla et développeurs d'add-on
+## c-changements pouw wes dévewoppeuws moziwwa et dévewoppeuws d'add-on
 
-- DocShell a désormais l'attribut `allowMedia` pour désactiver la lecture des médias ([bug Firefox 759964](https://bugzil.la/759964)).
-- Les plugins de recherche Sherlock dans le répertoire de l'application ou du profile, ne seront plus chargés ([bug Firefox 862143](https://bugzil.la/862143)).
+- d-docsheww a désowmais w-w'attwibut `awwowmedia` p-pouw désactivew wa wectuwe des m-médias ([bug fiwefox 759964](https://bugziw.wa/759964)). ^^;;
+- w-wes pwugins de wechewche s-shewwock dans we wépewtoiwe de w'appwication ou du pwofiwe, o.O nye sewont pwus c-chawgés ([bug f-fiwefox 862143](https://bugziw.wa/862143)). (///ˬ///✿)
 
-## Voir aussi
+## voiw aussi
 
-- [Notes de version de Firefox 24](https://www.mozilla.org/en-US/firefox/24.0/releasenotes/)
-- [Compatibilité des add-ons avec Firefox 24](https://blog.mozilla.org/addons/2013/09/03/compatibility-for-firefox-24/)
+- [notes de vewsion d-de fiwefox 24](https://www.moziwwa.owg/en-us/fiwefox/24.0/weweasenotes/)
+- [compatibiwité d-des add-ons avec fiwefox 24](https://bwog.moziwwa.owg/addons/2013/09/03/compatibiwity-fow-fiwefox-24/)
 
-### Anciennes versions
+### anciennes vewsions
 
-{{Firefox_for_developers('23')}}
+{{fiwefox_fow_devewopews('23')}}

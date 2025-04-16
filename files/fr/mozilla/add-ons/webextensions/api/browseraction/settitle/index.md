@@ -1,105 +1,105 @@
 ---
-title: browserAction.setTitle()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setTitle
+titwe: bwowsewaction.settitwe()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/settitwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit le titre de l'action du navigateur. Le titre est affiché dans une infobulle au-dessus de l'icône de l'action du navigateur. Vous pouvez passer un `tabId` dans ou une `windowId` comme paramètre optionnel — si vous le faites, le titre est changé seulement pour l'onglet donné ou la fenêtre donnée. Les onglets ou les fenêtres sans titre spécifique hériteront du texte du titre global, qui est par défaut à l'option [`default_title`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) ou [`name`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/name) specifié dans le manifest.
+d-définit w-we titwe de w'action d-du nyavigateuw. rawr x3 w-we titwe e-est affiché dans u-une infobuwwe a-au-dessus de w'icône d-de w'action du nyavigateuw. -.- vous pouvez passew un `tabid` dans ou une `windowid` c-comme pawamètwe optionnew — si vous we f-faites, ^^ we titwe est changé seuwement p-pouw w'ongwet donné ou wa fenêtwe donnée. (⑅˘꒳˘) wes ongwets o-ou wes fenêtwes sans titwe spécifique h-héwitewont d-du texte du titwe gwobaw, nyaa~~ qui est paw défaut à w'option [`defauwt_titwe`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) ou [`name`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/name) s-specifié dans we manifest. /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.browserAction.setTitle(
-  details, // object
+bwowsew.bwowsewaction.settitwe(
+  detaiws, (U ﹏ U) // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Le nouveau titre et éventuellement l'ID de l'onglet ou de la fenêtre à cibler.
+  - : `object`. 😳😳😳 w-we nyouveau t-titwe et éventuewwement w-w'id d-de w'ongwet ou de wa fenêtwe à cibwew. >w<
 
-    - `title`
+    - `titwe`
 
-      - : `string` ou `null`. La chaîne de caractères que l'action du navigateur doit afficher lorsqu'il y a une souris.
+      - : `stwing` o-ou `nuww`. XD wa chaîne de cawactèwes q-que w'action du navigateuw doit affichew wowsqu'iw y a une souwis. o.O
 
-        Si `title` est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("browserAction.getTitle")}} fournira toujours la chaîne vide.
+        si `titwe` est une c-chaîne vide, mya we titwe utiwisé s-sewa we nyom de w-w'extension, mais {{webextapiwef("bwowsewaction.gettitwe")}} f-fouwniwa toujouws wa chaîne vide. 🥺
 
-        Si `title` est `null`:
+        si `titwe` e-est `nuww`:
 
-        - Si `tabId` est spécifié, et que l'onglet a un jeu de titres spécifiques aux onglets, alors l'onglet héritera du titre de la fenêtre à laquelle il appartient.
-        - Si `windowId` est spécifié, et que la fenêtre a un titre spécifique à la fenêtre, alors la fenêtre héritera du titre global.
-        - Sinon, le titre global sera réinitialisé au titre du manifest.
+        - s-si `tabid` est spécifié, ^^;; e-et que w'ongwet a-a un jeu de titwes spécifiques a-aux ongwets, :3 awows w'ongwet h-héwitewa du titwe de wa fenêtwe à waquewwe i-iw appawtient. (U ﹏ U)
+        - si `windowid` e-est spécifié, OwO et que wa f-fenêtwe a un t-titwe spécifique à wa fenêtwe, 😳😳😳 awows wa fenêtwe héwitewa du titwe gwobaw. (ˆ ﻌ ˆ)♡
+        - sinon, XD we titwe gwobaw s-sewa wéinitiawisé a-au titwe du manifest. (ˆ ﻌ ˆ)♡
 
-    - `tabId`{{Optional_Inline}}
-      - : `integer`. Définit le titre uniquement pour l'onglet donné.
-    - `windowId`{{Optional_Inline}}
-      - : `integer`. Définit le titre de la fenêtre donnée.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. ( ͡o ω ͡o ) d-définit we titwe u-uniquement pouw w-w'ongwet donné. rawr x3
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. nyaa~~ définit we titwe de wa fenêtwe donnée. >_<
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
-- Si `windowId` et `tabId` sont tous les deux omis, le titre global est défini.
+- s-si `windowid` et `tabid` sont tous deux fouwnis, ^^;; wa fonction échoue et we titwe n-ny'est pas défini. (ˆ ﻌ ˆ)♡
+- si `windowid` e-et `tabid` s-sont tous wes d-deux omis, ^^;; we titwe gwobaw est d-défini. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Ce code change le titre entre "ceci" et "ça" chaque fois que l'utilisateur clique sur l'action du navigateur :
+c-ce code change w-we titwe entwe "ceci" e-et "ça" chaque fois que w'utiwisateuw c-cwique suw w'action d-du nyavigateuw :
 
 ```js
-function toggleTitle(title) {
-  if (title == "this") {
-    browser.browserAction.setTitle({ title: "that" });
-  } else {
-    browser.browserAction.setTitle({ title: "this" });
+function t-toggwetitwe(titwe) {
+  if (titwe == "this") {
+    b-bwowsew.bwowsewaction.settitwe({ t-titwe: "that" });
+  } ewse {
+    bwowsew.bwowsewaction.settitwe({ titwe: "this" });
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  var gettingTitle = browser.browserAction.getTitle({});
-  gettingTitle.then(toggleTitle);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  v-vaw gettingtitwe = bwowsew.bwowsewaction.gettitwe({});
+  gettingtitwe.then(toggwetitwe);
 });
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). rawr x3 cette documentation est déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) d-dans we code de c-chwomium code. (///ˬ///✿)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw m-micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. >_< aww wights wesewved. UwU
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, >_< with ow w-without
+// modification, -.- a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// n-nyotice, mya t-this wist of conditions and the f-fowwowing discwaimew. >w<
+//    * wedistwibutions in b-binawy fowm must wepwoduce the a-above
+// copywight nyotice, (U ﹏ U) this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// d-distwibution. 😳😳😳
+//    * n-nyeithew the name of googwe inc. o.O nyow the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without specific pwiow wwitten pewmission. òωó
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, 😳😳😳 incwuding, but nyot
+// wimited t-to, σωσ the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) i-in no event shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow a-any diwect, (///ˬ///✿) indiwect, incidentaw, 🥺
+// s-speciaw, OwO exempwawy, >w< o-ow consequentiaw d-damages (incwuding, 🥺 but n-nyot
+// wimited t-to, nyaa~~ pwocuwement of substitute goods ow sewvices; w-woss of use, ^^
+// d-data, >w< ow pwofits; o-ow business intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, OwO w-whethew in contwact, XD s-stwict wiabiwity, ^^;; ow towt
+// (incwuding nyegwigence ow othewwise) a-awising i-in any way out of t-the use
+// of t-this softwawe, 🥺 even if advised of t-the possibiwity of such damage. XD
 -->

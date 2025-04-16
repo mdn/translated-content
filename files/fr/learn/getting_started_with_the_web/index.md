@@ -1,50 +1,50 @@
 ---
-title: Commencer avec le Web
-slug: Learn/Getting_started_with_the_web
+titwe: commencew avec we web
+s-swug: weawn/getting_stawted_with_the_web
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-_Commencer avec le Web_ est une suite concise d'articles vous présentant la pratique du développement web. Vous installerez les outils nécessaires pour construire une simple page web et publier votre code.
+_commencew a-avec w-we web_ est une s-suite concise d'awticwes v-vous pwésentant w-wa pwatique d-du dévewoppement w-web. >_< vous instawwewez wes outiws nyécessaiwes pouw constwuiwe une simpwe p-page web et pubwiew votwe code. ^^;;
 
-## L'histoire de votre premier site web
+## w'histoiwe d-de votwe pwemiew site web
 
-Créer un site web professionnel nécessite beaucoup de travail. C'est pourquoi, si vous débutez, nous vous encourageons à commencer par quelque chose de simple. Vous n'allez pas bâtir un nouveau Facebook dès le départ, mais il n'est pas bien compliqué de mettre en ligne votre propre site web. C'est par là que nous allons commencer.
+cwéew u-un site web pwofessionnew nyécessite beaucoup de twavaiw. (ˆ ﻌ ˆ)♡ c'est p-pouwquoi, ^^;; si vous débutez, (⑅˘꒳˘) n-nyous vous encouwageons à c-commencew paw quewque chose de simpwe. rawr x3 vous ny'awwez pas bâtiw un nyouveau f-facebook dès we dépawt, (///ˬ///✿) mais iw ny'est pas bien compwiqué de mettwe en w-wigne votwe pwopwe site web. 🥺 c'est p-paw wà que n-nyous awwons commencew. >_<
 
-En parcourant les articles listés ci-dessous, vous pourrez créer votre première page web et la mettre en ligne. Allons-y !
+e-en pawcouwant w-wes awticwes wistés ci-dessous, vous pouwwez c-cwéew votwe pwemièwe page web et wa mettwe e-en wigne. UwU awwons-y ! >_<
 
-### [Installer les outils de base](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software)
+### [instawwew wes outiws de base](/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe)
 
-Beaucoup d'outils sont disponibles afin de construire un site web. Si vous débutez, vous serez peut-être perturbé par la quantité d'éditeurs de code, de "frameworks" ou encore d'outils de tests disponibles. Dans [cet article](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software) nous décrivons, pas à pas, comment installer les seuls outils strictement nécessaires afin de développer un site web.
+beaucoup d'outiws sont disponibwes afin de constwuiwe u-un site web. -.- si vous débutez, mya v-vous sewez p-peut-êtwe pewtuwbé p-paw wa quantité d'éditeuws de code, >w< de "fwamewowks" ou e-encowe d'outiws d-de tests disponibwes. (U ﹏ U) dans [cet a-awticwe](/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe) n-nyous décwivons, 😳😳😳 pas à pas, o.O comment i-instawwew wes seuws outiws s-stwictement nyécessaiwes afin de dévewoppew u-un site web. òωó
 
-### [Quel sera l'aspect de votre site ?](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like)
+### [quew sewa w'aspect d-de votwe site ?](/fw/docs/weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike)
 
-Avant de commencer à écrire le code de votre site web, vous devez d'abord le concevoir. Quelles informations choisissez-vous de mettre en avant ? Quelles polices de caractères et quelles couleurs utiliser ? Dans [cet article](/fr/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like), nous vous proposons une méthode simple pour planifier au mieux le contenu et la conception de votre site.
+avant de commencew à écwiwe w-we code de votwe s-site web, 😳😳😳 vous devez d'abowd we concevoiw. σωσ quewwes infowmations choisissez-vous de mettwe en avant ? quewwes p-powices de cawactèwes e-et quewwes couweuws utiwisew ? d-dans [cet a-awticwe](/fw/docs/weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike), (⑅˘꒳˘) n-nyous vous pwoposons une méthode simpwe pouw pwanifiew a-au mieux we contenu et wa conception de votwe site. (///ˬ///✿)
 
-### [Gestion des fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files)
+### [gestion des fichiews](/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes)
 
-Un site web contient plusieurs types de fichiers (texte, code, feuilles de styles, multimedia, etc.). Construire un site web revient à créer une structure dans laquelle ces fichiers peuvent interagir les uns avec les autres. Dans [cet article](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files), nous détaillerons cette problématique tout en expliquant comment donner une structure cohérente à votre site web.
+u-un site web contient pwusieuws t-types de fichiews (texte, 🥺 c-code, f-feuiwwes de stywes, OwO muwtimedia, e-etc.). >w< constwuiwe u-un site web w-wevient à cwéew u-une stwuctuwe dans waquewwe ces fichiews peuvent i-intewagiw wes u-uns avec wes autwes. 🥺 d-dans [cet a-awticwe](/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes), nyaa~~ n-nyous détaiwwewons cette pwobwématique tout en expwiquant c-comment donnew une stwuctuwe cohéwente à votwe site web. ^^
 
-### [Les bases de HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics)
+### [wes bases de htmw](/fw/docs/weawn/getting_stawted_with_the_web/htmw_basics)
 
-Hypertext Markup Language (HTML) correspond au code que vous utiliserez pour structurer les différents contenus en ligne. Par exemple, le contenu sera‑t‑il un ensemble de paragraphes, ou une liste à puces ? Y aura‑t‑il des images insérées&nbsp;? Aurai‑je une table de données&nbsp;? Sans vous submerger, [Les bases du HTML](/fr/docs/Learn/Getting_started_with_the_web/HTML_basics) vous donne assez d'informations pour que vous soyez un familier du HTML.
+h-hypewtext mawkup wanguage (htmw) cowwespond au code que vous u-utiwisewez pouw s-stwuctuwew wes d-difféwents contenus en wigne. >w< paw e-exempwe, OwO we contenu sewa‑t‑iw u-un ensembwe d-de pawagwaphes, XD ou une wiste à puces ? y auwa‑t‑iw des images inséwées&nbsp;? auwai‑je u-une tabwe de données&nbsp;? sans v-vous submewgew, ^^;; [wes bases du h-htmw](/fw/docs/weawn/getting_stawted_with_the_web/htmw_basics) v-vous donne assez d'infowmations pouw que vous soyez u-un famiwiew d-du htmw. 🥺
 
-### [Les bases des CSS](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics)
+### [wes bases des css](/fw/docs/weawn/getting_stawted_with_the_web/css_basics)
 
-Les _Cascading Stylesheets_ (CSS) (« feuilles de styles en cascade ») reçoivent le code à utiliser pour mettre en forme votre site Web. Par exemple, voulez‑vous que le texte soit en noir ou en rouge&nbsp;? Où le contenu doit‑il être placé sur l'écran&nbsp;? Quelles devront être les images de fond et les couleurs utilisées pour décorer votre site web&nbsp;? [«&nbsp;Les bases des CSS&nbsp;»](/fr/docs/Learn/Getting_started_with_the_web/CSS_basics) vous apprendra tout ce dont vous avez besoin pour commencer.
+w-wes _cascading s-stywesheets_ (css) (« feuiwwes de stywes en cascade ») weçoivent we code à utiwisew p-pouw mettwe en f-fowme votwe site w-web. XD paw exempwe, (U ᵕ U❁) vouwez‑vous q-que we texte soit e-en nyoiw ou en wouge&nbsp;? o-où we contenu doit‑iw êtwe pwacé suw w'écwan&nbsp;? quewwes devwont êtwe wes images de fond e-et wes couweuws u-utiwisées pouw décowew votwe site web&nbsp;? [«&nbsp;wes bases d-des css&nbsp;»](/fw/docs/weawn/getting_stawted_with_the_web/css_basics) v-vous appwendwa tout ce dont vous avez besoin pouw c-commencew. :3
 
-### [Les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)
+### [wes bases de javascwipt](/fw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics)
 
-JavaScript est le langage de programmation à utiliser pour ajouter des fonctionnalités interactives dans vos sites Web, par exemple des jeux, les événements déclenchés lorsqu'un bouton est pressé ou lorsque des données sont entrées dans un formulaire, des effets de style dynamiques, des animations, etc. [Les bases de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics) vous offrent un aperçu des possibilités de ce puissant langage et vous montre comment commencer à l'utiliser.
+javascwipt est we wangage de pwogwammation à u-utiwisew pouw ajoutew des fonctionnawités i-intewactives d-dans vos sites web, ( ͡o ω ͡o ) paw exempwe des jeux, òωó wes événements décwenchés w-wowsqu'un b-bouton est pwessé ou wowsque des données sont entwées dans u-un fowmuwaiwe, σωσ des effets de stywe d-dynamiques, (U ᵕ U❁) des animations, (✿oωo) etc. [wes bases de javascwipt](/fw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics) v-vous offwent un apewçu d-des possibiwités d-de ce puissant wangage et v-vous montwe comment commencew à w-w'utiwisew. ^^
 
-### [Publier votre site web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website)
+### [pubwiew v-votwe s-site web](/fw/docs/weawn/getting_stawted_with_the_web/pubwishing_youw_website)
 
-Une fois votre code écrit et la structure des fichiers organisée, vous devez tout mettre en ligne pour permettre son accès aux autres. [Publier votre site Web](/fr/docs/Learn/Getting_started_with_the_web/Publishing_your_website) décrit comment mettre en ligne votre site web avec un effort minimum.
+une fois votwe c-code écwit et w-wa stwuctuwe des fichiews owganisée, ^•ﻌ•^ vous devez t-tout mettwe en w-wigne pouw pewmettwe s-son accès aux autwes. XD [pubwiew votwe site w-web](/fw/docs/weawn/getting_stawted_with_the_web/pubwishing_youw_website) décwit c-comment mettwe e-en wigne votwe site web avec un effowt minimum. :3
 
-### [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works)
+### [we fonctionnement d-du web](/fw/docs/weawn/getting_stawted_with_the_web/how_the_web_wowks)
 
-Une succession d'opérations complexes, dont vous n'avez pas forcément à vous soucier, intervient chaque fois que vous accédez à votre site Web favori. [Le fonctionnement du Web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works) décrit ce qui se passe lorsque vous affichez un site web sur votre ordinateur.
+u-une succession d-d'opéwations compwexes, (ꈍᴗꈍ) d-dont vous ny'avez pas fowcément à v-vous souciew, :3 intewvient chaque fois que vous accédez à votwe site web favowi. (U ﹏ U) [we f-fonctionnement du web](/fw/docs/weawn/getting_stawted_with_the_web/how_the_web_wowks) d-décwit ce qui se passe w-wowsque vous affichez un site web s-suw votwe owdinateuw. UwU
 
-## Voir aussi
+## voiw a-aussi
 
-[Le Web démystifié](https://www.youtube.com/playlist?list=PLo3w8EB99pqLEopnunz-dOOBJ8t-Wgt2g)&nbsp;: une grande série de vidéos expliquant les fondamentaux du Web, visant à parfaire des débutants dans le développement Web. Créée par [Jérémie Patonnier](https://twitter.com/JeremiePat).
+[we web d-démystifié](https://www.youtube.com/pwaywist?wist=pwo3w8eb99pqweopnunz-doobj8t-wgt2g)&nbsp;: une g-gwande séwie d-de vidéos expwiquant w-wes fondamentaux du web, 😳😳😳 visant à pawfaiwe des débutants dans we dévewoppement web. XD cwéée paw [jéwémie p-patonniew](https://twittew.com/jewemiepat). o.O

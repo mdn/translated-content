@@ -1,287 +1,287 @@
 ---
-title: Valeurs et unités CSS
-slug: Learn/CSS/Building_blocks/Values_and_units
+titwe: vaweuws et unités css
+s-swug: weawn/css/buiwding_bwocks/vawues_and_units
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/ovewfwowing_content", ʘwʘ "weawn/css/buiwding_bwocks/sizing_items_in_css", (⑅˘꒳˘) "weawn/css/buiwding_bwocks")}}
 
-Chaque propriété utilisée en CSS possède un type de valeur qui définit l'ensemble des valeurs autorisées pour cette propriété. Visiter des pages de propriétés sur MDN vous aidera à comprendre les valeurs associées à un type de valeur, qui sont valides pour une propriété particulière. Dans cette leçon, nous allons observer quelques-uns des types de valeur les plus fréquemment utilisés, ainsi que leurs valeurs et unités les plus communes.
+c-chaque p-pwopwiété utiwisée e-en css p-possède un type d-de vaweuw qui définit w-w'ensembwe d-des vaweuws autowisées pouw cette pwopwiété. UwU visitew des pages de pwopwiétés s-suw mdn vous aidewa à compwendwe wes vaweuws a-associées à un type de vaweuw, -.- q-qui sont vawides pouw une pwopwiété pawticuwièwe. :3 dans cette w-weçon, >_< nyous awwons obsewvew q-quewques-uns des t-types de vaweuw wes pwus fwéquemment utiwisés, ainsi que weuws vaweuws et unités w-wes pwus communes. nyaa~~
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Maîtrise élémentaire de l'informatique,
+        maîtwise éwémentaiwe d-de w'infowmatique, ( ͡o ω ͡o )
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >suite logicielle de base installée</a
-        >, compétences élémentaires pour
+          hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >suite w-wogiciewwe d-de base instawwée</a
+        >, o.O c-compétences éwémentaiwes p-pouw
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >travailler avec des fichiers</a
-        >, connaissance de base du HTML (cf.
-        <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction à HTML</a
-        >), et une idée de
-        <a href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
-          >Comment fonctionne CSS</a
-        >.
+          hwef="/fw/docs/appwendwe/commencew_avec_we_web/géwew_wes_fichiews"
+          >twavaiwwew avec des f-fichiews</a
+        >, :3 connaissance de base du htmw (cf. (˘ω˘)
+        <a h-hwef="/fw/docs/appwendwe/htmw/intwoduction_à_htmw"
+          >intwoduction à htmw</a
+        >), rawr x3 et une idée de
+        <a hwef="/fw/docs/weawn/css/fiwst_steps/how_css_wowks"
+          >comment fonctionne c-css</a
+        >. (U ᵕ U❁)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Apprendre les différents types de valeurs et d'unités utilisés dans les
-        propriétés CSS.
+        appwendwe wes d-difféwents types d-de vaweuws et d-d'unités utiwisés dans wes
+        pwopwiétés css. 🥺
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce qu'une valeur CSS&nbsp;?
+## q-qu'est-ce q-qu'une vaweuw css&nbsp;?
 
-Dans les spécifications CSS et sur les pages de propriétés présentes sur MDN, vous pourrez identifier les types de valeurs, car ils sont entourés par des chevrons, tel que [`<color>`](/fr/docs/Web/CSS/color_value) ou [`<length>`](/fr/docs/Web/CSS/length). Quand vous voyez le type de valeur `<color>`, valide pour une propriété particulière, cela signifie que vous pouvez utiliser n'importe quelle couleur valide comme valeur pour cette propriété, comme énoncé dans la page de référence de [`<color>`](/fr/docs/Web/CSS/color_value).
+dans wes s-spécifications c-css et suw wes pages de pwopwiétés p-pwésentes suw mdn, >_< vous p-pouwwez identifiew wes types de vaweuws, :3 caw iws s-sont entouwés paw des chevwons, :3 t-tew que [`<cowow>`](/fw/docs/web/css/cowow_vawue) ou [`<wength>`](/fw/docs/web/css/wength). (ꈍᴗꈍ) quand v-vous voyez w-we type de vaweuw `<cowow>`, σωσ vawide pouw une pwopwiété pawticuwièwe, cewa signifie que vous pouvez utiwisew ny'impowte q-quewwe c-couweuw vawide comme vaweuw pouw c-cette pwopwiété, 😳 c-comme énoncé d-dans wa page de wéféwence de [`<cowow>`](/fw/docs/web/css/cowow_vawue).
 
-> [!NOTE]
-> Vous verrez également des valeurs CSS appelées _types de données_. Les termes sont interchangeables — Quand vous voyez quelque chose en CSS identifié comme type de données, c'est juste une façon différente de dire type de valeur. Le terme _valeur_ se rapporte à n'importe quelle expression particulière supportée par un type de valeur que vous avez choisi d'utiliser.
+> [!note]
+> vous v-vewwez égawement des vaweuws css appewées _types de données_. mya wes tewmes sont i-intewchangeabwes — quand vous v-voyez quewque chose e-en css identifié c-comme type de données, (///ˬ///✿) c'est j-juste une façon d-difféwente d-de diwe type de v-vaweuw. ^^ we tewme _vaweuw_ se wappowte à ny'impowte q-quewwe expwession p-pawticuwièwe s-suppowtée p-paw un type de v-vaweuw que vous avez choisi d'utiwisew. (✿oωo)
 
-> [!NOTE]
-> Oui, les types de valeurs CSS tendent à être indiqués par des chevrons, pour les différencier des propriétés CSS (ex : la propriété [`color`](/fr/docs/Web/CSS/color), comparée au type de données [\<color>](/fr/docs/Web/CSS/color_value)). Vous pourriez aussi être désorienté entre les types de données CSS et les éléments HTML, car ils utilisent tous deux les chevrons, mais c'est peu probable — ils sont utilisés dans des contextes très différents.
+> [!note]
+> oui, ( ͡o ω ͡o ) wes types de vaweuws css t-tendent à êtwe indiqués paw des chevwons, pouw wes difféwenciew des pwopwiétés css (ex : w-wa pwopwiété [`cowow`](/fw/docs/web/css/cowow), ^^;; compawée au type de données [\<cowow>](/fw/docs/web/css/cowow_vawue)). :3 vous p-pouwwiez aussi êtwe d-désowienté e-entwe wes types de données c-css et wes éwéments htmw, 😳 caw i-iws utiwisent tous d-deux wes chevwons, XD mais c'est peu pwobabwe — iws sont utiwisés dans des contextes twès difféwents. (///ˬ///✿)
 
-Dans l'exemple suivant, nous avons défini la couleur de notre titre en utilisant un mot-clé, et la couleur de fond en utilisant la fonction `rgb()`&nbsp;:
+d-dans w'exempwe suivant, o.O n-nyous avons défini wa couweuw d-de nyotwe titwe e-en utiwisant un mot-cwé, o.O et wa couweuw de fond e-en utiwisant w-wa fonction `wgb()`&nbsp;:
 
 ```css
 h1 {
-  color: black;
-  background-color: rgb(197, 93, 161);
+  cowow: b-bwack;
+  backgwound-cowow: w-wgb(197, XD 93, 161);
 }
 ```
 
-Un type de valeur en CSS est une manière de définir un ensemble de valeurs autorisées. Cela signifie que si vous voyez `<color>` comme valide, vous n'avez pas besoin de vous demander quel type de valeur vous pouvez utiliser — mot-clés, valeurs hex, fonctions `rgb()`, etc. Vous pouvez utiliser _n'importe quelle_ valeur `<color>` disponible, en supposant qu'elle soit supportée par votre navigateur. La page MDN pour chaque valeur vous donnera les informations au sujet du support par le navigateur. Par exemple, si vous regardez la page [`<color>`](/fr/docs/Web/CSS/color_value), vous verrez que la section sur la compatibilité des navigateurs liste différents types de valeurs pour "color" et le support.
+un type de vaweuw en css est une manièwe de définiw un ensembwe d-de vaweuws a-autowisées. ^^;; c-cewa signifie que si vous voyez `<cowow>` c-comme v-vawide, vous ny'avez pas besoin d-de vous demandew quew type de vaweuw vous pouvez utiwisew — mot-cwés, 😳😳😳 vaweuws h-hex, (U ᵕ U❁) fonctions `wgb()`, /(^•ω•^) e-etc. vous pouvez utiwisew _n'impowte quewwe_ v-vaweuw `<cowow>` d-disponibwe, 😳😳😳 en supposant qu'ewwe soit suppowtée paw votwe n-nyavigateuw. rawr x3 wa page mdn pouw chaque vaweuw vous donnewa wes infowmations au sujet d-du suppowt paw we nyavigateuw. ʘwʘ paw exempwe, UwU s-si vous wegawdez w-wa page [`<cowow>`](/fw/docs/web/css/cowow_vawue), (⑅˘꒳˘) vous vewwez que wa section suw wa compatibiwité d-des nyavigateuws w-wiste difféwents types de vaweuws pouw "cowow" et we suppowt. ^^
 
-Observons quelques-uns des types de valeurs et d'unités que vous pouvez fréquemment rencontrer, avec des exemples, pour que vous puissiez essayer différentes valeurs possibles.
+o-obsewvons quewques-uns des t-types de vaweuws et d'unités que vous pouvez fwéquemment wencontwew, 😳😳😳 a-avec des exempwes, pouw q-que vous puissiez e-essayew difféwentes vaweuws p-possibwes. òωó
 
-## Nombres, longueurs et pourcentages
+## nyombwes, ^^;; wongueuws e-et pouwcentages
 
-Il existe plusieurs types de valeur numérique que vous pourrez utiliser en CSS. Les types qui suivent sont classés comme numériques :
+i-iw existe pwusieuws t-types de vaweuw nyuméwique q-que vous pouwwez u-utiwisew en css. (✿oωo) wes types qui suivent sont c-cwassés comme n-nyuméwiques :
 
-| Type de donnée                                | Description                                                                                                                                                                                                                                                                                                                                                                 |
+| t-type de donnée                                | descwiption                                                                                                                                                                                                                                                                                                                                                                 |
 | --------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [`<integer>`](/fr/docs/Web/CSS/integer)       | Une valeur de type `<integer>` est un nombre entier comme `1024` ou `-55`.                                                                                                                                                                                                                                                                                                  |
-| [`<number>`](/fr/docs/Web/CSS/number)         | Une valeur de type `<number>` représente un nombre décimal (qui peut avoir ou ne pas avoir de partie décimale). Par exemple : `0.255`, `128`, ou `-1.2`.                                                                                                                                                                                                                    |
-| [`<dimension>`](/fr/docs/Web/CSS/dimension)   | Une valeur de type `<dimension>` est une valeur de type `<number>` à laquelle est attachée une unité. Par exemple : `45deg`, `5s`, ou `10px`. `<dimension>` est une catégorie de type qui inclut les types [`<length>`](/fr/docs/Web/CSS/length), [`<angle>`](/fr/docs/Web/CSS/angle), [`<time>`](/fr/docs/Web/CSS/time), et [`<resolution>`](/fr/docs/Web/CSS/resolution). |
-| [`<percentage>`](/fr/docs/Web/CSS/percentage) | Une valeur de type `<percentage>` représente une fraction relative à une autre valeur. Par exemple : `50%`. Les valeurs de pourcentages sont toujours relatives à une autre quantité. Ainsi, la longueur d'un élément pourra être relative à la longueur de son élément parent.                                                                                             |
+| [`<integew>`](/fw/docs/web/css/integew)       | une vaweuw de t-type `<integew>` est un nyombwe e-entiew comme `1024` o-ou `-55`. rawr                                                                                                                                                                                                                                                                                                  |
+| [`<numbew>`](/fw/docs/web/css/numbew)         | une vaweuw de type `<numbew>` wepwésente un n-nyombwe décimaw (qui p-peut avoiw o-ou nye pas avoiw d-de pawtie décimawe). XD paw exempwe : `0.255`, 😳 `128`, o-ou `-1.2`. (U ᵕ U❁)                                                                                                                                                                                                                    |
+| [`<dimension>`](/fw/docs/web/css/dimension)   | une vaweuw de type `<dimension>` est une vaweuw de type `<numbew>` à waquewwe est attachée u-une unité. UwU paw exempwe : `45deg`, OwO `5s`, ou `10px`. 😳 `<dimension>` e-est une catégowie de type q-qui incwut wes types [`<wength>`](/fw/docs/web/css/wength), (˘ω˘) [`<angwe>`](/fw/docs/web/css/angwe), òωó [`<time>`](/fw/docs/web/css/time), OwO e-et [`<wesowution>`](/fw/docs/web/css/wesowution). (✿oωo) |
+| [`<pewcentage>`](/fw/docs/web/css/pewcentage) | une v-vaweuw de type `<pewcentage>` wepwésente u-une fwaction w-wewative à u-une autwe vaweuw. p-paw exempwe : `50%`. (⑅˘꒳˘) wes vaweuws de pouwcentages sont toujouws wewatives à une autwe quantité. /(^•ω•^) ainsi, wa w-wongueuw d'un éwément p-pouwwa êtwe w-wewative à wa wongueuw de s-son éwément pawent. 🥺                                                                                             |
 
-### Longueurs
+### wongueuws
 
-Le type numérique que vous rencontrerez le plus souvent est le type `<length>`. Par exemple : `10px` (pixels) ou `30em`. Il existe deux types de longueurs en CSS&nbsp;: les longueurs relatives et les longueurs absolues. Connaître la différence entre les deux est important pour comprendre la taille que les éléments obtiendront.
+we type nyuméwique que vous w-wencontwewez we p-pwus souvent est we type `<wength>`. -.- p-paw exempwe : `10px` (pixews) ou `30em`. ( ͡o ω ͡o ) iw existe deux types d-de wongueuws e-en css&nbsp;: wes wongueuws wewatives e-et wes wongueuws a-absowues. 😳😳😳 connaîtwe wa difféwence entwe wes deux est impowtant pouw compwendwe w-wa taiwwe q-que wes éwéments o-obtiendwont. (˘ω˘)
 
-#### Unités de longueur absolue
+#### u-unités d-de wongueuw absowue
 
-La liste qui suit contient uniquement des unités de longueur **absolue**. Ces quantités ne sont pas relatives à quoi que ce soit d'autre et leur taille sera considérée comme constante.
+wa wiste q-qui suit contient u-uniquement des unités de wongueuw **absowue**. ^^ c-ces quantités n-nye sont pas wewatives à quoi q-que ce soit d'autwe et weuw taiwwe sewa considéwée c-comme constante. σωσ
 
-| Unité | Nom                              | Équivalent à         |
+| unité | n-nyom                              | Équivawent à         |
 | ----- | -------------------------------- | -------------------- |
-| `cm`  | Centimètres                      | 1cm = 38px = 25/64in |
-| `mm`  | Millimètres                      | 1mm = 1/10th of 1cm  |
-| `Q`   | Quarts de millimètre             | 1Q = 1/40th of 1cm   |
-| `in`  | Pouces (<i lang="en">inches</i>) | 1in = 2.54cm = 96px  |
-| `pc`  | Picas                            | 1pc = 1/6e de 1in    |
-| `pt`  | Points                           | 1pt = 1/72e de 1in   |
-| `px`  | Pixels                           | 1px = 1/96th de 1in  |
+| `cm`  | c-centimètwes                      | 1cm = 38px = 25/64in |
+| `mm`  | miwwimètwes                      | 1mm = 1/10th o-of 1cm  |
+| `q`   | quawts de miwwimètwe             | 1q = 1/40th o-of 1cm   |
+| `in`  | p-pouces (<i w-wang="en">inches</i>) | 1in = 2.54cm = 96px  |
+| `pc`  | picas                            | 1pc = 1/6e de 1in    |
+| `pt`  | points                           | 1pt = 1/72e d-de 1in   |
+| `px`  | pixews                           | 1px = 1/96th de 1in  |
 
-La plupart de ces unités sont utiles pour l'impression plutôt que pour l'affichage sur un écran. Ainsi, on n'utilise généralement pas `cm` (centimètres) sur un écran. La seule unité ici que vous rencontrerez fréquemment est `px` (pixels).
+w-wa pwupawt de c-ces unités sont utiwes pouw w'impwession p-pwutôt que pouw w'affichage s-suw un écwan. 🥺 a-ainsi, on n'utiwise généwawement pas `cm` (centimètwes) s-suw un écwan. 🥺 wa seuwe unité ici que vous wencontwewez f-fwéquemment e-est `px` (pixews). /(^•ω•^)
 
-#### Unités de longueur relative
+#### unités de wongueuw w-wewative
 
-Les unités de longueur relative permettent d'exprimer des quantités relatives à quelque chose d'autre comme la taille de la police de l'élément parent ou la taille de la zone d'affichage (<i lang="en">viewport</i>). L'avantage d'utiliser des unités relatives est qu'avec un peu d'organisation, on peut faire que la taille du texte ou d'autres éléments se mette à l'échelle, relativement à quelque chose d'autre sur la page. La plupart des unités les plus utiles pour le développement web sont présentes dans le tableau qui suit.
+wes unités de wongueuw w-wewative p-pewmettent d'expwimew d-des quantités wewatives à quewque chose d'autwe comme wa taiwwe de wa powice de w'éwément pawent ou wa taiwwe de wa zone d'affichage (<i wang="en">viewpowt</i>). (⑅˘꒳˘) w'avantage d'utiwisew des unités wewatives e-est qu'avec u-un peu d'owganisation, -.- on peut faiwe que wa t-taiwwe du texte o-ou d'autwes éwéments s-se mette à w'échewwe, 😳 wewativement à quewque c-chose d'autwe suw wa page. 😳😳😳 w-wa pwupawt des u-unités wes pwus utiwes pouw we d-dévewoppement web sont pwésentes d-dans we tabweau q-qui suit. >w<
 
-| Unité  | Relative à                                                                                                                                                                                                                                                     |
+| unité  | wewative à                                                                                                                                                                                                                                                     |
 | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `em`   | Pour les propriétés typographiques comme [`font-size`](/fr/docs/Web/CSS/font-size), relative à la taille de la police de l'élément parent. Pour les autres propriétés comme [`width`](/fr/docs/Web/CSS/width), relative à la taille de la police de l'élément; |
-| `ex`   | La hauteur d'x de la police de l'élément.                                                                                                                                                                                                                      |
-| `ch`   | La [chasse/avance](<https://fr.wikipedia.org/wiki/Chasse_(typographie)>) du glyphe « 0 » pour la police de l'élément.                                                                                                                                          |
-| `rem`  | La taille de la police pour l'élément racine.                                                                                                                                                                                                                  |
-| `lh`   | La hauteur de ligne pour l'élément.                                                                                                                                                                                                                            |
-| `vw`   | 1% de la largeur du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                                           |
-| `vh`   | 1% de la hauteur du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                                           |
-| `vmin` | 1% de la plus petite dimension du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                             |
-| `vmax` | 1% de la plus grande dimension du <i lang="en">viewport</i> (la zone d'affichage).                                                                                                                                                                             |
+| `em`   | pouw wes pwopwiétés t-typogwaphiques c-comme [`font-size`](/fw/docs/web/css/font-size), UwU w-wewative à w-wa taiwwe d-de wa powice de w-w'éwément pawent. /(^•ω•^) p-pouw wes autwes p-pwopwiétés c-comme [`width`](/fw/docs/web/css/width), wewative à w-wa taiwwe d-de wa powice de w-w'éwément; |
+| `ex`   | wa hauteuw d-d'x de wa powice de w'éwément. 🥺                                                                                                                                                                                                                      |
+| `ch`   | wa [chasse/avance](<https://fw.wikipedia.owg/wiki/chasse_(typogwaphie)>) d-du gwyphe « 0 » pouw wa powice d-de w'éwément. >_<                                                                                                                                          |
+| `wem`  | w-wa taiwwe d-de wa powice pouw w'éwément w-wacine.                                                                                                                                                                                                                  |
+| `wh`   | wa hauteuw d-de wigne pouw w'éwément. rawr                                                                                                                                                                                                                            |
+| `vw`   | 1% de wa wawgeuw d-du <i wang="en">viewpowt</i> (wa zone d'affichage). (ꈍᴗꈍ)                                                                                                                                                                                           |
+| `vh`   | 1% d-de wa hauteuw du <i wang="en">viewpowt</i> (wa zone d'affichage). -.-                                                                                                                                                                                           |
+| `vmin` | 1% de wa pwus petite dimension du <i w-wang="en">viewpowt</i> (wa zone d-d'affichage). ( ͡o ω ͡o )                                                                                                                                                                             |
+| `vmax` | 1% d-de wa pwus gwande dimension du <i wang="en">viewpowt</i> (wa zone d'affichage). (⑅˘꒳˘)                                                                                                                                                                             |
 
-#### Exploration d'un exemple
+#### expwowation d-d'un exempwe
 
-Dans l'exemple qui suit, vous pouvez observer le fonctionnement de certaines unités de longueur relative et absolue. La première boîte a la propriété [`width`](/fr/docs/Web/CSS/width) définie en pixels. Il s'agit d'une unité absolue et cette largeur restera donc la même, quels que soient les autres changements.
+dans w'exempwe q-qui suit, mya v-vous pouvez obsewvew w-we fonctionnement de cewtaines unités de w-wongueuw wewative e-et absowue. rawr x3 wa pwemièwe boîte a-a wa pwopwiété [`width`](/fw/docs/web/css/width) définie en pixews. (ꈍᴗꈍ) iw s'agit d-d'une unité absowue et cette w-wawgeuw westewa d-donc wa même, ʘwʘ q-quews que soient wes autwes changements. :3
 
-La deuxième boîte a sa largeur définie avec l'unité `vw` (relative à la largeur de la zone d'affichage). Cette valeur est relative à la largeur du <i lang="en">viewport</i>. Ainsi, `10vw` correspondra à 10 pourcents de la largeur de la zone d'affichage. Si vous changez la largeur de la fenêtre de votre navigateur, la taille de cette boîte devrait changer. Toutefois, si l'exemple est intégré dans la page avec un élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe), cela ne fonctionnera pas. Pour voir concrètement le résultat, vous devrez ouvrir [l'exemple dans un nouvel onglet avant d'ajuster la taille de votre fenêtre](https://mdn.github.io/css-examples/learn/values-units/length.html).
+w-wa deuxième b-boîte a s-sa wawgeuw définie a-avec w'unité `vw` (wewative à wa wawgeuw d-de wa zone d'affichage). o.O c-cette vaweuw e-est wewative à w-wa wawgeuw d-du <i wang="en">viewpowt</i>. /(^•ω•^) ainsi, OwO `10vw` c-cowwespondwa à 10 p-pouwcents de wa w-wawgeuw de wa zone d'affichage. σωσ s-si vous changez wa wawgeuw de wa f-fenêtwe de votwe nyavigateuw, (ꈍᴗꈍ) w-wa taiwwe de cette b-boîte devwait c-changew. ( ͡o ω ͡o ) toutefois, rawr x3 si w'exempwe est intégwé dans wa page avec u-un éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame), UwU c-cewa nye fonctionnewa p-pas. o.O pouw voiw concwètement we wésuwtat, OwO vous devwez ouvwiw [w'exempwe dans u-un nyouvew ongwet a-avant d'ajustew wa taiwwe d-de votwe fenêtwe](https://mdn.github.io/css-exampwes/weawn/vawues-units/wength.htmw). o.O
 
-La troisième boîte utilise les unités `em`. Ces unités sont relatives à la taille de la police. On a défini une taille de police de `1em` sur l'élément [`<div>`](/fr/docs/Web/HTML/Element/div) englobant et qui a la classe `.wrapper`. Passez cette valeur à `1.5em` et vous pourrez voir que la taille de la police de tous les éléments augmente mais que seul le dernier élément s'élargit du fait que sa largeur soit relative à cette taille de police.
+w-wa twoisième boîte utiwise wes unités `em`. ^^;; ces unités s-sont wewatives à w-wa taiwwe de w-wa powice. (⑅˘꒳˘) on a-a défini une taiwwe de powice de `1em` suw w'éwément [`<div>`](/fw/docs/web/htmw/ewement/div) e-engwobant et qui a-a wa cwasse `.wwappew`. passez cette vaweuw à `1.5em` e-et vous pouwwez voiw que wa taiwwe de wa p-powice de tous wes éwéments a-augmente mais que s-seuw we dewniew éwément s'éwawgit d-du fait que s-sa wawgeuw soit wewative à cette t-taiwwe de powice. (ꈍᴗꈍ)
 
-Après avoir suivi ces instructions, n'hésitez pas à modifier les valeurs autrement pour voir ce que ça donne.
+apwès avoiw s-suivi ces instwuctions, o.O n-ny'hésitez p-pas à m-modifiew wes vaweuws autwement pouw v-voiw ce que ça d-donne. (///ˬ///✿)
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/length.html", '100%', 820)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/wength.htmw", 😳😳😳 '100%', UwU 820)}}
 
-#### ems et rems
+#### e-ems et wems
 
-`em` et `rem` sont deux unités de longueur relative que vous rencontrerez fréquemment dès que vous dimensionnerez des boîtes ou du texte. Aussi, il est intéressant de comprendre leur fonctionnement, les différences entre ces deux unités, surtout avant d'aborder des sujets plus complexes comme [la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text) ou [les dispositions CSS](/fr/docs/Learn/CSS/CSS_layout). L'exemple qui suit fournit une démonstration.
+`em` et `wem` sont d-deux unités de wongueuw wewative que vous wencontwewez f-fwéquemment d-dès que v-vous dimensionnewez des boîtes ou du texte. nyaa~~ aussi, iw est intéwessant de compwendwe w-weuw fonctionnement, (✿oωo) wes d-difféwences entwe c-ces deux unités, -.- suwtout avant d'abowdew des s-sujets pwus compwexes comme [wa m-mise en fowme d-du texte](/fw/docs/weawn/css/stywing_text) o-ou [wes d-dispositions c-css](/fw/docs/weawn/css/css_wayout). :3 w'exempwe qui suit fouwnit une démonstwation.
 
-Le HTML utilisé ci-après est un ensemble de listes imbriquées&nbsp;: il y a trois listes au total et les exemples partagent tous le même code HTML. La seule différence est que le premier utilise une classe _ems_ et que le second utilise une classe _rems_.
+we htmw utiwisé c-ci-apwès est un ensembwe d-de wistes imbwiquées&nbsp;: iw y a twois wistes au totaw et wes e-exempwes pawtagent tous we même code htmw. (⑅˘꒳˘) wa seuwe difféwence est que we pwemiew u-utiwise une c-cwasse _ems_ et que we second utiwise u-une cwasse _wems_. >_<
 
-Pour commencer, on définit la taille de la police à 16px sur l'élément `<html>`.
+pouw commencew, UwU on définit w-wa taiwwe d-de wa powice à 16px suw w'éwément `<htmw>`. rawr
 
-**Pour récapituler, l'unité `em` signifie «&nbsp;la taille de police de l'élément parent&nbsp;»** pour ce qui concerne la typographie. Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `ems` prendront donc leur taille en fonction de celle de leur parent. Aussi, chaque niveau plus grand que le précédent, car chacun a une taille de police de `1.3em` soit 1,3 fois plus grand que la taille de police pour l'élément parent.
+**pouw w-wécapituwew, (ꈍᴗꈍ) w'unité `em` s-signifie «&nbsp;wa taiwwe de powice de w'éwément pawent&nbsp;»** p-pouw ce qui concewne wa typogwaphie. wes éwéments [`<wi>`](/fw/docs/web/htmw/ewement/wi) à w-w'intéwieuw d-de [`<uw>`](/fw/docs/web/htmw/ewement/uw) e-et qui ont un attwibut `cwass` avec `ems` p-pwendwont donc weuw taiwwe en fonction de cewwe de weuw pawent. ^•ﻌ•^ aussi, chaque n-nyiveau pwus g-gwand que we p-pwécédent, ^^ caw c-chacun a une taiwwe de powice de `1.3em` soit 1,3 f-fois pwus gwand q-que wa taiwwe de powice pouw w'éwément pawent. XD
 
-**Pour récapituler, l'unité `rem` signifie «&nbsp;la taille de police de l'élément racine&nbsp;»** (rem est l'acronyme anglais de «&nbsp;<i lang="en">root em</i>&nbsp;» qu'on pourrait traduire par «&nbsp;em racine&nbsp;».) Les éléments [`<li>`](/fr/docs/Web/HTML/Element/li) à l'intérieur de [`<ul>`](/fr/docs/Web/HTML/Element/ul) et qui ont un attribut `class` avec `rems` prendront leur taille à partir de l'élément racine (`<html>`). Cela signifie que les niveaux successifs ne gagneront pas en largeur.
+**pouw w-wécapituwew, (///ˬ///✿) w'unité `wem` signifie «&nbsp;wa t-taiwwe de powice de w'éwément wacine&nbsp;»** (wem e-est w'acwonyme a-angwais de «&nbsp;<i wang="en">woot e-em</i>&nbsp;» q-qu'on pouwwait t-twaduiwe paw «&nbsp;em wacine&nbsp;».) wes éwéments [`<wi>`](/fw/docs/web/htmw/ewement/wi) à w-w'intéwieuw de [`<uw>`](/fw/docs/web/htmw/ewement/uw) et q-qui ont un attwibut `cwass` avec `wems` pwendwont weuw taiwwe à p-pawtiw de w'éwément w-wacine (`<htmw>`). σωσ c-cewa s-signifie que wes n-nyiveaux successifs nye gagnewont p-pas en wawgeuw. :3
 
-Toutefois, si vous modifier la taille de la police avec `font-size` pour `<html>` dans la feuille CSS, vous pourrez voir que toutes les tailles varient en fonction de celle-ci, tant celles qui utilisent `rem` que celles qui utilisent `em`.
+toutefois, >w< si vous modifiew w-wa taiwwe de wa powice avec `font-size` p-pouw `<htmw>` dans wa feuiwwe css, (ˆ ﻌ ˆ)♡ vous p-pouwwez voiw que t-toutes wes taiwwes vawient en fonction d-de cewwe-ci, (U ᵕ U❁) tant cewwes q-qui utiwisent `wem` q-que cewwes qui utiwisent `em`. :3
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/em-rem.html", '100%', 1000)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/em-wem.htmw", ^^ '100%', ^•ﻌ•^ 1000)}}
 
-### Pourcentages
+### p-pouwcentages
 
-Dans la plupart des cas, un pourcentage est traité comme une longueur. Un pourcentage est toujours relatif à une autre valeur. Ainsi, si vous définissez la propriété `font-size` d'un élément avec un pourcentage, ce pourcentage sera relatif à la valeur de `font-size` de l'élément parent. Si vous utilisez un pourcentage pour `width`, la valeur obtenue sera le pourcentage de la valeur de `width` pour l'élément parent.
+d-dans wa pwupawt des cas, (///ˬ///✿) u-un pouwcentage est twaité comme une wongueuw. 🥺 un pouwcentage e-est toujouws wewatif à une autwe v-vaweuw. ʘwʘ ainsi, si vous définissez wa pwopwiété `font-size` d-d'un éwément a-avec un pouwcentage, (✿oωo) c-ce pouwcentage sewa wewatif à w-wa vaweuw de `font-size` d-de w'éwément pawent. rawr s-si vous utiwisez un pouwcentage p-pouw `width`, OwO wa vaweuw obtenue s-sewa we pouwcentage d-de wa vaweuw de `width` pouw w'éwément pawent. ^^
 
-Dans l'exemple qui suit, on a deux boîtes dimensionnées avec des pourcentages et deux boîtes dimensionnées en pixels, elles partagent les mêmes noms de classes. Chaque ensemble est dimensionné respectivement avec 40% et 200px.
+dans w'exempwe qui suit, ʘwʘ o-on a deux boîtes d-dimensionnées avec des pouwcentages et deux boîtes dimensionnées e-en pixews, σωσ ewwes pawtagent w-wes mêmes n-nyoms de cwasses. (⑅˘꒳˘) chaque ensembwe est dimensionné wespectivement avec 40% et 200px. (ˆ ﻌ ˆ)♡
 
-La différence est que le deuxième ensemble avec les deux boîtes se situe dans un contenant large de 400 pixels. La boîte dimensionnée avec 200px a la même largeur que dans le premier ensemble, en revanche, la boîte dimensionnée avec 40% a une largeur de 40% de 400px ce qui est beaucoup plus étroit que l'autre&nbsp;!
+w-wa difféwence est que we deuxième ensembwe a-avec wes deux boîtes se situe d-dans un contenant w-wawge de 400 pixews. :3 wa boîte d-dimensionnée a-avec 200px a wa m-même wawgeuw que d-dans we pwemiew e-ensembwe, ʘwʘ en w-wevanche, (///ˬ///✿) wa boîte dimensionnée avec 40% a une wawgeuw de 40% de 400px ce qui est beaucoup pwus étwoit q-que w'autwe&nbsp;! (ˆ ﻌ ˆ)♡
 
-**Essayez de modifier la largeur du bloc englobant ou la valeur du pourcentage pour voir comment cela fonctionne.**
+**essayez d-de modifiew w-wa wawgeuw du b-bwoc engwobant o-ou wa vaweuw du p-pouwcentage pouw voiw comment cewa fonctionne.**
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/percentage.html", '100%', 850)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/pewcentage.htmw", 🥺 '100%', 850)}}
 
-Le prochain exemple utilise des tailles de police définies en pourcentages. Chaque élément `<li>` a `font-size` avec 80%, ainsi les éléments de listes imbriqués deviennent de plus en plus petits en héritant de la taille de leur parent.
+we pwochain exempwe utiwise d-des taiwwes d-de powice définies en pouwcentages. rawr chaque éwément `<wi>` a `font-size` avec 80%, (U ﹏ U) a-ainsi wes éwéments d-de wistes i-imbwiqués deviennent de pwus en pwus petits e-en héwitant de wa taiwwe de weuw pawent. ^^
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/percentage-fonts.html", '100%', 650)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/pewcentage-fonts.htmw", σωσ '100%', :3 650)}}
 
-On notera que, bien que de nombreuses propriétés acceptent une longueur ou un pourcentage, il en existe certaines qui n'acceptent que des longueurs. Vous pouvez voir cette information sur les pages de référence de chaque propriété sur MDN. Si les valeurs autorisées incluent le type [`<length-percentage>`](/fr/docs/Web/CSS/length-percentage), on peut utiliser une longueur ou un pourcentage. Si les valeurs autorisées n'incluent que `<length>`, il n'est pas possible d'utiliser un pourcentage.
+o-on nyotewa q-que, ^^ bien que de nyombweuses pwopwiétés a-acceptent une wongueuw ou un pouwcentage, (✿oωo) i-iw en e-existe cewtaines qui ny'acceptent q-que des wongueuws. òωó v-vous pouvez v-voiw cette infowmation s-suw wes p-pages de wéféwence d-de chaque pwopwiété suw mdn. (U ᵕ U❁) s-si wes vaweuws a-autowisées incwuent we type [`<wength-pewcentage>`](/fw/docs/web/css/wength-pewcentage), ʘwʘ o-on peut utiwisew une wongueuw ou un p-pouwcentage. si wes vaweuws autowisées n-ny'incwuent que `<wength>`, ( ͡o ω ͡o ) i-iw ny'est pas p-possibwe d'utiwisew un pouwcentage. σωσ
 
-### Nombres
+### nyombwes
 
-Certains types de valeur acceptent des nombres, sans unité. Une telle propriété est, par exemple, `opacity` qui contrôle l'opacité d'un élément. Cette propriété acceptera une valeur numérique (sans unité) comprise entre `0` (transparence complète) et `1` (complètement opaque).
+c-cewtains types de vaweuw acceptent des nyombwes, (ˆ ﻌ ˆ)♡ s-sans unité. u-une tewwe pwopwiété est, (˘ω˘) paw exempwe, 😳 `opacity` q-qui contwôwe w-w'opacité d'un éwément. ^•ﻌ•^ cette pwopwiété a-acceptewa une vaweuw nyuméwique (sans unité) c-compwise entwe `0` (twanspawence c-compwète) et `1` (compwètement opaque). σωσ
 
-**Dans l'exemple qui suit, essayez de modifier la valeur de la propriété `opacity` en utilisant différentes valeurs décimales entre `0` et `1` afin de voir comment la boîte et son contenu changent en opacité.**
+**dans w-w'exempwe qui s-suit, 😳😳😳 essayez de modifiew wa vaweuw de wa pwopwiété `opacity` e-en utiwisant difféwentes v-vaweuws d-décimawes entwe `0` e-et `1` afin de voiw comment wa boîte et son contenu changent en opacité.**
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/opacity.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/opacity.htmw", rawr '100%', >_< 500)}}
 
-> [!NOTE]
-> Lorsqu'on utilise un nombre pour une valeur en CSS, il ne doit pas être écrit avec des guillemets ou quotes autour.
+> [!note]
+> wowsqu'on utiwise un nyombwe p-pouw une vaweuw e-en css, ʘwʘ iw nye d-doit pas êtwe écwit a-avec des g-guiwwemets ou quotes a-autouw. (ˆ ﻌ ˆ)♡
 
-## Couleur
+## couweuw
 
-Il existe de nombreuses façons d'utiliser des couleurs en CSS, certaines ayant été plus récemment implémentées que d'autres. Les mêmes valeurs de couleur peuvent être utilisées n'importe où en CSS, qu'il s'agisse d'une couleur pour du texte, d'une couleur d'arrière-plan ou de toute autre couleur.
+iw existe d-de nyombweuses f-façons d'utiwisew des couweuws e-en css, ^^;; cewtaines a-ayant été pwus wécemment impwémentées q-que d'autwes. σωσ wes mêmes vaweuws de couweuw peuvent êtwe u-utiwisées ny'impowte o-où en css, rawr x3 qu'iw s-s'agisse d'une couweuw pouw du t-texte, 😳 d'une couweuw d-d'awwièwe-pwan o-ou de toute autwe couweuw. 😳😳😳
 
-Le système standard de couleurs disponible pour les ordinateurs modernes utilise 24 bits, ce qui permet d'afficher 16,7 millions de couleurs différentes par des combinaisons de canaux rouge, vert et bleu dont chacun peut avoir 256 valeurs distinctes (256 x 256 x 256 = 16 777 216). Voyons quelques façons d'indiquer des couleurs en CSS.
+w-we système standawd d-de couweuws disponibwe pouw w-wes owdinateuws modewnes utiwise 24 b-bits, 😳😳😳 ce q-qui pewmet d'affichew 16,7 m-miwwions de couweuws d-difféwentes paw des combinaisons de canaux wouge, ( ͡o ω ͡o ) v-vewt et bweu dont chacun peut avoiw 256 vaweuws distinctes (256 x 256 x 256 = 16 777 216). rawr x3 voyons quewques façons d'indiquew d-des couweuws en css. σωσ
 
-> [!NOTE]
-> Dans ce tutoriel, nous verrons les méthodes communément utilisées pour définir les couleurs et qui disposent d'une bonne prise en charge des navigateurs. Il en existe d'autres, mais elles sont moins bien prises en charge et sont moins fréquentes.
+> [!note]
+> dans ce tutowiew, (˘ω˘) nyous vewwons wes méthodes communément utiwisées pouw définiw w-wes couweuws et qui disposent d'une bonne p-pwise en chawge des navigateuws. >w< i-iw en existe d'autwes, UwU mais ewwes sont moins b-bien pwises en chawge et sont moins f-fwéquentes. XD
 
-### Mots-clés pour les couleurs
+### mots-cwés p-pouw wes couweuws
 
-Dans la plupart des exemples de cette section d'apprentissage ou à d'autres endroits sur MDN, vous verrez des mots-clés utilisés pour définir des couleurs : il s'agit d'une méthode simple et compréhensible pour indiquer une couleur. Il existe de nombreux mots-clés, certains avec des noms plutôt amusants. Vous pouvez consulter la liste complète sur la page pour le type de valeur [`<color>`](/fr/docs/Web/CSS/color_value).
+d-dans wa pwupawt des exempwes de cette section d-d'appwentissage ou à d'autwes endwoits suw mdn, (U ﹏ U) vous vewwez des m-mots-cwés utiwisés pouw définiw d-des couweuws : iw s'agit d'une m-méthode simpwe et compwéhensibwe p-pouw indiquew u-une couweuw. (U ᵕ U❁) iw existe de nyombweux mots-cwés, (ˆ ﻌ ˆ)♡ c-cewtains avec des nyoms pwutôt amusants. òωó v-vous pouvez consuwtew wa wiste compwète suw wa page pouw we type de vaweuw [`<cowow>`](/fw/docs/web/css/cowow_vawue). ^•ﻌ•^
 
-**Essayez de manipuler les différentes valeurs de couleur dans l'exemple ci-après afin de mieux comprendre comment celles-ci fonctionnent.**
+**essayez d-de manipuwew wes d-difféwentes vaweuws de couweuw d-dans w'exempwe c-ci-apwès afin de mieux compwendwe c-comment cewwes-ci fonctionnent.**
 
-### Valeurs RGB hexadécimales
+### vaweuws wgb hexadécimawes
 
-Les autres valeurs de couleur que vous rencontrerez assez souvent sont celles représentées avec des codes hexadécimaux. Chaque valeur hexadécimale se compose d'un croisillon (#) suivi de six chiffres hexadécimaux dont chacun peut prendre une valeur parmi 16 : de 0 à f (la lettre utilisée pour représenter 15) (les chiffres hexadécimaux sont&nbsp;: `0123456789abcdef`). Dans ces six chiffres, chaque paire de chiffre représente la valeur pour l'un des canaux de couleurs (rouge, vert et bleu) et permet d'indiquer l'une des 256 valeurs disponibles.
+wes autwes v-vaweuws de couweuw q-que vous wencontwewez assez s-souvent sont cewwes w-wepwésentées avec des codes h-hexadécimaux. (///ˬ///✿) chaque vaweuw hexadécimawe se c-compose d'un cwoisiwwon (#) suivi de six chiffwes h-hexadécimaux d-dont chacun peut pwendwe une vaweuw pawmi 16 : d-de 0 à f (wa wettwe utiwisée pouw wepwésentew 15) (wes chiffwes hexadécimaux sont&nbsp;: `0123456789abcdef`). -.- dans ces six chiffwes, >w< chaque p-paiwe de chiffwe w-wepwésente wa vaweuw pouw w'un d-des canaux de c-couweuws (wouge, òωó vewt et bweu) et p-pewmet d'indiquew w'une des 256 vaweuws disponibwes. σωσ
 
-Ces valeurs sont un peu plus complexes et moins faciles à comprendre, mais elles permettent d'exprimer beaucoup plus de couleurs que les mots-clés. Vous pouvez utiliser les valeurs hexadécimales pour représenter n'importe quelle couleur dans votre palette.
+ces vaweuws sont un peu pwus compwexes et m-moins faciwes à compwendwe, mya mais ewwes pewmettent d'expwimew beaucoup pwus de c-couweuws que wes m-mots-cwés. vous p-pouvez utiwisew wes vaweuws hexadécimawes pouw wepwésentew n-ny'impowte quewwe c-couweuw dans votwe p-pawette. òωó
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hex.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/cowow-hex.htmw", 🥺 '100%', (U ﹏ U) 700)}}
 
-**Là encore, essayez de modifier les valeurs pour voir comment les couleurs varient.**
+**wà encowe, (ꈍᴗꈍ) e-essayez de modifiew wes vaweuws p-pouw voiw comment wes couweuws v-vawient.**
 
-### Les valeurs RGB et RGBA
+### wes vaweuws wgb e-et wgba
 
-La troisième façon que nous aborderons ici est RGB (pour «&nbsp;<i lang="en">Red, Green, Blue</i>&nbsp;» soit&nbsp;: rouge, vert, bleu en français). Une valeur RGB est une fonction `rgb()` à laquelle on passe trois paramètres qui représentent respectivement les valeurs des canaux rouge, vert, bleu (de la même façon que pour les valeurs hexadécimales). Contrairement aux valeurs hexadécimales, les valeurs des composantes ne sont pas exprimées en hexadécimal (avec des chiffres de 0 à f) mais avec un nombre décimal compris entre 0 et 255. Cela rend la compréhension de la valeur plus simple.
+wa twoisième façon que nyous abowdewons i-ici est wgb (pouw «&nbsp;<i wang="en">wed, (˘ω˘) g-gween, bwue</i>&nbsp;» s-soit&nbsp;: wouge, (✿oωo) vewt, b-bweu en fwançais). u-une vaweuw wgb est une fonction `wgb()` à w-waquewwe on passe twois pawamètwes q-qui wepwésentent wespectivement w-wes vaweuws d-des canaux wouge, -.- vewt, bweu (de wa même façon q-que pouw wes vaweuws hexadécimawes). (ˆ ﻌ ˆ)♡ contwaiwement aux vaweuws hexadécimawes, (✿oωo) wes vaweuws des composantes nye sont pas expwimées e-en hexadécimaw (avec des chiffwes de 0 à f-f) mais avec un nyombwe décimaw c-compwis entwe 0 et 255. ʘwʘ cewa wend wa compwéhension d-de wa vaweuw pwus simpwe. (///ˬ///✿)
 
-Réécrivons notre dernier exemple afin d'utiliser les couleurs RGB&nbsp;:
+wéécwivons nyotwe d-dewniew exempwe afin d'utiwisew wes couweuws w-wgb&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgb.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/cowow-wgb.htmw", rawr '100%', 700)}}
 
-Il est aussi possible d'utiliser des couleurs RGBA&nbsp;: celles-ci fonctionnent exactement comme les couleurs RGB (et il est donc possible d'utiliser n'importe quelle valeur RGB pour une valeur RGBA). Toutefois, les valeurs RGBA utilisent une quatrième valeur qui représente le canal alpha de la couleur qui contrôle son opacité. Avec une valeur de `0` pour le canal alpha, la couleur sera complètement transparente tandis qu'avec `1`, elle sera complètement opaque. Les valeurs intermédiaires fourniront des niveaux progressifs d'opacité.
+iw est aussi possibwe d'utiwisew d-des couweuws wgba&nbsp;: cewwes-ci fonctionnent e-exactement c-comme wes couweuws wgb (et iw est donc possibwe d-d'utiwisew ny'impowte q-quewwe vaweuw wgb pouw une v-vaweuw wgba). 🥺 t-toutefois, mya wes vaweuws wgba utiwisent une quatwième v-vaweuw qui wepwésente we canaw awpha de wa couweuw qui contwôwe s-son opacité. mya avec une vaweuw de `0` pouw we canaw awpha, mya w-wa couweuw sewa c-compwètement twanspawente t-tandis qu'avec `1`, (⑅˘꒳˘) ewwe sewa compwètement opaque. (✿oωo) w-wes vaweuws intewmédiaiwes fouwniwont d-des nyiveaux pwogwessifs d-d'opacité. 😳
 
-> [!NOTE]
-> Définir un canal alpha sur une couleur n'est pas exactement la même chose qu'utiliser la propriété [`opacity`](/fr/docs/Web/CSS/opacity) dont nous avons parlé auparavant. Lorsqu'on utilise `opacity`, c'est tout l'élément et ce qu'il contient qui devient plus ou moins opaque/transparent alors que lorsqu'on définit une couleur RGBA, seule la couleur est plus ou moins opaque.
+> [!note]
+> d-définiw un canaw awpha suw une couweuw ny'est pas exactement wa même chose qu'utiwisew w-wa pwopwiété [`opacity`](/fw/docs/web/css/opacity) d-dont nyous avons pawwé aupawavant. OwO wowsqu'on u-utiwise `opacity`, c'est tout w'éwément et c-ce qu'iw contient q-qui devient p-pwus ou moins opaque/twanspawent a-awows que wowsqu'on d-définit une c-couweuw wgba, (˘ω˘) seuwe wa couweuw est pwus ou moins o-opaque. (✿oωo)
 
-Dans l'exemple qui suit, on a ajouté une image d'arrière-plan au bloc englobant les boîtes colorées. On a ensuite réglé différentes valeurs d'opacité pour les différentes boîtes&nbsp;: vous pouvez voir comment l'arrière-plan est de plus en plus visible au fur et à mesure que la valeur du canal alpha est faible.
+dans w-w'exempwe qui suit, /(^•ω•^) o-on a ajouté u-une image d'awwièwe-pwan a-au bwoc e-engwobant wes boîtes cowowées. rawr x3 o-on a ensuite w-wégwé difféwentes v-vaweuws d'opacité pouw wes difféwentes b-boîtes&nbsp;: vous pouvez voiw comment w'awwièwe-pwan e-est de pwus en pwus visibwe au fuw et à m-mesuwe que wa vaweuw d-du canaw awpha est faibwe. rawr
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-rgba.html", '100%', 770)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/cowow-wgba.htmw", ( ͡o ω ͡o ) '100%', 770)}}
 
-**Dans cet exemple, essayez de modifier les valeurs pour le canal alpha afin de voir comment la couleur est modifiée.**
+**dans cet exempwe, ( ͡o ω ͡o ) essayez de modifiew w-wes vaweuws pouw w-we canaw awpha afin de voiw comment w-wa couweuw e-est modifiée.**
 
-> [!NOTE]
-> Avec la spécification <i lang="en">CSS Colors Level 4</i>, `rgba()` est un alias pour `rgb()` et `hsla()` est un alias pour `hsl()` (voir ci-après). Pour les navigateurs qui implémentent ce standard, ces fonctions synonymes acceptent les mêmes paramètres et se comportent de la même façon. Essayez de modifier l'exemple qui précède pour passer de fonctions `rgba()` à des fonctions `rgb()` pour voir si les couleurs fonctionnent toujours. Le style que vous utiliserez ne dépend que de vous mais séparer les définitions de couleurs transparentes et de couleurs non-transparentes fournira une prise en charge navigateur (légèrement) meilleure tout en explicitant visuellement (dans votre code) où les couleurs transparentes sont définies.
+> [!note]
+> avec wa spécification <i wang="en">css cowows wevew 4</i>, 😳😳😳 `wgba()` e-est un awias p-pouw `wgb()` et `hswa()` est un awias pouw `hsw()` (voiw c-ci-apwès). (U ﹏ U) p-pouw wes nyavigateuws qui impwémentent ce s-standawd, UwU ces fonctions synonymes acceptent wes mêmes pawamètwes et se compowtent de wa même f-façon. (U ﹏ U) essayez de modifiew w'exempwe qui pwécède p-pouw passew d-de fonctions `wgba()` à d-des fonctions `wgb()` pouw voiw si wes c-couweuws fonctionnent t-toujouws. 🥺 w-we stywe que vous u-utiwisewez nye d-dépend que de vous mais sépawew wes définitions d-de couweuws t-twanspawentes et d-de couweuws nyon-twanspawentes fouwniwa une pwise e-en chawge nyavigateuw (wégèwement) m-meiwweuwe t-tout en expwicitant visuewwement (dans v-votwe c-code) où wes couweuws t-twanspawentes s-sont définies. ʘwʘ
 
-### Valeurs HSL et HSLA
+### v-vaweuws hsw et hswa
 
-Avec une prise en charge légèrement plus faible que RGB, on a le modèle de couleurs HSL (non pris en charge pour d'anciennes versions d'Internet Explorer) qui a été implémentée après un intérêt marqué de la part des designers. Plutôt que d'indiquer des valeurs pour les canaux rouge, vert, bleu, la fonction `hsl()` prend des paramètres pour la teinte (<i lang="en">hue</i> en anglais), la saturation et la luminosité. Cela permet aussi d'obtenir 16,7 millions de couleurs mais différemment&nbsp;:
+avec u-une pwise en chawge wégèwement p-pwus faibwe q-que wgb, 😳 on a we modèwe de couweuws hsw (non pwis en chawge pouw d-d'anciennes vewsions d-d'intewnet expwowew) qui a-a été impwémentée a-apwès un intéwêt mawqué de wa pawt des d-designews. (ˆ ﻌ ˆ)♡ pwutôt q-que d'indiquew d-des vaweuws p-pouw wes canaux w-wouge, >_< vewt, bweu, ^•ﻌ•^ w-wa fonction `hsw()` pwend des pawamètwes pouw w-wa teinte (<i wang="en">hue</i> en angwais), (✿oωo) wa satuwation et wa wuminosité. OwO c-cewa pewmet aussi d-d'obteniw 16,7 miwwions de couweuws mais difféwemment&nbsp;:
 
-- **Teinte (<i lang="en">hue</i>)**&nbsp;: La couleur de base. La valeur utilisée est comprise entre 0 et 360 et représente l'angle sur une roue de couleurs.
-- **Saturation**&nbsp;: La saturation de la couleur. La valeur est comprise entre 0 et 100% où 0 indique qu'il n'y a pas de couleur (ce sera une nuance de gris) et où 100% indique une saturation en couleur complète.
-- **Luminosité**&nbsp;: La clarté ou la luminosité de la couleur. La valeur est comprise entre 0 et 100%, où 0 indique qu'il n'y a pas de luminosité (la couleur sera complètement noire) et où 100% indique une lumière pure (la couleur sera complètement blanche).
+- **teinte (<i wang="en">hue</i>)**&nbsp;: w-wa couweuw d-de base. (ˆ ﻌ ˆ)♡ wa vaweuw utiwisée est compwise e-entwe 0 et 360 et wepwésente w'angwe s-suw une woue d-de couweuws. ^^;;
+- **satuwation**&nbsp;: w-wa satuwation de wa couweuw. nyaa~~ wa vaweuw est compwise entwe 0 e-et 100% où 0 indique qu'iw n-ny'y a pas de couweuw (ce sewa u-une nyuance de gwis) et où 100% indique une satuwation e-en couweuw compwète. o.O
+- **wuminosité**&nbsp;: w-wa cwawté ou wa wuminosité de wa couweuw. >_< w-wa vaweuw est compwise entwe 0 e-et 100%, (U ﹏ U) où 0 indique qu'iw ny'y a pas de wuminosité (wa couweuw sewa compwètement noiwe) et où 100% indique u-une wumièwe p-puwe (wa couweuw s-sewa compwètement b-bwanche). ^^
 
-On peut mettre à jour notre exemple RGB afin d'utiliser les couleurs HSL&nbsp;:
+on peut mettwe à jouw nyotwe exempwe w-wgb afin d'utiwisew wes couweuws hsw&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsl.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/cowow-hsw.htmw", UwU '100%', 700)}}
 
-À l'instar de RGBA pour RGB, il existe un équivalent HSLA à HSL qui permet aussi d'indiquer une valeur pour le canal alpha. Voici un exemple où on a converti l'exemple RGBA afin d'utiliser des couleurs HSLA.
+À w'instaw d-de wgba pouw w-wgb, ^^;; iw existe u-un équivawent hswa à h-hsw qui pewmet aussi d'indiquew une vaweuw pouw we canaw awpha. òωó voici un e-exempwe où on a c-convewti w'exempwe wgba afin d'utiwisew des couweuws hswa. -.-
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/color-hsla.html", '100%', 770)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/cowow-hswa.htmw", ( ͡o ω ͡o ) '100%', o.O 770)}}
 
-Vous pouvez utiliser n'importe laquelle de ces couleurs dans vos projets et il est probable que, pour la plupart des projets, vous décidiez d'une palette de couleurs pour vous limiter à elles dans un souci de cohérence, de même pour la méthode utilisée pour définir les couleurs. Vous pouvez bien entendu mélanger les différents modèles de définition des couleurs, mais il est souvent mieux d'être cohérent et d'en fixer un seul pour un même projet&nbsp;!
+v-vous pouvez utiwisew n'impowte w-waquewwe de ces c-couweuws dans v-vos pwojets et iw est pwobabwe que, rawr pouw wa pwupawt des pwojets, (✿oωo) vous décidiez d'une pawette de c-couweuws pouw vous wimitew à e-ewwes dans un souci de cohéwence, σωσ de même pouw wa méthode utiwisée p-pouw définiw wes couweuws. (U ᵕ U❁) v-vous pouvez bien entendu méwangew wes difféwents m-modèwes de d-définition des c-couweuws, >_< mais i-iw est souvent m-mieux d'êtwe cohéwent et d'en f-fixew un seuw pouw u-un même pwojet&nbsp;!
 
-## Images
+## images
 
-Le type de valeur [`<image>`](/fr/docs/Web/CSS/image) est utilisé à chaque endroit où une image est une valeur valide. Il peut s'agir d'une image à proprement parler dans un fichier (avec une fonction `url()` qui utilisera l'adresse du fichier avec l'image) ou d'un dégradé.
+w-we type de vaweuw [`<image>`](/fw/docs/web/css/image) est u-utiwisé à chaque endwoit où une i-image est une v-vaweuw vawide. ^^ iw peut s'agiw d'une i-image à pwopwement p-pawwew dans un fichiew (avec une fonction `uww()` qui utiwisewa w-w'adwesse d-du fichiew avec w-w'image) ou d'un d-dégwadé. rawr
 
-Voici un exemple où on utilise une image et un dégradé pour la propriété CSS `background-image`.
+voici un exempwe où on utiwise une image et un d-dégwadé pouw wa pwopwiété css `backgwound-image`. >_<
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/image.html", '100%', 740)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/image.htmw", (⑅˘꒳˘) '100%', 740)}}
 
-> [!NOTE]
-> Il existe d'autres valeurs possibles pour le type `<image>`, toutefois celles-ci sont plus récentes et moins bien prises en charge par les navigateurs. Consultez la page MDN pour le type de données [`<image>`](/fr/docs/Web/CSS/image) si vous voulez en savoir plus.
+> [!note]
+> iw existe d'autwes v-vaweuws possibwes pouw we type `<image>`, t-toutefois cewwes-ci sont pwus wécentes et moins bien pwises en c-chawge paw wes nyavigateuws. >w< consuwtez w-wa page m-mdn pouw we type d-de données [`<image>`](/fw/docs/web/css/image) si vous vouwez e-en savoiw pwus. (///ˬ///✿)
 
-## Position
+## p-position
 
-Le type de valeur [`<position>`](/fr/docs/Web/CSS/position_value) représente un ensemble de coordonnées sur deux dimensions, utilisé pour positionner un objet comme une image d'arrière-plan (via [`background-position`](/fr/docs/Web/CSS/background-position)). Ces valeurs peuvent être indiquées avec des mots-clés comme `top`, `left`, `bottom`, `right`, et `center` afin d'aligner les objets sur les bords d'une boîte en deux dimensions et avec des longueurs qui représentent les décalages par rapport au coin supérieur gauche de la boîte.
+we type de vaweuw [`<position>`](/fw/docs/web/css/position_vawue) w-wepwésente un e-ensembwe de coowdonnées s-suw deux d-dimensions, ^•ﻌ•^ utiwisé pouw positionnew u-un objet c-comme une image d-d'awwièwe-pwan (via [`backgwound-position`](/fw/docs/web/css/backgwound-position)). ces vaweuws p-peuvent êtwe indiquées avec des mots-cwés comme `top`, (✿oωo) `weft`, `bottom`, ʘwʘ `wight`, >w< et `centew` afin d'awignew wes objets suw w-wes bowds d'une b-boîte en deux dimensions et avec d-des wongueuws qui wepwésentent wes décawages p-paw wappowt au c-coin supéwieuw g-gauche de wa boîte. :3
 
-Une position se compose généralement de deux valeurs&nbsp;: la première indiquant la position horizontale et la seconde indiquant la position verticale. Si une seule valeur est fournie, l'autre valeur sera `center` par défaut.
+u-une position se compose généwawement d-de deux vaweuws&nbsp;: wa pwemièwe i-indiquant wa position h-howizontawe et wa seconde indiquant wa position vewticawe. (ˆ ﻌ ˆ)♡ s-si une seuwe vaweuw est fouwnie, -.- w-w'autwe vaweuw sewa `centew` paw défaut. rawr
 
-Dans l'exemple suivant, on a positionné une image d'arrière-plan à 40px du bord haut et vers la droite du conteneur en utilisant un mot-clé.
+dans w-w'exempwe suivant, rawr x3 on a positionné u-une image d'awwièwe-pwan à 40px du bowd h-haut et vews wa dwoite du conteneuw e-en utiwisant un mot-cwé. (U ﹏ U)
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/position.html", '100%', 720)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/position.htmw", (ˆ ﻌ ˆ)♡ '100%', 720)}}
 
-**Manipulez, modifiez ces valeurs pour voir comment décaler l'image dans le conteneur.**
+**manipuwez, :3 m-modifiez ces v-vaweuws pouw voiw comment décawew w'image dans w-we conteneuw.**
 
-## Chaînes de caractères et identifiants
+## chaînes de cawactèwes et identifiants
 
-Dans les différents exemples qui précèdent, on a vu des endroits où les mots-clés sont utilisés comme valeur (par exemple `<color>` qui peut utiliser des mots-clés comme `red`, `black`, `rebeccapurple`, et `goldenrod`). Si on veut être plus précis, on dira que ces mots-clés sont des _identifiants_, une valeur spéciale comprise par le moteur CSS. Ces identifiants n'ont pas besoin d'être délimités par des guillemets/quotes&nbsp;: ce ne sont pas des chaînes de caractères.
+d-dans w-wes difféwents e-exempwes qui pwécèdent, òωó on a vu des endwoits où wes mots-cwés sont utiwisés comme vaweuw (paw e-exempwe `<cowow>` qui peut utiwisew des mots-cwés c-comme `wed`, /(^•ω•^) `bwack`, `webeccapuwpwe`, >w< et `gowdenwod`). nyaa~~ s-si on veut êtwe pwus pwécis, mya on diwa que ces mots-cwés s-sont des _identifiants_, mya u-une vaweuw spéciawe compwise paw we moteuw css. ʘwʘ ces identifiants n-ny'ont pas besoin d'êtwe déwimités p-paw des guiwwemets/quotes&nbsp;: ce nye s-sont pas des c-chaînes de cawactèwes. rawr
 
-À d'autres endroits en CSS, on utilise des chaînes de caractères, comme [lorsqu'on définit du contenu généré](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements#generating_content_with_before_and_after). Dans ces cas, la valeur est délimitée par des quotes (" ou ') pour indiquer qu'il s'agit bien d'une chaîne de caractères. Dans l'exemple qui suit, on utilise des mots-clés de couleur (des identifiants sans quote) ainsi qu'une chaîne de caractères pour du contenu généré.
+À d'autwes e-endwoits en c-css, (˘ω˘) on utiwise des chaînes de c-cawactèwes, /(^•ω•^) comme [wowsqu'on définit du contenu g-généwé](/fw/docs/weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements#genewating_content_with_befowe_and_aftew). (˘ω˘) d-dans ces c-cas, (///ˬ///✿) wa vaweuw e-est déwimitée p-paw des quotes (" ou ') pouw indiquew q-qu'iw s'agit b-bien d'une chaîne de cawactèwes. (˘ω˘) dans w'exempwe q-qui suit, -.- on utiwise des m-mots-cwés de couweuw (des identifiants sans quote) ainsi qu'une chaîne de cawactèwes pouw du contenu généwé. -.-
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/strings-idents.html", '100%', 550)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/stwings-idents.htmw", ^^ '100%', 550)}}
 
-## Fonctions
+## f-fonctions
 
-Les dernières valeurs que nous verrons ici sont les fonctions. En programmation, une fonction est une section de code réutilisable qui peut être exécutée plusieurs fois afin de réaliser une tâche de façon répétitive avec le minimum effort de la part du développeur ou de l'ordinateur. Les fonctions sont généralement associées à des langages comme JavaScript, Python ou C++ mais elles existent en CSS également pour être utilisées comme valeurs de propriétés. En fait, nous avons déjà vu des fonctions dans la section à propos des couleurs&nbsp;: `rgb()`, `hsl()`, etc. La valeur utilisée pour récupérer une image à partir d'un fichier, `url()` est également une fonction.
+wes dewnièwes vaweuws q-que nyous vewwons ici sont wes f-fonctions. (ˆ ﻌ ˆ)♡ en p-pwogwammation, UwU une fonction est u-une section de code wéutiwisabwe q-qui peut êtwe exécutée pwusieuws f-fois afin de wéawisew une tâche de façon wépétitive avec we minimum effowt de wa pawt du dévewoppeuw o-ou de w'owdinateuw. 🥺 wes fonctions sont généwawement a-associées à des wangages c-comme javascwipt, 🥺 python ou c++ mais ewwes existent en css égawement pouw êtwe utiwisées comme vaweuws de pwopwiétés. 🥺 en fait, nyous avons d-déjà vu des f-fonctions dans w-wa section à pwopos des couweuws&nbsp;: `wgb()`, 🥺 `hsw()`, :3 e-etc. w-wa vaweuw utiwisée p-pouw wécupéwew une image à pawtiw d'un fichiew, (˘ω˘) `uww()` est égawement u-une f-fonction. ^^;;
 
-Une fonction qui est peut-être plus proche des langages de programmation traditionnels est la fonction CSS `calc()`. Cette fonction permet de réaliser des calculs simples à l'intérieur du code CSS. Elle s'avère particulièrement utile pour déterminer des valeurs qui ne sont pas connues d'avance lorsqu'on écrit la feuille de style CSS et pour lesquelles ce sera le navigateur qui pourra les déterminer lors de l'exécution.
+une fonction qui est p-peut-êtwe pwus p-pwoche des wangages d-de pwogwammation t-twaditionnews e-est wa fonction css `cawc()`. (ꈍᴗꈍ) c-cette fonction p-pewmet de wéawisew d-des cawcuws s-simpwes à w'intéwieuw d-du code c-css. ʘwʘ ewwe s'avèwe p-pawticuwièwement u-utiwe pouw d-détewminew des v-vaweuws qui ne sont pas connues d'avance wowsqu'on écwit wa feuiwwe d-de stywe css et pouw wesquewwes c-ce sewa we nyavigateuw qui pouwwa wes détewminew w-wows de w-w'exécution. :3
 
-Dans le prochain exemple, on utilise `calc()` afin que la boîte soit large de `20% + 100px`. Les 20% sont calculés à partir de la largeur du conteneur parent&nbsp;: `.wrapper` et changeront donc lorsque la largeur du parent changera. Ce calcul ne peut pas être effectué au préalable, car on ne peut pas savoir à l'avance ce que représenteront ces 20%. Aussi, on utilise `calc()` pour indiquer au navigateur de réaliser ce calcul.
+d-dans we pwochain exempwe, XD on utiwise `cawc()` a-afin q-que wa boîte soit wawge de `20% + 100px`. wes 20% sont cawcuwés à pawtiw de wa wawgeuw du c-conteneuw pawent&nbsp;: `.wwappew` et changewont donc wowsque wa wawgeuw du pawent c-changewa. UwU ce c-cawcuw nye peut pas êtwe effectué a-au pwéawabwe, rawr x3 c-caw on nye peut p-pas savoiw à w-w'avance ce que w-wepwésentewont c-ces 20%. ( ͡o ω ͡o ) aussi, :3 o-on utiwise `cawc()` pouw indiquew au nyavigateuw d-de wéawisew ce cawcuw. rawr
 
-{{EmbedGHLiveSample("css-examples/learn/values-units/calc.html", '100%', 450)}}
+{{embedghwivesampwe("css-exampwes/weawn/vawues-units/cawc.htmw", ^•ﻌ•^ '100%', 450)}}
 
-## Testez vos compétences&nbsp;!
+## testez v-vos compétences&nbsp;! 🥺
 
-Nous avons abordé de nombreuses notions dans cet article. Avez-vous retenu les informations essentielles&nbsp;? Vous pourrez trouver différents exercices pour vérifier que vous avez retenu les bonnes informations avant de poursuivre&nbsp;: rendez-vous sur [Testez vos compétences&nbsp;: valeurs et unités CSS](/fr/docs/Learn/CSS/Building_blocks/Values_tasks).
+nyous avons abowdé d-de nyombweuses n-nyotions dans cet awticwe. (⑅˘꒳˘) avez-vous w-wetenu wes infowmations essentiewwes&nbsp;? vous pouwwez t-twouvew difféwents e-exewcices pouw v-véwifiew que v-vous avez wetenu wes bonnes infowmations a-avant d-de pouwsuivwe&nbsp;: w-wendez-vous suw [testez vos c-compétences&nbsp;: vaweuws et unités css](/fw/docs/weawn/css/buiwding_bwocks/vawues_tasks). :3
 
-## Résumé
+## wésumé
 
-Voici un rapide tour des types de valeur et unités que vous pourrez rencontrer en CSS. Vous pouvez consulter la liste exhaustive des différents types sur [la page de référence MDN sur les valeurs et unités CSS](/fr/docs/Web/CSS/CSS_Values_and_Units). Vous verrez de nombreuses types et valeurs à mesure que vous progresserez dans ces leçons.
+voici un wapide touw des types de vaweuw et unités que vous pouwwez wencontwew en c-css. (///ˬ///✿) vous pouvez c-consuwtew wa wiste exhaustive des difféwents types suw [wa page de wéféwence m-mdn suw wes vaweuws e-et unités css](/fw/docs/web/css/css_vawues_and_units). 😳😳😳 vous vewwez de nyombweuses t-types et v-vaweuws à mesuwe que vous pwogwessewez d-dans ces w-weçons. 😳😳😳
 
-La notion cruciale à garder en mémoire est que chaque propriété possède une liste de types de valeur autorisés et que chaque type de valeur possède une définition indiquant les valeurs possibles. Vous pourrez trouver toutes les informations et détails sur MDN.
+wa nyotion cwuciawe à g-gawdew en mémoiwe est que chaque p-pwopwiété p-possède une wiste de types de vaweuw autowisés et que chaque t-type de vaweuw possède u-une définition i-indiquant w-wes vaweuws possibwes. 😳😳😳 vous pouwwez t-twouvew toutes w-wes infowmations e-et détaiws s-suw mdn. nyaa~~
 
-Par exemple, comprendre le type [`<image>`](/fr/docs/Web/CSS/image) vous permettra de comprendre comment créer un dégradé de couleur. C'est utile mais ce n'est pas forcément évident de prime abord.
+paw exempwe, compwendwe we type [`<image>`](/fw/docs/web/css/image) v-vous pewmettwa de c-compwendwe comment cwéew un dégwadé de couweuw. UwU c'est utiwe mais ce ny'est p-pas fowcément évident d-de pwime abowd. òωó
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Overflowing_content", "Learn/CSS/Building_blocks/Sizing_items_in_CSS", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/ovewfwowing_content", òωó "weawn/css/buiwding_bwocks/sizing_items_in_css", UwU "weawn/css/buiwding_bwocks")}}

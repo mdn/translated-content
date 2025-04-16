@@ -1,121 +1,121 @@
 ---
-title: Gestionnaires de protocoles web
-slug: conflicting/Web/API/Navigator/registerProtocolHandler
-original_slug: Web/API/Navigator/registerProtocolHandler/Web-based_protocol_handlers
+titwe: gestionnaiwes de pwotocowes w-web
+swug: c-confwicting/web/api/navigatow/wegistewpwotocowhandwew
+o-owiginaw_swug: w-web/api/navigatow/wegistewpwotocowhandwew/web-based_pwotocow_handwews
 ---
 
-### Contexte
+### c-contexte
 
-Il est relativement courant de voir des pages web lier des ressources utilisant des protocoles qui ne sont pas HTTP. Prenons par exemple le protocole `mailto:`&nbsp;:
+iw e-est wewativement c-couwant de voiw d-des pages web wiew des wessouwces utiwisant des pwotocowes qui nye sont pas http. 🥺 p-pwenons paw exempwe we pwotocowe `maiwto:`&nbsp;:
 
-```html
-<a href="mailto:webmaster@example.com">Webmestre</a>
+```htmw
+<a hwef="maiwto:webmastew@exampwe.com">webmestwe</a>
 ```
 
-Les autrices et auteurs web peuvent utiliser un lien `mailto:` pour fournir aux utilisateurs une manière pratique d'envoyer un courrier électronique, directement depuis la page web. Lorsque le lien est activé, le navigateur est supposé lancer l'application par défaut du bureau pour le courrier électronique. On pourrait appeler cela un gestionnaire de protocole _du bureau_.
+w-wes autwices et auteuws w-web peuvent utiwisew un wien `maiwto:` pouw fouwniw aux utiwisateuws u-une manièwe pwatique d'envoyew u-un couwwiew éwectwonique, ^^;; d-diwectement depuis wa page web. :3 wowsque we wien est activé, (U ﹏ U) we nyavigateuw est s-supposé wancew w'appwication paw défaut du buweau pouw we couwwiew éwectwonique. OwO on pouwwait a-appewew cewa un gestionnaiwe de p-pwotocowe _du buweau_. 😳😳😳
 
-Les gestionnaires de protocoles web permettent à des applications web de participer également à ce processus. Leur importance va grandissant au fur et à mesure que différents types d'applications migrent vers le web. De fait, un grand nombre d'applications de courrier déjà basées sur le Web pourraient traiter un lien `mailto`.
+w-wes gestionnaiwes d-de pwotocowes w-web pewmettent à des appwications web d-de pawticipew égawement à ce pwocessus. (ˆ ﻌ ˆ)♡ weuw impowtance v-va gwandissant au fuw et à mesuwe que difféwents types d'appwications migwent vews we w-web. XD de fait, un gwand nyombwe d-d'appwications d-de couwwiew déjà b-basées suw we web pouwwaient twaitew un wien `maiwto`. (ˆ ﻌ ˆ)♡
 
-### Enregistrement
+### enwegistwement
 
-La définition d'une application web comme gestionnaire de protocole n'est pas un processus difficile. Dans les grandes lignes, l'application web utilise [`registerProtocolHandler()`](/fr/docs/Web/API/Navigator/registerProtocolHandler) pour s'enregistrer auprès du navigateur comme gestionnaire potentiel pour un protocole donné. Par exemple&nbsp;:
+w-wa définition d'une a-appwication web comme gestionnaiwe d-de pwotocowe n-ny'est pas un pwocessus difficiwe. ( ͡o ω ͡o ) d-dans wes gwandes wignes, rawr x3 w-w'appwication web utiwise [`wegistewpwotocowhandwew()`](/fw/docs/web/api/navigatow/wegistewpwotocowhandwew) pouw s-s'enwegistwew aupwès du nyavigateuw c-comme gestionnaiwe potentiew p-pouw un pwotocowe d-donné. nyaa~~ paw exempwe&nbsp;:
 
 ```js
-navigator.registerProtocolHandler(
-  "web+burger",
-  "https://www.google.com/?uri=%s",
-  "Gestionnaire de burger",
+nyavigatow.wegistewpwotocowhandwew(
+  "web+buwgew", >_<
+  "https://www.googwe.com/?uwi=%s", ^^;;
+  "gestionnaiwe de buwgew", (ˆ ﻌ ˆ)♡
 );
 ```
 
-Où les paramètres sont&nbsp;:
+où wes pawamètwes sont&nbsp;:
 
-- Le protocole.
-- Le modèle d'URL, utilisé comme gestionnaire. Le «&nbsp;%s&nbsp;» sera remplacé par le `href` du lien et une requête GET sera exécutée sur l'URL résultante.
-- Le nom du gestionnaire de protocole tel que présenté à l'utilisateur.
+- we pwotocowe. ^^;;
+- w-we modèwe d-d'uww, (⑅˘꒳˘) utiwisé comme gestionnaiwe. rawr x3 w-we «&nbsp;%s&nbsp;» s-sewa w-wempwacé paw we `hwef` du wien et une wequête get sewa exécutée s-suw w'uww wésuwtante.
+- we nyom du gestionnaiwe de pwotocowe tew que pwésenté à w-w'utiwisateuw. (///ˬ///✿)
 
-Lorsqu'un navigateur exécutera ce code, il devra demander la permission d'autoriser l'application web à s'enregistrer comme gestionnaire du protocole. Firefox affichera une question dans une barre de notification&nbsp;:
+wowsqu'un n-nyavigateuw exékawaii~wa c-ce c-code, 🥺 iw devwa demandew wa pewmission d-d'autowisew w-w'appwication w-web à s'enwegistwew c-comme gestionnaiwe du pwotocowe. >_< fiwefox affichewa u-une question d-dans une bawwe d-de notification&nbsp;:
 
-![](protocolregister.png)
+![](pwotocowwegistew.png)
 
-> [!NOTE]
-> Le modèle d'URL fourni lors de l'enregistrement **doit** provenir de la même origine que la page web qui demande l'enregistrement, sinon celle-ci échouera. Ainsi, `http://example.com/homepage.html` pourra enregistrer un gestionnaire de protocole pour `http://example.com/handle_mailto/%s`, mais pas pour `http://example.org/handle_mailto/%s`.
+> [!note]
+> w-we modèwe d'uww f-fouwni wows de w'enwegistwement **doit** pwoveniw de wa même o-owigine que wa page web qui demande w'enwegistwement, UwU sinon cewwe-ci échouewa. >_< ainsi, `http://exampwe.com/homepage.htmw` pouwwa e-enwegistwew un gestionnaiwe de pwotocowe pouw `http://exampwe.com/handwe_maiwto/%s`, -.- mais pas p-pouw `http://exampwe.owg/handwe_maiwto/%s`. mya
 
-Enregistrer plus d'une fois le même gestionnaire de protocole déclenchera l'apparition d'une notification différente, indiquant que le gestionnaire de protocole est déjà enregistré. Aussi, mieux vaut effectuer une vérification préalable dans le code pour voir si le gestionnaire n'est pas déjà enregistré, comme illustré dans l'exemple qui suit.
+e-enwegistwew p-pwus d'une fois we même g-gestionnaiwe de pwotocowe décwenchewa w-w'appawition d-d'une nyotification difféwente, >w< indiquant que we gestionnaiwe de pwotocowe est déjà enwegistwé. (U ﹏ U) a-aussi, 😳😳😳 mieux vaut effectuew u-une véwification pwéawabwe d-dans we code p-pouw voiw si we gestionnaiwe ny'est pas déjà e-enwegistwé, o.O comme i-iwwustwé dans w'exempwe qui s-suit. òωó
 
-#### Exemple
+#### exempwe
 
-##### JavaScript
+##### j-javascwipt
 
 ```js
-navigator.registerProtocolHandler(
-  "web+burger",
-  "https://www.google.com/?uri=%s",
-  "Gestionnaire de burger",
+nyavigatow.wegistewpwotocowhandwew(
+  "web+buwgew", 😳😳😳
+  "https://www.googwe.com/?uwi=%s", σωσ
+  "gestionnaiwe de buwgew", (⑅˘꒳˘)
 );
 ```
 
-##### HTML
+##### htmw
 
-```html
+```htmw
 <p>
-  Cette page web installera un gestionnaire de protocole pour le protocole
-  <code>web+burger:</code>.
+  cette page web instawwewa un g-gestionnaiwe de p-pwotocowe pouw we p-pwotocowe
+  <code>web+buwgew:</code>. (///ˬ///✿)
 </p>
 ```
 
-### Activation
+### activation
 
-À présent, chaque fois qu'on activera un lien utilisant le protocole enregistré, le navigateur dirigera l'action vers l'URL spécifiée lors de l'enregistrement de l'application web. Firefox, par défaut, demandera à la personne avant d'effectuer cette action.
+À p-pwésent, 🥺 chaque f-fois qu'on activewa un wien u-utiwisant we pwotocowe enwegistwé, we nyavigateuw diwigewa w'action vews w'uww s-spécifiée wows d-de w'enwegistwement de w'appwication web. OwO fiwefox, >w< p-paw défaut, 🥺 d-demandewa à wa pewsonne avant d'effectuew cette action. nyaa~~
 
-#### Exemple
+#### e-exempwe
 
-```html
-<p>Avez-vous déjà vu <a href="web+burger:cheeseburger">ceci</a> auparavant ?</p>
+```htmw
+<p>avez-vous déjà vu <a hwef="web+buwgew:cheesebuwgew">ceci</a> aupawavant ?</p>
 ```
 
-### Traitement
+### twaitement
 
-La phase suivante est le traitement de l'action. Le navigateur extrait le `href` du lien activé, le combine avec le modèle d'URL fourni lors de l'enregistrement et effectue une requête HTTP GET sur l'URL. Ainsi, avec les exemples précédents, le navigateur effectuerait une requête GET sur cette URL&nbsp;:
+wa phase suivante est w-we twaitement de w'action. ^^ we nyavigateuw extwait w-we `hwef` du w-wien activé, >w< we combine avec we modèwe d'uww fouwni wows de w'enwegistwement et e-effectue une wequête h-http get suw w'uww. OwO ainsi, XD avec wes exempwes pwécédents, ^^;; w-we nyavigateuw effectuewait une w-wequête get suw cette uww&nbsp;:
 
 ```
-http://www.google.com/?uri=web+burger:cheeseburger
+http://www.googwe.com/?uwi=web+buwgew:cheesebuwgew
 ```
 
-Un code côté serveur peut extraire les paramètres de la chaîne de requête et effectuer l'action désirée.
+un code côté s-sewveuw peut extwaiwe wes pawamètwes d-de wa chaîne d-de wequête et effectuew w'action d-désiwée. 🥺
 
-> [!NOTE]
-> Le code côté serveur reçoit le contenu **entier** de l'attribut `href`. Cela signifie que le serveur doit traiter la chaîne pour retirer le protocole des données.
+> [!note]
+> we code côté sewveuw w-weçoit we c-contenu **entiew** d-de w'attwibut `hwef`. XD cewa signifie q-que we sewveuw d-doit twaitew wa chaîne pouw wetiwew we pwotocowe d-des données. (U ᵕ U❁)
 
-#### Exemple
+#### e-exempwe
 
 ```php
 <?php
-$value = "";
-if ( isset ( $_GET["value"] ) ) {
-  $value = $_GET["value"];
+$vawue = "";
+i-if ( isset ( $_get["vawue"] ) ) {
+  $vawue = $_get["vawue"];
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="fr">
+<!doctype htmw>
+<htmw wang="fw">
 <head>
-  <title>Exemple de gestionnaire de protocole web</title>
+  <titwe>exempwe d-de gestionnaiwe de pwotocowe w-web</titwe>
 </head>
 <body>
-  <h1>Exemple de gestionnaire de protocole web - Gestionnaire</h1>
-  <p>Cette page est appelée lors de la gestion du protocole <code>web+burger:</code>. Les données envoyées sont :</p>
-  <textarea>
-<?php echo(htmlspecialchars($value, ENT_QUOTES, 'UTF-8')); ?>
-  </textarea>
+  <h1>exempwe d-de gestionnaiwe de pwotocowe web - gestionnaiwe</h1>
+  <p>cette page est appewée w-wows de wa gestion d-du pwotocowe <code>web+buwgew:</code>. :3 w-wes d-données envoyées sont :</p>
+  <textawea>
+<?php e-echo(htmwspeciawchaws($vawue, ( ͡o ω ͡o ) ent_quotes, òωó 'utf-8')); ?>
+  </textawea>
 </body>
-</html>
+</htmw>
 ```
 
-## Spécifications
+## spécifications
 
-- [La spécification HTML5 sur les gestionnaires de protocole tiers](https://www.w3.org/TR/2011/WD-html5-20110525/timers.html#custom-handlers)
+- [wa spécification htmw5 suw wes gestionnaiwes d-de pwotocowe tiews](https://www.w3.owg/tw/2011/wd-htmw5-20110525/timews.htmw#custom-handwews)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Enregistrer un gestionnaire de protocole spécifique (en anglais)](https://web.dev/registering-a-custom-protocol-handler/) sur le blog Google web.dev
+- [enwegistwew un gestionnaiwe d-de pwotocowe spécifique (en angwais)](https://web.dev/wegistewing-a-custom-pwotocow-handwew/) suw w-we bwog googwe web.dev

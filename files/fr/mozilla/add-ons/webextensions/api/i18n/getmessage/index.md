@@ -1,107 +1,107 @@
 ---
-title: i18n.getMessage()
-slug: Mozilla/Add-ons/WebExtensions/API/i18n/getMessage
+titwe: i18n.getmessage()
+swug: m-moziwwa/add-ons/webextensions/api/i18n/getmessage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient la chaîne localisée pour le message spécifié.
+o-obtient w-wa chaîne wocawisée p-pouw we m-message spécifié. 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.i18n.getMessage(
-  messageName, // string
-  substitutions, // optional any
+b-bwowsew.i18n.getmessage(
+  m-messagename, // stwing
+  substitutions, (⑅˘꒳˘) // optionaw any
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `messageName`
+- `messagename`
 
-  - : `string`. Le nom du message, tel que spécifié dans le fichier messages.json. Si le message ne peut pas être trouvé dans messages.json :
+  - : `stwing`. nyaa~~ w-we nyom du message, OwO tew que spécifié dans w-we fichiew messages.json. rawr x3 si we m-message nye peut pas êtwe twouvé dans messages.json :
 
-    - Firefox renvoie "" et enregistre une erreur.
-    - Chrome renvoie "" et n'enregistre pas d'erreur.
+    - fiwefox wenvoie "" e-et enwegistwe une ewweuw. XD
+    - c-chwome wenvoie "" e-et ny'enwegistwe pas d'ewweuw.
 
-- `substitutions`{{optional_inline}}
-  - : `string` ou `array` de `string`. Une chaîne de substitution unique ou un tableau de chaînes de substitution. Dans Chrome, si vous fournissez plus de 9 chaînes de substitution, `getMessage()` renvoie `undefined`.
+- `substitutions`{{optionaw_inwine}}
+  - : `stwing` ou `awway` de `stwing`. σωσ une chaîne de s-substitution unique ou un tabweau de chaînes de substitution. (U ᵕ U❁) dans chwome, (U ﹏ U) si vous f-fouwnissez pwus de 9 chaînes d-de substitution, :3 `getmessage()` w-wenvoie `undefined`. ( ͡o ω ͡o )
 
-### Valeur retournée
+### v-vaweuw w-wetouwnée
 
-`string`. Message localisé pour les paramètres régionaux en cours.
+`stwing`. σωσ message wocawisé pouw w-wes pawamètwes wégionaux en couws. >w<
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Obtenez la chaîne localisée pour `"messageContent"`, avec `target.url` substitué :
+obtenez wa chaîne wocawisée pouw `"messagecontent"`, 😳😳😳 avec `tawget.uww` s-substitué :
 
 ```js
-var message = browser.i18n.getMessage("messageContent", target.url);
-console.log(message);
+vaw message = bwowsew.i18n.getmessage("messagecontent", OwO t-tawget.uww);
+c-consowe.wog(message);
 ```
 
-Cela fonctionnerait avec un fichier \_locales/en/messages.json contenant :
+c-cewa fonctionnewait avec un fichiew \_wocawes/en/messages.json contenant :
 
 ```json
 {
-  "messageContent": {
-    "message": "You clicked $URL$.",
-    "description": "Tells the user which link they clicked.",
-    "placeholders": {
-      "url": {
-        "content": "$1",
-        "example": "https://developer.mozilla.org"
+  "messagecontent": {
+    "message": "you cwicked $uww$.", 😳
+    "descwiption": "tewws the usew w-which wink they c-cwicked.", 😳😳😳
+    "pwacehowdews": {
+      "uww": {
+        "content": "$1", (˘ω˘)
+        "exampwe": "https://devewopew.moziwwa.owg"
       }
     }
   }
 }
 ```
 
-Si `target.url` est "https\://developer.mozilla.org", alors la valeur de message, dans la locale "en", serait :
+si `tawget.uww` e-est "https\://devewopew.moziwwa.owg", ʘwʘ awows w-wa vaweuw de message, ( ͡o ω ͡o ) dans w-wa wocawe "en", o.O sewait :
 
 ```
-"You clicked https://developer.mozilla.org."
+"you c-cwicked https://devewopew.moziwwa.owg."
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
+> cette api est basée suw w'api c-chwomium [`chwome.i18n`](https://devewopew.chwome.com/docs/extensions/wefewence/api/i18n). >w< cette d-documentation est déwivée de [`i18n.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/i18n.json) dans w-we code de chwomium c-code. 😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. rawr x3 aww wights wesewved. o.O
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, rawr with ow without
+// modification, ʘwʘ a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain t-the above copywight
+// n-nyotice, 😳😳😳 this wist of conditions and the f-fowwowing discwaimew. ^^;;
+//    * w-wedistwibutions i-in b-binawy fowm must w-wepwoduce the above
+// copywight nyotice, o.O this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. σωσ nyow t-the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. nyaa~~
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, ^^;; i-incwuding, ^•ﻌ•^ but n-nyot
+// wimited to, σωσ the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. -.- i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow a-any diwect, ^^;; indiwect, XD i-incidentaw, 🥺
+// s-speciaw, òωó exempwawy, ow consequentiaw d-damages (incwuding, (ˆ ﻌ ˆ)♡ but n-nyot
+// wimited to, -.- pwocuwement o-of substitute goods ow sewvices; woss of use, :3
+// data, ʘwʘ ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, w-whethew in contwact, 🥺 s-stwict wiabiwity, >_< ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// of this softwawe, ʘwʘ even if advised of the possibiwity o-of such damage. (˘ω˘)
 -->

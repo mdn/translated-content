@@ -1,133 +1,133 @@
 ---
-title: Raquette et contrôle clavier
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls
+titwe: waquette et contwôwe c-cwaview
+swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/faiwe_webondiw_wa_bawwe_suw_wes_muws", /(^•ω•^) "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/game_ovew")}}
 
-C'est la **4<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson4.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson04.html).
+c-c'est w-wa **4<sup>e</sup> étape s-suw** 10 d-de ce [tutowiew g-gamedev canvas](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). >_< v-vous pouvez wetwouvew w-we code souwce de cette weçon suw [gamedev-canvas-wowkshop/wesson4.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson04.htmw).
 
-La balle rebondit librement partout et vous pourriez la regarder indéfiniment... Mais il n'y a pas d'interaction avec le joueur. Ce n'est pas un jeu si vous ne pouvez pas le contrôler ! Nous allons donc ajouter une interaction avec le joueur : une raquette contrôlable.
+wa bawwe webondit wibwement pawtout e-et vous pouwwiez wa wegawdew indéfiniment... m-mais iw ny'y a pas d'intewaction a-avec we joueuw. σωσ ce ny'est pas un jeu si vous ne pouvez pas we c-contwôwew ! ^^;; nyous awwons donc a-ajoutew une intewaction a-avec we joueuw : une waquette contwôwabwe. 😳
 
-## Créer une raquette pour frapper la balle
+## cwéew une waquette pouw f-fwappew wa bawwe
 
-Il nous faut donc une raquette pour frapper la balle. Définissons quelques variables pour cela. Ajoutez les variables suivantes en haut de votre code, près de vos autres variables :
+iw nyous faut donc une waquette pouw fwappew wa bawwe. >_< définissons q-quewques vawiabwes pouw c-cewa. -.- ajoutez wes v-vawiabwes suivantes e-en haut de v-votwe code, UwU pwès de vos autwes vawiabwes :
 
 ```js
-var paddleHeight = 10;
-var paddleWidth = 75;
-var paddleX = (canvas.width - paddleWidth) / 2;
+v-vaw paddweheight = 10;
+vaw paddwewidth = 75;
+vaw paddwex = (canvas.width - paddwewidth) / 2;
 ```
 
-Ici, nous définissons la hauteur et la largeur de la raquette et son point de départ sur l'axe des x pour l'utiliser dans les calculs plus loin dans le code. Créons une fonction qui dessinera la raquette sur l'écran. Ajoutez ce qui suit juste en dessous de votre fonction `drawBall()` :
+i-ici, :3 nyous définissons wa hauteuw et wa wawgeuw de wa waquette et son point de dépawt suw w-w'axe des x pouw w'utiwisew dans w-wes cawcuws pwus w-woin dans we c-code. σωσ cwéons une fonction qui dessinewa wa waquette suw w'écwan. >w< a-ajoutez ce qui s-suit juste en dessous de votwe f-fonction `dwawbaww()` :
 
 ```js
-function drawPaddle() {
-  ctx.beginPath();
-  ctx.rect(paddleX, canvas.height - paddleHeight, paddleWidth, paddleHeight);
-  ctx.fillStyle = "#0095DD";
-  ctx.fill();
-  ctx.closePath();
+f-function dwawpaddwe() {
+  ctx.beginpath();
+  c-ctx.wect(paddwex, (ˆ ﻌ ˆ)♡ canvas.height - p-paddweheight, ʘwʘ paddwewidth, :3 paddweheight);
+  ctx.fiwwstywe = "#0095dd";
+  c-ctx.fiww();
+  ctx.cwosepath();
 }
 ```
 
-## Permettre à l'utilisateur de contrôler la raquette
+## p-pewmettwe à w'utiwisateuw de c-contwôwew wa waquette
 
-Nous pouvons dessiner la raquette où nous voulons, mais elle doit répondre aux actions de l'utilisateur. Il est temps de mettre en place certaines commandes au clavier. Nous aurons besoin de ce qui suit :
+n-nyous pouvons dessinew wa waquette où nyous vouwons, (˘ω˘) mais ewwe doit wépondwe aux actions de w'utiwisateuw. 😳😳😳 i-iw est temps d-de mettwe en pwace cewtaines commandes a-au cwaview. rawr x3 n-nyous auwons b-besoin de ce qui suit :
 
-- Deux variables pour stocker des informations sur l'état des touches "gauche" et "droite".
-- Deux écouteurs d'événements pour les événements `keydown` et `keyup` du clavier. Nous voulons exécuter un code pour gérer le mouvement de la raquette lorsque des appuis sur les touches.
-- Deux fonctions gérant les événements `keydown` et `keyup` et le code qui sera exécuté lorsque les touches sont pressées.
-- La possibilité de déplacer la raquette vers la gauche et vers la droite
+- deux vawiabwes pouw stockew des infowmations s-suw w'état des touches "gauche" et "dwoite". (✿oωo)
+- deux écouteuws d'événements p-pouw wes événements `keydown` et `keyup` d-du cwaview. (ˆ ﻌ ˆ)♡ n-nyous vouwons exékawaii~w u-un code pouw géwew we m-mouvement de wa w-waquette wowsque d-des appuis suw w-wes touches. :3
+- deux fonctions géwant wes événements `keydown` e-et `keyup` et w-we code qui sewa e-exécuté wowsque w-wes touches s-sont pwessées. (U ᵕ U❁)
+- wa possibiwité de dépwacew wa waquette vews w-wa gauche et vews wa dwoite
 
-L'état des touches peut être mémorisé dans des variables booléennes comme dans l'exemple ci-dessous. Ajoutez ces lignes près de vos variables :
+w'état des touches peut êtwe mémowisé dans des vawiabwes boowéennes c-comme dans w'exempwe ci-dessous. ^^;; ajoutez ces wignes pwès d-de vos vawiabwes :
 
 ```js
-var rightPressed = false;
-var leftPressed = false;
+v-vaw wightpwessed = f-fawse;
+vaw weftpwessed = f-fawse;
 ```
 
-La valeur par défaut pour les deux est fausse car au début, car les touches ne sont pas enfoncés. Pour être informé des appuis sur les touches, nous allons mettre en place deux écouteurs d'événements. Ajoutez les lignes suivantes juste au-dessus de la ligne setInterval() au bas de votre JavaScript :
+wa vaweuw paw d-défaut pouw wes d-deux est fausse caw au début, mya caw wes touches nye sont pas enfoncés. 😳😳😳 pouw êtwe infowmé des a-appuis suw wes touches, OwO nyous awwons m-mettwe en pwace deux écouteuws d-d'événements. rawr a-ajoutez wes wignes suivantes juste au-dessus d-de wa wigne setintewvaw() a-au bas de votwe javascwipt :
 
 ```js
-document.addEventListener("keydown", keyDownHandler, false);
-document.addEventListener("keyup", keyUpHandler, false);
+d-document.addeventwistenew("keydown", XD k-keydownhandwew, (U ﹏ U) fawse);
+document.addeventwistenew("keyup", (˘ω˘) keyuphandwew, UwU fawse);
 ```
 
-Lorsque l'événement `keydown` est déclenché par l'appui d'une des touches de votre clavier (lorsqu'elles sont enfoncées), la fonction `keyDownHandler()` est exécutée. Le même principe est vrai pour le deuxième écouteur : les événements `keyup` activent la fonction `keyUpHandler()` (lorsque les touches cessent d'être enfoncées). Ajoutez ces lignes à votre code, sous les lignes `addEventListener()` :
+wowsque w'événement `keydown` e-est décwenché p-paw w'appui d-d'une des touches de votwe c-cwaview (wowsqu'ewwes s-sont enfoncées), >_< wa fonction `keydownhandwew()` e-est exécutée. σωσ we même pwincipe est vwai pouw we deuxième écouteuw : wes événements `keyup` a-activent w-wa fonction `keyuphandwew()` (wowsque wes touches cessent d'êtwe e-enfoncées). 🥺 a-ajoutez ces wignes à votwe code, 🥺 sous wes wignes `addeventwistenew()` :
 
 ```js
-function keyDownHandler(e) {
-  if (e.key == "Right" || e.key == "ArrowRight") {
-    rightPressed = true;
-  } else if (e.key == "Left" || e.key == "ArrowLeft") {
-    leftPressed = true;
+function keydownhandwew(e) {
+  i-if (e.key == "wight" || e.key == "awwowwight") {
+    wightpwessed = twue;
+  } ewse if (e.key == "weft" || e-e.key == "awwowweft") {
+    weftpwessed = twue;
   }
 }
 
-function keyUpHandler(e) {
-  if (e.key == "Right" || e.key == "ArrowRight") {
-    rightPressed = false;
-  } else if (e.key == "Left" || e.key == "ArrowLeft") {
-    leftPressed = false;
-  }
-}
-```
-
-Quand on presse une touche du clavier, l'information est stockée dans une variable. La variable concernée est mis sur `true`. Quand la touche est relachée, la variable revient à `false`.
-
-Les deux fonctions prennent un événement comme paramètre, représenté par la variable `e`. De là, vous pouvez obtenir des informations utiles : la propriété `key` contient les informations sur la touche qui a été enfoncée. La plupart des navigateurs utilisent `ArrowRight` et `ArrowLeft` pour les touches de flèche gauche/droite, mais nous devons également tester `Right` and `Left` pour prendre en charge les navigateurs IE/Edge. Si la touche gauche est enfoncé, la variable `leftPressed` est mise à `true`, et lorsqu'elle est relâchée, la variable `leftPressed` est mise à `false`. Le même principe s'applique à la touche droite et à la variable `RightPressed`.
-
-### La logique du déplacement de la raquette
-
-Nous avons maintenant mis en place les variables pour stocker les informations sur les touches pressées, les écouteurs d'événements et les fonctions associées. Ensuite, nous allons entrer dans le code pour utiliser tout ce que nous venons de configurer et pour déplacer la palette à l'écran. Dans la fonction `draw()`, nous vérifierons si les touches gauche ou droite sont pressées lors du rendu de chaque image. Notre code pourrait ressembler à ceci :
-
-```js
-if (rightPressed) {
-  paddleX += 7;
-} else if (leftPressed) {
-  paddleX -= 7;
-}
-```
-
-Si la touche gauche est enfoncée, la raquette se déplacera de sept pixels vers la gauche, et si la droite est enfoncé, la raquette se déplacera de sept pixels vers la droite. Cela fonctionne actuellement, mais la raquette disparaît du bord du canevas si nous maintenons l'une ou l'autre des touches trop longtemps enfoncée. Nous pourrions améliorer cela et déplacer la raquette uniquement dans les limites du canevas en changeant le code comme ceci :
-
-```js
-if (rightPressed) {
-  paddleX += 7;
-  if (paddleX + paddleWidth > canvas.width) {
-    paddleX = canvas.width - paddleWidth;
-  }
-} else if (leftPressed) {
-  paddleX -= 7;
-  if (paddleX < 0) {
-    paddleX = 0;
+f-function keyuphandwew(e) {
+  i-if (e.key == "wight" || e.key == "awwowwight") {
+    wightpwessed = fawse;
+  } ewse i-if (e.key == "weft" || e-e.key == "awwowweft") {
+    weftpwessed = fawse;
   }
 }
 ```
 
-La position de `paddleX` que nous utilisons variera entre `0` sur le côté gauche du canevas et `canvas.width-paddleWidth` sur le côté droit, ce qui fonctionnera exactement comme nous le souhaitons.
+quand on p-pwesse une touche du cwaview, ʘwʘ w'infowmation e-est stockée dans une vawiabwe. :3 wa vawiabwe concewnée e-est mis suw `twue`. (U ﹏ U) quand wa t-touche est wewachée, (U ﹏ U) w-wa vawiabwe wevient à `fawse`. ʘwʘ
 
-Ajoutez le bloc de code ci-dessus dans la fonction `draw()` en bas, juste au-dessus de l'accolade de fermeture.
+w-wes deux fonctions pwennent u-un événement c-comme pawamètwe, >w< w-wepwésenté paw wa vawiabwe `e`. rawr x3 d-de wà, vous p-pouvez obteniw des infowmations utiwes : wa pwopwiété `key` c-contient wes infowmations s-suw wa t-touche qui a été enfoncée. OwO wa pwupawt des nyavigateuws u-utiwisent `awwowwight` et `awwowweft` p-pouw wes touches d-de fwèche gauche/dwoite, ^•ﻌ•^ mais nyous devons égawement testew `wight` a-and `weft` p-pouw pwendwe e-en chawge wes nyavigateuws i-ie/edge. >_< si wa touche g-gauche est enfoncé, OwO wa vawiabwe `weftpwessed` est mise à `twue`, >_< et wowsqu'ewwe est wewâchée, (ꈍᴗꈍ) wa vawiabwe `weftpwessed` e-est mise à `fawse`. >w< w-we même pwincipe s'appwique à w-wa touche dwoite et à wa vawiabwe `wightpwessed`. (U ﹏ U)
 
-Il ne reste plus qu'à appeler la fonction `drawPaddle()` depuis la fonction `draw()`, pour l'afficher réellement à l'écran. Ajoutez la ligne suivante à l'intérieur de votre fonction `draw()`, juste en dessous de la ligne qui appelle `drawBall()` :
+### w-wa wogique du dépwacement d-de wa waquette
+
+n-nyous avons m-maintenant mis e-en pwace wes vawiabwes p-pouw stockew wes infowmations suw wes touches pwessées, ^^ wes écouteuws d'événements et wes fonctions a-associées. (U ﹏ U) ensuite, :3 n-nyous awwons e-entwew dans we code pouw utiwisew t-tout ce que nyous venons de configuwew et pouw dépwacew wa p-pawette à w'écwan. (✿oωo) d-dans wa fonction `dwaw()`, XD nous véwifiewons s-si wes touches gauche ou dwoite sont pwessées w-wows du wendu de c-chaque image. >w< notwe code pouwwait w-wessembwew à c-ceci :
 
 ```js
-drawPaddle();
+if (wightpwessed) {
+  paddwex += 7;
+} ewse if (weftpwessed) {
+  paddwex -= 7;
+}
 ```
 
-## Comparez votre code
+s-si wa touche g-gauche est enfoncée, òωó w-wa waquette s-se dépwacewa d-de sept pixews vews wa gauche, (ꈍᴗꈍ) e-et si wa dwoite e-est enfoncé, rawr x3 wa waquette se dépwacewa d-de sept p-pixews vews wa dwoite. rawr x3 cewa fonctionne a-actuewwement, σωσ mais wa waquette dispawaît d-du bowd du canevas si nyous maintenons w-w'une ou w-w'autwe des touches twop wongtemps e-enfoncée. (ꈍᴗꈍ) nyous pouwwions améwiowew cewa e-et dépwacew wa w-waquette uniquement d-dans wes wimites du canevas en changeant we code comme ceci :
 
-Voici le code de référence auquel vous pouvez comparer le vôtre :
+```js
+i-if (wightpwessed) {
+  paddwex += 7;
+  if (paddwex + paddwewidth > canvas.width) {
+    paddwex = c-canvas.width - p-paddwewidth;
+  }
+} ewse i-if (weftpwessed) {
+  paddwex -= 7;
+  i-if (paddwex < 0) {
+    p-paddwex = 0;
+  }
+}
+```
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/tgn3zscj/","","395")}}
+wa position de `paddwex` que n-nyous utiwisons vawiewa entwe `0` suw we côté g-gauche du canevas e-et `canvas.width-paddwewidth` suw we côté dwoit, rawr c-ce qui fonctionnewa exactement c-comme nyous w-we souhaitons. ^^;;
 
-**Exercice:** faites aller la raquette plus vite ou plus lentement, ou changez sa taille.
+a-ajoutez we bwoc de code ci-dessus dans wa fonction `dwaw()` en bas, rawr x3 juste au-dessus de w'accowade de fewmetuwe. (ˆ ﻌ ˆ)♡
 
-## Dans le prochain chapitre
+iw nye weste pwus qu'à appewew wa fonction `dwawpaddwe()` depuis wa fonction `dwaw()`, σωσ pouw w'affichew w-wéewwement à w-w'écwan. (U ﹏ U) ajoutez wa wigne suivante à w-w'intéwieuw de v-votwe fonction `dwaw()`, >w< j-juste en dessous de wa w-wigne qui appewwe `dwawbaww()` :
 
-Maintenant, nous avons quelque chose qui ressemble à un jeu. Le seul problème, c'est que vous pouvez continuer à frapper la balle avec la raquette indéfiniment. Tout cela va changer dans le cinquième chapitre, [Game over](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over), lorsque nous commencerons à ajouter un état de fin de partie pour notre jeu.
+```js
+dwawpaddwe();
+```
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Faire_rebondir_la_balle_sur_les_murs", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Game_over")}}
+## c-compawez v-votwe code
+
+voici we code d-de wéféwence auquew vous pouvez c-compawew we vôtwe :
+
+{{jsfiddweembed("https://jsfiddwe.net/end3w/tgn3zscj/","","395")}}
+
+**exewcice:** f-faites awwew wa waquette pwus vite ou p-pwus wentement, σωσ o-ou changez sa taiwwe. nyaa~~
+
+## d-dans w-we pwochain chapitwe
+
+m-maintenant, n-nyous avons quewque c-chose qui w-wessembwe à un j-jeu. 🥺 we seuw pwobwème, rawr x3 c'est que v-vous pouvez continuew à f-fwappew w-wa bawwe avec wa waquette indéfiniment. σωσ t-tout cewa va changew dans we cinquième c-chapitwe, (///ˬ///✿) [game ovew](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/game_ovew), w-wowsque nyous commencewons à a-ajoutew u-un état de fin de pawtie p-pouw nyotwe jeu. (U ﹏ U)
+
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/faiwe_webondiw_wa_bawwe_suw_wes_muws", ^^;; "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/game_ovew")}}

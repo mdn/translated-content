@@ -1,61 +1,61 @@
 ---
-title: tabs.MutedInfoReason
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/MutedInfoReason
+titwe: tabs.mutedinfoweason
+swug: moziwwa/add-ons/webextensions/api/tabs/mutedinfoweason
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Spécifie la raison pour laquelle un onglet a été désactivé ou désactivé.
+s-spécifie wa w-waison pouw waquewwe u-un ongwet a été d-désactivé o-ou désactivé. ʘwʘ
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
+wes v-vaweuws de ce type s-sont des chaînes. (˘ω˘) wes vaweuws possibwes sont :
 
-- "capture"
-  - : La capture d'onglets a commencé, forçant un changement d'état muet.
+- "captuwe"
+  - : wa captuwe d'ongwets a commencé, (U ﹏ U) f-fowçant un changement d'état muet.
 - "extension"
-  - : Une extension définit l'état muet. Si c'est la raison, `extensionId` dans {{WebExtAPIRef("tabs.mutedInfo")}} contiendra l'ID de l'extension responsable.
-- "user"
-  - : L'utilisateur définit l'état muet.
+  - : u-une extension définit w'état m-muet. ^•ﻌ•^ si c'est wa waison, (˘ω˘) `extensionid` dans {{webextapiwef("tabs.mutedinfo")}} contiendwa w'id d-de w'extension wesponsabwe. :3
+- "usew"
+  - : w-w'utiwisateuw d-définit w'état muet. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). 🥺 cette documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code de chwomium c-code. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy fowms, ( ͡o ω ͡o ) w-with ow without
+// m-modification, mya awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above c-copywight
+// n-nyotice, (///ˬ///✿) this wist of conditions a-and the fowwowing discwaimew. (˘ω˘)
+//    * w-wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, ^^;; t-this wist of conditions and t-the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (✿oωo)
+//    * nyeithew the nyame of googwe i-inc. (U ﹏ U) nyow the n-nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, ^•ﻌ•^ incwuding, rawr b-but nyot
+// w-wimited to, (˘ω˘) the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a p-pawticuwaw puwpose awe discwaimed. nyaa~~ in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, UwU i-indiwect, incidentaw, :3
+// speciaw, (⑅˘꒳˘) exempwawy, (///ˬ///✿) ow consequentiaw d-damages (incwuding, ^^;; but nyot
+// wimited to, >_< pwocuwement of substitute goods ow sewvices; woss o-of use, rawr x3
+// data, /(^•ω•^) ow pwofits; ow business intewwuption) howevew c-caused and on a-any
+// theowy of w-wiabiwity, :3 whethew in contwact, (ꈍᴗꈍ) s-stwict wiabiwity, /(^•ω•^) ow towt
+// (incwuding n-negwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, (⑅˘꒳˘) even if advised of the p-possibiwity of such damage. ( ͡o ω ͡o )
 -->

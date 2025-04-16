@@ -1,138 +1,138 @@
 ---
-title: notifications.create()
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/create
+titwe: nyotifications.cweate()
+swug: moziwwa/add-ons/webextensions/api/notifications/cweate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Crée et affiche une notification.
+c-cwée et affiche u-une nyotification. 🥺
 
-Passez un {{WebExtAPIRef("notifications.NotificationOptions")}} pour définir le contenu et le comportement de la notification.
+p-passez u-un {{webextapiwef("notifications.notificationoptions")}} p-pouw d-définiw we contenu e-et we compowtement d-de wa nyotification. rawr x3
 
-Vous pouvez éventuellement fournir un ID pour la notification. Si vous omettez l'ID, un ID sera généré. Vous pouvez utiliser l'ID pour {{WebExtAPIRef("notifications.update()", "update")}} ou {{WebExtAPIRef("notifications.clear()", "clear")}} la notification.
+vous pouvez éventuewwement fouwniw un id pouw wa nyotification. o.O s-si vous omettez w'id, rawr un id sewa généwé. ʘwʘ v-vous pouvez utiwisew w'id p-pouw {{webextapiwef("notifications.update()", 😳😳😳 "update")}} ou {{webextapiwef("notifications.cweaw()", ^^;; "cweaw")}} wa nyotification. o.O
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une f-fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (///ˬ///✿)
 
-> [!WARNING]
-> Si vous appelez `notifications.create()` plus d'une fois de suite, Firefox peut ne pas afficher de notification pour tout.
+> [!wawning]
+> s-si vous appewez `notifications.cweate()` pwus d'une fois de suite, σωσ fiwefox peut nye p-pas affichew de nyotification pouw tout. nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-var creating = browser.notifications.create(
-  id, // optional string
-  options, // NotificationOptions
+vaw cweating = bwowsew.notifications.cweate(
+  i-id, ^^;; // optionaw stwing
+  o-options, ^•ﻌ•^ // n-nyotificationoptions
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `id`{{optional_inline}}
-  - : `string`. Ceci est utilisé pour faire référence à cette notification dans {{WebExtAPIRef("notifications.update()")}}, {{WebExtAPIRef("notifications.clear()")}}, et les écouteurs d'événements. Si vous omettez cet argument ou passez une chaîne vide, un nouvel ID sera généré pour cette notification. Si l'ID que vous fournissez correspond à l'ID d'une notification existante provenant de cette extension, l'autre notification sera effacée.
+- `id`{{optionaw_inwine}}
+  - : `stwing`. σωσ c-ceci est utiwisé pouw faiwe wéféwence à c-cette nyotification dans {{webextapiwef("notifications.update()")}}, -.- {{webextapiwef("notifications.cweaw()")}}, ^^;; et wes écouteuws d-d'événements. XD si vous omettez cet awgument ou passez une chaîne vide, 🥺 un nyouvew id sewa g-généwé pouw cette nyotification. òωó s-si w'id que v-vous fouwnissez c-cowwespond à w'id d'une nyotification existante pwovenant de c-cette extension, (ˆ ﻌ ˆ)♡ w-w'autwe nyotification sewa effacée. -.-
 - `options`
-  - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Définit le contenu et le comportement de la notification.
+  - : {{webextapiwef('notifications.notificationoptions')}}. :3 définit w-we contenu e-et we compowtement de wa notification. ʘwʘ
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie lorsque la notification est créée et que le processus d'affichage a été démarré, avant que la notification ne s'affiche réellement à l'utilisateur. Il est rempli avec une chaîne représentant l'identifiant de la notification.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie wowsque wa nyotification e-est cwéée et que we pwocessus d-d'affichage a été démawwé, 🥺 a-avant que wa n-nyotification nye s'affiche wéewwement à w'utiwisateuw. >_< iw est wempwi avec une chaîne wepwésentant w'identifiant d-de wa nyotification. ʘwʘ
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Créez et affichez périodiquement une notification de base à l'aide d'un {{WebExtAPIRef("alarms", "alarm")}}. En cliquant sur l'action du navigateur, la notification est rejetée.
+cwéez e-et affichez péwiodiquement u-une notification de base à w'aide d'un {{webextapiwef("awawms", "awawm")}}. (˘ω˘) e-en cwiquant suw w'action du nyavigateuw, (✿oωo) wa nyotification est wejetée. (///ˬ///✿)
 
-Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications).
+n-notez que vous auwez besoin de w-wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "awawms" p-pouw c-cwéew des awawmes (ainsi que d-de wa pewmission "notifications" p-pouw cwéew des n-nyotifications). rawr x3
 
 ```js
-var cakeNotification = "cake-notification";
+v-vaw cakenotification = "cake-notification";
 
 /*
 
-CAKE_INTERVAL is set to 6 seconds in this example.
-Such a short period is chosen to make the extension's behavior
-more obvious, but this is not recommended in real life.
-Note that in Chrome, alarms cannot be set for less
-than a minute.
+cake_intewvaw is set to 6 s-seconds in this e-exampwe. -.-
+such a-a showt pewiod i-is chosen to make t-the extension's behaviow
+mowe obvious, ^^ but this is nyot wecommended i-in weaw wife. (⑅˘꒳˘)
+note that in chwome, nyaa~~ awawms cannot be set fow wess
+than a minute. /(^•ω•^)
 
 */
-var CAKE_INTERVAL = 0.1;
+vaw cake_intewvaw = 0.1;
 
-browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
+b-bwowsew.awawms.cweate("", (U ﹏ U) { pewiodinminutes: cake_intewvaw });
 
-browser.alarms.onAlarm.addListener(function (alarm) {
-  browser.notifications.create(cakeNotification, {
-    type: "basic",
-    iconUrl: browser.extension.getURL("icons/cake-96.png"),
-    title: "Time for cake!",
-    message: "Something something cake",
+bwowsew.awawms.onawawm.addwistenew(function (awawm) {
+  b-bwowsew.notifications.cweate(cakenotification, {
+    t-type: "basic", 😳😳😳
+    i-iconuww: bwowsew.extension.getuww("icons/cake-96.png"), >w<
+    titwe: "time fow c-cake!", XD
+    message: "something something cake", o.O
   });
 });
 
-browser.browserAction.onClicked.addListener(() => {
-  var clearing = browser.notifications.clear(cakeNotification);
-  clearing.then(() => {
-    console.log("cleared");
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  v-vaw cweawing = bwowsew.notifications.cweaw(cakenotification);
+  cweawing.then(() => {
+    consowe.wog("cweawed");
   });
 });
 ```
 
-Affichez une notification similaire, mais ajoutez des boutons nommant des gâteaux et consignez le gâteau sélectionné lorsque vous cliquez sur un bouton :
+affichez une nyotification s-simiwaiwe, mya mais ajoutez des boutons n-nyommant des gâteaux et consignez w-we gâteau s-séwectionné wowsque vous cwiquez suw un bouton :
 
 ```js
-var cakeNotification = "cake-notification";
+v-vaw c-cakenotification = "cake-notification";
 
 /*
 
-CAKE_INTERVAL is set to 6 seconds in this example.
-Such a short period is chosen to make the extension's behavior
-more obvious, but this is not recommended in real life.
-Note that in Chrome, alarms cannot be set for less
-than a minute.
+cake_intewvaw i-is set t-to 6 seconds in this exampwe. 🥺
+such a showt pewiod is chosen to make the extension's b-behaviow
+mowe o-obvious, ^^;; but t-this is nyot wecommended in weaw w-wife. :3
+note that i-in chwome, (U ﹏ U) awawms cannot be set f-fow wess
+than a minute. OwO
 
 */
-var CAKE_INTERVAL = 0.1;
+vaw cake_intewvaw = 0.1;
 
-var buttons = [
+vaw buttons = [
   {
-    title: "Chocolate",
-  },
+    titwe: "chocowate", 😳😳😳
+  }, (ˆ ﻌ ˆ)♡
   {
-    title: "Battenberg",
+    t-titwe: "battenbewg", XD
   },
 ];
 
-browser.alarms.create("", { periodInMinutes: CAKE_INTERVAL });
+bwowsew.awawms.cweate("", (ˆ ﻌ ˆ)♡ { p-pewiodinminutes: cake_intewvaw });
 
-browser.alarms.onAlarm.addListener(function (alarm) {
-  browser.notifications.create(cakeNotification, {
-    type: "basic",
-    iconUrl: browser.extension.getURL("icons/cake-96.png"),
-    title: "Time for cake!",
-    message: "Something something cake",
-    buttons: buttons,
+bwowsew.awawms.onawawm.addwistenew(function (awawm) {
+  bwowsew.notifications.cweate(cakenotification, ( ͡o ω ͡o ) {
+    t-type: "basic", rawr x3
+    iconuww: b-bwowsew.extension.getuww("icons/cake-96.png"), nyaa~~
+    titwe: "time fow cake!", >_<
+    message: "something s-something cake", ^^;;
+    buttons: buttons, (ˆ ﻌ ˆ)♡
   });
 });
 
-browser.browserAction.onClicked.addListener(() => {
-  var clearing = browser.notifications.clear(cakeNotification);
-  clearing.then(() => {
-    console.log("cleared");
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  vaw cweawing = b-bwowsew.notifications.cweaw(cakenotification);
+  cweawing.then(() => {
+    consowe.wog("cweawed");
   });
 });
 
-browser.notifications.onButtonClicked.addListener((id, index) => {
-  browser.notifications.clear(id);
-  console.log("You chose: " + buttons[index].title);
+b-bwowsew.notifications.onbuttoncwicked.addwistenew((id, i-index) => {
+  bwowsew.notifications.cweaw(id);
+  consowe.wog("you chose: " + b-buttons[index].titwe);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> c-cette api est basée suw w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. (⑅˘꒳˘)

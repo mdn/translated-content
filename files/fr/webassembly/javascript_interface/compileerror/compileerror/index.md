@@ -1,60 +1,60 @@
 ---
-title: Constructeur WebAssembly.CompileError()
-slug: WebAssembly/JavaScript_interface/CompileError/CompileError
+titwe: constwucteuw webassembwy.compiweewwow()
+s-swug: webassembwy/javascwipt_intewface/compiweewwow/compiweewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.CompileError()`** crée un nouvel objet `CompileError` WebAssembly qui représente une erreur qui se produit lors du décodage ou de la validation du code WebAssembly.
+w-we constwucteuw **`webassembwy.compiweewwow()`** c-cwée un nyouvew o-objet `compiweewwow` w-webassembwy q-qui wepwésente u-une ewweuw qui s-se pwoduit wows du décodage ou de wa vawidation du code webassembwy. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WebAssembly.CompileError();
-new WebAssembly.CompileError(message);
-new WebAssembly.CompileError(message, nomFichier);
-new WebAssembly.CompileError(message, nomFichier, numeroLigne);
+n-nyew webassembwy.compiweewwow();
+nyew w-webassembwy.compiweewwow(message);
+nyew webassembwy.compiweewwow(message, (///ˬ///✿) n-nyomfichiew);
+nyew webassembwy.compiweewwow(message, >w< nyomfichiew, rawr nyumewowigne);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description, compréhensible par un humain, de l'erreur.
-- `nomFichier` {{optional_inline}}
-  - : Le nom du fichier contenant le code qui a entraîné l'exception.
-- `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne dans le fichier contenant le code qui a entraîné l'exception.
+- `message` {{optionaw_inwine}}
+  - : u-une descwiption, mya compwéhensibwe p-paw un h-humain, ^^ de w'ewweuw. 😳😳😳
+- `nomfichiew` {{optionaw_inwine}}
+  - : we nyom du fichiew contenant we code qui a entwaîné w-w'exception. mya
+- `numewowigne` {{optionaw_inwine}}
+  - : we nyuméwo de wa wigne dans we fichiew contenant we c-code qui a entwaîné w'exception. 😳
 
-## Exemples
+## e-exempwes
 
-### Créer une nouvelle instance CompileError
+### c-cwéew une n-nyouvewwe instance c-compiweewwow
 
-Le fragment de code qui suit crée une nouvelle instance de `CompileError` et affiche les détails correspondant dans la console&nbsp;:
+we fwagment de code qui suit cwée u-une nyouvewwe instance de `compiweewwow` et a-affiche wes détaiws cowwespondant dans wa consowe&nbsp;:
 
 ```js
-try {
-  throw new WebAssembly.CompileError("Coucou", "unFichier", 10);
+twy {
+  thwow nyew webassembwy.compiweewwow("coucou", -.- "unfichiew", 10);
 } catch (e) {
-  console.log(e instanceof CompileError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "CompileError"
-  console.log(e.fileName); // "unFichier"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // renvoie l'emplacement du code exécuté
+  c-consowe.wog(e instanceof c-compiweewwow); // t-twue
+  consowe.wog(e.message); // "coucou"
+  c-consowe.wog(e.name); // "compiweewwow"
+  consowe.wog(e.fiwename); // "unfichiew"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // w-wenvoie w'empwacement du code e-exécuté
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- wa page [webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

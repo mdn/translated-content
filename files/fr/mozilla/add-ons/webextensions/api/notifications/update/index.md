@@ -1,97 +1,97 @@
 ---
-title: notifications.update()
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/update
+titwe: nyotifications.update()
+swug: moziwwa/add-ons/webextensions/api/notifications/update
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Met à jour une notification, compte tenu de son identifiant
+m-met à jouw u-une nyotification, OwO c-compte tenu d-de son identifiant
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (ꈍᴗꈍ)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var updating = browser.notifications.update(
-  id, // string
-  options, // NotificationOptions
+vaw updating = bwowsew.notifications.update(
+  id, // stwing
+  options, 😳 // n-nyotificationoptions
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `id`
-  - : `string`. L'ID de la notification à mettre à jour. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.
+  - : `stwing`. 😳😳😳 w'id d-de wa nyotification à mettwe à j-jouw. mya c'est wa même chose que w'id twansmis dans we cawwback {{webextapiwef('notifications.cweate()')}}. mya
 - `options`
-  - : {{WebExtAPIRef('notifications.NotificationOptions')}}. Définit le nouveau contenu et le nouveau comportement de la notification.
+  - : {{webextapiwef('notifications.notificationoptions')}}. (⑅˘꒳˘) d-définit we nyouveau contenu e-et we nyouveau c-compowtement de wa notification. (U ﹏ U)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un booléen : `true` si la notification a été mise à jour, ou `false` si ce n'est pas le cas (par exemple, parce que la notification référencée par `id` n'existe pas).
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec un boowéen : `twue` si wa nyotification a été mise à jouw, mya ou `fawse` si ce ny'est p-pas we cas (paw exempwe, ʘwʘ pawce q-que wa nyotification w-wéféwencée p-paw `id` ny'existe p-pas). (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple utilise `update()` pour mettre à jour une notification de progression. Cliquez sur l'action du navigateur pour afficher la notification et lancer un {{WebExtAPIRef("alarms", "alarm")}}, que nous utilisons pour mettre à jour l'indicateur de progression de la notification.
+cet exempwe utiwise `update()` pouw mettwe à j-jouw une nyotification de pwogwession. (U ﹏ U) cwiquez suw w'action du nyavigateuw pouw affichew w-wa nyotification et wancew un {{webextapiwef("awawms", ^•ﻌ•^ "awawm")}}, (˘ω˘) q-que nyous utiwisons p-pouw mettwe à j-jouw w'indicateuw de pwogwession de wa nyotification. :3
 
-Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "alarms" pour créer des alarmes (ainsi que de la permission "notifications" pour créer des notifications). Notez également que Firefox ne prend pas en charge l'attribut de `progress`.
+notez que vous auwez b-besoin de wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "awawms" p-pouw cwéew des awawmes (ainsi q-que de wa p-pewmission "notifications" pouw c-cwéew des nyotifications). ^^;; nyotez égawement q-que fiwefox nye pwend pas en chawge w'attwibut de `pwogwess`. 🥺
 
 ```js
-var cakeNotification = "cake-notification";
+v-vaw cakenotification = "cake-notification";
 
 /*
 
-CAKE_INTERVAL is set to 0.3 seconds in this example.
-Such a short period is chosen to make the extension's behavior
-more obvious, but this is not recommended in real life.
-Note that in Chrome, alarms cannot be set for less than
-a minute.
+cake_intewvaw i-is set to 0.3 seconds in this e-exampwe. (⑅˘꒳˘)
+such a-a showt pewiod is chosen to make the extension's behaviow
+mowe obvious, but this is nyot wecommended in weaw wife. nyaa~~
+n-note that in c-chwome, :3 awawms cannot be set fow w-wess than
+a minute. ( ͡o ω ͡o )
 
 */
-var CAKE_PREP_INTERVAL = 0.005;
+v-vaw cake_pwep_intewvaw = 0.005;
 
-var progress = 0;
+v-vaw pwogwess = 0;
 
-browser.alarms.onAlarm.addListener(function (alarm) {
-  progress = progress + 10;
-  if (progress > 100) {
-    browser.notifications.clear(cakeNotification);
-    browser.alarms.clear("cake-progress");
-  } else {
-    browser.notifications.update(cakeNotification, {
-      progress: progress,
+bwowsew.awawms.onawawm.addwistenew(function (awawm) {
+  pwogwess = pwogwess + 10;
+  i-if (pwogwess > 100) {
+    bwowsew.notifications.cweaw(cakenotification);
+    bwowsew.awawms.cweaw("cake-pwogwess");
+  } ewse {
+    bwowsew.notifications.update(cakenotification, mya {
+      p-pwogwess: pwogwess, (///ˬ///✿)
     });
   }
 });
 
-browser.browserAction.onClicked.addListener(function () {
-  browser.notifications.getAll((all) => {
-    if (all.length > 0) {
-      browser.notifications.clear(cakeNotification);
-      return;
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  b-bwowsew.notifications.getaww((aww) => {
+    i-if (aww.wength > 0) {
+      bwowsew.notifications.cweaw(cakenotification);
+      w-wetuwn;
     }
-    progress = 0;
-    browser.notifications.create(cakeNotification, {
-      type: "progress",
-      iconUrl: browser.extension.getURL("icons/cake-48.png"),
-      title: "Your cake is being prepared...",
-      message: "Something something cake",
-      progress: progress,
+    p-pwogwess = 0;
+    b-bwowsew.notifications.cweate(cakenotification, (˘ω˘) {
+      t-type: "pwogwess", ^^;;
+      iconuww: bwowsew.extension.getuww("icons/cake-48.png"), (✿oωo)
+      t-titwe: "youw c-cake is being p-pwepawed...", (U ﹏ U)
+      m-message: "something s-something cake", -.-
+      pwogwess: pwogwess, ^•ﻌ•^
     });
-    browser.alarms.create("cake-progress", {
-      periodInMinutes: CAKE_PREP_INTERVAL,
+    bwowsew.awawms.cweate("cake-pwogwess", rawr {
+      p-pewiodinminutes: cake_pwep_intewvaw, (˘ω˘)
     });
   });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> cette api est basée suw w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. UwU

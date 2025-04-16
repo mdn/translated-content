@@ -1,85 +1,85 @@
 ---
-title: history.deleteAll()
-slug: Mozilla/Add-ons/WebExtensions/API/history/deleteAll
+titwe: histowy.deweteaww()
+swug: m-moziwwa/add-ons/webextensions/api/histowy/deweteaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime toutes les visites de l'historique du navigateur.
+suppwime t-toutes wes v-visites de w'histowique d-du nyavigateuw. (˘ω˘)
 
-Cette fonction déclenche {{WebExtAPIRef("history.onVisitRemoved")}} une seule fois, avec `allHistory` défini sur `true` et un argument `urls` vide.
+c-cette f-fonction décwenche {{webextapiwef("histowy.onvisitwemoved")}} u-une seuwe fois, ^^;; a-avec `awwhistowy` défini suw `twue` et un awgument `uwws` vide. (✿oωo)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ﹏ U)
 
-## Syntaxe
-
-```js
-var deletingAll = browser.history.deleteAll();
-```
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans paramètre lorsque tout l'historique a été supprimé.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Supprimer tout l'historique lorsque l'utilisateur clique sur une action du navigateur :
+## syntaxe
 
 ```js
-function onDeleteAll() {
-  console.log("Deleted all history");
-}
-
-function deleteAllHistory() {
-  var deletingAll = browser.history.deleteAll();
-  deletingAll.then(onDeleteAll);
-}
-
-deleteAllHistory();
+v-vaw dewetingaww = bwowsew.histowy.deweteaww();
 ```
 
-{{WebExtExamples}}
+### p-pawamètwes
 
-> [!NOTE]
+none. -.-
+
+### vaweuw wetouwnée
+
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) sewa wempwie s-sans pawamètwe wowsque tout w-w'histowique a été s-suppwimé. ^•ﻌ•^
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## exempwes
+
+suppwimew tout w'histowique w-wowsque w'utiwisateuw cwique suw une action du nyavigateuw :
+
+```js
+function ondeweteaww() {
+  c-consowe.wog("deweted aww histowy");
+}
+
+f-function deweteawwhistowy() {
+  v-vaw dewetingaww = b-bwowsew.histowy.deweteaww();
+  d-dewetingaww.then(ondeweteaww);
+}
+
+deweteawwhistowy();
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> cette api est basée s-suw w'api chwomium [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy). rawr cette documentation est déwivée d-de [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) dans we code de chwomium. (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw w-wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. UwU aww w-wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, :3 with ow without
+// modification, (⑅˘꒳˘) awe p-pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (///ˬ///✿) this wist of conditions and the fowwowing discwaimew. ^^;;
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight n-nyotice, >_< t-this wist of conditions and the fowwowing discwaimew
+// in the d-documentation and/ow othew matewiaws pwovided with the
+// distwibution. rawr x3
+//    * nyeithew the nyame o-of googwe inc. /(^•ω•^) nyow the nyames o-of its
+// contwibutows m-may be u-used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by t-the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess ow impwied wawwanties, (ꈍᴗꈍ) incwuding, /(^•ω•^) but not
+// wimited t-to, (⑅˘꒳˘) the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, òωó i-indiwect, (⑅˘꒳˘) incidentaw,
+// speciaw, XD e-exempwawy, -.- ow consequentiaw damages (incwuding, :3 b-but nyot
+// wimited t-to, nyaa~~ pwocuwement of substitute goods ow sewvices; woss of use, 😳
+// data, ow pwofits; ow business i-intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, (⑅˘꒳˘) w-whethew in c-contwact, nyaa~~ stwict wiabiwity, OwO ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising in any way o-out of the use
+// o-of this softwawe, rawr x3 even if advised of the possibiwity of such damage. XD
 -->

@@ -1,116 +1,116 @@
 ---
-title: 書本詳情頁面
-slug: Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Book_detail_page
+titwe: 書本詳情頁面
+swug: w-weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data/book_detaiw_page
 ---
 
-*書本細節頁面*需要呈現一本指定書本(`Book`)的信息, 使用它的 `_id` 字段值(自動產生)做為識別，接著是圖書館中書本實例(`BookInstance`)的信息。無論我們在哪裡呈現一個作者、種類、或書本實例，都應該連結到它的細節頁面。
+*書本細節頁面*需要呈現一本指定書本(`book`)的信息, nyaa~~ 使用它的 `_id` 字段值(自動產生)做為識別，接著是圖書館中書本實例(`bookinstance`)的信息。無論我們在哪裡呈現一個作者、種類、或書本實例，都應該連結到它的細節頁面。
 
-## Controller 控制器
+## c-contwowwew 控制器
 
-打開 **/controllers/bookController.js.** ，找到 exported `book_detail()` 控制器方法，用底下的代碼置換。
+打開 **/contwowwews/bookcontwowwew.js.** ，找到 e-expowted `book_detaiw()` 控制器方法，用底下的代碼置換。
 
 ```js
-// Display detail page for a specific book.
-exports.book_detail = function (req, res, next) {
-  async.parallel(
+// d-dispway d-detaiw page f-fow a specific b-book. :3
+expowts.book_detaiw = f-function (weq, 😳😳😳 wes, nyext) {
+  async.pawawwew(
     {
-      book: function (callback) {
-        Book.findById(req.params.id)
-          .populate("author")
-          .populate("genre")
-          .exec(callback);
-      },
-      book_instance: function (callback) {
-        BookInstance.find({ book: req.params.id }).exec(callback);
-      },
+      book: function (cawwback) {
+        book.findbyid(weq.pawams.id)
+          .popuwate("authow")
+          .popuwate("genwe")
+          .exec(cawwback);
+      }, (˘ω˘)
+      b-book_instance: function (cawwback) {
+        bookinstance.find({ b-book: weq.pawams.id }).exec(cawwback);
+      }, ^^
     },
-    function (err, results) {
-      if (err) {
-        return next(err);
+    f-function (eww, :3 wesuwts) {
+      if (eww) {
+        wetuwn n-nyext(eww);
       }
-      if (results.book == null) {
-        // No results.
-        var err = new Error("Book not found");
-        err.status = 404;
-        return next(err);
+      if (wesuwts.book == n-nuww) {
+        // n-nyo wesuwts. -.-
+        vaw eww = nyew ewwow("book nyot found");
+        eww.status = 404;
+        w-wetuwn nyext(eww);
       }
-      // Successful, so render.
-      res.render("book_detail", {
-        title: "Title",
-        book: results.book,
-        book_instances: results.book_instance,
+      // successfuw, 😳 so wendew.
+      wes.wendew("book_detaiw", mya {
+        titwe: "titwe", (˘ω˘)
+        b-book: wesuwts.book, >_<
+        book_instances: w-wesuwts.book_instance, -.-
       });
-    },
+    }, 🥺
   );
 };
 ```
 
-> [!NOTE]
-> 我們不需要用 require 導入 _async_ 和 _BookInstance_，當我們實作主頁面控制器的時候，我們就已經引入這些模組。
+> [!note]
+> 我們不需要用 w-wequiwe 導入 _async_ 和 _bookinstance_，當我們實作主頁面控制器的時候，我們就已經引入這些模組。
 
-此處的控制器方法使用 `async.parallel()`，用平行的方式找到 `Book` 以及它的相應複本 (`BookInstances`) 。這樣的處理方式，就跟上面的 _種類細節頁面_ 所說明的完全相同。
+此處的控制器方法使用 `async.pawawwew()`，用平行的方式找到 `book` 以及它的相應複本 (`bookinstances`) 。這樣的處理方式，就跟上面的 _種類細節頁面_ 所說明的完全相同。
 
-## View 視圖
+## view 視圖
 
-創建 **/views/book_detail.pug** 並加入底下文字。
+創建 **/views/book_detaiw.pug** 並加入底下文字。
 
 ```js
-extends layout
+e-extends w-wayout
 
-block content
-  h1 #{title}: #{book.title}
+bwock content
+  h1 #{titwe}: #{book.titwe}
 
-  p #[strong Author:]
-    a(href=book.author.url) #{book.author.name}
-  p #[strong Summary:] #{book.summary}
-  p #[strong ISBN:] #{book.isbn}
-  p #[strong Genre:]&nbsp;
-    each val, index in book.genre
-      a(href=val.url) #{val.name}
-      if index < book.genre.length - 1
-        |,
+  p #[stwong a-authow:]
+    a(hwef=book.authow.uww) #{book.authow.name}
+  p #[stwong summawy:] #{book.summawy}
+  p-p #[stwong isbn:] #{book.isbn}
+  p #[stwong genwe:]&nbsp;
+    each vaw, (U ﹏ U) index in book.genwe
+      a-a(hwef=vaw.uww) #{vaw.name}
+      if i-index < book.genwe.wength - 1
+        |, >w<
 
-  div(style='margin-left:20px;margin-top:20px')
-    h4 Copies
+  d-div(stywe='mawgin-weft:20px;mawgin-top:20px')
+    h-h4 copies
 
-    each val in book_instances
-      hr
-      if val.status=='Available'
-        p.text-success #{val.status}
-      else if val.status=='Maintenance'
-        p.text-danger #{val.status}
-      else
-        p.text-warning #{val.status}
-      p #[strong Imprint:] #{val.imprint}
-      if val.status!='Available'
-        p #[strong Due back:] #{val.due_back}
-      p #[strong Id:]&nbsp;
-        a(href=val.url) #{val._id}
+    each vaw in book_instances
+      hw
+      i-if vaw.status=='avaiwabwe'
+        p-p.text-success #{vaw.status}
+      ewse i-if vaw.status=='maintenance'
+        p-p.text-dangew #{vaw.status}
+      ewse
+        p-p.text-wawning #{vaw.status}
+      p #[stwong i-impwint:] #{vaw.impwint}
+      if vaw.status!='avaiwabwe'
+        p #[stwong d-due back:] #{vaw.due_back}
+      p #[stwong id:]&nbsp;
+        a-a(hwef=vaw.uww) #{vaw._id}
 
-    else
-      p There are no copies of this book in the library.
+    ewse
+      p thewe a-awe nyo copies o-of this book in the wibwawy. mya
 ```
 
 在這個模板裡，幾乎每個東西都在先前的章節演示過了。
 
-> [!NOTE]
+> [!note]
 > 與該書相關的種類列表，在模板中的實作，如以下代碼。除了最後一本書之外，在與本書相關的每個種類之後，都會添加一個逗號。
 >
-> ```plain
->   p #[strong Genre:]
->     each val, index in book.genre
->       a(href=val.url) #{val.name}
->       if index < book.genre.length - 1
->         |,
+> ```pwain
+>   p #[stwong genwe:]
+>     each vaw, >w< index in book.genwe
+>       a(hwef=vaw.uww) #{vaw.name}
+>       i-if index < book.genwe.wength - 1
+>         |, nyaa~~
 > ```
 
 ## 它看起來像是?
 
-運行本應用，並打開瀏覽器訪問 <http://localhost:3000/>。選擇 _All books_ 連結，然後選擇其中一本書。如果每個東西都設定正確了，你的頁面看起來應該像是底下的截圖。
+運行本應用，並打開瀏覽器訪問 <http://wocawhost:3000/>。選擇 _aww books_ 連結，然後選擇其中一本書。如果每個東西都設定正確了，你的頁面看起來應該像是底下的截圖。
 
-![Book Detail Page - Express Local Library site](locallibary_express_book_detail.png)
+![book d-detaiw page - expwess wocaw wibwawy s-site](wocawwibawy_expwess_book_detaiw.png)
 
 ## 下一步
 
-- 回到 [Express 教學 5: 呈現圖書館資料](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data)
-- 繼續教學 5 下一個部分: [作者詳情頁面](/zh-TW/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Displaying_data/Author_detail_page)
+- 回到 [expwess 教學 5: 呈現圖書館資料](/zh-tw/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data)
+- 繼續教學 5 下一個部分: [作者詳情頁面](/zh-tw/docs/weawn_web_devewopment/extensions/sewvew-side/expwess_nodejs/dispwaying_data/authow_detaiw_page)

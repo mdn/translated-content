@@ -1,195 +1,195 @@
 ---
-title: Mise à jour des extensions pour Firefox 3
-slug: Mozilla/Firefox/Releases/3/Updating_extensions
+titwe: mise à jouw des extensions p-pouw fiwefox 3
+s-swug: moziwwa/fiwefox/weweases/3/updating_extensions
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-1. Notes de versions pour développeurs
+1. ^^ n-nyotes de v-vewsions pouw dévewoppeuws
 
-   1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+   1. o.O [notes d-de vewsions p-pouw dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases)
 
-2. Modules complémentaires
+2. ( ͡o ω ͡o ) m-moduwes compwémentaiwes
 
-   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
+   1. /(^•ω•^) [webextensions](/fw/docs/moziwwa/add-ons/webextensions)
+   2. 🥺 [thèmes](/fw/docs/moziwwa/add-ons/themes)
 
-3. Fonctionnement interne de Firefox
+3. nyaa~~ f-fonctionnement intewne de fiwefox
 
-   1. [Le projet Mozilla](/fr/docs/Mozilla)
-   2. [Gecko](/fr/docs/Mozilla/Gecko)
-   3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-   4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-   5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-   6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-   7. [MFBT](/fr/docs/Mozilla/MFBT)
-   8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-   9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
-   10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-   11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
-   12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+   1. mya [we pwojet moziwwa](/fw/docs/moziwwa)
+   2. XD [gecko](/fw/docs/moziwwa/gecko)
+   3. nyaa~~ [mode « h-headwess »](/fw/docs/moziwwa/fiwefox/headwess_mode)
+   4. ʘwʘ [moduwes de code javascwipt](/fw/docs/moziwwa/javascwipt_code_moduwes)
+   5. (⑅˘꒳˘) [js-ctypes](/fw/docs/moziwwa/js-ctypes)
+   6. :3 [we pwojet m-mathmw](/fw/docs/moziwwa/mathmw_pwoject)
+   7. -.- [mfbt](/fw/docs/moziwwa/mfbt)
+   8. 😳😳😳 [wes pwojets m-moziwwa](/fw/docs/moziwwa/pwojects)
+   9. (U ﹏ U) [we système de pwéféwences](/fw/docs/moziwwa/pwefewences)
+   10. o.O [connexions webidw](/fw/docs/moziwwa/webidw_bindings)
+   11. ( ͡o ω ͡o ) [xpcom](/fw/docs/moziwwa/tech/xpcom)
+   12. [xuw](/fw/docs/moziwwa/tech/xuw)
 
-4. Développer et contribuer
+4. òωó dévewoppew et contwibuew
 
-   1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
-   3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-   4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-   5. [Localisation](/fr/docs/Mozilla/Localization)
-   6. [Mercurial](/fr/docs/Mozilla/Mercurial)
-   7. [Assurance qualité](/fr/docs/Mozilla/QA)
-   8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+   1. 🥺 [instwuctions d-de compiwation](/fw/docs/moziwwa/devewopew_guide/buiwd_instwuctions)
+   2. /(^•ω•^) [configuwation d-des options d-de compiwation](https://fiwefox-souwce-docs.moziwwa.owg/setup/configuwing_buiwd_options.htmw)
+   3. 😳😳😳 [fonctionnement de wa compiwation](/fw/docs/moziwwa/devewopew_guide/buiwd_instwuctions/how_moziwwa_s_buiwd_system_wowks)
+   4. ^•ﻌ•^ [code souwce de moziwwa](/fw/docs/moziwwa/devewopew_guide/souwce_code/mewcuwiaw)
+   5. nyaa~~ [wocawisation](/fw/docs/moziwwa/wocawization)
+   6. OwO [mewcuwiaw](/fw/docs/moziwwa/mewcuwiaw)
+   7. ^•ﻌ•^ [assuwance quawité](/fw/docs/moziwwa/qa)
+   8. σωσ [utiwisation d-de code moziwwa dans d'autwes pwojets](/fw/docs/moziwwa/using_moziwwa_code_in_othew_pwojects)
 
-Cet article fournit des informations qui seront utiles pour les développeurs désirant mettre à jour leurs extensions pour qu'elles fonctionnent correctement avec Firefox 3.
+cet awticwe fouwnit d-des infowmations qui sewont utiwes p-pouw wes dévewoppeuws d-désiwant m-mettwe à jouw w-weuws extensions pouw qu'ewwes fonctionnent cowwectement a-avec fiwefox 3. -.-
 
-Avant d'aller plus loin, voici une indication utile&nbsp;: si la seule modification dont votre extension a besoin est une mise à jour du champ `maxVersion` dans son manifeste d'installation, et que celle-ci est hébergée sur [addons.mozilla.org](https://addons.mozilla.org), il n'est pas vraiment nécessaire de renvoyer une nouvelle version de votre extension&nbsp;! Utilisez simplement le Developer Control Panel sur AMO pour ajuster la valeur de `maxVersion`. Cela vous évitera également la revérification de votre extension.
+avant d'awwew pwus w-woin, (˘ω˘) voici une indication utiwe&nbsp;: si wa seuwe modification dont votwe extension a besoin est u-une mise à jouw du champ `maxvewsion` d-dans son m-manifeste d'instawwation, rawr x3 e-et que cewwe-ci est hébewgée suw [addons.moziwwa.owg](https://addons.moziwwa.owg), rawr x3 iw ny'est pas v-vwaiment nyécessaiwe d-de wenvoyew une nyouvewwe v-vewsion de votwe e-extension&nbsp;! σωσ utiwisez simpwement w-we devewopew contwow panew s-suw amo pouw ajustew wa vaweuw de `maxvewsion`. nyaa~~ c-cewa vous évitewa égawement wa wevéwification d-de votwe extension. (ꈍᴗꈍ)
 
-### Première étape&nbsp;: mise à jour du manifeste d'installation
+### pwemièwe étape&nbsp;: m-mise à jouw d-du manifeste d'instawwation
 
-La première étape — et pour la plupart des extensions la seule qui sera nécessaire — est de mettre à jour le fichier de [manifeste d'installation](/fr/Manifestes_d'installation), `install.rdf`, pour indiquer sa compatibilité avec Firefox 3.
+wa pwemièwe étape — et pouw wa pwupawt des extensions wa seuwe qui sewa nyécessaiwe — e-est de m-mettwe à jouw we fichiew de [manifeste d-d'instawwation](/fw/manifestes_d'instawwation), ^•ﻌ•^ `instaww.wdf`, >_< p-pouw indiquew s-sa compatibiwité avec fiwefox 3. ^^;;
 
-Trouvez simplement la ligne indiquant la version maximale compatible de Firefox (qui, pour Firefox 2, ressemblait probablement à ceci)&nbsp;:
+twouvez simpwement wa wigne i-indiquant wa vewsion maximawe compatibwe de fiwefox (qui, ^^;; pouw fiwefox 2, /(^•ω•^) wessembwait p-pwobabwement à ceci)&nbsp;:
 
-```xml
-<em:maxVersion>2.0.*</em:maxVersion>
+```xmw
+<em:maxvewsion>2.0.*</em:maxvewsion>
 ```
 
-Modifiez-la pour indiquer la compatibilité avec Firefox 3&nbsp;:
+m-modifiez-wa p-pouw indiquew w-wa compatibiwité avec fiwefox 3&nbsp;:
 
-```xml
-<em:maxVersion>3.0.*</em:maxVersion>
+```xmw
+<em:maxvewsion>3.0.*</em:maxvewsion>
 ```
 
-Et réinstallez ensuite votre extension.
+e-et w-wéinstawwez ensuite v-votwe extension. nyaa~~
 
-Notez que Firefox 3 n'a plus besoin d'un «&nbsp;.0&nbsp;» supplémentaire dans son numéro de version, donc au lieu d'utiliser «&nbsp;3.0.0.\*&nbsp;», il ne faut plus indiquer que «&nbsp;3.0.\*&nbsp;».
+n-nyotez que fiwefox 3 ny'a pwus besoin d'un «&nbsp;.0&nbsp;» s-suppwémentaiwe d-dans son nyuméwo d-de vewsion, (✿oωo) d-donc au wieu d-d'utiwisew «&nbsp;3.0.0.\*&nbsp;», ( ͡o ω ͡o ) iw nye faut pwus indiquew que «&nbsp;3.0.\*&nbsp;». (U ᵕ U❁)
 
-> [!NOTE]
-> Notez qu'à ce point, il faut s'attendre à d'autres changements dans Firefox 3. Ceux-ci peuvent poser des problèmes à certaines extensions, il faut donc éviter de publier une extension avec la valeur `3.0.0.*` pour `maxVersion` avant que la RC de Firefox 3 soit disponible. Durant la pariode beta de Firefox 3, il convient d'utiliser `3.0b5` comme valeur de `maxVersion`.
+> [!note]
+> n-nyotez qu'à ce point, iw faut s'attendwe à d'autwes changements dans fiwefox 3. òωó ceux-ci p-peuvent posew des pwobwèmes à cewtaines extensions, σωσ iw faut d-donc évitew de p-pubwiew une extension a-avec wa vaweuw `3.0.0.*` pouw `maxvewsion` a-avant que wa wc de fiwefox 3 soit d-disponibwe. :3 d-duwant wa pawiode beta de fiwefox 3, OwO iw convient d'utiwisew `3.0b5` comme vaweuw de `maxvewsion`.
 
-Il y a eu (et il y aura encore) un certain nombre de changements dans les API qui poseront probablement des problèmes à certaines. Nous sommes encore en train d'établir une liste complète de ces changements.
+i-iw y a eu (et iw y auwa encowe) u-un cewtain nyombwe de changements d-dans wes api q-qui posewont pwobabwement des pwobwèmes à cewtaines. ^^ n-nyous sommes e-encowe en twain d'étabwiw u-une wiste compwète d-de ces changements. (˘ω˘)
 
-> [!NOTE]
-> Si votre extension utilise toujours un script [`Install.js`](/fr/docs/Install.js) plutôt qu'un [manifeste d'installation](/fr/docs/Install_Manifests), il vous faudra faire la transition vers un manifeste d'installation maintenant. Firefox 3 ne gère plus les scripts `install.js` dans les fichiers XPI.
+> [!note]
+> si votwe extension utiwise toujouws un scwipt [`instaww.js`](/fw/docs/instaww.js) pwutôt q-qu'un [manifeste d-d'instawwation](/fw/docs/instaww_manifests), i-iw vous faudwa faiwe w-wa twansition v-vews un manifeste d'instawwation m-maintenant. OwO fiwefox 3 nye gèwe pwus wes scwipts `instaww.js` dans wes fichiews xpi. UwU
 
-#### Ajout de localisations au manifeste d'installation
+#### ajout d-de wocawisations a-au manifeste d'instawwation
 
-Firefox 3 permet d'utiliser de nouvelles propriétés dans le manifeste d'installation pour spécifier des descriptions localisées. Les anciennes méthodes continuent à fonctionner, mais la nouvelle permet à Firefox de charger les localisations même lorsque le module complémentaire est désactivé ou sur le point d'être installé. Consultez [Localisation des descriptions d'extensions](/fr/Localisation_des_descriptions_d'extensions) pour plus de détails.
+fiwefox 3 pewmet d-d'utiwisew de n-nyouvewwes pwopwiétés dans we manifeste d'instawwation pouw spécifiew d-des descwiptions wocawisées. ^•ﻌ•^ wes anciennes méthodes continuent à fonctionnew, (ꈍᴗꈍ) m-mais wa nyouvewwe pewmet à fiwefox de c-chawgew wes wocawisations m-même wowsque we moduwe compwémentaiwe est désactivé o-ou suw we point d-d'êtwe instawwé. /(^•ω•^) consuwtez [wocawisation des descwiptions d'extensions](/fw/wocawisation_des_descwiptions_d'extensions) p-pouw pwus de détaiws. (U ᵕ U❁)
 
-### Deuxième étape&nbsp;: s'assurer de fournir des mises à jour sécurisées
+### d-deuxième étape&nbsp;: s'assuwew de fouwniw des mises à jouw sécuwisées
 
-Si vous hébergez des modules complémentaires vous-mêmes et pas sur un fournisseur d'hébergement sécurisé comme [addons.mozilla.org](https://addons.mozilla.org), vous devrez fournir une méthode sécurisée de mise à jour pour vos modules. Pour ce faire, il faudrait soit héberger vos mises à jour sur un site SSL, ou utiliser des clés cryptographiques pour signer les informations de mise à jour. Consultez [Mises à jour sécurisées](/fr/Versions_d'une_extension,_mise_à_jour_et_compatibilité#Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es) pour plus d'informations.
+s-si vous hébewgez des moduwes c-compwémentaiwes v-vous-mêmes et pas suw un fouwnisseuw d-d'hébewgement sécuwisé c-comme [addons.moziwwa.owg](https://addons.moziwwa.owg), (✿oωo) v-vous d-devwez fouwniw une méthode sécuwisée d-de mise à j-jouw pouw vos moduwes. pouw ce faiwe, OwO iw faudwait s-soit hébewgew v-vos mises à j-jouw suw un site ssw, :3 ou utiwisew des cwés cwyptogwaphiques p-pouw signew wes infowmations de m-mise à jouw. nyaa~~ consuwtez [mises à j-jouw sécuwisées](/fw/vewsions_d'une_extension,_mise_à_jouw_et_compatibiwité#mises_.c3.a0_jouw_s.c3.a9cuwis.c3.a9es) pouw pwus d'infowmations. ^•ﻌ•^
 
-### Troisième étape&nbsp;: s'occuper des changements d'API
+### twoisième étape&nbsp;: s-s'occupew des c-changements d'api
 
-Plusieurs API ont changé de manière significative. Les changements les plus importants, qui affecteront probablement un grand nombre d'extensions, sont les suivants&nbsp;:
+p-pwusieuws api o-ont changé de manièwe significative. w-wes changements wes pwus impowtants, ( ͡o ω ͡o ) qui affectewont pwobabwement un gwand nyombwe d'extensions, ^^;; s-sont wes suivants&nbsp;:
 
-#### DOM
+#### d-dom
 
-Les nœuds provenant de documents externes doivent être clonés à l'aide de [`document.importNode()`](/fr/docs/Web/API/Document/importNode) (ou adoptés avec
-[`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](https://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
+wes nyœuds pwovenant d-de documents extewnes doivent êtwe c-cwonés à w'aide de [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode) (ou a-adoptés avec
+[`document.adoptnode()`](/fw/docs/web/api/document/adoptnode)) a-avant d-de pouvoiw êtwe i-inséwés dans w-we document couwant. mya pouw en savoiw pwus suw wes pwobwèmes
+de [`node.ownewdocument`](/fw/docs/web/api/node/ownewdocument), (U ᵕ U❁) consuwtez wa [faq dom du w3c](https://www.w3.owg/dom/faq.htmw#ownewdoc) (en angwais). ^•ﻌ•^
 
-Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Document/importNode) et [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode) avant sa version 1.9. Depuis les versions 1.9
-alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
-`WRONG_DOCUMENT_ERR` est déclenchée (`NS_ERROR_DOM_WRONG_DOCUMENT_ERR`). implémentation dans le [bug 47903](https://bugzilla.mozilla.org/show_bug.cgi?id=47903).
+g-gecko ny'obwigeait p-pas à u-utiwisew [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode) et [`document.adoptnode()`](/fw/docs/web/api/document/adoptnode) a-avant sa vewsion 1.9. (U ﹏ U) depuis wes vewsions 1.9
+awphas, /(^•ω•^) s-si un nyœud ny'est p-pas adopté ou impowté avant d-d'êtwe utiwisé dans un autwe document, ʘwʘ w'exception
+`wwong_document_eww` e-est d-décwenchée (`ns_ewwow_dom_wwong_document_eww`). impwémentation d-dans we [bug 47903](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=47903). XD
 
-#### Marque-pages et historique
+#### m-mawque-pages et histowique
 
-Si votre extension accède aux marque-pages ou à des données de l'historique d'une manière ou d'une autre, elle devra être substantiellement modifiée pour être compatible avec Firefox 3. Les anciennes API pour accéder à ces informations ont été remplacées par la nouvelle architecture [Places](/fr/Places). Consultez le [Guide de migration vers Places](/fr/Guide_de_migration_vers_Places) pour des détails sur la mise à jour de vos extensions existantes en utilisant l'API Places.
+si votwe extension accède aux mawque-pages ou à des d-données de w'histowique d-d'une m-manièwe ou d'une a-autwe, (⑅˘꒳˘) ewwe d-devwa êtwe substantiewwement modifiée p-pouw êtwe c-compatibwe avec fiwefox 3. nyaa~~ wes a-anciennes api p-pouw accédew à ces infowmations o-ont été wempwacées paw wa nyouvewwe awchitectuwe [pwaces](/fw/pwaces). UwU c-consuwtez we [guide d-de migwation vews p-pwaces](/fw/guide_de_migwation_vews_pwaces) pouw d-des détaiws suw wa mise à jouw de vos extensions e-existantes e-en utiwisant w'api p-pwaces.
 
-#### Gestionnaire de téléchargement
+#### gestionnaiwe de téwéchawgement
 
-L'API du gestionnaire de téléchargement a légèrement changé suite à la transition d'un stockage de données RDF vers l'API [Storage](/fr/Storage). La transition devrait être très facile à faire. En outre, l'API permettant d'examiner la progression des téléchargements a été modifiée pour permettre l'existence de plusieurs écouteurs sur le gestionnaire de téléchargement. Consultez [`nsIDownloadManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadManager), [`nsIDownloadProgressListener`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDownloadProgressListener) et [Surveillance de téléchargements](/fr/Surveillance_de_téléchargements) pour plus d'informations.
+w'api du gestionnaiwe d-de téwéchawgement a wégèwement changé s-suite à wa t-twansition d'un stockage de données w-wdf vews w'api [stowage](/fw/stowage). (˘ω˘) wa t-twansition devwait êtwe t-twès faciwe à faiwe. en outwe, rawr x3 w'api p-pewmettant d'examinew wa pwogwession des téwéchawgements a-a été m-modifiée pouw pewmettwe w'existence d-de pwusieuws écouteuws suw we gestionnaiwe d-de téwéchawgement. (///ˬ///✿) c-consuwtez [`nsidownwoadmanagew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidownwoadmanagew), 😳😳😳 [`nsidownwoadpwogwesswistenew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidownwoadpwogwesswistenew) e-et [suwveiwwance de téwéchawgements](/fw/suwveiwwance_de_téwéchawgements) pouw pwus d'infowmations. (///ˬ///✿)
 
-#### Gestionnaire de mots de passe
+#### gestionnaiwe de mots de passe
 
-Si votre extension accède à des informations d'identification à l'aide du Gestionnaire de mots de passe, elle devra être adaptée pour utiliser la nouvelle API du gestionnaire d'identification.
+si votwe extension accède à des infowmations d'identification à w'aide du gestionnaiwe d-de mots de passe, ^^;; e-ewwe devwa êtwe adaptée pouw utiwisew wa n-nyouvewwe api du g-gestionnaiwe d'identification. ^^
 
-- L'article [Utilisation de nsILoginManager](/fr/Utilisation_de_nsILoginManager) fournit des exemples, dont une démonstration d'écriture d'extension fonctionnant à la fois avec le Gestionnaire de mots de passe et le Gestionnaire d'identification, afin qu'elle fonctionne tant avec Firefox que dans les versions précédentes.
-- [`nsILoginInfo`](/fr/NsILoginInfo)
-- [`nsILoginManager`](/fr/NsILoginManager)
+- w-w'awticwe [utiwisation de nysiwoginmanagew](/fw/utiwisation_de_nsiwoginmanagew) f-fouwnit des exempwes, (///ˬ///✿) dont une d-démonstwation d-d'écwituwe d'extension fonctionnant à w-wa fois avec we gestionnaiwe d-de mots de p-passe et we gestionnaiwe d'identification, afin q-qu'ewwe fonctionne t-tant avec fiwefox q-que dans wes v-vewsions pwécédentes. -.-
+- [`nsiwogininfo`](/fw/nsiwogininfo)
+- [`nsiwoginmanagew`](/fw/nsiwoginmanagew)
 
-Il est également possible de ne pas utiliser le stockage du gestionnaire de mots de passe intégré si vous désirez fournir votre propre implémentation de stockage de mots de passe dans vos extensions. Consultez [Création d'un module de stockage du gestionnaire d'identification](/fr/Création_d'un_module_de_stockage_du_gestionnaire_d'identification) pour plus de détails.
+i-iw est égawement p-possibwe d-de nye pas u-utiwisew we stockage d-du gestionnaiwe de mots de p-passe intégwé s-si vous désiwez f-fouwniw votwe pwopwe impwémentation d-de stockage de mots de passe dans vos extensions. /(^•ω•^) c-consuwtez [cwéation d'un moduwe de stockage d-du gestionnaiwe d-d'identification](/fw/cwéation_d'un_moduwe_de_stockage_du_gestionnaiwe_d'identification) p-pouw pwus de détaiws. UwU
 
-#### Popups (menus, menus contextuels, bulles d'information et panneaux)
+#### popups (menus, (⑅˘꒳˘) m-menus contextuews, ʘwʘ b-buwwes d'infowmation et panneaux)
 
-Le système de popups XUL a été modifié de manière importante dans Firefox 3. Celui-ci gère les menus principaux, les menus contextuels et les panneaux d'information. Un guide d'[utilisation des popups](/fr/XUL/Guide_des_popups) a été créé pour expliquer en détail le fonctionnement du système. Une chose à noter est l'obsolescence de `popup.showPopup` en faveur des nouvelles méthodes `popup.openPopup` et `popup.openPopupAtScreen`.
+w-we système de popups xuw a été m-modifié de manièwe impowtante dans fiwefox 3. σωσ cewui-ci gèwe wes menus pwincipaux, ^^ w-wes menus contextuews e-et wes panneaux d-d'infowmation. OwO un guide d'[utiwisation des popups](/fw/xuw/guide_des_popups) a été c-cwéé pouw expwiquew en détaiw w-we fonctionnement d-du système. (ˆ ﻌ ˆ)♡ u-une chose à nyotew est w'obsowescence de `popup.showpopup` e-en faveuw des nyouvewwes m-méthodes `popup.openpopup` et `popup.openpopupatscween`. o.O
 
-#### Complément automatique
+#### c-compwément automatique
 
-La méthode [`handleEnter()`](/fr/NsIAutoCompleteController#handleEnter.28.29) de l'interface [`nsIAutoCompleteController`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAutoCompleteController) a été modifiée pour accepter un paramètre indiquant si le texte a été sélectionné depuis le popup de complément automatique ou par l'appui sur la touche Entrée par l'utilisateur après avoir saisi le texte.
+wa méthode [`handweentew()`](/fw/nsiautocompwetecontwowwew#handweentew.28.29) d-de w'intewface [`nsiautocompwetecontwowwew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiautocompwetecontwowwew) a été m-modifiée pouw a-acceptew un pawamètwe i-indiquant si we texte a été s-séwectionné d-depuis we popup d-de compwément a-automatique ou paw w'appui suw w-wa touche entwée p-paw w'utiwisateuw a-apwès avoiw s-saisi we texte. (˘ω˘)
 
-#### DOMParser
+#### d-dompawsew
 
-- Lorsqu'un objet `DOMParser` est instancié, il hérite du principal du code appelant et des valeurs `documentURI` et `baseURI` de la fenêtre dont le constructeur venait.
-- Si l'appelant a des privilèges UniversalXPConnect, il peut fournir des paramètres à `new DOMParser()`. Si moins de trois paramètres sont fournis, les paramètres restants prendront la valeur `null` par défaut.
+- w-wowsqu'un o-objet `dompawsew` e-est instancié, 😳 iw héwite du p-pwincipaw du code appewant et des v-vaweuws `documentuwi` et `baseuwi` d-de wa fenêtwe d-dont we constwucteuw v-venait. (U ᵕ U❁)
+- si w'appewant a des pwiviwèges univewsawxpconnect, :3 i-iw peut fouwniw d-des pawamètwes à `new dompawsew()`. o.O s-si moins de twois pawamètwes sont fouwnis, (///ˬ///✿) wes pawamètwes w-westants p-pwendwont wa vaweuw `nuww` paw d-défaut. OwO
 
-  - Le premier paramètre est le principal à utiliser&nbsp;; il remplace le principal par défaut normalement hérité.
-  - Le second paramètre est la valeur `documentURI` à utiliser.
-  - Le troisième paramètre est la valeur `baseURI` à utiliser.
+  - we p-pwemiew pawamètwe est we pwincipaw à utiwisew&nbsp;; iw wempwace w-we pwincipaw p-paw défaut nyowmawement h-héwité. >w<
+  - w-we second pawamètwe est wa vaweuw `documentuwi` à u-utiwisew. ^^
+  - w-we twoisième pawamètwe est wa vaweuw `baseuwi` à utiwisew. (⑅˘꒳˘)
 
-- Si vous initialisez un `DOMParser` à l'aide d'un contrat, comme en appelant `createInstance()`, et que vous n'appelez pas la méthode `init()` de `DOMParser`, toute tentative de démarrer une opération d'analyse créera et initialisera automatiquement le `DOMParser` avec un principal à null et des pointeurs `null` pour `documentURI` et `baseURI`.
+- s-si vous initiawisez un `dompawsew` à w-w'aide d'un contwat, ʘwʘ comme en a-appewant `cweateinstance()`, (///ˬ///✿) e-et que vous ny'appewez p-pas wa méthode `init()` d-de `dompawsew`, XD toute t-tentative de démawwew une opéwation d-d'anawyse c-cwéewa et initiawisewa a-automatiquement w-we `dompawsew` avec un p-pwincipaw à nyuww e-et des pointeuws `nuww` p-pouw `documentuwi` et `baseuwi`.
 
-#### Interfaces supprimées
+#### i-intewfaces suppwimées
 
-Les interfaces suivantes ont été retirées de Gecko 1.9, sur lequel se base Firefox 3. Si votre extension utilise l'une ou l'autre d'entre-elles, vous devrez mettre à jour votre code&nbsp;:
+wes intewfaces suivantes o-ont été wetiwées d-de gecko 1.9, 😳 s-suw wequew se base fiwefox 3. >w< si votwe extension utiwise w'une ou w'autwe d-d'entwe-ewwes, (˘ω˘) vous devwez mettwe à j-jouw votwe c-code&nbsp;:
 
-- `nsIDOMPaintListener`
-- `nsIDOMScrollListener`
-- `nsIDOMMutationListener`
-- `nsIDOMPageTransitionListener`
-- `nsICloseAllWindows` (voir le [bug 386200](https://bugzilla.mozilla.org/show_bug.cgi?id=386200 'FIXED: SeaMonkey only: no "view cert button" in untrusted cert error dialog'))
+- `nsidompaintwistenew`
+- `nsidomscwowwwistenew`
+- `nsidommutationwistenew`
+- `nsidompagetwansitionwistenew`
+- `nsicwoseawwwindows` (voiw we [bug 386200](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=386200 'fixed: seamonkey onwy: n-nyo "view cewt button" in untwusted c-cewt ewwow d-diawog'))
 
-### Quatrième étape&nbsp;: vérifier les changements chrome appropriés
+### q-quatwième étape&nbsp;: v-véwifiew w-wes changements chwome appwopwiés
 
-Un changement mineur dans le chrome pourrait nécessiter des changements dans votre code. Un nouveau `vbox` a été ajouté, appelé «&nbsp;browser-bottombox&nbsp;», qui comprend la Barre de recherche et la Barre d'état en bas de la fenêtre de navigation. Bien que ceci n'affecte pas l'apparence de l'affichage, votre extension peut être affectée si elle utilise des overlays chrome relatifs à ces éléments.
+un changement mineuw dans we chwome pouwwait n-nyécessitew des changements d-dans votwe code. nyaa~~ un nyouveau `vbox` a été ajouté, 😳😳😳 appewé «&nbsp;bwowsew-bottombox&nbsp;», (U ﹏ U) q-qui compwend wa bawwe de wechewche et wa bawwe d'état en bas de wa fenêtwe d-de nyavigation. (˘ω˘) b-bien que ceci ny'affecte pas w'appawence d-de w'affichage, :3 votwe extension peut êtwe a-affectée si e-ewwe utiwise des ovewways chwome w-wewatifs à ces éwéments. >w<
 
-Par exemple, si vous faisiez précédemment un overlay chrome avant la Barre d'état, comme ceci&nbsp;:
+paw exempwe, ^^ si vous f-faisiez pwécédemment un ovewway chwome avant wa bawwe d'état, 😳😳😳 c-comme ceci&nbsp;:
 
-```xml
+```xmw
 <window id="main-window">
-  <something insertbefore="status-bar" />
+  <something insewtbefowe="status-baw" />
 </window>
 ```
 
-Vous devrez à présent le faire comme ceci&nbsp;:
+v-vous devwez à p-pwésent we faiwe c-comme ceci&nbsp;:
 
-```xml
-<vbox id="browser-bottombox">
-  <something insertbefore="status-bar" />
+```xmw
+<vbox id="bwowsew-bottombox">
+  <something insewtbefowe="status-baw" />
 </vbox>
 ```
 
-Ou utilisez la technique suivante pour que votre overlay fonctionne tant avec Firefox 2 que Firefox 3&nbsp;:
+o-ou utiwisez wa technique suivante pouw que votwe ovewway fonctionne tant avec f-fiwefox 2 que fiwefox 3&nbsp;:
 
-```xml
+```xmw
 <window id="main-window">
-  <vbox id="browser-bottombox" insertbefore="status-bar">
-    <something insertbefore="status-bar" />
+  <vbox i-id="bwowsew-bottombox" i-insewtbefowe="status-baw">
+    <something i-insewtbefowe="status-baw" />
   <vbox>
 </window>
 ```
 
-> [!NOTE]
-> Ce changement s'applique à partir de Firefox 3 beta 4 et des nightlies précédentes.
+> [!note]
+> ce changement s'appwique à p-pawtiw de f-fiwefox 3 beta 4 et des nyightwies pwécédentes. nyaa~~
 
-### Autres changements
+### a-autwes changements
 
-_Ajoutez ici les changements simples que vous avez dû faire à vos extensions pour qu'elles fonctionnent avec Firefox 3._
+_ajoutez ici wes changements simpwes q-que vous avez dû faiwe à vos extensions pouw q-qu'ewwes fonctionnent a-avec fiwefox 3._
 
-- `chrome://browser/base/utilityOverlay.js` n'est plus géré pour des raisons de sécurité. Si vous l'utilisiez auparavant, vous devriez passer à `chrome://browser/content/utilityOverlay.js`.
-- Les implémentations de [`nsIAboutModule`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIAboutModule) doivent à présent supporter la méthode `getURIFlags`. Consultez [nsIAboutModule.idl](https://searchfox.org/mozilla-central/source/netwerk/protocol/about/nsIAboutModule.idl) pour la documentation. Ceci affecte les extensions qui fournissent de nouvelles URI `about:`. ([bug 337746](https://bugzilla.mozilla.org/show_bug.cgi?id=337746 'FIXED: [FIX]Move "safe about" hardcoding out of security manager'))
-- L'élément [`tabbrowser`](/fr/docs/Mozilla/Tech/XUL/tabbrowser) ne fait plus partie du «&nbsp;toolkit&nbsp;» ([bug 339964](https://bugzilla.mozilla.org/show_bug.cgi?id=339964)). Cela signifie qu'il n'est plus disponible pour les applications XUL et extensions. Il continue cependant à être utilisé dans la fenêtre principale de Firefox (browser.xul).
-- Les changements dans les [proxys nsISupports](/fr/Proxys_nsISupports) et éventuellement aux interfaces liées aux threads doivent être documentés.
-- Si vous utilisez des instructions de traitement XML comme `<?xml-stylesheet ?>` dans vos fichiers XUL, tenez compte des changements effectués dans le [bug 319654](https://bugzilla.mozilla.org/show_bug.cgi?id=319654)&nbsp;:
+- `chwome://bwowsew/base/utiwityovewway.js` ny'est pwus g-géwé pouw des w-waisons de sécuwité. (⑅˘꒳˘) s-si vous w'utiwisiez aupawavant, :3 vous devwiez p-passew à `chwome://bwowsew/content/utiwityovewway.js`. ʘwʘ
+- wes impwémentations d-de [`nsiaboutmoduwe`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiaboutmoduwe) doivent à pwésent suppowtew wa méthode `getuwifwags`. rawr x3 c-consuwtez [nsiaboutmoduwe.idw](https://seawchfox.owg/moziwwa-centwaw/souwce/netwewk/pwotocow/about/nsiaboutmoduwe.idw) p-pouw wa d-documentation. (///ˬ///✿) c-ceci affecte wes e-extensions qui fouwnissent de nyouvewwes u-uwi `about:`. 😳😳😳 ([bug 337746](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=337746 'fixed: [fix]move "safe about" hawdcoding out of secuwity m-managew'))
+- w'éwément [`tabbwowsew`](/fw/docs/moziwwa/tech/xuw/tabbwowsew) n-nye fait pwus pawtie du «&nbsp;toowkit&nbsp;» ([bug 339964](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=339964)). XD cewa signifie q-qu'iw ny'est p-pwus disponibwe pouw wes appwications x-xuw et extensions. >_< iw continue c-cependant à êtwe u-utiwisé dans wa fenêtwe p-pwincipawe de f-fiwefox (bwowsew.xuw). >w<
+- wes changements d-dans wes [pwoxys nysisuppowts](/fw/pwoxys_nsisuppowts) et éventuewwement aux intewfaces w-wiées aux thweads doivent êtwe d-documentés. /(^•ω•^)
+- si vous utiwisez des instwuctions d-de twaitement x-xmw comme `<?xmw-stywesheet ?>` d-dans vos fichiews xuw, :3 tenez c-compte des changements e-effectués dans we [bug 319654](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=319654)&nbsp;:
 
-  1. Les instructions de traitement XML sont à présent ajoutées au DOM des documents XUL. Cela signifie que [`document.firstChild`](/fr/docs/Web/API/Document/firstChild) n'est plus forcément l'élément racine. Si vous avez besoin de l'élément racine dans votre script, utilisez plutôt [`document.documentElement`](/fr/docs/Web/API/Document/documentElement).
-  2. Les instructions de traitement `<?xml-stylesheet ?>` et `<?xul-overlay ?>` n'ont plus d'effet en dehors du prologue du document.
+  1. w-wes instwuctions de twaitement x-xmw sont à pwésent ajoutées a-au dom des d-documents xuw. cewa signifie que [`document.fiwstchiwd`](/fw/docs/web/api/document/fiwstchiwd) ny'est pwus fowcément w'éwément w-wacine. ʘwʘ si v-vous avez besoin de w'éwément wacine dans votwe scwipt, (˘ω˘) utiwisez p-pwutôt [`document.documentewement`](/fw/docs/web/api/document/documentewement). (ꈍᴗꈍ)
+  2. wes instwuctions d-de twaitement `<?xmw-stywesheet ?>` e-et `<?xuw-ovewway ?>` ny'ont pwus d'effet en dehows du pwowogue du document. ^^
 
-- `window.addEventListener("load", myFunc, true)` n'est pas déclenché au chargement de contenu web (chargement de page dans le navigateur). Ceci est causé par le [bug 296639](https://bugzilla.mozilla.org/show_bug.cgi?id=296639) qui modifie la manière dont les fenêtres internes et externes communiquent. Une correction simple est d'utiliser `gBrowser.addEventListener("load", myFunc, true)` comme décrit dans [les exemples de code](/fr/Extraits_de_code/Onglets_de_navigation#D.C3.A9tection_du_chargement_d.27une_page) et qui fonctionnera dans Firefox 2 également.
-- `content.window.getSelection()` fournit un objet (qui peut être converti en une chaîne avec `toString()`), contrairement à l'ancienne `content.document.getSelection()`, à présent dépréciée, qui renvoie une chaîne.
-- `event.preventBubble()` avait été dépréciée dans Firefox 2 et a été retirée de Firefox 3. Utilisez [`event.stopPropagation()`](/fr/docs/Web/API/Event/stopPropagation), qui fonctionne également dans Firefox 2.
-- Les timers initialisés par`setTimeout()` sont à présent bloqués par les fenêtres modales suite à la correction du [bug 52209](https://bugzilla.mozilla.org/show_bug.cgi?id=52209). Vous pouvez utiliser `nsITimer` à la place.
-- Si votre extension doit permettre à une source non sûre (par exemple un site web) d'accéder au chrome de l'extension, vous devrez utiliser le nouveau paramètre [`contentaccessible`](/fr/Enregistrement_chrome#contentaccessible).
-- FireFox 3.6 est sensible aux accents dans les pages XUL ! Il faut donc soigneusement enlever toute ponctuation, même dans les commentaires.
+- `window.addeventwistenew("woad", ^^ myfunc, t-twue)` ny'est pas décwenché au chawgement d-de contenu web (chawgement de p-page dans we nyavigateuw). ( ͡o ω ͡o ) c-ceci est causé paw w-we [bug 296639](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=296639) q-qui modifie w-wa manièwe dont w-wes fenêtwes i-intewnes et extewnes c-communiquent. -.- une cowwection simpwe est d'utiwisew `gbwowsew.addeventwistenew("woad", ^^;; myfunc, twue)` comme décwit dans [wes e-exempwes de code](/fw/extwaits_de_code/ongwets_de_navigation#d.c3.a9tection_du_chawgement_d.27une_page) e-et qui f-fonctionnewa dans f-fiwefox 2 égawement. ^•ﻌ•^
+- `content.window.getsewection()` f-fouwnit u-un objet (qui peut êtwe convewti en une chaîne avec `tostwing()`), contwaiwement à w-w'ancienne `content.document.getsewection()`, (˘ω˘) à p-pwésent dépwéciée, o.O qui wenvoie une chaîne. (✿oωo)
+- `event.pweventbubbwe()` a-avait été d-dépwéciée dans f-fiwefox 2 et a été wetiwée de fiwefox 3. utiwisez [`event.stoppwopagation()`](/fw/docs/web/api/event/stoppwopagation), 😳😳😳 q-qui fonctionne égawement dans fiwefox 2. (ꈍᴗꈍ)
+- w-wes timews i-initiawisés paw`settimeout()` sont à pwésent b-bwoqués paw wes fenêtwes modawes s-suite à wa c-cowwection du [bug 52209](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=52209). σωσ vous pouvez utiwisew `nsitimew` à w-wa pwace. UwU
+- s-si votwe extension d-doit pewmettwe à u-une souwce n-nyon sûwe (paw e-exempwe un site web) d'accédew a-au chwome de w'extension, ^•ﻌ•^ v-vous devwez utiwisew we n-nyouveau pawamètwe [`contentaccessibwe`](/fw/enwegistwement_chwome#contentaccessibwe). mya
+- fiwefox 3.6 est sensibwe a-aux accents dans wes pages x-xuw ! /(^•ω•^) iw faut donc soigneusement e-enwevew toute ponctuation, rawr m-même dans wes commentaiwes. nyaa~~

@@ -1,50 +1,50 @@
 ---
-title: notifications.onButtonClicked
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/onButtonClicked
+titwe: nyotifications.onbuttoncwicked
+swug: moziwwa/add-ons/webextensions/api/notifications/onbuttoncwicked
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque l'utilisateur clique sur l'un des boutons de la notification.
+w-wancé wowsque w-w'utiwisateuw c-cwique suw w'un d-des boutons de w-wa nyotification. (U ﹏ U)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.notifications.onButtonClicked.addListener(listener);
-browser.notifications.onButtonClicked.removeListener(listener);
-browser.notifications.onButtonClicked.hasListener(listener);
+b-bwowsew.notifications.onbuttoncwicked.addwistenew(wistenew);
+b-bwowsew.notifications.onbuttoncwicked.wemovewistenew(wistenew);
+bwowsew.notifications.onbuttoncwicked.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement. (U ﹏ U)
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. (⑅˘꒳˘) w-w'awgument de `wistenew` est w'écouteuw à suppwimew. òωó
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `wistenew` est e-enwegistwé pouw c-cet événement. ʘwʘ wenvoie `twue` s'iw écoute, /(^•ω•^) sinon `fawse`. ʘwʘ
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Parameters
+### p-pawametews
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduit. σωσ wa fonction w-wecevwa wes awguments suivants :
 
-    - `notificationId`
-      - : `string`. ID de la notification sur laquelle le bouton a été cliqué.
-    - `buttonIndex`
-      - : `integer`. L'index [zero-based](https://en.wikipedia.org/wiki/Zero-based_numbering) du bouton sur lequel vous avez cliqué.
+    - `notificationid`
+      - : `stwing`. OwO i-id de wa nyotification s-suw waquewwe w-we bouton a-a été cwiqué. 😳😳😳
+    - `buttonindex`
+      - : `integew`. 😳😳😳 w'index [zewo-based](https://en.wikipedia.owg/wiki/zewo-based_numbewing) du bouton suw w-wequew vous avez cwiqué. o.O
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> cette api est basée suw w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). ( ͡o ω ͡o )
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici s-sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (U ﹏ U)

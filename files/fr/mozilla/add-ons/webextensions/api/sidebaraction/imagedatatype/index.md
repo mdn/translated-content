@@ -1,54 +1,54 @@
 ---
-title: sidebarAction.ImageDataType
-slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/ImageDataType
+titwe: sidebawaction.imagedatatype
+swug: moziwwa/add-ons/webextensions/api/sidebawaction/imagedatatype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Données de pixel pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, à partir d'un élément {{htmlelement("canvas")}}).
+d-données de pixew p-pouw une image. /(^•ω•^) d-doit êtwe un o-objet [`imagedata`](/fw/docs/web/api/imagedata) (paw e-exempwe, 😳😳😳 à p-pawtiw d'un éwément {{htmwewement("canvas")}}).
 
-## Type
+## t-type
 
-Un objet [`ImageData`](/fr/docs/Web/API/ImageData).
+un o-objet [`imagedata`](/fw/docs/web/api/imagedata). ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+> cette api est basée suw w'api o-opewa [`chwome.sidebawaction`](https://dev.opewa.com/extensions/sidebaw-action-api/). >_<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. rawr aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, >w< with ow without
+// modification, (⑅˘꒳˘) a-awe pewmitted pwovided that t-the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, OwO this wist of conditions a-and the fowwowing discwaimew. (ꈍᴗꈍ)
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, 😳 this wist o-of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// d-distwibution. 😳😳😳
+//    * nyeithew t-the nyame of googwe i-inc. mya nyow the nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, (⑅˘꒳˘) incwuding, (U ﹏ U) but nyot
+// w-wimited to, mya t-the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ʘwʘ in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (˘ω˘) indiwect, (U ﹏ U) incidentaw, ^•ﻌ•^
+// s-speciaw, (˘ω˘) exempwawy, ow consequentiaw d-damages (incwuding, :3 b-but nyot
+// w-wimited to, ^^;; pwocuwement of s-substitute goods o-ow sewvices; w-woss of use, 🥺
+// d-data, (⑅˘꒳˘) ow pwofits; ow business intewwuption) howevew c-caused and on a-any
+// theowy o-of wiabiwity, nyaa~~ whethew i-in contwact, :3 s-stwict wiabiwity, ( ͡o ω ͡o ) ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, mya even if advised of the possibiwity of s-such damage. (///ˬ///✿)
 -->

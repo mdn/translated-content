@@ -1,59 +1,59 @@
 ---
-title: tabs.WindowType
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/WindowType
+titwe: tabs.windowtype
+swug: m-moziwwa/add-ons/webextensions/api/tabs/windowtype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type de fenêtre qui héberge cet onglet.
+w-we type d-de fenêtwe qui h-hébewge cet ongwet. >w<
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
+w-wes vaweuws de ce t-type sont des c-chaînes. (⑅˘꒳˘) wes vaweuws possibwes sont:
 
-- **"normal"**
+- **"nowmaw"**
 - **"popup"**
-- **"panel"**
-- **"devtools"**
+- **"panew"**
+- **"devtoows"**
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). OwO c-cette documentation est d-déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code.
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. (ꈍᴗꈍ)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 😳 a-aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution a-and use in souwce a-and binawy fowms, mya w-with ow without
+// modification, mya awe pewmitted p-pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (⑅˘꒳˘) this w-wist of conditions and the fowwowing d-discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, mya t-this wist o-of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. ʘwʘ
+//    * nyeithew the nyame of googwe i-inc. (˘ω˘) nyow the nyames of its
+// c-contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied w-wawwanties, ^•ﻌ•^ incwuding, but nyot
+// wimited to, (˘ω˘) the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. :3 i-in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, ^^;; indiwect, i-incidentaw, 🥺
+// s-speciaw, (⑅˘꒳˘) exempwawy, nyaa~~ o-ow consequentiaw d-damages (incwuding, :3 but nyot
+// wimited to, ( ͡o ω ͡o ) p-pwocuwement of s-substitute goods o-ow sewvices; w-woss of use, mya
+// d-data, (///ˬ///✿) ow pwofits; ow business intewwuption) howevew caused and on a-any
+// theowy of wiabiwity, (˘ω˘) whethew in contwact, ^^;; stwict wiabiwity, (✿oωo) ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this s-softwawe, even i-if advised of the p-possibiwity of such damage. (U ﹏ U)
 -->

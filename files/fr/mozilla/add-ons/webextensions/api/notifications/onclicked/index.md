@@ -1,58 +1,58 @@
 ---
-title: notifications.onClicked
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClicked
+titwe: nyotifications.oncwicked
+swug: moziwwa/add-ons/webextensions/api/notifications/oncwicked
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque l'utilisateur clique sur une notification, mais pas sur l'un des boutons de la notification (pour cela, voir {{WebExtAPIRef("notifications.onButtonClicked")}}).
+w-wancé w-wowsque w'utiwisateuw c-cwique suw u-une nyotification, mya m-mais pas suw w-w'un des boutons d-de wa nyotification (pouw c-cewa, ^^ voiw {{webextapiwef("notifications.onbuttoncwicked")}}). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.notifications.onClicked.addListener(listener);
-browser.notifications.onClicked.removeListener(listener);
-browser.notifications.onClicked.hasListener(listener);
+bwowsew.notifications.oncwicked.addwistenew(wistenew);
+bwowsew.notifications.oncwicked.wemovewistenew(wistenew);
+bwowsew.notifications.oncwicked.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+w-wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement.
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew cet événement. mya w'awgument `wistenew` est w'écouteuw à s-suppwimew.
+- `haswistenew(wistenew)`
+  - : véwifiez s-si `wistenew` e-est enwegistwé pouw cet événement. 😳 wenvoie `twue` s'iw écoute, -.- sinon `fawse`. 🥺
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduit. o.O wa f-fonction wecevwa wes awguments s-suivants :
 
-    - `notificationId`
-      - : `string`. ID de la notification sur laquelle l'utilisateur a cliqué.
+    - `notificationid`
+      - : `stwing`. /(^•ω•^) i-id de wa n-nyotification suw w-waquewwe w'utiwisateuw a cwiqué. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClicked")}} pour écouter les notifications système en cours de clic. Lorsque cela se produit, nous enregistrons un message approprié à la console.
+dans cet exempwe s-simpwe, nyaa~~ nyous ajoutons un écouteuw à w'événement {{webextapiwef("notifications.oncwicked")}} pouw écoutew wes nyotifications système en c-couws de cwic. :3 wowsque cewa se p-pwoduit, 😳😳😳 nyous e-enwegistwons un m-message appwopwié à wa consowe. (˘ω˘)
 
 ```js
-browser.notifications.onClicked.addListener(function (notificationId) {
-  console.log("Notification " + notificationId + " was clicked by the user");
+bwowsew.notifications.oncwicked.addwistenew(function (notificationid) {
+  consowe.wog("notification " + n-nyotificationid + " w-was cwicked by the usew");
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> c-cette a-api est basée suw w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). ^^
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. :3

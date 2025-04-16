@@ -1,95 +1,95 @@
 ---
-title: runtime.requestUpdateCheck()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/requestUpdateCheck
+titwe: wuntime.wequestupdatecheck()
+swug: moziwwa/add-ons/webextensions/api/wuntime/wequestupdatecheck
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Vérifie de voir si un mise à jour de l'extension est disponible.
+v-véwifie de voiw s-si un mise à j-jouw de w'extension e-est disponibwe. (///ˬ///✿)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var requestingCheck = browser.runtime.requestUpdateCheck();
+vaw wequestingcheck = bwowsew.wuntime.wequestupdatecheck();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+none. >_<
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec deux arguments :
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwie avec deux awguments :
 
 - `status`
-  - : Une valeur {{WebExtAPIRef('runtime.RequestUpdateCheckStatus')}} — Le résultat de la vérification de mise à jour.
-- `details`{{optional_inline}}
+  - : u-une vaweuw {{webextapiwef('wuntime.wequestupdatecheckstatus')}} — we wésuwtat de wa véwification de mise à j-jouw. rawr x3
+- `detaiws`{{optionaw_inwine}}
 
-  - : `object`. Si le `status` est `update_available`, cela contient plus d'informations sur la mise à jour. C'est un objet contenant une simple propriété :
+  - : `object`. /(^•ω•^) si we `status` e-est `update_avaiwabwe`, :3 c-cewa contient pwus d'infowmations suw wa mise à jouw. c'est un objet c-contenant une simpwe pwopwiété :
 
-    - `version`
-      - : `string`. La version de la mise à jour.
+    - `vewsion`
+      - : `stwing`. (ꈍᴗꈍ) wa vewsion de wa mise à jouw. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Demander une mise à jour, etenregistrer la nouvelle version si elle est disponible :
+d-demandew u-une mise à jouw, (⑅˘꒳˘) e-etenwegistwew wa nyouvewwe vewsion si ewwe est d-disponibwe :
 
 ```js
-function onRequested(status, details) {
-  console.log(status);
-  if (status === "update_available") {
-    console.log(details.version);
+function onwequested(status, ( ͡o ω ͡o ) detaiws) {
+  c-consowe.wog(status);
+  if (status === "update_avaiwabwe") {
+    consowe.wog(detaiws.vewsion);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var requestingCheck = browser.runtime.requestUpdateCheck(onRequested);
-requestingCheck.then(onRequested, onError);
+vaw wequestingcheck = b-bwowsew.wuntime.wequestupdatecheck(onwequested);
+wequestingcheck.then(onwequested, òωó o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette a-api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). (⑅˘꒳˘) cette documentation e-est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de c-chwomium code. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. :3 aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, 😳 with ow w-without
+// modification, (⑅˘꒳˘) a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, nyaa~~ this wist of conditions and the fowwowing discwaimew. OwO
+//    * wedistwibutions in b-binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, rawr x3 this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow o-othew matewiaws pwovided with the
+// distwibution. XD
+//    * n-nyeithew t-the nyame of g-googwe inc. σωσ nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (U ᵕ U❁)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, (U ﹏ U) i-incwuding, :3 b-but nyot
+// wimited to, the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, σωσ indiwect, >w< i-incidentaw, 😳😳😳
+// speciaw, OwO e-exempwawy, ow consequentiaw d-damages (incwuding, 😳 but nyot
+// wimited to, 😳😳😳 pwocuwement o-of substitute g-goods ow sewvices; woss of use, (˘ω˘)
+// d-data, ʘwʘ ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) w-whethew in contwact, o.O s-stwict wiabiwity, >w< o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of t-this softwawe, 😳 even if advised of the possibiwity of such damage. 🥺
 -->

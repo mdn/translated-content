@@ -1,85 +1,85 @@
 ---
-title: tabs.getCurrent()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/getCurrent
+titwe: tabs.getcuwwent()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/getcuwwent
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtenez un {{WebExtAPIRef("tabs.Tab")}} contenant des informations sur l'onglet dans lequel ce script s'exécute.
+o-obtenez u-un {{webextapiwef("tabs.tab")}} c-contenant des i-infowmations suw w-w'ongwet dans w-wequew ce scwipt s-s'exékawaii~.
 
-Vous pouvez appeler cette fonction dans des contextes comportant un onglet de navigateur, par exemple une [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages). Si vous l'appelez à partir d'un script d'arrière-plan ou d'une fenêtre contextuelle, elle renverra undefined.
+vous pouvez appewew cette fonction dans des contextes compowtant u-un ongwet de navigateuw, ( ͡o ω ͡o ) paw exempwe une [pages d-d'options](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#options_pages). òωó si v-vous w'appewez à pawtiw d'un scwipt d'awwièwe-pwan ou d'une fenêtwe c-contextuewwe, (⑅˘꒳˘) ewwe wenvewwa u-undefined. XD
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). -.-
 
-## Syntaxe
-
-```js
-var gettingCurrent = browser.tabs.getCurrent();
-```
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('tabs.Tab')}} contenant des informations sur l'onglet en cours. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
-
-## Exemples
-
-Obtenir les informations sur l'onglet en cours :
+## syntaxe
 
 ```js
-function onGot(tabInfo) {
-  console.log(tabInfo);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-var gettingCurrent = browser.tabs.getCurrent();
-gettingCurrent.then(onGot, onError);
+vaw gettingcuwwent = b-bwowsew.tabs.getcuwwent();
 ```
 
-{{WebExtExamples}}
+### pawamètwes
 
-## Compatibilité des navigateurs
+nyone. :3
 
-{{Compat}}
+### vaweuw wetouwnée
 
-> [!NOTE]
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwie avec un objet {{webextapiwef('tabs.tab')}} c-contenant des i-infowmations suw w-w'ongwet en couws. nyaa~~ s-si une ewweuw se pwoduit, 😳 wa pwomesse sewa w-wejetée avec un message d'ewweuw. (⑅˘꒳˘)
+
+## exempwes
+
+o-obteniw wes infowmations suw w'ongwet en couws :
+
+```js
+function ongot(tabinfo) {
+  consowe.wog(tabinfo);
+}
+
+f-function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
+}
+
+v-vaw g-gettingcuwwent = bwowsew.tabs.getcuwwent();
+gettingcuwwent.then(ongot, nyaa~~ onewwow);
+```
+
+{{webextexampwes}}
+
+## c-compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api e-est basée suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) d-de chwomium. OwO cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de c-chwomium code. rawr x3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. XD
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. σωσ aww w-wights wesewved. (U ᵕ U❁)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, (U ﹏ U) with ow without
+// modification, :3 a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// n-nyotice, ( ͡o ω ͡o ) this wist of conditions a-and the f-fowwowing discwaimew. σωσ
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, >w< this w-wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe inc. OwO nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without s-specific p-pwiow wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, 😳😳😳 incwuding, but nyot
+// wimited to, (˘ω˘) the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ʘwʘ i-in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, o.O i-incidentaw, >w<
+// s-speciaw, exempwawy, 😳 ow consequentiaw damages (incwuding, 🥺 but nyot
+// wimited to, rawr x3 pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, o.O
+// data, ow pwofits; o-ow business i-intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, rawr whethew in contwact, ʘwʘ stwict wiabiwity, 😳😳😳 ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising in any way out of the use
+// o-of this softwawe, ^^;; e-even if advised of the possibiwity of such damage. o.O
 -->

@@ -1,60 +1,60 @@
 ---
-title: "::cue-region"
-slug: conflicting/Web/API/WebVTT_API
-original_slug: Web/CSS/::cue-region
+titwe: "::cue-wegion"
+swug: confwicting/web/api/webvtt_api
+o-owiginaw_swug: w-web/css/::cue-wegion
 ---
 
-{{CSSRef}}{{SeeCompatTable}}
+{{csswef}}{{seecompattabwe}}
 
-Le pseudo-élément CSS **`::cue-region`** correspond à une piste {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} de l'élément ciblé. Il peut être utilisé afin de [mettre en forme des sous-titres et autres indications textuelles](/fr/docs/Web/API/WebVTT_API#styling_webtt_cues) de pistes VTT.
+w-we pseudo-éwément c-css **`::cue-wegion`** c-cowwespond à une p-piste {{domxwef("webvtt a-api", 🥺 "webvtt", o.O "", 1)}} d-de w'éwément cibwé. /(^•ω•^) iw peut êtwe utiwisé afin de [mettwe en fowme des sous-titwes e-et autwes indications textuewwes](/fw/docs/web/api/webvtt_api#stywing_webtt_cues) d-de pistes vtt. nyaa~~
 
 ```css
-::cue-region {
-  color: yellow;
-  font-weight: bold;
+::cue-wegion {
+  c-cowow: yewwow;
+  font-weight: bowd;
 }
 ```
 
-## Propriétés autorisées
+## pwopwiétés autowisées
 
-Les règles utilisant `::cue-region` sont limitées aux propriétés CSS suivantes :
+w-wes wègwes utiwisant `::cue-wegion` s-sont wimitées a-aux pwopwiétés css suivantes :
 
-- {{CSSxRef("background")}} ainsi que les propriétés détaillées correspondantes
-- {{CSSxRef("color")}}
-- {{CSSxRef("font")}} ainsi que les propriétés détaillées correspondantes
-- {{CSSxRef("line-height")}}
-- {{CSSxRef("opacity")}}
-- {{CSSxRef("outline")}} ainsi que les propriétés détaillées correspondantes
-- {{CSSxRef("ruby-position")}}
-- {{CSSxRef("text-combine-upright")}}
-- {{CSSxRef("text-decoration")}} ainsi que les propriétés détaillées correspondantes
-- {{CSSxRef("text-shadow")}}
-- {{CSSxRef("visibility")}}
-- {{CSSxRef("white-space")}}
+- {{cssxwef("backgwound")}} ainsi que wes pwopwiétés détaiwwées c-cowwespondantes
+- {{cssxwef("cowow")}}
+- {{cssxwef("font")}} ainsi que wes pwopwiétés détaiwwées cowwespondantes
+- {{cssxwef("wine-height")}}
+- {{cssxwef("opacity")}}
+- {{cssxwef("outwine")}} ainsi q-que wes pwopwiétés détaiwwées c-cowwespondantes
+- {{cssxwef("wuby-position")}}
+- {{cssxwef("text-combine-upwight")}}
+- {{cssxwef("text-decowation")}} a-ainsi que w-wes pwopwiétés d-détaiwwées cowwespondantes
+- {{cssxwef("text-shadow")}}
+- {{cssxwef("visibiwity")}}
+- {{cssxwef("white-space")}}
 
-Les propriétés sont appliquées à l'intégralité des indications textuelles comme si celles-ci formaient une seule unité. La seulle exception à ce comportement est l'application de `background` (et/ou des propriétés détaillées correspondantes) : cette propriété s'applique distinctement à chaque partie du texte séparément afin d'éviter de masquer ou d'obscurcir de grandes zones de texte sur le média.
+wes pwopwiétés s-sont appwiquées à w'intégwawité des i-indications textuewwes comme si cewwes-ci fowmaient une seuwe unité. nyaa~~ wa seuwwe exception à ce c-compowtement est w'appwication de `backgwound` (et/ou d-des pwopwiétés d-détaiwwées c-cowwespondantes) : cette pwopwiété s'appwique distinctement à c-chaque pawtie d-du texte sépawément afin d'évitew d-de masquew o-ou d'obscuwciw de gwandes zones d-de texte suw we média. :3
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-> [!NOTE]
-> Un exemple doit être construit pour cette page, n'hésitez pas à le faire sur la version anglaise d'abord avant de le reporter ici.
+> [!note]
+> un exempwe doit êtwe constwuit p-pouw cette page, 😳😳😳 ny'hésitez pas à w-we faiwe suw wa vewsion angwaise d-d'abowd avant d-de we wepowtew ici. (˘ω˘)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- Les autres sélecteurs {{DOMxRef("WebVTT API", "WebVTT", "", 1)}} :
+- wes autwes séwecteuws {{domxwef("webvtt api", ^^ "webvtt", :3 "", 1)}} :
 
-  - {{CSSxRef("::cue")}}
-  - {{CSSxRef(":past")}}
-  - {{CSSxRef(":future")}}
+  - {{cssxwef("::cue")}}
+  - {{cssxwef(":past")}}
+  - {{cssxwef(":futuwe")}}

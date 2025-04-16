@@ -1,243 +1,243 @@
 ---
-title: Firefox 3.6 pour les développeurs
-slug: Mozilla/Firefox/Releases/3.6
+titwe: fiwefox 3.6 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/3.6
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-1. Notes de versions pour développeurs
+1. n-nyotes d-de vewsions pouw d-dévewoppeuws
 
-   1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+   1. -.- [notes d-de vewsions pouw d-dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases)
 
-2. Modules complémentaires
+2. 🥺 m-moduwes compwémentaiwes
 
-   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
+   1. (˘ω˘) [webextensions](/fw/docs/moziwwa/add-ons/webextensions)
+   2. òωó [thèmes](/fw/docs/moziwwa/add-ons/themes)
 
-3. Fonctionnement interne de Firefox
+3. UwU fonctionnement intewne de fiwefox
 
-   1. [Le projet Mozilla](/fr/docs/Mozilla)
-   2. [Gecko](/fr/docs/Mozilla/Gecko)
-   3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-   4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-   5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-   6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-   7. [MFBT](/fr/docs/Mozilla/MFBT)
-   8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-   9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
-   10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-   11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
-   12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+   1. ^•ﻌ•^ [we pwojet moziwwa](/fw/docs/moziwwa)
+   2. mya [gecko](/fw/docs/moziwwa/gecko)
+   3. (✿oωo) [mode « headwess »](/fw/docs/moziwwa/fiwefox/headwess_mode)
+   4. XD [moduwes d-de code javascwipt](/fw/docs/moziwwa/javascwipt_code_moduwes)
+   5. :3 [js-ctypes](/fw/docs/moziwwa/js-ctypes)
+   6. [we pwojet mathmw](/fw/docs/moziwwa/mathmw_pwoject)
+   7. (U ﹏ U) [mfbt](/fw/docs/moziwwa/mfbt)
+   8. UwU [wes p-pwojets moziwwa](/fw/docs/moziwwa/pwojects)
+   9. ʘwʘ [we système d-de pwéféwences](/fw/docs/moziwwa/pwefewences)
+   10. >w< [connexions webidw](/fw/docs/moziwwa/webidw_bindings)
+   11. 😳😳😳 [xpcom](/fw/docs/moziwwa/tech/xpcom)
+   12. rawr [xuw](/fw/docs/moziwwa/tech/xuw)
 
-4. Développer et contribuer
+4. ^•ﻌ•^ dévewoppew et contwibuew
 
-   1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
-   3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-   4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-   5. [Localisation](/fr/docs/Mozilla/Localization)
-   6. [Mercurial](/fr/docs/Mozilla/Mercurial)
-   7. [Assurance qualité](/fr/docs/Mozilla/QA)
-   8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+   1. σωσ [instwuctions d-de compiwation](/fw/docs/moziwwa/devewopew_guide/buiwd_instwuctions)
+   2. :3 [configuwation des o-options de compiwation](https://fiwefox-souwce-docs.moziwwa.owg/setup/configuwing_buiwd_options.htmw)
+   3. rawr x3 [fonctionnement d-de wa compiwation](/fw/docs/moziwwa/devewopew_guide/buiwd_instwuctions/how_moziwwa_s_buiwd_system_wowks)
+   4. nyaa~~ [code souwce de moziwwa](/fw/docs/moziwwa/devewopew_guide/souwce_code/mewcuwiaw)
+   5. [wocawisation](/fw/docs/moziwwa/wocawization)
+   6. :3 [mewcuwiaw](/fw/docs/moziwwa/mewcuwiaw)
+   7. >w< [assuwance quawité](/fw/docs/moziwwa/qa)
+   8. rawr [utiwisation de code moziwwa d-dans d'autwes pwojets](/fw/docs/moziwwa/using_moziwwa_code_in_othew_pwojects)
 
-Firefox 3.6 (nom de code [Namoroka](https://wiki.mozilla.org/Firefox/Namoroka)) est sorti le 21 janvier 2010 et est basé sur Gecko 1.9.2. Cette page fournit des liens vers des articles qui décrivent les nouvelles fonctionnalités de Firefox 3.6.
+fiwefox 3.6 (nom de code [namowoka](https://wiki.moziwwa.owg/fiwefox/namowoka)) est sowti we 21 j-janview 2010 et est basé suw g-gecko 1.9.2. 😳 cette p-page fouwnit d-des wiens vews des a-awticwes qui décwivent wes nyouvewwes fonctionnawités d-de fiwefox 3.6. 😳
 
-## Pour les développeurs de sites et d'applications Web
+## pouw wes dévewoppeuws de sites et d-d'appwications web
 
-### CSS
+### css
 
-- [Utilisation de dégradés](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients)
-  - : Firefox 3.6 ajoute le support de [`-moz-linear-gradient`](/fr/docs/Web/CSS/gradient/linear-gradient) et [`-moz-radial-gradient`](/fr/docs/Web/CSS/gradient/radial-gradient) pour la propriété [`background`](/fr/docs/Web/CSS/background).
-- [Fonds multiples](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds)
-  - : La propriété [`background`](/fr/docs/Web/CSS/background) (ainsi que [`background-attachment`](/fr/docs/Web/CSS/background-attachment)[`background-color`](/fr/docs/Web/CSS/background-color), [`background-image`](/fr/docs/Web/CSS/background-image), [`background-position`](/fr/docs/Web/CSS/background-position) et [`background-repeat`](/fr/docs/Web/CSS/background-repeat)) peuvent gérer des fonds multiples. Ceux-ci seront affichés par couches, les uns au dessus des autres.
-- [Fonctionnalités de médias spécifiques à Mozilla](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#fonctionnalit.c3.a9s_de_m.c3.a9dias_sp.c3.a9cifiques_.c3.a0_mozilla)
-  - : Des fonctionnalités de médias ont été ajoutées pour des mesures spécifiques à Mozilla, afin de pouvoir utiliser des [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) pour vérifier plus aisément la disponibilité de fonctionnalités comme un écran tactile.
-- [Redimensionnement d'images de fond](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Resizing_background_images)
-  - : La propriété `background-size` du [brouillon CSS 3 Backgrounds and Borders](https://dev.w3.org/csswg/css3-background/) est gérée sous le nom de [`-moz-background-size`](/fr/docs/Web/CSS/background-size).
-- [Support des polices WOFF](/fr/docs/Web/CSS/CSS_fonts/WOFF)
-  - : [`@font-face`](/fr/docs/Web/CSS/@font-face) supporte désormais le format de polices Web téléchargeables WOFF
-- [Evènements pointeurs](/fr/docs/Web/CSS/pointer-events)
-  - : La propriété [`pointer-events`](/fr/docs/Web/CSS/pointer-events) si le contenu d'un élément peut être ou non la cible d'évènements pointeur avec la souris.
+- [utiwisation de dégwadés](/fw/docs/web/css/css_images/using_css_gwadients)
+  - : fiwefox 3.6 ajoute we suppowt d-de [`-moz-wineaw-gwadient`](/fw/docs/web/css/gwadient/wineaw-gwadient) et [`-moz-wadiaw-gwadient`](/fw/docs/web/css/gwadient/wadiaw-gwadient) p-pouw wa pwopwiété [`backgwound`](/fw/docs/web/css/backgwound). 🥺
+- [fonds m-muwtipwes](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds)
+  - : w-wa pwopwiété [`backgwound`](/fw/docs/web/css/backgwound) (ainsi que [`backgwound-attachment`](/fw/docs/web/css/backgwound-attachment)[`backgwound-cowow`](/fw/docs/web/css/backgwound-cowow), rawr x3 [`backgwound-image`](/fw/docs/web/css/backgwound-image), ^^ [`backgwound-position`](/fw/docs/web/css/backgwound-position) et [`backgwound-wepeat`](/fw/docs/web/css/backgwound-wepeat)) peuvent g-géwew des fonds m-muwtipwes. ( ͡o ω ͡o ) ceux-ci sewont affichés p-paw couches, XD w-wes uns au dessus des autwes. ^^
+- [fonctionnawités d-de médias spécifiques à m-moziwwa](/fw/docs/web/css/css_media_quewies/using_media_quewies#fonctionnawit.c3.a9s_de_m.c3.a9dias_sp.c3.a9cifiques_.c3.a0_moziwwa)
+  - : des fonctionnawités de médias ont été a-ajoutées pouw des mesuwes s-spécifiques à moziwwa, (⑅˘꒳˘) afin de p-pouvoiw utiwisew d-des [media quewies](/fw/docs/web/css/css_media_quewies/using_media_quewies) pouw véwifiew pwus aisément wa disponibiwité de fonctionnawités comme un écwan t-tactiwe. (⑅˘꒳˘)
+- [wedimensionnement d-d'images de fond](/fw/docs/web/css/css_backgwounds_and_bowdews/wesizing_backgwound_images)
+  - : wa pwopwiété `backgwound-size` d-du [bwouiwwon c-css 3 backgwounds a-and bowdews](https://dev.w3.owg/csswg/css3-backgwound/) est géwée sous we nyom de [`-moz-backgwound-size`](/fw/docs/web/css/backgwound-size). ^•ﻌ•^
+- [suppowt d-des powices woff](/fw/docs/web/css/css_fonts/woff)
+  - : [`@font-face`](/fw/docs/web/css/@font-face) suppowte désowmais we fowmat de powices web téwéchawgeabwes w-woff
+- [evènements pointeuws](/fw/docs/web/css/pointew-events)
+  - : w-wa pwopwiété [`pointew-events`](/fw/docs/web/css/pointew-events) s-si we c-contenu d'un éwément peut êtwe o-ou nyon wa cibwe d-d'évènements p-pointeuw avec w-wa souwis. ( ͡o ω ͡o )
 
-#### Autres changements CSS
+#### autwes changements css
 
-- L'unité de longueur [`rem`](/fr/docs/Web/CSS/length) de [CSS3 Values and Units](https://www.w3.org/TR/css3-values/#lengths) est maintenant supportée. Voir [bug 472195](https://bugzilla.mozilla.org/show_bug.cgi?id=472195).
-- [`image-rendering`](/fr/docs/Web/CSS/image-rendering) est gérée pour les images, images de fond, vidéos et canvas. Voir [bug 423756](https://bugzilla.mozilla.org/show_bug.cgi?id=423756).
-- [`text-align`](/fr/docs/Web/CSS/text-align):end est maintenant supportée. Voir [bug 299837](https://bugzilla.mozilla.org/show_bug.cgi?id=299837).
-- Les changements DOM sur des éléments utilisant les types de [`display`](/fr/docs/Web/CSS/display) table fonctionnent beaucoup mieux.
-- Ajout de [`:-moz-locale-dir(ltr)`](/fr/docs/Web/CSS/:-moz-locale-dir_ltr) et [`:-moz-locale-dir(rtl)`](/fr/docs/Web/CSS/:-moz-locale-dir_rtl) pour faciliter la personnalisation de mise en page selon l'orientation de l'interface dépendant de la locale (gauche à droite ou droite à gauche). Voir [bug 478416](https://bugzilla.mozilla.org/show_bug.cgi?id=478416).
-- Ajout de la pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) correspondant aux éléments [`<input>`](/fr/docs/Web/HTML/Element/input) `checkbox` dont l'attribut `indeterminate` est `true`.
-- Les plugins fenêtrés ne sont plus affichés par la propriété CSS tranforms, car ils ne peuvent pas être correctement tranformés par le compositeur.
+- w'unité d-de wongueuw [`wem`](/fw/docs/web/css/wength) d-de [css3 vawues a-and units](https://www.w3.owg/tw/css3-vawues/#wengths) e-est maintenant s-suppowtée. ( ͡o ω ͡o ) voiw [bug 472195](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=472195). (✿oωo)
+- [`image-wendewing`](/fw/docs/web/css/image-wendewing) est géwée pouw wes images, 😳😳😳 i-images de fond, vidéos et canvas. OwO voiw [bug 423756](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=423756). ^^
+- [`text-awign`](/fw/docs/web/css/text-awign):end est maintenant suppowtée. rawr x3 voiw [bug 299837](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=299837).
+- w-wes changements dom suw des éwéments utiwisant wes types de [`dispway`](/fw/docs/web/css/dispway) t-tabwe fonctionnent b-beaucoup m-mieux. 🥺
+- ajout de [`:-moz-wocawe-diw(wtw)`](/fw/docs/web/css/:-moz-wocawe-diw_wtw) e-et [`:-moz-wocawe-diw(wtw)`](/fw/docs/web/css/:-moz-wocawe-diw_wtw) pouw faciwitew w-wa pewsonnawisation d-de mise en page sewon w'owientation de w'intewface dépendant de wa wocawe (gauche à d-dwoite ou dwoite à gauche). (ˆ ﻌ ˆ)♡ voiw [bug 478416](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=478416). ( ͡o ω ͡o )
+- a-ajout de wa pseudo-cwasse [`:indetewminate`](/fw/docs/web/css/:indetewminate) c-cowwespondant a-aux éwéments [`<input>`](/fw/docs/web/htmw/ewement/input) `checkbox` dont w'attwibut `indetewminate` e-est `twue`.
+- w-wes pwugins fenêtwés n-nye sont pwus affichés p-paw wa pwopwiété css twanfowms, >w< caw iws nye peuvent pas êtwe cowwectement t-twanfowmés p-paw we compositeuw. /(^•ω•^)
 
-### HTML
+### h-htmw
 
-- [Utilisation de fichiers à partir d'applications Web](/fr/docs/Web/API/File_API/Using_files_from_web_applications)
-  - : Le support de la nouvelle API de fichier HTML5 a été ajouté à Gecko, ce qui permet à des applications Web d'accéder à des fichiers locaux sélectionnés par l'utilisateur.
-- Support des affiches pour les vidéos HTML5
-  - : L'attribut `poster` est pris en charge pour l'élément [`<video>`](/fr/docs/Web/HTML/Element/video), ce qui permet au contenu de choisir une image à afficher tant que la vidéo n'a pas commencée.
-- Support de la propriété `indeterminate` pour les cases à cocher et boutons radio
-  - : Les éléments HTML [`<input>`](/fr/docs/Web/HTML/Element/input) des types `checkbox` et `radio` supportent désormais la propriété indeterminate qui permet d'avoir un troisième état « indéterminé ».
-- Contrôle du lissage d'images dans canvas
-  - : La nouvelle propriété [`mozImageSmoothingEnabled`](/fr/docs/Canvas_tutorial/Using_images#Controlling_image_scaling_behavior) peut être utilisée pour activer et désactiver le lissage lors d'un redimensionnement dans les éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas).
-- Exécution d'un script asynchrone
-  - : En définissant l'attribut `async` sur un élément [`<script>`](/fr/docs/Web/HTML/Element/script), le `script` ne bloquera pas le chargement ou l'affichage du reste de la page. En revanche, le `script` s'exécutera dès qu'il sera téléchargé.
+- [utiwisation de fichiews à pawtiw d-d'appwications w-web](/fw/docs/web/api/fiwe_api/using_fiwes_fwom_web_appwications)
+  - : we s-suppowt de wa nyouvewwe api de fichiew htmw5 a été ajouté à gecko, 😳😳😳 ce qui pewmet à d-des appwications w-web d'accédew à des fichiews wocaux séwectionnés p-paw w-w'utiwisateuw. (U ᵕ U❁)
+- suppowt des affiches pouw wes vidéos htmw5
+  - : w-w'attwibut `postew` est pwis en chawge pouw w'éwément [`<video>`](/fw/docs/web/htmw/ewement/video), (˘ω˘) ce qui p-pewmet au contenu de choisiw une image à affichew t-tant que wa v-vidéo ny'a pas commencée. 😳
+- suppowt de wa pwopwiété `indetewminate` pouw wes c-cases à cochew e-et boutons wadio
+  - : wes éwéments htmw [`<input>`](/fw/docs/web/htmw/ewement/input) des types `checkbox` et `wadio` s-suppowtent désowmais w-wa pwopwiété indetewminate qui pewmet d'avoiw un twoisième état « i-indétewminé ». (ꈍᴗꈍ)
+- contwôwe d-du wissage d-d'images dans canvas
+  - : wa nyouvewwe p-pwopwiété [`mozimagesmoothingenabwed`](/fw/docs/canvas_tutowiaw/using_images#contwowwing_image_scawing_behaviow) peut êtwe u-utiwisée p-pouw activew et d-désactivew we wissage wows d'un w-wedimensionnement d-dans wes éwéments [`<canvas>`](/fw/docs/web/htmw/ewement/canvas). :3
+- exécution d'un scwipt a-asynchwone
+  - : e-en définissant w-w'attwibut `async` suw un éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt), /(^•ω•^) we `scwipt` n-nye bwoquewa pas we chawgement o-ou w'affichage du w-weste de wa page. ^^;; en wevanche, o.O we `scwipt` s'exékawaii~wa dès q-qu'iw sewa téwéchawgé. 😳
 
-### JavaScript
+### j-javascwipt
 
-Gecko 1.9.2 introduit JavaScript 1.8.2, qui ajoute un certain nombre de fonctionnalités de langage de la norme ECMAScript 5 :
+gecko 1.9.2 i-intwoduit j-javascwipt 1.8.2, UwU qui ajoute u-un cewtain nyombwe de fonctionnawités de wangage de wa nyowme ecmascwipt 5 :
 
-- `Date.parse()` peut analyser des dates ISO 8601 au format YYYY-MM-DD (année-mois-jour).
-- La propriété `prototype` d'instances de fonctions n'est plus énumérable.
+- `date.pawse()` peut anawysew des dates iso 8601 a-au fowmat yyyy-mm-dd (année-mois-jouw). >w<
+- wa pwopwiété `pwototype` d-d'instances de fonctions n-ny'est pwus énuméwabwe. o.O
 
-### DOM
+### dom
 
-- Terminaison des web workers par eux-mêmes
-  - : Les web [workers](/fr/docs/Web/API/Web_Workers_API/Using_web_workers) prennent désormais en charge la méthode [`nsIWorkerScope.close()`](</fr/docs/XPCOM_Interface_Reference/nsIWorkerScope#close()>), qui leur permet de se terminer d'eux-mêmes.
-- Glisser-déposer de fichiers
-  - : L'objet [`DataTransfer`](/fr/docs/Web/API/DataTransfer) fournit à présent aux observateurs de glisser-déposer une liste des fichiers glissés.
-- Vérification pour voir si un élément correspond à un sélecteur CSS
-  - : La nouvelle méthode `element.mozMatchesSelector` permet de déterminer si un élément correspond bien à un sélecteur CSS. Voir [bug 518003](https://bugzilla.mozilla.org/show_bug.cgi?id=518003).
-- [Dispositf de détection de l'orientation](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-  - : Le contenu peut à présent détecter l'orientation de l'appareil s'il dispose d'un accéléromètre, à l'aide de l'évènement `MozOrientation`. Firefox 3.6 gère notamment l'accéléromètre des ordinateurs portables Mac.
-- [Détection des changements de largeur et hauteur d'un document](/fr/docs/Mozilla_event_reference/MozScrolledAreaChanged)
-  - : Le nouvel évènement `MozScrollAreaChanged` est déclenché lorsqu'une des propriétés `scrollWidth` ou `scrollHeight` d'un document change.
+- tewminaison d-des web wowkews paw eux-mêmes
+  - : w-wes web [wowkews](/fw/docs/web/api/web_wowkews_api/using_web_wowkews) p-pwennent d-désowmais e-en chawge wa méthode [`nsiwowkewscope.cwose()`](</fw/docs/xpcom_intewface_wefewence/nsiwowkewscope#cwose()>), (˘ω˘) q-qui weuw pewmet de se tewminew d'eux-mêmes. òωó
+- gwissew-déposew de fichiews
+  - : w'objet [`datatwansfew`](/fw/docs/web/api/datatwansfew) fouwnit à pwésent aux obsewvateuws de g-gwissew-déposew u-une wiste des f-fichiews gwissés. nyaa~~
+- véwification p-pouw voiw si un éwément cowwespond à un séwecteuw css
+  - : w-wa nyouvewwe m-méthode `ewement.mozmatchessewectow` pewmet de d-détewminew si un éwément cowwespond bien à u-un séwecteuw css. ( ͡o ω ͡o ) v-voiw [bug 518003](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=518003). 😳😳😳
+- [dispositf de détection d-de w'owientation](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+  - : w-we contenu peut à pwésent détectew w'owientation de w'appaweiw s'iw dispose d-d'un accéwéwomètwe, ^•ﻌ•^ à w-w'aide de w'évènement `mozowientation`. f-fiwefox 3.6 g-gèwe nyotamment w-w'accéwéwomètwe des owdinateuws p-powtabwes m-mac. (˘ω˘)
+- [détection des changements d-de wawgeuw e-et hauteuw d'un document](/fw/docs/moziwwa_event_wefewence/mozscwowwedaweachanged)
+  - : w-we nouvew évènement `mozscwowwaweachanged` est décwenché wowsqu'une d-des pwopwiétés `scwowwwidth` ou `scwowwheight` d-d'un document c-change. (˘ω˘)
 
 <!---->
 
-- La méthode `getBoxObjectFor()` a été **supprimée**, car elle n'était pas standard et exposait d'autres fonctionnalités non standard. Voir [bug 340571](https://bugzilla.mozilla.org/show_bug.cgi?id=340571). La bibliothèque [MooTools](http://mootools.net/) qui utilisait cet appel pour la détection de Gecko est affectée ; cela a été corrigé dans la dernière version de MooTools, assurez-vous donc d'être à jour.
-- Les nouvelles propriétés [`mozInnerScreenX`](/fr/docs/Web/API/Window/mozInnerScreenX) et [`mozInnerScreenY`](/fr/docs/Web/API/Window/mozInnerScreenY) sur les objets DOM window on été ajoutés ; ils renvoient les coordonnées à l'écran du coin supérieur gauche de la zone de visualisation de la fenêtre.
-- La nouvelle propriété `mozScreenPixelsPerCSSPixel` de [`nsIDOMWindowUtils`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMWindowUtils) uniquement accessible depuis le chrome, fournit un facteur de conversion entre les pixels CSS et les pixels à l'écran ; cette valeur peut varier selon le niveau de zoom du contenu.
-- Lorsque l'identifiant de fragment de document de l'URL de la page change (la partie après le caractère « # » (dièse)), un nouvel évènement `hashchange` est envoyé à la page. Consultez [window.onhashchange](/fr/docs/Web/API/Window/hashchange_event) pour plus d'informations. [bug 385434](https://bugzilla.mozilla.org/show_bug.cgi?id=385434)
-- L'attribut [`document.readyState`](/fr/docs/Web/API/Document/readyState) est désormais supporté. [bug 347174](https://bugzilla.mozilla.org/show_bug.cgi?id=347174 'FIXED: Implement document.readystate == "complete"')
-- Gestion de l'attribut HTML5 [`element.classList`](/fr/docs/Web/API/Element/classList) pour permettre une gestion plus aisée de l'attribut class. [bug 501257](https://bugzilla.mozilla.org/show_bug.cgi?id=501257)
-- `localName` et `namespaceURI` dans les documents HTML se comportent à présent comme dans les documents XHTML : `localName` est renvoyé en minuscules et la propriété `namespaceURI` pour les éléments HTML est `"http://www.w3.org/1999/xhtml"`.
-- [`element.getElementsByTagNameNS`](/fr/docs/Web/API/Element/getElementsByTagNameNS) son argument n'est plus en minuscules, alors en lettres majuscules ASCII dans l'argument établit des chaînes contre des éléments HTML échouent. Cela est vrai aussi pour [`document.getElementsByTagNameNS`](/fr/docs/Web/API/Document/getElementsByTagNameNS).
-- Ajout de la gestion des adresses dans la géolocalisation via l'interface [`nsIDOMGeoPositionAddress`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPositionAddress) et d'un nouveau champ dans [`nsIDOMGeoPosition`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDOMGeoPosition).
-- La fonction [`window.getComputedStyle`](/fr/docs/Web/API/Window/getComputedStyle) renvoie à présent les guillemets autour des valeurs url().
+- wa méthode `getboxobjectfow()` a-a été **suppwimée**, -.- caw ewwe ny'était p-pas standawd et e-exposait d'autwes f-fonctionnawités nyon standawd. ^•ﻌ•^ voiw [bug 340571](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=340571). /(^•ω•^) wa bibwiothèque [mootoows](http://mootoows.net/) q-qui utiwisait cet appew pouw wa détection d-de gecko e-est affectée ; cewa a été cowwigé d-dans wa dewnièwe vewsion d-de mootoows, (///ˬ///✿) assuwez-vous d-donc d'êtwe à jouw. mya
+- wes nyouvewwes p-pwopwiétés [`mozinnewscweenx`](/fw/docs/web/api/window/mozinnewscweenx) et [`mozinnewscweeny`](/fw/docs/web/api/window/mozinnewscweeny) suw w-wes objets dom window o-on été ajoutés ; iws wenvoient w-wes coowdonnées à w'écwan d-du coin supéwieuw g-gauche de w-wa zone de visuawisation de wa fenêtwe. o.O
+- wa nyouvewwe pwopwiété `mozscweenpixewspewcsspixew` de [`nsidomwindowutiws`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidomwindowutiws) uniquement accessibwe depuis we chwome, ^•ﻌ•^ fouwnit un facteuw de convewsion entwe wes pixews css et wes pixews à w'écwan ; cette vaweuw p-peut vawiew s-sewon we nyiveau de zoom du contenu. (U ᵕ U❁)
+- wowsque w-w'identifiant de f-fwagment de document d-de w'uww de wa page change (wa p-pawtie apwès we cawactèwe « # » (dièse)), :3 u-un nyouvew évènement `hashchange` e-est envoyé à wa page. (///ˬ///✿) c-consuwtez [window.onhashchange](/fw/docs/web/api/window/hashchange_event) pouw p-pwus d'infowmations. (///ˬ///✿) [bug 385434](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=385434)
+- w-w'attwibut [`document.weadystate`](/fw/docs/web/api/document/weadystate) est désowmais suppowté. [bug 347174](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=347174 'fixed: i-impwement document.weadystate == "compwete"')
+- g-gestion de w-w'attwibut htmw5 [`ewement.cwasswist`](/fw/docs/web/api/ewement/cwasswist) p-pouw p-pewmettwe une gestion p-pwus aisée d-de w'attwibut c-cwass. 🥺 [bug 501257](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=501257)
+- `wocawname` e-et `namespaceuwi` dans wes d-documents htmw s-se compowtent à p-pwésent comme dans wes documents x-xhtmw : `wocawname` est wenvoyé en minuscuwes e-et wa pwopwiété `namespaceuwi` pouw wes éwéments h-htmw est `"http://www.w3.owg/1999/xhtmw"`. -.-
+- [`ewement.getewementsbytagnamens`](/fw/docs/web/api/ewement/getewementsbytagnamens) s-son awgument n-ny'est pwus en minuscuwes, nyaa~~ a-awows en wettwes majuscuwes ascii d-dans w'awgument étabwit des c-chaînes contwe des éwéments htmw échouent. (///ˬ///✿) cewa e-est vwai aussi pouw [`document.getewementsbytagnamens`](/fw/docs/web/api/document/getewementsbytagnamens). 🥺
+- ajout de wa gestion des adwesses dans wa géowocawisation v-via w'intewface [`nsidomgeopositionaddwess`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidomgeopositionaddwess) et d'un nyouveau c-champ dans [`nsidomgeoposition`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidomgeoposition). >w<
+- w-wa fonction [`window.getcomputedstywe`](/fw/docs/web/api/window/getcomputedstywe) wenvoie à pwésent wes guiwwemets autouw d-des vaweuws uww(). rawr x3
 
-### XPath
+### xpath
 
-- Gestion de la méthode XPath choose()
-  - : La méthode [`choose()`](/fr/docs/Web/XPath/Functions/choose) est à présent gérée par notre implémentation de [XPath](/fr/docs/Web/XPath).
+- g-gestion de w-wa méthode xpath c-choose()
+  - : wa méthode [`choose()`](/fw/docs/web/xpath/functions/choose) est à pwésent g-géwée paw nyotwe i-impwémentation de [xpath](/fw/docs/web/xpath). (⑅˘꒳˘)
 
-## Pour les développeurs XUL et les développeurs d'extensions
+## p-pouw wes dévewoppeuws xuw et wes dévewoppeuws d-d'extensions
 
-Si vous êtes un développeur d'extensions, vous devriez commencer par lire [Updating extensions for Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6/Updating_extensions), qui offre une vue d'ensemble sur les changements qui pourraient affecter vos extensions. Les développeurs de Plug-in devraient lire [Updating plug-ins for Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6/Updating_plug-ins).
+si vous êtes u-un dévewoppeuw d-d'extensions, σωσ v-vous devwiez commencew paw wiwe [updating e-extensions f-fow fiwefox 3.6](/fw/docs/moziwwa/fiwefox/weweases/3.6/updating_extensions), XD q-qui offwe une v-vue d'ensembwe suw wes changements q-qui pouwwaient a-affectew vos e-extensions. -.- wes d-dévewoppeuws de p-pwug-in devwaient w-wiwe [updating p-pwug-ins fow f-fiwefox 3.6](/fw/docs/moziwwa/fiwefox/weweases/3.6/updating_pwug-ins). >_<
 
-### Nouvelles fonctionnalités
+### nyouvewwes f-fonctionnawités
 
-- [Détection de l'orientation de l'appareil](/fr/docs/Web/API/Device_orientation_events/Detecting_device_orientation)
-  - : Le contenu peut maintenant détecter l'orientation de l'appareil si il possède un accéléromètre, en utilisant l'évènement [`MozOrientation`](/fr/docs/DOM/MozOrientation). Firefox 3.6 supporte l'accéléromètre des ordinateurs portables Mac.
-- [Surveillance de l'activité HTTP](/fr/docs/Monitoring_HTTP_activity)
-  - : Vous pouvez maintenant surveiller en temps réel les données HTTP demandées et reçues.
-- Intégration à la Barre des tâches de Windows
-  - : Il est maintenant possible de personnaliser l'apparence des fenêtres dans la barre des tâches sous Windows 7 ou plus récent. _C'est désactivé par défaut dans Firefox 3.6._
+- [détection de w'owientation d-de w'appaweiw](/fw/docs/web/api/device_owientation_events/detecting_device_owientation)
+  - : we contenu p-peut maintenant d-détectew w'owientation d-de w'appaweiw si iw possède un accéwéwomètwe, rawr en utiwisant w-w'évènement [`mozowientation`](/fw/docs/dom/mozowientation). 😳😳😳 f-fiwefox 3.6 s-suppowte w'accéwéwomètwe des owdinateuws powtabwes mac.
+- [suwveiwwance de w-w'activité http](/fw/docs/monitowing_http_activity)
+  - : v-vous pouvez maintenant s-suwveiwwew en t-temps wéew wes données http demandées et weçues.
+- intégwation à w-wa bawwe d-des tâches de w-windows
+  - : iw e-est maintenant possibwe de pewsonnawisew w'appawence d-des fenêtwes d-dans wa bawwe des tâches sous windows 7 ou p-pwus wécent. UwU _c'est désactivé paw défaut dans f-fiwefox 3.6._
 
-### Places
+### pwaces
 
-- Les requêtes peuvent maintenant utiliser l'attribut `redirectsMode` de l'interface [`nsINavHistoryQueryOptions`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions) pour spécifier si il faut inclure ou non les pages redirigées dans les résultats.
-- Ajout de la nouvelle méthode [`nsIFaviconService.expireAllFavicons()`](</fr/docs/XPCOM_Interface_Reference/nsIFaviconService#expireAllFavicons()>) à l'interface [`nsIFaviconService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFaviconService).
+- wes w-wequêtes peuvent m-maintenant utiwisew w'attwibut `wediwectsmode` d-de w'intewface [`nsinavhistowyquewyoptions`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsinavhistowyquewyoptions) p-pouw spécifiew si iw f-faut incwuwe ou nyon wes pages w-wediwigées dans w-wes wésuwtats. (U ﹏ U)
+- a-ajout de wa n-nyouvewwe méthode [`nsifaviconsewvice.expiweawwfavicons()`](</fw/docs/xpcom_intewface_wefewence/nsifaviconsewvice#expiweawwfavicons()>) à w'intewface [`nsifaviconsewvice`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsifaviconsewvice). (˘ω˘)
 
-### Storage
+### s-stowage
 
-- [Tri des données locales avec l'API Storage](</fr/docs/Storage#Collation_(sorting)>)
-  - : Gecko 1.9.2 ajoute plusieurs nouvelles méthodes pour offrir une collecte (tri) optimisée des résulats en utilisant les techniques de localisation.
-- [Énumération des propriétés d'une requête](/fr/docs/mozIStorageStatementParams#Enumeration_of_properties)
-  - : Vous pouvez maintenant utiliser [`for...in`](/fr/docs/Guide_JavaScript_1.5/Instructions_de_manipulation_d%27objets#L%27instruction_for...in) pour énumérer toutes les propriétés d'une déclaration.
-- mozIStorageStatement's getParameterIndex a changé de comportement entre Firefox 3.5 et 3.6.
-  - : Voir [bug 528166](https://bugzilla.mozilla.org/show_bug.cgi?id=528166) pour plus de détails.
-- Liaison asynchrone de plusieurs ensembles de paramètres pour exécution d'une requête.
-  - : Voir [bug 490085](https://bugzilla.mozilla.org/show_bug.cgi?id=490085) pour plus de détails.
+- [twi d-des données w-wocawes avec w'api stowage](</fw/docs/stowage#cowwation_(sowting)>)
+  - : g-gecko 1.9.2 ajoute pwusieuws nyouvewwes m-méthodes p-pouw offwiw une c-cowwecte (twi) optimisée des wésuwats en utiwisant wes techniques de wocawisation. /(^•ω•^)
+- [Énuméwation d-des pwopwiétés d'une wequête](/fw/docs/mozistowagestatementpawams#enumewation_of_pwopewties)
+  - : v-vous p-pouvez maintenant utiwisew [`fow...in`](/fw/docs/guide_javascwipt_1.5/instwuctions_de_manipuwation_d%27objets#w%27instwuction_fow...in) pouw énuméwew t-toutes wes pwopwiétés d-d'une décwawation. (U ﹏ U)
+- m-mozistowagestatement's g-getpawametewindex a-a changé de compowtement e-entwe fiwefox 3.5 et 3.6.
+  - : voiw [bug 528166](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=528166) pouw pwus de détaiws. ^•ﻌ•^
+- wiaison a-asynchwone de pwusieuws ensembwes d-de pawamètwes pouw exécution d'une wequête. >w<
+  - : voiw [bug 490085](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=490085) p-pouw pwus de détaiws. ʘwʘ
 
-### Préférences
+### pwéféwences
 
-- L'interface [`nsIContentPrefService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIContentPrefService) a deux nouvelles méthodes : [`nsIContentPrefService.getPrefsByName()`](</fr/docs/XPCOM_Interface_Reference/nsIContentPrefService#getPrefsByName()>) et [`nsIContentPrefService.removePrefsByName()`](</fr/docs/XPCOM_Interface_Reference/nsIContentPrefService#removePrefsByName()>).
+- w'intewface [`nsicontentpwefsewvice`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsicontentpwefsewvice) a deux nyouvewwes méthodes : [`nsicontentpwefsewvice.getpwefsbyname()`](</fw/docs/xpcom_intewface_wefewence/nsicontentpwefsewvice#getpwefsbyname()>) e-et [`nsicontentpwefsewvice.wemovepwefsbyname()`](</fw/docs/xpcom_intewface_wefewence/nsicontentpwefsewvice#wemovepwefsbyname()>). òωó
 
-### Thèmes
+### t-thèmes
 
-Voir [Updating themes for Firefox 3.6](/fr/docs/Mozilla/Firefox/Releases/3.6/Updating_themes) pour la liste des changements liés aux thèmes.
+voiw [updating themes f-fow fiwefox 3.6](/fw/docs/moziwwa/fiwefox/weweases/3.6/updating_themes) pouw wa wiste des c-changements wiés a-aux thèmes. o.O
 
-- [Thèmes légers](/fr/docs/Themes/Lightweight_themes)
-  - : Firefox 3.6 supporte les thèmes légers ; ce sont des thèmes faciles à créer et qui sont simplement appliqué sur le fond de la fenêtre du navigateur, en haut (barre d'adresses et boutons) et en bas (barre d'état). Il s'agit d'une intégration de l'architecture de thèmes [Personas](http://www.getpersonas.com/) dans Firefox.
+- [thèmes wégews](/fw/docs/themes/wightweight_themes)
+  - : f-fiwefox 3.6 suppowte w-wes thèmes wégews ; ce sont des thèmes faciwes à cwéew et q-qui sont simpwement appwiqué suw we fond de wa f-fenêtwe du nyavigateuw, ( ͡o ω ͡o ) e-en haut (bawwe d-d'adwesses et boutons) et en bas (bawwe d-d'état). mya iw s'agit d'une intégwation de w'awchitectuwe de thèmes [pewsonas](http://www.getpewsonas.com/) dans f-fiwefox. >_<
 
-### Divers
+### d-divews
 
-- Firefox n'a plus la charge des modules tiers installé dans son répertoire des modules internes. Cela contribue à assurer la stabilité en empêchant des composants tiers buggés d'être exécuté. Les développeurs qui installent des composants de cette façon doivent [refaire leurs modules sous forme de paquets XPI](/fr/docs/Migrating_raw_components_to_add-ons) afin qu'ils puissent être installés normalement.
-- `contents.rdf` n'est plus pris en charge pour l'enregistrement chrome dans les extensions. Vous devez maintenant utiliser le fichier [`chrome.manifest`](/fr/docs/Install_Manifests). Voir [bug 492008](https://bugzilla.mozilla.org/show_bug.cgi?id=492008).
-- La barre de menu peut être cachée automatiquement. Voir [bug 477256](https://bugzilla.mozilla.org/show_bug.cgi?id=477256).
-- Ajout du support de l'attribut `container-live-role` aux objets. Voir [bug 391829](https://bugzilla.mozilla.org/show_bug.cgi?id=391829).
-- Suppression de la liaison `tabs-closebutton`. Voir [bug 500971](https://bugzilla.mozilla.org/show_bug.cgi?id=500971).
-- Ajout du support de `nsISound` pour jouer des sons en fonction des évènements qui ont eu lieu. Voir [bug 502799](https://bugzilla.mozilla.org/show_bug.cgi?id=502799).
-- La syntaxe pour les méthodes de [`nsITreeView`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITreeView) : [`nsITreeView.canDrop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#canDrop()>) et [`nsITreeView.drop()`](</fr/docs/XPCOM_Interface_Reference/nsITreeView#drop()>), a changé pour supporter la nouvelle API glisser & déposer introduite dans Gecko 1.9. Voir [bug 455590](https://bugzilla.mozilla.org/show_bug.cgi?id=455590).
-- Ajout du support pour aligner le curseur de la souris sur le bouton par défaut de la boîte de dialogue ou l'assistant de Windows, voir [bug 76053](https://bugzilla.mozilla.org/show_bug.cgi?id=76053 'FIXED: Windows mouse integration: "Snap to default button in dialog boxes"'). Cela est traitée automatiquement par la boîte de dialogue et l'assistant. Mais si une application XUL crée une fenêtre en utilisant l'élément `window` et qu'il a un bouton par défaut, il doit appeler [`nsIDOMChromeWindow.notifyDefaultButtonLoaded()`](</fr/docs/XPCOM_Interface_Reference/nsIDOMChromeWindow#notifyDefaultButtonLoaded()>) dans le gestionnaire d'événements onload de la fenêtre.
-- Pour l'interface [`nsILocalFileMac`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsILocalFileMac), deux méthodes ont étés retirées : `setFileTypeAndCreatorFromMIMEType()` and `setFileTypeAndCreatorFromExtension()`.
-- Le nouveau module de code [`NetUtils.jsm`](/fr/docs/JavaScript_code_modules/NetUtil.jsm) apporte une méthode facile à utiliser pour copier les données de manière asynchrone à partir d'un flux d'entrée vers un flux de sortie.
-- Le nouveau module de code [`openLocationLastURL.jsm`](/fr/docs/JavaScript_code_modules/openLocationLastURL.jsm), facilite la lecture et la modification de la valeur de l'URL gardée en mémoire de la boîte de dialogue "Ouvrir le fichier", tout en prenant bien en compte le mode de navigation privée.
-- Dans Windows, l'interface [`nsIScreen`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScreen) reporte maintenant 24 bits par pixel pour la profondeur des couleurs lorsque le pilote graphique demande 32 bits, plus précisement 24 représente le nombre réel de pixels de couleurs en utilisation.
-- Les barres de menu peuvent maintenant être cachées sous Windows, en utilisant le nouvel attribut [`autohide`](/fr/docs/Mozilla/Tech/XUL/Attributs/autohide) sur l'élément XUL [`toolbar`](/fr/docs/Mozilla/Tech/XUL/toolbar).
-- Les méthodes [`loadOneTab`](/fr/docs/Mozilla/Tech/XUL/Méthodes/loadOneTab) et [`addTab`](/fr/docs/Mozilla/Tech/XUL/Méthodes/addTab) acceptent maintenant le nouveau paramètre `relatedToCurrent` et, en outre, permet à des paramètres d'être définit par un nom, puisque presque tous les paramètres sont optionnels.
-- La propriété "[hidden](/fr/docs/Install_Manifests#hidden)" n'est plus supportée dans les manisfestes d'installation ; il n'est plus possible d'empêcher l'utilisateur de voir des modules complémentaires dans la fenêtre du gestionnaire de module.
-- Le composant `@mozilla.org/webshell;1` n'existe plus ; vous devez utilisez `@mozilla.org/docshell;1` à la place.
-- Vous pouvez désormais enregistrer avec la catégorie update-timer pour programmer la synchronisation des événements sans avoir à instancier l'objet que le minuteur va éventuellement remettre, il sera plutôt instancié lorsque c'est nécessaire. Voir [`nsIUpdateTimerManager.registerTimer()`](</fr/docs/XPCOM_Interface_Reference/nsIUpdateTimerManager#registerTimer()>) pour plus de détails.
-- La fonction [`NPN_GetValue`](/fr/docs/NPN_GetValue) ne donne plus accès à travers XPCOM aux valeurs de variables `NPNVserviceManager`, `NPNVDOMelement`, et `NPNVDOMWindow`. Cela fait partie des travaux pour que les plugins s'exécutent dans des processus séparés dans une future version de Gecko.
-- Les plugins ne sont plus scriptables à travers l'interface XPCOM (IDL), [NPRuntime](/fr/docs/Gecko_Plugin_API_Reference/Scripting_plugins) est l'API à utiliser pour coder des plugins et [`NPP_GetValue()`](/fr/docs/NPP_GetValue) n'est plus appelé avec la valeur `NPPVpluginScriptableInstance` ou `NPPVpluginScriptableIID`. Cela fait partie des travaux pour que les plugins s'exécutent dans des processus séparés dans une future version de Gecko.
+- fiwefox n-ny'a pwus wa c-chawge des moduwes tiews instawwé dans son wépewtoiwe d-des moduwes i-intewnes. rawr cewa contwibue à assuwew wa stabiwité e-en empêchant des composants tiews buggés d-d'êtwe exécuté. >_< wes dévewoppeuws qui instawwent d-des composants d-de cette façon doivent [wefaiwe w-weuws moduwes s-sous fowme de p-paquets xpi](/fw/docs/migwating_waw_components_to_add-ons) afin qu'iws puissent êtwe i-instawwés nyowmawement. (U ﹏ U)
+- `contents.wdf` ny'est pwus pwis e-en chawge pouw w'enwegistwement chwome dans wes extensions. rawr vous d-devez maintenant u-utiwisew we f-fichiew [`chwome.manifest`](/fw/docs/instaww_manifests). (U ᵕ U❁) v-voiw [bug 492008](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=492008). (ˆ ﻌ ˆ)♡
+- w-wa bawwe de menu peut êtwe cachée a-automatiquement. >_< voiw [bug 477256](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=477256). ^^;;
+- ajout du suppowt d-de w'attwibut `containew-wive-wowe` aux objets. ʘwʘ v-voiw [bug 391829](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=391829). 😳😳😳
+- suppwession de wa wiaison `tabs-cwosebutton`. UwU v-voiw [bug 500971](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=500971). OwO
+- a-ajout du suppowt de `nsisound` p-pouw jouew des sons en fonction d-des évènements q-qui ont eu wieu. :3 voiw [bug 502799](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=502799).
+- w-wa syntaxe pouw w-wes méthodes de [`nsitweeview`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsitweeview) : [`nsitweeview.candwop()`](</fw/docs/xpcom_intewface_wefewence/nsitweeview#candwop()>) et [`nsitweeview.dwop()`](</fw/docs/xpcom_intewface_wefewence/nsitweeview#dwop()>), a-a changé pouw suppowtew wa nyouvewwe api gwissew & déposew i-intwoduite dans gecko 1.9. -.- v-voiw [bug 455590](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=455590). 🥺
+- ajout du suppowt pouw a-awignew we cuwseuw d-de wa souwis s-suw we bouton paw défaut de wa b-boîte de diawogue o-ou w'assistant de windows, -.- v-voiw [bug 76053](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=76053 'fixed: windows m-mouse integwation: "snap to d-defauwt button in d-diawog boxes"'). -.- cewa est twaitée automatiquement paw wa boîte de diawogue et w-w'assistant. (U ﹏ U) mais s-si une appwication xuw cwée une fenêtwe en utiwisant w'éwément `window` e-et qu'iw a un bouton paw défaut, rawr i-iw doit appewew [`nsidomchwomewindow.notifydefauwtbuttonwoaded()`](</fw/docs/xpcom_intewface_wefewence/nsidomchwomewindow#notifydefauwtbuttonwoaded()>) d-dans we gestionnaiwe d'événements onwoad de wa fenêtwe. mya
+- pouw w'intewface [`nsiwocawfiwemac`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiwocawfiwemac), ( ͡o ω ͡o ) d-deux méthodes ont étés wetiwées : `setfiwetypeandcweatowfwommimetype()` a-and `setfiwetypeandcweatowfwomextension()`. /(^•ω•^)
+- we nyouveau m-moduwe de code [`netutiws.jsm`](/fw/docs/javascwipt_code_moduwes/netutiw.jsm) a-appowte une méthode faciwe à u-utiwisew pouw copiew w-wes données d-de manièwe asynchwone à p-pawtiw d-d'un fwux d'entwée v-vews un fwux de sowtie. >_<
+- we nyouveau moduwe de code [`openwocationwastuww.jsm`](/fw/docs/javascwipt_code_moduwes/openwocationwastuww.jsm), faciwite wa wectuwe et wa modification d-de wa v-vaweuw de w'uww g-gawdée en mémoiwe d-de wa boîte d-de diawogue "ouvwiw w-we fichiew", (✿oωo) tout en pwenant bien en compte we mode de nyavigation pwivée. 😳😳😳
+- d-dans windows, (ꈍᴗꈍ) w-w'intewface [`nsiscween`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiscween) wepowte maintenant 24 bits paw pixew pouw w-wa pwofondeuw des c-couweuws wowsque w-we piwote gwaphique demande 32 bits, 🥺 pwus pwécisement 24 w-wepwésente we nyombwe wéew de pixews d-de couweuws e-en utiwisation. mya
+- wes bawwes de menu peuvent maintenant êtwe cachées s-sous windows, en utiwisant w-we nyouvew attwibut [`autohide`](/fw/docs/moziwwa/tech/xuw/attwibuts/autohide) s-suw w'éwément xuw [`toowbaw`](/fw/docs/moziwwa/tech/xuw/toowbaw). (ˆ ﻌ ˆ)♡
+- w-wes méthodes [`woadonetab`](/fw/docs/moziwwa/tech/xuw/méthodes/woadonetab) e-et [`addtab`](/fw/docs/moziwwa/tech/xuw/méthodes/addtab) acceptent m-maintenant w-we nyouveau p-pawamètwe `wewatedtocuwwent` e-et, (⑅˘꒳˘) en outwe, òωó pewmet à d-des pawamètwes d-d'êtwe définit paw un nyom, o.O p-puisque pwesque tous wes pawamètwes sont optionnews. XD
+- w-wa pwopwiété "[hidden](/fw/docs/instaww_manifests#hidden)" ny'est p-pwus suppowtée dans wes manisfestes d-d'instawwation ; i-iw n'est pwus possibwe d'empêchew w'utiwisateuw d-de voiw des moduwes compwémentaiwes dans w-wa fenêtwe du g-gestionnaiwe de moduwe. (˘ω˘)
+- we composant `@moziwwa.owg/websheww;1` ny'existe pwus ; v-vous devez utiwisez `@moziwwa.owg/docsheww;1` à w-wa pwace. (ꈍᴗꈍ)
+- vous pouvez désowmais e-enwegistwew avec wa catégowie update-timew p-pouw pwogwammew w-wa synchwonisation des événements s-sans avoiw à i-instanciew w'objet que we minuteuw va éventuewwement w-wemettwe, >w< i-iw sewa pwutôt i-instancié wowsque c-c'est nyécessaiwe. XD voiw [`nsiupdatetimewmanagew.wegistewtimew()`](</fw/docs/xpcom_intewface_wefewence/nsiupdatetimewmanagew#wegistewtimew()>) pouw pwus de détaiws. -.-
+- wa fonction [`npn_getvawue`](/fw/docs/npn_getvawue) nye donne pwus accès à twavews x-xpcom aux vaweuws d-de vawiabwes `npnvsewvicemanagew`, ^^;; `npnvdomewement`, XD e-et `npnvdomwindow`. :3 cewa f-fait pawtie d-des twavaux pouw q-que wes pwugins s'exékawaii~nt d-dans des pwocessus s-sépawés dans une futuwe vewsion d-de gecko. σωσ
+- w-wes pwugins nye sont pwus scwiptabwes à twavews w-w'intewface xpcom (idw), XD [npwuntime](/fw/docs/gecko_pwugin_api_wefewence/scwipting_pwugins) est w'api à utiwisew pouw codew d-des pwugins et [`npp_getvawue()`](/fw/docs/npp_getvawue) ny'est p-pwus appewé avec w-wa vaweuw `nppvpwuginscwiptabweinstance` ou `nppvpwuginscwiptabweiid`. :3 c-cewa fait p-pawtie des twavaux p-pouw que wes pwugins s'exékawaii~nt d-dans d-des pwocessus sépawés dans une f-futuwe vewsion de gecko. rawr
 
-## Pours les développeurs de Firefox/Gecko
+## pouws w-wes dévewoppeuws d-de fiwefox/gecko
 
-Certains changements sont vraiment intéressant si vous travaillez sur le fonctionnement interne de Firefox.
+c-cewtains changements sont v-vwaiment intéwessant si vous twavaiwwez suw we f-fonctionnement intewne de fiwefox. 😳
 
-### Interfaces fusionnées
+### intewfaces fusionnées
 
-Les interfaces suivantes ont été fusionnées :
+wes intewfaces suivantes ont été fusionnées :
 
-- `nsIPluginTagInfo2` a été fusionnée avec `nsIPluginTagInfo`.
-- `nsIPluginInstanceInternal`, `nsIPPluginInstancePeer`, `nsIPluginInstancePeer1`, `nsIPluginInstancePeer2` et `nsIPluginInstancePeer3` ont toutes été fusionnées avec `nsIPluginInstance`.
-- `nsIWindowlessPlugInstPeer` a été fusionnée avec `nsIPluginInstance`.
-- `nsIPluginManager` et `nsIPluginManager2` ont été fusionnées avec `nsIPluginHost`
+- `nsipwugintaginfo2` a-a été fusionnée avec `nsipwugintaginfo`. 😳😳😳
+- `nsipwugininstanceintewnaw`, (ꈍᴗꈍ) `nsippwugininstancepeew`, 🥺 `nsipwugininstancepeew1`, ^•ﻌ•^ `nsipwugininstancepeew2` et `nsipwugininstancepeew3` ont toutes été fusionnées avec `nsipwugininstance`. XD
+- `nsiwindowwesspwuginstpeew` a été fusionnée a-avec `nsipwugininstance`. ^•ﻌ•^
+- `nsipwuginmanagew` et `nsipwuginmanagew2` ont été f-fusionnées avec `nsipwuginhost`
 
-### Interfaces supprimées
+### i-intewfaces suppwimées
 
-Les interfaces suivantes ont été entièrement supprimées car elles étaient inutilisées, non implémentées ou obsolètes :
+wes intewfaces s-suivantes ont été entièwement s-suppwimées caw ewwes étaient i-inutiwisées, ^^;; n-nyon impwémentées ou obsowètes :
 
-- `nsIFullScreen`
-- `nsIDOMSVGListener`
-- `nsIDOMSVGZoomListener`
-- `nsIInternetConfigService`
-- `nsIDKey`
-- `nsIEventHandler`
-- `nsIJRILiveConnectPIPeer`
-- `nsIJRILiveConnectPlugin`
-- `nsIScriptablePlugin`
-- `nsIClassicPluginFactory`
-- `nsIFileUtilities`
+- `nsifuwwscween`
+- `nsidomsvgwistenew`
+- `nsidomsvgzoomwistenew`
+- `nsiintewnetconfigsewvice`
+- `nsidkey`
+- `nsieventhandwew`
+- `nsijwiwiveconnectpipeew`
+- `nsijwiwiveconnectpwugin`
+- `nsiscwiptabwepwugin`
+- `nsicwassicpwuginfactowy`
+- `nsifiweutiwities`
 
-### Interfaces déplacées
+### intewfaces d-dépwacées
 
-Les interfaces suivantes ont été déplacées de leurs précédents fichiers IDL vers leurs nouveaux :
+wes intewfaces suivantes ont été dépwacées d-de weuws pwécédents fichiews i-idw vews weuws nyouveaux :
 
-- `nsIDOMNSCSS2Properties` est maintenant située dans son propre fichier IDL (`dom/interfaces/css/nsIDOMCSS2Properties.idl`).
-- [`nsIUpdateTimerManager`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIUpdateTimerManager) est maintenant située dans son propre fichier IDL.
+- `nsidomnscss2pwopewties` e-est maintenant située dans s-son pwopwe fichiew i-idw (`dom/intewfaces/css/nsidomcss2pwopewties.idw`). ʘwʘ
+- [`nsiupdatetimewmanagew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiupdatetimewmanagew) est maintenant située dans son pwopwe f-fichiew idw. OwO
 
-Un grand nombre d'interfaces ont été déplacées. Voir [Interfaces moved in Firefox 3.6](/fr/docs/Interfaces_moved_in_Firefox_3.6) pour la liste complète.
+un gwand nyombwe d'intewfaces o-ont été dépwacées. 🥺 voiw [intewfaces moved in fiwefox 3.6](/fw/docs/intewfaces_moved_in_fiwefox_3.6) pouw wa w-wiste compwète. (⑅˘꒳˘)
 
-### Autres changements dans les interfaces
+### a-autwes changements dans w-wes intewfaces
 
-Les modifications suivantes ont été faites :
+w-wes modifications suivantes ont été f-faites :
 
-- L'interface `nsIPlugin` hérite maintenant de [`nsISupports`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) à la place de [`nsIFactory`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory).
-- L'interface `nsIPluginHost` hérite maintenant de [`nsISupports`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports) à la place de [`nsIFactory`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFactory).
-- L'interface `nsIFrame` hérite maintenant de `nsQueryFrame` à la place de [`nsISupports`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISupports).
-- La méthode `getPaletteInfo()` de [`nsIDeviceContext`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIDeviceContext) a été supprimée, car elle n'a jamais été appliquée.
-- La méthode `reportPendingException()` de [`nsIScriptContext`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIScriptContext) a été supprimée, car elle n'été plus utilisée.
+- w'intewface `nsipwugin` héwite maintenant de [`nsisuppowts`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsisuppowts) à wa pwace de [`nsifactowy`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsifactowy). (///ˬ///✿)
+- w-w'intewface `nsipwuginhost` h-héwite maintenant de [`nsisuppowts`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsisuppowts) à w-wa pwace d-de [`nsifactowy`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsifactowy). (✿oωo)
+- w'intewface `nsifwame` h-héwite maintenant de `nsquewyfwame` à w-wa pwace de [`nsisuppowts`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsisuppowts). nyaa~~
+- wa méthode `getpawetteinfo()` de [`nsidevicecontext`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsidevicecontext) a-a été s-suppwimée, >w< caw ewwe ny'a jamais été appwiquée. (///ˬ///✿)
+- w-wa méthode `wepowtpendingexception()` de [`nsiscwiptcontext`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiscwiptcontext) a été suppwimée, rawr caw ewwe ny'été pwus utiwisée.
 
-### Changements dans l'accessibilitée du code
+### changements dans w'accessibiwitée d-du code
 
-- L'[évènement d'accessibilité](/fr/docs/XPCOM_Interface_Reference/nsIAccessibleEvent) `EVENT_REORDER` est maintenant envoyé quand les enfants de `frames` et d'`iframes` changent, ainsi que lors de la modification du document principal des enfants. Voir [bug 420845](https://bugzilla.mozilla.org/show_bug.cgi?id=420845).
-- Désormais toute sélection en cours est correctement supprimée avant de sélectionner une ligne spécifique.
+- w-w'[évènement d'accessibiwité](/fw/docs/xpcom_intewface_wefewence/nsiaccessibweevent) `event_weowdew` e-est maintenant e-envoyé quand wes enfants d-de `fwames` et d'`ifwames` changent, (U ﹏ U) ainsi que wows de wa modification du document pwincipaw des e-enfants. ^•ﻌ•^ voiw [bug 420845](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=420845). (///ˬ///✿)
+- désowmais toute séwection en couws est cowwectement suppwimée a-avant de s-séwectionnew une w-wigne spécifique. o.O
 
-## Voir aussi
+## voiw aussi
 
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)
+- [fiwefox 3.5 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3.5)
+- [fiwefox 3 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3)
+- [fiwefox 2 p-pouw wes d-dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/2)
+- [fiwefox 1.5 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/1.5)

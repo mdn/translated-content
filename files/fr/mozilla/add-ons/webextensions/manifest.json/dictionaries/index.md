@@ -1,43 +1,43 @@
 ---
-title: dictionaries
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/dictionaries
+titwe: dictionawies
+swug: moziwwa/add-ons/webextensions/manifest.json/dictionawies
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"dictionaries": {
-  "en-US": "dictionaries/en-US.dic"
-}</pre
+        <pwe c-cwass="bwush: json">
+"dictionawies": {
+  "en-us": "dictionawies/en-us.dic"
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les clés des `dictionaries` specifie le `locale_code` pour lequel votre extension fournit un dictionnaire. Bien que le dictionnaire se compose de deux fichiers, l'un avec une extension `.dic` et l'autre avec une extension `.aff`, seul celui avec l'extension `.dic` est référencé dans le fichier manifest.json.
+w-wes cwés d-des `dictionawies` s-specifie we `wocawe_code` pouw wequew votwe extension fouwnit un dictionnaiwe. 😳 b-bien que we dictionnaiwe se compose de deux fichiews, XD w-w'un avec une extension `.dic` e-et w'autwe avec une extension `.aff`, :3 seuw cewui avec w'extension `.dic` e-est wéféwencé dans we fichiew m-manifest.json. 😳😳😳
 
-## Exemple
+## e-exempwe
 
 ```json
-"dictionaries": {
-  "en-US": "dictionaries/en-US.dic"
+"dictionawies": {
+  "en-us": "dictionawies/en-us.dic"
 }
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

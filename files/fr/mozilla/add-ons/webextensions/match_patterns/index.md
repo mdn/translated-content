@@ -1,362 +1,362 @@
 ---
-title: Motifs (Match patterns)
-slug: Mozilla/Add-ons/WebExtensions/Match_patterns
+titwe: motifs (match pattewns)
+s-swug: moziwwa/add-ons/webextensions/match_pattewns
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les modèles de correspondance sont un moyen de spécifier des groupes d'URL : un modèle de correspondance correspond à un ensemble spécifique d'URL. Ils sont destinés à des extensions à l'aide d'API WebExtensions dans quelques endroits, notamment pour spécifier les documents dans lesquels charger des [content scripts](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts), et pour spécifier les URL à ajouter aux auditeurs [`webRequest`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
+w-wes m-modèwes de cowwespondance s-sont u-un moyen de spécifiew d-des gwoupes d-d'uww : un modèwe d-de cowwespondance cowwespond à un ensembwe spécifique d'uww. XD iws sont destinés à d-des extensions à w'aide d'api webextensions d-dans quewques endwoits, mya n-nyotamment pouw spécifiew wes documents dans wesquews chawgew des [content s-scwipts](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts), ^•ﻌ•^ et p-pouw spécifiew w-wes uww à ajoutew aux auditeuws [`webwequest`](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest). ʘwʘ
 
-Les API qui utilisent des modèles de correspondance acceptent généralement une liste de modèles de correspondance et effectueront les actions appropriées si l'URL correspond à l'un des motifs. Voir, par exemple, la clé [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) dans manifest.json.
+wes api qui utiwisent des modèwes de c-cowwespondance acceptent généwawement une wiste de modèwes de cowwespondance e-et effectuewont wes actions appwopwiées s-si w'uww c-cowwespond à w-w'un des motifs. ( ͡o ω ͡o ) v-voiw, paw exempwe, mya wa cwé [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) dans manifest.json. o.O
 
-## Structure du modèle de correspondance
+## s-stwuctuwe du modèwe de cowwespondance
 
-> [!NOTE]
-> Certains navigateurs ne prennent pas en charge certains schémas.
-> Consultez le [tableau de compatibilité du navigateur](#browser_compatibility) pour plus de détails.
+> [!note]
+> c-cewtains nyavigateuws nye pwennent pas en chawge cewtains schémas. (✿oωo)
+> consuwtez we [tabweau de c-compatibiwité du nyavigateuw](#bwowsew_compatibiwity) p-pouw pwus d-de détaiws. :3
 
-Tous les modèles de correspondance sont spécifiés comme des chaînes. Outre le motif spécial « [\<all_urls>](/fr/Add-ons/WebExtensions/Match_patterns#%3Call_urls%3E) », les modèles de correspondance se composent de trois partie : _schéma_, l'hôte, et le _chemin d'accès._ Le schéma et l'hôte sont séparés par « :// ».
+t-tous wes modèwes de cowwespondance sont spécifiés comme des chaînes. 😳 o-outwe we m-motif spéciaw « [\<aww_uwws>](/fw/add-ons/webextensions/match_pattewns#%3caww_uwws%3e) », (U ﹏ U) wes modèwes de cowwespondance s-se c-composent de twois pawtie : _schéma_, mya w-w'hôte, et we _chemin d'accès._ w-we schéma et w'hôte sont sépawés paw « :// ». (U ᵕ U❁)
 
 ```
 <scheme>://<host><path>
 ```
 
-### schéma
+### s-schéma
 
-Le composant du _schéma_ peut prendre l'une des deux formes suivantes :
+we composant du _schéma_ p-peut pwendwe w'une des deux f-fowmes suivantes :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Valeur</th>
-      <th scope="col">Correspondances</th>
-    </tr>
+    <tw>
+      <th scope="cow" stywe="width: 50%">vaweuw</th>
+      <th scope="cow">cowwespondances</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>*</code></td>
       <td>
-        Seulement "http" et "https" et dans certains navigateurs
-        <a href="/fr/docs/Web/API/WebSockets_API">"ws" et "wss"</a> aussi.
+        seuwement "http" et "https" et dans cewtains nyavigateuws
+        <a hwef="/fw/docs/web/api/websockets_api">"ws" e-et "wss"</a> a-aussi. :3
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        Une parmi <code>http</code>, <code>https</code>, <code>ws</code>,
-        <code>wss</code>, <code>ftp</code>, <code>ftps</code>,
-        <code>data</code> ou <code>file</code>.
+        une pawmi <code>http</code>, mya <code>https</code>, OwO <code>ws</code>, (ˆ ﻌ ˆ)♡
+        <code>wss</code>, ʘwʘ <code>ftp</code>, o.O <code>ftps</code>, UwU
+        <code>data</code> o-ou <code>fiwe</code>. rawr x3
       </td>
-      <td>Seulement le schéma donné.</td>
-    </tr>
+      <td>seuwement w-we schéma d-donné.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
 ### hôte
 
-Le composant _hôte_ peut prendre l'une des trois formes suivantes :
+we composant _hôte_ peut pwendwe w'une des twois fowmes s-suivantes :
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col" style="width: 50%">Valeur</th>
-      <th scope="col">Correspondances</th>
-    </tr>
+    <tw>
+      <th scope="cow" stywe="width: 50%">vaweuw</th>
+      <th scope="cow">cowwespondances</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>*</code></td>
-      <td>Tout hôte</td>
-    </tr>
-    <tr>
-      <td><code>*.</code> Suivi d'une partie du nom d'hôte</td>
-      <td>L'hôte donné et l'un de ses sous-domaines</td>
-    </tr>
-    <tr>
-      <td>Un nom d'hôte complet, sans caractères génériques</td>
-      <td>Seul l'hôte donné</td>
-    </tr>
+      <td>tout h-hôte</td>
+    </tw>
+    <tw>
+      <td><code>*.</code> suivi d'une pawtie d-du nyom d'hôte</td>
+      <td>w'hôte d-donné e-et w'un de ses sous-domaines</td>
+    </tw>
+    <tw>
+      <td>un n-nyom d'hôte c-compwet, 🥺 sans cawactèwes g-généwiques</td>
+      <td>seuw w-w'hôte donné</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-L'_hôte_ ne doit pas inclure un numéro de port.
+w'_hôte_ nye doit p-pas incwuwe un n-nyuméwo de powt. :3
 
-L'_hôte_ est facultatif seulement si le _schéma_ est un « fichier ».
+w-w'_hôte_ est f-facuwtatif seuwement s-si we _schéma_ est un « fichiew ». (ꈍᴗꈍ)
 
-Notez que le caractère générique ne peut apparaître qu'au début.
+nyotez que we cawactèwe g-généwique nye peut appawaîtwe qu'au début. 🥺
 
 ### chemin
 
-Le composant du chemin d'accès doit commencer par un `/`.
+we composant du chemin d'accès d-doit commencew paw un `/`.
 
-Ensuite, il peut contenir éventuellement toute combinaison du caractère générique `*` et de l'un des caractères autorisés dans les chemins d'URL ou chaînes de requête. Contrairement à l'_hôte_, le composant du _chemin_ peut contenir le caractère générique `*` au milieu ou à la fin, et le caractère `*` peut apparaître plusieurs fois.
+ensuite, (✿oωo) iw peut conteniw éventuewwement t-toute combinaison d-du cawactèwe g-généwique `*` et de w'un d-des cawactèwes autowisés dans w-wes chemins d-d'uww ou chaînes de wequête. (U ﹏ U) contwaiwement à w'_hôte_, :3 we composant du _chemin_ peut conteniw we cawactèwe g-généwique `*` au miwieu ou à w-wa fin, ^^;; et we cawactèwe `*` peut a-appawaîtwe pwusieuws f-fois. rawr
 
-La valeur du _chemin_ matches correspond à la chaîne de caractères qui est le chemin plus la [chaine de requête URL](https://en.wikipedia.org/wiki/Query_string). Ceci inclut le signe `?` entre les deux, si la chaîne de requête est présente dans l'URL. Par exemple, si vous voulez faire correspondre des URLs sur n'importe quel domaine où le chemin URL se termine par `foo.bar`, alors vous devez utiliser un tableau de Match Patterns comme `['*://*/*foo.bar', '*://*/*foo.bar?*']`. Le `?*` est nécessaire, plutôt que juste la `bar*`, afin d'ancrer la fin `*` comme s'appliquant à la chaîne de requête URL et non à une partie du chemin URL.
+wa vaweuw du _chemin_ matches cowwespond à w-wa chaîne d-de cawactèwes qui est we c-chemin pwus wa [chaine d-de wequête uww](https://en.wikipedia.owg/wiki/quewy_stwing). 😳😳😳 ceci incwut we signe `?` entwe wes deux, (✿oωo) si w-wa chaîne de wequête e-est pwésente d-dans w'uww. OwO paw exempwe, ʘwʘ si v-vous vouwez faiwe c-cowwespondwe des uwws suw ny'impowte q-quew domaine où we chemin uww se tewmine paw `foo.baw`, (ˆ ﻌ ˆ)♡ awows vous devez u-utiwisew un tabweau d-de match pattewns comme `['*://*/*foo.baw', (U ﹏ U) '*://*/*foo.baw?*']`. UwU we `?*` e-est nyécessaiwe, XD p-pwutôt que juste wa `baw*`, ʘwʘ afin d'ancwew wa fin `*` comme s'appwiquant à wa c-chaîne de wequête uww et nyon à une pawtie du chemin uww. rawr x3
 
-Ni l'[identificateur de fragment d'URL](https://en.wikipedia.org/wiki/Fragment_identifier), ni le `#` qui le précède, ne sont considérés comme faisant partie du _chemin_.
+nyi w'[identificateuw d-de fwagment d'uww](https://en.wikipedia.owg/wiki/fwagment_identifiew), ^^;; nyi w-we `#` qui we pwécède, ʘwʘ n-nye sont considéwés comme faisant pawtie du _chemin_. (U ﹏ U)
 
-> [!NOTE]
-> La chaîne de modèle de chemin d'accès ne doit pas inclure de numéro de port. Ajout d'un port, comme dans : `http://localhost:1234/*` fait que le motif de match est ignoré. Cependant, `http://localhost:1234` correspondra avec `http://localhost/*`.
+> [!note]
+> wa c-chaîne de modèwe d-de chemin d'accès nye doit pas incwuwe de nyuméwo de powt. a-ajout d'un powt, (˘ω˘) comme dans : `http://wocawhost:1234/*` f-fait que we motif de match est ignowé. (ꈍᴗꈍ) cependant, `http://wocawhost:1234` c-cowwespondwa avec `http://wocawhost/*`. /(^•ω•^)
 
-### \<all_urls>
+### \<aww_uwws>
 
-La valeur spéciale `<all_urls>` correspond à toutes les URL sous l'un des schémas pris en charge, c'est‐à‐dire&nbsp;: "http", "https", "ws", "wss", "ftp", "data" et "file".
+wa v-vaweuw spéciawe `<aww_uwws>` c-cowwespond à toutes wes uww sous w-w'un des schémas pwis en chawge, >_< c-c'est‐à‐diwe&nbsp;: "http", σωσ "https", "ws", "wss", ^^;; "ftp", "data" e-et "fiwe". 😳
 
-## Exemples
+## e-exempwes
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col" style="width: 33%">Modèle</th>
-      <th scope="col" style="width: 33%">Exemples de correspondances</th>
-      <th scope="col" style="width: 33%">Exemples de non-correspondances</th>
-    </tr>
+    <tw>
+      <th s-scope="cow" s-stywe="width: 33%">modèwe</th>
+      <th scope="cow" stywe="width: 33%">exempwes d-de cowwespondances</th>
+      <th s-scope="cow" s-stywe="width: 33%">exempwes de nyon-cowwespondances</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td>
-        <p><code>&#x3C;all_urls></code></p>
-        <p>Correspondance à toutes les URL</p>
+        <p><code>&#x3c;aww_uwws></code></p>
+        <p>cowwespondance à toutes wes uww</p>
       </td>
       <td>
-        <p><code>http://example.org/</code></p>
-        <p><code>https://a.org/some/path/</code></p>
-        <p><code>ws://sockets.somewhere.org/</code></p>
-        <p><code>wss://ws.example.com/stuff/</code></p>
-        <p><code>ftp://files.somewhere.org/</code></p>
-        <p><code>ftps://files.somewhere.org/</code></p>
+        <p><code>http://exampwe.owg/</code></p>
+        <p><code>https://a.owg/some/path/</code></p>
+        <p><code>ws://sockets.somewhewe.owg/</code></p>
+        <p><code>wss://ws.exampwe.com/stuff/</code></p>
+        <p><code>ftp://fiwes.somewhewe.owg/</code></p>
+        <p><code>ftps://fiwes.somewhewe.owg/</code></p>
       </td>
       <td>
-        <p><code>resource://a/b/c/</code><br />(schéma sans équivalent)</p>
+        <p><code>wesouwce://a/b/c/</code><bw />(schéma s-sans équivawent)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <p><code>*://*/*</code></p>
-        <p>Correspondance à toutes les URLs HTTP, HTTPS et WebSocket</p>
+        <p>cowwespondance à toutes w-wes uwws http, >_< h-https et websocket</p>
       </td>
       <td>
-        <p><code>http://example.org/</code></p>
-        <p><code>https://a.org/some/path/</code></p>
-        <p><code>ws://sockets.somewhere.org/</code></p>
-        <p><code>wss://ws.example.com/stuff/</code></p>
+        <p><code>http://exampwe.owg/</code></p>
+        <p><code>https://a.owg/some/path/</code></p>
+        <p><code>ws://sockets.somewhewe.owg/</code></p>
+        <p><code>wss://ws.exampwe.com/stuff/</code></p>
       </td>
       <td>
-        <p><code>ftp://ftp.example.org/</code><br />(schéma sans équivalent)</p>
+        <p><code>ftp://ftp.exampwe.owg/</code><bw />(schéma sans équivawent)</p>
         <p>
-          <code>ftps://ftp.example.org/</code><br />(schéma sans équivalent)
+          <code>ftps://ftp.exampwe.owg/</code><bw />(schéma sans équivawent)
         </p>
-        <p><code>file:///a/</code><br />(schéma sans équivalent)</p>
+        <p><code>fiwe:///a/</code><bw />(schéma sans équivawent)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>*://*.mozilla.org/*</code></p>
+        <p><code>*://*.moziwwa.owg/*</code></p>
         <p>
-          Correspondance à toutes les URLs HTTP, HTTPS et WebSocket URLs qui
-          sont hébergés sur "mozilla.org" ou l'un de ses sous-domaines.
-        </p>
-      </td>
-      <td>
-        <p><code>http://mozilla.org/</code></p>
-        <p><code>https://mozilla.org/</code></p>
-        <p><code>http://a.mozilla.org/</code></p>
-        <p><code>http://a.b.mozilla.org/</code></p>
-        <p><code>https://b.mozilla.org/path/</code></p>
-        <p><code>ws://ws.mozilla.org/</code></p>
-        <p><code>wss://secure.mozilla.org/something</code></p>
-      </td>
-      <td>
-        <p><code>ftp://mozilla.org/</code><br />(schéma sans équivalent)</p>
-        <p><code>http://mozilla.com/</code><br />(hôte sans équivalent)</p>
-        <p><code>http://firefox.org/</code><br />(hôte sans équivalent)</p>
-      </td>
-    </tr>
-    <tr>
-      <td>
-        <p><code>*://mozilla.org/</code></p>
-        <p>
-          Correspondance à toutes les URLs HTTP, HTTPS and WebSocket qui sont
-          hébergés exactement chez "mozilla.org/"
+          cowwespondance à t-toutes wes uwws h-http, -.- https et w-websocket uwws qui
+          s-sont hébewgés suw "moziwwa.owg" ou w-w'un de ses sous-domaines. UwU
         </p>
       </td>
       <td>
-        <p><code>http://mozilla.org/</code></p>
-        <p><code>https://mozilla.org/</code></p>
-        <p><code>ws://mozilla.org/</code></p>
-        <p><code>wss://mozilla.org/</code></p>
+        <p><code>http://moziwwa.owg/</code></p>
+        <p><code>https://moziwwa.owg/</code></p>
+        <p><code>http://a.moziwwa.owg/</code></p>
+        <p><code>http://a.b.moziwwa.owg/</code></p>
+        <p><code>https://b.moziwwa.owg/path/</code></p>
+        <p><code>ws://ws.moziwwa.owg/</code></p>
+        <p><code>wss://secuwe.moziwwa.owg/something</code></p>
       </td>
       <td>
-        <p><code>ftp://mozilla.org/</code><br />(schéma sans équivalent)</p>
-        <p><code>http://a.mozilla.org/</code><br />(hôte sans équivalent)</p>
-        <p><code>http://mozilla.org/a</code><br />(chemin sans équivalent)</p>
+        <p><code>ftp://moziwwa.owg/</code><bw />(schéma sans équivawent)</p>
+        <p><code>http://moziwwa.com/</code><bw />(hôte sans équivawent)</p>
+        <p><code>http://fiwefox.owg/</code><bw />(hôte sans équivawent)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>ftp://mozilla.org/</code></p>
-        <p>Correspondance seulement à "ftp://mozilla.org/".</p>
+        <p><code>*://moziwwa.owg/</code></p>
+        <p>
+          cowwespondance à toutes wes uwws http, :3 https and w-websocket qui sont
+          hébewgés e-exactement chez "moziwwa.owg/"
+        </p>
       </td>
-      <td><code>ftp://mozilla.org</code></td>
       <td>
-        <p><code>http://mozilla.org/</code><br />(schéma sans équivalent)</p>
-        <p><code>ftp://sub.mozilla.org/</code><br />(hôte sans équivalent)</p>
-        <p><code>ftp://mozilla.org/path</code><br />(chemin sans équivalent)</p>
+        <p><code>http://moziwwa.owg/</code></p>
+        <p><code>https://moziwwa.owg/</code></p>
+        <p><code>ws://moziwwa.owg/</code></p>
+        <p><code>wss://moziwwa.owg/</code></p>
       </td>
-    </tr>
-    <tr>
+      <td>
+        <p><code>ftp://moziwwa.owg/</code><bw />(schéma s-sans équivawent)</p>
+        <p><code>http://a.moziwwa.owg/</code><bw />(hôte sans équivawent)</p>
+        <p><code>http://moziwwa.owg/a</code><bw />(chemin s-sans équivawent)</p>
+      </td>
+    </tw>
+    <tw>
+      <td>
+        <p><code>ftp://moziwwa.owg/</code></p>
+        <p>cowwespondance seuwement à "ftp://moziwwa.owg/".</p>
+      </td>
+      <td><code>ftp://moziwwa.owg</code></td>
+      <td>
+        <p><code>http://moziwwa.owg/</code><bw />(schéma s-sans équivawent)</p>
+        <p><code>ftp://sub.moziwwa.owg/</code><bw />(hôte s-sans équivawent)</p>
+        <p><code>ftp://moziwwa.owg/path</code><bw />(chemin s-sans équivawent)</p>
+      </td>
+    </tw>
+    <tw>
       <td>
         <p><code>https://*/path</code></p>
         <p>
-          Correspondance aux URLs HTTPS sur n'importe quel hôte, dont le chemin
-          est "path".
+          c-cowwespondance a-aux uwws https suw ny'impowte quew hôte, σωσ dont we chemin
+          est "path". >w<
         </p>
       </td>
       <td>
-        <p><code>https://mozilla.org/path</code></p>
-        <p><code>https://a.mozilla.org/path</code></p>
+        <p><code>https://moziwwa.owg/path</code></p>
+        <p><code>https://a.moziwwa.owg/path</code></p>
         <p><code>https://something.com/path</code></p>
       </td>
       <td>
         <p>
-          <code>http://mozilla.org/path</code><br />(schéma sans équivalent)
+          <code>http://moziwwa.owg/path</code><bw />(schéma sans équivawent)
         </p>
         <p>
-          <code>https://mozilla.org/path/</code><br />(chemin sans équivalent)
+          <code>https://moziwwa.owg/path/</code><bw />(chemin sans équivawent)
         </p>
-        <p><code>https://mozilla.org/a</code><br />(chemin sans équivalent)</p>
-        <p><code>https://mozilla.org/</code><br />(chemin sans équivalent)</p>
+        <p><code>https://moziwwa.owg/a</code><bw />(chemin sans équivawent)</p>
+        <p><code>https://moziwwa.owg/</code><bw />(chemin s-sans équivawent)</p>
         <p>
-          <code>https://mozilla.org/path?foo=1</code><br />(chemin d'accès
-          inégalé grâce à la chaîne d'interrogation URL)
+          <code>https://moziwwa.owg/path?foo=1</code><bw />(chemin d-d'accès
+          i-inégawé gwâce à w-wa chaîne d'intewwogation uww)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
         <p><code>https://*/path/</code></p>
         <p>
-          Correspondance aux URLs HTTPS sur n'importe quel hôte, dont le chemin
-          est "path/".
+          cowwespondance aux uwws h-https suw ny'impowte q-quew hôte, (ˆ ﻌ ˆ)♡ dont we chemin
+          e-est "path/". ʘwʘ
         </p>
       </td>
       <td>
-        <p><code>https://mozilla.org/path/</code></p>
-        <p><code>https://a.mozilla.org/path/</code></p>
+        <p><code>https://moziwwa.owg/path/</code></p>
+        <p><code>https://a.moziwwa.owg/path/</code></p>
         <p><code>https://something.com/path</code>/</p>
       </td>
       <td>
         <p>
-          <code>http://mozilla.org/path/</code><br />(schéma sans équivalent)
+          <code>http://moziwwa.owg/path/</code><bw />(schéma sans équivawent)
         </p>
         <p>
-          <code>https://mozilla.org/path</code><br />(chemin sans équivalent)
+          <code>https://moziwwa.owg/path</code><bw />(chemin sans équivawent)
         </p>
-        <p><code>https://mozilla.org/a</code><br />(chemin sans équivalent)</p>
-        <p><code>https://mozilla.org/</code><br />(chemin sans équivalent)</p>
+        <p><code>https://moziwwa.owg/a</code><bw />(chemin s-sans équivawent)</p>
+        <p><code>https://moziwwa.owg/</code><bw />(chemin s-sans équivawent)</p>
         <p>
-          <code>https://mozilla.org/path/</code><code>?foo=1</code><br />(chemin
-          d'accès inégalé grâce à la chaîne d'interrogation URL)
+          <code>https://moziwwa.owg/path/</code><code>?foo=1</code><bw />(chemin
+          d'accès inégawé g-gwâce à w-wa chaîne d'intewwogation uww)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>https://mozilla.org/*</code></p>
+        <p><code>https://moziwwa.owg/*</code></p>
         <p>
-          Correspondance sur toutes les URLs HTTPS uniquement sur "mozilla.org",
-          avec n'importe quel chemin
+          cowwespondance suw toutes wes uwws https uniquement s-suw "moziwwa.owg", :3
+          a-avec n'impowte quew c-chemin
         </p>
       </td>
       <td>
-        <p><code>https://mozilla.org/</code></p>
-        <p><code>https://mozilla.org/path</code></p>
-        <p><code>https://mozilla.org/another</code></p>
-        <p><code>https://mozilla.org/path/to/doc</code></p>
-        <p><code>https://mozilla.org/path/to/doc?foo=1</code></p>
+        <p><code>https://moziwwa.owg/</code></p>
+        <p><code>https://moziwwa.owg/path</code></p>
+        <p><code>https://moziwwa.owg/anothew</code></p>
+        <p><code>https://moziwwa.owg/path/to/doc</code></p>
+        <p><code>https://moziwwa.owg/path/to/doc?foo=1</code></p>
       </td>
       <td>
         <p>
-          <code>http://mozilla.org/path</code><br />(chemin sans équivalent)
+          <code>http://moziwwa.owg/path</code><bw />(chemin s-sans équivawent)
         </p>
-        <p><code>https://mozilla.com/path</code><br />(hôte sans équivalent)</p>
+        <p><code>https://moziwwa.com/path</code><bw />(hôte s-sans équivawent)</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>https://mozilla.org/a/b/c/</code></p>
-        <p>Correspondance seulement pour cet URL.</p>
+        <p><code>https://moziwwa.owg/a/b/c/</code></p>
+        <p>cowwespondance seuwement p-pouw cet uww.</p>
       </td>
       <td>
-        <p><code>https://mozilla.org/a/b/c/</code></p>
-        <p><code>https://mozilla.org/a/b/c/#section1</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/#section1</code></p>
       </td>
-      <td>N'importe quoi d'autre.</td>
-    </tr>
-    <tr>
+      <td>n'impowte q-quoi d'autwe.</td>
+    </tw>
+    <tw>
       <td>
-        <p><code>https://mozilla.org/*/b/*/</code></p>
+        <p><code>https://moziwwa.owg/*/b/*/</code></p>
         <p>
-          Correspondance sur toutes les URL HTTPS hébergées sur "mozilla.org",
-          dont le chemin d'accès contient un composant "b" quelque part au
-          milieu. Correspond aux URLs avec les chaînes de requête, si la chaîne
-          se termine par un <code>/</code>.
+          cowwespondance suw t-toutes wes uww h-https hébewgées suw "moziwwa.owg", (˘ω˘)
+          d-dont we chemin d'accès contient un composant "b" q-quewque pawt au
+          miwieu. 😳😳😳 c-cowwespond aux u-uwws avec wes chaînes de wequête, rawr x3 s-si wa chaîne
+          se tewmine paw un <code>/</code>. (✿oωo)
         </p>
       </td>
       <td>
-        <p><code>https://mozilla.org/a/b/c/</code></p>
-        <p><code>https://mozilla.org/d/b/f/</code></p>
-        <p><code>https://mozilla.org/a/b/c/d/</code></p>
-        <p><code>https://mozilla.org/a/b/c/d/#section1</code></p>
-        <p><code>https://mozilla.org/a/b/c/d/?foo=/</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/</code></p>
+        <p><code>https://moziwwa.owg/d/b/f/</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/d/</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/d/#section1</code></p>
+        <p><code>https://moziwwa.owg/a/b/c/d/?foo=/</code></p>
         <p>
           <code
-            >https://mozilla.org/a?foo=21314&#x26;bar=/b/&#x26;extra=c/</code
+            >https://moziwwa.owg/a?foo=21314&#x26;baw=/b/&#x26;extwa=c/</code
           >
         </p>
       </td>
       <td>
         <p>
-          <code>https://mozilla.org/b/*/</code><br />(chemin sans équivalent)
+          <code>https://moziwwa.owg/b/*/</code><bw />(chemin sans équivawent)
         </p>
         <p>
-          <code>https://mozilla.org/a/b/</code><br />(chemin sans équivalent)
+          <code>https://moziwwa.owg/a/b/</code><bw />(chemin s-sans équivawent)
         </p>
         <p>
-          <code>https://mozilla.org/a/b/c/d/?foo=bar</code><br />(chemin d'accès
-          inégalé grâce à la chaîne d'interrogation URL)
+          <code>https://moziwwa.owg/a/b/c/d/?foo=baw</code><bw />(chemin d-d'accès
+          inégawé g-gwâce à wa chaîne d'intewwogation uww)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td>
-        <p><code>file:///blah/*</code></p>
+        <p><code>fiwe:///bwah/*</code></p>
         <p>
-          Correspondance à n'importe quelle URL FILE dont le chemin commence par
-          "blah".
+          cowwespondance à n-ny'impowte quewwe uww fiwe dont we c-chemin commence p-paw
+          "bwah".
         </p>
       </td>
       <td>
-        <p><code>file:///blah/</code></p>
-        <p><code>file:///blah/bleh</code></p>
+        <p><code>fiwe:///bwah/</code></p>
+        <p><code>fiwe:///bwah/bweh</code></p>
       </td>
-      <td><code>file:///bleh/</code><br />(chemin sans équivalent)</td>
-    </tr>
+      <td><code>fiwe:///bweh/</code><bw />(chemin sans équivawent)</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Modèles de correspondance invalides
+### m-modèwes de cowwespondance i-invawides
 
-| Modèle invalide           | Raison                                                               |
+| m-modèwe invawide           | waison                                                               |
 | ------------------------- | -------------------------------------------------------------------- |
-| `resource://path/`        | schéma non pris en charge.                                           |
-| `https://mozilla.org`     | pas de chemin.                                                       |
-| `https://mozilla.*.org/`  | "*" dans *hôte\* doit être au départ.                                |
-| `https://*zilla.org/`     | "*" dans *hôte\* doit être le seul caractère ou être suivi de « . ». |
-| `http*://mozilla.org/`    | "\*" dans le schéma doit être le seul caractère.                     |
-| `https://mozilla.org:80/` | L'hôte ne doit pas inclure un numéro de port.                        |
-| `*://*`                   | Chemin vide : il doit être "`*://*/*`".                              |
-| `file://*`                | Chemin vide : il doit être "`file:///*`".                            |
+| `wesouwce://path/`        | schéma nyon pwis en chawge. (ˆ ﻌ ˆ)♡                                           |
+| `https://moziwwa.owg`     | p-pas de chemin. :3                                                       |
+| `https://moziwwa.*.owg/`  | "*" dans *hôte\* doit êtwe a-au dépawt. (U ᵕ U❁)                                |
+| `https://*ziwwa.owg/`     | "*" d-dans *hôte\* doit êtwe we seuw c-cawactèwe ou êtwe suivi de « . ^^;; ». |
+| `http*://moziwwa.owg/`    | "\*" d-dans w-we schéma doit êtwe w-we seuw cawactèwe. mya                     |
+| `https://moziwwa.owg:80/` | w'hôte nye doit pas incwuwe un nyuméwo de powt.                        |
+| `*://*`                   | chemin vide : iw doit êtwe "`*://*/*`".                              |
+| `fiwe://*`                | chemin vide : iw doit êtwe "`fiwe:///*`". 😳😳😳                            |
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

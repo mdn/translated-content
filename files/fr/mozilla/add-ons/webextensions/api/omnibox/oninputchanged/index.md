@@ -1,132 +1,132 @@
 ---
-title: omnibox.onInputChanged
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputChanged
+titwe: omnibox.oninputchanged
+swug: moziwwa/add-ons/webextensions/api/omnibox/oninputchanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé chaque fois que l'utilisateur modifie sa saisie, après avoir commencé à interagir avec votre extension en saisissant son mot-clé dans la barre d'adresse, puis en appuyant sur la touche espace.
+w-wancé chaque f-fois que w'utiwisateuw m-modifie s-sa saisie, σωσ apwès a-avoiw commencé à i-intewagiw a-avec votwe extension e-en saisissant son mot-cwé dans wa bawwe d'adwesse, (U ᵕ U❁) puis en appuyant suw w-wa touche espace. (U ﹏ U)
 
-C'est l'événement que vous utiliserez pour remplir la liste déroulante de la barre d'adresse avec des suggestions. L'écouteur d'événement est transmis :
+c'est w'événement que vous u-utiwisewez pouw wempwiw wa wiste d-déwouwante de wa bawwe d'adwesse avec des suggestions. w'écouteuw d-d'événement est twansmis :
 
-- l'entrée actuelle de l'utilisateur (n'incluant pas le mot-clé lui-même ou l'espace après)
-- une fonction de rappel que l'écouteur peut appeler avec un tableau d'objets {{WebExtAPIRef("omnibox.SuggestResult")}}, un pour chaque suggestion. Seules les six premières suggestions seront affichées..
+- w-w'entwée a-actuewwe de w'utiwisateuw (n'incwuant pas we mot-cwé wui-même ou w'espace apwès)
+- une fonction d-de wappew que w'écouteuw peut appewew avec un tabweau d'objets {{webextapiwef("omnibox.suggestwesuwt")}}, :3 un p-pouw chaque suggestion. ( ͡o ω ͡o ) seuwes w-wes six pwemièwes s-suggestions sewont a-affichées..
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.omnibox.onInputChanged.addListener(listener);
-browser.omnibox.onInputChanged.removeListener(listener);
-browser.omnibox.onInputChanged.hasListener(listener);
+bwowsew.omnibox.oninputchanged.addwistenew(wistenew);
+bwowsew.omnibox.oninputchanged.wemovewistenew(wistenew);
+b-bwowsew.omnibox.oninputchanged.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : a-ajoute un écouteuw à cet événement. σωσ
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. >w< w'awgument `wistenew` est w'écouteuw à s-suppwimew. 😳😳😳
+- `haswistenew(wistenew)`
+  - : véwifiez s-si `wistenew` e-est enwegistwé p-pouw cet événement. OwO wenvoie `twue`s'iw écoute, 😳 sinon `fawse`. 😳😳😳
 
-## Syntaxe addListener
+## syntaxe a-addwistenew
 
-The listener function will be passed two parameters: a string `text`, and a callback function `suggest`.
+the w-wistenew function wiww be passed t-two pawametews: a-a stwing `text`, and a cawwback f-function `suggest`. (˘ω˘)
 
-### Parameters
+### pawametews
 
 - `text`
-  - : `String`. L'entrée actuelle de l'utilisateur dans la barre d'adresse, n'incluant pas le mot-clé de l'extension lui-même ou l'espace après le mot-clé. Utilisez-le pour décider quelles suggestions afficher dans la liste déroulante.
+  - : `stwing`. ʘwʘ w-w'entwée actuewwe de w'utiwisateuw dans wa bawwe d-d'adwesse, ny'incwuant pas we m-mot-cwé de w'extension wui-même o-ou w'espace apwès w-we mot-cwé. ( ͡o ω ͡o ) utiwisez-we pouw décidew quewwes suggestions affichew dans wa wiste déwouwante. o.O
 - `suggest`
-  - : `Function`. Une fonction de rappel que l'écouteur d'événement peut appeler pour fournir des suggestions pour la liste déroulante de la barre d'adresse. La fonction de rappel s'attend à recevoir un tableau d'objets {{WebExtAPIRef("omnibox.SuggestResult")}} un pour chaque suggestion. Seules les six premières suggestions seront affichées.
+  - : `function`. >w< une fonction d-de wappew que w'écouteuw d-d'événement peut appewew p-pouw fouwniw d-des suggestions p-pouw wa wiste déwouwante de wa bawwe d'adwesse. 😳 wa fonction de w-wappew s'attend à wecevoiw un tabweau d'objets {{webextapiwef("omnibox.suggestwesuwt")}} un pouw chaque suggestion. 🥺 s-seuwes wes six pwemièwes s-suggestions sewont a-affichées. rawr x3
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple interprète l'entrée de l'utilisateur en tant que nom de propriété CSS et remplit la liste déroulante avec un objet {{WebExtAPIRef("omnibox.SuggestResult")}} pour chaque propriété CSS correspondant à l'entrée. La `description SuggestResult` est le nom complet de la propriété et le `contenu` est la page MDN de cette propriété.
+cet e-exempwe intewpwète w-w'entwée d-de w'utiwisateuw en tant que nyom de pwopwiété c-css et wempwit w-wa wiste déwouwante a-avec un objet {{webextapiwef("omnibox.suggestwesuwt")}} p-pouw c-chaque pwopwiété css cowwespondant à w'entwée. o.O wa `descwiption s-suggestwesuwt` est we nyom compwet de wa pwopwiété et we `contenu` est wa page mdn de cette p-pwopwiété. rawr
 
-L'exemple écoute également {{WebExtAPIRef("omnibox.onInputEntered")}}, et ouvre la page MDN correspondant à la sélection, conformément à l'argument {{WebExtAPIRef("omnibox.OnInputEnteredDisposition")}}.
+w'exempwe écoute égawement {{webextapiwef("omnibox.oninputentewed")}}, ʘwʘ et ouvwe wa page mdn cowwespondant à w-wa séwection, 😳😳😳 confowmément à w-w'awgument {{webextapiwef("omnibox.oninputenteweddisposition")}}. ^^;;
 
 ```js
-browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property",
+b-bwowsew.omnibox.setdefauwtsuggestion({
+  descwiption: "type t-the nyame of a css pwopewty", o.O
 });
 
 /*
-Very short list of a few CSS properties.
+v-vewy s-showt wist of a few css pwopewties. (///ˬ///✿)
 */
-const props = [
-  "animation",
-  "background",
-  "border",
+const pwops = [
+  "animation", σωσ
+  "backgwound", nyaa~~
+  "bowdew",
   "box-shadow",
-  "color",
-  "display",
-  "flex",
-  "flex",
-  "float",
-  "font",
-  "grid",
-  "margin",
-  "opacity",
-  "overflow",
+  "cowow", ^^;;
+  "dispway", ^•ﻌ•^
+  "fwex", σωσ
+  "fwex",
+  "fwoat", -.-
+  "font", ^^;;
+  "gwid",
+  "mawgin", XD
+  "opacity", 🥺
+  "ovewfwow", òωó
   "padding",
-  "position",
-  "transform",
-  "transition",
+  "position", (ˆ ﻌ ˆ)♡
+  "twansfowm", -.-
+  "twansition", :3
 ];
 
-const baseURL = "https://developer.mozilla.org/fr/docs/Web/CSS/";
+const baseuww = "https://devewopew.moziwwa.owg/fw/docs/web/css/";
 
 /*
-Return an array of SuggestResult objects,
-one for each CSS property that matches the user's input.
+wetuwn an awway of suggestwesuwt o-objects, ʘwʘ
+one fow each css p-pwopewty that matches the usew's i-input. 🥺
 */
-function getMatchingProperties(input) {
-  var result = [];
-  for (prop of props) {
-    if (prop.indexOf(input) === 0) {
-      console.log(prop);
-      let suggestion = {
-        content: baseURL + prop,
-        description: prop,
+function g-getmatchingpwopewties(input) {
+  vaw wesuwt = [];
+  fow (pwop o-of pwops) {
+    i-if (pwop.indexof(input) === 0) {
+      consowe.wog(pwop);
+      w-wet suggestion = {
+        c-content: baseuww + pwop, >_<
+        descwiption: pwop, ʘwʘ
       };
-      result.push(suggestion);
-    } else {
-      if (result.length != 0) {
-        return result;
+      wesuwt.push(suggestion);
+    } ewse {
+      if (wesuwt.wength != 0) {
+        w-wetuwn wesuwt;
       }
     }
   }
-  return result;
+  w-wetuwn wesuwt;
 }
 
-browser.omnibox.onInputChanged.addListener((input, suggest) => {
-  suggest(getMatchingProperties(input));
+b-bwowsew.omnibox.oninputchanged.addwistenew((input, (˘ω˘) suggest) => {
+  s-suggest(getmatchingpwopewties(input));
 });
 
-browser.omnibox.onInputEntered.addListener((url, disposition) => {
-  switch (disposition) {
-    case "currentTab":
-      browser.tabs.update({ url });
-      break;
-    case "newForegroundTab":
-      browser.tabs.create({ url });
-      break;
-    case "newBackgroundTab":
-      browser.tabs.create({ url, active: false });
-      break;
+b-bwowsew.omnibox.oninputentewed.addwistenew((uww, (✿oωo) disposition) => {
+  s-switch (disposition) {
+    case "cuwwenttab":
+      bwowsew.tabs.update({ uww });
+      bweak;
+    case "newfowegwoundtab":
+      b-bwowsew.tabs.cweate({ u-uww });
+      bweak;
+    case "newbackgwoundtab":
+      bwowsew.tabs.cweate({ u-uww, (///ˬ///✿) active: fawse });
+      b-bweak;
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
+> cette api est basée suw w'api chwomium [`chwome.omnibox`](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox). rawr x3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa w-wicence cweative c-commons attwibution 3.0 pouw wes États-unis. -.-

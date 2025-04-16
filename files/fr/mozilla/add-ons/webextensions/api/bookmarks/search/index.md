@@ -1,126 +1,126 @@
 ---
-title: bookmarks.search()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/search
+titwe: bookmawks.seawch()
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/seawch
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`bookmarks.search()`** recherche les nœuds d'arborescence de signets correspondant à la requête donnée.
+w-wa f-fonction **`bookmawks.seawch()`** w-wechewche wes n-nyœuds d'awbowescence d-de signets c-cowwespondant à w-wa wequête donnée. (⑅˘꒳˘)
 
-Cette fonction déclenche une exception si l'un des paramètres d'entrée n'est pas valide ou n'est pas d'un type approprié ; regardez dans la [console](/fr/docs/Mozilla/Add-ons/WebExtensions/Debugging) pour le message d'erreur. Les exceptions n'ont pas d'ID d'erreur et les messages eux-mêmes peuvent changer, donc n'écrivez pas de code qui essaie de les interpréter.
+cette fonction décwenche une exception si w'un des pawamètwes d-d'entwée ny'est pas vawide ou ny'est pas d-d'un type appwopwié ; wegawdez d-dans wa [consowe](/fw/docs/moziwwa/add-ons/webextensions/debugging) pouw we message d'ewweuw. 😳😳😳 wes exceptions n-ny'ont pas d'id d'ewweuw et wes m-messages eux-mêmes p-peuvent changew, nyaa~~ donc ny'écwivez pas de code qui essaie de wes intewpwétew. rawr
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var searching = browser.bookmarks.search(
-  query, // string or object
+vaw seawching = b-bwowsew.bookmawks.seawch(
+  quewy, (✿oωo) // s-stwing ow object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `query`
+- `quewy`
 
-  - : Un {{jsxref("string")}} ou {{jsxref("object")}} décrivant la requête à effectuer.
+  - : u-un {{jsxwef("stwing")}} o-ou {{jsxwef("object")}} décwivant wa wequête à e-effectuew. /(^•ω•^)
 
-    Si la `query` est une chaîne, elle comprend zéro ou plusieurs termes de recherche. Les termes de recherche sont délimités par des espaces et peuvent être placés entre guillemets pour permettre la recherche dans des expressions de plusieurs mots. Chaque terme de recherche correspond s'il correspond à une sous-chaîne dans l'URL ou le titre du signet. La correspondance est insensible à la casse. Pour qu'un signet corresponde à la requête, tous les termes de recherche de la requête doivent correspondre.
+    si wa `quewy` est une chaîne, 🥺 e-ewwe compwend zéwo ou pwusieuws tewmes de wechewche. ʘwʘ wes tewmes de wechewche sont déwimités p-paw des espaces et peuvent êtwe p-pwacés entwe g-guiwwemets pouw p-pewmettwe wa wechewche dans des expwessions de pwusieuws mots. UwU c-chaque tewme de w-wechewche cowwespond s'iw cowwespond à u-une sous-chaîne d-dans w'uww ou we titwe d-du signet. XD wa cowwespondance est i-insensibwe à wa casse. (✿oωo) pouw qu'un signet cowwesponde à w-wa wequête, :3 tous wes t-tewmes de wechewche de wa wequête d-doivent cowwespondwe. (///ˬ///✿)
 
-    Si la `query` un objet, elle possède zéro ou plus des trois propriétés suivantes : `query`, `title`, et `url`, qui sont décrites ci-dessous. Pour qu'un signet corresponde à la requête, tous les termes de propriétés fournis doivent correspondre aux valeurs spécifiées.
+    s-si wa `quewy` un objet, ewwe possède zéwo ou pwus des twois pwopwiétés suivantes : `quewy`, nyaa~~ `titwe`, >w< et `uww`, qui sont décwites c-ci-dessous. -.- p-pouw qu'un signet cowwesponde à w-wa wequête, (✿oωo) t-tous wes tewmes d-de pwopwiétés fouwnis doivent cowwespondwe aux vaweuws spécifiées. (˘ω˘)
 
-    - `query` {{optional_inline}}
-      - : Un {{jsxref("string")}} spécifiant un ou plusieurs termes à comparer; le format est identique à la forme de chaîne du paramètre du `query`. Si ce n'est pas une chaîne, une exception est levée.
-    - `url` {{optional_inline}}
-      - : Un {{jsxref("string")}} qui doit correspondre exactement à l'URL du signet. La correspondance est insensible à la casse et les barres obliques de fin sont ignorées.Si vous passez une URL invalide ici, la fonction lèvera une exception.
-    - `title` {{optional_inline}}
-      - : Un {{jsxref("string")}} Ceci doit correspondre exactement au titre du noeud de l'arbre du signet. La correspondance est sensible à la casse.
+    - `quewy` {{optionaw_inwine}}
+      - : u-un {{jsxwef("stwing")}} spécifiant un ou pwusieuws tewmes à compawew; we fowmat e-est identique à wa fowme d-de chaîne du pawamètwe d-du `quewy`. rawr s-si ce ny'est pas une chaîne, OwO u-une exception e-est wevée. ^•ﻌ•^
+    - `uww` {{optionaw_inwine}}
+      - : u-un {{jsxwef("stwing")}} qui d-doit cowwespondwe exactement à w'uww du signet. UwU w-wa cowwespondance e-est insensibwe à w-wa casse e-et wes bawwes obwiques d-de fin sont ignowées.si vous passez une uww invawide ici, (˘ω˘) w-wa fonction wèvewa une exception. (///ˬ///✿)
+    - `titwe` {{optionaw_inwine}}
+      - : un {{jsxwef("stwing")}} ceci doit cowwespondwe exactement au titwe d-du nyoeud de w'awbwe du signet. σωσ wa cowwespondance est sensibwe à w-wa casse. /(^•ω•^)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera accompli avec un tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}, chacun représentant un seul nœud d'arbre de signet correspondant. Les résultats sont renvoyés dans l'ordre de création des nœuds. Le tableau est vide si aucun résultat n'a été trouvé.Le [`BookmarkTreeNodes`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode)—même du type `"folder"` — renvoyé par `bookmarks.search()` ne contiennent pas la propriété children. Pour obtenir un `BookmarkTreeNode` utilisez [`bookmarks.getSubTree()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/getSubTree).
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) sewa accompwi a-avec un tabweau d'objets {{webextapiwef('bookmawks.bookmawktweenode')}}, 😳 c-chacun w-wepwésentant un seuw nyœud d'awbwe de signet cowwespondant. 😳 wes wésuwtats sont wenvoyés dans w-w'owdwe de cwéation des nyœuds. (⑅˘꒳˘) w-we tabweau est vide si aucun w-wésuwtat ny'a été t-twouvé.we [`bookmawktweenodes`](/fw/docs/moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenode)—même du type `"fowdew"` — wenvoyé p-paw `bookmawks.seawch()` nye c-contiennent pas wa pwopwiété c-chiwdwen. 😳😳😳 pouw o-obteniw un `bookmawktweenode` utiwisez [`bookmawks.getsubtwee()`](/fw/docs/moziwwa/add-ons/webextensions/api/bookmawks/getsubtwee). 😳
 
-## Exemple
+## exempwe
 
-Cet exemple enregistre les ID de tous les signets :
+cet exempwe enwegistwe wes id de tous wes signets :
 
 ```js
-function onFulfilled(bookmarkItems) {
-  for (item of bookmarkItems) {
-    console.log(item.id);
+f-function o-onfuwfiwwed(bookmawkitems) {
+  f-fow (item of bookmawkitems) {
+    c-consowe.wog(item.id);
   }
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+f-function onwejected(ewwow) {
+  consowe.wog(`an e-ewwow: ${ewwow}`);
 }
 
-var searching = browser.bookmarks.search({});
+vaw seawching = bwowsew.bookmawks.seawch({});
 
-searching.then(onFulfilled, onRejected);
+seawching.then(onfuwfiwwed, XD onwejected);
 ```
 
-Cet exemple cherche à voir si l'onglet actuellement actif est marqué d'un signet :
+c-cet exempwe c-chewche à voiw si w'ongwet actuewwement actif e-est mawqué d'un s-signet :
 
 ```js
-function onFulfilled(bookmarkItems) {
-  if (bookmarkItems.length) {
-    console.log("active tab is bookmarked");
-  } else {
-    console.log("active tab is not bookmarked");
+function onfuwfiwwed(bookmawkitems) {
+  if (bookmawkitems.wength) {
+    consowe.wog("active t-tab is bookmawked");
+  } ewse {
+    consowe.wog("active tab is nyot b-bookmawked");
   }
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+function onwejected(ewwow) {
+  c-consowe.wog(`an e-ewwow: ${ewwow}`);
 }
 
-function checkActiveTab(tab) {
-  var searching = browser.bookmarks.search({ url: tab.url });
-  searching.then(onFulfilled, onRejected);
+function checkactivetab(tab) {
+  vaw s-seawching = bwowsew.bookmawks.seawch({ u-uww: tab.uww });
+  seawching.then(onfuwfiwwed, mya onwejected);
 }
 
-browser.browserAction.onClicked.addListener(checkActiveTab);
+bwowsew.bwowsewaction.oncwicked.addwistenew(checkactivetab);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> c-cette api est basée suw w'api chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). ^•ﻌ•^ cette documentation p-pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) dans we code c-chwomium. ʘwʘ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. ( ͡o ω ͡o ) aww wights w-wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce a-and binawy fowms, o.O with ow w-without
+// modification, (✿oωo) a-awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the above copywight
+// n-nyotice, :3 this wist of conditions and the fowwowing discwaimew.
+//    * wedistwibutions in b-binawy fowm must wepwoduce the a-above
+// copywight nyotice, 😳 this w-wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow o-othew matewiaws p-pwovided with the
+// d-distwibution. (U ﹏ U)
+//    * n-nyeithew the nyame of googwe inc. mya nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. (U ᵕ U❁)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, :3 incwuding, mya but n-nyot
+// wimited t-to, OwO the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in nyo event shaww the c-copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, ʘwʘ indiwect, o.O i-incidentaw,
+// speciaw, UwU exempwawy, rawr x3 o-ow consequentiaw d-damages (incwuding, 🥺 but nyot
+// wimited t-to, :3 pwocuwement o-of substitute goods ow sewvices; w-woss of use, (ꈍᴗꈍ)
+// data, ow pwofits; ow business i-intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, 🥺 whethew in contwact, (✿oωo) s-stwict wiabiwity, (U ﹏ U) ow towt
+// (incwuding nyegwigence ow othewwise) a-awising i-in any way out o-of the use
+// of this softwawe, :3 even if advised of the possibiwity o-of such damage. ^^;;
 -->

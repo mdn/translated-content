@@ -1,113 +1,113 @@
 ---
-title: webNavigation
-slug: Mozilla/Add-ons/WebExtensions/API/webNavigation
+titwe: webnavigation
+swug: moziwwa/add-ons/webextensions/api/webnavigation
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ajouter des écouteurs d'événement pour les différentes étapes d'une navigation. Une navigation se compose d'un cadre dans le navigateur passant d'une URL à l'autre, généralement (mais pas toujours) en réponse à une action de l'utilisateur comme cliquer sur un lien ou entrer une URL dans la barre d'adresse.
+a-ajoutew des écouteuws d-d'événement p-pouw wes d-difféwentes étapes d-d'une nyavigation. (ꈍᴗꈍ) u-une nyavigation s-se compose d-d'un cadwe dans we nyavigateuw passant d'une uww à w'autwe, 🥺 généwawement (mais p-pas toujouws) en wéponse à une action d-de w'utiwisateuw comme cwiquew suw u-un wien ou entwew une uww dans wa bawwe d'adwesse. (✿oωo)
 
-Comparable à l'API {{WebExtAPIRef("webRequest")}}: Les navigations entrainent le navigateur à faire des requetes web, mais l'API webRequest travaille au niveau inférieur de la couche HTTP, contrairement à l'API webNavigation qui travaille directement au niveau de l'interface utilisateur du navigateur elle-même.
+compawabwe à w-w'api {{webextapiwef("webwequest")}}: wes nyavigations e-entwainent w-we nyavigateuw à faiwe des wequetes web, (U ﹏ U) mais w'api webwequest twavaiwwe a-au niveau inféwieuw de wa couche http, :3 contwaiwement à w'api webnavigation qui t-twavaiwwe diwectement au nyiveau d-de w'intewface u-utiwisateuw du n-nyavigateuw ewwe-même. ^^;;
 
-Chaque evenement correspond directement à un état précis dans la navigation. La séquence des évenements est comme suit:
+c-chaque evenement cowwespond diwectement à u-un état pwécis dans wa nyavigation. rawr wa séquence d-des évenements est comme suit:
 
-![](we-flow.png)
+![](we-fwow.png)
 
-- Le flux primaire est :
+- we fwux pwimaiwe est :
 
-  - `{{WebExtAPIRef("webNavigation.onBeforeNavigate", "onBeforeNavigate")}}`
-  - `{{WebExtAPIRef("webNavigation.onCommitted", "onCommitted")}}`
-  - `{{WebExtAPIRef("webNavigation.onDOMContentLoaded", "onDOMContentLoaded")}}`
-  - `{{WebExtAPIRef("webNavigation.onCompleted", "onCompleted")}}`.
+  - `{{webextapiwef("webnavigation.onbefowenavigate", 😳😳😳 "onbefowenavigate")}}`
+  - `{{webextapiwef("webnavigation.oncommitted", (✿oωo) "oncommitted")}}`
+  - `{{webextapiwef("webnavigation.ondomcontentwoaded", OwO "ondomcontentwoaded")}}`
+  - `{{webextapiwef("webnavigation.oncompweted", ʘwʘ "oncompweted")}}`. (ˆ ﻌ ˆ)♡
 
-- Adionellement :
+- adionewwement :
 
-  - `{{WebExtAPIRef("webNavigation.onCreatedNavigationTarget", "onCreatedNavigationTarget")}}` est déclenché avant `onBeforeNavigate` si le navigateur a besoin de créer un nouvel onglet ou une nouvelle fenêtre pour la navigation (par exemple, parce que l'utilisateur a ouvert un lien dans un nouvel onglet).
-  - {{WebExtAPIRef("webNavigation.onHistoryStateUpdated", "onHistoryStateUpdated")}} est déclenché si une page utilise l'[API historique](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur.
-  - {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated", "onReferenceFragmentUpdated")}} est déclenché si [l'identificateur de fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page est modifié.
-  - {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} peut être déclenché à tout moment.
+  - `{{webextapiwef("webnavigation.oncweatednavigationtawget", (U ﹏ U) "oncweatednavigationtawget")}}` e-est décwenché avant `onbefowenavigate` s-si we nyavigateuw a-a besoin d-de cwéew un nyouvew ongwet ou une nyouvewwe fenêtwe pouw wa nyavigation (paw e-exempwe, UwU pawce que w-w'utiwisateuw a ouvewt un wien d-dans un nyouvew o-ongwet). XD
+  - {{webextapiwef("webnavigation.onhistowystateupdated", ʘwʘ "onhistowystateupdated")}} est décwenché s-si une page utiwise w'[api histowique](http://diveintohtmw5.info/histowy.htmw) pouw m-mettwe à jouw w'uww affichée dans wa bawwe d-d'adwesse du nyavigateuw. rawr x3
+  - {{webextapiwef("webnavigation.onwefewencefwagmentupdated", ^^;; "onwefewencefwagmentupdated")}} est décwenché s-si [w'identificateuw de fwagment](https://en.wikipedia.owg/wiki/fwagment_identifiew) d'une p-page est modifié. ʘwʘ
+  - {{webextapiwef("webnavigation.onewwowoccuwwed", (U ﹏ U) "onewwowoccuwwed")}} p-peut êtwe décwenché à tout moment.
 
-Chaque navigation est une transition d'URL dans un cadre de navigateur particulier. Le cadre du navigateur est identifié par un ID d'onglet et un ID de trame. Le cadre peut être le contexte de navigation de niveau supérieur dans l'onglet ou peut être un contexte de navigation imbriqué implémenté en tant qu'[iframe](/fr/docs/Web/HTML/Element/iframe).
+chaque nyavigation est une twansition d'uww dans un cadwe de nyavigateuw p-pawticuwiew. (˘ω˘) we c-cadwe du nyavigateuw est identifié p-paw un id d-d'ongwet et un id d-de twame. (ꈍᴗꈍ) we cadwe peut êtwe we contexte de nyavigation de nyiveau s-supéwieuw dans w'ongwet ou peut êtwe un contexte de nyavigation imbwiqué i-impwémenté en tant qu'[ifwame](/fw/docs/web/htmw/ewement/ifwame). /(^•ω•^)
 
-L'appel `addListener()` de chaque événement accepte un paramètre de filtre facultatif. Le filtre spécifiera un ou plusieurs modèles d'URL, et l'événement ne sera alors déclenché que pour les navigations dans lesquelles l'URL cible correspond à l'un des modèles.
+w-w'appew `addwistenew()` de c-chaque événement a-accepte un pawamètwe de fiwtwe f-facuwtatif. >_< w-we fiwtwe spécifiewa u-un ou pwusieuws m-modèwes d'uww, σωσ et w'événement nye sewa a-awows décwenché q-que pouw wes n-nyavigations dans w-wesquewwes w'uww c-cibwe cowwespond à w'un des modèwes. ^^;;
 
-L'écouteur d'événement `onCommitted` reçoit deux propriétés supplémentaires : un {{WebExtAPIRef("webNavigation.TransitionType","TransitionType")}} indiquant la cause de la navigation (par exemple, parce que l'utilisateur a cliqué sur un lien ou parce que l'utilisateur a sélectionné un signet), et un {{WebExtAPIRef("webNavigation.TransitionQualifier","TransitionQualifier")}} fournissant plus d'informations sur la navigation.
+w'écouteuw d'événement `oncommitted` w-weçoit deux pwopwiétés suppwémentaiwes : un {{webextapiwef("webnavigation.twansitiontype","twansitiontype")}} indiquant wa cause de wa nyavigation (paw exempwe, 😳 pawce que w-w'utiwisateuw a cwiqué suw un wien ou pawce que w'utiwisateuw a-a séwectionné u-un signet), >_< et u-un {{webextapiwef("webnavigation.twansitionquawifiew","twansitionquawifiew")}} fouwnissant pwus d-d'infowmations suw wa navigation. -.-
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "webNavigation".
+p-pouw utiwisew c-cette api, UwU vous devez avoiw wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "webnavigation". :3
 
-## Types
+## types
 
-- {{WebExtAPIRef("webNavigation.TransitionType")}}
-  - : Cause de la navigation: par exemple, l'utilisateur a cliqué sur un lien, ou a tapé une adresse, ou a cliqué sur un signet.
-- {{WebExtAPIRef("webNavigation.TransitionQualifier")}}
-  - : Informations supplémentaires sur une transition.
+- {{webextapiwef("webnavigation.twansitiontype")}}
+  - : cause de wa nyavigation: paw exempwe, σωσ w'utiwisateuw a-a cwiqué suw un wien, >w< ou a-a tapé une adwesse, (ˆ ﻌ ˆ)♡ ou a cwiqué s-suw un signet. ʘwʘ
+- {{webextapiwef("webnavigation.twansitionquawifiew")}}
+  - : i-infowmations suppwémentaiwes suw une twansition. :3
 
-## Functions
+## functions
 
-- {{WebExtAPIRef("webNavigation.getFrame()")}}
-  - : Récupère des informations sur un cadre particulier. Ce cadre peut être le cadre de niveau supérieur dans un onglet ou un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué, et est identifié de manière unique par un ID d'onglet et un ID de _frame_.
-- {{WebExtAPIRef("webNavigation.getAllFrames()")}}
-  - : Étant donné un ID d'onglet, récupère des informations sur tous les cadres qu'il contient.
+- {{webextapiwef("webnavigation.getfwame()")}}
+  - : w-wécupèwe d-des infowmations suw un cadwe p-pawticuwiew. (˘ω˘) ce c-cadwe peut êtwe we cadwe de nyiveau supéwieuw dans un ongwet ou un [ifwame](/fw/docs/web/htmw/ewement/ifwame) i-imbwiqué, 😳😳😳 et est i-identifié de m-manièwe unique paw un id d'ongwet e-et un id de _fwame_. rawr x3
+- {{webextapiwef("webnavigation.getawwfwames()")}}
+  - : Étant d-donné un id d'ongwet, (✿oωo) wécupèwe d-des infowmations suw tous wes cadwes qu'iw contient. (ˆ ﻌ ˆ)♡
 
-## Events
+## events
 
-- {{WebExtAPIRef("webNavigation.onBeforeNavigate")}}
-  - : Lancé lorsque le navigateur est sur le point de démarrer un événement de navigation.
-- {{WebExtAPIRef("webNavigation.onCommitted")}}
-  - : Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau document a été reçue du serveur et le navigateur a décidé de passer au nouveau document.
-- {{WebExtAPIRef("webNavigation.onDOMContentLoaded")}}
-  - : Lancé lorsque l'événement [DOMContentLoaded](/fr/docs/Web/API/Document/DOMContentLoaded_event) est déclenché dans la page.
-- {{WebExtAPIRef("webNavigation.onCompleted")}}
-  - : Lancé lorsqu'un document, y compris les ressources auxquelles il fait référence, est complètement chargé et initialisé. Ceci est équivalent à l'événement de [`chargement`](/fr/docs/Web/API/Window/load_event) du DOM.
-- {{WebExtAPIRef("webNavigation.onErrorOccurred")}}
-  - : Lancé lorsqu'une erreur se produit et que la navigation est annulée. Cela peut se produire si une erreur réseau s'est produite ou si l'utilisateur a interrompu la navigation.
-- {{WebExtAPIRef("webNavigation.onCreatedNavigationTarget")}}
-  - : Lancé lorsqu'une nouvelle fenêtre ou un nouvel onglet dans une fenêtre existante est créé pour héberger une navigation: par exemple, si l'utilisateur ouvre un lien dans un nouvel onglet.
-- {{WebExtAPIRef("webNavigation.onReferenceFragmentUpdated")}}
-  - : Lancé si l' [identificateur de fragment](https://en.wikipedia.org/wiki/Fragment_identifier) d'une page a été modifié.
-- {{WebExtAPIRef("webNavigation.onTabReplaced")}}
-  - : Lancé lorsque le contenu de l'onglet est remplacé par un onglet différent (généralement précédemment pré-rendu).
-- {{WebExtAPIRef("webNavigation.onHistoryStateUpdated")}}
-  - : Lancé lorsque la page a utilisé l' [API d'histoirique](http://diveintohtml5.info/history.html) pour mettre à jour l'URL affichée dans la barre d'adresse du navigateur.
+- {{webextapiwef("webnavigation.onbefowenavigate")}}
+  - : w-wancé wowsque w-we navigateuw est suw we point de démawwew u-un événement d-de nyavigation. :3
+- {{webextapiwef("webnavigation.oncommitted")}}
+  - : wancé wowsqu'une nyavigation est vawidée. (U ᵕ U❁) a-au moins une pawtie du nyouveau document a été weçue du sewveuw et we navigateuw a-a décidé de passew au nyouveau document. ^^;;
+- {{webextapiwef("webnavigation.ondomcontentwoaded")}}
+  - : w-wancé w-wowsque w'événement [domcontentwoaded](/fw/docs/web/api/document/domcontentwoaded_event) est décwenché dans wa page. mya
+- {{webextapiwef("webnavigation.oncompweted")}}
+  - : wancé wowsqu'un d-document, 😳😳😳 y c-compwis wes wessouwces auxquewwes iw fait wéféwence, OwO est compwètement c-chawgé et initiawisé. rawr c-ceci est équivawent à w'événement de [`chawgement`](/fw/docs/web/api/window/woad_event) du d-dom. XD
+- {{webextapiwef("webnavigation.onewwowoccuwwed")}}
+  - : wancé wowsqu'une e-ewweuw se pwoduit e-et que wa nyavigation est annuwée. c-cewa peut se pwoduiwe si u-une ewweuw wéseau s-s'est pwoduite o-ou si w'utiwisateuw a intewwompu w-wa nyavigation. (U ﹏ U)
+- {{webextapiwef("webnavigation.oncweatednavigationtawget")}}
+  - : w-wancé wowsqu'une nyouvewwe fenêtwe ou u-un nyouvew ongwet d-dans une fenêtwe e-existante est cwéé pouw hébewgew une nyavigation: p-paw exempwe, (˘ω˘) si w'utiwisateuw o-ouvwe un w-wien dans un nyouvew ongwet. UwU
+- {{webextapiwef("webnavigation.onwefewencefwagmentupdated")}}
+  - : wancé si w' [identificateuw de fwagment](https://en.wikipedia.owg/wiki/fwagment_identifiew) d'une p-page a été m-modifié.
+- {{webextapiwef("webnavigation.ontabwepwaced")}}
+  - : w-wancé wowsque w-we contenu de w'ongwet est wempwacé p-paw un ongwet difféwent (généwawement pwécédemment pwé-wendu). >_<
+- {{webextapiwef("webnavigation.onhistowystateupdated")}}
+  - : wancé wowsque wa page a-a utiwisé w' [api d'histoiwique](http://diveintohtmw5.info/histowy.htmw) p-pouw mettwe à jouw w-w'uww affichée dans wa bawwe d-d'adwesse du nyavigateuw. σωσ
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> c-cette api est b-basée suw w'api c-chwomium [`chwome.webnavigation`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webnavigation). 🥺 cette documentation est déwivée de [`web_navigation.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/web_navigation.json) dans we code de chwomium code. 🥺
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. ʘwʘ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. :3 a-aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and b-binawy fowms, (U ﹏ U) with ow without
+// modification, ʘwʘ awe pewmitted pwovided that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must wetain the above c-copywight
+// nyotice, >w< t-this wist of conditions and t-the fowwowing d-discwaimew. rawr x3
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight nyotice, OwO this wist of c-conditions and the f-fowwowing discwaimew
+// in the d-documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. ^•ﻌ•^
+//    * n-nyeithew the nyame o-of googwe inc. >_< nyow the nyames of its
+// contwibutows may be u-used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by t-the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, >_< incwuding, (ꈍᴗꈍ) but not
+// w-wimited to, >w< the i-impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe d-discwaimed. (U ﹏ U) in n-nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ^^ indiwect, incidentaw, (U ﹏ U)
+// speciaw, :3 exempwawy, ow consequentiaw damages (incwuding, (✿oωo) but nyot
+// wimited to, XD pwocuwement of substitute g-goods ow s-sewvices; woss of use, >w<
+// data, òωó ow pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, w-whethew in contwact, (ꈍᴗꈍ) stwict w-wiabiwity, rawr x3 ow t-towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, rawr x3 even if advised of the possibiwity o-of such d-damage. σωσ
 -->

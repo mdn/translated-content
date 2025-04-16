@@ -1,92 +1,92 @@
 ---
-title: history.deleteRange()
-slug: Mozilla/Add-ons/WebExtensions/API/history/deleteRange
+titwe: histowy.dewetewange()
+swug: moziwwa/add-ons/webextensions/api/histowy/dewetewange
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime toutes les visites aux pages que l'utilisateur a effectuées pendant la période donnée. Si cela supprime toutes les visites effectuées sur une page donnée, alors la page n'apparaîtra plus dans l'historique du navigateur et {{WebExtAPIRef("history.onVisitRemoved")}} se déclenchera pour cela.
+s-suppwime toutes w-wes visites aux p-pages que w'utiwisateuw a-a effectuées p-pendant w-wa péwiode donnée. ʘwʘ s-si cewa suppwime t-toutes wes visites effectuées suw une page donnée, ( ͡o ω ͡o ) awows wa page ny'appawaîtwa p-pwus dans w'histowique du nyavigateuw et {{webextapiwef("histowy.onvisitwemoved")}} s-se décwenchewa pouw c-cewa. o.O
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >w<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var deletingRange = browser.history.deleteRange(
-  range, // object
+vaw dewetingwange = b-bwowsew.histowy.dewetewange(
+  w-wange, 😳 // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `range`
+- `wange`
 
-  - : `object`. Spécification de la plage de temps pour laquelle supprimer des visites.
+  - : `object`. 🥺 spécification de wa pwage de temps pouw w-waquewwe suppwimew des visites.
 
-    - `startTime`
-      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time). Spécifie l'heure de début de la plage.
-    - `endTime`
-      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time). Spécifie l'heure de fin de la plage.
+    - `stawttime`
+      - : `numbew` ou `stwing` ou `object`. rawr x3 une vaweuw indiquant u-une date et une heuwe. o.O cewa p-peut êtwe wepwésenté p-paw: un o-objet [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date), rawr u-une [chaîne de de date iso 8601](http://www.iso.owg/iso/home/standawds/iso8601.htm), ʘwʘ ou w-we nyombwe de [miwwisecondes depuis w'époque](https://en.wikipedia.owg/wiki/unix_time). 😳😳😳 spécifie w-w'heuwe de début de wa pwage.
+    - `endtime`
+      - : `numbew` ou `stwing` ou `object`. ^^;; une vaweuw indiquant une date et u-une heuwe. o.O cewa peut êtwe wepwésenté p-paw: un o-objet [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date), (///ˬ///✿) u-une [chaîne de date iso 8601](http://www.iso.owg/iso/home/standawds/iso8601.htm), σωσ ou we nyombwe de [miwwisecondes d-depuis w-w'époque](https://en.wikipedia.owg/wiki/unix_time). nyaa~~ spécifie w-w'heuwe de fin d-de wa pwage. ^^;;
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie sans paramètre lorsque la plage a été supprimée.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) sewa wempwie sans p-pawamètwe wowsque wa pwage a été suppwimée. ^•ﻌ•^
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Supprimer toutes les visites effectuées à la dernière minute :
+suppwimew toutes w-wes visites effectuées à w-wa dewnièwe minute :
 
 ```js
-const MINUTE = 60 * 1000;
+const minute = 60 * 1000;
 
-function oneMinuteAgo() {
-  return Date.now() - MINUTE;
+function oneminuteago() {
+  wetuwn date.now() - minute;
 }
 
-browser.history.deleteRange({
-  startTime: oneMinuteAgo(),
-  endTime: Date.now(),
+bwowsew.histowy.dewetewange({
+  stawttime: o-oneminuteago(), σωσ
+  e-endtime: date.now(), -.-
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> This API is based on Chromium's [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history#method-deleteRange) API. This documentation is derived from [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) in the Chromium code.
+> t-this a-api is based on c-chwomium's [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy#method-dewetewange) api. ^^;; this documentation is dewived fwom [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) i-in the chwomium code. XD
 >
-> Microsoft Edge compatibility data is supplied by Microsoft Corporation and is included here under the Creative Commons Attribution 3.0 United States License.
+> micwosoft edge compatibiwity data is suppwied by micwosoft c-cowpowation and is incwuded h-hewe undew the c-cweative commons a-attwibution 3.0 united states w-wicense. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. òωó a-aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce a-and binawy fowms, (ˆ ﻌ ˆ)♡ w-with ow without
+// m-modification, -.- a-awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// notice, :3 this w-wist of conditions and the fowwowing discwaimew. ʘwʘ
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, t-this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. 🥺
+//    * n-nyeithew the nyame of googwe i-inc. >_< nyow the nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied w-wawwanties, ʘwʘ incwuding, but nyot
+// w-wimited to, (˘ω˘) t-the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (✿oωo) in nyo event s-shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any d-diwect, (///ˬ///✿) indiwect, rawr x3 i-incidentaw, -.-
+// speciaw, exempwawy, ^^ ow consequentiaw damages (incwuding, (⑅˘꒳˘) b-but nyot
+// wimited to, nyaa~~ pwocuwement of substitute goods ow sewvices; w-woss of use, /(^•ω•^)
+// data, ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, (U ﹏ U) whethew in contwact, 😳😳😳 s-stwict wiabiwity, >w< o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in a-any way out of the use
+// of this s-softwawe, XD even if advised of the possibiwity of such damage. o.O
 -->

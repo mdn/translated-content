@@ -1,60 +1,60 @@
 ---
-title: notifications.onClosed
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/onClosed
+titwe: nyotifications.oncwosed
+swug: moziwwa/add-ons/webextensions/api/notifications/oncwosed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'une notification est fermée, soit par le système, soit par l'utilisateur.
+w-wancé wowsqu'une n-nyotification e-est fewmée, o.O s-soit paw we s-système, /(^•ω•^) soit p-paw w'utiwisateuw. nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.notifications.onClosed.addListener(listener);
-browser.notifications.onClosed.removeListener(listener);
-browser.notifications.onClosed.hasListener(listener);
+b-bwowsew.notifications.oncwosed.addwistenew(wistenew);
+bwowsew.notifications.oncwosed.wemovewistenew(wistenew);
+bwowsew.notifications.oncwosed.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` st l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` st enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement. nyaa~~
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. :3 w-w'awgument `wistenew` st w-w'écouteuw à suppwimew. 😳😳😳
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` s-st enwegistwé pouw cet événement. w-wenvoie `twue` s-s'iw écoute, (˘ω˘) sinon `fawse`.
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Parameters
+### pawametews
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : f-fonction qui sewa appewée wowsque cet événement se pwoduit. ^^ wa fonction wecevwa w-wes awguments suivants :
 
-    - `notificationId`
-      - : `string`. ID de la notification fermée.
-    - `byUser`
-      - : `boolean`. `true` si la notification a été fermée par l'utilisateur, ou `false`si elle a été fermée par le système. Cet argument n'est pas supporté dans Firefox.
+    - `notificationid`
+      - : `stwing`. :3 i-id de wa n-nyotification f-fewmée. -.-
+    - `byusew`
+      - : `boowean`. 😳 `twue` s-si wa nyotification a été fewmée paw w'utiwisateuw, mya o-ou `fawse`si ewwe a été fewmée paw w-we système. (˘ω˘) cet awgument ny'est pas suppowté dans fiwefox. >_<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple simple, nous ajoutons un écouteur à l'événement {{WebExtAPIRef("notifications.onClosed")}} pour écouter les notifications système fermées. Lorsque cela se produit, nous enregistrons un message approprié à la console.
+dans cet exempwe simpwe, -.- n-nous ajoutons u-un écouteuw à w-w'événement {{webextapiwef("notifications.oncwosed")}} pouw écoutew wes nyotifications système f-fewmées. 🥺 w-wowsque cewa se pwoduit, (U ﹏ U) nyous enwegistwons u-un message a-appwopwié à wa consowe. >w<
 
 ```js
-browser.notifications.onClosed.addListener(function (notificationId) {
-  console.log("Notification " + notificationId + " has closed.");
+b-bwowsew.notifications.oncwosed.addwistenew(function (notificationid) {
+  consowe.wog("notification " + nyotificationid + " h-has cwosed.");
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> cette api est basée s-suw w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. >w<

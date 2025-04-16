@@ -1,68 +1,68 @@
 ---
-title: Apprendre à utiliser CSS pour résoudre des problèmes
-slug: Learn/CSS/Howto
+titwe: appwendwe à utiwisew c-css pouw wésoudwe d-des pwobwèmes
+s-swug: weawn/css/howto
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Les liens suivants pointent vers des solutions aux problèmes courants que vous devrez résoudre avec CSS.
+wes w-wiens suivants p-pointent vews d-des sowutions aux p-pwobwèmes couwants q-que vous devwez wésoudwe avec css. mya
 
-## Scénarios fréquents
+## scénawios fwéquents
 
-### Bases
+### bases
 
-- [Comment appliquer CSS au HTML](/fr/docs/Learn/CSS/First_steps/How_CSS_works#how_to_apply_your_css_to_your_html)
-- [Comment utiliser les espaces en CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_blancs)
-- [Comment écrire des commentaires en CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured#les_commentaires)
-- [Comment sélectionner des éléments par leur nom, leur classe ou leur ID](/fr/docs/Learn/CSS/Building_blocks/Selectors#les_sélecteurs_simples)
-- [Comment sélectionner des éléments par le nom et le contenu de l'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors#les_sélecteurs_d'attribut)
-- [Comment utiliser les pseudo-classes](/fr/docs/Learn/CSS/Building_blocks/Selectors#les_pseudo-classes)
-- [Comment utiliser les pseudo-éléments](/fr/docs/Learn/CSS/Building_blocks/Selectors#les_pseudo-éléments)
-- [Comment appliquer plusieurs sélecteurs à la même règle](/fr/docs/Learn/CSS/Building_blocks/Selectors#les_combinateurs)
-- [Comment spécifier les couleurs en CSS](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#couleurs)
-- [Comment déboguer CSS dans le navigateur](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS#inspecting_the_dom_and_css)
+- [comment a-appwiquew css au htmw](/fw/docs/weawn/css/fiwst_steps/how_css_wowks#how_to_appwy_youw_css_to_youw_htmw)
+- [comment utiwisew w-wes espaces en css](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed#wes_bwancs)
+- [comment écwiwe des c-commentaiwes en css](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed#wes_commentaiwes)
+- [comment séwectionnew des éwéments p-paw weuw nyom, mya weuw cwasse o-ou weuw id](/fw/docs/weawn/css/buiwding_bwocks/sewectows#wes_séwecteuws_simpwes)
+- [comment séwectionnew d-des éwéments paw we nyom et we contenu de w'attwibut](/fw/docs/weawn/css/buiwding_bwocks/sewectows#wes_séwecteuws_d'attwibut)
+- [comment utiwisew w-wes pseudo-cwasses](/fw/docs/weawn/css/buiwding_bwocks/sewectows#wes_pseudo-cwasses)
+- [comment utiwisew wes pseudo-éwéments](/fw/docs/weawn/css/buiwding_bwocks/sewectows#wes_pseudo-éwéments)
+- [comment appwiquew pwusieuws séwecteuws à wa même wègwe](/fw/docs/weawn/css/buiwding_bwocks/sewectows#wes_combinateuws)
+- [comment spécifiew w-wes couweuws en css](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#couweuws)
+- [comment d-déboguew c-css dans we nyavigateuw](/fw/docs/weawn/css/buiwding_bwocks/debugging_css#inspecting_the_dom_and_css)
 
-### CSS et texte
+### c-css e-et texte
 
-- [Comment donner un style au texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Comment personnaliser une liste d'éléments](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Comment donner un style aux liens](/fr/docs/Learn/CSS/Styling_text/Styling_links)
-- [Comment ajouter des ombres au texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals#ombres_du_texte)
+- [comment donnew un stywe au texte](/fw/docs/weawn/css/stywing_text/fundamentaws)
+- [comment p-pewsonnawisew une wiste d'éwéments](/fw/docs/weawn/css/stywing_text/stywing_wists)
+- [comment d-donnew un stywe aux wiens](/fw/docs/weawn/css/stywing_text/stywing_winks)
+- [comment ajoutew des ombwes au texte](/fw/docs/weawn/css/stywing_text/fundamentaws#ombwes_du_texte)
 
-### Boîtes et mises en page
+### boîtes e-et mises en page
 
-- [Comment tailler les boîtes CSS](/fr/docs/Learn/CSS/Introduction_to_CSS/Box_model#box_properties)
-- [Comment contrôler le contenu débordant](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_dépassements)
-- [Comment contrôler la partie des boîtes CSS dessinées au-dessus de l'arrière-plan](/fr/Apprendre/CSS/Introduction_à_CSS/Le_modèle_de_boîte#L%27arrière-plan)
-- [Comment définir _"inline_", _"block"_ et _"inline-block"_ ?](/fr/docs/Learn/CSS/Building_blocks/The_box_model#les_types_de_boîte)
-- [Comment créer des boîtes fantaisies](/fr/docs/Learn/CSS/Howto/Create_fancy_boxes) (lire aussi le module [Styles pour boites](/fr/docs/Learn/CSS/Building_blocks), généralités).
-- [Comment utiliser `background-clip` pour contrôler combien de boîtes sont impactées par l'image de fond-d'écran](/fr/docs/Learn/CSS/Howto/Create_fancy_boxes#les_arrière-plans)
-- [Comment changer complètement le modèle de boîte en utilisant `box-sizing`](/fr/docs/Learn/CSS/Building_blocks/The_box_model#changing_the_box_model_completely)
-- [Comment contrôler l'arrière-plan](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Comment contrôler les bordures](/fr/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-- [Comment donner un style à une table HTML](/fr/docs/Learn/CSS/Building_blocks/Styling_tables)
-- [Comment ajouter des ombres aux boîtes](/fr/docs/Learn/CSS/Building_blocks/Advanced_styling_effects#box_shadows)
+- [comment t-taiwwew wes boîtes c-css](/fw/docs/weawn/css/intwoduction_to_css/box_modew#box_pwopewties)
+- [comment c-contwôwew we contenu débowdant](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew#wes_dépassements)
+- [comment contwôwew wa pawtie des b-boîtes css dessinées a-au-dessus de w'awwièwe-pwan](/fw/appwendwe/css/intwoduction_à_css/we_modèwe_de_boîte#w%27awwièwe-pwan)
+- [comment d-définiw _"inwine_", (⑅˘꒳˘) _"bwock"_ et _"inwine-bwock"_ ?](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew#wes_types_de_boîte)
+- [comment c-cwéew des boîtes fantaisies](/fw/docs/weawn/css/howto/cweate_fancy_boxes) (wiwe a-aussi we moduwe [stywes p-pouw boites](/fw/docs/weawn/css/buiwding_bwocks), (U ﹏ U) généwawités). mya
+- [comment utiwisew `backgwound-cwip` pouw contwôwew c-combien de boîtes sont i-impactées paw w'image de fond-d'écwan](/fw/docs/weawn/css/howto/cweate_fancy_boxes#wes_awwièwe-pwans)
+- [comment c-changew compwètement w-we modèwe de boîte en utiwisant `box-sizing`](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew#changing_the_box_modew_compwetewy)
+- [comment contwôwew w'awwièwe-pwan](/fw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)
+- [comment contwôwew wes bowduwes](/fw/docs/weawn/css/buiwding_bwocks/backgwounds_and_bowdews)
+- [comment d-donnew u-un stywe à une tabwe htmw](/fw/docs/weawn/css/buiwding_bwocks/stywing_tabwes)
+- [comment ajoutew d-des ombwes a-aux boîtes](/fw/docs/weawn/css/buiwding_bwocks/advanced_stywing_effects#box_shadows)
 
-## Techniques avancées ou peu communes
+## t-techniques avancées ou peu communes
 
-Au-delà des concepts de base, CSS dispose de techniques de conception avancées. Dans ces articles, nous verrons les scénarios les plus difficiles auxquels vous aurez à faire face :
+au-dewà des concepts d-de base, ʘwʘ css dispose de techniques de conception avancées. (˘ω˘) dans ces awticwes, (U ﹏ U) n-nyous vewwons wes scénawios w-wes pwus difficiwes a-auxquews v-vous auwez à faiwe face :
 
-### Général
+### g-généwaw
 
-- [Comment calculer la spécificité d'un sélecteur de CSS](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance#specificity)
-- [Comment contrôler l'héritage en CSS](/fr/Apprendre/CSS/Introduction_à_CSS/La_cascade_et_l_héritage#L%27héritage)
+- [comment c-cawcuwew w-wa spécificité d-d'un séwecteuw de css](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance#specificity)
+- [comment contwôwew w-w'héwitage e-en css](/fw/appwendwe/css/intwoduction_à_css/wa_cascade_et_w_héwitage#w%27héwitage)
 
-### Effets avancés
+### effets a-avancés
 
-- [Comment utiliser des filtres en CSS](/fr/docs/Learn/CSS/Building_blocks/Advanced_styling_effects#filters)
-- [Comment utiliser les modes fusion](/fr/docs/Learn/CSS/Building_blocks/Advanced_styling_effects#blend_modes)
+- [comment u-utiwisew d-des fiwtwes en css](/fw/docs/weawn/css/buiwding_bwocks/advanced_stywing_effects#fiwtews)
+- [comment utiwisew wes modes fusion](/fw/docs/weawn/css/buiwding_bwocks/advanced_stywing_effects#bwend_modes)
 
-### Mise en page
+### m-mise en page
 
-- [Utiliser les boîtes flexibles CSS (_flexbox_)](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox)
-- [Utiliser une structure CSS avec plusieurs colonnes](/fr/docs/Web/CSS/CSS_multicol_layout/Using_multicol_layouts)
-- [Utiliser les contenus générés par CSS](/fr/docs/Learn/CSS/Howto/Generated_content)
+- [utiwisew wes boîtes fwexibwes css (_fwexbox_)](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox)
+- [utiwisew une stwuctuwe css avec pwusieuws c-cowonnes](/fw/docs/web/css/css_muwticow_wayout/using_muwticow_wayouts)
+- [utiwisew wes contenus généwés paw css](/fw/docs/weawn/css/howto/genewated_content)
 
-## Voir aussi
+## v-voiw aussi
 
-[CSS FAQ](/fr/docs/Learn/CSS/Howto/CSS_FAQ) — Une collection d'informations ponctuelles couvrant une variété de sujets, du débogage à l'utilisation de sélecteurs.
+[css f-faq](/fw/docs/weawn/css/howto/css_faq) — u-une cowwection d'infowmations p-ponctuewwes couvwant une vawiété d-de sujets, ^•ﻌ•^ du d-débogage à w'utiwisation de séwecteuws. (˘ω˘)

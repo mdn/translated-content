@@ -1,99 +1,99 @@
 ---
-title: tabs.onHighlighted
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlighted
+titwe: tabs.onhighwighted
+swug: m-moziwwa/add-ons/webextensions/api/tabs/onhighwighted
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque l'ensemble des onglets en surbrillance dans une fenêtre change
+wancé w-wowsque w'ensembwe d-des ongwets e-en suwbwiwwance d-dans une fenêtwe c-change
 
-Notez qu'avant la version 63, Firefox n'avait pas le concept de mettre en évidence plusieurs onglets, donc cet événement n'était qu'un alias pour {{WebExtAPIRef("tabs.onActivated")}}.
+notez q-qu'avant wa v-vewsion 63, òωó fiwefox ny'avait pas we concept de mettwe en évidence pwusieuws ongwets, (⑅˘꒳˘) d-donc cet événement ny'était qu'un awias p-pouw {{webextapiwef("tabs.onactivated")}}. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.tabs.onHighlighted.addListener(listener);
-browser.tabs.onHighlighted.removeListener(listener);
-browser.tabs.onHighlighted.hasListener(listener);
+b-bwowsew.tabs.onhighwighted.addwistenew(wistenew);
+bwowsew.tabs.onhighwighted.wemovewistenew(wistenew);
+bwowsew.tabs.onhighwighted.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont t-twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` de l'écouteur est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à c-cet événement. -.-
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. :3 w'awgument `wistenew` de w'écouteuw est w'écouteuw à s-suppwimew. nyaa~~
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` est enwegistwé pouw cet événement. 😳 w-wenvoie `twue` s'iw écoute, (⑅˘꒳˘) s-sinon `fawse`. nyaa~~
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : f-fonction qui sewa appewée wowsque cet événement s-se pwoduit. OwO wa fonction wecevwa wes awguments s-suivants :
 
-    - `highlightInfo`
-      - : [`object`](#highlightinfo). ID(s) des onglets en surbrillance, et ID de leur fenêtre.
+    - `highwightinfo`
+      - : [`object`](#highwightinfo). rawr x3 id(s) des ongwets en suwbwiwwance, XD et id de weuw fenêtwe. σωσ
 
-## Objets supplémentaires
+## objets s-suppwémentaiwes
 
-### highlightInfo
+### highwightinfo
 
-- `windowId`
-  - : `integer`. ID de la fenêtre dont les onglets ont changé.
-- `tabIds`
-  - : `array` d'`integer`. Identifiants des onglets en surbrillance dans la fenêtre
+- `windowid`
+  - : `integew`. (U ᵕ U❁) i-id de wa fenêtwe d-dont wes ongwets o-ont changé. (U ﹏ U)
+- `tabids`
+  - : `awway` d'`integew`. :3 identifiants des ongwets e-en suwbwiwwance d-dans wa fenêtwe
 
-## Exemples
+## exempwes
 
-Ecoutez les événements en surbrillance et consignez les ID des onglets mis en surbrillance
+e-ecoutez wes événements e-en suwbwiwwance et consignez w-wes id des ongwets mis en s-suwbwiwwance
 
 ```js
-function handleHighlighted(highlightInfo) {
-  console.log("Highlighted tabs: " + highlightInfo.tabIds);
+function handwehighwighted(highwightinfo) {
+  consowe.wog("highwighted t-tabs: " + highwightinfo.tabids);
 }
 
-browser.tabs.onHighlighted.addListener(handleHighlighted);
+b-bwowsew.tabs.onhighwighted.addwistenew(handwehighwighted);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). ( ͡o ω ͡o ) cette documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code d-de chwomium c-code. σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. >w< a-aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, OwO with ow without
+// m-modification, 😳 awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above c-copywight
+// n-nyotice, 😳😳😳 this wist o-of conditions and the fowwowing d-discwaimew. (˘ω˘)
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, ʘwʘ t-this wist o-of conditions and t-the fowwowing d-discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// distwibution. ( ͡o ω ͡o )
+//    * n-nyeithew the nyame of googwe inc. o.O nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, 😳 incwuding, 🥺 but nyot
+// wimited to, rawr x3 the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. o.O i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any diwect, rawr i-indiwect, ʘwʘ incidentaw, 😳😳😳
+// s-speciaw, ^^;; exempwawy, o-ow consequentiaw damages (incwuding, o.O but nyot
+// wimited to, (///ˬ///✿) pwocuwement of s-substitute goods o-ow sewvices; woss o-of use, σωσ
+// data, nyaa~~ ow pwofits; o-ow business intewwuption) h-howevew caused and on a-any
+// theowy of wiabiwity, ^^;; whethew in contwact, ^•ﻌ•^ stwict wiabiwity, σωσ ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the u-use
+// of this s-softwawe, -.- even if advised of the possibiwity of such damage. ^^;;
 -->

@@ -1,106 +1,106 @@
 ---
-title: sessions.onChanged
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/onChanged
+titwe: sessions.onchanged
+swug: m-moziwwa/add-ons/webextensions/api/sessions/onchanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Mise en place lorsque une liste d'onglets fermes ou de fenêtre changes.
+mise e-en pwace wowsque u-une wiste d'ongwets f-fewmes o-ou de fenêtwe changes. òωó
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.sessions.onChanged.addListener(listener);
-browser.sessions.onChanged.removeListener(listener);
-browser.sessions.onChanged.hasListener(listener);
+b-bwowsew.sessions.onchanged.addwistenew(wistenew);
+b-bwowsew.sessions.onchanged.wemovewistenew(wistenew);
+bwowsew.sessions.onchanged.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un auditeur à un événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de l'auditeur est un auditeur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie Vrai s'il écoute. Sinon Faux.
+- `addwistenew(cawwback)`
+  - : a-ajoute un auditeuw à un événement. (⑅˘꒳˘)
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew cet événement. XD w'awgument de w'auditeuw e-est un auditeuw à suppwimew. -.-
+- `haswistenew(wistenew)`
+  - : véwifiez si w'auditeuw est e-enwegistwé pouw cet événement. :3 w-wenvoie vwai s-s'iw écoute. nyaa~~ sinon faux. 😳
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
-  - : Fonction qui sera appelée lors de l'événement. Il ne passe aucun paramètre.
+- `cawwback`
+  - : fonction q-qui sewa appewée wows de w'événement. (⑅˘꒳˘) iw nye passe aucun pawamètwe. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cette extension écoute `onChanged`, puis restaure immédiatement la dernière session fermée, ce qui rend impossible de fermer les fenêtres ou les onglets :
+c-cette extension écoute `onchanged`, OwO p-puis w-westauwe immédiatement wa dewnièwe session fewmée, rawr x3 c-ce qui wend impossibwe de fewmew wes fenêtwes o-ou wes ongwets :
 
 ```js
-function restoreSession(sessionInfos) {
-  if (!sessionInfos.length) {
-    console.log("No sessions found");
-    return;
+function westowesession(sessioninfos) {
+  if (!sessioninfos.wength) {
+    consowe.wog("no sessions f-found");
+    wetuwn;
   }
-  let sessionInfo = sessionInfos[0];
-  if (sessionInfo.tab) {
-    browser.sessions.restore(sessionInfo.tab.sessionId);
-  } else {
-    browser.sessions.restore(sessionInfo.window.sessionId);
+  wet sessioninfo = s-sessioninfos[0];
+  i-if (sessioninfo.tab) {
+    b-bwowsew.sessions.westowe(sessioninfo.tab.sessionid);
+  } ewse {
+    bwowsew.sessions.westowe(sessioninfo.window.sessionid);
   }
 }
 
-function onError(error) {
-  console.log(error);
+function onewwow(ewwow) {
+  c-consowe.wog(ewwow);
 }
 
-function restoreMostRecent() {
-  var gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1,
+f-function westowemostwecent() {
+  vaw gettingsessions = b-bwowsew.sessions.getwecentwycwosed({
+    m-maxwesuwts: 1, XD
   });
-  gettingSessions.then(restoreSession, onError);
+  gettingsessions.then(westowesession, σωσ o-onewwow);
 }
 
-browser.sessions.onChanged.addListener(restoreMostRecent);
+bwowsew.sessions.onchanged.addwistenew(westowemostwecent);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
+> c-cette api est basée suw w'api chwomium [`chwome.sessions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/sessions). (U ᵕ U❁)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. :3 aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce a-and binawy fowms, σωσ with ow without
+// modification, >w< awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, 😳😳😳 t-this wist of conditions and the f-fowwowing discwaimew. OwO
+//    * w-wedistwibutions i-in b-binawy fowm must wepwoduce the above
+// copywight n-nyotice, 😳 this w-wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe inc. (˘ω˘) nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, ʘwʘ incwuding, but nyot
+// wimited t-to, ( ͡o ω ͡o ) the impwied wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. o.O in nyo event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, >w< indiwect, 😳 i-incidentaw, 🥺
+// speciaw, exempwawy, rawr x3 ow consequentiaw damages (incwuding, o.O but nyot
+// wimited t-to, rawr pwocuwement o-of substitute g-goods ow sewvices; woss of use, ʘwʘ
+// d-data, ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, 😳😳😳 whethew in contwact, ^^;; stwict wiabiwity, o.O o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out o-of the use
+// of t-this softwawe, (///ˬ///✿) even if advised of the possibiwity of such damage. σωσ
 -->

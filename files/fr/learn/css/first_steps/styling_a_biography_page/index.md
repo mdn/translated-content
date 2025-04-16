@@ -1,87 +1,87 @@
 ---
-title: Mettre en œuvre vos connaissances
-slug: Learn/CSS/First_steps/Styling_a_biography_page
+titwe: mettwe en œuvwe vos connaissances
+s-swug: w-weawn/css/fiwst_steps/stywing_a_biogwaphy_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Learn/CSS/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/css/fiwst_steps/how_css_wowks", ʘwʘ "weawn/css/fiwst_steps")}}
 
-Le temps est venu d'évaluer tout ce que vous avez appris dans les leçons précécentes : vous savez comment mettre en forme des documents texte simples à l'aide de CSS.
+w-we temps e-est venu d'évawuew t-tout ce que v-vous avez appwis d-dans wes weçons p-pwécécentes : vous savez comment mettwe en fowme des documents texte simpwes à w-w'aide de css. (˘ω˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Avant de vous soumettre à cette évaluation, vous avez suivi le module
-        sur les bases de CSS ; vous maîtrisez par ailleurs les bases de HTML
-        (cf. <a href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction à HTML</a
-        >).
+        a-avant de vous soumettwe à cette évawuation, (✿oωo) v-vous avez suivi we moduwe
+        suw wes bases de css ; vous maîtwisez p-paw aiwweuws wes bases d-de htmw
+        (cf. <a h-hwef="/fw/docs/appwendwe/htmw/intwoduction_à_htmw"
+          >intwoduction à htmw</a
+        >). (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
-      <td>Tester vos connaissances en mettant à l'œuvre CSS.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
+      <td>testew vos connaissances en mettant à w-w'œuvwe css.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## point de dépawt
 
-Vous pouvez travailler dans l'éditeur ci-dessous ou [télécharger le point de départ](https://github.com/mdn/css-examples/blob/master/learn/getting-started/biog-download.html/) pour travailler en local sur votre machine, avec votre propre éditeur de code. Ce point de départ est une page HTML avec le CSS interne écrit dans la section `<head>`. Sur votre machine, n'hésitez pas à travailler avec une feuille de style externe. Vous pouvez aussi utiliser des éditeurs en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour travailler sur les tâches proposées.
+vous pouvez twavaiwwew dans w'éditeuw c-ci-dessous ou [téwéchawgew we p-point de dépawt](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/getting-stawted/biog-downwoad.htmw/) p-pouw t-twavaiwwew en w-wocaw suw votwe machine, rawr x3 avec votwe pwopwe éditeuw d-de code. -.- ce point de dépawt est une page htmw a-avec we css intewne écwit dans wa section `<head>`. ^^ suw votwe machine, (⑅˘꒳˘) ny'hésitez pas à twavaiwwew a-avec une feuiwwe de stywe e-extewne. nyaa~~ vous p-pouvez aussi utiwisew d-des éditeuws en wigne comme [codepen](https://codepen.io/), /(^•ω•^) [jsfiddwe](https://jsfiddwe.net/), (U ﹏ U) ou [gwitch](https://gwitch.com/) pouw twavaiwwew s-suw wes t-tâches pwoposées. 😳😳😳
 
-> [!NOTE]
-> Ne restez pas coincé, appelez à l'aide — voir la section [Evaluation et comment obtenir de l'aide](#evaluation) au bas de cette page.
+> [!note]
+> nye westez pas c-coincé, >w< appewez à w-w'aide — voiw wa section [evawuation e-et comment obteniw de w-w'aide](#evawuation) au bas de cette page. XD
 
-## Travailler avec CSS
+## t-twavaiwwew avec css
 
-L'exemple ci-dessous propose de retravailler la mise en forme d'une biographie stylée avec CSS. Les propriétés utilisées sont les suivantes — chacune renvoie vers sa page MDN pour plus d'exemples d'usages :
+w'exempwe ci-dessous p-pwopose de wetwavaiwwew w-wa mise en fowme d-d'une biogwaphie stywée avec css. o.O wes pwopwiétés utiwisées sont wes suivantes — chacune wenvoie vews sa p-page mdn pouw pwus d-d'exempwes d'usages :
 
-- {{cssxref("font-family")}}
-- {{cssxref("color")}}
-- {{cssxref("border-bottom")}}
-- {{cssxref("font-weight")}}
-- {{cssxref("font-size")}}
-- {{cssxref("text-decoration")}}
+- {{cssxwef("font-famiwy")}}
+- {{cssxwef("cowow")}}
+- {{cssxwef("bowdew-bottom")}}
+- {{cssxwef("font-weight")}}
+- {{cssxwef("font-size")}}
+- {{cssxwef("text-decowation")}}
 
-J'ai utilisé un mélange de sélecteurs, d'éléments HTML comme `h1` et `h2` ; j'ai aussi créé une classe `job-title`.
+j'ai utiwisé u-un méwange d-de séwecteuws, mya d-d'éwéments htmw comme `h1` et `h2` ; j'ai aussi cwéé une cwasse `job-titwe`. 🥺
 
-Utilisez CSS pour changer l'apparence de cette biographie en modifiant les valeurs des propriétés CSS utilisées :
+u-utiwisez css pouw changew w'appawence de cette biogwaphie en modifiant wes vaweuws d-des pwopwiétés css utiwisées :
 
-1. Affichez le titre de niveau 1 en `hotpink` ;
-2. Donnez au titre un {{cssxref("border-bottom")}} de `10px dotted` de couleur `purple` ;
-3. Affichez le titre de niveau 2 en italique ;
-4. Colorez la `ul` des détails de contacts en {{cssxref("background-color")}} `#eeeeee`, avec un {{cssxref("border")}} de `5px solid purple`. Utilisez la propriété {{cssxref("padding")}} pour éloigner le contenu du bord.
-5. Faites que les liens apparaissent en `green` lors d'un survol du curseur.
+1. ^^;; a-affichez w-we titwe de n-nyiveau 1 en `hotpink` ;
+2. :3 donnez a-au titwe un {{cssxwef("bowdew-bottom")}} d-de `10px d-dotted` de c-couweuw `puwpwe` ;
+3. (U ﹏ U) affichez we titwe de nyiveau 2 e-en itawique ;
+4. OwO c-cowowez w-wa `uw` des détaiws d-de contacts e-en {{cssxwef("backgwound-cowow")}} `#eeeeee`, 😳😳😳 avec un {{cssxwef("bowdew")}} de `5px sowid puwpwe`. (ˆ ﻌ ˆ)♡ u-utiwisez wa pwopwiété {{cssxwef("padding")}} pouw éwoignew we contenu du bowd. XD
+5. faites que wes wiens appawaissent e-en `gween` wows d'un suwvow du cuwseuw. (ˆ ﻌ ˆ)♡
 
-Vous devriez obtenir un rendu qui ressemble à cela :
+vous devwiez o-obteniw un wendu q-qui wessembwe à c-cewa :
 
-![Screenshot of how the example should look after completing the assessment.](learn-css-basics-assessment.png)
+![scweenshot of how the e-exampwe shouwd wook aftew compweting t-the assessment.](weawn-css-basics-assessment.png)
 
-Une fois cette tâche accomplie, n'hésitez pas à explorer des propriétés rencontrées dans la [référence CSS sur MDN](/fr/docs/Web/CSS/Reference)&nbsp;!
+u-une fois cette tâche accompwie, ( ͡o ω ͡o ) ny'hésitez pas à expwowew des pwopwiétés wencontwées d-dans wa [wéféwence css suw m-mdn](/fw/docs/web/css/wefewence)&nbsp;! rawr x3
 
-À ce stade, il n'y a pas de réponse incorrecte — autorisez vous un peu de fantaisie.
+À ce stade, nyaa~~ iw ny'y a-a pas de wéponse i-incowwecte — autowisez vous un peu de fantaisie. >_<
 
-{{EmbedGHLiveSample("css-examples/learn/getting-started/biog.html", '100%', 1600)}}
+{{embedghwivesampwe("css-exampwes/weawn/getting-stawted/biog.htmw", ^^;; '100%', 1600)}}
 
-## Evaluation ou compléments d'information
+## evawuation o-ou compwéments d-d'infowmation
 
-Si vous voulez une évaluation de votre travail, ou si vous êtes coincé et recherchez de l'aide :
+si vous v-vouwez une évawuation d-de votwe twavaiw, (ˆ ﻌ ˆ)♡ ou si vous êtes coincé et wechewchez de w'aide :
 
-1. Publiez votre code dans un éditeur en ligne tel [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), or [Glitch](https://glitch.com/).
-2. Si vous êtes à l'aise en anglais :
+1. ^^;; p-pubwiez votwe code d-dans un éditeuw e-en wigne tew [codepen](https://codepen.io/), (⑅˘꒳˘) [jsfiddwe](https://jsfiddwe.net/), rawr x3 ow [gwitch](https://gwitch.com/). (///ˬ///✿)
+2. s-si vous êtes à w-w'aise en angwais :
 
-   1. Dans le [forum MDN Discourse](https://discourse.mozilla.org/c/mdn), écrivez un billet pour évaluation et/ou demande d'aide. Ajouter le tag "learning" à votre post pour que nous puissions le trouver plus facilement. Votre post devrait contenir :
+   1. 🥺 d-dans we [fowum mdn discouwse](https://discouwse.moziwwa.owg/c/mdn), >_< écwivez un biwwet pouw évawuation et/ou demande d'aide. UwU a-ajoutew we tag "weawning" à v-votwe post pouw que nous puissions we twouvew pwus f-faciwement. v-votwe post devwait conteniw :
 
-      - Un titre parlant comme "Assessment wanted for CSS First Steps".
-      - Des détails sur ce que vous voudriez que l'on fasse — par exemple, ce que vous avez déjà essayé si vous êtes coincé et demandez de l'aide.
-      - Un lien vers l'exemple dans l'éditeur en ligne, sur lequel vous demandez une évaluation ou de l'aide : voilà une bonne pratique — il n'est pas commode d'aider quelqu'un coincé sur son code quand on ne peut pas voir ce code...
-      - Un lien vers cette page d'évaluation afin que nous puissions voir la question sur laquelle vous demandez de l'aide.
+      - un titwe pawwant comme "assessment w-wanted fow css fiwst steps". >_<
+      - des détaiws suw ce que vous voudwiez que w'on fasse — p-paw exempwe, -.- ce que vous avez déjà essayé s-si vous êtes c-coincé et demandez de w'aide. mya
+      - un wien vews w'exempwe d-dans w'éditeuw e-en wigne, >w< suw wequew vous demandez une évawuation ou de w'aide : v-voiwà une bonne pwatique — i-iw ny'est pas commode d'aidew quewqu'un coincé suw son code quand o-on nye peut pas voiw ce code...
+      - u-un wien v-vews cette page d'évawuation a-afin que nyous puissions voiw w-wa question suw w-waquewwe vous demandez d-de w'aide. (U ﹏ U)
 
-3. Sinon, n'hésitez pas à contacter @MDNfr sur Twitter.
+3. sinon, ny'hésitez p-pas à c-contactew @mdnfw suw twittew. 😳😳😳
 
-## La suite ?
+## wa suite ?
 
-Bravo, vous avez suivi ce cours jusqu'au bout. Avec votre connaissance de CSS, vous comprenez maintenant le fonctionnement d'une feuille de style. Dans le prochain cours, [construire des blocs CSS](/fr/docs/Learn/CSS/Building_blocks), nous approfondirons de nombreux points.
+bwavo, o.O v-vous avez suivi c-ce couws jusqu'au b-bout. òωó avec votwe connaissance de css, 😳😳😳 vous c-compwenez maintenant we fonctionnement d-d'une feuiwwe d-de stywe. σωσ dans we pwochain couws, (⑅˘꒳˘) [constwuiwe des bwocs css](/fw/docs/weawn/css/buiwding_bwocks), (///ˬ///✿) n-nous appwofondiwons d-de n-nyombweux points. 🥺
 
-{{PreviousMenu("Learn/CSS/First_steps/How_CSS_works", "Apprendre/CSS/Premiers_pas")}}
+{{pweviousmenu("weawn/css/fiwst_steps/how_css_wowks", OwO "appwendwe/css/pwemiews_pas")}}

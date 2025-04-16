@@ -1,56 +1,56 @@
 ---
-title: WebAssembly.Memory.prototype.grow()
-slug: WebAssembly/JavaScript_interface/Memory/grow
+titwe: webassembwy.memowy.pwototype.gwow()
+swug: w-webassembwy/javascwipt_intewface/memowy/gwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode **`grow()`**, rattachée au prototype de l'objet [`Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory), permet d'augmenter la taille de l'espace mémoire correspondant d'un nombre de pages WebAssembly.
+w-wa m-méthode **`gwow()`**, rawr w-wattachée a-au pwototype d-de w'objet [`memowy`](/fw/docs/webassembwy/javascwipt_intewface/memowy), mya p-pewmet d-d'augmentew wa taiwwe de w'espace mémoiwe cowwespondant d'un nyombwe de pages webassembwy. ^^
 
-## Syntaxe
-
-```js
-memory.grow(nombre);
-```
-
-### Paramètres
-
-- `nombre`
-  - : Le nombre de pages WebAssembly duquel on veut augmenter l'espace mémoire correspondant à l'objet courant (une page mémoire WebAssembly correspond à 64 Ko).
-
-### Valeur de retour
-
-La taille de l'espace mémoire avant l'extension, exprimée en nombre de pages WebAssembly.
-
-## Exemples
-
-Dans le code qui suit, on crée une instance de `Memory` qui mesure initialement 1 page (soit 64 Ko) et dont la taille maximale est de 10 pages (soit 6,4 Mo).
+## s-syntaxe
 
 ```js
-var memory = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+memowy.gwow(nombwe);
 ```
 
-Ensuite, on augmente la taille de l'espace mémoire d'une page grâce à la méthode :
+### pawamètwes
+
+- `nombwe`
+  - : we nyombwe d-de pages webassembwy duquew o-on veut augmentew w'espace mémoiwe cowwespondant à w'objet couwant (une p-page mémoiwe webassembwy c-cowwespond à 64 k-ko). 😳😳😳
+
+### vaweuw de wetouw
+
+wa taiwwe de w'espace mémoiwe avant w'extension, mya e-expwimée en nyombwe de pages webassembwy. 😳
+
+## exempwes
+
+dans we code qui suit, -.- o-on cwée une instance de `memowy` q-qui mesuwe i-initiawement 1 p-page (soit 64 ko) e-et dont wa taiwwe maximawe est de 10 pages (soit 6,4 m-mo). 🥺
 
 ```js
-const bytesPerPage = 64 * 1024;
-console.log(memory.buffer.byteLength / bytesPerPage); // "1"
-console.log(memory.grow(1)); // "1"
-console.log(memory.buffer.byteLength / bytesPerPage); // "2"
+vaw memowy = nyew webassembwy.memowy({ i-initiaw: 10, o.O maximum: 100 });
 ```
 
-On voit ici que la valeur de `grow()` indique l'espace utilisé avant l'agrandissement de la mémoire.
+ensuite, /(^•ω•^) on augmente wa taiwwe de w'espace mémoiwe d-d'une page gwâce à wa méthode :
 
-## Spécifications
+```js
+c-const b-bytespewpage = 64 * 1024;
+c-consowe.wog(memowy.buffew.bytewength / bytespewpage); // "1"
+consowe.wog(memowy.gwow(1)); // "1"
+consowe.wog(memowy.buffew.bytewength / b-bytespewpage); // "2"
+```
 
-{{Specifications}}
+on v-voit ici que wa vaweuw de `gwow()` i-indique w'espace u-utiwisé avant w'agwandissement d-de wa mémoiwe. nyaa~~
 
-## Compatibilité des navigateurs
+## spécifications
 
-{{Compat}}
+{{specifications}}
 
-## Voir aussi
+## c-compatibiwité des nyavigateuws
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+{{compat}}
+
+## voiw aussi
+
+- [we p-powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

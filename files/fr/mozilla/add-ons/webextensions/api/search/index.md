@@ -1,21 +1,21 @@
 ---
-title: search
-slug: Mozilla/Add-ons/WebExtensions/API/search
+titwe: seawch
+swug: moziwwa/add-ons/webextensions/api/seawch
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Récupère les moteurs de recherche et lance une recherche avec un moteur de recherche spécifique
+w-wécupèwe w-wes moteuws de w-wechewche et wance u-une wechewche a-avec un moteuw d-de wechewche spécifique
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "search".
+p-pouw u-utiwisew cette api, (ˆ ﻌ ˆ)♡ vous devez avoiw wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "seawch". (⑅˘꒳˘)
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("search.get()")}}
-  - : Récupérer tous les moteurs de recherche
-- {{WebExtAPIRef("search.search()")}}
-  - : Recherche à l'aide du moteur de recherche spécifié.
+- {{webextapiwef("seawch.get()")}}
+  - : wécupéwew t-tous wes moteuws de wechewche
+- {{webextapiwef("seawch.seawch()")}}
+  - : wechewche à w'aide d-du moteuw de wechewche spécifié. (U ᵕ U❁)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}

@@ -1,12 +1,12 @@
 ---
-title: extensionTypes.InjectDetails
-slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes/InjectDetails
+titwe: extensiontypes.injectdetaiws
+swug: moziwwa/add-ons/webextensions/api/extensiontypes/injectdetaiws
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ce type est donné en tant que paramètre aux méthodes `tabs.executeScript()`, `tabs.insertCSS()`, et `tabs.removeCSS()` . Pour plus de détails sur ses propriétés et leur utilisation, consultez les pages de documentation de ces méthodes :
+c-ce type est donné e-en tant que p-pawamètwe aux m-méthodes `tabs.exekawaii~scwipt()`, rawr `tabs.insewtcss()`, σωσ e-et `tabs.wemovecss()` . σωσ p-pouw pwus de détaiws s-suw ses p-pwopwiétés et weuw utiwisation, >_< consuwtez wes pages de documentation de ces méthodes :
 
-- {{WebExtAPIRef("tabs.executeScript()")}}
-- {{WebExtAPIRef("tabs.insertCSS()")}}
-- {{WebExtAPIRef("tabs.removeCSS()")}}
+- {{webextapiwef("tabs.exekawaii~scwipt()")}}
+- {{webextapiwef("tabs.insewtcss()")}}
+- {{webextapiwef("tabs.wemovecss()")}}

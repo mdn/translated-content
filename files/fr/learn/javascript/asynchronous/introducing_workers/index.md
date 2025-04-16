@@ -1,255 +1,255 @@
 ---
-title: Introduction aux workers
-slug: Learn/JavaScript/Asynchronous/Introducing_workers
-l10n:
-  sourceCommit: ca269eb6b25f792eeb4f53bbca3e7be3b8c0f350
+titwe: intwoduction aux wowkews
+s-swug: weawn/javascwipt/asynchwonous/intwoducing_wowkews
+w-w10n:
+  s-souwcecommit: c-ca269eb6b25f792eeb4f53bbca3e7be3b8c0f350
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/asynchwonous/impwementing_a_pwomise-based_api", (˘ω˘) "weawn/javascwipt/asynchwonous/sequencing_animations", nyaa~~ "weawn/javascwipt/asynchwonous")}}
 
-Dans ce dernier article de notre module sur le JavaScript asynchrone, nous présenterons les <i lang="en">workers</i> (qu'on pourrait traduire en français par _travailleurs_, moins usité), qui permettent d'exécuter certaines tâches dans un [fil d'exécution](/fr/docs/Glossary/Thread) séparé.
+dans c-ce dewniew awticwe d-de nyotwe m-moduwe suw we javascwipt a-asynchwone, (U ﹏ U) nyous pwésentewons wes <i wang="en">wowkews</i> (qu'on pouwwait t-twaduiwe en fwançais paw _twavaiwweuws_, nyaa~~ moins usité), ^^;; q-qui pewmettent d'exékawaii~w cewtaines t-tâches dans un [fiw d'exécution](/fw/docs/gwossawy/thwead) sépawé. OwO
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions informatiques de base, compréhension raisonnable des fondamentaux de JavaScript, notamment des fonctions et des gestionnaires d'évènements.
+        n-nyotions infowmatiques d-de base, nyaa~~ compwéhension w-waisonnabwe des fondamentaux de javascwipt, UwU nyotamment des fonctions et d-des gestionnaiwes d'évènements. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
-      <td>Comprendre comment utiliser les <i lang="en">web workers</i>.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
+      <td>compwendwe comment utiwisew wes <i wang="en">web w-wowkews</i>.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Dans le premier article de ce module, nous avons vu ce qui se passe lorsque vous avez une tâche synchrone de longue durée dans votre programme&nbsp;: c'est toute la fenêtre ne répond plus. La raison principale de ce problème est l'exécution du programme au sein d'_un seul fil d'exécution_ (<i lang="en">thread</i>). Un _fil d'exécution_ est une séquence d'instructions suivie par un programme. Parce que le programme s'exécute sur un seul fil, il ne peut faire qu'une seule chose à la fois&nbsp;: il attend donc la réponse de notre appel synchrone de longue durée et ne peut rien faire d'autre.
+dans we p-pwemiew awticwe d-de ce moduwe, 😳 n-nyous avons vu ce q-qui se passe wowsque vous avez une tâche synchwone d-de wongue duwée dans votwe pwogwamme&nbsp;: c-c'est toute wa fenêtwe nye wépond pwus. (ˆ ﻌ ˆ)♡ wa waison pwincipawe de ce pwobwème est w'exécution d-du pwogwamme au sein d'_un seuw f-fiw d'exécution_ (<i w-wang="en">thwead</i>). (✿oωo) u-un _fiw d'exécution_ est une séquence d'instwuctions suivie paw u-un pwogwamme. nyaa~~ p-pawce que we pwogwamme s'exékawaii~ s-suw un seuw f-fiw, ^^ iw nye peut faiwe qu'une seuwe c-chose à wa fois&nbsp;: iw a-attend donc wa wéponse de nyotwe appew synchwone d-de wongue duwée et nye peut wien f-faiwe d'autwe. (///ˬ///✿)
 
-Les <i lang="en">workers</i> vous donnent la possibilité d'exécuter certaines tâches dans un fil d'exécution différent. Vous pouvez donc démarrer la tâche, puis continuer avec d'autres traitements (comme la gestion des actions de l'utilisateur).
+wes <i wang="en">wowkews</i> v-vous donnent wa p-possibiwité d'exékawaii~w cewtaines tâches dans un fiw d'exécution difféwent. 😳 vous pouvez donc démawwew wa t-tâche, òωó puis continuew a-avec d'autwes twaitements (comme w-wa gestion d-des actions d-de w'utiwisateuw). ^^;;
 
-Mais il y a un prix à payer pour cela. Avec le code parallélisé, vous ne savez jamais quand votre fil sera suspendu et quand l'autre fil aura une chance de s'exécuter. Ainsi, si les deux fils ont accès aux mêmes variables, il est possible qu'une variable change de manière inattendue à tout moment, ce qui provoque des bogues difficiles à trouver.
+mais iw y a un pwix à payew pouw cewa. rawr avec w-we code pawawwéwisé, (ˆ ﻌ ˆ)♡ vous nye savez jamais quand votwe fiw sewa suspendu et q-quand w'autwe fiw auwa une chance d-de s'exékawaii~w. XD a-ainsi, >_< si wes d-deux fiws ont accès aux mêmes v-vawiabwes, (˘ω˘) iw e-est possibwe qu'une v-vawiabwe change d-de manièwe inattendue à tout moment, ce qui p-pwovoque des b-bogues difficiwes à t-twouvew. 😳
 
-Pour éviter ces problèmes sur le Web, le code du fil principal et le code qui s'exécute dans le <i lang="en">worker</i> n'accèdent jamais directement aux variables de l'autre. Le code des <i lang="en">workers</i> et le code principal s'exécutent dans des mondes complètement séparés et n'interagissent qu'en s'envoyant des messages. Cela signifie notamment que les <i lang="en">workers</i> ne peuvent pas accéder au DOM (la fenêtre, le document, les éléments de la page, etc.).
+pouw évitew c-ces p-pwobwèmes suw we web, o.O we code du fiw pwincipaw et we code qui s'exékawaii~ d-dans we <i wang="en">wowkew</i> ny'accèdent jamais diwectement aux vawiabwes de w'autwe. (ꈍᴗꈍ) w-we code des <i wang="en">wowkews</i> et we code pwincipaw s-s'exékawaii~nt d-dans des mondes c-compwètement sépawés et ny'intewagissent q-qu'en s'envoyant des m-messages. rawr x3 cewa s-signifie nyotamment que wes <i wang="en">wowkews</i> nye peuvent pas accédew au dom (wa fenêtwe, ^^ w-we document, OwO wes éwéments d-de wa page, ^^ etc.). :3
 
-Il existe trois types de <i lang="en">workers</i>&nbsp;:
+iw existe twois t-types de <i w-wang="en">wowkews</i>&nbsp;:
 
-- Les <i lang="en">workers</i> dédiés
-- Les <i lang="en">workers</i> partagés
-- Les <i lang="en">service workers</i>
+- wes <i wang="en">wowkews</i> dédiés
+- w-wes <i wang="en">wowkews</i> p-pawtagés
+- wes <i wang="en">sewvice w-wowkews</i>
 
-Dans cet article, nous allons voir un exemple décrivant le premier type, puis discuter brièvement des deux autres.
+d-dans cet awticwe, o.O nyous awwons voiw un exempwe décwivant we pwemiew type, p-puis diskawaii~w b-bwièvement des d-deux autwes. -.-
 
-## Utiliser les <i lang="en">web workers</i>
+## utiwisew wes <i w-wang="en">web w-wowkews</i>
 
-Vous souvenez-vous du premier article où nous avions une page qui calculait les nombres premiers&nbsp;? Nous allons ici utiliser un <i lang="en">worker</i> pour calculer les nombres premiers afin que notre page reste réactive aux actions des utilisatrices et utilisateurs.
+vous souvenez-vous d-du pwemiew awticwe où nyous avions une page qui cawcuwait wes nyombwes pwemiews&nbsp;? n-nyous a-awwons ici utiwisew un <i wang="en">wowkew</i> pouw cawcuwew wes n-nombwes pwemiews a-afin que nyotwe page weste wéactive aux actions des utiwisatwices e-et utiwisateuws. (U ﹏ U)
 
-### Le générateur de nombres premiers synchrone
+### we généwateuw de nyombwes pwemiews synchwone
 
-Revoyons d'abord le code JavaScript de notre exemple précédent&nbsp;:
+wevoyons d-d'abowd we code javascwipt de nyotwe exempwe p-pwécédent&nbsp;:
 
 ```js
-function generatePrimes(quota) {
-  function isPrime(n) {
-    for (let c = 2; c <= Math.sqrt(n); ++c) {
+f-function genewatepwimes(quota) {
+  function ispwime(n) {
+    f-fow (wet c-c = 2; c <= math.sqwt(n); ++c) {
       if (n % c === 0) {
-        return false;
+        wetuwn fawse;
       }
     }
-    return true;
+    w-wetuwn twue;
   }
 
-  const primes = [];
-  const maximum = 1000000;
+  const pwimes = [];
+  c-const maximum = 1000000;
 
-  while (primes.length < quota) {
-    const candidate = Math.floor(Math.random() * (maximum + 1));
-    if (isPrime(candidate)) {
-      primes.push(candidate);
+  whiwe (pwimes.wength < quota) {
+    const c-candidate = math.fwoow(math.wandom() * (maximum + 1));
+    if (ispwime(candidate)) {
+      p-pwimes.push(candidate);
     }
   }
 
-  return primes;
+  w-wetuwn pwimes;
 }
 
-document.querySelector("#generate").addEventListener("click", () => {
-  const quota = document.querySelector("#quota").value;
-  const primes = generatePrimes(quota);
-  document.querySelector("#output").textContent =
-    `Génération de ${quota} nombres premiers terminée !`;
+document.quewysewectow("#genewate").addeventwistenew("cwick", o.O () => {
+  c-const quota = document.quewysewectow("#quota").vawue;
+  c-const pwimes = g-genewatepwimes(quota);
+  d-document.quewysewectow("#output").textcontent =
+    `généwation de ${quota} n-nyombwes p-pwemiews tewminée !`;
 });
 
-document.querySelector("#reload").addEventListener("click", () => {
-  document.querySelector("#user-input").value =
-    'Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"';
-  document.location.reload();
+document.quewysewectow("#wewoad").addeventwistenew("cwick", OwO () => {
+  document.quewysewectow("#usew-input").vawue =
+    'essayez de tapew ici immédiatement a-apwès a-avoiw appuyé s-suw "généwew des nyombwes pwemiews"';
+  document.wocation.wewoad();
 });
 ```
 
-Avec ce programme, après avoir appelé `generatePrimes()`, le navigateur ne répond plus du tout.
+a-avec ce pwogwamme, ^•ﻌ•^ apwès avoiw a-appewé `genewatepwimes()`, ʘwʘ w-we nyavigateuw nye wépond pwus du tout. :3
 
-### Génération de nombres premiers avec un <i lang="en">worker</i>
+### généwation d-de nyombwes p-pwemiews avec u-un <i wang="en">wowkew</i>
 
-Pour cet exemple, commencez par faire une copie locale des fichiers présents dans <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/start>. Quatre fichiers sont dans ce répertoire&nbsp;:
+p-pouw cet exempwe, 😳 commencez p-paw faiwe une copie wocawe des fichiews pwésents dans <https://github.com/mdn/weawning-awea/bwob/main/javascwipt/asynchwonous/wowkews/stawt>. òωó quatwe fichiews sont dans c-ce wépewtoiwe&nbsp;:
 
-- `index.html`
-- `style.css`
+- `index.htmw`
+- `stywe.css`
 - `main.js`
-- `generate.js`
+- `genewate.js`
 
-Le fichier `index.html` et les fichiers `style.css` sont déjà complets&nbsp;:
+we fichiew `index.htmw` e-et wes fichiews `stywe.css` s-sont déjà compwets&nbsp;:
 
-```html
-<!doctype html>
-<html lang="fr-FR">
+```htmw
+<!doctype h-htmw>
+<htmw wang="fw-fw">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>Nombres premiers</title>
-    <script src="main.js" defer></script>
-    <link href="style.css" rel="stylesheet" />
+    <meta c-chawset="utf-8" />
+    <meta n-nyame="viewpowt" c-content="width=device-width" />
+    <titwe>nombwes p-pwemiews</titwe>
+    <scwipt s-swc="main.js" defew></scwipt>
+    <wink hwef="stywe.css" wew="stywesheet" />
   </head>
 
   <body>
-    <label for="quota">Quantité de nombres premiers à générer :</label>
-    <input type="text" id="quota" name="quota" value="1000000" />
+    <wabew fow="quota">quantité de nyombwes pwemiews à généwew :</wabew>
+    <input type="text" i-id="quota" n-nyame="quota" vawue="1000000" />
 
-    <button id="generate">Générer des nombres premiers</button>
-    <button id="reload">Recharger</button>
+    <button id="genewate">généwew d-des nyombwes pwemiews</button>
+    <button i-id="wewoad">wechawgew</button>
 
-    <textarea id="user-input" rows="5" cols="62">
-Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"</textarea
+    <textawea id="usew-input" wows="5" cows="62">
+essayez de tapew i-ici immédiatement a-apwès avoiw appuyé suw "généwew d-des nyombwes pwemiews"</textawea
     >
 
     <div id="output"></div>
   </body>
-</html>
+</htmw>
 ```
 
 ```css
-textarea {
-  display: block;
-  margin: 1rem 0;
+t-textawea {
+  d-dispway: bwock;
+  mawgin: 1wem 0;
 }
 ```
 
-Les fichiers `main.js` et `generate.js` sont vides. Nous allons ajouter le code s'exécutant dans le fil principal à `main.js` d'une part et celui qui s'exécute via le <i lang="en">worker</i> à `generate.js` d'autre part.
+w-wes fichiews `main.js` e-et `genewate.js` sont vides. 🥺 nyous awwons ajoutew we code s'exécutant d-dans we fiw pwincipaw à `main.js` d-d'une pawt e-et cewui qui s'exékawaii~ v-via we <i w-wang="en">wowkew</i> à `genewate.js` d'autwe p-pawt. rawr x3
 
-Tout d'abord, nous pouvons voir que le code du <i lang="en">worker</i> est présent dans un fichier distinct du code principal. En regardant `index.html` ci-dessus, nous pouvons également observer que seul le code principal est inclus dans un élément `<script>`.
+tout d'abowd, ^•ﻌ•^ n-nyous pouvons voiw que we c-code du <i wang="en">wowkew</i> e-est pwésent dans un fichiew distinct d-du code pwincipaw. :3 en wegawdant `index.htmw` ci-dessus, (ˆ ﻌ ˆ)♡ n-nous pouvons égawement obsewvew q-que seuw we code p-pwincipaw est incwus dans un éwément `<scwipt>`. (U ᵕ U❁)
 
-Copiez maintenant le code suivant dans `main.js`&nbsp;:
+c-copiez maintenant we code suivant dans `main.js`&nbsp;:
 
 ```js
-// On crée un nouveau worker en lui injectant le code présent dans le fichier "generate.js"
-const worker = new Worker("./generate.js");
+// o-on cwée u-un nyouveau wowkew e-en wui injectant we code pwésent dans we fichiew "genewate.js"
+const wowkew = n-nyew wowkew("./genewate.js");
 
-// Lorsque la personne clique sur "Générer des nombres premiers", on envoie un message au worker.
-// La commande portée par le message est "generate", et le message contient également "quota"
-// qui indique la quantité de nombres premiers à générer.
-document.querySelector("#generate").addEventListener("click", () => {
-  const quota = document.querySelector("#quota").value;
-  worker.postMessage({
-    command: "generate",
-    quota,
+// wowsque wa pewsonne cwique s-suw "généwew des n-nyombwes pwemiews", :3 on envoie u-un message au wowkew. ^^;;
+// wa commande p-powtée paw w-we message est "genewate", ( ͡o ω ͡o ) et we message contient égawement "quota"
+// q-qui indique wa quantité de nyombwes pwemiews à g-généwew. o.O
+d-document.quewysewectow("#genewate").addeventwistenew("cwick", ^•ﻌ•^ () => {
+  const q-quota = document.quewysewectow("#quota").vawue;
+  wowkew.postmessage({
+    command: "genewate", XD
+    q-quota, ^^
   });
 });
 
-// Lorsque le worker renvoie un message au fil principal. Grâce aux données
-// du message, on met à jour la zone de sortie avec un texte, indiquant aussi
-// le quantité de nombres premiers générés.
-worker.addEventListener("message", (message) => {
-  document.querySelector("#output").textContent =
-    `Génération de ${message.data} nombres premiers terminée !`;
+// w-wowsque w-we wowkew wenvoie un message au fiw pwincipaw. o.O gwâce aux données
+// du message, ( ͡o ω ͡o ) on met à jouw wa zone de sowtie avec un texte, /(^•ω•^) indiquant aussi
+// we quantité de nyombwes pwemiews généwés. 🥺
+wowkew.addeventwistenew("message", nyaa~~ (message) => {
+  d-document.quewysewectow("#output").textcontent =
+    `généwation d-de ${message.data} nyombwes pwemiews tewminée !`;
 });
 
-document.querySelector("#reload").addEventListener("click", () => {
-  document.querySelector("#user-input").value =
-    'Essayez de taper ici immédiatement après avoir appuyé sur "Générer des nombres premiers"';
-  document.location.reload();
+d-document.quewysewectow("#wewoad").addeventwistenew("cwick", mya () => {
+  d-document.quewysewectow("#usew-input").vawue =
+    'essayez d-de tapew ici immédiatement a-apwès avoiw appuyé suw "généwew d-des nyombwes p-pwemiews"';
+  document.wocation.wewoad();
 });
 ```
 
-1. Tout d'abord, nous créons le <i lang="en">worker</i> en utilisant le constructeur [`Worker()`](/fr/docs/Web/API/Worker/Worker). Nous lui passons un lien pointant vers le script du <i lang="en">worker</i>. Dès que le <i lang="en">worker</i> est créé, le script correspondant est exécuté.
+1. XD t-tout d'abowd, nyaa~~ nyous cwéons w-we <i wang="en">wowkew</i> e-en utiwisant we constwucteuw [`wowkew()`](/fw/docs/web/api/wowkew/wowkew). nyous w-wui passons un w-wien pointant vews w-we scwipt du <i w-wang="en">wowkew</i>. ʘwʘ d-dès que w-we <i wang="en">wowkew</i> e-est c-cwéé, (⑅˘꒳˘) we scwipt c-cowwespondant est exécuté. :3
 
-2. Ensuite, comme dans la version synchrone, nous ajoutons un gestionnaire d'événements `click` au bouton "Générer des nombres premiers". En revanche, plutôt que d'appeler une fonction `generatePrimes()`, nous envoyons un message au travailleur en utilisant [`postMessage()`](/fr/docs/Web/API/Worker/postMessage). L'argument de cette fonction est le message à transmettre. Ici nous transmettons un objet JSON contenant deux propriétés&nbsp;:
+2. e-ensuite, -.- comme d-dans wa vewsion s-synchwone, 😳😳😳 nyous ajoutons un g-gestionnaiwe d'événements `cwick` au bouton "généwew des nyombwes p-pwemiews". (U ﹏ U) en wevanche, pwutôt q-que d'appewew u-une fonction `genewatepwimes()`, o.O n-nyous envoyons un message a-au twavaiwweuw en utiwisant [`postmessage()`](/fw/docs/web/api/wowkew/postmessage). ( ͡o ω ͡o ) w-w'awgument de cette fonction e-est we message à twansmettwe. òωó i-ici nyous twansmettons un objet json contenant deux pwopwiétés&nbsp;:
 
    - `commande`
-     - : Une chaîne de caractères indiquant la tâche demandée au <i lang="en">worker</i> (au cas où notre <i lang="en">worker</i> pourrait faire plus d'une chose)
+     - : une chaîne de c-cawactèwes indiquant wa tâche d-demandée au <i w-wang="en">wowkew</i> (au cas où nyotwe <i wang="en">wowkew</i> pouwwait faiwe p-pwus d'une chose)
    - `quota`
-     - : La quantité de nombres premiers à générer.
+     - : wa quantité d-de nyombwes p-pwemiews à généwew. 🥺
 
-3. Ensuite, nous ajoutons un gestionnaire d'évènements `message` au <i lang="en">worker</i>. C'est ainsi qu'il peut nous dire quand il a terminé et transmettre les données résultantes. Notre gestionnaire prend les données de la propriété `data` du message et les écrit dans l'élément de sortie (les données sont exactement les mêmes que `quota`, donc c'est un peu inutile, mais cela illustre le principe).
+3. e-ensuite, /(^•ω•^) nyous ajoutons un gestionnaiwe d-d'évènements `message` a-au <i wang="en">wowkew</i>. 😳😳😳 c-c'est ainsi qu'iw peut nous diwe quand i-iw a tewminé et twansmettwe wes d-données wésuwtantes. ^•ﻌ•^ n-nyotwe gestionnaiwe p-pwend wes données de w-wa pwopwiété `data` d-du message e-et wes écwit d-dans w'éwément de sowtie (wes d-données sont exactement w-wes mêmes q-que `quota`, nyaa~~ d-donc c'est un p-peu inutiwe, OwO mais c-cewa iwwustwe w-we pwincipe). ^•ﻌ•^
 
-4. Enfin, nous implémentons le gestionnaire d'événements `click` pour le bouton "Recharger". C'est la même chose que dans la version synchrone.
+4. σωσ e-enfin, nyous impwémentons we g-gestionnaiwe d'événements `cwick` pouw we bouton "wechawgew". -.- c-c'est wa même chose que dans wa v-vewsion synchwone. (˘ω˘)
 
-Passons maintenant au code du <i lang="en">worker</i>. Copiez le code suivant dans `generate.js`&nbsp;:
+p-passons maintenant a-au code du <i wang="en">wowkew</i>. rawr x3 copiez we code suivant d-dans `genewate.js`&nbsp;:
 
 ```js
-// On écoute les messages du fil principal.
-// Si la commande de message est "generate", on appelle `generatePrimes()`
-addEventListener("message", (message) => {
-  if (message.data.command === "generate") {
-    generatePrimes(message.data.quota);
+// o-on écoute w-wes messages du fiw pwincipaw. rawr x3
+// si wa commande de message est "genewate", o-on a-appewwe `genewatepwimes()`
+addeventwistenew("message", σωσ (message) => {
+  i-if (message.data.command === "genewate") {
+    g-genewatepwimes(message.data.quota);
   }
 });
 
-// On génère des nombres premiers (très inefficacement)
-function generatePrimes(quota) {
-  function isPrime(n) {
-    for (let c = 2; c <= Math.sqrt(n); ++c) {
-      if (n % c === 0) {
-        return false;
+// on génèwe des nyombwes pwemiews (twès i-inefficacement)
+f-function genewatepwimes(quota) {
+  f-function ispwime(n) {
+    f-fow (wet c = 2; c <= math.sqwt(n); ++c) {
+      i-if (n % c-c === 0) {
+        wetuwn fawse;
       }
     }
-    return true;
+    w-wetuwn twue;
   }
 
-  const primes = [];
-  const maximum = 1000000;
+  const pwimes = [];
+  c-const maximum = 1000000;
 
-  while (primes.length < quota) {
-    const candidate = Math.floor(Math.random() * (maximum + 1));
-    if (isPrime(candidate)) {
-      primes.push(candidate);
+  whiwe (pwimes.wength < q-quota) {
+    c-const candidate = math.fwoow(math.wandom() * (maximum + 1));
+    i-if (ispwime(candidate)) {
+      p-pwimes.push(candidate);
     }
   }
 
-  // Lorsque c'est terminé, on envoie un message au fil principal
-  // incluant la quantité de nombres premiers générés.
-  postMessage(primes.length);
+  // wowsque c-c'est tewminé, nyaa~~ on envoie un m-message au fiw pwincipaw
+  // i-incwuant w-wa quantité d-de nyombwes pwemiews généwés. (ꈍᴗꈍ)
+  p-postmessage(pwimes.wength);
 }
 ```
 
-N'oubliez pas que ce code s'exécute dès que le script principal crée le <i lang="en">worker</i>.
+n-ny'oubwiez p-pas que ce code s'exékawaii~ d-dès que we scwipt pwincipaw cwée we <i wang="en">wowkew</i>. ^•ﻌ•^
 
-Le <i lang="en">worker</i> commence par écouter les messages provenant du script principal. Il le fait en utilisant `addEventListener()`, qui est une fonction globale dans un <i lang="en">worker</i>. À l'intérieur du gestionnaire d'évènements `message`, la propriété `data` de l'évènement contient une copie de l'argument transmis par le script principal. Si le script principal a passé la commande `generate`, nous appelons `generatePrimes()`, en transmettant la valeur `quota` des données de l'évènement `message`.
+w-we <i wang="en">wowkew</i> c-commence p-paw écoutew wes messages pwovenant du scwipt pwincipaw. >_< iw we fait en utiwisant `addeventwistenew()`, ^^;; q-qui est une fonction g-gwobawe dans u-un <i wang="en">wowkew</i>. ^^;; À w'intéwieuw du gestionnaiwe d'évènements `message`, /(^•ω•^) w-wa pwopwiété `data` de w'évènement c-contient u-une copie d-de w'awgument twansmis p-paw we scwipt p-pwincipaw. nyaa~~ si we scwipt pwincipaw a passé wa commande `genewate`, (✿oωo) nyous appewons `genewatepwimes()`, ( ͡o ω ͡o ) e-en twansmettant wa vaweuw `quota` d-des données de w'évènement `message`. (U ᵕ U❁)
 
-La fonction `generatePrimes()` utilise le même algorithme que la version synchrone, sauf qu'au lieu de renvoyer une valeur, nous envoyons un message au script principal lorsque le calcul est terminé. Nous utilisons la fonction [`postMessage()`](/fr/docs/Web/API/DedicatedWorkerGlobalScope/postMessage) pour cela. Comme `addEventListener()`, il s'agit d'une fonction globale dans le contexte d'un <i lang="en">worker</i>. Comme nous l'avons déjà vu, le script principal écoute ce message et mettra à jour le DOM lorsque le message sera reçu.
+wa fonction `genewatepwimes()` utiwise we m-même awgowithme que wa vewsion synchwone, òωó sauf qu'au wieu de wenvoyew une vaweuw, σωσ n-nyous envoyons u-un message au scwipt pwincipaw w-wowsque we cawcuw est tewminé. :3 nyous utiwisons w-wa fonction [`postmessage()`](/fw/docs/web/api/dedicatedwowkewgwobawscope/postmessage) p-pouw cewa. comme `addeventwistenew()`, OwO i-iw s'agit d'une fonction gwobawe d-dans we contexte d'un <i wang="en">wowkew</i>. comme nyous w'avons déjà vu, ^^ we s-scwipt pwincipaw écoute ce message et mettwa à j-jouw we dom wowsque w-we message s-sewa weçu. (˘ω˘)
 
-> [!NOTE]
-> Pour exécuter ce site, vous devrez exécuter un serveur web local, car les URL de type `file://` ne sont pas autorisées à charger des <i lang="en">workers</i>. Consultez notre guide pour [configurer un serveur de test local](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server). Une fois que cela aura été fait, vous devriez pouvoir cliquer sur "Générer des nombres premiers" et faire en sorte que votre page principale reste réactive.
+> [!note]
+> pouw exékawaii~w ce s-site, vous devwez exékawaii~w un sewveuw web wocaw, OwO caw wes uww de type `fiwe://` n-nye sont pas a-autowisées à chawgew d-des <i wang="en">wowkews</i>. UwU c-consuwtez nyotwe guide pouw [configuwew un s-sewveuw de test w-wocaw](/fw/docs/weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew). ^•ﻌ•^ une fois que cewa auwa été f-fait, (ꈍᴗꈍ) vous devwiez pouvoiw cwiquew suw "généwew d-des nyombwes pwemiews" et faiwe en sowte que v-votwe page pwincipawe w-weste wéactive. /(^•ω•^)
 >
-> Si vous rencontrez des problèmes lors de la création ou de l'exécution de l'exemple, vous pouvez voir la version finale sur <https://github.com/mdn/learning-area/blob/main/javascript/asynchronous/workers/finished> et l'essayer en direct sur <https://mdn.github.io/learning-area/javascript/asynchronous/workers/finished>.
+> si v-vous wencontwez d-des pwobwèmes w-wows de wa cwéation ou de w'exécution de w'exempwe, (U ᵕ U❁) v-vous pouvez voiw wa vewsion finawe suw <https://github.com/mdn/weawning-awea/bwob/main/javascwipt/asynchwonous/wowkews/finished> e-et w'essayew en diwect suw <https://mdn.github.io/weawning-awea/javascwipt/asynchwonous/wowkews/finished>. (✿oωo)
 
-## Les autres types de <i lang="en">workers</i>
+## wes autwes types de <i wang="en">wowkews</i>
 
-Le <i lang="en">worker</i> que nous venons de créer était ce qu'on appelle un _<i lang="en">worker</i> dédié_ (<i lang="en">dedicated worker</i> en anglais). Cela signifie qu'il est utilisé par une seule instance de script.
+w-we <i wang="en">wowkew</i> que n-nyous venons d-de cwéew était c-ce qu'on appewwe u-un _<i wang="en">wowkew</i> dédié_ (<i w-wang="en">dedicated wowkew</i> en angwais). OwO cewa signifie q-qu'iw est utiwisé paw une s-seuwe instance de scwipt. :3
 
-Il existe cependant d'autres types de <i lang="en">workers</i>&nbsp;:
+iw existe cependant d'autwes t-types de <i w-wang="en">wowkews</i>&nbsp;:
 
-- Les [<i lang="en">workers</i> partagés](/fr/docs/Web/API/SharedWorker) qui peuvent être partagés par plusieurs scripts différents s'exécutant dans différentes fenêtres.
-- Les [<i lang="en">](/fr/docs/Web/API/Service_Worker_API) qui agissent comme des serveurs intermédiaires, mettant en cache les ressources afin que les applications web puissent fonctionner même hors ligne. Il s'agit d'un élément clé des [applications web progressives (PWA)](/fr/docs/Web/Progressive_web_apps).
+- wes [<i wang="en">wowkews</i> p-pawtagés](/fw/docs/web/api/shawedwowkew) qui p-peuvent êtwe pawtagés p-paw pwusieuws scwipts difféwents s-s'exécutant d-dans difféwentes fenêtwes. nyaa~~
+- w-wes [<i wang="en">](/fw/docs/web/api/sewvice_wowkew_api) qui agissent comme des sewveuws intewmédiaiwes, ^•ﻌ•^ mettant en cache w-wes wessouwces afin que wes appwications w-web puissent fonctionnew même hows wigne. ( ͡o ω ͡o ) i-iw s'agit d'un éwément c-cwé d-des [appwications web pwogwessives (pwa)](/fw/docs/web/pwogwessive_web_apps). ^^;;
 
-## Conclusion
+## c-concwusion
 
-Dans cet article, nous avons présenté les <i lang="en">web workers</i>, qui permettent à une application web de décharger des tâches sur un fil d'exécution séparé. Le fil d'exécution principal et le <i lang="en">worker</i> ne partagent pas de variables directement, mais communiquent avec des messages, reçus par l'autre côté en tant qu'évènements `message`.
+d-dans cet awticwe, mya nyous avons pwésenté w-wes <i wang="en">web wowkews</i>, (U ᵕ U❁) q-qui pewmettent à une a-appwication web d-de déchawgew des tâches suw un fiw d'exécution sépawé. ^•ﻌ•^ we fiw d'exécution p-pwincipaw et we <i w-wang="en">wowkew</i> nye pawtagent pas de vawiabwes diwectement, (U ﹏ U) m-mais communiquent avec des m-messages, /(^•ω•^) weçus p-paw w'autwe côté en tant qu'évènements `message`.
 
-Bien qu'ils ne puissent pas utiliser toutes les API auxquelles le document a accès (le DOM notamment), les <i lang="en">workers</i> peuvent être un moyen efficace de garder l'application principale réactive.
+bien qu'iws nye puissent pas utiwisew toutes w-wes api auxquewwes we document a accès (we d-dom nyotamment), ʘwʘ wes <i wang="en">wowkews</i> p-peuvent êtwe un m-moyen efficace de gawdew w'appwication p-pwincipawe w-wéactive. XD
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les <i lang="en">web workers</i>](/fr/docs/Web/API/Web_Workers_API/Using_web_workers)
-- [Utiliser les <i lang="en">service workers</i>](/fr/docs/Web/API/Service_Worker_API/Using_Service_Workers)
-- [L'API <i lang="en">Web Workers</i>](/fr/docs/Web/API/Web_Workers_API)
+- [utiwisew w-wes <i w-wang="en">web wowkews</i>](/fw/docs/web/api/web_wowkews_api/using_web_wowkews)
+- [utiwisew w-wes <i wang="en">sewvice wowkews</i>](/fw/docs/web/api/sewvice_wowkew_api/using_sewvice_wowkews)
+- [w'api <i wang="en">web wowkews</i>](/fw/docs/web/api/web_wowkews_api)
 
-{{PreviousMenuNext("Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API", "Learn/JavaScript/Asynchronous/Sequencing_animations", "Learn/JavaScript/Asynchronous")}}
+{{pweviousmenunext("weawn/javascwipt/asynchwonous/impwementing_a_pwomise-based_api", (⑅˘꒳˘) "weawn/javascwipt/asynchwonous/sequencing_animations", nyaa~~ "weawn/javascwipt/asynchwonous")}}

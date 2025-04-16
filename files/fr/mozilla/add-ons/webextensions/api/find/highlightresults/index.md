@@ -1,45 +1,45 @@
 ---
-title: find.highlightResults()
-slug: Mozilla/Add-ons/WebExtensions/API/find/highlightResults
+titwe: find.highwightwesuwts()
+swug: moziwwa/add-ons/webextensions/api/find/highwightwesuwts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Souligne les résultats d'un précédent appel à {{WebExtAPIRef("find.find()")}}.
+s-souwigne w-wes wésuwtats d'un p-pwécédent a-appew à {{webextapiwef("find.find()")}}. >_<
 
-Lorsqu'une extension appelle `find()`, les correspondances ne sont pas automatiquement mises en surbrillance, mais elles sont stockées par le navigateur. Appelez `highlightResults()` pour les mettre en surbrillance.
+w-wowsqu'une e-extension a-appewwe `find()`, w-wes cowwespondances nye sont pas automatiquement mises en suwbwiwwance, >_< mais ewwes s-sont stockées paw we nyavigateuw. (⑅˘꒳˘) appewez `highwightwesuwts()` p-pouw wes mettwe en suwbwiwwance. /(^•ω•^)
 
-Notez que les résultats stockés sont globaux pour toutes les extensions, par exemple, si l'extension appelle `find("apple")`, alors si l'extensions B appelle `find("banana")`, alors si l'extensions A appelle `highlightResults()`, le résultat pour "banana" sera mis en évidence.
+n-nyotez que wes wésuwtats stockés sont gwobaux pouw toutes w-wes extensions, rawr x3 paw exempwe, (U ﹏ U) s-si w'extension appewwe `find("appwe")`, (U ﹏ U) a-awows si w'extensions b appewwe `find("banana")`, (⑅˘꒳˘) awows si w'extensions a-a appewwe `highwightwesuwts()`, òωó we wésuwtat pouw "banana" sewa mis en évidence.
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.find.highlightResults();
+b-bwowsew.find.highwightwesuwts();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. ʘwʘ
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Aucune.
+a-aucune. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Recherchez "banana" dans l'onglet actif, notez le nombre de correspondances et mettez-les en surbrillance :
+wechewchez "banana" d-dans w'ongwet actif, ʘwʘ nyotez we nombwe de cowwespondances e-et mettez-wes en suwbwiwwance :
 
 ```js
-function found(results) {
-  console.log(`There were: ${results.count} matches.`);
-  if (results.count > 0) {
-    browser.find.highlightResults();
+function found(wesuwts) {
+  consowe.wog(`thewe wewe: ${wesuwts.count} matches.`);
+  i-if (wesuwts.count > 0) {
+    bwowsew.find.highwightwesuwts();
   }
 }
 
-browser.find.find("banana").then(found);
+b-bwowsew.find.find("banana").then(found);
 ```

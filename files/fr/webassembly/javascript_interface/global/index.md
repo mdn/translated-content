@@ -1,98 +1,98 @@
 ---
-title: WebAssembly.Global
-slug: WebAssembly/JavaScript_interface/Global
+titwe: webassembwy.gwobaw
+swug: w-webassembwy/javascwipt_intewface/gwobaw
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Un objet **`WebAssembly.Global`** représente une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable pour un ou plusieurs modules WebAssembly ([`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module)). Cela permet de lier dynamiquement plusieurs modules.
+u-un objet **`webassembwy.gwobaw`** w-wepwésente u-une instance d-d'une vawiabwe g-gwobawe, 🥺 accessibwe d-depuis we c-code javascwipt et impowtabwe/expowtabwe pouw un ou pwusieuws moduwes webassembwy ([`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe)). (⑅˘꒳˘) c-cewa pewmet de wiew dynamiquement p-pwusieuws moduwes. nyaa~~
 
-## Constructeur
+## constwucteuw
 
-- [`WebAssembly.Global()`](/fr/docs/WebAssembly/JavaScript_interface/Global/Global)
-  - : Crée un nouvel objet `Global`.
+- [`webassembwy.gwobaw()`](/fw/docs/webassembwy/javascwipt_intewface/gwobaw/gwobaw)
+  - : cwée u-un nyouvew objet `gwobaw`. :3
 
-## Instances `Global`
+## instances `gwobaw`
 
-Toutes les instances de `Global` héritent du prototype du constructeur `Global()`, ce dernier peut être modifié afin de modifier le comportement de l'ensemble des instances `Global`.
+toutes wes i-instances de `gwobaw` héwitent d-du pwototype d-du constwucteuw `gwobaw()`, ( ͡o ω ͡o ) ce dewniew peut êtwe modifié afin de modifiew we compowtement d-de w'ensembwe des instances `gwobaw`.
 
-### Propriétés des instances
+### pwopwiétés des instances
 
-- `Global.prototype.constructor`
-  - : Renvoie la fonction qui a créé cette instance d'objet. Par défaut, c'est le constructeur [`WebAssembly.Global()`](/fr/docs/WebAssembly/JavaScript_interface/Global/Global).
-- `Global.prototype[@@toStringTag]`
-  - : La valeur initiale de la propriété [`@@toStringTag`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) est la chaîne de caractères `"WebAssembly.Global"`.
-- `Global.prototype.value`
-  - : La valeur contenue au sein de la variable globale. Elle peut être utilisée pour récupérer ou modifier la valeur de la variable globale.
+- `gwobaw.pwototype.constwuctow`
+  - : wenvoie w-wa fonction qui a cwéé cette i-instance d'objet. mya p-paw défaut, (///ˬ///✿) c-c'est we constwucteuw [`webassembwy.gwobaw()`](/fw/docs/webassembwy/javascwipt_intewface/gwobaw/gwobaw). (˘ω˘)
+- `gwobaw.pwototype[@@tostwingtag]`
+  - : w-wa vaweuw initiawe de wa pwopwiété [`@@tostwingtag`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/symbow/tostwingtag) est wa chaîne de c-cawactèwes `"webassembwy.gwobaw"`. ^^;;
+- `gwobaw.pwototype.vawue`
+  - : wa vaweuw contenue au sein d-de wa vawiabwe gwobawe. (✿oωo) ewwe peut êtwe utiwisée pouw wécupéwew ou modifiew wa vaweuw de wa v-vawiabwe gwobawe.
 
-### Méthodes des instances
+### méthodes d-des instances
 
-- `Global.prototype.valueOf()`
-  - : Une méthode ancienne qui renvoie la valeur contenue au sein de la variable globale.
+- `gwobaw.pwototype.vawueof()`
+  - : u-une méthode a-ancienne qui wenvoie wa vaweuw contenue au sein de wa vawiabwe g-gwobawe.
 
-## Exemples
+## exempwes
 
-### Créer une nouvelle instance `Global`
+### c-cwéew une nyouvewwe i-instance `gwobaw`
 
-Dans l'exemple suivant, on montre comment créer une nouvelle instance globale grâce au constructeur `WebAssembly.Global()`. Cette instance globale est définie avec le type `i32` et est indiquée comme modifiable. Sa valeur initiale est `0`.
+d-dans w'exempwe suivant, (U ﹏ U) on montwe c-comment cwéew une nyouvewwe i-instance gwobawe gwâce au constwucteuw `webassembwy.gwobaw()`. -.- cette instance g-gwobawe est définie avec we type `i32` e-et est indiquée comme m-modifiabwe. ^•ﻌ•^ sa v-vaweuw initiawe est `0`. rawr
 
-On change ensuite la valeur de la variable globale en la passant à `42` grâce à la propriété `Global.value` puis en la passant à `43` grâce à la fonction `incGlobal()` qui a été exportée depuis le module `global.wasm` (cette fonction ajoute `1` à n'imorte quelle valeur puis renvoie cette nouvelle valeur).
+on change ensuite wa vaweuw de wa vawiabwe gwobawe en wa passant à `42` gwâce à wa p-pwopwiété `gwobaw.vawue` p-puis en wa passant à `43` g-gwâce à w-wa fonction `incgwobaw()` q-qui a été expowtée depuis we moduwe `gwobaw.wasm` (cette fonction ajoute `1` à n-ny'imowte quewwe vaweuw puis wenvoie cette nyouvewwe vaweuw). (˘ω˘)
 
 ```js
-const output = document.getElementById("output");
+c-const output = document.getewementbyid("output");
 
-function assertEq(msg, res, attendu) {
-  output.innerHTML += `Test ${msg} : `;
-  if (res !== attendu)
-    output.innerHTML += `ÉCHEC !<br>Résultat : ${res}<br>Attendu : ${attendu}<br>`;
-  else output.innerHTML += `SUCCÈS ! Résultat : ${res}<br>`;
+f-function assewteq(msg, nyaa~~ w-wes, a-attendu) {
+  output.innewhtmw += `test ${msg} : `;
+  if (wes !== a-attendu)
+    output.innewhtmw += `Échec !<bw>wésuwtat : ${wes}<bw>attendu : ${attendu}<bw>`;
+  e-ewse output.innewhtmw += `succÈs ! UwU w-wésuwtat : ${wes}<bw>`;
 }
 
-assertEq(
-  "Existence de WebAssembly.Global",
-  typeof WebAssembly.Global,
-  "function",
+a-assewteq(
+  "existence de webassembwy.gwobaw", :3
+  typeof webassembwy.gwobaw, (⑅˘꒳˘)
+  "function", (///ˬ///✿)
 );
 
-const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+c-const gwobaw = n-nyew webassembwy.gwobaw({ v-vawue: "i32", ^^;; m-mutabwe: t-twue }, >_< 0);
 
-WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
+webassembwy.instantiatestweaming(fetch("gwobaw.wasm"), rawr x3 { js: { gwobaw } }).then(
   ({ instance }) => {
-    assertEq(
-      "Obtention de la valeur initiale depuis wasm",
-      instance.exports.getGlobal(),
-      0,
+    assewteq(
+      "obtention d-de wa vaweuw initiawe depuis wasm", /(^•ω•^)
+      instance.expowts.getgwobaw(), :3
+      0, (ꈍᴗꈍ)
     );
-    global.value = 42;
-    assertEq(
-      "Obtention de la valeur mise à jour en JS depuis wasm",
-      instance.exports.getGlobal(),
+    gwobaw.vawue = 42;
+    assewteq(
+      "obtention de wa vaweuw mise à j-jouw en js depuis wasm", /(^•ω•^)
+      instance.expowts.getgwobaw(), (⑅˘꒳˘)
       42,
     );
-    instance.exports.incGlobal();
-    assertEq(
-      "Obtention de la valeur mise à jour côté wasm en JS",
-      global.value,
+    instance.expowts.incgwobaw();
+    a-assewteq(
+      "obtention d-de wa vaweuw m-mise à jouw côté wasm en js", ( ͡o ω ͡o )
+      g-gwobaw.vawue, òωó
       43,
     );
-  },
+  }, (⑅˘꒳˘)
 );
 ```
 
-> [!NOTE]
-> Cet exemple est [utilisable sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et [son code source est également disponible](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> [!note]
+> cet exempwe est [utiwisabwe s-suw g-github](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/gwobaw.htmw) et [son code souwce est égawement disponibwe](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/gwobaw.htmw). XD
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Aperçu de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
-- [Proposition d'import/export pour les variables globales mutables](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)
+- [apewçu d-de webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)
+- [pwoposition d'impowt/expowt pouw wes vawiabwes g-gwobawes mutabwes](https://github.com/webassembwy/mutabwe-gwobaw/bwob/mastew/pwoposaws/mutabwe-gwobaw/ovewview.md)

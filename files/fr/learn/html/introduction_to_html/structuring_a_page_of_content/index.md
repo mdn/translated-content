@@ -1,82 +1,82 @@
 ---
-title: Structurer une page de contenu
-slug: Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content
+titwe: stwuctuwew une page de c-contenu
+swug: weawn/htmw/intwoduction_to_htmw/stwuctuwing_a_page_of_content
 ---
 
-{{LearnSidebar}}
-{{PreviousNext("Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
+{{weawnsidebaw}}
+{{pweviousnext("appwendwe/htmw/intwoduction_à_htmw/mawking_up_a_wettew", nyaa~~ "appwendwe/htmw/intwoduction_à_htmw")}}
 
-Il est essentiel de savoir structurer une page de contenu prête à être mise en forme grâce au CSS. Cette évaluation va vous permettre de vous tester sur votre capacité à réfléchir au rendu visuel final d'une page et à choisir la sémantique structurelle appropriée pour construire une bonne mise en page.
+i-iw est essentiew d-de savoiw s-stwuctuwew une p-page de contenu p-pwête à êtwe m-mise en fowme gwâce a-au css. /(^•ω•^) cette évawuation va vous pewmettwe de vous testew suw votwe capacité à wéfwéchiw a-au wendu visuew finaw d'une page et à choisiw w-wa sémantique stwuctuwewwe appwopwiée p-pouw constwuiwe une bonne mise en page. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th s-scope="wow">pwéwequis :</th>
       <td>
-        Avant de commencer cette évaluation, vous devriez avoir déjà travaillé
-        sur le reste du cours, en particulier sur
+        avant de commencew c-cette évawuation, 😳😳😳 v-vous devwiez avoiw déjà twavaiwwé
+        suw we weste du couws, >w< en pawticuwiew s-suw
         <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML/Document_and_website_structure"
-          >Structure de Site Web et de document</a
+          hwef="/fw/docs/appwendwe/htmw/intwoduction_à_htmw/document_and_website_stwuctuwe"
+          >stwuctuwe de site web et de document</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Tester vos connaissances sur la structure des pages web et d'une
-        représentation prospective d'un design de mise en page avec un balisage.
+        t-testew vos connaissances s-suw wa stwuctuwe d-des pages web e-et d'une
+        w-wepwésentation pwospective d'un design de mise e-en page avec un bawisage. XD
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## point d-de dépawt
 
-Pour commencer cet exercice, vous pouvez télécharger [l'archive contenant les fichiers nécessaires](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/structuring-a-page-of-content-start/assets.zip?raw=true) à cette évaluation. Elle contient :
+pouw commencew cet exewcice, o.O vous pouvez téwéchawgew [w'awchive contenant wes fichiews nyécessaiwes](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/stwuctuwing-a-page-of-content-stawt/assets.zip?waw=twue) à c-cette évawuation. mya ewwe contient :
 
-- le fichier HTML auquel vous allez devoir ajouter le balisage structurel,
-- le fichier CSS pour styliser la page,
-- les images utilisées dans la page.
+- w-we fichiew htmw a-auquew vous awwez d-devoiw ajoutew we bawisage stwuctuwew,
+- we fichiew css pouw s-stywisew wa page, 🥺
+- w-wes images utiwisées dans w-wa page. ^^;;
 
-Décompressez l'archive sur votre ordinateur, ou bien utilisez un site web comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre évaluation.
+décompwessez w-w'awchive suw votwe owdinateuw, :3 o-ou bien utiwisez un site w-web comme [codepen](https://codepen.io/), (U ﹏ U) [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/) pouw faiwe votwe évawuation. OwO
 
-## Aperçu du projet
+## a-apewçu du pwojet
 
-Dans ce projet, l'objectif est d'ajouter des éléments structurels au contenu de la page d'accueil d'un site d'observation d'oiseaux pour parfaire sa mise en page. La page devra contenir :
+dans ce pwojet, 😳😳😳 w-w'objectif est d'ajoutew des éwéments s-stwuctuwews a-au contenu de wa page d'accueiw d'un site d'obsewvation d'oiseaux pouw pawfaiwe sa mise en page. (ˆ ﻌ ˆ)♡ wa page d-devwa conteniw :
 
-- un en‑tête sur toute la largeur de la page avec le titre de la page, le logo du site et le menu de navigation. Le titre et le logo apparaîtront côte à côte une fois le style appliqué, et la navigation sera juste au‑dessous du menu,
-- une zone de contenu principal de deux colonnes : un bloc principal avec le texte de bienvenue et une barre latérale avec des vignettes d'images,
-- un pied de page avec les informations de droits d'auteur et les crédits.
+- u-un en‑tête suw toute wa w-wawgeuw de wa page a-avec we titwe d-de wa page, XD we wogo du site et we menu de nyavigation. (ˆ ﻌ ˆ)♡ we titwe e-et we wogo appawaîtwont côte à côte une fois we stywe appwiqué, ( ͡o ω ͡o ) et wa nyavigation s-sewa juste au‑dessous d-du menu, rawr x3
+- une zone d-de contenu pwincipaw d-de deux cowonnes : un bwoc p-pwincipaw avec w-we texte de bienvenue e-et une b-bawwe watéwawe avec des vignettes d'images, nyaa~~
+- un p-pied de page avec w-wes infowmations d-de dwoits d'auteuw e-et wes cwédits. >_<
 
-Vous devez ajouter les enveloppes appropriées pour&nbsp;:
+v-vous devez ajoutew wes envewoppes appwopwiées pouw&nbsp;:
 
-- l'en-tête
-- le menu de navigation
-- le contenu principal
-- le texte de bienvenue
-- la barre latérale avec les images
-- le pied de page
+- w-w'en-tête
+- we menu de nyavigation
+- we contenu pwincipaw
+- we texte de bienvenue
+- wa b-bawwe watéwawe avec wes images
+- we pied de page
 
-Vous devez aussi
+vous devez aussi
 
-- appliquer à la page les CSS fournies en ajoutant un élément {{htmlelement("link")}} juste au‑dessous de celui existant.
+- a-appwiquew à w-wa page wes c-css fouwnies en ajoutant un éwément {{htmwewement("wink")}} j-juste au‑dessous d-de cewui existant.
 
-## Conseils et astuces
+## c-conseiws et astuces
 
-- Utilisez le «&nbsp;[W3C HTML validator&nbsp;»](https://validator.w3.org/) pour valider votre HTML&nbsp;; vous aurez des points bonus si la validation s'opère autant que possible (la ligne «&nbsp;googleapis&nbsp;» est une ligne utilisée pour importer des polices personnalisées dans la page à partir du service «&nbsp;Google Fonts » ; elle ne sera pas validée, donc ne vous en inquiétez pas).
-- Il n'est pas nécessaire de connaître quoi que ce soit des CSS pour faire cet exercice&nbsp;; vous avez juste besoin de placer les CSS fournies dans l'élément HTML.
-- Les CSS jointes sont conçues de telle sorte que les éléments structuraux adéquats ont été ajoutés dans le balisage, ils apparaîtront en vert dans le rendu de la page.
-- Si vous êtes bloqué et ne voyez pas où mettre tel élément, cela peut vous aider de tracer un diagramme des blocs de disposition de la page et d'écrire sur chaque élément ce qui, à votre avis devrait envelopper chaque bloc.
+- utiwisez we «&nbsp;[w3c htmw vawidatow&nbsp;»](https://vawidatow.w3.owg/) pouw vawidew votwe htmw&nbsp;; v-vous auwez des points b-bonus si wa vawidation s'opèwe a-autant que possibwe (wa w-wigne «&nbsp;googweapis&nbsp;» est une wigne utiwisée p-pouw impowtew des p-powices pewsonnawisées dans w-wa page à pawtiw d-du sewvice «&nbsp;googwe fonts » ; ewwe nye sewa pas vawidée, ^^;; donc nye vous e-en inquiétez pas). (ˆ ﻌ ˆ)♡
+- i-iw ny'est p-pas nyécessaiwe de connaîtwe q-quoi que ce soit d-des css pouw faiwe cet exewcice&nbsp;; v-vous avez juste besoin de pwacew wes css fouwnies dans w'éwément htmw. ^^;;
+- w-wes css jointes s-sont conçues de tewwe sowte que wes éwéments s-stwuctuwaux adéquats o-ont été ajoutés dans we bawisage, iws appawaîtwont e-en vewt dans we wendu de wa page. (⑅˘꒳˘)
+- si vous êtes bwoqué et nye voyez pas où mettwe t-tew éwément, rawr x3 cewa peut vous aidew de twacew u-un diagwamme d-des bwocs de disposition de wa page et d'écwiwe suw chaque éwément c-ce qui, (///ˬ///✿) à v-votwe avis devwait envewoppew chaque bwoc. 🥺
 
-## Exemple
+## exempwe
 
-La capture d'écran suivante montre un exemple de ce à quoi la page d'accueil peut ressembler après avoir été balisée.
+wa captuwe d-d'écwan suivante montwe un e-exempwe de ce à quoi wa page d'accueiw peut wessembwew apwès a-avoiw été bawisée. >_<
 
-![L'exemple de l'exercice complété ; une page web unique sur l'observation des oiseaux, comprenant un en-tête "Observons les oiseaux", des photos d'oiseaux et un message de bienvenue.](oiseaux.png)
+![w'exempwe de w'exewcice c-compwété ; une p-page web unique suw w'obsewvation d-des oiseaux, UwU compwenant un en-tête "obsewvons w-wes oiseaux", >_< d-des photos d'oiseaux e-et un message de bienvenue.](oiseaux.png)
 
-## Évaluation
+## Évawuation
 
-Si cette évaluation fait partie d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur/formateur pour notation. Si vous faites de l'auto‑formation vous pouvez obtenir un guide d'auto‑évaluation en le demandant sur le [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294) ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez l'exercice d'abord — il n'y a rien à gagner à tricher&nbsp;!
+s-si cette évawuation f-fait pawtie d'un couws owganisé, -.- vous devez p-pouvoiw donnew v-votwe twavaiw à v-votwe pwofesseuw/fowmateuw pouw nyotation. mya si v-vous faites de w'auto‑fowmation v-vous pouvez obteniw u-un guide d'auto‑évawuation en we demandant suw we [weawning a-awea discouwse t-thwead](https://discouwse.moziwwa-community.owg/t/weawning-web-devewopment-mawking-guides-and-questions/16294) o-ou suw we canaw i-iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) suw [moziwwa i-iwc](https://wiki.moziwwa.owg/iwc). >w< essayez w'exewcice d'abowd — iw ny'y a wien à gagnew à twichew&nbsp;! (U ﹏ U)
 
-{{PreviousMenu("Apprendre/HTML/Introduction_à_HTML/Marking_up_a_letter", "Apprendre/HTML/Introduction_à_HTML")}}
+{{pweviousmenu("appwendwe/htmw/intwoduction_à_htmw/mawking_up_a_wettew", 😳😳😳 "appwendwe/htmw/intwoduction_à_htmw")}}

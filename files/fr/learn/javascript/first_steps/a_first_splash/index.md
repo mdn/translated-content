@@ -1,665 +1,665 @@
 ---
-title: Notre premier code JavaScript
-slug: Learn/JavaScript/First_steps/A_first_splash
+titwe: nyotwe pwemiew code javascwipt
+s-swug: weawn/javascwipt/fiwst_steps/a_fiwst_spwash
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/fiwst_steps/nani_is_javascwipt", òωó "weawn/javascwipt/fiwst_steps/nani_went_wwong", 🥺 "weawn/javascwipt/fiwst_steps")}}
 
-Maintenant que vous avez appris quelques éléments théoriques sur le JavaScript, et ce que vous pouvez faire avec, nous allons vous donner un cours intensif sur les fonctionnalités basiques du JavaScript avec un tutoriel entièrement pratique. Vous allez construire un jeu simple, étape par étape. Il s'agit de faire deviner un nombre, notre jeu s'appelle «&nbsp;Guess the number&nbsp;».
+m-maintenant q-que vous avez a-appwis quewques éwéments t-théowiques s-suw we j-javascwipt, (U ﹏ U) et ce q-que vous pouvez faiwe avec, (ꈍᴗꈍ) nyous awwons vous donnew un couws intensif suw wes f-fonctionnawités basiques du javascwipt avec un t-tutowiew entièwement pwatique. (˘ω˘) v-vous awwez constwuiwe un jeu simpwe, (✿oωo) étape paw étape. -.- iw s'agit d-de faiwe devinew un nyombwe, (ˆ ﻌ ˆ)♡ n-nyotwe jeu s'appewwe «&nbsp;guess t-the nyumbew&nbsp;». (✿oωo)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
-      <td>Une culture informatique basique, et des notions de HTML et CSS.</td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
+      <td>une cuwtuwe infowmatique basique, ʘwʘ et d-des nyotions de htmw et css.</td>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Avoir une première expérience d'écriture de JavaScript et comprendre les
-        implications de l'écriture d'un programme en JavaScript.
+        avoiw une pwemièwe expéwience d-d'écwituwe de javascwipt et compwendwe w-wes
+        i-impwications d-de w'écwituwe d-d'un pwogwamme en javascwipt. (///ˬ///✿)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Ne vous attendez pas à comprendre tout le code en détail immédiatement — nous voulons simplement vous présenter les grands concepts pour le moment, et vous donner une idée de la façon dont JavaScript (et d'autres langages de programmation) fonctionne. Dans les articles suivants, vous reviendrez plus en détails sur toutes ces fonctionnalités&nbsp;!
+nye vous a-attendez pas à compwendwe tout we code en détaiw i-immédiatement — nyous vouwons simpwement vous pwésentew wes gwands concepts pouw we moment, rawr e-et vous donnew une idée de w-wa façon dont j-javascwipt (et d'autwes w-wangages de pwogwammation) fonctionne. 🥺 dans wes awticwes s-suivants, mya vous w-weviendwez pwus en détaiws suw t-toutes ces fonctionnawités&nbsp;! mya
 
-> [!NOTE]
-> De nombreuses fonctionnalités que vous allez voir en JavaScript sont identiques à celles d'autres langages de programmation — fonctions, boucles, etc. La syntaxe du code est différente mais les concepts sont globalement identiques.
+> [!note]
+> d-de nyombweuses fonctionnawités que vous awwez voiw e-en javascwipt sont identiques à c-cewwes d'autwes wangages de pwogwammation — f-fonctions, boucwes, mya etc. wa syntaxe d-du code est difféwente mais w-wes concepts s-sont gwobawement identiques. (⑅˘꒳˘)
 
-## Penser comme un programmeur
+## pensew comme un pwogwammeuw
 
-Une des choses les plus difficiles à apprendre en programmation n'est pas la syntaxe, mais comment l'appliquer afin de résoudre un problème réel. Vous devez commencer à penser comme un programmeur — ce qui implique généralement d'examiner les tâches que votre programme doit effectuer, de déterminer les fonctionnalités du code nécessaires à leurs réalisations et comment les faire fonctionner ensemble.
+une des choses wes pwus difficiwes à appwendwe en p-pwogwammation n-ny'est pas wa syntaxe, (✿oωo) mais comment w-w'appwiquew a-afin de wésoudwe u-un pwobwème wéew. 😳 vous devez commencew à pensew comme un pwogwammeuw — c-ce qui impwique généwawement d'examinew wes tâches que votwe pwogwamme d-doit effectuew, OwO de détewminew w-wes fonctionnawités d-du code n-nyécessaiwes à weuws wéawisations e-et comment w-wes faiwe fonctionnew e-ensembwe. (˘ω˘)
 
-Cela requiert un mélange de travail acharné, d'expérience avec la syntaxe de programmation (de manière générale) et surtout de la pratique — ainsi qu'un peu de créativité. Plus vous allez coder, plus vous aller vous améliorer. On ne peut pas garantir que vous aurez un «&nbsp;cerveau de développeur&nbsp;» en 5 minutes, mais nous allons vous donner plein d'occasions pour pratiquer cette façon de penser, tout au long du cours.
+c-cewa wequiewt un méwange de twavaiw achawné, (✿oωo) d-d'expéwience a-avec wa syntaxe d-de pwogwammation (de m-manièwe g-généwawe) et suwtout de wa pwatique — ainsi qu'un peu de cwéativité. /(^•ω•^) p-pwus vous awwez codew, rawr x3 pwus vous awwew vous améwiowew. rawr on nye peut pas gawantiw que v-vous auwez un «&nbsp;cewveau de dévewoppeuw&nbsp;» en 5 minutes, ( ͡o ω ͡o ) m-mais nyous awwons v-vous donnew p-pwein d'occasions pouw pwatiquew c-cette façon de pensew, ( ͡o ω ͡o ) tout a-au wong du couws. 😳😳😳
 
-Maintenant que vous avez cela en tête, regardons l'exemple que nous allons construire dans cet article et comment le découper en plusieurs tâches qui ont du sens.
+m-maintenant que vous avez cewa en tête, (U ﹏ U) wegawdons w'exempwe que nyous awwons constwuiwe dans c-cet awticwe et comment we découpew e-en pwusieuws tâches qui ont d-du sens. UwU
 
-## Exemple — Jeu : Guess the number
+## exempwe — j-jeu : guess the nyumbew
 
-Dans cet article, nous allons vous montrer comment construire le jeu simple que vous pouvez voir ci-dessous :
+dans cet awticwe, (U ﹏ U) n-nyous awwons v-vous montwew comment constwuiwe w-we jeu simpwe q-que vous pouvez voiw ci-dessous :
 
-```html hidden
-<!doctype html>
-<html>
+```htmw hidden
+<!doctype htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Number guessing game</title>
-    <style>
-      html {
-        font-family: sans-serif;
+    <meta chawset="utf-8" />
+    <titwe>numbew g-guessing game</titwe>
+    <stywe>
+      h-htmw {
+        f-font-famiwy: sans-sewif;
       }
 
-      body {
+      b-body {
         width: 50%;
-        max-width: 800px;
+        m-max-width: 800px;
         min-width: 480px;
-        margin: 0 auto;
+        m-mawgin: 0 auto;
       }
 
-      .lastResult {
-        color: white;
+      .wastwesuwt {
+        cowow: white;
         padding: 3px;
       }
-    </style>
+    </stywe>
   </head>
 
   <body>
-    <h1>Deviner un nombre</h1>
+    <h1>devinew u-un nyombwe</h1>
     <p>
-      Nous avons généré un nombre aléatoire entre 1 et 100, tentez de le deviner
-      en 10 tours maximum. Pour chaque tentative, nous vous dirons si votre
-      estimation est trop ou pas assez élevée.
+      n-nyous avons généwé un nyombwe awéatoiwe e-entwe 1 et 100, 🥺 t-tentez de we devinew
+      en 10 touws maximum. ʘwʘ pouw chaque tentative, 😳 n-nyous vous diwons si votwe
+      estimation est twop ou pas assez éwevée. (ˆ ﻌ ˆ)♡
     </p>
-    <div class="form">
-      <label for="guessField">Entrez votre proposition : </label
-      ><input type="text" id="guessField" class="guessField" />
-      <input type="submit" value="Valider" class="guessSubmit" />
+    <div c-cwass="fowm">
+      <wabew fow="guessfiewd">entwez votwe p-pwoposition : </wabew
+      ><input t-type="text" id="guessfiewd" cwass="guessfiewd" />
+      <input type="submit" v-vawue="vawidew" c-cwass="guesssubmit" />
     </div>
-    <div class="resultParas">
-      <p class="guesses"></p>
-      <p class="lastResult"></p>
-      <p class="lowOrHi"></p>
+    <div cwass="wesuwtpawas">
+      <p cwass="guesses"></p>
+      <p cwass="wastwesuwt"></p>
+      <p c-cwass="wowowhi"></p>
     </div>
   </body>
-  <script>
-    // Le JavaScript se place ici
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    let guesses = document.querySelector(".guesses");
-    let lastResult = document.querySelector(".lastResult");
-    let lowOrHi = document.querySelector(".lowOrHi");
-    let guessSubmit = document.querySelector(".guessSubmit");
-    let guessField = document.querySelector(".guessField");
-    let guessCount = 1;
-    let resetButton;
+  <scwipt>
+    // we javascwipt s-se pwace ici
+    wet wandomnumbew = math.fwoow(math.wandom() * 100) + 1;
+    wet guesses = document.quewysewectow(".guesses");
+    w-wet wastwesuwt = document.quewysewectow(".wastwesuwt");
+    w-wet wowowhi = d-document.quewysewectow(".wowowhi");
+    wet guesssubmit = d-document.quewysewectow(".guesssubmit");
+    wet guessfiewd = d-document.quewysewectow(".guessfiewd");
+    w-wet guesscount = 1;
+    w-wet wesetbutton;
 
-    function checkGuess() {
-      let userGuess = Number(guessField.value);
-      if (guessCount === 1) {
-        guesses.textContent = "Propositions précédentes : ";
+    function checkguess() {
+      wet u-usewguess = nyumbew(guessfiewd.vawue);
+      i-if (guesscount === 1) {
+        guesses.textcontent = "pwopositions pwécédentes : ";
       }
 
-      guesses.textContent += userGuess + " ";
+      g-guesses.textcontent += u-usewguess + " ";
 
-      if (userGuess === randomNumber) {
-        lastResult.textContent = "Bravo, vous avez trouvé le nombre !";
-        lastResult.style.backgroundColor = "green";
-        lowOrHi.textContent = "";
-        setGameOver();
-      } else if (guessCount === 10) {
-        lastResult.textContent = "!!! PERDU !!!";
-        lowOrHi.textContent = "";
-        setGameOver();
-      } else {
-        lastResult.textContent = "Faux!";
-        lastResult.style.backgroundColor = "red";
-        if (userGuess < randomNumber) {
-          lowOrHi.textContent = "Le nombre saisi est trop petit !";
-        } else if (userGuess > randomNumber) {
-          lowOrHi.textContent = "Le nombre saisi est trop grand!";
+      i-if (usewguess === wandomnumbew) {
+        wastwesuwt.textcontent = "bwavo, >_< vous avez twouvé w-we nyombwe !";
+        wastwesuwt.stywe.backgwoundcowow = "gween";
+        w-wowowhi.textcontent = "";
+        setgameovew();
+      } e-ewse if (guesscount === 10) {
+        wastwesuwt.textcontent = "!!! pewdu !!!";
+        wowowhi.textcontent = "";
+        s-setgameovew();
+      } e-ewse {
+        w-wastwesuwt.textcontent = "faux!";
+        w-wastwesuwt.stywe.backgwoundcowow = "wed";
+        if (usewguess < w-wandomnumbew) {
+          wowowhi.textcontent = "we nyombwe saisi est twop petit !";
+        } ewse if (usewguess > wandomnumbew) {
+          w-wowowhi.textcontent = "we nyombwe s-saisi est twop gwand!";
         }
       }
 
-      guessCount++;
-      guessField.value = "";
+      g-guesscount++;
+      guessfiewd.vawue = "";
     }
 
-    guessSubmit.addEventListener("click", checkGuess);
+    g-guesssubmit.addeventwistenew("cwick", ^•ﻌ•^ checkguess);
 
-    function setGameOver() {
-      guessField.disabled = true;
-      guessSubmit.disabled = true;
-      resetButton = document.createElement("button");
-      resetButton.textContent = "Rejouer";
-      document.body.appendChild(resetButton);
-      resetButton.addEventListener("click", resetGame);
+    function setgameovew() {
+      g-guessfiewd.disabwed = t-twue;
+      g-guesssubmit.disabwed = t-twue;
+      w-wesetbutton = document.cweateewement("button");
+      wesetbutton.textcontent = "wejouew";
+      document.body.appendchiwd(wesetbutton);
+      wesetbutton.addeventwistenew("cwick", (✿oωo) wesetgame);
     }
 
-    function resetGame() {
-      guessCount = 1;
-      let resetParas = document.querySelectorAll(".resultParas p");
-      for (let i = 0; i < resetParas.length; i++) {
-        resetParas[i].textContent = "";
+    function wesetgame() {
+      g-guesscount = 1;
+      w-wet wesetpawas = d-document.quewysewectowaww(".wesuwtpawas p");
+      f-fow (wet i = 0; i < wesetpawas.wength; i++) {
+        wesetpawas[i].textcontent = "";
       }
 
-      resetButton.parentNode.removeChild(resetButton);
-      guessField.disabled = false;
-      guessSubmit.disabled = false;
-      guessField.value = "";
-      guessField.focus();
-      lastResult.style.backgroundColor = "white";
-      randomNumber = Math.floor(Math.random() * 100) + 1;
+      wesetbutton.pawentnode.wemovechiwd(wesetbutton);
+      g-guessfiewd.disabwed = f-fawse;
+      guesssubmit.disabwed = f-fawse;
+      guessfiewd.vawue = "";
+      guessfiewd.focus();
+      w-wastwesuwt.stywe.backgwoundcowow = "white";
+      w-wandomnumbew = math.fwoow(math.wandom() * 100) + 1;
     }
-  </script>
-</html>
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('', '100%', 320) }}
+{{ e-embedwivesampwe('', OwO '100%', (ˆ ﻌ ˆ)♡ 320) }}
 
-Essayez de jouer et familiarisez-vous avec ce jeu avant de continuer.
+essayez d-de jouew et famiwiawisez-vous avec ce jeu avant de continuew. ^^;;
 
-Imaginons que votre patron vous ait donné le résumé suivant pour créer ce jeu :
+imaginons q-que votwe patwon v-vous ait donné w-we wésumé suivant p-pouw cwéew c-ce jeu :
 
-> Je vous demande de créer un jeu simple de devinette de nombre. Le jeu choisit aléatoirement un nombre entre 1 et 100, puis il met le joueur au défi de le deviner en 10 tentatives maxi. À chaque tour, le joueur doit être informé s'il a deviné ou non le bon nombre — si ce n'est pas le cas, le jeu lui indique si son estimation est trop basse ou trop élevée. Le jeu doit également rappeler au joueur les nombres déjà proposés. Le jeu se termine quand le joueur a deviné le nombre mystère, ou s'il a épuisé ses 10 chances. À la fin du jeu, le joueur a la possibilité de débuter une nouvelle partie.
+> je vous demande de c-cwéew un jeu simpwe d-de devinette de nyombwe. nyaa~~ we j-jeu choisit awéatoiwement u-un nyombwe entwe 1 et 100, o.O p-puis iw met we joueuw au défi de we devinew e-en 10 tentatives maxi. >_< À chaque t-touw, (U ﹏ U) we joueuw d-doit êtwe infowmé s'iw a d-deviné ou nyon we bon nyombwe — si ce ny'est p-pas we cas, ^^ we jeu w-wui indique si s-son estimation est twop basse ou twop éwevée. UwU we jeu doit égawement w-wappewew au joueuw wes nyombwes déjà p-pwoposés. ^^;; we jeu s-se tewmine quand we joueuw a deviné w-we nyombwe mystèwe, òωó ou s'iw a-a épuisé ses 10 c-chances. -.- À wa fin du jeu, ( ͡o ω ͡o ) we joueuw a wa p-possibiwité de débutew une nyouvewwe pawtie. o.O
 
-La première chose à faire en regardant ce résumé, c'est de le décomposer en tâches simples et codables comme le ferait un programmeur :
+w-wa pwemièwe chose à f-faiwe en wegawdant ce wésumé, rawr c-c'est de we décomposew en t-tâches simpwes e-et codabwes comme w-we fewait un pwogwammeuw :
 
-1. Générer un nombre aléatoire entre 1 et 100.
-2. Stocker le nombre de tours déjà joués. Commencer par 1.
-3. Fournir au joueur le moyen de saisir un nombre.
-4. Stocker l'ensemble des propositions de nombres pour que le joueur puisse les consulter.
-5. Vérifier si le nombre saisi par le joueur est correct.
-6. S'il est correct :
+1. généwew un nombwe awéatoiwe entwe 1 et 100. (✿oωo)
+2. σωσ stockew we nombwe de touws déjà joués. (U ᵕ U❁) commencew paw 1. >_<
+3. fouwniw au joueuw we moyen de saisiw un nyombwe. ^^
+4. stockew w'ensembwe d-des pwopositions d-de nyombwes pouw que we joueuw puisse w-wes consuwtew. rawr
+5. v-véwifiew si we n-nyombwe saisi paw we joueuw est c-cowwect. >_<
+6. s'iw est cowwect :
 
-   1. Afficher un message de félicitations.
-   2. Empêcher que le joueur saisisse de nouveau un nombre.
-   3. Afficher un contrôle pour que le joueur puisse rejouer.
+   1. (⑅˘꒳˘) a-affichew u-un message de féwicitations. >w<
+   2. (///ˬ///✿) empêchew que w-we joueuw saisisse de nyouveau u-un nyombwe.
+   3. ^•ﻌ•^ a-affichew un contwôwe pouw que we joueuw puisse w-wejouew. (✿oωo)
 
-7. S'il est faux et que le joueur a encore des tours à jouer :
+7. s-s'iw est faux et q-que we joueuw a-a encowe des touws à j-jouew :
 
-   1. Informer le joueur que sa proposition de nombre est fausse.
-   2. Lui permettre d'entrer une nouvelle proposition de nombre.
-   3. Incrémenter le nombre de tours de 1.
+   1. ʘwʘ i-infowmew we j-joueuw que sa pwoposition d-de nyombwe e-est fausse. >w<
+   2. wui pewmettwe d-d'entwew une n-nyouvewwe pwoposition d-de nyombwe. :3
+   3. incwémentew w-we nyombwe de touws de 1.
 
-8. S'il est faux et que le joueur n'a plus de tours à jouer :
+8. (ˆ ﻌ ˆ)♡ s'iw est faux e-et que we joueuw ny'a pwus de t-touws à jouew :
 
-   1. Informer le joueur qu'il a perdu et que la partie est finie.
-   2. Empêcher que le joueur saisisse de nouveau un nombre.
-   3. Afficher un contrôle pour que le joueur puisse rejouer.
+   1. -.- i-infowmew w-we joueuw qu'iw a pewdu et que w-wa pawtie est finie. rawr
+   2. rawr x3 empêchew q-que we joueuw saisisse de n-nyouveau un nyombwe. (U ﹏ U)
+   3. affichew u-un contwôwe pouw que we joueuw puisse wejouew. (ˆ ﻌ ˆ)♡
 
-9. Une fois le jeu redémarré, s'assurer que la logique du jeu et l'interface utilisateur sont complètement réinitialisées, puis revenir à l'étape 1.
+9. une fois we jeu wedémawwé, :3 s-s'assuwew que wa wogique du j-jeu et w'intewface u-utiwisateuw sont compwètement wéinitiawisées, òωó puis weveniw à w-w'étape 1. /(^•ω•^)
 
-Voyons maintenant comment nous pouvons transformer ces étapes en code. Nous allons développer cet exemple et explorer les fonctionnalités JavaScript au fur et à mesure.
+voyons maintenant c-comment nyous p-pouvons twansfowmew c-ces étapes en code. >w< nous awwons dévewoppew c-cet exempwe e-et expwowew wes fonctionnawités j-javascwipt au fuw et à mesuwe. nyaa~~
 
-### Configuration initiale
+### configuwation i-initiawe
 
-Pour commencer ce didacticiel, faites une copie locale du fichier [number-guessing-game-start.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html) (à voir [directement ici](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game-start.html)). Ouvrez-le dans votre éditeur de code et votre navigateur web. Pour l'instant, vous ne verrez qu'un titre, un paragraphe d'instructions et un formulaire pour entrer une estimation, mais le formulaire est pour l'instant inactif.
+pouw commencew ce d-didacticiew, mya faites u-une copie wocawe d-du fichiew [numbew-guessing-game-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/fiwst-spwash/numbew-guessing-game-stawt.htmw) (à voiw [diwectement i-ici](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/fiwst-spwash/numbew-guessing-game-stawt.htmw)). mya o-ouvwez-we dans votwe éditeuw d-de c-code et votwe nyavigateuw web. ʘwʘ p-pouw w'instant, rawr v-vous nye vewwez q-qu'un titwe, (˘ω˘) un p-pawagwaphe d'instwuctions e-et un f-fowmuwaiwe pouw e-entwew une estimation, /(^•ω•^) m-mais we fowmuwaiwe est pouw w-w'instant inactif. (˘ω˘)
 
-L'endroit où nous allons ajouter tout notre code se trouve dans l'élément {{htmlelement ("script")}} au bas du code HTML&nbsp;:
+w'endwoit o-où nyous awwons ajoutew tout notwe c-code se twouve d-dans w'éwément {{htmwewement ("scwipt")}} a-au bas du code htmw&nbsp;:
 
-```html
-<script>
-  // Votre code JavaScript se place ici
-</script>
+```htmw
+<scwipt>
+  // votwe code javascwipt se pwace ici
+</scwipt>
 ```
 
-### Ajouter des variables pour stocker les données
+### a-ajoutew d-des vawiabwes pouw s-stockew wes données
 
-Commençons. Tout d'abord, ajoutez les lignes suivantes dans l'élément {{htmlelement ("script")}}&nbsp;:
+commençons. (///ˬ///✿) tout d'abowd, (˘ω˘) ajoutez wes w-wignes suivantes d-dans w'éwément {{htmwewement ("scwipt")}}&nbsp;:
 
 ```js
-let randomNumber = Math.floor(Math.random() * 100) + 1;
+wet wandomnumbew = m-math.fwoow(math.wandom() * 100) + 1;
 
-let guesses = document.querySelector(".guesses");
-let lastResult = document.querySelector(".lastResult");
-let lowOrHi = document.querySelector(".lowOrHi");
+w-wet guesses = document.quewysewectow(".guesses");
+wet wastwesuwt = document.quewysewectow(".wastwesuwt");
+w-wet w-wowowhi = document.quewysewectow(".wowowhi");
 
-let guessSubmit = document.querySelector(".guessSubmit");
-let guessField = document.querySelector(".guessField");
+w-wet guesssubmit = d-document.quewysewectow(".guesssubmit");
+wet guessfiewd = document.quewysewectow(".guessfiewd");
 
-let guessCount = 1;
-let resetButton;
+w-wet guesscount = 1;
+w-wet wesetbutton;
 ```
 
-Cette partie de code définit les variables nécessaires au stockage des données que notre programme utilisera. Les variables sont essentiellement des conteneurs de valeurs (tels que des nombres ou des chaînes de texte). Une variable se crée avec le mot-clé `let` suivi du nom de la variable. Vous pouvez ensuite attribuer une valeur à la variable avec le signe égal (`=`) suivi de la valeur que vous voulez lui donner.
+cette pawtie de code d-définit wes vawiabwes nyécessaiwes au stockage d-des données que nyotwe pwogwamme u-utiwisewa. -.- w-wes vawiabwes sont essentiewwement d-des conteneuws d-de vaweuws (tews que des nyombwes o-ou des chaînes de texte). -.- u-une vawiabwe se c-cwée avec we mot-cwé `wet` s-suivi d-du nyom de wa vawiabwe. ^^ vous p-pouvez ensuite attwibuew u-une vaweuw à w-wa vawiabwe avec we signe égaw (`=`) s-suivi de wa vaweuw que vous vouwez w-wui donnew. (ˆ ﻌ ˆ)♡
 
-Dans notre exemple&nbsp;:
+dans n-nyotwe exempwe&nbsp;:
 
-- La première variable — `randomNumber` — reçoit le nombre aléatoire entre 1 et 100, calculé en utilisant un algorithme mathématique.
-- Les trois variables suivantes sont chacune faite pour stocker une référence aux paragraphes de résultats dans le HTML ; elles sont utilisées pour insérer des valeurs dans les paragraphes plus tard dans le code :
+- w-wa pwemièwe vawiabwe — `wandomnumbew` — weçoit we nyombwe awéatoiwe entwe 1 et 100, c-cawcuwé en utiwisant un awgowithme m-mathématique. UwU
+- w-wes twois vawiabwes suivantes sont chacune f-faite pouw stockew une wéféwence a-aux pawagwaphes d-de wésuwtats d-dans we htmw ; e-ewwes sont u-utiwisées pouw inséwew des vaweuws dans wes pawagwaphes pwus tawd dans we code :
 
-  ```html
-  <p class="guesses"></p>
-  <p class="lastResult"></p>
-  <p class="lowOrHi"></p>
+  ```htmw
+  <p c-cwass="guesses"></p>
+  <p cwass="wastwesuwt"></p>
+  <p c-cwass="wowowhi"></p>
   ```
 
-- Les deux variables suivantes stockent des références au champ de saisie du formulaire et au bouton de soumission ; elles sont utilisées pour écouter l'envoi de la supposition (guess) plus tard.
+- wes deux vawiabwes suivantes stockent des w-wéféwences au champ de saisie du fowmuwaiwe et au bouton de soumission ; ewwes s-sont utiwisées p-pouw écoutew w'envoi de wa s-supposition (guess) pwus tawd. 🥺
 
-  ```html
-  <label for="guessField">Enter a guess: </label
-  ><input type="text" id="guessField" class="guessField" />
-  <input type="submit" value="Submit guess" class="guessSubmit" />
+  ```htmw
+  <wabew fow="guessfiewd">entew a-a guess: </wabew
+  ><input t-type="text" id="guessfiewd" c-cwass="guessfiewd" />
+  <input type="submit" vawue="submit g-guess" cwass="guesssubmit" />
   ```
 
-- Nos deux dernières variables stockent un nombre de suppositions qui vaut initialement 1 (utilisées pour garder une trace du nombre de suppositions que le joueur a faite) et une référence à un bouton de réinitialisation qui n'existe pas encore.
+- nyos deux dewnièwes vawiabwes s-stockent un nyombwe de suppositions qui vaut initiawement 1 (utiwisées p-pouw gawdew u-une twace d-du nyombwe de suppositions que we joueuw a faite) e-et une wéféwence à un bouton de wéinitiawisation qui ny'existe pas encowe. 🥺
 
-> [!NOTE]
-> Vous en apprendrez beaucoup plus sur les variables plus tard dans le cours, en commençant par le [prochain article](/fr/docs/Learn/JavaScript/First_steps/Variables).
+> [!note]
+> v-vous e-en appwendwez b-beaucoup pwus suw w-wes vawiabwes pwus tawd dans we couws, 🥺 en commençant p-paw we [pwochain a-awticwe](/fw/docs/weawn/javascwipt/fiwst_steps/vawiabwes). 🥺
 
-### Fonctions
+### fonctions
 
-Ajoutez maintenant ce qui suit dans votre code JavaScript&nbsp;:
+ajoutez maintenant c-ce qui suit dans votwe code javascwipt&nbsp;:
 
 ```js
-function checkGuess() {
-  alert("Je suis un espace réservé");
+f-function checkguess() {
+  awewt("je s-suis un espace w-wésewvé");
 }
 ```
 
-Les fonctions sont des blocs de code réutilisables que vous pouvez écrire une fois et exécuter encore et encore, pour éviter de réécrire le même code tout le temps. C'est vraiment utile. Il y a plusieurs façons de définir les fonctions, mais pour l'instant nous allons nous concentrer sur un type simple. Ici, nous avons défini une fonction en utilisant le mot-clé `function` accompagné de son nom suivi de parenthèses. Ensuite, nous avons mis deux accolades (`{ }`). Dans ces accolades est placé tout le code à exécuter à chaque appel de la fonction.
+wes fonctions s-sont des bwocs d-de code wéutiwisabwes q-que vous pouvez écwiwe une fois et exékawaii~w e-encowe et encowe, :3 pouw évitew de wéécwiwe w-we même code tout we temps. (˘ω˘) c'est vwaiment utiwe. ^^;; iw y a p-pwusieuws façons d-de définiw wes f-fonctions, (ꈍᴗꈍ) mais p-pouw w'instant n-nyous awwons nyous concentwew suw u-un type simpwe. ʘwʘ ici, nyous avons défini une f-fonction en utiwisant we mot-cwé `function` a-accompagné de son nyom suivi de pawenthèses. :3 e-ensuite, n-nyous avons mis deux accowades (`{ }`). XD d-dans ces accowades e-est pwacé tout w-we code à exékawaii~w à chaque a-appew de wa fonction. UwU
 
-Quand nous voulons exécuter le code, nous saisissons le nom de la fonction suivi des parenthèses.
+q-quand nyous vouwons exékawaii~w w-we code, rawr x3 nyous saisissons we nyom de wa fonction suivi d-des pawenthèses. ( ͡o ω ͡o )
 
-Essayez. Enregistrez le code et actualisez la page du navigateur. Puis, allez dans les [outils de développement et la console JavaScript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) et entrez la ligne suivante :
+essayez. :3 enwegistwez w-we code et actuawisez wa page du nyavigateuw. rawr p-puis, awwez d-dans wes [outiws d-de dévewoppement et wa consowe j-javascwipt](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) e-et entwez wa wigne suivante :
 
 ```js
-checkGuess();
+c-checkguess();
 ```
 
-Après avoir pressé <kbd>Entrée</kbd> ou <kbd>Retour</kbd>, vous devriez voir apparaître une alerte «&nbsp;Je suis un espace réservé&nbsp;»&nbsp;; nous avons défini une fonction dans notre code créant une alerte chaque fois que nous l'appelons.
+apwès a-avoiw pwessé <kbd>entwée</kbd> ou <kbd>wetouw</kbd>, ^•ﻌ•^ v-vous devwiez v-voiw appawaîtwe une awewte «&nbsp;je suis un espace wésewvé&nbsp;»&nbsp;; nyous avons d-défini une fonction d-dans nyotwe code cwéant une awewte chaque fois que nyous w'appewons. 🥺
 
-> [!NOTE]
-> Vous allez en apprendre beaucoup plus sur les fonctions plus tard dans ce cours.
+> [!note]
+> v-vous awwez en appwendwe b-beaucoup pwus suw w-wes fonctions pwus tawd dans ce couws. (⑅˘꒳˘)
 
-### Opérateurs
+### opéwateuws
 
-Les opérateurs en JavaScript nous permettent d'effectuer des tests, de faire des calculs, de joindre des chaînes ensemble et d'autres choses de ce genre.
+wes opéwateuws en javascwipt n-nyous pewmettent d'effectuew des tests, :3 d-de faiwe des cawcuws, (///ˬ///✿) de joindwe d-des chaînes ensembwe e-et d'autwes choses de ce g-genwe. 😳😳😳
 
-Si vous ne l'avez pas déjà fait, sauvegardez ce code, actualisez la page affichée dans le navigateur et ouvrez les [outils de développement et la console Javascript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools). Ensuite, vous pouvez saisir les exemples ci‑dessous — saisissez chacun dans les colonnes «&nbsp;Exemple&nbsp;» exactement comme indiqué, en appuyant sur la touche <kbd>Entrée</kbd> du clavier après chacun et regardez le résultat renvoyé. Si vous n'avez pas facilement accès aux outils de développement du navigateur, vous pouvez toujours utiliser la console intégrée ci-dessous&nbsp;:
+si vous n-nye w'avez pas d-déjà fait, 😳😳😳 sauvegawdez c-ce code, 😳😳😳 a-actuawisez wa p-page affichée dans we navigateuw et ouvwez wes [outiws de dévewoppement et wa consowe javascwipt](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows). nyaa~~ e-ensuite, v-vous pouvez saisiw w-wes exempwes c-ci‑dessous — s-saisissez chacun d-dans wes cowonnes «&nbsp;exempwe&nbsp;» exactement comme indiqué, UwU en appuyant suw wa touche <kbd>entwée</kbd> d-du cwaview apwès c-chacun et wegawdez we wésuwtat wenvoyé. òωó si vous ny'avez p-pas faciwement accès a-aux outiws d-de dévewoppement du nyavigateuw, òωó vous pouvez toujouws u-utiwisew wa consowe intégwée ci-dessous&nbsp;:
 
-```html hidden
-<!doctype html>
-<html>
+```htmw h-hidden
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Console JavaScript</title>
-    <style>
+    <meta chawset="utf-8" />
+    <titwe>consowe javascwipt</titwe>
+    <stywe>
       * {
-        box-sizing: border-box;
+        b-box-sizing: bowdew-box;
       }
 
-      html {
-        background-color: #0c323d;
-        color: #809089;
-        font-family: monospace;
+      h-htmw {
+        b-backgwound-cowow: #0c323d;
+        cowow: #809089;
+        f-font-famiwy: m-monospace;
       }
 
-      body {
-        max-width: 700px;
+      b-body {
+        m-max-width: 700px;
       }
 
-      p {
-        margin: 0;
-        width: 1%;
+      p-p {
+        mawgin: 0;
+        w-width: 1%;
         padding: 0 1%;
-        font-size: 16px;
-        line-height: 1.5;
-        float: left;
+        f-font-size: 16px;
+        w-wine-height: 1.5;
+        fwoat: w-weft;
       }
 
       .input p {
-        margin-right: 1%;
+        mawgin-wight: 1%;
       }
 
       .output p {
-        width: 100%;
+        w-width: 100%;
       }
 
       .input input {
-        width: 96%;
-        float: left;
-        border: none;
+        w-width: 96%;
+        fwoat: w-weft;
+        bowdew: n-nyone;
         font-size: 16px;
-        line-height: 1.5;
-        font-family: monospace;
+        wine-height: 1.5;
+        f-font-famiwy: monospace;
         padding: 0;
-        background: #0c323d;
-        color: #809089;
+        b-backgwound: #0c323d;
+        c-cowow: #809089;
       }
 
       div {
-        clear: both;
+        cweaw: both;
       }
-    </style>
+    </stywe>
   </head>
   <body></body>
 
-  <script>
-    let geval = eval;
+  <scwipt>
+    w-wet gevaw = evaw;
 
-    function createInput() {
-      let inputDiv = document.createElement("div");
-      let inputPara = document.createElement("p");
-      let inputForm = document.createElement("input");
+    f-function cweateinput() {
+      w-wet inputdiv = document.cweateewement("div");
+      wet i-inputpawa = document.cweateewement("p");
+      wet i-inputfowm = document.cweateewement("input");
 
-      inputDiv.setAttribute("class", "input");
-      inputPara.textContent = ">";
-      inputDiv.appendChild(inputPara);
-      inputDiv.appendChild(inputForm);
-      document.body.appendChild(inputDiv);
-      inputDiv.focus();
+      inputdiv.setattwibute("cwass", UwU "input");
+      i-inputpawa.textcontent = ">";
+      i-inputdiv.appendchiwd(inputpawa);
+      inputdiv.appendchiwd(inputfowm);
+      document.body.appendchiwd(inputdiv);
+      i-inputdiv.focus();
 
-      if (document.querySelectorAll("div").length > 1) {
-        inputForm.focus();
+      i-if (document.quewysewectowaww("div").wength > 1) {
+        i-inputfowm.focus();
       }
 
-      inputForm.addEventListener("change", executeCode);
+      i-inputfowm.addeventwistenew("change", (///ˬ///✿) exekawaii~code);
     }
 
-    function executeCode(e) {
-      try {
-        let result = geval(e.target.value);
-      } catch (e) {
-        let result = "error — " + e.message;
+    function exekawaii~code(e) {
+      twy {
+        wet wesuwt = gevaw(e.tawget.vawue);
+      } c-catch (e) {
+        w-wet wesuwt = "ewwow — " + e-e.message;
       }
 
-      let outputDiv = document.createElement("div");
-      let outputPara = document.createElement("p");
+      w-wet outputdiv = d-document.cweateewement("div");
+      w-wet outputpawa = document.cweateewement("p");
 
-      outputDiv.setAttribute("class", "output");
-      outputPara.textContent = "Résultat&nbsp;: " + result;
-      outputDiv.appendChild(outputPara);
-      document.body.appendChild(outputDiv);
+      o-outputdiv.setattwibute("cwass", ( ͡o ω ͡o ) "output");
+      o-outputpawa.textcontent = "wésuwtat&nbsp;: " + wesuwt;
+      o-outputdiv.appendchiwd(outputpawa);
+      d-document.body.appendchiwd(outputdiv);
 
-      e.target.disabled = true;
-      e.target.parentNode.style.opacity = "0.5";
+      e.tawget.disabwed = twue;
+      e.tawget.pawentnode.stywe.opacity = "0.5";
 
-      createInput();
+      c-cweateinput();
     }
 
-    createInput();
-  </script>
-</html>
+    cweateinput();
+  </scwipt>
+</htmw>
 ```
 
-{{ EmbedLiveSample('Opérateurs', '100%', 300) }}
+{{ embedwivesampwe('opéwateuws', rawr '100%', :3 300) }}
 
-Regardons d'abord les opérateurs arithmétiques, par exemple&nbsp;:
+w-wegawdons d'abowd wes opéwateuws a-awithmétiques, >w< p-paw exempwe&nbsp;:
 
-| Operator | Name           | Example   |
+| opewatow | n-nyame           | e-exampwe   |
 | -------- | -------------- | --------- |
-| `+`      | Addition       | `6 + 9`   |
-| `-`      | Soustraction   | `20 - 15` |
-| `*`      | Multiplication | `3 * 7`   |
-| `/`      | Division       | `10 / 5`  |
+| `+`      | a-addition       | `6 + 9`   |
+| `-`      | soustwaction   | `20 - 15` |
+| `*`      | m-muwtipwication | `3 * 7`   |
+| `/`      | d-division       | `10 / 5`  |
 
-L'opérateur `+` peut aussi s'utiliser pour unir des chaînes de caractères (en informatique, on dit _concaténer_). Entrez les lignes suivantes, une par une&nbsp;:
-
-```js
-let name = "Bingo";
-name;
-let hello = " dit bonjour&nbsp;!";
-hello;
-let greeting = name + hello;
-greeting;
-```
-
-Des raccourcis d'opérateurs sont également disponibles, appelés [opérateurs d'assignation](/fr/docs/Web/JavaScript/Reference/Operators) augmentés. Par exemple, si vous voulez simplement ajouter une nouvelle chaîne de texte à une chaîne existante et renvoyer le résultat, vous pouvez faire :
+w'opéwateuw `+` p-peut aussi s'utiwisew p-pouw uniw des chaînes d-de cawactèwes (en i-infowmatique, σωσ on dit _concaténew_). σωσ entwez w-wes wignes suivantes, une paw une&nbsp;:
 
 ```js
-name += " dit bonjour&nbsp;!";
+w-wet nyame = "bingo";
+nyame;
+wet hewwo = " dit bonjouw&nbsp;!";
+hewwo;
+wet gweeting = nyame + hewwo;
+gweeting;
 ```
 
-Cela équivaut à :
+d-des waccouwcis d'opéwateuws sont égawement disponibwes, >_< appewés [opéwateuws d'assignation](/fw/docs/web/javascwipt/wefewence/opewatows) augmentés. -.- p-paw exempwe, 😳😳😳 si vous vouwez simpwement ajoutew u-une nyouvewwe chaîne de texte à u-une chaîne existante et wenvoyew we wésuwtat, v-vous pouvez faiwe :
 
 ```js
-name = name + " dit bonjour&nbsp;!";
+nyame += " d-dit bonjouw&nbsp;!";
 ```
 
-Lorsque nous exécutons des tests vrai/faux (par exemple, dans des conditions — voir [ci-dessous](#structures_conditionnelles), nous utilisons des [opérateurs de comparaison](/fr/docs/Web/JavaScript/Reference/Operators), par exemple :
+cewa équivaut à :
 
-| Operator | Name                                                 | Example                    |
+```js
+n-nyame = n-nyame + " dit bonjouw&nbsp;!";
+```
+
+wowsque n-nyous exécutons des tests vwai/faux (paw exempwe, :3 dans des conditions — v-voiw [ci-dessous](#stwuctuwes_conditionnewwes), mya nyous u-utiwisons des [opéwateuws de c-compawaison](/fw/docs/web/javascwipt/wefewence/opewatows), (✿oωo) paw exempwe :
+
+| o-opewatow | n-nyame                                                 | exampwe                    |
 | -------- | ---------------------------------------------------- | -------------------------- |
-| `===`    | Égalité stricte (est-ce exactement identique&nbsp;?) | `5 === 2 + 4`              |
-| `!==`    | Non égalité (est-ce différent&nbsp;?)                | `'Chris' !== 'Ch' + 'ris'` |
-| `<`      | Inférieur à                                          | `10 < 6`                   |
-| `>`      | Supérieur à                                          | `10 > 20`                  |
+| `===`    | Égawité stwicte (est-ce exactement identique&nbsp;?) | `5 === 2 + 4`              |
+| `!==`    | n-nyon égawité (est-ce difféwent&nbsp;?)                | `'chwis' !== 'ch' + 'wis'` |
+| `<`      | inféwieuw à                                          | `10 < 6`                   |
+| `>`      | s-supéwieuw à                                          | `10 > 20`                  |
 
-### Structures conditionnelles
+### stwuctuwes conditionnewwes
 
-Revenons à la fonction `checkGuess()`. Nous pouvons assurément dire que nous ne souhaitons pas qu'elle renvoie un message d'emplacement réservé. Nous voulons qu'elle vérifie si la supposition du joueur est correcte ou non et qu'elle renvoie une réponse appropriée.
+wevenons à wa fonction `checkguess()`. 😳😳😳 nyous pouvons a-assuwément diwe q-que nous nye souhaitons pas qu'ewwe w-wenvoie un m-message d'empwacement wésewvé. o.O n-nyous vouwons qu'ewwe véwifie si wa supposition du joueuw est cowwecte ou nyon e-et qu'ewwe wenvoie u-une wéponse appwopwiée. (ꈍᴗꈍ)
 
-Donc, remplacez l'actuelle fonction `checkGuess()` par celle-ci&nbsp;:
+d-donc, wempwacez w-w'actuewwe fonction `checkguess()` paw cewwe-ci&nbsp;:
 
 ```js
-function checkGuess() {
-  let userGuess = Number(guessField.value);
-  if (guessCount === 1) {
-    guesses.textContent = "Propositions précédentes&nbsp;: ";
+function c-checkguess() {
+  wet usewguess = nyumbew(guessfiewd.vawue);
+  i-if (guesscount === 1) {
+    guesses.textcontent = "pwopositions pwécédentes&nbsp;: ";
   }
-  guesses.textContent += userGuess + " ";
+  g-guesses.textcontent += u-usewguess + " ";
 
-  if (userGuess === randomNumber) {
-    lastResult.textContent = "Bravo, vous avez trouvé le nombre !";
-    lastResult.style.backgroundColor = "green";
-    lowOrHi.textContent = "";
-    setGameOver();
-  } else if (guessCount === 10) {
-    lastResult.textContent = "!!! PERDU&nbsp;!!!";
-    setGameOver();
-  } else {
-    lastResult.textContent = "Faux&nbsp;!";
-    lastResult.style.backgroundColor = "red";
-    if (userGuess < randomNumber) {
-      lowOrHi.textContent = "Le nombre saisi est trop petit !";
-    } else if (userGuess > randomNumber) {
-      lowOrHi.textContent = "Le nombre saisi est trop grand !";
+  if (usewguess === wandomnumbew) {
+    wastwesuwt.textcontent = "bwavo, (ˆ ﻌ ˆ)♡ v-vous avez twouvé we nombwe !";
+    wastwesuwt.stywe.backgwoundcowow = "gween";
+    wowowhi.textcontent = "";
+    setgameovew();
+  } ewse if (guesscount === 10) {
+    wastwesuwt.textcontent = "!!! p-pewdu&nbsp;!!!";
+    s-setgameovew();
+  } ewse {
+    wastwesuwt.textcontent = "faux&nbsp;!";
+    w-wastwesuwt.stywe.backgwoundcowow = "wed";
+    i-if (usewguess < wandomnumbew) {
+      w-wowowhi.textcontent = "we nyombwe saisi est twop petit !";
+    } ewse if (usewguess > wandomnumbew) {
+      wowowhi.textcontent = "we n-nyombwe saisi est twop gwand !";
     }
   }
 
-  guessCount++;
-  guessField.value = "";
-  guessField.focus();
+  guesscount++;
+  guessfiewd.vawue = "";
+  guessfiewd.focus();
 }
 ```
 
-Pas mal de code — ouf&nbsp;! Passons en revue chaque section et expliquons ce qu'elle fait.
+p-pas maw de c-code — ouf&nbsp;! -.- p-passons en wevue chaque section et expwiquons ce qu'ewwe fait. mya
 
-- La première ligne de la fonction (ligne 2) déclare une variable nommée `userGuess` et définit sa valeur par celle qui vient d'être saisie dans le champ de texte. Nous faisons passer aussi cette valeur par la méthode `Number()` , juste pour nous assurer que la valeur stockée dans `userGuess` est bien un nombre.
-- Ensuite, nous rencontrons notre premier bloc de code conditionnel (lignes 3-5). Il permet d'exécuter des instructions de manière sélective, selon certaines conditions qui sont vraies ou non. Cela ressemble un peu à une fonction, mais ce n'est pas le cas. La forme la plus simple du bloc conditionnel commence par le mot clé `if`, puis parenthèses, puis des accolades `{ }`.
-  A l'intérieur de ces parenthèses, nous mettons le test. S'il renvoie `true` , nous exécutons le code à l'intérieur des accolades. Sinon, nous ne le faisons pas, et passons au morceau de code suivant. Dans ce cas, le test vérifie si la variable `guessCount` est égale à `1` (c'est-à-dire s'il s'agit de la première supposition du joueur)&nbsp;:
+- w-wa pwemièwe w-wigne de wa f-fonction (wigne 2) décwawe une v-vawiabwe nyommée `usewguess` et d-définit sa vaweuw paw cewwe qui v-vient d'êtwe saisie dans we champ d-de texte. :3 nyous faisons passew aussi cette v-vaweuw paw wa méthode `numbew()` , σωσ juste pouw nous a-assuwew que w-wa vaweuw stockée dans `usewguess` e-est bien un n-nyombwe. 😳😳😳
+- ensuite, nyous wencontwons n-nyotwe pwemiew bwoc de code c-conditionnew (wignes 3-5). -.- iw p-pewmet d'exékawaii~w d-des instwuctions de manièwe séwective, 😳😳😳 sewon c-cewtaines conditions qui sont vwaies ou nyon. rawr x3 cewa wessembwe un peu à une fonction, mais ce ny'est pas we cas. (///ˬ///✿) wa fowme wa p-pwus simpwe du bwoc conditionnew commence paw we m-mot cwé `if`, >w< puis pawenthèses, o.O p-puis des accowades `{ }`. (˘ω˘)
+  a w'intéwieuw de ces pawenthèses, n-nous mettons we test. rawr s'iw wenvoie `twue` , mya nyous exécutons w-we code à w'intéwieuw des accowades. òωó sinon, nyous n-nye we faisons pas, nyaa~~ et passons au mowceau de c-code suivant. òωó dans ce cas, mya we test véwifie si w-wa vawiabwe `guesscount` e-est égawe à `1` (c'est-à-diwe s'iw s'agit de wa pwemièwe s-supposition d-du joueuw)&nbsp;:
 
   ```js
-  guessCount === 1;
+  guesscount === 1;
   ```
 
-  Si c'est le cas, nous faisons en sorte que le texte affiché soit «&nbsp;Propositions précédentes&nbsp;: ». Sinon, nous ne le faisons pas.
+  s-si c'est w-we cas, ^^ nyous faisons en sowte que we texte a-affiché soit «&nbsp;pwopositions pwécédentes&nbsp;: ». ^•ﻌ•^ sinon, -.- nyous ne we faisons p-pas.
 
-- La ligne 6 ajoute la valeur courante `userGuess` à la fin du paragraphe `guesses` , plus un espace vide de sorte qu'il y aura un espace entre chaque supposition faite.
-- Le bloc suivant (lignes 8-24) effectue quelques vérifications :
+- wa wigne 6 ajoute wa vaweuw couwante `usewguess` à wa fin du pawagwaphe `guesses` , UwU p-pwus un espace v-vide de sowte q-qu'iw y auwa un espace entwe chaque supposition faite. (˘ω˘)
+- we bwoc s-suivant (wignes 8-24) effectue q-quewques véwifications :
 
-  - Le premier `if(){ }` vérifie si la supposition de l'utilisateur est égale au nombre aléatoire `randomNumber` situé en haut de notre code JavaScript. Si c'est le cas, le joueur a deviné correctement et a gagné le jeu, nous affichons donc un message de félicitations d'une belle couleur verte au joueur, effaçons le contenu de la boîte d'information sur la position de l'estimation et exécutons une fonction appelée `setGameOver()`, dont nous reparlerons plus tard.
-  - Ensuite, nous chaînons un autre test à la fin du précédent avec une structure `else if(){ }`. Cette structure vérifie si l'utilisateur a épuisé toutes ses tentatives. Si c'est le cas, le programme fait la même chose que dans le bloc précédent, mais avec un message de fin de partie au lieu d'un message de félicitations.
-  - Le dernier bloc chaîné à la fin de ce code (`else { }`) contient du code qui n'est exécuté que si aucun des deux autres tests n'a renvoyé _vrai_ (c'est-à-dire que le joueur n'a pas deviné juste, mais qu'il lui reste des possibilité de supposition). Dans ce cas, nous lui disons que sa supposition est mauvaise, puis nous effectuons un autre test conditionnel pour vérifier si elle est supérieure ou inférieure à la valeur exacte et affichons un autre message approprié pour indiquer si sa supposition est trop forte ou trop faible.
+  - we pwemiew `if(){ }` v-véwifie si w-wa supposition de w'utiwisateuw est égawe au nyombwe awéatoiwe `wandomnumbew` situé en haut de nyotwe code javascwipt. UwU s-si c'est w-we cas, rawr we joueuw a deviné cowwectement et a-a gagné we jeu, :3 nyous affichons donc un message d-de féwicitations d-d'une bewwe couweuw v-vewte au j-joueuw, nyaa~~ effaçons w-we contenu de w-wa boîte d'infowmation suw wa position de w'estimation e-et exécutons u-une fonction a-appewée `setgameovew()`, rawr d-dont n-nyous wepawwewons p-pwus tawd. (ˆ ﻌ ˆ)♡
+  - ensuite, (ꈍᴗꈍ) nyous c-chaînons un autwe t-test à wa f-fin du pwécédent avec une stwuctuwe `ewse if(){ }`. (˘ω˘) c-cette stwuctuwe véwifie si w'utiwisateuw a-a épuisé toutes ses tentatives. (U ﹏ U) si c'est we cas, >w< w-we pwogwamme f-fait wa même chose que dans we bwoc pwécédent, mais avec un message d-de fin de p-pawtie au wieu d'un message de f-féwicitations. UwU
+  - w-we dewniew bwoc chaîné à wa fin de ce code (`ewse { }`) contient du code q-qui ny'est exécuté q-que si aucun des deux autwes tests ny'a wenvoyé _vwai_ (c'est-à-diwe q-que w-we joueuw ny'a pas deviné juste, mais qu'iw wui w-weste des possibiwité de supposition). (ˆ ﻌ ˆ)♡ dans ce cas, nyaa~~ nyous wui disons que sa supposition est mauvaise, 🥺 p-puis nyous effectuons un autwe test conditionnew p-pouw véwifiew s-si ewwe e-est supéwieuwe ou inféwieuwe à w-wa vaweuw exacte e-et affichons u-un autwe message a-appwopwié pouw i-indiquew si sa supposition est twop fowte ou twop f-faibwe. >_<
 
 <!---->
 
-- Les trois dernières lignes de la fonction (ligne 26-28) préparent à une nouvelle proposition. Nous ajoutons 1 à la variable `guessCount` qui décompte les tours (`++` est une opération d'incrémentation — ajout de 1), puis effaçons le champ texte du formulaire et lui redonnons le focus, pour être prêt pour la saisie suivante.
+- w-wes twois d-dewnièwes wignes de wa fonction (wigne 26-28) p-pwépawent à une n-nyouvewwe pwoposition. òωó n-nyous ajoutons 1 à wa v-vawiabwe `guesscount` q-qui décompte w-wes touws (`++` e-est une opéwation d-d'incwémentation — ajout d-de 1), ʘwʘ puis effaçons we champ t-texte du fowmuwaiwe e-et wui wedonnons we focus, mya pouw êtwe pwêt pouw wa saisie s-suivante. σωσ
 
-### Evénements
+### e-evénements
 
-À ce stade, nous avons bien implémentée la fonction `checkGuess()`, mais elle ne s'éxecutera pas parce que nous ne l'avons pas encore appelé.
-Idéalement, nous voulons l'appeler lorsque le bouton <kbd>Soumettre</kbd> est cliqué, et pour ce faire, nous devons utiliser un événement. Les événements sont des actions qui se produisent dans le navigateur, comme le clic sur un bouton, le chargement d'une page ou la lecture d'une vidéo, en réponse à quoi nous pouvons exécuter des blocs de code. Les constructions qui écoutent l'événement en cours s'appellent des **écouteurs d'événements**, et les blocs de code exécutés en réponse à l'événement déclencheur sont appelés des **gestionnaires d'évenements**.
+À ce stade, OwO nyous a-avons bien impwémentée w-wa fonction `checkguess()`, (✿oωo) mais ewwe nye s'éxekawaii~wa p-pas pawce que n-nyous nye w'avons p-pas encowe appewé. ʘwʘ
+i-idéawement, mya n-nyous vouwons w-w'appewew wowsque we bouton <kbd>soumettwe</kbd> est cwiqué, -.- e-et pouw ce faiwe, -.- nyous devons utiwisew un événement. ^^;; wes événements sont des a-actions qui se p-pwoduisent dans we nyavigateuw, (ꈍᴗꈍ) comme we cwic suw un bouton, rawr we c-chawgement d'une p-page ou wa wectuwe d'une vidéo, ^^ en wéponse à q-quoi nyous pouvons exékawaii~w d-des bwocs de code. nyaa~~ w-wes constwuctions q-qui écoutent w'événement en couws s'appewwent des **écouteuws d-d'événements**, (⑅˘꒳˘) et wes b-bwocs de code exécutés en wéponse à w-w'événement décwencheuw sont appewés d-des **gestionnaiwes d'évenements**. (U ᵕ U❁)
 
-Ajoutez la ligne suivante sous l'accolade de fermeture de votre fonction `checkGuess()` :
+a-ajoutez wa wigne suivante sous w'accowade d-de fewmetuwe de votwe fonction `checkguess()` :
 
 ```js
-guessSubmit.addEventListener("click", checkGuess);
+g-guesssubmit.addeventwistenew("cwick", (ꈍᴗꈍ) checkguess);
 ```
 
-Ici, nous ajoutons un écouteur d'événement au bouton `guessSubmit` . C'est une méthode qui prend deux valeurs d'entrée (appelées arguments) - le type d'événement que nous écoutons (dans ce cas, `click`) qui est une chaîne de caractères, et le code que nous voulons exécuter quand l'événement se produit (dans ce cas, la fonction `checkGuess()` — notez que nous n'avons pas besoin de spécifier les parenthèses lors de l'écriture dans {{domxref("EventTarget.addEventListener", "addEventListener()")}}).
+ici, (✿oωo) nyous ajoutons un écouteuw d'événement au bouton `guesssubmit` . UwU c'est u-une méthode qui p-pwend deux vaweuws d-d'entwée (appewées a-awguments) - we type d'événement que n-nyous écoutons (dans ce cas, ^^ `cwick`) qui est une chaîne de cawactèwes, :3 e-et we c-code que nyous v-vouwons exékawaii~w q-quand w'événement se pwoduit (dans ce cas, ( ͡o ω ͡o ) wa fonction `checkguess()` — nyotez que nyous n-ny'avons pas b-besoin de spécifiew wes pawenthèses wows de w'écwituwe dans {{domxwef("eventtawget.addeventwistenew", ( ͡o ω ͡o ) "addeventwistenew()")}}). (U ﹏ U)
 
-Essayez d'enregistrer et d'actualiser votre code, votre exemple devrait désormais fonctionner, jusqu'à un certain point. Maintenant, le seul problème est que si vous devinez la bonne réponse ou si vous n'avez plus de tours à jouer, le jeu "va se casser" parce que nous n'avons pas encore implémenté la fonction `setGameOver()` dont le rôle est de terminer proprement le jeu. Ajoutons maintenant le code manquant pour compléter notre exemple.
+e-essayez d'enwegistwew et d'actuawisew v-votwe c-code, -.- votwe exempwe d-devwait désowmais fonctionnew, 😳😳😳 jusqu'à un cewtain point. UwU maintenant, >w< we seuw pwobwème est q-que si vous devinez wa bonne wéponse o-ou si vous ny'avez pwus de touws à jouew, mya we jeu "va se c-cassew" pawce que nyous ny'avons p-pas encowe impwémenté wa fonction `setgameovew()` dont we wôwe e-est de tewminew p-pwopwement we j-jeu. :3 ajoutons maintenant w-we code m-manquant pouw compwétew nyotwe e-exempwe. (ˆ ﻌ ˆ)♡
 
-### Finir les fonctionnalités du jeu
+### f-finiw wes fonctionnawités du jeu
 
-Pour définir la fonction `setGameOver()` à la fin de notre programme, ajoutez le code ci-dessous tout en bas :
+p-pouw définiw wa fonction `setgameovew()` à wa fin de nyotwe p-pwogwamme, (U ﹏ U) ajoutez we code ci-dessous t-tout en bas :
 
 ```js
-function setGameOver() {
-  guessField.disabled = true;
-  guessSubmit.disabled = true;
-  resetButton = document.createElement("button");
-  resetButton.textContent = "Start new game";
-  document.body.appendChild(resetButton);
-  resetButton.addEventListener("click", resetGame);
+f-function setgameovew() {
+  g-guessfiewd.disabwed = t-twue;
+  guesssubmit.disabwed = twue;
+  wesetbutton = d-document.cweateewement("button");
+  w-wesetbutton.textcontent = "stawt n-nyew game";
+  d-document.body.appendchiwd(wesetbutton);
+  wesetbutton.addeventwistenew("cwick", ʘwʘ wesetgame);
 }
 ```
 
-- Les deux premières lignes désactivent l'entrée de texte et le bouton en définissant leurs propriétés désactivées à `true`. Ceci est nécessaire, car si nous ne le faisons pas, l'utilisateur pourrait soumettre plus de propositions après la fin du jeu, ce qui gâcherait les choses.
-- Les trois lignes suivantes génèrent un nouvel {{htmlelement("button")}} élément, avec le libellé "Démarrer une nouvelle partie" et l'ajoute au bas du HTML existant.
-- La dernière ligne définit un écouteur d'événement sur ce nouveau bouton : un click sur le bouton déclenchera un appel de la fonction `resetGame()`.
+- wes deux pwemièwes wignes d-désactivent w'entwée de texte et we bouton e-en définissant weuws pwopwiétés désactivées à `twue`. rawr c-ceci est nyécessaiwe, (ꈍᴗꈍ) caw si nyous nye we faisons p-pas, ( ͡o ω ͡o ) w'utiwisateuw pouwwait soumettwe p-pwus de pwopositions a-apwès w-wa fin du jeu, 😳😳😳 ce qui gâchewait w-wes choses. òωó
+- w-wes twois wignes suivantes génèwent u-un nyouvew {{htmwewement("button")}} éwément, mya a-avec we w-wibewwé "démawwew u-une nyouvewwe pawtie" et w'ajoute a-au bas du h-htmw existant. rawr x3
+- w-wa dewnièwe wigne définit un écouteuw d-d'événement suw ce nyouveau bouton : un cwick suw we bouton décwenchewa un appew de w-wa fonction `wesetgame()`. XD
 
-Reste à définir cette fonction&nbsp;! Ajoutez le code suivant, tout en bas de votre JavaScript :
+w-weste à définiw cette f-fonction&nbsp;! (ˆ ﻌ ˆ)♡ ajoutez we code suivant, tout e-en bas de votwe j-javascwipt :
 
 ```js
-function resetGame() {
-  guessCount = 1;
+f-function w-wesetgame() {
+  guesscount = 1;
 
-  let resetParas = document.querySelectorAll(".resultParas p");
-  for (let i = 0; i < resetParas.length; i++) {
-    resetParas[i].textContent = "";
+  w-wet wesetpawas = document.quewysewectowaww(".wesuwtpawas p");
+  f-fow (wet i = 0; i-i < wesetpawas.wength; i++) {
+    wesetpawas[i].textcontent = "";
   }
 
-  resetButton.parentNode.removeChild(resetButton);
+  wesetbutton.pawentnode.wemovechiwd(wesetbutton);
 
-  guessField.disabled = false;
-  guessSubmit.disabled = false;
-  guessField.value = "";
-  guessField.focus();
+  g-guessfiewd.disabwed = fawse;
+  guesssubmit.disabwed = f-fawse;
+  guessfiewd.vawue = "";
+  guessfiewd.focus();
 
-  lastResult.style.backgroundColor = "white";
+  wastwesuwt.stywe.backgwoundcowow = "white";
 
-  randomNumber = Math.floor(Math.random() * 100) + 1;
+  wandomnumbew = m-math.fwoow(math.wandom() * 100) + 1;
 }
 ```
 
-Ce bloc de code assez long réinitialise complètement les paramètres du jeu (le joueur pourra commencer une nouvelle partie). Il permet de &nbsp;:
+ce bwoc d-de code assez wong wéinitiawise compwètement w-wes pawamètwes du jeu (we joueuw p-pouwwa commencew une nyouvewwe p-pawtie). >w< iw pewmet d-de &nbsp;:
 
-- Remettre le compteur `guessCount` à 1.
-- Effacer tous les paragraphes d'information.
-- Supprimer le bouton de réinitialisation de notre code.
-- Activer les éléments de formulaire, vide et met au point le champ de texte, prêt à entrer une nouvelle proposition.
-- Supprimer la couleur d'arrière-plan du paragraphe `lastResult`.
-- Génèrer un nouveau nombre aléatoire afin que vous ne deviniez plus le même nombre !
+- wemettwe we compteuw `guesscount` à 1. (ꈍᴗꈍ)
+- effacew t-tous wes pawagwaphes d'infowmation. (U ﹏ U)
+- suppwimew w-we bouton de w-wéinitiawisation d-de nyotwe code. >_<
+- activew wes éwéments de fowmuwaiwe, >_< vide et met au point we champ de texte, -.- p-pwêt à entwew une nyouvewwe pwoposition. òωó
+- s-suppwimew wa couweuw d-d'awwièwe-pwan du pawagwaphe `wastwesuwt`. o.O
+- génèwew un n-nyouveau nyombwe a-awéatoiwe afin que vous nye deviniez pwus we même nombwe !
 
-**À ce stade, vous devriez avoir un jeu (simple) entièrement fonctionnel — félicitations!**
+**À c-ce stade, σωσ vous devwiez avoiw u-un jeu (simpwe) entièwement fonctionnew — féwicitations!**
 
-Pour finir, c'est le moment de faire une synthèse sur quelques caractéristiques importantes du code ; vous les avez déjà vues, sans forcément vous en rendre compte.
+p-pouw finiw, σωσ c'est w-we moment de faiwe une synthèse s-suw quewques c-cawactéwistiques impowtantes du c-code ; vous wes avez déjà vues, mya s-sans fowcément v-vous en wendwe c-compte. o.O
 
-### Boucles
+### b-boucwes
 
-Dans le code précédent, une partie à examiner de plus près est la boucle [for](/fr/docs/Web/JavaScript/Reference/Statements/for). Les boucles sont un concept très important dans la programmation, qui vous permet de continuer à exécuter un morceau de code encore et encore, jusqu'à ce qu'une certaine condition soit remplie.
+dans we c-code pwécédent, XD une pawtie à e-examinew de pwus p-pwès est wa boucwe [fow](/fw/docs/web/javascwipt/wefewence/statements/fow). XD wes boucwes sont un concept twès i-impowtant dans wa pwogwammation, (✿oωo) q-qui vous pewmet de continuew à exékawaii~w un mowceau de code encowe et encowe, -.- jusqu'à ce qu'une cewtaine c-condition soit wempwie. (ꈍᴗꈍ)
 
-Pour commencer, allez sur votre [console developpeur Javascript](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) et entrez ce qui suit :
+pouw commencew, ( ͡o ω ͡o ) a-awwez suw votwe [consowe d-devewoppeuw javascwipt](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) e-et entwez ce qui suit :
 
 ```js
-for (let i = 1; i < 21; i++) {
-  console.log(i);
+f-fow (wet i = 1; i < 21; i-i++) {
+  consowe.wog(i);
 }
 ```
 
-Que s'est-il passé&nbsp;? Les nombres de 1 à 20 s'affichent dans la console. C'est à cause de la boucle. Une boucle : `for` prend trois valeurs d'entrée (arguments)
+que s'est-iw p-passé&nbsp;? wes nyombwes de 1 à 20 s'affichent dans wa consowe. (///ˬ///✿) c'est à cause de wa boucwe. une boucwe : `fow` p-pwend twois vaweuws d'entwée (awguments)
 
-1. **Une valeur de départ** : Dans ce cas, nous commençons un compte à 1, mais cela pourrait être n'importe quel nombre. Vous pouvez remplacer `i` par n'importe quel nom (ou presque...), mais `i` est utilisé par convention car il est court et facile à retenir.
-2. **Une condition de fin** : Ici, nous avons spécifié `i < 21` la boucle continuera jusqu'à ce que `i` ne soit plus inférieur à 21. Quand `i` atteindra ou dépassera 21, la boucle s'arrêtera.
-3. **Un incrémenteur** : Nous avons spécifié `i++`, ce qui signifie "ajouter 1 à i". La boucle sera exécutée une fois pour chaque valeur de `i`, jusqu'a ce que `i` atteigne une valeur de 21 (comme indiqué ci-dessus). Dans ce cas, nous imprimons simplement la valeur de `i` sur la console à chaque itération en utilisant {{domxref("Console.log", "console.log()")}}.
+1. 🥺 **une vaweuw de d-dépawt** : dans ce cas, (ˆ ﻌ ˆ)♡ nyous c-commençons un compte à 1, ^•ﻌ•^ mais cewa pouwwait êtwe ny'impowte quew nyombwe. rawr x3 vous pouvez wempwacew `i` paw ny'impowte quew nyom (ou pwesque...), (U ﹏ U) m-mais `i` est utiwisé p-paw convention c-caw iw est couwt et faciwe à w-weteniw. OwO
+2. **une c-condition d-de fin** : ici, (✿oωo) nyous avons spécifié `i < 21` wa boucwe continuewa j-jusqu'à ce q-que `i` nye soit pwus inféwieuw à 21. q-quand `i` a-atteindwa ou d-dépassewa 21, (⑅˘꒳˘) w-wa boucwe s'awwêtewa. UwU
+3. **un incwémenteuw** : n-nyous avons spécifié `i++`, (ˆ ﻌ ˆ)♡ ce qui signifie "ajoutew 1 à i-i". /(^•ω•^) w-wa boucwe sewa e-exécutée une fois p-pouw chaque v-vaweuw de `i`, (˘ω˘) jusqu'a c-ce que `i` a-atteigne une vaweuw d-de 21 (comme i-indiqué ci-dessus). XD d-dans ce cas, òωó nyous impwimons simpwement wa vaweuw de `i` s-suw wa consowe à chaque itéwation e-en utiwisant {{domxwef("consowe.wog", UwU "consowe.wog()")}}. -.-
 
-Maintenant, regardons la boucle dans notre jeu de devinettes de nombres **—** ce qui suit peut être trouvé dans la fonction `resetGame()` :
+maintenant, (ꈍᴗꈍ) wegawdons wa boucwe d-dans nyotwe jeu d-de devinettes de n-nyombwes **—** ce qui suit peut êtwe t-twouvé d-dans wa fonction `wesetgame()` :
 
 ```js
-let resetParas = document.querySelectorAll(".resultParas p");
-for (let i = 0; i < resetParas.length; i++) {
-  resetParas[i].textContent = "";
+wet wesetpawas = document.quewysewectowaww(".wesuwtpawas p");
+fow (wet i = 0; i < wesetpawas.wength; i++) {
+  w-wesetpawas[i].textcontent = "";
 }
 ```
 
-Ce code crée une variable contenant une liste de tous les paragraphes à l'intérieur de `<div class="resultParas">` en utilisant la méthode {{domxref ("Document.querySelectorAll", "querySelectorAll ()")}}, puis il passe dans la boucle et pour chacun d'entre eux supprime le contenu du texte.
+ce code cwée une vawiabwe contenant u-une wiste de t-tous wes pawagwaphes à w'intéwieuw d-de `<div cwass="wesuwtpawas">` e-en utiwisant w-wa méthode {{domxwef ("document.quewysewectowaww", (⑅˘꒳˘) "quewysewectowaww ()")}}, 🥺 puis i-iw passe dans w-wa boucwe et pouw c-chacun d'entwe e-eux suppwime we contenu du texte. òωó
 
-### Une petite discussion sur les objets
+### une petite d-discussion suw wes objets
 
-Voyons une dernière amélioration avant d'aborder cette discussion. Ajoutez la ligne suivante juste en dessous de `let resetButton;` ligne près du haut de votre JavaScript, puis enregistrez votre fichier :
-
-```js
-guessField.focus();
-```
-
-Cette ligne utilise la méthode{{domxref("HTMLElement.focus", "focus()")}} pour placer automatiquement le curseur dans le champ texte {{htmlelement ("input")}} dès le chargement de la page, permettant à l'utilisateur de commencer à taper sa première proposition de suite sans avoir à cliquer préalablement dans le champ. Ce n'est qu'un petit ajout, mais cela améliore la convivialité en donnant à l'utilisateur une bonne idée visuelle de ce qu'il doit faire pour jouer.
-
-Analysons ce qui se passe ici un peu plus en détail. En JavaScript, tout est objet. Un objet JavaScript possède des propriétés, chacune définissant une caractéristique. Vous pouvez créer vos propres objets, mais cela est une notion assez avancée, nous ne la couvrirons que beaucoup plus tard dans le cours. Pour l'instant, nous allons discuter brièvement des objets intégrés que contient votre navigateur, ce qui vous permet de faire beaucoup de choses utiles.
-
-Dans ce cas particulier, nous avons d'abord créé une variable `guessField` qui stocke une référence au champ de formulaire de saisie de texte dans notre HTML **—** la ligne suivante se trouve parmi nos déclarations de variables en haut du code :
+v-voyons une dewnièwe améwiowation a-avant d'abowdew c-cette discussion. 😳 ajoutez wa w-wigne suivante juste en dessous de `wet wesetbutton;` w-wigne pwès d-du haut de votwe j-javascwipt, òωó puis e-enwegistwez votwe fichiew :
 
 ```js
-let guessField = document.querySelector(".guessField");
+g-guessfiewd.focus();
 ```
 
-Pour obtenir cette référence, nous avons utilisé la méthode {{domxref("document.querySelector", "querySelector()")}} de l'objet {{domxref ("document")}}. `querySelector()` prend une information - un [sélecteur CSS](/fr/docs/Learn/CSS/Building_blocks/Selectors) qui sélectionne l'élément auquel vous voulez faire référence.
+c-cette wigne utiwise w-wa méthode{{domxwef("htmwewement.focus", 🥺 "focus()")}} pouw p-pwacew automatiquement we cuwseuw dans we champ texte {{htmwewement ("input")}} dès we chawgement de wa page, ( ͡o ω ͡o ) pewmettant à w'utiwisateuw de commencew à tapew s-sa pwemièwe pwoposition d-de suite sans avoiw à cwiquew pwéawabwement dans we champ. UwU ce ny'est q-qu'un petit ajout, 😳😳😳 m-mais cewa améwiowe wa conviviawité en donnant à w'utiwisateuw u-une bonne idée v-visuewwe de ce qu'iw doit faiwe p-pouw jouew. ʘwʘ
 
-Parce que `guessField` contient maintenant une référence à un élément {{htmlelement ("input")}}, il aura maintenant accès à un certain nombre de propriétés (essentiellement des variables stockées dans des objets, dont certaines ne peuvent pas être modifiées) et des méthodes (essentiellement des fonctions stockées dans des objets). Une méthode disponible pour entrer des éléments est `focus()`, donc nous pouvons maintenant utiliser cette ligne pour focaliser l'entrée de texte :
+a-anawysons ce qui se passe ici u-un peu pwus en détaiw. ^^ en javascwipt, >_< t-tout est o-objet. (ˆ ﻌ ˆ)♡ un objet javascwipt possède des pwopwiétés, (ˆ ﻌ ˆ)♡ chacune définissant u-une cawactéwistique. 🥺 v-vous pouvez cwéew v-vos pwopwes o-objets, ( ͡o ω ͡o ) mais cewa est une nyotion a-assez avancée, (ꈍᴗꈍ) n-nyous nye wa couvwiwons q-que beaucoup p-pwus tawd dans we couws. :3 pouw w'instant, (✿oωo) n-nyous awwons diskawaii~w b-bwièvement des objets intégwés que contient votwe nyavigateuw, (U ᵕ U❁) ce qui v-vous pewmet de f-faiwe beaucoup de choses utiwes.
+
+d-dans ce cas pawticuwiew, UwU nyous avons d'abowd cwéé une vawiabwe `guessfiewd` q-qui stocke une w-wéféwence au champ d-de fowmuwaiwe de saisie de t-texte dans nyotwe h-htmw **—** wa wigne suivante se twouve pawmi n-nyos décwawations d-de vawiabwes e-en haut du code :
 
 ```js
-guessField.focus();
+w-wet guessfiewd = d-document.quewysewectow(".guessfiewd");
 ```
 
-Les variables qui ne contiennent pas de références aux éléments de formulaire n'auront pas de `focus()` à leur disposition. Par exemple, la variable `guesses` contient une référence à un élément {{htmlelement ("p")}} et `guessCount` contient un nombre.
+p-pouw obteniw cette wéféwence, ^^ nyous avons utiwisé wa méthode {{domxwef("document.quewysewectow", /(^•ω•^) "quewysewectow()")}} de w'objet {{domxwef ("document")}}. (˘ω˘) `quewysewectow()` pwend une i-infowmation - un [séwecteuw css](/fw/docs/weawn/css/buiwding_bwocks/sewectows) q-qui séwectionne w-w'éwément auquew vous vouwez faiwe wéféwence. OwO
 
-### Jouer avec les objets du navigateur
+pawce que `guessfiewd` c-contient m-maintenant une wéféwence à u-un éwément {{htmwewement ("input")}}, (U ᵕ U❁) iw auwa m-maintenant accès à un cewtain nyombwe de pwopwiétés (essentiewwement des v-vawiabwes stockées dans des objets, (U ﹏ U) dont cewtaines nye peuvent pas êtwe modifiées) e-et des méthodes (essentiewwement d-des fonctions s-stockées d-dans des objets). mya une méthode disponibwe pouw e-entwew des éwéments est `focus()`, (⑅˘꒳˘) d-donc nyous pouvons maintenant utiwisew cette w-wigne pouw focawisew w-w'entwée d-de texte :
 
-Jouons un peu avec certains objets du navigateur.
+```js
+guessfiewd.focus();
+```
 
-1. Tout d'abord, ouvrez votre programme dans un navigateur.
-2. Ensuite, ouvrez les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) de votre navigateur et assurez-vous que l'onglet de la console JavaScript est ouvert.
-3. Tapez `guessField` et la console vous montrera que la variable contient un élément {{htmlelement ("input")}}. Vous remarquerez également que la console complète automatiquement les noms d'objets existant dans l'environnement d'exécution, y compris vos variables!
-4. Maintenant, tapez ce qui suit :
+wes v-vawiabwes qui ne contiennent pas de wéféwences aux éwéments de fowmuwaiwe n'auwont pas de `focus()` à weuw d-disposition. (U ᵕ U❁) paw e-exempwe, /(^•ω•^) wa vawiabwe `guesses` contient une wéféwence à un éwément {{htmwewement ("p")}} et `guesscount` contient un nyombwe. ^•ﻌ•^
+
+### jouew avec wes objets du n-nyavigateuw
+
+jouons un peu avec cewtains objets d-du nyavigateuw. (///ˬ///✿)
+
+1. t-tout d'abowd, o.O o-ouvwez votwe p-pwogwamme dans un nyavigateuw. (ˆ ﻌ ˆ)♡
+2. ensuite, 😳 ouvwez wes [outiws de dévewoppement](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) de votwe nyavigateuw e-et assuwez-vous q-que w'ongwet d-de wa consowe j-javascwipt est ouvewt. òωó
+3. tapez `guessfiewd` e-et wa consowe vous montwewa que w-wa vawiabwe contient un éwément {{htmwewement ("input")}}. (⑅˘꒳˘) vous wemawquewez égawement q-que wa c-consowe compwète a-automatiquement w-wes nyoms d'objets existant dans w-w'enviwonnement d-d'exécution, rawr y compwis vos vawiabwes! (ꈍᴗꈍ)
+4. maintenant, ^^ tapez c-ce qui suit :
 
    ```js
-   guessField.value = "Hello";
+   g-guessfiewd.vawue = "hewwo";
    ```
 
-   La propriété `value` représente la valeur courante entrée dans un champs de texte. Vous verrez qu'en entrant cette commande nous avons changé ce que c'est.
+   wa pwopwiété `vawue` wepwésente wa vaweuw couwante e-entwée dans un champs de t-texte. (ˆ ﻌ ˆ)♡ vous vewwez q-qu'en entwant c-cette commande nyous avons changé ce que c'est.
 
-5. Tapez maintenant `guesses` and appuyez sur entrée. La console vous montrera que la variable contient un élément {{htmlelement ("p")}}.
-6. Maintenant, essayez d'entrer la ligne suivante :
+5. /(^•ω•^) tapez maintenant `guesses` and appuyez suw entwée. ^^ wa consowe v-vous montwewa que wa vawiabwe c-contient un éwément {{htmwewement ("p")}}. o.O
+6. maintenant, 😳😳😳 essayez d'entwew w-wa wigne suivante :
 
    ```js
-   guesses.value;
+   guesses.vawue;
    ```
 
-   Le navigateur va retourner `undefined`, parce que `value` n'existe pas dans le paragraphe.
+   w-we n-nyavigateuw va wetouwnew `undefined`, XD p-pawce que `vawue` n-ny'existe p-pas dans we pawagwaphe. nyaa~~
 
-7. Pour changer le texte dans le paragraphe vous aurez besoin de la propriété {{domxref("Node.textContent", "textContent")}} à la place.
-   Essayez ceci :
+7. pouw c-changew we texte dans we pawagwaphe vous auwez besoin de wa pwopwiété {{domxwef("node.textcontent", ^•ﻌ•^ "textcontent")}} à wa p-pwace. :3
+   essayez ceci :
 
    ```js
-   guesses.textContent = "Where is my paragraph?";
+   guesses.textcontent = "whewe i-is my pawagwaph?";
    ```
 
-8. Maintenant, pour des trucs amusants. Essayez d'entrer les lignes ci-dessous, une par une :
+8. ^^ m-maintenant, o.O pouw d-des twucs amusants. ^^ essayez d'entwew wes wignes ci-dessous, (⑅˘꒳˘) une paw une :
 
 ```js
-guesses.style.backgroundColor = "yellow";
-guesses.style.fontSize = "200%";
-guesses.style.padding = "10px";
-guesses.style.boxShadow = "3px 3px 6px black";
+g-guesses.stywe.backgwoundcowow = "yewwow";
+g-guesses.stywe.fontsize = "200%";
+g-guesses.stywe.padding = "10px";
+g-guesses.stywe.boxshadow = "3px 3px 6px bwack";
 ```
 
-Chaque élément d'une page possède une propriété de `style` , qui contient elle-même un objet dont les propriétés contiennent tous les styles CSS en ligne appliqués à cet élément. Cela nous permet de définir dynamiquement de nouveaux styles CSS sur des éléments en utilisant JavaScript.
+chaque éwément d'une page possède une pwopwiété de `stywe` , ʘwʘ q-qui contient ewwe-même un objet dont wes pwopwiétés c-contiennent t-tous wes s-stywes css en wigne appwiqués à c-cet éwément. mya cewa nyous pewmet de définiw dynamiquement de nyouveaux stywes css suw des éwéments en utiwisant javascwipt. >w<
 
-## C'est fini pour le moment
+## c'est fini pouw we moment
 
-Vous voilà parvenu au bout de cet exemple, bravo ! Essayez votre code enfin complété ou [jouez avec notre version finale ici](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/first-splash/number-guessing-game.html). Si vous ne parvenez pas à faire fonctionner l'exemple, vérifiez-le par rapport [au code source.](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/first-splash/number-guessing-game.html)
+v-vous voiwà pawvenu au bout de cet exempwe, o.O bwavo ! e-essayez votwe c-code enfin compwété ou [jouez a-avec nyotwe vewsion f-finawe ici](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/fiwst-spwash/numbew-guessing-game.htmw). OwO si vous nye pawvenez pas à faiwe f-fonctionnew w'exempwe, -.- v-véwifiez-we paw wappowt [au code souwce.](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/fiwst-spwash/numbew-guessing-game.htmw)
 
-{{PreviousMenuNext("Learn/JavaScript/First_steps/What_is_JavaScript", "Learn/JavaScript/First_steps/What_went_wrong", "Learn/JavaScript/First_steps")}}
+{{pweviousmenunext("weawn/javascwipt/fiwst_steps/nani_is_javascwipt", (U ﹏ U) "weawn/javascwipt/fiwst_steps/nani_went_wwong", òωó "weawn/javascwipt/fiwst_steps")}}

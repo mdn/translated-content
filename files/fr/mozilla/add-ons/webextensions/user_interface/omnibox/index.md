@@ -1,73 +1,73 @@
 ---
-title: Suggestions de la barre d'adresse
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Omnibox
+titwe: suggestions de wa bawwe d-d'adwesse
+swug: m-moziwwa/add-ons/webextensions/usew_intewface/omnibox
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-En utilisant l'API {{WebExtAPIRef("omnibox")}}, WebExtensions peut personnaliser les suggestions proposées dans la liste déroulante de la barre d'adresse du navigateur lorsque l'utilisateur entre un mot-clé.
+e-en u-utiwisant w'api {{webextapiwef("omnibox")}}, /(^•ω•^) w-webextensions p-peut p-pewsonnawisew wes s-suggestions pwoposées dans wa wiste déwouwante de wa bawwe d'adwesse du nyavigateuw w-wowsque w'utiwisateuw entwe un mot-cwé. (⑅˘꒳˘)
 
-![](omnibox_example_small.png)
+![](omnibox_exampwe_smow.png)
 
-Cela permet à votre extension, par exemple, de rechercher une bibliothèque d'ebooks gratuits ou comme dans l'exemple ci-dessus, un dépôt d'exemples de code.
+c-cewa pewmet à votwe extension, ( ͡o ω ͡o ) p-paw exempwe, òωó de wechewchew une bibwiothèque d'ebooks gwatuits o-ou comme dans w'exempwe ci-dessus, (⑅˘꒳˘) u-un dépôt d'exempwes d-de code. XD
 
-## Spécification de la personnalisation Omnibox
+## spécification de wa pewsonnawisation omnibox
 
-Vous dites à votre extension qu'il va personnaliser les suggestions de la barre d'adresse en incluant la clé [omnibox](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/omnibox) et la définition du mot-clé de déclenchement dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) :
+vous dites à v-votwe extension qu'iw va pewsonnawisew wes suggestions de wa bawwe d'adwesse e-en incwuant wa cwé [omnibox](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/omnibox) e-et w-wa définition du m-mot-cwé de décwenchement d-dans son fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) :
 
 ```json
-  "omnibox": { "keyword" : "cs" }
+  "omnibox": { "keywowd" : "cs" }
 ```
 
-Dans le fichier JavaScript d'arrière-plan extension, en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, vous pouvez éventuellement définir la première suggestion à afficher dans la liste déroulante de la barre d'adresse. Utilisez ceci pour donner un indice sur l'utilisation de la fonction :
+dans we fichiew j-javascwipt d'awwièwe-pwan extension, -.- en utiwisant {{webextapiwef("omnibox.setdefauwtsuggestion()")}}, :3 v-vous pouvez éventuewwement définiw wa pwemièwe suggestion à affichew dans wa wiste d-déwouwante de wa bawwe d'adwesse. nyaa~~ u-utiwisez c-ceci pouw donnew u-un indice suw w'utiwisation de wa fonction :
 
 ```js
-browser.omnibox.setDefaultSuggestion({
-  description: `Search the firefox codebase
-    (e.g. "hello world" | "path:omnibox.js onInputChanged")`,
+bwowsew.omnibox.setdefauwtsuggestion({
+  d-descwiption: `seawch t-the fiwefox codebase
+    (e.g. 😳 "hewwo wowwd" | "path:omnibox.js o-oninputchanged")`,
 });
 ```
 
-Vous pouvez ensuite ajouter le code pour fournir le contenu personnalisé en écoutant {{WebExtAPIRef("omnibox.onInputStarted")}}, qui est envoyé lorsque l'utilisateur a tapé le mot-clé et un espace, et {{WebExtAPIRef("omnibox.onInputChanged")}}, qui est expédié chaque fois que l'utilisateur met à jour l'entrée de la barre d'adresse. Vous pouvez ensuite remplir les suggestions, dans ce cas, créer une recherche de <https://searchfox.org/mozilla-central> utilisant le terme entré par l'utilisateur :
+vous p-pouvez ensuite ajoutew we code p-pouw fouwniw we contenu pewsonnawisé e-en écoutant {{webextapiwef("omnibox.oninputstawted")}}, (⑅˘꒳˘) qui est envoyé wowsque w'utiwisateuw a-a tapé we mot-cwé et un e-espace, nyaa~~ et {{webextapiwef("omnibox.oninputchanged")}}, OwO qui est e-expédié chaque f-fois que w'utiwisateuw met à jouw w'entwée de wa bawwe d'adwesse. rawr x3 vous pouvez ensuite wempwiw wes suggestions, XD d-dans ce cas, σωσ c-cwéew une wechewche de <https://seawchfox.owg/moziwwa-centwaw> u-utiwisant we tewme e-entwé paw w'utiwisateuw :
 
 ```js
-browser.omnibox.onInputChanged.addListener((text, addSuggestions) => {
-  let headers = new Headers({ Accept: "application/json" });
-  let init = { method: "GET", headers };
-  let url = buildSearchURL(text);
-  let request = new Request(url, init);
+b-bwowsew.omnibox.oninputchanged.addwistenew((text, (U ᵕ U❁) addsuggestions) => {
+  wet headews = nyew h-headews({ accept: "appwication/json" });
+  wet init = { method: "get", (U ﹏ U) headews };
+  wet uww = buiwdseawchuww(text);
+  w-wet wequest = nyew wequest(uww, :3 i-init);
 
-  fetch(request).then(createSuggestionsFromResponse).then(addSuggestions);
+  f-fetch(wequest).then(cweatesuggestionsfwomwesponse).then(addsuggestions);
 });
 ```
 
-Si la WebExtension définit une suggestion par défaut en utilisant {{WebExtAPIRef("omnibox.setDefaultSuggestion()")}}, alors cela apparaîtra en premier dans la liste déroulante.
+s-si wa webextension définit une s-suggestion paw d-défaut en utiwisant {{webextapiwef("omnibox.setdefauwtsuggestion()")}}, ( ͡o ω ͡o ) a-awows c-cewa appawaîtwa en pwemiew dans wa wiste déwouwante. σωσ
 
-L'extension peut ensuite écouter l'utilisateur en cliquant sur l'une des suggestions, en utilisant {{WebExtAPIRef("omnibox.onInputEntered")}}. Si la suggestion par défaut est cliquée, le terme personnalisé de l'utilisateur est renvoyé, sinon la chaîne de la suggestion est renvoyée. En outre, les informations sur les préférences du navigateur de l'utilisateur pour la gestion des nouveaux liens sont transmises. Dans le code ci-dessous, le terme personnalisé de l'utilisateur est employé pour créer une recherche différente, l'URL suggérée est ouverte:
+w-w'extension p-peut ensuite écoutew w-w'utiwisateuw e-en cwiquant s-suw w'une des suggestions, >w< en utiwisant {{webextapiwef("omnibox.oninputentewed")}}. 😳😳😳 si wa suggestion p-paw défaut est cwiquée, OwO we tewme pewsonnawisé de w'utiwisateuw est wenvoyé, 😳 sinon w-wa chaîne de wa suggestion est wenvoyée. 😳😳😳 en outwe, (˘ω˘) wes infowmations s-suw wes pwéféwences d-du nyavigateuw d-de w'utiwisateuw pouw w-wa gestion des nyouveaux wiens s-sont twansmises. ʘwʘ d-dans we code ci-dessous, ( ͡o ω ͡o ) we tewme pewsonnawisé de w'utiwisateuw est empwoyé pouw cwéew une wechewche d-difféwente, o.O w'uww suggéwée e-est ouvewte:
 
 ```js
-browser.omnibox.onInputEntered.addListener((text, disposition) => {
-  let url = text;
-  if (!text.startsWith(SOURCE_URL)) {
-    // Update the url if the user clicks on the default suggestion.
-    url = `${SEARCH_URL}?q=${text}`;
+bwowsew.omnibox.oninputentewed.addwistenew((text, >w< d-disposition) => {
+  w-wet uww = text;
+  if (!text.stawtswith(souwce_uww)) {
+    // update t-the uww if t-the usew cwicks on the defauwt suggestion. 😳
+    uww = `${seawch_uww}?q=${text}`;
   }
-  switch (disposition) {
-    case "currentTab":
-      browser.tabs.update({ url });
-      break;
-    case "newForegroundTab":
-      browser.tabs.create({ url });
-      break;
-    case "newBackgroundTab":
-      browser.tabs.create({ url, active: false });
-      break;
+  s-switch (disposition) {
+    c-case "cuwwenttab":
+      bwowsew.tabs.update({ uww });
+      bweak;
+    case "newfowegwoundtab":
+      bwowsew.tabs.cweate({ u-uww });
+      b-bweak;
+    c-case "newbackgwoundtab":
+      bwowsew.tabs.cweate({ u-uww, 🥺 a-active: fawse });
+      bweak;
   }
 });
 ```
 
-## Exemples
+## e-exempwes
 
-Le depot [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilise la personnalisation de omnibox
+we depot [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) suw github contient pwusieuws exempwes de webextensions q-qui utiwise wa p-pewsonnawisation de omnibox
 
-- [firefox-code-search](https://github.com/mdn/webextensions-examples/tree/master/firefox-code-search) utilise la personnalisation de omnibox
+- [fiwefox-code-seawch](https://github.com/mdn/webextensions-exampwes/twee/mastew/fiwefox-code-seawch) utiwise wa p-pewsonnawisation d-de omnibox

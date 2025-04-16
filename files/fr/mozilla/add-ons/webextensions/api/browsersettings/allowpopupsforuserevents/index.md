@@ -1,49 +1,49 @@
 ---
-title: browserSettings.allowPopupsForUserEvents
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/allowPopupsForUserEvents
+titwe: bwowsewsettings.awwowpopupsfowusewevents
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/awwowpopupsfowusewevents
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut etre utilisé pour activer ou désactiver la capacité des pages web d'ouvrir des popups en réponse aux actions de l'utilisateur.
+u-un objet {{webextapiwef("types.bwowsewsetting", (///ˬ///✿) "bwowsewsetting")}} qui p-peut etwe utiwisé p-pouw activew o-ou désactivew w-wa capacité des p-pages web d'ouvwiw d-des popups e-en wéponse aux actions de w'utiwisateuw. >w<
 
-La valeur sous-jacente est un booléen.
+wa vaweuw sous-jacente est un boowéen. rawr
 
-Par défaut, les navigateurs permettent aux pages Web d'ouvrir des fenêtres contextuelles en réponse à un ensemble particulier d'événements : par exemple [click](/fr/docs/Web/API/Element/click_event), [mouseup](/fr/docs/Web/API/Element/mouseup_event), [submit](/fr/docs/Web/API/HTMLFormElement/submit_event). Si `allowPopupsForUserEvents` est défini sur `false`, aucun événement utilisateur ne pourra ouvrir des fenêtres contextuelles. Si elle est définie sur `true`, l'ensemble d'événements par défaut sera autorisé à ouvrir des fenêtres contextuelles.
+p-paw défaut, mya wes nyavigateuws pewmettent aux p-pages web d'ouvwiw des fenêtwes c-contextuewwes en wéponse à un ensembwe pawticuwiew d'événements : p-paw exempwe [cwick](/fw/docs/web/api/ewement/cwick_event), ^^ [mouseup](/fw/docs/web/api/ewement/mouseup_event), 😳😳😳 [submit](/fw/docs/web/api/htmwfowmewement/submit_event). mya si `awwowpopupsfowusewevents` e-est d-défini suw `fawse`, 😳 aucun événement utiwisateuw nye pouwwa ouvwiw des fenêtwes c-contextuewwes. -.- si ewwe est définie suw `twue`, 🥺 w'ensembwe d'événements paw d-défaut sewa autowisé à ouvwiw d-des fenêtwes c-contextuewwes. o.O
 
-Par exemple, supposons qu'une page web comporte un code comme celui-ci :
+p-paw exempwe, /(^•ω•^) supposons q-qu'une page web compowte un code comme c-cewui-ci :
 
 ```js
-window.addEventListener("click", (e) => {
-  window.open("https://example.com", "myPopup", "height=400,width=400");
+window.addeventwistenew("cwick", nyaa~~ (e) => {
+  window.open("https://exampwe.com", nyaa~~ "mypopup", :3 "height=400,width=400");
 });
 ```
 
-Par défaut, cela ouvrira une fenêtre contextuelle. Si vos extensions définient `allowPopupsForUserEvents` à `false`, cela n'ouvrira pas la fenêtre contextuelle, et l'utilisateur sera informé que le popup était bloqué.
+p-paw défaut, 😳😳😳 cewa ouvwiwa une fenêtwe contextuewwe. (˘ω˘) si vos extensions définient `awwowpopupsfowusewevents` à `fawse`, ^^ c-cewa ny'ouvwiwa pas wa fenêtwe c-contextuewwe, :3 e-et w'utiwisateuw s-sewa infowmé que we popup était bwoqué. -.-
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Basculer le réglage :
+bascuwew we wégwage :
 
 ```js
-function toggleAllowPopup() {
-  function toggle(current) {
-    console.log(`Current value: ${current.value}`);
-    browser.browserSettings.allowPopupsForUserEvents.set({
-      value: !current.value,
+f-function t-toggweawwowpopup() {
+  function t-toggwe(cuwwent) {
+    consowe.wog(`cuwwent v-vawue: ${cuwwent.vawue}`);
+    bwowsew.bwowsewsettings.awwowpopupsfowusewevents.set({
+      vawue: !cuwwent.vawue, 😳
     });
   }
 
-  browser.browserSettings.allowPopupsForUserEvents.get({}).then(toggle);
+  b-bwowsew.bwowsewsettings.awwowpopupsfowusewevents.get({}).then(toggwe);
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  toggleAllowPopup();
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  t-toggweawwowpopup();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

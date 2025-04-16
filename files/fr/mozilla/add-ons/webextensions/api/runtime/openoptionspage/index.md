@@ -1,81 +1,81 @@
 ---
-title: runtime.openOptionsPage()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/openOptionsPage
+titwe: wuntime.openoptionspage()
+swug: moziwwa/add-ons/webextensions/api/wuntime/openoptionspage
 ---
 
-{{AddonSidebar}}Si votre extension a défini une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), cette méthode l'ouvre.
+{{addonsidebaw}}si v-votwe e-extension a défini u-une [page d-d'options](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages), rawr c-cette méthode w-w'ouvwe. (˘ω˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). nyaa~~
 
-## Syntaxe
-
-```js
-var openingPage = browser.runtime.openOptionsPage();
-```
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la page d'options a été créée avec succés, ou rejetée avec un message d'erreur si l'opération a échoué.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Ouvrez une page d'options lorsque l'utilisateur clique sur l'icône d'une action du navigateur :
+## syntaxe
 
 ```js
-function onOpened() {
-  console.log(`Options page opened`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-var opening = browser.runtime.openOptionsPage();
-opening.then(onOpened, onError);
+vaw openingpage = bwowsew.wuntime.openoptionspage();
 ```
 
-{{WebExtExamples}}
+### p-pawamètwes
 
-> [!NOTE]
+nyone. UwU
+
+### vaweuw wetouwnée
+
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie sans awgument w-wowsque wa page d'options a été cwéée avec succés, :3 ou w-wejetée avec un message d'ewweuw s-si w'opéwation a-a échoué. (⑅˘꒳˘)
+
+## compatibiwité des nyavigateuws
+
+{{compat}}
+
+## exempwes
+
+ouvwez une page d'options w-wowsque w'utiwisateuw cwique suw w'icône d'une action du nyavigateuw :
+
+```js
+f-function onopened() {
+  consowe.wog(`options p-page opened`);
+}
+
+f-function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
+}
+
+v-vaw opening = bwowsew.wuntime.openoptionspage();
+opening.then(onopened, (///ˬ///✿) o-onewwow);
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est basée s-suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). ^^;; cette documentation est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de chwomium c-code. >_<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité w-wewatives à micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. /(^•ω•^) aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy f-fowms, (ꈍᴗꈍ) with ow without
+// modification, /(^•ω•^) a-awe pewmitted pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (⑅˘꒳˘) this w-wist of conditions a-and the fowwowing discwaimew. ( ͡o ω ͡o )
+//    * w-wedistwibutions i-in b-binawy fowm must wepwoduce the above
+// copywight nyotice, òωó this w-wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. (⑅˘꒳˘)
+//    * n-nyeithew t-the nyame of googwe inc. XD nyow t-the nyames of its
+// c-contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, :3 incwuding, but nyot
+// wimited to, nyaa~~ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. 😳 i-in nyo event s-shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, (⑅˘꒳˘) indiwect, nyaa~~ i-incidentaw,
+// speciaw, OwO exempwawy, rawr x3 ow consequentiaw damages (incwuding, XD but nyot
+// wimited t-to, σωσ pwocuwement of substitute g-goods ow sewvices; woss of use, (U ᵕ U❁)
+// d-data, ow pwofits; o-ow business intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, (U ﹏ U) whethew in contwact, s-stwict wiabiwity, :3 o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of t-the use
+// of t-this softwawe, ( ͡o ω ͡o ) even i-if advised of the possibiwity o-of such damage. σωσ
 -->

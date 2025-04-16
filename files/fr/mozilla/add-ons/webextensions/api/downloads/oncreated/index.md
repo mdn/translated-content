@@ -1,92 +1,92 @@
 ---
-title: downloads.onCreated
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/onCreated
+titwe: downwoads.oncweated
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/oncweated
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'événement **`onCreated()`** de l'API {{WebExtAPIRef("downloads")}} se déclenche lorsqu'un téléchargement commence, c'est à dire lorsque quand {{WebExtAPIRef("downloads.download()")}} est appelé avec succès.
+w-w'événement **`oncweated()`** d-de w'api {{webextapiwef("downwoads")}} s-se décwenche w-wowsqu'un t-téwéchawgement c-commence, (ꈍᴗꈍ) c'est à d-diwe wowsque quand {{webextapiwef("downwoads.downwoad()")}} est appewé avec succès. /(^•ω•^)
 
-L'écouteur reçoit l'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question en tant que paramètre.
+w'écouteuw weçoit w'objet {{webextapiwef('downwoads.downwoaditem')}} e-en question en tant que pawamètwe. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.downloads.onCreated.addListener(listener);
-browser.downloads.onCreated.removeListener(listener);
-browser.downloads.onCreated.hasListener(listener);
+b-bwowsew.downwoads.oncweated.addwistenew(wistenew);
+bwowsew.downwoads.oncweated.wemovewistenew(wistenew);
+b-bwowsew.downwoads.oncweated.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si un `listener` donné est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement. ( ͡o ω ͡o )
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d-d'écoutew cet événement. òωó w'awgument `wistenew` est w'écouteuw à suppwimew. (⑅˘꒳˘)
+- `haswistenew(wistenew)`
+  - : v-véwifiez si un `wistenew` donné est enwegistwé pouw cet événement. XD wenvoie `twue` s-s'iw écoute, -.- sinon `fawse`. :3
 
-## Syntaxe addListener
+## s-syntaxe a-addwistenew
 
-### Paramètres
+### p-pawamètwes
 
 - `function`
 
-  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. Cette fonction recevra les arguments suivants :
+  - : u-une fonction de wappew qui sewa appewée w-wowsque cet événement se pwoduiwa. cette fonction w-wecevwa wes awguments suivants :
 
-    - `downloadItem`
-      - : L'objet {{WebExtAPIRef('downloads.DownloadItem')}} en question.
+    - `downwoaditem`
+      - : w'objet {{webextapiwef('downwoads.downwoaditem')}} en question. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Consignez l'URL des éléments au fur et à mesure qu'ils sont téléchargés :
+consignez w'uww d-des éwéments a-au fuw et à m-mesuwe qu'iws sont téwéchawgés :
 
 ```js
-function handleCreated(item) {
-  console.log(item.url);
+function handwecweated(item) {
+  c-consowe.wog(item.uww);
 }
 
-browser.downloads.onCreated.addListener(handleCreated);
+b-bwowsew.downwoads.oncweated.addwistenew(handwecweated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette api est b-basée suw w'api c-chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). 😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. nyaa~~ aww wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, rawr x3 w-with ow without
+// modification, a-awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, XD this wist of conditions a-and the fowwowing discwaimew. σωσ
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, (U ᵕ U❁) t-this wist o-of conditions and t-the fowwowing discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. (U ﹏ U)
+//    * n-nyeithew the name of googwe inc. :3 nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, σωσ incwuding, >w< but nyot
+// w-wimited to, 😳😳😳 t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. OwO i-in no event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, 😳 i-indiwect, 😳😳😳 incidentaw, (˘ω˘)
+// speciaw, exempwawy, ʘwʘ o-ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) but nyot
+// w-wimited to, o.O p-pwocuwement of substitute goods ow sewvices; woss of use, >w<
+// data, 😳 ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// theowy of w-wiabiwity, 🥺 whethew i-in contwact, rawr x3 stwict wiabiwity, o.O o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the u-use
+// of this softwawe, rawr e-even if advised of the possibiwity of such d-damage. ʘwʘ
 -->

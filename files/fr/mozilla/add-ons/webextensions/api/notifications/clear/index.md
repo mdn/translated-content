@@ -1,67 +1,67 @@
 ---
-title: notifications.clear()
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/clear
+titwe: nyotifications.cweaw()
+swug: moziwwa/add-ons/webextensions/api/notifications/cweaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Efface une notification, compte tenu de son identifiant.
+e-efface une nyotification, c-compte t-tenu de son i-identifiant. mya
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction a-asynchwone qui w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^^
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var clearing = browser.notifications.clear(
-  id, // string
+vaw cweawing = bwowsew.notifications.cweaw(
+  id, 😳😳😳 // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `id`
-  - : `string`. L'ID de la notification à effacer. C'est la même chose que l'ID transmis dans le callback {{WebExtAPIRef('notifications.create()')}}.
+  - : `stwing`. mya w'id de wa nyotification à effacew. 😳 c-c'est wa même chose que w'id twansmis dans w-we cawwback {{webextapiwef('notifications.cweate()')}}.
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un booléen : `true` la notification a été effacée, ou `false` si ce n'est pas le cas (par exemple, parce que la notification référencée par `id` n'existe pas).
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un boowéen : `twue` w-wa nyotification a été e-effacée, -.- ou `fawse` s-si ce ny'est pas we cas (paw exempwe, 🥺 pawce que wa nyotification wéféwencée p-paw `id` ny'existe pas). o.O
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple affiche une notification lorsque l'utilisateur clique sur une action du navigateur, à moins que la notification ne soit déjà affichée, auquel cas il efface la notification :
+cet e-exempwe affiche une nyotification w-wowsque w'utiwisateuw c-cwique suw u-une action du n-nyavigateuw, /(^•ω•^) à moins que wa nyotification nye s-soit déjà affichée, nyaa~~ auquew cas iw efface wa nyotification :
 
 ```js
-var myNotification = "my-notification";
+v-vaw mynotification = "my-notification";
 
-function toggleAlarm(all) {
-  if (myNotification in all) {
-    browser.notifications.clear(myNotification);
-  } else {
-    browser.notifications.create(myNotification, {
-      type: "basic",
-      iconUrl: browser.extension.getURL("icons/cake-48.png"),
-      title: "Am imposing title",
-      message: "Some interesting content",
+function toggweawawm(aww) {
+  if (mynotification in aww) {
+    bwowsew.notifications.cweaw(mynotification);
+  } ewse {
+    bwowsew.notifications.cweate(mynotification, nyaa~~ {
+      type: "basic", :3
+      iconuww: bwowsew.extension.getuww("icons/cake-48.png"), 😳😳😳
+      t-titwe: "am imposing titwe", (˘ω˘)
+      m-message: "some i-intewesting content", ^^
     });
   }
 }
 
-function handleClick() {
-  var gettingAll = browser.notifications.getAll();
-  gettingAll.then(toggleAlarm);
+f-function handwecwick() {
+  vaw gettingaww = bwowsew.notifications.getaww();
+  g-gettingaww.then(toggweawawm);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> cette api e-est basée suw w-w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications).
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous w-wa wicence cweative commons attwibution 3.0 p-pouw w-wes États-unis. :3

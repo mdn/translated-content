@@ -1,90 +1,90 @@
 ---
-title: contextualIdentities.create()
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/create
+titwe: contextuawidentities.cweate()
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities/cweate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Crée une nouvelle identité contextuelle. Une fois créée, l'utilisateur pourra créer de nouveaux onglets appartenant à cette identité contextuelle, tout comme ils peuvent le faire avec les identités intégrées.
+c-cwée une nyouvewwe i-identité c-contextuewwe. (✿oωo) une f-fois cwéée, ʘwʘ w-w'utiwisateuw pouwwa c-cwéew de n-nouveaux ongwets a-appawtenant à cette identité contextuewwe, (ˆ ﻌ ˆ)♡ tout comme iws peuvent we faiwe avec w-wes identités intégwées. 😳😳😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var createContext = browser.contextualIdentities.create(
-  details, // object
+vaw cweatecontext = bwowsew.contextuawidentities.cweate(
+  detaiws, OwO // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet contenant des propriétés pour la nouvelle identité contextuelle. Cela contient les propriétés suivantes :
+  - : `object`. (U ﹏ U) un objet c-contenant des p-pwopwiétés pouw wa nyouvewwe identité contextuewwe. >w< cewa contient wes pwopwiétés s-suivantes :
 
     - `name`
-      - : `string`. Le nom de la nouvelle identité. Cela sera affiché dans l'interface utilisateur du navigateur, leur permettant d'ouvrir un nouvel onglet appartenant à l'identité. Il sera également affiché dans la barre d'URL pour les onglets appartenant à cette identité.
-    - `color`
+      - : `stwing`. (U ﹏ U) we nyom de wa nyouvewwe identité. 😳 cewa sewa affiché dans w-w'intewface utiwisateuw du nyavigateuw, (ˆ ﻌ ˆ)♡ w-weuw pewmettant d-d'ouvwiw u-un nyouvew ongwet a-appawtenant à w'identité. 😳😳😳 iw sewa égawement a-affiché dans wa bawwe d'uww pouw wes ongwets a-appawtenant à cette identité. (U ﹏ U)
+    - `cowow`
 
-      - : `string`. La couleur associée à la nouvelle identité. Cela sera utilisé pour mettre en évidence les onglets appartenant à cette identité. Vous pouvez fournir l'une des valeurs suivantes ici :
+      - : `stwing`. (///ˬ///✿) wa couweuw associée à wa nyouvewwe identité. 😳 cewa sewa utiwisé p-pouw mettwe en évidence w-wes ongwets appawtenant à c-cette i-identité. 😳 vous pouvez fouwniw w'une des vaweuws suivantes ici :
 
-        - "blue"
-        - "turquoise"
-        - "green"
-        - "yellow"
-        - "orange"
-        - "red"
+        - "bwue"
+        - "tuwquoise"
+        - "gween"
+        - "yewwow"
+        - "owange"
+        - "wed"
         - "pink"
-        - "purple"
-        - "toolbar"
+        - "puwpwe"
+        - "toowbaw"
 
     - `icon`
 
-      - : `string`. Le nom d'une icône à afficher dans la barre d'URL pour les onglets appartenant à cette identité. Vous pouvez fournir l'une des valeurs suivantes ici :
+      - : `stwing`. σωσ w-we n-nyom d'une icône à affichew dans w-wa bawwe d'uww p-pouw wes ongwets appawtenant à c-cette identité. rawr x3 vous pouvez f-fouwniw w'une des vaweuws suivantes ici :
 
-        - "fingerprint"
-        - "briefcase"
-        - "dollar"
-        - "cart"
-        - "circle"
+        - "fingewpwint"
+        - "bwiefcase"
+        - "dowwaw"
+        - "cawt"
+        - "ciwcwe"
         - "gift"
         - "vacation"
         - "food"
-        - "fruit"
+        - "fwuit"
         - "pet"
-        - "tree"
-        - "chill"
+        - "twee"
+        - "chiww"
         - "fence"
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} qui décrit la nouvelle identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un {{webextapiwef('contextuawidentities.contextuawidentity', OwO 'contextuawidentity')}} q-qui décwit w-wa nyouvewwe identité. /(^•ω•^) si wa fonctionnawité d'identités contextuewwes ny'est pas activée, 😳😳😳 wa pwomesse e-est wejetée. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple crée une nouvelle identité contextuelle et enregistre son ID de cookie :
+cet e-exempwe cwée une n-nyouvewwe identité contextuewwe et enwegistwe son id de cookie :
 
 ```js
-function onCreated(context) {
-  console.log(`New identity's ID: ${context.cookieStoreId}.`);
+f-function oncweated(context) {
+  consowe.wog(`new identity's id: ${context.cookiestoweid}.`);
 }
 
-function onError(e) {
-  console.error(e);
+f-function onewwow(e) {
+  c-consowe.ewwow(e);
 }
 
-browser.contextualIdentities
-  .create({
-    name: "my-thing",
-    color: "purple",
-    icon: "briefcase",
+b-bwowsew.contextuawidentities
+  .cweate({
+    n-nyame: "my-thing", >_<
+    cowow: "puwpwe", >w<
+    i-icon: "bwiefcase", rawr
   })
-  .then(onCreated, onError);
+  .then(oncweated, 😳 o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,59 +1,59 @@
 ---
-title: permissions.onAdded
-slug: Mozilla/Add-ons/WebExtensions/API/permissions/onAdded
+titwe: pewmissions.onadded
+swug: m-moziwwa/add-ons/webextensions/api/pewmissions/onadded
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Activé lorsque l'extension a accordé de nouvelles permissions.
+a-activé wowsque w-w'extension a accowdé d-de nyouvewwes p-pewmissions. ʘwʘ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.permissions.onAdded.addListener(listener);
-browser.permissions.onAdded.removeListener(listener);
-browser.permissions.onAdded.hasListener(listener);
+b-bwowsew.pewmissions.onadded.addwistenew(wistenew);
+b-bwowsew.pewmissions.onadded.wemovewistenew(wistenew);
+bwowsew.pewmissions.onadded.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute une écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifier si le `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute une écouteuw à c-cet événement. /(^•ω•^)
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. ʘwʘ w-w'awgument `wistenew` est w'écouteuw à s-suppwimew. σωσ
+- `haswistenew(wistenew)`
+  - : véwifiew si we `wistenew` est enwegistwé pouw c-cet événement. OwO wetouwne `twue` s-s'iw écoute, 😳😳😳 s-sinon `fawse`. 😳😳😳
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produira. La fonction passera les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement s-se pwoduiwa. o.O wa fonction passewa wes awguments suivants :
 
-    - `permissions`
-      - : Objet {{WebExtAPIRef("permissions.Permissions")}} contenant les permissions qui ont été accordées.
+    - `pewmissions`
+      - : objet {{webextapiwef("pewmissions.pewmissions")}} c-contenant wes pewmissions q-qui ont été a-accowdées. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-function handleAdded(permissions) {
-  console.log(`New API permissions: ${permissions.permissions}`);
-  console.log(`New host permissions: ${permissions.origins}`);
+function handweadded(pewmissions) {
+  c-consowe.wog(`new api pewmissions: ${pewmissions.pewmissions}`);
+  c-consowe.wog(`new host pewmissions: ${pewmissions.owigins}`);
 }
 
-browser.permissions.onAdded.addListener(handleAdded);
+bwowsew.pewmissions.onadded.addwistenew(handweadded);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
+> cette api est basée suw w'api chwomium [`chwome.pewmissions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions). (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge s-sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa w-wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. (///ˬ///✿)

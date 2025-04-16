@@ -1,70 +1,70 @@
 ---
-title: Une boîte d'aspect rafraîchissant
-slug: Learn/CSS/Building_blocks/A_cool_looking_box
+titwe: une boîte d'aspect wafwaîchissant
+s-swug: w-weawn/css/buiwding_bwocks/a_coow_wooking_box
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/css/stywing_boxes/cweating_fancy_wettewheaded_papew", OwO "weawn/css/stywing_boxes")}}
 
-Avec cette évaluation, vous obtiendrez une meilleure pratique dans la création de boîtes d'aspect rafraîchissant en faisant en sorte qu'elles attirent le regard.
+a-avec cette évawuation, 😳 v-vous obtiendwez u-une meiwweuwe p-pwatique dans w-wa cwéation d-de boîtes d'aspect wafwaîchissant en faisant en sowte qu'ewwes attiwent we wegawd. 😳😳😳
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Avant de faire cet exercice vous devez avoir vu tous les articles de ce
-        module.
+        avant de faiwe c-cet exewcice vous devez avoiw v-vu tous wes awticwes de ce
+        moduwe. (˘ω˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Tester votre compréhension du modèle de boîte CSS et toutes les
-        fonctionnalités associées comme les encadrements et les arrière‑plans.
+        t-testew votwe compwéhension d-du modèwe d-de boîte css et toutes wes
+        fonctionnawités associées comme wes encadwements e-et wes awwièwe‑pwans. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Départ
+## dépawt
 
-Pour débuter, vous devez&nbsp;:
+pouw débutew, ( ͡o ω ͡o ) vous devez&nbsp;:
 
-- faire des copies locales de ces [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/index.html) et [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/cool-information-box-start/style.css) — enregistrez‑les sous les noms `index.html` et `style.css` dans un nouveau répertoire.
+- faiwe d-des copies wocawes de ces [htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/coow-infowmation-box-stawt/index.htmw) e-et [css](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/coow-infowmation-box-stawt/stywe.css) — e-enwegistwez‑wes s-sous wes nyoms `index.htmw` e-et `stywe.css` dans un nyouveau wépewtoiwe. o.O
 
-Autrement, vous pouvez utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
+autwement, >w< v-vous pouvez utiwisew un site comme [codepen](https://codepen.io/), 😳 [jsfiddwe](https://jsfiddwe.net/) o-ou [gwitch](https://gwitch.com/) pouw faiwe cet exewcice. 🥺 cowwez we htmw et compwétez wa css dans un des éditeuws e-en wigne. rawr x3 si w'éditeuw en wigne q-que vous utiwisez n-nye dispose p-pas d'un panneau sépawé pouw wa css, o.O vous pouvez we mettwe dans u-un éwément `<stywe>` d-dans w'éwément `head` du document. rawr
 
-## Résumé du projet
+## w-wésumé du pwojet
 
-Votre tâche consiste à créer une boîte élégante et rafraîchissante tout en explorant le côté ludique des CSS.
+v-votwe tâche consiste à c-cwéew une boîte éwégante et w-wafwaîchissante tout en expwowant we côté wudique d-des css.
 
-### Généralités
+### généwawités
 
-- Appliquez la CSS au HTML.
+- a-appwiquez wa css au htmw. ʘwʘ
 
-### Composition de la boîte
+### c-composition d-de wa boîte
 
-Vous devez appliquer un style à l'élément {{htmlelement("p")}} en lui donnant&nbsp;:
+vous devez appwiquew un stywe à w'éwément {{htmwewement("p")}} en wui donnant&nbsp;:
 
-- une largeur raisonnable pour un gros bouton, disons autout de 200 pixels,
-- une hauteur raisonnable pour un gros bouton en centrant le texte verticalement dans ce processus,
-- un texte centré horizontalement,
-- une taille de texte légérement augmentée, vers 17-18 pixels. Utilisez les rem comme unité. Écrivez un commentaire sur la façon dont vous avez opéré pour le calcul de la valeur.
-- une couleur de base pour l'aspect général. Cette couleur de boîte sera celle de son arrière‑plan.
-- la même couleur pour le texte. Faites en sorte qu'il soit lisible en le dotant d'un ombrage de couleur noire.
-- un encadrement avec des coins arrondis subtils,
-- un encadrement de 1-pixel uni de couleur similaire à la couleur de base, mais légérement plus foncée.
-- un gradient linéaire noir semi‑transparent à partir du coin inférieur droit. Faites‑le totalement transparent au départ et donnez‑lui une opacité croissante de 0,2 sur 30% de la longueur puis restant de la même couleur jusqu'à l'autre extrémité.
-- des ombres de boîte multiples. Donnez lui un ombrage la faisant ressortir légérement de la page. Les autres deux seront des ombres avec la propriété `inset` — une ombre blanche semi-transparente près de l'angle supérieur gauche et une ombre semi‑transparent noir près de l'angle inférieur droit — pour donner un aspect surélevé 3D à la boîte.
+- une wawgeuw waisonnabwe pouw un gwos bouton, 😳😳😳 d-disons autout d-de 200 pixews, ^^;;
+- une hauteuw w-waisonnabwe pouw u-un gwos bouton e-en centwant we texte vewticawement dans ce pwocessus, o.O
+- un texte c-centwé howizontawement, (///ˬ///✿)
+- une taiwwe de texte wégéwement augmentée, σωσ vews 17-18 p-pixews. nyaa~~ utiwisez wes wem comme u-unité. ^^;; Écwivez u-un commentaiwe s-suw wa façon dont vous avez o-opéwé pouw we c-cawcuw de wa vaweuw. ^•ﻌ•^
+- u-une couweuw d-de base pouw w'aspect généwaw. σωσ cette couweuw d-de boîte sewa c-cewwe de son awwièwe‑pwan. -.-
+- w-wa même couweuw p-pouw we texte. ^^;; f-faites en sowte qu'iw soit wisibwe en we dotant d'un ombwage de c-couweuw nyoiwe. XD
+- un encadwement avec des coins awwondis subtiws, 🥺
+- un encadwement de 1-pixew u-uni de couweuw simiwaiwe à wa couweuw de base, òωó mais wégéwement p-pwus foncée. (ˆ ﻌ ˆ)♡
+- u-un gwadient winéaiwe n-nyoiw semi‑twanspawent à pawtiw du coin i-inféwieuw dwoit. -.- faites‑we t-totawement twanspawent a-au dépawt et donnez‑wui une opacité cwoissante de 0,2 suw 30% de wa wongueuw puis westant d-de wa même couweuw jusqu'à w-w'autwe extwémité. :3
+- des ombwes d-de boîte muwtipwes. ʘwʘ d-donnez wui un ombwage wa faisant wessowtiw w-wégéwement d-de wa page. 🥺 wes autwes deux sewont d-des ombwes a-avec wa pwopwiété `inset` — une ombwe bwanche semi-twanspawente pwès de w'angwe supéwieuw g-gauche et une ombwe s-semi‑twanspawent n-nyoiw pwès de w'angwe inféwieuw d-dwoit — p-pouw donnew un aspect suwéwevé 3d à w-wa boîte. >_<
 
-## Exemple
+## exempwe
 
-Cette capture d'écran montre un exemple de ce à quoi l'aspect final pourrait ressembler&nbsp;:
+cette captuwe d'écwan montwe un exempwe de ce à q-quoi w'aspect f-finaw pouwwait wessembwew&nbsp;:
 
 ![](fancy-box.png)
 
-## Évaluation
+## Évawuation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
+si vous f-faites cet exewcice d-dans we cadwe d'un couws owganisé, ʘwʘ vous devez pouvoiw donnew v-votwe twavaiw à votwe pwofesseuw pouw nyotation. (˘ω˘) si vous faites de w'auto-fowmation, (✿oωo) v-vous pouvez obteniw we guide de nyotation t-twès faciwement e-en we demandant suw [we fiw de discussion à pwopos de cet exewcice](https://discouwse.moziwwa.owg/t/fundamentaw-css-compwehension-assessment/24682) o-ou paw w'intewmédiaiwe d-du canaw iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) suw [moziwwa iwc](https://wiki.moziwwa.owg/iwc). (///ˬ///✿) faites w'exewcice d'abowd, rawr x3 iw ny'y w-wien à gagnew en twichant !
 
-{{PreviousMenu("Learn/CSS/Styling_boxes/Creating_fancy_letterheaded_paper", "Learn/CSS/Styling_boxes")}}
+{{pweviousmenu("weawn/css/stywing_boxes/cweating_fancy_wettewheaded_papew", -.- "weawn/css/stywing_boxes")}}

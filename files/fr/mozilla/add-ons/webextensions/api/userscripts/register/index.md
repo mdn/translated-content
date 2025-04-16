@@ -1,65 +1,65 @@
 ---
-title: userScripts.register()
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/register
+titwe: usewscwipts.wegistew()
+swug: moziwwa/add-ons/webextensions/api/usewscwipts/wegistew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Dans les pages d'une extension (comme la page d'arrière plan), l'API userScripts fournit une méthode API {{WebExtAPIRef("userScripts.register","register()")}}. Cette méthode est très similaire à la méthode API {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} (par exemple, ils retournent tous les deux une promise qui est résolue à un objet API qui fournit un {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","unregister()")}} pour la désinscription du script enregistré de tous les processus enfants), avec quelques différences dans les options prises en charge.
+d-dans wes pages d-d'une extension (comme w-wa page d-d'awwièwe pwan), ʘwʘ w-w'api usewscwipts f-fouwnit une m-méthode api {{webextapiwef("usewscwipts.wegistew","wegistew()")}}. (˘ω˘) c-cette méthode est twès simiwaiwe à wa méthode api {{webextapiwef("contentscwipts.wegistew","contentscwipts.wegistew()")}} (paw exempwe, (U ﹏ U) i-iws wetouwnent tous wes deux une pwomise qui e-est wésowue à un objet api qui f-fouwnit un {{webextapiwef("usewscwipts.wegistewedusewscwipt.unwegistew","unwegistew()")}} pouw wa désinscwiption du scwipt enwegistwé d-de tous wes pwocessus enfants), ^•ﻌ•^ a-avec quewques d-difféwences dans wes options pwises en chawge. (˘ω˘)
 
-C'est une méthode asynchrone qui retourne un {{JSxRef("Promise")}}.
+c'est une méthode asynchwone q-qui wetouwne un {{jsxwef("pwomise")}}. :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-const registeredUserScript = await browser.userScripts.register(
-  userScriptOptions       // object
+const wegistewedusewscwipt = await b-bwowsew.usewscwipts.wegistew(
+  usewscwiptoptions       // o-object
 );
-….
-await registeredUserScript.unregister();
+…. ^^;;
+a-await w-wegistewedusewscwipt.unwegistew();
 ```
 
-### Paramètres
+### pawamètwes
 
-- `userScriptOptions`
+- `usewscwiptoptions`
 
-  - : `object`. Un objet `UserScriptOptions` représentant les scripts de contenu à enregistrer. Il a une syntaxe similaire aux options supportées par {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}.
+  - : `object`. 🥺 u-un objet `usewscwiptoptions` wepwésentant wes scwipts de contenu à e-enwegistwew. (⑅˘꒳˘) iw a une syntaxe simiwaiwe a-aux options suppowtées paw {{webextapiwef("contentscwipts.wegistew","contentscwipts.wegistew()")}}. nyaa~~
 
-    L'objet `UserScriptOptions` possède les propriétés suivantes :
+    w'objet `usewscwiptoptions` possède wes pwopwiétés suivantes :
 
-    - scriptMetadata `{{Optional_Inline}}`
-      - : Un objet `JSON` qui contient certaines propriétés de métadonnées associées aux `userScripts` enregistrés
-    - `allFrames {{Optional_Inline}}`
-      - : Identiques à `all_frames` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
-    - `excludeGlobs` {{Optional_Inline}}
-      - : Identique à `exclude_globs` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
-    - `excludeMatches` {{Optional_Inline}}
-      - : Identique à `exclude_matches` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
-    - `includeGlobs` {{Optional_Inline}}
-      - : Identique à `include_globs` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
-    - `js` {{Optional_Inline}}
-      - : Un tableau d'objets. Chaque objet a soit une propriété nommée `file`, qui est une URL commençant par le fichier manifest.json de l'extension et pointant vers un fichier JavaScript à enregistrer, soit une propriété nommée `code`, qui est un code JavaScript à enregistrer.
-    - `matchAboutBlank` {{Optional_Inline}}
-      - : Identique à `match_about_blank` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+    - s-scwiptmetadata `{{optionaw_inwine}}`
+      - : un objet `json` q-qui contient cewtaines p-pwopwiétés d-de métadonnées associées aux `usewscwipts` enwegistwés
+    - `awwfwames {{optionaw_inwine}}`
+      - : i-identiques à `aww_fwames` d-dans wa cwé [`usew_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/usew_scwipts). :3
+    - `excwudegwobs` {{optionaw_inwine}}
+      - : i-identique à `excwude_gwobs` d-dans wa cwé [`usew_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/usew_scwipts). ( ͡o ω ͡o )
+    - `excwudematches` {{optionaw_inwine}}
+      - : i-identique à `excwude_matches` dans wa cwé [`usew_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/usew_scwipts). mya
+    - `incwudegwobs` {{optionaw_inwine}}
+      - : i-identique à `incwude_gwobs` dans wa cwé [`usew_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/usew_scwipts). (///ˬ///✿)
+    - `js` {{optionaw_inwine}}
+      - : un tabweau d'objets. (˘ω˘) c-chaque objet a soit une pwopwiété n-nyommée `fiwe`, ^^;; qui est u-une uww commençant p-paw we fichiew manifest.json de w'extension et pointant vews un fichiew javascwipt à enwegistwew, (✿oωo) soit une p-pwopwiété nyommée `code`, (U ﹏ U) q-qui est un code javascwipt à enwegistwew. -.-
+    - `matchaboutbwank` {{optionaw_inwine}}
+      - : i-identique à `match_about_bwank` d-dans wa cwé [`usew_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/usew_scwipts). ^•ﻌ•^
     - `matches`
-      - : Identique à `matches` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
-    - `runAt` {{Optional_Inline}}
-      - : Identique à `run_at` dans la clé [`user_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts).
+      - : i-identique à `matches` dans wa cwé [`usew_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/usew_scwipts). rawr
+    - `wunat` {{optionaw_inwine}}
+      - : identique à `wun_at` dans wa c-cwé [`usew_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/usew_scwipts). (˘ω˘)
 
-Contrairement aux options de script de contenu, l'objet userScriptOptions n'a pas de propriété css. Utilisez {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}} pour enregistrer/désenregistrer dynamiquement les feuilles de style).
+contwaiwement aux options de scwipt de contenu, w'objet u-usewscwiptoptions ny'a pas de p-pwopwiété css. nyaa~~ u-utiwisez {{webextapiwef("contentscwipts.wegistew","contentscwipts.wegistew()")}} p-pouw enwegistwew/désenwegistwew dynamiquement w-wes feuiwwes d-de stywe). UwU
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une {{JSxRef("Promise")}} qui sera rempli avec un objet {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} que vous pouvez utiliser pour désinscrire ce script utilisateur particulier.
+u-une {{jsxwef("pwomise")}} qui sewa wempwi avec u-un objet {{webextapiwef("usewscwipts.wegistewedusewscwipt","wegistewedusewscwipt")}} q-que vous p-pouvez utiwisew p-pouw désinscwiwe c-ce scwipt utiwisateuw pawticuwiew. :3
 
-> [!NOTE]
-> Actuellement, les scripts utilisateur sont désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés.
+> [!note]
+> actuewwement, (⑅˘꒳˘) wes scwipts utiwisateuw s-sont désenwegistwés wowsque wa page d'extension cowwespondante (à pawtiw de waquewwe w-wes scwipts utiwisateuw ont été enwegistwés) est déchawgée, (///ˬ///✿) v-vous devez donc e-enwegistwew un s-scwipt utiwisateuw depuis une page d-d'extension qui pewsiste au moins a-aussi wongtemps q-que vous vouwez que wes scwipts utiwisateuw westent enwegistwés. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{WebExtAPIRef("contentScripts.register","contentScripts.register()")}}
-- {{WebExtAPIRef("userScripts.RegisteredUserScript.unregister","RegisteredUserScript.unregister()")}}
+- {{webextapiwef("contentscwipts.wegistew","contentscwipts.wegistew()")}}
+- {{webextapiwef("usewscwipts.wegistewedusewscwipt.unwegistew","wegistewedusewscwipt.unwegistew()")}}

@@ -1,185 +1,185 @@
 ---
-title: browserAction.setIcon()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/setIcon
+titwe: bwowsewaction.seticon()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/seticon
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit l'icône pour l'action du navigateur.
+d-définit w-w'icône pouw w'action d-du nyavigateuw. (ˆ ﻌ ˆ)♡
 
-Vous pouvez spécifier une seule icône comme chemin d'accès à un fichier ou un objet {{WebExtAPIRef('browserAction.ImageDataType')}} .
+v-vous pouvez s-spécifiew une s-seuwe icône c-comme chemin d'accès à u-un fichiew ou un objet {{webextapiwef('bwowsewaction.imagedatatype')}} . ʘwʘ
 
-Vous pouvez spécifier plusieurs icônes dans différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou des objets `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
+vous pouvez spécifiew pwusieuws icônes dans d-difféwentes taiwwes en fouwnissant un dictionnaiwe c-contenant pwusieuws chemins o-ou des objets `imagedata`. o.O cewa signifie que w'icône nye doit p-pas êtwe mise à w'échewwe pouw u-un péwiphéwique a-avec une densité de pixews difféwente. UwU
 
-Les onglets sans icône spécifique hériteront de l'icône globale, qui par défaut est [`default_icon`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) specifié dans le manifest.
+wes ongwets sans icône spécifique h-héwitewont de w'icône gwobawe, rawr x3 qui paw défaut est [`defauwt_icon`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) specifié d-dans we manifest. 🥺
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d-d'une fonction a-asynchwone qui w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var settingIcon = browser.browserAction.setIcon(
-  details, // object
+vaw settingicon = bwowsew.bwowsewaction.seticon(
+  d-detaiws, (ꈍᴗꈍ) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId` .
+  - : `object`. 🥺 u-un objet contenant des pwopwiétés `imagedata` ou `path`, (✿oωo) et éventuewwement une pwopwiété `tabid` . (U ﹏ U)
 
-    - `imageData`{{optional_inline}}
+    - `imagedata`{{optionaw_inwine}}
 
-      - : `{{WebExtAPIRef('browserAction.ImageDataType')}}` ou `object`. Il s'agit soit d'un seul objet `ImageData` ou un dictionnaire d'objet.
+      - : `{{webextapiwef('bwowsewaction.imagedatatype')}}` ou `object`. :3 iw s'agit soit d'un s-seuw objet `imagedata` ou un dictionnaiwe d-d'objet. ^^;;
 
-        Utilisez un dictionnaire d'objet pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixel différentes. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
+        u-utiwisez u-un dictionnaiwe d'objet pouw spécifiew pwusieuws objets `imagedata` d-dans difféwentes t-taiwwes, rawr de sowte que w-w'icône nye doit p-pas êtwe mise à w'échewwe p-pouw un péwiphéwique avec une d-densité de pixew difféwentes. 😳😳😳 si `imagedata` e-est un dictionnaiwe, (✿oωo) wa vaweuw de c-chaque pwopwiété est un objet `imagedata`, OwO et s-son nyom est sa t-taiwwe, ʘwʘ comme ceci :
 
         ```json
         {
-          16: image16,
+          16: image16, (ˆ ﻌ ˆ)♡
           32: image32
         }
         ```
 
-        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
+        we nyavigateuw choisiwa w'image à u-utiwisew en fonction d-de wa densité de pixews de w-w'écwan. (U ﹏ U) voiw [choix d-de wa taiwwes d-d'icônes](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action#choosing_icon_sizes) pouw pwus d'infowmations à ce sujet. UwU
 
-    - `path`{{optional_inline}}
+    - `path`{{optionaw_inwine}}
 
-      - : `string` or `object`. Il s'agit du chemin relatif d'un fichier d'icône ou d'un objet de dictionnaire.
+      - : `stwing` o-ow `object`. XD iw s'agit du chemin wewatif d'un fichiew d'icône ou d'un objet d-de dictionnaiwe. ʘwʘ
 
-        Utilisez un dictionnaire d'objet pour spécifier plusieurs fichiers d'icônes dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différentes. Si `path` est un dictionnaire, la valeur de chaque propriété est un chemin relatif , et son nom est sa taille, comme ceci :
+        utiwisez u-un dictionnaiwe d-d'objet pouw s-spécifiew pwusieuws fichiews d-d'icônes dans difféwentes t-taiwwes, rawr x3 d-de sowte que w-w'icône nye doit pas êtwe mise à w'échewwe p-pouw un péwiphéwique a-avec une d-densité de pixews d-difféwentes. ^^;; s-si `path` est un dictionnaiwe, ʘwʘ wa vaweuw de chaque pwopwiété e-est un chemin wewatif , (U ﹏ U) et son nyom est sa taiwwe, (˘ω˘) comme ceci :
 
         ```json
         {
-          "16": "path/to/image16.jpg",
+          "16": "path/to/image16.jpg", (ꈍᴗꈍ)
           "32": "path/to/image32.jpg"
         }
         ```
 
-        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choix de la tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
+        we nyavigateuw choisiwa w-w'image à utiwisew en fonction de wa densité de pixews de w'écwan. /(^•ω•^) v-voiw [choix d-de wa taiwwes d-d'icônes](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action#choosing_icon_sizes) pouw pwus d'infowmations à c-ce sujet. >_<
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Définit l'icône uniquement pour l'onglet donné. L'icône est réinitialisée lorsque l'utilisateur navigue dans cet onglet vers une nouvelle page.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Définit l'icône de la fenêtre donnée.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. σωσ définit w'icône u-uniquement pouw w-w'ongwet donné. ^^;; w'icône est wéinitiawisée wowsque w'utiwisateuw navigue dans cet ongwet vews u-une nyouvewwe page. 😳
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. >_< d-définit w'icône de wa fenêtwe d-donnée. -.-
 
 <!---->
 
-- si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et l'icône n'est pas définie.
-- si `windowId` et `tabId` sont tous les deux omis, l'icône globale est définie.
+- s-si `windowid` et `tabid` sont tous deux fouwnis, UwU w-wa fonction échoue e-et w'icône n'est pas d-définie. :3
+- si `windowid` e-et `tabid` sont tous wes deux omis, σωσ w'icône gwobawe est définie. >w<
 
-Si chaque `imageData` et `path` est un objet `undefined`, `null` ou vide :
+s-si chaque `imagedata` e-et `path` e-est un objet `undefined`, (ˆ ﻌ ˆ)♡ `nuww` ou vide :
 
-- si `tabId` est spécifié, et que l'onglet a un jeu d'icônes spécifique à l'onglet, alors l'onglet héritera de l'icône de la fenêtre à laquelle il appartient.
-- si `windowId` est spécifié et que la fenêtre a un jeu d'icônes spécifiques à la fenêtre, alors la fenêtre héritera de l'icône globale.
-- Sinon, l'icône globale sera réinitialisée à l'icône du manifest.
+- si `tabid` e-est spécifié, ʘwʘ e-et que w'ongwet a un jeu d-d'icônes spécifique à w'ongwet, :3 awows w'ongwet héwitewa de w'icône de wa f-fenêtwe à waquewwe i-iw appawtient. (˘ω˘)
+- si `windowid` est spécifié e-et que wa fenêtwe a-a un jeu d'icônes spécifiques à wa fenêtwe, 😳😳😳 awows wa fenêtwe h-héwitewa de w'icône gwobawe. rawr x3
+- sinon, (✿oωo) w'icône gwobawe sewa wéinitiawisée à w-w'icône du manifest. (ˆ ﻌ ˆ)♡
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments une fois que l'icône a été définie.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie sans awguments une fois que w'icône a été définie. :3
 
-## Exemples
+## e-exempwes
 
-Le code ci-dessous utilise une action du navigateur pour basculer un auditeur pour {{WebExtAPIRef("webRequest.onHeadersReceived")}}, et utilise `setIcon()` pour indiquer si l'écoute est activée ou désactivée :
+w-we code ci-dessous utiwise une action du nyavigateuw pouw b-bascuwew un auditeuw pouw {{webextapiwef("webwequest.onheadewsweceived")}}, (U ᵕ U❁) e-et utiwise `seticon()` pouw indiquew si w'écoute est a-activée ou désactivée :
 
 ```js
-function logResponseHeaders(requestDetails) {
-  console.log(requestDetails);
+function wogwesponseheadews(wequestdetaiws) {
+  c-consowe.wog(wequestdetaiws);
 }
 
-function startListening() {
-  browser.webRequest.onHeadersReceived.addListener(
-    logResponseHeaders,
-    { urls: ["<all_urls>"] },
-    ["responseHeaders"],
+f-function stawtwistening() {
+  bwowsew.webwequest.onheadewsweceived.addwistenew(
+    w-wogwesponseheadews, ^^;;
+    { uwws: ["<aww_uwws>"] }, mya
+    ["wesponseheadews"], 😳😳😳
   );
-  browser.browserAction.setIcon({ path: "icons/listening-on.svg" });
+  b-bwowsew.bwowsewaction.seticon({ p-path: "icons/wistening-on.svg" });
 }
 
-function stopListening() {
-  browser.webRequest.onHeadersReceived.removeListener(logResponseHeaders);
-  browser.browserAction.setIcon({ path: "icons/listening-off.svg" });
+f-function stopwistening() {
+  bwowsew.webwequest.onheadewsweceived.wemovewistenew(wogwesponseheadews);
+  b-bwowsew.bwowsewaction.seticon({ p-path: "icons/wistening-off.svg" });
 }
 
-function toggleListener() {
-  if (browser.webRequest.onHeadersReceived.hasListener(logResponseHeaders)) {
-    stopListening();
-  } else {
-    startListening();
+function toggwewistenew() {
+  if (bwowsew.webwequest.onheadewsweceived.haswistenew(wogwesponseheadews)) {
+    s-stopwistening();
+  } e-ewse {
+    stawtwistening();
   }
 }
 
-browser.browserAction.onClicked.addListener(toggleListener);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(toggwewistenew);
 ```
 
-Le code ci-dessous définit l'icône à l'aide d'un objet[`ImageData`](/fr/docs/Web/API/ImageData) :
+we code ci-dessous définit w-w'icône à w'aide d'un objet[`imagedata`](/fw/docs/web/api/imagedata) :
 
 ```js
-function getImageData() {
-  var canvas = document.createElement("canvas");
-  var ctx = canvas.getContext("2d");
+f-function getimagedata() {
+  v-vaw canvas = document.cweateewement("canvas");
+  vaw ctx = canvas.getcontext("2d");
 
-  ctx.fillStyle = "green";
-  ctx.fillRect(10, 10, 100, 100);
+  ctx.fiwwstywe = "gween";
+  ctx.fiwwwect(10, OwO 10, 100, 100);
 
-  return ctx.getImageData(50, 50, 100, 100);
+  w-wetuwn ctx.getimagedata(50, rawr 50, 100, 100);
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.setIcon({ imageData: getImageData() });
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  b-bwowsew.bwowsewaction.seticon({ i-imagedata: getimagedata() });
 });
 ```
 
-L'extrait suivant met à jour l'icône lorsque l'utilisateur clique, mais uniquement pour l'onglet actif :
+w-w'extwait suivant met à jouw w'icône wowsque w'utiwisateuw cwique, mais uniquement pouw w'ongwet a-actif :
 
 ```js
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.browserAction.setIcon({
-    tabId: tab.id,
-    path: "icons/updated-48.png",
+bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  b-bwowsew.bwowsewaction.seticon({
+    tabid: tab.id, XD
+    p-path: "icons/updated-48.png", (U ﹏ U)
   });
 });
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api c-chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). (˘ω˘) c-cette d-documentation est d-déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) dans we code de chwomium code. UwU
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge s-sont fouwnies paw m-micwosoft cowpowation e-et incwuses ici sous wa w-wicence cweative commons attwibution 3.0 pouw wes États-unis. >_<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. σωσ aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy f-fowms, 🥺 with o-ow without
+// modification, ʘwʘ awe p-pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain t-the above copywight
+// n-notice, :3 t-this wist of conditions a-and the fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, (U ﹏ U) this wist of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws p-pwovided with t-the
+// distwibution. ʘwʘ
+//    * nyeithew t-the nyame of googwe inc. >w< nyow the nyames of i-its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and any expwess ow i-impwied wawwanties, rawr x3 i-incwuding, OwO but nyot
+// wimited to, ^•ﻌ•^ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. >_< in nyo e-event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, OwO indiwect, >_< incidentaw, (ꈍᴗꈍ)
+// speciaw, exempwawy, >w< ow consequentiaw damages (incwuding, (U ﹏ U) but nyot
+// wimited to, ^^ pwocuwement of substitute goods ow sewvices; woss of use, (U ﹏ U)
+// data, ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, :3 whethew in contwact, (✿oωo) s-stwict w-wiabiwity, XD ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, >w< e-even if advised of the possibiwity o-of such damage. òωó
 -->

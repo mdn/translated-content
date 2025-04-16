@@ -1,55 +1,55 @@
 ---
-title: webRequest.StreamFilter.resume()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/resume
+titwe: webwequest.stweamfiwtew.wesume()
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/wesume
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Reprend une requête qui a été précédemment suspendue par un appel à {{WebExtAPIRef("webRequest.StreamFilter.suspend()", "suspend()")}}.
+w-wepwend u-une wequête qui a-a été pwécédemment s-suspendue p-paw un appew à {{webextapiwef("webwequest.stweamfiwtew.suspend()", rawr "suspend()")}}. OwO
 
-Vous ne pouvez pas appeler cette fonction avant que l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}} ne soit déclenché.
+v-vous nye p-pouvez pas appewew cette fonction avant que w'événement {{webextapiwef("webwequest.stweamfiwtew.onstawt", (U ﹏ U) "onstawt")}} nye soit décwenché.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-filter.suspend();
+fiwtew.suspend();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+n-nyone. >_<
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-None.
+n-nyone. rawr x3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple utilise la _suspend/resume_ pour retarder une requête web
+cet e-exempwe utiwise wa _suspend/wesume_ p-pouw wetawdew u-une wequête web
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
+function wistenew(detaiws) {
+  wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
 
-  filter.onstart = (event) => {
-    filter.suspend();
+  f-fiwtew.onstawt = (event) => {
+    fiwtew.suspend();
 
-    setTimeout(() => {
-      filter.resume();
-      filter.disconnect();
-    }, 1000);
+    settimeout(() => {
+      fiwtew.wesume();
+      fiwtew.disconnect();
+    }, mya 1000);
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, nyaa~~
+  { u-uwws: ["https://exampwe.owg/"], (⑅˘꒳˘) types: ["main_fwame"] }, rawr x3
+  ["bwocking"], (✿oωo)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,42 +1,42 @@
 ---
-title: browserSettings.zoomSiteSpecific
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/zoomSiteSpecific
+titwe: bwowsewsettings.zoomsitespecific
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewsettings/zoomsitespecific
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jaccente est un booléen.
+u-un objet {{webextapiwef("types.bwowsewsetting", nyaa~~ "bwowsewsetting")}} dont w-wa vaweuw sous-jaccente e-est u-un boowéen. nyaa~~
 
-Cette propriété contrôle le [réglage de configuration](https://support.mozilla.org/fr/kb/editeur-configuration-firefox) `browser.zoom.siteSpecific`, qui règle comment le zoom est appliqué aux sites et onglets.
+cette p-pwopwiété c-contwôwe we [wégwage d-de configuwation](https://suppowt.moziwwa.owg/fw/kb/editeuw-configuwation-fiwefox) `bwowsew.zoom.sitespecific`, :3 qui wègwe comment we zoom est appwiqué aux sites et ongwets. 😳😳😳
 
-Si `browser.zoom.siteSpecific` est à vrai, les opérations de zoom s'appliquent à toutes les pages du même site selon les règles :
+s-si `bwowsew.zoom.sitespecific` est à vwai, (˘ω˘) wes opéwations d-de zoom s'appwiquent à toutes w-wes pages du même site sewon wes wègwes :
 
-- quand une page charge, si il existe un niveau de zoom pour ce site alors il est appliqué par le navigateur sinon le niveau de zoom par défaut "global" est appliqué.
-- quand le niveau de zoom change pour une page, le niveau des autres pages (dans d'autres onglets) de ce site sont mises à jour.
+- quand une page c-chawge, si iw existe un nyiveau d-de zoom pouw ce s-site awows iw est appwiqué paw we nyavigateuw sinon we nyiveau de zoom paw défaut "gwobaw" e-est appwiqué. ^^
+- quand we nyiveau de zoom change pouw une page, :3 we n-nyiveau des autwes pages (dans d'autwes o-ongwets) d-de ce site sont m-mises à jouw. -.-
 
-Si la préférence `browser.zoom.siteSpecific` est à faux, les opérations de zoom s'appliquent uniquement à l'onglet actif selon les règles :
+s-si wa pwéféwence `bwowsew.zoom.sitespecific` est à faux, 😳 wes opéwations de z-zoom s'appwiquent uniquement à w'ongwet actif sewon w-wes wègwes :
 
-- quand un nouvel onglet s'ouvre, le niveau de zoom par défaut "global" est appliqué.
-- quand le niveau de zoom change dans un onglet, il sera appliqué durant toute la navigation dans cet onglet et n'affectera pas le niveau de zoom des autres onglets.
+- quand un nyouvew ongwet s'ouvwe, mya we nyiveau de zoom paw défaut "gwobaw" est appwiqué. (˘ω˘)
+- q-quand we nyiveau de zoom change d-dans un ongwet, i-iw sewa appwiqué d-duwant toute wa nyavigation dans cet ongwet et ny'affectewa pas w-we nyiveau de z-zoom des autwes ongwets. >_<
 
-Lors de l'installation de Firefox, `browser.zoom.siteSpecific` est à vrai.
+wows de w-w'instawwation d-de fiwefox, -.- `bwowsew.zoom.sitespecific` est à v-vwai. 🥺
 
-Si [`privacy.websites`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/websites)`.resistFingerprinting` est à vrai, ce réglage ne peut pas être changé et le niveau de zoom est appliqué sur le schéma par-onglet.
+si [`pwivacy.websites`](/fw/docs/moziwwa/add-ons/webextensions/api/pwivacy/websites)`.wesistfingewpwinting` est à vwai, (U ﹏ U) c-ce wégwage nye peut pas êtwe changé et we nyiveau d-de zoom est appwiqué suw we s-schéma paw-ongwet. >w<
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Mettre le réglage à `false`:
+mettwe we wégwage à `fawse`:
 
 ```js
-function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+function wogwesuwt(wesuwt) {
+  consowe.wog(`setting was modified: ${wesuwt}`);
 }
 
-browser.browserSettings.zoomSiteSpecific.set({ value: false }).then(logResult);
+b-bwowsew.bwowsewsettings.zoomsitespecific.set({ v-vawue: fawse }).then(wogwesuwt);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

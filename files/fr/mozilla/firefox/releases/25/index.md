@@ -1,72 +1,72 @@
 ---
-title: Firefox 25 for developers
-slug: Mozilla/Firefox/Releases/25
+titwe: fiwefox 25 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/25
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-## Changements pour les développeurs Web
+## c-changements pouw w-wes dévewoppeuws w-web
 
-### Nouveau dans Firefox DevTools
+### nyouveau d-dans fiwefox d-devtoows
 
-- L'inspecteur propose désormais la saisie semi-automatique des noms et valeurs CSS.
-- Le débogueur vous permet désormais de créer des fichiers de script "boîte noire", pour empêcher les points d'arrêt de s'arrêter dans le code de la bibliothèque que vous n'êtes pas intéressé par le débogage.
-- Le profileur a désormais la possibilité d'enregistrer et d'importer les résultats du profilage. "Afficher les données de la plateforme Gecko" est désormais une option dans les options des outils de développement Firefox.
-- Le panneau Réseau dispose d'un menu contextuel accessible par clic droit, avec des commandes de copie et de renvoi d'URL.
-- De nombreux changements sous le capot peuvent rendre nécessaire une réécriture pour les addons qui modifient les DevTools.
+- w-w'inspecteuw pwopose d-désowmais wa saisie semi-automatique des nyoms et vaweuws css. 😳😳😳
+- we débogueuw v-vous pewmet désowmais de cwéew des fichiews d-de scwipt "boîte nyoiwe", nyaa~~ pouw e-empêchew wes points d'awwêt de s'awwêtew dans we code de wa b-bibwiothèque que vous ny'êtes p-pas intéwessé p-paw we débogage.
+- we pwofiweuw a désowmais wa possibiwité d'enwegistwew et d-d'impowtew wes wésuwtats du pwofiwage. rawr "affichew wes données de wa pwatefowme gecko" est désowmais u-une option dans wes options d-des outiws de d-dévewoppement f-fiwefox. -.-
+- we panneau w-wéseau dispose d'un menu contextuew accessibwe p-paw cwic dwoit, avec des commandes de copie e-et de wenvoi d'uww. (✿oωo)
+- de nyombweux changements sous we capot peuvent wendwe nyécessaiwe une wéécwituwe p-pouw wes addons qui m-modifient wes devtoows. /(^•ω•^)
 
-### CSS
+### c-css
 
-- La prise en charge du mot clé `local` en tant que valeur de la propriété CSS {{cssxref("background-attachment")}} a été ajoutée ([bug Firefox 483446](https://bugzil.la/483446)).
-- La prise en charge d'une requête multimédia non standard de Mozilla uniquement pour déterminer la version du système d'exploitation a été ajoutée: [`-moz-os-version`](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries#-moz-os-version) ([bug Firefox 810399](https://bugzil.la/810399)). La propriété n'est actuellement implémentée que sur Windows.
-- La propriété CSS {{cssxref("-moz-osx-font-smoothing")}} a été ajoutée ([bug Firefox 857142](https://bugzil.la/857142)).
-- Notre support expérimental pour {{cssxref("filter")}} prend désormais en charge la notation fonctionnelle `hue-rotate()` ([bug Firefox 897392](https://bugzil.la/897392)). Il est toujours désactivé par défaut.
-- `page-break-inside`: `avoid` travaille maintenant avec la hauteur d'un bloc ([bug Firefox 883676](https://bugzil.la/883676)).
+- w-wa pwise en chawge du mot cwé `wocaw` en tant que vaweuw de w-wa pwopwiété c-css {{cssxwef("backgwound-attachment")}} a été a-ajoutée ([bug f-fiwefox 483446](https://bugziw.wa/483446)). 🥺
+- wa p-pwise en chawge d'une wequête m-muwtimédia nyon standawd de moziwwa uniquement p-pouw détewminew wa vewsion du système d-d'expwoitation a été ajoutée: [`-moz-os-vewsion`](/fw/docs/web/css/css_media_quewies/using_media_quewies#-moz-os-vewsion) ([bug f-fiwefox 810399](https://bugziw.wa/810399)). ʘwʘ w-wa pwopwiété n'est actuewwement impwémentée que suw windows.
+- wa pwopwiété css {{cssxwef("-moz-osx-font-smoothing")}} a été ajoutée ([bug f-fiwefox 857142](https://bugziw.wa/857142)). UwU
+- n-nyotwe suppowt expéwimentaw p-pouw {{cssxwef("fiwtew")}} p-pwend désowmais e-en chawge wa nyotation fonctionnewwe `hue-wotate()` ([bug fiwefox 897392](https://bugziw.wa/897392)). XD iw est toujouws d-désactivé paw défaut. (✿oωo)
+- `page-bweak-inside`: `avoid` twavaiwwe maintenant avec wa hauteuw d'un bwoc ([bug f-fiwefox 883676](https://bugziw.wa/883676)). :3
 
-### HTML
+### htmw
 
-- L'attribut [`srcdoc`](/fr/docs/Web/HTML/Element/iframe#srcdoc), permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est maintenant pris en charge ([bug Firefox 802895](https://bugzil.la/802895)).
-- Lorsqu'elle est utilisée avec un type `"image/jpeg"`, la méthode `HTMLCanvasElement.toBlob` accepte désormais un troisième attribut définissant la qualité de l'image ([bug Firefox 891884](https://bugzil.la/891884)).
+- w'attwibut [`swcdoc`](/fw/docs/web/htmw/ewement/ifwame#swcdoc), (///ˬ///✿) p-pewmettant w-wa spécification e-en wigne du contenu d'un {{htmwewement("ifwame")}}, nyaa~~ est m-maintenant pwis e-en chawge ([bug f-fiwefox 802895](https://bugziw.wa/802895)). >w<
+- w-wowsqu'ewwe est utiwisée avec un type `"image/jpeg"`, -.- w-wa méthode `htmwcanvasewement.tobwob` accepte d-désowmais u-un twoisième a-attwibut définissant w-wa quawité de w'image ([bug fiwefox 891884](https://bugziw.wa/891884)). (✿oωo)
 
-### JavaScript
+### javascwipt
 
-L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) continue!
+w-w'impwémentation d'[ecmascwipt 6](/fw/docs/web/javascwipt/ecmascwipt_6_suppowt_in_moziwwa) (hawmony) continue!
 
-- La méthode {{jsxref("Array.of()")}} est maintenant implémentée sur [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) ([bug Firefox 866849](https://bugzil.la/866849)).
-- Le support des méthodes {{jsxref("Array.prototype.find()")}} et {{jsxref("Array.prototype.findIndex()")}} a été ajouté ([bug Firefox 885553](https://bugzil.la/885553)).
-- Les méthodes {{jsxref("Global_Objects/Number/parseInt", "Number.parseInt()")}} et {{jsxref("Global_Objects/Number/parseFloat", "Number.parseFloat()")}} ont été implémentées ([bug Firefox 886949](https://bugzil.la/886949)).
-- Les méthodes {{jsxref("Map.prototype.forEach()")}} et {{jsxref("Set.prototype.forEach()")}} sont maintenant implémentées ([bug Firefox 866847](https://bugzil.la/866847)).
-- De nouvelles méthodes mathématiques ont été implémentées sur [`Math`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math): `Math.log10()`, `Math.log2()`, `Math.log1p()`, `Math.expm1()`, `Math.cosh()`, `Math.sinh()`, `Math.tanh()`, `Math.acosh()`, `Math.asinh()`, `Math.atanh()`, `Math.trunc()`, `Math.sign()` et `Math.cbrt()` ([bug Firefox 717379](https://bugzil.la/717379)).
-- La prise en charge des littéraux d'entiers binaires et octaux a été ajoutée: `0b10101010`, `0B1010`, `0o777`, `0O237` sont désormais valides ([bug Firefox 894026](https://bugzil.la/894026)).
-- La constante epsilon de la machine, c'est-à-dire le plus petit nombre représentable qui ajouté à 1 ne sera pas 1, est désormais disponible sous la forme {{jsxref("Global_Objects/Number/EPSILON", "Number.EPSILON")}} ([bug Firefox 885798](https://bugzil.la/885798)).
-- Les [tableaux typés](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ont été mis à jour pour [ne plus rechercher dans la chaîne de prototypes les propriétés indexées](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray#indexed_property_access) ([bug Firefox 829896](https://bugzil.la/829896)).
+- wa méthode {{jsxwef("awway.of()")}} est maintenant impwémentée s-suw [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) ([bug fiwefox 866849](https://bugziw.wa/866849)). (˘ω˘)
+- we suppowt des méthodes {{jsxwef("awway.pwototype.find()")}} et {{jsxwef("awway.pwototype.findindex()")}} a-a été a-ajouté ([bug f-fiwefox 885553](https://bugziw.wa/885553)). rawr
+- wes m-méthodes {{jsxwef("gwobaw_objects/numbew/pawseint", OwO "numbew.pawseint()")}} et {{jsxwef("gwobaw_objects/numbew/pawsefwoat", ^•ﻌ•^ "numbew.pawsefwoat()")}} o-ont été i-impwémentées ([bug fiwefox 886949](https://bugziw.wa/886949)).
+- wes méthodes {{jsxwef("map.pwototype.foweach()")}} et {{jsxwef("set.pwototype.foweach()")}} sont maintenant impwémentées ([bug f-fiwefox 866847](https://bugziw.wa/866847)). UwU
+- de nyouvewwes m-méthodes mathématiques ont été i-impwémentées s-suw [`math`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math): `math.wog10()`, (˘ω˘) `math.wog2()`, (///ˬ///✿) `math.wog1p()`, σωσ `math.expm1()`, /(^•ω•^) `math.cosh()`, 😳 `math.sinh()`, 😳 `math.tanh()`, (⑅˘꒳˘) `math.acosh()`, 😳😳😳 `math.asinh()`, 😳 `math.atanh()`, XD `math.twunc()`, mya `math.sign()` et `math.cbwt()` ([bug fiwefox 717379](https://bugziw.wa/717379)). ^•ﻌ•^
+- w-wa pwise e-en chawge des wittéwaux d'entiews b-binaiwes et o-octaux a été ajoutée: `0b10101010`, ʘwʘ `0b1010`, `0o777`, ( ͡o ω ͡o ) `0o237` sont désowmais vawides ([bug fiwefox 894026](https://bugziw.wa/894026)). mya
+- wa c-constante epsiwon d-de wa machine, o.O c-c'est-à-diwe we pwus petit nyombwe w-wepwésentabwe q-qui ajouté à 1 nye sewa pas 1, (✿oωo) e-est désowmais disponibwe sous wa fowme {{jsxwef("gwobaw_objects/numbew/epsiwon", :3 "numbew.epsiwon")}} ([bug fiwefox 885798](https://bugziw.wa/885798)). 😳
+- wes [tabweaux typés](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) o-ont été mis à j-jouw pouw [ne pwus wechewchew dans wa chaîne d-de pwototypes w-wes pwopwiétés indexées](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway#indexed_pwopewty_access) ([bug fiwefox 829896](https://bugziw.wa/829896)). (U ﹏ U)
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-- L'[API Web Audio](/fr/docs/Web/API/Web_Audio_API) est désormais prise en charge. Une implémentation incomplète était auparavant disponible derrière une péférence ([bug Firefox 779297](https://bugzil.la/779297)).
-- Certaines clés liées à IME sous Windows sont prises en charge par `KeyboardEvent.key` ([bug Firefox 865565](https://bugzil.la/865565)), voir [le tableau des noms de clé](/fr/docs/Web/API/KeyboardEvent#keyname_table_win) pour plus de détails.
-- Firefox pour Metro distribue désormais les événements clés de la même manière que la version bureau ([bug Firefox 843236](https://bugzil.la/843236)).
-- L'événement `keypress` n'est plus distribué si `preventDefault()` de l'événement `keydown` précédnt est appelé ([bug Firefox 501496](https://bugzil.la/501496)), voir [le document de l'événement `keydown`](</fr/docs/Web/Reference/Events/keydown#preventDefault()_of_keydown_event>) pour plus de détails.
-- L'interface `Future` a été renommée `Promise` ([bug Firefox 884279](https://bugzil.la/884279)).
-- La propriété `srcDoc` sur l'interface {{domxref("HTMLIFrameElement")}}, permettant la spécification en ligne du contenu d'un {{HTMLElement("iframe")}}, est désormais prise en charge ([bug Firefox 802895](https://bugzil.la/802895)).
-- La méthode `createTBody()` sur l'interface {{domxref("HTMLTableElement")}}, permettant d'obtenir son {{HTMLElement("tbody")}}, est désormais supportée ([bug Firefox 813034](https://bugzil.la/813034)).
-- Le paramètre `toStart` de la méthode {{domxref("Range.collapse()")}} est maintenant facultatif et par défaut à `false`, comme défini dans la spécification ([bug Firefox 891340](https://bugzil.la/891340)).
-- La prise en charge de l'interface {{domxref("ParentNode")}} sur {{domxref("Document")}} et {{domxref("DocumentFragment")}} a été ajoutée ([bug Firefox 895974](https://bugzil.la/895974)).
-- Le `previousElementSibling` et le `nextElementSibling` ont été déplacés vers {{domxref("ChildNode")}} leur permettant d'être appelés non seulement sur un objet {{domxref("Element")}} mais aussi sur un {{domxref("CharacterData")}} ou {{domxref("DocumentType")}} ([bug Firefox 895974](https://bugzil.la/895974)).
-- La propriété `navigator.geolocation` a été mise à jour pour correspondre à la spécification. Il ne renvoie jamais `null`. Lorsque la préférence `geo.enabled` est définie sur `false`, elle renvoie désormais `undefined` ([bug Firefox 884921](https://bugzil.la/884921)).
-- L'attribut `videoPlaybackQuality` sur l'interface {{domxref("HTMLVideoElement")}} a été remplacé par la méthode `getVideoPlaybackQuality` ([bug Firefox 889205](https://bugzil.la/889205)).
-- L'interface non standard de `GlobalObjectConstructor` a été supprimée ([bug Firefox 898136](https://bugzil.la/898136)). Cette interface a été utilisée pour ajouter des arguments aux constructeursd'APIs que les [add-ons](/fr/docs/Mozilla/Add-ons) de Firefox exposaient sur l'objet global. Cette capacité a été supprimée; Notez qu'à l'heure actuelle, il n'y a pas de remplacement pour cette fonctionnalité.
+- w'[api w-web audio](/fw/docs/web/api/web_audio_api) est désowmais pwise en chawge. mya une impwémentation incompwète était a-aupawavant disponibwe dewwièwe une péféwence ([bug f-fiwefox 779297](https://bugziw.wa/779297)). (U ᵕ U❁)
+- c-cewtaines cwés wiées à ime sous windows sont pwises e-en chawge paw `keyboawdevent.key` ([bug f-fiwefox 865565](https://bugziw.wa/865565)), :3 voiw [we tabweau des nyoms de cwé](/fw/docs/web/api/keyboawdevent#keyname_tabwe_win) p-pouw pwus de détaiws. mya
+- f-fiwefox pouw metwo distwibue désowmais wes événements cwés de wa même m-manièwe que wa vewsion buweau ([bug f-fiwefox 843236](https://bugziw.wa/843236)). OwO
+- w-w'événement `keypwess` ny'est p-pwus distwibué si `pweventdefauwt()` d-de w'événement `keydown` p-pwécédnt e-est appewé ([bug fiwefox 501496](https://bugziw.wa/501496)), (ˆ ﻌ ˆ)♡ v-voiw [we d-document de w'événement `keydown`](</fw/docs/web/wefewence/events/keydown#pweventdefauwt()_of_keydown_event>) pouw pwus d-de détaiws. ʘwʘ
+- w-w'intewface `futuwe` a-a été wenommée `pwomise` ([bug fiwefox 884279](https://bugziw.wa/884279)). o.O
+- wa pwopwiété `swcdoc` s-suw w'intewface {{domxwef("htmwifwameewement")}}, UwU pewmettant w-wa spécification e-en wigne du contenu d'un {{htmwewement("ifwame")}}, est désowmais pwise e-en chawge ([bug f-fiwefox 802895](https://bugziw.wa/802895)). rawr x3
+- w-wa méthode `cweatetbody()` suw w-w'intewface {{domxwef("htmwtabweewement")}}, 🥺 pewmettant d'obteniw s-son {{htmwewement("tbody")}}, :3 est désowmais suppowtée ([bug fiwefox 813034](https://bugziw.wa/813034)). (ꈍᴗꈍ)
+- we pawamètwe `tostawt` de wa méthode {{domxwef("wange.cowwapse()")}} e-est maintenant facuwtatif e-et paw défaut à `fawse`, 🥺 comme d-défini dans wa spécification ([bug f-fiwefox 891340](https://bugziw.wa/891340)). (✿oωo)
+- wa pwise en c-chawge de w'intewface {{domxwef("pawentnode")}} s-suw {{domxwef("document")}} e-et {{domxwef("documentfwagment")}} a-a été ajoutée ([bug f-fiwefox 895974](https://bugziw.wa/895974)).
+- we `pweviousewementsibwing` et we `nextewementsibwing` ont été dépwacés vews {{domxwef("chiwdnode")}} weuw pewmettant d-d'êtwe appewés n-nyon seuwement s-suw un objet {{domxwef("ewement")}} mais aussi suw u-un {{domxwef("chawactewdata")}} ou {{domxwef("documenttype")}} ([bug fiwefox 895974](https://bugziw.wa/895974)). (U ﹏ U)
+- wa pwopwiété `navigatow.geowocation` a-a été m-mise à jouw pouw cowwespondwe à w-wa spécification. :3 iw nye wenvoie jamais `nuww`. ^^;; w-wowsque w-wa pwéféwence `geo.enabwed` est d-définie suw `fawse`, rawr e-ewwe wenvoie désowmais `undefined` ([bug fiwefox 884921](https://bugziw.wa/884921)).
+- w'attwibut `videopwaybackquawity` suw w'intewface {{domxwef("htmwvideoewement")}} a-a été wempwacé p-paw wa méthode `getvideopwaybackquawity` ([bug f-fiwefox 889205](https://bugziw.wa/889205)). 😳😳😳
+- w-w'intewface nyon s-standawd de `gwobawobjectconstwuctow` a été s-suppwimée ([bug f-fiwefox 898136](https://bugziw.wa/898136)). (✿oωo) cette i-intewface a été u-utiwisée pouw ajoutew des a-awguments aux constwucteuwsd'apis que wes [add-ons](/fw/docs/moziwwa/add-ons) de fiwefox exposaient s-suw w'objet gwobaw. OwO cette capacité a-a été s-suppwimée; nyotez qu'à w'heuwe a-actuewwe, ʘwʘ iw ny'y a pas de wempwacement pouw cette f-fonctionnawité. (ˆ ﻌ ˆ)♡
 
-### MathML
+### m-mathmw
 
-_Pas de changement._
+_pas d-de changement._
 
-### SVG
+### svg
 
-_Pas de changement._
+_pas de changement._
 
-## Voir aussi
+## voiw a-aussi
 
-### Versions plus anciennes
+### vewsions pwus anciennes
 
-{{Firefox_for_developers('24')}}
+{{fiwefox_fow_devewopews('24')}}

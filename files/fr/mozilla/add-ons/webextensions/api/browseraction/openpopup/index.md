@@ -1,44 +1,44 @@
 ---
-title: browserAction.openPopup()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/openPopup
+titwe: bwowsewaction.openpopup()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/openpopup
 ---
 
-{{AddonSidebar}}Ouvrez le popup de l'action du navigateur.
+{{addonsidebaw}}ouvwez w-we popup de w'action d-du nyavigateuw. 😳😳😳
 
-Vous pouvez uniquement appeler cette fonction à partir du gestionnaire pour une [action utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions).
+v-vous pouvez u-uniquement appewew c-cette fonction à p-pawtiw du g-gestionnaiwe pouw u-une [action utiwisateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_actions). -.-
 
-## Syntaxe
-
-```js
-browser.browserAction.openPopup();
-```
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) cela est résolu sans arguments.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Ouvrez la fenêtre contextuelle lorsque l'utilisateur sélectionne un élément de menu contextuel :
+## syntaxe
 
 ```js
-browser.menus.create({
-  id: "open-popup",
-  title: "open popup",
-  contexts: ["all"],
+bwowsew.bwowsewaction.openpopup();
+```
+
+### pawamètwes
+
+nyone. ( ͡o ω ͡o )
+
+### vaweuw w-wetouwnée
+
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) cewa est wésowu sans awguments. rawr x3
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## e-exempwes
+
+ouvwez wa fenêtwe contextuewwe wowsque w'utiwisateuw s-séwectionne un éwément d-de menu contextuew :
+
+```js
+b-bwowsew.menus.cweate({
+  id: "open-popup", nyaa~~
+  titwe: "open popup",
+  contexts: ["aww"], /(^•ω•^)
 });
 
-browser.menus.onClicked.addListener(() => {
-  browser.browserAction.openPopup();
+bwowsew.menus.oncwicked.addwistenew(() => {
+  b-bwowsew.bwowsewaction.openpopup();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,75 +1,75 @@
 ---
-title: downloads.DangerType
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/DangerType
+titwe: downwoads.dangewtype
+swug: moziwwa/add-ons/webextensions/api/downwoads/dangewtype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `DangerType` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un fichier téléchargeable peut être considéré comme dangereux..
+w-we type `dangewtype` d-de w'api {{webextapiwef("downwoads")}} définit u-un ensembwe d-de waisons possibwes p-pouw wesquewwes u-un fichiew t-téwéchawgeabwe p-peut êtwe considéwé comme dangeweux..
 
-Une propriété de `danger` {{WebExtAPIRef('downloads.DownloadItem')}} contiendra une chaîne tirée des valeurs définies dans ce type.
+une pwopwiété de `dangew` {{webextapiwef('downwoads.downwoaditem')}} contiendwa u-une chaîne tiwée des vaweuws définies dans ce t-type. rawr x3
 
-> [!NOTE]
-> Ces constantes de chaîne ne changeront jamais, mais l'ensemble de DangerTypes peut changer.
+> [!note]
+> ces constantes d-de chaîne ne changewont jamais, /(^•ω•^) mais w'ensembwe de dangewtypes p-peut changew. :3
 
-## Type
+## type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
+wes v-vaweuws de ce type s-sont des chaînes. (ꈍᴗꈍ) wes vaweuws possibwes sont :
 
-- `file`
-  - : Le nom de fichier du téléchargement est suspect.
-- `url`
-  - : L'URL du téléchargement est connue pour être malveillante.
+- `fiwe`
+  - : we nyom de fichiew du téwéchawgement e-est suspect. /(^•ω•^)
+- `uww`
+  - : w'uww du téwéchawgement est connue pouw êtwe mawveiwwante. (⑅˘꒳˘)
 - `content`
-  - : Le fichier téléchargé est connu pour être malveillant.
+  - : we fichiew t-téwéchawgé est connu pouw êtwe m-mawveiwwant. ( ͡o ω ͡o )
 - `uncommon`
-  - : L'URL du téléchargement n'est pas généralement téléchargée.
+  - : w-w'uww du téwéchawgement n-ny'est p-pas généwawement téwéchawgée. òωó
 - `host`
-  - : Le téléchargement provenait d'un hôte connu pour distribuer des binaires malveillants.
+  - : we téwéchawgement p-pwovenait d'un hôte connu pouw distwibuew d-des binaiwes mawveiwwants. (⑅˘꒳˘)
 - `unwanted`
-  - : Le téléchargement est potentiellement indésirable ou dangereux..
+  - : we téwéchawgement est potentiewwement indésiwabwe ou dangeweux..
 - `safe`
-  - : Le téléchargement ne présente aucun danger connu pour l'ordinateur de l'utilisateur.
+  - : w-we téwéchawgement nye pwésente a-aucun dangew c-connu pouw w-w'owdinateuw de w'utiwisateuw. XD
 - `accepted`
-  - : L'utilisateur a accepté le téléchargement dangereux.
+  - : w'utiwisateuw a accepté we téwéchawgement dangeweux. -.-
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> c-cette a-api est basée suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). :3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw m-micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 😳 aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in s-souwce and binawy f-fowms, nyaa~~ with ow without
+// modification, OwO a-awe p-pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, rawr x3 this wist of c-conditions and the fowwowing discwaimew. XD
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, σωσ this w-wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution.
+//    * n-nyeithew t-the nyame of googwe inc. (U ᵕ U❁) nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess ow impwied wawwanties, :3 i-incwuding, ( ͡o ω ͡o ) but nyot
+// wimited t-to, σωσ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. >w< in nyo e-event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, 😳😳😳 i-indiwect, incidentaw, OwO
+// speciaw, 😳 exempwawy, 😳😳😳 ow c-consequentiaw damages (incwuding, (˘ω˘) b-but nyot
+// wimited to, ʘwʘ pwocuwement o-of substitute g-goods ow sewvices; woss of use, ( ͡o ω ͡o )
+// data, ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// t-theowy of wiabiwity, o.O whethew in c-contwact, stwict w-wiabiwity, >w< ow towt
+// (incwuding nyegwigence ow o-othewwise) awising in any way out of the use
+// of this softwawe, 😳 even if advised o-of the possibiwity o-of such damage. 🥺

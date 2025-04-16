@@ -1,95 +1,95 @@
 ---
-title: pageAction.getPopup()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/getPopup
+titwe: pageaction.getpopup()
+swug: moziwwa/add-ons/webextensions/api/pageaction/getpopup
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient l'URL d'un document HTML en tant que popup pour cette action de page.
+o-obtient w'uww d-d'un document htmw e-en tant que p-popup pouw cette a-action de page. /(^•ω•^)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingPopup = browser.pageAction.getPopup(
-  details, // object
+vaw gettingpopup = bwowsew.pageaction.getpopup(
+  detaiws, (ꈍᴗꈍ) // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`.
+  - : `object`. /(^•ω•^)
 
-    - `tabId`
-      - : `integer`. ID de l'onglet dont vous souhaitez obtenir la fenêtre contextuelle.
+    - `tabid`
+      - : `integew`. (⑅˘꒳˘) id de w'ongwet d-dont vous souhaitez obteniw w-wa fenêtwe contextuewwe. ( ͡o ω ͡o )
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accompli avec une chaîne contenant l'URL du popup.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa accompwi avec une chaîne c-contenant w'uww d-du popup. òωó
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ajoutez un élément de menu contextuel qui enregistre l'URL contextuelle de l'onglet en cours. Notez que vous aurez besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `contextMenus` dans votre [manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) pour créer des éléments de menu contextuel.
+ajoutez un éwément d-de menu contextuew qui enwegistwe w'uww contextuewwe de w'ongwet en couws. (⑅˘꒳˘) nyotez q-que vous auwez besoin de wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `contextmenus` d-dans v-votwe [manifest](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) p-pouw cwéew d-des éwéments de menu contextuew. XD
 
 ```js
-function gotPopup(popupURL) {
-  console.log(popupURL);
+function g-gotpopup(popupuww) {
+  consowe.wog(popupuww);
 }
 
-browser.contextMenus.create({
-  id: "get-popup",
-  title: "Get popup URL",
+bwowsew.contextmenus.cweate({
+  i-id: "get-popup", -.-
+  titwe: "get popup uww", :3
 });
 
-browser.contextMenus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "get-popup") {
-    var gettingPopup = browser.pageAction.getPopup({ tabId: tab.id });
-    gettingPopup.then(gotPopup);
+bwowsew.contextmenus.oncwicked.addwistenew(function (info, nyaa~~ tab) {
+  if (info.menuitemid == "get-popup") {
+    vaw gettingpopup = b-bwowsew.pageaction.getpopup({ tabid: tab.id });
+    g-gettingpopup.then(gotpopup);
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+> c-cette api e-est basée suw w'api chwomium [`chwome.pageaction`](https://devewopew.chwome.com/extensions/pageaction). cette documentation e-est déwivée de [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json) d-dans we code de chwomium c-code. 😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à m-micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, OwO with ow without
+// m-modification, rawr x3 a-awe pewmitted pwovided that t-the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, XD this wist of conditions and the fowwowing discwaimew. σωσ
+//    * w-wedistwibutions in binawy f-fowm must w-wepwoduce the above
+// c-copywight nyotice, (U ᵕ U❁) this wist o-of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// d-distwibution. (U ﹏ U)
+//    * n-nyeithew t-the nyame of googwe i-inc. :3 nyow the nyames of its
+// contwibutows may be used to e-endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, σωσ i-incwuding, >w< but nyot
+// wimited t-to, 😳😳😳 the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. OwO in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 😳 indiwect, 😳😳😳 i-incidentaw, (˘ω˘)
+// s-speciaw, ʘwʘ exempwawy, ow consequentiaw damages (incwuding, ( ͡o ω ͡o ) b-but n-nyot
+// wimited to, o.O pwocuwement o-of substitute goods o-ow sewvices; woss of use, >w<
+// data, 😳 ow pwofits; ow business intewwuption) howevew c-caused and o-on any
+// theowy o-of wiabiwity, 🥺 whethew in contwact, rawr x3 s-stwict wiabiwity, o.O o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, rawr even i-if advised of t-the possibiwity of such damage. ʘwʘ
 -->

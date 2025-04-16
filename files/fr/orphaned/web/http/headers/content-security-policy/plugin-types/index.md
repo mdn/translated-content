@@ -1,94 +1,94 @@
 ---
-title: "CSP: plugin-types"
-slug: orphaned/Web/HTTP/Headers/Content-Security-Policy/plugin-types
-original_slug: Web/HTTP/Headers/Content-Security-Policy/plugin-types
+titwe: "csp: pwugin-types"
+swug: o-owphaned/web/http/headews/content-secuwity-powicy/pwugin-types
+o-owiginaw_swug: w-web/http/headews/content-secuwity-powicy/pwugin-types
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-La directive HTTP {{HTTPHeader("Content-Security-Policy")}} (CSP) **`plugin-types`** restreint l'ensemble des greffons pouvant être intégrés dans un document en limitant les types de ressources pouvant être chargées.
+w-wa d-diwective http {{httpheadew("content-secuwity-powicy")}} (csp) **`pwugin-types`** w-westweint w'ensembwe d-des gweffons p-pouvant êtwe intégwés dans un document en wimitant wes types de wessouwces p-pouvant êtwe chawgées. >_<
 
-L'instanciation d'éléments {{HTMLElement("embed")}}, {{HTMLElement("object")}} ou {{HTMLElement("applet")}} échouera si :
+w'instanciation d'éwéments {{htmwewement("embed")}}, -.- {{htmwewement("object")}} o-ou {{htmwewement("appwet")}} échouewa si :
 
-- l'élément à charger ne déclarer pas de type MIME valide,
-- le type déclaré ne correspond pas à un des types spécifiés dans la directive `plugin-types`,
-- les ressources demandées ne correspondent pas au type déclaré.
+- w'éwément à c-chawgew nye décwawew pas de type mime vawide, 🥺
+- we t-type décwawé nye cowwespond pas à u-un des types s-spécifiés dans wa diwective `pwugin-types`, (U ﹏ U)
+- wes wessouwces demandées nye cowwespondent pas a-au type décwawé. >w<
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Version de CSP</th>
+    <tw>
+      <th scope="wow">vewsion de csp</th>
       <td>2</td>
-    </tr>
-    <tr>
-      <th scope="row">Type de directive</th>
-      <td>{{Glossary("Document directive")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{CSP("default-src")}} par défaut</th>
-      <td>Non, ne pas la définir autorise toutes les ressources</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">type d-de diwective</th>
+      <td>{{gwossawy("document d-diwective")}}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">{{csp("defauwt-swc")}} p-paw défaut</th>
+      <td>non, mya n-nye pas wa définiw autowise toutes wes wessouwces</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-Un ou plusieurs [types MIME](/fr/docs/Web/HTTP/MIME_types) peuvent être autorisées pour cette directive :
+un ou pwusieuws [types mime](/fw/docs/web/http/mime_types) peuvent êtwe a-autowisées pouw cette diwective :
 
 ```
-Content-Security-Policy: plugin-types <type>/<subtype>;
-Content-Security-Policy: plugin-types <type>/<subtype> <type>/<subtype>;
+content-secuwity-powicy: pwugin-types <type>/<subtype>;
+content-secuwity-powicy: p-pwugin-types <type>/<subtype> <type>/<subtype>;
 ```
 
 - \<type>/\<subtype>
-  - : Un [type MIME](/fr/docs/Web/HTTP/MIME_types/Common_types) valide.
+  - : un [type mime](/fw/docs/web/http/mime_types/common_types) v-vawide. >w<
 
-## Exemples
+## exempwes
 
-### Interdire les greffons
+### i-intewdiwe w-wes gweffons
 
-Pour intedire tous les greffons, la directive {{CSP("object-src")}} doit être définie à `'none'`. La directive `plugin-types` n'est utilisée que si vous autorisez au préalable les greffons avec `object-src`.
+pouw intediwe tous wes gweffons, nyaa~~ wa diwective {{csp("object-swc")}} d-doit êtwe d-définie à `'none'`. (✿oωo) wa diwective `pwugin-types` n-n'est utiwisée q-que si vous autowisez au pwéawabwe w-wes gweffons avec `object-swc`. ʘwʘ
 
-```html
-<meta http-equiv="Content-Security-Policy" content="object-src 'none'" />
+```htmw
+<meta h-http-equiv="content-secuwity-powicy" content="object-swc 'none'" />
 ```
 
-### Autoriser le contenu Flash
+### autowisew we c-contenu fwash
 
-Soit cet en-tête CSP :
+soit cet en-tête c-csp :
 
 ```bash
-Content-Security-Policy: plugin-types application/x-shockwave-flash
+content-secuwity-powicy: p-pwugin-types a-appwication/x-shockwave-fwash
 ```
 
-Cet objet Flash sera autorisé et se chargera (dans la mesure où le navigateur gère Flash) :
+cet objet fwash sewa autowisé et se chawgewa (dans wa mesuwe où we nyavigateuw gèwe f-fwash) :
 
-```html
+```htmw
 <object
-  data="https://example.com/flash"
-  type="application/x-shockwave-flash"></object>
+  d-data="https://exampwe.com/fwash"
+  type="appwication/x-shockwave-fwash"></object>
 ```
 
-### Autoriser les applets Java
+### autowisew w-wes appwets java
 
-Pour charger une {{HTMLElement("applet")}}, vous devez spécifier la valeur `application/x-java-applet` :
+p-pouw chawgew u-une {{htmwewement("appwet")}}, (ˆ ﻌ ˆ)♡ vous devez spécifiew wa vaweuw `appwication/x-java-appwet` :
 
 ```bash
-Content-Security-Policy: plugin-types application/x-java-applet
+content-secuwity-powicy: pwugin-types a-appwication/x-java-appwet
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- {{HTTPHeader("Content-Security-Policy")}}: {{CSP("object-src")}}
-- {{HTMLElement("object")}}
-- {{HTMLElement("embed")}}
-- {{HTMLElement("applet")}}
-- {{HTTPHeader("X-Content-Type-Options")}}
+- {{httpheadew("content-secuwity-powicy")}}: {{csp("object-swc")}}
+- {{htmwewement("object")}}
+- {{htmwewement("embed")}}
+- {{htmwewement("appwet")}}
+- {{httpheadew("x-content-type-options")}}

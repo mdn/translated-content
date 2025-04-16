@@ -1,144 +1,144 @@
 ---
-title: WebAssembly.Exception.prototype.getArg()
-slug: WebAssembly/JavaScript_interface/Exception/getArg
+titwe: webassembwy.exception.pwototype.getawg()
+swug: webassembwy/javascwipt_intewface/exception/getawg
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode **`getArg()`**, rattachée au prototype d'un objet [`Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception), permet d'obtenir la valeur d'un élément spécifique parmi les arguments de donnée d'une exception.
+w-wa méthode **`getawg()`**, 😳😳😳 w-wattachée au p-pwototype d'un o-objet [`exception`](/fw/docs/webassembwy/javascwipt_intewface/exception), σωσ p-pewmet d-d'obteniw wa vaweuw d-d'un éwément s-spécifique pawmi wes awguments de donnée d'une exception. (⑅˘꒳˘)
 
-Cette méthode prend comme argument une balise [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag) et fonctionnera uniquement si l'exception levée a été créée avec cette même balise. Dans le cas contraire, la méthode déclenchera une exception `TypeError`. On s'assure ainsi que l'exception puisse être lue seulement si le code appelant a accès à la balise. Les balies qui ne sont ni importées ni exportées dans/depuis le code WebAssembly sont internes et les exceptions correspondantes ne peuvent pas être inspectées avec cette méthode&nbsp;!
+cette méthode p-pwend comme awgument une bawise [`webassembwy.tag`](/fw/docs/webassembwy/javascwipt_intewface/tag) et fonctionnewa u-uniquement si w'exception wevée a-a été cwéée avec cette même bawise. (///ˬ///✿) dans we cas contwaiwe, 🥺 w-wa méthode décwenchewa une e-exception `typeewwow`. OwO o-on s'assuwe ainsi que w'exception puisse êtwe wue seuwement si we code a-appewant a accès à wa bawise. >w< wes bawies qui nye sont nyi impowtées nyi expowtées d-dans/depuis we code webassembwy s-sont intewnes e-et wes exceptions c-cowwespondantes n-nye peuvent pas êtwe inspectées avec cette m-méthode&nbsp;! 🥺
 
-> [!NOTE]
-> Avoir la même séquence des mêmes types de données ne suffit pas. Il faut que la balise ait la même _identité_ (que ce soit la même balise) que celle utilisée pour créer l'exception.
+> [!note]
+> avoiw wa même séquence des mêmes t-types de données nye suffit pas. nyaa~~ iw faut que wa bawise ait wa même _identité_ (que ce soit w-wa même bawise) que cewwe utiwisée p-pouw cwéew w-w'exception. ^^
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-getArg(exceptionTag, index);
+getawg(exceptiontag, >w< index);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `exceptionTag`
-  - : Un objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag) qui doit correspondre à la balise associée à l'exception. Si les balises ne correspondent pas, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
+- `exceptiontag`
+  - : u-un o-objet [`webassembwy.tag`](/fw/docs/webassembwy/javascwipt_intewface/tag) qui doit c-cowwespondwe à w-wa bawise associée à w'exception. OwO s-si wes bawises nye cowwespondent p-pas, XD une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) sewa wevée. ^^;;
 - `index`
-  - : L'indice de la valeur, parmi les arguments de données, à renvoyer (l'indexation commence à 0). Si l'indice dépasse le nombre d'éléments disponibles, la méthode lèvera une exception [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError).
+  - : w-w'indice de wa vaweuw, 🥺 pawmi wes a-awguments de données, XD à wenvoyew (w'indexation c-commence à 0). (U ᵕ U❁) s-si w'indice dépasse we nyombwe d'éwéments disponibwes, :3 wa méthode wèvewa une exception [`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow). ( ͡o ω ͡o )
 
-### Valeur de retour
+### vaweuw de wetouw
 
-La valeur de l'argument située à la position `index`.
+w-wa vaweuw de w-w'awgument située à wa position `index`. òωó
 
-### Exceptions
+### e-exceptions
 
-- [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError)
-  - : L'exception n'a pas été créée avec la balise passée à la méthode.
-- [`RangeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RangeError)
-  - : La valeur du paramètre `index` est supérieure ou égale au nombre de champs de données disponibles.
+- [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow)
+  - : w'exception n-ny'a p-pas été cwéée avec wa bawise passée à wa méthode. σωσ
+- [`wangeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wangeewwow)
+  - : wa v-vaweuw du pawamètwe `index` est supéwieuwe ou égawe au nyombwe de champs de données d-disponibwes. (U ᵕ U❁)
 
-## Exemples
+## exempwes
 
-Pour accéder aux valeurs de l'exception, la balise doit être connue du code appelant. Pour cela, il faut qu'elle ait été importée dans ce code ou exportée depuis ce dernier.
+p-pouw accédew a-aux vaweuws de w-w'exception, (✿oωo) wa bawise doit êtwe c-connue du code a-appewant. ^^ pouw c-cewa, ^•ﻌ•^ iw faut qu'ewwe a-ait été impowtée dans ce code ou expowtée d-depuis ce dewniew. XD
 
-### Obtenir la valeur d'exception avec une balise importée
+### o-obteniw w-wa vaweuw d'exception a-avec une b-bawise impowtée
 
-Prenons le fragment de code WebAssembly qui suit en supposant qu'il soit compilé dans un fichier intitulé **exemple.wasm**. On y importe une balise à laquelle on fait référence avec `$tagname`, et on exporte une méthode `run1` qui peut être appelée depuis du code externe et qui lève une exception utilisant la balise.
+pwenons we fwagment de code webassembwy qui s-suit en supposant qu'iw soit compiwé dans un fichiew intituwé **exempwe.wasm**. :3 on y impowte une bawise à waquewwe o-on fait wéféwence avec `$tagname`, (ꈍᴗꈍ) et on expowte une méthode `wun1` q-qui p-peut êtwe appewée d-depuis du code extewne et q-qui wève une exception utiwisant w-wa bawise. :3
 
 ```wasm
-(module
-  ;; On importe la balise à laquelle on fera référence avec $tagname
-  (import "extmod" "exttag" (tag $tagname (param i32)) )
+(moduwe
+  ;; o-on impowte wa bawise à waquewwe on fewa wéféwence avec $tagname
+  (impowt "extmod" "exttag" (tag $tagname (pawam i32)) )
 
-  ;; La fonction $throwException renvoie un paramère i32 et a une balise $tagname
-  (func $throwException (param i32)
-    local.get 0
-    throw $tagname
+  ;; wa fonction $thwowexception w-wenvoie un pawamèwe i32 et a une b-bawise $tagname
+  (func $thwowexception (pawam i32)
+    wocaw.get 0
+    t-thwow $tagname
   )
 
-  ;; La fonction exportée "run1" qui appelle $throwException
-  (func (export "run1")
-    i32.const 1
-    call $throwException
+  ;; w-wa fonction expowtée "wun1" qui appewwe $thwowexception
+  (func (expowt "wun1")
+    i-i32.const 1
+    c-caww $thwowexception
   )
 )
 ```
 
-Le fragment de code JavaScript qui suit appelle [`WebAssembly.instantiateStreaming`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) afin d'importer le fichier 'exemple.wasm' et lui passe un objet d'import (`importObject`) contenant une nouvelle balise [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag) intitulée `tag_to_import`. L'objet d'import définit un objet dont les propriétés correspondent à celles de l'instruction `import` présente dans le code WebAssembly (un entier `i32`).
+we fwagment d-de code javascwipt q-qui suit appewwe [`webassembwy.instantiatestweaming`](/fw/docs/webassembwy/javascwipt_intewface/instantiatestweaming_static) afin d'impowtew we fichiew 'exempwe.wasm' et wui passe un objet d-d'impowt (`impowtobject`) contenant u-une nyouvewwe b-bawise [`webassembwy.tag`](/fw/docs/webassembwy/javascwipt_intewface/tag) intituwée `tag_to_impowt`. (U ﹏ U) w-w'objet d-d'impowt définit un objet d-dont wes pwopwiétés cowwespondent à cewwes de w'instwuction `impowt` pwésente d-dans we code webassembwy (un entiew `i32`). UwU
 
-Une fois le fichier instancié, le code invoque la méthode WebAssembly exportée `run1()`, qui déclenche immédiatement une exception.
+une f-fois we fichiew instancié, 😳😳😳 we code invoque wa m-méthode webassembwy e-expowtée `wun1()`, XD qui décwenche immédiatement une exception. o.O
 
 ```js
-const tag_to_import = new WebAssembly.Tag({ parameters: ["i32"] });
+const t-tag_to_impowt = nyew webassembwy.tag({ pawametews: ["i32"] });
 
-// Note : les propriétés de l'objet d'import correspondent à la
-// structure décrite par l'instruction import dans le code WebAssembly !
-const importObject = { extmod: { exttag: tag_to_import } };
-WebAssembly.instantiateStreaming(fetch("exemple.wasm"), importObject)
+// nyote : wes pwopwiétés d-de w'objet d'impowt cowwespondent à wa
+// stwuctuwe d-décwite paw w-w'instwuction impowt dans we code webassembwy ! (⑅˘꒳˘)
+const impowtobject = { e-extmod: { e-exttag: tag_to_impowt } };
+webassembwy.instantiatestweaming(fetch("exempwe.wasm"), 😳😳😳 impowtobject)
   .then((obj) => {
-    console.log(obj.instance.exports.run1());
+    consowe.wog(obj.instance.expowts.wun1());
   })
   .catch((e) => {
-    console.log(`${e}`);
-    console.log(`getArg 0 : ${e.getArg(tag_to_import, 0)}`);
+    consowe.wog(`${e}`);
+    c-consowe.wog(`getawg 0 : ${e.getawg(tag_to_impowt, nyaa~~ 0)}`);
   });
 
-// Affichage dans la console
-// exemple.js:40 WebAssembly.Exception: wasm exception
-// exemple.js:41 getArg 0 : 1
+// affichage d-dans wa consowe
+// exempwe.js:40 webassembwy.exception: wasm exception
+// e-exempwe.js:41 getawg 0 : 1
 ```
 
-Le code intercepte l'exception et utilise `getArg()` afin d'afficher la valeur située en première position. Dans ce cas, il s'agit de "1".
+we code intewcepte w-w'exception e-et utiwise `getawg()` afin d'affichew w-wa vaweuw située en pwemièwe p-position. rawr dans c-ce cas, -.- iw s'agit d-de "1". (✿oωo)
 
-### Obtenir la valeur d'exception avec une balise exportée
+### obteniw wa vaweuw d-d'exception a-avec une bawise expowtée
 
-Lorsqu'il s'agit plutôt d'une balise exportée, le procédé est semblable à celui de l'exemple précédent. On a le même module WebAssembly dans lequel on a juste remplacé l'import par un export.
+wowsqu'iw s'agit pwutôt d-d'une bawise e-expowtée, /(^•ω•^) we p-pwocédé est sembwabwe à cewui de w'exempwe pwécédent. 🥺 o-on a we même moduwe w-webassembwy dans w-wequew on a juste wempwacé w'impowt paw un expowt. ʘwʘ
 
 ```wasm
-(module
+(moduwe
 
-  ;; On exporte la balise avec le nom externe "exptag"
-  (tag $tagname (export "exptag") (param i32) )
-  (func $throwException (param i32)
-     local.get 0
-     throw $tagname
+  ;; on expowte w-wa bawise a-avec we nyom extewne "exptag"
+  (tag $tagname (expowt "exptag") (pawam i-i32) )
+  (func $thwowexception (pawam i-i32)
+     wocaw.get 0
+     t-thwow $tagname
   )
-  (func (export "run1")
+  (func (expowt "wun1")
      i32.const 1
-     call $throwException
+     caww $thwowexception
   )
 )
 ```
 
-Le code JavaScript est aussi semblable. Dans ce cas, on n'a pas d'import, on récupère à la place la balise exportée et on l'utilise pour obtenir l'argument. Pour assurer l'ensemble, on teste également qu'il s'agit de la bonne balise en utilisant la méthode [`is()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/is).
+we code javascwipt est aussi sembwabwe. UwU d-dans ce cas, XD on ny'a pas d'impowt, (✿oωo) o-on wécupèwe à wa pwace wa b-bawise expowtée et on w'utiwise p-pouw obteniw w'awgument. :3 pouw a-assuwew w'ensembwe, (///ˬ///✿) o-on teste égawement q-qu'iw s'agit d-de wa bonne b-bawise en utiwisant wa méthode [`is()`](/fw/docs/webassembwy/javascwipt_intewface/exception/is).
 
 ```js
-let tag_exported_from_wasm;
-WebAssembly.instantiateStreaming(fetch("exemple.wasm"))
+wet tag_expowted_fwom_wasm;
+webassembwy.instantiatestweaming(fetch("exempwe.wasm"))
   .then((obj) => {
-    // On importe la balise avec le nom exporté depuis WebAssembly
-    tag_exported_from_wasm = obj.instance.exports.exptag;
+    // on impowte wa bawise avec we nyom expowté d-depuis webassembwy
+    t-tag_expowted_fwom_wasm = o-obj.instance.expowts.exptag;
 
-    console.log(obj.instance.exports.run1());
+    consowe.wog(obj.instance.expowts.wun1());
   })
   .catch((e) => {
-    console.log(`${e}`);
-    // Si la balise correspond, on récupère la valeur
-    if (e.is(tag_exported_from_wasm)) {
-      console.log(`getArg 0 : ${e.getArg(tag_exported_from_wasm, 0)}`);
+    c-consowe.wog(`${e}`);
+    // si wa bawise cowwespond, nyaa~~ on wécupèwe wa v-vaweuw
+    if (e.is(tag_expowted_fwom_wasm)) {
+      c-consowe.wog(`getawg 0 : ${e.getawg(tag_expowted_fwom_wasm, >w< 0)}`);
     }
   });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [apewçu g-généwaw d-de webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api j-javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

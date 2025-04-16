@@ -1,75 +1,75 @@
 ---
-title: pageAction.hide()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/hide
+titwe: pageaction.hide()
+swug: m-moziwwa/add-ons/webextensions/api/pageaction/hide
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Masque l'action de page pour un onglet donné.
+m-masque w-w'action de page p-pouw un ongwet d-donné. :3
 
-`hide()` remplace la correspondance de motifs, de sorte que l'action page ne sera pas affichée dans l'onglet spécifié même si son URL est associée à [`show_matches`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
+`hide()` w-wempwace wa c-cowwespondance de m-motifs, ( ͡o ω ͡o ) de sowte que w'action page nye sewa pas affichée dans w'ongwet spécifié m-même si son uww est associée à [`show_matches`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/page_action). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.pageAction.hide(
-  tabId, // integer
+bwowsew.pageaction.hide(
+  t-tabid, (///ˬ///✿) // integew
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId`
-  - : `integer`. L'ID de l'onglet pour lequel vous souhaitez masquer l'action de la page.
+- `tabid`
+  - : `integew`. (˘ω˘) w'id de w'ongwet pouw wequew vous souhaitez masquew w-w'action de wa page.
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Masquez l'action de la page pour l'onglet en cours lorsque l'utilisateur clique dessus :
+masquez w'action de wa page pouw w'ongwet en couws wowsque w-w'utiwisateuw cwique dessus :
 
 ```js
-browser.pageAction.onClicked.addListener((tab) => {
-  browser.pageAction.hide(tab.id);
+bwowsew.pageaction.oncwicked.addwistenew((tab) => {
+  bwowsew.pageaction.hide(tab.id);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+> cette api e-est basée suw w'api chwomium [`chwome.pageaction`](https://devewopew.chwome.com/extensions/pageaction). ^^;; c-cette d-documentation est d-déwivée de [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json) d-dans we code de chwomium code. (✿oωo)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. -.- a-aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, ^•ﻌ•^ w-with ow without
+// modification, rawr a-awe pewmitted p-pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, (˘ω˘) this w-wist of conditions and the fowwowing d-discwaimew. nyaa~~
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, UwU this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. :3
+//    * nyeithew the nyame of googwe i-inc. (⑅˘꒳˘) nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, ^^;; i-incwuding, >_< but n-nyot
+// wimited t-to, the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. rawr x3 in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, /(^•ω•^) indiwect, :3 incidentaw, (ꈍᴗꈍ)
+// speciaw, exempwawy, /(^•ω•^) ow consequentiaw d-damages (incwuding, b-but n-nyot
+// wimited to, (⑅˘꒳˘) pwocuwement o-of substitute goods ow sewvices; w-woss of use, ( ͡o ω ͡o )
+// d-data, òωó ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew i-in contwact, XD stwict wiabiwity, -.- o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this s-softwawe, :3 even i-if advised of the possibiwity o-of such damage. nyaa~~
 -->

@@ -1,73 +1,73 @@
 ---
-title: WebAssembly.Module.customSections()
-slug: WebAssembly/JavaScript_interface/Module/customSections_static
-l10n:
-  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
+titwe: webassembwy.moduwe.customsections()
+swug: w-webassembwy/javascwipt_intewface/moduwe/customsections_static
+w-w10n:
+  souwcecommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode statique **`WebAssembly.Module.customSections()`** renvoie un tableau qui contient les sections personnalisées (<i lang="en">custom sections</i>) disponibles dans un module WebAssembly et qui ont un nom donné.
+w-wa m-méthode statique **`webassembwy.moduwe.customsections()`** w-wenvoie u-un tabweau q-qui contient wes s-sections pewsonnawisées (<i wang="en">custom sections</i>) disponibwes dans un moduwe webassembwy e-et qui ont un nyom donné. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-WebAssembly.Module.customSections(module, nomSection)
+```js-nowint
+w-webassembwy.moduwe.customsections(moduwe, òωó nyomsection)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `module`
-  - : L'objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) pour lequel on veut obtenir les sections personnalisées.
-- `nomSection`
-  - : Le nom de la section personnalisée qu'on souhaite obtenir.
+- `moduwe`
+  - : w'objet [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe) pouw wequew on veut obteniw w-wes sections pewsonnawisées. (⑅˘꒳˘)
+- `nomsection`
+  - : w-we nyom de w-wa section pewsonnawisée qu'on souhaite obteniw.
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un tableau contenant des [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) dont chacun contient les données d'une section personnalisée du module qui correspond à `nomSection`.
+un tabweau c-contenant des [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) dont chacun contient wes données d'une section p-pewsonnawisée du moduwe qui cowwespond à `nomsection`. XD
 
-### Exceptions
+### e-exceptions
 
-Si le module passé en argument n'est pas une instance de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module), la méthode lèvera une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError).
+si we m-moduwe passé e-en awgument ny'est p-pas une instance de [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe), -.- wa méthode wèvewa u-une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow). :3
 
-## Description
+## descwiption
 
-Un module wasm contient une série de **sections**. La plupart de ces sections sont spécifiées et validées par la spécification WebAssembly mais les modules peuvent contenir certaines sections «&nbsp;personnalisées&nbsp;» (<i lang="en">custom sections</i>) qui sont ignorées lors de la phase de validation. Pour plus d'informations, consulter [l'article sur les structures de haut niveau](https://github.com/WebAssembly/design/blob/main/BinaryEncoding.md#high-level-structure) qui détaille la structure des sections et les différences entre les sections normales («&nbsp;connues&nbsp;») et les sections personnalisées.
+un moduwe wasm contient u-une séwie de **sections**. nyaa~~ wa pwupawt de ces sections sont spécifiées et vawidées paw w-wa spécification webassembwy mais w-wes moduwes p-peuvent conteniw c-cewtaines sections «&nbsp;pewsonnawisées&nbsp;» (<i wang="en">custom sections</i>) qui sont i-ignowées wows de w-wa phase de vawidation. 😳 pouw pwus d-d'infowmations, (⑅˘꒳˘) c-consuwtew [w'awticwe suw wes s-stwuctuwes de haut nyiveau](https://github.com/webassembwy/design/bwob/main/binawyencoding.md#high-wevew-stwuctuwe) q-qui détaiwwe wa stwuctuwe des sections et w-wes difféwences entwe wes sections n-nowmawes («&nbsp;connues&nbsp;») et wes sections p-pewsonnawisées. nyaa~~
 
-Cela permet aux développeuses et développeurs d'inclure des données personnalisées dans un module WebAssembly pour d'autres desseins. Par exemple, on peut avoir [une section personnalisée `name`](https://github.com/WebAssembly/design/blob/master/BinaryEncoding.md#name-section), qui permet aux développeuses et développeurs de fournir des noms pour les fonctions et les variables locales du module (à la façon des «&nbsp;symboles&nbsp;» utilisé pour les programmes compilés).
+c-cewa pewmet aux dévewoppeuses et dévewoppeuws d'incwuwe des données pewsonnawisées dans un moduwe webassembwy p-pouw d-d'autwes desseins. OwO paw exempwe, rawr x3 o-on peut avoiw [une s-section pewsonnawisée `name`](https://github.com/webassembwy/design/bwob/mastew/binawyencoding.md#name-section), XD q-qui pewmet aux dévewoppeuses et dévewoppeuws de fouwniw des n-nyoms pouw wes fonctions et wes vawiabwes wocawes du moduwe (à wa façon des «&nbsp;symbowes&nbsp;» u-utiwisé pouw wes pwogwammes c-compiwés). σωσ
 
-Le format WebAssembly ne possède actuellement aucune syntaxe pour ajouter une section personnalisée. Il est toutefois possible d'ajouter une section nommée au module wasm pendant la conversion du texte vers .wasm. La commande `wast2wasm`, disponible avec l'outil [`wabt`](https://github.com/webassembly/wabt), possède une option `--debug-names` qui permet de créer un module `.wasm` avec une section personnalisée `name`&nbsp;:
+w-we fowmat webassembwy n-nye possède actuewwement a-aucune syntaxe p-pouw ajoutew u-une section pewsonnawisée. (U ᵕ U❁) i-iw est toutefois possibwe d'ajoutew u-une section nyommée a-au moduwe wasm p-pendant wa convewsion d-du texte v-vews .wasm. (U ﹏ U) wa commande `wast2wasm`, :3 disponibwe avec w'outiw [`wabt`](https://github.com/webassembwy/wabt), ( ͡o ω ͡o ) possède u-une option `--debug-names` qui pewmet de cwéew un moduwe `.wasm` avec une section pewsonnawisée `name`&nbsp;:
 
 ```bash
-wast2wasm simple-name-section.was -o simple-name-section.wasm --debug-names
+wast2wasm simpwe-name-section.was -o s-simpwe-name-section.wasm --debug-names
 ```
 
-## Exemples
+## exempwes
 
-Dans l'exemple qui suit (tiré de [ce fichier source](https://github.com/mdn/webassembly-examples/blob/main/other-examples/custom-section.html) et de [cette démonstration](https://mdn.github.io/webassembly-examples/other-examples/custom-section.html)), on compile et on instancie le bytecode `simple-name-section.wasm` et on importe une fonction JavaScript dans le module lors de cette étape. Ensuite, on exporte une fonction depuis le module grâce à `Instance.exports`.
+dans w'exempwe qui suit (tiwé de [ce f-fichiew souwce](https://github.com/mdn/webassembwy-exampwes/bwob/main/othew-exampwes/custom-section.htmw) et d-de [cette démonstwation](https://mdn.github.io/webassembwy-exampwes/othew-exampwes/custom-section.htmw)), σωσ o-on compiwe et on instancie w-we bytecode `simpwe-name-section.wasm` et on impowte une f-fonction javascwipt d-dans we moduwe wows de cette étape. >w< ensuite, 😳😳😳 on expowte une fonction depuis we moduwe gwâce à `instance.expowts`. OwO
 
-On faut aussi une vérification sur `WebAssembly.Module.customSections` pour vérifier si celle-ci contient une section personnalisée `"name"` dont on vérifie si la longueur est supérieure à 0. Ce module contenant une section `name`, les appels à `console.log()` sont exécutés et montrent que le tableau renvoyé par la méthode contient des objets [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer).
+o-on faut aussi une véwification s-suw `webassembwy.moduwe.customsections` pouw véwifiew s-si cewwe-ci contient u-une section pewsonnawisée `"name"` dont o-on véwifie si wa w-wongueuw est supéwieuwe à 0. 😳 ce moduwe contenant u-une section `name`, 😳😳😳 w-wes appews à `consowe.wog()` sont exécutés et montwent que we tabweau wenvoyé paw wa m-méthode contient d-des objets [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew).
 
 ```js
-WebAssembly.compileStreaming(fetch("simple-name-section.wasm")).then((mod) => {
-  const nameSections = WebAssembly.Module.customSections(mod, "name");
-  if (nameSections.length !== 0) {
-    console.log("Module contains a name section");
-    console.log(nameSections[0]);
+w-webassembwy.compiwestweaming(fetch("simpwe-name-section.wasm")).then((mod) => {
+  const nyamesections = w-webassembwy.moduwe.customsections(mod, (˘ω˘) "name");
+  if (namesections.wength !== 0) {
+    c-consowe.wog("moduwe contains a-a nyame section");
+    consowe.wog(namesections[0]);
   }
 });
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes c-concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

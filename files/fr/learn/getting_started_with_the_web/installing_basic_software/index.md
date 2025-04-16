@@ -1,65 +1,65 @@
 ---
-title: Installation des outils de base
-slug: Learn/Getting_started_with_the_web/Installing_basic_software
-l10n:
-  sourceCommit: f1d0f645561a3658f896d2e0f0c670686c949492
+titwe: instawwation des outiws d-de base
+swug: w-weawn/getting_stawted_with_the_web/instawwing_basic_softwawe
+w-w10n:
+  s-souwcecommit: f-f1d0f645561a3658f896d2e0f0c670686c949492
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{weawnsidebaw}}{{nextmenu("weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike", 😳😳😳 "weawn/getting_stawted_with_the_web")}}
 
-Dans cet article, nous verrons les outils nécessaires pour commencer le développement web et comment les installer.
+d-dans c-cet awticwe, XD nyous v-vewwons wes outiws nyécessaiwes pouw commencew we dévewoppement web et comment w-wes instawwew. o.O
 
-## Quels outils sont nécessaires pour le moment&nbsp;?
+## quews outiws sont nyécessaiwes p-pouw we moment&nbsp;?
 
-Dans cet article, nous prendrons uniquement le bagage minimum&nbsp;: un éditeur de texte, ainsi que des navigateurs web récents.
+dans c-cet awticwe, (⑅˘꒳˘) nyous pwendwons uniquement we bagage minimum&nbsp;: u-un éditeuw de texte, 😳😳😳 ainsi q-que des nyavigateuws w-web wécents.
 
-### Installer un éditeur de texte
+### instawwew un éditeuw de texte
 
-Vous disposez sans doute déjà d'un éditeur de texte basique sur votre ordinateur. Par défaut, Windows inclut [Bloc-notes](<https://fr.wikipedia.org/wiki/Bloc-notes_(Windows)>), et macOS inclut [TextEdit](https://fr.wikipedia.org/wiki/TextEdit). Pour les distributions Linux, cela peut varier d'une à l'autre, par exemple Ubuntu 22.04 permet d'utiliser [l'éditeur de texte GNOME](https://en.wikipedia.org/wiki/GNOME_Text_Editor) par défaut.
+vous disposez sans doute d-déjà d'un éditeuw de texte basique suw votwe owdinateuw. nyaa~~ paw défaut, rawr windows i-incwut [bwoc-notes](<https://fw.wikipedia.owg/wiki/bwoc-notes_(windows)>), -.- et m-macos incwut [textedit](https://fw.wikipedia.owg/wiki/textedit). (✿oωo) p-pouw wes distwibutions w-winux, /(^•ω•^) c-cewa peut vawiew d'une à w'autwe, 🥺 paw exempwe ubuntu 22.04 p-pewmet d'utiwisew [w'éditeuw de texte g-gnome](https://en.wikipedia.owg/wiki/gnome_text_editow) paw défaut. ʘwʘ
 
-Pour le développement web, Notepad ou TextEdit seront certainement limités. Nous vous recommandons de démarrer avec [Visual Studio Code](https://code.visualstudio.com/), un éditeur gratuit et <i lang="en">open source</i> qui permet des prévisualisations en direct et qui fournit des indications pour la complétion du code.
+pouw we dévewoppement web, UwU nyotepad ou textedit sewont c-cewtainement wimités. XD nyous vous w-wecommandons d-de démawwew avec [visuaw s-studio code](https://code.visuawstudio.com/), (✿oωo) un éditeuw gwatuit et <i w-wang="en">open s-souwce</i> qui pewmet des pwévisuawisations e-en d-diwect et qui fouwnit des indications p-pouw wa compwétion du code. :3
 
-### Installer des navigateurs web récents
+### i-instawwew des nyavigateuws web wécents
 
-Pour le moment, nous allons installer quelques navigateurs de bureau dans lesquels nous pourrons tester notre code. Sélectionnez votre système d'exploitation et utilisez les liens associés pour télécharger les installeurs des navigateurs les plus répandus&nbsp;:
+p-pouw we moment, (///ˬ///✿) nyous awwons instawwew q-quewques nyavigateuws de b-buweau dans wesquews n-nyous pouwwons testew nyotwe code. nyaa~~ séwectionnez votwe système d'expwoitation et utiwisez wes wiens associés p-pouw téwéchawgew w-wes instawweuws des nyavigateuws w-wes pwus w-wépandus&nbsp;:
 
-- Génériques (Linux, Windows, macOS)
-  - [Firefox](https://www.mozilla.org/fr/firefox/new/)
-  - [Chrome](https://www.google.com/chrome/)
-  - [Opera](https://www.opera.com/)
-  - [Brave](https://brave.com)
-- Windows
-  - [Edge](https://www.microsoft.com/edge) (Edge est préinstallé par défaut sur Windows 10 et 11)
-- macOS
-  - [Safari](https://www.apple.com/safari/) (Safari est présent par défaut sur macOS et iOS)
+- g-généwiques (winux, >w< windows, -.- macos)
+  - [fiwefox](https://www.moziwwa.owg/fw/fiwefox/new/)
+  - [chwome](https://www.googwe.com/chwome/)
+  - [opewa](https://www.opewa.com/)
+  - [bwave](https://bwave.com)
+- windows
+  - [edge](https://www.micwosoft.com/edge) (edge e-est pwéinstawwé paw défaut suw windows 10 et 11)
+- macos
+  - [safawi](https://www.appwe.com/safawi/) (safawi e-est pwésent paw défaut s-suw macos e-et ios)
 
-Avant d'aller plus loin, installez au moins deux navigateurs différents afin de pouvoir tester vos sites ou applications web avec.
+avant d-d'awwew pwus woin, (✿oωo) instawwez au m-moins deux nyavigateuws d-difféwents a-afin de pouvoiw t-testew vos sites ou appwications web avec. (˘ω˘)
 
-### Installer un serveur web local
+### i-instawwew un s-sewveuw web wocaw
 
-Pour que certains exemples fonctionnent correctement, il vous faudra avoir mis en place un serveur web local. Pour cela, vous pouvez consulter l'article [Comment configurer un serveur de test local&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server)
+p-pouw que cewtains e-exempwes fonctionnent c-cowwectement, rawr iw vous faudwa avoiw mis en pwace un sewveuw w-web wocaw. OwO pouw cewa, vous pouvez consuwtew w'awticwe [comment configuwew un sewveuw de test w-wocaw&nbsp;?](/fw/docs/weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew)
 
-## Quels outils sont nécessaires pour du développement web professionnel&nbsp;?
+## quews outiws sont nyécessaiwes pouw du dévewoppement w-web p-pwofessionnew&nbsp;?
 
-La liste ci-après peut sembler longue, mais il est tout à fait possible de se lancer dans du développement web sans pour autant connaître dans les détails ce qui suit.
+w-wa wiste ci-apwès peut sembwew w-wongue, ^•ﻌ•^ mais iw est tout à f-fait possibwe d-de se wancew dans du dévewoppement web sans pouw autant connaîtwe dans wes détaiws ce qui suit. UwU
 
-- Un ordinateur
-  - : Si vous lisez cet article depuis un téléphone ou l'ordinateur d'une bibliothèque, sachez qu'il est préférable de disposer d'un ordinateur (de bureau ou portable) sous Linux, Windows ou macOS pour le développement web.
-- Un éditeur de texte
-  - : Un logiciel qui vous permettra d'écrire votre code. Il peut s'agir d'un éditeur de texte (comme [Visual Studio Code](https://code.visualstudio.com/), [Notepad++](https://notepad-plus-plus.org/), [Sublime Text](https://www.sublimetext.com/), [Pulsar](https://pulsar-edit.dev), [GNU Emacs](https://www.gnu.org/software/emacs/), ou [VIM](https://www.vim.org/)), ou d'un éditeur hybride (comme [Dreamweaver](https://www.adobe.com/fr/products/dreamweaver.html) ou [WebStorm](https://www.jetbrains.com/webstorm/)). Les éditeurs de texte graphiques comme Office Word ne doivent pas être utilisés, car ils ne permettent pas d'enregistrer des fichiers texte simple et contiennent des éléments qui interfèrent avec les moteurs de rendu des navigateurs web.
-- Des navigateurs web
-  - : Les navigateurs vous permettront de tester votre code. Les navigateurs les plus répandus sont [Firefox](https://www.mozilla.org/fr/firefox/new/), [Chrome](https://www.google.com/chrome/), [Safari](https://www.apple.com/safari/), [Edge](https://www.microsoft.com/edge). Il est également recommandé de tester votre site sur des appareils mobiles et sur d'éventuels anciens navigateurs qui seraient utilisés par votre public. [Lynx](https://lynx.browser.org/) est un navigateur web texte, qui s'affiche dans un terminal, et qui permet de voir comment le site peut être utilisé par les personnes en situation de handicap visuel.
-- Un éditeur graphique
-  - : [GIMP](https://www.gimp.org/), [Figma](https://www.figma.com/), [Paint.NET](https://www.getpaint.net/), [Photoshop](https://www.adobe.com/products/photoshop.html), [Sketch](https://www.sketch.com) ou [XD](https://www.adobe.com/products/xd.html) vous permettent d'éditer des images pour les visuels de vos pages web.
-- Un système de gestion de version
-  - : Qu'il s'agisse de travailler en équipe sur les mêmes fichiers, d'avoir un serveur de stockage, de partager du code ou d'éviter les conflits de version, vous devrez utiliser un outil de gestion de version. [Git](https://git-scm.com/) est le plus répandu aujourd'hui, et permet d'utiliser des plateformes d'hébergement comme [GitHub](https://github.com/) ou [GitLab](https://about.gitlab.com/).
-- Un client (S)FTP
-  - : Certains hébergeurs vous permettent de téléverser vos fichiers web via (S)FTP (même si [Git](https://git-scm.com/) tend à remplacer (S)FTP). Il existe de nombreux clients (S)FTP comme [Cyberduck](https://cyberduck.io/), [Fetch](https://fetchsoftworks.com/), [WinSCP](https://winscp.net/eng/docs/lang:fr), et [FileZilla](https://filezilla-project.org/).
-- Un système d'automatisation
-  - : Des systèmes comme [Webpack](https://webpack.js.org/), [Grunt](https://gruntjs.com/), ou [Gulp](https://gulpjs.com/) vous permettront d'automatiser certaines tâches répétitives comme la minification du code et le lancement des tests.
-- Bibliothèques et <i lang="en">frameworks</i>
-  - : Ces outils vous permettront de gagner en efficacité pour implémenter les fonctionnalités les plus communes. Une bibliothèque prendra généralement la forme d'un fichier JavaScript ou CSS qui fournit une fonctionnalité prête à l'usage que vous pouvez inclure dans votre code. Un <i lang="en">framework</i> va plus loin et fournit un système complet, avec une surcouche spécifique dans laquelle vous pouvez écrire votre application web.
+- u-un owdinateuw
+  - : si vous w-wisez cet awticwe depuis un téwéphone o-ou w'owdinateuw d-d'une bibwiothèque, (˘ω˘) sachez qu'iw est p-pwéféwabwe de d-disposew d'un owdinateuw (de buweau o-ou powtabwe) s-sous winux, (///ˬ///✿) windows ou macos pouw we dévewoppement web. σωσ
+- un éditeuw de texte
+  - : u-un wogiciew q-qui vous pewmettwa d-d'écwiwe votwe code. iw peut s-s'agiw d'un éditeuw d-de texte (comme [visuaw studio code](https://code.visuawstudio.com/), /(^•ω•^) [notepad++](https://notepad-pwus-pwus.owg/), 😳 [subwime t-text](https://www.subwimetext.com/), 😳 [puwsaw](https://puwsaw-edit.dev), (⑅˘꒳˘) [gnu emacs](https://www.gnu.owg/softwawe/emacs/), 😳😳😳 ou [vim](https://www.vim.owg/)), 😳 ou d'un éditeuw hybwide (comme [dweamweavew](https://www.adobe.com/fw/pwoducts/dweamweavew.htmw) ou [webstowm](https://www.jetbwains.com/webstowm/)). XD w-wes éditeuws d-de texte gwaphiques comme office wowd nye doivent p-pas êtwe u-utiwisés, mya caw iws nye pewmettent pas d'enwegistwew des fichiews t-texte simpwe et contiennent des éwéments qui intewfèwent avec wes moteuws de w-wendu des nyavigateuws web. ^•ﻌ•^
+- des nyavigateuws w-web
+  - : wes nyavigateuws v-vous pewmettwont de testew votwe code. ʘwʘ wes nyavigateuws w-wes pwus wépandus s-sont [fiwefox](https://www.moziwwa.owg/fw/fiwefox/new/), ( ͡o ω ͡o ) [chwome](https://www.googwe.com/chwome/), mya [safawi](https://www.appwe.com/safawi/), o.O [edge](https://www.micwosoft.com/edge). (✿oωo) iw est égawement wecommandé de testew v-votwe site suw des appaweiws m-mobiwes et suw d'éventuews anciens navigateuws qui sewaient utiwisés p-paw votwe pubwic. :3 [wynx](https://wynx.bwowsew.owg/) e-est un n-nyavigateuw web texte, 😳 qui s'affiche d-dans un tewminaw, (U ﹏ U) et qui p-pewmet de voiw comment w-we site peut êtwe u-utiwisé paw wes pewsonnes e-en situation d-de handicap visuew. mya
+- un éditeuw gwaphique
+  - : [gimp](https://www.gimp.owg/), (U ᵕ U❁) [figma](https://www.figma.com/), :3 [paint.net](https://www.getpaint.net/), [photoshop](https://www.adobe.com/pwoducts/photoshop.htmw), mya [sketch](https://www.sketch.com) o-ou [xd](https://www.adobe.com/pwoducts/xd.htmw) v-vous pewmettent d-d'éditew des images pouw wes visuews de v-vos pages web. OwO
+- un système de g-gestion de vewsion
+  - : q-qu'iw s'agisse de twavaiwwew en équipe suw wes mêmes f-fichiews, (ˆ ﻌ ˆ)♡ d'avoiw u-un sewveuw de s-stockage, ʘwʘ de pawtagew d-du code ou d'évitew wes c-confwits de vewsion, vous devwez utiwisew un outiw de gestion de vewsion. o.O [git](https://git-scm.com/) est we pwus w-wépandu aujouwd'hui, UwU et pewmet d-d'utiwisew des pwatefowmes d'hébewgement c-comme [github](https://github.com/) ou [gitwab](https://about.gitwab.com/). rawr x3
+- u-un cwient (s)ftp
+  - : cewtains hébewgeuws v-vous pewmettent d-de téwévewsew v-vos fichiews w-web via (s)ftp (même s-si [git](https://git-scm.com/) tend à wempwacew (s)ftp). iw existe de nyombweux cwients (s)ftp comme [cybewduck](https://cybewduck.io/), [fetch](https://fetchsoftwowks.com/), 🥺 [winscp](https://winscp.net/eng/docs/wang:fw), :3 et [fiweziwwa](https://fiweziwwa-pwoject.owg/). (ꈍᴗꈍ)
+- u-un système d-d'automatisation
+  - : d-des systèmes comme [webpack](https://webpack.js.owg/), 🥺 [gwunt](https://gwuntjs.com/), (✿oωo) o-ou [guwp](https://guwpjs.com/) vous pewmettwont d'automatisew cewtaines tâches w-wépétitives c-comme wa minification du code e-et we wancement des tests. (U ﹏ U)
+- bibwiothèques et <i w-wang="en">fwamewowks</i>
+  - : c-ces outiws vous pewmettwont de g-gagnew en efficacité p-pouw impwémentew wes fonctionnawités wes pwus communes. :3 une bibwiothèque p-pwendwa généwawement w-wa fowme d-d'un fichiew j-javascwipt ou css q-qui fouwnit une fonctionnawité p-pwête à w'usage q-que vous pouvez incwuwe dans v-votwe code. ^^;; un <i w-wang="en">fwamewowk</i> va pwus w-woin et fouwnit un système compwet, rawr avec une s-suwcouche spécifique dans waquewwe v-vous pouvez écwiwe v-votwe appwication web. 😳😳😳
 
-Cette liste n'est pas exhaustive, il existe de nombreux autres outils qui pourront vous être utiles.
+c-cette wiste ny'est pas exhaustive, (✿oωo) iw existe de n-nyombweux autwes o-outiws qui pouwwont v-vous êtwe utiwes. OwO
 
-{{NextMenu("Learn/Getting_started_with_the_web/What_will_your_website_look_like", "Learn/Getting_started_with_the_web")}}
+{{nextmenu("weawn/getting_stawted_with_the_web/nani_wiww_youw_website_wook_wike", "weawn/getting_stawted_with_the_web")}}

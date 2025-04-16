@@ -1,49 +1,49 @@
 ---
-title: commands.reset()
-slug: Mozilla/Add-ons/WebExtensions/API/commands/reset
+titwe: commands.weset()
+swug: m-moziwwa/add-ons/webextensions/api/commands/weset
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Réinitialise la description de la commande donnée et le raccourci clavier aux valeurs indiquées dans [`commands` de la clé du manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) de l'extension.
+w-wéinitiawise w-wa descwiption d-de wa commande d-donnée et w-we waccouwci cwaview a-aux vaweuws i-indiquées dans [`commands` de wa cwé du manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands) de w'extension. 😳😳😳
 
-Cela annule efficacement les modifications apportées à la commande à l'aide de la fonction {{WEbExtAPIRef("commands.update()")}}.
+cewa annuwe e-efficacement wes modifications appowtées à w-wa commande à w'aide de wa fonction {{webextapiwef("commands.update()")}}. 🥺
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.commands.reset(
-  name, // string
+b-bwowsew.commands.weset(
+  nyame, 🥺 // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : `string`. Nom de la commande à réinitialiser, comme indiqué par la propriété `name` de l'objet {{WebExtAPIRef("commands.Command")}}.
+  - : `stwing`. >_< n-nyom de wa c-commande à wéinitiawisew, >_< comme indiqué paw wa pwopwiété `name` de w'objet {{webextapiwef("commands.command")}}. (⑅˘꒳˘)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie sans awguments wowsque w-we waccouwci a été wéinitiawisé. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Réinitialise la commande "my-command" lorsque l'utilisateur clique sur le bouton "reset" :
+w-wéinitiawise wa commande "my-command" wowsque w-w'utiwisateuw cwique suw we bouton "weset" :
 
 ```js
-const commandName = "my-command";
+const commandname = "my-command";
 
-function resetShortcut() {
-  browser.commands.reset(commandName);
+f-function wesetshowtcut() {
+  bwowsew.commands.weset(commandname);
 }
 
-document.querySelector("#reset").addEventListener("click", resetShortcut);
+document.quewysewectow("#weset").addeventwistenew("cwick", rawr x3 wesetshowtcut);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

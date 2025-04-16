@@ -1,52 +1,52 @@
 ---
-title: runtime.getBrowserInfo()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBrowserInfo
+titwe: wuntime.getbwowsewinfo()
+swug: moziwwa/add-ons/webextensions/api/wuntime/getbwowsewinfo
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoie les informations sur le navigateur dans lequel l'extension est installée.
+w-wenvoie w-wes infowmations s-suw we nyavigateuw d-dans wequew w-w'extension est i-instawwée. òωó
 
-Il s'agit d'une fonction asynchrone qui renvoie une {{JSxRef("Promise")}}.
+iw s-s'agit d'une fonction a-asynchwone qui wenvoie une {{jsxwef("pwomise")}}. ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingInfo = browser.runtime.getBrowserInfo();
+vaw gettinginfo = bwowsew.wuntime.getbwowsewinfo();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-None.
+nyone. /(^•ω•^)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet qui a les propriétés suivantes :
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec un objet qui a wes pwopwiétés suivantes :
 
-- **`name`**: Valeur de chaîne représentant le nom du navigateur, par exemple "Firefox".
-- **`vendor`**: Valeur de chaîne représentant le fournisseur du navigateur, par exemple "Mozilla".
-- **`version`**: Chaîne représentant la version du navigateur, par exemple "51.0" or "51.0a2".
-- **`buildID`**: Chaine représentant la version spécifique du navigateur, par exemple "20161018004015".
+- **`name`**: vaweuw de chaîne w-wepwésentant we nyom du nyavigateuw, p-paw exempwe "fiwefox". ʘwʘ
+- **`vendow`**: vaweuw d-de chaîne wepwésentant we fouwnisseuw du nyavigateuw, σωσ paw exempwe "moziwwa". OwO
+- **`vewsion`**: c-chaîne wepwésentant wa vewsion du nyavigateuw, 😳😳😳 paw exempwe "51.0" ow "51.0a2". 😳😳😳
+- **`buiwdid`**: c-chaine wepwésentant wa v-vewsion spécifique d-du nyavigateuw, o.O p-paw exempwe "20161018004015". ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Obtenir et enregistrer le nom du navigateur :
+o-obteniw et enwegistwew we nyom du nyavigateuw :
 
 ```js
-function gotBrowserInfo(info) {
-  console.log(info.name);
+f-function gotbwowsewinfo(info) {
+  consowe.wog(info.name);
 }
 
-var gettingInfo = browser.runtime.getBrowserInfo();
-gettingInfo.then(gotBrowserInfo);
+vaw gettinginfo = bwowsew.wuntime.getbwowsewinfo();
+gettinginfo.then(gotbwowsewinfo);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft e-edge sont f-fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. (U ﹏ U)

@@ -1,48 +1,48 @@
 ---
-title: sessions.MAX_SESSION_RESULTS
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/MAX_SESSION_RESULTS
+titwe: sessions.max_session_wesuwts
+swug: moziwwa/add-ons/webextensions/api/sessions/max_session_wesuwts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le nombre maximum de sessions qui seront retournées par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}. Il est en lecture seule pour le code des WebExtensions, et défini à 25.
+w-we nyombwe maximum d-de sessions q-qui sewont wetouwnées p-paw un a-appew à {{webextapiwef("sessions.getwecentwycwosed()")}}. 😳😳😳 i-iw est e-en wectuwe seuwe p-pouw we code des webextensions, ( ͡o ω ͡o ) et défini à 25. >_<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
+> c-cette api est basée suw w'api chwomium [`chwome.sessions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/sessions). >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, with ow without
+// m-modification, 😳 a-awe pewmitted pwovided t-that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above c-copywight
+// nyotice, >w< this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, OwO t-this wist of conditions and the fowwowing discwaimew
+// in the d-documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (ꈍᴗꈍ)
+//    * n-neithew the nyame of googwe inc. n-now the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, 😳😳😳 incwuding, b-but nyot
+// w-wimited to, mya the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. mya in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (⑅˘꒳˘) indiwect, (U ﹏ U) incidentaw,
+// s-speciaw, mya exempwawy, ʘwʘ o-ow consequentiaw d-damages (incwuding, (˘ω˘) b-but nyot
+// wimited to, (U ﹏ U) pwocuwement o-of substitute g-goods ow s-sewvices; woss of u-use, ^•ﻌ•^
+// data, (˘ω˘) ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// t-theowy of wiabiwity, :3 w-whethew i-in contwact, ^^;; stwict wiabiwity, 🥺 ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, (⑅˘꒳˘) even if advised of the possibiwity o-of such damage. nyaa~~
 -->

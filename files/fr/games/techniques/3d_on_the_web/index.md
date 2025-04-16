@@ -1,96 +1,96 @@
 ---
-title: Jeux 3D sur le web
-slug: Games/Techniques/3D_on_the_web
+titwe: jeux 3d suw we web
+swug: g-games/techniques/3d_on_the_web
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Pour des expériences de jeu riches sur le Web, l'arme de choix est WebGL, qui est fourni sur HTML {{htmlelement ("canvas")}}. WebGL est essentiellement un OpenGL ES 2.0 pour le Web - c'est une API JavaScript fournissant des outils pour créer des animations interactives riches et bien sûr aussi des jeux. Vous pouvez générer et rendre des graphiques 3D dynamiques avec du JavaScript accéléré.
+p-pouw des e-expéwiences de j-jeu wiches suw w-we web, XD w'awme d-de choix est webgw, q-qui est fouwni s-suw htmw {{htmwewement ("canvas")}}. >w< webgw est essentiewwement un opengw es 2.0 pouw we web - c-c'est une api javascwipt fouwnissant des outiws p-pouw cwéew des animations intewactives w-wiches et bien sûw aussi des jeux. òωó vous pouvez généwew e-et wendwe des gwaphiques 3d dynamiques a-avec du j-javascwipt accéwéwé. (ꈍᴗꈍ)
 
-## Documentation et support du navigateur
+## documentation et suppowt du nyavigateuw
 
-La documentation et les spécifications du projet [WebGL](/fr/docs/Web/API/WebGL_API) sont gérées par le [Groupe Khronos](https://www.khronos.org/), pas le W3C comme pour la plupart des API Web. Le support sur les navigateurs modernes est très bon, même sur mobile, donc vous n'avez pas trop à vous en soucier. Les principaux navigateurs prennent en charge WebGL et tout ce dont vous avez besoin est de vous concentrer sur l'optimisation des performances sur les appareils que vous utilisez.
+wa documentation e-et wes spécifications du pwojet [webgw](/fw/docs/web/api/webgw_api) sont géwées paw we [gwoupe khwonos](https://www.khwonos.owg/), rawr x3 p-pas we w3c comme pouw w-wa pwupawt des a-api web. we suppowt s-suw wes nyavigateuws m-modewnes est twès bon, rawr x3 même suw mobiwe, σωσ d-donc vous ny'avez pas twop à vous en souciew. (ꈍᴗꈍ) w-wes pwincipaux nyavigateuws pwennent en chawge webgw et tout ce dont vous avez besoin est de v-vous concentwew suw w'optimisation d-des pewfowmances s-suw wes appaweiws q-que vous utiwisez. rawr
 
-Il y a un effort continu pour rendre libre WebGL 2.0 (basé sur OpenGL ES 3.0) dans un proche avenir, ce qui apporterait de nombreuses améliorations et aiderait les développeurs à construire des jeux pour le Web moderne en utilisant le matériel puissant actuel.
+iw y a un effowt continu pouw wendwe w-wibwe webgw 2.0 (basé s-suw opengw es 3.0) dans u-un pwoche aveniw, ^^;; c-ce qui appowtewait de nyombweuses a-améwiowations et aidewait wes d-dévewoppeuws à constwuiwe des jeux pouw we w-web modewne en utiwisant we matéwiew p-puissant actuew. rawr x3
 
-## Explication des bases de la théorie 3D
+## expwication d-des bases d-de wa théowie 3d
 
-Les bases de la théorie 3D s'articulent autour des formes représentées dans un espace 3D, avec un système de coordonnées utilisé pour calculer leurs positions. Consultez [notre article de base sur la théorie 3D](/fr/docs/Games/Techniques/3D_on_the_web/Basic_theory) pour toutes les informations dont vous avez besoin.
+wes bases de wa théowie 3d s'awticuwent autouw des fowmes wepwésentées dans un espace 3d, (ˆ ﻌ ˆ)♡ a-avec un système d-de coowdonnées utiwisé pouw c-cawcuwew weuws positions. σωσ c-consuwtez [notwe a-awticwe de base suw wa théowie 3d](/fw/docs/games/techniques/3d_on_the_web/basic_theowy) pouw toutes w-wes infowmations dont vous avez besoin. (U ﹏ U)
 
-## Concepts avancés
+## concepts avancés
 
-Vous pouvez faire beaucoup plus avec WebGL. Il y a des concepts avancés dans lesquels vous devriez plonger et en apprendre davantage — les "shaders", la détection de collision ou le dernier sujet brûlant — la réalité virtuelle sur le Web.
+vous pouvez faiwe b-beaucoup pwus avec webgw. >w< iw y a-a des concepts a-avancés dans wesquews v-vous devwiez pwongew et en a-appwendwe davantage — w-wes "shadews", σωσ w-wa détection d-de cowwision ou we dewniew sujet bwûwant — w-wa wéawité v-viwtuewwe suw w-we web. nyaa~~
 
-### Shaders
+### shadews
 
-Il convient de distinguer les shaders, qui sont un cas particulier. Les Shaders utilisent GLSL, un langage d'ombrage OpenGL spécial avec une syntaxe similaire à C, qui est exécuté directement par le pipeline graphique. Ils peuvent être divisés en "Vertex Shaders" et "Fragment Shaders" (ou "Pixel Shaders") — le premier transforme les positions des formes en véritables coordonnées de dessin 3D, tandis que le second calcule les couleurs de rendu et d'autres attributs. Vous devriez absolument lire l'article [GLSL Shaders](/fr/docs/Games/Techniques/3D_on_the_web/GLSL_Shaders) pour en apprendre plus à leur sujet.
+i-iw convient d-de distinguew wes shadews, 🥺 qui sont un cas pawticuwiew. rawr x3 wes shadews u-utiwisent gwsw, σωσ un wangage d'ombwage opengw spéciaw avec une syntaxe simiwaiwe à c, (///ˬ///✿) qui e-est exécuté diwectement paw we pipewine gwaphique. (U ﹏ U) iws peuvent êtwe d-divisés e-en "vewtex shadews" e-et "fwagment shadews" (ou "pixew s-shadews") — we pwemiew twansfowme w-wes positions d-des fowmes en véwitabwes coowdonnées de dessin 3d, ^^;; tandis que we second cawcuwe wes couweuws d-de wendu et d'autwes attwibuts. 🥺 v-vous devwiez absowument wiwe w-w'awticwe [gwsw s-shadews](/fw/docs/games/techniques/3d_on_the_web/gwsw_shadews) pouw en appwendwe pwus à weuw s-sujet.
 
-### Détection de collision
+### détection d-de cowwision
 
-Il est difficile d'imaginer un jeu sans la détection de collision — nous devons toujours mettre au point quand quelque chose frappe quelque chose d'autre. Nous avons des informations disponibles pour votre apprentissage de :
+iw est difficiwe d-d'imaginew u-un jeu sans wa détection de cowwision — nyous devons toujouws mettwe au point q-quand quewque c-chose fwappe quewque c-chose d'autwe. òωó nous avons d-des infowmations d-disponibwes pouw votwe appwentissage d-de :
 
-- [détection de collision 2D](/fr/docs/Games/Techniques/2D_collision_detection)
-- [détection de collision 3D](/fr/docs/Games/Techniques/3D_collision_detection)
+- [détection de cowwision 2d](/fw/docs/games/techniques/2d_cowwision_detection)
+- [détection de cowwision 3d](/fw/docs/games/techniques/3d_cowwision_detection)
 
-### Réalité virtuelle sur le web
+### wéawité viwtuewwe suw we web
 
-Le concept de réalité virtuelle n'est pas nouveau, mais il est en train de conquérir le web grâce à des avancées matérielles telles que l' [Oculus Rift](https://www.oculus.com/en-us/rift/) et l'[API WebVR](/fr/docs/Web/API/WebVR_API) (actuellement expérimental) pour capturer les informations du matériel de réalité virtuelle et les rendre disponibles pour les applications JavaScript. Pour en savoir plus, lisez [WebVR - Réalité virtuelle pour le Web](/fr/docs/Games/Techniques/3D_on_the_web/WebXR).
+w-we concept de w-wéawité viwtuewwe n'est pas nyouveau, XD mais iw e-est en twain de c-conquéwiw we web gwâce à des avancées matéwiewwes tewwes que w-w' [ocuwus wift](https://www.ocuwus.com/en-us/wift/) et w'[api webvw](/fw/docs/web/api/webvw_api) (actuewwement expéwimentaw) pouw captuwew w-wes infowmations du matéwiew de wéawité viwtuewwe e-et wes wendwe d-disponibwes pouw wes appwications javascwipt. :3 pouw en savoiw p-pwus, (U ﹏ U) wisez [webvw - w-wéawité viwtuewwe pouw we web](/fw/docs/games/techniques/3d_on_the_web/webxw). >w<
 
-Il y a aussi la [construction d'une démo de base avec l'article A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) qui montre comment il est facile de construire des environnements 3D pour la réalité virtuelle en utilisant le framework [A-Frame](https://aframe.io//) .
+iw y a aussi w-wa [constwuction d'une démo d-de base avec w'awticwe a-fwame](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_a-fwame) qui montwe comment iw est faciwe d-de constwuiwe des enviwonnements 3d p-pouw wa wéawité v-viwtuewwe en utiwisant we f-fwamewowk [a-fwame](https://afwame.io//) . /(^•ω•^)
 
-## L'essor des bibliothèques et des cadres
+## w'essow des bibwiothèques e-et des c-cadwes
 
-Le codage de WebGL brut est assez complexe, mais vous aurez envie de le maîtriser à long terme, car vos projets seront plus avancés (consultez notre [documentation WebGL](/fr/docs/Web/API/WebGL_API) pour commencer). Pour les projets de monde réel, vous utiliserez probablement aussi un "framework" pour accélérer le développement et vous aider à gérer le projet. L'utilisation d'un "framework" pour les jeux 3D permet également d'optimiser les performances, car les outils que vous utilisez vous permettent de vous concentrer sur la construction du jeu.
+we codage d-de webgw bwut est assez compwexe, (⑅˘꒳˘) m-mais vous a-auwez envie de we maîtwisew à wong tewme, caw v-vos pwojets sewont p-pwus avancés (consuwtez n-nyotwe [documentation webgw](/fw/docs/web/api/webgw_api) pouw commencew). p-pouw wes pwojets de monde w-wéew, ʘwʘ vous utiwisewez p-pwobabwement aussi un "fwamewowk" pouw accéwéwew we dévewoppement e-et vous a-aidew à géwew w-we pwojet. rawr x3 w'utiwisation d-d'un "fwamewowk" pouw w-wes jeux 3d pewmet égawement d'optimisew wes pewfowmances, (˘ω˘) caw wes outiws que vous utiwisez vous pewmettent d-de vous concentwew suw wa constwuction d-du jeu. o.O
 
-La bibliothèque 3D JavaScript la plus populaire est [Three.js](https://threejs.org/), un outil polyvalent qui rend les techniques 3D plus simples à implémenter. Il existe d'autres bibliothèques et cadres de développement de jeux populaires qui valent la peine d'être regardés ; [A-Frame](https://aframe.io/), [PlayCanvas](https://playcanvas.com/) et [Babylon.js](https://www.babylonjs.com/) sont parmi les plus reconnaissables avec une documentation riche, des éditeurs en ligne et des communautés actives.
+wa bibwiothèque 3d j-javascwipt wa pwus popuwaiwe e-est [thwee.js](https://thweejs.owg/), 😳 un outiw p-powyvawent qui wend w-wes techniques 3d p-pwus simpwes à i-impwémentew. o.O i-iw existe d'autwes bibwiothèques et cadwes de dévewoppement de jeux popuwaiwes qui vawent wa peine d'êtwe w-wegawdés ; [a-fwame](https://afwame.io/), ^^;; [pwaycanvas](https://pwaycanvas.com/) e-et [babywon.js](https://www.babywonjs.com/) s-sont pawmi wes pwus w-weconnaissabwes avec une documentation wiche, ( ͡o ω ͡o ) des éditeuws en w-wigne et des communautés a-actives. ^^;;
 
-### Construction d'une démo de base avec A-Frame
+### constwuction d-d'une démo de base avec a-fwame
 
-A-Frame est un "framework" web pour construire des expériences 3D et de la réalité virtuelle. Sous le capot, il s'agit d'un "framework" three.js avec un modèle déclaratif entité-composant, ce qui signifie que nous pouvons construire des scènes avec seulement du HTML. Voir la page [Construction d'une démo de base avec A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame) pour le processus étape par étape de création de la démo .
+a-fwame e-est un "fwamewowk" w-web pouw constwuiwe des expéwiences 3d e-et de w-wa wéawité viwtuewwe. ^^;; sous we capot, XD iw s'agit d'un "fwamewowk" thwee.js avec u-un modèwe décwawatif e-entité-composant, 🥺 c-ce qui s-signifie que nyous p-pouvons constwuiwe des scènes a-avec seuwement d-du htmw. (///ˬ///✿) voiw wa page [constwuction d-d'une démo d-de base avec a-fwame](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_a-fwame) p-pouw we pwocessus étape paw étape de cwéation d-de wa démo . (U ᵕ U❁)
 
-### Construction d'une démo de base avec Babylon.js
+### constwuction d-d'une démo d-de base avec babywon.js
 
-Babylon.js est l'un des moteurs de jeux 3D les plus populaires utilisés par les développeurs. Comme avec n'importe quelle autre bibliothèque 3D, il fournit des fonctions intégrées pour vous aider à implémenter les fonctionnalités 3D courantes plus rapidement. Voir la page [Construction d'une démo de base avec Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js) sur les bases et l'utilisation de Babylon.js, y compris la mise en place d'un environnement de développement, la structuration du code HTML nécessaire et l'écriture du code JavaScript.
+babywon.js e-est w'un des moteuws de jeux 3d wes pwus p-popuwaiwes utiwisés p-paw wes dévewoppeuws. c-comme avec ny'impowte quewwe autwe bibwiothèque 3d, ^^;; i-iw fouwnit des fonctions intégwées pouw vous a-aidew à impwémentew w-wes fonctionnawités 3d couwantes pwus wapidement. ^^;; v-voiw wa page [constwuction d-d'une démo d-de base avec babywon.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_babywon.js) suw wes bases et w'utiwisation d-de babywon.js, rawr y compwis wa mise en p-pwace d'un enviwonnement d-de dévewoppement, (˘ω˘) wa stwuctuwation d-du code htmw nyécessaiwe e-et w'écwituwe d-du code javascwipt. 🥺
 
-### Construction d'une démo de base avec PlayCanvas
+### constwuction d-d'une démo de base avec pwaycanvas
 
-PlayCanvas est un moteur de jeu 3D WebGL populaire ouvert sur GitHub, avec un éditeur disponible en ligne et une bonne documentation. Voir la page [Construction d'une démo de base avec PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas) pour des détails de haut niveau, et d'autres articles montrant comment créer des démos à l'aide de la bibliothèque PlayCanvas et de l'éditeur en ligne.
+pwaycanvas est un moteuw de jeu 3d webgw popuwaiwe ouvewt suw github, nyaa~~ avec un éditeuw disponibwe en wigne et une bonne documentation. :3 voiw wa page [constwuction d-d'une démo de b-base avec pwaycanvas](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_pwaycanvas) pouw des détaiws de haut n-nyiveau, /(^•ω•^) et d-d'autwes awticwes m-montwant comment cwéew des démos à w-w'aide de wa bibwiothèque p-pwaycanvas et d-de w'éditeuw en wigne. ^•ﻌ•^
 
-### Construction d'une démo de base avec Three.js
+### constwuction d-d'une démo de base avec t-thwee.js
 
-Three.js, comme toute autre bibliothèque, vous donne un énorme avantage : au lieu d'écrire des centaines de lignes de code WebGL pour construire quelque chose d'intéressant, vous pouvez utiliser des fonctions intégrées pour le faire beaucoup plus facilement et plus rapidement. Voir la page [Construction d'une démo de base avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js) pour le processus étape par étape de création de la démo .
+thwee.js, UwU c-comme toute autwe bibwiothèque, 😳😳😳 vous donne u-un énowme avantage : a-au wieu d-d'écwiwe des c-centaines de wignes d-de code webgw p-pouw constwuiwe q-quewque chose d-d'intéwessant, OwO v-vous pouvez utiwisew des fonctions i-intégwées pouw w-we faiwe beaucoup p-pwus faciwement et pwus wapidement. ^•ﻌ•^ v-voiw wa page [constwuction d'une démo d-de base avec thwee.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_thwee.js) pouw we p-pwocessus étape p-paw étape de cwéation d-de wa démo . (ꈍᴗꈍ)
 
-### Autres outils
+### autwes o-outiws
 
-Les deux [Unity](http://unity3d.com/) et [Unreal](https://www.unrealengine.com/) peuvent exporter votre jeu vers [WebGL](/fr/docs/Web/API/WebGL_API) avec [asm.js](/fr/docs/Games/Tools/asm.js) , de sorte que vous êtes libre d'utiliser leurs outils et techniques pour construire des jeux qui seront exportés vers le web.
+wes deux [unity](http://unity3d.com/) et [unweaw](https://www.unweawengine.com/) p-peuvent expowtew votwe j-jeu vews [webgw](/fw/docs/web/api/webgw_api) avec [asm.js](/fw/docs/games/toows/asm.js) , (⑅˘꒳˘) d-de sowte que vous êtes wibwe d'utiwisew weuws outiws et techniques p-pouw constwuiwe des jeux qui sewont e-expowtés vews w-we web.
 
 ![](shapes.png)
 
-## Où aller ensuite
+## où awwew ensuite
 
-Avec cet article, nous avons juste effleuré la surface de ce qu'il est possible de faire avec les technologies actuellement disponibles. Vous pouvez créer des jeux 3D immersifs, beaux et rapides à l'aide de WebGL, les bibliothèques et les frameworks s'appuient dessus.
+avec cet awticwe, (⑅˘꒳˘) nyous avons j-juste effweuwé wa suwface de c-ce qu'iw est possibwe d-de faiwe avec w-wes technowogies actuewwement disponibwes. (ˆ ﻌ ˆ)♡ vous p-pouvez cwéew d-des jeux 3d immewsifs, /(^•ω•^) beaux et w-wapides à w'aide de webgw, wes bibwiothèques e-et wes fwamewowks s'appuient dessus. òωó
 
-### Code source
+### c-code s-souwce
 
-Vous pouvez trouver tous les codes source de cette série de [démos sur GitHub](http://end3r.github.io/MDN-Games-3D/).
+vous pouvez t-twouvew tous wes codes souwce d-de cette séwie d-de [démos suw g-github](http://end3w.github.io/mdn-games-3d/).
 
-### API
+### a-api
 
-- [Canvas API](/fr/docs/Web/API/Canvas_API)
-- [WebGL API](/fr/docs/Web/API/WebGL_API)
-- [WebVR API](/fr/docs/Web/API/WebVR_API)
+- [canvas api](/fw/docs/web/api/canvas_api)
+- [webgw api](/fw/docs/web/api/webgw_api)
+- [webvw a-api](/fw/docs/web/api/webvw_api)
 
-### Frameworks
+### fwamewowks
 
-- [Three.js](https://threejs.org/)
-- [Whitestorm.js](http://whitestormjs.xyz/) (basé sur Three.js)
-- [PlayCanvas](https://playcanvas.com/)
-- [Babylon.js](https://www.babylonjs.com/)
-- [A-Frame](https://aframe.io//)
+- [thwee.js](https://thweejs.owg/)
+- [whitestowm.js](http://whitestowmjs.xyz/) (basé s-suw thwee.js)
+- [pwaycanvas](https://pwaycanvas.com/)
+- [babywon.js](https://www.babywonjs.com/)
+- [a-fwame](https://afwame.io//)
 
-### Tutorials
+### t-tutowiaws
 
-- [Construction d'une démo de base avec Three.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Three.js)
-- [Construction d'une démo de base avec PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas)
-- [Construction d'une démo de base avec Babylon.js](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_Babylon.js)
-- [Construction d'une démo de base avec A-Frame](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_A-Frame)
+- [constwuction d-d'une démo de b-base avec thwee.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_thwee.js)
+- [constwuction d-d'une démo d-de base avec pwaycanvas](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_pwaycanvas)
+- [constwuction d-d'une démo de base a-avec babywon.js](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_babywon.js)
+- [constwuction d'une démo d-de base avec a-fwame](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_a-fwame)

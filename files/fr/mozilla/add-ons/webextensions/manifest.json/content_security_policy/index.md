@@ -1,131 +1,131 @@
 ---
-title: content_security_policy
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy
+titwe: content_secuwity_powicy
+swug: moziwwa/add-ons/webextensions/manifest.json/content_secuwity_powicy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"content_security_policy": "default-src 'self'"</pre
+        <pwe c-cwass="bwush: j-json">
+"content_secuwity_powicy": "defauwt-swc 'sewf'"</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les extensions ont une politique de sécurité de contenu qui leur est appliquée par défaut. La stratégie par défaut restreint les sources à partir desquelles elles peuvent charger les ressources [\<script>](/fr/docs/Web/HTML/Element/script) et [\<object>](/fr/docs/Web/HTML/Element/object), et interdit les pratiques potentiellement dangereuses telles que l'utilisation d'[`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité de contenu par défaut](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#politique_de_sécurité_du_contenu_par_défaut) pour en savoir plus sur ces implications.
+w-wes extensions o-ont une powitique de sécuwité de contenu qui weuw est appwiquée paw défaut. σωσ w-wa stwatégie paw défaut westweint wes souwces à p-pawtiw desquewwes ewwes peuvent c-chawgew wes wessouwces [\<scwipt>](/fw/docs/web/htmw/ewement/scwipt) et [\<object>](/fw/docs/web/htmw/ewement/object), nyaa~~ et i-intewdit wes pwatiques potentiewwement d-dangeweuses t-tewwes que w'utiwisation d'[`evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw). ^^;; voiw wa [powitique de sécuwité de contenu paw d-défaut](/fw/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy#powitique_de_sécuwité_du_contenu_paw_défaut) pouw en savoiw pwus suw ces impwications. ^•ﻌ•^
 
-Vous pouvez utiliser la clé `"content_security_policy"` pour desserrer ou resserrer la politique par défaut. Cette clé est spécifiée de la même manière que l'en-tête HTTP Content-Security-Policy. Voir l'[utilisation de la politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) pour une description générale de la syntaxe de CSP.
+vous pouvez u-utiwisew wa cwé `"content_secuwity_powicy"` pouw d-dessewwew ou w-wessewwew wa powitique p-paw défaut. σωσ c-cette cwé est spécifiée de wa même manièwe q-que w'en-tête http content-secuwity-powicy. -.- voiw w'[utiwisation d-de wa powitique de sécuwité de contenu](/fw/docs/web/http/csp) pouw une descwiption généwawe de wa syntaxe d-de csp. ^^;;
 
-Par exemple, vous pouvez utiliser cette clé pour&nbsp;:
+paw exempwe, XD vous pouvez u-utiwisew cette c-cwé pouw&nbsp;:
 
-- permettre à l'extension de charger des scripts et des objets hors de son paquet, en fournissant leurs URL dans les directives {{CSP("script-src")}} or {{CSP("object-src")}}&nbsp;;
-- permettre à l'extension d'exécuter des scripts en ligne, en [fournissant le hash du script dans la directive `"script-src"`](/fr/docs/HTTP/Headers/Content-Security-Policy/script-src#Unsafe_inline_script)&nbsp;;
-- permettre à l'extension d'utiliser `eval()` et des fonctionnalités similaires, en incluant `'unsafe-eval'` dans la directive {{CSP("script-src")}}&nbsp;;
-- limiter les sources autorisées pour d'autres types de contenu, tels que les images et les feuilles de style, en utilisant la [directive de politique](https://publicsuffix.org/list/) appropriée.
+- p-pewmettwe à w'extension de chawgew des scwipts et des o-objets hows de son p-paquet, 🥺 en fouwnissant weuws u-uww dans wes diwectives {{csp("scwipt-swc")}} o-ow {{csp("object-swc")}}&nbsp;;
+- pewmettwe à w'extension d-d'exékawaii~w des scwipts e-en wigne, òωó en [fouwnissant we hash du scwipt d-dans wa diwective `"scwipt-swc"`](/fw/docs/http/headews/content-secuwity-powicy/scwipt-swc#unsafe_inwine_scwipt)&nbsp;;
+- pewmettwe à w-w'extension d'utiwisew `evaw()` e-et des fonctionnawités simiwaiwes, (ˆ ﻌ ˆ)♡ e-en incwuant `'unsafe-evaw'` dans wa diwective {{csp("scwipt-swc")}}&nbsp;;
+- wimitew wes souwces autowisées pouw d'autwes types de contenu, tews que w-wes images et wes f-feuiwwes de stywe, -.- en utiwisant w-wa [diwective d-de powitique](https://pubwicsuffix.owg/wist/) appwopwiée. :3
 
-Il existe des restrictions sur la politique que vous pouvez spécifier ici&nbsp;:
+i-iw existe des westwictions suw wa powitique que vous p-pouvez spécifiew ici&nbsp;:
 
-- La politique doit inclure au moins les directives {{CSP("script-src")}} et les {{CSP("object-src")}}, et la directive {{CSP("script-src")}} doit contenir le mot-clé `'self'`.
-- Les sources distantes doivent utiliser le schéma `https:`.
-- Les sources distantes ne doivent pas utiliser de caractères génériques pour les domaines dans la [liste des suffixes publics](https://publicsuffix.org/list/) (ainsi, «&nbsp;\*.co.uk&nbsp;» et «&nbsp;\*.blogspot.com&nbsp;» ne sont pas autorisés, même si «&nbsp;\*.foo.blogspot.com&nbsp;» est autorisé).
-- Toutes les sources doivent spécifier un hôte.
-- Les seuls schémas autorisés pour les sources sont&nbsp;: `blob:`, `filesystem:`, `moz-extension:`, et `https:`.
-- Les seuls [mots-clés](/fr/docs/HTTP/Headers/Content-Security-Policy/default-src#Sources) autorisés sont&nbsp;: `'none'`, `'self'`, et `'unsafe-eval'`.
+- wa powitique doit incwuwe au moins wes diwectives {{csp("scwipt-swc")}} e-et wes {{csp("object-swc")}}, ʘwʘ et wa diwective {{csp("scwipt-swc")}} d-doit c-conteniw we mot-cwé `'sewf'`. 🥺
+- w-wes souwces distantes doivent u-utiwisew we schéma `https:`. >_<
+- w-wes souwces distantes n-nye doivent p-pas utiwisew de cawactèwes généwiques pouw w-wes domaines dans w-wa [wiste des s-suffixes pubwics](https://pubwicsuffix.owg/wist/) (ainsi, ʘwʘ «&nbsp;\*.co.uk&nbsp;» e-et «&nbsp;\*.bwogspot.com&nbsp;» n-nye sont pas autowisés, (˘ω˘) même si «&nbsp;\*.foo.bwogspot.com&nbsp;» est a-autowisé). (✿oωo)
+- toutes wes souwces doivent spécifiew un hôte.
+- wes seuws schémas autowisés p-pouw wes souwces sont&nbsp;: `bwob:`, (///ˬ///✿) `fiwesystem:`, rawr x3 `moz-extension:`, -.- et `https:`. ^^
+- wes seuws [mots-cwés](/fw/docs/http/headews/content-secuwity-powicy/defauwt-swc#souwces) a-autowisés sont&nbsp;: `'none'`, (⑅˘꒳˘) `'sewf'`, e-et `'unsafe-evaw'`. nyaa~~
 
-## Exemple
+## e-exempwe
 
-### Examples valides
+### exampwes vawides
 
-Autoriser les scripts distants de `https://example.com` : <sup>(_voir note_ [1](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy#examplenote_1)</sup>
-
-```json
-"content_security_policy": "script-src 'self' https://example.com; object-src 'self'"
-```
-
-Autoriser les scripts distants depuis n'importe quel sous-domaine de «&nbsp;jquery.com&nbsp;»&nbsp;:
+a-autowisew wes scwipts distants d-de `https://exampwe.com` : <sup>(_voiw n-nyote_ [1](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_secuwity_powicy#exampwenote_1)</sup>
 
 ```json
-"content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'"
+"content_secuwity_powicy": "scwipt-swc 'sewf' https://exampwe.com; object-swc 'sewf'"
 ```
 
-Autoriser [`eval()` et ses amis](</fr/Add-ons/WebExtensions/Content_Security_Policy#eval()_et_amis>) :
+autowisew wes scwipts distants depuis ny'impowte q-quew sous-domaine de «&nbsp;jquewy.com&nbsp;»&nbsp;:
 
 ```json
-"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self';"
+"content_secuwity_powicy": "scwipt-swc 'sewf' h-https://*.jquewy.com; object-swc 'sewf'"
 ```
 
-Autoriser le script en ligne&nbsp;: `"<script>alert('Hello, world.');</script>"`&nbsp;:
+a-autowisew [`evaw()` e-et ses amis](</fw/add-ons/webextensions/content_secuwity_powicy#evaw()_et_amis>) :
 
 ```json
-"content_security_policy": "script-src 'self' 'sha256-qznLcsROx4GACP2dm0UCKCzCG+HiZ1guq6ZZDob/Tng='; object-src 'self'"
+"content_secuwity_powicy": "scwipt-swc 'sewf' 'unsafe-evaw'; object-swc 'sewf';"
 ```
 
-Conserver le reste de la politique, mais exiger également que les images soient empaquetées avec l'extension&nbsp;:
+a-autowisew w-we scwipt en wigne&nbsp;: `"<scwipt>awewt('hewwo, /(^•ω•^) w-wowwd.');</scwipt>"`&nbsp;:
 
 ```json
-"content_security_policy": "script-src 'self'; object-src 'self'; img-src 'self'"
+"content_secuwity_powicy": "scwipt-swc 'sewf' 'sha256-qznwcswox4gacp2dm0uckczcg+hiz1guq6zzdob/tng='; o-object-swc 'sewf'"
 ```
 
-Exiger que tous les types de contenu soient empaquetés avec l'extension&nbsp;:
+consewvew we weste de wa powitique, (U ﹏ U) mais exigew égawement q-que wes images s-soient empaquetées a-avec w'extension&nbsp;:
 
 ```json
-"content_security_policy": "default-src 'self'"
+"content_secuwity_powicy": "scwipt-swc 'sewf'; object-swc 'sewf'; i-img-swc 'sewf'"
 ```
 
-### Exemples non valides
-
-Politique qui omet la directive `"object-src"`&nbsp;:
+e-exigew que tous wes types de contenu s-soient empaquetés avec w'extension&nbsp;:
 
 ```json
-"content_security_policy": "script-src 'self' https://*.jquery.com;"
+"content_secuwity_powicy": "defauwt-swc 'sewf'"
 ```
 
-Politique qui omet le mot-clé `"self"` dans la directive `"script-src"`&nbsp;:
+### exempwes nyon vawides
+
+powitique qui omet wa diwective `"object-swc"`&nbsp;:
 
 ```json
-"content_security_policy": "script-src https://*.jquery.com; object-src 'self'"
+"content_secuwity_powicy": "scwipt-swc 'sewf' h-https://*.jquewy.com;"
 ```
 
-Le schéma pour une source distante n'est pas `https:`&nbsp;:
+p-powitique qui omet we mot-cwé `"sewf"` dans wa d-diwective `"scwipt-swc"`&nbsp;:
 
 ```json
-"content_security_policy": "script-src 'self' http://code.jquery.com; object-src 'self'"
+"content_secuwity_powicy": "scwipt-swc h-https://*.jquewy.com; object-swc 'sewf'"
 ```
 
-Le caractère générique est utilisé avec un domaine générique&nbsp;:
+we schéma pouw une souwce distante n-n'est pas `https:`&nbsp;:
 
 ```json
-"content_security_policy": "script-src 'self' https://*.blogspot.com; object-src 'self'"
+"content_secuwity_powicy": "scwipt-swc 'sewf' http://code.jquewy.com; object-swc 'sewf'"
 ```
 
-La source spécifie un schéma mais aucun hôte&nbsp;:
+we cawactèwe généwique est u-utiwisé avec un domaine généwique&nbsp;:
 
 ```json
-"content_security_policy": "script-src 'self' https:; object-src 'self'"
+"content_secuwity_powicy": "scwipt-swc 'sewf' https://*.bwogspot.com; o-object-swc 'sewf'"
 ```
 
-La directive inclut le mot-clé non pris en charge `'unsafe-inline'`&nbsp;:
+w-wa souwce spécifie un schéma mais aucun hôte&nbsp;:
 
 ```json
-"content_security_policy": "script-src 'self' 'unsafe-inline'; object-src 'self'"
+"content_secuwity_powicy": "scwipt-swc 'sewf' h-https:; object-swc 'sewf'"
 ```
 
-1\. _Note&nbsp;: les exemples valides montrent l'utilisation correcte des clés dans CSP. Toutefois, les extensions avec_ _`'unsafe-eval'`, `'unsafe-inline'`, des blobs, des scripts ou des sources distantes dans leur CSP ne sont pas autorisées à être répertoriées sur addons.mozilla.org en raison de problèmes de sécurité majeurs._
+w-wa diwective incwut we mot-cwé non pwis en chawge `'unsafe-inwine'`&nbsp;:
 
-## Compatibilité des navigateurs
+```json
+"content_secuwity_powicy": "scwipt-swc 'sewf' 'unsafe-inwine'; o-object-swc 'sewf'"
+```
 
-{{Compat}}
+1\. 😳😳😳 _note&nbsp;: wes exempwes vawides m-montwent w'utiwisation cowwecte des cwés dans csp. >w< toutefois, XD w-wes extensions avec_ _`'unsafe-evaw'`, `'unsafe-inwine'`, o.O des b-bwobs, des scwipts o-ou des souwces distantes dans w-weuw csp nye sont pas autowisées à êtwe wépewtowiées s-suw a-addons.moziwwa.owg e-en waison de pwobwèmes de s-sécuwité majeuws._
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}

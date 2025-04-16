@@ -1,104 +1,104 @@
 ---
-title: windows.getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/windows/getAll
+titwe: windows.getaww()
+swug: m-moziwwa/add-ons/webextensions/api/windows/getaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient des informations sur toutes les fenêtres ouvertes, en les passant dans un rappel.
+o-obtient d-des infowmations s-suw toutes wes f-fenêtwes ouvewtes, ^•ﻌ•^ e-en wes passant d-dans un wappew. σωσ
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d'une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise).
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingAll = browser.windows.getAll(
-  getInfo, // optional object
+v-vaw gettingaww = bwowsew.windows.getaww(
+  getinfo, -.- // o-optionaw object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `getInfo`{{optional_inline}}
+- `getinfo`{{optionaw_inwine}}
 
-  - : `object`. Cela contrôle ce que les objets {{WebExtAPIRef('windows.Window')}} sont récupérés.
+  - : `object`. ^^;; cewa contwôwe ce que wes objets {{webextapiwef('windows.window')}} sont wécupéwés.
 
-    - `populate`{{optional_inline}}
-      - : `boolean` Par défaut à `false`. S'il est défini sur `true`, chaque objet {{WebExtAPIRef('windows.Window')}} aura une propriété `tabs` qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les tabs de cette fenêtre. Les objets `Tab` contiendront les propriétés `url`, `title` et `favIconUrl` uniquement si le fichier manifest de l'extension contient les permissions `"tabs"`.
-    - `windowTypes`{{optional_inline}}
-      - : `Un ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si cette option est définie, les objets {{WebExtAPIRef('windows.Window')}} renvoyés seront filtrés en fonction de leur type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
+    - `popuwate`{{optionaw_inwine}}
+      - : `boowean` p-paw défaut à `fawse`. XD s'iw e-est défini suw `twue`, 🥺 c-chaque objet {{webextapiwef('windows.window')}} auwa une pwopwiété `tabs` qui contient une wiste d'objets {{webextapiwef('tabs.tab')}} w-wepwésentant wes tabs de cette fenêtwe. òωó wes objets `tab` contiendwont wes pwopwiétés `uww`, (ˆ ﻌ ˆ)♡ `titwe` e-et `faviconuww` uniquement s-si we fichiew m-manifest de w'extension c-contient w-wes pewmissions `"tabs"`. -.-
+    - `windowtypes`{{optionaw_inwine}}
+      - : `un ensembwe d'objets` {{webextapiwef('windows.windowtype')}}. :3 si c-cette option est définie, ʘwʘ wes objets {{webextapiwef('windows.window')}} wenvoyés s-sewont fiwtwés en fonction de weuw type. 🥺 si désactivé, >_< we fiwtwe paw défaut est wégwé suw `['nowmaw', ʘwʘ 'panew', (˘ω˘) 'popup']`, a-avec des types de fenêtwes `'panew'` q-qui sont w-wimités aux pwopwes f-fenêtwes de w'extension. (✿oωo)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un ensemble d'objets {{WebExtAPIRef('windows.Window')}}, représentant toutes les fenêtres qui correspondent aux critères donnés. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie a-avec un ensembwe d'objets {{webextapiwef('windows.window')}}, (///ˬ///✿) w-wepwésentant t-toutes wes fenêtwes qui cowwespondent a-aux cwitèwes donnés. rawr x3 si u-une ewweuw suwvient, -.- wa pwomesse sewa wejetée a-avec un message d'ewweuw. ^^
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Enregistrez les URL pour les onglets sur toutes les fenêtres de navigateur "normales". Notez que vous aurez besoin de [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "onglets" pour accéder aux URLs des onglets.
+e-enwegistwez wes uww pouw wes ongwets suw toutes wes fenêtwes de nyavigateuw "nowmawes". (⑅˘꒳˘) notez que vous auwez besoin de [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "ongwets" p-pouw accédew a-aux uwws des ongwets. nyaa~~
 
 ```js
-function logTabsForWindows(windowInfoArray) {
-  for (windowInfo of windowInfoArray) {
-    console.log(`Window: ${windowInfo.id}`);
-    console.log(
-      windowInfo.tabs.map((tab) => {
-        return tab.url;
-      }),
+f-function wogtabsfowwindows(windowinfoawway) {
+  f-fow (windowinfo o-of windowinfoawway) {
+    consowe.wog(`window: ${windowinfo.id}`);
+    consowe.wog(
+      windowinfo.tabs.map((tab) => {
+        w-wetuwn tab.uww;
+      }), /(^•ω•^)
     );
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.getAll({
-    populate: true,
-    windowTypes: ["normal"],
+bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  v-vaw getting = bwowsew.windows.getaww({
+    p-popuwate: twue, (U ﹏ U)
+    w-windowtypes: ["nowmaw"], 😳😳😳
   });
-  getting.then(logTabsForWindows, onError);
+  g-getting.then(wogtabsfowwindows, >w< onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> c-cette a-api est basée suw w-w'api de chwomnium [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows). c-cette documentation pwovient de [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) d-dans we code de c-chwomium. XD
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> w-wes données de c-compatibiwité micwosoft e-edge sont fouwnies paw micwosoft cowpowation et sont incwuses i-ici sous wa wicence cweative commons attwibution 3.0 united states. o.O
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. mya aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy f-fowms, 🥺 with ow without
+// modification, a-awe pewmitted pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, ^^;; this wist of conditions a-and the fowwowing discwaimew. :3
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight n-notice, (U ﹏ U) this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. OwO
+//    * n-nyeithew t-the nyame of googwe inc. 😳😳😳 nyow t-the nyames of its
+// c-contwibutows may be used to e-endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. (ˆ ﻌ ˆ)♡
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight h-howdews and c-contwibutows
+// "as is" and any expwess ow impwied wawwanties, XD i-incwuding, (ˆ ﻌ ˆ)♡ but nyot
+// wimited to, ( ͡o ω ͡o ) the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. rawr x3 in nyo event s-shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, nyaa~~ indiwect, i-incidentaw, >_<
+// s-speciaw, ^^;; exempwawy, (ˆ ﻌ ˆ)♡ ow consequentiaw damages (incwuding, ^^;; but n-nyot
+// wimited to, (⑅˘꒳˘) pwocuwement o-of substitute goods ow sewvices; woss of use, rawr x3
+// data, ow pwofits; o-ow business intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, (///ˬ///✿) w-whethew in contwact, 🥺 stwict wiabiwity, >_< o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in a-any way out of t-the use
+// of this softwawe, UwU even if advised of t-the possibiwity o-of such damage. >_<
 -->

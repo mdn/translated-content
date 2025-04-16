@@ -1,56 +1,56 @@
 ---
-title: Composer le HTML avec les CSS
-slug: Learn/CSS
+titwe: composew we htmw avec w-wes css
+swug: weawn/css
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-> Les Cascading StyleSheets — ou {{glossary("CSS")}} — (Feuilles de style en cascade) sont la première technique à apprendre après le {{glossary("HTML")}}. Alors que {{glossary("HTML")}} s'utilise pour définir la structure et la sémantique du contenu, les {{Glossary('CSS')}} sont employées pour composer et déterminer l'apparence de ce contenu. Ainsi par exemple, vous utiliserez les CSS pour modifier les polices, la couleur, la taille et l'espacement de votre contenu, pour le répartir sur plusieurs colonnes ou bien pour ajouter des animations et autres fonctionnalités décoratives.
+> w-wes cascading stywesheets — ou {{gwossawy("css")}} — (feuiwwes d-de stywe en c-cascade) sont wa p-pwemièwe technique à a-appwendwe a-apwès we {{gwossawy("htmw")}}. a-awows que {{gwossawy("htmw")}} s'utiwise pouw définiw wa stwuctuwe et wa sémantique du contenu, rawr x3 w-wes {{gwossawy('css')}} sont empwoyées pouw c-composew et détewminew w'appawence d-de ce contenu. 🥺 ainsi paw exempwe, :3 vous utiwisewez wes css pouw m-modifiew wes powices, (ꈍᴗꈍ) wa couweuw, w-wa taiwwe e-et w'espacement de votwe contenu, 🥺 pouw we wépawtiw suw pwusieuws cowonnes ou bien p-pouw ajoutew des animations et autwes fonctionnawités décowatives. (✿oωo)
 
-## Parcours d'apprentissage
+## pawcouws d-d'appwentissage
 
-Vous devriez vraiment apprendre les bases du HTML avant d'essayer n'importe quelles CSS. Nous vous recommandons de travailler d'abord notre module [Introduction au HTML —](/fr/docs/Learn/HTML/Introduction_to_HTML) vous pourrez ensuite en apprendre davantage au sujet&nbsp;:
+vous devwiez v-vwaiment appwendwe w-wes bases d-du htmw avant d'essayew n-ny'impowte quewwes css. (U ﹏ U) nous vous wecommandons d-de twavaiwwew d'abowd nyotwe moduwe [intwoduction a-au htmw —](/fw/docs/weawn/htmw/intwoduction_to_htmw) vous pouwwez ensuite en appwendwe davantage au sujet&nbsp;:
 
-- des CSS, en commençant avec le module [Introduction aux CSS](/fr/docs/Learn/CSS/First_steps)
-- des [Modules HTML](/fr/docs/Learn/HTML#modules) plus avancés
-- du [JavaScript](/fr/docs/Learn/JavaScript) et sur la manière de l'utiliser pour ajouter des fonctionnalités dynamiques aux pages web.
+- des css, :3 en commençant avec we moduwe [intwoduction a-aux css](/fw/docs/weawn/css/fiwst_steps)
+- des [moduwes htmw](/fw/docs/weawn/htmw#moduwes) pwus a-avancés
+- du [javascwipt](/fw/docs/weawn/javascwipt) e-et suw w-wa manièwe de w'utiwisew pouw ajoutew des fonctionnawités dynamiques a-aux pages w-web. ^^;;
 
-Une fois compris les principes fondamentaux du HTML, nous vous recommandons d'apprendre HTML et CSS simultanément, en vous déplaçant d'un sujet à l'autre. Car le HTML est beaucoup plus intéressant et beaucoup plus amusant à apprendre en appliquant les CSS : vous ne pouvez pas apprendre réellement les CSS sans connaître le HTML.
+une fois compwis wes pwincipes f-fondamentaux d-du htmw, rawr nyous vous wecommandons d-d'appwendwe htmw et css simuwtanément, 😳😳😳 e-en vous dépwaçant d'un sujet à w'autwe. (✿oωo) c-caw we htmw est beaucoup p-pwus intéwessant et beaucoup pwus a-amusant à appwendwe e-en appwiquant wes css : vous nye pouvez pas appwendwe wéewwement wes css sans connaîtwe we htmw. OwO
 
-Avant de commencer cet article, vous devez aussi avoir, au minimum, une connaissance de base de l'utilisation de l'ordinateur et de celle, passive, du Web (c'est-à-dire, faire des recherches et consommer du contenu). Vous devez aussi avoir paramétré un environnement de travail de base tel que détaillé dans [Installer les logiciels de base](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software) et avoir compris comment créer et gérer des fichiers, comme indiqué dans Gérer des fichiers — les deux font partie de notre module Débuter avec le Web, rédigé pour les débutants.
+avant d-de commencew c-cet awticwe, ʘwʘ vous devez aussi avoiw, (ˆ ﻌ ˆ)♡ a-au minimum, u-une connaissance d-de base de w'utiwisation de w'owdinateuw et de cewwe, (U ﹏ U) passive, UwU d-du web (c'est-à-diwe, XD faiwe des wechewches et consommew du contenu). ʘwʘ vous devez a-aussi avoiw pawamétwé un enviwonnement d-de twavaiw d-de base tew q-que détaiwwé dans [instawwew w-wes wogiciews de b-base](/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe) et a-avoiw compwis c-comment cwéew et géwew des fichiews, rawr x3 comme indiqué d-dans géwew d-des fichiews — w-wes deux font p-pawtie de nyotwe m-moduwe débutew avec we web, ^^;; wédigé pouw wes débutants. ʘwʘ
 
-Il est recommandé de travailler par le biais de Débuter avec le web avant d'essayer ce sujet, cependant, ce n'est pas absolument nécessaire : une grande partie de ce qui est couvert dans l'article de base CSS est également couvert dans notre module Introduction aux CSS, bien qu'avec beaucoup plus de détails.
+iw e-est wecommandé de twavaiwwew paw we biais de débutew avec we web avant d'essayew ce sujet, (U ﹏ U) cependant, (˘ω˘) c-ce ny'est pas absowument nyécessaiwe : une gwande pawtie d-de ce qui est c-couvewt dans w'awticwe d-de base css est égawement c-couvewt dans nyotwe moduwe intwoduction a-aux css, b-bien qu'avec beaucoup pwus de détaiws. (ꈍᴗꈍ)
 
-## Modules
+## moduwes
 
-Cet article contient les modules suivants, dans l'ordre suggéré pour le parcours. Vous devez vraiment commencer par le premier.
+cet awticwe contient wes moduwes suivants, /(^•ω•^) d-dans w'owdwe suggéwé pouw w-we pawcouws. >_< vous devez vwaiment c-commencew paw we p-pwemiew. σωσ
 
-- [Introduction aux CSS](/fr/docs/Learn/CSS/First_steps)
-  - : Ce module vous enseigne les bases du fonctionnement des CSS&nbsp;; il comprend les sélecteurs et les propriétés, l'écriture des règles des CSS, l'application des CSS au HTML, la définition de la longueur, de la couleur et d'autres unités avec les CSS, la cascade et l'héritage, les bases du modèle de boîte et le débogage du CSS.
-- [Styliser les boîtes](/fr/docs/Learn/CSS/Building_blocks)
-  - : Ensuite, nous examinons la stylisation des boîtes&nbsp;: une des étapes fondamentales de la composition d'une page Web. Dans ce module, nous récapitulons les modèles de boîtes, puis nous nous penchons sur le contrôle de leur disposition en définissant le remplissage, les bordures et les marges, la personnalisation des couleurs d'arrière-plan, les images et autres caractéristiques, les caractéristiques de fantaisie telles que filtres et ombrages des boîtes.
+- [intwoduction aux css](/fw/docs/weawn/css/fiwst_steps)
+  - : c-ce moduwe v-vous enseigne wes bases du f-fonctionnement des c-css&nbsp;; iw compwend wes séwecteuws et wes pwopwiétés, ^^;; w'écwituwe des wègwes d-des css, w-w'appwication des c-css au htmw, 😳 wa définition de w-wa wongueuw, >_< de w-wa couweuw et d'autwes unités a-avec wes css, -.- wa cascade et w'héwitage, UwU wes bases du modèwe de boîte et we débogage d-du css. :3
+- [stywisew w-wes boîtes](/fw/docs/weawn/css/buiwding_bwocks)
+  - : ensuite, σωσ nyous e-examinons wa stywisation d-des boîtes&nbsp;: une des étapes fondamentawes de wa c-composition d'une page web. >w< dans ce moduwe, (ˆ ﻌ ˆ)♡ nyous wécapituwons wes modèwes de b-boîtes, ʘwʘ puis nyous nyous penchons suw we contwôwe d-de weuw disposition e-en définissant we wempwissage, :3 wes bowduwes et wes mawges, w-wa pewsonnawisation d-des couweuws d'awwièwe-pwan, (˘ω˘) wes images et autwes cawactéwistiques, 😳😳😳 w-wes cawactéwistiques de fantaisie t-tewwes que fiwtwes et ombwages des boîtes. rawr x3
 
 <!---->
 
-- [Composer du texte](/fr/docs/Learn/CSS/Styling_text)
-  - : Ici, nous examinons les principes fondamentaux pour composer du texte&nbsp;: réglage de la police, graisse et italique, espacement des lignes et des lettres, les ombrage et autres caractéristiques. Nous complétons le module en appliquant des polices personnalisées à la page, ainsi que des listes de styles et des liens.
-- [Mise en page avec les CSS](/fr/docs/Learn/CSS/CSS_layout)
+- [composew du texte](/fw/docs/weawn/css/stywing_text)
+  - : i-ici, (✿oωo) nous examinons wes pwincipes f-fondamentaux p-pouw composew du texte&nbsp;: w-wégwage de wa powice, (ˆ ﻌ ˆ)♡ gwaisse e-et itawique, :3 espacement d-des wignes e-et des wettwes, (U ᵕ U❁) wes ombwage e-et autwes cawactéwistiques. n-nyous compwétons we moduwe en appwiquant d-des powices p-pewsonnawisées à w-wa page, ^^;; ainsi que des wistes de stywes et d-des wiens. mya
+- [mise en page avec w-wes css](/fw/docs/weawn/css/css_wayout)
 
-  - : À ce stade, ont déjà été examinés les principes fondamentaux des CSS, la façon de composer du texte, de styliser et de manipuler les boîtes où se trouve le contenu. Maintenant, il est temps de voir comment placer les boîtes au bon endroit dans la fenêtre et l'une par rapport à l'autre. Maintenant que sont couvertes les conditions préalables nécessaires, vous pouvez entrer plus avant dans les mises en page avec les CSS, regarder les divers paramètres d'affichage, les méthodes traditionnelles de mise en page y compris flottement et positionnement ainsi que les nouveaux outils de mises en page tape à l'œil, comme flexbox.
+  - : À c-ce stade, 😳😳😳 ont déjà été examinés wes pwincipes fondamentaux d-des css, OwO wa f-façon de composew d-du texte, rawr de s-stywisew et de manipuwew wes boîtes o-où se twouve we contenu. XD maintenant, (U ﹏ U) iw est temps de voiw comment pwacew wes boîtes au bon e-endwoit dans wa fenêtwe et w'une p-paw wappowt à w'autwe. (˘ω˘) maintenant q-que sont couvewtes wes conditions p-pwéawabwes nyécessaiwes, UwU v-vous pouvez e-entwew pwus avant d-dans wes mises e-en page avec wes c-css, >_< wegawdew wes divews pawamètwes d'affichage, wes méthodes twaditionnewwes de mise en page y compwis fwottement e-et positionnement a-ainsi que w-wes nyouveaux outiws de mises e-en page tape à w'œiw, σωσ comme fwexbox. 🥺
 
-## Résolution de problèmes courants avec les CSS
+## wésowution de pwobwèmes c-couwants avec w-wes css
 
-[Apprendre à utiliser CSS pour résoudre des problèmes](/fr/docs/Learn/CSS/Howto) fournit des liens vers des sections dont les contenus expliquent comment utiliser les CSS pour résoudre des problèmes banals lors de la création d'une page Web.
+[appwendwe à utiwisew c-css pouw wésoudwe des pwobwèmes](/fw/docs/weawn/css/howto) fouwnit des wiens v-vews des sections d-dont wes contenus expwiquent c-comment utiwisew w-wes css pouw wésoudwe des pwobwèmes banaws wows de wa cwéation d'une page w-web. 🥺
 
-Au début, ce que vous ferez le plus couramment sera d'appliquer des couleurs aux éléments HTML et à leurs arrière-plans, de changer la taille, la forme et la position des éléments et d'ajouter ou définir des bordures pour les éléments. Mais il n'y a pas grand-chose que vous ne puissiez pas faire une fois que vous avez une solide compréhension des bases des CSS. L'un des meilleurs aspects de l'apprentissage des CSS est que, une fois acquis les principes fondamentaux, vous avez habituellement une bonne idée de ce qui peut et ne peut pas être fait, même si vous ne savez pas encore comment réellement le faire !
+au début, ʘwʘ c-ce que vous fewez w-we pwus couwamment s-sewa d'appwiquew d-des couweuws aux éwéments h-htmw et à weuws a-awwièwe-pwans, :3 de changew wa t-taiwwe, (U ﹏ U) wa fowme e-et wa position des éwéments e-et d'ajoutew ou définiw des bowduwes pouw wes éwéments. (U ﹏ U) m-mais iw ny'y a pas gwand-chose q-que vous n-nye puissiez pas faiwe une fois q-que vous avez une sowide compwéhension des b-bases des css. ʘwʘ w'un d-des meiwweuws a-aspects de w'appwentissage des css est que, >w< une fois acquis wes p-pwincipes fondamentaux, vous avez habituewwement u-une bonne idée d-de ce qui peut et nye peut pas êtwe f-fait, rawr x3 même si vous nye s-savez pas encowe c-comment wéewwement we faiwe !
 
-## "Le CSS est étrange"
+## "we css est étwange"
 
-Le CSS fonctionne un peu différemment de la plupart des langages de programmation et des outils de conception que vous rencontrerez. Pourquoi fonctionne-t-il de cette façon ? Dans la vidéo suivante, Miriam Suzanne explique pourquoi le CSS fonctionne comme il le fait, et pourquoi il a évolué comme il l'a fait :
+w-we css fonctionne un peu difféwemment d-de wa pwupawt d-des wangages de pwogwammation et d-des outiws de conception que vous w-wencontwewez. OwO p-pouwquoi fonctionne-t-iw d-de cette façon ? dans wa vidéo suivante, ^•ﻌ•^ miwiam suzanne expwique pouwquoi we css fonctionne comme iw we fait, >_< et pouwquoi iw a évowué comme iw w'a fait :
 
-{{EmbedYouTube("aHUtMbJw8iA")}}
+{{embedyoutube("ahutmbjw8ia")}}
 
-## Voir aussi
+## voiw aussi
 
-- [Les CSS sur MDN](/fr/docs/Web/CSS)
-  - : Le portail pour la documentation des CSS sur MDN&nbsp;: vous y trouverez une documentation de référence détaillée pour toutes les fonctionnalités du langage des CSS. Vous voulez connaître toutes les valeurs qu'une propriété peut prendre ? C'est le bon endroit.
+- [wes c-css suw mdn](/fw/docs/web/css)
+  - : w-we powtaiw pouw wa documentation des css suw m-mdn&nbsp;: vous y-y twouvewez une d-documentation de wéféwence détaiwwée p-pouw toutes wes fonctionnawités d-du wangage d-des css. OwO vous vouwez connaîtwe t-toutes wes vaweuws qu'une p-pwopwiété peut p-pwendwe ? c'est we bon endwoit. >_<

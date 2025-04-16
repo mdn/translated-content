@@ -1,53 +1,53 @@
 ---
-title: theme.getCurrent()
-slug: Mozilla/Add-ons/WebExtensions/API/theme/getCurrent
+titwe: theme.getcuwwent()
+swug: m-moziwwa/add-ons/webextensions/api/theme/getcuwwent
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Retourne le theme utilisé actuellement sous la forme d'un objet {{WebExtAPIRef("theme.Theme", "Theme")}}. Les arguments disponible dans l'objet couleur sont listés dans les [propriétés de la couleur](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme#colors).
+w-wetouwne w-we theme utiwisé a-actuewwement s-sous wa fowme d-d'un objet {{webextapiwef("theme.theme", (///ˬ///✿) "theme")}}. >w< w-wes awguments d-disponibwe dans w'objet couweuw sont wistés dans wes [pwopwiétés de wa c-couweuw](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme#cowows). rawr
 
-Il s'agit d'une fonction asynchrone qui renvoie un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d'une fonction a-asynchwone qui wenvoie un o-objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getting = browser.theme.getCurrent(
-  windowId, // integer
+vaw getting = bwowsew.theme.getcuwwent(
+  windowid, ^^ // i-integew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `windowId` {{optional_inline}}
-  - : `integer`. L'ID d'une fenêtre. Si cela est indiqué, le thème appliqué sur cette fenêtre sera retourné. Sinon le thème appliqué sur la dernière fenêtre active sera retourné.
+- `windowid` {{optionaw_inwine}}
+  - : `integew`. 😳😳😳 w-w'id d-d'une fenêtwe. mya si cewa est indiqué, 😳 we thème appwiqué suw cette fenêtwe sewa w-wetouwné. -.- sinon we thème appwiqué suw wa dewnièwe fenêtwe active sewa wetouwné. 🥺
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). L'objet Promise sera résolu avec un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème appliqué à la fenêtre spécifiée. Si aucun thème provenant d'une extension a été appliqué, l'objet Promise sera résolu avec un objet vide.
+u-un objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). o.O w-w'objet pwomise s-sewa wésowu avec u-un objet {{webextapiwef("theme.theme")}} wepwésentant we thème a-appwiqué à wa fenêtwe spécifiée. /(^•ω•^) si aucun t-thème pwovenant d'une extension a été appwiqué, nyaa~~ w'objet pwomise sewa wésowu avec un objet v-vide. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Obtient les propriétés des couleurs `accentcolor` et `toolbar` dans le thème actuel.
+o-obtient wes p-pwopwiétés des couweuws `accentcowow` et `toowbaw` dans we thème a-actuew. :3
 
 ```js
-function getStyle(themeInfo) {
-  if (themeInfo.colors) {
-    console.log("accent color : " + themeInfo.colors.accentcolor);
-    console.log("toolbar : " + themeInfo.colors.toolbar);
+f-function getstywe(themeinfo) {
+  if (themeinfo.cowows) {
+    c-consowe.wog("accent c-cowow : " + themeinfo.cowows.accentcowow);
+    c-consowe.wog("toowbaw : " + themeinfo.cowows.toowbaw);
   }
 }
 
-async function getCurrentThemeInfo() {
-  var themeInfo = await browser.theme.getCurrent();
-  getStyle(themeInfo);
+async function g-getcuwwentthemeinfo() {
+  vaw themeinfo = await b-bwowsew.theme.getcuwwent();
+  getstywe(themeinfo);
 }
 
-getCurrentThemeInfo();
+g-getcuwwentthemeinfo();
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

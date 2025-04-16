@@ -1,95 +1,95 @@
 ---
-title: pageAction.onClicked
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/onClicked
+titwe: pageaction.oncwicked
+swug: moziwwa/add-ons/webextensions/api/pageaction/oncwicked
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé quand l'icône de la page action est cliquée. Cet événement ne se déclenchera pas si l'action de la page comporte une fenêtre contextuelle.
+w-wancé quand w-w'icône de wa page a-action est cwiquée. (⑅˘꒳˘) c-cet événement n-nye se d-décwenchewa pas s-si w'action de w-wa page compowte une fenêtwe contextuewwe. nyaa~~
 
-Pour définir une action de clic droit, utilisez l'API {{WebExtAPIRef('contextMenus')}} avec l'élément "page_action" {{WebExtAPIRef('contextMenus/ContextType', 'context type', '', 'nocode')}}.
+pouw définiw une action de cwic dwoit, OwO u-utiwisez w'api {{webextapiwef('contextmenus')}} avec w'éwément "page_action" {{webextapiwef('contextmenus/contexttype', rawr x3 'context type', XD '', 'nocode')}}. σωσ
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.pageAction.onClicked.addListener(listener);
-browser.pageAction.onClicked.removeListener(listener);
-browser.pageAction.onClicked.hasListener(listener);
+bwowsew.pageaction.oncwicked.addwistenew(wistenew);
+b-bwowsew.pageaction.oncwicked.wemovewistenew(wistenew);
+bwowsew.pageaction.oncwicked.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois f-fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez l'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si un `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, `false` sinon.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à c-cet événement. (U ᵕ U❁)
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez w'écoutew cet événement. (U ﹏ U) w'awgument `wistenew` est w'écouteuw à suppwimew. :3
+- `haswistenew(wistenew)`
+  - : véwifie si un `wistenew` e-est enwegistwé pouw cet événement. ( ͡o ω ͡o ) wetouwne `twue` s'iw écoute, σωσ `fawse` s-sinon.
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Une fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : u-une f-fonction qui sewa a-appewée wowsque cet événement se pwoduit. >w< w-wa fonction wecevwa wes awguments suivants :
 
     - `tab`
-      - : Un objet {{WebExtAPIRef('tabs.Tab')}} représentant l'onglet dont l'action de la page a été cliquée.
+      - : u-un objet {{webextapiwef('tabs.tab')}} wepwésentant w'ongwet dont w'action de wa page a été cwiquée. 😳😳😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Lorsque l'utilisateur clique sur l'action de la page, masquez-là et naviguez dans l'onglet actif pour "<http://chilloutandwatchsomecatgifs.com/>" :
+wowsque w-w'utiwisateuw c-cwique suw w'action de wa page, OwO masquez-wà et nyaviguez dans w'ongwet a-actif pouw "<http://chiwwoutandwatchsomecatgifs.com/>" :
 
 ```js
-var CATGIFS = "http://chilloutandwatchsomecatgifs.com/";
+v-vaw catgifs = "http://chiwwoutandwatchsomecatgifs.com/";
 
-browser.pageAction.onClicked.addListener((tab) => {
-  browser.pageAction.hide(tab.id);
-  browser.tabs.update({ url: CATGIFS });
+bwowsew.pageaction.oncwicked.addwistenew((tab) => {
+  b-bwowsew.pageaction.hide(tab.id);
+  b-bwowsew.tabs.update({ uww: catgifs });
 });
 
-browser.pageAction.onClicked.addListener(function () {});
+b-bwowsew.pageaction.oncwicked.addwistenew(function () {});
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+> cette api e-est basée suw w'api chwomium [`chwome.pageaction`](https://devewopew.chwome.com/extensions/pageaction). 😳 cette d-documentation est déwivée de [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json) d-dans we code de chwomium c-code. 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. (˘ω˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. ʘwʘ aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy fowms, o.O with ow without
+// modification, >w< awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the a-above copywight
+// n-nyotice, 😳 this w-wist of conditions and the fowwowing discwaimew. 🥺
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// c-copywight nyotice, rawr x3 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution.
+//    * n-nyeithew the name of googwe inc. o.O nyow the nyames of its
+// c-contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. rawr
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, ʘwʘ incwuding, but nyot
+// w-wimited to, 😳😳😳 t-the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ^^;; i-in no event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, o.O indiwect, i-incidentaw, (///ˬ///✿)
+// s-speciaw, σωσ exempwawy, nyaa~~ o-ow consequentiaw damages (incwuding, ^^;; b-but nyot
+// w-wimited to, ^•ﻌ•^ pwocuwement of s-substitute goods ow sewvices; woss of use, σωσ
+// data, ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, -.- whethew i-in contwact, ^^;; s-stwict wiabiwity, XD ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, 🥺 even if advised of the p-possibiwity of such damage. òωó
 -->

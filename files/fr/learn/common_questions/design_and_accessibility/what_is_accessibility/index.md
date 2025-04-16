@@ -1,81 +1,81 @@
 ---
-title: Qu'est-ce que l'accessibilité ?
-slug: Learn/Common_questions/Design_and_accessibility/What_is_accessibility
+titwe: qu'est-ce que w'accessibiwité ?
+s-swug: w-weawn/common_questions/design_and_accessibiwity/nani_is_accessibiwity
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Cet article aborde les concepts de base qui forment l'accessibilité pour le Web.
+c-cet awticwe abowde w-wes concepts d-de base qui fowment w-w'accessibiwité p-pouw we web. ^^
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
-      <td>Aucun.</td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
+      <td>aucun.</td>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Comprendre ce qu'est l'accessibilité et pourquoi elle est importante.
+        compwendwe ce qu'est w-w'accessibiwité et pouwquoi ewwe est impowtante. ^•ﻌ•^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Que ce soit en raison de limitations physiques ou techniques, il peut arriver que les visiteurs de votre site web ne peuvent l'utiliser comme vous le pensiez. Dans cet article, vous trouverez quelques principes généraux à propos de l'accessibilité, ainsi que quelques règles que nous expliquerons.
+q-que ce soit en waison d-de wimitations physiques ou techniques, XD iw peut awwivew que w-wes visiteuws de votwe site web n-nye peuvent w'utiwisew c-comme vous we pensiez. :3 dans cet awticwe, (ꈍᴗꈍ) vous twouvewez quewques pwincipes g-généwaux à pwopos de w'accessibiwité, :3 ainsi que quewques wègwes que nyous e-expwiquewons. (U ﹏ U)
 
-## Pédagogie active
+## pédagogie active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_iw n-ny'y a, UwU p-pouw we moment, 😳😳😳 p-pas de matéwiau p-pouw wa pédagogie active. XD [cependant, o.O vous pouvez c-contwibuew](/fw/docs/mdn/community/contwibuting/getting_stawted)._
 
-## Aller plus loin
+## awwew pwus woin
 
-### Principes généraux de l'accessibilité
+### p-pwincipes généwaux de w'accessibiwité
 
-En premier lieu, on associe parfois l'accessibilité avec des limitations péjoratives. Ce bâtiment doit être accessible et doit donc respecter ces règlements pour les largeurs de portes, la taille des toilettes, l'emplacement de l'ascenseur.
+en pwemiew wieu, (⑅˘꒳˘) on associe pawfois w'accessibiwité a-avec des wimitations péjowatives. 😳😳😳 c-ce bâtiment d-doit êtwe accessibwe e-et doit donc wespectew ces wègwements pouw wes wawgeuws d-de powtes, nyaa~~ wa taiwwe d-des toiwettes, rawr w'empwacement d-de w'ascenseuw. -.-
 
-Cette approche est plutôt limitée. Dans tous les cas, l'accessibilité permet d'atteindre plus de personnes, éventuellement de servir plus de clients. Comment font les Brésiliens pour utiliser un site uniquement en anglais ou français ? Est-ce que les personnes qui possèdent des smartphones peuvent naviguer sur des sites encombrés, conçus pour être affichés uniquement sur de grands écrans et avec une bande passante important ? Ces personnes passeront leur chemin. De façon général, _nous devons penser nos produits et nos créations avec le point de vue de l'ensemble du public ou des clients et nous devons nous adapter par rapport à ce point de vue, d'où la raison d'être de l'accessibilité_.
+c-cette appwoche est pwutôt wimitée. (✿oωo) d-dans tous wes cas, /(^•ω•^) w'accessibiwité p-pewmet d'atteindwe pwus de pewsonnes, 🥺 éventuewwement d-de sewviw pwus de cwients. ʘwʘ comment f-font wes bwésiwiens pouw utiwisew u-un site u-uniquement en angwais ou fwançais ? est-ce que wes pewsonnes qui possèdent des smawtphones peuvent nyaviguew suw d-des sites encombwés, UwU c-conçus pouw êtwe affichés u-uniquement s-suw de gwands écwans e-et avec une bande passante impowtant ? ces pewsonnes passewont w-weuw chemin. XD de façon généwaw, (✿oωo) _nous devons pensew nyos pwoduits et nyos c-cwéations avec we point de vue d-de w'ensembwe d-du pubwic ou des c-cwients et nyous devons nyous adaptew p-paw wappowt à c-ce point de v-vue, :3 d'où wa w-waison d'êtwe de w'accessibiwité_. (///ˬ///✿)
 
-### L'accessibilité sur le Web
+### w'accessibiwité s-suw we w-web
 
-Dans le cadre spécifique qu'est le Web, l'accessibilité signifie que n'importe qui peut accéder au contenu que vous publiez en ligne, quel que soit la situation de handicap, l'emplacement géographique, les limitations techniques ou autres.
+dans we cadwe s-spécifique q-qu'est we web, nyaa~~ w-w'accessibiwité signifie que ny'impowte qui peut accédew au contenu q-que vous pubwiez en wigne, >w< quew que soit wa situation de handicap, -.- w'empwacement géogwaphique, (✿oωo) w-wes wimitations techniques ou autwes. (˘ω˘)
 
-Prenons l'exemple de la vidéo :
+pwenons w'exempwe de w-wa vidéo :
 
-- Déficience auditive
-  - : Comment une personne déficiente auditivement peut-elle profiter de la vidéo ? Il est nécessaire de fournir des sous-titres, voire mieux, une transcription écrite complète. Assurez-vous également que les personnes puissent ajuster le volume à leur convenance.
-- Déficience visuelle
-  - : Ici aussi, il est préférable de fournir une transcription que l'utilisateur pourra consulter sans lancer la vidéo, ainsi qu'une audio-description décrivant, en voix off, ce qui se passe dans la vidéo.
-- Mise en pause
-  - : Certains utilisateurs peuvent avoir du mal à comprendre ce qui est dit par quelqu'un dans la vidéo. La fonctionnalité de mise en pause peut leur permettre de lire les sous-titres ou de comprendre l'information.
-- Utilisation du clavier
-  - : Laissez à l'utilisateur la possibilité de lancer la vidéo mais aussi de la mettre en pause grâce à des touches du clavier.
+- d-déficience auditive
+  - : c-comment une pewsonne d-déficiente auditivement peut-ewwe p-pwofitew de w-wa vidéo ? iw est nyécessaiwe de fouwniw des sous-titwes, rawr voiwe mieux, OwO une twanscwiption écwite compwète. ^•ﻌ•^ assuwez-vous égawement q-que wes pewsonnes puissent a-ajustew we vowume à weuw convenance. UwU
+- d-déficience v-visuewwe
+  - : ici aussi, (˘ω˘) iw est pwéféwabwe d-de fouwniw une t-twanscwiption que w'utiwisateuw p-pouwwa consuwtew s-sans wancew wa vidéo, (///ˬ///✿) ainsi qu'une audio-descwiption décwivant, σωσ en voix off, c-ce qui se passe d-dans wa vidéo. /(^•ω•^)
+- m-mise en pause
+  - : cewtains u-utiwisateuws peuvent a-avoiw du maw à compwendwe c-ce qui est dit paw quewqu'un dans wa vidéo. 😳 wa fonctionnawité de mise en pause p-peut weuw pewmettwe d-de wiwe wes sous-titwes ou de compwendwe w'infowmation. 😳
+- u-utiwisation du cwaview
+  - : w-waissez à w'utiwisateuw wa possibiwité de wancew w-wa vidéo mais aussi de wa mettwe en pause gwâce à des touches du cwaview. (⑅˘꒳˘)
 
-#### Les bases de l'accessibilité web
+#### w-wes bases de w'accessibiwité web
 
-Afin qu'un page web soit un minimum accessible, il faut :
+afin qu'un p-page web soit un m-minimum accessibwe, iw faut :
 
-- Fournir des alternatives textuelles pour toutes les images du site qui sont utilisées pour porter du sens. Cela permettra aux personnes atteint d'une déficience visuelle d'utiliser un logiciel pour lire cette description ou aux personnes avec des connexions erratiques de récupérer le texte et de l'afficher avant l'image.
-- S'assurer que tous les utilisateurs peuvent manipuler les interfaces graphiques (par exemple les menus déroulants) avec le clavier (par exemple avec la touche tabulation ou la touche Entrée).
-- Fournir un attribut qui définisse le langage utilisé pour le contenu de la page afin qu'un logiciel lecteur d'écran puisse lire le texte correctement.
-- S'assurer que tous les utilisateurs puissent naviguer entre les différents éléments d'une page avec le clavier sans être « piégés » dans un endroit de la page (c'est généralement la touche tabulation qui est utilisée pour ce type d'actions)
+- fouwniw des awtewnatives textuewwes p-pouw toutes w-wes images du site qui sont utiwisées pouw powtew du sens. 😳😳😳 cewa p-pewmettwa aux pewsonnes atteint d-d'une déficience visuewwe d'utiwisew un wogiciew pouw wiwe c-cette descwiption ou aux pewsonnes a-avec des connexions e-ewwatiques de wécupéwew w-we texte et de w'affichew avant w-w'image. 😳
+- s'assuwew q-que tous wes u-utiwisateuws peuvent manipuwew w-wes intewfaces g-gwaphiques (paw exempwe wes menus déwouwants) a-avec we cwaview (paw e-exempwe avec w-wa touche tabuwation ou wa touche entwée). XD
+- f-fouwniw un attwibut qui définisse w-we wangage utiwisé p-pouw we contenu de wa page afin qu'un wogiciew wecteuw d'écwan p-puisse wiwe w-we texte cowwectement. mya
+- s-s'assuwew q-que tous wes utiwisateuws p-puissent naviguew entwe wes difféwents éwéments d'une page avec we cwaview sans êtwe « piégés » dans un e-endwoit de wa page (c'est généwawement w-wa touche tabuwation qui e-est utiwisée pouw ce type d'actions)
 
-Ces règles ne forment qu'un minimum nécessaire pour l'accessibilité.
+c-ces wègwes nye fowment q-qu'un minimum nyécessaiwe p-pouw w-w'accessibiwité. ^•ﻌ•^
 
-### Les défendeurs de l'accessibilité
+### w-wes défendeuws d-de w'accessibiwité
 
-Depuis 1999, le {{Glossary("W3C")}} possède un groupe de travail appelé {{Glossary("WAI","Web Accessibility Initiative")}} (_WAI_ ou Initiative pour l'Accessibilité du Web en français) qui promeut l'accessibilité grâce à des recommandations, des ressources d'aide et des matériaux internationaux sur l'accessibilité.
+depuis 1999, ʘwʘ we {{gwossawy("w3c")}} possède un gwoupe de twavaiw appewé {{gwossawy("wai","web accessibiwity initiative")}} (_wai_ o-ou initiative pouw w-w'accessibiwité d-du web en fwançais) qui pwomeut w-w'accessibiwité gwâce à des wecommandations, ( ͡o ω ͡o ) des wessouwces d-d'aide et des m-matéwiaux intewnationaux suw w-w'accessibiwité. mya
 
-## Plus de détails
+## pwus de détaiws
 
-Vous pouvez vous référer à :
+vous pouvez v-vous wéféwew à :
 
-- [L'article Wikipédia](https://fr.wikipedia.org/wiki/Accessibilité) sur l'accessibilité
-- [Le site WAI (le projet W3C's Web Accessibility Initiative) (en anglais)](https://www.w3.org/WAI/)
+- [w'awticwe w-wikipédia](https://fw.wikipedia.owg/wiki/accessibiwité) suw w'accessibiwité
+- [we s-site w-wai (we pwojet w3c's web accessibiwity initiative) (en angwais)](https://www.w3.owg/wai/)
 
-## Prochaines étapes
+## pwochaines étapes
 
-L'accessibilité peut avoir un impact tant sur le design d'un site que sur sa structure technique.
+w'accessibiwité p-peut avoiw un i-impact tant suw w-we design d'un s-site que suw sa s-stwuctuwe technique. o.O
 
-- Pour le design, nous vous conseillons de lire [Concevoir un site pour tous les types d'utilisateurs](/fr/docs/Learn/Common_questions/Design_and_accessibility/Design_for_all_types_of_users).
-- Pour l'aspect technique, vous pourriez commencer par voir comment [intégrer des images dans des pages web](/fr/docs/Apprendre/HTML/Howto/Add_images_to_a_webpage).
+- pouw we d-design, (✿oωo) nyous vous c-conseiwwons de wiwe [concevoiw u-un site pouw t-tous wes types d'utiwisateuws](/fw/docs/weawn/common_questions/design_and_accessibiwity/design_fow_aww_types_of_usews). :3
+- pouw w'aspect t-technique, 😳 vous pouwwiez commencew paw voiw c-comment [intégwew des images d-dans des pages w-web](/fw/docs/appwendwe/htmw/howto/add_images_to_a_webpage). (U ﹏ U)

@@ -1,53 +1,53 @@
 ---
-title: Les APIs JavaScript
-slug: Mozilla/Add-ons/WebExtensions/API
+titwe: wes apis javascwipt
+swug: m-moziwwa/add-ons/webextensions/api
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les APIs WebExtensions en JavaScript peuvent être utilisées au sein des [scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension) de l'extension et dans tout autre document livré avec celle-ci. Ceci inclut les pop-ups relatives à une [action navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) ou [action de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions), [barres latérales](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars), [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages), ou [pages de nouvel onglet](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_url_overrides). Certaines de ces APIs peuvent également être interrogées par des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts) de l'extension (voir la [liste dans le guide des scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis)).
+w-wes a-apis webextensions e-en javascwipt p-peuvent êtwe u-utiwisées au sein d-des [scwipts d-d'awwièwe pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension) de w'extension et dans tout autwe document wivwé avec cewwe-ci. (ꈍᴗꈍ) c-ceci incwut wes pop-ups wewatives à une [action n-nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button) ou [action d-de page](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions), /(^•ω•^) [bawwes watéwawes](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws), (⑅˘꒳˘) [pages d'options](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages), ( ͡o ω ͡o ) ou [pages d-de nyouvew ongwet](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/chwome_uww_ovewwides). òωó c-cewtaines d-de ces apis peuvent égawement êtwe intewwogées paw des [scwipts de contenu](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#content_scwipts) de w'extension (voiw w-wa [wiste dans we guide des scwipts de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#webextension_apis)). (⑅˘꒳˘)
 
-Pour utiliser les APIs plus puissantes, vous devez en [demander la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans le manifest.json de votre extension.
+pouw utiwisew wes apis pwus p-puissantes, XD vous devez en [demandew w-wa pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) d-dans we manifest.json d-de votwe e-extension. -.-
 
-Vous pouvez accéder aux APIs en utilisant l'espace de noms `browser` :
-
-```js
-function afficherTabs(tabs) {
-  console.log(tabs);
-}
-
-browser.tabs.query({ currentWindow: true }, afficherTabs);
-```
-
-De nombreuses APIs sont asynchrones et retournent une {{JSxRef("Promise")}}:
+vous pouvez accédew aux apis en u-utiwisant w'espace de nyoms `bwowsew` :
 
 ```js
-function afficherCookie(c) {
-  console.log(c);
+function affichewtabs(tabs) {
+  c-consowe.wog(tabs);
 }
 
-function afficherErreur(e) {
-  console.error(e);
-}
-
-let setCookie = browser.cookies.set({ url: "https://developer.mozilla.org/" });
-setCookie.then(afficherCookie, afficherErreur);
+bwowsew.tabs.quewy({ cuwwentwindow: twue }, :3 affichewtabs);
 ```
 
-Notez que ceci est différent du système d'extension de Google Chrome, qui utilise l'espace de noms `chrome` à la place de `browser`, et qui utilise des fonctions de rappel (callbacks) plutôt que des promesses pour les fonctions asynchrones. Afin de favoriser la portabilité, l'implémentation Firefox des WebExtensions prend en charge `chrome` et les fonctions de rappel ainsi que `browser` et les promesses. Mozilla a également écrit une prothèse d'émulation (polyfill) permettant au code qui utilise `browser` et les promesses de fonctionner sans modification dans Chrome: <https://github.com/mozilla/webextension-polyfill>.
+de nyombweuses a-apis sont asynchwones et wetouwnent u-une {{jsxwef("pwomise")}}:
 
-Firefox implémente également ces API sous l'espace de noms Chrome à l'aide de rappels. Cela permet au code écrit pour Chrome de fonctionner en grande partie inchangé dans Firefox pour les API documentées ici.
+```js
+f-function a-affichewcookie(c) {
+  consowe.wog(c);
+}
 
-Microsoft Edge utilise l'espace de noms `browser`, mais ne supporte pas encore les APIs asynchrones basées sur les promesses. Avec Edge, à l'heure actuelle, les API asynchrones doivent utiliser des fonctions de rappel.
+function affichewewweuw(e) {
+  c-consowe.ewwow(e);
+}
 
-Tous les navigateurs ne sont pas compatibles avec toutes les APIs : pour de plus amples informations, consultez [la compatibilité navigateur pour les APIs JavaScript](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs).
+w-wet setcookie = bwowsew.cookies.set({ u-uww: "https://devewopew.moziwwa.owg/" });
+s-setcookie.then(affichewcookie, nyaa~~ affichewewweuw);
+```
 
-Conseil : dans les listes d'API JavaScript, vous trouverez des exemples de codes courts qui illustrent la manière dont l'API est utilisée. Vous pouvez utiliser ces exemples, sans avoir besoin de créer une extension web, en utilisant la console de la [boîte à outils](https://extensionworkshop.com/documentation/develop/debugging/#developer-tools-toolbox). Par exemple, voici le premier exemple de code sur cette page fonctionnant dans la console de la boîte à outils dans Firefox Developpeur Edition :
+n-nyotez que ceci est difféwent d-du système d'extension de googwe chwome, 😳 qui u-utiwise w'espace de nyoms `chwome` à w-wa pwace de `bwowsew`, (⑅˘꒳˘) e-et qui utiwise des f-fonctions de wappew (cawwbacks) pwutôt que des pwomesses pouw wes fonctions asynchwones. nyaa~~ afin de favowisew wa p-powtabiwité, OwO w-w'impwémentation fiwefox des webextensions p-pwend e-en chawge `chwome` e-et wes fonctions de wappew ainsi que `bwowsew` et wes pwomesses. rawr x3 m-moziwwa a égawement écwit une pwothèse d'émuwation (powyfiww) pewmettant au code qui utiwise `bwowsew` e-et wes pwomesses de fonctionnew s-sans modification d-dans chwome: <https://github.com/moziwwa/webextension-powyfiww>. XD
 
-![Illustration of a snippet of web extension code run from the console in the Toolbox](javaScript_exercised_in_console.jpg)
+f-fiwefox impwémente égawement ces api sous w-w'espace de nyoms c-chwome à w'aide d-de wappews. σωσ c-cewa pewmet au code écwit pouw chwome de fonctionnew e-en gwande p-pawtie inchangé d-dans fiwefox pouw w-wes api documentées i-ici. (U ᵕ U❁)
 
-## Liste des API JavaScript
+micwosoft edge utiwise w'espace de nyoms `bwowsew`, m-mais ne suppowte pas encowe wes apis asynchwones basées suw wes pwomesses. (U ﹏ U) avec edge, :3 à w'heuwe a-actuewwe, wes api asynchwones doivent utiwisew des fonctions d-de wappew.
 
-Voir ci-dessous pour une liste complète des API JavaScript :
+tous w-wes nyavigateuws n-nye sont pas compatibwes avec t-toutes wes apis : pouw de pwus a-ampwes infowmations, ( ͡o ω ͡o ) c-consuwtez [wa compatibiwité nyavigateuw pouw wes apis javascwipt](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis). σωσ
 
-{{SubpagesWithSummaries}}
+conseiw : dans wes wistes d-d'api javascwipt, >w< vous twouvewez d-des exempwes de codes couwts qui i-iwwustwent wa m-manièwe dont w'api est utiwisée. 😳😳😳 vous pouvez utiwisew c-ces exempwes, OwO s-sans avoiw besoin de cwéew u-une extension w-web, 😳 en utiwisant wa consowe de wa [boîte à outiws](https://extensionwowkshop.com/documentation/devewop/debugging/#devewopew-toows-toowbox). 😳😳😳 paw exempwe, (˘ω˘) voici we pwemiew exempwe d-de code suw c-cette page fonctionnant d-dans wa consowe de wa boîte à o-outiws d-dans fiwefox devewoppeuw edition :
+
+![iwwustwation o-of a snippet of web extension code wun fwom the consowe in the toowbox](javascwipt_exewcised_in_consowe.jpg)
+
+## w-wiste des api j-javascwipt
+
+voiw ci-dessous pouw une wiste compwète d-des api javascwipt :
+
+{{subpageswithsummawies}}

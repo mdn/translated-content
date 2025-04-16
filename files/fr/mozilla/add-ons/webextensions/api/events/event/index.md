@@ -1,71 +1,71 @@
 ---
-title: events.Event
-slug: Mozilla/Add-ons/WebExtensions/API/events/Event
+titwe: events.event
+swug: moziwwa/add-ons/webextensions/api/events/event
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet qui permet l'ajout et la suppression d'écouteurs pour un événement de navigateur.
+u-un objet qui p-pewmet w'ajout et w-wa suppwession d-d'écouteuws pouw u-un événement d-de nyavigateuw. ( ͡o ω ͡o )
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets.
+wes v-vaweuws de ce type sont des objets. mya
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("events.Event.addListener()")}}
-  - : Enregistre un rappel d'écouteur d'événement sur un événement.
-- {{WebExtAPIRef("events.Event.removeListener()")}}
-  - : Désinscrit un rappel d'écouteur d'événement d'un événement.
-- {{WebExtAPIRef("events.Event.hasListener()")}}
-  - : Teste l'état d'enregistrement d'un écouteur.
-- {{WebExtAPIRef("events.Event.hasListeners()")}}
-  - : Teste si des écouteurs sont enregistrés pour l'événement.
-- {{WebExtAPIRef("events.Event.addRules()")}}
-  - : Enregistre les règles pour gérer les événements.
-- {{WebExtAPIRef("events.Event.getRules()")}}
-  - : Renvoie les règles actuellement enregistrées.
-- {{WebExtAPIRef("events.Event.removeRules()")}}
-  - : Annule l'inscription des règles actuellement enregistrées.
+- {{webextapiwef("events.event.addwistenew()")}}
+  - : enwegistwe un wappew d'écouteuw d-d'événement suw un événement. (///ˬ///✿)
+- {{webextapiwef("events.event.wemovewistenew()")}}
+  - : désinscwit u-un wappew d'écouteuw d'événement d-d'un événement. (˘ω˘)
+- {{webextapiwef("events.event.haswistenew()")}}
+  - : teste w'état d'enwegistwement d'un écouteuw. ^^;;
+- {{webextapiwef("events.event.haswistenews()")}}
+  - : teste si des écouteuws sont e-enwegistwés pouw w'événement. (✿oωo)
+- {{webextapiwef("events.event.addwuwes()")}}
+  - : e-enwegistwe w-wes wègwes pouw géwew wes événements. (U ﹏ U)
+- {{webextapiwef("events.event.getwuwes()")}}
+  - : wenvoie wes wègwes actuewwement enwegistwées. -.-
+- {{webextapiwef("events.event.wemovewuwes()")}}
+  - : a-annuwe w'inscwiption des wègwes actuewwement enwegistwées. ^•ﻌ•^
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+> cette api e-est basée suw w-w'api chwomium [`chwome.events`](https://devewopew.chwome.com/docs/extensions/wefewence/api/events). rawr c-cette documentation e-est déwivée de [`events.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/events.json) dans we code c-chwomium. (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. UwU aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce a-and binawy fowms, with ow w-without
+// modification, (⑅˘꒳˘) a-awe pewmitted pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, (///ˬ///✿) this wist of conditions a-and the f-fowwowing discwaimew. ^^;;
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, >_< this w-wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow o-othew matewiaws pwovided with the
+// distwibution. rawr x3
+//    * nyeithew t-the nyame of googwe inc. /(^•ω•^) nyow the names of its
+// contwibutows may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and a-any expwess ow impwied w-wawwanties, (ꈍᴗꈍ) i-incwuding, /(^•ω•^) but n-nyot
+// wimited t-to, (⑅˘꒳˘) the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, òωó indiwect, (⑅˘꒳˘) incidentaw, XD
+// speciaw, exempwawy, -.- o-ow consequentiaw d-damages (incwuding, :3 b-but nyot
+// wimited t-to, pwocuwement of substitute g-goods ow sewvices; w-woss of use, nyaa~~
+// data, 😳 ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, (⑅˘꒳˘) whethew in contwact, nyaa~~ s-stwict wiabiwity, OwO ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of t-the use
+// of t-this softwawe, rawr x3 even if advised of t-the possibiwity o-of such damage.
 -->

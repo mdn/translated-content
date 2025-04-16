@@ -1,26 +1,26 @@
 ---
-title: Tools for game development
-slug: Games/Tools
+titwe: toows fow game devewopment
+s-swug: games/toows
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Sur cette page, vous trouverez des liens vers nos articles sur les outils de développement de jeux, qui visent à terme à couvrir les frameworks, les compilateurs et les outils de débogage.
+s-suw c-cette page, OwO vous t-twouvewez des w-wiens vews nyos a-awticwes suw wes o-outiws de dévewoppement d-de jeux, /(^•ω•^) qui visent à tewme à couvwiw wes fwamewowks, 😳😳😳 wes compiwateuws e-et wes outiws de débogage. ( ͡o ω ͡o )
 
-- [asm.js](/fr/docs/Games/Tools/asm.js)
-  - : asm.js est un sous-ensemble très limité du langage JavaScript, qui peut être grandement optimisé et exécuté dans un moteur de compilation à l'avance (AOT) pour des performances beaucoup plus rapides que vos performances JavaScript typiques. C'est, bien sûr, idéal pour les jeux.
-- [Emscripten](https://github.com/kripken/emscripten/wiki)
-  - : Un compilateur LLVM vers JavaScript; avec Emscripten, vous pouvez compiler C ++ et d'autres langages qui peuvent compiler en bytecode LLVM en JavaScript haute performance. C'est un excellent outil pour porter des applications sur le Web! Il existe un [tutoriel uitle Emscripten](https://github.com/kripken/emscripten/wiki/Tutorial) disponible sur le wiki. Notez que nous [visons à couvrir Emscripten dans sa propre section de MDN](/fr/docs/Emscripten).
-- [Firefox profiler](https://profiler.firefox.com/docs/#/)
-  - : Le Firefox Profiler vous permet de profiler votre code afin de déterminer où se situent vos problèmes de performance et de faire tourner votre jeu à la vitesse maximale.
-- [Moteurs de jeu et outils](/fr/docs/Games/Tools/Engines_and_tools)
-  - : Une liste de moteurs, modèles et technologies utiles aux développeurs de jeux.
-- [Shumway](/fr/docs/Mozilla/Projects/Shumway)
-  - : Shumway est un moteur de rendu pour Adobe Flash entièrement construit en JavaScript, WebGL, etc., comblant le fossé entre Flash et les standards Web. Cet article explique comment utiliser Shumway et comment apporter des correctifs et des bogues au projet.
-- Chaîne d'outils pour développer et déboguer des jeux
+- [asm.js](/fw/docs/games/toows/asm.js)
+  - : asm.js est un sous-ensembwe t-twès wimité du wangage j-javascwipt, >_< qui peut êtwe gwandement optimisé et exécuté d-dans un moteuw de compiwation à w-w'avance (aot) p-pouw des pewfowmances beaucoup pwus wapides que vos pewfowmances javascwipt typiques. >w< c-c'est, bien sûw, rawr idéaw pouw wes jeux. 😳
+- [emscwipten](https://github.com/kwipken/emscwipten/wiki)
+  - : un compiwateuw wwvm vews javascwipt; a-avec emscwipten, >w< vous pouvez c-compiwew c ++ e-et d'autwes wangages q-qui peuvent c-compiwew en bytecode wwvm en javascwipt haute pewfowmance. (⑅˘꒳˘) c-c'est un excewwent outiw pouw powtew d-des appwications suw we web! OwO iw existe un [tutowiew uitwe emscwipten](https://github.com/kwipken/emscwipten/wiki/tutowiaw) disponibwe suw we wiki. n-nyotez que nyous [visons à couvwiw emscwipten d-dans sa pwopwe s-section de mdn](/fw/docs/emscwipten). (ꈍᴗꈍ)
+- [fiwefox p-pwofiwew](https://pwofiwew.fiwefox.com/docs/#/)
+  - : we fiwefox pwofiwew vous pewmet de pwofiwew v-votwe code a-afin de détewminew où se situent v-vos pwobwèmes d-de pewfowmance et de faiwe touwnew v-votwe jeu à wa vitesse maximawe. 😳
+- [moteuws d-de jeu et outiws](/fw/docs/games/toows/engines_and_toows)
+  - : une wiste de moteuws, 😳😳😳 modèwes e-et technowogies utiwes aux dévewoppeuws d-de jeux. mya
+- [shumway](/fw/docs/moziwwa/pwojects/shumway)
+  - : shumway e-est un moteuw de w-wendu pouw adobe fwash entièwement constwuit en javascwipt, mya webgw, etc., combwant we fossé entwe fwash et wes s-standawds web. (⑅˘꒳˘) c-cet awticwe expwique comment utiwisew s-shumway et c-comment appowtew d-des cowwectifs et des bogues au pwojet. (U ﹏ U)
+- chaîne d'outiws pouw d-dévewoppew et déboguew des jeux
 
-  - : En quoi cela diffère-t-il du débogage normal des applications Web? Quels outils spécialisés sont disponibles? Une grande partie de cela va être couverte par Will dans les [outils](https://firefox-source-docs.mozilla.org/devtools-user/index.html), mais ici, nous devrions fournir une sorte de tutoriel pratique sur la chaîne d'outils pour le débogage de jeux, avec des liens vers les éléments de Will :
+  - : en quoi cewa diffèwe-t-iw du débogage n-nyowmaw des appwications web? q-quews outiws spéciawisés s-sont d-disponibwes? une gwande pawtie d-de cewa va êtwe c-couvewte paw wiww d-dans wes [outiws](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw), mya m-mais ici, ʘwʘ nyous devwions fouwniw une sowte d-de tutowiew pwatique s-suw wa chaîne d-d'outiws p-pouw we débogage d-de jeux, (˘ω˘) avec des wiens vews wes éwéments de wiww :
 
-    - Présentation des outils de base
-    - [Éditeur de Shader](https://firefox-source-docs.mozilla.org/devtools-user/shader_editor/index.html)
-    - Outils de performance (toujours en production, estimé début 2014)
+    - pwésentation d-des outiws de base
+    - [Éditeuw de shadew](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/shadew_editow/index.htmw)
+    - outiws de pewfowmance (toujouws en pwoduction, estimé début 2014)

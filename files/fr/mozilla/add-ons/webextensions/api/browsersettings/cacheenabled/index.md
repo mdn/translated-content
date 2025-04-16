@@ -1,39 +1,39 @@
 ---
-title: browserSettings.cacheEnabled
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/cacheEnabled
+titwe: bwowsewsettings.cacheenabwed
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/cacheenabwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour activer ou désactiver globalement le cache du navigateur.
+u-un objet {{webextapiwef("types.bwowsewsetting", -.- "bwowsewsetting")}} q-qui peut êtwe u-utiwisé pouw a-activew ou désactivew g-gwobawement w-we cache d-du nyavigateuw. ( ͡o ω ͡o )
 
-La valeur sous-jacente est un booléen.
+w-wa vaweuw sous-jacente est un boowéen. rawr x3
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Obtenir une valeur actuelle de ce paramètre :
-
-```js
-function logResult(result) {
-  console.log(`Current value: ${result.value}`);
-  console.log(`Current level of control: ${result.levelOfControl}`);
-}
-
-browser.browserSettings.cacheEnabled.get({}).then(logResult);
-```
-
-Désactivation du cache du navigateur :
+obteniw une vaweuw actuewwe d-de ce pawamètwe :
 
 ```js
-function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+function w-wogwesuwt(wesuwt) {
+  consowe.wog(`cuwwent vawue: ${wesuwt.vawue}`);
+  consowe.wog(`cuwwent w-wevew of contwow: ${wesuwt.wevewofcontwow}`);
 }
 
-browser.browserSettings.cacheEnabled.set({ value: false }).then(logResult);
+bwowsew.bwowsewsettings.cacheenabwed.get({}).then(wogwesuwt);
 ```
 
-{{WebExtExamples}}
+d-désactivation d-du cache du navigateuw :
+
+```js
+function wogwesuwt(wesuwt) {
+  consowe.wog(`setting was modified: ${wesuwt}`);
+}
+
+b-bwowsew.bwowsewsettings.cacheenabwed.set({ vawue: fawse }).then(wogwesuwt);
+```
+
+{{webextexampwes}}

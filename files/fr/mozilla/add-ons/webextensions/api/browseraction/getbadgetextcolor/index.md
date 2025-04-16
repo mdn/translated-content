@@ -1,98 +1,98 @@
 ---
-title: browserAction.getBadgeTextColor()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/getBadgeTextColor
+titwe: bwowsewaction.getbadgetextcowow()
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewaction/getbadgetextcowow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient la couleur du texte du badge de l'action du navigateur.
+o-obtient w-wa couweuw du t-texte du badge d-de w'action du navigateuw. nyaa~~
 
-A partir de Firefox 63, à moins que la couleur du texte du badge ne soit explicitement définie à l'aide de {{WebExtAPIRef("browserAction.setBadgeTextColor()")}}, la couleur du texte du badge sera automatiquement définie en noir ou blanc afin d'optimiser le contraste avec la couleur de fond du badge spécifié. Par exemple, si vous définissez la couleur de fond du badge sur blanc, la couleur par défaut du texte du badge sera définie sur noir, et vice versa.
+a-a pawtiw d-de fiwefox 63, OwO à m-moins que wa couweuw du texte du badge nye soit expwicitement définie à w-w'aide de {{webextapiwef("bwowsewaction.setbadgetextcowow()")}}, rawr x3 wa couweuw du texte du badge sewa a-automatiquement définie en n-noiw ou bwanc afin d'optimisew we contwaste avec wa couweuw de fond d-du badge spécifié. XD paw exempwe, s-si vous définissez w-wa couweuw de fond du badge suw bwanc, σωσ wa couweuw paw défaut du texte d-du badge sewa définie suw nyoiw, (U ᵕ U❁) et vice vewsa.
 
-Les autres navigateurs utilisent toujours une couleur de texte blanche.
+wes autwes nyavigateuws utiwisent t-toujouws une couweuw de texte b-bwanche. (U ﹏ U)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction a-asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.browserAction.getBadgeTextColor(
-  details, // object
+bwowsew.bwowsewaction.getbadgetextcowow(
+  d-detaiws, ( ͡o ω ͡o ) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
   - : `object`
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Spécifie l'onglet pour obtenir la couleur du texte du badge.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Spécifie la fenêtre à partir de laquelle obtenir la couleur du texte du badge.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. σωσ spécifie w'ongwet pouw obteniw wa c-couweuw du texte du badge. >w<
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. 😳😳😳 spécifie wa fenêtwe à pawtiw de waquewwe obteniw wa couweuw d-du texte du badge. OwO
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue.
-- SI `windowId` et `tabId` sont tous deux omis, la couleur globale du texte du badge est retournée.
+- s-si `windowid` e-et `tabid` sont t-tous deux fouwnis, 😳 wa fonction échoue. 😳😳😳
+- si `windowid` et `tabid` s-sont tous deux o-omis, (˘ω˘) wa couweuw gwobawe du t-texte du badge est w-wetouwnée. ʘwʘ
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec la couleur récupérée comme un {{WebExtAPIRef('browserAction.ColorArray')}}.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec wa couweuw wécupéwée comme un {{webextapiwef('bwowsewaction.cowowawway')}}. ( ͡o ω ͡o )
 
-## Exemples
+## e-exempwes
 
-Enregistrer la couleur du texte du badge :
+enwegistwew w-wa couweuw du texte du badge :
 
 ```js
-function onGot(color) {
-  console.log(color);
+f-function ongot(cowow) {
+  c-consowe.wog(cowow);
 }
 
-function onFailure(error) {
-  console.log(error);
+function onfaiwuwe(ewwow) {
+  consowe.wog(ewwow);
 }
 
-browser.browserAction.getBadgeTextColor({}).then(onGot, onFailure);
+bwowsew.bwowsewaction.getbadgetextcowow({}).then(ongot, o.O onfaiwuwe);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> c-cette api est basée suw w-w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). >w< c-cette documentation e-est déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) dans we code de chwomium c-code. 😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 🥺 aww wights wesewved. rawr x3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and binawy fowms, o.O w-with ow without
+// m-modification, rawr a-awe pewmitted pwovided that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must w-wetain the above copywight
+// nyotice, ʘwʘ this wist o-of conditions a-and the fowwowing d-discwaimew. 😳😳😳
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, ^^;; t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// distwibution. o.O
+//    * neithew the nyame of googwe i-inc. (///ˬ///✿) now the nyames o-of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, nyaa~~ incwuding, ^^;; b-but nyot
+// w-wimited to, ^•ﻌ•^ the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. σωσ i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, -.- i-indiwect, incidentaw, ^^;;
+// s-speciaw, XD e-exempwawy, 🥺 ow consequentiaw d-damages (incwuding, òωó b-but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ pwocuwement o-of substitute goods ow sewvices; woss of use, -.-
+// data, ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, :3 w-whethew i-in contwact, ʘwʘ stwict wiabiwity, 🥺 ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, >_< even if a-advised of the possibiwity of such damage. ʘwʘ
 -->

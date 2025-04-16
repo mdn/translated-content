@@ -1,209 +1,209 @@
 ---
-title: chrome_settings_overrides
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides
+titwe: chwome_settings_ovewwides
+swug: moziwwa/add-ons/webextensions/manifest.json/chwome_settings_ovewwides
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez la clé `chrome_settings_overrides` pour remplacer certains paramètres du navigateur. Deux paramètres sont disponibles :
+u-utiwisez w-wa cwé `chwome_settings_ovewwides` p-pouw wempwacew c-cewtains pawamètwes d-du nyavigateuw. 🥺 d-deux pawamètwes s-sont disponibwes :
 
-- `"homepage"`, qui vous permet de remplacer la page d'accueil du navigateur.
-- `"search_provider"`, qui vous permet d'ajouter un nouveau moteur de recherche.
+- `"homepage"`, òωó q-qui vous pewmet de wempwacew wa page d'accueiw du nyavigateuw. (ˆ ﻌ ˆ)♡
+- `"seawch_pwovidew"`, -.- qui vous pewmet d-d'ajoutew un nyouveau moteuw de wechewche.
 
 ```json
-"chrome_settings_overrides" : {
-  "homepage": "https://developer.mozilla.org/"
+"chwome_settings_ovewwides" : {
+  "homepage": "https://devewopew.moziwwa.owg/"
 }
 ```
 
 ```json
-"chrome_settings_overrides": {
-  "search_provider": {
-    "name": "Discogs",
-    "search_url": "https://www.discogs.com/search/?q={searchTerms}",
-    "keyword": "disc",
-    "favicon_url": "https://www.discogs.com/favicon.ico"
+"chwome_settings_ovewwides": {
+  "seawch_pwovidew": {
+    "name": "discogs", :3
+    "seawch_uww": "https://www.discogs.com/seawch/?q={seawchtewms}", ʘwʘ
+    "keywowd": "disc",
+    "favicon_uww": "https://www.discogs.com/favicon.ico"
   }
 }
 ```
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th colspan="2" scope="row">
-        clé de manifeste : <code>chrome_settings_overrides</code>
+    <tw>
+      <th c-cowspan="2" scope="wow">
+        c-cwé de manifeste : <code>chwome_settings_ovewwides</code>
       </th>
-    </tr>
-    <tr>
-      <th scope="row">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
-La clé `chrome_settings_overrides` est un objet qui peut avoir les propriétés suivantes:
+wa cwé `chwome_settings_ovewwides` est un objet qui p-peut avoiw wes p-pwopwiétés suivantes:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Nom</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">nom</th>
+      <th scope="cow">type</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
+    <tw>
       <td><code>homepage</code></td>
-      <td>Chaîne de caractères</td>
+      <td>chaîne d-de cawactèwes</td>
       <td>
-        <p>Définit la page à utiliser comme page d'accueil du navigateur.</p>
-        <p>Le remplacement est donné comme une URL. L'URL peut :</p>
-        <ul>
-          <li>
-            pointer sur un fichier regroupé avec l'extension, auquel cas il est
-            donné comme une URL relative au fichier manifest.json
-          </li>
-          <li>être une URL distante comme "https://developer.mozilla.org/".</li>
-        </ul>
+        <p>définit wa page à utiwisew comme page d'accueiw du nyavigateuw.</p>
+        <p>we wempwacement e-est donné comme une u-uww. 🥺 w'uww peut :</p>
+        <uw>
+          <wi>
+            p-pointew s-suw un fichiew w-wegwoupé avec w'extension, >_< auquew cas iw est
+            donné c-comme une uww wewative au fichiew manifest.json
+          </wi>
+          <wi>êtwe u-une uww distante comme "https://devewopew.moziwwa.owg/".</wi>
+        </uw>
         <p>
-          Si deux ou plusieurs extensions définissent toutes les deux cette
-          valeur, alors le paramètre de la dernière extension installée aura la
-          priorité.
+          si deux ou pwusieuws extensions définissent toutes w-wes deux cette
+          vaweuw, ʘwʘ a-awows we pawamètwe d-de wa dewnièwe e-extension instawwée auwa wa
+          pwiowité. (˘ω˘)
         </p>
         <p>
-          Pour éviter de nouveaux onglets, utilisez à la place "<a
-            href="/fr/Add-ons/WebExtensions/manifest.json/chrome_url_overrides"
-            >chrome_url_overrides</a
-          >".
+          pouw évitew d-de nyouveaux o-ongwets, (✿oωo) utiwisez à wa pwace "<a
+            h-hwef="/fw/add-ons/webextensions/manifest.json/chwome_uww_ovewwides"
+            >chwome_uww_ovewwides</a
+          >". (///ˬ///✿)
         </p>
         <p>
-          C'est une
+          c-c'est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >propriété localisable</a
-          >.
+            hwef="/fw/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >pwopwiété wocawisabwe</a
+          >. rawr x3
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>search_provider</code></td>
-      <td><code>Objet</code></td>
+    </tw>
+    <tw>
+      <td><code>seawch_pwovidew</code></td>
+      <td><code>objet</code></td>
       <td>
-        <p>Définit un moteur de recherche à ajouter au navigateur.</p>
+        <p>définit u-un moteuw de wechewche à ajoutew a-au nyavigateuw.</p>
         <p>
-          Le moteur de recherche a un nom et une URL principale. D'autres URL
-          peuvent être fournies, y compris des URL pour des recherches plus
-          spécialisées comme des recherches d'images. Dans l'URL que vous
-          fournissez, utilisez "<code>{searchTerms}</code>" pour interpoler le
-          terme de recherche dans l'URL, comme :
-          <code>https://www.discogs.com/search/?q={searchTerms}</code>. Vous
-          pouvez également fournir des paramètres POST à envoyer avec la
-          recherche.
+          we moteuw de wechewche a un nyom e-et une uww pwincipawe. -.- d'autwes u-uww
+          peuvent êtwe fouwnies, ^^ y-y compwis d-des uww pouw des wechewches pwus
+          spéciawisées comme des wechewches d'images. (⑅˘꒳˘) dans w'uww que vous
+          f-fouwnissez, nyaa~~ u-utiwisez "<code>{seawchtewms}</code>" pouw intewpowew w-we
+          t-tewme de w-wechewche dans w'uww, /(^•ω•^) comme :
+          <code>https://www.discogs.com/seawch/?q={seawchtewms}</code>. (U ﹏ U) vous
+          pouvez égawement f-fouwniw des pawamètwes post à envoyew avec wa
+          wechewche.
         </p>
         <p>
-          Le moteur de recherche sera présenté à l'utilisateur à côté de ceux
-          fournis dans l'interface. Si vous incluez la propriété
-          <code>is_default</code>et le configurez avec <code>true</code>, le
-          nouveau moteur de recherche devient l'option par défaut. Avec
-          l'utilisation de la propriété<code>keyword</code>, vous permettez à
-          l'utilisateur de sélectionner votre moteur de recherche en tapant le
-          mot-clé dans la barre d'adresse avant le terme recherché.
+          we m-moteuw de wechewche sewa pwésenté à w-w'utiwisateuw à c-côté d-de ceux
+          fouwnis dans w-w'intewface. 😳😳😳 si v-vous incwuez wa p-pwopwiété
+          <code>is_defauwt</code>et w-we configuwez avec <code>twue</code>, >w< we
+          nyouveau moteuw d-de wechewche d-devient w'option p-paw défaut. XD avec
+          w-w'utiwisation d-de wa pwopwiété<code>keywowd</code>, vous pewmettez à
+          w'utiwisateuw d-de séwectionnew votwe moteuw de wechewche en tapant we
+          mot-cwé dans wa bawwe d-d'adwesse avant we tewme wechewché. o.O
         </p>
         <p>
-          C'est un objet avec les propriétés listées ci-dessous. Toutes les
-          propriétés chaîne de caractères sont
+          c'est un objet avec w-wes pwopwiétés w-wistées ci-dessous. mya t-toutes wes
+          pwopwiétés c-chaîne de cawactèwes s-sont
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >localisable</a
-          >s.
+            h-hwef="/fw/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >wocawisabwe</a
+          >s. 🥺
         </p>
-        <dl>
+        <dw>
           <dt><code>name</code></dt>
           <dd>
-            Chaîne de caractères : le nom du moteur de recherche, affiché pour
-            l'utilisateur.
+            chaîne de cawactèwes : we nyom du moteuw de wechewche, affiché pouw
+            w-w'utiwisateuw. ^^;;
           </dd>
-          <dt><code>search_url</code></dt>
+          <dt><code>seawch_uww</code></dt>
           <dd>
-            Chaîne de caractères : l'URL utilisée par le moteur de recherche. Il
-            peut être une URL HTTPS.
+            chaîne de cawactèwes : w-w'uww utiwisée paw we m-moteuw de wechewche. :3 i-iw
+            peut êtwe une uww https. (U ﹏ U)
           </dd>
-          <dt><code>is_default</code></dt>
+          <dt><code>is_defauwt</code></dt>
           <dd>
-            Booléen: "True" si le moteur de recherche doit être le choix par
-            défaut.
+            b-boowéen: "twue" s-si we moteuw de wechewche d-doit êtwe we choix p-paw
+            défaut. OwO
           </dd>
-          <dt><code>alternate_urls {{optional_inline}}</code></dt>
+          <dt><code>awtewnate_uwws {{optionaw_inwine}}</code></dt>
           <dd>
-            Tableau de chaînes de caractères : un éventail d'URL alternatives,
-            qui peut être utilisé à la place de<code>search_url</code>.
+            tabweau de chaînes de cawactèwes : u-un éventaiw d'uww a-awtewnatives, 😳😳😳
+            q-qui peut êtwe utiwisé à w-wa pwace d-de<code>seawch_uww</code>. (ˆ ﻌ ˆ)♡
           </dd>
-          <dt><code>encoding {{optional_inline}}</code></dt>
+          <dt><code>encoding {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : codage du terme de recherche, spécifié comme
+            chaîne de cawactèwes : c-codage du tewme de wechewche, XD spécifié comme
             un
             <a
-              href="https://www.iana.org/assignments/character-sets/character-sets.xhtml"
-              >standard character encoding name</a
-            >, voir "UTF-8".
+              h-hwef="https://www.iana.owg/assignments/chawactew-sets/chawactew-sets.xhtmw"
+              >standawd c-chawactew encoding nyame</a
+            >, (ˆ ﻌ ˆ)♡ voiw "utf-8". ( ͡o ω ͡o )
           </dd>
-          <dt><code>favicon_url {{optional_inline}}</code></dt>
+          <dt><code>favicon_uww {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : URL pointant sur une icône pour le moteur de
-            recherche. Ce doit être une URL absolue HTTP ou HTTPS.
+            c-chaîne de cawactèwes : u-uww pointant suw une icône pouw we moteuw de
+            w-wechewche. rawr x3 ce doit êtwe une uww absowue http ou https. nyaa~~
           </dd>
-          <dt><code>image_url {{optional_inline}}</code></dt>
+          <dt><code>image_uww {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : URL utilisée pour une recherche d'images.
+            chaîne de cawactèwes : u-uww utiwisée pouw une wechewche d'images. >_<
           </dd>
-          <dt><code>image_url_post_params {{optional_inline}}</code></dt>
+          <dt><code>image_uww_post_pawams {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : paramètres POST à envoyer
-            à<code>image_url</code>.
+            c-chaîne d-de cawactèwes : pawamètwes post à envoyew
+            à<code>image_uww</code>. ^^;;
           </dd>
-          <dt><code>instant_url {{optional_inline}}</code></dt>
+          <dt><code>instant_uww {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : URL utilisée pour une recherche instantanée.
+            chaîne de cawactèwes : u-uww u-utiwisée pouw une wechewche instantanée. (ˆ ﻌ ˆ)♡
           </dd>
-          <dt><code>instant_url_post_params {{optional_inline}}</code></dt>
+          <dt><code>instant_uww_post_pawams {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : paramètres POST à envoyer à
-            <code>instant_url</code>.
+            chaîne de cawactèwes : pawamètwes p-post à envoyew à
+            <code>instant_uww</code>.
           </dd>
-          <dt><code>keyword {{optional_inline}}</code></dt>
+          <dt><code>keywowd {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : mots-clés de la barre d'adresse pour le
-            moteur de recherche.
+            chaîne de c-cawactèwes : mots-cwés de wa bawwe d'adwesse pouw we
+            m-moteuw de wechewche. ^^;;
           </dd>
-          <dt><code>prepopulated_id {{optional_inline}}</code></dt>
-          <dd>L'ID d'un moteur de recherche intégré à utiliser.</dd>
-          <dt><code>search_url_post_params {{optional_inline}}</code></dt>
+          <dt><code>pwepopuwated_id {{optionaw_inwine}}</code></dt>
+          <dd>w'id d'un moteuw de w-wechewche intégwé à u-utiwisew.</dd>
+          <dt><code>seawch_uww_post_pawams {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : paramètres POST à envoyer
-            à<code>search_url</code>.
+            chaîne d-de cawactèwes : pawamètwes p-post à envoyew
+            à<code>seawch_uww</code>. (⑅˘꒳˘)
           </dd>
-          <dt><code>suggest_url {{optional_inline}}</code></dt>
+          <dt><code>suggest_uww {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : URL utilisée pour les suggestions de
-            recherche. Ceci doit être une URL HTTPS
+            c-chaîne de cawactèwes : u-uww utiwisée pouw wes s-suggestions de
+            w-wechewche. rawr x3 ceci doit êtwe une uww h-https
           </dd>
-          <dt><code>suggest_url_post_params {{optional_inline}}</code></dt>
+          <dt><code>suggest_uww_post_pawams {{optionaw_inwine}}</code></dt>
           <dd>
-            Chaîne de caractères : paramètres POST à envoyer
-            à<code>suggest_url</code>.
+            c-chaîne d-de cawactèwes : pawamètwes post à envoyew
+            à<code>suggest_uww</code>. (///ˬ///✿)
           </dd>
-        </dl>
+        </dw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

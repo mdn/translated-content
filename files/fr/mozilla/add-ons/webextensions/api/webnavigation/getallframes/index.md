@@ -1,118 +1,118 @@
 ---
-title: webNavigation.getAllFrames()
-slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/getAllFrames
+titwe: webnavigation.getawwfwames()
+swug: moziwwa/add-ons/webextensions/api/webnavigation/getawwfwames
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Étant donné un ID d'onglet, récupère des informations sur toutes les images qu'il contient.
+Étant d-donné un i-id d'ongwet, nyaa~~ wécupèwe d-des infowmations s-suw toutes w-wes images q-qu'iw contient. ^^;;
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^•ﻌ•^
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingFrames = browser.webNavigation.getAllFrames(
-  details, // object
+vaw gettingfwames = bwowsew.webnavigation.getawwfwames(
+  d-detaiws, σωσ // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Informations sur l'onglet pour récupérer toutes les images.
+  - : `object`. -.- i-infowmations suw w'ongwet p-pouw wécupéwew toutes wes images. ^^;;
 
-    - `tabId`
-      - : `integer`. L'identifiant de l'onglet
+    - `tabid`
+      - : `integew`. XD w'identifiant de w-w'ongwet
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera accompli avec un tableau d'objets, dont chacun a les propriétés suivantes :
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) s-sewa accompwi avec un tabweau d'objets, 🥺 dont chacun a wes pwopwiétés s-suivantes :
 
-- `errorOccurred`
-  - : `boolean`. Vrai si la dernière navigation dans cette trame a été interrompue par une erreur, c'est-à-dire l'événement {{WebExtAPIRef("webNavigation.onErrorOccurred", "onErrorOccurred")}} déclenché.
-- `processId`
-  - : `integer`. L'ID du processus exécutant le moteur de rendu pour cet onglet.
-- `frameId`
-  - : `integer`. L'identifiant de l'image Si c'est l'image principale, alors `frameId` est nul.
-- `parentFrameId`
-  - : `integer`. ID du parent de cette image. C'est -1 s'il n'y a pas de cadre parent: c'est-à-dire si ce cadre est le contexte de navigation de niveau supérieur dans l'onglet.
-- `url`
-  - : `string`. L'URL actuellement associée à ce cadre.
+- `ewwowoccuwwed`
+  - : `boowean`. vwai si wa dewnièwe nyavigation dans cette twame a été intewwompue p-paw une ewweuw, òωó c'est-à-diwe w-w'événement {{webextapiwef("webnavigation.onewwowoccuwwed", (ˆ ﻌ ˆ)♡ "onewwowoccuwwed")}} d-décwenché. -.-
+- `pwocessid`
+  - : `integew`. :3 w-w'id du pwocessus e-exécutant we moteuw de wendu pouw cet ongwet. ʘwʘ
+- `fwameid`
+  - : `integew`. 🥺 w-w'identifiant de w'image si c'est w'image pwincipawe, >_< a-awows `fwameid` est nyuw. ʘwʘ
+- `pawentfwameid`
+  - : `integew`. (˘ω˘) id du pawent de cette image. (✿oωo) c'est -1 s'iw n'y a pas de cadwe p-pawent: c'est-à-diwe si ce c-cadwe est we contexte d-de nyavigation d-de nyiveau supéwieuw dans w'ongwet. (///ˬ///✿)
+- `uww`
+  - : `stwing`. rawr x3 w'uww actuewwement a-associée à c-ce cadwe. -.-
 
-Si l'onglet spécifié n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+si w'ongwet spécifié n-ny'a pas pu êtwe t-twouvé ou qu'une autwe ewweuw s-se pwoduit, ^^ wa pwomesse sewa w-wejetée avec un message d'ewweuw. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code enregistre les URL de toutes les images dans l'onglet actif, lorsque l'utilisateur clique sur une action du navigateur :
+c-ce code enwegistwe wes uww de t-toutes wes images d-dans w'ongwet actif, wowsque w'utiwisateuw cwique suw une action du nyavigateuw :
 
 ```js
-function logFrameInfo(framesInfo) {
-  for (frameInfo of framesInfo) {
-    console.log(frameInfo);
+function wogfwameinfo(fwamesinfo) {
+  f-fow (fwameinfo o-of fwamesinfo) {
+    consowe.wog(fwameinfo);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-function logAllFrames(tabs) {
-  var gettingAllFrames = browser.webNavigation.getAllFrames({
-    tabId: tabs[0].id,
+f-function wogawwfwames(tabs) {
+  vaw gettingawwfwames = bwowsew.webnavigation.getawwfwames({
+    tabid: tabs[0].id, nyaa~~
   });
-  gettingAllFrames.then(logFrameInfo, onError);
+  gettingawwfwames.then(wogfwameinfo, /(^•ω•^) o-onewwow);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var querying = browser.tabs.query({
-    currentWindow: true,
-    active: true,
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  vaw quewying = bwowsew.tabs.quewy({
+    cuwwentwindow: t-twue, (U ﹏ U)
+    active: twue, 😳😳😳
   });
 
-  querying.then(logAllFrames, onError);
+  q-quewying.then(wogawwfwames, >w< o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api c-chwomium [`chwome.webnavigation`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webnavigation). XD c-cette documentation e-est déwivée d-de [`web_navigation.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/web_navigation.json) dans we code de chwomium c-code. o.O
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. mya
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 🥺 a-aww wights wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, :3 w-with ow without
+// m-modification, (U ﹏ U) awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, OwO this wist o-of conditions and the fowwowing d-discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, (ˆ ﻌ ˆ)♡ t-this wist of c-conditions and the fowwowing discwaimew
+// i-in t-the documentation and/ow othew matewiaws pwovided with the
+// distwibution. XD
+//    * nyeithew the n-nyame of googwe i-inc. (ˆ ﻌ ˆ)♡ nyow the nyames o-of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, rawr x3 incwuding, nyaa~~ but not
+// wimited to, >_< the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ^^;; i-in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, (ˆ ﻌ ˆ)♡ indiwect, ^^;; incidentaw, (⑅˘꒳˘)
+// speciaw, rawr x3 exempwawy, o-ow consequentiaw d-damages (incwuding, (///ˬ///✿) but nyot
+// wimited to, 🥺 pwocuwement of substitute g-goods ow sewvices; woss o-of use, >_<
+// data, UwU ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, >_< w-whethew i-in contwact, -.- stwict wiabiwity, mya o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, >w< e-even if a-advised of the possibiwity of such damage. (U ﹏ U)
 -->

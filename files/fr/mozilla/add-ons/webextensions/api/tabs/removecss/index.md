@@ -1,108 +1,108 @@
 ---
-title: tabs.removeCSS()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/removeCSS
+titwe: tabs.wemovecss()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/wemovecss
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime d'une page CSS précédemment injectée par un appel à {{WebExtAPIRef("tabs.insertCSS()")}}.
+s-suppwime d-d'une page css p-pwécédemment i-injectée paw un a-appew à {{webextapiwef("tabs.insewtcss()")}}. ^^;;
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.tabs.removeCSS(
-  tabId, // optional integer
-  details, // object
+vaw wemoving = bwowsew.tabs.wemovecss(
+  t-tabid, (U ﹏ U) // optionaw integew
+  detaiws, OwO // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId` {{optional_inline}}
-  - : `integer`. L'ID de l'onglet à partir duquel supprimer le CSS. Par défaut à l'onglet actif de la fenêtre en cours.
-- `details`
+- `tabid` {{optionaw_inwine}}
+  - : `integew`. 😳😳😳 w'id de w-w'ongwet à pawtiw duquew suppwimew we css. (ˆ ﻌ ˆ)♡ paw défaut à w'ongwet a-actif de wa fenêtwe en couws. XD
+- `detaiws`
 
-  - : Un objet décrivant le CSS à retirer de la page. Il contient les propriétés suivantes :
+  - : u-un objet d-décwivant we css à wetiwew de wa page. (ˆ ﻌ ˆ)♡ iw contient wes pwopwiétés suivantes :
 
-    - `allFrames`{{optional_inline}}
+    - `awwfwames`{{optionaw_inwine}}
 
-      - : `boolean`. si `true`, le code sera supprimé de toutes les images de la page en cours. si c'est `false`, le code est seulement retiré du cadre supérieur. Par défaut à `false`.
+      - : `boowean`. ( ͡o ω ͡o ) si `twue`, rawr x3 w-we code sewa suppwimé de toutes wes images de wa page en couws. nyaa~~ si c'est `fawse`, >_< w-we code est seuwement w-wetiwé du cadwe s-supéwieuw. ^^;; p-paw défaut à `fawse`. (ˆ ﻌ ˆ)♡
 
-    - `code`{{optional_inline}}
-      - : `string`. CSS à supprimer, en tant que chaîne de texte. Cela doit correspondre exactement à une chaîne CSS précédemment insérée dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
-    - `cssOrigin`{{optional_inline}}
-      - : `string`. Cela peut prendre l'une des deux valeurs suivantes : "user", pour CSS ajouté en tant que feuille de style utilisateur, ou "author" pour CSS ajouté en tant que feuille de style auteur. Si cette option a été définie précédemment par {{WebExtAPIRef("tabs.insertCSS()")}}, elle doit correspondre exactement.
-    - `file`{{optional_inline}}
-      - : `string`. Chemin d'accès à un fichier contenant le CSS à supprimer. Cela doit correspondre exactement à un fichier CSS préalablement inséré dans la page en utilisant {{WebExtAPIRef("tabs.insertCSS()")}}.
-    - `frameId`{{optional_inline}}
-      - : `integer`. Le cadre à partir duquel supprimer le CSS. La valeur par défaut est `0` (l'image de niveau supérieur).
-    - `matchAboutBlank`{{optional_inline}}
-      - : `boolean`. si `true`, le CSS sera supprimé des cadres "about:blank" et "about:srcdoc" intégrés si votre extension a accès à leur document parent. Par défaut à `false`.
+    - `code`{{optionaw_inwine}}
+      - : `stwing`. ^^;; c-css à suppwimew, (⑅˘꒳˘) en tant que chaîne d-de texte. rawr x3 cewa doit cowwespondwe exactement à u-une chaîne css pwécédemment inséwée dans wa page en utiwisant {{webextapiwef("tabs.insewtcss()")}}. (///ˬ///✿)
+    - `cssowigin`{{optionaw_inwine}}
+      - : `stwing`. cewa peut pwendwe w'une des d-deux vaweuws suivantes : "usew", 🥺 pouw css ajouté e-en tant que feuiwwe d-de stywe utiwisateuw, >_< o-ou "authow" pouw css ajouté en tant que feuiwwe de s-stywe auteuw. UwU si c-cette option a été définie pwécédemment p-paw {{webextapiwef("tabs.insewtcss()")}}, >_< e-ewwe doit cowwespondwe exactement. -.-
+    - `fiwe`{{optionaw_inwine}}
+      - : `stwing`. mya chemin d-d'accès à un fichiew contenant w-we css à suppwimew. >w< cewa doit cowwespondwe e-exactement à un fichiew css p-pwéawabwement inséwé dans wa p-page en utiwisant {{webextapiwef("tabs.insewtcss()")}}. (U ﹏ U)
+    - `fwameid`{{optionaw_inwine}}
+      - : `integew`. 😳😳😳 w-we cadwe à pawtiw duquew suppwimew we css. o.O wa vaweuw paw défaut est `0` (w'image de nyiveau supéwieuw). òωó
+    - `matchaboutbwank`{{optionaw_inwine}}
+      - : `boowean`. 😳😳😳 si `twue`, w-we css sewa s-suppwimé des cadwes "about:bwank" e-et "about:swcdoc" i-intégwés s-si votwe extension a accès à weuw document pawent. σωσ paw défaut à `fawse`. (⑅˘꒳˘)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque tous les CSS ont été supprimés. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie sans awguments wowsque tous wes c-css ont été suppwimés. (///ˬ///✿) si une e-ewweuw se pwoduit, 🥺 w-wa pwomesse s-sewa wejetée avec un message d-d'ewweuw. OwO
 
-## Exemples
+## exempwes
 
-Cet exemple ajoute du code CSS en utilisant {{WebExtAPIRef("tabs.insertCSS")}}, puis le supprime à nouveau lorsque l'utilisateur clique sur une action du navigateur :
+c-cet exempwe a-ajoute du code c-css en utiwisant {{webextapiwef("tabs.insewtcss")}}, >w< puis we suppwime à nyouveau w-wowsque w'utiwisateuw c-cwique s-suw une action d-du nyavigateuw :
 
 ```js
-var css = "body { border: 20px dotted pink; }";
+v-vaw css = "body { bowdew: 20px dotted pink; }";
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var insertingCSS = browser.tabs.insertCSS(2, { code: css });
-insertingCSS.then(null, onError);
+vaw insewtingcss = bwowsew.tabs.insewtcss(2, 🥺 { code: css });
+insewtingcss.then(nuww, nyaa~~ o-onewwow);
 
-browser.browserAction.onClicked.addListener(() => {
-  var removing = browser.tabs.removeCSS(2, { code: css });
-  removing.then(null, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  vaw wemoving = bwowsew.tabs.wemovecss(2, ^^ { code: c-css });
+  wemoving.then(nuww, >w< o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) d-de chwomium. OwO c-cette documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. 🥺 aww wights wesewved. XD
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce a-and binawy fowms, (U ᵕ U❁) w-with ow without
+// m-modification, :3 awe pewmitted p-pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-notice, ( ͡o ω ͡o ) this w-wist of conditions and the fowwowing discwaimew. òωó
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, σωσ t-this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// d-distwibution. (U ᵕ U❁)
+//    * n-nyeithew the nyame of googwe inc. (✿oωo) nyow the nyames of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. ^^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, ^•ﻌ•^ incwuding, XD b-but nyot
+// wimited to, :3 t-the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a p-pawticuwaw puwpose a-awe discwaimed. (ꈍᴗꈍ) in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, :3 indiwect, incidentaw, (U ﹏ U)
+// s-speciaw, UwU exempwawy, 😳😳😳 ow consequentiaw d-damages (incwuding, XD b-but nyot
+// wimited to, o.O pwocuwement of substitute goods o-ow sewvices; woss o-of use,
+// data, (⑅˘꒳˘) o-ow pwofits; o-ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, 😳😳😳 whethew in contwact, nyaa~~ stwict wiabiwity, rawr ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any way out of the u-use
+// of this softwawe, -.- even i-if advised of the possibiwity of s-such damage. (✿oωo)
 -->

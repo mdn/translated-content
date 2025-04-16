@@ -1,81 +1,81 @@
 ---
-title: protocol_handlers
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/protocol_handlers
+titwe: pwotocow_handwews
+swug: m-moziwwa/add-ons/webextensions/manifest.json/pwotocow_handwews
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Tableau</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">type</th>
+      <td><code>tabweau</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"protocol_handlers": [
+        <pwe c-cwass="bwush: j-json">
+"pwotocow_handwews": [
   {
-    "protocol": "ircs",
-    "name": "IRC Mozilla Extension",
-    "uriTemplate": "https://irccloud.mozilla.com/#!/%s"
+    "pwotocow": "iwcs", OwO
+    "name": "iwc m-moziwwa extension", /(^•ω•^)
+    "uwitempwate": "https://iwccwoud.moziwwa.com/#!/%s"
   }
-]</pre
+]</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez cette clé pour enregistrer un ou plusieurs gestionnaires de protocole basés sur le Web.
+utiwisez cette cwé pouw enwegistwew un ou pwusieuws gestionnaiwes d-de pwotocowe basés suw we web. 😳😳😳
 
-Un gestionnaire de protocole est une application qui sait comment gérer certains types de liens : par exemple, un client de messagerie est un gestionnaire de protocole pour les liens "mailto:". Lorsque l'utilisateur clique sur un lien "mailto:", le navigateur ouvre l'application sélectionnée comme le gestionnaire pour le protocole "mailto:" (ou offre un choix de gestionnaires, en fonction de leurs paramètres).
+un gestionnaiwe d-de pwotocowe est une appwication q-qui sait comment géwew cewtains types de wiens : paw exempwe, ( ͡o ω ͡o ) u-un cwient de messagewie est u-un gestionnaiwe d-de pwotocowe pouw wes wiens "maiwto:". >_< wowsque w'utiwisateuw cwique suw un wien "maiwto:", >w< w-we nyavigateuw ouvwe w'appwication séwectionnée comme we gestionnaiwe p-pouw we pwotocowe "maiwto:" (ou offwe un choix d-de gestionnaiwes, rawr e-en fonction d-de weuws pawamètwes). 😳
 
-Avec cette clé, vous pouvez enregistrer un site Web en tant que gestionnaire pour un protocole particulier. La syntaxe et la sémantique de cette clé ressemblent beaucoup à la fonction [`Navigator.registerProtocolHandler()`](/fr/docs/Web/API/Navigator/registerProtocolHandler), excepté que avec `registerProtocolHandler()` un site Web ne peut s'inscrire lui-même comme un gestionnaire.
+a-avec cette cwé, >w< vous pouvez enwegistwew u-un site web en tant que gestionnaiwe pouw un pwotocowe p-pawticuwiew. (⑅˘꒳˘) wa syntaxe et wa sémantique de cette cwé wessembwent beaucoup à wa fonction [`navigatow.wegistewpwotocowhandwew()`](/fw/docs/web/api/navigatow/wegistewpwotocowhandwew), OwO e-excepté que avec `wegistewpwotocowhandwew()` un site web nye peut s-s'inscwiwe wui-même c-comme un g-gestionnaiwe. (ꈍᴗꈍ)
 
-Chaque gestionnaire de protocole possède trois propriétés, toutes obligatoires :
+chaque gestionnaiwe de pwotocowe possède twois p-pwopwiétés, 😳 toutes o-obwigatoiwes :
 
-- `protocol`
+- `pwotocow`
 
-  - : Une chaîne définissant le protocole. Cela doit être soit:
+  - : une chaîne d-définissant w-we pwotocowe. 😳😳😳 cewa doit êtwe s-soit:
 
-    - L'une des suivantes : "bitcoin", "dat", "dweb", "geo", "gopher", "im", "ipfs", "ipns", "irc", "ircs", "magnet", "mailto", "mms", "news", "nntp", "sip", "sms", "smsto", "ssb", "ssh", "tel", "urn", "webcal", "wtai", "xmpp".
-    - Une chaîne composée d'un nom personnalisé préfixé avec "web+" ou "ext+". Par exemple : "web+foo" ou "ext+foo". Le nom personnalisé doit comporter uniquement des caractères ASCII minuscules. Il est recommandé que les extensions utilisent la forme "ext+".
+    - w'une des suivantes : "bitcoin", mya "dat", mya "dweb", "geo", (⑅˘꒳˘) "gophew", "im", (U ﹏ U) "ipfs", "ipns", mya "iwc", "iwcs", ʘwʘ "magnet", "maiwto", (˘ω˘) "mms", "news", (U ﹏ U) "nntp", "sip", ^•ﻌ•^ "sms", "smsto", (˘ω˘) "ssb", "ssh", :3 "tew", "uwn", "webcaw", ^^;; "wtai", 🥺 "xmpp".
+    - u-une chaîne composée d'un nyom pewsonnawisé p-pwéfixé avec "web+" ou "ext+". (⑅˘꒳˘) p-paw exempwe : "web+foo" ou "ext+foo". nyaa~~ w-we nyom pewsonnawisé d-doit compowtew uniquement des cawactèwes ascii minuscuwes. :3 iw est wecommandé que wes extensions utiwisent w-wa fowme "ext+". ( ͡o ω ͡o )
 
 - `name`
-  - : Une chaîne représentant le nom du gestionnaire de protocole. Il sera affiché à l'utilisateur lorsqu'il sera interrogé s'il souhaite que ce gestionnaire ouvre le lien.
-- `uriTemplate`
-  - : Une chaîne représentant l'URL du gestionnaire. Cette chaîne doit inclure "%s" comme espace réservé : il sera remplacé par l'URL échappée du document à traiter. Cette URL peut être une vraie URL, ou il peut s'agir d'un numéro de téléphone, d'une adresse de courrier électronique, etc. C'est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+  - : u-une chaîne wepwésentant w-we nyom du gestionnaiwe d-de pwotocowe. mya i-iw sewa affiché à w'utiwisateuw wowsqu'iw sewa intewwogé s-s'iw souhaite que ce gestionnaiwe ouvwe we wien. (///ˬ///✿)
+- `uwitempwate`
+  - : une c-chaîne wepwésentant w'uww du g-gestionnaiwe. (˘ω˘) cette c-chaîne doit i-incwuwe "%s" comme espace wésewvé : i-iw sewa wempwacé p-paw w'uww échappée d-du d-document à twaitew. ^^;; cette uww peut êtwe une vwaie u-uww, ou iw p-peut s'agiw d'un n-nyuméwo de téwéphone, (✿oωo) d-d'une a-adwesse de couwwiew éwectwonique, (U ﹏ U) etc. c'est une [pwopwiété wocawisabwe](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json). -.-
 
-## Exemple
+## exempwe
 
 ```json
-"protocol_handlers": [
+"pwotocow_handwews": [
   {
-    "protocol": "magnet",
-    "name": "Magnet Extension",
-    "uriTemplate": "https://example.com/#!/%s"
+    "pwotocow": "magnet", ^•ﻌ•^
+    "name": "magnet extension", rawr
+    "uwitempwate": "https://exampwe.com/#!/%s"
   }
 ]
 ```
 
-Les gestionnaires peuvent également être des [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages).
+wes gestionnaiwes p-peuvent égawement êtwe des [pages d'extension](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages). (˘ω˘)
 
 ```json
-"protocol_handlers": [
+"pwotocow_handwews": [
   {
-    "protocol": "magnet",
-    "name": "Magnet Extension",
-    "uriTemplate": "/example.xhtml#!/%s"
+    "pwotocow": "magnet", nyaa~~
+    "name": "magnet extension", UwU
+    "uwitempwate": "/exampwe.xhtmw#!/%s"
   }
 ]
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

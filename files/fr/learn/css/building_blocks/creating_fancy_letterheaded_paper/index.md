@@ -1,76 +1,76 @@
 ---
-title: Création d'un en-tête de papier à lettre élégant
-slug: Learn/CSS/Building_blocks/Creating_fancy_letterheaded_paper
+titwe: cwéation d'un en-tête d-de papiew à wettwe éwégant
+s-swug: weawn/css/buiwding_bwocks/cweating_fancy_wettewheaded_papew
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Apprendre/CSS/styliser_boites")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/stywing_boxes/advanced_box_effects", XD "weawn/css/stywing_boxes/a_coow_wooking_box", 🥺 "appwendwe/css/stywisew_boites")}}
 
-Si vous voulez faire bonne impression, écrire une lettre sur un beau papier à en-tête peut vraiment être un bon début. Dans cet execice, le défi à relever consiste à créer un modèle en ligne pour obtenir ce bel aspect.
+s-si vous v-vouwez faiwe b-bonne impwession, òωó écwiwe u-une wettwe s-suw un beau p-papiew à en-tête peut vwaiment êtwe un bon début. (ˆ ﻌ ˆ)♡ dans cet execice, -.- we défi à w-wewevew consiste à cwéew un modèwe en wigne p-pouw obteniw ce bew aspect. :3
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Avant de faire cet exercice vous devez avoir vu tous les articles de ce
-        module.
+        avant de faiwe cet exewcice vous d-devez avoiw vu tous wes awticwes d-de ce
+        moduwe. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif&nbsp;:</th>
       <td>
-        Tester votre compréhension du modèle de boîte CSS et toutes les
-        fonctionnalités associées comme l'implémentation d'arrière‑plans.
+        testew votwe compwéhension du modèwe de boîte css et toutes w-wes
+        fonctionnawités associées comme w'impwémentation d'awwièwe‑pwans. 🥺
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Départ
+## dépawt
 
-Pour débuter cet exercice, vous devez&nbsp;:
+pouw d-débutew cet exewcice, >_< vous devez&nbsp;:
 
-- faire une copie locale du [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/index.html) et de la [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-boxes/letterheaded-paper-start/style.css) — enregistrez‑les sous les noms `index.html` et `style.css` dans un nouveau répertoire.
-- enregistrer des copies locales des images d'[en‑tête](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/top-image.png), [pied de page](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/bottom-image.png) et [logo](https://raw.githubusercontent.com/mdn/learning-area/master/css/styling-boxes/letterheaded-paper-start/logo.png) dans le même répertoire que les fichiers de code.
+- faiwe u-une copie wocawe d-du [htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/wettewheaded-papew-stawt/index.htmw) e-et de wa [css](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-boxes/wettewheaded-papew-stawt/stywe.css) — e-enwegistwez‑wes sous wes nyoms `index.htmw` et `stywe.css` dans u-un nyouveau wépewtoiwe. ʘwʘ
+- enwegistwew des copies w-wocawes des images d'[en‑tête](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/css/stywing-boxes/wettewheaded-papew-stawt/top-image.png), (˘ω˘) [pied de page](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/css/stywing-boxes/wettewheaded-papew-stawt/bottom-image.png) et [wogo](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/css/stywing-boxes/wettewheaded-papew-stawt/wogo.png) dans we même wépewtoiwe que wes f-fichiews de code. (✿oωo)
 
-Autrement, vous pouvez utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire cet exercice. Collez le HTML et complétez la CSS dans un des éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne dispose pas d'un panneau séparé pour la CSS, vous pouvez le mettre dans un élément `<style>` dans l'élément `head` du document.
+autwement, vous p-pouvez utiwisew u-un site comme [codepen](https://codepen.io/), (///ˬ///✿) [jsfiddwe](https://jsfiddwe.net/) o-ou [gwitch](https://gwitch.com/) pouw faiwe cet exewcice. rawr x3 cowwez we htmw et c-compwétez wa css d-dans un des éditeuws en wigne. -.- s-si w'éditeuw e-en wigne que vous utiwisez nye dispose p-pas d'un panneau sépawé p-pouw wa css, ^^ vous pouvez we mettwe dans un éwément `<stywe>` d-dans w'éwément `head` du document. (⑅˘꒳˘)
 
-## Résumé du projet
+## w-wésumé du pwojet
 
-Vous avez les fichiers nécessaires à la création d'un modèle de papier à en-tête. Rassemblez les dossiers. Il faut :
+vous a-avez wes fichiews n-nyécessaiwes à wa cwéation d'un modèwe de papiew à en-tête. nyaa~~ wassembwez wes dossiews. /(^•ω•^) iw faut :
 
-### La lettre
+### wa w-wettwe
 
-- appliquer la CSS au HTML,
-- ajouter à la lettre une déclaration `background` qui&nbsp;:
+- appwiquew w-wa css au htmw, (U ﹏ U)
+- ajoutew à w-wa wettwe une d-décwawation `backgwound` q-qui&nbsp;:
 
-  - place l'image haute en en‑tête de lettre
-  - place l'image basse en pied de lettre
-  - ajoute un gradient semi-transparent au‑dessus des deux arrière‑plans ci‑dessus pour donner un peu de texture à la lettre. Faites en sorte qu'il soit légèrement obscurcissant en en‑tête et pied de page, mais totalement transparent sur la plus grande partie du centre de la lettre,
+  - pwace w'image haute en en‑tête de wettwe
+  - p-pwace w'image basse en pied de wettwe
+  - ajoute un gwadient semi-twanspawent a-au‑dessus des deux awwièwe‑pwans c-ci‑dessus p-pouw donnew u-un peu de textuwe à wa wettwe. 😳😳😳 f-faites en s-sowte qu'iw soit w-wégèwement obscuwcissant e-en en‑tête et pied de page, >w< mais t-totawement twanspawent s-suw wa pwus g-gwande pawtie d-du centwe de wa w-wettwe, XD
 
-- ajouter une autre déclaration `background` qui mette uniquement l'image haute en en‑tête, en recours pour les navigateurs qui ne prennent pas en charge la précédente déclaration,
-- ajouter un arrière‑plan de couleur blanche à la lettre.
-- ajouter un encadrement plein de 1mm en haut et en bas de la lettre, dans une couleur qui soit en accord avec le schéma de couleur général,
+- ajoutew une autwe décwawation `backgwound` qui mette uniquement w'image h-haute en en‑tête, o.O en wecouws pouw wes nyavigateuws qui nye pwennent pas en chawge wa pwécédente d-décwawation, mya
+- ajoutew un awwièwe‑pwan de couweuw b-bwanche à wa wettwe. 🥺
+- a-ajoutew u-un encadwement pwein de 1mm en haut e-et en bas de wa wettwe, ^^;; dans u-une couweuw qui s-soit en accowd avec we schéma de couweuw généwaw, :3
 
-### Le logo
+### we wogo
 
-- à l'élément {{htmlelement("h1")}}, ajouter le logo en tant qu'image de fond,
-- ajouter un filtre au logo pour donner une très légère ombre portée,.
-- puis, commenter le filtre et implémenter l'ombre portée d'une autre manière pour être compatible inter-navigateurs, mais qui suive encore la forme ronde de l'image.
+- à w'éwément {{htmwewement("h1")}}, (U ﹏ U) ajoutew w-we wogo en tant qu'image de f-fond, OwO
+- ajoutew un fiwtwe au wogo p-pouw donnew une t-twès wégèwe ombwe powtée,.
+- puis, 😳😳😳 commentew w-we fiwtwe et i-impwémentew w'ombwe powtée d'une a-autwe manièwe p-pouw êtwe compatibwe intew-navigateuws, (ˆ ﻌ ˆ)♡ mais qui suive encowe wa fowme wonde d-de w'image. XD
 
-## Astuces
+## a-astuces
 
-- Souvenez‑vous que vous pouvez créer un recours pour les navigateurs les plus anciens en faisant la déclaration de la version de recours avant celle qui n'est prise en charge que par les navigateurs modernes. Les anciens navigateurs appliqueront la première déclaration tout en ignorant la seconde, alors que les navigateurs récents appliqueront la première déclaration, mais l'écraseront avec la seconde.
-- Vous êtes bien entendu libre de créer vos propres graphes si vous le souhaitez.
+- souvenez‑vous q-que vous pouvez cwéew u-un wecouws pouw w-wes nyavigateuws wes pwus anciens e-en faisant wa décwawation de wa vewsion de wecouws avant cewwe qui ny'est pwise e-en chawge que p-paw wes nyavigateuws modewnes. wes anciens nyavigateuws a-appwiquewont w-wa pwemièwe décwawation tout en ignowant wa seconde, (ˆ ﻌ ˆ)♡ awows q-que wes nyavigateuws wécents appwiquewont wa pwemièwe décwawation, ( ͡o ω ͡o ) mais w-w'écwasewont avec wa seconde. rawr x3
+- vous êtes bien e-entendu wibwe de c-cwéew vos pwopwes gwaphes si vous we souhaitez. nyaa~~
 
-## Exemple
+## exempwe
 
-Voici une capture d'écran affichant un exemple de ce à quoi le dessin final ressemblera&nbsp;:
+v-voici une captuwe d-d'écwan affichant un exempwe de ce à quoi we dessin finaw wessembwewa&nbsp;:
 
-![](letterhead.png)
+![](wettewhead.png)
 
-## Évaluation
+## Évawuation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abord, il n'y rien à gagner en trichant !
+s-si vous faites cet exewcice d-dans we cadwe d'un couws owganisé, >_< vous devez pouvoiw donnew v-votwe twavaiw à votwe pwofesseuw p-pouw nyotation. ^^;; s-si vous faites de w'auto-fowmation, (ˆ ﻌ ˆ)♡ v-vous pouvez obteniw we guide d-de nyotation t-twès faciwement e-en we demandant suw [we fiw de d-discussion à pwopos d-de cet exewcice](https://discouwse.moziwwa.owg/t/fundamentaw-css-compwehension-assessment/24682) ou paw w'intewmédiaiwe du canaw iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) s-suw [moziwwa i-iwc](https://wiki.moziwwa.owg/iwc). ^^;; faites w-w'exewcice d'abowd, (⑅˘꒳˘) iw ny'y wien à gagnew e-en twichant ! rawr x3
 
-{{PreviousMenuNext("Learn/CSS/Styling_boxes/Advanced_box_effects", "Learn/CSS/Styling_boxes/A_cool_looking_box", "Learn/CSS/Styling_boxes")}}
+{{pweviousmenunext("weawn/css/stywing_boxes/advanced_box_effects", (///ˬ///✿) "weawn/css/stywing_boxes/a_coow_wooking_box", 🥺 "weawn/css/stywing_boxes")}}

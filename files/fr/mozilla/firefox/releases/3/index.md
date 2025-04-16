@@ -1,257 +1,257 @@
 ---
-title: Firefox 3 pour les développeurs
-slug: Mozilla/Firefox/Releases/3
+titwe: fiwefox 3 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/3
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Pour les développeurs qui désirent prendre connaissance de toutes les nouvelles fonctionnalités de Firefox 3, c'est ici qu'il convient de commencer. Cet article fournit la liste des nouveaux articles couvrant les fonctionnalités qui ont été ajoutées à Firefox 3. Même s'il ne couvre pas nécessairement chaque petite modification, il vous aidera à découvrir les améliorations majeures.
+p-pouw wes dévewoppeuws q-qui d-désiwent pwendwe c-connaissance de t-toutes wes nyouvewwes f-fonctionnawités de fiwefox 3, (˘ω˘) c'est ici qu'iw convient de commencew. 😳 cet a-awticwe fouwnit wa wiste des nyouveaux awticwes c-couvwant wes fonctionnawités qui ont été ajoutées à f-fiwefox 3. (ꈍᴗꈍ) même s'iw ne couvwe pas nyécessaiwement chaque petite modification, :3 i-iw vous aidewa à découvwiw w-wes améwiowations m-majeuwes. /(^•ω•^)
 
-## Nouvelles fonctionnalités pour les développeurs dans Firefox 3
+## nyouvewwes fonctionnawités pouw wes dévewoppeuws dans f-fiwefox 3
 
-### Pour les développeurs de sites et d'applications Web
+### pouw wes dévewoppeuws de sites et d'appwications web
 
-- [Mise à jour des applications Web pour Firefox 3](/fr/Mise_à_jour_des_applications_Web_pour_Firefox_3)
-  - : Fournit des informations concernant les changements que vous devrez éventuellement prendre en compte pour permettre à votre site ou application Web de profiter des nouvelles fonctionnalités de Firefox 3.
-
-<!---->
-
-- [Évènements online et offline](/fr/Évènements_online_et_offline)
-  - : Firefox 3 gère les évènements online et offline définis par le WHATWG, qui permettent aux applications et extensions de détecter si une connexion Internet active est disponible, ainsi que de détecter l'activation et la désactivation de la connexion.
+- [mise à j-jouw des appwications web pouw f-fiwefox 3](/fw/mise_à_jouw_des_appwications_web_pouw_fiwefox_3)
+  - : f-fouwnit d-des infowmations c-concewnant wes changements que vous devwez éventuewwement p-pwendwe en compte pouw pewmettwe à v-votwe site ou appwication web de pwofitew des nyouvewwes fonctionnawités de fiwefox 3. ^^;;
 
 <!---->
 
-- [Gestionnaires de protocoles web](/fr/Gestionnaires_de_protocoles_web)
-  - : Il est à présent possible d'enregistrer des applications Web en tant que gestionnaires de protocoles à l'aide de la méthode `navigator.registerProtocolHandler()`.
+- [Évènements onwine et offwine](/fw/Évènements_onwine_et_offwine)
+  - : f-fiwefox 3 gèwe wes évènements o-onwine et offwine d-définis paw w-we nyaniwg, qui pewmettent aux appwications et extensions de détectew s-si une connexion i-intewnet active est disponibwe, a-ainsi que d-de détectew w'activation et wa d-désactivation de wa connexion.
 
 <!---->
 
-- [Dessin de texte avec canvas](/fr/Dessin_de_texte_avec_canvas)
-  - : Il est possible de dessiner du texte dans un élément canvas dans Firefox 3 avec une API non normalisée.
+- [gestionnaiwes d-de pwotocowes web](/fw/gestionnaiwes_de_pwotocowes_web)
+  - : iw est à p-pwésent possibwe d'enwegistwew d-des appwications web en tant q-que gestionnaiwes d-de pwotocowes à w'aide de wa méthode `navigatow.wegistewpwotocowhandwew()`. o.O
 
 <!---->
 
-- [Support des transformations pour canvas](/fr/Tutoriel_canvas/Transformations#Transformations)
-  - : Firefox gère à présent les méthodes `transform()` et `setTransform()` sur les éléments canvas.
+- [dessin de texte avec canvas](/fw/dessin_de_texte_avec_canvas)
+  - : iw est possibwe de dessinew du t-texte dans un éwément c-canvas dans fiwefox 3 a-avec une api nyon n-nyowmawisée.
 
 <!---->
 
-- [Utilisation de microformats](/fr/Utilisation_de_microformats)
-  - : Firefox dispose à présent d'API permettant de travailler avec des microformats.
+- [suppowt d-des twansfowmations pouw canvas](/fw/tutowiew_canvas/twansfowmations#twansfowmations)
+  - : fiwefox gèwe à pwésent wes méthodes `twansfowm()` e-et `settwansfowm()` suw wes éwéments canvas. 😳
 
 <!---->
 
-- [Évènements de glisser-déposer](/fr/Évènements_de_glisser-déposer)
-  - : Firefox 3 gère de nouveaux évènements envoyés au nœud source d'une opération de glisser-déposer lorsque le glisser débute et se termine.
+- [utiwisation de micwofowmats](/fw/utiwisation_de_micwofowmats)
+  - : fiwefox dispose à p-pwésent d'api pewmettant d-de twavaiwwew a-avec des micwofowmats. UwU
 
 <!---->
 
-- [Gestion du focus en HTML](/fr/Gestion_du_focus_en_HTML)
-  - : Les nouveaux attributs `activeElement` et `hasFocus` de HTML 5 sont gérés.
+- [Évènements d-de gwissew-déposew](/fw/Évènements_de_gwissew-déposew)
+  - : fiwefox 3 gèwe d-de nouveaux évènements e-envoyés a-au nyœud s-souwce d'une opéwation de gwissew-déposew wowsque w-we gwissew débute e-et se tewmine. >w<
 
 <!---->
 
-- [Ressources hors ligne dans Firefox](/fr/Ressources_hors_ligne_dans_Firefox)
-  - : Firefox permet applications Web de demander que des ressources soient mises en cache pour permettre leur utilisation en mode hors ligne.
+- [gestion d-du focus e-en htmw](/fw/gestion_du_focus_en_htmw)
+  - : w-wes nyouveaux attwibuts `activeewement` et `hasfocus` de htmw 5 sont géwés. o.O
 
 <!---->
 
-- [Améliorations CSS dans Firefox 3](/fr/Améliorations_CSS_dans_Firefox_3)
-  - : Firefox 3 propose un certain nombre d'améliorations dans son support CSS.
+- [wessouwces h-hows wigne dans fiwefox](/fw/wessouwces_hows_wigne_dans_fiwefox)
+  - : fiwefox pewmet appwications web de demandew que des w-wessouwces soient mises en cache pouw pewmettwe weuw utiwisation e-en mode hows w-wigne. (˘ω˘)
 
 <!---->
 
-- [Améliorations DOM dans Firefox 3](/fr/Améliorations_DOM_dans_Firefox_3)
-  - : Firefox 3 propose un certain nombre de nouvelles fonctionnalités dans son implémentation DOM, comme la gestion de plusieurs extensions d'Internet Explorer au DOM.
+- [améwiowations c-css dans fiwefox 3](/fw/améwiowations_css_dans_fiwefox_3)
+  - : fiwefox 3 pwopose u-un cewtain nyombwe d'améwiowations d-dans son s-suppowt css. òωó
 
 <!---->
 
-- [Support de JavaScript 1.8](/fr/Nouveautés_dans_JavaScript_1.8)
-  - : JavaScript 1.8 est fourni avec Firefox 3.
+- [améwiowations dom dans fiwefox 3](/fw/améwiowations_dom_dans_fiwefox_3)
+  - : fiwefox 3 pwopose un cewtain nombwe d-de nyouvewwes fonctionnawités dans son impwémentation d-dom, comme wa gestion de p-pwusieuws extensions d-d'intewnet expwowew au dom. nyaa~~
 
 <!---->
 
-- [Support d'EXSLT](/fr/EXSLT)
-  - : Firefox 3 permet d'utiliser une partie importante des extensions [EXSLT](/fr/EXSLT) à [XSLT](/fr/XSLT).
+- [suppowt de javascwipt 1.8](/fw/nouveautés_dans_javascwipt_1.8)
+  - : j-javascwipt 1.8 e-est fouwni avec fiwefox 3. ( ͡o ω ͡o )
 
 <!---->
 
-- [Améliorations SVG dans Firefox 3](/fr/Améliorations_SVG_dans_Firefox_3)
-  - : La gestion du SVG dans Firefox 3 a été mise à jour de manière substantielle, avec plus d'une vingtaine de nouveaux filtres, plusieurs nouveaux éléments et attributs, et quelques autres améliorations.
+- [suppowt d-d'exswt](/fw/exswt)
+  - : fiwefox 3 p-pewmet d'utiwisew une pawtie impowtante des extensions [exswt](/fw/exswt) à [xswt](/fw/xswt). 😳😳😳
 
 <!---->
 
-- [Images PNG animées](/fr/Images_PNG_animées)
-  - : Firefox 3 gère le format d'images PNG animées (APNG).
-
-### Pour les développeurs XUL et d'extensions
-
-#### Améliorations et modifications notables
-
-- [Mise à jour des extensions pour Firefox 3](/fr/Mise_à_jour_des_extensions_pour_Firefox_3)
-  - : Un guide fournissant tout ce qu'il faut savoir pour mettre à jour une extension afin de la faire fonctionner avec Firefox 3.
+- [améwiowations svg dans fiwefox 3](/fw/améwiowations_svg_dans_fiwefox_3)
+  - : w-wa gestion d-du svg dans fiwefox 3 a-a été mise à jouw de manièwe s-substantiewwe, ^•ﻌ•^ a-avec pwus d'une vingtaine d-de nyouveaux fiwtwes, pwusieuws nyouveaux éwéments et attwibuts, (˘ω˘) et quewques autwes a-améwiowations. (˘ω˘)
 
 <!---->
 
-- [Améliorations XUL dans Firefox 3](/fr/Améliorations_XUL_dans_Firefox_3)
-  - : Firefox 3 offre un certain nombre de nouveaux éléments XUL, dont de nouvelles échelles coulissantes, des sélecteurs de date et d'heure, et des boîtes d'incrément (spin buttons).
+- [images p-png animées](/fw/images_png_animées)
+  - : fiwefox 3 gèwe we fowmat d-d'images png animées (apng). -.-
+
+### p-pouw wes dévewoppeuws xuw et d'extensions
+
+#### améwiowations e-et modifications nyotabwes
+
+- [mise à jouw des extensions pouw fiwefox 3](/fw/mise_à_jouw_des_extensions_pouw_fiwefox_3)
+  - : u-un guide fouwnissant tout ce qu'iw faut savoiw p-pouw mettwe à j-jouw une extension afin de wa faiwe fonctionnew avec fiwefox 3. ^•ﻌ•^
 
 <!---->
 
-- [Templates dans Firefox 3](/fr/Templates_dans_Firefox_3)
-  - : Les templates ont été notablement améliorés dans Firefox 3. Le plus remarquable est la possibilité d'utiliser des processeur de requêtes personnalisés permettant d'utiliser d'autres sources de données que RDF.
+- [améwiowations xuw d-dans fiwefox 3](/fw/améwiowations_xuw_dans_fiwefox_3)
+  - : f-fiwefox 3 offwe un cewtain nyombwe de nyouveaux éwéments xuw, /(^•ω•^) d-dont de nyouvewwes échewwes couwissantes, (///ˬ///✿) d-des séwecteuws de date et d'heuwe, mya et des boîtes d'incwément (spin b-buttons). o.O
 
 <!---->
 
-- [Mises à jour sécurisées](/fr/Versions_d'une_extension,_mise_à_jour_et_compatibilité#Mises_.C3.A0_jour_s.C3.A9curis.C3.A9es)
-  - : Afin que le processus de mise à jour soit plus sûr pour les utilisateurs, les modules complémentaires doivent à présent fournir une méthode sécurisée de distribution des mises à jour avant de pouvoir être installés. Les modules hébergés sur [AMO](https://addons.mozilla.org) fournissent ceci automatiquement. Tout module installé ne fournissant pas une méthode de mise à jour sécurisée lorsque l'utilisateur migrera vers Firefox 3 sera désactivé automatiquement. Firefox continuera cependant à vérifier si des mises à jour sont disponibles au travers du chemin non sécurisé et essayera d'installer toute mise à jour proposée (l'installation échouera si la mise à jour ne propose pas non plus de méthode de mise à jour sécurisée).
+- [tempwates dans fiwefox 3](/fw/tempwates_dans_fiwefox_3)
+  - : w-wes tempwates o-ont été nyotabwement améwiowés d-dans fiwefox 3. ^•ﻌ•^ we pwus wemawquabwe e-est wa p-possibiwité d'utiwisew d-des pwocesseuw de wequêtes p-pewsonnawisés p-pewmettant d'utiwisew d'autwes souwces de données q-que wdf. (U ᵕ U❁)
 
 <!---->
 
-- [Guide de migration vers Places](/fr/Guide_de_migration_vers_Places)
-  - : Un article concernant la migration d'une application existante pour utiliser l'API Places.
+- [mises à j-jouw sécuwisées](/fw/vewsions_d'une_extension,_mise_à_jouw_et_compatibiwité#mises_.c3.a0_jouw_s.c3.a9cuwis.c3.a9es)
+  - : a-afin que we pwocessus de mise à jouw soit p-pwus sûw pouw wes utiwisateuws, :3 w-wes moduwes compwémentaiwes d-doivent à pwésent fouwniw une méthode sécuwisée d-de distwibution d-des mises à j-jouw avant de pouvoiw êtwe i-instawwés. wes moduwes h-hébewgés suw [amo](https://addons.moziwwa.owg) fouwnissent ceci automatiquement. (///ˬ///✿) tout moduwe instawwé nye fouwnissant pas u-une méthode de mise à jouw sécuwisée w-wowsque w'utiwisateuw m-migwewa vews fiwefox 3 sewa désactivé a-automatiquement. (///ˬ///✿) fiwefox c-continuewa cependant à v-véwifiew s-si des mises à j-jouw sont disponibwes a-au twavews du chemin nyon sécuwisé et essayewa d'instawwew toute mise à jouw pwoposée (w'instawwation échouewa si w-wa mise à jouw n-nye pwopose pas n-nyon pwus de méthode de mise à j-jouw sécuwisée). 🥺
 
 <!---->
 
-- [Améliorations du gestionnaire de téléchargement dans Firefox 3](/fr/Améliorations_du_gestionnaire_de_téléchargement_dans_Firefox_3)
-  - : Le gestionnaire de téléchargement de Firefox 3 comprend de nouvelles API et d'autres améliorations, comme la gestion de plusieurs écouteurs de progression.
+- [guide de migwation vews pwaces](/fw/guide_de_migwation_vews_pwaces)
+  - : un awticwe c-concewnant w-wa migwation d'une appwication e-existante pouw utiwisew w'api pwaces.
 
 <!---->
 
-- [Utilisation de nsILoginManager](/fr/Utilisation_de_nsILoginManager)
-  - : Le gestionnaire de mots de passe a été remplacé par le nouveau gestionnaire d'identification.
+- [améwiowations du gestionnaiwe d-de téwéchawgement d-dans fiwefox 3](/fw/améwiowations_du_gestionnaiwe_de_téwéchawgement_dans_fiwefox_3)
+  - : we gestionnaiwe d-de téwéchawgement d-de fiwefox 3 compwend de nyouvewwes api et d'autwes améwiowations, -.- comme w-wa gestion de pwusieuws écouteuws d-de pwogwession. nyaa~~
 
 <!---->
 
-- [Intégration de liaisons XBL](/fr/XBL/Référence_XBL_1.0/Éléments#binding)
-  - : Il est à présent possible d'utiliser le schéma d'URL `data:` depuis du code chrome pour intégrer des liaisons XBL directement au lieu de devoir les placer dans des fichiers XML séparés.
+- [utiwisation d-de n-nysiwoginmanagew](/fw/utiwisation_de_nsiwoginmanagew)
+  - : w-we gestionnaiwe de mots d-de passe a été w-wempwacé paw we nyouveau gestionnaiwe d-d'identification.
 
 <!---->
 
-- [Localisation des descriptions d'extensions](/fr/Localisation_des_descriptions_d'extensions)
-  - : Firefox 3 propose une nouvelle méthode de localisation des métadonnées des modules complémentaires. Ceci permet de disposer des détails localisés dès le téléchargement du module, et même s'il est désactivé.
+- [intégwation d-de wiaisons xbw](/fw/xbw/wéféwence_xbw_1.0/Éwéments#binding)
+  - : iw e-est à pwésent possibwe d'utiwisew we schéma d-d'uww `data:` depuis du code chwome p-pouw intégwew d-des wiaisons xbw diwectement a-au wieu de devoiw wes pwacew dans des fichiews x-xmw sépawés. (///ˬ///✿)
 
 <!---->
 
-- [Localisation et pluriels](/fr/Localisation_et_pluriels)
-  - : Firefox 3 ajout un nouveau module PluralForm fournissant des outils pour aider à mettre des mots correctement au pluriel dans diverses localisations.
+- [wocawisation d-des descwiptions d-d'extensions](/fw/wocawisation_des_descwiptions_d'extensions)
+  - : fiwefox 3 pwopose une nyouvewwe méthode d-de wocawisation des métadonnées des moduwes c-compwémentaiwes. 🥺 c-ceci pewmet de disposew des d-détaiws wocawisés dès we téwéchawgement d-du moduwe, >w< et même s-s'iw est désactivé. rawr x3
 
 <!---->
 
-- [Changements dans les thèmes pour Firefox 3](/fr/Changements_dans_les_thèmes_pour_Firefox_3)
-  - : Notes et informations pour ceux qui voudraient créer des thèmes pour Firefox 3.
-
-#### Nouveaux composants et fonctionnalités
-
-- [Bibliothèque FUEL](/fr/FUEL)
-  - : FUEL sert à améliorer la productivité des développeurs d'extensions en minimisant certaines des formalités XPCOM et en ajoutant certaines idées «&nbsp;modernes&nbsp;» de JavaScript.
+- [wocawisation et pwuwiews](/fw/wocawisation_et_pwuwiews)
+  - : fiwefox 3 ajout u-un nyouveau moduwe pwuwawfowm fouwnissant des o-outiws pouw aidew à m-mettwe des mots cowwectement a-au pwuwiew dans divewses wocawisations. (⑅˘꒳˘)
 
 <!---->
 
-- [Places](/fr/Places)
-  - : Les API d'historique et de marque-pages ont été entièrement remplacés par la nouvelle API [Places](/fr/Places).
+- [changements d-dans wes thèmes p-pouw fiwefox 3](/fw/changements_dans_wes_thèmes_pouw_fiwefox_3)
+  - : n-nyotes et infowmations pouw ceux qui voudwaient cwéew des thèmes pouw fiwefox 3. σωσ
+
+#### nyouveaux composants et fonctionnawités
+
+- [bibwiothèque fuew](/fw/fuew)
+  - : fuew sewt à améwiowew wa pwoductivité des dévewoppeuws d-d'extensions e-en minimisant cewtaines des fowmawités xpcom et e-en ajoutant cewtaines i-idées «&nbsp;modewnes&nbsp;» d-de javascwipt. XD
 
 <!---->
 
-- [Service Idle](/fr/nsIIdleService)
-  - : Firefox 3 propose une nouvelle interface `nsIIdleService` qui permet aux extensions de savoir depuis quand l'utilisateur n'a plus appuyé sur une touche ou déplacé la souris.
+- [pwaces](/fw/pwaces)
+  - : wes a-api d'histowique et de mawque-pages o-ont été entièwement w-wempwacés paw wa nyouvewwe a-api [pwaces](/fw/pwaces). -.-
 
 <!---->
 
-- [ZIP writer](/fr/NsIZipWriter)
-  - : La nouvelle interface `nsIZipWriter` permet aux extensions de pouvoir créer des archives ZIP.
+- [sewvice idwe](/fw/nsiidwesewvice)
+  - : f-fiwefox 3 p-pwopose une nyouvewwe intewface `nsiidwesewvice` qui pewmet aux e-extensions de savoiw d-depuis quand w-w'utiwisateuw n-ny'a pwus appuyé s-suw une touche o-ou dépwacé wa s-souwis. >_<
 
 <!---->
 
-- [Zoom pleine page](/fr/Zoom_pleine_page)
-  - : Firefox 3 améliore l'expérience utilisateur en offrant un zoom complet des pages en plus du simple zoom de texte.
+- [zip w-wwitew](/fw/nsizipwwitew)
+  - : w-wa nyouvewwe intewface `nsizipwwitew` p-pewmet aux extensions d-de pouvoiw c-cwéew des awchives zip. rawr
 
 <!---->
 
-- [Interfaçage avec le collecteur de cycles XPCOM](/fr/Interfaçage_avec_le_collecteur_de_cycles_XPCOM)
-  - : XPCOM peut à présent bénéficier du collecteur de cycles, qui permet de s'assurer que la mémoire inutilisée est libérée et d'éviter les fuites mémoire.
+- [zoom p-pweine page](/fw/zoom_pweine_page)
+  - : fiwefox 3 a-améwiowe w'expéwience utiwisateuw e-en offwant un z-zoom compwet des p-pages en pwus du simpwe zoom d-de texte. 😳😳😳
 
 <!---->
 
-- [Le gestionnaire de threads](/fr/Le_gestionnaire_de_threads)
-  - : Firefox 3 propose une nouvelle interface `nsIThreadManager`, accompagnée de nouvelles interfaces pour les threads et les évènements liés, qui offre une manière pratique de créer et gérer des threads dans votre code.
+- [intewfaçage avec we cowwecteuw d-de cycwes xpcom](/fw/intewfaçage_avec_we_cowwecteuw_de_cycwes_xpcom)
+  - : x-xpcom peut à pwésent bénéficiew d-du cowwecteuw de cycwes, UwU qui pewmet de s'assuwew que wa mémoiwe inutiwisée e-est wibéwée et d'évitew wes f-fuites mémoiwe. (U ﹏ U)
 
 <!---->
 
-- [Modules JavaScript](/fr/Modules_JavaScript)
-  - : Firefox 3 offre un mécanisme de modules de code partagés permettant de créer facilement des modules en JavaScript qui pourront être chargés par des extensions et applications, de manière similaire à des bibliothèques partagées.
+- [we g-gestionnaiwe de thweads](/fw/we_gestionnaiwe_de_thweads)
+  - : fiwefox 3 pwopose une nyouvewwe i-intewface `nsithweadmanagew`, (˘ω˘) accompagnée de n-nyouvewwes intewfaces p-pouw wes t-thweads et wes évènements wiés, /(^•ω•^) qui offwe une m-manièwe pwatique d-de cwéew et géwew des thweads d-dans votwe code. (U ﹏ U)
 
 <!---->
 
-- [L'interface `nsIJSON`](/fr/NsIJSON)
-  - : Firefox 3 propose la nouvelle interface `nsIJSON`, qui offre des chaînes de caractères [JSON](/fr/JSON) de codage et décodage en haute performance.
+- [moduwes javascwipt](/fw/moduwes_javascwipt)
+  - : fiwefox 3 offwe u-un mécanisme de moduwes de code p-pawtagés pewmettant d-de cwéew f-faciwement des moduwes en javascwipt q-qui pouwwont êtwe c-chawgés p-paw des extensions e-et appwications, ^•ﻌ•^ de manièwe s-simiwaiwe à d-des bibwiothèques p-pawtagées. >w<
 
 <!---->
 
-- [L'interface nsIParentalControlsService](/fr/NsIParentalControlsService)
-  - : Firefox 3 gère à présent la fonctionnalité de contrôle parental de Microsoft Windows Vista, et permet au code d'interagir directement avec elle.
+- [w'intewface `nsijson`](/fw/nsijson)
+  - : f-fiwefox 3 p-pwopose wa nyouvewwe i-intewface `nsijson`, ʘwʘ q-qui offwe d-des chaînes de cawactèwes [json](/fw/json) d-de codage et décodage en haute p-pewfowmance. òωó
 
 <!---->
 
-- [Utilisation des préférences de contenu](/fr/Utilisation_des_préférences_de_contenu)
-  - : Firefox 3 fournit un nouveau service permettant de définir et de lire des préférences particulières à un site, que des extensions ou le programme peuvent utiliser pour conserver des informations sur les préférences de l'utilisateur concernant certains sites.
+- [w'intewface nysipawentawcontwowssewvice](/fw/nsipawentawcontwowssewvice)
+  - : f-fiwefox 3 g-gèwe à pwésent w-wa fonctionnawité de contwôwe pawentaw de micwosoft windows v-vista, o.O et pewmet a-au code d'intewagiw d-diwectement avec ewwe. ( ͡o ω ͡o )
 
 <!---->
 
-- [Surveillance des plugins](/fr/Surveillance_des_plugins)
-  - : Un nouveau composant du système de plugins est à présent disponible pour mesurer le temps mis par les plugins (par exemple Macromedia Flash) pour exécuter leurs appels.
+- [utiwisation des pwéféwences de contenu](/fw/utiwisation_des_pwéféwences_de_contenu)
+  - : f-fiwefox 3 f-fouwnit un nyouveau sewvice p-pewmettant de d-définiw et de wiwe des pwéféwences pawticuwièwes à un site, mya q-que des extensions o-ou we pwogwamme p-peuvent utiwisew p-pouw consewvew des infowmations suw wes pwéféwences d-de w'utiwisateuw c-concewnant cewtains sites. >_<
 
-#### Bugs corrigés
+<!---->
 
-- [Bugs importants corrigés dans Firefox 3](/fr/Bugs_importants_corrigés_dans_Firefox_3)
-  - : Cet article fournit des informations concernant les bugs corrigés dans Firefox 3.
+- [suwveiwwance d-des pwugins](/fw/suwveiwwance_des_pwugins)
+  - : un nyouveau composant du système d-de pwugins est à pwésent disponibwe p-pouw mesuwew w-we temps mis paw wes pwugins (paw e-exempwe m-macwomedia fwash) pouw exékawaii~w w-weuws appews. rawr
 
-## Nouvelles fonctionnalités pour les utilisateurs
+#### bugs cowwigés
 
-### Expérience utilisateur
+- [bugs i-impowtants cowwigés d-dans fiwefox 3](/fw/bugs_impowtants_cowwigés_dans_fiwefox_3)
+  - : c-cet awticwe f-fouwnit des infowmations concewnant w-wes bugs c-cowwigés dans f-fiwefox 3. >_<
 
-- **Gestion simplifiée des mots de passe.** Une barre d'information apparaît en haut de la fenêtre du navigateur pour permettre d'enregistrer le mot de passe après une identification réussie.
-- **Installation de modules simplifiée.** Il est à présent possible d'installer des extensions depuis des sites tiers en un nombre réduit de clics, grâce au retrait de la liste blanche des sites de téléchargement de modules.
-- **Nouveau gestionnaire de téléchargement.** Le gestionnaire de téléchargement permet de retrouver plus facilement vos fichiers téléchargés.
-- **Reprise des téléchargements.** Il est à présent possible de reprendre des téléchargements après le redémarrage du navigateur ou la réinitialisation de votre connexion au réseau.
-- **Zoom pleine page.** Depuis le menu Affichage et à l'aide de raccourcis clavier, il est à présent possible d'agrandir et de réduire le contenu de pages entières — il ne s'agit plus simplement du texte mais également de la mise en page et des images.
-- **Défilement des onglets et menu rapide.** Les onglets sont plus faciles à identifier avec le nouveau défilement des onglets et leur menu rapide.
-- **Enregistrement de votre session.** Firefox 3 vous demande si vous désirez enregistrer vos onglets ouverts lorsque vous quittez Firefox.
-- **Comportement d'ouverture dans des onglets optimisé.** L'ouverture d'un dossier de marque-pages dans des onglets ajoute une série de nouveaux onglets au lieu de remplacer les onglets existants.
-- **Barres d'adresse et de recherche plus faciles à redimensionner.** Il est à présent aisé de redimensionner les barres d'adresse et de recherche grâce à une poignée de redimensionnement située entre les deux.
-- **Améliorations dans la sélection de texte.** Il est à présent possible de sélectionner plusieurs sections de texte à l'aide de la touche Ctrl (Command sur Macintosh). Un double clic avec déplacement sélectionne en mode «&nbsp;mot à mot&nbsp;». Un triple clic sélectionne tout le paragraphe.
-- **Barre de recherche.** La barre de recherche dans la page s'ouvre avec le contenu de la sélection courante.
-- **Gestion des plugins.** Les utilisateurs peuvent désactiver des plugins particuliers dans le gestionnaire de modules complémentaires.
-- **Intégration dans Windows Vista.** Les menus de Firefox s'affichent à présent avec le thème natif de Vista.
-- **Intégration dans Mac OS X.** Firefox utilise le correcteur orthographique de Mac OS X et gère [Growl](http://growl.info/) pour les notifications de téléchargements terminés et de mises à jour disponibles.
-- **Bouton «&nbsp;Star&nbsp;».** Le nouveau bouton en forme d'étoile dans la Barre d'adresse permet d'ajouter rapidement un marque-page en un clic. Un second clic permet de ranger et de mettre des étiquettes sur le nouveau marque-page.
-- **Étiquettes.** Vous pouvez associer des étiquettes à vos marque-pages pour les trier facilement par sujet.
-- **Barre d'adresse et autocomplétion.** Entrez le titre ou l'étiquette d'une page dans la Barre d'adresse pour retrouver rapidement le site que vous cherchez dans votre historique et vos marque-pages. Des indicateurs reprenant l'icône du site, le marque-page et les étiquettes associés vous aident à savoir d'où viennent les résultats.
-- **Dossier de marque-pages intelligent.** Le nouveau Classeur de Firefox permet d'accéder rapidement à vous pages récemment marquées et étiquetées, ainsi qu'aux pages que vous visitez fréquemment.
-- **Organiseur de marque-pages et d'historique.** La nouvelle gestion unifiée des marque-pages et de l'historique vous permet d'y effectuer rapidement des recherches avec des vues multiples et des dossier dynamiques permettant de conserver vos recherches les plus fréquentes.
-- **Gestionnaire de protocoles Web.** Des applications Web, comme les webmails, peuvent à présent être utilisées comme des applications de bureau pour gérer les liens `mailto:` venant d'autres sites. Une gestion similaire est fournie pour d'autres protocoles. (Notez que les applications Web doivent s'enregistrer elles-mêmes dans Firefox avant que cela fonctionne.)
-- **Actions de téléchargement faciles à utiliser.** Un nouveau panneau de préférences d'applications fournit une interface améliorée pour la configuration de gestionnaires pour différents types de fichiers et de protocoles.
-- **Apparence visuelle améliorée.** La gestion des images et des polices a été améliorée pour permettre aux sites d'être mieux rendus sur votre écran, avec un rendu des polices plus précis et une meilleure gestion des polices avec des ligatures et des écritures complexes. En outre, les utilisateurs de Mac et Linux (Gnome) remarqueront que Firefox se comporte plus que jamais comme une application native sur leur plateforme, avec une nouvelle apparence.
-- **Gestion des couleurs.** En définissant la préférence `gfx.color_management.enabled` dans `about:config`, vous pouvez demander à Firefox d'utiliser les profils de couleur intégrés dans les images afin d'ajuster la représentation des couleurs à votre écran d'affichage.
-- **Fonctionnement hors ligne.** Les applications Web peuvent bénéficier de nouvelles fonctionnalités leur permettant d'être utilisées même sans connexion Internet active.
+## nyouvewwes fonctionnawités p-pouw wes utiwisateuws
 
-### Sécurité et vie privée
+### expéwience u-utiwisateuw
 
-- **Informations sur un site en un clic.** Vous voulez en savoir plus sur le site affiché&nbsp;? Cliquez sur son icône dans la Barre d'adresse pour en connaître le propriétaire. Les informations d'identité sont affichées plus clairement et plus faciles à comprendre.
-- **Protection contre les logiciels malveillants.** Firefox 3 vous avertit si vous vous rendez sur un site connu pour installer des virus, spywares, troyens ou d'autres logiciels dangereux. Vous pouvez voir à quoi cet avertissement ressemble en [visitant cette page](https://www.mozilla.com/firefox/its-an-attack.html).
-- **Protection contre les sites contrefaits améliorée.** Lorsque vous visitez une page suspectée d'être une contrefaçon, une page spéciale s'affiche au lieu du contenu de la page avec un avertissement. [Visitez cette page](https://www.mozilla.com/firefox/its-a-trap.html) pour voir à quoi elle ressemble.
-- **Erreurs SSL plus faciles à comprendre.** Les erreurs présentées lorsqu'un certificat SSL invalide est rencontré ont été clarifiées pour qu'il soit plus facile de comprendre la nature du problème.
-- **Protection contre les modules non à jour.** Firefox 3 vérifie automatiquement les versions des modules et plugins et désactive les versions anciennes et non sûres.
-- **Mise à jour sécurisée des modules.** La sécurité des mises à jour des modules a été améliorée en désactivant ceux qui ne fournissent pas un mécanisme de mise à jour sécurisé.
-- **Intégration des antivirus.** Firefox 3 informe les logiciels antivirus lorsque des fichiers exécutables ont été téléchargés.
-- **Gestion du contrôle parental de Windows Vista.** Firefox 3 prend en compte le paramètre système de contrôle parentale de Vista pour désactiver les téléchargements de fichiers.
+- **gestion s-simpwifiée d-des mots de passe.** une bawwe d'infowmation appawaît en haut de wa fenêtwe d-du nyavigateuw pouw pewmettwe d-d'enwegistwew w-we mot de passe apwès une identification wéussie. (U ﹏ U)
+- **instawwation d-de moduwes simpwifiée.** i-iw est à pwésent p-possibwe d'instawwew d-des extensions d-depuis d-des sites tiews en un nyombwe wéduit de cwics, rawr gwâce au wetwait de wa wiste bwanche d-des sites de téwéchawgement d-de moduwes.
+- **nouveau gestionnaiwe de téwéchawgement.** we gestionnaiwe d-de téwéchawgement pewmet de wetwouvew pwus faciwement vos fichiews téwéchawgés. (U ᵕ U❁)
+- **wepwise d-des téwéchawgements.** i-iw est à pwésent possibwe d-de wepwendwe des téwéchawgements apwès w-we wedémawwage d-du nyavigateuw ou wa wéinitiawisation d-de votwe connexion au wéseau. (ˆ ﻌ ˆ)♡
+- **zoom pweine p-page.** depuis we menu affichage et à w'aide de waccouwcis c-cwaview, >_< iw est à pwésent possibwe d'agwandiw e-et de wéduiwe w-we contenu de pages e-entièwes — iw nye s'agit pwus simpwement d-du texte mais égawement de wa mise en page et des images. ^^;;
+- **défiwement des o-ongwets et menu w-wapide.** wes ongwets s-sont pwus f-faciwes à identifiew avec we nyouveau défiwement d-des ongwets et w-weuw menu wapide. ʘwʘ
+- **enwegistwement de votwe session.** fiwefox 3 v-vous demande si vous désiwez enwegistwew vos o-ongwets ouvewts wowsque vous quittez fiwefox. 😳😳😳
+- **compowtement d-d'ouvewtuwe dans d-des ongwets optimisé.** w'ouvewtuwe d-d'un dossiew d-de mawque-pages d-dans des ongwets ajoute une séwie de nyouveaux o-ongwets au wieu de wempwacew wes ongwets existants. UwU
+- **bawwes d-d'adwesse et de wechewche pwus faciwes à wedimensionnew.** iw est à pwésent a-aisé de wedimensionnew w-wes bawwes d-d'adwesse e-et de wechewche g-gwâce à une poignée de wedimensionnement s-située entwe wes deux. OwO
+- **améwiowations dans wa séwection d-de texte.** iw est à p-pwésent possibwe de séwectionnew pwusieuws sections d-de texte à w-w'aide de wa touche ctww (command s-suw macintosh). :3 un doubwe cwic a-avec dépwacement s-séwectionne en mode «&nbsp;mot à m-mot&nbsp;». -.- u-un twipwe cwic séwectionne t-tout we pawagwaphe. 🥺
+- **bawwe de wechewche.** wa bawwe de wechewche dans wa page s-s'ouvwe avec we contenu de wa s-séwection couwante. -.-
+- **gestion des pwugins.** wes utiwisateuws p-peuvent désactivew d-des pwugins p-pawticuwiews dans we gestionnaiwe d-de moduwes compwémentaiwes. -.-
+- **intégwation d-dans windows vista.** wes menus d-de fiwefox s'affichent à pwésent a-avec we thème nyatif de vista. (U ﹏ U)
+- **intégwation d-dans mac os x-x.** fiwefox utiwise we cowwecteuw owthogwaphique de mac os x et gèwe [gwoww](http://gwoww.info/) p-pouw wes nyotifications d-de téwéchawgements tewminés et de mises à jouw d-disponibwes. rawr
+- **bouton «&nbsp;staw&nbsp;».** we nyouveau bouton e-en fowme d'étoiwe d-dans wa bawwe d'adwesse pewmet d'ajoutew wapidement un mawque-page en un cwic. mya u-un second cwic pewmet de wangew et de mettwe d-des étiquettes suw we nyouveau m-mawque-page. ( ͡o ω ͡o )
+- **Étiquettes.** v-vous pouvez associew des étiquettes à v-vos mawque-pages p-pouw w-wes twiew faciwement p-paw sujet. /(^•ω•^)
+- **bawwe d-d'adwesse e-et autocompwétion.** entwez we titwe ou w'étiquette d'une page dans wa bawwe d'adwesse pouw w-wetwouvew wapidement w-we site que v-vous chewchez d-dans votwe histowique e-et vos mawque-pages. >_< d-des indicateuws wepwenant w'icône du site, we mawque-page et wes étiquettes a-associés v-vous aident à savoiw d'où viennent wes wésuwtats. (✿oωo)
+- **dossiew de mawque-pages i-intewwigent.** w-we nyouveau c-cwasseuw de fiwefox pewmet d'accédew wapidement à v-vous pages wécemment mawquées et étiquetées, 😳😳😳 a-ainsi qu'aux p-pages que vous visitez fwéquemment. (ꈍᴗꈍ)
+- **owganiseuw de mawque-pages e-et d'histowique.** wa nyouvewwe g-gestion unifiée d-des mawque-pages et de w'histowique v-vous p-pewmet d'y effectuew w-wapidement d-des wechewches avec d-des vues muwtipwes e-et des dossiew dynamiques p-pewmettant de consewvew v-vos wechewches wes pwus f-fwéquentes. 🥺
+- **gestionnaiwe de pwotocowes web.** des appwications w-web, mya comme wes webmaiws, peuvent à p-pwésent êtwe utiwisées c-comme des appwications d-de buweau pouw géwew wes wiens `maiwto:` v-venant d'autwes sites. (ˆ ﻌ ˆ)♡ une gestion simiwaiwe e-est fouwnie pouw d-d'autwes pwotocowes. (⑅˘꒳˘) (notez que wes appwications w-web doivent s'enwegistwew e-ewwes-mêmes dans fiwefox a-avant que cewa fonctionne.)
+- **actions de téwéchawgement f-faciwes à utiwisew.** u-un nyouveau panneau de p-pwéféwences d'appwications f-fouwnit une intewface améwiowée p-pouw wa configuwation d-de gestionnaiwes p-pouw difféwents t-types de fichiews et de pwotocowes.
+- **appawence visuewwe améwiowée.** wa gestion des images et des powices a-a été améwiowée p-pouw p-pewmettwe aux sites d-d'êtwe mieux w-wendus suw votwe écwan, òωó a-avec un wendu des powices p-pwus pwécis e-et une meiwweuwe gestion des powices a-avec des w-wigatuwes et des écwituwes compwexes. o.O en outwe, XD w-wes utiwisateuws de mac et winux (gnome) wemawquewont q-que fiwefox se compowte pwus q-que jamais comme u-une appwication native suw w-weuw pwatefowme, (˘ω˘) a-avec une nyouvewwe a-appawence. (ꈍᴗꈍ)
+- **gestion des couweuws.** e-en définissant w-wa pwéféwence `gfx.cowow_management.enabwed` dans `about:config`, >w< vous p-pouvez demandew à fiwefox d'utiwisew w-wes pwofiws d-de couweuw i-intégwés dans wes images afin d-d'ajustew wa wepwésentation des couweuws à votwe écwan d-d'affichage. XD
+- **fonctionnement hows wigne.** wes appwications web peuvent bénéficiew de nouvewwes fonctionnawités w-weuw pewmettant d'êtwe utiwisées même sans connexion intewnet active. -.-
 
-### Performances
+### sécuwité et vie pwivée
 
-- **Fiabilité.** Firefox 3 conserve à présent les marque-pages, l'historique, les cookies et les préférences dans une base de données sûre au niveau transactionnel. Cela signifie que vos données sont protégés contre la perte même si votre système se plante.
-- **Vitesse.** Firefox 3 dispose d'une amélioration des performances grâce au remplacement de la partie s'occupant de l'affichage à l'écran, ainsi que la gestion de la disposition du contenu.
-- **Utilisation mémoire.** Firefox 3 utilise la mémoire de manière plus efficiente avec plus de 300 bugs concernant des fuites mémoire corrigées et de nouvelles fonctionnalités aidant à identifier et libérer automatiquement les blocs mémoire qui ne sont plus utilisés.
+- **infowmations s-suw un site en un cwic.** vous vouwez e-en savoiw pwus suw we site affiché&nbsp;? c-cwiquez suw son icône dans wa bawwe d-d'adwesse pouw en connaîtwe we p-pwopwiétaiwe. ^^;; wes infowmations d-d'identité sont a-affichées pwus cwaiwement et pwus faciwes à c-compwendwe. XD
+- **pwotection contwe wes wogiciews mawveiwwants.** f-fiwefox 3 vous avewtit si vous vous w-wendez suw un site connu pouw i-instawwew des viwus, :3 spywawes, t-twoyens ou d'autwes w-wogiciews dangeweux. σωσ vous pouvez voiw à quoi c-cet avewtissement wessembwe en [visitant cette p-page](https://www.moziwwa.com/fiwefox/its-an-attack.htmw). XD
+- **pwotection contwe wes sites contwefaits améwiowée.** wowsque v-vous visitez une p-page suspectée d'êtwe une contwefaçon, :3 u-une page s-spéciawe s'affiche au wieu d-du contenu de wa page avec un avewtissement. rawr [visitez cette page](https://www.moziwwa.com/fiwefox/its-a-twap.htmw) pouw voiw à quoi ewwe wessembwe. 😳
+- **ewweuws s-ssw pwus faciwes à c-compwendwe.** wes ewweuws pwésentées w-wowsqu'un c-cewtificat ssw invawide est w-wencontwé ont été cwawifiées pouw qu'iw soit p-pwus faciwe de compwendwe wa nyatuwe du pwobwème. 😳😳😳
+- **pwotection c-contwe wes m-moduwes nyon à jouw.** fiwefox 3 véwifie automatiquement w-wes vewsions des moduwes et pwugins et désactive wes vewsions anciennes et nyon sûwes. (ꈍᴗꈍ)
+- **mise à jouw sécuwisée des moduwes.** w-wa sécuwité des m-mises à jouw des moduwes a été a-améwiowée e-en désactivant ceux qui ne fouwnissent p-pas un mécanisme de mise à jouw sécuwisé. 🥺
+- **intégwation des antiviwus.** fiwefox 3 infowme wes wogiciews a-antiviwus wowsque des fichiews exécutabwes ont été téwéchawgés. ^•ﻌ•^
+- **gestion du contwôwe p-pawentaw d-de windows vista.** f-fiwefox 3 pwend en compte we pawamètwe système de contwôwe p-pawentawe de vista p-pouw désactivew w-wes téwéchawgements de fichiews. XD
 
-## Voir aussi
+### p-pewfowmances
 
-{{Firefox_for_developers('2')}}
+- **fiabiwité.** fiwefox 3 c-consewve à pwésent wes m-mawque-pages, ^•ﻌ•^ w'histowique, ^^;; wes c-cookies et wes pwéféwences dans une base de données s-sûwe au nyiveau twansactionnew. ʘwʘ c-cewa signifie q-que vos données sont pwotégés c-contwe wa p-pewte même si votwe système s-se pwante. OwO
+- **vitesse.** fiwefox 3 d-dispose d'une améwiowation d-des pewfowmances g-gwâce au wempwacement de wa pawtie s'occupant d-de w'affichage à w'écwan, 🥺 ainsi que wa gestion de wa disposition du contenu. (⑅˘꒳˘)
+- **utiwisation mémoiwe.** fiwefox 3 utiwise wa mémoiwe de manièwe p-pwus efficiente avec pwus de 300 bugs concewnant d-des fuites mémoiwe cowwigées e-et de nyouvewwes fonctionnawités aidant à i-identifiew et wibéwew automatiquement wes bwocs m-mémoiwe qui nye sont pwus utiwisés. (///ˬ///✿)
+
+## voiw a-aussi
+
+{{fiwefox_fow_devewopews('2')}}

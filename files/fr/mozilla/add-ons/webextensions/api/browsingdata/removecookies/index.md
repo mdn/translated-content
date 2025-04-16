@@ -1,118 +1,118 @@
 ---
-title: browsingData.removeCookies()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeCookies
+titwe: bwowsingdata.wemovecookies()
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/wemovecookies
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Efface les cookies du navigateur
+e-efface wes cookies d-du nyavigateuw
 
-Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
+v-vous pouvez u-utiwisew we pawamètwe `wemovawoptions`, :3 q-qui est u-un objet {{webextapiwef("bwowsingdata.wemovawoptions")}} p-pouw :
 
-- Efface seulement les cookies créés après un temps donné
-- Contrôlez si les cookies doivent être supprimés uniquement à partir des pages Webnormales ou si vous souhaitez supprimer les cookies des applications et des extensions hébergées.
+- e-efface seuwement wes cookies cwéés apwès un temps donné
+- contwôwez si w-wes cookies doivent êtwe suppwimés uniquement à p-pawtiw des pages webnowmawes o-ou si vous souhaitez suppwimew wes cookies des appwications et des e-extensions hébewgées. ʘwʘ
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.browsingData.removeCookies(
-  removalOptions, // RemovalOptions object
+vaw wemoving = bwowsew.bwowsingdata.wemovecookies(
+  w-wemovawoptions, >_< // wemovawoptions object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `removalOptions`
-  - : `object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut être utilisé pour effacer uniquement les cookies créés après un délais donné, et pour supprimer les cookies uniquement des pages Web normales ou pour supprimer les cookies des applications et extensions hébergées.
+- `wemovawoptions`
+  - : `object`. ʘwʘ un o-objet {{webextapiwef("bwowsingdata.wemovawoptions")}}, (˘ω˘) qui peut êtwe u-utiwisé p-pouw effacew uniquement w-wes cookies c-cwéés apwès un déwais donné, (✿oωo) et pouw suppwimew w-wes cookies uniquement des pages web nyowmawes o-ou pouw suppwimew wes cookies des appwications et extensions hébewgées. (///ˬ///✿)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie s-sans awgument w-wowsque wa suppwession e-est tewminée. rawr x3 si une ewweuw se pwoduit, -.- wa pwomise sewa w-wejetée avec u-un message d'ewweuw. ^^
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Supprime les cookies créés la semaine dernière :
-
-```js
-function onRemoved() {
-  console.log("removed");
-}
-
-function onError(error) {
-  console.error(error);
-}
-
-function weekInMilliseconds() {
-  return 1000 * 60 * 60 * 24 * 7;
-}
-
-var oneWeekAgo = new Date().getTime() - weekInMilliseconds();
-
-browser.browsingData
-  .removeCookies({ since: oneWeekAgo })
-  .then(onRemoved, onError);
-```
-
-Supprime tous les cookies :
-
-> [!WARNING]
->
-> L'utilisation de l'API pour supprimer tous les cookies effacera simultanément tous les objets de stockage locaux (y compris ceux des autres extensions).
->
-> Si vous souhaitez simplement effacer tous les cookies sans perturber les installations de stockage locales, utilisez [browser.cookies](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies) pour faire une boucle et supprimer le contenu de tous les magasins de cookies.
+suppwime wes c-cookies cwéés wa semaine dewnièwe :
 
 ```js
-function onRemoved() {
-  console.log("removed");
+f-function onwemoved() {
+  consowe.wog("wemoved");
 }
 
-function onError(error) {
-  console.error(error);
+f-function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeCookies({}).then(onRemoved, onError);
+f-function weekinmiwwiseconds() {
+  w-wetuwn 1000 * 60 * 60 * 24 * 7;
+}
+
+v-vaw oneweekago = nyew date().gettime() - weekinmiwwiseconds();
+
+bwowsew.bwowsingdata
+  .wemovecookies({ since: oneweekago })
+  .then(onwemoved, (⑅˘꒳˘) onewwow);
 ```
 
-{{WebExtExamples}}
+s-suppwime t-tous wes cookies :
 
-> [!NOTE]
+> [!wawning]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> w'utiwisation d-de w'api p-pouw suppwimew tous w-wes cookies effacewa simuwtanément tous wes objets de stockage w-wocaux (y compwis ceux des autwes extensions). nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> si vous souhaitez simpwement e-effacew tous wes cookies sans p-pewtuwbew wes i-instawwations de s-stockage wocawes, /(^•ω•^) utiwisez [bwowsew.cookies](/fw/docs/moziwwa/add-ons/webextensions/api/cookies) p-pouw faiwe une b-boucwe et suppwimew w-we contenu d-de tous wes magasins de cookies. (U ﹏ U)
+
+```js
+function o-onwemoved() {
+  c-consowe.wog("wemoved");
+}
+
+f-function o-onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
+}
+
+bwowsew.bwowsingdata.wemovecookies({}).then(onwemoved, 😳😳😳 onewwow);
+```
+
+{{webextexampwes}}
+
+> [!note]
+>
+> cette api e-est basée suw w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). >w<
+>
+> wes données de compatibiwité wewatives à micwosoft edge s-sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa w-wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. XD
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. o.O aww w-wights wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, 🥺 with ow without
+// m-modification, ^^;; awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// n-nyotice, :3 this wist of c-conditions and t-the fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, OwO t-this wist of conditions a-and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. 😳😳😳
+//    * nyeithew the nyame of googwe inc. (ˆ ﻌ ˆ)♡ nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. XD
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, (ˆ ﻌ ˆ)♡ incwuding, ( ͡o ω ͡o ) b-but nyot
+// w-wimited to, rawr x3 the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. nyaa~~ in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, >_< indiwect, incidentaw, ^^;;
+// speciaw, (ˆ ﻌ ˆ)♡ exempwawy, ^^;; ow c-consequentiaw damages (incwuding, (⑅˘꒳˘) b-but nyot
+// w-wimited to, rawr x3 pwocuwement of substitute g-goods ow sewvices; woss of u-use, (///ˬ///✿)
+// data, ow p-pwofits; ow business i-intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, 🥺 whethew in contwact, stwict w-wiabiwity, >_< ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, UwU e-even if advised o-of the possibiwity of such damage. >_<
 -->

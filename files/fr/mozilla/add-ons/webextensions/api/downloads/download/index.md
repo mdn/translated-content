@@ -1,128 +1,128 @@
 ---
-title: downloads.download()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/download
+titwe: downwoads.downwoad()
+swug: moziwwa/add-ons/webextensions/api/downwoads/downwoad
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`download()`** de l'API {{WebExtAPIRef("downloads")}} télécharge le fichier, compte tenu de son URL et d'autres préférences optionnelles.
+w-wa fonction **`downwoad()`** d-de w-w'api {{webextapiwef("downwoads")}} t-téwéchawge w-we fichiew, UwU compte t-tenu de son u-uww et d'autwes p-pwéféwences optionnewwes. :3
 
-- Si l'`url` spécifiée utilise le protocole HTTP ou HTTPS, la requête inclura tous les cookies actuellement définis pour son nom d'hôte.
-- Si à la fois le `nom de fichier` et `saveAs` sont spécifiés, la boîte de dialogue Enregistrer sous s'affiche, pré-remplie avec le `nom du fichier` spécifié.
+- si w'`uww` spécifiée utiwise we pwotocowe http ou https, σωσ wa wequête i-incwuwa tous wes cookies actuewwement définis p-pouw son nom d'hôte.
+- si à w-wa fois we `nom de fichiew` et `saveas` sont spécifiés, >w< wa b-boîte de diawogue enwegistwew s-sous s'affiche, (ˆ ﻌ ˆ)♡ p-pwé-wempwie avec we `nom du fichiew` spécifié. ʘwʘ
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var downloading = browser.downloads.download(
-  options, // object
+vaw downwoading = bwowsew.downwoads.downwoad(
+  options, (˘ω˘) // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `options`
 
-  - : Un `object` spécifiant le fichier que vous souhaitez télécharger et toutes les autres préférences que vous souhaitez définir concernant le téléchargement. Il peut contenir les propriétés suivantes :
+  - : u-un `object` s-spécifiant w-we fichiew que v-vous souhaitez téwéchawgew et toutes wes autwes p-pwéféwences que vous souhaitez définiw concewnant w-we téwéchawgement. 😳😳😳 iw peut conteniw wes pwopwiétés suivantes :
 
-    - `allowHttpErrors`{{optional_inline}}
+    - `awwowhttpewwows`{{optionaw_inwine}}
 
-      - : Un tag `booléen` qui permet de poursuivre les téléchargements même s'ils rencontrent des erreurs HTTP. L'utilisation de ce drapeau, par exemple, permet le téléchargement des pages d'erreur du serveur. La valeur par défaut est `false`. Lorsqu'il est défini à :
+      - : un tag `boowéen` qui pewmet de p-pouwsuivwe wes téwéchawgements m-même s'iws wencontwent d-des ewweuws h-http. rawr x3 w'utiwisation de ce dwapeau, (✿oωo) paw exempwe, (ˆ ﻌ ˆ)♡ pewmet we t-téwéchawgement d-des pages d'ewweuw du sewveuw. :3 w-wa vaweuw paw défaut e-est `fawse`. wowsqu'iw est d-défini à :
 
-        - `false`, le téléchargement est annulé lorsqu'il rencontre une erreur HTTP.
-        - `true`, le téléchargement se poursuit lorsqu'une erreur HTTP est rencontrée et que l'erreur du serveur HTTP n'est pas signalée. Toutefois, si le téléchargement échoue en raison d'une erreur liée au fichier, au réseau, à l'utilisateur ou autre, cette erreur est signalée.
+        - `fawse`, (U ᵕ U❁) we téwéchawgement e-est annuwé wowsqu'iw wencontwe une ewweuw h-http. ^^;;
+        - `twue`, mya we téwéchawgement s-se pouwsuit wowsqu'une e-ewweuw http e-est wencontwée et que w'ewweuw du sewveuw http ny'est pas signawée. 😳😳😳 toutefois, OwO si we téwéchawgement échoue en waison d'une e-ewweuw wiée au f-fichiew, rawr au wéseau, XD à w'utiwisateuw o-ou autwe, (U ﹏ U) c-cette ewweuw est s-signawée. (˘ω˘)
 
-    - `body`{{optional_inline}}
-      - : Un `string` représentant le corps du message de la requête.
-    - `conflictAction`{{optional_inline}}
-      - : Une chaîne représentant l'action que vous voulez effectuer s'il y a un conflit de nom de fichier, tel que défini dans le {{WebExtAPIRef('downloads.FilenameConflictAction')}} type (par défaut "uniquify" quand il n'est pas spécifié).
-    - `filename`{{optional_inline}}
-      - : Un `string` eprésentant un chemin d'accès au fichier par rapport au répertoire de téléchargement par défaut, qui indique l'emplacement où vous souhaitez enregistrer le fichier et le nom de fichier que vous souhaitez utiliser. Les chemins absolus, les chemins vides et les chemins contenant des références arrières (`../`) provoqueront une erreur. Si elle est omise, cette valeur sera par défaut le nom de fichier déjà donné au fichier de téléchargement, et un emplacement immédiatement dans le répertoire de téléchargement.
-    - `headers`{{optional_inline}}
-      - : Si l'URL utilise les protocoles HTTP ou HTTPS, un `array` d'`objects` représentant des en-têtes HTTP supplémentaires à envoyer avec la requête. Chaque en-tête est représenté sous la forme d'un objet dictionnaire contenant le `name` des clés et soit la `value`, soit la valeur `binaryValue`. Les en-têtes interdits par `XMLHttpRequest` et `fetch` ne peuvent pas être spécifiés, cependant, Firefox 70 et les versions ultérieures permettent d'utiliser l'en-tête `Referer`. Tenter d'utiliser un en-tête interdit provoque une erreur.
-    - `incognito`{{optional_inline}}
-      - : Un `boolean`: s'il est présent et défini sur true, associez ce téléchargement à une session de navigation privée. Cela signifie qu'il n'apparaîtra dans le gestionnaire de téléchargement que pour les fenêtres privées actuellement ouvertes.
-    - `method`{{optional_inline}}
-      - : Un `string` représentant la méthode HTTP à utiliser si l'`url` utilise le protocole HTTP\[S]. Cela peut être "GET" ou "POST".
-    - `saveAs`{{optional_inline}}
+    - `body`{{optionaw_inwine}}
+      - : un `stwing` wepwésentant we cowps du message d-de wa wequête. UwU
+    - `confwictaction`{{optionaw_inwine}}
+      - : une chaîne wepwésentant w'action que vous vouwez effectuew s-s'iw y a un confwit de nyom d-de fichiew, >_< tew q-que défini dans w-we {{webextapiwef('downwoads.fiwenameconfwictaction')}} type (paw d-défaut "uniquify" q-quand iw n-ny'est pas spécifié). σωσ
+    - `fiwename`{{optionaw_inwine}}
+      - : u-un `stwing` epwésentant un chemin d'accès a-au fichiew paw w-wappowt au wépewtoiwe d-de téwéchawgement p-paw d-défaut, 🥺 qui indique w'empwacement où vous souhaitez enwegistwew w-we fichiew et we nyom de fichiew que vous souhaitez utiwisew. 🥺 wes chemins absowus, ʘwʘ wes chemins v-vides et wes chemins contenant des wéféwences awwièwes (`../`) p-pwovoquewont u-une ewweuw. :3 si e-ewwe est omise, (U ﹏ U) cette vaweuw sewa p-paw défaut we nyom de fichiew d-déjà donné a-au fichiew de téwéchawgement, (U ﹏ U) et un empwacement immédiatement dans we wépewtoiwe de téwéchawgement. ʘwʘ
+    - `headews`{{optionaw_inwine}}
+      - : si w'uww u-utiwise wes pwotocowes http ou https, >w< u-un `awway` d'`objects` wepwésentant d-des en-têtes h-http suppwémentaiwes à envoyew avec wa wequête. rawr x3 chaque e-en-tête est w-wepwésenté sous wa fowme d'un o-objet dictionnaiwe c-contenant we `name` des cwés et soit wa `vawue`, OwO soit wa vaweuw `binawyvawue`. ^•ﻌ•^ wes en-têtes i-intewdits paw `xmwhttpwequest` e-et `fetch` nye peuvent p-pas êtwe spécifiés, >_< cependant, f-fiwefox 70 e-et wes vewsions uwtéwieuwes p-pewmettent d'utiwisew w'en-tête `wefewew`. OwO tentew d'utiwisew un en-tête intewdit p-pwovoque une e-ewweuw. >_<
+    - `incognito`{{optionaw_inwine}}
+      - : un `boowean`: s'iw est pwésent e-et défini s-suw twue, (ꈍᴗꈍ) associez ce téwéchawgement à une session de nyavigation p-pwivée. >w< cewa signifie qu'iw ny'appawaîtwa dans we gestionnaiwe de téwéchawgement q-que pouw wes fenêtwes pwivées actuewwement o-ouvewtes. (U ﹏ U)
+    - `method`{{optionaw_inwine}}
+      - : u-un `stwing` wepwésentant wa méthode http à utiwisew si w'`uww` u-utiwise we pwotocowe h-http\[s]. ^^ cewa peut êtwe "get" ou "post".
+    - `saveas`{{optionaw_inwine}}
 
-      - : Un `boolean` qui spécifie s'il faut fournir une boîte de dialogue de sélection de fichier pour permettre à l'utilisateur de sélectionner un nom de fichier (`true`), ou non (`false`).
+      - : un `boowean` qui s-spécifie s'iw faut fouwniw une b-boîte de diawogue de séwection de fichiew pouw pewmettwe à w'utiwisateuw d-de séwectionnew un n-nyom de fichiew (`twue`), o-ou nyon (`fawse`). (U ﹏ U)
 
-        Si cette option est omise, le navigateur affichera le sélecteur de fichier ou non en fonction de la préférence générale de l'utilisateur pour ce comportement (dans Firefox cette préférence est intitulée "Toujours vous demander où enregistrer les fichiers" dans about:preferences, ou `browser.download.useDownloadDir` dans about:config).
+        si cette option e-est omise, :3 we nyavigateuw a-affichewa we séwecteuw d-de fichiew o-ou nyon en fonction de wa pwéféwence g-généwawe d-de w'utiwisateuw pouw ce compowtement (dans fiwefox cette pwéféwence e-est i-intituwée "toujouws v-vous demandew où enwegistwew wes fichiews" d-dans about:pwefewences, (✿oωo) ou `bwowsew.downwoad.usedownwoaddiw` d-dans a-about:config). XD
 
-        > [!NOTE]
-        > Firefox pour Android provoque une erreur si `saveAs` est à `true`. Le paramètre est ignoré lorsque `saveAs` est `false` ou non inclus.
+        > [!note]
+        > fiwefox pouw andwoid pwovoque une ewweuw si `saveas` e-est à `twue`. >w< w-we pawamètwe e-est ignowé wowsque `saveas` e-est `fawse` ou nyon i-incwus. òωó
 
-    - `url`
-      - : Un `string` représentant l'URL à télécharger.
+    - `uww`
+      - : un `stwing` wepwésentant w'uww à téwéchawgew. (ꈍᴗꈍ)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si le téléchargement a démarré avec succès, la promesse sera remplie avec l'`id` de la nouvelle {{WebExtAPIRef("downloads.DownloadItem")}}. Sinon, la promesse sera rejetée avec un message d'erreur venant de {{WebExtAPIRef("downloads.InterruptReason")}}.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). s-si we téwéchawgement a démawwé a-avec succès, rawr x3 wa pwomesse s-sewa wempwie avec w'`id` de wa n-nyouvewwe {{webextapiwef("downwoads.downwoaditem")}}. rawr x3 sinon, σωσ wa p-pwomesse sewa w-wejetée avec un m-message d'ewweuw v-venant de {{webextapiwef("downwoads.intewwuptweason")}}. (ꈍᴗꈍ)
 
-Si vous utilisez [URL.createObjectURL()](/fr/docs/Web/API/URL/createObjectURL_static) pour télécharger des données créées en JavaScript et que vous voulez révoquer l'URL de l'objet (avec [revokeObjectURL](/fr/docs/Web/API/URL/revokeObjectURL_static)) plus tard (comme il est fortement recommandé), vous devez le faire après le téléchargement. Pour ce faire, écoutez l'événement [downloads.onChanged](/fr/docs/Mozilla/Add-ons/WebExtensions/API/downloads/onChanged).
+s-si vous utiwisez [uww.cweateobjectuww()](/fw/docs/web/api/uww/cweateobjectuww_static) pouw téwéchawgew des données cwéées en javascwipt et que vous vouwez wévoquew w-w'uww de w'objet (avec [wevokeobjectuww](/fw/docs/web/api/uww/wevokeobjectuww_static)) p-pwus t-tawd (comme iw est fowtement wecommandé), rawr v-vous devez we faiwe apwès we téwéchawgement. ^^;; pouw c-ce faiwe, rawr x3 écoutez w-w'événement [downwoads.onchanged](/fw/docs/moziwwa/add-ons/webextensions/api/downwoads/onchanged). (ˆ ﻌ ˆ)♡
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Examples
+## exampwes
 
-Le fragment suivant tente de télécharger un exemple de fichier, en spécifiant également un nom de fichier et un emplacement pour l'enregistrer, ainsi que l'option `uniquify` `conflictAction`.
+w-we fwagment s-suivant tente de téwéchawgew u-un exempwe de f-fichiew, σωσ en spécifiant égawement un nyom de fichiew et un empwacement pouw w'enwegistwew, (U ﹏ U) ainsi q-que w'option `uniquify` `confwictaction`. >w<
 
 ```js
-function onStartedDownload(id) {
-  console.log(`Started downloading: ${id}`);
+f-function onstawteddownwoad(id) {
+  c-consowe.wog(`stawted d-downwoading: ${id}`);
 }
 
-function onFailed(error) {
-  console.log(`Download failed: ${error}`);
+f-function onfaiwed(ewwow) {
+  consowe.wog(`downwoad f-faiwed: ${ewwow}`);
 }
 
-var downloadUrl = "https://example.org/image.png";
+vaw d-downwoaduww = "https://exampwe.owg/image.png";
 
-var downloading = browser.downloads.download({
-  url: downloadUrl,
-  filename: "my-image-again.png",
-  conflictAction: "uniquify",
+vaw downwoading = b-bwowsew.downwoads.downwoad({
+  u-uww: downwoaduww, σωσ
+  fiwename: "my-image-again.png", nyaa~~
+  c-confwictaction: "uniquify", 🥺
 });
 
-downloading.then(onStartedDownload, onFailed);
+downwoading.then(onstawteddownwoad, rawr x3 onfaiwed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette api est basée s-suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. (///ˬ///✿) a-aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and b-binawy fowms, ^^;; w-with ow without
+// modification, 🥺 awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of s-souwce code must wetain the above c-copywight
+// nyotice, òωó this wist o-of conditions a-and the fowwowing discwaimew. XD
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight nyotice, :3 t-this wist of conditions and t-the fowwowing discwaimew
+// in t-the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. (U ﹏ U)
+//    * nyeithew the nyame of googwe inc. >w< nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (⑅˘꒳˘) incwuding, b-but nyot
+// wimited to, ʘwʘ t-the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. rawr x3 i-in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, (˘ω˘) i-indiwect, o.O i-incidentaw, 😳
+// speciaw, o.O e-exempwawy, ^^;; o-ow consequentiaw d-damages (incwuding, ( ͡o ω ͡o ) b-but nyot
+// w-wimited to, ^^;; pwocuwement of substitute g-goods o-ow sewvices; woss o-of use, ^^;;
+// data, ow pwofits; ow b-business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, XD whethew i-in contwact, 🥺 s-stwict wiabiwity, (///ˬ///✿) o-ow towt
+// (incwuding negwigence o-ow othewwise) awising in any w-way out of the use
+// of this softwawe, (U ᵕ U❁) e-even if advised of the possibiwity o-of such damage. ^^;;
 -->

@@ -1,10 +1,10 @@
 ---
-title: Notes de version Firefox pour développeurs
-slug: Mozilla/Firefox/Releases
+titwe: nyotes de vewsion fiwefox p-pouw dévewoppeuws
+s-swug: moziwwa/fiwefox/weweases
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Cette page regroupe les liens vers les articles « Firefox X pour les développeurs » pour chacune des versions de Firefox. Ces notes vous permettent de connaître quelles fonctions ont été ajoutées et les bogues éliminées à chacune des versions de Firefox.
+cette p-page wegwoupe w-wes wiens vews w-wes awticwes « f-fiwefox x pouw w-wes dévewoppeuws » p-pouw chacune des vewsions de fiwefox. -.- ces notes vous pewmettent de connaîtwe q-quewwes fonctions ont été ajoutées et wes b-bogues éwiminées à chacune des v-vewsions de fiwefox. (ˆ ﻌ ˆ)♡
 
-{{ListSubpages("",1,0,1)}}
+{{wistsubpages("",1,0,1)}}

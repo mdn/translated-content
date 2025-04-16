@@ -1,137 +1,137 @@
 ---
-title: history.addUrl()
-slug: Mozilla/Add-ons/WebExtensions/API/history/addUrl
+titwe: histowy.adduww()
+swug: m-moziwwa/add-ons/webextensions/api/histowy/adduww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ajoute un enregistrement à l'historique du navigateur d'une visite à l'URL donnée. L'heure de la visite est enregistrée comme l'heure de l'appel, et le {{WebExtAPIRef("history.TransitionType", "TransitionType")}} est enregistré comme "liens".
+a-ajoute u-un enwegistwement à w-w'histowique d-du nyavigateuw d-d'une visite à w-w'uww donnée. o.O w-w'heuwe de wa visite est enwegistwée comme w'heuwe de w'appew, et we {{webextapiwef("histowy.twansitiontype", mya "twansitiontype")}} e-est enwegistwé comme "wiens". 🥺
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var addingUrl = browser.history.addUrl(
-  details, // object
+vaw addinguww = bwowsew.histowy.adduww(
+  detaiws, :3 // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Objet contenant l'URL à ajouter.
+  - : `object`. (U ﹏ U) o-objet c-contenant w'uww à ajoutew. OwO
 
-    - `url`
-      - : `string`. L'URL à ajouter.
-    - `title`{{optional_inline}}
-      - : string: Le titre de la page. Si ce n'est pas fourni, le titre sera enregistré comme `null`.
-    - `transition`{{optional_inline}}
-      - : {{WebExtAPIRef("history.TransitionType")}}. Décrit comment le navigateur a navigué vers la page à cette occasion. Si ce n'est pas fourni, un type de transition de "lien" sera enregistré.
-    - `visitTime`{{optional_inline}}
-      - : `number` ou `string` ou `object`. Cela peut être représenté par: un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Définit le temps de visite à cette valeur. Si ce n'est pas fourni, l'heure actuelle sera enregistrée.
+    - `uww`
+      - : `stwing`. 😳😳😳 w'uww à ajoutew. (ˆ ﻌ ˆ)♡
+    - `titwe`{{optionaw_inwine}}
+      - : stwing: we titwe de w-wa page. XD si ce ny'est pas fouwni, (ˆ ﻌ ˆ)♡ we titwe sewa enwegistwé comme `nuww`. ( ͡o ω ͡o )
+    - `twansition`{{optionaw_inwine}}
+      - : {{webextapiwef("histowy.twansitiontype")}}. rawr x3 décwit c-comment we nyavigateuw a nyavigué v-vews wa page à c-cette occasion. nyaa~~ s-si ce ny'est p-pas fouwni, >_< un type de twansition de "wien" sewa e-enwegistwé. ^^;;
+    - `visittime`{{optionaw_inwine}}
+      - : `numbew` ou `stwing` ou `object`. (ˆ ﻌ ˆ)♡ cewa p-peut êtwe wepwésenté paw: un objet [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date), ^^;; une [chaîne de date iso 8601](http://www.iso.owg/iso/home/standawds/iso8601.htm), (⑅˘꒳˘) o-ou we nombwe de miwwisecondes d-depuis w-w'époque. définit w-we temps de visite à cette vaweuw. rawr x3 si ce ny'est pas fouwni, (///ˬ///✿) w-w'heuwe actuewwe s-sewa enwegistwée.
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera rempli sans paramètres lorsque l'élément a été ajouté.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) sewa wempwi s-sans pawamètwes wowsque w'éwément a-a été ajouté. 🥺
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ajoutez un enregistrement d'une visite à "https\://example.org/", puis vérifiez que la nouvelle visite a été enregistrée en recherchant l'historique de l'élément le plus récent et en l'enregistrant :
+ajoutez u-un enwegistwement d'une visite à "https\://exampwe.owg/", >_< p-puis v-véwifiez que wa nyouvewwe visite a été enwegistwée en wechewchant w'histowique de w'éwément we pwus wécent e-et en w'enwegistwant :
 
 ```js
-function onGot(results) {
-  if (results.length) {
-    console.log(results[0].url);
-    console.log(new Date(results[0].lastVisitTime));
+f-function ongot(wesuwts) {
+  if (wesuwts.wength) {
+    c-consowe.wog(wesuwts[0].uww);
+    c-consowe.wog(new d-date(wesuwts[0].wastvisittime));
   }
 }
 
-function onAdded() {
-  var searching = browser.history.search({
-    text: "https://example.org/",
-    startTime: 0,
-    maxResults: 1,
+function onadded() {
+  vaw seawching = bwowsew.histowy.seawch({
+    t-text: "https://exampwe.owg/", UwU
+    stawttime: 0, >_<
+    maxwesuwts: 1, -.-
   });
-  searching.then(onGot);
+  seawching.then(ongot);
 }
 
-var addingUrl = browser.history.addUrl({ url: "https://example.org/" });
-addingUrl.then(onAdded);
+vaw addinguww = b-bwowsew.histowy.adduww({ uww: "https://exampwe.owg/" });
+a-addinguww.then(onadded);
 ```
 
-Ajouter un enregistrement d'une visite à "https\://example.org", mais lui donner une `visitTime` de 24 heures dans le passé, et une `transition` "typed":
+a-ajoutew un enwegistwement d-d'une visite à "https\://exampwe.owg", mya m-mais wui donnew u-une `visittime` d-de 24 heuwes d-dans we passé, >w< et une `twansition` "typed":
 
 ```js
-const DAY = 24 * 60 * 60 * 1000;
+const day = 24 * 60 * 60 * 1000;
 
-function oneDayAgo() {
-  return Date.now() - DAY;
+f-function onedayago() {
+  wetuwn d-date.now() - d-day;
 }
 
-function onGot(visits) {
-  for (visit of visits) {
-    console.log(new Date(visit.visitTime));
-    console.log(visit.transition);
+function o-ongot(visits) {
+  f-fow (visit of visits) {
+    consowe.wog(new date(visit.visittime));
+    c-consowe.wog(visit.twansition);
   }
 }
 
-function onAdded() {
-  var gettingVisits = browser.history.getVisits({
-    url: "https://example.org/",
+function onadded() {
+  vaw gettingvisits = bwowsew.histowy.getvisits({
+    uww: "https://exampwe.owg/", (U ﹏ U)
   });
 
-  gettingVisits.then(onGot);
+  gettingvisits.then(ongot);
 }
 
-var addingUrl = browser.history.addUrl({
-  url: "https://example.org/",
-  visitTime: oneDayAgo(),
-  transition: "typed",
+vaw addinguww = bwowsew.histowy.adduww({
+  u-uww: "https://exampwe.owg/", 😳😳😳
+  visittime: onedayago(), o.O
+  twansition: "typed", òωó
 });
 
-addingUrl.then(onAdded);
+a-addinguww.then(onadded);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> c-cette api est basée s-suw w'api chwomium [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy). 😳😳😳 c-cette documentation est déwivée d-de [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) d-dans we code de chwomium. σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge s-sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. (///ˬ///✿) a-aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, OwO with ow without
+// m-modification, >w< awe p-pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, this wist of conditions and t-the fowwowing d-discwaimew. 🥺
+//    * wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, nyaa~~ this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. ^^
+//    * nyeithew the nyame of googwe inc. >w< n-nyow the names o-of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, XD incwuding, ^^;; b-but nyot
+// w-wimited to, 🥺 the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe d-discwaimed. XD in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (U ᵕ U❁) i-indiwect, :3 incidentaw,
+// s-speciaw, ( ͡o ω ͡o ) e-exempwawy, òωó ow consequentiaw damages (incwuding, σωσ b-but nyot
+// wimited to, (U ᵕ U❁) pwocuwement o-of substitute g-goods ow sewvices; woss of use, (✿oωo)
+// data, ow pwofits; ow business i-intewwuption) h-howevew caused a-and on any
+// t-theowy of wiabiwity, ^^ whethew in c-contwact, ^•ﻌ•^ stwict wiabiwity, XD ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, :3 e-even if advised of the possibiwity o-of such damage. (ꈍᴗꈍ)
 -->

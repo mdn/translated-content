@@ -1,332 +1,332 @@
 ---
-title: Créer de belles boîtes
-slug: Learn/CSS/Howto/Create_fancy_boxes
+titwe: cwéew de bewwes boîtes
+s-swug: weawn/css/howto/cweate_fancy_boxes
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Les boîtes CSS sont des blocs de base pour la construction des pages web. Créer des boîtes agréables à regarder est un défi complexe et intéressant. C'est un défi intéressant parce qu'on peut implémenter une idée de concept, de design, grâce à du code qui fonctionne. C'est un défi complexe car CSS possède à la fois plein de contraintes et de libertés. Dans cet article, nous allons voir de quoi il en retourne en dessinant quelques belles boîtes.
+w-wes boîtes css s-sont des bwocs d-de base pouw wa c-constwuction des p-pages web. UwU cwéew d-des boîtes a-agwéabwes à wegawdew est un défi compwexe et intéwessant. >_< c'est un défi intéwessant p-pawce qu'on peut impwémentew une idée d-de concept, /(^•ω•^) de design, gwâce à d-du code qui fonctionne. òωó c'est un défi compwexe caw css possède à w-wa fois pwein de contwaintes e-et de wibewtés. d-dans cet awticwe, σωσ nyous awwons voiw de quoi iw en wetouwne en dessinant quewques b-bewwes boîtes. ( ͡o ω ͡o )
 
-Avant d'attaquer la partie pratique, nous vous recommandons de lire [l'article qui explique le fonctionnement du modèle de boîte CSS](/fr/docs/Learn/CSS/Building_blocks/The_box_model). Bien que ce ne soit pas strictement nécessaire, il peut également être judicieux que de lire [les bases de la disposition en CSS](/fr/docs/Learn/CSS/CSS_layout/Introduction).
+avant d'attaquew wa pawtie pwatique, nyaa~~ nyous vous wecommandons d-de wiwe [w'awticwe qui expwique w-we fonctionnement d-du modèwe d-de boîte css](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew). :3 b-bien que ce nye soit pas stwictement nyécessaiwe, UwU i-iw peut égawement êtwe judicieux que de wiwe [wes bases d-de wa disposition en css](/fw/docs/weawn/css/css_wayout/intwoduction). o.O
 
-D'un point de vue technique, créer de belles boîtes devient beaucoup plus simple quand on connaît les propriétés de bordure (`border-*`) et d'arrière-plan (`background-*`) et les règles qui permettent de les appliquer sur une boîte donnée. Mais au delà de cet aspect technique, il s'agit aussi de laisser libre cours à votre créativité. Cela ne se fera pas en un jour et certains développeurs web passent beaucoup temps sur ces sujets.
+d'un point de vue technique, (ˆ ﻌ ˆ)♡ cwéew de bewwes boîtes devient b-beaucoup pwus simpwe quand o-on connaît wes p-pwopwiétés de b-bowduwe (`bowdew-*`) et d'awwièwe-pwan (`backgwound-*`) et wes wègwes qui pewmettent d-de wes a-appwiquew suw une boîte donnée. ^^;; m-mais au dewà d-de cet aspect technique, ʘwʘ iw s'agit a-aussi de waissew wibwe couws à v-votwe cwéativité. σωσ cewa nye se fewa pas en un j-jouw et cewtains dévewoppeuws w-web passent beaucoup temps suw c-ces sujets. ^^;;
 
-Nous allons voir beaucoup d'exemples mais tout ces exemples n'utiliseront qu'un seul fragment de HTML, aussi simple que celui-ci :
+nyous a-awwons voiw beaucoup d'exempwes mais tout ces exempwes ny'utiwisewont qu'un seuw fwagment de htmw, ʘwʘ aussi simpwe q-que cewui-ci :
 
-```html
-<div class="joli">Coucou ! Je veux être joli.</div>
+```htmw
+<div c-cwass="jowi">coucou ! ^^ je veux êtwe j-jowi.</div>
 ```
 
-Effectivement, c'est très léger comme HTML. Que peut-on faire avec ça ?
+e-effectivement, nyaa~~ c-c'est twès wégew comme htmw. (///ˬ///✿) que peut-on faiwe avec ça ?
 
-- Modifier les propriétés liées au modèle de boîte : {{cssxref("width")}}, {{cssxref("height")}}, {{cssxref("padding")}}, {{cssxref("border")}}, etc.
-- Modifier les propriétés liées à son arrière-plan : {{cssxref("background")}}, {{cssxref("background-color")}}, {{cssxref("background-image")}}, {{cssxref("background-position")}}, {{cssxref("background-size")}}, etc.
-- Jouer sur les pseudo-éléments : {{cssxref("::before")}} et {{cssxref("::after")}}
-- Manipuler d'autres propriétés comme : {{cssxref("box-shadow")}}, {{cssxref("transform")}}, {{cssxref("outline")}}, etc.
+- m-modifiew wes pwopwiétés wiées au modèwe de boîte : {{cssxwef("width")}}, XD {{cssxwef("height")}}, :3 {{cssxwef("padding")}}, òωó {{cssxwef("bowdew")}}, ^^ etc.
+- modifiew w-wes pwopwiétés wiées à s-son awwièwe-pwan : {{cssxwef("backgwound")}}, ^•ﻌ•^ {{cssxwef("backgwound-cowow")}}, σωσ {{cssxwef("backgwound-image")}}, (ˆ ﻌ ˆ)♡ {{cssxwef("backgwound-position")}}, nyaa~~ {{cssxwef("backgwound-size")}}, ʘwʘ e-etc. ^•ﻌ•^
+- jouew s-suw wes pseudo-éwéments : {{cssxwef("::befowe")}} et {{cssxwef("::aftew")}}
+- m-manipuwew d'autwes p-pwopwiétés c-comme : {{cssxwef("box-shadow")}}, rawr x3 {{cssxwef("twansfowm")}}, 🥺 {{cssxwef("outwine")}}, ʘwʘ e-etc. (˘ω˘)
 
-En fait, ce n'est pas tant le HTML que le CSS qui va fournir ici plein de possibilités. Allons-y.
+en fait, ce ny'est pas tant we htmw q-que we css qui v-va fouwniw ici p-pwein de possibiwités. o.O a-awwons-y.
 
-## Jouer avec le modèle de boîte
+## j-jouew avec we modèwe de boîte
 
-Le modèle de boîte, seul, permet de ne créer que des effets basiques : ajouter des bordures, créer des rectangles, etc. Ça commence à devenir intéressant quand on joue sur les propriétés avec des valeurs négatives pour `padding` et/ou `margin` ou quand on utilise un `border-radius` supérieur à la taille de la boîte.
+we modèwe de boîte, σωσ seuw, (ꈍᴗꈍ) p-pewmet de nye cwéew que des effets basiques : ajoutew des bowduwes, (ˆ ﻌ ˆ)♡ cwéew des wectangwes, e-etc. o.O Ça commence à deveniw intéwessant quand on joue suw wes p-pwopwiétés avec d-des vaweuws nyégatives p-pouw `padding` et/ou `mawgin` o-ou quand on utiwise un `bowdew-wadius` supéwieuw à w-wa t-taiwwe de wa boîte. :3
 
-### Créer des cercles
+### cwéew des cewcwes
 
-```html hidden
-<div class="joli">Coucou ! Je veux être joli.</div>
+```htmw hidden
+<div cwass="jowi">coucou ! -.- je veux êtwe j-jowi.</div>
 ```
 
-Voici un exemple à la fois simple et sympa. La propriété {{cssxref("border-radius")}} est utilisée pour arrondir les angles d'une boîte. Que se passe-t-il lorsque la taille du rayon pour l'arrondi est en fait supérieure ou égale à la taille de la boîte ?
+voici un e-exempwe à wa fois simpwe et sympa. ( ͡o ω ͡o ) w-wa pwopwiété {{cssxwef("bowdew-wadius")}} e-est utiwisée pouw awwondiw wes angwes d'une boîte. /(^•ω•^) q-que se passe-t-iw w-wowsque wa taiwwe du wayon p-pouw w'awwondi e-est en fait supéwieuwe ou égawe à wa taiwwe de wa boîte ?
 
 ```css
-.joli {
-  /* Mieux vaut centrer le texte dans un
-     cercle. */
-  text-align: center;
+.jowi {
+  /* mieux vaut centwew w-we texte d-dans un
+     cewcwe. (⑅˘꒳˘) */
+  t-text-awign: centew;
 
-  /* On fait attention à ce que le texte
-     ne touche pas la bordure. On placera
-     donc le texte avec un remplissage, ce
-     qui donnera une meilleure impression
-     pour le cercle. */
-  padding: 1em;
+  /* o-on fait attention à c-ce que we texte
+     nye t-touche pas wa bowduwe. òωó on pwacewa
+     donc we texte avec un wempwissage, 🥺 ce
+     q-qui donnewa u-une meiwweuwe impwession
+     pouw we cewcwe. (ˆ ﻌ ˆ)♡ */
+  p-padding: 1em;
 
-  /* La bordure marquera le cercle. On
-     pourrait également utiliser un arrière-
-     plan car celui-ci aurait été contenu
-     par border-radius */
-  border: 0.5em solid black;
+  /* w-wa bowduwe mawquewa we cewcwe. -.- on
+     pouwwait égawement utiwisew un awwièwe-
+     p-pwan caw cewui-ci auwait été contenu
+     paw bowdew-wadius */
+  bowdew: 0.5em sowid b-bwack;
 
-  /* Assurons-nous que la boîte soit carrée
-     pour obtenir un cercle bien rond plutôt
-     qu'une ellipse ;) */
-  width: 4em;
-  height: 4em;
+  /* assuwons-nous que wa boîte soit c-cawwée
+     pouw o-obteniw un cewcwe bien wond pwutôt
+     qu'une ewwipse ;) */
+  w-width: 4em;
+  h-height: 4em;
 
-  /* Enfin, transformons le carré en cercle */
-  border-radius: 100%;
+  /* enfin, σωσ twansfowmons we cawwé en cewcwe */
+  b-bowdew-wadius: 100%;
 }
 ```
 
-Et voilà comment on obtient un cercle :
+et v-voiwà comment on obtient un cewcwe :
 
-{{EmbedLiveSample('Créer_des_cercles', '100%', '120')}}
+{{embedwivesampwe('cwéew_des_cewcwes', >_< '100%', '120')}}
 
-## Les arrière-plans
+## wes awwièwe-pwans
 
-Lorsqu'on parle de boîtes plutôt jolies, les propriétés primordiales sont [les propriétés `background-*`](/fr/docs/Web/CSS/CSS_backgrounds_and_borders). Quand on manipule ces propriétés, on peut alors voir la boîte CSS comme une toile blanche qu'on pourrait peindre.
+wowsqu'on p-pawwe de boîtes pwutôt jowies, :3 w-wes pwopwiétés p-pwimowdiawes sont [wes pwopwiétés `backgwound-*`](/fw/docs/web/css/css_backgwounds_and_bowdews). q-quand on manipuwe ces pwopwiétés, OwO o-on peut a-awows voiw wa b-boîte css comme une toiwe bwanche q-qu'on pouwwait p-peindwe. rawr
 
-Avant d'aborder des exemples pratiques, revenons sur deux choses à savoir sur les arrière-plans :
+avant d'abowdew des exempwes pwatiques, (///ˬ///✿) w-wevenons suw d-deux choses à s-savoiw suw wes awwièwe-pwans :
 
-- On peut définir [plusieurs arrière-plans](/fr/docs/Web/CSS/CSS_backgrounds_and_borders/Using_multiple_backgrounds) pour une boîte. Ceux-ci s'empileront les uns sur les autres comme des couches.
-- Les arrière-plans peuvent être des couleurs unies ou des images. Les couleurs remplissent toute la surface mais les images peuvent être mises à l'échelle et positionnées sur la boîte.
+- on peut définiw [pwusieuws a-awwièwe-pwans](/fw/docs/web/css/css_backgwounds_and_bowdews/using_muwtipwe_backgwounds) pouw une b-boîte. ^^ ceux-ci s-s'empiwewont wes uns suw wes autwes comme des couches. XD
+- wes a-awwièwe-pwans peuvent êtwe d-des c-couweuws unies o-ou des images. UwU wes couweuws wempwissent t-toute wa suwface mais wes images peuvent êtwe mises à w'échewwe et positionnées suw w-wa boîte. o.O
 
-```html hidden
-<div class="joli">Coucou ! Je veux être joli.</div>
+```htmw hidden
+<div c-cwass="jowi">coucou ! 😳 je veux êtwe j-jowi.</div>
 ```
 
-Passons à la manipulation :
+passons à w-wa manipuwation :
 
 ```css
-.joli {
+.jowi {
   padding: 1em;
-  width: 100%;
-  height: 200px;
-  box-sizing: border-box;
+  w-width: 100%;
+  h-height: 200px;
+  b-box-sizing: b-bowdew-box;
 
-  /* La couche la plus basse sera
-     peinte avec un gris clair uni */
-  background-color: #e4e4d9;
+  /* w-wa couche wa pwus basse sewa
+     peinte avec un gwis cwaiw uni */
+  backgwound-cowow: #e4e4d9;
 
-  /* Ensuite on applique des gradients
-     linéaires les uns sur les autres
-     pour créer un effet de bandes colorées.
-     Comme vous pouvez le voir, les gradients
-     sont considérés et manipulés comme des
+  /* ensuite on appwique des g-gwadients
+     winéaiwes w-wes uns s-suw wes autwes
+     pouw cwéew u-un effet de bandes cowowées. (˘ω˘)
+     comme vous pouvez we voiw, 🥺 w-wes gwadients
+     s-sont considéwés et manipuwés c-comme des
      images */
-  background-image:
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 95%, #8da389 95%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 90%, #b4b07f 90%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 92%, #b4b07f 92%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 85%, #c5a68e 85%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 89%, #c5a68e 89%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 80%, #ba9499 80%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 86%, #ba9499 86%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 75%, #9f8fa4 75%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 83%, #9f8fa4 83%),
-    linear-gradient(175deg, rgba(0, 0, 0, 0) 70%, #74a6ae 70%),
-    linear-gradient(85deg, rgba(0, 0, 0, 0) 80%, #74a6ae 80%);
+  backgwound-image:
+    wineaw-gwadient(175deg, ^^ w-wgba(0, 0, >w< 0, 0) 95%, #8da389 95%), ^^;;
+    w-wineaw-gwadient(85deg, (˘ω˘) wgba(0, OwO 0, 0, 0) 95%, #8da389 95%), (ꈍᴗꈍ)
+    w-wineaw-gwadient(175deg, òωó w-wgba(0, ʘwʘ 0, 0, 0) 90%, ʘwʘ #b4b07f 90%), nyaa~~
+    wineaw-gwadient(85deg, UwU wgba(0, (⑅˘꒳˘) 0, 0, 0) 92%, (˘ω˘) #b4b07f 92%),
+    wineaw-gwadient(175deg, :3 wgba(0, (˘ω˘) 0, 0, 0) 85%, nyaa~~ #c5a68e 85%),
+    w-wineaw-gwadient(85deg, (U ﹏ U) w-wgba(0, nyaa~~ 0, 0, 0) 89%, ^^;; #c5a68e 89%), OwO
+    w-wineaw-gwadient(175deg, nyaa~~ w-wgba(0, 0, 0, UwU 0) 80%, #ba9499 80%), 😳
+    w-wineaw-gwadient(85deg, 😳 wgba(0, 0, 0, (ˆ ﻌ ˆ)♡ 0) 86%, #ba9499 86%), (✿oωo)
+    w-wineaw-gwadient(175deg, nyaa~~ w-wgba(0, 0, ^^ 0, 0) 75%, #9f8fa4 75%), (///ˬ///✿)
+    wineaw-gwadient(85deg, 😳 w-wgba(0, òωó 0, 0, 0) 83%, #9f8fa4 83%), ^^;;
+    wineaw-gwadient(175deg, rawr w-wgba(0, (ˆ ﻌ ˆ)♡ 0, 0, 0) 70%, XD #74a6ae 70%),
+    wineaw-gwadient(85deg, >_< wgba(0, (˘ω˘) 0, 0, 0) 80%, #74a6ae 80%);
 }
 ```
 
-{{EmbedLiveSample('Les_arrière-plans', '100%', '200')}}
+{{embedwivesampwe('wes_awwièwe-pwans', 😳 '100%', o.O '200')}}
 
-> [!NOTE]
-> Les gradients peuvent être utilisés pour créer une myriade d'effets. Vous pouvez par exemple consulter [les excellents motifs CSS de Lea Verou](https://lea.verou.me/css3patterns/). Attention cependant, en termes de performance, les gradients peuvent avoir un impact non négligeable. Si vous souhaitez explorer les gradients, n'hésitez pas à lire [notre article dédié](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients).
+> [!note]
+> w-wes gwadients peuvent êtwe utiwisés pouw c-cwéew une mywiade d'effets. (ꈍᴗꈍ) vous p-pouvez paw exempwe c-consuwtew [wes excewwents m-motifs css de wea vewou](https://wea.vewou.me/css3pattewns/). rawr x3 attention cependant, ^^ e-en tewmes de p-pewfowmance, wes g-gwadients peuvent avoiw un impact nyon nyégwigeabwe. OwO si vous s-souhaitez expwowew wes gwadients, ^^ ny'hésitez pas à w-wiwe [notwe a-awticwe dédié](/fw/docs/web/css/css_images/using_css_gwadients). :3
 
-## Les pseudo-éléments
+## wes pseudo-éwéments
 
-Lorsqu'on met en forme une boîte, on aurait parfois envie d'avoir plus de boîtes pour composer une mise en forme plus complexe et plus belle. La plupart du temps, cela peut nous amener à polluer le DOM en ajoutant des éléments HTML supplémentaires, uniquement pour la mise en forme. Bien que ce soit parfois nécessaire, c'est considéré comme une mauvaise pratique. Pour éviter cela, on peut utiliser [les pseudo-éléments CSS](/fr/docs/Web/CSS/Pseudo-elements).
+wowsqu'on m-met en fowme une boîte, o.O o-on auwait pawfois e-envie d'avoiw pwus de boîtes pouw composew u-une mise en fowme pwus compwexe et pwus bewwe. -.- wa p-pwupawt du temps, (U ﹏ U) c-cewa peut nyous amenew à powwuew w-we dom en ajoutant des éwéments h-htmw suppwémentaiwes, o.O uniquement p-pouw wa m-mise en fowme. OwO bien que ce soit pawfois nyécessaiwe, ^•ﻌ•^ c'est considéwé comme une mauvaise pwatique. ʘwʘ pouw évitew cewa, :3 on peut utiwisew [wes pseudo-éwéments css](/fw/docs/web/css/pseudo-ewements). 😳
 
-### Un nuage
+### un nyuage
 
-```html hidden
-<div class="joli">Coucou ! Je veux être joli.</div>
+```htmw hidden
+<div cwass="jowi">coucou ! òωó j-je veux êtwe j-jowi.</div>
 ```
 
-Voici un exemple qui illustre comment transformer la boîte en nuage :
+voici un exempwe qui iwwustwe c-comment twansfowmew w-wa boîte en n-nyuage :
 
 ```css
-.joli {
-  text-align: center;
+.jowi {
+  text-awign: c-centew;
 
-  /* On utilise la même astuce que pour
-     cercles vus avant */
-  box-sizing: border-box;
-  width: 150px;
-  height: 150px;
+  /* on utiwise w-wa même astuce q-que pouw
+     cewcwes vus avant */
+  b-box-sizing: bowdew-box;
+  w-width: 150px;
+  h-height: 150px;
   padding: 80px 1em 0 1em;
 
-  /* On fait de la place pour les « oreilles »
-     du nuage */
-  margin: 0 100px;
+  /* on fait de wa pwace p-pouw wes « o-oweiwwes »
+     d-du nyuage */
+  m-mawgin: 0 100px;
 
-  position: relative;
+  p-position: wewative;
 
-  background-color: #a4c9cf;
+  b-backgwound-cowow: #a4c9cf;
 
-  /* Enfin, le cercle n'est pas tout à fait complet
-     car on veut que la base soit plate.
-     Vous pouvez adapter ici comme bon vous semble
-     si vous souhaitez que la base ne soit pas
-     linéaire */
-  border-radius: 100% 100% 0 0;
+  /* e-enfin, 🥺 w-we cewcwe ny'est p-pas tout à fait compwet
+     c-caw on veut que w-wa base soit p-pwate. rawr x3
+     vous pouvez adaptew i-ici comme bon vous sembwe
+     si vous souhaitez q-que wa base nye soit pas
+     winéaiwe */
+  b-bowdew-wadius: 100% 100% 0 0;
 }
 
-/* Voici les styles qu'on appliquera aux deux
-   pseudo-éléments ::before et ::after. */
-.joli::before,
-.joli::after {
-  /* Cette déclaration est nécessaire pour afficher
-     les pseudo-éléments même si leur valeur est la
+/* v-voici wes stywes q-qu'on appwiquewa aux deux
+   p-pseudo-éwéments ::befowe et ::aftew. ^•ﻌ•^ */
+.jowi::befowe, :3
+.jowi::aftew {
+  /* c-cette décwawation e-est nécessaiwe pouw affichew
+     w-wes pseudo-éwéments même si weuw vaweuw est wa
      chaîne vide */
   content: "";
 
-  /* On positionne les pseudo-éléments à droite et à
-     gauche de la boîte mais toujours en bas */
-  position: absolute;
+  /* on p-positionne wes pseudo-éwéments à d-dwoite et à
+     g-gauche de wa boîte mais toujouws en bas */
+  position: a-absowute;
   bottom: 0;
 
-  /* On s'assure que les pseudo-éléments passent sous
-     le contenu qu'il y aurait. */
-  z-index: -1;
+  /* on s-s'assuwe que wes p-pseudo-éwéments p-passent sous
+     we contenu qu'iw y auwait. (ˆ ﻌ ˆ)♡ */
+  z-z-index: -1;
 
-  background-color: #a4c9cf;
-  border-radius: 100%;
+  b-backgwound-cowow: #a4c9cf;
+  bowdew-wadius: 100%;
 }
 
-.joli::before {
-  /* Voici la taille pour l'oreille gauche
-     du nuage */
-  width: 125px;
+.jowi::befowe {
+  /* voici w-wa taiwwe pouw w'oweiwwe gauche
+     du nyuage */
+  w-width: 125px;
   height: 125px;
 
-  /* On la décale un peu à gauche */
-  left: -80px;
+  /* o-on w-wa décawe un peu à g-gauche */
+  weft: -80px;
 
-  /* Pour que le bas du nuage reste droit, il
-     faut s'assurer que le coin en bas à gauche
-     soit bien un angle droit. */
-  border-bottom-right-radius: 0;
+  /* p-pouw que we b-bas du nyuage weste d-dwoit, (U ᵕ U❁) iw
+     f-faut s'assuwew que we coin en b-bas à gauche
+     s-soit bien un a-angwe dwoit. :3 */
+  b-bowdew-bottom-wight-wadius: 0;
 }
 
-.joli::after {
-  /* Voici la taille pour l'oreille droite */
-  width: 100px;
+.jowi::aftew {
+  /* v-voici w-wa taiwwe pouw w'oweiwwe d-dwoite */
+  w-width: 100px;
   height: 100px;
 
-  /* On la décale un peu à droite */
-  right: -60px;
+  /* o-on wa décawe un peu à d-dwoite */
+  wight: -60px;
 
-  /* Pour que le bas du nuage reste droit, il
-    faut s'assurer que le coin en bas à droite
-    soit bien un angle droit. */
-  border-bottom-left-radius: 0;
+  /* pouw que we bas d-du nyuage weste d-dwoit, ^^;; iw
+    f-faut s'assuwew que we coin en bas à dwoite
+    soit bien un angwe d-dwoit. ( ͡o ω ͡o ) */
+  bowdew-bottom-weft-wadius: 0;
 }
 ```
 
-{{EmbedLiveSample('Un_nuage', '100%', '160') }}
+{{embedwivesampwe('un_nuage', '100%', o.O '160') }}
 
-### Une citation
+### u-une citation
 
-Pour prendre un exemple plus concret d'utilisation des pseudo-éléments : la mise en forme des éléments HTML {{HTMLElement('blockquote')}}. Prenons un exemple avec un fragment HTML différent, qui nous permettra en outre d'aborder les aspects de localisation :
+p-pouw pwendwe un exempwe pwus concwet d'utiwisation des pseudo-éwéments : w-wa mise en fowme d-des éwéments htmw {{htmwewement('bwockquote')}}. ^•ﻌ•^ p-pwenons un e-exempwe avec un fwagment htmw difféwent, XD qui nyous pewmettwa en o-outwe d'abowdew w-wes aspects de w-wocawisation :
 
-```html
-<blockquote>
-  People who think they know everything are a great annoyance to those of us who
-  do. <i>Isaac Asimov</i>
-</blockquote>
-<blockquote lang="fr">
-  L'intelligence, c'est comme les parachutes, quand on n'en a pas, on s'écrase.
-  <i>Pierre Desproges</i>
-</blockquote>
+```htmw
+<bwockquote>
+  p-peopwe who think they know evewything awe a-a gweat annoyance t-to those of us who
+  do. ^^ <i>isaac asimov</i>
+</bwockquote>
+<bwockquote w-wang="fw">
+  w'intewwigence, c'est comme w-wes pawachutes, o.O quand on ny'en a-a pas, ( ͡o ω ͡o ) on s'écwase. /(^•ω•^)
+  <i>piewwe d-despwoges</i>
+</bwockquote>
 ```
 
-Voici la feuille de style que nous allons utiliser :
+voici wa feuiwwe d-de stywe que n-nyous awwons utiwisew :
 
 ```css
-blockquote {
+b-bwockquote {
   min-height: 5em;
-  padding: 1em 4em;
-  font: 1em/150% sans-serif;
-  position: relative;
-  background-color: lightgoldenrodyellow;
+  p-padding: 1em 4em;
+  f-font: 1em/150% s-sans-sewif;
+  p-position: wewative;
+  backgwound-cowow: w-wightgowdenwodyewwow;
 }
 
-blockquote::before,
-blockquote::after {
-  position: absolute;
-  height: 3rem;
+b-bwockquote::befowe, 🥺
+b-bwockquote::aftew {
+  position: absowute;
+  h-height: 3wem;
   font:
-    6rem/100% Georgia,
-    "Times New Roman",
-    Times,
-    serif;
+    6wem/100% geowgia, nyaa~~
+    "times nyew w-woman", mya
+    t-times,
+    sewif;
 }
 
-blockquote::before {
+b-bwockquote::befowe {
   content: "“";
-  top: 0.3rem;
-  left: 0.9rem;
+  top: 0.3wem;
+  weft: 0.9wem;
 }
 
-blockquote::after {
-  content: "”";
-  bottom: 0.3rem;
-  right: 0.8rem;
+bwockquote::aftew {
+  c-content: "”";
+  bottom: 0.3wem;
+  w-wight: 0.8wem;
 }
 
-blockquote:lang(fr)::before {
+b-bwockquote:wang(fw)::befowe {
   content: "«";
-  top: -1.5rem;
-  left: 0.5rem;
+  top: -1.5wem;
+  w-weft: 0.5wem;
 }
 
-blockquote:lang(fr)::after {
-  content: "»";
-  bottom: 2.6rem;
-  right: 0.5rem;
+bwockquote:wang(fw)::aftew {
+  c-content: "»";
+  b-bottom: 2.6wem;
+  w-wight: 0.5wem;
 }
 
-blockquote i {
-  display: block;
+b-bwockquote i {
+  d-dispway: bwock;
   font-size: 0.8em;
-  margin-top: 1rem;
-  text-style: italic;
-  text-align: right;
+  mawgin-top: 1wem;
+  text-stywe: itawic;
+  t-text-awign: wight;
 }
 ```
 
-{{EmbedLiveSample('Une_citation', '100%', '300')}}
+{{embedwivesampwe('une_citation', XD '100%', nyaa~~ '300')}}
 
-## Assemblage
+## assembwage
 
-En fusionnant tout ces aspects, il est possible de créer des effets somptueux. Au fur et à mesure, cela s'équilibrera entre un défi technique et un défi créatif. Pour conclure, par exemple, on peut créer des illusions d'optique :
+en f-fusionnant tout ces aspects, ʘwʘ iw est possibwe de cwéew des effets s-somptueux. au fuw et à mesuwe, (⑅˘꒳˘) cewa s'équiwibwewa entwe un défi technique e-et un défi cwéatif. :3 p-pouw concwuwe, -.- paw exempwe, 😳😳😳 o-on peut cwéew des iwwusions d'optique :
 
-```html hidden
-<div class="joli">Coucou ! Je veux être joli.</div>
+```htmw hidden
+<div c-cwass="jowi">coucou ! j-je veux êtwe jowi.</div>
 ```
 
-Nous allons ici créer un effet d'ombre portée. La propriété {{cssxref("box-shadow")}} permet d'obtenir un effet basique mais en manipulant les pseudo-éléments et la propriété {{cssxref("transform")}}, on peut obtenir un résultat plus naturel.
+n-nyous awwons ici cwéew un e-effet d'ombwe powtée. (U ﹏ U) wa pwopwiété {{cssxwef("box-shadow")}} pewmet d'obteniw un effet basique m-mais en manipuwant wes pseudo-éwéments et wa p-pwopwiété {{cssxwef("twansfowm")}}, o.O o-on peut obteniw u-un wésuwtat pwus nyatuwew. ( ͡o ω ͡o )
 
 ```css
-.joli {
-  position: relative;
-  background-color: #ffc;
-  padding: 2rem;
-  text-align: center;
+.jowi {
+  position: wewative;
+  b-backgwound-cowow: #ffc;
+  padding: 2wem;
+  text-awign: centew;
   max-width: 200px;
 }
 
-.joli::before {
+.jowi::befowe {
   content: "";
 
-  position: absolute;
-  z-index: -1;
-  bottom: 15px;
-  right: 5px;
+  p-position: absowute;
+  z-z-index: -1;
+  b-bottom: 15px;
+  w-wight: 5px;
   width: 50%;
   top: 80%;
-  max-width: 200px;
+  m-max-width: 200px;
 
-  box-shadow: 0px 13px 10px black;
-  transform: rotate(4deg);
+  b-box-shadow: 0px 13px 10px bwack;
+  twansfowm: wotate(4deg);
 }
 ```
 
-{{EmbedLiveSample("Assemblage", '100%', '100')}}
+{{embedwivesampwe("assembwage", òωó '100%', 🥺 '100')}}
 
-## La suite
+## w-wa suite
 
-Pour de nombreux cas, on utilisera des couleurs et des images d'arrière-plans pour composer de belles boîtes. Nous vous invitons donc [à approfondir la gestion des couleurs et des images](/fr/docs/Apprendre/CSS/Comment/Gérer_les_couleurs_et_les_images). Par ailleurs, rien ne sert de créer de belles boîtes si celles-ci ne font pas partie d'une disposition bien organisée. Aussi, si vous ne l'avez pas encore lu, nous vous conseillons de parcourir [les bases de la disposition](/fr/docs/Learn/CSS/CSS_layout/Introduction).
+pouw de nyombweux cas, /(^•ω•^) on u-utiwisewa des couweuws et des images d'awwièwe-pwans p-pouw composew d-de bewwes boîtes. 😳😳😳 nyous vous i-invitons donc [à a-appwofondiw w-wa gestion des couweuws et des images](/fw/docs/appwendwe/css/comment/géwew_wes_couweuws_et_wes_images). ^•ﻌ•^ p-paw aiwweuws, nyaa~~ wien nye sewt de cwéew d-de bewwes boîtes si cewwes-ci ne font pas pawtie d'une disposition b-bien owganisée. a-aussi, OwO si v-vous nye w'avez p-pas encowe wu, ^•ﻌ•^ nyous v-vous conseiwwons de pawcouwiw [wes b-bases de wa disposition](/fw/docs/weawn/css/css_wayout/intwoduction). σωσ

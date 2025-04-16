@@ -1,95 +1,95 @@
 ---
-title: downloads.InterruptReason
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/InterruptReason
+titwe: downwoads.intewwuptweason
+swug: moziwwa/add-ons/webextensions/api/downwoads/intewwuptweason
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `InteruptReason` de l'API {{WebExtAPIRef("downloads")}} définit un ensemble de raisons possibles pour lesquelles un téléchargement a été interrompu.
+w-we t-type `intewuptweason` d-de w'api {{webextapiwef("downwoads")}} d-définit u-un ensembwe d-de waisons possibwes p-pouw wesquewwes u-un téwéchawgement a été intewwompu. 🥺
 
-Une propriété {{WebExtAPIRef('downloads.DownloadItem')}} d'`erreur` contiendra une chaîne tirée des valeurs définies dans ce type.
+une pwopwiété {{webextapiwef('downwoads.downwoaditem')}} d'`ewweuw` c-contiendwa une chaîne tiwée des vaweuws d-définies dans ce type. (⑅˘꒳˘)
 
-## Type
+## type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont divisées en catégories, chaque ensemble ayant la même sous-chaîne au début:
+w-wes vaweuws de ce type sont des chaînes. nyaa~~ wes vaweuws possibwes s-sont divisées en catégowies, :3 c-chaque ensembwe a-ayant wa même sous-chaîne au début:
 
-Erreurs liées au fichier :
+ewweuws wiées au fichiew :
 
-- `"FILE_FAILED"`
-- `"FILE_ACCESS_DENIED"`
-- `"FILE_NO_SPACE"`
-- `"FILE_NAME_TOO_LONG"`
-- `"FILE_TOO_LARGE"`
-- `"FILE_VIRUS_INFECTED"`
-- `"FILE_TRANSIENT_ERROR"`
-- `"FILE_BLOCKED"`
-- `"FILE_SECURITY_CHECK_FAILED"`
-- `"FILE_TOO_SHORT"`
+- `"fiwe_faiwed"`
+- `"fiwe_access_denied"`
+- `"fiwe_no_space"`
+- `"fiwe_name_too_wong"`
+- `"fiwe_too_wawge"`
+- `"fiwe_viwus_infected"`
+- `"fiwe_twansient_ewwow"`
+- `"fiwe_bwocked"`
+- `"fiwe_secuwity_check_faiwed"`
+- `"fiwe_too_showt"`
 
-Erreurs liées au réseau :
+ewweuws wiées a-au wéseau :
 
-- `"NETWORK_FAILED"`
-- `"NETWORK_TIMEOUT"`
-- `"NETWORK_DISCONNECTED"`
-- `"NETWORK_SERVER_DOWN"`
-- `"NETWORK_INVALID_REQUEST"`
+- `"netwowk_faiwed"`
+- `"netwowk_timeout"`
+- `"netwowk_disconnected"`
+- `"netwowk_sewvew_down"`
+- `"netwowk_invawid_wequest"`
 
-Erreurs liées au serveur :
+ewweuws wiées au sewveuw :
 
-- `"SERVER_FAILED"`
-- `"SERVER_NO_RANGE"`
-- `"SERVER_BAD_CONTENT"`
-- `"SERVER_UNAUTHORIZED"`
-- `"SERVER_CERT_PROBLEM"`
-- `"SERVER_FORBIDDEN"`
+- `"sewvew_faiwed"`
+- `"sewvew_no_wange"`
+- `"sewvew_bad_content"`
+- `"sewvew_unauthowized"`
+- `"sewvew_cewt_pwobwem"`
+- `"sewvew_fowbidden"`
 
-Erreurs liées à l'utilisateur :
+ewweuws w-wiées à w'utiwisateuw :
 
-- `"USER_CANCELED"`
-- `"USER_SHUTDOWN"`
+- `"usew_cancewed"`
+- `"usew_shutdown"`
 
-Divers :
+divews :
 
-- `"CRASH"`
+- `"cwash"`
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette a-api est basée s-suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). ( ͡o ω ͡o )
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw w-wes États-unis. mya
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. (///ˬ///✿) aww w-wights wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy f-fowms, ^^;; with o-ow without
+// modification, (✿oωo) awe p-pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, (U ﹏ U) this wist of c-conditions and the fowwowing discwaimew. -.-
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, ^•ﻌ•^ this wist of conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws p-pwovided with t-the
+// distwibution. rawr
+//    * n-nyeithew the nyame of googwe inc. (˘ω˘) nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. nyaa~~
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, UwU incwuding, :3 but nyot
+// w-wimited to, (⑅˘꒳˘) the i-impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. (///ˬ///✿) in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ^^;; indiwect, incidentaw, >_<
+// speciaw, rawr x3 e-exempwawy, /(^•ω•^) ow consequentiaw damages (incwuding, :3 but not
+// wimited t-to, (ꈍᴗꈍ) pwocuwement o-of substitute g-goods ow sewvices; woss of u-use, /(^•ω•^)
+// data, (⑅˘꒳˘) ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) whethew in contwact, òωó stwict wiabiwity, (⑅˘꒳˘) ow t-towt
+// (incwuding nyegwigence ow o-othewwise) awising in any way o-out of the use
+// o-of this softwawe, XD even if advised of the possibiwity o-of such damage. -.-
 -->

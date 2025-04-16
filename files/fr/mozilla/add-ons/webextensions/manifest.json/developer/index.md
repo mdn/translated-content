@@ -1,49 +1,49 @@
 ---
-title: developer
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/developer
+titwe: devewopew
+swug: moziwwa/add-ons/webextensions/manifest.json/devewopew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"developer": {
-  "name": "Walt Whitman",
-  "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
-}</pre
+        <pwe c-cwass="bwush: j-json">
+"devewopew": {
+  "name": "wawt w-whitman", OwO
+  "uww": "https://en.wikipedia.owg/wiki/wawt_whitman"
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Le nom du développeur de l'extension et l'URL de sa page d'accueil, destinés à être affichés dans l'interface utilisateur du navigateur.
+w-we nyom du dévewoppeuw de w'extension et w'uww de sa page d'accueiw, (U ﹏ U) destinés à êtwe a-affichés dans w'intewface utiwisateuw du nyavigateuw. >_<
 
-L'objet et ses deux propriétés sont facultatifs. Les propriétés "nom" et "url", si présentes, remplacent respectivement les clés [author](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/author) et [homepage_url](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/homepage_url). Cet objet ne permet qu'un seul nom de développeur et une URL à spécifier.
+w-w'objet et ses deux pwopwiétés s-sont facuwtatifs. rawr x3 wes pwopwiétés "nom" et "uww", mya si p-pwésentes, nyaa~~ wempwacent wespectivement w-wes cwés [authow](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/authow) e-et [homepage_uww](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/homepage_uww). (⑅˘꒳˘) cet objet nye pewmet qu'un seuw nyom de dévewoppeuw e-et une uww à spécifiew. rawr x3
 
-Ceci est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+ceci est une [pwopwiété wocawisabwe](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json). (✿oωo)
 
-## Exemple
+## exempwe
 
 ```json
-"developer": {
-  "name": "Walt Whitman",
-  "url": "https://en.wikipedia.org/wiki/Walt_Whitman"
+"devewopew": {
+  "name": "wawt w-whitman", (ˆ ﻌ ˆ)♡
+  "uww": "https://en.wikipedia.owg/wiki/wawt_whitman"
 }
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,14 +1,14 @@
 ---
-title: Browser compatibility for manifest.json
-slug: Mozilla/Add-ons/WebExtensions/Browser_compatibility_for_manifest.json
+titwe: bwowsew compatibiwity f-fow manifest.json
+s-swug: moziwwa/add-ons/webextensions/bwowsew_compatibiwity_fow_manifest.json
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Prise en charge du navigateur pour les API JavaScript](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_support_for_JavaScript_APIs)
+- [pwise e-en c-chawge du nyavigateuw p-pouw wes api javascwipt](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_suppowt_fow_javascwipt_apis)

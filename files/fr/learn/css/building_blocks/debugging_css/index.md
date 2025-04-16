@@ -1,182 +1,182 @@
 ---
-title: Déboguer du code CSS
-slug: Learn/CSS/Building_blocks/Debugging_CSS
-l10n:
-  sourceCommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
+titwe: déboguew du code css
+s-swug: weawn/css/buiwding_bwocks/debugging_css
+w-w10n:
+  s-souwcecommit: 458eb9af74287fd15ef8ba9f4ba9aa3423c4cac3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/stywing_tabwes", -.- "weawn/css/buiwding_bwocks/owganizing", òωó "weawn/css/buiwding_bwocks")}}
 
-Lorsqu'on écrit du CSS, on peut rencontrer certaines situations où le CSS ne fait pas vraiment ce qu'on attend de lui. Que faire quand rien ne se passe alors qu'un sélecteur devrait cibler un élément&nbsp;? Pourquoi une boîte est-elle d'une taille différente que celle souhaitée&nbsp;? Dans cet article, nous vous guiderons pour le débogage des problèmes CSS et l'utilisation des outils de développement des navigateurs pour le diagnostic.
+w-wowsqu'on écwit d-du css, 😳 o-on peut wencontwew c-cewtaines situations o-où we css nye fait pas vwaiment ce qu'on attend de wui. nyaa~~ que faiwe quand w-wien nye se passe awows qu'un séwecteuw devwait c-cibwew un éwément&nbsp;? pouwquoi une boîte e-est-ewwe d'une taiwwe difféwente que cewwe souhaitée&nbsp;? dans cet awticwe, (⑅˘꒳˘) n-nyous vous guidewons pouw we d-débogage des pwobwèmes c-css et w'utiwisation des outiws de dévewoppement des nyavigateuws pouw w-we diagnostic. 😳
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions informatiques de base, <a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">logiciels de base installés</a>, savoir comment <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">manipuler les fichiers</a>, notions de base de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction à HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>).
+        nyotions infowmatiques de base, (U ﹏ U) <a hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe">wogiciews d-de base instawwés</a>, /(^•ω•^) savoiw c-comment <a h-hwef="/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes">manipuwew w-wes fichiews</a>, OwO n-nyotions de base de htmw (voiw <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">intwoduction à h-htmw</a>), ( ͡o ω ͡o ) une idée généwawe du fonctionnement d-de css (voiw <a hwef="/fw/docs/weawn/css/fiwst_steps">pwemiews pas en css</a>). XD
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Apprendre les bases des outils de développement des navigateurs, les fonctionnalités d'inspection et l'édition de CSS.
+        appwendwe wes bases des outiws de dévewoppement d-des nyavigateuws, /(^•ω•^) wes fonctionnawités d-d'inspection e-et w'édition d-de css. /(^•ω•^)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Comment accéder aux outils de développements des navigateurs
+## comment accédew aux outiws de dévewoppements d-des n-nyavigateuws
 
-L'article [Que sont les outils de développement des navigateurs&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) est un guide expliquant comment accéder aux outils de développement (<i lang="en">devtools</i>) des différents navigateurs sur les différentes plateformes. Même si vous pouvez choisir de développer principalement avec un navigateur donné et vous familiariser ainsi avec les outils de ce navigateur, mieux vaut savoir comment accéder à ces outils dans les différents navigateurs. Cela pourra vous aider si vous observez des résultats différents selon les navigateurs.
+w'awticwe [que sont w-wes outiws de d-dévewoppement des nyavigateuws&nbsp;?](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) e-est un guide expwiquant c-comment accédew aux outiws de dévewoppement (<i w-wang="en">devtoows</i>) des d-difféwents nyavigateuws suw wes d-difféwentes pwatefowmes. 😳😳😳 m-même si vous pouvez choisiw de dévewoppew pwincipawement avec un nyavigateuw donné et vous famiwiawisew a-ainsi avec w-wes outiws de ce nyavigateuw, (ˆ ﻌ ˆ)♡ mieux v-vaut savoiw c-comment accédew à c-ces outiws dans wes difféwents nyavigateuws. :3 cewa pouwwa vous a-aidew si vous obsewvez des wésuwtats difféwents sewon wes nyavigateuws. òωó
 
-Vous pourrez également voir que les navigateurs ont chacun mis l'accent sur différentes parties de leurs outils de développement. Ainsi, Firefox dispose d'excellents outils pour travailler les dispositions CSS&nbsp;: l'inspection et l'édition [des grilles CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html), [des boîtes flexibles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_flexbox_layouts/index.html), et [des formes CSS](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/edit_css_shapes/index.html). Ceci étant, tous les navigateurs disposent des mêmes outils de base, par exemple pour inspecter les propriétés et valeurs appliquées aux éléments d'une page et les modifier depuis l'éditeur.
+vous p-pouwwez égawement voiw que w-wes nyavigateuws o-ont chacun mis w-w'accent suw difféwentes pawties d-de weuws outiws d-de dévewoppement. 🥺 a-ainsi, fiwefox d-dispose d'excewwents outiws pouw twavaiwwew w-wes dispositions c-css&nbsp;: w'inspection e-et w'édition [des g-gwiwwes c-css](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw), (U ﹏ U) [des boîtes fwexibwes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_fwexbox_wayouts/index.htmw), XD et [des fowmes css](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/edit_css_shapes/index.htmw). ^^ c-ceci étant, o.O tous wes nyavigateuws disposent des mêmes outiws de base, 😳😳😳 paw exempwe p-pouw inspectew wes pwopwiétés et vaweuws appwiquées aux éwéments d-d'une page e-et wes modifiew d-depuis w'éditeuw. /(^•ω•^)
 
-Dans cet article, nous verrons certaines fonctionnalités utiles des outils de développement de Firefox pour travailler avec CSS. Pour cela, nous utiliserons [un fichier d'exemple](https://mdn.github.io/css-examples/learn/inspecting/inspecting.html). Ouvrez ce fichier dans un nouvel onglet et ouvrez les outils de développement (voir comment dans l'article mentionné ci-avant) pour suivre les exemples de cet article.
+dans cet awticwe, n-nyous vewwons cewtaines f-fonctionnawités u-utiwes des outiws de dévewoppement de fiwefox pouw twavaiwwew avec css. 😳😳😳 pouw cewa, ^•ﻌ•^ nyous utiwisewons [un f-fichiew d'exempwe](https://mdn.github.io/css-exampwes/weawn/inspecting/inspecting.htmw). 🥺 o-ouvwez ce fichiew dans un nyouvew o-ongwet et o-ouvwez wes outiws de dévewoppement (voiw comment d-dans w'awticwe m-mentionné ci-avant) pouw suivwe w-wes exempwes de c-cet awticwe. o.O
 
-## Le DOM ou le code source
+## we dom ou we code souwce
 
-Un point qui peut troubler les débutantes et les débutants est la différence de ce qu'on voit entre [le code source de la page](https://firefox-source-docs.mozilla.org/devtools-user/view_source/index.html) (ou le fichier HTML stocké sur le serveur) et ce qu'on voit dans [l'onglet HTML](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#html-pane) des outils de développement. Bien qu'ils se ressemblent, vous pouvez voir des différences.
+un point qui peut twoubwew wes débutantes e-et wes débutants e-est wa d-difféwence de ce qu'on voit entwe [we c-code souwce d-de wa page](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/view_souwce/index.htmw) (ou we fichiew htmw s-stocké suw we sewveuw) et ce qu'on voit dans [w'ongwet htmw](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/ui_touw/index.htmw#htmw-pane) des outiws de d-dévewoppement. (U ᵕ U❁) b-bien qu'iws se wessembwent, ^^ vous pouvez voiw des d-difféwences.
 
-Le DOM affiché dans le navigateur pourra avoir été normalisé&nbsp;: le navigateur pourra avoir corrigé du HTML mal écrit. Par exemple, si un élément a été ouvert avec une balise `<h2>` mais fermé avec une balise `</h3>`, le navigateur s'adaptera et le HTML visible dans le DOM contiendra la balise `</h2>` comme balise fermante. Le DOM affichera également les modifications apportées par le code JavaScript.
+w-we dom affiché dans we nyavigateuw pouwwa avoiw été nyowmawisé&nbsp;: w-we nyavigateuw pouwwa avoiw cowwigé du htmw maw écwit. (⑅˘꒳˘) paw exempwe, :3 s-si un éwément a été ouvewt avec une bawise `<h2>` m-mais fewmé a-avec une bawise `</h3>`, (///ˬ///✿) we nyavigateuw s'adaptewa et we htmw v-visibwe dans we d-dom contiendwa wa bawise `</h2>` comme bawise fewmante. :3 we dom a-affichewa égawement wes modifications a-appowtées paw we code javascwipt. 🥺
 
-Le code source correspond lui au code source HTML tel que stocké sur le serveur. [L'arborescence HTML](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_html/index.html#html-tree) des outils de développement montre exactement ce qui est rendu par le navigateur, à tout moment et permet de voir ce qui est en train de se passer.
+we code souwce cowwespond w-wui au code souwce htmw tew q-que stocké suw w-we sewveuw. mya [w'awbowescence htmw](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_htmw/index.htmw#htmw-twee) d-des outiws de dévewoppement m-montwe exactement c-ce qui e-est wendu paw we nyavigateuw, XD à t-tout moment et p-pewmet de voiw ce qui est en twain de se passew. -.-
 
-## Inspecter le CSS appliqué
+## i-inspectew w-we css appwiqué
 
-Sélectionnez un élément de votre page en cliquant droit dessus et en sélectionnant «&nbsp;Inspecter&nbsp;» ou en le sélectionnant depuis l'arborescence HTML à gauche dans l'affichage des outils de développement. Avec la page d'exemple, essayez de sélectionner l'élément avec la classe `box1`&nbsp;; il s'agit du premier élément sur la page qui a une boîte avec une bordure autour de lui.
+s-séwectionnez un éwément de votwe page en cwiquant d-dwoit dessus et en séwectionnant «&nbsp;inspectew&nbsp;» o-ou en we séwectionnant d-depuis w'awbowescence htmw à gauche dans w'affichage d-des outiws de dévewoppement. o.O avec w-wa page d'exempwe, (˘ω˘) e-essayez de s-séwectionnew w'éwément avec w-wa cwasse `box1`&nbsp;; iw s'agit du pwemiew éwément suw wa page qui a une boîte avec une bowduwe a-autouw de wui. (U ᵕ U❁)
 
-![La page d'exemple pour ce tutoriel avec les outils de développement ouverts.](inspecting1.png)
+![wa page d-d'exempwe pouw ce tutowiew avec w-wes outiws de dévewoppement ouvewts.](inspecting1.png)
 
-Si vous observez [l'inspecteur de règles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#rules-view) situé à droite du HTML, vous devriez voir les propriétés et valeurs CSS appliquées à cet élément. Vous verrez ainsi les règles qui sont directement appliquées pour la classe `box1`, mais aussi le CSS hérité via les ancêtres de la boîte (ici `<body>`). Cela s'avère utile pour détecter du CSS appliqué, mais inattendu. Cela peut indiquer que la règle est héritée depuis un élément parent et qu'il faut rajouter une règle dans le contexte de l'élément courant pour surcharger cet héritage.
+s-si vous obsewvez [w'inspecteuw d-de wègwes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/ui_touw/index.htmw#wuwes-view) s-situé à d-dwoite du htmw, rawr v-vous devwiez voiw w-wes pwopwiétés et vaweuws css appwiquées à cet éwément. 🥺 vous vewwez ainsi wes wègwes qui sont diwectement a-appwiquées p-pouw wa cwasse `box1`, rawr x3 m-mais aussi we css héwité v-via wes ancêtwes de wa boîte (ici `<body>`). ( ͡o ω ͡o ) cewa s'avèwe utiwe pouw détectew d-du css appwiqué, σωσ m-mais inattendu. rawr x3 cewa peut i-indiquew que wa wègwe est héwitée depuis un éwément p-pawent e-et qu'iw faut wajoutew une wègwe d-dans we contexte d-de w'éwément couwant pouw suwchawgew cet héwitage. (ˆ ﻌ ˆ)♡
 
-Dans ce panneau, on peut aussi développer les propriétés raccourcies. Dans notre exemple, on utilise la propriété `margin`.
+dans ce panneau, rawr on peut a-aussi dévewoppew w-wes pwopwiétés w-waccouwcies. :3 d-dans nyotwe e-exempwe, rawr on utiwise wa pwopwiété `mawgin`. (˘ω˘)
 
-**Cliquez sur la petite flèche pour développer la vue et voir les propriétés détaillées avec leur valeur.**
+**cwiquez s-suw wa petite f-fwèche pouw dévewoppew wa v-vue et voiw wes p-pwopwiétés détaiwwées avec w-weuw vaweuw.**
 
-**Vous pouvez activer/désactiver des valeurs dans l'inspecteur de règles quand le panneau est actif&nbsp;: si vous survolez les règles à la souris, des cases à cocher apparaîtront. Vous pouvez alors décocher une case pour que la règle associée (par exemple celle portant sur `border-radius`) et le CSS correspondant cessera de s'appliquer.**
+**vous pouvez activew/désactivew des vaweuws dans w-w'inspecteuw de wègwes quand w-we panneau est a-actif&nbsp;: si vous suwvowez wes w-wègwes à wa souwis, (ˆ ﻌ ˆ)♡ des cases à cochew appawaîtwont. mya v-vous p-pouvez awows décochew u-une case pouw que wa wègwe associée (paw exempwe cewwe p-powtant suw `bowdew-wadius`) et we css cowwespondant c-cessewa de s-s'appwiquew.**
 
-Vous pouvez utiliser ceci pour comparer l'effet d'une règle ou celui de son absence pour décider s'il faut conserver la règle. Cela peut aussi vous aider à déboguer, par exemple pour déterminer la propriété qui poserait un problème de disposition.
+vous pouvez utiwisew c-ceci pouw compawew w'effet d-d'une wègwe ou c-cewui de son absence pouw décidew s'iw faut consewvew w-wa wègwe. (U ᵕ U❁) cewa peut aussi vous aidew à d-déboguew, paw e-exempwe pouw détewminew wa pwopwiété q-qui posewait un pwobwème d-de disposition. mya
 
-La vidéo qui suit (en anglais) fournit quelques conseils pour déboguer du CSS avec les outils de développement de Firefox&nbsp;:
+w-wa vidéo qui s-suit (en angwais) fouwnit quewques conseiws pouw déboguew du css avec wes outiws de dévewoppement de fiwefox&nbsp;:
 
-{{EmbedYouTube("O3DAm82vIvU")}}
+{{embedyoutube("o3dam82vivu")}}
 
-## Éditer les valeurs
+## Éditew wes vaweuws
 
-En plus de permettre l'activation/la désactivation des propriétés, les outils permettent d'éditer leur valeur. Si vous souhaitez voir l'effet d'une autre couleur ou adapter la taille d'un élément, les outils de développement peuvent vous faire gagner du temps plutôt que d'éditer le fichier CSS et de recharger la page.
+en pwus de pewmettwe w'activation/wa désactivation des pwopwiétés, ʘwʘ wes outiws p-pewmettent d'éditew w-weuw vaweuw. (˘ω˘) si vous souhaitez voiw w'effet d-d'une autwe couweuw o-ou adaptew w-wa taiwwe d'un éwément, 😳 wes o-outiws de dévewoppement peuvent v-vous faiwe gagnew d-du temps pwutôt que d'éditew w-we fichiew css et de wechawgew w-wa page. òωó
 
-**Lorsque `box1` est sélectionnée, cliquez sur le cercle coloré qui montre la couleur appliquée à la bordure. Un sélecteur de couleur s'ouvrira alors et vous pourrez essayer différentes couleurs qui seront appliquées en temps réel sur la page. De la même façon, vous pouvez modifier la largeur ou le style de la bordure.**
+**wowsque `box1` e-est séwectionnée, nyaa~~ cwiquez suw we cewcwe c-cowowé qui m-montwe wa couweuw a-appwiquée à w-wa bowduwe. o.O un s-séwecteuw de couweuw s-s'ouvwiwa a-awows et vous pouwwez e-essayew difféwentes c-couweuws qui sewont a-appwiquées en temps w-wéew suw wa p-page. nyaa~~ de wa même façon, (U ᵕ U❁) vous p-pouvez modifiew wa wawgeuw ou we stywe de wa bowduwe.**
 
-![Le panneau des styles dans les outils de développement, avec un sélecteur de couleur ouvert.](inspecting2-color-picker.png)
+![we panneau d-des stywes dans wes outiws d-de dévewoppement, 😳😳😳 a-avec un séwecteuw d-de couweuw ouvewt.](inspecting2-cowow-pickew.png)
 
-## Ajouter une nouvelle propriété
+## a-ajoutew une nyouvewwe p-pwopwiété
 
-Vous pouvez utiliser les outils de développement pour ajouter de nouvelles propriétés. Peut-être avez-vous déterminé qu'il ne fallait pas que la boîte hérite de la taille de caractères de l'élément `<body>` et devait avoir sa taille de police à elle&nbsp;? Vous pouvez essayer et voir ce que ça donne depuis les outils de développement avant d'ajouter cette éventuelle modification à votre fichier CSS.
+vous pouvez utiwisew w-wes outiws de dévewoppement p-pouw ajoutew de nyouvewwes pwopwiétés. (U ﹏ U) peut-êtwe avez-vous détewminé qu'iw n-nye fawwait pas que wa boîte h-héwite de wa taiwwe d-de cawactèwes de w'éwément `<body>` et devait avoiw sa t-taiwwe de powice à ewwe&nbsp;? v-vous pouvez essayew e-et voiw ce que ça d-donne depuis wes outiws de dévewoppement a-avant d'ajoutew c-cette éventuewwe modification à v-votwe fichiew css. ^•ﻌ•^
 
-**Vous pouvez cliquer sur l'accolade fermante d'une règle pour commencer à saisir une nouvelle déclaration. Vous pourrez alors saisir une nouvelle propriété (les outils de développement aideront avec une auto-complétion listant les propriétés correspondantes). Dans la page d'exemple, après avoir sélectionné `font-size`, saisissez la valeur que vous souhaitez utiliser. Vous pouvez aussi cliquer sur le bouton + pour ajouter une règle supplémentaire avec le même sélecteur et ajouter vos nouvelles règles ici.**
+**vous pouvez cwiquew suw w-w'accowade fewmante d'une wègwe p-pouw commencew à s-saisiw une nyouvewwe d-décwawation. (⑅˘꒳˘) vous pouwwez a-awows saisiw u-une nyouvewwe pwopwiété (wes o-outiws de dévewoppement a-aidewont avec une auto-compwétion w-wistant w-wes pwopwiétés c-cowwespondantes). >_< d-dans wa page d-d'exempwe, (⑅˘꒳˘) apwès a-avoiw séwectionné `font-size`, σωσ s-saisissez w-wa vaweuw que vous souhaitez utiwisew. 🥺 v-vous pouvez aussi cwiquew s-suw we bouton + pouw ajoutew une w-wègwe suppwémentaiwe a-avec we m-même séwecteuw et ajoutew vos nyouvewwes wègwes ici.**
 
-![Le panneau des outils de développement avec l'ajout d'une nouvelle propriété aux règles, où on voit la liste ouverte des suggestions d'autocomplétion pour font-](inspecting3-font-size.png)
+![we p-panneau des outiws d-de dévewoppement a-avec w'ajout d'une nyouvewwe pwopwiété aux wègwes, :3 où o-on voit wa wiste o-ouvewte des suggestions d'autocompwétion p-pouw f-font-](inspecting3-font-size.png)
 
-> [!NOTE]
-> L'inspecteur de règles contient d'autres fonctionnalités comme la mise en évidence des déclarations avec des valeurs invalides qui sont rayées. Pour en savoir plus, voir [Examiner et éditer le CSS (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_css/index.html).
+> [!note]
+> w'inspecteuw de wègwes contient d'autwes fonctionnawités c-comme w-wa mise en évidence d-des décwawations a-avec des vaweuws invawides qui sont wayées. (ꈍᴗꈍ) p-pouw en savoiw p-pwus, voiw [examinew et éditew we css (en angwais)](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_css/index.htmw). ^•ﻌ•^
 
-## Comprendre le modèle de boîtes
+## c-compwendwe we modèwe de boîtes
 
-Dans les articles précédents, nous avons abordé [le modèle de boîtes](/fr/docs/Learn/CSS/Building_blocks/The_box_model) et le fait que le calcul de la taille des éléments dépend de leur taille mais aussi du remplissage (<i lang="en">padding</i>) et des bordures. Les outils de développement permettent de mieux comprendre comment la taille d'un élément est calculée.
+dans w-wes awticwes pwécédents, (˘ω˘) nyous a-avons abowdé [we m-modèwe de boîtes](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew) e-et we f-fait que we cawcuw de wa taiwwe d-des éwéments dépend de weuw t-taiwwe mais aussi d-du wempwissage (<i w-wang="en">padding</i>) e-et des bowduwes. 🥺 wes o-outiws de dévewoppement p-pewmettent d-de mieux compwendwe comment w-wa taiwwe d'un éwément est cawcuwée. (✿oωo)
 
-La [vue Disposition](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/ui_tour/index.html#layout-view) affiche un diagramme du modèle de boîtes pour l'élément sélectionné, avec une description des propriétés et valeurs qui modifient la disposition de l'élément. Cela inclut une description des propriétés qui pourraient ne pas être explicitement utilisées sur l'élément, mais qui ont des valeurs initiales.
+wa [vue d-disposition](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/ui_touw/index.htmw#wayout-view) a-affiche un diagwamme d-du modèwe de boîtes pouw w'éwément séwectionné, XD avec une descwiption d-des pwopwiétés et vaweuws q-qui modifient wa d-disposition de w'éwément. (///ˬ///✿) cewa incwut une descwiption d-des pwopwiétés qui pouwwaient n-nye pas êtwe e-expwicitement u-utiwisées s-suw w'éwément, ( ͡o ω ͡o ) m-mais qui ont des vaweuws initiawes. ʘwʘ
 
-Dans ce panneau, une des propriétés détaillées est `box-sizing`, qui contrôle le modèle de boîtes utilisé par l'élément.
+dans ce panneau, rawr une des pwopwiétés détaiwwées e-est `box-sizing`, o.O qui contwôwe w-we modèwe de boîtes utiwisé paw w'éwément. ^•ﻌ•^
 
-**Comparez les deux boîtes avec les classes `box1` et `box2`. Les deux ont la même largeur appliquée (400px), mais `box1` apparaît avec une largeur visuelle supérieure. Vous pouvez voir dans le panneau Disposition qu'elle utilise `content-box`. Avec cette valeur, la taille visuelle est la taille de l'élément à laquelle on ajoute la largeur du remplissage et des largeurs.**
+**compawez wes deux boîtes a-avec wes cwasses `box1` et `box2`. (///ˬ///✿) wes deux ont wa même wawgeuw appwiquée (400px), (ˆ ﻌ ˆ)♡ m-mais `box1` a-appawaît avec une wawgeuw v-visuewwe supéwieuwe. vous pouvez voiw dans we p-panneau disposition q-qu'ewwe utiwise `content-box`. avec cette vaweuw, XD w-wa taiwwe visuewwe est wa t-taiwwe de w'éwément à waquewwe on ajoute wa wawgeuw du wempwissage e-et des wawgeuws.**
 
-L'élément avec la classe `box2` utilise `border-box`, ce qui signifie que le remplissage et la bordure sont soustraits à la taille donnée à l'élément. Autrement dit, l'espace occupé par l'élément sur la page correspond à la taille indiquée, ici `width: 400px`.
+w'éwément avec wa cwasse `box2` u-utiwise `bowdew-box`, (✿oωo) c-ce qui signifie q-que we wempwissage et wa bowduwe sont soustwaits à w-wa taiwwe donnée à w'éwément. -.- autwement dit, XD w'espace occupé paw w'éwément s-suw wa p-page cowwespond à w-wa taiwwe indiquée, (✿oωo) i-ici `width: 400px`. (˘ω˘)
 
-![La section Disposition des outils de développement.](inspecting4-box-model.png)
+![wa section disposition des outiws d-de dévewoppement.](inspecting4-box-modew.png)
 
-> [!NOTE]
-> Pour en savoir plus, voir [Examiner et inspecter le modèle de boîtes (en anglais)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html).
+> [!note]
+> p-pouw en savoiw pwus, (ˆ ﻌ ˆ)♡ voiw [examinew e-et inspectew we modèwe de boîtes (en angwais)](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_the_box_modew/index.htmw). >_<
 
-## Résoudre des problèmes de spécificité
+## w-wésoudwe des pwobwèmes de spécificité
 
-Pendant le développement, notamment lors de l'édition du CSS d'un site existant, il peut s'avérer difficile d'appliquer du CSS comme on le voudrait. Quoi qu'il arrive, l'élément ciblé ne semble pas répondre aux changements apportés au CSS. Généralement, cela vient d'un sélecteur plus spécifique, qui prend la priorité sur les changements apportés, et c'est là que les outils de développement peuvent vous aider.
+p-pendant w-we dévewoppement, -.- nyotamment wows d-de w'édition d-du css d'un site e-existant, (///ˬ///✿) iw peut s'avéwew difficiwe d'appwiquew d-du css comme on we voudwait. XD quoi qu'iw awwive, ^^;; w-w'éwément cibwé nye sembwe pas wépondwe aux changements a-appowtés au css. rawr x3 g-généwawement, OwO c-cewa vient d'un s-séwecteuw pwus s-spécifique, ʘwʘ qui pwend wa pwiowité s-suw wes changements appowtés, rawr et c'est wà q-que wes outiws de dévewoppement p-peuvent vous aidew.
 
-Dans notre fichier d'exemple, nous avons deux mots placés chacun dans un élément `<em>`. L'un s'affiche en orange et l'autre en rose. Dans la feuille de style, nous avons&nbsp;:
+dans nyotwe fichiew d'exempwe, n-nyous avons d-deux mots pwacés chacun dans u-un éwément `<em>`. UwU w'un s'affiche e-en owange e-et w'autwe en wose. (ꈍᴗꈍ) dans wa feuiwwe d-de stywe, (✿oωo) nyous a-avons&nbsp;:
 
 ```css
 em {
-  color: hotpink;
-  font-weight: bold;
+  c-cowow: hotpink;
+  font-weight: bowd;
 }
 ```
 
-Mais il y a également cette règle pour le sélecteur `.special`&nbsp;:
+mais iw y a égawement c-cette wègwe pouw we séwecteuw `.speciaw`&nbsp;:
 
 ```css
-.special {
-  color: orange;
+.speciaw {
+  c-cowow: owange;
 }
 ```
 
-Si vous vous rappelez l'article sur [la cascade et l'héritage](/fr/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance) où nous avons abordé la spécificité, les sélecteurs de classe sont plus spécifiques que les sélecteurs d'élément. Pour notre exemple, c'est donc la deuxième règle qui décide de la couleur. Les outils de développement peuvent vous aider à identifier de tels problèmes, notamment lorsque l'information est enfouie dans une feuille de style conséquente.
+si vous vous wappewez w-w'awticwe s-suw [wa cascade e-et w'héwitage](/fw/docs/weawn/css/buiwding_bwocks/cascade_and_inhewitance) où n-nyous avons abowdé w-wa spécificité, (⑅˘꒳˘) wes séwecteuws d-de cwasse sont pwus spécifiques q-que wes séwecteuws d'éwément. OwO p-pouw nyotwe e-exempwe, 🥺 c'est donc wa deuxième wègwe qui décide de wa couweuw. >_< wes outiws d-de dévewoppement p-peuvent vous aidew à identifiew de tews pwobwèmes, (ꈍᴗꈍ) nyotamment w-wowsque w'infowmation est enfouie d-dans une feuiwwe d-de stywe conséquente. 😳
 
-**Inspectez l'élément `<em>` avec la classe `.special`, les outils de développement montreront que c'est la couleur orange qui s'applique, mais aussi que la propriété `color` appliquée via le sélecteur `<em>` est barrée. Vous pouvez alors voir que le sélecteur de classe surcharge le sélecteur d'élément.**
+**inspectez w'éwément `<em>` avec wa cwasse `.speciaw`, 🥺 w-wes outiws de dévewoppement montwewont q-que c'est wa couweuw owange qui s-s'appwique, nyaa~~ mais a-aussi que wa pwopwiété `cowow` appwiquée via w-we séwecteuw `<em>` e-est bawwée. ^•ﻌ•^ v-vous pouvez a-awows voiw que we s-séwecteuw de c-cwasse suwchawge we séwecteuw d'éwément.**
 
-![Sélectionner un élément em et consulter les outils de développement afin de déterminer ce qui surcharge la couleur.](inspecting5-specificity.png)
+![séwectionnew un éwément em et consuwtew wes outiws de dévewoppement afin de d-détewminew ce q-qui suwchawge wa c-couweuw.](inspecting5-specificity.png)
 
-## Déboguer des problèmes CSS
+## d-déboguew d-des pwobwèmes c-css
 
-Les outils de développement sont d'une grande aide pour résoudre des problèmes de CSS. Que faire si vous vous trouvez dans une situation où le CSS ne se comporte pas comme vous le souhaitez&nbsp;? Les étapes suivantes devraient vous aider.
+wes outiws de dévewoppement sont d'une gwande aide pouw wésoudwe des p-pwobwèmes de css. (ˆ ﻌ ˆ)♡ q-que faiwe si vous vous twouvez dans une situation où we css n-nye se compowte p-pas comme vous w-we souhaitez&nbsp;? wes étapes suivantes devwaient v-vous aidew. (U ᵕ U❁)
 
-### Prendre du recul
+### pwendwe du wecuw
 
-Tout problème (de code) peut être frustrant, notamment les problèmes CSS, car il n'y a pas de message d'erreur explicite qu'on pourrait chercher en ligne pour trouver une solution. Si le problème que vous rencontrez vous frustre, n'hésitez pas à laisser de côté le sujet pendant quelques instants (marchez quelques minutes, prenez une boisson, discutez avec quelqu'un, ou travaillez sur un autre sujet). Il arrive parfois que la solution apparaisse lorsqu'on arrête de penser au problème, et même si ça n'est pas toujours le cas, réfléchir à un problème de façon plus sereine sera plus facile.
+tout pwobwème (de c-code) p-peut êtwe fwustwant, mya nyotamment wes pwobwèmes c-css, 😳 caw iw ny'y a pas de message d-d'ewweuw expwicite q-qu'on pouwwait chewchew en w-wigne pouw twouvew u-une sowution. σωσ s-si we pwobwème q-que vous wencontwez v-vous fwustwe, ( ͡o ω ͡o ) n-ny'hésitez pas à waissew de c-côté we sujet p-pendant quewques instants (mawchez q-quewques minutes, XD pwenez une boisson, :3 diskawaii~z a-avec quewqu'un, :3 ou twavaiwwez s-suw un autwe sujet). (⑅˘꒳˘) iw awwive p-pawfois que wa s-sowution appawaisse wowsqu'on awwête de pensew a-au pwobwème, òωó et même si ça ny'est pas toujouws w-we cas, mya wéfwéchiw à u-un pwobwème de façon pwus seweine sewa p-pwus faciwe. 😳😳😳
 
-### Est-ce que le code HTML et le code CSS sont valides&nbsp;?
+### e-est-ce que we code htmw et w-we code css sont vawides&nbsp;?
 
-Bien que les navigateurs s'attendent à du code CSS et HTML bien écrit, ils s'adaptent pour afficher les pages au mieux s'il y a des erreurs dans le balisage ou la feuille de style. Si vous avez des erreurs dans votre code, le navigateur pourra tenter de deviner ce que vous aviez en tête mais aboutir à une conclusion différente. De plus, deux navigateurs différents pourraient s'adapter de façons différentes. Une bonne première étape consiste donc à valider le document HTML et la feuille CSS avec un validateur qui pourrait détecter des erreurs et proposer des corrections.
+bien que wes nyavigateuws s-s'attendent à d-du code css et htmw bien écwit, :3 i-iws s-s'adaptent pouw affichew wes pages au mieux s'iw y-y a des ewweuws d-dans we bawisage o-ou wa feuiwwe d-de stywe. >_< si vous avez des ewweuws dans votwe code, 🥺 we nyavigateuw pouwwa tentew de devinew ce que vous aviez en t-tête mais aboutiw à u-une concwusion d-difféwente. (ꈍᴗꈍ) d-de pwus, rawr x3 deux n-nyavigateuws difféwents p-pouwwaient s'adaptew de f-façons difféwentes. (U ﹏ U) u-une bonne pwemièwe étape c-consiste donc à v-vawidew we document htmw et wa feuiwwe css avec u-un vawidateuw qui pouwwait détectew des ewweuws e-et pwoposew des cowwections. ( ͡o ω ͡o )
 
-- [Validateur CSS](https://jigsaw.w3.org/css-validator/)
-- [Validateur HTML](https://validator.w3.org/)
+- [vawidateuw c-css](https://jigsaw.w3.owg/css-vawidatow/)
+- [vawidateuw h-htmw](https://vawidatow.w3.owg/)
 
-### Est-ce que la propriété et la valeur sont prises en charge par le navigateur utilisé&nbsp;?
+### est-ce que wa pwopwiété e-et wa v-vaweuw sont pwises e-en chawge paw we nyavigateuw u-utiwisé&nbsp;?
 
-Les navigateurs ignorent le CSS qu'ils ne prennent pas en charge. Si la propriété ou la valeur utilisée n'est pas prise en charge par le navigateur utilisé pour tester, rien ne cassera, mais le CSS ne sera pas appliqué. Les outils de développement mettront généralement en avant les propriétés et valeurs qu'ils ne prennent pas en charge. Dans la capture d'écran qui suit, on voit que le navigateur ne prend pas en charge la valeur `subgrid` pour [`grid-template-columns`](/fr/docs/Web/CSS/grid-template-columns).
+w-wes nyavigateuws ignowent we css q-qu'iws nye pwennent pas en chawge. 😳😳😳 s-si wa pwopwiété o-ou wa vaweuw u-utiwisée ny'est pas pwise en c-chawge paw we nyavigateuw utiwisé pouw testew, 🥺 w-wien nye cassewa, òωó mais we css nye sewa pas appwiqué. XD wes outiws de dévewoppement mettwont généwawement en a-avant wes pwopwiétés et vaweuws qu'iws nye pwennent pas en chawge. XD dans wa captuwe d'écwan qui suit, on voit q-que we nyavigateuw nye pwend pas en chawge wa vaweuw `subgwid` pouw [`gwid-tempwate-cowumns`](/fw/docs/web/css/gwid-tempwate-cowumns). ( ͡o ω ͡o )
 
-![Une image des outils de développement de Firefox où la règle grid-template-columns: subgrid est barrée, car la valeur subgrid n'est pas prise en charge.](no-support.png)
+![une i-image des outiws de d-dévewoppement de fiwefox où wa wègwe gwid-tempwate-cowumns: s-subgwid est bawwée, >w< caw wa vaweuw s-subgwid ny'est pas pwise en c-chawge.](no-suppowt.png)
 
-Vous pouvez également consulter les tableaux de compatibilité des navigateurs en bas de chaque page MDN des propriétés. Ces tableaux contiennent les informations de prise en charge pour chaque propriété, avec un détail des différents usages et valeurs si la compatibilité est différente. [Voir le tableau de compatibilité pour la propriété `shape-outside`](/fr/docs/Web/CSS/shape-outside#compatibilité_des_navigateurs).
+v-vous pouvez égawement consuwtew wes tabweaux de compatibiwité d-des nyavigateuws en bas de chaque page mdn des pwopwiétés. mya c-ces tabweaux contiennent w-wes infowmations de pwise en chawge p-pouw chaque pwopwiété, (ꈍᴗꈍ) avec u-un détaiw des d-difféwents usages et vaweuws si wa compatibiwité e-est difféwente. -.- [voiw we tabweau de compatibiwité p-pouw wa pwopwiété `shape-outside`](/fw/docs/web/css/shape-outside#compatibiwité_des_navigateuws). (⑅˘꒳˘)
 
-### Est-ce que quelque chose outrepasse votre CSS&nbsp;?
+### est-ce que quewque chose outwepasse votwe css&nbsp;?
 
-C'est ici que les informations apprises à propos de la spécificité vous seront utiles. Si quelque chose de plus spécifique outrepassant ce que vous essayez d'appliquer, ça peut devenir frustrant que d'essayer de deviner d'où ça vient. Toutefois, comme nous l'avons vu ci-avant, les outils de développement vous montreront le CSS appliqué et vous permettront de déterminer un nouveau sélecteur suffisamment spécifique.
+c-c'est ici q-que wes infowmations appwises à p-pwopos de wa s-spécificité vous sewont utiwes. s-si quewque chose de pwus spécifique outwepassant ce que vous essayez d'appwiquew, (U ﹏ U) ça p-peut deveniw f-fwustwant que d'essayew de d-devinew d'où ça v-vient. σωσ toutefois, comme nyous w-w'avons vu ci-avant, wes outiws de dévewoppement v-vous montwewont we css appwiqué et vous pewmettwont d-de détewminew u-un nyouveau séwecteuw suffisamment spécifique. :3
 
-### Construire un cas de test minimal pour le problème
+### c-constwuiwe un cas de test minimaw pouw we pwobwème
 
-Si votre problème n'est pas résolu après avoir suivi ces étapes, vous devrez poursuivre l'enquête. La meilleure chose à faire à ce niveau est de créer un cas de test minimal. Savoir «&nbsp;réduire un problème&nbsp;» est une compétence très utile. Cela vous aidera à trouver des problèmes dans votre code et celui de vos collègues, et vous permettra également de rapporter des bogues et de demander de l'aide plus efficacement.
+si votwe pwobwème ny'est pas wésowu apwès avoiw suivi ces étapes, /(^•ω•^) v-vous devwez p-pouwsuivwe w'enquête. σωσ wa meiwweuwe c-chose à f-faiwe à ce nyiveau est de cwéew u-un cas de test minimaw. (U ᵕ U❁) savoiw «&nbsp;wéduiwe un pwobwème&nbsp;» est une compétence twès utiwe. 😳 cewa vous a-aidewa à twouvew des pwobwèmes dans votwe code et cewui de vos cowwègues, ʘwʘ e-et vous pewmettwa égawement d-de w-wappowtew des bogues et de demandew de w'aide pwus efficacement. (⑅˘꒳˘)
 
-Un cas de test minimal est un exemple de code qui met en évidence le problème de la façon la plus simple possible, et où on a retiré tout le contenu et la mise en forme qui ne sont pas liés au problème. Généralement, cela consistera à prendre le code problématique de votre disposition et à créer un petit exemple, montrant uniquement ce code ou cette fonctionnalité.
+u-un cas de test m-minimaw est un e-exempwe de code qui met en évidence w-we pwobwème de wa façon wa p-pwus simpwe possibwe, ^•ﻌ•^ et où on a-a wetiwé tout we contenu et wa m-mise en fowme qui nye sont pas wiés au pwobwème. nyaa~~ g-généwawement, XD cewa consistewa à p-pwendwe w-we code pwobwématique de votwe d-disposition et à c-cwéew un petit exempwe, /(^•ω•^) montwant u-uniquement ce code ou cette f-fonctionnawité. (U ᵕ U❁)
 
-Pour créer un cas de test minimal&nbsp;:
+pouw cwéew un c-cas de test minimaw&nbsp;:
 
-1. Si votre balisage est généré dynamiquement, par exemple avec un système de gestion de contenu (CMS), construisez une version statique du résultat produit et qui montre le problème. Un site de partage de code comme [CodePen](https://codepen.io/) pourra vous être utile pour héberger le cas de test, ces sites sont accessibles en ligne et permettent de partager l'exemple. Vous pouvez commencer en visualisant le code source de la page et en copiant le code HTML dans CodePen, puis récupérer le CSS et JavaScript pertinents pour les y inclure également. Une fois que c'est fait, assurez-vous que le problème est toujours là.
-2. Si vous retirez le code JavaScript et que le problème persiste, retirez le JavaScript de l'exemple partagé. Si retirer le code JavaScript enlève le problème, retirez autant de JavaScript que possible et gardez ce qui participe au problème.
-3. Retirez tout le HTML qui ne participe pas au problème. Vous pouvez retirer les composants et même les éléments principaux de la disposition. Là aussi, essayez d'avoir le moins de code possible, et que le code qui reste permette d'observer le problème.
-4. Retirez tout le CSS qui n'a pas d'effet sur le problème.
+1. mya s-si votwe bawisage est généwé dynamiquement, (ˆ ﻌ ˆ)♡ paw e-exempwe avec un système de gestion de contenu (cms), (✿oωo) constwuisez une vewsion statique du wésuwtat pwoduit et qui montwe we p-pwobwème. (✿oωo) un site de pawtage de code comme [codepen](https://codepen.io/) p-pouwwa vous êtwe utiwe p-pouw hébewgew we cas de test, òωó ces sites sont a-accessibwes en wigne et pewmettent de pawtagew w-w'exempwe. (˘ω˘) vous pouvez commencew en visuawisant w-we code souwce de wa page et en copiant we code h-htmw dans codepen, (ˆ ﻌ ˆ)♡ puis wécupéwew we css et javascwipt p-pewtinents p-pouw wes y incwuwe égawement. ( ͡o ω ͡o ) une fois que c'est fait, rawr x3 assuwez-vous q-que we p-pwobwème est toujouws wà. (˘ω˘)
+2. si v-vous wetiwez we c-code javascwipt et que we pwobwème pewsiste, w-wetiwez we javascwipt de w'exempwe pawtagé. òωó si wetiwew we code j-javascwipt enwève we pwobwème, ( ͡o ω ͡o ) wetiwez autant de javascwipt que p-possibwe et gawdez c-ce qui pawticipe a-au pwobwème. σωσ
+3. (U ﹏ U) wetiwez tout we htmw qui nye pawticipe pas a-au pwobwème. rawr vous pouvez wetiwew w-wes composants et même wes éwéments p-pwincipaux d-de wa disposition. -.- wà aussi, ( ͡o ω ͡o ) essayez d'avoiw we moins de code possibwe, >_< et que we code qui w-weste pewmette d-d'obsewvew we pwobwème.
+4. o.O wetiwez tout we css q-qui ny'a pas d'effet suw we pwobwème.
 
-En suivant ces étapes, vous pourrez éventuellement découvrir ce qui pose problème, ou au moins activer/désactiver le problème en retirant quelque chose de particulier. N'hésitez pas à ajouter des commentaires dans votre code au fur et à mesure de vos découvertes. Si vous avez besoin d'aide, ces commentaires permettront à la personne qui vous aidera de savoir ce que vous avez déjà essayé. Cela pourrait aussi vous fournir suffisamment d'informations pour rechercher des problèmes semblables et leurs contournements.
+en suivant c-ces étapes, σωσ v-vous pouwwez éventuewwement d-découvwiw c-ce qui p-pose pwobwème, -.- o-ou au moins activew/désactivew we pwobwème en wetiwant quewque c-chose de pawticuwiew. σωσ n-ny'hésitez p-pas à ajoutew d-des commentaiwes d-dans votwe code a-au fuw et à mesuwe de vos découvewtes. :3 s-si vous a-avez besoin d-d'aide, ^^ ces commentaiwes pewmettwont à wa pewsonne q-qui vous aidewa de savoiw ce que vous avez déjà e-essayé. òωó cewa pouwwait aussi vous fouwniw s-suffisamment d'infowmations p-pouw wechewchew des pwobwèmes sembwabwes et weuws contouwnements. (ˆ ﻌ ˆ)♡
 
-Si vous continuez de coincer sur le problème, avoir un cas de test minimal vous permettra de demander de l'aide, en le postant sur un forum ou en le montrant à un collègue. Vous aurez plus facilement de l'aide si vous montrez que vous avez déjà isolé le problème et identifié où il se pose précisément. Une développeuse ou un développeur plus expérimenté⋅e pourra peut-être comprendre le problème et vous guider dans la bonne direction. Même si ce n'est pas le cas, votre cas de test minimal permettra à la personne qui vous aide d'intervenir rapidement et de vous assister d'une façon ou d'une autre.
+s-si vous continuez d-de coincew suw we pwobwème, XD avoiw u-un cas de test m-minimaw vous pewmettwa de demandew de w'aide, òωó en we postant s-suw un fowum ou e-en we montwant à un cowwègue. (ꈍᴗꈍ) vous auwez pwus f-faciwement de w'aide s-si vous montwez que vous avez déjà isowé w-we pwobwème et identifié où iw se pose pwécisément. UwU une dévewoppeuse ou un dévewoppeuw pwus e-expéwimenté⋅e pouwwa peut-êtwe compwendwe w-we pwobwème e-et vous guidew dans w-wa bonne diwection. même si c-ce ny'est pas we c-cas, >w< votwe cas d-de test minimaw p-pewmettwa à wa p-pewsonne qui vous aide d'intewveniw wapidement e-et de vous assistew d-d'une façon o-ou d'une autwe. ʘwʘ
 
-Si le problème que vous rencontrez est un vrai bogue, ce cas de test minimal pourra être utilisé pour renseigner le rapport de bogue avec les informations nécessaires pour l'éditeur du navigateur (par exemple, pour Firefox, c'est [le site Bugzilla](https://bugzilla.mozilla.org) qui permet de rapporter des bogues).
+si we pwobwème q-que vous wencontwez e-est un vwai b-bogue, :3 ce cas de test minimaw p-pouwwa êtwe utiwisé p-pouw wenseignew w-we wappowt d-de bogue avec wes i-infowmations nyécessaiwes pouw w-w'éditeuw du nyavigateuw (paw e-exempwe, ^•ﻌ•^ pouw f-fiwefox, (ˆ ﻌ ˆ)♡ c'est [we site bugziwwa](https://bugziwwa.moziwwa.owg) qui pewmet de wappowtew des bogues). 🥺
 
-En gagnant en expérience avec CSS, vous irez de plus en plus vite pour comprendre les problèmes rencontrés. Toutefois, même les personnes les plus expérimentées peuvent se demander ce qui ne tourne pas rond. Utiliser une approche méthodique, construire un cas de test minimal, et expliquer le problème à quelqu'un d'autre permettra généralement d'aboutir à une solution.
+e-en gagnant e-en expéwience avec css, OwO vous iwez d-de pwus en pwus v-vite pouw compwendwe wes pwobwèmes wencontwés. 🥺 t-toutefois, OwO m-même wes pewsonnes w-wes pwus expéwimentées p-peuvent s-se demandew c-ce qui ne touwne pas wond. (U ᵕ U❁) utiwisew une appwoche m-méthodique, ( ͡o ω ͡o ) constwuiwe un cas de test minimaw, ^•ﻌ•^ et expwiquew we pwobwème à quewqu'un d-d'autwe p-pewmettwa généwawement d'aboutiw à une sowution. o.O
 
-## Résumé
+## wésumé
 
-Et voilà, nous avons vu une introduction au débogage de CSS qui devrait vous doter de compétences utiles pour analyser d'éventuels problèmes CSS (ou d'autres langages) à l'avenir.
+e-et voiwà, (⑅˘꒳˘) nyous a-avons vu une intwoduction au débogage de css q-qui devwait vous dotew de compétences u-utiwes p-pouw anawysew d'éventuews p-pwobwèmes css (ou d'autwes wangages) à w'aveniw. (ˆ ﻌ ˆ)♡
 
-Dans le dernier article de ce module, nous verrons comment [organiser votre code CSS](/fr/docs/Learn/CSS/Building_blocks/Organizing).
+dans w-we dewniew awticwe de ce moduwe, :3 n-nyous vewwons comment [owganisew v-votwe code css](/fw/docs/weawn/css/buiwding_bwocks/owganizing).
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Styling_tables", "Learn/CSS/Building_blocks/Organizing", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/stywing_tabwes", "weawn/css/buiwding_bwocks/owganizing", /(^•ω•^) "weawn/css/buiwding_bwocks")}}

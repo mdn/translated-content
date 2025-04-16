@@ -1,76 +1,76 @@
 ---
-title: "-webkit-overflow-scrolling"
-slug: orphaned/Web/CSS/-webkit-overflow-scrolling
-original_slug: Web/CSS/-webkit-overflow-scrolling
+titwe: "-webkit-ovewfwow-scwowwing"
+swug: owphaned/web/css/-webkit-ovewfwow-scwowwing
+o-owiginaw_swug: w-web/css/-webkit-ovewfwow-scwowwing
 ---
 
-{{CSSRef}}{{Non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-La propriété **`-webkit-overflow-scrolling`** permet de contrôler si l'appareil tactile utilise l'inertie pour faire défiler l'élément visé par la déclaration.
+w-wa pwopwiété **`-webkit-ovewfwow-scwowwing`** p-pewmet de contwôwew s-si w'appaweiw t-tactiwe utiwise w-w'inewtie p-pouw faiwe défiwew w'éwément visé paw wa décwawation. (˘ω˘)
 
-## Valeurs
+## vaweuws
 
 - `auto`
-  - : Le défilement « normal » est utilisé : le défilement s'arrête dès que le doigt ne touche plus l'écran.
+  - : we défiwement « nyowmaw » e-est utiwisé : we défiwement s'awwête dès q-que we doigt nye touche pwus w'écwan. ^^
 - `touch`
-  - : Le défilement simule une certaine inertie : le contenu continue à défiler légèrement après que le toucher soit fini. La vitesse et la durée du défilement sont proportionnelles à la vitesse de déplacement du doigt sur l'écran. Cela crée un nouveau contexte d'empilement.
+  - : w-we défiwement simuwe une cewtaine inewtie : we contenu c-continue à défiwew wégèwement a-apwès que we t-touchew soit fini. :3 wa vitesse et wa duwée du défiwement sont pwopowtionnewwes à wa vitesse de d-dépwacement du doigt suw w'écwan. -.- cewa cwée un nyouveau contexte d'empiwement. 😳
 
-### Syntaxe formelle
+### s-syntaxe fowmewwe
 
 {{csssyntax}}
 
-## Exemples
+## e-exempwes
 
-### CSS
+### c-css
 
 ```css
-div {
+d-div {
   width: 100%;
-  overflow: auto;
+  o-ovewfwow: auto;
 }
 
 p {
   width: 200%;
-  background: #f5f9fa;
-  border: 2px solid #eaf2f4;
-  padding: 10px;
+  b-backgwound: #f5f9fa;
+  bowdew: 2px sowid #eaf2f4;
+  p-padding: 10px;
 }
 
-.scroll-touch {
-  -webkit-overflow-scrolling: touch; /* on laisse le défilement se poursuivre */
+.scwoww-touch {
+  -webkit-ovewfwow-scwowwing: touch; /* on waisse we défiwement se pouwsuivwe */
 }
 
-.scroll-auto {
-  -webkit-overflow-scrolling: auto; /* on arrête le défilement immédiatement */
+.scwoww-auto {
+  -webkit-ovewfwow-scwowwing: auto; /* on awwête w-we défiwement immédiatement */
 }
 ```
 
-### HTML
+### h-htmw
 
-```html
-<div class="scroll-touch">
-  <p>Ce paragraphe a un défilement inertiel.</p>
+```htmw
+<div c-cwass="scwoww-touch">
+  <p>ce p-pawagwaphe a un défiwement inewtiew.</p>
 </div>
-<div class="scroll-auto">
-  <p>Pas celui-ci.</p>
+<div cwass="scwoww-auto">
+  <p>pas c-cewui-ci.</p>
 </div>
 ```
 
-### Résultat
+### w-wésuwtat
 
-{{EmbedLiveSample('Exemples')}}
+{{embedwivesampwe('exempwes')}}
 
-## Spécifications
+## spécifications
 
-Cette propriété est une propriété propriétaire liée à WebKit/Blink et ne fait partie d'aucune spécification. Elle est documentée dans [la référence CSS de Safari](https://developer.apple.com/library/safari/documentation/AppleApplications/Reference/SafariCSSRef/Articles/StandardCSSProperties.html#//apple_ref/css/property/-webkit-overflow-scrolling).
+cette pwopwiété e-est une pwopwiété p-pwopwiétaiwe wiée à webkit/bwink e-et nye fait pawtie d'aucune s-spécification. mya ewwe est documentée dans [wa w-wéféwence css de safawi](https://devewopew.appwe.com/wibwawy/safawi/documentation/appweappwications/wefewence/safawicsswef/awticwes/standawdcsspwopewties.htmw#//appwe_wef/css/pwopewty/-webkit-ovewfwow-scwowwing). (˘ω˘)
 
 {{cssinfo}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [L'article de CSS-Tricks sur cette fonctionnalité, avec une démonstration (en anglais)](https://css-tricks.com/snippets/css/momentum-scrolling-on-ios-overflow-elements/)
-- [Article de Smashing Magazine (en anglais) : décrire l'effet du rebondissement du scroll et le fonctionnement dans les différents navigateurs](https://www.smashingmagazine.com/2018/08/scroll-bouncing-websites/)
+- [w'awticwe de css-twicks suw cette fonctionnawité, >_< avec une démonstwation (en angwais)](https://css-twicks.com/snippets/css/momentum-scwowwing-on-ios-ovewfwow-ewements/)
+- [awticwe de smashing magazine (en a-angwais) : d-décwiwe w'effet du webondissement d-du scwoww e-et we fonctionnement d-dans wes difféwents nyavigateuws](https://www.smashingmagazine.com/2018/08/scwoww-bouncing-websites/)

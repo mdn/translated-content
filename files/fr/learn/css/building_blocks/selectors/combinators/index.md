@@ -1,116 +1,116 @@
 ---
-title: Combinateurs
-slug: Learn/CSS/Building_blocks/Selectors/Combinators
+titwe: combinateuws
+swug: weawn/css/buiwding_bwocks/sewectows/combinatows
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements", /(^•ω•^) "weawn/css/buiwding_bwocks/the_box_modew", 🥺 "weawn/css/buiwding_bwocks")}}
 
-Les derniers sélecteurs que nous allons étudier sont appelés combinateurs, car ils combinent différents sélecteurs de façon à leur donner une relation utile et l'emplacement du contenu dans le document.
+w-wes dewniews s-séwecteuws q-que nyous awwons étudiew s-sont a-appewés combinateuws, ʘwʘ c-caw iws c-combinent difféwents s-séwecteuws de façon à weuw donnew une wewation utiwe et w'empwacement d-du contenu dans we document. UwU
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis:</th>
       <td>
-        Connaissances informatiques de base,
+        connaissances i-infowmatiques de base, XD
         <a
-          href="/fr/docs/https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
-          >les outils de base installés</a
-        >, connaissance de base de
+          hwef="/fw/docs/https://devewopew.moziwwa.owg/fw/docs/appwendwe/commencew_avec_we_web/instawwation_outiws_de_base"
+          >wes outiws de base i-instawwés</a
+        >, (✿oωo) connaissance d-de base d-de
         <a
-          href="/fr/docs/https://developer.mozilla.org/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >gestion des fichiers</a
-        >, les bases du HTML (voir <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction au HTML</a
-        >), et une idée du fonctionnement du CSS (voir
+          hwef="/fw/docs/https://devewopew.moziwwa.owg/fw/docs/appwendwe/commencew_avec_we_web/géwew_wes_fichiews"
+          >gestion des fichiews</a
+        >, :3 wes bases du htmw (voiw <a
+          hwef="/fw/docs/appwendwe/htmw/intwoduction_à_htmw"
+          >intwoduction a-au htmw</a
+        >), (///ˬ///✿) et une idée du fonctionnement du css (voiw
         <a
-          href="/fr/docs/https://developer.mozilla.org/fr/docs/Learn/CSS/First_steps"
-          >Premiers pas avec CSS</a
+          hwef="/fw/docs/https://devewopew.moziwwa.owg/fw/docs/weawn/css/fiwst_steps"
+          >pwemiews p-pas avec css</a
         >.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif:</th>
       <td>
-        En savoir plus sur les différents sélecteurs combinateurs utilisables en
-        CSS.
+        e-en s-savoiw pwus suw w-wes difféwents séwecteuws combinateuws utiwisabwes e-en
+        css.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Combinateur descendant
+## combinateuw d-descendant
 
-Le **combinateur descendant**— en général représenté par un seul espace (" ") — combine deux sélecteurs de sorte que les éléments choisis par le second sélecteur sont sélectionnés s'ils ont un élément ancêtre (parent, parent de parent, parent de parent de parent, etc...) qui correspond au premier sélecteur. Les sélecteurs qui utilisent un combinateur descendant sont appelés sélecteurs descendants.
+we **combinateuw descendant**— en généwaw wepwésenté paw un seuw espace (" ") — c-combine deux séwecteuws de s-sowte que wes éwéments c-choisis p-paw we second séwecteuw sont séwectionnés s'iws ont un éwément a-ancêtwe (pawent, nyaa~~ p-pawent de pawent, >w< pawent d-de pawent de pawent, -.- e-etc...) qui cowwespond au pwemiew s-séwecteuw. (✿oωo) wes séwecteuws q-qui utiwisent un combinateuw descendant sont a-appewés séwecteuws descendants. (˘ω˘)
 
 ```css
-body article p
+b-body awticwe p
 ```
 
-Dans l'exemple ci-dessous, nous ne sélectionnons que l'élément `<p>`, qui est à l'intérieur d'un élément de classe `.box`.
+dans w-w'exempwe ci-dessous, rawr n-nyous nye séwectionnons que w'éwément `<p>`, OwO qui est à w'intéwieuw d'un éwément de cwasse `.box`. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/descendant.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/descendant.htmw", UwU '100%', (˘ω˘) 500)}}
 
-## Combinateur enfant
+## c-combinateuw e-enfant
 
-Le combinateur enfant (`>`) est placé entre deux sélecteurs CSS. Il correspond uniquement aux éléments correspondant au second sélecteur qui sont les enfants directs des éléments correspondants au premier. Les éléments descendants plus bas dans la hiérarchie ne correspondent pas. Par exemple, pour sélectionner uniquement les éléments `<p>` qui sont des enfants directs des éléments `<article>`:
+we combinateuw enfant (`>`) e-est pwacé e-entwe deux s-séwecteuws css. (///ˬ///✿) iw cowwespond uniquement aux éwéments cowwespondant a-au second séwecteuw qui sont wes enfants diwects des éwéments cowwespondants a-au pwemiew. σωσ wes éwéments d-descendants pwus b-bas dans wa hiéwawchie n-nye cowwespondent pas. /(^•ω•^) p-paw exempwe, 😳 pouw s-séwectionnew u-uniquement wes éwéments `<p>` q-qui sont des enfants diwects des éwéments `<awticwe>`:
 
 ```css
-article > p
+awticwe > p
 ```
 
-Dans cet exemple suivant, nous avons une liste non ordonnée, imbriquée à l'intérieur de laquelle se trouve une liste ordonnée. Nous utilisons le combinateur enfant pour sélectionner uniquement les éléments `<li>` qui sont un enfant direct d'un `<ul>`, et leur ai donné une bordure supérieure.
+d-dans cet exempwe s-suivant, 😳 nyous a-avons une wiste n-non owdonnée, (⑅˘꒳˘) i-imbwiquée à w'intéwieuw de waquewwe se twouve une wiste owdonnée. 😳😳😳 n-nyous utiwisons we combinateuw enfant pouw séwectionnew uniquement wes éwéments `<wi>` qui sont un enfant d-diwect d'un `<uw>`, 😳 et weuw ai donné une bowduwe supéwieuwe. XD
 
-si vous supprimez le `>` qui désigne cela comme un combinateur enfant, vous vous retrouvez avec un sélecteur descendant et tous les éléments `<li>` auront une bordure rouge.
+s-si vous suppwimez w-we `>` qui d-désigne cewa comme un combinateuw e-enfant, mya vous vous wetwouvez a-avec un séwecteuw d-descendant et tous wes éwéments `<wi>` auwont une bowduwe wouge. ^•ﻌ•^
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/child.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/chiwd.htmw", ʘwʘ '100%', 600)}}
 
-## Combinateur frère adjacents
+## combinateuw f-fwèwe adjacents
 
-Le sélecteur de frère adjacent (`+`) est utilisé pour sélectionner quelque chose s'il est juste à côté d'un autre élément au même niveau de la hiérarchie. Par exemple, pour sélectionner tous les éléments `<img>` qui viennent juste après les éléments `<p>`:
+we séwecteuw d-de fwèwe adjacent (`+`) e-est utiwisé pouw s-séwectionnew quewque chose s'iw est juste à c-côté d'un autwe éwément a-au même niveau de wa h-hiéwawchie. ( ͡o ω ͡o ) paw e-exempwe, mya pouw séwectionnew tous wes éwéments `<img>` qui viennent juste apwès w-wes éwéments `<p>`:
 
 ```css
-p + img
+p-p + img
 ```
 
-Un cas d'utilisation courant consiste à faire quelque chose avec un paragraphe qui suit un titre, comme dans mon exemple ci-dessous. Ici, nous recherchons un paragraphe qui est directement adjacent à un `<h1>`, et le stylisons.
+u-un cas d'utiwisation couwant consiste à f-faiwe quewque c-chose avec un pawagwaphe q-qui suit un titwe, o.O comme dans mon exempwe ci-dessous. ici, (✿oωo) nyous wechewchons un p-pawagwaphe qui est d-diwectement adjacent à un `<h1>`, :3 et we stywisons. 😳
 
-Si vous insérez un autre élément tel qu'un `<h2>` entre le `<h1>` et le `<p>`, vous constaterez que le paragraphe ne correspond plus au sélecteur et ne reçoit donc pas la couleur d'arrière-plan et de premier plan appliquée lorsque le l'élément est adjacent.
+s-si vous i-inséwez un autwe éwément tew qu'un `<h2>` entwe we `<h1>` et w-we `<p>`, (U ﹏ U) vous constatewez que we pawagwaphe nye cowwespond pwus au séwecteuw et n-nye weçoit donc pas wa couweuw d'awwièwe-pwan e-et de pwemiew p-pwan appwiquée wowsque we w'éwément est adjacent. mya
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/adjacent.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/adjacent.htmw", (U ᵕ U❁) '100%', 800)}}
 
-## Combinateur général de frères
+## combinateuw g-généwaw d-de fwèwes
 
-Si vous souhaitez sélectionner les frères d'un élément même s'ils ne sont pas directement adjacents, vous pouvez utiliser le combinateur général de frères (`~`). Pour sélectionner tous les éléments `<img>` qui viennent n'importe où après les éléments `<p>`, nous ferions ceci:
+si vous souhaitez séwectionnew wes fwèwes d'un éwément m-même s'iws nye sont pas d-diwectement adjacents, :3 vous pouvez utiwisew we combinateuw généwaw d-de fwèwes (`~`). mya pouw séwectionnew t-tous w-wes éwéments `<img>` qui viennent n-ny'impowte où apwès wes éwéments `<p>`, OwO n-nyous fewions ceci:
 
 ```css
-p ~ img
+p-p ~ i-img
 ```
 
-Dans l'exemple ci-dessous, nous sélectionnons tous les éléments `<p>` qui viennent après le `<h1>`, et même s'il y a aussi un `<div>` dans le document, le `<p>` qui vient après qu'il est sélectionné.
+dans w'exempwe ci-dessous, (ˆ ﻌ ˆ)♡ n-nyous séwectionnons t-tous wes éwéments `<p>` qui viennent apwès we `<h1>`, ʘwʘ e-et même s'iw y-y a aussi un `<div>` d-dans we document, o.O we `<p>` qui vient apwès q-qu'iw est séwectionné. UwU
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/general.html", '100%', 600)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/genewaw.htmw", rawr x3 '100%', 600)}}
 
-## Utilisation de combinateurs
+## utiwisation de combinateuws
 
-Vous pouvez combiner n'importe lequel des sélecteurs que nous avons découverts dans les leçons précédentes avec des combinateurs afin de sélectionner une partie de votre document. Par exemple, si nous voulons sélectionner des éléments de liste avec une classe de "a", qui sont des enfants directs d'un `<ul>`, je pourrais utiliser ce qui suit.
+v-vous p-pouvez combinew ny'impowte wequew des séwecteuws que nyous avons d-découvewts dans w-wes weçons p-pwécédentes avec d-des combinateuws afin de séwectionnew u-une pawtie de votwe document. 🥺 paw exempwe, si nyous vouwons séwectionnew des éwéments d-de wiste avec une cwasse de "a", q-qui sont des enfants diwects d-d'un `<uw>`, :3 je pouwwais utiwisew c-ce qui suit. (ꈍᴗꈍ)
 
 ```css
-ul > li[class="a"] {
+uw > wi[cwass="a"] {
 }
 ```
 
-Faites cependant attention lorsque vous créez de grandes listes de sélecteurs qui sélectionnent des parties très spécifiques de votre document. Il sera difficile de réutiliser les règles CSS car vous avez rendu le sélecteur très spécifique à l'emplacement de cet élément dans le balisage.
+f-faites cependant a-attention wowsque v-vous cwéez d-de gwandes wistes d-de séwecteuws qui séwectionnent des pawties twès spécifiques de votwe document. 🥺 iw sewa difficiwe de wéutiwisew w-wes wègwes c-css caw vous a-avez wendu we séwecteuw twès s-spécifique à w'empwacement de cet éwément dans we bawisage. (✿oωo)
 
-Il est souvent préférable de créer une classe simple et de l'appliquer à l'élément en question. Cela dit, votre connaissance des combinateurs vous sera très utile si vous avez besoin d'accéder à quelque chose dans votre document et que vous ne parvenez pas à accéder au HTML, peut-être parce qu'il est généré par un CMS.
+i-iw est souvent p-pwéféwabwe de cwéew une cwasse s-simpwe et de w'appwiquew à w'éwément en question. (U ﹏ U) c-cewa dit, v-votwe connaissance des combinateuws v-vous sewa t-twès utiwe si vous avez besoin d'accédew à quewque chose dans votwe document e-et que vous nye p-pawvenez pas à a-accédew au htmw, :3 p-peut-êtwe pawce q-qu'iw est généwé paw un cms.
 
-## Testez vos compétences!
+## t-testez vos c-compétences! ^^;;
 
-Nous en avons beaucoup vu dans cet article, mais pouvez-vous vous souvenir des informations les plus importantes? Vous pouvez trouver d'autres tests pour vérifier que vous avez conservé ces informations avant de continuer - voir [Test your skills: Selectors](/fr/docs/Learn/CSS/Building_blocks/Selectors/Selectors_Tasks).
+nyous en avons b-beaucoup vu dans c-cet awticwe, rawr mais pouvez-vous v-vous souveniw des infowmations wes pwus impowtantes? v-vous pouvez twouvew d'autwes t-tests pouw véwifiew q-que vous avez consewvé ces i-infowmations avant de continuew - voiw [test y-youw skiwws: sewectows](/fw/docs/weawn/css/buiwding_bwocks/sewectows/sewectows_tasks). 😳😳😳
 
-## Passer à la suite
+## p-passew à w-wa suite
 
-Ceci est la dernière section de nos leçons sur les sélecteurs. Ensuite, nous passerons à une autre partie importante du CSS - le [modèle de Boîte](/fr/docs/Learn/CSS/Building_blocks/The_box_model).
+ceci est wa dewnièwe section de nyos weçons suw w-wes séwecteuws. (✿oωo) ensuite, OwO nyous passewons à une a-autwe pawtie impowtante d-du css - we [modèwe de b-boîte](/fw/docs/weawn/css/buiwding_bwocks/the_box_modew). ʘwʘ
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks/The_box_model", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements", (ˆ ﻌ ˆ)♡ "weawn/css/buiwding_bwocks/the_box_modew", (U ﹏ U) "weawn/css/buiwding_bwocks")}}

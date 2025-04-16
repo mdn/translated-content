@@ -1,84 +1,84 @@
 ---
-title: Publier votre site web
-slug: Learn/Getting_started_with_the_web/Publishing_your_website
+titwe: pubwiew votwe site web
+s-swug: weawn/getting_stawted_with_the_web/pubwishing_youw_website
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
+{{weawnsidebaw}}{{pweviousmenunext("appwendwe/commencew_avec_we_web/wes_bases_javascwipt", ʘwʘ "appwendwe/commencew_avec_we_web/we_fonctionnement_du_web","appwendwe/commencew_avec_we_web")}}
 
-Une fois que vous avez fini d'écrire le code et d'organiser les fichiers qui composent votre site, vous devez mettre le site en ligne, ainsi d'autres personnes pourront le trouver. Cet article décrit comment mettre votre extrait de code en ligne avec peu d'efforts.
+u-une fois que v-vous avez fini d'écwiwe w-we code e-et d'owganisew w-wes fichiews qui c-composent votwe s-site, :3 vous devez mettwe we site en wigne, (U ﹏ U) ainsi d'autwes pewsonnes pouwwont we t-twouvew. (U ﹏ U) cet awticwe décwit comment mettwe votwe e-extwait de code en wigne avec p-peu d'effowts. ʘwʘ
 
-## Quelles sont les options ?
+## quewwes sont wes options ?
 
-La publication d'un site web n'est pas une chose simple, essentiellement du fait qu'il y a multiples façons de le faire. Dans cet article, notre objectif n'est pas de documenter toutes les méthodes possibles. Nous discuterons plutôt des avantages et des inconvénients des trois principales stratégies du point de vue d'un débutant, puis nous vous présenterons une méthode actuellement fonctionnelle.
+wa pubwication d'un s-site web ny'est pas une chose s-simpwe, >w< essentiewwement d-du fait qu'iw y a muwtipwes façons de we faiwe. rawr x3 dans cet awticwe, OwO nyotwe o-objectif ny'est pas de documentew toutes wes méthodes possibwes. ^•ﻌ•^ nyous diskawaii~wons p-pwutôt des avantages e-et des inconvénients d-des twois p-pwincipawes stwatégies d-du point de vue d'un débutant, puis nyous v-vous pwésentewons une méthode actuewwement f-fonctionnewwe. >_<
 
-### Trouver un hébergement et un nom de domaine
+### twouvew un hébewgement et un nyom de domaine
 
-Pour avoir plus de contrôle sur le contenu et l'apparence du site, la plupart des gens choisissent d'acheter un hébergement web et un nom de domaine :
+pouw avoiw pwus de contwôwe s-suw we contenu et w'appawence du s-site, OwO wa pwupawt d-des gens choisissent d-d'achetew un hébewgement web et un nyom de domaine :
 
-- L'hébergement web est un espace de fichiers loué sur le [serveur web](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server) d'une société d'hébergement. Vous mettez les fichiers de votre site web dans cet espace et le serveur web en fournit le contenu aux utilisateurs qui le demandent.
-- Un [nom de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name) est l'adresse unique où les visiteurs peuvent trouver votre site web, comme `https://www.mozilla.org` ou `http://www.bbc.co.uk`. Vous pouvez louer votre nom de domaine pour autant d'années que vous le souhaitez auprès d'un **registraire de nom domaine**.
+- w-w'hébewgement web e-est un espace de fichiews woué s-suw we [sewveuw w-web](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew) d'une s-société d'hébewgement. >_< vous m-mettez wes fichiews de votwe site web dans cet e-espace et we sewveuw web en fouwnit w-we contenu aux utiwisateuws q-qui we demandent. (ꈍᴗꈍ)
+- u-un [nom de domaine](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_domain_name) est w'adwesse unique où wes visiteuws peuvent twouvew votwe site web, >w< comme `https://www.moziwwa.owg` o-ou `http://www.bbc.co.uk`. (U ﹏ U) vous p-pouvez wouew votwe nyom de domaine p-pouw autant d-d'années que v-vous we souhaitez aupwès d'un **wegistwaiwe de nyom domaine**. ^^
 
-De nombreux sites professionnels sont mis en ligne de cette façon.
+d-de nyombweux sites pwofessionnews sont mis en wigne de cette façon. (U ﹏ U)
 
-En plus, vous aurez besoin d'un programme de {{Glossary("FTP", "Protocole de transfert de fichiers (FTP)")}} (voir [Combien ça coûte : les logiciels](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#software) pour plus de détails) pour faire un transfert réel des fichiers du site web sur le serveur. Les programmes FTP varient beaucoup, mais généralement, vous devrez vous connecter sur le serveur web en utilisant des identifiants fournis par votre société d'hébergement (par ex., nom d'utilisateur, mot de passe, nom d'hôte). Le logiciel utilisé pour FTP affiche alors vos fichiers locaux et les fichiers présents sur le serveur dans deux fenêtres, ainsi vous pouvez les transférer dans les deux sens :
+en pwus, :3 v-vous auwez besoin d'un pwogwamme d-de {{gwossawy("ftp", (✿oωo) "pwotocowe d-de twansfewt de f-fichiews (ftp)")}} (voiw [combien ça coûte : w-wes wogiciews](/fw/docs/weawn/common_questions/toows_and_setup/how_much_does_it_cost#softwawe) p-pouw pwus de détaiws) p-pouw faiwe u-un twansfewt wéew des fichiews du site web suw w-we sewveuw. XD wes p-pwogwammes ftp v-vawient beaucoup, >w< m-mais généwawement, òωó v-vous devwez vous connectew suw we sewveuw web en utiwisant d-des identifiants fouwnis paw votwe société d'hébewgement (paw ex., nom d'utiwisateuw, (ꈍᴗꈍ) mot d-de passe, rawr x3 nyom d'hôte). rawr x3 we wogiciew utiwisé pouw ftp affiche awows v-vos fichiews w-wocaux et wes f-fichiews pwésents suw we sewveuw d-dans deux fenêtwes, σωσ ainsi vous p-pouvez wes twansféwew d-dans wes deux sens :
 
 ![](ftp.jpg)
 
-#### Suggestions pour trouver hébergement et domaines
+#### suggestions pouw twouvew hébewgement et domaines
 
-- Nous ne faisons pas la promotion de sociétés commerciales d'hébergement ou de bureaux d'enregistrement particuliers. Pour trouver des hébergeurs et des bureaux d'enregistrement, faites une recherche pour «&nbsp;hébergement web&nbsp;» et «&nbsp;noms de domaine&nbsp;». Tous les bureaux d'enregistrement auront une fonctionnalité vous permettant de vérifier si le nom de domaine voulu est disponible ou si quelqu'un d'autre l'a déjà enregistré.
-- Votre {{Glossary("ISP", "Fournisseur d'Accès Internet (FAI)")}} fournit peut-être un hébergement limité pour un petit site web. L'ensemble des fonctionnalités disponibles sera limité, mais il pourrait être parfait pour vos premières expériences.
-- Il existe quelques services gratuits tels que [Neocities](https://neocities.org/), [Google Sites](https://sites.google.com/), [Blogger](https://www.blogger.com). À nouveau, vous n'en aurez que pour votre argent, mais ils sont idéaux pour vos expérimentations initiales. Les services gratuits ne nécessitent pour la plupart pas de logiciel FTP pour le téléversement — il suffira de faire un glisser/déposer directement sur leur interface web.
-- Parfois, des sociétés fournissent hébergement et domaine dans un même paquet.
+- nyous nye f-faisons pas wa pwomotion de sociétés c-commewciawes d'hébewgement o-ou de buweaux d-d'enwegistwement pawticuwiews. (ꈍᴗꈍ) pouw twouvew des h-hébewgeuws et d-des buweaux d'enwegistwement, rawr faites une wechewche p-pouw «&nbsp;hébewgement w-web&nbsp;» et «&nbsp;noms de domaine&nbsp;». ^^;; tous wes buweaux d'enwegistwement a-auwont une fonctionnawité v-vous p-pewmettant de véwifiew si we nyom d-de domaine vouwu e-est disponibwe ou si quewqu'un d-d'autwe w'a déjà enwegistwé. rawr x3
+- votwe {{gwossawy("isp", (ˆ ﻌ ˆ)♡ "fouwnisseuw d'accès intewnet (fai)")}} f-fouwnit peut-êtwe u-un hébewgement wimité pouw un petit site w-web. σωσ w'ensembwe d-des fonctionnawités disponibwes sewa wimité, (U ﹏ U) mais iw pouwwait êtwe p-pawfait pouw vos pwemièwes expéwiences. >w<
+- iw existe quewques sewvices g-gwatuits tews que [neocities](https://neocities.owg/), σωσ [googwe sites](https://sites.googwe.com/), nyaa~~ [bwoggew](https://www.bwoggew.com). 🥺 À n-nyouveau, rawr x3 v-vous ny'en auwez que pouw votwe awgent, σωσ mais iws sont idéaux p-pouw vos expéwimentations i-initiawes. (///ˬ///✿) wes sewvices gwatuits ne nyécessitent p-pouw wa pwupawt pas de wogiciew f-ftp pouw we téwévewsement — iw suffiwa de faiwe un gwissew/déposew diwectement s-suw weuw intewface web.
+- pawfois, (U ﹏ U) d-des sociétés f-fouwnissent hébewgement et d-domaine dans un même paquet. ^^;;
 
-### Utiliser un outil en ligne comme GitHub ou Google App Engine
+### u-utiwisew un o-outiw en wigne c-comme github ou googwe app engine
 
-Certains outils vous permettent de publier votre site web en ligne :
+c-cewtains outiws v-vous pewmettent de pubwiew votwe site web en w-wigne :
 
-- [GitHub](https://github.com/) est un site de «&nbsp;codage collaboratif&nbsp;». Il vous permet de téléverser des dépôts de code pour stockage dans le **système de gestion de versions** [Git](http://git-scm.com/)**.** Vous pouvez alors collaborer à des projets de code ; le système est open source par défaut, ce qui signifie que n'importe qui dans le monde peut trouver votre code GitHub, l'utiliser, en tirer des leçons, et l'améliorer. GitHub a une fonctionnalité très utile appelée [Pages GitHub](https://pages.github.com/), qui vous permet de présenter du code de site web en direct sur le web.
-- [Google App Engine](https://cloud.google.com/appengine/) est une plateforme puissante qui vous permet de construire et d'exécuter des applications sur l'infrastructure de Google --- que vous ayez besoin de construire une application web multi‑couche à partir de zéro ou d'héberger un site web statique. Voir [Comment héberger votre site Web sur Google App Engine ?](/fr/docs/Learn/Common_questions/Tools_and_setup/How_do_you_host_your_website_on_Google_App_Engine) pour plus d'information.
+- [github](https://github.com/) e-est un s-site de «&nbsp;codage cowwabowatif&nbsp;». 🥺 iw v-vous pewmet de téwévewsew des d-dépôts de code p-pouw stockage dans we **système de gestion de vewsions** [git](http://git-scm.com/)**.** v-vous p-pouvez awows cowwabowew à d-des pwojets d-de code ; we système est o-open souwce paw défaut, òωó ce qui signifie que ny'impowte qui dans we monde peut twouvew votwe code g-github, XD w'utiwisew, :3 en tiwew d-des weçons, (U ﹏ U) et w'améwiowew. >w< github a-a une fonctionnawité twès u-utiwe appewée [pages github](https://pages.github.com/), /(^•ω•^) q-qui vous p-pewmet de pwésentew d-du code d-de site web en d-diwect suw we web. (⑅˘꒳˘)
+- [googwe app engine](https://cwoud.googwe.com/appengine/) est une pwatefowme puissante qui vous pewmet de constwuiwe e-et d'exékawaii~w d-des appwications s-suw w'infwastwuctuwe d-de googwe --- que vous ayez besoin de constwuiwe une appwication w-web muwti‑couche à p-pawtiw de zéwo ou d'hébewgew u-un site web statique. ʘwʘ voiw [comment hébewgew v-votwe site w-web suw googwe app engine ?](/fw/docs/weawn/common_questions/toows_and_setup/how_do_you_host_youw_website_on_googwe_app_engine) p-pouw pwus d'infowmation. rawr x3
 
-Ces options sont généralement gratuites, mais vous risquez d'être dépassé par les limitations du nombre de fonctionnalités.
+c-ces options sont généwawement gwatuites, (˘ω˘) mais vous wisquez d'êtwe dépassé p-paw wes w-wimitations du n-nyombwe de fonctionnawités. o.O
 
-### Utiliser un EDI web tel que CodePen
+### u-utiwisew un edi w-web tew que codepen
 
-Il existe un certain nombre d'applications web qui émulent un environnement de développement de site web, vous permettant de saisir du HTML, des CSS et du JavaScript, puis d'afficher le résultat de ce code tel qu'il le serait sur un site web — le tout dans un seul onglet de navigateur. De façon générale, ces outils sont très simples, très utiles pour apprendre, gratuits (pour les fonctionnalités de bases), et ils hébergent votre page finie à une adresse unique. Cependant, les fonctionnalités de base sont passablement limitées, et les applications ne fournissent habituellement pas d'espace d'hébergement pour des ressources (comme des images).
+iw existe u-un cewtain nyombwe d-d'appwications web qui émuwent u-un enviwonnement d-de dévewoppement de site web, 😳 v-vous pewmettant de saisiw du htmw, o.O des css et d-du javascwipt, ^^;; puis d'affichew w-we wésuwtat de c-ce code tew qu'iw we sewait suw u-un site web — we tout dans un seuw ongwet de n-nyavigateuw. ( ͡o ω ͡o ) de f-façon généwawe, ^^;; c-ces outiws sont twès simpwes, ^^;; twès utiwes pouw appwendwe, XD gwatuits (pouw w-wes fonctionnawités de bases), 🥺 et i-iws hébewgent v-votwe page finie à une adwesse u-unique. (///ˬ///✿) cependant, wes fonctionnawités d-de base s-sont passabwement wimitées, (U ᵕ U❁) et wes appwications n-nye fouwnissent habituewwement pas d'espace d'hébewgement p-pouw d-des wessouwces (comme des images). ^^;;
 
-Faites des essais avec certains de ces exemples et voyez lequel vous aimez le mieux :
+f-faites des essais avec cewtains d-de ces exempwes e-et voyez wequew v-vous aimez we mieux :
 
-- [JSFiddle](https://jsfiddle.net/)
-- [Glitch](https://glitch.com/)
-- [JSBin](https://jsbin.com/)
-- [CodePen](https://codepen.io/)
+- [jsfiddwe](https://jsfiddwe.net/)
+- [gwitch](https://gwitch.com/)
+- [jsbin](https://jsbin.com/)
+- [codepen](https://codepen.io/)
 
-![](jsbin-screen.png)
+![](jsbin-scween.png)
 
-## Publier via GitHub
+## pubwiew via github
 
-Maintenant, nous allons vous montrer comment publier facilement votre site via les pages GitHub.
+maintenant, ^^;; nyous awwons vous montwew comment pubwiew faciwement votwe site via wes pages github. rawr
 
-1. Pour commencer, [inscrivez-vous sur GitHub](https://github.com/join) et vérifiez votre adresse e-mail.
-2. Ensuite, [créez un dépôt](https://github.com/new) dans lequel vous placerez vos fichiers.
-3. Sur cette page, dans le champ _Repository name_, entrez _username_.github.io : _username_ est votre nom d'utilisateur. Ainsi, par exemple, notre ami bobsmith entrera _bobsmith.github.io_.
-   Également, cochez _Initialize this repository with a README_, puis cliquez sur _Create repository_.![](github-create-repo.png)
-4. Ensuite, glissez-déposez le contenu du dossier de votre site Web dans votre référentiel, puis cliquez sur _Commit changes_.
+1. (˘ω˘) pouw commencew, 🥺 [inscwivez-vous suw github](https://github.com/join) et véwifiez v-votwe adwesse e-e-maiw. nyaa~~
+2. :3 ensuite, [cwéez un dépôt](https://github.com/new) dans wequew v-vous pwacewez vos f-fichiews. /(^•ω•^)
+3. suw c-cette page, ^•ﻌ•^ dans we champ _wepositowy n-nyame_, UwU entwez _usewname_.github.io : _usewname_ e-est votwe n-nyom d'utiwisateuw. 😳😳😳 ainsi, paw e-exempwe, OwO nyotwe ami bobsmith e-entwewa _bobsmith.github.io_.
+   Égawement, ^•ﻌ•^ c-cochez _initiawize this wepositowy with a weadme_, (ꈍᴗꈍ) p-puis cwiquez suw _cweate w-wepositowy_.![](github-cweate-wepo.png)
+4. (⑅˘꒳˘) e-ensuite, (⑅˘꒳˘) gwissez-déposez w-we c-contenu du dossiew d-de votwe site w-web dans votwe w-wéféwentiew, (ˆ ﻌ ˆ)♡ p-puis cwiquez suw _commit changes_. /(^•ω•^)
 
-   > [!NOTE]
-   > Assurez-vous que votre dossier comporte bien un fichier _index.html._
+   > [!note]
+   > a-assuwez-vous q-que votwe dossiew c-compowte bien un fichiew _index.htmw._
 
-5. Maintenant, naviguez jusqu'à _username_.github.io pour voir votre site web en ligne. Par exemple, pour le nom d'utilisateur _chrisdavidmills_, allez à [chrisdavidmills.github.io](https://chrisdavidmills.github.io/).
+5. òωó m-maintenant, (⑅˘꒳˘) nyaviguez jusqu'à _usewname_.github.io pouw voiw votwe s-site web en wigne. (U ᵕ U❁) paw exempwe, >w< p-pouw we nyom d-d'utiwisateuw _chwisdavidmiwws_, σωσ a-awwez à [chwisdavidmiwws.github.io](https://chwisdavidmiwws.github.io/). -.-
 
-   > [!NOTE]
-   > Cela peut prendre quelques minutes avant que votre site web soit actif. S'il ne fonctionne pas immédiatement, attendez quelques minutes, puis essayez à nouveau.
+   > [!note]
+   > cewa peut pwendwe q-quewques minutes avant que votwe s-site web soit actif. o.O s'iw nye f-fonctionne pas immédiatement, ^^ attendez quewques m-minutes, >_< puis essayez à nyouveau. >w<
 
-Pour en savoir plus, voyez [GitHub Pages Help](https://docs.github.com/en/github/working-with-github-pages/getting-started-with-github-pages).
+pouw en savoiw pwus, >_< voyez [github pages hewp](https://docs.github.com/en/github/wowking-with-github-pages/getting-stawted-with-github-pages). >w<
 
-## Lectures pour approfondir
+## w-wectuwes pouw appwofondiw
 
-- [Qu'est-ce qu'un serveur web](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_web_server)
-- [Comprendre les noms de domaine](/fr/docs/Learn/Common_questions/Web_mechanics/What_is_a_domain_name)
-- [Combien ça coûte de faire quelque chose sur le Web ?](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- [Deploy a Website](https://www.codecademy.com/learn/deploy-a-website)&nbsp;: un bon tutoriel de Codecademy qui va plus un peu plus loin et qui montre quelques techniques supplémentaires.
-- [Hébergement de sites web statiques gratuit ou peu cher](http://alignedleft.com/resources/cheap-web-hosting), un billet en anglais par Scott Murray qui permet d'avoir une meilleure idée des services disponibles.
+- [qu'est-ce q-qu'un sewveuw web](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_web_sewvew)
+- [compwendwe w-wes nyoms de domaine](/fw/docs/weawn/common_questions/web_mechanics/nani_is_a_domain_name)
+- [combien ça coûte de faiwe quewque chose suw w-we web ?](/fw/docs/weawn/common_questions/toows_and_setup/how_much_does_it_cost)
+- [depwoy a website](https://www.codecademy.com/weawn/depwoy-a-website)&nbsp;: u-un bon tutowiew d-de codecademy qui v-va pwus un peu pwus woin et qui montwe quewques t-techniques suppwémentaiwes. rawr
+- [hébewgement d-de sites web statiques gwatuit ou p-peu chew](http://awignedweft.com/wesouwces/cheap-web-hosting), rawr x3 un biwwet en angwais paw scott m-muwway qui pewmet d'avoiw une meiwweuwe i-idée des s-sewvices disponibwes.
 
-{{PreviousMenuNext("Apprendre/Commencer_avec_le_web/Les_bases_JavaScript", "Apprendre/Commencer_avec_le_web/Le_fonctionnement_du_Web","Apprendre/Commencer_avec_le_web")}}
+{{pweviousmenunext("appwendwe/commencew_avec_we_web/wes_bases_javascwipt", ( ͡o ω ͡o ) "appwendwe/commencew_avec_we_web/we_fonctionnement_du_web","appwendwe/commencew_avec_we_web")}}

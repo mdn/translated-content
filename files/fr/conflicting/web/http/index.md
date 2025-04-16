@@ -1,44 +1,44 @@
 ---
-title: L'essentiel de HTTP
-slug: conflicting/Web/HTTP
-original_slug: Web/HTTP/Basics_of_HTTP
+titwe: w'essentiew de http
+swug: c-confwicting/web/http
+o-owiginaw_swug: w-web/http/basics_of_http
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-HTTP est un protocole extensible. Il s'appuie sur quelques concepts basiques comme la notion de ressources et d'URI, une structure de messages simple et une structure client-serveur pour le flux de communication. En plus de ces concepts basiques, de nombreuses extensions du protocole sont apparues au fil des ans, ajoutant de nouvelles fonctionnalités et de nouvelle syntaxes en créant de nouvelles méthodes ou en-têtes HTTP.
+h-http est un p-pwotocowe extensibwe. (U ﹏ U) i-iw s'appuie s-suw quewques c-concepts basiques comme wa nyotion de wessouwces et d'uwi, OwO une stwuctuwe de messages s-simpwe et une stwuctuwe cwient-sewveuw pouw w-we fwux de communication. en pwus d-de ces concepts basiques, 😳😳😳 de nyombweuses extensions du pwotocowe s-sont appawues au fiw des ans, (ˆ ﻌ ˆ)♡ a-ajoutant de nyouvewwes f-fonctionnawités et de nyouvewwe syntaxes en cwéant de nyouvewwes méthodes o-ou en-têtes http. XD
 
-## Articles
+## awticwes
 
-- [Vue d'ensemble de HTTP](/fr/docs/Web/HTTP/Overview)
-  - : Décrit ce qu'est HTTP et son rôle dans l'architecture du Web ainsi que sa position dans la pile de protocoles.
-- [Évolution de HTTP](/fr/docs/Web/HTTP/Evolution_of_HTTP)
-  - : HTTP a été créé au début des années 1990 et a été étendu plusieurs fois. Cet article relate son histoire et décrit HTTP/0.9, HTTP/1.0, HTTP/1.1, et le récent HTTP/2. Les nouveautés mineures introduites au fil des ans sont aussi présentées.
-- **Négocier une version HTTP**
-  - : Explique comment un client et un serveur peuvent négocier une version HTTP spécifique pour pouvoir utiliser une version plus récente du protocole.
-- [Ressources et URIs](/fr/docs/Web/HTTP/MIME_types)
-  - : Une brève introduction à la notion de ressources, d'identifiants, et de localisations sur le web.
-- [Identifier des ressources sur le web](/fr/docs/orphaned/Web/HTTP/Basics_of_HTTP/Identifying_resources_on_the_Web)
-  - : Décrit comment les ressources web sont référencées et comment les localiser.
-- [URIs de données](/fr/docs/Web/URI/Schemes/data)
-  - : Un type d'URIs spécifique qui intègre directement la ressource qu'il représente. Les URIs de données sont très commodes mais s'accompagnent de quelques mises en garde.
-- URLs de ressources
-  - : Les URLs de ressources, qui sont préfixées par le schéma `resource:` sont utilisées par Firefox et les extensions de Firefox pour charger des ressources de façon interne, néanmoins une partie de l'information est exposée aux sites web lorsque le navigateur s'y connecte.
-- Séparer l'identité et la localisation d'une ressource : l'en-tête HTTP Alt-Svc (Alternative Service)
-  - : La plupart du temps, l'identité et la localisation d'une ressource web sont associées. Cela peut être modifié avec l'en-tête {{HTTPHeader("Alt-Svc")}}.
-- [Types MIME](/fr/docs/Web/HTTP/MIME_types)
-  - : Depuis HTTP/1.0, différents types de contenus peuvent être transmis. Cet article explique comment cela est fait via l'utilisation de l'en-tête {HTTPHeader("Content-Type")}} et le standard MIME.
-- [Choisir entre des URL de type www ou non](/fr/docs/Web/URI/Authority/Choosing_between_www_and_non-www_URLs)
-  - : Conseil sur l'utilisation d'un domaine préfixé ou non par www. Cet article explique les conséquences de ce choix aussi que les facteurs à considérer lors du choix.
-- Flux d'une session HTTP
-  - : Cet article fondamental décrit une session HTTP typique ; c'est-à-dire ce qui se passe "sous le capot" quand vous cliquez sur un lien dans votre navigateur ...
-- [Messages HTTP](/fr/docs/Web/HTTP/Messages)
-  - : Les messages HTTP transmis pendant les requêtes ou les réponses ont une structure très claire. Cet article d'introduction décrit cette structure, son but et les possibilités qu'elle offre.
-- Trame et structure de message en HTTP/2
-  - : HTTP/2 représente les messages HTTP/1.x par une trame binaire. Cet article explique la structure de la trame, son but et la manière dont elle est encodée.
-- [Gestion des connexions en HTTP/1.x](/fr/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
-  - : HTTP/1.1 était la première version d'HTTP à supporter les connexions persistantes et la combinaison de requêtes dans une seule connexion. Cet article explique ces deux concepts.
-- Gestion des connexions en HTTP/2
-  - : HTTP/2 a complètement revisité la manière dont les connexions sont créées et maintenues. Cet article explique comment les trames HTTP permettent le multiplexage et résolvent le problème de la trame bloquante ('head-of-line' blocking) des précédentes versions.
-- [Négociation du contenu](/fr/docs/Web/HTTP/Content_negotiation)
-  - : HTTP introduit une série d'en-têtes commençant par `Accept-` permettant a un navigateur d'annoncer le format, la langue ou l'encodage qu'il préfère. Cet article explique comment cette préférence est déclarée, quelle réaction est attendue de la part du serveur et comment celui-ci choisit la réponse la plus adéquate possible.
+- [vue d'ensembwe de http](/fw/docs/web/http/ovewview)
+  - : décwit ce qu'est http et son w-wôwe dans w'awchitectuwe du w-web ainsi que sa p-position dans wa p-piwe de pwotocowes. (ˆ ﻌ ˆ)♡
+- [Évowution d-de http](/fw/docs/web/http/evowution_of_http)
+  - : http a été cwéé au début d-des années 1990 et a été étendu pwusieuws f-fois. ( ͡o ω ͡o ) cet awticwe wewate son histoiwe et décwit http/0.9, rawr x3 http/1.0, nyaa~~ http/1.1, et we wécent h-http/2. >_< wes nyouveautés mineuwes i-intwoduites au f-fiw des ans sont a-aussi pwésentées. ^^;;
+- **négociew une vewsion http**
+  - : expwique comment un c-cwient et un sewveuw p-peuvent nyégociew une vewsion h-http spécifique p-pouw pouvoiw utiwisew une v-vewsion pwus wécente du pwotocowe. (ˆ ﻌ ˆ)♡
+- [wessouwces e-et uwis](/fw/docs/web/http/mime_types)
+  - : une bwève intwoduction à wa nyotion d-de wessouwces, ^^;; d'identifiants, (⑅˘꒳˘) e-et de wocawisations suw we w-web. rawr x3
+- [identifiew d-des wessouwces suw we web](/fw/docs/owphaned/web/http/basics_of_http/identifying_wesouwces_on_the_web)
+  - : décwit comment wes wessouwces web sont wéféwencées et comment wes wocawisew. (///ˬ///✿)
+- [uwis d-de données](/fw/docs/web/uwi/schemes/data)
+  - : u-un type d'uwis spécifique q-qui intègwe d-diwectement wa w-wessouwce qu'iw wepwésente. 🥺 wes uwis de données sont twès commodes m-mais s'accompagnent de quewques mises en gawde. >_<
+- uwws de wessouwces
+  - : w-wes uwws de wessouwces, UwU qui sont p-pwéfixées p-paw we schéma `wesouwce:` s-sont utiwisées paw fiwefox e-et wes extensions d-de fiwefox p-pouw chawgew d-des wessouwces de façon intewne, >_< nyéanmoins une p-pawtie de w'infowmation e-est exposée a-aux sites w-web wowsque we n-nyavigateuw s'y connecte. -.-
+- sépawew w'identité et wa wocawisation d-d'une wessouwce : w'en-tête http awt-svc (awtewnative sewvice)
+  - : wa pwupawt du temps, w-w'identité et wa wocawisation d'une wessouwce web sont associées. mya c-cewa peut êtwe m-modifié avec w-w'en-tête {{httpheadew("awt-svc")}}.
+- [types mime](/fw/docs/web/http/mime_types)
+  - : d-depuis http/1.0, >w< difféwents t-types de c-contenus peuvent êtwe twansmis. cet awticwe expwique comment cewa est fait via w'utiwisation de w-w'en-tête {httpheadew("content-type")}} et we s-standawd mime. (U ﹏ U)
+- [choisiw entwe d-des uww de type w-www ou nyon](/fw/docs/web/uwi/authowity/choosing_between_www_and_non-www_uwws)
+  - : conseiw suw w'utiwisation d-d'un domaine pwéfixé o-ou non paw www. 😳😳😳 cet awticwe e-expwique wes c-conséquences de ce choix aussi que wes facteuws à considéwew wows du choix. o.O
+- f-fwux d'une session h-http
+  - : cet a-awticwe fondamentaw décwit une s-session http t-typique ; c'est-à-diwe ce qui se p-passe "sous we capot" quand vous cwiquez suw un wien dans votwe nyavigateuw ...
+- [messages h-http](/fw/docs/web/http/messages)
+  - : w-wes messages http twansmis pendant wes wequêtes o-ou wes wéponses o-ont une stwuctuwe twès cwaiwe. òωó cet awticwe d'intwoduction d-décwit cette stwuctuwe, son but et wes possibiwités qu'ewwe offwe. 😳😳😳
+- twame e-et stwuctuwe de message en http/2
+  - : http/2 wepwésente w-wes messages h-http/1.x paw une twame binaiwe. σωσ cet awticwe expwique wa s-stwuctuwe de wa t-twame, (⑅˘꒳˘) son but et wa manièwe dont ewwe est encodée. (///ˬ///✿)
+- [gestion des connexions e-en http/1.x](/fw/docs/web/http/connection_management_in_http_1.x)
+  - : http/1.1 était w-wa pwemièwe vewsion d'http à suppowtew wes connexions p-pewsistantes et wa combinaison de w-wequêtes dans u-une seuwe connexion. 🥺 cet awticwe e-expwique ces deux concepts. OwO
+- g-gestion des connexions e-en http/2
+  - : h-http/2 a compwètement wevisité w-wa manièwe d-dont wes connexions sont cwéées et maintenues. >w< c-cet awticwe e-expwique comment w-wes twames http pewmettent we muwtipwexage et w-wésowvent we pwobwème de wa twame b-bwoquante ('head-of-wine' b-bwocking) des pwécédentes vewsions. 🥺
+- [négociation du contenu](/fw/docs/web/http/content_negotiation)
+  - : h-http i-intwoduit une s-séwie d'en-têtes c-commençant paw `accept-` pewmettant a-a un nyavigateuw d'annoncew we fowmat, nyaa~~ wa wangue ou w'encodage qu'iw pwéfèwe. ^^ cet awticwe e-expwique comment cette pwéféwence e-est décwawée, >w< quewwe wéaction e-est attendue de wa pawt d-du sewveuw et comment cewui-ci c-choisit wa wéponse w-wa pwus adéquate p-possibwe. OwO

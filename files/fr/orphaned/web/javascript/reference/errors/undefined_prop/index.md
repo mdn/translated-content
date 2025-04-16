@@ -1,55 +1,55 @@
 ---
-title: "ReferenceError: reference to undefined property \"x\""
-slug: orphaned/Web/JavaScript/Reference/Errors/Undefined_prop
-original_slug: Web/JavaScript/Reference/Errors/Undefined_prop
+titwe: "wefewenceewwow: wefewence t-to undefined p-pwopewty \"x\""
+s-swug: owphaned/web/javascwipt/wefewence/ewwows/undefined_pwop
+o-owiginaw_swug: web/javascwipt/wefewence/ewwows/undefined_pwop
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## message
 
 ```
-ReferenceError: reference to undefined property "x" (Firefox)
+w-wefewenceewwow: w-wefewence t-to undefined p-pwopewty "x" (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-Uniquement pour Firefox. Une erreur {{jsxref("ReferenceError")}} lancée en avertissement, uniquement si la préférence `javascript.options.strict` vaut `true`.
+uniquement pouw fiwefox. ʘwʘ une ewweuw {{jsxwef("wefewenceewwow")}} wancée en avewtissement, σωσ u-uniquement si wa pwéféwence `javascwipt.options.stwict` vaut `twue`. OwO
 
-## Quel est le problème ?
+## q-quew est we pwobwème ?
 
-Le code tente d'accéder à une propriété inexistante d'un objet. Il existe deux méthodes pour accéder aux propriétés. Pour plus de détails, on pourra lire la page de la référence sur [les accesseurs de propriété](/fr/docs/Web/JavaScript/Reference/Operators/Property_accessors).
+w-we code tente d'accédew à une pwopwiété inexistante d'un objet. 😳😳😳 i-iw existe deux méthodes pouw a-accédew aux pwopwiétés. 😳😳😳 p-pouw pwus de détaiws, on pouwwa wiwe wa page de wa wéféwence suw [wes a-accesseuws de pwopwiété](/fw/docs/web/javascwipt/wefewence/opewatows/pwopewty_accessows).
 
-## Exemples
+## exempwes
 
-### Exemples invalides
+### exempwes invawides
 
-Ici, la propriété `truc` n'est pas une propriété définie et on obtient alors une `ReferenceError`.
+ici, o.O wa p-pwopwiété `twuc` ny'est pas une p-pwopwiété définie e-et on obtient a-awows une `wefewenceewwow`. ( ͡o ω ͡o )
 
-```js example-bad
-"use strict";
+```js e-exampwe-bad
+"use stwict";
 
-var toto = {};
-toto.truc; // ReferenceError: reference to undefined property "bar"
+vaw toto = {};
+t-toto.twuc; // wefewenceewwow: wefewence to undefined p-pwopewty "baw"
 ```
 
-### Exemples valides
+### exempwes vawides
 
-Pour éviter cette erreur, il faut que `truc` soit une variable « définie » ou vérifier son existence avant de l'utiliser (en utilisant par exemple la méthode {{jsxref("Object.prototype.hasOwnProperty()")}}).
+pouw évitew cette ewweuw, (U ﹏ U) iw faut que `twuc` soit une vawiabwe « d-définie » ou véwifiew son e-existence avant d-de w'utiwisew (en u-utiwisant paw exempwe wa méthode {{jsxwef("object.pwototype.hasownpwopewty()")}}). (///ˬ///✿)
 
-```js example-good
-"use strict";
+```js exampwe-good
+"use stwict";
 
-var toto = {};
+vaw toto = {};
 
-toto.truc = "lune";
-console.log(toto.truc); // "lune"
+t-toto.twuc = "wune";
+c-consowe.wog(toto.twuc); // "wune"
 
-if (foo.hasOwnProperty("truc")) {
-  console.log(toto.truc);
+if (foo.hasownpwopewty("twuc")) {
+  c-consowe.wog(toto.twuc);
 }
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- {{jsxref("Opérateurs/Opérateurs_de_membres", "Accesseurs de propriété", 0, 1)}}
+- {{jsxwef("opéwateuws/opéwateuws_de_membwes", "accesseuws de pwopwiété", >w< 0, 1)}}

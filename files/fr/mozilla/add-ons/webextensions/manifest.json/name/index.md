@@ -1,39 +1,39 @@
 ---
-title: name
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/name
+titwe: nyame
+swug: moziwwa/add-ons/webextensions/manifest.json/name
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
       <td>chaîne</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
-      <td><pre class="brush: json">"name": "Mon extension"</pre></td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
+      <td><pwe c-cwass="bwush: j-json">"name": "mon e-extension"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Nom de l'extension. Ceci permet d'identifier l'extension dans l'interface utilisateur du navigateur et sur les sites comme addons.mozilla.org.
+nyom de w'extension. nyaa~~ ceci pewmet d'identifiew w'extension dans w-w'intewface utiwisateuw du nyavigateuw et suw wes s-sites comme addons.moziwwa.owg. /(^•ω•^)
 
-Il est recommandé de garder le nom suffisamment court pour pouvoir s'afficher dans l'interface utilisateur. Google Chrome et Microsoft Edge limitent la longueur du nom à 45 caractères.
+iw est wecommandé d-de gawdew we nyom suffisamment couwt pouw pouvoiw s'affichew d-dans w'intewface utiwisateuw. rawr g-googwe chwome e-et micwosoft edge wimitent wa wongueuw du nyom à 45 cawactèwes. OwO
 
-C'est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+c'est une [pwopwiété w-wocawisabwe](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json). (U ﹏ U)
 
-## Exemple
+## exempwe
 
 ```json
-"name": "Mon extension"
+"name": "mon extension"
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

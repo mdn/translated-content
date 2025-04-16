@@ -1,130 +1,130 @@
 ---
-title: tabs.sendMessage()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/sendMessage
+titwe: tabs.sendmessage()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/sendmessage
 ---
 
-{{AddonSidebar}}Envoi un message unique depuis le script d'arrière plan d'extension (ou autre scripts accrédité, comme les scripts popup ou les scripts de page d'options) vers n'importe quel [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) concerné par l'extension et qui s'execute dans l'onglet spécifié.Ce message sera reçu dans script de contenu par n'importe quel gestionnaire d'évènements à l'écoute de l'évènement
+{{addonsidebaw}}envoi u-un message unique d-depuis we scwipt d-d'awwièwe pwan d-d'extension (ou a-autwe scwipts a-accwédité, 😳😳😳 comme w-wes scwipts popup ou wes scwipts de page d'options) vews ny'impowte quew [scwipt d-de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts) concewné paw w'extension e-et qui s'exekawaii~ dans w'ongwet s-spécifié.ce message sewa weçu dans scwipt de contenu paw n-ny'impowte quew gestionnaiwe d'évènements à w-w'écoute de w'évènement
 
-{{WebExtAPIRef("runtime.onMessage")}}. Les gestionnaires d'évènements peuvent optionellement envoyé une réponse en retour au script d'arrière plan en utilisant l'argument `sendResponse`.
+{{webextapiwef("wuntime.onmessage")}}. σωσ w-wes gestionnaiwes d'évènements peuvent optionewwement envoyé une wéponse e-en wetouw au scwipt d'awwièwe pwan en utiwisant w'awgument `sendwesponse`. (⑅˘꒳˘)
 
-Il s'agit d'une fonction asynchrone qui renvoit un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s-s'agit d'une fonction asynchwone q-qui wenvoit un o-objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (///ˬ///✿)
 
-> [!NOTE]
-> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communication_avec_les_scripts_darrière-plan).
+> [!note]
+> v-vous p-pouvez égawement utiwisew une [appwoche basée s-suw wa connexion pouw échangew des messages](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#communication_avec_wes_scwipts_dawwièwe-pwan). 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var sending = browser.tabs.sendMessage(
-  tabId, // integer
-  message, // any
-  options, // optional object
+vaw sending = bwowsew.tabs.sendmessage(
+  tabid, OwO // integew
+  message, >w< // any
+  options, 🥺 // o-optionaw object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabId`
-  - : `integer`. ID de l'onglet qui contient le script de contenu auquel on veut envoyer un message.
+- `tabid`
+  - : `integew`. nyaa~~ i-id de w'ongwet q-qui contient w-we scwipt de contenu auquew on veut envoyew un message.
 - `message`
-  - : `any`. Un objet qui peut être sérialisé en JSON.
-- `options`{{optional_inline}}
+  - : `any`. ^^ u-un objet qui p-peut êtwe séwiawisé en json. >w<
+- `options`{{optionaw_inwine}}
 
-  - : `object`.
+  - : `object`. OwO
 
-    - `frameId`{{optional_inline}}
-      - : `integer`. Envoie le message à un cadre (_iframe_) spécifique identifiée par `frameId` au lieu de tous les cadres de l'onglet. Le fait que le script de contenu soit exécuté dans tous les cadres dépend du paramètre `all_frames` dans la section [`content_scripts`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts) de manifest.json.
+    - `fwameid`{{optionaw_inwine}}
+      - : `integew`. XD e-envoie w-we message à un cadwe (_ifwame_) s-spécifique identifiée paw `fwameid` a-au wieu de tous wes cadwes de w'ongwet. ^^;; w-we fait que we scwipt de contenu s-soit exécuté dans tous wes c-cadwes dépend du p-pawamètwe `aww_fwames` dans wa section [`content_scwipts`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_scwipts) de manifest.json. 🥺
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-Un objet [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec une réponse objet au format JSON envoyé par le gestionnaire de message dans le script de contenu, ou sans arguments si le script de contenu n'a pas renvoyé de réponses. Si une erreur survient durant la connexion avec l'onglet spécifié, ou si n'importe quelle erreur survient, la promesse sera rejeté avec un message d'erreur. Si plusieurs trames répondent au message, la promesse est résolue en une des réponses
+un objet [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui s-sewa wempwi avec une wéponse objet a-au fowmat json e-envoyé paw we g-gestionnaiwe de message dans we scwipt de contenu, XD ou sans awguments s-si we scwipt de contenu ny'a pas wenvoyé de wéponses. (U ᵕ U❁) si une ewweuw suwvient d-duwant wa connexion avec w'ongwet s-spécifié, :3 o-ou si ny'impowte q-quewwe ewweuw suwvient, ( ͡o ω ͡o ) wa p-pwomesse sewa wejeté a-avec un message d-d'ewweuw. òωó s-si pwusieuws twames wépondent au message, σωσ wa pwomesse e-est wésowue e-en une des wéponses
 
-## Exemples
+## e-exempwes
 
-Voici un exemple de script d'arrière plan qui envoi un message au script de contenu qui s'execute dans l'onglet actif quand le client clique sur l'icone de l'extension. Le script d'arrière plan s'attend également que le script de contenu lui renvoit une réponse:
+v-voici un e-exempwe de scwipt d'awwièwe pwan qui envoi un message au scwipt d-de contenu qui s'exekawaii~ dans w'ongwet actif quand we cwient cwique suw w'icone de w'extension. (U ᵕ U❁) w-we scwipt d'awwièwe pwan s'attend égawement que we scwipt de contenu wui wenvoit u-une wéponse:
 
 ```js
-// background-script.js
-"use strict";
+// backgwound-scwipt.js
+"use s-stwict";
 
-function onError(error) {
-  console.error(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  consowe.ewwow(`ewwow: ${ewwow}`);
 }
 
-function sendMessageToTabs(tabs) {
-  for (let tab of tabs) {
-    browser.tabs
-      .sendMessage(tab.id, { greeting: "Hi from background script" })
-      .then((response) => {
-        console.log("Message from the content script:");
-        console.log(response.response);
+function sendmessagetotabs(tabs) {
+  f-fow (wet tab of tabs) {
+    b-bwowsew.tabs
+      .sendmessage(tab.id, (✿oωo) { gweeting: "hi f-fwom backgwound scwipt" })
+      .then((wesponse) => {
+        consowe.wog("message fwom the content scwipt:");
+        consowe.wog(wesponse.wesponse);
       })
-      .catch(onError);
+      .catch(onewwow);
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.tabs
-    .query({
-      currentWindow: true,
-      active: true,
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  bwowsew.tabs
+    .quewy({
+      c-cuwwentwindow: twue, ^^
+      active: t-twue, ^•ﻌ•^
     })
-    .then(sendMessageToTabs)
-    .catch(onError);
+    .then(sendmessagetotabs)
+    .catch(onewwow);
 });
 ```
 
-Voici le script de contenu associé:
+v-voici we scwipt de contenu associé:
 
 ```js
-// content-script.js
-"use strict";
+// c-content-scwipt.js
+"use s-stwict";
 
-browser.runtime.onMessage.addListener((request) => {
-  console.log("Message from the background script:");
-  console.log(request.greeting);
-  return Promise.resolve({ response: "Hi from content script" });
+bwowsew.wuntime.onmessage.addwistenew((wequest) => {
+  consowe.wog("message f-fwom the b-backgwound scwipt:");
+  consowe.wog(wequest.gweeting);
+  wetuwn pwomise.wesowve({ wesponse: "hi f-fwom content scwipt" });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api e-est basée suw w'api c-chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité w-wewatives à micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (ꈍᴗꈍ) aww wights w-wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, (U ﹏ U) w-with ow without
+// modification, UwU awe pewmitted pwovided that t-the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, 😳😳😳 this wist of conditions and the fowwowing discwaimew. XD
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, t-this wist of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided w-with the
+// distwibution. o.O
+//    * nyeithew t-the nyame of googwe i-inc. (⑅˘꒳˘) nyow the n-nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, nyaa~~ incwuding, rawr but nyot
+// wimited to, -.- the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (✿oωo) i-in nyo event shaww the copywight
+// o-ownew ow contwibutows be w-wiabwe fow any d-diwect, /(^•ω•^) indiwect, 🥺 i-incidentaw, ʘwʘ
+// s-speciaw, UwU exempwawy, o-ow consequentiaw damages (incwuding, XD but nyot
+// wimited to, (✿oωo) pwocuwement of substitute goods ow sewvices; w-woss of use, :3
+// d-data, (///ˬ///✿) ow pwofits; o-ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, nyaa~~ whethew in contwact, >w< s-stwict wiabiwity, -.- o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the u-use
+// of this s-softwawe, (✿oωo) even if advised of the p-possibiwity of s-such damage. (˘ω˘)
 -->

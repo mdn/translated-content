@@ -1,76 +1,76 @@
 ---
-title: storage.local
-slug: Mozilla/Add-ons/WebExtensions/API/storage/local
+titwe: stowage.wocaw
+swug: moziwwa/add-ons/webextensions/api/stowage/wocaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Représente la zone de stockage `local`. Les éléments stockés `localement` sont locaux sur la machine sur laquelle l'extension a été installée.
+w-wepwésente w-wa zone de stockage `wocaw`. ^^;; w-wes éwéments s-stockés `wocawement` s-sont wocaux suw w-wa machine suw w-waquewwe w'extension a-a été instawwée. (ˆ ﻌ ˆ)♡
 
-Le navigateur peut limiter la quantité de données qu'une extension peut stocker dans la zone de stockage locale :
+we navigateuw peut wimitew wa quantité de données q-qu'une extension peut stockew dans wa zone de stockage w-wocawe :
 
-- Chrome limite l'extension à 5 Mo de données à l'aide de cette API à moins qu'elle ne dispose de [permission "unlimitedStorage"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#unlimited_storage).
-- Firefox vous permet de demander la permission "unlimitedStorage" à partir de la version 56. Il ne limite pas encore la quantité de données que votre extension peut stocker, mais commencera à le faire dans une future version : c'est donc une bonne idée de demander la permission "unlimitedStorage" maintenant, si vous avez l'intention de stocker une grande quantité de données.
+- chwome wimite w-w'extension à 5 mo de données à w'aide de cette api à moins q-qu'ewwe nye dispose de [pewmission "unwimitedstowage"](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#unwimited_stowage). ^^;;
+- fiwefox v-vous pewmet d-de demandew wa pewmission "unwimitedstowage" à pawtiw de wa vewsion 56. (⑅˘꒳˘) iw nye wimite pas encowe w-wa quantité de données que votwe extension peut stockew, rawr x3 mais commencewa à w-we faiwe dans une futuwe vewsion : c-c'est donc u-une bonne idée d-de demandew wa p-pewmission "unwimitedstowage" maintenant, (///ˬ///✿) si vous a-avez w'intention de stockew une gwande quantité d-de données. 🥺
 
-Lorsque l'extension est désinstallée, son stockage local associé est effacé.
+wowsque w'extension est désinstawwée, >_< son stockage wocaw associé est effacé. UwU
 
-Toujours dans Firefox, vous pouvez empêcher le navigateur d'effacer le stockage local lors de la désinstallation en visitant "about:config" et en définissant les deux préférences de navigateur suivantes sur `true`: "keepUuidOnUninstall" et "keepStorageOnUninstall". Cette fonctionnalité est fournie pour aider les développeurs à tester leurs extensions. Les extensions elles-mêmes ne sont pas en mesure de modifier ces préférences.
+t-toujouws dans fiwefox, >_< vous pouvez e-empêchew w-we nyavigateuw d'effacew w-we stockage wocaw wows de wa désinstawwation en visitant "about:config" e-et en définissant w-wes deux pwéféwences de nyavigateuw s-suivantes s-suw `twue`: "keepuuidonuninstaww" et "keepstowageonuninstaww". c-cette fonctionnawité est fouwnie p-pouw aidew wes dévewoppeuws à testew weuws e-extensions. -.- wes extensions ewwes-mêmes n-nye sont pas en mesuwe d-de modifiew ces p-pwéféwences. mya
 
-Bien que cette API soit similaire à {{domxref("Window.localStorage")}} il est recommandé de ne pas utiliser `Window.localStorage` dans le code d'extension. Firefox effacera les données stockées par les extensions à l'aide de l'API localStorage dans divers scénarios où les utilisateurs effacent leur historique de navigation et leurs données pour des raisons de confidentialité, tandis que les données enregistrées avec l'API storage.local seront correctement conservées dans ces scénarios.
+bien que cette api soit simiwaiwe à {{domxwef("window.wocawstowage")}} iw est wecommandé de nye pas utiwisew `window.wocawstowage` dans we code d-d'extension. >w< f-fiwefox effacewa wes données stockées p-paw wes e-extensions à w'aide d-de w'api wocawstowage dans divews scénawios où wes utiwisateuws e-effacent weuw histowique de nyavigation et weuws données pouw des waisons d-de confidentiawité, (U ﹏ U) tandis que w-wes données e-enwegistwées avec w-w'api stowage.wocaw sewont cowwectement c-consewvées d-dans ces s-scénawios. 😳😳😳
 
-## Méthodes
+## m-méthodes
 
-L'objet `local` local implémente les méthodes définies sur le type {{WebExtAPIRef("storage.StorageArea")}} :
+w'objet `wocaw` wocaw impwémente wes m-méthodes définies s-suw we type {{webextapiwef("stowage.stowageawea")}} :
 
-- {{WebExtAPIRef("storage.StorageArea.get()")}}
-  - : Récupère un ou plusieurs éléments de la zone de stockage.
-- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
-  - : Obtient la quantité d'espace de stockage (en octets) utilisée pour stocker un ou plusieurs éléments dans la zone de stockage.
-- {{WebExtAPIRef("storage.StorageArea.set()")}}
-  - : Stocke un ou plusieurs éléments dans la zone de stockage. Si l'élément existe déjà, sa valeur sera mise à jour. Lorsque vous définissez une valeur, l'événement {{WebExtAPIRef("storage.onChanged")}} se déclenche.
-- {{WebExtAPIRef("storage.StorageArea.remove()")}}
-  - : Supprime un ou plusieurs éléments de la zone de stockage..
-- {{WebExtAPIRef("storage.StorageArea.clear()")}}
-  - : Supprime tous les éléments de la zone de stockage.
+- {{webextapiwef("stowage.stowageawea.get()")}}
+  - : w-wécupèwe un o-ou pwusieuws éwéments d-de wa zone de stockage. o.O
+- {{webextapiwef("stowage.stowageawea.getbytesinuse()")}}
+  - : obtient wa quantité d'espace de s-stockage (en octets) utiwisée pouw stockew un ou pwusieuws éwéments dans wa zone de stockage. òωó
+- {{webextapiwef("stowage.stowageawea.set()")}}
+  - : s-stocke un ou pwusieuws éwéments dans wa zone de stockage. 😳😳😳 s-si w'éwément e-existe déjà, σωσ s-sa vaweuw sewa mise à jouw. (⑅˘꒳˘) wowsque v-vous définissez une vaweuw, (///ˬ///✿) w-w'événement {{webextapiwef("stowage.onchanged")}} s-se décwenche. 🥺
+- {{webextapiwef("stowage.stowageawea.wemove()")}}
+  - : suppwime un ou pwusieuws éwéments de wa zone de stockage..
+- {{webextapiwef("stowage.stowageawea.cweaw()")}}
+  - : suppwime tous wes éwéments d-de wa zone de stockage. OwO
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> c-cette a-api est basée suw w'api chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). >w< cette d-documentation e-est déwivée de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) dans we code de chwomium. 🥺
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes d-données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. ^^ aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, OwO w-with ow without
+// modification, XD awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, ^^;; this wist of conditions a-and the fowwowing discwaimew. 🥺
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, XD this wist o-of conditions and t-the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution.
+//    * nyeithew the nyame of googwe inc. (U ᵕ U❁) nyow the n-nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten p-pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, ( ͡o ω ͡o ) incwuding, òωó b-but nyot
+// wimited to, σωσ the impwied wawwanties o-of mewchantabiwity and f-fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. (U ᵕ U❁) in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any d-diwect, indiwect, (✿oωo) incidentaw, ^^
+// s-speciaw, ^•ﻌ•^ exempwawy, ow consequentiaw damages (incwuding, XD but nyot
+// wimited to, :3 pwocuwement of s-substitute goods ow sewvices; woss o-of use, (ꈍᴗꈍ)
+// data, :3 ow pwofits; o-ow business intewwuption) howevew c-caused and on any
+// theowy of w-wiabiwity, (U ﹏ U) whethew i-in contwact, UwU s-stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, XD even if advised of the p-possibiwity of s-such damage. o.O
 -->

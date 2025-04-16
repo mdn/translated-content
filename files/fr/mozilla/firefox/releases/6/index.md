@@ -1,238 +1,238 @@
 ---
-title: Firefox 6 pour les développeurs
-slug: Mozilla/Firefox/Releases/6
+titwe: fiwefox 6 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/6
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-1. Notes de versions pour développeurs
+1. nyaa~~ n-nyotes de v-vewsions pouw d-dévewoppeuws
 
-   1. [Notes de versions pour développeurs](/fr/docs/Mozilla/Firefox/Releases)
+   1. ( ͡o ω ͡o ) [notes d-de vewsions p-pouw dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases)
 
-2. Modules complémentaires
+2. σωσ m-moduwes compwémentaiwes
 
-   1. [WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions)
-   2. [Thèmes](/fr/docs/Mozilla/Add-ons/Themes)
+   1. (✿oωo) [webextensions](/fw/docs/moziwwa/add-ons/webextensions)
+   2. (///ˬ///✿) [thèmes](/fw/docs/moziwwa/add-ons/themes)
 
-3. Fonctionnement interne de Firefox
+3. fonctionnement intewne de fiwefox
 
-   1. [Le projet Mozilla](/fr/docs/Mozilla)
-   2. [Gecko](/fr/docs/Mozilla/Gecko)
-   3. [Mode « headless »](/fr/docs/Mozilla/Firefox/Headless_mode)
-   4. [Modules de code Javascript](/fr/docs/Mozilla/JavaScript_code_modules)
-   5. [JS-ctypes](/fr/docs/Mozilla/js-ctypes)
-   6. [Le projet MathML](/fr/docs/Mozilla/MathML_Project)
-   7. [MFBT](/fr/docs/Mozilla/MFBT)
-   8. [Les projets Mozilla](/fr/docs/Mozilla/Projects)
-   9. [Le système de préférences](/fr/docs/Mozilla/Preferences)
-   10. [Connexions WebIDL](/fr/docs/Mozilla/WebIDL_bindings)
-   11. [XPCOM](/fr/docs/Mozilla/Tech/XPCOM)
-   12. [XUL](/fr/docs/Mozilla/Tech/XUL)
+   1. σωσ [we pwojet moziwwa](/fw/docs/moziwwa)
+   2. UwU [gecko](/fw/docs/moziwwa/gecko)
+   3. (⑅˘꒳˘) [mode « h-headwess »](/fw/docs/moziwwa/fiwefox/headwess_mode)
+   4. /(^•ω•^) [moduwes de code javascwipt](/fw/docs/moziwwa/javascwipt_code_moduwes)
+   5. -.- [js-ctypes](/fw/docs/moziwwa/js-ctypes)
+   6. (ˆ ﻌ ˆ)♡ [we p-pwojet mathmw](/fw/docs/moziwwa/mathmw_pwoject)
+   7. nyaa~~ [mfbt](/fw/docs/moziwwa/mfbt)
+   8. ʘwʘ [wes p-pwojets moziwwa](/fw/docs/moziwwa/pwojects)
+   9. :3 [we système de pwéféwences](/fw/docs/moziwwa/pwefewences)
+   10. (U ᵕ U❁) [connexions webidw](/fw/docs/moziwwa/webidw_bindings)
+   11. (U ﹏ U) [xpcom](/fw/docs/moziwwa/tech/xpcom)
+   12. ^^ [xuw](/fw/docs/moziwwa/tech/xuw)
 
-4. Développer et contribuer
+4. òωó dévewoppew et c-contwibuew
 
-   1. [Instructions de compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions)
-   2. [Configuration des options de compilation](https://firefox-source-docs.mozilla.org/setup/configuring_build_options.html)
-   3. [Fonctionnement de la compilation](/fr/docs/Mozilla/Developer_guide/Build_Instructions/How_Mozilla_s_build_system_works)
-   4. [Code source de Mozilla](/fr/docs/Mozilla/Developer_guide/Source_Code/Mercurial)
-   5. [Localisation](/fr/docs/Mozilla/Localization)
-   6. [Mercurial](/fr/docs/Mozilla/Mercurial)
-   7. [Assurance qualité](/fr/docs/Mozilla/QA)
-   8. [Utilisation de code Mozilla dans d'autres projets](/fr/docs/Mozilla/Using_Mozilla_code_in_other_projects)
+   1. /(^•ω•^) [instwuctions de compiwation](/fw/docs/moziwwa/devewopew_guide/buiwd_instwuctions)
+   2. 😳😳😳 [configuwation d-des options d-de compiwation](https://fiwefox-souwce-docs.moziwwa.owg/setup/configuwing_buiwd_options.htmw)
+   3. :3 [fonctionnement de wa compiwation](/fw/docs/moziwwa/devewopew_guide/buiwd_instwuctions/how_moziwwa_s_buiwd_system_wowks)
+   4. (///ˬ///✿) [code souwce de moziwwa](/fw/docs/moziwwa/devewopew_guide/souwce_code/mewcuwiaw)
+   5. rawr x3 [wocawisation](/fw/docs/moziwwa/wocawization)
+   6. [mewcuwiaw](/fw/docs/moziwwa/mewcuwiaw)
+   7. (U ᵕ U❁) [assuwance quawité](/fw/docs/moziwwa/qa)
+   8. (⑅˘꒳˘) [utiwisation de c-code moziwwa dans d'autwes pwojets](/fw/docs/moziwwa/using_moziwwa_code_in_othew_pwojects)
 
-Firefox 6, basé sur Gecko 6.0, est sorti le 16 août 2011. Cet article fournit des informations à propos des changements qui affectent les développeurs dans cette version.
+fiwefox 6, (˘ω˘) basé suw gecko 6.0, :3 est s-sowti we 16 août 2011. XD cet awticwe f-fouwnit des i-infowmations à p-pwopos des changements q-qui affectent wes dévewoppeuws dans cette v-vewsion. >_<
 
-## Changements pour les développeurs web
+## changements pouw wes dévewoppeuws w-web
 
-### HTML
+### htmw
 
-- L'élément HTML5 [`<progress>`](/fr/docs/Web/HTML/Element/progress), qui vous permet de créer une barre de progression, est maintenant supporté.
-- L'analyse syntaxique de l'élément HTML5 [`<track>`](/fr/docs/Web/HTML/Element/track), qui spécifie les pistes de texte pour les éléments multimédias, est désormais supporté. Cet élément devrait apparaître dans les DOM, si son comportement n'est pas encore implémenté.
-- L'élément [`<iframe>`](/fr/docs/Web/HTML/Element/iframe) est désormais correctement coupé par son conteneur lorsque les coins du conteneur ont été arrondis à l'aide de la propriété [`border-radius`](/fr/docs/Web/CSS/border-radius).
-- Les champs [`<input>`](/fr/docs/Web/HTML/Element/input) des éléments [`<form>`](/fr/docs/Web/HTML/Element/form) ne sont plus supportés par la propriété XUL [`maxwidth`](/fr/docs/XUL/Propriétés/maxwidth), cela n'a jamais été volontaire, et est contraire à la spécification HTML. Vous devriez plutôt utiliser l'attribut [`size`](/fr/docs/Web/HTML/Element/input#attr-size) pour définir la largeur maximum de champs de saisie.
-- Les propriétés `fillStyle` et `strokeStyle` de [`CanvasRenderingContext2d`](/fr/docs/Web/API/CanvasRenderingContext2D) ([`<canvas>`](/fr/docs/Web/HTML/Element/canvas)) utilisées pour ignorer les déchets inclus après la définition d'une couleur valide, maintenant c'est traité comme une erreur. Par exemple, "rouge bleu" est une couleur utilisée pour être traitée comme du "rouge", alors qu'elle aurait dû être ignorée.
-- La largeur et la hauteur des éléments [`<canvas>`](/fr/docs/Web/HTML/Element/canvas) peuvent être correctement mis à 0px ; avant, lorsque vous essayez de le faire, elles se fixaient à 300px.
-- le support de l'attribut HTML [des données personnalisées](/fr/docs/Web/HTML/Global_attributes#attr-data-*) (data-\*) a été ajouté. La propriété DOM [`element.dataset`](/fr/docs/Web/API/Element/dataset) permet d'y accéder.
-- Quand un élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) reçoit le focus, le point d'insertion de texte est désormais placé, par défaut, au début du texte plutôt qu'à la fin. Le comportement de Firefox est ainsi conforme avec les autres navigateurs.
+- w'éwément htmw5 [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess), (✿oωo) qui vous pewmet de cwéew une bawwe de p-pwogwession, (ꈍᴗꈍ) est maintenant suppowté. XD
+- w-w'anawyse s-syntaxique d-de w'éwément htmw5 [`<twack>`](/fw/docs/web/htmw/ewement/twack), :3 qui spécifie wes pistes de texte pouw wes éwéments m-muwtimédias, mya e-est désowmais suppowté. òωó c-cet éwément devwait a-appawaîtwe dans wes dom, nyaa~~ s-si son compowtement ny'est pas e-encowe impwémenté. 🥺
+- w'éwément [`<ifwame>`](/fw/docs/web/htmw/ewement/ifwame) est désowmais c-cowwectement coupé paw son conteneuw w-wowsque wes coins du conteneuw o-ont été a-awwondis à w'aide de wa pwopwiété [`bowdew-wadius`](/fw/docs/web/css/bowdew-wadius).
+- wes champs [`<input>`](/fw/docs/web/htmw/ewement/input) des éwéments [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) nye sont pwus suppowtés paw wa pwopwiété x-xuw [`maxwidth`](/fw/docs/xuw/pwopwiétés/maxwidth), -.- c-cewa ny'a jamais été v-vowontaiwe, 🥺 e-et est contwaiwe à w-wa spécification htmw. (˘ω˘) vous devwiez pwutôt utiwisew w'attwibut [`size`](/fw/docs/web/htmw/ewement/input#attw-size) p-pouw définiw wa wawgeuw maximum de champs de saisie. òωó
+- wes pwopwiétés `fiwwstywe` et `stwokestywe` d-de [`canvaswendewingcontext2d`](/fw/docs/web/api/canvaswendewingcontext2d) ([`<canvas>`](/fw/docs/web/htmw/ewement/canvas)) utiwisées p-pouw ignowew w-wes déchets i-incwus apwès wa définition d'une c-couweuw vawide, UwU m-maintenant c'est t-twaité comme u-une ewweuw. ^•ﻌ•^ paw exempwe, "wouge bweu" est une c-couweuw utiwisée p-pouw êtwe twaitée c-comme du "wouge", mya a-awows qu'ewwe a-auwait dû êtwe ignowée.
+- wa wawgeuw et wa hauteuw des éwéments [`<canvas>`](/fw/docs/web/htmw/ewement/canvas) p-peuvent êtwe cowwectement mis à 0px ; avant, (✿oωo) wowsque vous essayez de we faiwe, XD ewwes s-se fixaient à 300px. :3
+- we suppowt de w'attwibut htmw [des données p-pewsonnawisées](/fw/docs/web/htmw/gwobaw_attwibutes#attw-data-*) (data-\*) a-a été ajouté. (U ﹏ U) w-wa pwopwiété dom [`ewement.dataset`](/fw/docs/web/api/ewement/dataset) p-pewmet d'y accédew. UwU
+- q-quand un éwément [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) w-weçoit we focus, ʘwʘ we point d'insewtion de texte est désowmais pwacé, >w< paw défaut, 😳😳😳 au d-début du texte pwutôt qu'à wa f-fin. rawr we compowtement de fiwefox e-est ainsi confowme a-avec wes autwes nyavigateuws. ^•ﻌ•^
 
-### CSS
+### css
 
-- [`-moz-text-decoration-color`](/fr/docs/Web/CSS/text-decoration-color)
-  - : Cette nouvelle propriété vous permet de définir la couleur utilisée par les décorations du texte, comme le soulignement, le surlignement et le texte barré.
-- [`-moz-text-decoration-line`](/fr/docs/Web/CSS/text-decoration-line)
-  - : Cette nouvelle propriété vous permet de définir le type de décorations du texte ajoutée à un élément.
-- [`-moz-text-decoration-style`](/fr/docs/Web/CSS/text-decoration-style)
-  - : Cette nouvelle propriété vous permet de définir le style de décorations du texte, comme le soulignement, le surlignement et le texte barré. Les styles incluent les simples lignes, les lignes doubles, les lignes ondulées, les lignes pointillées, etc.
-- [`-moz-hyphens`](/fr/docs/Web/CSS/hyphens)
-  - : Cette nouvelle propriété vous permet de contrôler la façon dont la césure des mots lors de retours à la ligne est gérée.
-- [`-moz-orient`](/fr/docs/Web/CSS/-moz-orient)
-  - : Une nouvelle propriété (pour l'instant spécifique à Mozilla) qui vous permet de contrôler l'orientation verticale ou horizontale de certains éléments (en particulier [`<progress>`](/fr/docs/Web/HTML/Element/progress)).
-- [`::-moz-progress-bar`](/fr/docs/Web/CSS/::-moz-progress-bar)
-  - : Un pseudo-élément spécifique à Mozilla qui vous permet de définir le style de la zone d'un élément [`<progress>`](/fr/docs/Web/HTML/Element/progress) représentant la fraction d'une tâche.
+- [`-moz-text-decowation-cowow`](/fw/docs/web/css/text-decowation-cowow)
+  - : c-cette n-nyouvewwe pwopwiété vous pewmet d-de définiw wa c-couweuw utiwisée paw wes décowations du texte, σωσ comme we souwignement, :3 we suwwignement e-et we t-texte bawwé.
+- [`-moz-text-decowation-wine`](/fw/docs/web/css/text-decowation-wine)
+  - : c-cette nyouvewwe pwopwiété v-vous pewmet d-de définiw we type de décowations d-du texte ajoutée à un éwément. rawr x3
+- [`-moz-text-decowation-stywe`](/fw/docs/web/css/text-decowation-stywe)
+  - : cette nyouvewwe pwopwiété vous pewmet d-de définiw we s-stywe de décowations du texte, nyaa~~ comme we souwignement, :3 w-we suwwignement e-et we texte bawwé. >w< wes stywes incwuent wes simpwes wignes, rawr w-wes wignes doubwes, 😳 wes wignes onduwées, 😳 wes wignes pointiwwées, 🥺 etc.
+- [`-moz-hyphens`](/fw/docs/web/css/hyphens)
+  - : c-cette nyouvewwe pwopwiété vous pewmet d-de contwôwew w-wa façon dont wa césuwe des mots wows de wetouws à wa wigne e-est géwée. rawr x3
+- [`-moz-owient`](/fw/docs/web/css/-moz-owient)
+  - : u-une nyouvewwe pwopwiété (pouw w'instant spécifique à moziwwa) q-qui vous pewmet de contwôwew w-w'owientation vewticawe ou howizontawe de cewtains éwéments (en p-pawticuwiew [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess)). ^^
+- [`::-moz-pwogwess-baw`](/fw/docs/web/css/::-moz-pwogwess-baw)
+  - : un pseudo-éwément s-spécifique à m-moziwwa qui vous pewmet de définiw w-we stywe de wa zone d'un éwément [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess) w-wepwésentant w-wa fwaction d-d'une tâche. ( ͡o ω ͡o )
 
-#### Autres changements
+#### autwes c-changements
 
-- La propriété [`@-moz-document`](/fr/docs/Web/CSS/@document) a une nouvelle fonction `regexp()`, qui vous permet d'adapter l'URL du document à une [regular expression](/fr/Guide_JavaScript_1.5/Expressions_rationnelles).
-- La propriété CSS [`azimuth`](/fr/docs/Web/CSS/azimuth) n'est plus supportée, comme nous avons enlevé le peu de code que nous avions pour le groupe média `aural`. Il n'a jamais été implémenté de manière significative, donc il était plus logique de supprimer cette implémentation crufty pour le moment, au lieu d'essayer de le rafistoler.
-- Avant, la pseudo-classe [`:hover`](/fr/docs/Web/CSS/:hover) n'était pas appliquée aux sélecteurs de classe quand on était en mode quirks, par exemple, `.someclass:hover` ne fonctionne pas. Cette bizarrerie a été enlevée.
-- La pseudo-classe [`:indeterminate`](/fr/docs/Web/CSS/:indeterminate) peut être appliquée à l'élément [`<progress>`](/fr/docs/Web/HTML/Element/progress). Cela n'est pas un standard, mais nous espérons que ce soit adopté par les autres navigateurs car c'est utile.
-- La valeur `-moz-win-exclude-glass` a été ajoutée à la propriété CSS [`-moz-appearance`](/fr/docs/Web/CSS/appearance) afin d'exclure des zones opaques dans les effets d'Aero Glass sur les systèmes Windows.
-- Le [bug 658949](https://bugzilla.mozilla.org/show_bug.cgi?id=658949) change la façon dont le symbole dièse (#) est traité dans les données URI qui peut briser les feuilles de style CSS qui contiennent un tel symbole.
+- w-wa pwopwiété [`@-moz-document`](/fw/docs/web/css/@document) a une nyouvewwe fonction `wegexp()`, XD q-qui vous pewmet d-d'adaptew w'uww d-du document à une [weguwaw expwession](/fw/guide_javascwipt_1.5/expwessions_wationnewwes). ^^
+- wa pwopwiété c-css [`azimuth`](/fw/docs/web/css/azimuth) n'est p-pwus suppowtée, (⑅˘꒳˘) c-comme nyous avons enwevé we peu de code que nyous avions pouw w-we gwoupe média `auwaw`. (⑅˘꒳˘) i-iw ny'a j-jamais été impwémenté d-de manièwe significative, ^•ﻌ•^ d-donc iw était pwus wogique de suppwimew cette impwémentation cwufty pouw we moment, ( ͡o ω ͡o ) au w-wieu d'essayew de we wafistowew. ( ͡o ω ͡o )
+- a-avant, (✿oωo) wa pseudo-cwasse [`:hovew`](/fw/docs/web/css/:hovew) ny'était pas appwiquée a-aux séwecteuws de cwasse q-quand on était en mode quiwks, 😳😳😳 p-paw exempwe, OwO `.somecwass:hovew` n-nye fonctionne p-pas. ^^ cette bizawwewie a-a été enwevée. rawr x3
+- w-wa pseudo-cwasse [`:indetewminate`](/fw/docs/web/css/:indetewminate) peut êtwe appwiquée à w'éwément [`<pwogwess>`](/fw/docs/web/htmw/ewement/pwogwess). 🥺 cewa ny'est pas un standawd, (ˆ ﻌ ˆ)♡ mais nyous espéwons que ce s-soit adopté paw w-wes autwes nyavigateuws c-caw c'est utiwe. ( ͡o ω ͡o )
+- wa v-vaweuw `-moz-win-excwude-gwass` a été ajoutée à wa pwopwiété css [`-moz-appeawance`](/fw/docs/web/css/appeawance) a-afin d'excwuwe d-des zones opaques dans wes e-effets d'aewo gwass suw wes systèmes windows. >w<
+- w-we [bug 658949](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=658949) c-change wa façon dont we s-symbowe dièse (#) e-est twaité dans wes données uwi qui peut bwisew wes feuiwwes de stywe css q-qui contiennent u-un tew symbowe. /(^•ω•^)
 
-### DOM
+### d-dom
 
-- [Utilisation de media queries à partir de code](/fr/docs/Web/CSS/CSS_media_queries/Testing_media_queries)
-  - : Vous pouvez désormais tester le résultat d'une chaîne media query en programmant la méthode [`window.matchMedia()`](/fr/docs/Web/API/Window/matchMedia) et l'interface [`MediaQueryList`](/fr/docs/Web/API/MediaQueryList).
-- [Evènements tactile](/fr/docs/Web/API/Touch_events)
-  - : Firefox 6 ajout le support du standard W3C sur les évènements tactile, cela facilite l'interprétation d'une ou plusieurs touches à la fois sur les surfaces tactiles comme les écrans tactiles et pavés tactiles.
-- [Evènements server-sent](/fr/docs/Web/API/Server-sent_events)
-  - : Les évènements server-sent permettent à une application Web de demander à un serveur pour envoyer des événements comme n'importe quel événement DOM localement créé.
-
-<!---->
-
-- `navigator.securityPolicy`, qui a depuis longtemps retourné une chaîne vide, a simplement été supprimé.
-- [`BlobBuilder`](/fr/docs/Web/API/Blob) est maintenant implémenté, même si pour l'instant il est préfixé (vous devez utiliser `MozBlobBuilder`).
-- [`document.height`](/fr/docs/Web/API/Element/clientHeight) et [`document.width`](/fr/docs/Web/API/Element/clientWidth) ont été supprimées. [bug 585877](https://bugzilla.mozilla.org/show_bug.cgi?id=585877)
-- Les propriétés `entities` et `notations` de l'objet [`DocumentType`](/fr/docs/Web/API/DocumentType), qui n'ont jamais été implémentées et renvoyées toujours `null`, ont été retirées, car elles ont également été enlevées de la spécification.
-- L'interface `DOMConfiguration` et la propriété `document.domConfig` qu'elle utilisait ont été supprimées, elles n'ont jamais été supportées et ont depuis été retirées de la spécification DOM.
-- L'évènement `hashchange` comprend désormais [les champs `newURL` et `oldURL`](/fr/docs/Web/API/Window/hashchange_event#the_hashchange_event).
-- La méthode `abort()` de l'interface [`FileReader`](/fr/docs/Web/API/FileReader) retourne maintenant une exception si aucun fichier n'est en cours de lecture lorqu'elle est utilisée.
-- La méthode [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage) utilise maintenant [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) pour vous permettre de transmettre d'une fenêtre à une autre des objets JavaScript au lieu de chaînes.
-- L'API [`window.history`](/fr/docs/Web/API/Window/history) utilise désormais [l'algorithme de clonage structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) pour sérialiser des objets que vous passez avec les méthodes `pushState()` et `replaceState()`, ce qui vous permet d'utiliser des objets plus complexes (y compris ceux qui contiennent des références de graphes cycliques).
-- Vous pouvez désormais [détecter lorsqu'une impression a été lancée et a été achevée](/fr/docs/Web/CSS/CSS_media_queries/Printing#detecting_print_requests) grâce aux nouveaux évènements `beforeprint` et `afterprint`.
-- La propriété `document.strictErrorChecking` a été supprimée, car elle n'a jamais été implémentée et a été retiré de la spécification DOM.
-- La propriété standard [`event.defaultPrevented`](/fr/docs/Web/API/Event/defaultPrevented) est maintenant supportée, vous devriez utiliser à la place la méthode non-standard `getPreventDefault()` pour détecter si [`event.preventDefault()`](/fr/docs/Web/API/Event/preventDefault) a été appelée sur l'événement.
-- La propriété [`window.top`](/fr/docs/Web/API/Window/top) est désormais en lecture seule.
-- DOM views, which we never documented, have been removed. This was a bit of implementation detail that was unnecessarily complicating things, so we got rid of it. If you notice this change, you're probably doing something wrong.
-- La fonction `EventTarget` de la méthode [`addEventListener()`](/fr/docs/XPCOM_Interface_Reference/nsIDOMEventTarget) est désormais facultative, car ça l'est dans WebKit (et aussi dans la dernière version de la spécification).
-- La propriété `mozResponseArrayBuffer` de l'objet [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) a été remplacé par les propriétés `responseType` et `response`.
-- La propriété [`element.dataset`](/fr/docs/Web/API/Element/dataset) a été ajoutée à l'interface [`HTMLElement`](/fr/docs/Web/API/HTMLElement) permettant d'accéder aux attributs globaux [`data-*` global attributes](/fr/docs/Web/HTML/Global_attributes#attr-data-*) d'un élément.
-- L'interface [`CustomEvent`](/fr/docs/Web/API/CustomEvent) a été implémentée. (voir [bug 427537](https://bugzilla.mozilla.org/show_bug.cgi?id=427537))
-- Pour des raisons de sécurité, les URIs `data:` et `javascript:` n'héritent plus de l'environnment de sécurité de la page active lorsque l'utilisateur les saisit dans la barre d'adresse, mais un nouvel environnment de sécurité vide est créé. Par exemple, le script chargé en entrant l'URI `javascript:` dans la barre d'adresse n'a plus accès aux méthodes DOM et similaires. Ces URIs continueront à travailler comme avant lorsqu'elles sont utilisées par le script.
-
-### JavaScript
-
-- Avant, il était possible d'utiliser l'opérateur `new` sur plusieurs fonctions natives (eval, parseInt, Date.parse, etc) ce qui, conformément à la spécification, n'était pas autorisé. Désormais ce comportement n'est plus supporté. Cette façon d'utiliser l'opérateur `new` n'a jamais été officiellement supportée et était peu utilisée, donc il est peu probable que ce changement vous affecte.
-- ECMAScript Harmony [WeakMaps](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/WeakMap) a été ajouté en tant que prototype.
-
-### SVG
-
-- L'attribut [`pathLength`](/fr/docs/Web/SVG/Attributs/pathLength) est désormais supporté.
-- Les modèles SVG, les dégradés et les filtres fonctionnent désormais correctement lorsqu'ils sont chargés à partir de [`data:` URLs](/fr/docs/Web/URI/Schemes/data).
-
-### MathML
-
-- L'implémentation de [`<mstyle>`](/fr/docs/Web/MathML/Element/mstyle) a été corrigée.
-
-### Accessibilité (ARIA)
-
-- Un événement de changement d'état est à présent correctement envoyé lors d'un changement de la valeur de `aria-busy`.
-- Un événement de changement d'attribut est à présent correctement envoyé lorsque survient `aria-sort`.
-
-### Réseau
-
-- [WebSockets](/fr/docs/Web/API/WebSockets_API)
-  - : Pour Firefox 6, WebSockets a été mis à jour à la version 07 du protocole. De plus, l'objet `WebSocket` a été renommé en `MozWebSocket` pour l'empêcher d'être utilisé de façon incorrecte pour détecter la disponibilité des WebSockets sans préfixe.
+- [utiwisation d-de media q-quewies à pawtiw de code](/fw/docs/web/css/css_media_quewies/testing_media_quewies)
+  - : v-vous p-pouvez désowmais testew we wésuwtat d-d'une chaîne m-media quewy en pwogwammant w-wa méthode [`window.matchmedia()`](/fw/docs/web/api/window/matchmedia) et w'intewface [`mediaquewywist`](/fw/docs/web/api/mediaquewywist). 😳😳😳
+- [evènements tactiwe](/fw/docs/web/api/touch_events)
+  - : f-fiwefox 6 ajout we suppowt d-du standawd w-w3c suw wes évènements tactiwe, c-cewa faciwite w'intewpwétation d'une ou pwusieuws t-touches à w-wa fois suw wes s-suwfaces tactiwes comme wes écwans tactiwes et pavés tactiwes. (U ᵕ U❁)
+- [evènements s-sewvew-sent](/fw/docs/web/api/sewvew-sent_events)
+  - : wes évènements sewvew-sent p-pewmettent à u-une appwication web de demandew à u-un sewveuw pouw envoyew d-des événements c-comme ny'impowte quew événement dom wocawement c-cwéé. (˘ω˘)
 
 <!---->
 
-- L'analyse de l'en-tête `Content-Disposition` a été fixée afin d'interpréter correctement les antislashs des caractères ASCII. Auparavant, il été remplacé par le caractère underscore ("\_").
-- La valeur du champ du chemin de l'en-tête `Set-Cookie` est désormais correctement interprétée lors de l'utilisation de guillements, auparavant, ils étaient considérés comme faisant partie de la chaîne du chemin d'accès à la place d'être des délimiteurs. **Ce changement peut affecter la compatibilité avec certains sites web**, les auteurs doivent vérifier leur code.
-- L'en-tête de la requête [`Upgrade`](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.42) est désormais supporté, vous pouvez demander la mise à niveau d'un canal vers un autre protocole HTTP en appelant [`nsIHttpChannelInternal.HTTPUpgrade()`](</fr/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>).
+- `navigatow.secuwitypowicy`, 😳 qui a depuis wongtemps wetouwné u-une chaîne vide, (ꈍᴗꈍ) a-a simpwement été suppwimé. :3
+- [`bwobbuiwdew`](/fw/docs/web/api/bwob) e-est maintenant impwémenté, /(^•ω•^) m-même si p-pouw w'instant i-iw est pwéfixé (vous devez utiwisew `mozbwobbuiwdew`). ^^;;
+- [`document.height`](/fw/docs/web/api/ewement/cwientheight) et [`document.width`](/fw/docs/web/api/ewement/cwientwidth) ont été suppwimées. o.O [bug 585877](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=585877)
+- wes pwopwiétés `entities` et `notations` de w'objet [`documenttype`](/fw/docs/web/api/documenttype), 😳 qui ny'ont jamais été impwémentées et wenvoyées toujouws `nuww`, UwU ont été w-wetiwées, c-caw ewwes ont égawement été enwevées de wa spécification. >w<
+- w'intewface `domconfiguwation` e-et wa pwopwiété `document.domconfig` q-qu'ewwe utiwisait o-ont été suppwimées, o.O e-ewwes ny'ont jamais été suppowtées e-et ont depuis été w-wetiwées de wa spécification d-dom. (˘ω˘)
+- w'évènement `hashchange` c-compwend d-désowmais [wes champs `newuww` et `owduww`](/fw/docs/web/api/window/hashchange_event#the_hashchange_event). òωó
+- w-wa méthode `abowt()` d-de w'intewface [`fiweweadew`](/fw/docs/web/api/fiweweadew) w-wetouwne maintenant u-une exception s-si aucun fichiew n-ny'est en c-couws de wectuwe w-wowqu'ewwe est u-utiwisée. nyaa~~
+- wa méthode [`window.postmessage()`](/fw/docs/web/api/window/postmessage) u-utiwise m-maintenant [w'awgowithme d-de cwonage stwuctuwé](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) p-pouw vous pewmettwe de twansmettwe d-d'une fenêtwe à une autwe des o-objets javascwipt a-au wieu de chaînes. ( ͡o ω ͡o )
+- w-w'api [`window.histowy`](/fw/docs/web/api/window/histowy) utiwise désowmais [w'awgowithme d-de cwonage stwuctuwé](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) pouw séwiawisew d-des objets que vous passez a-avec wes méthodes `pushstate()` et `wepwacestate()`, 😳😳😳 c-ce qui vous pewmet d'utiwisew des objets pwus compwexes (y compwis ceux q-qui contiennent des wéféwences d-de gwaphes cycwiques). ^•ﻌ•^
+- v-vous pouvez désowmais [détectew wowsqu'une impwession a-a été wancée et a été achevée](/fw/docs/web/css/css_media_quewies/pwinting#detecting_pwint_wequests) gwâce a-aux nyouveaux évènements `befowepwint` et `aftewpwint`. (˘ω˘)
+- w-wa pwopwiété `document.stwictewwowchecking` a-a été suppwimée, caw ewwe ny'a jamais été impwémentée e-et a-a été wetiwé de wa spécification d-dom. (˘ω˘)
+- wa pwopwiété standawd [`event.defauwtpwevented`](/fw/docs/web/api/event/defauwtpwevented) est maintenant s-suppowtée, -.- vous devwiez u-utiwisew à wa pwace w-wa méthode n-nyon-standawd `getpweventdefauwt()` pouw détectew s-si [`event.pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) a-a été a-appewée suw w'événement. ^•ﻌ•^
+- wa p-pwopwiété [`window.top`](/fw/docs/web/api/window/top) est désowmais e-en wectuwe s-seuwe. /(^•ω•^)
+- dom v-views, which we n-nyevew documented, (///ˬ///✿) h-have been wemoved. mya t-this was a-a bit of impwementation d-detaiw that was unnecessawiwy c-compwicating things, o.O so we g-got wid of it. ^•ﻌ•^ if you nyotice this c-change, (U ᵕ U❁) you'we p-pwobabwy doing s-something wwong. :3
+- wa fonction `eventtawget` de wa méthode [`addeventwistenew()`](/fw/docs/xpcom_intewface_wefewence/nsidomeventtawget) est désowmais f-facuwtative, (///ˬ///✿) c-caw ça w'est d-dans webkit (et aussi dans wa dewnièwe vewsion de wa spécification). (///ˬ///✿)
+- w-wa p-pwopwiété `mozwesponseawwaybuffew` de w'objet [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) a-a été wempwacé p-paw wes pwopwiétés `wesponsetype` et `wesponse`. 🥺
+- wa pwopwiété [`ewement.dataset`](/fw/docs/web/api/ewement/dataset) a été ajoutée à w-w'intewface [`htmwewement`](/fw/docs/web/api/htmwewement) pewmettant d-d'accédew a-aux attwibuts g-gwobaux [`data-*` gwobaw attwibutes](/fw/docs/web/htmw/gwobaw_attwibutes#attw-data-*) d'un éwément. -.-
+- w-w'intewface [`customevent`](/fw/docs/web/api/customevent) a-a été impwémentée. nyaa~~ (voiw [bug 427537](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=427537))
+- pouw des waisons de sécuwité, (///ˬ///✿) w-wes uwis `data:` et `javascwipt:` ny'héwitent p-pwus de w'enviwonnment de s-sécuwité de wa p-page active wowsque w'utiwisateuw w-wes saisit dans w-wa bawwe d'adwesse, 🥺 mais un nyouvew e-enviwonnment de sécuwité v-vide est cwéé. >w< p-paw exempwe, rawr x3 w-we scwipt chawgé e-en entwant w'uwi `javascwipt:` dans wa bawwe d'adwesse n-ny'a pwus a-accès aux méthodes d-dom et simiwaiwes. (⑅˘꒳˘) ces uwis c-continuewont à twavaiwwew comme avant wowsqu'ewwes s-sont utiwisées p-paw we scwipt. σωσ
 
-### Autres changements
+### j-javascwipt
 
-- Le support des microrésumés a été enlevé, ils n'ont jamais été très utilisés, n'étaient pas très détectable et continuer leur support été d'apporter des améliorations à Places (favoris et historique) à l'architecture difficile.
-- WebGL supporte maintenant l'extension [`OES_texture_float`](https://www.khronos.org/registry/gles/extensions/OES/OES_texture_float.txt).
-- Le nouvel outil [Ardoise](/fr/docs/Outils/Ardoise) offre un endroit pratique pour expérimenter du code JavaScript.
-- La méthode `console.trace()` a été ajouté à [ConsoleAPI](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) (voir [bug 585956](https://bugzilla.mozilla.org/show_bug.cgi?id=585956)).
+- avant, XD iw était possibwe d'utiwisew w'opéwateuw `new` suw pwusieuws f-fonctions nyatives (evaw, -.- pawseint, d-date.pawse, >_< e-etc) ce qui, rawr confowmément à wa spécification, 😳😳😳 n-ny'était pas autowisé. UwU désowmais c-ce compowtement n-ny'est pwus s-suppowté. (U ﹏ U) cette f-façon d'utiwisew w-w'opéwateuw `new` ny'a jamais été officiewwement suppowtée et était peu u-utiwisée, (˘ω˘) donc iw est peu pwobabwe q-que ce changement vous affecte. /(^•ω•^)
+- ecmascwipt hawmony [weakmaps](/fw/docs/javascwipt/wéféwence_javascwipt/objets_gwobaux/weakmap) a-a été ajouté en tant que pwototype. (U ﹏ U)
 
-## Changements pour les développeurs de Mozilla et de modules complémentaires
+### svg
 
-Pour des conseils utiles sur la mise à jour des extensions pour Firefox 6, voir [Updating add-ons for Firefox 6](/fr/docs/Mozilla/Firefox/Updating_add-ons_for_Firefox_6).
+- w'attwibut [`pathwength`](/fw/docs/web/svg/attwibuts/pathwength) est d-désowmais suppowté. ^•ﻌ•^
+- w-wes modèwes svg, wes dégwadés e-et wes fiwtwes fonctionnent désowmais c-cowwectement wowsqu'iws s-sont chawgés à pawtiw d-de [`data:` uwws](/fw/docs/web/uwi/schemes/data).
 
-> [!NOTE]
-> Firefox 6 requiert que les composants binaires soient recompilés, comme pour toutes les versions majeures de Firefox. Pour plus de détails, voir [Interfaces Binaires](/fr/docs/Developer_Guide/Interface_Compatibility#Binary_Interfaces).
+### mathmw
 
-### Modules de code JavaScript
+- w-w'impwémentation de [`<mstywe>`](/fw/docs/web/mathmw/ewement/mstywe) a été cowwigée. >w<
 
-#### FileUtils.jsm
+### accessibiwité (awia)
 
-- La méthode `openSafeFileOutputStream()` ouvre maintenant les fichiers avec [l'indicateur de comportement](/fr/docs/XPCOM_Interface_Reference/nsIFileOutputStream#Behavior_flag_constants) `DEFER_OPEN` au lieu d'essayer de les ouvrir immédiatement.
+- un événement d-de changement d'état est à pwésent cowwectement e-envoyé w-wows d'un changement d-de wa vaweuw de `awia-busy`. ʘwʘ
+- un événement d-de changement d'attwibut est à pwésent cowwectement envoyé wowsque suwvient `awia-sowt`. òωó
 
-#### XPCOMUtils.jsm
+### w-wéseau
 
-- La nouvelle méthode [`importRelative()`](</fr/docs/JavaScript_code_modules/XPCOMUtils.jsm#importRelative()>) vous permet de charger un module de code JavaScript depuis un chemin relatif au chemin d'un autre module de code JavaScript. Cela rend plus facile la construction de modules qui dépendent les uns des autres.
+- [websockets](/fw/docs/web/api/websockets_api)
+  - : p-pouw fiwefox 6, o.O w-websockets a-a été mis à jouw à wa vewsion 07 du pwotocowe. ( ͡o ω ͡o ) d-de pwus, w'objet `websocket` a-a été wenommé en `mozwebsocket` pouw w'empêchew d-d'êtwe utiwisé de façon incowwecte pouw détectew w-wa disponibiwité des websockets sans pwéfixe. mya
 
-### XPCOM
+<!---->
 
-- [`nsCOMArray<T>`](/fr/docs/XPCOM_array_guide#nsCOMArray.3cT.3e) dispose désormais d'une méthode [`RemoveObjectsAt()`](/fr/docs/XPCOM_array_guide#Deleting_objects) pour enlever plusieurs objets à la fois à partir d'un tableau.
+- w-w'anawyse de w-w'en-tête `content-disposition` a été fixée a-afin d'intewpwétew c-cowwectement w-wes antiswashs des cawactèwes ascii. >_< aupawavant, rawr i-iw été wempwacé paw we cawactèwe undewscowe ("\_"). >_<
+- wa v-vaweuw du champ du chemin de w'en-tête `set-cookie` est désowmais cowwectement i-intewpwétée w-wows de w'utiwisation d-de guiwwements, (U ﹏ U) a-aupawavant, rawr i-iws étaient considéwés comme f-faisant pawtie de wa chaîne du chemin d'accès à w-wa pwace d'êtwe des déwimiteuws. (U ᵕ U❁) **ce c-changement peut affectew wa compatibiwité a-avec cewtains s-sites web**, wes auteuws d-doivent véwifiew weuw code. (ˆ ﻌ ˆ)♡
+- w'en-tête d-de wa w-wequête [`upgwade`](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec14.htmw#sec14.42) est désowmais s-suppowté, >_< v-vous pouvez demandew wa mise à n-nyiveau d'un canaw vews un autwe pwotocowe http en appewant [`nsihttpchannewintewnaw.httpupgwade()`](</fw/docs/xpcom_intewface_wefewence/nsihttpchannewintewnaw#httpupgwade()>). ^^;;
 
-### Utilisation du DOM depuis le chrome
+### a-autwes changements
 
-- [Utilisation de l'API DOM File dans du code chrome](/fr/docs/Extensions/Using_the_DOM_File_API_in_chrome_code)
-  - : Bien que vous avez toujours pu utiliser l'API DOM File à partir du code chrome, le constructeur [`File`](/fr/docs/Web/API/File) supporte désormais la spécification d'un chemin d'accès local lorsqu'il est utilisé depuis le chrome. De plus, vous pouvez également spécifier le fichier pour accéder à l'aide de l'API DOM File en utilisant un objet [`nsIFile`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFile).
+- we s-suppowt des micwowésumés a été enwevé, ʘwʘ iws n-ny'ont jamais été t-twès utiwisés, 😳😳😳 n-ny'étaient pas twès détectabwe e-et continuew w-weuw suppowt été d'appowtew d-des améwiowations à pwaces (favowis e-et histowique) à w'awchitectuwe d-difficiwe.
+- w-webgw suppowte maintenant w'extension [`oes_textuwe_fwoat`](https://www.khwonos.owg/wegistwy/gwes/extensions/oes/oes_textuwe_fwoat.txt). UwU
+- we nyouvew outiw [awdoise](/fw/docs/outiws/awdoise) offwe un endwoit p-pwatique pouw e-expéwimentew du code javascwipt. OwO
+- wa méthode `consowe.twace()` a été ajouté à [consoweapi](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) (voiw [bug 585956](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=585956)).
 
-### Changements dans les interfaces
+## c-changements pouw wes dévewoppeuws d-de moziwwa e-et de moduwes compwémentaiwes
 
-- [`nsINavHistoryQueryOptions`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavHistoryQueryOptions) supporte désormais le tri par orde de frecency à l'aide des nouvelles constantes `SORT_BY_FRECENCY_ASCENDING` et `SORT_BY_FRECENCY_DESCENDING`.
-- [`nsIFilePicker`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIFilePicker) a un nouvel attribut [`nsIFilePicker.addToRecentDocs`](/fr/docs/XPCOM_Interface_Reference/nsIFilePicker#addToRecentDocs), qui vous permet d'indiquer que le fichier sélectionné doit être ajoutée à la liste "documents récents" de l'utilisateur si il y en a une. Cet attribut n'a aucun effet en mode navigation privée.
-- Les méthodes de [`nsINavBookmarkObserver`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsINavBookmarkObserver) avec les paramètres ID d'un élément exigent désormais un GUID.
-- [`nsIPrefBranch.clearUserPref()`](</fr/docs/XPCOM_Interface_Reference/nsIPrefBranch#clearUserPref()>) ne génère plus d'exception si la préférence spécifié n'existe pas ou n'a pas de valeur définie par l'utilisateur. Désormais, il ne fait rien.
-- L'interface [`nsIMemoryReporter`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIMemoryReporter) prend désormais en charge l'indication du type de mémoire qui est décrite (mappée, heap, ou autre).
-- L'attribut `stateData` de [`nsISHEntry`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsISHEntry) renvoi désormais à [`nsIStructuredCloneContainer`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStructuredCloneContainer).
-- [`nsIURI`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI) a un nouvel attribut [`nsIURI.ref`](/fr/docs/XPCOM_Interface_Reference/nsIURI#ref), qui renvoie la partie de référence (la partie après le "#") de l'URI. Il y a également de nouvelles méthodes [`nsIURI.cloneIgnoringRef()`](</fr/docs/XPCOM_Interface_Reference/nsIURI#cloneIgnoringRef()>) qui clone [`nsIURI`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI) sans l'élément ref et [`nsIURI.equalsExceptRef()`](</fr/docs/XPCOM_Interface_Reference/nsIURI#equalsExceptRef()>) qui se compare à un autre [`nsIURI`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIURI) en ignorant l'élément ref.
+pouw des conseiws utiwes suw wa mise à jouw des extensions pouw f-fiwefox 6, :3 voiw [updating add-ons fow fiwefox 6](/fw/docs/moziwwa/fiwefox/updating_add-ons_fow_fiwefox_6). -.-
 
-#### Nouvelles interfaces
+> [!note]
+> f-fiwefox 6 wequiewt que w-wes composants binaiwes s-soient wecompiwés, 🥺 comme p-pouw toutes wes v-vewsions majeuwes d-de fiwefox. -.- p-pouw pwus de détaiws, -.- v-voiw [intewfaces b-binaiwes](/fw/docs/devewopew_guide/intewface_compatibiwity#binawy_intewfaces). (U ﹏ U)
 
-- [`mozIAsyncFavicons`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/mozIAsyncFavicons)
-  - : Un nouveau service qui vous permet d'accéder au service favicon de façon asynchrone.
-- [`nsIEventSource`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIEventSource)
-  - : _Détails à venir._
-- [`nsIGSettingsCollection`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIGSettingsCollection)
-  - : _Détails à venir._
-- [`nsIGSettingsService`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIGSettingsService)
-  - : _Détails à venir._
-- [`nsIHttpUpgradeListener`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIHttpUpgradeListener)
-  - : L'interface de rappel pour le traitement des demandes de mise à niveau HTTP via la méthode [`nsIHttpChannelInternal.HTTPUpgrade()`](</fr/docs/XPCOM_Interface_Reference/nsIHttpChannelInternal#HTTPUpgrade()>).
-- [`nsIStructuredCloneContainer`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIStructuredCloneContainer)
-  - : Un conteneur pour les objets qui ont été sérialisé à l'aide de [l'algorithme de clonage structuré](/fr/docs/Web/API/Window/structuredClone).
-- [`nsITelemetry`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITelemetry)
-  - : Implémentation du support de la télémétrie permettant d'enregistrer des données de télémétrie pour être utilisé pour présenter des histogrammes à des fins de suivi des performances. Voir [bug 649502](https://bugzilla.mozilla.org/show_bug.cgi?id=649502) et [bug 585196](https://bugzilla.mozilla.org/show_bug.cgi?id=585196).
-- [`nsITimedChannel`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsITimedChannel)
-  - : Voir [bug 576006](https://bugzilla.mozilla.org/show_bug.cgi?id=576006).
-- [`nsIWebSocketListener`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebSocketListener)
-  - : Voir [bug 640003](https://bugzilla.mozilla.org/show_bug.cgi?id=640003).
-- [`nsIWebSocketProtocol`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIWebSocketProtocol)
-  - : Voir [bug 640003](https://bugzilla.mozilla.org/show_bug.cgi?id=640003).
+### moduwes de code javascwipt
 
-#### Interfaces supprimées
+#### fiweutiws.jsm
 
-Les interfaces suivantes ont été supprimées car elles n'étaient plus indispensables :
+- wa méthode `opensafefiweoutputstweam()` o-ouvwe maintenant w-wes fichiews a-avec [w'indicateuw d-de compowtement](/fw/docs/xpcom_intewface_wefewence/nsifiweoutputstweam#behaviow_fwag_constants) `defew_open` a-au wieu d'essayew d-de wes ouvwiw immédiatement. rawr
 
-- `nsIDOMDocumentEvent` (voir [bug 655517](https://bugzilla.mozilla.org/show_bug.cgi?id=655517))
-- `nsIDOMDocumentTraversal` (voir [bug 655514](https://bugzilla.mozilla.org/show_bug.cgi?id=655514))
-- `nsIDOMDocumentRange` (voir [bug 655513](https://bugzilla.mozilla.org/show_bug.cgi?id=655513))
-- `IWeaveCrypto` (voir [bug 651596](https://bugzilla.mozilla.org/show_bug.cgi?id=651596))
-- `nsIDOM3DocumentEvent` (voir [bug 481863](https://bugzilla.mozilla.org/show_bug.cgi?id=481863))
-- `nsIDOMAbstractView`
-- `nsILiveTitleNotificationSubject`
-- `nsIPlugin` (voir [bug 637253](https://bugzilla.mozilla.org/show_bug.cgi?id=637253))
-- `nsIPluginInstance` (voir [bug 637253](https://bugzilla.mozilla.org/show_bug.cgi?id=637253))
-- `nsIHTMLEditRules` (voir [bug 633750](https://bugzilla.mozilla.org/show_bug.cgi?id=633750))
-- [`nsIXSLTProcessorObsolete`](/fr/docs/Mozilla/Tech/XPCOM/Reference/Interface/nsIXSLTProcessorObsolete) (voir [bug 649534](https://bugzilla.mozilla.org/show_bug.cgi?id=649534))
+#### xpcomutiws.jsm
 
-### Autres changements
+- wa nyouvewwe méthode [`impowtwewative()`](</fw/docs/javascwipt_code_moduwes/xpcomutiws.jsm#impowtwewative()>) v-vous p-pewmet de chawgew un moduwe de code javascwipt depuis un chemin w-wewatif au chemin d-d'un autwe moduwe d-de code javascwipt. mya cewa wend pwus faciwe w-wa constwuction de moduwes qui dépendent wes uns d-des autwes. ( ͡o ω ͡o )
 
-- [Utilisation des préférences à partir du code d'application](/fr/docs/Mozilla/Preferences/Using_preferences_from_application_code)
-  - : Une nouvelle API statique est disponible pour accéder facilement aux préférences, ce n'est disponible que pour le code d'application et ne peut pas être utilisé par les modules complémentaires.
+### x-xpcom
 
-## Voir aussi
+- [`nscomawway<t>`](/fw/docs/xpcom_awway_guide#nscomawway.3ct.3e) dispose désowmais d'une m-méthode [`wemoveobjectsat()`](/fw/docs/xpcom_awway_guide#deweting_objects) pouw enwevew pwusieuws o-objets à w-wa fois à pawtiw d'un tabweau.
 
-- [Firefox 5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/5)
-- [Firefox 4 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/4)
-- [Firefox 3.6 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.6)
-- [Firefox 3.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3.5)
-- [Firefox 3 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
-- [Firefox 2 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/2)
-- [Firefox 1.5 pour les développeurs](/fr/docs/Mozilla/Firefox/Releases/1.5)
+### u-utiwisation d-du dom depuis w-we chwome
+
+- [utiwisation d-de w'api d-dom fiwe dans d-du code chwome](/fw/docs/extensions/using_the_dom_fiwe_api_in_chwome_code)
+  - : bien que vous a-avez toujouws pu u-utiwisew w'api dom fiwe à pawtiw d-du code chwome, /(^•ω•^) we constwucteuw [`fiwe`](/fw/docs/web/api/fiwe) suppowte désowmais w-wa spécification d'un chemin d-d'accès wocaw wowsqu'iw est u-utiwisé depuis w-we chwome. >_< de pwus, vous pouvez égawement spécifiew w-we fichiew pouw accédew à w'aide de w'api d-dom fiwe en u-utiwisant un objet [`nsifiwe`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsifiwe). (✿oωo)
+
+### changements dans wes intewfaces
+
+- [`nsinavhistowyquewyoptions`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsinavhistowyquewyoptions) s-suppowte d-désowmais we twi paw owde de f-fwecency à w'aide des nyouvewwes constantes `sowt_by_fwecency_ascending` e-et `sowt_by_fwecency_descending`. 😳😳😳
+- [`nsifiwepickew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsifiwepickew) a-a un nyouvew attwibut [`nsifiwepickew.addtowecentdocs`](/fw/docs/xpcom_intewface_wefewence/nsifiwepickew#addtowecentdocs), (ꈍᴗꈍ) qui v-vous pewmet d'indiquew q-que we fichiew séwectionné doit êtwe ajoutée à w-wa wiste "documents wécents" d-de w'utiwisateuw s-si iw y-y en a une. cet attwibut n'a aucun effet en mode nyavigation pwivée. 🥺
+- wes méthodes de [`nsinavbookmawkobsewvew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsinavbookmawkobsewvew) avec w-wes pawamètwes i-id d'un éwément e-exigent désowmais u-un guid. mya
+- [`nsipwefbwanch.cweawusewpwef()`](</fw/docs/xpcom_intewface_wefewence/nsipwefbwanch#cweawusewpwef()>) n-nye génèwe p-pwus d'exception si wa pwéféwence s-spécifié n-ny'existe pas ou ny'a pas de v-vaweuw définie p-paw w'utiwisateuw. (ˆ ﻌ ˆ)♡ désowmais, (⑅˘꒳˘) iw nye fait wien. òωó
+- w-w'intewface [`nsimemowywepowtew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsimemowywepowtew) pwend désowmais en chawge w-w'indication du type de mémoiwe q-qui est décwite (mappée, o.O heap, XD o-ou autwe).
+- w'attwibut `statedata` d-de [`nsishentwy`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsishentwy) w-wenvoi désowmais à [`nsistwuctuwedcwonecontainew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsistwuctuwedcwonecontainew). (˘ω˘)
+- [`nsiuwi`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiuwi) a u-un nyouvew attwibut [`nsiuwi.wef`](/fw/docs/xpcom_intewface_wefewence/nsiuwi#wef), (ꈍᴗꈍ) qui wenvoie w-wa pawtie de wéféwence (wa p-pawtie apwès we "#") d-de w'uwi. >w< iw y a égawement de n-nyouvewwes méthodes [`nsiuwi.cwoneignowingwef()`](</fw/docs/xpcom_intewface_wefewence/nsiuwi#cwoneignowingwef()>) q-qui cwone [`nsiuwi`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiuwi) s-sans w'éwément wef et [`nsiuwi.equawsexceptwef()`](</fw/docs/xpcom_intewface_wefewence/nsiuwi#equawsexceptwef()>) q-qui se compawe à un autwe [`nsiuwi`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiuwi) en ignowant w-w'éwément wef. XD
+
+#### nyouvewwes intewfaces
+
+- [`moziasyncfavicons`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/moziasyncfavicons)
+  - : un nyouveau sewvice qui vous pewmet d'accédew au sewvice favicon d-de façon asynchwone. -.-
+- [`nsieventsouwce`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsieventsouwce)
+  - : _détaiws à veniw._
+- [`nsigsettingscowwection`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsigsettingscowwection)
+  - : _détaiws à veniw._
+- [`nsigsettingssewvice`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsigsettingssewvice)
+  - : _détaiws à veniw._
+- [`nsihttpupgwadewistenew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsihttpupgwadewistenew)
+  - : w'intewface de wappew pouw we twaitement des demandes de mise à nyiveau h-http via wa méthode [`nsihttpchannewintewnaw.httpupgwade()`](</fw/docs/xpcom_intewface_wefewence/nsihttpchannewintewnaw#httpupgwade()>). ^^;;
+- [`nsistwuctuwedcwonecontainew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsistwuctuwedcwonecontainew)
+  - : un conteneuw p-pouw wes objets qui ont été séwiawisé à w-w'aide de [w'awgowithme de cwonage s-stwuctuwé](/fw/docs/web/api/window/stwuctuwedcwone). XD
+- [`nsitewemetwy`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsitewemetwy)
+  - : impwémentation d-du suppowt de wa téwémétwie p-pewmettant d-d'enwegistwew des données de téwémétwie p-pouw êtwe utiwisé pouw pwésentew des histogwammes à des f-fins de suivi des pewfowmances. :3 v-voiw [bug 649502](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=649502) et [bug 585196](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=585196). σωσ
+- [`nsitimedchannew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsitimedchannew)
+  - : v-voiw [bug 576006](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=576006).
+- [`nsiwebsocketwistenew`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiwebsocketwistenew)
+  - : voiw [bug 640003](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=640003). XD
+- [`nsiwebsocketpwotocow`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsiwebsocketpwotocow)
+  - : v-voiw [bug 640003](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=640003).
+
+#### i-intewfaces suppwimées
+
+wes intewfaces suivantes o-ont été suppwimées caw ewwes ny'étaient p-pwus indispensabwes :
+
+- `nsidomdocumentevent` (voiw [bug 655517](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=655517))
+- `nsidomdocumenttwavewsaw` (voiw [bug 655514](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=655514))
+- `nsidomdocumentwange` (voiw [bug 655513](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=655513))
+- `iweavecwypto` (voiw [bug 651596](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=651596))
+- `nsidom3documentevent` (voiw [bug 481863](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=481863))
+- `nsidomabstwactview`
+- `nsiwivetitwenotificationsubject`
+- `nsipwugin` (voiw [bug 637253](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=637253))
+- `nsipwugininstance` (voiw [bug 637253](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=637253))
+- `nsihtmweditwuwes` (voiw [bug 633750](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=633750))
+- [`nsixswtpwocessowobsowete`](/fw/docs/moziwwa/tech/xpcom/wefewence/intewface/nsixswtpwocessowobsowete) (voiw [bug 649534](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=649534))
+
+### autwes changements
+
+- [utiwisation des pwéféwences à pawtiw du code d'appwication](/fw/docs/moziwwa/pwefewences/using_pwefewences_fwom_appwication_code)
+  - : u-une nyouvewwe a-api statique est disponibwe pouw a-accédew faciwement a-aux pwéféwences, :3 ce ny'est d-disponibwe que pouw we code d'appwication et nye peut pas êtwe utiwisé paw w-wes moduwes compwémentaiwes. rawr
+
+## v-voiw aussi
+
+- [fiwefox 5 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/5)
+- [fiwefox 4 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/4)
+- [fiwefox 3.6 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3.6)
+- [fiwefox 3.5 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3.5)
+- [fiwefox 3 pouw w-wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3)
+- [fiwefox 2 pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/2)
+- [fiwefox 1.5 p-pouw wes dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/1.5)

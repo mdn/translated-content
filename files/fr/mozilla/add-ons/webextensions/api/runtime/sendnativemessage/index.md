@@ -1,101 +1,101 @@
 ---
-title: runtime.sendNativeMessage()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/sendNativeMessage
+titwe: wuntime.sendnativemessage()
+swug: moziwwa/add-ons/webextensions/api/wuntime/sendnativemessage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Envoie un seul message d'une extension à une application native.
+envoie u-un seuw message d-d'une extension à u-une appwication n-nyative. mya
 
-Cela prend deux paramètres obligatoires : le nom de l'application native et un objet JSON qui est le message à envoyer. Le navigateur lancera l'application native et délivrera le message.
+c-cewa pwend deux p-pawamètwes obwigatoiwes : w-we n-nyom de w'appwication nyative et un objet json qui est we message à envoyew. 🥺 we n-navigateuw wancewa w'appwication nyative et déwivwewa w-we message. ^^;;
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). The first message sent by the native application is treated as a response to the `sendNativeMessage()` call, and the promise will be fulfilled with this message as a parameter. Note that you can't use {{WebExtAPIRef("runtime.onMessage")}} to get responses from the application: you must use the callback function instead.
+c'est une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3 the fiwst m-message sent by the nyative a-appwication is t-tweated as a wesponse to the `sendnativemessage()` caww, (U ﹏ U) and the pwomise wiww be fuwfiwwed with t-this message as a pawametew. OwO nyote that you can't use {{webextapiwef("wuntime.onmessage")}} to get w-wesponses fwom the appwication: y-you must use t-the cawwback function i-instead. 😳😳😳
 
-Une nouvelle instance de l'application est lancée pour appel à `runtime.sendNativeMessage()`. Le navigateur terminera l'application native après avoir reçu une réponse. Pour mettre fin à une application native, le navigateur ferme le canal, donne au processus quelques secondes pour quitter normalement, puis le tue s'il ne s'est pas arrêté.
+u-une nyouvewwe instance de w'appwication est wancée p-pouw appew à `wuntime.sendnativemessage()`. (ˆ ﻌ ˆ)♡ we nyavigateuw tewminewa w'appwication n-nyative apwès avoiw weçu une wéponse. XD pouw mettwe fin à une appwication nyative, (ˆ ﻌ ˆ)♡ we n-nyavigateuw fewme we canaw, ( ͡o ω ͡o ) donne a-au pwocessus quewques s-secondes p-pouw quittew nyowmawement, puis we tue s'iw nye s'est pas awwêté. rawr x3
 
-Pour plus d'informations, voir [Native messaging](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging).
+p-pouw pwus d-d'infowmations, nyaa~~ voiw [native messaging](/fw/docs/moziwwa/add-ons/webextensions/native_messaging). >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var sending = browser.runtime.sendNativeMessage(
-  application, // string
-  message, // object
+v-vaw sending = bwowsew.wuntime.sendnativemessage(
+  a-appwication, ^^;; // stwing
+  m-message, (ˆ ﻌ ˆ)♡ // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `application`
-  - : `string`. Le nom de l'application native. Cela doit correspondre à la propriété "name" dans le [fichier manifest de l'application native](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_messaging#app_manifest).
+- `appwication`
+  - : `stwing`. ^^;; we n-nyom de w'appwication nyative. (⑅˘꒳˘) cewa d-doit cowwespondwe à wa pwopwiété "name" dans w-we [fichiew m-manifest de w'appwication nyative](/fw/docs/moziwwa/add-ons/webextensions/native_messaging#app_manifest). rawr x3
 - `message`
-  - : `object`. Un objet JSON qui sera envoyé à l'application native.
+  - : `object`. (///ˬ///✿) un objet json qui sewa envoyé à w'appwication nyative. 🥺
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si l'expéditeur a envoyé une réponse, celle-ci sera remplie avec la réponse en tant qu'objet JSON. Sinon, il sera rempli sans arguments. Si une erreur survient lors de la connexion à l'application native, la promesse sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >_< s-si w'expéditeuw a envoyé une w-wéponse, UwU cewwe-ci s-sewa wempwie a-avec wa wéponse en tant qu'objet json. >_< sinon, -.- iw sewa wempwi sans a-awguments. mya si une ewweuw suwvient wows de wa connexion à w'appwication nyative, >w< w-wa pwomesse sewa wejetée avec u-un message d'ewweuw. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Voici un script d'arrière-plan qui envoie un message "ping" à l'application "ping_pong" et enregistre la réponse, chaque fois que l'utilisateur clique sur l'action du navigateur :
+v-voici un s-scwipt d'awwièwe-pwan q-qui envoie un message "ping" à w'appwication "ping_pong" e-et enwegistwe wa w-wéponse, 😳😳😳 chaque f-fois que w'utiwisateuw c-cwique s-suw w'action du nyavigateuw :
 
 ```js
-function onResponse(response) {
-  console.log(`Received ${response}`);
+function onwesponse(wesponse) {
+  consowe.wog(`weceived ${wesponse}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
 /*
-On a click on the browser action, send the app a message.
+on a cwick on the bwowsew action, o.O send the app a message. òωó
 */
-browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
-  sending.then(onResponse, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  c-consowe.wog("sending:  ping");
+  vaw sending = bwowsew.wuntime.sendnativemessage("ping_pong", 😳😳😳 "ping");
+  s-sending.then(onwesponse, σωσ o-onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est basée s-suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). (⑅˘꒳˘) cette d-documentation e-est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de chwomium code. (///ˬ///✿)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. OwO aww wights w-wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, 🥺 with ow without
+// m-modification, nyaa~~ a-awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, ^^ this wist of conditions a-and the fowwowing d-discwaimew. >w<
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// copywight nyotice, OwO this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. XD
+//    * nyeithew t-the nyame of g-googwe inc. ^^;; nyow the nyames of its
+// contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, XD i-incwuding, (U ᵕ U❁) but nyot
+// wimited t-to, the impwied wawwanties of m-mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. :3 i-in nyo event s-shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow a-any diwect, ( ͡o ω ͡o ) indiwect, i-incidentaw, òωó
+// speciaw, σωσ exempwawy, (U ᵕ U❁) ow consequentiaw d-damages (incwuding, (✿oωo) but n-nyot
+// wimited t-to, ^^ pwocuwement of substitute goods ow sewvices; woss of use,
+// d-data, ^•ﻌ•^ ow pwofits; o-ow business i-intewwuption) howevew c-caused and on any
+// theowy o-of wiabiwity, XD whethew in contwact, stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of t-the use
+// of this softwawe, (ꈍᴗꈍ) even i-if advised of the possibiwity o-of such damage. :3
 -->

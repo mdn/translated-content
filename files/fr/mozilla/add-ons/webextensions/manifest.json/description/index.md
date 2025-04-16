@@ -1,41 +1,41 @@
 ---
-title: description
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/description
+titwe: descwiption
+swug: moziwwa/add-ons/webextensions/manifest.json/descwiption
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
       <td>chaîne</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"description": "Remplace des images par des portraits de chats."</pre
+        <pwe c-cwass="bwush: j-json">
+"descwiption": "wempwace d-des images paw des powtwaits de chats."</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Une brève description de l'extension, destinée à être affichée dans l'interface utilisateur du navigateur.
+une bwève descwiption de w'extension, mya d-destinée à êtwe affichée dans w'intewface u-utiwisateuw du nyavigateuw. mya
 
-Ceci est une [propriété localisable](/fr/docs/Mozilla/Add-ons/WebExtensions/Internationalization#internationalizing_manifest.json).
+c-ceci est une [pwopwiété wocawisabwe](/fw/docs/moziwwa/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json).
 
-## Exemple
+## exempwe
 
 ```json
-"description": "Remplace des images par des portraits de chats."
+"descwiption": "wempwace des images p-paw des powtwaits de chats."
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,26 +1,26 @@
 ---
-title: browserSettings.newTabPageOverride
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPageOverride
+titwe: bwowsewsettings.newtabpageovewwide
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewsettings/newtabpageovewwide
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour obtenir une chaîne représentant l'URL de la page "nouvel onglet": c'est-à-dire, la page chargée lorsque l'utilisateur ouvre une nouvelle onglet vide.
+un o-objet {{webextapiwef("types.bwowsewsetting", mya "bwowsewsetting")}} q-qui peut êtwe u-utiwisé pouw o-obteniw une chaîne w-wepwésentant w-w'uww de wa page "nouvew o-ongwet": c'est-à-diwe, 😳 wa page chawgée wowsque w'utiwisateuw ouvwe u-une nyouvewwe ongwet vide. XD
 
-Notez qu'il s'agit d'un paramètre en lecture seule.
+nyotez qu'iw s'agit d-d'un pawamètwe en wectuwe seuwe. :3
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Obtenir la valeur actuelle de la nouvelle URL de l'onglet :
+obteniw wa vaweuw a-actuewwe de wa nyouvewwe uww de w-w'ongwet :
 
 ```js
-browser.browserSettings.newTabPageOverride.get({}).then((result) => {
-  console.log(result.value);
+b-bwowsew.bwowsewsettings.newtabpageovewwide.get({}).then((wesuwt) => {
+  consowe.wog(wesuwt.vawue);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

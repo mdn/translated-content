@@ -1,37 +1,37 @@
 ---
-title: author
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/author
+titwe: authow
+swug: moziwwa/add-ons/webextensions/manifest.json/authow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td>chaîne de caractères</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
-      <td><pre class="brush: json">"author": "Walt Whitman"</pre></td>
-    </tr>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td>chaîne d-de cawactèwes</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
+      <td><pwe c-cwass="bwush: j-json">"authow": "wawt whitman"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-L'auteur de l'extension, destiné à être visualisé dans l'interface utilisateur du navigateur. Si la clé du [developpeur](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/developer) est fournie et qu'elle contient la propriété "nom", elle remplacera la clé de l'auteur. Il n'y a aucun moyen de spécifier plusieurs auteurs.
+w'auteuw de w'extension, (U ﹏ U) destiné à êtwe visuawisé dans w-w'intewface utiwisateuw du nyavigateuw. >_< si wa cwé d-du [devewoppeuw](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/devewopew) est fouwnie e-et qu'ewwe contient wa pwopwiété "nom", ewwe wempwacewa wa cwé d-de w'auteuw. rawr x3 iw ny'y a aucun moyen d-de spécifiew p-pwusieuws auteuws. mya
 
-Notez que Firefox ne supporte cette clé qu'à partir de la version 52 et que cette clé est obligatoire dans Microsoft Edge.
+nyotez que fiwefox nye suppowte cette cwé qu'à pawtiw de w-wa vewsion 52 et que cette cwé est obwigatoiwe dans micwosoft edge. nyaa~~
 
-## Exemple
+## exempwe
 
 ```json
-"author": "Walt Whitman"
+"authow": "wawt w-whitman"
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,58 +1,58 @@
 ---
-title: WebAssembly.validate()
-slug: WebAssembly/JavaScript_interface/validate_static
-l10n:
-  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
+titwe: webassembwy.vawidate()
+swug: webassembwy/javascwipt_intewface/vawidate_static
+w-w10n:
+  s-souwcecommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode statique **`WebAssembly.validate()`** permet de valider un [tableau typé](/fr/docs/Web/JavaScript/Guide/Typed_arrays) de <i lang="en">bytecode</i> WebAssembly et renvoie un booléen qui indique si le contenu du tableau forme un module WebAssembly valide (`true`) ou non (`false`).
+w-wa méthode s-statique **`webassembwy.vawidate()`** p-pewmet de v-vawidew un [tabweau t-typé](/fw/docs/web/javascwipt/guide/typed_awways) d-de <i wang="en">bytecode</i> webassembwy et wenvoie un boowéen qui indique si we contenu d-du tabweau fowme un moduwe webassembwy vawide (`twue`) o-ou nyon (`fawse`). mya
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-WebAssembly.validate(bufferSource)
+```js-nowint
+webassembwy.vawidate(buffewsouwce)
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `bufferSource`
-  - : Un [tableau typé](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypedArray) ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer) qui contient le <i lang="en">bytecode</i> du module qu'on souhaite valider.
+- `buffewsouwce`
+  - : un [tabweau typé](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typedawway) ou un [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew) q-qui contient we <i wang="en">bytecode</i> d-du moduwe qu'on s-souhaite vawidew. ^^
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un booléen qui indique si la source est un code WebAssembly valide (`true`) ou non (`false`).
+un boowéen qui indique si wa souwce e-est un code webassembwy vawide (`twue`) ou nyon (`fawse`). 😳😳😳
 
-### Exceptions
+### exceptions
 
-Si la valeur passée en argument n'est pas un tableau typé ou un [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer), une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
+si wa vaweuw passée e-en awgument ny'est pas un tabweau t-typé ou un [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew), mya une e-exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) s-sewa wevée. 😳
 
-## Exemples
+## e-exempwes
 
-Dans l'exemple suivant, (cf. le fichier `validate.html` du [code source](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/validate.html), ainsi que [l'exemple <i lang="en">live</i>](https://mdn.github.io/webassembly-examples/js-api-examples/validate.html)), on récupère un module .wasm et on le convertit en un tableau typé. Ensuite, on appelle la méthode `validate()` afin de vérifier si le module est valide.
+dans w'exempwe suivant, -.- (cf. we f-fichiew `vawidate.htmw` du [code souwce](https://github.com/mdn/webassembwy-exampwes/bwob/main/js-api-exampwes/vawidate.htmw), 🥺 a-ainsi que [w'exempwe <i wang="en">wive</i>](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/vawidate.htmw)), o.O on wécupèwe un moduwe .wasm et on we convewtit en un t-tabweau typé. /(^•ω•^) ensuite, nyaa~~ on appewwe w-wa méthode `vawidate()` a-afin d-de véwifiew si we moduwe est vawide. nyaa~~
 
 ```js
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
+fetch("simpwe.wasm")
+  .then((wesponse) => wesponse.awwaybuffew())
   .then((bytes) => {
-    const valid = WebAssembly.validate(bytes);
-    console.log(
-      `The given bytes are ${valid ? "" : "not "}a valid Wasm module`,
+    c-const v-vawid = webassembwy.vawidate(bytes);
+    consowe.wog(
+      `the g-given bytes awe ${vawid ? "" : "not "}a v-vawid wasm moduwe`, :3
     );
   });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw w-webassembwy](/fw/docs/webassembwy)
+- [wes concepts w-wewatifs à webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api j-javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

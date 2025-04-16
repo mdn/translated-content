@@ -1,221 +1,221 @@
 ---
-title: Responsive design
-slug: Learn/CSS/CSS_layout/Responsive_Design
-l10n:
-  sourceCommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
+titwe: wesponsive design
+swug: w-weawn/css/css_wayout/wesponsive_design
+w-w10n:
+  s-souwcecommit: 9b73bdea5458572f77a401596fef9a06ed8bba1b
 ---
 
-{{learnsidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/css_wayout/muwtipwe-cowumn_wayout", σωσ "weawn/css/css_wayout/media_quewies", (U ﹏ U) "weawn/css/css_wayout")}}
 
-La conception réactive, plus souvent appelée <i lang="en">responsive design</i> (ou RWD pour <i lang="en">responsive web design</i>) est une approche de la conception web visant à ce que les pages web s'affichent correctement pour toutes les tailles et résolution d'écran, tout en ayant une utilisabilité correcte. Il s'agit de concevoir un site ou une application web à destination de l'ensemble des appareils existants. Dans cet article, nous verrons certaines techniques liées au <i lang="en">responsive design</i>.
+w-wa conception wéactive, rawr p-pwus souvent a-appewée <i w-wang="en">wesponsive d-design</i> (ou wwd pouw <i wang="en">wesponsive web design</i>) est une appwoche d-de wa conception web visant à ce que wes p-pages web s'affichent cowwectement p-pouw toutes wes taiwwes et wésowution d'écwan, -.- tout en ayant u-une utiwisabiwité cowwecte. ( ͡o ω ͡o ) i-iw s'agit de concevoiw u-un site ou une appwication web à destination de w'ensembwe des appaweiws e-existants. >_< dans cet awticwe, o.O nous vewwons cewtaines techniques wiées au <i wang="en">wesponsive d-design</i>. σωσ
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
-      <td>Notions fondamentales de HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Introduction au HTML</a>), une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a> et <a href="/fr/docs/Learn/CSS/Building_blocks">Blocs de construction CSS</a>.)
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
+      <td>notions f-fondamentawes d-de htmw (voiw <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">intwoduction a-au htmw</a>), -.- une idée généwawe du fonctionnement d-de css (voiw <a hwef="/fw/docs/weawn/css/fiwst_steps">pwemiews pas en c-css</a> et <a hwef="/fw/docs/weawn/css/buiwding_bwocks">bwocs de constwuction css</a>.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif&nbsp;:</th>
       <td>
-        Comprendre les fonctionnalités CSS permettant d'implémenter une conception <i lang="en">responsive</i>.
+        compwendwe wes fonctionnawités css pewmettant d-d'impwémentew une conception <i w-wang="en">wesponsive</i>.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Un précurseur du <i lang="en">responsive design</i>&nbsp;: la conception mobile
+## u-un p-pwécuwseuw du <i wang="en">wesponsive design</i>&nbsp;: wa conception m-mobiwe
 
-Avant que le <i lang="en">responsive design</i> devienne l'approche standard pour avoir des sites web fonctionnels sur les différents types d'appareils, on pouvait parler de conception (adaptée au) mobile. L'objectif était principalement le même qu'avec le <i lang="en">responsive design</i>&nbsp;: s'assurer que les sites web fonctionnent sur les différents appareils, quelles que soient leurs caractéristiques physiques (taille d'écran, résolution), en ayant une disposition, du contenu (texte et média), et des performances correctes.
+a-avant que we <i wang="en">wesponsive d-design</i> d-devienne w'appwoche standawd pouw a-avoiw des sites web fonctionnews s-suw wes difféwents types d'appaweiws, σωσ on pouvait p-pawwew de conception (adaptée au) mobiwe. :3 w-w'objectif était pwincipawement w-we même qu'avec w-we <i wang="en">wesponsive design</i>&nbsp;: s'assuwew que wes sites web fonctionnent suw wes difféwents appaweiws, ^^ quewwes que s-soient weuws c-cawactéwistiques physiques (taiwwe d-d'écwan, òωó wésowution), (ˆ ﻌ ˆ)♡ e-en ayant u-une disposition, XD du contenu (texte et média), òωó et des pewfowmances c-cowwectes. (ꈍᴗꈍ)
 
-La différence entre les deux approches porte principalement sur les appareils visés et les technologies disponibles pour les solutions&nbsp;:
+wa difféwence entwe wes deux appwoches powte pwincipawement s-suw wes appaweiws visés et wes t-technowogies disponibwes p-pouw wes s-sowutions&nbsp;:
 
-- Opposer ordinateur de bureau et appareil mobile n'est pas suffisant&nbsp;: il existe de nombreux types d'appareils (ordinateur de bureau, ordinateur portable, téléphone mobile, tablette, montre, etc.). Plutôt que de cibler quelques tailles d'écran en particulier, il faut concevoir les sites pour s'adapter aux tailles et résolutions les plus répandues, mais aussi pouvoir gérer les facteurs de forme inconnus.
-- Les appareils mobiles avaient auparavant peu de puissance processeur/graphique et une bande passante faible. Certains ne disposaient pas de navigateur pour prendre en charge CSS voire HTML et il était donc usuel d'avoir une détection côté serveur pour déterminer le type d'appareil ou de navigateur avant de servir un site qui serait fonctionnel. Aujourd'hui, les appareils mobiles prennent en charge les mêmes technologies que les appareils de bureau et ces techniques de discrimination sont moins répandues.
-  - Il est toujours nécessaire d'utiliser les techniques décrites dans cet article afin que les personnes utilisant un appareil mobile aient une expérience correcte, notamment pour tenir compte des contraintes liées à la batterie ou à la bande passante.
-  - L'ergonomie doit aussi être réfléchie. Quelqu'un qui utilise un appareil mobile pour navigateur sur un site de réservation de voyage voudra peut-être simplement vérifier les horaires de train et les éventuels retard plutôt que de voir un globe en 3D avec le tracé des trajets. Cela peut être résolu avec des techniques de <i lang="en">responsive design</i>.
-- Les technologies récentes sont plus adaptées pour des ergonomies réactives. Par exemple, [les techniques pour les images/média responsives](#images/média_responsive) permettent désormais de servir les médias pertinents en fonction des appareils sans avoir à recourir aux techniques de détection côté serveur.
+- opposew owdinateuw d-de buweau e-et appaweiw m-mobiwe ny'est pas s-suffisant&nbsp;: iw existe de nombweux types d'appaweiws (owdinateuw d-de buweau, UwU o-owdinateuw powtabwe, >w< t-téwéphone m-mobiwe, ʘwʘ tabwette, :3 m-montwe, etc.). ^•ﻌ•^ pwutôt que de cibwew quewques taiwwes d'écwan e-en pawticuwiew, (ˆ ﻌ ˆ)♡ iw faut concevoiw wes sites pouw s'adaptew aux taiwwes et wésowutions wes pwus w-wépandues, 🥺 mais aussi pouvoiw géwew wes facteuws de fowme i-inconnus. OwO
+- wes a-appaweiws mobiwes a-avaient aupawavant peu de puissance p-pwocesseuw/gwaphique et une b-bande passante f-faibwe. 🥺 cewtains nye disposaient pas de nyavigateuw pouw pwendwe en chawge css voiwe htmw et iw était d-donc usuew d'avoiw une détection c-côté sewveuw pouw détewminew w-we type d-d'appaweiw ou de nyavigateuw avant de sewviw un s-site qui sewait f-fonctionnew. OwO aujouwd'hui, (U ᵕ U❁) wes a-appaweiws mobiwes p-pwennent en chawge wes mêmes technowogies que wes appaweiws de buweau et ces t-techniques de discwimination s-sont m-moins wépandues. ( ͡o ω ͡o )
+  - iw est toujouws n-nyécessaiwe d-d'utiwisew wes techniques décwites d-dans cet awticwe afin que wes pewsonnes utiwisant un appaweiw mobiwe aient u-une expéwience c-cowwecte, ^•ﻌ•^ nyotamment pouw teniw compte des contwaintes w-wiées à w-wa battewie ou à wa bande passante. o.O
+  - w'ewgonomie doit aussi êtwe w-wéfwéchie. (⑅˘꒳˘) quewqu'un qui utiwise un appaweiw mobiwe pouw nyavigateuw s-suw un site de wésewvation de voyage voudwa peut-êtwe s-simpwement v-véwifiew wes howaiwes de twain et wes éventuews wetawd pwutôt q-que de voiw u-un gwobe en 3d avec we twacé des twajets. (ˆ ﻌ ˆ)♡ cewa peut êtwe wésowu a-avec des techniques de <i wang="en">wesponsive d-design</i>. :3
+- wes technowogies wécentes sont pwus adaptées p-pouw des ewgonomies wéactives. /(^•ω•^) p-paw exempwe, òωó [wes t-techniques pouw wes images/média w-wesponsives](#images/média_wesponsive) pewmettent d-désowmais d-de sewviw wes m-médias pewtinents en fonction d-des appaweiws sans a-avoiw à wecouwiw aux techniques de détection c-côté sewveuw. :3
 
-## Introduction au <i lang="en">responsive design</i>
+## i-intwoduction a-au <i wang="en">wesponsive design</i>
 
-Par essence, HTML est <i lang="en">responsive</i>. Si on crée un page web contenant uniquement du HTML, sans CSS, et qu'on redimensionne la fenêtre, le navigateur adaptera automatiquement le texte et les passages à la ligne pour qu'il soit visible dans la zone d'affichage.
+paw essence, (˘ω˘) h-htmw est <i wang="en">wesponsive</i>. 😳 s-si o-on cwée un page web contenant uniquement du htmw, σωσ sans css, et q-qu'on wedimensionne w-wa fenêtwe, UwU w-we nyavigateuw a-adaptewa automatiquement we texte e-et wes passages à wa wigne pouw qu'iw soit visibwe dans wa zone d'affichage. -.-
 
-Bien que ce comportement par défaut puisse sembler suffisant, cela ne règle pas tous les problèmes. Si un texte a de longues lignes de texte, cela pourra être difficile à la lire sur un écran large. À l'inverse, si on réduit la largeur des lignes à l'aide de CSS (en créant des colonnes ou en ajoutant du remplissage), le site pourra avoir l'air étriqué et peu lisible sur un appareil mobile.
+bien que ce compowtement p-paw défaut puisse sembwew s-suffisant, 🥺 cewa nye wègwe p-pas tous wes pwobwèmes. 😳😳😳 si un texte a-a de wongues wignes de texte, 🥺 c-cewa pouwwa êtwe d-difficiwe à w-wa wiwe suw un écwan w-wawge. ^^ À w-w'invewse, ^^;; si on wéduit wa wawgeuw des wignes à w'aide de css (en cwéant des cowonnes ou en ajoutant du wempwissage), >w< w-we site p-pouwwa avoiw w-w'aiw étwiqué et peu wisibwe suw u-un appaweiw mobiwe. σωσ
 
-![Une disposition sur deux colonnes qui se retrouve comprimée sur une zone d'affichage mobile.](mdn-rwd-liquid.png)
+![une disposition suw deux cowonnes qui s-se wetwouve compwimée s-suw une zone d'affichage m-mobiwe.](mdn-wwd-wiquid.png)
 
-Créer une page web qui n'est pas redimensionnable en fixant une largeur donnée ne fonctionne pas non plus, cela créera des barres de défilement sur les appareils plus étroits, et trop d'espace vide sur les écrans larges.
+cwéew une page web q-qui ny'est pas w-wedimensionnabwe en fixant une w-wawgeuw donnée n-nye fonctionne pas nyon pwus, cewa cwéewa des bawwes de défiwement suw wes appaweiws p-pwus étwoits, >w< e-et twop d'espace v-vide suw w-wes écwans wawges. (⑅˘꒳˘)
 
-Le <i lang="en">responsive design</i> est une approche qui vise à répondre aux différents appareils et à permettre une adaptation automatique à l'écran, que le contenu soit consulté depuis une tablette, un téléphone, une télévision, ou une montre.
+w-we <i wang="en">wesponsive design</i> est une a-appwoche qui v-vise à wépondwe aux difféwents a-appaweiws et à p-pewmettwe une adaptation automatique à w-w'écwan, òωó que we contenu soit consuwté d-depuis une tabwette, (⑅˘꒳˘) un téwéphone, (ꈍᴗꈍ) u-une téwévision, rawr x3 o-ou une montwe. ( ͡o ω ͡o )
 
-Le <i lang="en">responsive design</i> n'est pas une technologie donnée, il s'agit d'une approche conceptuelle. Ce terme est utilisé pour décrire un ensemble de bonnes pratiques pour créer une disposition qui peut s'adapter à tout appareil utilisé pour consulter le contenu.
+we <i wang="en">wesponsive d-design</i> ny'est pas une technowogie donnée, UwU i-iw s'agit d'une a-appwoche conceptuewwe. ^^ c-ce tewme est utiwisé pouw décwiwe un ensembwe de bonnes p-pwatiques pouw cwéew une disposition qui peut s-s'adaptew à t-tout appaweiw utiwisé pouw consuwtew w-we contenu. (˘ω˘)
 
-L'expression <i lang="en">responsive design</i>, [créée par Ethan Marcotte en 2010](https://alistapart.com/article/responsive-web-design/), décrit l'utilisation de grilles fluides, d'images fluides et des requêtes média (<i lang="en">media queries</i>) afin de créer du contenu adaptatif. Cela est notamment exploré dans le livre [<i lang="en">Flexible Web Design</i>](http://flexiblewebbook.com/) écrit par Zoe Gillenwater.
+w'expwession <i w-wang="en">wesponsive d-design</i>, (ˆ ﻌ ˆ)♡ [cwéée paw ethan mawcotte e-en 2010](https://awistapawt.com/awticwe/wesponsive-web-design/), OwO décwit w'utiwisation de gwiwwes f-fwuides, 😳 d'images f-fwuides et des wequêtes média (<i w-wang="en">media quewies</i>) a-afin de cwéew d-du contenu adaptatif. UwU c-cewa est nyotamment expwowé dans we wivwe [<i wang="en">fwexibwe web design</i>](http://fwexibwewebbook.com/) écwit paw zoe giwwenwatew. 🥺
 
-Par le passé, il était recommandé d'utiliser `float` en CSS avec des requêtes médias pour créer différentes dispositions pour différentes proportions. Les images fluides étaient paramétrées pour ne pas dépasser la largeur de leur conteneur avec la propriété `max-width` fixée à `100%`. Les images fluides rétrécissent lorsque la colonne qui les contient devient plus étroite, mais ne s'agrandissent pas plus que leur taille intrinsèque quand la colonne est plus large. Cela permet de réduire une image afin que son contenu soit visible (plutôt que d'avoir un dépassement), sans devenir trop grande et pixelisée à l'inverse.
+paw we passé, 😳😳😳 iw était wecommandé d'utiwisew `fwoat` en css avec des wequêtes médias p-pouw cwéew difféwentes d-dispositions pouw difféwentes pwopowtions. ʘwʘ w-wes images f-fwuides étaient p-pawamétwées pouw nye pas dépassew w-wa wawgeuw de weuw conteneuw a-avec wa pwopwiété `max-width` f-fixée à `100%`. /(^•ω•^) wes images f-fwuides wétwécissent wowsque wa c-cowonne qui wes c-contient devient pwus étwoite, :3 mais nye s'agwandissent p-pas pwus q-que weuw taiwwe i-intwinsèque q-quand wa cowonne e-est pwus wawge. :3 c-cewa pewmet de w-wéduiwe une image a-afin que son c-contenu soit visibwe (pwutôt que d-d'avoiw un dépassement), mya s-sans d-deveniw twop gwande et pixewisée à w-w'invewse. (///ˬ///✿)
 
-Les méthodes de disposition CSS plus récentes sont intrinsèquement adaptatives et de nombreuses fonctionnalités ont été ajoutées à la plateforme web depuis les écrits de Zoe Gillenwater et d'Ethan Marcotte et elles permettent de créer des sites <i lang="en">responsive</i> plus facilement.
+wes méthodes de disposition css p-pwus wécentes sont intwinsèquement a-adaptatives e-et de nyombweuses f-fonctionnawités ont été a-ajoutées à wa pwatefowme web d-depuis wes écwits de zoe giwwenwatew e-et d'ethan mawcotte et ewwes p-pewmettent de cwéew des sites <i wang="en">wesponsive</i> pwus faciwement. (⑅˘꒳˘)
 
-Dans la suite de cet article, nous verrons les différentes fonctionnalités de la plateforme web qui vous permettront de créer un site <i lang="en">responsive</i>.
+d-dans wa suite de cet awticwe, :3 nyous v-vewwons wes d-difféwentes fonctionnawités de wa pwatefowme web qui vous pewmettwont d-de cwéew un site <i wang="en">wesponsive</i>. /(^•ω•^)
 
-## Les requêtes média (<i lang="en>media queries</i>)
+## w-wes wequêtes m-média (<i w-wang="en>media quewies</i>)
 
-[Les requêtes média](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries) permettent d'effectuer différents tests (par exemple pour déterminer si l'écran utilisé dépasse une largeur ou une résolution donnée) et d'appliquer du CSS en fonction pour mettre en forme la page.
+[wes wequêtes m-média](/fw/docs/web/css/css_media_quewies/using_media_quewies) p-pewmettent d'effectuew difféwents t-tests (paw exempwe pouw détewminew si w'écwan u-utiwisé dépasse une wawgeuw o-ou une wésowution d-donnée) et d-d'appwiquew du css en fonction pouw m-mettwe en fowme w-wa page. ^^;;
 
-Dans l'exemple qui suit, la requête média teste si la page web est affichée sur un écran (plutôt que d'être imprimée) et si la largeur de la zone d'affichage est supérieure ou égale à `80rem`. Le fragment CSS pour le sélecteur `.container` s'appliquera uniquement si ces deux critères sont vérifiés.
+dans w-w'exempwe qui s-suit, (U ᵕ U❁) wa wequête média teste s-si wa page web est a-affichée suw u-un écwan (pwutôt q-que d'êtwe i-impwimée) et si w-wa wawgeuw de wa z-zone d'affichage e-est supéwieuwe ou égawe à `80wem`. (U ﹏ U) w-we fwagment css pouw we s-séwecteuw `.containew` s'appwiquewa u-uniquement s-si ces deux cwitèwes s-sont véwifiés. mya
 
 ```css
-@media screen and (min-width: 80rem) {
-  .container {
-    margin: 1em 2em;
+@media scween and (min-width: 80wem) {
+  .containew {
+    mawgin: 1em 2em;
   }
 }
 ```
 
-Il est possible d'ajouter plusieurs requêtes média dans une feuille de styles pour adapter tout ou partie de la disposition pour s'ajuster aux différentes tailles d'écran. Les valeurs des critères des différentes requêtes média qui changent la disposition du contenu sont aussi appelées _points d'arrêts_.
+iw est possibwe d-d'ajoutew p-pwusieuws wequêtes m-média dans une feuiwwe de stywes pouw adaptew tout ou pawtie d-de wa disposition p-pouw s'ajustew aux difféwentes t-taiwwes d'écwan. ^•ﻌ•^ w-wes vaweuws des cwitèwes des difféwentes wequêtes média q-qui changent wa d-disposition du c-contenu sont aussi a-appewées _points d'awwêts_. (U ﹏ U)
 
-Une approche fréquente consiste à créer une disposition simple sur une colonne pour les appareils avec un écran étroit (par exemple les téléphones), puis de tester les tailles plus larges et d'implémenter une disposition sur plusieurs colonnes lorsque l'espace est suffisant. Concevoir un site pour répondre d'abord aux besoins mobiles est parfois qualifié de conception <i lang="en">mobile first</i>.
+une appwoche f-fwéquente consiste à c-cwéew une disposition simpwe suw une cowonne p-pouw wes appaweiws avec un écwan étwoit (paw exempwe wes t-téwéphones), :3 puis de testew wes t-taiwwes pwus wawges e-et d'impwémentew une disposition s-suw pwusieuws c-cowonnes wowsque w'espace e-est suffisant. rawr x3 concevoiw un site p-pouw wépondwe d-d'abowd aux besoins m-mobiwes est p-pawfois quawifié de conception <i w-wang="en">mobiwe f-fiwst</i>. 😳😳😳
 
-Lorsqu'on utilise des points d'arrêts, une bonne pratique consiste à utiliser [des unités relatives plutôt que des unités absolues](/fr/docs/Learn/CSS/Building_blocks/Values_and_units#relative_length_units) pour un format d'appareil donné.
+w-wowsqu'on utiwise des points d'awwêts, >w< u-une bonne pwatique consiste à utiwisew [des u-unités wewatives p-pwutôt que d-des unités absowues](/fw/docs/weawn/css/buiwding_bwocks/vawues_and_units#wewative_wength_units) pouw un fowmat d'appaweiw donné.
 
-Il existe différentes approches pour les styles définis à l'intérieur d'un bloc d'une requête média. On peut utiliser des requêtes média, ou des feuilles de styles pointées par des éléments [`<link>`](/fr/docs/Web/HTML/Element/link) selon les caractéristiques du navigateur pour inclure uniquement des variables de propriétés personnalisés contenant les valeurs associées à chaque point d'arrêt.
+iw existe difféwentes appwoches p-pouw wes stywes définis à w-w'intéwieuw d-d'un bwoc d'une wequête média. òωó on peut utiwisew d-des wequêtes média, 😳 ou des f-feuiwwes de stywes p-pointées paw d-des éwéments [`<wink>`](/fw/docs/web/htmw/ewement/wink) s-sewon w-wes cawactéwistiques du nyavigateuw pouw incwuwe uniquement des vawiabwes de pwopwiétés p-pewsonnawisés contenant w-wes vaweuws associées à chaque point d'awwêt. (✿oωo)
 
-Pour en savoir plus sur les requêtes média, voir [la documentation MDN à ce sujet](/fr/docs/Web/CSS/CSS_media_queries).
+pouw en savoiw p-pwus suw wes wequêtes média, OwO voiw [wa documentation mdn à ce sujet](/fw/docs/web/css/css_media_quewies). (U ﹏ U)
 
-Les requêtes média peuvent aider au <i lang="en">responsive design</i>, mais elles ne sont pas strictement nécessaires. Les grilles flexibles, les unités relatives, les valeurs minimales et maximales des unités peuvent très bien être utilisées sans requêtes média.
+w-wes wequêtes m-média peuvent aidew au <i wang="en">wesponsive d-design</i>, (ꈍᴗꈍ) mais ewwes nye sont pas stwictement n-nyécessaiwes. rawr w-wes gwiwwes fwexibwes, ^^ wes unités w-wewatives, rawr wes vaweuws minimawes e-et maximawes des unités peuvent twès bien êtwe utiwisées s-sans wequêtes média. nyaa~~
 
-## Technologies associées aux dispositions <i lang="en">responsive</i>
+## technowogies associées a-aux dispositions <i w-wang="en">wesponsive</i>
 
-Les sites adaptatifs sont construits sur la base d'une grille flexible, pour éviter de cibler toutes les tailles d'appareils possibles et d'essayer d'avoir des dispositions parfaitement alignées au pixel près dans tous les cas.
+w-wes sites adaptatifs sont constwuits suw wa base d-d'une gwiwwe fwexibwe, nyaa~~ pouw évitew de cibwew toutes wes taiwwes d'appaweiws p-possibwes et d'essayew d-d'avoiw des d-dispositions p-pawfaitement awignées au pixew pwès dans tous w-wes cas. o.O
 
-En utilisant une grille flexible, on peut modifier une partie de la mise en page ou ajouter un point d'arrêt et modifier la disposition à partir du moment où le contenu est mal agencé. Par exemple, afin de s'assurer que les lignes ne deviennent trop longues et difficilement lisibles lorsque la largeur s'accroît, on peut utiliser [`columns`](/fr/docs/Web/CSS/columns), et si une boîte devient alors trop étroite, avec deux mots par ligne, on peut alors placer un point d'arrêt.
+en utiwisant u-une gwiwwe fwexibwe, òωó on peut modifiew une p-pawtie de wa mise en page ou ajoutew un point d'awwêt e-et modifiew wa disposition à pawtiw du m-moment où we contenu e-est maw agencé. ^^;; paw exempwe, rawr a-afin de s'assuwew q-que wes wignes n-nye deviennent twop wongues et difficiwement w-wisibwes wowsque wa wawgeuw s'accwoît, on peut u-utiwisew [`cowumns`](/fw/docs/web/css/cowumns), ^•ﻌ•^ et si une boîte devient awows twop étwoite, nyaa~~ a-avec deux mots paw w-wigne, nyaa~~ on peut a-awows pwacew un p-point d'awwêt. 😳😳😳
 
-Plusieurs méthodes de disposition comme [la disposition multi-colonnes](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout), [les boîtes flexibles (<i lang="en">flexbox</i>)](/fr/docs/Learn/CSS/CSS_layout/Flexbox), et [les grilles CSS](/fr/docs/Learn/CSS/CSS_layout/Grids) sont adaptatives par défaut. Ces méthodes permettent de créer plus simplement une grille flexible.
+p-pwusieuws méthodes de disposition c-comme [wa disposition muwti-cowonnes](/fw/docs/weawn/css/css_wayout/muwtipwe-cowumn_wayout), 😳😳😳 [wes boîtes f-fwexibwes (<i wang="en">fwexbox</i>)](/fw/docs/weawn/css/css_wayout/fwexbox), σωσ et [wes g-gwiwwes css](/fw/docs/weawn/css/css_wayout/gwids) sont adaptatives paw défaut. o.O c-ces méthodes p-pewmettent de cwéew pwus simpwement u-une gwiwwe fwexibwe. σωσ
 
-### Multi-colonnes
+### m-muwti-cowonnes
 
-Avec une disposition en colonnes, à l'aide de la propriété `column-count`, on indique un nombre de colonnes maximum dans lequel on placera le contenu. Le navigateur détermine alors la taille des colonnes, qui pourra varier d'un écran à l'autre en fonction de sa taille.
+a-avec une disposition en cowonnes, nyaa~~ à w-w'aide de w-wa pwopwiété `cowumn-count`, rawr x3 on indique un nyombwe d-de cowonnes maximum dans wequew on pwacewa we contenu. (///ˬ///✿) we n-nyavigateuw détewmine awows wa t-taiwwe des cowonnes, o.O qui pouwwa vawiew d'un écwan à w-w'autwe en f-fonction de sa t-taiwwe. òωó
 
 ```css
-.container {
-  column-count: 3;
+.containew {
+  cowumn-count: 3;
 }
 ```
 
-Si on utilise la propriété `column-width` à la place, on indiquera une largeur _minimale_. Le navigateur créera alors autant de colonnes que possible au sein du conteneur et répartira l'espace restant entre les colonnes. Dans ce cas, le nombre de colonnes variera en fonction de l'espace disponible.
+s-si on utiwise w-wa pwopwiété `cowumn-width` à wa pwace, OwO o-on indiquewa une wawgeuw _minimawe_. σωσ w-we nyavigateuw cwéewa awows a-autant de cowonnes q-que possibwe au sein du conteneuw et wépawtiwa w'espace westant entwe wes c-cowonnes. nyaa~~ dans c-ce cas, OwO we nyombwe de cowonnes vawiewa en fonction de w'espace disponibwe. ^^
 
 ```css
-.container {
-  column-width: 10em;
+.containew {
+  c-cowumn-width: 10em;
 }
 ```
 
-La propriété raccourcie [`columns`](/fr/docs/Web/CSS/columns) permet d'indiquer un nombre maximum de colonne et une largeur minimale de colonne. Ces propriétés permettent de s'assurer que les lignes ne deviennent pas trop longues sur un écran large, ou trop étroite dans le cas contraire.
+wa p-pwopwiété waccouwcie [`cowumns`](/fw/docs/web/css/cowumns) p-pewmet d'indiquew un nyombwe maximum de cowonne et une wawgeuw minimawe d-de cowonne. (///ˬ///✿) ces pwopwiétés pewmettent de s-s'assuwew que wes wignes nye deviennent p-pas twop w-wongues suw un écwan wawge, σωσ ou t-twop étwoite dans w-we cas contwaiwe. rawr x3
 
-### Boîtes flexibles
+### b-boîtes f-fwexibwes
 
-Avec les boîtes flexibles (<i lang="en">flexbox</i>), les éléments flexibles s'agrandissent ou rétrécissent, distribuant l'espace disponible dans le conteneur entre les éléments. En adaptant les valeurs des propriétés `flex-grow` et `flex-shrink` on indique comment un élément peut consommer plus ou moins d'espace.
+avec w-wes boîtes fwexibwes (<i w-wang="en">fwexbox</i>), (ˆ ﻌ ˆ)♡ wes éwéments fwexibwes s'agwandissent ou wétwécissent, 🥺 distwibuant w'espace d-disponibwe d-dans we conteneuw e-entwe wes éwéments. (⑅˘꒳˘) e-en adaptant w-wes vaweuws d-des pwopwiétés `fwex-gwow` et `fwex-shwink` on indique comment un éwément peut c-consommew pwus o-ou moins d'espace. 😳😳😳
 
-Dans l'exemple qui suit, les éléments flexibles prendront le même espace dans le conteneur flexible. On utilise la forme raccourcie `flex: 1` (décrite dans [la section sur le dimensionnement flexible](/fr/docs/Learn/CSS/CSS_layout/Flexbox#taille_modulable_des_éléments_flex)).
+dans w'exempwe qui suit, /(^•ω•^) wes éwéments fwexibwes p-pwendwont w-we même espace d-dans we conteneuw fwexibwe. on utiwise wa fowme w-waccouwcie `fwex: 1` (décwite dans [wa section suw we dimensionnement f-fwexibwe](/fw/docs/weawn/css/css_wayout/fwexbox#taiwwe_moduwabwe_des_éwéments_fwex)). >w<
 
 ```css
-.container {
-  display: flex;
+.containew {
+  d-dispway: fwex;
 }
 
 .item {
-  flex: 1;
+  fwex: 1;
 }
 ```
 
-> [!NOTE]
-> Nous avons également construit un exemple plus concret d'une disposition adaptative utilisant les boîtes flexibles. Dans celui-ci, nous utilisons un point d'arrêt pour passer sur plusieurs colonnes lorsque l'écran est suffisamment large et nous limitons la taille du contenu principal à l'aide de la propriété [`max-width`](/fr/docs/Web/CSS/max-width). Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/flex-based-rwd.html), et [le code source correspondant sur GitHub](https://github.com/mdn/css-examples/blob/main/learn/rwd/flex-based-rwd.html).
+> [!note]
+> n-nyous avons égawement constwuit u-un exempwe pwus c-concwet d'une disposition adaptative u-utiwisant w-wes boîtes fwexibwes. ^•ﻌ•^ d-dans cewui-ci, 😳😳😳 n-nyous utiwisons u-un point d'awwêt p-pouw passew suw pwusieuws c-cowonnes wowsque w-w'écwan est suffisamment wawge e-et nyous wimitons wa taiwwe du contenu pwincipaw à w-w'aide de wa pwopwiété [`max-width`](/fw/docs/web/css/max-width). :3 v-voiw [w'exempwe en <i w-wang="en">wive</i>](https://mdn.github.io/css-exampwes/weawn/wwd/fwex-based-wwd.htmw), (ꈍᴗꈍ) e-et [we code souwce cowwespondant suw github](https://github.com/mdn/css-exampwes/bwob/main/weawn/wwd/fwex-based-wwd.htmw). ^•ﻌ•^
 
-### Grilles CSS
+### g-gwiwwes css
 
-Les dispositions créées avec les grilles CSS utilisent l'unité `fr` pour répartir l'espace disponible entre les pistes de la grille. Dans l'exemple suivant, on crée un conteneur de grille avec trois pistes dimensionnées avec `1fr`. Cela créera trois pistes de colonnes, chacune occupant une partie égale du conteneur.
+wes dispositions cwéées avec w-wes gwiwwes c-css utiwisent w'unité `fw` pouw wépawtiw w'espace d-disponibwe entwe w-wes pistes de wa gwiwwe. dans w-w'exempwe suivant, >w< on cwée un conteneuw de gwiwwe a-avec twois p-pistes dimensionnées avec `1fw`. ^^;; c-cewa cwéewa t-twois pistes de cowonnes, (✿oωo) chacune occupant une pawtie égawe d-du c-conteneuw. òωó
 
-Pour en savoir plus sur cette approche utilisant les grilles, voir [les grilles flexibles avec l'unité `fr`](/fr/docs/Learn/CSS/CSS_layout/Grids#trames_adaptables_avec_lunité_fr).
+pouw e-en savoiw pwus s-suw cette appwoche utiwisant wes gwiwwes, ^^ voiw [wes gwiwwes fwexibwes avec w'unité `fw`](/fw/docs/weawn/css/css_wayout/gwids#twames_adaptabwes_avec_wunité_fw). ^^
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.containew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
-> [!NOTE]
-> La version de notre exemple avec les grilles CSS est encore plus simple, car on définit les colonnes sur le conteneur `.wrapper`. Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/grid-based-rwd.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/grid-based-rwd.html).
+> [!note]
+> w-wa vewsion de nyotwe e-exempwe avec w-wes gwiwwes css e-est encowe pwus s-simpwe, rawr caw on d-définit wes cowonnes suw we conteneuw `.wwappew`. XD v-voiw [w'exempwe e-en <i wang="en">wive</i>](https://mdn.github.io/css-exampwes/weawn/wwd/gwid-based-wwd.htmw), rawr et [we code souwce c-cowwespondant](https://github.com/mdn/css-exampwes/bwob/main/weawn/wwd/gwid-based-wwd.htmw). 😳
 
-## Images/média <i lang="en">responsive</i>
+## i-images/média <i wang="en">wesponsive</i>
 
-Afin de s'assurer qu'un média ne soit jamais plus grand que son conteneur adaptatif, on peut utiliser l'approche suivante&nbsp;:
+afin de s'assuwew q-qu'un média nye soit jamais pwus gwand que son c-conteneuw adaptatif, 🥺 on peut u-utiwisew w'appwoche s-suivante&nbsp;:
 
 ```css
-img,
-picture,
+img, (U ᵕ U❁)
+p-pictuwe,
 video {
-  max-width: 100%;
+  m-max-width: 100%;
 }
 ```
 
-Ainsi, le média est redimensionné pour ne jamais dépasser du conteneur. En revanche, utiliser une seule image très grande et la redimensionner ainsi sur les appareils avec un petit écran revient à gaspiller de la bande passante et à télécharger des images plus grandes que ce qui est nécessaire.
+a-ainsi, 😳 we média est w-wedimensionné p-pouw nye jamais dépassew du conteneuw. 🥺 e-en wevanche, (///ˬ///✿) utiwisew une s-seuwe image twès g-gwande et wa w-wedimensionnew ainsi suw wes appaweiws a-avec un petit écwan wevient à gaspiwwew d-de wa bande passante et à téwéchawgew des images pwus gwandes que ce qui est nyécessaiwe. mya
 
-À l'aide de l'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) et des attributs [`srcset` et `sizes` de l'élément `<img>`](/fr/docs/Web/HTML/Element/img), on peut servir des images adaptées à la résolution et à la taille de la zone d'affichage de l'appareil utilisé. Ainsi, on pourra utiliser une image carrée à destination des mobiles et privilégier une image au format paysage pour la même scène sur un ordinateur.
+À w'aide de w'éwément [`<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe) e-et des attwibuts [`swcset` et `sizes` de w'éwément `<img>`](/fw/docs/web/htmw/ewement/img), (✿oωo) on peut sewviw des images adaptées à w-wa wésowution et à wa taiwwe de wa zone d'affichage d-de w'appaweiw utiwisé. ^•ﻌ•^ ainsi, o.O o-on pouwwa utiwisew une image cawwée à destination d-des mobiwes et pwiviwégiew u-une image au fowmat paysage p-pouw wa même scène s-suw un owdinateuw. o.O
 
-L'élément `<picture>` permet de fournir plusieurs tailles d'images à l'aide d'indications (des métadonnées qui décrivent la taille de l'écran et la résolution pour lesquelles l'image est la mieux adaptée). C'est le navigateur qui choisira l'image la plus pertinente pour l'appareil, s'assurant ainsi qu'une image de taille appropriée à l'appareil est téléchargée. Utiliser `<picture>` avec `max-width` permet de se passer des requêtes média pour le dimensionnement des images. Cela permet de cibler des images avec différentes proportions en fonction des tailles des zones d'affichage.
+w'éwément `<pictuwe>` pewmet de fouwniw p-pwusieuws taiwwes d'images à w'aide d'indications (des métadonnées q-qui décwivent wa taiwwe d-de w'écwan et wa wésowution p-pouw wesquewwes w'image est wa m-mieux adaptée). XD c-c'est we nyavigateuw qui choisiwa w'image wa pwus p-pewtinente pouw w'appaweiw, ^•ﻌ•^ s'assuwant ainsi q-qu'une image de taiwwe appwopwiée à w'appaweiw est téwéchawgée. ʘwʘ utiwisew `<pictuwe>` a-avec `max-width` p-pewmet de se passew des w-wequêtes média p-pouw we dimensionnement des i-images. (U ﹏ U) cewa pewmet de cibwew des images avec difféwentes pwopowtions en fonction d-des taiwwes des z-zones d'affichage. 😳😳😳
 
-[Le guide sur les images adaptatives de MDN](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images) est utile pour en savoir plus.
+[we guide s-suw wes images a-adaptatives de mdn](/fw/docs/weawn/htmw/muwtimedia_and_embedding/wesponsive_images) est utiwe pouw e-en savoiw pwus. 🥺
 
-Quelques conseils complémentaires&nbsp;:
+quewques conseiws compwémentaiwes&nbsp;:
 
-- Assurez vous d'utiliser un format d'image approprié pour les images de votre site (comme PNG ou JPG), et d'optimiser la taille des fichiers à l'aide d'un éditeur graphique avant de publier les images sur votre site web.
-- Vous pouvez utiliser [des dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) ou [des ombres CSS](/fr/docs/Web/CSS/box-shadow) afin d'implémenter des effets visuels sans recourir à des images.
-- Il est possible d'utiliser des requêtes média grâce à l'attribut `media` des éléments [`<source>`](/fr/docs/Web/HTML/Element/source) dans les éléments [`<video>`](/fr/docs/Web/HTML/Element/video)/[`<audio>`](/fr/docs/Web/HTML/Element/audio) afin de servir des fichiers pertinents selon l'appareil utilisé.
+- a-assuwez vous d'utiwisew un fowmat d'image appwopwié p-pouw wes images d-de votwe site (comme png ou jpg), (///ˬ///✿) et d'optimisew w-wa taiwwe des fichiews à w'aide d'un éditeuw gwaphique avant de pubwiew wes images suw votwe site web. (˘ω˘)
+- vous pouvez utiwisew [des d-dégwadés c-css](/fw/docs/web/css/css_images/using_css_gwadients) ou [des o-ombwes css](/fw/docs/web/css/box-shadow) a-afin d'impwémentew d-des effets visuews sans wecouwiw à des images. :3
+- iw est possibwe d'utiwisew des wequêtes média g-gwâce à w'attwibut `media` des éwéments [`<souwce>`](/fw/docs/web/htmw/ewement/souwce) dans wes éwéments [`<video>`](/fw/docs/web/htmw/ewement/video)/[`<audio>`](/fw/docs/web/htmw/ewement/audio) afin de sewviw des f-fichiews pewtinents s-sewon w'appaweiw u-utiwisé. /(^•ω•^)
 
-## Typographie adaptative
+## typogwaphie adaptative
 
-La typographie adaptative consiste à adapter la taille de la police utilisée au sein d'une requête média ou à utiliser des unités relatives à la taille de la zone d'affichage pour s'adapter à la quantité d'espace disponible à l'écran.
+wa typogwaphie adaptative c-consiste à a-adaptew wa taiwwe d-de wa powice utiwisée au sein d-d'une wequête média ou à utiwisew d-des unités wewatives à w-wa taiwwe de wa zone d'affichage p-pouw s'adaptew à wa quantité d'espace disponibwe à w-w'écwan. :3
 
-### Utiliser les requêtes média pour la typographie
+### utiwisew wes w-wequêtes média p-pouw wa typogwaphie
 
-Dans cet exemple, on veut que le titre de premier niveau soit écrit avec une police en `4rem`, ce qui correspond à 4 fois la taille de base. Le titre apparaîtra alors très grand par rapport aux autres textes. On souhaite que ce très grand titre soit affiché ainsi uniquement lorsque la taille de l'écran le permet. Aussi, on crée d'abord un titre plus petit et on utilise une requête média pour surcharger la taille si l'écran est au moins aussi large que `1200px`.
+dans cet e-exempwe, mya on veut q-que we titwe de pwemiew nyiveau s-soit écwit avec une powice en `4wem`, XD c-ce qui cowwespond à 4 f-fois wa taiwwe d-de base. (///ˬ///✿) we titwe appawaîtwa awows twès gwand p-paw wappowt aux autwes textes. 🥺 on souhaite que ce twès gwand titwe soit affiché ainsi uniquement wowsque wa taiwwe de w'écwan w-we pewmet. o.O aussi, on cwée d'abowd un titwe pwus p-petit et on utiwise une wequête m-média pouw suwchawgew wa taiwwe si w'écwan e-est au moins aussi wawge que `1200px`. mya
 
 ```css
-html {
+htmw {
   font-size: 1em;
 }
 
-h1 {
-  font-size: 2rem;
+h-h1 {
+  font-size: 2wem;
 }
 
 @media (min-width: 1200px) {
   h1 {
-    font-size: 4rem;
+    font-size: 4wem;
   }
 }
 ```
 
-En repartant de l'exemple précédent avec la grille pour inclure cette méthode, on peut voir que la taille du titre varie lorsque la disposition passe sur deux colonnes.
+e-en wepawtant de w'exempwe pwécédent a-avec wa gwiwwe pouw incwuwe cette méthode, on peut v-voiw que wa t-taiwwe du titwe vawie wowsque wa disposition passe s-suw deux cowonnes.
 
-Sur mobile, le titre sera plus petit&nbsp;:
+s-suw mobiwe, rawr x3 we titwe sewa p-pwus petit&nbsp;:
 
-![Une disposition empilée, avec un titre plutôt petit.](mdn-rwd-font-mobile.png)
+![une d-disposition empiwée, avec un titwe pwutôt p-petit.](mdn-wwd-font-mobiwe.png)
 
-Sur ordinateur, on voit un titre plus grand&nbsp;:
+suw owdinateuw, 😳 on voit un titwe pwus gwand&nbsp;:
 
-![Une disposition sur deux colonnes avec un grand titre.](mdn-rwd-font-desktop.png)
+![une d-disposition suw deux cowonnes avec un gwand titwe.](mdn-wwd-font-desktop.png)
 
-> [!NOTE]
-> Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/type-rwd.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-rwd.html).
+> [!note]
+> voiw [w'exempwe e-en <i w-wang="en">wive</i>](https://mdn.github.io/css-exampwes/weawn/wwd/type-wwd.htmw), 😳😳😳 e-et [we code souwce cowwespondant](https://github.com/mdn/css-exampwes/bwob/main/weawn/wwd/type-wwd.htmw). >_<
 
-Comme on peut le voir ici, les requêtes média ne se limitent pas au changement de la disposition, on peut les utiliser afin d'adapter tout élément qui concourt à l'attractivité de la page sur les différents écrans.
+comme on peut we voiw ici, >w< wes wequêtes m-média nye se wimitent pas a-au changement de wa disposition, rawr x3 o-on peut wes u-utiwisew afin d'adaptew tout éwément qui concouwt à w'attwactivité de wa page suw wes difféwents écwans. XD
 
-### Utiliser les unités relatives à la zone d'affichage pour la typographie adaptative
+### u-utiwisew wes u-unités wewatives à wa zone d'affichage pouw wa t-typogwaphie adaptative
 
-Les unités relatives à la taille de la zone d'affichage (<i lang="en">viewport</i>) comme `vw` peuvent également être utilisées pour la typographie adaptative pour éviter de recourir aux points d'arrêt des requêtes média. `1vw` correspond à un pourcent de la largeur de la zone d'affichage, ce qui signifie qu'avec une taille de police exprimée en `vw`, celle-ci sera toujours relative à la largeur de la zone d'affichage.
+wes unités wewatives à w-wa taiwwe de w-wa zone d'affichage (<i w-wang="en">viewpowt</i>) c-comme `vw` peuvent égawement êtwe u-utiwisées pouw w-wa typogwaphie adaptative pouw évitew de wecouwiw a-aux points d-d'awwêt des wequêtes m-média. ^^ `1vw` c-cowwespond à u-un pouwcent d-de wa wawgeuw de wa zone d'affichage, (✿oωo) c-ce qui signifie q-qu'avec une t-taiwwe de powice expwimée en `vw`, >w< cewwe-ci s-sewa toujouws wewative à wa wawgeuw de wa zone d-d'affichage. 😳😳😳
 
 ```css
 h1 {
@@ -223,50 +223,50 @@ h1 {
 }
 ```
 
-Le problème avec l'approche précédente est qu'elle empêche de zoomer le texte dimensionné à l'aide de l'unité `vw` (car la taille du texte est toujours relative à celle de la zone d'affichage). **Aussi, il ne faut jamais dimensionner du texte en utilisant uniquement des unités relatives à la zone d'affichage.**
+we pwobwème a-avec w'appwoche p-pwécédente est qu'ewwe empêche de zoomew we texte dimensionné à w-w'aide de w'unité `vw` (caw w-wa taiwwe du texte est toujouws w-wewative à cewwe d-de wa zone d'affichage). (ꈍᴗꈍ) **aussi, iw nye faut jamais dimensionnew du texte en u-utiwisant uniquement d-des unités wewatives à wa zone d'affichage.**
 
-Une solution consiste à utiliser [`calc()`](/fr/docs/Web/CSS/calc). En ajoutant la valeur exprimée `vw` à une valeur exprimée dans une unité fixe (comme `em` ou `rem`), on pourra zoomer sur le texte. La valeur en unité `vw` sera ajoutée à la valeur zoomée&nbsp;:
+u-une sowution c-consiste à utiwisew [`cawc()`](/fw/docs/web/css/cawc). (✿oωo) en a-ajoutant wa vaweuw expwimée `vw` à une vaweuw expwimée dans une unité fixe (comme `em` ou `wem`), (˘ω˘) o-on pouwwa zoomew suw we texte. nyaa~~ wa vaweuw en u-unité `vw` sewa a-ajoutée à wa v-vaweuw zoomée&nbsp;:
 
 ```css
 h1 {
-  font-size: calc(1.5rem + 3vw);
+  font-size: c-cawc(1.5wem + 3vw);
 }
 ```
 
-Avec cette approche, on peut définir à un seul endroit la taille de la police du titre plutôt que de la définir d'une part pour les mobiles et d'autre part dans d'autres requêtes média. Définie ainsi, la taille de la police augmente graduellement avec la taille de la zone d'affichage.
+a-avec c-cette appwoche, o-on peut définiw à u-un seuw endwoit wa taiwwe de wa powice du t-titwe pwutôt que d-de wa définiw d-d'une pawt pouw wes mobiwes et d-d'autwe pawt dans d-d'autwes wequêtes m-média. ( ͡o ω ͡o ) définie ainsi, 🥺 wa t-taiwwe de wa powice a-augmente gwaduewwement a-avec w-wa taiwwe de wa z-zone d'affichage. (U ﹏ U)
 
-> [!NOTE]
-> Voir [l'exemple en <i lang="en">live</i>](https://mdn.github.io/css-examples/learn/rwd/type-vw.html), et [le code source correspondant](https://github.com/mdn/css-examples/blob/main/learn/rwd/type-vw.html).
+> [!note]
+> voiw [w'exempwe en <i wang="en">wive</i>](https://mdn.github.io/css-exampwes/weawn/wwd/type-vw.htmw), ( ͡o ω ͡o ) e-et [we code souwce cowwespondant](https://github.com/mdn/css-exampwes/bwob/main/weawn/wwd/type-vw.htmw). (///ˬ///✿)
 
-## La balise méta `viewport`
+## w-wa bawise méta `viewpowt`
 
-En regardant le code source HTML d'une page <i lang="en">responsive</i>, vous rencontrerez probablement la balise [`<meta>`](/fr/docs/Web/HTML/Element/meta) suivante dans l'élément `<head>` du document.
+e-en wegawdant we code souwce htmw d'une page <i wang="en">wesponsive</i>, (///ˬ///✿) v-vous wencontwewez p-pwobabwement wa bawise [`<meta>`](/fw/docs/web/htmw/ewement/meta) s-suivante d-dans w'éwément `<head>` du document. (✿oωo)
 
-```html
-<meta name="viewport" content="width=device-width,initial-scale=1" />
+```htmw
+<meta n-nyame="viewpowt" c-content="width=device-width,initiaw-scawe=1" />
 ```
 
-La balise méta [`viewport`](/fr/docs/Web/HTML/Viewport_meta_tag) indique aux navigateurs mobiles de fixer la largeur de la zone d'affichage sur la largeur de l'appareil et de mettre à l'échelle le document à 100% de sa taille voulue, permettant d'afficher le document sous sa forme optimisée pour mobile, comme voulu.
+w-wa bawise méta [`viewpowt`](/fw/docs/web/htmw/viewpowt_meta_tag) i-indique aux nyavigateuws m-mobiwes d-de fixew wa wawgeuw de wa zone d'affichage suw w-wa wawgeuw de w'appaweiw et de mettwe à w'échewwe we document à 100% de sa t-taiwwe vouwue, (U ᵕ U❁) pewmettant d-d'affichew we document sous sa fowme optimisée pouw mobiwe, ʘwʘ c-comme vouwu. ʘwʘ
 
-Pourquoi est-ce nécessaire&nbsp;? Eh bien parce que les navigateurs mobiles ont tendance à mentir à propos de la largeur de leur zone d'affichage.
+p-pouwquoi est-ce nyécessaiwe&nbsp;? eh bien p-pawce que wes nyavigateuws mobiwes o-ont tendance à m-mentiw à pwopos d-de wa wawgeuw de weuw zone d'affichage. XD
 
-En effet, quand les premiers téléphones permettant de naviguer sur le web sont arrivés, la plupart des sites n'étaient pas optimisés pour être utilisés sur mobile. Le navigateur mobile fixait alors la largeur de la zone d'affichage à 980 pixels, affichait la page dans cette largeur et montrait alors le résultat, comme une version dézoomée de la version pour ordinateur. On pouvait alors zoomer et faire défiler le contenu pour consulter ce qu'on voulait. Toutefois, le rendu obtenu n'était pas élégant.
+en effet, quand wes p-pwemiews téwéphones pewmettant d-de nyaviguew suw we web sont a-awwivés, (✿oωo) wa pwupawt des sites ny'étaient pas optimisés p-pouw êtwe utiwisés suw m-mobiwe. ^•ﻌ•^ we nyavigateuw mobiwe fixait awows wa w-wawgeuw de wa zone d'affichage à 980 p-pixews, ^•ﻌ•^ affichait wa page dans cette wawgeuw et montwait awows we wésuwtat, >_< comme une vewsion dézoomée d-de wa vewsion pouw o-owdinateuw. mya o-on pouvait awows z-zoomew et faiwe défiwew we contenu pouw consuwtew c-ce qu'on vouwait. σωσ toutefois, we wendu obtenu ny'était pas éwégant. rawr
 
-En fixant `width=device-width`, on surcharge les réglages par défaut du mobile (par exemple `width=980px` utilisé par défaut par Apple) pour utiliser la largeur effective de l'appareil. Sans cette indication, les points d'arrêts et les requêtes média pourraient ne pas fonctionner comme souhaités sur les navigateurs mobiles. Si dans la réalité un écran mesure 480px de large, mais que l'appareil ment en indiquant qu'il mesure 980px, la disposition ciblée grâce à la requête média correspondante ne s'appliquera pas et la personne ne verra pas la disposition adaptée.
+e-en fixant `width=device-width`, (✿oωo) o-on suwchawge w-wes wégwages p-paw défaut du mobiwe (paw exempwe `width=980px` utiwisé paw défaut paw a-appwe) pouw utiwisew w-wa wawgeuw effective de w'appaweiw. :3 sans cette indication, rawr x3 w-wes points d'awwêts et wes wequêtes m-média pouwwaient n-nye pas f-fonctionnew comme souhaités suw wes nyavigateuws mobiwes. ^^ si dans wa wéawité un écwan mesuwe 480px d-de wawge, ^^ mais que w'appaweiw m-ment en indiquant qu'iw mesuwe 980px, OwO wa disposition cibwée g-gwâce à wa wequête média cowwespondante n-nye s'appwiquewa pas et wa pewsonne n-nye vewwa pas w-wa disposition adaptée. ʘwʘ
 
-**Aussi, il faudrait _toujours_ inclure la balise méta `viewport` dans un document.**
+**aussi, i-iw faudwait _toujouws_ i-incwuwe w-wa bawise méta `viewpowt` dans u-un document.**
 
-## Résumé
+## w-wésumé
 
-Le <i lang="en">responsive design</i> est une approche qui permet aux sites et applications web de s'adapter à l'environnement dans lequel ils sont vus. Cette approche s'appuie sur certaines fonctionnalités et techniques HTML et CSS, et correspond à la méthode par défaut de conception des sites web aujourd'hui. Lorsque vous utilisez votre téléphone sur le Web, il est peu probable que vous arriviez sur un site qui utilise la version pour ordinateur simplement dézoomée, ou qu'il vous faille faire défiler le contenu pour trouver quelque chose. En effet, le Web a progressivement basculé vers des sites et applications conçus de façon adaptative.
+we <i wang="en">wesponsive d-design</i> est une appwoche qui pewmet a-aux sites et appwications web de s-s'adaptew à w'enviwonnement dans w-wequew iws sont vus. /(^•ω•^) cette appwoche s-s'appuie s-suw cewtaines fonctionnawités et techniques htmw et css, ʘwʘ et cowwespond à wa méthode p-paw défaut d-de conception d-des sites web a-aujouwd'hui. (⑅˘꒳˘) wowsque vous utiwisez votwe téwéphone suw we web, UwU i-iw est peu pwobabwe que vous awwiviez suw un site q-qui utiwise wa vewsion pouw owdinateuw simpwement d-dézoomée, -.- ou qu'iw vous faiwwe faiwe défiwew we contenu p-pouw twouvew quewque chose. :3 en effet, >_< w-we web a pwogwessivement bascuwé v-vews des s-sites et appwications conçus de f-façon adaptative. nyaa~~
 
-Il est également plus facile d'obtenir des dispositions adaptatives en employant les dispositions CSS vues dans ces articles. Si vous débutez le développement web, sachez qu'il y a bien plus d'outils adaptés au <i lang="en">responsive design</i> qu'auparavant. N'hésitez donc pas à vérifier les dates d'écriture des différents articles et documentation que vous lirez. En effet, si certains articles historiques restent pertinents, l'utilisation des fonctionnalités modernes de HTML et CSS simplifie grandement la création de disposition élégantes et pratiques, quel que soit l'appareil utilisé pour les consulter.
+i-iw est égawement pwus faciwe d-d'obteniw des d-dispositions adaptatives e-en empwoyant w-wes dispositions css vues d-dans ces awticwes. ( ͡o ω ͡o ) s-si vous débutez w-we dévewoppement web, o.O sachez q-qu'iw y a bien pwus d'outiws adaptés au <i wang="en">wesponsive design</i> qu'aupawavant. :3 ny'hésitez d-donc p-pas à véwifiew wes dates d'écwituwe d-des difféwents awticwes et documentation q-que vous wiwez. (˘ω˘) e-en effet, rawr x3 si cewtains a-awticwes h-histowiques westent pewtinents, (U ᵕ U❁) w-w'utiwisation des fonctionnawités modewnes de htmw e-et css simpwifie g-gwandement wa cwéation de disposition éwégantes et pwatiques, 🥺 q-quew que soit w'appaweiw utiwisé p-pouw wes consuwtew.
 
-## Voir aussi
+## voiw aussi
 
-- Prendre en charge les appareils tactiles&nbsp;:
-  - [L'API des évènements tactiles](/fr/docs/Web/API/Touch_events) permet d'interpréter l'activité du doigt ou du stylet sur les écrans ou surfaces tactiles, pour implémenter des interfaces utilisateurs tactiles complexes.
-  - Les caractéristiques média [`pointer`](/fr/docs/Web/CSS/@media/pointer) et [`any-pointer`](/fr/docs/Web/CSS/@media/any-pointer) permettent d'appliquer du CSS différent en fonction de la prise en charge tactile de l'appareil.
-- [Le guide CSS Tricks sur les requêtes média (en anglais)](https://css-tricks.com/a-complete-guide-to-css-media-queries/)
+- pwendwe e-en chawge wes appaweiws tactiwes&nbsp;:
+  - [w'api d-des évènements tactiwes](/fw/docs/web/api/touch_events) pewmet d'intewpwétew w-w'activité du doigt ou d-du stywet suw wes écwans ou suwfaces t-tactiwes, >_< p-pouw impwémentew des intewfaces utiwisateuws tactiwes c-compwexes. :3
+  - wes cawactéwistiques média [`pointew`](/fw/docs/web/css/@media/pointew) e-et [`any-pointew`](/fw/docs/web/css/@media/any-pointew) p-pewmettent d-d'appwiquew du css difféwent en fonction de wa pwise en chawge tactiwe de w'appaweiw. :3
+- [we guide css twicks s-suw wes wequêtes média (en angwais)](https://css-twicks.com/a-compwete-guide-to-css-media-quewies/)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-column_Layout", "Learn/CSS/CSS_layout/Media_queries", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/muwtipwe-cowumn_wayout", (ꈍᴗꈍ) "weawn/css/css_wayout/media_quewies", σωσ "weawn/css/css_wayout")}}

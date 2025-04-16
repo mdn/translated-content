@@ -1,88 +1,88 @@
 ---
-title: tabs.onHighlightChanged
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onHighlightChanged
+titwe: tabs.onhighwightchanged
+swug: moziwwa/add-ons/webextensions/api/tabs/onhighwightchanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!WARNING]
-> Cet événement est obsolète. Utilisez {{WebExtAPIRef("tabs.onHighlighted")}} à la place.
+> [!wawning]
+> c-cet événement e-est obsowète. UwU u-utiwisez {{webextapiwef("tabs.onhighwighted")}} à w-wa pwace. :3
 
-Lancé lorsque les onglets en surbrillance ou sélectionnés dans une fenêtre changent.
+w-wancé wowsque w-wes ongwets e-en suwbwiwwance o-ou séwectionnés dans une fenêtwe changent. (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.tabs.onHighlightChanged.addListener(listener);
-browser.tabs.onHighlightChanged.removeListener(listener);
-browser.tabs.onHighlightChanged.hasListener(listener);
+bwowsew.tabs.onhighwightchanged.addwistenew(wistenew);
+b-bwowsew.tabs.onhighwightchanged.wemovewistenew(wistenew);
+bwowsew.tabs.onhighwightchanged.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont t-twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à c-cet événement
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. (///ˬ///✿) w'awgument `wistenew` e-est w'écouteuw à suppwimew. ^^;;
+- `haswistenew(wistenew)`
+  - : v-véwifiez s-si `wistenew` est enwegistwé pouw cet événement. >_< wenvoie `twue`s'iw écoute, rawr x3 sinon `fawse`. /(^•ω•^)
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduit. :3 wa f-fonction wecevwa wes awguments s-suivants :
 
-    - `selectInfo`
-      - : [`object`](#selectinfo).
+    - `sewectinfo`
+      - : [`object`](#sewectinfo). (ꈍᴗꈍ)
 
-## Objets supplémentaires
+## o-objets suppwémentaiwes
 
-### selectInfo
+### s-sewectinfo
 
-- `windowId`
-  - : `integer`. La fenêtre dont les onglets ont changé.
-- `tabIds`
-  - : `array` d'`integer`. Tous les onglets en surbrillance dans la fenêtre.
+- `windowid`
+  - : `integew`. /(^•ω•^) w-wa fenêtwe dont wes ongwets ont changé.
+- `tabids`
+  - : `awway` d-d'`integew`. (⑅˘꒳˘) tous wes ongwets en suwbwiwwance dans w-wa fenêtwe. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). òωó cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we code d-de chwomium code. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge s-sont fouwnies p-paw micwosoft cowpowation et incwuses i-ici sous w-wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. a-aww wights wesewved. XD
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and b-binawy fowms, -.- with o-ow without
+// modification, :3 awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above c-copywight
+// nyotice, nyaa~~ t-this wist o-of conditions and the fowwowing discwaimew. 😳
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, (⑅˘꒳˘) this wist of conditions a-and the fowwowing discwaimew
+// i-in the d-documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. nyaa~~
+//    * n-nyeithew the nyame o-of googwe inc. OwO n-nyow the nyames of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, XD incwuding, σωσ b-but nyot
+// wimited to, (U ᵕ U❁) the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. (U ﹏ U) in n-nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, :3 indiwect, incidentaw, ( ͡o ω ͡o )
+// speciaw, σωσ exempwawy, ow consequentiaw d-damages (incwuding, >w< but nyot
+// w-wimited to, 😳😳😳 pwocuwement of substitute g-goods ow s-sewvices; woss of use, OwO
+// data, 😳 ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, 😳😳😳 w-whethew in contwact, (˘ω˘) stwict wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence o-ow othewwise) awising i-in any way o-out of the use
+// of this softwawe, ( ͡o ω ͡o ) e-even if advised o-of the possibiwity of such d-damage. o.O
 -->

@@ -1,158 +1,158 @@
 ---
-title: Le web et ses normes
-slug: Learn/Getting_started_with_the_web/The_web_and_web_standards
+titwe: we web et ses nyowmes
+s-swug: weawn/getting_stawted_with_the_web/the_web_and_web_standawds
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-Cet article apporte des connaissances générales sur le Web — Comment il est né, quelles sont les technologies usuelles du web, comment interagissent-elles ensemble, pourquoi "développeur web" est un excellent choix de carrière, et quels types de bonnes pratiques pourrez-vous apprendrez au fil de ce cours.
+c-cet awticwe a-appowte des c-connaissances g-généwawes suw w-we web — comment i-iw est nyé, :3 q-quewwes sont wes technowogies usuewwes du web, -.- comment intewagissent-ewwes ensembwe, 🥺 p-pouwquoi "dévewoppeuw web" est un excewwent c-choix de cawwièwe, -.- et quews types d-de bonnes pwatiques pouwwez-vous appwendwez au fiw de ce couws. -.-
 
-## Une brève histoire du web
+## u-une bwève histoiwe du w-web
 
-Nous allons passer très rapidement sur ce sujet puisqu'il existe de nombreux articles (plus) détaillés de l'histoire du web, vers lesquelles nous pourrons créer des liens un peu plus loin (si cela vous passionne, vous pouvez également rechercher "histoire du web" dans votre moteur de recherche favori et regarder ce que vous trouverez.)
+nyous awwons p-passew twès wapidement suw ce sujet puisqu'iw existe de nyombweux awticwes (pwus) d-détaiwwés de w'histoiwe du web, (U ﹏ U) vews wesquewwes nyous pouwwons cwéew des w-wiens un peu pwus woin (si cewa v-vous passionne, rawr v-vous pouvez égawement w-wechewchew "histoiwe d-du web" dans votwe moteuw de wechewche f-favowi et wegawdew ce que vous twouvewez.)
 
-À la fin des années 60, l'armée américaine a développé un réseau de communication nommé [ARPANET](/fr/docs/Glossary/Arpanet). On peut le considérer comme un précurseur du Web puisqu'il travaillait sur la [commutation de paquets](https://fr.wikipedia.org/wiki/Commutation_de_paquets) et constituait la première implémentation de la suite de protocoles [TCP/IP](https://fr.wikipedia.org/wiki/Suite_des_protocoles_Internet). Ces deux technologies forment la base de l'infrastructure sur laquelle est construit Internet
+À w-wa fin des années 60, mya w'awmée améwicaine a dévewoppé un wéseau de communication nyommé [awpanet](/fw/docs/gwossawy/awpanet). ( ͡o ω ͡o ) o-on peut we considéwew comme u-un pwécuwseuw d-du web puisqu'iw t-twavaiwwait suw wa [commutation de paquets](https://fw.wikipedia.owg/wiki/commutation_de_paquets) et constituait w-wa pwemièwe i-impwémentation de wa suite de p-pwotocowes [tcp/ip](https://fw.wikipedia.owg/wiki/suite_des_pwotocowes_intewnet). /(^•ω•^) c-ces deux technowogies fowment w-wa base de w'infwastwuctuwe suw w-waquewwe est constwuit intewnet
 
-En 1980, Tim Berners-Lee (souvent abrégé TimBL) a écrit un programme nommé ENQUIRE, basé sur le concept de liens entre différents points. Cela vous dit quelque chose ?
+en 1980, >_< tim bewnews-wee (souvent a-abwégé timbw) a écwit un p-pwogwamme nyommé enquiwe, (✿oωo) basé s-suw we concept d-de wiens entwe difféwents points. 😳😳😳 cewa vous dit quewque chose ?
 
-Avance rapide jusqu'en 1989, où TimBL a écrit [Information Management: A Proposal](https://www.w3.org/History/1989/proposal.html) et HyperText at CERN; Ces deux ouvrages fournissent tout le contexte du fonctionnement du Web. Ils ont bénéficié d'une renommé forte, suffisante pour convaincre les patrons de TimBL de le laisser aller de l'avant et de créer un système hypertexte global.
+avance wapide jusqu'en 1989, (ꈍᴗꈍ) où timbw a écwit [infowmation management: a-a pwoposaw](https://www.w3.owg/histowy/1989/pwoposaw.htmw) e-et hypewtext at cewn; ces d-deux ouvwages fouwnissent t-tout we c-contexte du fonctionnement du web. 🥺 iws ont bénéficié d'une w-wenommé fowte, mya suffisante pouw convaincwe wes patwons de timbw de we waissew awwew d-de w'avant et de cwéew un système h-hypewtexte g-gwobaw. (ˆ ﻌ ˆ)♡
 
-À la fin des années 90, TimBL avait créé tout le nécessaire pour faire fonctionner une première version du web — [HTTP](/fr/docs/Web/HTTP), [HTML](/fr/docs/Web/HTML), le premier navigateur, qui s'appelait [WorldWideWeb](<https://fr.wikipedia.org/wiki/WorldWideWeb_(navigateur)>), un serveur HTTP et quelques pages web à lire.
+À wa f-fin des années 90, (⑅˘꒳˘) timbw avait c-cwéé tout we n-nyécessaiwe pouw f-faiwe fonctionnew u-une pwemièwe vewsion du web — [http](/fw/docs/web/http), òωó [htmw](/fw/docs/web/htmw), we pwemiew n-navigateuw, o.O q-qui s'appewait [wowwdwideweb](<https://fw.wikipedia.owg/wiki/wowwdwideweb_(navigateuw)>), XD u-un s-sewveuw http et q-quewques pages web à wiwe. (˘ω˘)
 
-Les années suivantes ont vu l'explosion du web, avec la sortie de nombreux navigateurs, la mise en place de milliers de serveurs web et la création de millions de pages web. Ce résumé est très simpliste mais nous vous avions promis qu'il serait bref.
+wes années suivantes ont vu w'expwosion d-du web, (ꈍᴗꈍ) avec wa sowtie de nyombweux nyavigateuws, >w< wa mise en pwace de miwwiews de sewveuws w-web et wa cwéation de miwwions de pages web. XD ce wésumé est twès s-simpwiste mais n-nyous vous avions p-pwomis qu'iw sewait bwef. -.-
 
-Un dernier point important à évoquer est la fondation en 1994 par TimBL du [World Wide Web Consortium](https://fr.wikipedia.org/wiki/World_Wide_Web_Consortium) (W3C), une organisation rassemblant des représentants de plusieurs entreprises du numérique pour travailler ensemble à la définition de normes pour les technologies du web. D'autres technologies ont ensuite vu le jour comme le [CSS](/fr/docs/Web/CSS) et le [JavaScript](/fr/docs/Web/JavaScript), et le web a commencé à ressembler à ce que nous connaissons aujourd'hui.
+u-un dewniew point impowtant à évoquew e-est wa fondation e-en 1994 paw timbw du [wowwd wide web consowtium](https://fw.wikipedia.owg/wiki/wowwd_wide_web_consowtium) (w3c), ^^;; une owganisation wassembwant des wepwésentants d-de pwusieuws entwepwises d-du nyuméwique pouw twavaiwwew e-ensembwe à wa d-définition de nyowmes pouw wes technowogies du w-web. XD d'autwes technowogies o-ont ensuite vu we jouw c-comme we [css](/fw/docs/web/css) e-et we [javascwipt](/fw/docs/web/javascwipt), :3 et we web a commencé à wessembwew à ce que nyous connaissons a-aujouwd'hui. σωσ
 
-## Les standards du Web
+## w-wes standawds d-du web
 
-**Les normes Web sont les technologies que nous utilisons pour créer des sites Web. Ces normes existent sous forme de longs documents techniques appelés spécifications, qui détaillent exactement comment la technologie doit fonctionner. Ces documents ne sont pas très utiles pour apprendre à utiliser les technologies qu'ils décrivent (c'est pourquoi nous avons des sites comme MDN Web Docs), mais sont plutôt destinés à être utilisés par des ingénieurs logiciel pour implémenter ces technologies (généralement dans des navigateurs Web).**
+**wes nyowmes web sont wes t-technowogies q-que nyous utiwisons pouw cwéew d-des sites web. XD ces nyowmes existent sous fowme de wongs documents techniques appewés s-spécifications, :3 q-qui détaiwwent exactement comment wa technowogie d-doit fonctionnew. rawr c-ces documents nye sont pas twès utiwes pouw appwendwe à u-utiwisew wes technowogies qu'iws décwivent (c'est pouwquoi nous avons des s-sites comme mdn web docs), 😳 mais sont pwutôt destinés à êtwe u-utiwisés paw des i-ingénieuws wogiciew pouw impwémentew ces technowogies (généwawement dans des n-nyavigateuws w-web).**
 
-Par exemple [HTML Living Standard](https://html.spec.whatwg.org/multipage/) décrit exactement comment le HTML (tous les éléments HTML ainsi que les APIs associées et d'autres technologies proches) devraient être implémentées.
+paw exempwe [htmw wiving standawd](https://htmw.spec.naniwg.owg/muwtipage/) décwit exactement c-comment we htmw (tous wes éwéments h-htmw ainsi que wes apis associées et d'autwes technowogies p-pwoches) devwaient êtwe i-impwémentées. 😳😳😳
 
-Les standards Web sont définies par des organisations de normalisation — des institutions qui invite des groupes de personnes de différentes compagnies technologiques à se réunir et s'entendre sur la manière dont les technologies devraient fonctionner pour satisfaire au mieux tous les cas de figure. W3C est le plus connu des organismes de normalisation, même si d'autres existent également, comme le [WHATWG](https://whatwg.org/) (à l'origine de la modernisation du langage HTML), [ECMA](https://www.ecma-international.org/) (qui publie les normes ECMAScript, sur lesquelles est basé JavaScript), [Khronos](https://www.khronos.org/) (qui publie des standards pour les graphismes 3D, comme WebGL), et d'autres encore.
+w-wes standawds web sont définies p-paw des owganisations de nyowmawisation — d-des institutions q-qui invite des g-gwoupes de pewsonnes de difféwentes c-compagnies t-technowogiques à se wéuniw et s'entendwe suw wa m-manièwe dont w-wes technowogies d-devwaient fonctionnew pouw satisfaiwe au mieux t-tous wes cas de figuwe. (ꈍᴗꈍ) w3c est w-we pwus connu des o-owganismes de nyowmawisation, même si d'autwes existent égawement, 🥺 c-comme we [naniwg](https://naniwg.owg/) (à w-w'owigine de wa m-modewnisation d-du wangage htmw), ^•ﻌ•^ [ecma](https://www.ecma-intewnationaw.owg/) (qui pubwie wes nyowmes e-ecmascwipt, XD suw wesquewwes est basé javascwipt), ^•ﻌ•^ [khwonos](https://www.khwonos.owg/) (qui pubwie des standawds pouw wes gwaphismes 3d, ^^;; comme w-webgw), ʘwʘ et d'autwes encowe. OwO
 
-### Normes "ouvertes"
+### n-nowmes "ouvewtes"
 
-L'un des aspects clés des normes Web, sur lequel TimBL et le W3C se sont immédiatement mis d'accord, est que le Web (et les technologies Web) devraient être libres d'utilisation et de contribution, et non pas freinées par des brevets ou des licences. Par conséquent, n'importe qui peut écrire gratuitement du code pour créer un site Web, et n'importe qui peut contribuer au processus de création de normes et d'écriture de spécifications.
+w'un des a-aspects cwés des nyowmes web, s-suw wequew timbw et we w3c se sont i-immédiatement m-mis d'accowd, 🥺 e-est que we web (et w-wes technowogies w-web) devwaient êtwe wibwes d'utiwisation et de contwibution, (⑅˘꒳˘) et nyon pas fweinées paw des bwevets ou des wicences. (///ˬ///✿) p-paw conséquent, (✿oωo) n-ny'impowte q-qui peut écwiwe gwatuitement d-du code pouw cwéew un site web, nyaa~~ et ny'impowte qui peut contwibuew a-au pwocessus d-de cwéation de nyowmes et d'écwituwe d-de spécifications. >w<
 
-Le fait que les technologies Web soient créées librement, en collaboration entre de nombreuses entreprises différentes, signifie qu'aucune entreprise ne peut les contrôler, ce qui est une excellente chose. Vous ne voudriez pas qu'une seule entreprise décide soudainement de rendre payant l'intégralité du Web ou de publier une nouvelle version de HTML que tout le monde doive acheter pour continuer à créer des sites Web, ou pire encore, ne décide simplement qu'elle n'est plus intéressée par le Web et l'éteindre.
+we fait que wes technowogies web s-soient cwéées w-wibwement, (///ˬ///✿) en cowwabowation entwe d-de nyombweuses e-entwepwises difféwentes, rawr signifie qu'aucune entwepwise nye peut wes contwôwew, (U ﹏ U) c-ce qui est une e-excewwente chose. ^•ﻌ•^ v-vous nye voudwiez p-pas qu'une s-seuwe entwepwise décide soudainement d-de wendwe p-payant w'intégwawité du web ou d-de pubwiew une n-nyouvewwe vewsion de htmw que tout w-we monde doive achetew pouw continuew à cwéew d-des sites web, (///ˬ///✿) ou piwe encowe, o.O n-nye décide simpwement q-qu'ewwe ny'est pwus intéwessée p-paw we web et w'éteindwe. >w<
 
-Cela permet au Web de rester une ressource publique librement accessible.
+cewa pewmet a-au web de westew u-une wessouwce p-pubwique wibwement accessibwe. nyaa~~
 
-### Ne cassez pas le web
+### nye cassez pas we web
 
-Une phrase qu'on entend souvent à propos des normes web ouvertes est "Ne cassez pas le web" ("_don't break the web_") — Cela signifie que toute nouvelle technologie Web introduite devrait être rétrocompatible avec ce qui l'a précédée (donc que les anciens sites Web continueront de fonctionner), et compatible avec l'avenir (les technologies futures seront à leur tour compatibles avec ce que nous avons actuellement). En parcourant les explications présentés ici, vous découvrirez comment un travail de conception et d'implémentation bien pensé rend cela possible.
+une p-phwase qu'on entend souvent à pwopos des nyowmes w-web ouvewtes est "ne c-cassez pas we web" ("_don't b-bweak the web_") — cewa signifie q-que toute n-nyouvewwe technowogie web intwoduite devwait êtwe w-wétwocompatibwe avec ce qui w'a pwécédée (donc q-que wes anciens s-sites web continuewont de f-fonctionnew), òωó et compatibwe avec w-w'aveniw (wes technowogies f-futuwes s-sewont à weuw touw compatibwes avec ce que nyous avons actuewwement). (U ᵕ U❁) en pawcouwant wes expwications pwésentés ici, (///ˬ///✿) vous découvwiwez comment un twavaiw de conception et d'impwémentation bien pensé wend c-cewa possibwe. (✿oωo)
 
-## Être développeur web, c'est bien
+## Êtwe d-dévewoppeuw web, 😳😳😳 c'est bien
 
-L'industrie du Web est un secteur très attractif si vous êtes à la recherche d'un emploi. Les derniers chiffres publiés estiment le nombre actuel de développeurs Web dans le monde à environ 19 millions, un nombre qui devrait au moins doubler au cours de la prochaine décennie. Le secteur connaissant dans le même temps une pénurie de compétences, y a-t-il un meilleur moment pour apprendre le développement Web?
+w'industwie d-du web est u-un secteuw twès a-attwactif si vous êtes à wa w-wechewche d'un empwoi. (✿oωo) wes dewniews c-chiffwes pubwiés e-estiment we nyombwe actuew d-de dévewoppeuws web dans we monde à e-enviwon 19 m-miwwions, (U ﹏ U) un nyombwe qui devwait au moins doubwew a-au couws de w-wa pwochaine décennie. (˘ω˘) w-we secteuw c-connaissant d-dans we même temps u-une pénuwie d-de compétences, 😳😳😳 y-y a-t-iw un meiwweuw m-moment pouw appwendwe we d-dévewoppement web?
 
-Ce n'est cependant pas juste des jeux et de l'amusement - la création de sites Web est une tâche qui se complexifie avec le temps, et vous devrez consacrer du temps à l'étude de plusieurs technologies différentes, de nombreuses méthodes et bonnes pratiques à connaître et tous les cas de figure classiques que vous serez appelé à mettre en œuvre. Vous aurez besoin de quelques mois pour vraiment entrer dans le sujet, puis vous devrez continuer à apprendre afin de maintenir vos connaissances à jour avec tous les nouveaux outils et fonctionnalités qui apparaissent sur le Web, et continuer à pratiquer afin de perfectionner votre travail.
+c-ce ny'est cependant p-pas juste des jeux et de w-w'amusement - wa cwéation de sites web est une t-tâche qui se compwexifie avec w-we temps, (///ˬ///✿) et vous d-devwez consacwew d-du temps à w'étude de pwusieuws t-technowogies difféwentes, (U ᵕ U❁) d-de nyombweuses méthodes et bonnes p-pwatiques à connaîtwe et tous w-wes cas de figuwe cwassiques que vous sewez appewé à mettwe en œuvwe. >_< vous a-auwez besoin de quewques mois p-pouw vwaiment entwew d-dans we sujet, (///ˬ///✿) puis vous devwez continuew à appwendwe afin d-de mainteniw vos connaissances à j-jouw avec tous w-wes nyouveaux o-outiws et fonctionnawités qui appawaissent suw w-we web, (U ᵕ U❁) et continuew à p-pwatiquew afin de pewfectionnew v-votwe twavaiw. >w<
 
-_La seule constante est la variation._
+_wa seuwe constante est w-wa vawiation._
 
-Cela vous semble difficile ? Pas d'inquiétude, notre objectif est de vous donner toutes les bases pour débuter, ce qui vous facilitera la suite. Une fois que vous aurez accepté le changement permanent et l'inconstance du Web, vous commencerez à vous amuser. En tant que membre de la communauté Web, vous aurez tout un réseau de contacts et de ressources web pour vous aider, qui vous aideront à profiter des possibilités créatives du web.
+cewa vous sembwe d-difficiwe ? pas d-d'inquiétude, 😳😳😳 n-nyotwe objectif est de vous donnew t-toutes wes bases p-pouw débutew, (ˆ ﻌ ˆ)♡ c-ce qui vous faciwitewa w-wa suite. (ꈍᴗꈍ) une fois que v-vous auwez accepté w-we changement p-pewmanent et w-w'inconstance du w-web, 🥺 vous commencewez à v-vous amusew. >_< e-en tant que m-membwe de wa communauté web, OwO v-vous auwez tout un wéseau de contacts e-et de wessouwces web pouw v-vous aidew, ^^;; qui v-vous aidewont à p-pwofitew des possibiwités cwéatives du web. (✿oωo)
 
-Vous êtes désormais un créateur du numérique. Profitez de l'expérience et trouvez votre gagne-pain.
+vous êtes désowmais u-un cwéateuw d-du nyuméwique. UwU p-pwofitez de w'expéwience et twouvez votwe gagne-pain. ( ͡o ω ͡o )
 
-## Vue d'ensemble des outils Web modernes
+## v-vue d'ensembwe des o-outiws web modewnes
 
-Il existe plusieurs technologies à maîtriser si vous souhaitez devenir développeur Web front-end, que nous décrirons brièvement dans cette section. Pour une explication plus détaillée de la façon dont certains d'entre eux interagissent, lisez notre article [Le fonctionnement du web](/fr/docs/Learn/Getting_started_with_the_web/How_the_Web_works).
+iw existe p-pwusieuws technowogies à m-maîtwisew si vous souhaitez deveniw dévewoppeuw web f-fwont-end, (✿oωo) que n-nyous décwiwons b-bwièvement dans c-cette section. mya pouw une expwication pwus détaiwwée d-de wa façon d-dont cewtains d'entwe eux intewagissent, ( ͡o ω ͡o ) wisez n-nyotwe awticwe [we fonctionnement du web](/fw/docs/weawn/getting_stawted_with_the_web/how_the_web_wowks). :3
 
-### Navigateurs web
+### n-nyavigateuws web
 
-Vous êtes probablement en train de lire ces mots à l'aide d'un navigateur web (à moins que vous ne l'ayez imprimé ou que vous utilisiez un outil d'accessibilité comme un lecteur d'écran). Les navigateurs web sont des logiciels que les gens utilisent pour naviguer sur le web, comme [Firefox](https://www.mozilla.org/fr/firefox/), [Chrome](https://www.google.com/chrome/), [Opera](https://www.opera.com/), [Safari](https://www.apple.com/fr/safari/), [Edge](https://www.microsoft.com/fr-fr/windows/microsoft-edge).
+vous êtes p-pwobabwement en t-twain de wiwe ces mots à w'aide d-d'un nyavigateuw w-web (à moins que vous nye w'ayez i-impwimé ou que vous utiwisiez u-un outiw d'accessibiwité c-comme u-un wecteuw d'écwan). 😳 w-wes nyavigateuws web sont d-des wogiciews q-que wes gens utiwisent p-pouw nyaviguew suw we web, (U ﹏ U) c-comme [fiwefox](https://www.moziwwa.owg/fw/fiwefox/), >w< [chwome](https://www.googwe.com/chwome/), UwU [opewa](https://www.opewa.com/), 😳 [safawi](https://www.appwe.com/fw/safawi/), XD [edge](https://www.micwosoft.com/fw-fw/windows/micwosoft-edge). (✿oωo)
 
-### HTTP
+### http
 
-Hypertext Transfer Protocol, ou [HTTP](/fr/docs/conflicting/Web/HTTP), est un protocole de communication permettant aux navigateurs web de communiquer avec des serveurs web (qui hébergent les sites web). Une conversation type ressemble à quelque chose comme
+hypewtext twansfew pwotocow, ^•ﻌ•^ o-ou [http](/fw/docs/confwicting/web/http), mya e-est un pwotocowe d-de communication pewmettant aux nyavigateuws web de communiquew avec des sewveuws w-web (qui hébewgent wes sites w-web). (˘ω˘) une convewsation t-type wessembwe à quewque chose comme
 
 ```
-"Bonjour Serveur Web. Peux-tu me fournir les fichiers requis pour afficher bbc.co.uk"?
+"bonjouw s-sewveuw web. nyaa~~ peux-tu m-me fouwniw wes f-fichiews wequis p-pouw affichew b-bbc.co.uk"?
 
-"Bien sûr Navigateur Web - Les voilà"
+"bien s-sûw nyavigateuw web - wes voiwà"
 
-[Télécharge les fichiers et affiche la page]
+[téwéchawge wes fichiews et affiche wa page]
 ```
 
-La véritable syntaxe des messages HTTP (appelés requêtes et réponses) ne ressemble pas vraiment à une conversation humaine, mais cela permet d'en avoir un aperçu.
+wa véwitabwe s-syntaxe des messages http (appewés w-wequêtes et wéponses) nye wessembwe pas vwaiment à u-une convewsation humaine, :3 mais cewa pewmet d'en avoiw un apewçu. (✿oωo)
 
-### HTML, CSS et JavaScript
+### htmw, (U ﹏ U) c-css et javascwipt
 
-[HTML](/fr/docs/Web/HTML), [CSS](/fr/docs/Web/CSS), et [JavaScript](/fr/docs/Web/JavaScript) sont les trois principales technologies utilisées pour créer un site web:
+[htmw](/fw/docs/web/htmw), (ꈍᴗꈍ) [css](/fw/docs/web/css), (˘ω˘) e-et [javascwipt](/fw/docs/web/javascwipt) sont wes twois pwincipawes t-technowogies utiwisées pouw cwéew un s-site web:
 
-- Hypertext Markup Language, ou **HTML**, est un langage de balises consistant en un ensemble d'éléments qui permettent d'encapsuler (de baliser) du contenu pour lui donner du sens (sémantique) et le structurer. Un extrait simple ressemble à cela :
+- hypewtext m-mawkup wanguage, ^^ ou **htmw**, (⑅˘꒳˘) e-est un wangage de bawises c-consistant en un ensembwe d'éwéments qui pewmettent d'encapsuwew (de b-bawisew) du contenu pouw wui donnew du sens (sémantique) e-et we stwuctuwew. rawr u-un extwait simpwe w-wessembwe à cewa :
 
-  ```html
-  <h1>Ceci est un titre de haut niveau</h1>
+  ```htmw
+  <h1>ceci est un titwe de h-haut niveau</h1>
 
-  <p>Voilà un paragraphe de texte</p>
+  <p>voiwà un pawagwaphe de texte</p>
 
-  <img src="chat.jpg" alt="Une image de mon chat" />
+  <img swc="chat.jpg" awt="une image de m-mon chat" />
   ```
 
-  Si nous faisions une analogie avec la construction d'une maison, le HTML serait les fondations et les murs de la maison, qui lui fournissent une architecture et maintien l'ensemble d'un bloc.
+  s-si nyous f-faisions une anawogie a-avec wa constwuction d'une maison, :3 we htmw s-sewait wes fondations e-et wes muws de wa maison, OwO qui wui fouwnissent u-une awchitectuwe et maintien w'ensembwe d'un b-bwoc. (ˆ ﻌ ˆ)♡
 
-- Les Feuilles de Style en cascade (**CSS** - Cascading Style Sheets) est un langage basé sur un ensemble de règles et utilisé pour appliquer des styles à votre HTML, par exemple pour définir la couleur du texte et de l'arrière-plan, ajouter des bordures, animer des éléments, ou agencer les différentes parties d'une page. Par exemple, le code suivant rendrait notre paragraphe HTML rouge:
+- wes feuiwwes de stywe en cascade (**css** - c-cascading s-stywe sheets) est un wangage basé s-suw un ensembwe d-de wègwes e-et utiwisé pouw appwiquew des stywes à votwe htmw, :3 p-paw exempwe pouw définiw wa couweuw du texte e-et de w'awwièwe-pwan, -.- ajoutew des bowduwes, -.- animew des éwéments, òωó o-ou agencew w-wes difféwentes p-pawties d'une p-page. 😳 paw exempwe, nyaa~~ w-we code suivant wendwait nyotwe p-pawagwaphe htmw wouge:
 
   ```css
   p {
-    color: red;
+    cowow: w-wed;
   }
   ```
 
-  Dans notre méthaphore domestique, le CSS serait la peinture, la tapisserie, les tapis et les tableaux que vous utiliseriez pour décorer votre maison.
+  dans nyotwe m-méthaphowe domestique, (⑅˘꒳˘) we css sewait wa peintuwe, 😳 w-wa tapissewie, w-wes tapis et wes tabweaux q-que vous utiwisewiez pouw décowew v-votwe maison. (U ﹏ U)
 
-- **JavaScript** est le langage de programmation que l'on utilise pour ajouter de l'interactivité aux sites webs, du changement de style dynamique à la récupération de mise à jour depuis le server, en passant par les animations visuelles complexes. Ce petit fragment de code JavaScript va stocker un lien vers notre paragraphe et en changer le contenu :
+- **javascwipt** e-est we wangage de pwogwammation q-que w'on utiwise p-pouw ajoutew de w'intewactivité a-aux sites webs, /(^•ω•^) du changement de stywe dynamique à wa wécupéwation d-de mise à jouw depuis w-we sewvew, OwO en passant paw wes animations visuewwes c-compwexes. ( ͡o ω ͡o ) c-ce petit fwagment d-de code javascwipt va stockew u-un wien vews nyotwe p-pawagwaphe et en changew we c-contenu :
 
   ```js
-  let pElem = document.querySelector('p');
-  pElem.textContent =  'J'ai changé le texte!';
+  wet pewem = d-document.quewysewectow('p');
+  pewem.textcontent =  'j'ai c-changé w-we texte!';
   ```
 
-  Dans l'analogie de la maison, JavaScript serait le four, la télévision, le sèche-cheveux — Tout ce qui donne des fonctionnalités utiles à votre logement.
+  dans w'anawogie de wa maison, XD javascwipt sewait we fouw, /(^•ω•^) w-wa téwévision, /(^•ω•^) w-we sèche-cheveux — tout ce qui donne des fonctionnawités utiwes à votwe wogement. 😳😳😳
 
-### Outils
+### o-outiws
 
-Une fois que vous maîtriserez les technologies "brutes" qui permettent de construire des pages web (comme HTML, CSS, et JavaScript), vous rencontrerez rapidement divers outils permettant de faciliter ou d'accélerer votre travail. On peut citer comme exemples :
+une fois que v-vous maîtwisewez w-wes technowogies "bwutes" qui pewmettent de constwuiwe des pages web (comme htmw, (ˆ ﻌ ˆ)♡ css, :3 et javascwipt), òωó v-vous wencontwewez wapidement divews o-outiws pewmettant de faciwitew ou d-d'accéwewew votwe t-twavaiw. 🥺 on peut citew comme e-exempwes :
 
-- Les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) des navigateurs modernes qui permettent de déboguer votre code.
-- [Des outils de test](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing) pouvant être utilisés afin de vérifier si votre code se comporte comme vous l'aviez prévu.
-- Des bibliothèques et des cadres de travail (frameworks) basés sur JavaScript qui permettent de créer certains types de sites web beaucoup plus rapidement et efficacement .
-- Ce qu'on appelle les "Linters", des outils d'analyse qui prennent une liste de règles, parcourent votre code et listent les endroits où vous n'avez pas parfaitement suivi les règles.
-- Des minificateurs, qui retirent tous les blancs de vos fichiers de code pour les rendre plus compacts et donc plus rapides à télécharger.
+- w-wes [outiws de dévewoppement](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) d-des nyavigateuws m-modewnes qui pewmettent d-de déboguew v-votwe code. (U ﹏ U)
+- [des outiws de test](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing) pouvant êtwe utiwisés afin de véwifiew si votwe c-code se compowte c-comme vous w-w'aviez pwévu. XD
+- d-des bibwiothèques e-et des cadwes d-de twavaiw (fwamewowks) basés suw javascwipt qui pewmettent de cwéew cewtains t-types de sites w-web beaucoup pwus wapidement et efficacement . ^^
+- ce qu'on appewwe w-wes "wintews", o.O d-des outiws d'anawyse q-qui pwennent une wiste de wègwes, 😳😳😳 pawcouwent v-votwe code et wistent wes endwoits où vous n-ny'avez pas pawfaitement s-suivi wes wègwes. /(^•ω•^)
+- des minificateuws, 😳😳😳 q-qui wetiwent tous wes bwancs d-de vos fichiews d-de code pouw wes wendwe pwus compacts e-et donc pwus w-wapides à téwéchawgew.
 
-### Langages et frameworks « côté serveur »
+### w-wangages et fwamewowks « c-côté s-sewveuw »
 
-HTML, CSS et JavaScript sont des langages "front-end" (ou « côté client »), ce qui signifie qu'ils sont exécutés par le navigateur pour produire un rendu visuel du site web à destination des utilisateurs.
+h-htmw, css et javascwipt sont des w-wangages "fwont-end" (ou « c-côté cwient »), ^•ﻌ•^ c-ce qui signifie qu'iws sont exécutés paw we nyavigateuw p-pouw pwoduiwe un wendu v-visuew du site web à destination d-des utiwisateuws. 🥺
 
-Il existe une autre catégorie de langages appelés langages "back-end" (ou « côté serveur »), qui s'exécutent sur le serveur avant que le résultat ne soit envoyé au navigateur pour être affiché. Une utilisation typique d'un langage côté serveur consiste à extraire des données d'une base de données et à générer du HTML pour les contenir avant d'envoyer le résultat au navigateur pour que celui-ci l'affiche à l'utilisateur.
+i-iw existe une autwe catégowie de wangages a-appewés wangages "back-end" (ou « côté sewveuw »), o.O qui s'exékawaii~nt s-suw w-we sewveuw avant que we wésuwtat nye soit envoyé a-au nyavigateuw p-pouw êtwe affiché. (U ᵕ U❁) une utiwisation t-typique d'un wangage côté sewveuw consiste à e-extwaiwe d-des données d'une base de données e-et à généwew d-du htmw pouw wes conteniw avant d'envoyew we w-wésuwtat au nyavigateuw p-pouw q-que cewui-ci w'affiche à w-w'utiwisateuw. ^^
 
-On peut citer comme exemples ASP.NET, Python, PHP, ou NodeJS.
+on peut citew comme exempwes asp.net, (⑅˘꒳˘) python, php, :3 ou nyodejs.
 
-## Les bonnes pratiques du web
+## wes bonnes pwatiques d-du web
 
-Nous avons rapidement évoqué les technologies utilisées pour créer des sites web et nous allons désormais parler des bonnes pratiques à employer pour s'assurer que vous utilisez ces outils de la meilleure manière possible.
+nyous a-avons wapidement évoqué w-wes technowogies u-utiwisées p-pouw cwéew d-des sites web et nyous awwons d-désowmais pawwew d-des bonnes pwatiques à empwoyew p-pouw s'assuwew q-que vous utiwisez ces outiws de wa meiwweuwe manièwe p-possibwe. (///ˬ///✿)
 
-Lorsque l'on réalise du développement web, la principale cause d'incertitude provient du fait que l'on ne sache pas quelle combinaison de technologies va être utilisée par chacun des utilisateurs du site web:
+wowsque w'on wéawise du dévewoppement w-web, :3 wa pwincipawe cause d-d'incewtitude p-pwovient du fait que w'on nye s-sache pas quewwe c-combinaison de t-technowogies va êtwe utiwisée p-paw chacun des utiwisateuws d-du site web:
 
-- L'utilisateur 1 peut utiliser un iPhone avec un écran petit et étroit.
-- L'utilisateur 2 peut se servir d'un ordinateur portable Windows avec un grand écran secondaire.
-- L'utilisateur 3 peut être aveugle et utiliser un lecteur d'écran pour accéder au contenu de la page web.
-- L'utilisateur 4 utilise peut-être un très vieil ordinateur de bureau incapable de faire fonctionner les navigateurs modernes.
+- w'utiwisateuw 1 p-peut utiwisew un iphone a-avec un écwan p-petit et étwoit. 🥺
+- w-w'utiwisateuw 2 peut se sewviw d-d'un owdinateuw powtabwe windows avec un gwand écwan s-secondaiwe. mya
+- w'utiwisateuw 3 peut êtwe aveugwe et utiwisew un wecteuw d'écwan pouw accédew au contenu d-de wa page web. XD
+- w'utiwisateuw 4 utiwise peut-êtwe un twès vieiw owdinateuw de buweau incapabwe de faiwe f-fonctionnew wes nyavigateuws modewnes. -.-
 
-Ne sachant pas comment vos utilisateurs vont interagir avec votre site, vous devez le concevoir de manière défensive — rendre votre site web aussi flexible que possible, de façon à ce que chacun des utilisateurs mentionnés puissent y accéder, même s'ils n'auront pas la même interaction. En bref, nous essayons de rendre le web accessible à tous, autant que possible.
+nye sachant p-pas comment vos utiwisateuws v-vont intewagiw avec votwe site, o.O vous devez we c-concevoiw de manièwe défensive — w-wendwe votwe site web aussi f-fwexibwe que possibwe, (˘ω˘) d-de façon à ce que chacun des utiwisateuws m-mentionnés puissent y accédew, (U ᵕ U❁) même s'iws ny'auwont pas w-wa même intewaction. en bwef, rawr nyous e-essayons de wendwe we web accessibwe à t-tous, 🥺 autant que possibwe. rawr x3
 
-Vous rencontrerez les concepts suivants à un moment donné de vos études.
+v-vous wencontwewez w-wes concepts suivants à un moment donné d-de vos études. ( ͡o ω ͡o )
 
-- **La compatibilité entre navigateurs** consiste à essayer de garantir que votre page Web fonctionne sur autant d'appareils que possible. Cela inclut l'utilisation de technologies prises en charge par tous les navigateurs, l'offre de meilleures expériences aux navigateurs qui peuvent les gérer (amélioration progressive) et/ ou l'adaptation du code afin de revenir à une expérience plus simple mais fonctionnelle dans les navigateurs plus anciens (dégradation gracieuse). Cela implique notamment de nombreux tests pour vérifier le bon fonctionnement dans chaque navigateur, puis un travail supplémentaire pour résoudre ces problèmes.
-- **La conception web réactive (responsive)** consiste à rendre vos fonctionnalités et mises en page flexibles afin qu'elles puissent s'adapter automatiquement à différents navigateurs. Un exemple immédiat est un site Web qui est présenté d'une certaine manière dans un navigateur grand écran, mais qui s'affiche en une colonne unique plus compacte sur les navigateurs de téléphone mobile. Essayez d'ajuster la largeur de la fenêtre de votre navigateur maintenant pour voir ce qui se passe.
-- **La performance** signifie que les sites Web doivent se charger le plus rapidement possible, mais aussi qu'ils doivent être intuitifs et faciles à utiliser afin que les utilisateurs ne soient pas frustrés et ne partent pas ailleurs.
-- **L'accessibilité** consiste à rendre vos sites web utilisables par le plus grand nombre de catégories de personnes possible (Un concept lié est la notion de conception inclusive). Cela inclut les individus avec des déficiences visuelles, auditives, cognitives ou physiques. Cela va même au-delà des personnes handicapées — Qu'en est-il des jeunes et des personnes agées, des personnes de cultures différentes, utilisant des appareils mobiles, disposant d'une connection lente ou peu fiable ?
-- **L'internationalisation** signifie rendre les sites Web utilisables par des personnes de cultures différentes, qui parlent des langues différentes de la vôtre. cela inclut des considérations techniques (telles que la modification de votre mise en page pour qu'elle fonctionne également pour les langues se lisant de droite à gauche, ou même verticalement), et les considérations sociales (comme l'utilisation d'un langage simple et non argotique afin que les personnes pour qui votre langue est leur deuxième ou troisième langue soient plus susceptibles de comprendre votre texte).
-- **Confidentialité et sécurité**. Ces deux concepts sont liés mais différents. La confidentialité consiste à permettre aux gens de vaquer à leurs occupations en privé et à ne pas les espionner ni ne collecter plus de données que ce dont vous avez absolument besoin. La sécurité fait référence à la conception sécurisée de votre site Web afin d'empêcher des utilisateurs malveillants de voler les informations qu'il contient, et ce qu'elle vous appartiennent ou à vos utilisateurs.
+- **wa compatibiwité entwe n-nyavigateuws** consiste à essayew de gawantiw que votwe page web fonctionne suw a-autant d'appaweiws q-que possibwe. σωσ cewa incwut w-w'utiwisation de t-technowogies pwises en chawge paw t-tous wes nyavigateuws, rawr x3 w'offwe de meiwweuwes expéwiences aux nyavigateuws qui p-peuvent wes géwew (améwiowation p-pwogwessive) et/ ou w'adaptation d-du code afin d-de weveniw à une expéwience p-pwus simpwe mais fonctionnewwe dans wes nyavigateuws p-pwus anciens (dégwadation gwacieuse). (ˆ ﻌ ˆ)♡ cewa impwique nyotamment d-de nyombweux t-tests pouw véwifiew we bon fonctionnement dans c-chaque nyavigateuw, rawr puis un twavaiw suppwémentaiwe pouw wésoudwe ces pwobwèmes. :3
+- **wa conception web wéactive (wesponsive)** consiste à w-wendwe vos fonctionnawités e-et mises en page fwexibwes a-afin qu'ewwes p-puissent s'adaptew automatiquement à d-difféwents nyavigateuws. rawr un exempwe immédiat est un site web qui est pwésenté d'une c-cewtaine manièwe dans un nyavigateuw gwand écwan, (˘ω˘) mais qui s'affiche en une c-cowonne unique p-pwus compacte suw w-wes nyavigateuws de téwéphone mobiwe. (ˆ ﻌ ˆ)♡ essayez d'ajustew wa wawgeuw d-de wa fenêtwe d-de votwe nyavigateuw m-maintenant pouw voiw c-ce qui se passe. mya
+- **wa pewfowmance** s-signifie que wes sites web d-doivent se chawgew we pwus wapidement p-possibwe, (U ᵕ U❁) mais aussi qu'iws doivent êtwe i-intuitifs et faciwes à utiwisew a-afin que wes utiwisateuws n-nye soient pas fwustwés e-et nye pawtent p-pas aiwweuws. mya
+- **w'accessibiwité** consiste à w-wendwe vos sites web utiwisabwes p-paw we pwus gwand nyombwe d-de catégowies de p-pewsonnes possibwe (un concept wié est wa nyotion d-de conception incwusive). ʘwʘ cewa incwut wes individus avec des déficiences visuewwes, auditives, (˘ω˘) cognitives ou physiques. 😳 cewa v-va même au-dewà des pewsonnes handicapées — q-qu'en est-iw des jeunes et des p-pewsonnes agées, òωó des pewsonnes de cuwtuwes difféwentes, nyaa~~ u-utiwisant des appaweiws mobiwes, o.O disposant d-d'une connection wente ou peu fiabwe ?
+- **w'intewnationawisation** s-signifie wendwe wes sites web utiwisabwes p-paw des pewsonnes de cuwtuwes difféwentes, nyaa~~ q-qui pawwent des w-wangues difféwentes de wa vôtwe. (U ᵕ U❁) cewa incwut d-des considéwations t-techniques (tewwes que wa modification d-de votwe m-mise en page pouw qu'ewwe fonctionne égawement pouw wes wangues s-se wisant de dwoite à gauche, 😳😳😳 ou même vewticawement), et w-wes considéwations sociawes (comme w'utiwisation d'un wangage s-simpwe et nyon awgotique a-afin que w-wes pewsonnes pouw qui votwe wangue est weuw deuxième ou twoisième w-wangue soient pwus susceptibwes d-de compwendwe votwe texte). (U ﹏ U)
+- **confidentiawité e-et sécuwité**. ^•ﻌ•^ c-ces deux concepts sont wiés mais difféwents. (⑅˘꒳˘) wa confidentiawité consiste à pewmettwe a-aux gens de vaquew à w-weuws occupations en pwivé et à nye pas w-wes espionnew nyi nye cowwectew pwus de données q-que ce dont vous a-avez absowument b-besoin. >_< wa sécuwité f-fait wéféwence à w-wa c-conception sécuwisée de votwe site web afin d'empêchew d-des utiwisateuws m-mawveiwwants d-de vowew w-wes infowmations q-qu'iw contient, (⑅˘꒳˘) e-et ce qu'ewwe vous appawtiennent o-ou à vos utiwisateuws. σωσ
 
-## Voir aussi
+## v-voiw aussi
 
-- [Histoire du World Wide Web](https://fr.wikipedia.org/wiki/World_Wide_Web#Histoire)
-- [Le fonctionnement de l'Internet](/fr/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work)
+- [histoiwe d-du wowwd wide web](https://fw.wikipedia.owg/wiki/wowwd_wide_web#histoiwe)
+- [we fonctionnement d-de w'intewnet](/fw/docs/weawn/common_questions/web_mechanics/how_does_the_intewnet_wowk)

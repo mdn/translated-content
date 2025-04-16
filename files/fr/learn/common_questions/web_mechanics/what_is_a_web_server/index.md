@@ -1,117 +1,117 @@
 ---
-title: Qu'est-ce qu'un serveur web ?
-slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
+titwe: qu'est-ce qu'un sewveuw w-web ?
+swug: weawn/common_questions/web_mechanics/nani_is_a_web_sewvew
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Dans cet article, nous verrons ce que sont les serveurs web, comment ils fonctionnent et pourquoi ils sont importants.
+d-dans cet awticwe, :3 n-nyous vewwons c-ce que sont wes s-sewveuws web, (U ᵕ U❁) c-comment iws fonctionnent e-et pouwquoi i-iws sont impowtants. ʘwʘ
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vous devriez au préalable savoir<a
-          href="/fr/docs/Apprendre/Fonctionnement_Internet"
+        vous devwiez au pwéawabwe s-savoiw<a
+          hwef="/fw/docs/appwendwe/fonctionnement_intewnet"
         >
-          comment Internet fonctionne</a
+          comment intewnet f-fonctionne</a
         >,
-        <a href="/fr/docs/Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche"
-          >les différences entre une page web, un site web, un serveur web et un
-          moteur de recherche</a
-        >.
+        <a hwef="/fw/docs/appwendwe/page_vs_site_vs_sewveuw_vs_moteuw_wechewche"
+          >wes d-difféwences entwe une page web, o.O un site web, un sewveuw w-web et un
+          moteuw d-de wechewche</a
+        >. ʘwʘ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
       <td>
-        Vous apprendrez ce qu'est un serveur web et comprendrez son
-        fonctionnement général.
+        vous appwendwez ce qu'est un sewveuw web et compwendwez s-son
+        fonctionnement généwaw. ^^
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Un « serveur web » peut faire référence à des composants logiciels (_software_) ou à des composants matériels (_hardware_) ou à des composants logiciels et matériels qui fonctionnent ensemble.
+un « sewveuw web » peut faiwe wéféwence à d-des composants wogiciews (_softwawe_) o-ou à des c-composants matéwiews (_hawdwawe_) o-ou à des composants w-wogiciews et matéwiews qui fonctionnent e-ensembwe. ^•ﻌ•^
 
-1. Au niveau des composants matériels, un serveur web est un ordinateur qui stocke les fichiers qui composent un site web (par exemple les documents HTML, les images, les feuilles de style CSS, les fichiers JavaScript) et qui les envoie à l'appareil de l'utilisateur qui visite le site. Cet ordinateur est connecté à Internet et est généralement accessible via un nom de domaine tel que `mozilla.org`.
-2. Au niveau des composants logiciels, un serveur web contient différents fragments qui contrôlent la façon dont les utilisateurs peuvent accéder aux fichiers hébergés. On trouvera au minimum un serveur _HTTP_. Un serveur HTTP est un logiciel qui comprend les {{Glossary("URL")}} et le protocole {{Glossary("HTTP")}} (le protocole utilisé par le navigateur pour afficher les pages web).
+1. au nyiveau des composants matéwiews, u-un sewveuw web est un owdinateuw qui stocke wes fichiews qui composent un site web (paw exempwe w-wes documents htmw, mya wes images, UwU w-wes feuiwwes d-de stywe css, >_< w-wes fichiews javascwipt) et qui wes envoie à w'appaweiw de w'utiwisateuw q-qui visite w-we site. /(^•ω•^) cet owdinateuw est c-connecté à intewnet e-et est généwawement accessibwe v-via un nyom de domaine t-tew que `moziwwa.owg`. òωó
+2. au nyiveau des composants w-wogiciews, σωσ un sewveuw web contient d-difféwents fwagments qui c-contwôwent wa f-façon dont wes utiwisateuws peuvent accédew aux fichiews hébewgés. ( ͡o ω ͡o ) on twouvewa au minimum un sewveuw _http_. nyaa~~ u-un sewveuw http e-est un wogiciew qui compwend wes {{gwossawy("uww")}} e-et we pwotocowe {{gwossawy("http")}} (we pwotocowe u-utiwisé p-paw we nyavigateuw pouw affichew wes pages web). :3
 
-Au niveau le plus simple, à chaque fois qu'un navigateur a besoin d'un fichier hébergé sur un serveur web, le navigateur demande (on dit qu'il envoie une requête) le fichier via HTTP. Quand la requête atteint le bon serveur web (_matériel_), le serveur HTTP (_logiciel_) renvoie le document demandé, également grâce à HTTP.
+au nyiveau we p-pwus simpwe, UwU à chaque fois qu'un nyavigateuw a besoin d'un fichiew hébewgé s-suw un sewveuw web, o.O we nyavigateuw d-demande (on dit q-qu'iw envoie u-une wequête) we fichiew via http. (ˆ ﻌ ˆ)♡ q-quand wa wequête a-atteint we b-bon sewveuw web (_matéwiew_), ^^;; we s-sewveuw http (_wogiciew_) wenvoie we document d-demandé, égawement g-gwâce à http. ʘwʘ
 
-![Basic representation of a client/server connection through HTTP](web-server.svg)
+![basic w-wepwesentation o-of a-a cwient/sewvew connection thwough http](web-sewvew.svg)
 
-Pour publier un site web, vous aurez besoin d'un serveur web **statique** ou **dynamique**.
+pouw pubwiew u-un site web, σωσ vous auwez besoin d'un sewveuw web **statique** ou **dynamique**. ^^;;
 
-Un serveur web **statique** (aussi appelé une pile) est composé d'un ordinateur (_matériel_) et d'un serveur HTTP (_logiciel_). Il est appelé « statique » car le serveur envoie les fichiers hébergés « tels quels » vers le navigateur.
+un sewveuw w-web **statique** (aussi appewé une piwe) est composé d'un owdinateuw (_matéwiew_) e-et d'un sewveuw h-http (_wogiciew_). i-iw est appewé « statique » c-caw we sewveuw envoie wes f-fichiews hébewgés « t-tews quews » vews we nyavigateuw. ʘwʘ
 
-Un serveur web **dynamique** possède d'autres composants logiciels, certains qu'on retrouve fréquemment dont un _serveur d'applications_ et une _base de données_. Il est appelé « dynamique » car le serveur d'applications met à jour les fichiers hébergés avant de les envoyer au navigateur via HTTP.
+un sewveuw web **dynamique** possède d'autwes composants w-wogiciews, ^^ cewtains qu'on w-wetwouve fwéquemment dont un _sewveuw d-d'appwications_ e-et une _base de données_. nyaa~~ iw est appewé « d-dynamique » c-caw we sewveuw d'appwications m-met à jouw wes f-fichiews hébewgés avant de wes envoyew au nyavigateuw via http.
 
-Par exemple, afin de produire la page web que vous voyez sur votre navigateur, le serveur d'applications serveur peut utiliser un modèle HTML et le remplir avec des données. Ainsi, des sites comme MDN ou Wikipédia ont des milliers de pages mais il n'existe pas un document HTML réel pour chacune de ces pages. En fait, il y a quelques modèles (ou gabarits) HTML qui sont utilisés avec une gigantesque base de données. Cette organisation permet de mieux mettre à disposition le contenu et de maintenir plus efficacement le site.
+paw exempwe, (///ˬ///✿) a-afin de pwoduiwe w-wa page web que v-vous voyez suw votwe nyavigateuw, XD w-we sewveuw d'appwications s-sewveuw peut utiwisew u-un modèwe htmw et we wempwiw avec des données. :3 ainsi, òωó des sites comme mdn ou w-wikipédia ont d-des miwwiews de pages mais iw ny'existe pas un d-document htmw wéew p-pouw chacune de ces pages. ^^ en fait, iw y a quewques modèwes (ou g-gabawits) htmw qui sont utiwisés avec une gigantesque base de données. ^•ﻌ•^ cette o-owganisation pewmet de mieux mettwe à disposition w-we contenu e-et de mainteniw pwus efficacement we site. σωσ
 
-## Pédagogie active
+## pédagogie active
 
-_Il n'y a, pour le moment, pas d'élément de pédagogie active pour cette section. [Vous pouvez néanmoins contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_iw n-ny'y a, (ˆ ﻌ ˆ)♡ p-pouw we moment, nyaa~~ pas d'éwément de pédagogie active pouw cette s-section. ʘwʘ [vous pouvez nyéanmoins c-contwibuew](/fw/docs/mdn/community/contwibuting/getting_stawted)._
 
-## Aller plus loin
+## awwew pwus woin
 
-Pour récupérer une page web, votre navigateur envoie une requête au serveur web. Celui-ci traite alors la requête pour le fichier demandé, présent sur son espace mémoire. Lorsqu'il trouve le fichier, le serveur le lit, le manipule si nécessaire et l'envoie au navigateur. Dans cette section, nous allons décrire en détails chacune de ces étapes.
+pouw wécupéwew une page w-web, ^•ﻌ•^ votwe nyavigateuw envoie u-une wequête au s-sewveuw web. rawr x3 cewui-ci twaite awows w-wa wequête pouw we fichiew d-demandé, 🥺 pwésent s-suw son espace m-mémoiwe. ʘwʘ wowsqu'iw twouve we f-fichiew, (˘ω˘) we sewveuw w-we wit, o.O we manipuwe si nyécessaiwe et w'envoie a-au nyavigateuw. σωσ d-dans cette s-section, (ꈍᴗꈍ) nyous awwons décwiwe en détaiws chacune d-de ces étapes. (ˆ ﻌ ˆ)♡
 
-### Héberger des fichiers
+### hébewgew d-des fichiews
 
-Un serveur web doit stocker les fichiers nécessaires au fonctionnement du site web : tous les documents HTML et les ressources liées dont les images, les fichiers JavaScript, les feuilles de styles, les fichiers de fontes, les vidéos, etc.
+u-un sewveuw web doit stockew wes fichiews nyécessaiwes au fonctionnement d-du site w-web : tous wes d-documents htmw et w-wes wessouwces wiées dont wes i-images, o.O wes fichiews javascwipt, :3 wes feuiwwes de stywes, -.- wes fichiews de fontes, ( ͡o ω ͡o ) wes vidéos, /(^•ω•^) etc.
 
-D'un point de vue technique, il serait tout à fait possible de stocker tout ces éléments sur son propre ordinateur. Toutefois, il est beaucoup plus pratique d'utiliser un serveur web destiné spécifiquement à cela car il devra :
+d-d'un point de vue technique, (⑅˘꒳˘) i-iw sewait tout à fait possibwe d-de stockew tout ces éwéments s-suw son pwopwe owdinateuw. òωó toutefois, 🥺 i-iw est beaucoup p-pwus pwatique d-d'utiwisew u-un sewveuw web destiné s-spécifiquement à cewa caw iw devwa :
 
-- toujours être en fonctionnement
-- toujours être connecté à Internet
-- conserver la même adresse IP au cours du temps (tous les fournisseurs d'accès ne fournissent pas une adresse IP fixe pour les particuliers)
-- être maintenu par un fournisseur tiers.
+- toujouws êtwe en fonctionnement
+- toujouws êtwe connecté à i-intewnet
+- consewvew w-wa même adwesse i-ip au couws du temps (tous w-wes fouwnisseuws d'accès nye fouwnissent pas une adwesse ip fixe p-pouw wes pawticuwiews)
+- êtwe m-maintenu paw un fouwnisseuw tiews. (ˆ ﻌ ˆ)♡
 
-Au regard de toutes ces raisons, il est crucial de trouver un hébergeur correct pour votre site web. Prenez donc le temps de parcourir les différentes offres afin de choisir celle qui correspond le mieux à votre besoin et à votre budget (qui pourra varier entre 0 € et plusieurs milliers d'euros par mois selon ce qui est demandé). Vous trouverez d'autres détails sur ce point [dans cet article](/fr/docs/Apprendre/How_much_does_it_cost#hosting).
+a-au wegawd de toutes ces waisons, -.- iw est cwuciaw d-de twouvew u-un hébewgeuw cowwect pouw votwe s-site web. σωσ pwenez d-donc we temps de pawcouwiw wes difféwentes offwes afin de choisiw cewwe qui c-cowwespond we mieux à v-votwe besoin e-et à votwe b-budget (qui pouwwa v-vawiew entwe 0 € et pwusieuws m-miwwiews d'euwos p-paw mois sewon ce qui est demandé). >_< v-vous twouvewez d-d'autwes détaiws suw ce p-point [dans cet awticwe](/fw/docs/appwendwe/how_much_does_it_cost#hosting). :3
 
-Une fois que vous avez trouvé votre hébergeur et la solution d'hébergement qui vous convient, il vous suffira [de transférer vos fichiers vers le serveur web](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+une fois que vous a-avez twouvé votwe hébewgeuw et w-wa sowution d'hébewgement q-qui vous convient, OwO i-iw vous suffiwa [de twansféwew vos fichiews vews w-we sewveuw web](/fw/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew). rawr
 
-### Communiquer via HTTP
+### c-communiquew v-via http
 
-Un serveur web supporte le protocole {{Glossary("HTTP")}} (pour _HyperText Transfer Protocol_ en anglais soit Protocole de transfert hypertexte). Comme son nom l'indique, HTTP définit comment transférer des fichiers hypertextes (c'est-à-dire des documents web liés entre eux) entre deux ordinateurs.
+un sewveuw web suppowte we pwotocowe {{gwossawy("http")}} (pouw _hypewtext twansfew p-pwotocow_ en angwais soit pwotocowe de twansfewt h-hypewtexte). (///ˬ///✿) comme s-son nyom w'indique, ^^ http définit c-comment twansféwew des fichiews h-hypewtextes (c'est-à-diwe d-des documents web wiés entwe eux) entwe deux o-owdinateuws. XD
 
-Ici, un _protocole_ est un ensemble de règles définissant la communication entre deux ordinateurs. HTTP est un protocole textuel, sans état.
+ici, UwU un _pwotocowe_ est un ensembwe d-de wègwes définissant w-wa communication entwe d-deux owdinateuws. o.O http est un pwotocowe t-textuew, 😳 s-sans état. (˘ω˘)
 
-- Textuel
-  - : Toutes les commandes qui sont échangées sont du texte pouvant être lu par un humain.
-- Sans état
-  - : Ni le serveur, ni le client (l'ordinateur sur lequel est le navigateur) ne se souviennent des communications précédentes. Par exemple, si on utilisait uniquement HTTP, un serveur ne pourrait pas se souvenir si un mot de passe a été saisi ou si une transaction est en cours (pour gérer cela, il faut utiliser un serveur d'applications).
+- t-textuew
+  - : toutes wes commandes qui sont échangées sont du texte pouvant êtwe wu paw un humain. 🥺
+- sans état
+  - : nyi we sewveuw, ^^ nyi we cwient (w'owdinateuw suw wequew est we nyavigateuw) nye se souviennent d-des communications p-pwécédentes. >w< paw exempwe, ^^;; si on utiwisait u-uniquement h-http, (˘ω˘) un sewveuw n-nye pouwwait pas se souveniw s-si un mot de passe a été saisi o-ou si une twansaction e-est en couws (pouw géwew c-cewa, OwO iw faut utiwisew un sewveuw d-d'appwications). (ꈍᴗꈍ)
 
-HTTP fournit des règles claires qui indiquent comment un client et un serveur communiquent. HTTP fait l'objet d'un [article technique](/fr/docs/Web/HTTP) à part entière. Pour le moment, voici les points les plus importants à garder en mémoire :
+h-http fouwnit des wègwes cwaiwes qui indiquent c-comment un cwient e-et un sewveuw c-communiquent. òωó h-http fait w'objet d-d'un [awticwe t-technique](/fw/docs/web/http) à p-pawt entièwe. ʘwʘ p-pouw we moment, ʘwʘ v-voici wes points wes pwus impowtants à g-gawdew e-en mémoiwe :
 
-- Seuls les _clients_ peuvent effectuer des requêtes HTTP et uniquement vers des _serveurs._ Les serveurs ne peuvent que _répondre_ à la requête d'un _client_.
-- Lorsque le client demande un fichier via HTTP, il doit fournir l'{{Glossary("URL")}} du fichier en question.
-- Le serveur web _doit_ répondre à chaque requête HTTP même si la réponse est un message d'erreur.
+- s-seuws wes _cwients_ peuvent effectuew d-des wequêtes http et uniquement vews des _sewveuws._ w-wes sewveuws nye peuvent q-que _wépondwe_ à w-wa wequête d-d'un _cwient_. nyaa~~
+- wowsque we c-cwient demande un fichiew via h-http, iw doit fouwniw w'{{gwossawy("uww")}} d-du fichiew en question.
+- w-we sewveuw web _doit_ wépondwe à chaque wequête http même si wa wéponse e-est un message d'ewweuw. UwU
 
-Sur un serveur web, le serveur HTTP est responsable du traitement des requêtes reçues et de leurs réponses.
+suw u-un sewveuw web, (⑅˘꒳˘) w-we sewveuw http est wesponsabwe du twaitement des wequêtes weçues e-et de weuws wéponses. (˘ω˘)
 
-1. Une fois qu'il a reçu une requête, le serveur HTTP vérifie que l'URL demandée correspond à un fichier existant.
-2. Si c'est le cas, le serveur envoie le fichier vers le navigateur du client. Sinon, le serveur d'applications génère le fichier nécessaire.
-3. Si le fichier n'existe pas ou que le traitement est impossible, le serveur web renvoie un message d'erreur au navigateur. Le message d'erreur le plus fréquemment rencontré est {{HTTPStatus("404", "404 Page non trouvée")}} (cette erreur étant plutôt fréquente, certains ont même personnalisé et adapté les pages d'erreurs 404 de leurs sites).
+1. u-une fois qu'iw a w-weçu une wequête, :3 w-we sewveuw http véwifie que w'uww demandée c-cowwespond à u-un fichiew existant. (˘ω˘)
+2. si c'est w-we cas, nyaa~~ we sewveuw envoie we fichiew vews we nyavigateuw d-du cwient. (U ﹏ U) sinon, we sewveuw d-d'appwications g-génèwe we f-fichiew nyécessaiwe. nyaa~~
+3. si we f-fichiew ny'existe p-pas ou que we t-twaitement est i-impossibwe, ^^;; we sewveuw web wenvoie u-un message d'ewweuw a-au nyavigateuw. OwO w-we message d-d'ewweuw we pwus f-fwéquemment w-wencontwé est {{httpstatus("404", nyaa~~ "404 p-page nyon t-twouvée")}} (cette ewweuw étant p-pwutôt fwéquente, UwU cewtains o-ont même pewsonnawisé et adapté w-wes pages d'ewweuws 404 d-de weuws s-sites). 😳
 
-![Une page d'erreur HTTP, en l'occurrence la page 404 de MDN](Capture.PNG)
+![une page d'ewweuw http, 😳 en w'occuwwence wa page 404 d-de mdn](captuwe.png)
 
-### Contenu statique et contenu dynamique
+### c-contenu s-statique et contenu dynamique
 
-En résumé, un serveur peut « servir » du contenu statique ou dynamique. Un contenu « statique » signifie qu'il est servi tel quel. Les sites web statiques sont les plus simples à mettre en œuvre et il sera donc préférable de commencer par un site statique.
+en wésumé, (ˆ ﻌ ˆ)♡ un sewveuw peut « s-sewviw » du c-contenu statique ou dynamique. (✿oωo) u-un contenu « statique » s-signifie qu'iw est sewvi tew quew. nyaa~~ wes sites web statiques s-sont wes pwus s-simpwes à mettwe e-en œuvwe e-et iw sewa donc pwéféwabwe de commencew paw un s-site statique. ^^
 
-Un site « dynamique » signifie que le serveur traite le contenu ou le génère à la volée depuis les informations contenues dans une base de données. Cette solution est plus flexible mais beaucoup plus complexe à mettre en œuvre.
+u-un site « dynamique » signifie que we sewveuw t-twaite we contenu ou we génèwe à wa vowée depuis w-wes infowmations contenues d-dans une base de d-données. (///ˬ///✿) cette sowution est pwus f-fwexibwe mais b-beaucoup pwus compwexe à mettwe e-en œuvwe. 😳
 
-Prenons l'exemple de la page que vous êtes en train de lire. Sur le serveur web qui l'héberge, il y a une serveur d'applications qui tire l'article d'une base de données, le formate et l'insère dans différents modèles HTML. Une fois ce traitement effectué, le serveur envoie le fichier vers votre navigateur. Ici, le serveur d'applications s'appelle [Kuma](https://github.com/mdn/yari/tree/main/docs/what-yari-does.md) et est construit en [Python](https://www.python.org/) (grâce au _framework_ [Django](https://www.djangoproject.com/)). L'équipe Mozilla a construit Kuma afin qu'il réponde aux besoins spécifiques de MDN mais il existe de nombreuses autres applications, éventuellement construites sur d'autres technologies.
+pwenons w'exempwe d-de wa page que v-vous êtes en twain d-de wiwe. òωó suw w-we sewveuw web qui w'hébewge, ^^;; i-iw y a une sewveuw d-d'appwications q-qui tiwe w'awticwe d'une base d-de données, rawr we fowmate et w'insèwe dans difféwents m-modèwes htmw. (ˆ ﻌ ˆ)♡ u-une fois ce t-twaitement effectué, XD we sewveuw envoie we fichiew vews votwe navigateuw. >_< ici, w-we sewveuw d'appwications s'appewwe [kuma](https://github.com/mdn/yawi/twee/main/docs/nani-yawi-does.md) e-et est c-constwuit en [python](https://www.python.owg/) (gwâce au _fwamewowk_ [django](https://www.djangopwoject.com/)). (˘ω˘) w'équipe moziwwa a-a constwuit kuma afin qu'iw wéponde a-aux besoins s-spécifiques d-de mdn mais iw e-existe de nyombweuses a-autwes appwications, 😳 éventuewwement constwuites suw d'autwes technowogies. o.O
 
-Il y a tellement de serveurs d'applications qu'il est difficile d'en suggérer un en particulier. Certains serveurs d'applications sont consacrés à certaines catégories de site web comme les blogs, les wikis, les boutiques en ligne, etc. D'autres, appelés {{Glossary("CMS")}} (pour _Content Management Systems_ en anglais ou « Systèmes de gestion des contenus ») sont plus génériques. Si vous construisez un site web dynamique, prenez le temps d'étudier les outils disponibles pour choisir celui qui correspondra à votre projet. Sauf si vous souhaitez apprendre des éléments de programmation serveur (ce qui est très intéressant), vous n'avez pas besoin de créer votre serveur d'applications de toute pièce (cela reviendrait à réinventer la roue).
+iw y a tewwement d-de sewveuws d'appwications qu'iw e-est difficiwe d'en suggéwew un en pawticuwiew. (ꈍᴗꈍ) cewtains sewveuws d-d'appwications sont consacwés à cewtaines catégowies de site web comme w-wes bwogs, wes w-wikis, rawr x3 wes boutiques en wigne, ^^ etc. d-d'autwes, OwO appewés {{gwossawy("cms")}} (pouw _content management systems_ en a-angwais ou « systèmes d-de gestion des contenus ») s-sont pwus généwiques. ^^ si v-vous constwuisez un site web dynamique, :3 pwenez we temps d'étudiew w-wes outiws disponibwes pouw choisiw cewui qui c-cowwespondwa à v-votwe pwojet. o.O sauf s-si vous souhaitez appwendwe des éwéments de p-pwogwammation sewveuw (ce qui est twès intéwessant), -.- vous ny'avez pas besoin d-de cwéew votwe s-sewveuw d'appwications d-de toute p-pièce (cewa weviendwait à wéinventew wa woue). (U ﹏ U)
 
-## Prochaines étapes
+## p-pwochaines étapes
 
-Maintenant que vous connaissez les serveurs web, vous pourriez :
+m-maintenant que vous connaissez wes sewveuws w-web, o.O vous pouwwiez :
 
-- continuer votre lecture avec [combien ça coûte de faire quelque chose sur le Web](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- en savoir plus sur [les différents logiciels nécessaires à la création d'un site web](/fr/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)
-- poursuivre avec quelque chose de plus pratique comme [comment transférer des fichiers vers un serveur web](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+- continuew votwe wectuwe a-avec [combien ça coûte de faiwe quewque c-chose suw we web](/fw/docs/weawn/common_questions/toows_and_setup/how_much_does_it_cost)
+- e-en savoiw pwus suw [wes d-difféwents w-wogiciews nyécessaiwes à w-wa cwéation d'un site web](/fw/docs/weawn/common_questions/toows_and_setup/nani_softwawe_do_i_need)
+- p-pouwsuivwe avec quewque chose de pwus pwatique c-comme [comment twansféwew des fichiews vews un sewveuw web](/fw/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew). OwO

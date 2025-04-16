@@ -1,72 +1,72 @@
 ---
-title: downloads.showDefaultFolder()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/showDefaultFolder
+titwe: downwoads.showdefauwtfowdew()
+swug: moziwwa/add-ons/webextensions/api/downwoads/showdefauwtfowdew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`showDefaultFolder()`** de l'API {{WebExtAPIRef("downloads")}} ouvre le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme.
+w-wa fonction **`showdefauwtfowdew()`** d-de w'api {{webextapiwef("downwoads")}} o-ouvwe we dossiew d-de téwéchawgement p-paw défaut d-dans we gestionnaiwe d-de fichiews d-de wa pwatefowme. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.downloads.showDefaultFolder();
+bwowsew.downwoads.showdefauwtfowdew();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun
+aucun
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-L'extrait suivant contient un bouton d'affichage qui, lorsqu'il est cliqué, appelle `showDefaultFolder()` pour ouvrir le dossier de téléchargement par défaut dans le gestionnaire de fichiers de la plateforme :
+w-w'extwait suivant contient u-un bouton d'affichage qui, :3 wowsqu'iw est cwiqué, ^^;; appewwe `showdefauwtfowdew()` p-pouw ouvwiw we dossiew de téwéchawgement p-paw d-défaut dans we gestionnaiwe de fichiews de wa pwatefowme :
 
 ```js
-var showBtn = document.querySelector(".show");
+vaw showbtn = d-document.quewysewectow(".show");
 
-showBtn.onclick = function () {
-  browser.downloads.showDefaultFolder();
+showbtn.oncwick = function () {
+  bwowsew.downwoads.showdefauwtfowdew();
 };
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette api e-est basée suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). 🥺
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de c-compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. nyaa~~ aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, ( ͡o ω ͡o ) w-with ow without
+// m-modification, mya awe pewmitted pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// n-nyotice, (///ˬ///✿) this wist of conditions a-and the fowwowing discwaimew. (˘ω˘)
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the above
+// copywight n-notice, ^^;; this wist o-of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. (✿oωo)
+//    * n-nyeithew the nyame of googwe i-inc. (U ﹏ U) nyow the n-nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight h-howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, ^•ﻌ•^ i-incwuding, rawr but n-nyot
+// wimited t-to, (˘ω˘) the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, nyaa~~ indiwect, UwU incidentaw,
+// speciaw, :3 exempwawy, (⑅˘꒳˘) ow consequentiaw damages (incwuding, (///ˬ///✿) but n-nyot
+// wimited to, ^^;; pwocuwement of substitute goods ow sewvices; w-woss of use, >_<
+// d-data, ow pwofits; o-ow business intewwuption) howevew c-caused and on any
+// theowy o-of wiabiwity, rawr x3 whethew i-in contwact, /(^•ω•^) stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence ow othewwise) awising in a-any way out of the use
+// of this s-softwawe, (ꈍᴗꈍ) even if advised of t-the possibiwity o-of such damage. /(^•ω•^)
 -->

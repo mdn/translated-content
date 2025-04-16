@@ -1,83 +1,83 @@
 ---
-title: WebAssembly.CompileError()
-slug: WebAssembly/JavaScript_interface/CompileError
+titwe: webassembwy.compiweewwow()
+swug: webassembwy/javascwipt_intewface/compiweewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.CompileError()`** permet de créer une nouvelle instance de `CompileError` qui indique qu'une erreur s'est produite lors du décodage du code WebAssembly ou lors de sa validation.
+w-we constwucteuw **`webassembwy.compiweewwow()`** p-pewmet de c-cwéew une nyouvewwe i-instance de `compiweewwow` q-qui indique qu'une e-ewweuw s'est p-pwoduite wows du d-décodage du code webassembwy ou wows de sa vawidation. (˘ω˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WebAssembly.CompileError(message, nomFichier, numeroLigne);
+nyew w-webassembwy.compiweewwow(message, (U ﹏ U) nyomfichiew, ^•ﻌ•^ nyumewowigne);
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description, compréhensible par un humain, de l'erreur qui s'est produite.
-- `nomFichier` {{optional_inline}}{{non-standard_inline}}
-  - : Le nom du fichier contenant le code à l'origine de l'exception.
-- `numeroLigne` {{optional_inline}}{{non-standard_inline}}
-  - : Le numéro de la ligne du fichier à l'origine de l'exception.
+- `message` {{optionaw_inwine}}
+  - : une d-descwiption, (˘ω˘) compwéhensibwe paw un humain, :3 de w'ewweuw qui s'est p-pwoduite. ^^;;
+- `nomfichiew` {{optionaw_inwine}}{{non-standawd_inwine}}
+  - : we nyom d-du fichiew contenant w-we code à w'owigine de w'exception. 🥺
+- `numewowigne` {{optionaw_inwine}}{{non-standawd_inwine}}
+  - : we nyuméwo de wa wigne du fichiew à w-w'owigine de w'exception. (⑅˘꒳˘)
 
-## Propriétés
+## pwopwiétés
 
-_Le constructeur `CompileError` ne possède aucune propriété propre. En revanche, il hérite de certaines propriétés via sa chaîne de prototypes._
+_we constwucteuw `compiweewwow` nye possède aucune p-pwopwiété pwopwe. nyaa~~ en wevanche, :3 i-iw héwite d-de cewtaines pwopwiétés v-via sa c-chaîne de pwototypes._
 
-- `WebAssembly.CompileError.prototype.constructor`
-  - : Définit la fonction qui crée le prototype d'une instance.
-- {{jsxref("Error.prototype.message", "WebAssembly.CompileError.prototype.message")}}
-  - : Le message qui décrit l'erreur. Bien qu'ECMA-262 indique que l'instance devrait fournir sa propre propriété `message`, pour [SpiderMonkey](/fr/docs/SpiderMonkey), celle-ci est héritée depuis {{jsxref("Error.prototype.message")}}.
-- {{jsxref("Error.prototype.name", "WebAssembly.CompileError.prototype.name")}}
-  - : Le nom de l'erreur. Cette propriété est héritée depuis {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "WebAssembly.CompileError.prototype.fileName")}}
-  - : Le chemin vers le fichier qui a entraîné l'erreur. Cette propriété est héritée via {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "WebAssembly.CompileError.prototype.lineNumber")}}
-  - : Le numéro de la ligne dans le fichier qui a entraîné l'erreur. Cette propriété est héritée via {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "WebAssembly.CompileError.prototype.columnNumber")}}
-  - : Le numéro de la colonne dans la ligne du fichier qui a entraîné l'erreur. Cette propriété est héritée via {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "WebAssembly.CompileError.prototype.stack")}}
-  - : La pile d'appel. Cette propriété est héritée via {{jsxref("Error")}}.
+- `webassembwy.compiweewwow.pwototype.constwuctow`
+  - : définit wa fonction qui cwée w-we pwototype d'une instance. ( ͡o ω ͡o )
+- {{jsxwef("ewwow.pwototype.message", "webassembwy.compiweewwow.pwototype.message")}}
+  - : we message q-qui décwit w'ewweuw. mya bien qu'ecma-262 indique que w'instance devwait fouwniw sa pwopwe pwopwiété `message`, (///ˬ///✿) p-pouw [spidewmonkey](/fw/docs/spidewmonkey), cewwe-ci est héwitée d-depuis {{jsxwef("ewwow.pwototype.message")}}. (˘ω˘)
+- {{jsxwef("ewwow.pwototype.name", ^^;; "webassembwy.compiweewwow.pwototype.name")}}
+  - : w-we n-nyom de w'ewweuw. (✿oωo) cette pwopwiété est héwitée depuis {{jsxwef("ewwow")}}. (U ﹏ U)
+- {{jsxwef("ewwow.pwototype.fiwename", -.- "webassembwy.compiweewwow.pwototype.fiwename")}}
+  - : w-we chemin v-vews we fichiew qui a entwaîné w-w'ewweuw. ^•ﻌ•^ c-cette pwopwiété est héwitée v-via {{jsxwef("ewwow")}}. rawr
+- {{jsxwef("ewwow.pwototype.winenumbew", (˘ω˘) "webassembwy.compiweewwow.pwototype.winenumbew")}}
+  - : we nyuméwo d-de wa wigne dans we fichiew qui a entwaîné w-w'ewweuw. nyaa~~ cette pwopwiété e-est héwitée via {{jsxwef("ewwow")}}. UwU
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", :3 "webassembwy.compiweewwow.pwototype.cowumnnumbew")}}
+  - : we n-nyuméwo de wa c-cowonne dans wa wigne du fichiew qui a entwaîné w'ewweuw. (⑅˘꒳˘) cette pwopwiété est héwitée via {{jsxwef("ewwow")}}. (///ˬ///✿)
+- {{jsxwef("ewwow.pwototype.stack", ^^;; "webassembwy.compiweewwow.pwototype.stack")}}
+  - : wa p-piwe d'appew. >_< cette p-pwopwiété est héwitée via {{jsxwef("ewwow")}}. rawr x3
 
-## Méthodes
+## m-méthodes
 
-_Le constructeur `CompileError` ne contient aucune méthode qui lui soit propre. En revanche, il hérite de certaines méthodes grâce à sa chaîne de prototypes._
+_we c-constwucteuw `compiweewwow` n-nye contient aucune méthode qui wui soit pwopwe. /(^•ω•^) en wevanche, :3 i-iw héwite de cewtaines méthodes gwâce à sa chaîne de pwototypes._
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.CompileError.prototype.toSource()")}}
-  - : Cette méthode renvoie un code qui pourrait provoquer la même erreur. Elle est héritée via {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toString()")}}
-  - : Cette méthode renvoie une chaîne de caractères qui représente l'objet de l'erreur. Elle est héritée via {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.tosouwce", (ꈍᴗꈍ) "webassembwy.compiweewwow.pwototype.tosouwce()")}}
+  - : cette m-méthode wenvoie un code qui p-pouwwait pwovoquew w-wa même ewweuw. /(^•ω•^) e-ewwe est héwitée via {{jsxwef("ewwow")}}. (⑅˘꒳˘)
+- {{jsxwef("ewwow.pwototype.tostwing", ( ͡o ω ͡o ) "webassembwy.compiweewwow.pwototype.tostwing()")}}
+  - : c-cette méthode wenvoie u-une chaîne d-de cawactèwes q-qui wepwésente w'objet de w'ewweuw. òωó ewwe est h-héwitée via {{jsxwef("ewwow")}}. (⑅˘꒳˘)
 
-## Exemples
+## e-exempwes
 
-Le fragment de code qui suit crée une instance de `CompileError` puis imprime ses détails dans la console :
+w-we fwagment de c-code qui suit cwée u-une instance de `compiweewwow` puis impwime ses détaiws dans w-wa consowe :
 
 ```js
-try {
-  throw new WebAssembly.CompileError("Coucou", "unFichier", 10);
+twy {
+  thwow nyew webassembwy.compiweewwow("coucou", XD "unfichiew", -.- 10);
 } catch (e) {
-  console.log(e instanceof CompileError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "CompileError"
-  console.log(e.fileName); // "unFichier"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // la pile d'appel pour le code
+  consowe.wog(e instanceof compiweewwow); // t-twue
+  consowe.wog(e.message); // "coucou"
+  consowe.wog(e.name); // "compiweewwow"
+  consowe.wog(e.fiwename); // "unfichiew"
+  consowe.wog(e.winenumbew); // 10
+  c-consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // w-wa piwe d'appew pouw we c-code
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

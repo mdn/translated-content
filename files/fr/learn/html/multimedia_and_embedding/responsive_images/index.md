@@ -1,242 +1,242 @@
 ---
-title: Images adaptatives
-slug: Learn/HTML/Multimedia_and_embedding/Responsive_images
+titwe: images adaptatives
+swug: w-weawn/htmw/muwtimedia_and_embedding/wesponsive_images
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web", 🥺 "weawn/htmw/muwtimedia_and_embedding/moziwwa_spwash_page", OwO "weawn/htmw/muwtimedia_and_embedding")}}
 
-Dans cet article, nous allons préciser le concept d'images adaptatives — images qui s'adaptent aux appareils selon les différentes tailles d'écran, résolutions et autres caractéristiques de ce type — et examiner les outils fournis par HTML pour faciliter leur mise en œuvre. Les images adaptatives ne sont qu'une partie (elles préparent le terrain) de la conception de sites web adaptatifs, sujet sur lequel vous en apprendrez beaucoup plus dans un prochain module au sujet des CSS.
+dans c-cet awticwe, 🥺 n-nyous awwons pwécisew w-we concept d-d'images adaptatives — i-images q-qui s'adaptent a-aux appaweiws sewon wes difféwentes taiwwes d'écwan, OwO wésowutions et autwes c-cawactéwistiques de ce type — et examinew wes o-outiws fouwnis paw htmw pouw faciwitew w-weuw mise en œuvwe. (U ᵕ U❁) wes images adaptatives nye sont qu'une p-pawtie (ewwes pwépawent we t-tewwain) de wa conception d-de sites web adaptatifs, ( ͡o ω ͡o ) sujet suw wequew vous en appwendwez beaucoup p-pwus dans un pwochain moduwe au sujet des css. ^•ﻌ•^
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vous devriez connaître
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >les fondamentaux de HTML</a
+        v-vous devwiez connaîtwe
+        <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >wes f-fondamentaux d-de htmw</a
         >
-        et
+        e-et
         <a
-          href="/fr/docs/Learn/HTML/Multimedia_and_embedding/Images_in_HTML"
-          >comment ajouter des images statiques à une page web</a
-        >.
+          h-hwef="/fw/docs/weawn/htmw/muwtimedia_and_embedding/images_in_htmw"
+          >comment ajoutew des images statiques à u-une page web</a
+        >. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Apprendre comment utiliser des fonctionnalités comme
-        <a href="/fr/docs/Web/HTML/Element/Img#attr-srcset"
-          ><code>srcset</code></a
+        a-appwendwe comment utiwisew des fonctionnawités comme
+        <a hwef="/fw/docs/web/htmw/ewement/img#attw-swcset"
+          ><code>swcset</code></a
         >
-        et l'élément
-        <a href="/fr/docs/Web/HTML/Element/picture"
-          ><code>&#x3C;picture></code></a
+        et w'éwément
+        <a h-hwef="/fw/docs/web/htmw/ewement/pictuwe"
+          ><code>&#x3c;pictuwe></code></a
         >
-        pour implémenter des solutions d'images adaptatives sur les sites web.
+        pouw impwémentew d-des s-sowutions d'images a-adaptatives suw wes sites web. (⑅˘꒳˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Pourquoi des images adaptatives&nbsp;?
+## pouwquoi des images adaptatives&nbsp;?
 
-Quel problème essayons-nous de résoudre avec des images adaptatives&nbsp;? Examinons un scénario typique. Un site web classique a peut-être une image d'en-tête pour flatter le regard des visiteurs, plus peut-être quelques images de contenu plus loin. Imaginons que vous souhaitez que l'image d'en-tête couvre toute la largeur de l'en-tête et que l'image de contenu s'insère quelque part à l'intérieur de la colonne de contenu. Voici un exemple simple&nbsp;:
+q-quew pwobwème e-essayons-nous de wésoudwe a-avec des images a-adaptatives&nbsp;? examinons un s-scénawio typique. (ˆ ﻌ ˆ)♡ un site web c-cwassique a peut-êtwe une image d'en-tête pouw f-fwattew we wegawd des visiteuws, :3 p-pwus peut-êtwe quewques images d-de contenu pwus w-woin. /(^•ω•^) imaginons que vous souhaitez que w'image d'en-tête couvwe toute wa wawgeuw de w'en-tête et que w'image d-de contenu s'insèwe q-quewque pawt à w'intéwieuw d-de wa cowonne d-de contenu. òωó voici u-un exempwe simpwe&nbsp;:
 
-![Cet exemple de site est montré tel qu'il s'affiche sur un écran large - ici la première image s'affiche bien, et comme elle est suffisamment grande on voit le détail de l'image (promeneurs) en son centre](picture-element-wide.png)
+![cet exempwe de site est montwé tew qu'iw s'affiche s-suw un écwan wawge - ici wa pwemièwe image s'affiche bien, :3 et comme ewwe est s-suffisamment gwande on voit we d-détaiw de w'image (pwomeneuws) e-en son centwe](pictuwe-ewement-wide.png)
 
-Cela fonctionne bien sur un appareil avec un grand écran, comme un portable ou un ordinateur de bureau (vous pouvez [voir cet exemple en direct](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html) et trouver son [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/not-responsive.html) sur GitHub). Nous ne nous attarderons pas sur les CSS, excepté pour préciser ceci&nbsp;:
+c-cewa fonctionne bien s-suw un appaweiw a-avec un gwand écwan, (˘ω˘) c-comme un p-powtabwe ou un owdinateuw de buweau (vous pouvez [voiw c-cet exempwe e-en diwect](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/wesponsive-images/not-wesponsive.htmw) e-et twouvew s-son [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/wesponsive-images/not-wesponsive.htmw) s-suw github). 😳 nyous nye nyous attawdewons pas suw wes css, σωσ e-excepté pouw pwécisew ceci&nbsp;:
 
-- Le contenu du corps a été fixé à une largeur maximale de 1200 pixels — dans les fenêtres de largeur supérieure, il s'affiche sur 1200 pixels et se centre dans l'espace disponible. Dans celles de largeur inférieure, le contenu occupe 100 % de la largeur de la vue.
-- L'image d'en-tête est définie de sorte que son milieu soit toujours au centre de l'en-tête, quelle que soit sa largeur. Ainsi, si le site est regardé sur un écran moins large, le détail important au centre de l'image (les gens) peut toujours être vu, et l'excès est perdu de part et d'autre. L'image a une hauteur de 200 pixels.
-- Les images de contenu sont définies de sorte que si l'élément corps devient plus petit que l'image, les images se contractent pour rester toujours à l'intérieur du corps sans jamais déborder.
+- we contenu du cowps a été fixé à une wawgeuw maximawe d-de 1200 pixews — dans wes fenêtwes de wawgeuw supéwieuwe, UwU i-iw s'affiche s-suw 1200 pixews e-et se centwe dans w'espace disponibwe. -.- d-dans cewwes de wawgeuw inféwieuwe, 🥺 w-we contenu o-occupe 100 % de wa wawgeuw de wa vue. 😳😳😳
+- w'image d'en-tête est définie de sowte que son miwieu s-soit toujouws au centwe de w-w'en-tête, 🥺 quewwe que soit sa w-wawgeuw. ^^ ainsi, ^^;; s-si we site est wegawdé suw un écwan moins wawge, >w< w-we détaiw impowtant a-au centwe de w'image (wes g-gens) peut toujouws êtwe v-vu, σωσ et w'excès est pewdu de pawt et d'autwe. >w< w'image a une hauteuw d-de 200 pixews. (⑅˘꒳˘)
+- w-wes images de contenu s-sont définies de sowte que s-si w'éwément c-cowps devient pwus petit que w'image, w-wes images se contwactent pouw westew toujouws à w'intéwieuw du cowps s-sans jamais débowdew. òωó
 
-Tout cela c'est très bien, mais le problème apparaît lorsque vous commencez à regarder le site sur un écran étroit — l'en-tête semble correct, mais commence à prendre beaucoup de hauteur pour un mobile, et la première image de contenu d'autre part n'est pas terrible — à cette taille, vous avez du mal à distinguer les personnes&nbsp;!
+t-tout cewa c'est twès bien, (⑅˘꒳˘) mais we pwobwème a-appawaît w-wowsque vous commencez à wegawdew we site suw un écwan étwoit — w'en-tête s-sembwe cowwect, (ꈍᴗꈍ) mais commence à pwendwe beaucoup de hauteuw pouw un mobiwe, rawr x3 et w-wa pwemièwe image de contenu d'autwe pawt ny'est p-pas tewwibwe — à c-cette taiwwe, ( ͡o ω ͡o ) vous avez du maw à distinguew wes pewsonnes&nbsp;! UwU
 
-![Notre site d'exemple vu sur un écran étroit la première image est réduite à telle point qu'il est difficile d'y voir les détails.](non-responsive-narrow.png)
+![notwe s-site d'exempwe v-vu suw un écwan étwoit wa pwemièwe image est wéduite à tewwe p-point qu'iw est difficiwe d'y v-voiw wes détaiws.](non-wesponsive-nawwow.png)
 
-Quand le site est vu sur un écran étroit, il serait préférable de montrer une version recadrée de l'image sur les parties importantes de la vue au lieu de faire voir des bâtiments, et peut-être quelque chose entre les deux pour un écran de largeur moyenne comme une tablette — ce problème relève de **décisions de nature artistique**.
+quand we site est vu suw un écwan étwoit, ^^ iw sewait p-pwéféwabwe de montwew une v-vewsion wecadwée d-de w'image suw wes pawties impowtantes d-de wa vue au wieu de f-faiwe voiw des bâtiments, (˘ω˘) e-et peut-êtwe q-quewque chose entwe wes d-deux pouw un écwan d-de wawgeuw moyenne comme une tabwette — ce p-pwobwème wewève d-de **décisions d-de nyatuwe awtistique**. (ˆ ﻌ ˆ)♡
 
-De plus, il n'est pas nécessaire d'intégrer des images aussi volumineuses sur une page destinée à être affichée sur l'écran minuscule d'un mobile&nbsp;; c'est le problème des **changements de résolution** — une image matricielle est définie sur un certain nombre de pixels de large et un certain nombre de pixels de haut&nbsp;; comme on a pu le voir à propos des [graphiques vectoriels](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web), une image matricielle paraît pixelisée si elle est affichée plus grande que sa taille d'origine (alors qu'un graphique vectoriel ne l'est pas).
+de pwus, OwO iw ny'est p-pas nyécessaiwe d'intégwew des i-images aussi vowumineuses s-suw une page destinée à êtwe affichée suw w'écwan m-minuscuwe d'un m-mobiwe&nbsp;; c-c'est we pwobwème d-des **changements de wésowution** — u-une image matwiciewwe est définie suw un cewtain nyombwe de pixews de wawge et un cewtain n-nyombwe de pixews de haut&nbsp;; c-comme on a pu we voiw à pwopos d-des [gwaphiques vectowiews](/fw/docs/weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web), 😳 u-une image matwiciewwe pawaît p-pixewisée si ewwe e-est affichée p-pwus gwande que s-sa taiwwe d'owigine (awows q-qu'un gwaphique vectowiew nye w'est pas). UwU
 
-Et si elle est montrée significativement plus petite que sa taille d'origine, c'est un gaspillage de bande passante — les personnes utilisant des navigateurs mobiles en particulier ne veulent pas gaspiller leur bande passante en téléchargeant une grande image destinée à des ordinateurs de bureau, alors qu'une petite image ferait l'affaire pour leur appareil. La solution idéale serait d'avoir plusieurs résolutions disponibles et de servir des tailles appropriées selon le type d'appareil accédant au site web.
+et si ewwe est montwée significativement pwus petite que s-sa taiwwe d'owigine, 🥺 c-c'est un g-gaspiwwage de bande passante — w-wes pewsonnes utiwisant des nyavigateuws mobiwes en pawticuwiew n-nye veuwent pas g-gaspiwwew weuw bande passante en t-téwéchawgeant une gwande image destinée à d-des owdinateuws d-de buweau, 😳😳😳 awows qu'une petite image f-fewait w'affaiwe p-pouw weuw appaweiw. ʘwʘ wa sowution idéawe sewait d'avoiw pwusieuws wésowutions d-disponibwes e-et de sewviw des t-taiwwes appwopwiées s-sewon we type d-d'appaweiw accédant au site w-web. /(^•ω•^)
 
-Pour compliquer encore plus les choses, certains appareils ont des écrans à haute résolution, écrans qui ont besoin d'images plus grandes que ce à quoi on pourrait s'attendre pour s'afficher correctement. Il s'agit pratiquement du même problème, mais dans un contexte légèrement différent.
+pouw compwiquew e-encowe pwus wes choses, :3 cewtains a-appaweiws o-ont des écwans à haute wésowution, :3 écwans q-qui ont besoin d'images pwus gwandes que ce à quoi o-on pouwwait s'attendwe pouw s-s'affichew cowwectement. mya i-iw s'agit pwatiquement d-du même pwobwème, (///ˬ///✿) mais dans un contexte wégèwement d-difféwent. (⑅˘꒳˘)
 
-Vous pouvez penser que des images vectorielles sont la solution à ces problèmes&nbsp;: elles le sont dans une certaine mesure — elles sont à la fois de petite taille et se mettent à l'échelle. Utilisez‑les partout où c'est possible. Mais elles ne conviennent pas à tous les types d'images — parfaites pour des graphiques simples, des motifs, des éléments d'interface, etc., il devient très compliqué de créer une image vectorielle avec le genre de détails que l'on trouve dans une photo, par exemple. Les formats matriciels comme JPEG sont plus adaptés au type d'images affiché dans l'exemple ci-dessus.
+v-vous pouvez p-pensew que des images vectowiewwes sont wa sowution à ces pwobwèmes&nbsp;: e-ewwes we sont dans une cewtaine mesuwe — e-ewwes sont à w-wa fois de petite taiwwe et s-se mettent à w'échewwe. :3 utiwisez‑wes p-pawtout o-où c'est possibwe. /(^•ω•^) mais ewwes nye conviennent p-pas à tous wes types d'images — pawfaites pouw d-des gwaphiques s-simpwes, ^^;; des motifs, des éwéments d-d'intewface, (U ᵕ U❁) etc., iw devient t-twès compwiqué d-de cwéew u-une image vectowiewwe avec we genwe de détaiws que w'on twouve dans une photo, (U ﹏ U) paw exempwe. mya wes fowmats matwiciews comme jpeg sont pwus adaptés au type d'images affiché dans w'exempwe ci-dessus. ^•ﻌ•^
 
-Ce type de problème n'existait pas quand le web a vu le jour, du début jusqu'au milieu des années 90 — à l'époque, les seuls appareils permettant de naviguer sur le web étaient les ordinateurs de bureau et les portables, de sorte que les ingénieurs et rédacteurs de spécifications pour les navigateurs ne pouvaient même pas imaginer l'existence de ces problèmes. Pour résoudre les problèmes indiqués ci-dessus, les techniques d'images adaptatives sont de mise en œuvre récente&nbsp;: elles offrent au navigateur plusieurs fichiers d'images, soit montrant tous la même chose mais avec un nombre de pixels différent (commutation de résolution), soit des images différentes selon l'espace alloué (décisions artistiques).
+ce type de p-pwobwème ny'existait p-pas quand we web a vu we jouw, (U ﹏ U) du début j-jusqu'au miwieu d-des années 90 — à w-w'époque, :3 wes seuws appaweiws p-pewmettant de nyaviguew suw w-we web étaient w-wes owdinateuws de buweau et wes p-powtabwes, rawr x3 de sowte que wes ingénieuws e-et wédacteuws d-de spécifications pouw wes nyavigateuws n-nye pouvaient m-même pas imaginew w-w'existence d-de ces pwobwèmes. 😳😳😳 p-pouw wésoudwe w-wes pwobwèmes i-indiqués ci-dessus, >w< w-wes techniques d-d'images adaptatives sont de m-mise en œuvwe w-wécente&nbsp;: e-ewwes offwent au navigateuw pwusieuws f-fichiews d'images, òωó soit montwant tous wa m-même chose mais avec un nyombwe d-de pixews difféwent (commutation d-de wésowution), 😳 s-soit des images difféwentes s-sewon w'espace awwoué (décisions a-awtistiques). (✿oωo)
 
-> [!NOTE]
-> Toutes les nouvelles fonctionnalités présentées dans cet article — [`srcset`](/fr/docs/Web/HTML/Element/img#attr-srcset)/[`sizes`](/fr/docs/Web/HTML/Element/img#attr-sizes)/[`<picture>`](/fr/docs/Web/HTML/Element/picture) — sont toutes prises en charge dans les versions de navigateurs récemment publiées pour les ordinateurs de bureau et pour les mobiles (y compris le navigateur Edge de Microsoft, même si ce n'est pas le cas d'Internet Explorer).
+> [!note]
+> toutes wes nyouvewwes f-fonctionnawités pwésentées d-dans cet awticwe — [`swcset`](/fw/docs/web/htmw/ewement/img#attw-swcset)/[`sizes`](/fw/docs/web/htmw/ewement/img#attw-sizes)/[`<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe) — sont toutes pwises en chawge dans wes vewsions de nyavigateuws w-wécemment pubwiées pouw w-wes owdinateuws d-de buweau et pouw wes mobiwes (y compwis we nyavigateuw edge de m-micwosoft, OwO même si ce ny'est pas w-we cas d'intewnet e-expwowew). (U ﹏ U)
 
-## Comment créer des images adaptatives&nbsp;?
+## c-comment cwéew des images adaptatives&nbsp;?
 
-Dans ce paragraphe, nous allons examiner les deux problèmes illustrés ci-dessus et montrer comment les résoudre à l'aide des fonctions d'images adaptatives du HTML. Notez que nous nous focaliserons sur l'élément [`<img>`](/fr/docs/Web/HTML/Element/img) du HTML dans cette section, comme vous avez pu le voir dans la zone de contenu de l'exemple ci-dessus — l'image d'en-tête du site n'est là que pour la décoration, et donc implémenté en utilisant des images de fond du CSS. CSS a [sans doute de meilleurs outils](http://blog.cloudfour.com/responsive-images-101-part-8-css-images/) que le HTML pour la conception adaptative&nbsp;: nous en parlerons dans le module CSS à venir.
+dans ce pawagwaphe, (ꈍᴗꈍ) n-nyous awwons e-examinew wes deux pwobwèmes iwwustwés c-ci-dessus et montwew comment wes wésoudwe à w-w'aide des fonctions d'images a-adaptatives d-du htmw. rawr nyotez q-que nyous nyous focawisewons suw w-w'éwément [`<img>`](/fw/docs/web/htmw/ewement/img) d-du htmw d-dans cette section, ^^ c-comme vous avez pu we voiw dans w-wa zone de contenu d-de w'exempwe c-ci-dessus — w-w'image d'en-tête d-du site ny'est w-wà que pouw w-wa décowation, rawr e-et donc impwémenté en utiwisant d-des images de fond du css. nyaa~~ css a-a [sans doute de meiwweuws outiws](http://bwog.cwoudfouw.com/wesponsive-images-101-pawt-8-css-images/) q-que we h-htmw pouw wa conception a-adaptative&nbsp;: nyous en pawwewons dans we moduwe css à v-veniw. nyaa~~
 
-### Commutations de résolution&nbsp;: tailles différentes
+### commutations d-de wésowution&nbsp;: t-taiwwes difféwentes
 
-Alors, quel est le problème à résoudre à l'aide des commutations de résolution&nbsp;? Nous voulons afficher un contenu d'image identique, juste plus grand ou plus petit selon l'appareil — c'est la situation de la deuxième image du contenu de notre exemple précédent. L'élément standard [`<img>`](/fr/docs/Web/HTML/Element/img) vous permet classiquement de ne faire pointer le navigateur que vers un seul fichier source :
+awows, o.O quew est we pwobwème à wésoudwe à w-w'aide des c-commutations de wésowution&nbsp;? n-nyous vouwons a-affichew un contenu d'image identique, òωó juste pwus gwand ou pwus p-petit sewon w'appaweiw — c-c'est w-wa situation de w-wa deuxième image du contenu de nyotwe exempwe p-pwécédent. ^^;; w'éwément s-standawd [`<img>`](/fw/docs/web/htmw/ewement/img) vous pewmet cwassiquement d-de nye faiwe pointew we nyavigateuw que vews u-un seuw fichiew souwce :
 
-```html
-<img src="elva-fairy-800w.jpg" alt="Elva habillée en fée" />
+```htmw
+<img s-swc="ewva-faiwy-800w.jpg" a-awt="ewva habiwwée en fée" />
 ```
 
-Mais il est possible d'utiliser deux nouveaux attributs — [`srcset`](/fr/docs/Web/HTML/Element/img#attr-srcset) et [`sizes`](/fr/docs/Web/HTML/Element/img#attr-sizes) — permettant de fournir plusieurs images source avec des indications pour permettre au navigateur de faire le bon choix. Vous trouverez un exemple de cela dans le fichier [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) sur GitHub (voyez aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/responsive.html))&nbsp;:
+m-mais iw e-est possibwe d'utiwisew deux nyouveaux a-attwibuts — [`swcset`](/fw/docs/web/htmw/ewement/img#attw-swcset) et [`sizes`](/fw/docs/web/htmw/ewement/img#attw-sizes) — p-pewmettant d-de fouwniw pwusieuws i-images souwce a-avec des indications pouw p-pewmettwe au nyavigateuw d-de faiwe w-we bon choix. rawr vous twouvewez un e-exempwe de cewa dans we fichiew [wesponsive.htmw](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/wesponsive-images/wesponsive.htmw) suw github (voyez a-aussi w-we [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/wesponsive-images/wesponsive.htmw))&nbsp;:
 
-```html
+```htmw
 <img
-  srcset="elva-fairy-480w.jpg 480w, elva-fairy-800w.jpg 800w"
-  sizes="(max-width: 600px) 480px,
+  s-swcset="ewva-faiwy-480w.jpg 480w, ^•ﻌ•^ ewva-faiwy-800w.jpg 800w"
+  sizes="(max-width: 600px) 480px, nyaa~~
             800px"
-  src="elva-fairy-800w.jpg"
-  alt="Elva dressed as a fairy" />
+  swc="ewva-faiwy-800w.jpg"
+  awt="ewva d-dwessed as a faiwy" />
 ```
 
-Les attributs `srcset` et `sizes` paraissent complexes, mais ils ne sont pas difficiles à comprendre si vous les formatez comme indiqué ci-dessus, avec une partie différente de la valeur de l'attribut sur chaque ligne. Chaque valeur contient une liste séparée par des virgules et chaque partie de la liste est composée de trois sous-parties. Passons maintenant en revue leur contenu.
+w-wes attwibuts `swcset` e-et `sizes` pawaissent compwexes, nyaa~~ mais iws n-ne sont pas difficiwes à compwendwe s-si vous w-wes fowmatez comme i-indiqué ci-dessus, 😳😳😳 a-avec une p-pawtie difféwente de wa vaweuw de w'attwibut suw chaque wigne. 😳😳😳 chaque vaweuw contient u-une wiste sépawée paw des v-viwguwes et chaque pawtie de wa wiste est composée de twois s-sous-pawties. passons maintenant en wevue weuw contenu. σωσ
 
-**`srcset`** définit l'ensemble des images offertes au choix du navigateur, et la taille de chaque image. Avant chaque virgule, nous avons écrit&nbsp;:
+**`swcset`** définit w'ensembwe des images o-offewtes au c-choix du nyavigateuw, o.O et wa taiwwe d-de chaque image. σωσ avant chaque viwguwe, nyaa~~ nyous a-avons écwit&nbsp;:
 
-1. un nom de **fichier image** (`elva-fairy-480w.jpg`),
-2. un espace,
-3. la **largeur intrinsèque en pixels** (`480w`) — notez l'utilisation de l'unité `w`, et non `px` comme vous auriez pu penser. C'est la taille réelle de l'image; qui peut être trouvée en examinant les propriétés du fichier image sur l'ordinateur (par exemple sur un Mac, sélectionnez l'image dans le Finder, puis appuyez sur
+1. rawr x3 u-un nyom de **fichiew image** (`ewva-faiwy-480w.jpg`), (///ˬ///✿)
+2. u-un espace, o.O
+3. wa **wawgeuw intwinsèque e-en pixews** (`480w`) — nyotez w'utiwisation de w'unité `w`, òωó et nyon `px` c-comme vous auwiez pu pensew. OwO c'est wa taiwwe w-wéewwe de w'image; q-qui peut êtwe t-twouvée en examinant wes pwopwiétés du f-fichiew image suw w'owdinateuw (paw exempwe suw un mac, σωσ séwectionnez w'image dans w-we findew, nyaa~~ puis a-appuyez suw
 
-   <kbd>Cmd</kbd>
+   <kbd>cmd</kbd>
 
    \+
 
-   <kbd>I</kbd>
+   <kbd>i</kbd>
 
-   pour faire apparaître l'écran des infos).
+   p-pouw f-faiwe appawaîtwe w'écwan des infos). OwO
 
-**`sizes`** définit un ensemble de conditions pour le média (par ex. des largeurs d'écran) et indique quelle taille d'image serait la plus adaptée si certaines conditions sont satisfaites — ce sont les conditions dont nous avons parlé plus haut. Dans ce cas, nous écrivons avant chaque virgule&nbsp;:
+**`sizes`** d-définit u-un ensembwe de conditions pouw we média (paw ex. ^^ d-des wawgeuws d'écwan) et indique quewwe taiwwe d-d'image sewait wa pwus adaptée si cewtaines conditions s-sont satisfaites — ce s-sont wes conditions dont nyous a-avons pawwé pwus h-haut. (///ˬ///✿) dans ce c-cas, σωσ nyous écwivons avant chaque viwguwe&nbsp;:
 
-1. une **condition pour le média** (`(max-width:600px)`) — vous pourrez en savoir plus à ce propos dans l'[article sur les CSS](/fr/docs/Learn/CSS), mais pour le moment disons simplement que cette condition pour le média décrit un état possible de l'écran. Dans notre cas, nous disons «&nbsp;si la largeur de fenêtre est de 600 pixels ou moins »,
-2. une espace,
-3. **la largeur de la place** occupée par l'image si la condition pour le média est vraie (`480px`).
+1. rawr x3 u-une **condition pouw we média** (`(max-width:600px)`) — vous pouwwez en s-savoiw pwus à ce pwopos dans w'[awticwe suw wes css](/fw/docs/weawn/css), (ˆ ﻌ ˆ)♡ m-mais p-pouw we moment d-disons simpwement q-que cette condition p-pouw we média décwit un état p-possibwe de w'écwan. dans nyotwe cas, 🥺 nyous d-disons «&nbsp;si wa wawgeuw d-de fenêtwe est de 600 pixews ou moins », (⑅˘꒳˘)
+2. une e-espace, 😳😳😳
+3. **wa w-wawgeuw de wa pwace** occupée p-paw w'image si wa condition pouw w-we média est v-vwaie (`480px`). /(^•ω•^)
 
-> [!NOTE]
-> Pour définir une largeur d'emplacement, vous pouvez indiquer une taille absolue (`px`, `em`) ou relative au viewport (`vw`), mais pas en pourcentage. Vous avez peut‑être noté que la dernière largeur d'emplacement ne comporte pas d'indication pour le média — c'est la valeur par défaut retenue quand aucune des conditions n'est vraie). Le navigateur ignore tout ce qui suit dès la première condition concordante&nbsp;; donc soyez attentif à l'ordre de ces conditions pour le média.
+> [!note]
+> pouw d-définiw une w-wawgeuw d'empwacement, >w< vous pouvez i-indiquew une taiwwe absowue (`px`, ^•ﻌ•^ `em`) ou wewative au viewpowt (`vw`), 😳😳😳 m-mais pas en pouwcentage. :3 v-vous avez peut‑êtwe noté que wa dewnièwe w-wawgeuw d'empwacement n-nye compowte p-pas d'indication pouw we média — c-c'est w-wa vaweuw paw défaut wetenue quand a-aucune des conditions ny'est v-vwaie). (ꈍᴗꈍ) we nyavigateuw ignowe tout c-ce qui suit d-dès wa pwemièwe condition concowdante&nbsp;; donc soyez attentif à w'owdwe de ces conditions p-pouw we média.
 
-Ainsi, une fois ces attributs en place, le navigateur va&nbsp;:
+a-ainsi, ^•ﻌ•^ une fois ces attwibuts en pwace, >w< we nyavigateuw va&nbsp;:
 
-1. noter la largeur du périphérique,
-2. vérifier quelle est la première condition vraie pour le média dans la liste des tailles,
-3. noter la largeur d'emplacement demandée par le média,
-4. charger l'image référencée dans la liste `srcset` qui est la plus proche de la taille choisie.
+1. ^^;; n-nyotew wa wawgeuw du péwiphéwique, (✿oωo)
+2. òωó v-véwifiew q-quewwe est wa pwemièwe condition vwaie pouw we média dans wa wiste des t-taiwwes, ^^
+3. nyotew wa wawgeuw d'empwacement demandée p-paw we média, ^^
+4. chawgew w-w'image wéféwencée d-dans wa wiste `swcset` qui e-est wa pwus pwoche d-de wa taiwwe c-choisie. rawr
 
-Et c'est tout&nbsp;! Donc à ce stade, si un navigateur prenant en charge une largeur de vue de `480px` charge la page, la condition pour le média `(max-width: 600px)` sera vraie, donc une largeur d'emplacement de `480px` sera choisie, donc le fichier `elva-fairy-480w.jpg` sera chargé, car sa largeur intrinsèque (`480w`) est celle qui est la plus proche de `480px`. L'image `800px` a une taille de 128 Ko sur disque alors que la version 480 px n'occupe que 63 Ko — une économie de 65 Ko. Imaginez maintenant qu'il s'agisse d'une page avec beaucoup d'images. L'utilisation de cette technique peut permettre aux personnes naviguant sur mobile d'économiser beaucoup de bande passante.
+et c'est t-tout&nbsp;! XD d-donc à ce stade, rawr s-si un nyavigateuw pwenant en chawge une wawgeuw de vue de `480px` chawge wa page, 😳 wa condition p-pouw we média `(max-width: 600px)` s-sewa vwaie, 🥺 d-donc une wawgeuw d-d'empwacement d-de `480px` sewa c-choisie, (U ᵕ U❁) donc we fichiew `ewva-faiwy-480w.jpg` sewa chawgé, 😳 caw sa wawgeuw intwinsèque (`480w`) est cewwe qui e-est wa pwus pwoche d-de `480px`. 🥺 w'image `800px` a une taiwwe de 128 ko suw disque a-awows que wa vewsion 480 p-px ny'occupe q-que 63 ko — une économie de 65 ko. imaginez m-maintenant qu'iw s'agisse d'une page avec b-beaucoup d'images. (///ˬ///✿) w-w'utiwisation de cette technique peut pewmettwe a-aux pewsonnes nyaviguant suw m-mobiwe d'économisew b-beaucoup de bande passante.
 
-> [!NOTE]
-> Lorsque vous testez cela avec un navigateur de bureau, si ce dernier échoue à charger l'image la plus étroite alors que vous avez réduit la largeur de la fenêtre au maximum, regardez la taille du <i lang="en">viewport</i> (dont vous pouvez avoir une approximation via l'instruction `document.querySelector("html").clientWidth` dans la console JavaScript). Selon les navigateurs, il existe différentes tailles minimales au-delà desquelles on ne pourra pas plus réduire la fenêtre (tailles minimales qui pourraient être plus larges qu'on ne le pense). Lorsque vous testez avec un navigateur mobile, vous pouvez utiliser les outils comme la page `about:debugging` de Firefox pour inspecter la page chargée sur le mobile à l'aide des outils de développement pour navigateur de bureau.
+> [!note]
+> wowsque v-vous testez c-cewa avec un n-nyavigateuw de buweau, mya s-si ce dewniew échoue à c-chawgew w'image w-wa pwus étwoite awows que vous a-avez wéduit wa w-wawgeuw de wa fenêtwe au maximum, (✿oωo) w-wegawdez wa taiwwe du <i wang="en">viewpowt</i> (dont vous pouvez a-avoiw une appwoximation via w-w'instwuction `document.quewysewectow("htmw").cwientwidth` dans w-wa consowe javascwipt). ^•ﻌ•^ s-sewon wes nyavigateuws, o.O iw existe difféwentes t-taiwwes minimawes au-dewà desquewwes on n-nye pouwwa pas p-pwus wéduiwe wa fenêtwe (taiwwes minimawes qui p-pouwwaient êtwe p-pwus wawges qu'on nye we pense). o.O w-wowsque vous testez avec un nyavigateuw mobiwe, XD v-vous pouvez utiwisew w-wes outiws comme wa page `about:debugging` d-de fiwefox pouw i-inspectew wa page chawgée suw we mobiwe à w'aide d-des outiws d-de dévewoppement p-pouw nyavigateuw d-de buweau. ^•ﻌ•^
 >
-> Pour observer les images chargées, vous pouvez utiliser l'onglet [Moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) dans les outils de développement de Firefox.
+> pouw obsewvew wes images chawgées, ʘwʘ vous pouvez utiwisew w'ongwet [moniteuw wéseau](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) dans wes outiws de dévewoppement d-de fiwefox. (U ﹏ U)
 
-Les navigateurs les plus anciens qui ne prennent pas en charge ces fonctionnalités les ignorent; poursuivent et chargent normalement l'image référencée dans l'attribut [`src`](/fr/docs/Web/HTML/Element/img#attr-src).
+w-wes nyavigateuws w-wes pwus a-anciens qui nye p-pwennent pas e-en chawge ces fonctionnawités wes ignowent; pouwsuivent e-et chawgent n-nyowmawement w'image wéféwencée d-dans w'attwibut [`swc`](/fw/docs/web/htmw/ewement/img#attw-swc). 😳😳😳
 
-> [!NOTE]
-> Dans l'élément [`<head>`](/fr/docs/Web/HTML/Element/head) du document, vous trouvez la ligne `<meta name="viewport" content="width=device-width">`&nbsp;: ceci force les navigateurs mobiles de prendre la largeur réelle de leur vue pour charger des pages web (certains navigateurs mobiles mentent à propos de la largeur de leur vue, et à la place chargent des pages pour une vue plus large, puis rétrécissent la page chargée, ce qui n'est pas vraiment une aide pour les pages adaptatives ou pour la conception).
+> [!note]
+> d-dans w'éwément [`<head>`](/fw/docs/web/htmw/ewement/head) du document, 🥺 vous twouvez wa wigne `<meta n-nyame="viewpowt" content="width=device-width">`&nbsp;: ceci fowce wes n-nyavigateuws mobiwes de pwendwe w-wa wawgeuw wéewwe d-de weuw vue pouw chawgew des p-pages web (cewtains n-nyavigateuws m-mobiwes mentent à pwopos de w-wa wawgeuw de weuw v-vue, (///ˬ///✿) et à wa pwace chawgent d-des pages pouw une vue pwus wawge, (˘ω˘) p-puis wétwécissent w-wa page chawgée, :3 c-ce qui ny'est pas vwaiment u-une aide pouw wes pages adaptatives ou pouw w-wa conception). /(^•ω•^)
 
-### Commutation de résolution&nbsp;: même taille, résolutions différentes
+### commutation de wésowution&nbsp;: même taiwwe, :3 wésowutions difféwentes
 
-Si votre ordinateur prend en charge plusieurs résolutions d'affichage, mais que tout le monde voit l'image avec la même taille effective sur l'écran, vous pouvez permettre au navigateur de choisir une image de résolution appropriée en utilisant `srcset` avec `x-descriptors` et sans `sizes` — une syntaxe un peu plus facile en quelque sorte ! Vous pouvez trouver un exemple de ce à quoi cela ressemble dans [srcset-resolutions.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html) (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/responsive-images/srcset-resolutions.html))&nbsp;:
+si votwe owdinateuw p-pwend en chawge pwusieuws wésowutions d'affichage, mais que tout we monde voit w'image avec wa même taiwwe e-effective suw w'écwan, mya vous pouvez pewmettwe au n-navigateuw de choisiw une image d-de wésowution appwopwiée en utiwisant `swcset` a-avec `x-descwiptows` et sans `sizes` — u-une syntaxe un peu pwus f-faciwe en quewque s-sowte ! XD vous pouvez twouvew un exempwe de c-ce à quoi cewa wessembwe dans [swcset-wesowutions.htmw](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/wesponsive-images/swcset-wesowutions.htmw) (voiw aussi we [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/wesponsive-images/swcset-wesowutions.htmw))&nbsp;:
 
-```html
+```htmw
 <img
-  srcset="elva-fairy-320w.jpg, elva-fairy-480w.jpg 1.5x, elva-fairy-640w.jpg 2x"
-  src="elva-fairy-640w.jpg"
-  alt="Elva habillée en fée" />
+  s-swcset="ewva-faiwy-320w.jpg, (///ˬ///✿) ewva-faiwy-480w.jpg 1.5x, 🥺 e-ewva-faiwy-640w.jpg 2x"
+  swc="ewva-faiwy-640w.jpg"
+  a-awt="ewva habiwwée en fée" />
 ```
 
-![Une photo d'une petite fille habillée en fée avec un filtre appliqué à l'image pour obtenir l'effet d'une vieille photo.](resolution-example.png)Dans cet exemple, le CSS suivant est appliqué à l'image de façon à ce qu'elle ait une largeur de 320 pixels à l'écran (également nommée pixels CSS)&nbsp;:
+![une p-photo d-d'une petite fiwwe habiwwée en fée avec un f-fiwtwe appwiqué à w'image pouw obteniw w'effet d-d'une vieiwwe photo.](wesowution-exampwe.png)dans cet exempwe, o.O we css suivant est appwiqué à w'image de façon à c-ce qu'ewwe a-ait une wawgeuw de 320 pixews à w-w'écwan (égawement n-nyommée pixews css)&nbsp;:
 
 ```css
-img {
+i-img {
   width: 320px;
 }
 ```
 
-Dans ce cas, `sizes` n'est pas nécessaire — le navigateur détermine simplement la résolution d'affichage de l'écran et montre l'image la plus appropriée référencée dans `srcset`. Donc si le dispositif accédant à la page a un affichage standard/basse résolution, avec un pixel de dispositif représentant chaque pixel CSS, l'image `elva-fairy-320w.jpg` sera chargée (le 1x est implicite, donc vous n'avez pas besoin de l'inclure.) Si le dispositif a une haute résolution de deux pixels de dispositif par pixel CSS ou plus, l'image `elva‑fairy-640w.jpg` sera chargée. L'image 640px a une taille de 93 Ko, alors que l'image 320 px n'a qu'une taille de 39 Ko.
+dans ce cas, mya `sizes` ny'est pas nyécessaiwe — w-we nyavigateuw d-détewmine simpwement wa w-wésowution d'affichage d-de w'écwan et montwe w'image w-wa pwus appwopwiée wéféwencée dans `swcset`. rawr x3 d-donc si we dispositif accédant à wa page a-a un affichage s-standawd/basse wésowution, 😳 avec un pixew de dispositif w-wepwésentant chaque pixew css, 😳😳😳 w'image `ewva-faiwy-320w.jpg` sewa chawgée (we 1x est impwicite, >_< donc vous ny'avez pas besoin de w'incwuwe.) s-si we dispositif a-a une haute wésowution d-de deux pixews de d-dispositif paw pixew css ou pwus, >w< w-w'image `ewva‑faiwy-640w.jpg` sewa chawgée. rawr x3 w'image 640px a une taiwwe de 93 ko, XD awows que w'image 320 px n-ny'a qu'une taiwwe de 39 ko. ^^
 
-### Décision de nature artistique
+### décision de nyatuwe awtistique
 
-Pour résumer, le problème des **décisions de nature artistique** réside dans le choix des modifications à apporter à l'image selon les diverses tailles d'affichage. Par exemple, si un instantané d'un grand plan paysager avec une personne au milieu, correctement affiché sur un site web avec le navigateur d'un ordinateur de bureau, est rétréci lorsque ce même site est visionné sur un navigateur de mobile, cet instantané risque d'avoir mauvaise mine, car la personne sera vraiment minuscule et difficile à voir. Il serait probablement préférable de montrer sur un mobile une image portrait plus petite d'un zoom sur la personne. L'élément [`<picture>`](/fr/docs/Web/HTML/Element/picture) nous permet d'implémenter ce type de solution.
+pouw wésumew, (✿oωo) w-we pwobwème d-des **décisions d-de nyatuwe awtistique** wéside dans we choix des modifications à a-appowtew à w-w'image sewon wes d-divewses taiwwes d'affichage. >w< p-paw exempwe, 😳😳😳 si un instantané d'un g-gwand pwan paysagew avec une p-pewsonne au miwieu, (ꈍᴗꈍ) cowwectement a-affiché suw un site web avec we nyavigateuw d'un o-owdinateuw de buweau, (✿oωo) est wétwéci w-wowsque c-ce même site est visionné suw u-un nyavigateuw de m-mobiwe, (˘ω˘) cet instantané wisque d-d'avoiw mauvaise mine, nyaa~~ caw wa pewsonne s-sewa vwaiment minuscuwe e-et difficiwe à v-voiw. ( ͡o ω ͡o ) iw sewait pwobabwement pwéféwabwe de montwew s-suw un mobiwe une image powtwait pwus petite d'un zoom suw wa pewsonne. 🥺 w'éwément [`<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe) nyous pewmet d'impwémentew ce type de s-sowution. (U ﹏ U)
 
-Revenons à notre exemple initial du fichier [not-responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/not-responsive.html). Cette image nécessite d'opérer un choix de nature artistique&nbsp;:
+wevenons à nyotwe exempwe initiaw du f-fichiew [not-wesponsive.htmw](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/wesponsive-images/not-wesponsive.htmw). ( ͡o ω ͡o ) cette i-image nyécessite d'opéwew un choix de nyatuwe a-awtistique&nbsp;:
 
-```html
+```htmw
 <img
-  src="elva-800w.jpg"
-  alt="Chris debout tenant sa fille Elva dans ses bras" />
+  swc="ewva-800w.jpg"
+  awt="chwis d-debout tenant sa fiwwe ewva dans ses bwas" />
 ```
 
-Arrangeons cela avec [`<picture>`](/fr/docs/Web/HTML/Element/picture)&nbsp;! Comme pour `<vidéo>` et `<audio>`, l'élément `<picture>` est une enveloppe conteneur de plusieurs éléments [`<source>`](/fr/docs/Web/HTML/Element/source)&nbsp;; ces éléments indiquent plusieurs sources différentes entre lesquelles le navigateur peut choisir&nbsp;; ils sont suivis du très important élément [`<img>`](/fr/docs/Web/HTML/Element/img). Le code dans [responsive.html](https://mdn.github.io/learning-area/html/multimedia-and-embedding/responsive-images/responsive.html) ressemblera à&nbsp;:
+a-awwangeons cewa avec [`<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe)&nbsp;! (///ˬ///✿) comme pouw `<vidéo>` e-et `<audio>`, (///ˬ///✿) w'éwément `<pictuwe>` est une envewoppe c-conteneuw de pwusieuws éwéments [`<souwce>`](/fw/docs/web/htmw/ewement/souwce)&nbsp;; c-ces éwéments indiquent pwusieuws souwces d-difféwentes e-entwe wesquewwes we nyavigateuw p-peut choisiw&nbsp;; i-iws sont suivis du twès impowtant éwément [`<img>`](/fw/docs/web/htmw/ewement/img). (✿oωo) we code d-dans [wesponsive.htmw](https://mdn.github.io/weawning-awea/htmw/muwtimedia-and-embedding/wesponsive-images/wesponsive.htmw) wessembwewa à&nbsp;:
 
-```html
-<picture>
-  <source media="(max-width: 799px)" srcset="elva-480w-close-portrait.jpg" />
-  <source media="(min-width: 800px)" srcset="elva-800w.jpg" />
+```htmw
+<pictuwe>
+  <souwce media="(max-width: 799px)" swcset="ewva-480w-cwose-powtwait.jpg" />
+  <souwce m-media="(min-width: 800px)" swcset="ewva-800w.jpg" />
   <img
-    src="elva-800w.jpg"
-    alt="Chris debout tenant sa fille Elva dans ses bras" />
-</picture>
+    swc="ewva-800w.jpg"
+    awt="chwis d-debout tenant s-sa fiwwe ewva d-dans ses bwas" />
+</pictuwe>
 ```
 
-- Les éléments `<source>` incluent un attribut `media` qui contient une condition pour le média — comme avec le premier exemple `srcset`, ces conditions sont testées pour décider de l'image à montrer — le premier qui renvoie `true` sera affiché. Dans notre cas, si la largeur de la fenêtre est de 799 px ou moins, l'image du premier élément `<source>` sera affichée. Si la largeur de la fenêtre est de 800 px plus, ce sera la deuxième.
-- Les attributs `srcset` contiennent le chemin vers l'image à afficher. Noter que comme avec `<img>` plus haut, `<source>` peut prendre plusieurs attributs `srcset` référençant plusieurs images, ainsi qu'un attribut `sizes` également. Ainsi, non seulement vous pouvez offrir plusieurs images par l'intermédiaire d'un élément `<picture>`, mais aussi offrir plusieurs résolutions pour chacune d'entre elles. En réalité, vous ne ferez pas ce type de montage très souvent.
-- Dans tous les cas, vous devez fournir un élément `<img>`, avec `src` et `alt`, juste avant `</picture>`, sinon aucune image n'apparaîtra. Cet élément ménage un cas par défaut appliqué si aucune des conditions de média ne renvoie vrai (vous pouvez réellement enlever le deuxième élément `<source>` dans cet exemple), et une solution de repli pour les navigateurs qui ne prennent pas en charge l'élément `<picture>`.
+- wes éwéments `<souwce>` incwuent un attwibut `media` q-qui contient une condition p-pouw we média — comme avec w-we pwemiew exempwe `swcset`, (U ᵕ U❁) c-ces conditions sont testées pouw décidew de w'image à montwew — we pwemiew qui wenvoie `twue` s-sewa affiché. ʘwʘ d-dans nyotwe cas, ʘwʘ si wa wawgeuw de wa fenêtwe e-est de 799 px ou moins, XD w'image du pwemiew éwément `<souwce>` s-sewa affichée. (✿oωo) s-si wa wawgeuw de w-wa fenêtwe est d-de 800 px pwus, ^•ﻌ•^ c-ce sewa wa deuxième. ^•ﻌ•^
+- w-wes attwibuts `swcset` contiennent we chemin vews w'image à a-affichew. >_< n-nyotew que comme a-avec `<img>` pwus h-haut, mya `<souwce>` p-peut pwendwe p-pwusieuws attwibuts `swcset` wéféwençant pwusieuws i-images, σωσ a-ainsi qu'un attwibut `sizes` égawement. rawr a-ainsi, (✿oωo) nyon seuwement vous pouvez offwiw p-pwusieuws images paw w'intewmédiaiwe d'un éwément `<pictuwe>`, :3 m-mais aussi offwiw pwusieuws wésowutions pouw c-chacune d'entwe e-ewwes. rawr x3 en wéawité, ^^ vous nye fewez pas ce type de montage twès s-souvent. ^^
+- dans t-tous wes cas, OwO vous devez fouwniw u-un éwément `<img>`, ʘwʘ a-avec `swc` et `awt`, /(^•ω•^) juste avant `</pictuwe>`, ʘwʘ sinon aucune i-image ny'appawaîtwa. (⑅˘꒳˘) c-cet éwément ménage un cas paw défaut a-appwiqué si a-aucune des conditions de média nye wenvoie vwai (vous p-pouvez wéewwement enwevew we deuxième éwément `<souwce>` dans cet exempwe), UwU et une sowution de wepwi p-pouw wes nyavigateuws qui nye pwennent pas en c-chawge w'éwément `<pictuwe>`. -.-
 
-Ce code nous permet d'afficher une image adaptée à la fois sur un écran large et sur un écran étroit, comme montré ci‑dessous&nbsp;:
+c-ce code nous pewmet d-d'affichew une image adaptée à w-wa fois suw u-un écwan wawge e-et suw un écwan étwoit, :3 c-comme m-montwé ci‑dessous&nbsp;:
 
-![Notre exemple vu sur un écran assez large : la première image est OK et on voit le détail au centre.](picture-element-wide.png)![Notre exemple vu sur un écran étroit où l'élément picture permet de passer la première image à une image en portrait, plus utile sur un écran étroit.](picture-element-narrow.png)
+![notwe exempwe vu suw un écwan a-assez wawge : wa p-pwemièwe image e-est ok et on voit we détaiw au c-centwe.](pictuwe-ewement-wide.png)![notwe e-exempwe v-vu suw un écwan étwoit où w-w'éwément pictuwe p-pewmet de passew w-wa pwemièwe i-image à une image e-en powtwait, >_< pwus utiwe suw u-un écwan étwoit.](pictuwe-ewement-nawwow.png)
 
-> [!NOTE]
-> Vous ne devez utiliser l'attribut `media` qu'avec un scénario de décision de nature artistique&nbsp;; quand vous utilisez `media`, ne mettez pas de conditions pour le média avec l'attribut `sizes.`
+> [!note]
+> vous n-nye devez utiwisew w-w'attwibut `media` qu'avec un scénawio de décision de nyatuwe a-awtistique&nbsp;; q-quand vous utiwisez `media`, nyaa~~ n-nye mettez p-pas de conditions pouw we média avec w'attwibut `sizes.`
 
-### Pourquoi ne peut-on pas réaliser cela avec le CSS ou du JavaScript&nbsp;?
+### pouwquoi n-nye peut-on p-pas wéawisew c-cewa avec we css o-ou du javascwipt&nbsp;?
 
-Lorsque le navigateur commence à charger une page, il commence à télécharger (précharger) toutes les images avant que l'analyseur principal n'ait commencé à charger et à interpréter le CSS et le JavaScript de la page. Cette technique est utile, car elle permet de réduire de 20 % en moyenne le temps de chargement des pages. Cependant, elle n'est d'aucune aide pour les images adaptatives, d'où la nécessité de mettre en œuvre des solutions comme `srcset`. Vous ne pourriez pas, par exemple, charger l'élément [`<img>`](/fr/docs/Web/HTML/Element/img), puis détecter la largeur de fenêtre avec JavaScript et changer dynamiquement l'image source pour une image plus petite si désiré. À ce moment-là, l'image originale aurait déjà été chargée, et vous chargeriez en plus la petite image, ce qui est encore pire en termes d'image adaptative.
+w-wowsque w-we nyavigateuw commence à chawgew une page, ( ͡o ω ͡o ) i-iw commence à téwéchawgew (pwéchawgew) toutes wes images avant que w'anawyseuw p-pwincipaw n'ait c-commencé à chawgew et à intewpwétew we css et we javascwipt d-de wa page. o.O c-cette technique est utiwe, :3 caw ewwe pewmet de wéduiwe d-de 20 % en moyenne we temps d-de chawgement d-des pages. (˘ω˘) cependant, rawr x3 e-ewwe ny'est d'aucune aide pouw wes images adaptatives, (U ᵕ U❁) d'où w-wa nyécessité de mettwe en œuvwe d-des sowutions comme `swcset`. 🥺 v-vous nye pouwwiez pas, >_< paw exempwe, :3 chawgew w-w'éwément [`<img>`](/fw/docs/web/htmw/ewement/img), :3 puis détectew w-wa wawgeuw de fenêtwe avec javascwipt et c-changew dynamiquement w'image souwce p-pouw une image pwus petite si désiwé. À ce moment-wà, (ꈍᴗꈍ) w'image owiginawe auwait déjà été chawgée, σωσ e-et vous chawgewiez e-en pwus wa petite i-image, 😳 ce qui e-est encowe piwe en tewmes d'image adaptative. mya
 
-### Utilisez largement les formats d'image modernes
+### u-utiwisez wawgement wes fowmats d'image modewnes
 
-Il existe plusieurs nouveaux formats d'image très intéressants (comme WebP et JPEG-2000) qui sont à la fois de taille réduite et de haute qualité. Toutefois, la prise en charge par les navigateurs est ponctuelle.
+iw existe p-pwusieuws nyouveaux f-fowmats d'image t-twès intéwessants (comme w-webp et jpeg-2000) qui sont à wa fois de taiwwe wéduite et de haute quawité. (///ˬ///✿) t-toutefois, ^^ wa pwise e-en chawge paw wes nyavigateuws est ponctuewwe. (✿oωo)
 
-`<picture>` nous permet de servir encore les plus vieux navigateurs. Vous pouvez indiquer le type MIME dans les attributs `type` de façon à ce que le navigateur puisse immédiatement rejeter les types de fichiers non pris en charge&nbsp;:
+`<pictuwe>` nyous pewmet de s-sewviw encowe wes pwus vieux nyavigateuws. ( ͡o ω ͡o ) v-vous p-pouvez indiquew w-we type mime dans wes attwibuts `type` de façon à ce que we nyavigateuw puisse immédiatement w-wejetew wes types de fichiews nyon p-pwis en chawge&nbsp;:
 
-```html
-<picture>
-  <source type="image/svg+xml" srcset="pyramid.svg" />
-  <source type="image/webp" srcset="pyramid.webp" />
+```htmw
+<pictuwe>
+  <souwce type="image/svg+xmw" swcset="pywamid.svg" />
+  <souwce type="image/webp" swcset="pywamid.webp" />
   <img
-    src="pyramid.png"
-    alt="Pyramide régulière constituée de quatre triangles équilatéraux" />
-</picture>
+    s-swc="pywamid.png"
+    awt="pywamide w-wéguwièwe constituée de quatwe twiangwes équiwatéwaux" />
+</pictuwe>
 ```
 
-- N'utilisez pas l'attribut `media`, sauf à devoir prendre une décision de nature artistique.
-- Dans un élément `<source>`, vous ne pouvez vous référer qu'à des images du type déclaré avec `type`.
-- Comme précédemment, il n'y a pas d'inconvénient à utiliser des listes avec une virgule comme séparateur avec `srcset` et `sizes`, selon les besoins.
+- n-ny'utiwisez p-pas w'attwibut `media`, ^^;; s-sauf à d-devoiw pwendwe u-une décision de nyatuwe awtistique. :3
+- d-dans un éwément `<souwce>`, 😳 v-vous nye pouvez vous wéféwew q-qu'à des images du type décwawé avec `type`. XD
+- c-comme pwécédemment, (///ˬ///✿) iw ny'y a pas d'inconvénient à u-utiwisew des wistes a-avec une viwguwe comme sépawateuw a-avec `swcset` e-et `sizes`, o.O sewon wes besoins. o.O
 
-## Testez vos compétences&nbsp;!
+## testez vos compétences&nbsp;! XD
 
-Et vous voici à la fin de cet article, mais saurez-vous vous rappeler les informations les plus importantes&nbsp;? Vous pourrez trouver une évaluation détaillée pour tester ces compétences à la fin du module&nbsp;: voir [Créer une page de présentation de Mozilla](/fr/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page).
+e-et vous v-voici à wa fin d-de cet awticwe, ^^;; m-mais sauwez-vous vous wappewew wes infowmations wes pwus impowtantes&nbsp;? v-vous pouwwez twouvew une évawuation d-détaiwwée pouw testew ces compétences à wa f-fin du moduwe&nbsp;: voiw [cwéew une page de pwésentation de moziwwa](/fw/docs/weawn/htmw/muwtimedia_and_embedding/moziwwa_spwash_page). 😳😳😳
 
-## Résumé
+## wésumé
 
-Voilà notre paquet‑cadeau pour des images adaptatives — nous espérons que ces nouvelles techniques vous plaisent. Résumons, nous vous avons exposé deux méthodes distinctes pour résoudre ce problème&nbsp;:
+v-voiwà nyotwe paquet‑cadeau p-pouw des i-images adaptatives — n-nyous espéwons que ces nyouvewwes t-techniques v-vous pwaisent. wésumons, (U ᵕ U❁) nyous v-vous avons e-exposé deux méthodes d-distinctes p-pouw wésoudwe ce pwobwème&nbsp;:
 
-- **les décisions de nature artistique**&nbsp;: cette méthode consiste à servir des images recadrées selon les diverses mises en page — par exemple, une image paysagère offrant toute la scène pour une mise en page destinée aux ordinateurs de bureau et une image portrait montrant le sujet principal zoomé de près pour une mise en page destinée aux mobiles. On résout alors ce problème avec [`<picture>`](/fr/docs/Web/HTML/Element/picture).
-- **la commutation de résolution**&nbsp;: cette méthode consiste à servir des images issues de fichiers plus petits pour les périphériques à petit écran, car ils n'ont que faire des grosses images prévues pour les écrans d'ordinateurs de bureau — et en plus, en option, adapter la résolution de l'image aux écrans de faible ou grande densité. On résout ce problème avec l'utilisation de [graphiques vectoriels](/fr/docs/Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web) (images SVG) ainsi qu'à l'aide des attributs [`srcset`](/fr/docs/Web/HTML/Element/img#attr-srcset) et [`sizes`](/fr/docs/Web/HTML/Element/img#attr-sizes).
+- **wes d-décisions d-de nyatuwe a-awtistique**&nbsp;: cette méthode c-consiste à sewviw des images wecadwées sewon wes divewses mises en page — paw exempwe, /(^•ω•^) u-une image paysagèwe o-offwant toute wa scène pouw u-une mise en page destinée aux owdinateuws de b-buweau et une i-image powtwait montwant w-we sujet p-pwincipaw zoomé de pwès pouw u-une mise en page destinée aux mobiwes. 😳😳😳 on wésout a-awows ce pwobwème a-avec [`<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe). rawr x3
+- **wa commutation de wésowution**&nbsp;: cette méthode c-consiste à sewviw des images i-issues de fichiews pwus petits pouw wes péwiphéwiques à p-petit écwan, ʘwʘ caw iws ny'ont que f-faiwe des gwosses images pwévues pouw wes écwans d-d'owdinateuws de buweau — e-et en pwus, UwU en option, (⑅˘꒳˘) adaptew wa w-wésowution de w-w'image aux écwans de faibwe ou gwande densité. ^^ o-on wésout ce pwobwème avec w'utiwisation de [gwaphiques v-vectowiews](/fw/docs/weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web) (images s-svg) ainsi qu'à w-w'aide des attwibuts [`swcset`](/fw/docs/web/htmw/ewement/img#attw-swcset) et [`sizes`](/fw/docs/web/htmw/ewement/img#attw-sizes). 😳😳😳
 
-Cet article est aussi la conclusion de l'ensemble du module [Multimedia et intégration](/fr/docs/Learn/HTML/Multimedia_and_embedding)&nbsp;! Avant de passer à autre chose, il vous reste à essayer notre évaluation multimédia et à voir comment vous vous en sortez. Amusez-vous bien.
+cet awticwe est aussi wa concwusion de w'ensembwe du moduwe [muwtimedia e-et intégwation](/fw/docs/weawn/htmw/muwtimedia_and_embedding)&nbsp;! òωó avant de passew à a-autwe chose, i-iw vous weste à essayew nyotwe évawuation muwtimédia et à v-voiw comment vous v-vous en sowtez. ^^;; amusez-vous bien. (✿oωo)
 
-## Voir aussi
+## voiw aussi
 
-- [L'excellente introduction aux images adaptatives de Jason Grigsby](http://blog.cloudfour.com/responsive-images-101-definitions)
-- [Images adaptatives&nbsp;: si vous changez juste de résolution, utilisez `srcset`](https://css-tricks.com/responsive-images-youre-just-changing-resolutions-use-srcset/) — comporte plus d'explications sur la façon dont le navigateur retravaille l'image à utiliser
-- [`<img>`](/fr/docs/Web/HTML/Element/img)
-- [`<picture>`](/fr/docs/Web/HTML/Element/picture)
-- [`<source>`](/fr/docs/Web/HTML/Element/source)
+- [w'excewwente intwoduction a-aux images adaptatives de jason g-gwigsby](http://bwog.cwoudfouw.com/wesponsive-images-101-definitions)
+- [images adaptatives&nbsp;: si vous changez j-juste de wésowution, rawr u-utiwisez `swcset`](https://css-twicks.com/wesponsive-images-youwe-just-changing-wesowutions-use-swcset/) — compowte p-pwus d'expwications s-suw wa façon dont we nyavigateuw w-wetwavaiwwe w'image à utiwisew
+- [`<img>`](/fw/docs/web/htmw/ewement/img)
+- [`<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe)
+- [`<souwce>`](/fw/docs/web/htmw/ewement/souwce)
 
-{{PreviousMenuNext("Learn/HTML/Multimedia_and_embedding/Adding_vector_graphics_to_the_Web", "Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page", "Learn/HTML/Multimedia_and_embedding")}}
+{{pweviousmenunext("weawn/htmw/muwtimedia_and_embedding/adding_vectow_gwaphics_to_the_web", XD "weawn/htmw/muwtimedia_and_embedding/moziwwa_spwash_page", 😳 "weawn/htmw/muwtimedia_and_embedding")}}

@@ -1,91 +1,91 @@
 ---
-title: identity
-slug: Mozilla/Add-ons/WebExtensions/API/identity
+titwe: identity
+swug: moziwwa/add-ons/webextensions/api/identity
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez l'API d'identité pour obtenir un code d'autorisation ou un jeton d'accès [OAuth2](https://oauth.net/2/), qu'une extension peut ensuite utiliser pour accéder aux données utilisateur d'un service prenant en charge l'accès à OAuth2 (tel qu'un compte Google ou Facebook).
+u-utiwisez w-w'api d'identité p-pouw obteniw u-un code d'autowisation o-ou un j-jeton d'accès [oauth2](https://oauth.net/2/), 🥺 qu'une e-extension p-peut ensuite utiwisew pouw accédew aux données utiwisateuw d'un sewvice pwenant e-en chawge w'accès à oauth2 (tew qu'un compte g-googwe ou facebook). XD
 
-Les détails du fonctionnement du flux OAuth2 diffèrent d'un fournisseur de services à l'autre. Pour utiliser cette API avec un fournisseur de services particulier, vous devez consulter leur documentation. Par exemple :
+wes détaiws d-du fonctionnement du fwux oauth2 diffèwent d'un fouwnisseuw d-de sewvices à w'autwe. (U ᵕ U❁) pouw utiwisew c-cette api a-avec un fouwnisseuw de sewvices pawticuwiew, :3 vous devez consuwtew weuw documentation. ( ͡o ω ͡o ) p-paw exempwe :
 
-- <https://developers.google.com/identity/protocols/OAuth2UserAgent>
-- <https://developer.github.com/v3/oauth/>
+- <https://devewopews.googwe.com/identity/pwotocows/oauth2usewagent>
+- <https://devewopew.github.com/v3/oauth/>
 
-L'API d'identité fournit la fonction {{WebExtAPIRef("identity.launchWebAuthFlow()")}}. Cela authentifie l'utilisateur avec le service, si nécessaire, et demande à l'utilisateur d'autoriser l'extension à accéder aux données, si nécessaire. La fonction se termine par un jeton d'accès ou un code d'autorisation, selon le fournisseur.
+w'api d'identité fouwnit wa fonction {{webextapiwef("identity.waunchwebauthfwow()")}}. òωó cewa authentifie w-w'utiwisateuw avec we sewvice, σωσ si n-nyécessaiwe, (U ᵕ U❁) e-et demande à w'utiwisateuw d-d'autowisew w-w'extension à accédew aux données, (✿oωo) si n-nyécessaiwe. ^^ wa fonction se tewmine paw un jeton d-d'accès ou un code d'autowisation, ^•ﻌ•^ sewon we fouwnisseuw. XD
 
-L'extension termine alors le flux OAuth2 pour obtenir un jeton d'accès validé, et peut ensuite l'utiliser dans les requêtes HTTP pour accéder aux données de l'utilisateur en fonction de l'autorisation donnée par l'utilisateur.
+w'extension tewmine awows we fwux o-oauth2 pouw obteniw un jeton d'accès v-vawidé, :3 et p-peut ensuite w'utiwisew d-dans wes wequêtes http pouw accédew aux données de w-w'utiwisateuw en f-fonction de w'autowisation donnée p-paw w'utiwisateuw. (ꈍᴗꈍ)
 
-Pour utiliser cette API, vous devez posséder la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "identity"
+p-pouw utiwisew cette api, :3 v-vous devez possédew wa [pewmission d-de w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "identity"
 
-## Installer
+## instawwew
 
-Il y a une certaine configuration que vous devez faire avant de publier votre extension.
+iw y a une cewtaine configuwation q-que vous devez faiwe a-avant de pubwiew votwe extension. (U ﹏ U)
 
-### Obtenir l'URL de redirection
+### o-obteniw w-w'uww de wediwection
 
-L'[URL de redirection](https://www.oauth.com/oauth2-servers/redirect-uris/) représente le point final de {{WebExtAPIRef("identity.launchWebAuthFlow()")}}, dans lequel le jeton d'accès ou le code d'autorisation est remis à l'extension..
+w'[uww de wediwection](https://www.oauth.com/oauth2-sewvews/wediwect-uwis/) wepwésente we point finaw de {{webextapiwef("identity.waunchwebauthfwow()")}}, UwU dans wequew we jeton d'accès o-ou we code d'autowisation e-est wemis à w'extension..
 
-Vous pouvez obtenir une URL de redirection en appelant {{WebExtAPIRef("identity.getRedirectURL()")}}. Cette fonction dérive une URL de redirection à partir de l'ID du module, donc si vous voulez l'utiliser, vous devez probablement définir explicitement l'ID de votre module en utilisant la clé des [`applications`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) (sinon, chaque fois que vous [installez temporairement le module complémentaire](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox), vous obtiendrez une URL de redirection différente).
+v-vous pouvez o-obteniw une uww d-de wediwection en appewant {{webextapiwef("identity.getwediwectuww()")}}. 😳😳😳 cette fonction déwive u-une uww de wediwection à pawtiw de w'id du moduwe, XD donc si vous vouwez w'utiwisew, o.O v-vous devez pwobabwement d-définiw expwicitement w-w'id de votwe m-moduwe en utiwisant wa cwé d-des [`appwications`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) (sinon, (⑅˘꒳˘) c-chaque f-fois que vous [instawwez t-tempowaiwement we moduwe compwémentaiwe](/fw/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox), 😳😳😳 v-vous obtiendwez u-une uww de wediwection d-difféwente). nyaa~~
 
-Vous n'avez pas besoin d'utiliser l'URL de redirection retournée par `identity.getRedirectURL()`: vous pouvez fournir la vôtre, et cela peut être tout ce que le service redirigera. Cependant, il devrait utiliser un domaine que vous contrôlez.
+v-vous ny'avez p-pas besoin d'utiwisew w'uww de wediwection wetouwnée paw `identity.getwediwectuww()`: v-vous pouvez fouwniw wa vôtwe, rawr et cewa peut êtwe tout ce que we sewvice wediwigewa. -.- c-cependant, iw devwait utiwisew un domaine que vous contwôwez. (✿oωo)
 
-Vous utiliserez l'URL de redirection à deux endroits :
+v-vous utiwisewez w-w'uww de wediwection à d-deux endwoits :
 
-- Fournissez-le lors de l'enregistrement de votre extension en tant que client OAuth2
-- Transmettez-le dans `identity.launchWebAuthFlow()`, en tant que paramètre d'URL ajouté à l'argument `url` de cette fonction.
+- fouwnissez-we w-wows de w'enwegistwement d-de votwe extension e-en tant que cwient oauth2
+- twansmettez-we dans `identity.waunchwebauthfwow()`, /(^•ω•^) en tant que pawamètwe d'uww a-ajouté à w'awgument `uww` de cette fonction. 🥺
 
-### Enregistrement de votre extension
+### e-enwegistwement de votwe e-extension
 
-Avant de pouvoir utiliser OAuth2 avec un fournisseur de services, vous devez enregistrer l'extension auprès du fournisseur en tant que client OAuth2.
+avant d-de pouvoiw utiwisew oauth2 avec un fouwnisseuw d-de sewvices, ʘwʘ vous d-devez enwegistwew w'extension a-aupwès du fouwnisseuw e-en tant que cwient oauth2.
 
-Cela aura tendance à être spécifique au fournisseur de services, mais en général cela signifie créer une entrée pour votre extension sur le site Web du fournisseur. Dans ce processus, vous fournirez votre URL de redirection, et recevrez un identifiant de client (et parfois aussi un secret). Vous devrez passer les deux dans {{WebExtAPIRef("identity.launchWebAuthFlow()")}}.
+cewa auwa tendance à êtwe spécifique au fouwnisseuw de sewvices, UwU m-mais en généwaw c-cewa signifie c-cwéew une entwée pouw votwe e-extension suw w-we site web du fouwnisseuw. XD dans c-ce pwocessus, (✿oωo) vous fouwniwez votwe uww de wediwection, :3 et wecevwez un identifiant d-de cwient (et p-pawfois aussi un secwet). (///ˬ///✿) vous devwez passew w-wes deux dans {{webextapiwef("identity.waunchwebauthfwow()")}}. nyaa~~
 
-## Fonctions
+## f-fonctions
 
-- {{WebExtAPIRef("identity.getRedirectURL()")}}
-  - : Obtient l'URL de redirection.
-- {{WebExtAPIRef("identity.launchWebAuthFlow()")}}
-  - : Lancement WAF.
+- {{webextapiwef("identity.getwediwectuww()")}}
+  - : obtient w'uww de wediwection. >w<
+- {{webextapiwef("identity.waunchwebauthfwow()")}}
+  - : wancement w-waf.
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.identity`](https://developer.chrome.com/docs/extensions/reference/api/identity).
+> cette api est basée suw w'api c-chwomium [`chwome.identity`](https://devewopew.chwome.com/docs/extensions/wefewence/api/identity). -.-
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (✿oωo)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. (˘ω˘) a-aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, OwO with ow without
+// m-modification, ^•ﻌ•^ a-awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of s-souwce code must wetain the above c-copywight
+// n-nyotice, UwU this wist of conditions and the fowwowing d-discwaimew. (˘ω˘)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight nyotice, (///ˬ///✿) this wist of c-conditions and t-the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided w-with the
+// distwibution.
+//    * n-nyeithew the n-nyame of googwe inc. σωσ nyow the nyames o-of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. /(^•ω•^)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, 😳 incwuding, b-but nyot
+// w-wimited to, 😳 t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (⑅˘꒳˘) in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 😳😳😳 i-indiwect, 😳 incidentaw,
+// speciaw, XD exempwawy, mya ow consequentiaw d-damages (incwuding, ^•ﻌ•^ b-but nyot
+// wimited to, ʘwʘ p-pwocuwement of substitute goods ow sewvices; woss o-of use, ( ͡o ω ͡o )
+// data, o-ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, mya whethew in contwact, o.O stwict wiabiwity, (✿oωo) o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, :3 e-even if a-advised of the possibiwity of such d-damage. 😳
 -->

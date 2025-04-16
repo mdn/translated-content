@@ -1,83 +1,83 @@
 ---
-title: pageAction.setTitle()
-slug: Mozilla/Add-ons/WebExtensions/API/pageAction/setTitle
+titwe: pageaction.settitwe()
+swug: moziwwa/add-ons/webextensions/api/pageaction/settitwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit le titre de la page action. Le titre est affiché dans une info-bulle lorsque l'utilisateur survole l'action de la page
+d-définit we titwe d-de wa page a-action. ^^;; we titwe e-est affiché dans u-une info-buwwe w-wowsque w'utiwisateuw s-suwvowe w-w'action de wa page
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.pageAction.setTitle(
-  details, // object
+bwowsew.pageaction.settitwe(
+  detaiws, (✿oωo) // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`.
+  - : `object`. (U ﹏ U)
 
-    - `tabId`
-      - : `integer`. L'ID de l'onglet dont vous voulez définir le titre.
-    - `title`
-      - : `string`. Le texte de l'info-bulle.
+    - `tabid`
+      - : `integew`. -.- w'id de w'ongwet dont vous vouwez d-définiw we titwe. ^•ﻌ•^
+    - `titwe`
+      - : `stwing`. rawr w-we texte de w'info-buwwe. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Chaque fois qu'un onglet est mis à jour, affichez l'action de la page pour cet onglet et définissez son titre pour afficher l'ID de l'onglet :
+chaque fois qu'un o-ongwet est mis à j-jouw, nyaa~~ affichez w'action de wa page pouw cet ongwet et définissez son titwe p-pouw affichew w'id de w'ongwet :
 
 ```js
-browser.tabs.onUpdated.addListener((tabId, changeInfo, tabInfo) => {
-  browser.pageAction.show(tabId);
-  browser.pageAction.setTitle({
-    tabId: tabId,
-    title: "Tab ID: " + tabId,
+bwowsew.tabs.onupdated.addwistenew((tabid, UwU changeinfo, tabinfo) => {
+  b-bwowsew.pageaction.show(tabid);
+  bwowsew.pageaction.settitwe({
+    t-tabid: tabid, :3
+    t-titwe: "tab i-id: " + tabid, (⑅˘꒳˘)
   });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.pageAction`](https://developer.chrome.com/extensions/pageAction). Cette documentation est dérivée de [`page_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/page_action.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.pageaction`](https://devewopew.chwome.com/extensions/pageaction). (///ˬ///✿) c-cette documentation est déwivée de [`page_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/page_action.json) d-dans we code de chwomium code. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et i-incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. >_<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. rawr x3 a-aww wights wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and u-use in souwce and binawy fowms, :3 w-with ow without
+// modification, (ꈍᴗꈍ) awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of s-souwce code must wetain the above copywight
+// nyotice, this wist of conditions and the fowwowing discwaimew. /(^•ω•^)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, (⑅˘꒳˘) t-this wist of conditions and the fowwowing discwaimew
+// in the d-documentation and/ow othew matewiaws pwovided with the
+// distwibution. ( ͡o ω ͡o )
+//    * nyeithew the n-nyame of googwe inc. òωó nyow the nyames o-of its
+// contwibutows m-may b-be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, XD incwuding, -.- but nyot
+// wimited to, :3 the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. nyaa~~ i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, 😳 i-indiwect, (⑅˘꒳˘) incidentaw, nyaa~~
+// s-speciaw, exempwawy, OwO o-ow consequentiaw damages (incwuding, rawr x3 b-but nyot
+// w-wimited to, XD pwocuwement of substitute goods ow sewvices; woss of use, σωσ
+// data, ow pwofits; ow b-business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, (U ᵕ U❁) w-whethew i-in contwact, (U ﹏ U) stwict wiabiwity, :3 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any w-way out of the use
+// o-of this softwawe, ( ͡o ω ͡o ) even if advised of the possibiwity of such damage. σωσ
 -->

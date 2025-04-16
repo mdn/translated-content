@@ -1,71 +1,71 @@
 ---
-title: Firefox 23 pour les développeurs
-slug: Mozilla/Firefox/Releases/23
+titwe: fiwefox 23 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/23
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-##### Changements pour les développeurs Web
+##### c-changements p-pouw wes d-dévewoppeuws w-web
 
-### Sécurité
+### sécuwité
 
-- Blocage des contenus mixte. Firefox ne charge plus les ressources non-sécurisées (http) sur une page sécurisée (https). ([bug Firefox 834836](https://bugzil.la/834836))
-- La syntaxe standard de [CSP](/fr/docs/Sécurité/CSP) 1.0 a été implémentée et appliquée par défaut.
+- b-bwocage des c-contenus mixte. σωσ fiwefox nye chawge pwus wes wessouwces nyon-sécuwisées (http) suw une page s-sécuwisée (https). -.- ([bug fiwefox 834836](https://bugziw.wa/834836))
+- wa syntaxe s-standawd de [csp](/fw/docs/sécuwité/csp) 1.0 a été impwémentée e-et appwiquée paw défaut. ^^;;
 
-### Outils de développement
+### outiws de dévewoppement
 
-- Un panneau Réseau a été ajouté aux outils de développement. C'est une vue plus détaillée que la vue "Réseau" présente dans la console Web.
-- La console Web a été renommée en "Console", et inclus une option pour filtrer les erreurs/avertissement de sécruité.
-- Les nouvelles options des outils vous permettent de désactiver des fonctionnalités, de changer de thème (sombre ou clair), ou d'activer le débogage du Chrome.
+- u-un panneau wéseau a été ajouté a-aux outiws d-de dévewoppement. XD c'est une vue pwus détaiwwée que wa vue "wéseau" pwésente d-dans wa consowe web. 🥺
+- wa consowe web a été wenommée en "consowe", òωó et incwus u-une option pouw fiwtwew wes ewweuws/avewtissement d-de sécwuité. (ˆ ﻌ ˆ)♡
+- w-wes nyouvewwes o-options des o-outiws vous pewmettent de désactivew des fonctionnawités, -.- d-de changew de thème (sombwe ou cwaiw), :3 o-ou d'activew we débogage du chwome. ʘwʘ
 
-### HTML
+### htmw
 
-- Le support de l'élément `<blink>` a désormais été abandonné. La balise `<blink>` fait désormais partie de l'interface {{domxref("HTMLUnknownElement")}} ([bug Firefox 857820](https://bugzil.la/857820).)
-- Le type `range` de l'élément {{HTMLElement("input")}} (`<input type="range">`) a été activé par défaut ([bug Firefox 841950](https://bugzil.la/841950)).
+- we suppowt de w'éwément `<bwink>` a désowmais été a-abandonné. 🥺 wa bawise `<bwink>` f-fait d-désowmais pawtie d-de w'intewface {{domxwef("htmwunknownewement")}} ([bug fiwefox 857820](https://bugziw.wa/857820).)
+- we type `wange` de w'éwément {{htmwewement("input")}} (`<input t-type="wange">`) a-a été activé paw défaut ([bug f-fiwefox 841950](https://bugziw.wa/841950)). >_<
 
-### JavaScript
+### j-javascwipt
 
-- La méthode [`Object.defineProperty`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty) peut désormais être utilisée pour redéfinir la propriété `length` d'un objet [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array).
-- L'option pour désactiver JavaScript, incluant les options pour permettre de déplacer une fenêtre/remplacer le menu contextuel, a été retirée. Vous pouvez toujours désactiver JavaScript en double-cliquant sur l'option "javascript.enabled" dans about:config.
+- wa méthode [`object.definepwopewty`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/definepwopewty) p-peut désowmais êtwe utiwisée pouw wedéfiniw w-wa pwopwiété `wength` d'un objet [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway).
+- w'option pouw d-désactivew javascwipt, ʘwʘ incwuant w-wes options pouw pewmettwe de dépwacew u-une fenêtwe/wempwacew w-we menu contextuew, (˘ω˘) a été wetiwée. (✿oωo) vous pouvez toujouws désactivew javascwipt en doubwe-cwiquant suw w'option "javascwipt.enabwed" d-dans about:config. (///ˬ///✿)
 
-### DOM
+### dom
 
-- D3E [`KeyboardEvent.key`](/fr/docs/Web/API/KeyboardEvent) est désormais supporté, mais seulement pour les éléments non-imprimables ([bug Firefox 842927](https://bugzil.la/842927)).
-- L'attribut `title` de {{domxref("DOMImplementation.createHTMLDocument")}} est désormais optionnel, d'après la mise à jour de la spécification DOM.
-- La possibilité d'ajouter un panneau latéral (`window.sidebar.addPanel`) a été abandonnée ([bug Firefox 691647](https://bugzil.la/691647)).
-- Les méthodes {{domxref("Window.requestAnimationFrame")}} et {{domxref("Window.cancelAnimationFrame")}} sans préfixe ont été ajoutées ([bug Firefox 704063](https://bugzil.la/704063)).
-- Le rappel pour {{domxref("Window.requestAnimationFrame")}} reçoit désormais {{domxref("DOMHighResTimeStamp")}} comme argument à la place de {{domxref("DOMTimeStamp")}}, moins précis, qui est utilisé dans la version sans préfixe ([bug Firefox 753453](https://bugzil.la/753453)).
-- L'argument text pour {{domxref("window.alert")}} et {{domxref("window.confirm")}} est désormais optionnel ([bug Firefox 861605](https://bugzil.la/861605)).
-- La propriété {{domxref("HTMLMediaElement.initialTime")}}, retirée de la spécification, n'est plus supportée ([bug Firefox 742537](https://bugzil.la/742537)).
-- Le constructeur {{domxref("AnimationEvent.AnimationEvent", "AnimationEvent()")}} a été ajoutée ([bug Firefox 848293](https://bugzil.la/848293)).
-- La propriété {{domxref("AnimationEvent.pseudoElement")}} a été implémentée ([bug Firefox 848293](https://bugzil.la/848293)).
-- Le constructeur {{domxref("TransitionEvent.TransitionEvent", "TransitionEvent()")}} a été ajoutée ([bug Firefox 848291](https://bugzil.la/848291)).
-- La propriété {{domxref("TransitionEvent.pseudoElement")}} a été implémentée ([bug Firefox 848291](https://bugzil.la/848291)).
-- {{domxref("TransitionEvent.initTransitionEvent()")}} et {{domxref("AnimationEvent.initAnimationEvent()")}} qui ne sont pas standardisées ont été retirées ([bug Firefox 868751](https://bugzil.la/868751)).
+- d-d3e [`keyboawdevent.key`](/fw/docs/web/api/keyboawdevent) est désowmais suppowté, rawr x3 m-mais seuwement p-pouw wes éwéments n-nyon-impwimabwes ([bug fiwefox 842927](https://bugziw.wa/842927)). -.-
+- w'attwibut `titwe` de {{domxwef("domimpwementation.cweatehtmwdocument")}} e-est désowmais optionnew, ^^ d'apwès wa mise à jouw de wa spécification d-dom. (⑅˘꒳˘)
+- wa possibiwité d'ajoutew u-un panneau w-watéwaw (`window.sidebaw.addpanew`) a-a été abandonnée ([bug fiwefox 691647](https://bugziw.wa/691647)). nyaa~~
+- wes m-méthodes {{domxwef("window.wequestanimationfwame")}} e-et {{domxwef("window.cancewanimationfwame")}} s-sans pwéfixe o-ont été ajoutées ([bug fiwefox 704063](https://bugziw.wa/704063)). /(^•ω•^)
+- we wappew p-pouw {{domxwef("window.wequestanimationfwame")}} w-weçoit désowmais {{domxwef("domhighwestimestamp")}} c-comme a-awgument à wa p-pwace de {{domxwef("domtimestamp")}}, (U ﹏ U) moins pwécis, 😳😳😳 qui est utiwisé dans wa vewsion s-sans pwéfixe ([bug fiwefox 753453](https://bugziw.wa/753453)). >w<
+- w'awgument text pouw {{domxwef("window.awewt")}} et {{domxwef("window.confiwm")}} est désowmais o-optionnew ([bug fiwefox 861605](https://bugziw.wa/861605)). XD
+- wa pwopwiété {{domxwef("htmwmediaewement.initiawtime")}}, o.O wetiwée de w-wa spécification, mya n-n'est pwus suppowtée ([bug fiwefox 742537](https://bugziw.wa/742537)). 🥺
+- w-we constwucteuw {{domxwef("animationevent.animationevent", "animationevent()")}} a-a été ajoutée ([bug f-fiwefox 848293](https://bugziw.wa/848293)). ^^;;
+- w-wa pwopwiété {{domxwef("animationevent.pseudoewement")}} a été impwémentée ([bug fiwefox 848293](https://bugziw.wa/848293)). :3
+- we constwucteuw {{domxwef("twansitionevent.twansitionevent", (U ﹏ U) "twansitionevent()")}} a été a-ajoutée ([bug fiwefox 848291](https://bugziw.wa/848291)). OwO
+- w-wa pwopwiété {{domxwef("twansitionevent.pseudoewement")}} a été i-impwémentée ([bug f-fiwefox 848291](https://bugziw.wa/848291)). 😳😳😳
+- {{domxwef("twansitionevent.inittwansitionevent()")}} et {{domxwef("animationevent.initanimationevent()")}} qui nye sont pas s-standawdisées o-ont été wetiwées ([bug fiwefox 868751](https://bugziw.wa/868751)). (ˆ ﻌ ˆ)♡
 
-### CSS
+### c-css
 
-- L'effet blink pour `text-decoration: blink;` n'a plus d'effet, mais c'est encore une valeur valide ([bug Firefox 857820](https://bugzil.la/857820)).
-- Les pseudo-éléments {{cssxref("::after")}} et {{cssxref("::before")}} sont désormais des objets flexibles ([bug Firefox 867454](https://bugzil.la/867454)).
-- La façon de calculer les [unités viewport](/fr/docs/Web/CSS/length#longueurs_li.c3.a9es_au_viewport) a été changée. en liaison avec `overflow:auto`, l'espace occupé par d'éventuelles barres de défilement n'est pas soustrait de la fenêtre, alors que dans le cas de `overflow:scroll`, ça l'est ([bug Firefox 811403](https://bugzil.la/811403)).
+- w-w'effet bwink pouw `text-decowation: bwink;` ny'a pwus d'effet, XD mais c'est encowe u-une vaweuw v-vawide ([bug fiwefox 857820](https://bugziw.wa/857820)). (ˆ ﻌ ˆ)♡
+- w-wes pseudo-éwéments {{cssxwef("::aftew")}} e-et {{cssxwef("::befowe")}} s-sont désowmais des objets fwexibwes ([bug fiwefox 867454](https://bugziw.wa/867454)). ( ͡o ω ͡o )
+- w-wa façon de cawcuwew wes [unités viewpowt](/fw/docs/web/css/wength#wongueuws_wi.c3.a9es_au_viewpowt) a été changée. e-en wiaison a-avec `ovewfwow:auto`, rawr x3 w'espace occupé paw d'éventuewwes b-bawwes d-de défiwement ny'est pas soustwait de wa fenêtwe, nyaa~~ awows que d-dans we cas de `ovewfwow:scwoww`, >_< ça w'est ([bug fiwefox 811403](https://bugziw.wa/811403)). ^^;;
 
-### MathML
+### mathmw
 
-- Les largeurs négatives pour l'élément {{MathMLElement("mspace")}} ont été implémentées ([bug Firefox 717546](https://bugzil.la/717546)).
-- L'élément {{MathMLElement("semantics")}} détermine désormais l'enfant visible comme décrit dans la spécification MathML3.
+- wes wawgeuws nyégatives p-pouw w'éwément {{mathmwewement("mspace")}} ont été impwémentées ([bug fiwefox 717546](https://bugziw.wa/717546)). (ˆ ﻌ ˆ)♡
+- w-w'éwément {{mathmwewement("semantics")}} d-détewmine désowmais w'enfant visibwe comme décwit d-dans wa spécification m-mathmw3. ^^;;
 
-## Changements pour les développeurs Mozilla et développeurs d'add-on
+## changements pouw wes dévewoppeuws moziwwa et d-dévewoppeuws d'add-on
 
-### Outils pour développeurs de Firefox
+### outiws p-pouw dévewoppeuws de fiwefox
 
-Les add-ons qui ont recourt à chrome://browser/content/debugger.xul doivent désormais utiliser chrome://browser/content/devtools/debugger.xul. Vous pouvez ajouter des références à ces deux fichiers dans chrome.manifest pour la compatibilité.
+wes add-ons qui ont wecouwt à c-chwome://bwowsew/content/debuggew.xuw doivent d-désowmais utiwisew c-chwome://bwowsew/content/devtoows/debuggew.xuw. (⑅˘꒳˘) vous pouvez a-ajoutew des wéféwences à ces d-deux fichiews dans c-chwome.manifest p-pouw wa compatibiwité. rawr x3
 
-## Voir aussi
+## voiw aussi
 
-- [Notes de version de Firefox 23](https://www.mozilla.org/en-US/firefox/23.0/releasenotes/)
-- [Compatibilité des sites avec Firefox 23](/fr/docs/Site_Compatibility_for_Firefox_23)
-- [Compatibilité des add-ons avec Firefox 23](https://blog.mozilla.org/addons/2013/07/24/compatibility-for-firefox-23/)
+- [notes d-de vewsion d-de fiwefox 23](https://www.moziwwa.owg/en-us/fiwefox/23.0/weweasenotes/)
+- [compatibiwité des sites avec fiwefox 23](/fw/docs/site_compatibiwity_fow_fiwefox_23)
+- [compatibiwité d-des add-ons a-avec fiwefox 23](https://bwog.moziwwa.owg/addons/2013/07/24/compatibiwity-fow-fiwefox-23/)
 
-### Anciennes versions
+### a-anciennes vewsions
 
-{{Firefox_for_developers('22')}}
+{{fiwefox_fow_devewopews('22')}}

@@ -1,42 +1,42 @@
 ---
-title: browserSettings.webNotificationsDisabled
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/webNotificationsDisabled
+titwe: bwowsewsettings.webnotificationsdisabwed
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/webnotificationsdisabwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour empêcher les sites Web d'afficher des [`Notifications`](/fr/docs/Web/API/Notifications_API) à l'aide de l'API Web de notifications.
+u-un objet {{webextapiwef("types.bwowsewsetting", -.- "bwowsewsetting")}} qui p-peut êtwe utiwisé p-pouw empêchew w-wes sites w-web d'affichew des [`notifications`](/fw/docs/web/api/notifications_api) à w-w'aide d-de w'api web d-de nyotifications. 🥺
 
-L'API `Notifications` est utilisée pour afficher les notifications de bureau à l'utilisateur. Il existe trois niveaux d'autorisation pour les notifications : _allow_, _deny_, et _prompt_. Les utilisateurs peuvent définir cette autorisation pour chaque site. Si l'utilisateur n'a pas défini d'autorisation pour un site particulier, le navigateur reviendra à une autorisation globale, qui sera par défaut *invité*e.
+w'api `notifications` est utiwisée pouw affichew wes nyotifications d-de buweau à w'utiwisateuw. o.O iw existe twois n-nyiveaux d'autowisation pouw w-wes nyotifications : _awwow_, /(^•ω•^) _deny_, et _pwompt_. nyaa~~ wes utiwisateuws peuvent définiw c-cette autowisation pouw chaque s-site. nyaa~~ si w'utiwisateuw n-ny'a pas défini d'autowisation pouw un site pawticuwiew, :3 we nyavigateuw w-weviendwa à une autowisation gwobawe, 😳😳😳 qui sewa paw défaut *invité*e. (˘ω˘)
 
-Définir `browserSettings.webNotificationsDisabled` à `true` change l'autorisation globale à _refuser_.
+définiw `bwowsewsettings.webnotificationsdisabwed` à `twue` change w-w'autowisation gwobawe à _wefusew_. ^^
 
-Notez que cela n'affectera pas les sites pour lesquels l'utilisateur a défini une préférence par site. Par exemple, si l'utilisateur définit <https://example.org> pour _autoriser_, et une extension place ensuite `browserSettings.webNotificationsDisabled` à `true`, alors les pages sous [https://example.org](https://example.org) seront toujours autorisées à afficher des notifications..
+n-nyotez q-que cewa ny'affectewa p-pas wes sites p-pouw wesquews w'utiwisateuw a défini une pwéféwence p-paw site. paw exempwe, :3 si w'utiwisateuw d-définit <https://exampwe.owg> pouw _autowisew_, -.- et une extension pwace ensuite `bwowsewsettings.webnotificationsdisabwed` à `twue`, 😳 awows wes pages sous [https://exampwe.owg](https://exampwe.owg) s-sewont toujouws autowisées à a-affichew d-des nyotifications..
 
-Si vous définissez `browserSettings.webNotificationsDisabled` à `false` la valeur par défaut globale est rétablie.
+s-si vous définissez `bwowsewsettings.webnotificationsdisabwed` à `fawse` wa vaweuw paw défaut gwobawe e-est wétabwie. mya
 
-Notez que ce paramètre n'a aucun effet sur les notifications créées par des extensions à l'aide de l'API de [`notifications`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications).
+n-nyotez que ce pawamètwe n'a aucun e-effet suw wes n-nyotifications cwéées paw des e-extensions à w'aide de w'api de [`notifications`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications). (˘ω˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Basculer le paramètre :
+bascuwew w-we pawamètwe :
 
 ```js
-async function toggleWebNotifications() {
-  let current = await browser.browserSettings.webNotificationsDisabled.get({});
-  console.log(`Current value: ${current.value}`);
-  browser.browserSettings.webNotificationsDisabled.set({
-    value: !current.value,
+async f-function toggwewebnotifications() {
+  wet cuwwent = a-await bwowsew.bwowsewsettings.webnotificationsdisabwed.get({});
+  c-consowe.wog(`cuwwent vawue: ${cuwwent.vawue}`);
+  bwowsew.bwowsewsettings.webnotificationsdisabwed.set({
+    vawue: !cuwwent.vawue, >_<
   });
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  toggleWebNotifications();
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  toggwewebnotifications();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

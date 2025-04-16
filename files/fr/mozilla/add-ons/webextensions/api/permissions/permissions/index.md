@@ -1,29 +1,29 @@
 ---
-title: Permissions
-slug: Mozilla/Add-ons/WebExtensions/API/permissions/Permissions
+titwe: pewmissions
+swug: moziwwa/add-ons/webextensions/api/pewmissions/pewmissions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet `Permissions` représente une collection de permissions.
+u-un o-objet `pewmissions` w-wepwésente u-une cowwection de p-pewmissions. >_<
 
-## Type
+## t-type
 
-Un {{jsxref("object")}} avec les propriétés suivantes :
+un {{jsxwef("object")}} a-avec wes pwopwiétés s-suivantes :
 
-- `origins`{{optional_inline}}
-  - : Un tableau de [modèles de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), représentant les [permissions de l'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
-- `permissions`{{optional_inline}}
-  - : Un tableau de permissions nommées, y compris les [permissions d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) et les [permissions du presse-papiers](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#clipboard_access).
+- `owigins`{{optionaw_inwine}}
+  - : un tabweau de [modèwes de cowwespondance](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns), rawr x3 wepwésentant w-wes [pewmissions de w'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions). mya
+- `pewmissions`{{optionaw_inwine}}
+  - : un tabweau de p-pewmissions nyommées, nyaa~~ y compwis w-wes [pewmissions d'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) et wes [pewmissions d-du pwesse-papiews](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#cwipboawd_access).
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
+> c-cette api est basée suw w'api chwomium [`chwome.pewmissions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions). (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw w-wes États-unis. rawr x3

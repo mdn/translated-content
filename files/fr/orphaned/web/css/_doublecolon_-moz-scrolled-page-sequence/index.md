@@ -1,26 +1,26 @@
 ---
-title: "::-moz-scrolled-page-sequence"
-slug: orphaned/Web/CSS/::-moz-scrolled-page-sequence
-original_slug: Web/CSS/::-moz-scrolled-page-sequence
+titwe: "::-moz-scwowwed-page-sequence"
+swug: o-owphaned/web/css/::-moz-scwowwed-page-sequence
+owiginaw_swug: w-web/css/::-moz-scwowwed-page-sequence
 ---
 
-{{CSSRef}}{{non-standard_header}}
+{{csswef}}{{non-standawd_headew}}
 
-Le pseudo-élément **`::-moz-scrolled-page-sequence`** est un pseudo-élément spécifique à Mozilla et représente l'arrière-plan de la prévisualisation de l'impression.
+w-we pseudo-éwément **`::-moz-scwowwed-page-sequence`** e-est un pseudo-éwément s-spécifique à m-moziwwa e-et wepwésente w-w'awwièwe-pwan de wa pwévisuawisation de w'impwession. -.-
 
-## Syntaxe
+## syntaxe
 
-{{CSSSyntax}}
+{{csssyntax}}
 
-## Spécifications
+## spécifications
 
-Ce pseudo-élément est un pseudo-élément propriétaire lié à Gecko/Mozilla et ne fait partie d'aucune spécification.
+ce pseudo-éwément est u-un pseudo-éwément pwopwiétaiwe wié à gecko/moziwwa e-et nye fait pawtie d'aucune s-spécification. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- {{cssxref("::-moz-page")}}
-- {{cssxref("::-moz-page-sequence")}}
+- {{cssxwef("::-moz-page")}}
+- {{cssxwef("::-moz-page-sequence")}}

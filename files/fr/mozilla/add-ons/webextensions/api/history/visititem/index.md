@@ -1,65 +1,65 @@
 ---
-title: history.VisitItem
-slug: Mozilla/Add-ons/WebExtensions/API/history/VisitItem
+titwe: histowy.visititem
+swug: m-moziwwa/add-ons/webextensions/api/histowy/visititem
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet décrivant une seule visite sur une page.
+u-un o-objet décwivant u-une seuwe visite s-suw une page. ^^;;
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws d-de ce type s-sont des objets. 🥺 iws contiennent wes pwopwiétés suivantes :
 
 - `id`
-  - : `string`. L'identifiant unique du {{WebExtAPIRef("history.HistoryItem")}} associé à cette visite.
-- `visitId`
-  - : `string`. L'identifiant unique pour cette visite.
-- `visitTime`{{optional_inline}}
-  - : `number`. Lorsque cette visite s'est produite, représentée en millisecondes depuis l'époque.
-- `referringVisitId`
-  - : `string`. L'ID de visite du référent.
-- `transition`
-  - : {{WebExtAPIRef('history.TransitionType')}}. Décrit comment le navigateur a navigué vers la page à cette occasion.
+  - : `stwing`. (⑅˘꒳˘) w'identifiant u-unique du {{webextapiwef("histowy.histowyitem")}} associé à cette visite. nyaa~~
+- `visitid`
+  - : `stwing`. :3 w-w'identifiant unique p-pouw cette visite. ( ͡o ω ͡o )
+- `visittime`{{optionaw_inwine}}
+  - : `numbew`. mya wowsque cette visite s'est pwoduite, (///ˬ///✿) wepwésentée e-en miwwisecondes depuis w-w'époque. (˘ω˘)
+- `wefewwingvisitid`
+  - : `stwing`. ^^;; w-w'id de visite du wéféwent. (✿oωo)
+- `twansition`
+  - : {{webextapiwef('histowy.twansitiontype')}}. (U ﹏ U) décwit comment we nyavigateuw a nyavigué vews w-wa page à cette occasion. -.-
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> cette a-api est basée suw w'api chwomium [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy). ^•ﻌ•^ c-cette d-documentation e-est déwivée d-de [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) dans we code de chwomium. rawr
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. (˘ω˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. nyaa~~ aww wights wesewved. UwU
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in s-souwce and binawy f-fowms, :3 with ow without
+// modification, (⑅˘꒳˘) a-awe p-pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, (///ˬ///✿) t-this wist of conditions and the f-fowwowing discwaimew. ^^;;
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, >_< this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. rawr x3
+//    * nyeithew the nyame of googwe inc. /(^•ω•^) n-nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess ow impwied wawwanties, (ꈍᴗꈍ) incwuding, /(^•ω•^) b-but nyot
+// wimited t-to, (⑅˘꒳˘) the impwied w-wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ( ͡o ω ͡o ) in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, indiwect, òωó incidentaw, (⑅˘꒳˘)
+// s-speciaw, XD exempwawy, ow consequentiaw damages (incwuding, -.- but nyot
+// wimited t-to, :3 pwocuwement o-of substitute g-goods ow sewvices; woss of use, nyaa~~
+// d-data, 😳 ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew in contwact, nyaa~~ stwict wiabiwity, OwO ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, rawr x3 e-even if advised of the possibiwity of such damage. XD
 -->

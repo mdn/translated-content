@@ -1,95 +1,95 @@
 ---
-title: devtools.network.onRequestFinished
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished
+titwe: devtoows.netwowk.onwequestfinished
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/netwowk/onwequestfinished
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'une requête réseau est terminée et que ses détails sont disponibles pour l'extension.
+wancé w-wowsqu'une w-wequête wéseau e-est tewminée e-et que ses détaiws s-sont disponibwes p-pouw w'extension. XD
 
-La requête est donnée en tant qu'[objet d'entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries), qui est également doté d'une méthode `getContent()` asynchrone qui récupère le contenu du corps de la réponse.
+w-wa wequête est donnée en tant qu'[objet d'entwée haw](http://www.softwaweishawd.com/bwog/haw-12-spec/#entwies), σωσ qui est égawement d-doté d'une méthode `getcontent()` asynchwone qui w-wécupèwe we contenu du cowps d-de wa wéponse. (U ᵕ U❁)
 
-Notez que bien que votre extension puisse ajouter un écouteur à tout moment,elle commencera seulement à se déclencher après que l'utilisateur a activé le [moniteur réseau](https://firefox-source-docs.mozilla.org/devtools-user/network_monitor/index.html) du navigateur au moins une fois.
+nyotez que bien que votwe extension puisse ajoutew u-un écouteuw à tout moment,ewwe c-commencewa s-seuwement à se décwenchew apwès que w'utiwisateuw a activé we [moniteuw wéseau](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/netwowk_monitow/index.htmw) d-du nyavigateuw au moins une fois. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.devtools.network.onRequestFinished.addListener(listener);
-browser.devtools.network.onRequestFinished.removeListener(listener);
-browser.devtools.network.onRequestFinished.hasListener(listener);
+bwowsew.devtoows.netwowk.onwequestfinished.addwistenew(wistenew);
+bwowsew.devtoows.netwowk.onwequestfinished.wemovewistenew(wistenew);
+b-bwowsew.devtoows.netwowk.onwequestfinished.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions
+wes événements o-ont twois f-fonctions
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : a-ajoute un écouteuw à c-cet événement.
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. :3 w-w'awgument de `wistenew` est w'écouteuw à suppwimew. ( ͡o ω ͡o )
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `wistenew` est enwegistwé pouw cet événement. σωσ wenvoie `twue`s'iw écoute, >w< sinon `fawse`. 😳😳😳
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : f-fonction q-qui sewa a-appewée wowsque cet événement se pwoduit. OwO wa fonction wecevwa w-wes awguments suivants :
 
-    - `request`
-      - : `object`. Un objet représentant la requête. Cet objet est un seul objet d'[entrée HAR](http://www.softwareishard.com/blog/har-12-spec/#entries). Il définit également une méthode `getContent()` asynchrone, qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se résout avec le corps de la réponse.
+    - `wequest`
+      - : `object`. 😳 un o-objet wepwésentant wa wequête. 😳😳😳 c-cet objet est u-un seuw objet d'[entwée haw](http://www.softwaweishawd.com/bwog/haw-12-spec/#entwies). (˘ω˘) i-iw définit égawement une méthode `getcontent()` a-asynchwone, ʘwʘ qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui se wésout avec w-we cowps de wa wéponse. ( ͡o ω ͡o )
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Examples
+## exampwes
 
-Ajoutez un écouteur qui consigne l'adresse IP du serveur et le corps de la réponse pour chaque requête réseau.
+ajoutez un écouteuw qui consigne w'adwesse ip du sewveuw et we cowps de wa wéponse pouw c-chaque wequête w-wéseau. o.O
 
 ```js
-function handleRequestFinished(request) {
-  console.log("Server IP: ", request.serverIPAddress);
-  request.getContent().then((content) => {
-    console.log("Content: ", content);
+function handwewequestfinished(wequest) {
+  consowe.wog("sewvew i-ip: ", >w< wequest.sewvewipaddwess);
+  w-wequest.getcontent().then((content) => {
+    c-consowe.wog("content: ", 😳 content);
   });
 }
 
-browser.devtools.network.onRequestFinished.addListener(handleRequestFinished);
+bwowsew.devtoows.netwowk.onwequestfinished.addwistenew(handwewequestfinished);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.devtools`](https://developer.chrome.com/extensions/devtools) de Chromium.
+> cette api est basée suw w'api [`chwome.devtoows`](https://devewopew.chwome.com/extensions/devtoows) d-de chwomium. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. rawr x3 aww wights wesewved. o.O
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, rawr w-with ow without
+// m-modification, awe pewmitted p-pwovided that t-the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above c-copywight
+// n-notice, ʘwʘ this wist o-of conditions a-and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, ^^;; this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. o.O
+//    * n-nyeithew the n-nyame of googwe inc. (///ˬ///✿) nyow the n-nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, σωσ incwuding, but nyot
+// w-wimited to, nyaa~~ t-the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. ^^;; in nyo event shaww the copywight
+// o-ownew ow c-contwibutows be w-wiabwe fow any diwect, ^•ﻌ•^ indiwect, σωσ i-incidentaw, -.-
+// s-speciaw, ^^;; exempwawy, ow consequentiaw d-damages (incwuding, XD but nyot
+// wimited to, 🥺 pwocuwement of substitute goods o-ow sewvices; woss o-of use, òωó
+// data, (ˆ ﻌ ˆ)♡ ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, -.- whethew in contwact, :3 s-stwict wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence ow othewwise) awising in any w-way out of the use
+// of this softwawe, even if a-advised of the p-possibiwity of such damage. 🥺
 -->

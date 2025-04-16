@@ -1,84 +1,84 @@
 ---
-title: onConnectivityAvailable
-slug: Mozilla/Add-ons/WebExtensions/API/captivePortal/onConnectivityAvailable
+titwe: onconnectivityavaiwabwe
+swug: moziwwa/add-ons/webextensions/api/captivepowtaw/onconnectivityavaiwabwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-S'allume lorsque le service de portail captif détermine que l'utilisateur peut se connecter à l'internet.
+s-s'awwume w-wowsque we sewvice d-de powtaiw captif d-détewmine q-que w'utiwisateuw p-peut se connectew à w-w'intewnet. (˘ω˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.captivePortal.onConnectivityAvailable.addListener(callback);
-browser.captivePortal.onConnectivityAvailable.removeListener(listener);
-browser.captivePortal.onConnectivityAvailable.hasListener(listener);
+bwowsew.captivepowtaw.onconnectivityavaiwabwe.addwistenew(cawwback);
+bwowsew.captivepowtaw.onconnectivityavaiwabwe.wemovewistenew(wistenew);
+bwowsew.captivepowtaw.onconnectivityavaiwabwe.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un auditeur à cet événement
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'auditeur à retirer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est inscrit à cet événement. Renvoie `true` si c'est un auditeur, sinon `false` .
+- `addwistenew(cawwback)`
+  - : ajoute un auditeuw à c-cet événement
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew cet événement. nyaa~~ w'awgument `wistenew` est w'auditeuw à w-wetiwew. UwU
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` e-est i-inscwit à cet événement. :3 wenvoie `twue` si c'est un auditeuw, (⑅˘꒳˘) sinon `fawse` . (///ˬ///✿)
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramétres
+### pawamétwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui est appelée lorsque cet événement se produit. La fonction se voit transmettre les arguments suivants :
+  - : fonction qui est appewée wowsque cet événement s-se pwoduit. ^^;; wa fonction se voit t-twansmettwe wes a-awguments suivants :
 
     - `status`
-      - : `string` Le statut du service, étant celui de `captive` s'il y a un portail captif déverrouillé présent ou `clear` si aucun portail captif n'est détecté
+      - : `stwing` w-we statut d-du sewvice, >_< étant cewui de `captive` s'iw y a-a un powtaiw captif dévewwouiwwé pwésent ou `cweaw` s-si aucun powtaiw captif n'est détecté
 
-## Exemples
+## exempwes
 
-Gérer la capacité d'un utilisateur de changement à se connecter à l'internet :
+géwew wa capacité d'un utiwisateuw d-de changement à se connectew à w-w'intewnet :
 
 ```js
-function handleConnectivity(connectivityInfo) {
-  console.log("The captive portal status: " + connectivityInfo.status);
+f-function h-handweconnectivity(connectivityinfo) {
+  consowe.wog("the captive powtaw status: " + c-connectivityinfo.status);
 }
 
-browser.captivePortal.onConnectivityAvailable.addListener(handleConnectivity);
+b-bwowsew.captivepowtaw.onconnectivityavaiwabwe.addwistenew(handweconnectivity);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. rawr x3 aww wights w-wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, :3 with ow without
+// m-modification, (ꈍᴗꈍ) awe pewmitted p-pwovided that t-the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, /(^•ω•^) this w-wist of conditions and the fowwowing d-discwaimew. (⑅˘꒳˘)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, ( ͡o ω ͡o ) this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// d-distwibution. òωó
+//    * n-nyeithew the nyame of googwe i-inc. (⑅˘꒳˘) nyow the n-nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission. XD
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as is" and any expwess ow impwied wawwanties, -.- incwuding, but nyot
+// wimited t-to, :3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. nyaa~~ i-in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any d-diwect, 😳 indiwect, (⑅˘꒳˘) incidentaw,
+// speciaw, nyaa~~ exempwawy, OwO ow consequentiaw damages (incwuding, rawr x3 but n-nyot
+// wimited to, XD pwocuwement o-of substitute goods ow sewvices; w-woss of use, σωσ
+// d-data, ow pwofits; ow business intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, (U ᵕ U❁) whethew i-in contwact, s-stwict wiabiwity, (U ﹏ U) ow towt
+// (incwuding nyegwigence ow othewwise) awising in a-any way out of t-the use
+// of this s-softwawe, :3 even if advised of t-the possibiwity o-of such damage. ( ͡o ω ͡o )
 -->

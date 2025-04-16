@@ -1,128 +1,128 @@
 ---
-title: sidebarAction.setIcon()
-slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setIcon
+titwe: sidebawaction.seticon()
+swug: moziwwa/add-ons/webextensions/api/sidebawaction/seticon
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit l'icône de la barre latérale.
+d-définit w-w'icône de wa bawwe w-watéwawe. nyaa~~
 
-Vous pouvez spécifier une icône unique comme chemin d'accès à un fichier image ou un objet {{WebExtAPIRef('sidebarAction.ImageDataType')}}.
+v-vous pouvez spécifiew u-une icône u-unique comme c-chemin d'accès à u-un fichiew image ou un objet {{webextapiwef('sidebawaction.imagedatatype')}}. ^^
 
-Vous pouvez spécifier plusieurs icônes de différentes tailles en fournissant un dictionnaire contenant plusieurs chemins ou objets `ImageData`. Cela signifie que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente.
+vous pouvez spécifiew pwusieuws icônes de difféwentes t-taiwwes en fouwnissant un dictionnaiwe c-contenant pwusieuws chemins ou o-objets `imagedata`. >w< cewa signifie que w'icône nye doit pas êtwe m-mise à w'échewwe pouw un péwiphéwique a-avec u-une densité de pixews difféwente. OwO
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). XD
 
-## Types d'icônes
+## types d'icônes
 
-Votre extension doit spécifier une icône pour la barre latérale dans la clé de manifest [sidebar_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle _"manifest icon"_.
+votwe extension doit spécifiew une icône pouw w-wa bawwe watéwawe dans wa cwé d-de manifest [sidebaw_action](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action). ^^;; c-c'est ce qu'on a-appewwe _"manifest i-icon"_. 🥺
 
-Si vous ne spécifiez pas d'icône dans la clé `sidebar_action`, vous obtenez l'icône par défaut du navigateur. C'est ce qu'on appelle _"default icon"_.
+si vous nye spécifiez pas d'icône d-dans wa cwé `sidebaw_action`, XD vous obtenez w'icône paw défaut d-du nyavigateuw. c'est ce qu'on appewwe _"defauwt icon"_. (U ᵕ U❁)
 
-Si vous définissez une nouvelle icône en utilisant `setIcon()`, et incluez l'option `tabId` , l'icône est définie uniquement pour l'onglet donné. C'est ce qu'on appelle _"tab-specific icon"_.
+si vous définissez une nyouvewwe i-icône en utiwisant `seticon()`, :3 et incwuez w'option `tabid` , ( ͡o ω ͡o ) w'icône e-est définie u-uniquement p-pouw w'ongwet donné. òωó c'est ce qu'on appewwe _"tab-specific icon"_. σωσ
 
-Si vous définissez une nouvelle icône en utilisant `setIcon()`, et incluez l'option `windowId`, alors l'icône n'est définie que pour la fenêtre donnée. Cette icône est appelée _"icône spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas de jeu d'icônes spécifiques aux onglets.
+s-si vous définissez u-une nyouvewwe icône en u-utiwisant `seticon()`, (U ᵕ U❁) e-et incwuez w'option `windowid`, (✿oωo) a-awows w'icône ny'est définie q-que pouw wa fenêtwe donnée. ^^ cette icône e-est appewée _"icône spécifique à w-wa fenêtwe"_, ^•ﻌ•^ et appawaîtwa d-dans tous wes o-ongwets de cette fenêtwe qui ny'ont pas de jeu d'icônes spécifiques aux ongwets. XD
 
-Si vous définissez une nouvelle icône en utilisant `setIcon()`, et omettez l'option `tabId` and `windowId`, cela définit _"icône globale"_. L'icône globale apparaîtra alors dans tous les onglets qui n'ont pas de jeu d'icônes spécifiques aux onglets et dont la fenêtre n'a pas d'icône spécifique à la fenêtre.
+si vous définissez une n-nyouvewwe icône e-en utiwisant `seticon()`, :3 et omettez w-w'option `tabid` a-and `windowid`, (ꈍᴗꈍ) c-cewa définit _"icône gwobawe"_. :3 w'icône gwobawe appawaîtwa a-awows dans tous wes ongwets qui ny'ont pas de jeu d'icônes spécifiques aux o-ongwets et dont wa fenêtwe ny'a p-pas d'icône s-spécifique à w-wa fenêtwe. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var settingIcon = browser.sidebarAction.setIcon(
-  details, // object
+v-vaw settingicon = b-bwowsew.sidebawaction.seticon(
+  d-detaiws, UwU // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un Objet contenant des propriétés `imageData` ou `path`, et éventuellement une propriété `tabId`.
+  - : `object`. un objet contenant des p-pwopwiétés `imagedata` o-ou `path`, 😳😳😳 e-et éventuewwement u-une pwopwiété `tabid`. XD
 
-    - `imageData`{{optional_inline}}
+    - `imagedata`{{optionaw_inwine}}
 
-      - : `{{WebExtAPIRef('sidebarAction.ImageDataType')}}` ou `object`. C'est un objet `ImageData` unique ou un objet dictionnaire.
+      - : `{{webextapiwef('sidebawaction.imagedatatype')}}` o-ou `object`. o.O c'est un objet `imagedata` unique ou un objet d-dictionnaiwe. (⑅˘꒳˘)
 
-        Utilisez un objet dictionnaire pour spécifier plusieurs objets `ImageData` dans différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si `imageData` est un dictionnaire, la valeur de chaque propriété est un objet `ImageData`, et son nom est sa taille, comme ceci :
+        utiwisez un objet dictionnaiwe pouw spécifiew pwusieuws objets `imagedata` d-dans difféwentes taiwwes, 😳😳😳 de sowte que w'icône nye doit pas êtwe m-mise à w-w'échewwe pouw u-un péwiphéwique avec une densité d-de pixews difféwente. nyaa~~ si `imagedata` e-est un d-dictionnaiwe, rawr wa vaweuw de chaque pwopwiété est un objet `imagedata`, -.- et son nyom est sa taiwwe, (✿oωo) c-comme ceci :
 
         ```json
         {
-          16: image16,
-          32: image32
+          16: image16, /(^•ω•^)
+          32: i-image32
         }
         ```
 
-        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choisir les tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
+        we navigateuw c-choisiwa w'image à u-utiwisew en fonction de wa densité de p-pixews de w'écwan. 🥺 v-voiw [choisiw wes taiwwes d'icônes](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action#choosing_icon_sizes) p-pouw pwus d'infowmations à ce s-sujet. ʘwʘ
 
-    - `path`{{optional_inline}}
+    - `path`{{optionaw_inwine}}
 
-      - : `string` ou `object`. C'est soit un chemin relatif vers un fichier d'icône, soit un objet dictionnaire.
+      - : `stwing` ou `object`. UwU c'est soit un chemin wewatif vews un f-fichiew d'icône, XD s-soit un objet d-dictionnaiwe. (✿oωo)
 
-        Utilisez un objet de dictionnaire pour spécifier plusieurs fichiers d'icônes de différentes tailles, de sorte que l'icône ne doit pas être mise à l'échelle pour un périphérique avec une densité de pixels différente. Si `path` est un dictionnaire, la valeur de chaque propriété est un chemin relatif, et son nom est sa taille, comme ceci :
+        utiwisez u-un objet de dictionnaiwe p-pouw spécifiew pwusieuws f-fichiews d'icônes de difféwentes taiwwes, :3 de sowte que w'icône nye doit pas êtwe m-mise à w-w'échewwe pouw un péwiphéwique avec une densité d-de pixews difféwente. (///ˬ///✿) s-si `path` est un dictionnaiwe, nyaa~~ wa vaweuw de chaque pwopwiété e-est un chemin wewatif, >w< et son nyom est sa taiwwe, comme ceci :
 
         ```json
         {
-          "16": "path/to/image16.jpg",
+          "16": "path/to/image16.jpg", -.-
           "32": "path/to/image32.jpg"
         }
         ```
 
-        Le navigateur choisira l'image à utiliser en fonction de la densité de pixels de l'écran. Voir [Choosir les tailles d'icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#choosing_icon_sizes) pour plus d'informations à ce sujet.
+        w-we nyavigateuw choisiwa w'image à utiwisew en fonction d-de wa densité d-de pixews de w'écwan. (✿oωo) voiw [choosiw wes taiwwes d'icônes](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action#choosing_icon_sizes) p-pouw p-pwus d'infowmations à ce sujet.
 
-        si `path` est une chaîne vide, le navigateur utilisera l'icône par défaut.
+        si `path` est une chaîne v-vide, (˘ω˘) we navigateuw utiwisewa w-w'icône paw défaut. rawr
 
-        si `path` n'est pas vide mais ne pointe pas vers un fichier d'icône, l'icône est masquée.
+        si `path` ny'est pas vide mais n-nye pointe pas vews un fichiew d-d'icône, w'icône e-est masquée. OwO
 
-        si `path` est `null`, et `tabId` a été spécifié, et que l'onglet spécifié possède un jeu d'icônes spécifique à l'onglet: l'icône spécifique à l'onglet est réinitialisée à l'icône globale (si une icône globale est définie) ou à l'icône manifeste.
+        si `path` e-est `nuww`, ^•ﻌ•^ et `tabid` a été s-spécifié, UwU et q-que w'ongwet spécifié p-possède un jeu d'icônes s-spécifique à w-w'ongwet: w'icône spécifique à w'ongwet est w-wéinitiawisée à w-w'icône gwobawe (si u-une icône gwobawe est définie) ou à w-w'icône manifeste. (˘ω˘)
 
-        si `path` est `null`, et `tabId` a été omis, et qu'il y avait un jeu d'icônes global, il sera réinitialisé à l'icône de manifest.
+        si `path` e-est `nuww`, (///ˬ///✿) e-et `tabid` a été omis, σωσ et qu'iw y avait un jeu d'icônes gwobaw, /(^•ω•^) i-iw sewa wéinitiawisé à w-w'icône de manifest. 😳
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Définit l'icône uniquement pour l'onglet donné.
-    - `windowId` {{optional_inline}}
-      - : `integer`. Définit l'icône uniquement pour la fenêtre donnée.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. 😳 d-définit w-w'icône uniquement pouw w-w'ongwet donné. (⑅˘꒳˘)
+    - `windowid` {{optionaw_inwine}}
+      - : `integew`. 😳😳😳 définit w'icône uniquement pouw wa fenêtwe donnée. 😳
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous deux spécifiés, la fonction échoue et l'icône n'est pas définie.
-- SI `windowId` et `tabId` sont tous deux omis, l'icône est définie globalement.
+- si `windowid` e-et `tabid` sont tous d-deux spécifiés, XD wa fonction échoue e-et w'icône ny'est pas définie. mya
+- s-si `windowid` et `tabid` s-sont tous deux o-omis, ^•ﻌ•^ w'icône e-est définie gwobawement. ʘwʘ
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument une fois l'icône définie.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie sans awgument une fois w'icône définie. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Le code ci-dessous bascule l'icône de la barre latérale de l'onglet actif lorsque l'utilisateur clique sur une action du navigateur :
+we code ci-dessous b-bascuwe w-w'icône de wa b-bawwe watéwawe de w'ongwet actif w-wowsque w'utiwisateuw cwique suw une action du navigateuw :
 
 ```js
-var on = false;
+v-vaw on = fawse;
 
-function toggle(tab) {
+f-function toggwe(tab) {
   if (on) {
-    browser.sidebarAction.setIcon({
-      path: "off.svg",
-      tabId: tab.id,
+    bwowsew.sidebawaction.seticon({
+      p-path: "off.svg", mya
+      tabid: tab.id, o.O
     });
-    on = false;
-  } else {
-    browser.sidebarAction.setIcon({
-      path: "on.svg",
-      tabId: tab.id,
+    o-on = fawse;
+  } e-ewse {
+    bwowsew.sidebawaction.seticon({
+      p-path: "on.svg", (✿oωo)
+      t-tabid: tab.id, :3
     });
-    on = true;
+    on = twue;
   }
 }
 
-browser.browserAction.onClicked.addListener(toggle);
+bwowsew.bwowsewaction.oncwicked.addwistenew(toggwe);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+> c-cette api est b-basée suw w'api o-opewa [`chwome.sidebawaction`](https://dev.opewa.com/extensions/sidebaw-action-api/). 😳

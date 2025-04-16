@@ -1,89 +1,89 @@
 ---
-title: bookmarks.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/remove
+titwe: bookmawks.wemove()
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode **`bookmarks.remove()`** supprime un seul signet ou un dossier de signets vide.
+w-wa m-méthode **`bookmawks.wemove()`** s-suppwime un seuw s-signet ou un d-dossiew de signets v-vide. nyaa~~
 
-> [!WARNING]
-> Si votre extension tente de supprimer un signet du nœud racine de l'arborescence de signets, l'appel déclenche une erreur avec le message suivant: "_La racine du signet ne peut pas être modifiée_" et le signet ne sera pas supprimé.
+> [!wawning]
+> s-si votwe extension tente de suppwimew un signet du nyœud wacine de w'awbowescence d-de signets, 😳 w'appew décwenche une ewweuw a-avec we message suivant: "_wa w-wacine du signet nye peut pas êtwe modifiée_" et we signet n-ne sewa pas suppwimé.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une f-fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removingBookmark = browser.bookmarks.remove(
-  id, // string
+vaw wemovingbookmawk = bwowsew.bookmawks.wemove(
+  i-id, nyaa~~ // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID du signet ou du dossier vide à supprimer.
+  - : un {{jsxwef("stwing")}} spécifiant w'id du signet ou du d-dossiew vide à suppwimew. OwO
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accomplie sans arguments..Si le nœud correspondant au paramètre `id` ne peut être trouvé ou s'il s'agit d'un dossier non vide, la promesse est rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui s-sewa accompwie sans awguments..si we nyœud cowwespondant a-au pawamètwe `id` nye peut êtwe twouvé ou s'iw s'agit d-d'un dossiew nyon vide, rawr x3 wa pwomesse est wejetée avec un message d'ewweuw. XD
 
-## Exemples
+## exempwes
 
 ```js
-function onRemoved() {
-  console.log("Removed!");
+f-function onwemoved() {
+  consowe.wog("wemoved!");
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+f-function o-onwejected(ewwow) {
+  c-consowe.wog(`an ewwow: ${ewwow}`);
 }
 
-var bookmarkId = "abcdefghijkl";
+vaw bookmawkid = "abcdefghijkw";
 
-var removingBookmark = browser.bookmarks.remove(bookmarkId);
-removingBookmark.then(onRemoved, onRejected);
+v-vaw wemovingbookmawk = b-bwowsew.bookmawks.wemove(bookmawkid);
+wemovingbookmawk.then(onwemoved, σωσ o-onwejected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> c-cette api est basée suw w'api c-chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). (U ᵕ U❁) cette documentation pwovient d-de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) dans w-we code chwomium. (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. ( ͡o ω ͡o ) aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, >w< with ow without
+// modification, 😳😳😳 awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must w-wetain the above c-copywight
+// nyotice, OwO t-this wist o-of conditions and the fowwowing discwaimew. 😳
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// c-copywight nyotice, 😳😳😳 this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (˘ω˘)
+//    * nyeithew the nyame o-of googwe inc. ʘwʘ nyow the nyames of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, o.O i-incwuding, >w< but nyot
+// w-wimited to, the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. 😳 i-in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, 🥺 indiwect, incidentaw, rawr x3
+// speciaw, o.O exempwawy, o-ow consequentiaw d-damages (incwuding, rawr b-but nyot
+// wimited to, ʘwʘ pwocuwement o-of substitute g-goods ow sewvices; woss o-of use, 😳😳😳
+// data, ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, ^^;; w-whethew in contwact, o.O stwict wiabiwity, (///ˬ///✿) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, σωσ even if advised of the possibiwity of such damage. nyaa~~
 -->

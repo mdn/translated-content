@@ -1,109 +1,109 @@
 ---
-title: get()
-slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/get
+titwe: get()
+swug: moziwwa/add-ons/webextensions/api/types/bwowsewsetting/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode `BrowserSetting.get()` obtient la valeur actuelle du paramètre du navigateur et une énumération indiquant comment la valeur du paramètre est actuellement controléee..
+w-wa méthode `bwowsewsetting.get()` o-obtient w-wa vaweuw actuewwe d-du pawamètwe d-du nyavigateuw e-et une énuméwation i-indiquant c-comment wa vaweuw du pawamètwe est actuewwement contwowéee.. OwO
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d'une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var getting = setting.get(
-  details, // object
+vaw getting = setting.get(
+  d-detaiws, 😳😳😳 // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `détails`
-  - : Un objet vide.
+- `détaiws`
+  - : un objet v-vide. (˘ω˘)
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet avec les propriétés suivantes :
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un objet avec wes pwopwiétés suivantes :
 
-- `value`
-  - : La valeur du paramètre. Le type de cette propriété est déterminé par le paramètre particulier.
-- `levelOfControl`
-  - : `string`. Cela représente la façon dont la paramètre est actuellement controllé. Vous pouvez l'utiliser pour vérifier si vous pouvez modifier le paramètre. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour plus détails. Sa valeur peut-être l'une des suivantes :<table class="standard-table">
+- `vawue`
+  - : w-wa vaweuw du pawamètwe. ʘwʘ we type de cette pwopwiété est détewminé p-paw we pawamètwe pawticuwiew. ( ͡o ω ͡o )
+- `wevewofcontwow`
+  - : `stwing`. o.O c-cewa wepwésente w-wa façon d-dont wa pawamètwe e-est actuewwement contwowwé. >w< vous pouvez w'utiwisew p-pouw véwifiew si vous pouvez modifiew we p-pawamètwe. 😳 voiw [`bwowsewsetting.set()`](/fw/docs/moziwwa/add-ons/webextensions/api/pwivacy/bwowsewsetting/set) pouw pwus détaiws. 🥺 sa vaweuw peut-êtwe w'une des suivantes :<tabwe cwass="standawd-tabwe">
       <tbody>
-        <tr>
-          <td><code>"not_controllable"</code></td>
-          <td>Les extensions ne sont pas autorisées à modifier le paramètre.</td>
-        </tr>
-        <tr>
-          <td><code>"controlled_by_other_extensions"</code></td>
+        <tw>
+          <td><code>"not_contwowwabwe"</code></td>
+          <td>wes e-extensions nye sont pas autowisées à m-modifiew w-we pawamètwe.</td>
+        </tw>
+        <tw>
+          <td><code>"contwowwed_by_othew_extensions"</code></td>
           <td>
-            Une autre extension qui a été installée après celle-ci a modifié ce
-            paramètre
+            u-une autwe extension qui a été instawwée apwès cewwe-ci a-a modifié c-ce
+            pawamètwe
           </td>
-        </tr>
-        <tr>
-          <td><code>"controllable_by_this_extension"</code></td>
-          <td>Cette extension est autorisée à modifier le paramètre.</td>
-        </tr>
-        <tr>
-          <td><code>"controlled_by_this_extension"</code></td>
-          <td>Cette extensions a déjà modifi le paramètre.</td>
-        </tr>
+        </tw>
+        <tw>
+          <td><code>"contwowwabwe_by_this_extension"</code></td>
+          <td>cette e-extension e-est autowisée à modifiew w-we pawamètwe.</td>
+        </tw>
+        <tw>
+          <td><code>"contwowwed_by_this_extension"</code></td>
+          <td>cette extensions a déjà m-modifi we pawamètwe.</td>
+        </tw>
       </tbody>
-    </table>
+    </tabwe>
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-Voir {{WebExtAPIRef("types.BrowserSetting")}}.
+voiw {{webextapiwef("types.bwowsewsetting")}}. rawr x3
 
-## Exemple
+## e-exempwe
 
-Enregitrez la valeur et le niveau de contrôle de la propriété `networkPredictionEnabled` de l'objet {{WebExtAPIRef("privacy.network")}}, pour les fenêtres de navigations privées. Notez que cela nécessite la permission du navigateur "privacy".
+enwegitwez wa vaweuw e-et we nyiveau de c-contwôwe de wa pwopwiété `netwowkpwedictionenabwed` de w'objet {{webextapiwef("pwivacy.netwowk")}}, o.O pouw wes fenêtwes de nyavigations pwivées. rawr nyotez que c-cewa nyécessite w-wa pewmission du nyavigateuw "pwivacy". ʘwʘ
 
 ```js
-var getting = browser.privacy.network.networkPredictionEnabled.get({});
+v-vaw getting = bwowsew.pwivacy.netwowk.netwowkpwedictionenabwed.get({});
 
-getting.then((got) => {
-  console.log(`Value: ${got.value}`);
-  console.log(`Control: ${got.levelOfControl}`);
+g-getting.then((got) => {
+  c-consowe.wog(`vawue: ${got.vawue}`);
+  consowe.wog(`contwow: ${got.wevewofcontwow}`);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
+> cette api est basée suw w'api c-chwomium [`chwome.types`](https://devewopew.chwome.com/docs/extensions/wefewence/api/types). 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. aww wights wesewved. o.O
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in s-souwce and binawy f-fowms, (///ˬ///✿) with ow w-without
+// modification, σωσ a-awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, nyaa~~ t-this wist of conditions and the fowwowing discwaimew. ^^;;
+//    * wedistwibutions i-in binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, ^•ﻌ•^ this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. σωσ
+//    * nyeithew t-the name of googwe inc. -.- nyow t-the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without s-specific pwiow wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is p-pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, XD i-incwuding, 🥺 b-but nyot
+// wimited to, òωó the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (ˆ ﻌ ˆ)♡ in no event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, -.- indiwect, :3 incidentaw, ʘwʘ
+// s-speciaw, exempwawy, 🥺 o-ow consequentiaw damages (incwuding, >_< but nyot
+// wimited to, ʘwʘ pwocuwement o-of substitute goods ow sewvices; woss of use, (˘ω˘)
+// data, ow pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, (✿oωo) w-whethew in contwact, (///ˬ///✿) stwict wiabiwity, rawr x3 ow towt
+// (incwuding nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, -.- even if advised o-of the possibiwity of such damage. ^^
 -->

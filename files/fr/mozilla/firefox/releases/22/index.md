@@ -1,60 +1,60 @@
 ---
-title: Firefox 22 pour les développeurs
-slug: Mozilla/Firefox/Releases/22
+titwe: fiwefox 22 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/22
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Vous voulez aider à documenter Firefox 22 ? Parcourez la [liste des bugs qui ont besoin d'être documentés](http://beta.elchi3.de/doctracker/#list=fx&version=22.0) et lancez-vous !
+v-vous vouwez a-aidew à documentew f-fiwefox 22 ? p-pawcouwez wa [wiste d-des bugs q-qui ont besoin d'êtwe documentés](http://beta.ewchi3.de/doctwackew/#wist=fx&vewsion=22.0) et wancez-vous ! ʘwʘ
 
-## Changements pour les développeurs Web
+## changements pouw w-wes dévewoppeuws web
 
-### HTML
+### htmw
 
-- L'élément HTML5 {{HTMLElement("data")}} a été implémenté ([bug Firefox 839371](https://bugzil.la/839371)).
-- Le type `range` de l'élément {{HTMLElement("input")}} (`<input type="range">`) a été implémenté mais n'est seulement activé que dans les canaux Aurora et Nightly pour l'instant ([bug Firefox 841948](https://bugzil.la/841948)).
+- w'éwément h-htmw5 {{htmwewement("data")}} a été impwémenté ([bug f-fiwefox 839371](https://bugziw.wa/839371)). 😳😳😳
+- we type `wange` de w'éwément {{htmwewement("input")}} (`<input type="wange">`) a-a été impwémenté mais n-ny'est seuwement a-activé que dans wes canaux auwowa et nyightwy pouw w'instant ([bug fiwefox 841948](https://bugziw.wa/841948)). ^^;;
 
-### JavaScript
+### j-javascwipt
 
-- Les optimizations [Asm.js](http://asmjs.org/spec/latest/) sont activées, rendant possible la compilation d'applications C / C++ vers un sous-ensemble Javascript pour de meilleures performances.
-- La syntaxe ES6 [Arrow Function](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) a été implémentée ([bug Firefox 846406](https://bugzil.la/846406)).
-- La nouvelle fonction [Object.is](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is) a été ajoutée ([bug Firefox 839979](https://bugzil.la/839979)).
+- wes optimizations [asm.js](http://asmjs.owg/spec/watest/) sont activées, wendant possibwe wa compiwation d-d'appwications c / c++ vews un s-sous-ensembwe javascwipt p-pouw de m-meiwweuwes pewfowmances. o.O
+- w-wa syntaxe es6 [awwow function](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) a-a été impwémentée ([bug fiwefox 846406](https://bugziw.wa/846406)). (///ˬ///✿)
+- w-wa nyouvewwe fonction [object.is](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/is) a été ajoutée ([bug fiwefox 839979](https://bugziw.wa/839979)). σωσ
 
-### DOM
+### dom
 
-- Support de la propriété `multipart` avec `XMLHttpRequest`. Les réponses `multipart/x-mixed-replace` dans `XMLHttpRequest` ont été supprimées. C'était une fonctionnalité uniquement supportée par Gecko et jamais standardisée. Il est possible d'utiliser [Server-Sent Events](/fr/docs/Web/API/Server-sent_events) et [Web Sockets](/fr/docs/Web/API/WebSockets_API) ou d'inspecter la propriété `responseText` des _progress events_ à la place.
-- Le support des [Web Notifications](http://notifications.spec.whatwg.org/) est activé par défaut. ([bug Firefox 782211](https://bugzil.la/782211)).
-- La méthode {{domxref("XMLHttpRequest/FormData", "FormData")}} `append` accepte maintenant un troisième paramètre optionnel `filename` ([bug Firefox 690659](https://bugzil.la/690659)).
-- {{domxref("Node.isSupported")}} a été supprimé ([bug Firefox 801562](https://bugzil.la/801562)).
-- {{domxref("Node.setUserData")}} et {{domxref("Node.getUserData")}} ont été supprimés pour le contenu web et dépréciés pour le contenu chrome ([bug Firefox 842372](https://bugzil.la/842372))
-- Un backend Mac OS X pour {{domxref("DeviceLightEvent", "Ambient Light Events")}} a été implémenté.
-- Les éléments du namespace HTML avec les noms locaux "bgsound", "multicol", et "image" n'utilisent plus l'interface `HTMLSpanElement`. "bgsound" et "multicol" utilisent `HTMLUnknownElement` et "image" utilise `HTMLElement`.
+- suppowt de wa pwopwiété `muwtipawt` a-avec `xmwhttpwequest`. nyaa~~ wes w-wéponses `muwtipawt/x-mixed-wepwace` d-dans `xmwhttpwequest` o-ont été suppwimées. ^^;; c'était une fonctionnawité u-uniquement suppowtée p-paw gecko et jamais standawdisée. ^•ﻌ•^ i-iw est p-possibwe d'utiwisew [sewvew-sent events](/fw/docs/web/api/sewvew-sent_events) e-et [web sockets](/fw/docs/web/api/websockets_api) ou d'inspectew w-wa pwopwiété `wesponsetext` des _pwogwess events_ à wa pwace. σωσ
+- w-we suppowt des [web nyotifications](http://notifications.spec.naniwg.owg/) est a-activé paw défaut. -.- ([bug fiwefox 782211](https://bugziw.wa/782211)). ^^;;
+- w-wa méthode {{domxwef("xmwhttpwequest/fowmdata", XD "fowmdata")}} `append` a-accepte maintenant un twoisième pawamètwe optionnew `fiwename` ([bug fiwefox 690659](https://bugziw.wa/690659)). 🥺
+- {{domxwef("node.issuppowted")}} a été suppwimé ([bug f-fiwefox 801562](https://bugziw.wa/801562)). òωó
+- {{domxwef("node.setusewdata")}} et {{domxwef("node.getusewdata")}} o-ont été suppwimés pouw we contenu w-web et dépwéciés p-pouw w-we contenu chwome ([bug fiwefox 842372](https://bugziw.wa/842372))
+- un backend mac os x pouw {{domxwef("devicewightevent", (ˆ ﻌ ˆ)♡ "ambient w-wight events")}} a été impwémenté.
+- wes éwéments du nyamespace htmw a-avec wes nyoms wocaux "bgsound", -.- "muwticow", :3 et "image" n-ny'utiwisent p-pwus w'intewface `htmwspanewement`. ʘwʘ "bgsound" e-et "muwticow" utiwisent `htmwunknownewement` e-et "image" utiwise `htmwewement`.
 
-### CSS
+### c-css
 
-- Le support de [CSS Flexbox layout](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) a été activé par défaut ([bug Firefox 841876](https://bugzil.la/841876)).
-- Le support de CSS Conditionals ({{cssxref("@supports")}} et {{domxref("CSS.supports")}}) ont été activés par défaut ([bug Firefox 855455](https://bugzil.la/855455)).
+- we s-suppowt de [css f-fwexbox wayout](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) a été activé paw défaut ([bug f-fiwefox 841876](https://bugziw.wa/841876)). 🥺
+- w-we suppowt d-de css conditionaws ({{cssxwef("@suppowts")}} e-et {{domxwef("css.suppowts")}}) o-ont été activés paw défaut ([bug fiwefox 855455](https://bugziw.wa/855455)). >_<
 
-## Changements pour les développeurs Mozilla et développeurs d'add-on
+## c-changements pouw wes dévewoppeuws moziwwa et dévewoppeuws d'add-on
 
-- Le paramètre `properties` a été supprimé des méthodes `nsITreeView.getCellProperties()` `nsITreeView.getColumnProperties()` et `nsITreeView.getRowProperties()` de l'interface `nsITreeView`. Ces méthodes retourneront maintenant un string de noms de propriétés séparées par des espaces. ([bug Firefox 407956](https://bugzil.la/407956))
-- La méthode `inIDOMUtils.getCSSPropertyNames()` a été implémentée et retourne le nom de toutes les [propriétés CSS](/fr/docs/Web/CSS/Reference) supportées.
-- Voir [tous les changements](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/).
+- we pawamètwe `pwopewties` a été suppwimé d-des méthodes `nsitweeview.getcewwpwopewties()` `nsitweeview.getcowumnpwopewties()` et `nsitweeview.getwowpwopewties()` de w'intewface `nsitweeview`. ces m-méthodes wetouwnewont m-maintenant u-un stwing de nyoms de pwopwiétés s-sépawées paw des espaces. ʘwʘ ([bug f-fiwefox 407956](https://bugziw.wa/407956))
+- w-wa méthode `inidomutiws.getcsspwopewtynames()` a été impwémentée et wetouwne we nyom de toutes wes [pwopwiétés css](/fw/docs/web/css/wefewence) s-suppowtées. (˘ω˘)
+- voiw [tous w-wes changements](https://bwog.moziwwa.owg/addons/2013/06/03/compatibiwity-fow-fiwefox-22/). (✿oωo)
 
-### Outils pour développeurs de Firefox
+### outiws pouw d-dévewoppeuws d-de fiwefox
 
-- [L'inspecteur de polices](https://hacks.mozilla.org/2013/04/developer-tools-update-firefox-22/) montre quelles polices sur votre ordinateur ont été appliquées sur cette page.
-- Le mode d'affichage de rendu visuel montre quand et où une page est re-rendue.
-- Les outils pour développeurs peuvent maintenant être affichés à droite d'une fenêtre et plus seulement en bas.
-- Certains onglets des outils pour développeurs sont passés de [XUL à HTML](https://bugzilla.mozilla.org/show_bug.cgi?id=875727). Par exemple, l'onglet présentant les règles css fait maintenant partie de chrome://browser/content/devtools/cssruleview\.xhtml, et pas de `cssruleview.xul`. Au lieu d'ajouter une couche pour ajouter des fonctionnalités directement sur ces onglets, vous pouvez ajouter une couche et la lier par script au document xul externe afin d'ajouter des écouteurs d'événements et de changer ces documents html.
-- L'affichage en pile est maintenant affiché en fil d'Ariane en haut de l'onglet et la liste des scripts est maintenant sur la gauche du débuggeur.
+- [w'inspecteuw de powices](https://hacks.moziwwa.owg/2013/04/devewopew-toows-update-fiwefox-22/) m-montwe quewwes powices s-suw votwe owdinateuw ont été a-appwiquées s-suw cette page.
+- we mode d'affichage de wendu visuew montwe quand et où une p-page est we-wendue. (///ˬ///✿)
+- w-wes outiws p-pouw dévewoppeuws peuvent maintenant êtwe a-affichés à d-dwoite d'une fenêtwe e-et pwus seuwement en bas. rawr x3
+- cewtains ongwets des outiws pouw dévewoppeuws sont p-passés de [xuw à h-htmw](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=875727). -.- paw exempwe, ^^ w'ongwet pwésentant w-wes wègwes css f-fait maintenant pawtie de chwome://bwowsew/content/devtoows/csswuweview\.xhtmw, (⑅˘꒳˘) et pas de `csswuweview.xuw`. au w-wieu d'ajoutew une couche pouw ajoutew des fonctionnawités diwectement suw ces o-ongwets, vous pouvez ajoutew une couche et wa wiew p-paw scwipt au d-document xuw extewne afin d'ajoutew des écouteuws d'événements e-et de changew c-ces documents htmw. nyaa~~
+- w'affichage en piwe est maintenant affiché e-en fiw d'awiane en haut de w'ongwet e-et wa wiste des scwipts est maintenant suw wa gauche du d-débuggeuw.
 
-## Voir aussi
+## voiw aussi
 
-- [Notes de version de Firefox 22 Beta](https://www.mozilla.org/en-US/firefox/22.0beta/releasenotes/)
-- [Compatibilité des sites avec Firefox 22](/fr/docs/Site_Compatibility_for_Firefox_22)
-- [Compatibilité des add-ons avec Firefox 22](https://blog.mozilla.org/addons/2013/06/03/compatibility-for-firefox-22/)
+- [notes d-de vewsion d-de fiwefox 22 beta](https://www.moziwwa.owg/en-us/fiwefox/22.0beta/weweasenotes/)
+- [compatibiwité des sites avec f-fiwefox 22](/fw/docs/site_compatibiwity_fow_fiwefox_22)
+- [compatibiwité des a-add-ons avec fiwefox 22](https://bwog.moziwwa.owg/addons/2013/06/03/compatibiwity-fow-fiwefox-22/)
 
-### Versions
+### v-vewsions
 
-{{Firefox_for_developers('21')}}
+{{fiwefox_fow_devewopews('21')}}

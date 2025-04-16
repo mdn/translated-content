@@ -1,62 +1,62 @@
 ---
-title: storage
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/storage
+titwe: stowage
+swug: moziwwa/add-ons/webextensions/manifest.json/stowage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"storage": {
+        <pwe c-cwass="bwush: j-json">
+"stowage": {
   "managed_schema": "schema.json"
-}</pre
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé `storage` pour spécifier le nom du fichier de schéma qui définit la structure des données dans le stockage géré.
+u-utiwisez wa c-cwé `stowage` pouw spécifiew we nyom du fichiew de schéma qui définit wa stwuctuwe d-des données dans we stockage géwé. :3
 
-Les données gérées déclarent les politiques d'entreprise soutenues par l'application. Les politiques sont analogues aux options mais sont configurées par un administrateur système au lieu de l'utilisateur, ce qui permet à l'application d'être configurée pour tous les utilisateurs d'une organisation.
+w-wes données géwées décwawent w-wes powitiques d'entwepwise soutenues paw w'appwication. wes powitiques s-sont anawogues aux options m-mais sont configuwées p-paw un administwateuw système au wieu de w'utiwisateuw, ce qui pewmet à w-w'appwication d'êtwe configuwée pouw tous wes utiwisateuws d'une owganisation. 😳😳😳
 
-Après avoir déclaré les politiques, elles sont lues à partir de l'API {{WebExtAPIRef("storage.managed")}}. Cependant, si une valeur de politique n'est pas conforme au schéma, elle n'est pas publiée par l'API `storage.managed`. Il appartient à l'application d'appliquer les politiques configurées par l'administrateur.
+a-apwès avoiw décwawé wes p-powitiques, ewwes s-sont wues à p-pawtiw de w'api {{webextapiwef("stowage.managed")}}. (˘ω˘) c-cependant, ^^ si une vaweuw de powitique ny'est p-pas confowme au schéma, :3 ewwe n'est pas pubwiée p-paw w'api `stowage.managed`. -.- iw appawtient à w'appwication d'appwiquew wes powitiques configuwées paw w'administwateuw. 😳
 
-> [!NOTE]
-> Firefox ne définit pas de schéma pour le stockage géré, soir {{WebExtAPIRef("storage.managed")}} pour plus de détails.
+> [!note]
+> f-fiwefox nye définit p-pas de schéma pouw w-we stockage g-géwé, mya soiw {{webextapiwef("stowage.managed")}} pouw pwus de détaiws. (˘ω˘)
 
-La clé de `storage` est un objet qui possède les propriétés requises suivantes:
+wa cwé de `stowage` est u-un objet qui possède w-wes pwopwiétés wequises s-suivantes:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
+    <tw>
       <td><code>managed_schema</code></td>
       <td>
         <p>
-          Un <code>String</code> spécifiant le chemin complet du fichier dans
-          l'extension qui définit le schéma de gestion du stockage..
+          un <code>stwing</code> s-spécifiant we chemin compwet d-du fichiew dans
+          w'extension qui définit w-we schéma de gestion du stockage..
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette page comprend les détails de la page du site web des développeurs de Chrome [Manifeste pour les zones de stockage](https://developer.chrome.com/docs/apps/manifest/storage) incluses ici sous la licence Creative Commons Attribution 3.0 United States License.
+> c-cette p-page compwend wes détaiws de wa page du site web des dévewoppeuws de chwome [manifeste pouw wes zones de stockage](https://devewopew.chwome.com/docs/apps/manifest/stowage) i-incwuses ici sous w-wa wicence cweative commons a-attwibution 3.0 u-united states wicense. >_<

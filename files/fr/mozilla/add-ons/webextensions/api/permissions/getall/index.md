@@ -1,48 +1,48 @@
 ---
-title: permissions.getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/permissions/getAll
+titwe: pewmissions.getaww()
+swug: moziwwa/add-ons/webextensions/api/pewmissions/getaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Récupère un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement acccordées à l'extension.
+w-wécupèwe un objet {{webextapiwef("pewmissions.pewmissions")}} c-contenant toutes w-wes pewmissions a-actuewwement acccowdées à w-w'extension. (⑅˘꒳˘)
 
-Il s'agit d'une fonction asynchrone qui retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d-d'une fonction a-asynchwone qui wetouwne une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingAll = browser.permissions.getAll();
+vaw gettingaww = bwowsew.pewmissions.getaww();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-None.
+nyone. rawr x3
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef("permissions.Permissions")}} contenant toutes les permissions actuellement accordées à l'extensions. Cela inclut toutes les permissions que l'extension à répertoriées dans la clé de [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) , et toutes les permissions répertoriées dans [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) que l'extension a été accordée en appelant {{WebExtAPIRef("permissions.request()")}}.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un o-objet {{webextapiwef("pewmissions.pewmissions")}} contenant toutes wes pewmissions actuewwement a-accowdées à w'extensions. (U ﹏ U) cewa i-incwut toutes w-wes pewmissions que w'extension à wépewtowiées dans wa cwé de [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) , (U ﹏ U) et toutes w-wes pewmissions wépewtowiées dans [`optionaw_pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions) que w'extension a été accowdée en appewant {{webextapiwef("pewmissions.wequest()")}}. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-// Extension permissions are:
-// "webRequest", "tabs", "*://*.mozilla.org/*"
+// e-extension p-pewmissions awe:
+// "webwequest", òωó "tabs", ʘwʘ "*://*.moziwwa.owg/*"
 
-browser.permissions.getAll().then((result) => {
-  console.log(result.permissions); // [ "webRequest", "tabs" ]
-  console.log(result.origins); // [ "*://*.mozilla.org/*" ]
+b-bwowsew.pewmissions.getaww().then((wesuwt) => {
+  consowe.wog(wesuwt.pewmissions); // [ "webwequest", /(^•ω•^) "tabs" ]
+  consowe.wog(wesuwt.owigins); // [ "*://*.moziwwa.owg/*" ]
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
+> c-cette api est basée suw w'api chwomium [`chwome.pewmissions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions). ʘwʘ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa w-wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. σωσ

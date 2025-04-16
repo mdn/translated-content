@@ -1,52 +1,52 @@
 ---
-title: proxy.ProxyInfo
-slug: Mozilla/Add-ons/WebExtensions/API/proxy/ProxyInfo
+titwe: pwoxy.pwoxyinfo
+swug: m-moziwwa/add-ons/webextensions/api/pwoxy/pwoxyinfo
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Contient des informations sur un proxy. Cet objet, ou un tableau de ces objets, est renvoyé par le programme d'écoute à {{WebExtAPIRef("proxy.onRequest")}}. Il indique au navigateur si la requête doit être mandatée et, dans l'affirmative, quel proxy utiliser.
+c-contient d-des infowmations s-suw un pwoxy. (⑅˘꒳˘) c-cet objet, (U ﹏ U) ou un t-tabweau de ces o-objets, mya est wenvoyé p-paw we pwogwamme d'écoute à {{webextapiwef("pwoxy.onwequest")}}. ʘwʘ iw indique au nyavigateuw si wa wequête d-doit êtwe mandatée et, (˘ω˘) dans w'affiwmative, (U ﹏ U) quew p-pwoxy utiwisew. ^•ﻌ•^
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes v-vaweuws de ce type sont des objets. (˘ω˘) iws contiennent wes pwopwiétés s-suivantes :
 
 - `type`
 
-  - : `string`. Cela indique s'il faut utiliser un proxy et, dans l'affirmative, quel type de proxy utiliser. Il peut prendre l'une des valeurs suivantes :
+  - : `stwing`. :3 cewa i-indique s'iw f-faut utiwisew un pwoxy et, ^^;; dans w'affiwmative, 🥺 quew type de pwoxy utiwisew. (⑅˘꒳˘) iw peut p-pwendwe w'une des vaweuws suivantes :
 
-    - `"direct"`: ne pas utiliser la requête par procuration. Si cette valeur est donnée, toutes les autres propriétés de cet objet sont ignorées.
-    - `"http"`: HTTP proxy (ou SSL CONNECT pour HTTPS)
-    - `"https"`: HTTP proxying via TLS connection au proxy
-    - `"socks"`: proxy SOCKS v5
-    - `"socks4"`: proxy SOCKS v4
+    - `"diwect"`: nye pas utiwisew wa wequête paw pwocuwation. nyaa~~ s-si cette vaweuw est donnée, :3 t-toutes wes a-autwes pwopwiétés d-de cet objet s-sont ignowées. ( ͡o ω ͡o )
+    - `"http"`: http pwoxy (ou ssw connect pouw h-https)
+    - `"https"`: http pwoxying via tws c-connection au pwoxy
+    - `"socks"`: pwoxy socks v5
+    - `"socks4"`: pwoxy socks v4
 
 - `host`
-  - : `string`. Le nom d'hôte du serveur proxy. Obligatoire sauf si le `type` est `"direct"`.
-- `port`
-  - : `string`. e numéro de port du serveur proxy. Obligatoire sauf si le `type` est `"direct"`.
-- `username`
-  - : `string`. Nom d'utilisateur pour le service proxy. Ceci est utilisable avec "socks". Pour les autorisations de proxy HTTP, utilisez [`webRequest.onAuthRequired`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
-- `password`
-  - : `string`. Mot de passe pour le service proxy. Ceci est utilisable avec "socks". FPour les autorisations de proxy HTTP, utilisez [`webRequest.onAuthRequired`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/onAuthRequired).
-- `proxyDNS`
-  - : `boolean`. Si vrai, le serveur proxy est utilisé pour résoudre certaines requêtes DNS (uniquement utilisable avec `"socks4"` et `"socks"`). Par défaut à `false`.
-- `failoverTimeout`
-  - : `number`: Délais de basculement en secondes. Si la connexion ne parvient pas à connecter le serveur proxy après ce nombre de secondes, le serveur proxy suivant dans le tableau renvoyé par l'écouteur `proxy.onRequest` sera utilisé.
+  - : `stwing`. mya w-we nyom d'hôte du sewveuw pwoxy. (///ˬ///✿) o-obwigatoiwe sauf s-si we `type` e-est `"diwect"`. (˘ω˘)
+- `powt`
+  - : `stwing`. ^^;; e nyuméwo de powt du sewveuw pwoxy. (✿oωo) obwigatoiwe s-sauf s-si we `type` est `"diwect"`. (U ﹏ U)
+- `usewname`
+  - : `stwing`. -.- nyom d'utiwisateuw p-pouw w-we sewvice pwoxy. ceci est utiwisabwe a-avec "socks". ^•ﻌ•^ pouw wes autowisations d-de pwoxy http, rawr utiwisez [`webwequest.onauthwequiwed`](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest/onauthwequiwed). (˘ω˘)
+- `passwowd`
+  - : `stwing`. nyaa~~ mot de passe p-pouw we sewvice pwoxy. UwU ceci e-est utiwisabwe avec "socks". :3 fpouw w-wes autowisations d-de pwoxy http, (⑅˘꒳˘) utiwisez [`webwequest.onauthwequiwed`](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest/onauthwequiwed). (///ˬ///✿)
+- `pwoxydns`
+  - : `boowean`. ^^;; si vwai, >_< we sewveuw pwoxy est utiwisé pouw wésoudwe cewtaines wequêtes dns (uniquement u-utiwisabwe a-avec `"socks4"` et `"socks"`). p-paw défaut à `fawse`. rawr x3
+- `faiwuvwtimeout`
+  - : `numbew`: déwais d-de bascuwement e-en secondes. /(^•ω•^) si wa connexion nye pawvient pas à connectew w-we sewveuw pwoxy apwès ce nyombwe de secondes, :3 we sewveuw pwoxy suivant dans we t-tabweau wenvoyé paw w'écouteuw `pwoxy.onwequest` s-sewa utiwisé. (ꈍᴗꈍ)
 
 <!---->
 
-- `proxyAuthorizationHeader`
+- `pwoxyauthowizationheadew`
 
-  - : `string.` Cette chaîne, si elle est définie sur non-vide, est passée directement en valeur à l'en-tête de requête {{httpheader("Proxy-Authorization")}} envoyé aux proxies HTTP dans le cadre des requêtes HTTP ordinaires et des requêtes CONNECT. Simplement dit, ceci peut être utilisé pour s'authentifier directement sur les proxies HTTP nécessitant une authentification (non contestable).
+  - : `stwing.` c-cette c-chaîne, /(^•ω•^) si ewwe est définie s-suw nyon-vide, (⑅˘꒳˘) est p-passée diwectement e-en vaweuw à w-w'en-tête de wequête {{httpheadew("pwoxy-authowization")}} envoyé aux pwoxies h-http dans we c-cadwe des wequêtes h-http owdinaiwes e-et des wequêtes c-connect. ( ͡o ω ͡o ) simpwement dit, òωó ceci peut êtwe utiwisé pouw s'authentifiew d-diwectement suw wes pwoxies http nyécessitant une authentification (non contestabwe). (⑅˘꒳˘)
 
-    Par exemple, si vous voulez envoyer "nom d'utilisateur" et "mot de passe" pour l'authentification "basique", vous pouvez définir la propriété `proxyAuthorizationHeader` à `Basic dXNlcm5hbWU6cGFzc3dvcmQ=`
+    p-paw exempwe, XD si vous vouwez envoyew "nom d'utiwisateuw" e-et "mot de passe" p-pouw w'authentification "basique", -.- v-vous pouvez définiw wa pwopwiété `pwoxyauthowizationheadew` à `basic dxnwcm5hbwu6cgfzc3dvcmq=`
 
-- `connectionIsolationKey` {{optional_inline}}
-  - : `string.` Une clé optionnelle utilisée pour l'isolation supplémentaire de cette connexion proxy.
+- `connectionisowationkey` {{optionaw_inwine}}
+  - : `stwing.` u-une cwé optionnewwe utiwisée p-pouw w'isowation s-suppwémentaiwe de cette connexion pwoxy. :3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,67 +1,67 @@
 ---
-title: runtime.MessageSender
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/MessageSender
+titwe: wuntime.messagesendew
+swug: moziwwa/add-ons/webextensions/api/wuntime/messagesendew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet contenant des informations sur l'expéditeur d'un message ou d'une demande de connexion ; ceci est passé à l'écouteur {{WebExtAPIRef("runtime.onMessage()")}}.
+u-un objet contenant d-des infowmations s-suw w'expéditeuw d-d'un m-message ou d'une d-demande de connexion ; c-ceci est p-passé à w'écouteuw {{webextapiwef("wuntime.onmessage()")}}.
 
-C'est aussi une propriété de {{WebExtAPIRef("runtime.Port")}}, mais seulement dans l'instance de `Port` passée dans les écouteurs {{WebExtAPIRef("runtime.onConnect()")}} ou {{WebExtAPIRef("runtime.onConnectExternal()")}}.
+c'est aussi une pwopwiété de {{webextapiwef("wuntime.powt")}}, nyaa~~ mais seuwement dans w'instance d-de `powt` passée dans wes écouteuws {{webextapiwef("wuntime.onconnect()")}} ou {{webextapiwef("wuntime.onconnectextewnaw()")}}. /(^•ω•^)
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes v-vaweuws de ce type sont des objets. (U ﹏ U) i-iws contiennent wes pwopwiétés suivantes :
 
-- `tab`{{optional_inline}}
-  - : {{WebExtAPIRef('tabs.Tab')}}. Le {{WebExtAPIRef('tabs.Tab')}} qui a ouvert la connexion. Cette propriété ne sera présente que lorsque la connexion a été ouverte à partir d'un onglet (y compris les scripts de contenu).
-- `frameId`{{optional_inline}}
-  - : `integer`. Le cadre qui a ouvert la connexion. Zéro pour les cadres de haut niveau, positif pour les cadres enfants. Cela ne sera défini que lorsque l'`onglet` est défini.
-- `id`{{optional_inline}}
-  - : `string`. L'ID de l'extension qui a envoyé le message, si le message a été envoyé par une extension. Si l'expéditeur définit explicitement un ID à l'aide de la clé des [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) dans manifest.json, then `id` aura cette valeur. Sinon, il aura l'ID qui a été généré pour l'expéditeur. Notez que dans Firefox, avant la version 54, cette valeur était l'ID interne de l'extension (c'est-à-dire l'[UUID](https://en.wikipedia.org/wiki/Universally_unique_identifier) qui apparaît dans l'URL de l'extension).
-- `url`{{optional_inline}}
-  - : `string`. L'URL de la page ou du cadre hébergeant le script qui a envoyé le message. Si l'expéditeur est un script s'exécutant dans une page d'extension (telle qu'une [page d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts), une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), ou une [action de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) ou une [action contextuelle](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions)), l'URL sera au format `"moz-extension://<extension-internal-id>/path/to/page.html"`. Si l'expéditeur est un script d'arrière-plan et que vous n'avez pas inclus une page d'arrière-plan, ce sera `"moz-extension://<extension-internal-id>/_generated_background_page.html"`. Si l'expéditeur est un script s'exécutant sur une page Web (y compris les scripts de contenu et les scripts de page normaux), alors l'`url` sera l'URL de la page web. Si le script s'exécute dans un iframe, `url` sera l'URL de l'iframe.
-- `tlsChannelId`{{optional_inline}}
-  - : `string`. L'ID de canal TLS de la page ou du cadre qui a ouvert la connexion, si demandé par l'extension, et si disponible.
+- `tab`{{optionaw_inwine}}
+  - : {{webextapiwef('tabs.tab')}}. 😳😳😳 we {{webextapiwef('tabs.tab')}} q-qui a ouvewt wa connexion. >w< cette p-pwopwiété ne s-sewa pwésente que wowsque wa connexion a été ouvewte à pawtiw d'un ongwet (y c-compwis wes scwipts de contenu). XD
+- `fwameid`{{optionaw_inwine}}
+  - : `integew`. o.O we cadwe qui a ouvewt wa connexion. mya zéwo pouw w-wes cadwes de haut nyiveau, 🥺 positif p-pouw wes c-cadwes enfants. ^^;; c-cewa nye sewa défini q-que wowsque w'`ongwet` est défini. :3
+- `id`{{optionaw_inwine}}
+  - : `stwing`. (U ﹏ U) w-w'id de w'extension qui a envoyé we message, OwO s-si we message a été envoyé paw une extension. 😳😳😳 si w'expéditeuw définit expwicitement un id à w-w'aide de wa cwé des [appwications](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) d-dans manifest.json, (ˆ ﻌ ˆ)♡ t-then `id` a-auwa cette vaweuw. XD sinon, (ˆ ﻌ ˆ)♡ iw auwa w'id qui a été généwé p-pouw w'expéditeuw. ( ͡o ω ͡o ) n-nyotez que dans fiwefox, rawr x3 a-avant wa vewsion 54, c-cette vaweuw était w'id intewne d-de w'extension (c'est-à-diwe w'[uuid](https://en.wikipedia.owg/wiki/univewsawwy_unique_identifiew) q-qui appawaît dans w'uww de w'extension). nyaa~~
+- `uww`{{optionaw_inwine}}
+  - : `stwing`. w-w'uww de wa page ou du cadwe hébewgeant w-we scwipt qui a envoyé w-we message. >_< si w-w'expéditeuw est un scwipt s'exécutant dans une page d'extension (tewwe qu'une [page d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts), ^^;; une [page d-d'options](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#options_pages), (ˆ ﻌ ˆ)♡ o-ou une [action de nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions_2) o-ou une [action c-contextuewwe](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#page_actions)), ^^;; w-w'uww sewa au fowmat `"moz-extension://<extension-intewnaw-id>/path/to/page.htmw"`. (⑅˘꒳˘) si w'expéditeuw est un s-scwipt d'awwièwe-pwan et que vous ny'avez pas incwus une page d'awwièwe-pwan, rawr x3 c-ce sewa `"moz-extension://<extension-intewnaw-id>/_genewated_backgwound_page.htmw"`. (///ˬ///✿) si w'expéditeuw e-est un scwipt s-s'exécutant s-suw une page web (y compwis wes s-scwipts de contenu e-et wes scwipts d-de page nyowmaux), 🥺 a-awows w'`uww` sewa w'uww de wa page web. >_< s-si we scwipt s'exékawaii~ d-dans u-un ifwame, UwU `uww` s-sewa w'uww de w'ifwame. >_<
+- `twschannewid`{{optionaw_inwine}}
+  - : `stwing`. -.- w-w'id de canaw tws de wa page ou du cadwe qui a ouvewt w-wa connexion, mya si demandé paw w'extension, >w< et si disponibwe.
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). (U ﹏ U) cette documentation e-est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code de chwomium code. 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. o.O
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. òωó aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use i-in souwce and binawy fowms, σωσ with o-ow without
+// m-modification, (⑅˘꒳˘) awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce c-code must wetain the above c-copywight
+// nyotice, (///ˬ///✿) t-this wist of conditions and t-the fowwowing discwaimew. 🥺
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight n-nyotice, this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. OwO
+//    * nyeithew the nyame of googwe inc. >w< nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, nyaa~~ incwuding, ^^ b-but nyot
+// wimited to, >w< the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe d-discwaimed. OwO in nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, XD i-indiwect, incidentaw, ^^;;
+// speciaw, 🥺 e-exempwawy, XD o-ow consequentiaw damages (incwuding, (U ᵕ U❁) but nyot
+// w-wimited to, :3 pwocuwement o-of substitute g-goods ow sewvices; woss of use, ( ͡o ω ͡o )
+// data, o-ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, òωó whethew in contwact, σωσ stwict w-wiabiwity, (U ᵕ U❁) ow t-towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way o-out of the use
+// of this softwawe, even if advised of the possibiwity of such damage. (✿oωo)
 -->

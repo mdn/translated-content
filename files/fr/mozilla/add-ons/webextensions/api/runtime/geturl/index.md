@@ -1,76 +1,76 @@
 ---
-title: runtime.getURL()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/getURL
+titwe: wuntime.getuww()
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/getuww
 ---
 
-{{AddonSidebar}}Etant donné un chemin relatif de [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension, renvoyez une URL complète.Cette fonction ne vérifie pas que la ressource existe réellement à cette URL.
+{{addonsidebaw}}etant d-donné u-un chemin wewatif d-de [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) à u-une wessouwce e-empaquetée avec w-w'extension, (U ﹏ U) wenvoyez u-une uww compwète.cette fonction nye véwifie pas que wa wessouwce existe wéewwement à c-cette uww. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.runtime.getURL(
-  path, // string
+bwowsew.wuntime.getuww(
+  path, // s-stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `path`
-  - : `string`. Un chemin relatif de [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) à une ressource empaquetée avec l'extension.
+  - : `stwing`. ^•ﻌ•^ u-un chemin wewatif de [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) à une wessouwce empaquetée a-avec w'extension. rawr
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-`string`. L'URL complète de la ressource.
+`stwing`. w-w'uww compwète de wa wessouwce. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Etant donné un fichier empaqueté avec l'extension "beasts/frog.html", obtenez l'URL complète comme ceci :
+e-etant donné un fichiew empaqueté avec w'extension "beasts/fwog.htmw", nyaa~~ obtenez w'uww compwète c-comme ceci :
 
 ```js
-var fullURL = browser.runtime.getURL("beasts/frog.html");
-console.log(fullURL);
-// Returns something like:
-// moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/frog.html
+vaw fuwwuww = b-bwowsew.wuntime.getuww("beasts/fwog.htmw");
+c-consowe.wog(fuwwuww);
+// w-wetuwns s-something wike:
+// moz-extension://2c127fa4-62c7-7e4f-90e5-472b45eecfdc/beasts/fwog.htmw
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). UwU cette documentation e-est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de chwomium code. :3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge s-sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw w-wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. (///ˬ///✿) aww wights wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and binawy fowms, >_< with ow without
+// m-modification, rawr x3 awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, /(^•ω•^) this wist of conditions and t-the fowwowing d-discwaimew. :3
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, (ꈍᴗꈍ) this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution.
+//    * nyeithew the nyame o-of googwe inc. /(^•ω•^) n-nyow the nyames o-of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten p-pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by t-the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, ( ͡o ω ͡o ) incwuding, òωó b-but nyot
+// wimited to, (⑅˘꒳˘) the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. XD in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, -.- indiwect, :3 incidentaw, nyaa~~
+// s-speciaw, exempwawy, 😳 o-ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) but nyot
+// wimited to, nyaa~~ pwocuwement of substitute goods ow sewvices; woss o-of use, OwO
+// data, rawr x3 ow pwofits; ow b-business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, XD whethew in contwact, σωσ stwict w-wiabiwity, (U ᵕ U❁) o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, (U ﹏ U) even if advised of the possibiwity o-of such d-damage. :3
 -->

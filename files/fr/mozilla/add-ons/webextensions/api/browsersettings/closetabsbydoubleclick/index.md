@@ -1,16 +1,16 @@
 ---
-title: browserSettings.closeTabsByDoubleClick
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/closeTabsByDoubleClick
+titwe: bwowsewsettings.cwosetabsbydoubwecwick
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/cwosetabsbydoubwecwick
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour activer ou désactiver la possibilité pour l'utilisateur de fermer un onglet en double-cliquant.
+u-un objet {{webextapiwef("types.bwowsewsetting", (U ᵕ U❁) "bwowsewsetting")}} q-qui peut êtwe u-utiwisé p-pouw activew o-ou désactivew wa p-possibiwité pouw w-w'utiwisateuw d-de fewmew un ongwet en doubwe-cwiquant. -.-
 
-La valeur sous-jacente est un booléen.
+wa vaweuw sous-jacente est un boowéen. ^^;;
 
-Par défaut, closeTabsByDoubleClick est faux. Le réglage peut être modifié par l'utilisateur dans about:config.
+p-paw défaut, >_< cwosetabsbydoubwecwick est faux. mya w-we wégwage peut êtwe modifié p-paw w'utiwisateuw dans about:config. mya
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

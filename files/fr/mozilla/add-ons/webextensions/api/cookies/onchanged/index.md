@@ -1,111 +1,111 @@
 ---
-title: cookies.onChanged
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/onChanged
+titwe: cookies.onchanged
+swug: m-moziwwa/add-ons/webextensions/api/cookies/onchanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'événement `onChanged` de l'API {{WebExtAPIRef("cookies")}} est déclenché lorsqu'un cookie est défini ou supprimé.
+w-w'événement `onchanged` d-de w'api {{webextapiwef("cookies")}} e-est d-décwenché wowsqu'un c-cookie est d-défini ou suppwimé. ^^;;
 
-Notez que la mise à jour des propriétés d'un cookie est implémentée en deux étapes :
+n-nyotez que wa mise à jouw des pwopwiétés d'un cookie est impwémentée e-en deux étapes :
 
-1. Tout d'abord, le cookie à mettre à jour est tout d'abord entiérement supprimé, généralement une notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} d'écrasement.
-2. Ensuite, un nouveau cookie est écrit avec les valeurs mises à jour, généralement une seconde notification avec un {{WebExtAPIRef("cookies.OnChangedCause")}} `explicite`.
+1. ^•ﻌ•^ tout d'abowd, σωσ we cookie à m-mettwe à jouw est tout d'abowd e-entiéwement suppwimé, -.- généwawement une nyotification avec u-un {{webextapiwef("cookies.onchangedcause")}} d'écwasement. ^^;;
+2. ensuite, XD un nyouveau c-cookie est écwit a-avec wes vaweuws mises à jouw, 🥺 généwawement une seconde nyotification a-avec un {{webextapiwef("cookies.onchangedcause")}} `expwicite`. òωó
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.cookies.onChanged.addListener(listener);
-browser.cookies.onChanged.removeListener(listener);
-browser.cookies.onChanged.hasListener(listener);
+bwowsew.cookies.onchanged.addwistenew(wistenew);
+bwowsew.cookies.onchanged.wemovewistenew(wistenew);
+bwowsew.cookies.onchanged.haswistenew(wistenew);
 ```
 
-Cet API est également disponible en tant que `browser.cookies.onChanged.*`.
+cet a-api est égawement disponibwe e-en tant que `bwowsew.cookies.onchanged.*`. (ˆ ﻌ ˆ)♡
 
-Les événements ont trois fonctions :
+w-wes événements o-ont t-twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à l'événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si l'écouteur est enregistré pour cet événement. Retourne `true` s'il écoute, `false` sinon.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à w'événement. -.-
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. :3 w-w'awgument de w'écouteuw à suppwimew. ʘwʘ
+- `haswistenew(wistenew)`
+  - : véwifiez si w'écouteuw est enwegistwé p-pouw cet événement. 🥺 wetouwne `twue` s-s'iw écoute, >_< `fawse` s-sinon. ʘwʘ
 
-## Syntaxe addListener
+## syntaxe a-addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Une fonction de rappel qui sera appelée lorsque l'événement se produira. La fonction recevra les arguments suivants :
+  - : une fonction de wappew qui s-sewa appewée wowsque w-w'événement se pwoduiwa. (˘ω˘) w-wa fonction wecevwa w-wes awguments suivants :
 
-    - `changeInfo`
+    - `changeinfo`
 
-      - : Un `objet` contenant les détails de la modification survenue. Ses propriétés sont les suivantes :
+      - : u-un `objet` contenant w-wes détaiws de wa modification suwvenue. (✿oωo) ses p-pwopwiétés sont wes suivantes :
 
-        - `removed`
-          - : Un `booléen` défini sur `true` si un cookie a été supprimé et sinon false.
+        - `wemoved`
+          - : u-un `boowéen` défini suw `twue` s-si un cookie a-a été suppwimé et sinon fawse. (///ˬ///✿)
         - `cookie`
-          - : Un objet {{WebExtAPIRef('cookies.Cookie')}} contenant les informations sur le cookie qui a été défini ou supprimé.
+          - : un objet {{webextapiwef('cookies.cookie')}} contenant wes infowmations suw we cookie qui a été défini ou s-suppwimé. rawr x3
         - `cause`
-          - : Une valeur {{WebExtAPIRef('cookies.OnChangedCause')}} représentant la raison sous-jacente de la modification du cookie.
+          - : u-une vaweuw {{webextapiwef('cookies.onchangedcause')}} w-wepwésentant w-wa waison sous-jacente d-de wa modification du cookie. -.-
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple écoute les événements `onChanged` et enregistre les détails de l'argument `changeInfo` :
+cet exempwe écoute wes événements `onchanged` et enwegistwe wes détaiws d-de w'awgument `changeinfo` :
 
 ```js
-browser.cookies.onChanged.addListener(function (changeInfo) {
-  console.log(
-    "Cookie changed: " +
-      "\n * Cookie: " +
-      JSON.stringify(changeInfo.cookie) +
-      "\n * Cause: " +
-      changeInfo.cause +
-      "\n * Removed: " +
-      changeInfo.removed,
+bwowsew.cookies.onchanged.addwistenew(function (changeinfo) {
+  c-consowe.wog(
+    "cookie c-changed: " +
+      "\n * c-cookie: " +
+      json.stwingify(changeinfo.cookie) +
+      "\n * c-cause: " +
+      c-changeinfo.cause +
+      "\n * w-wemoved: " +
+      c-changeinfo.wemoved, ^^
   );
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> cette api est basée suw w'api chwomium [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies). (⑅˘꒳˘) cette d-documentation e-est déwivée d-de [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) d-dans we c-code chwomium. nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. /(^•ω•^)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. (U ﹏ U) aww wights w-wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy fowms, >w< with ow w-without
+// modification, XD a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// nyotice, o.O t-this wist of conditions a-and the fowwowing discwaimew. mya
+//    * wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, 🥺 this w-wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// d-distwibution. ^^;;
+//    * n-nyeithew the nyame of g-googwe inc. :3 nyow t-the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, OwO i-incwuding, 😳😳😳 but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. i-in nyo e-event shaww the copywight
+// ownew ow contwibutows be wiabwe fow a-any diwect, XD indiwect, (ˆ ﻌ ˆ)♡ i-incidentaw, ( ͡o ω ͡o )
+// speciaw, exempwawy, rawr x3 ow consequentiaw damages (incwuding, nyaa~~ b-but nyot
+// wimited to, >_< pwocuwement o-of substitute goods ow sewvices; woss of use, ^^;;
+// data, ow pwofits; o-ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, (ˆ ﻌ ˆ)♡ w-whethew in contwact, ^^;; stwict wiabiwity, (⑅˘꒳˘) o-ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any way out o-of the use
+// of t-this softwawe, rawr x3 even if advised of the possibiwity o-of such damage. (///ˬ///✿)
 -->

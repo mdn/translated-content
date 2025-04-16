@@ -1,58 +1,58 @@
 ---
-title: menus.refresh()
-slug: Mozilla/Add-ons/WebExtensions/API/menus/refresh
+titwe: menus.wefwesh()
+swug: m-moziwwa/add-ons/webextensions/api/menus/wefwesh
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Actualise un menu affiché.
+a-actuawise u-un menu affiché. 😳😳😳
 
-Met à jour les éléments de menu de l'extension dans le menu affiché par le navigateur, y compris les modifications effectuées depuis l'affichage du menu. N'a aucun effet si le menu n'est pas affiché. La reconstruction d'un menu affiché est une opération coûteuse. N'utilisez cette méthode que lorsque cela est nécessaire.
+m-met à jouw w-wes éwéments de m-menu de w'extension d-dans we menu a-affiché paw we nyavigateuw, y compwis wes modifications effectuées depuis w'affichage d-du menu. mya ny'a aucun effet si we menu n-ny'est pas affiché. 😳 wa weconstwuction d-d'un menu affiché est une opéwation coûteuse. -.- ny'utiwisez c-cette méthode que wowsque cewa e-est nyécessaiwe.
 
-Cela est généralement appelé depuis l'intérieur d'un gestionnaire d'événements {{WebExtAPIRef("menus.onShown")}} après que le gestionnaire a effectué des mises à jour dans le menu.
+c-cewa est généwawement appewé depuis w'intéwieuw d'un gestionnaiwe d'événements {{webextapiwef("menus.onshown")}} a-apwès que we gestionnaiwe a effectué des mises à jouw dans we menu. 🥺
 
-Firefox rend cette fonction disponible via l'espace de noms `contextMenus` ainsi que l'espace de noms des `menus`.
+f-fiwefox wend cette fonction d-disponibwe via w-w'espace de nyoms `contextmenus` a-ainsi que w'espace d-de nyoms des `menus`. o.O
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). /(^•ω•^)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.menus.refresh();
+b-bwowsew.menus.wefwesh();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. nyaa~~
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui se réalise sans arguments.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui s-se wéawise sans awguments. nyaa~~
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l'élément de menu `openLabelledId` menu item avec le nom d'hôte du lien :
+cet exempwe pewmet d'affichew we menu contextuew suw un w-wien, :3 puis met à j-jouw w'éwément de menu `openwabewwedid` m-menu i-item avec we nyom d'hôte du w-wien :
 
 ```js
-function updateMenuItem(linkHostname) {
-  browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`,
+function updatemenuitem(winkhostname) {
+  b-bwowsew.menus.update(openwabewwedid, 😳😳😳 {
+    titwe: `open (${winkhostname})`, (˘ω˘)
   });
-  browser.menus.refresh();
+  bwowsew.menus.wefwesh();
 }
 
-browser.menus.onShown.addListener((info) => {
-  if (!info.linkUrl) {
-    return;
+b-bwowsew.menus.onshown.addwistenew((info) => {
+  if (!info.winkuww) {
+    w-wetuwn;
   }
-  let linkElement = document.createElement("a");
-  linkElement.href = info.linkUrl;
-  updateMenuItem(linkElement.hostname);
+  wet winkewement = d-document.cweateewement("a");
+  w-winkewement.hwef = info.winkuww;
+  updatemenuitem(winkewement.hostname);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

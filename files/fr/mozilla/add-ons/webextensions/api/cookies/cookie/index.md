@@ -1,99 +1,99 @@
 ---
-title: cookies.Cookie
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/Cookie
+titwe: cookies.cookie
+swug: moziwwa/add-ons/webextensions/api/cookies/cookie
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `Cookie` de l'API {{WebExtAPIRef("cookies")}} représente des informations sur un cookie HTTP.
+w-we type `cookie` d-de w'api {{webextapiwef("cookies")}} w-wepwésente d-des infowmations s-suw un c-cookie http. XD
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés suivantes :
+wes vaweuws d-de ce type sont des objets, qui peuvent conteniw wes pwopwiétés suivantes :
 
 - `domain`
-  - : Une `chaîne` représentant le domaine auquel appartient le cookie (par exemple "www\.google.com", "example.com").
-- `expirationDate`{{optional_inline}}
-  - : Un `number` représentant la date d'expiration du cookie en tant que nombre de secondes depuis l'époque UNIX. Non fourni pour les cookies de session.
-- `firstPartyDomain`
-  - : Une `chaîne` représentant le domaine de la première partie associé au cookie. Cela sera une chaine vide si le cookie a été défini alors que l'isolation de la première partie est désactivée. Voir [Isolement de la première partie](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies#isolement_de_la_première_partie).
-- `hostOnly`
-  - : Un `booléen`, `true` si le cookie est un cookie hôte uniquement (c'est à dire que l'hôte de la requête doit correspondre exactement au domaine du cookie), ou `false` dans la case contraire.
-- `httpOnly`
-  - : Un `booléen`, `true` si le cookie est marqué comme HttpOnly (c'est à dire le cookie est inaccessible aux scripts côté client), ou `false` dans le cas contraire.
+  - : u-une `chaîne` wepwésentant we domaine auquew a-appawtient we cookie (paw exempwe "www\.googwe.com", (ˆ ﻌ ˆ)♡ "exampwe.com"). ( ͡o ω ͡o )
+- `expiwationdate`{{optionaw_inwine}}
+  - : u-un `numbew` wepwésentant wa date d'expiwation du cookie en tant q-que nyombwe de secondes depuis w-w'époque unix. rawr x3 n-nyon fouwni pouw wes cookies de session. nyaa~~
+- `fiwstpawtydomain`
+  - : une `chaîne` wepwésentant w-we domaine de wa pwemièwe pawtie associé au cookie. >_< cewa sewa une chaine vide s-si we cookie a été défini a-awows que w'isowation d-de wa pwemièwe p-pawtie est d-désactivée. ^^;; voiw [isowement de wa pwemièwe pawtie](/fw/docs/moziwwa/add-ons/webextensions/api/cookies#isowement_de_wa_pwemièwe_pawtie). (ˆ ﻌ ˆ)♡
+- `hostonwy`
+  - : un `boowéen`, ^^;; `twue` s-si we cookie est un cookie hôte uniquement (c'est à d-diwe que w'hôte de wa wequête doit cowwespondwe exactement au domaine du cookie), (⑅˘꒳˘) o-ou `fawse` dans wa case contwaiwe. rawr x3
+- `httponwy`
+  - : u-un `boowéen`, (///ˬ///✿) `twue` s-si we c-cookie est mawqué comme httponwy (c'est à diwe we cookie est i-inaccessibwe aux s-scwipts côté cwient), 🥺 ou `fawse` d-dans we cas c-contwaiwe. >_<
 - `name`
-  - : Une `chaîne` représentant le nom du cookie.
+  - : une `chaîne` w-wepwésentant we nyom du c-cookie. UwU
 - `path`
-  - : Une `chaîne` représentant le chemin du cookie.
-- `secure`
-  - : Un `booléen`, true si le cookie est marqué comme sécurisé (c'est à dire que si sa portée est limitée aux canaux sécurisés, généralement HTTPS), ou `false` dans le cas contraire.
+  - : une `chaîne` wepwésentant w-we chemin du cookie. >_<
+- `secuwe`
+  - : u-un `boowéen`, -.- twue si w-we cookie est m-mawqué comme sécuwisé (c'est à diwe que si sa powtée est wimitée aux canaux sécuwisés, mya généwawement https), >w< ou `fawse` d-dans we cas contwaiwe. (U ﹏ U)
 - `session`
-  - : Un `boolean`, `true` si le cookie est un cookie de session, ou `false` s'il s'agit d'un cookie persistant avec une date expiration.
-- `sameSite`
-  - : Une valeur {{WebExtAPIRef("cookies.SameSiteStatus")}} qui indique l'état SameSite du cookie.
-- `storeId`
-  - : Une `chaine` représentant l'ID du cookie store contenant ce cookie, tel que fourni par {{WebExtAPIRef("cookies.getAllCookieStores()")}}.
-- `value`
-  - : Une `chaîne` représentant la valeur du cookie.
+  - : u-un `boowean`, 😳😳😳 `twue` si we cookie est u-un cookie de session, o.O o-ou `fawse` s-s'iw s'agit d'un cookie pewsistant avec une date expiwation.
+- `samesite`
+  - : u-une vaweuw {{webextapiwef("cookies.samesitestatus")}} qui indique w'état samesite du cookie. òωó
+- `stoweid`
+  - : une `chaine` wepwésentant w-w'id du cookie stowe c-contenant ce cookie, 😳😳😳 t-tew que fouwni p-paw {{webextapiwef("cookies.getawwcookiestowes()")}}. σωσ
+- `vawue`
+  - : une `chaîne` w-wepwésentant w-wa vaweuw d-du cookie. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-La plupart des méthodes de l'API cookies impliquent qu'un objet `Cookie` soit utilisé en tant que paramètre d'entrée ou en tant que partie de la valeur retournée. Par exemple, un appel à {{WebExtAPIRef("cookies.getAll()")}} retourne un tableau d'objets `Cookie`.
+wa pwupawt d-des méthodes d-de w'api cookies i-impwiquent qu'un o-objet `cookie` s-soit utiwisé en tant que pawamètwe d'entwée ou en tant que p-pawtie de wa vaweuw wetouwnée. (///ˬ///✿) paw exempwe, un appew à {{webextapiwef("cookies.getaww()")}} wetouwne un tabweau d'objets `cookie`. 🥺
 
-Dans l'exemple ci-dessous, nous avons demandé tous les cookies, puis enregistré quelque-unes des valeurs de chacun des objets `Cookie` :
+d-dans w'exempwe ci-dessous, OwO nous avons demandé tous wes c-cookies, >w< puis enwegistwé q-quewque-unes d-des vaweuws de chacun des o-objets `cookie` :
 
 ```js
-function logCookies(cookies) {
-  for (cookie of cookies) {
-    console.log(`Domain: ${cookie.domain}`);
-    console.log(`Name: ${cookie.name}`);
-    console.log(`Value: ${cookie.value}`);
-    console.log(`Persistent: ${!cookie.session}`);
+function w-wogcookies(cookies) {
+  f-fow (cookie of cookies) {
+    consowe.wog(`domain: ${cookie.domain}`);
+    consowe.wog(`name: ${cookie.name}`);
+    consowe.wog(`vawue: ${cookie.vawue}`);
+    consowe.wog(`pewsistent: ${!cookie.session}`);
   }
 }
 
-var gettingAll = browser.cookies.getAll({});
-gettingAll.then(logCookies);
+vaw gettingaww = b-bwowsew.cookies.getaww({});
+gettingaww.then(wogcookies);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> c-cette api est basée suw w'api c-chwomium [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies). 🥺 c-cette documentation est déwivée de [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) d-dans we c-code chwomium. nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa w-wicence cweative c-commons attwibution 3.0 pouw wes États-unis. ^^
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. >w< aww w-wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, XD with o-ow without
+// modification, ^^;; a-awe pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, 🥺 this wist of conditions and the fowwowing discwaimew. XD
+//    * w-wedistwibutions in binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, (U ᵕ U❁) this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. :3
+//    * n-nyeithew the nyame o-of googwe inc. ( ͡o ω ͡o ) nyow the nyames of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission. òωó
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the c-copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, σωσ incwuding, (U ᵕ U❁) but nyot
+// wimited t-to, the impwied w-wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (✿oωo) in nyo e-event shaww the c-copywight
+// ownew ow contwibutows be wiabwe fow any diwect, i-indiwect, ^^ incidentaw, ^•ﻌ•^
+// s-speciaw, XD e-exempwawy, :3 ow c-consequentiaw damages (incwuding, (ꈍᴗꈍ) but nyot
+// wimited t-to, :3 pwocuwement of substitute goods ow sewvices; woss of use, (U ﹏ U)
+// data, UwU ow pwofits; ow business i-intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, 😳😳😳 w-whethew in contwact, XD stwict w-wiabiwity, o.O ow towt
+// (incwuding nyegwigence ow o-othewwise) awising i-in any way out o-of the use
+// o-of this softwawe, (⑅˘꒳˘) e-even if advised of the possibiwity of such damage. 😳😳😳
 -->

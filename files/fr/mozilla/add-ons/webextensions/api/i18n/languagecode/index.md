@@ -1,54 +1,54 @@
 ---
-title: i18n.LanguageCode
-slug: Mozilla/Add-ons/WebExtensions/API/i18n/LanguageCode
+titwe: i18n.wanguagecode
+swug: m-moziwwa/add-ons/webextensions/api/i18n/wanguagecode
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Une [balise de langue](https://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.10) telle que `"en-US"` ou "`fr`".
+u-une [bawise d-de wangue](https://www.w3.owg/pwotocows/wfc2616/wfc2616-sec3.htmw#sec3.10) t-tewwe que `"en-us"` o-ou "`fw`". >w<
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes.
+wes v-vaweuws de ce type s-sont des chaînes. rawr
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.i18n`](https://developer.chrome.com/docs/extensions/reference/api/i18n). Cette documentation est dérivée de [`i18n.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/i18n.json) dans le code de Chromium code.
+> cette api est basée suw w-w'api chwomium [`chwome.i18n`](https://devewopew.chwome.com/docs/extensions/wefewence/api/i18n). 😳 cette documentation est déwivée d-de [`i18n.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/i18n.json) dans we code d-de chwomium code. >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw w-wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and u-use in souwce and b-binawy fowms, (ꈍᴗꈍ) w-with ow without
+// m-modification, 😳 awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, 😳😳😳 this wist of conditions a-and the fowwowing discwaimew. mya
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, mya this wist of c-conditions and t-the fowwowing discwaimew
+// in the d-documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (⑅˘꒳˘)
+//    * nyeithew the n-nyame of googwe inc. (U ﹏ U) nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, ʘwʘ incwuding, (˘ω˘) b-but nyot
+// w-wimited to, (U ﹏ U) the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ^•ﻌ•^ in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (˘ω˘) i-indiwect, :3 incidentaw, ^^;;
+// s-speciaw, 🥺 e-exempwawy, ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) b-but nyot
+// w-wimited to, nyaa~~ pwocuwement o-of substitute goods ow sewvices; woss o-of use, :3
+// data, ( ͡o ω ͡o ) o-ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, mya whethew in contwact, (///ˬ///✿) stwict w-wiabiwity, (˘ω˘) ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, ^^;; even if advised of the possibiwity of such d-damage. (✿oωo)
 -->

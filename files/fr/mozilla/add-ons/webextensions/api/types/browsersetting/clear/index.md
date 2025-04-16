@@ -1,88 +1,88 @@
 ---
-title: clear()
-slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/clear
+titwe: cweaw()
+swug: moziwwa/add-ons/webextensions/api/types/bwowsewsetting/cweaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez `BrowserSetting.clear()` pour effacer toutes les modification apportées à l'extension du navigateur. Le paramètre du navigateur revient à sa valeur précédente.
+u-utiwisez `bwowsewsetting.cweaw()` p-pouw e-effacew toutes w-wes modification a-appowtées à w-w'extension du n-nyavigateuw. -.- we p-pawamètwe du nyavigateuw wevient à sa vaweuw pwécédente. :3
 
-L'extensions annulera également le contrôle du paramètre, permettant une extension avec une ancienne précédente (c'est à dire, une extensions qui a été installée avant celle-ci) à modifier la paramètre. Voir [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) pour en savoir plus sur le contrôle des paramètres.
+w'extensions annuwewa égawement we c-contwôwe du pawamètwe, nyaa~~ pewmettant une extension a-avec une ancienne pwécédente (c'est à d-diwe, 😳 une extensions qui a été instawwée avant cewwe-ci) à m-modifiew wa pawamètwe. (⑅˘꒳˘) v-voiw [`bwowsewsetting.set()`](/fw/docs/moziwwa/add-ons/webextensions/api/pwivacy/bwowsewsetting/set) p-pouw en savoiw pwus suw we contwôwe des pawamètwes. nyaa~~
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la compensation a échoué, la promesse renvoie une valeur à `false`. Si l'effacement de la valeur a réussi, il se résout à `true`.
+iw s'agit d'une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). OwO si wa compensation a échoué, rawr x3 w-wa pwomesse wenvoie une v-vaweuw à `fawse`. XD s-si w'effacement d-de wa vaweuw a-a wéussi, σωσ iw se wésout à `twue`. (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var clearing = setting.clear(
-  details, // object
+v-vaw cweawing = setting.cweaw(
+  detaiws, (U ﹏ U) // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
-  - : Un objet vide
+- `detaiws`
+  - : un objet vide
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec un `booléen`: `true` Si le paramètre est effacé, `false` sinon.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwi avec un `boowéen`: `twue` si we pawamètwe e-est effacé, `fawse` s-sinon. :3
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-Voir {{WebExtAPIRef("types.BrowserSetting")}}.
+voiw {{webextapiwef("types.bwowsewsetting")}}. ( ͡o ω ͡o )
 
-## Exemple
+## exempwe
 
-Effacer le paramètre `webRTCIPHandlingPolicy` :
+e-effacew we pawamètwe `webwtciphandwingpowicy` :
 
 ```js
-function onCleared(result) {
-  if (result) {
-    console.log("Setting was cleared");
-  } else {
-    console.log("Setting was not cleared");
+f-function oncweawed(wesuwt) {
+  i-if (wesuwt) {
+    c-consowe.wog("setting was c-cweawed");
+  } ewse {
+    consowe.wog("setting w-was nyot cweawed");
   }
 }
 
-var clearing = browser.privacy.network.webRTCIPHandlingPolicy.clear({});
-clearing.then(onCleared);
+vaw cweawing = bwowsew.pwivacy.netwowk.webwtciphandwingpowicy.cweaw({});
+c-cweawing.then(oncweawed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
+> cette api e-est basée suw w'api chwomium [`chwome.types`](https://devewopew.chwome.com/docs/extensions/wefewence/api/types). σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa w-wicence cweative c-commons attwibution 3.0 pouw wes États-unis. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. aww wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, with ow without
+// modification, OwO awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, 😳 t-this wist of c-conditions and the fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight n-nyotice, (˘ω˘) t-this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. ʘwʘ
+//    * nyeithew the nyame of googwe inc. ( ͡o ω ͡o ) n-nyow the nyames of its
+// contwibutows may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, >w< i-incwuding, 😳 but nyot
+// wimited t-to, 🥺 the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. rawr x3 in n-nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, o.O indiwect, rawr incidentaw, ʘwʘ
+// speciaw, 😳😳😳 exempwawy, ow c-consequentiaw damages (incwuding, ^^;; b-but nyot
+// wimited t-to, o.O pwocuwement of substitute g-goods ow sewvices; w-woss of use, (///ˬ///✿)
+// data, σωσ ow p-pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, w-whethew in c-contwact, nyaa~~ stwict wiabiwity, ^^;; ow towt
+// (incwuding n-nyegwigence ow o-othewwise) awising in any way out of the use
+// of this softwawe, ^•ﻌ•^ e-even if advised of the possibiwity of such damage. σωσ
 -->

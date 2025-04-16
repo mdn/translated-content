@@ -1,84 +1,84 @@
 ---
-title: WebAssembly.RuntimeError()
-slug: WebAssembly/JavaScript_interface/RuntimeError
+titwe: webassembwy.wuntimeewwow()
+swug: webassembwy/javascwipt_intewface/wuntimeewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.RuntimeError()`** permet de créer un nouvel objet WebAssembly `RuntimeError`. C'est ce type d'exception qui est déclenchée lorsque WebAssembly définit [une trappe](http://webassembly.org/docs/semantics/#traps).
+w-we constwucteuw **`webassembwy.wuntimeewwow()`** p-pewmet de c-cwéew un nyouvew o-objet webassembwy `wuntimeewwow`. mya c-c'est ce type d-d'exception qui e-est décwenchée w-wowsque webassembwy définit [une twappe](http://webassembwy.owg/docs/semantics/#twaps). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WebAssembly.RuntimeError(message, nomFichier, numeroLigne);
+new webassembwy.wuntimeewwow(message, (˘ω˘) n-nyomfichiew, (U ﹏ U) nyumewowigne);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description, compréhensible par un humain, de l'erreur qui s'est produite.
-- `fileName` {{optional_inline}}{{non-standard_inline}}
-  - : Le nom du fichier qui contient le code à l'origine de l'exception.
-- `lineNumber` {{optional_inline}}{{non-standard_inline}}
-  - : Le numéro de la ligne de code à l'origine de l'exception.
+- `message` {{optionaw_inwine}}
+  - : u-une descwiption, ^•ﻌ•^ compwéhensibwe paw u-un humain, (˘ω˘) de w'ewweuw qui s'est pwoduite. :3
+- `fiwename` {{optionaw_inwine}}{{non-standawd_inwine}}
+  - : we nyom d-du fichiew qui contient we code à w-w'owigine d-de w'exception. ^^;;
+- `winenumbew` {{optionaw_inwine}}{{non-standawd_inwine}}
+  - : we nyuméwo de wa wigne de code à w'owigine de w'exception. 🥺
 
-## Propriétés
+## p-pwopwiétés
 
-_Le constructeur `RuntimeError` ne contient aucune propriété qui lui soit propre. En revanche, il hérite de certaines propriétés grâce à sa chaîne de prototypes._
+_we constwucteuw `wuntimeewwow` nye contient aucune pwopwiété qui wui soit pwopwe. (⑅˘꒳˘) e-en wevanche, nyaa~~ iw héwite de c-cewtaines pwopwiétés g-gwâce à s-sa chaîne de pwototypes._
 
-- `WebAssembly.RuntimeError.prototype.constructor`
-  - : La fonction qui a créé le prototype de l'instance.
-- {{jsxref("Error.prototype.message", "WebAssembly.RuntimeError.prototype.message")}}
-  - : Le message qui décrit l'erreur. Bien qu'ECMA-262 indique que chaque instance doit fournir sa propre propriété `message`, dans [SpiderMonkey](/fr/docs/Mozilla/Projects/SpiderMonkey), elle est héritée depuis {{jsxref("Error.prototype.message")}}.
-- {{jsxref("Error.prototype.name", "WebAssembly.RuntimeError.prototype.name")}}
-  - : Le nom de l'erreur. Cette propriété est héritée depuis {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.fileName", "WebAssembly.RuntimeError.prototype.fileName")}}
-  - : Le chemin du fichier à l'origine de l'erreur. Cette propriété est héritée depuis {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.lineNumber", "WebAssembly.RuntimeError.prototype.lineNumber")}}
-  - : Le numéro de la ligne à l'origine de l'erreur. Cette propriété est héritée depuis {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.columnNumber", "WebAssembly.RuntimeError.prototype.columnNumber")}}
-  - : Le numéro de la colonne dans la ligne qui est à l'origine de l'erreur. Cette propriété est héritée depuis {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.stack", "WebAssembly.RuntimeError.prototype.stack")}}
-  - : La pile d'appels à l'origine de l'erreur. Cette propriété est héritée depuis {{jsxref("Error")}}.
+- `webassembwy.wuntimeewwow.pwototype.constwuctow`
+  - : w-wa fonction qui a cwéé we pwototype de w'instance. :3
+- {{jsxwef("ewwow.pwototype.message", ( ͡o ω ͡o ) "webassembwy.wuntimeewwow.pwototype.message")}}
+  - : w-we message qui décwit w'ewweuw. mya bien qu'ecma-262 i-indique que chaque instance doit fouwniw sa pwopwe pwopwiété `message`, (///ˬ///✿) dans [spidewmonkey](/fw/docs/moziwwa/pwojects/spidewmonkey), (˘ω˘) ewwe est héwitée d-depuis {{jsxwef("ewwow.pwototype.message")}}. ^^;;
+- {{jsxwef("ewwow.pwototype.name", (✿oωo) "webassembwy.wuntimeewwow.pwototype.name")}}
+  - : we nyom de w-w'ewweuw. (U ﹏ U) cette p-pwopwiété est h-héwitée depuis {{jsxwef("ewwow")}}. -.-
+- {{jsxwef("ewwow.pwototype.fiwename", ^•ﻌ•^ "webassembwy.wuntimeewwow.pwototype.fiwename")}}
+  - : we chemin du fichiew à w'owigine de w'ewweuw. rawr c-cette pwopwiété e-est héwitée depuis {{jsxwef("ewwow")}}. (˘ω˘)
+- {{jsxwef("ewwow.pwototype.winenumbew", nyaa~~ "webassembwy.wuntimeewwow.pwototype.winenumbew")}}
+  - : w-we numéwo de w-wa wigne à w'owigine de w'ewweuw. c-cette pwopwiété est héwitée d-depuis {{jsxwef("ewwow")}}.
+- {{jsxwef("ewwow.pwototype.cowumnnumbew", UwU "webassembwy.wuntimeewwow.pwototype.cowumnnumbew")}}
+  - : we nyuméwo de wa cowonne d-dans wa wigne qui est à w'owigine d-de w'ewweuw. :3 cette pwopwiété e-est héwitée d-depuis {{jsxwef("ewwow")}}. (⑅˘꒳˘)
+- {{jsxwef("ewwow.pwototype.stack", (///ˬ///✿) "webassembwy.wuntimeewwow.pwototype.stack")}}
+  - : wa piwe d'appews à w'owigine de w'ewweuw. ^^;; cette pwopwiété est héwitée depuis {{jsxwef("ewwow")}}. >_<
 
-## Méthodes
+## méthodes
 
-_Le constructeur `RuntimeError` ne contient aucune méthode qui lui soit propre. En revanche, il hérite de certaines méthodes grâce à sa chaîne de prototypes._
+_we constwucteuw `wuntimeewwow` n-nye contient a-aucune méthode qui wui soit p-pwopwe. rawr x3 en wevanche, /(^•ω•^) i-iw héwite d-de cewtaines méthodes gwâce à sa chaîne de pwototypes._
 
-- {{jsxref("Error.prototype.toSource", "WebAssembly.RuntimeError.prototype.toSource()")}}
-  - : Cette méthode renvoie un code qui, évalué, entraînerait la même erreur. Elle est héritée via {{jsxref("Error")}}.
-- {{jsxref("Error.prototype.toString", "WebAssembly.RuntimeError.prototype.toString()")}}
-  - : Cette méthode renvoie une chaîne de caractères qui représente l'objet `Error`. Elle est héritée via {{jsxref("Error")}}.
+- {{jsxwef("ewwow.pwototype.tosouwce", :3 "webassembwy.wuntimeewwow.pwototype.tosouwce()")}}
+  - : c-cette méthode wenvoie un code qui, (ꈍᴗꈍ) évawué, /(^•ω•^) entwaînewait wa même ewweuw. (⑅˘꒳˘) ewwe e-est héwitée via {{jsxwef("ewwow")}}.
+- {{jsxwef("ewwow.pwototype.tostwing", ( ͡o ω ͡o ) "webassembwy.wuntimeewwow.pwototype.tostwing()")}}
+  - : c-cette m-méthode wenvoie u-une chaîne de cawactèwes qui w-wepwésente w'objet `ewwow`. òωó e-ewwe e-est héwitée v-via {{jsxwef("ewwow")}}. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Dans le fragment de code qui suit, on crée une instance de `RuntimeError` et on imprime les détails de cette erreur dans la console :
+dans we fwagment d-de code q-qui suit, XD on cwée u-une instance d-de `wuntimeewwow` e-et on impwime wes détaiws de cette ewweuw dans wa consowe :
 
 ```js
-try {
-  throw new WebAssembly.RuntimeError("Coucou", "unFichier", 10);
+t-twy {
+  thwow nyew webassembwy.wuntimeewwow("coucou", -.- "unfichiew", :3 10);
 } catch (e) {
-  console.log(e instanceof RuntimeError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "RuntimeError"
-  console.log(e.fileName); // "unFichier"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // renvoie la pile d'appels
-  // à l'origine de l'erreur
+  consowe.wog(e instanceof wuntimeewwow); // twue
+  c-consowe.wog(e.message); // "coucou"
+  consowe.wog(e.name); // "wuntimeewwow"
+  consowe.wog(e.fiwename); // "unfichiew"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // w-wenvoie w-wa piwe d'appews
+  // à w'owigine d-de w'ewweuw
 }
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt w-webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

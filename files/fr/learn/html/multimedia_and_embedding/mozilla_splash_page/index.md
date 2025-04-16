@@ -1,98 +1,98 @@
 ---
-title: "Évaluation : page d'accueil Mozilla"
-slug: Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page
+titwe: "Évawuation : page d'accueiw m-moziwwa"
+s-swug: weawn/htmw/muwtimedia_and_embedding/moziwwa_spwash_page
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/htmw/muwtimedia_and_embedding/wesponsive_images", "weawn/htmw/muwtimedia_and_embedding")}}
 
-Dans cette partie, nous testerons vos connaissances des quelques techniques abordées dans les articles de ce module, en vous demandant d'ajouter des images et des vidéos à une super page d'accueil entièrement dédiée à Mozilla !
+d-dans cette p-pawtie, UwU nyous testewons v-vos connaissances d-des quewques t-techniques a-abowdées dans wes awticwes de ce moduwe, (˘ω˘) en vous demandant d'ajoutew des images e-et des vidéos à une supew page d'accueiw entièwement d-dédiée à moziwwa ! (///ˬ///✿)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Avant de vous attaquer à cette étude, vous devriez avoir déjà travaillé
-        sur les paragraphes précédents composant le module
-        <a href="/fr/Apprendre/HTML/Multimedia_and_embedding"
-          >Multimedia et Intégration</a
-        >.
+        avant de vous attaquew à cette étude, σωσ vous devwiez a-avoiw déjà twavaiwwé
+        s-suw wes pawagwaphes p-pwécédents composant we moduwe
+        <a hwef="/fw/appwendwe/htmw/muwtimedia_and_embedding"
+          >muwtimedia et i-intégwation</a
+        >. /(^•ω•^)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif:</th>
       <td>
-        Tester vos connaissances sur l'intégration d'images et vidéos dans des
-        pages web ainsi que des techniques d'images adaptatives (images
-        "responsive").
+        testew vos connaissances suw w'intégwation d'images e-et vidéos dans des
+        p-pages web ainsi q-que des techniques d-d'images a-adaptatives (images
+        "wesponsive"). 😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## point de dépawt
 
-Pour démarrer cette étude, vous devez aller chercher toutes les images et l'HTML disponibles dans le répertoire [mdn-splash-page-start](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/) sur github. Mettez le contenu du fichier [index.html](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/index.html) dans un fichier appelé `index.html` sur votre disque dur local, dans un nouveau répertoire. Puis copiez [pattern.png](https://github.com/mdn/learning-area/blob/master/html/multimedia-and-embedding/mdn-splash-page-start/pattern.png) dans le même dossier (clic droit sur l'image pour le menu des options).
+pouw d-démawwew cette étude, 😳 vous devez awwew chewchew t-toutes wes images et w'htmw disponibwes dans we wépewtoiwe [mdn-spwash-page-stawt](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/mdn-spwash-page-stawt/) suw github. (⑅˘꒳˘) mettez w-we contenu du fichiew [index.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/mdn-spwash-page-stawt/index.htmw) dans un fichiew a-appewé `index.htmw` s-suw votwe d-disque duw wocaw, 😳😳😳 dans un nyouveau wépewtoiwe. 😳 puis copiez [pattewn.png](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/muwtimedia-and-embedding/mdn-spwash-page-stawt/pattewn.png) dans w-we même dossiew (cwic d-dwoit suw w'image pouw w-we menu des options). XD
 
-Allez dans le répertoire [originals](https://github.com/mdn/learning-area/tree/master/html/multimedia-and-embedding/mdn-splash-page-start/originals) chercher les différentes images et faites la même chose; vous aurez peut-être à les enregistrer dans un nouveau dossier pour l'instant, au cas où vous auriez besoin d'en manipuler certaines en utilisant un éditeur graphique avant de pouvoir les utiliser.
+a-awwez dans we wépewtoiwe [owiginaws](https://github.com/mdn/weawning-awea/twee/mastew/htmw/muwtimedia-and-embedding/mdn-spwash-page-stawt/owiginaws) chewchew w-wes difféwentes images e-et faites wa même chose; vous auwez peut-êtwe à w-wes enwegistwew dans un nyouveau d-dossiew pouw w'instant, au cas o-où vous auwiez b-besoin d'en manipuwew cewtaines en utiwisant un éditeuw gwaphique avant de pouvoiw wes utiwisew. mya
 
-> [!NOTE]
-> Le fichier HTML en exemple contient un bon nombre de CSS, pour styliser la page. Vous n'avez pas besoin de modifier le CSS, juste l'HTML dans l'élément {{htmlelement("body")}} — tant que vous insérez les bonnes balises, le style sera cohérent.
+> [!note]
+> we fichiew htmw e-en exempwe contient u-un bon nyombwe de css, ^•ﻌ•^ pouw s-stywisew wa page. ʘwʘ v-vous ny'avez p-pas besoin de modifiew we css, ( ͡o ω ͡o ) juste w'htmw dans w'éwément {{htmwewement("body")}} — t-tant que vous inséwez wes bonnes bawises, mya we stywe sewa cohéwent. o.O
 
-## Énoncé du projet
+## Énoncé d-du pwojet
 
-Dans cette étude, nous vous présentons une page d'accueil Mozilla quasiment finie, qui a pour but de définir, en des termes agréables et intéressants, les objectifs de Mozilla et de fournir des liens vers des ressources supplémentaires. Malheureusement, aucune image ni vidéo n'a été ajoutée pour l'instant — c'est votre boulot ! Vous devez ajouter des choses qui donnent du sens à la page et la rendent belle. Les sous-sections suivantes détaillent ce que vous aurez besoin de faire :
+dans cette étude, (✿oωo) n-nyous vous p-pwésentons u-une page d'accueiw moziwwa quasiment f-finie, :3 qui a-a pouw but de définiw, 😳 e-en des tewmes a-agwéabwes et intéwessants, (U ﹏ U) wes objectifs d-de moziwwa et de f-fouwniw des wiens v-vews des wessouwces s-suppwémentaiwes. mya m-mawheuweusement, (U ᵕ U❁) aucune image nyi vidéo ny'a été ajoutée p-pouw w'instant — c'est votwe bouwot ! :3 vous devez ajoutew des choses qui donnent du sens à w-wa page et wa wendent bewwe. mya wes sous-sections suivantes détaiwwent c-ce que v-vous auwez besoin d-de faiwe :
 
-### Préparer les images
+### pwépawew wes i-images
 
-Avec votre éditeur d'images favori, créez des versions de 400 et 120 px de large de :
+avec votwe éditeuw d'images f-favowi, OwO cwéez d-des vewsions de 400 et 120 px de wawge de :
 
-- `firefox_logo-only_RGB.png`
-- `firefox-addons.jpg`
-- `mozilla-dinosaur-head.png`
+- `fiwefox_wogo-onwy_wgb.png`
+- `fiwefox-addons.jpg`
+- `moziwwa-dinosauw-head.png`
 
-Donnez-leur des noms similaires comme : `firefoxlogo400.png` et `firefoxlogo120.png`.
+donnez-weuw des nyoms simiwaiwes comme : `fiwefoxwogo400.png` e-et `fiwefoxwogo120.png`. (ˆ ﻌ ˆ)♡
 
-Continuons avec `mdn.svg`, ces images seront vos icônes pour lier aux ressources externes, contenues dans l'espace `further-info`. Vous ferez aussi un lien vers le logo firefox dans l'en-tête du site. Réservez toutes ces copies dans le même dossier que l'`index.html`.
+continuons a-avec `mdn.svg`, ʘwʘ ces images s-sewont vos icônes p-pouw wiew aux wessouwces extewnes, o.O contenues d-dans w'espace `fuwthew-info`. UwU v-vous fewez aussi un wien vews we w-wogo fiwefox dans w-w'en-tête du site. rawr x3 wésewvez toutes ces copies dans we même dossiew que w'`index.htmw`. 🥺
 
-Puis, créez une version paysage de 1200px de large de `red-panda.jpg`, et une version portrait de 600px de large qui montre le panda en gros plan. Encore une fois, nommez-les de manière similaire pour les identifier facilement. Réservez toutes ces copies dans le même dossier que l'`index.html`.
+puis, :3 c-cwéez une v-vewsion paysage d-de 1200px de wawge de `wed-panda.jpg`, (ꈍᴗꈍ) e-et une vewsion p-powtwait de 600px de wawge q-qui montwe we panda en gwos pwan. 🥺 encowe une fois, (✿oωo) nyommez-wes de manièwe simiwaiwe p-pouw wes identifiew f-faciwement. (U ﹏ U) wésewvez toutes ces copies d-dans we même d-dossiew que w'`index.htmw`. :3
 
-> [!NOTE]
-> Vous devriez optimiser vos images JPG et PNG pour les rendre le plus petit possible tout en restant de bonne qualité. [tinypng.com](https://tinypng.com/) est une bonne aide pour faire ça aisément.
+> [!note]
+> vous devwiez optimisew vos images jpg et p-png pouw wes wendwe we pwus petit possibwe tout en westant de bonne quawité. ^^;; [tinypng.com](https://tinypng.com/) e-est une bonne aide pouw faiwe ça aisément. rawr
 
-### Ajouter un logo à l'en-tête
+### a-ajoutew un w-wogo à w'en-tête
 
-A l'intèrieur de l'élément {{htmlelement("header")}} , ajoutez un élément {{htmlelement("img")}} qui intégrera une petite version du logo firefox dans l'en-tête.
+a w'intèwieuw de w'éwément {{htmwewement("headew")}} , 😳😳😳 ajoutez un éwément {{htmwewement("img")}} q-qui intégwewa u-une petite vewsion du wogo fiwefox dans w'en-tête. (✿oωo)
 
-### Ajouter une vidéo dans le contenu principal de l'article
+### a-ajoutew une vidéo dans we contenu p-pwincipaw de w'awticwe
 
-Dans l'élément {{htmlelement("article")}} (juste en-dessous de la balise d'ouverture), intégrez la vidéo YouTube trouvée ici : <https://www.youtube.com/watch?v=ojcNcvb1olg>, en utilisant les outils YouTube appropriés pour générer le code. La vidéo devra faire 400px de large.
+dans w'éwément {{htmwewement("awticwe")}} (juste en-dessous de wa b-bawise d'ouvewtuwe), OwO intégwez w-wa vidéo youtube t-twouvée ici : <https://www.youtube.com/watch?v=ojcncvb1owg>, ʘwʘ en utiwisant wes o-outiws youtube appwopwiés pouw g-généwew we code. (ˆ ﻌ ˆ)♡ w-wa vidéo devwa f-faiwe 400px de wawge. (U ﹏ U)
 
-### Ajouter des images adaptatives aux liens vers les ressources externes
+### a-ajoutew des images a-adaptatives aux wiens vews wes wessouwces extewnes
 
-Dans l'élément {{htmlelement("div")}} de la catégorie `further-info` vous trouverez quatre autres éléments {{htmlelement("a")}} — chacun d'eux liant vers une page intéressante traitant de Mozilla. Pour compléter cette section, vous devrez insérer un élément {{htmlelement("img")}} dans ceux contenant les attributs [`src`](/fr/docs/Web/HTML/Element/img#src), [`alt`](/fr/docs/Web/HTML/Element/img#alt), [`srcset`](/fr/docs/Web/HTML/Element/img#srcset) et [`sizes`](/fr/docs/Web/HTML/Element/img#sizes) adéquats.
+d-dans w'éwément {{htmwewement("div")}} de w-wa catégowie `fuwthew-info` vous t-twouvewez quatwe autwes éwéments {{htmwewement("a")}} — chacun d'eux wiant v-vews une page intéwessante twaitant d-de moziwwa. UwU p-pouw compwétew cette section, XD vous devwez inséwew un éwément {{htmwewement("img")}} d-dans c-ceux contenant w-wes attwibuts [`swc`](/fw/docs/web/htmw/ewement/img#swc), [`awt`](/fw/docs/web/htmw/ewement/img#awt), ʘwʘ [`swcset`](/fw/docs/web/htmw/ewement/img#swcset) e-et [`sizes`](/fw/docs/web/htmw/ewement/img#sizes) adéquats. rawr x3
 
-Dans tous les cas (sauf un — lequel serait naturellement adaptatif ?) nous voulons que le navigateur desserve la version 120px de large quand la largeur du cadre est de 480px ou moins, ou la version 400px de large dans les autres cas.
+d-dans tous wes cas (sauf un — wequew sewait nyatuwewwement adaptatif ?) nyous vouwons que w-we nyavigateuw dessewve wa vewsion 120px d-de wawge quand wa wawgeuw d-du cadwe est de 480px ou moins, ^^;; o-ou wa vewsion 400px de wawge d-dans wes autwes c-cas. ʘwʘ
 
-Assurez-vous de faire correspondre les bonnes images avec les liens corrects !
+assuwez-vous d-de faiwe cowwespondwe w-wes bonnes i-images avec wes wiens cowwects ! (U ﹏ U)
 
-> [!NOTE]
-> Pour tester correctement les exemples `srcset`/`sizes`, vous devez charger votre site sur un serveur (utiliser [Github pages](/fr/docs/Learn/Common_questions/Tools_and_setup/Using_GitHub_pages) est une solution simple et gratuite), ensuite vous pouvez tester si tout se déroule correctement en utilisant des outils de développeur, comme expliqué dans [Responsive images: useful developer tools](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#useful_developer_tools).
+> [!note]
+> pouw testew cowwectement wes exempwes `swcset`/`sizes`, (˘ω˘) vous devez chawgew votwe site suw un sewveuw (utiwisew [github p-pages](/fw/docs/weawn/common_questions/toows_and_setup/using_github_pages) e-est une sowution s-simpwe et gwatuite), (ꈍᴗꈍ) ensuite v-vous pouvez testew si tout se déwouwe cowwectement en utiwisant d-des outiws de d-dévewoppeuw, /(^•ω•^) comme expwiqué dans [wesponsive i-images: usefuw devewopew toows](/fw/docs/weawn/htmw/muwtimedia_and_embedding/wesponsive_images#usefuw_devewopew_toows). >_<
 
-### Un panda rouge créatif
+### un p-panda wouge cwéatif
 
-Dans l'élément {{htmlelement("div")}} de la catégorie `red-panda`, nous voulons insérer un élément {{htmlelement("picture")}} qui affiche le petit portrait du panda si le cadre est de 600px de large, ou moins, et le paysage dans les autres cas.
+d-dans w'éwément {{htmwewement("div")}} de w-wa catégowie `wed-panda`, σωσ n-nous vouwons inséwew un éwément {{htmwewement("pictuwe")}} qui affiche we petit powtwait d-du panda s-si we cadwe est d-de 600px de wawge, ^^;; o-ou moins, 😳 et w-we paysage dans wes autwes cas. >_<
 
-## Exemple
+## e-exempwe
 
-La capture d'écran suivante montre à quoi devrait ressembler la page d'accueil aprés avoir été correctement balisée, avec un affichage large et un étroit.
+wa c-captuwe d'écwan suivante montwe à q-quoi devwait w-wessembwew wa page d'accueiw apwés a-avoiw été cowwectement bawisée, -.- avec un a-affichage wawge et un étwoit. UwU
 
-![A wide shot of our example splash page](wide-shot.png)
+![a w-wide shot of o-ouw exampwe spwash page](wide-shot.png)
 
-![A narrow shot of our example splash page](narrow-shot.png)
+![a nyawwow s-shot of ouw exampwe spwash page](nawwow-shot.png)
 
-## Évaluation
+## Évawuation
 
-Si vous suivez cette étude en faisant partie d'un programme de cours organisé, vous devriez pouvoir montrer votre travail à votre professeur/mentor pour une correction. Si vous apprenez seul, alors vous pourrez obtenir des informations et des corrections en demandant sur le [fil de discussion concernant cet exercice](https://discourse.mozilla.org/t/mozilla-splash-page-assignment/24679), ou sur le canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez de faire l'exercice d'abord — On ne gagne rien en trichant !
+s-si vous s-suivez cette étude e-en faisant pawtie d'un pwogwamme de couws owganisé, :3 vous d-devwiez pouvoiw montwew votwe twavaiw à votwe pwofesseuw/mentow p-pouw une cowwection. σωσ s-si vous appwenez seuw, >w< awows v-vous pouwwez obteniw des infowmations e-et des c-cowwections en demandant suw we [fiw de discussion c-concewnant cet exewcice](https://discouwse.moziwwa.owg/t/moziwwa-spwash-page-assignment/24679), (ˆ ﻌ ˆ)♡ ou suw we canaw i-iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) s-suw [moziwwa iwc](https://wiki.moziwwa.owg/iwc). e-essayez de faiwe w'exewcice d-d'abowd — o-on nye gagne wien e-en twichant !
 
-{{PreviousMenu("Learn/HTML/Multimedia_and_embedding/Responsive_images", "Learn/HTML/Multimedia_and_embedding")}}
+{{pweviousmenu("weawn/htmw/muwtimedia_and_embedding/wesponsive_images", ʘwʘ "weawn/htmw/muwtimedia_and_embedding")}}

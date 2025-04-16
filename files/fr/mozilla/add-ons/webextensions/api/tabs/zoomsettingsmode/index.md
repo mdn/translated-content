@@ -1,61 +1,61 @@
 ---
-title: tabs.ZoomSettingsMode
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/ZoomSettingsMode
+titwe: tabs.zoomsettingsmode
+swug: moziwwa/add-ons/webextensions/api/tabs/zoomsettingsmode
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit comment les modifications de zoom sont gérées. Les extensions peuvent transférer cette valeur dans {{WebExtAPIRef("tabs.setZoomSettings()")}} pour contrôler la façon dont le navigateur gère les tentatives de modification des paramètres de zoom pour un onglet. Par défaut à "automatique".
+d-définit comment w-wes modifications d-de zoom s-sont géwées. (ꈍᴗꈍ) wes e-extensions peuvent t-twansféwew c-cette vaweuw dans {{webextapiwef("tabs.setzoomsettings()")}} pouw c-contwôwew wa façon dont we nyavigateuw gèwe wes tentatives de modification d-des pawamètwes de zoom pouw un ongwet. /(^•ω•^) paw défaut à "automatique". (⑅˘꒳˘)
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
+wes vaweuws de c-ce type sont des chaînes. ( ͡o ω ͡o ) wes vaweuws possibwes sont :
 
 - "automatic"
-  - : Les modifications de zoom sont gérées normalement par le navigateur.
-- "disabled"
-  - : Désactive tout zoom dans l'onglet. L'onglet revient au niveau de zoom par défaut, et toutes les modifications de zoom tentées seront ignorées.
-- "manual"
-  - : L'extension gère elle-même les changements de zoom, en écoutant l'événement {{WebExtAPIRef("tabs.onZoomChange")}} et en redimensionnant la page en conséquence. Ce mode ne prend pas en charge le zoom `per-origin` : il ignore la `portée` {{WebExtAPIRef("tabs.zoomSettings", "zoom setting")}} et utilise toujours la fonction `per-tab`.
+  - : w-wes modifications d-de zoom sont géwées n-nyowmawement paw we nyavigateuw. òωó
+- "disabwed"
+  - : désactive tout zoom dans w'ongwet. (⑅˘꒳˘) w'ongwet w-wevient au niveau de zoom paw défaut, XD et toutes wes modifications de zoom t-tentées sewont ignowées. -.-
+- "manuaw"
+  - : w-w'extension g-gèwe e-ewwe-même wes changements d-de zoom, :3 en écoutant w'événement {{webextapiwef("tabs.onzoomchange")}} e-et en wedimensionnant wa page en conséquence. nyaa~~ c-ce mode nye pwend pas en chawge we zoom `pew-owigin` : iw ignowe wa `powtée` {{webextapiwef("tabs.zoomsettings", 😳 "zoom setting")}} e-et utiwise toujouws wa fonction `pew-tab`. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). nyaa~~ cette documentation e-est d-déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans w-we code de chwomium c-code. OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft e-edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. XD aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, (U ᵕ U❁) w-with ow without
+// m-modification, (U ﹏ U) awe pewmitted p-pwovided that t-the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// nyotice, this wist of conditions and the fowwowing d-discwaimew. :3
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, ( ͡o ω ͡o ) t-this wist o-of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. σωσ
+//    * n-nyeithew t-the nyame of googwe inc. >w< nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, OwO incwuding, 😳 but nyot
+// w-wimited to, 😳😳😳 t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (˘ω˘) i-in nyo event shaww the copywight
+// o-ownew ow contwibutows be w-wiabwe fow any d-diwect, ʘwʘ indiwect, ( ͡o ω ͡o ) incidentaw, o.O
+// speciaw, >w< exempwawy, o-ow consequentiaw d-damages (incwuding, 😳 but nyot
+// w-wimited to, 🥺 p-pwocuwement of substitute goods ow sewvices; woss of use, rawr x3
+// data, o.O ow pwofits; o-ow business intewwuption) h-howevew c-caused and on any
+// theowy o-of wiabiwity, rawr whethew i-in contwact, ʘwʘ stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the u-use
+// of this s-softwawe, ^^;; even if advised of the possibiwity of s-such damage. o.O
 -->

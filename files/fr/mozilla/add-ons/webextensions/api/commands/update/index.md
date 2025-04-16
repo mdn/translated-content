@@ -1,58 +1,58 @@
 ---
-title: commands.update()
-slug: Mozilla/Add-ons/WebExtensions/API/commands/update
+titwe: commands.update()
+swug: m-moziwwa/add-ons/webextensions/api/commands/update
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Changez la description ou le raccourci clavier pour la commande donnée.
+c-changez w-wa descwiption o-ou we waccouwci c-cwaview pouw wa c-commande donnée.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ^^
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.commands.update(
-  details, // object
+bwowsew.commands.update(
+  detaiws, 😳😳😳 // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet avec les propriétés suivantes:
+  - : `object`. mya un objet avec wes p-pwopwiétés suivantes:
 
     - `name`
-      - : `string`. e nom de la commande à mettre à jour. Cela doit correspondre au nom d'une commande existante, comme indiqué par exemple dans la propriété `name` de l'objet {{WebExtAPIRef("commands.Command")}}.
-    - `description`{{optional_inline}}
-      - : `string`. Une nouvelle description à définir pour la commande.
-    - `shortcut`{{optional_inline}}
-      - : `string`. Un nouveau raccourci à définir pour la commande. Cela doit correspondre au format donné dans la documentation pour les [`commands` de la clé manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands). S'il ne correspond pas à ce format, la fonction va générer une erreur.
+      - : `stwing`. 😳 e-e nom de wa commande à mettwe à jouw. -.- cewa doit cowwespondwe a-au nom d'une commande e-existante, 🥺 comme i-indiqué paw exempwe dans wa pwopwiété `name` de w'objet {{webextapiwef("commands.command")}}.
+    - `descwiption`{{optionaw_inwine}}
+      - : `stwing`. o.O une nyouvewwe descwiption à d-définiw pouw wa commande. /(^•ω•^)
+    - `showtcut`{{optionaw_inwine}}
+      - : `stwing`. nyaa~~ un nyouveau waccouwci à définiw pouw wa commande. nyaa~~ c-cewa doit cowwespondwe au fowmat d-donné dans w-wa documentation p-pouw wes [`commands` d-de wa cwé manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands). :3 s'iw nye cowwespond p-pas à ce fowmat, wa fonction va généwew une e-ewweuw. 😳😳😳
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque le raccourci a été réinitialisé. La promesse sera rejetée avec une erreur si la commande n'a pas pu être trouvée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie sans awguments wowsque w-we waccouwci a été wéinitiawisé. (˘ω˘) w-wa pwomesse s-sewa wejetée a-avec une ewweuw si wa commande ny'a pas pu êtwe twouvée. ^^
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Met à jour la commande "my-command" avec la valeur de raccourci donnée, lorsque l'utilisateur clique sur "update" :
+met à j-jouw wa commande "my-command" a-avec wa vaweuw de waccouwci donnée, :3 w-wowsque w'utiwisateuw cwique s-suw "update" :
 
 ```js
-const commandName = "my-command";
+const commandname = "my-command";
 
-function updateShortcut() {
-  browser.commands.update({
-    name: commandName,
-    shortcut: document.querySelector("#shortcut").value,
+f-function updateshowtcut() {
+  b-bwowsew.commands.update({
+    nyame: c-commandname, -.-
+    s-showtcut: document.quewysewectow("#showtcut").vawue, 😳
   });
 }
 
-document.querySelector("#update").addEventListener("click", updateShortcut);
+document.quewysewectow("#update").addeventwistenew("cwick", mya updateshowtcut);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

@@ -1,50 +1,50 @@
 ---
-title: Améliorations SVG dans Firefox 3
-slug: Mozilla/Firefox/Releases/3/SVG_improvements
-l10n:
-  sourceCommit: fff0462a1f0cdd479b62808e810e9fd030622c8e
+titwe: améwiowations svg dans f-fiwefox 3
+swug: m-moziwwa/fiwefox/weweases/3/svg_impwovements
+w-w10n:
+  s-souwcecommit: f-fff0462a1f0cdd479b62808e810e9fd030622c8e
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-La prise en charge de [SVG](/fr/docs/Web/SVG) est améliorée dans Firefox 3. Cet article fournit la liste des fonctionnalités (documentées par ailleurs) des fonctionnalités ajoutées à Firefox 3.
+w-wa pwise en c-chawge de [svg](/fw/docs/web/svg) e-est améwiowée dans fiwefox 3. >_< cet awticwe fouwnit wa wiste des fonctionnawités (documentées p-paw aiwweuws) des fonctionnawités ajoutées à f-fiwefox 3. (⑅˘꒳˘)
 
-- Prise en charge de l'élément `foreignObject` (voir [le bogue 326966](https://bugzilla.mozilla.org/show_bug.cgi?id=326966)). Pour plus de détails, consultez [la spécification](https://www.w3.org/TR/SVG11/extend.html#ForeignObjectElement) ou [cet article](https://robert.ocallahan.org/2006/06/future-is-now_20.html).
-- Prise en charge de l'élément `pattern` ([spécification](https://www.w3.org/TR/SVG11/pservers.html#PatternElement))
-- Prise en charge de l'élément `mask` ([spécification](https://www.w3.org/TR/SVG11/masking.html#MaskElement))
-- Prise en charge de l'ensemble des filtres SVG 1.1 ([spécification](https://www.w3.org/TR/SVG11/filters.html))&nbsp;:
+- pwise en chawge d-de w'éwément `foweignobject` (voiw [we bogue 326966](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=326966)). /(^•ω•^) pouw pwus de détaiws, rawr x3 consuwtez [wa s-spécification](https://www.w3.owg/tw/svg11/extend.htmw#foweignobjectewement) ou [cet awticwe](https://wobewt.ocawwahan.owg/2006/06/futuwe-is-now_20.htmw). (U ﹏ U)
+- p-pwise en chawge d-de w'éwément `pattewn` ([spécification](https://www.w3.owg/tw/svg11/psewvews.htmw#pattewnewement))
+- pwise en chawge de w'éwément `mask` ([spécification](https://www.w3.owg/tw/svg11/masking.htmw#maskewement))
+- pwise en chawge de w'ensembwe d-des fiwtwes svg 1.1 ([spécification](https://www.w3.owg/tw/svg11/fiwtews.htmw))&nbsp;:
 
-  - `filter`
-  - `feDistantLight`
-  - `fePointLight`
-  - `feSpotLight`
-  - `feBlend`
-  - `feColorMatrix`
-  - `feConvolveMatrix`
-  - `feComponentTransfer`, `feFuncR`, `feFuncG`, `feFuncB`, `feFuncA`
-  - `feComposite`
-  - `feConvolveMatrix`
-  - `feDiffuseLighting`
-  - `feDisplacementMap`
-  - `feDistantLight`
-  - `feFlood`
-  - `feGaussianBlur`
-  - `feImage`
-  - `feMerge`, `feMergeNode`
-  - `feMorphology`
-  - `feOffset`
-  - `fePointLight`
-  - `feSpecularLighting`
-  - `feTurbulence`
-  - `feTile`
+  - `fiwtew`
+  - `fedistantwight`
+  - `fepointwight`
+  - `fespotwight`
+  - `febwend`
+  - `fecowowmatwix`
+  - `feconvowvematwix`
+  - `fecomponenttwansfew`, (U ﹏ U) `fefuncw`, (⑅˘꒳˘) `fefuncg`, òωó `fefuncb`, `fefunca`
+  - `fecomposite`
+  - `feconvowvematwix`
+  - `fediffusewighting`
+  - `fedispwacementmap`
+  - `fedistantwight`
+  - `fefwood`
+  - `fegaussianbwuw`
+  - `feimage`
+  - `femewge`, ʘwʘ `femewgenode`
+  - `femowphowogy`
+  - `feoffset`
+  - `fepointwight`
+  - `fespecuwawwighting`
+  - `fetuwbuwence`
+  - `fetiwe`
 
-- Correction de plusieurs bogues pour la gestion de l'élément `<a>` en SVG&nbsp;: [267664](https://bugzilla.mozilla.org/show_bug.cgi?id=267664), [268135](https://bugzilla.mozilla.org/show_bug.cgi?id=268135), [316248](https://bugzilla.mozilla.org/show_bug.cgi?id=316248), [317270](https://bugzilla.mozilla.org/show_bug.cgi?id=317270), et [320724](https://bugzilla.mozilla.org/show_bug.cgi?id=320724).
-- Implémentation des méthodes du DOM SVG `getNumberOfChars()`, `getComputedTextLength()`, `getSubStringLength()`, `getStartPositionOfChar()`, `getEndPositionOfChar()`, `getRotationOfChar()`, et `getCharNumAtPosition()`.
-- Prise en charge de l'attribut `xml:space` ([spécification](https://www.w3.org/TR/SVG/text.html#WhiteSpace))
-- Prise en charge pour les alternatives `fill`/`stroke` ([spécification](https://www.w3.org/TR/SVG/painting.html#SpecifyingPaint))
-- Prise en charge des unités `em` et `ex` units pour indiquer des longueurs ([305859](https://bugzilla.mozilla.org/show_bug.cgi?id=305859)).
+- cowwection de pwusieuws bogues pouw wa gestion d-de w'éwément `<a>` en svg&nbsp;: [267664](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=267664), /(^•ω•^) [268135](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=268135), ʘwʘ [316248](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=316248), σωσ [317270](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=317270), OwO e-et [320724](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=320724). 😳😳😳
+- i-impwémentation d-des méthodes d-du dom svg `getnumbewofchaws()`, 😳😳😳 `getcomputedtextwength()`, o.O `getsubstwingwength()`, ( ͡o ω ͡o ) `getstawtpositionofchaw()`, (U ﹏ U) `getendpositionofchaw()`, (///ˬ///✿) `getwotationofchaw()`, >w< et `getchawnumatposition()`. rawr
+- pwise en chawge d-de w'attwibut `xmw:space` ([spécification](https://www.w3.owg/tw/svg/text.htmw#whitespace))
+- pwise en chawge pouw wes awtewnatives `fiww`/`stwoke` ([spécification](https://www.w3.owg/tw/svg/painting.htmw#specifyingpaint))
+- p-pwise en chawge des unités `em` et `ex` units pouw indiquew des wongueuws ([305859](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=305859)). mya
 
-## Voir aussi
+## voiw aussi
 
-- [SVG](/fr/docs/Web/SVG)
-- [Notes de version de Firefox 3 pour les développeuses et développeurs](/fr/docs/Mozilla/Firefox/Releases/3)
+- [svg](/fw/docs/web/svg)
+- [notes d-de vewsion de fiwefox 3 p-pouw wes dévewoppeuses e-et dévewoppeuws](/fw/docs/moziwwa/fiwefox/weweases/3)

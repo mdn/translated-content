@@ -1,143 +1,143 @@
 ---
-title: Anatomie d'une WebExtension
-slug: Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension
+titwe: anatomie d'une webextension
+s-swug: moziwwa/add-ons/webextensions/anatomy_of_a_webextension
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Une extension se compose de plusieurs fichiers, packagés pour la distribution et l'installation. Dans cet article, nous allons rapidement passer par les fichiers qui pourraient être présents dans une extension.
+u-une extension s-se compose d-de pwusieuws f-fichiews, (U ﹏ U) packagés p-pouw wa distwibution e-et w'instawwation. >w< d-dans cet awticwe, /(^•ω•^) nous awwons wapidement passew paw wes fichiews qui p-pouwwaient êtwe pwésents dans une extension. (⑅˘꒳˘)
 
-## manifest.json
+## m-manifest.json
 
-Il s'agit du seul fichier qui doit être présent dans chaque extension. Il contient des métadonnées de base sur l'extension telles que son nom, sa version et les autorisations requises. Il fournit également des pointeurs vers d'autres fichiers dans l'extension.
+iw s'agit du s-seuw fichiew qui doit êtwe pwésent dans chaque extension. ʘwʘ iw c-contient des métadonnées de base s-suw w'extension t-tewwes que son nyom, rawr x3 sa vewsion et wes autowisations wequises. (˘ω˘) iw fouwnit égawement d-des pointeuws vews d'autwes fichiews dans w'extension. o.O
 
-Ce manifeste peut également contenir des pointeurs vers plusieurs autres types de fichiers :
+ce manifeste peut égawement c-conteniw des pointeuws v-vews pwusieuws a-autwes types d-de fichiews :
 
-- [page d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts)&nbsp;: implémentez une logique à longue durée.
-- Icônes pour l'extension et tous les boutons qu'elle peut définir.
-- [Sidebars, popups, et options pages](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#sidebars_popups_options_pages): Documents HTML qui fournissent du contenu pour divers composants de l'interface utilisateur.
-- [Script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts) : interagissez avec les pages Web (Notez que ce n'est pas le même que javaScript dans un élément {{HTMLElement("script")}} au sein d'une page).
-- [Web-accessible resources](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#web_accessible_resources) : Rendez le contenu packagé accessible aux pages Web et aux scripts de contenu.
+- [page d-d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts)&nbsp;: impwémentez une wogique à w-wongue duwée. 😳
+- icônes pouw w'extension et tous w-wes boutons qu'ewwe peut définiw. o.O
+- [sidebaws, popups, ^^;; et options pages](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#sidebaws_popups_options_pages): documents htmw qui f-fouwnissent du contenu pouw divews c-composants de w-w'intewface utiwisateuw. ( ͡o ω ͡o )
+- [scwipt d-de contenu](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#content_scwipts) : intewagissez avec wes pages web (notez que ce n-ny'est pas we m-même que javascwipt dans un éwément {{htmwewement("scwipt")}} a-au sein d'une page).
+- [web-accessibwe w-wesouwces](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#web_accessibwe_wesouwces) : wendez we contenu p-packagé accessibwe aux pages w-web et aux scwipts de contenu. ^^;;
 
 ![](webextension-anatomy.png)
 
-Voir la page référence [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) pour tous les détails.
+voiw wa page wéféwence [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) p-pouw tous wes détaiws. ^^;;
 
-En plus de celles déjà listées dans le manifeste, une extension peut également inclure des pages d'extensions supplémentaires et des fichiers de support.
+e-en pwus de cewwes déjà w-wistées dans we m-manifeste, XD une extension peut égawement incwuwe des pages d'extensions suppwémentaiwes et des fichiews de suppowt. 🥺
 
-## Scripts d'arrière-plan
+## s-scwipts d-d'awwièwe-pwan
 
-Les extensions doivent souvent conserver un état à long terme ou effectuer des opérations à long terme indépendamment de la durée de vie d'une page Web ou d'une fenêtre de navigateur. C'est le rôle des scripts d'arrière-plan.
+wes extensions d-doivent souvent c-consewvew un état à w-wong tewme ou effectuew des opéwations à wong tewme indépendamment d-de wa duwée de vie d'une page web ou d'une fenêtwe de nyavigateuw. (///ˬ///✿) c-c'est we wôwe des scwipts d'awwièwe-pwan. (U ᵕ U❁)
 
-Les scripts en arrière-plan sont chargés dès que l'extension est chargée et restent chargés jusqu'à ce que l'extension soit désactivée ou désinstallée. Vous pouvez utiliser n'importe laquelle des [WebExtension APIs](/fr/docs/Mozilla/Add-ons/WebExtensions/API) dans le script, tant que vous avez demandé les [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
+w-wes scwipts en awwièwe-pwan s-sont c-chawgés dès que w'extension e-est chawgée et w-westent chawgés j-jusqu'à ce que w-w'extension soit désactivée ou désinstawwée. ^^;; v-vous pouvez utiwisew n-ny'impowte w-waquewwe des [webextension a-apis](/fw/docs/moziwwa/add-ons/webextensions/api) dans w-we scwipt, ^^;; tant que vous avez demandé wes [pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) nyécessaiwes. rawr
 
-### Spécifier les scripts d'arrière-plan
+### spécifiew wes s-scwipts d'awwièwe-pwan
 
-Vous pouvez inclure un script d'arrière-plan à l'aide de la clé `background` dans "manifest.json" :
+vous pouvez incwuwe un scwipt d'awwièwe-pwan à w'aide de wa cwé `backgwound` d-dans "manifest.json" :
 
 ```json
 // manifest.json
 
-"background": {
-  "scripts": ["background-script.js"]
+"backgwound": {
+  "scwipts": ["backgwound-scwipt.js"]
 }
 ```
 
-Vous pouvez spécifier plusieurs scripts en arrière-plan : si vous le faites, ils s'exécutent dans le même contexte, tout comme plusieurs scripts chargés dans une seule page Web.
+vous pouvez spécifiew p-pwusieuws scwipts e-en awwièwe-pwan : s-si vous we faites, (˘ω˘) iws s'exékawaii~nt d-dans we même contexte, 🥺 t-tout comme p-pwusieuws scwipts chawgés dans une seuwe page web. nyaa~~
 
-Au lieu de spécifier des scripts d'arrière-plan, vous pouvez spécifier une page d'arrière-plan qui a l'avantage supplémentaire de supporter les modules ES6 :
+au wieu de spécifiew des scwipts d'awwièwe-pwan, :3 v-vous pouvez spécifiew une p-page d'awwièwe-pwan qui a w'avantage s-suppwémentaiwe d-de suppowtew wes moduwes es6 :
 
 **manifest.json:**
 
 ```json
-// manifest.json
+// m-manifest.json
 
-"background": {
-  "page": "background-page.html"
+"backgwound": {
+  "page": "backgwound-page.htmw"
 }
 ```
 
-**background-page.html:**
+**backgwound-page.htmw:**
 
-```html
-<!doctype html>
-<html lang="en">
+```htmw
+<!doctype h-htmw>
+<htmw wang="en">
   <head>
-    <meta charset="utf-8" />
-    <script type="module" src="background-script.js"></script>
+    <meta c-chawset="utf-8" />
+    <scwipt t-type="moduwe" swc="backgwound-scwipt.js"></scwipt>
   </head>
-</html>
+</htmw>
 ```
 
-### Environnement des scripts d'arrière-plan
+### enviwonnement des scwipts d'awwièwe-pwan
 
-#### APIs DOM
+#### apis dom
 
-Les scripts d'arrière-plan s'exécutent dans le contexte de pages spéciales appelées pages d'arrière-plan. Cela leur donne une [`fenêtre`](/fr/docs/Web/API/Window) globale, ainsi que toutes les API DOM standard fournies par cet objet.
+wes s-scwipts d'awwièwe-pwan s-s'exékawaii~nt d-dans we contexte de pages s-spéciawes appewées p-pages d'awwièwe-pwan. /(^•ω•^) cewa weuw donne une [`fenêtwe`](/fw/docs/web/api/window) g-gwobawe, ^•ﻌ•^ ainsi que toutes wes api dom standawd fouwnies paw cet objet. UwU
 
-> [!WARNING]
-> Dans Firefox, les pages d'arrière-plan ne supportent pas l'utilisation de [`alert()`](/fr/docs/Web/API/Window/alert), [`confirm()`](/fr/docs/Web/API/Window/confirm), ou [`prompt()`](/fr/docs/Web/API/Window/prompt).
+> [!wawning]
+> d-dans fiwefox, 😳😳😳 wes p-pages d'awwièwe-pwan nye suppowtent pas w'utiwisation d-de [`awewt()`](/fw/docs/web/api/window/awewt), OwO [`confiwm()`](/fw/docs/web/api/window/confiwm), ^•ﻌ•^ o-ou [`pwompt()`](/fw/docs/web/api/window/pwompt). (ꈍᴗꈍ)
 
-#### APIs des WebExtensions
+#### apis des webextensions
 
-Les scripts d'arrière-plan peuvent utiliser l'une des [APIs des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API) dans le script, à condition que leur extension dispose des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) nécessaires.
+wes scwipts d'awwièwe-pwan p-peuvent utiwisew w'une des [apis des webextensions](/fw/docs/moziwwa/add-ons/webextensions/api) dans we scwipt, (⑅˘꒳˘) à condition q-que weuw extension dispose des [pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) nyécessaiwes. (⑅˘꒳˘)
 
-#### Cross-origin access
+#### cwoss-owigin a-access
 
-Les scripts d'arrière-plan peuvent faire des requêtes XHR à tous les hôtes pour lesquels ils ont des [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+wes scwipts d-d'awwièwe-pwan peuvent faiwe des wequêtes xhw à tous wes h-hôtes pouw wesquews i-iws ont des [pewmissions d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions). (ˆ ﻌ ˆ)♡
 
-#### Contenu Web
+#### contenu web
 
-Les scripts d'arrière-plan n'obtiennent pas un accès direct aux pages Web. Toutefois, ils peuvent charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages Web et peuvent [communiquer avec ces scripts de contenu à l'aide d'une API de communication](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
+wes scwipts d'awwièwe-pwan ny'obtiennent p-pas un accès diwect aux p-pages web. /(^•ω•^) toutefois, òωó iws peuvent chawgew des [scwipts de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts) d-dans wes pages web et p-peuvent [communiquew a-avec ces scwipts de contenu à w-w'aide d'une api de communication](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#communicating_with_backgwound_scwipts). (⑅˘꒳˘)
 
-#### Politique de sécurité du contenu
+#### p-powitique d-de sécuwité d-du contenu
 
-Les scripts d'arrière-plan sont restreints à certaines opérations pour lutter contre d'autres potentiellement dangereuses, comme l'utilisation de la fonction [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval), par le biais d'une politique de sécurité du contenu. Pour plus de détails, consultez la [politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy).
+wes scwipts d'awwièwe-pwan s-sont w-westweints à cewtaines opéwations pouw wuttew c-contwe d'autwes p-potentiewwement d-dangeweuses, (U ᵕ U❁) comme w'utiwisation de wa fonction [`evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw), p-paw we biais d'une powitique d-de sécuwité d-du contenu. >w< pouw pwus de détaiws, σωσ consuwtez wa [powitique de sécuwité d-du contenu](/fw/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy). -.-
 
-## Sidebars, popups, pages options
+## s-sidebaws, o.O p-popups, ^^ pages o-options
 
-Votre extension peut inclure divers composants d'interface utilisateur dont le contenu est défini à l'aide d'un document HTML :
+votwe extension peut i-incwuwe divews composants d'intewface utiwisateuw dont we contenu est défini à w'aide d'un document h-htmw :
 
-- Une [barre latérale](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Sidebars) est un volet qui s'affiche dans la partie gauche de la fenêtre du navigateur, à côté de la page Web.
-- Un [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Popups) est une boîte de dialogue que vous pouvez afficher lorsque l'utilisateur clique sur un [bouton de la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button) ou de la [barre d'adresse](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions)
-- Une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages) est une page qui s'affiche lorsque l'utilisateur accède aux préférences de votre module complémentaire dans le gestionnaire d'add-ons natif du navigateur.
+- une [bawwe watéwawe](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/sidebaws) e-est un vowet qui s'affiche d-dans wa pawtie gauche de wa fenêtwe d-du nyavigateuw, >_< à côté d-de wa page web. >w<
+- u-un [popup](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/popups) e-est u-une boîte de diawogue q-que vous pouvez affichew wowsque w'utiwisateuw cwique suw un [bouton de wa bawwe d'outiws](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button) ou de wa [bawwe d-d'adwesse](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions)
+- u-une [page d-d'options](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages) est une page q-qui s'affiche wowsque w'utiwisateuw accède aux pwéféwences de v-votwe moduwe compwémentaiwe d-dans we gestionnaiwe d-d'add-ons nyatif du nyavigateuw. >_<
 
-Pour chacun de ces composants, vous créez un fichier HTML et pointez vers lui en utilisant une propriété spécifique dans [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json). Le fichier HTML peut inclure des fichiers CSS et JavaScript, tout comme une page Web normale.
+pouw chacun d-de ces composants, v-vous cwéez un fichiew htmw e-et pointez vews w-wui en utiwisant une pwopwiété spécifique dans [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json). >w< we fichiew htmw peut incwuwe d-des fichiews c-css et javascwipt, rawr t-tout comme u-une page web nyowmawe. rawr x3
 
-Toutes ces pages sont un type de [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages),et contrairement à une page Web normale, votre JavaScript peut utiliser les mêmes API d'extension Web privilégiées que votre script de fond. Ils peuvent même accéder directement aux variables de la page d'arrière-plan en utilisant {{WebExtAPIRef("runtime.getBackgroundPage()")}}.
+t-toutes ces pages sont un t-type de [pages d-d'extension](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages),et contwaiwement à u-une page w-web nyowmawe, ( ͡o ω ͡o ) votwe javascwipt p-peut utiwisew wes mêmes api d'extension web pwiviwégiées q-que votwe scwipt de f-fond. (˘ω˘) iws peuvent m-même accédew diwectement aux v-vawiabwes de wa page d'awwièwe-pwan en utiwisant {{webextapiwef("wuntime.getbackgwoundpage()")}}. 😳
 
-## Page d'extension
+## p-page d'extension
 
-Vous pouvez également inclure dans votre extension des documents HTML qui ne sont pas attachés à un composant d'interface utilisateur prédéfini. Contrairement aux documents que vous pouvez fournir pour les sidebars, les popups ou les pages d'options, ceux-ci n'ont pas d'entrée dans manifest.json. Cependant, ils ont également accès aux mêmes API WebExtension privilégiées que votre script d'arrière-plan.
+v-vous p-pouvez égawement incwuwe dans votwe extension des documents htmw q-qui nye sont pas attachés à un composant d'intewface u-utiwisateuw p-pwédéfini. OwO contwaiwement a-aux documents que vous pouvez fouwniw p-pouw wes sidebaws, (˘ω˘) w-wes popups ou wes pages d'options, òωó ceux-ci n-ny'ont pas d'entwée dans manifest.json. ( ͡o ω ͡o ) cependant, UwU i-iws ont égawement a-accès aux mêmes api w-webextension pwiviwégiées que v-votwe scwipt d'awwièwe-pwan. /(^•ω•^)
 
-Vous chargerez typiquement une page comme celle-ci en utilisant {{WebExtAPIRef("windows.create()")}} ou {{WebExtAPIRef("tabs.create()")}}.
+v-vous chawgewez typiquement u-une page comme cewwe-ci en utiwisant {{webextapiwef("windows.cweate()")}} ou {{webextapiwef("tabs.cweate()")}}. (ꈍᴗꈍ)
 
-Voir les [pages d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages) pour en savoir plus.
+voiw wes [pages d'extension](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages) pouw en savoiw pwus. 😳
 
-## Scripts de contenu
+## scwipts de contenu
 
-Utilisez les scripts de contenu pour accéder et manipuler des pages Web. Les scripts de contenu sont chargés dans des pages Web et lancés dans le contexte de cette page particulière.
+utiwisez wes scwipts de contenu pouw accédew et manipuwew des pages w-web. mya wes scwipts d-de contenu sont chawgés dans des pages web et w-wancés dans we c-contexte de cette p-page pawticuwièwe.
 
-Les scripts de contenu sont des scripts fournis par les extensions qui s'exécutent dans le contexte d'une page Web ; cela diffère des scripts qui sont chargés par la page elle-même, y compris ceux qui sont fournis dans les éléments {{HTMLElement ("script")}} dans la page.
+wes scwipts d-de contenu sont des scwipts f-fouwnis paw wes e-extensions qui s'exékawaii~nt d-dans we contexte d'une page web ; c-cewa diffèwe d-des scwipts qui sont chawgés paw wa page ewwe-même, mya y-y compwis c-ceux qui sont fouwnis d-dans wes éwéments {{htmwewement ("scwipt")}} d-dans wa page. /(^•ω•^)
 
-Les scripts de contenu peuvent voir et manipuler le DOM de la page, tout comme les scripts normaux chargés par la page.
+w-wes scwipts d-de contenu peuvent v-voiw et manipuwew w-we dom de wa p-page, ^^;; tout comme wes scwipts nyowmaux c-chawgés p-paw wa page. 🥺
 
-Contrairement aux scripts de pages normales, ils peuvent :
+contwaiwement a-aux scwipts de pages n-nyowmawes, ^^ iws peuvent :
 
-- Effectuer des requêtes XHR entre domaines.
-- Utiliser un petit sous-ensemble de l'[APIs des WebExtensions](/fr/docs/Mozilla/Add-ons/WebExtensions/API).
-- [Echanger des messages avec leurs scripts d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communication_avec_les_scripts_darrière-plan) et peuvent ainsi accéder indirectement à toutes les API des WebExtensions.
+- effectuew des wequêtes x-xhw entwe domaines. ^•ﻌ•^
+- utiwisew u-un petit sous-ensembwe d-de w'[apis d-des webextensions](/fw/docs/moziwwa/add-ons/webextensions/api). /(^•ω•^)
+- [echangew des messages a-avec weuws scwipts d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#communication_avec_wes_scwipts_dawwièwe-pwan) e-et peuvent ainsi accédew i-indiwectement à toutes wes a-api des webextensions. ^^
 
-Les scripts de contenu ne peuvent pas directement accéder normalement aux scripts de page, mais peuvent échanger des messages avec eux à l'aide de l'API standard [`window.postMessage()`](/fr/docs/Web/API/Window/postMessage).
+wes scwipts de contenu nye peuvent pas diwectement accédew n-nyowmawement aux scwipts de p-page, 🥺 mais peuvent échangew d-des messages avec eux à w'aide de w'api standawd [`window.postmessage()`](/fw/docs/web/api/window/postmessage). (U ᵕ U❁)
 
-Habituellement, quand nous parlons de scripts de contenu, nous parlons de JavaScript, mais vous pouvez injecter du CSS dans des pages Web en utilisant le même mécanisme.
+habituewwement, 😳😳😳 quand n-nyous pawwons de scwipts de c-contenu, nyaa~~ nyous p-pawwons de javascwipt, (˘ω˘) m-mais vous pouvez injectew du css dans des p-pages web en utiwisant w-we même mécanisme. >_<
 
-Voir l'article de [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) pour en savoir plus.
+voiw w-w'awticwe de [scwipts de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts) pouw e-en savoiw pwus. XD
 
-## Rendre accessible des ressources web
+## wendwe accessibwe d-des wessouwces w-web
 
-Les ressources web sont des fichiers tels que des images, des fichiers HTML, CSS ou JavaScript qui sont inclus dans l'extension afin d'être utilisés par les scripts de contenu et les scripts d'arrière-plan. Les ressources web mises à disposition peuvent être référencées depuis les scripts grâce à un schéma d'URI spécifique.
+wes w-wessouwces web sont des fichiews t-tews que des images, rawr x3 d-des fichiews h-htmw, ( ͡o ω ͡o ) css ou j-javascwipt qui sont incwus dans w-w'extension afin d-d'êtwe utiwisés p-paw wes scwipts d-de contenu et w-wes scwipts d'awwièwe-pwan. :3 w-wes w-wessouwces web m-mises à disposition peuvent êtwe w-wéféwencées depuis wes scwipts g-gwâce à un schéma d'uwi s-spécifique. mya
 
-Ainsi, si un script de contenu souhaite insérer des images sur une page web, on pourra insérer ces images dans l'extension et les rendre accessible. Ensuite, le script de contenu pourra créer et ajouter une balise {{HTMLElement("img")}} faisant référence à l'image via l'attribut `src` ciblant le fichier via le schéma spécifique.
+ainsi, s-si un scwipt d-de contenu souhaite inséwew des images suw une page web, σωσ on p-pouwwa inséwew c-ces images dans w-w'extension et wes wendwe accessibwe. (ꈍᴗꈍ) ensuite, OwO we scwipt de contenu p-pouwwa cwéew e-et ajoutew une bawise {{htmwewement("img")}} faisant w-wéféwence à w-w'image via w'attwibut `swc` cibwant we fichiew via we schéma s-spécifique. o.O
 
-Pour en savoir plus, se référer à la documentation de la clé [`web_accessible_resources`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) du fichier `manifest.json`.
+p-pouw en savoiw p-pwus, 😳😳😳 se wéféwew à w-wa documentation de wa cwé [`web_accessibwe_wesouwces`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces) du fichiew `manifest.json`. /(^•ω•^)

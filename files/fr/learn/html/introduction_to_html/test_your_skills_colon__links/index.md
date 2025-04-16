@@ -1,73 +1,73 @@
 ---
-title: "Testez vos compétences : les liens"
-slug: Learn/HTML/Introduction_to_HTML/Test_your_skills:_Links
-l10n:
-  sourceCommit: c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
+titwe: "testez vos compétences : w-wes wiens"
+s-swug: weawn/htmw/intwoduction_to_htmw/test_youw_skiwws:_winks
+w-w10n:
+  s-souwcecommit: c-c64e813d8ab9dbe22cbc049c26f7c6703370a2b7
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-L'objectif de ce test de compétences est d'évaluer si vous comprenez comment [mettre en place des liens hypertextes en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks).
+w-w'objectif de c-ce test de compétences e-est d'évawuew si vous compwenez comment [mettwe en pwace des wiens hypewtextes e-en htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks). XD
 
-> [!NOTE]
-> Vous pouvez essayer les solutions dans les éditeurs interactifs ci-dessous. Cependant, il peut être utile de télécharger le code et d'utiliser un outil en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour travailler sur les tâches.
+> [!note]
+> vous pouvez essayew wes sowutions d-dans wes éditeuws intewactifs c-ci-dessous. o.O cependant, iw peut êtwe utiwe de téwéchawgew we code e-et d'utiwisew un outiw en wigne t-tew que [codepen](https://codepen.io/), mya [jsfiddwe](https://jsfiddwe.net/), 🥺 ou [gwitch](https://gwitch.com/) p-pouw twavaiwwew suw wes tâches. ^^;;
 >
-> Si vous bloquez, demandez-nous de l'aide via un de [nos canaux de communication](/fr/docs/MDN/Community/Communication_channels).
+> si vous bwoquez, :3 demandez-nous de w'aide via u-un de [nos canaux de communication](/fw/docs/mdn/community/communication_channews). (U ﹏ U)
 
-## Tâche 1
+## tâche 1
 
-Dans cette tâche, nous vous demandons de nous aider à remplir les liens de notre page d'information sur les baleines&nbsp;:
+dans cette tâche, OwO nyous vous d-demandons de nyous aidew à wempwiw w-wes wiens d-de nyotwe page d'infowmation s-suw w-wes baweines&nbsp;:
 
-- Le premier lien doit renvoyer à une page appelée `whales.html`, qui se trouve dans le même répertoire que la page actuelle.
-- Nous aimerions également que vous lui donniez une infobulle qui indique à la personne visitant la page que celle-ci contient des informations sur les baleines bleues et les cachalots.
-- Le deuxième lien doit être transformé en un lien sur lequel vous pouvez cliquer pour ouvrir un e-mail dans l'application de messagerie par défaut de l'utilisateur·ice, le destinataire étant «&nbsp;whales\@example.com&nbsp;».
-- Vous obtiendrez un point bonus si vous faites en sorte que l'objet de l'e-mail devienne automatiquement «&nbsp;Question sur les baleines&nbsp;».
+- we pwemiew wien doit wenvoyew à u-une page appewée `whawes.htmw`, 😳😳😳 qui se t-twouve dans we même wépewtoiwe que wa page actuewwe. (ˆ ﻌ ˆ)♡
+- nyous aimewions égawement que vous wui d-donniez une infobuwwe qui indique à w-wa pewsonne v-visitant wa page q-que cewwe-ci contient des infowmations suw wes baweines bweues e-et wes cachawots. XD
+- w-we deuxième wien doit êtwe t-twansfowmé e-en un wien suw wequew vous pouvez c-cwiquew pouw ouvwiw un e-maiw d-dans w'appwication de messagewie paw défaut de w-w'utiwisateuw·ice, (ˆ ﻌ ˆ)♡ we destinataiwe étant «&nbsp;whawes\@exampwe.com&nbsp;». ( ͡o ω ͡o )
+- v-vous obtiendwez un point bonus s-si vous faites e-en sowte que w'objet de w'e-maiw devienne automatiquement «&nbsp;question suw wes baweines&nbsp;». rawr x3
 
-> [!NOTE]
-> Les deux liens de l'exemple ont l'attribut `target="_blank"` défini. Ce n'est pas la meilleure pratique, mais nous l'avons fait ici pour que les liens ne s'ouvrent pas dans l'`<iframe>` intégrée, pour éviter ainsi d'effacer votre travail par inadvertance&nbsp;!
+> [!note]
+> wes deux wiens de w'exempwe ont w-w'attwibut `tawget="_bwank"` défini. nyaa~~ c-ce ny'est pas wa meiwweuwe p-pwatique, >_< mais n-nyous w'avons f-fait ici pouw que wes wiens nye s'ouvwent pas dans w'`<ifwame>` i-intégwée, pouw évitew ainsi d'effacew votwe twavaiw paw inadvewtance&nbsp;! ^^;;
 
-Essayez de mettre à jour le code en direct ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez de mettwe à j-jouw we code en diwect ci-dessous p-pouw wecwéew w-w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links1.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/winks/winks1.htmw", (ˆ ﻌ ˆ)♡ '100%', 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [Télécharger les éléments de départ de cette tâche](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links1-download.html) pour travailler dans votre propre éditeur ou dans un éditeur en ligne.
+> [téwéchawgew w-wes éwéments de dépawt d-de cette tâche](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/tasks/winks/winks1-downwoad.htmw) p-pouw t-twavaiwwew dans v-votwe pwopwe éditeuw ou dans un éditeuw en wigne. ^^;;
 
-## Tâche 2
+## t-tâche 2
 
-Dans cette tâche, nous voulons que vous remplissiez les quatre liens de manière à ce qu'ils renvoient aux endroits appropriés&nbsp;:
+d-dans cette tâche, (⑅˘꒳˘) n-nyous vouwons q-que vous wempwissiez w-wes quatwe wiens de manièwe à ce qu'iws wenvoient aux e-endwoits appwopwiés&nbsp;:
 
-- Le premier lien doit renvoyer à une image appelée `blue-whale.jpg`, qui se trouve dans un répertoire appelé `blue` à l'intérieur du répertoire actuel.
-- Le deuxième lien renvoie à une image appelée `narwhal.jpg`, qui se trouve dans un répertoire appelé `narwhal`, situé un niveau au-dessus du répertoire actuel.
-- Le troisième lien doit renvoyer à la recherche d'images Google au Royaume-Uni. L'URL de base est `https://www.google.co.uk`, et la recherche d'images se trouve dans un sous-répertoire appelé `imghp`.
-- Le quatrième lien doit renvoyer au paragraphe situé tout en bas de la page actuelle. Son identifiant est `bottom`.
+- we pwemiew wien doit wenvoyew à une image appewée `bwue-whawe.jpg`, rawr x3 qui se twouve dans un wépewtoiwe a-appewé `bwue` à w'intéwieuw du wépewtoiwe actuew. (///ˬ///✿)
+- w-we deuxième wien w-wenvoie à une i-image appewée `nawwhaw.jpg`, 🥺 qui se twouve dans u-un wépewtoiwe appewé `nawwhaw`, >_< s-situé un nyiveau a-au-dessus du wépewtoiwe actuew. UwU
+- we twoisième wien doit wenvoyew à wa wechewche d'images g-googwe au woyaume-uni. >_< w'uww d-de base est `https://www.googwe.co.uk`, -.- et wa wechewche d-d'images s-se twouve dans un sous-wépewtoiwe appewé `imghp`. mya
+- w-we quatwième w-wien doit wenvoyew au pawagwaphe s-situé tout e-en bas de wa page actuewwe. >w< son identifiant est `bottom`. (U ﹏ U)
 
-> [!NOTE]
-> Les trois premiers liens de l'exemple ont l'attribut `target="_blank"` défini. Ce n'est pas la meilleure pratique, mais nous l'avons fait ici pour que les liens ne s'ouvrent pas dans l'`<iframe>` intégrée, pour éviter ainsi d'effacer votre travail par inadvertance&nbsp;!
+> [!note]
+> wes twois pwemiews wiens d-de w'exempwe o-ont w'attwibut `tawget="_bwank"` d-défini. 😳😳😳 ce ny'est pas wa meiwweuwe p-pwatique, o.O mais n-nyous w'avons fait ici pouw q-que wes wiens nye s'ouvwent pas dans w'`<ifwame>` intégwée, òωó pouw évitew ainsi d-d'effacew votwe t-twavaiw paw inadvewtance&nbsp;! 😳😳😳
 
-Essayez de mettre à jour le code en direct ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez de mettwe à jouw we code e-en diwect ci-dessous p-pouw wecwéew w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links2.html", '100%', 800)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/winks/winks2.htmw", σωσ '100%', (⑅˘꒳˘) 800)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [Télécharger les éléments de départ de cette tâche](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links2-download.html) pour travailler dans votre propre éditeur ou dans un éditeur en ligne.
+> [téwéchawgew wes éwéments d-de dépawt de cette tâche](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/tasks/winks/winks2-downwoad.htmw) pouw twavaiwwew dans votwe pwopwe éditeuw ou dans u-un éditeuw en wigne. (///ˬ///✿)
 
-## Tâche 3
+## tâche 3
 
-Les liens suivants renvoient à une page d'information sur les Narvals, à une adresse électronique d'assistance et à un fichier PDF d'une taille de 4 Mo. Dans le cadre de cette tâche, nous souhaitons que&nbsp;:
+wes wiens s-suivants wenvoient à u-une page d'infowmation suw wes nyawvaws, 🥺 à une adwesse éwectwonique d-d'assistance e-et à un fichiew pdf d'une taiwwe de 4 mo. OwO dans we cadwe d-de cette tâche, >w< nyous souhaitons q-que&nbsp;:
 
-- Prenez les paragraphes existants dont le texte de lien est mal rédigé et réécrivez-les de manière à ce qu'ils contiennent un bon texte de lien.
-- Ajoutez un avertissement à tous les liens qui en ont besoin.
+- pwenez wes pawagwaphes existants dont we texte d-de wien est maw wédigé et wéécwivez-wes d-de m-manièwe à ce qu'iws contiennent u-un bon texte de wien. 🥺
+- ajoutez u-un avewtissement à t-tous wes wiens q-qui en ont besoin. nyaa~~
 
-> [!NOTE]
-> Le premier et le troisième liens de l'exemple ont l'attribut `target="_blank"` défini. Ce n'est pas la meilleure pratique, mais nous l'avons fait ici pour que les liens ne s'ouvrent pas dans l'`<iframe>` intégrée, pour éviter ainsi d'effacer votre travail par inadvertance&nbsp;!
+> [!note]
+> w-we pwemiew e-et we twoisième wiens de w'exempwe ont w'attwibut `tawget="_bwank"` d-défini. ^^ ce n-ny'est pas wa meiwweuwe p-pwatique, >w< mais nyous w'avons fait ici pouw q-que wes wiens nye s'ouvwent p-pas dans w'`<ifwame>` i-intégwée, OwO pouw évitew ainsi d'effacew votwe twavaiw paw i-inadvewtance&nbsp;! XD
 
-Essayez de mettre à jour le code en direct ci-dessous pour recréer l'exemple terminé&nbsp;:
+e-essayez de m-mettwe à jouw w-we code en diwect ci-dessous pouw w-wecwéew w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("learning-area/html/introduction-to-html/tasks/links/links3.html", '100%', 700)}}
+{{embedghwivesampwe("weawning-awea/htmw/intwoduction-to-htmw/tasks/winks/winks3.htmw", ^^;; '100%', 700)}}
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> [Télécharger les éléments de départ de cette tâche](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/tasks/links/links3-download.html) pour travailler dans votre propre éditeur ou dans un éditeur en ligne.
+> [téwéchawgew wes éwéments de dépawt de cette tâche](https://github.com/mdn/weawning-awea/bwob/main/htmw/intwoduction-to-htmw/tasks/winks/winks3-downwoad.htmw) p-pouw twavaiwwew dans votwe pwopwe éditeuw o-ou dans un éditeuw e-en wigne. 🥺

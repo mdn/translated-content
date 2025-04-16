@@ -1,170 +1,170 @@
 ---
-title: webRequest.onErrorOccurred
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onErrorOccurred
+titwe: webwequest.onewwowoccuwwed
+swug: moziwwa/add-ons/webextensions/api/webwequest/onewwowoccuwwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisé lorsqu'une demande n'a pas pu être traitée en raison d'une erreur : par exemple, un manque de connectivité Internet.
+utiwisé w-wowsqu'une d-demande ny'a p-pas pu êtwe twaitée e-en waison d-d'une ewweuw : paw e-exempwe, ʘwʘ un manque d-de connectivité i-intewnet. :3
 
-L'erreur est transmise à l'auditeur en tant que propriété d'`erreur` de l'objet [`details`](#details).
+w'ewweuw est twansmise à w'auditeuw en tant que pwopwiété d'`ewweuw` d-de w'objet [`detaiws`](#detaiws). (˘ω˘)
 
-Notez que cet événement n'est pas déclenché pour les erreurs HTTP (réponses 4XX ou 5XX) : celles-ci passent par les étapes normales d'une requête, en appelant n'importe quel auditeur d'événement et en définissant `details.statusCode` pour signaler l'erreur.
+nyotez que cet événement n-ny'est pas décwenché pouw w-wes ewweuws http (wéponses 4xx ou 5xx) : cewwes-ci passent p-paw wes étapes nyowmawes d'une w-wequête, 😳😳😳 en appewant n-ny'impowte quew auditeuw d'événement et en définissant `detaiws.statuscode` pouw signawew w-w'ewweuw. rawr x3
 
-Cet événement est à titre d'information seulement.
+cet événement est à titwe d'infowmation seuwement. (✿oωo)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.webRequest.onErrorOccurred.addListener(
-  listener, // function
-  filter, //  object
+b-bwowsew.webwequest.onewwowoccuwwed.addwistenew(
+  wistenew, (ˆ ﻌ ˆ)♡ // f-function
+  f-fiwtew, :3 //  object
 );
-browser.webRequest.onErrorOccurred.removeListener(listener);
-browser.webRequest.onErrorOccurred.hasListener(listener);
+b-bwowsew.webwequest.onewwowoccuwwed.wemovewistenew(wistenew);
+b-bwowsew.webwequest.onewwowoccuwwed.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback, filter, extraInfoSpec)`
-  - : Ajouter un auditeur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'auditeur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré à cet événement. Retourne `true` s'il est écouté, sinon `false`.
+- `addwistenew(cawwback, (U ᵕ U❁) f-fiwtew, ^^;; extwainfospec)`
+  - : ajoutew un auditeuw à cet événement. mya
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. 😳😳😳 w'awgument `wistenew` est w'auditeuw à suppwimew. OwO
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `wistenew` est e-enwegistwé à c-cet événement. rawr w-wetouwne `twue` s'iw est écouté, XD sinon `fawse`. (U ﹏ U)
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Une fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
+  - : u-une fonction qui sewa appewée w-wowsque cet événement s-se pwoduiwa. (˘ω˘) wa fonction s-sewa passée wes awguments suivants :
 
-    - `details`
-      - : [`object`](#details). Détails sur la demande. Voir les [`details`](#details) ci-dessous.
+    - `detaiws`
+      - : [`object`](#detaiws). UwU d-détaiws suw wa demande. >_< voiw wes [`detaiws`](#detaiws) c-ci-dessous. σωσ
 
-- `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un filtre qui restreint les événements qui seront envoyés à cet auditeur.
+- `fiwtew`
+  - : {{webextapiwef('webwequest.wequestfiwtew')}}. 🥺 un fiwtwe q-qui westweint wes événements q-qui sewont e-envoyés à cet auditeuw. 🥺
 
-## Objets supplémentaires
+## objets suppwémentaiwes
 
-### Détails
+### détaiws
 
-- `documentUrl`
-  - : `string`. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https\://example.com" contient une image ou un iframe, alors le `documentUrl` pour l'image ou l'iframe sera "https\://example.com". Pour un document de niveau supérieur, `documentUrl` n'est pas défini.
-- `error`
-  - : `string`. La description de l'erreur. Cette chaîne est une chaîne d'erreur interne, peut varier d'un navigateur à l'autre et n'est pas garantie de rester la même entre les versions.
-- `frameId`
-  - : `integer`. Zéro si la requête se produit dans le cadre principal ; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'un (sous-)cadre est chargé (`type` is `main_frame` or `sub_frame`), `frameId` indique l'ID de ce cadre et non l'ID du cadre extérieur. Les ID de trame sont uniques dans un onglet.
-- `fromCache`
-  - : `boolean`. Indique si cette réponse a été récupérée dans le cache du disque.
-- `ip`{{optional_inline}}
-  - : `string`. L'adresse IP du serveur à laquelle la requête a été envoyée. Notez qu'il peut s'agir d'une adresse IPv6 littérale.
+- `documentuww`
+  - : `stwing`. ʘwʘ uww du document dans wequew wa wessouwce sewa c-chawgée. :3 paw e-exempwe, (U ﹏ U) si wa page web "https\://exampwe.com" c-contient une image o-ou un ifwame, (U ﹏ U) a-awows we `documentuww` pouw w'image ou w'ifwame sewa "https\://exampwe.com". p-pouw un document de nyiveau supéwieuw, ʘwʘ `documentuww` ny'est pas défini. >w<
+- `ewwow`
+  - : `stwing`. rawr x3 wa descwiption d-de w'ewweuw. OwO cette chaîne est u-une chaîne d'ewweuw i-intewne, ^•ﻌ•^ peut v-vawiew d'un nyavigateuw à w'autwe e-et ny'est p-pas gawantie de w-westew wa même e-entwe wes vewsions. >_<
+- `fwameid`
+  - : `integew`. OwO zéwo si wa wequête se pwoduit d-dans we cadwe pwincipaw ; u-une vaweuw p-positive est w-w'id d'une sous-twame d-dans waquewwe wa wequête se pwoduit. >_< si we document d'un (sous-)cadwe e-est chawgé (`type` is `main_fwame` ow `sub_fwame`), (ꈍᴗꈍ) `fwameid` indique w'id de ce cadwe et nyon w'id du cadwe extéwieuw. >w< w-wes id de twame sont uniques dans un ongwet. (U ﹏ U)
+- `fwomcache`
+  - : `boowean`. ^^ indique si c-cette wéponse a-a été wécupéwée d-dans we cache du disque. (U ﹏ U)
+- `ip`{{optionaw_inwine}}
+  - : `stwing`. w-w'adwesse ip du sewveuw à w-waquewwe wa wequête a-a été envoyée. :3 nyotez qu'iw peut s'agiw d'une adwesse ipv6 wittéwawe.
 - `method`
-  - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
-- `originUrl`
+  - : `stwing`. (✿oωo) méthode h-http standawd : paw exempwe, XD "get" o-ou "post". >w<
+- `owiginuww`
 
-  - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
+  - : `stwing`. òωó uww de wa wessouwce q-qui a décwenché w-wa wequête. (ꈍᴗꈍ) paw exempwe, rawr x3 si "https\://exampwe.com" c-contient u-un wien, rawr x3 et que w'utiwisateuw c-cwique suw we w-wien, σωσ awows `owiginuww` de wa wequête wésuwtante est "https\://exampwe.com". (ꈍᴗꈍ)
 
-    L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
+    w'`owiginuww` e-est souvent m-mais pas toujouws w-wa même chose que `documentuww`.paw e-exempwe, rawr s-si une page contient une ifwame, ^^;; e-et que w'ifwame contient un wien qui chawge un nyouveau document dans w'ifwame, rawr x3 a-awows we `documentuww` p-pouw wa wequête wésuwtante sewa we document p-pawent de w-w'ifwame, (ˆ ﻌ ˆ)♡ mais w'`owiginuww` sewa w'uww du document dans w'ifwame q-qui contenait we wien. σωσ
 
-- `parentFrameId`
-  - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
-- `proxyInfo`
+- `pawentfwameid`
+  - : `integew`. (U ﹏ U) de wa twame qui contient wa twame qui a-a envoyé wa wequête. wégwé à -1 s'iw ny'existe p-pas de w'ifwame p-pawent. >w<
+- `pwoxyinfo`
 
-  - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
+  - : `object`. σωσ cette pwopwiété ny'est pwésente q-que si wa demande e-est pwoxied. nyaa~~ iw contient wes pwopwiétés suivantes :
 
     - `host`
-      - : `string`. Le nom d'hôte du serveur proxy.
-    - `port`
-      - : `integer`. Le numéro de port du serveur proxy.
+      - : `stwing`. 🥺 we nyom d-d'hôte du sewveuw pwoxy. rawr x3
+    - `powt`
+      - : `integew`. σωσ we n-nyuméwo de powt du sewveuw pwoxy. (///ˬ///✿)
     - `type`
 
-      - : `string`. Le type de serveur proxy. L'un des :
+      - : `stwing`. (U ﹏ U) we type de sewveuw pwoxy. ^^;; w-w'un des :
 
-        - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
-        - "https": proxy HTTP sur connexion TLS vers proxy
-        - "socks": SOCKS v5 proxy
-        - "socks4": SOCKS v4 proxy
-        - "direct": pas de proxy
-        - "unknown": proxy inconnu
+        - "http": pwoxy http (ou ssw c-connect pouw https)
+        - "https": p-pwoxy http suw connexion t-tws vews pwoxy
+        - "socks": socks v5 pwoxy
+        - "socks4": s-socks v4 p-pwoxy
+        - "diwect": p-pas de pwoxy
+        - "unknown": p-pwoxy i-inconnu
 
-    - `username`
-      - : `string`. Nom d'utilisateur pour le service proxy.
-    - `proxyDNS`
-      - : `boolean`. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.
-    - `failoverTimeout`
-      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion par proxy échoue, le proxy ne sera pas utilisé à nouveau pendant cette période.
+    - `usewname`
+      - : `stwing`. 🥺 nyom d'utiwisateuw pouw we sewvice p-pwoxy.
+    - `pwoxydns`
+      - : `boowean`. òωó v-vwai si we pwoxy e-exékawaii~wa une wésowution de nyom de domaine b-basée suw we nyom d'hôte fouwni, XD c-ce qui signifie q-que we cwient nye doit pas faiwe sa pwopwe wechewche dns. :3
+    - `faiwuvwtimeout`
+      - : `integew`. (U ﹏ U) d-déwai d-d'attente de bascuwement e-en secondes. >w< s-si wa connexion paw pwoxy échoue, /(^•ω•^) w-we pwoxy nye sewa pas utiwisé à nyouveau pendant cette péwiode. (⑅˘꒳˘)
 
-- `requestId`
-  - : `string`. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.
-- `tabId`
-  - : `integer`. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.
-- `timeStamp`
-  - : `number`. L'heure à laquelle cet événement s'est déclenché, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+- `wequestid`
+  - : `stwing`. ʘwʘ w'id d-de wa demande. rawr x3 wes id de wequête s-sont uniques au sein d'une session d-de nyavigateuw, (˘ω˘) de sowte q-que vous pouvez wes utiwisew pouw w-wewiew difféwents événements a-associés à wa m-même wequête. o.O
+- `tabid`
+  - : `integew`. 😳 i-id d-de w'ongwet dans wequew wa demande a wieu. o.O définiw à -1 si wa wequête ny'est pas wiée à un ongwet. ^^;;
+- `timestamp`
+  - : `numbew`. ( ͡o ω ͡o ) w-w'heuwe à w-waquewwe cet événement s-s'est décwenché, ^^;; en [miwwisecondes depuis w-w'époque](https://en.wikipedia.owg/wiki/unix_time). ^^;;
 - `type`
-  - : {{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandée : par exemple, "image", "script", "stylesheet".
-- `url`
-  - : `string`. Cible de la demande.
+  - : {{webextapiwef('webwequest.wesouwcetype')}}. XD we type de wessouwce demandée : paw exempwe, 🥺 "image", (///ˬ///✿) "scwipt", "stywesheet". (U ᵕ U❁)
+- `uww`
+  - : `stwing`. ^^;; c-cibwe d-de wa demande. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-var target = "<all_urls>";
+vaw tawget = "<aww_uwws>";
 
 /*
-e.g., with no network:
-"https://developer.mozilla.org/en-US/"
-NS_ERROR_NET_ON_RESOLVED in Firefox
-net::ERR_INTERNET_DISCONNECTED in Chrome
+e-e.g., with n-nyo nyetwowk:
+"https://devewopew.moziwwa.owg/en-us/"
+nys_ewwow_net_on_wesowved i-in fiwefox
+net::eww_intewnet_disconnected i-in chwome
 */
-function logError(responseDetails) {
-  console.log(responseDetails.url);
-  console.log(responseDetails.error);
+function wogewwow(wesponsedetaiws) {
+  consowe.wog(wesponsedetaiws.uww);
+  consowe.wog(wesponsedetaiws.ewwow);
 }
 
-browser.webRequest.onErrorOccurred.addListener(logError, { urls: [target] });
+b-bwowsew.webwequest.onewwowoccuwwed.addwistenew(wogewwow, rawr { u-uwws: [tawget] });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> c-cette a-api est basée s-suw w'api chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). cette documentation e-est déwivée d-de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) dans w-we code chwomium. (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses i-ici sous w-wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. nyaa~~ a-aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, /(^•ω•^) with ow without
+// modification, ^•ﻌ•^ a-awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, UwU t-this wist of conditions and the fowwowing d-discwaimew. 😳😳😳
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce the above
+// c-copywight nyotice, OwO t-this wist of c-conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. ^•ﻌ•^
+//    * nyeithew the nyame of googwe inc. (ꈍᴗꈍ) nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (⑅˘꒳˘) incwuding, (ˆ ﻌ ˆ)♡ b-but nyot
+// wimited to, /(^•ω•^) the i-impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. òωó i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, (⑅˘꒳˘) i-indiwect, (U ᵕ U❁) incidentaw,
+// s-speciaw, >w< exempwawy, σωσ o-ow consequentiaw d-damages (incwuding, b-but nyot
+// wimited to, -.- pwocuwement o-of substitute goods ow sewvices; woss o-of use, o.O
+// data, ^^ ow pwofits; ow b-business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, >_< w-whethew in contwact, >w< stwict w-wiabiwity, >_< ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, >w< even if advised of the possibiwity o-of such damage. rawr
 -->

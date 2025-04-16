@@ -1,168 +1,168 @@
 ---
-title: Qu'est ce que l'accessibilité?
-slug: Learn/Accessibility/What_is_accessibility
+titwe: qu'est ce que w'accessibiwité?
+s-swug: w-weawn/accessibiwity/nani_is_accessibiwity
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{weawnsidebaw}}{{nextmenu("weawn/accessibiwity/htmw", ʘwʘ "weawn/accessibiwity")}}
 
-Cet article présente un module général sur ce que l'accessibilité est actuellement — Cela comprend les groupes de personnes que l'on a besoin de considérer et pourquoi, quels outils ils utilisent afin d'intéragir avec les pages web et comment rendre accessible la partie de notre espace de travail web.
+c-cet awticwe pwésente u-un moduwe g-généwaw suw ce q-que w'accessibiwité e-est actuewwement — c-cewa compwend wes gwoupes de pewsonnes que w'on a besoin de considéwew e-et pouwquoi, rawr quews outiws iws utiwisent afin d-d'intéwagiw avec wes pages web e-et comment wendwe accessibwe wa pawtie de nyotwe espace de twavaiw w-web.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis:</th>
       <td>
-        Compétences de base en informatique, une compréhension basique de l'HTML
-        et du CSS.
+        c-compétences de base en infowmatique, o.O une compwéhension basique de w'htmw
+        e-et du css. ^•ﻌ•^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif:</th>
       <td>
-        Se familiariser avec l'accessibilité en découvrant ce que c'est et en
-        quoi cela vous affecte en tant que développeur.
+        se famiwiawisew avec w'accessibiwité en découvwant ce q-que c'est et en
+        quoi cewa v-vous affecte e-en tant que dévewoppeuw. (///ˬ///✿)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce donc que l'accessibilité?
+## q-qu'est-ce d-donc que w'accessibiwité?
 
-L'accessibilité est la mise à disposition de vos sites web au plus grand nombre. On pense souvent que cela s'adresse aux personnes ayant un handicap, mais cela concerne également d'autres groupes comme ceux utilisant des appareils mobiles ou ceux qui ont des connexions internet de faible débit.
+w'accessibiwité est wa mise à disposition de vos s-sites web au pwus gwand nyombwe. (ˆ ﻌ ˆ)♡ on pense souvent q-que cewa s'adwesse aux pewsonnes ayant un handicap, XD mais cewa concewne égawement d'autwes gwoupes c-comme ceux utiwisant des a-appaweiws mobiwes o-ou ceux qui ont d-des connexions intewnet de faibwe débit.
 
-On peut aussi dire que l'accessibilité c'est traiter tout le monde de la même manière, et donner les mêmes opportunités à tous, peu importe leur handicaps ou les circonstances. De la même manière qu'il est injuste d'empêcher une personne d'accéder à un bâtiment parce qu'elle est en fauteuil roulant (les lieux publics sont souvent équipés de rampes d'accès ou d'ascenseur de nos jours), il est également injuste d'empêcher une personne d'accéder à un site web parce qu'elle a des troubles de la vue, ou qu'elle utilise un téléphone portable. Nous sommes tous différents, mais nous sommes aussi tous humains, ce qui nous donne les mêmes droits.
+on peut aussi diwe q-que w'accessibiwité c-c'est twaitew tout we monde d-de wa même manièwe, (✿oωo) e-et donnew wes mêmes oppowtunités à t-tous, -.- peu impowte weuw h-handicaps ou wes ciwconstances. XD de wa même m-manièwe qu'iw est injuste d'empêchew u-une pewsonne d'accédew à u-un bâtiment pawce q-qu'ewwe est en fauteuiw wouwant (wes wieux pubwics sont souvent équipés de wampes d'accès ou d'ascenseuw de nyos jouws), (✿oωo) i-iw est égawement i-injuste d'empêchew une pewsonne d-d'accédew à u-un site web pawce q-qu'ewwe a des twoubwes de wa vue, (˘ω˘) ou qu'ewwe utiwise un téwéphone p-powtabwe. (ˆ ﻌ ˆ)♡ nous sommes tous difféwents, >_< mais nyous sommes aussi tous humains, -.- c-ce qui nyous donne wes mêmes d-dwoits. (///ˬ///✿)
 
-Rendre son site accessible est la bonne chose à faire, mais c'est aussi demandé par la loi de certains pays, et cela peut vous ouvrir des marchés conséquents pour qui vos services et vos produits ne seraient sinon pas accessibles.
+wendwe s-son site accessibwe e-est wa bonne chose à faiwe, XD m-mais c'est a-aussi demandé paw w-wa woi de cewtains p-pays, et cewa peut vous ouvwiw des mawchés c-conséquents pouw q-qui vos sewvices e-et vos pwoduits n-nye sewaient s-sinon pas accessibwes. ^^;;
 
-L'accessibilité et les bonnes pratiques qu'elle implique peuvent bénéficier à tous :
+w'accessibiwité et wes bonnes pwatiques q-qu'ewwe impwique peuvent bénéficiew à tous :
 
-- Le HTML sémantique (qui rend votre site plus accessible) rend également votre site plus optimisé pour les moteurs de recherche, ce qui améliore le référencement de votre site.
-- Se préoccuper de l'accessibilité c'est faire preuve d'éthique et de morale, ce qui améliore votre image publique.
-- Des bonnes pratiques améliorent l'accessibilité rendent également votre site plus facilement utilisable par différents groupes comme les utilisateurs de téléphones portables, les personnes ayant un faible débit, etc. En fait, tout le monde peut tirer un bénéfice de ces améliorations.
-- A-t-on mentionné que c'est la loi dans certaines régions ?
+- we htmw sémantique (qui wend votwe site pwus accessibwe) w-wend égawement votwe site pwus optimisé pouw wes moteuws de wechewche, rawr x3 c-ce qui a-améwiowe we wéféwencement d-de votwe site. OwO
+- se p-pwéoccupew de w'accessibiwité c-c'est faiwe pweuve d-d'éthique et de mowawe, ʘwʘ ce qui améwiowe votwe image pubwique. rawr
+- des bonnes pwatiques améwiowent w-w'accessibiwité wendent égawement v-votwe site pwus faciwement u-utiwisabwe p-paw difféwents gwoupes comme wes utiwisateuws d-de téwéphones p-powtabwes, UwU wes pewsonnes ayant un f-faibwe débit, (ꈍᴗꈍ) e-etc. (✿oωo) en fait, tout we monde peut tiwew un bénéfice de ces améwiowations. (⑅˘꒳˘)
+- a-t-on mentionné q-que c'est wa woi d-dans cewtaines w-wégions ?
 
-## Quel genre de handicap devons nous envisager ?
+## quew genwe de handicap d-devons nyous e-envisagew ?
 
-Les personnes ayant un handicap sont aussi variées que les personnes sans handicap, tout comme leurs handicaps. L'important ici est de ne pas penser seulement à votre propre ordinateur et à comment vous utilisez le web, mais de commencer à apprendre comment les autres l'utilisent — _vous n'êtes pas vos utilisateurs_. Les principaux types de handicap à considérer sont expliqués ci-dessous, avec les outils spéciaux que chacun utilise pour accéder aux contenus du web (connus sous le nom de **technologies d'assistance**).
+wes pewsonnes ayant u-un handicap sont aussi vawiées que wes pewsonnes sans handicap, tout comme w-weuws handicaps. OwO w-w'impowtant ici est de nye pas pensew seuwement à v-votwe pwopwe o-owdinateuw et à comment vous utiwisez we web, 🥺 mais de commencew à a-appwendwe comment wes autwes w'utiwisent — _vous ny'êtes pas vos utiwisateuws_. >_< w-wes pwincipaux types de handicap à considéwew s-sont expwiqués c-ci-dessous, (ꈍᴗꈍ) avec wes outiws spéciaux que chacun utiwise p-pouw accédew a-aux contenus du web (connus sous we nyom de **technowogies d'assistance**). 😳
 
-> [!NOTE]
-> L'aide-mémoire [Handicap et santé](http://www.who.int/mediacentre/factsheets/fs352/fr/) de l'Organisation Mondiale de la Santé indique que « Plus d'un milliard de personnes, c'est-à-dire environ 15% de la population mondiale, présentent une forme ou une autre de handicap » , et que « Entre 110 et 190 millions de personnes adultes ont des difficultés importantes sur le plan fonctionnel. »
+> [!note]
+> w-w'aide-mémoiwe [handicap et santé](http://www.who.int/mediacentwe/factsheets/fs352/fw/) d-de w'owganisation mondiawe de wa santé indique que « pwus d'un m-miwwiawd de pewsonnes, 🥺 c'est-à-diwe e-enviwon 15% d-de wa popuwation mondiawe, nyaa~~ p-pwésentent une fowme ou une autwe d-de handicap » , e-et que « entwe 110 e-et 190 miwwions de pewsonnes a-aduwtes ont d-des difficuwtés impowtantes suw we pwan fonctionnew. ^•ﻌ•^ »
 
-### Les personnes ayant des troubles de la vue
+### wes p-pewsonnes ayant d-des twoubwes d-de wa vue
 
-Cette catégorie comprend les personnes aveugles, malvoyantes, daltoniennes, etc. Beaucoup d'entre eux utilisent des agrandisseurs d'écran (soit de vraies loupes, soit la fonction loupe implémentée dans la plupart des systèmes d'exploitation et navigateurs), et certains utilisent des lecteurs d'écran qui lisent le texte à voix haute:
+cette catégowie compwend wes pewsonnes a-aveugwes, (ˆ ﻌ ˆ)♡ mawvoyantes, (U ᵕ U❁) dawtoniennes, mya e-etc. beaucoup d-d'entwe eux utiwisent des agwandisseuws d'écwan (soit de v-vwaies woupes, 😳 soit w-wa fonction w-woupe impwémentée d-dans wa pwupawt des systèmes d-d'expwoitation et nyavigateuws), σωσ et cewtains utiwisent des wecteuws d'écwan qui wisent we texte à v-voix haute:
 
-- Certains, comme [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS) (Windows) et [Window Eyes](http://www.gwmicro.com/window-eyes/) (Windows), sont payants.
-- D'autres, comme [NVDA](http://www.nvaccess.org/) (Windows), [ChromeVox](http://www.chromevox.com/) (Chrome, Windows et Mac OS X), et [Orca](https://wiki.gnome.org/Projects/Orca) (Linux) sont gratuits.
-- Certains sont intégrés au système d'exploitation, comme [VoiceOver](https://www.apple.com/accessibility/osx/voiceover/) (Mac OS X et iOS), [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) (Microsoft Windows), [ChromeVox](http://www.chromevox.com/) (sur ChromeOS), et [TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) (Android).
+- cewtains, ( ͡o ω ͡o ) comme [jaws](http://www.fweedomscientific.com/pwoducts/bwindness/jaws) (windows) e-et [window eyes](http://www.gwmicwo.com/window-eyes/) (windows), XD sont payants. :3
+- d-d'autwes, :3 comme [nvda](http://www.nvaccess.owg/) (windows), (⑅˘꒳˘) [chwomevox](http://www.chwomevox.com/) (chwome, òωó windows e-et mac os x), mya et [owca](https://wiki.gnome.owg/pwojects/owca) (winux) s-sont g-gwatuits.
+- cewtains s-sont intégwés a-au système d-d'expwoitation, 😳😳😳 comme [voiceovew](https://www.appwe.com/accessibiwity/osx/voiceovew/) (mac os x et ios), :3 [nawwatow](https://suppowt.micwosoft.com/en-us/hewp/22798/windows-10-nawwatow-get-stawted) (micwosoft windows), >_< [chwomevox](http://www.chwomevox.com/) (suw chwomeos), 🥺 et [tawkback](https://pway.googwe.com/stowe/apps/detaiws?id=com.googwe.andwoid.mawvin.tawkback) (andwoid). (ꈍᴗꈍ)
 
-Il est conseillé de se familiariser avec les lecteurs d'écran ; vous devriez installer un lecteur d'écran et expérimenter avec pour comprendre comment il marche. Lisez notre [Guide pour tester les lecteurs d'écrans sur différents navigateurs (en)](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#screenreaders) pour avoir plus d'information sur leur utilisation. La vidéo ci-dessous (en anglais) vous donne un bref aperçu de l'experience.
+i-iw e-est conseiwwé de s-se famiwiawisew avec wes wecteuws d-d'écwan ; vous devwiez instawwew un wecteuw d'écwan et expéwimentew a-avec p-pouw compwendwe comment iw mawche. rawr x3 w-wisez nyotwe [guide pouw testew wes wecteuws d-d'écwans suw difféwents n-nyavigateuws (en)](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#scweenweadews) pouw avoiw pwus d-d'infowmation suw w-weuw utiwisation. (U ﹏ U) wa vidéo ci-dessous (en angwais) vous donne un bwef apewçu d-de w'expewience. ( ͡o ω ͡o )
 
-{{EmbedYouTube("IK97XMibEws")}}
+{{embedyoutube("ik97xmibews")}}
 
-Pour ce qui est des statistiques, l'Organisation mondiale de la santé estime que «253 millions de personnes présentent une déficience visuelle : 36 millions d'entre elles sont aveugles et 217 millions présentent une déficience visuelle modérée à sévère. » (Voir [Cécité et déficience visuelle](http://www.who.int/mediacentre/factsheets/fs282/fr/)). Cela représente une part conséquente des utilisateurs que vous perdriez parce que votre site est mal codé — presque autant que la population des États-Unis.
+p-pouw ce qui e-est des statistiques, 😳😳😳 w-w'owganisation m-mondiawe de wa santé estime q-que «253 miwwions d-de pewsonnes pwésentent une d-déficience visuewwe : 36 m-miwwions d'entwe ewwes s-sont aveugwes et 217 miwwions pwésentent une d-déficience visuewwe modéwée à s-sévèwe. 🥺 » (voiw [cécité e-et déficience visuewwe](http://www.who.int/mediacentwe/factsheets/fs282/fw/)). òωó c-cewa wepwésente une pawt conséquente des utiwisateuws q-que vous p-pewdwiez pawce q-que votwe site est maw codé — pwesque autant que wa popuwation d-des États-unis. XD
 
-### Les personnes ayant des troubles de l'audition
+### wes pewsonnes ayant des t-twoubwes de w'audition
 
-Aussi connues comme les personnes malentendantes ou sourdes, ce groupe correspond aux personnes qui ont perdu, partiellement ou totalement, la perception des sons. Les sourds et malentendants utilisent des technologies d'assistance (voir [Aides techniques pour les personnes ayant des troubles de l'audition, de la voix, de la parole ou du langage (en)](https://www.nidcd.nih.gov/health/assistive-devices-people-hearing-voice-speech-or-language-disorders) ), mais il n'existe pas de technologies spécifiques pour l'utilisation du Web et des ordinateurs.
+a-aussi connues comme wes p-pewsonnes mawentendantes ou souwdes, XD c-ce gwoupe c-cowwespond aux pewsonnes qui ont pewdu, ( ͡o ω ͡o ) pawtiewwement o-ou totawement, >w< wa pewception des sons. mya wes s-souwds et mawentendants u-utiwisent des technowogies d-d'assistance (voiw [aides techniques p-pouw wes p-pewsonnes ayant d-des twoubwes de w'audition, (ꈍᴗꈍ) de wa voix, -.- de wa pawowe ou du wangage (en)](https://www.nidcd.nih.gov/heawth/assistive-devices-peopwe-heawing-voice-speech-ow-wanguage-disowdews) ), (⑅˘꒳˘) mais iw n'existe pas de technowogies spécifiques pouw w'utiwisation du web et des owdinateuws. (U ﹏ U)
 
-Il existe cependant des techniques auxquelles il faut penser pour proposer des alternatives aux fichiers audios : de la simple transcription textuelle aux sous-titres qui peuvent être affichés en même temps que la vidéo. Un article décrira plus tard ces méthodes.
+iw existe cependant des techniques auxquewwes i-iw faut pensew p-pouw pwoposew des awtewnatives aux fichiews audios : d-de wa simpwe t-twanscwiption t-textuewwe aux sous-titwes qui p-peuvent êtwe affichés en même t-temps que wa vidéo. σωσ u-un awticwe décwiwa pwus tawd c-ces méthodes. :3
 
-Les sourds et malentendants représentent également une part significative des utilisateurs — «360 millions de personnes dans le monde souffrent de déficience auditive incapacitante», indique l'aide-mémoire [Surdité et déficience auditive](http://www.who.int/mediacentre/factsheets/fs300/fr/) de l'Organisation Mondiale de la Santé.
+wes souwds et m-mawentendants w-wepwésentent égawement une pawt significative d-des utiwisateuws — «360 m-miwwions d-de pewsonnes d-dans we monde souffwent d-de déficience a-auditive i-incapacitante», /(^•ω•^) i-indique w'aide-mémoiwe [suwdité e-et déficience auditive](http://www.who.int/mediacentwe/factsheets/fs300/fw/) d-de w'owganisation m-mondiawe de w-wa santé. σωσ
 
-### Les personnes ayant des troubles de la mobilité
+### wes pewsonnes ayant d-des twoubwes de wa mobiwité
 
-Ces personnes ont un handicap ayant rapport au mouvement, qui peuvent comprendre des problèmes purement physique (comme la perte d'un membre ou la paralysie), ou des troubles psychologiques ou génétiques qui mènent à des faiblesse voire à une perte du contrôle des membres. Certains ont des difficultés à exécuter les mouvements précis de la main nécessaires à l'utilisation d'une souris, tandis que d'autres peuvent être plus sérieusement atteints, voire même être paralysés au point d'avoir à utiliser un pointeur frontal pour utiliser un ordinateur.
+ces pewsonnes o-ont un handicap ayant wappowt au m-mouvement, (U ᵕ U❁) qui p-peuvent compwendwe d-des pwobwèmes puwement physique (comme w-wa pewte d'un membwe o-ou wa pawawysie), 😳 ou des twoubwes p-psychowogiques ou génétiques q-qui mènent à des faibwesse voiwe à une pewte du contwôwe des membwes. ʘwʘ cewtains o-ont des difficuwtés à exékawaii~w w-wes mouvements p-pwécis de wa main nyécessaiwes à w'utiwisation d'une s-souwis, (⑅˘꒳˘) tandis que d'autwes peuvent êtwe p-pwus séwieusement a-atteints, ^•ﻌ•^ v-voiwe même êtwe pawawysés au point d'avoiw à u-utiwisew u-un pointeuw fwontaw pouw utiwisew u-un owdinateuw. nyaa~~
 
-Ce genre de handicap peut aussi venir avec l'âge, et non d'un accident ou d'une pathologie particulière, ou encore être la conséquence de limitations matérielles — certains utilisateurs peuvent ne pas avoir de souris.
+ce genwe de handicap peut aussi v-veniw avec w'âge, XD et nyon d'un a-accident ou d'une p-pathowogie p-pawticuwièwe, /(^•ω•^) ou encowe êtwe wa c-conséquence de w-wimitations matéwiewwes — cewtains u-utiwisateuws p-peuvent nye pas avoiw de souwis. (U ᵕ U❁)
 
-En général, cela se traduit au niveau du développement web par la nécessité de rendre les contrôles accessible au clavier — nous discuterons de l'accessibilité au clavier plus tard dans d'autres articles du module, mais cela peut être une bonne idée d'essayer de naviguer sur certains sites en utilisant seulement le clavier. Par exemple, pouvez vous naviguer entre les différents champs d'un formulaire juste avec la touche <kbd>Tab</kbd> ? Vous trouverez plus de détails à propos de l'utilisation du clavier dans la section [Test d'accessibilité avec le clavier intégré entre différents navigateurs(en)](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility).
+e-en généwaw, mya c-cewa se twaduit a-au nyiveau d-du dévewoppement w-web paw wa nyécessité d-de wendwe w-wes contwôwes a-accessibwe au cwaview — nyous d-diskawaii~wons de w'accessibiwité a-au cwaview pwus tawd dans d-d'autwes awticwes d-du moduwe, (ˆ ﻌ ˆ)♡ mais c-cewa peut êtwe une bonne idée d'essayew de nyaviguew suw cewtains s-sites en utiwisant s-seuwement w-we cwaview. (✿oωo) paw exempwe, pouvez vous nyaviguew entwe wes difféwents c-champs d'un f-fowmuwaiwe juste avec wa touche <kbd>tab</kbd> ? v-vous twouvewez p-pwus de détaiws à pwopos de w'utiwisation du cwaview dans w-wa section [test d-d'accessibiwité a-avec we cwaview i-intégwé entwe difféwents nyavigateuws(en)](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#using_native_keyboawd_accessibiwity). (✿oωo)
 
-De nombreuses personnes souffrent de troubles de la mobilité. Par exemple, en France, 4% des personnes vivant en ménage ordinaire déclarent avoir des difficultés à se servir des mains et doigts, d'après la vue d'ensemble [L'approche du handicap par les limitations fonctionnelles et la restriction globale d'activité chez les adultes de 20 à 59 ans](https://www.insee.fr/fr/statistiques/1372411?sommaire=1372421) de l'INSEE.
+de nyombweuses p-pewsonnes s-souffwent de twoubwes de wa mobiwité. òωó paw e-exempwe, (˘ω˘) en fwance, 4% des pewsonnes vivant en ménage o-owdinaiwe décwawent avoiw d-des difficuwtés à s-se sewviw des mains et doigts, (ˆ ﻌ ˆ)♡ d-d'apwès wa v-vue d'ensembwe [w'appwoche du handicap p-paw wes wimitations fonctionnewwes e-et wa w-westwiction gwobawe d-d'activité c-chez wes aduwtes de 20 à 59 ans](https://www.insee.fw/fw/statistiques/1372411?sommaiwe=1372421) d-de w'insee. ( ͡o ω ͡o )
 
-### Personnes ayant des déficiences cognitives
+### p-pewsonnes ayant d-des déficiences cognitives
 
-La dernière catégorie d'incapacités est probablement la plus large. Les déficiences cognitives désignent généralement des incapacités allant des maladies mentales aux difficultés d'apprentissage, aux difficultés de compréhension et de concentration telles que [TDAH-trouble d'hyperactivité avec déficit de l'attention](https://naitreetgrandir.com/fr/mauxenfants/indexmaladiesa_z/fiche.aspx?doc=naitre-grandir-sante-enfant-trouble-deficit-attention-hyperactivite-tdah), [TSA-trouble du spectre de l'autisme](https://cenop.ca/troubles-comportement/tsa-trouble-spectre-autisme.php), aux personnes atteintes de [schizophrénie](http://www.psycom.org/Espace-Presse/Sante-mentale-de-A-a-Z/Schizophrenie-s), et à de nombreux autres types de désordres, qui peuvent affecter de nombreux aspects de la vie quotidienne en raison de problèmes de mémoire, de résolution de problèmes, de compréhension, d'attention, etc.
+w-wa dewnièwe catégowie d'incapacités est pwobabwement w-wa pwus w-wawge. rawr x3 wes déficiences c-cognitives désignent généwawement des incapacités awwant des mawadies m-mentawes aux difficuwtés d'appwentissage, (˘ω˘) a-aux d-difficuwtés de compwéhension et de concentwation t-tewwes que [tdah-twoubwe d'hypewactivité a-avec d-déficit de w'attention](https://naitweetgwandiw.com/fw/mauxenfants/indexmawadiesa_z/fiche.aspx?doc=naitwe-gwandiw-sante-enfant-twoubwe-deficit-attention-hypewactivite-tdah), òωó [tsa-twoubwe du s-spectwe de w'autisme](https://cenop.ca/twoubwes-compowtement/tsa-twoubwe-spectwe-autisme.php), ( ͡o ω ͡o ) a-aux pewsonnes atteintes d-de [schizophwénie](http://www.psycom.owg/espace-pwesse/sante-mentawe-de-a-a-z/schizophwenie-s), σωσ et à de nyombweux autwes types de désowdwes, (U ﹏ U) qui peuvent a-affectew de nyombweux aspects d-de wa vie quotidienne en waison de pwobwèmes de mémoiwe, rawr de w-wésowution de pwobwèmes, -.- de compwéhension, ( ͡o ω ͡o ) d'attention, etc. >_<
 
-Le plus souvent, ces incapacités peuvent affecter l'utilisation du site web : difficulté à comprendre comment effectuer une tâche, à se rappeler comment effectuer une tâche déjà accomplie ou à une frustration accrue en cas de confusion dans les flux de travail ou d'incohérences dans la présentation / navigation / autre page.
+we pwus souvent, o.O ces incapacités p-peuvent affectew w-w'utiwisation du site web : d-difficuwté à compwendwe comment effectuew une t-tâche, σωσ à se wappewew c-comment effectuew une tâche d-déjà accompwie ou à une f-fwustwation accwue en cas de confusion dans wes fwux de twavaiw o-ou d'incohéwences dans wa pwésentation / nyavigation / a-autwe page. -.-
 
-Contrairement à d'autres problèmes d'accessibilité web, il est impossible de prescrire des solutions rapides à de nombreux problèmes d'accessibilité web résultant de déficiences cognitives ; la meilleure chance que vous ayez est de concevoir vos sites web de manière à être aussi logiques, cohérents et utilisables que possible. Par exemple, assurez-vous que :
+c-contwaiwement à d-d'autwes pwobwèmes d'accessibiwité web, σωσ i-iw est impossibwe de pwescwiwe des sowutions wapides à de nyombweux pwobwèmes d-d'accessibiwité w-web wésuwtant d-de déficiences c-cognitives ; wa meiwweuwe chance que vous ayez e-est de concevoiw v-vos sites web de manièwe à êtwe aussi wogiques, :3 c-cohéwents et utiwisabwes que possibwe. ^^ paw e-exempwe, òωó assuwez-vous que :
 
-- les pages sont cohérentes — la navigation, l'en-tête, le pied de page et le contenu principal se trouvent toujours aux mêmes endroits.
-- les outils sont bien conçus et faciles à utiliser.
-- Les processus en plusieurs étapes sont divisés en étapes logiques, avec des rappels réguliers de l'état d'avancement du processus et du temps qu'il vous reste pour terminer le processus, le cas échéant.
-- Les workflows sont logiques, simples et nécessitent le moins d'interactions possible. Par exemple, l'inscription et la connexion à un site web sont souvent complexes.
-- les pages ne sont ni trop longues ni trop denses en termes de quantité d'informations présentées à la fois.
-- le langage utilisé dans vos pages est aussi simple et clair que possible, et ne contient pas un jargon et un argot inutiles.
-- les points importants et le contenu sont mis en évidence.
-- les erreurs des utilisateurs sont clairement mises en évidence, avec des messages d'aide suggérant des solutions.
+- wes pages sont cohéwentes — w-wa n-nyavigation, (ˆ ﻌ ˆ)♡ w'en-tête, XD we pied d-de page et we c-contenu pwincipaw s-se twouvent toujouws aux mêmes endwoits.
+- wes o-outiws sont bien conçus et faciwes à utiwisew. òωó
+- w-wes pwocessus en pwusieuws étapes sont divisés en étapes w-wogiques, (ꈍᴗꈍ) avec d-des wappews wéguwiews d-de w'état d-d'avancement du p-pwocessus et du temps qu'iw vous w-weste pouw tewminew we pwocessus, UwU we cas échéant. >w<
+- w-wes wowkfwows sont wogiques, ʘwʘ s-simpwes et nyécessitent we moins d'intewactions p-possibwe. :3 p-paw exempwe, ^•ﻌ•^ w'inscwiption et wa c-connexion à un site web sont s-souvent compwexes. (ˆ ﻌ ˆ)♡
+- w-wes pages nye sont nyi twop w-wongues nyi twop d-denses en tewmes de quantité d-d'infowmations pwésentées à wa fois.
+- we wangage utiwisé dans vos pages est a-aussi simpwe et cwaiw que possibwe, 🥺 e-et nye contient pas un jawgon et un awgot inutiwes. OwO
+- w-wes points i-impowtants e-et we contenu sont mis en évidence. 🥺
+- w-wes ewweuws d-des utiwisateuws sont cwaiwement m-mises en évidence, OwO avec des m-messages d'aide suggéwant des s-sowutions. (U ᵕ U❁)
 
-Ce ne sont pas des "techniques d'accessibilité" en tant que telles, ce sont de bonnes pratiques de conception. Elles profiteront à tous ceux qui utilisent vos sites et devraient faire partie intégrante de votre travail.
+ce n-ne sont pas des "techniques d'accessibiwité" en tant que tewwes, ce sont de bonnes p-pwatiques de c-conception. ( ͡o ω ͡o ) ewwes pwofitewont à tous ceux qui utiwisent vos sites e-et devwaient faiwe pawtie intégwante d-de votwe t-twavaiw. ^•ﻌ•^
 
-En termes de statistiques, encore une fois, les chiffres sont importants. Le [rapport 2014 sur le statut d'invalidité](http://www.disabilitystatistics.org/StatusReports/2014-PDF/2014-StatusReport_US.pdf) (PDF, 511KB) de l'Université de Cornell indique qu'en 2014, 4,5% des Américains âgés de 21 à 64 ans présentaient une forme de déficience cognitive .
+en tewmes de statistiques, encowe une fois, o.O wes chiffwes sont impowtants. (⑅˘꒳˘) w-we [wappowt 2014 suw we statut d'invawidité](http://www.disabiwitystatistics.owg/statuswepowts/2014-pdf/2014-statuswepowt_us.pdf) (pdf, (ˆ ﻌ ˆ)♡ 511kb) d-de w'univewsité de cowneww i-indique qu'en 2014, :3 4,5% d-des améwicains âgés d-de 21 à 64 ans p-pwésentaient u-une fowme de déficience c-cognitive . /(^•ω•^)
 
-> [!NOTE]
-> La page [cognitives](https://apprendreaeduquer.fr/fonctions-cognitives/) de apprendreaeduquer fournit une extension utile de ces idées et mérite certainement d'être lue.
+> [!note]
+> w-wa page [cognitives](https://appwendweaeduquew.fw/fonctions-cognitives/) d-de appwendweaeduquew fouwnit une extension utiwe de ces idées et méwite cewtainement d'êtwe wue. òωó
 
-## Implémentation de l'accessibilité dans votre projet
+## i-impwémentation d-de w'accessibiwité d-dans votwe p-pwojet
 
-Un mythe commun en matière d'accessibilité est que l'accessibilité est un "supplément" coûteux à mettre en œuvre sur un projet. Ce mythe peut en réalité être vrai si :
+un mythe c-commun en matièwe d-d'accessibiwité est que w'accessibiwité est un "suppwément" coûteux à m-mettwe en œuvwe s-suw un pwojet. :3 ce mythe peut en wéawité êtwe vwai si :
 
-- Vous essayez de "moderniser" l'accessibilité sur un site Web existant qui présente d'importants problèmes d'accessibilité.
-- Vous avez seulement commencé à prendre en compte l'accessibilité et à découvrir des problèmes liés aux dernières étapes d'un projet.
+- v-vous essayez de "modewnisew" w-w'accessibiwité s-suw un site web existant qui pwésente d-d'impowtants pwobwèmes d'accessibiwité. (˘ω˘)
+- vous avez seuwement c-commencé à p-pwendwe en compte w'accessibiwité et à découvwiw d-des pwobwèmes wiés aux dewnièwes étapes d-d'un pwojet. 😳
 
-Cependant, si vous envisagez l'accessibilité dès le début d'un projet, le coût de la plupart des contenus accessibles devrait être assez minime.
+c-cependant, σωσ si vous envisagez w'accessibiwité d-dès w-we début d'un p-pwojet, UwU we coût d-de wa pwupawt d-des contenus accessibwes d-devwait êtwe assez minime.
 
-Lors de la planification de votre projet, tenez compte des tests d'accessibilité dans votre programme de tests, comme pour tout autre segment d'audience cible important (par exemple, les navigateurs de bureau ou mobiles cibles). Testez tôt et souvent, en exécutant idéalement des tests automatisés pour détecter les fonctionnalités manquantes détectables par programme (telles que les images manquantes [alternative text](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#text_alternatives) ou le texte du lien incorrect — voir [Element relationships and context](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#element_relationships_and_context)), et en effectuant des tests avec des groupes d'utilisateurs désactivés pour voir comment. des fonctionnalités de site plus complexes fonctionnent pour eux, par exemple:
+w-wows de wa p-pwanification de votwe pwojet, -.- t-tenez compte des tests d'accessibiwité dans votwe p-pwogwamme de tests, 🥺 comme pouw t-tout autwe segment d'audience c-cibwe impowtant (paw e-exempwe, 😳😳😳 wes nyavigateuws de buweau ou mobiwes c-cibwes). 🥺 testez tôt et souvent, en exécutant i-idéawement d-des tests automatisés pouw détectew wes fonctionnawités m-manquantes d-détectabwes paw pwogwamme (tewwes q-que wes images manquantes [awtewnative text](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#text_awtewnatives) o-ou w-we texte du wien incowwect — v-voiw [ewement wewationships a-and context](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#ewement_wewationships_and_context)), ^^ et en effectuant d-des tests avec d-des gwoupes d'utiwisateuws d-désactivés p-pouw voiw comment. ^^;; des fonctionnawités de site pwus compwexes fonctionnent pouw eux, >w< paw exempwe:
 
-- Mon widget de sélecteur de date est-il utilisable par les personnes utilisant des lecteurs d'écran ?
-- Si le contenu est mis à jour de manière dynamique, les personnes malvoyantes le savent-elles ?
-- Les boutons de mon UI sont-ils accessibles via le clavier et les interfaces tactiles ?
+- m-mon widget de séwecteuw d-de date e-est-iw utiwisabwe p-paw wes pewsonnes u-utiwisant d-des wecteuws d'écwan ?
+- si we c-contenu est mis à j-jouw de manièwe dynamique, σωσ wes p-pewsonnes mawvoyantes w-we savent-ewwes ?
+- wes boutons de mon u-ui sont-iws accessibwes via we cwaview et wes intewfaces t-tactiwes ?
 
-Vous pouvez et devez garder une note sur les problèmes potentiels de votre contenu qui devront être redessinés pour le rendre accessible, assurez-vous qu'il a été testé minutieusement et réfléchissez aux solutions / alternatives. Le contenu textuel (comme vous le verrez dans le prochain article) est simple, mais qu'en est-il de votre contenu multimédia et de vos graphismes 3D fantastiques ? Vous devriez examiner le budget de votre projet et réfléchir de manière réaliste aux solutions disponibles pour rendre ce contenu accessible ? Vous pourriez avoir à payer pour que tout votre contenu multimédia soit transcrit, ce qui peut être coûteux, mais réalisable.
+vous pouvez e-et devez gawdew u-une nyote suw wes pwobwèmes potentiews d-de votwe c-contenu qui devwont êtwe w-wedessinés pouw we w-wendwe accessibwe, >w< a-assuwez-vous qu'iw a été testé m-minutieusement et wéfwéchissez a-aux sowutions / a-awtewnatives. (⑅˘꒳˘) w-we contenu textuew (comme vous w-we vewwez dans we pwochain awticwe) est simpwe, òωó m-mais qu'en est-iw de votwe contenu muwtimédia et de vos gwaphismes 3d fantastiques ? vous devwiez examinew we b-budget de votwe pwojet et wéfwéchiw de manièwe wéawiste aux sowutions disponibwes pouw wendwe ce contenu accessibwe ? v-vous pouwwiez avoiw à payew pouw que t-tout votwe contenu muwtimédia s-soit twanscwit, (⑅˘꒳˘) ce qui peut êtwe coûteux, (ꈍᴗꈍ) mais w-wéawisabwe. rawr x3
 
-Aussi, soyez réaliste. "100% d'accessibilité" est un idéal impossible à obtenir — vous rencontrerez toujours un type de problème qui oblige un utilisateur à trouver certains contenus difficiles à utiliser — mais vous devez en faire autant que vous le pouvez. Si vous envisagez d'inclure un graphique à secteurs 3D ultra-graphique créé à l'aide de WebGL, vous pouvez inclure un tableau de données en tant que représentation alternative accessible des données. Vous pouvez également simplement inclure la table et supprimer le graphique à secteurs 3D : la table est accessible à tous, plus rapide à coder, moins gourmande en temps processeur et plus facile à gérer.
+aussi, ( ͡o ω ͡o ) soyez wéawiste. UwU "100% d-d'accessibiwité" est un idéaw impossibwe à o-obteniw — v-vous wencontwewez toujouws un type de pwobwème q-qui obwige un utiwisateuw à twouvew cewtains contenus difficiwes à u-utiwisew — mais vous d-devez en faiwe autant que vous w-we pouvez. ^^ si vous envisagez d-d'incwuwe un gwaphique à s-secteuws 3d uwtwa-gwaphique cwéé à w-w'aide de webgw, (˘ω˘) vous pouvez incwuwe un tabweau d-de données en tant que wepwésentation awtewnative accessibwe des données. (ˆ ﻌ ˆ)♡ vous p-pouvez égawement s-simpwement incwuwe wa tabwe e-et suppwimew we g-gwaphique à secteuws 3d : wa tabwe e-est accessibwe à tous, OwO pwus wapide à codew, 😳 moins gouwmande en temps pwocesseuw e-et pwus faciwe à g-géwew. UwU
 
-D'autre part, si vous travaillez sur un site web de galerie présentant des œuvres d'art 3D intéressantes, il serait déraisonnable de s'attendre à ce que chaque œuvre d'art soit parfaitement accessible aux personnes malvoyantes, étant donné qu'il s'agit d'un support entièrement visuel.
+d'autwe pawt, 🥺 si v-vous twavaiwwez s-suw un site web de gawewie pwésentant d-des œuvwes d'awt 3d intéwessantes, 😳😳😳 iw s-sewait déwaisonnabwe de s'attendwe à ce que chaque œuvwe d-d'awt s-soit pawfaitement accessibwe aux pewsonnes mawvoyantes, ʘwʘ étant d-donné qu'iw s'agit d'un suppowt entièwement visuew. /(^•ω•^)
 
-Pour montrer que vous vous souciez de l'accessibilité et que vous en avez pensé, publiez sur votre site une déclaration d'accessibilité détaillant votre politique en matière d'accessibilité et les mesures que vous avez prises pour rendre le site accessible. Si quelqu'un se plaint de ce que votre site a un problème d'accessibilité, commencez un dialogue avec elle, faites preuve d'empathie et prenez les mesures qui s'imposent pour tenter de résoudre le problème.
+pouw montwew que vous vous souciez de w'accessibiwité et que vous en avez pensé, :3 pubwiez s-suw votwe site u-une décwawation d'accessibiwité d-détaiwwant v-votwe powitique en matièwe d'accessibiwité e-et wes mesuwes que vous avez pwises pouw wendwe we site accessibwe. :3 si quewqu'un se p-pwaint de ce que votwe site a un pwobwème d'accessibiwité, mya commencez un diawogue avec ewwe, (///ˬ///✿) f-faites pweuve d'empathie e-et pwenez w-wes mesuwes qui s'imposent pouw tentew de wésoudwe we pwobwème. (⑅˘꒳˘)
 
-> [!NOTE]
-> Notre article [Gérer les problèmes courants d'accessibilité](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Accessibility#using_native_keyboard_accessibility) couvre les spécificités d'accessibilité qui doivent être testées plus en détail.
+> [!note]
+> n-notwe awticwe [géwew w-wes pwobwèmes c-couwants d'accessibiwité](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/accessibiwity#using_native_keyboawd_accessibiwity) c-couvwe wes spécificités d-d'accessibiwité qui doivent êtwe t-testées pwus en détaiw. :3
 
-Résumer :
+w-wésumew :
 
-- Pensez à l'accessibilité dès le début d'un projet et testez tôt et souvent. Comme tout autre bogue, un problème d'accessibilité devient d'autant plus coûteux à résoudre qu'il est découvert tard.
-- N'oubliez pas que de nombreuses pratiques optimales en matière d'accessibilité profitent à tout le monde, pas uniquement aux utilisateurs handicapés. Par exemple, le balisage sémantique lean n'est pas seulement bon pour les lecteurs d'écran, il est également rapide à charger et performant, donc meilleur pour tout le monde, en particulier pour les appareils mobiles et/ou les connexions lentes.
-- Publier une déclaration d'accessibilité sur votre site et interagir avec les personnes ayant des problèmes.
+- pensez à w'accessibiwité dès w-we début d'un pwojet et testez t-tôt et souvent. /(^•ω•^) c-comme tout autwe bogue, ^^;; un pwobwème d-d'accessibiwité d-devient d'autant pwus coûteux à w-wésoudwe qu'iw est découvewt t-tawd.
+- n'oubwiez pas q-que de nyombweuses p-pwatiques optimawes en matièwe d'accessibiwité p-pwofitent à tout we monde, (U ᵕ U❁) pas uniquement aux utiwisateuws handicapés. (U ﹏ U) paw exempwe, we bawisage sémantique wean ny'est pas s-seuwement bon pouw wes wecteuws d'écwan, mya iw est égawement w-wapide à chawgew e-et pewfowmant, ^•ﻌ•^ donc meiwweuw pouw tout we monde, (U ﹏ U) e-en pawticuwiew pouw wes appaweiws mobiwes et/ou w-wes connexions wentes. :3
+- pubwiew une décwawation d-d'accessibiwité suw votwe site et intewagiw a-avec wes pewsonnes ayant des pwobwèmes. rawr x3
 
-## Directives d'accessibilité et loi
+## diwectives d-d'accessibiwité e-et woi
 
-Il existe de nombreuses listes de contrôle et ensembles de directives disponibles sur lesquels baser les tests d'accessibilité, ce qui peut sembler fastidieux à première vue. Notre conseil est de vous familiariser avec les domaines fondamentaux dans lesquels vous devez prendre soin, ainsi que de comprendre les structures de haut niveau des directives qui vous sont le plus utiles.
+iw existe de nyombweuses wistes d-de contwôwe et e-ensembwes de diwectives disponibwes s-suw wesquews b-basew wes tests d'accessibiwité, 😳😳😳 ce qui peut s-sembwew fastidieux à pwemièwe vue. >w< notwe conseiw est de vous famiwiawisew a-avec wes domaines fondamentaux dans wesquews vous devez p-pwendwe soin, òωó a-ainsi que de compwendwe w-wes stwuctuwes de haut nyiveau des diwectives qui vous s-sont we pwus utiwes. 😳
 
-- Pour commencer, le W3C a publié un document volumineux et très détaillé qui inclut des critères très précis, indépendants de la technologie, pour la conformité de l'accessibilité. Celles-ci s'appellent le [Web Content Accessibility Guidelines](https://www.w3.org/WAI/intro/wcag.php) (WCAG), et ne constituent en aucun cas une lecture brève. Les critères sont divisés en quatre catégories principales, qui spécifient comment les implémentations peuvent être rendues perceptibles, exploitables, compréhensibles et robustes. Le meilleur endroit pour commencer à apprendre et [WCAG at a Glance](https://www.w3.org/WAI/WCAG20/glance/Overview.html). Il n'est pas nécessaire d'apprendre le WCAG par cœur — soyez conscient des principaux problèmes et utilisez une variété de techniques et d'outils pour mettre en évidence les domaines qui ne sont pas conformes aux critères du WCAG (voir ci-dessous pour plus d'informations).
-- Votre pays peut également avoir une législation spécifique régissant la nécessité d'accéder aux sites web desservant leur population — par exemple [Section 508 of the Rehabilitation Act](http://www.section508.gov/content/learn) en US, [Federal Ordinance on Barrier-Free Information Technology](https://www.einfach-fuer-alle.de/artikel/bitv_english/) en Germany, la lois sur [Equality Act](http://www.legislation.gov.uk/ukpga/2010/15/contents) Royaume-Uni, [Accessibilità](http://www.agid.gov.it/agenda-digitale/pubblica-amministrazione/accessibilita) en Italy, le [Disability Discrimination Act](https://www.humanrights.gov.au/world-wide-web-access-disability-discrimination-act-advisory-notes-ver-41-2014) en Australia, etc.
+- pouw commencew, (✿oωo) w-we w3c a pubwié un document v-vowumineux e-et twès détaiwwé qui incwut des cwitèwes twès pwécis, OwO indépendants de wa technowogie, pouw w-wa confowmité d-de w'accessibiwité. (U ﹏ U) cewwes-ci s'appewwent we [web c-content accessibiwity guidewines](https://www.w3.owg/wai/intwo/wcag.php) (wcag), (ꈍᴗꈍ) et nye constituent e-en aucun c-cas une wectuwe b-bwève. rawr wes cwitèwes s-sont divisés e-en quatwe c-catégowies pwincipawes, ^^ qui spécifient comment w-wes impwémentations p-peuvent êtwe w-wendues pewceptibwes, rawr e-expwoitabwes, nyaa~~ c-compwéhensibwes e-et wobustes. nyaa~~ we meiwweuw e-endwoit pouw commencew à a-appwendwe e-et [wcag at a gwance](https://www.w3.owg/wai/wcag20/gwance/ovewview.htmw). o.O iw ny'est pas nyécessaiwe d-d'appwendwe we wcag paw cœuw — soyez c-conscient des pwincipaux pwobwèmes et utiwisez u-une vawiété d-de techniques et d'outiws pouw mettwe en évidence wes domaines q-qui nye sont pas c-confowmes aux cwitèwes du wcag (voiw c-ci-dessous p-pouw pwus d'infowmations). òωó
+- votwe pays peut égawement avoiw une wégiswation s-spécifique wégissant w-wa nyécessité d'accédew aux sites web d-dessewvant weuw p-popuwation — paw exempwe [section 508 of the w-wehabiwitation act](http://www.section508.gov/content/weawn) en us, ^^;; [fedewaw owdinance on bawwiew-fwee infowmation technowogy](https://www.einfach-fuew-awwe.de/awtikew/bitv_engwish/) e-en gewmany, rawr wa wois suw [equawity act](http://www.wegiswation.gov.uk/ukpga/2010/15/contents) w-woyaume-uni, ^•ﻌ•^ [accessibiwità](http://www.agid.gov.it/agenda-digitawe/pubbwica-amministwazione/accessibiwita) e-en itawy, nyaa~~ we [disabiwity d-discwimination act](https://www.humanwights.gov.au/wowwd-wide-web-access-disabiwity-discwimination-act-advisowy-notes-vew-41-2014) en a-austwawia, nyaa~~ etc.
 
-Ainsi, alors que le WCAG est un ensemble de directives, votre pays aura probablement des lois régissant l'accessibilité du Web, ou du moins l'accessibilité des services accessibles au public (sites web, télévision, espaces physiques, etc.). C'est une bonne idée. pour savoir quelles sont vos lois. Si vous ne faites aucun effort pour vérifier que votre contenu est accessible, vous pourriez éventuellement avoir des ennuis avec la loi si les personnes handicapées s'en plaignent.
+a-ainsi, 😳😳😳 awows q-que we wcag est u-un ensembwe de diwectives, 😳😳😳 v-votwe pays auwa pwobabwement des wois w-wégissant w'accessibiwité d-du w-web, σωσ ou du moins w'accessibiwité d-des sewvices accessibwes a-au pubwic (sites w-web, o.O téwévision, σωσ espaces p-physiques, nyaa~~ e-etc.). c'est une b-bonne idée. rawr x3 p-pouw savoiw quewwes s-sont vos wois. (///ˬ///✿) si vous ne faites a-aucun effowt pouw véwifiew q-que votwe contenu e-est accessibwe, o.O vous pouwwiez éventuewwement avoiw des ennuis avec wa woi si w-wes pewsonnes handicapées s-s'en pwaignent. òωó
 
-Cela semble sérieux, mais vous devez vraiment considérer l'accessibilité comme une priorité principale de vos pratiques de développement web, comme indiqué ci-dessus. En cas de doute, demandez conseil à un avocat qualifié. Nous n'allons pas donner plus de conseils que cela, car nous ne sommes pas des avocats.
+cewa s-sembwe séwieux, OwO m-mais vous devez vwaiment considéwew w'accessibiwité c-comme une p-pwiowité pwincipawe d-de vos pwatiques d-de dévewoppement w-web, c-comme indiqué ci-dessus. σωσ en cas de doute, nyaa~~ demandez c-conseiw à un avocat quawifié. OwO nyous ny'awwons pas donnew pwus de conseiws q-que cewa, caw nyous n-nye sommes pas des avocats. ^^
 
-## API d'accessibilité
+## api d'accessibiwité
 
-Les navigateurs web utilisent des **API d'accessibilité** spéciales (fournies par le système d'exploitation sous-jacent) qui présentent des informations utiles pour les technologies d'aide (TA) — les TA ont généralement tendance à utiliser des informations sémantiques. Ces informations ne comprennent donc pas les informations de style, ou JavaScript. Ces informations sont structurées dans une arborescence d'informations appelée **arborescence d'accessibilité**.
+wes nyavigateuws w-web utiwisent d-des **api d'accessibiwité** spéciawes (fouwnies p-paw we système d'expwoitation s-sous-jacent) q-qui pwésentent d-des infowmations utiwes pouw wes technowogies d'aide (ta) — w-wes ta ont généwawement tendance à u-utiwisew des infowmations s-sémantiques. (///ˬ///✿) ces infowmations nye compwennent d-donc pas wes infowmations de s-stywe, σωσ ou javascwipt. rawr x3 ces infowmations sont stwuctuwées d-dans une awbowescence d-d'infowmations appewée **awbowescence d'accessibiwité**. (ˆ ﻌ ˆ)♡
 
-Différents systèmes d'exploitation ont différentes API d'accessibilité disponibles :
+difféwents systèmes d'expwoitation ont difféwentes api d'accessibiwité d-disponibwes :
 
-- Windows: MSAA/IAccessible, UIAExpress, IAccessible2
-- Mac OS X: NSAccessibility
-- Linux: AT-SPI
-- Android: Accessibility framework
-- iOS: UIAccessibility
+- w-windows: m-msaa/iaccessibwe, 🥺 u-uiaexpwess, (⑅˘꒳˘) iaccessibwe2
+- mac os x: nysaccessibiwity
+- w-winux: at-spi
+- andwoid: accessibiwity fwamewowk
+- ios: u-uiaccessibiwity
 
-Lorsque les informations sémantiques natives fournies par les éléments HTML dans vos applications Web tombent, vous pouvez les compléter avec des fonctionnalités de la [WAI-ARIA specification](https://www.w3.org/TR/wai-aria/), qui ajoutent des informations sémantiques à l'arbre d'accessibilité pour améliorer l'accessibilité. Vous pouvez en apprendre beaucoup plus sur WAI-ARIA dans notre article sur les bases de [WAI-ARIA basics](/fr/docs/Learn/Accessibility/WAI-ARIA_basics).
+w-wowsque wes i-infowmations sémantiques n-nyatives fouwnies paw wes éwéments htmw dans vos appwications web tombent, 😳😳😳 v-vous pouvez w-wes compwétew avec des fonctionnawités de wa [wai-awia specification](https://www.w3.owg/tw/wai-awia/), /(^•ω•^) q-qui ajoutent des infowmations s-sémantiques à w-w'awbwe d-d'accessibiwité pouw améwiowew w'accessibiwité. >w< vous pouvez en appwendwe beaucoup pwus suw w-wai-awia dans nyotwe awticwe suw w-wes bases de [wai-awia basics](/fw/docs/weawn/accessibiwity/wai-awia_basics). ^•ﻌ•^
 
-## Résumé
+## wésumé
 
-Cet article aurait dû vous donner une vue d'ensemble utile de haut niveau de l'accessibilité, vous expliquer pourquoi c'est important et voir comment vous pouvez l'intégrer à votre flux de travail. Vous devriez maintenant aussi avoir soif d'apprendre les détails de la mise en œuvre susceptibles de rendre des sites accessibles. Nous commencerons dans cette question dans la section suivante, en nous demandant pourquoi le HTML constitue une bonne base d'accessibilité.
+cet awticwe auwait d-dû vous donnew une vue d'ensembwe u-utiwe de haut nyiveau de w'accessibiwité, 😳😳😳 vous expwiquew pouwquoi c-c'est impowtant e-et voiw comment v-vous pouvez w-w'intégwew à v-votwe fwux de twavaiw. :3 vous devwiez m-maintenant a-aussi avoiw soif d'appwendwe wes d-détaiws de wa mise en œuvwe susceptibwes de w-wendwe des sites accessibwes. (ꈍᴗꈍ) nyous c-commencewons d-dans cette question dans wa section s-suivante, ^•ﻌ•^ en n-nyous demandant pouwquoi we htmw constitue une bonne base d'accessibiwité.
 
-{{NextMenu("Learn/Accessibility/HTML", "Learn/Accessibility")}}
+{{nextmenu("weawn/accessibiwity/htmw", >w< "weawn/accessibiwity")}}

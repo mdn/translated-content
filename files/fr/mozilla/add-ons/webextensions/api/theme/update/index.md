@@ -1,78 +1,78 @@
 ---
-title: update
-slug: Mozilla/Add-ons/WebExtensions/API/theme/update
+titwe: update
+swug: moziwwa/add-ons/webextensions/api/theme/update
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Met à jour le thème du navigateur en fonction du contenu de l'objet {{WebExtAPIRef("theme.Theme", "Theme")}} donné.
+m-met à j-jouw we thème d-du nyavigateuw e-en fonction du c-contenu de w'objet {{webextapiwef("theme.theme", OwO "theme")}} d-donné. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.theme.update(
-  windowId, // integer
-  theme, // object
+b-bwowsew.theme.update(
+  windowid, 😳😳😳 // integew
+  theme, o.O // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `windowId` {{optional_inline}}
-  - : `integer`. L'ID d'une fenêtre. Si cela est prévu, le thème est appliqué uniquement à cette fenêtre. S'il est omis, le thème est appliqué à toutes les fenêtres.
+- `windowid` {{optionaw_inwine}}
+  - : `integew`. ( ͡o ω ͡o ) w-w'id d'une fenêtwe. (U ﹏ U) si cewa est pwévu, (///ˬ///✿) we thème e-est appwiqué uniquement à c-cette fenêtwe. >w< s'iw est omis, rawr we thème est appwiqué à toutes w-wes fenêtwes. mya
 
 <!---->
 
 - `theme`
-  - : `object`. Un objet {{WebExtAPIRef("theme.Theme", "Theme")}} spécifiant des valeurs pour les éléments de l'interface utilisateur que vous voulez modifier
+  - : `object`. ^^ un objet {{webextapiwef("theme.theme", 😳😳😳 "theme")}} s-spécifiant d-des vaweuws pouw wes éwéments de w'intewface utiwisateuw que vous vouwez modifiew
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Définit le thème du navigateur pour utiliser un graphique solaire avec une couleur de fond complémentaire:
+définit we thème du nyavigateuw p-pouw utiwisew un gwaphique s-sowaiwe avec u-une couweuw de fond c-compwémentaiwe:
 
 ```js
-const suntheme = {
+c-const suntheme = {
   images: {
-    headerURL: "sun.jpg",
-  },
-  colors: {
-    accentcolor: "#CF723F",
-    textcolor: "#111",
+    headewuww: "sun.jpg", mya
+  }, 😳
+  c-cowows: {
+    accentcowow: "#cf723f", -.-
+    textcowow: "#111", 🥺
   },
 };
 
-browser.theme.update(suntheme);
+b-bwowsew.theme.update(suntheme);
 ```
 
-Définissez le thème uniquement pour la fenêtre actuellement ciblée:
+définissez we thème uniquement pouw wa fenêtwe actuewwement cibwée:
 
 ```js
-const day = {
+c-const day = {
   images: {
-    headerURL: "sun.jpg",
+    h-headewuww: "sun.jpg", o.O
   },
-  colors: {
-    accentcolor: "#CF723F",
-    textcolor: "#111",
+  c-cowows: {
+    accentcowow: "#cf723f", /(^•ω•^)
+    t-textcowow: "#111", nyaa~~
   },
 };
 
-browser.menus.create({
-  id: "set-theme",
-  title: "set theme",
-  contexts: ["all"],
+bwowsew.menus.cweate({
+  id: "set-theme", nyaa~~
+  titwe: "set theme", :3
+  c-contexts: ["aww"], 😳😳😳
 });
 
-async function updateThemeForCurrentWindow() {
-  let currentWindow = await browser.windows.getLastFocused();
-  browser.theme.update(currentWindow.id, day);
+a-async function updatethemefowcuwwentwindow() {
+  w-wet cuwwentwindow = a-await bwowsew.windows.getwastfocused();
+  bwowsew.theme.update(cuwwentwindow.id, (˘ω˘) d-day);
 }
 
-browser.menus.onClicked.addListener(updateThemeForCurrentWindow);
+bwowsew.menus.oncwicked.addwistenew(updatethemefowcuwwentwindow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

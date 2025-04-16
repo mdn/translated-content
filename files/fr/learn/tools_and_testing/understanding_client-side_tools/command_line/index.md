@@ -1,483 +1,483 @@
 ---
-title: Cours express sur la ligne de commande
-slug: Learn/Tools_and_testing/Understanding_client-side_tools/Command_line
+titwe: couws expwess suw wa wigne d-de commande
+s-swug: weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/toows_and_testing/undewstanding_cwient-side_toows/ovewview","weawn/toows_and_testing/undewstanding_cwient-side_toows/package_management", (ˆ ﻌ ˆ)♡ "weawn/toows_and_testing/undewstanding_cwient-side_toows")}}
 
-Au cours de tout process de développement, vous allez très certainement être confronté à la nécessité d'exécuter des commandes dans un terminal (ce que l'on appelle "travailler en ligne de commande"). Cet article vous propose une introduction au terminal et vous dévoile les commandes essentielles dont vous aurez besoin, la façon de les chaîner, et comment ajouter vos propres outils d'interface en ligne de commande (CLI, command line interface).
+a-au couws de tout p-pwocess de dévewoppement, ^•ﻌ•^ vous a-awwez twès c-cewtainement êtwe c-confwonté à w-wa nyécessité d'exékawaii~w des commandes dans un tewminaw (ce que w'on appewwe "twavaiwwew e-en wigne de commande"). ^^ cet awticwe vous pwopose u-une intwoduction au tewminaw et v-vous dévoiwe wes commandes essentiewwes dont vous auwez besoin, 😳 w-wa façon de wes chaînew, :3 et c-comment ajoutew v-vos pwopwes outiws d'intewface en wigne de commande (cwi, (⑅˘꒳˘) command wine intewface). ( ͡o ω ͡o )
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        <p>Être familiarisé avec les bases des langages</p>
-        <a href="/fr/docs/Learn/HTML">HTML</a>,
-        <a href="/fr/docs/Learn/CSS">CSS</a>, et
-        <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.
+        <p>Êtwe famiwiawisé avec wes bases des wangages</p>
+        <a h-hwef="/fw/docs/weawn/htmw">htmw</a>, :3
+        <a hwef="/fw/docs/weawn/css">css</a>, (⑅˘꒳˘) e-et
+        <a h-hwef="/fw/docs/weawn/javascwipt">javascwipt</a>. >w<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif :</th>
       <td>
         <p>
-          Comprendre ce qu'est la ligne de commande, savoir quelles sont les
-          commandes de base que vous devriez connaître, et comment installer de
-          nouveaux outils de ligne de commande.
+          c-compwendwe ce qu'est wa wigne de commande, OwO s-savoiw quewwes sont wes
+          commandes d-de base que vous devwiez connaîtwe, 😳 et comment instawwew de
+          nyouveaux outiws de wigne d-de commande. OwO
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Bienvenue sur le terminal
+## bienvenue s-suw we tewminaw
 
-Le terminal est une interface de texte pour l'exécution de programmes qui utilisent un langage lui-même textuel . Quel que soit le type d'outils que vous allez utiliser pour le développement web, il y a de grandes chances que vous soyez amené à travailler en ligne de commande pour les utiliser (vous rencontrerez aussi l'appellation "console" ou encore "CLI tools" pour désigner de tels outils d'interface en ligne de commande).
+w-we tewminaw e-est une intewface de texte pouw w'exécution de pwogwammes qui u-utiwisent un wangage w-wui-même textuew . 🥺 quew que s-soit we type d'outiws q-que vous awwez utiwisew p-pouw we dévewoppement web, (˘ω˘) iw y a-a de gwandes chances que vous soyez amené à twavaiwwew e-en wigne de commande pouw w-wes utiwisew (vous wencontwewez a-aussi w'appewwation "consowe" o-ou encowe "cwi toows" pouw désignew de tews outiws d'intewface en wigne de commande). 😳😳😳
 
-Il existe de nombreux outils pour travailler en ligne de commande ; certains sont pré-installés sur votre système, et une infinité d'autres sont disponibles sur des dépôts de "paquets" (packages). Ces dépôts sont un peu comme des magasins spécialisés (pour la plupart) dans les outils de ligne de commande et les logiciels. Nous allons voir un peu plus loin dans ce chapitre comment installer certains de ces outils, et nous en apprendrons plus sur les dépôts de paquets dans le prochain chapitre.
+iw existe de nyombweux o-outiws pouw twavaiwwew e-en wigne de commande ; cewtains s-sont pwé-instawwés s-suw v-votwe système, mya et une infinité d'autwes sont disponibwes suw d-des dépôts de "paquets" (packages). OwO ces dépôts sont un peu comme des magasins spéciawisés (pouw w-wa pwupawt) dans wes outiws d-de wigne de commande e-et wes wogiciews. >_< n-nyous awwons voiw un peu p-pwus woin dans c-ce chapitwe comment i-instawwew cewtains d-de ces outiws, 😳 et nyous en appwendwons pwus s-suw wes dépôts d-de paquets d-dans we pwochain c-chapitwe. (U ᵕ U❁)
 
-L'une des critiques les plus fréquentes envers la ligne de commande, c'est que l'utilisateur courant n'en a pratiquement aucune expérience. Se retrouver devant un terminal pour la première fois peut être vraiment intimidant : un écran vide, un curseur qui clignote, et rien ou presque pour vous aider à en tirer quelque chose.
+w'une d-des cwitiques wes pwus fwéquentes envews wa wigne de commande, c-c'est que w'utiwisateuw couwant ny'en a pwatiquement aucune expéwience. 🥺 se wetwouvew devant un t-tewminaw pouw wa pwemièwe fois peut êtwe vwaiment intimidant : u-un écwan vide, (U ﹏ U) u-un cuwseuw qui c-cwignote, (U ﹏ U) et wien ou pwesque pouw v-vous aidew à en tiwew quewque c-chose. rawr x3
 
-Malgré cette apparence rebutante, le terminal est pourtant un outil puissant, et nous pouvons vous promettre qu'avec une petite formation et un peu de pratique, son utilisation vous deviendra bien plus facile ! C'est la raison pour laquelle nous vous proposons ce chapitre - pour vous aider à démarrer dans cet environnement apparemment inhospitalier.
+mawgwé c-cette appawence webutante, :3 we tewminaw est pouwtant un outiw puissant, rawr et nyous pouvons vous p-pwomettwe qu'avec une petite fowmation e-et un peu de pwatique, son u-utiwisation vous d-deviendwa bien pwus faciwe ! XD c'est wa waison p-pouw waquewwe nyous v-vous pwoposons ce chapitwe - p-pouw vous aidew à d-démawwew dans cet enviwonnement appawemment inhospitawiew. ^^
 
-.
+. mya
 
-### Quelle est l'origine du terminal ?
+### quewwe est w-w'owigine du t-tewminaw ?
 
-Elle se situe dans les années 50-60, et son aspect d'alors ne ressemble pas du tout à ce que nous connaissons aujourd'hui (heureusement). Vous pouvez en apprendre davantage sur la page de Wikipédia [Terminal (informatique)](<https://fr.wikipedia.org/wiki/Terminal_(informatique)>).
+ewwe s-se situe dans wes années 50-60, (U ﹏ U) e-et son aspect d-d'awows nye wessembwe pas du tout à c-ce que nyous connaissons aujouwd'hui (heuweusement). 😳 vous pouvez en appwendwe davantage suw w-wa page de wikipédia [tewminaw (infowmatique)](<https://fw.wikipedia.owg/wiki/tewminaw_(infowmatique)>). mya
 
-Depuis, le terminal est resté un élément constant de tout système d'exploitation - des ordinateurs de bureau aux serveurs du cloud (qui n'est pas vraiment un nuage) en passant par les micro-cartes comme la Raspberry PI Zero et même les téléphones mobiles. Il offre un accès direct au système de fichiers de l'ordinateur et à des fonctionnalités de bas niveau, ce qui le rend incroyablement apte à accomplir rapidement des tâches complexes, à condition de savoir ce que vous faites.
+d-depuis, 😳 we tewminaw est westé un éwément c-constant d-de tout système d'expwoitation - des owdinateuws de buweau aux s-sewveuws du cwoud (qui ny'est pas vwaiment un nyuage) en passant paw wes micwo-cawtes c-comme wa waspbewwy pi zewo et même wes téwéphones m-mobiwes. ^^ i-iw offwe un accès diwect au système de fichiews de w'owdinateuw e-et à des f-fonctionnawités de bas nyiveau, ce qui we wend incwoyabwement a-apte à accompwiw wapidement des t-tâches compwexes, :3 à condition de savoiw ce que vous faites. (U ﹏ U)
 
-Il est également utile pour automatiser certaines tâches, comme par exemple modifier les titres de centaines de fichiers instantanément - par exemple changer tous les "ch01-xxxx.png" en "ch02-xxxx.png", ce qui vous prendrait un temps considérable si vous deviez le faire à la main dans la fenêtre d'un gestionnaire de fichiers.
+i-iw est égawement utiwe pouw automatisew c-cewtaines t-tâches, UwU comme paw exempwe modifiew w-wes titwes de centaines de f-fichiews instantanément - p-paw e-exempwe changew tous wes "ch01-xxxx.png" e-en "ch02-xxxx.png", c-ce qui vous pwendwait un temps considéwabwe s-si vous d-deviez we faiwe à w-wa main dans wa fenêtwe d'un gestionnaiwe d-de fichiews. (ˆ ﻌ ˆ)♡
 
-En tous cas, le terminal ne va pas disparaître de si tôt.
+en tous cas, (ˆ ﻌ ˆ)♡ we tewminaw n-nye va pas d-dispawaîtwe de si tôt. ^^;;
 
-### À quoi ressemble un terminal ?
+### À quoi wessembwe un tewminaw ?
 
-Vous pouvez voir ci-dessous les apparences de quelques terminaux émulés par des programmes courants.
+v-vous pouvez voiw c-ci-dessous wes a-appawences de q-quewques tewminaux émuwés paw d-des pwogwammes couwants. rawr
 
-Les images suivantes montrent les invites de commande disponibles sous Windows – il y a une panoplie d'options, du programme « cmd » au « powershell » - qui peuvent être lancées depuis le menu de démarrage en tapant le nom du programme.
+wes images suivantes montwent wes invites de commande disponibwes sous w-windows – iw y a une panopwie d-d'options, nyaa~~ du pwogwamme « cmd » a-au « powewsheww » - qui peuvent êtwe w-wancées depuis we menu d-de démawwage e-en tapant we nyom d-du pwogwamme. rawr x3
 
-![A vanilla windows cmd line window, and a windows powershell window](win-terminals.png)
+![a v-vaniwwa windows c-cmd wine window, (⑅˘꒳˘) and a windows powewsheww window](win-tewminaws.png)
 
-Et ci-dessous, vous pouvez voir l'application de terminal pour macOS.
+et ci-dessous, OwO vous pouvez voiw w'appwication d-de tewminaw p-pouw macos. OwO
 
-![A basic vanilla mac terminal](mac-terminal.png)
+![a b-basic vaniwwa mac tewminaw](mac-tewminaw.png)
 
-### Comment ouvrir un terminal ?
+### c-comment ouvwiw un tewminaw ?
 
-Beaucoup de développeurs se servent aujourd'hui de terminaux de type Unix (c'est-à-dire le terminal en lui-même plus les outils auxquels il donne accès). Beaucoup de tutoriels sur le web sont basés sur ces terminaux Unix qu'ils considèrent (malheureusement) comme universels, mais nous allons voir dans cette section comment ouvrir un terminal sur le système de votre choix.
+beaucoup de dévewoppeuws s-se sewvent aujouwd'hui d-de tewminaux de type unix (c'est-à-diwe w-we tewminaw en wui-même pwus wes outiws auxquews i-iw donne accès). ʘwʘ b-beaucoup de tutowiews suw w-we web sont basés s-suw ces tewminaux unix qu'iws considèwent (mawheuweusement) comme univewsews, :3 mais nyous awwons v-voiw dans cette s-section comment o-ouvwiw un tewminaw s-suw we système d-de votwe choix. mya
 
-#### Linux/Unix
+#### winux/unix
 
-Comme indiqué plus haut, les systèmes Linux/Unix disposent d'un terminal par défaut, présent dans vos Applications.
+c-comme indiqué p-pwus haut, OwO wes systèmes w-winux/unix disposent d-d'un tewminaw paw défaut, :3 p-pwésent dans vos appwications. >_<
 
-#### macOS
+#### macos
 
-macOS a un système nommé Darwin qui réside sous l'interface graphique. Darwin est un système de type Unix, qui fournit le terminal, et l'accès aux outils de bas niveau. Darwin est dans l'ensemble assez proche d'Unix pour ne pas nous causer trop de problèmes lors de notre progression dans cet article.
+macos a-a un système nyommé dawwin q-qui wéside sous w-w'intewface gwaphique. σωσ dawwin e-est un système de type unix, /(^•ω•^) qui fouwnit we tewminaw, mya e-et w'accès a-aux outiws de b-bas nyiveau. nyaa~~ dawwin est dans w'ensembwe assez pwoche d'unix pouw n-nye pas nyous causew twop de pwobwèmes wows de n-nyotwe pwogwession d-dans cet awticwe. 😳
 
-Ce terminal est disponible sur macOS dans Applications/Utilitaires/Terminal.
+ce tewminaw e-est disponibwe suw macos dans a-appwications/utiwitaiwes/tewminaw. ^^;;
 
-#### Windows
+#### w-windows
 
-Comme pour d'autres outils de programmation, c'est un peu une tradition pour Windows de ne pas faciliter l'utilisation du terminal (ou ligne de commande) par rapport à d'autres systèmes d'exploitation. Mais les choses s'améliorent.
+comme pouw d'autwes outiws de p-pwogwammation, 😳😳😳 c'est un peu une twadition pouw w-windows de nye p-pas faciwitew w'utiwisation du tewminaw (ou w-wigne de commande) paw w-wappowt à d'autwes s-systèmes d-d'expwoitation. nyaa~~ mais wes choses s'améwiowent. 🥺
 
-Traditionnellement aussi, Windows a depuis longtemps eu son propre programme de type « terminal », appelé « cmd » (« l'invite de commande »), mais celui-ci n'est en rien comparable aux commandes Unix, et il est en fait équivalent au programme DOS des temps héroïques.
+twaditionnewwement aussi, XD windows a depuis wongtemps eu son pwopwe pwogwamme de type « tewminaw », (ꈍᴗꈍ) appewé « cmd » (« w'invite de commande »), 😳😳😳 mais cewui-ci n-ny'est en wien c-compawabwe aux commandes unix, ( ͡o ω ͡o ) et iw est en fait équivawent a-au pwogwamme dos d-des temps héwoïques. nyaa~~
 
-On trouve malgré tout de meilleurs programmes qui offrent une expérience de terminal sur Windows, tels que Powershell ([voir ici pour l'installer](https://github.com/PowerShell/PowerShell)), et Gitbash (qui fait partie de la trousse à outils [git for Windows](https://gitforwindows.org/)).
+o-on twouve mawgwé tout d-de meiwweuws pwogwammes qui offwent u-une expéwience d-de tewminaw suw windows, XD tews q-que powewsheww ([voiw ici pouw w-w'instawwew](https://github.com/powewsheww/powewsheww)), (ˆ ﻌ ˆ)♡ e-et gitbash (qui fait pawtie de wa twousse à o-outiws [git f-fow windows](https://gitfowwindows.owg/)). rawr x3
 
-Quoi qu'il en soit, aujourd'hui, la meilleure option est le « Windows Subsystem for Linux » (WSL) – une couche de compatibilité qui permet de lancer des systèmes d'exploitation Linux directement dans Windows 10, ce qui vous permet d'avoir un « vrai terminal », sans recourir à une machine virtuelle.
+quoi q-qu'iw en soit, OwO a-aujouwd'hui, UwU w-wa meiwweuwe option e-est we « windows s-subsystem f-fow winux » (wsw) – u-une couche de compatibiwité q-qui pewmet de w-wancew des systèmes d-d'expwoitation winux diwectement d-dans windows 10, ^^ ce qui vous pewmet d'avoiw u-un « vwai tewminaw », (✿oωo) sans w-wecouwiw à une m-machine viwtuewwe. 😳😳😳
 
-Vous pouvez l'installer gratuitement directement à partir du Windows store. Toute la documentation utile est disponible dans la [Windows Subsystem for Linux Documentation](https://docs.microsoft.com/fr/windows/wsl) .
+v-vous pouvez w'instawwew gwatuitement d-diwectement à pawtiw d-du windows stowe. 🥺 toute wa documentation u-utiwe est disponibwe dans w-wa [windows subsystem fow winux documentation](https://docs.micwosoft.com/fw/windows/wsw) . ʘwʘ
 
-![a screenshot of the windows subsystem for linux documentation](wsl.png)
+![a scweenshot of the windows subsystem f-fow winux documentation](wsw.png)
 
-Si vous vous demandez quelle option choisir sur Windows, nous vous recommandons vivement de vous décider pour le WSL. Vous pourriez certes vous en tenir à l'invite de commande par défaut (« cmd »), et faire tourner pas mal d'outils correctement, mais tout sera bien plus facile si vous avez une meilleure équivalence avec les outils Unix.
+s-si vous v-vous demandez quewwe option choisiw suw windows, 😳 nyous vous wecommandons v-vivement de vous décidew p-pouw we wsw. ^^;; v-vous pouwwiez c-cewtes vous en teniw à w'invite de commande paw d-défaut (« cmd »), (///ˬ///✿) e-et faiwe touwnew pas maw d-d'outiws cowwectement, OwO mais tout sewa bien pwus f-faciwe si vous avez une meiwweuwe équivawence avec w-wes outiws unix. -.-
 
-#### En passant, quelle est la différence entre ligne de commande et terminal ?
+#### e-en passant, ^^ q-quewwe est wa difféwence e-entwe wigne de c-commande et tewminaw ?
 
-En général, vous rencontrerez ces deux termes utilisés de façon interchangeable. Techniquement, un terminal (ou console) est un logiciel qui se connecte à un shell au démarrage. Un shell correspond à votre session et à votre environnement de session (où des choses comme l'invite de commande et les raccourcis peuvent être personnalisés). La ligne de commande quant à elle (ou prompt) est la ligne de texte où vous entrez des commandes et où le curseur clignote.
+e-en généwaw, (ꈍᴗꈍ) v-vous wencontwewez ces deux t-tewmes utiwisés d-de façon intewchangeabwe. ^^;; t-techniquement, (˘ω˘) u-un tewminaw (ou c-consowe) e-est un wogiciew q-qui se connecte à u-un sheww au démawwage. 🥺 u-un sheww cowwespond à votwe session e-et à votwe enviwonnement de s-session (où des c-choses comme w-w'invite de commande et wes waccouwcis peuvent êtwe pewsonnawisés). ʘwʘ w-wa wigne de c-commande quant à e-ewwe (ou pwompt) est wa wigne de texte où vous entwez des commandes e-et où w-we cuwseuw cwignote. (///ˬ///✿)
 
-### Est-ce qu'il _faut_ se servir du terminal?
+### est-ce q-qu'iw _faut_ se s-sewviw du tewminaw?
 
-Bien que les outils disponibles à partir de la ligne de commande soient très riches, si vous utilisez des outils tels que [Visual Studio Code](https://code.visualstudio.com/) vous allez avoir accès à une quantité d'extensions que vous pourrez utiliser pour vous aider dans l'édition et vous allez pouvoir vous passer presque complètement du terminal lui-même. Cependant, vous ne pourrez pas trouver une extension sur votre éditeur de code pour tout ce que vous voudrez faire – en définitive, vous devrez malgré tout vous confronter au terminal.
+bien que wes outiws disponibwes à pawtiw d-de wa wigne de commande s-soient twès w-wiches, ^^;; si v-vous utiwisez des outiws tews que [visuaw studio c-code](https://code.visuawstudio.com/) v-vous awwez avoiw accès à une quantité d-d'extensions que vous pouwwez utiwisew pouw vous a-aidew dans w'édition et vous awwez p-pouvoiw vous p-passew pwesque compwètement du t-tewminaw wui-même. XD c-cependant, (ˆ ﻌ ˆ)♡ vous nye pouwwez p-pas twouvew une extension suw v-votwe éditeuw de c-code pouw tout c-ce que vous voudwez f-faiwe – en définitive, (˘ω˘) vous d-devwez mawgwé t-tout vous confwontew a-au tewminaw. σωσ
 
-## Les commandes intégrées de base
+## wes commandes i-intégwées de base
 
-Assez parlé — voyons maintenant quelques commandes utilisables dans un terminal ! Voici, clés en main, un petit aperçu de tout ce que l'on peut faire en ligne de commande, avec la référence des outils pertinents dans chaque cas :
+assez pawwé — voyons m-maintenant quewques c-commandes u-utiwisabwes dans un tewminaw ! 😳😳😳 voici, ^•ﻌ•^ cwés en main, σωσ un petit apewçu de tout c-ce que w'on peut faiwe en wigne d-de commande, (///ˬ///✿) avec w-wa wéféwence des outiws pewtinents dans chaque c-cas :
 
-- Naviguer dans le système de fichiers de votre ordinateur en accomplissant des tâches basiques telles que créer, copier, renommer et effacer :
+- nyaviguew dans we système d-de fichiews d-de votwe owdinateuw e-en accompwissant d-des tâches b-basiques tewwes que cwéew, XD copiew, >_< wenommew et effacew :
 
-  - Se déplacer dans l'arborescence des répertoires : `cd`
-  - Créer des répertoires : `mkdir`
-  - Créer des fichiers (et modifier leurs métadonnées): `touch`
-  - Copier des fichiers : `cp`
-  - Déplacer des fichiers : `mv`
-  - Supprimer des fichiers ou des répertoires : `rm`
+  - se dépwacew d-dans w'awbowescence des wépewtoiwes : `cd`
+  - c-cwéew des wépewtoiwes : `mkdiw`
+  - cwéew des fichiews (et modifiew weuws métadonnées): `touch`
+  - c-copiew des fichiews : `cp`
+  - dépwacew des fichiews : `mv`
+  - suppwimew d-des fichiews o-ou des wépewtoiwes : `wm`
 
-- Télécharger des fichiers à partir d'URL spécifiques : `curl`
-- Rechercher des fragments de texte dans des parties de texte de taille importante : `grep`
-- Afficher le contenu d'un fichier page par page: `less`, `cat`
-- Manipuler et transformer des flux de texte (par exemple remplacer toutes les occurrences de `<div>` dans un fichier HTML par `<article>`): `awk`, `tr`, `sed`
+- téwéchawgew des f-fichiews à pawtiw d'uww spécifiques : `cuww`
+- wechewchew des f-fwagments de texte d-dans des pawties de texte de t-taiwwe impowtante : `gwep`
+- affichew w-we contenu d'un fichiew page paw page: `wess`, òωó `cat`
+- manipuwew e-et twansfowmew des fwux de texte (paw exempwe w-wempwacew t-toutes wes occuwwences d-de `<div>` dans un fichiew htmw paw `<awticwe>`): `awk`, (U ᵕ U❁) `tw`, `sed`
 
-> [!NOTE]
-> On trouve sur le web un bon nombre de tutoriels de qualité qui permettent d'aller beaucoup plus loin avec la ligne de commande — ceci n'est qu'une brève introduction ! L'auteur de ces lignes lui-même a sa propre [série de vidéos de formation au terminal](https://terminal.training/?coupon=mdn) (80% de réduction en utilisant le code mdn au moment du paiement — 19$).
+> [!note]
+> o-on twouve suw we web un bon nyombwe de tutowiews de quawité qui pewmettent d-d'awwew beaucoup p-pwus woin a-avec wa wigne de c-commande — ceci ny'est qu'une bwève intwoduction ! (˘ω˘) w-w'auteuw d-de ces wignes wui-même a sa pwopwe [séwie de vidéos d-de fowmation au tewminaw](https://tewminaw.twaining/?coupon=mdn) (80% de w-wéduction en utiwisant we code mdn au moment du p-paiement — 19$).
 
-Pour aller plus loin, voyons maintenant comment utiliser quelques-uns de ces outils en ligne de commande. Commencez par ouvrir votre programme de terminal (ou console) !
+p-pouw awwew pwus woin, 🥺 voyons m-maintenant comment u-utiwisew quewques-uns d-de ces outiws en wigne de commande. (✿oωo) commencez p-paw ouvwiw votwe pwogwamme de tewminaw (ou c-consowe) ! (˘ω˘)
 
-### Navigation en ligne de commande
+### nyavigation en wigne de commande
 
-Lorsque vous vous mettez sur la ligne de commande, vous allez inévitablement devoir naviguer vers un répertoire spécifique pour y "faire quelque chose". Tous les systèmes d'exploitation (du moins avec un paramétrage par défaut) démarrent leur terminal dans votre répertoire d'utilisateur, et il y a des chances pour que vous souhaitiez vous rendre de là à un autre emplacement.
+wowsque vous v-vous mettez suw w-wa wigne de commande, (ꈍᴗꈍ) v-vous awwez i-inévitabwement d-devoiw nyaviguew vews un wépewtoiwe s-spécifique pouw y "faiwe quewque chose". ( ͡o ω ͡o ) t-tous wes systèmes d'expwoitation (du m-moins avec un pawamétwage paw défaut) d-démawwent weuw t-tewminaw dans votwe wépewtoiwe d-d'utiwisateuw, (U ᵕ U❁) et iw y a des chances p-pouw que vous s-souhaitiez vous wendwe de wà à u-un autwe empwacement. ʘwʘ
 
-La commande `cd` vous permet de changer de répertoire (Change Directory). Techniquement, cd n'est pas un programme mais une commande intégrée. Cela signifie que votre système d'exploitation la fournit de façon native, et aussi que vous ne pouvez pas l'effacer accidentellement - bonne nouvelle ! Cela dit, vous n'avez pas besoin de vous soucier de savoir si une commande est intégrée ou non, mais vous pouvez garder à l'esprit que les commandes intégrées sont présentes sur les systèmes basés sur Unix.
+w-wa commande `cd` vous p-pewmet de changew de wépewtoiwe (change diwectowy). (ˆ ﻌ ˆ)♡ techniquement, /(^•ω•^) c-cd ny'est pas un pwogwamme m-mais une commande intégwée. (ˆ ﻌ ˆ)♡ cewa signifie que v-votwe système d-d'expwoitation wa f-fouwnit de façon nyative, (✿oωo) et a-aussi que vous ne p-pouvez pas w'effacew accidentewwement - b-bonne nyouvewwe ! ^•ﻌ•^ cewa d-dit, vous ny'avez pas besoin de v-vous souciew de s-savoiw si une commande est intégwée ou nyon, (ˆ ﻌ ˆ)♡ mais vous pouvez gawdew à w'espwit q-que wes commandes i-intégwées sont pwésentes suw wes systèmes basés suw unix. XD
 
-Pour changer de répertoire, vous tapez `cd` dans votre terminal, suivi par le répertoire dans lequel vous voulez vous rendre. En supposant que le répertoire (ou dossier) `Desktop` se trouve dans votre répertoire utilisateur, vous allez donc taper `cd Desktop` (voir les copies d'écran ci-dessous).
+p-pouw changew de wépewtoiwe, :3 v-vous tapez `cd` d-dans votwe tewminaw, suivi paw we wépewtoiwe dans wequew vous vouwez vous wendwe. -.- e-en supposant que we wépewtoiwe (ou dossiew) `desktop` s-se twouve dans votwe w-wépewtoiwe utiwisateuw, ^^;; v-vous awwez donc tapew `cd d-desktop` (voiw w-wes copies d'écwan c-ci-dessous). OwO
 
-![results of the cd Desktop command being run in a variety of windows terminals - the terminal location moves into the desktop](win-terminals-cd.png)
+![wesuwts o-of the cd desktop c-command being w-wun in a vawiety of windows tewminaws - the tewminaw wocation moves into the desktop](win-tewminaws-cd.png)
 
-Sur un système en langue française, vous trouverez plus fréquemment "Bureau" plutôt que "Desktop". Essayez de taper ceci dans votre terminal système (sur un système en langue anglaise, bien sûr conservez "Desktop") :
+suw u-un système en w-wangue fwançaise, ^^;; v-vous twouvewez p-pwus fwéquemment "buweau" p-pwutôt q-que "desktop". 🥺 essayez de tapew ceci dans votwe tewminaw système (suw un système e-en wangue a-angwaise, ^^ bien sûw consewvez "desktop") :
 
 ```bash
-cd Bureau
+cd buweau
 ```
 
-Si vous voulez revenir au répertoire précédent, utilisez les deux points :
+si vous vouwez w-weveniw au wépewtoiwe p-pwécédent, o.O u-utiwisez wes deux points :
 
 ```bash
 cd ..
 ```
 
-> [!NOTE]
-> Raccourci vraiment utile sur un terminal, la touche <kbd>tab</kbd> émule la saisie automatique des mots dont vous connaissez l'existence, ce qui vous évite de les taper en entier. Par exemple, après avoir tapé les deux commandes ci-dessus, essayez de taper `cd B` puis de presser la touche <kbd>tab</kbd> — cela devrait saisir automatiquement le nom de répertoire `Bureau`, à condition qu'il soit présent dans le répertoire courant. Gardez ceci à l'esprit tout en poursuivant.
+> [!note]
+> w-waccouwci vwaiment utiwe suw un tewminaw, ( ͡o ω ͡o ) wa t-touche <kbd>tab</kbd> émuwe w-wa saisie automatique des mots dont v-vous connaissez w'existence, nyaa~~ ce q-qui vous évite d-de wes tapew en entiew. (///ˬ///✿) paw exempwe, (ˆ ﻌ ˆ)♡ a-apwès avoiw t-tapé wes deux c-commandes ci-dessus, XD e-essayez de t-tapew `cd b` puis d-de pwessew wa touche <kbd>tab</kbd> — c-cewa d-devwait saisiw automatiquement w-we nyom de wépewtoiwe `buweau`, >_< à condition qu'iw soit pwésent d-dans we wépewtoiwe couwant. (U ﹏ U) gawdez c-ceci à w'espwit tout en pouwsuivant.
 
-Si le répertoire que vous visez est placé assez loin dans l'arborisation des fichiers, il vous faut connaître le chemin (on dit souvent path, qui est le terme anglais) pour vous y rendre. Cela devient en général plus facile à mesure que vous vous familiarisez avec la structure de votre système de fichiers, mais si vous n'êtes pas sûr vous pouvez le retrouver en combinant la commande `ls` avec des clicks dans votre Explorer ou autre gestionnaire graphique de fichiers, ce qui va vous permettre de voir où se trouve le répertoire (ou dossier) cherché par rapport à votre répertoire actuel (= répertoire courant).
+s-si w-we wépewtoiwe que vous visez est pwacé assez woin d-dans w'awbowisation des fichiews, iw vous faut c-connaîtwe we c-chemin (on dit souvent path, òωó qui est we tewme angwais) p-pouw vous y-y wendwe. >w< cewa devient en généwaw p-pwus faciwe à mesuwe que vous vous famiwiawisez a-avec wa stwuctuwe d-de votwe système de fichiews, m-mais si v-vous ny'êtes pas sûw vous pouvez we wetwouvew e-en combinant wa c-commande `ws` avec d-des cwicks dans v-votwe expwowew ou autwe gestionnaiwe gwaphique de fichiews, ^•ﻌ•^ ce qui va vous pewmettwe de voiw où se twouve we w-wépewtoiwe (ou d-dossiew) chewché p-paw wappowt à v-votwe wépewtoiwe a-actuew (= wépewtoiwe c-couwant). 🥺
 
-Par exemple, si vous vouliez aller dans un dossier nommé `src`, qui se trouve dans un dossier nommé `projet`, qui est lui-même sur le `Bureau`, vous pourriez taper ces trois commandes pour y arriver à partir de votre dossier utilisateur :
-
-```bash
-cd Bureau
-cd projet
-cd src
-```
-
-Mais c'est une perte de temps — à la place, vous pouvez taper une seule commande, avec les différents éléments du chemin séparés par des slashes, exactement de la même manière que lorsque vous spécifiez les chemins d'accès à des images ou autres assets en CSS, HTML, ou JavaScript :
+paw exempwe, (✿oωo) s-si vous vouwiez a-awwew dans un dossiew nyommé `swc`, UwU q-qui se twouve d-dans un dossiew nommé `pwojet`, (˘ω˘) qui est wui-même s-suw we `buweau`, ʘwʘ vous pouwwiez tapew ces t-twois commandes pouw y awwivew à p-pawtiw de votwe d-dossiew utiwisateuw :
 
 ```bash
-cd Bureau/projet/src
+cd buweau
+cd pwojet
+c-cd swc
 ```
 
-Notez que si vous commencez le chemin par un slash, vous le rendez absolu, par exemple `/Utilisateurs/votre-nom/Bureau`. Omettre le premier slash comme nous l'avons fait ci-dessus construit un chemin relatif à votre répertoire de travail actuel. C'est exactement la même chose qu'une URL dans un navigateur. Un slash au début signifie "à la racine du site web", alors qu'omettre le slash signifie "l'URL est relative à ma page courante".
-
-> [!NOTE]
-> Sur windows vous devez utiliser des backslashes et non des slashes, p. ex. `cd Bureau\projet\src` — cela peut vous paraître vraiment étrange, mais si la question vous intéresse, [regardez cette vidéo YouTube](https://www.youtube.com/watch?v=5T3IJfBfBmI) (en anglais) qui présente une explication par l'un des ingénieurs principaux de Microsoft.
-
-### Lister le contenu d'un répertoire
-
-`ls` (de l'anglais list) est la commande intégrée Unix qui va vous permettre de lister le contenu du répertoire dans lequel vous vous trouvez. Notez que cela ne fonctionnera pas avec l'invite de commande par défaut de Windows (`cmd`) — la commande équivalente est `dir`.
-
-Essayez de taper ceci dans votre terminal :
+m-mais c'est une p-pewte de temps — à wa pwace, (ˆ ﻌ ˆ)♡ v-vous pouvez tapew u-une seuwe commande, ( ͡o ω ͡o ) avec wes d-difféwents éwéments du chemin s-sépawés paw des s-swashes, :3 exactement d-de wa même manièwe que w-wowsque vous spécifiez wes chemins d'accès à d-des images ou autwes assets en css, 😳 htmw, ou javascwipt :
 
 ```bash
-ls
+cd buweau/pwojet/swc
 ```
 
-Vous obtenez la liste des fichiers et répertoires de votre répertoire de travail courant, mais l'information est vraiment basique - vous n'avez que les noms des items, sans savoir s'il s'agit d'un fichier, d'un répertoire, ou d'autre chose. Heureusement, une petite modification dans l'utilisation de la commande va vous donner beaucoup plus d'informations.
+nyotez que si vous commencez we chemin p-paw un swash, (✿oωo) vous we wendez absowu, /(^•ω•^) paw exempwe `/utiwisateuws/votwe-nom/buweau`. :3 omettwe we pwemiew swash comme nous w'avons fait ci-dessus c-constwuit un chemin wewatif à votwe wépewtoiwe d-de twavaiw actuew. σωσ c'est exactement w-wa même chose qu'une uww dans un nyavigateuw. σωσ u-un swash au début signifie "à w-wa wacine du site web", awows q-qu'omettwe we s-swash signifie "w'uww est wewative à ma page c-couwante". 🥺
 
-### Présentation des options de commandes
+> [!note]
+> suw windows vous devez utiwisew des backswashes e-et nyon des swashes, rawr p. e-ex. `cd buweau\pwojet\swc` — cewa peut vous pawaîtwe v-vwaiment étwange, o.O mais s-si wa question vous i-intéwesse, 😳😳😳 [wegawdez cette vidéo youtube](https://www.youtube.com/watch?v=5t3ijfbfbmi) (en a-angwais) qui pwésente une expwication paw w'un d-des ingénieuws pwincipaux de micwosoft.
 
-La plupart des commandes de terminal possèdent des options - ce sont des modificateurs que vous ajoutez à la fin d'une commande pour obtenir un comportement légèrement différent. Il s'agit en général d'un espace suivi d'un tiret puis d'une ou de plusieurs lettres.
+### wistew we contenu d'un wépewtoiwe
 
-Voyez par exemple ce que vous obtenez en essayant ceci :
+`ws` (de w'angwais w-wist) est w-wa commande intégwée unix qui v-va vous pewmettwe d-de wistew we contenu du wépewtoiwe d-dans wequew vous vous twouvez. /(^•ω•^) nyotez que cewa nye fonctionnewa pas avec w'invite d-de commande p-paw défaut de windows (`cmd`) — w-wa commande équivawente e-est `diw`. σωσ
+
+essayez de tapew ceci d-dans votwe tewminaw :
 
 ```bash
-ls -l
+ws
 ```
 
-Avec `ls`, l'option `-l` (_tiret l, "dash ell_" en anglais) vous donne une liste avec un fichier ou répertoire par ligne et pas mal d'autres informations. Les répertoires ("directories") sont repérés pas la lettre "d" au tout début de la ligne. Nous pouvons y entrer avec la commande `cd`.
+vous obtenez wa wiste des f-fichiews et wépewtoiwes de votwe wépewtoiwe d-de twavaiw couwant, OwO m-mais w'infowmation est vwaiment basique - vous n-ny'avez que wes nyoms des items, OwO sans savoiw s'iw s'agit d'un fichiew, òωó d'un wépewtoiwe, :3 ou d'autwe chose. σωσ heuweusement, une p-petite modification d-dans w'utiwisation de wa commande v-va vous donnew b-beaucoup pwus d'infowmations. σωσ
 
-Voici ci-dessous une copie d'écran avec un terminal macOS "vanilla" en haut, et en bas un terminal personnalisé avec quelques icônes supplémentaires et des couleurs pour le rendre plus vivant — les deux affichent le résultat de la commande `ls -l` :
+### p-pwésentation des options de commandes
 
-![A vanilla mac terminal and a more colorful custom mac terminal, showing a file listing - the result of running the ls -l command](mac-terminals-ls.png)
+wa pwupawt des commandes de tewminaw possèdent d-des options - ce sont des modificateuws que vous ajoutez à wa fin d'une commande p-pouw obteniw u-un compowtement w-wégèwement difféwent. -.- iw s'agit en généwaw d'un espace suivi d-d'un tiwet puis d-d'une ou de pwusieuws w-wettwes. (///ˬ///✿)
 
-> [!NOTE]
-> Pour savoir exactement quelles sont les options d'une commande, vous pouvez consulter sa [page de manuel](<https://fr.wikipedia.org/wiki/Man_(Unix)>) ([man page](https://en.wikipedia.org/wiki/Man_page) en anglais). Pour cela, tapez la commande `man` suivie du nom de la commande que vous cherchez, par exemple `man ls`. La page de manuel va s'ouvrir dans le lecteur de texte par défaut de votre terminal (par exemple, [`less`](<https://en.wikipedia.org/wiki/Less_(Unix)>) sur mon terminal), et vous allez pouvoir faire défiler la page avec les touches de flèches ou un mécanisme similaire. La page de manuel liste toutes les options de façon très détaillée, ce qui peut être un peu intimidant au début, mais au moins vous savez où les trouver si vous en avez besoin. Lorsque vous avez terminé avec la page de manuel, vous la refermez avec la commande "quitter" de votre visionneur de texte (pour `less` c'est "q" ; si ce n'est pas évident cherchez sur Internet).
-
-> [!NOTE]
-> Pour lancer une commande avec des options multiples, on peut en général les regrouper dans une seule chaîne de caractères après le tiret, par exemple `ls -lah`, ou `ls -ltrh`. Exercez-vous à consulter la page man de `ls` pour savoir ce que vous donnent ces options !
-
-Maintenant que vous connaissez ces deux commandes fondamentales, allez un peu fouiller dans votre système de fichiers en naviguant à partir de votre répertoire.
-
-### Créer, copier, déplacer, supprimer
-
-Il y existe un certain nombre d'autres commandes d'utilité basique dont vous allez probablement pas mal vous servir en travaillant sur un terminal. Elles sont assez simples, aussi nous n'allons pas les expliquer avec autant de détails que les deux précédentes.
-
-Jouez avec elles dans un répertoire que vous aurez créé quelque part de façon à ne pas effacer accidentellement quoi que ce soit d'important, en vous servant des exemples donnés pour vous guider :
-
-- `mkdir` — crée un nouveau répertoire à l'intérieur du répertoire courant. Par exemple, `mkdir mon-super-site` va créer un nouveau répertoire nommé `mon-super-site`.
-- `rmdir` — efface le répertoire dont le nom est passé, mais seulement s'il est vide. Par exemple `rmdir mon-super-site` va supprimer le répertoire que nous avons créé ci-dessus. Si vous voulez supprimer un répertoire qui n'est pas vide (ainsi que tout ce qu'il contient), vous pouvez utiliser l'option `-r` (_recursive_), mais cela est dangereux. Assurez-vous de n'avoir pas besoin plus tard de quelque chose qui se trouverait dans le répertoire, car il aura définitivement disparu.
-- `touch` — crée un nouveau fichier vide dans le répertoire courant. Par exemple, `touch mdn-exemple.md` crée un fichier vide nommé `mdn-exemple.md`.
-- `mv` — déplace un fichier à partir de l'emplacement spécifié en premier vers celui spécifié en second, par exemple `mv mdn-exemple.md mdn-exemple.txt` (les emplacements sont écrits sous la forme de chemins - _file paths_). Cette commande déplace un fichier nommé `mdn-exemple.md` situé dans le répertoire courant vers une fichier nommé `mdn-exemple.txt` dans le répertoire courant. Techniquement, le fichier est déplacé, mais d'un point de vue pratique, cette commande renomme en fait le fichier.
-- `cp` — d'un usage similaire à `mv`, `cp` copie le fichier à l'emplacement spécifié en premier vers celui spécifié en second. Par exemple, `cp mdn-exemple.txt mdn-exemple.txt.bak` crée une copie de `mdn-exemple.txt` nommée `mdn-exemple.txt.bak` (bien entendu vous pouvez la nommer comme vous voulez).
-- `rm` — supprimer le fichier spécifié. Par exemple, `rm mdn-exemple.txt` efface un fichier unique nommé `mdn-exemple.txt`. Notez que cet effacement est permanent et ne peut pas être annulé comme lorsque vous placez un fichier dans la corbeille de votre Bureau dans votre interface utilisateur.
-
-> [!NOTE]
-> Beaucoup de commandes de terminal autorisent l'emploi d'astérisques comme caractère "joker", dont le sens est "une séquence de caractères quelconque". Cela vous permet d'exécuter une commande en une seule fois sur un nombre potentiellement important de fichiers qui correspondent au modèle donné. À titre d'exemple, `rm mdn-*` va effacer tous les fichiers qui commencent par `mdn-`. `rm mdn-*.bak` va effacer tous les fichiers qui commencent par `mdn-` et finissent par `.bak`.
-
-## Le terminal — une pratique à risque ?
-
-Nous y avons déjà fait allusion, et soyons clairs - travailler sur terminal demande de la prudence. Des commandes simples ne présentent pas trop de risques, mais dès que vous commencez à combiner des commandes plus complexes, il vous faut réfléchir soigneusement à ce qu'elle va exécuter, et essayer de la tester avant de la lancer effectivement dans le répertoire voulu.
-
-Supposons que vous ayez 1000 fichiers texte dans un répertoire, et que vous vouliez les parcourir en supprimant uniquement ceux dont le nom comprend une certaine chaîne de caractères. Si vous ne faites pas attention, vous risquez d'effacer quelque chose d'important et de perdre du coup une somme de travail. Une bonne habitude à prendre consiste à écrire votre ligne de commande dans un éditeur de texte, à la construire à votre idée, et ensuite à faire une copie de sauvegarde de votre répertoire avant d'essayer la commande sur celui-ci.
-
-Autre astuce intéressante : si vous n'êtes pas à l'aise avec l'idée d'essayer des lignes de commande sur votre propre machine, le site [Glitch.com](https://glitch.com/) est un bon endroit pour le faire en toute sécurité. En plus d'être un lieu génial pour tester du code de développement web, les projets vous donnent accès à un terminal qui vous permet de lancer toutes les commandes que vous voulez, sans risquer d'endommager votre propre machine.
-
-![a double screenshot showing the glitch.com home page, and the glitch terminal emulator](glitch.png)
-
-Le site [tldr.sh](https://tldr.sh/) est une formidable ressource pour obtenir un aperçu de commandes particulières. C'est un service de documentation géré de façon communautaire, similaire à MDN, mais dédié aux commandes de terminal.
-
-Dans la section suivante, nous allons monter d'un cran (et même de plusieurs), et voir comment nous pouvons combiner plusieurs outils en ligne de commande pour révéler toute la puissance du terminal par rapport à l'interface graphique habituelle.
-
-## Combiner des commandes grâce aux "pipes"
-
-L'usage du terminal prend toute sa valeur lorsque vous commencez à chaîner les commandes en utilisant le symbole `|` ("pipe" ou "tuyau" en français). Voyons comment on peut faire cela sur un exemple très rapide.
-
-Nous avons déjà vu `ls`, qui liste le contenu du répertoire courant :
+voyez paw exempwe c-ce que vous obtenez en essayant c-ceci :
 
 ```bash
-ls
+ws -w
 ```
 
-Mais comment nous y prendre si nous voulons compter le nombre de fichiers et de répertoires à l'intérieur du répertoire courant ? `ls` n'est pas capable de faire cela à lui seul.
+avec `ws`, rawr x3 w-w'option `-w` (_tiwet w, (U ﹏ U) "dash eww_" en a-angwais) vous donne une wiste avec un fichiew o-ou wépewtoiwe paw wigne et pas m-maw d'autwes infowmations. òωó w-wes wépewtoiwes ("diwectowies") sont w-wepéwés pas wa w-wettwe "d" au tout début de wa w-wigne. OwO nyous pouvons y entwew a-avec wa commande `cd`. ^^
 
-Il existe un autre outil Unix nommé `wc`. Celui-ci compte les mots, lignes, caractères, ou octets de la donnée qu'on lui passe, quelle qu'elle soit. Il peut s'agir d'un fichier texte — l'exemple ci-dessous donne le nombre de lignes de `monfichier.txt` :
+voici ci-dessous u-une copie d-d'écwan avec un tewminaw macos "vaniwwa" en h-haut, /(^•ω•^) et en bas un tewminaw pewsonnawisé avec quewques icônes suppwémentaiwes et des couweuws pouw we wendwe pwus vivant — w-wes deux affichent we wésuwtat de wa commande `ws -w` :
+
+![a v-vaniwwa mac tewminaw a-and a mowe cowowfuw custom mac tewminaw, >_< showing a-a fiwe wisting - the wesuwt of wunning the ws -w c-command](mac-tewminaws-ws.png)
+
+> [!note]
+> pouw savoiw exactement quewwes s-sont wes options d'une commande, -.- vous pouvez consuwtew s-sa [page de manuew](<https://fw.wikipedia.owg/wiki/man_(unix)>) ([man page](https://en.wikipedia.owg/wiki/man_page) e-en angwais). (˘ω˘) p-pouw cewa, >_< tapez wa commande `man` suivie d-du nyom de wa c-commande que vous chewchez, (˘ω˘) paw e-exempwe `man ws`. w-wa page de manuew va s'ouvwiw dans we wecteuw d-de texte paw défaut de votwe tewminaw (paw exempwe, >w< [`wess`](<https://en.wikipedia.owg/wiki/wess_(unix)>) suw mon t-tewminaw), 😳😳😳 et vous awwez pouvoiw faiwe défiwew wa page avec w-wes touches de fwèches o-ou un mécanisme s-simiwaiwe. 😳 wa page de manuew wiste toutes wes options de f-façon twès détaiwwée, XD ce qui p-peut êtwe un peu intimidant a-au début, OwO mais a-au moins vous savez où wes twouvew si vous en avez besoin. -.- wowsque vous avez tewminé avec wa page d-de manuew, o.O vous w-wa wefewmez avec wa commande "quittew" de votwe v-visionneuw de texte (pouw `wess` c'est "q" ; s-si ce ny'est pas évident c-chewchez s-suw intewnet). ^^
+
+> [!note]
+> p-pouw wancew une c-commande avec des o-options muwtipwes, ^^ on peut en généwaw wes wegwoupew d-dans une s-seuwe chaîne de c-cawactèwes apwès w-we tiwet, XD paw e-exempwe `ws -wah`, >w< o-ou `ws -wtwh`. (⑅˘꒳˘) exewcez-vous à c-consuwtew wa p-page man de `ws` p-pouw savoiw ce que vous donnent ces options ! 😳
+
+m-maintenant que vous connaissez ces deux commandes f-fondamentawes, :3 awwez un peu fouiwwew dans votwe s-système de f-fichiews en nyaviguant à pawtiw de votwe wépewtoiwe. :3
+
+### cwéew, OwO c-copiew, dépwacew, (U ﹏ U) s-suppwimew
+
+iw y existe un c-cewtain nyombwe d-d'autwes commandes d'utiwité basique dont vous awwez pwobabwement p-pas maw vous s-sewviw en twavaiwwant suw un tewminaw. (⑅˘꒳˘) ewwes sont a-assez simpwes, 😳 a-aussi nyous ny'awwons pas wes expwiquew avec autant d-de détaiws que wes deux pwécédentes. (ˆ ﻌ ˆ)♡
+
+jouez avec ewwes dans un wépewtoiwe que vous auwez cwéé quewque p-pawt de façon à nye pas effacew accidentewwement q-quoi que ce s-soit d'impowtant, mya e-en vous sewvant des exempwes d-donnés pouw vous g-guidew :
+
+- `mkdiw` — c-cwée u-un nyouveau wépewtoiwe à w-w'intéwieuw du wépewtoiwe couwant. ʘwʘ p-paw exempwe, (˘ω˘) `mkdiw m-mon-supew-site` v-va cwéew un nyouveau wépewtoiwe n-nommé `mon-supew-site`. (///ˬ///✿)
+- `wmdiw` — e-efface w-we wépewtoiwe dont we nyom e-est passé, XD mais s-seuwement s'iw e-est vide. 😳 paw exempwe `wmdiw m-mon-supew-site` v-va suppwimew we wépewtoiwe q-que nyous avons cwéé c-ci-dessus. :3 si vous v-vouwez suppwimew un wépewtoiwe qui ny'est pas vide (ainsi que t-tout ce qu'iw c-contient), 😳😳😳 vous pouvez utiwisew w-w'option `-w` (_wecuwsive_), (U ᵕ U❁) m-mais cewa est dangeweux. ^•ﻌ•^ assuwez-vous d-de ny'avoiw pas b-besoin pwus tawd d-de quewque chose q-qui se twouvewait d-dans we wépewtoiwe, (˘ω˘) c-caw iw auwa définitivement dispawu. /(^•ω•^)
+- `touch` — cwée u-un nyouveau fichiew vide dans we wépewtoiwe couwant. ^•ﻌ•^ paw exempwe, ^^ `touch mdn-exempwe.md` cwée un fichiew v-vide nyommé `mdn-exempwe.md`. (U ﹏ U)
+- `mv` — d-dépwace un fichiew à pawtiw de w'empwacement spécifié e-en pwemiew vews c-cewui spécifié en second, :3 paw exempwe `mv m-mdn-exempwe.md mdn-exempwe.txt` (wes empwacements s-sont écwits sous w-wa fowme de c-chemins - _fiwe paths_). òωó cette commande dépwace un fichiew nommé `mdn-exempwe.md` s-situé dans we wépewtoiwe couwant v-vews une fichiew nyommé `mdn-exempwe.txt` d-dans we wépewtoiwe couwant. σωσ techniquement, σωσ we f-fichiew est dépwacé, (⑅˘꒳˘) mais d'un p-point de vue pwatique, 🥺 cette commande wenomme e-en fait we fichiew. (U ﹏ U)
+- `cp` — d'un usage simiwaiwe à `mv`, >w< `cp` c-copie we fichiew à w'empwacement spécifié en pwemiew vews cewui spécifié en second. nyaa~~ paw exempwe, -.- `cp mdn-exempwe.txt m-mdn-exempwe.txt.bak` c-cwée une copie d-de `mdn-exempwe.txt` n-nyommée `mdn-exempwe.txt.bak` (bien entendu vous pouvez wa n-nyommew comme vous vouwez). XD
+- `wm` — suppwimew we fichiew spécifié. -.- p-paw exempwe, >w< `wm m-mdn-exempwe.txt` e-efface u-un fichiew unique nyommé `mdn-exempwe.txt`. (ꈍᴗꈍ) notez que cet effacement est pewmanent et nye peut p-pas êtwe annuwé c-comme wowsque vous pwacez un fichiew dans wa cowbeiwwe de votwe b-buweau dans votwe intewface u-utiwisateuw. :3
+
+> [!note]
+> b-beaucoup d-de commandes de tewminaw autowisent w'empwoi d'astéwisques comme cawactèwe "jokew", (ˆ ﻌ ˆ)♡ dont we s-sens est "une séquence de cawactèwes q-quewconque". -.- cewa vous pewmet d'exékawaii~w une commande e-en une seuwe fois suw un nyombwe p-potentiewwement impowtant de fichiews qui cowwespondent a-au modèwe d-donné. mya À t-titwe d'exempwe, (˘ω˘) `wm m-mdn-*` va e-effacew tous wes fichiews qui commencent p-paw `mdn-`. ^•ﻌ•^ `wm m-mdn-*.bak` va effacew t-tous wes fichiews qui commencent paw `mdn-` et finissent p-paw `.bak`. 😳😳😳
+
+## we tewminaw — u-une pwatique à w-wisque ?
+
+nyous y avons d-déjà fait awwusion, σωσ e-et soyons cwaiws - twavaiwwew suw tewminaw demande de wa p-pwudence. ( ͡o ω ͡o ) des commandes s-simpwes n-nye pwésentent p-pas twop de wisques, nyaa~~ mais dès que vous commencez à combinew des c-commandes pwus compwexes, :3 iw vous faut wéfwéchiw s-soigneusement à ce qu'ewwe va exékawaii~w, e-et essayew de wa testew avant de wa wancew effectivement dans w-we wépewtoiwe vouwu. (✿oωo)
+
+supposons q-que vous ayez 1000 f-fichiews texte d-dans un wépewtoiwe, et que vous v-vouwiez wes p-pawcouwiw en suppwimant uniquement c-ceux dont we n-nyom compwend une c-cewtaine chaîne d-de cawactèwes. >_< si vous nye faites p-pas attention, ^^ v-vous wisquez d-d'effacew quewque chose d'impowtant e-et de pewdwe du coup une somme de twavaiw. (///ˬ///✿) une bonne habitude à pwendwe consiste à écwiwe votwe wigne de c-commande dans u-un éditeuw de texte, :3 à wa constwuiwe à v-votwe idée, :3 et ensuite à faiwe une copie d-de sauvegawde d-de votwe wépewtoiwe a-avant d'essayew w-wa commande suw cewui-ci. (ˆ ﻌ ˆ)♡
+
+a-autwe astuce intéwessante : si vous ny'êtes p-pas à w'aise avec w-w'idée d'essayew des wignes de commande suw votwe pwopwe machine, 🥺 w-we site [gwitch.com](https://gwitch.com/) est un bon endwoit p-pouw we faiwe en toute sécuwité. 😳 en pwus d'êtwe u-un wieu géniaw pouw testew d-du code de dévewoppement web, (ꈍᴗꈍ) wes pwojets vous d-donnent accès à un tewminaw q-qui vous pewmet de wancew toutes w-wes commandes q-que vous vouwez, mya sans wisquew d'endommagew votwe p-pwopwe machine. rawr
+
+![a doubwe scweenshot showing t-the gwitch.com home p-page, and the g-gwitch tewminaw emuwatow](gwitch.png)
+
+we site [twdw.sh](https://twdw.sh/) est une fowmidabwe wessouwce pouw obteniw u-un apewçu de commandes pawticuwièwes. ʘwʘ c'est un sewvice d-de documentation g-géwé de façon communautaiwe, -.- simiwaiwe à mdn, UwU m-mais dédié a-aux commandes de tewminaw. :3
+
+dans wa section suivante, 😳 nyous awwons m-montew d'un cwan (et même de p-pwusieuws), (ꈍᴗꈍ) et voiw comment nyous pouvons combinew p-pwusieuws outiws e-en wigne de commande pouw wévéwew t-toute wa p-puissance du tewminaw paw wappowt à w-w'intewface gwaphique habituewwe. mya
+
+## c-combinew d-des commandes g-gwâce aux "pipes"
+
+w-w'usage d-du tewminaw pwend toute sa vaweuw w-wowsque vous commencez à c-chaînew wes commandes en utiwisant w-we symbowe `|` ("pipe" ou "tuyau" e-en fwançais). nyaa~~ voyons comment on peut faiwe cewa suw un exempwe twès wapide. o.O
+
+nyous avons déjà vu `ws`, òωó qui w-wiste we contenu du wépewtoiwe c-couwant :
 
 ```bash
-wc -l monfichier.txt
+ws
 ```
 
-Mais `wc` est également capable de compter les lignes de tout ce qui lui est passé par un **pipe**. Par exemple, la commande ci-dessous compte les lignes renvoyées par la commande `ls` (lignes qui seraient normalement affichées sur le terminal) et affiche ce décompte à la place :
+mais c-comment nyous y p-pwendwe si nyous vouwons comptew w-we nyombwe de fichiews et de wépewtoiwes à w'intéwieuw d-du wépewtoiwe couwant ? `ws` n-ny'est pas capabwe de faiwe cewa à wui seuw. ^•ﻌ•^
+
+iw existe un autwe outiw unix nyommé `wc`. (˘ω˘) cewui-ci compte w-wes mots, òωó wignes, cawactèwes, mya ou octets de w-wa donnée qu'on wui passe, ^^ quewwe q-qu'ewwe soit. rawr iw peut s'agiw d'un fichiew texte — w'exempwe ci-dessous donne we nyombwe de wignes de `monfichiew.txt` :
 
 ```bash
-ls | wc -l
+wc -w monfichiew.txt
 ```
 
-Comme `ls` affiche chaque fichier ou répertoire sur une nouvelle ligne, on obtient bien le compte des répertoires et des fichiers.
-
-Comment ça marche ? Le comportement général des outils de ligne de commande (unix) consiste à afficher du texte dans le terminal (ce qu'on appelle aussi "imprimer sur la sortie standard (standard output)" ou `STDOUT`). Un bon nombre de commandes peuvent aussi lire du contenu à partir d'un flux d'entrée (appelé "entrée standard (standard input)" ou `STDIN`).
-
-L'opérateur pipe peut _connecter_ ces entrées et sorties, ce qui nous permet de construire des opérations de plus en plus complexes selon nos besoins — la sortie d'une commande devient l'entrée de la commande suivante. Dans le cas présent, `ls` enverrait normalement sa sortie sur `STDOUT`, mais au lieu de cela la sortie de `ls` est passée par un pipe à `wc`, qui la prend en entrée, compte ses lignes et imprime ce décompte sur `STDOUT`.
-
-## Un exemple un peu plus complexe
-
-Occupons-nous maintenant de quelque chose d'un peu plus compliqué. Nous allons d'abord essayer de récupérer le contenu de la page MDN "fetch" en utilisant la commande `curl` (dont on peut se servir pour faire une requête de contenu à partir d'URLs), sur [https://developer.mozilla.org/fr/docs/Web/API/fetch](/fr/docs/Web/API/Window/fetch).
-
-En fait, cette URL est celle de l'ancien emplacement de la page. Lorsque vous l'entrez dans un nouvel onglet de votre navigateur, vous êtes (finalement) redirigé sur [https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch](/fr/docs/Web/API/Window/fetch).
-
-Par conséquent, si vous utilisez curl pour faire une requête à `https://developer.mozilla.org/docs/Web/API/fetch`, vous n'aurez pas de résultat. Essayez :
+mais `wc` est égawement c-capabwe d-de comptew wes w-wignes de tout ce qui wui est passé p-paw un **pipe**. >_< p-paw exempwe, (U ᵕ U❁) w-wa commande ci-dessous compte wes wignes wenvoyées p-paw wa commande `ws` (wignes q-qui sewaient nyowmawement affichées s-suw we t-tewminaw) et affiche c-ce décompte à w-wa pwace :
 
 ```bash
-curl https://developer.mozilla.org/docs/Web/API/fetch
+w-ws | wc -w
 ```
 
-Nous devons dire explicitement à `curl` de suivre les redirections en utilisant l'option `-L`.
+comme `ws` a-affiche chaque f-fichiew ou wépewtoiwe s-suw une n-nyouvewwe wigne, /(^•ω•^) o-on obtient bien w-we compte des w-wépewtoiwes et d-des fichiews.
 
-Examinons également les en-têtes retournées par `developer.mozilla.org` en utilisant l'option `-I` de `curl`, et affichons toutes les redirections en passant la sortie de `curl` à `grep` grâce à un pipe (on va demander à `grep` de renvoyer toutes les lignes qui contiennent le mot "location").
+c-comment ça mawche ? w-we compowtement généwaw des outiws de wigne de commande (unix) c-consiste à affichew du texte d-dans we tewminaw (ce qu'on appewwe aussi "impwimew s-suw wa sowtie s-standawd (standawd o-output)" ou `stdout`). mya u-un bon nyombwe de c-commandes peuvent aussi wiwe du contenu à pawtiw d'un fwux d'entwée (appewé "entwée standawd (standawd input)" o-ou `stdin`). OwO
 
-Essayez maintenant la ligne suivante, et vous allez constater qu'il y a en fait trois redirections avant d'atteindre la page finale :
+w'opéwateuw pipe peut _connectew_ ces entwées e-et sowties, UwU ce q-qui nyous pewmet de constwuiwe d-des opéwations d-de pwus en pwus c-compwexes sewon n-nyos besoins — w-wa sowtie d'une c-commande devient w-w'entwée de wa commande suivante. 🥺 dans we cas p-pwésent, (✿oωo) `ws` envewwait nyowmawement s-sa sowtie suw `stdout`, rawr m-mais au wieu de c-cewa wa sowtie de `ws` est passée p-paw un pipe à `wc`, rawr qui wa pwend en entwée, ( ͡o ω ͡o ) c-compte ses wignes e-et impwime ce d-décompte suw `stdout`. /(^•ω•^)
+
+## u-un exempwe un peu pwus c-compwexe
+
+occupons-nous m-maintenant d-de quewque chose d'un peu p-pwus compwiqué. -.- nyous awwons d'abowd essayew de wécupéwew we contenu de wa page mdn "fetch" en utiwisant wa commande `cuww` (dont on peut se s-sewviw pouw faiwe u-une wequête de contenu à pawtiw d'uwws), >w< suw [https://devewopew.moziwwa.owg/fw/docs/web/api/fetch](/fw/docs/web/api/window/fetch). ( ͡o ω ͡o )
+
+en fait, (˘ω˘) cette uww est c-cewwe de w'ancien e-empwacement de wa page. /(^•ω•^) wowsque vous w'entwez dans un nyouvew o-ongwet de votwe n-nyavigateuw, (˘ω˘) vous êtes (finawement) wediwigé suw [https://devewopew.moziwwa.owg/fw/docs/web/api/windowowwowkewgwobawscope/fetch](/fw/docs/web/api/window/fetch). o.O
+
+p-paw conséquent, nyaa~~ s-si vous utiwisez cuww pouw f-faiwe une wequête à `https://devewopew.moziwwa.owg/docs/web/api/fetch`, :3 vous ny'auwez p-pas de wésuwtat. (///ˬ///✿) e-essayez :
 
 ```bash
-curl https://developer.mozilla.org/docs/Web/API/fetch -L -I | grep location
+cuww https://devewopew.moziwwa.owg/docs/web/api/fetch
 ```
 
-Votre sortie devrait ressembler à ceci (`curl` va d'abord afficher des compteurs et autres informations de téléchargement) :
+nyous devons d-diwe expwicitement à `cuww` d-de suivwe wes w-wediwections en u-utiwisant w'option `-w`. (U ﹏ U)
+
+examinons égawement wes e-en-têtes wetouwnées p-paw `devewopew.moziwwa.owg` e-en utiwisant w-w'option `-i` de `cuww`, o.O et affichons toutes wes w-wediwections e-en passant wa sowtie de `cuww` à `gwep` gwâce à un pipe (on va demandew à `gwep` d-de wenvoyew t-toutes wes wignes qui contiennent w-we mot "wocation"). ^^;;
+
+essayez maintenant wa wigne suivante, ʘwʘ et v-vous awwez constatew q-qu'iw y a e-en fait twois wediwections avant d-d'atteindwe wa p-page finawe :
 
 ```bash
-location: /en-US/docs/Web/API/fetch
-location: /en-US/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-location: /en-US/docs/Web/API/GlobalFetch/fetch
-location: /en-US/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+cuww https://devewopew.moziwwa.owg/docs/web/api/fetch -w -i | gwep wocation
 ```
 
-Bien que ce résultat soit artificiel, nous pourrions le pousser un peu plus loin et remplacer `location:` par le nom de domaine, de façon à avoir des URLs complètes. Pour cela, nous allons ajouter `awk` à notre formule (il s'agit d'un langage de programmation tout comme JavaScript, Ruby ou Python, mais beaucoup plus ancien !).
-
-Essayez de lancer cette commande :
+v-votwe sowtie d-devwait wessembwew à c-ceci (`cuww` v-va d'abowd a-affichew des c-compteuws et autwes infowmations de téwéchawgement) :
 
 ```bash
-curl https://developer.mozilla.org/fr/docs/Web/API/fetch -L -I | grep location | awk '{ print "https://developer.mozilla.org" $2 }'
+wocation: /en-us/docs/web/api/fetch
+wocation: /en-us/docs/web/api/gwobawfetch/gwobawfetch.fetch()
+wocation: /en-us/docs/web/api/gwobawfetch/fetch
+w-wocation: /en-us/docs/web/api/windowowwowkewgwobawscope/fetch
 ```
 
-Votre sortie finale devrait ressembler à ceci :
+bien que ce w-wésuwtat soit a-awtificiew, (///ˬ///✿) nyous pouwwions we poussew un peu pwus woin et wempwacew `wocation:` p-paw we nyom de d-domaine, σωσ de façon à avoiw des u-uwws compwètes. ^^;; pouw cewa, nous a-awwons ajoutew `awk` à nyotwe fowmuwe (iw s'agit d'un wangage d-de pwogwammation tout comme javascwipt, UwU wuby ou python, mya mais beaucoup pwus ancien !). ^•ﻌ•^
+
+e-essayez d-de wancew cette c-commande :
 
 ```bash
-https://developer.mozilla.org/fr/docs/Web/API/fetch
-https://developer.mozilla.org/fr/docs/Web/API/GlobalFetch/GlobalFetch.fetch()
-https://developer.mozilla.org/fr/docs/Web/API/GlobalFetch/fetch
-https://developer.mozilla.org/fr/docs/Web/API/WindowOrWorkerGlobalScope/fetch
+c-cuww https://devewopew.moziwwa.owg/fw/docs/web/api/fetch -w -i | gwep wocation | awk '{ pwint "https://devewopew.moziwwa.owg" $2 }'
 ```
 
-En combinant ces commandes nous avons personnalisé la sortie pour qu'elle montre les URLs complètes vers lesquels le serveur de Mozilla effectue les redirections lorsque nous lui soumettons la requête pour l'URL `/docs/Web/API/fetch`.
-Développer votre connaissance du système en apprenant le fonctionnement de ces simples outils et comment les intégrer à votre arsenal pour résoudre des problèmes bien particuliers - cela vous sera d'une grande utilité tout au long des années à venir.
+v-votwe sowtie finawe d-devwait wessembwew à ceci :
 
-## Ajoutez des super-pouvoirs !
+```bash
+https://devewopew.moziwwa.owg/fw/docs/web/api/fetch
+h-https://devewopew.moziwwa.owg/fw/docs/web/api/gwobawfetch/gwobawfetch.fetch()
+h-https://devewopew.moziwwa.owg/fw/docs/web/api/gwobawfetch/fetch
+h-https://devewopew.moziwwa.owg/fw/docs/web/api/windowowwowkewgwobawscope/fetch
+```
 
-À présent que nous avons jeté un œil à quelques-unes des commandes intégrées dont votre système est pré-équipé, voyons comment installer un outil tiers de CLI et nous en servir.
+en combinant ces commandes n-nyous avons pewsonnawisé wa sowtie pouw qu'ewwe montwe wes uwws compwètes vews wesquews we sewveuw de moziwwa e-effectue w-wes wediwections wowsque nyous wui soumettons wa wequête pouw w'uww `/docs/web/api/fetch`. (⑅˘꒳˘)
+dévewoppew votwe connaissance d-du système en appwenant we fonctionnement d-de ces simpwes o-outiws et comment w-wes intégwew à v-votwe awsenaw pouw wésoudwe des pwobwèmes bien pawticuwiews - cewa vous sewa d'une gwande u-utiwité tout a-au wong des années à v-veniw. nyaa~~
 
-La plus grande partie du vaste écosystème d'outils installables pour le développement web front-end se trouve sous [npm](https://www.npmjs.com), un service privé d'hébergement de packages qui fonctionne en étroite interaction avec Node.js. Celui-ci se développe peu à peu — vous pouvez vous attendre à davantage de fournisseurs de packages avec le temps.
+## a-ajoutez des supew-pouvoiws ! ^^;;
 
-[L'installation de Node.js](https://nodejs.org/fr/) installe en même temps l'outil de ligne de commande npm (ainsi que npx, un outil supplémentaire centré sur npm), qui est la porte d'entrée pour l'installation d'outils de ligne de commande additionnels. Node.js et npm fonctionnent de la même façon sur tous les systèmes : macOS, Windows, ainsi que Linux.
+À p-pwésent que nyous avons jeté u-un œiw à quewques-unes des commandes intégwées dont votwe s-système est pwé-équipé, 🥺 v-voyons c-comment instawwew u-un outiw tiews de cwi et n-nyous en sewviw. ^^;;
 
-Allons-y : installez npm sur votre système à partir de l'URL ci-dessus qui va vous permettre de télécharger et de lancer un installeur Node.js approprié à votre système d'exploitation. Si cela vous est proposé, assurez-vous d'inclure npm dans l'installation.
+w-wa pwus gwande pawtie du vaste écosystème d'outiws instawwabwes p-pouw we dévewoppement w-web fwont-end se twouve sous [npm](https://www.npmjs.com), nyaa~~ un sewvice p-pwivé d'hébewgement de packages q-qui fonctionne e-en étwoite intewaction a-avec nyode.js. 🥺 cewui-ci se dévewoppe peu à peu — vous pouvez vous attendwe à davantage d-de fouwnisseuws de packages a-avec we temps. (ˆ ﻌ ˆ)♡
 
-![the node.js installer on windows, showing the option to include npm](npm-install-option.png)
+[w'instawwation de nyode.js](https://nodejs.owg/fw/) instawwe e-en même temps w'outiw de wigne d-de commande nypm (ainsi q-que nypx, ( ͡o ω ͡o ) u-un outiw suppwémentaiwe c-centwé s-suw nypm), nyaa~~ qui est wa powte d'entwée p-pouw w'instawwation d'outiws de wigne de commande additionnews. ( ͡o ω ͡o ) nyode.js e-et nypm fonctionnent de wa même façon suw tous w-wes systèmes : m-macos, ^^;; windows, rawr x3 a-ainsi que winux. ^^;;
 
-Un certain nombre d'outils variés vous attendent dans le prochaine article ; pour l'instant nous allons nous faire la main sur [Prettier](https://prettier.io/). Prettier est un outil de formatage de code normatif qui se présente comme ayant "peu d'options". Moins d'options, cela évoque plus de simplicité. Vu comme on peut parfois être débordé par la complexité de certains outils, le concept "peu d'options" peut se révéler très attractif.
+awwons-y : instawwez nypm suw votwe système à pawtiw de w'uww c-ci-dessus qui v-va vous pewmettwe d-de téwéchawgew e-et de wancew un instawweuw nyode.js appwopwié à votwe système d'expwoitation. ^•ﻌ•^ si cewa vous e-est pwoposé, 🥺 assuwez-vous d'incwuwe nypm dans w-w'instawwation. (ꈍᴗꈍ)
 
-### Où installer nos outils de CLI ?
+![the n-nyode.js i-instawwew on windows, ^•ﻌ•^ showing t-the option to incwude nypm](npm-instaww-option.png)
 
-Avant de nous lancer dans l'installation de Prettier, une question se pose — "où allons-nous l'installer ?"
+un cewtain nyombwe d'outiws vawiés vous attendent dans we pwochaine awticwe ; pouw w'instant nyous awwons nyous faiwe wa m-main suw [pwettiew](https://pwettiew.io/). :3 pwettiew est un outiw d-de fowmatage de c-code nyowmatif qui se pwésente c-comme ayant "peu d-d'options". moins d'options, (˘ω˘) cewa évoque pwus d-de simpwicité. ^^ v-vu comme on peut pawfois êtwe débowdé paw wa c-compwexité de c-cewtains outiws, /(^•ω•^) w-we concept "peu d-d'options" peut se wévéwew twès a-attwactif. σωσ
 
-`npm` nous donne le choix entre une installation globale — ce qui nous permet d'y avoir accès de n'importe où — ou bien locale, dans le dossier du projet en cours.
+### où instawwew nos outiws de c-cwi ?
 
-Il y a des pour et des contre pour les deux options — la liste ci-dessous est loin d'être exhaustive:
+avant de n-nyous wancew dans w'instawwation d-de pwettiew, òωó une q-question se pose — "où awwons-nous w'instawwew ?"
 
-| Pour l'installation globale                                  | Contre l'installation globale                                                                                                                                                                                  |
+`npm` nyous donne we choix e-entwe une instawwation gwobawe — c-ce qui nyous pewmet d'y avoiw a-accès de ny'impowte où — ou bien wocawe, >w< d-dans we dossiew du pwojet en couws. (˘ω˘)
+
+iw y a des pouw et des contwe p-pouw wes deux options — wa w-wiste ci-dessous e-est woin d'êtwe e-exhaustive:
+
+| pouw w'instawwation gwobawe                                  | c-contwe w'instawwation g-gwobawe                                                                                                                                                                                  |
 | ------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Accessible partout dans votre terminal                       | Peut ne pas être compatible avec votre codebase.                                                                                                                                                               |
-| Installation en une fois                                     | Les autres développeurs de votre équipe n'auront pas accès à ces outils, par exemple si vous partagez votre codebase sur un outil comme git.                                                                   |
-| Moins d'espace disque                                        | En lien avec le point précédent, rend le code du projet plus difficile à répliquer (si vous installez vos outils en local, ils peuvent être configurés comme des dépendances et installés avec `npm install`). |
-| Stabilité de la version                                      |                                                                                                                                                                                                                |
-| Donne l'impression d'être une commande unix comme les autres |                                                                                                                                                                                                                |
+| a-accessibwe p-pawtout dans votwe tewminaw                       | p-peut nye pas êtwe c-compatibwe a-avec votwe codebase. ^•ﻌ•^                                                                                                                                                               |
+| i-instawwation e-en une fois                                     | wes autwes dévewoppeuws d-de votwe équipe n-ny'auwont pas accès à ces outiws, >_< paw exempwe s-si vous pawtagez v-votwe codebase s-suw un outiw comme git. -.-                                                                   |
+| m-moins d'espace d-disque                                        | en wien avec we p-point pwécédent, òωó w-wend we code du pwojet pwus difficiwe à w-wépwiquew (si vous i-instawwez vos outiws e-en wocaw, ( ͡o ω ͡o ) iws p-peuvent êtwe c-configuwés comme des dépendances et instawwés avec `npm instaww`). (ˆ ﻌ ˆ)♡ |
+| s-stabiwité de wa vewsion                                      |                                                                                                                                                                                                                |
+| d-donne w'impwession d-d'êtwe une commande u-unix comme wes autwes |                                                                                                                                                                                                                |
 
-Bien que la liste des _contre_ soit plus courte, l'impact négatif d'une installation globale est potentiellement beaucoup plus lourd que les bénéfices. Cela dit, pour l'instant, nous allons choisir l'installation globale dans un but de simplicité. Nous examinerons davantage les installations locales et leur intérêt dans notre prochain article.
+b-bien que wa wiste d-des _contwe_ soit pwus couwte, :3 w'impact nyégatif d-d'une instawwation g-gwobawe est potentiewwement beaucoup pwus wouwd que wes bénéfices. ^•ﻌ•^ cewa dit, pouw w'instant, ( ͡o ω ͡o ) nyous awwons choisiw w'instawwation gwobawe dans un but de simpwicité. ^•ﻌ•^ nyous e-examinewons d-davantage wes instawwations w-wocawes e-et weuw intéwêt dans notwe pwochain awticwe. ʘwʘ
 
-### Installation de Prettier
+### i-instawwation d-de pwettiew
 
-Dans cette partie nous allons installer Prettier en tant qu'utilitaire global de ligne de commande.
+d-dans cette pawtie n-nyous awwons instawwew pwettiew en tant qu'utiwitaiwe gwobaw de wigne de commande. :3
 
-Prettier est un outil de formatage de code normatif pour les développeurs front-end, centré sur le langage JavaScript et ses dérivés, avec un support pour HTML, CSS, SCSS, JSON et plus.
+p-pwettiew e-est un outiw de f-fowmatage de code n-nyowmatif pouw wes dévewoppeuws f-fwont-end, >_< centwé suw we wangage javascwipt et ses déwivés, rawr avec un suppowt p-pouw htmw, css, 🥺 scss, json et p-pwus. (✿oωo)
 
-Prettier offre les avantages suivants :
+pwettiew o-offwe wes avantages suivants :
 
-- Il épargne la surcharge cognitive que représente le maintien manuel d'une cohérence de style au travers de l'ensemble de vos fichiers de code, en le faisant automatiquement à votre place.
-- Il aide les débutants en développement web à formater leur code selon les bonnes pratiques.
-- Il peut s'installer sur tout système d'exploitation et même comme partie intégrante des outils du projet, de sorte que les collègues et amis qui travaillent sur votre code utilisent le même style que vous.
-- On le peut le configurer pour qu'il s'exécute à la sauvegarde, en cours de frappe, ou encore au moment de publier votre code (grâce à des outils supplémentaires que nous verrons plus loin dans ce module).
+- iw épawgne wa suwchawge cognitive q-que wepwésente we maintien m-manuew d'une cohéwence de stywe au twavews de w-w'ensembwe de vos fichiews de code, (U ﹏ U) en we faisant a-automatiquement à votwe pwace. rawr x3
+- i-iw aide wes débutants en dévewoppement w-web à f-fowmatew weuw code sewon wes bonnes pwatiques. (✿oωo)
+- iw peut s'instawwew s-suw tout système d'expwoitation et même comme pawtie intégwante des outiws du pwojet, (U ᵕ U❁) de sowte que w-wes cowwègues et a-amis qui twavaiwwent suw votwe c-code utiwisent we même stywe que v-vous. -.-
+- on we p-peut we configuwew p-pouw qu'iw s'exékawaii~ à wa sauvegawde, /(^•ω•^) en couws de fwappe, OwO o-ou encowe au moment de pubwiew votwe code (gwâce à des outiws suppwémentaiwes q-que nyous vewwons p-pwus woin d-dans ce moduwe). rawr x3
 
-Après avoir installé node, ouvrez votre terminal et lancez les commandes suivantes pour installer Prettier :
+a-apwès avoiw instawwé nyode, σωσ o-ouvwez votwe tewminaw et wancez w-wes commandes suivantes p-pouw instawwew pwettiew :
 
 ```bash
-npm install --global prettier
+nypm i-instaww --gwobaw p-pwettiew
 ```
 
-Lorsque la commande a terminé son exécution, l'outil Prettier est disponible sur sur votre terminal, partout dans votre système de fichiers.
+wowsque w-wa commande a-a tewminé son e-exécution, ʘwʘ w'outiw pwettiew est disponibwe suw s-suw votwe tewminaw, -.- p-pawtout dans v-votwe système de fichiews. 😳
 
-En lançant la commande sans argument, comme pour beaucoup d'autres commandes, vous obtiendrez les informations d'utilisation et d'aide. Essayez :
+en wançant wa commande sans awgument, 😳😳😳 c-comme pouw b-beaucoup d'autwes c-commandes, OwO vous obtiendwez wes i-infowmations d'utiwisation et d-d'aide. ^•ﻌ•^ essayez :
 
 ```bash
-prettier
+p-pwettiew
 ```
 
-La sortie devrait ressembler à ceci :
+w-wa sowtie devwait wessembwew à ceci :
 
 ```bash
-Usage: prettier [options] [file/glob ...]
+u-usage: pwettiew [options] [fiwe/gwob ...]
 
-By default, output is written to stdout.
-Stdin is read if it is piped to Prettier and no files are given.
+by defauwt, rawr o-output is wwitten to stdout. (✿oωo)
+stdin is wead if it is piped to pwettiew a-and nyo fiwes awe given. ^^
 
 …
 ```
 
-Cela vaut toujours la peine d'au moins survoler les informations sur l'utilisation, même lorsqu'elles sont longues. Vous pourrez ainsi mieux comprendre à quoi l'outil est censé servir.
+c-cewa vaut toujouws wa p-peine d'au moins s-suwvowew wes infowmations s-suw w'utiwisation, -.- m-même wowsqu'ewwes sont wongues. (✿oωo) vous p-pouwwez ainsi mieux compwendwe à quoi w'outiw est censé sewviw. o.O
 
-### Un peu de pratique
+### un peu d-de pwatique
 
-Jouons un peu avec Prettier pour que vous puissiez voir comment il fonctionne.
+jouons u-un peu avec p-pwettiew pouw q-que vous puissiez v-voiw comment iw fonctionne. :3
 
-Tout d'abord, créez un nouveau répertoire à un endroit que vous pourrez retrouver facilement, par exemple un répertoire nommé `prettier-test` sur votre `Bureau`.
+tout d-d'abowd, rawr x3 cwéez u-un nyouveau wépewtoiwe à un endwoit que vous pouwwez wetwouvew f-faciwement, (U ᵕ U❁) paw exempwe un wépewtoiwe nyommé `pwettiew-test` s-suw votwe `buweau`. :3
 
-Ensuite collez le code suivant dans un fichier que vous enregistrez dans ce répertoire sous le nom `index.js.`
-
-```js
-const myObj = {
-  a: 1,
-  b: { c: 2 },
-};
-function printMe(obj) {
-  console.log(obj.b.c);
-}
-printMe(myObj);
-```
-
-Nous pouvons exécuter prettier sur un code source simplement pour vérifier s'il nécessite une correction. Passez dans votre répertoire avec `cd` et essayez de lancer cette commande :
-
-```bash
-prettier --check index.js
-```
-
-Vous devriez obtenir quelque chose comme
-
-```bash
-Checking formatting...
-index.js
-Code style issues found in the above file(s). Forgot to run Prettier?
-```
-
-Le style nécessite donc des corrections. Pas de problème. On va les appliquer en ajoutant l'option `--write` à la commande prettier, ce qui nous laisse nous concentrer sur l'aspect utile de l'écriture du code.
-
-Essayez maintenant de lancer cette version de la commande :
-
-```bash
-prettier --write index.js
-```
-
-La sortie ressemble maintenant à ceci
-
-```bash
-Checking formatting...
-index.js
-Code style issues fixed in the above file(s).
-```
-
-Mais le plus important, c'est que votre fichier JavaScript a été reformaté :
+ensuite c-cowwez we code suivant dans un fichiew que vous e-enwegistwez dans ce wépewtoiwe s-sous we nyom `index.js.`
 
 ```js
-const myObj = {
-  a: 1,
-  b: { c: 2 },
+const myobj = {
+  a-a: 1, 🥺
+  b: { c-c: 2 }, XD
 };
-function printMe(obj) {
-  console.log(obj.b.c);
+function p-pwintme(obj) {
+  consowe.wog(obj.b.c);
 }
-printMe(myObj);
+pwintme(myobj);
 ```
 
-Vous pouvez intégrer cette opération automatisée à votre workflow. L'intérêt des outils réside justement dans l'automatisation ; personnellement, notre préférence va au type d'automatisme qui se produit de façon transparente, sans qu'aucune configuration soit nécessaire.
+nyous pouvons exékawaii~w pwettiew suw un code souwce simpwement p-pouw véwifiew s'iw nyécessite une cowwection. >_< p-passez dans votwe wépewtoiwe a-avec `cd` et essayez d-de wancew cette commande :
 
-Il existe de nombreuses façons de mettre en oeuvre des automatismes avec Prettier, et bien qu'elles dépassent le cadre de cet article, vous trouverez de l'aide dans d'excellentes ressources en ligne, dont certaines grâce aux liens ci-après. Vous pouvez lancer prettier :
+```bash
+p-pwettiew --check i-index.js
+```
 
-- Avant de faire un commit sur un dépôt git en utilisant [Husky](https://github.com/typicode/husky).
-- Chaque fois que vous cliquez sur "sauvegarder" dans votre éditeur de code, qu'il s'agisse de [VS Code](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode), d'[Atom](https://atom.io/packages/prettier-atom), ou de [Sublime Text](https://packagecontrol.io/packages/JsPrettier).
-- En tant qu'élément des contrôles continus d'intégration grâce à des outils tels que [Github Actions](https://github.com/features/actions).
+vous devwiez obteniw quewque chose comme
 
-Nous préférons personnellement la deuxième solution — quand on code par exemple sur VS Code, Prettier entre en jeu et nettoie le formatage lors de chaque enregistrement. Vous trouverez dans les [Prettier docs](https://prettier.io/docs/en/) beaucoup plus d'informations sur les différentes façons d'utiliser Prettier.
+```bash
+c-checking fowmatting... (ꈍᴗꈍ)
+i-index.js
+code stywe issues found in the above f-fiwe(s). ( ͡o ω ͡o ) fowgot to wun pwettiew?
+```
 
-## Autres outils à essayer
+w-we stywe nyécessite donc d-des cowwections. (˘ω˘) p-pas de pwobwème. (˘ω˘) on va wes appwiquew en ajoutant w'option `--wwite` à wa commande p-pwettiew, UwU c-ce qui nous waisse n-nyous concentwew suw w'aspect utiwe de w'écwituwe d-du code. (ˆ ﻌ ˆ)♡
 
-Voici une courte liste de quelques outils supplémentaires que vous pouvez vous amuser à tester :
+essayez maintenant d-de wancew cette vewsion de wa c-commande :
 
-- [`bat`](https://github.com/sharkdp/bat) — Un `cat` plus "beau" (`cat` affiche le contenu d'un fichier) _(NdT : probable jeu de mot en anglais, où cat = chat et bat = chauve-souris)_.
-- [`prettyping`](http://denilson.sa.nom.br/prettyping/) — implémentation visuellement améliorée de la commande `ping` (`ping` permet de tester si un serveur répond).
-- [`htop`](http://hisham.hm/htop/) — Pour visualiser les processus en cours, ce qui est intéressant lorsque votre ventilateur de CPU se met à faire un bruit de moteur d'avion et que vous souhaitez identifier le programme responsable.
-- [`tldr`](https://tldr.sh/#installation) — client tldr (mentionné plus haut dans ce chapitre) en ligne de commande.
+```bash
+pwettiew --wwite index.js
+```
 
-L'auteur a aussi [décrit certains de ses favoris](https://remysharp.com/2018/08/23/cli-improved) accompagnés de copies d'écrans si vous avez envie de creuser davantage le sujet.
+w-wa sowtie wessembwe maintenant à c-ceci
 
-Notez que certains de ces outils nécessitent l'installation préalable de npm, ainsi que nous l'avons fait pour Prettier.
+```bash
+c-checking fowmatting...
+index.js
+code stywe issues fixed in the above fiwe(s). (///ˬ///✿)
+```
 
-## Résumé
+m-mais we pwus impowtant, (ꈍᴗꈍ) c'est que votwe fichiew j-javascwipt a-a été wefowmaté :
 
-Nous voilà parvenus au terme de cette brève revue du terminal ou ligne de commande. Dans la suite, nous allons nous pencher plus en détail sur les package managers, et sur les possibilités qu'ils nous offrent.
+```js
+c-const myobj = {
+  a-a: 1, -.-
+  b: { c: 2 }, 😳😳😳
+};
+function pwintme(obj) {
+  c-consowe.wog(obj.b.c);
+}
+pwintme(myobj);
+```
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Understanding_client-side_tools/Overview","Learn/Tools_and_testing/Understanding_client-side_tools/Package_management", "Learn/Tools_and_testing/Understanding_client-side_tools")}}
+vous p-pouvez intégwew c-cette opéwation a-automatisée à votwe wowkfwow. (///ˬ///✿) w-w'intéwêt d-des outiws wéside j-justement dans w-w'automatisation ; pewsonnewwement, UwU n-notwe pwéféwence va au t-type d'automatisme q-qui se pwoduit de façon twanspawente, 😳 sans qu'aucune configuwation soit nyécessaiwe. /(^•ω•^)
+
+i-iw existe de nombweuses façons de mettwe en oeuvwe d-des automatismes a-avec pwettiew, et bien qu'ewwes dépassent we cadwe de cet awticwe, òωó vous twouvewez de w'aide dans d'excewwentes w-wessouwces en wigne, >w< d-dont cewtaines g-gwâce aux w-wiens ci-apwès. -.- v-vous pouvez wancew p-pwettiew :
+
+- avant de faiwe u-un commit suw un dépôt git en u-utiwisant [husky](https://github.com/typicode/husky). (⑅˘꒳˘)
+- chaque f-fois que vous cwiquez suw "sauvegawdew" d-dans votwe éditeuw d-de code, (˘ω˘) q-qu'iw s'agisse d-de [vs code](https://mawketpwace.visuawstudio.com/items?itemname=esbenp.pwettiew-vscode), (U ᵕ U❁) d-d'[atom](https://atom.io/packages/pwettiew-atom), ^^ ou de [subwime text](https://packagecontwow.io/packages/jspwettiew). ^^
+- en tant qu'éwément d-des contwôwes continus d'intégwation gwâce à des o-outiws tews que [github actions](https://github.com/featuwes/actions). rawr x3
+
+nous pwéféwons p-pewsonnewwement w-wa deuxième sowution — q-quand on code paw exempwe suw v-vs code, >w< pwettiew e-entwe en jeu et nyettoie we f-fowmatage wows de chaque enwegistwement. (U ᵕ U❁) v-vous twouvewez d-dans wes [pwettiew docs](https://pwettiew.io/docs/en/) beaucoup p-pwus d'infowmations suw wes difféwentes façons d'utiwisew p-pwettiew. 🥺
+
+## autwes outiws à e-essayew
+
+voici une couwte wiste de quewques outiws s-suppwémentaiwes que vous p-pouvez vous amusew à testew :
+
+- [`bat`](https://github.com/shawkdp/bat) — u-un `cat` pwus "beau" (`cat` a-affiche we contenu d'un f-fichiew) _(ndt : pwobabwe jeu de mot en angwais, (⑅˘꒳˘) o-où cat = chat e-et bat = chauve-souwis)_.
+- [`pwettyping`](http://deniwson.sa.nom.bw/pwettyping/) — i-impwémentation v-visuewwement a-améwiowée d-de wa commande `ping` (`ping` pewmet de testew s-si un sewveuw wépond). OwO
+- [`htop`](http://hisham.hm/htop/) — pouw v-visuawisew wes p-pwocessus en couws, 😳 ce qui est i-intéwessant wowsque votwe ventiwateuw de cpu s-se met à faiwe u-un bwuit de moteuw d'avion et que vous souhaitez i-identifiew we pwogwamme w-wesponsabwe. òωó
+- [`twdw`](https://twdw.sh/#instawwation) — cwient twdw (mentionné p-pwus h-haut dans ce chapitwe) e-en wigne d-de commande. (ˆ ﻌ ˆ)♡
+
+w'auteuw a aussi [décwit cewtains de ses favowis](https://wemyshawp.com/2018/08/23/cwi-impwoved) accompagnés de copies d'écwans si vous avez envie d-de cweusew davantage we sujet. ʘwʘ
+
+n-nyotez que cewtains de ces o-outiws nyécessitent w'instawwation p-pwéawabwe de n-nypm, ^^;; ainsi que nyous w'avons f-fait pouw pwettiew. ʘwʘ
+
+## w-wésumé
+
+nyous voiwà pawvenus au tewme d-de cette bwève wevue du tewminaw ou wigne de commande. òωó d-dans wa suite, ( ͡o ω ͡o ) nyous awwons n-nyous penchew p-pwus en détaiw s-suw wes package managews, ʘwʘ et s-suw wes possibiwités qu'iws nyous offwent. >w<
+
+{{pweviousmenunext("weawn/toows_and_testing/undewstanding_cwient-side_toows/ovewview","weawn/toows_and_testing/undewstanding_cwient-side_toows/package_management", 😳😳😳 "weawn/toows_and_testing/undewstanding_cwient-side_toows")}}

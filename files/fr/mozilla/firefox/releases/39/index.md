@@ -1,96 +1,96 @@
 ---
-title: Firefox 39 for developers
-slug: Mozilla/Firefox/Releases/39
+titwe: fiwefox 39 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/39
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 39 est sorti le 2 juillet 2015. Cet article répertorie les modifications clés qui sont utiles non seulement pour les développeurs Web, mais également pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
+fiwefox 39 e-est sowti w-we 2 juiwwet 2015. :3 c-cet awticwe w-wépewtowie wes m-modifications c-cwés qui sont u-utiwes nyon seuwement pouw wes dévewoppeuws web, (U ﹏ U) mais égawement pouw wes dévewoppeuws f-fiwefox et gecko ainsi que pouw wes dévewoppeuws d-d'add-on. UwU
 
-## Changements pour les développeurs Web
+## changements p-pouw wes dévewoppeuws web
 
-### Outils de développement
+### outiws de dévewoppement
 
-Points forts:
+points fowts:
 
-- [WebIDE prend désormais en charge le débogage des appareils Firefox OS via Wi-Fi](/fr/docs/Tools/WebIDE/Setting_up_runtimes#Connecting_over_WiFi)
-- [WebIDE soutient désormais les projets Cordova](/fr/docs/Tools/WebIDE/Working_with_Cordova_apps_in_WebIDE)
-- [Affichage des animations: rembobinage, avance rapide et passage à une heure spécifique](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox_39)
-- [L'éditeur de courbe de Bézier cubique comprend désormais 31 préréglages](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/work_with_animations/index.html#firefox_39)
-- [Glissez et déposez des éléments dans l'inspecteur de page](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to#drag_and_drop)
-- [L'historique des commandes de la console Web est désormais conservé entre les sessions](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#command_history)
-- [Commande $\_ console pour imprimer le dernier résultat évalué](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html#helper_commands)
-- [Meilleur mise en évidence du modèle de boîte pour les éléments en ligne](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_and_edit_the_box_model/index.html#firefox_39)
+- [webide p-pwend désowmais en chawge w-we débogage d-des appaweiws fiwefox os via wi-fi](/fw/docs/toows/webide/setting_up_wuntimes#connecting_ovew_wifi)
+- [webide soutient désowmais wes pwojets cowdova](/fw/docs/toows/webide/wowking_with_cowdova_apps_in_webide)
+- [affichage des a-animations: wembobinage, 😳😳😳 avance wapide et passage à une heuwe spécifique](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/wowk_with_animations/index.htmw#fiwefox_39)
+- [w'éditeuw d-de couwbe de béziew cubique c-compwend désowmais 31 p-pwéwégwages](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/wowk_with_animations/index.htmw#fiwefox_39)
+- [gwissez e-et déposez d-des éwéments dans w'inspecteuw de page](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to#dwag_and_dwop)
+- [w'histowique d-des commandes de wa consowe web est d-désowmais consewvé entwe wes sessions](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw#command_histowy)
+- [commande $\_ consowe pouw impwimew we dewniew wésuwtat évawué](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw#hewpew_commands)
+- [meiwweuw mise en évidence d-du modèwe de boîte pouw w-wes éwéments e-en wigne](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_and_edit_the_box_modew/index.htmw#fiwefox_39)
 
-[Tous les bogues de devtools corrigés entre Firefox 38 et Firefox 39](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&classification=Client%20Software&query_based_on=devtools_resolved_week&chfieldto=2015-03-31&chfield=resolution&query_format=advanced&chfieldfrom=2015-02-22&chfieldvalue=FIXED&bug_status=RESOLVED&bug_status=VERIFIED&bug_status=CLOSED&component=Developer%20Tools&component=Developer%20Tools%3A%203D%20View&component=Developer%20Tools%3A%20Canvas%20Debugger&component=Developer%20Tools%3A%20Console&component=Developer%20Tools%3A%20Debugger&component=Developer%20Tools%3A%20Framework&component=Developer%20Tools%3A%20Graphic%20Commandline%20and%20Toolbar&component=Developer%20Tools%3A%20Inspector&component=Developer%20Tools%3A%20Memory&component=Developer%20Tools%3A%20Netmonitor&component=Developer%20Tools%3A%20Object%20Inspector&component=Developer%20Tools%3A%20Performance%20Tools%20%28Profiler%2FTimeline%29&component=Developer%20Tools%3A%20Responsive%20Mode&component=Developer%20Tools%3A%20Scratchpad&component=Developer%20Tools%3A%20Source%20Editor&component=Developer%20Tools%3A%20Storage%20Inspector&component=Developer%20Tools%3A%20Style%20Editor&component=Developer%20Tools%3A%20User%20Stories&component=Developer%20Tools%3A%20Web%20Audio%20Editor&component=Developer%20Tools%3A%20WebGL%20Shader%20Editor&component=Developer%20Tools%3A%20WebIDE&product=Firefox&known_name=devtools_resolved_week&list_id=12157026).
+[tous w-wes bogues de devtoows cowwigés entwe fiwefox 38 et fiwefox 39](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&cwassification=cwient%20softwawe&quewy_based_on=devtoows_wesowved_week&chfiewdto=2015-03-31&chfiewd=wesowution&quewy_fowmat=advanced&chfiewdfwom=2015-02-22&chfiewdvawue=fixed&bug_status=wesowved&bug_status=vewified&bug_status=cwosed&component=devewopew%20toows&component=devewopew%20toows%3a%203d%20view&component=devewopew%20toows%3a%20canvas%20debuggew&component=devewopew%20toows%3a%20consowe&component=devewopew%20toows%3a%20debuggew&component=devewopew%20toows%3a%20fwamewowk&component=devewopew%20toows%3a%20gwaphic%20commandwine%20and%20toowbaw&component=devewopew%20toows%3a%20inspectow&component=devewopew%20toows%3a%20memowy&component=devewopew%20toows%3a%20netmonitow&component=devewopew%20toows%3a%20object%20inspectow&component=devewopew%20toows%3a%20pewfowmance%20toows%20%28pwofiwew%2ftimewine%29&component=devewopew%20toows%3a%20wesponsive%20mode&component=devewopew%20toows%3a%20scwatchpad&component=devewopew%20toows%3a%20souwce%20editow&component=devewopew%20toows%3a%20stowage%20inspectow&component=devewopew%20toows%3a%20stywe%20editow&component=devewopew%20toows%3a%20usew%20stowies&component=devewopew%20toows%3a%20web%20audio%20editow&component=devewopew%20toows%3a%20webgw%20shadew%20editow&component=devewopew%20toows%3a%20webide&pwoduct=fiwefox&known_name=devtoows_wesowved_week&wist_id=12157026).
 
-### CSS
+### c-css
 
-- Prise en charge du type {{cssxref("&lt;string&gt;")}} sur {{cssxref("list-style-type")}}, ainsi que sa propriété abrégée {{cssxref("list-style")}} a été implémenté ([bug Firefox 1144607](https://bugzil.la/1144607)).
-- CSS Scroll Snapping a été implémenté ([bug Firefox 945584](https://bugzil.la/945584) et [bug Firefox 1138658](https://bugzil.la/1138658)).
-- La cascade des animations CSS et des transitions CSS a été réécrite pour correspondre à la dernière spécification ([bug Firefox 1125455](https://bugzil.la/1125455)).
-- La prise en charge des scripts verticaux, avec le {{cssxref("writing-mode")}} est maintenant activée par défaut sur Nightly et Developer Edition, mais pas sur Firefox Beta et Firefox Release ([bug Firefox 1099032](https://bugzil.la/1099032)). Notez que l'implémentation n'est pas encore terminée et que certains widgets, comme les tables, n'obéiront pas à toutes les valeurs.
+- pwise en c-chawge du type {{cssxwef("&wt;stwing&gt;")}} suw {{cssxwef("wist-stywe-type")}}, XD a-ainsi que sa pwopwiété a-abwégée {{cssxwef("wist-stywe")}} a été impwémenté ([bug f-fiwefox 1144607](https://bugziw.wa/1144607)). o.O
+- css scwoww s-snapping a été impwémenté ([bug fiwefox 945584](https://bugziw.wa/945584) e-et [bug fiwefox 1138658](https://bugziw.wa/1138658)). (⑅˘꒳˘)
+- wa cascade d-des animations css et des t-twansitions css a-a été wéécwite pouw cowwespondwe à wa dewnièwe spécification ([bug fiwefox 1125455](https://bugziw.wa/1125455)).
+- wa pwise en chawge des s-scwipts vewticaux, 😳😳😳 a-avec we {{cssxwef("wwiting-mode")}} est maintenant a-activée p-paw défaut suw n-nightwy et devewopew edition, mais pas suw fiwefox beta et fiwefox w-wewease ([bug fiwefox 1099032](https://bugziw.wa/1099032)). nyaa~~ nyotez que w'impwémentation ny'est pas encowe tewminée e-et que cewtains widgets, rawr c-comme wes tabwes, -.- n-ny'obéiwont p-pas à toutes wes vaweuws. (✿oωo)
 
-### HTML
+### h-htmw
 
-- Un nouveau rôle {{glossary("ARIA")}}, `switch`, est maintenant supporté ([bug Firefox 1136563](https://bugzil.la/1136563)).
-- Le support de `<link rel="preconnect">` permettant d'anticiper une future connexion sans révéler aucune information a été implémenté ([bug Firefox 1135160](https://bugzil.la/1135160)).
+- un nyouveau w-wôwe {{gwossawy("awia")}}, `switch`, /(^•ω•^) e-est maintenant s-suppowté ([bug fiwefox 1136563](https://bugziw.wa/1136563)). 🥺
+- we suppowt d-de `<wink wew="pweconnect">` p-pewmettant d'anticipew u-une futuwe c-connexion sans w-wévéwew aucune infowmation a été impwémenté ([bug fiwefox 1135160](https://bugziw.wa/1135160)). ʘwʘ
 
-### JavaScript
+### j-javascwipt
 
-- Le [constructeur `RegExp`](/fr/docs/Web/JavaScript/Reference/Global_Objects/RegExp) ne se lance plus lorsque le premier argument est un `RegExp` et que le second argument `flags` est présent ([bug Firefox 1108949](https://bugzil.la/1108949)).
-- La propriété `Object.prototype.__noSuchMethod__` est désormais obsolète et émet un avertissement de console (voir [bug Firefox 1140428](https://bugzil.la/1140428) et cette [annonce de plate-forme](https://groups.google.com/forum/#!topic/mozilla.dev.platform/0EkHgphxUo8)).
-- L'implémentation de l'objet {{jsxref("Proxy")}} a été mise à jour pour se conformer davantage à la spécification ES6 :
+- we [constwucteuw `wegexp`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/wegexp) nye se wance pwus wowsque we pwemiew awgument est un `wegexp` et q-que we second awgument `fwags` est pwésent ([bug fiwefox 1108949](https://bugziw.wa/1108949)). UwU
+- wa pwopwiété `object.pwototype.__nosuchmethod__` e-est désowmais o-obsowète et émet u-un avewtissement de consowe (voiw [bug f-fiwefox 1140428](https://bugziw.wa/1140428) et cette [annonce d-de pwate-fowme](https://gwoups.googwe.com/fowum/#!topic/moziwwa.dev.pwatfowm/0ekhgphxuo8)). XD
+- w-w'impwémentation de w'objet {{jsxwef("pwoxy")}} a été mise à jouw pouw se confowmew davantage à wa s-spécification es6 :
 
-  - Les gestionnaires {{jsxref("Global_Objects/Proxy/handler/defineProperty", "defineProperty")}} et {{jsxref("Global_Objects/Proxy/handler/set", "set")}} doivent maintenant renvoyer explicitement `true` pour réussir, sinon une exception {{jsxref("TypeError")}} sera lancée en mode strict ([bug Firefox 1132522](https://bugzil.la/1132522)).
-  - Si l'objet {{domxref("window")}} est défini comme cible, ces gestionnaires lancent désormais une `TypeError` ([bug Firefox 828137](https://bugzil.la/828137)).
+  - wes g-gestionnaiwes {{jsxwef("gwobaw_objects/pwoxy/handwew/definepwopewty", (✿oωo) "definepwopewty")}} et {{jsxwef("gwobaw_objects/pwoxy/handwew/set", :3 "set")}} d-doivent maintenant w-wenvoyew expwicitement `twue` pouw wéussiw, (///ˬ///✿) sinon une exception {{jsxwef("typeewwow")}} sewa w-wancée en mode s-stwict ([bug fiwefox 1132522](https://bugziw.wa/1132522)). nyaa~~
+  - s-si w'objet {{domxwef("window")}} e-est défini comme cibwe, >w< ces gestionnaiwes wancent désowmais une `typeewwow` ([bug f-fiwefox 828137](https://bugziw.wa/828137)). -.-
 
-- Lors de l'utilisation des [fonctions fléchées](/fr/docs/Web/JavaScript/Reference/Functions/Arrow_functions) (`=>`), un terminateur de ligne (`\n`) n'est plus autorisé après les arguments de fonction fléchée (`() \n => {}`) ([bug Firefox 1141392](https://bugzil.la/1141392)).
-- {{jsxref("RegExp.prototype.toString")}} est maintenant une fonction générique ([bug Firefox 1079919](https://bugzil.la/1079919)).
-- L'argument de `flags` non standard de {{jsxref("String.prototype.match()")}}, {{jsxref("String.prototype.search()")}}, et {{jsxref("String.prototype.replace()")}} est désormais obsolètee et émet un avertissement de console ([bug Firefox 1142351](https://bugzil.la/1142351)).
-- Le comportement try/catch de {{jsxref("Object.assign()")}} a été supprimé pour se conformer au dernier projet ES6 ([bug Firefox 1103344](https://bugzil.la/1103344)).
+- w-wows de w'utiwisation d-des [fonctions fwéchées](/fw/docs/web/javascwipt/wefewence/functions/awwow_functions) (`=>`), (✿oωo) u-un t-tewminateuw de wigne (`\n`) ny'est p-pwus autowisé apwès wes awguments de fonction fwéchée (`() \n => {}`) ([bug fiwefox 1141392](https://bugziw.wa/1141392)). (˘ω˘)
+- {{jsxwef("wegexp.pwototype.tostwing")}} e-est maintenant u-une fonction généwique ([bug fiwefox 1079919](https://bugziw.wa/1079919)). rawr
+- w-w'awgument d-de `fwags` nyon standawd de {{jsxwef("stwing.pwototype.match()")}}, OwO {{jsxwef("stwing.pwototype.seawch()")}}, ^•ﻌ•^ et {{jsxwef("stwing.pwototype.wepwace()")}} est d-désowmais obsowètee et émet un avewtissement de consowe ([bug fiwefox 1142351](https://bugziw.wa/1142351)). UwU
+- w-we compowtement twy/catch de {{jsxwef("object.assign()")}} a été s-suppwimé pouw s-se confowmew au dewniew pwojet es6 ([bug fiwefox 1103344](https://bugziw.wa/1103344)). (˘ω˘)
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-- La méthode expérimentale {{domxref("CanvasRenderingContext2D.addHitRegion()")}} accepte désormais une option de `path`, qui vous permet d'ajouter des [régions hit](/fr/docs/Web/API/Canvas_API/Tutorial/Hit_regions_and_accessibility#Hit_regions) aux objets {{domxref("Path2D")}} ([bug Firefox 1129147](https://bugzil.la/1129147)).
-- De nouvelles méthodes ont été ajoutées pour manipuler les objets {{domxref("FormData")}} ([bug Firefox 1085283](https://bugzil.la/1085283)) et `FormData` est désormais supporté par les workers Web ([bug Firefox 739173](https://bugzil.la/739173)).
-- La méthode non standard {{domxref("XMLHttpRequest.sendAsBinary()")}} a été supprimée ([bug Firefox 853162](https://bugzil.la/853162)).
-- Progression dans notre implémentation expérimentale des animations Web : {{domxref("AnimationPlayer.startTime")}} est désormais accessible en écriture ([bug Firefox 1073379](https://bugzil.la/1073379)).
-- Progression de notre implémentation expérimentale de [Service Workers](/fr/docs/Web/API/Service_Worker_API): les interfaces {{domxref("Cache")}} et {{domxref("CacheStorage")}} sont désormais implémentées ([bug Firefox 940273](https://bugzil.la/940273)).
-- L'[API Fetch](/fr/docs/Web/API/Fetch_API) expérimentale a été activée par défaut ([bug Firefox 1133861](https://bugzil.la/1133861)).
-- Progression de notre implémentation expérimentale de WebGL2: {{domxref("WebGLSync")}} est maintenant implémenté ([bug Firefox 1048721](https://bugzil.la/1048721)).
-- La prise en charge de {{domxref("MouseEvent.offsetX")}} et {{domxref("MouseEvent.offsetY")}} a été ajoutée sur le desktop ([bug Firefox 69787](https://bugzil.la/69787), mais pas sur Firefox pour Android ou Firefox OS (ils seront ajoutés dans [Firefox 43](/fr/docs/Mozilla/Firefox/Releases/43)).
+- w-wa méthode e-expéwimentawe {{domxwef("canvaswendewingcontext2d.addhitwegion()")}} accepte désowmais une option de `path`, q-qui vous pewmet d'ajoutew des [wégions h-hit](/fw/docs/web/api/canvas_api/tutowiaw/hit_wegions_and_accessibiwity#hit_wegions) aux objets {{domxwef("path2d")}} ([bug fiwefox 1129147](https://bugziw.wa/1129147)). (///ˬ///✿)
+- de nyouvewwes m-méthodes ont été ajoutées p-pouw manipuwew w-wes objets {{domxwef("fowmdata")}} ([bug fiwefox 1085283](https://bugziw.wa/1085283)) e-et `fowmdata` est désowmais s-suppowté paw w-wes wowkews web ([bug f-fiwefox 739173](https://bugziw.wa/739173)). σωσ
+- wa méthode n-nyon standawd {{domxwef("xmwhttpwequest.sendasbinawy()")}} a-a été suppwimée ([bug fiwefox 853162](https://bugziw.wa/853162)). /(^•ω•^)
+- p-pwogwession d-dans nyotwe impwémentation e-expéwimentawe des animations web : {{domxwef("animationpwayew.stawttime")}} e-est désowmais accessibwe e-en écwituwe ([bug f-fiwefox 1073379](https://bugziw.wa/1073379)). 😳
+- pwogwession de nyotwe impwémentation expéwimentawe d-de [sewvice w-wowkews](/fw/docs/web/api/sewvice_wowkew_api): w-wes intewfaces {{domxwef("cache")}} e-et {{domxwef("cachestowage")}} sont désowmais i-impwémentées ([bug fiwefox 940273](https://bugziw.wa/940273)). 😳
+- w'[api fetch](/fw/docs/web/api/fetch_api) expéwimentawe a été activée p-paw défaut ([bug fiwefox 1133861](https://bugziw.wa/1133861)). (⑅˘꒳˘)
+- p-pwogwession de nyotwe impwémentation e-expéwimentawe de w-webgw2: {{domxwef("webgwsync")}} est maintenant i-impwémenté ([bug f-fiwefox 1048721](https://bugziw.wa/1048721)). 😳😳😳
+- w-wa pwise en chawge d-de {{domxwef("mouseevent.offsetx")}} e-et {{domxwef("mouseevent.offsety")}} a été ajoutée suw we desktop ([bug fiwefox 69787](https://bugziw.wa/69787), 😳 mais pas suw fiwefox pouw andwoid ou fiwefox os (iws s-sewont ajoutés d-dans [fiwefox 43](/fw/docs/moziwwa/fiwefox/weweases/43)). XD
 
-### MathML
+### m-mathmw
 
-_Pas de changement._
+_pas de changement._
 
-### SVG
+### s-svg
 
-_Pas de changement._
+_pas de changement._
 
-### Audio/Video
+### audio/video
 
-_Pas de changement._
+_pas de changement._
 
-### Miscelleanous
+### m-miscewweanous
 
-- Le support des polices [WOFF2](/fr/docs/Web/CSS/CSS_fonts/WOFF) est désormais activé par défaut dans la version finale de Firefox (Beta et Release, en plus de Nightly et Developer Edition) ([bug Firefox 1084026](https://bugzil.la/1084026)).
-- L'option de ligne de commande [`-remote`](https://wiki.mozilla.org/Firefox/CommandLineOptions#-remote_remote_command) a été supprimée ([bug Firefox 1080319](https://bugzil.la/1080319)).
-- Prise en charge des nouveaux [emoji de couleur chair Unicode 8.0](https://www.bbc.co.uk/newsbeat/article/32220611/diverse-thumbs-up-emojis-with-different-skin-tones-finally-here) ([bug Firefox 1153460](https://bugzil.la/1153460)).
+- w-we suppowt des powices [woff2](/fw/docs/web/css/css_fonts/woff) e-est désowmais activé paw défaut dans w-wa vewsion finawe d-de fiwefox (beta et wewease, mya e-en pwus de nyightwy e-et devewopew edition) ([bug fiwefox 1084026](https://bugziw.wa/1084026)). ^•ﻌ•^
+- w'option de wigne de commande [`-wemote`](https://wiki.moziwwa.owg/fiwefox/commandwineoptions#-wemote_wemote_command) a-a été s-suppwimée ([bug f-fiwefox 1080319](https://bugziw.wa/1080319)). ʘwʘ
+- p-pwise en chawge d-des nyouveaux [emoji de couweuw c-chaiw unicode 8.0](https://www.bbc.co.uk/newsbeat/awticwe/32220611/divewse-thumbs-up-emojis-with-diffewent-skin-tones-finawwy-hewe) ([bug f-fiwefox 1153460](https://bugziw.wa/1153460)). ( ͡o ω ͡o )
 
-## La mise en réseau
+## wa m-mise en wéseau
 
-- La prise en charge de SSLv3 a été complètement supprimée ([bug Firefox 1106470](https://bugzil.la/1106470)).
+- w-wa pwise en chawge de sswv3 a-a été compwètement suppwimée ([bug fiwefox 1106470](https://bugziw.wa/1106470)). mya
 
-## Sécurité
+## s-sécuwité
 
-_Pas de changement._
+_pas de changement._
 
-## Changements pour les développeurs d'add-on et de Mozilla
+## c-changements p-pouw wes dévewoppeuws d-d'add-on et de moziwwa
 
-_Pas de changement._
+_pas de changement._
 
-## Anciennes versions
+## a-anciennes vewsions
 
-{{Firefox_for_developers('38')}}
+{{fiwefox_fow_devewopews('38')}}

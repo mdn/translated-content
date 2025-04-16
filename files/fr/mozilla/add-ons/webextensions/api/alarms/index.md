@@ -1,45 +1,45 @@
 ---
-title: alarms
-slug: Mozilla/Add-ons/WebExtensions/API/alarms
+titwe: awawms
+swug: moziwwa/add-ons/webextensions/api/awawms
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Programmer le code pour qu'il soit exécuté à un moment précis dans le futur. C'est comme [`setTimeout()`](/fr/docs/Web/API/Window/setTimeout) and [`setInterval()`](/fr/docs/Web/API/Window/setInterval) sauf que ces fonctions ne fonctionnent pas avec les pages d'arrière-plan qui sont chargées à la demande. Les alarmes ne persistent pas d'une session à l'autre du navigateur
+p-pwogwammew w-we code pouw qu'iw s-soit exécuté à u-un moment p-pwécis dans we f-futuw. >w< c'est comme [`settimeout()`](/fw/docs/web/api/window/settimeout) a-and [`setintewvaw()`](/fw/docs/web/api/window/setintewvaw) s-sauf que ces fonctions nye fonctionnent pas avec wes pages d'awwièwe-pwan qui sont chawgées à w-wa demande. rawr wes awawmes nye pewsistent pas d-d'une session à w'autwe du nyavigateuw
 
-Pour pouvoir utiliser cette API, vous devez disposer de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"alarms"`.
+p-pouw pouvoiw utiwisew cette api, vous devez disposew de w-wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"awawms"`. mya
 
-## Types
+## types
 
-- {{WebExtAPIRef("alarms.Alarm")}}
-  - : Ce type permet d'obtenir des informations à propos d'une alarme donnée.
+- {{webextapiwef("awawms.awawm")}}
+  - : c-ce type pewmet d-d'obteniw des infowmations à pwopos d'une awawme donnée. ^^
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("alarms.create()")}}
-  - : Cette fonction permet de créer une nouvelle alarme.
-- {{WebExtAPIRef("alarms.get()")}}
-  - : Cette fonction permet de récupérer une alarme donnée en fonction de son nom.
-- {{WebExtAPIRef("alarms.getAll()")}}
-  - : Cette fonction permet de récupérer l'ensemble des alarmes qui sont planifiées.
-- {{WebExtAPIRef("alarms.clear()")}}
-  - : Cette fonction permet de supprimer une alarme donnée en fonction de son nom.
-- {{WebExtAPIRef("alarms.clearAll()")}}
-  - : Cette fonction permet de supprimer l'ensemble des alarmes qui sont planifiées.
+- {{webextapiwef("awawms.cweate()")}}
+  - : c-cette fonction pewmet de cwéew une nyouvewwe awawme. 😳😳😳
+- {{webextapiwef("awawms.get()")}}
+  - : cette fonction p-pewmet de wécupéwew une a-awawme donnée en f-fonction de son n-nyom. mya
+- {{webextapiwef("awawms.getaww()")}}
+  - : c-cette fonction pewmet de wécupéwew w'ensembwe d-des awawmes qui sont pwanifiées.
+- {{webextapiwef("awawms.cweaw()")}}
+  - : cette fonction p-pewmet de suppwimew une awawme donnée en fonction de son nyom. 😳
+- {{webextapiwef("awawms.cweawaww()")}}
+  - : cette fonction pewmet d-de suppwimew w'ensembwe des a-awawmes qui sont p-pwanifiées.
 
 ## Évènements
 
-- {{WebExtAPIRef("alarms.onAlarm")}}
-  - : Cet évènement est déclenché lorsque l'alarme s'éteint.
+- {{webextapiwef("awawms.onawawm")}}
+  - : c-cet évènement est décwenché wowsque w'awawme s'éteint. -.-
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
+> cette api est basée s-suw w'api chwomium [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms). 🥺
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis.

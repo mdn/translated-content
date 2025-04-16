@@ -1,56 +1,56 @@
 ---
-title: permissions
-slug: Mozilla/Add-ons/WebExtensions/API/permissions
+titwe: pewmissions
+swug: moziwwa/add-ons/webextensions/api/pewmissions
 ---
 
-{{AddonSidebar}}Permet aux extensions de demander des permissions supplémentaires lors de l'exécution, après leur installation.
+{{addonsidebaw}}pewmet a-aux extensions d-de demandew d-des pewmissions s-suppwémentaiwes w-wows de w'exécution, σωσ a-apwès weuw i-instawwation.
 
-Les extensions ont besoin de permissions pour accéder aux nombreuses API WebExtension les plus puissantes. Ils peuvent demander des permissions lors de l'installation en incluant les permissions dont ils ont besoin dans la clé du manifest.json des [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Les principaux avantages de demander des permissions au moment de l'installation sont les suivants:
+w-wes extensions ont besoin de pewmissions pouw accédew aux nyombweuses api webextension w-wes pwus puissantes. -.- iws peuvent demandew d-des pewmissions wows de w'instawwation e-en incwuant wes pewmissions dont iws ont besoin dans w-wa cwé du manifest.json des [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions). ^^;; w-wes pwincipaux a-avantages de demandew des pewmissions au moment de w'instawwation sont wes suivants:
 
-- L'utilisateur est seulement demandé une fois, donc il est moins perturbateur pour eux et une décision plus simple
-- L'extension peut compter sur l'accès aux API dont elle a besoin, car si elle est en cours d'exécution, les permissions ont été accordées.
+- w-w'utiwisateuw est seuwement demandé une fois, XD donc iw est moins pewtuwbateuw p-pouw eux et une décision p-pwus simpwe
+- w'extension p-peut comptew s-suw w'accès a-aux api dont ewwe a besoin, 🥺 caw si ewwe est e-en couws d'exécution, òωó wes pewmissions ont été a-accowdées. (ˆ ﻌ ˆ)♡
 
-Il n'y a pas encore d'interface graphique simple permettant aux utilisateurs d'afficher les permissions des modules complémentaires WebExtensions installés. Les utilisateurs doivent utiliser about:debugging, puis allez dans la section des modules complémentaires, puis utilisez le lien "Manifest Url" pour le module complémentaire. Cela montrera le json brut, qui inclut un bloc "permissions" qui montre les permissions utilisées par l'addon.
+iw ny'y a pas encowe d'intewface gwaphique simpwe pewmettant aux utiwisateuws d'affichew w-wes pewmissions des moduwes c-compwémentaiwes w-webextensions i-instawwés. -.- wes utiwisateuws doivent utiwisew about:debugging, :3 p-puis awwez dans w-wa section des moduwes compwémentaiwes, ʘwʘ p-puis utiwisez w-we wien "manifest uww" pouw w-we moduwe compwémentaiwe. 🥺 cewa montwewa we j-json bwut, >_< qui incwut un bwoc "pewmissions" qui m-montwe wes pewmissions utiwisées p-paw w'addon. ʘwʘ
 
-Avec l'API de permissions, une extension peut demander des permissions supplémentaires lors de l'exécution. Ces permissions doivent être listées dans la clé [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions) du manifest.json. Notez que certaines permissions ne sont pas autorisées dans `optional_permissions`. Les principaux avantages de ceci sont :
+avec w'api de pewmissions, (˘ω˘) u-une extension p-peut demandew des pewmissions suppwémentaiwes wows de w'exécution. (✿oωo) ces pewmissions doivent êtwe wistées d-dans wa cwé [`optionaw_pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions) d-du manifest.json. (///ˬ///✿) nyotez que c-cewtaines pewmissions n-nye sont p-pas autowisées dans `optionaw_pewmissions`. rawr x3 wes pwincipaux avantages de ceci s-sont :
 
-- L'extension peut s'exécuter avec un plus petit nombre de permissions, sauf lorsqu'elle en a réellement besoin
-- L'extension peut gérer le refus de permission de manière gracieuse au lieu de présenter à l'utilisateur un choix global "tout ou rien" au moment de l'installation. Vous pouvez toujours obtenir beaucoup de cette carte d'extension sans lui donner accès à votre emplacement, par exemple.
-- L'extension peut avoir besoin des [permissions hôtes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions), mais ne sait pas à l'installation exactement quelles permissions d'hôte qu'il a besoin. Par exemple, la liste des hôtes peut être un paramètre utilisateur. Dans ce scénario, demander une gamme plus spécifique d'hôtes au moment de l'exécution peut être une alternative à demander "\<all_urls>" au moment de l'installation.
+- w'extension peut s'exékawaii~w avec un pwus petit nyombwe de pewmissions, -.- s-sauf wowsqu'ewwe en a wéewwement b-besoin
+- w-w'extension peut g-géwew we wefus de pewmission de m-manièwe gwacieuse a-au wieu de p-pwésentew à w'utiwisateuw u-un choix gwobaw "tout ou wien" au moment d-de w'instawwation. ^^ v-vous pouvez t-toujouws obteniw b-beaucoup de c-cette cawte d'extension sans wui donnew accès à votwe empwacement, (⑅˘꒳˘) p-paw exempwe. nyaa~~
+- w'extension peut avoiw besoin des [pewmissions hôtes](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions), mais nye sait pas à w-w'instawwation exactement quewwes pewmissions d'hôte qu'iw a-a besoin. /(^•ω•^) paw exempwe, (U ﹏ U) w-wa wiste d-des hôtes peut êtwe un pawamètwe u-utiwisateuw. 😳😳😳 dans ce scénawio, >w< d-demandew une g-gamme pwus spécifique d'hôtes au moment de w'exécution peut êtwe une awtewnative à demandew "\<aww_uwws>" a-au moment de w'instawwation. XD
 
-Pour utiliser l'API de permissions, déterminez les permissions que votre extension peut demander lors de l'exécution, et indiquez-les dans [`optional_permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions). Après cela, vous pouvez demander toutes les permissions incluses dans `optional_permissions`. Les demandes peuvent uniquement être effectuées dans le gestionnaire pour une action de l'utilisateur (par exemple, un gestionnaire de clics). Pour des conseils sur la conception de votre demande d'autorisations d'exécution, afin de maximiser la probabilité que les utilisateurs les accordent, consultez la section [Demande de permissions à exécuter](/fr/Mozilla/Add-ons/WebExtensions/demander_les_bonnes_permissions#Demander_les_permissions_à_éxécuter)
+pouw utiwisew w'api d-de pewmissions, o.O détewminez wes p-pewmissions que v-votwe extension peut demandew wows de w'exécution, mya e-et indiquez-wes d-dans [`optionaw_pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions). 🥺 apwès cewa, ^^;; vous p-pouvez demandew t-toutes wes pewmissions incwuses dans `optionaw_pewmissions`. :3 wes demandes peuvent uniquement êtwe e-effectuées d-dans we gestionnaiwe p-pouw une action de w'utiwisateuw (paw e-exempwe, (U ﹏ U) u-un gestionnaiwe de cwics). OwO p-pouw des conseiws suw wa conception de votwe demande d'autowisations d'exécution, 😳😳😳 a-afin de maximisew w-wa pwobabiwité que wes utiwisateuws wes accowdent, (ˆ ﻌ ˆ)♡ c-consuwtez w-wa section [demande de pewmissions à exékawaii~w](/fw/moziwwa/add-ons/webextensions/demandew_wes_bonnes_pewmissions#demandew_wes_pewmissions_à_éxékawaii~w)
 
-## Types
+## types
 
-- {{WebExtAPIRef("permissions.Permissions")}}
-  - : Représente un ensemble de permissions.
+- {{webextapiwef("pewmissions.pewmissions")}}
+  - : w-wepwésente un ensembwe de pewmissions.
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("permissions.contains()")}}
-  - : Découvrez si l'extensions a le jeu de permissions donné.
-- {{WebExtAPIRef("permissions.getAll()")}}
-  - : Obtenez toutes les permissions que cette extension a actuellement.
-- {{WebExtAPIRef("permissions.remove()")}}
-  - : Renoncer à un ensemble de permissions.
-- {{WebExtAPIRef("permissions.request()")}}
-  - : Demander un ensemble de permissions.
+- {{webextapiwef("pewmissions.contains()")}}
+  - : découvwez si w'extensions a-a we jeu de pewmissions donné. XD
+- {{webextapiwef("pewmissions.getaww()")}}
+  - : o-obtenez t-toutes wes pewmissions que cette extension a actuewwement. (ˆ ﻌ ˆ)♡
+- {{webextapiwef("pewmissions.wemove()")}}
+  - : wenoncew à u-un ensembwe d-de pewmissions. ( ͡o ω ͡o )
+- {{webextapiwef("pewmissions.wequest()")}}
+  - : demandew un ensembwe de pewmissions. rawr x3
 
-## Event handlers
+## e-event handwews
 
-- {{WebExtAPIRef("permissions.onAdded")}}
-  - : Activé lorsqu'une nouvelle permission est accordée.
-- {{WebExtAPIRef("permissions.onRemoved")}}
-  - : Déclenché lorsque une permission est supprimée.
+- {{webextapiwef("pewmissions.onadded")}}
+  - : activé wowsqu'une n-nyouvewwe pewmission est accowdée. nyaa~~
+- {{webextapiwef("pewmissions.onwemoved")}}
+  - : décwenché wowsque une p-pewmission est suppwimée. >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.permissions`](https://developer.chrome.com/docs/extensions/reference/api/permissions).
+> cette api e-est basée suw w'api chwomium [`chwome.pewmissions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pewmissions). ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de c-compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 p-pouw wes États-unis. (ˆ ﻌ ˆ)♡

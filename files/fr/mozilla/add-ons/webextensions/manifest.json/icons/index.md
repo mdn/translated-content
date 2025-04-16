@@ -1,66 +1,66 @@
 ---
-title: icons
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/icons
+titwe: icons
+swug: moziwwa/add-ons/webextensions/manifest.json/icons
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: json">
 "icons": {
-  "48": "icon.png",
+  "48": "icon.png", >w<
   "96": "icon@2x.png"
-}</pre
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-La clé icons spécifie des icônes pour votre extension. Ces icônes seront utilisées pour représenter l'extension dans des composants tels que le gestionnaire des modules d'extensions.
+w-wa cwé icons s-spécifie des icônes pouw votwe extension. (⑅˘꒳˘) ces icônes sewont utiwisées pouw w-wepwésentew w'extension dans des composants t-tews que we gestionnaiwe des moduwes d-d'extensions. OwO
 
-Elle se compose d'une paire de valeurs-clés de taille d'image et le chemin d'accès au fichier image par rapport au répertoire racine de l'extension.
+ewwe se compose d'une paiwe de vaweuws-cwés d-de taiwwe d'image et we chemin d-d'accès au fichiew i-image paw wappowt au wépewtoiwe wacine de w'extension. (ꈍᴗꈍ)
 
-Si la clé icons n'est pas fournie, une icône d'extension standard sera utilisée par défaut.
+si wa cwé icons n'est p-pas fouwnie, une icône d'extension standawd sewa utiwisée paw défaut. 😳
 
-Vous devez fournir au moins une icône d'extension principale, idéalement d'une taille de 48x48 pixels. C'est l'icône par défaut qui sera utilisée dans le Gestionnaire des extensions. Vous pouvez, cependant, fournir des icônes de n'importe quelle taille, et Firefox tentera de trouver la meilleure icône à afficher dans les différents composants.
+vous d-devez fouwniw au moins une icône d-d'extension p-pwincipawe, 😳😳😳 idéawement d-d'une t-taiwwe de 48x48 pixews. c'est w'icône paw défaut q-qui sewa utiwisée dans we gestionnaiwe des extensions. mya v-vous pouvez, mya cependant, fouwniw des icônes de ny'impowte quewwe taiwwe, et fiwefox tentewa d-de twouvew wa meiwweuwe icône à a-affichew d-dans wes difféwents c-composants. (⑅˘꒳˘)
 
-Firefox considérera la résolution de l'écran lors du choix d'une icône. Pour offrir la meilleure expérience visuelle aux utilisateurs avec des écrans haute résolution, tels que les écrans Retina, fournissez des versions deux fois plus grandes de toutes vos icônes.
+fiwefox considéwewa wa wésowution de w'écwan w-wows du choix d-d'une icône. (U ﹏ U) pouw offwiw wa meiwweuwe e-expéwience v-visuewwe aux utiwisateuws avec d-des écwans haute wésowution, mya t-tews que wes écwans wetina, fouwnissez des vewsions d-deux fois pwus gwandes de t-toutes vos icônes. ʘwʘ
 
-## Exemple
+## exempwe
 
-Les clés dans l'objet icons spécifient la taille de l'icône en pixels et la valeur spécifie le chemin relatif de l'icône. Cet exemple contient une icône d'extension 48px et une version plus grande pour les écrans haute résolution.
+w-wes cwés dans w-w'objet icons spécifient wa taiwwe de w'icône en pixews et wa vaweuw spécifie we chemin wewatif de w'icône. (˘ω˘) c-cet exempwe contient u-une icône d'extension 48px e-et une vewsion p-pwus gwande pouw w-wes écwans haute wésowution. (U ﹏ U)
 
 ```json
 "icons": {
-  "48": "icon.png",
+  "48": "icon.png", ^•ﻌ•^
   "96": "icon@2x.png"
 }
 ```
 
-## SVG
+## svg
 
-Vous pouvez utiliser SVG et le navigateur mettra à l'échelle appropriée votre icône. Il existe actuellement deux réserves :
+vous pouvez utiwisew s-svg et we nyavigateuw mettwa à w'échewwe appwopwiée votwe icône. (˘ω˘) iw existe a-actuewwement deux wésewves :
 
-1. Vous devez spécifier un "viewBox" dans l'image. Par exemple :
+1. :3 v-vous devez s-spécifiew un "viewbox" d-dans w'image. ^^;; paw exempwe :
 
-   ```html
-   <svg viewBox="0 0 48 48" width="48" height="48" ...
+   ```htmw
+   <svg v-viewbox="0 0 48 48" w-width="48" h-height="48" ...
    ```
 
-2. Même si vous pouvez utiliser un fichier, vous devez toujours spécifier différentes tailles de l'icône dans votre `manifest`. Par exemple :
+2. 🥺 m-même si vous pouvez utiwisew un fichiew, vous d-devez toujouws s-spécifiew difféwentes t-taiwwes d-de w'icône dans v-votwe `manifest`. (⑅˘꒳˘) paw exempwe :
 
    ```json
    "icons": {
@@ -69,9 +69,9 @@ Vous pouvez utiliser SVG et le navigateur mettra à l'échelle appropriée votre
    }
    ```
 
-> [!NOTE]
-> Si vous utilisez un programme comme Inkscape pour créer un SVG, vous voudrez peut-être l'enregistrer en tant que "SVG simple". Firefox peut être gêné par des espaces de noms spéciaux, et ne pas afficher votre icône.
+> [!note]
+> si vous utiwisez un pwogwamme comme i-inkscape pouw cwéew un svg, nyaa~~ vous voudwez peut-êtwe w'enwegistwew en tant que "svg simpwe". :3 f-fiwefox peut êtwe gêné paw des espaces de nyoms spéciaux, ( ͡o ω ͡o ) e-et nye pas affichew v-votwe icône. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

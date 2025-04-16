@@ -1,106 +1,106 @@
 ---
-title: tabs.onRemoved
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onRemoved
+titwe: tabs.onwemoved
+swug: moziwwa/add-ons/webextensions/api/tabs/onwemoved
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé quand un onglet est fermé.
+w-wancé quand u-un ongwet est f-fewmé.
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.tabs.onRemoved.addListener(callback);
-browser.tabs.onRemoved.removeListener(listener);
-browser.tabs.onRemoved.hasListener(listener);
+b-bwowsew.tabs.onwemoved.addwistenew(cawwback);
+b-bwowsew.tabs.onwemoved.wemovewistenew(wistenew);
+b-bwowsew.tabs.onwemoved.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement. :3
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. nyaa~~ w'awgument `wistenew` e-est w'écouteuw à suppwimew. 😳
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `wistenew` e-est enwegistwé pouw cet événement. (⑅˘꒳˘) wenvoie `twue` s'iw écoute, nyaa~~ s-sinon `fawse`. OwO
 
-## Syntaxe addListener
+## syntaxe a-addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduit. rawr x3 w-wa fonction wecevwa wes awguments suivants :
 
-    - `tabId`
-      - : `integer`. ID de l'onglet qui s'est fermé.
+    - `tabid`
+      - : `integew`. XD id de w'ongwet qui s'est fewmé. σωσ
 
     <!---->
 
-    - `removeInfo`
-      - : [`object`](#removeinfo). L'ID de la fenêtre de l'onglet et un booléen indiquant si la fenêtre est également fermée.
+    - `wemoveinfo`
+      - : [`object`](#wemoveinfo). (U ᵕ U❁) w-w'id de wa fenêtwe de w'ongwet e-et un boowéen i-indiquant s-si wa fenêtwe e-est égawement fewmée.
 
-## Objets supplémentaires
+## objets suppwémentaiwes
 
-### removeInfo
+### w-wemoveinfo
 
-- `windowId`
-  - : `integer`. La fenêtre dont l'onglet est fermé.
-- `isWindowClosing`
-  - : `boolean`. `true` si l'onglet est fermé car sa fenêtre est en cours de fermeture.
+- `windowid`
+  - : `integew`. (U ﹏ U) wa fenêtwe dont w'ongwet est f-fewmé. :3
+- `iswindowcwosing`
+  - : `boowean`. ( ͡o ω ͡o ) `twue` si w'ongwet est fewmé caw sa fenêtwe est en couws de fewmetuwe. σωσ
 
-## Exemples
+## exempwes
 
-Écoutez les événements proches et consignez les informations :
+Écoutez w-wes événements pwoches et consignez w-wes infowmations :
 
 ```js
-function handleRemoved(tabId, removeInfo) {
-  console.log("Tab: " + tabId + " is closing");
-  console.log("Window ID: " + removeInfo.windowId);
-  console.log("Window is closing: " + removeInfo.isWindowClosing);
+f-function h-handwewemoved(tabid, wemoveinfo) {
+  consowe.wog("tab: " + tabid + " is cwosing");
+  c-consowe.wog("window i-id: " + wemoveinfo.windowid);
+  consowe.wog("window i-is cwosing: " + w-wemoveinfo.iswindowcwosing);
 }
 
-browser.tabs.onRemoved.addListener(handleRemoved);
+bwowsew.tabs.onwemoved.addwistenew(handwewemoved);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). c-cette documentation est déwivée d-de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code d-de chwomium code. >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa w-wicence cweative commons attwibution 3.0 p-pouw wes États-unis. 😳😳😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. aww wights wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, with ow without
+// modification, 😳 awe p-pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain t-the above copywight
+// n-nyotice, 😳😳😳 t-this wist of conditions and the fowwowing discwaimew. (˘ω˘)
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight n-nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. ( ͡o ω ͡o )
+//    * nyeithew the nyame o-of googwe inc. o.O nyow the nyames of its
+// contwibutows may be used t-to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. >w<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, 😳 incwuding, 🥺 b-but nyot
+// wimited to, rawr x3 the impwied w-wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe d-discwaimed. o.O in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, rawr indiwect, ʘwʘ incidentaw, 😳😳😳
+// speciaw, ^^;; e-exempwawy, ow c-consequentiaw damages (incwuding, o.O b-but nyot
+// wimited to, (///ˬ///✿) pwocuwement o-of substitute g-goods ow sewvices; woss of u-use, σωσ
+// data, nyaa~~ ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, ^^;; w-whethew in contwact, ^•ﻌ•^ stwict wiabiwity, σωσ ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, -.- even if advised of the possibiwity of such damage. ^^;;
 -->

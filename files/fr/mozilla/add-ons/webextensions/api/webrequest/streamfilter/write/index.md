@@ -1,58 +1,58 @@
 ---
-title: webRequest.StreamFilter.write()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/write
+titwe: webwequest.stweamfiwtew.wwite()
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/wwite
 ---
 
-{{AddonSidebar}}Écrit quelques données de réponse dans le flux de sortie..Vous ne pouvez appeler cette fonction qu'après le déclenchement de l'événement {{WebExtAPIRef("webRequest.StreamFilter.onstart", "onstart")}}.
+{{addonsidebaw}}Écwit q-quewques d-données de w-wéponse dans we f-fwux de sowtie..vous n-nye pouvez a-appewew cette f-fonction qu'apwès we décwenchement de w'événement {{webextapiwef("webwequest.stweamfiwtew.onstawt", rawr x3 "onstawt")}}. (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-filter.write(
-  data, // ArrayBuffer or Uint8Array
+fiwtew.wwite(
+  d-data, (U ﹏ U) // awwaybuffew ow uint8awway
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `data`
-  - : [`Uint8Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Uint8Array) ou [`ArrayBuffer`](/fr/docs/Web/JavaScript/Reference/Global_Objects/ArrayBuffer): tableau d'octets contenant les données à transmettre au moteur de rendu du navigateur.
+  - : [`uint8awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/uint8awway) ou [`awwaybuffew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awwaybuffew): t-tabweau d'octets contenant wes données à twansmettwe au moteuw d-de wendu du nyavigateuw. (⑅˘꒳˘)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-None.
+n-nyone. òωó
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple utilise `write()` pour remplacer "Example" dans la réponse par "WebExtension Example".
+cet exempwe utiwise `wwite()` p-pouw wempwacew "exampwe" dans wa wéponse paw "webextension exampwe". ʘwʘ
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  let decoder = new TextDecoder("utf-8");
-  let encoder = new TextEncoder();
+function wistenew(detaiws) {
+  w-wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  wet decodew = n-nyew textdecodew("utf-8");
+  w-wet encodew = n-nyew textencodew();
 
-  filter.ondata = (event) => {
-    let str = decoder.decode(event.data, { stream: true });
-    // Just change any instance of Example in the HTTP response
-    // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension Example");
-    filter.write(encoder.encode(str));
-    filter.disconnect();
+  f-fiwtew.ondata = (event) => {
+    wet stw = decodew.decode(event.data, /(^•ω•^) { s-stweam: twue });
+    // just change any instance o-of exampwe in the http wesponse
+    // to webextension exampwe.
+    stw = stw.wepwace(/exampwe/g, ʘwʘ "webextension exampwe");
+    f-fiwtew.wwite(encodew.encode(stw));
+    fiwtew.disconnect();
   };
 
-  //return {}; // not needed
+  //wetuwn {}; // n-nyot nyeeded
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  w-wistenew, σωσ
+  { uwws: ["https://exampwe.com/*"], OwO types: ["main_fwame"] }, 😳😳😳
+  ["bwocking"], 😳😳😳
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

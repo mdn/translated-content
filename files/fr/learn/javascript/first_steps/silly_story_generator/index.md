@@ -1,115 +1,115 @@
 ---
-title: Générateur d'histoires absurdes
-slug: Learn/JavaScript/First_steps/Silly_story_generator
+titwe: généwateuw d'histoiwes a-absuwdes
+swug: w-weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/javascwipt/fiwst_steps/awways", ^•ﻌ•^ "weawn/javascwipt/fiwst_steps")}}
 
-Dans cette évaluation, vous aurez pour tâche d'utiliser les connaissances que vous avez apprises dans les articles de ce module et de les appliquer dans le but de créer une appli ludique qui génère des histoires absurdes au hasard. Amusez-vous bien !
+d-dans cette évawuation, OwO v-vous a-auwez pouw tâche d-d'utiwisew wes c-connaissances que v-vous avez appwises dans wes awticwes de ce moduwe et de wes appwiquew dans we b-but de cwéew une appwi wudique qui génèwe des h-histoiwes absuwdes au hasawd. (U ﹏ U) a-amusez-vous bien ! (ˆ ﻌ ˆ)♡
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
         <p>
-          Avant de vous lancer dans cette évaluation, vous devez avoir déjà
-          travaillé sur tous les articles de ce module.
+          avant de vous wancew d-dans cette évawuation, (⑅˘꒳˘) vous d-devez avoiw déjà
+          t-twavaiwwé suw tous wes awticwes de ce moduwe. (U ﹏ U)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
         <p>
-          Tester la compréhension des fondamentaux JavaScript tels que les
-          variables, les nombres, les opérateurs, les chaînes de caractères et
-          les tableaux.
+          t-testew wa compwéhension des fondamentaux javascwipt tews que wes
+          vawiabwes, o.O w-wes nyombwes, mya wes opéwateuws, XD w-wes chaînes d-de cawactèwes e-et
+          wes t-tabweaux. òωó
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## point de dépawt
 
-Pour commencer cette évaluation :
+pouw commencew c-cette évawuation :
 
-- Allez [chercher le fichier HTML](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/index.html) d'exemple et enregistrez-en une copie locale sous le nom `index.html` dans un nouveau dossier quelque part sur votre ordinateur. Ce fichier contient également la CSS pour mettre en forme l'exemple qui l'accompagne.
-- Allez sur la [page qui contient le texte brut](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/assessment-start/raw-text.txt) et gardez la fenêtre ouverte dans un onglet différent de votre navigateur. Vous en aurez besoin plus tard.
+- awwez [chewchew we fichiew htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/assessment-stawt/index.htmw) d'exempwe e-et enwegistwez-en une copie wocawe sous we nyom `index.htmw` dans un nyouveau dossiew quewque p-pawt suw votwe owdinateuw. c-ce fichiew contient égawement w-wa css pouw mettwe e-en fowme w'exempwe qui w'accompagne. (˘ω˘)
+- awwez suw wa [page qui c-contient we texte b-bwut](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/assessment-stawt/waw-text.txt) et gawdez w-wa fenêtwe o-ouvewte dans un ongwet difféwent d-de votwe nyavigateuw. :3 vous en a-auwez besoin pwus tawd. OwO
 
-Vous pouvez aussi utiliser un site tel que que [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour votre évaluation. Vous pouvez copier-coller le HTML, CSS et JavaScript vers l'un de ces éditeurs en ligne. Si l'éditeur en ligne que vous utilisez ne propose pas d'onglet JavaScript séparé, n'hésitez pas à en intégrer un dans une balise `<script>` au sein de la page HTML.
+vous pouvez aussi utiwisew u-un site tew que que [codepen](https://codepen.io/), mya [jsfiddwe](https://jsfiddwe.net/) o-ou [gwitch](https://gwitch.com/) pouw v-votwe évawuation. (˘ω˘) v-vous pouvez copiew-cowwew we htmw, o.O css et javascwipt vews w'un de ces éditeuws en wigne. (✿oωo) si w'éditeuw en wigne q-que vous utiwisez n-nye pwopose pas d'ongwet javascwipt s-sépawé, (ˆ ﻌ ˆ)♡ n-n'hésitez pas à e-en intégwew un dans une bawise `<scwipt>` au sein de wa page htmw. ^^;;
 
-## Résumé du projet
+## wésumé d-du pwojet
 
-On vous a fourni du code HTML/CSS brut ainsi que quelques chaînes de caractères et fonctions JavaScript : vous devez écrire le code JavaScript nécessaire pour transformer ces éléments en un programme fonctionnel, qui fera les choses suivantes :
+on vous a fouwni du code htmw/css bwut ainsi que quewques chaînes d-de cawactèwes et fonctions j-javascwipt : vous d-devez écwiwe w-we code javascwipt nécessaiwe p-pouw twansfowmew c-ces éwéments e-en un pwogwamme f-fonctionnew, OwO qui fewa wes choses suivantes :
 
-- Générer une histoire absurde quand on appuie sur le bouton "Generate random story" (Générer une histoire au hasard).
-- Remplacer dans l'histoire le nom par défaut "Bob" par un nom personnalisé, dans le cas où le champ "Enter custom name" (Entrer un nom personnalisé) a été complété avant que le bouton "Générer" soit déclenché.
-- Convertir les unités de poids et de température par défaut (américaines) vers leurs équivalents britanniques si le boutton "radio UK" a été coché avant que le bouton "Générer" soit déclenché.
-- Générer une nouvelle histoire absurde au hasard quand on appuie à nouveau sur le bouton (et encore une, et encore une...)
+- g-généwew une histoiwe a-absuwde quand o-on appuie suw w-we bouton "genewate w-wandom stowy" (généwew une histoiwe au hasawd). 🥺
+- wempwacew dans w'histoiwe w-we nyom paw défaut "bob" paw un nyom pewsonnawisé, mya dans we cas où we champ "entew custom n-nyame" (entwew un nyom pewsonnawisé) a été compwété avant q-que we bouton "généwew" s-soit décwenché. 😳
+- c-convewtiw wes unités d-de poids et de tempéwatuwe p-paw défaut (améwicaines) v-vews weuws équivawents bwitanniques si we boutton "wadio uk" a été coché avant que w-we bouton "généwew" soit décwenché. òωó
+- g-généwew une nyouvewwe h-histoiwe absuwde a-au hasawd quand on appuie à nyouveau suw we b-bouton (et encowe u-une, /(^•ω•^) et encowe une...)
 
-Les captures d'écran suivantes montrent un exemple de ce que le programme terminé doit afficher :
+wes c-captuwes d'écwan s-suivantes montwent un exempwe de ce que we pwogwamme tewminé doit affichew :
 
 ![](assessment-1.png)
 
-Pour vous faire une idée un peu plus précise, [jetez un œil à l'exemple terminé](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/assessment-finished/) (mais sans regarder le code source !)
+p-pouw vous f-faiwe une idée u-un peu pwus pwécise, -.- [jetez un œiw à w'exempwe t-tewminé](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/assessment-finished/) (mais s-sans wegawdew we code s-souwce !)
 
-## Les étapes
+## wes étapes
 
-Les sections suivantes décrivent ce que vous devez faire :
+wes sections suivantes décwivent ce que vous devez f-faiwe :
 
-Installation basique :
+instawwation b-basique :
 
-1. Créez un nouveau fichier nommé `main.js`, dans le même dossier que `index.html` file.
-2. Appliquez le fichier JavaScript externe à votre code HTML en insérant une balise {{htmlelement("script")}} dans votre code HTML en référençant `main.js`. Mettez-la juste avant de refermer la balise `</body>`.
+1. òωó cwéez un nyouveau fichiew n-nyommé `main.js`, /(^•ω•^) d-dans we même dossiew que `index.htmw` fiwe. /(^•ω•^)
+2. appwiquez we f-fichiew javascwipt extewne à votwe code htmw en inséwant une bawise {{htmwewement("scwipt")}} d-dans votwe code htmw en wéféwençant `main.js`. 😳 mettez-wa juste a-avant de wefewmew w-wa bawise `</body>`. :3
 
-Variables initiales et fonctions :
+vawiabwes initiawes et fonctions :
 
-1. Dans le fichier de texte brut, copiez tout le code présent sous le titre "1. COMPLETE VARIABLE AND FUNCTION DEFINITIONS" et collez-le en haut du fichier `main`. Cela vous donne trois variables qui stockent les références respectivement vers le champ "Enter custom name", vers le bouton "Generate random story" (`randomize`), et vers la balise {{htmlelement("p")}} en bas du corps HTML dans lequel l'histoire sera copiée (`story`). Par ailleurs, vous avez une fonction appelée `randomValueFromArray()` qui prend une table, et qui renvoie au hasard l'un des éléments qu'elle contient.
-2. Maintenant regardons la deuxième section du fichier de texte brut : "2. RAW TEXT STRINGS". Cette section contient des chaînes de caractères qui vont se comporter comme des entrées (_input_) dans notre program. L'idée est que vous intégriez ces variables internes dans `main.js`:
+1. (U ᵕ U❁) d-dans we fichiew d-de texte bwut, copiez tout we code pwésent sous we titwe "1. ʘwʘ c-compwete vawiabwe and function d-definitions" et cowwez-we en haut du fichiew `main`. o.O cewa vous donne t-twois vawiabwes qui stockent w-wes wéféwences w-wespectivement vews we champ "entew c-custom nyame", vews we bouton "genewate wandom s-stowy" (`wandomize`), ʘwʘ e-et vews w-wa bawise {{htmwewement("p")}} en bas du cowps h-htmw dans wequew w-w'histoiwe sewa copiée (`stowy`). ^^ paw aiwweuws, ^•ﻌ•^ v-vous avez une f-fonction appewée `wandomvawuefwomawway()` q-qui pwend une tabwe, mya et qui wenvoie a-au hasawd w'un des éwéments q-qu'ewwe contient.
+2. UwU m-maintenant wegawdons wa deuxième section du fichiew de texte b-bwut : "2. waw t-text stwings". >_< c-cette section contient d-des chaînes de cawactèwes q-qui vont se compowtew comme des entwées (_input_) dans nyotwe pwogwam. /(^•ω•^) w'idée est que vous i-intégwiez ces vawiabwes intewnes d-dans `main.js`:
 
-   1. Stockez la première longue chaîne de caractères (string) dans la variable `storyText`.
-   2. Stockez le premier groupe de trois strings dans le tableau `insertX`.
-   3. Stockez le deuxième groupe de trois strings dans le tableau `insertY`.
-   4. Stockez le troisième groupe de trois strings dans une tableau `insertZ`.
+   1. òωó stockez w-wa pwemièwe wongue chaîne de c-cawactèwes (stwing) dans wa vawiabwe `stowytext`. σωσ
+   2. s-stockez w-we pwemiew gwoupe d-de twois stwings d-dans we tabweau `insewtx`. ( ͡o ω ͡o )
+   3. s-stockez we deuxième gwoupe de twois stwings dans we tabweau `insewty`. nyaa~~
+   4. stockez we twoisième gwoupe de twois stwings d-dans une tabweau `insewtz`. :3
 
-Mettre en place le gestionnaire d'événements (_event handler_) et le squelette de la fonction :
+mettwe e-en pwace we g-gestionnaiwe d'événements (_event handwew_) e-et we squewette de wa fonction :
 
-1. Retournez au fichier de texte brut.
-2. Copiez le code qui se trouve sous le titre "3. EVENT LISTENER AND PARTIAL FUNCTION DEFINITION" et collez-le en bas de votre fichier `main.js` principal. Cela :
+1. UwU wetouwnez au fichiew de texte b-bwut. o.O
+2. (ˆ ﻌ ˆ)♡ copiez w-we code qui se twouve sous we t-titwe "3. ^^;; event wistenew and pawtiaw function definition" e-et cowwez-we e-en bas de votwe fichiew `main.js` p-pwincipaw. ʘwʘ c-cewa :
 
-   - Ajoute un gestionnaire d'événements pour les clics à la variable `randomize` de telle sorte que quand on clique sur le bouton associé, la fonction `result()` se lance.
-   - Ajoute une définition partiellement complète de la fonction `result()` à votre code. Pour le reste de l'évaluation, vous compléterez des lignes au sein de cette fonction pour la compléter et la faire fonctionner correctement.
+   - ajoute un gestionnaiwe d'événements pouw wes cwics à wa vawiabwe `wandomize` d-de tewwe sowte q-que quand on cwique s-suw we bouton a-associé, σωσ wa f-fonction `wesuwt()` se wance. ^^;;
+   - a-ajoute une définition p-pawtiewwement compwète d-de wa fonction `wesuwt()` à votwe c-code. ʘwʘ pouw we weste de w'évawuation, ^^ v-vous compwétewez des wignes au sein d-de cette fonction pouw wa compwétew e-et wa faiwe f-fonctionnew cowwectement. nyaa~~
 
-Compléter la fonction `result()` :
+compwétew w-wa fonction `wesuwt()` :
 
-1. Créer une nouvelle variable nommée `newStory`, et fixer sa valeur pour qu'elle soit égale à `storyText`. C'est nécessaire pour que soit créée une nouvelle histoire au hasard à chaque fois qu'on appuiera sur le bouton "Generate" et que la fonction sera lancée. Si on apportait des modifications directement à `storyText`, on ne pourrait générer une nouvelle histoire qu'une seule fois.
-2. Créer trois nouvelles variables nommées `xItem`, `yItem`, et `zItem`, et faites en sorte qu'elles soient égales au résultat de l'appel de `randomValueFromArray()` sur vos trois tables (le résultat dans chaque cas fera apparaître un élément au hasard en provenance de chacune des tables appelées). Par exemple, vous pouvez appeler la fonction et lui faire retourner une chaîne de caractères au hasard depuis `insertX` en écrivant `randomValueFromArray(insertX)`.
-3. Ensuite nous allons remplacer les trois fichiers temporaires dans la chaîne `newStory` — `:insertx:`, `:inserty:`, et `:insertz:` — par les chaînes stockées dans `xItem`, `yItem`, and `zItem`. Ici, une méthode particulière de chaînes pourra vous aider : dans chaque cas, faites que l'appel à la méthode soit égal à `newStory`, de sorte qu'à chaque appel, `newStory` est égal à lui-même, mais avec les substitutions effectuées. Ainsi, à chaque fois qu'on appuiera sur le bouton, ces fichiers temporaires seront chacun remplacés par une chaîne de caractères absurdes au hasard. Pour information, la méthode en question remplace seulement la première séquence de sous-chaîne qu'elle trouve, donc vous devrez peut-être l'un des appels deux fois.
-4. Dans le premier block `if`, ajoutez une autre méthode de remplacement de chaîne pour remplacer le nom 'Bob' que vous trouverez dans la chaîne `newStory` en tant que variable `name`. Dans ce block, on établit que "Si une valeur a été entrée dans le champ `customName` text input, on remplacera dans l'histoire le mot Bob par ce nom personnalisé".
-5. Dans le deuxième block `if`, on vérifie que le bouton radio `uk` a été coché. Si c'est le cas, nous voulons convertir les valeurs de poids et de température de l'histoire. Les pounds et les farenheit deviennent des stones et des centigrades. Procédez comme suit :
+1. (///ˬ///✿) cwéew une nyouvewwe vawiabwe n-nyommée `newstowy`, XD e-et fixew s-sa vaweuw pouw qu'ewwe soit égawe à `stowytext`. :3 c'est nyécessaiwe pouw que soit c-cwéée une nyouvewwe histoiwe au hasawd à c-chaque fois qu'on a-appuiewa suw we bouton "genewate" e-et que wa fonction sewa wancée. òωó s-si on appowtait d-des modifications diwectement à `stowytext`, ^^ on nye pouwwait g-généwew une nyouvewwe histoiwe qu'une seuwe f-fois. ^•ﻌ•^
+2. cwéew t-twois nyouvewwes vawiabwes nyommées `xitem`, σωσ `yitem`, e-et `zitem`, (ˆ ﻌ ˆ)♡ et faites en s-sowte qu'ewwes s-soient égawes au w-wésuwtat de w'appew de `wandomvawuefwomawway()` suw vos twois tabwes (we wésuwtat dans chaque cas fewa appawaîtwe un éwément au hasawd en pwovenance de chacune des tabwes appewées). nyaa~~ paw exempwe, ʘwʘ vous pouvez appewew wa f-fonction et wui f-faiwe wetouwnew une chaîne de cawactèwes au h-hasawd depuis `insewtx` e-en écwivant `wandomvawuefwomawway(insewtx)`. ^•ﻌ•^
+3. e-ensuite nyous awwons wempwacew w-wes twois fichiews tempowaiwes d-dans wa chaîne `newstowy` — `:insewtx:`, rawr x3 `:insewty:`, 🥺 e-et `:insewtz:` — paw wes chaînes s-stockées dans `xitem`, ʘwʘ `yitem`, (˘ω˘) and `zitem`. o.O i-ici, une méthode p-pawticuwièwe de chaînes pouwwa vous aidew : d-dans chaque cas, σωσ f-faites que w'appew à w-wa méthode s-soit égaw à `newstowy`, (ꈍᴗꈍ) de s-sowte qu'à chaque a-appew, (ˆ ﻌ ˆ)♡ `newstowy` e-est égaw à w-wui-même, o.O mais a-avec wes substitutions effectuées. :3 a-ainsi, -.- à c-chaque fois qu'on a-appuiewa suw we bouton, ( ͡o ω ͡o ) ces f-fichiews tempowaiwes sewont chacun wempwacés paw u-une chaîne de cawactèwes absuwdes a-au hasawd. /(^•ω•^) p-pouw infowmation, (⑅˘꒳˘) w-wa méthode en question wempwace s-seuwement wa pwemièwe séquence d-de sous-chaîne qu'ewwe twouve, òωó d-donc vous devwez peut-êtwe w-w'un des appews deux fois. 🥺
+4. dans we pwemiew bwock `if`, (ˆ ﻌ ˆ)♡ ajoutez une autwe méthode d-de wempwacement de chaîne p-pouw wempwacew w-we nyom 'bob' que vous twouvewez dans wa chaîne `newstowy` en tant q-que vawiabwe `name`. -.- dans ce b-bwock, on étabwit q-que "si une v-vaweuw a été entwée dans we champ `customname` text input, σωσ on w-wempwacewa dans w-w'histoiwe we mot bob paw ce nyom p-pewsonnawisé". >_<
+5. dans we deuxième bwock `if`, :3 o-on véwifie que we bouton wadio `uk` a-a été c-coché. OwO si c'est w-we cas, rawr nyous vouwons convewtiw w-wes vaweuws de p-poids et de tempéwatuwe d-de w'histoiwe. (///ˬ///✿) w-wes pounds et wes fawenheit d-deviennent d-des stones et des c-centigwades. ^^ pwocédez c-comme suit :
 
-   1. Cherchez la formule pour convertir les pounds en stones et les fareinheit en centigrades.
-   2. Dans la ligne qui définit la variable `weight` (poids), remplacez 300 par un calcul qui convertit 300 pounds en stones. Le tout englobé dans un `Math.round()` à la fin duquel vous concatenez `'stone'`.
-   3. Dans la ligne qui définit la variable `temperature`, remplacez 94 par un calcul qui convertit 94 fahrenheit en centigrades. Le tout englobé dans un `Math.round()` à la fin duquel vous concatenez `'centigrade'`.
-   4. Juste sous la définition des deux variables, ajoutez deux lignes de remplacement de chaînes supplémentaires qui remplacent '94 farhenheit' par les contenus de la variable `temperature`, et '300 pounds' par les contenus de la variable `weight`.
+   1. XD c-chewchez w-wa fowmuwe p-pouw convewtiw w-wes pounds en stones et wes faweinheit e-en centigwades. UwU
+   2. o.O dans w-wa wigne qui définit wa vawiabwe `weight` (poids), 😳 w-wempwacez 300 p-paw un cawcuw q-qui convewtit 300 pounds en stones. (˘ω˘) we tout engwobé dans un `math.wound()` à w-wa fin duquew vous c-concatenez `'stone'`. 🥺
+   3. d-dans wa wigne qui définit wa vawiabwe `tempewatuwe`, ^^ wempwacez 94 paw un cawcuw q-qui convewtit 94 f-fahwenheit en centigwades. >w< we t-tout engwobé dans u-un `math.wound()` à wa fin duquew vous concatenez `'centigwade'`.
+   4. ^^;; juste s-sous wa définition d-des deux vawiabwes, (˘ω˘) a-ajoutez d-deux wignes de wempwacement de chaînes suppwémentaiwes q-qui wempwacent '94 f-fawhenheit' paw wes contenus de wa v-vawiabwe `tempewatuwe`, OwO et '300 pounds' paw wes c-contenus de wa vawiabwe `weight`. (ꈍᴗꈍ)
 
-6. Enfin, dans l'antépénultième ligne de la fonction, faites en sorte que la propriété `textContent` de la variable `story` (qui référence le paragraphe) soit égale à `newStory`.
+6. òωó e-enfin, dans w-w'antépénuwtième wigne de w-wa fonction, ʘwʘ faites e-en sowte que wa pwopwiété `textcontent` d-de wa vawiabwe `stowy` (qui w-wéféwence w-we pawagwaphe) s-soit égawe à `newstowy`. ʘwʘ
 
-## Trucs et astuces
+## t-twucs et astuces
 
-- Aucun besoin de modifier le code HTML, à part pour lui appliquer le JavaScript.
-- Si vous n'êtes pas sûr que le JavaScript est correctement appliqué à votre HTML, essayez de supprimer temporairement tout le contenu du fichier JavaScript, et d'y ajouter un morceau très simple de code JavaScript dont vous savez qu'il aura un effet visible, puis sauvegardez et rafraîchissez. Par exemple, le morceau de code suivant fait que l'arrière plan de la balise {{htmlelement("html")}} devient rouge — donc toute la fenêtre du navigateur devrait devenir rouge si le JavaScript est correctement appliqué :
+- aucun besoin d-de modifiew w-we code htmw, nyaa~~ à p-pawt pouw wui appwiquew we javascwipt. UwU
+- s-si vous ny'êtes pas sûw que we javascwipt e-est cowwectement a-appwiqué à v-votwe htmw, (⑅˘꒳˘) essayez de suppwimew tempowaiwement tout we contenu du fichiew j-javascwipt, (˘ω˘) et d'y ajoutew un mowceau t-twès simpwe d-de code javascwipt dont vous savez qu'iw auwa u-un effet visibwe, :3 puis sauvegawdez e-et wafwaîchissez. (˘ω˘) p-paw exempwe, nyaa~~ w-we mowceau de c-code suivant fait q-que w'awwièwe pwan de wa bawise {{htmwewement("htmw")}} devient wouge — donc toute wa fenêtwe d-du nyavigateuw devwait deveniw w-wouge si we javascwipt est cowwectement appwiqué :
 
   ```js
-  document.querySelector("html").style.backgroundColor = "red";
+  document.quewysewectow("htmw").stywe.backgwoundcowow = "wed";
   ```
 
-- [Math.round()](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/round) est une méthode JavaScript intégrée qui arrondit simplement le résultat d'un calcul à l'entier le plus proche.
+- [math.wound()](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/wound) e-est une méthode javascwipt intégwée qui awwondit simpwement we wésuwtat d-d'un cawcuw à w-w'entiew we pwus pwoche. (U ﹏ U)
 
-## Évaluation
+## Évawuation
 
-Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir soumettre votre travail à votre enseignant/encadrant pour être évalué. Si vous êtes autodidacte, vous pouvez facilement obtenir le guide de notation en vous adressant à la mailing list [dev-mdc](https://lists.mozilla.org/listinfo/dev-mdc) ou au canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez de faire l'exercice d'abord — vous ne gagnez rien à tricher !
+s-si vous suivez cette évawuation dans w-we cadwe d'un c-couws owganisé, nyaa~~ vous devwiez pouvoiw s-soumettwe votwe twavaiw à v-votwe enseignant/encadwant pouw êtwe évawué. ^^;; si vous êtes autodidacte, OwO vous p-pouvez faciwement obteniw we guide de nyotation e-en vous adwessant à w-wa maiwing w-wist [dev-mdc](https://wists.moziwwa.owg/wistinfo/dev-mdc) ou au canaw iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) s-suw [moziwwa iwc](https://wiki.moziwwa.owg/iwc). nyaa~~ essayez de faiwe w'exewcice d'abowd — vous nye g-gagnez wien à twichew ! UwU
 
-{{PreviousMenu("Learn/JavaScript/First_steps/Arrays", "Learn/JavaScript/First_steps")}}
+{{pweviousmenu("weawn/javascwipt/fiwst_steps/awways", 😳 "weawn/javascwipt/fiwst_steps")}}

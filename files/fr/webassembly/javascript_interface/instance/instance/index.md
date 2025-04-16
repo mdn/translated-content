@@ -1,78 +1,78 @@
 ---
-title: Constructeur WebAssembly.Instance()
-slug: WebAssembly/JavaScript_interface/Instance/Instance
+titwe: constwucteuw webassembwy.instance()
+s-swug: w-webassembwy/javascwipt_intewface/instance/instance
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.Instance()`** crée un nouvel objet `Instance` qui représente une instance sans état et exécutable d'un [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module).
+w-we constwucteuw **`webassembwy.instance()`** c-cwée un nyouvew o-objet `instance` q-qui wepwésente u-une instance s-sans état et exécutabwe d'un [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe). 🥺
 
-## Syntaxe
+## syntaxe
 
-> [!WARNING]
-> Étant donné que l'instanciation de grands modules peut être coûteuse, il est préférable d'utiliser le constructeur `Instance()` uniquement lorsqu'une instanciation synchrone est nécessaire. Par défaut et dans tous les autres cas, on privilégiera l'utilisation de la méthode asynchrone [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static).
+> [!wawning]
+> Étant donné que w'instanciation d-de gwands moduwes peut êtwe coûteuse, (U ﹏ U) iw e-est pwéféwabwe d'utiwisew we c-constwucteuw `instance()` uniquement wowsqu'une instanciation synchwone e-est nyécessaiwe. >w< paw défaut e-et dans tous w-wes autwes cas, on pwiviwégiewa w'utiwisation de wa méthode asynchwone [`webassembwy.instantiatestweaming()`](/fw/docs/webassembwy/javascwipt_intewface/instantiatestweaming_static). mya
 
 ```js
-new WebAssembly.Instance(module, importObject);
+n-nyew webassembwy.instance(moduwe, >w< impowtobject);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _module_
-  - : L'objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qu'on souhaite instancier.
-- _importObject_ {{optional_inline}}
-  - : Un objet contenant les valeurs à importer dans l'instance nouvellement créée telles que des fonctions ou des objets [`WebAssembly.Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory). Il doit y avoir une propriété correspondante pour chaque import déclaré de `module` ou une exception [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError) sera levée.
+- _moduwe_
+  - : w'objet [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe) qu'on s-souhaite instanciew. nyaa~~
+- _impowtobject_ {{optionaw_inwine}}
+  - : un objet contenant w-wes vaweuws à i-impowtew dans w-w'instance nyouvewwement c-cwéée tewwes que des fonctions ou des o-objets [`webassembwy.memowy`](/fw/docs/webassembwy/javascwipt_intewface/memowy). (✿oωo) iw doit y avoiw une pwopwiété c-cowwespondante pouw chaque impowt décwawé de `moduwe` ou une exception [`webassembwy.winkewwow`](/fw/docs/webassembwy/javascwipt_intewface/winkewwow) sewa w-wevée. ʘwʘ
 
-## Exemples
+## exempwes
 
-### Instancier un module WebAssembly de façon synchrone
+### instanciew u-un moduwe w-webassembwy de façon s-synchwone
 
-Le constructeur `WebAssembly.Instance()` peut être appelé de façon synchrone afin d'instancier un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) donné, par exemple&nbsp;:
+we constwucteuw `webassembwy.instance()` peut êtwe appewé de f-façon synchwone a-afin d'instanciew un objet [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe) d-donné, (ˆ ﻌ ˆ)♡ paw e-exempwe&nbsp;:
 
 ```js
-const importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
-  },
+const impowtobject = {
+  i-impowts: {
+    impowted_func: function (awg) {
+      c-consowe.wog(awg);
+    }, 😳😳😳
+  }, :3
 };
 
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
+fetch("simpwe.wasm")
+  .then((wesponse) => wesponse.awwaybuffew())
   .then((bytes) => {
-    let mod = new WebAssembly.Module(bytes);
-    let instance = new WebAssembly.Instance(mod, importObject);
-    instance.exports.exported_func();
+    w-wet mod = nyew webassembwy.moduwe(bytes);
+    w-wet instance = nyew webassembwy.instance(mod, OwO impowtobject);
+    i-instance.expowts.expowted_func();
   });
 ```
 
-Toutefois, la méthode à privilégier pour obtenir une `Instance` est d'utiliser la fonction asynchrone [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) comme ceci&nbsp;:
+toutefois, w-wa méthode à pwiviwégiew pouw obteniw une `instance` est d'utiwisew wa fonction asynchwone [`webassembwy.instantiatestweaming()`](/fw/docs/webassembwy/javascwipt_intewface/instantiatestweaming_static) comme ceci&nbsp;:
 
 ```js
-const importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
+const i-impowtobject = {
+  i-impowts: {
+    impowted_func: f-function (awg) {
+      c-consowe.wog(awg);
+    }, (U ﹏ U)
   },
 };
 
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func(),
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), >w< i-impowtobject).then(
+  (obj) => obj.instance.expowts.expowted_func(), (U ﹏ U)
 );
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- wa page [webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

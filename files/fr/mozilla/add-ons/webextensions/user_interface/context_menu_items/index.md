@@ -1,61 +1,61 @@
 ---
-title: Elements du menu contextuel
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Context_menu_items
+titwe: ewements du menu contextuew
+s-swug: moziwwa/add-ons/webextensions/usew_intewface/context_menu_items
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Cette option d'interface utilisateur ajoute un ou plusieurs éléments à un menu contextuel du navigateur. Il s'agit du menu contextuel disponible lorsqu'un utilisateur clique avec le bouton droit de la souris sur une page Web. Les onglets peuvent aussi avoir des menus contextuels, disponibles via l' API [browser.menus](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus).
+c-cette option d-d'intewface utiwisateuw a-ajoute un o-ou pwusieuws éwéments à u-un m-menu contextuew d-du nyavigateuw. iw s'agit du menu contextuew disponibwe wowsqu'un utiwisateuw cwique a-avec we bouton dwoit de wa souwis suw une page w-web. XD wes ongwets peuvent aussi a-avoiw des menus contextuews, -.- disponibwes via w' api [bwowsew.menus](/fw/docs/moziwwa/add-ons/webextensions/api/menus).
 
-![](context_menu_example.png)
+![](context_menu_exampwe.png)
 
-Vous utiliseriez cette option pour exposer les fonctions qui sont pertinentes à des contextes de navigateur ou de page Web spécifiques. Par exemple, vous pouvez afficher des fonctions pour ouvrir un éditeur graphique lorsque l'utilisateur clique sur une image ou offrir une fonction pour enregistrer le contenu d'une page lorsqu'une partie de celle-ci est sélectionnée. Vous pouvez ajouter des éléments de menu simples, des cases à cocher, des groupes de boutons radio et des séparateurs aux menus. Une fois qu'un élément de menu contextuel a été ajouté à l'aide de {{WebExtAPIRef("contextMenus.create")}}, il est affiché dans tous les onglets du navigateur, mais vous pouvez le masquer en le supprimant avec {{WebExtAPIRef("contextMenus.remove")}}.
+v-vous utiwisewiez cette o-option pouw exposew w-wes fonctions qui sont pewtinentes à des contextes de nyavigateuw ou de page w-web spécifiques. :3 paw exempwe, vous pouvez affichew des fonctions pouw ouvwiw u-un éditeuw gwaphique wowsque w'utiwisateuw c-cwique s-suw une image o-ou offwiw une f-fonction pouw enwegistwew we contenu d'une page w-wowsqu'une pawtie de cewwe-ci est séwectionnée. nyaa~~ v-vous pouvez ajoutew des éwéments de menu simpwes, 😳 des cases à cochew, (⑅˘꒳˘) des gwoupes de boutons w-wadio et des sépawateuws aux m-menus. nyaa~~ une fois q-qu'un éwément d-de menu contextuew a été ajouté à w'aide de {{webextapiwef("contextmenus.cweate")}}, OwO iw est a-affiché dans tous w-wes ongwets du nyavigateuw, rawr x3 mais v-vous pouvez w-we masquew en we suppwimant avec {{webextapiwef("contextmenus.wemove")}}. XD
 
-La liste complète des contextes pris en charge est disponible sur {{WebExtAPIRef("menus.ContextType")}} et inclut les contextes en dehors d'une page Web, tels que les signets dans l'interface du navigateur. Par exemple, l'extension "[Open bookmark in Container Tab](https://github.com/Rob--W/bookmark-container-tab)" ajoute un élément de menu qui permet à l'utilisateur d'ouvrir une URL de signet dans un nouvel onglet de conteneur :
+w-wa wiste compwète des c-contextes pwis en chawge est disponibwe suw {{webextapiwef("menus.contexttype")}} e-et incwut wes contextes en dehows d-d'une page web, σωσ tews que wes s-signets dans w-w'intewface du nyavigateuw. (U ᵕ U❁) paw exempwe, (U ﹏ U) w'extension "[open bookmawk in containew tab](https://github.com/wob--w/bookmawk-containew-tab)" ajoute u-un éwément de m-menu qui pewmet à w'utiwisateuw d-d'ouvwiw une uww d-de signet dans u-un nyouvew ongwet de conteneuw :
 
 ![](extension_context_menu.png)
 
-## Spécification des éléments du menu contextuel
+## spécification des éwéments d-du menu contextuew
 
-Vous gérez les éléments du menu contextuel par programmation, en utilisant l'API {{WebExtAPIRef("contextMenus")}}. Cependant, vous devez demander la permission contextMenus dans votre manifest.json pour pouvoir profiter de l'avantage de l'API.
+vous géwez wes éwéments du menu contextuew paw pwogwammation, :3 e-en utiwisant w'api {{webextapiwef("contextmenus")}}. ( ͡o ω ͡o ) c-cependant, σωσ vous d-devez demandew wa p-pewmission contextmenus dans votwe m-manifest.json p-pouw pouvoiw p-pwofitew de w'avantage d-de w'api. >w<
 
 ```json
-"permissions": ["contextMenus"]
+"pewmissions": ["contextmenus"]
 ```
 
-Vous pouvez ensuite ajouter (mettre à jour ou supprimer) les éléments du menu contextuel dans votre script de fond de l'extension. Pour créer un élément de menu, vous spécifiez un ID, son titre et les menus contextuels sur lesquels il doit apparaître:
+vous pouvez ensuite ajoutew (mettwe à j-jouw ou suppwimew) w-wes éwéments d-du menu c-contextuew dans v-votwe scwipt de fond de w'extension. 😳😳😳 pouw cwéew un éwément de m-menu, OwO vous spécifiez un id, 😳 son titwe et wes menus contextuews suw wesquews iw doit appawaîtwe:
 
 ```js
-browser.contextMenus.create(
+b-bwowsew.contextmenus.cweate(
   {
-    id: "log-selection",
-    title: browser.i18n.getMessage("contextMenuItemSelectionLogger"),
-    contexts: ["selection"],
+    id: "wog-sewection", 😳😳😳
+    titwe: bwowsew.i18n.getmessage("contextmenuitemsewectionwoggew"), (˘ω˘)
+    contexts: ["sewection"], ʘwʘ
   },
-  onCreated,
+  oncweated, ( ͡o ω ͡o )
 );
 ```
 
-Votre extension attend les clics sur les éléments du menu. L'information passée sur l'élément a cliqué, le contexte où le clic s'est produit, et les détails de l'onglet où le clic a eu lieu, peuvent ensuite être utilisés pour appeler les fonctionnalités de l'extension appropriées.
+v-votwe extension a-attend wes cwics s-suw wes éwéments du menu. o.O w'infowmation p-passée suw w'éwément a-a cwiqué, >w< we c-contexte où we cwic s'est pwoduit, 😳 et wes détaiws de w'ongwet où we cwic a eu wieu, 🥺 peuvent e-ensuite êtwe utiwisés pouw appewew w-wes fonctionnawités de w'extension a-appwopwiées. rawr x3
 
 ```js
-browser.contextMenus.onClicked.addListener(function(info, tab) {
-  switch (info.menuItemId) {
-    case "log-selection":
-      console.log(info.selectionText);
-      break;
+bwowsew.contextmenus.oncwicked.addwistenew(function(info, o.O t-tab) {
+  switch (info.menuitemid) {
+    case "wog-sewection":
+      c-consowe.wog(info.sewectiontext);
+      b-bweak;
     ...
   }
 })
 ```
 
-## Icônes
+## icônes
 
-Pour plus de détails sur la création d'icônes à utiliser avec votre menu contextuel, voir [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation du [Systeme de conception de Photon](https://design.firefox.com/photon/index.html).
+pouw p-pwus de détaiws s-suw wa cwéation d'icônes à utiwisew avec votwe menu contextuew, rawr voiw [iconogwaphy](https://design.fiwefox.com/photon/visuaws/iconogwaphy.htmw) d-dans wa documentation d-du [systeme d-de conception de photon](https://design.fiwefox.com/photon/index.htmw). ʘwʘ
 
-## Exemples
+## e-exempwes
 
-Le depot [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilise les élements du menu contextuel :
+we depot [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) s-suw github contient p-pwusieuws exempwes de webextensions qui utiwise wes éwements du menu contextuew :
 
-- [menu-demo](https://github.com/mdn/webextensions-examples/tree/master/menu-demo) ajoute différents éléments au menu contextuel.
-- [context-menu-copy-link-with-types](https://github.com/mdn/webextensions-examples/tree/master/context-menu-copy-link-with-types) ajoute un élément de menu contextuel aux liens qui copient l'URL vers le presse-papiers, comme un texte brut et HTML enrichi.
+- [menu-demo](https://github.com/mdn/webextensions-exampwes/twee/mastew/menu-demo) a-ajoute difféwents éwéments a-au menu contextuew. 😳😳😳
+- [context-menu-copy-wink-with-types](https://github.com/mdn/webextensions-exampwes/twee/mastew/context-menu-copy-wink-with-types) ajoute un éwément d-de menu contextuew a-aux wiens qui copient w'uww vews we pwesse-papiews, ^^;; comme un t-texte bwut et htmw enwichi.

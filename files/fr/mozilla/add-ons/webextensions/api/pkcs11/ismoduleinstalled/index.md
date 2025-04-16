@@ -1,47 +1,47 @@
 ---
-title: pkcs11.isModuleInstalled()
-slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/isModuleInstalled
+titwe: pkcs11.ismoduweinstawwed()
+swug: moziwwa/add-ons/webextensions/api/pkcs11/ismoduweinstawwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Vérifie si le module PKCS #11 nommé est actuellement installé dans Firefox.
+v-véwifie s-si we moduwe p-pkcs #11 nyommé e-est actuewwement i-instawwé dans f-fiwefox. nyaa~~
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var checking = browser.pkcs11.isModuleInstalled(
-  name, // string
+vaw checking = bwowsew.pkcs11.ismoduweinstawwed(
+  n-nyame, rawr x3 // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `name`
-  - : `string`. Nom du module à vérifier.
+  - : `stwing`. (✿oωo) n-nyom du moduwe à véwifiew. (ˆ ﻌ ˆ)♡
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec `true` si le module est installé, `false` sinon.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwie avec `twue` si we moduwe e-est instawwé, (˘ω˘) `fawse` s-sinon. (⑅˘꒳˘)
 
-Si une erreur se produit dans le module, la promise sera rejetée avec un message d'erreur.
+si une ewweuw se pwoduit dans we moduwe, (///ˬ///✿) wa pwomise sewa wejetée a-avec un message d'ewweuw. 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Vérifie sir le module nommée "pkcs11_module" est installé :
+véwifie s-siw we moduwe nyommée "pkcs11_moduwe" e-est i-instawwé :
 
 ```js
-function logIsInstalled(isInstalled) {
-  console.log(`Module is installed: ${isInstalled}`);
+f-function wogisinstawwed(isinstawwed) {
+  c-consowe.wog(`moduwe is instawwed: ${isinstawwed}`);
 }
 
-browser.pkcs11.isModuleInstalled("pkcs11_module").then(logIsInstalled);
+bwowsew.pkcs11.ismoduweinstawwed("pkcs11_moduwe").then(wogisinstawwed);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

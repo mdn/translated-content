@@ -1,79 +1,79 @@
 ---
-title: runtime.getPlatformInfo()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/getPlatformInfo
+titwe: wuntime.getpwatfowminfo()
+swug: moziwwa/add-ons/webextensions/api/wuntime/getpwatfowminfo
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoies des informations sur la plate-forme actuelle. Ceci ne peut être appelé que dans le contexte du script d'arrière-plan.
+w-wenvoies d-des infowmations s-suw wa pwate-fowme a-actuewwe. ( ͡o ω ͡o ) c-ceci nye peut êtwe a-appewé que d-dans we contexte d-du scwipt d'awwièwe-pwan. mya
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d'une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getting = browser.runtime.getPlatformInfo();
+v-vaw getting = bwowsew.wuntime.getpwatfowminfo();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+n-nyone. (˘ω˘)
 
-### Valeur rentournée
+### vaweuw wentouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une valeur {{WebExtAPIRef('runtime.PlatformInfo')}} représentant la plate-forme actuelle.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec une vaweuw {{webextapiwef('wuntime.pwatfowminfo')}} w-wepwésentant wa pwate-fowme a-actuewwe. ^^;;
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Obtenez et consignez le système d'exploitation de la plateforme :
+obtenez et consignez we système d'expwoitation d-de wa pwatefowme :
 
 ```js
-function gotPlatformInfo(info) {
-  console.log(info.os);
+function gotpwatfowminfo(info) {
+  consowe.wog(info.os);
 }
 
-var gettingInfo = browser.runtime.getPlatformInfo();
-gettingInfo.then(gotPlatformInfo);
+v-vaw gettinginfo = bwowsew.wuntime.getpwatfowminfo();
+g-gettinginfo.then(gotpwatfowminfo);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est b-basée suw w'api c-chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). (✿oωo) cette documentation est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de chwomium code. (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa w-wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. ^•ﻌ•^ aww w-wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use i-in souwce and binawy fowms, (˘ω˘) with o-ow without
+// modification, nyaa~~ awe p-pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, UwU this wist of conditions and the fowwowing discwaimew. :3
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight n-nyotice, (⑅˘꒳˘) this wist of conditions a-and the f-fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. ^^;; nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, rawr x3 i-incwuding, b-but not
+// wimited to, /(^•ω•^) the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. :3 in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (ꈍᴗꈍ) indiwect, incidentaw, /(^•ω•^)
+// s-speciaw, (⑅˘꒳˘) e-exempwawy, ( ͡o ω ͡o ) ow c-consequentiaw damages (incwuding, òωó but nyot
+// wimited t-to, (⑅˘꒳˘) pwocuwement of substitute g-goods ow sewvices; w-woss of use, XD
+// data, ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, -.- whethew in c-contwact, :3 stwict wiabiwity, nyaa~~ ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, 😳 even if advised o-of the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

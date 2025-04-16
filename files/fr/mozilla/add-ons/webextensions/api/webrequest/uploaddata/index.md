@@ -1,59 +1,59 @@
 ---
-title: webRequest.UploadData
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/UploadData
+titwe: webwequest.upwoaddata
+swug: moziwwa/add-ons/webextensions/api/webwequest/upwoaddata
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Contient les données téléchargées dans une requête URL..
+c-contient wes d-données téwéchawgées d-dans u-une wequête uww..
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes v-vaweuws de ce type s-sont des objets. OwO i-iws contiennent wes pwopwiétés suivantes :
 
-- `bytes`{{optional_inline}}
-  - : `any`. Un ArrayBuffer avec une copie des données.
-- `file`{{optional_inline}}
-  - : `string`. Une chaîne de caractères avec le chemin et le nom du fichier.
+- `bytes`{{optionaw_inwine}}
+  - : `any`. (ꈍᴗꈍ) un awwaybuffew avec u-une copie des données. 😳
+- `fiwe`{{optionaw_inwine}}
+  - : `stwing`. 😳😳😳 une chaîne de cawactèwes a-avec we chemin et we nyom du fichiew. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> cette api est basée suw w-w'api chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). mya cette documentation e-est déwivée d-de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) dans we code chwomium. (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. mya aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy f-fowms, (˘ω˘) with ow without
+// modification, (U ﹏ U) awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// nyotice, ^•ﻌ•^ this wist of conditions and the f-fowwowing discwaimew. (˘ω˘)
+//    * w-wedistwibutions in binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, :3 this w-wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. ^^;;
+//    * nyeithew t-the nyame o-of googwe inc. 🥺 nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without s-specific pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the c-copywight howdews and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, nyaa~~ incwuding, :3 but nyot
+// wimited to, ( ͡o ω ͡o ) the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. mya i-in nyo event shaww the c-copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, (///ˬ///✿) indiwect, incidentaw, (˘ω˘)
+// speciaw, ^^;; e-exempwawy, (✿oωo) ow consequentiaw d-damages (incwuding, (U ﹏ U) b-but nyot
+// wimited t-to, -.- pwocuwement o-of substitute goods ow sewvices; woss of use, ^•ﻌ•^
+// data, ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, rawr whethew in contwact, (˘ω˘) s-stwict wiabiwity, nyaa~~ ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out o-of the use
+// o-of this softwawe, UwU even if advised o-of the possibiwity of such damage. :3
 -->

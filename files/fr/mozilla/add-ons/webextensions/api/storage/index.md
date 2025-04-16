@@ -1,89 +1,89 @@
 ---
-title: storage
-slug: Mozilla/Add-ons/WebExtensions/API/storage
+titwe: stowage
+swug: moziwwa/add-ons/webextensions/api/stowage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Permet aux extensions de stocker et de récupérer des données et d'écouter les modifications apportées aux éléments stockés.
+p-pewmet a-aux extensions de s-stockew et de w-wécupéwew des d-données et d'écoutew w-wes modifications a-appowtées a-aux éwéments stockés. ^^
 
-Le mécanisme de stockage est basé sur l'[API Web Storage](/fr/docs/Web/API/Web_Storage_API), à quelques différences près. Elles incluent entre autres&nbsp;:
+we mécanisme de stockage est basé suw w'[api web s-stowage](/fw/docs/web/api/web_stowage_api), >w< à quewques difféwences pwès. OwO ewwes i-incwuent entwe autwes&nbsp;:
 
-- Le mécanisme est asynchrone.
-- La portée des valeurs s'étend à l'extension, pas à un domaine en particulier (c-à-d que les mêmes paires clef/valeur sont disponibles pour tous les scripts d'arrière-plan et de contenu).
-- Les valeurs stockées peuvent être de tout type compatible avec JSON et pas uniquement [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String). Ce qui inclut entre autres [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) et [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object), mais seulement si leur contenu peut être représenté en JSON, ce qui exclut les nœuds DOM. Il n'est pas nécessaire de convertir vos valeurs en JSON Strings avant de les stocker, mais elles sont représentées en JSON en interne, d'où l'impératif de compatibilité.
-- Plusieurs paires clef/valeur peuvent être récupérées par un même appel à l'API.
+- w-we mécanisme est asynchwone. XD
+- wa powtée des vaweuws s'étend à w-w'extension, ^^;; pas à un domaine e-en pawticuwiew (c-à-d q-que wes mêmes paiwes cwef/vaweuw sont disponibwes pouw tous wes scwipts d-d'awwièwe-pwan et de contenu). 🥺
+- wes vaweuws stockées peuvent êtwe de tout t-type compatibwe avec json et p-pas uniquement [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing). XD c-ce qui incwut e-entwe autwes [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) e-et [`object`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object), (U ᵕ U❁) mais seuwement si weuw c-contenu peut êtwe wepwésenté en json, :3 ce qui e-excwut wes nyœuds dom. ( ͡o ω ͡o ) iw ny'est pas nyécessaiwe de convewtiw vos vaweuws en json stwings avant d-de wes stockew, mais ewwes sont w-wepwésentées e-en json en intewne, òωó d-d'où w'impéwatif de compatibiwité. σωσ
+- pwusieuws paiwes cwef/vaweuw p-peuvent êtwe w-wécupéwées paw un même a-appew à w'api. (U ᵕ U❁)
 
-Pour utiliser cette API vous devez inclure la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) «&nbsp;storage&nbsp;» dans votre fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+p-pouw utiwisew cette api vous d-devez incwuwe wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) «&nbsp;stowage&nbsp;» dans votwe f-fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json). (✿oωo)
 
-Chaque extension a sa propre zone de stockage, qui peut être divisée entre plusieurs types de stockage.
+chaque extension a sa pwopwe z-zone de stockage, ^^ qui peut êtwe d-divisée entwe pwusieuws types d-de stockage. ^•ﻌ•^
 
-Bien que cette API soit semblable à {{domxref("Window.localStorage")}} il est conseillé de ne pas utiliser `Window.localStorage` dans le code de l'extension pour stocker ses données. Firefox effacera les données stockées via l'API localStorage par les extensions dans plusieurs scénarios où les utilisateurs effacent leur historique de navigation ou des données pour des raisons de confidentialité, alors que les données sauvées en utilisant l'API [`storage.local`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) seront correctement conservées dans ces scénarios.
+bien q-que cette api soit sembwabwe à {{domxwef("window.wocawstowage")}} iw est conseiwwé de nye pas utiwisew `window.wocawstowage` dans we code de w'extension pouw s-stockew ses d-données. XD fiwefox effacewa wes données s-stockées v-via w'api wocawstowage p-paw wes extensions dans pwusieuws scénawios où wes utiwisateuws e-effacent weuw histowique de nyavigation ou des données pouw des waisons d-de confidentiawité, :3 awows que w-wes données s-sauvées en utiwisant w-w'api [`stowage.wocaw`](/fw/docs/moziwwa/add-ons/webextensions/api/stowage/wocaw) sewont cowwectement c-consewvées d-dans ces s-scénawios. (ꈍᴗꈍ)
 
-> [!NOTE]
-> La zone de stockage n'est pas chiffrée et ne doit pas être utilisée pour stocker des informations confidentielles sur les utilisateurs.
+> [!note]
+> w-wa zone de stockage ny'est pas chiffwée e-et nye doit pas êtwe u-utiwisée p-pouw stockew d-des infowmations c-confidentiewwes suw wes utiwisateuws. :3
 
-## Types
+## types
 
-- {{WebExtAPIRef("storage.StorageArea")}}
-  - : Un objet représentant la zone de stockage.
-- {{WebExtAPIRef("storage.StorageChange")}}
-  - : Un objet représentant une modification d'une zone de stockage.
+- {{webextapiwef("stowage.stowageawea")}}
+  - : un objet wepwésentant w-wa zone de stockage. (U ﹏ U)
+- {{webextapiwef("stowage.stowagechange")}}
+  - : un objet wepwésentant une modification d'une zone de stockage.
 
-## Propriétés
+## p-pwopwiétés
 
-`storage` a trois propriétés, qui représentent les différents types de zones de stockage disponibles.
+`stowage` a twois pwopwiétés, UwU qui wepwésentent w-wes difféwents t-types de zones d-de stockage disponibwes. 😳😳😳
 
-- {{WebExtAPIRef("storage.sync")}}
-  - : Représente la zone de stockage `sync`. Les items dans `sync` sont synchronisés par le navigateur, et disponibles pour toutes les instances de ce navigateur auxquelles l'utilisateur est connecté, pour tous les appareils.
-- {{WebExtAPIRef("storage.local")}}
-  - : Représente la zone de stockage `local`. Les items dans `local` sont limités à l'appareil sur lequel l'extension a été installée.
-- {{WebExtAPIRef("storage.managed")}}
-  - : Représente la zone de stockage `managed`. Les items dans `managed` sont en écriture pour l'administrateur du domaine et en lecture seule pour l'extension. Tenter de modifier cet espace de nom renvoie une erreur.
+- {{webextapiwef("stowage.sync")}}
+  - : wepwésente w-wa zone de stockage `sync`. XD wes i-items dans `sync` s-sont synchwonisés paw we nyavigateuw, o.O et disponibwes pouw toutes wes instances de ce nyavigateuw a-auxquewwes w'utiwisateuw est c-connecté, pouw tous wes appaweiws. (⑅˘꒳˘)
+- {{webextapiwef("stowage.wocaw")}}
+  - : w-wepwésente wa z-zone de stockage `wocaw`. wes items dans `wocaw` s-sont wimités à w-w'appaweiw suw wequew w'extension a-a été instawwée. 😳😳😳
+- {{webextapiwef("stowage.managed")}}
+  - : w-wepwésente wa zone de stockage `managed`. nyaa~~ wes items dans `managed` sont en écwituwe pouw w'administwateuw d-du domaine et en w-wectuwe seuwe pouw w-w'extension. rawr tentew de modifiew c-cet espace de n-nyom wenvoie une ewweuw. -.-
 
 ## Événements
 
-- {{WebExtAPIRef("storage.onChanged")}}
-  - : Activé quand un ou plusieurs items d'une zone de stockage sont modifiés.
+- {{webextapiwef("stowage.onchanged")}}
+  - : a-activé quand un ou pwusieuws items d'une zone de stockage sont modifiés.
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> cette api est basée suw w'api chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). (✿oωo) cette d-documentation e-est déwivée de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) dans we code de chwomium. /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ʘwʘ a-aww wights w-wesewved. UwU
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce and binawy fowms, XD w-with ow without
+// modification, (✿oωo) a-awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// n-nyotice, :3 this wist of conditions a-and the fowwowing d-discwaimew. (///ˬ///✿)
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, nyaa~~ this wist o-of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. >w<
+//    * n-nyeithew the nyame of googwe inc. -.- nyow the nyames of its
+// c-contwibutows m-may be used to e-endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without specific pwiow wwitten pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, (˘ω˘) incwuding, but n-not
+// wimited to, rawr the impwied wawwanties o-of mewchantabiwity a-and f-fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. OwO in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, ^•ﻌ•^ indiwect, i-incidentaw, UwU
+// s-speciaw, (˘ω˘) exempwawy, (///ˬ///✿) o-ow consequentiaw damages (incwuding, σωσ b-but nyot
+// wimited to, /(^•ω•^) pwocuwement of substitute goods o-ow sewvices; w-woss of use, 😳
+// data, ow pwofits; o-ow business intewwuption) howevew caused and on a-any
+// theowy o-of wiabiwity, 😳 whethew in contwact, (⑅˘꒳˘) s-stwict wiabiwity, 😳😳😳 o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the u-use
+// of this s-softwawe, 😳 even i-if advised of the p-possibiwity of s-such damage. XD
 -->

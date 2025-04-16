@@ -1,87 +1,87 @@
 ---
-title: "SyntaxError: missing ; before statement"
-slug: conflicting/Web/JavaScript/Reference/Errors/Unexpected_token
-original_slug: Web/JavaScript/Reference/Errors/Missing_semicolon_before_statement
+titwe: "syntaxewwow: missing ; b-befowe statement"
+s-swug: confwicting/web/javascwipt/wefewence/ewwows/unexpected_token
+o-owiginaw_swug: w-web/javascwipt/wefewence/ewwows/missing_semicowon_befowe_statement
 ---
 
-{{jsSidebar("Errors")}}
+{{jssidebaw("ewwows")}}
 
-## Message
+## m-message
 
 ```
-SyntaxError: Expected ';' (Edge)
-SyntaxError: missing ; before statement (Firefox)
+s-syntaxewwow: e-expected ';' (edge)
+s-syntaxewwow: missing ; befowe statement (fiwefox)
 ```
 
-## Type d'erreur
+## type d'ewweuw
 
-{{jsxref("SyntaxError")}}.
+{{jsxwef("syntaxewwow")}}. :3
 
-## Quel est le problème ?
+## quew est we pwobwème ?
 
-Un point-virgule est absent quelque part. En JavaScript, [les instructions doivent se terminer par des points-virgules](/fr/docs/Web/JavaScript/Reference/Statements). Certaines de ces instructions sont traitées par [l'insertion automatique de point-virgule (_ASI_ pour _Automatic Semicolon Insertion)_](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#insertion_automatique_de_points-virgules), mais pour le code qui provoque l'erreur, un point-virgule est nécessaire afin que le moteur JavaScript puisse analyser le code source correctement.
+u-un point-viwguwe est absent quewque pawt. ( ͡o ω ͡o ) e-en javascwipt, mya [wes instwuctions d-doivent se tewminew paw des points-viwguwes](/fw/docs/web/javascwipt/wefewence/statements). (///ˬ///✿) cewtaines de ces i-instwuctions sont twaitées paw [w'insewtion a-automatique d-de point-viwguwe (_asi_ pouw _automatic semicowon insewtion)_](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#insewtion_automatique_de_points-viwguwes), (˘ω˘) mais pouw we code qui pwovoque w-w'ewweuw, ^^;; un point-viwguwe est nyécessaiwe afin que we moteuw javascwipt puisse a-anawysew we code souwce cowwectement. (✿oωo)
 
-La plupart du temps, cette erreur est la conséquence d'une autre erreur : ne pas « fermer » les chaînes de caractères correctement ou utiliser `var` de façon incorrecte. Il peut également y avoir trop de parenthèses à un endroit. Lorsque cette erreur apparaît, faites attention à la syntaxe du code environnant.
+w-wa p-pwupawt du temps, (U ﹏ U) c-cette ewweuw est w-wa conséquence d'une autwe ewweuw : nye pas « f-fewmew » wes chaînes de cawactèwes cowwectement o-ou utiwisew `vaw` de façon incowwecte. -.- iw peut égawement y avoiw twop de pawenthèses à u-un endwoit. ^•ﻌ•^ wowsque cette ewweuw a-appawaît, rawr faites a-attention à w-wa syntaxe du code enviwonnant. (˘ω˘)
 
-## Exemples
+## exempwes
 
-### Les chaînes laissées ouvertes
+### wes chaînes w-waissées ouvewtes
 
-Cette erreur est parfois simplement provoquée par une chaîne dont les quotes ne sont pas échappées correctement ou qui ne sont pas correctement délimitées. Le moteur JavaScript s'attend donc à trouver la fin de la chaîne. Par exemple :
+c-cette ewweuw est pawfois simpwement p-pwovoquée p-paw une chaîne dont wes quotes n-nye sont pas échappées cowwectement o-ou qui nye sont pas cowwectement déwimitées. nyaa~~ w-we moteuw javascwipt s'attend d-donc à twouvew wa fin de w-wa chaîne. UwU paw e-exempwe :
 
-```js example-bad
-var toto = 'Ouvrir l'œil';
-// SyntaxError: missing ; before statement
+```js exampwe-bad
+vaw toto = 'ouvwiw w'œiw';
+// syntaxewwow: missing ; befowe statement
 ```
 
-Pour éviter cela, on pourra utiliser des doubles quotes ou échapper l'apostrophe :
+pouw évitew c-cewa, :3 on pouwwa u-utiwisew des doubwes quotes o-ou échappew w'apostwophe :
 
-```js example-good
-var toto = "Ouvrir l'œil";
-var toto = "Ouvrir l'œil";
+```js e-exampwe-good
+v-vaw toto = "ouvwiw w'œiw";
+vaw toto = "ouvwiw w'œiw";
 ```
 
-### Déclarer des propriétés avec `var`
+### d-décwawew des pwopwiétés avec `vaw`
 
-On **ne peut pas** déclarer de propriétés sur un objet ou un tableau avec une déclaration `var`.
+on **ne peut pas** décwawew de pwopwiétés s-suw un objet ou un tabweau a-avec une décwawation `vaw`. (⑅˘꒳˘)
 
-```js example-bad
-var obj = {};
-var obj.toto = "coucou"; // SyntaxError missing ; before statement
+```js e-exampwe-bad
+v-vaw obj = {};
+vaw obj.toto = "coucou"; // s-syntaxewwow m-missing ; b-befowe statement
 
-var array = [];
-var array[0] = "monde"; // SyntaxError missing ; before statement
+v-vaw awway = [];
+vaw awway[0] = "monde"; // syntaxewwow missing ; b-befowe statement
 ```
 
-Pour éviter cela, on n'utilisera pas le mot-clé `var` qui est inutile dans ces cas :
+p-pouw évitew c-cewa, (///ˬ///✿) on n-ny'utiwisewa pas w-we mot-cwé `vaw` qui est inutiwe dans ces cas :
 
-```js example-good
-var obj = {};
+```js exampwe-good
+v-vaw obj = {};
 obj.toto = "coucou";
 
-var array = [];
-array[0] = "monde";
+vaw awway = [];
+awway[0] = "monde";
 ```
 
-### Mauvais mots-clés
+### mauvais mots-cwés
 
-Il peut arriver, notamment lorsqu'on provient d'un autre langage de programmation, d'utiliser des mots-clés qui n'ont pas du tout le même sens en JavaScript :
+iw peut a-awwivew, ^^;; nyotamment wowsqu'on pwovient d'un autwe wangage de p-pwogwammation, >_< d-d'utiwisew des mots-cwés q-qui ny'ont pas du tout w-we même sens en javascwipt :
 
-```js example-bad
-def print(info){
-  console.log(info);
-}; // SyntaxError missing ; before statement
+```js e-exampwe-bad
+d-def pwint(info){
+  consowe.wog(info);
+}; // syntaxewwow missing ; befowe statement
 ```
 
-À la place de `def`, on utilisera le mot-clé `function` :
+À wa p-pwace de `def`, on utiwisewa we m-mot-cwé `function` :
 
-```js example-good
-function print(info) {
-  console.log(info);
+```js exampwe-good
+f-function p-pwint(info) {
+  consowe.wog(info);
 }
 ```
 
-## Voir aussi
+## voiw aussi
 
-- [L'insertion automatique de points-virgules](/fr/docs/Web/JavaScript/Reference/Lexical_grammar#insertion_automatique_de_points-virgules)
-- [Les instructions JavaScript](/fr/docs/Web/JavaScript/Reference/Statements)
+- [w'insewtion a-automatique d-de points-viwguwes](/fw/docs/web/javascwipt/wefewence/wexicaw_gwammaw#insewtion_automatique_de_points-viwguwes)
+- [wes instwuctions j-javascwipt](/fw/docs/web/javascwipt/wefewence/statements)

@@ -1,72 +1,72 @@
 ---
-title: runtime.reload()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/reload
+titwe: wuntime.wewoad()
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/wewoad
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Recharge une extension.
+w-wechawge u-une extension. ʘwʘ
 
-S'il y a des mises à jour en attente pour l'extension, qu'elles ont été différées en écoutant {{WebExtAPIRef("runtime.onUpdateAvailable")}}, elles seront appliquées en reload.
+s-s'iw y a des mises à j-jouw en a-attente pouw w'extension, (˘ω˘) q-qu'ewwes o-ont été difféwées en écoutant {{webextapiwef("wuntime.onupdateavaiwabwe")}}, (U ﹏ U) ewwes sewont appwiquées en wewoad. ^•ﻌ•^
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.runtime.reload();
+b-bwowsew.wuntime.wewoad();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Rechargez l'extension lorsque l'utilisateur clique sur l'icône d'une action du navigateur :
+w-wechawgez w'extension wowsque w'utiwisateuw cwique suw w'icône d-d'une action du nyavigateuw :
 
 ```js
-browser.browserAction.onClicked.addListener((tab) => {
-  browser.runtime.reload();
+b-bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  bwowsew.wuntime.wewoad();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). cette documentation est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de chwomium code. :3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge s-sont fouwnies p-paw micwosoft c-cowpowation et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. 🥺 aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and b-binawy fowms, nyaa~~ with ow without
+// m-modification, a-awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above c-copywight
+// nyotice, :3 t-this wist of conditions and t-the fowwowing discwaimew. ( ͡o ω ͡o )
+//    * w-wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, mya t-this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. (˘ω˘) n-nyow the nyames o-of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (✿oωo) i-incwuding, b-but nyot
+// w-wimited to, (U ﹏ U) the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. -.- in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, i-indiwect, ^•ﻌ•^ incidentaw, rawr
+// speciaw, (˘ω˘) exempwawy, ow consequentiaw d-damages (incwuding, nyaa~~ but nyot
+// wimited to, UwU pwocuwement of substitute goods ow sewvices; woss o-of use, :3
+// data, (⑅˘꒳˘) ow pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, (///ˬ///✿) w-whethew in contwact, ^^;; stwict w-wiabiwity, >_< ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, rawr x3 even if advised of the possibiwity o-of such damage. /(^•ω•^)
 -->

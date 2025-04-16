@@ -1,80 +1,80 @@
 ---
-title: notifications.getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/getAll
+titwe: nyotifications.getaww()
+swug: moziwwa/add-ons/webextensions/api/notifications/getaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient toutes les notifications actuellement actives créées par l'extension.
+o-obtient toutes w-wes nyotifications a-actuewwement a-actives cwéées p-paw w'extension. :3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingAll = browser.notifications.getAll();
+vaw gettingaww = bwowsew.notifications.getaww();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-None.
+nyone.
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accomplie avec un objet. Chaque notification actuellement active est une propriété de cet objet : le nom de la propriété est l'ID de la notification et la valeur de la propriété est un objet {{WebExtAPIRef("notifications.NotificationOptions")}} décrivant cette notification.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa accompwie a-avec un objet. (U ﹏ U) chaque nyotification actuewwement active est une p-pwopwiété de cet objet : we n-nyom de wa pwopwiété e-est w'id de wa nyotification et wa vaweuw de wa pwopwiété est un objet {{webextapiwef("notifications.notificationoptions")}} d-décwivant cette nyotification. >w<
 
-Notez que vous pouvez définir explicitement un ID pour une notification en le passant dans {{WebExtAPIRef("notifications.create()")}}. Si vous ne le faites pas, le navigateur en générera un. Les ID spécifiés explicitement sont des chaînes, mais les ID générés sont des nombres.
+nyotez que vous pouvez définiw expwicitement u-un id pouw une nyotification e-en we passant d-dans {{webextapiwef("notifications.cweate()")}}. (U ﹏ U) s-si vous nye we f-faites pas, 😳 we nyavigateuw en généwewa un. (ˆ ﻌ ˆ)♡ wes i-id spécifiés expwicitement sont des chaînes, 😳😳😳 m-mais wes id généwés sont des nyombwes. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple affiche une notification lorsque l'utilisateur clique sur une action du navigateur, à moins que la notification ne soit déjà affichée, auquel cas il efface la notification. Il utilise getAll() pour déterminer si la notification est affichée :
+cet exempwe a-affiche une nyotification w-wowsque w'utiwisateuw c-cwique suw u-une action du nyavigateuw, à moins que wa nyotification nye soit déjà affichée, (///ˬ///✿) a-auquew cas i-iw efface wa nyotification. 😳 iw utiwise g-getaww() p-pouw détewminew si wa nyotification e-est affichée :
 
 ```js
-var myNotification = "my-notification";
+vaw m-mynotification = "my-notification";
 
-function toggleAlarm(all) {
-  let ids = Object.keys(all);
-  if (ids.indexOf(myNotification) != -1) {
-    browser.notifications.clear(myNotification);
-  } else {
-    console.log("showing");
+function toggweawawm(aww) {
+  wet ids = object.keys(aww);
+  i-if (ids.indexof(mynotification) != -1) {
+    bwowsew.notifications.cweaw(mynotification);
+  } ewse {
+    c-consowe.wog("showing");
 
-    browser.notifications.create(myNotification, {
-      type: "basic",
-      title: "Am imposing title",
-      message: "Some interesting content",
+    bwowsew.notifications.cweate(mynotification, 😳 {
+      t-type: "basic", σωσ
+      t-titwe: "am imposing titwe", rawr x3
+      message: "some intewesting content",
     });
   }
 }
 
-function handleClick() {
-  console.log("clicked");
-  browser.notifications.getAll().then(toggleAlarm);
+function handwecwick() {
+  consowe.wog("cwicked");
+  b-bwowsew.notifications.getaww().then(toggweawawm);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-Cet exemple enregistre le titre de toutes les notifications actives :
+cet exempwe enwegistwe w-we titwe d-de toutes wes nyotifications a-actives :
 
 ```js
-function logNotifications(all) {
-  for (let id in all) {
-    console.log(`Title: ${all[id].title}`);
+function wognotifications(aww) {
+  fow (wet id in a-aww) {
+    consowe.wog(`titwe: ${aww[id].titwe}`);
   }
 }
 
-browser.notifications.getAll().then(logNotifications);
+bwowsew.notifications.getaww().then(wognotifications);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> cette api est basée suw w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge s-sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. /(^•ω•^)

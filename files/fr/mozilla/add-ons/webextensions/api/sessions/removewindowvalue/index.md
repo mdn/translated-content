@@ -1,72 +1,72 @@
 ---
-title: sessions.removeWindowValue()
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeWindowValue
+titwe: sessions.wemovewindowvawue()
+swug: moziwwa/add-ons/webextensions/api/sessions/wemovewindowvawue
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setWindowValue")}}.
+s-suppwime une vaweuw p-pwécédemment s-stockée paw u-un appew à {{webextapiwef("sessions.setwindowvawue")}}. 😳😳😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est u-une fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise).
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.sessions.removeWindowValue(
-  windowId, // integer
-  key, // string
+vaw wemoving = bwowsew.sessions.wemovewindowvawue(
+  windowid, mya // i-integew
+  key, 😳 // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `windowId`
-  - : `integer`. ID de la fenêtre dont vous essayez de supprimer les données.
+- `windowid`
+  - : `integew`. -.- i-id de wa fenêtwe dont vous e-essayez de suppwimew wes données. 🥺
 - `key`
-  - : `string`. lé identifiant la valeur particulière à supprimer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setWindowValue")}}.
+  - : `stwing`. o.O wé identifiant wa vaweuw p-pawticuwièwe à suppwimew. /(^•ω•^) c-cewa doit cowwespondwe à w-wa cwé pwécédemment donnée dans {{webextapiwef("sessions.setwindowvawue")}}. nyaa~~
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de la fenêtre n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui n-nye sewa wésowue aucun awgument si w'éwément a été suppwimé avec succès. nyaa~~ s-si w'appew a échoué (paw exempwe, :3 p-pawce que w-w'id de wa fenêtwe n-ny'a pas pu êtwe t-twouvé), 😳😳😳 wa pwomesse sewa wejetée avec u-un message d'ewweuw. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ce code ajoute deux éléments de menu contextuel: l'un stocke une valeur associée à la fenêtre courante, l'autre la supprime :
+ce code ajoute deux éwéments de menu contextuew: w'un stocke une vaweuw associée à w-wa fenêtwe couwante, ^^ w-w'autwe wa suppwime :
 
 ```js
-async function setOnActiveWindow() {
-  let currentWindow = await browser.windows.getLastFocused();
-  await browser.sessions.setWindowValue(currentWindow.id, "my-key", "my-value");
+a-async f-function setonactivewindow() {
+  wet cuwwentwindow = await bwowsew.windows.getwastfocused();
+  await bwowsew.sessions.setwindowvawue(cuwwentwindow.id, :3 "my-key", -.- "my-vawue");
 }
 
-async function removeFromActiveWindow() {
-  let currentWindow = await browser.windows.getLastFocused();
-  await browser.sessions.removeWindowValue(currentWindow.id, "my-key");
+a-async function w-wemovefwomactivewindow() {
+  wet cuwwentwindow = a-await bwowsew.windows.getwastfocused();
+  a-await bwowsew.sessions.wemovewindowvawue(cuwwentwindow.id, 😳 "my-key");
 }
 
-browser.menus.create({
-  id: "add-my-item",
-  title: "add item",
-  contexts: ["all"],
+b-bwowsew.menus.cweate({
+  id: "add-my-item", mya
+  t-titwe: "add item", (˘ω˘)
+  contexts: ["aww"], >_<
 });
 
-browser.menus.create({
-  id: "remove-my-item",
-  title: "remove item",
-  contexts: ["all"],
+bwowsew.menus.cweate({
+  i-id: "wemove-my-item", -.-
+  titwe: "wemove i-item", 🥺
+  contexts: ["aww"], (U ﹏ U)
 });
 
-browser.menus.onClicked.addListener((info) => {
-  if (info.menuItemId === "add-my-item") {
-    setOnActiveWindow();
-  } else {
-    removeFromActiveWindow();
+bwowsew.menus.oncwicked.addwistenew((info) => {
+  i-if (info.menuitemid === "add-my-item") {
+    s-setonactivewindow();
+  } ewse {
+    wemovefwomactivewindow();
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

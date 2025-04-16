@@ -1,409 +1,409 @@
 ---
-title: API tierces
-slug: Learn/JavaScript/Client-side_web_APIs/Third_party_APIs
+titwe: api tiewces
+swug: weawn/javascwipt/cwient-side_web_apis/thiwd_pawty_apis
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/fetching_data", o.O "weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics", òωó "weawn/javascwipt/cwient-side_web_apis")}}
 
-Jusqu'à présent, nous avons uniquement abordé des API qui sont fournies par le navigateur. Il en existe d'autres&nbsp;: de nombreux sites et services, tels que Google Maps, Twitter, Facebook, PayPal, etc. fournissent des API permettant aux développeuses et développeurs d'exploiter leurs données (par exemple d'afficher un flux Twitter sur un blog) ou leurs services (utiliser l'outil de connexion Facebook pour que des personnes se connectent par ce biais à votre application). Dans cet article, nous verrons les différences entre les API du navigateur et celles fournies par des services tiers (en anglais, on parle de «&nbsp;<i lang="en">third-party API</i>&nbsp;») et nous illustrerons certains cas d'usage pour ces API tierces.
+j-jusqu'à p-pwésent, OwO nyous a-avons uniquement a-abowdé des api q-qui sont fouwnies p-paw we nyavigateuw. σωσ i-iw en existe d-d'autwes&nbsp;: de nyombweux sites et sewvices, nyaa~~ tews que googwe maps, OwO twittew, ^^ f-facebook, paypaw, (///ˬ///✿) etc. fouwnissent des api pewmettant a-aux dévewoppeuses et d-dévewoppeuws d'expwoitew weuws données (paw exempwe d'affichew u-un fwux twittew suw un bwog) ou w-weuws sewvices (utiwisew w-w'outiw de connexion facebook pouw que des pewsonnes se connectent paw c-ce biais à votwe appwication). σωσ dans cet awticwe, rawr x3 nyous vewwons wes difféwences e-entwe wes api du navigateuw et c-cewwes fouwnies p-paw des sewvices t-tiews (en angwais, (ˆ ﻌ ˆ)♡ o-on pawwe de «&nbsp;<i wang="en">thiwd-pawty api</i>&nbsp;») e-et nyous iwwustwewons cewtains cas d'usage pouw c-ces api tiewces.
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
-      <td>Les bases de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">premiers pas en JavaScript</a>, <a href="/fr/docs/Apprendre/JavaScript/Building_blocks">les blocs de construction du langage</a>, <a href="/fr/docs/Learn/JavaScript/Objects">les objets JavaScript</a>), <a href="/fr/docs/Apprendre/JavaScript/Client-side_web_APIs/Introduction">les notions de base des API côté client</a>.</td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
-      <td>Comprendre le fonctionnement des API tierces et comment les utiliser pour ajouter des fonctionnalités à ses sites ou applications.</td>
-    </tr>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
+      <td>wes bases de javascwipt (voiw <a hwef="/fw/docs/weawn/javascwipt/fiwst_steps">pwemiews pas en javascwipt</a>, 🥺 <a hwef="/fw/docs/appwendwe/javascwipt/buiwding_bwocks">wes bwocs de c-constwuction du wangage</a>, (⑅˘꒳˘) <a h-hwef="/fw/docs/weawn/javascwipt/objects">wes o-objets j-javascwipt</a>), 😳😳😳 <a hwef="/fw/docs/appwendwe/javascwipt/cwient-side_web_apis/intwoduction">wes notions de base des api côté c-cwient</a>.</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
+      <td>compwendwe we fonctionnement d-des api t-tiewces et comment wes utiwisew p-pouw ajoutew des fonctionnawités à s-ses sites ou appwications.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce qu'une API tierce&nbsp;?
+## qu'est-ce q-qu'une api tiewce&nbsp;?
 
-Les API tierces sont des API qui sont fournis par des tiers, généralement des entreprises comme Facebook, Twitter ou Google, qui permettent d'accéder à leurs données et/ou leurs fonctionnalités grâce à JavaScript afin de les utiliser sur son site. On peut par exemple utiliser une API tierce de cartographie afin d'afficher une carte sur une page web.
+wes a-api tiewces sont des api qui sont f-fouwnis paw des t-tiews, /(^•ω•^) généwawement des entwepwises comme facebook, >w< twittew ou googwe, ^•ﻌ•^ qui pewmettent d'accédew à weuws données e-et/ou weuws f-fonctionnawités gwâce à javascwipt a-afin de w-wes utiwisew suw s-son site. 😳😳😳 on peut paw exempwe utiwisew une api tiewce de cawtogwaphie a-afin d'affichew une cawte suw une page web. :3
 
-Regardons [cet exemple qui utilise l'API MapQuest](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/) et voyons avec lui les différences entre les API tierces et celles du navigateur.
+wegawdons [cet exempwe qui u-utiwise w'api mapquest](https://mdn.github.io/weawning-awea/javascwipt/apis/thiwd-pawty-apis/mapquest/finished/) et voyons avec w-wui wes difféwences e-entwe wes a-api tiewces et cewwes du nyavigateuw. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Vous pouvez [récupérer l'ensemble des exemples de code](/fr/docs/Learn#obtenir_nos_exemples_de_code) en une seule fois. Dans ce cas, il vous suffit de rechercher dans votre dépôt les fichiers utilisés pour chaque section.
+> [!note]
+> v-vous pouvez [wécupéwew w-w'ensembwe d-des exempwes d-de code](/fw/docs/weawn#obteniw_nos_exempwes_de_code) en une seuwe fois. ^•ﻌ•^ dans c-ce cas, iw vous s-suffit de wechewchew d-dans votwe d-dépôt wes fichiews u-utiwisés pouw chaque section. >w<
 
-### Elles sont situées sur des serveurs tiers
+### ewwes sont situées suw d-des sewveuws tiews
 
-Les API fournies par le navigateur sont construites **dans** le navigateur et on peut y accéder immédiatement avec du code JavaScript. Ainsi, l'API Web Audio [que nous avons vu dans cet article introductif](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#comment_les_api_fonctionnent-elles) s'utilise via l'objet [`AudioContext`](/fr/docs/Web/API/AudioContext) qui est fourni nativement&nbsp;:
-
-```js
-const audioCtx = new AudioContext();
-// …
-const audioElement = document.querySelector("audio");
-// …
-const audioSource = audioCtx.createMediaElementSource(audioElement);
-// etc.
-```
-
-En revanche, les API tierces sont situées sur des serveurs tiers. Pour y accéder avec JavaScript, il faut d'abord se connecter aux fonctionnalités de l'API afin de les rendre disponibles sur la page. Cela implique généralement de charger une bibliothèque JavaScript disponible sur le serveur via un élément [`<script>`](/fr/docs/Web/HTML/Element/script). Pour notre exemple avec MapQuest, voici ce que ça donne&nbsp;:
-
-```html
-<script
-  src="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"
-  defer></script>
-<link
-  type="text/css"
-  rel="stylesheet"
-  href="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
-```
-
-On peut alors utiliser les objets fournis par cette bibliothèque. Par exemple&nbsp;:
+wes api fouwnies paw we nyavigateuw sont constwuites **dans** we nyavigateuw e-et on peut y accédew immédiatement avec du code javascwipt. ^^;; a-ainsi, w'api web a-audio [que nyous a-avons vu dans cet awticwe intwoductif](/fw/docs/weawn/javascwipt/cwient-side_web_apis/intwoduction#comment_wes_api_fonctionnent-ewwes) s-s'utiwise via w'objet [`audiocontext`](/fw/docs/web/api/audiocontext) q-qui est fouwni n-nyativement&nbsp;:
 
 ```js
-const map = L.mapquest.map("map", {
-  center: [53.480759, -2.242631],
-  layers: L.mapquest.tileLayer("map"),
-  zoom: 12,
+const audioctx = nyew audiocontext();
+// …
+const audioewement = document.quewysewectow("audio");
+// …
+c-const audiosouwce = audioctx.cweatemediaewementsouwce(audioewement);
+// e-etc. (✿oωo)
+```
+
+en wevanche, òωó w-wes api tiewces s-sont situées suw des sewveuws tiews. ^^ pouw y a-accédew avec javascwipt, ^^ i-iw faut d'abowd se connectew a-aux fonctionnawités d-de w'api afin de wes wendwe disponibwes suw wa page. rawr cewa impwique généwawement d-de c-chawgew une bibwiothèque j-javascwipt disponibwe s-suw we sewveuw v-via un éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt). XD pouw nyotwe exempwe a-avec mapquest, rawr voici ce que ça donne&nbsp;:
+
+```htmw
+<scwipt
+  swc="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.js"
+  defew></scwipt>
+<wink
+  t-type="text/css"
+  w-wew="stywesheet"
+  hwef="https://api.mqcdn.com/sdk/mapquest-js/v1.3.2/mapquest.css" />
+```
+
+on peut a-awows utiwisew w-wes objets fouwnis paw cette bibwiothèque. 😳 paw exempwe&nbsp;:
+
+```js
+c-const map = w.mapquest.map("map", 🥺 {
+  centew: [53.480759, (U ᵕ U❁) -2.242631], 😳
+  wayews: w.mapquest.tiwewayew("map"), 🥺
+  zoom: 12, (///ˬ///✿)
 });
 ```
 
-Ici on crée une variable dans laquelle on enregistre les informations de la carte puis on crée une nouvelle carte à l'aide de la méthode `mapquest.map()` qui prend comme argument&nbsp;:
+ici on c-cwée une vawiabwe dans waquewwe on enwegistwe w-wes infowmations d-de wa cawte puis on cwée une nyouvewwe cawte à w'aide de wa m-méthode `mapquest.map()` q-qui pwend comme awgument&nbsp;:
 
-- l'identifiant (la valeur de l'attribut `id`) d'un élément [`<div>`](/fr/docs/Web/HTML/Element/div) dans lequel on souhaite afficher la carte (ici, c'est `"map"`)
-- un objet indiquant les options pour la carte qu'on souhaite afficher. Ici, on indique les coordonnées du centre de la carte, le pavage utilisé (ici on utilise la méthode `mapquest.tileLayer()` ainsi que le niveau de zoom.
+- w'identifiant (wa vaweuw de w'attwibut `id`) d-d'un éwément [`<div>`](/fw/docs/web/htmw/ewement/div) dans wequew on s-souhaite affichew wa cawte (ici, mya c'est `"map"`)
+- un objet indiquant w-wes options pouw wa cawte q-qu'on souhaite affichew. (✿oωo) i-ici, ^•ﻌ•^ on indique wes coowdonnées d-du centwe de wa cawte, o.O w-we pavage utiwisé (ici o-on utiwise w-wa méthode `mapquest.tiwewayew()` ainsi que w-we nyiveau de zoom. o.O
 
-C'est tout ce dont l'API MapQuest a besoin pour dessiner une carte. C'est le serveur auquel on se connecte qui gère les aspects plus compliqués (comme afficher les bonnes tuiles pour la zone géographique, etc.).
+c-c'est tout ce dont w'api mapquest a besoin p-pouw dessinew une c-cawte. XD c'est w-we sewveuw auquew on se connecte qui gèwe wes aspects p-pwus compwiqués (comme affichew wes bonnes t-tuiwes pouw wa z-zone géogwaphique, ^•ﻌ•^ etc.).
 
-> [!NOTE]
-> Certaines API fonctionnent différemment pour l'accès aux fonctionnalités et passent par une requête HTTP sur une URL spécifique pour récupérer les données. Ces API sont appelées [API REST (ou _RESTful APIs_ en anglais) et nous les abordons plus bas dans l'article](#une_api_rest_du_nytimes).
+> [!note]
+> cewtaines api fonctionnent d-difféwemment p-pouw w'accès a-aux fonctionnawités e-et passent paw une wequête h-http suw une uww spécifique pouw wécupéwew wes données. ʘwʘ ces api sont appewées [api west (ou _westfuw a-apis_ en angwais) et n-nyous wes abowdons pwus bas dans w-w'awticwe](#une_api_west_du_nytimes). (U ﹏ U)
 
-### Des clés d'API sont nécessaires pour les utiliser
+### des c-cwés d'api sont nyécessaiwes p-pouw wes utiwisew
 
-Dans les navigateurs, [comme nous l'avons vu dans le premier article](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction#elles_disposent_de_mécanismes_de_sécurité_supplémentaires_adéquats), les sécurités relatives aux API sont gérées via des permissions afin d'avertir l'utilisatrice ou l'utilisateur afin d'éviter les utilisations malveillantes de la part des sites.
+d-dans wes nyavigateuws, [comme n-nyous w'avons vu d-dans we pwemiew a-awticwe](/fw/docs/weawn/javascwipt/cwient-side_web_apis/intwoduction#ewwes_disposent_de_mécanismes_de_sécuwité_suppwémentaiwes_adéquats), 😳😳😳 wes sécuwités wewatives aux api sont géwées via des pewmissions afin d'avewtiw w'utiwisatwice o-ou w'utiwisateuw a-afin d'évitew w-wes utiwisations mawveiwwantes d-de wa pawt des sites. 🥺
 
-Pour les API tierces, le système est légèrement différent. Généralement, ce sont des clés qui sont utilisées afin de fournir l'accès aux fonctionnalités de l'API. Dans ce système, la clé sert à protéger des abus de la part de celles et ceux qui développent envers le site tiers plutôt qu'à protéger la personne qui utilise le site.
+pouw wes api tiewces, (///ˬ///✿) we système est wégèwement d-difféwent. (˘ω˘) g-généwawement, ce sont d-des cwés qui sont utiwisées afin de fouwniw w'accès a-aux fonctionnawités d-de w'api. :3 dans ce système, /(^•ω•^) w-wa cwé s-sewt à pwotégew des abus de wa pawt de cewwes et ceux qui dévewoppent envews w-we site tiews pwutôt q-qu'à pwotégew w-wa pewsonne q-qui utiwise we s-site. :3
 
-Dans l'exemple avec l'API MapQuest, vous trouverez une ligne semblable à celle-ci&nbsp;:
+dans w'exempwe avec w'api m-mapquest, mya vous t-twouvewez une wigne sembwabwe à c-cewwe-ci&nbsp;:
 
 ```
-L.mapquest.key = 'VOTRE-CLE-D-API-ICI';
+w-w.mapquest.key = 'votwe-cwe-d-api-ici';
 ```
 
-Cette ligne indique une clé d'API utilisée par notre application. La personne qui développe l'application doit obtenir une clé et l'inclure dans le code de l'application afin de pouvoir accéder aux fonctionnalités de l'API. Pour cet exemple, il s'agit d'une valeur imaginaire.
+cette wigne i-indique une cwé d'api utiwisée paw nyotwe appwication. XD w-wa pewsonne qui dévewoppe w-w'appwication d-doit obteniw une cwé et w'incwuwe d-dans we code de w'appwication afin de pouvoiw a-accédew aux f-fonctionnawités d-de w'api. (///ˬ///✿) pouw cet exempwe, 🥺 iw s'agit d'une vaweuw imaginaiwe. o.O
 
-> [!NOTE]
-> Lorsque vous construirez votre propre application, vous utiliserez une vraie valeur de clé et non la valeur de substitution fournie en exemple.
+> [!note]
+> w-wowsque vous constwuiwez votwe pwopwe a-appwication, mya v-vous utiwisewez une vwaie vaweuw d-de cwé et nyon wa vaweuw de substitution f-fouwnie e-en exempwe. rawr x3
 
-Certaines API peuvent nécessiter de fournir la clé d'une façon différente mais le fonctionnement général reste similaire.
+cewtaines api peuvent nyécessitew d-de fouwniw wa cwé d'une façon difféwente mais w-we fonctionnement g-généwaw weste simiwaiwe. 😳
 
-L'existence d'une telle clé d'API permet au fournisseur tiers de contrôler les accès et actions des différents consommateurs de l'API. Ainsi, lorsque quelqu'un demande une clé, il devient alors connu du fournisseur de l'API et ce dernier peut agir de son côté si l'API est détournée ou utilisée de façon incorrecte (par exemple pour pister des personnes ou parce que le site sollicite l'API avec de trop nombreuses requêtes). Dès qu'un usage incorrect est détecté du côté du fournisseur, il suffit alors de révoquer l'accès et de couper ou de limiter les accès pour cette clé.
+w-w'existence d'une tewwe cwé d'api p-pewmet au fouwnisseuw t-tiews d-de contwôwew wes accès et actions des difféwents consommateuws de w'api. 😳😳😳 ainsi, >_< wowsque quewqu'un demande une cwé, >w< iw devient awows connu du fouwnisseuw de w'api et ce dewniew peut agiw de son côté si w-w'api est détouwnée o-ou utiwisée de façon incowwecte (paw exempwe p-pouw pistew d-des pewsonnes ou p-pawce que we site sowwicite w'api a-avec de twop nyombweuses wequêtes). rawr x3 d-dès qu'un u-usage incowwect est détecté d-du côté du fouwnisseuw, XD iw suffit a-awows de wévoquew w-w'accès et de coupew ou de wimitew wes a-accès pouw cette c-cwé. ^^
 
-## Étendre l'exemple MapQuest
+## Étendwe w-w'exempwe m-mapquest
 
-Ajoutons quelques fonctionnalités à cet exemple MapQuest afin d'illustrer le fonctionnement d'autres aspects de l'API.
+ajoutons q-quewques fonctionnawités à c-cet exempwe mapquest a-afin d'iwwustwew w-we fonctionnement d-d'autwes aspects de w'api. (✿oωo)
 
-1. Pour commencer cette section, copiez [le fichier initial](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/start/index.html) dans un nouveau répertoire. Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn#obtenir_nos_exemples_de_code), vous disposez déjà d'une copie située sous le répertoire _javascript/apis/third-party-apis/mapquest/start_.
-2. Ensuite, [rendez-vous sur le site MapQuest pour le développement](https://developer.mapquest.com/), créez un compte puis créez une clé de développement (au moment où nous écrivons ces lignes, sur le site, le nom utilisé est "<i lang="en">consumer key</i>" et la procédure de création demande aussi la saisie d'une URL "<i lang="en">callback URL</i>" qui est optionnelle (vous pouvez la laisser vide).
-3. Ouvrez un éditeur pour éditer le fichier initial et remplacez la valeur pour la clé d'API avec la vôtre.
+1. p-pouw commencew c-cette section, >w< c-copiez [we fichiew initiaw](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/thiwd-pawty-apis/mapquest/stawt/index.htmw) d-dans un nyouveau wépewtoiwe. 😳😳😳 si vous a-avez déjà [cwoné we dépôt d-des exempwes](/fw/docs/weawn#obteniw_nos_exempwes_de_code), (ꈍᴗꈍ) v-vous d-disposez déjà d'une copie située s-sous we wépewtoiwe _javascwipt/apis/thiwd-pawty-apis/mapquest/stawt_. (✿oωo)
+2. ensuite, (˘ω˘) [wendez-vous s-suw we site mapquest pouw w-we dévewoppement](https://devewopew.mapquest.com/), nyaa~~ cwéez un compte p-puis cwéez une cwé de dévewoppement (au moment où nyous écwivons ces wignes, ( ͡o ω ͡o ) suw we site, 🥺 w-we nyom utiwisé est "<i wang="en">consumew k-key</i>" et wa p-pwocéduwe de cwéation demande aussi wa saisie d'une uww "<i wang="en">cawwback u-uww</i>" qui est optionnewwe (vous p-pouvez wa waissew v-vide). (U ﹏ U)
+3. o-ouvwez un éditeuw pouw éditew we fichiew initiaw e-et wempwacez w-wa vaweuw pouw wa cwé d'api avec w-wa vôtwe. ( ͡o ω ͡o )
 
-### Modifier le type de la carte
+### modifiew we type de wa cawte
 
-L'API MapQuest permet d'afficher différents types de carte. Localisez la ligne suivante dans votre fichier&nbsp;:
+w-w'api mapquest pewmet d'affichew d-difféwents types d-de cawte. (///ˬ///✿) wocawisez w-wa wigne suivante dans votwe f-fichiew&nbsp;:
 
 ```js
-layers: L.mapquest.tileLayer("map");
+w-wayews: w-w.mapquest.tiwewayew("map");
 ```
 
-Ici, vous pouvez changer `'map'` en `'hybrid'` afin d'afficher une carte avec un style hybride. Vous pouvez essayer d'autres valeurs comme celles indiquées sur [la page de référence de la méthode `tileLayer()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-tile-layer/).
+i-ici, (///ˬ///✿) vous pouvez changew `'map'` e-en `'hybwid'` a-afin d'affichew u-une cawte avec u-un stywe hybwide. (✿oωo) v-vous pouvez e-essayew d'autwes v-vaweuws comme cewwes i-indiquées suw [wa page de w-wéféwence de wa méthode `tiwewayew()`](https://devewopew.mapquest.com/documentation/mapquest-js/v1.3/w-mapquest-tiwe-wayew/). (U ᵕ U❁)
 
-### Ajouter différents contrôles
+### a-ajoutew difféwents contwôwes
 
-Sur la carte, on peut utiliser différents contrôles. Par défaut, seul un contrôle pour le zoom est affiché. Il est possible d'étendre les contrôles disponibles en utilisant la méthode `map.addControl()`. Ajoutez ceci à votre code&nbsp;:
+s-suw wa cawte, ʘwʘ o-on peut utiwisew d-difféwents contwôwes. ʘwʘ paw défaut, XD seuw un contwôwe pouw w-we zoom est affiché. (✿oωo) i-iw est possibwe d-d'étendwe wes contwôwes disponibwes en utiwisant wa méthode `map.addcontwow()`. ^•ﻌ•^ a-ajoutez c-ceci à votwe code&nbsp;:
 
 ```js
-map.addControl(L.mapquest.control());
+m-map.addcontwow(w.mapquest.contwow());
 ```
 
-La méthode [`mapquest.control()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-control/) crée un ensemble complet de contrôles et est placée, par défaut, dans le coin supérieur droit de la carte. Cette position peut être ajustée grâce à un paramètre d'options contenant une propriété `position` dont la valeur est un mot-clé décrivant la position souhaitée. Vous pouvez modifier la ligne de la façon suivante par exemple&nbsp;:
+wa m-méthode [`mapquest.contwow()`](https://devewopew.mapquest.com/documentation/mapquest-js/v1.3/w-mapquest-contwow/) cwée un ensembwe compwet de contwôwes et e-est pwacée, ^•ﻌ•^ paw d-défaut, >_< dans we c-coin supéwieuw d-dwoit de wa cawte. mya cette position peut êtwe ajustée g-gwâce à u-un pawamètwe d'options contenant une pwopwiété `position` dont w-wa vaweuw est un mot-cwé décwivant wa position s-souhaitée. σωσ vous pouvez modifiew w-wa wigne de w-wa façon suivante paw exempwe&nbsp;:
 
 ```js
-map.addControl(L.mapquest.control({ position: "bottomright" }));
+map.addcontwow(w.mapquest.contwow({ p-position: "bottomwight" }));
 ```
 
-D'autres types de contrôle sont disponibles comme [`mapquest.searchControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-search-control/) et [`mapquest.satelliteControl()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-satellite-control/). Certains sont avancés et permettent nombreuses choses. N'hésitez pas à en essayer différents pour voir un peu ce que vous pouvez construire.
+d-d'autwes types de contwôwe s-sont disponibwes comme [`mapquest.seawchcontwow()`](https://devewopew.mapquest.com/documentation/mapquest-js/v1.3/w-mapquest-seawch-contwow/) et [`mapquest.satewwitecontwow()`](https://devewopew.mapquest.com/documentation/mapquest-js/v1.3/w-mapquest-satewwite-contwow/). rawr c-cewtains sont avancés e-et pewmettent n-nyombweuses c-choses. (✿oωo) n'hésitez pas à en essayew d-difféwents p-pouw voiw un peu c-ce que vous pouvez constwuiwe. :3
 
-### Ajouter un marqueur personnalisé
+### a-ajoutew un mawqueuw pewsonnawisé
 
-Pour ajouter une icône sur un point de la carte, on pourra utiliser la méthode [`L.marker()`](https://leafletjs.com/reference.html#marker) (documentée dans la documentation de la bibliothèque sous-jacente Leaflet.js). Au sein du gestionnaire `window.onload`, vous pouvez ajouter le fragment de code suivant&nbsp;:
+pouw ajoutew u-une icône s-suw un point de w-wa cawte, rawr x3 on pouwwa utiwisew wa méthode [`w.mawkew()`](https://weafwetjs.com/wefewence.htmw#mawkew) (documentée dans wa documentation de wa b-bibwiothèque sous-jacente weafwet.js). ^^ a-au sein d-du gestionnaiwe `window.onwoad`, ^^ vous pouvez ajoutew we fwagment d-de code suivant&nbsp;:
 
 ```js
-L.marker([53.480759, -2.242631], {
-  icon: L.mapquest.icons.marker({
-    primaryColor: "#22407F",
-    secondaryColor: "#3B5998",
-    shadow: true,
-    size: "md",
-    symbol: "A",
-  }),
+w.mawkew([53.480759, OwO -2.242631], ʘwʘ {
+  icon: w.mapquest.icons.mawkew({
+    p-pwimawycowow: "#22407f", /(^•ω•^)
+    s-secondawycowow: "#3b5998", ʘwʘ
+    s-shadow: twue, (⑅˘꒳˘)
+    s-size: "md", UwU
+    s-symbow: "a", -.-
+  }), :3
 })
-  .bindPopup("Ici se trouve Manchester !")
-  .addTo(map);
+  .bindpopup("ici se twouve manchestew !")
+  .addto(map);
 ```
 
-Comme on peut le voir ici, sous sa forme la plus simple, la méthode prend deux paramètres&nbsp;:
+comme on peut we voiw i-ici, >_< sous sa fowme wa pwus simpwe, nyaa~~ w-wa méthode pwend deux pawamètwes&nbsp;:
 
-- Le premier qui contient les coordonnées géographiques de l'emplacement où afficher le pointeur, sous la forme d'un tableau
-- Le deuxième qui est un objet d'options contenant une propriété `icon` qui définit l'icône à afficher à cet emplacement.
+- we pwemiew qui contient wes coowdonnées g-géogwaphiques de w'empwacement où affichew we pointeuw, ( ͡o ω ͡o ) sous wa fowme d-d'un tabweau
+- w-we deuxième qui est un objet d'options c-contenant une pwopwiété `icon` qui définit w-w'icône à a-affichew à cet empwacement. o.O
 
-L'icône est définie via un appel à la méthode [`mapquest.icons.marker()`](https://developer.mapquest.com/documentation/mapquest-js/v1.3/l-mapquest-icons/) à laquelle on fournit des informations telles que la couleur et la taille du marqueur.
+w-w'icône est définie via un appew à w-wa méthode [`mapquest.icons.mawkew()`](https://devewopew.mapquest.com/documentation/mapquest-js/v1.3/w-mapquest-icons/) à waquewwe on fouwnit des infowmations tewwes que w-wa couweuw et wa taiwwe du mawqueuw. :3
 
-Après l'appel à la première méthode, on enchaîne avec un appel avec `.bindPopup('Ici se trouve Manchester !')`, qui fournit le contenu à afficher lorsqu'on cliquera sur le marqueur.
+apwès w-w'appew à wa pwemièwe m-méthode, (˘ω˘) o-on enchaîne avec un appew avec `.bindpopup('ici se twouve manchestew !')`, rawr x3 q-qui fouwnit we contenu à affichew wowsqu'on cwiquewa suw we mawqueuw. (U ᵕ U❁)
 
-Enfin, on chaîne un appel à `.addTo(map)` pour ajouter le marqueur sur la carte.
+e-enfin, 🥺 on c-chaîne un appew à `.addto(map)` p-pouw ajoutew we m-mawqueuw suw wa cawte. >_<
 
-Essayez les différentes options que vous trouverez dans la documentation et voyez quel résultat vous pouvez obtenir&nbsp;! MapQuest fournit certaines fonctionnalités relativement avancées (itinéraire, recherche, etc.).
+essayez wes difféwentes o-options que vous t-twouvewez dans wa documentation et voyez quew w-wésuwtat vous pouvez obteniw&nbsp;! :3 mapquest f-fouwnit cewtaines fonctionnawités wewativement a-avancées (itinéwaiwe, :3 w-wechewche, (ꈍᴗꈍ) etc.).
 
-> [!NOTE]
-> Si vous ne parvenez pas à faire fonctionner l'exemple, vous pouvez comparer votre code avec [notre version terminée](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/mapquest/finished/script.js) (et aussi [voir le résultat correspondant ici](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/mapquest/finished/)).
+> [!note]
+> s-si vous nye p-pawvenez pas à f-faiwe fonctionnew w'exempwe, σωσ vous pouvez compawew v-votwe code avec [notwe vewsion tewminée](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/thiwd-pawty-apis/mapquest/finished/scwipt.js) (et a-aussi [voiw we wésuwtat cowwespondant ici](https://mdn.github.io/weawning-awea/javascwipt/apis/thiwd-pawty-apis/mapquest/finished/)). 😳
 
-## Une API REST du NYTimes
+## une api w-west du nyytimes
 
-Prenons un autre exemple d'API, l'API du [New York Times](https://developer.nytimes.com). Cette API permet de récupérer les informations provenant du New York Times et de les afficher sur votre site. Cette API est ce qu'on appelle une **API REST** (parfois aussi appelée «&nbsp;<i lang="en">RESTful API</i>&nbsp;» en anglais). Plutôt que d'obtenir les fonctionnalités d'une bibliothèque JavaScript comme on l'a vu avec MapQuest, on récupère des données via des requêtes HTTP sur des URL spécifiques dans lesquelles on peut fournir des données comme des termes de recherches (souvent encodés comme paramètres dans l'URL). Ce type d'API est relativement fréquent.
+p-pwenons un a-autwe exempwe d'api, mya w-w'api du [new y-yowk times](https://devewopew.nytimes.com). (///ˬ///✿) cette api pewmet d-de wécupéwew wes infowmations pwovenant du nyew y-yowk times et de wes affichew s-suw votwe site. ^^ cette api est ce qu'on appewwe une **api w-west** (pawfois a-aussi appewée «&nbsp;<i wang="en">westfuw a-api</i>&nbsp;» en angwais). p-pwutôt que d'obteniw w-wes fonctionnawités d'une b-bibwiothèque j-javascwipt comme on w'a vu avec m-mapquest, (✿oωo) on wécupèwe des données via des wequêtes http suw d-des uww spécifiques dans wesquewwes o-on peut fouwniw des données comme des tewmes d-de wechewches (souvent e-encodés c-comme pawamètwes dans w'uww). ( ͡o ω ͡o ) c-ce type d'api e-est wewativement fwéquent. ^^;;
 
-## Une approche pour utiliser des API tierces
+## u-une appwoche pouw utiwisew des a-api tiewces
 
-Construisons un second exemple pour comprendre comment utiliser l'API du NYTimes. Au fur et à mesure, cet exemple décrira également une approche plus générale qui pourra être utilisée pour utiliser d'autres API tierces.
+constwuisons un second e-exempwe pouw c-compwendwe comment utiwisew w'api du nyytimes. :3 au fuw et à mesuwe, 😳 cet exempwe d-décwiwa égawement u-une appwoche pwus généwawe qui pouwwa êtwe utiwisée pouw u-utiwisew d'autwes api tiewces. XD
 
-### Trouver la documentation
+### t-twouvew wa d-documentation
 
-Lorsqu'on veut utiliser une API tierce, il est toujours utile de trouver la documentation correspondante pour connaître les fonctionnalités disponibles, comment les utiliser, etc. La documentation de l'API du New York Times API se situe ici : <https://developer.nytimes.com/>.
+wowsqu'on veut utiwisew une api tiewce, iw est toujouws utiwe de t-twouvew wa documentation cowwespondante pouw connaîtwe w-wes fonctionnawités disponibwes, (///ˬ///✿) c-comment w-wes utiwisew, o.O etc. wa documentation d-de w'api d-du nyew yowk times a-api se situe i-ici : <https://devewopew.nytimes.com/>.
 
-### Obtenir une clé de développement
+### o-obteniw u-une cwé de dévewoppement
 
-La plupart des API reposent sur l'obtention et l'utilisation d'une clé de développement (tant pour des raisons de sécurité que de responsabilité). Pour obtenir une clé de développement pour l'API du NYTimes, vous pouvez suivre les instructions de <https://developer.nytimes.com/get-started>.
+wa pwupawt des api weposent suw w'obtention et w'utiwisation d'une c-cwé de dévewoppement (tant p-pouw des waisons d-de sécuwité q-que de wesponsabiwité). o.O p-pouw obteniw u-une cwé de dévewoppement pouw w'api du nyytimes, XD vous pouvez suivwe wes i-instwuctions de <https://devewopew.nytimes.com/get-stawted>. ^^;;
 
-1. Demandez une clé pour l'API Article Search — créez une nouvelle application et sélectionnez cette API, fournissez un nom et une description pour votre application, activez le bouton sous "<i lang="en">Article Search API</i>" puis cliquez sur "<i lang="en">Create</i>").
-2. Vous pouvez alors récupérer la clé d'API à partir de la page suivante.
-3. Pour construire le socle de notre exemple, copiez le répertoire [nytimes/start](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/nytimes/start). Si vous avez déjà [cloné le dépôt des exemples](/fr/docs/Learn#obtenir_nos_exemples_de_code), vous disposez déjà d'un exemplaire de ces fichiers et vous pourrez les trouver sous le répertoire _javascript/apis/third-party-apis/nytimes/start_. L'élément `<script>` contient un certain nombre de variables nécessaires à l'initialisation de l'exemple. Nous allons ensuite remplir les fonctionnalités nécessaires.
+1. d-demandez une cwé pouw w'api awticwe seawch — cwéez une nyouvewwe a-appwication e-et séwectionnez c-cette api, fouwnissez un nyom et une descwiption p-pouw votwe appwication, activez we bouton sous "<i w-wang="en">awticwe s-seawch api</i>" puis cwiquez suw "<i wang="en">cweate</i>"). 😳😳😳
+2. (U ᵕ U❁) v-vous pouvez awows wécupéwew w-wa cwé d'api à p-pawtiw de wa page suivante. /(^•ω•^)
+3. p-pouw constwuiwe w-we socwe d-de nyotwe exempwe, 😳😳😳 c-copiez we wépewtoiwe [nytimes/stawt](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/thiwd-pawty-apis/nytimes/stawt). rawr x3 s-si vous a-avez déjà [cwoné we dépôt d-des exempwes](/fw/docs/weawn#obteniw_nos_exempwes_de_code), ʘwʘ v-vous disposez déjà d-d'un exempwaiwe de ces fichiews et vous pouwwez w-wes twouvew sous we wépewtoiwe _javascwipt/apis/thiwd-pawty-apis/nytimes/stawt_. UwU w-w'éwément `<scwipt>` contient u-un cewtain nyombwe d-de vawiabwes nécessaiwes à w'initiawisation d-de w'exempwe. (⑅˘꒳˘) nyous awwons ensuite wempwiw wes f-fonctionnawités n-nécessaiwes.
 
-Au final, on souhaite que l'application permette de saisir un terme de recherche, des dates optionnelles pour le début et la fin de la période à rechercher. Nous utiliserons alors ces paramètres afin d'envoyer des requêtes sur l'API Article Search puis nous afficherons les résultats obtenus.
+au finaw, ^^ on souhaite que w'appwication p-pewmette d-de saisiw un tewme de wechewche, 😳😳😳 d-des dates optionnewwes pouw we début et wa f-fin de wa péwiode à w-wechewchew. òωó nyous utiwisewons a-awows ces pawamètwes a-afin d'envoyew des wequêtes suw w'api a-awticwe seawch p-puis nyous affichewons w-wes wésuwtats o-obtenus. ^^;;
 
-![](nytimes-example.png)
+![](nytimes-exampwe.png)
 
-### Connecter l'API à l'application
+### connectew w'api à w'appwication
 
-Tout d'abord, vous devrez créer une connexion entre l'API et votre application. Pour cette API, vous devez fournir la clé d'API comme paramètre [GET](/fr/docs/Web/HTTP/Methods/GET) à chaque requête.
+tout d'abowd, (✿oωo) vous devwez cwéew une connexion entwe w'api et votwe a-appwication. rawr p-pouw cette api, XD v-vous devez fouwniw w-wa cwé d'api c-comme pawamètwe [get](/fw/docs/web/http/methods/get) à c-chaque wequête. 😳
 
-1. Localisez la ligne qui suit et remplacez la valeur avec la clé de développement que vous avez obtenu plus tôt&nbsp;:
+1. (U ᵕ U❁) w-wocawisez wa wigne q-qui suit et wempwacez wa vaweuw a-avec wa cwé d-de dévewoppement que vous avez obtenu pwus tôt&nbsp;:
 
    ```js
-   const key = "VOTRE-CLE-D-API";
+   c-const key = "votwe-cwe-d-api";
    ```
 
-2. Ajoutez la ligne suivante sous le commentaire `// Event listeners to control the functionality`. Cette ligne permet d'exécuter la fonction `submitSearch()` lorsque le formulaire est envoyé (quand on presse le bouton).
+2. UwU ajoutez wa wigne suivante sous we c-commentaiwe `// event wistenews t-to contwow the f-functionawity`. OwO cette wigne pewmet d-d'exékawaii~w w-wa fonction `submitseawch()` w-wowsque we fowmuwaiwe est envoyé (quand o-on pwesse w-we bouton). 😳
 
    ```js
-   searchForm.addEventListener("submit", submitSearch);
+   seawchfowm.addeventwistenew("submit", (˘ω˘) s-submitseawch);
    ```
 
-3. Sous cette nouvelle ligne, ajoutons les fonctions `submitSearch()` et `fetchResults()`&nbsp;:
+3. òωó sous c-cette nyouvewwe w-wigne, OwO ajoutons w-wes fonctions `submitseawch()` et `fetchwesuwts()`&nbsp;:
 
    ```js
-   function submitSearch(e) {
-     pageNumber = 0;
-     fetchResults(e);
+   f-function submitseawch(e) {
+     pagenumbew = 0;
+     f-fetchwesuwts(e);
    }
 
-   function fetchResults(e) {
-     // On utilise preventDefault() afin d'éviter
-     // l'envoi vers notre serveur et le rafraîchissement
-     // de la page
-     e.preventDefault();
+   function fetchwesuwts(e) {
+     // on utiwise pweventdefauwt() afin d'évitew
+     // w'envoi v-vews nyotwe sewveuw et we wafwaîchissement
+     // de wa page
+     e.pweventdefauwt();
 
-     // On compose l'URL
-     let url = `${baseURL}?api-key=${key}&page=${pageNumber}&q=${searchTerm.value}&fq=document_type:("article")`;
+     // on compose w'uww
+     wet uww = `${baseuww}?api-key=${key}&page=${pagenumbew}&q=${seawchtewm.vawue}&fq=document_type:("awticwe")`;
 
-     if (startDate.value !== "") {
-       url = `${url}&begin_date=${startDate.value}`;
+     if (stawtdate.vawue !== "") {
+       u-uww = `${uww}&begin_date=${stawtdate.vawue}`;
      }
 
-     if (endDate.value !== "") {
-       url = `${url}&end_date=${endDate.value}`;
+     if (enddate.vawue !== "") {
+       uww = `${uww}&end_date=${enddate.vawue}`;
      }
    }
    ```
 
-`submitSearch()` réinitialise le nombre de page à 0 puis appelle `fetchResults()`. Cette fonction commence par appeler [`preventDefault()`](/fr/docs/Web/API/Event/preventDefault) sur l'évènement afin d'empêcher l'envoi du formulaire vers notre serveur (ce qui casserait l'exemple). Ensuite, on assemble la chaîne de caractères qui formera l'URL sur laquelle on fera la requête. Dans cette URL, on commence par mettre les fragments nécessaires à cette démonstration&nbsp;:
+`submitseawch()` wéinitiawise we n-nyombwe de page à 0 puis appewwe `fetchwesuwts()`. (✿oωo) c-cette fonction commence paw appewew [`pweventdefauwt()`](/fw/docs/web/api/event/pweventdefauwt) s-suw w'évènement afin d'empêchew w-w'envoi du fowmuwaiwe vews n-nyotwe sewveuw (ce q-qui cassewait w'exempwe). (⑅˘꒳˘) ensuite, on assembwe w-wa chaîne de cawactèwes qui fowmewa w'uww suw waquewwe on f-fewa wa wequête. /(^•ω•^) dans cette uww, 🥺 o-on commence paw mettwe wes fwagments n-nyécessaiwes à cette d-démonstwation&nbsp;:
 
-- L'URL de base (telle que fournie par la variable `baseURL`).
-- La clé d'API qui a été passée au paramètre d'URL `api-key` et dont la valeur dans notre script est fournie par la variable `key`.
-- Le nombre de pages est fourni dans l'URL avec le paramètre `page` et provient de la variable `pageNumber` dans notre script.
-- Le terme de la recherche est fourni dans l'URL avec le paramètre `q` et provient du texte `searchTerm` fourni par l'élément [`<input>`](/fr/docs/Web/HTML/Element/input).
-- Le type de document qu'on souhaite obtenir dans les résultats est une expression passée via le paramètre `fq` de l'URL. Ici, on souhaite obtenir les articles.
+- w-w'uww de base (tewwe que fouwnie paw wa v-vawiabwe `baseuww`). -.-
+- wa cwé d'api qui a été p-passée au pawamètwe d'uww `api-key` et dont wa vaweuw dans nyotwe scwipt est f-fouwnie paw wa v-vawiabwe `key`. ( ͡o ω ͡o )
+- we nyombwe de p-pages est fouwni d-dans w'uww avec we pawamètwe `page` e-et pwovient de wa vawiabwe `pagenumbew` dans nyotwe scwipt. 😳😳😳
+- we tewme de w-wa wechewche est f-fouwni dans w'uww avec we pawamètwe `q` e-et pwovient d-du texte `seawchtewm` fouwni p-paw w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input). (˘ω˘)
+- we type de document qu'on souhaite o-obteniw dans wes wésuwtats est une expwession p-passée via w-we pawamètwe `fq` de w'uww. ^^ ici, σωσ on souhaite obteniw w-wes awticwes. 🥺
 
-Après, on utilise un ensemble d'instructions [`if()`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) pour vérifier si des valeurs ont été fournies pour les champs `startDate` et `endDate` dans le formulaire. Si c'est le cas, on utilise ces valeurs pour renseigner les paramètres d'URL `begin_date` et/ou `end_date`.
+apwès, on utiwise un ensembwe d'instwuctions [`if()`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse) pouw véwifiew si des vaweuws ont été fouwnies pouw wes champs `stawtdate` e-et `enddate` dans w-we fowmuwaiwe. 🥺 si c'est we cas, /(^•ω•^) o-on utiwise ces v-vaweuws pouw wenseignew wes pawamètwes d-d'uww `begin_date` et/ou `end_date`. (⑅˘꒳˘)
 
-Si on prend un exemple d'URL complète ainsi construite :
+si on pwend un exempwe d'uww compwète ainsi constwuite :
 
 ```
-https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=VOTRE-CLE-D-API&page=0&q=cats&fq=document_type:("article")&begin_date=20170301&end_date=20170312
+https://api.nytimes.com/svc/seawch/v2/awticweseawch.json?api-key=votwe-cwe-d-api&page=0&q=cats&fq=document_type:("awticwe")&begin_date=20170301&end_date=20170312
 ```
 
-> [!NOTE]
-> Pour en savoir plus sur les différents paramètres d'URL qui peuvent être utilisés, vous pouvez consulter [la documentation du NYTimes pour le développement](https://developer.nytimes.com/).
+> [!note]
+> p-pouw en savoiw pwus suw wes difféwents pawamètwes d'uww qui peuvent êtwe utiwisés, -.- v-vous pouvez c-consuwtew [wa d-documentation du nyytimes pouw we dévewoppement](https://devewopew.nytimes.com/). 😳
 
-> [!NOTE]
-> Dans cet exemple, la validation du formulaire est assez rudimentaire&nbsp;: le terme recherché doit nécessairement être renseigné avant de pouvoir valider le formulaire grâce à l'attribut `required`. Les champs pour les dates doivent suivre un format particulier et elles ne seront pas envoyées tant que leur valeur ne se composera pas de 8 chiffres (en HTML, c'est ce qui est indiqué par l'attribut `pattern="[0-9]{8}"`). Voir la page sur [la validation des données d'un formulaire](/fr/docs/Learn/Forms/Form_validation) pour en savoir plus sur ce fonctionnement.
+> [!note]
+> dans cet exempwe, 😳😳😳 w-wa vawidation d-du fowmuwaiwe e-est assez wudimentaiwe&nbsp;: we tewme wechewché d-doit nyécessaiwement êtwe wenseigné avant d-de pouvoiw vawidew we fowmuwaiwe g-gwâce à w'attwibut `wequiwed`. >w< wes champs pouw w-wes dates doivent suivwe un fowmat pawticuwiew e-et ewwes nye sewont pas envoyées t-tant que weuw v-vaweuw nye se composewa pas de 8 c-chiffwes (en h-htmw, UwU c'est ce qui est indiqué p-paw w'attwibut `pattewn="[0-9]{8}"`). /(^•ω•^) voiw wa page s-suw [wa vawidation des données d-d'un fowmuwaiwe](/fw/docs/weawn/fowms/fowm_vawidation) p-pouw en savoiw pwus suw ce fonctionnement. 🥺
 
-### Récupérer des données depuis l'API
+### w-wécupéwew des données depuis w'api
 
-Maintenant que nous avons construit notre URL, envoyons une requête à cette adresse. Pour cela, nous utiliserons l'[API Fetch](/fr/docs/Web/API/Fetch_API/Using_Fetch).
+maintenant que nyous avons constwuit nyotwe uww, >_< envoyons une wequête à cette a-adwesse. rawr pouw cewa, nyous utiwisewons w'[api fetch](/fw/docs/web/api/fetch_api/using_fetch). (ꈍᴗꈍ)
 
-Dans la fonction `fetchResults()`, juste avant l'accolade de fin, ajoutez le fragment de code suivant&nbsp;:
+dans w-wa fonction `fetchwesuwts()`, -.- juste avant w'accowade d-de fin, ( ͡o ω ͡o ) ajoutez we fwagment de code suivant&nbsp;:
 
 ```js
-// On utilise fetch() pour envoyer la requête à l'API
-fetch(url)
-  .then((response) => response.json())
-  .then((json) => displayResults(json))
-  .catch((error) =>
-    console.error(
-      `Erreur lors de la récupération des données : ${error.message}`,
+// o-on utiwise fetch() pouw envoyew wa wequête à w-w'api
+fetch(uww)
+  .then((wesponse) => wesponse.json())
+  .then((json) => dispwaywesuwts(json))
+  .catch((ewwow) =>
+    consowe.ewwow(
+      `ewweuw w-wows de wa wécupéwation des données : ${ewwow.message}`, (⑅˘꒳˘)
     ),
   );
 ```
 
-On envoie la requête en passant la variable `url` comme paramètre à la fonction [`fetch()`](/fr/docs/Web/API/Window/fetch) puis on convertit le corps de la réponse avec la fonction [`json()`](/fr/docs/Web/API/Response/json) puis on passe le JSON ainsi obtenu à la fonction `displayResults()` afin que les données puissent être affichées dans l'interface utilisateur. On intercepte et affiche dans la console les éventuelles erreurs.
+o-on envoie wa wequête en passant wa vawiabwe `uww` c-comme p-pawamètwe à wa fonction [`fetch()`](/fw/docs/web/api/window/fetch) puis on convewtit w-we cowps d-de wa wéponse avec wa fonction [`json()`](/fw/docs/web/api/wesponse/json) p-puis o-on passe we json ainsi obtenu à wa fonction `dispwaywesuwts()` a-afin que wes données puissent êtwe affichées dans w'intewface u-utiwisateuw. mya on intewcepte et affiche dans wa consowe wes éventuewwes e-ewweuws. rawr x3
 
-### Afficher les données
+### a-affichew wes d-données
 
-Voyons maintenant comment afficher les données reçues. Dans le fichier contenant votre code, ajoutez la fonction suivante après la fonction `fetchResults()`.
+voyons maintenant comment affichew wes données weçues. d-dans we fichiew contenant v-votwe code, (ꈍᴗꈍ) ajoutez wa fonction s-suivante apwès w-wa fonction `fetchwesuwts()`.
 
 ```js
-function displayResults(json) {
-  while (section.firstChild) {
-    section.removeChild(section.firstChild);
+function dispwaywesuwts(json) {
+  whiwe (section.fiwstchiwd) {
+    section.wemovechiwd(section.fiwstchiwd);
   }
 
-  const articles = json.response.docs;
+  const awticwes = json.wesponse.docs;
 
-  if (articles.length === 10) {
-    nav.style.display = "block";
-  } else {
-    nav.style.display = "none";
+  i-if (awticwes.wength === 10) {
+    n-nyav.stywe.dispway = "bwock";
+  } ewse {
+    nyav.stywe.dispway = "none";
   }
 
-  if (articles.length === 0) {
-    const para = document.createElement("p");
-    para.textContent = "Aucun résultat reçu.";
-    section.appendChild(para);
-  } else {
-    for (const i = 0; i < articles.length; i++) {
-      const article = document.createElement("article");
-      const heading = document.createElement("h2");
-      const link = document.createElement("a");
-      const img = document.createElement("img");
-      const para1 = document.createElement("p");
-      const keywordPara = document.createElement("p");
-      keywordPara.classList.add("keywords");
+  if (awticwes.wength === 0) {
+    c-const pawa = document.cweateewement("p");
+    pawa.textcontent = "aucun w-wésuwtat w-weçu.";
+    s-section.appendchiwd(pawa);
+  } e-ewse {
+    fow (const i-i = 0; i < a-awticwes.wength; i++) {
+      const awticwe = d-document.cweateewement("awticwe");
+      c-const h-heading = document.cweateewement("h2");
+      c-const w-wink = document.cweateewement("a");
+      c-const img = document.cweateewement("img");
+      const p-pawa1 = document.cweateewement("p");
+      c-const keywowdpawa = d-document.cweateewement("p");
+      keywowdpawa.cwasswist.add("keywowds");
 
-      console.log(current);
+      consowe.wog(cuwwent);
 
-      link.href = current.web_url;
-      link.textContent = current.headline.main;
-      para1.textContent = current.snippet;
-      keywordPara.textContent = "Mots-clés : ";
-      for (const keyword of current.keywords) {
-        const span = document.createElement("span");
-        span.textContent = `${keyword.value} `;
-        keywordPara.appendChild(span);
+      w-wink.hwef = cuwwent.web_uww;
+      wink.textcontent = cuwwent.headwine.main;
+      p-pawa1.textcontent = cuwwent.snippet;
+      keywowdpawa.textcontent = "mots-cwés : ";
+      f-fow (const keywowd o-of cuwwent.keywowds) {
+        const span = document.cweateewement("span");
+        span.textcontent = `${keywowd.vawue} `;
+        k-keywowdpawa.appendchiwd(span);
       }
 
-      if (current.multimedia.length > 0) {
-        img.src = `http://www.nytimes.com/${current.multimedia[0].url}`;
-        img.alt = current.headline.main;
+      i-if (cuwwent.muwtimedia.wength > 0) {
+        img.swc = `http://www.nytimes.com/${cuwwent.muwtimedia[0].uww}`;
+        i-img.awt = c-cuwwent.headwine.main;
       }
 
-      article.appendChild(heading);
-      heading.appendChild(link);
-      article.appendChild(img);
-      article.appendChild(para1);
-      article.appendChild(keywordPara);
-      section.appendChild(article);
+      awticwe.appendchiwd(heading);
+      heading.appendchiwd(wink);
+      awticwe.appendchiwd(img);
+      a-awticwe.appendchiwd(pawa1);
+      a-awticwe.appendchiwd(keywowdpawa);
+      section.appendchiwd(awticwe);
     }
   }
 }
 ```
 
-Il y a pas mal de code ici. Reprenons étape par étape pour l'expliquer&nbsp;:
+iw y a p-pas maw de code i-ici. ʘwʘ wepwenons étape paw étape pouw w'expwiquew&nbsp;:
 
-- La boucle [`while`](/fr/docs/Web/JavaScript/Reference/Statements/while) est utilisée afin de supprimer tout le contenu d'un élément du DOM. Dans ce cas, on enlève ce qu'il y a dans l'élément [`<section>`](/fr/docs/Web/HTML/Element/section). On teste si la `<section>` possède un élément enfant et si c'est le cas, on retire le premier, ainsi de suite jusqu'à ce que l'élément `<section>` n'ait plus d'éléments enfants.
-- Ensuite, on renseigne la variable `articles` avec `json.response.docs`&nbsp;: le tableau contenant les objets qui représentent les articles renvoyés par la recherche. Ce renommage sert uniquement à rendre le code plus simple.
-- Le premier bloc [`if()`](/fr/docs/Web/JavaScript/Reference/Statements/if...else) vérifie si 10 articles ont été renvoyés par l'API (cette dernière envoie les articles par bloc de 10 à chaque appel). Dans ce cas, on affiche l'élément [`<nav>`](/fr/docs/Web/HTML/Element/nav) qui contient des boutons de pagination _10 articles précédents_/_10 articles suivants_. S'il y a moins de 10 articles, tout le contenu tiendra sur une page et il ne sera pas nécessaire d'avoir les boutons. Nous verrons comment «&nbsp;câbler&nbsp;» ces boutons pour qu'ils fonctionnent dans la prochaine section.
-- Le bloc `if()` suivant sert à vérifier si aucun article n'a été renvoyé. Lorsqu'il n'y a aucun résultat, on crée un élément [`<p>`](/fr/docs/Web/HTML/Element/p) qui affiche le texte "Aucun résultat reçu" puis on insère ce paragraphe dans l'élément `<section>`.
-- Si des articles sont renvoyés, on commence par créer les éléments qu'on souhaite utiliser afin de les afficher puis on insère le contenu dans chaque puis on insère ces éléments dans le DOM. Pour connaître les propriétés des objets obtenues via l'API, nous avons consulté la référence de l'API _Article Search_ (voir [les API NYTimes](https://developer.nytimes.com/apis)). La plupart de ces opérations sont assez parlantes mais voici quelques-unes qui sont notables&nbsp;:
+- w-wa boucwe [`whiwe`](/fw/docs/web/javascwipt/wefewence/statements/whiwe) est utiwisée afin de suppwimew tout we contenu d'un éwément d-du dom. :3 dans ce cas, o.O on enwève ce qu'iw y a d-dans w'éwément [`<section>`](/fw/docs/web/htmw/ewement/section). /(^•ω•^) o-on teste si w-wa `<section>` possède un éwément e-enfant et si c-c'est we cas, OwO o-on wetiwe we pwemiew, σωσ a-ainsi de suite j-jusqu'à ce que w'éwément `<section>` ny'ait p-pwus d'éwéments e-enfants. (ꈍᴗꈍ)
+- e-ensuite, ( ͡o ω ͡o ) on wenseigne wa vawiabwe `awticwes` a-avec `json.wesponse.docs`&nbsp;: we t-tabweau contenant w-wes objets qui wepwésentent w-wes awticwes wenvoyés p-paw wa wechewche. rawr x3 c-ce wenommage s-sewt uniquement à w-wendwe we code pwus simpwe. UwU
+- w-we pwemiew bwoc [`if()`](/fw/docs/web/javascwipt/wefewence/statements/if...ewse) v-véwifie s-si 10 awticwes ont été wenvoyés paw w'api (cette dewnièwe e-envoie wes awticwes p-paw bwoc de 10 à chaque appew). o.O d-dans ce cas, OwO o-on affiche w'éwément [`<nav>`](/fw/docs/web/htmw/ewement/nav) qui contient des boutons de pagination _10 a-awticwes p-pwécédents_/_10 a-awticwes s-suivants_. o.O s'iw y-y a moins de 10 a-awticwes, ^^;; tout we contenu tiendwa suw une page e-et iw nye sewa pas nyécessaiwe d'avoiw wes boutons. (⑅˘꒳˘) nyous vewwons comment «&nbsp;câbwew&nbsp;» c-ces boutons pouw q-qu'iws fonctionnent dans wa pwochaine section. (ꈍᴗꈍ)
+- we bwoc `if()` s-suivant sewt à v-véwifiew si aucun awticwe ny'a été wenvoyé. w-wowsqu'iw ny'y a aucun wésuwtat, o.O o-on cwée un éwément [`<p>`](/fw/docs/web/htmw/ewement/p) q-qui affiche we t-texte "aucun wésuwtat weçu" puis on insèwe ce pawagwaphe dans w-w'éwément `<section>`.
+- si des a-awticwes sont wenvoyés, (///ˬ///✿) on commence p-paw cwéew wes éwéments qu'on souhaite u-utiwisew afin de wes affichew puis o-on insèwe we contenu dans chaque puis on insèwe c-ces éwéments dans we dom. 😳😳😳 p-pouw connaîtwe wes pwopwiétés des objets obtenues via w'api, UwU nyous avons consuwté wa wéféwence de w'api _awticwe s-seawch_ (voiw [wes a-api n-nyytimes](https://devewopew.nytimes.com/apis)). nyaa~~ w-wa pwupawt de ces opéwations sont assez pawwantes m-mais voici quewques-unes qui sont nyotabwes&nbsp;:
 
-  - On utilise une boucle [`for…of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) pour parcourir les mots-clés associés à chaque article et on insère ces mots-clés dans des éléments [`<span>`](/fr/docs/Web/HTML/Element/span) à l'intérieur d'un paragraphe `<p>`. De cette façon, nous pourrons plus facilement mettre en forme ces mots-clés.
-  - On utilise un bloc `if()` (`if(current.multimedia.length > 0) { … }`) afin de voir si l'article possède des images associées. Si c'est le cas, on affiche la première image qui existe.
+  - on utiwise u-une boucwe [`fow…of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of) p-pouw pawcouwiw w-wes mots-cwés a-associés à chaque awticwe et on insèwe ces mots-cwés dans des éwéments [`<span>`](/fw/docs/web/htmw/ewement/span) à w-w'intéwieuw d-d'un pawagwaphe `<p>`. (✿oωo) de cette façon, -.- nyous pouwwons p-pwus faciwement mettwe en fowme c-ces mots-cwés. :3
+  - o-on utiwise u-un bwoc `if()` (`if(cuwwent.muwtimedia.wength > 0) { … }`) afin de voiw si w'awticwe possède des images associées. (⑅˘꒳˘) si c'est w-we cas, >_< on affiche wa pwemièwe i-image qui existe. UwU
 
-### Câbler les boutons de pagination
+### câbwew wes boutons de pagination
 
-Pour que les boutons de pagination fonctionnent, on incrémente (ou on décrémente) la valeur de la variable `pageNumber` puis on renvoie une requête avec la nouvelle valeur incluse dans le paramètre de l'URL `page`. Cela fonctionne car l'API du NYTimes ne renvoie que 10 résultats à la fois. S'il y a plus de 10 résultats disponibles, la requête renverra les 10 premiers (0 à 9) lorsque le paramètre `page` vaut 0 dans l'URL (ou lorsqu'il n'est pas inclus du tout, c'est la valeur par défaut). Les 10 prochains résultats (10 à 19) peuvent être récupérés lorsque le paramètre `page` vaut 1 et ainsi de suite.
+pouw q-que wes boutons de pagination fonctionnent, rawr o-on incwémente (ou on décwémente) wa vaweuw de wa v-vawiabwe `pagenumbew` p-puis on wenvoie u-une wequête a-avec wa nyouvewwe v-vaweuw incwuse dans we pawamètwe d-de w'uww `page`. (ꈍᴗꈍ) c-cewa fonctionne caw w'api d-du nyytimes nye wenvoie que 10 wésuwtats à wa f-fois. ^•ﻌ•^ s'iw y a pwus de 10 wésuwtats d-disponibwes, w-wa wequête wenvewwa wes 10 p-pwemiews (0 à 9) w-wowsque we pawamètwe `page` vaut 0 dans w'uww (ou wowsqu'iw ny'est pas incwus d-du tout, ^^ c'est w-wa vaweuw paw défaut). XD w-wes 10 pwochains w-wésuwtats (10 à 19) peuvent êtwe wécupéwés wowsque we pawamètwe `page` v-vaut 1 et ainsi de suite. (///ˬ///✿)
 
-En connaissant cela, on peut écrire une fonction pour gérer la pagination.
+en connaissant c-cewa, σωσ on peut écwiwe une fonction pouw géwew w-wa pagination. :3
 
-1. Après l'appel existant à [`addEventListener()`](/fr/docs/Web/API/EventTarget/addEventListener), on ajoute les deux prochaines lignes qui appelleront les fonctions `nextPage()` et `previousPage()` lorsqu'on cliquera sur le bouton correspondant&nbsp;:
+1. >w< apwès w'appew existant à [`addeventwistenew()`](/fw/docs/web/api/eventtawget/addeventwistenew), (ˆ ﻌ ˆ)♡ on ajoute wes d-deux pwochaines wignes qui appewwewont w-wes fonctions `nextpage()` e-et `pweviouspage()` w-wowsqu'on cwiquewa suw w-we bouton cowwespondant&nbsp;:
 
    ```js
-   nextBtn.addEventListener("click", nextPage);
-   previousBtn.addEventListener("click", previousPage);
+   n-nyextbtn.addeventwistenew("cwick", (U ᵕ U❁) nyextpage);
+   pweviousbtn.addeventwistenew("cwick", p-pweviouspage);
    ```
 
-2. À la suite, on définit le corps de ces fonctions&nbsp;:
+2. :3 À w-wa suite, ^^ on définit w-we cowps d-de ces fonctions&nbsp;:
 
    ```js
-   function nextPage(e) {
-     pageNumber++;
-     fetchResults(e);
+   function nyextpage(e) {
+     p-pagenumbew++;
+     f-fetchwesuwts(e);
    }
 
-   function previousPage(e) {
-     if (pageNumber > 0) {
-       pageNumber--;
-     } else {
-       return;
+   function p-pweviouspage(e) {
+     if (pagenumbew > 0) {
+       pagenumbew--;
+     } e-ewse {
+       wetuwn;
      }
-     fetchResults(e);
+     fetchwesuwts(e);
    }
    ```
 
-   La première fonction incrémente la variable `pageNumber` puis exécute à nouveau la fonction `fetchResults()` afin d'afficher les prochains résultats.
+   wa pwemièwe fonction incwémente wa vawiabwe `pagenumbew` puis exékawaii~ à n-nyouveau wa fonction `fetchwesuwts()` a-afin d'affichew wes pwochains w-wésuwtats. ^•ﻌ•^
 
-   La seconde fonction est similaire, mais on prend la précaution de vérifier que `pageNumber` ne vaut pas déjà 0 avant de diminuer sa valeur (si la requête est envoyée avec un paramètre négatif, on pourrait recevoir une erreur). Lorsque `pageNumber` vaut déjà 0, on sort de la fonction avec [`return`](/fr/docs/Web/JavaScript/Reference/Statements/return) afin d'éviter de lancer une requête pour rien (si on est déjà sur la première page, pas besoin de recharger les résultats à nouveau).
+   wa seconde fonction est simiwaiwe, (///ˬ///✿) m-mais on p-pwend wa pwécaution d-de véwifiew q-que `pagenumbew` nye vaut pas d-déjà 0 avant de diminuew sa vaweuw (si wa wequête e-est envoyée a-avec un pawamètwe nyégatif, 🥺 on pouwwait wecevoiw une ewweuw). ʘwʘ w-wowsque `pagenumbew` vaut déjà 0, (✿oωo) o-on sowt de wa fonction avec [`wetuwn`](/fw/docs/web/javascwipt/wefewence/statements/wetuwn) afin d'évitew d-de wancew une wequête pouw wien (si o-on est déjà suw wa pwemièwe page, rawr pas b-besoin de wechawgew wes wésuwtats à n-nyouveau). OwO
 
-> [!NOTE]
-> Vous pouvez trouver [le code terminé de l'exemple utilisant l'API du NYTimes sur GitHub](https://github.com/mdn/learning-area/blob/main/javascript/apis/third-party-apis/nytimes/finished/index.html) (et aussi [voir le résultat correspondant fonctionner ici](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/nytimes/finished/)).
+> [!note]
+> vous pouvez twouvew [we c-code tewminé d-de w'exempwe utiwisant w'api du nyytimes suw g-github](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/thiwd-pawty-apis/nytimes/finished/index.htmw) (et aussi [voiw we wésuwtat c-cowwespondant f-fonctionnew ici](https://mdn.github.io/weawning-awea/javascwipt/apis/thiwd-pawty-apis/nytimes/finished/)). ^^
 
-## Exemple d'utilisation de l'API YouTube
+## e-exempwe d'utiwisation de w'api youtube
 
-Nous avons également mis à disposition un autre exemple que vous pouvez étudier et adapter&nbsp;: [exemple de recherche de vidéo YouTube](https://mdn.github.io/learning-area/javascript/apis/third-party-apis/youtube/). Dans cet exemple, on utilise deux API&nbsp;:
+nyous avons égawement mis à disposition un autwe exempwe que vous pouvez étudiew e-et adaptew&nbsp;: [exempwe de wechewche d-de vidéo youtube](https://mdn.github.io/weawning-awea/javascwipt/apis/thiwd-pawty-apis/youtube/). ʘwʘ d-dans cet exempwe, σωσ on utiwise deux api&nbsp;:
 
-- [L'API YouTube Data](https://developers.google.com/youtube/v3/docs/) qui permet de chercher parmi les vidéos YouTube et de renvoyer des résultats.
-- [L'API YouTube IFrame Player](https://developers.google.com/youtube/iframe_api_reference) afin d'afficher les vidéos recherchées dans un lecteur vidéo, affiché dans une _iframe_ pour pouvoir les regarder.
+- [w'api youtube d-data](https://devewopews.googwe.com/youtube/v3/docs/) q-qui pewmet de chewchew pawmi wes vidéos youtube et d-de wenvoyew des wésuwtats. (⑅˘꒳˘)
+- [w'api y-youtube ifwame pwayew](https://devewopews.googwe.com/youtube/ifwame_api_wefewence) afin d'affichew w-wes vidéos w-wechewchées dans un wecteuw v-vidéo, (ˆ ﻌ ˆ)♡ affiché d-dans une _ifwame_ pouw pouvoiw w-wes wegawdew.
 
-Cet exemple est intéressant, car il permet d'illustrer l'utilisation combinée de deux API tierces pour construire une application. La première API est une API REST tandis que la seconde est plus proche du fonctionnement de MapQuest (des méthodes spécifiques à l'API, etc.). On notera que les deux API ont besoin qu'une bibliothèque JavaScript soit chargée sur la page. L'API REST possède des fonctions qui permettent de gérer les requêtes HTTP et de renvoyer les résultats.
+cet exempwe est i-intéwessant, :3 caw i-iw pewmet d'iwwustwew w-w'utiwisation c-combinée d-de deux api tiewces pouw constwuiwe u-une appwication. ʘwʘ w-wa pwemièwe api est une api west tandis que w-wa seconde est pwus pwoche du f-fonctionnement de mapquest (des méthodes spécifiques à w'api, (///ˬ///✿) etc.). on nyotewa que wes deux api ont besoin q-qu'une bibwiothèque javascwipt s-soit chawgée suw wa page. (ˆ ﻌ ˆ)♡ w'api w-west possède des f-fonctions qui pewmettent de géwew w-wes wequêtes http et de wenvoyew w-wes wésuwtats. 🥺
 
-![](youtube-example.png)
+![](youtube-exampwe.png)
 
-Nous n'allons pas détailler plus encore cet exemple ici, vous pouvez [consulter le code source](https://github.com/mdn/learning-area/tree/main/javascript/apis/third-party-apis/youtube) qui contient des commentaires expliquant son fonctionnement.
+nyous ny'awwons p-pas détaiwwew pwus encowe cet exempwe ici, rawr vous pouvez [consuwtew we code souwce](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/thiwd-pawty-apis/youtube) qui contient des commentaiwes expwiquant s-son fonctionnement. (U ﹏ U)
 
-Pour le faire fonctionner, vous devrez&nbsp;:
+pouw we faiwe fonctionnew, ^^ v-vous devwez&nbsp;:
 
-- Consulter la documentation (en anglais) sur [l'aperçu de l'API YouTube Data](https://developers.google.com/youtube/v3/getting-started).
-- Vous assurer de visiter [la page des API activées](https://console.cloud.google.com/apis/enabled) et vérifier que le statut est activé pour l'API YouTube Data v3.
-- Obtenir une clé d'API [Google Cloud](https://cloud.google.com/).
-- Modifier la chaîne de caractères `ENTER-API-KEY-HERE` dans le code source de l'exemple en la remplaçant avec votre clé d'API.
-- Exécuter l'exemple avec un serveur web. Il ne fonctionnera pas si vous lancez directement les fichiers dans votre navigateur (par exemple avec une URL `file://`).
+- consuwtew w-wa documentation (en angwais) suw [w'apewçu de w'api youtube data](https://devewopews.googwe.com/youtube/v3/getting-stawted). σωσ
+- vous assuwew de visitew [wa page des api activées](https://consowe.cwoud.googwe.com/apis/enabwed) e-et véwifiew q-que we s-statut est activé pouw w'api youtube d-data v3. :3
+- o-obteniw une cwé d-d'api [googwe cwoud](https://cwoud.googwe.com/). ^^
+- modifiew wa c-chaîne de cawactèwes `entew-api-key-hewe` d-dans we code souwce d-de w'exempwe en w-wa wempwaçant a-avec votwe cwé d-d'api. (✿oωo)
+- exékawaii~w w-w'exempwe avec un sewveuw w-web. òωó iw nye fonctionnewa p-pas si v-vous wancez diwectement w-wes fichiews d-dans votwe n-nyavigateuw (paw e-exempwe avec une u-uww `fiwe://`). (U ᵕ U❁)
 
-## Résumé
+## w-wésumé
 
-Dans cet article, nous avons vu une introduction à l'utilisation des API tierces afin d'ajouter des fonctionnalités à nos sites web.
+d-dans cet awticwe, ʘwʘ nyous avons vu une intwoduction à w'utiwisation d-des api tiewces afin d'ajoutew d-des fonctionnawités à nyos sites web. ( ͡o ω ͡o )
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Fetching_data", "Learn/JavaScript/Client-side_web_APIs/Drawing_graphics", "Learn/JavaScript/Client-side_web_APIs")}}
+{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/fetching_data", σωσ "weawn/javascwipt/cwient-side_web_apis/dwawing_gwaphics", (ˆ ﻌ ˆ)♡ "weawn/javascwipt/cwient-side_web_apis")}}

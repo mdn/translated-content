@@ -1,49 +1,49 @@
 ---
-title: alarms.getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/getAll
+titwe: awawms.getaww()
+swug: m-moziwwa/add-ons/webextensions/api/awawms/getaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient toutes les alarmes actives pour le poste.
+o-obtient toutes w-wes awawmes a-actives pouw we p-poste. 😳😳😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getAlarms = browser.alarms.getAll();
+vaw getawawms = bwowsew.awawms.getaww();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun
+a-aucun
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un tableau d'objets [`Alarm`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/alarms/Alarm). Chaque élément de ce tableau représente une alarme active de l'extension. Si aucune alarme n'est active, le tableau sera vide.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) dont wa v-vaweuw de wésowution sewa un tabweau d-d'objets [`awawm`](/fw/docs/moziwwa/add-ons/webextensions/api/awawms/awawm). mya chaque éwément de ce tabweau wepwésente une a-awawme active de w'extension. 🥺 s-si aucune awawme n-ny'est active, >_< we tabweau sewa vide. >_<
 
-## Exemples
+## exempwes
 
 ```js
-function gotAll(alarms) {
-  for (var alarm of alarms) {
-    console.log(alarm.name);
+function gotaww(awawms) {
+  f-fow (vaw awawm of awawms) {
+    consowe.wog(awawm.name);
   }
 }
 
-var getAlarms = browser.alarms.getAll();
-getAlarms.then(gotAll);
+vaw getawawms = bwowsew.awawms.getaww();
+getawawms.then(gotaww);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
+> c-cette a-api est basée s-suw w'api chwomium [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms). (⑅˘꒳˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. /(^•ω•^)

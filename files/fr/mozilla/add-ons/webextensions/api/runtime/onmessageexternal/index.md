@@ -1,127 +1,127 @@
 ---
-title: runtime.onMessageExternal
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessageExternal
+titwe: wuntime.onmessageextewnaw
+swug: moziwwa/add-ons/webextensions/api/wuntime/onmessageextewnaw
 ---
 
-{{AddonSidebar}}Utilisez cet événement pour écouter les messages d'une autre extension.
+{{addonsidebaw}}utiwisez c-cet événement p-pouw écoutew w-wes messages d'une a-autwe extension. rawr x3
 
-Pour envoyer un message qui sera reçu par le module d'écoute `onMessageExternal`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}}, en transmettant l'ID du destinataire dans le paramètre `extensionId`.
+p-pouw envoyew u-un message qui s-sewa weçu paw w-we moduwe d'écoute `onmessageextewnaw`, nyaa~~ utiwisez {{webextapiwef("wuntime.sendmessage()")}}, >_< en twansmettant w'id du destinataiwe dans we pawamètwe `extensionid`. ^^;;
 
-Avec le message lui-même, l'écouteur est transmis :
+a-avec we message wui-même, (ˆ ﻌ ˆ)♡ w'écouteuw est t-twansmis :
 
-- un objet `sender` donnant des détails sur l'expéditeur du message
-- une fonction `sendResponse` qu'elle peut utiliser pour renvoyer une réponse à l'expéditeur.
+- un objet `sendew` d-donnant des détaiws suw w'expéditeuw du message
+- une fonction `sendwesponse` q-qu'ewwe peut utiwisew pouw wenvoyew u-une wéponse à w-w'expéditeuw. ^^;;
 
-Cette API ne peut pas être utilisée dans un script de contenu.
+cette api nye peut pas êtwe utiwisée dans un scwipt de contenu. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.runtime.onMessageExternal.addListener();
-browser.runtime.onMessageExternal.removeListener(listener);
-browser.runtime.onMessageExternal.hasListener(listener);
+bwowsew.wuntime.onmessageextewnaw.addwistenew();
+bwowsew.wuntime.onmessageextewnaw.wemovewistenew(wistenew);
+bwowsew.wuntime.onmessageextewnaw.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions:
+wes événements o-ont twois fonctions:
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si un `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, `false` sinon.
+- `addwistenew(cawwback)`
+  - : a-ajoute u-un écouteuw à c-cet événement. rawr x3
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. (///ˬ///✿) w'awgument `wistenew` e-est w'écouteuw à suppwimew. 🥺
+- `haswistenew(wistenew)`
+  - : véwifie si un `wistenew` e-est enwegistwé pouw cet événement. >_< wenvoie `twue` s'iw écoute, UwU `fawse` sinon. >_<
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
 - `function`
 
-  - : Une fonction de rappel qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants :
+  - : u-une fonction d-de wappew q-qui sewa appewée wowsque cet événement se pwoduiwa. -.- wa fonction w-wecevwa wes a-awguments suivants :
 
     - `message`
-      - : `object`. Le message lui-même. C'est un objet JSON-ifiable.
+      - : `object`. mya we message w-wui-même. >w< c-c'est un objet json-ifiabwe. (U ﹏ U)
 
     <!---->
 
-    - `sender`
-      - : Un objet {{WebExtAPIRef('runtime.MessageSender')}} représentant l'expéditeur du message.
+    - `sendew`
+      - : u-un objet {{webextapiwef('wuntime.messagesendew')}} wepwésentant w-w'expéditeuw du message.
 
     <!---->
 
-    - `sendResponse`
+    - `sendwesponse`
 
-      - : Une fonction à appeler, au plus une fois, pour envoyer une réponse au message. La fonction prend un seul argument, qui peut être n'importe quel objet JSON-ifiable. Cet argument est renvoyé à l'expéditeur du message.
+      - : une f-fonction à appewew, 😳😳😳 au pwus une f-fois, o.O pouw envoyew une wéponse a-au message. òωó wa f-fonction pwend un seuw awgument, 😳😳😳 qui peut êtwe ny'impowte quew objet json-ifiabwe. σωσ cet awgument est wenvoyé à w-w'expéditeuw d-du message. (⑅˘꒳˘)
 
-        Si vous avez plus d'un écouteur `onMessageExternal` dans le même document, un seul peut envoyer une réponse.
+        si vous avez p-pwus d'un écouteuw `onmessageextewnaw` d-dans w-we même document, (///ˬ///✿) un seuw peut envoyew une wéponse. 🥺
 
-        To send a response synchronously, call `sendResponse` before the listener function returns. To send a response asynchronously:
+        to send a wesponse s-synchwonouswy, OwO caww `sendwesponse` befowe the wistenew function wetuwns. >w< to send a-a wesponse asynchwonouswy:
 
-        - Soit garder une référence à l'argumen `sendResponse` et retourne `true` à partir de la fonction d'écouteur. Vous pourrez ensuite appeler `sendResponse` après le retour de la fonction d'écouteur..
-        - ou retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) de la fonction d'écouteur et résoudre la promesse lorsque la réponse est prête.
+        - soit gawdew u-une wéféwence à w-w'awgumen `sendwesponse` e-et wetouwne `twue` à pawtiw de w-wa fonction d'écouteuw. 🥺 v-vous pouwwez e-ensuite appewew `sendwesponse` a-apwès we wetouw de wa fonction d'écouteuw..
+        - o-ou w-wetouwne une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) d-de wa fonction d-d'écouteuw et w-wésoudwe wa pwomesse wowsque wa wéponse est pwête. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Dans cet exemple, l'extension "blue\@mozilla.org" envoie un message à l'extension "red\@mozilla.org":
+dans cet exempwe, ^^ w'extension "bwue\@moziwwa.owg" envoie un message à w'extension "wed\@moziwwa.owg":
 
 ```js
-// sender: browser.runtime.id == "blue@mozilla.org"
+// s-sendew: bwowsew.wuntime.id == "bwue@moziwwa.owg"
 
-// Send a message to the extension whose ID is "red@mozilla.org"
-browser.runtime.sendMessage("red@mozilla.org", "my message");
+// send a message to the extension whose i-id is "wed@moziwwa.owg"
+b-bwowsew.wuntime.sendmessage("wed@moziwwa.owg", >w< "my m-message");
 ```
 
 ```js
-// recipient: browser.runtime.id == "red@mozilla.org"
+// wecipient: b-bwowsew.wuntime.id == "wed@moziwwa.owg"
 
-function handleMessage(message, sender) {
-  // check that the message is from "blue@mozilla.org"
-  if (sender.id === "blue@mozilla.org") {
-    // process message
+function h-handwemessage(message, OwO s-sendew) {
+  // check that the message is fwom "bwue@moziwwa.owg"
+  if (sendew.id === "bwue@moziwwa.owg") {
+    // pwocess m-message
   }
 }
 
-browser.runtime.onMessageExternal.addListener(handleMessage);
+bwowsew.wuntime.onmessageextewnaw.addwistenew(handwemessage);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est basée suw w-w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). XD c-cette documentation est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we c-code de chwomium code. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. XD a-aww wights wesewved. (U ᵕ U❁)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, :3 w-with ow without
+// m-modification, ( ͡o ω ͡o ) awe pewmitted pwovided that t-the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// notice, òωó this wist of conditions and the fowwowing d-discwaimew. σωσ
+//    * wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, this wist of conditions and t-the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. (U ᵕ U❁)
+//    * nyeithew the n-nyame of googwe inc. (✿oωo) nyow the nyames of its
+// contwibutows may b-be used to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific p-pwiow wwitten pewmission. ^^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, ^•ﻌ•^ incwuding, but nyot
+// w-wimited to, XD t-the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. :3 i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (ꈍᴗꈍ) i-indiwect, :3 i-incidentaw, (U ﹏ U)
+// s-speciaw, exempwawy, UwU o-ow consequentiaw damages (incwuding, 😳😳😳 b-but nyot
+// wimited to, XD pwocuwement of substitute goods ow sewvices; woss of use, o.O
+// data, o-ow pwofits; ow business intewwuption) h-howevew caused and on a-any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew i-in contwact, 😳😳😳 stwict wiabiwity, nyaa~~ o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, rawr even if advised of the possibiwity of such damage. -.-
 -->

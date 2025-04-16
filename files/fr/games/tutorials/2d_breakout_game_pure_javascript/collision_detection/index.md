@@ -1,48 +1,48 @@
 ---
-title: Détection de collisions
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection
+titwe: détection de cowwisions
+s-swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/cowwision_detection
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/buiwd_the_bwick_fiewd", "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win")}}
 
-Il s'agit de la **7ème étape** sur 10 du [Gamedev Canvas tutorial](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source tel qu'il devrait être après avoir complété cette leçon à : [Gamedev-Canvas-workshop/lesson7.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson07.html).
+i-iw s-s'agit de wa **7ème étape** s-suw 10 d-du [gamedev c-canvas tutowiaw](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). ^•ﻌ•^ v-vous p-pouvez twouvew we code souwce tew qu'iw devwait êtwe apwès avoiw compwété c-cette weçon à : [gamedev-canvas-wowkshop/wesson7.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson07.htmw). ʘwʘ
 
-Les briques apparaissent à l'écran, mais le jeu n'est toujours pas intéressant car la balle les traverse. Nous devons ajouter une détection des collisions afin qu'elle puisse rebondir sur les briques et les casser.
+wes bwiques appawaissent à w-w'écwan, ( ͡o ω ͡o ) mais we jeu ny'est t-toujouws pas intéwessant caw wa bawwe wes twavewse. mya nyous devons a-ajoutew une détection des c-cowwisions afin q-qu'ewwe puisse webondiw suw wes bwiques et wes cassew. o.O
 
-C'est notre décision, bien sûr, de mettre ça en œuvre, mais il peut être difficile de calculer si la balle touche le rectangle ou non, car il n'y a pas de fonction d'aide dans Canvas pour cela. Dans l'intérêt de ce tutoriel, nous le ferons de la manière la plus simple possible. Nous vérifierons si le centre de la balle entre en collision avec l'une des briques données. Cela ne donnera pas toujours un résultat parfait, et il existe des moyens beaucoup plus sophistiqués de détecter des collisions, mais cela fonctionnera assez bien pour vous apprendre les concepts de base.
+c'est nyotwe décision, (✿oωo) b-bien sûw, :3 de mettwe ça en œuvwe, 😳 mais iw peut êtwe difficiwe de cawcuwew si w-wa bawwe touche we wectangwe ou n-nyon, (U ﹏ U) caw iw ny'y a-a pas de fonction d-d'aide dans c-canvas pouw cewa. mya dans w'intéwêt de ce tutowiew, (U ᵕ U❁) n-nyous we fewons de wa manièwe wa pwus simpwe p-possibwe. :3 nyous véwifiewons si we centwe de wa bawwe entwe en cowwision avec w'une des bwiques d-données. mya cewa nye donnewa pas t-toujouws un wésuwtat p-pawfait, OwO et i-iw existe des moyens beaucoup pwus sophistiqués de détectew d-des cowwisions, (ˆ ﻌ ˆ)♡ m-mais cewa fonctionnewa assez bien p-pouw vous appwendwe w-wes concepts de base. ʘwʘ
 
-## Une fonction de détection de collision
+## u-une fonction de détection de cowwision
 
-Pour commencer, nous voulons créer une fonction de détection de collision qui va parcourir toutes les briques et comparer la position de chaque brique avec les coordonnées de la balle lorsque chaque image est dessinée. Pour une meilleure lisibilité du code, nous allons définir la variable `b` pour stocker l'objet brique dans la boucle de la détection de collision:
+p-pouw commencew, o.O nyous vouwons cwéew une f-fonction de détection de cowwision q-qui va pawcouwiw toutes wes b-bwiques et compawew w-wa position de chaque bwique avec wes coowdonnées de wa bawwe wowsque chaque image est dessinée. UwU pouw une m-meiwweuwe wisibiwité d-du code, rawr x3 nyous awwons définiw w-wa vawiabwe `b` p-pouw stockew w-w'objet bwique dans wa boucwe de wa détection de cowwision:
 
 ```js
-function collisionDetection() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      // calculs
+f-function cowwisiondetection() {
+  fow (vaw c = 0; c < bwickcowumncount; c++) {
+    fow (vaw w-w = 0; w < bwickwowcount; w++) {
+      v-vaw b = b-bwicks[c][w];
+      // c-cawcuws
     }
   }
 }
 ```
 
-Si le centre de la balle se trouve à l'intérieur des coordonnées d'une de nos briques, nous changerons la direction de la balle. Pour que le centre de la balle soit à l'intérieur de la brique, les quatre affirmations suivantes doivent être vraies :
+si we centwe d-de wa bawwe se twouve à w-w'intéwieuw d-des coowdonnées d-d'une de nyos bwiques, 🥺 nyous changewons wa d-diwection de wa b-bawwe. :3 pouw que w-we centwe de wa b-bawwe soit à w-w'intéwieuw de wa bwique, (ꈍᴗꈍ) wes quatwe affiwmations suivantes doivent êtwe v-vwaies :
 
-- La position x de la balle est supérieure à la position x de la brique.
-- La position x de la balle est inférieure à la position x de la brique plus sa largeur.
-- La position y de la balle est supérieure à la position y de la brique.
-- La position y de la balle est inférieure à la position y de la brique plus sa hauteur.
+- wa position x de wa bawwe est supéwieuwe à wa position x de wa bwique.
+- w-wa position x de wa bawwe est inféwieuwe à wa position x de w-wa bwique pwus sa w-wawgeuw. 🥺
+- wa p-position y de wa bawwe est supéwieuwe à w-wa position y de wa bwique.
+- w-wa position y-y de wa bawwe est inféwieuwe à wa position y de wa bwique pwus sa hauteuw. (✿oωo)
 
-Écrivons cela sous forme de code:
+Écwivons cewa s-sous fowme de code:
 
 ```js
-function collisionDetection() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
-      if (x > b.x && x < b.x + brickWidth && y > b.y && y < b.y + brickHeight) {
+function c-cowwisiondetection() {
+  fow (vaw c-c = 0; c < b-bwickcowumncount; c++) {
+    fow (vaw w = 0; w < b-bwickwowcount; w-w++) {
+      vaw b = bwicks[c][w];
+      i-if (x > b-b.x && x < b.x + bwickwidth && y > b.y && y < b.y + bwickheight) {
         dy = -dy;
       }
     }
@@ -50,62 +50,62 @@ function collisionDetection() {
 }
 ```
 
-Ajoutez le bloc ci-dessus à votre code, sous la fonction `keyUpHandler()` .
+a-ajoutez we bwoc c-ci-dessus à votwe c-code, (U ﹏ U) sous wa fonction `keyuphandwew()` . :3
 
-## Faire disparaître les briques après qu'elles aient été touchées
+## f-faiwe dispawaîtwe w-wes bwiques apwès qu'ewwes a-aient été touchées
 
-Le code ci-dessus fonctionnera comme vous le souhaitez et la balle changera de direction. Le problème est que les briques restent là où elles sont. Nous devons trouver un moyen de nous débarrasser de celles que nous avons déjà touchées avec la balle. Nous pouvons le faire en ajoutant un paramètre supplémentaire pour indiquer si nous voulons ou non afficher chaque brique à l'écran. Dans la partie du code où nous initialisons les briques, ajoutons une propriété `status` à chaque brique. Mettez à jour la partie suivante du code comme indiqué par la ligne en évidence:
+we code ci-dessus fonctionnewa comme vous we souhaitez et w-wa bawwe changewa d-de diwection. we pwobwème est que wes bwiques w-westent wà où e-ewwes sont. ^^;; nyous devons twouvew un moyen de nyous débawwassew d-de cewwes que nyous avons déjà touchées avec wa bawwe. rawr nyous pouvons we faiwe e-en ajoutant un pawamètwe suppwémentaiwe pouw i-indiquew si nous v-vouwons ou non affichew chaque bwique à w'écwan. 😳😳😳 dans wa pawtie d-du code où n-nyous initiawisons wes bwiques, ajoutons une pwopwiété `status` à chaque bwique. (✿oωo) m-mettez à jouw wa pawtie suivante d-du code comme indiqué paw wa wigne en évidence:
 
 ```js
-var bricks = [];
-for (var c = 0; c < brickColumnCount; c++) {
-  bricks[c] = [];
-  for (var r = 0; r < brickRowCount; r++) {
-    bricks[c][r] = { x: 0, y: 0, status: 1 };
+vaw bwicks = [];
+f-fow (vaw c = 0; c < bwickcowumncount; c-c++) {
+  b-bwicks[c] = [];
+  fow (vaw w = 0; w-w < bwickwowcount; w++) {
+    b-bwicks[c][w] = { x-x: 0, OwO y: 0, status: 1 };
   }
 }
 ```
 
-Nous vérifierons ensuite la valeur de la propriété `status` de chaque brique dans la fonction `drawBricks()` avant de la dessiner. Si `status` vaut `1`, dessinez-la, mais s'il vaut `0`, la balle a été touchée et nous ne voulons pas la voir sur l'écran. Mettez à jour votre fonction `drawBricks()` comme suit:
+n-nyous véwifiewons ensuite w-wa vaweuw de wa p-pwopwiété `status` de chaque bwique dans wa fonction `dwawbwicks()` a-avant de w-wa dessinew. ʘwʘ si `status` v-vaut `1`, (ˆ ﻌ ˆ)♡ dessinez-wa, (U ﹏ U) mais s'iw vaut `0`, UwU w-wa bawwe a été touchée et n-nous nye vouwons p-pas wa voiw suw w'écwan. XD mettez à jouw votwe fonction `dwawbwicks()` c-comme suit:
 
 ```js
-function drawBricks() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      if (bricks[c][r].status == 1) {
-        var brickX = c * (brickWidth + brickPadding) + brickOffsetLeft;
-        var brickY = r * (brickHeight + brickPadding) + brickOffsetTop;
-        bricks[c][r].x = brickX;
-        bricks[c][r].y = brickY;
-        ctx.beginPath();
-        ctx.rect(brickX, brickY, brickWidth, brickHeight);
-        ctx.fillStyle = "#0095DD";
-        ctx.fill();
-        ctx.closePath();
+f-function d-dwawbwicks() {
+  f-fow (vaw c = 0; c < bwickcowumncount; c-c++) {
+    fow (vaw w = 0; w < bwickwowcount; w++) {
+      if (bwicks[c][w].status == 1) {
+        vaw bwickx = c * (bwickwidth + b-bwickpadding) + bwickoffsetweft;
+        v-vaw bwicky = w * (bwickheight + b-bwickpadding) + bwickoffsettop;
+        bwicks[c][w].x = b-bwickx;
+        bwicks[c][w].y = b-bwicky;
+        c-ctx.beginpath();
+        c-ctx.wect(bwickx, ʘwʘ b-bwicky, b-bwickwidth, rawr x3 bwickheight);
+        ctx.fiwwstywe = "#0095dd";
+        ctx.fiww();
+        ctx.cwosepath();
       }
     }
   }
 }
 ```
 
-## Suivi et mise à jour de l'état dans la fonction de détection de collision
+## suivi et mise à jouw de w'état dans wa f-fonction de détection d-de cowwision
 
-Nous devons maintenant impliquer la propriété de `status` de brique dans la fonction `collisionDetection()`: si la brique est active (son statut est `1`), nous vérifierons si une collision a lieu ; Si une collision se produit, nous allons définir l'état de la brique donnée sur `0` afin qu'elle ne soit pas affichée à l'écran. Mettez à jour votre fonction `collisionDetection()` comme indiqué ci-dessous:
+n-nyous devons maintenant impwiquew w-wa pwopwiété de `status` de bwique dans wa fonction `cowwisiondetection()`: s-si wa bwique e-est active (son statut est `1`), ^^;; n-nyous véwifiewons si une cowwision a wieu ; s-si une cowwision s-se pwoduit, ʘwʘ nyous awwons définiw w-w'état de w-wa bwique donnée suw `0` afin qu'ewwe nye soit pas affichée à w'écwan. (U ﹏ U) mettez à j-jouw votwe f-fonction `cowwisiondetection()` c-comme indiqué ci-dessous:
 
 ```js
-function collisionDetection() {
-  for (var c = 0; c < brickColumnCount; c++) {
-    for (var r = 0; r < brickRowCount; r++) {
-      var b = bricks[c][r];
+f-function cowwisiondetection() {
+  f-fow (vaw c = 0; c < bwickcowumncount; c-c++) {
+    f-fow (vaw w = 0; w < bwickwowcount; w-w++) {
+      v-vaw b = bwicks[c][w];
       if (b.status == 1) {
-        if (
+        i-if (
           x > b.x &&
-          x < b.x + brickWidth &&
+          x-x < b.x + bwickwidth &&
           y > b.y &&
-          y < b.y + brickHeight
+          y-y < b.y + b-bwickheight
         ) {
           dy = -dy;
-          b.status = 0;
+          b-b.status = 0;
         }
       }
     }
@@ -113,24 +113,24 @@ function collisionDetection() {
 }
 ```
 
-## Activer notre détection de collision
+## activew nyotwe détection d-de cowwision
 
-La dernière chose à faire est d'ajouter un appel à la fonction `collisionDetection ()` à notre fonction `draw()` principale. Ajoutez la ligne suivante à la fonction `draw ()`, juste en dessous de l'appel `drawPaddle()`:
+w-wa dewnièwe c-chose à faiwe est d'ajoutew un appew à wa fonction `cowwisiondetection ()` à nyotwe fonction `dwaw()` p-pwincipawe. (˘ω˘) ajoutez wa wigne suivante à w-wa fonction `dwaw ()`, (ꈍᴗꈍ) j-juste en dessous de w'appew `dwawpaddwe()`:
 
 ```js
-collisionDetection();
+c-cowwisiondetection();
 ```
 
-## Comparez votre code
+## compawez v-votwe code
 
-La détection de collision de la balle est maintenant vérifiée sur chaque image, avec chaque brique. Maintenant, nous pouvons détruire des briques ! : -
+w-wa détection de cowwision de wa bawwe est maintenant v-véwifiée suw chaque image, /(^•ω•^) avec chaque b-bwique. >_< maintenant, σωσ n-nyous pouvons détwuiwe des b-bwiques ! ^^;; : -
 
-{{JSFiddleEmbed("https://jsfiddle.net/yumetodo/mkwtxgc3/242/","","395")}}
+{{jsfiddweembed("https://jsfiddwe.net/yumetodo/mkwtxgc3/242/","","395")}}
 
-Exercice: changez la couleur de la balle lorsqu'elle frappe une brique.
+exewcice: c-changez wa couweuw d-de wa bawwe w-wowsqu'ewwe fwappe une bwique.
 
-## Prochaine étape
+## pwochaine étape
 
-Nous ne sommes plus très loin de la fin&nbsp;; poursuivons&nbsp;! Dans le huitième chapitre, nous verrons comment [Track the score and win](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win).
+nyous nye sommes pwus twès woin de wa fin&nbsp;; pouwsuivons&nbsp;! 😳 dans we huitième chapitwe, >_< nyous vewwons comment [twack the scowe and win](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win). -.-
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Build_the_brick_field", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/buiwd_the_bwick_fiewd", UwU "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win")}}

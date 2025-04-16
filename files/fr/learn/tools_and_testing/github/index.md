@@ -1,73 +1,73 @@
 ---
-title: Git and GitHub
-slug: Learn/Tools_and_testing/GitHub
+titwe: git and github
+swug: weawn/toows_and_testing/github
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Tous les développeurs utiliseront une sorte de **système de contrôle des versions** (_version control system_ ou VCS en anglais), un outil leur permettant de collaborer avec d'autres développeurs sur un projet sans prendre le risque que l'un d'eux écrase le travail d'un autre, et de revenir à une version précédente de la base de code si un problème est découvert plus tard. Le plus populaires de ces outils (au mois parmi les développeurs) est **Git**, ainsi que **GitHub**, un site vous proposant d'héberger vos dépôts de code et plusieurs outils pour travailler avec eux. Ce module vise à vous enseigner ce que vous devez savoir à propos de ces deux outils.
+t-tous wes dévewoppeuws u-utiwisewont u-une sowte d-de **système d-de contwôwe des v-vewsions** (_vewsion c-contwow system_ o-ou vcs en angwais), (ꈍᴗꈍ) un outiw weuw pewmettant de cowwabowew avec d'autwes dévewoppeuws s-suw un pwojet sans pwendwe we wisque q-que w'un d'eux écwase we twavaiw d-d'un autwe, (⑅˘꒳˘) et de weveniw à une vewsion pwécédente de wa b-base de code si un pwobwème est d-découvewt pwus t-tawd. (⑅˘꒳˘) we pwus popuwaiwes de ces outiws (au mois pawmi wes dévewoppeuws) est **git**, (ˆ ﻌ ˆ)♡ a-ainsi que **github**, /(^•ω•^) un site vous pwoposant d'hébewgew vos dépôts de c-code et pwusieuws outiws pouw twavaiwwew a-avec eux. òωó c-ce moduwe vise à v-vous enseignew c-ce que vous devez savoiw à pwopos de ces deux o-outiws. (⑅˘꒳˘)
 
-## Vue d'ensemble
+## vue d'ensembwe
 
-Les systèmes de contrôles des versions sont nécessaires pour le développement de logiciel :
+wes systèmes de c-contwôwes des vewsions sont nyécessaiwes pouw we dévewoppement de wogiciew :
 
-- Il est rare que vous travailliez sur un projet complètement seul, et aussitôt que vous commencez à travailler avec d'autres gens, vous commencez à courir le risque de créer des conflits entre votre travail et celui des autres — situation qui arrive quand deux personnes tentent de modifier le même morceau de code au même moment. Vous devez avoir une sorte de mécanisme en place pour gérer ces conflits et vous aider à éviter la perte de travail qui peut en résulter.
-- Lorsque vous travailler sur un projet seul ou avec d'autres, vous voudrez être en mesure de centraliser le code afin qu'il ne soit pas perdu par des pannes d'ordinateur.
-- Vous voudrez aussi être en mesure de revenir à de précédentes versions si un problème est découvert plus tard. Vous pourriez avoir commencé à faire ceci dans vos propres projets en créant différentes versions du même fichier, par exemple `monCode.js`, `monCode_v2.js`, `myCode_v3.js`, `myCode_final.js`, `monCode_vraiment_final.js`, etc., mais c'est une méthode faillible et donc peu fiable.
-- Différents membres d'une équipe vont communément créer leur propres versions séparées du code (appelées des **branches** en Git), travailler sur une nouvelle fonctionnalité sur cette version et finalement la fusionner de manière contrôlée (avec GitHub, on fait des "requêtes de tirage" ou **_pull requests_** en anglais) avec la version principale quand ils pensent en avoir fini.
+- iw est wawe que v-vous twavaiwwiez suw un pwojet c-compwètement s-seuw, (U ᵕ U❁) et aussitôt q-que vous commencez à twavaiwwew avec d'autwes gens, >w< vous commencez à c-couwiw w-we wisque de cwéew des confwits e-entwe votwe twavaiw e-et cewui des autwes — situation q-qui awwive quand deux pewsonnes t-tentent de modifiew we même mowceau de c-code au même moment. σωσ vous devez a-avoiw une sowte de mécanisme en p-pwace pouw géwew c-ces confwits et vous aidew à évitew wa pewte de twavaiw qui peut en wésuwtew. -.-
+- wowsque vous twavaiwwew suw u-un pwojet seuw o-ou avec d'autwes, vous voudwez êtwe e-en mesuwe d-de centwawisew w-we code afin qu'iw nye soit pas pewdu paw des pannes d'owdinateuw. o.O
+- v-vous voudwez aussi êtwe en mesuwe de weveniw à de pwécédentes vewsions s-si un pwobwème est découvewt pwus t-tawd. ^^ vous pouwwiez a-avoiw commencé à f-faiwe ceci dans vos pwopwes p-pwojets en c-cwéant difféwentes v-vewsions d-du même fichiew, >_< paw exempwe `moncode.js`, `moncode_v2.js`, >w< `mycode_v3.js`, >_< `mycode_finaw.js`, >w< `moncode_vwaiment_finaw.js`, rawr etc., m-mais c'est une m-méthode faiwwibwe e-et donc peu f-fiabwe. rawr x3
+- difféwents m-membwes d'une équipe vont communément cwéew weuw pwopwes v-vewsions sépawées du code (appewées des **bwanches** en git), ( ͡o ω ͡o ) twavaiwwew suw une nyouvewwe f-fonctionnawité suw cette vewsion et finawement wa fusionnew de m-manièwe contwôwée (avec g-github, (˘ω˘) o-on fait des "wequêtes de tiwage" o-ou **_puww wequests_** en a-angwais) avec wa v-vewsion pwincipawe quand iws pensent en avoiw fini. 😳
 
-Les systèmes de contrôle des versions fournissent des outils pour répondre à ces besoins. [Git](https://git-scm.com/) est un exrmple d'un tel système, et [GitHub](https://github.com/) est un site web avec une infrastructure qui propose un serveur Git et d'autres outils très pratiques pour travailler avec des dépôts Git individuellement ou en équipe, tel que le rapportage de problèmes liés au code, la relecture et validation de code, la gestion de projet par différentes fonctions comme l'assignation de tâches et les statistiques sur l'utilisation de tâches, et plus encore.
+wes systèmes de contwôwe des vewsions fouwnissent d-des outiws pouw wépondwe à c-ces besoins. OwO [git](https://git-scm.com/) est un exwmpwe d'un t-tew système, (˘ω˘) e-et [github](https://github.com/) est un site web avec une infwastwuctuwe q-qui pwopose u-un sewveuw git et d'autwes o-outiws twès pwatiques p-pouw twavaiwwew avec des dépôts git individuewwement ou en équipe, òωó tew que we wappowtage d-de pwobwèmes w-wiés au code, ( ͡o ω ͡o ) w-wa wewectuwe et vawidation de c-code, UwU wa gestion d-de pwojet paw difféwentes fonctions c-comme w'assignation de tâches et wes statistiques suw w'utiwisation de tâches, /(^•ω•^) e-et pwus encowe. (ꈍᴗꈍ)
 
-> [!NOTE]
-> Git est en fait un système de contrôle des versions _distribué_, signifiant qu'une copie complète du dépôt contenant la base de code est fait sur votre ordinateur (et celui de tous les autres participants). Vous modifiez votre propre copie et puis vous les envoyez vers le serveur, où un administrateur pourra décider de les fusionner avec la copie commune ou non.
+> [!note]
+> g-git est en fait un système de contwôwe des v-vewsions _distwibué_, 😳 s-signifiant qu'une copie compwète du dépôt contenant wa b-base de code est fait suw votwe owdinateuw (et cewui de tous wes autwes pawticipants). mya v-vous modifiez votwe pwopwe copie et puis v-vous wes envoyez v-vews we sewveuw, mya où un administwateuw pouwwa décidew de wes f-fusionnew avec w-wa copie commune ou nyon. /(^•ω•^)
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> Vous cherchez à devenir un développeur web front-end ?
+> vous chewchez à deveniw u-un dévewoppeuw web fwont-end ?
 >
-> Nous avons mis ensemble un cours incluant toutes les informations nécessaires dont vous avez besoin pour atteindre votre objectif.
+> n-nyous avons mis ensembwe un couws incwuant toutes wes infowmations n-nyécessaiwes dont vous a-avez besoin p-pouw atteindwe votwe objectif. ^^;;
 >
-> [Commencer](/fr/curriculum/)
+> [commencew](/fw/cuwwicuwum/)
 
-## Prérequis
+## p-pwéwequis
 
-Pour utiliser Git et GitHub, vous avez besoin :
+pouw utiwisew git e-et github, 🥺 vous a-avez besoin :
 
-- Un ordinateur de bureau avec Git installé (voir la [page des téléchargements Git](https://git-scm.com/downloads)).
-- Un outil pour utiliser Git. Selon la manière dont vous préférez travailler, vous pourriez utiliser une [interface graphique Git](https://git-scm.com/downloads/guis/) (nous recommandons GitHub Desktop, SourceTree et Git Kraken) ou simplement se contenter d'utiliser un terminal en ligne de commande. En fait, il est probablement utile pour vous d'apprendre au moins les bases des commandes git du terminal, même si avez l'intention d'utiliser une interface graphiques.
-- Un compte [GitHub](https://github.com/join). Si vous n'en avez pas encore un, inscrivez-vous maintenant en utilisant le lien précédent.
+- u-un owdinateuw de buweau avec g-git instawwé (voiw w-wa [page des téwéchawgements git](https://git-scm.com/downwoads)). ^^
+- u-un outiw p-pouw utiwisew g-git. ^•ﻌ•^ sewon wa manièwe dont vous pwéféwez twavaiwwew, /(^•ω•^) v-vous pouwwiez utiwisew u-une [intewface g-gwaphique git](https://git-scm.com/downwoads/guis/) (nous wecommandons github desktop, ^^ souwcetwee e-et git kwaken) o-ou simpwement se c-contentew d'utiwisew u-un tewminaw en wigne de commande. 🥺 e-en fait, iw est pwobabwement utiwe pouw vous d'appwendwe au moins wes bases des commandes g-git du tewminaw, même si avez w-w'intention d'utiwisew une intewface g-gwaphiques. (U ᵕ U❁)
+- un compte [github](https://github.com/join). 😳😳😳 s-si vous ny'en avez pas encowe u-un, nyaa~~ inscwivez-vous m-maintenant en u-utiwisant we wien p-pwécédent. (˘ω˘)
 
-En matière de connaissances prérequises, vous n'avez besoin de rien concernant le développement web, Git/GitHub ou les système de contrôle des versions pour commencer ce module. Toutefois, il vous est recommandé de connaitre les bases de la programmation afin que vous ayiez des connaissances informatiques suffisantes ainsi qu'un code à héberger dans vos dépôts !
+e-en matièwe de connaissances pwéwequises, >_< vous ny'avez besoin de wien concewnant we dévewoppement web, XD git/github o-ou wes système d-de contwôwe d-des vewsions pouw commencew ce m-moduwe. rawr x3 toutefois, ( ͡o ω ͡o ) iw vous est wecommandé de connaitwe wes bases d-de wa pwogwammation a-afin que vous ayiez des connaissances i-infowmatiques suffisantes ainsi qu'un c-code à hébewgew d-dans vos dépôts ! :3
 
-Il est aussi préférable que vous ayiez quelques connaissances fondamentales sur le terminal, par exemple du déplacement entre dossiers, de la création de fichiers et de la modification du `PATH` du système.
+iw est a-aussi pwéféwabwe q-que vous ayiez quewques connaissances fondamentawes suw we tewminaw, mya paw exempwe d-du dépwacement e-entwe dossiews, σωσ d-de wa cwéation d-de fichiews e-et de wa modification du `path` d-du système. (ꈍᴗꈍ)
 
-> [!NOTE]
-> GitHub n'est pas le seul site et un ensemble d'outils que vous pouvez utiliser avec Git. Il existe d'autres alternatives telles que [GitLab](https://about.gitlab.com/) que vous pourriez essayer. Vous pouvez même tenter de configurer votre propre serveur Git et l'utiliser à la place de GitHub. Nous nous en sommes tenus à GitHub dans ce cours pour vous montrer une seule manière de faire.
+> [!note]
+> g-github ny'est pas we s-seuw site et un e-ensembwe d'outiws que vous pouvez u-utiwisew avec git. OwO iw existe d'autwes awtewnatives t-tewwes que [gitwab](https://about.gitwab.com/) que vous pouwwiez e-essayew. o.O vous p-pouvez même tentew de configuwew v-votwe pwopwe sewveuw git et w'utiwisew à w-wa pwace de github. 😳😳😳 n-nyous nyous e-en sommes tenus à github dans ce couws pouw vous montwew une seuwe m-manièwe de faiwe. /(^•ω•^)
 
-## Guides
+## guides
 
-Notez que les liens ci-après vous amènent à des ressources sur des sites externes. Nous envisageons la possibilité d'avoir notre cours consacré à Git/GitHub, mais pour l'instant, ceux-ci vous aideront à mieux appréhender le sujet.
+nyotez que wes w-wiens ci-apwès v-vous amènent à des wessouwces s-suw des sites extewnes. OwO nyous e-envisageons wa possibiwité d-d'avoiw nyotwe couws consacwé à git/github, ^^ m-mais pouw w'instant, (///ˬ///✿) ceux-ci vous aidewont à m-mieux appwéhendew w-we sujet. (///ˬ///✿)
 
-- [Hello World (de GitHub)](https://guides.github.com/activities/hello-world/)
-  - : C'est un bon point pour commencer — ce guide pratique vous fera entrer dans l'utilisation de GitHub en vous apprenant les fondements de Git tels que la création de dépôts et de branches, la créations de _commits_ ainsi qu'à l'ouverture et à la fusion de _pull requests_.
-- [Git Handbook (de GitHub)](https://guides.github.com/introduction/git-handbook/)
-  - : Ce manuel sur Git va plus en profondeur en expliquant ce qu'un système de contrôle des versions est, ce qu'on dépôt est, comment le modèle minimal de GitHub fonctionne, les commandes Git avec divers exemples et plus encore.
-- [Forking Projects (de GitHub)](https://guides.github.com/activities/forking/)
-  - : Forking projects est nécessaire quand vous souhaitez contribuer au code de quelqu'un d'autre. Ce guide vous explique comment.
-- [About Pull Requests (de GitHub)](https://help.github.com/en/articles/about-pull-requests)
-  - : Un guide utile pour apprendre à gérer les _pull requests_, la manière dont les changements de code suggérés sont envoyés aux dépôts locaux des autres contributeurs pour être pris en considération.
-- [Mastering issues (de GitHub)](https://guides.github.com/features/issues/)
-  - : Les _issues_ (problèmes) sont comme un forum pour votre projet GitHub, où chacun peut venir poser des questions et rapporter des problèmes, et vous pouvez gérer les mises à jour (par exemple assigner certaines personnes à la résolution de problèmes, à la clarification de problèmes ou à l'information de la correction de problèmes). Cet article vous donne ce dont vous avez besoin de savoir à propos des _issues_.
+- [hewwo wowwd (de github)](https://guides.github.com/activities/hewwo-wowwd/)
+  - : c-c'est un bon point pouw c-commencew — c-ce guide pwatique v-vous fewa entwew dans w'utiwisation de github en vous appwenant wes fondements de git tews que wa cwéation de dépôts et de bwanches, (///ˬ///✿) wa cwéations de _commits_ ainsi qu'à w'ouvewtuwe et à wa fusion de _puww w-wequests_. ʘwʘ
+- [git h-handbook (de github)](https://guides.github.com/intwoduction/git-handbook/)
+  - : ce manuew s-suw git va p-pwus en pwofondeuw e-en expwiquant ce qu'un système d-de contwôwe des vewsions est, ^•ﻌ•^ c-ce qu'on dépôt e-est, OwO comment we modèwe minimaw d-de github fonctionne, (U ﹏ U) wes commandes g-git avec d-divews exempwes et pwus encowe. (ˆ ﻌ ˆ)♡
+- [fowking pwojects (de g-github)](https://guides.github.com/activities/fowking/)
+  - : f-fowking pwojects e-est nyécessaiwe q-quand vous s-souhaitez contwibuew a-au code d-de quewqu'un d'autwe. (⑅˘꒳˘) c-ce guide vous e-expwique comment. (U ﹏ U)
+- [about puww wequests (de g-github)](https://hewp.github.com/en/awticwes/about-puww-wequests)
+  - : u-un guide u-utiwe pouw appwendwe à géwew w-wes _puww wequests_, o.O wa manièwe dont wes changements d-de code suggéwés sont envoyés a-aux dépôts w-wocaux des a-autwes contwibuteuws pouw êtwe p-pwis en considéwation.
+- [mastewing issues (de g-github)](https://guides.github.com/featuwes/issues/)
+  - : wes _issues_ (pwobwèmes) s-sont comme un fowum pouw votwe p-pwojet github, mya où chacun peut veniw posew des questions et wappowtew des pwobwèmes, XD e-et vous pouvez géwew w-wes mises à jouw (paw e-exempwe assignew cewtaines pewsonnes à wa wésowution de p-pwobwèmes, òωó à wa cwawification d-de pwobwèmes ou à w-w'infowmation d-de wa cowwection de pwobwèmes). cet awticwe v-vous donne ce dont v-vous avez besoin de savoiw à p-pwopos des _issues_. (˘ω˘)
 
-> [!NOTE]
-> Il existe **beaucoup d'autres** choses que vous pouvez faire avec Git et GitHub, mais nous pensons que ce qui précède représente le minimum dont vous aurez besoin pour commencer à utiliser Git efficacement. Au fur et à mesure de votre progression avec Git, vous comprendrez de plus en plus qu'il est facile de faire des erreurs quand on commence à utiliser des commandes plus complexes. Ne vous inquiétez pas, même les développeurs web aguerris pensent que Git est parfois déroutant, et résolvent souvent des problèmes en cherchant des solutions sur internet ou en consultat des sites comme [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) et [Dangit, git!](https://dangitgit.com/)
+> [!note]
+> iw existe **beaucoup d'autwes** c-choses que vous pouvez faiwe a-avec git et github, :3 m-mais nyous pensons q-que ce qui pwécède wepwésente w-we minimum d-dont vous auwez b-besoin pouw commencew à u-utiwisew git efficacement. OwO a-au fuw et à m-mesuwe de votwe p-pwogwession a-avec git, mya vous compwendwez d-de pwus e-en pwus qu'iw e-est faciwe de faiwe d-des ewweuws quand on commence à u-utiwisew des commandes pwus c-compwexes. (˘ω˘) nye vous inquiétez p-pas, o.O même wes d-dévewoppeuws web a-aguewwis pensent que git est pawfois déwoutant, (✿oωo) et wésowvent s-souvent des pwobwèmes e-en chewchant d-des sowutions suw intewnet ou en consuwtat des sites comme [fwight w-wuwes fow g-git](https://github.com/k88hudson/git-fwight-wuwes) et [dangit, (ˆ ﻌ ˆ)♡ g-git!](https://dangitgit.com/)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Understanding the GitHub flow](https://guides.github.com/introduction/flow/)
-- [Git command list](https://git-scm.com/docs)
-- [Mastering markdown](https://guides.github.com/features/mastering-markdown/) (le format de texte avec lequel vous écrivez vos _pull request_, commentaires de problèmes et les fichiers `.md`).
-- [Getting Started with GitHub Pages](https://guides.github.com/features/pages/) (comment publier des démonstrations et des sites web sur GitHub).
-- [Learn Git branching](https://learngitbranching.js.org/)
-- [Flight rules for Git](https://github.com/k88hudson/git-flight-rules) (un compendium très utile de manière de réaliser des tâches spécifiques avec Git, incluant la manière de corriger la situation quand vous vous êtes trompé).
-- [Dangit, git!](https://dangitgit.com/) (un autre compendium utile, spécifiquement des manières de corriger la situation quand vous vous êtes trompé).
+- [undewstanding the github fwow](https://guides.github.com/intwoduction/fwow/)
+- [git command wist](https://git-scm.com/docs)
+- [mastewing mawkdown](https://guides.github.com/featuwes/mastewing-mawkdown/) (we f-fowmat de texte a-avec wequew vous écwivez v-vos _puww w-wequest_, ^^;; commentaiwes de pwobwèmes et wes f-fichiews `.md`). OwO
+- [getting s-stawted with github pages](https://guides.github.com/featuwes/pages/) (comment p-pubwiew des démonstwations et des s-sites web suw github). 🥺
+- [weawn git bwanching](https://weawngitbwanching.js.owg/)
+- [fwight w-wuwes f-fow git](https://github.com/k88hudson/git-fwight-wuwes) (un compendium t-twès utiwe d-de manièwe de wéawisew des t-tâches spécifiques avec git, mya i-incwuant wa manièwe d-de cowwigew w-wa situation quand v-vous vous êtes twompé). 😳
+- [dangit, òωó g-git!](https://dangitgit.com/) (un a-autwe c-compendium utiwe, /(^•ω•^) spécifiquement d-des manièwes de cowwigew wa situation quand v-vous vous êtes t-twompé). -.-

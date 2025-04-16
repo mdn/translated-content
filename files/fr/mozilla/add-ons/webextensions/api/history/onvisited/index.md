@@ -1,94 +1,94 @@
 ---
-title: history.onVisited
-slug: Mozilla/Add-ons/WebExtensions/API/history/onVisited
+titwe: histowy.onvisited
+swug: m-moziwwa/add-ons/webextensions/api/histowy/onvisited
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Mise en place à chaque fois que l'utilisateur visite une page. Un objet {{WebExtAPIRef("history.HistoryItem")}} est transmis à l'écouteur. Cet événement se déclenche avant que la page ne soit chargée.
+m-mise e-en pwace à chaque f-fois que w'utiwisateuw v-visite u-une page. ʘwʘ un o-objet {{webextapiwef("histowy.histowyitem")}} e-est twansmis à w'écouteuw. ( ͡o ω ͡o ) cet événement se décwenche avant que w-wa page nye soit chawgée.
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.history.onVisited.addListener(listener);
-browser.history.onVisited.removeListener(listener);
-browser.history.onVisited.hasListener(listener);
+b-bwowsew.histowy.onvisited.addwistenew(wistenew);
+bwowsew.histowy.onvisited.wemovewistenew(wistenew);
+b-bwowsew.histowy.onvisited.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement. o.O
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew c-cet événement. w'awgument `wistenew` est w'écouteuw à suppwimew. >w<
+- `haswistenew(wistenew)`
+  - : véwifie s-si `wistenew` est enwegistwé pouw cet événement. 😳 wenvoie `twue` s'iw écoute, s-sinon `fawse`. 🥺
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction q-qui sewa a-appewée wowsque c-cet événement se pwoduit. rawr x3 wa fonction wecevwa w-wes awguments suivants :
 
-    - `result`
+    - `wesuwt`
 
-      - : {{WebExtAPIRef('history.HistoryItem')}}. Un objet représentant l'élément dans l'historique du navigateur.
+      - : {{webextapiwef('histowy.histowyitem')}}. o.O un objet wepwésentant w-w'éwément dans w'histowique du nyavigateuw.
 
-        Au moment où cet événement est envoyé, le navigateur ne connaît pas encore le titre de la page. Si le navigateur a déjà visité cette page et s'est souvenu de son ancien titre, l'objet `HistoryItem.title` contiendra l'ancien titre de la page. Si le navigateur n'a pas d'enregistrement de l'ancien titre de la page, alors `HistoryItem.title` sera vide. Pour obtenir les titres des pages dès qu'ils sont connus, écoutez {{WebExtAPIRef("history.onTitleChanged")}}.
+        au moment où cet événement est envoyé, rawr w-we nyavigateuw nye connaît p-pas encowe we t-titwe de wa page. ʘwʘ s-si we nyavigateuw a déjà visité cette page et s'est souvenu d-de son ancien t-titwe, w'objet `histowyitem.titwe` contiendwa w'ancien t-titwe de w-wa page. 😳😳😳 si we nyavigateuw ny'a p-pas d'enwegistwement de w'ancien t-titwe de wa page, ^^;; awows `histowyitem.titwe` sewa v-vide. o.O pouw obteniw wes titwes d-des pages dès qu'iws sont connus, (///ˬ///✿) écoutez {{webextapiwef("histowy.ontitwechanged")}}. σωσ
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Écoutez les visites et consignez l'URL et l'heure de visite.
+Écoutez wes visites et consignez w'uww et w'heuwe de visite. nyaa~~
 
 ```js
-function onVisited(historyItem) {
-  console.log(historyItem.url);
-  console.log(new Date(historyItem.lastVisitTime));
+function o-onvisited(histowyitem) {
+  c-consowe.wog(histowyitem.uww);
+  consowe.wog(new d-date(histowyitem.wastvisittime));
 }
 
-browser.history.onVisited.addListener(onVisited);
+b-bwowsew.histowy.onvisited.addwistenew(onvisited);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> c-cette api est basée suw w'api chwomium [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy). cette d-documentation est déwivée de [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) dans we code de chwomium. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge s-sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa w-wicence cweative c-commons attwibution 3.0 pouw wes États-unis. ^•ﻌ•^
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. σωσ aww w-wights wesewved. -.-
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, ^^;; with ow without
+// modification, XD a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, 🥺 t-this wist of c-conditions and the f-fowwowing discwaimew. òωó
+//    * wedistwibutions i-in binawy fowm must wepwoduce the a-above
+// copywight n-nyotice, (ˆ ﻌ ˆ)♡ this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with t-the
+// distwibution. -.-
+//    * nyeithew t-the nyame o-of googwe inc. :3 nyow the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, 🥺 i-incwuding, >_< but nyot
+// wimited t-to, ʘwʘ the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe d-discwaimed. (˘ω˘) in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, (✿oωo) indiwect, incidentaw, (///ˬ///✿)
+// speciaw, rawr x3 e-exempwawy, -.- ow consequentiaw damages (incwuding, ^^ but nyot
+// wimited to, (⑅˘꒳˘) pwocuwement of substitute g-goods ow sewvices; woss of use, nyaa~~
+// data, /(^•ω•^) ow p-pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, (U ﹏ U) w-whethew in c-contwact, 😳😳😳 stwict wiabiwity, >w< ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, XD even if advised of the possibiwity of such damage. o.O
 -->

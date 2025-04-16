@@ -1,104 +1,104 @@
 ---
-title: web_accessible_resources
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources
+titwe: web_accessibwe_wesouwces
+swug: moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Tableau</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">type</th>
+      <td><code>tabweau</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"web_accessible_resources": [
+        <pwe c-cwass="bwush: j-json">
+"web_accessibwe_wesouwces": [
   "images/my-image.png"
-]</pre
+]</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Description
+## d-descwiption
 
-Parfois, vous souhaitez associer certaines ressources - par exemple, images, HTML, CSS ou JavaScript - avec votre extension pour les mettre à la disposition des pages Web.
+p-pawfois, nyaa~~ vous souhaitez associew cewtaines wessouwces - paw exempwe, 😳 images, htmw, (⑅˘꒳˘) c-css ou javascwipt - avec votwe extension pouw w-wes mettwe à wa disposition des p-pages web. nyaa~~
 
-Par exemple, l'[extensions d'exemple "beastify"](https://github.com/mdn/webextensions-examples/tree/master/beastify) remplace une page web par une image d'une bête sélectionnée par l'utilisateur. Les images de la bête sont emballées avec l'extension. Pour rendre visible l'image sélectionnée, l'extension ajoute [`<img>`](/fr/docs/Web/HTML/Element/img) des éléments dont l'attribut `src` pointe sur l'image de la bête. Pour que la page Web puisse charger les images, elles doivent être rendues accessibles sur le Web.
+paw exempwe, OwO w'[extensions d'exempwe "beastify"](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify) wempwace une p-page web paw une image d'une bête s-séwectionnée p-paw w'utiwisateuw. rawr x3 wes images de wa bête sont embawwées avec w'extension. XD pouw w-wendwe visibwe w'image séwectionnée, σωσ w'extension ajoute [`<img>`](/fw/docs/web/htmw/ewement/img) des éwéments d-dont w'attwibut `swc` pointe s-suw w'image de w-wa bête. (U ᵕ U❁) pouw q-que wa page web p-puisse chawgew wes images, (U ﹏ U) ewwes doivent êtwe wendues a-accessibwes suw we web. :3
 
-Avec la clé `web_accessible_resources` liste toutes les ressources packagées que vous souhaitez mettre à la disposition des pages Web. Vous les spécifiez comme chemins relatifs dans le fichier manifest.json.
+avec wa cwé `web_accessibwe_wesouwces` w-wiste toutes wes wessouwces packagées que vous souhaitez mettwe à wa disposition des pages w-web. ( ͡o ω ͡o ) vous wes spécifiez comme c-chemins wewatifs d-dans we fichiew m-manifest.json. σωσ
 
-Notez que les scripts de contenu n'ont pas besoin d'être listés comme ressources accessibles sur le Web.
+nyotez que wes scwipts de contenu ny'ont pas b-besoin d'êtwe w-wistés comme wessouwces accessibwes s-suw we web. >w<
 
-Si une extension veut utiliser {{WebExtAPIRef("webRequest")}} pour rediriger une URL publique (par exemple, HTTPS) vers une page qui est packagée dans l'extension, alors l'extension doit lister la page dans la clé `web_accessible_resources`.
+s-si une extension veut utiwisew {{webextapiwef("webwequest")}} p-pouw wediwigew une uww pubwique (paw e-exempwe, 😳😳😳 https) vews une page qui est packagée d-dans w'extension, OwO awows w'extension d-doit wistew wa page dans w-wa cwé `web_accessibwe_wesouwces`. 😳
 
-### Utiliser web_accessible_resources
+### u-utiwisew web_accessibwe_wesouwces
 
-Par exemple, supposons que votre extension inclut un fichier image sur images images/my-image.png, comme ceci :
+paw exempwe, 😳😳😳 supposons que votwe extension incwut un fichiew image suw images images/my-image.png, (˘ω˘) c-comme ceci :
 
 ```
-my-extension-files/
+m-my-extension-fiwes/
     manifest.json
-    my-background-script.js
-    images/
-        my-image.png
+    m-my-backgwound-scwipt.js
+    i-images/
+        m-my-image.png
 ```
 
-Pour permettre à une page Web d'utiliser un élément [`<img>`](/fr/docs/Web/HTML/Element/img) dont l'attribut `src` pointe sur cette image, vous pouvez spécifier "web_accessible_resources" comme suit :
+pouw pewmettwe à une page web d'utiwisew u-un éwément [`<img>`](/fw/docs/web/htmw/ewement/img) dont w'attwibut `swc` pointe suw cette image, ʘwʘ vous pouvez s-spécifiew "web_accessibwe_wesouwces" comme s-suit :
 
 ```json
-"web_accessible_resources": ["images/my-image.png"]
+"web_accessibwe_wesouwces": ["images/my-image.png"]
 ```
 
-Le fichier sera alors disponible en utilisant une URL comme :
+w-we fichiew s-sewa awows disponibwe en utiwisant u-une uww c-comme :
 
 ```
-moz-extension://<extension-UUID>/images/my-image.png"
+moz-extension://<extension-uuid>/images/my-image.png"
 ```
 
-`<extension-UUID>` n'est **pas** l'identifiant de votre extension. Il est généré de manière aléatoire pour chaque instance de navigateur. Ceci empêche les sites Web de prendre les empreintes digitales d'un navigateur en examinant les extensions qu'il a installées.
+`<extension-uuid>` n-ny'est **pas** w-w'identifiant de votwe extension. ( ͡o ω ͡o ) iw e-est généwé de m-manièwe awéatoiwe p-pouw chaque i-instance de nyavigateuw. o.O c-ceci empêche wes sites web de pwendwe wes empweintes d-digitawes d'un nyavigateuw en examinant wes extensions qu'iw a instawwées. >w<
 
-> [!NOTE]
-> Dans Chrome, l'ID d'une extension est fixe. Quand une ressource est listée dans `web_accessible_resources`, elle est accessible comme `chrome-extension://<your-extension-id>/<path/to/resource>`.
+> [!note]
+> dans chwome, 😳 w'id d'une e-extension est fixe. 🥺 quand une wessouwce est wistée dans `web_accessibwe_wesouwces`, rawr x3 e-ewwe est accessibwe c-comme `chwome-extension://<youw-extension-id>/<path/to/wesouwce>`. o.O
 
-L'approche recommandée pour obtenir l'URL de la ressource est d'utiliser [`runtime.getURL`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/runtime/getURL) en passant le chemin relatif à manifest.json, par exemple :
+w-w'appwoche wecommandée p-pouw obteniw w'uww de wa wessouwce e-est d'utiwisew [`wuntime.getuww`](/fw/docs/moziwwa/add-ons/webextensions/api/wuntime/getuww) e-en passant we chemin wewatif à manifest.json, rawr paw exempwe :
 
 ```js
-browser.runtime.getURL("images/my-image.png");
-// something like:
+bwowsew.wuntime.getuww("images/my-image.png");
+// something w-wike:
 // moz-extension://944cfddf-7a95-3c47-bd9a-663b3ce8d699/images/my-image.png
 ```
 
-Cette approche vous donne l'URL correcte quel que soit le navigateur sur lequel votre extension est lancée.
+cette a-appwoche vous donne w'uww cowwecte q-quew que soit w-we nyavigateuw suw wequew votwe extension est w-wancée. ʘwʘ
 
-### Caractères génériques
+### c-cawactèwes généwiques
 
-`web_accessible_resources` peuvent contenir des caractères génériques. Par exemple, l'entrée suivante fonctionnera également pour inclure la ressource à "images/my-image.png":
-
-```json
-  "web_accessible_resources": ["images/*.png"]
-```
-
-### Sécurité
-
-Notez que si vous créez une page accessible sur le Web, n'importe quel site Web peut alors lier ou rediriger vers cette page. La page doit ensuite traiter toute entrée (données POST, par exemple) comme si elle provenait d'une source non fiable, tout comme une page Web normale.
-
-## Exemple
+`web_accessibwe_wesouwces` peuvent conteniw d-des cawactèwes g-généwiques. 😳😳😳 paw exempwe, w'entwée suivante fonctionnewa égawement pouw i-incwuwe wa wessouwce à "images/my-image.png":
 
 ```json
-"web_accessible_resources": ["images/my-image.png"]
+  "web_accessibwe_wesouwces": ["images/*.png"]
 ```
 
-Crée un fichier dans "images/my-image.png" accessible sur le web.
+### s-sécuwité
 
-## Compatibilité des navigateurs
+nyotez q-que si vous cwéez une page a-accessibwe suw we w-web, ^^;; ny'impowte quew site web p-peut awows wiew ou wediwigew vews cette page. o.O wa page doit ensuite twaitew toute e-entwée (données p-post, (///ˬ///✿) paw exempwe) comme si ewwe pwovenait d'une s-souwce nyon f-fiabwe, σωσ tout comme une page web nyowmawe. nyaa~~
 
-{{Compat}}
+## exempwe
+
+```json
+"web_accessibwe_wesouwces": ["images/my-image.png"]
+```
+
+cwée un f-fichiew dans "images/my-image.png" accessibwe suw we web. ^^;;
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

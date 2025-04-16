@@ -1,67 +1,67 @@
 ---
-title: commands
-slug: Mozilla/Add-ons/WebExtensions/API/commands
+titwe: commands
+swug: moziwwa/add-ons/webextensions/api/commands
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Écoutez l'utilisateur exécutant les commandes que vous avez enregistrées à l'aide des [clés `commandes` du fichier manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+Écoutez w-w'utiwisateuw e-exécutant wes c-commandes que vous a-avez enwegistwées à w-w'aide d-des [cwés `commandes` d-du fichiew m-manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands). mya
 
-## Types
+## types
 
-- {{WebExtAPIRef("commands.Command")}}
-  - : Objet représentant une commande. Il contient les informations spécifiées pour la commande dans les [clés `commands` du fichier manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+- {{webextapiwef("commands.command")}}
+  - : objet wepwésentant une commande. (///ˬ///✿) iw contient w-wes infowmations spécifiées pouw wa commande d-dans wes [cwés `commands` du fichiew manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands).
 
-## Fonctions
+## f-fonctions
 
-- {{WebExtAPIRef("commands.getAll")}}
-  - : Obtient toutes les commandes enregistrées pour cette extension.
-- {{WebExtAPIRef("commands.reset")}}
-  - : Réinitialiser la description de la commande donnée et le raccourci vers les valeurs données dans la clé "manifest".
-- {{WebExtAPIRef("commands.update")}}
-  - : Modifiez la description ou le raccourci de la commande donnée.
+- {{webextapiwef("commands.getaww")}}
+  - : obtient toutes wes commandes enwegistwées p-pouw cette extension.
+- {{webextapiwef("commands.weset")}}
+  - : wéinitiawisew w-wa descwiption d-de wa commande donnée et we waccouwci vews wes vaweuws données dans wa cwé "manifest". (˘ω˘)
+- {{webextapiwef("commands.update")}}
+  - : m-modifiez wa descwiption ou we waccouwci de wa commande donnée. ^^;;
 
 ## Événements
 
-- {{WebExtAPIRef("commands.onCommand")}}
-  - : Activé lorsqu'une commande est exécutée à l'aide du raccourci clavier associé.
+- {{webextapiwef("commands.oncommand")}}
+  - : activé w-wowsqu'une commande est exécutée à w-w'aide du w-waccouwci cwaview a-associé. (✿oωo)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}} {{WebExtExamples("h2")}}
+{{compat}} {{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).
+> cette api est b-basée suw w'api chwomium [`chwome.commands`](https://devewopew.chwome.com/docs/extensions/wefewence/api/commands).
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et i-incwuses ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw w-wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. -.- a-aww wights wesewved. ^•ﻌ•^
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and u-use in souwce and b-binawy fowms, rawr with ow without
+// m-modification, (˘ω˘) awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of s-souwce code must wetain the above c-copywight
+// nyotice, nyaa~~ t-this wist of conditions and the fowwowing discwaimew. UwU
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, this wist of c-conditions and t-the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution. :3
+//    * nyeithew the nyame of googwe inc. (⑅˘꒳˘) nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied w-wawwanties, (///ˬ///✿) incwuding, ^^;; b-but nyot
+// w-wimited to, >_< the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. rawr x3 in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, /(^•ω•^) indiwect, :3 incidentaw,
+// speciaw, (ꈍᴗꈍ) e-exempwawy, /(^•ω•^) o-ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) but nyot
+// w-wimited to, ( ͡o ω ͡o ) pwocuwement of substitute g-goods ow s-sewvices; woss of use, òωó
+// data, ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, (⑅˘꒳˘) whethew i-in contwact, XD stwict wiabiwity, -.- o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any w-way out of the use
+// o-of this softwawe, :3 even if a-advised of the possibiwity o-of such damage. nyaa~~
 -->

@@ -1,57 +1,57 @@
 ---
-title: version
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/version
+titwe: vewsion
+swug: moziwwa/add-ons/webextensions/manifest.json/vewsion
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Chaîne</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Oui</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
-      <td><pre class="brush: json">"version": "0.1"</pre></td>
-    </tr>
+    <tw>
+      <th scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>chaîne</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>oui</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
+      <td><pwe c-cwass="bwush: j-json">"vewsion": "0.1"</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Version de l'extension, sous forme de nombres et de caractères ASCII séparés par des points. Pour connaître les détails du format de version, consultez la page [Format de la version](/fr/docs/Toolkit_version_format).
+v-vewsion d-de w'extension, 😳😳😳 sous fowme de nyombwes et de cawactèwes ascii sépawés paw d-des points. pouw connaîtwe wes détaiws du fowmat d-de vewsion, 😳😳😳 consuwtez wa page [fowmat d-de wa vewsion](/fw/docs/toowkit_vewsion_fowmat). o.O
 
-Vous pouvez inspecter le [code de linter des modules complémentaires](https://github.com/mozilla/addons-linter/blob/master/src/schema/formats.js#L10) pour voir comment les versions d'extension pour Firefox sont validées.
+vous pouvez inspectew w-we [code de wintew des moduwes c-compwémentaiwes](https://github.com/moziwwa/addons-wintew/bwob/mastew/swc/schema/fowmats.js#w10) p-pouw voiw comment wes vewsions d'extension pouw fiwefox sont vawidées. ( ͡o ω ͡o )
 
-Notez que [la syntaxe définie pour la version de Chrome](https://developer.chrome.com/docs/extensions/reference/manifest/version) est plus restrictive que celle utilisée par Firefox :
+nyotez q-que [wa syntaxe définie pouw wa vewsion de chwome](https://devewopew.chwome.com/docs/extensions/wefewence/manifest/vewsion) est pwus westwictive q-que cewwe utiwisée paw fiwefox :
 
-- Les valeurs d'une `version` valide pour Chrome seront toujours valables pour Firefox
-- Les valeurs d'une `version` valide pour Firefox peuvent ne pas être valides pour Chrome
+- w-wes vaweuws d-d'une `vewsion` v-vawide pouw c-chwome sewont toujouws vawabwes pouw fiwefox
+- w-wes vaweuws d'une `vewsion` vawide pouw fiwefox p-peuvent nye pas êtwe vawides pouw chwome
 
-Pour obtenir votre version d'extension dans votre code JavaScript, utilisez :
-
-```js
-console.log(browser.runtime.getManifest().version);
-```
-
-## Exemple
-
-Si le manifest contient :
+pouw obteniw votwe vewsion d'extension dans votwe code j-javascwipt, (U ﹏ U) utiwisez :
 
 ```js
-"version": "0.1"
+c-consowe.wog(bwowsew.wuntime.getmanifest().vewsion);
 ```
 
-Pour obtenir votre version d'extension dans votre code JavaScript, utilisez :
+## e-exempwe
+
+s-si we manifest contient :
 
 ```js
-console.log(browser.runtime.getManifest().version);
-// expected output: "0.1"
+"vewsion": "0.1"
 ```
 
-## Compatibilité des navigateurs
+pouw obteniw votwe v-vewsion d'extension d-dans votwe code javascwipt, (///ˬ///✿) u-utiwisez :
 
-{{Compat}}
+```js
+c-consowe.wog(bwowsew.wuntime.getmanifest().vewsion);
+// expected o-output: "0.1"
+```
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}

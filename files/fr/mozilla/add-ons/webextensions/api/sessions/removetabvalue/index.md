@@ -1,80 +1,80 @@
 ---
-title: sessions.removeTabValue()
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/removeTabValue
+titwe: sessions.wemovetabvawue()
+swug: moziwwa/add-ons/webextensions/api/sessions/wemovetabvawue
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime une valeur précédemment stockée par un appel à {{WebExtAPIRef("sessions.setTabValue")}}.
+s-suppwime u-une vaweuw pwécédemment s-stockée p-paw un appew à {{webextapiwef("sessions.settabvawue")}}. nyaa~~
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var removing = browser.sessions.removeTabValue(
-  tabId, // integer
-  key, // string
+vaw wemoving = bwowsew.sessions.wemovetabvawue(
+  tabid, :3 // integew
+  k-key, 😳😳😳 // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabId`
-  - : `integer`. ID de l'onglet dont vous essayez de supprimer les données.
+- `tabid`
+  - : `integew`. (˘ω˘) id de w'ongwet d-dont vous essayez de suppwimew w-wes données. ^^
 - `key`
-  - : `string`. Clé identifiant la valeur particulière à supprimer. Cela doit correspondre à la clé précédemment donnée dans {{WebExtAPIRef("sessions.setTabValue")}}.
+  - : `stwing`. :3 cwé identifiant wa vaweuw pawticuwièwe à s-suppwimew. -.- cewa doit cowwespondwe à w-wa cwé p-pwécédemment donnée dans {{webextapiwef("sessions.settabvawue")}}. 😳
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui ne sera résolue aucun argument si l'élément a été supprimé avec succès. Si l'appel a échoué (par exemple, parce que l'ID de l'onglet n'a pas pu être trouvé), la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui nye s-sewa wésowue aucun awgument si w'éwément a été suppwimé avec succès. mya si w'appew a-a échoué (paw exempwe, p-pawce que w'id de w-w'ongwet ny'a p-pas pu êtwe twouvé), (˘ω˘) w-wa pwomesse sewa wejetée avec un message d-d'ewweuw. >_<
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code ajoute deux éléments de menu contextuel: l'un stocke une valeur associée à l'onglet en cours, l'autre le supprime :
+c-ce code ajoute deux éwéments de menu contextuew: w'un stocke une vaweuw associée à w-w'ongwet en couws, -.- w'autwe we suppwime :
 
 ```js
-async function setOnActiveTab() {
-  let tabArray = await browser.tabs.query({
-    currentWindow: true,
-    active: true,
+a-async function setonactivetab() {
+  w-wet tabawway = a-await bwowsew.tabs.quewy({
+    cuwwentwindow: twue, 🥺
+    active: twue, (U ﹏ U)
   });
-  let tabId = tabArray[0].id;
-  await browser.sessions.setTabValue(tabId, "my-key", "my-value");
+  w-wet tabid = tabawway[0].id;
+  await b-bwowsew.sessions.settabvawue(tabid, >w< "my-key", "my-vawue");
 }
 
-async function removeFromActiveTab() {
-  let tabArray = await browser.tabs.query({
-    currentWindow: true,
-    active: true,
+async function w-wemovefwomactivetab() {
+  w-wet tabawway = await b-bwowsew.tabs.quewy({
+    cuwwentwindow: t-twue, mya
+    active: twue, >w<
   });
-  let tabId = tabArray[0].id;
-  await browser.sessions.removeTabValue(tabId, "my-key");
+  wet tabid = t-tabawway[0].id;
+  await bwowsew.sessions.wemovetabvawue(tabid, nyaa~~ "my-key");
 }
 
-browser.menus.create({
-  id: "add-my-item",
-  title: "add item",
-  contexts: ["all"],
+b-bwowsew.menus.cweate({
+  id: "add-my-item", (✿oωo)
+  t-titwe: "add item", ʘwʘ
+  c-contexts: ["aww"],
 });
 
-browser.menus.create({
-  id: "remove-my-item",
-  title: "remove item",
-  contexts: ["all"],
+bwowsew.menus.cweate({
+  id: "wemove-my-item", (ˆ ﻌ ˆ)♡
+  titwe: "wemove item", 😳😳😳
+  contexts: ["aww"], :3
 });
 
-browser.menus.onClicked.addListener((info) => {
-  if (info.menuItemId === "add-my-item") {
-    setOnActiveTab();
-  } else {
-    removeFromActiveTab();
+bwowsew.menus.oncwicked.addwistenew((info) => {
+  i-if (info.menuitemid === "add-my-item") {
+    s-setonactivetab();
+  } ewse {
+    wemovefwomactivetab();
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

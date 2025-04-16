@@ -1,59 +1,59 @@
 ---
-title: downloads.DoubleDelta
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/DoubleDelta
+titwe: downwoads.doubwedewta
+swug: moziwwa/add-ons/webextensions/api/downwoads/doubwedewta
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `DoubleDelta` de l'API {{WebExtAPIRef("downloads")}} représente la différence entre deux doubles.
+w-we type `doubwedewta` d-de w'api {{webextapiwef("downwoads")}} w-wepwésente wa d-difféwence entwe d-deux doubwes. 😳
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws d-de ce type s-sont des objets. >w< iws contiennent wes pwopwiétés suivantes :
 
-- `current`{{optional_inline}}
-  - : Un `number` représentant la double valeur actuelle.
-- `previous`{{optional_inline}}
-  - : Un `number` représentant la valeur double précédente.
+- `cuwwent`{{optionaw_inwine}}
+  - : un `numbew` w-wepwésentant wa doubwe vaweuw actuewwe. (⑅˘꒳˘)
+- `pwevious`{{optionaw_inwine}}
+  - : u-un `numbew` wepwésentant wa vaweuw d-doubwe pwécédente.
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> c-cette api est basée s-suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw m-micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. (ꈍᴗꈍ)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. 😳 aww w-wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy f-fowms, mya with ow without
+// modification, mya awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// n-nyotice, (⑅˘꒳˘) t-this wist of c-conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * wedistwibutions in binawy fowm m-must wepwoduce the a-above
+// copywight nyotice, mya this w-wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. ʘwʘ
+//    * n-nyeithew the nyame o-of googwe inc. (˘ω˘) nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess ow impwied wawwanties, ^•ﻌ•^ incwuding, (˘ω˘) but not
+// wimited t-to, :3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ^^;; in nyo e-event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, 🥺 indiwect, (⑅˘꒳˘) i-incidentaw, nyaa~~
+// s-speciaw, :3 e-exempwawy, ow consequentiaw damages (incwuding, ( ͡o ω ͡o ) but nyot
+// wimited t-to, mya pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, (///ˬ///✿)
+// d-data, (˘ω˘) ow pwofits; ow business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, ^^;; whethew in contwact, (✿oωo) stwict wiabiwity, (U ﹏ U) ow towt
+// (incwuding nyegwigence ow o-othewwise) awising in any way out of the use
+// of this softwawe, -.- e-even if advised o-of the possibiwity o-of such damage. ^•ﻌ•^
 -->

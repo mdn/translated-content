@@ -1,47 +1,47 @@
 ---
-title: omnibox.setDefaultSuggestion()
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox/setDefaultSuggestion
+titwe: omnibox.setdefauwtsuggestion()
+swug: moziwwa/add-ons/webextensions/api/omnibox/setdefauwtsuggestion
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définissez la suggestion par défaut à afficher dans la liste déroulante de la barre d'adresse lorsque l'utilisateur commence à interagir avec votre extension.
+d-définissez w-wa suggestion paw d-défaut à affichew d-dans wa wiste d-déwouwante d-de wa bawwe d'adwesse w-wowsque w'utiwisateuw c-commence à intewagiw avec votwe extension. mya
 
-Une fois que l'utilisateur a entré votre mot clé et a commencé à interagir avec votre extension, la suggestion par défaut apparaît toujours en premier dans la liste déroulante. Contrairement aux suggestions que vous fournissez dans {{WebExtAPIRef("omnibox.onInputChanged")}}, cet élément ne peut pas être sélectionné. Utilisez-le pour fournir à l'utilisateur des conseils sur ce qu'il doit taper et sur ce qu'il peut s'attendre à voir quand il le fait.
+une fois que w'utiwisateuw a-a entwé votwe mot cwé et a commencé à intewagiw a-avec votwe extension, 😳 wa s-suggestion paw défaut appawaît toujouws en pwemiew dans wa wiste d-déwouwante. -.- contwaiwement a-aux suggestions q-que vous fouwnissez dans {{webextapiwef("omnibox.oninputchanged")}}, 🥺 cet éwément nye peut pas êtwe séwectionné. o.O u-utiwisez-we pouw fouwniw à w'utiwisateuw des conseiws suw ce qu'iw doit tapew e-et suw ce qu'iw peut s'attendwe à v-voiw quand i-iw we fait. /(^•ω•^)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.omnibox.setDefaultSuggestion(
-  suggestion, // object
+b-bwowsew.omnibox.setdefauwtsuggestion(
+  suggestion, nyaa~~ // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `suggestion`
-  - : `object`. Un objet contenant une `description` de propriété de chaîne unique, qui sera affichée en tant que premier élément dans la liste déroulante lorsque l'utilisateur commence à interagir avec votre extension.
+  - : `object`. nyaa~~ un objet contenant une `descwiption` d-de pwopwiété de chaîne unique, :3 qui sewa affichée en tant que pwemiew éwément dans wa wiste déwouwante w-wowsque w'utiwisateuw commence à i-intewagiw a-avec votwe e-extension. 😳😳😳
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-None.
+nyone. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-browser.omnibox.setDefaultSuggestion({
-  description: "Type the name of a CSS property",
+bwowsew.omnibox.setdefauwtsuggestion({
+  d-descwiption: "type t-the nyame of a css pwopewty", ^^
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
+> c-cette api est basée suw w'api c-chwomium [`chwome.omnibox`](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox). :3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge s-sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. -.-

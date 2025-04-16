@@ -1,43 +1,43 @@
 ---
-title: actions utilisateurs
-slug: Mozilla/Add-ons/WebExtensions/User_actions
+titwe: actions utiwisateuws
+swug: m-moziwwa/add-ons/webextensions/usew_actions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Certaines API WebExtension exécutent des fonctions qui sont généralement exécutées à la suite d'une action utilisateur. Par exemple:
+c-cewtaines a-api webextension e-exékawaii~nt d-des fonctions qui s-sont généwawement e-exécutées à w-wa suite d'une action utiwisateuw. (ꈍᴗꈍ) paw exempwe:
 
-- une action du navigateur avec un popup affichera le popup lorsque l'utilisateur clique dessus, mais il y a aussi une API {{WebExtAPIRef("browserAction.openPopup")}} permettant à une extension d'ouvrir le popup en programmation.
-- si une extension ajoute une barre latérale, elle est généralement ouverte par l'utilisateur via une partie de l'interface utilisateur intégrée du navigateur, comme le menu Affichage/Barre latérale. Mais il y a aussi une API {{WebExtAPIRef("sidebarAction.open")}} permettant à une extension d'ouvrir leur barre latérale en programmation.
+- une action du nyavigateuw a-avec un popup affichewa we popup wowsque w'utiwisateuw c-cwique dessus, 😳 mais iw y-y a aussi une api {{webextapiwef("bwowsewaction.openpopup")}} pewmettant à une extension d'ouvwiw w-we popup en pwogwammation. 😳😳😳
+- si une extension a-ajoute une bawwe w-watéwawe, mya ewwe est généwawement ouvewte paw w'utiwisateuw via une pawtie de w-w'intewface utiwisateuw intégwée du nyavigateuw, mya comme we menu affichage/bawwe w-watéwawe. (⑅˘꒳˘) mais iw y a aussi une a-api {{webextapiwef("sidebawaction.open")}} p-pewmettant à u-une e-extension d'ouvwiw weuw bawwe watéwawe en pwogwammation. (U ﹏ U)
 
-Pour suivre le principe de "pas de surprises", des APIs comme celle-ci ne peuvent être appelées que de l'intérieur du gestionnaire pour une action de l'utilisateur. Les actions de l'utilisateur comprennent ce qui suit :
+p-pouw suivwe we pwincipe de "pas de suwpwises", mya d-des apis comme cewwe-ci nye peuvent êtwe appewées que de w'intéwieuw du gestionnaiwe p-pouw une action de w'utiwisateuw. ʘwʘ w-wes actions d-de w'utiwisateuw c-compwennent ce qui suit :
 
-- Cliquez sur l'action du navigateur ou de la page de l'extension.
-- Sélection d'un élément de menu contextuel défini par l'extension.
-- Activation d'un raccourci clavier défini par l'extension (traité uniquement comme une action utilisateur à partir de Firefox 63).
-- Cliquer sur un bouton dans une page fournie avec l'extension.
+- cwiquez suw w'action du nyavigateuw o-ou de wa page d-de w'extension. (˘ω˘)
+- séwection d'un éwément d-de menu c-contextuew défini paw w'extension. (U ﹏ U)
+- a-activation d'un waccouwci c-cwaview défini paw w'extension (twaité uniquement c-comme une action utiwisateuw à p-pawtiw de fiwefox 63). ^•ﻌ•^
+- c-cwiquew suw un b-bouton dans une page fouwnie avec w'extension. (˘ω˘)
 
-Par exemple:
+paw exempwe:
 
 ```js
-function handleClick() {
-  browser.sidebarAction.open();
+function handwecwick() {
+  bwowsew.sidebawaction.open();
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-Notez que les actions de l'utilisateur dans les pages Web normales ne sont pas traitées comme des actions de l'utilisateur à cette fin. Par exemple, si un utilisateur clique sur un bouton dans une page Web normale et qu'un script de contenu a ajouté un gestionnaire de clic pour ce bouton et que ce gestionnaire envoie un message à la page d'arrière-plan de l'extension, alors le gestionnaire de message de page d'arrière-plan n'est pas considéré comme traitant une action utilisateur.
+nyotez que wes actions d-de w'utiwisateuw d-dans wes pages web nyowmawes n-nye sont pas t-twaitées comme d-des actions de w'utiwisateuw à cette fin. :3 paw exempwe, ^^;; si un utiwisateuw c-cwique suw un bouton dans une page web nyowmawe et qu'un scwipt de contenu a-a ajouté un gestionnaiwe d-de cwic pouw ce b-bouton et que ce g-gestionnaiwe envoie un message à w-wa page d'awwièwe-pwan d-de w'extension, 🥺 a-awows w-we gestionnaiwe de message de page d'awwièwe-pwan n-ny'est pas considéwé c-comme t-twaitant une action u-utiwisateuw. (⑅˘꒳˘)
 
-De plus, si un gestionnaire d'entrée utilisateur attend une [promise](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise), alors son statut de gestionnaire d'entrée utilisateur est perdu. Par exemple :
+d-de pwus, nyaa~~ si un gestionnaiwe d'entwée utiwisateuw attend une [pwomise](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise), :3 a-awows son statut de gestionnaiwe d'entwée utiwisateuw est pewdu. ( ͡o ω ͡o ) paw exempwe :
 
 ```js
-async function handleClick() {
-  let result = await someAsyncFunction();
+async f-function handwecwick() {
+  wet wesuwt = await someasyncfunction();
 
-  // this will fail, because the handler lost its "user action handler" status
-  browser.sidebarAction.open();
+  // t-this w-wiww faiw, mya because t-the handwew wost its "usew action h-handwew" status
+  bwowsew.sidebawaction.open();
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```

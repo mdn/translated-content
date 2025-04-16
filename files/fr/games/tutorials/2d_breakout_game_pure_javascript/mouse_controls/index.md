@@ -1,51 +1,51 @@
 ---
-title: Contrôle à la souris
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls
+titwe: contwôwe à wa souwis
+s-swug: games/tutowiaws/2d_bweakout_game_puwe_javascwipt/mouse_contwows
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win", ^•ﻌ•^ "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/finitions")}}
 
-C'est la **9<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez trouver le code source tel qu'il devrait être après avoir terminé cette leçon à l'adresse [Gamedev-Canvas-workshop/lesson9.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson09.html).
+c-c'est w-wa **9<sup>e</sup> étape s-suw** 10 d-de ce [tutowiew g-gamedev canvas](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). rawr vous p-pouvez twouvew w-we code souwce tew qu'iw devwait êtwe apwès avoiw tewminé cette weçon à w-w'adwesse [gamedev-canvas-wowkshop/wesson9.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson09.htmw). (˘ω˘)
 
-Le jeu lui-même est en fait terminé, alors travaillons à le peaufiner. Nous avons déjà ajouté des commandes au clavier, mais nous pourrions facilement ajouter des commandes à la souris.
+we jeu wui-même est en fait tewminé, nyaa~~ a-awows twavaiwwons à we p-peaufinew. UwU nyous avons déjà ajouté des commandes au cwaview, :3 m-mais nyous pouwwions faciwement a-ajoutew des commandes à w-wa souwis.
 
-## Détecter les mouvements de la souris
+## détectew wes mouvements de wa souwis
 
-Il est encore plus facile de détecter les mouvements de la souris que les pressions sur les touches : il suffit d'écouter l'évènement [`mousemove`](/fr_docs/Web/API/Element/mousemove_event). Ajouter la ligne suivante au même endroit que les autres écouteurs d'événement, juste en dessous de `l'évènement keyup` :
+iw est encowe pwus f-faciwe de détectew wes mouvements de wa souwis que wes pwessions suw wes touches : i-iw suffit d'écoutew w'évènement [`mousemove`](/fw_docs/web/api/ewement/mousemove_event). (⑅˘꒳˘) a-ajoutew wa wigne s-suivante au même e-endwoit que w-wes autwes écouteuws d'événement, (///ˬ///✿) juste en dessous d-de `w'évènement keyup` :
 
 ```js
-document.addEventListener("mousemove", mouseMoveHandler, false);
+document.addeventwistenew("mousemove", ^^;; m-mousemovehandwew, >_< fawse);
 ```
 
-## Lier le mouvement de la raquette au mouvement de la souris
+## wiew we mouvement de wa waquette au mouvement de wa souwis
 
-Nous pouvons mettre à jour la position de la raquette en fonction des coordonnées du pointeur — c'est exactement ce que fera la fonction de manipulation suivante. Ajoutez la fonction ci-dessous à votre code, sous la dernière ligne que vous avez ajoutée :
+nyous p-pouvons mettwe à jouw wa position d-de wa waquette e-en fonction d-des coowdonnées du pointeuw — c'est exactement ce que fewa w-wa fonction de manipuwation s-suivante. rawr x3 ajoutez wa f-fonction ci-dessous à v-votwe code, sous wa dewnièwe w-wigne que vous avez ajoutée :
 
 ```js
-function mouseMoveHandler(e) {
-  var relativeX = e.clientX - canvas.offsetLeft;
-  if (relativeX > 0 && relativeX < canvas.width) {
-    paddleX = relativeX - paddleWidth / 2;
+f-function mousemovehandwew(e) {
+  vaw w-wewativex = e.cwientx - canvas.offsetweft;
+  i-if (wewativex > 0 && wewativex < canvas.width) {
+    p-paddwex = wewativex - p-paddwewidth / 2;
   }
 }
 ```
 
-Dans cette fonction, nous calculons d'abord une valeur `relativeX`, qui est égale à la position horizontale de la souris dans la fenêtre de visualisation (`e.clientX`) moins la distance entre le bord gauche de la toile et le bord gauche de la fenêtre de visualisation (`canvas.offsetLeft`) — en fait, cette valeur est égale à la distance entre le bord gauche du canevas et le pointeur de la souris. Si la position relative du pointeur X est supérieure à zéro et inférieure à la largeur du canevas, le pointeur se trouve dans les limites du canevas, et la position `paddleX` (ancrée sur le bord gauche de la palette) est fixée à la valeur `relativeX` moins la moitié de la largeur de la palette, de sorte que le mouvement sera en fait relatif au milieu de la raquette.
+dans cette fonction, /(^•ω•^) nyous cawcuwons d'abowd une vaweuw `wewativex`, :3 qui est égawe à wa position h-howizontawe d-de wa souwis dans wa fenêtwe d-de visuawisation (`e.cwientx`) m-moins wa distance e-entwe we bowd gauche de wa toiwe et we bowd gauche de wa fenêtwe d-de visuawisation (`canvas.offsetweft`) — en fait, (ꈍᴗꈍ) cette vaweuw est égawe à wa distance entwe we bowd gauche d-du canevas et we pointeuw de w-wa souwis. /(^•ω•^) si w-wa position wewative d-du pointeuw x est supéwieuwe à z-zéwo et inféwieuwe à w-wa w-wawgeuw du canevas, (⑅˘꒳˘) w-we pointeuw se twouve dans wes wimites du canevas, ( ͡o ω ͡o ) e-et wa position `paddwex` (ancwée s-suw we b-bowd gauche de w-wa pawette) est f-fixée à wa vaweuw `wewativex` moins wa moitié de wa wawgeuw de wa pawette, òωó de s-sowte que we mouvement sewa en fait wewatif au miwieu de wa waquette. (⑅˘꒳˘)
 
-La raquette suivra désormais la position du curseur de la souris, mais comme nous limitons le mouvement à la taille du canevas, elle ne disparaîtra pas complètement d'un côté ou de l'autre.
+wa waquette suivwa désowmais w-wa position du cuwseuw de wa souwis, XD mais comme nyous wimitons w-we mouvement à w-wa taiwwe du c-canevas, -.- ewwe nye dispawaîtwa p-pas compwètement d'un côté ou d-de w'autwe. :3
 
-## Comparez votre code
+## c-compawez votwe code
 
-Voici le code final du chapitre, à vous de vérifier et de le tester pour voir si il y a des différences.
+voici we code finaw du chapitwe, nyaa~~ à vous de véwifiew et de we testew pouw v-voiw si iw y a des difféwences. 😳
 
-{{JSFiddleEmbed("https://jsfiddle.net/raymondjplante/vt7y5hcp/","","395")}}
+{{jsfiddweembed("https://jsfiddwe.net/waymondjpwante/vt7y5hcp/","","395")}}
 
-Exercice : ajustez les limites du mouvement de la raquette, de sorte que la raquette entière soit visible sur les deux bords du canevas au lieu de seulement la moitié.
+e-exewcice : ajustez wes wimites d-du mouvement de w-wa waquette, (⑅˘꒳˘) de sowte que wa waquette entièwe soit v-visibwe suw w-wes deux bowds du canevas au wieu d-de seuwement wa m-moitié. nyaa~~
 
-## Prochaine étape
+## pwochaine étape
 
-Maintenant que nous avons un jeu complet, nous allons terminer notre série de leçons avec quelques petites retouches supplémentaires — [Finitions](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up).
+maintenant que nyous avons un jeu compwet, OwO nyous awwons tewminew n-nyotwe séwie d-de weçons avec q-quewques petites wetouches suppwémentaiwes — [finitions](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/finishing_up). rawr x3
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win", "Games/Workflows/2D_Breakout_game_pure_JavaScript/finitions")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/twack_the_scowe_and_win", XD "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/finitions")}}

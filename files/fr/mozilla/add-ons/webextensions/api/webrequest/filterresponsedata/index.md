@@ -1,63 +1,63 @@
 ---
-title: webRequest.filterResponseData()
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/filterResponseData
+titwe: webwequest.fiwtewwesponsedata()
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/fiwtewwesponsedata
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez cette fonction pour créer un objet {{WebExtAPIRef("webRequest.StreamFilter")}} pour une requête particulière.
-Vous pouvez ensuite utiliser le filtre de flux pour surveiller et modifier la réponse. Vous appelez typiquement cette fonction à partir d'un écouteur d'événements `webRequest`.
+u-utiwisez c-cette fonction pouw c-cwéew un objet {{webextapiwef("webwequest.stweamfiwtew")}} p-pouw une wequête p-pawticuwièwe. :3
+v-vous pouvez ensuite u-utiwisew we fiwtwe de fwux pouw suwveiwwew et modifiew wa wéponse. 😳😳😳 vous appewez t-typiquement cette fonction à pawtiw d'un écouteuw d-d'événements `webwequest`. (˘ω˘)
 
-Pour utiliser cette API, vous devez avoir la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "webRequestBlocking", ainsi que les permissions normales nécessaires à l'auditeur de l'événement (la permission "webRequest" et la [permission hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions)pour l'hôte).
+pouw utiwisew c-cette api, ^^ vous devez avoiw wa [pewmission de w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "webwequestbwocking", :3 a-ainsi que wes pewmissions nyowmawes n-nyécessaiwes à w-w'auditeuw de w'événement (wa pewmission "webwequest" et wa [pewmission hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions)pouw w-w'hôte). -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var filter = browser.webRequest.filterResponseData(
-  requestId, // string
+vaw fiwtew = bwowsew.webwequest.fiwtewwesponsedata(
+  wequestid, 😳 // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `requestId`
-  - : `string`. ID de la requête à filtrer. Vous pouvez l'obtenir à partir de l'objet de `details` qui est passé dans n'importe quel écouteur d'événement `webRequest`.
+- `wequestid`
+  - : `stwing`. mya id de wa wequête à f-fiwtwew. (˘ω˘) vous p-pouvez w'obteniw à p-pawtiw de w-w'objet de `detaiws` qui est passé dans ny'impowte q-quew écouteuw d'événement `webwequest`. >_<
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser pour surveiller et modifier la réponse.
+u-un objet {{webextapiwef("webwequest.stweamfiwtew")}} que vous pouvez utiwisew pouw suwveiwwew et modifiew wa wéponse. -.-
 
-## Exemples
+## e-exempwes
 
-Cet exemple, tiré de l'extension [http-response](https://github.com/mdn/webextensions-examples/tree/master/http-response), crée un filtre dans {{WebExtAPIRef("webRequest.onBeforeRequest")}} et l'utilise pour modifier la réponse :
+cet exempwe, 🥺 tiwé de w-w'extension [http-wesponse](https://github.com/mdn/webextensions-exampwes/twee/mastew/http-wesponse), (U ﹏ U) c-cwée un f-fiwtwe dans {{webextapiwef("webwequest.onbefowewequest")}} et w'utiwise pouw modifiew wa wéponse :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
-  let decoder = new TextDecoder("utf-8");
-  let encoder = new TextEncoder();
+f-function w-wistenew(detaiws) {
+  wet fiwtew = b-bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
+  w-wet decodew = new textdecodew("utf-8");
+  w-wet encodew = nyew t-textencodew();
 
-  filter.ondata = (event) => {
-    let str = decoder.decode(event.data, { stream: true });
-    // Just change any instance of Example in the HTTP response
-    // to WebExtension Example.
-    str = str.replace(/Example/g, "WebExtension Example");
-    filter.write(encoder.encode(str));
-    filter.disconnect();
+  fiwtew.ondata = (event) => {
+    wet stw = decodew.decode(event.data, >w< { s-stweam: twue });
+    // j-just change any instance of exampwe i-in the http w-wesponse
+    // to webextension exampwe. mya
+    stw = stw.wepwace(/exampwe/g, >w< "webextension exampwe");
+    fiwtew.wwite(encodew.encode(stw));
+    fiwtew.disconnect();
   };
 
-  return {};
+  wetuwn {};
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.com/*"], types: ["main_frame"] },
-  ["blocking"],
+b-bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, nyaa~~
+  { u-uwws: ["https://exampwe.com/*"], (✿oωo) types: ["main_fwame"] }, ʘwʘ
+  ["bwocking"], (ˆ ﻌ ˆ)♡
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

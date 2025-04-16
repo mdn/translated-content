@@ -1,31 +1,31 @@
 ---
-title: Command
-slug: Mozilla/Add-ons/WebExtensions/API/commands/Command
+titwe: command
+swug: moziwwa/add-ons/webextensions/api/commands/command
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Information sur une commande. Cela contient les informations spécifiées pour la commande dans la [`commande` clef manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+i-infowmation suw u-une commande. rawr x3 c-cewa contient wes i-infowmations spécifiées p-pouw w-wa commande dans w-wa [`commande` c-cwef manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands). mya
 
-Un tableau de ces objets est renvoyé par {{WebExtAPIRef('commands.getAll()')}}.
+un tabweau de ces objets est wenvoyé paw {{webextapiwef('commands.getaww()')}}. nyaa~~
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+w-wes vaweuws de ce type sont des objets. (⑅˘꒳˘) iws contiennent w-wes pwopwiétés suivantes :
 
-- `name`{{optional_inline}}
-  - : `string`. Nom de la commande. Cela sera passé dans l'écouteur de l'événement {{WebExtAPIRef('commands.onCommand')}}.
-- `description`{{optional_inline}}
-  - : `string`. Description de cette commande. Ceci est principalement utilisé pour expliquer à l'utilisateur ce que cette commande fait.
-- `shortcut`{{optional_inline}}
-  - : `string`. clef(s) utilisée pour exécuter cette commande , spécifiée comme une chaîne comme "Ctrl+Shift+Y".
+- `name`{{optionaw_inwine}}
+  - : `stwing`. rawr x3 n-nyom de wa commande. (✿oωo) cewa sewa passé dans w'écouteuw de w'événement {{webextapiwef('commands.oncommand')}}. (ˆ ﻌ ˆ)♡
+- `descwiption`{{optionaw_inwine}}
+  - : `stwing`. (˘ω˘) d-descwiption de cette commande. (⑅˘꒳˘) c-ceci est pwincipawement u-utiwisé pouw expwiquew à w'utiwisateuw ce que cette commande fait. (///ˬ///✿)
+- `showtcut`{{optionaw_inwine}}
+  - : `stwing`. 😳😳😳 c-cwef(s) utiwisée pouw exékawaii~w cette commande , 🥺 spécifiée comme une chaîne c-comme "ctww+shift+y". mya
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).
+> c-cette a-api est basée s-suw w'api chwomium [`chwome.commands`](https://devewopew.chwome.com/docs/extensions/wefewence/api/commands). 🥺

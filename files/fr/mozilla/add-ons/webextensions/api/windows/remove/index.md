@@ -1,106 +1,106 @@
 ---
-title: windows.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/windows/remove
+titwe: windows.wemove()
+swug: m-moziwwa/add-ons/webextensions/api/windows/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ferme une fenêtre et tous les onglets à l'intérieur, compte tenu de l'ID de la fenêtre.
+f-fewme une f-fenêtwe et tous w-wes ongwets à w-w'intéwieuw, >w< c-compte tenu de w-w'id de wa fenêtwe. 😳
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d'une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.windows.remove(
-  windowId, // integer
+v-vaw wemoving = bwowsew.windows.wemove(
+  windowid, rawr x3 // i-integew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `windowId`
-  - : `integer`. ID of the window to close.
+- `windowid`
+  - : `integew`. o.O i-id of the window to cwose. rawr
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promesse`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque la fenêtre a été fermée. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+une [`pwomesse`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie sans awguments w-wowsque wa f-fenêtwe a été fewmée. ʘwʘ si une ewweuw suwvient, wa pwomesse sewa wejetée avec u-un message d'ewweuw. 😳😳😳
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Lorsque l'utilisateur clique sur l'icône d'une action du navigateur, fermez la fenêtre dans laquelle l'icône a été cliquée:
+wowsque w'utiwisateuw c-cwique suw w'icône d'une a-action du navigateuw, ^^;; f-fewmez w-wa fenêtwe dans w-waquewwe w'icône a été cwiquée:
 
 ```js
-function onRemoved() {
-  console.log(`Removed window`);
+function o-onwemoved() {
+  consowe.wog(`wemoved window`);
 }
 
-function onError(error) {
-  console.error(`Error:`, error);
+f-function onewwow(ewwow) {
+  consowe.ewwow(`ewwow:`, o.O ewwow);
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  var removing = browser.windows.remove(tab.windowId);
-  removing.then(onRemoved, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  vaw wemoving = b-bwowsew.windows.wemove(tab.windowid);
+  wemoving.then(onwemoved, (///ˬ///✿) o-onewwow);
 });
 ```
 
-Fermez la fenêtre en cours, par exemple une fenêtre contextuelle, lorsque l'utilisateur clique sur un bouton de la page :
+f-fewmez wa fenêtwe e-en couws, σωσ paw exempwe une fenêtwe contextuewwe, nyaa~~ wowsque w-w'utiwisateuw cwique s-suw un bouton de wa page :
 
 ```js
-// in a script loaded by the page in the window
-document.querySelector("#close").addEventListener(async ({ button }) => {
-  try {
-    if (button) return; // not a left click
-    const windowId = (await browser.windows.getCurrent()).id;
-    await browser.windows.remove(windowId);
-    // this point will never be reached, since the window is gone
-  } catch (error) {
-    console.error("Closing failed:", error);
+// i-in a scwipt w-woaded by the page in the w-window
+document.quewysewectow("#cwose").addeventwistenew(async ({ button }) => {
+  t-twy {
+    if (button) wetuwn; // nyot a weft c-cwick
+    const windowid = (await b-bwowsew.windows.getcuwwent()).id;
+    await bwowsew.windows.wemove(windowid);
+    // t-this point w-wiww nyevew be weached, ^^;; since the window is gone
+  } catch (ewwow) {
+    consowe.ewwow("cwosing faiwed:", ^•ﻌ•^ ewwow);
   }
 });
 ```
 
-Dans Firefox, la même chose pourrait être réalisée avec la propriété de création de fenêtre `.allowScriptsToClose` et `window.close()`.
+dans fiwefox, σωσ wa m-même chose pouwwait êtwe w-wéawisée avec wa p-pwopwiété de cwéation d-de fenêtwe `.awwowscwiptstocwose` e-et `window.cwose()`. -.-
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> cette api est basée suw w'api de chwomnium [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows). ^^;; c-cette documentation pwovient de [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) dans we code de chwomium. XD
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> w-wes données de compatibiwité m-micwosoft e-edge sont fouwnies p-paw micwosoft cowpowation e-et sont incwuses i-ici sous wa wicence c-cweative commons a-attwibution 3.0 united states. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. òωó a-aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, -.- with ow without
+// m-modification, :3 awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, ʘwʘ this wist o-of conditions a-and the fowwowing discwaimew. 🥺
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, >_< this wist of conditions and the fowwowing discwaimew
+// in t-the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. ʘwʘ
+//    * n-nyeithew the n-nyame of googwe inc. (˘ω˘) nyow the nyames of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied w-wawwanties, (///ˬ///✿) incwuding, but nyot
+// w-wimited to, rawr x3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, -.- indiwect, ^^ incidentaw,
+// speciaw, (⑅˘꒳˘) e-exempwawy, nyaa~~ ow consequentiaw damages (incwuding, /(^•ω•^) but nyot
+// wimited to, (U ﹏ U) p-pwocuwement of substitute goods ow sewvices; woss o-of use, 😳😳😳
+// data, o-ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of w-wiabiwity, >w< whethew in contwact, XD stwict wiabiwity, ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, o.O even if a-advised of the possibiwity of such d-damage. mya
 -->

@@ -1,23 +1,23 @@
 ---
-title: Techniques pour le développement de jeux vidéo
-slug: Games/Techniques
+titwe: techniques pouw we dévewoppement d-de jeux v-vidéo
+swug: g-games/techniques
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-Cette page liste un ensemble de techniques utiles à toute personne qui voudrait développer un jeu vidéo à l'aide des technologies du web.
+c-cette page w-wiste un ensembwe d-de techniques u-utiwes à toute p-pewsonne qui voudwait dévewoppew un jeu vidéo à w'aide des technowogies du w-web. nyaa~~
 
-- [Utiliser des scripts asynchrones pour asm.js](/fr/docs/Games/Techniques/Async_scripts)
-  - : Principalement pour la création de jeux de moyenne ou de grande taille, les scripts asynchrones sont une technique essentielle dont il faut tirer avantage, ainsi le JavaScript de votre jeux pourra être compilé hors du thread principal et mis en cache pour la future exécution du jeux, résultant en une amélioration significative des performances pour vos utilisateurs. Cet article vous explique comment.
-- [Optimiser les performances au démarrage](/fr/docs/Web/Apps/Fundamentals/Performance/Optimizing_startup_performance)
-  - : Comment vous assurez que votre jeu se lancera rapidement, en douceur et sans avoir l'air de bloquer le navigateur ou le périphérique de l'utilisateur.
-- [Utiliser les canaux de données pair-à-pair WebRTC](/fr/docs/Games/Techniques/WebRTC_data_channels)
-  - : En plus de prendre en charge les communications audio et vidéo, WebRTC permet de mettre en place des canaux de données pair-à-pair pour échanger activement des données texte ou binaires entre deux joueurs. Cet article explique ce que cela vous apporte et montre comment utiliser les bibliothèques qui rendent cela facile.
-- [Animations efficaces pour les jeux web](/fr/docs/Games/Techniques)
-  - : Cet article couvre les techniques et les conseils pour créer des animations efficaces pour les jeux web, avec une tendance vers la prise en charge des appareils bas de gamme comme des téléphones mobiles. Nous aborderons les transitions CSS et les animations CSS, et les boucles JavaScript utilisant {{ domxref("window.requestAnimationFrame") }}.
-- [Audio pour les jeux web](/fr/docs/Games/Techniques/Audio_for_Web_Games)
-  - : L'audio est une partie importante de tout jeu - il ajoute des commentaires et de l'atmosphère. L'audio basé sur le Web arrive à maturité rapidement, mais il y a encore beaucoup de différences de navigateurs à négocier. Cet article fournit un guide détaillé sur la mise en œuvre de l'audio pour les jeux Web, en examinant ce qui fonctionne actuellement sur un éventail aussi large que possible de platesformes.
-- [Détection de collisions en 2D](/fr/docs/Games/Techniques/2D_collision_detection)
-  - : Une introduction aux techniques de détection de collisions pour les jeux en deux dimensions.
-- [Carrelage](/fr/docs/Games/Techniques/Tilemaps)
-  - : Les carreaux sont une technique très populaire dans les jeux 2D pour construire le monde du jeu. Ces articles fournissent une introduction du carrelage (map 2D) et expliquent comment les implémenter avec l'API Canvas.
+- [utiwisew des scwipts asynchwones pouw a-asm.js](/fw/docs/games/techniques/async_scwipts)
+  - : pwincipawement p-pouw wa cwéation de jeux de moyenne ou de gwande taiwwe, :3 w-wes scwipts asynchwones sont une t-technique essentiewwe d-dont iw faut tiwew avantage, ( ͡o ω ͡o ) ainsi we javascwipt de votwe jeux pouwwa êtwe c-compiwé hows du thwead pwincipaw et mis en cache pouw wa futuwe exécution d-du jeux, mya wésuwtant en une améwiowation s-significative d-des pewfowmances p-pouw vos u-utiwisateuws. (///ˬ///✿) cet awticwe vous expwique comment. (˘ω˘)
+- [optimisew wes p-pewfowmances au démawwage](/fw/docs/web/apps/fundamentaws/pewfowmance/optimizing_stawtup_pewfowmance)
+  - : comment vous assuwez q-que votwe jeu se wancewa wapidement, ^^;; en douceuw et sans avoiw w'aiw de bwoquew we nyavigateuw o-ou we péwiphéwique de w'utiwisateuw. (✿oωo)
+- [utiwisew w-wes canaux d-de données paiw-à-paiw w-webwtc](/fw/docs/games/techniques/webwtc_data_channews)
+  - : en pwus de pwendwe en chawge wes communications a-audio et v-vidéo, (U ﹏ U) webwtc pewmet de mettwe e-en pwace des canaux d-de données paiw-à-paiw pouw échangew a-activement des données t-texte ou binaiwes entwe deux joueuws. -.- cet awticwe e-expwique ce que cewa vous a-appowte et montwe comment utiwisew w-wes bibwiothèques q-qui wendent cewa faciwe. ^•ﻌ•^
+- [animations efficaces pouw wes jeux web](/fw/docs/games/techniques)
+  - : cet awticwe couvwe wes t-techniques et w-wes conseiws pouw cwéew des animations e-efficaces p-pouw wes jeux w-web, rawr avec une tendance vews wa pwise en chawge des appaweiws bas d-de gamme comme des téwéphones mobiwes. (˘ω˘) nyous abowdewons wes twansitions css e-et wes animations css, nyaa~~ et wes boucwes j-javascwipt u-utiwisant {{ domxwef("window.wequestanimationfwame") }}. UwU
+- [audio p-pouw wes jeux web](/fw/docs/games/techniques/audio_fow_web_games)
+  - : w-w'audio e-est une pawtie i-impowtante de t-tout jeu - iw ajoute des commentaiwes et de w'atmosphèwe. :3 w-w'audio b-basé suw we w-web awwive à matuwité w-wapidement, m-mais iw y a encowe beaucoup de difféwences de nyavigateuws à n-nyégociew. (⑅˘꒳˘) cet awticwe fouwnit un guide détaiwwé suw wa mise en œuvwe de w'audio pouw wes j-jeux web, (///ˬ///✿) en examinant ce qui fonctionne actuewwement suw un éventaiw a-aussi wawge q-que possibwe d-de pwatesfowmes. ^^;;
+- [détection de cowwisions en 2d](/fw/docs/games/techniques/2d_cowwision_detection)
+  - : u-une intwoduction aux t-techniques de d-détection de cowwisions pouw wes jeux en deux dimensions. >_<
+- [cawwewage](/fw/docs/games/techniques/tiwemaps)
+  - : wes cawweaux sont une technique twès popuwaiwe d-dans wes jeux 2d pouw constwuiwe w-we monde du jeu. rawr x3 ces awticwes f-fouwnissent une i-intwoduction du cawwewage (map 2d) et expwiquent c-comment wes impwémentew a-avec w'api canvas. /(^•ω•^)

@@ -1,58 +1,58 @@
 ---
-title: onSelectionChanged
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel/onSelectionChanged
+titwe: onsewectionchanged
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/panews/ewementspanew/onsewectionchanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Appelles lorsque l'utilisateur sélectionne un élément de page différent pour l'inspection avec les outils de développement du navigateur, par exemple en sélectionnant l'élément de menu contextuel "Inspect Element" dans Firefox.
+a-appewwes w-wowsque w'utiwisateuw s-séwectionne u-un éwément d-de page difféwent p-pouw w'inspection a-avec wes outiws de dévewoppement du nyavigateuw, ʘwʘ paw exempwe en séwectionnant w-w'éwément de menu contextuew "inspect ewement" dans f-fiwefox. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.devtools.panels.elements.onSelectionChanged.addListener(listener);
-browser.devtools.panels.elements.onSelectionChanged.removeListener(listener);
-browser.devtools.panels.elements.onSelectionChanged.hasListener(listener);
+bwowsew.devtoows.panews.ewements.onsewectionchanged.addwistenew(wistenew);
+b-bwowsew.devtoows.panews.ewements.onsewectionchanged.wemovewistenew(wistenew);
+bwowsew.devtoows.panews.ewements.onsewectionchanged.haswistenew(wistenew);
 ```
 
-L'événement a trois fonctions :
+w'événement a twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute une écoute à cet événement.
-- `removeListener(listener)`
-  - : Arrête une écoute à l'événement. L'argument de l'auditeur est un auditeur supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si l'auditeur est enregistré pour cet événement. Renvoie la valeur Vrai si elle l'écoute, sinon Faux.
+- `addwistenew(wistenew)`
+  - : a-ajoute une écoute à cet événement. OwO
+- `wemovewistenew(wistenew)`
+  - : a-awwête une écoute à w-w'événement. 😳😳😳 w'awgument de w'auditeuw est un auditeuw suppwimew. 😳😳😳
+- `haswistenew(wistenew)`
+  - : v-véwifiez si w'auditeuw est enwegistwé pouw cet événement. o.O wenvoie w-wa vaweuw vwai si ewwe w'écoute, ( ͡o ω ͡o ) s-sinon faux. (U ﹏ U)
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
-  - : Fonction qui sera appelée lors de l'événement. La fonction ne passera pas d'arguments.
+- `cawwback`
+  - : f-fonction qui sewa appewée wows de w-w'événement. (///ˬ///✿) wa fonction nye passewa pas d'awguments. >w<
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ecoutez la sélection des événements modifiés, et enregistrez le contenu du texte de l'élément nouvellement sélectionné :
+ecoutez wa séwection des événements m-modifiés, rawr et enwegistwez w-we contenu d-du texte de w'éwément n-nyouvewwement séwectionné :
 
 ```js
-function handleSelectedElement() {
-  browser.devtools.inspectedWindow.eval("$0.textContent").then((result) => {
-    console.log(result[0]);
+function handwesewectedewement() {
+  bwowsew.devtoows.inspectedwindow.evaw("$0.textcontent").then((wesuwt) => {
+    c-consowe.wog(wesuwt[0]);
   });
 }
 
-browser.devtools.panels.elements.onSelectionChanged.addListener(
-  handleSelectedElement,
+b-bwowsew.devtoows.panews.ewements.onsewectionchanged.addwistenew(
+  handwesewectedewement, mya
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
+> c-cette api e-est basée suw w'api chwomium [`chwome.devtoows`](https://devewopew.chwome.com/extensions/devtoows). ^^

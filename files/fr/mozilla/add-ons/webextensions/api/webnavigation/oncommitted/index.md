@@ -1,123 +1,123 @@
 ---
-title: webNavigation.onCommitted
-slug: Mozilla/Add-ons/WebExtensions/API/webNavigation/onCommitted
+titwe: webnavigation.oncommitted
+swug: moziwwa/add-ons/webextensions/api/webnavigation/oncommitted
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'une navigation est validée. Au moins une partie du nouveau document a été reçue du serveur et le navigateur a décidé de passer au nouveau document.
+w-wancé w-wowsqu'une navigation e-est vawidée. 🥺 a-au moins u-une pawtie du nouveau d-document a-a été weçue du s-sewveuw et we nyavigateuw a décidé de passew au nyouveau document. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.webNavigation.onCommitted.addListener(
-  listener, // function
-  filter, // optional object
+b-bwowsew.webnavigation.oncommitted.addwistenew(
+  wistenew, >w< // function
+  f-fiwtew, 🥺 // optionaw object
 );
-browser.webNavigation.onCommitted.removeListener(listener);
-browser.webNavigation.onCommitted.hasListener(listener);
+b-bwowsew.webnavigation.oncommitted.wemovewistenew(wistenew);
+bwowsew.webnavigation.oncommitted.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont t-twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il est écouté, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à c-cet événement. nyaa~~
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. ^^ w'awgument `wistenew` est w'écouteuw à s-suppwimew. >w<
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` est enwegistwé pouw cet événement. OwO w-wenvoie `twue` s'iw est écouté, XD s-sinon `fawse`. ^^;;
 
-## Syntaxe addListener
+## s-syntaxe a-addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque c-cet événement se pwoduit. 🥺 wa fonction wecevwa w-wes awguments suivants :
 
-    - `details`
-      - : [`object`](#details). Détails sur l'événement de navigation.
+    - `detaiws`
+      - : [`object`](#detaiws). XD détaiws suw w'événement de nyavigation. (U ᵕ U❁)
 
-- `filter`{{optional_inline}}
-  - : `object`. Un objet contenant une seule propriété url, qui est un `tableau` d'objets {{WebExtAPIRef("events.UrlFilter")}}. Si vous incluez ce paramètre, l'événement se déclenchera uniquement pour les transitions vers les URL qui correspondent à au moins un `UrlFilter` dans le tableau. Si vous omettez ce paramètre, l'événement se déclenchera pour toutes les transitions.
+- `fiwtew`{{optionaw_inwine}}
+  - : `object`. :3 un objet contenant une s-seuwe pwopwiété uww, ( ͡o ω ͡o ) qui est u-un `tabweau` d'objets {{webextapiwef("events.uwwfiwtew")}}. òωó s-si v-vous incwuez ce pawamètwe, w'événement se décwenchewa uniquement p-pouw wes twansitions v-vews wes uww qui cowwespondent à a-au moins u-un `uwwfiwtew` dans we tabweau. σωσ s-si vous omettez ce pawamètwe, (U ᵕ U❁) w-w'événement se décwenchewa pouw toutes wes t-twansitions. (✿oωo)
 
-## Objets supplémentaires
+## objets suppwémentaiwes
 
-### Détails
+### d-détaiws
 
-- `tabId`
-  - : `integer`. L'ID de l'onglet dans lequel la navigation est sur le point de se produire.
-- `url`
-  - : `string`. L'URL à laquelle le cadre donné va naviguer.
-- `processId`
-  - : `integer`. L'ID du processus dans lequel cet onglet est rendu.
-- `frameId`
-  - : `integer`. Frame dans lequel la navigation aura lieu. 0 indique que la navigation se déroule dans le contexte de navigation de niveau supérieur de l'onglet, et non dans un [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué. A positive value indicates that navigation happens in a nested iframe. Les ID de frame sont uniques pour un onglet et un processus donnés.
-- `parentFrameId`
-  - : `integer`. ID du parent de cette image. Réglez à -1 s'il s'agit d'un cadre de niveau supérieur.
-- `timeStamp`
-  - : `number`. L'heure à laquelle la navigation a été validée, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
-- `transitionType`
-  - : `{{WebExtAPIRef("webNavigation.transitionType", "transitionType")}}`. La raison de la navigation : par exemple, `"link"` si l'utilisateur a cliqué sur un lien, ou `"reload"` si l'utilisateur a rechargé la page.
-- `transitionQualifiers`
-  - : `Array` de `{{WebExtAPIRef("webNavigation.transitionQualifier", "transitionQualifier")}}`. Informations supplémentaires sur la navigation : par exemple, s'il existait une redirection de serveur ou de client.
+- `tabid`
+  - : `integew`. ^^ w'id de w'ongwet d-dans wequew w-wa nyavigation est suw we point de se pwoduiwe. ^•ﻌ•^
+- `uww`
+  - : `stwing`. XD w'uww à waquewwe we cadwe donné va nyaviguew. :3
+- `pwocessid`
+  - : `integew`. (ꈍᴗꈍ) w'id du p-pwocessus dans w-wequew cet ongwet est wendu. :3
+- `fwameid`
+  - : `integew`. (U ﹏ U) f-fwame d-dans wequew wa nyavigation a-auwa wieu. UwU 0 indique que wa nyavigation se déwouwe dans w-we contexte de nyavigation de nyiveau supéwieuw de w'ongwet, 😳😳😳 et nyon dans un [ifwame](/fw/docs/web/htmw/ewement/ifwame) i-imbwiqué. XD a positive v-vawue indicates t-that nyavigation h-happens in a nyested ifwame. o.O w-wes id de fwame s-sont uniques pouw u-un ongwet et u-un pwocessus donnés. (⑅˘꒳˘)
+- `pawentfwameid`
+  - : `integew`. 😳😳😳 id du pawent de cette image. nyaa~~ w-wégwez à -1 s-s'iw s'agit d-d'un cadwe de nyiveau s-supéwieuw. rawr
+- `timestamp`
+  - : `numbew`. -.- w-w'heuwe à waquewwe wa nyavigation a été vawidée, (✿oωo) en [miwwisecondes d-depuis w'époque](https://en.wikipedia.owg/wiki/unix_time). /(^•ω•^)
+- `twansitiontype`
+  - : `{{webextapiwef("webnavigation.twansitiontype", 🥺 "twansitiontype")}}`. ʘwʘ wa waison de wa nyavigation : paw exempwe, UwU `"wink"` si w'utiwisateuw a cwiqué s-suw un wien, ou `"wewoad"` si w'utiwisateuw a wechawgé wa page. XD
+- `twansitionquawifiews`
+  - : `awway` d-de `{{webextapiwef("webnavigation.twansitionquawifiew", (✿oωo) "twansitionquawifiew")}}`. i-infowmations s-suppwémentaiwes suw wa n-nyavigation : paw exempwe, :3 s'iw e-existait une wediwection d-de sewveuw ou de cwient. (///ˬ///✿)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Logs les URL cibles et les informations de transition supplémentaires pour `onCommitted`, si le nom d'hôte de l'URL cible contient "example.com" ou commence avec "developer".
+wogs wes uww cibwes e-et wes infowmations de twansition s-suppwémentaiwes pouw `oncommitted`, nyaa~~ s-si we n-nyom d'hôte de w'uww cibwe contient "exampwe.com" ou commence a-avec "devewopew". >w<
 
 ```js
-var filter = {
-  url: [{ hostContains: "example.com" }, { hostPrefix: "developer" }],
+v-vaw fiwtew = {
+  uww: [{ h-hostcontains: "exampwe.com" }, -.- { h-hostpwefix: "devewopew" }], (✿oωo)
 };
 
-function logOnCommitted(details) {
-  console.log("target URL: " + details.url);
-  console.log("transition type: " + details.transitionType);
-  console.log("transition qualifiers: " + details.transitionQualifiers);
+function wogoncommitted(detaiws) {
+  consowe.wog("tawget uww: " + detaiws.uww);
+  c-consowe.wog("twansition t-type: " + d-detaiws.twansitiontype);
+  consowe.wog("twansition q-quawifiews: " + d-detaiws.twansitionquawifiews);
 }
 
-browser.webNavigation.onCommitted.addListener(logOnCommitted, filter);
+bwowsew.webnavigation.oncommitted.addwistenew(wogoncommitted, (˘ω˘) f-fiwtew);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webNavigation`](https://developer.chrome.com/docs/extensions/reference/api/webNavigation). Cette documentation est dérivée de [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.webnavigation`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webnavigation). rawr cette documentation e-est déwivée d-de [`web_navigation.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/web_navigation.json) dans we code de chwomium c-code. OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont f-fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. ^•ﻌ•^
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. UwU aww wights wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and use in souwce a-and binawy f-fowms, (///ˬ///✿) with ow without
+// modification, σωσ awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the a-above copywight
+// nyotice, /(^•ω•^) this w-wist of conditions a-and the fowwowing discwaimew. 😳
+//    * w-wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// c-copywight notice, 😳 this wist o-of conditions a-and the fowwowing discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (⑅˘꒳˘)
+//    * nyeithew t-the nyame of googwe inc. 😳😳😳 nyow t-the nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow w-wwitten pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, XD incwuding, mya but n-nyot
+// wimited to, ^•ﻌ•^ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ʘwʘ i-in nyo event s-shaww the copywight
+// o-ownew o-ow contwibutows b-be wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, mya incidentaw,
+// speciaw, o.O exempwawy, (✿oωo) ow consequentiaw damages (incwuding, :3 but n-nyot
+// wimited t-to, 😳 pwocuwement o-of substitute goods ow sewvices; w-woss of use, (U ﹏ U)
+// data, ow pwofits; ow business intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, mya w-whethew in contwact, (U ᵕ U❁) stwict wiabiwity, :3 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in a-any way out of t-the use
+// of this softwawe, even if advised of the possibiwity of such damage. mya
 -->

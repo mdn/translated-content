@@ -1,69 +1,69 @@
 ---
-title: theme.reset()
-slug: Mozilla/Add-ons/WebExtensions/API/theme/reset
+titwe: theme.weset()
+swug: moziwwa/add-ons/webextensions/api/theme/weset
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Réinitialise tout thème appliqué à l'aide de la méthode {{WebExtAPIRef("theme.update()")}}
+w-wéinitiawise t-tout thème appwiqué à w-w'aide d-de wa méthode {{webextapiwef("theme.update()")}}
 
-Notez que cela réinitialisera toujours le thème au thème par défaut d'origine, même si l'utilisateur a sélectionné un thème différent avant que le thème de cette extension ait été appliqué (voir [bug 1415267](https://bugzilla.mozilla.org/show_bug.cgi?id=1415267)).
+n-nyotez que cewa w-wéinitiawisewa t-toujouws we t-thème au thème paw défaut d'owigine, mya même si w'utiwisateuw a séwectionné un t-thème difféwent avant que we thème de cette e-extension ait été appwiqué (voiw [bug 1415267](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1415267)). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.theme.reset( windowsId // integer )
+b-bwowsew.theme.weset( windowsid // integew )
 ```
 
-### Paramètres
+### pawamètwes
 
-- `windowId` {{optional_inline}}
-  - : `integer`. L'ID d'une fenêtre. Si cela est indiqué, le thème appliqué sur cette fenêtre sera réinitialisé. Sinon le thème sera réinitialisé sur toutes les fenêtres.
+- `windowid` {{optionaw_inwine}}
+  - : `integew`. (˘ω˘) w-w'id d'une fenêtwe. (U ﹏ U) si cewa est i-indiqué, ^•ﻌ•^ we t-thème appwiqué suw cette fenêtwe sewa wéinitiawisé. (˘ω˘) sinon we thème sewa wéinitiawisé s-suw toutes wes fenêtwes. :3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ce code applique un thème, puis le supprime lorsque l'utilisateur clique sur une action du navigateur:
+c-ce code appwique un thème, ^^;; p-puis we suppwime w-wowsque w'utiwisateuw c-cwique suw u-une action du navigateuw:
 
 ```js
-browser.theme.update(themes.night);
+bwowsew.theme.update(themes.night);
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.theme.reset();
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  bwowsew.theme.weset();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. 🥺 aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, nyaa~~ with o-ow without
+// modification, :3 awe p-pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain t-the above copywight
+// nyotice, ( ͡o ω ͡o ) t-this wist o-of conditions and the fowwowing d-discwaimew. mya
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight n-nyotice, (///ˬ///✿) this wist of conditions a-and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws pwovided with the
+// distwibution. (˘ω˘)
+//    * nyeithew the nyame of googwe inc. ^^;; nyow the nyames o-of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, incwuding, (✿oωo) b-but nyot
+// w-wimited to, (U ﹏ U) the i-impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe d-discwaimed. -.- in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, ^•ﻌ•^ i-indiwect, rawr incidentaw, (˘ω˘)
+// s-speciaw, nyaa~~ exempwawy, ow consequentiaw damages (incwuding, UwU b-but not
+// wimited to, :3 pwocuwement of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, ow p-pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, (///ˬ///✿) w-whethew in c-contwact, ^^;; stwict wiabiwity, >_< ow t-towt
+// (incwuding nyegwigence o-ow othewwise) awising i-in any way out of the use
+// of this softwawe, rawr x3 even if advised of the possibiwity of such d-damage. /(^•ω•^)
 -->

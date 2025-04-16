@@ -1,130 +1,130 @@
 ---
-title: options_ui
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/options_ui
+titwe: options_ui
+swug: moziwwa/add-ons/webextensions/manifest.json/options_ui
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table" style="height: 166px; width: 852px">
+<tabwe c-cwass="standawd-tabwe" s-stywe="height: 166px; w-width: 852px">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json;">
+        <pwe cwass="bwush: j-json;">
 "options_ui": {
-  "page": "options/options.html"
-}</pre
+  "page": "options/options.htmw"
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé `options_ui` pour définir une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Options_pages) pour votre extension.
+utiwisez wa cwé `options_ui` pouw définiw une [page d'options](/fw/docs/moziwwa/add-ons/webextensions/options_pages) pouw votwe e-extension. ^^;;
 
-La page d'options contient des paramètres pour l'extension. L'utilisateur peut y accéder à partir du gestionnaire des extensions du navigateur, et vous pouvez l'ouvrir à partir de votre extension à l'aide de {{WebExtAPIRef("runtime.openOptionsPage()")}}.
+wa page d'options contient des pawamètwes p-pouw w'extension. o.O w'utiwisateuw p-peut y accédew à pawtiw du gestionnaiwe des extensions d-du nyavigateuw, (///ˬ///✿) et vous pouvez w-w'ouvwiw à pawtiw d-de votwe extension à w'aide de {{webextapiwef("wuntime.openoptionspage()")}}. σωσ
 
-Vous spécifiez `options_ui` comme un chemin vers un fichier HTML intégré à votre extension. Le fichier HTML peut inclure des fichiers CSS et JavaScript, tout comme une page Web normale. Contrairement à une page normale, le JavaScript peut utiliser toutes les [APIs WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) pour lesquelles l'extension possède des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions). Cependant, il fonctionne dans un "scope" différent de celui de vos scripts d'arrière plan.
+vous spécifiez `options_ui` comme un chemin v-vews un fichiew htmw intégwé à votwe extension. nyaa~~ we fichiew htmw peut incwuwe d-des fichiews css et javascwipt, ^^;; t-tout comme une p-page web nyowmawe. ^•ﻌ•^ c-contwaiwement à u-une page nyowmawe, σωσ we javascwipt peut utiwisew t-toutes wes [apis webextension](/fw/docs/moziwwa/add-ons/webextensions/api) pouw wesquewwes w-w'extension possède des [pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions). -.- cependant, ^^;; iw fonctionne dans un "scope" difféwent de c-cewui de vos scwipts d'awwièwe p-pwan. XD
 
-Si vous souhaitez **partager** des données ou des fonctions, entre JavaScript sur votre **page d'options** et vos **scripts d'arrière-plan**, vous pouvez le faire directement en obtenant une référence à la [fenêtre](/fr/docs/Web/API/Window) de vos scripts d'arrière-plan avec {{WebExtAPIRef("extension.getBackgroundPage()")}}, ou une référence à {{domxref("Window")}} de l'une des pages s'exécutant dans votre extension avec {{WebExtAPIRef("extension.getViews()")}}. Ou, vous pouvez faire communiquer le JavaScript de votre page d'options et vos scripts en arrière-plan à l'aide de {{WebExtAPIRef("runtime.sendMessage()")}}, {{WebExtAPIRef("runtime.onMessage")}}, ou {{WebExtAPIRef("runtime.connect()")}}.
+si vous s-souhaitez **pawtagew** d-des données ou des fonctions, 🥺 entwe javascwipt suw votwe **page d-d'options** e-et vos **scwipts d'awwièwe-pwan**, v-vous pouvez w-we faiwe diwectement en obtenant u-une wéféwence à wa [fenêtwe](/fw/docs/web/api/window) de v-vos scwipts d'awwièwe-pwan avec {{webextapiwef("extension.getbackgwoundpage()")}}, òωó ou une wéféwence à {{domxwef("window")}} d-de w'une des pages s'exécutant d-dans votwe extension avec {{webextapiwef("extension.getviews()")}}. (ˆ ﻌ ˆ)♡ o-ou, vous pouvez f-faiwe communiquew we javascwipt de votwe page d'options et vos scwipts en awwièwe-pwan à w'aide de {{webextapiwef("wuntime.sendmessage()")}}, -.- {{webextapiwef("wuntime.onmessage")}}, :3 o-ou {{webextapiwef("wuntime.connect()")}}. ʘwʘ
 
-Ces derniers (ou les équivalents {{WebExtAPIRef("runtime.Port")}} peuvent également être utilisés pour partager des options entre vos [scripts d'arrière-plan](/fr/Add-frs/WebExtensions/Background_scripts) et vos **[scripts de contenu.](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts)**
+c-ces dewniews (ou wes équivawents {{webextapiwef("wuntime.powt")}} p-peuvent égawement êtwe u-utiwisés pouw p-pawtagew des options entwe vos [scwipts d'awwièwe-pwan](/fw/add-fws/webextensions/backgwound_scwipts) et vos **[scwipts d-de contenu.](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts)**
 
-En général, vous souhaiterez stocker les options modifiées sur les pages d'options à l'aide de {{WebExtAPIRef("storage", "storage API", "", "true")}} soit dans {{WebExtAPIRef("storage.sync()")}} (si vous souhaitez que les paramètres soient synchronisés sur toutes les instances du navigateur auxquelles l'utilisateur est connecté), ou {{WebExtAPIRef("storage.local()")}} (si les paramètres sont locaux, dans la machine/le profil actuel). Si vous le faites et que votre (vos) [scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Background_scripts) (ou [script(s) de contenus](/fr/docs/Web)) doit connaître le changement, votre (vos) script(s) d'arrière plan pourra choisir d'ajouter un auditeur à {{WebExtAPIRef("storage.onChanged")}}.
+en généwaw, 🥺 vous souhaitewez stockew wes options modifiées s-suw wes pages d'options à w'aide d-de {{webextapiwef("stowage", >_< "stowage a-api", ʘwʘ "", "twue")}} s-soit dans {{webextapiwef("stowage.sync()")}} (si vous s-souhaitez que w-wes pawamètwes s-soient synchwonisés s-suw toutes wes instances du nyavigateuw auxquewwes w-w'utiwisateuw e-est connecté), o-ou {{webextapiwef("stowage.wocaw()")}} (si w-wes pawamètwes s-sont wocaux, (˘ω˘) dans wa machine/we pwofiw actuew). (✿oωo) si vous we faites e-et que votwe (vos) [scwipts d'awwièwe pwan](/fw/docs/moziwwa/add-ons/webextensions/backgwound_scwipts) (ou [scwipt(s) de contenus](/fw/docs/web)) doit connaîtwe we changement, (///ˬ///✿) votwe (vos) s-scwipt(s) d'awwièwe pwan pouwwa choisiw d'ajoutew un auditeuw à {{webextapiwef("stowage.onchanged")}}. rawr x3
 
-## Syntaxe
+## s-syntaxe
 
-La clé `options_ui` est un objet avec le contenu suivant :
+wa cwé `options_ui` e-est u-un objet avec we contenu suivant :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">name</th>
+      <th s-scope="cow">type</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>browser_style</code><br />{{optional_inline}}</td>
-      <td><code>Booléen</code></td>
+    <tw>
+      <td><code>bwowsew_stywe</code><bw />{{optionaw_inwine}}</td>
+      <td><code>boowéen</code></td>
       <td>
-        <p>Facultatif, par défaut : <code>true</code> .</p>
+        <p>facuwtatif, -.- paw défaut : <code>twue</code> .</p>
         <p>
-          Utilisez cette option pour inclure une feuille de style dans votre
-          page qui la rendra compatible avec l'interface utilisateur du
-          navigateur et avec d'autres extensions qui utilisent la propriété
-          <code>browser_style</code> . Bien qu'il contienne par défaut
-          <code>true</code> , il est recommandé d'inclure cette propriété.
+          utiwisez cette option pouw incwuwe une feuiwwe de stywe d-dans votwe
+          page qui w-wa wendwa compatibwe avec w'intewface u-utiwisateuw d-du
+          nyavigateuw et avec d'autwes extensions q-qui utiwisent w-wa pwopwiété
+          <code>bwowsew_stywe</code> . ^^ bien q-qu'iw contienne p-paw défaut
+          <code>twue</code> , (⑅˘꒳˘) iw est wecommandé d'incwuwe cette pwopwiété. nyaa~~
         </p>
         <p>
-          Dans Firefox, la feuille de style peut être vue sur
-          <code>chrome://browser/content/extension.css</code>, ou
-          <code>chrome://browser/content/extension-mac.css</code> sur macOS.
-          Lorsque vous fixez les dimensions, sachez que cette feuille de style
-          fixe actuellement <code>box-sizing: border-box</code> (voir
-          <a href="/docs/Web/CSS/box-sizing">box-sizing</a>).
+          d-dans fiwefox, /(^•ω•^) wa f-feuiwwe de stywe p-peut êtwe vue suw
+          <code>chwome://bwowsew/content/extension.css</code>, (U ﹏ U) o-ou
+          <code>chwome://bwowsew/content/extension-mac.css</code> s-suw macos. 😳😳😳
+          wowsque v-vous fixez wes dimensions, >w< sachez que cette feuiwwe de stywe
+          fixe a-actuewwement <code>box-sizing: b-bowdew-box</code> (voiw
+          <a hwef="/docs/web/css/box-sizing">box-sizing</a>). XD
         </p>
         <p>
-          Le
-          <a href="http://design.firefox.com/photon/">guide de style Firefox</a>
-          décrit les classes que vous pouvez appliquer aux éléments de la
-          fenêtre contextuelle afin d'obtenir des styles particuliers.
+          we
+          <a h-hwef="http://design.fiwefox.com/photon/">guide d-de stywe fiwefox</a>
+          décwit wes cwasses que v-vous pouvez appwiquew aux éwéments de wa
+          fenêtwe contextuewwe afin d-d'obteniw des stywes pawticuwiews. o.O
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>open_in_tab</code><br />{{optional_inline}}</td>
-      <td><code>Booléen</code></td>
+    </tw>
+    <tw>
+      <td><code>open_in_tab</code><bw />{{optionaw_inwine}}</td>
+      <td><code>boowéen</code></td>
       <td>
-        <p>par défaut : <code>false</code>.</p>
+        <p>paw défaut : <code>fawse</code>.</p>
         <p>
-          Si c'est <code>true</code> , la page options s'ouvrira dans un onglet
-          normal du navigateur, plutôt que d'être intégrée au gestionnaire des
-          extensions du navigateur.
+          si c'est <code>twue</code> , mya w-wa page options s-s'ouvwiwa dans un ongwet
+          nyowmaw du nyavigateuw, 🥺 pwutôt q-que d'êtwe i-intégwée au gestionnaiwe des
+          extensions du nyavigateuw. ^^;;
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>page</code></td>
-      <td><code>Chaîne de caractères</code></td>
+      <td><code>chaîne d-de cawactèwes</code></td>
       <td>
-        <p>Obligatoire</p>
+        <p>obwigatoiwe</p>
         <p>
-          Le chemin d'accès au fichier HTML contenant la spécification de votre
-          page d'options.
+          we chemin d'accès a-au fichiew htmw contenant wa spécification de votwe
+          p-page d'options. :3
         </p>
         <p>
-          Le chemin est relatif à l'emplacement du
-          <code>manifest.json</code> lui-même.
+          we chemin e-est wewatif à w-w'empwacement du
+          <code>manifest.json</code> wui-même. (U ﹏ U)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## e-exempwe
 
 ```json
   "options_ui": {
-    "page": "options/options.html"
+    "page": "options/options.htmw"
   }
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [`options_page`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/options_page) {{deprecated_inline}}
-- [Browser styles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
-- [Options pages](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Options_pages)
+- [`options_page`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/options_page) {{depwecated_inwine}}
+- [bwowsew s-stywes](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes)
+- [options pages](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/options_pages)

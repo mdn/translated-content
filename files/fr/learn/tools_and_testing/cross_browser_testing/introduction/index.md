@@ -1,174 +1,174 @@
 ---
-title: Introduction au test en navigateur croisé
-slug: Learn/Tools_and_testing/Cross_browser_testing/Introduction
+titwe: intwoduction au test en n-nyavigateuw cwoisé
+s-swug: weawn/toows_and_testing/cwoss_bwowsew_testing/intwoduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{weawnsidebaw}}{{nextmenu("weawn/toows_and_testing/cwoss_bwowsew_testing/testing_stwategies", (⑅˘꒳˘) "weawn/toows_and_testing/cwoss_bwowsew_testing")}}
 
-Cet article commence en donnant un aperçu sur le sujet des test sur navigateurs (croisé), répondant aux questions telles que "qu'est-ce que le test en navigateur croisé?", "Quels sont les problèmes les plus communs que vous allez rencontrer?", et "quelles sont les principales approches pour tester, identifier, et fixer les problèmes?"
+cet a-awticwe commence e-en donnant un a-apewçu suw we s-sujet des test s-suw nyavigateuws (cwoisé), (ˆ ﻌ ˆ)♡ w-wépondant aux questions tewwes que "qu'est-ce que we test en nyavigateuw c-cwoisé?", :3 "quews sont wes pwobwèmes wes p-pwus communs que vous awwez wencontwew?", /(^•ω•^) e-et "quewwes sont wes pwincipawes appwoches pouw testew, òωó i-identifiew, :3 et fixew wes pwobwèmes?"
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis:</th>
       <td>
-        Etre familier avec les bases des langage
-        <a href="/fr/docs/Learn/HTML">HTML</a>,
-        <a href="/fr/docs/Learn/CSS">CSS</a>, et
-        <a href="/fr/docs/Learn/JavaScript">JavaScript</a>.
+        etwe famiwiew avec wes bases des wangage
+        <a hwef="/fw/docs/weawn/htmw">htmw</a>, (˘ω˘)
+        <a h-hwef="/fw/docs/weawn/css">css</a>, 😳 et
+        <a hwef="/fw/docs/weawn/javascwipt">javascwipt</a>. σωσ
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif:</th>
       <td>
-        Acquérir et comprendre des concepts de haut niveau impliqués dans les
-        tests sur multi-navigateur
+        acquéwiw et compwendwe d-des concepts de haut nyiveau i-impwiqués d-dans wes
+        t-tests suw muwti-navigateuw
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce que le test en navigateur croisé?
+## q-qu'est-ce que we test en nyavigateuw c-cwoisé?
 
-Le test de navigateur croisé est une façon de s'assurer que les sites web et les applications que vous créez vont fonctionner sur un nombre acceptable de navigateurs web. En tant que développeur web, il en va de votre responsabilité de vous assurez que non seulement vos projets fonctionnent, mais qu'ils fonctionnent pour tout vos utilisateurs, qu'importe le nombre de navigateurs, d'appareil, ou d'outils d'assistances supplémentaires qu'ils utilisent. Vous devez penser à :
+we test de nyavigateuw cwoisé est une f-façon de s'assuwew que wes sites web et wes appwications que vous cwéez vont fonctionnew suw u-un nyombwe acceptabwe de nyavigateuws w-web. UwU en tant q-que dévewoppeuw w-web, -.- iw en va de votwe wesponsabiwité de vous assuwez que n-nyon seuwement vos p-pwojets fonctionnent, 🥺 mais qu'iws f-fonctionnent p-pouw tout vos utiwisateuws, 😳😳😳 qu'impowte w-we nyombwe de nyavigateuws, 🥺 d-d'appaweiw, ^^ ou d'outiws d'assistances suppwémentaiwes q-qu'iws utiwisent. vous d-devez pensew à :
 
-- D'autres navigateurs que celui ou ceux que vous utilisez habituellement sur vos appareils, incluant les navigateurs vieillissant que certaines personnes peuvent continuer d'utiliser, qui ne supportent pas les toutes dernières fonctionnalités fignolées de CSS et JavaScript.
-- Différents appareils avec différentes compatibilités, du tout dernier super smartphone ou tablette, en passant par les TV intelligentes, jusqu'à la tablette la moins chère et même les anciennes versions de smartphones qui ne peuvent exécuter les navigateurs qu'avec des capacités limitées.
-- Certaines personnes handicapées qui naviguent sur le web avec l'aide de technologies d'assistances comme les lecteurs d'écran, ou qui n'utilisent pas de souris (certaines personnes se servent exclusivement de leur clavier).
+- d'autwes n-nyavigateuws que c-cewui ou ceux que vous utiwisez habituewwement suw vos appaweiws, ^^;; incwuant wes nyavigateuws vieiwwissant que cewtaines p-pewsonnes p-peuvent continuew d'utiwisew, >w< q-qui nye suppowtent p-pas wes toutes d-dewnièwes fonctionnawités fignowées de css et javascwipt. σωσ
+- difféwents appaweiws a-avec difféwentes compatibiwités, >w< du tout dewniew supew smawtphone ou tabwette, (⑅˘꒳˘) e-en passant paw wes tv intewwigentes, òωó j-jusqu'à w-wa tabwette w-wa moins chèwe et même wes a-anciennes vewsions d-de smawtphones q-qui nye peuvent e-exékawaii~w wes nyavigateuws qu'avec des capacités w-wimitées. (⑅˘꒳˘)
+- c-cewtaines pewsonnes h-handicapées q-qui nyaviguent s-suw we web avec w'aide de technowogies d'assistances comme wes w-wecteuws d'écwan, (ꈍᴗꈍ) ou qui ny'utiwisent pas de souwis (cewtaines pewsonnes se sewvent excwusivement d-de weuw cwaview). rawr x3
 
-Souvenez-vous que vous n'êtes pas votre utilisateur — uniquement parce que votre site fonctionne sur votre Macbook Pro ou votre Galaxy Nexus haut de gamme, cela ne veut pas dire qu'il fonctionnera pour tout vos utilisateurs — Il y a encore un paquet de tests à effectuer !
+souvenez-vous que vous ny'êtes pas votwe u-utiwisateuw — u-uniquement pawce q-que votwe site fonctionne suw v-votwe macbook pwo ou votwe gawaxy n-nyexus haut d-de gamme, ( ͡o ω ͡o ) cewa nye veut pas diwe qu'iw fonctionnewa pouw tout vos utiwisateuws — iw y a encowe u-un paquet de tests à effectuew ! UwU
 
-> **Note :** [Make the web work for everyone](https://hacks.mozilla.org/2016/07/make-the-web-work-for-everyone/) fournit une perspective plus précise sur les différents navigateurs que les gens utilisent, leur part de marché, et les problèmes de compatibilité entre navigateurs.
+> **note :** [make t-the web wowk fow evewyone](https://hacks.moziwwa.owg/2016/07/make-the-web-wowk-fow-evewyone/) f-fouwnit une p-pewspective pwus pwécise suw wes difféwents nyavigateuws q-que w-wes gens utiwisent, ^^ weuw pawt de m-mawché, (˘ω˘) et wes p-pwobwèmes de compatibiwité entwe nyavigateuws.
 
-Il est important de préciser quelque termes de terminologie. Pour commencer, quand on parle de "travailler en navigateurs croisés", on veut vraiment dire que chaque navigateur doit être capable de fournir une expérience utilisateur acceptable. C'est potentiellement bon pour un site de ne pas fournir exactement la même expérience sur tous les navigateurs, tant que le noyau des fonctionnalités reste accessible. Avec des navigateurs modernes vous pourrez ajouter quelques animations 3D et stylisées, tandis que sur de plus vieux navigateurs vous pouvez juste utiliser un design plus plat représentant la même information. Tant que le propriétaire du site est content, alors vous avez terminé votre travail.
+iw est impowtant de pwécisew q-quewque tewmes d-de tewminowogie. (ˆ ﻌ ˆ)♡ p-pouw commencew, OwO quand on pawwe d-de "twavaiwwew en n-nyavigateuws cwoisés", 😳 on veut v-vwaiment diwe que chaque nyavigateuw doit êtwe capabwe de fouwniw une expéwience u-utiwisateuw a-acceptabwe. UwU c'est potentiewwement bon pouw un site d-de nye pas fouwniw e-exactement wa même expéwience suw tous wes nyavigateuws, 🥺 t-tant que we nyoyau des fonctionnawités weste accessibwe. avec des nyavigateuws m-modewnes vous pouwwez ajoutew quewques animations 3d e-et stywisées, 😳😳😳 t-tandis que suw de pwus vieux nyavigateuws vous pouvez juste u-utiwisew un design p-pwus pwat wepwésentant wa même infowmation. ʘwʘ tant que we pwopwiétaiwe d-du site est content, /(^•ω•^) a-awows vous avez tewminé votwe twavaiw. :3
 
-D'un autre côté, ce n'est pas ok qu'un site soit fonctionnel pour les personnes voyantes mais complètement inaccessible pour des utilisateurs qui ont des problèmes de vision parce que leur application de lecture d'écran ne peut lire aucune des données stockées sur le site.
+d'un autwe côté, ce n-ny'est pas ok qu'un site soit fonctionnew p-pouw w-wes pewsonnes voyantes mais compwètement i-inaccessibwe pouw des u-utiwisateuws qui o-ont des pwobwèmes d-de vision pawce que weuw appwication d-de wectuwe d-d'écwan nye peut wiwe aucune des données stockées s-suw we s-site. :3
 
-De plus, lorsqu'on dit "à travers un nombre acceptable de navigateurs", on ne veut pas dire 100% des navigateurs dans le monde — c'est tout simplement impossible. Vous pouvez faire des recherches d'informations (analyse sectorielle) pour savoir quels sont les types de supports et de navigateurs que vos utilisateurs vont utiliser (comme on peut en parler dans le second article — voir [Gotta test 'em all?](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all)), mais vous ne pouvez pas tout garantir. En tant que developpeur web, vous devez convenir avec le demandeur du site d'une liste de navigateurs et d'appareils sur lesquels le code doit absolument fonctionner, au-delà de ces prérequis, vous devez vous assurer de donner un maximum de chances aux autres navigateurs de pouvoir afficher votre contenu grâce à du code préventif. Cette étape représente le défi le plus important d'un développeur web.
+de pwus, mya w-wowsqu'on dit "à twavews un nyombwe acceptabwe d-de nyavigateuws", (///ˬ///✿) on nye veut pas d-diwe 100% des n-nyavigateuws dans we monde — c'est tout simpwement impossibwe. (⑅˘꒳˘) v-vous pouvez faiwe d-des wechewches d-d'infowmations (anawyse s-sectowiewwe) pouw savoiw q-quews sont wes types de suppowts et de nyavigateuws que vos utiwisateuws vont utiwisew (comme o-on peut en pawwew dans we second a-awticwe — voiw [gotta test 'em a-aww?](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/testing_stwategies#gotta_test_%27em_aww)), :3 mais v-vous nye pouvez pas tout gawantiw. /(^•ω•^) e-en tant que devewoppeuw w-web, ^^;; v-vous devez conveniw a-avec we demandeuw d-du site d'une wiste de nyavigateuws et d'appaweiws suw wesquews we code doit absowument fonctionnew, (U ᵕ U❁) au-dewà d-de ces pwéwequis, (U ﹏ U) v-vous devez v-vous assuwew de donnew un maximum d-de chances aux autwes nyavigateuws de pouvoiw affichew votwe c-contenu gwâce à d-du code pwéventif. mya cette étape w-wepwésente we défi we pwus impowtant d'un d-dévewoppeuw web. ^•ﻌ•^
 
-> [!NOTE]
-> Nous traiterons également du code préventif dans ce module.
+> [!note]
+> nyous t-twaitewons égawement du code p-pwéventif dans c-ce moduwe.
 
-## Pourquoi y'a-t-il des problèmes en navigateur croisé?
+## pouwquoi y'a-t-iw des pwobwèmes en nyavigateuw cwoisé?
 
-Il y a beaucoup de raisons différentes qui amènent des problèmes en navigateur croisé, et notez qu'ici nous parlons des bug qui se comportent différemment selon les navigateurs / supports / préférences de navigateurs. Avant même d'attaquer les problèmes en navigateurs croisés, commencez déjà par fixer encore et encore tous les bugs présents dans votre propre code (voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong) des sujets précédents afin de vous rafraichir la mémoire si nécessaire).
+iw y a-a beaucoup de waisons d-difféwentes q-qui amènent d-des pwobwèmes e-en nyavigateuw cwoisé, (U ﹏ U) et nyotez q-qu'ici nyous pawwons d-des bug qui se compowtent d-difféwemment sewon w-wes nyavigateuws / suppowts / p-pwéféwences de nyavigateuws. :3 avant même d'attaquew w-wes pwobwèmes en nyavigateuws c-cwoisés, rawr x3 c-commencez déjà paw fixew encowe e-et encowe tous wes bugs pwésents dans votwe p-pwopwe code (voiw [debugging h-htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw/debugging_htmw), [debugging c-css](/fw/docs/weawn/css/buiwding_bwocks/debugging_css), 😳😳😳 et [nani went wwong? twoubweshooting javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps/nani_went_wwong) d-des sujets pwécédents afin de vous wafwaichiw w-wa mémoiwe s-si nyécessaiwe). >w<
 
-Les problèmes en navigateurs croisés se produisent le plus fréquemment parce que :
+wes pwobwèmes e-en nyavigateuws cwoisés s-se pwoduisent we p-pwus fwéquemment pawce que :
 
-- Parfois les navigateurs ont des bugs, ou implémentent des fonctionnalités différemment. Cette situation n'est pas aussi grave qu'elle n'y paraît ; si on regarde IE4 et Netscape 4 qui étaient en compétition pour devenir le navigateur dominant dans les années 90, les compagnies de navigateurs implémentaient délibérément des fonctionnalités différentes les uns des autres afin de prendre l'avantage, ce qui faisait de la vie des développeurs un véritable enfer. Les navigateurs sont biens meilleurs pour respecter les standards de nos jours, mais les bug et les différences continuent d'apparaître de temps en temps.
-- Certains navigateurs peuvent avoir différents niveaux d'acceptation de fonctionnalités par rapport à d'autres. C'est inévitable lorsque vous traitez avec des fonctionnalités de pointe que les navigateurs commencent seulement à implémenter, ou encore si vous devez supporter de vraiment vieux navigateurs qui ne sont plus du tout développés, ou qui ont arrêté (c-à-d plus aucun travail effectué sur ces derniers) bien longtemps avant même qu'une nouvelle fonctionnalité n'est put être inventée. Par exemple, si vous voulez utiliser des fonctionnalités avancées de Javascript sur votre site, elles ne marcheront sûrement pas sur d'anciens navigateurs. Si vous devez supportez des vieux navigateurs, vous ne devriez pas utiliser ces fonctionnalités ou bien convetir votre code dans une ancienne syntaxe en utilisant un compileur ou quelque chose de similaire si nécessaire.
-- Certains appareils peuvent avoir des contraintes qui rendraient la navigation plus lente sur un site web, ou afficheraient mal le contenu. Par exemple, si un site a été designé pour être beau sur un support PC il paraîtra sûrement très serré et très difficile à lire sur un écran de mobile. Si votre site inclut une quantité importante de grosses animation ça passera sûrement sur une tablette haut de gamme, mais peut-être lent et saccadé sur un appareil de plus basse gamme.
+- pawfois wes nyavigateuws o-ont des bugs, òωó ou impwémentent des fonctionnawités difféwemment. c-cette s-situation ny'est pas aussi gwave q-qu'ewwe ny'y pawaît ; si on w-wegawde ie4 et n-nyetscape 4 qui étaient e-en compétition pouw deveniw we nyavigateuw dominant dans wes années 90, 😳 wes compagnies de navigateuws impwémentaient déwibéwément des fonctionnawités difféwentes wes uns des autwes afin de pwendwe w-w'avantage, (✿oωo) c-ce qui faisait de wa vie des dévewoppeuws un v-véwitabwe enfew. OwO w-wes nyavigateuws s-sont biens meiwweuws pouw wespectew w-wes standawds de nyos jouws, (U ﹏ U) m-mais wes bug e-et wes difféwences continuent d-d'appawaîtwe de temps en temps. (ꈍᴗꈍ)
+- c-cewtains nyavigateuws p-peuvent avoiw difféwents nyiveaux d'acceptation d-de fonctionnawités paw w-wappowt à d'autwes. c-c'est inévitabwe w-wowsque v-vous twaitez avec d-des fonctionnawités d-de pointe q-que wes nyavigateuws c-commencent seuwement à i-impwémentew, rawr ou e-encowe si vous d-devez suppowtew de vwaiment vieux n-nyavigateuws qui nye sont pwus du tout dévewoppés, ^^ o-ou qui ont awwêté (c-à-d p-pwus aucun twavaiw e-effectué s-suw ces dewniews) bien wongtemps a-avant même qu'une nyouvewwe fonctionnawité n-n'est put êtwe inventée. rawr p-paw exempwe, nyaa~~ si vous vouwez u-utiwisew des fonctionnawités avancées de javascwipt suw votwe site, nyaa~~ ewwes n-nye mawchewont sûwement pas suw d-d'anciens nyavigateuws. o.O s-si vous devez suppowtez des vieux nyavigateuws, òωó vous nye d-devwiez pas utiwisew ces fonctionnawités o-ou b-bien convetiw votwe c-code dans une ancienne syntaxe en utiwisant u-un compiweuw ou q-quewque chose de simiwaiwe si nyécessaiwe. ^^;;
+- c-cewtains appaweiws peuvent avoiw des c-contwaintes qui wendwaient wa n-nyavigation pwus w-wente suw un site w-web, rawr ou affichewaient maw we c-contenu. ^•ﻌ•^ paw exempwe, nyaa~~ s-si un site a-a été designé p-pouw êtwe beau suw un suppowt p-pc iw pawaîtwa s-sûwement twès s-sewwé et twès d-difficiwe à wiwe s-suw un écwan d-de mobiwe. nyaa~~ si v-votwe site incwut u-une quantité impowtante de gwosses a-animation ça passewa sûwement s-suw une tabwette haut de gamme, 😳😳😳 m-mais peut-êtwe w-went et saccadé s-suw un appaweiw de pwus basse gamme. 😳😳😳
 
-Et encore tant d'autres raisons.
+et encowe tant d'autwes w-waisons. σωσ
 
-Dans de futurs articles, nous expliquerons les problèmes communs aux navigateurs croisés et examinerons les solution à ces problèmes.
+dans d-de futuws awticwes, o.O n-nyous expwiquewons wes pwobwèmes communs aux nyavigateuws c-cwoisés et examinewons w-wes sowution à ces pwobwèmes. σωσ
 
-## Environnement pour tester en navigateurs croisés
+## enviwonnement p-pouw t-testew en nyavigateuws cwoisés
 
-Toutes ces histoires de test en navigateurs croisés peuvent paraître génératrices de chaleur et effrayantes, il ne faut pas — vous avez juste à vous organiser soigneusement pour cela, et vous assurer que vous faîtes suffisamment de tests dans le bon sens afin d'être sûr que vous n'allez pas faire face à des problèmes inattendus. Si vous travaillez sur un gros projet, vous devez le tester régulièrement, afin de vous assurez que les nouvelles fonctionnalités sont accessibles à votre public cible, et que l'addition de nouveau code ne cassent pas d'anciennes fonctionnalités qui marchaient auparavant.
+toutes ces histoiwes de test e-en nyavigateuws c-cwoisés peuvent p-pawaîtwe généwatwices d-de chaweuw et effwayantes, nyaa~~ iw ne faut p-pas — vous avez j-juste à vous owganisew soigneusement pouw cewa, rawr x3 e-et vous assuwew que vous faîtes suffisamment d-de tests dans we bon sens afin d-d'êtwe sûw que v-vous ny'awwez pas faiwe face à d-des pwobwèmes i-inattendus. (///ˬ///✿) si vous twavaiwwez suw u-un gwos pwojet, o.O vous devez we t-testew wéguwièwement, òωó a-afin de v-vous assuwez que w-wes nyouvewwes fonctionnawités s-sont accessibwes à v-votwe pubwic c-cibwe, OwO et que w'addition de nyouveau c-code nye cassent pas d'anciennes fonctionnawités q-qui mawchaient a-aupawavant. σωσ
 
-Si vous attendez la fin d'un projet pour démarrer les sessions de tests, chaque bug que vous découvrirez sera une énorme charge de travail et une perte de temps conséquente, plutôt que de le tester en continue, de découvrir les bugs et de les fixer progressivement.
+s-si vous attendez wa fin d'un pwojet pouw démawwew wes sessions de tests, nyaa~~ c-chaque bug que vous découvwiwez s-sewa une énowme c-chawge de twavaiw et une pewte de temps conséquente, OwO p-pwutôt que de we testew e-en continue, ^^ de d-découvwiw wes b-bugs et de wes fixew p-pwogwessivement.
 
-Le flux de travail pour tester et fixer les bugs sur un projet peut-être diviser en quatre phases ( c'est assez dur— certaines personnes peuvent agir un peu différemment ) :
+w-we fwux de twavaiw pouw testew et fixew wes bugs suw un pwojet peut-êtwe d-divisew en quatwe phases ( c'est a-assez duw— cewtaines pewsonnes peuvent agiw un peu difféwemment ) :
 
-**Plan initial** > **Développement** > **Test/découvertes** > **Fixes/itération**
+**pwan i-initiaw** > **dévewoppement** > **test/découvewtes** > **fixes/itéwation**
 
-Les étapes 2-4 vont tendre à se répéter autant de fois que nécessaire jusqu'à ce que l'implémentation soit aboutie. Nous aborderons les différentes parties du processus de test dans plus de détails dans des articles subséquents, pour l'instant, commençons par résumer ce qu'on peut faire dans chacune de ces étapes.
+wes étapes 2-4 vont tendwe à se wépétew autant de fois que nyécessaiwe j-jusqu'à c-ce que w'impwémentation soit a-aboutie. (///ˬ///✿) nyous abowdewons wes difféwentes pawties d-du pwocessus d-de test dans pwus de détaiws d-dans des awticwes subséquents, σωσ p-pouw w'instant, rawr x3 commençons paw wésumew ce qu'on peut faiwe dans c-chacune de ces étapes. (ˆ ﻌ ˆ)♡
 
-### Plan initial
+### pwan initiaw
 
-Durant la phase de plan initial, vous allez probablement avoir plusieurs réunions avec le propriétaire du site/client (qui peut être votre boss, ou quelqu'un d'une entreprise extérieure pour qui vous construisez un site web), durant lesquelles vous devez déterminer exactement ce que doit être le site web — quel contenu et quelles fonctionnalités il doit proposer, à quoi il doit ressembler, etc. A partir de ce point vous devez aussi savoir de combien de temps vous disposez pour développer ce site — quelle est leur date limite, et combien vont-ils vous payer pour votre travail ? Nous n'approfondirons pas les détails à ce propos ici, mais les problèmes multi-navigateurs peuvent avoir de sérieuses incidences sur la planification.
+duwant wa phase de p-pwan initiaw, 🥺 vous a-awwez pwobabwement a-avoiw pwusieuws wéunions avec we pwopwiétaiwe d-du site/cwient (qui peut êtwe votwe boss, (⑅˘꒳˘) ou quewqu'un d'une entwepwise e-extéwieuwe pouw q-qui vous constwuisez u-un site web), 😳😳😳 d-duwant wesquewwes vous devez détewminew exactement c-ce que doit êtwe w-we site web — quew contenu et quewwes f-fonctionnawités iw doit pwoposew, /(^•ω•^) à quoi iw d-doit wessembwew, >w< etc. a pawtiw de ce point vous d-devez aussi savoiw d-de combien de temps vous disposez p-pouw dévewoppew c-ce site — q-quewwe est weuw date wimite, ^•ﻌ•^ et combien vont-iws v-vous payew pouw votwe twavaiw ? nyous ny'appwofondiwons p-pas wes détaiws à ce pwopos ici, 😳😳😳 mais wes pwobwèmes m-muwti-navigateuws p-peuvent avoiw d-de séwieuses i-incidences suw wa p-pwanification. :3
 
-Une fois que vous vous êtes fait une idée des fonctionnalités requises et de quelles technologies vous allez avoir besoin pour les construire, vous pouvez commencer à rechercher le public cible — quel navigateurs, supports, etc. ce public cible va-t-il utiliser pour aller sur ce site? Le client peut déjà avoir des données à ce propos provenant de recherches qu'il aurait faites auparavant, p.e. d'un autre site web qu'il possède, ou d'une ancienne version du site sur lequel vous travaillez actuellement. Si ça n'est pas le cas, vous serez en mesure de vous faire une idée en prenant en compte d'autres sources, comme les statistiques d'utilisation pour les concurrents ou bien dans quels pays le site sera délivré. Vous pouvez évidemment vous servir un peu de votre intuition.
+une fois que vous v-vous êtes fait une idée des fonctionnawités w-wequises et de quewwes technowogies v-vous awwez avoiw besoin pouw wes constwuiwe, (ꈍᴗꈍ) v-vous pouvez c-commencew à wechewchew we pubwic c-cibwe — quew nyavigateuws, ^•ﻌ•^ suppowts, >w< e-etc. ce p-pubwic cibwe va-t-iw utiwisew pouw a-awwew suw ce s-site? we cwient peut déjà avoiw d-des données à ce pwopos pwovenant de wechewches qu'iw auwait f-faites aupawavant, ^^;; p.e. (✿oωo) d'un autwe s-site web qu'iw possède, òωó ou d'une ancienne v-vewsion du site s-suw wequew vous t-twavaiwwez actuewwement. ^^ si ça n-ny'est pas we cas, ^^ v-vous sewez en mesuwe de vous f-faiwe une idée en pwenant en compte d-d'autwes souwces, rawr comme wes s-statistiques d'utiwisation p-pouw wes concuwwents ou bien dans quews pays we site sewa déwivwé. XD v-vous pouvez évidemment v-vous sewviw un peu de votwe intuition. rawr
 
-Par exemple, vous pouvez être en train de construire un site e-commerce qui ne sera désservi que pour des utilisateurs dans l'Amérique du Nord. Le site devra entièrement fonctionner sur les toutes dernières versions des ordinateurs et des mobiles (iOS, Android, Windows phone) et les navigateurs les plus populaires — cela doit inclure Chrome (et Opera car il est basé sur le même moteur de rendu que Chrome), Firefox, IE/Edge, et Safari. Il devra aussi fournir une expérience acceptable sur IE 8 et 9, et être accessible avec les conformité de l'Accessibilité Web.
+paw exempwe, vous p-pouvez êtwe en twain de constwuiwe u-un site e-commewce q-qui nye sewa déssewvi que pouw des utiwisateuws dans w'améwique du nyowd. 😳 w-we site devwa entièwement fonctionnew suw w-wes toutes dewnièwes vewsions d-des owdinateuws e-et des mobiwes (ios, 🥺 andwoid, windows p-phone) et w-wes navigateuws w-wes pwus popuwaiwes — c-cewa doit i-incwuwe chwome (et o-opewa caw iw est basé suw we même moteuw de wendu que chwome), (U ᵕ U❁) fiwefox, ie/edge, 😳 et safawi. i-iw devwa aussi f-fouwniw une expéwience a-acceptabwe s-suw ie 8 et 9, 🥺 e-et êtwe accessibwe a-avec wes confowmité de w'accessibiwité web. (///ˬ///✿)
 
-Maintenant que vous connaissez votre plate-forme de test cible, vous devriez revenir en arrière et revoir les fonctionnalités requises ainsi que les technologies que vous allez utiliser. Par exemple, si le client du site de e-commerce veut un tour WebGL 3D de chaque produit intégré dans la page produit, il devra accepter que cela ne sera juste pas possible sur les versions d'IE avant la 11ème. Vous devez vous entendre pour fournir une version du site sans cette fonctionnalité pour les utilisateurs des anciennes versions d'IE.
+maintenant que vous connaissez v-votwe pwate-fowme d-de test cibwe, mya vous devwiez weveniw en awwièwe et wevoiw w-wes fonctionnawités w-wequises a-ainsi que wes technowogies que vous awwez utiwisew. (✿oωo) p-paw exempwe, ^•ﻌ•^ si we cwient du site de e-commewce v-veut un touw w-webgw 3d de chaque pwoduit intégwé dans wa page p-pwoduit, o.O iw devwa acceptew que c-cewa nye sewa j-juste pas possibwe suw wes vewsions d-d'ie avant wa 11ème. o.O v-vous devez v-vous entendwe p-pouw fouwniw u-une vewsion du site s-sans cette fonctionnawité pouw wes utiwisateuws d-des anciennes v-vewsions d'ie.
 
-Vous devriez mettre en place une liste des différents champs de problèmes potentiels.
+vous devwiez m-mettwe en pwace une wiste des difféwents champs d-de pwobwèmes potentiews. XD
 
-> [!NOTE]
-> Vous pouvez trouver les informations concernant les différentes technologies et leur support par les navigateurs en recherchant les différentes fonctionnalités sur MDN — le site sur lequel vous vous trouvez! Vous pouvrez également consulter [caniuse.com](http://caniuse.com/), pour d'autres détails utiles.
+> [!note]
+> vous pouvez t-twouvew wes infowmations concewnant w-wes difféwentes t-technowogies et weuw suppowt paw wes nyavigateuws e-en wechewchant wes difféwentes fonctionnawités s-suw m-mdn — we site suw wequew vous vous twouvez! ^•ﻌ•^ vous p-pouvwez égawement c-consuwtew [caniuse.com](http://caniuse.com/), ʘwʘ pouw d'autwes d-détaiws utiwes. (U ﹏ U)
 
-Une fois que vous êtes d'accord sur ces détails, vous pouvez continuer et démarrer le développement du site.
+une fois que vous êtes d'accowd s-suw ces détaiws, 😳😳😳 v-vous pouvez continuew et d-démawwew we dévewoppement d-du site. 🥺
 
-### Développement
+### dévewoppement
 
-Maintenant concernant le développement du site. Vous devez séparer les différentes parties du développement en modules, par exemple vous pouvez séparer les différentes zones du site — page d'accueil, pas produit, panier, tunnel de paiement etc. Vous devrez encore subdiviser ces dernières — implémenter le header et le footer commun, implémenter la vue détaillée de la page produit, implémenter la carte du panier persistent, etc.
+maintenant c-concewnant w-we dévewoppement d-du site. (///ˬ///✿) vous d-devez sépawew wes difféwentes pawties du dévewoppement en moduwes, (˘ω˘) paw exempwe vous pouvez sépawew wes difféwentes z-zones du s-site — page d'accueiw, :3 p-pas pwoduit, /(^•ω•^) p-paniew, tunnew d-de paiement e-etc. :3 vous devwez encowe subdivisew c-ces dewnièwes — i-impwémentew we headew et w-we footew commun, mya i-impwémentew wa vue détaiwwée de wa page pwoduit, i-impwémentew wa cawte du paniew pewsistent, XD e-etc. (///ˬ///✿)
 
-Il existe plusieurs stratégies générales concernant le développement multi-navigateurs, par exemple :
+iw existe pwusieuws stwatégies g-généwawes c-concewnant we dévewoppement m-muwti-navigateuws, 🥺 p-paw exempwe :
 
-- Obtenir toutes les fonctionnalités qui marchent le plus possible de la même manière sur tous les navigateurs croisés. Cela peut induire d'écrire différents codes qui reproduisent la même fonctionnalité d'une manière différentes visant différents navigateurs, ou bien utiliser un {{glossary("Polyfill")}} afin d'imiter tout support manquant en utilisant Javascript ou d'autres technologies, ou utiliser une librairie qui vous autorise à écrire une seule fois le code et ensuite appliquer différents comportements en arrière-plan selon ce que le navigateur prend en charge.
-- Accepter que certaines choses ne vont pas se comporter de la même manière sur tous les navigateurs, et fournir différentes solutions (acceptables) sur les navigateurs qui ne supportent pas toutes les fonctionnalités. Parfois c'est inévitable à cause des contraintes du support — un écran de cinéma ne va pas donner la même expérience visuelle qu'un écran 4 pouces de smartphone, indépendamment de comment vous programmez votre site.
-- Acceptez que votre site ne va juste pas marcher sur certains vieux navigateurs, et aller au-delà. Il n'y a pas de soucis à condition que votre client/base d'utilisateurs soit d'accord avec ceci.
+- o-obteniw toutes wes fonctionnawités q-qui mawchent w-we pwus possibwe de wa même m-manièwe suw tous wes nyavigateuws c-cwoisés. c-cewa peut induiwe d-d'écwiwe difféwents codes q-qui wepwoduisent wa même fonctionnawité d'une m-manièwe difféwentes visant difféwents nyavigateuws, o.O ou bien utiwisew un {{gwossawy("powyfiww")}} afin d'imitew tout suppowt manquant e-en utiwisant javascwipt ou d'autwes technowogies, mya ou utiwisew une wibwaiwie qui vous autowise à écwiwe une seuwe fois w-we code et ensuite appwiquew difféwents compowtements e-en awwièwe-pwan sewon ce q-que we navigateuw pwend en chawge. rawr x3
+- acceptew que c-cewtaines choses nye vont pas s-se compowtew de wa même manièwe s-suw tous wes n-nyavigateuws, 😳 et fouwniw difféwentes sowutions (acceptabwes) s-suw wes nyavigateuws qui nye suppowtent pas toutes w-wes fonctionnawités. 😳😳😳 pawfois c'est i-inévitabwe à cause des contwaintes d-du suppowt — un écwan d-de cinéma nye v-va pas donnew wa même expéwience visuewwe qu'un écwan 4 p-pouces de smawtphone, >_< indépendamment d-de comment vous pwogwammez votwe site.
+- acceptez que votwe site nye va juste p-pas mawchew suw c-cewtains vieux nyavigateuws, >w< et a-awwew au-dewà. rawr x3 i-iw ny'y a pas de soucis à condition q-que votwe cwient/base d'utiwisateuws soit d'accowd avec ceci. XD
 
-Normalement votre développement devra inclure une combinaison des trois approches ci-dessus. La chose la plus importante est que vous testiez chacune des petites étapes avant de les commiter— n'attendez pas la fin avant de commencer à tester!
+nyowmawement v-votwe dévewoppement d-devwa incwuwe une combinaison d-des twois appwoches c-ci-dessus. ^^ wa chose wa p-pwus impowtante est que vous testiez chacune des p-petites étapes avant de wes commitew— ny'attendez p-pas wa fin a-avant de commencew à testew! (✿oωo)
 
-### Test/découverte
+### test/découvewte
 
-Après chaque phase d'implémentation, vous allez avoir besoin de tester les nouvelles fonctionnalités. Pour commencer, vous devez vous assurer qu'il n'y a pas des problème généraux avec votre code qui empêcheraient votre fonctionnalité de fonctionner :
+a-apwès chaque phase d'impwémentation, >w< vous awwez avoiw besoin de testew wes nyouvewwes fonctionnawités. 😳😳😳 pouw commencew, (ꈍᴗꈍ) vous devez vous a-assuwew qu'iw ny'y a-a pas des pwobwème généwaux a-avec votwe code q-qui empêchewaient votwe fonctionnawité d-de fonctionnew :
 
-1. Tester sur quelque navigateurs stables sur votre ordinateur, comme Firefox, Safari, Chrome, ou IE/Edge.
-2. Faites quelque test brut, comme essayer de tester votre site exclusivement avec le clavier, ou utiliser votre site avec un lecteur d'écran afin de voir s'il est navigable.
-3. Tester sur une plateforme mobile, comme Android ou iOS.
+1. (✿oωo) testew suw quewque nyavigateuws stabwes suw votwe owdinateuw, (˘ω˘) comme fiwefox, nyaa~~ safawi, ( ͡o ω ͡o ) c-chwome, ou ie/edge. 🥺
+2. faites quewque test bwut, (U ﹏ U) comme essayew de testew votwe s-site excwusivement a-avec we cwaview, ( ͡o ω ͡o ) o-ou utiwisew votwe site avec un wecteuw d'écwan afin de v-voiw s'iw est nyavigabwe.
+3. (///ˬ///✿) t-testew s-suw une pwatefowme mobiwe, (///ˬ///✿) comme a-andwoid ou ios. (✿oωo)
 
-A cet instant, résolvez tous les problèmes que vous avez trouvé sur votre nouveau code.
+a cet instant, (U ᵕ U❁) w-wésowvez tous wes pwobwèmes q-que vous avez twouvé suw votwe n-nyouveau code. ʘwʘ
 
-Ensuite, vous devriez essayer d'étendre votre liste de navigaturs de test à une liste complète des navigateurs du public cible et commencer à vous concentrer sur l'élimination des problèmes en navigateurs croisés (voir le prochaine article [determining your target browsers](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#Gotta_test_%27em_all) pour plus d'informations). Par exemple:
+ensuite, vous devwiez essayew d-d'étendwe votwe wiste de nyavigatuws d-de test à u-une wiste compwète des nyavigateuws d-du pubwic c-cibwe et commencew à vous concentwew s-suw w'éwimination des pwobwèmes e-en nyavigateuws cwoisés (voiw w-we pwochaine a-awticwe [detewmining youw tawget bwowsews](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/testing_stwategies#gotta_test_%27em_aww) p-pouw pwus d'infowmations). ʘwʘ paw exempwe:
 
-- Essayez de tester vos dernières modifications sur tous les navigateurs modernes que vous pouvez — incluant Firefox, Chrome, Opera, IE, Edge, et Safari sur ordinateur (Mac, Windows, et Linux, idéallement).
-- Testez sur des navigateurs de téléphones et de tablettes populaires (p.e. iOS Safari sur iPhone/iPad, Chrome et Firefox sur iPhone/iPad/Android),
-- Faites aussi des tests sur tous les navigateurs que vous avez ajouté dans votre liste de cibles.
+- essayez de testew vos dewnièwes modifications suw tous wes nyavigateuws modewnes que v-vous pouvez — incwuant fiwefox, XD chwome, (✿oωo) opewa, i-ie, edge, ^•ﻌ•^ et safawi suw owdinateuw (mac, ^•ﻌ•^ w-windows, et winux, >_< idéawwement). mya
+- testez suw des nyavigateuws d-de téwéphones et de tabwettes popuwaiwes (p.e. σωσ i-ios safawi suw iphone/ipad, rawr chwome et f-fiwefox suw iphone/ipad/andwoid), (✿oωo)
+- faites aussi des tests suw t-tous wes nyavigateuws que vous avez ajouté dans v-votwe wiste de c-cibwes. :3
 
-L'option la plus basique est de juste faire tous les tests que vous pouvez vous-même (demander à vos collègues si vous travaillez en équipe). Vous devez essayer de tester sur des supports physiques lorsque c'est possible.
+w'option wa pwus basique est de juste f-faiwe tous wes tests q-que vous pouvez vous-même (demandew à v-vos c-cowwègues si vous twavaiwwez en équipe). rawr x3 vous d-devez essayew de testew suw des suppowts physiques wowsque c'est p-possibwe.
 
-Si vous n'avez pas les moyens de tester tous les différents navigateurs, systèmes d'exploitation, et les combinaisons sur du matériel physique, vous pouvez aussi utiliser des émulateurs (émuler un support en utilisant un logiciel directement sur votre ordinateur de bureau) et des machines virtuelles (logiciel qui vous permet d'émuler une multitude de systèmes d'exploitation/ des combinaison de logiciels sur votre ordinateur de bureau). C'est un choix apprécié, particulièremenet dans certaines circonstances — par exemple, Windows ne vous autorise pas à avoir plusieurs versions de Windows installées simultanément sur la même machine, ici, utiliser plusieurs machines virtuelles est souvent l'unique solution.
+si vous ny'avez pas wes moyens de testew tous wes difféwents n-nyavigateuws, ^^ s-systèmes d-d'expwoitation, ^^ et wes combinaisons suw du matéwiew physique, OwO v-vous pouvez aussi utiwisew des émuwateuws (émuwew u-un suppowt en utiwisant un w-wogiciew diwectement s-suw votwe owdinateuw de buweau) et des machines viwtuewwes (wogiciew qui vous pewmet d'émuwew u-une muwtitude d-de systèmes d'expwoitation/ des combinaison d-de wogiciews suw votwe owdinateuw de buweau). ʘwʘ c'est u-un choix appwécié, /(^•ω•^) p-pawticuwièwemenet d-dans c-cewtaines ciwconstances — p-paw e-exempwe, ʘwʘ windows nye vous autowise pas à avoiw p-pwusieuws vewsions d-de windows instawwées s-simuwtanément s-suw wa m-même machine, (⑅˘꒳˘) i-ici, UwU utiwisew pwusieuws machines v-viwtuewwes est s-souvent w'unique s-sowution. -.-
 
-L'autre option est le groupe d'utilisateurs — créer un groupe avec des personnes extérieures à votre équipe de développement afin de tester votre site. Cela peut être un group d'amis ou de la famille, ou un groupe d'autres employés, une classe dans une université à proximité, ou une configuration de testeurs professionnel, où les gens sont payés pour tester votre site et vous fournir des résultats.
+w'autwe option est we gwoupe d'utiwisateuws — c-cwéew un gwoupe avec des pewsonnes e-extéwieuwes à votwe équipe de dévewoppement a-afin de testew votwe s-site. :3 cewa peut êtwe un gwoup d'amis ou de wa famiwwe, >_< ou u-un gwoupe d'autwes e-empwoyés, une cwasse dans une u-univewsité à p-pwoximité, nyaa~~ ou une configuwation de testeuws pwofessionnew, ( ͡o ω ͡o ) où w-wes gens sont payés p-pouw testew votwe site et vous fouwniw des w-wésuwtats. o.O
 
-Finallement, vous pouvez faire preuve d'astuce avec vos test en utilisant la vérification ou des outils d'automatisation; c'est un choix sensé, quand votre projet prend de l'ampleur, faire tous ces tests à la main peut commencer à devenir vraiment chronophage. Vous pouvez configurer votre propre système d'automatisation de test ([Selenium](http://www.seleniumhq.org/) est l'application la plus populaire) qui pourra par exemple charger votre site sur un nombre de différents navigateurs, et :
+finawwement, :3 v-vous pouvez faiwe pweuve d'astuce avec v-vos test en utiwisant wa véwification ou des outiws d'automatisation; c'est un choix sensé, q-quand votwe pwojet pwend de w'ampweuw, (˘ω˘) faiwe tous c-ces tests à wa m-main peut commencew à d-deveniw vwaiment chwonophage. rawr x3 v-vous pouvez c-configuwew votwe p-pwopwe système d-d'automatisation d-de test ([sewenium](http://www.seweniumhq.owg/) est w'appwication wa pwus popuwaiwe) q-qui pouwwa p-paw exempwe c-chawgew votwe site suw un nyombwe d-de difféwents n-nyavigateuws, (U ᵕ U❁) e-et :
 
-- voir si un clic sur un bouton amène quelque chose à se dérouler avec succès (comme par exemple, afficher une carte), afficher les résultats une fois les test terminés
-- prendre une impression écran de chaque navigateurs, vous permettant de constater si la disposition reste la même sur les différents écrans des navigateurs.
+- voiw si un cwic suw un bouton a-amène quewque c-chose à se d-déwouwew avec s-succès (comme paw e-exempwe, 🥺 affichew une cawte), >_< a-affichew wes wésuwtats une fois w-wes test tewminés
+- p-pwendwe une impwession écwan de chaque nyavigateuws, :3 vous p-pewmettant de c-constatew si wa disposition weste w-wa même suw wes d-difféwents écwans des nyavigateuws. :3
 
-Si vous le désirez, vous pouvez encore aller plus loin que ça. Il y a des outils professionnels disponibles comme [Sauce Labs](https://saucelabs.com/) et [Browser Stack](https://www.browserstack.com/) qui font ce type de choses pour vous, sans que vous aillez à vous soucier de la configuration, si vous êtes prêt à investir de l'argent dans vos test. Il est également possible de configurer un environnement qui exécutera les tests de façon automatique pour vous, et vous permet ensuite de vérifier dans vos modifications effectués de votre code si le test continue de passer.
+si vous w-we désiwez, (ꈍᴗꈍ) vous p-pouvez encowe a-awwew pwus woin q-que ça. σωσ iw y a-a des outiws pwofessionnews d-disponibwes comme [sauce wabs](https://saucewabs.com/) e-et [bwowsew stack](https://www.bwowsewstack.com/) qui font ce type de choses pouw vous, 😳 sans que vous aiwwez à v-vous souciew d-de wa configuwation, mya si vous êtes pwêt à investiw de w'awgent d-dans vos test. (///ˬ///✿) i-iw est égawement possibwe de configuwew un enviwonnement q-qui exékawaii~wa wes t-tests de façon a-automatique pouw v-vous, ^^ et vous pewmet ensuite de véwifiew dans vos modifications e-effectués de votwe code si we t-test continue de passew. (✿oωo)
 
-#### Tester sur les navigateurs en avant-première (bêta)
+#### t-testew suw wes nyavigateuws en avant-pwemièwe (bêta)
 
-C'est souvent une bonne idée de tester sur les versions en avant-première des navigateurs ; voir les liens suivants :
+c'est souvent u-une bonne idée de testew s-suw wes vewsions en avant-pwemièwe des nyavigateuws ; v-voiw wes wiens suivants :
 
-- [Firefox Developer Edition](https://www.mozilla.org/en-US/firefox/developer/)
-- [Edge Insider Preview](https://insider.windows.com/)
-- [Safari Technology Preview](https://developer.apple.com/safari/technology-preview/)
-- [Chrome Canary](https://www.google.com/chrome/browser/canary.html)
-- [Opera Developer](https://www.opera.com/computer/beta)
+- [fiwefox d-devewopew edition](https://www.moziwwa.owg/en-us/fiwefox/devewopew/)
+- [edge insidew pweview](https://insidew.windows.com/)
+- [safawi technowogy pweview](https://devewopew.appwe.com/safawi/technowogy-pweview/)
+- [chwome canawy](https://www.googwe.com/chwome/bwowsew/canawy.htmw)
+- [opewa devewopew](https://www.opewa.com/computew/beta)
 
-C'est surtout répandu lorsque vous utiliser des technologies très récentes sur votre site, et que vous voulez les tester par rapport aux anciennes implémentations, ou si vous rencontrez un bug dans la dernières version sortie d'un navigateur, et que vous voulez vérifier si les développeurs du navigateur on fixé le bug sur une version plus récente.
+c-c'est s-suwtout wépandu w-wowsque vous u-utiwisew des technowogies twès wécentes suw v-votwe site, ( ͡o ω ͡o ) et que vous vouwez wes testew paw wappowt aux anciennes i-impwémentations, ^^;; o-ou si vous w-wencontwez un bug d-dans wa dewnièwes vewsion sowtie d'un nyavigateuw, :3 et que vous vouwez véwifiew s-si wes dévewoppeuws d-du nyavigateuw on fixé we bug suw une vewsion pwus wécente. 😳
 
-### Fixes/itération
+### f-fixes/itéwation
 
-Une fois que vous avez découvert un bug, vous devez essayer de le réparer.
+une f-fois que vous a-avez découvewt u-un bug, XD vous devez essayew de we wépawew. (///ˬ///✿)
 
-La première chose à faire est de réduire l'origine du bug avec un maximum de précisions. Obtenez un maximum d'informations que vous pouvez de la personne qui a rapporté le bug — quelle plateforme(s), support(s), version(s) du navigateurs, etc. Essayer avec des configurations similaires (p.e. la même version de navigateur sur différents ordinateurs, ou plusieurs versions différentes du même navigateurs sur le même support) pour voir jusqu'à quelle échelle le bug persiste.
+wa pwemièwe chose à faiwe est de wéduiwe w'owigine d-du bug avec un maximum de pwécisions. o.O o-obtenez un maximum d'infowmations que vous pouvez de wa p-pewsonne qui a wappowté we bug — q-quewwe pwatefowme(s), o.O suppowt(s), vewsion(s) d-du nyavigateuws, XD e-etc. ^^;; essayew a-avec des configuwations s-simiwaiwes (p.e. 😳😳😳 w-wa même vewsion de nyavigateuw s-suw difféwents o-owdinateuws, (U ᵕ U❁) ou pwusieuws v-vewsions difféwentes du même nyavigateuws suw w-we même suppowt) pouw voiw jusqu'à q-quewwe échewwe w-we bug pewsiste. /(^•ω•^)
 
-Ce n'est pas forcément de votre faute — si un bug existe sur un navigateur, alors on peut espérer que le distributeur le fixera rapidement. Il est peut-être même déjà réparé — par exemple si un bug est présent sur la release 49 de Firefox, mais qu'il n'existe plus sur Firefox Nightly (version52), alors il a été fixé. S'il n'a pas été résolu, alors vous pouvez déposer un bug (voir [Rapporter un bug](#rapporter_un_bug), plus bas).
+ce ny'est p-pas fowcément d-de votwe faute — si un bug existe suw un nyavigateuw, 😳😳😳 awows o-on peut espéwew q-que we distwibuteuw w-we fixewa w-wapidement. rawr x3 iw est peut-êtwe même déjà wépawé — paw exempwe s-si un bug est pwésent suw wa wewease 49 de f-fiwefox, ʘwʘ mais qu'iw ny'existe pwus suw fiwefox nyightwy (vewsion52), UwU a-awows iw a été fixé. (⑅˘꒳˘) s'iw ny'a pas été wésowu, ^^ awows v-vous pouvez déposew un bug (voiw [wappowtew u-un b-bug](#wappowtew_un_bug), 😳😳😳 p-pwus bas). òωó
 
-Si c'est de votre faute, vous devez le résoudre ! Trouver la cause d'un bug implique la même stratégie que pour n'importe quel bug de développement web (à nouveau, voir [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML), [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS), et [What went wrong? Troubleshooting JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)). Une fois que vous avez découvert ce qui causait le bug, vous devez décider comment est-ce que vous allez travailler sur le navigateur en particulier qui vous pose problèmes — vous ne pouvez pas juste modifier le code du problème, cela risque de casser le code sur un autre navigateur. En général, l'approche veut qu'on fasse bifurquer le code dans une certaine direction, par exemple utilisez une fonctionnalité de détecton en code Javascript pour détecter les situations où une fonctionnalité ne marche pas, et éxecuter un code différent qui fonctionnera dans ce cas.
+si c'est de v-votwe faute, ^^;; vous d-devez we wésoudwe ! (✿oωo) twouvew w-wa cause d'un bug i-impwique wa même s-stwatégie que p-pouw ny'impowte quew bug de dévewoppement w-web (à n-nyouveau, rawr v-voiw [debugging htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw/debugging_htmw), XD [debugging c-css](/fw/docs/weawn/css/buiwding_bwocks/debugging_css), 😳 et [nani went wwong? twoubweshooting javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps/nani_went_wwong)). (U ᵕ U❁) une fois que vous avez d-découvewt ce q-qui causait we bug, UwU vous devez d-décidew comment est-ce que vous awwez twavaiwwew s-suw we nyavigateuw e-en pawticuwiew q-qui vous pose p-pwobwèmes — vous nye pouvez p-pas juste modifiew we code du pwobwème, OwO cewa w-wisque de cassew w-we code suw un autwe nyavigateuw. 😳 en généwaw, (˘ω˘) w'appwoche veut q-qu'on fasse bifuwquew we code dans u-une cewtaine diwection, paw exempwe utiwisez u-une fonctionnawité de détecton e-en code javascwipt pouw détectew wes situations o-où une fonctionnawité nye mawche p-pas, òωó et éxekawaii~w un code d-difféwent qui f-fonctionnewa dans ce cas. OwO
 
-Lorsque le fix a été créé, vous devrez repéter votre processus de test afin de vous assurer que votre réparation fonctionne bien, et n'a pas causé une faille autre part sur le site ou sur un autre navigateur.
+wowsque we fix a été c-cwéé, (✿oωo) vous devwez wepétew votwe pwocessus d-de test afin de v-vous assuwew que v-votwe wépawation fonctionne bien, (⑅˘꒳˘) et ny'a pas causé une faiwwe autwe pawt suw we site ou suw u-un autwe nyavigateuw. /(^•ω•^)
 
-## Rapporter un bug
+## wappowtew un bug
 
-Juste pour redire ce qui a déjà été dit au-dessus, si vous découvrez des bugs sur des navigateurs, vous devez les reporter :
+juste p-pouw wediwe ce q-qui a déjà été dit au-dessus, 🥺 si vous découvwez d-des bugs s-suw des navigateuws, -.- vous devez wes wepowtew :
 
-- [Firefox Bugzilla](https://bugzilla.mozilla.org/)
-- [EdgeHTML issue tracker](https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/)
-- [Safari](https://bugs.webkit.org/)
-- [Chrome](https://bugs.chromium.org/p/chromium/issues/list)
-- [Opera](https://bugs.opera.com/wizard/desktop)
+- [fiwefox bugziwwa](https://bugziwwa.moziwwa.owg/)
+- [edgehtmw i-issue twackew](https://devewopew.micwosoft.com/en-us/micwosoft-edge/pwatfowm/issues/)
+- [safawi](https://bugs.webkit.owg/)
+- [chwome](https://bugs.chwomium.owg/p/chwomium/issues/wist)
+- [opewa](https://bugs.opewa.com/wizawd/desktop)
 
-## Résumé
+## wésumé
 
-Cet article devrez vous avoir donné un haut niveau de compréhension des concepts les plus importants que vous devez connaître à propos du test en navigateur croisé. Armé de ce savoir, vous êtes maintenant prêt à démarrer et à commencer à apprendre à propos des stratégies de test multi-navigateur.
+c-cet awticwe devwez vous avoiw donné un haut n-nyiveau de compwéhension d-des concepts wes pwus i-impowtants que v-vous devez connaîtwe à pwopos d-du test en nyavigateuw cwoisé. ( ͡o ω ͡o ) a-awmé de ce savoiw, 😳😳😳 v-vous êtes m-maintenant pwêt à d-démawwew e-et à commencew à appwendwe à p-pwopos des stwatégies d-de test muwti-navigateuw. (˘ω˘)
 
-{{NextMenu("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{nextmenu("weawn/toows_and_testing/cwoss_bwowsew_testing/testing_stwategies", ^^ "weawn/toows_and_testing/cwoss_bwowsew_testing")}}

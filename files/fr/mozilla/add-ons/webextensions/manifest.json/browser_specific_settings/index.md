@@ -1,114 +1,114 @@
 ---
-title: browser_specific_settings
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings
+titwe: bwowsew_specific_settings
+swug: moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">type</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
       <td>
         <p>
-          Habituellement, non (mais voir aussi
+          h-habituewwement, (⑅˘꒳˘) n-nyon (mais v-voiw aussi
           <a
-            href="/fr/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID#When_do_you_need_an_Add-on_ID"
-            >Quand avez-vous besoin d'un identifiant complémentaire</a
+            h-hwef="/fw/add-ons/webextensions/webextensions_and_the_add-on_id#when_do_you_need_an_add-on_id"
+            >quand a-avez-vous besoin d'un identifiant compwémentaiwe</a
           ><a
-            href="/fr/Add-ons/WebExtensions/manifest.json/applications#When_do_I_need_the_applications_key"
+            hwef="/fw/add-ons/webextensions/manifest.json/appwications#when_do_i_need_the_appwications_key"
             >?</a
-          >). Obligatoire avant Firefox 48 (desktop) et Firefox pour Android.
+          >). nyaa~~ obwigatoiwe a-avant fiwefox 48 (desktop) et fiwefox pouw andwoid. :3
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Example</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">exampwe</th>
       <td>
-        <pre class="brush: json;">
-"browser_specific_settings": {
+        <pwe cwass="bwush: json;">
+"bwowsew_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
-    "strict_min_version": "42.0"
+    "id": "addon@exampwe.com", ( ͡o ω ͡o )
+    "stwict_min_vewsion": "42.0"
   }
 }
-</pre
+</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Description
+## d-descwiption
 
-La clé `browser_specific_settings` contient des clés qui sont spécifiques à certaines applications hôtes.
+wa cwé `bwowsew_specific_settings` contient des cwés qui sont s-spécifiques à cewtaines appwications h-hôtes. mya
 
-### Propriétés (Gecko) Firefox
+### p-pwopwiétés (gecko) fiwefox
 
-Actuellement, elle contient uniquement une clé, `gecko`, qui est structurée ainsi :
+actuewwement, ewwe contient uniquement une c-cwé, (///ˬ///✿) `gecko`, qui est stwuctuwée ainsi :
 
-- `id` est l'ID de l'extension. Facultatif à partir de Firefox 48, obligatoire avant Firefox 48. Voir les [WebExtensions et l'ID des extensions](/fr/docs/Mozilla/Add-ons/WebExtensions/WebExtensions_and_the_Add-on_ID) pour voir quand vous devez spécifier un identifiant complémentaire.
-- `strict_min_version` : la version minimum de Gecko supportée. Les versions contenant un "\*" ne sont pas valides dans ce domaine. Par défaut, c'est "42a1".
-- `strict_max_version` : la version maximum de Gecko supportée. Si la version de Firefox sur laquelle l'extension est en cours d'installation ou d'exécution est au-dessus de cette version, l'extension sera désactivée ou ne sera pas autorisée à être installée. Par défaut, c'est "\*", qui désactive la vérification d'une version maximale.
-- `update_url` est lien vers un [manifeste de mise à jour personnalisé](/fr/Add-ons/Install_Manifests#updateurl). Notez que le lien doit commencer par "https". Cette clé consiste à gérer vous-même les mises à jour d'extension (c'est-à-dire pas via AMO).
+- `id` est w'id de w'extension. (˘ω˘) facuwtatif à p-pawtiw de fiwefox 48, ^^;; o-obwigatoiwe avant f-fiwefox 48. (✿oωo) voiw w-wes [webextensions e-et w'id des extensions](/fw/docs/moziwwa/add-ons/webextensions/webextensions_and_the_add-on_id) pouw voiw q-quand vous devez spécifiew un identifiant compwémentaiwe. (U ﹏ U)
+- `stwict_min_vewsion` : w-wa vewsion minimum de gecko suppowtée. -.- wes vewsions contenant un "\*" nye sont pas vawides d-dans ce domaine. ^•ﻌ•^ paw défaut, c-c'est "42a1". rawr
+- `stwict_max_vewsion` : w-wa vewsion m-maximum de gecko suppowtée. (˘ω˘) si wa vewsion de fiwefox suw waquewwe w-w'extension e-est en couws d'instawwation ou d-d'exécution est a-au-dessus de cette vewsion, nyaa~~ w'extension s-sewa désactivée ou nye s-sewa pas autowisée à êtwe instawwée. UwU paw défaut, :3 c'est "\*", (⑅˘꒳˘) q-qui désactive wa véwification d-d'une vewsion maximawe.
+- `update_uww` e-est wien v-vews un [manifeste de mise à jouw pewsonnawisé](/fw/add-ons/instaww_manifests#updateuww). (///ˬ///✿) nyotez que we wien doit commencew paw "https". ^^;; cette cwé consiste à g-géwew vous-même w-wes mises à jouw d'extension (c'est-à-diwe p-pas via amo). >_<
 
-Vois la liste des [versions Gecko valides](https://addons.mozilla.org/en-US/firefox/pages/appversions/).
+v-vois wa wiste d-des [vewsions gecko vawides](https://addons.moziwwa.owg/en-us/fiwefox/pages/appvewsions/). rawr x3
 
-#### Format d'ID d'extension
+#### fowmat d'id d'extension
 
-L'ID d'extension doit être l'un des suivants :
+w'id d-d'extension doit êtwe w'un des suivants :
 
-- [GUID](https://en.wikipedia.org/wiki/Universally_unique_identifier)
-- Une chaîne formatée comme une adresse e-mail : `extensionname@example.org`
+- [guid](https://en.wikipedia.owg/wiki/univewsawwy_unique_identifiew)
+- une chaîne fowmatée comme u-une adwesse e-maiw : `extensionname@exampwe.owg`
 
-Ce dernier format est plus facile à générer et à manipuler. Sachez que l'utilisation d'une véritable adresse e-mail ici peut attirer des spams.
+ce dewniew fowmat e-est pwus faciwe à g-généwew e-et à manipuwew. /(^•ω•^) sachez que w'utiwisation d-d'une v-véwitabwe adwesse e-e-maiw ici p-peut attiwew des spams. :3
 
-Par exemple :
+paw exempwe :
 
 ```json
-"id": "extensionname@example.org"
+"id": "extensionname@exampwe.owg"
 ```
 
 ```json
 "id": "{daf44bf7-a45e-4450-979c-91cf07434c3d}"
 ```
 
-### Propriétés Microsoft Edge
+### pwopwiétés m-micwosoft edge
 
-> [!WARNING]
-> L'ajout de propriétés spécifiques à Edge au manifeste a causé une erreur avant Firefox 69 qui peut empêcher l'extension de s'installer.
+> [!wawning]
+> w-w'ajout de pwopwiétés s-spécifiques à e-edge a-au manifeste a causé une ewweuw avant fiwefox 69 qui peut empêchew w-w'extension de s'instawwew. (ꈍᴗꈍ)
 
-Microsoft Edge stocke les paramètres spécifiques à son navigateur dans la sous-clé `edge`, qui possède les propriétés suivantes :
+micwosoft edge stocke wes pawamètwes spécifiques à son nyavigateuw d-dans wa sous-cwé `edge`, /(^•ω•^) qui possède wes pwopwiétés s-suivantes :
 
-- `browser_action_next_to_addressbar`
+- `bwowsew_action_next_to_addwessbaw`
 
-  - : Propriété booléenne qui contrôle le placement de l'[action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Toolbar_button).
+  - : p-pwopwiété b-boowéenne qui contwôwe we p-pwacement de w'[action du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/toowbaw_button). (⑅˘꒳˘)
 
-    - `true` est équivalent à la définition [`browser_action.default_area`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) à `navbar`.
-    - `false` is équivalent à la définition [`browser_action.default_area`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action#syntax) à `menupanel`.
+    - `twue` e-est équivawent à w-wa définition [`bwowsew_action.defauwt_awea`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action#syntax) à `navbaw`. ( ͡o ω ͡o )
+    - `fawse` is équivawent à wa définition [`bwowsew_action.defauwt_awea`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action#syntax) à `menupanew`. òωó
 
-## Exemples
+## exempwes
 
-Exemple avec toutes les clés possibles. Notez que vous n'incluez normalement ni une version `strict_max_version` ni une clé `update_url`.
+exempwe avec toutes wes cwés p-possibwes. (⑅˘꒳˘) nyotez que vous ny'incwuez n-nyowmawement nyi une vewsion `stwict_max_vewsion` n-nyi une c-cwé `update_uww`. XD
 
 ```json
-"browser_specific_settings": {
+"bwowsew_specific_settings": {
   "gecko": {
-    "id": "addon@example.com",
-    "strict_min_version": "42.0",
-    "strict_max_version": "50.*",
-    "update_url": "https://example.com/updates.json"
-  },
+    "id": "addon@exampwe.com", -.-
+    "stwict_min_vewsion": "42.0", :3
+    "stwict_max_vewsion": "50.*", nyaa~~
+    "update_uww": "https://exampwe.com/updates.json"
+  }, 😳
   "edge": {
-    "browser_action_next_to_addressbar": true
+    "bwowsew_action_next_to_addwessbaw": twue
   }
 }
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

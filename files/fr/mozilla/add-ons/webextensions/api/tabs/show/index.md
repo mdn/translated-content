@@ -1,63 +1,63 @@
 ---
-title: tabs.show()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/show
+titwe: tabs.show()
+swug: moziwwa/add-ons/webextensions/api/tabs/show
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Affiche un ou plusieurs onglets précédemment masqués par un appel à {{WebExtAPIRef("tabs.hide")}}.
+affiche u-un ou pwusieuws o-ongwets pwécédemment m-masqués p-paw un appew à {{webextapiwef("tabs.hide")}}. (///ˬ///✿)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var showing = browser.tabs.show(
-  tabIds, // integer or integer array
+vaw showing = bwowsew.tabs.show(
+  tabids, 🥺 // integew ow integew a-awway
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabIds`
-  - : `integer` or `array` of `integer`. Les ID de l'onglet ou des onglets à afficher.
+- `tabids`
+  - : `integew` ow `awway` o-of `integew`. mya wes id de w'ongwet o-ou des ongwets à affichew. 🥺
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accomplie sans arguments. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa accompwie sans awguments. >_< s-si une ewweuw s-se pwoduit, >_< wa pwomesse sewa wejetée avec un message d'ewweuw. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Afficher un seul onglet :
-
-```js
-function onShown() {
-  console.log(`Shown`);
-}
-
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-browser.tabs.show(2).then(onShown, onError);
-```
-
-Afficher plusieurs onglets :
+a-affichew un seuw ongwet :
 
 ```js
-function onShown() {
-  console.log(`Shown`);
+function onshown() {
+  consowe.wog(`shown`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.tabs.show([15, 14, 1]).then(onShown, onError);
+bwowsew.tabs.show(2).then(onshown, /(^•ω•^) o-onewwow);
 ```
 
-{{WebExtExamples}}
+a-affichew pwusieuws o-ongwets :
 
-## Compatibilité des navigateurs
+```js
+f-function onshown() {
+  consowe.wog(`shown`);
+}
 
-{{Compat}}
+f-function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
+}
+
+b-bwowsew.tabs.show([15, rawr x3 14, 1]).then(onshown, (U ﹏ U) onewwow);
+```
+
+{{webextexampwes}}
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

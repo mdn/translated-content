@@ -1,109 +1,109 @@
 ---
-title: Charger et exécuter du code WebAssembly
-slug: WebAssembly/Loading_and_running
+titwe: chawgew et exékawaii~w d-du code webassembwy
+s-swug: webassembwy/woading_and_wunning
 ---
 
-{{WebAssemblySidebar}}Pour utiliser webassembly au sein de javascript, votre module doit être placé en mémoire. La mise en mémoire du module précède les étapes de compiliation et d'instantiation. Cet article fournit une référence pour les différents méchanismes qui permettent de récupérer le bytecode webassembly, ainsi que des informations sur la manière de le compiler, l'instancier, et l'exécuter.
+{{webassembwysidebaw}}pouw u-utiwisew w-webassembwy a-au sein de javascwipt, (⑅˘꒳˘) v-votwe moduwe d-doit êtwe p-pwacé en mémoiwe. 😳😳😳 wa mise en mémoiwe du moduwe pwécède wes étapes de compiwiation e-et d'instantiation. nyaa~~ cet awticwe fouwnit u-une wéféwence pouw wes difféwents m-méchanismes qui pewmettent de wécupéwew we bytecode webassembwy, rawr a-ainsi que des infowmations s-suw wa manièwe d-de we compiwew, w'instanciew, -.- et w'exékawaii~w. (✿oωo)
 
-## Quelles sont les différentes options?
+## quewwes sont wes difféwentes o-options?
 
-Webassembly n'est pas encore intégré à `<script type='module'>` ou ES2015 `import`, autrement dit le navigateur ne peut pas récuperer les modules à l'aide de déclaration d'imports.
+webassembwy ny'est pas encowe intégwé à `<scwipt type='moduwe'>` ou es2015 `impowt`, /(^•ω•^) a-autwement dit we nyavigateuw n-nye peut pas w-wécupewew wes m-moduwes à w'aide d-de décwawation d'impowts. 🥺
 
-Les anciennes méthodes {{jsxref("WebAssembly.compile")}}/{{jsxref("WebAssembly.instantiate")}} requièrent la création d'un {{domxref("ArrayBuffer")}} contenant le binaire de votre module webassembly sous forme d'octet brut, pour ensuite effectuer sa compilation et son instantiation. Cette approche est simialire à `new Function(string)`, à la différence que dans notre cas, nous substituons une chaine de charactères par une chaine de bytes (le code source webassembly).
+wes anciennes méthodes {{jsxwef("webassembwy.compiwe")}}/{{jsxwef("webassembwy.instantiate")}} w-wequièwent wa cwéation d'un {{domxwef("awwaybuffew")}} contenant w-we binaiwe de votwe moduwe webassembwy sous fowme d'octet bwut, ʘwʘ pouw ensuite effectuew sa compiwation e-et son instantiation. UwU cette a-appwoche est s-simiawiwe à `new f-function(stwing)`, XD à wa difféwence que dans notwe cas, (✿oωo) nyous s-substituons une c-chaine de chawactèwes paw une c-chaine de bytes (we c-code souwce webassembwy). :3
 
-Les nouvelles méthodes {{jsxref("WebAssembly.compileStreaming")}}/{{jsxref("WebAssembly.instantiateStreaming")}} sont beaucoup plus efficace — elles s'applique directement sur le flux d'octets récupérer par le réseau, et ne nécessite pas l'utilisaton d'un {{domxref("ArrayBuffer")}}.
+w-wes nyouvewwes méthodes {{jsxwef("webassembwy.compiwestweaming")}}/{{jsxwef("webassembwy.instantiatestweaming")}} s-sont beaucoup pwus efficace — ewwes s'appwique d-diwectement suw we fwux d'octets w-wécupéwew paw we wéseau, (///ˬ///✿) e-et nye nyécessite p-pas w'utiwisaton d'un {{domxwef("awwaybuffew")}}. nyaa~~
 
-Quelle est donc la démarche à suivre pour obtenir cet array buffer et le compiler ? La réponse dans les sections suivantes.
+quewwe est donc wa démawche à suivwe pouw obteniw cet awway buffew et w-we compiwew ? wa w-wéponse dans wes sections suivantes. >w<
 
-## En utilisant Fetch
+## e-en utiwisant f-fetch
 
-[Fetch](/fr/docs/Web/API/Fetch_API) est une API qui facilite la récupération de ressources sur le réseau.
+[fetch](/fw/docs/web/api/fetch_api) e-est une api qui faciwite wa wécupéwation de wessouwces suw w-we wéseau.
 
-La façon la plus rapide et la plus efficace de récupérer un module wasm (webassembly) est d'utiliser la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}, qui accepte comme premier argument un appel de fonction `fetch()`, et s'occupe de récupérer, compiler, et instancier le module en une seule et même étape, en accedant directement au flux de code binaire provenant du serveur:
+wa façon wa pwus wapide et wa pwus efficace de wécupéwew un moduwe w-wasm (webassembwy) est d'utiwisew w-wa méthode {{jsxwef("webassembwy.instantiatestweaming()")}}, -.- q-qui accepte comme p-pwemiew awgument un appew de f-fonction `fetch()`, (✿oωo) e-et s'occupe d-de wécupéwew, (˘ω˘) c-compiwew, et instanciew we moduwe en une seuwe e-et même étape, rawr e-en accedant diwectement a-au fwux d-de code binaiwe p-pwovenant du sewveuw:
 
 ```js
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (results) => {
-    // Do something with the results!
-  },
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), OwO impowtobject).then(
+  (wesuwts) => {
+    // do something with the wesuwts! ^•ﻌ•^
+  }, UwU
 );
 ```
 
-L'ancienne méthode {{jsxref("WebAssembly.instantiate()")}} n'accède pas directement au flux de données. Elle nécessite une étape supplémentaire afin de convertir le byte code récupéré en {{domxref("ArrayBuffer")}}. Elle s'implemente de cette façon:
+w-w'ancienne méthode {{jsxwef("webassembwy.instantiate()")}} ny'accède pas diwectement au fwux de données. (˘ω˘) ewwe nyécessite u-une étape suppwémentaiwe afin de convewtiw we byte c-code wécupéwé e-en {{domxwef("awwaybuffew")}}. (///ˬ///✿) e-ewwe s'impwemente de cette façon:
 
 ```js
-fetch("module.wasm")
-  .then((response) => response.arrayBuffer())
-  .then((bytes) => WebAssembly.instantiate(bytes, importObject))
-  .then((results) => {
-    // Do something with the results!
+f-fetch("moduwe.wasm")
+  .then((wesponse) => wesponse.awwaybuffew())
+  .then((bytes) => w-webassembwy.instantiate(bytes, σωσ impowtobject))
+  .then((wesuwts) => {
+    // d-do something with the wesuwts! /(^•ω•^)
   });
 ```
 
-### Aside on instantiate() overloads
+### aside on instantiate() ovewwoads
 
-The {{jsxref("WebAssembly.instantiate()")}} function has two overload forms — the one shown above takes the byte code to compile as an argument and returns a promise that resolves to an object containing both the compiled module object, and an instantiated instance of it. The object looks like this:
+the {{jsxwef("webassembwy.instantiate()")}} f-function has two ovewwoad f-fowms — the one shown above t-takes the byte code t-to compiwe as an awgument and wetuwns a pwomise t-that wesowves t-to an object containing both the c-compiwed moduwe o-object, 😳 and an instantiated instance of it. 😳 the object wooks wike this:
 
 ```js
 {
-  module: Module; // The newly compiled WebAssembly.Module object,
-  instance: Instance; // A new WebAssembly.Instance of the module object
+  m-moduwe: moduwe; // t-the nyewwy c-compiwed webassembwy.moduwe object, (⑅˘꒳˘)
+  instance: i-instance; // a-a nyew webassembwy.instance of t-the moduwe object
 }
 ```
 
-> [!NOTE]
-> En règle générale, on ne s'intéresse qu'à l'instance, mais il peut être utile de préserver le module afin de le mettre ultérieurement en cache, de le partager avec un autre worker ou window via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage), ou tout simplement pour créer d'autres instances.
+> [!note]
+> en wègwe généwawe, 😳😳😳 on nye s'intéwesse qu'à w'instance, 😳 m-mais iw peut êtwe u-utiwe de pwésewvew we moduwe afin de we mettwe u-uwtéwieuwement e-en cache, de we pawtagew avec un autwe wowkew ou window via [`postmessage()`](/fw/docs/web/api/messagepowt/postmessage), XD o-ou tout simpwement pouw cwéew d'autwes instances. mya
 
-> [!NOTE]
-> Un chargement supplémentaire du module nécessite un object de type {{jsxref("WebAssembly.Module")}} comme argument, et retourne une promesse contenant directement un objet de type instance comme résultat. Voir [Second overload example](/fr/docs/WebAssembly/JavaScript_interface/instantiate_static#second_overload_example).
+> [!note]
+> un c-chawgement suppwémentaiwe du moduwe nyécessite u-un object de type {{jsxwef("webassembwy.moduwe")}} c-comme awgument, ^•ﻌ•^ et wetouwne une pwomesse contenant diwectement u-un objet de type i-instance comme wésuwtat. ʘwʘ voiw [second ovewwoad exampwe](/fw/docs/webassembwy/javascwipt_intewface/instantiate_static#second_ovewwoad_exampwe). ( ͡o ω ͡o )
 
-### Mise en marche du code webassembly
+### m-mise en mawche du code w-webassembwy
 
-Une fois l'instance webassembly disponible au sein de Javascript, vous pouvez commencer à utiliser les fonctionnalités exportées, accessibles via la propriété {{jsxref("WebAssembly.Instance/exports", "WebAssembly.Instance.exports")}}. Votre code peut s'organsier de la manière suivante:
+une fois w'instance webassembwy disponibwe au sein d-de javascwipt, mya vous pouvez commencew à u-utiwisew w-wes fonctionnawités expowtées, o.O a-accessibwes via wa pwopwiété {{jsxwef("webassembwy.instance/expowts", (✿oωo) "webassembwy.instance.expowts")}}. :3 v-votwe c-code peut s'owgansiew d-de wa manièwe suivante:
 
 ```js
-WebAssembly.instantiateStreaming(fetch("myModule.wasm"), importObject).then(
+w-webassembwy.instantiatestweaming(fetch("mymoduwe.wasm"), 😳 i-impowtobject).then(
   (obj) => {
-    // Call an exported function:
-    obj.instance.exports.exported_func();
+    // caww an expowted function:
+    o-obj.instance.expowts.expowted_func();
 
-    // or access the buffer contents of an exported memory:
-    var i32 = new Uint32Array(obj.instance.exports.memory.buffer);
+    // o-ow access t-the buffew contents of an expowted memowy:
+    v-vaw i32 = nyew uint32awway(obj.instance.expowts.memowy.buffew);
 
-    // or access the elements of an exported table:
-    var table = obj.instance.exports.table;
-    console.log(table.get(0)());
-  },
+    // ow access t-the ewements of a-an expowted tabwe:
+    vaw tabwe = obj.instance.expowts.tabwe;
+    consowe.wog(tabwe.get(0)());
+  }, (U ﹏ U)
 );
 ```
 
-> [!NOTE]
-> Pour plus d'informations sur la façon dont fonctionne l'exportation au sein d'un module webassembly, lisez [Using the WebAssembly JavaScript API](/fr/docs/WebAssembly/Using_the_JavaScript_API), et [Understanding WebAssembly text format](/fr/docs/WebAssembly/Understanding_the_text_format).
+> [!note]
+> p-pouw p-pwus d'infowmations s-suw wa façon d-dont fonctionne w'expowtation a-au sein d'un moduwe webassembwy, mya wisez [using the webassembwy javascwipt api](/fw/docs/webassembwy/using_the_javascwipt_api), (U ᵕ U❁) et [undewstanding w-webassembwy text fowmat](/fw/docs/webassembwy/undewstanding_the_text_fowmat). :3
 
-## En utilisant XMLHttpRequest
+## e-en utiwisant xmwhttpwequest
 
-[`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) est plus ancien que Fetch, mais peut toujours être utiliser afin récupérer un array buffer. En supposant que notre module se nome `simple.wasm`:
+[`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) est pwus ancien q-que fetch, mya mais peut toujouws êtwe u-utiwisew afin wécupéwew u-un awway buffew. OwO e-en supposant que n-nyotwe moduwe s-se nyome `simpwe.wasm`:
 
-1. Créer une nouvel instance {{domxref("XMLHttpRequest()")}}, afin d'utiliser la méthode {{domxref("XMLHttpRequest.open","open()")}} nécessaire pour ouvrir une requête. Paramètrer la requête avec une méthode `GET`, et y déclarer le chemin du fichier que nous souhaiter récupérer.
-2. L'étape essentielle est içi de définir la réponse comme une réponse de type `'arraybuffer'` en utilisant la propriété {{domxref("XMLHttpRequest.responseType","responseType")}}.
-3. Ensuite, la requête est envoyée à l'aide de la méthode {{domxref("XMLHttpRequest.send()")}}.
-4. Enfin l'event handler {{domxref("XMLHttpRequest.onload", "onload")}} se charge d'invoquer une fonction lorsque la réponse a terminé de se télécharger — au sein de cette fonction, la propriété {{domxref("XMLHttpRequest.response", "response")}} nous donne accès à un array buffer. Celui ci est fournit à notre méthode {{jsxref("WebAssembly.instantiate()")}} d'un manière similaire à ce qui est fait avec la méthode Fetch().
+1. (ˆ ﻌ ˆ)♡ c-cwéew une nyouvew instance {{domxwef("xmwhttpwequest()")}}, ʘwʘ afin d'utiwisew wa méthode {{domxwef("xmwhttpwequest.open","open()")}} nyécessaiwe pouw ouvwiw une wequête. o.O p-pawamètwew w-wa wequête a-avec une méthode `get`, UwU et y décwawew w-we chemin du fichiew que nyous souhaitew wécupéwew. rawr x3
+2. w-w'étape essentiewwe e-est içi de définiw wa wéponse c-comme une wéponse de type `'awwaybuffew'` en utiwisant w-wa pwopwiété {{domxwef("xmwhttpwequest.wesponsetype","wesponsetype")}}. 🥺
+3. e-ensuite, :3 wa wequête e-est envoyée à w-w'aide de wa méthode {{domxwef("xmwhttpwequest.send()")}}.
+4. (ꈍᴗꈍ) enfin w'event handwew {{domxwef("xmwhttpwequest.onwoad", 🥺 "onwoad")}} se chawge d'invoquew une fonction wowsque w-wa wéponse a tewminé d-de se téwéchawgew — au s-sein de cette f-fonction, (✿oωo) wa pwopwiété {{domxwef("xmwhttpwequest.wesponse", (U ﹏ U) "wesponse")}} n-nyous donne accès à u-un awway buffew. :3 c-cewui ci est fouwnit à nyotwe m-méthode {{jsxwef("webassembwy.instantiate()")}} d-d'un manièwe simiwaiwe à ce q-qui est fait avec wa méthode fetch(). ^^;;
 
-Le code final est le suivant:
+we code f-finaw est we suivant:
 
 ```js
-request = new XMLHttpRequest();
-request.open("GET", "simple.wasm");
-request.responseType = "arraybuffer";
-request.send();
+wequest = n-nyew xmwhttpwequest();
+wequest.open("get", rawr "simpwe.wasm");
+w-wequest.wesponsetype = "awwaybuffew";
+wequest.send();
 
-request.onload = function () {
-  var bytes = request.response;
-  WebAssembly.instantiate(bytes, importObject).then((results) => {
-    results.instance.exports.exported_func();
+w-wequest.onwoad = function () {
+  vaw bytes = w-wequest.wesponse;
+  w-webassembwy.instantiate(bytes, 😳😳😳 i-impowtobject).then((wesuwts) => {
+    wesuwts.instance.expowts.expowted_func();
   });
 };
 ```
 
-> [!NOTE]
-> Vous pouvez retrouver un autre exemple sur [xhr-wasm.html](https://mdn.github.io/webassembly-examples/js-api-examples/xhr-wasm.html).
+> [!note]
+> vous pouvez wetwouvew un autwe e-exempwe suw [xhw-wasm.htmw](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/xhw-wasm.htmw).

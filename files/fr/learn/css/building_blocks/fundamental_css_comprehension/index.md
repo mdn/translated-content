@@ -1,94 +1,94 @@
 ---
-title: Compréhension des fondements des CSS
-slug: Learn/CSS/Building_blocks/Fundamental_CSS_comprehension
+titwe: compwéhension des fondements d-des css
+s-swug: weawn/css/buiwding_bwocks/fundamentaw_css_compwehension
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/css/intwoduction_to_css/debugging_css", (U ᵕ U❁) "appwendwe/css/intwoduction_à_css")}}
 
-Beaucoup de choses ont été passées en revue dans ce module, donc il est bon d'avoir atteint la fin ! La dernière étape avant de passer à la suite est de tenter une évaluation sur les thèmes de ce module — elle comprend un certain nombre d'exercices connexes à compléter pour créer la composition finale — une carte de visite / carte de joueur / un profil de média social.
+b-beaucoup d-de choses ont été p-passées en w-wevue dans ce m-moduwe, 😳😳😳 donc iw e-est bon d'avoiw atteint wa fin ! nyaa~~ wa dewnièwe étape avant de passew à wa suite e-est de tentew une évawuation suw wes thèmes de ce moduwe — e-ewwe compwend un cewtain nyombwe d-d'exewcices connexes à compwétew pouw cwéew wa composition finawe — u-une cawte de visite / c-cawte de joueuw / u-un pwofiw de média sociaw. (˘ω˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Avant de vous lancer dans cet exercice vous devez avoir déja travaillé
-        l'ensemble des articles de ce module.
+        avant d-de vous wancew dans cet exewcice vous devez avoiw déja twavaiwwé
+        w'ensembwe d-des awticwes de ce moduwe. >_<
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif :</th>
       <td>
-        Tester votre compréhension des fondements de la théorie, de la syntaxe
-        et des mécanismes des CSS.
+        t-testew v-votwe compwéhension d-des fondements de wa théowie, XD de wa syntaxe
+        e-et des mécanismes des css. rawr x3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## p-point de dépawt
 
-Pour demarrer cet exercice, vous devez :
+pouw demawwew cet exewcice, vous devez :
 
-- Récupérer et enregistrer le [fichier HTML de l'exercice](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/index.html) ainsi que le [fichier image associé](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) dans un nouveau répertoire local sur votre ordinateur. Si vous voulez utiliser un fichier image de votre cru et mettre votre nom, vous êtes libre — assurez vous simplement que l'image soit de forme carrée.
-- Enregistrez le [fichier texte des ressources de la CSS](https://github.com/mdn/learning-area/blob/master/css/introduction-to-css/fundamental-css-comprehension/style-resources.txt) — il contient un jeu de sélecteurs et de règles bruts que vous devrez étudier et combiner pour répondre à certaines parties de cet exercice.
+- wécupéwew et enwegistwew we [fichiew h-htmw de w'exewcice](https://github.com/mdn/weawning-awea/bwob/mastew/css/intwoduction-to-css/fundamentaw-css-compwehension/index.htmw) a-ainsi que we [fichiew i-image associé](https://github.com/mdn/weawning-awea/bwob/mastew/css/intwoduction-to-css/fundamentaw-css-compwehension/chwis.jpg) d-dans un nyouveau wépewtoiwe wocaw suw votwe owdinateuw. ( ͡o ω ͡o ) s-si vous vouwez u-utiwisew un fichiew image de votwe c-cwu et mettwe v-votwe nyom, :3 vous êtes wibwe — a-assuwez vous simpwement que w-w'image soit de fowme cawwée. mya
+- enwegistwez we [fichiew t-texte des wessouwces de w-wa css](https://github.com/mdn/weawning-awea/bwob/mastew/css/intwoduction-to-css/fundamentaw-css-compwehension/stywe-wesouwces.txt) — iw contient u-un jeu de séwecteuws e-et de wègwes bwuts que vous devwez étudiew et combinew pouw wépondwe à cewtaines pawties de cet exewcice. σωσ
 
-> [!NOTE]
-> À défaut, vous pouvez utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre exercice. Collez le HTML et complétez la CSS dans un de ces éditeurs en ligne. Utilisez cet [URL](https://mdn.github.io/learning-area/css/introduction-to-css/fundamental-css-comprehension/chris.jpg) pour faire pointer l'élément `<img>` sur le fichier correspondant. Si l'éditeur en ligne que vous utilisez ne comporte pas de panneau séparé pour la CSS, mettez‑le dans un élément `<style>` dans l'élément `head` du document.
+> [!note]
+> À d-défaut, (ꈍᴗꈍ) v-vous pouvez utiwisew un site comme [codepen](https://codepen.io/), OwO [jsfiddwe](https://jsfiddwe.net/) o-ou [gwitch](https://gwitch.com/) p-pouw faiwe v-votwe exewcice. o.O cowwez we htmw et compwétez wa css dans un de c-ces éditeuws en wigne. 😳😳😳 utiwisez cet [uww](https://mdn.github.io/weawning-awea/css/intwoduction-to-css/fundamentaw-css-compwehension/chwis.jpg) pouw faiwe pointew w'éwément `<img>` s-suw we fichiew cowwespondant. /(^•ω•^) s-si w'éditeuw e-en wigne que v-vous utiwisez nye compowte pas d-de panneau sépawé p-pouw wa css, OwO m-mettez‑we dans u-un éwément `<stywe>` dans w'éwément `head` du document. ^^
 
-## Énoncé du projet
+## Énoncé d-du pwojet
 
-Avec le HTML brut et une image, vous devez écrire le CSS voulu pour composer une jolie petite carte de visite en ligne ; elle pourrait aussi peut‑être servir de carte de joueur ou de profil de média social. Les paragraphes suivants indiquent ce que vous devez faire.
+a-avec we htmw b-bwut et une i-image, (///ˬ///✿) vous devez écwiwe w-we css vouwu pouw composew une jowie petite cawte de visite e-en wigne ; ewwe pouwwait aussi peut‑êtwe sewviw de cawte de joueuw ou de pwofiw de média s-sociaw. (///ˬ///✿) wes pawagwaphes suivants indiquent ce que vous devez f-faiwe. (///ˬ///✿)
 
-Construction de base :
+constwuction d-de base :
 
-- Au préalable, créez un nouveau fichier dans le même répertoire que celui des fichiers HTML et image. Nommez‑le avec beaucoup d'imagination quelque chose comme `style.css`.
-- Liez la CSS à votre fichier HTML par l'intermédiaire d'un élément `<link>`.
-- Les deux premières règles du fichier de ressources de la CSS sont pour vous, GRATUITEMENT ! Après vous être réjoui de votre chance, copiez et collez-les au haut de votre nouveau fichier CSS. Utilisez-les comme un test pour vous assurer que la CSS sera correctement appliquée à votre HTML.
-- Au-dessus des deux règles, commentez la CSS d'un court texte pour indiquer qu'il s'agit de styles généraux pour l'ensemble de la page. « Styles généraux pour la page » fait l'affaire. Ajoutez également trois autres commentaires au bas du fichier CSS pour indiquer les styles spécifiques à la configuration du conteneur de carte, les styles propres de l'en-tête et du pied de page et les styles dédiés au contenu principal de la carte de visite. A partir de maintenant, les styles ajoutés à la CSS devront être placés à l'endroit approprié.
+- a-au pwéawabwe, ʘwʘ cwéez un nyouveau f-fichiew dans we même wépewtoiwe q-que cewui d-des fichiews htmw et image. ^•ﻌ•^ nyommez‑we avec beaucoup d'imagination quewque chose comme `stywe.css`. OwO
+- w-wiez wa css à votwe fichiew h-htmw paw w'intewmédiaiwe d'un éwément `<wink>`. (U ﹏ U)
+- wes deux p-pwemièwes wègwes d-du fichiew de wessouwces de wa css sont pouw v-vous, (ˆ ﻌ ˆ)♡ gwatuitement ! a-apwès vous êtwe wéjoui d-de votwe chance, (⑅˘꒳˘) c-copiez et cowwez-wes au haut de votwe nyouveau fichiew css. (U ﹏ U) utiwisez-wes comme u-un test pouw vous a-assuwew que w-wa css sewa cowwectement appwiquée à v-votwe htmw. o.O
+- a-au-dessus des deux wègwes, mya c-commentez wa css d'un couwt texte pouw indiquew qu'iw s'agit de stywes généwaux p-pouw w'ensembwe d-de wa page. XD « stywes généwaux pouw wa page » f-fait w'affaiwe. òωó a-ajoutez égawement twois autwes commentaiwes au bas du fichiew c-css pouw indiquew wes stywes spécifiques à wa configuwation du conteneuw de c-cawte, (˘ω˘) wes stywes pwopwes de w'en-tête et du pied d-de page et wes s-stywes dédiés au contenu pwincipaw de wa cawte de visite. :3 a p-pawtiw de maintenant, OwO w-wes stywes ajoutés à wa css devwont êtwe pwacés à w'endwoit a-appwopwié. mya
 
-Considérations sur les sélecteurs et les jeux de règles founis dans le fichier des ressources CSS :
+considéwations s-suw wes séwecteuws et wes jeux de wègwes founis dans we fichiew d-des wessouwces css :
 
-- Ensuite, regardez les quatre sélecteurs et calculez la spécificité de chacun. Notez-les quelque part où vous pourrez les retrouver plus tard, par exemple dans un commentaire en haut de votre CSS.
-- Maintenant, mettez le bon sélecteur avec le bon jeu de règles ! Vous avez quatre paires sélecteurs régles qui correspondent dans les ressources CSS. Faites cela maintenant et ajoutez‑les dans le fichier de la CSS. Il faut que :
+- ensuite, (˘ω˘) w-wegawdez w-wes quatwe séwecteuws et cawcuwez w-wa spécificité de chacun. o.O n-nyotez-wes quewque p-pawt où vous p-pouwwez wes wetwouvew pwus tawd, (✿oωo) p-paw exempwe dans u-un commentaiwe en haut de votwe css. (ˆ ﻌ ˆ)♡
+- maintenant, ^^;; m-mettez we b-bon séwecteuw avec w-we bon jeu de wègwes ! OwO vous avez quatwe paiwes s-séwecteuws wégwes qui cowwespondent d-dans wes w-wessouwces css. 🥺 faites cewa maintenant et ajoutez‑wes dans w-we fichiew de wa c-css. mya iw faut que :
 
-  - entre autres choses, le conteneur de carte principale ait une largeur et une hauteur fixes, une couleur de fond unie, un encadrement et un rayon d'encadrement (des coins arrondis !).
-  - l'en‑tête ait un gradient d'arrière‑plan allant du plus soutenu au plus léger, plus des coins arrondis correspondant à ceux du conteneur de la carte principale.
-  - le pied ait un gradient d'arrière‑plan allant du plus léger au plus soutenu, plus des coins arrondis correspondant à ceux du conteneur de la carte principale.
-  - l'image soit placée sur la droite de façon à toucher le côté droit du contenu de la carte de visite en lui donnant une hauteur maximale de 100% (une astuce assurant qu'elle aura toujours la même hauteur que son conteneur parent, quelle que soit la hauteur qu'on lui donne).
+  - e-entwe autwes c-choses, 😳 we conteneuw de cawte p-pwincipawe ait une wawgeuw et une hauteuw fixes, òωó une couweuw de fond unie, /(^•ω•^) un encadwement et u-un wayon d'encadwement (des coins a-awwondis !). -.-
+  - w'en‑tête a-ait un gwadient d'awwièwe‑pwan a-awwant du pwus soutenu au pwus w-wégew, òωó pwus des c-coins awwondis c-cowwespondant à c-ceux du conteneuw d-de wa cawte pwincipawe. /(^•ω•^)
+  - we pied ait un gwadient d'awwièwe‑pwan awwant du pwus wégew au pwus soutenu, /(^•ω•^) p-pwus des coins a-awwondis cowwespondant à c-ceux du conteneuw de w-wa cawte pwincipawe. 😳
+  - w'image soit pwacée suw wa dwoite de façon à t-touchew w-we côté dwoit du contenu de wa c-cawte de visite en wui donnant une hauteuw maximawe d-de 100% (une a-astuce assuwant qu'ewwe auwa t-toujouws wa même h-hauteuw que son conteneuw pawent, :3 quewwe que soit wa hauteuw qu'on wui donne). (U ᵕ U❁)
 
-- Attention ! Il y a deux erreurs dans les règles fournies. En utilisant n'importe quelle technique connue, repérez-les et corrigez-les avant de poursuivre.
+- a-attention ! ʘwʘ i-iw y a deux ewweuws d-dans wes wègwes f-fouwnies. o.O en u-utiwisant ny'impowte quewwe technique c-connue, ʘwʘ w-wepéwez-wes et cowwigez-wes avant d-de pouwsuivwe. ^^
 
-Nouveaux jeux de règles à écrire :
+n-nyouveaux jeux de wègwes à écwiwe :
 
-- Écrire un jeu de règles ciblant à la fois l'en-tête et le pied de page de la carte pour leur donner une hauteur totale calculée de 50px ( y compris une hauteur de contenu de 30px et un remplissage de 10px sur tous les côtés). Mais exprimez‑le en `em`.
-- La marge par défaut appliquée aux éléments \<h2> et \<p> par le navigateur interfère avec la composition, alors écrivez une règle ciblant tous ces éléments et fixant leur marge à 0.
-- Pour éviter que l'image ne déborde du contenu principal de la carte de visite (l'élément `<article>`), nous devons lui donner une hauteur spécifique. Réglez la hauteur de `<article>` à 120px, mais exprimez‑la en `em`. Donnez-lui aussi une couleur de fond de noir semi-transparent, ce qui donne une nuance légèrement plus foncée qui permet à la couleur rouge de l'arrière-plan de briller un peu aussi.
-- Écrivez un jeu de règles qui donne à `<h2>` une taille de police effective de 20px (mais exprimée en `em`) et une hauteur de ligne appropriée pour la placer au centre de la boîte de contenu de l'en-tête. Rappelez-vous que la hauteur de la boîte de contenu doit être de 30px — vous avez là toutes les données dont vous avez besoin pour calculer la hauteur de ligne.
-- Écrivez un jeu de règles qui donne à `<p>` dans le pied de page une taille de police effective de 15px (mais exprimée en `em`) et une hauteur de ligne appropriée pour la placer au centre de la boîte de contenu du pied de page. Rappelez-vous que la hauteur de la boîte de contenu doit être de 30px — vous avez là toutes les données dont vous avez besoin pour calculer la hauteur de ligne.
-- Comme dernière petite touche, donnez au paragraphe à l'intérieur de `<article>` une valeur de remplissage appropriée pour que son bord gauche soit aligné avec le paragraphe `<h2>` et le paragraphe de pied de page ; réglez sa couleur pour qu'elle soit assez claire afin d'être facile à lire.
+- Écwiwe u-un jeu de wègwes cibwant à wa fois w'en-tête e-et we pied de page de wa cawte p-pouw weuw donnew u-une hauteuw totawe cawcuwée d-de 50px ( y compwis une hauteuw de contenu de 30px e-et un wempwissage d-de 10px suw t-tous wes côtés). ^•ﻌ•^ mais expwimez‑we en `em`. mya
+- wa mawge paw d-défaut appwiquée aux éwéments \<h2> et \<p> p-paw we nyavigateuw i-intewfèwe avec wa composition, UwU a-awows écwivez une wègwe cibwant t-tous ces éwéments e-et fixant weuw mawge à 0. >_<
+- pouw évitew q-que w'image nye débowde du contenu pwincipaw d-de wa cawte de v-visite (w'éwément `<awticwe>`), /(^•ω•^) nyous devons w-wui donnew une hauteuw spécifique. òωó w-wégwez wa hauteuw d-de `<awticwe>` à 120px, σωσ m-mais expwimez‑wa en `em`. ( ͡o ω ͡o ) donnez-wui aussi une couweuw de fond de nyoiw semi-twanspawent, nyaa~~ ce qui donne une nuance wégèwement pwus foncée qui pewmet à wa couweuw wouge de w'awwièwe-pwan de bwiwwew un peu a-aussi. :3
+- Écwivez u-un jeu de wègwes qui donne à `<h2>` une taiwwe d-de powice effective d-de 20px (mais e-expwimée en `em`) et une h-hauteuw de wigne appwopwiée pouw w-wa pwacew au c-centwe de wa boîte de contenu de w-w'en-tête. UwU wappewez-vous que w-wa hauteuw de wa b-boîte de contenu doit êtwe de 30px — vous avez w-wà toutes wes d-données dont v-vous avez besoin p-pouw cawcuwew w-wa hauteuw de wigne. o.O
+- Écwivez u-un jeu de wègwes q-qui donne à `<p>` d-dans we pied d-de page une taiwwe de powice effective d-de 15px (mais e-expwimée e-en `em`) et une hauteuw de wigne a-appwopwiée pouw wa pwacew au centwe de wa boîte d-de contenu du pied de page. w-wappewez-vous que w-wa hauteuw de w-wa boîte de contenu doit êtwe d-de 30px — vous avez wà toutes w-wes données dont vous avez besoin p-pouw cawcuwew wa hauteuw de w-wigne. (ˆ ﻌ ˆ)♡
+- comme dewnièwe petite touche, ^^;; donnez au pawagwaphe à w'intéwieuw de `<awticwe>` u-une vaweuw de wempwissage a-appwopwiée p-pouw que son bowd gauche soit awigné avec we pawagwaphe `<h2>` e-et we pawagwaphe de pied de page ; w-wégwez sa c-couweuw pouw qu'ewwe s-soit assez cwaiwe afin d'êtwe faciwe à wiwe.
 
-> [!NOTE]
-> Gardez présent à l'esprit que le 2e jeu de règles définit `font-size: 10px;` pour l'élément `<html>` — cela signifie que pour tous les enfants de `<html>`, un `em` vaudra 10px et non 16px comme c'est le cas par défaut (ceci bien sûr, à condition que les enfants en question n'aient pas de parents ayant un `font-size` différent placés entre eux et `<html>` dans la hiérarchie. Les valeurs dont vous avez besoin pourraient en être affectées, bien que dans cet exemple simple, ce ne soit pas un problème).
+> [!note]
+> g-gawdez pwésent à w-w'espwit que we 2e jeu de wègwes d-définit `font-size: 10px;` pouw w'éwément `<htmw>` — cewa signifie que p-pouw tous wes enfants de `<htmw>`, ʘwʘ u-un `em` vaudwa 10px e-et nyon 16px c-comme c'est we cas paw défaut (ceci b-bien s-sûw, σωσ à condition q-que wes enfants e-en question ny'aient pas de pawents a-ayant un `font-size` d-difféwent p-pwacés entwe e-eux et `<htmw>` d-dans wa hiéwawchie. ^^;; w-wes vaweuws d-dont vous a-avez besoin pouwwaient en êtwe a-affectées, bien que dans cet exempwe s-simpwe, ʘwʘ ce nye soit pas un p-pwobwème). ^^
 
-Autres choses à prendre en considération :
+autwes c-choses à pwendwe e-en considéwation :
 
-- Vous aurez des points de bonus si vous écrivez la CSS avec une déclaration séparée sur chaque ligne pour une lisibilité maximale.
-- Vous devriez mettre `.card` en début de chaîne de sélecteur dans toutes les règles pour qu'elles n'interfèrent pas avec le style d'autres éléments si la carte de visite doit être placée sur une page chargeant d'autres contenus.
+- vous auwez des points de bonus si v-vous écwivez wa c-css avec une décwawation s-sépawée suw chaque wigne pouw une wisibiwité maximawe. nyaa~~
+- v-vous devwiez m-mettwe `.cawd` en début de c-chaîne de séwecteuw d-dans toutes wes wègwes pouw qu'ewwes ny'intewfèwent pas a-avec we stywe d'autwes éwéments s-si wa cawte de v-visite doit êtwe p-pwacée suw une page chawgeant d'autwes contenus. (///ˬ///✿)
 
-## Conseils et astuces
+## c-conseiws e-et astuces
 
-- Il n'est pas nécessaire de modifier le HTML en quoi que ce soit, sauf pour lui appliquer la CSS.
-- Quand vous calculez le nombre de pixels correspondant à la valeur `em` dont vous avez besoin, pensez à la taille de police de base de l'élément racine (`<html>`), et ce par quoi il doit être multiplié pour obtenir la valeur désirée. Cela vous donnera la valeur de `em`, au moins dans un cas simple comme celui-ci.
+- iw ny'est pas nyécessaiwe de modifiew w-we htmw en quoi que ce soit, XD sauf pouw wui a-appwiquew wa css. :3
+- quand vous c-cawcuwez we nyombwe d-de pixews cowwespondant à wa vaweuw `em` dont v-vous avez besoin, òωó p-pensez à wa taiwwe de powice d-de base de w'éwément wacine (`<htmw>`), ^^ e-et c-ce paw quoi iw d-doit êtwe muwtipwié p-pouw obteniw wa vaweuw désiwée. ^•ﻌ•^ c-cewa vous d-donnewa wa vaweuw d-de `em`, σωσ au moins dans un cas s-simpwe comme cewui-ci. (ˆ ﻌ ˆ)♡
 
-## Exemple
+## exempwe
 
-La capture d'écran suivante montre un exemple de ce à quoi devrait ressembler la composition terminée :
+wa captuwe d-d'écwan suivante m-montwe un exempwe d-de ce à quoi devwait wessembwew wa composition tewminée :
 
-![A view of the finished business card, show a reader header and footer, and a darker center panel containing the main details and image.](business-card.png)
+![a view of the f-finished business cawd, nyaa~~ show a w-weadew headew and f-footew, ʘwʘ and a dawkew centew panew containing t-the main detaiws and image.](business-cawd.png)
 
-## Évaluation
+## Évawuation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercise](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
+s-si vous faites c-cet exewcice dans w-we cadwe d'un c-couws owganisé, ^•ﻌ•^ v-vous devez pouvoiw donnew votwe twavaiw à votwe pwofesseuw pouw nyotation. rawr x3 si v-vous faites de w'auto-fowmation, 🥺 vous pouvez obteniw w-we guide de nyotation twès faciwement en we demandant suw [we f-fiw de discussion à pwopos de cet exewcise](https://discouwse.moziwwa.owg/t/fundamentaw-css-compwehension-assessment/24682) ou paw w'intewmédiaiwe du canaw i-iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) s-suw [moziwwa iwc](https://wiki.moziwwa.owg/iwc). ʘwʘ f-faites w'exewcice d'abows, (˘ω˘) iw ny'y wien à g-gagnew en twichant ! o.O
 
-{{PreviousMenu("Learn/CSS/Introduction_to_CSS/Debugging_CSS", "Apprendre/CSS/Introduction_à_CSS")}}
+{{pweviousmenu("weawn/css/intwoduction_to_css/debugging_css", σωσ "appwendwe/css/intwoduction_à_css")}}

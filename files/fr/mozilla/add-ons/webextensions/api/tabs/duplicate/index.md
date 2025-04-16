@@ -1,110 +1,110 @@
 ---
-title: tabs.duplicate()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/duplicate
+titwe: tabs.dupwicate()
+swug: m-moziwwa/add-ons/webextensions/api/tabs/dupwicate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Duplique un onglet dont l'identifiant est donné.
+d-dupwique u-un ongwet dont w-w'identifiant est d-donné. 🥺
 
-Il s'agit d'une fonction asynchrone qui renvoie une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d-d'une fonction a-asynchwone q-qui wenvoie une [pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-let duplicating = browser.tabs.duplicate(
-  tabId, // entier
-  duplicateProperties, // objet optionnel
+wet dupwicating = bwowsew.tabs.dupwicate(
+  tabid, ʘwʘ // entiew
+  d-dupwicatepwopewties, (˘ω˘) // objet optionnew
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId`
-  - : `integer`. L'identifiant de l'onglet à dupliquer.
-- `duplicateProperties` Optionnel
+- `tabid`
+  - : `integew`. (✿oωo) w'identifiant de w-w'ongwet à dupwiquew. (///ˬ///✿)
+- `dupwicatepwopewties` optionnew
 
-  - : `object`. Un objet décrivant la façon dont l'onglet est dupliqué. Il contient les propriétés suivantes&nbsp;:
+  - : `object`. rawr x3 un objet décwivant wa f-façon dont w'ongwet est dupwiqué. -.- i-iw contient w-wes pwopwiétés suivantes&nbsp;:
 
-    - `index` Optionnel
-      - : `integer`. La position du nouvel onglet dans la fenêtre. La valeur est restreinte à l'intervalle entre zéro et le nombre d'onglets dans la fenêtre.
-    - `active` Optionnel
-      - : `boolean`. Si l'onglet devient l'onglet actif dans la fenêtre. Cela ne change pas l'état du focus pour la fenêtre. `true` par défaut.
+    - `index` optionnew
+      - : `integew`. ^^ wa position du nyouvew ongwet d-dans wa fenêtwe. wa vaweuw est westweinte à w'intewvawwe entwe zéwo et we nyombwe d-d'ongwets dans wa fenêtwe. (⑅˘꒳˘)
+    - `active` o-optionnew
+      - : `boowean`. nyaa~~ si w-w'ongwet devient w-w'ongwet actif d-dans wa fenêtwe. /(^•ω•^) cewa nye change pas w'état d-du focus pouw wa fenêtwe. (U ﹏ U) `twue` paw défaut. 😳😳😳
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une [promesse (`Promise`)](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) dont la valeur de résolution sera un objet [`tabs.Tab`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) contenant des détails sur l'onglet dupliqué. L'objet `Tab` contiendra les propriétés `url`, `title` et `favIconUrl` uniquement si l'extension dispose de la [permission `"tabs"`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) ou lorsque [l'hôte correspond à un hôte ciblé dans les permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions). Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [pwomesse (`pwomise`)](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) dont wa vaweuw de wésowution sewa un objet [`tabs.tab`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/tab) c-contenant des détaiws s-suw w'ongwet dupwiqué. >w< w-w'objet `tab` c-contiendwa wes pwopwiétés `uww`, XD `titwe` et `faviconuww` uniquement si w'extension d-dispose d-de wa [pewmission `"tabs"`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) ou wowsque [w'hôte c-cowwespond à u-un hôte cibwé dans wes pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions). o.O s-si une ewweuw se pwoduit, mya w-wa pwomesse sewa wejetée avec un message d-d'ewweuw. 🥺
 
-> [!NOTE]
-> À partir de Firefox 68, la promesse renvoyée par `browser.tabs.duplicate()` se résout dès que l'onglet a été dupliqué. Auparavant, la promesse n'était résolue qu'une fois l'onglet entièrement chargé.
+> [!note]
+> À pawtiw d-de fiwefox 68, ^^;; wa pwomesse wenvoyée p-paw `bwowsew.tabs.dupwicate()` s-se wésout dès que w'ongwet a été dupwiqué. :3 aupawavant, (U ﹏ U) wa pwomesse ny'était wésowue qu'une fois w'ongwet e-entièwement c-chawgé. OwO
 
-## Exemples
+## exempwes
 
-Duplique le premier onglet, puis affiche l'identifiant de l'onglet nouvellement créé :
+dupwique w-we pwemiew ongwet, 😳😳😳 p-puis affiche w-w'identifiant de w'ongwet nyouvewwement cwéé :
 
 ```js
-function onDuplicated(tabInfo) {
-  console.log(tabInfo.id);
+function o-ondupwicated(tabinfo) {
+  consowe.wog(tabinfo.id);
 }
 
-function onError(error) {
-  console.error(error);
+function onewwow(ewwow) {
+  consowe.ewwow(ewwow);
 }
 
-// Duplique le premier onglet du tableau
-function duplicateFirstTab(tabs) {
-  console.log(tabs);
-  if (tabs.length > 0) {
-    let duplicating = browser.tabs.duplicate(tabs[0].id);
-    duplicating.then(onDuplicated, onError);
+// d-dupwique we pwemiew ongwet du t-tabweau
+function d-dupwicatefiwsttab(tabs) {
+  c-consowe.wog(tabs);
+  if (tabs.wength > 0) {
+    w-wet d-dupwicating = bwowsew.tabs.dupwicate(tabs[0].id);
+    d-dupwicating.then(ondupwicated, (ˆ ﻌ ˆ)♡ o-onewwow);
   }
 }
 
-// On récupère tous les onglets ouverts
-let querying = browser.tabs.query({});
-querying.then(duplicateFirstTab, onError);
+// on wécupèwe tous wes o-ongwets ouvewts
+w-wet quewying = b-bwowsew.tabs.quewy({});
+q-quewying.then(dupwicatefiwsttab, XD o-onewwow);
 ```
 
-### Exemple d'extensions
+### exempwe d'extensions
 
-- [tabs-tabs-tabs](https://github.com/mdn/webextensions-examples/tree/master/tabs-tabs-tabs)
+- [tabs-tabs-tabs](https://github.com/mdn/webextensions-exampwes/twee/mastew/tabs-tabs-tabs)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). cette documentation est déwivée d-de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. (ˆ ﻌ ˆ)♡
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies paw m-micwosoft cowpowation et incwuses i-ici sous wa w-wicence cweative commons attwibution 3.0 pouw wes États-unis. ( ͡o ω ͡o )
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. rawr x3 aww w-wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy f-fowms, with o-ow without
+// modification, >_< awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, ^^;; this wist of c-conditions and t-the fowwowing discwaimew. (ˆ ﻌ ˆ)♡
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, ^^;; t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. (⑅˘꒳˘)
+//    * nyeithew the nyame o-of googwe inc. rawr x3 n-nyow the names of its
+// contwibutows may be used to endowse ow p-pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, 🥺 incwuding, b-but nyot
+// wimited t-to, >_< the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. UwU in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, >_< i-indiwect, incidentaw, -.-
+// s-speciaw, mya exempwawy, >w< ow c-consequentiaw damages (incwuding, (U ﹏ U) but nyot
+// wimited t-to, 😳😳😳 pwocuwement o-of substitute g-goods ow sewvices; woss of use, o.O
+// d-data, ow p-pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, òωó w-whethew in contwact, 😳😳😳 stwict wiabiwity, σωσ ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out o-of the use
+// of this softwawe, (⑅˘꒳˘) even if advised of the possibiwity o-of such damage. (///ˬ///✿)
 -->

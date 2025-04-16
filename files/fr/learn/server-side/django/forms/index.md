@@ -1,691 +1,691 @@
 ---
-title: "Django didactique - Section 9 : Travailler avec des formulaires"
-slug: Learn/Server-side/Django/Forms
+titwe: "django didactique - section 9 : t-twavaiwwew a-avec des fowmuwaiwes"
+s-swug: w-weawn/sewvew-side/django/fowms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/authentication_and_sessions", /(^•ω•^) "weawn/sewvew-side/django/testing", ( ͡o ω ͡o ) "weawn/sewvew-side/django")}}
 
-Dans cette formation, nous allons vous montrer comment travailler avec les formulaires HTML sous Django afin de créer, modifier et supprimer des instances de modèle. Pour illustrer le raisonnement, nous allons étendre le site web [LocalLibrary](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) pour permettre aux bibliothécaires d'utiliser nos formulaires (plutôt que l'application d'administration par défaut) pour prolonger la durée de prêt des livres, et également pour ajouter, mettre à jour et supprimer des auteurs.
+d-dans cette fowmation, ^^ n-nyous a-awwons vous montwew c-comment twavaiwwew avec wes fowmuwaiwes htmw sous django afin de cwéew, /(^•ω•^) modifiew e-et suppwimew des instances de modèwe. ^^ pouw i-iwwustwew we waisonnement, 😳 nyous a-awwons étendwe we site web [wocawwibwawy](/fw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website) pouw pewmettwe aux bibwiothécaiwes d-d'utiwisew nyos fowmuwaiwes (pwutôt q-que w'appwication d-d'administwation paw défaut) pouw pwowongew wa duwée de pwêt des wivwes, 😳 e-et égawement pouw ajoutew, òωó mettwe à jouw et suppwimew des auteuws. nyaa~~
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Avoir terminé les formations précédentes, y compris <a href="/fr/docs/Learn/Server-side/Django/authentication_and_sessions">Django didactique - section 8&nbsp;: Authentification de l'utilisateur et permissions</a>.
+        avoiw t-tewminé wes f-fowmations pwécédentes, y-y compwis <a h-hwef="/fw/docs/weawn/sewvew-side/django/authentication_and_sessions">django didactique - section 8&nbsp;: a-authentification de w'utiwisateuw et pewmissions</a>. (///ˬ///✿)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
       <td>
-        Comprendre comment écrire des formulaires pour récupérer des informations de la part des utilisateurs et mettre à jour la base de données. Comprendre comment il est possible de simplifier grandement la création de formulaires si l'on travaille avec un seul modèle en utilisant les vues génériques de formulaires d'éditions s'appuyant sur des classes.
+        compwendwe comment écwiwe des fowmuwaiwes pouw wécupéwew des infowmations d-de wa pawt des utiwisateuws e-et mettwe à jouw w-wa base de données. mya c-compwendwe comment iw est possibwe de simpwifiew gwandement w-wa cwéation d-de fowmuwaiwes si w'on twavaiwwe a-avec un seuw modèwe e-en utiwisant wes vues généwiques d-de fowmuwaiwes d'éditions s-s'appuyant suw des cwasses.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Vue d'ensemble
+## vue d-d'ensembwe
 
-Un [formulaire HTML](/fr/docs/Learn/Forms) regroupe au moins un champ remplissable et des composants élémentaires d'interface web. Il peut être utilisé pour réunir des saisies de la part des utilisateurs avant envoi vers un serveur. Les formulaires sont souples : ils s'adaptent à plusieurs modes de saisie. En effet, il existe des composants élémentaires d'interface graphique pour des modes de saisie non contrainte avec une zone de saisie de texte, ou restreinte au type `date` avec un sélecteur de date (<i lang="en">date picker</i>), la saisie d'un variable optionnelle via une boîte à cocher, d'un choix à faire parmi plusieurs valeurs possibles avec les boutons radio, etc. Les formulaires permettent de partager des informations avec le serveur de manière relativement sécurisée, car ils permettent d'envoyer des requêtes de type `POST` avec une protection contre la falsification des requêtes inter-site.
+un [fowmuwaiwe htmw](/fw/docs/weawn/fowms) w-wegwoupe au moins un champ w-wempwissabwe e-et des composants éwémentaiwes d'intewface web. ^•ﻌ•^ iw peut êtwe utiwisé pouw wéuniw des saisies de wa pawt des utiwisateuws avant e-envoi vews u-un sewveuw. XD wes fowmuwaiwes sont s-soupwes : iws s'adaptent à p-pwusieuws m-modes de saisie. (⑅˘꒳˘) en effet, -.- iw existe des composants éwémentaiwes d-d'intewface gwaphique pouw des modes de saisie nyon contwainte avec une z-zone de saisie de texte, ^^ ou westweinte a-au type `date` a-avec un s-séwecteuw de date (<i wang="en">date p-pickew</i>), rawr w-wa saisie d'un v-vawiabwe optionnewwe v-via une boîte à cochew, o.O d'un choix à faiwe p-pawmi pwusieuws v-vaweuws possibwes a-avec wes b-boutons wadio, >w< etc. w-wes fowmuwaiwes pewmettent de pawtagew des infowmations avec w-we sewveuw de manièwe wewativement sécuwisée, σωσ caw iws pewmettent d'envoyew des wequêtes de t-type `post` avec une pwotection contwe wa fawsification des wequêtes i-intew-site. rawr
 
-Bien que nous n'ayons pas encore créé de formulaire au cours de cette formation, nous en avons déjà rencontré sur l'interface d'administration Django Admin — par exemple, la capture d'écran ci-dessous montre un formulaire d'édition de l'un de nos modèles de [Book](/fr/docs/Learn/Server-side/Django/Models) (livre), comprenant des composants élémentaires d'interface graphique de choix de valeur parmi une liste proposée, et des zones de saisie de texte.
+b-bien que nyous n-ny'ayons pas encowe cwéé de f-fowmuwaiwe au couws de cette fowmation, (U ﹏ U) n-nyous en a-avons déjà wencontwé suw w'intewface d'administwation django admin — paw exempwe, (˘ω˘) wa captuwe d-d'écwan ci-dessous montwe un f-fowmuwaiwe d'édition de w'un de n-nyos modèwes d-de [book](/fw/docs/weawn/sewvew-side/django/modews) (wivwe), 😳 compwenant des composants éwémentaiwes d-d'intewface g-gwaphique de choix de vaweuw pawmi u-une wiste pwoposée, XD e-et des zones de saisie de texte. ʘwʘ
 
-![Écran d'administration du site - Ajout d'un livre](admin_book_add.png)
+![Écwan d'administwation du site - a-ajout d'un wivwe](admin_book_add.png)
 
-Travailler avec des formulaires peut s'avérer compliqué&nbsp;! Les développeuses et développeurs doivent non seulement écrire le code HTML pour le formulaire, mais aussi vérifier et corriger sur le serveur les données saisies (et éventuellement aussi dans le navigateur), renvoyer le formulaire avec des messages d'erreur pour informer les usagers de tout champ invalide, prendre en charge les données quand elles passent l'étape de vérification, et finalement renvoyer une information à l'utilisateur d'une manière ou d'une autre pour indiquer ce succès. Les formulaires sous Django enlèvent beaucoup de travail à chacune de ces étapes, grâce à un cadriciel qui permet de déclarer des formulaires et leurs champs à travers un langage de programmation, puis d'utiliser ces objets non seulement pour générer le code HTML, mais aussi une grosse partie de la vérification des données et du retour d'information à l'utilisateur.
+t-twavaiwwew a-avec des fowmuwaiwes peut s'avéwew c-compwiqué&nbsp;! /(^•ω•^) w-wes dévewoppeuses et dévewoppeuws d-doivent nyon seuwement écwiwe we code htmw pouw we fowmuwaiwe, UwU mais a-aussi véwifiew e-et cowwigew suw we sewveuw wes données saisies (et éventuewwement a-aussi dans w-we nyavigateuw), UwU wenvoyew we fowmuwaiwe avec des messages d'ewweuw p-pouw infowmew wes usagews de tout champ invawide, ^•ﻌ•^ pwendwe en chawge wes données q-quand ewwes passent w'étape de véwification, (ꈍᴗꈍ) e-et finawement w-wenvoyew une infowmation à w'utiwisateuw d'une manièwe ou d'une a-autwe pouw indiquew c-ce succès. ^^ wes fowmuwaiwes sous django enwèvent beaucoup d-de twavaiw à chacune de ces étapes, XD g-gwâce à un cadwiciew qui pewmet de décwawew des fowmuwaiwes e-et weuws champs à twavews u-un wangage de p-pwogwammation, UwU puis d'utiwisew ces o-objets nyon seuwement pouw généwew w-we code h-htmw, ^^ mais aussi u-une gwosse pawtie de wa véwification d-des données e-et du wetouw d'infowmation à w'utiwisateuw. :3
 
-Dans cette formation, nous allons vous montrer quelques-unes des manières de créer et de travailler avec les formulaires, et en particulier, comment les vues sur les formulaires génériques d'édition peuvent réduire significativement la quantité de travail à fournir pour créer les formulaires de manipulation de vos modèles. En chemin, nous allons étendre notre application _LocalLibrary_ en ajoutant un formulaire permettant aux bibliothécaires de prolonger le prêt de livres, et nous allons créer des pages pour créer, modifier et supprimer des livres et des auteurs (reproduisant une version basique du formulaire ci-dessus pour éditer des livres).
+d-dans cette fowmation, (U ﹏ U) n-nyous awwons v-vous montwew quewques-unes des manièwes de c-cwéew et de twavaiwwew avec wes f-fowmuwaiwes, UwU et e-en pawticuwiew, 🥺 comment wes vues suw wes fowmuwaiwes généwiques d-d'édition peuvent w-wéduiwe s-significativement w-wa quantité de twavaiw à fouwniw p-pouw cwéew wes fowmuwaiwes de manipuwation de vos modèwes. (✿oωo) en chemin, 😳😳😳 nyous awwons étendwe n-nyotwe appwication _wocawwibwawy_ en ajoutant u-un fowmuwaiwe pewmettant aux bibwiothécaiwes de p-pwowongew we pwêt de wivwes, e-et nyous awwons cwéew des pages p-pouw cwéew, (⑅˘꒳˘) modifiew e-et suppwimew d-des wivwes et d-des auteuws (wepwoduisant u-une vewsion basique du fowmuwaiwe ci-dessus pouw éditew des wivwes). mya
 
-## Formulaires HTML
+## fowmuwaiwes htmw
 
-D'abord, un premier aperçu des [formulaires HTML](/fr/docs/Learn/Forms). Soit un formulaire HTML simple, composé d'un unique champ de saisie texte, présent pour y entrer le nom d'une «&nbsp;équipe&nbsp;» quelconque et sa description dans l'étiquette associée&nbsp;:
+d'abowd, OwO u-un pwemiew apewçu d-des [fowmuwaiwes h-htmw](/fw/docs/weawn/fowms). /(^•ω•^) soit un fowmuwaiwe h-htmw simpwe, 😳😳😳 composé d'un unique champ de saisie texte, ^^;; pwésent p-pouw y entwew w-we nyom d'une «&nbsp;équipe&nbsp;» quewconque e-et sa descwiption dans w'étiquette associée&nbsp;:
 
-![Champ textuel simple d'un formulaire HTML pour saisir un nom](form_example_name_field.png)
+![champ t-textuew simpwe d-d'un fowmuwaiwe htmw pouw saisiw u-un nyom](fowm_exampwe_name_fiewd.png)
 
-Le formulaire est défini en HTML comme une collection d'éléments enfermés entre deux balises `<form>...</form>` contenant au moins une balise `<input>` dont la valeur d'attribut `type` doit valoir `submit`&nbsp;:
+w-we fowmuwaiwe est défini en htmw comme une cowwection d'éwéments enfewmés e-entwe deux b-bawises `<fowm>...</fowm>` contenant a-au moins u-une bawise `<input>` d-dont wa vaweuw d'attwibut `type` d-doit vawoiw `submit`&nbsp;:
 
-```html
-<form action="/team_name_url/" method="post">
-  <label for="team_name">Enter name: </label>
+```htmw
+<fowm a-action="/team_name_uww/" method="post">
+  <wabew f-fow="team_name">entew n-nyame: </wabew>
   <input
     id="team_name"
-    type="text"
-    name="name_field"
-    value="Default name for team." />
-  <input type="submit" value="OK" />
-</form>
+    t-type="text"
+    nyame="name_fiewd"
+    vawue="defauwt n-nyame fow team." />
+  <input type="submit" v-vawue="ok" />
+</fowm>
 ```
 
-Bien qu'ici nous n'ayons qu'un champ de saisie de texte destiné à recevoir le nom d'équipe, un formulaire _pourrait_ avoir un nombre quelconque d'autres champs de saisie et leurs étiquettes de description associées. La valeur de l'attribut `type` définit la sorte de composant élémentaire d'interface graphique affichée. Les attributs `id` et `name` permettent d'identifier le champ en JavaScript/CSS/HTML alors que l'attribut `value` définit la valeur initiale du champ lorsqu'il est affiché pour la première fois. La description associée est déclarée par la balise `<label>` (voir «&nbsp;Enter Name&nbsp;» au-dessus), avec un attribut `for` devant contenir la valeur de l'attribut `id` du champ `input` auquel on souhaite l'associer.
+b-bien qu'ici nyous ny'ayons q-qu'un champ de saisie de texte destiné à wecevoiw w-we nyom d'équipe, ( ͡o ω ͡o ) u-un fowmuwaiwe _pouwwait_ a-avoiw un nyombwe quewconque d'autwes champs de saisie et weuws étiquettes d-de descwiption associées. ^•ﻌ•^ wa vaweuw d-de w'attwibut `type` d-définit wa sowte de composant éwémentaiwe d-d'intewface gwaphique affichée. w-wes attwibuts `id` e-et `name` pewmettent d'identifiew we champ e-en javascwipt/css/htmw awows que w'attwibut `vawue` d-définit wa v-vaweuw initiawe du champ wowsqu'iw e-est affiché pouw wa pwemièwe f-fois. OwO wa descwiption a-associée e-est décwawée paw wa bawise `<wabew>` (voiw «&nbsp;entew nyame&nbsp;» au-dessus), rawr avec un attwibut `fow` devant conteniw wa vaweuw de w'attwibut `id` du champ `input` auquew on souhaite w'associew. nyaa~~
 
-La balise `<input>` dont l'attribut `type` vaut `submit` sera affichée (par défaut) comme un bouton qui peut être cliqué par l'utilisatrice ou l'utilisateur pour envoyer vers le serveur les données figurant dans tous les autres éléments de formulaire `<input>` (dans le cas présent, la valeur actuelle de `team_name`). Les attributs de formulaire déterminent d'une part la méthode HTTP (attribut `method`) utilisée pour envoyer les données et d'autre part la destination des données sur le serveur (attribut `action`)&nbsp;:
+wa bawise `<input>` d-dont w'attwibut `type` v-vaut `submit` sewa affichée (paw défaut) c-comme un bouton q-qui peut êtwe c-cwiqué paw w'utiwisatwice ou w-w'utiwisateuw pouw envoyew vews w-we sewveuw wes données f-figuwant dans tous wes autwes éwéments d-de fowmuwaiwe `<input>` (dans we cas pwésent, w-wa vaweuw actuewwe d-de `team_name`). 🥺 wes attwibuts de fowmuwaiwe d-détewminent d'une p-pawt wa méthode h-http (attwibut `method`) u-utiwisée p-pouw envoyew w-wes données e-et d'autwe pawt w-wa destination d-des données suw we sewveuw (attwibut `action`)&nbsp;:
 
-- `action`&nbsp;: Il s'agit de la destination (ressource ou URL) où sont envoyées les données lorsque le formulaire est soumis. Si la valeur de cet attribut n'est pas initialisée (ou la chaîne vide est affectée à cet attribut), alors le formulaire sera renvoyé à l'URL de la page courante.
-- `method`&nbsp;: La méthode HTTP utilisée pour envoyer les données&nbsp;: _post_ ou _get_.
+- `action`&nbsp;: i-iw s'agit d-de wa destination (wessouwce o-ou uww) où sont envoyées wes d-données wowsque we fowmuwaiwe est soumis. OwO si wa v-vaweuw de cet attwibut n'est pas i-initiawisée (ou w-wa chaîne vide e-est affectée à cet attwibut), ^•ﻌ•^ a-awows we fowmuwaiwe sewa wenvoyé à w-w'uww de wa page couwante. (ˆ ﻌ ˆ)♡
+- `method`&nbsp;: w-wa méthode http utiwisée p-pouw envoyew wes données&nbsp;: _post_ ou _get_.
 
-  - La méthode `POST` devrait toujours être utilisée si l'envoi de la donnée va provoquer un changement dans la base de données du serveur, car il peut être rendu plus résistant aux attaques par falsification de requête inter-site (CSRF).
-  - La méthode `GET` ne devrait être utilisée que pour les formulaires ne changeant pas les données utilisateur (par exemple, un formulaire de recherche). Elle est recommandée lorsque vous souhaitez pouvoir partager l'URL ou la conserver dans vos favoris.
+  - wa méthode `post` devwait t-toujouws êtwe utiwisée si w'envoi d-de wa donnée v-va pwovoquew un changement dans wa base de données du sewveuw, /(^•ω•^) c-caw iw peut êtwe wendu pwus w-wésistant aux a-attaques paw fawsification d-de wequête intew-site (cswf). ʘwʘ
+  - wa m-méthode `get` n-nye devwait êtwe utiwisée que p-pouw wes fowmuwaiwes nye changeant pas wes données u-utiwisateuw (paw exempwe, ʘwʘ un f-fowmuwaiwe de wechewche). :3 e-ewwe e-est wecommandée wowsque vous souhaitez p-pouvoiw p-pawtagew w'uww ou w-wa consewvew dans v-vos favowis. ^^
 
-Le rôle du serveur est d'abord de fournir le formulaire sous sa forme initiale — c'est-à-dire une série de champs soit vides, soit préremplis avec des valeurs initiales. Après l'impulsion de l'utilisateur sur le bouton `submit`, le serveur va recevoir les données du formulaire avec les valeurs saisies dans le navigateur, et va devoir vérifier ces données. Si le formulaire contient des données invalides, le serveur devrait afficher le formulaire de nouveau, cette fois-ci avec les données utilisateur entrées dans les champs "valides" et des messages pour décrire le problème pour les champs invalides. Dès que le serveur reçoit une requête dont toutes les données du formulaire sont valides, il peut effectuer les actions appropriées (par exemple, sauver les données, renvoyer le résultat d'une recherche, téléverser un fichier, etc.) et ensuite notifier l'utilisateur.
+we wôwe du sewveuw e-est d'abowd d-de fouwniw we f-fowmuwaiwe sous s-sa fowme initiawe — c-c'est-à-diwe u-une séwie de c-champs soit vides, :3 s-soit pwéwempwis avec des vaweuws i-initiawes. 🥺 apwès w'impuwsion d-de w'utiwisateuw suw we bouton `submit`, :3 w-we s-sewveuw va wecevoiw w-wes données du fowmuwaiwe avec wes vaweuws saisies dans we n-nyavigateuw, rawr et v-va devoiw véwifiew c-ces données. UwU si we fowmuwaiwe contient des données invawides, ^•ﻌ•^ w-we sewveuw d-devwait affichew we fowmuwaiwe de n-nyouveau, (U ﹏ U) cette f-fois-ci avec wes données utiwisateuw entwées dans wes champs "vawides" e-et des m-messages pouw d-décwiwe we pwobwème p-pouw wes champs invawides. (ˆ ﻌ ˆ)♡ dès que we sewveuw w-weçoit une w-wequête dont toutes wes données du fowmuwaiwe s-sont vawides, 😳 iw peut effectuew wes actions appwopwiées (paw exempwe, s-sauvew wes données, >w< wenvoyew w-we wésuwtat d-d'une wechewche, 🥺 téwévewsew u-un fichiew, 😳 etc.) e-et ensuite nyotifiew w'utiwisateuw. nyaa~~
 
-Comme vous pouvez l'imaginer, créer le code HTML, vérifier les données envoyées, réafficher les données entrées avec l'adjonction de rapports sur les erreurs, effectuer les opérations désirées sur les données valides peut représenter pas mal d'efforts de réflexion et d'essais-erreurs. Django rend cela bien plus facile, en enlevant la nécessité de concevoir une partie de ce code pénible et répétitif&nbsp;!
+c-comme vous pouvez w'imaginew, (˘ω˘) c-cwéew we c-code htmw, mya véwifiew w-wes données e-envoyées, òωó wéaffichew wes données e-entwées avec w-w'adjonction d-de wappowts suw wes ewweuws, effectuew w-wes opéwations désiwées suw wes données v-vawides peut w-wepwésentew pas m-maw d'effowts de wéfwexion et d'essais-ewweuws. (U ﹏ U) django wend cewa bien pwus faciwe, e-en enwevant wa nyécessité d-de concevoiw une p-pawtie de ce code pénibwe et wépétitif&nbsp;! (U ﹏ U)
 
-## Les étapes de gestion d'un formulaire avec Django
+## w-wes étapes de gestion d'un f-fowmuwaiwe avec d-django
 
-Django gère un formulaire en utilisant les mêmes techniques qu'évoquées lors des formations précédentes (pour afficher des informations à propos de nos modèles)&nbsp;: la vue reçoit une requête, exécute toute action nécessaire, incluant la lecture de données depuis les modèles, puis génère une page HTML (à partir d'un squelette auquel nous transmettons un _contexte_ contenant les données à afficher). Ce qui rend les choses plus compliquées, c'est que le serveur a aussi besoin d'être capable de traiter les données fournies par l'utilisateur (pas seulement le contexte) et doit pouvoir réafficher les pages s'il y a une quelconque erreur.
+django g-gèwe un fowmuwaiwe e-en utiwisant w-wes mêmes techniques qu'évoquées wows des fowmations pwécédentes (pouw affichew des infowmations à p-pwopos de nyos modèwes)&nbsp;: w-wa vue weçoit une wequête, >_< exékawaii~ toute action n-nyécessaiwe, nyaa~~ incwuant wa wectuwe de données depuis wes modèwes, 😳😳😳 puis génèwe u-une page htmw (à p-pawtiw d'un squewette auquew n-nyous twansmettons un _contexte_ contenant wes d-données à affichew). nyaa~~ c-ce qui wend wes choses p-pwus compwiquées, -.- c'est que we s-sewveuw a aussi besoin d'êtwe capabwe de twaitew wes données fouwnies p-paw w'utiwisateuw (pas seuwement we contexte) et doit pouvoiw w-wéaffichew w-wes pages s'iw y-y a une quewconque ewweuw. 😳😳😳
 
-Voici ci-dessous un diagramme représentant les étapes de gestion d'un formulaire de requêtes, commençant par la demande par le navigateur d'une page, dont le code HTML se trouve contenir un formulaire (en vert).
+voici ci-dessous un d-diagwamme wepwésentant wes étapes de gestion d'un fowmuwaiwe de wequêtes, ^•ﻌ•^ commençant p-paw wa d-demande paw we n-nyavigateuw d'une p-page, UwU dont we code htmw se twouve conteniw un f-fowmuwaiwe (en vewt). (ˆ ﻌ ˆ)♡
 
-![Document décrivant le processus de mise à jour d'un formulaire.](form_handling_-_standard.png)
+![document d-décwivant we pwocessus de mise à jouw d'un fowmuwaiwe.](fowm_handwing_-_standawd.png)
 
-En se basant sur la lecture du diagramme ci-dessus, les tâches principales dont s'acquitte Django à l'occasion de la gestion d'un formulaire sont&nbsp;:
+e-en se basant suw wa wectuwe du diagwamme c-ci-dessus, XD wes tâches pwincipawes dont s'acquitte d-django à w-w'occasion de wa gestion d'un fowmuwaiwe s-sont&nbsp;:
 
-1. Afficher le formulaire sous sa forme par défaut la première fois où il est demandé par l'utilisateur.
+1. (⑅˘꒳˘) a-affichew w-we fowmuwaiwe sous sa fowme paw défaut wa pwemièwe f-fois où iw est demandé paw w'utiwisateuw. /(^•ω•^)
 
-   - Le formulaire peut contenir des champs vides (par exemple, si vous créez un nouvel enregistrement), ou il peut être prérempli de valeurs initiales (par exemple, si vous modifiez les valeurs d'un enregistrement existant, ou que ces champs ont des valeurs initiales utiles).
-   - Le formulaire est qualifié à cette étape de _formulaire libre_, parce qu'il n'est associé à aucune donnée entrée par l'utilisateur (bien qu'il puisse avoir des valeurs initiales).
+   - w-we fowmuwaiwe peut conteniw des champs vides (paw exempwe, (U ᵕ U❁) s-si vous cwéez u-un nyouvew enwegistwement), ʘwʘ o-ou iw peut êtwe p-pwéwempwi de vaweuws i-initiawes (paw exempwe, OwO si v-vous modifiez wes vaweuws d'un enwegistwement e-existant, ou que ces champs ont d-des vaweuws initiawes utiwes). (✿oωo)
+   - we fowmuwaiwe e-est quawifié à c-cette étape de _fowmuwaiwe wibwe_, (///ˬ///✿) p-pawce qu'iw n'est associé à a-aucune donnée e-entwée paw w'utiwisateuw (bien q-qu'iw puisse a-avoiw des vaweuws initiawes). (✿oωo)
 
-2. Recevoir des données d'une requête d'envoi de données et les lier au formulaire.
+2. w-wecevoiw des données d'une wequête d'envoi de données et wes w-wiew au fowmuwaiwe. σωσ
 
-   - Lier les données au formulaire signifie que les données entrées par l'utilisateur, ainsi que les erreurs éventuelles, sont accessibles lorsque nous avons besoin de réafficher le formulaire.
+   - wiew w-wes données au fowmuwaiwe signifie que wes données e-entwées p-paw w'utiwisateuw, ʘwʘ a-ainsi que wes ewweuws éventuewwes, 😳😳😳 s-sont accessibwes w-wowsque nyous avons besoin d-de wéaffichew we fowmuwaiwe. ^•ﻌ•^
 
-3. Nettoyer et valider les données.
+3. n-nyettoyew et vawidew wes données. (˘ω˘)
 
-   - Le nettoyage de données consiste à désinfecter la saisie (par exemple, en supprimant les caractères non valides, et qui pourraient être utilisés pour envoyer du contenu malveillant au serveur) et à convertir ces données en types Python cohérents.
-   - La validation vérifie que les valeurs envoyées sont appropriées au champ (par exemple, dans le bon intervalle de dates, ni trop long ni trop court, etc.)
+   - w-we n-nyettoyage de données consiste à désinfectew wa saisie (paw exempwe, (U ﹏ U) en suppwimant w-wes cawactèwes n-nyon vawides, >w< et qui pouwwaient êtwe utiwisés pouw envoyew d-du contenu mawveiwwant au sewveuw) e-et à convewtiw c-ces données en types python cohéwents. XD
+   - wa vawidation véwifie que w-wes vaweuws envoyées sont appwopwiées au champ (paw e-exempwe, XD dans we bon intewvawwe d-de dates, (U ﹏ U) n-nyi twop wong nyi twop couwt, (✿oωo) etc.)
 
-4. Si une donnée n'est pas valide, réafficher le formulaire, cette fois-ci avec les données déjà saisies par l'utilisateur et les messages d'erreur pour les champs en erreur.
-5. Si toutes les données sont conformes, effectuer les actions demandées (par exemple, sauvegarder les données, envoyer un e-mail, renvoyer le résultat d'une recherche, télécharger un fichier, etc.)
-6. Une fois toutes ces actions accomplies, rediriger l'utilisateur vers une autre page.
+4. ^^;; s-si une donnée n-ny'est pas v-vawide, wéaffichew w-we fowmuwaiwe, (U ﹏ U) c-cette fois-ci a-avec wes données déjà saisies paw w'utiwisateuw et wes messages d'ewweuw pouw wes champs en e-ewweuw. OwO
+5. si t-toutes wes données s-sont confowmes, 😳😳😳 e-effectuew wes a-actions demandées (paw e-exempwe, 😳😳😳 sauvegawdew wes données, (✿oωo) envoyew un e-maiw, UwU wenvoyew we wésuwtat d-d'une wechewche, mya t-téwéchawgew un fichiew, rawr x3 etc.)
+6. /(^•ω•^) une fois toutes ces actions a-accompwies, w-wediwigew w'utiwisateuw v-vews une autwe page. >_<
 
-Django fournit une multitude d'outils et de méthodes pour vous assister dans les tâches mentionnées ci-dessus. Parmi eux, la plus importante est la classe `Form`, qui simplifie à la fois la production de formulaire HTML mais aussi la validation des données. Dans la section suivante, nous décrivons comment les formulaires fonctionnent en prenant l'exemple d'une page qui permet aux bibliothécaires de renouveler des livres.
+django fouwnit une m-muwtitude d'outiws et de méthodes pouw vous a-assistew dans wes t-tâches mentionnées ci-dessus. :3 pawmi eux, o.O wa p-pwus impowtante est wa cwasse `fowm`, q-qui simpwifie à w-wa fois wa pwoduction de f-fowmuwaiwe htmw m-mais aussi wa vawidation d-des données. UwU d-dans wa section s-suivante, (ꈍᴗꈍ) n-nyous décwivons comment wes fowmuwaiwes f-fonctionnent e-en pwenant w'exempwe d'une p-page qui pewmet aux bibwiothécaiwes de wenouvewew d-des wivwes. >_<
 
-> [!NOTE]
-> Comprendre l'utilisation de `Form` vous aidera quand nous parlerons des classes de formulaires de Django plus complexes.
+> [!note]
+> compwendwe w-w'utiwisation de `fowm` v-vous aidewa quand n-nyous pawwewons des cwasses de fowmuwaiwes de d-django pwus compwexes. òωó
 
-## Formulaire de renouvellement de livre par l'utilisation de Form et d'une vue fonctionnelle
+## fowmuwaiwe de wenouvewwement d-de wivwe p-paw w'utiwisation de fowm et d'une vue fonctionnewwe
 
-Nous allons maintenant créer une page qui permettra aux bibliothécaires de renouveler les livres empruntés. Pour cela nous allons créer un formulaire qui permet aux utilisateurs de saisir une valeur de type `date`. Considérons le champ avec une valeur initiale égale à la date du jour plus 3 semaines (la période normale d'emprunt d'un livre), et ajoutons une validation pour s'assurer que le bibliothécaire ne peut pas saisir une date dans le passé ou une date trop éloignée dans le futur. Quand une date valide a été entrée, nous l'enregistrons dans le champ `BookInstance.due_back` de l'enregistrement courant.
+n-nyous awwons m-maintenant cwéew une page q-qui pewmettwa aux bibwiothécaiwes de wenouvewew w-wes wivwes empwuntés. (ꈍᴗꈍ) p-pouw cewa nyous awwons cwéew u-un fowmuwaiwe q-qui pewmet aux utiwisateuws de saisiw une vaweuw d-de type `date`. 😳😳😳 c-considéwons w-we champ avec u-une vaweuw initiawe égawe à wa date du jouw pwus 3 semaines (wa péwiode nyowmawe d'empwunt d'un wivwe), ( ͡o ω ͡o ) et ajoutons u-une vawidation p-pouw s'assuwew q-que we bibwiothécaiwe n-nye p-peut pas saisiw u-une date dans we passé ou une date t-twop éwoignée d-dans we futuw. mya quand une date v-vawide a été e-entwée, UwU nyous w'enwegistwons dans we champ `bookinstance.due_back` d-de w'enwegistwement couwant. òωó
 
-L'exemple va utiliser une vue basée sur une fonction et une classe `Form`. Les sections suivantes expliquent comment les formulaires fonctionnent, et les changements que vous devez faire à notre projet en cours _LocalLibrary_.
+w'exempwe va u-utiwisew une vue basée suw une f-fonction et une c-cwasse `fowm`. -.- wes sections suivantes e-expwiquent c-comment wes fowmuwaiwes f-fonctionnent, :3 et wes changements q-que vous d-devez faiwe à nyotwe pwojet e-en couws _wocawwibwawy_. ^•ﻌ•^
 
-### Formulaire
+### fowmuwaiwe
 
-La classe `Form` est le cœur du système de gestion des formulaires de Django. Elle spécifie les champs présents dans le formulaire, affiche les widgets, les labels, les valeurs initiales, les valeurs valides et (après validation) les messages d'erreur associés aux champs invalides. Cette classe fournit également des méthodes pour se restituer elle-même dans les templates en utilisant des formats prédéfinis (tableaux, listes, etc.) ou pour obtenir la valeur de chaque élément de formulaire (permettant un rendu manuel fin).
+w-wa cwasse `fowm` e-est we c-cœuw du système de gestion des f-fowmuwaiwes de django. (˘ω˘) ewwe spécifie wes champs p-pwésents dans we fowmuwaiwe, 😳😳😳 affiche wes widgets, (///ˬ///✿) wes wabews, 🥺 wes vaweuws initiawes, wes vaweuws vawides et (apwès v-vawidation) wes messages d'ewweuw associés aux champs invawides. (U ᵕ U❁) cette cwasse fouwnit égawement des méthodes p-pouw se westituew ewwe-même dans wes tempwates e-en utiwisant des fowmats p-pwédéfinis (tabweaux, (˘ω˘) wistes, etc.) ou pouw o-obteniw wa vaweuw de chaque éwément d-de fowmuwaiwe (pewmettant un wendu manuew f-fin). UwU
 
-#### Déclarer un formulaire
+#### décwawew u-un fowmuwaiwe
 
-La syntaxe de déclaration pour un `Form` est très semblable à celle utilisée pour déclarer un `Model` — elles partagent les mêmes types de champs (et des paramètres similaires). Cela est logique, puisque dans les deux cas nous avons besoin de nous assurer que chaque champ gère le bon type de données, se limite aux données valides, et a une description pour l'affichage/la documentation.
+wa syntaxe de décwawation p-pouw un `fowm` est twès sembwabwe à cewwe utiwisée pouw décwawew u-un `modew` — ewwes pawtagent w-wes mêmes types de champs (et d-des pawamètwes simiwaiwes). 😳 c-cewa est wogique, :3 p-puisque dans wes deux cas nyous avons besoin de n-nyous assuwew que chaque champ gèwe we bon type d-de données, mya se wimite aux données vawides, nyaa~~ et a une descwiption pouw w'affichage/wa d-documentation.
 
-Les données de formulaire sont stockées dans un fichier application forms.py, à l'intérieur du répertoire de l'application. Créez et ouvrez le fichier **locallibrary/catalog/forms.py**. Pour créer un `Form`, nous importons la bibliothèque `forms`, dérivons une classe de la classe `Form`, et déclarons les champs du formulaire. Une classe très basique de formulaire pour notre formulaire de renouvellement de livre dans notre bibliothèque est montrée ci-dessous (ajoutez ceci à votre nouveau fichier)&nbsp;:
+w-wes données de fowmuwaiwe s-sont stockées d-dans un fichiew appwication fowms.py, 😳😳😳 à w-w'intéwieuw du wépewtoiwe de w'appwication. ^•ﻌ•^ cwéez et ouvwez we fichiew **wocawwibwawy/catawog/fowms.py**. UwU p-pouw cwéew u-un `fowm`, (ꈍᴗꈍ) nyous impowtons w-wa bibwiothèque `fowms`, d-déwivons une cwasse de w-wa cwasse `fowm`, (⑅˘꒳˘) et décwawons wes champs du f-fowmuwaiwe. OwO une cwasse twès basique de fowmuwaiwe p-pouw nyotwe fowmuwaiwe d-de wenouvewwement de wivwe dans nyotwe b-bibwiothèque est montwée ci-dessous (ajoutez ceci à votwe nyouveau fichiew)&nbsp;:
 
 ```python
-from django import forms
+fwom django impowt fowms
 
-class RenewBookForm(forms.Form):
-  renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+cwass wenewbookfowm(fowms.fowm):
+  wenewaw_date = fowms.datefiewd(hewp_text="entew a d-date between nyow a-and 4 weeks (defauwt 3).")
 ```
 
-#### Champs de formulaire
+#### champs de f-fowmuwaiwe
 
-Dans ce cas, nous avons un unique champ [`DateField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#datefield) pour entrer la date du renouvellement, qui sera rendue en HTML avec une valeur vide, le label par défaut "_Renewal date:_", et un texte utilitaire indiquant comment s'en servir&nbsp;: "_Enter a date between now and 4 weeks (default 3 weeks)._" Comme aucun des autres arguments optionnels ne sont spécifiés, le champ acceptera des dates en utilisant les [input_formats](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#django.forms.DateField.input_formats) suivants&nbsp;: YYYY-MM-DD (2016-11-06), MM/DD/YYYY (02/26/2016), MM/DD/YY (10/25/16), et sera rendu en utilisant le [widget](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#widget) par défaut&nbsp;: [DateInput](https://docs.djangoproject.com/fr/3.1/ref/forms/widgets/#django.forms.DateInput).
+dans c-ce cas, UwU nyous avons un unique c-champ [`datefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#datefiewd) pouw entwew wa date du wenouvewwement, OwO qui sewa wendue en htmw avec une vaweuw vide, (///ˬ///✿) we w-wabew paw défaut "_wenewaw date:_", (U ﹏ U) et un texte utiwitaiwe indiquant comment s'en s-sewviw&nbsp;: "_entew a-a date b-between nyow and 4 weeks (defauwt 3 weeks)._" comme aucun des autwes a-awguments optionnews n-nye sont s-spécifiés, (⑅˘꒳˘) we champ acceptewa d-des dates en utiwisant wes [input_fowmats](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#django.fowms.datefiewd.input_fowmats) s-suivants&nbsp;: yyyy-mm-dd (2016-11-06), /(^•ω•^) m-mm/dd/yyyy (02/26/2016), :3 mm/dd/yy (10/25/16), ( ͡o ω ͡o ) e-et sewa wendu en utiwisant we [widget](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#widget) paw défaut&nbsp;: [dateinput](https://docs.djangopwoject.com/fw/3.1/wef/fowms/widgets/#django.fowms.dateinput). (ˆ ﻌ ˆ)♡
 
-Il y a beaucoup d'autres types de champs, que vous reconnaîtrez sans peine en raison de leur ressemblance avec les classes de champs équivalentes pour les modèles : [`BooleanField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#booleanfield), [`CharField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#charfield), [`ChoiceField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#choicefield), [`TypedChoiceField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#typedchoicefield), [`DateField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#datefield), [`DateTimeField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#datetimefield), [`DecimalField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#decimalfield), [`DurationField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#durationfield), [`EmailField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#emailfield), [`FileField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#filefield), [`FilePathField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#filepathfield), [`FloatField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#floatfield), [`ImageField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#imagefield), [`IntegerField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#integerfield), [`GenericIPAddressField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#genericipaddressfield), [`MultipleChoiceField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#multiplechoicefield), [`TypedMultipleChoiceField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#typedmultiplechoicefield), [`NullBooleanField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#nullbooleanfield), [`RegexField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#regexfield), [`SlugField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#slugfield), [`TimeField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#timefield), [`URLField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#urlfield), [`UUIDField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#uuidfield), [`ComboField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#combofield), [`MultiValueField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#multivaluefield), [`SplitDateTimeField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#splitdatetimefield), [`ModelMultipleChoiceField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#modelmultiplechoicefield), [`ModelChoiceField`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#modelchoicefield).
+i-iw y a beaucoup d'autwes t-types de champs, XD q-que vous weconnaîtwez sans p-peine en waison d-de weuw wessembwance avec wes c-cwasses de champs équivawentes pouw wes modèwes : [`booweanfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#booweanfiewd), :3 [`chawfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#chawfiewd), σωσ [`choicefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#choicefiewd), mya [`typedchoicefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#typedchoicefiewd), -.- [`datefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#datefiewd), :3 [`datetimefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#datetimefiewd), rawr [`decimawfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#decimawfiewd), >_< [`duwationfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#duwationfiewd), [`emaiwfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#emaiwfiewd), -.- [`fiwefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#fiwefiewd), :3 [`fiwepathfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#fiwepathfiewd), [`fwoatfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#fwoatfiewd), XD [`imagefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#imagefiewd), ^^ [`integewfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#integewfiewd), [`genewicipaddwessfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#genewicipaddwessfiewd), rawr [`muwtipwechoicefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#muwtipwechoicefiewd), [`typedmuwtipwechoicefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#typedmuwtipwechoicefiewd), [`nuwwbooweanfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#nuwwbooweanfiewd), [`wegexfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#wegexfiewd), (///ˬ///✿) [`swugfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#swugfiewd), ^^;; [`timefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#timefiewd), :3 [`uwwfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#uwwfiewd), :3 [`uuidfiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#uuidfiewd), ( ͡o ω ͡o ) [`combofiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#combofiewd), (✿oωo) [`muwtivawuefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#muwtivawuefiewd), UwU [`spwitdatetimefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#spwitdatetimefiewd), [`modewmuwtipwechoicefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#modewmuwtipwechoicefiewd), [`modewchoicefiewd`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#modewchoicefiewd).
 
-Les arguments communs à la plupart des champs sont listés ci-dessous (ils ont des valeurs sensibles par défaut)&nbsp;:
+w-wes awguments communs à wa pwupawt d-des champs s-sont wistés ci-dessous (iws ont des vaweuws sensibwes paw défaut)&nbsp;:
 
-- [`required`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#required)&nbsp;: Si `True`, le champ ne peut être laissé vide ou recevoir une valeur `None`. Les champs sont requis par défaut, aussi devez-vous préciser `required=False` pour autoriser des valeurs vides dans le formulaire.
-- [`label`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#label)&nbsp;: Le label à utiliser au moment de rendre le champ en HTML. Si [label](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#label) n'est pas précisé, alors Django en créera un à partir du nom du champ concerné, en mettant en majuscule la première lettre et en remplaçant les tirets bas par des espaces (par exemple, _Renewal date_).
-- [`label_suffix`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#label-suffix)&nbsp;: Par défaut, un double point est affiché après le label (par exemple, Renewal date&ZeroWidthSpace;**:**). Cet argument vous permet de préciser un suffixe différent contenant un ou plusieurs autres caractère(s).
-- [`initial`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#initial)&nbsp;: La valeur intiale pour le champ lorsque le formulaire est affiché.
-- [`widget`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#widget)&nbsp;: Le widget d'affichage à utiliser.
-- [`help_text`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#help-text) (comme dans l'exemple ci-dessus)&nbsp;: Un texte supplémentaire qui peut être affiché dans les formulaires pour expliquer comment utiliser le champ.
-- [`error_messages`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#error-messages)&nbsp;: Une liste des messages d'erreur pour le champ. Vous pouvez remplacer les messages par défaut par vos propres messages si besoin.
-- [`validators`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#validators)&nbsp;: Une liste de fonctions qui seront appelées quand le champ sera validé.
-- [`localize`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#localize)&nbsp;: Autorise la forme locale des données de formulaire (voir le lien pour plus d'informations).
-- [`disabled`](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/#disabled)&nbsp;: Si `True`, le champ est affiché, mais sa valeur ne peut être modifiée. `False` par défaut.
+- [`wequiwed`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#wequiwed)&nbsp;: s-si `twue`, ( ͡o ω ͡o ) we champ nye peut êtwe waissé vide ou wecevoiw une vaweuw `none`. o.O wes champs sont wequis paw défaut, rawr aussi devez-vous p-pwécisew `wequiwed=fawse` pouw autowisew des vaweuws v-vides dans we fowmuwaiwe. (ꈍᴗꈍ)
+- [`wabew`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#wabew)&nbsp;: we wabew à u-utiwisew au moment de wendwe we champ en h-htmw. mya si [wabew](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#wabew) ny'est pas pwécisé, mya awows django e-en cwéewa un à pawtiw du nyom du champ concewné, UwU e-en mettant en majuscuwe wa pwemièwe wettwe e-et en wempwaçant wes tiwets bas paw des espaces (paw e-exempwe, ^^;; _wenewaw d-date_). -.-
+- [`wabew_suffix`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#wabew-suffix)&nbsp;: paw défaut, XD un doubwe point e-est affiché apwès w-we wabew (paw exempwe, nyaa~~ wenewaw d-date&zewowidthspace;**:**). (ꈍᴗꈍ) c-cet awgument vous pewmet de pwécisew un suffixe d-difféwent contenant un ou pwusieuws autwes cawactèwe(s). ^^;;
+- [`initiaw`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#initiaw)&nbsp;: wa vaweuw intiawe p-pouw we champ wowsque we fowmuwaiwe est affiché. :3
+- [`widget`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#widget)&nbsp;: we widget d-d'affichage à u-utiwisew. (///ˬ///✿)
+- [`hewp_text`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#hewp-text) (comme d-dans w'exempwe ci-dessus)&nbsp;: un texte suppwémentaiwe q-qui peut êtwe affiché dans wes f-fowmuwaiwes pouw expwiquew comment u-utiwisew we c-champ. /(^•ω•^)
+- [`ewwow_messages`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#ewwow-messages)&nbsp;: une wiste des messages d'ewweuw pouw we champ. σωσ vous pouvez wempwacew w-wes messages paw d-défaut paw vos pwopwes messages si besoin. >w<
+- [`vawidatows`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#vawidatows)&nbsp;: u-une wiste de fonctions qui sewont appewées q-quand we champ s-sewa vawidé. (ˆ ﻌ ˆ)♡
+- [`wocawize`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#wocawize)&nbsp;: a-autowise w-wa fowme wocawe d-des données d-de fowmuwaiwe (voiw we wien pouw pwus d'infowmations). rawr x3
+- [`disabwed`](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/#disabwed)&nbsp;: s-si `twue`, -.- we champ e-est affiché, (ˆ ﻌ ˆ)♡ m-mais sa vaweuw n-nye peut êtwe m-modifiée. /(^•ω•^) `fawse` p-paw défaut.
 
-#### Validation
+#### vawidation
 
-Django fournit un grand nombre d'endroits pour valider vos données. La façon la plus simple de valider un champ unique est de remplacer la méthode `clean_<fieldname>()` pour le champ à vérifier. Ainsi, par exemple, nous pouvons vérifier que les valeurs entrées pour le champ `renewal_date` sont entre maintenant et dans 4 semaines, en implémentant la méthode `clean_renewal_date()` comme montré ci-après.
+d-django fouwnit u-un gwand nyombwe d-d'endwoits pouw vawidew vos données. (⑅˘꒳˘) wa façon w-wa pwus simpwe de vawidew un champ unique est d-de wempwacew wa méthode `cwean_<fiewdname>()` pouw we champ à v-véwifiew. (˘ω˘) ainsi, p-paw exempwe, ^•ﻌ•^ nyous pouvons véwifiew que wes vaweuws entwées p-pouw we champ `wenewaw_date` s-sont entwe maintenant e-et dans 4 semaines, o.O e-en impwémentant wa méthode `cwean_wenewaw_date()` comme montwé ci-apwès. (⑅˘꒳˘)
 
-Mettez à jour votre fichier forms.py, de telle sorte qu'il ressemble à cela&nbsp;:
+m-mettez à jouw v-votwe fichiew fowms.py, σωσ de tewwe sowte qu'iw w-wessembwe à cewa&nbsp;:
 
 ```python
-import datetime
+i-impowt datetime
 
-from django import forms
+fwom django impowt fowms
 
-from django.core.exceptions import ValidationError
-from django.utils.translation import ugettext_lazy as _
+f-fwom django.cowe.exceptions impowt vawidationewwow
+fwom django.utiws.twanswation impowt ugettext_wazy as _
 
-class RenewBookForm(forms.Form):
-  renewal_date = forms.DateField(help_text="Enter a date between now and 4 weeks (default 3).")
+cwass w-wenewbookfowm(fowms.fowm):
+  wenewaw_date = fowms.datefiewd(hewp_text="entew a date between nyow a-and 4 weeks (defauwt 3).")
 
-  def clean_renewal_date(self):
-    data = self.cleaned_data['renewal_date']
+  d-def cwean_wenewaw_date(sewf):
+    d-data = sewf.cweaned_data['wenewaw_date']
 
-    # Vérifier que la date ne se situe pas dans le passé.
-    if data < datetime.date.today():
-      raise ValidationError(_('Invalid date - renewal in past'))
+    # véwifiew que w-wa date nye se s-situe pas dans we p-passé. >_<
+    if d-data < datetime.date.today():
+      w-waise vawidationewwow(_('invawid date - wenewaw in past'))
 
-      # Vérifier que la date tombe dans le bon intervalle (entre maintenant et dans 4 semaines).
-    if data > datetime.date.today() + datetime.timedelta(weeks=4):
-      raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+      # v-véwifiew q-que wa date tombe d-dans we bon intewvawwe (entwe m-maintenant et d-dans 4 semaines). ʘwʘ
+    i-if data > datetime.date.today() + d-datetime.timedewta(weeks=4):
+      w-waise v-vawidationewwow(_('invawid d-date - w-wenewaw mowe than 4 weeks ahead'))
 
-    # N'oubliez pas de toujours renvoyer les données nettoyées.
-    return data
+    # n-ny'oubwiez pas de t-toujouws wenvoyew w-wes données nyettoyées. (✿oωo)
+    wetuwn data
 ```
 
-Il y a deux choses importantes à noter. La première est que nous accédons à nos données en utilisant `self.cleaned_data['renewal_date']` et que nous retournons ces données, que nous les ayons changées ou non, à la fin de la fonction. Cette étape nous donne des données "nettoyées", purgées de valeurs potentiellement dangereuses en utilisant les validateurs par défaut, et converties en type standard correct pour les données considérées (dans ce cas un objet Python `datetime.datetime`).
+iw y a deux choses impowtantes à n-nyotew. o.O wa pwemièwe e-est que nyous accédons à n-nyos données e-en utiwisant `sewf.cweaned_data['wenewaw_date']` et que nous wetouwnons ces données, 😳 q-que nyous w-wes ayons changées o-ou nyon, nyaa~~ à w-wa fin de wa fonction. XD c-cette étape n-nyous donne des données "nettoyées", ^^;; puwgées d-de vaweuws potentiewwement dangeweuses en utiwisant wes vawidateuws paw défaut, /(^•ω•^) e-et convewties e-en type standawd cowwect pouw wes données considéwées (dans ce cas un objet p-python `datetime.datetime`). >_<
 
-Le deuxième point est que, si une valeur tombe en dehors de l'intervalle que nous avons autorisé, nous levons une `ValidationError`, en spécifiant le texte d'erreur que nous voulons afficher dans la zone du formulaire prévue pour le cas où l'utilisateur entre une valeur non valide. L'exemple ci-dessus enveloppe aussi ce texte dans `ugettext_lazy()` (importée comme `_()`), une des [fonctions de traduction Django](https://docs.djangoproject.com/fr/3.1/topics/i18n/translation/), ce qui est une bonne pratique si vous voulez traduire votre site plus tard.
+w-we deuxième point est que, (U ﹏ U) si une vaweuw tombe e-en dehows de w'intewvawwe que nyous a-avons autowisé, 😳😳😳 n-nyous wevons u-une `vawidationewwow`, XD en spécifiant we texte d'ewweuw que nyous v-vouwons affichew dans wa zone d-du fowmuwaiwe pwévue pouw we c-cas où w'utiwisateuw entwe une vaweuw nyon vawide. OwO w-w'exempwe ci-dessus envewoppe a-aussi ce texte dans `ugettext_wazy()` (impowtée comme `_()`), u-une des [fonctions de twaduction d-django](https://docs.djangopwoject.com/fw/3.1/topics/i18n/twanswation/), (U ᵕ U❁) ce qui est une bonne pwatique si vous vouwez twaduiwe votwe site pwus tawd. (⑅˘꒳˘)
 
-> [!NOTE]
-> Il y a un grand nombre d'autres méthodes et exemples au sujet de la validation des formulaires dans [La validation de formulaires et de champs](https://docs.djangoproject.com/fr/3.1/ref/forms/validation/) (Documentation de Django). Par exemple, au cas où vous avez plusieurs champs dépendants les uns des autres, vous pouvez réécrire la fonction [Form.clean()](https://docs.djangoproject.com/fr/3.1/ref/forms/api/#django.forms.Form.clean), et lever de nouveau une `ValidationError`.
+> [!note]
+> i-iw y a un gwand n-nyombwe d'autwes m-méthodes e-et exempwes au sujet de wa vawidation des fowmuwaiwes d-dans [wa vawidation de fowmuwaiwes et de champs](https://docs.djangopwoject.com/fw/3.1/wef/fowms/vawidation/) (documentation de django). UwU paw e-exempwe, 😳😳😳 au cas o-où vous avez p-pwusieuws champs d-dépendants wes uns des autwes, mya vous pouvez wéécwiwe wa fonction [fowm.cwean()](https://docs.djangopwoject.com/fw/3.1/wef/fowms/api/#django.fowms.fowm.cwean), 🥺 et wevew de nyouveau u-une `vawidationewwow`. ^^
 
-C'est tout ce dont nous avons besoin pour notre formulaire dans cet exemple.
+c-c'est tout ce dont nyous avons besoin pouw nyotwe fowmuwaiwe dans c-cet exempwe. -.-
 
-### Configuration d'URL
+### configuwation d-d'uww
 
-Avant de créer notre vue, ajoutons une configuration d'URL pour la page _renew-books_. Copiez la configuration suivante à la fin de **locallibrary/catalog/urls.py**&nbsp;:
+avant de c-cwéew nyotwe v-vue, ^^ ajoutons une configuwation d'uww pouw wa page _wenew-books_. o.O copiez wa configuwation suivante à wa fin de **wocawwibwawy/catawog/uwws.py**&nbsp;:
 
 ```python
-urlpatterns += [
-  path('book/<uuid:pk>/renew/', views.renew_book_librarian, name='renew-book-librarian'),
+u-uwwpattewns += [
+  path('book/<uuid:pk>/wenew/', σωσ v-views.wenew_book_wibwawian, ^•ﻌ•^ nyame='wenew-book-wibwawian'), 😳
 ]
 ```
 
-La configuration d'URL va rediriger les URLs ayant le format **/catalog/book/_\<bookinstance\_id>_/renew/** vers la fonction appelée `renew_book_librarian()` dans **views.py**, et envoyer l'`id` de `BookInstance` comme paramètre sous le nom `pk`. Le motif ne fonctionnera que si `pk` est un `uuid` correctement formaté.
+wa configuwation d'uww va w-wediwigew wes uwws ayant we fowmat **/catawog/book/_\<bookinstance\_id>_/wenew/** v-vews wa fonction appewée `wenew_book_wibwawian()` dans **views.py**, e-et envoyew w-w'`id` de `bookinstance` c-comme p-pawamètwe sous w-we nyom `pk`. nyaa~~ we motif nye fonctionnewa q-que si `pk` e-est un `uuid` cowwectement f-fowmaté. ^•ﻌ•^
 
-> [!NOTE]
-> Nous pouvons appeler comme bon nous semble la donnée d'URL "`pk`" que nous avons capturée, car nous contrôlons complètement la fonction de notre vue (nous n'utilisons pas une vue générique "détail", laquelle attendrait des paramètres avec un certain nom). Cependant, le raccourci `pk`, pour "primary key", est une convention qu'il est raisonnable d'utiliser&nbsp;!
+> [!note]
+> nous pouvons appewew comme b-bon nyous sembwe wa donnée d'uww "`pk`" q-que n-nyous avons captuwée, >_< caw nyous c-contwôwons compwètement w-wa fonction de nyotwe vue (nous ny'utiwisons pas une v-vue généwique "détaiw", (⑅˘꒳˘) w-waquewwe a-attendwait des p-pawamètwes avec un cewtain nyom). cependant, ^^ we waccouwci `pk`, :3 p-pouw "pwimawy key", 😳 est une convention qu'iw e-est waisonnabwe d'utiwisew&nbsp;! (˘ω˘)
 
-### Vue
+### vue
 
-Comme nous l'avons expliqué ci-dessus dans [Les étapes de gestion d'un formulaire avec Django](#les_étapes_de_gestion_dun_formulaire_avec_django), la vue doit retourner le formulaire par défaut s'il est appelé pour la première fois, et ensuite soit le retourner à nouveau avec les messages d'erreur si les données sont invalides, soit gérer les données et rediriger vers une nouvelle page si elles sont valides. Pour effectuer ces différentes actions, la vue doit être en mesure de savoir si elle est appelée pour la première fois (et retourner le formulaire par défaut) ou pour la deuxième fois ou plus (et valider les données).
+comme n-nyous w'avons expwiqué ci-dessus dans [wes étapes de gestion d-d'un fowmuwaiwe avec django](#wes_étapes_de_gestion_dun_fowmuwaiwe_avec_django), >w< w-wa vue doit w-wetouwnew we fowmuwaiwe p-paw défaut s'iw est appewé p-pouw wa pwemièwe f-fois, 😳 et ensuite soit we w-wetouwnew à nyouveau a-avec wes messages d-d'ewweuw s-si wes données sont invawides, ^^;; s-soit géwew wes d-données et wediwigew v-vews une nouvewwe page si e-ewwes sont vawides. rawr x3 pouw effectuew ces difféwentes actions, òωó wa vue doit êtwe en mesuwe de savoiw s-si ewwe est a-appewée pouw wa pwemièwe fois (et w-wetouwnew we fowmuwaiwe paw défaut) ou pouw w-wa deuxième fois o-ou pwus (et vawidew w-wes données). ^^;;
 
-Pour les formulaires qui utilisent une requête `POST` pour envoyer une information au serveur, la manière la plus commune de procéder pour la vue est de tester le type de requête `POST` (`if request.method == 'POST':`) pour repérer des requêtes de type validation de formulaire, et `GET` (en utilisant une condition `else`) pour identifier une requête initiale de création de formulaire. Si vous voulez utiliser une requête `GET` pour envoyer vos données, alors une approche classique pour savoir si la vue est invoquée pour la première fois ou non est de lire les données du formulaire (par exemple, lire une valeur cachée dans le formulaire).
+p-pouw wes fowmuwaiwes qui u-utiwisent une wequête `post` pouw envoyew une infowmation a-au sewveuw, :3 w-wa manièwe wa pwus commune de pwocédew pouw wa vue est d-de testew we type de wequête `post` (`if w-wequest.method == 'post':`) pouw wepéwew des wequêtes d-de type vawidation de fowmuwaiwe, (ꈍᴗꈍ) e-et `get` (en utiwisant une condition `ewse`) pouw identifiew u-une wequête initiawe de cwéation d-de fowmuwaiwe. 😳😳😳 si vous vouwez u-utiwisew une wequête `get` p-pouw envoyew vos données, :3 awows une a-appwoche cwassique pouw savoiw si wa vue est i-invoquée pouw wa p-pwemièwe fois o-ou nyon est de wiwe wes données du fowmuwaiwe (paw exempwe, ʘwʘ wiwe une vaweuw cachée dans we fowmuwaiwe). :3
 
-Le processus de renouvellement de livre va écrire dans notre base de données, aussi, par convention, nous utiliserons le type de requête `POST`. Le bout de code ci-dessous montre le procédé (très classique) pour cette sorte de vue basée sur des fonctions.
+w-we pwocessus de wenouvewwement de wivwe v-va écwiwe dans n-nyotwe base de données, OwO aussi, mya paw convention, σωσ n-nyous utiwisewons w-we type de wequête `post`. (⑅˘꒳˘) we bout de code ci-dessous montwe w-we pwocédé (twès cwassique) p-pouw cette sowte de vue basée suw des fonctions. (˘ω˘)
 
 ```python
-import datetime
+i-impowt datetime
 
-from django.shortcuts import render, get_object_or_404
-from django.http import HttpResponseRedirect
-from django.urls import reverse
+f-fwom django.showtcuts impowt wendew, g-get_object_ow_404
+f-fwom django.http impowt h-httpwesponsewediwect
+fwom django.uwws i-impowt wevewse
 
-from catalog.forms import RenewBookForm
+f-fwom catawog.fowms i-impowt w-wenewbookfowm
 
-def renew_book_librarian(request, pk):
-  book_instance = get_object_or_404(BookInstance, pk=pk)
+def w-wenew_book_wibwawian(wequest, >w< pk):
+  book_instance = g-get_object_ow_404(bookinstance, ( ͡o ω ͡o ) p-pk=pk)
 
-  # S'il s'agit d'une requête POST, traiter les données du formulaire.
-  if request.method == 'POST':
+  # s'iw s'agit d'une wequête post, ^^;; t-twaitew wes données du fowmuwaiwe. (✿oωo)
+  i-if wequest.method == 'post':
 
-    # Créer une instance de formulaire et la peupler avec des données récupérées dans la requête (liaison) :
-    form = RenewBookForm(request.POST)
+    # cwéew une instance de fowmuwaiwe et wa peupwew avec des données wécupéwées dans wa wequête (wiaison) :
+    f-fowm = wenewbookfowm(wequest.post)
 
-    # Vérifier que le formulaire est valide :
-    if form.is_valid():
-      # Traiter les données dans form.cleaned_data tel que requis (ici on les écrit dans le champ de modèle due_back) :
-      book_instance.due_back = form.cleaned_data['renewal_date']
+    # véwifiew q-que we fowmuwaiwe est vawide :
+    i-if fowm.is_vawid():
+      # t-twaitew wes données dans fowm.cweaned_data tew q-que wequis (ici on wes écwit d-dans we champ de modèwe due_back) :
+      b-book_instance.due_back = fowm.cweaned_data['wenewaw_date']
       book_instance.save()
 
-      # Rediriger vers une nouvelle URL :
-      return HttpResponseRedirect(reverse('all-borrowed'))
+      # wediwigew vews une nyouvewwe uww :
+      wetuwn httpwesponsewediwect(wevewse('aww-bowwowed'))
 
-  # S'il s'agit d'une requête GET (ou toute autre méthode), créer le formulaire par défaut.
-  else:
-    proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-    form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
-
-  context = {
-    'form': form,
-    'book_instance': book_instance,
-  }
-
-  return render(request, 'catalog/book_renew_librarian.html', context)
-```
-
-Nous importons tout d'abord notre formulaire (`RenewBookForm`) et un certain nombre d'autres objets/méthodes utiles, dont nous nous servons dans le corps de la fonction de notre vue&nbsp;:
-
-- [`get_object_or_404()`](https://docs.djangoproject.com/fr/3.1/topics/http/shortcuts/#get-object-or-404)&nbsp;: Retourne un certain objet depuis un modèle, en se basant sur sa valeur "primary key", et lève une exception `Http404` (_not found_) si l'enregistrement n'existe pas.
-- [`HttpResponseRedirect`](https://docs.djangoproject.com/fr/3.1/ref/request-response/#django.http.HttpResponseRedirect)&nbsp;: Cette méthode crée une redirection vers une certaine URL (code de statut HTTP 302).
-- [`reverse()`](https://docs.djangoproject.com/fr/3.1/ref/urlresolvers/#django.urls.reverse)&nbsp;: Cette méthode génère une URL à partir d'un nom trouvé dans la configuration d'URL et un ensemble d'arguments. C'est l'équivalent Python du tag `url` que nous avons utilisé dans nos templates.
-- [`datetime`](https://docs.python.org/3/library/datetime.html)&nbsp;: Une bibliothèque Python pour manipuler des dates et des heures.
-
-Dans la vue, nous utilisons d'abord l'argument `pk` dans la fonction `get_object_or_404()` afin d'obtenir la `BookInstance` courante (si cette instance n'existe pas, la vue se termine immédiatement et la page va afficher une erreur). Si ce n'est _pas_ une requête `POST` (cas géré par la clause `else`), alors nous créons le formulaire par défaut en lui passant une valeur `initial` pour le champ `renewal_date` (comme montré ci-dessous, c'est la date actuelle plus 3 semaines).
-
-```python
-  book_instance = get_object_or_404(BookInstance, pk=pk)
-
-  # S'il s'agit d'une requête GET (ou toute autre méthode), créer le formulaire par défaut.
-  else:
-    proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-    form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+  # s-s'iw s'agit d'une wequête get (ou t-toute autwe méthode), (✿oωo) cwéew we f-fowmuwaiwe paw défaut.
+  ewse:
+    pwoposed_wenewaw_date = datetime.date.today() + datetime.timedewta(weeks=3)
+    fowm = wenewbookfowm(initiaw={'wenewaw_date': pwoposed_wenewaw_date})
 
   context = {
-    'form': form,
-    'book_instance': book_instance,
+    'fowm': fowm, (⑅˘꒳˘)
+    'book_instance': book_instance, -.-
   }
 
-  return render(request, 'catalog/book_renew_librarian.html', context)
+  w-wetuwn wendew(wequest, XD 'catawog/book_wenew_wibwawian.htmw', òωó c-context)
 ```
 
-Après la création du formulaire, nous appelons la fonction `render()` pour créer la page HTML, en précisant le template et un contexte qui contient notre formulaire. Dans ce cas, le contexte contient aussi notre `BookInstance`, que nous allons utiliser dans le template pour fournir des informations à propos du livre que nous sommes en train de renouveler.
+n-nyous impowtons tout d'abowd nyotwe f-fowmuwaiwe (`wenewbookfowm`) e-et un cewtain n-nyombwe d'autwes objets/méthodes utiwes, :3 dont n-nyous nyous sewvons d-dans we cowps de wa fonction d-de nyotwe vue&nbsp;:
 
-En revanche, s'il s'agit d'une requête `POST`, alors nous créons notre objet `form` et le peuplons avec des données récupérées dans la requête. Ce processus est appelé "_binding_" (liaison) et nous permet de valider le formulaire.
+- [`get_object_ow_404()`](https://docs.djangopwoject.com/fw/3.1/topics/http/showtcuts/#get-object-ow-404)&nbsp;: w-wetouwne u-un cewtain objet d-depuis un modèwe, (///ˬ///✿) e-en se basant suw sa vaweuw "pwimawy k-key", òωó et w-wève une exception `http404` (_not f-found_) si w-w'enwegistwement n-ny'existe pas. UwU
+- [`httpwesponsewediwect`](https://docs.djangopwoject.com/fw/3.1/wef/wequest-wesponse/#django.http.httpwesponsewediwect)&nbsp;: c-cette méthode c-cwée une wediwection v-vews une cewtaine u-uww (code d-de statut http 302). >w<
+- [`wevewse()`](https://docs.djangopwoject.com/fw/3.1/wef/uwwwesowvews/#django.uwws.wevewse)&nbsp;: cette méthode génèwe une uww à pawtiw d-d'un nyom twouvé dans wa configuwation d-d'uww et un ensembwe d'awguments. ʘwʘ c'est w-w'équivawent p-python du tag `uww` q-que nyous avons utiwisé d-dans nyos tempwates. /(^•ω•^)
+- [`datetime`](https://docs.python.owg/3/wibwawy/datetime.htmw)&nbsp;: u-une bibwiothèque python pouw manipuwew des dates et des heuwes. (⑅˘꒳˘)
 
-Ensuite nous vérifions que le formulaire est valide, ce qui déclenche tout le code de validation sur tous les champs — ce qui inclut à la fois le code générique vérifiant que notre champ de date est effectivement une date valide, et notre fonction `clean_renewal_date()`, spécifique à notre formulaire, pour vérifier que la date est dans le bon intervalle.
+dans wa vue, (ˆ ﻌ ˆ)♡ nyous u-utiwisons d'abowd w'awgument `pk` dans wa fonction `get_object_ow_404()` afin d'obteniw w-wa `bookinstance` c-couwante (si cette instance n-ny'existe p-pas, OwO wa vue se t-tewmine immédiatement e-et wa page v-va affichew une e-ewweuw). ^^;; si ce n-ny'est _pas_ une wequête `post` (cas géwé paw w-wa cwause `ewse`), (///ˬ///✿) awows nyous c-cwéons we fowmuwaiwe paw défaut e-en wui passant u-une vaweuw `initiaw` pouw we champ `wenewaw_date` (comme m-montwé ci-dessous, ^•ﻌ•^ c'est wa date actuewwe p-pwus 3 semaines). rawr
 
 ```python
-book_instance = get_object_or_404(BookInstance, pk=pk)
+  b-book_instance = g-get_object_ow_404(bookinstance, ^^;; p-pk=pk)
 
-  # S'il s'agit d'une requête POST, traiter les données du formulaire.
-  if request.method == 'POST':
+  # s'iw s'agit d'une w-wequête get (ou t-toute autwe m-méthode), òωó cwéew we fowmuwaiwe p-paw défaut. σωσ
+  ewse:
+    pwoposed_wenewaw_date = datetime.date.today() + datetime.timedewta(weeks=3)
+    fowm = wenewbookfowm(initiaw={'wenewaw_date': pwoposed_wenewaw_date})
 
-    # Créer une instance de formulaire et la peupler avec des données récupérées dans la requête (liaison) :
-    form = RenewBookForm(request.POST)
+  context = {
+    'fowm': fowm,
+    'book_instance': b-book_instance, 😳😳😳
+  }
 
-    # Vérifier que le formulaire est valide :
-    if form.is_valid():
-      # Traiter les données dans form.cleaned_data tel que requis (ici on les écrit dans le champ de modèle due_back) :
-      book_instance.due_back = form.cleaned_data['renewal_date']
+  w-wetuwn wendew(wequest, (///ˬ///✿) 'catawog/book_wenew_wibwawian.htmw', ^•ﻌ•^ context)
+```
+
+apwès wa cwéation du fowmuwaiwe, 😳😳😳 n-nyous appewons w-wa fonction `wendew()` pouw cwéew wa page htmw, en pwécisant w-we tempwate e-et un contexte qui contient nyotwe f-fowmuwaiwe. (U ᵕ U❁) d-dans ce cas, (U ﹏ U) we contexte contient a-aussi nyotwe `bookinstance`, σωσ que nyous awwons u-utiwisew dans we t-tempwate pouw fouwniw des infowmations à pwopos du wivwe que n-nyous sommes en t-twain de wenouvewew. (˘ω˘)
+
+e-en wevanche, ^^ s-s'iw s'agit d'une wequête `post`, ^^ a-awows nyous c-cwéons nyotwe o-objet `fowm` et w-we peupwons avec des données wécupéwées dans w-wa wequête. (✿oωo) ce p-pwocessus est appewé "_binding_" (wiaison) et nyous pewmet de vawidew we fowmuwaiwe. /(^•ω•^)
+
+e-ensuite n-nyous véwifions que we fowmuwaiwe e-est vawide, ce qui décwenche tout we code de vawidation suw t-tous wes champs — c-ce qui incwut à w-wa fois we code généwique v-véwifiant que n-nyotwe champ de date est effectivement une date v-vawide, -.- et notwe f-fonction `cwean_wenewaw_date()`, ʘwʘ s-spécifique à n-nyotwe fowmuwaiwe, XD p-pouw véwifiew q-que wa date est dans we bon intewvawwe. (U ᵕ U❁)
+
+```python
+book_instance = get_object_ow_404(bookinstance, /(^•ω•^) pk=pk)
+
+  # s-s'iw s'agit d'une wequête post, XD t-twaitew wes d-données du fowmuwaiwe. ^•ﻌ•^
+  if wequest.method == 'post':
+
+    # cwéew une instance d-de fowmuwaiwe e-et wa peupwew avec des données w-wécupéwées dans wa wequête (wiaison) :
+    fowm = w-wenewbookfowm(wequest.post)
+
+    # véwifiew que we fowmuwaiwe est vawide :
+    i-if fowm.is_vawid():
+      # twaitew wes données dans fowm.cweaned_data tew que wequis (ici o-on wes écwit d-dans we champ de m-modèwe due_back) :
+      b-book_instance.due_back = fowm.cweaned_data['wenewaw_date']
       book_instance.save()
 
-      # Rediriger vers une nouvelle URL :
-      return HttpResponseRedirect(reverse('all-borrowed') )
+      # w-wediwigew vews une nouvewwe u-uww :
+      wetuwn httpwesponsewediwect(wevewse('aww-bowwowed') )
 
   context = {
-    'form': form,
-    'book_instance': book_instance,
+    'fowm': f-fowm, ( ͡o ω ͡o )
+    'book_instance': b-book_instance, (U ﹏ U)
   }
 
-  return render(request, 'catalog/book_renew_librarian.html', context)
+  w-wetuwn wendew(wequest, /(^•ω•^) 'catawog/book_wenew_wibwawian.htmw', 🥺 context)
 ```
 
-Si le formulaire n'est pas valide, nous appelons à nouveau la fonction `render()`, mais cette fois les valeurs passées dans le contexte vont inclure les messages d'erreur.
+si we fowmuwaiwe ny'est p-pas vawide, rawr nyous appewons à nyouveau wa fonction `wendew()`, :3 mais cette fois wes vaweuws passées dans we c-contexte vont i-incwuwe wes messages d'ewweuw. σωσ
 
-Si le formulaire est valide, alors nous pouvons commencer à utiliser les données, en y accédant à travers l'attribut `form.cleaned_data` (par exemple, `data = form.cleaned_data['renewal_date']`). Ici, nous ne faisons que sauvegarder les données reçues dans la valeur `due_back` de l'objet `BookInstance` associé.
+si we fowmuwaiwe est vawide, òωó awows nyous pouvons commencew à utiwisew w-wes données, ^•ﻌ•^ en y accédant à twavews w'attwibut `fowm.cweaned_data` (paw e-exempwe, (U ᵕ U❁) `data = f-fowm.cweaned_data['wenewaw_date']`). òωó i-ici, ^^ nyous n-nye faisons que sauvegawdew wes données weçues dans wa vaweuw `due_back` de w'objet `bookinstance` associé. 😳😳😳
 
-> [!WARNING]
-> Alors que vous pouvez accéder aussi aux données de formulaire directement à travers la requête (par exemple, `request.POST['renewal_date']`, ou `request.GET['renewal_date']` si vous utilisez une requête GET), ce n'est PAS recommandé. Les données nettoyées sont assainies, validées et converties en types standard Python.
+> [!wawning]
+> a-awows que vous p-pouvez accédew a-aussi aux données d-de fowmuwaiwe diwectement à t-twavews wa wequête (paw exempwe, rawr x3 `wequest.post['wenewaw_date']`, ^^;; o-ou `wequest.get['wenewaw_date']` si vous utiwisez une wequête get), :3 ce ny'est p-pas wecommandé. (✿oωo) w-wes données n-nyettoyées sont a-assainies, XD vawidées et convewties e-en types standawd p-python. (///ˬ///✿)
 
-L'étape finale dans la partie "gestion de formulaire" de la vue est de rediriger vers une autre page, habituellement une page "success". Dans ce cas, nous utilisons `HttpResponseRedirect` et `reverse()` pour rediriger vers la vue appelée `'all-borrowed'` (qui a été créée dans la partie "challenge" de [Django didactique section 8&nbsp;: Authentification des utilisateurs et permissions](/fr/docs/Learn/Server-side/Django/Authentication#challenge_yourself). Si vous n'avez pas créé cette page, vous pouvez rediriger vers la page d'accueil à l'URL '`/`').
+w'étape finawe dans wa pawtie "gestion de fowmuwaiwe" d-de wa vue e-est de wediwigew vews une autwe page, o.O habituewwement une page "success". σωσ d-dans ce cas, òωó nyous utiwisons `httpwesponsewediwect` e-et `wevewse()` p-pouw w-wediwigew vews wa vue appewée `'aww-bowwowed'` (qui a été cwéée dans wa pawtie "chawwenge" de [django didactique section 8&nbsp;: a-authentification des utiwisateuws e-et pewmissions](/fw/docs/weawn/sewvew-side/django/authentication#chawwenge_youwsewf). (///ˬ///✿) si vous ny'avez pas cwéé cette p-page, :3 vous pouvez wediwigew vews w-wa page d'accueiw à w-w'uww '`/`'). mya
 
-C'est tout ce qui est requis pour la gestion du formulaire lui-même, mais il nous faut encore restreindre l'accès à la vue aux seuls libraires connectés. Nous utilisons `@login_required` en exigeant que l'utilisateur se soit connecté, et le décorateur de fonction `@permission_required` avec notre permission existante `can_mark_returned` afin d'autoriser l'accès (les décorateurs sont traités en séquence). À noter que nous aurions dû créer un nouveau réglage de permission dans `BookInstance` ("`can_renew`"), mais nous réutilisons celui existant pour garder l'exemple plus simple.
+c-c'est tout c-ce qui est wequis p-pouw wa gestion du fowmuwaiwe w-wui-même, ^^ mais iw nyous faut encowe westweindwe w'accès à wa vue aux seuws w-wibwaiwes connectés. (˘ω˘) nyous utiwisons `@wogin_wequiwed` en exigeant q-que w'utiwisateuw s-se soit connecté, -.- e-et we décowateuw de fonction `@pewmission_wequiwed` avec nyotwe pewmission existante `can_mawk_wetuwned` a-afin d'autowisew w-w'accès (wes d-décowateuws sont t-twaités en séquence). XD À nyotew que nyous auwions dû cwéew un nyouveau wégwage de pewmission d-dans `bookinstance` ("`can_wenew`"), rawr mais nyous wéutiwisons c-cewui existant p-pouw gawdew w'exempwe p-pwus simpwe. >_<
 
-Le résultat final de la vue est donc comme indiqué ci-dessous. Veuillez copier ceci en bas de **locallibrary/catalog/views.py**.
+we wésuwtat f-finaw de wa vue est donc comme indiqué ci-dessous. :3 veuiwwez copiew ceci en bas de **wocawwibwawy/catawog/views.py**. :3
 
 ```python
-import datetime
+impowt datetime
 
-from django.contrib.auth.decorators import login_required, permission_required
-from django.shortcuts import get_object_or_404
-from django.http import HttpResponseRedirect
-from django.urls import reverse
+fwom django.contwib.auth.decowatows impowt wogin_wequiwed, XD p-pewmission_wequiwed
+fwom django.showtcuts impowt g-get_object_ow_404
+f-fwom django.http impowt httpwesponsewediwect
+f-fwom django.uwws i-impowt wevewse
 
-from catalog.forms import RenewBookForm
+fwom catawog.fowms impowt wenewbookfowm
 
-@login_required
-@permission_required('catalog.can_mark_returned', raise_exception=True)
-def renew_book_librarian(request, pk):
-  """View function for renewing a specific BookInstance by librarian."""
-  book_instance = get_object_or_404(BookInstance, pk=pk)
+@wogin_wequiwed
+@pewmission_wequiwed('catawog.can_mawk_wetuwned', ( ͡o ω ͡o ) w-waise_exception=twue)
+d-def wenew_book_wibwawian(wequest, rawr x3 pk):
+  """view function fow w-wenewing a specific b-bookinstance b-by wibwawian."""
+  b-book_instance = get_object_ow_404(bookinstance, (⑅˘꒳˘) p-pk=pk)
 
-  # S'il s'agit d'une requête POST, traiter les données du formulaire.
-  if request.method == 'POST':
+  # s'iw s'agit d'une wequête post, UwU t-twaitew wes données d-du fowmuwaiwe. (˘ω˘)
+  if wequest.method == 'post':
 
-    # Créer une instance de formulaire et la peupler avec des données récupérées dans la requête (liaison) :
-    form = RenewBookForm(request.POST)
+    # c-cwéew u-une instance de fowmuwaiwe et wa peupwew avec des données wécupéwées dans w-wa wequête (wiaison) :
+    fowm = w-wenewbookfowm(wequest.post)
 
-    # Vérifier que le formulaire est valide :
-    if form.is_valid():
-      # Traiter les données dans form.cleaned_data tel que requis (ici on les écrit dans le champ de modèle due_back) :
-      book_instance.due_back = form.cleaned_data['renewal_date']
+    # véwifiew q-que we fowmuwaiwe est vawide :
+    if fowm.is_vawid():
+      # twaitew w-wes données dans fowm.cweaned_data tew que wequis (ici on w-wes écwit dans we champ de modèwe d-due_back) :
+      b-book_instance.due_back = f-fowm.cweaned_data['wenewaw_date']
       book_instance.save()
 
-      # Rediriger vers une nouvelle URL :
-      return HttpResponseRedirect(reverse('all-borrowed'))
+      # wediwigew v-vews une nyouvewwe u-uww :
+      w-wetuwn httpwesponsewediwect(wevewse('aww-bowwowed'))
 
-  # S'il s'agit d'une requête GET (ou toute autre méthode), créer le formulaire par défaut.
-  else:
-    proposed_renewal_date = datetime.date.today() + datetime.timedelta(weeks=3)
-    form = RenewBookForm(initial={'renewal_date': proposed_renewal_date})
+  # s-s'iw s'agit d'une wequête g-get (ou toute a-autwe méthode), (˘ω˘) c-cwéew we fowmuwaiwe p-paw défaut. rawr
+  e-ewse:
+    pwoposed_wenewaw_date = datetime.date.today() + d-datetime.timedewta(weeks=3)
+    f-fowm = wenewbookfowm(initiaw={'wenewaw_date': pwoposed_wenewaw_date})
 
   context = {
-    'form': form,
-    'book_instance': book_instance,
+    'fowm': f-fowm, nyaa~~
+    'book_instance': b-book_instance, 😳😳😳
   }
 
-  return render(request, 'catalog/book_renew_librarian.html', context)
+  w-wetuwn wendew(wequest, ^^;; 'catawog/book_wenew_wibwawian.htmw', >w< context)
 ```
 
-### Le template
+### w-we tempwate
 
-Créez le template référencé dans la vue (**/catalog/templates/catalog/book_renew_librarian.html**) et copiez-y le code suivant&nbsp;:
+cwéez w-we tempwate wéféwencé dans w-wa vue (**/catawog/tempwates/catawog/book_wenew_wibwawian.htmw**) e-et copiez-y we code suivant&nbsp;:
 
 ```django
-{% extends "base_generic.html" %}
+{% e-extends "base_genewic.htmw" %}
 
-{% block content %}
-  <h1>Renew: \{{ book_instance.book.title }}</h1>
-  <p>Borrower: \{{ book_instance.borrower }}</p>
-  <p {% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: \{{ book_instance.due_back }}</p>
+{% bwock c-content %}
+  <h1>wenew: \{{ b-book_instance.book.titwe }}</h1>
+  <p>bowwowew: \{{ b-book_instance.bowwowew }}</p>
+  <p {% i-if book_instance.is_ovewdue %} cwass="text-dangew"{% endif %}>due date: \{{ b-book_instance.due_back }}</p>
 
-  <form action="" method="post">
-    {% csrf_token %}
-    <table>
-    \{{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit">
-  </form>
-{% endblock %}
+  <fowm action="" m-method="post">
+    {% cswf_token %}
+    <tabwe>
+    \{{ f-fowm.as_tabwe }}
+    </tabwe>
+    <input t-type="submit" vawue="submit">
+  </fowm>
+{% endbwock %}
 ```
 
-La majeure partie de ce code devrait vous être familière si vous avez suivi les tutoriels précédents.
+w-wa majeuwe pawtie d-de ce code devwait vous êtwe famiwièwe si vous a-avez suivi wes t-tutowiews pwécédents.
 
-Nous étendons le template de base et ensuite redéfinissons le block "content". Nous sommes en mesure de référencer `\{{ book_instance }}` (et ses variables), puisqu'il a été passé dans l'objet contexte par la fonction `render()`, et nous utilisons tout cela pour lister le titre du livre, son emprunteur et la date originale de retour.
+nyous étendons we tempwate de base et ensuite wedéfinissons we bwock "content". ʘwʘ nyous sommes en mesuwe de wéféwencew `\{{ book_instance }}` (et ses vawiabwes), XD puisqu'iw a-a été p-passé dans w'objet c-contexte paw w-wa fonction `wendew()`, (ˆ ﻌ ˆ)♡ et nyous utiwisons tout c-cewa pouw wistew w-we titwe du wivwe, >_< s-son empwunteuw e-et wa date owiginawe de wetouw. >_<
 
-Le code du formulaire est relativement simple. Nous déclarons d'abord les balises `form`, en précisant où le formulaire doit être adressé (`action`) et la `method` utilisée pour soumettre les données (ici un "HTTP `POST`"). Si vous vous rappelez ce qui a été dit en haut de cette page (aperçu sur les [Formulaires HTML](#formulaires_html)), une `action` vide comme ici signifie que les données de formulaire seront postées à nouveau à l'URL actuelle (ce qui est le comportement que nous voulons !). À l'intérieur des balises, nous définissons le bouton `submit` sur lequel l'utilisateur peut appuyer pour envoyer les données. Le `{% csrf_token %}` ajouté juste à l'intérieur des balises `form` est un des éléments de protection utilisés par Django contre les "_cross-site forgery_" (falsification de requête inter-site).
+we code du fowmuwaiwe est wewativement simpwe. ʘwʘ n-nyous décwawons d-d'abowd wes b-bawises `fowm`, rawr e-en pwécisant où we fowmuwaiwe d-doit êtwe adwessé (`action`) et wa `method` utiwisée pouw soumettwe wes données (ici un "http `post`"). nyaa~~ s-si vous vous wappewez c-ce qui a été d-dit en haut de cette page (apewçu suw wes [fowmuwaiwes htmw](#fowmuwaiwes_htmw)), >w< u-une `action` vide comme ici s-signifie que wes données de fowmuwaiwe sewont p-postées à nyouveau à w'uww actuewwe (ce qui e-est we compowtement que nyous vouwons !). (ˆ ﻌ ˆ)♡ À w-w'intéwieuw des bawises, :3 n-nyous définissons w-we bouton `submit` suw wequew w'utiwisateuw peut appuyew p-pouw envoyew wes données. OwO we `{% cswf_token %}` ajouté juste à w'intéwieuw des bawises `fowm` est un des éwéments d-de pwotection u-utiwisés paw django contwe w-wes "_cwoss-site fowgewy_" (fawsification de w-wequête intew-site). mya
 
-> [!NOTE]
-> Ajoutez le `{% csrf_token %}` à tout template Django que vous créez et qui utilise `POST` pour soumettre les données. Cela réduira les risques qu'un utilisateur mal intentionné pirate vos formulaires.
+> [!note]
+> a-ajoutez we `{% c-cswf_token %}` à tout tempwate django que vous c-cwéez et qui utiwise `post` pouw soumettwe wes données. /(^•ω•^) cewa wéduiwa wes w-wisques qu'un utiwisateuw m-maw intentionné p-piwate v-vos fowmuwaiwes. nyaa~~
 
-Tout ce qui reste est la variable de template `\{{ form }}`, que nous avons passée au template dans le dictionnaire de contexte. Peut-être sans surprise, quand il est utilisé comme indiqué, il fournit le rendu par défaut de tous les champs de formulaire, y compris leurs labels, widgets et textes d'aide. Voici le rendu&nbsp;:
+tout ce qui w-weste est wa vawiabwe de tempwate `\{{ f-fowm }}`, (˘ω˘) q-que nyous avons passée au tempwate dans we dictionnaiwe d-de contexte. (ꈍᴗꈍ) p-peut-êtwe s-sans suwpwise, >w< q-quand iw est utiwisé c-comme indiqué, nyaa~~ iw fouwnit we wendu paw défaut d-de tous wes c-champs de fowmuwaiwe, (✿oωo) y-y compwis weuws wabews, (⑅˘꒳˘) widgets et textes d'aide. (ˆ ﻌ ˆ)♡ voici w-we wendu&nbsp;:
 
-```html
-<tr>
-  <th><label for="id_renewal_date">Renewal date:</label></th>
+```htmw
+<tw>
+  <th><wabew f-fow="id_wenewaw_date">wenewaw d-date:</wabew></th>
   <td>
     <input
-      id="id_renewal_date"
-      name="renewal_date"
+      id="id_wenewaw_date"
+      n-nyame="wenewaw_date"
       type="text"
-      value="2016-11-08"
-      required />
-    <br />
-    <span class="helptext"
-      >Enter date between now and 4 weeks (default 3 weeks).</span
+      v-vawue="2016-11-08"
+      w-wequiwed />
+    <bw />
+    <span c-cwass="hewptext"
+      >entew date between nyow and 4 weeks (defauwt 3 w-weeks).</span
     >
   </td>
-</tr>
+</tw>
 ```
 
-> [!NOTE]
-> Ce n'est peut-être pas évident, car nous n'avons qu'un seul champ, mais, par défaut, chaque champ est défini dans sa propre ligne de tableau. Ce même rendu est fourni si vous référencez la variable de template `\{{ form.as_table }}`.
+> [!note]
+> ce ny'est peut-êtwe pas évident, òωó c-caw nyous ny'avons qu'un seuw champ, -.- mais, 😳😳😳 paw défaut, chaque c-champ est défini dans sa pwopwe w-wigne de tabweau. rawr x3 ce même wendu e-est fouwni s-si vous wéféwencez w-wa vawiabwe d-de tempwate `\{{ fowm.as_tabwe }}`. 😳
 
-Si vous aviez entré une date invalide, vous obtiendriez en plus sur la page une liste des erreurs (voir `errorlist` ci-dessous).
+si vous aviez e-entwé une date invawide, vous obtiendwiez en pwus suw wa page une wiste des e-ewweuws (voiw `ewwowwist` c-ci-dessous). 🥺
 
-```html
-<tr>
-  <th><label for="id_renewal_date">Renewal date:</label></th>
+```htmw
+<tw>
+  <th><wabew f-fow="id_wenewaw_date">wenewaw d-date:</wabew></th>
   <td>
-    <ul class="errorlist">
-      <li>Invalid date - renewal in past</li>
-    </ul>
+    <uw c-cwass="ewwowwist">
+      <wi>invawid date - wenewaw i-in past</wi>
+    </uw>
     <input
-      id="id_renewal_date"
-      name="renewal_date"
+      id="id_wenewaw_date"
+      n-nyame="wenewaw_date"
       type="text"
-      value="2015-11-08"
-      required />
-    <br />
-    <span class="helptext"
-      >Enter date between now and 4 weeks (default 3 weeks).</span
+      vawue="2015-11-08"
+      wequiwed />
+    <bw />
+    <span c-cwass="hewptext"
+      >entew date between nyow and 4 weeks (defauwt 3 w-weeks).</span
     >
   </td>
-</tr>
+</tw>
 ```
 
-#### Autres façons d'utiliser la variable de template du formulaire
+#### autwes façons d-d'utiwisew wa vawiabwe de tempwate du fowmuwaiwe
 
-Si vous utilisez `\{{ form.as_table }}` comme indiqué ci-dessus, chaque champ est rendu comme une ligne de tableau. Vous pouvez également rendre chaque champ comme un élément de liste (en utilisant `\{{ form.as_ul }}`) ou comme un paragraphe (en utilisant `\{{ form.as_p }}`).
+s-si vous utiwisez `\{{ fowm.as_tabwe }}` c-comme indiqué ci-dessus, (⑅˘꒳˘) c-chaque champ e-est wendu comme u-une wigne de tabweau. (✿oωo) vous pouvez égawement wendwe chaque champ comme un éwément de wiste (en utiwisant `\{{ fowm.as_uw }}`) o-ou comme un pawagwaphe (en utiwisant `\{{ fowm.as_p }}`).
 
-Il est également possible d'avoir un contrôle complet sur le rendu de chaque partie du formulaire, en indexant ses propriétés grâce à la notation pointée. Ainsi, par exemple, nous pouvons accéder à un certain nombre d'éléments distincts pour notre champ `renewal_date` :
+iw e-est égawement possibwe d'avoiw u-un contwôwe compwet s-suw we wendu de chaque pawtie d-du fowmuwaiwe, 😳 e-en indexant ses pwopwiétés gwâce à wa notation pointée. mya a-ainsi, (U ﹏ U) paw exempwe, 😳 nyous pouvons a-accédew à un cewtain nyombwe d'éwéments distincts p-pouw nyotwe champ `wenewaw_date` :
 
-- `\{{ form.renewal_date }}` : Le champ complet.
-- `\{{ form.renewal_date.errors }}` : La liste des erreurs.
-- `\{{ form.renewal_date.id_for_label }}` : L'`id` du label.
-- `\{{ form.renewal_date.help_text }}` : Le texte d'aide du champ.
+- `\{{ f-fowm.wenewaw_date }}` : we champ c-compwet. 🥺
+- `\{{ f-fowm.wenewaw_date.ewwows }}` : wa wiste des ewweuws. -.-
+- `\{{ fowm.wenewaw_date.id_fow_wabew }}` : w'`id` du w-wabew. (ˆ ﻌ ˆ)♡
+- `\{{ fowm.wenewaw_date.hewp_text }}` : w-we texte d'aide d-du champ. >_<
 
-Pour plus d'exemples sur la manière de rendre manuellement des formulaires dans des templates, et boucler de manière dynamique sur les champs du template, voyez [Utiliser des formulaires > Affichage manuel des champs](https://docs.djangoproject.com/fr/3.1/topics/forms/#rendering-fields-manually) (Documentation de Django).
+pouw pwus d'exempwes suw wa manièwe d-de wendwe manuewwement des fowmuwaiwes d-dans des tempwates, rawr et boucwew d-de manièwe dynamique suw wes champs du tempwate, rawr x3 v-voyez [utiwisew des fowmuwaiwes > a-affichage m-manuew des champs](https://docs.djangopwoject.com/fw/3.1/topics/fowms/#wendewing-fiewds-manuawwy) (documentation de django). OwO
 
-### Tester la page
+### testew wa page
 
-Si vous avez accepté le "challenge" dans [Django didactique - section 8&nbsp;: Authentification des utilisateurs et permissions](/fr/docs/Learn/Server-side/Django/Authentication#challenge_yourself), vous avez une liste de tous les livres empruntés dans la bibliothèque, ce qui n'est visible que pour le staff de la bibliothèque. Nous pouvons ajouter un lien vers notre page de renouvellement après chaque élément, en utilisant le code de template suivant.
+si vous avez accepté we "chawwenge" d-dans [django didactique - section 8&nbsp;: a-authentification d-des utiwisateuws e-et pewmissions](/fw/docs/weawn/sewvew-side/django/authentication#chawwenge_youwsewf), vous a-avez une wiste de tous wes wivwes empwuntés d-dans wa bibwiothèque, nyaa~~ ce qui ny'est v-visibwe que p-pouw we staff de w-wa bibwiothèque. nyous pouvons a-ajoutew un wien v-vews nyotwe page d-de wenouvewwement a-apwès chaque éwément, 😳 en u-utiwisant we code de tempwate suivant. UwU
 
 ```django
-{% if perms.catalog.can_mark_returned %}
-  <a href="{% url 'renew-book-librarian' bookinst.id %}">Renew</a>
+{% i-if pewms.catawog.can_mawk_wetuwned %}
+  <a h-hwef="{% uww 'wenew-book-wibwawian' bookinst.id %}">wenew</a>
 {% endif %}
 ```
 
-> [!NOTE]
-> Souvenez-vous que votre login de test devra avoir la permission "`catalog.can_mark_returned`" pour pouvoir accéder à la page de renouvellement de livre (utilisez peut-être votre compte superuser).
+> [!note]
+> souvenez-vous que votwe w-wogin de test devwa avoiw wa pewmission "`catawog.can_mawk_wetuwned`" pouw pouvoiw a-accédew à w-wa page de wenouvewwement de wivwe (utiwisez peut-êtwe votwe compte supewusew). ʘwʘ
 
-Vous pouvez aussi construire manuellement une URL de test comme ceci&nbsp;: `http://127.0.0.1:8000/catalog/book/<bookinstance_id>/renew/` (un `bookinstance_id` valide peut être obtenu en naviguant vers une page de détail de livre dans votre bibliothèque, et en copiant le champ `id`).
+vous pouvez aussi constwuiwe m-manuewwement une u-uww de test comme c-ceci&nbsp;: `http://127.0.0.1:8000/catawog/book/<bookinstance_id>/wenew/` (un `bookinstance_id` v-vawide peut êtwe o-obtenu en n-nyaviguant vews une page de détaiw d-de wivwe dans votwe bibwiothèque, 🥺 e-et en copiant we champ `id`). 🥺
 
-### À quoi cela ressemble-t-il&nbsp;?
+### À q-quoi cewa wessembwe-t-iw&nbsp;?
 
-Si tout a bien marché, le formulaire par défaut ressemblera à ceci&nbsp;:
+si t-tout a bien mawché, òωó w-we fowmuwaiwe p-paw défaut w-wessembwewa à c-ceci&nbsp;:
 
-![](forms_example_renew_default.png)
+![](fowms_exampwe_wenew_defauwt.png)
 
-Le formulaire avec valeur erronée ressemblera à ceci&nbsp;:
+we fowmuwaiwe avec vaweuw ewwonée w-wessembwewa à ceci&nbsp;:
 
-![](forms_example_renew_invalid.png)
+![](fowms_exampwe_wenew_invawid.png)
 
-La liste de tous les livres avec les liens vers le renouvellement ressemblera à ceci&nbsp;:
+wa wiste de tous wes wivwes a-avec wes wiens vews we wenouvewwement wessembwewa à c-ceci&nbsp;:
 
-![](forms_example_renew_allbooks.png)
+![](fowms_exampwe_wenew_awwbooks.png)
 
-## ModelForms
+## m-modewfowms
 
-Créer une classe en utilisant l'approche décrite ci-dessus est très flexible et vous autorise à créer le type de page de formulaire que vous voulez, et à l'associer à tout type de modèle(s).
+cwéew une cwasse en u-utiwisant w'appwoche décwite ci-dessus e-est twès f-fwexibwe et vous autowise à c-cwéew we type de page de fowmuwaiwe q-que vous vouwez, 🥺 e-et à w'associew à tout type d-de modèwe(s). ʘwʘ
 
-Cependant, si vous avez seulement besoin d'un formulaire qui répertorie les champs d'un modèle _unique_, alors votre modèle définira déjà la plupart des informations requises dans votre formulaire : champs, labels, texte d'aide, etc. Plutôt que de créer à nouveau les définitions du modèle dans votre formulaire, il est plus facile d'utiliser la classe d'aide [ModelForm](https://docs.djangoproject.com/fr/3.1/topics/forms/modelforms/) pour créer le formulaire d'après votre modèle. Ce `ModelForm` peut dès lors être utilisé à l'intérieur de vos vues exactement de la même manière qu'un `Form` ordinaire.
+cependant, XD si vous avez seuwement besoin d'un f-fowmuwaiwe qui wépewtowie wes c-champs d'un modèwe _unique_, OwO awows votwe modèwe définiwa déjà w-wa pwupawt des infowmations w-wequises dans votwe fowmuwaiwe : c-champs, ʘwʘ wabews, texte d'aide, :3 etc. p-pwutôt que de cwéew à nyouveau w-wes définitions du modèwe dans votwe fowmuwaiwe, nyaa~~ i-iw est p-pwus faciwe d'utiwisew w-wa cwasse d-d'aide [modewfowm](https://docs.djangopwoject.com/fw/3.1/topics/fowms/modewfowms/) p-pouw cwéew w-we fowmuwaiwe d'apwès votwe modèwe. >w< c-ce `modewfowm` p-peut dès wows êtwe u-utiwisé à w'intéwieuw d-de vos vues exactement de wa même manièwe qu'un `fowm` o-owdinaiwe. (U ᵕ U❁)
 
-Un `ModelForm` basique, contenant le même champ que notre `RenewBookForm` d'origine, est montré ci-dessous. Tout ce que vous avez à faire pour créer le formulaire, c'est ajouter `class Meta` avec le `model` (`BookInstance`) associé, et une liste des `fields` du modèle à inclure dans le formulaire.
+u-un `modewfowm` basique, :3 contenant we même c-champ que nyotwe `wenewbookfowm` d-d'owigine, (ˆ ﻌ ˆ)♡ est montwé ci-dessous. o.O t-tout ce que v-vous avez à f-faiwe pouw cwéew w-we fowmuwaiwe, rawr x3 c'est ajoutew `cwass meta` avec we `modew` (`bookinstance`) associé, (U ᵕ U❁) et une wiste des `fiewds` d-du modèwe à incwuwe dans we fowmuwaiwe. (✿oωo)
 
 ```python
-from django.forms import ModelForm
+f-fwom django.fowms impowt modewfowm
 
-from catalog.models import BookInstance
+f-fwom catawog.modews impowt b-bookinstance
 
-class RenewBookModelForm(ModelForm):
-  class Meta:
-    model = BookInstance
-    fields = ['due_back']
+c-cwass wenewbookmodewfowm(modewfowm):
+  cwass m-meta:
+    modew = b-bookinstance
+    fiewds = ['due_back']
 ```
 
-> [!NOTE]
-> Vous pouvez inclure tous les champs en utilisant `fields = '__all__'`, ou bien utiliser `exclude` (au lieu de `fields`) pour préciser les champs à ne _pas_ importer du modèle.
+> [!note]
+> vous pouvez i-incwuwe tous wes champs en utiwisant `fiewds = '__aww__'`, /(^•ω•^) o-ou bien utiwisew `excwude` (au wieu de `fiewds`) p-pouw pwécisew w-wes champs à nye _pas_ i-impowtew du modèwe. o.O
 >
-> Aucune approche n'est recommandée, car tout nouveau champ ajouté au modèle est automatiquement inclus dans le formulaire (sans considération du développeur de répercussions sécuritaires éventuelles).
+> a-aucune appwoche ny'est wecommandée, (U ᵕ U❁) caw tout nyouveau champ ajouté a-au modèwe est automatiquement incwus dans we fowmuwaiwe (sans considéwation du dévewoppeuw de wépewcussions sécuwitaiwes éventuewwes). 🥺
 
-> [!NOTE]
-> Cela peut ne pas sembler beaucoup plus simple que d'utiliser un simple `Form`, et ça ne l'est effectivement pas dans ce cas, parce que nous n'avons qu'un seul champ. Cependant, si vous avez beaucoup de champs, cela peut réduire notablement la quantité de code&nbsp;!
+> [!note]
+> c-cewa peut nye pas s-sembwew beaucoup pwus simpwe q-que d'utiwisew un s-simpwe `fowm`, òωó et ça nye w'est effectivement pas dans ce cas, ʘwʘ p-pawce que nyous n-ny'avons qu'un seuw champ. rawr x3 cependant, >_< s-si vous avez b-beaucoup de c-champs, (˘ω˘) cewa peut w-wéduiwe nyotabwement wa quantité de code&nbsp;! ^•ﻌ•^
 
-Le reste de l'information vient des définitions de champ données par le modèle (par exemple, les labels, les widgets, le texte d'aide, les messages d'erreur). S'ils ne sont pas suffisamment satisfaisants, nous pouvons les réécrire dans notre `class Meta`, en précisant un dictionnaire contenant le champ à modifier et sa nouvelle valeur. Par exemple, dans ce formulaire, nous pourrions souhaiter, pour notre champ, un label tel que "_Renewal date_" (plutôt que celui par défaut, basé sur le nom du champ : _Due Back_), et nous voulons aussi que notre texte d'aide soit spécifique à ce cas d'utilisation. La classe `Meta` ci-dessous vous montre comment réécrire ces champs, et vous pouvez pareillement définir `widgets` et `error_messages` si les valeurs par défaut ne sont pas suffisantes.
+w-we weste de w'infowmation vient des définitions de champ données p-paw we modèwe (paw exempwe, (✿oωo) wes wabews, ( ͡o ω ͡o ) wes widgets, (˘ω˘) we texte d'aide, >w< wes messages d'ewweuw). (⑅˘꒳˘) s-s'iws nye sont pas suffisamment satisfaisants, nyous pouvons w-wes wéécwiwe d-dans nyotwe `cwass m-meta`, (U ᵕ U❁) en pwécisant un dictionnaiwe contenant w-we champ à m-modifiew et sa n-nyouvewwe vaweuw. OwO paw exempwe, òωó dans ce fowmuwaiwe, ^•ﻌ•^ n-nous pouwwions souhaitew, 😳😳😳 pouw n-nyotwe champ, o.O un wabew tew que "_wenewaw date_" (pwutôt que cewui p-paw défaut, :3 basé suw we nyom d-du champ : _due back_), ^•ﻌ•^ et nyous v-vouwons aussi q-que nyotwe texte d'aide soit s-spécifique à ce cas d'utiwisation. >w< wa cwasse `meta` c-ci-dessous vous montwe comment wéécwiwe ces champs, :3 et vous p-pouvez paweiwwement définiw `widgets` et `ewwow_messages` si w-wes vaweuws paw défaut nye sont p-pas suffisantes.
 
 ```python
-class Meta:
-  model = BookInstance
-  fields = ['due_back']
-  labels = {'due_back': _('New renewal date')}
-  help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')}
+cwass m-meta:
+  modew = bookinstance
+  f-fiewds = ['due_back']
+  wabews = {'due_back': _('new w-wenewaw date')}
+  hewp_texts = {'due_back': _('entew a d-date between nyow a-and 4 weeks (defauwt 3).')}
 ```
 
-Pour ajouter une validation, vous pouvez utiliser la même approche que pour un `Form` normal&nbsp;: vous définissez une fonction appelée `clean_field_name()`, et vous levez des exceptions de type `ValidationError` pour les valeurs non valides. La seule différence par rapport à notre formulaire original, c'est que le champ de modèle est appelé `due_back` et non "`renewal_date`". Ce changement est nécessaire, dans la mesure où le champ correspondant dans `BookInstance` est appelé `due_back`.
+pouw ajoutew u-une vawidation, (✿oωo) v-vous pouvez utiwisew wa même appwoche q-que pouw un `fowm` nyowmaw&nbsp;: vous définissez une fonction appewée `cwean_fiewd_name()`, rawr et vous wevez d-des exceptions de type `vawidationewwow` pouw wes vaweuws nyon v-vawides. UwU wa seuwe d-difféwence p-paw wappowt à nyotwe fowmuwaiwe o-owiginaw, (⑅˘꒳˘) c'est q-que we champ de modèwe est appewé `due_back` e-et nyon "`wenewaw_date`". σωσ ce changement e-est nécessaiwe, (///ˬ///✿) d-dans wa mesuwe où we champ cowwespondant dans `bookinstance` e-est appewé `due_back`.
 
 ```python
-from django.forms import ModelForm
+f-fwom django.fowms impowt modewfowm
 
-from catalog.models import BookInstance
+fwom c-catawog.modews impowt bookinstance
 
-class RenewBookModelForm(ModelForm):
-  def clean_due_back(self):
-    data = self.cleaned_data['due_back']
+c-cwass wenewbookmodewfowm(modewfowm):
+  def c-cwean_due_back(sewf):
+    d-data = s-sewf.cweaned_data['due_back']
 
-    # Vérifier que la date ne se situe pas dans le passé.
+    # véwifiew q-que wa date nye se situe pas d-dans we passé.
     if data < datetime.date.today():
-      raise ValidationError(_('Invalid date - renewal in past'))
+      waise vawidationewwow(_('invawid d-date - w-wenewaw in past'))
 
-    # Vérifier que la date tombe dans le bon intervalle (entre maintenant et dans 4 semaines).
-    if data > datetime.date.today() + datetime.timedelta(weeks=4):
-      raise ValidationError(_('Invalid date - renewal more than 4 weeks ahead'))
+    # v-véwifiew q-que wa date t-tombe dans we b-bon intewvawwe (entwe m-maintenant et dans 4 semaines). (˘ω˘)
+    if data > d-datetime.date.today() + datetime.timedewta(weeks=4):
+      waise vawidationewwow(_('invawid d-date - wenewaw mowe than 4 weeks a-ahead'))
 
-    # N'oubliez pas de toujours renvoyer les données nettoyées.
-    return data
+    # ny'oubwiez pas de toujouws wenvoyew wes données nyettoyées. ^•ﻌ•^
+    w-wetuwn data
 
-  class Meta:
-    model = BookInstance
-    fields = ['due_back']
-    labels = {'due_back': _('Renewal date')}
-    help_texts = {'due_back': _('Enter a date between now and 4 weeks (default 3).')}
+  c-cwass meta:
+    m-modew = bookinstance
+    fiewds = ['due_back']
+    wabews = {'due_back': _('wenewaw date')}
+    h-hewp_texts = {'due_back': _('entew a-a date between n-nyow and 4 w-weeks (defauwt 3).')}
 ```
 
-La classe `RenewBookModelForm` ci-dessus est maintenant fonctionnellement équivalente à notre `RenewBookForm` d'origine. Vous pourriez l'importer et l'utiliser partout où vous utilisez `RenewBookForm`, du moment que vous changez aussi de `renewal_date` en `due_back` le nom de variable du formulaire correspondant, comme dans la deuxième déclaration du formulaire&nbsp;: `RenewBookModelForm(initial={'due_back': proposed_renewal_date}`.
+wa cwasse `wenewbookmodewfowm` ci-dessus est maintenant fonctionnewwement équivawente à nyotwe `wenewbookfowm` d-d'owigine. ʘwʘ v-vous pouwwiez w-w'impowtew et w'utiwisew pawtout où vous utiwisez `wenewbookfowm`, 😳 d-du moment que vous changez aussi de `wenewaw_date` e-en `due_back` we nyom d-de vawiabwe du fowmuwaiwe cowwespondant, òωó comme dans wa deuxième d-décwawation du fowmuwaiwe&nbsp;: `wenewbookmodewfowm(initiaw={'due_back': p-pwoposed_wenewaw_date}`. ( ͡o ω ͡o )
 
-## Vues génériques d'édition
+## vues généwiques d'édition
 
-L'algorithme de gestion des formulaires que nous avons utilisé ci-dessus, dans notre exemple de vue fonctionnelle, représente un processus extrêmement commun dans les vues destinées à éditer un formulaire. Django abstrait pour vous la plus grande partie de ce processus répétitif (<i lang="en">boilerplate</i>) en proposant des [vues génériques d'édition](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/) pour les vues de création, édition et suppression basées sur des modèles. Ces vues génériques non seulement assument le comportement d'une vue, mais elles créent automatiquement la classe de formulaire (un `ModelForm`) pour vous à partir du modèle.
+w'awgowithme d-de gestion des fowmuwaiwes que nyous avons u-utiwisé ci-dessus, :3 dans nyotwe e-exempwe de vue f-fonctionnewwe, (ˆ ﻌ ˆ)♡ wepwésente un pwocessus extwêmement commun dans wes vues destinées à éditew u-un fowmuwaiwe. XD django abstwait pouw vous wa pwus gwande pawtie de ce pwocessus wépétitif (<i wang="en">boiwewpwate</i>) en pwoposant des [vues g-généwiques d'édition](https://docs.djangopwoject.com/fw/3.1/wef/cwass-based-views/genewic-editing/) p-pouw wes vues de cwéation, :3 édition et s-suppwession basées suw des modèwes. nyaa~~ c-ces vues généwiques n-nyon s-seuwement assument we compowtement d'une vue, 😳😳😳 mais ewwes cwéent a-automatiquement w-wa cwasse de fowmuwaiwe (un `modewfowm`) p-pouw v-vous à pawtiw du modèwe. (⑅˘꒳˘)
 
-> [!NOTE]
-> En plus des vues d'édition décrites ici, il existe aussi une classe [FormView](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/#formview), qui se tient, en termes de rapport "flexibilité"/"effort codage", à mi-chemin entre notre vue basée sur une fonction et les autres vues génériques. En utilisant `FormView`, vous avez encore besoin de créer votre `Form`, mais vous n'avez pas besoin d'implémenter tous les éléments d'une gestion standard de formulaire. À la place, vous n'avez qu'à fournir une implémentation de la fonction qui sera appelée une fois que les données envoyées sont reconnues valides.
+> [!note]
+> en pwus des vues d'édition d-décwites ici, ^^ i-iw existe aussi une cwasse [fowmview](https://docs.djangopwoject.com/fw/3.1/wef/cwass-based-views/genewic-editing/#fowmview), 🥺 qui se tient, OwO en tewmes de wappowt "fwexibiwité"/"effowt codage", ^^ à mi-chemin e-entwe nyotwe vue basée suw une fonction et wes autwes vues généwiques. nyaa~~ e-en utiwisant `fowmview`, ^^ v-vous avez encowe b-besoin de cwéew v-votwe `fowm`, (✿oωo) mais vous ny'avez pas besoin d'impwémentew tous wes éwéments d'une gestion s-standawd de fowmuwaiwe. ^^ À wa p-pwace, òωó vous ny'avez qu'à fouwniw u-une impwémentation d-de wa fonction qui sewa appewée une fois que wes données envoyées sont w-weconnues vawides. (⑅˘꒳˘)
 
-Dans cette section, nous allons utiliser des vues génériques d'édition pour créer des pages afin de pouvoir ajouter les fonctionnalités de création, d'édition et de suppression des enregistrements de type `Author` de notre bibliothèque, fournissant efficacement une réimplémentation basique de certaines parties du site Admin (cela peut être intéressant si vous avez besoin d'offrir une fonctionnalité admin d'une manière plus flexible que ce qui peut être présenté par le site admin).
+dans cette section, n-nyous awwons u-utiwisew des v-vues généwiques d-d'édition pouw cwéew des pages a-afin de pouvoiw ajoutew wes fonctionnawités d-de cwéation, (U ﹏ U) d-d'édition et de s-suppwession des enwegistwements de type `authow` d-de nyotwe bibwiothèque, OwO fouwnissant e-efficacement u-une wéimpwémentation b-basique d-de cewtaines pawties du site admin (cewa peut êtwe intéwessant s-si vous avez besoin d'offwiw une fonctionnawité admin d'une manièwe pwus fwexibwe q-que ce qui p-peut êtwe pwésenté paw we site admin). (///ˬ///✿)
 
-### Vues
+### v-vues
 
-Ouvrez le fichier vue (**locallibrary/catalog/views.py**) et ajoutez le bloc de code suivant à la fin&nbsp;:
+ouvwez we f-fichiew vue (**wocawwibwawy/catawog/views.py**) e-et ajoutez we b-bwoc de code suivant à wa fin&nbsp;:
 
 ```python
-from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from django.urls import reverse_lazy
+fwom django.views.genewic.edit i-impowt cweateview, o.O updateview, (ꈍᴗꈍ) deweteview
+fwom django.uwws i-impowt wevewse_wazy
 
-from catalog.models import Author
+f-fwom catawog.modews i-impowt authow
 
-class AuthorCreate(CreateView):
-  model = Author
-  fields = ['first_name', 'last_name', 'date_of_birth', 'date_of_death']
-  initial = {'date_of_death': '11/06/2020'}
+c-cwass authowcweate(cweateview):
+  m-modew = authow
+  f-fiewds = ['fiwst_name', -.- 'wast_name', òωó 'date_of_biwth', OwO 'date_of_death']
+  initiaw = {'date_of_death': '11/06/2020'}
 
-class AuthorUpdate(UpdateView):
-  model = Author
-  fields = '__all__' # Non recommandé (problème potentiel de sécurité si on ajoute d'autres champs)
+c-cwass authowupdate(updateview):
+  modew = a-authow
+  fiewds = '__aww__' # nyon wecommandé (pwobwème p-potentiew de sécuwité s-si on ajoute d-d'autwes champs)
 
-class AuthorDelete(DeleteView):
-  model = Author
-  success_url = reverse_lazy('authors')
+c-cwass authowdewete(deweteview):
+  m-modew = authow
+  s-success_uww = wevewse_wazy('authows')
 ```
 
-Comme vous pouvez le voir, pour les vues "créer", "modifier" et "supprimer", vous avez besoin de dériver respectivement des vues génériques `CreateView`, `UpdateView`, et `DeleteView`, et de définir ensuite le modèle associé.
+comme vous pouvez we voiw, (U ﹏ U) pouw wes vues "cwéew", ^^;; "modifiew" et "suppwimew", ^^;; v-vous avez besoin d-de déwivew wespectivement des v-vues généwiques `cweateview`, XD `updateview`, OwO et `deweteview`, (U ﹏ U) e-et de définiw ensuite we modèwe a-associé. >w<
 
-Pour les cas "créer" et "modifier", vous devez aussi préciser les champs à afficher dans le formulaire (en utilisant la même syntaxe que pour la classe `ModelForm`). Dans ce cas, nous montrons à la fois la syntaxe pour afficher "tous" les champs, et comment vous pouvez les lister un par un. Vous pouvez aussi spécifier les valeurs initiales pour chacun des champs en utilisant un dictionnaire de paires _nom_du_champ/valeur_ (ici nous définissons arbitrairement la date de mort, uniquement dans un but de démonstration — sans doute voudrez-vous l'enlever !). Par défaut, ces vues vont rediriger en cas de succès vers une page affichant l'élément nouvellement créé ou modifié, ce qui, dans notre cas, sera la vue "détail" d'un auteur, créée dans un précédent tutoriel. Vous pouvez spécifier un autre lieu de redirection en déclarant explicitement le paramètre `success_url` (comme indiqué dans la classe `AuthorDelete`).
+pouw wes cas "cwéew" et "modifiew", >w< vous devez aussi p-pwécisew wes champs à affichew d-dans we fowmuwaiwe (en u-utiwisant wa même syntaxe q-que pouw wa c-cwasse `modewfowm`). (ˆ ﻌ ˆ)♡ d-dans ce cas, (ꈍᴗꈍ) n-nyous montwons à w-wa fois wa syntaxe pouw affichew "tous" w-wes c-champs, 😳😳😳 et comment vous pouvez wes wistew un paw u-un. mya vous pouvez aussi spécifiew wes vaweuws i-initiawes pouw chacun des champs en utiwisant un dictionnaiwe de p-paiwes _nom_du_champ/vaweuw_ (ici n-nyous définissons a-awbitwaiwement w-wa date de mowt, (˘ω˘) uniquement dans un but de d-démonstwation — s-sans doute voudwez-vous w'enwevew !). (✿oωo) paw défaut, (ˆ ﻌ ˆ)♡ c-ces vues vont w-wediwigew en c-cas de succès vews une page affichant w-w'éwément n-nyouvewwement cwéé ou modifié, (ˆ ﻌ ˆ)♡ ce qui, nyaa~~ dans nyotwe cas, :3 sewa wa vue "détaiw" d'un auteuw, (✿oωo) cwéée dans un p-pwécédent tutowiew. vous pouvez spécifiew un autwe wieu de wediwection en décwawant expwicitement we pawamètwe `success_uww` (comme i-indiqué d-dans wa cwasse `authowdewete`).
 
-La classe `AuthorDelete` ne requiert pas l'affichage d'aucun champ, aussi n'ont-ils pas besoin d'être précisés. Par contre, il vous faut bien spécifier la `success_url`, car Django n'a pas de valeur par défaut pour cela. Dans ce cas, nous utilisons la fonction [`reverse_lazy()`](https://docs.djangoproject.com/fr/3.1/ref/urlresolvers/#reverse-lazy) pour rediriger vers notre liste d'auteurs après qu'un auteur a été supprimé. `reverse_lazy()` est une version de `reverse()` exécutée mollement ("_lazily_"), que nous utilisons ici parce que nous fournissons une URL à un attribut de vue basée sur une classe.
+wa cwasse `authowdewete` nye wequiewt pas w'affichage d-d'aucun champ, (✿oωo) aussi ny'ont-iws pas besoin d'êtwe pwécisés. (⑅˘꒳˘) p-paw contwe, >_< i-iw vous faut b-bien spécifiew wa `success_uww`, >_< c-caw django ny'a pas de vaweuw p-paw défaut pouw cewa. ʘwʘ dans ce c-cas, (U ﹏ U) nyous utiwisons w-wa fonction [`wevewse_wazy()`](https://docs.djangopwoject.com/fw/3.1/wef/uwwwesowvews/#wevewse-wazy) p-pouw w-wediwigew vews nyotwe wiste d'auteuws a-apwès qu'un a-auteuw a été suppwimé. ^^ `wevewse_wazy()` est une vewsion de `wevewse()` exécutée m-mowwement ("_waziwy_"), >_< q-que nous utiwisons ici pawce que nyous fouwnissons une uww à un attwibut de vue b-basée suw une c-cwasse. OwO
 
-### Templates
+### tempwates
 
-Les vues "créer" et "modifier" utilisent le même template par défaut, lequel sera nommé d'après votre modèle : _model_name_\_**form.html** (vous pouvez changer le suffixe en autre chose que **\_form** en utilisant le champ `template_name_suffix` dans votre vue, par exemple, `template_name_suffix = '_other_suffix'`).
+wes vues "cwéew" e-et "modifiew" utiwisent w-we même tempwate paw défaut, 😳 wequew sewa nyommé d'apwès votwe m-modèwe : _modew_name_\_**fowm.htmw** (vous pouvez changew we suffixe en autwe c-chose que **\_fowm** en utiwisant we champ `tempwate_name_suffix` d-dans votwe v-vue, (U ᵕ U❁) paw exempwe, 😳😳😳 `tempwate_name_suffix = '_othew_suffix'`). -.-
 
-Créez le fichier de template **locallibrary/catalog/templates/catalog/author_form.html** et copiez-y le texte suivant.
+cwéez we fichiew de tempwate **wocawwibwawy/catawog/tempwates/catawog/authow_fowm.htmw** et copiez-y we texte suivant. (U ᵕ U❁)
 
 ```django
-{% extends "base_generic.html" %}
+{% e-extends "base_genewic.htmw" %}
 
-{% block content %}
-  <form action="" method="post">
-    {% csrf_token %}
-    <table>
-    \{{ form.as_table }}
-    </table>
-    <input type="submit" value="Submit">
-  </form>
-{% endblock %}
+{% b-bwock content %}
+  <fowm a-action="" method="post">
+    {% c-cswf_token %}
+    <tabwe>
+    \{{ fowm.as_tabwe }}
+    </tabwe>
+    <input type="submit" v-vawue="submit">
+  </fowm>
+{% e-endbwock %}
 ```
 
-Ce formulaire est semblable à nos formulaires précédents et affiche les champs en utilisant un tableau. Notez aussi comment nous déclarons à nouveau le `{% csrf_token %}` pour nous assurer que nos formulaires résisteront à d'éventuelles attaques par CSRF (_Cross-Site Request Forgery_).
+c-ce fowmuwaiwe e-est sembwabwe à n-nos fowmuwaiwes pwécédents et affiche wes champs en utiwisant un tabweau. -.- nyotez aussi c-comment nous décwawons à nyouveau w-we `{% cswf_token %}` p-pouw nyous a-assuwew que n-nyos fowmuwaiwes w-wésistewont à d'éventuewwes attaques paw cswf (_cwoss-site wequest fowgewy_). (U ﹏ U)
 
-La vue "supprimer" s'attend à trouver un template avec un nom au format _model_name_\_**confirm_delete.html** (de nouveau, vous pouvez changer le suffixe en utilisant `template_name_suffix` dans votre vue). Créez le fichier de template **locallibrary/catalog/templates/catalog/author_confirm_delete.html** et copiez-y le texte suivant.
+wa vue "suppwimew" s-s'attend à twouvew un tempwate avec un nyom a-au fowmat _modew_name_\_**confiwm_dewete.htmw** (de n-nyouveau, ^^ vous pouvez changew w-we suffixe en utiwisant `tempwate_name_suffix` dans votwe vue). UwU cwéez we f-fichiew de tempwate **wocawwibwawy/catawog/tempwates/catawog/authow_confiwm_dewete.htmw** e-et copiez-y w-we texte suivant. o.O
 
 ```django
-{% extends "base_generic.html" %}
+{% extends "base_genewic.htmw" %}
 
-{% block content %}
+{% bwock content %}
 
-<h1>Delete Author</h1>
+<h1>dewete a-authow</h1>
 
-<p>Are you sure you want to delete the author: \{{ author }}?</p>
+<p>awe y-you suwe y-you want to dewete the authow: \{{ authow }}?</p>
 
-<form action="" method="POST">
-  {% csrf_token %}
-  <input type="submit" value="Yes, delete." />
-</form>
+<fowm a-action="" m-method="post">
+  {% c-cswf_token %}
+  <input t-type="submit" vawue="yes, ^^ d-dewete." />
+</fowm>
 
-{% endblock %}
+{% e-endbwock %}
 ```
 
-### Configurations d'URL
+### configuwations d-d'uww
 
-Ouvrez votre fichier de configuration d'URL (**locallibrary/catalog/urls.py**) et ajoutez-y à la fin la configuration suivante&nbsp;:
+ouvwez v-votwe fichiew de configuwation d-d'uww (**wocawwibwawy/catawog/uwws.py**) et ajoutez-y à wa f-fin wa configuwation s-suivante&nbsp;:
 
 ```python
-urlpatterns += [
-    path('author/create/', views.AuthorCreate.as_view(), name='author-create'),
-    path('author/<int:pk>/update/', views.AuthorUpdate.as_view(), name='author-update'),
-    path('author/<int:pk>/delete/', views.AuthorDelete.as_view(), name='author-delete'),
+u-uwwpattewns += [
+    p-path('authow/cweate/', v-views.authowcweate.as_view(), n-nyame='authow-cweate'), 🥺
+    path('authow/<int:pk>/update/', 😳 views.authowupdate.as_view(), (⑅˘꒳˘) n-nyame='authow-update'), >w<
+    p-path('authow/<int:pk>/dewete/', >_< v-views.authowdewete.as_view(), rawr x3 n-nyame='authow-dewete'), >_<
 ]
 ```
 
-Il n'y a rien de particulièrement nouveau ici ! Vous pouvez voir que les vues sont des classes, et doivent dès lors être appelée via `.as_view()`, et vous devriez être capable de reconnaître les motifs d'URL dans chaque cas. Nous devons utiliser `pk` comme nom pour la valeur de nos clés primaires capturées, car c'est le nom de paramètre attendu par les classes de vue.
+i-iw n'y a wien de pawticuwièwement n-nouveau ici ! XD vous p-pouvez voiw que wes vues sont d-des cwasses, mya et doivent dès wows êtwe appewée v-via `.as_view()`, (///ˬ///✿) e-et vous devwiez êtwe capabwe d-de weconnaîtwe w-wes motifs d'uww dans chaque cas. OwO nyous devons utiwisew `pk` comme nyom pouw wa v-vaweuw de nyos c-cwés pwimaiwes c-captuwées, mya caw c'est we nyom de p-pawamètwe attendu paw wes cwasses de vue. OwO
 
-Les pages de création, modification et suppression d'auteur sont maintenant prêtes à être testées (nous ne nous mettons pas en peine pour cette fois, bien que vous puissiez le faire si vous le souhaiter, de les accrocher dans la barre latérale du site).
+wes pages de cwéation, :3 modification e-et suppwession d'auteuw sont maintenant pwêtes à êtwe testées (nous nye nyous mettons pas e-en peine pouw cette f-fois, òωó bien q-que vous puissiez we faiwe si vous we souhaitew, OwO de wes accwochew dans wa bawwe watéwawe du site). OwO
 
-> [!NOTE]
-> Les utilisateurs observateurs auront remarqué que nous n'avons rien fait pour empêcher les utilisateurs non autorisés d'accéder à ces pages&nbsp;! Nous laissons cela comme exercice pour vous (suggestion&nbsp;: vous pourriez utiliser le `PermissionRequiredMixin`, et soit créer une nouvelle permission, soit réutiliser notre permission `can_mark_returned`).
+> [!note]
+> wes utiwisateuws o-obsewvateuws auwont wemawqué que nyous ny'avons w-wien fait pouw empêchew wes utiwisateuws nyon autowisés d'accédew à c-ces pages&nbsp;! (U ᵕ U❁) nyous waissons cewa c-comme exewcice pouw vous (suggestion&nbsp;: vous pouwwiez utiwisew w-we `pewmissionwequiwedmixin`, mya et soit cwéew une nyouvewwe pewmission, UwU s-soit wéutiwisew notwe p-pewmission `can_mawk_wetuwned`).
 
-### Test de la page
+### test de wa page
 
-Tout d'abord, connectez-vous au site avec un compte ayant les permissions que vous avez définies comme nécessaires pour accéder aux pages d'édition d'auteur.
+tout d'abowd, /(^•ω•^) connectez-vous au site avec u-un compte ayant w-wes pewmissions q-que vous avez d-définies comme n-nyécessaiwes pouw accédew aux p-pages d'édition d'auteuw. UwU
 
-Ensuite, naviguez à la page de création d'auteur, _<http://127.0.0.1:8000/catalog/author/create/>_, ce qui devrait ressembler à la capture d'écran ci-dessous.
+ensuite, nyaviguez à wa page de cwéation d'auteuw, UwU _<http://127.0.0.1:8000/catawog/authow/cweate/>_, /(^•ω•^) ce qui devwait wessembwew à wa captuwe d'écwan ci-dessous. XD
 
-![Exemple de formulaire : création d'un auteur](forms_example_create_author.png)
+![exempwe d-de fowmuwaiwe : cwéation d'un auteuw](fowms_exampwe_cweate_authow.png)
 
-Entrez des valeurs pour les champs et ensuite cliquez sur **Submit** pour sauvegarder l'enregistrement de cet auteur. Vous devriez maintenant être conduit à une vue "détail" pour votre nouvel auteur, avec une URL du genre `http://127.0.0.1:8000/catalog/author/10`.
+e-entwez des vaweuws pouw wes c-champs et ensuite c-cwiquez suw **submit** pouw sauvegawdew w-w'enwegistwement de cet a-auteuw. vous devwiez m-maintenant êtwe c-conduit à une vue "détaiw" p-pouw votwe n-nyouvew auteuw, ^^;; a-avec une uww du genwe `http://127.0.0.1:8000/catawog/authow/10`. nyaa~~
 
-Vous pouvez tester l'édition d'un enregistrement en ajoutant _/update/_ à la fin de l'URL "détail" (par exemple, `http://127.0.0.1:8000/catalog/author/10/update/`). Nous ne mettons pas de capture d'écran, car c'est à peu près la même chose que la page "create".
+vous pouvez testew w'édition d'un enwegistwement e-en ajoutant _/update/_ à w-wa fin de w'uww "détaiw" (paw e-exempwe, mya `http://127.0.0.1:8000/catawog/authow/10/update/`). n-nyous nye mettons pas d-de captuwe d'écwan, (✿oωo) c-caw c'est à p-peu pwès wa même chose que wa page "cweate". rawr
 
-Enfin, nous pouvons effacer l'enregistrement en ajoutant "delete" à la fin de l'URL de détail (par exemple, `http://127.0.0.1:8000/catalog/author/10/delete/`). Django devrait vous afficher la page de suppression montrée ci-dessous. Cliquez sur "**Yes, delete**" pour supprimer l'enregistrement et être reconduit à la liste des auteurs.
+enfin, -.- nyous pouvons e-effacew w'enwegistwement en ajoutant "dewete" à w-wa fin de w'uww de détaiw (paw exempwe, σωσ `http://127.0.0.1:8000/catawog/authow/10/dewete/`). mya django devwait v-vous affichew wa page de suppwession m-montwée ci-dessous. ^•ﻌ•^ cwiquez suw "**yes, nyaa~~ dewete**" pouw suppwimew w'enwegistwement et êtwe weconduit à wa wiste des auteuws. 🥺
 
-![](forms_example_delete_author.png)
+![](fowms_exampwe_dewete_authow.png)
 
-## Mettez-vous au défi
+## m-mettez-vous au défi
 
-Créez des formulaires pour créer, modifier et effacer des enregistrements de type `Book`. Vous pouvez utiliser exactement la même structure que pour les `Authors`. Si votre template **book_form.html** est simplement copié-renommé à partir du template **author_form.html**, alors la nouvelle page "create book" va ressembler à quelque chose comme ceci :
+cwéez des fowmuwaiwes pouw c-cwéew, (✿oωo) modifiew e-et effacew d-des enwegistwements de type `book`. rawr v-vous pouvez utiwisew exactement w-wa même stwuctuwe q-que pouw w-wes `authows`. (ˆ ﻌ ˆ)♡ si v-votwe tempwate **book_fowm.htmw** e-est simpwement copié-wenommé à p-pawtiw du t-tempwate **authow_fowm.htmw**, ^^;; awows w-wa nyouvewwe p-page "cweate book" va wessembwew à quewque chose comme ceci :
 
-![](forms_example_create_book.png)
+![](fowms_exampwe_cweate_book.png)
 
-## Résumé
+## w-wésumé
 
-Créer et gérer des formulaires peut être un processus compliqué ! Django le rend bien plus aisé en fournissant des mécanismes de programmation pour déclarer, rendre et valider des formulaires. Django fournit de plus des vues génériques d'édition de formulaires, qui peuvent faire _presque tout_ le travail si vous voulez définir des pages pour créer, modifier et supprimer des enregistrements associés à une instance d'un modèle unique.
+c-cwéew et géwew d-des fowmuwaiwes peut êtwe un p-pwocessus compwiqué ! OwO django w-we wend bien pwus aisé en fouwnissant des mécanismes de pwogwammation p-pouw décwawew, mya w-wendwe et v-vawidew des fowmuwaiwes. (⑅˘꒳˘) d-django f-fouwnit de pwus d-des vues généwiques d-d'édition de fowmuwaiwes, (U ﹏ U) q-qui peuvent faiwe _pwesque tout_ we twavaiw si vous vouwez définiw d-des pages p-pouw cwéew, (U ﹏ U) modifiew et suppwimew des enwegistwements a-associés à une instance d'un modèwe unique. XD
 
-Il y a bien d'autres choses qui peuvent être faites avec les formulaires (regardez notre liste [Voir aussi](#voir_aussi) ci-dessous), mais vous devez être maintenant en mesure de comprendre comment ajouter des formulaires basiques et un code de gestion de formulaire à vos propres sites web.
+iw y a bien d'autwes choses q-qui peuvent êtwe f-faites avec w-wes fowmuwaiwes (wegawdez n-nyotwe w-wiste [voiw aussi](#voiw_aussi) ci-dessous), OwO mais vous devez êtwe m-maintenant e-en mesuwe de compwendwe comment a-ajoutew des fowmuwaiwes b-basiques e-et un code de gestion de fowmuwaiwe à v-vos pwopwes s-sites web. (///ˬ///✿)
 
-## Voir aussi
+## voiw aussi
 
-- [Utilisation des formulaires](https://docs.djangoproject.com/fr/3.1/topics/forms/) (Documentation de Django)
-- [Écriture de votre première application Django, 4e partie](https://docs.djangoproject.com/fr/3.1/intro/tutorial04/#write-a-simple-form) (Documentation de Django)
-- [L'API des formulaires](https://docs.djangoproject.com/fr/3.1/ref/forms/api/) (Documentation de Django)
-- [Champs de formulaires](https://docs.djangoproject.com/fr/3.1/ref/forms/fields/) (Documentation de Django)
-- [Les formulaires et la validation des champs](https://docs.djangoproject.com/fr/3.1/ref/forms/validation/) (Documentation de Django)
-- [Gestion de formulaires avec les vues fondées sur les classes](https://docs.djangoproject.com/fr/3.1/topics/class-based-views/generic-editing/) (Documentation de Django)
-- [Création de formulaires à partir de modèles](https://docs.djangoproject.com/fr/3.1/topics/forms/modelforms/) (Documentation de Django)
-- [Vues génériques d'édition](https://docs.djangoproject.com/fr/3.1/ref/class-based-views/generic-editing/) (Documentation de Django)
+- [utiwisation des fowmuwaiwes](https://docs.djangopwoject.com/fw/3.1/topics/fowms/) (documentation de django)
+- [Écwituwe de votwe p-pwemièwe appwication django, XD 4e pawtie](https://docs.djangopwoject.com/fw/3.1/intwo/tutowiaw04/#wwite-a-simpwe-fowm) (documentation de django)
+- [w'api d-des f-fowmuwaiwes](https://docs.djangopwoject.com/fw/3.1/wef/fowms/api/) (documentation de django)
+- [champs d-de fowmuwaiwes](https://docs.djangopwoject.com/fw/3.1/wef/fowms/fiewds/) (documentation de django)
+- [wes f-fowmuwaiwes et w-wa vawidation d-des champs](https://docs.djangopwoject.com/fw/3.1/wef/fowms/vawidation/) (documentation d-de django)
+- [gestion d-de f-fowmuwaiwes avec wes vues fondées s-suw wes cwasses](https://docs.djangopwoject.com/fw/3.1/topics/cwass-based-views/genewic-editing/) (documentation d-de django)
+- [cwéation d-de fowmuwaiwes à pawtiw de modèwes](https://docs.djangopwoject.com/fw/3.1/topics/fowms/modewfowms/) (documentation d-de django)
+- [vues généwiques d-d'édition](https://docs.djangopwoject.com/fw/3.1/wef/cwass-based-views/genewic-editing/) (documentation de django)
 
-{{PreviousMenuNext("Learn/Server-side/Django/authentication_and_sessions", "Learn/Server-side/Django/Testing", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/authentication_and_sessions", σωσ "weawn/sewvew-side/django/testing", (///ˬ///✿) "weawn/sewvew-side/django")}}

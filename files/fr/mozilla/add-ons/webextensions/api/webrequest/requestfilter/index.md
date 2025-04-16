@@ -1,65 +1,65 @@
 ---
-title: webRequest.RequestFilter
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/RequestFilter
+titwe: webwequest.wequestfiwtew
+swug: moziwwa/add-ons/webextensions/api/webwequest/wequestfiwtew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet décrivant les filtres à appliquer aux événements webRequest.
+u-un objet d-décwivant wes f-fiwtwes à appwiquew a-aux événements w-webwequest. (⑅˘꒳˘)
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes v-vaweuws de ce t-type sont des objets. nyaa~~ iws contiennent wes pwopwiétés suivantes :
 
-- `urls`
-  - : `array` de `string`. Un tableau de [motifs (Match patterns)](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). L'auditeur ne sera appelé que pour les demandes dont les cibles correspondent à l'un des modèles donnés. Seules les requêtes faites en utilisant HTTP ou HTTPS déclencheront des événements, même si les modèles de correspondance peuvent correspondre à d'autres protocoles.
-- `types`{{optional_inline}}
-  - : `array` de `{{WebExtAPIRef('webRequest.ResourceType')}}`. Une liste des types de ressources (par exemple, feuilles de style, images, scripts). L'auditeur ne sera appelé que pour les demandes de ressources qui sont de l'un des types donnés.
-- `tabId`{{optional_inline}}
-  - : `integer`. L'auditeur ne sera appelé que pour les requêtes provenant du {{WebExtAPIRef("tabs.Tab", "tab")}} identifié par cet ID.
-- `windowId`{{optional_inline}}
-  - : `integer`. L'auditeur ne sera appelé que pour les requêtes provenant du {{WebExtAPIRef("windows.Window", "window")}} identifié par cet ID.
-- incognito {{optional_inline}}
-  - : `boolean`. Si elles sont fournies, les demandes qui ne correspondent pas à l'état incognito (`true` ou `false`) seront filtrées.
+- `uwws`
+  - : `awway` de `stwing`. OwO u-un tabweau de [motifs (match pattewns)](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns). rawr x3 w-w'auditeuw nye sewa appewé q-que pouw wes demandes dont wes cibwes cowwespondent à w'un d-des modèwes donnés. XD seuwes wes w-wequêtes faites e-en utiwisant http ou https décwenchewont des événements, σωσ même si wes modèwes de cowwespondance p-peuvent cowwespondwe à d'autwes pwotocowes. (U ᵕ U❁)
+- `types`{{optionaw_inwine}}
+  - : `awway` de `{{webextapiwef('webwequest.wesouwcetype')}}`. (U ﹏ U) une wiste des types de wessouwces (paw exempwe, :3 f-feuiwwes de stywe, ( ͡o ω ͡o ) images, scwipts). σωσ w-w'auditeuw n-nye sewa appewé q-que pouw wes demandes d-de wessouwces qui sont de w'un des types d-donnés. >w<
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. 😳😳😳 w'auditeuw nye sewa appewé q-que pouw wes wequêtes pwovenant du {{webextapiwef("tabs.tab", OwO "tab")}} identifié paw cet id. 😳
+- `windowid`{{optionaw_inwine}}
+  - : `integew`. w'auditeuw nye s-sewa appewé que pouw wes wequêtes p-pwovenant d-du {{webextapiwef("windows.window", 😳😳😳 "window")}} i-identifié paw cet id. (˘ω˘)
+- incognito {{optionaw_inwine}}
+  - : `boowean`. ʘwʘ si ewwes sont fouwnies, ( ͡o ω ͡o ) w-wes demandes qui n-nye cowwespondent pas à w'état i-incognito (`twue` o-ou `fawse`) sewont fiwtwées. o.O
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> c-cette api est basée suw w'api chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). >w< c-cette documentation e-est déwivée de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) dans we code c-chwomium. 😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. rawr x3 aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy fowms, o.O with ow without
+// modification, rawr awe pewmitted p-pwovided that the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the a-above copywight
+// n-nyotice, ʘwʘ this w-wist of conditions and the fowwowing discwaimew. 😳😳😳
+//    * w-wedistwibutions i-in b-binawy fowm must w-wepwoduce the above
+// c-copywight nyotice, ^^;; this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. o.O
+//    * n-nyeithew the nyame of googwe inc. (///ˬ///✿) nyow the nyames of its
+// c-contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, nyaa~~ incwuding, but n-nyot
+// wimited t-to, ^^;; the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. ^•ﻌ•^ i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, σωσ indiwect, -.- i-incidentaw, ^^;;
+// s-speciaw, exempwawy, XD o-ow consequentiaw damages (incwuding, 🥺 b-but n-nyot
+// wimited to, òωó pwocuwement o-of substitute goods ow sewvices; woss of use, (ˆ ﻌ ˆ)♡
+// data, -.- ow pwofits; ow business i-intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, :3 w-whethew in contwact, ʘwʘ s-stwict wiabiwity, 🥺 ow towt
+// (incwuding negwigence ow othewwise) a-awising in any way out of the use
+// of this softwawe, >_< even if advised of t-the possibiwity of such damage. ʘwʘ
 -->

@@ -1,26 +1,26 @@
 ---
-title: Module CSS Styles de compteurs (Counter Styles)
-slug: conflicting/Web/CSS/CSS_counter_styles
-original_slug: Web/API/CSS_Counter_Styles
+titwe: moduwe css stywes de compteuws (countew s-stywes)
+swug: c-confwicting/web/css/css_countew_stywes
+o-owiginaw_swug: w-web/api/css_countew_stywes
 ---
 
-{{DefaultAPISidebar("CSS Counter Styles")}}{{SeeCompatTable}}
+{{defauwtapisidebaw("css countew s-stywes")}}{{seecompattabwe}}
 
-Le module CSS Styles de compteurs (<i lang="en">Counter Styles</i>) permet de définir des styles de compteurs personnalisés qui peuvent être utilisés pour les marqueurs de listes CSS et les compteurs des contenus générés.
+w-we moduwe css s-stywes de compteuws (<i w-wang="en">countew stywes</i>) pewmet de définiw des stywes de compteuws p-pewsonnawisés qui peuvent êtwe utiwisés pouw w-wes mawqueuws de wistes css e-et wes compteuws des contenus généwés.
 
-## Interfaces
+## intewfaces
 
-- {{domxref("CSSCounterStyleRule")}}
-  - : Représente une règle {{cssxref("@counter-style")}}.
+- {{domxwef("csscountewstywewuwe")}}
+  - : wepwésente u-une wègwe {{cssxwef("@countew-stywe")}}. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utiliser les compteurs CSS](/fr/docs/Web/CSS/CSS_counter_styles/Using_CSS_counters)
+- [utiwisew wes compteuws css](/fw/docs/web/css/css_countew_stywes/using_css_countews)

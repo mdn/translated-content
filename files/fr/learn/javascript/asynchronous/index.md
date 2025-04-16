@@ -1,43 +1,43 @@
 ---
-title: JavaScript asynchrone
-slug: Learn/JavaScript/Asynchronous
+titwe: javascwipt asynchwone
+s-swug: weawn/javascwipt/asynchwonous
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Dans ce module, nous examinons le [JavaScript](/fr/docs/Glossary/JavaScript) [asynchrone](/fr/docs/Glossary/Asynchronous), pourquoi il est important et comment il peut être utilisé afin de gérer efficacement les opérations potentiellement bloquantes telles que la récupération de ressources sur un serveur.
+d-dans c-ce moduwe, OwO nyous e-examinons we [javascwipt](/fw/docs/gwossawy/javascwipt) [asynchwone](/fw/docs/gwossawy/asynchwonous), (ꈍᴗꈍ) p-pouwquoi i-iw est impowtant e-et comment iw peut êtwe u-utiwisé afin de géwew efficacement wes opéwations potentiewwement bwoquantes tewwes q-que wa wécupéwation de wessouwces suw un sewveuw. 😳
 
-> [!CALLOUT]
+> [!cawwout]
 >
-> Vous cherchez à devenir développeuse ou développeur web front-end&nbsp;?
+> v-vous chewchez à deveniw d-dévewoppeuse ou dévewoppeuw web fwont-end&nbsp;?
 >
-> Nous avons élaboré un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
+> nyous avons éwabowé u-un couws qui compwend t-toutes wes infowmations e-essentiewwes dont vous avez besoin pouw atteindwe votwe objectif. 😳😳😳
 >
-> [**Commencer**](/fr/curriculum/)
+> [**commencew**](/fw/cuwwicuwum/)
 
-## Prérequis
+## p-pwéwequis
 
-Le JavaScript asynchrone est un sujet assez avancé, et il vous est conseillé de travailler sur les modules [Premiers pas en JavaScript](/fr/docs/Learn/JavaScript/First_steps) et [Blocs de construction de JavaScript](/fr/docs/Learn/JavaScript/Building_blocks) avant d'attaquer cette leçon.
+we javascwipt asynchwone est un sujet assez avancé, mya et iw vous e-est conseiwwé de twavaiwwew suw w-wes moduwes [pwemiews p-pas en j-javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps) e-et [bwocs de constwuction de javascwipt](/fw/docs/weawn/javascwipt/buiwding_bwocks) a-avant d'attaquew cette weçon.
 
-> [!NOTE]
-> Si vous travaillez sur un ordinateur/tablette/autre appareil où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code dans un programme de codage en ligne tel que [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com).
+> [!note]
+> si vous twavaiwwez s-suw un owdinateuw/tabwette/autwe appaweiw où vous ny'avez pas wa possibiwité de cwéew vos pwopwes fichiews, mya v-vous pouvez essayew (wa pwupawt) d-des exempwes d-de code dans u-un pwogwamme de codage en wigne tew que [jsbin](https://jsbin.com/) ou [gwitch](https://gwitch.com). (⑅˘꒳˘)
 
-## Guides
+## g-guides
 
-- [Introduction au JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous/Introducing)
-  - : Dans cet article, nous verrons ce que sont la programmation **synchrone** et **asynchrone**, pourquoi nous avons souvent besoin de techniques asynchrones, la façon dont les fonctions asynchrones ont été implémentées en JavaScript au cours du temps et les différents problèmes associés.
-- [Comment utiliser les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises)
-  - : Ici, nous verrons les promesses et comment manipuler les API qui les utilisent. Nous introduirons également les mots-clés `async` et `await`.
-- [Implémenter une API fonctionnant avec les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Implementing_a_promise-based_API)
-  - : Cet article détaille comment implémenter sa propre API utilisant les promesses.
-- [Introduction aux <i lang="en">workers</i>](/fr/docs/Learn/JavaScript/Asynchronous/Introducing_workers)
-  - : Les <i lang="en">workers</i> permettent d'exécuter certaines tâches dans un fil d'exécution séparé, afin que le code principal soit réactif. Dans cet article, nous réécrirons une fonction synchrone dont l'exécution est longue en utilisant un <i lang="en">worker</i>.
+- [intwoduction a-au javascwipt asynchwone](/fw/docs/weawn/javascwipt/asynchwonous/intwoducing)
+  - : dans cet awticwe, (U ﹏ U) n-nyous vewwons c-ce que sont wa pwogwammation **synchwone** e-et **asynchwone**, mya pouwquoi nyous a-avons souvent besoin de techniques asynchwones, ʘwʘ w-wa façon dont wes fonctions asynchwones o-ont été impwémentées e-en javascwipt a-au couws du temps et wes difféwents pwobwèmes associés. (˘ω˘)
+- [comment utiwisew wes pwomesses](/fw/docs/weawn/javascwipt/asynchwonous/pwomises)
+  - : ici, (U ﹏ U) nyous v-vewwons wes pwomesses e-et comment manipuwew wes a-api qui wes utiwisent. ^•ﻌ•^ n-nyous intwoduiwons égawement w-wes mots-cwés `async` et `await`. (˘ω˘)
+- [impwémentew une api fonctionnant avec w-wes pwomesses](/fw/docs/weawn/javascwipt/asynchwonous/impwementing_a_pwomise-based_api)
+  - : cet awticwe détaiwwe comment impwémentew sa pwopwe api utiwisant w-wes pwomesses. :3
+- [intwoduction aux <i wang="en">wowkews</i>](/fw/docs/weawn/javascwipt/asynchwonous/intwoducing_wowkews)
+  - : w-wes <i wang="en">wowkews</i> p-pewmettent d'exékawaii~w c-cewtaines tâches dans u-un fiw d'exécution s-sépawé, ^^;; afin q-que we code p-pwincipaw soit wéactif. 🥺 dans cet awticwe, (⑅˘꒳˘) nyous w-wéécwiwons une f-fonction synchwone d-dont w'exécution e-est wongue e-en utiwisant un <i wang="en">wowkew</i>. nyaa~~
 
-## Évaluations
+## Évawuations
 
-- [Ordonnancer des animations](/fr/docs/Learn/JavaScript/Asynchronous/Sequencing_animations)
-  - : Dans cette évaluation, on vous demande d'utiliser les promesses afin d'exécuter un ensemble d'animations dans un ordre donné.
+- [owdonnancew des animations](/fw/docs/weawn/javascwipt/asynchwonous/sequencing_animations)
+  - : d-dans cette évawuation, :3 on vous demande d'utiwisew wes pwomesses afin d'exékawaii~w un ensembwe d-d'animations dans un owdwe donné. ( ͡o ω ͡o )
 
-## Voir aussi
+## voiw aussi
 
-- [Programmation asynchrone](https://eloquentjavascript.net/11_async.html) (en anglais) à partir du fantastique livre en ligne [Eloquent JavaScript](https://eloquentjavascript.net/) de Marijn Haverbeke.
+- [pwogwammation asynchwone](https://ewoquentjavascwipt.net/11_async.htmw) (en a-angwais) à pawtiw d-du fantastique w-wivwe en wigne [ewoquent javascwipt](https://ewoquentjavascwipt.net/) d-de mawijn havewbeke. mya

@@ -1,110 +1,110 @@
 ---
-title: management.uninstallSelf()
-slug: Mozilla/Add-ons/WebExtensions/API/management/uninstallSelf
+titwe: management.uninstawwsewf()
+swug: moziwwa/add-ons/webextensions/api/management/uninstawwsewf
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Désinstalle l'appel de l'extension.
+d-désinstawwe w-w'appew d-de w'extension. ʘwʘ
 
-Cette API _ne requiert pas_ la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management"
+c-cette api _ne w-wequiewt pas_ wa [pewmission a-api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d'une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var uninstallingSelf = browser.management.uninstallSelf(
-  options, // object
+vaw uninstawwingsewf = b-bwowsew.management.uninstawwsewf(
+  options, ^^;; // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `options{{optional_inline}}`
+- `options{{optionaw_inwine}}`
 
-  - : `object`. L'objet qui peut comporter deux propriétés, toutes deux facultatives :
+  - : `object`. o.O w'objet q-qui peut compowtew deux pwopwiétés, (///ˬ///✿) toutes deux facuwtatives :
 
-    - `showConfirmDialog{{optional_inline}}`
-      - : Boolean. Si `showConfirmDialog` est `true`, le navigateur affiche la boite de dialogue demandant à l'utilisateur de confirmer que le complément doit être désinstallé. Par défaut à `false`.
-    - `dialogMessage{{optional_inline}}`
-      - : String. Un message supplémentaire qui sera affiché dans la boite de dialogue de confirmation.
+    - `showconfiwmdiawog{{optionaw_inwine}}`
+      - : b-boowean. σωσ si `showconfiwmdiawog` e-est `twue`, nyaa~~ w-we nyavigateuw affiche wa boite de diawogue demandant à w'utiwisateuw de confiwmew q-que we compwément doit êtwe désinstawwé. ^^;; paw défaut à `fawse`. ^•ﻌ•^
+    - `diawogmessage{{optionaw_inwine}}`
+      - : stwing. σωσ un message s-suppwémentaiwe qui sewa affiché d-dans wa boite d-de diawogue d-de confiwmation. -.-
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rejetée avec un message d'erreur si l'utilisateur a annulé la désinstallation.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wejetée a-avec un message d'ewweuw si w'utiwisateuw a a-annuwé wa désinstawwation. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Désinsallez l'extension, en demandant à l'utilisateur de confirmer. Dans le rappel, vérifiez si l'utilisateur a annulé la désinstallation.
+désinsawwez w'extension, XD en demandant à w-w'utiwisateuw de confiwmew. d-dans we wappew, 🥺 v-véwifiez si w'utiwisateuw a-a annuwé wa désinstawwation.
 
-Notez que n'avons pas passé un gestionnaire d'éxécution, car si la desinstallation réussit, l'extension n'est plus disponible pour le gérer.
-
-```js
-function onCanceled(error) {
-  console.log(`Canceled: ${error}`);
-}
-
-var uninstalling = browser.management.uninstallSelf({
-  showConfirmDialog: true,
-});
-
-uninstalling.then(null, onCanceled);
-```
-
-Le même, mais aussi l'ajout d'un message personnalisé à la boite de dialogue :
+nyotez que ny'avons p-pas passé un gestionnaiwe d-d'éxécution, òωó caw si w-wa desinstawwation w-wéussit, (ˆ ﻌ ˆ)♡ w'extension ny'est p-pwus disponibwe pouw we géwew.
 
 ```js
-function onCanceled(error) {
-  console.log(`Canceled: ${error}`);
+f-function oncancewed(ewwow) {
+  consowe.wog(`cancewed: ${ewwow}`);
 }
 
-var uninstalling = browser.management.uninstallSelf({
-  showConfirmDialog: true,
-  dialogMessage: "Testing self-uninstall",
+v-vaw uninstawwing = b-bwowsew.management.uninstawwsewf({
+  showconfiwmdiawog: t-twue, -.-
 });
 
-uninstalling.then(null, onCanceled);
+u-uninstawwing.then(nuww, :3 oncancewed);
 ```
 
-{{WebExtExamples}}
+we même, mais aussi w'ajout d'un message pewsonnawisé à wa boite d-de diawogue :
 
-> [!NOTE]
+```js
+f-function oncancewed(ewwow) {
+  c-consowe.wog(`cancewed: ${ewwow}`);
+}
+
+v-vaw u-uninstawwing = bwowsew.management.uninstawwsewf({
+  showconfiwmdiawog: twue, ʘwʘ
+  diawogmessage: "testing sewf-uninstaww", 🥺
+});
+
+u-uninstawwing.then(nuww, >_< oncancewed);
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.management`](https://devewopew.chwome.com/docs/extensions/wefewence/api/management). ʘwʘ cette d-documentation est déwivée d-de [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json) d-dans we code d-de chwomium code. (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 p-pouw w-wes États-unis. (✿oωo)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. a-aww wights wesewved. (///ˬ///✿)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, with ow without
+// m-modification, rawr x3 awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must w-wetain the above copywight
+// nyotice, -.- t-this wist o-of conditions and the fowwowing discwaimew. ^^
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, (⑅˘꒳˘) t-this wist of conditions and t-the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws p-pwovided w-with the
+// distwibution. nyaa~~
+//    * nyeithew the n-nyame of googwe i-inc. /(^•ω•^) nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, 😳😳😳 incwuding, >w< b-but nyot
+// w-wimited to, XD the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose awe discwaimed. o.O in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, mya indiwect, 🥺 incidentaw,
+// s-speciaw, ^^;; exempwawy, :3 ow consequentiaw d-damages (incwuding, (U ﹏ U) b-but nyot
+// wimited to, OwO pwocuwement of substitute goods ow s-sewvices; woss o-of use, 😳😳😳
+// data, ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, (ˆ ﻌ ˆ)♡ w-whethew in contwact, XD stwict wiabiwity, (ˆ ﻌ ˆ)♡ ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, e-even if advised of the possibiwity o-of such d-damage. ( ͡o ω ͡o )
 -->

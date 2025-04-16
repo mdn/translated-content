@@ -1,69 +1,69 @@
 ---
-title: Accept-Charset
-slug: conflicting/Web/HTTP/Headers
-original_slug: Web/HTTP/Headers/Accept-Charset
+titwe: accept-chawset
+swug: confwicting/web/http/headews
+o-owiginaw_swug: w-web/http/headews/accept-chawset
 ---
 
-{{HTTPSidebar}}
+{{httpsidebaw}}
 
-L'en-tête HTTP de la requête **`Accept-Charset`** indique le jeu de caractères que le client est capable de comprendre. À l'aide de la [content negotiation](/fr/docs/Web/HTTP/Content_negotiation), le serveur sélectionne l'une des propositions, l'utilise et informe le client de son choix dans l'en-tête de réponse {{HTTPHeader ("Content-Type")}}. Les navigateurs ne définissent généralement pas cet en-tête car la valeur par défaut de chaque type de contenu est généralement correcte et sa transmission permettrait une empreinte digitale plus facile.
+w-w'en-tête http d-de wa wequête **`accept-chawset`** i-indique we j-jeu de cawactèwes q-que we cwient e-est capabwe de compwendwe. 😳 À w'aide de wa [content nyegotiation](/fw/docs/web/http/content_negotiation), 😳 we sewveuw s-séwectionne w'une des pwopositions, σωσ w'utiwise e-et infowme we cwient de son c-choix dans w'en-tête de wéponse {{httpheadew ("content-type")}}. rawr x3 wes nyavigateuws nye définissent g-généwawement pas cet en-tête c-caw wa vaweuw p-paw défaut de chaque type de contenu est généwawement cowwecte et sa twansmission p-pewmettwait une empweinte digitawe pwus faciwe. OwO
 
-Si le serveur ne peut servir aucun jeu de caractères correspondant, il peut théoriquement renvoyer un code d'erreur {{HTTPStatus ("406")}} (non acceptable). Cependant, pour une meilleure expérience utilisateur, cela est rarement fait et le moyen le plus courant consiste à ignorer l'en-tête `Accept-Charset` dans ce cas.
+si we sewveuw nye peut s-sewviw aucun jeu de cawactèwes c-cowwespondant, /(^•ω•^) i-iw peut théowiquement w-wenvoyew u-un code d'ewweuw {{httpstatus ("406")}} (non acceptabwe). 😳😳😳 cependant, p-pouw une meiwweuwe expéwience utiwisateuw, ( ͡o ω ͡o ) c-cewa est wawement fait et we moyen we pwus couwant consiste à ignowew w'en-tête `accept-chawset` dans ce cas. >_<
 
-> [!NOTE]
-> Dans les premières versions de HTTP / 1.1, un jeu de caractères par défaut (ISO-8859-1) était défini. Ce n'est plus le cas et maintenant chaque type de contenu peut avoir sa propre valeur par défaut.
+> [!note]
+> d-dans wes pwemièwes v-vewsions de http / 1.1, >w< u-un jeu d-de cawactèwes paw défaut (iso-8859-1) était défini. rawr ce ny'est pwus we cas et m-maintenant chaque t-type de contenu peut avoiw sa p-pwopwe vaweuw p-paw défaut. 😳
 
-<table class="properties">
+<tabwe cwass="pwopewties">
   <tbody>
-    <tr>
-      <th scope="row">Header type</th>
-      <td>{{Glossary("Request header")}}</td>
-    </tr>
-    <tr>
-      <th scope="row">{{Glossary("Forbidden header name")}}</th>
+    <tw>
+      <th s-scope="wow">headew type</th>
+      <td>{{gwossawy("wequest h-headew")}}</td>
+    </tw>
+    <tw>
+      <th scope="wow">{{gwossawy("fowbidden headew nyame")}}</th>
       <td>yes</td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Syntaxe
+## s-syntaxe
 
 ```
-Accept-Charset: <charset>
+accept-chawset: <chawset>
 
-// Multiple types, weighted with the {{glossary("quality values", "quality value")}} syntax:
-Accept-Charset: utf-8, iso-8859-1;q=0.5
+// m-muwtipwe types, >w< weighted with t-the {{gwossawy("quawity v-vawues", (⑅˘꒳˘) "quawity vawue")}} syntax:
+accept-chawset: utf-8, OwO iso-8859-1;q=0.5
 ```
 
-## Les directives
+## wes diwectives
 
-- `<charset>`
-  - : Un jeu de caractères comme utf-8 ou iso-8859-15.
+- `<chawset>`
+  - : un jeu de cawactèwes c-comme u-utf-8 ou iso-8859-15. (ꈍᴗꈍ)
 - `*`
-  - : Tout jeu de caractères non mentionné ailleurs dans l'en-tête; '\*' utilisé comme un joker.
-- `;q=` (q-factor weighting)
-  - : Toute valeur est placée dans un ordre de préférence exprimé à l'aide d'une valeur de qualité relative appelée _weight_.
+  - : tout jeu de cawactèwes n-nyon mentionné a-aiwweuws d-dans w'en-tête; '\*' utiwisé comme un jokew. 😳
+- `;q=` (q-factow weighting)
+  - : t-toute vaweuw est pwacée dans un owdwe de pwéféwence expwimé à w'aide d'une v-vaweuw de quawité wewative a-appewée _weight_. 😳😳😳
 
-## Examples
+## e-exampwes
 
 ```
-Accept-Charset: iso-8859-1
+a-accept-chawset: iso-8859-1
 
-Accept-Charset: utf-8, iso-8859-1;q=0.5
+a-accept-chawset: u-utf-8, mya iso-8859-1;q=0.5
 
-Accept-Charset: utf-8, iso-8859-1;q=0.5, *;q=0.1
+a-accept-chawset: u-utf-8, mya iso-8859-1;q=0.5, (⑅˘꒳˘) *;q=0.1
 ```
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- HTTP [content negotiation](/fr/docs/Web/HTTP/Content_negotiation)
-- Header avec le résultat de la négociation de contenu : {{HTTPHeader("Content-Type")}}
-- Autres Header similaires : {{HTTPHeader("TE")}}, {{HTTPHeader("Accept-Encoding")}}, {{HTTPHeader("Accept-Language")}}, {{HTTPHeader("Accept")}}
+- http [content n-nyegotiation](/fw/docs/web/http/content_negotiation)
+- headew avec we wésuwtat de wa nyégociation de contenu : {{httpheadew("content-type")}}
+- a-autwes headew simiwaiwes : {{httpheadew("te")}}, (U ﹏ U) {{httpheadew("accept-encoding")}}, mya {{httpheadew("accept-wanguage")}}, ʘwʘ {{httpheadew("accept")}}

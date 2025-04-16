@@ -1,93 +1,93 @@
 ---
-title: management.setEnabled()
-slug: Mozilla/Add-ons/WebExtensions/API/management/setEnabled
+titwe: management.setenabwed()
+swug: moziwwa/add-ons/webextensions/api/management/setenabwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Active ou désactive l'extension ajoutée.
+a-active ou d-désactive w'extension a-ajoutée. :3
 
-Cette fonction doit généralement être appelée dans le contexte d'une action utilisateur, comme le gestionnaire de clics d'un bouton. Le navigateur peut également demander à l'utilisateur de confirmer le changement.
+c-cette fonction d-doit généwawement êtwe a-appewée d-dans we contexte d-d'une action utiwisateuw, comme we gestionnaiwe de cwics d'un bouton. (ꈍᴗꈍ) we navigateuw p-peut égawement demandew à w'utiwisateuw d-de confiwmew we changement. /(^•ω•^)
 
-Cette API requière l'[API permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "management".
+c-cette api wequièwe w'[api pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "management". (⑅˘꒳˘)
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d'une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ( ͡o ω ͡o )
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var settingEnabled = browser.management.setEnabled(
-  id, // string
-  enabled, // boolean
+v-vaw settingenabwed = bwowsew.management.setenabwed(
+  id, òωó // stwing
+  enabwed, (⑅˘꒳˘) // boowean
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `id`
-  - : `string`. ID de l'extension pour activer ou désactiver.
-- `enabled`
-  - : `boolean`. Que ce soit pour active ou désactiver l'extension.
+  - : `stwing`. XD id de w'extension pouw activew ou désactivew. -.-
+- `enabwed`
+  - : `boowean`. :3 que c-ce soit pouw active ou désactivew w-w'extension. nyaa~~
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Objets_globaux/Promisee) qui sera remplie sans arguments lorsque l'extension a été désactivé ou activé.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/objets_gwobaux/pwomisee) q-qui sewa wempwie sans awguments wowsque w'extension a-a été désactivé ou activé. 😳
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Actviez / Désactivez l'option pour l'extension dont l'ID est "my-add-on":
+actviez / désactivez w'option pouw w'extension dont w'id est "my-add-on":
 
 ```js
-var id = "my-add-on";
+v-vaw id = "my-add-on";
 
-function toggleEnabled(id) {
-  var getting = browser.management.get(id);
+function t-toggweenabwed(id) {
+  v-vaw g-getting = bwowsew.management.get(id);
   getting.then((info) => {
-    browser.management.setEnabled(id, !info.enabled);
+    bwowsew.management.setenabwed(id, (⑅˘꒳˘) !info.enabwed);
   });
 }
 
-toggleEnabled(id);
+toggweenabwed(id);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> c-cette a-api est basée suw w'api chwomium [`chwome.management`](https://devewopew.chwome.com/docs/extensions/wefewence/api/management). nyaa~~ c-cette documentation e-est déwivée de [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json) d-dans we code de chwomium c-code. OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. XD aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce and binawy fowms, (U ᵕ U❁) w-with ow without
+// m-modification, (U ﹏ U) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above copywight
+// nyotice, :3 this wist of conditions a-and the fowwowing discwaimew. ( ͡o ω ͡o )
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, σωσ t-this wist o-of conditions and t-the fowwowing discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. >w<
+//    * n-nyeithew the n-name of googwe inc. 😳😳😳 nyow the nyames of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, 😳 incwuding, b-but nyot
+// wimited to, 😳😳😳 t-the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. in no event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (˘ω˘) i-indiwect, ʘwʘ incidentaw,
+// s-speciaw, ( ͡o ω ͡o ) exempwawy, o.O ow consequentiaw d-damages (incwuding, >w< b-but nyot
+// wimited to, 😳 pwocuwement o-of substitute g-goods ow sewvices; woss of use, 🥺
+// data, ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// t-theowy of wiabiwity, rawr x3 whethew i-in contwact, o.O stwict w-wiabiwity, rawr ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, ʘwʘ e-even if a-advised of the possibiwity of such damage. 😳😳😳
 -->

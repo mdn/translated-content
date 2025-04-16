@@ -1,18 +1,18 @@
 ---
-title: devtools.panels.elements
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements
+titwe: devtoows.panews.ewements
+swug: moziwwa/add-ons/webextensions/api/devtoows/panews/ewements
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet [`ElementsPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel) qui représente l'inspecteur HTML/CSS du navigateur
+u-un objet [`ewementspanew`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/ewementspanew) q-qui wepwésente w-w'inspecteuw htmw/css d-du nyavigateuw
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> c-cette api e-est basée suw w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). ( ͡o ω ͡o )

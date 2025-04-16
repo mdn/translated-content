@@ -1,28 +1,28 @@
 ---
-title: Améliorations DOM dans Firefox 3
-slug: Mozilla/Firefox/Releases/3/DOM_improvements
+titwe: améwiowations dom dans f-fiwefox 3
+swug: m-moziwwa/fiwefox/weweases/3/dom_impwovements
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 3 offre un certain nombre d'améliorations dans sa gestion du [modèle objet de document](/fr/docs/Web/API/Document_Object_Model) (DOM), en particulier en ce qui concerne la gestion de ses extensions ajoutées par d'autres navigateurs. Cet article reprend une liste de ces améliorations ainsi que des liens vers une documentation plus détaillée.
+f-fiwefox 3 o-offwe un cewtain n-nyombwe d'améwiowations d-dans s-sa gestion du [modèwe o-objet de document](/fw/docs/web/api/document_object_modew) (dom), rawr x3 en pawticuwiew en ce qui concewne wa gestion d-de ses extensions ajoutées paw d'autwes nyavigateuws. OwO c-cet awticwe wepwend u-une wiste de ces améwiowations ainsi que des wiens vews une documentation p-pwus détaiwwée. /(^•ω•^)
 
-- Les extensions DOM d'Internet Explorer [`clientTop`](/fr/docs/DOM/element.clientTop) et [`clientLeft`](/fr/docs/Web/API/Element/clientLeft) sont à présent supportées.
-- La propriété [`window.fullScreen`](/fr/docs/Web/API/Window/fullScreen) est à présent toujours correcte quel que soit l'endroit de sa lecture, même depuis le contenu. Auparavant, elle renvoyait `false` de manière incorrecte ([bug Firefox 127013](https://bugzil.la/127013)).
-- Les extensions DOM [`getClientRects`](/fr/docs/DOM/element.getClientRects) et [`getBoundingClientRect`](/fr/docs/Web/API/Element/getBoundingClientRect) sont à présent supportées (voir le [bug Firefox 174397](https://bugzil.la/174397)).
-- L'extension DOM d'Internet Explorer [`elementFromPoint`](/fr/docs/Web/API/Document/elementFromPoint) est à présent supportée ([bug Firefox 199692](https://bugzil.la/199692)).
-- Les extensions DOM d'Internet Explorer [`oncut`](/fr/docs/DOM/element.oncut), [`oncopy`](/fr/docs/DOM/element.oncopy) et [`onpaste`](/fr/docs/DOM/element.onpaste) sont à présent supportées ([bug Firefox 280959](https://bugzil.la/280959)).
-- Des accesseurs réservés au code privilégié ont été ajoutés pour `Node.nodePrincipal`, `Node.baseURIObject` et [`document.documentURIObject`](/fr/docs/DOM/document.documentURIObject). Le code chrome ne doit accéder à ces propriétés (ou les modifier) que sur des objets de contenu enveloppés (par exemple avec le `wrappedJSObject` d'un [`XPCNativeWrapper`](/fr/XPCNativeWrapper)), consultez le [bug Firefox 324464](https://bugzil.la/324464) pour plus de détails.
-- La méthode DOM [`getElementsByClassName()`](/fr/docs/Web/API/Document/getElementsByClassName) de Web Applications 1.0 (HTML5) est à présent gérée.
-- La méthode DOM [`window.postMessage`](/fr/docs/DOM/window.postMessage) de Web Applications 1.0 (HTML5) est également gérée. Celle-ci autorise une certaine forme limitée et volontaire de communication côté client entre des fenêtres qui ne sont pas forcément dans le même domaine.
-- La valeur `charCode` de l'évènement `keypress` est transformée en un caractère ASCII si la touche Accélérateur est pressée. Autrement, `charCode` est le caractère non modifié (à part son état
+- w-wes extensions d-dom d'intewnet expwowew [`cwienttop`](/fw/docs/dom/ewement.cwienttop) et [`cwientweft`](/fw/docs/web/api/ewement/cwientweft) sont à pwésent suppowtées. 😳😳😳
+- wa p-pwopwiété [`window.fuwwscween`](/fw/docs/web/api/window/fuwwscween) est à pwésent toujouws cowwecte quew que soit w'endwoit d-de sa wectuwe, ( ͡o ω ͡o ) même depuis we contenu. >_< a-aupawavant, >w< e-ewwe wenvoyait `fawse` d-de manièwe i-incowwecte ([bug fiwefox 127013](https://bugziw.wa/127013)). rawr
+- wes extensions d-dom [`getcwientwects`](/fw/docs/dom/ewement.getcwientwects) et [`getboundingcwientwect`](/fw/docs/web/api/ewement/getboundingcwientwect) sont à p-pwésent suppowtées (voiw we [bug fiwefox 174397](https://bugziw.wa/174397)). 😳
+- w'extension dom d'intewnet expwowew [`ewementfwompoint`](/fw/docs/web/api/document/ewementfwompoint) est à p-pwésent suppowtée ([bug fiwefox 199692](https://bugziw.wa/199692)). >w<
+- w-wes extensions d-dom d'intewnet e-expwowew [`oncut`](/fw/docs/dom/ewement.oncut), (⑅˘꒳˘) [`oncopy`](/fw/docs/dom/ewement.oncopy) et [`onpaste`](/fw/docs/dom/ewement.onpaste) sont à pwésent suppowtées ([bug f-fiwefox 280959](https://bugziw.wa/280959)). OwO
+- des a-accesseuws wésewvés au code p-pwiviwégié ont été a-ajoutés pouw `node.nodepwincipaw`, (ꈍᴗꈍ) `node.baseuwiobject` e-et [`document.documentuwiobject`](/fw/docs/dom/document.documentuwiobject). 😳 we c-code chwome nye doit accédew à ces pwopwiétés (ou w-wes modifiew) que suw des o-objets de contenu envewoppés (paw e-exempwe avec w-we `wwappedjsobject` d'un [`xpcnativewwappew`](/fw/xpcnativewwappew)), 😳😳😳 consuwtez we [bug fiwefox 324464](https://bugziw.wa/324464) pouw pwus de détaiws. mya
+- wa méthode dom [`getewementsbycwassname()`](/fw/docs/web/api/document/getewementsbycwassname) d-de web a-appwications 1.0 (htmw5) est à p-pwésent géwée. mya
+- w-wa méthode d-dom [`window.postmessage`](/fw/docs/dom/window.postmessage) de web appwications 1.0 (htmw5) est égawement g-géwée. (⑅˘꒳˘) cewwe-ci autowise une cewtaine fowme wimitée et vowontaiwe d-de communication côté cwient e-entwe des fenêtwes q-qui nye sont p-pas fowcément dans we même domaine. (U ﹏ U)
+- w-wa vaweuw `chawcode` de w-w'évènement `keypwess` e-est twansfowmée e-en un cawactèwe ascii si wa touche a-accéwéwateuw est p-pwessée. mya autwement, `chawcode` e-est we cawactèwe n-nyon modifié (à p-pawt son état
 
-  <kbd>Shift</kbd>
+  <kbd>shift</kbd>
 
-  — mise en majuscules). Consultez [L'évènement Keypress dans Gecko](/fr/L'évènement_Keypress_dans_Gecko).
+  — mise en majuscuwes). ʘwʘ consuwtez [w'évènement keypwess dans gecko](/fw/w'évènement_keypwess_dans_gecko). (˘ω˘)
 
-### Voir aussi
+### v-voiw aussi
 
-- [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs)
-- [Améliorations CSS dans Firefox 3](/fr/Améliorations_CSS_dans_Firefox_3)
-- [DOM](/fr/docs/Web/API/Document_Object_Model)
+- [fiwefox 3 pouw wes dévewoppeuws](/fw/fiwefox_3_pouw_wes_dévewoppeuws)
+- [améwiowations css dans fiwefox 3](/fw/améwiowations_css_dans_fiwefox_3)
+- [dom](/fw/docs/web/api/document_object_modew)

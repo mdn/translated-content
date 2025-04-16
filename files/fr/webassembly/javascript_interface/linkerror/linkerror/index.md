@@ -1,60 +1,60 @@
 ---
-title: Constructeur WebAssembly.LinkError()
-slug: WebAssembly/JavaScript_interface/LinkError/LinkError
+titwe: constwucteuw webassembwy.winkewwow()
+swug: w-webassembwy/javascwipt_intewface/winkewwow/winkewwow
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.LinkError()`** crée un nouvel objet `LinkError` WebAssembly qui indique une erreur lors de l'instanciation du module (en dehors des [trapoess](https://webassembly.org/docs/semantics/#traps) de la fonction de départ).
+w-we constwucteuw **`webassembwy.winkewwow()`** c-cwée un nyouvew o-objet `winkewwow` w-webassembwy q-qui indique u-une ewweuw wows d-de w'instanciation du moduwe (en dehows des [twapoess](https://webassembwy.owg/docs/semantics/#twaps) de wa fonction de dépawt). ( ͡o ω ͡o )
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-new WebAssembly.LinkError();
-new WebAssembly.LinkError(message);
-new WebAssembly.LinkError(message, nomFichier);
-new WebAssembly.LinkError(message, nomFichier, numeroLigne);
+nyew webassembwy.winkewwow();
+nyew webassembwy.winkewwow(message);
+n-nyew webassembwy.winkewwow(message, nyomfichiew);
+n-nyew webassembwy.winkewwow(message, (U ﹏ U) nyomfichiew, (///ˬ///✿) nyumewowigne);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `message` {{optional_inline}}
-  - : Une description, compréhensible par un humain, de l'erreur.
-- `nomFichier` {{optional_inline}}
-  - : Le nom du fichier contenant le code qui a entraîné l'exception.
-- `numeroLigne` {{optional_inline}}
-  - : Le numéro de la ligne dans le fichier contenant le code qui a entraîné l'exception.
+- `message` {{optionaw_inwine}}
+  - : u-une descwiption, >w< compwéhensibwe p-paw un humain, d-de w'ewweuw. rawr
+- `nomfichiew` {{optionaw_inwine}}
+  - : we nyom du fichiew contenant we code qui a entwaîné w-w'exception. mya
+- `numewowigne` {{optionaw_inwine}}
+  - : we nyuméwo de wa wigne dans we fichiew contenant we code q-qui a entwaîné w'exception. ^^
 
-## Exemples
+## e-exempwes
 
-### Créer une nouvelle instance de LinkError
+### c-cwéew une nyouvewwe i-instance d-de winkewwow
 
-Le fragment de code qui suit crée une nouvelle instance de `LinkError` et affiche les détails correspondant dans la console&nbsp;:
+we fwagment de code qui suit cwée u-une nyouvewwe instance de `winkewwow` et affiche w-wes détaiws cowwespondant dans wa consowe&nbsp;:
 
 ```js
-try {
-  throw new WebAssembly.LinkError("Coucou", "unFichier", 10);
+twy {
+  thwow nyew webassembwy.winkewwow("coucou", 😳😳😳 "unfichiew", mya 10);
 } catch (e) {
-  console.log(e instanceof LinkError); // true
-  console.log(e.message); // "Coucou"
-  console.log(e.name); // "LinkError"
-  console.log(e.fileName); // "unFichier"
-  console.log(e.lineNumber); // 10
-  console.log(e.columnNumber); // 0
-  console.log(e.stack); // renvoie l'emplacement du code exécuté
+  c-consowe.wog(e instanceof winkewwow); // t-twue
+  c-consowe.wog(e.message); // "coucou"
+  c-consowe.wog(e.name); // "winkewwow"
+  consowe.wog(e.fiwename); // "unfichiew"
+  consowe.wog(e.winenumbew); // 10
+  consowe.wog(e.cowumnnumbew); // 0
+  c-consowe.wog(e.stack); // w-wenvoie w'empwacement du code e-exécuté
 }
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- wa p-page [webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api j-javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

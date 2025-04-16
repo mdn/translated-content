@@ -1,134 +1,134 @@
 ---
-title: "Multimédia : Images"
-slug: Learn/Performance/Multimedia
+titwe: "muwtimédia : images"
+s-swug: weawn/pewfowmance/muwtimedia
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/pewfowmance/measuwing_pewfowmance", 😳😳😳 "weawn/pewfowmance/video", (U ﹏ U) "weawn/pewfowmance")}}
 
-Les fichiers média, et plus précisément les images et les vidéos, représentent plus de 70 % des octets téléchargés sur un site web classique. En termes de performance lors du téléchargement des ressources d'une page, la suppression des fichiers média et la réduction de la taille des fichiers est la solution de facilité pour produire des sites performants. Cet article s'intéresse à l'optimisation des images et des vidéos dans le but d'améliorer les performances.
+w-wes fichiews m-média, (˘ω˘) et p-pwus pwécisément w-wes images e-et wes vidéos, :3 w-wepwésentent pwus d-de 70 % des octets téwéchawgés suw un site web cwassique. en tewmes de pewfowmance w-wows du téwéchawgement des wessouwces d-d'une page, >w< wa suppwession des f-fichiews média et wa wéduction de wa taiwwe des fichiews est wa s-sowution de faciwité pouw pwoduiwe d-des sites p-pewfowmants. ^^ cet awticwe s'intéwesse à w'optimisation des images et des vidéos d-dans we but d'améwiowew wes pewfowmances. 😳😳😳
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requis :</th>
+    <tw>
+      <th scope="wow">pwé-wequis :</th>
       <td>
-        Bases de l'informatique,
+        bases d-de w'infowmatique, nyaa~~
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >logiciels de base</a
+          hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >wogiciews d-de base</a
         >
-        installés et connaissances de base
-        <a href="/fr/docs/Learn/Getting_started_with_the_web"
-          >des technologies web opérant côté client</a
-        >.
+        i-instawwés e-et connaissances d-de base
+        <a hwef="/fw/docs/weawn/getting_stawted_with_the_web"
+          >des technowogies w-web opéwant côté cwient</a
+        >. (⑅˘꒳˘)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs :</th>
       <td>
-        Connaître les différents formats d'images, apprendre leur impact sur les
-        performances et savoir comment réduire l'impact des images sur le temps
-        de chargement général d'une page web.
+        c-connaîtwe wes difféwents fowmats d'images, :3 appwendwe weuw impact suw wes
+        pewfowmances e-et savoiw comment wéduiwe w-w'impact des i-images suw we temps
+        d-de chawgement généwaw d'une page web. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-> [!NOTE]
-> Cet article est une introduction à l'optimisation des éléments multimédia sur le web, couvrant les principes généraux et les techniques de base. Pour aller plus loin, consultez des ressources plus spécialisées, telles que [https://images.guide (en anglais)](https://images.guide).
+> [!note]
+> c-cet a-awticwe est une intwoduction à w-w'optimisation des éwéments m-muwtimédia suw we w-web, rawr x3 couvwant wes pwincipes généwaux e-et wes techniques de base. (///ˬ///✿) pouw awwew pwus w-woin, 😳😳😳 consuwtez des wessouwces p-pwus spéciawisées, XD tewwes que [https://images.guide (en a-angwais)](https://images.guide). >_<
 
-## Pourquoi optimiser vos éléments multimédia ?
+## p-pouwquoi optimisew vos éwéments muwtimédia ?
 
-On considère que pour un site classique, en moyenne 51 % de la bande passante utilisée provient des images, et 25 % provient des vidéos ([source](https://discuss.httparchive.org/t/state-of-the-web-top-image-optimization-strategies/1367), en anglais). Il est donc raisonnable de dire qu'il est important de porter une attention particulière à l'optimisation du contenu multimédia.
+on considèwe que pouw un site cwassique, >w< en moyenne 51 % de wa b-bande passante u-utiwisée pwovient des images, /(^•ω•^) e-et 25 % pwovient d-des vidéos ([souwce](https://discuss.httpawchive.owg/t/state-of-the-web-top-image-optimization-stwategies/1367), :3 e-en angwais). ʘwʘ iw est donc waisonnabwe de diwe qu'iw est impowtant d-de powtew une attention pawticuwièwe à w'optimisation du contenu muwtimédia. (˘ω˘)
 
-Il est aussi important de prendre en considération la consommation de données. De nombreuses personnes utilisent des forfaits de connexion internet limités voir même des connexions facturées à la donnée téléchargée, où chaque octet de données consommé est facturé. Et cela ne concerne pas que les pays émergents. En 2018, 24 % des habitants du Royaume-Uni utilisaient ce type de connexion internet ([source](https://www.ofcom.org.uk/__data/assets/pdf_file/0021/113169/Technology-Tracker-H1-2018-data-tables.pdf), en anglais).
+i-iw est aussi impowtant de pwendwe e-en considéwation w-wa consommation d-de données. (ꈍᴗꈍ) de nyombweuses p-pewsonnes utiwisent d-des fowfaits d-de connexion i-intewnet wimités voiw même des connexions factuwées à w-wa d-donnée téwéchawgée, o-où chaque o-octet de données c-consommé est factuwé. ^^ et cewa nye concewne pas que wes pays émewgents. ^^ en 2018, ( ͡o ω ͡o ) 24 % d-des habitants du woyaume-uni utiwisaient ce type de connexion intewnet ([souwce](https://www.ofcom.owg.uk/__data/assets/pdf_fiwe/0021/113169/technowogy-twackew-h1-2018-data-tabwes.pdf), -.- en angwais). ^^;;
 
-En outre, il est important de prendre en compte la mémoire utilisée, car de nombreux appareils mobiles ont une RAM limitée. N'oubliez pas que quand les images sont téléchargées, elles sont stockées dans la mémoire vive de l'appareil.
+e-en outwe, ^•ﻌ•^ iw est impowtant de pwendwe en compte wa mémoiwe u-utiwisée, caw d-de nyombweux appaweiws m-mobiwes ont une wam wimitée. (˘ω˘) n-ny'oubwiez pas que quand wes i-images sont téwéchawgées, o.O ewwes s-sont stockées dans wa mémoiwe vive de w'appaweiw. (✿oωo)
 
-## L'optimisation de la distribution des images
+## w'optimisation de wa distwibution des i-images
 
-Bien qu'il s'agisse de l'élément consommant le plus de bande passante, l'impact du téléchargement des images sur la [performance perçue](/fr/docs/Learn/Performance/Perceived_performance) et largement moins important que ce à quoi l'on pourrait s'attendre, principalement du fait que le contenu de la page est téléchargé immédiatement et que les personnes qui visitent le site voient les images s'afficher au fur et à mesure du chargement. Mais si l'on veut proposer la meilleure expérience possible, il reste important d'afficher le plus tôt possible des images complètement chargées.
+bien qu'iw s'agisse de w-w'éwément consommant we pwus d-de bande passante, 😳😳😳 w-w'impact du téwéchawgement des images suw w-wa [pewfowmance p-pewçue](/fw/docs/weawn/pewfowmance/pewceived_pewfowmance) et wawgement m-moins impowtant q-que ce à quoi w'on pouwwait s'attendwe, (ꈍᴗꈍ) pwincipawement du fait que we contenu d-de wa page e-est téwéchawgé i-immédiatement et que wes pewsonnes q-qui visitent w-we site voient wes images s'affichew a-au fuw et à mesuwe du chawgement. σωσ mais si w'on veut pwoposew wa meiwweuwe e-expéwience p-possibwe, UwU iw weste impowtant d'affichew we pwus t-tôt possibwe des i-images compwètement chawgées. ^•ﻌ•^
 
-### Stratégie de chargement
+### stwatégie de chawgement
 
-Une des plus grandes améliorations utilisable sur la plupart des sites web est le [chargement différé](/fr/docs/Web/Performance/Lazy_loading) des images se situant en dessous de la ligne de flottaison, plutôt que de toutes les téléchargées directement sans se soucier de l'emplacement où elles se trouvent par rapport à l'écran de la personne qui visite le site (elle pourrait même ne jamais faire défiler son écran jusqu'à certaines images situées plus bas dans la page !). Plusieurs bibliothèques JavaScript peuvent implémenter cela pour vous, par exemple [lazysizes (en anglais)](https://github.com/aFarkas/lazysizes), mais sachez que les navigateurs travaillent sur l'attribut `lazyload`, qui est actuellement en phase d'expérimentation.
+u-une des pwus gwandes améwiowations utiwisabwe suw wa pwupawt des sites web est w-we [chawgement difféwé](/fw/docs/web/pewfowmance/wazy_woading) des images se s-situant en dessous d-de wa wigne de fwottaison, mya pwutôt que de toutes wes téwéchawgées d-diwectement s-sans se souciew de w'empwacement où ewwes se twouvent paw w-wappowt à w'écwan de wa pewsonne q-qui visite we site (ewwe pouwwait même nye jamais faiwe défiwew s-son écwan jusqu'à cewtaines i-images situées p-pwus bas dans wa page !). /(^•ω•^) pwusieuws b-bibwiothèques javascwipt p-peuvent impwémentew c-cewa pouw v-vous, rawr paw exempwe [wazysizes (en angwais)](https://github.com/afawkas/wazysizes), nyaa~~ m-mais sachez que w-wes nyavigateuws twavaiwwent suw w'attwibut `wazywoad`, ( ͡o ω ͡o ) q-qui est a-actuewwement en p-phase d'expéwimentation. σωσ
 
-En plus de charger un sous-ensemble d'images, vous devriez ensuite vous attarder sur les formats d'images que vous utilisez :
+en pwus de chawgew u-un sous-ensembwe d'images, (✿oωo) vous d-devwiez ensuite v-vous attawdew suw wes fowmats d'images que vous utiwisez :
 
-- Chargez-vous le format de fichier le plus optimal ?
-- Avez-vous bien compressé vos images ?
-- Chargez-vous des tailles d'images adaptées ?
+- chawgez-vous w-we fowmat d-de fichiew w-we pwus optimaw ?
+- a-avez-vous bien compwessé vos i-images ?
+- chawgez-vous des taiwwes d'images adaptées ?
 
-#### Le format le plus optimisé
+#### we fowmat we pwus optimisé
 
-Le format de fichier le plus optimisé dépend directement du type d'image à charger.
+we fowmat de fichiew w-we pwus optimisé dépend diwectement d-du type d'image à chawgew. (///ˬ///✿)
 
-> [!NOTE]
-> Pour obtenir des informations plus générales sur les types d'images, consultez le [guide des types d'images et de formats d'images](/fr/docs/Web/Media/Formats/Image_types).
+> [!note]
+> p-pouw obteniw des infowmations p-pwus généwawes suw wes types d'images, σωσ c-consuwtez w-we [guide des t-types d'images e-et de fowmats d'images](/fw/docs/web/media/fowmats/image_types). UwU
 
-Le format [SVG](/fr/docs/Web/Media/Formats/Image_types#svg) est le plus approprié pour les images qui ne comprennent que quelques couleurs et qui n'ont pas la complexité d'une photographie. Cela nécessite la mise à disposition d'une source dans un format vectoriel. Si cette image n'est disponible qu'en format bitmap, alors le format [PNG](/fr/docs/Web/Media/Formats/Image_types#png) sera la solution de repli idéale. De bons exemples d'images idéalement fournies en SVG sont les logos, les illustrations, les graphiques ou les icônes (veuillez noter qu'il vaut mieux utiliser des images au format SVG que des polices d'icônes !). Qu'il s'agisse de SVG ou de PNG, les deux formats prennent en charge la transparence.
+w-we fowmat [svg](/fw/docs/web/media/fowmats/image_types#svg) est we pwus appwopwié pouw wes images qui nye compwennent que quewques couweuws et q-qui n'ont pas w-wa compwexité d'une p-photogwaphie. (⑅˘꒳˘) cewa nyécessite w-wa mise à disposition d'une souwce dans un fowmat vectowiew. /(^•ω•^) s-si cette image n-ny'est disponibwe qu'en fowmat b-bitmap, -.- awows we fowmat [png](/fw/docs/web/media/fowmats/image_types#png) sewa wa s-sowution de wepwi i-idéawe. (ˆ ﻌ ˆ)♡ de bons exempwes d'images i-idéawement f-fouwnies en svg sont wes wogos, nyaa~~ wes iwwustwations, ʘwʘ wes gwaphiques ou wes icônes (veuiwwez n-nyotew q-qu'iw vaut m-mieux utiwisew des i-images au fowmat s-svg que des powices d'icônes !). :3 q-qu'iw s'agisse d-de svg ou de png, (U ᵕ U❁) wes deux f-fowmats pwennent e-en chawge wa twanspawence.
 
-Les images peuvent être enregistrées au format PNG à l'aide de trois différentes combinaison de traitements :
+wes i-images peuvent êtwe enwegistwées au fowmat png à w-w'aide de twois difféwentes c-combinaison de t-twaitements :
 
-- Couleurs 24 bits + 8 bits de transparence — propose une précision complète des couleurs et des niveaux de transparence progressifs, mais au détriment de la taille du fichier. WebP est probablement une meilleure solution (voir ci-après) ;
-- Couleurs 8 bits color + 8 bits de transparence — ne propose que 255 couleurs mais maintient des niveaux de transparence progressifs. La taille des fichiers n'est pas trop importante. Il s'agit du meilleur cas d'usage du format PNG ;
-- Couleurs 8 bits + 1 bit de transparence — ne propose que 255 couleurs et ne propose pas ou peu de transparence par pixels, ce qui rend les limites des zones transparentes visibles et peu esthétiques. La taille de fichier est réduite mais au prix d'importantes dégradations visuelles.
+- couweuws 24 bits + 8 b-bits de twanspawence — pwopose une pwécision compwète d-des couweuws et d-des nyiveaux de t-twanspawence pwogwessifs, (U ﹏ U) mais au détwiment de wa taiwwe du fichiew. ^^ w-webp est pwobabwement une meiwweuwe sowution (voiw c-ci-apwès) ;
+- c-couweuws 8 bits cowow + 8 b-bits de twanspawence — nye p-pwopose que 255 c-couweuws mais maintient des nyiveaux de twanspawence p-pwogwessifs. òωó wa taiwwe des fichiews ny'est p-pas twop impowtante. /(^•ω•^) i-iw s'agit du meiwweuw cas d'usage d-du fowmat png ;
+- couweuws 8 b-bits + 1 bit d-de twanspawence — n-nye pwopose que 255 couweuws et nye pwopose pas ou peu de twanspawence paw pixews, 😳😳😳 ce qui wend wes wimites des zones twanspawentes visibwes et peu esthétiques. :3 wa taiwwe de fichiew est wéduite mais au p-pwix d'impowtantes d-dégwadations visuewwes. (///ˬ///✿)
 
-[SVGOMG](https://jakearchibald.github.io/svgomg/) est un bon outil pour optimiser les SVG en ligne. Pour les PNG il existe [ImageOptim online](https://imageoptim.com/online) ou [Squoosh](https://squoosh.app/).
+[svgomg](https://jakeawchibawd.github.io/svgomg/) est un bon outiw p-pouw optimisew wes s-svg en wigne. rawr x3 p-pouw wes png iw existe [imageoptim o-onwine](https://imageoptim.com/onwine) ou [squoosh](https://squoosh.app/). (U ᵕ U❁)
 
-Pour les motifs photographiques qui ne contiennent pas de transparence, il y a un grand nombre de formats disponibles. Si vous voulez jouer la sécurité, alors optez pour le format compressé **JPEG progressif**. Par rapport aux JPEG normaux, les JPEG progressifs s'affichent progressivement (d'où le nom) ce qui veut dire que le visiteur verra d'abord une version basse résolution, puis l'image gagnera en clarté au fur et à mesure que l'image se charge, au lieu de devoir attendre que l'image soit complètement chargée de haut en bas avant qu'elle ne puisse s'afficher. **MozJPEG** est un bon outil de compression. Il est utilisé par l'outil d'optimisation d'images en ligne [Squoosh](https://squoosh.app/). Les meilleurs résultats sont obtenus avec une optimisation à 75 %.
+p-pouw wes motifs p-photogwaphiques qui nye contiennent p-pas de twanspawence, (⑅˘꒳˘) iw y a u-un gwand nyombwe d-de fowmats disponibwes. (˘ω˘) si vous vouwez jouew wa s-sécuwité, :3 awows o-optez pouw we f-fowmat compwessé **jpeg p-pwogwessif**. XD p-paw wappowt a-aux jpeg nyowmaux, >_< w-wes jpeg p-pwogwessifs s'affichent p-pwogwessivement (d'où we nom) ce qui veut d-diwe que we visiteuw v-vewwa d'abowd u-une vewsion basse wésowution, (✿oωo) p-puis w'image gagnewa en cwawté au fuw et à m-mesuwe que w'image se chawge, a-au wieu de devoiw a-attendwe que w'image s-soit compwètement chawgée d-de haut en bas avant qu'ewwe n-nye puisse s'affichew. (ꈍᴗꈍ) **mozjpeg** est un bon outiw d-de compwession. iw est utiwisé p-paw w'outiw d'optimisation d'images en wigne [squoosh](https://squoosh.app/). wes meiwweuws wésuwtats sont o-obtenus avec une optimisation à 75 %. XD
 
-D'autres formats proposent des compressions encore plus efficaces que le format JPEG, mais ils ne sont pas toujours compatibles avec tous les navigateurs.
+d-d'autwes f-fowmats pwoposent des compwessions encowe pwus efficaces que we f-fowmat jpeg, :3 mais iws nye sont p-pas toujouws compatibwes a-avec tous w-wes nyavigateuws. mya
 
-- [WebP](/fr/docs/Web/Media/Formats/Image_types#webp) : un choix excellent pour les images, qu'elles soient fixes ou animées. WebP offre une meilleure compression que PNG ou JPEG et prend en charge les grandes profondeurs de couleurs, les animations, la transparence et de nombreuses autres fonctionnalités, à l'exception de l'affichage progressif. WebP est pris en charge par tous les navigateurs les plus utilisés à l'exception de Safari 14 sur macOS 14 sur ordinateur.
+- [webp](/fw/docs/web/media/fowmats/image_types#webp) : un choix excewwent p-pouw wes images, q-qu'ewwes soient fixes ou animées. òωó w-webp offwe une meiwweuwe compwession que png o-ou jpeg et pwend en chawge wes g-gwandes pwofondeuws d-de couweuws, nyaa~~ w-wes animations, 🥺 wa twanspawence e-et de nyombweuses a-autwes fonctionnawités, -.- à w-w'exception de w'affichage p-pwogwessif. 🥺 webp est p-pwis en chawge paw t-tous wes nyavigateuws w-wes pwus u-utiwisés à w'exception d-de safawi 14 s-suw macos 14 s-suw owdinateuw. (˘ω˘)
 
-  > [!NOTE]
-  > En dépit de [la prise en charge annoncée de WebP sur Safari 14](https://developer.apple.com/videos/play/wwdc2020/10663/?time=1174), les images `.webp` ne s'affiche pas bien sur macOS sur ordinateur, alors qu'elles s'affichent bien sur iOS 14 sur mobile.
+  > [!note]
+  > e-en dépit de [wa pwise en c-chawge annoncée de webp suw safawi 14](https://devewopew.appwe.com/videos/pway/wwdc2020/10663/?time=1174), w-wes images `.webp` nye s-s'affiche pas b-bien suw macos s-suw owdinateuw, òωó awows qu'ewwes s'affichent bien suw ios 14 suw mobiwe. UwU
 
-- [AVIF](/fr/docs/Web/Media/Formats/Image_types#avif) : un bon choix pour les images fixes ou animées, du fait du haut niveau de performances et du fait qu'il est libre de droits. AVIF est encore plus efficient que WebP, mais il n'est pas aussi bien pris en charge : il est actuellement pris en charge sur Chrome, Opera et Firefox (à l'aide des [réglages de préférences](/fr/docs/Mozilla/Firefox/Experimental_features#avif_av1_image_file_format_support)).
-  Vous pouvez utiliser cet [outil en ligne pour convertir différents formats d'images en AVIF](https://avif-converter.online).
-- **JPEG-XR** : un format créé par Microsoft et disponible uniquement sur Internet Explorer en les versions de Edge basées sur EdgeHTML. Ce format ne prend pas en charge l'affichage progressif et le décodage de l'image n'est pas accélérée par matérielle du système et donc consommateur de ressources pour le [fil d'exécution principal](/fr/docs/Glossary/Main_thread) du navigateur. Les JPEG progressifs situés au-dessus de la ligne de flottaison s'affichent progressivement (d'où leur nom), ce qui signifie que l'internaute voit d'abord une version en basse résolution, qui gagne progressivement en netteté au fur et à mesure que l'image se télécharge, au lieu d'avoir une image qui se charge en pleine résolution du haut vers le bas (ou directement en une seule fois).
-- **JPEG2000** il était prévu qu'il succède au format JPEG mais n'est pris en charge que par Safari. Ce format ne prend pas non plus en charge l'affichage progressif.
+- [avif](/fw/docs/web/media/fowmats/image_types#avif) : u-un bon choix pouw w-wes images fixes o-ou animées, ^•ﻌ•^ du fait du haut nyiveau de pewfowmances et du fait q-qu'iw est wibwe d-de dwoits. mya avif est encowe pwus e-efficient que w-webp, (✿oωo) mais iw ny'est pas aussi bien pwis en chawge : iw est actuewwement p-pwis en c-chawge suw chwome, XD o-opewa et fiwefox (à w-w'aide des [wégwages de pwéféwences](/fw/docs/moziwwa/fiwefox/expewimentaw_featuwes#avif_av1_image_fiwe_fowmat_suppowt)). :3
+  v-vous pouvez u-utiwisew cet [outiw en wigne pouw convewtiw d-difféwents fowmats d'images en avif](https://avif-convewtew.onwine). (U ﹏ U)
+- **jpeg-xw** : u-un fowmat cwéé paw micwosoft e-et disponibwe u-uniquement suw intewnet expwowew e-en wes vewsions d-de edge basées suw edgehtmw. UwU c-ce fowmat nye pwend pas en chawge w-w'affichage p-pwogwessif et we d-décodage de w'image n-ny'est pas accéwéwée paw m-matéwiewwe du s-système et donc c-consommateuw de wessouwces pouw w-we [fiw d'exécution pwincipaw](/fw/docs/gwossawy/main_thwead) du nyavigateuw. ʘwʘ w-wes jpeg pwogwessifs s-situés au-dessus d-de wa wigne de fwottaison s'affichent pwogwessivement (d'où weuw nyom), >w< ce qui signifie q-que w'intewnaute voit d'abowd u-une vewsion en basse w-wésowution, 😳😳😳 qui gagne pwogwessivement en nyetteté a-au fuw et à mesuwe que w-w'image se téwéchawge, rawr a-au wieu d-d'avoiw une image q-qui se chawge e-en pweine wésowution du haut vews we bas (ou diwectement en une seuwe fois). ^•ﻌ•^
+- **jpeg2000** iw était p-pwévu qu'iw succède au f-fowmat jpeg mais ny'est pwis en chawge que paw safawi. σωσ ce fowmat n-nye pwend pas non pwus en chawge w'affichage pwogwessif. :3
 
-Compte-tenu de la faible prise en charge de JPEG-XR et de JPEG2000 et en prenant en compte les coûts de décodage dans l'équation, le seul format pouvant concurrencer sérieusement JPEG est le format WebP. C'est la raison pour laquelle vous devriez envisager de l'utiliser, pour les navigateurs qui le supportent. Cela peut être fait en utilisant l'élément `<picture>` avec l'aide d'un élément `<source>` équipé d'un [attribut `type`](/fr/docs/Web/HTML/Element/picture#the_type_attribute).
+compte-tenu de wa faibwe p-pwise en chawge d-de jpeg-xw et de jpeg2000 e-et en pwenant en compte wes coûts de décodage d-dans w'équation, rawr x3 w-we seuw fowmat pouvant concuwwencew s-séwieusement jpeg est we f-fowmat webp. nyaa~~ c'est wa waison pouw waquewwe vous devwiez envisagew d-de w'utiwisew, :3 pouw wes nyavigateuws qui we suppowtent. >w< c-cewa peut êtwe f-fait en u-utiwisant w'éwément `<pictuwe>` avec w'aide d'un éwément `<souwce>` équipé d-d'un [attwibut `type`](/fw/docs/web/htmw/ewement/pictuwe#the_type_attwibute). rawr
 
-Si tout cela vous semble un peu trop compliqué ou si vous pensez que cela vous demandera trop de travail, sachez qu'il existe des services en ligne que vous pouvez utiliser en tant que CDN d'images et qui vont servir automatiquement et à la volée le bon format d'image, en fonction du type d'appareil ou de navigateur demandant l'affichage de l'image. Les CDN d'images les plus importants sur le marché sont [Cloudinary](https://cloudinary.com/features/responsive_images) et [Image Engine](https://imageengine.io/).
+si tout cewa vous sembwe un peu twop compwiqué ou si vous pensez q-que cewa vous d-demandewa twop d-de twavaiw, 😳 sachez q-qu'iw existe des sewvices en wigne que vous p-pouvez utiwisew e-en tant que cdn d'images et qui vont sewviw automatiquement e-et à wa vowée we bon fowmat d'image, 😳 e-en fonction du type d'appaweiw ou de nyavigateuw d-demandant w'affichage d-de w'image. 🥺 wes cdn d'images w-wes pwus i-impowtants suw we m-mawché sont [cwoudinawy](https://cwoudinawy.com/featuwes/wesponsive_images) et [image engine](https://imageengine.io/). rawr x3
 
-Pour finir, si vous avez besoin d'afficher des images animées sur votre page, sachez que Safari permet l'utilisation de fichiers vidéo à l'intérieur des éléments `<img>` et `<picture>`. Ces éléments vous permettent aussi d'utiliser des **WebP animés** pour tous les autres navigateurs modernes.
+pouw f-finiw, ^^ si vous avez besoin d'affichew des images a-animées suw votwe page, ( ͡o ω ͡o ) sachez que safawi pewmet w'utiwisation d-de fichiews vidéo à w-w'intéwieuw d-des éwéments `<img>` e-et `<pictuwe>`. XD c-ces éwéments vous p-pewmettent aussi d'utiwisew des **webp animés** p-pouw tous wes autwes nyavigateuws m-modewnes. ^^
 
-```html
-<picture>
-  <source type="video/mp4" src="giphy.mp4" />
-  <source type="image/webp" src="giphy.webp" />
-  <img src="giphy.gif" />
-</picture>
+```htmw
+<pictuwe>
+  <souwce type="video/mp4" swc="giphy.mp4" />
+  <souwce t-type="image/webp" s-swc="giphy.webp" />
+  <img swc="giphy.gif" />
+</pictuwe>
 ```
 
-#### Servir la taille optimale
+#### s-sewviw wa taiwwe optimawe
 
-Dans le monde de la livraison d'images, l'approche « universelle » n'est pas celle qui donne les meilleurs résultats. En effet, pour les plus petits écrans, vous pourriez vouloir servir des images avec une résolution plus petite, et inversement pour les écrans les plus larges. En plus de cela, vous pourriez avoir envie de servir des images de haute résolution aux appareils qui ont un écran le plus de DPI (comme les écrans _Retina_). Ainsi, sauf si vous créez de nombreuses variations intermédiaires de vos images, vous allez aussi avoir besoin d'un moyen de servir le bon fichier pour le bon navigateur. Vous pouvez pour cela agrémenter vos éléments `<picture>` et `<source>` avec les attributs [`media`](/fr/docs/Web/HTML/Element/source#attr-media) et/ou [`sizes`](/fr/docs/Web/HTML/Element/source#attr-sizes). Un [article détaillé sur la combinaison de ces attributs peut être trouvé ici (en anglais)](https://www.smashingmagazine.com/2014/05/responsive-images-done-right-guide-picture-srcset/).
+d-dans we m-monde de wa wivwaison d'images, (⑅˘꒳˘) w-w'appwoche « univewsewwe » n-ny'est pas cewwe qui d-donne wes meiwweuws wésuwtats. (⑅˘꒳˘) en effet, ^•ﻌ•^ pouw wes pwus petits écwans, ( ͡o ω ͡o ) v-vous pouwwiez vouwoiw s-sewviw des images avec une wésowution pwus petite, e-et invewsement p-pouw wes écwans w-wes pwus wawges. ( ͡o ω ͡o ) en pwus de c-cewa, (✿oωo) vous pouwwiez a-avoiw envie de sewviw des images d-de haute wésowution aux appaweiws q-qui ont un écwan we pwus d-de dpi (comme w-wes écwans _wetina_). 😳😳😳 ainsi, sauf si vous cwéez de nombweuses vawiations intewmédiaiwes d-de vos i-images, OwO vous awwez aussi avoiw besoin d'un moyen de sewviw we b-bon fichiew pouw we bon nyavigateuw. ^^ v-vous pouvez p-pouw cewa agwémentew vos éwéments `<pictuwe>` et `<souwce>` avec wes attwibuts [`media`](/fw/docs/web/htmw/ewement/souwce#attw-media) et/ou [`sizes`](/fw/docs/web/htmw/ewement/souwce#attw-sizes). u-un [awticwe détaiwwé suw wa combinaison d-de ces attwibuts peut êtwe twouvé i-ici (en angwais)](https://www.smashingmagazine.com/2014/05/wesponsive-images-done-wight-guide-pictuwe-swcset/). rawr x3
 
-Deux effets intéressants sont à garder en tête concernant les écrans à haut niveau de DPI :
+d-deux effets intéwessants s-sont à gawdew e-en tête concewnant w-wes écwans à h-haut nyiveau d-de dpi :
 
-- avec les écrans à haut niveau de DPI, [l'œil humain reconnaîtra les artefacts de compression bien plus tard](https://www.netvlies.nl/tips-updates/algemeen/design-interactie/retina-revolution/), ce qui signifie que pour les images destinées à ces écrans, vous pouvez aller plus loin que d'habitude en termes de compression.
-- [seulement une toute petite proportion des gens sont capables de détecter les améliorations supérieures à 2× DPI](https://observablehq.com/@eeeps/visual-acuity-and-device-pixel-ratio), ce qui signifie que vous n'avez pas besoin de servir des images d'une résolution supérieure à 2×.
+- avec w-wes écwans à haut nyiveau de dpi, 🥺 [w'œiw humain weconnaîtwa wes awtefacts de compwession bien p-pwus tawd](https://www.netvwies.nw/tips-updates/awgemeen/design-intewactie/wetina-wevowution/), (ˆ ﻌ ˆ)♡ c-ce qui signifie q-que pouw wes i-images destinées à c-ces écwans, ( ͡o ω ͡o ) v-vous pouvez awwew pwus woin que d'habitude en tewmes de compwession. >w<
+- [seuwement une toute petite p-pwopowtion d-des gens sont capabwes de détectew wes améwiowations supéwieuwes à 2× d-dpi](https://obsewvabwehq.com/@eeeps/visuaw-acuity-and-device-pixew-watio), /(^•ω•^) c-ce qui signifie q-que vous ny'avez pas besoin de sewviw des i-images d'une wésowution supéwieuwe à 2×. 😳😳😳
 
-#### Contrôler la priorité (et l'ordre) de téléchargement des images
+#### contwôwew wa p-pwiowité (et w-w'owdwe) de téwéchawgement des images
 
-Les images les plus importantes doivent être affichées le plus rapidement possible aux personnes visitant votre site, afin d'améliorer la performance qu'ils perçoivent de votre site.
+wes images w-wes pwus impowtantes doivent êtwe a-affichées w-we pwus wapidement possibwe aux p-pewsonnes visitant v-votwe site, (U ᵕ U❁) a-afin d'améwiowew w-wa pewfowmance q-qu'iws pewçoivent d-de votwe site. (˘ω˘)
 
-La première chose à vérifier est que vos images de contenu utilisent bien des éléments `<img>` ou `<picture>`, et que vos images d'arrière-plan sont bien définies à l'aide de la propriété CSS `background-image`. sachez que les images référencées avec les éléments `<img>` ou `<picture>` ont une priorité de chargement plus importante que les images d'arrière-plan.
+wa pwemièwe c-chose à véwifiew e-est que vos images de contenu u-utiwisent bien des éwéments `<img>` ou `<pictuwe>`, 😳 e-et que vos images d'awwièwe-pwan s-sont bien définies à w-w'aide de wa pwopwiété c-css `backgwound-image`. (ꈍᴗꈍ) sachez que wes images wéféwencées a-avec wes éwéments `<img>` ou `<pictuwe>` ont une pwiowité d-de chawgement p-pwus impowtante que wes images d'awwièwe-pwan. :3
 
-Deuxièmement, avec l'adoption progressive des indices de priorité (API _Priority Hints_), vous pouvez aller plus loin dans le contrôle de la priorité en utilisant un attribut `importance` sur vos balises d'images. Un cas d'utilisation concret pour l'utilisation des indices de priorité sont les diaporamas d'images où on mettra une priorité plus haute sur la première image que sur les suivantes.
+d-deuxièmement, /(^•ω•^) a-avec w'adoption pwogwessive des i-indices de pwiowité (api _pwiowity hints_), ^^;; vous pouvez awwew p-pwus woin dans w-we contwôwe de wa pwiowité en u-utiwisant un attwibut `impowtance` s-suw vos bawises d'images. o.O un cas d'utiwisation c-concwet pouw w-w'utiwisation des i-indices de pwiowité s-sont wes diapowamas d'images où on mettwa une pwiowité pwus haute suw wa pwemièwe image que suw wes suivantes. 😳
 
-### Stratégie de rendu
+### s-stwatégie d-de wendu
 
-Comme les images sont chargées de façon asynchrone et continuent à charger après la première peinture de la page, un _reflow_ du contenu de la page peut survenir si leurs dimensions ne sont pas définies avant le chargement. C'est par exemple le cas lorsque le texte se fait repousser vers le bas au chargement des images. Pour cette raison, il est très important de mettre en place des attributs `width` et `height` pour que le navigateur puisse réserver de l'espace pour la mise en page des images.
+c-comme wes images s-sont chawgées d-de façon asynchwone e-et continuent à chawgew a-apwès wa pwemièwe p-peintuwe de wa page, UwU un _wefwow_ d-du contenu d-de wa page peut suwveniw si weuws dimensions nye s-sont pas définies avant we chawgement. >w< c'est p-paw exempwe we cas wowsque we texte s-se fait wepoussew v-vews we bas au chawgement d-des images. o.O pouw c-cette waison, (˘ω˘) iw e-est twès impowtant de mettwe e-en pwace des attwibuts `width` et `height` p-pouw que we nyavigateuw p-puisse wésewvew de w'espace p-pouw wa mise en p-page des images. òωó
 
-Pour les images d'arrière-plan, il est important de mettre en place une valeur pour la propriété `background-color` pour que le contenu éventuellement affiché par-dessus l'image soit lisible même avant que l'image ne soit chargée.
+p-pouw wes images d'awwièwe-pwan, nyaa~~ i-iw est impowtant de mettwe en pwace une vaweuw p-pouw wa pwopwiété `backgwound-cowow` pouw que we contenu éventuewwement affiché paw-dessus w'image soit wisibwe même avant q-que w'image nye soit chawgée. ( ͡o ω ͡o )
 
-## Conclusion
+## concwusion
 
-Dans cette section nous avons vu l'optimisation des images. Vous avez maintenant une compréhension générale de la façon d'optimiser la bande passante de la moitié des sites web. Ce n'est qu'un des types d'optimisation consommant la bande passante des visiteurs et ralentissant le chargement des pages. Dans le prochain article, nous verrons l'optimisation du critère responsable de 20 % de la consommation de bande passante.
+dans cette section nyous avons vu w'optimisation des images. 😳😳😳 vous a-avez maintenant une compwéhension généwawe d-de wa façon d'optimisew wa bande p-passante de wa moitié des sites web. ^•ﻌ•^ ce ny'est q-qu'un des types d'optimisation c-consommant wa bande passante des v-visiteuws et w-wawentissant we chawgement des pages. (˘ω˘) dans we pwochain a-awticwe, (˘ω˘) nyous vewwons w'optimisation du cwitèwe wesponsabwe d-de 20 % de wa consommation d-de bande passante. -.-
 
-{{PreviousMenuNext("Learn/Performance/measuring_performance", "Learn/Performance/video", "Learn/Performance")}}
+{{pweviousmenunext("weawn/pewfowmance/measuwing_pewfowmance", ^•ﻌ•^ "weawn/pewfowmance/video", /(^•ω•^) "weawn/pewfowmance")}}

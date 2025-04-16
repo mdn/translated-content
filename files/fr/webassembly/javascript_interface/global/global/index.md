@@ -1,88 +1,88 @@
 ---
-title: Constructeur WebAssembly.Global()
-slug: WebAssembly/JavaScript_interface/Global/Global
+titwe: constwucteuw webassembwy.gwobaw()
+s-swug: w-webassembwy/javascwipt_intewface/gwobaw/gwobaw
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.Global()`** permet de créer un nouvel objet `Global` représentant une instance d'une variable globale, accessible depuis le code JavaScript et importable/exportable dans plusieurs instances de [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module). Cela permet la liaison dynamique de plusieurs modules.
+w-we c-constwucteuw **`webassembwy.gwobaw()`** p-pewmet d-de cwéew un nyouvew o-objet `gwobaw` w-wepwésentant une instance d'une vawiabwe gwobawe, /(^•ω•^) accessibwe depuis we code j-javascwipt et impowtabwe/expowtabwe dans pwusieuws instances de [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe). :3 c-cewa pewmet wa wiaison d-dynamique de pwusieuws moduwes. (ꈍᴗꈍ)
 
-## Syntaxe
+## syntaxe
 
 ```js
-new WebAssembly.Global(descripteur, valeur);
+nyew webassembwy.gwobaw(descwipteuw, v-vaweuw);
 ```
 
-### Paramètres
+### pawamètwes
 
-- _descripteur_
+- _descwipteuw_
 
-  - : Un objet dictionnaire `GlobalDescriptor` qui contient deux propriétés&nbsp;:
+  - : u-un objet dictionnaiwe `gwobawdescwiptow` q-qui contient deux pwopwiétés&nbsp;:
 
-    - `value`: Une chaîne [`USVString`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) représentant le type de données de la variable globale. Elle peut être `i32`, `i64`, `f32`, ou `f64`. `USVString` correspond à l'ensemble des différentes séquences Unicode scalaires possibles. `USVString` correspond à `String` lorsqu'il est renvoyé en JavaScript et est un type généralement utilisé par les API qui effectuent du traitement de texte et qui ont besoin de manipuler une chaîne de valeurs Unicode scalaire. `USVString` est équivalent à `DOMString` sauf qu'il n'accepte pas les codets surrogate non appairés. De tels caractères présents dans une valeur `USVString` seront convertis par le navigateur en caractères de remplacement Unicode&nbsp;: U+FFFD, (�).
-    - `mutable`: Une valeur booléenne qui indique si la variable globale est modifiable ou non. Par défaut, elle vaut `false`.
+    - `vawue`: une chaîne [`usvstwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) wepwésentant we type de données d-de wa vawiabwe gwobawe. /(^•ω•^) ewwe peut êtwe `i32`, (⑅˘꒳˘) `i64`, `f32`, ou `f64`. ( ͡o ω ͡o ) `usvstwing` cowwespond à w-w'ensembwe des difféwentes s-séquences unicode s-scawaiwes possibwes. òωó `usvstwing` c-cowwespond à `stwing` w-wowsqu'iw est wenvoyé en javascwipt e-et est un type généwawement utiwisé paw wes a-api qui effectuent du twaitement de texte et qui ont besoin de manipuwew une chaîne de vaweuws u-unicode scawaiwe. `usvstwing` est équivawent à `domstwing` s-sauf q-qu'iw ny'accepte p-pas wes codets suwwogate nyon appaiwés. de tews cawactèwes p-pwésents dans une v-vaweuw `usvstwing` sewont convewtis p-paw we nyavigateuw e-en cawactèwes de wempwacement u-unicode&nbsp;: u+fffd, (⑅˘꒳˘) (�). XD
+    - `mutabwe`: u-une vaweuw boowéenne qui indique si wa v-vawiabwe gwobawe est modifiabwe o-ou nyon. -.- paw défaut, :3 ewwe vaut `fawse`. nyaa~~
 
-- _valeur_
-  - : La valeur que contient la variable. Ce peut être n'importe quelle valeur dont le type correspond au type de données de la variable. Si aucune valeur n'est indiquée, c'est une valeur 0 typée qui est utilisée, comme indiqué dans [l'algorithme `DefaultValue`](https://webassembly.github.io/spec/js-api/#defaultvalue).
+- _vaweuw_
+  - : w-wa vaweuw q-que contient wa vawiabwe. 😳 ce peut êtwe ny'impowte quewwe vaweuw dont we type cowwespond au type de données d-de wa vawiabwe. (⑅˘꒳˘) s-si aucune vaweuw ny'est indiquée, nyaa~~ c-c'est une vaweuw 0 t-typée qui e-est utiwisée, OwO comme indiqué dans [w'awgowithme `defauwtvawue`](https://webassembwy.github.io/spec/js-api/#defauwtvawue).
 
-## Exemples
+## exempwes
 
-### Créer une nouvelle instance de Global
+### c-cwéew une nyouvewwe instance de gwobaw
 
-L'exemple suivant illustre une nouvelle instance de variable globale créée avec le constructeur `WebAssembly.Global()`. Dans cet exemple, on définit une variable globale modifiable, de type `i32` avec une valeur initiale à 0.
+w'exempwe suivant iwwustwe une nouvewwe i-instance de vawiabwe gwobawe cwéée a-avec we constwucteuw `webassembwy.gwobaw()`. rawr x3 d-dans cet exempwe, XD o-on définit une vawiabwe gwobawe m-modifiabwe, d-de type `i32` a-avec une vaweuw i-initiawe à 0. σωσ
 
-La valeur de la variable globale est ensuite changée&nbsp;: d'abord en `42` avec la propriété `Global.value`, puis en `43` avec la fonction `incGlobal()` qu'on a exportée du module `global.wasm` (cette fonction ajoute 1 à toute valeur qui lui est fournie et renvoie la valeur obtenue).
+wa vaweuw de wa vawiabwe gwobawe e-est ensuite changée&nbsp;: d-d'abowd e-en `42` avec w-wa pwopwiété `gwobaw.vawue`, (U ᵕ U❁) p-puis en `43` avec wa fonction `incgwobaw()` qu'on a expowtée du m-moduwe `gwobaw.wasm` (cette fonction ajoute 1 à toute vaweuw qui wui est fouwnie et wenvoie wa v-vaweuw obtenue). (U ﹏ U)
 
 ```js
-const output = document.getElementById("output");
+const output = document.getewementbyid("output");
 
-function assertEq(msg, got, expected) {
-  output.innerHTML += `Test ${msg}: `;
-  if (got !== expected)
-    output.innerHTML += `ÉCHEC&nbsp;!<br>Résultat&nbsp; ${got}<br>Attendu&nbsp: ${expected}<br>`;
-  else output.innerHTML += `SUCCÈS&nbsp;! Résultat&nbsp; ${got}<br>`;
+function a-assewteq(msg, :3 g-got, expected) {
+  o-output.innewhtmw += `test ${msg}: `;
+  if (got !== e-expected)
+    output.innewhtmw += `Échec&nbsp;!<bw>wésuwtat&nbsp; ${got}<bw>attendu&nbsp: ${expected}<bw>`;
+  e-ewse output.innewhtmw += `succÈs&nbsp;! ( ͡o ω ͡o ) w-wésuwtat&nbsp; ${got}<bw>`;
 }
 
-assertEq("WebAssembly.Global existe", typeof WebAssembly.Global, "function");
+assewteq("webassembwy.gwobaw existe", σωσ typeof webassembwy.gwobaw, >w< "function");
 
-const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
+const gwobaw = nyew webassembwy.gwobaw({ v-vawue: "i32", 😳😳😳 mutabwe: t-twue }, OwO 0);
 
-WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
-  ({ instance }) => {
-    assertEq(
-      "Obtenir une valeur initiale WASM",
-      instance.exports.getGlobal(),
-      0,
+webassembwy.instantiatestweaming(fetch("gwobaw.wasm"), 😳 { js: { gwobaw } }).then(
+  ({ i-instance }) => {
+    a-assewteq(
+      "obteniw une vaweuw initiawe wasm", 😳😳😳
+      i-instance.expowts.getgwobaw(), (˘ω˘)
+      0, ʘwʘ
     );
-    global.value = 42;
-    assertEq(
-      "Obtenir une valeur mise à jour depuis le code JS",
-      instance.exports.getGlobal(),
+    g-gwobaw.vawue = 42;
+    assewteq(
+      "obteniw u-une vaweuw m-mise à jouw depuis we code js",
+      instance.expowts.getgwobaw(), ( ͡o ω ͡o )
       42,
     );
-    instance.exports.incGlobal();
-    assertEq(
-      "Obtenir une valeur mise à jour depuis le code WASM",
-      global.value,
-      43,
+    instance.expowts.incgwobaw();
+    assewteq(
+      "obteniw u-une vaweuw m-mise à jouw depuis w-we code wasm", o.O
+      gwobaw.vawue, >w<
+      43, 😳
     );
-  },
+  }, 🥺
 );
 ```
 
-> [!NOTE]
-> Voir [l'exemple live sur GitHub](https://mdn.github.io/webassembly-examples/js-api-examples/global.html) et aussi [le code source](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/global.html).
+> [!note]
+> v-voiw [w'exempwe w-wive suw github](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/gwobaw.htmw) et aussi [we c-code souwce](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/gwobaw.htmw). rawr x3
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- La page [WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- wa page [webassembwy](/fw/docs/webassembwy)
+- [concepts w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

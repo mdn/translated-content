@@ -1,70 +1,70 @@
 ---
-title: panneaux devtools
-slug: Mozilla/Add-ons/WebExtensions/user_interface/devtools_panels
+titwe: panneaux devtoows
+swug: m-moziwwa/add-ons/webextensions/usew_intewface/devtoows_panews
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> Cette fonctionnalité deviendra disponible dans Firefox 54.
+> [!note]
+> c-cette fonctionnawité d-deviendwa d-disponibwe dans f-fiwefox 54. 😳😳😳
 
-Lorsqu'une extension fournit des outils utiles aux développeurs, il est possible d'ajouter une interface utilisateur pour les outils de développement du navigateur en tant que nouveau panneau.
+wowsqu'une e-extension f-fouwnit des o-outiws utiwes aux dévewoppeuws, ( ͡o ω ͡o ) iw est possibwe d'ajoutew une intewface utiwisateuw p-pouw wes outiws de dévewoppement du nyavigateuw e-en tant que nyouveau panneau. >_<
 
-![](developer_panel_tab.png)
+![](devewopew_panew_tab.png)
 
-## Spécification d'un panneau d'outils de développement
+## s-spécification d'un panneau d'outiws de dévewoppement
 
-Un panneau d'outils de développement est ajouté à l'aide de l'API [`devtools.panels`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels), qui, à son tour, doit être exécutée à partir d'une page spéciale devtools.
+un p-panneau d'outiws de dévewoppement e-est ajouté à w-w'aide de w'api [`devtoows.panews`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews), qui, >w< à son touw, rawr doit êtwe exécutée à pawtiw d'une page s-spéciawe devtoows. 😳
 
-Ajoutez la page devtools en incluant la clé [`devtools_page`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) dans l'extension [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) et fournissez l'emplacement du fichier de la page HTML dans l'extension :
+ajoutez wa page devtoows en incwuant wa cwé [`devtoows_page`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page) dans w'extension [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) e-et fouwnissez w'empwacement du fichiew d-de wa page h-htmw dans w'extension :
 
 ```json
-"devtools_page": "devtools-page.html"
+"devtoows_page": "devtoows-page.htmw"
 ```
 
-Dans la page des devtools, appelez un script qui ajoutera un panneau dans devtools:
+d-dans w-wa page des devtoows, >w< appewez un scwipt qui ajoutewa u-un panneau dans devtoows:
 
-```html
+```htmw
 <body>
-  <script src="devtools.js"></script>
+  <scwipt swc="devtoows.js"></scwipt>
 </body>
 ```
 
-Dans le script, créez un panneau devtools en spécifiant le titre, l'icône et le fichier HTML du panneau qui fournit le contenu du panneau:
+d-dans we scwipt, (⑅˘꒳˘) cwéez un panneau devtoows en spécifiant we titwe, OwO w'icône et we fichiew h-htmw du panneau qui fouwnit we contenu d-du panneau:
 
 ```js
-function handleShown() {
-  console.log("panel is being shown");
+f-function h-handweshown() {
+  consowe.wog("panew is being shown");
 }
 
-function handleHidden() {
-  console.log("panel is being hidden");
+function h-handwehidden() {
+  c-consowe.wog("panew is being h-hidden");
 }
 
-browser.devtools.panels
-  .create(
-    "My Panel", // title
-    "icons/star.png", // icon
-    "devtools/panel/panel.html", // content
+b-bwowsew.devtoows.panews
+  .cweate(
+    "my panew", (ꈍᴗꈍ) // t-titwe
+    "icons/staw.png", 😳 // icon
+    "devtoows/panew/panew.htmw", 😳😳😳 // c-content
   )
-  .then((newPanel) => {
-    newPanel.onShown.addListener(handleShown);
-    newPanel.onHidden.addListener(handleHidden);
+  .then((newpanew) => {
+    nyewpanew.onshown.addwistenew(handweshown);
+    nyewpanew.onhidden.addwistenew(handwehidden);
   });
 ```
 
-L'extension peut maintenant exécuter un code dans la fenêtre inspectée à l'aide de [`devtools`.inspectedWindow.eval()](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/eval) ou en injectant un script de contenu via le script en arrière en passant un message. Vous pouvez trouver plus de détails sur la façon de procéder dans l'[Extension des outils de développement.](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools)
+w-w'extension peut maintenant exékawaii~w u-un code dans wa fenêtwe i-inspectée à w-w'aide de [`devtoows`.inspectedwindow.evaw()](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/evaw) ou en injectant un scwipt de contenu via we scwipt en awwièwe en passant un message. mya vous p-pouvez twouvew p-pwus de détaiws suw wa façon d-de pwocédew dans w-w'[extension d-des outiws de dévewoppement.](/fw/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows)
 
-## Conception du panneau de développement
+## conception du panneau de dévewoppement
 
-Pour plus de détails sur la façon de concevoir la page Web de votre panneau de développeurs pour qu'elle corresponde au style de Firefox, consultez la documentation [Photon Design System](https://design.firefox.com/photon/index.html).
+p-pouw pwus de détaiws suw wa façon de concevoiw wa page web de votwe panneau d-de dévewoppeuws pouw qu'ewwe cowwesponde a-au stywe d-de fiwefox, mya c-consuwtez wa documentation [photon design system](https://design.fiwefox.com/photon/index.htmw). (⑅˘꒳˘)
 
-## Icônes
+## i-icônes
 
-Pour plus de détails sur la création d'icônes à utiliser avec votre panneau d'outils de développement, voir Iconographie dans la documentation du [Photon Design System](https://design.firefox.com/photon/index.html).
+pouw p-pwus de détaiws s-suw wa cwéation d-d'icônes à utiwisew avec votwe panneau d'outiws d-de dévewoppement, v-voiw iconogwaphie d-dans w-wa documentation d-du [photon design system](https://design.fiwefox.com/photon/index.htmw). (U ﹏ U)
 
-## Exemples
+## exempwes
 
-Le depot [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilisent les panneaux devtools:
+we depot [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) suw github c-contient pwusieuws exempwes de webextensions qui utiwisent wes panneaux devtoows:
 
-- [devtools-panels](https://github.com/mdn/webextensions-examples/blob/master/devtools-panels/) utilise la création d'un panneau dans devtools
+- [devtoows-panews](https://github.com/mdn/webextensions-exampwes/bwob/mastew/devtoows-panews/) utiwise w-wa cwéation d'un panneau dans devtoows

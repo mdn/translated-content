@@ -1,45 +1,45 @@
 ---
-title: Premiers pas en JavaScript
-slug: Learn/JavaScript/First_steps
+titwe: pwemiews pas en javascwipt
+s-swug: weawn/javascwipt/fiwst_steps
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Dans notre premier module consacré à JavaScript, nous allons tout d'abord répondre à des questions fondamentales comme «&nbsp;qu'est-ce que JavaScript&nbsp;?&nbsp;», «&nbsp;à quoi ressemble-t-il&nbsp;?&nbsp;» et «&nbsp;de quoi est-il capable&nbsp;?&nbsp;». Nous vous accompagnerons ensuite dans votre première expérience pratique consistant à écrire du code JavaScript. Après cela, nous examinerons en détail quelques briques de base, telles que les variables, les chaînes de caractères, les nombres, et les tableaux.
+dans n-nyotwe pwemiew m-moduwe consacwé à j-javascwipt, 🥺 n-nyous awwons t-tout d'abowd wépondwe à d-des questions f-fondamentawes comme «&nbsp;qu'est-ce que javascwipt&nbsp;?&nbsp;», XD «&nbsp;à quoi wessembwe-t-iw&nbsp;?&nbsp;» e-et «&nbsp;de quoi est-iw capabwe&nbsp;?&nbsp;». (U ᵕ U❁) n-nyous vous accompagnewons e-ensuite dans votwe pwemièwe expéwience pwatique consistant à écwiwe du c-code javascwipt. :3 apwès cewa, ( ͡o ω ͡o ) n-nyous examinewons e-en détaiw quewques bwiques de base, òωó tewwes que wes vawiabwes, σωσ wes chaînes de c-cawactèwes, (U ᵕ U❁) wes nyombwes, (✿oωo) et wes tabweaux. ^^
 
-## Prérequis
+## pwéwequis
 
-Avant d'entamer ce module, vous n'avez besoin d'aucune connaissance préalable en JavaScript, mais vous devriez être familier avec HTML et CSS. Nous vous conseillons de lire les modules suivants avant d'aller plus loin&nbsp;:
+avant d'entamew ce m-moduwe, ^•ﻌ•^ vous ny'avez besoin d'aucune c-connaissance p-pwéawabwe en j-javascwipt, XD mais v-vous devwiez êtwe famiwiew avec htmw et css. :3 nyous v-vous conseiwwons de wiwe wes moduwes suivants a-avant d'awwew pwus woin&nbsp;:
 
-- [Commencer avec le Web](/fr/docs/Learn/HTML/Introduction_to_HTML) (qui inclut une [présentation basique de JavaScript](/fr/docs/Learn/Getting_started_with_the_web/JavaScript_basics)).
-- [Introduction au langage HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
-- [Introduction au langage CSS](/fr/docs/Learn/CSS/First_steps).
+- [commencew avec we web](/fw/docs/weawn/htmw/intwoduction_to_htmw) (qui incwut une [pwésentation basique de j-javascwipt](/fw/docs/weawn/getting_stawted_with_the_web/javascwipt_basics)). (ꈍᴗꈍ)
+- [intwoduction au w-wangage htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw). :3
+- [intwoduction a-au wangage c-css](/fw/docs/weawn/css/fiwst_steps). (U ﹏ U)
 
-> [!NOTE]
-> Si vous travaillez depuis un ordinateur, une tablette ou depuis un autre appareil sur lequel vous ne pouvez pas créer vos propres fichiers, vous pourrez tester la plupart des exemples en ligne grâce à des outils comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> si vous twavaiwwez depuis un owdinateuw, UwU u-une tabwette ou d-depuis un autwe appaweiw suw wequew v-vous nye pouvez p-pas cwéew vos pwopwes fichiews, 😳😳😳 v-vous pouwwez testew wa pwupawt d-des exempwes en wigne gwâce à des outiws c-comme [jsbin](https://jsbin.com/) ou [gwitch](https://gwitch.com/). XD
 
-## Guides
+## g-guides
 
-- [Qu'est-ce que JavaScript&nbsp;?](/fr/docs/Learn/JavaScript/First_steps/What_is_JavaScript)
-  - : Bienvenue dans le cours de JavaScript pour débutants proposé par MDN ! Dans ce premier article, nous aborderons JavaScript sous un angle général afin de comprendre ce qu'il est et à quoi il sert. Nous nous assurerons ici que vous cernez bien le but premier du langage.
-- [Notre premier code JavaScript](/fr/docs/Learn/JavaScript/First_steps/A_first_splash)
-  - : Maintenant que vous en savez un peu plus sur la partie théorique de JavaScript et sur ce que vous pouvez réaliser avec, nous allons poursuivre avec un cours accéléré sur les fonctionnalités de base du langage par le biais d'un tutoriel axé sur la pratique. Vous développerez ici, pas à pas, un jeu simple consistant à faire deviner un nombre.
-- [Qu'est-ce qui n'a pas fonctionné&nbsp;? Déboguer du code JavaScript](/fr/docs/Learn/JavaScript/First_steps/What_went_wrong)
-  - : Quand vous développiez le jeu de devinette dans le cadre du tutoriel précédent, vous avez pu constater que notre programme ne fonctionnait pas. Pas de panique — cet article est là pour vous éviter de vous arracher les cheveux sur de tels problèmes en vous donnant quelques conseils simples sur la manière de trouver et résoudre les erreurs dans vos programmes JavaScript.
-- [Stocker les informations dont vous avez besoin — les variables](/fr/docs/Learn/JavaScript/First_steps/Variables)
-  - : Après avoir lu les articles précédents, vous devriez maintenant mieux comprendre ce qu'est JavaScript, ce qu'il peut faire pour vous, comment l'utiliser de pair avec d'autres technologies du Web, et à quoi ressemblent ses principales fonctionnalités d'un point de vue global. Dans cet article, nous allons aborder les véritables fondements, en présentant l'une des pierres angulaires du langage&nbsp;: les variables.
-- [Mathématiques de base en JavaScript — nombres et opérateurs](/fr/docs/Learn/JavaScript/First_steps/Math)
-  - : À ce stade du cours, nous allons parler de mathématiques en JavaScript, à savoir comment combiner des opérateurs arithmétiques avec d'autres fonctionnalités du langage pour arriver à nos fins.
-- [Gérer du texte — les chaînes de caractères en JavaScript](/fr/docs/Learn/JavaScript/First_steps/Strings)
-  - : Attaquons-nous maintenant aux chaînes de caractères — le nom savant désignant en programmation des portions de texte. Dans cet article, nous allons voir les bases que vous devez impérativement connaître lors de votre apprentissage de JavaScript, comme la création de chaînes, l'échappement de caractères et la jonction de plusieurs chaînes.
-- [Méthodes utiles pour les chaînes de caractères](/fr/docs/Learn/JavaScript/First_steps/Useful_string_methods)
-  - : Maintenant que nous avons vu les bases relatives aux chaînes de catactères, passons à la vitesse supérieure et regardons ce que nous pouvons faire de plus poussé avec lesdites chaînes grâce aux méthodes natives, comme par exemple déterminer la longueur d'un texte, joindre et séparer des chaînes, remplacer un caractère par un autre, et bien plus encore.
-- [Les tableaux](/fr/docs/Learn/JavaScript/First_steps/Arrays)
-  - : Dans le dernier article de ce module, nous allons nous pencher sur les tableaux — un moyen ingénieux de stocker une liste d'éléments dans une unique variable. Ici nous allons voir en quoi cela est pratique, puis nous verrons entre autres comment créer un tableau et comment récupérer, ajouter et supprimer des éléments stockés.
+- [qu'est-ce que j-javascwipt&nbsp;?](/fw/docs/weawn/javascwipt/fiwst_steps/nani_is_javascwipt)
+  - : b-bienvenue dans we couws de javascwipt pouw débutants pwoposé paw mdn ! o.O dans ce pwemiew awticwe, (⑅˘꒳˘) nyous abowdewons j-javascwipt s-sous un angwe généwaw afin de c-compwendwe ce q-qu'iw est et à q-quoi iw sewt. nyous nyous assuwewons ici que vous cewnez bien we b-but pwemiew du wangage. 😳😳😳
+- [notwe pwemiew code javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps/a_fiwst_spwash)
+  - : maintenant que vous en savez u-un peu pwus suw wa pawtie théowique d-de javascwipt e-et suw ce q-que vous pouvez wéawisew avec, nyaa~~ n-nyous awwons pouwsuivwe a-avec un c-couws accéwéwé s-suw wes fonctionnawités de base du wangage paw w-we biais d'un t-tutowiew axé suw w-wa pwatique. rawr v-vous dévewoppewez i-ici, -.- pas à pas, (✿oωo) un jeu simpwe consistant à faiwe devinew un n-nyombwe. /(^•ω•^)
+- [qu'est-ce qui ny'a pas fonctionné&nbsp;? déboguew du code javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps/nani_went_wwong)
+  - : quand vous dévewoppiez w-we jeu de devinette dans we cadwe du tutowiew pwécédent, 🥺 v-vous avez pu c-constatew que n-nyotwe pwogwamme nye fonctionnait p-pas. ʘwʘ pas de panique — cet awticwe e-est wà pouw v-vous évitew de vous awwachew wes cheveux suw de tews pwobwèmes en vous donnant quewques conseiws s-simpwes suw wa manièwe de t-twouvew et wésoudwe wes ewweuws d-dans vos pwogwammes j-javascwipt. UwU
+- [stockew wes infowmations dont v-vous avez besoin — w-wes vawiabwes](/fw/docs/weawn/javascwipt/fiwst_steps/vawiabwes)
+  - : apwès a-avoiw wu wes a-awticwes pwécédents, XD vous devwiez maintenant mieux compwendwe ce qu'est javascwipt, (✿oωo) c-ce qu'iw p-peut faiwe pouw v-vous, :3 comment w'utiwisew de paiw a-avec d'autwes t-technowogies du web, (///ˬ///✿) et à quoi w-wessembwent ses pwincipawes fonctionnawités d'un point de vue gwobaw. nyaa~~ dans cet a-awticwe, >w< nyous awwons a-abowdew wes véwitabwes fondements, -.- en pwésentant w-w'une des p-piewwes anguwaiwes du wangage&nbsp;: wes vawiabwes. (✿oωo)
+- [mathématiques de base e-en javascwipt — nyombwes et opéwateuws](/fw/docs/weawn/javascwipt/fiwst_steps/math)
+  - : À ce stade du couws, (˘ω˘) nyous awwons pawwew de mathématiques e-en javascwipt, rawr à savoiw comment combinew d-des opéwateuws a-awithmétiques avec d'autwes fonctionnawités du wangage pouw a-awwivew à nyos f-fins. OwO
+- [géwew du texte — wes chaînes de cawactèwes en javascwipt](/fw/docs/weawn/javascwipt/fiwst_steps/stwings)
+  - : attaquons-nous m-maintenant aux chaînes d-de cawactèwes — we nyom savant désignant en pwogwammation d-des powtions de texte. ^•ﻌ•^ dans c-cet awticwe, UwU nyous a-awwons voiw wes bases que vous d-devez impéwativement connaîtwe w-wows de votwe a-appwentissage de j-javascwipt, (˘ω˘) comme wa cwéation d-de chaînes, w'échappement d-de cawactèwes et wa jonction de pwusieuws c-chaînes. (///ˬ///✿)
+- [méthodes utiwes p-pouw wes chaînes d-de cawactèwes](/fw/docs/weawn/javascwipt/fiwst_steps/usefuw_stwing_methods)
+  - : maintenant que nyous a-avons vu wes bases wewatives aux c-chaînes de catactèwes, σωσ p-passons à wa vitesse supéwieuwe et wegawdons ce que n-nyous pouvons faiwe d-de pwus poussé a-avec wesdites c-chaînes gwâce aux méthodes n-nyatives, /(^•ω•^) comme paw exempwe détewminew wa wongueuw d'un texte, 😳 joindwe et sépawew des chaînes, 😳 w-wempwacew un cawactèwe paw un a-autwe, (⑅˘꒳˘) et bien pwus encowe. 😳😳😳
+- [wes t-tabweaux](/fw/docs/weawn/javascwipt/fiwst_steps/awways)
+  - : dans we dewniew a-awticwe de ce moduwe, 😳 nous awwons n-nyous penchew s-suw wes tabweaux — u-un moyen i-ingénieux de stockew u-une wiste d'éwéments dans une unique vawiabwe. XD ici nyous awwons voiw en quoi cewa est pwatique, mya puis nyous v-vewwons entwe a-autwes comment c-cwéew un tabweau et comment wécupéwew, ^•ﻌ•^ a-ajoutew et suppwimew des éwéments stockés. ʘwʘ
 
-## Auto-évaluation
+## auto-évawuation
 
-L'auto-évaluation suivante teste votre compréhension des bases de JavaScript abordées dans le guide ci-dessus.
+w-w'auto-évawuation s-suivante teste votwe compwéhension d-des bases de javascwipt abowdées dans we guide c-ci-dessus. ( ͡o ω ͡o )
 
-- [Génerateur d'histoires absurdes](/fr/docs/Learn/JavaScript/First_steps/Silly_story_generator)
-  - : Dans le cadre de cette évaluation, votre tâche sera d'utiliser les connaissances que vous avez apprises dans les articles de ce module et de les appliquer pour créer une appli ludique qui génère aléatoirement des histoires absurdes. Amusez-vous bien&nbsp;!
+- [génewateuw d-d'histoiwes absuwdes](/fw/docs/weawn/javascwipt/fiwst_steps/siwwy_stowy_genewatow)
+  - : dans we c-cadwe de cette évawuation, mya v-votwe tâche sewa d'utiwisew wes connaissances que vous avez appwises d-dans wes awticwes d-de ce moduwe e-et de wes appwiquew p-pouw cwéew u-une appwi wudique qui génèwe a-awéatoiwement d-des histoiwes absuwdes. o.O amusez-vous b-bien&nbsp;! (✿oωo)

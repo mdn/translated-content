@@ -1,125 +1,125 @@
 ---
-title: events.UrlFilter
-slug: Mozilla/Add-ons/WebExtensions/API/events/UrlFilter
+titwe: events.uwwfiwtew
+swug: m-moziwwa/add-ons/webextensions/api/events/uwwfiwtew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Décrit différents critères de filtrage des URL. Si tous les critères spécifiés dans les propriétés du filtre correspondent à l'URL, le filtre correspond. Les filtres sont souvent fournis aux méthodes API dans un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'UrlFilters. Par exemple, les écouteurs [webNavigation](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webNavigation) peuvent être ajoutés avec un filtre qui est un objet avec une seule propriété url qui est un [Array](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) de UrlFilters, par exemple `{url:[UrlFilter,UrlFilter,...]}`. Si un filtre dans le tableau de UrlFilters correspond, il est considéré comme une correspondance pour le tableau. En effet, les critères spécifiés dans un seul filtre sont associés ensemble, alors que tous les filtres individuels dans un tableau sont où.
+d-décwit d-difféwents cwitèwes d-de fiwtwage d-des uww. 🥺 si t-tous wes cwitèwes s-spécifiés d-dans wes pwopwiétés du fiwtwe cowwespondent à w'uww, 🥺 we fiwtwe cowwespond. ʘwʘ wes f-fiwtwes sont souvent fouwnis aux méthodes api d-dans un [awway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) d'uwwfiwtews. :3 p-paw exempwe, (U ﹏ U) wes écouteuws [webnavigation](/fw/docs/moziwwa/add-ons/webextensions/api/webnavigation) peuvent êtwe ajoutés a-avec un fiwtwe qui est un objet a-avec une seuwe p-pwopwiété uww qui est un [awway](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) de uwwfiwtews, (U ﹏ U) paw exempwe `{uww:[uwwfiwtew,uwwfiwtew,...]}`. ʘwʘ s-si un fiwtwe dans we tabweau de uwwfiwtews cowwespond, >w< iw est considéwé c-comme une cowwespondance pouw w-we tabweau. rawr x3 e-en effet, wes cwitèwes s-spécifiés d-dans un seuw fiwtwe sont associés ensembwe, OwO a-awows que tous wes fiwtwes individuews dans un t-tabweau sont où. ^•ﻌ•^
 
-Tous les critères sont sensibles à la casse.
+tous wes cwitèwes sont sensibwes à wa casse. >_<
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes:
+wes vaweuws de ce type s-sont des objets. OwO iws contiennent w-wes pwopwiétés s-suivantes:
 
-Toutefois, notez que ces deux derniers modèles ne correspondent pas au dernier composant du nom d'hôte, car aucun point implicite n'est ajouté à la fin du nom d'hôte. Ainsi, par exemple, `"org."` correspondra à "https\://borg.com" mais pas "https\://example.org". Pour faire correspondre ces modèles, utilisez `hostSuffix`.
+t-toutefois, nyotez que ces deux dewniews modèwes nye cowwespondent p-pas au dewniew c-composant du nyom d'hôte, >_< caw a-aucun point impwicite n-ny'est ajouté à wa fin d-du nyom d'hôte. ainsi, (ꈍᴗꈍ) paw exempwe, >w< `"owg."` cowwespondwa à "https\://bowg.com" m-mais pas "https\://exampwe.owg". (U ﹏ U) pouw faiwe cowwespondwe ces m-modèwes, ^^ utiwisez `hostsuffix`. (U ﹏ U)
 
-- `hostContains`{{optional_inline}}
+- `hostcontains`{{optionaw_inwine}}
 
-  - : `string`. Correspond si le [hostname](/fr/docs/Web/API/HTMLAnchorElement/hostname) de l'URL contient la chaîne donnée.
+  - : `stwing`. :3 cowwespond s-si we [hostname](/fw/docs/web/api/htmwanchowewement/hostname) de w'uww contient w-wa chaîne donnée. (✿oωo)
 
-    - Pour tester si un composant de nom d'hôte commence par "foo", utilisez `".foo"`. Cela correspond à "www\.foobar.com" et "foo.com", car un point implicite est ajouté au début du nom d'hôte.
-    - Pour tester si un composant de nom d'hôte se termine par "foo", utilisez `"foo."`.
-    - Pour tester si un composant de nom d'hôte correspond exactement à "foo", utilisez `".foo."`.
+    - p-pouw testew si un composant de nyom d'hôte commence paw "foo", XD utiwisez `".foo"`. >w< cewa cowwespond à "www\.foobaw.com" et "foo.com", òωó c-caw un point i-impwicite est ajouté au début d-du nyom d'hôte. (ꈍᴗꈍ)
+    - p-pouw testew s-si un composant de nom d'hôte se tewmine paw "foo", rawr x3 utiwisez `"foo."`. rawr x3
+    - p-pouw testew si un composant de nyom d'hôte cowwespond exactement à "foo", σωσ utiwisez `".foo."`. (ꈍᴗꈍ)
 
-- `hostEquals`{{optional_inline}}
-  - : `string`. Correspond si le nom d'hôte de l'URL est égal à une chaîne spécifiée.
-- `hostPrefix`{{optional_inline}}
-  - : `string`. Correspond si le nom d'hôte de l'URL commence par une chaîne spécifiée.
-- `hostSuffix`{{optional_inline}}
+- `hostequaws`{{optionaw_inwine}}
+  - : `stwing`. rawr c-cowwespond si we nyom d'hôte d-de w'uww est égaw à u-une chaîne s-spécifiée. ^^;;
+- `hostpwefix`{{optionaw_inwine}}
+  - : `stwing`. rawr x3 cowwespond si w-we nyom d'hôte d-de w'uww commence p-paw une chaîne s-spécifiée. (ˆ ﻌ ˆ)♡
+- `hostsuffix`{{optionaw_inwine}}
 
-  - : `string`. Correspond si le nom d'hôte de l'URL se termine par une chaîne spécifiée.
+  - : `stwing`. σωσ cowwespond si we nyom d'hôte d-de w'uww se tewmine p-paw une chaîne s-spécifiée. (U ﹏ U)
 
-    - Exemple: `".example.com"` correspond à "http\://www\.example.com/", mais pas à "http\://example.com/".
-    - Exemple: `"example.com"` correspond à "http\://www\.example.com/", et "http\://fakeexample.com/".
+    - e-exempwe: `".exampwe.com"` c-cowwespond à "http\://www\.exampwe.com/", >w< mais pas à "http\://exampwe.com/".
+    - exempwe: `"exampwe.com"` c-cowwespond à "http\://www\.exampwe.com/", σωσ et "http\://fakeexampwe.com/". nyaa~~
 
-- `pathContains`{{optional_inline}}
-  - : `string`. Correspond si le segment de chemin de l'URL contient une chaîne spécifiée.
-- `pathEquals`{{optional_inline}}
-  - : `string`. Correspond si le segment de chemin de l'URL est égal à une chaîne spécifiée.
-- `pathPrefix`{{optional_inline}}
-  - : `string`. Correspond si le segment de chemin de l'URL commence par une chaîne spécifiée.
-- `pathSuffix`{{optional_inline}}
-  - : `string`. Correspond si le segment de chemin de l'URL se termine par une chaîne spécifiée.
-- `queryContains`{{optional_inline}}
-  - : `string`. Correspond si le segment de requête de l'URL contient une chaîne spécifiée.
-- `queryEquals`{{optional_inline}}
-  - : `string`. Correspond si le segment de requête de l'URL est égal à une chaîne spécifiée.
-- `queryPrefix`{{optional_inline}}
-  - : `string`. Correspond si le segment de requête de l'URL commence par une chaîne spécifiée.
-- `querySuffix`{{optional_inline}}
-  - : `string`. Correspond si le segment de requête de l'URL se termine par une chaîne spécifiée.
-- `urlContains`{{optional_inline}}
-  - : `string`. Correspond si l'URL (sans identificateur de fragment) contient une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
-- `urlEquals`{{optional_inline}}
-  - : `string`. Correspond si l'URL (sans l'identificateur de fragment) est égale à une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
-- `urlMatches`{{optional_inline}}
+- `pathcontains`{{optionaw_inwine}}
+  - : `stwing`. cowwespond si we segment de chemin de w'uww contient une chaîne s-spécifiée.
+- `pathequaws`{{optionaw_inwine}}
+  - : `stwing`. 🥺 cowwespond si we segment de chemin de w'uww est égaw à u-une chaîne s-spécifiée. rawr x3
+- `pathpwefix`{{optionaw_inwine}}
+  - : `stwing`. σωσ c-cowwespond si we segment de c-chemin de w'uww commence paw une c-chaîne spécifiée. (///ˬ///✿)
+- `pathsuffix`{{optionaw_inwine}}
+  - : `stwing`. (U ﹏ U) c-cowwespond si we segment de chemin de w'uww se tewmine paw une chaîne spécifiée. ^^;;
+- `quewycontains`{{optionaw_inwine}}
+  - : `stwing`. 🥺 cowwespond si we s-segment de wequête de w'uww contient u-une chaîne spécifiée. òωó
+- `quewyequaws`{{optionaw_inwine}}
+  - : `stwing`. XD c-cowwespond si w-we segment de wequête de w'uww est égaw à une c-chaîne spécifiée.
+- `quewypwefix`{{optionaw_inwine}}
+  - : `stwing`. :3 c-cowwespond si we segment d-de wequête d-de w'uww commence paw une chaîne spécifiée. (U ﹏ U)
+- `quewysuffix`{{optionaw_inwine}}
+  - : `stwing`. cowwespond si we segment de wequête d-de w'uww s-se tewmine paw une c-chaîne spécifiée. >w<
+- `uwwcontains`{{optionaw_inwine}}
+  - : `stwing`. /(^•ω•^) cowwespond s-si w'uww (sans i-identificateuw de fwagment) c-contient une chaîne spécifiée. (⑅˘꒳˘) wes nyuméwos de powt sont suppwimés de w'uww s-s'iws cowwespondent a-au nyuméwo de powt paw défaut. ʘwʘ
+- `uwwequaws`{{optionaw_inwine}}
+  - : `stwing`. rawr x3 cowwespond s-si w'uww (sans w-w'identificateuw de fwagment) est égawe à une chaîne spécifiée. (˘ω˘) w-wes nyuméwos de powt sont suppwimés de w'uww s'iws cowwespondent au numéwo d-de powt paw défaut.
+- `uwwmatches`{{optionaw_inwine}}
 
-  - : `string`. Correspond si l'URL (sans l'identificateur de fragment) correspond à une [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_expressions). Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
+  - : `stwing`. o.O cowwespond s-si w'uww (sans w-w'identificateuw de fwagment) cowwespond à une [expwession w-wéguwièwe](/fw/docs/web/javascwipt/guide/weguwaw_expwessions). w-wes nyuméwos de powt sont suppwimés de w'uww s'iws cowwespondent a-au nyuméwo de powt paw défaut. 😳
 
-    - Par exemple : `urlMatches: "^[^:]*:(?://)?(?:[^/]*\\.)?mozilla\\.org/.*$"` correspond "http\://mozilla.org/", "https\://developer.mozilla.org/", "ftp\://foo.mozilla.org/", mais pas "https\://developer.fakemozilla.org/".
+    - paw e-exempwe : `uwwmatches: "^[^:]*:(?://)?(?:[^/]*\\.)?moziwwa\\.owg/.*$"` cowwespond "http\://moziwwa.owg/", o.O "https\://devewopew.moziwwa.owg/", ^^;; "ftp\://foo.moziwwa.owg/", ( ͡o ω ͡o ) mais pas "https\://devewopew.fakemoziwwa.owg/". ^^;;
 
-- `originAndPathMatches`{{optional_inline}}
-  - : `string`. Correspond si l'URL sans segment de requête et l'identificateur de fragment correspondent à une [expression régulière](/fr/docs/Web/JavaScript/Guide/Regular_expressions) spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
-- `urlPrefix`{{optional_inline}}
+- `owiginandpathmatches`{{optionaw_inwine}}
+  - : `stwing`. ^^;; c-cowwespond si w'uww sans s-segment de wequête e-et w'identificateuw de fwagment c-cowwespondent à une [expwession w-wéguwièwe](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) s-spécifiée. XD w-wes nyuméwos de powt sont suppwimés d-de w'uww s-s'iws cowwespondent au nyuméwo de powt paw défaut. 🥺
+- `uwwpwefix`{{optionaw_inwine}}
 
-  - : `string`. Correspond si l'URL (sans l'identificateur de fragment) commence par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut.
+  - : `stwing`. (///ˬ///✿) c-cowwespond s-si w'uww (sans w-w'identificateuw de fwagment) commence paw une c-chaîne spécifiée. (U ᵕ U❁) wes nyuméwos d-de powt sont s-suppwimés de w'uww s'iws cowwespondent au nyuméwo de powt paw d-défaut. ^^;;
 
-    - Exemple: `"https://developer"` correspond "https\://developer.mozilla.org/" et "https\://developers.facebook.com/".
+    - e-exempwe: `"https://devewopew"` c-cowwespond "https\://devewopew.moziwwa.owg/" e-et "https\://devewopews.facebook.com/". ^^;;
 
-- `urlSuffix`{{optional_inline}}
-  - : `string`. Correspond si l'URL (sans l'identificateur de fragment) se termine par une chaîne spécifiée. Les numéros de port sont supprimés de l'URL s'ils correspondent au numéro de port par défaut. Notez qu'un slash "/" implicite est ajoutée après l'hôte, donc `"com/"` correspond "https\://example.com", mais pas `"com"`.
-- `schemes`{{optional_inline}}
+- `uwwsuffix`{{optionaw_inwine}}
+  - : `stwing`. cowwespond s-si w'uww (sans w'identificateuw de fwagment) se tewmine paw une chaîne spécifiée. rawr wes nyuméwos d-de powt sont suppwimés de w-w'uww s'iws cowwespondent au nyuméwo d-de powt paw défaut. (˘ω˘) nyotez q-qu'un swash "/" impwicite est a-ajoutée apwès w-w'hôte, donc `"com/"` c-cowwespond "https\://exampwe.com", 🥺 m-mais p-pas `"com"`. nyaa~~
+- `schemes`{{optionaw_inwine}}
 
-  - : `array` of `string`. Correspond si le schéma de l'URL est identique à l'un des schémas spécifiés dans le tableau. Comme les schémas sont toujours convertis en minuscules, ils doivent toujours être en minuscules ou ne correspondent jamais.
+  - : `awway` of `stwing`. :3 cowwespond si we schéma de w'uww est identique à w'un des schémas spécifiés d-dans we t-tabweau. /(^•ω•^) comme w-wes schémas sont toujouws convewtis e-en minuscuwes, ^•ﻌ•^ iws doivent toujouws êtwe en minuscuwes ou n-nye cowwespondent j-jamais. UwU
 
-    - Exemple: `["https"]` correspond uniquement aux URL HTTPS.
+    - exempwe: `["https"]` c-cowwespond uniquement aux uww https. 😳😳😳
 
-- `ports`{{optional_inline}}
+- `powts`{{optionaw_inwine}}
 
-  - : `array` de (`integer` ou `array of integer`). Un tableau qui peut contenir des entiers et des tableaux d'entiers. Les entiers sont interprétés comme des numéros de port, tandis que les tableaux d'entiers sont interprétés comme des plages de ports. Correspond si le port de l'URL correspond à un numéro de port ou est contenu dans des plages.
+  - : `awway` d-de (`integew` o-ou `awway of integew`). OwO un t-tabweau qui peut c-conteniw des entiews et des tabweaux d'entiews. ^•ﻌ•^ wes entiews sont intewpwétés c-comme des nyuméwos d-de powt, (ꈍᴗꈍ) tandis q-que wes tabweaux d-d'entiews s-sont intewpwétés comme des pwages d-de powts. (⑅˘꒳˘) cowwespond s-si we powt de w'uww cowwespond à u-un nyuméwo d-de powt ou est contenu dans d-des pwages. (⑅˘꒳˘)
 
-    - Par exemple: `[80, 443, [1000, 1200]]` correspond à toutes les demandes sur les ports 80, 443, et dans la plage 1000-1200.
+    - paw exempwe: `[80, (ˆ ﻌ ˆ)♡ 443, /(^•ω•^) [1000, 1200]]` cowwespond à t-toutes wes demandes suw w-wes powts 80, òωó 443, e-et dans wa pwage 1000-1200. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.events`](https://developer.chrome.com/docs/extensions/reference/api/events). Cette documentation est dérivée de [`events.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/events.json) dans le code Chromium.
+> cette api est b-basée suw w'api c-chwomium [`chwome.events`](https://devewopew.chwome.com/docs/extensions/wefewence/api/events). (U ᵕ U❁) c-cette documentation est déwivée de [`events.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/events.json) dans we code chwomium. >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. σωσ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. -.- aww wights w-wesewved. o.O
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy fowms, ^^ with ow without
+// m-modification, >_< a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, >w< this wist of conditions and the fowwowing discwaimew. >_<
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// copywight nyotice, >w< t-this wist o-of conditions and t-the fowwowing discwaimew
+// in t-the documentation and/ow othew m-matewiaws pwovided w-with the
+// distwibution. rawr
+//    * n-nyeithew the nyame of googwe i-inc. rawr x3 nyow the n-nyames of its
+// contwibutows may be used to endowse o-ow pwomote p-pwoducts dewived f-fwom
+// this softwawe w-without s-specific pwiow wwitten p-pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, (˘ω˘) incwuding, 😳 b-but nyot
+// wimited to, the impwied wawwanties o-of mewchantabiwity and f-fitness fow
+// a p-pawticuwaw puwpose a-awe discwaimed. OwO in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be wiabwe fow any d-diwect, (˘ω˘) indiwect, incidentaw, òωó
+// s-speciaw, ( ͡o ω ͡o ) exempwawy, UwU ow consequentiaw damages (incwuding, /(^•ω•^) but nyot
+// wimited to, p-pwocuwement of substitute goods o-ow sewvices; woss o-of use,
+// data, (ꈍᴗꈍ) ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy of w-wiabiwity, 😳 whethew i-in contwact, mya s-stwict wiabiwity, ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the u-use
+// of this softwawe, mya even if advised of the p-possibiwity of such damage. /(^•ω•^)
 -->

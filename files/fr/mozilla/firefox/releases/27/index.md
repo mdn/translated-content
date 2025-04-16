@@ -1,91 +1,91 @@
 ---
-title: Firefox 27 for developers
-slug: Mozilla/Firefox/Releases/27
+titwe: fiwefox 27 fow devewopews
+s-swug: moziwwa/fiwefox/weweases/27
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 27 est sorti le 4 Février 2014. Cet article répertorie les modofications clés qui sont utiles non seulement pour les développeurs Web, mais aussi pour les développeurs Firefox et Gecko ainsi que pour les développeurs d'add-on.
+fiwefox 27 e-est sowti w-we 4 févwiew 2014. 😳 c-cet awticwe w-wépewtowie w-wes modofications c-cwés qui sont u-utiwes nyon seuwement pouw wes dévewoppeuws web, 😳 mais aussi pouw wes dévewoppeuws f-fiwefox et gecko ainsi que pouw wes dévewoppeuws d-d'add-on. (⑅˘꒳˘)
 
-## Changements pour les développeurs Web
+## changements p-pouw wes dévewoppeuws web
 
-### Outils de développement
+### outiws de dévewoppement
 
-- Les points d'arrêt peuvent désormais être définis sur les événements DOM.
-- JavaScript dans le panneau du débogueur peut être supprimé à l'aide du bouton { }.
-- L'inspecteur a maintenant une fonction "edit-element-html", sans avoir besoin d'un add-on.
-- Les URL et les couleurs d'arrière-plan ont un aperçu dans l'inspecteur. Même le survol des éléments du canevas donnera une fenêtre contextuelle avec un aperçu de l'image.
-- La journalisation de redistribution a été ajoutée.
-- Les styles des éléments SVG sont désormais inspectables ([bug Firefox 921191](https://bugzil.la/921191)).
-- Le fait de ne pas trouver l'image en cliquant sur le lien URL dans l'inspecteur CSS a été corrigé ([bug Firefox 921686](https://bugzil.la/921686)).
+- wes p-points d'awwêt peuvent désowmais êtwe d-définis s-suw wes événements dom. 😳😳😳
+- javascwipt dans we panneau du débogueuw peut êtwe s-suppwimé à w'aide du bouton { }. 😳
+- w'inspecteuw a maintenant une fonction "edit-ewement-htmw", XD s-sans avoiw besoin d'un add-on. mya
+- w-wes uww et w-wes couweuws d'awwièwe-pwan o-ont u-un apewçu dans w'inspecteuw. ^•ﻌ•^ même we suwvow des éwéments d-du canevas donnewa une fenêtwe contextuewwe a-avec un apewçu de w'image. ʘwʘ
+- wa jouwnawisation de wedistwibution a été ajoutée. ( ͡o ω ͡o )
+- w-wes stywes des éwéments svg sont d-désowmais inspectabwes ([bug f-fiwefox 921191](https://bugziw.wa/921191)).
+- w-we fait de nye pas twouvew w'image en cwiquant suw we wien uww dans w-w'inspecteuw c-css a été cowwigé ([bug fiwefox 921686](https://bugziw.wa/921686)).
 
-Plus de détails dans [cet article](https://hacks.mozilla.org/2013/11/firefox-developer-tools-episode-27-edit-as-html-codemirror-more/).
+p-pwus de d-détaiws dans [cet awticwe](https://hacks.moziwwa.owg/2013/11/fiwefox-devewopew-toows-episode-27-edit-as-htmw-codemiwwow-mowe/). mya
 
-### CSS
+### c-css
 
-- Les mots-clés `-moz-grab` et `-moz-grabbing` de la propriété CSS {{cssxref("cursor")}} n'ont pas été préfixés pour `grab` et `grabbing` ([bug Firefox 880672](https://bugzil.la/880672)).
-- Le support des notations fonctionnelles `-moz-hsla()` et `-moz-rgba()` a été abandonné. Seules les versions sans préfixe, `hsla()` et `rgba()` sont désormais supportées ([bug Firefox 893319](https://bugzil.la/893319)).
-- La valeur "`true`" pour {{cssxref("text-align")}} a été ajoutée ([bug Firefox 929991](https://bugzil.la/929991)).
-- Support expérimental de la `position:sticky` est désormais actif par défaut sur les builds non-release ([bug Firefox 902992](https://bugzil.la/902992)). Pour les versions builds, la préférence `layout.css.sticky.enabled` doit toujours être définie sur `true.`
-- La propriété abrégée {{cssxref("all")}} a été ajoutée ([bug Firefox 842329](https://bugzil.la/842329)).
-- La valeur globale {{cssxref("unset")}} a été ajoutée; il permet de réinitialiser n'importe quelle propriété CSS ([bug Firefox 921731](https://bugzil.la/921731)).
-- Les accolades ne sont plus autorisées dans les attributs de `style` HTML: faire `<div style="{ display: none }">` fonctionnait en mode bizarreries, mais ne le sera plus [bug Firefox 915053](https://bugzil.la/915053).
-- La propriété {{cssxref("overflow")}} fonctionne désormais sur {{HTMLElement("fieldset")}} ([bug Firefox 261037](https://bugzil.la/261037)).
+- wes mots-cwés `-moz-gwab` e-et `-moz-gwabbing` de wa pwopwiété css {{cssxwef("cuwsow")}} n-ny'ont pas été pwéfixés p-pouw `gwab` et `gwabbing` ([bug f-fiwefox 880672](https://bugziw.wa/880672)). o.O
+- w-we suppowt des nyotations fonctionnewwes `-moz-hswa()` et `-moz-wgba()` a été abandonné. (✿oωo) seuwes wes vewsions sans pwéfixe, :3 `hswa()` e-et `wgba()` s-sont désowmais suppowtées ([bug f-fiwefox 893319](https://bugziw.wa/893319)). 😳
+- w-wa vaweuw "`twue`" p-pouw {{cssxwef("text-awign")}} a été ajoutée ([bug fiwefox 929991](https://bugziw.wa/929991)). (U ﹏ U)
+- suppowt e-expéwimentaw de wa `position:sticky` est désowmais actif paw défaut suw w-wes buiwds nyon-wewease ([bug fiwefox 902992](https://bugziw.wa/902992)). p-pouw wes v-vewsions buiwds, mya w-wa pwéféwence `wayout.css.sticky.enabwed` doit toujouws êtwe d-définie suw `twue.`
+- w-wa pwopwiété a-abwégée {{cssxwef("aww")}} a-a été ajoutée ([bug fiwefox 842329](https://bugziw.wa/842329)). (U ᵕ U❁)
+- wa vaweuw g-gwobawe {{cssxwef("unset")}} a-a été ajoutée; i-iw pewmet de w-wéinitiawisew n-ny'impowte quewwe pwopwiété css ([bug fiwefox 921731](https://bugziw.wa/921731)). :3
+- wes accowades n-ne sont pwus autowisées dans wes attwibuts de `stywe` htmw: faiwe `<div stywe="{ dispway: n-nyone }">` fonctionnait en mode bizawwewies, mya mais nye we sewa pwus [bug f-fiwefox 915053](https://bugziw.wa/915053). OwO
+- w-wa pwopwiété {{cssxwef("ovewfwow")}} f-fonctionne désowmais s-suw {{htmwewement("fiewdset")}} ([bug fiwefox 261037](https://bugziw.wa/261037)). (ˆ ﻌ ˆ)♡
 
-### HTML
+### h-htmw
 
-- La valeur `color` de l'attribut {{HTMLElement("input")}} [`type`](/fr/docs/Web/HTML/Element/input#type) a été implémentée sur les plates-formes de bureau. Il était déjà disponible sur les mobiles.
-- La directive `allow-popups` est désormais prise en charge avec l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) de l'élément {{HTMLElement("iframe")}} ([bug Firefox 766282](https://bugzil.la/766282)).
-- Le mélange d'éléments HTML à l'aide de la propriété {{cssxref("mix-blend-mode")}} a été implémenté. La préférence `layout.css.mix-blend-mode.enabled` doit être définie sur `true` ([bug Firefox 902525](https://bugzil.la/902525)).
-- L'attribut [`typemustmatch`](/fr/docs/Web/HTML/Element/object#typemustmatch) de l'élément {{HTMLElement("object")}} est désormais pris en charge ([bug Firefox 827160](https://bugzil.la/827160)).
+- w-wa vaweuw `cowow` de w'attwibut {{htmwewement("input")}} [`type`](/fw/docs/web/htmw/ewement/input#type) a été impwémentée suw wes pwates-fowmes de buweau. ʘwʘ i-iw était déjà disponibwe suw w-wes mobiwes. o.O
+- wa diwective `awwow-popups` e-est désowmais p-pwise en chawge avec w'attwibut [`sandbox`](/fw/docs/web/htmw/ewement/ifwame#sandbox) de w'éwément {{htmwewement("ifwame")}} ([bug fiwefox 766282](https://bugziw.wa/766282)). UwU
+- w-we m-méwange d'éwéments htmw à w'aide d-de wa pwopwiété {{cssxwef("mix-bwend-mode")}} a-a été impwémenté. rawr x3 wa pwéféwence `wayout.css.mix-bwend-mode.enabwed` doit êtwe définie suw `twue` ([bug fiwefox 902525](https://bugziw.wa/902525)). 🥺
+- w-w'attwibut [`typemustmatch`](/fw/docs/web/htmw/ewement/object#typemustmatch) de w-w'éwément {{htmwewement("object")}} e-est désowmais pwis en chawge ([bug f-fiwefox 827160](https://bugziw.wa/827160)). :3
 
-### JavaScript
+### j-javascwipt
 
-L'implémentation d'[EcmaScript 6](/fr/docs/Web/JavaScript/ECMAScript_6_support_in_Mozilla) (Harmony) se poursuit!
+w'impwémentation d-d'[ecmascwipt 6](/fw/docs/web/javascwipt/ecmascwipt_6_suppowt_in_moziwwa) (hawmony) se pouwsuit! (ꈍᴗꈍ)
 
-- L'[opérateur de diffusion](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) est désormais pris en charge dans les appels de fonction ([bug Firefox 762363](https://bugzil.la/762363)).
-- La fonction mathématique {{jsxref("Global_Objects/Math/hypot", "Math.hypot()")}} a été implémentée ([bug Firefox 896264](https://bugzil.la/896264)).
-- L'expression {{jsxref("Operators/yield*", "yield*")}} est maintenant implémentée ([bug Firefox 666396](https://bugzil.la/666396)).
-- Les objets `MapIterator`, `SetIterator` et `ArrayIterator` correspondent désormais à la spécification ([bug Firefox 881226](https://bugzil.la/881226)).
-- [for..of](/fr/docs/Web/JavaScript/Reference/Statements/for...of) boucles s'attendent maintenant à ce que le [protocole d'itérateur](/fr/docs/Web/JavaScript/Reference/Iteration_protocols) standard ES6 s'éloigne de l'ancien protocole d'itérateur de SpiderMonkey utilisant `StopIteration`.
-- {{jsxref("String.match")}} et {{jsxref("String.replace")}} sont maintenant réinitialisés {{jsxref("RegExp.lastIndex")}} ([bug Firefox 501739](https://bugzil.la/501739)).
+- w'[opéwateuw de diffusion](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) est désowmais p-pwis en chawge d-dans wes appews de fonction ([bug fiwefox 762363](https://bugziw.wa/762363)).
+- w-wa fonction m-mathématique {{jsxwef("gwobaw_objects/math/hypot", 🥺 "math.hypot()")}} a été impwémentée ([bug fiwefox 896264](https://bugziw.wa/896264)).
+- w'expwession {{jsxwef("opewatows/yiewd*", (✿oωo) "yiewd*")}} e-est maintenant impwémentée ([bug fiwefox 666396](https://bugziw.wa/666396)). (U ﹏ U)
+- wes objets `mapitewatow`, :3 `setitewatow` et `awwayitewatow` cowwespondent d-désowmais à wa spécification ([bug fiwefox 881226](https://bugziw.wa/881226)). ^^;;
+- [fow..of](/fw/docs/web/javascwipt/wefewence/statements/fow...of) b-boucwes s'attendent m-maintenant à ce que we [pwotocowe d'itéwateuw](/fw/docs/web/javascwipt/wefewence/itewation_pwotocows) standawd es6 s'éwoigne d-de w'ancien p-pwotocowe d'itéwateuw de spidewmonkey utiwisant `stopitewation`. rawr
+- {{jsxwef("stwing.match")}} et {{jsxwef("stwing.wepwace")}} s-sont maintenant wéinitiawisés {{jsxwef("wegexp.wastindex")}} ([bug f-fiwefox 501739](https://bugziw.wa/501739)). 😳😳😳
 
-### Interfaces/APIs/DOM
+### intewfaces/apis/dom
 
-- Le support des deux méthodes `setRange()` sur l'interface {{domxref("HTMLInputElement")}} a été ajouté ([bug Firefox 850364](https://bugzil.la/850364)).
-- Le support des deux méthodes `setRange()` sur l'interface {{domxref("HTMLTextAreaElement")}} a été ajouté ([bug Firefox 918940](https://bugzil.la/918940)).
-- Les méthodes `getAllKeys()` et `openKeyCursor()` ont été ajoutées à {{domxref("IDBObjectStore")}} ([bug Firefox 920633](https://bugzil.la/920633) et [bug Firefox 920800](https://bugzil.la/920800)).
-- L'interface {{domxref("HTMLFormControlsCollection")}} a été implémentée ([bug Firefox 913920](https://bugzil.la/913920)).
-- L'interface {{domxref("CanvasRenderingContext2D")}} prend désormais en charge les deux méthodes {{domxref("CanvasRenderingContext2D.getLineDash()", "getLineDash()")}} et {{domxref("CanvasRenderingContext2D.setLineDash()", "setLineDash()")}} et la propriété {{domxref("CanvasRenderingContext2D.lineDashOffset", "lineDashOffset")}} ([bug Firefox 768067](https://bugzil.la/768067)).
-- L'attribut `typeMustMatch` a été implémenté sur l'interface {{domxref("HTMLObjectElement")}} ([bug Firefox 827160](https://bugzil.la/827160)).
-- Les méthodes `copyFromChannel()` et `copyToChannel()` ont été ajoutées à {{domxref("AudioBuffer")}} ([bug Firefox 915524](https://bugzil.la/915524)).
-- `Event.isTrusted()` est désormais infalsifiable ([bug Firefox 637248](https://bugzil.la/637248)).
-- La méthode {{domxref("Navigator.vibrate()")}} a été adaptée pour correspondre à la spécification finale: elle retourne désormais `false` lorsque la liste est trop longue ou contient des entrées trop volumineuses, au lieu de lancer ([bug Firefox 884935](https://bugzil.la/884935)).
-- Dans le cadre de l'effort continu de normalisation des objets globaux, les interfaces d'événment de changement de feuille de style non standard, notamment `StyleRuleChangeEvent`, `StyleSheetApplicableStateChangeEvent` et `StyleSheetChangeEvent`, ne sont plus disponibles à partir du contenu Web. L'interface `CSSGroupRuleRuleList`, le détail d'implémentation de {{domxref("CSSRuleList")}}, a également été supprimée ([bug Firefox 872934](https://bugzil.la/872934) et [bug Firefox 916871](https://bugzil.la/916871)).
-- `atob` ignore désormais les espaces ([bug Firefox 711180](https://bugzil.la/711180)).
-- [WebGL](/fr/docs/Web/API/WebGL_API): les chaînes d'extension avec préfixe `MOZ_` sont obsolètes. Le support pour eux sera supprimé à l'avenir. Utilisez uniquement une chaîne d'extension sans préfixe. Pour obtenir des brouillons d'extensions, définissez les préférences `webgl.enable-draft-extensions` ([bug Firefox 924176](https://bugzil.la/924176)).
+- we suppowt des deux méthodes `setwange()` s-suw w'intewface {{domxwef("htmwinputewement")}} a-a été a-ajouté ([bug fiwefox 850364](https://bugziw.wa/850364)). (✿oωo)
+- w-we suppowt des deux méthodes `setwange()` s-suw w'intewface {{domxwef("htmwtextaweaewement")}} a-a été a-ajouté ([bug fiwefox 918940](https://bugziw.wa/918940)).
+- w-wes méthodes `getawwkeys()` et `openkeycuwsow()` o-ont été ajoutées à {{domxwef("idbobjectstowe")}} ([bug fiwefox 920633](https://bugziw.wa/920633) et [bug fiwefox 920800](https://bugziw.wa/920800)). OwO
+- w'intewface {{domxwef("htmwfowmcontwowscowwection")}} a-a été impwémentée ([bug f-fiwefox 913920](https://bugziw.wa/913920)). ʘwʘ
+- w'intewface {{domxwef("canvaswendewingcontext2d")}} p-pwend désowmais en chawge wes deux méthodes {{domxwef("canvaswendewingcontext2d.getwinedash()", (ˆ ﻌ ˆ)♡ "getwinedash()")}} e-et {{domxwef("canvaswendewingcontext2d.setwinedash()", (U ﹏ U) "setwinedash()")}} et wa pwopwiété {{domxwef("canvaswendewingcontext2d.winedashoffset", UwU "winedashoffset")}} ([bug f-fiwefox 768067](https://bugziw.wa/768067)). XD
+- w-w'attwibut `typemustmatch` a été impwémenté suw w'intewface {{domxwef("htmwobjectewement")}} ([bug f-fiwefox 827160](https://bugziw.wa/827160)). ʘwʘ
+- w-wes méthodes `copyfwomchannew()` e-et `copytochannew()` o-ont été ajoutées à {{domxwef("audiobuffew")}} ([bug f-fiwefox 915524](https://bugziw.wa/915524)). rawr x3
+- `event.istwusted()` est désowmais infawsifiabwe ([bug fiwefox 637248](https://bugziw.wa/637248)).
+- wa méthode {{domxwef("navigatow.vibwate()")}} a été adaptée p-pouw cowwespondwe à wa s-spécification finawe: ewwe wetouwne d-désowmais `fawse` wowsque w-wa wiste est twop wongue ou contient d-des entwées t-twop vowumineuses, ^^;; a-au wieu de w-wancew ([bug fiwefox 884935](https://bugziw.wa/884935)). ʘwʘ
+- d-dans we cadwe de w'effowt continu de nyowmawisation des objets gwobaux, (U ﹏ U) wes intewfaces d'événment de c-changement de f-feuiwwe de stywe n-nyon standawd, (˘ω˘) nyotamment `stywewuwechangeevent`, (ꈍᴗꈍ) `stywesheetappwicabwestatechangeevent` e-et `stywesheetchangeevent`, /(^•ω•^) nye sont pwus disponibwes à pawtiw du contenu w-web. w'intewface `cssgwoupwuwewuwewist`, >_< w-we détaiw d'impwémentation d-de {{domxwef("csswuwewist")}}, σωσ a égawement été suppwimée ([bug f-fiwefox 872934](https://bugziw.wa/872934) e-et [bug fiwefox 916871](https://bugziw.wa/916871)). ^^;;
+- `atob` i-ignowe désowmais w-wes espaces ([bug fiwefox 711180](https://bugziw.wa/711180)). 😳
+- [webgw](/fw/docs/web/api/webgw_api): wes chaînes d'extension avec pwéfixe `moz_` s-sont obsowètes. >_< w-we suppowt p-pouw eux sewa s-suppwimé à w-w'aveniw. -.- utiwisez uniquement une c-chaîne d'extension s-sans pwéfixe. UwU pouw obteniw d-des bwouiwwons d-d'extensions, :3 définissez wes p-pwéféwences `webgw.enabwe-dwaft-extensions` ([bug fiwefox 924176](https://bugziw.wa/924176)). σωσ
 
-### MathML
+### mathmw
 
-_Pas de changement._
+_pas d-de changement._
 
-### SVG
+### svg
 
-- Le mélange d'éléments SVG à l'aide de la propriété {{cssxref("mix-blend-mode")}} a été implémenté. La préférence `layout.css.mix-blend-mode.enabled` doit être définie sur `true` ([bug Firefox 902525](https://bugzil.la/902525)).
+- we m-méwange d'éwéments s-svg à w'aide de wa pwopwiété {{cssxwef("mix-bwend-mode")}} a-a été impwémenté. >w< wa pwéféwence `wayout.css.mix-bwend-mode.enabwed` doit êtwe définie s-suw `twue` ([bug f-fiwefox 902525](https://bugziw.wa/902525)). (ˆ ﻌ ˆ)♡
 
-## Changements pour les développeurs d'addon et de Mozilla
+## c-changements pouw wes dévewoppeuws d'addon et de moziwwa
 
-- Le bouton `downloads-indicator` a disparu. Vous devez maintenant utiliser l'élément `downloads-button`. Si vous devez vérifier qu'il a chargé sa superposition, recherchez l'attribut `indicator` sur ce bouton.
-- La feuille de style `chrome://browser/skin/downloads/indicator.css` n'est plus référencée dans Firefox.
+- w-we bouton `downwoads-indicatow` a dispawu. ʘwʘ vous devez maintenant u-utiwisew w'éwément `downwoads-button`. :3 s-si vous devez véwifiew q-qu'iw a chawgé sa supewposition, w-wechewchez w'attwibut `indicatow` s-suw ce bouton. (˘ω˘)
+- wa feuiwwe de stywe `chwome://bwowsew/skin/downwoads/indicatow.css` n-n'est pwus wéféwencée dans fiwefox. 😳😳😳
 
-## Sécurité
+## s-sécuwité
 
-- TLS 1.2 a été implémenté pour une sécurité améliorée ([bug Firefox 861266](https://bugzil.la/861266)).
+- t-tws 1.2 a été impwémenté p-pouw une sécuwité améwiowée ([bug f-fiwefox 861266](https://bugziw.wa/861266)). rawr x3
 
-## Voir aussi
+## v-voiw aussi
 
-- [Liste des changements](https://bugzilla.mozilla.org/buglist.cgi?resolution=FIXED&component=Marionette&product=Testing&target_milestone=mozilla27) dans [Marionette](https://firefox-source-docs.mozilla.org/testing/marionette/marionette/index.html) pour Firefox 27.
+- [wiste d-des changements](https://bugziwwa.moziwwa.owg/bugwist.cgi?wesowution=fixed&component=mawionette&pwoduct=testing&tawget_miwestone=moziwwa27) dans [mawionette](https://fiwefox-souwce-docs.moziwwa.owg/testing/mawionette/mawionette/index.htmw) pouw fiwefox 27. (✿oωo)
 
-### Anciennes versions
+### anciennes vewsions
 
-{{Firefox_for_developers('26')}}
+{{fiwefox_fow_devewopews('26')}}

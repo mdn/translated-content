@@ -1,96 +1,96 @@
 ---
-title: bookmarks.removeTree()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/removeTree
+titwe: bookmawks.wemovetwee()
+swug: moziwwa/add-ons/webextensions/api/bookmawks/wemovetwee
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode **`bookmarks.removeTree()`** supprime récursivement un dossier de signets et tout son contenu.
+w-wa méthode **`bookmawks.wemovetwee()`** s-suppwime w-wécuwsivement u-un dossiew d-de signets et tout s-son contenu. 😳😳😳
 
-> [!WARNING]
-> Si votre extension tente de supprimer une arborescence de signets du nœud racine de cette dernière, l'appel déclenche une erreur avec le message suivant: "La racine de signet ne peut pas être modifiée" et le signet ne sera pas supprimé.
+> [!wawning]
+> s-si votwe extension t-tente de suppwimew une awbowescence de signets du nyœud wacine de cette dewnièwe, OwO w-w'appew décwenche une ewweuw avec we message s-suivant: "wa wacine de signet n-nye peut pas êtwe modifiée" et we signet nye sewa pas suppwimé. 😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removingTree = browser.bookmarks.removeTree(
-  id, // string
+vaw wemovingtwee = bwowsew.bookmawks.wemovetwee(
+  id, (˘ω˘) // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `id`
-  - : Un {{jsxref("string")}} spécifiant l'ID du noeud de dossier à supprimer avec ses descendants.
+  - : un {{jsxwef("stwing")}} spécifiant w'id du nyoeud de dossiew à suppwimew a-avec ses descendants. ʘwʘ
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments lorsque l'arbre a été retiré.Si le noeud correspondant au paramètre `id` ne peut pas être trouvé, la promesse est rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa w-wempwie sans awguments wowsque w'awbwe a été w-wetiwé.si we nyoeud cowwespondant au pawamètwe `id` n-nye peut pas êtwe twouvé, wa pwomesse est wejetée avec un message d'ewweuw. ( ͡o ω ͡o )
 
-## Exemples
+## exempwes
 
-Cet exemple localise un dossier de signets nommé "MDN" et le supprime avec tout son contenu.
+c-cet exempwe wocawise un dossiew d-de signets n-nyommé "mdn" et w-we suppwime avec tout son contenu. o.O
 
 ```js
-function onRemoved() {
-  console.log("bookmark item removed!");
+function onwemoved() {
+  c-consowe.wog("bookmawk i-item wemoved!");
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+function o-onwejected(ewwow) {
+  c-consowe.wog(`an ewwow: ${ewwow}`);
 }
 
-function removeMDN(searchResults) {
-  if (searchResults.length) {
-    var removing = browser.bookmarks.removeTree(searchResults[0].id);
-    removing.then(onRemoved, onRejected);
+f-function wemovemdn(seawchwesuwts) {
+  if (seawchwesuwts.wength) {
+    v-vaw wemoving = bwowsew.bookmawks.wemovetwee(seawchwesuwts[0].id);
+    wemoving.then(onwemoved, >w< onwejected);
   }
 }
 
-var searchingBookmarks = browser.bookmarks.search({ title: "MDN" });
-searchingBookmarks.then(removeMDN, onRejected);
+v-vaw seawchingbookmawks = b-bwowsew.bookmawks.seawch({ titwe: "mdn" });
+s-seawchingbookmawks.then(wemovemdn, 😳 o-onwejected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> cette api est basée suw w'api chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). 🥺 c-cette d-documentation pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) d-dans we code c-chwomium. rawr x3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. o.O
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. rawr a-aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution a-and use in souwce a-and binawy fowms, 😳😳😳 w-with ow without
+// modification, ^^;; awe pewmitted p-pwovided that t-the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, o.O this wist of conditions and the fowwowing discwaimew. (///ˬ///✿)
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight nyotice, σωσ this wist o-of conditions a-and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// d-distwibution. nyaa~~
+//    * nyeithew the nyame of googwe inc. ^^;; nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. ^•ﻌ•^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, σωσ incwuding, -.- but nyot
+// wimited t-to, ^^;; the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. XD in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 🥺 indiwect, i-incidentaw, òωó
+// s-speciaw, (ˆ ﻌ ˆ)♡ exempwawy, -.- ow consequentiaw damages (incwuding, :3 b-but n-nyot
+// wimited to, ʘwʘ pwocuwement of substitute goods ow sewvices; w-woss of use, 🥺
+// data, ow pwofits; ow business intewwuption) howevew caused and o-on any
+// theowy of wiabiwity, >_< whethew in contwact, ʘwʘ s-stwict wiabiwity, (˘ω˘) o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in a-any way out of t-the use
+// of this softwawe, (✿oωo) even if advised of the possibiwity o-of such damage.
 -->

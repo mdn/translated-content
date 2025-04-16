@@ -1,82 +1,82 @@
 ---
-title: webRequest.BlockingResponse
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse
+titwe: webwequest.bwockingwesponse
+swug: moziwwa/add-ons/webextensions/api/webwequest/bwockingwesponse
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet de ce type est renvoyé par les auditeurs d'événements qui ont défini le `"blocking"` dans leur argument `extraInfoSpec`.
+u-un objet de ce t-type est wenvoyé p-paw wes auditeuws d-d'événements q-qui ont défini w-we `"bwocking"` d-dans weuw awgument `extwainfospec`. (U ﹏ U)
 
-En définissant des propriétés particulières dans `BlockingResponse`, l'auditeur peut modifier les requêtes réseau.
+e-en définissant des pwopwiétés pawticuwièwes dans `bwockingwesponse`, 😳😳😳 w'auditeuw peut m-modifiew wes wequêtes wéseau. o.O
 
-Notez que vous ne pouvez pas définir toutes les propriétés de cet objet dans chaque auditeur : les propriétés que vous pouvez définir dépendent de l'événement qui a déclenché cet auditeur, comme détaillé ci-dessous.
+nyotez que vous n-nye pouvez pas définiw toutes w-wes pwopwiétés de cet objet dans chaque auditeuw : wes pwopwiétés q-que vous pouvez définiw d-dépendent de w'événement q-qui a décwenché cet auditeuw, òωó comme détaiwwé ci-dessous. 😳😳😳
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+w-wes vaweuws de ce type sont des objets. σωσ iws contiennent wes pwopwiétés suivantes :
 
-- `authCredentials`{{optional_inline}}
+- `authcwedentiaws`{{optionaw_inwine}}
 
-  - : `object`. Si elle est définie, la demande est faite en utilisant les informations d'identification données. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}. La propriété `authCredentials` est un objet avec les propriétés suivantes :
+  - : `object`. (⑅˘꒳˘) s-si ewwe est définie, (///ˬ///✿) wa demande e-est faite en utiwisant w-wes infowmations d-d'identification d-données. 🥺 vous nye pouvez définiw cette p-pwopwiété que dans {{webextapiwef("webwequest.onauthwequiwed", OwO "onauthwequiwed")}}. >w< wa pwopwiété `authcwedentiaws` e-est un objet avec wes pwopwiétés suivantes :
 
-    - `username`
-      - : `string`. Nom d'utilisateur à fournir.
-    - `password`
-      - : `string`. Mot de passe à fournir.
+    - `usewname`
+      - : `stwing`. 🥺 nyom d'utiwisateuw à fouwniw. nyaa~~
+    - `passwowd`
+      - : `stwing`. mot de passe à f-fouwniw. ^^
 
-- `cancel`{{optional_inline}}
-  - : `boolean`. Si `true`, la demande est annulée. Vous pouvez définir cette propriété seulement dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}, {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}, {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}, et {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}.
-- `redirectUrl`{{optional_inline}}
+- `cancew`{{optionaw_inwine}}
+  - : `boowean`. >w< si `twue`, OwO w-wa demande e-est annuwée. XD v-vous pouvez définiw cette pwopwiété seuwement dans {{webextapiwef("webwequest.onbefowewequest", ^^;; "onbefowewequest")}}, 🥺 {{webextapiwef("webwequest.onbefowesendheadews", XD "onbefowesendheadews")}}, (U ᵕ U❁) {{webextapiwef("webwequest.onheadewsweceived", :3 "onheadewsweceived")}}, e-et {{webextapiwef("webwequest.onauthwequiwed", ( ͡o ω ͡o ) "onauthwequiwed")}}. òωó
+- `wediwectuww`{{optionaw_inwine}}
 
-  - : `string`. Il s'agit d'une URL, et si elle est définie, la requête originale est redirigée vers cette URL. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}} ou {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}.
+  - : `stwing`. σωσ i-iw s'agit d'une uww, (U ᵕ U❁) et si ewwe e-est définie, (✿oωo) w-wa wequête owiginawe est wediwigée v-vews cette uww. ^^ vous nye p-pouvez définiw cette pwopwiété que dans {{webextapiwef("webwequest.onbefowewequest", ^•ﻌ•^ "onbefowewequest")}} o-ou {{webextapiwef("webwequest.onheadewsweceived", XD "onheadewsweceived")}}. :3
 
-    Les redirections vers des schémas non-HTTP tels que data : sont autorisées, mais elles ne sont pas prises en charge actuellement ([bug Firefox 707624](https://bugzil.la/707624)). Les redirections utilisent la même méthode de requête que la requête originale à moins qu'elle ne soit initiée à partir de l'étape `onHeadersReceived`, auquel cas la redirection utilise la méthode GET.
+    wes w-wediwections vews des schémas nyon-http t-tews que d-data : sont autowisées, (ꈍᴗꈍ) mais ewwes nye sont pas pwises en chawge actuewwement ([bug fiwefox 707624](https://bugziw.wa/707624)). :3 wes wediwections u-utiwisent wa m-même méthode de wequête que w-wa wequête owiginawe à m-moins qu'ewwe n-nye soit initiée à pawtiw de w'étape `onheadewsweceived`, (U ﹏ U) auquew cas wa w-wediwection utiwise wa méthode get. UwU
 
-    Si une extension veut rediriger une URL publique (par exemple HTTPS) vers une [page d'extension](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages), le fichier manifest.json de l'extension doit contenir une clé [web_accessible_resources](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/web_accessible_resources) qui liste l'URL de la page d'extension.
+    si une extension veut wediwigew une u-uww pubwique (paw exempwe https) v-vews une [page d-d'extension](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/extension_pages), 😳😳😳 w-we fichiew manifest.json de w-w'extension doit c-conteniw une cwé [web_accessibwe_wesouwces](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/web_accessibwe_wesouwces) q-qui w-wiste w'uww de wa page d'extension. XD
 
-- `requestHeaders`{{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, la demande est faite avec ces en-têtes plutôt qu'avec les en-têtes d'origine. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}} .
-- `responseHeaders`{{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. C'est un objet {{WebExtAPIRef('webRequest.HttpHeaders', "HttpHeaders")}}, un tableau dans lequel chaque objet représente un en-tête. Si elle est définie, le serveur est supposé avoir répondu avec ces en-têtes de réponse au lieu des originaux. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}. Si plusieurs extensions tentent de définir le même en-tête (par exemple, `Content-Security-Policy`), une seule des modifications sera réussie.
-- `upgradeToSecure`{{optional_inline}}
-  - : `boolean`. Si la valeur `true` est est définie et que la requête originale est une requête HTTP, cela empêchera l'envoi de la requête originale et fera plutôt une requête sécurisée (HTTPS). Si une extension renvoie `redirectUrl` dans `onBeforeRequest`, alors `upgradeToSecure` sera ignoré pour cette requête. Vous ne pouvez définir cette propriété que dans {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}.
+- `wequestheadews`{{optionaw_inwine}}
+  - : {{webextapiwef('webwequest.httpheadews')}}. o.O c'est un objet {{webextapiwef('webwequest.httpheadews', (⑅˘꒳˘) "httpheadews")}}, 😳😳😳 u-un tabweau d-dans wequew c-chaque objet wepwésente u-un en-tête. nyaa~~ s-si ewwe est définie, rawr wa demande est faite avec ces en-têtes p-pwutôt qu'avec wes en-têtes d'owigine. -.- vous nye pouvez définiw cette pwopwiété que dans {{webextapiwef("webwequest.onbefowesendheadews", (✿oωo) "onbefowesendheadews")}} . /(^•ω•^)
+- `wesponseheadews`{{optionaw_inwine}}
+  - : {{webextapiwef('webwequest.httpheadews')}}. 🥺 c-c'est un objet {{webextapiwef('webwequest.httpheadews', "httpheadews")}}, ʘwʘ un tabweau dans wequew chaque objet wepwésente u-un en-tête. UwU si e-ewwe est définie, XD w-we sewveuw est supposé avoiw w-wépondu avec ces en-têtes de w-wéponse au wieu d-des owiginaux. (✿oωo) vous nye pouvez définiw cette pwopwiété que dans {{webextapiwef("webwequest.onheadewsweceived", :3 "onheadewsweceived")}}. (///ˬ///✿) si pwusieuws extensions t-tentent de définiw we même e-en-tête (paw exempwe, nyaa~~ `content-secuwity-powicy`), >w< une seuwe des m-modifications sewa w-wéussie. -.-
+- `upgwadetosecuwe`{{optionaw_inwine}}
+  - : `boowean`. (✿oωo) si wa vaweuw `twue` est est d-définie et que w-wa wequête owiginawe est une w-wequête http, (˘ω˘) cewa e-empêchewa w'envoi de wa wequête owiginawe et fewa pwutôt une wequête sécuwisée (https). s-si une extension w-wenvoie `wediwectuww` d-dans `onbefowewequest`, rawr awows `upgwadetosecuwe` s-sewa ignowé p-pouw cette wequête. OwO vous n-nye pouvez définiw cette pwopwiété que dans {{webextapiwef("webwequest.onbefowewequest", ^•ﻌ•^ "onbefowewequest")}}. UwU
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> c-cette api est b-basée suw w'api chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). (˘ω˘) cette d-documentation est d-déwivée de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) dans we code chwomium. (///ˬ///✿)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. σωσ aww wights wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, 😳 with ow without
+// modification, 😳 a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (⑅˘꒳˘) t-this wist of conditions and the f-fowwowing discwaimew. 😳😳😳
+//    * wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight n-nyotice, 😳 this w-wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow o-othew matewiaws p-pwovided with the
+// distwibution. XD
+//    * n-nyeithew t-the nyame of googwe inc. mya nyow the nyames of i-its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without specific pwiow w-wwitten pewmission. ^•ﻌ•^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and a-any expwess ow i-impwied wawwanties, ʘwʘ incwuding, ( ͡o ω ͡o ) but n-nyot
+// wimited to, mya the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. o.O in nyo e-event shaww the copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, (✿oωo) indiwect, :3 incidentaw, 😳
+// s-speciaw, (U ﹏ U) exempwawy, o-ow consequentiaw d-damages (incwuding, mya but n-not
+// wimited t-to, (U ᵕ U❁) pwocuwement of substitute goods ow sewvices; woss of use, :3
+// data, mya ow pwofits; ow business intewwuption) howevew c-caused and o-on any
+// theowy o-of wiabiwity, OwO whethew in contwact, (ˆ ﻌ ˆ)♡ s-stwict wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of t-this softwawe, o.O even if advised of the possibiwity o-of such damage. UwU
 -->

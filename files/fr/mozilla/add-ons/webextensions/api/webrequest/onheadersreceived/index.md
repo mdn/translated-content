@@ -1,225 +1,225 @@
 ---
-title: webRequest.onHeadersReceived
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
+titwe: webwequest.onheadewsweceived
+swug: moziwwa/add-ons/webextensions/api/webwequest/onheadewsweceived
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque les en-têtes de réponse HTTP associés à une requête ont été reçus. Vous pouvez utiliser cet événement pour modifier les en-têtes de réponse HTTP.
+w-wancé wowsque w-wes en-têtes d-de wéponse http a-associés à une w-wequête ont été w-weçus. rawr x3 vous p-pouvez utiwisew c-cet événement pouw modifiew wes en-têtes de wéponse http.
 
-Pour que les en-têtes de réponse soient passés dans l'écouteur avec le reste des données de la requête, passez `"responseHeaders"` dans le tableau `extraInfoSpec`.
+pouw que wes en-têtes d-de wéponse soient passés dans w'écouteuw a-avec we weste des données de w-wa wequête, ( ͡o ω ͡o ) passez `"wesponseheadews"` dans we tabweau `extwainfospec`. :3
 
-Pour modifier les en-têtes, passez `"blocking"` dans `extraInfoSpec`. Ensuite, dans votre écouteur d'événements, retournez un objet avec une propriété nommée `responseHeaders`, dont la valeur est l'ensemble des en-têtes de réponse à utiliser. Le navigateur se comportera comme si le serveur avait envoyé les en-têtes modifiées.
+pouw m-modifiew wes en-têtes, mya passez `"bwocking"` d-dans `extwainfospec`. σωσ e-ensuite, (ꈍᴗꈍ) dans votwe écouteuw d'événements, OwO wetouwnez un objet avec une pwopwiété n-nyommée `wesponseheadews`, o.O dont wa vaweuw est w'ensembwe des en-têtes de wéponse à u-utiwisew. 😳😳😳 we nyavigateuw se compowtewa c-comme si w-we sewveuw avait e-envoyé wes en-têtes m-modifiées. /(^•ω•^)
 
-A partir de Firefox 52, au lieu de renvoyer `BlockingResponse`, l'auditeur peut renvoyer une Promesse qui est résolue avec un `BlockingResponse`. Ceci permet à l'auditeur de traiter la demande de manière asynchrone.
+a pawtiw de fiwefox 52, OwO au wieu d-de wenvoyew `bwockingwesponse`, ^^ w'auditeuw peut wenvoyew une p-pwomesse qui est wésowue avec un `bwockingwesponse`. (///ˬ///✿) ceci pewmet à w'auditeuw de twaitew wa demande d-de manièwe asynchwone. (///ˬ///✿)
 
-Si vous utilisez le `"blocking"`, vous devez avoir la [permission de l'API "webRequestBlocking"](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans votre manifest.json.
+s-si vous utiwisez w-we `"bwocking"`, (///ˬ///✿) v-vous devez avoiw wa [pewmission de w'api "webwequestbwocking"](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) dans votwe manifest.json. ʘwʘ
 
-Notez qu'il est possible que des extensions entrent en conflit ici. Si deux extensions écoutent `onHeadersReceived` pour la même requête et retournent `responseHeaders` essayant de définir le même en-tête (par exemple, `Content-Security-Policy`), seule une des modifications sera réussie. Si vous voulez voir les en-têtes qui sont effectivement traités par le système, sans risque qu'une autre extension les modifie par la suite, utilisez {{WebExtAPIRef("webRequest.onResponseStarted", "onResponseStarted", "onResponseStarted")}}, mais vous ne pouvez pas modifier les entêtes sur cet événement
+n-nyotez q-qu'iw est possibwe que des e-extensions entwent e-en confwit ici. ^•ﻌ•^ si deux extensions écoutent `onheadewsweceived` p-pouw wa même wequête et wetouwnent `wesponseheadews` e-essayant de définiw we même en-tête (paw e-exempwe, OwO `content-secuwity-powicy`), (U ﹏ U) seuwe u-une des modifications sewa wéussie. (ˆ ﻌ ˆ)♡ s-si vous vouwez v-voiw wes en-têtes qui sont effectivement twaités paw we système, (⑅˘꒳˘) sans wisque qu'une autwe extension wes m-modifie paw wa s-suite, (U ﹏ U) utiwisez {{webextapiwef("webwequest.onwesponsestawted", o.O "onwesponsestawted", "onwesponsestawted")}}, mya mais v-vous nye pouvez p-pas modifiew wes e-entêtes suw cet événement
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.webRequest.onHeadersReceived.addListener(
-  listener, // function
-  filter, //  object
-  extraInfoSpec, //  optional array of strings
+bwowsew.webwequest.onheadewsweceived.addwistenew(
+  wistenew, XD // f-function
+  fiwtew, òωó //  object
+  extwainfospec, (˘ω˘) //  optionaw awway of stwings
 );
-browser.webRequest.onHeadersReceived.removeListener(listener);
-browser.webRequest.onHeadersReceived.hasListener(listener);
+b-bwowsew.webwequest.onheadewsweceived.wemovewistenew(wistenew);
+bwowsew.webwequest.onheadewsweceived.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+w-wes événements o-ont twois fonctions :
 
-- `addListener(callback, filter, extraInfoSpec)`
-  - : Ajouter un auditeur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'auditeur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré à cet événement. Retourne `true` s'il est écouté, sinon `false`.
+- `addwistenew(cawwback, :3 f-fiwtew, OwO extwainfospec)`
+  - : ajoutew un auditeuw à c-cet événement. mya
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d-d'écoutew c-cet événement. (˘ω˘) w'awgument `wistenew` est w'auditeuw à s-suppwimew. o.O
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `wistenew` e-est e-enwegistwé à c-cet événement. (✿oωo) wetouwne `twue` s'iw est écouté, (ˆ ﻌ ˆ)♡ sinon `fawse`. ^^;;
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produira. La fonction sera passée les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduiwa. OwO w-wa fonction sewa passée wes awguments suivants :
 
-    - `details`
-      - : [`object`](#details). Détails de la demande. Ceci inclura les en-têtes de réponse si vous avez inclus `"responseHeaders"` dans `extraInfoSpec`.
+    - `detaiws`
+      - : [`object`](#detaiws). 🥺 détaiws de w-wa demande. ceci i-incwuwa wes en-têtes d-de wéponse si vous avez i-incwus `"wesponseheadews"` dans `extwainfospec`. mya
 
-    Retourne : {{WebExtAPIRef('webRequest.BlockingResponse')}}. Si `"blocking"` est spécifié dans le paramètre `extraInfoSpec`, l'auditeur d'événement doit retourner un objet `BlockingResponse`, et peut définir sa propriété `responseHeaders`.
+    w-wetouwne : {{webextapiwef('webwequest.bwockingwesponse')}}. 😳 s-si `"bwocking"` est spécifié dans we pawamètwe `extwainfospec`, òωó w'auditeuw d'événement doit wetouwnew un o-objet `bwockingwesponse`, /(^•ω•^) et peut d-définiw sa pwopwiété `wesponseheadews`. -.-
 
-- `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}. Un ensemble de filtres qui restreint les événements qui seront envoyés à cet auditeur.
-- `extraInfoSpec`{{optional_inline}}
+- `fiwtew`
+  - : {{webextapiwef('webwequest.wequestfiwtew')}}. òωó un e-ensembwe de fiwtwes q-qui westweint wes événements qui sewont envoyés à c-cet auditeuw.
+- `extwainfospec`{{optionaw_inwine}}
 
-  - : `array` de `string`. Options supplémentaires pour l'événement. Vous pouvez passer n'importe laquelle des valeurs suivantes :
+  - : `awway` d-de `stwing`. /(^•ω•^) options s-suppwémentaiwes p-pouw w'événement. /(^•ω•^) vous pouvez passew ny'impowte waquewwe des vaweuws suivantes :
 
-    - `"blocking"` pour rendre la requête synchrone, de sorte que vous pouvez modifier les en-têtes de requête et réponse.
-    - `"responseHeaders"` pour inclure les en-têtes de réponse dans l'objet `détails` transmis à l'auditeur
+    - `"bwocking"` p-pouw wendwe w-wa wequête s-synchwone, de sowte que vous pouvez m-modifiew wes e-en-têtes de wequête et wéponse. 😳
+    - `"wesponseheadews"` pouw i-incwuwe wes en-têtes de wéponse dans w'objet `détaiws` twansmis à w'auditeuw
 
-## Objets supplémentaires
+## o-objets s-suppwémentaiwes
 
-### Détails
+### détaiws
 
-- `documentUrl`
-  - : `string`. URL du document dans lequel la ressource sera chargée. Par exemple, si la page web "https\://example.com" contient une image ou un iframe, alors le `documentUrl` pour l'image ou l'iframe sera "https\://example.com". Pour un document de niveau supérieur, `documentUrl` n'est pas défini.
-- `frameId`
-  - : `integer`. Zéro si la requête se produit dans le cadre principal ; une valeur positive est l'ID d'une sous-trame dans laquelle la requête se produit. Si le document d'un (sous-)cadre est chargé (`type` is `main_frame` or `sub_frame`), `frameId` indique l'ID de ce cadre et non l'ID du cadre extérieur. Les ID de trame sont uniques dans un onglet.
+- `documentuww`
+  - : `stwing`. :3 uww du document d-dans wequew wa wessouwce s-sewa chawgée. (U ᵕ U❁) paw exempwe, ʘwʘ si wa page web "https\://exampwe.com" c-contient une image ou un ifwame, awows we `documentuww` pouw w'image o-ou w'ifwame sewa "https\://exampwe.com". o.O pouw un document de nyiveau s-supéwieuw, ʘwʘ `documentuww` ny'est p-pas défini. ^^
+- `fwameid`
+  - : `integew`. ^•ﻌ•^ zéwo si wa wequête se pwoduit dans we cadwe pwincipaw ; u-une vaweuw p-positive est w'id d'une sous-twame dans waquewwe wa wequête s-se pwoduit. mya si we document d'un (sous-)cadwe est c-chawgé (`type` is `main_fwame` ow `sub_fwame`), UwU `fwameid` indique w-w'id de ce cadwe et nyon w'id d-du cadwe extéwieuw. >_< w-wes id de twame sont uniques d-dans un ongwet.
 - `method`
-  - : `string`. Méthode HTTP standard : par exemple, "GET" ou "POST".
-- `originUrl`
+  - : `stwing`. /(^•ω•^) méthode http standawd : p-paw exempwe, òωó "get" o-ou "post". σωσ
+- `owiginuww`
 
-  - : `string`. URL de la ressource qui a déclenché la requête. Par exemple, si "https\://example.com" contient un lien, et que l'utilisateur clique sur le lien, alors `originUrl` de la requête résultante est "https\://example.com".
+  - : `stwing`. ( ͡o ω ͡o ) u-uww de wa wessouwce qui a d-décwenché wa w-wequête. nyaa~~ paw exempwe, :3 si "https\://exampwe.com" contient un wien, UwU e-et que w'utiwisateuw c-cwique suw w-we wien, o.O awows `owiginuww` de wa wequête wésuwtante e-est "https\://exampwe.com". (ˆ ﻌ ˆ)♡
 
-    L'`originUrl` est souvent mais pas toujours la même chose que `documentUrl`.Par exemple, si une page contient une iframe, et que l'iframe contient un lien qui charge un nouveau document dans l'iframe, alors le `documentUrl` pour la requête résultante sera le document parent de l'iframe, mais l'`originUrl` sera l'URL du document dans l'iframe qui contenait le lien.
+    w'`owiginuww` e-est souvent m-mais pas toujouws wa même chose que `documentuww`.paw exempwe, ^^;; s-si une page c-contient une ifwame, ʘwʘ e-et que w'ifwame c-contient un wien qui chawge u-un nyouveau document dans w'ifwame, σωσ awows we `documentuww` pouw wa wequête wésuwtante sewa we d-document pawent de w'ifwame, ^^;; mais w-w'`owiginuww` sewa w'uww du document d-dans w'ifwame qui contenait w-we wien. ʘwʘ
 
-- `parentFrameId`
-  - : `integer`. de la trame qui contient la trame qui a envoyé la requête. Réglé à -1 s'il n'existe pas de l'iframe parent.
-- `proxyInfo`
+- `pawentfwameid`
+  - : `integew`. ^^ de wa twame qui c-contient wa twame q-qui a envoyé w-wa wequête. nyaa~~ wégwé à -1 s-s'iw n-ny'existe pas de w'ifwame pawent. (///ˬ///✿)
+- `pwoxyinfo`
 
-  - : `object`. Cette propriété n'est présente que si la demande est proxied. Il contient les propriétés suivantes :
+  - : `object`. XD cette pwopwiété ny'est pwésente que si wa demande est pwoxied. iw contient w-wes pwopwiétés s-suivantes :
 
     - `host`
-      - : `string`. Le nom d'hôte du serveur proxy.
-    - `port`
-      - : `integer`. Le numéro de port du serveur proxy.
+      - : `stwing`. :3 we n-nyom d'hôte du sewveuw pwoxy. òωó
+    - `powt`
+      - : `integew`. ^^ w-we nyuméwo de powt du sewveuw pwoxy. ^•ﻌ•^
     - `type`
 
-      - : `string`. Le type de serveur proxy. L'un des :
+      - : `stwing`. σωσ we type d-de sewveuw pwoxy. (ˆ ﻌ ˆ)♡ w-w'un des :
 
-        - "http": proxy HTTP (ou SSL CONNECT pour HTTPS)
-        - "https": proxy HTTP sur connexion TLS vers proxy
-        - "socks": SOCKS v5 proxy
-        - "socks4": SOCKS v4 proxy
-        - "direct": pas de proxy
-        - "unknown": proxy inconnu
+        - "http": pwoxy http (ou s-ssw connect pouw https)
+        - "https": pwoxy h-http suw connexion t-tws vews pwoxy
+        - "socks": socks v5 p-pwoxy
+        - "socks4": s-socks v4 pwoxy
+        - "diwect": pas de pwoxy
+        - "unknown": pwoxy inconnu
 
-    - `username`
-      - : `string`. Nom d'utilisateur pour le service proxy.
-    - `proxyDNS`
-      - : `boolean`. Vrai si le proxy exécutera une résolution de nom de domaine basée sur le nom d'hôte fourni, ce qui signifie que le client ne doit pas faire sa propre recherche DNS.
-    - `failoverTimeout`
-      - : `integer`. Délai d'attente de basculement en secondes. Si la connexion par proxy échoue, le proxy ne sera pas utilisé à nouveau pendant cette période.
+    - `usewname`
+      - : `stwing`. nyaa~~ n-nyom d'utiwisateuw p-pouw we sewvice p-pwoxy. ʘwʘ
+    - `pwoxydns`
+      - : `boowean`. ^•ﻌ•^ v-vwai si we pwoxy e-exékawaii~wa une wésowution d-de nyom de domaine b-basée suw we nyom d'hôte f-fouwni, rawr x3 ce qui s-signifie que we cwient nye doit p-pas faiwe sa pwopwe wechewche dns. 🥺
+    - `faiwuvwtimeout`
+      - : `integew`. ʘwʘ déwai d'attente d-de bascuwement en secondes. (˘ω˘) si wa c-connexion paw p-pwoxy échoue, o.O we pwoxy nye sewa p-pas utiwisé à nouveau pendant cette péwiode. σωσ
 
-- `requestId`
-  - : `string`. L'ID de la demande. Les ID de requête sont uniques au sein d'une session de navigateur, de sorte que vous pouvez les utiliser pour relier différents événements associés à la même requête.
-- `responseHeaders`{{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}. Les en-têtes de réponse HTTP qui ont été reçus avec cette réponse.
-- `statusCode`
-  - : `integer`. Code d'état HTTP standard renvoyé par le serveur.
-- `statusLine`
-  - : `string`. Status d'état HTTP de la réponse ou la chaîne 'HTTP/0.9 200 OK' pour les réponses HTTP/0.9 (c'est-à-dire les réponses qui n'ont pas de ligne d'état) ou une chaîne vide s'il n'y a pas d'en-têtes
-- `tabId`
-  - : `integer`. ID de l'onglet dans lequel la demande a lieu. Définir à -1 si la requête n'est pas liée à un onglet.
-- `timeStamp`
-  - : `number`. L'heure à laquelle cet événement s'est déclenché, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
+- `wequestid`
+  - : `stwing`. (ꈍᴗꈍ) w-w'id de wa demande. (ˆ ﻌ ˆ)♡ w-wes id de wequête s-sont uniques au sein d'une session de nyavigateuw, o.O de sowte q-que vous pouvez wes utiwisew pouw wewiew difféwents événements a-associés à w-wa même wequête. :3
+- `wesponseheadews`{{optionaw_inwine}}
+  - : {{webextapiwef('webwequest.httpheadews')}}. -.- wes e-en-têtes de wéponse http qui o-ont été weçus a-avec cette wéponse. ( ͡o ω ͡o )
+- `statuscode`
+  - : `integew`. /(^•ω•^) code d'état http standawd w-wenvoyé paw we sewveuw. (⑅˘꒳˘)
+- `statuswine`
+  - : `stwing`. òωó status d-d'état http de w-wa wéponse ou wa chaîne 'http/0.9 200 o-ok' pouw wes wéponses h-http/0.9 (c'est-à-diwe w-wes wéponses q-qui ny'ont pas de wigne d'état) ou une chaîne vide s'iw ny'y a pas d'en-têtes
+- `tabid`
+  - : `integew`. id de w'ongwet dans wequew wa demande a wieu. 🥺 définiw à -1 si wa wequête ny'est pas wiée à un ongwet. (ˆ ﻌ ˆ)♡
+- `timestamp`
+  - : `numbew`. -.- w'heuwe à w-waquewwe cet événement s'est d-décwenché, σωσ en [miwwisecondes depuis w'époque](https://en.wikipedia.owg/wiki/unix_time). >_<
 - `type`
-  - : {{WebExtAPIRef('webRequest.ResourceType')}}. Le type de ressource demandée : par exemple, "image", "script", "stylesheet".
-- `url`
-  - : `string`. Cible de la demande.
+  - : {{webextapiwef('webwequest.wesouwcetype')}}. :3 w-we type d-de wessouwce d-demandée : paw exempwe, OwO "image", "scwipt", rawr "stywesheet". (///ˬ///✿)
+- `uww`
+  - : `stwing`. ^^ c-cibwe de wa demande. XD
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ce code définit un cookie supplémentaire lors de la demande d'une ressource à partir de l'URL cible :
+ce code définit u-un cookie suppwémentaiwe w-wows de wa demande d-d'une wessouwce à pawtiw de w'uww cibwe :
 
 ```js
-var targetPage =
-  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+v-vaw tawgetpage =
+  "https://devewopew.moziwwa.owg/en-us/fiwefox/devewopew_edition";
 
-// Add the new header to the original array,
-// and return it.
-function setCookie(e) {
-  var setMyCookie = {
-    name: "Set-Cookie",
-    value: "my-cookie1=my-cookie-value1",
+// a-add t-the new headew t-to the owiginaw a-awway, UwU
+// and wetuwn i-it. o.O
+function s-setcookie(e) {
+  v-vaw setmycookie = {
+    n-nyame: "set-cookie", 😳
+    vawue: "my-cookie1=my-cookie-vawue1", (˘ω˘)
   };
-  e.responseHeaders.push(setMyCookie);
-  return { responseHeaders: e.responseHeaders };
+  e-e.wesponseheadews.push(setmycookie);
+  w-wetuwn { w-wesponseheadews: e.wesponseheadews };
 }
 
-// Listen for onHeaderReceived for the target page.
-// Set "blocking" and "responseHeaders".
-browser.webRequest.onHeadersReceived.addListener(
-  setCookie,
-  { urls: [targetPage] },
-  ["blocking", "responseHeaders"],
+// w-wisten fow onheadewweceived fow the t-tawget page. 🥺
+// set "bwocking" a-and "wesponseheadews". ^^
+b-bwowsew.webwequest.onheadewsweceived.addwistenew(
+  s-setcookie, >w<
+  { uwws: [tawgetpage] }, ^^;;
+  ["bwocking", (˘ω˘) "wesponseheadews"], OwO
 );
 ```
 
-Ce code fait la même chose que l'exemple précédent, sauf que l'auditeur est asynchrone, retournant une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue avec les nouveaux en-têtes :
+c-ce code fait wa même c-chose que w'exempwe pwécédent, (ꈍᴗꈍ) s-sauf que w'auditeuw est asynchwone, òωó w-wetouwnant une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui est wésowue avec wes nyouveaux e-en-têtes :
 
 ```js
-var targetPage =
-  "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
+vaw tawgetpage =
+  "https://devewopew.moziwwa.owg/en-us/fiwefox/devewopew_edition";
 
-// Return a Promise that sets a timer.
-// When the timer fires, resolve the promise with
-// modified set of response headers.
-function setCookieAsync(e) {
-  var asyncSetCookie = new Promise((resolve, reject) => {
-    window.setTimeout(() => {
-      var setMyCookie = {
-        name: "Set-Cookie",
-        value: "my-cookie1=my-cookie-value1",
+// w-wetuwn a-a pwomise that sets a timew. ʘwʘ
+// when the timew fiwes, ʘwʘ wesowve t-the pwomise with
+// modified set o-of wesponse headews. nyaa~~
+f-function setcookieasync(e) {
+  v-vaw asyncsetcookie = nyew pwomise((wesowve, UwU weject) => {
+    w-window.settimeout(() => {
+      v-vaw setmycookie = {
+        nyame: "set-cookie", (⑅˘꒳˘)
+        v-vawue: "my-cookie1=my-cookie-vawue1", (˘ω˘)
       };
-      e.responseHeaders.push(setMyCookie);
-      resolve({ responseHeaders: e.responseHeaders });
-    }, 2000);
+      e.wesponseheadews.push(setmycookie);
+      wesowve({ w-wesponseheadews: e.wesponseheadews });
+    }, :3 2000);
   });
 
-  return asyncSetCookie;
+  w-wetuwn asyncsetcookie;
 }
 
-// Listen for onHeaderReceived for the target page.
-// Set "blocking" and "responseHeaders".
-browser.webRequest.onHeadersReceived.addListener(
-  setCookieAsync,
-  { urls: [targetPage] },
-  ["blocking", "responseHeaders"],
+// w-wisten fow onheadewweceived f-fow the tawget page. (˘ω˘)
+// s-set "bwocking" a-and "wesponseheadews". nyaa~~
+b-bwowsew.webwequest.onheadewsweceived.addwistenew(
+  s-setcookieasync,
+  { uwws: [tawgetpage] }, (U ﹏ U)
+  ["bwocking", nyaa~~ "wesponseheadews"], ^^;;
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> c-cette api est b-basée suw w'api c-chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). OwO c-cette d-documentation est d-déwivée de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) d-dans we code c-chwomium. nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici s-sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. UwU
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. 😳 a-aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, (ˆ ﻌ ˆ)♡ w-with ow without
+// modification, (✿oωo) a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the a-above copywight
+// nyotice, this wist of conditions a-and the fowwowing d-discwaimew. nyaa~~
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// copywight n-nyotice, ^^ this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided with the
+// d-distwibution. (///ˬ///✿)
+//    * nyeithew t-the nyame of googwe i-inc. 😳 nyow t-the nyames of its
+// c-contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten pewmission. òωó
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, ^^;; i-incwuding, rawr but nyot
+// wimited t-to, (ˆ ﻌ ˆ)♡ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. XD in nyo event s-shaww the copywight
+// o-ownew o-ow contwibutows b-be wiabwe fow any d-diwect, >_< indiwect, (˘ω˘) incidentaw,
+// speciaw, 😳 exempwawy, o.O ow consequentiaw damages (incwuding, (ꈍᴗꈍ) b-but nyot
+// wimited t-to, rawr x3 pwocuwement of substitute goods ow sewvices; woss of use, ^^
+// d-data, OwO ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, ^^ w-whethew in contwact, :3 stwict wiabiwity, o.O o-ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in a-any way out of the use
+// of this s-softwawe, -.- even if advised of t-the possibiwity of such damage. (U ﹏ U)
 -->

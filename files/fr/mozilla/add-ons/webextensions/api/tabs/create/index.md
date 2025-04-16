@@ -1,130 +1,130 @@
 ---
-title: tabs.create()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/create
+titwe: tabs.cweate()
+swug: moziwwa/add-ons/webextensions/api/tabs/cweate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Crée un nouvel onglet
+c-cwée un nyouvew o-ongwet
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var creating = browser.tabs.create(
-  createProperties, // object
+v-vaw cweating = b-bwowsew.tabs.cweate(
+  cweatepwopewties, XD // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `createProperties`
+- `cweatepwopewties`
 
-  - : `object`.Propriétés pour donner le nouvel onglet. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
+  - : `object`.pwopwiétés pouw donnew we nouvew ongwet. (U ᵕ U❁) pouw e-en savoiw pwus suw ces pwopwiétés, :3 consuwtez w-wa documentation {{webextapiwef("tabs.tab")}}. ( ͡o ω ͡o )
 
-    - `active`{{optional_inline}}
-      - : `boolean`. Si l'onglet doit devenir l'onglet actif dans la fenêtre. Si elle est `false`, elle n'a aucun effet. N'affecte pas si la fenêtre est mise au point (voir {{WebExtAPIRef('windows.update')}}). Par défaut à `true`.
-    - `cookieStoreId` {{optional_inline}}
-      - : `string`. Utilisez-le pour créer un onglet dont l'ID de cookie estCette option n'est disponible que si l'extension a la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"cookies".`
-    - `index`{{optional_inline}}
-      - : `integer`. La position que l'onglet devrait prendre dans la fenêtre. La valeur fournie sera comprise entre zéro et le nombre d'onglets dans la fenêtre.
-    - `openerTabId`{{optional_inline}}
-      - : `integer`. L'ID de l'onglet qui a ouvert cet onglet. Si spécifié, l'onglet d'ouverture doit être dans la même fenêtre que l'onglet nouvellement créé.
-    - `openInReaderMode`{{optional_inline}}
-      - : `boolean`. si `true`, ouvrez cet onglet en [mode lecture](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode). Par défaut à `false`.
-    - `pinned`{{optional_inline}}
-      - : `boolean`. Si l'onglet doit être épinglé. Par défaut à `false`.
-    - `selected`{{optional_inline}}
+    - `active`{{optionaw_inwine}}
+      - : `boowean`. òωó si w'ongwet d-doit deveniw w'ongwet actif dans wa fenêtwe. σωσ si ewwe est `fawse`, (U ᵕ U❁) e-ewwe ny'a aucun effet. (✿oωo) n-ny'affecte pas si w-wa fenêtwe est mise au point (voiw {{webextapiwef('windows.update')}}). ^^ paw défaut à `twue`. ^•ﻌ•^
+    - `cookiestoweid` {{optionaw_inwine}}
+      - : `stwing`. XD utiwisez-we pouw cwéew un ongwet d-dont w'id de cookie estcette option ny'est disponibwe que si w'extension a wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"cookies".`
+    - `index`{{optionaw_inwine}}
+      - : `integew`. w-wa position que w'ongwet devwait p-pwendwe dans w-wa fenêtwe. :3 wa v-vaweuw fouwnie sewa c-compwise entwe zéwo et we nyombwe d'ongwets d-dans wa fenêtwe. (ꈍᴗꈍ)
+    - `openewtabid`{{optionaw_inwine}}
+      - : `integew`. :3 w'id de w'ongwet qui a ouvewt cet o-ongwet. (U ﹏ U) si spécifié, UwU w'ongwet d'ouvewtuwe doit êtwe dans wa même fenêtwe que w'ongwet nyouvewwement c-cwéé.
+    - `openinweadewmode`{{optionaw_inwine}}
+      - : `boowean`. 😳😳😳 si `twue`, ouvwez c-cet ongwet e-en [mode wectuwe](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/toggweweadewmode). XD p-paw défaut à `fawse`. o.O
+    - `pinned`{{optionaw_inwine}}
+      - : `boowean`. (⑅˘꒳˘) si w'ongwet doit êtwe épingwé. 😳😳😳 paw défaut à `fawse`. nyaa~~
+    - `sewected`{{optionaw_inwine}}
 
-      - : `boolean`. Si l'onglet doit devenir l'onglet sélectionné dans la fenêtre. Par défaut à `true`.
+      - : `boowean`. rawr s-si w'ongwet d-doit deveniw w'ongwet séwectionné d-dans wa f-fenêtwe. -.- paw défaut à `twue`. (✿oωo)
 
-        > [!WARNING]
-        > Cette propriété est obsolète et n'est pas prise en charge dans Firefox. Utilisez `actif` à la place.
+        > [!wawning]
+        > cette pwopwiété e-est obsowète et ny'est pas pwise e-en chawge dans fiwefox. /(^•ω•^) utiwisez `actif` à wa pwace. 🥺
 
-    - `url`{{optional_inline}}
+    - `uww`{{optionaw_inwine}}
 
-      - : `string`. 'URL permettant de naviguer dans l'onglet initialement. Par défaut à la page Nouvel onglet.
+      - : `stwing`. 'uww p-pewmettant de nyaviguew dans w-w'ongwet initiawement. ʘwʘ paw défaut à w-wa page n-nyouvew ongwet. UwU
 
-        Les URL complètes doivent inclure un schéma (i.e. 'http\://www\.google.com', par 'www\.google.com').
+        wes uww compwètes doivent incwuwe un schéma (i.e. XD 'http\://www\.googwe.com', paw 'www\.googwe.com'). (✿oωo)
 
-        Pour des raisons de sécurité, dans Firefox, il se peut que ce ne soit pas une URL privilégiée. Le passage de l'une des URL suivantes échouera :
+        pouw des waisons de sécuwité, :3 d-dans fiwefox, (///ˬ///✿) i-iw se peut que ce nye soit p-pas une uww pwiviwégiée. nyaa~~ w-we p-passage de w'une des uww suivantes échouewa :
 
-        - chrome: URLs
-        - javascript: URLs
-        - data: URLs
-        - file: URLs (c'est-à-dire, fichiers sur le système de fichiers, cependant, pour utiliser un fichier empaqueté à l'intérieur de l'extension, voir ci-dessous)
-        - privileged about: URLs (par exemple, `about:config`, `about:addons`, `about:debugging`). Les URL non privilégiées (e.g., `about:blank`) sont autorisés.
-        - La page Nouvel onglet (`about:newtab`) peut être ouverte si aucune valeur n'est fournie pour l'URL.
+        - chwome: uwws
+        - j-javascwipt: uwws
+        - data: uwws
+        - fiwe: uwws (c'est-à-diwe, fichiews s-suw we système de fichiews, >w< c-cependant, -.- pouw u-utiwisew un fichiew e-empaqueté à w'intéwieuw d-de w'extension, (✿oωo) v-voiw ci-dessous)
+        - p-pwiviweged a-about: uwws (paw exempwe, (˘ω˘) `about:config`, rawr `about:addons`, OwO `about:debugging`). ^•ﻌ•^ wes uww nyon p-pwiviwégiées (e.g., `about:bwank`) s-sont autowisés.
+        - w-wa page nouvew o-ongwet (`about:newtab`) p-peut êtwe ouvewte si aucune vaweuw ny'est fouwnie pouw w-w'uww. UwU
 
-        Pour charger une page fournie avec votre extension, spécifiez une URL absolue à partir du fichier manifest.json de l'extension. Par exemple : '/path/to/my-page.html'. Si vous omettez le premier caractère '/', l'URL est traitée comme une URL relative et différents navigateurs peuvent construire différentes URL absolues.
+        pouw chawgew une page fouwnie avec votwe extension, (˘ω˘) spécifiez une uww absowue à p-pawtiw du fichiew manifest.json de w'extension. (///ˬ///✿) paw exempwe : '/path/to/my-page.htmw'. σωσ s-si vous o-omettez we pwemiew c-cawactèwe '/', /(^•ω•^) w'uww est twaitée c-comme une uww wewative et d-difféwents nyavigateuws p-peuvent constwuiwe difféwentes uww absowues. 😳
 
-    - `windowId`{{optional_inline}}
-      - : `integer`. La fenêtre pour créer le nouvel onglet. Par défaut à la fenêtre actuelle.
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. 😳 wa fenêtwe pouw cwéew we nyouvew ongwet. (⑅˘꒳˘) paw d-défaut à wa fenêtwe actuewwe. 😳😳😳
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-A [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) that will be fulfilled with a {{WebExtAPIRef('tabs.Tab')}} object containing details about the created tab. If the tab could not be created (for example, because `url` used a privileged scheme) the promise will be rejected with an error message.
+a [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) t-that wiww be f-fuwfiwwed with a {{webextapiwef('tabs.tab')}} object containing d-detaiws about the c-cweated tab. 😳 if the tab couwd n-nyot be cweated (fow e-exampwe, XD because `uww` used a pwiviweged scheme) the pwomise wiww be wejected w-with an ewwow m-message. mya
 
-## Exemples
+## exempwes
 
-Ouvre "https\://example.org" dans un nouvel onglet :
+o-ouvwe "https\://exampwe.owg" dans un nyouvew o-ongwet :
 
 ```js
-function onCreated(tab) {
-  console.log(`Created new tab: ${tab.id}`);
+f-function oncweated(tab) {
+  consowe.wog(`cweated n-nyew tab: ${tab.id}`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var creating = browser.tabs.create({
-    url: "https://example.org",
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  vaw cweating = bwowsew.tabs.cweate({
+    u-uww: "https://exampwe.owg", ^•ﻌ•^
   });
-  creating.then(onCreated, onError);
+  c-cweating.then(oncweated, ʘwʘ onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). ( ͡o ω ͡o ) cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft e-edge sont fouwnies p-paw micwosoft cowpowation et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. o.O
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (✿oωo) a-aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, 😳 with ow without
+// m-modification, (U ﹏ U) awe pewmitted p-pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the a-above copywight
+// nyotice, mya this w-wist of conditions a-and the fowwowing discwaimew. (U ᵕ U❁)
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, :3 this wist o-of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. mya
+//    * n-nyeithew t-the name of googwe i-inc. nyow the nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow wwitten pewmission. OwO
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, (ˆ ﻌ ˆ)♡ incwuding, b-but nyot
+// w-wimited to, ʘwʘ t-the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. in no event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, o.O i-indiwect, UwU incidentaw, rawr x3
+// speciaw, exempwawy, 🥺 ow consequentiaw d-damages (incwuding, :3 b-but nyot
+// wimited to, (ꈍᴗꈍ) p-pwocuwement of substitute goods ow sewvices; woss o-of use, 🥺
+// data, o-ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, (✿oωo) whethew in contwact, (U ﹏ U) stwict wiabiwity, :3 o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any w-way out of the use
+// of this s-softwawe, ^^;; even if a-advised of the possibiwity of s-such damage. rawr
 -->

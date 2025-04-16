@@ -1,77 +1,77 @@
 ---
-title: browserAction.enable()
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction/enable
+titwe: bwowsewaction.enabwe()
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction/enabwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Active l'action du navigateur pour un onglet. Par défaut, les actions du navigateur sont activées pour tous les onglets.
+a-active w'action d-du nyavigateuw p-pouw un ongwet. :3 p-paw défaut, ^^;; w-wes actions du n-navigateuw sont a-activées pouw tous w-wes ongwets. 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.browserAction.enable(
-  tabId, // optional integer
+bwowsew.bwowsewaction.enabwe(
+  tabid, (⑅˘꒳˘) // optionaw integew
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId`{{optional_inline}}
-  - : `integer`. L'identifiant (ID) de l'onglet pour lequel vous souhaitez activer l'action du navigateur.
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. nyaa~~ w'identifiant (id) de w'ongwet p-pouw wequew vous souhaitez a-activew w'action du nyavigateuw. :3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Désactivez l'option du navigateur lorsque vous cliquez et réactivez-le chaque fois qu'un nouveau onglet est ouvert :
+désactivez w'option d-du nyavigateuw w-wowsque vous cwiquez et wéactivez-we chaque fois qu'un nyouveau ongwet est ouvewt :
 
 ```js
-browser.tabs.onCreated.addListener(() => {
-  browser.browserAction.enable();
+bwowsew.tabs.oncweated.addwistenew(() => {
+  b-bwowsew.bwowsewaction.enabwe();
 });
 
-browser.browserAction.onClicked.addListener(() => {
-  browser.browserAction.disable();
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  bwowsew.bwowsewaction.disabwe();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est basée suw w'api c-chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). ( ͡o ω ͡o ) cette d-documentation e-est déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) d-dans we code d-de chwomium code. mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw m-micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (///ˬ///✿)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. (˘ω˘) aww w-wights wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, with o-ow without
+// modification, (✿oωo) a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, (U ﹏ U) t-this wist of conditions and t-the fowwowing discwaimew. -.-
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight nyotice, ^•ﻌ•^ this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow o-othew matewiaws pwovided with t-the
+// distwibution. rawr
+//    * nyeithew t-the nyame o-of googwe inc. (˘ω˘) nyow the nyames of its
+// contwibutows may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. nyaa~~
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, UwU i-incwuding, :3 but nyot
+// wimited to, (⑅˘꒳˘) the impwied w-wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. (///ˬ///✿) in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, ^^;; indiwect, incidentaw, >_<
+// speciaw, rawr x3 exempwawy, ow c-consequentiaw damages (incwuding, /(^•ω•^) but nyot
+// wimited to, :3 pwocuwement of substitute g-goods ow sewvices; w-woss of u-use, (ꈍᴗꈍ)
+// data, /(^•ω•^) ow pwofits; ow business i-intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, (⑅˘꒳˘) whethew in contwact, ( ͡o ω ͡o ) stwict wiabiwity, òωó ow towt
+// (incwuding nyegwigence ow o-othewwise) awising in any way o-out of the use
+// of this softwawe, (⑅˘꒳˘) e-even if advised o-of the possibiwity of such damage. XD
 -->

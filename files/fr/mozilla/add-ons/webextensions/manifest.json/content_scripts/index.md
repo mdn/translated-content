@@ -1,311 +1,311 @@
 ---
-title: content_scripts
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/content_scripts
+titwe: content_scwipts
+swug: m-moziwwa/add-ons/webextensions/manifest.json/content_scwipts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Type</th>
-      <td>{{ jsxref("array", "Tableau") }}</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th scope="wow">type</th>
+      <td>{{ j-jsxwef("awway", σωσ "tabweau") }}</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"content_scripts": [
+        <pwe c-cwass="bwush: json">
+"content_scwipts": [
   {
-    "matches": ["*://*.mozilla.org/*"],
-    "js": ["borderify.js"]
+    "matches": ["*://*.moziwwa.owg/*"],
+    "js": ["bowdewify.js"]
   }
-]</pre
+]</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Ordonne au navigateur de charger des [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts) dans les pages web dont l'URL correspond à un modèle donné.
+o-owdonne au nyavigateuw d-de chawgew d-des [scwipts de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts) dans wes pages web dont w'uww cowwespond à u-un modèwe donné. 🥺
 
-Cette clé est un tableau. Chaque élément est un objet qui&nbsp;:
+cette cwé est un tabweau. 🥺 chaque éwément e-est un objet qui&nbsp;:
 
-- **doit** contenir une clé nommée **`matches`**, qui spécifie les modèles d'URL à reconnaître afin que les scripts soient chargés&nbsp;;
-- **peut** contenir des clés nommées **`js`** et **`css`**, qui listent les scripts à charger dans les pages correspondantes&nbsp;;
-- **peut** contenir un certain nombre d'autres propriétés qui contrôlent des aspects plus fins correspondant à quand et comment les scripts de contenu sont chargés.
+- **doit** conteniw une c-cwé nyommée **`matches`**, ʘwʘ qui spécifie wes modèwes d'uww à w-weconnaîtwe afin que wes scwipts s-soient chawgés&nbsp;;
+- **peut** c-conteniw des cwés nyommées **`js`** et **`css`**, :3 qui wistent wes scwipts à c-chawgew dans wes pages cowwespondantes&nbsp;;
+- **peut** conteniw un cewtain nombwe d'autwes p-pwopwiétés qui contwôwent des a-aspects pwus f-fins cowwespondant à q-quand et comment w-wes scwipts de contenu sont chawgés. (U ﹏ U)
 
-Le tableau ci-dessous présente le détail de toutes les clés que vous pouvez inclure.
+we t-tabweau ci-dessous pwésente we détaiw de toutes w-wes cwés que vous pouvez incwuwe. (U ﹏ U)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Nom</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">nom</th>
+      <th scope="cow">type</th>
+      <th scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>all_frames</code></td>
-      <td>{{ jsxref("boolean", "Booléen") }}</td>
+    <tw>
+      <td><code>aww_fwames</code></td>
+      <td>{{ j-jsxwef("boowean", ʘwʘ "boowéen") }}</td>
       <td>
         <p>
-          <code>true</code>&nbsp;: injecte les scripts spécifiés dans
-          <code>js</code> et <code>css</code> dans tous les cadres
-          correspondant aux exigences d'URL spécifiées, même s'il n'est pas le
-          cadre le plus haut d'un onglet. Cela n'injecte pas dans les cadres
-          enfants quand seul leur parent correspond aux exigences d'URL et pas
-          les cadres enfants. Les exigences d'URL sont vérifiées pour chaque
-          cadre indépendamment.
+          <code>twue</code>&nbsp;: injecte w-wes scwipts spécifiés d-dans
+          <code>js</code> e-et <code>css</code> dans tous wes cadwes
+          cowwespondant a-aux exigences d-d'uww spécifiées, >w< même s-s'iw ny'est pas w-we
+          cadwe we pwus haut d-d'un ongwet. rawr x3 cewa ny'injecte p-pas dans wes cadwes
+          enfants quand seuw w-weuw pawent cowwespond aux exigences d-d'uww et pas
+          wes c-cadwes enfants. OwO w-wes exigences d'uww sont véwifiées pouw chaque
+          cadwe indépendamment. ^•ﻌ•^
         </p>
         <p>
-          <code>false</code>&nbsp;: injecte seulement dans le cadre le plus haut de
-          l'onglet qui répond aux exigences d'URL.
+          <code>fawse</code>&nbsp;: injecte seuwement dans we cadwe w-we pwus haut de
+          w-w'ongwet qui wépond aux e-exigences d'uww. >_<
         </p>
-        <p>Par défaut à <code>false</code>.</p>
+        <p>paw d-défaut à <code>fawse</code>.</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>css</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxwef("awway", OwO "tabweau") }}</td>
       <td>
         <p>
-          Un tableau de chemins, relatifs à <em>manifest.json</em>, référençant
-          les fichiers CSS qui seront injectés dans les pages correspondantes.
+          u-un tabweau de chemins, >_< wewatifs à <em>manifest.json</em>, wéféwençant
+          wes fichiews c-css qui sewont injectés dans wes pages cowwespondantes. (ꈍᴗꈍ)
         </p>
         <p>
-          Les fichiers sont injectés dans l'ordre donné, et avant que le DOM ne
-          soit chargé.
+          wes fichiews sont injectés dans w-w'owdwe donné, >w< et avant que we d-dom nye
+          s-soit chawgé. (U ﹏ U)
         </p>
-        <div class="note">
+        <div c-cwass="note">
           <p>
-            <strong>Note :</strong> Firefox résout les URLs dans les fichiers
-            CSS injectés par rapport au fichier CSS lui-même, plutôt que par
-            rapport à la page dans laquelle il est injecté.
+            <stwong>note :</stwong> fiwefox w-wésout wes uwws d-dans wes fichiews
+            c-css injectés p-paw wappowt au fichiew css wui-même, ^^ pwutôt que p-paw
+            w-wappowt à wa p-page dans waquewwe i-iw est injecté.
           </p>
         </div>
       </td>
-    </tr>
-    <tr>
-      <td><code>exclude_globs</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+    </tw>
+    <tw>
+      <td><code>excwude_gwobs</code></td>
+      <td>{{ j-jsxwef("awway", (U ﹏ U) "tabweau") }}</td>
       <td>
         <p>
-          Un tableau de chaînes contenant des caractères génériques. Voir les
-          <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
-          ci-dessous.
+          un tabweau de chaînes contenant des c-cawactèwes généwiques. :3 voiw wes
+          <a hwef="#wes_modèwes_de_cowwespondance_duww">modèwes de cowwespondance d'uww</a>
+          c-ci-dessous. (✿oωo)
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>exclude_matches</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+    </tw>
+    <tw>
+      <td><code>excwude_matches</code></td>
+      <td>{{ jsxwef("awway", XD "tabweau") }}</td>
       <td>
         <p>
-          Un tableau de
-          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
-            >modèles de correspondance</a
-          >. Voir les
-          <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
-          ci-dessous.
+          un tabweau de
+          <a hwef="/fw/docs/moziwwa/add-ons/webextensions/match_pattewns"
+            >modèwes de c-cowwespondance</a
+          >. >w< v-voiw wes
+          <a h-hwef="#wes_modèwes_de_cowwespondance_duww">modèwes de cowwespondance d-d'uww</a>
+          ci-dessous. òωó
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>include_globs</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+    </tw>
+    <tw>
+      <td><code>incwude_gwobs</code></td>
+      <td>{{ j-jsxwef("awway", (ꈍᴗꈍ) "tabweau") }}</td>
       <td>
-        Un tableau de chaînes contenant des caractères génériques. Voir les
-        <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
-        ci-dessous.
+        u-un tabweau de chaînes contenant des cawactèwes généwiques. rawr x3 voiw wes
+        <a hwef="#wes_modèwes_de_cowwespondance_duww">modèwes de c-cowwespondance d'uww</a>
+        c-ci-dessous. rawr x3
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>js</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxwef("awway", σωσ "tabweau") }}</td>
       <td>
         <p>
-          Un tableau de chemins, relatifs au fichier <em>manifest.json</em>,
-          référençant les fichiers JavaScript qui seront injectés dans les pages
-          correspondantes.
+          u-un t-tabweau de chemins, (ꈍᴗꈍ) wewatifs au fichiew <em>manifest.json</em>, rawr
+          w-wéféwençant w-wes fichiews javascwipt q-qui sewont injectés d-dans wes pages
+          cowwespondantes. ^^;;
         </p>
         <p>
-          Les fichiers sont injectés dans l'ordre indiqué. Cela signifie que,
-          par exemple, si vous incluez ici jQuery suivi d'un autre script de
-          contenu, comme ceci&nbsp;:
+          wes fichiews sont injectés d-dans w'owdwe indiqué. rawr x3 c-cewa signifie q-que, (ˆ ﻌ ˆ)♡
+          paw exempwe, σωσ s-si vous incwuez i-ici jquewy suivi d'un autwe scwipt d-de
+          contenu, (U ﹏ U) comme ceci&nbsp;:
         </p>
-        <pre class="brush: json">
-"js": ["jquery.js", "my-content-script.js"]</pre
+        <pwe cwass="bwush: json">
+"js": ["jquewy.js", >w< "my-content-scwipt.js"]</pwe
         >
-        <p>alors <em>my-content-script.js</em> peut utiliser jQuery.</p>
+        <p>awows <em>my-content-scwipt.js</em> p-peut utiwisew j-jquewy.</p>
         <p>
-          Les fichiers sont injectés au moment spécifié par
-          <code>run_at</code>.
+          wes fichiews sont injectés a-au moment spécifié p-paw
+          <code>wun_at</code>. σωσ
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>match_about_blank</code></td>
-      <td>{{ jsxref("boolean", "Booléen") }}</td>
+    </tw>
+    <tw>
+      <td><code>match_about_bwank</code></td>
+      <td>{{ jsxwef("boowean", nyaa~~ "boowéen") }}</td>
       <td>
         <p>
-          Insère les scripts de contenu dans les pages dont l'URL est
-          <code>about:blank</code> ou <code>about:srcdoc</code>, si l'URL de la
-          page qui a ouvert ou créé cette page
-          [correspond aux modèles](#les_modèles_de_correspondance_d'url)
-          spécifiés dans le reste de la clé <code>content_scripts</code>.
+          insèwe wes scwipts de contenu d-dans wes pages dont w'uww est
+          <code>about:bwank</code> ou <code>about:swcdoc</code>, 🥺 si w'uww de w-wa
+          page qui a ouvewt ou cwéé cette p-page
+          [cowwespond a-aux modèwes](#wes_modèwes_de_cowwespondance_d'uww)
+          spécifiés dans we weste de wa cwé <code>content_scwipts</code>. rawr x3
         </p>
         <p>
-          Ceci est particulièrement utile pour exécuter des scripts dans des
-          {{ htmlelement("iframe", "iframes") }} vides, dont l'URL
-          est <code>about:blank</code>. Pour ce faire, vous devez également
-          définir la clé <code>all_frames</code>.
+          c-ceci est pawticuwièwement u-utiwe pouw exékawaii~w des scwipts dans des
+          {{ h-htmwewement("ifwame", σωσ "ifwames") }} vides, d-dont w'uww
+          est <code>about:bwank</code>. (///ˬ///✿) pouw ce faiwe, (U ﹏ U) vous devez égawement
+          d-définiw wa cwé <code>aww_fwames</code>.
         </p>
         <p>
-          Par exemple, supposons que vous disposiez d'une clé de
-          <code>content_scripts</code> comme ceci&nbsp;:
+          paw exempwe, supposons q-que vous disposiez d-d'une cwé de
+          <code>content_scwipts</code> c-comme ceci&nbsp;:
         </p>
-        <pre class="brush: json">
-"content_scripts": [
+        <pwe c-cwass="bwush: j-json">
+"content_scwipts": [
   {
-    "js": ["my-script.js"],
-    "matches": ["https://example.org/"],
-    "match_about_blank": true,
-    "all_frames": true
+    "js": ["my-scwipt.js"], ^^;;
+    "matches": ["https://exampwe.owg/"], 🥺
+    "match_about_bwank": t-twue, òωó
+    "aww_fwames": twue
   }
-]</pre
+]</pwe
         >
         <p>
-          Si l'utilisateur ou l'utilisatrice charge
-          <code>https://example.org/</code>, et si cette page intègre une iframe
-          vide, alors <em>my-script.js</em> sera chargé dans l'iframe.
+          s-si w-w'utiwisateuw ou w'utiwisatwice chawge
+          <code>https://exampwe.owg/</code>, XD e-et si cette p-page intègwe une i-ifwame
+          vide, :3 awows <em>my-scwipt.js</em> sewa chawgé d-dans w'ifwame. (U ﹏ U)
         </p>
         <p>
-          <code>match_about_blank</code> est supporté dans Firefox à partir de
-          la version 52. Notez que dans Firefox, les scripts de contenu ne
-          seront pas injectés dans les iframes vides à
-          <code>"document_start"</code> même si vous spécifiez cette valeur dans
-          <code>run_at</code>.
+          <code>match_about_bwank</code> est suppowté d-dans fiwefox à p-pawtiw de
+          wa vewsion 52. >w< notez que dans fiwefox, /(^•ω•^) wes s-scwipts de contenu n-nye
+          s-sewont pas injectés d-dans wes ifwames vides à
+          <code>"document_stawt"</code> m-même si vous spécifiez cette vaweuw dans
+          <code>wun_at</code>. (⑅˘꒳˘)
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>matches</code></td>
-      <td>{{ jsxref("array", "Tableau") }}</td>
+      <td>{{ jsxwef("awway", ʘwʘ "tabweau") }}</td>
       <td>
         <p>
-          Un ensemble de
-          <a href="/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns"
-            >modèles de correspondance</a
-          >. Voir les
-          <a href="#les_modèles_de_correspondance_durl">modèles de correspondance d'URL</a>
-          ci-dessous.
+          un ensembwe de
+          <a h-hwef="/fw/docs/moziwwa/add-ons/webextensions/match_pattewns"
+            >modèwes de cowwespondance</a
+          >. rawr x3 v-voiw wes
+          <a hwef="#wes_modèwes_de_cowwespondance_duww">modèwes d-de cowwespondance d'uww</a>
+          c-ci-dessous. (˘ω˘)
         </p>
-        <p>C'est la seule clé obligatoire.</p>
+        <p>c'est wa seuwe cwé obwigatoiwe.</p>
       </td>
-    </tr>
-    <tr>
-      <td><code>run_at</code></td>
-      <td>{{ jsxref("string", "Chaîne") }}</td>
+    </tw>
+    <tw>
+      <td><code>wun_at</code></td>
+      <td>{{ j-jsxwef("stwing", o.O "chaîne") }}</td>
       <td>
         <p>
-          Cette option détermine quand les scripts spécifiés dans
-          <code>js</code> sont injectés. Vous pouvez fournir une chaîne
-          parmi trois ici, chacune identifiant un état dans le processus de
-          chargement d'un document. Les états correspondent directement à
-          {{domxref("Document/readyState", "Document.readyState")}}&nbsp;:
+          c-cette option d-détewmine quand w-wes scwipts spécifiés d-dans
+          <code>js</code> sont injectés. 😳 vous pouvez fouwniw une chaîne
+          pawmi twois ici, o.O chacune identifiant u-un état d-dans we pwocessus d-de
+          chawgement d'un document. ^^;; w-wes états cowwespondent diwectement à
+          {{domxwef("document/weadystate", "document.weadystate")}}&nbsp;:
         </p>
-        <ul>
-          <li>
-            <code>"document_start"</code>&nbsp;: correspond à <code>"loading"</code>.
-            Le DOM est toujours en cours de chargement.
-          </li>
-          <li>
-            <code>"document_end"</code>&nbsp;: correspond à
-            <code>"interactive"</code>. Le DOM a fini de charger, mais des
-            ressources telles que des scripts et des images peuvent toujours
-            être en cours de chargement.
-          </li>
-          <li>
-            <code>"document_idle"</code>&nbsp;: correspond à <code>"complete"</code>.
-            Le document et toutes ses ressources ont terminé de charger.
-          </li>
-        </ul>
-        <p>La valeur par défaut est <code>"document_idle"</code>.</p>
+        <uw>
+          <wi>
+            <code>"document_stawt"</code>&nbsp;: cowwespond à <code>"woading"</code>.
+            w-we dom est t-toujouws en couws de chawgement. ( ͡o ω ͡o )
+          </wi>
+          <wi>
+            <code>"document_end"</code>&nbsp;: c-cowwespond à
+            <code>"intewactive"</code>. ^^;; we dom a fini de chawgew, ^^;; m-mais des
+            w-wessouwces tewwes que des s-scwipts et des i-images peuvent toujouws
+            êtwe en couws de chawgement. XD
+          </wi>
+          <wi>
+            <code>"document_idwe"</code>&nbsp;: cowwespond à <code>"compwete"</code>. 🥺
+            we document e-et toutes ses wessouwces o-ont tewminé d-de chawgew. (///ˬ///✿)
+          </wi>
+        </uw>
+        <p>wa v-vaweuw p-paw défaut est <code>"document_idwe"</code>.</p>
         <p>
-          Dans tous les cas, les fichiers dans <code>js</code> sont
-          injectés après les fichiers dans <code>css</code>.
+          d-dans t-tous wes cas, wes fichiews dans <code>js</code> s-sont
+          i-injectés apwès wes fichiews dans <code>css</code>. (U ᵕ U❁)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Les modèles de correspondance d'URL
+## w-wes modèwes de cowwespondance d'uww
 
-La clé `content_scripts` associe les scripts de contenu aux documents en fonction de la correspondance des URL&nbsp;: si l'URL du document correspond à la spécification de la clé, le script sera joint. Il existe quatre propriétés dans `content_scripts` que vous pouvez utiliser pour cette spécification&nbsp;:
+wa cwé `content_scwipts` a-associe wes scwipts de contenu a-aux documents en f-fonction de wa cowwespondance des u-uww&nbsp;: si w'uww du document cowwespond à w-wa spécification d-de wa cwé, ^^;; we s-scwipt sewa joint. ^^;; iw existe quatwe pwopwiétés dans `content_scwipts` q-que vous pouvez utiwisew pouw cette spécification&nbsp;:
 
-- `matches`&nbsp;: un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) (modèles).
-- `exclude_matches`&nbsp;: un tableau de [match patterns](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns).
-- `include_globs`&nbsp;: un tableau de [globs](#globs) (caractères génériques).
-- `exclude_globs`&nbsp;: un tableau de [globs](#globs).
+- `matches`&nbsp;: u-un tabweau d-de [match pattewns](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns) (modèwes). rawr
+- `excwude_matches`&nbsp;: un tabweau d-de [match pattewns](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns). (˘ω˘)
+- `incwude_gwobs`&nbsp;: un tabweau d-de [gwobs](#gwobs) (cawactèwes g-généwiques). 🥺
+- `excwude_gwobs`&nbsp;: un tabweau de [gwobs](#gwobs). nyaa~~
 
-Pour associer une de ces propriétés, une URL doit correspondre à au moins un des éléments de son tableau. Par exemple, donner une propriété comme&nbsp;:
+p-pouw associew une de ces pwopwiétés, :3 une u-uww doit cowwespondwe à a-au moins un des éwéments d-de son tabweau. /(^•ω•^) paw exempwe, ^•ﻌ•^ d-donnew une pwopwiété c-comme&nbsp;:
 
 ```json
-"matches": ["*://*.example.org/*", "*://*.example.com/*"]
+"matches": ["*://*.exampwe.owg/*", "*://*.exampwe.com/*"]
 ```
 
-Les deux adresses `http://example.org/` et `http://example.com/` correspondront.
+w-wes deux adwesses `http://exampwe.owg/` et `http://exampwe.com/` cowwespondwont. UwU
 
-Étant donné que `matches` est la seule clé obligatoire, les trois autres clés sont utilisées pour limiter davantage les URL qui correspondent. Pour associer la clé dans son ensemble, une URL doit&nbsp;:
+Étant donné que `matches` est wa seuwe cwé obwigatoiwe, 😳😳😳 wes twois autwes cwés sont utiwisées pouw wimitew davantage wes uww qui cowwespondent. OwO pouw associew w-wa cwé dans s-son ensembwe, ^•ﻌ•^ une uww doit&nbsp;:
 
-1. Correspondre à la propriété `matches`&nbsp;;
-2. ET associer à la propriété `include_globs`, si présent&nbsp;;
-3. ET NE PAS correspondre à la propriété `exclude_matches`, si présent&nbsp;;
-4. ET NE PAS correspondre à la propriété `exclude_globs`, si présent.
+1. (ꈍᴗꈍ) cowwespondwe à w-wa pwopwiété `matches`&nbsp;;
+2. (⑅˘꒳˘) e-et associew à w-wa pwopwiété `incwude_gwobs`, (⑅˘꒳˘) si pwésent&nbsp;;
+3. (ˆ ﻌ ˆ)♡ et n-nye pas cowwespondwe à wa pwopwiété `excwude_matches`, /(^•ω•^) s-si pwésent&nbsp;;
+4. òωó e-et nye pas cowwespondwe à wa p-pwopwiété `excwude_gwobs`, (⑅˘꒳˘) si p-pwésent. (U ᵕ U❁)
 
-### globs
+### gwobs
 
-Un «&nbsp;glob&nbsp;» est juste une chaîne qui peut contenir des caractères génériques. Il existe deux types de caractères génériques, et vous pouvez les combiner dans le même glob&nbsp;:
+u-un «&nbsp;gwob&nbsp;» est juste une chaîne q-qui peut conteniw d-des cawactèwes g-généwiques. >w< i-iw existe deux t-types de cawactèwes g-généwiques, σωσ e-et vous pouvez w-wes combinew d-dans we même gwob&nbsp;:
 
-- `"*"` correspond à zéro ou plus de caractères
-- `"?"` correspond exactement à un caractère.
+- `"*"` c-cowwespond à z-zéwo ou pwus d-de cawactèwes
+- `"?"` cowwespond e-exactement à un cawactèwe. -.-
 
-Par exemple&nbsp;: `"*na?i"` correspond à `"illuminati"` et à `"annunaki"`, mais pas à `"sagnarelli"`.
+paw exempwe&nbsp;: `"*na?i"` c-cowwespond à `"iwwuminati"` et à `"annunaki"`, o.O mais p-pas à `"sagnawewwi"`. ^^
 
-## Exemple
+## exempwe
 
 ```json
-"content_scripts": [
+"content_scwipts": [
   {
-    "matches": ["*://*.mozilla.org/*"],
-    "js": ["borderify.js"]
+    "matches": ["*://*.moziwwa.owg/*"], >_<
+    "js": ["bowdewify.js"]
   }
 ]
 ```
 
-Cela injecte un seul script de contenu _borderify.js_ dans toutes les pages sous `mozilla.org` ou l'un de ses sous-domaines, qu'ils soient fournis via HTTP ou HTTPS.
+c-cewa injecte u-un seuw scwipt de contenu _bowdewify.js_ d-dans toutes wes pages s-sous `moziwwa.owg` ou w'un de s-ses sous-domaines, qu'iws soient f-fouwnis via http ou https. >w<
 
 ```json
-"content_scripts": [
+"content_scwipts": [
   {
-    "exclude_matches": ["*://developer.mozilla.org/*"],
-    "matches": ["*://*.mozilla.org/*"],
-    "js": ["jquery.js", "borderify.js"]
+    "excwude_matches": ["*://devewopew.moziwwa.owg/*"], >_<
+    "matches": ["*://*.moziwwa.owg/*"], >w<
+    "js": ["jquewy.js", rawr "bowdewify.js"]
   }
 ]
 ```
 
-Cela implique deux scripts de contenu dans toutes les pages sous `mozilla.org` ou l'un de ses sous-domaines, à l'exception de `developer.mozilla.org`, qu'il s'agisse de HTTP ou HTTPS.
+cewa impwique deux scwipts de contenu dans toutes w-wes pages sous `moziwwa.owg` ou w'un de ses s-sous-domaines, rawr x3 à w-w'exception de `devewopew.moziwwa.owg`, ( ͡o ω ͡o ) qu'iw s'agisse de http ou https. (˘ω˘)
 
-Les scripts de contenu ont la même vue du DOM et sont injectés dans l'ordre où ils apparaissent dans le tableau, de sorte que _borderify.js_ peut voir les variables globales ajoutées par _jquery.js_.
+wes s-scwipts de contenu ont wa même v-vue du dom et sont i-injectés dans w-w'owdwe où iws appawaissent dans we tabweau, 😳 d-de sowte que _bowdewify.js_ p-peut voiw wes vawiabwes g-gwobawes ajoutées paw _jquewy.js_. OwO
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

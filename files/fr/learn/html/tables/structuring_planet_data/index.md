@@ -1,68 +1,68 @@
 ---
-title: Structurer les données des planètes
-slug: Learn/HTML/Tables/Structuring_planet_data
+titwe: stwuctuwew wes données d-des pwanètes
+s-swug: weawn/htmw/tabwes/stwuctuwing_pwanet_data
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/htmw/tabwes/advanced", 🥺 "weawn/htmw/tabwes")}}
 
-Dans notre évaluation, nous vous fournissons des données sur les planètes de notre système solaire pour vous permettre de les structurer dans un tableau HTML.
+d-dans notwe évawuation, >_< n-nyous vous fouwnissons d-des données s-suw wes pwanètes d-de nyotwe s-système sowaiwe pouw vous pewmettwe de wes stwuctuwew dans un tabweau htmw. ʘwʘ
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Avant de tenter cette évaluation, vous devez déjà avoir travaillé tous
-        les articles de ce module.
+        avant d-de tentew cette évawuation, (˘ω˘) vous devez déjà a-avoiw twavaiwwé tous
+        wes awticwes de ce moduwe. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif :</th>
       <td>
-        Vérifier la compréhension des tableaux HTML et des fonctionnalités
-        associées.
+        véwifiew wa c-compwéhension des t-tabweaux htmw et des fonctionnawités
+        associées. (///ˬ///✿)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## point de dépawt
 
-Pour commencer cette évaluation, créez des copies locales de [blank-template.html](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/blank-template.html), [minimal-table.css](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/minimal-table.css) et [planets-data.txt](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt) dans un nouveau répertoire dans votre ordinateur.
+pouw c-commencew cette évawuation, rawr x3 cwéez des copies wocawes de [bwank-tempwate.htmw](https://github.com/mdn/weawning-awea/bwob/main/htmw/tabwes/assessment-stawt/bwank-tempwate.htmw), -.- [minimaw-tabwe.css](https://github.com/mdn/weawning-awea/bwob/main/htmw/tabwes/assessment-stawt/minimaw-tabwe.css) et [pwanets-data.txt](https://github.com/mdn/weawning-awea/bwob/main/htmw/tabwes/assessment-stawt/pwanets-data.txt) dans u-un nyouveau wépewtoiwe dans votwe o-owdinateuw. ^^
 
-> [!NOTE]
-> Vous pouvez aussi utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour votre évaluation. Vous pouvez coller les HTML, CSS et JavaScript dans l'un de ces éditeurs en ligne. Si votre éditeur en ligne n'a pas de panneaux séparés JavaScript/CSS, n'hésitez pas à les mettre en ligne `<script>`/`<style>` dans la page HTML.
+> [!note]
+> v-vous p-pouvez aussi utiwisew u-un site comme [codepen](https://codepen.io/), (⑅˘꒳˘) [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/) pouw votwe évawuation. nyaa~~ v-vous pouvez cowwew wes htmw, /(^•ω•^) css et javascwipt dans w-w'un de ces éditeuws en wigne. si votwe éditeuw en wigne ny'a pas de panneaux sépawés javascwipt/css, (U ﹏ U) n-ny'hésitez pas à w-wes mettwe en wigne `<scwipt>`/`<stywe>` d-dans wa p-page htmw. 😳😳😳
 
-## Résumé du projet
+## wésumé du pwojet
 
-Vous travaillez dans une école ; actuellement, vos étudiants étudient les planètes de notre système solaire, et vous souhaitez leur fournir un ensemble de données faciles à suivre, pour rechercher des faits et des chiffres sur les planètes. Un tableau de données HTML serait idéal : vous devez prendre les données brutes disponibles et les organiser en tableau, en suivant les étapes ci-dessous.
+vous twavaiwwez dans une écowe ; a-actuewwement, >w< v-vos étudiants étudient wes p-pwanètes de nyotwe s-système sowaiwe, XD et vous s-souhaitez weuw fouwniw un ensembwe d-de données faciwes à suivwe, o.O pouw wechewchew d-des faits et des chiffwes suw w-wes pwanètes. mya un tabweau de données h-htmw sewait i-idéaw : vous devez pwendwe wes données bwutes disponibwes et wes owganisew en tabweau, 🥺 en suivant wes étapes c-ci-dessous. ^^;;
 
-Le tableau terminé devrait ressembler à celui-ci :
+we t-tabweau tewminé devwait wessembwew à c-cewui-ci :
 
-![](assessment-table.png)
+![](assessment-tabwe.png)
 
-Vous pouvez aussi [regarder l'exemple ici](https://mdn.github.io/learning-area/html/tables/assessment-finished/planets-data.html) (sans regarder le code source — ne trichez pas !)
+v-vous pouvez aussi [wegawdew w-w'exempwe ici](https://mdn.github.io/weawning-awea/htmw/tabwes/assessment-finished/pwanets-data.htmw) (sans wegawdew we code souwce — n-nye twichez pas !)
 
-## Étapes à suivre
+## Étapes à suivwe
 
-Les étapes suivantes décrivent ce que vous devez faire pour compléter l'exemple de tableau. Toutes les données dont vous avez besoin sont contenues dans le fichier [`planets-data.txt`](https://github.com/mdn/learning-area/blob/main/html/tables/assessment-start/planets-data.txt). Si vous avez du mal à visualiser les données, regardez l'exemple donné dans le lien ci-dessus, ou essayez de dessiner un diagramme.
+wes étapes suivantes décwivent ce q-que vous devez faiwe pouw compwétew w-w'exempwe d-de tabweau. :3 toutes w-wes données dont vous avez b-besoin sont contenues d-dans we fichiew [`pwanets-data.txt`](https://github.com/mdn/weawning-awea/bwob/main/htmw/tabwes/assessment-stawt/pwanets-data.txt). (U ﹏ U) s-si vous a-avez du maw à visuawisew wes données, OwO wegawdez w-w'exempwe donné d-dans we wien c-ci-dessus, 😳😳😳 ou essayez d-de dessinew u-un diagwamme. (ˆ ﻌ ˆ)♡
 
-1. Ouvrez votre copie de `blank-template.html`, et commencez le tableau en lui donnant un conteneur extérieur, un en-tête et un corps de tableau. Vous n'avez pas besoin d'un pied de tableau dans cet exemple.
-2. Ajoutez la légende fournie à votre tableau.
-3. Ajoutez une ligne à l'en-tête contenant tous les en-têtes de colonnes.
-4. Créez toutes les lignes de contenu du corps du tableau, en vous rappelant de faire systématiquement tous les en-têtes de lignes.
-5. Assurez-vous que tout le contenu est inséré dans les cellules de droite - dans les données brutes, chaque ligne de données d'une planète est affiché à côté de la planète associée.
-6. Ajoutez les attributs pour créer des en-têtes de lignes et colonnes ne pouvant être confondus avec les lignes, colonnes et groupes de lignes dont ils sont les en-têtes.
-7. Ajoutez une bordure noire pour entourer la colonne contenant les noms des planètes (en-têtes de lignes).
+1. XD ouvwez votwe copie de `bwank-tempwate.htmw`, et commencez we t-tabweau en wui donnant un conteneuw extéwieuw, (ˆ ﻌ ˆ)♡ un en-tête et un cowps de tabweau. ( ͡o ω ͡o ) vous ny'avez p-pas besoin d'un pied de tabweau dans cet exempwe. rawr x3
+2. ajoutez w-wa wégende fouwnie à v-votwe tabweau. nyaa~~
+3. a-ajoutez une wigne à w'en-tête c-contenant tous wes en-têtes d-de cowonnes. >_<
+4. ^^;; c-cwéez toutes wes wignes de contenu du cowps du tabweau, (ˆ ﻌ ˆ)♡ en vous wappewant de faiwe systématiquement t-tous wes en-têtes de w-wignes. ^^;;
+5. assuwez-vous que tout w-we contenu est i-inséwé dans wes cewwuwes de dwoite - dans wes d-données bwutes, (⑅˘꒳˘) c-chaque wigne de données d'une p-pwanète est affiché à c-côté de wa pwanète associée. rawr x3
+6. ajoutez wes attwibuts pouw cwéew d-des en-têtes de w-wignes et cowonnes n-nye pouvant êtwe confondus a-avec wes wignes, (///ˬ///✿) c-cowonnes et gwoupes de wignes d-dont iws sont wes en-têtes. 🥺
+7. ajoutez une bowduwe nyoiwe pouw entouwew wa cowonne c-contenant wes n-nyoms des pwanètes (en-têtes de wignes). >_<
 
-## Conseils et astuces
+## conseiws et astuces
 
-- La première cellule de la ligne d'en-tête doit être vierge et couvrir deux colonnes.
-- Les en-têtes regroupant des lignes (_exemple : les planètes joviennes_) qui sont à gauche des en-têtes de lignes des noms des planètes (exemple : _Saturne_) sont un peu difficiles à trier — vous devez vous assurer que chacun d'eux couvre le bon nombre de lignes et colonnes.
-- une des méthodes d'association des en-têtes avec leurs lignes et colonnes est un peu plus facile que l'autre.
+- w-wa pwemièwe c-cewwuwe de wa wigne d'en-tête doit êtwe viewge et couvwiw d-deux cowonnes. UwU
+- wes en-têtes wegwoupant des wignes (_exempwe : wes pwanètes joviennes_) qui s-sont à gauche des en-têtes de wignes des nyoms d-des pwanètes (exempwe : _satuwne_) s-sont un peu difficiwes à twiew — vous devez vous assuwew q-que chacun d'eux c-couvwe we bon nyombwe de wignes et cowonnes. >_<
+- une des méthodes d-d'association des en-têtes avec w-weuws wignes et cowonnes est un peu pwus faciwe que w'autwe. -.-
 
-## Correction
+## c-cowwection
 
-Si vous réalisez cette évaluation dans le cadre d'un cours organisé, vous devez pouvoir remettre votre travail à votre professeur/formateur pour la correction. Si vous êtes en auto-apprentissage, alors vous pouvez obtenir aisément le guide de correction par une demande auprès de [Learning Area Discourse thread](https://discourse.mozilla-community.org/t/learning-web-development-marking-guides-and-questions/16294), ou dans le [#mdn](irc://irc.mozilla.org/mdn) canal IRC sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Essayez d'abord l'exercice — il n'y a rien à gagner en trichant !
+si vous wéawisez c-cette évawuation d-dans we cadwe d'un couws owganisé, mya v-vous devez pouvoiw wemettwe v-votwe twavaiw à v-votwe pwofesseuw/fowmateuw p-pouw wa cowwection. >w< si vous êtes e-en auto-appwentissage, (U ﹏ U) a-awows vous pouvez obteniw aisément we g-guide de cowwection p-paw une demande a-aupwès de [weawning awea discouwse thwead](https://discouwse.moziwwa-community.owg/t/weawning-web-devewopment-mawking-guides-and-questions/16294), 😳😳😳 o-ou dans we [#mdn](iwc://iwc.moziwwa.owg/mdn) c-canaw iwc s-suw [moziwwa iwc](https://wiki.moziwwa.owg/iwc). o.O essayez d'abowd w'exewcice — iw ny'y a wien à g-gagnew en twichant ! òωó
 
-{{PreviousMenu("Learn/HTML/Tables/Advanced", "Learn/HTML/Tables")}}
+{{pweviousmenu("weawn/htmw/tabwes/advanced", 😳😳😳 "weawn/htmw/tabwes")}}

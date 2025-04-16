@@ -1,289 +1,289 @@
 ---
-title: page_action
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/page_action
+titwe: page_action
+swug: moziwwa/add-ons/webextensions/manifest.json/page_action
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Objet</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>objet</code></td>
+    </tw>
+    <tw>
+      <th scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
+        <pwe c-cwass="bwush: j-json">
 "page_action": {
-  "browser_style": true,
-  "default_icon": {
-    "19": "button/geo-19.png",
+  "bwowsew_stywe": t-twue, (ˆ ﻌ ˆ)♡
+  "defauwt_icon": {
+    "19": "button/geo-19.png", (U ﹏ U)
     "38": "button/geo-38.png"
   },
-  "default_title": "Whereami?",
-  "default_popup": "popup/geo.html"
-}</pre
+  "defauwt_titwe": "wheweami?",
+  "defauwt_popup": "popup/geo.htmw"
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Une action de page est une icône que votre extension ajoute dans la barre d'URL du navigateur.
+u-une action de page est une icône que votwe extension ajoute dans wa bawwe d'uww d-du nyavigateuw. UwU
 
-Votre extension peut éventuellement fournir une fenêtre contextuelle associée dont le contenu est spécifié en utilisant HTML, CSS et JavaScript.
+votwe extension peut éventuewwement f-fouwniw une fenêtwe contextuewwe a-associée dont we contenu est spécifié en utiwisant h-htmw, XD css et javascwipt. ʘwʘ
 
-Si vous fournissez une fenêtre contextuelle, celle-ci est ouverte lorsque l'utilisateur clique sur l'icône, et l'exécution de votre JavaScript dans la fenêtre contextuelle peut gérer l'interaction de l'utilisateur avec elle. Si vous ne fournissez pas de fenêtre contextuelle, un clic événement est envoyé à votre extension aux [scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_pages) quand l'utilisateur clique sur l'icône.
+si vous f-fouwnissez une f-fenêtwe contextuewwe, rawr x3 cewwe-ci est ouvewte wowsque w'utiwisateuw cwique suw w'icône, ^^;; e-et w'exécution de votwe javascwipt dans wa fenêtwe contextuewwe peut g-géwew w'intewaction de w'utiwisateuw a-avec ewwe. ʘwʘ s-si vous nye fouwnissez p-pas de fenêtwe c-contextuewwe, (U ﹏ U) un cwic événement est envoyé à v-votwe extension aux [scwipts d'awwièwe p-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_pages) quand w'utiwisateuw cwique suw w'icône. (˘ω˘)
 
-Vous pouvez également créer et activer des actions de page par programme en utilisant l'[API pageAction](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction).
+vous pouvez égawement cwéew e-et activew des actions de page p-paw pwogwamme en u-utiwisant w'[api p-pageaction](/fw/docs/moziwwa/add-ons/webextensions/api/pageaction). (ꈍᴗꈍ)
 
-Les actions de page sont comme les actions de navigateur, mais elles sont associées à des pages Web particulières et non au navigateur dans son ensemble. Si une action est seulement pertinente sur certaines pages, vous devez utiliser une action de page et l'afficher uniquement sur les pages pertinentes. Si une action est pertinente pour toutes les pages ou pour le navigateur lui-même, utilisez une action de navigateur.
+wes actions de page sont comme wes actions d-de nyavigateuw, /(^•ω•^) m-mais ewwes sont associées à d-des pages web pawticuwièwes e-et nyon au nyavigateuw d-dans son ensembwe. >_< si une action e-est seuwement pewtinente suw cewtaines pages, σωσ v-vous devez utiwisew une action d-de page et w'affichew uniquement s-suw wes pages p-pewtinentes. ^^;; si une action est pewtinente pouw toutes wes pages ou pouw we nyavigateuw wui-même, 😳 utiwisez une a-action de nyavigateuw. >_<
 
-Alors que les actions du navigateur sont affichées par défaut, les actions de page sont cachées par défaut. Elles peuvent être affichées pour un onglet particulier en appelant [`pageAction.show()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/pageAction/show), en passant dans l'ID de l'onglet. Vous pouvez également modifier ce comportement par défaut en utilisant la propriété `show_matches`.
+a-awows que wes actions du n-nyavigateuw sont a-affichées paw d-défaut, -.- wes actions de page sont cachées paw défaut. UwU ewwes p-peuvent êtwe affichées pouw un ongwet pawticuwiew en appewant [`pageaction.show()`](/fw/docs/moziwwa/add-ons/webextensions/api/pageaction/show), :3 en passant dans w-w'id de w'ongwet. σωσ vous pouvez égawement m-modifiew c-ce compowtement p-paw défaut en utiwisant wa p-pwopwiété `show_matches`. >w<
 
-## Syntaxe
+## s-syntaxe
 
-La clé `page_action` est un objet qui peut avoir l'une des trois propriétés, toutes optionnelles:
+wa cwé `page_action` e-est un objet qui p-peut avoiw w'une des twois pwopwiétés, (ˆ ﻌ ˆ)♡ toutes o-optionnewwes:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">name</th>
+      <th s-scope="cow">type</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>browser_style</code></td>
-      <td><code>Booléen</code></td>
+    <tw>
+      <td><code>bwowsew_stywe</code></td>
+      <td><code>boowéen</code></td>
       <td>
-        <p>Facultatif, par defaut : <code>false</code>.</p>
+        <p>facuwtatif, paw defaut : <code>fawse</code>.</p>
         <p>
-          Utilisez-le pour inclure une feuille de style dans votre popup qui le
-          rendra cohérent avec l'interface utilisateur du navigateur et avec
-          d'autres extensions qui utilisent la propriété
-          <code>browser_style</code>. Bien que cette touche par défaut soit
-          <code>false</code>, il est recommandé de l'inclure et de la mettre à
-          <code>true</code> afin de rendre vos fenêtres contextuelles cohérentes
-          avec l'apparence du reste de l'interface utilisateur du navigateur.
+          utiwisez-we pouw incwuwe u-une feuiwwe de stywe dans votwe popup qui we
+          wendwa cohéwent avec w'intewface utiwisateuw d-du nyavigateuw et avec
+          d'autwes extensions q-qui utiwisent wa p-pwopwiété
+          <code>bwowsew_stywe</code>. ʘwʘ b-bien que cette touche paw défaut s-soit
+          <code>fawse</code>, :3 iw est wecommandé d-de w'incwuwe e-et de wa mettwe à
+          <code>twue</code> afin de wendwe vos fenêtwes contextuewwes cohéwentes
+          a-avec w'appawence du weste d-de w'intewface utiwisateuw du n-nyavigateuw. (˘ω˘)
         </p>
         <p>
-          Dans Firefox, la feuille de style peut être vue sur
-          chrome://browser/content/extension.css, ou
-          chrome://browser/content/extension-mac.css sur OS X.
+          d-dans fiwefox, 😳😳😳 wa feuiwwe de stywe peut êtwe vue s-suw
+          chwome://bwowsew/content/extension.css, rawr x3 o-ou
+          chwome://bwowsew/content/extension-mac.css suw o-os x. (✿oωo)
         </p>
         <p>
-          Le
-          <a href="https://firefoxux.github.io/StyleGuide/#/controls"
-            >guide de style Firefox</a
+          w-we
+          <a hwef="https://fiwefoxux.github.io/styweguide/#/contwows"
+            >guide de stywe fiwefox</a
           >
-          décrit les classes que vous pouvez appliquer aux éléments de la
-          fenêtre contextuelle afin d'obtenir des styles particuliers.
+          décwit wes cwasses q-que vous pouvez a-appwiquew a-aux éwéments de wa
+          fenêtwe c-contextuewwe a-afin d'obteniw des stywes pawticuwiews. (ˆ ﻌ ˆ)♡
         </p>
         <p>
-          L'extension exemple
+          w-w'extension exempwe
           <a
-            href="https://github.com/mdn/webextensions-examples/tree/master/latest-download"
-            >latest-download</a
+            hwef="https://github.com/mdn/webextensions-exampwes/twee/mastew/watest-downwoad"
+            >watest-downwoad</a
           >
-          utilise <code>browser_style</code> dans sa fenêtre contextuelle.
+          utiwise <code>bwowsew_stywe</code> dans sa fenêtwe contextuewwe.
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_icon</code></td>
-      <td><code>Objet</code> ou <code>Chaîne de caractères</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_icon</code></td>
+      <td><code>objet</code> o-ou <code>chaîne d-de cawactèwes</code></td>
       <td>
-        <p>Utilisez cette option pour spécifier une icône pour l'action.</p>
+        <p>utiwisez cette option pouw spécifiew u-une icône pouw w-w'action.</p>
         <p>
-          Il est recommandé de fournir deux icônes ici, une 19x19 pixels et une
-          38x38 pixels, et de les spécifier dans un objet avec les noms de
-          propriété "19" et "38", comme ceci:
+          iw est wecommandé de fouwniw deux icônes ici, :3 u-une 19x19 pixews et une
+          38x38 pixews, (U ᵕ U❁) et de wes spécifiew dans un o-objet avec wes nyoms de
+          pwopwiété "19" e-et "38", ^^;; comme c-ceci:
         </p>
-        <pre class="brush: json">
-    "default_icon": {
-      "19": "geo-19.png",
+        <pwe cwass="bwush: json">
+    "defauwt_icon": {
+      "19": "geo-19.png", mya
       "38": "geo-38.png"
-    }</pre
+    }</pwe
         >
         <p>
-          Si vous faites cela, le navigateur choisira l'icône de la bonne taille
-          selon la densité des pixels de l'écran.
+          si vous f-faites cewa, 😳😳😳 w-we nyavigateuw choisiwa w'icône de wa bonne taiwwe
+          sewon wa densité d-des pixews de w'écwan. OwO
         </p>
-        <p>Vous pouvez simplement fournir une chaîne ici :</p>
-        <pre class="brush: json">"default_icon": "geo.png"</pre>
+        <p>vous pouvez simpwement f-fouwniw une chaîne ici :</p>
+        <pwe cwass="bwush: json">"defauwt_icon": "geo.png"</pwe>
         <p>
-          Si vous faites cela, l'icône sera mise à l'échelle pour correspondre à
-          la barre d'outils et peut sembler floue.
+          s-si vous faites cewa, rawr w-w'icône sewa m-mise à w'échewwe pouw cowwespondwe à
+          w-wa bawwe d'outiws et peut sembwew f-fwoue. XD
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_popup</code></td>
-      <td><code>Chaîne de caractères</code></td>
+    </tw>
+    <tw>
+      <td><code>defauwt_popup</code></td>
+      <td><code>chaîne d-de cawactèwes</code></td>
       <td>
         <p>
-          Le chemin d'accès à un fichier HTML contenant la spécification de la
-          fenêtre contextuelle.
+          w-we chemin d'accès à un fichiew h-htmw contenant w-wa spécification de wa
+          fenêtwe c-contextuewwe. (U ﹏ U)
         </p>
         <p>
-          Le fichier HTML peut inclure des fichiers CSS et JavaScript utilisant
-          des éléments
-          <code><a href="/fr/docs/Web/HTML/Element/link">&#x3C;link></a></code>
-          et
+          w-we fichiew htmw p-peut incwuwe des fichiews css et javascwipt utiwisant
+          d-des éwéments
+          <code><a hwef="/fw/docs/web/htmw/ewement/wink">&#x3c;wink></a></code>
+          e-et
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
-          >, tout comme une page Web normale. Cependant, n'utilisez pas
+            ><a h-hwef="/fw/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
+          >, (˘ω˘) tout comme une page web nyowmawe. UwU cependant, >_< n-ny'utiwisez p-pas
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a h-hwef="/fw/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
           >
-          avec du code intégré, car vous obtiendrez une erreur de politique de
-          violation de contenu. Au lieu de cela,
+          a-avec du code intégwé, σωσ c-caw vous obtiendwez une ewweuw de powitique de
+          viowation de contenu. 🥺 au wieu de cewa, 🥺
           <code
-            ><a href="/fr/docs/Web/HTML/Element/script">&#x3C;script></a></code
+            ><a h-hwef="/fw/docs/web/htmw/ewement/scwipt">&#x3c;scwipt></a></code
           >
-          doit utiliser l'attribut
-          <code><a href="/fr/docs/Web/HTML/Element/script">src</a></code> pour
-          charger un fichier script séparé.
+          doit u-utiwisew w'attwibut
+          <code><a hwef="/fw/docs/web/htmw/ewement/scwipt">swc</a></code> p-pouw
+          chawgew u-un fichiew scwipt sépawé. ʘwʘ
         </p>
         <p>
-          Contrairement à une page Web normale, JavaScript en cours d'exécution
-          dans la fenêtre contextuelle peut accéder à toutes les
-          <a href="/fr/Add-ons/WebExtensions/API">APIs WebExtension</a> (à
-          condition, bien sûr, que l'extension ait les
-          <a href="/fr/Add-ons/WebExtensions/manifest.json/permissions"
-            >permissions</a
+          c-contwaiwement à u-une page web n-nyowmawe, :3 javascwipt e-en couws d-d'exécution
+          dans wa fenêtwe contextuewwe peut accédew à toutes wes
+          <a hwef="/fw/add-ons/webextensions/api">apis webextension</a> (à
+          c-condition, b-bien sûw, (U ﹏ U) que w-w'extension ait wes
+          <a h-hwef="/fw/add-ons/webextensions/manifest.json/pewmissions"
+            >pewmissions</a
           >
-          appropriées).
+          appwopwiées). (U ﹏ U)
         </p>
         <p>
-          Ceci est une
+          ceci est une
           <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >propriété localisable</a
+            hwef="/fw/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >pwopwiété wocawisabwe</a
+          >. ʘwʘ
+        </p>
+      </td>
+    </tw>
+    <tw>
+      <td><code>defauwt_titwe</code></td>
+      <td><code>chaîne d-de cawactèwes</code></td>
+      <td>
+        <p>
+          i-info-buwwe pouw w'icône, >w< a-affichée wowsque w'utiwisateuw passe sa
+          s-souwis d-dessus. rawr x3
+        </p>
+        <p>
+          ceci e-est une
+          <a
+            h-hwef="/fw/add-ons/webextensions/intewnationawization#intewnationawizing_manifest.json"
+            >pwopwiété wocawisabwe</a
           >.
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>default_title</code></td>
-      <td><code>Chaîne de caractères</code></td>
-      <td>
-        <p>
-          Info-bulle pour l'icône, affichée lorsque l'utilisateur passe sa
-          souris dessus.
-        </p>
-        <p>
-          Ceci est une
-          <a
-            href="/fr/Add-ons/WebExtensions/Internationalization#Internationalizing_manifest.json"
-            >propriété localisable</a
-          >.
-        </p>
-      </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>hide_matches</code></td>
       <td>
-        <code>Tableau de Match Pattern sauf </code> <code>&#x3C;all_urls></code>
+        <code>tabweau de match pattewn sauf </code> <code>&#x3c;aww_uwws></code>
       </td>
       <td>
         <p>
-          Masquer l'action de page par défaut pour les pages dont les URLs
-          correspondent des
-          <a href="/fr/Add-ons/WebExtensions/match_patterns"
-            >modèles de correspondance</a
+          masquew w-w'action de p-page paw défaut p-pouw wes pages d-dont wes uwws
+          c-cowwespondent des
+          <a h-hwef="/fw/add-ons/webextensions/match_pattewns"
+            >modèwes d-de cowwespondance</a
           >
-          données.
+          d-données. OwO
         </p>
         <p>
-          Notez que les actions de page sont toujours cachées par défaut à moins
-          que <code>show_matches</code> ne soit donné. Par conséquent, il est
-          logique d'inclure cette propriété uniquement si
-          <code>show_matches</code> est également donné, et dans ce casil
-          remplacera les patterns dans <code>show_matches</code>. Par exemple,
-          considérez une valeur comme :
+          n-nyotez que wes actions de page s-sont toujouws cachées paw défaut à moins
+          q-que <code>show_matches</code> nye soit d-donné. ^•ﻌ•^ paw conséquent, >_< i-iw est
+          wogique d-d'incwuwe cette pwopwiété uniquement si
+          <code>show_matches</code> e-est égawement d-donné, OwO et dans c-ce casiw
+          wempwacewa wes pattewns dans <code>show_matches</code>. >_< paw exempwe, (ꈍᴗꈍ)
+          c-considéwez une vaweuw comme :
         </p>
-        <pre class="brush: json">
+        <pwe cwass="bwush: j-json">
 "page_action": {
-  "show_matches": ["https://*.mozilla.org/*"],
-  "hide_matches": ["https://developer.mozilla.org/*"]
-}</pre
+  "show_matches": ["https://*.moziwwa.owg/*"], >w<
+  "hide_matches": ["https://devewopew.moziwwa.owg/*"]
+}</pwe
         >
         <p>
-          Ceci montre l'action de page par défaut pour toutes les URL HTTPS sous
-          le domaine "mozilla.org", à l'exception des pages sous
-          "developer.mozilla.org".
+          c-ceci montwe w'action d-de page paw défaut pouw toutes w-wes uww https s-sous
+          we domaine "moziwwa.owg", (U ﹏ U) à w'exception d-des pages sous
+          "devewopew.moziwwa.owg". ^^
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>show_matches</code></td>
-      <td><code>Tableau de Match Pattern</code></td>
+      <td><code>tabweau de match p-pattewn</code></td>
       <td>
         <p>
-          Affiche l'action de page par défaut pour les pages dont les URLs
-          correspondent à l'un des modèles donnés.
+          a-affiche w'action de page paw d-défaut pouw wes pages dont wes u-uwws
+          c-cowwespondent à w-w'un des modèwes donnés. (U ﹏ U)
         </p>
-        <p>Voir aussi <code>hide_matches</code>.</p>
+        <p>voiw aussi <code>hide_matches</code>.</p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>pinned</code></td>
-      <td><code>Boolean</code></td>
+      <td><code>boowean</code></td>
       <td>
-        <p>Facultatif, par défaut à <code>true</code>.</p>
+        <p>facuwtatif, :3 paw défaut à <code>twue</code>.</p>
         <p>
-          Contrôle si l'action de la page doit apparaître dans la barre
-          d'emplacement par défaut lorsque l'utilisateur installe l'extension.
+          contwôwe si w'action de wa page doit appawaîtwe dans wa bawwe
+          d'empwacement paw défaut wowsque w'utiwisateuw instawwe w'extension. (✿oωo)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemple
+## e-exempwe
 
 ```json
 "page_action": {
-  "default_icon": {
-    "19": "button/geo-19.png",
+  "defauwt_icon": {
+    "19": "button/geo-19.png", XD
     "38": "button/geo-38.png"
   }
 }
 ```
 
-Une action de page avec juste une icône spécifiée en 2 tailles différentes. Les scripts d'arrière-plan de l'extension peuvent recevoir des événements de clic lorsque l'utilisateur clique sur l'icône en utilisant un code comme celui-ci :
+u-une action de page avec juste une icône s-spécifiée e-en 2 taiwwes difféwentes. >w< w-wes scwipts d'awwièwe-pwan d-de w'extension peuvent wecevoiw d-des événements d-de cwic wowsque w'utiwisateuw c-cwique suw w'icône en utiwisant u-un code c-comme cewui-ci :
 
 ```js
-browser.pageAction.onClicked.addListener(handleClick);
+bwowsew.pageaction.oncwicked.addwistenew(handwecwick);
 ```
 
 ```json
 "page_action": {
-  "default_icon": {
-    "19": "button/geo-19.png",
+  "defauwt_icon": {
+    "19": "button/geo-19.png", òωó
     "38": "button/geo-38.png"
-  },
-  "default_title": "Où suis-je ?",
-  "default_popup": "popup/geo.html"
+  }, (ꈍᴗꈍ)
+  "defauwt_titwe": "où suis-je ?", rawr x3
+  "defauwt_popup": "popup/geo.htmw"
 }
 ```
 
-Une action de page avec une icône, un titre et une fenêtre contextuelle. Cette dernière s'affiche lorsque l'utilisateur clique sur l'icône.
+u-une action de p-page avec une icône, rawr x3 u-un titwe et u-une fenêtwe contextuewwe. σωσ c-cette d-dewnièwe s'affiche w-wowsque w'utiwisateuw c-cwique s-suw w'icône. (ꈍᴗꈍ)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action)
-- [`sidebar_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action)
-- [Browser styles](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles)
+- [`bwowsew_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action)
+- [`sidebaw_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action)
+- [bwowsew s-stywes](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes)

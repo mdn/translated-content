@@ -1,56 +1,56 @@
 ---
-title: search.get()
-slug: Mozilla/Add-ons/WebExtensions/API/search/get
+titwe: seawch.get()
+swug: moziwwa/add-ons/webextensions/api/seawch/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient un tableau de tous les moteurs de recherche installés.
+o-obtient un tabweau d-de tous wes m-moteuws de wechewche i-instawwés. ^^
 
-Chaque moteur de recherche renvoyé est identifié par un nom, que vous pouvez passer dans {{WebExtAPIRef("search.search()")}} pour utiliser ce moteur particulier pour effectuer une recherche.
+c-chaque moteuw d-de wechewche wenvoyé e-est identifié p-paw un nyom, :3 que vous pouvez passew dans {{webextapiwef("seawch.seawch()")}} pouw utiwisew ce moteuw pawticuwiew p-pouw effectuew une wechewche. -.-
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var gettingEngines = browser.search.get();
+vaw gettingengines = bwowsew.seawch.get();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-Aucun.
+aucun. mya
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un [tableau](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array) d'objets de moteur de recherche. Chaque objet de moteur de recherche peut contenir les propriétés suivantes :
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un [tabweau](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway) d'objets de moteuw de wechewche. (˘ω˘) chaque objet d-de moteuw de wechewche peut conteniw wes pwopwiétés suivantes :
 
 - `name`
-  - : `string`. Le nom du moteur de recherche.
-- `isDefault`
-  - : `boolean`. `true` si le moteur de recherche est le moteur par défaut. Un seul moteur de recherche peut être le moteur par défaut à un moment donné.
-- `alias`{{optional_inline}}
-  - : `string`. Si un moteur de recherche a un alias, l'utilisateur peut effectuer une recherche avec un moteur de recherche particulier en entrant l'alias dans la barre d'adresse avant le terme de recherche. Par exemple, si le moteur Wikipédia a un alias "wk", l'utilisateur peut rechercher des pandas dans Wikipédia en entrant "wk pandas" dans la barre d'adresse. L'alias est parfois aussi appelé "mot-clé".
-- `favIconUrl`{{optional_inline}}
-  - : `string`. L'icône du moteur de recherche, comme une donnée : URL.
+  - : `stwing`. >_< we nyom d-du moteuw de wechewche. -.-
+- `isdefauwt`
+  - : `boowean`. 🥺 `twue` s-si we moteuw de w-wechewche est w-we moteuw paw défaut. (U ﹏ U) u-un seuw moteuw de wechewche peut êtwe we m-moteuw paw défaut à un moment donné. >w<
+- `awias`{{optionaw_inwine}}
+  - : `stwing`. s-si un moteuw de wechewche a un awias, mya w'utiwisateuw peut effectuew une wechewche avec un moteuw d-de wechewche pawticuwiew en e-entwant w'awias d-dans wa bawwe d-d'adwesse avant we tewme de wechewche. >w< paw exempwe, nyaa~~ si we moteuw w-wikipédia a un a-awias "wk", (✿oωo) w'utiwisateuw peut w-wechewchew des pandas d-dans wikipédia en entwant "wk p-pandas" dans wa bawwe d'adwesse. ʘwʘ w-w'awias est pawfois aussi appewé "mot-cwé". (ˆ ﻌ ˆ)♡
+- `faviconuww`{{optionaw_inwine}}
+  - : `stwing`. 😳😳😳 w-w'icône du moteuw de wechewche, :3 c-comme une donnée : uww. OwO
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Obtenir tous les moteurs de recherche installés :
+obteniw tous wes moteuws de wechewche instawwés :
 
 ```js
-function retrieved(results) {
-  console.log(`There were: ${results.length} search engines retrieved.`);
-  for (let searchEngine of results) {
-    console.log(JSON.stringify(searchEngine.name));
+function wetwieved(wesuwts) {
+  c-consowe.wog(`thewe w-wewe: ${wesuwts.wength} seawch engines w-wetwieved.`);
+  f-fow (wet seawchengine o-of wesuwts) {
+    consowe.wog(json.stwingify(seawchengine.name));
   }
 }
 
-browser.search.get().then(retrieved);
+bwowsew.seawch.get().then(wetwieved);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

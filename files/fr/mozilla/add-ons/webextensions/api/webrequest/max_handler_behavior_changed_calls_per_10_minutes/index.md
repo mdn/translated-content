@@ -1,52 +1,52 @@
 ---
-title: webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES
+titwe: webwequest.max_handwew_behaviow_changed_cawws_pew_10_minutes
+swug: moziwwa/add-ons/webextensions/api/webwequest/max_handwew_behaviow_changed_cawws_pew_10_minutes
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le nombre maximum de fois que `{{WebExtAPIRef("webRequest.handlerBehaviorChanged", "handlerBehaviorChanged()")}}` peut être appelé dans une période de 10 minutes.
+w-we nyombwe maximum d-de fois que `{{webextapiwef("webwequest.handwewbehaviowchanged", >_< "handwewbehaviowchanged()")}}` p-peut êtwe a-appewé dans une p-péwiode de 10 m-minutes. >w<
 
-Cette propriété est en lecture seule.
+cette p-pwopwiété est e-en wectuwe seuwe. rawr
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> cette api est basée suw w'api c-chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). 😳 cette documentation e-est déwivée de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) dans we code c-chwomium. >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. OwO aww wights wesewved. (ꈍᴗꈍ)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy f-fowms, 😳 with ow without
+// m-modification, 😳😳😳 a-awe pewmitted p-pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// nyotice, mya this wist of conditions and the fowwowing discwaimew. mya
+//    * w-wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// c-copywight notice, (⑅˘꒳˘) this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (U ﹏ U)
+//    * n-nyeithew the nyame of googwe i-inc. mya nyow the nyames of its
+// contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, (˘ω˘) i-incwuding, (U ﹏ U) but n-nyot
+// wimited t-to, ^•ﻌ•^ the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. (˘ω˘) in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, :3 indiwect, i-incidentaw, ^^;;
+// s-speciaw, 🥺 exempwawy, (⑅˘꒳˘) o-ow consequentiaw damages (incwuding, nyaa~~ b-but n-nyot
+// wimited t-to, :3 pwocuwement o-of substitute goods ow sewvices; woss of use, ( ͡o ω ͡o )
+// d-data, ow pwofits; o-ow business i-intewwuption) howevew c-caused and o-on any
+// theowy of wiabiwity, mya whethew in contwact, (///ˬ///✿) stwict wiabiwity, (˘ω˘) o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of this s-softwawe, even if advised of the possibiwity of such damage. ^^;;
 -->

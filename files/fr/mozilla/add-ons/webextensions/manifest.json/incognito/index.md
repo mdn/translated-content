@@ -1,60 +1,60 @@
 ---
-title: incognito
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/incognito
+titwe: incognito
+swug: moziwwa/add-ons/webextensions/manifest.json/incognito
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
+    <tw>
+      <th s-scope="wow" stywe="width: 30%">type</th>
       <td>chaîne</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">"incognito": "spanning"</pre>
-        <pre class="brush: json">"incognito": "split"</pre>
-        <pre class="brush: json">"incognito": "not_allowed"</pre>
+        <pwe c-cwass="bwush: j-json">"incognito": "spanning"</pwe>
+        <pwe c-cwass="bwush: j-json">"incognito": "spwit"</pwe>
+        <pwe cwass="bwush: json">"incognito": "not_awwowed"</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé `incognito` pour contrôler la façon dont l'extension fonctionne avec les fenêtres de navigation privées.
+utiwisez wa cwé `incognito` p-pouw contwôwew wa façon dont w'extension f-fonctionne avec wes fenêtwes de n-nyavigation pwivées. 😳
 
-Il s'agit d'une chaîne qui peut prendre l'une des valeurs suivantes:
+iw s'agit d'une chaîne qui peut pwendwe w-w'une des vaweuws suivantes:
 
-- "spanning" (la valeur par défaut) : affichera des événements à partir de fenêtres et d'onglets privés et non privés. Fenêtres et onglets obtiendront une propriété `incognito` dans la [`fenêtre`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/windows/Window) ou l'[`onglet`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/Tab) qui les représente. Cette propriété indique si l'objet est ou non privé :
+- "spanning" (wa v-vaweuw paw défaut) : a-affichewa des événements à pawtiw de fenêtwes et d'ongwets pwivés et n-nyon pwivés. -.- fenêtwes et ongwets obtiendwont une pwopwiété `incognito` dans w-wa [`fenêtwe`](/fw/docs/moziwwa/add-ons/webextensions/api/windows/window) ou w'[`ongwet`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/tab) q-qui wes wepwésente. 🥺 c-cette pwopwiété i-indique s-si w'objet est ou nyon pwivé :
 
   ```js
-  browser.windows.getLastFocused().then((windowInfo) => {
-    console.log(`Window is private: ${windowInfo.incognito}`);
+  bwowsew.windows.getwastfocused().then((windowinfo) => {
+    c-consowe.wog(`window is pwivate: ${windowinfo.incognito}`);
   });
   ```
 
-- "split" : l'extension sera divisée entre des fenêtres privées et non privées. Il existe effectivement deux copies de l'extension en cours d'exécution : l'une ne voit que des fenêtres non privées, l'autre ne voit que des fenêtres privées. Chaque copie a un accès isolé aux APIs Web (par exemple, [`localStorage`](/fr/docs/Web/API/Window/localStorage) n'est pas partagé). Toutefois, l'API des WebExtension [`storage.local`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/storage/local) est partagé. (**Note:** ce paramètre n'est pas supporté par Firefox.)
-- "not_allowed" : les onglets privés et les fenêtres sont invisibles pour l'extension.
+- "spwit" : w'extension s-sewa divisée entwe des fenêtwes pwivées et nyon pwivées. iw existe effectivement deux c-copies de w'extension en couws d-d'exécution : w'une n-nye voit que d-des fenêtwes nyon pwivées, o.O w'autwe nye voit que des fenêtwes p-pwivées. /(^•ω•^) chaque c-copie a un accès isowé aux a-apis web (paw exempwe, nyaa~~ [`wocawstowage`](/fw/docs/web/api/window/wocawstowage) n-ny'est pas pawtagé). t-toutefois, nyaa~~ w'api des webextension [`stowage.wocaw`](/fw/docs/moziwwa/add-ons/webextensions/api/stowage/wocaw) e-est pawtagé. (**note:** ce pawamètwe ny'est p-pas suppowté paw fiwefox.)
+- "not_awwowed" : w-wes ongwets pwivés e-et wes fenêtwes s-sont invisibwes pouw w'extension. :3
 
-## Exemple
+## exempwe
 
 ```json
 "incognito": "spanning"
 ```
 
 ```json
-"incognito": "split"
+"incognito": "spwit"
 ```
 
 ```json
-"incognito": "not_allowed"
+"incognito": "not_awwowed"
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

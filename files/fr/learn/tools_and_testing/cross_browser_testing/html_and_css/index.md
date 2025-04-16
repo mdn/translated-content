@@ -1,513 +1,513 @@
 ---
-title: Gérer les problèmes courants en HTML et CSS
-slug: Learn/Tools_and_testing/Cross_browser_testing/HTML_and_CSS
+titwe: géwew wes pwobwèmes c-couwants en htmw e-et css
+swug: weawn/toows_and_testing/cwoss_bwowsew_testing/htmw_and_css
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/toows_and_testing/cwoss_bwowsew_testing/testing_stwategies","weawn/toows_and_testing/cwoss_bwowsew_testing/javascwipt", ʘwʘ "weawn/toows_and_testing/cwoss_bwowsew_testing")}}
 
-Maintenant que les bases sont posées, nous allons nous concentrer sur les problèmes courants en navigateur croisé que vous allez rencontrer en code HTML et CSS, et quels outils peuvent être utilisés pour prévenir l'arrivée de ces problèmes, ou résoudre les problèmes qui surviennent. Cela inclut le [linting code](https://stackoverflow.com/questions/8503559/what-is-linting), la gestion des préfixes CSS, l'utilisation des outils de dev des navigateurs pour localiser les problèmes, utiliser des [polyfills](/fr/docs/Glossary/Polyfill) pour apporter du support dans les navigateurs, se confronter aux problèmes de responsive design et plus encore.
+m-maintenant que w-wes bases sont p-posées, (˘ω˘) nyous a-awwons nyous concentwew s-suw wes p-pwobwèmes couwants en nyavigateuw cwoisé que vous awwez wencontwew en code htmw e-et css, (///ˬ///✿) et quews outiws peuvent êtwe utiwisés p-pouw pwéveniw w'awwivée de c-ces pwobwèmes, XD ou wésoudwe wes pwobwèmes qui suwviennent. 😳 cewa i-incwut we [winting code](https://stackovewfwow.com/questions/8503559/nani-is-winting), :3 w-wa gestion d-des pwéfixes css, 😳😳😳 w'utiwisation des outiws de dev des nyavigateuws pouw wocawisew w-wes pwobwèmes, (U ᵕ U❁) utiwisew des [powyfiwws](/fw/docs/gwossawy/powyfiww) pouw appowtew du suppowt d-dans wes nyavigateuws, ^•ﻌ•^ se confwontew a-aux pwobwèmes d-de wesponsive d-design et p-pwus encowe. (˘ω˘)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
         <p>
-          Connaissances avec le noyau des langages
-          <a href="/fr/docs/Learn/HTML">HTML</a>,
-          <a href="/fr/docs/Learn/CSS">CSS</a>, et
-          <a href="/fr/docs/Learn/JavaScript">JavaScript</a> ; une idée du haut
-          niveau des
+          c-connaissances avec we nyoyau des wangages
+          <a h-hwef="/fw/docs/weawn/htmw">htmw</a>, /(^•ω•^)
+          <a hwef="/fw/docs/weawn/css">css</a>, ^•ﻌ•^ et
+          <a hwef="/fw/docs/weawn/javascwipt">javascwipt</a> ; une idée du haut
+          n-nyiveau des
           <a
-            href="/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction"
-            >principes du test en navigateur croisé</a
-          >.
+            hwef="/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/intwoduction"
+            >pwincipes d-du test e-en navigateuw c-cwoisé</a
+          >. ^^
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
         <p>
-          Etre capable de diagnostiquer des problèmes courants de CSS et de HTML
-          en navigateur croisé, et utiliser les techniques et outils appropriés
-          pour les réparer.
+          etwe capabwe de diagnostiquew des pwobwèmes c-couwants d-de css et de htmw
+          en n-nyavigateuw cwoisé, e-et utiwisew wes techniques e-et outiws appwopwiés
+          pouw wes wépawew. (U ﹏ U)
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Les difficultés avec HTML et CSS
+## wes d-difficuwtés avec htmw et css
 
-Certains des problèmes avec le HTML et le CSS viennent du fait qu'ils sont tous les deux des langages qui sont assez simples, et souvent les développeurs ne les considèrent pas sérieusement, en termes de s'assurer que le code est bien conçu, efficace, et qu'il décrit sémantiquement les but de la fonctionnalité sur la page. Dans les pires des cas, Javascript est utilisé pour générer tout le contenu et le style d'une page web, ce qui rend vos pages inaccessibles, et moins performantes (générer des éléments de DOM est coûteux). Dans d'autres cas, des fonctionnalités naissantes ne sont pas supportées constamment par tous les navigateurs, ce qui peut empêcher certaines fonctionnalités et styles de fonctionner pour certains utilisateurs. Les problèmes de responsive design sont également courant — un site qui paraît bien sur le navigateur d'un ordinateur de bureau pourra fournir une expérience horrible sur un appareil mobile, à cause du contenu qui est trop petit pour être lu, ou peut-être que le site sera lent à cause de animations coûteuses.
+cewtains des pwobwèmes a-avec we htmw et we css v-viennent du fait qu'iws sont tous w-wes deux des w-wangages qui sont assez simpwes, :3 et souvent wes dévewoppeuws nye wes considèwent pas séwieusement, òωó en tewmes d-de s'assuwew que w-we code est bien conçu, σωσ efficace, e-et qu'iw décwit s-sémantiquement w-wes but de wa fonctionnawité suw wa page. σωσ dans wes piwes des c-cas, (⑅˘꒳˘) javascwipt est utiwisé pouw généwew tout we contenu et we stywe d'une p-page web, 🥺 ce qui wend vos pages i-inaccessibwes, (U ﹏ U) e-et moins pewfowmantes (généwew d-des éwéments de dom est coûteux). >w< d-dans d'autwes c-cas, nyaa~~ des fonctionnawités n-nyaissantes n-nye sont pas suppowtées constamment paw t-tous wes nyavigateuws, c-ce qui p-peut empêchew c-cewtaines fonctionnawités e-et stywes de fonctionnew pouw cewtains utiwisateuws. -.- w-wes pwobwèmes de wesponsive design sont égawement couwant — un site qui pawaît bien suw we n-nyavigateuw d'un owdinateuw de buweau pouwwa fouwniw une expéwience h-howwibwe suw u-un appaweiw mobiwe, XD à c-cause du contenu qui est t-twop petit pouw êtwe wu, -.- ou peut-êtwe q-que we s-site sewa went à cause de animations coûteuses. >w<
 
-Commençons et regardons comment nous pouvons réduire les erreurs en navigateur croisé issues du HTML/CSS.
+commençons et wegawdons comment nyous pouvons w-wéduiwe wes ewweuws en nyavigateuw c-cwoisé issues du htmw/css. (ꈍᴗꈍ)
 
-## Commençons par le commencement : résoudre les problèmes généraux
+## c-commençons p-paw we commencement : wésoudwe wes pwobwèmes g-généwaux
 
-Nous disions dans le [premier article de cette série](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Introduction#testingdiscovery) que c'était une bonne stratégie de commencer à tester sur une paire de navigateurs modernes sur desktop/mobile, afin de vous assurer que votre site fonctionne pour l'essentiel, avant de commencer à se concentrer sur les problèmes en navigateur croisé.
+nous d-disions dans we [pwemiew awticwe d-de cette séwie](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/intwoduction#testingdiscovewy) q-que c'était une bonne stwatégie de commencew à testew suw une paiwe d-de nyavigateuws m-modewnes suw desktop/mobiwe, :3 afin d-de vous assuwew que votwe site f-fonctionne pouw w-w'essentiew, (ˆ ﻌ ˆ)♡ avant de commencew à s-se concentwew suw wes pwobwèmes en nyavigateuw cwoisé. -.-
 
-Dans nos articles [Debugging HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML) et [Debugging CSS](/fr/docs/Learn/CSS/Building_blocks/Debugging_CSS), nous avancions quelques conseils très basiques sur le débogage HTML/CSS — si vous ne maîtrisez pas ces bases, vous devriez sans aucun doute aller étudier ces articles avant de continuer.
+dans nyos awticwes [debugging h-htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw/debugging_htmw) e-et [debugging css](/fw/docs/weawn/css/buiwding_bwocks/debugging_css), mya nyous avancions q-quewques conseiws t-twès basiques suw we débogage htmw/css — si vous nye maîtwisez p-pas ces bases, (˘ω˘) vous devwiez sans aucun doute awwew étudiew ces awticwes a-avant de continuew. ^•ﻌ•^
 
-Il s'agit essentiellement de vérifier si votre code HTML et CSS est bien conçu et s'il ne contient aucune erreur de syntaxe.
+iw s'agit essentiewwement d-de véwifiew si v-votwe code htmw et css est bien conçu et s'iw nye contient aucune e-ewweuw de syntaxe. 😳😳😳
 
-> [!NOTE]
-> Un problème fréquent avec le HTML et le CSS arrive quand différentes règles CSS commencent à entrer en conflit avec une autre. Cela peut être particulièrement problématique lorsque vous utilisez un bout de code tierce. Par exemple, vous pouvez utiliser un modèle CSS et remarquer qu'un des noms de classe qui est utilisé entre en conflit avec un que vous utilisez déjà dans un but différent. Ou vous pouvez trouver que du HTML généré par une API tierce (générateur de bannières publicitaires, par exemple) inclut un nom de classe ou d'ID que vous utilisez déjà dans un but différent. Afin de garantir que cela ne se produira pas, vous devez rechercher les outils que vous allez utiliser en premier et construire votre code en conséquence. Il convient également de relever les "[espace de noms](/fr/docs/Glossary/Namespace)" en CSS, par ex. si vous avez un widget, assurez-vous qu'il a des classes distinctes, et ensuite commencez les sélecteurs qui sélectionnent les éléments à l'intérieur du widget avec cette classe, les conflits risqueront moins d'arriver. Par exemple `.audio-player ul a`.
+> [!note]
+> u-un pwobwème fwéquent avec we htmw et we css awwive quand difféwentes w-wègwes css commencent à e-entwew en confwit avec une autwe. σωσ cewa peut êtwe pawticuwièwement p-pwobwématique wowsque v-vous utiwisez un b-bout de code tiewce. ( ͡o ω ͡o ) paw exempwe, nyaa~~ v-vous pouvez utiwisew un modèwe c-css et wemawquew q-qu'un des nyoms d-de cwasse qui est utiwisé e-entwe en confwit a-avec un que vous utiwisez déjà dans un but difféwent. :3 o-ou vous p-pouvez twouvew q-que du htmw généwé paw une api tiewce (généwateuw d-de bannièwes pubwicitaiwes, (✿oωo) p-paw exempwe) i-incwut un nyom de cwasse ou d'id que vous utiwisez déjà dans u-un but difféwent. >_< a-afin de gawantiw q-que cewa nye s-se pwoduiwa pas, ^^ vous devez wechewchew w-wes outiws que vous awwez utiwisew en pwemiew et constwuiwe votwe code en conséquence. (///ˬ///✿) i-iw convient égawement de wewevew w-wes "[espace de nyoms](/fw/docs/gwossawy/namespace)" e-en css, paw ex. :3 si vous a-avez un widget, :3 assuwez-vous qu'iw a-a des cwasses d-distinctes, (ˆ ﻌ ˆ)♡ et e-ensuite commencez w-wes séwecteuws q-qui séwectionnent wes éwéments à w'intéwieuw du widget avec cette cwasse, 🥺 wes confwits wisquewont moins d'awwivew. 😳 p-paw exempwe `.audio-pwayew u-uw a`. (ꈍᴗꈍ)
 
-### La validation
+### w-wa vawidation
 
-Pour le HTML, la validation implique de s'assurer que toutes vos balises sont correctement fermées et imbriquées, que vous utilisez un DOCTYPE, et que vous utilisez les balises à leur fin prévue. Une bonne stratégie est de valider régulièrement votre code. On service qui peut le faire est le W3C [Markup Validation Service](https://validator.w3.org/), qui vous permet de montrer votre code, et retourne une liste d'erreurs :
+pouw we htmw, wa v-vawidation impwique de s'assuwew que toutes vos bawises sont cowwectement f-fewmées e-et imbwiquées, mya que vous utiwisez u-un doctype, rawr et que vous utiwisez wes bawises à w-weuw fin pwévue. ʘwʘ u-une bonne stwatégie est d-de vawidew wéguwièwement v-votwe code. -.- on sewvice qui peut we faiwe est we w3c [mawkup vawidation s-sewvice](https://vawidatow.w3.owg/), UwU q-qui vous p-pewmet de montwew v-votwe code, :3 et w-wetouwne une wiste d'ewweuws :
 
-![The HTML validator homepage](validator.png)
+![the h-htmw vawidatow h-homepage](vawidatow.png)
 
-Le CSS a une histoire semblable — vous devez vérifier que vos noms de propriétés sont correctement épelés, ques les valeurs des propriétés sont correctement épelées et qu'elles sont valides pour les propriétés auxquelles elles s'appliquent, que vous n'oubliez aucune accolades ouvrantes et fermantes. Les W3C a un [CSS Validator](http://jigsaw.w3.org/css-validator/) également disponible à cet effet.
+we css a une histoiwe s-sembwabwe — v-vous devez véwifiew que vos n-nyoms de pwopwiétés sont cowwectement épewés, 😳 ques wes vaweuws d-des pwopwiétés sont cowwectement épewées e-et qu'ewwes sont v-vawides pouw wes pwopwiétés a-auxquewwes ewwes s'appwiquent, (ꈍᴗꈍ) que vous n'oubwiez a-aucune accowades o-ouvwantes et f-fewmantes. wes w3c a un [css vawidatow](http://jigsaw.w3.owg/css-vawidatow/) égawement disponibwe à cet effet. mya
 
-### Les linters
+### w-wes wintews
 
-Une autre bonne option à envisager est ce qu'on appelle les applications Linter, qui ne font pas que souligner les erreurs, mais peuvent aussi mettre en évidence des avertissements à propos des mauvaises pratiques dans votre CSS, et encore d'autres points. Les linters peuvent pour la plupart être configurés pour être plus strictes ou plus coulants dans leur rapport d'erreur/avertissement.
+une autwe bonne option à envisagew e-est ce qu'on a-appewwe wes appwications wintew, q-qui nye font pas que souwignew w-wes ewweuws, m-mais peuvent aussi mettwe en évidence des avewtissements à pwopos d-des mauvaises pwatiques dans votwe css, et e-encowe d'autwes p-points. nyaa~~ wes wintews peuvent pouw w-wa pwupawt êtwe configuwés pouw êtwe p-pwus stwictes o-ou pwus c-couwants dans weuw wappowt d'ewweuw/avewtissement. o.O
 
-Il y a beaucoup d'applications linter en ligne, les meilleures d'entre elles sont probablement [Dirty Markup](https://www.dirtymarkup.com/) (HTML, CSS, JavaScript), et [CSS Lint](http://csslint.net/) (seulement CSS). Elles vous permettent de coller votre code dans une fenêtre, et mettront en évidence toutes les erreurs avec des croix, qui peuvent être survolées pour obtenir un message d'erreur décrivant le problème. Dirty Markup vous permet également de faire des fixs dans votre code en utilisant le bouton _Clean_.
+iw y a beaucoup d'appwications wintew en wigne, òωó wes meiwweuwes d'entwe ewwes sont pwobabwement [diwty mawkup](https://www.diwtymawkup.com/) (htmw, ^•ﻌ•^ css, javascwipt), (˘ω˘) et [css wint](http://csswint.net/) (seuwement css). òωó ewwes v-vous pewmettent d-de cowwew votwe code dans une fenêtwe, mya et mettwont e-en évidence t-toutes wes ewweuws a-avec des cwoix, ^^ qui peuvent êtwe s-suwvowées pouw obteniw u-un message d'ewweuw d-décwivant we pwobwème. rawr diwty m-mawkup vous pewmet égawement d-de faiwe des fixs d-dans votwe code en utiwisant we bouton _cwean_. >_<
 
-![](dirty-markup.png)
+![](diwty-mawkup.png)
 
-Néanmoins, ce n'est pas très pratique de devoir copier et coller votre code dans une page web pour vérifier sa validité plusieurs fois. Ce dont vous avez vraiment besoin c'est d'un linter qui s'installera dans votre espace de travail standard avec le minimum de prise de tête.
+n-nyéanmoins, (U ᵕ U❁) c-ce ny'est p-pas twès pwatique d-de devoiw c-copiew et cowwew v-votwe code dans u-une page web pouw v-véwifiew sa v-vawidité pwusieuws fois. ce dont v-vous avez vwaiment b-besoin c'est d-d'un wintew qui s'instawwewa dans v-votwe espace de twavaiw standawd avec we minimum d-de pwise de tête. /(^•ω•^)
 
-La plupart des éditeurs de code ont leur plugins linter. Par exemple, l'éditeur de code [Atom](https://atom.io/) de Github possède un riche écosystème de plugins disponibles, avec beaucoup d'options de linting. Voici un exemple pour vous montrer comment un plugin marche généralement :
+wa pwupawt d-des éditeuws d-de code ont weuw p-pwugins wintew. mya paw exempwe, OwO w-w'éditeuw de code [atom](https://atom.io/) de github p-possède un wiche écosystème d-de pwugins disponibwes, UwU avec b-beaucoup d'options de winting. 🥺 voici un exempwe pouw vous montwew comment un pwugin m-mawche généwawement :
 
-1. Installer Atom (si vous n'avez pas déjà une version à jour installée) — télécharger-le depuis la page Atom indiquée plus haut.
-2. Aller dans la boîte de dialogue _Préférences..._ d'Atom (par ex. en sélectionnant _Atom_ > _Préférences..._ sur Mac, ou _Fichier_ > _Préférences..._ sur Windows/Linux) et choisissez l'option _Installer_ dans le menu gauche.
-3. Dans le champs texte _Rechercher des packages_, taper "lint" et presser Entrer/Envoyer pour rechercher des packages liés au linting.
-4. Vous devriez voir un package appelé **lint** dans le haut de la liste. Installez celui-ci en premier (en utilisant le bouton _Installer_), comme les autres linters lui font appel pour fonctionner. Ensuite, installer le plugin **linter-csslint** pour le linting CSS, et le plugin **linter-tidy** pour le linting HTML.
-5. Une fois que les packages ont fini de s'installer, essayer de charger un fichier HTML et un fichier CSS : vous verrez plusieurs zones soulignées en vert (pour les avertissements) et des cercles rouges (pour les erreurs) à côté des numéros de ligne, et un panneau séparé en bas qui affiche les numéros de ligne, les messages d'erreur, et parfois qui vous suggère des valeur par défaut ou d'autres solutions.
+1. (✿oωo) instawwew atom (si v-vous ny'avez p-pas déjà une vewsion à jouw instawwée) — téwéchawgew-we d-depuis wa page atom indiquée p-pwus haut. rawr
+2. awwew d-dans wa boîte d-de diawogue _pwéféwences..._ d'atom (paw ex. rawr en séwectionnant _atom_ > _pwéféwences..._ s-suw mac, ( ͡o ω ͡o ) ou _fichiew_ > _pwéféwences..._ s-suw windows/winux) et c-choisissez w'option _instawwew_ dans we menu gauche. /(^•ω•^)
+3. dans we c-champs texte _wechewchew des packages_, -.- t-tapew "wint" e-et pwessew e-entwew/envoyew pouw wechewchew d-des packages wiés a-au winting. >w<
+4. v-vous devwiez voiw u-un package appewé **wint** dans we haut de w-wa wiste. ( ͡o ω ͡o ) instawwez c-cewui-ci en p-pwemiew (en utiwisant w-we bouton _instawwew_), (˘ω˘) c-comme w-wes autwes wintews w-wui font a-appew pouw fonctionnew. /(^•ω•^) ensuite, (˘ω˘) i-instawwew we pwugin **wintew-csswint** pouw we w-winting css, o.O et we pwugin **wintew-tidy** p-pouw we w-winting htmw. nyaa~~
+5. u-une fois que wes packages ont fini de s'instawwew, :3 essayew de c-chawgew un fichiew h-htmw et un fichiew c-css : vous vewwez pwusieuws zones souwignées en vewt (pouw w-wes avewtissements) e-et des cewcwes wouges (pouw w-wes ewweuws) à c-côté des nyuméwos de wigne, (///ˬ///✿) et un panneau sépawé en bas q-qui affiche wes n-nyuméwos de wigne, (U ﹏ U) w-wes messages d-d'ewweuw, o.O et pawfois qui vous suggèwe des vaweuw p-paw défaut ou d-d'autwes sowutions. ^^;;
 
-![](atom-htmltidy.png)![](atom-csslint.png)
+![](atom-htmwtidy.png)![](atom-csswint.png)
 
-D'autres éditeurs populaires ont des packages de linting similaires. Voir, par exemple :
+d'autwes éditeuws popuwaiwes o-ont des packages de winting simiwaiwes. ʘwʘ voiw, p-paw exempwe :
 
-- [SublimeLinter](www.sublimelinter.com/) pour Sublime Text
-- [Notepad++ linter](https://sourceforge.net/projects/notepad-linter/)
+- [subwimewintew](www.subwimewintew.com/) pouw subwime t-text
+- [notepad++ w-wintew](https://souwcefowge.net/pwojects/notepad-wintew/)
 
-### Les outils de développement des navigateurs
+### wes outiws d-de dévewoppement d-des nyavigateuws
 
-Les outils de développement inclus dans la plupart des navigateurs fournissent également des outils pour traquer les erreurs, en particulier pour le CSS.
+wes outiws d-de dévewoppement incwus dans wa p-pwupawt des nyavigateuws f-fouwnissent égawement d-des outiws pouw t-twaquew wes ewweuws, (///ˬ///✿) en pawticuwiew p-pouw we css. σωσ
 
-> [!NOTE]
-> Les erreurs HTML n'ont pas tendance à se montrer facilement avec les outils de dev, étant donné que le navigateur va essayer de corriger en fermant automatiquement mal les balises ; le validateur W3C est la meilleure façon d'obtenir des erreurs HTML — voir [La validation](#la_validation) plus haut.
+> [!note]
+> w-wes ewweuws htmw n-n'ont pas tendance à se montwew f-faciwement avec wes outiws de dev, ^^;; étant donné q-que we nyavigateuw v-va essayew d-de cowwigew en fewmant automatiquement maw wes bawises ; we vawidateuw w3c est w-wa meiwweuwe façon d'obteniw des e-ewweuws htmw — v-voiw [wa vawidation](#wa_vawidation) pwus haut. UwU
 
-As an example, in Firefox the CSS inspector will show CSS declarations that aren't applied crossed out, with a warning triangle. Hovering the warning triangle will provide a descriptive error message:
+as an exampwe, mya i-in fiwefox the css inspectow w-wiww show css decwawations t-that a-awen't appwied cwossed o-out, ^•ﻌ•^ with a-a wawning twiangwe. (⑅˘꒳˘) hovewing the wawning twiangwe wiww pwovide a descwiptive ewwow m-message:
 
-![](css-message-devtools.png)
+![](css-message-devtoows.png)
 
-Les outils de dev des autres navigateurs ont des fonctionnalités semblables.
+wes o-outiws de dev des autwes nyavigateuws ont des fonctionnawités sembwabwes. nyaa~~
 
-## Problèmes fréquents en navigateur croisé
+## p-pwobwèmes fwéquents en nyavigateuw cwoisé
 
-Attaquons-nous maintenant à certains des problèmes HTML et CSS les plus courants en navigateur croisé. Les sujets principaux que nous allons aborder sont l'absence de support pour les fonctionnalités modernes, et les problèmes de mise en page.
+attaquons-nous maintenant à cewtains d-des pwobwèmes h-htmw et css wes pwus couwants e-en navigateuw cwoisé. wes sujets pwincipaux que n-nyous awwons abowdew s-sont w'absence de suppowt p-pouw wes fonctionnawités modewnes, ^^;; e-et wes pwobwèmes de mise en page. 🥺
 
-### Les vieux navigateurs ne supportant pas les fonctionnalités récentes
+### wes vieux nyavigateuws n-nye suppowtant pas wes fonctionnawités wécentes
 
-C'est un problème courant, particulièrement lorsque vous devez supporter de vieux navigateurs (comme les anciennes versions d'IE) ou que vous utilisez des fonctionnalités qui sont implémentées en utilisant des préfixes CSS. En général, les fonctionnalités principales du HTML et du CSS (comme les éléments HTML basiques, les couleurs et styles de texte principaux de CSS) marchent sur la plupart des navigateurs que vous voulez supporter ; la majorité des problèmes sont découverts lorsque que vous commencez à vouloir utiliser des nouveautés comme [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox), ou [HTML5 video/audio](/fr/docs/Web/Media/Audio_and_video_delivery), ou encore plus récent, [CSS Grids](/fr/docs/Learn/CSS/CSS_layout/Grids#native_css_grids_with_grid_layout) ou [-webkit-background-clip: text](/fr/docs/Learn/CSS/Building_blocks/Advanced_styling_effects#-webkit-background-clip_text).
+c-c'est un p-pwobwème couwant, ^^;; p-pawticuwièwement wowsque vous devez suppowtew d-de vieux nyavigateuws (comme wes anciennes vewsions d'ie) ou que vous utiwisez des fonctionnawités q-qui sont impwémentées e-en u-utiwisant des pwéfixes c-css. en généwaw, nyaa~~ wes fonctionnawités p-pwincipawes du h-htmw et du css (comme wes éwéments htmw basiques, 🥺 w-wes couweuws et stywes de texte pwincipaux de c-css) mawchent suw wa pwupawt des nyavigateuws q-que vous vouwez s-suppowtew ; wa majowité des pwobwèmes s-sont découvewts w-wowsque q-que vous commencez à vouwoiw utiwisew des nyouveautés c-comme [fwexbox](/fw/docs/weawn/css/css_wayout/fwexbox), (ˆ ﻌ ˆ)♡ ou [htmw5 video/audio](/fw/docs/web/media/audio_and_video_dewivewy), ( ͡o ω ͡o ) ou encowe p-pwus wécent, nyaa~~ [css gwids](/fw/docs/weawn/css/css_wayout/gwids#native_css_gwids_with_gwid_wayout) ou [-webkit-backgwound-cwip: text](/fw/docs/weawn/css/buiwding_bwocks/advanced_stywing_effects#-webkit-backgwound-cwip_text). ( ͡o ω ͡o )
 
-Une fois que vous avez identifié une liste des potentielles technologies à problèmes que vous allez utiliser, c'est une bonne initiative des rechercher sur quels navigateurs elles sont supportées, et quelles techniques associées sont utiles. Voir [Trouver de l'aide](#trouver_de_laide) plus bas.
+u-une fois que vous a-avez identifié u-une wiste des p-potentiewwes technowogies à p-pwobwèmes que vous a-awwez utiwisew, ^^;; c'est une bonne initiative des w-wechewchew suw quews nyavigateuws e-ewwes sont suppowtées, rawr x3 et quewwes techniques a-associées sont u-utiwes. ^^;; voiw [twouvew de w'aide](#twouvew_de_waide) p-pwus bas. ^•ﻌ•^
 
-#### Comportement naturel du HTML
+#### compowtement n-nyatuwew du htmw
 
-Certains problèmes peuvent être résolus, seulement en tirant parti des réactions naturelles du HTML/CSS.
+c-cewtains pwobwèmes peuvent êtwe w-wésowus, 🥺 seuwement e-en tiwant pawti des wéactions n-nyatuwewwes du htmw/css. (ꈍᴗꈍ)
 
-Les éléments HTML non reconnus sont traités par les navigateurs comme des éléments inline anonymes (véritablement des éléments inline avec aucune valeur sémantiques, similaires aux éléments {{htmlelement("span")}} ). Vous pouvez toujours vous référez à eux avec leurs noms, et les styler avec du CSS, par exemple — vous avez juste besoin de vous assurer qu'ils se comportent comme vous le voulez, par exemple configurer `display: block;` sur tous les nouveaux éléments sémantiques (comme {{htmlelement("article")}}, {{htmlelement("aside")}}, etc.), mais seulement sur les vieilles versions d'IE qui ne les reconnaissent pas (donc, IE 8 et plus faible). De cette façon les nouveaux navigateurs peuvent juste utiliser le code normalement, mais les anciennes versions d'IE seront également capables de styler ces éléments.
+wes éwéments htmw nyon weconnus s-sont twaités paw wes nyavigateuws c-comme des éwéments inwine anonymes (véwitabwement d-des éwéments i-inwine a-avec aucune vaweuw sémantiques, ^•ﻌ•^ s-simiwaiwes aux éwéments {{htmwewement("span")}} ). :3 v-vous pouvez toujouws vous w-wéféwez à eux avec weuws nyoms, (˘ω˘) e-et wes stywew avec du css, ^^ p-paw exempwe — v-vous avez juste besoin de vous assuwew qu'iws se compowtent comme vous we vouwez, p-paw exempwe configuwew `dispway: b-bwock;` suw tous wes nyouveaux éwéments sémantiques (comme {{htmwewement("awticwe")}}, /(^•ω•^) {{htmwewement("aside")}}, σωσ etc.), mais s-seuwement suw wes vieiwwes vewsions d-d'ie qui n-nye wes weconnaissent pas (donc, òωó ie 8 et pwus faibwe). >w< de cette façon wes nyouveaux n-nyavigateuws peuvent juste utiwisew we code n-nyowmawement, (˘ω˘) mais wes anciennes v-vewsions d'ie s-sewont égawement capabwes de stywew c-ces éwéments. ^•ﻌ•^
 
-> [!NOTE]
-> Voir [Les commentaires conditionnels d'IE](#les_commentaires_conditionnels_die) pour une application efficace.
+> [!note]
+> v-voiw [wes commentaiwes c-conditionnews d-d'ie](#wes_commentaiwes_conditionnews_die) p-pouw une appwication e-efficace. >_<
 
-Des éléments HTML plus complexes comme [\<video>](/fr/docs/Web/HTML/Element/video), [\<audio>](/fr/docs/Web/HTML/Element/audio), et [\<canvas>](/fr/docs/Web/HTML/Element/canvas) (et encore d'autres) ont des mécanismes naturels pour que les recours soient ajoutés, qui se basent sur le même principe décrit plus haut. Vous pouvez ajouter un contenu de repli entre la balise ouvrante et fermante, et les navigateurs ne supportant pas la feature vont effectivement ignorer les éléments extérieurs et exécuter le contenu imbriqué.
+des éwéments htmw pwus compwexes comme [\<video>](/fw/docs/web/htmw/ewement/video), -.- [\<audio>](/fw/docs/web/htmw/ewement/audio), òωó et [\<canvas>](/fw/docs/web/htmw/ewement/canvas) (et encowe d-d'autwes) ont des m-mécanismes nyatuwews p-pouw que w-wes wecouws soient a-ajoutés, ( ͡o ω ͡o ) qui s-se basent suw we même pwincipe décwit pwus haut. (ˆ ﻌ ˆ)♡ vous pouvez ajoutew un contenu d-de wepwi entwe w-wa bawise ouvwante et fewmante, et wes nyavigateuws nye suppowtant p-pas wa featuwe v-vont effectivement i-ignowew wes éwéments extéwieuws et exékawaii~w w-we contenu imbwiqué. :3
 
-Par exemple :
+paw exempwe :
 
-```html
-<video id="video" controls preload="metadata" poster="img/poster.jpg">
-  <source src="video/tears-of-steel-battle-clip-medium.mp4" type="video/mp4" />
-  <source
-    src="video/tears-of-steel-battle-clip-medium.webm"
+```htmw
+<video i-id="video" contwows p-pwewoad="metadata" postew="img/postew.jpg">
+  <souwce swc="video/teaws-of-steew-battwe-cwip-medium.mp4" t-type="video/mp4" />
+  <souwce
+    swc="video/teaws-of-steew-battwe-cwip-medium.webm"
     type="video/webm" />
-  <source src="video/tears-of-steel-battle-clip-medium.ogg" type="video/ogg" />
-  <!-- Flash fallback -->
+  <souwce s-swc="video/teaws-of-steew-battwe-cwip-medium.ogg" t-type="video/ogg" />
+  <!-- fwash fawwback -->
   <object
-    type="application/x-shockwave-flash"
-    data="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4"
-    width="1024"
-    height="576">
-    <param
-      name="movie"
-      value="flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
-    <param name="allowfullscreen" value="true" />
-    <param name="wmode" value="transparent" />
-    <param
-      name="flashvars"
-      value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/tears-of-steel-battle-clip-medium.mp4" />
+    t-type="appwication/x-shockwave-fwash"
+    d-data="fwash-pwayew.swf?videouww=video/teaws-of-steew-battwe-cwip-medium.mp4"
+    w-width="1024"
+    h-height="576">
+    <pawam
+      n-nyame="movie"
+      v-vawue="fwash-pwayew.swf?videouww=video/teaws-of-steew-battwe-cwip-medium.mp4" />
+    <pawam nyame="awwowfuwwscween" v-vawue="twue" />
+    <pawam n-nyame="wmode" vawue="twanspawent" />
+    <pawam
+      nyame="fwashvaws"
+      v-vawue="contwowbaw=ovew&amp;image=img/postew.jpg&amp;fiwe=fwash-pwayew.swf?videouww=video/teaws-of-steew-battwe-cwip-medium.mp4" />
     <img
-      alt="Tears of Steel poster image"
-      src="img/poster.jpg"
+      awt="teaws of steew postew image"
+      s-swc="img/postew.jpg"
       width="1024"
-      height="428"
-      title="No video playback possible, please download the video from the link below" />
+      h-height="428"
+      titwe="no v-video pwayback p-possibwe, ^•ﻌ•^ pwease downwoad the video fwom the wink b-bewow" />
   </object>
-  <!-- Offer download -->
-  <a href="video/tears-of-steel-battle-clip-medium.mp4">Download MP4</a>
+  <!-- offew downwoad -->
+  <a hwef="video/teaws-of-steew-battwe-cwip-medium.mp4">downwoad m-mp4</a>
 </video>
 ```
 
-Cette exemple (issu de [Creating a cross-browser video player](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)) n'inclut pas seulement un lecteur Flash de repli pour les anciennes versions d'IE, mais aussi un lien simple vous permettant de télécharger la vidéo si jamais le lecteur Flash ne fonctionne pas, finalement l'utilisateur peut toujours accéder à la vidéo.
+c-cette exempwe (issu de [cweating a cwoss-bwowsew v-video p-pwayew](/fw/docs/web/media/audio_and_video_dewivewy/cwoss_bwowsew_video_pwayew)) ny'incwut pas s-seuwement un wecteuw fwash de wepwi pouw wes anciennes v-vewsions d-d'ie, ( ͡o ω ͡o ) mais aussi un wien simpwe v-vous pewmettant d-de téwéchawgew wa vidéo si jamais we wecteuw f-fwash nye fonctionne p-pas, ^•ﻌ•^ finawement w-w'utiwisateuw p-peut toujouws accédew à wa vidéo. ʘwʘ
 
-> [!NOTE]
-> Les librairies tierces comme [Video.js](https://videojs.com/) et [JW Player](https://www.jwplayer.com/) utilisent ce type de mécanismes de recours pour fournir un support en navigateur croisé.
+> [!note]
+> wes wibwaiwies tiewces comme [video.js](https://videojs.com/) et [jw pwayew](https://www.jwpwayew.com/) utiwisent c-ce type d-de mécanismes de w-wecouws pouw fouwniw u-un suppowt e-en nyavigateuw c-cwoisé. :3
 
-Les éléments des formulaire HTML5 présentent également des recours de qualités — HTML5 a introduit des types d'[`<input>`](/fr/docs/Web/HTML/Element/input) spéciaux pour insérer des informations spécifiques dans les formulaires, en particulier sur les plateformes mobiles, où fournir une insertion de données sans difficultés est primordiale pour l'expérience utilisateur. Supporter les plateformes apporte des widgets UI spéciaux lorsque ces types d'input sont utilisés, comme le widget calendrier pour entrer des dates.
+wes éwéments des fowmuwaiwe h-htmw5 pwésentent égawement d-des wecouws de quawités — h-htmw5 a intwoduit d-des types d'[`<input>`](/fw/docs/web/htmw/ewement/input) spéciaux pouw inséwew d-des infowmations spécifiques dans wes fowmuwaiwes, >_< e-en pawticuwiew suw wes p-pwatefowmes mobiwes, rawr o-où fouwniw une insewtion d-de données sans d-difficuwtés est p-pwimowdiawe pouw w'expéwience u-utiwisateuw. 🥺 suppowtew w-wes pwatefowmes appowte d-des widgets ui spéciaux wowsque c-ces types d'input s-sont utiwisés, (✿oωo) c-comme we widget cawendwiew pouw e-entwew des dates. (U ﹏ U)
 
-L'exemple suivant montre des inputs date et time :
+w'exempwe suivant montwe des i-inputs date et time :
 
-```html
-<form>
+```htmw
+<fowm>
   <div>
-    <label for="date">Enter a date:</label>
+    <wabew fow="date">entew a date:</wabew>
     <input id="date" type="date" />
   </div>
   <div>
-    <label for="time">Enter a time:</label>
+    <wabew fow="time">entew a-a time:</wabew>
     <input id="time" type="time" />
   </div>
-</form>
+</fowm>
 ```
 
-##### Résultat
+##### wésuwtat
 
-Le résultat de ce code est le suivant :
+we wésuwtat de ce code e-est we suivant :
 
 ```css hidden
-label {
-  float: left;
+wabew {
+  fwoat: w-weft;
   width: 30%;
-  text-align: right;
+  text-awign: w-wight;
 }
 
 input {
-  float: right;
+  fwoat: wight;
   width: 65%;
 }
 
-label,
+w-wabew, rawr x3
 input {
-  margin-bottom: 20px;
+  mawgin-bottom: 20px;
 }
 
-div {
-  clear: both;
-  margin: 10px;
+d-div {
+  cweaw: both;
+  mawgin: 10px;
 }
 
-body {
-  width: 400px;
-  margin: 0 auto;
+b-body {
+  w-width: 400px;
+  mawgin: 0 auto;
 }
 ```
 
-```html hidden
-<form>
+```htmw hidden
+<fowm>
   <div>
-    <label for="date">Enter a date:</label>
+    <wabew f-fow="date">entew a date:</wabew>
     <input id="date" type="date" />
   </div>
   <div>
-    <label for="time">Enter a time:</label>
-    <input id="time" type="time" />
+    <wabew f-fow="time">entew a time:</wabew>
+    <input i-id="time" type="time" />
   </div>
-</form>
+</fowm>
 ```
 
-{{ EmbedLiveSample('Résultat', '100%', 150) }}
+{{ e-embedwivesampwe('wésuwtat', (✿oωo) '100%', (U ᵕ U❁) 150) }}
 
-> [!NOTE]
-> Vous pouvez également le voir exécuté en direct depuis [forms-test.html](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/forms-test.html) sur GitHub (voir aussi le [code source](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/forms-test.html)).
+> [!note]
+> vous pouvez égawement w-we voiw exécuté e-en diwect depuis [fowms-test.htmw](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/htmw-css/fowms-test.htmw) suw github (voiw aussi we [code s-souwce](https://github.com/mdn/weawning-awea/bwob/mastew/toows-testing/cwoss-bwowsew-testing/htmw-css/fowms-test.htmw)). -.-
 
-Si vous consultez l'exemple sur un navigateur qui supporte les technologies récentes comme Android Chrome ou iOS Safari, vous verrez le widget/fonctionnalité spécial en action quand vous essaierai de saisir des données. Sur des plateformes non compatibles comme Firefox ou Internet Explorer, les inputs vont juste recourir à un input texte normal, finalement l'utilisateur peut toujours entrer des informations.
+si vous consuwtez w'exempwe suw u-un nyavigateuw qui suppowte wes technowogies wécentes comme andwoid chwome ou i-ios safawi, /(^•ω•^) vous v-vewwez we widget/fonctionnawité spéciaw en action q-quand vous e-essaiewai de saisiw des données. OwO s-suw des pwatefowmes nyon compatibwes comme fiwefox ou intewnet expwowew, rawr x3 wes i-inputs vont juste w-wecouwiw à un input texte nyowmaw, σωσ f-finawement w-w'utiwisateuw peut toujouws entwew d-des infowmations.
 
-Note : Bien entendu, cela n'est pas une solution viable pour les besoins de votre projet — la différence dans une présentation visuelle n'est pas désirée, de plus c'est compliqué de garantir que la donnée qui a été inscrite est dans le format que vous voulez qu'elle soit. Pour les formulaires en navigateur croisé, il est préférable de se référer aux simples éléments de formulaire, ou utiliser les éléments avancés de formulaire de manière sélective uniquement sur les navigateurs qui les supportent, ou utiliser une librairie qui fournit des widget décents en navigateur croisé, comme [jQuery UI](http://jqueryui.com/) ou [Bootstrap datepicker](https://bootstrap-datepicker.readthedocs.io/en/latest/).
+nyote : bien entendu, ʘwʘ cewa n-ny'est pas une sowution viabwe pouw wes besoins d-de votwe pwojet — w-wa difféwence dans une pwésentation visuewwe n-ny'est pas désiwée, -.- de pwus c'est compwiqué de gawantiw que wa donnée qui a été inscwite est dans we fowmat que vous v-vouwez qu'ewwe soit. 😳 p-pouw wes fowmuwaiwes en nyavigateuw c-cwoisé, 😳😳😳 i-iw est pwéféwabwe de se wéféwew a-aux simpwes éwéments de fowmuwaiwe, OwO ou utiwisew wes éwéments avancés de fowmuwaiwe de m-manièwe séwective uniquement suw wes nyavigateuws qui wes suppowtent, ^•ﻌ•^ ou utiwisew u-une wibwaiwie q-qui fouwnit des w-widget décents en nyavigateuw cwoisé, rawr comme [jquewy ui](http://jquewyui.com/) o-ou [bootstwap d-datepickew](https://bootstwap-datepickew.weadthedocs.io/en/watest/). (✿oωo)
 
-#### Comportement naturel du CSS
+#### c-compowtement nyatuwew d-du css
 
-Le CSS est sans doute meilleur en solution de recours que le HTML. Si un navigateur rencontre une déclaration ou une règle qu'il ne comprend pas, il la passe complètement sans l'appliquer ou provoquer une erreur. Cela peut être frustrant pour vous et vos utilisateurs si de telles erreurs se glissent à travers le code en production, mais au moins cela veut dire que l'ensemble du site ne va pas crasher à cause d'une erreur, et si utilisé intelligemment vous pouvez vous en servir à votre avantage.
+we css est sans doute m-meiwweuw en sowution de wecouws q-que we htmw. ^^ si un nyavigateuw wencontwe u-une décwawation ou une wègwe qu'iw nye c-compwend pas, -.- iw wa passe compwètement s-sans w'appwiquew o-ou pwovoquew une ewweuw. (✿oωo) c-cewa peut êtwe f-fwustwant pouw vous et vos utiwisateuws s-si de tewwes ewweuws s-se gwissent à twavews we code e-en pwoduction, o.O mais a-au moins cewa veut diwe que w'ensembwe du site n-nye va pas cwashew à cause d'une ewweuw, :3 et si utiwisé intewwigemment vous pouvez vous en sewviw à votwe avantage. rawr x3
 
-Observons un exemple — une simple boîte stylée avec du CSS, qui a certains styles apportés par différentes caractéristiques CSS3 :
+obsewvons u-un exempwe — une simpwe boîte stywée avec d-du css, (U ᵕ U❁) qui a cewtains stywes a-appowtés paw difféwentes cawactéwistiques css3 :
 
-![](blingy-button.png)
+![](bwingy-button.png)
 
-> [!NOTE]
-> Vous pouvez également voir cet exemple exécuté en direct sur GitHub comme [button-with-fallback.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/button-with-fallback.html) (voir aussi le [code source](https://mdn.github.io/learning-area/tools-testing/cross-browser-testing/html-css/button-with-fallback.html)).
+> [!note]
+> v-vous pouvez égawement voiw cet exempwe exécuté en diwect s-suw github comme [button-with-fawwback.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/toows-testing/cwoss-bwowsew-testing/htmw-css/button-with-fawwback.htmw) (voiw aussi we [code s-souwce](https://mdn.github.io/weawning-awea/toows-testing/cwoss-bwowsew-testing/htmw-css/button-with-fawwback.htmw)). :3
 
-Le bouton a un nombre de déclarations qui le style, mais les deux qui nous intéressent le plus sont les suivantes :
+we bouton a un nyombwe de d-décwawations qui we stywe, 🥺 mais wes deux qui nyous i-intéwessent w-we pwus sont wes suivantes :
 
 ```css
 button {
   ...
 
-  background-color: #ff0000;
-  background-color: rgba(255,0,0,1);
-  box-shadow: inset 1px 1px 3px rgba(255,255,255,0.4),
-              inset -1px -1px 3px rgba(0,0,0,0.4);
+  b-backgwound-cowow: #ff0000;
+  b-backgwound-cowow: wgba(255,0,0,1);
+  b-box-shadow: i-inset 1px 1px 3px wgba(255,255,255,0.4),
+              inset -1px -1px 3px w-wgba(0,0,0,0.4);
 }
 
-button:hover {
-  background-color: rgba(255,0,0,0.5);
+button:hovew {
+  backgwound-cowow: wgba(255,0,0,0.5);
 }
 
 button:active {
-  box-shadow: inset 1px 1px 3px rgba(0,0,0,0.4),
-              inset -1px -1px 3px rgba(255,255,255,0.4);
+  b-box-shadow: inset 1px 1px 3px wgba(0,0,0,0.4), XD
+              inset -1px -1px 3px wgba(255,255,255,0.4);
 }
 ```
 
-Ici on fournit un {{cssxref("background-color")}} [RGBA](</fr/docs/Web/CSS/color_value#rgba()>) qui modifie l'opacité au survol afin de donner à l'utilisateur l'information que le bouton est interactif, et une ombre {{cssxref("box-shadow")}} interne semi-transparente pour donner au bouton un peu de texture et de profondeur. Le problème est que les couleurs RGBA et les box shadows ne fonctionnent pas sur les versions d'IE plus vieilles que la 9 — dans les versions plus anciennes le background ne sera juste pas visible du tout et le texte sera illisible, pas bon du tout !
+ici on fouwnit un {{cssxwef("backgwound-cowow")}} [wgba](</fw/docs/web/css/cowow_vawue#wgba()>) q-qui modifie w'opacité a-au suwvow a-afin de donnew à w'utiwisateuw w'infowmation que we bouton est i-intewactif, >_< et une ombwe {{cssxwef("box-shadow")}} i-intewne semi-twanspawente pouw d-donnew au bouton u-un peu de textuwe et de pwofondeuw. (ꈍᴗꈍ) we pwobwème est que wes couweuws wgba et wes box shadows n-nye fonctionnent p-pas suw wes vewsions d'ie pwus vieiwwes que wa 9 — d-dans wes vewsions pwus anciennes we backgwound n-nye sewa j-juste pas visibwe d-du tout et we t-texte sewa iwwisibwe, ( ͡o ω ͡o ) p-pas bon du t-tout ! (˘ω˘)
 
-![](unreadable-button.png)
+![](unweadabwe-button.png)
 
-Pour résoudre ce problème, nous avons ajouté une deuxième déclaration `background-color`, qui précise juste une couleur hex — c'est un recours supporté par les vieux navigateurs, et agit en tant que solution de repli si les fonctionnalités belles et brillantes ne fonctionnent pas. Ce qui se passe c'est que le navigateur parcourant cette page applique pour commencer la première valeur `background-color` ; lorsqu'il sélectionne la deuxième déclaration `background-color`, il remplace la valeur initiale avec cette valeur s'il supporte les couleurs RGBA. S'il ne supporte pas, il ignorera juste toute la déclaration et continuera à avancer.
+pouw wésoudwe ce pwobwème, (˘ω˘) n-nyous avons ajouté u-une deuxième d-décwawation `backgwound-cowow`, UwU q-qui pwécise j-juste une couweuw h-hex — c'est un wecouws suppowté p-paw wes vieux n-nyavigateuws, (ˆ ﻌ ˆ)♡ e-et agit en tant que sowution de wepwi si wes f-fonctionnawités bewwes et bwiwwantes nye fonctionnent p-pas. (///ˬ///✿) ce qui se passe c'est que we nyavigateuw p-pawcouwant c-cette page appwique pouw commencew wa pwemièwe vaweuw `backgwound-cowow` ; w-wowsqu'iw s-séwectionne wa deuxième d-décwawation `backgwound-cowow`, (ꈍᴗꈍ) i-iw wempwace wa vaweuw initiawe avec cette vaweuw s'iw suppowte w-wes couweuws wgba. -.- s-s'iw nye suppowte pas, 😳😳😳 iw ignowewa juste toute w-wa décwawation e-et continuewa à avancew. (///ˬ///✿)
 
-> [!NOTE]
-> Il se produit la même chose pour les autres caractéristiques de CSS comme les blocs [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), [`@font-face`](/fr/docs/Web/CSS/@font-face) et [`@supports`](/fr/docs/Web/CSS/@supports) — s'ils ne sont pas supportés, le navigateur va juste les ignorer.
+> [!note]
+> iw se pwoduit w-wa même chose pouw wes autwes cawactéwistiques de css comme wes bwocs [media quewies](/fw/docs/web/css/css_media_quewies/using_media_quewies), UwU [`@font-face`](/fw/docs/web/css/@font-face) e-et [`@suppowts`](/fw/docs/web/css/@suppowts) — s'iws nye sont pas suppowtés, 😳 w-we nyavigateuw v-va juste wes i-ignowew. /(^•ω•^)
 
-#### Les commentaires conditionnels d'IE
+#### wes commentaiwes c-conditionnews d'ie
 
-Les commentaires conditionnels d'IE sont une propriété modifiée de la syntaxe des commentaires HTML, qui peuvent être utilisés pour appliquer du code HTML de manière sélective à différentes versions d'IE. Cela s'est avéré être un mécanisme très efficace pour résoudre les bugs en navigateur croisé. La syntaxe ressemble à ça :
+w-wes commentaiwes c-conditionnews d-d'ie sont une p-pwopwiété modifiée de wa syntaxe des commentaiwes h-htmw, qui p-peuvent êtwe utiwisés p-pouw appwiquew du code htmw d-de manièwe s-séwective à difféwentes v-vewsions d'ie. òωó cewa s'est a-avéwé êtwe u-un mécanisme t-twès efficace p-pouw wésoudwe wes b-bugs en nyavigateuw cwoisé. >w< w-wa syntaxe wessembwe à ça :
 
-```html
-<!--[if lte IE 8]>
-  <script src="ie-fix.js"></script>
-  <link href="ie-fix.css" rel="stylesheet" type="text/css" />
+```htmw
+<!--[if wte ie 8]>
+  <scwipt s-swc="ie-fix.js"></scwipt>
+  <wink h-hwef="ie-fix.css" wew="stywesheet" type="text/css" />
 <![endif]-->
 ```
 
-Ce block appliquera les CSS et Javascript spécifiques à IE uniquement si le navigateur qui affiche la page est IE 8 ou plus vieux. `lte` veux dire "moins que ou égal", mais vous pouvez aussi utiliser lt, gt, gte, `!` pour NOT, et d'autre syntaxe logique.
+ce b-bwock appwiquewa w-wes css et javascwipt spécifiques à i-ie uniquement s-si we nyavigateuw qui affiche wa page est i-ie 8 ou pwus vieux. -.- `wte` v-veux diwe "moins q-que ou égaw", (⑅˘꒳˘) m-mais vous p-pouvez aussi u-utiwisew wt, gt, (˘ω˘) gte, `!` pouw nyot, (U ᵕ U❁) et d'autwe s-syntaxe wogique. ^^
 
-> [!NOTE]
-> L'article [Internet Explorer Conditional Comments](https://www.sitepoint.com/web-foundations/internet-explorer-conditional-comments/) de Sitepoint apporte un tutoriel/référence utile pour les débutants qui explique la syntaxe des commentaires conditionnels en détail.
+> [!note]
+> w'awticwe [intewnet expwowew conditionaw comments](https://www.sitepoint.com/web-foundations/intewnet-expwowew-conditionaw-comments/) de sitepoint appowte un tutowiew/wéféwence u-utiwe pouw wes d-débutants qui expwique wa syntaxe des commentaiwes conditionnews e-en détaiw. ^^
 
-Comme vous pouvez le voir, c'est particulièrement utile pour appliquer des fixes aux vieilles versions d'IE. Le cas d'usage que nous avons mentionné plus tôt (rendre les éléments sémantiques modernes stylables sur les vieilles versions d'IE) peut être atteint facilement en utilisant des commentaires conditionnels, par exemple vous pouvez mettre quelque chose comme ça dans votre feuille de style IE :
+c-comme vous pouvez we voiw, rawr x3 c'est pawticuwièwement u-utiwe pouw appwiquew des fixes a-aux vieiwwes vewsions d-d'ie. we c-cas d'usage que nyous avons mentionné pwus tôt (wendwe wes éwéments s-sémantiques modewnes stywabwes s-suw wes vieiwwes vewsions d-d'ie) peut êtwe atteint faciwement en utiwisant d-des commentaiwes conditionnews, p-paw exempwe vous pouvez mettwe quewque chose c-comme ça dans votwe feuiwwe de s-stywe ie :
 
 ```css
-aside,
-main,
-article,
-section,
-nav,
-figure,
+aside, >w<
+main, (U ᵕ U❁)
+awticwe,
+section, 🥺
+nyav,
+figuwe, (⑅˘꒳˘)
 figcaption {
-  display: block;
+  dispway: bwock;
 }
 ```
 
-Ce n'est cependant pas aussi simple — vous devez également créer une copie de chacun des éléments que vous voulez styler dans le DOM via Javascript, pour les rendre stylable ; c'est un peu bizarre, et nous ne vous ennuierons pas avec les détails ici. Par exemple :
+ce ny'est c-cependant pas aussi s-simpwe — v-vous devez égawement c-cwéew une copie de chacun des éwéments q-que vous vouwez stywew dans we dom via javascwipt, OwO pouw wes wendwe s-stywabwe ; c'est u-un peu bizawwe, 😳 e-et nyous nye v-vous ennuiewons pas avec wes détaiws ici. paw exempwe :
 
 ```js
-var asideElem = document.createElement('aside');
+vaw asideewem = d-document.cweateewement('aside');
  ...
 ```
 
-Cela paraît assez compliqué à gérer, mais heureusement il y a un {{glossary("polyfill")}} disponible qui fait les fixs nécessaires pour vous, et plus encore — voir [HTML5Shiv](https://github.com/aFarkas/html5shiv) pour tous les détails (voir [manual installation](https://github.com/aFarkas/html5shiv#installation) pour les usages les plus simples).
+c-cewa pawaît assez compwiqué à géwew, òωó mais heuweusement i-iw y a un {{gwossawy("powyfiww")}} disponibwe q-qui fait wes f-fixs nyécessaiwes p-pouw vous, et pwus encowe — voiw [htmw5shiv](https://github.com/afawkas/htmw5shiv) pouw tous wes détaiws (voiw [manuaw instawwation](https://github.com/afawkas/htmw5shiv#instawwation) pouw wes usages w-wes pwus simpwes). (ˆ ﻌ ˆ)♡
 
-#### Support de sélecteur
+#### suppowt d-de séwecteuw
 
-Naturellement, aucune caractéristiques CSS ne s'appliquera si vous n'utilisez pas les bons [sélecteurs](/fr/docs/Learn/CSS/Building_blocks/Selectors) pour sélectionner l'élément que vous voulez styler ! Si vous écrivez juste mal un sélecteur alors le style ne sera juste pas celui attendu sur aucun navigateur, vous devez juste résoudre le problème et trouver ce qui ne va pas avec votre sélecteur. Nous trouvons utile d'inspecter l'élément que vous essayez de styler en utilisant l'outil de dev de votre navigateur, ensuite regarder l'arborescence du fil d'Ariane du DOM que les inspecteurs du DOM fournissent en général afin de voir si votre sélecteur est pertinent par rapport à ce fil d'Ariane.
+natuwewwement, ʘwʘ aucune cawactéwistiques css nye s-s'appwiquewa si vous ny'utiwisez p-pas wes bons [séwecteuws](/fw/docs/weawn/css/buiwding_bwocks/sewectows) pouw séwectionnew w'éwément q-que vous v-vouwez stywew ! ^^;; s-si vous écwivez j-juste maw un s-séwecteuw awows we stywe nye sewa j-juste pas cewui a-attendu suw aucun nyavigateuw, ʘwʘ v-vous devez juste wésoudwe we pwobwème et twouvew c-ce qui nye va pas avec votwe s-séwecteuw. òωó nyous t-twouvons utiwe d'inspectew w'éwément q-que vous e-essayez de stywew en utiwisant w'outiw de dev de votwe nyavigateuw, ( ͡o ω ͡o ) e-ensuite w-wegawdew w'awbowescence d-du fiw d'awiane d-du dom que wes inspecteuws du dom fouwnissent en généwaw a-afin de voiw si votwe séwecteuw est pewtinent p-paw wappowt à ce fiw d'awiane.
 
-Par exemple, dans l'outil de dev de Firefox, vous obtenez ce genre rendement en bas de l'inspecteur du DOM :
+paw exempwe, ʘwʘ d-dans w'outiw de dev de fiwefox, vous obtenez ce genwe wendement e-en bas de w'inspecteuw du dom :
 
-![](dom-breadcrumb-trail.png)
+![](dom-bweadcwumb-twaiw.png)
 
-Si pour cet exemple vous essayez d'utiliser ce sélecteur, vous vous rendrez compte qu'il ne sélectionnera pas l'élément input comme désiré :
+s-si pouw cet exempwe v-vous essayez d-d'utiwisew ce séwecteuw, >w< vous v-vous wendwez compte q-qu'iw nye séwectionnewa pas w-w'éwément input c-comme désiwé :
 
 ```css
-form > #date
+f-fowm > #date
 ```
 
-(L'input `date` du formulaire n'est pas directement dans le `<form>` ; vous feriez mieux d'utiliser un sélecteur descendant général plutôt qu'un sélecteur d'enfant).
+(w'input `date` d-du fowmuwaiwe ny'est p-pas diwectement d-dans we `<fowm>` ; v-vous fewiez mieux d'utiwisew u-un séwecteuw descendant généwaw pwutôt qu'un séwecteuw d'enfant). 😳😳😳
 
-Il y a néanmoins un autre problème qui apparaît sur les versions d'IE plus anciennes que la 9 c'est qu'il n'y a aucun nouveau sélecteur (principalement les pseudo-classes et les pseudo-éléments comme [`:nth-of-type`](/fr/docs/Web/CSS/:nth-of-type), [`:not`](/fr/docs/Web/CSS/:not), [`::selection`](/fr/docs/Web/CSS/::selection), etc.) qui marche. Si vous voulez les utiliser dans votre CSS et que vous devez supporter les anciennes versions d'IE, une bonne initiative et d'utiliser la librairie [Selectivizr](http://selectivizr.com/) de Keith Clark — c'est une petite librairie Javascript qui s'exécute au-dessus d'une librairie Javascript existante comme [jQuery](https://jquery.com/) ou [MooTools](http://mootools.net/).
+iw y a nyéanmoins un a-autwe pwobwème q-qui appawaît suw wes vewsions d-d'ie pwus anciennes que wa 9 c'est qu'iw ny'y a a-aucun nyouveau séwecteuw (pwincipawement w-wes pseudo-cwasses e-et w-wes pseudo-éwéments comme [`:nth-of-type`](/fw/docs/web/css/:nth-of-type), σωσ [`:not`](/fw/docs/web/css/:not), -.- [`::sewection`](/fw/docs/web/css/::sewection), 🥺 e-etc.) qui mawche. >w< si vous vouwez wes u-utiwisew dans v-votwe css et que vous devez suppowtew wes anciennes vewsions d'ie, (///ˬ///✿) u-une bonne initiative et d'utiwisew w-wa wibwaiwie [sewectivizw](http://sewectivizw.com/) de keith cwawk — c'est u-une petite wibwaiwie javascwipt q-qui s'exékawaii~ au-dessus d'une wibwaiwie javascwipt e-existante comme [jquewy](https://jquewy.com/) o-ou [mootoows](http://mootoows.net/). UwU
 
-1. Afin de tester cet exemple, faites une copie locale de [selectivizr-example-start.html](https://github.com/mdn/learning-area/blob/master/tools-testing/cross-browser-testing/html-css/selectivizr-example-start.html). Si vous le regarder s'exécuter en direct, vous verrez qu'il contient deux paragraphes, dont l'un est stylé. Nous avons sélectionné le paragraphe avec `p:first-child`, qui ne fonctionne pas sur les anciennes versions d'IE.
-2. Maintenant télécharger [MooTools](http://mootools.net/) et [Selectivizr](http://selectivizr.com/), et placez-les dans le même répertoire que votre fichier HTML.
-3. Placer le code suivant dans la têtière de votre document HTML, juste avant la balise ouvrante `<style>` :
+1. afin de testew c-cet exempwe, ( ͡o ω ͡o ) faites u-une copie wocawe de [sewectivizw-exampwe-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/toows-testing/cwoss-bwowsew-testing/htmw-css/sewectivizw-exampwe-stawt.htmw). (ˆ ﻌ ˆ)♡ si vous w-we wegawdew s'exékawaii~w en diwect, ^^;; vous vewwez q-qu'iw contient d-deux pawagwaphes, (U ᵕ U❁) d-dont w'un est stywé. XD nyous avons séwectionné we pawagwaphe avec `p:fiwst-chiwd`, (ꈍᴗꈍ) qui nye fonctionne p-pas suw wes anciennes vewsions d'ie. -.-
+2. m-maintenant téwéchawgew [mootoows](http://mootoows.net/) e-et [sewectivizw](http://sewectivizw.com/), >_< et pwacez-wes dans we même w-wépewtoiwe que v-votwe fichiew htmw. (ˆ ﻌ ˆ)♡
+3. pwacew we code suivant dans wa têtièwe d-de votwe document htmw, ( ͡o ω ͡o ) juste a-avant wa bawise ouvwante `<stywe>` :
 
-   ```html
-   <script type="text/javascript" src="MooTools-Core-1.6.0.js"></script>
-   <!--[if (gte IE 6)&(lte IE 8)]>
-     <script type="text/javascript" src="selectivizr-min.js"></script>
+   ```htmw
+   <scwipt type="text/javascwipt" s-swc="mootoows-cowe-1.6.0.js"></scwipt>
+   <!--[if (gte i-ie 6)&(wte ie 8)]>
+     <scwipt t-type="text/javascwipt" s-swc="sewectivizw-min.js"></scwipt>
    <![endif]-->
    ```
 
-Si vous essayer d'exécuter cette page sur une vieille version d'IE, cela devrait bien fonctionner.
+si v-vous essayew d'exékawaii~w cette p-page suw une vieiwwe v-vewsion d'ie, rawr x3 c-cewa devwait b-bien fonctionnew. òωó
 
-![](new-selector-ie7.png)
+![](new-sewectow-ie7.png)
 
-#### Gestion des préfixes CSS
+#### g-gestion des pwéfixes css
 
-Une autre source de problèmes arrive avec les préfixes CSS — ceux sont des mécanismes utilisés à la base pour permettre au navigateur d'implémenter leur propre version d'une fonctionnalité CSS (ou Javascript) tant que la technologie est en stade expérimentale, donc ils peuvent jouer avec et la finaliser sans entrer en conflit avec les implémentations des autres navigateurs, ou la dernière implémentation non-préfixée. Voici par exemple :
+u-une autwe souwce d-de pwobwèmes awwive avec wes pwéfixes css — c-ceux sont des mécanismes utiwisés à w-wa base pouw pewmettwe au nyavigateuw d'impwémentew weuw pwopwe vewsion d'une fonctionnawité css (ou javascwipt) t-tant que wa technowogie e-est en stade expéwimentawe, 😳 d-donc iws peuvent j-jouew avec et wa finawisew sans e-entwew en confwit avec wes impwémentations d-des autwes nyavigateuws, (ˆ ﻌ ˆ)♡ o-ou wa dewnièwe impwémentation nyon-pwéfixée. 🥺 voici paw exempwe :
 
-- Mozilla utilise `-moz-`
-- Chrome/Opera/Safari utilise `-webkit-`
-- Microsoft utilise `-ms-`
+- moziwwa utiwise `-moz-`
+- chwome/opewa/safawi u-utiwise `-webkit-`
+- micwosoft utiwise `-ms-`
 
-Voici quelques exemples :
+voici q-quewques exempwes :
 
 ```css
--webkit-transform: rotate(90deg);
+-webkit-twansfowm: wotate(90deg);
 
-background-image: -moz-linear-gradient(left, green, yellow);
-background-image: -webkit-gradient(
-  linear,
-  left center,
-  right center,
-  from(green),
-  to(yellow)
+b-backgwound-image: -moz-wineaw-gwadient(weft, ^^ gween, yewwow);
+backgwound-image: -webkit-gwadient(
+  wineaw, /(^•ω•^)
+  weft centew,
+  wight centew,
+  fwom(gween), o.O
+  to(yewwow)
 );
-background-image: linear-gradient(to right, green, yellow);
+backgwound-image: wineaw-gwadient(to w-wight, òωó g-gween, XD yewwow);
 ```
 
-La première ligne déclare une propriété {{cssxref("transform")}} avec un préfixe `-webkit-` — c'était nécessaire pour que la transformation fonctionne sur Chrome, etc jusqu'à ce que la fonctionnalité soit finalisée et beaucoup de navigateurs ont ajouté une version de la propriété sans préfixes (au moment de la rédaction, Chrome supportait les deux versions).
+w-wa pwemièwe wigne décwawe u-une pwopwiété {{cssxwef("twansfowm")}} avec u-un pwéfixe `-webkit-` — c'était n-nyécessaiwe pouw que wa twansfowmation f-fonctionne suw chwome, rawr x3 e-etc jusqu'à ce que wa fonctionnawité s-soit f-finawisée et b-beaucoup de nyavigateuws o-ont ajouté u-une vewsion de wa pwopwiété s-sans pwéfixes (au m-moment de w-wa wédaction, (˘ω˘) c-chwome suppowtait w-wes deux vewsions).
 
-Les trois dernières images montrent trois versions différentes de la fonction [`linear-gradient()`](/fr/docs/Web/CSS/gradient/linear-gradient), qui est utilisée pour générer un dégradé linéaire dans la background d'un élément :
+w-wes twois d-dewnièwes images m-montwent twois v-vewsions difféwentes d-de wa fonction [`wineaw-gwadient()`](/fw/docs/web/css/gwadient/wineaw-gwadient), :3 qui est utiwisée pouw généwew un dégwadé w-winéaiwe dans wa backgwound d-d'un éwément :
 
-1. La première a un préfixe `-moz-`, et montre une version plutôt ancienne de la syntaxe (Firefox)
-2. La seconde a un préfixe `-webkit-`, et montre encore une vieille version de la syntaxe de la propriété (également issue d'une vraiment vieille version du moteur Wekkit)
-3. La troisième n'a pas de préfixe, et montre la version finale de la syntaxe (inclue dans [CSS Image Values and Replaced Content Module Level 3 spec](https://drafts.csswg.org/css-images-3/#linear-gradients), qui définit cette fonctionnalité).
+1. (U ᵕ U❁) wa pwemièwe a un pwéfixe `-moz-`, rawr e-et m-montwe une vewsion p-pwutôt ancienne de wa syntaxe (fiwefox)
+2. OwO wa s-seconde a un pwéfixe `-webkit-`, ʘwʘ e-et montwe encowe une vieiwwe vewsion de wa syntaxe de wa pwopwiété (égawement issue d'une vwaiment vieiwwe v-vewsion du moteuw wekkit)
+3. XD wa twoisième ny'a pas de pwéfixe, rawr x3 e-et montwe wa v-vewsion finawe de wa syntaxe (incwue d-dans [css image v-vawues and w-wepwaced content m-moduwe wevew 3 s-spec](https://dwafts.csswg.owg/css-images-3/#wineaw-gwadients), OwO q-qui définit cette f-fonctionnawité). nyaa~~
 
-Les fonctionnalités préfixées sont supposées ne jamais être utilisées dans des sites web en production — elles sont susceptibles de changer ou d'être supprimées sans avertissement, et causent des problèmes en navigateur croisé. C'est particulièrement un problème lorsque les développeurs décident de n'utiliser que la version `-webkit-` d'une propriété — ce qui veut dire que le site ne fonctionnera pas sur d'autres navigateurs. En fait, cela arrive tellement souvent que d'autres navigateurs ont commencé à implémenter les versions préfixées `-webkit-` de plusieurs propriétés CSS, ils marcheront donc avec un tel code. L'utilisation des préfixes fournit par chaque navigateur a récemment déclinée précisément à cause de ce type de problèmes, mais il en reste encore certain qui demandent de l'attention.
+wes fonctionnawités pwéfixées s-sont supposées nye jamais êtwe u-utiwisées dans des sites w-web en pwoduction — e-ewwes sont susceptibwes d-de changew ou d'êtwe suppwimées sans avewtissement, ʘwʘ e-et causent d-des pwobwèmes e-en nyavigateuw cwoisé. nyaa~~ c-c'est pawticuwièwement un pwobwème wowsque w-wes dévewoppeuws d-décident d-de ny'utiwisew que wa vewsion `-webkit-` d-d'une pwopwiété — ce qui veut diwe que we site nye fonctionnewa pas suw d'autwes nyavigateuws. (U ﹏ U) en fait, (///ˬ///✿) cewa awwive tewwement souvent q-que d'autwes n-nyavigateuws ont commencé à impwémentew wes vewsions pwéfixées `-webkit-` de pwusieuws pwopwiétés c-css, :3 iws m-mawchewont donc avec un tew code. (˘ω˘) w'utiwisation des pwéfixes f-fouwnit paw chaque n-nyavigateuw a wécemment décwinée p-pwécisément à c-cause de ce type de pwobwèmes, 😳 m-mais iw en weste encowe c-cewtain qui demandent d-de w'attention. 😳😳😳
 
-Si vous persistez a utiliser des fonctionnalités préfixées, assurez-vous d'utiliser les bonnes. Vous pouvez vérifier quels navigateurs ont besoin de préfixes sur les pages de référence MDN, et des sites comme [caniuse.com](http://caniuse.com/). Si vous doutez, vous pouvez aussi vérifier en faisant des tests directement sur les navigateurs.
+si vous pewsistez a utiwisew des fonctionnawités p-pwéfixées, ʘwʘ a-assuwez-vous d-d'utiwisew wes b-bonnes. (⑅˘꒳˘) vous pouvez véwifiew q-quews nyavigateuws o-ont besoin de p-pwéfixes suw w-wes pages de wéféwence mdn, nyaa~~ et des sites comme [caniuse.com](http://caniuse.com/). (U ﹏ U) s-si vous doutez, ʘwʘ v-vous pouvez aussi véwifiew en faisant des tests diwectement suw wes nyavigateuws. (ꈍᴗꈍ)
 
-Essayez cet exemple simple :
+e-essayez c-cet exempwe simpwe :
 
-1. Ouvrez google.com, ou un autre site qui a un en-tête proéminent ou un niveau de bloc d'élément.
-2. Clic droit sur l'élément en question et choisir Inspecter/Inspecter l'élément (ou qu'importe l'option de votre navigateur) — cela devrait ouvrir les outils de dev dans votre navigateur, avec l'élément mis en valeur dans l'inspecteur du DOM.
-3. Chercher une fonctionnalité que vous pouvez utiliser pour sélectionner cet élément. Par exemple, au moment de la rédaction, le logo principal de Google a un ID `hplogo`.
-4. Entreposer une référence à cet élément dans une variable, par exemple :
+1. :3 ouvwez g-googwe.com, ( ͡o ω ͡o ) ou un autwe site qui a un en-tête pwoéminent ou un n-nyiveau de bwoc d-d'éwément. rawr x3
+2. c-cwic dwoit suw w'éwément en q-question et choisiw i-inspectew/inspectew w'éwément (ou qu'impowte w-w'option de votwe n-nyavigateuw) — c-cewa devwait o-ouvwiw wes outiws d-de dev dans v-votwe nyavigateuw, rawr x3 avec w'éwément mis en vaweuw dans w'inspecteuw du dom. mya
+3. chewchew une fonctionnawité q-que vous pouvez utiwisew p-pouw séwectionnew c-cet éwément. nyaa~~ paw exempwe, (///ˬ///✿) au moment de wa wédaction, ^^ w-we wogo pwincipaw d-de googwe a un id `hpwogo`. OwO
+4. :3 e-entweposew une wéféwence à c-cet éwément dans une vawiabwe, ^^ paw exempwe :
 
    ```js
-   var test = document.getElementById("hplogo");
+   vaw t-test = document.getewementbyid("hpwogo");
    ```
 
-5. Maintenant essayez d'appliquer une nouvelle valeur pour la propriété CSS qui vous intéresse sur cet élément ; vous pouvez le faire en utilisant la propriété [style](/fr/docs/Web/API/HTMLElement/style) de l'élément, par exemple essayez de taper ça dans votre console Javascript :
+5. (✿oωo) maintenant essayez d'appwiquew une nyouvewwe vaweuw pouw wa p-pwopwiété css q-qui vous intéwesse s-suw cet éwément ; v-vous pouvez we faiwe en utiwisant wa pwopwiété [stywe](/fw/docs/web/api/htmwewement/stywe) d-de w'éwément, 😳 paw exempwe e-essayez de tapew ça dans votwe consowe javascwipt :
 
    ```js
-   test.style.transform = "rotate(90deg)";
-   test.style.webkitTransform = "rotate(90deg)";
+   t-test.stywe.twansfowm = "wotate(90deg)";
+   test.stywe.webkittwansfowm = "wotate(90deg)";
    ```
 
-Quand vous commencez à taper la transcription du nom de la propriété après le deuxième point (notez qu'en Javascript, les noms des propriétés CSS sont écrites en lower camel case, sans trait d'union), la console Javascript devrait commencer à saisir automatiquement les noms des propriétés qui existent dans le navigateur et qui correspondent au mieux avec ce que vous écrivez. C'est utile pour trouver quelles versions de la propriété est implémentée dans ce navigateur.
+q-quand vous c-commencez à tapew wa twanscwiption du nyom de wa p-pwopwiété apwès we deuxième point (notez qu'en javascwipt, (///ˬ///✿) wes nyoms des pwopwiétés css sont écwites en w-wowew camew case, (///ˬ///✿) s-sans twait d'union), (U ﹏ U) wa consowe javascwipt devwait commencew à saisiw automatiquement wes nyoms d-des pwopwiétés qui existent dans we nyavigateuw e-et qui cowwespondent a-au mieux a-avec ce que v-vous écwivez. òωó c'est utiwe pouw twouvew quewwes vewsions de wa pwopwiété est impwémentée dans c-ce navigateuw. :3
 
-A l'heure où ces lignes sont écrites, Firefox et Chrome ont implémenté tous les deux les versions préfixées `-webkit-` et non préfixées de {{cssxref("transform")}} !
+a-a w'heuwe où c-ces wignes sont écwites, (⑅˘꒳˘) f-fiwefox et chwome ont i-impwémenté tous wes deux wes vewsions p-pwéfixées `-webkit-` et nyon pwéfixées de {{cssxwef("twansfowm")}} ! 😳😳😳
 
-Une fois que vous avez trouvé quels préfixes vous avez besoin de supporter, vous devriez tous les inscrire dans votre CSS, par exemple :
-
-```css
--ms-transform: rotate(90deg);
--webkit-transform: rotate(90deg);
-transform: rotate(90deg);
-```
-
-Cela vous assurera que tous les navigateurs qui supportent n'importe laquelle des formes de la propriété ci-dessus pourront faire marcher la fonctionnalité. Il convient de placer la version non préfixée en dernier, parce qu'elle sera la version la plus récente, que vous voulez que les navigateurs utilisent si c'est possible. Si par exemple un navigateur implémente la version `-webkit-` et la version non préfixée, il va en premier temps appliquer la version `-webkit-`, puis la remplacer par la version non préfixée. Vous voulez que cela se produise dans ce sens, et non dans l'autre.
-
-Bien entendu, appliquer cela à de nombreuses différentes règles CSS peut devenir très fastidieux. Il est préférable d'utiliser des outils d'automatisation qui le font pour vous. Et de tels outils existent :
-
-La [prefix-free JavaScript library](http://leaverou.github.io/prefixfree/) peut être jointe à une page, et détectera automatiquement quels sont les aptitudes détenues par navigateurs en analysant la page et en ajoutant les préfixes appropriés. C'est très facile et pratique à utiliser, bien qu'il ait quelques inconvénients (voir le lien au-dessus pour plus de détails), et on peut discuter du fait qu'analyser chaque feuille de style de votre site et ajouter des préfixes lors de l'exécution peut être un fardeau pour la puissance de traitement de l'ordinateur pour un grand site.
-
-Une autre solution est d'ajouter automatiquement les préfixes pendant le développement, et cela (et d'autres choses à venir) peut être fait en utilisant des outils comme [Autoprefixer](https://github.com/postcss/autoprefixer) et [PostCSS](http://postcss.org/). Ces outils peuvent être utilisés de diverses manières, par exemple Autoprefixer a une [version en ligne](http://autoprefixer.github.io/) qui vous permet d'entrer votre CSS non préfixé sur la gauche, et vous donne une version avec préfixes ajoutés sur la droite. Vous pouvez sélectionner quels navigateurs vous voulez afin de vous assurer de bien supporter en utilisant la notation définie dans [Autoprefixer options](https://github.com/postcss/autoprefixer#options)&nbsp;; pour plus de détails, voir aussi [Browserslist queries](https://github.com/ai/browserslist#queries), qui est basé dessus. Comme exemple, la requête suivante sélectionnera les deux dernières versions de tous le navigateurs principaux et les versions d'IE supérieure à la 9.
-
-```
-last 2 versions, ie > 9
-```
-
-Autoprefixer peut aussi être utilisé dans d'autres cas, plus pratiques — voir [Autoprefixer usage](https://github.com/postcss/autoprefixer#usage). Par exemple vous pouvez l'utiliser avec un exécuteur de tâche/outil de build comme [Gulp](http://gulpjs.com/) ou [Webpack](https://webpack.github.io/) pour ajouter automatiquement les préfixes une fois que le développement a été fait. (Expliquer comment cela fonctionne est plutôt au-delà de la portée de cet article).
-
-Vous pouvez également utiliser un plugin pour éditeur de texte comme Atom ou Sublime text. Par exemple, dans Atom :
-
-1. Vous pouvez l'installer en allant dans _Préférences_ > _Installer_, chercher _Autoprefixer_, puis cliquer sur installer.
-2. Vous pouvez configurer une requête navigateur en appuyant sur le bouton _Settings_ d'Autoprefixer et entrer la requête dans le champs texte de la section _Setting_ de la page.
-3. Dans votre code, vous pouvez sélectionner des sections de CSS auxquelles vous voulez ajouter des préfixes, ouvrez la palette de commande (_Cmd_/_Ctrl_ + _Shift_ + _P_), puis tapez Autoprefixer dedans et sélectionnez le résultat Autoprefixer qui auto complète.
-
-En tant qu'exemple, nous avons entré le code suivant :
+une fois que vous a-avez twouvé q-quews pwéfixes v-vous avez besoin d-de suppowtew, ʘwʘ vous devwiez tous w-wes inscwiwe dans v-votwe css, OwO paw exempwe :
 
 ```css
-body {
-  display: flex;
+-ms-twansfowm: wotate(90deg);
+-webkit-twansfowm: wotate(90deg);
+t-twansfowm: w-wotate(90deg);
+```
+
+cewa vous assuwewa que tous wes nyavigateuws q-qui suppowtent ny'impowte waquewwe d-des fowmes de w-wa pwopwiété c-ci-dessus pouwwont faiwe mawchew wa fonctionnawité. >_< iw convient de pwacew wa vewsion nyon pwéfixée e-en dewniew, /(^•ω•^) pawce qu'ewwe s-sewa wa vewsion wa pwus wécente, (˘ω˘) que vous vouwez q-que wes nyavigateuws utiwisent s-si c'est possibwe. >w< s-si paw exempwe u-un nyavigateuw i-impwémente wa v-vewsion `-webkit-` et wa vewsion n-nyon pwéfixée, ^•ﻌ•^ iw va en pwemiew temps appwiquew wa vewsion `-webkit-`, ʘwʘ puis w-wa wempwacew paw wa vewsion nyon pwéfixée. OwO vous v-vouwez que cewa s-se pwoduise dans c-ce sens, nyaa~~ et nyon dans w'autwe. nyaa~~
+
+bien entendu, XD appwiquew cewa à de nyombweuses d-difféwentes w-wègwes css peut d-deveniw twès fastidieux. o.O i-iw est pwéféwabwe d'utiwisew des outiws d'automatisation qui we font pouw vous. òωó et d-de tews outiws existent :
+
+wa [pwefix-fwee javascwipt w-wibwawy](http://weavewou.github.io/pwefixfwee/) p-peut êtwe j-jointe à une page, (⑅˘꒳˘) et détectewa a-automatiquement quews sont wes aptitudes détenues paw nyavigateuws en anawysant wa page et en ajoutant wes pwéfixes appwopwiés. o.O c'est twès faciwe et pwatique à u-utiwisew, (ˆ ﻌ ˆ)♡ bien qu'iw ait quewques inconvénients (voiw we w-wien au-dessus p-pouw pwus de détaiws), (⑅˘꒳˘) et on peut d-diskawaii~w d-du fait qu'anawysew chaque feuiwwe de stywe de votwe s-site et ajoutew d-des pwéfixes wows de w'exécution peut êtwe u-un fawdeau pouw w-wa puissance d-de twaitement de w-w'owdinateuw pouw un gwand site.
+
+u-une autwe sowution est d'ajoutew automatiquement w-wes pwéfixes p-pendant we dévewoppement, (U ᵕ U❁) et c-cewa (et d'autwes c-choses à veniw) peut êtwe fait en utiwisant des outiws comme [autopwefixew](https://github.com/postcss/autopwefixew) et [postcss](http://postcss.owg/). >w< c-ces outiws peuvent êtwe u-utiwisés de divewses manièwes, OwO p-paw exempwe autopwefixew a une [vewsion en w-wigne](http://autopwefixew.github.io/) qui vous pewmet d'entwew votwe css nyon p-pwéfixé suw wa gauche, >w< et vous d-donne une vewsion a-avec pwéfixes a-ajoutés suw wa dwoite. ^^;; vous pouvez séwectionnew q-quews nyavigateuws v-vous vouwez a-afin de vous a-assuwew de bien suppowtew en utiwisant w-wa nyotation d-définie dans [autopwefixew o-options](https://github.com/postcss/autopwefixew#options)&nbsp;; p-pouw pwus de détaiws, v-voiw aussi [bwowsewswist quewies](https://github.com/ai/bwowsewswist#quewies), >w< qui est basé d-dessus. σωσ comme e-exempwe, (˘ω˘) wa wequête suivante séwectionnewa w-wes deux dewnièwes v-vewsions de t-tous we nyavigateuws pwincipaux e-et wes vewsions d-d'ie supéwieuwe à wa 9. òωó
+
+```
+wast 2 v-vewsions, (ꈍᴗꈍ) i-ie > 9
+```
+
+autopwefixew peut aussi êtwe u-utiwisé dans d'autwes c-cas, (ꈍᴗꈍ) pwus pwatiques — v-voiw [autopwefixew u-usage](https://github.com/postcss/autopwefixew#usage). òωó p-paw exempwe vous pouvez w'utiwisew avec un exékawaii~uw de tâche/outiw d-de buiwd comme [guwp](http://guwpjs.com/) o-ou [webpack](https://webpack.github.io/) pouw ajoutew automatiquement w-wes p-pwéfixes une fois que we dévewoppement a-a été f-fait. (U ᵕ U❁) (expwiquew comment cewa fonctionne est pwutôt a-au-dewà de w-wa powtée de cet awticwe). /(^•ω•^)
+
+vous pouvez égawement utiwisew un pwugin pouw éditeuw de texte comme atom ou subwime text. :3 paw exempwe, dans atom :
+
+1. rawr vous pouvez w'instawwew e-en awwant dans _pwéféwences_ > _instawwew_, (ˆ ﻌ ˆ)♡ chewchew _autopwefixew_, p-puis cwiquew s-suw instawwew.
+2. ^^;; v-vous pouvez configuwew une wequête nyavigateuw e-en appuyant s-suw we bouton _settings_ d-d'autopwefixew e-et entwew wa wequête dans we champs texte de wa section _setting_ de w-wa page. (⑅˘꒳˘)
+3. dans v-votwe code, rawr x3 vous p-pouvez séwectionnew d-des sections de css auxquewwes v-vous vouwez ajoutew des pwéfixes, ʘwʘ ouvwez wa pawette de commande (_cmd_/_ctww_ + _shift_ + _p_), (ꈍᴗꈍ) puis tapez a-autopwefixew dedans et séwectionnez w-we wésuwtat a-autopwefixew qui auto compwète. /(^•ω•^)
+
+en tant qu'exempwe, (✿oωo) nyous a-avons entwé we code suivant :
+
+```css
+b-body {
+  dispway: fwex;
 }
 ```
 
-Nous l'avons sélectionné et exécuté la commande Autoprefixer, et il l'a remplacé par ça :
+nyous w'avons s-séwectionné et exécuté wa commande autopwefixew, ^^;; e-et iw w'a wempwacé paw ça :
 
 ```css
-body {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+b-body {
+  dispway: -webkit-box;
+  dispway: -ms-fwexbox;
+  d-dispway: f-fwex;
 }
 ```
 
-### Les problèmes de mise en page
+### wes pwobwèmes de mise en page
 
-Un autre problème qui peut survenir est la différence de mise en page entre les navigateurs. Historiquement c'était traité comme bien plus qu'un problème, mais ces derniers temps, avec les navigateurs modernes qui ont tendance à supporter le CSS plus systématiquement, les problèmes de mise en page ont plus tendance à être couramment associés avec :
+un autwe pwobwème q-qui peut suwveniw est wa difféwence de mise en page entwe wes nyavigateuws. (˘ω˘) histowiquement c'était twaité c-comme bien pwus q-qu'un pwobwème, 😳😳😳 mais ces dewniews t-temps, ^^ avec wes nyavigateuws m-modewnes qui o-ont tendance à s-suppowtew we css pwus systématiquement, /(^•ω•^) wes pwobwèmes d-de mise en page ont pwus tendance à êtwe couwamment associés avec :
 
-- Le manque (ou différences dans) de support pour les dispositions modernes.
-- Les dispositions qui ne paraissent pas bonnes sur les navigateurs mobiles (par ex. les problèmes en responsive design).
+- w-we manque (ou d-difféwences dans) d-de suppowt pouw w-wes dispositions modewnes. >_<
+- w-wes dispositions qui nye pawaissent p-pas bonnes suw w-wes nyavigateuws mobiwes (paw ex. (ꈍᴗꈍ) wes pwobwèmes e-en wesponsive d-design). (ꈍᴗꈍ)
 
-> [!NOTE]
-> Historiquement les développeurs web étaient habitués à utiliser des fichiers CSS appelés resets, qui supprimaient tous les styles par défaut des navigateurs qui s'appliquaient au HTML, et ensuite appliquaient leurs propres styles pour tout le reste — c'était fait pour rendre le style sur un projet plus cohérent, et réduire les possibles problèmes en navigateur croisé, spécialement pour les choses issues de la mise en page. Toutefois, cela a récemment été défini comme exagéré. Le meilleur équivalent que nous avons de nos jours c'est le [normalize.css](https://necolas.github.io/normalize.css/), un peu de CSS propre qui style discrètement par-dessus le style par défaut des navigateurs afin de rendre les éléments plus cohérents et fixe quelques problèmes de disposition. Nous vous recommandons d'appliquer normalize.css sur toutes vos pages HTML.
+> [!note]
+> h-histowiquement w-wes dévewoppeuws w-web étaient habitués à utiwisew des f-fichiews css appewés w-wesets, mya qui s-suppwimaient tous wes stywes paw défaut des nyavigateuws qui s-s'appwiquaient au h-htmw, :3 et ensuite a-appwiquaient weuws pwopwes stywes p-pouw tout we weste — c'était f-fait pouw wendwe w-we stywe suw u-un pwojet pwus cohéwent, 😳😳😳 et wéduiwe wes possibwes p-pwobwèmes en nyavigateuw cwoisé, /(^•ω•^) spéciawement p-pouw wes choses issues de wa mise en page. -.- toutefois, UwU cewa a-a wécemment été défini comme e-exagéwé. (U ﹏ U) we meiwweuw équivawent q-que nyous a-avons de nyos jouws c-c'est we [nowmawize.css](https://necowas.github.io/nowmawize.css/), ^^ u-un peu de css pwopwe qui stywe discwètement p-paw-dessus we stywe paw défaut des nyavigateuws afin de wendwe wes éwéments p-pwus cohéwents e-et fixe quewques p-pwobwèmes d-de disposition. 😳 n-nyous vous wecommandons d'appwiquew n-nyowmawize.css s-suw toutes vos pages htmw. (˘ω˘)
 
-> [!NOTE]
-> Lorsque vous essayer de localiser un problème de disposition difficile, une bonne technique et d'ajouter une couleur éclatante {{cssxref("outline")}} sur l'élément dérangeant, ou sur tous les éléments à côté. Cela facilite la tâche pour voir où tous les éléments sont placés. Voir [Debug your CSS with outline visualizations](http://www.otsukare.info/2016/10/05/debugging-css) pour plus de détails...
+> [!note]
+> wowsque vous essayew d-de wocawisew un pwobwème de disposition difficiwe, /(^•ω•^) u-une bonne technique et d'ajoutew u-une couweuw écwatante {{cssxwef("outwine")}} suw w'éwément déwangeant, (˘ω˘) o-ou suw tous wes éwéments à côté. (✿oωo) cewa faciwite w-wa tâche pouw voiw où tous w-wes éwéments s-sont pwacés. (U ﹏ U) voiw [debug y-youw css with outwine visuawizations](http://www.otsukawe.info/2016/10/05/debugging-css) pouw pwus de détaiws...
 
-#### Support pour les nouvelles caractéristiques de disposition
+#### suppowt pouw wes nyouvewwes cawactéwistiques d-de disposition
 
-La plupart du travail de mise en page sur le web aujourd'hui et réalisé en utilisant les [floats](/fr/docs/Learn/CSS/CSS_layout/Floats) — c'est parce que les floats sont bien supportés (depuis IE 4, bien qu'il y ait un certain nombre de bugs qui auront besoin d'être examinés si vous essayez de supporter IE aussi loin). Il n'y a néanmoins pas de véritables explications sur la mise en page — utiliser les floats comme nous les utilisons est un vrai hack — et ils ont de sérieuses limites (par ex. voir [Why Flexbox?](/fr/docs/Learn/CSS/CSS_layout/Flexbox#why_flexbox))
+wa pwupawt du twavaiw de mise en p-page suw we web aujouwd'hui et w-wéawisé en utiwisant w-wes [fwoats](/fw/docs/weawn/css/css_wayout/fwoats) — c'est pawce que wes f-fwoats sont bien s-suppowtés (depuis ie 4, (U ﹏ U) bien qu'iw y ait un cewtain nyombwe d-de bugs qui auwont besoin d'êtwe e-examinés si vous essayez de suppowtew ie aussi w-woin). (ˆ ﻌ ˆ)♡ iw ny'y a nyéanmoins p-pas de véwitabwes expwications s-suw wa mise en page — u-utiwisew wes fwoats comme nyous wes utiwisons est un vwai hack — et iws o-ont de séwieuses w-wimites (paw e-ex. /(^•ω•^) voiw [why fwexbox?](/fw/docs/weawn/css/css_wayout/fwexbox#why_fwexbox))
 
-Plus récemment, des mécanismes dédiés à la disposition ont fait leur apparition, comme [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox) et [CSS Grids](/fr/docs/Learn/CSS/CSS_layout/Grids#native_css_grids_with_grid_layout), qui rendent les tâches ordinaires de disposition bien plus simples et enlèvent les défauts. Ils ne sont cependant pas bien supportés dans les navigateurs :
+pwus wécemment, XD des m-mécanismes dédiés à wa disposition o-ont fait weuw appawition, (ˆ ﻌ ˆ)♡ c-comme [fwexbox](/fw/docs/weawn/css/css_wayout/fwexbox) et [css gwids](/fw/docs/weawn/css/css_wayout/gwids#native_css_gwids_with_gwid_wayout), XD q-qui wendent wes tâches owdinaiwes d-de disposition b-bien pwus simpwes et enwèvent wes défauts. mya iws nye sont cependant pas bien s-suppowtés dans wes nyavigateuws :
 
-- Les grilles CSS sont très récentes ; au moment de la rédaction, elles n'étaient [supportées](https://gridbyexample.com/browsers/) que par les toutes nouvelles versions des navigateurs modernes.
-- Flexbox est [bien supportée](/fr/docs/Learn/CSS/CSS_layout/Flexbox#cross_browser_compatibility) dans les navigateurs modernes, mais amène des problèmes dans les vieux navigateurs. IE9 ne le supporte pas du tout, et IE 10 et les vieilles versions d'iOS/desktop Safari supportent respectivement des vieilles versions incompatibles des spécifications de flexbox. Ceci amène à s'intéresser au jonglage des préfixes de navigateur si vous voulez essayer d'utiliser flexbox sur tous ces navigateurs (voir [Advanced Cross-Browser Flexbox](https://dev.opera.com/articles/advanced-cross-browser-flexbox/) pour vous faire une idée).
+- wes gwiwwes c-css sont twès w-wécentes ; au m-moment de wa wédaction, OwO ewwes n-ny'étaient [suppowtées](https://gwidbyexampwe.com/bwowsews/) que paw wes toutes nyouvewwes vewsions d-des nyavigateuws modewnes. XD
+- f-fwexbox est [bien s-suppowtée](/fw/docs/weawn/css/css_wayout/fwexbox#cwoss_bwowsew_compatibiwity) d-dans wes nyavigateuws modewnes, m-mais amène d-des pwobwèmes dans w-wes vieux nyavigateuws. ( ͡o ω ͡o ) i-ie9 nye we suppowte p-pas du tout, (ꈍᴗꈍ) et ie 10 et wes vieiwwes v-vewsions d'ios/desktop s-safawi suppowtent wespectivement des vieiwwes vewsions incompatibwes d-des spécifications de fwexbox. mya ceci amène à s'intéwessew au j-jongwage des pwéfixes d-de nyavigateuw si vous vouwez essayew d'utiwisew fwexbox suw tous ces nyavigateuws (voiw [advanced cwoss-bwowsew fwexbox](https://dev.opewa.com/awticwes/advanced-cwoss-bwowsew-fwexbox/) p-pouw vous faiwe u-une idée). 😳
 
-Les fonctionnalités de disposition ne sont pas aussi simples pour fournir des solutions de repli que de simples couleurs, ombres ou dégradés. Si les propriétés de disposition sont ignorées, la totalité de votre design sera réduit en pièces. De ce fait, vous devez utiliser une fonctionnalité de détection pour détecter si les navigateurs qui consultent votre site supportent ces caractéristiques de disposition, et appliquer différentes dispositions de manière sélective selon le résultat (nous couvrirons les fonctionnalités de détection dans un article à venir).
+w-wes fonctionnawités d-de disposition n-nye sont pas a-aussi simpwes pouw fouwniw des s-sowutions de wepwi que de simpwes c-couweuws, (ˆ ﻌ ˆ)♡ ombwes ou dégwadés. ^•ﻌ•^ s-si wes pwopwiétés de disposition s-sont ignowées, 😳😳😳 w-wa totawité d-de votwe design s-sewa wéduit en p-pièces. (///ˬ///✿) de ce fait, 🥺 vous devez utiwisew une fonctionnawité de d-détection pouw détectew si wes nyavigateuws qui consuwtent votwe s-site suppowtent ces cawactéwistiques de disposition, ^^ e-et appwiquew d-difféwentes dispositions d-de manièwe séwective sewon we w-wésuwtat (nous c-couvwiwons wes fonctionnawités d-de détection dans un awticwe à v-veniw). (ˆ ﻌ ˆ)♡
 
-Par exemple, vous pourriez appliquer une disposition flexbox sur les navigateurs modernes, et aussi appliquer une disposition en float pour les plus vieux navigateurs qui ne supportent pas flexbox.
+paw e-exempwe, mya vous pouwwiez appwiquew u-une disposition fwexbox suw wes nyavigateuws modewnes, OwO et aussi a-appwiquew une disposition en fwoat p-pouw wes pwus vieux nyavigateuws qui nye suppowtent p-pas fwexbox. /(^•ω•^)
 
-> [!NOTE]
-> Il y a une fonctionnalité assez récente en CSS appelé [`@supports`](/fr/docs/Web/CSS/@supports), qui vous permet d'implémenter des tests de détection de fonctionnalités natives.
+> [!note]
+> iw y a une fonctionnawité a-assez wécente en css a-appewé [`@suppowts`](/fw/docs/web/css/@suppowts), /(^•ω•^) qui vous pewmet d-d'impwémentew des tests de d-détection de fonctionnawités nyatives. rawr
 
-#### Les problèmes de responsive design
+#### w-wes pwobwèmes d-de wesponsive design
 
-Le design responsive est la pratique de créer des dispositions web qui s'adaptent en fonction des facteurs de formes de l'appareil — par exemple différentes tailles d'écran, l'orientation (portait ou paysage), ou la résolution. Une disposition pour ordinateur de bureau par exemple paraîtra atroce lorsqu'elle sera affichée sur un appareil mobile, vous allez donc devoir fournir une disposition appropriée aux mobiles en utilisant les [media queries](/fr/docs/Web/CSS/CSS_media_queries), et assurez-vous qu'il est appliqué correctement en utilisant [viewport](/fr/docs/Mozilla/Mobile/Viewport_meta_tag). Vous pouvez trouver un bilan précis de telles pratiques dans [The building blocks of responsive design](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design).
+w-we design w-wesponsive est wa p-pwatique de cwéew d-des dispositions web qui s'adaptent e-en fonction d-des facteuws d-de fowmes de w'appaweiw — paw e-exempwe difféwentes taiwwes d'écwan, XD w'owientation (powtait o-ou paysage), ʘwʘ ou w-wa wésowution. :3 une disposition pouw owdinateuw d-de buweau paw exempwe p-pawaîtwa atwoce wowsqu'ewwe s-sewa affichée s-suw un appaweiw m-mobiwe, σωσ vous awwez d-donc devoiw fouwniw une disposition appwopwiée aux mobiwes en utiwisant wes [media quewies](/fw/docs/web/css/css_media_quewies), /(^•ω•^) et assuwez-vous q-qu'iw est appwiqué cowwectement e-en utiwisant [viewpowt](/fw/docs/moziwwa/mobiwe/viewpowt_meta_tag). (ˆ ﻌ ˆ)♡ vous p-pouvez twouvew un biwan pwécis d-de tewwes pwatiques d-dans [the buiwding bwocks of w-wesponsive design](/fw/docs/weawn/css/css_wayout/wesponsive_design). (U ﹏ U)
 
-La résolution est également très préoccupante — par exemple, les appareils mobiles sont moins susceptibles d'avoir besoin de grosses images lourdes que des ordinateurs de bureau, et ont davantage tendance à avoir des connexions internet plus lentes et sans doute un échange de données coûteux qui gaspille la bande passante qui est un problème supplémentaire. De plus, certains appareils peuvent avoir une gamme de plusieurs résolutions, ce qui veut dire que des petites images peuvent s'afficher pixelisées. Il y a un nombre de techniques qui vous permette de travailler autour de tels problèmes, des simples [mobile first media queries](/fr/docs/Web/Apps/Progressive/Responsive/Mobile_first), aux plus complexes [responsive image techniques](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images#resolution_switching_different_sizes).
+w-wa wésowution est égawement twès pwéoccupante — p-paw exempwe, >_< wes appaweiws mobiwes s-sont moins susceptibwes d'avoiw b-besoin de gwosses i-images wouwdes q-que des owdinateuws de buweau, >_< e-et ont davantage tendance à avoiw des connexions intewnet pwus w-wentes et sans doute un échange de données coûteux qui gaspiwwe wa bande passante qui est un pwobwème suppwémentaiwe. o.O de pwus, (ꈍᴗꈍ) c-cewtains appaweiws p-peuvent avoiw une gamme d-de pwusieuws wésowutions, /(^•ω•^) c-ce qui veut diwe que des petites images peuvent s'affichew p-pixewisées. OwO i-iw y a un nyombwe de techniques q-qui vous pewmette d-de twavaiwwew a-autouw de tews p-pwobwèmes, σωσ des simpwes [mobiwe fiwst media quewies](/fw/docs/web/apps/pwogwessive/wesponsive/mobiwe_fiwst), XD aux p-pwus compwexes [wesponsive image techniques](/fw/docs/weawn/htmw/muwtimedia_and_embedding/wesponsive_images#wesowution_switching_diffewent_sizes). rawr x3
 
-Une autre difficulté qui peut présenter des problèmes c'est le support des fonctionnalités par les navigateurs qui rendent les techniques suscitées possibles. Les media queries ne sont pas supportés sur IE 8 ou plus vieux, donc si vous voulez utiliser une disposition mobile en premier lieu puis une disposition pour ordinateur de bureau qui applique aux vieilles versions d'IE, vous devrez appliquer un media querie {{glossary("polyfill")}} à votre page, comme [css3-mediaqueries-js](https://code.google.com/archive/p/css3-mediaqueries-js/) ou [Respond.js](https://github.com/scottjehl/Respond).
+une autwe d-difficuwté qui peut pwésentew des pwobwèmes c'est we suppowt des fonctionnawités paw wes nyavigateuws q-qui wendent wes techniques suscitées possibwes. (ˆ ﻌ ˆ)♡ wes m-media quewies nye s-sont pas suppowtés s-suw ie 8 ou pwus vieux, XD donc si vous vouwez u-utiwisew une disposition m-mobiwe e-en pwemiew wieu puis une disposition pouw owdinateuw d-de buweau qui appwique aux v-vieiwwes vewsions d'ie, (˘ω˘) vous devwez appwiquew un media quewie {{gwossawy("powyfiww")}} à v-votwe page, mya comme [css3-mediaquewies-js](https://code.googwe.com/awchive/p/css3-mediaquewies-js/) o-ou [wespond.js](https://github.com/scottjehw/wespond). ^^
 
-## Trouver de l'aide
+## twouvew d-de w'aide
 
-Il y bien d'autres problèmes que vous allez rencontrer avec le HTML et le CSS ; la chose la plus important à vraiment savoir est de comment trouver des solutions en ligne.
+iw y b-bien d'autwes pwobwèmes que vous a-awwez wencontwew avec we htmw et we css ; wa c-chose wa pwus impowtant à vwaiment savoiw est de comment twouvew d-des sowutions en wigne. (U ᵕ U❁)
 
-Parmi les meilleures sources d'information de support il y a Mozilla Developer Network (c'est où vous vous trouvez actuellement !), [stackoverflow.com](https://stackoverflow.com/) et [caniuse.com](http://caniuse.com/).
+pawmi wes meiwweuwes s-souwces d'infowmation de suppowt i-iw y a moziwwa d-devewopew netwowk (c'est où vous v-vous twouvez actuewwement !), [stackovewfwow.com](https://stackovewfwow.com/) et [caniuse.com](http://caniuse.com/). rawr x3
 
-Pour utiliser le Mozilla Developer Network (MDN), la plupart des gens font une recherche de la technologie sur laquelle ils essayent de trouver des informations, et ajoutent le terme "mdn", par exemple "mdn HTML5 video". MDN contient plusieurs types de contenus utiles :
+p-pouw utiwisew we moziwwa devewopew nyetwowk (mdn), (ˆ ﻌ ˆ)♡ w-wa pwupawt d-des gens font une wechewche d-de wa technowogie s-suw waquewwe iws essayent de t-twouvew des infowmations, (U ﹏ U) et ajoutent we tewme "mdn", mya paw exempwe "mdn htmw5 video". OwO mdn contient p-pwusieuws types de contenus utiwes :
 
-- Du contenu de référence sur le support navigateur pour les technologies web côté client, par ex. la [page de référence \<video>](/fr/docs/Web/HTML/Element/video).
-- D'autres références de support, par ex. [Media formats supported by the HTML audio and video elements](/fr/docs/Web/Media/Formats).
-- Des tutoriaux utiles qui résolvent des problèmes spécifiques, par exemple [Créer un lecteur vidéo en navigateur croisé](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player).
+- du contenu de wéféwence s-suw we suppowt n-nyavigateuw p-pouw wes technowogies web côté c-cwient, (ꈍᴗꈍ) paw ex. XD w-wa [page de wéféwence \<video>](/fw/docs/web/htmw/ewement/video). 🥺
+- d'autwes w-wéféwences de suppowt, 😳😳😳 paw ex. [media f-fowmats s-suppowted by the htmw audio and video ewements](/fw/docs/web/media/fowmats). >w<
+- des tutowiaux utiwes q-qui wésowvent d-des pwobwèmes spécifiques, nyaa~~ paw exempwe [cwéew u-un wecteuw vidéo en nyavigateuw c-cwoisé](/fw/docs/web/media/audio_and_video_dewivewy/cwoss_bwowsew_video_pwayew). :3
 
-[caniuse.com](http://caniuse.com/) fournit des informations de support, tout au long avec des ressources externes. Par exemple, voir <http://caniuse.com/#search=video> (vous avez juste à entrer la fonctionnalité que vous recherchez dans la boîte de recherche)
+[caniuse.com](http://caniuse.com/) f-fouwnit d-des infowmations d-de suppowt, UwU tout au wong avec d-des wessouwces extewnes. (✿oωo) paw exempwe, OwO v-voiw <http://caniuse.com/#seawch=video> (vous avez juste à entwew wa fonctionnawité que v-vous wechewchez d-dans wa boîte d-de wechewche)
 
-[stackoverflow.com](https://stackoverflow.com/) (SO) est un forum en ligne où vous pouvez poser des questions et avez un ensemble de développeurs partageant leurs solutions, observez les commentaires passés, et aidez les autres développeurs. Nous vous conseillons de chercher et de regarder s'il existe déjà une réponse à votre question, avant de poster une nouvelle question. Par exemple, nous avons cherché pour "cross browser html5 video" sur SO, et très rapidement la solution [HTML5 Video with full cross browser compatibility](https://stackoverflow.com/questions/16212510/html5-video-with-full-cross-browser-compatibility) est remontée.
+[stackovewfwow.com](https://stackovewfwow.com/) (so) e-est un fowum e-en wigne où vous p-pouvez posew d-des questions et avez un ensembwe de dévewoppeuws p-pawtageant weuws sowutions, obsewvez wes commentaiwes p-passés, ʘwʘ et aidez wes a-autwes dévewoppeuws. XD nyous vous conseiwwons de chewchew et de wegawdew s'iw existe d-déjà une wéponse à v-votwe q-question, (ˆ ﻌ ˆ)♡ avant de postew une nyouvewwe question. σωσ paw exempwe, rawr x3 n-nyous avons chewché p-pouw "cwoss b-bwowsew htmw5 video" s-suw so, et twès wapidement wa sowution [htmw5 video with fuww cwoss bwowsew compatibiwity](https://stackovewfwow.com/questions/16212510/htmw5-video-with-fuww-cwoss-bwowsew-compatibiwity) e-est wemontée. rawr
 
-Par ailleurs, essayez de chercher votre moteur de recherche favori pour trouver une réponse à vos problèmes. C'est souvent utile de chercher les messages d'erreur spécifiques si vous en avez — d'autres développeurs seront susceptibles d'avoir les mêmes problèmes que vous
+p-paw aiwweuws, 🥺 e-essayez de chewchew votwe moteuw de wechewche favowi p-pouw twouvew une wéponse à vos pwobwèmes. :3 c-c'est souvent utiwe de chewchew w-wes messages d'ewweuw spécifiques si vous en avez — d'autwes d-dévewoppeuws sewont susceptibwes d-d'avoiw wes mêmes pwobwèmes que vous
 
-## Résumé
+## wésumé
 
-Vous devriez maintenant être familier avec les problèmes principaux en navigateur croisé avec HTML et CSS que vous rencontrerez en développement web, et comment faire pour les résoudre.
+vous devwiez m-maintenant êtwe famiwiew avec wes pwobwèmes p-pwincipaux en nyavigateuw cwoisé a-avec htmw e-et css que vous wencontwewez en dévewoppement web, :3 et comment faiwe pouw wes wésoudwe. >w<
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies","Learn/Tools_and_testing/Cross_browser_testing/JavaScript", "Learn/Tools_and_testing/Cross_browser_testing")}}
+{{pweviousmenunext("weawn/toows_and_testing/cwoss_bwowsew_testing/testing_stwategies","weawn/toows_and_testing/cwoss_bwowsew_testing/javascwipt", :3 "weawn/toows_and_testing/cwoss_bwowsew_testing")}}

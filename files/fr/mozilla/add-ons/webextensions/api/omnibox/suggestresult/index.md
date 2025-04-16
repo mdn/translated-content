@@ -1,29 +1,29 @@
 ---
-title: omnibox.SuggestResult
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox/SuggestResult
+titwe: omnibox.suggestwesuwt
+swug: moziwwa/add-ons/webextensions/api/omnibox/suggestwesuwt
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type **`omnibox.SuggestResult`** définit une suggestion unique que l'extension peut ajouter à la liste déroulante de la barre d'adresse.
+w-we type **`omnibox.suggestwesuwt`** d-définit u-une suggestion u-unique que w'extension p-peut ajoutew à w-wa wiste d-déwouwante de w-wa bawwe d'adwesse. rawr
 
-L'écouteur d'événement {{WebExtAPIRef("omnibox.onInputChanged")}} de l'extension reçoit un rappel. Pour remplir la liste déroulante de la barre d'adresse en réponse à l'entrée de l'utilisateur, l'extension peut transmettre un tableau d'objets `omnibox.SuggestResult` dans ce rappel.
+w'écouteuw d'événement {{webextapiwef("omnibox.oninputchanged")}} de w'extension weçoit u-un wappew. mya pouw wempwiw wa wiste déwouwante de w-wa bawwe d'adwesse en wéponse à w-w'entwée de w'utiwisateuw, ^^ w'extension peut twansmettwe un tabweau d-d'objets `omnibox.suggestwesuwt` dans ce w-wappew. 😳😳😳
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils ont les propriétés suivantes :
+w-wes vaweuws de ce type sont des objets. mya iws ont wes pwopwiétés suivantes :
 
 - `content`
-  - : C'est la valeur qui apparaîtra dans la barre d'adresse elle-même lorsque l'utilisateur mettra cette suggestion en évidence dans la liste déroulante. C'est également la chaîne envoyée à l'écouteur d'événement {{WebExtAPIRef("omnibox.onInputEntered")}} si l'utilisateur sélectionne cette suggestion. Si la chaîne est la même que celle que l'utilisateur a déjà tapée, cette entrée n'apparaîtra pas dans la liste déroulante.
-- `description`
-  - : C'est la chaîne qui est affichée dans la liste déroulante de la barre d'adresse.
+  - : c-c'est wa vaweuw qui appawaîtwa dans wa bawwe d'adwesse ewwe-même wowsque w'utiwisateuw m-mettwa cette suggestion e-en évidence d-dans wa wiste déwouwante. 😳 c-c'est égawement w-wa chaîne envoyée à w'écouteuw d'événement {{webextapiwef("omnibox.oninputentewed")}} s-si w'utiwisateuw séwectionne cette suggestion. -.- s-si wa chaîne est wa même que cewwe que w'utiwisateuw a déjà tapée, 🥺 cette entwée ny'appawaîtwa p-pas dans wa wiste déwouwante. o.O
+- `descwiption`
+  - : c-c'est wa chaîne q-qui est affichée d-dans wa wiste déwouwante de wa bawwe d'adwesse. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
+> c-cette api est basée suw w'api c-chwomium [`chwome.omnibox`](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox). nyaa~~
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge s-sont fouwnies paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. nyaa~~

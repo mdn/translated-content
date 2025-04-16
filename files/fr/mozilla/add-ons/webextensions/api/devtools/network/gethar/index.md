@@ -1,80 +1,80 @@
 ---
-title: devtools.network.getHAR()
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR
+titwe: devtoows.netwowk.gethaw()
+swug: moziwwa/add-ons/webextensions/api/devtoows/netwowk/gethaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtenez un [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours.
+o-obtenez u-un [jouwnaw haw](http://www.softwaweishawd.com/bwog/haw-12-spec/#wog) p-pouw wa p-page chawgée dans w-w'ongwet en c-couws. (˘ω˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une f-fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getting = browser.devtools.network.getHAR();
+vaw getting = bwowsew.devtoows.netwowk.gethaw();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+n-nyone.
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet contenant le journal HAR pour l'onglet en cours. Pour plus de détails sur ce que contient l'objet journal, reportez-vous à la [spécification HAR](http://www.softwareishard.com/blog/har-12-spec/#log).
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un objet contenant w-we jouwnaw haw pouw w'ongwet en couws. ^^;; pouw pwus de détaiws s-suw ce que contient w'objet j-jouwnaw, 🥺 wepowtez-vous à w-wa [spécification haw](http://www.softwaweishawd.com/bwog/haw-12-spec/#wog). (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Consignez les URL des demandes contenues dans le journal HAR :
+c-consignez wes uww des demandes contenues dans we jouwnaw haw :
 
 ```js
-async function logRequests() {
-  let harLog = await browser.devtools.network.getHAR();
-  console.log(`HAR version: ${harLog.version}`);
-  for (let entry of harLog.entries) {
-    console.log(entry.request.url);
+async f-function wogwequests() {
+  wet hawwog = await b-bwowsew.devtoows.netwowk.gethaw();
+  c-consowe.wog(`haw v-vewsion: ${hawwog.vewsion}`);
+  f-fow (wet entwy of hawwog.entwies) {
+    consowe.wog(entwy.wequest.uww);
   }
 }
 
-logRequestsButton.addEventListener("click", logRequests);
+w-wogwequestsbutton.addeventwistenew("cwick", nyaa~~ wogwequests);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network).
+> cette api e-est basée suw w'api chwomium [`chwome.devtoows.netwowk`](https://devewopew.chwome.com/extensions/devtoows_netwowk). :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ( ͡o ω ͡o ) aww wights wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, (///ˬ///✿) w-with ow without
+// m-modification, (˘ω˘) awe pewmitted pwovided that the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above copywight
+// n-nyotice, ^^;; this wist of conditions a-and the fowwowing discwaimew. (✿oωo)
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, (U ﹏ U) t-this wist o-of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. -.-
+//    * n-nyeithew the nyame of googwe i-inc. ^•ﻌ•^ nyow the n-nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. rawr
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, (˘ω˘) incwuding, nyaa~~ b-but nyot
+// w-wimited to, UwU t-the impwied wawwanties of mewchantabiwity and f-fitness fow
+// a p-pawticuwaw puwpose a-awe discwaimed. :3 i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, (⑅˘꒳˘) indiwect, (///ˬ///✿) incidentaw,
+// speciaw, ^^;; exempwawy, >_< ow consequentiaw damages (incwuding, rawr x3 but nyot
+// w-wimited to, /(^•ω•^) pwocuwement of substitute goods ow sewvices; woss o-of use,
+// data, :3 o-ow pwofits; o-ow business intewwuption) howevew c-caused and on any
+// theowy of w-wiabiwity, (ꈍᴗꈍ) whethew i-in contwact, stwict wiabiwity, /(^•ω•^) ow towt
+// (incwuding negwigence ow othewwise) awising in any w-way out of the use
+// of this s-softwawe, (⑅˘꒳˘) even if advised of the p-possibiwity of s-such damage. ( ͡o ω ͡o )
 -->

@@ -1,425 +1,425 @@
 ---
-title: "Django didactique Section 5: Créer la page d'accueil"
-slug: Learn/Server-side/Django/Home_page
+titwe: "django didactique section 5: c-cwéew wa p-page d'accueiw"
+s-swug: weawn/sewvew-side/django/home_page
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/sewvew-side/django/admin_site", "weawn/sewvew-side/django/genewic_views", òωó "weawn/sewvew-side/django")}}
 
-Le travail préparatoire pour nous permettre de créer une page d'accueil pour le site web de [la bibliothèque locale](/fr/docs/Learn/Server-side/Django/Tutorial_local_library_website) est réalisé. La page d'accueil montera le nombre d'enregistrements pour chacun des objets décrits dans la base et les liens à l'aide d'une barre latérale de navigation. Dans la progression de l'article, nous apprendrons à gérer les vues et à présenter les données à l'aide de gabarits.
+w-we twavaiw pwépawatoiwe p-pouw n-nyous pewmettwe d-de cwéew une page d-d'accueiw pouw we site web de [wa bibwiothèque wocawe](/fw/docs/weawn/sewvew-side/django/tutowiaw_wocaw_wibwawy_website) est w-wéawisé. (⑅˘꒳˘) wa page d'accueiw montewa we nyombwe d-d'enwegistwements pouw chacun d-des objets décwits dans wa base et wes wiens à w'aide d'une bawwe w-watéwawe de navigation. (ꈍᴗꈍ) dans w-wa pwogwession d-de w'awticwe, rawr x3 nyous appwendwons à géwew wes vues et à pwésentew wes données à w-w'aide de gabawits. ( ͡o ω ͡o )
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Pré-requis:</th>
+    <tw>
+      <th scope="wow">pwé-wequis:</th>
       <td>
-        L'<a href="/fr/docs/Learn/Server-side/Django/Introduction"
-          >introduction</a
+        w'<a hwef="/fw/docs/weawn/sewvew-side/django/intwoduction"
+          >intwoduction</a
         >
-        à cette série didactique et les sections précédentes y compris celle sur
-        <a href="/fr/docs/Learn/Server-side/Django/Admin_site"
-          >le site d'administration</a
+        à cette séwie didactique e-et wes sections pwécédentes y-y compwis c-cewwe suw
+        <a h-hwef="/fw/docs/weawn/sewvew-side/django/admin_site"
+          >we s-site d'administwation</a
         >
-        du site web.
+        du site web. UwU
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objective:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objective:</th>
       <td>
-        Apprendre à construire un routage d'URL et les pages de publication des
-        vues (où les données ne sont pas encodées dans l'URL). Obtenir et
-        publier des données via les objets du modèle de données et les publier à
-        l'aide de gabarits.
+        a-appwendwe à constwuiwe un woutage d'uww e-et wes pages de pubwication des
+        vues (où wes données nye sont pas encodées dans w'uww). ^^ o-obteniw et
+        pubwiew d-des données via w-wes objets du modèwe d-de données et wes pubwiew à
+        w'aide de gabawits. (˘ω˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Survol
+## suwvow
 
-Dans les sections précédentes, nous avons défini [le modèle de données et les objets Django à manipuler](/fr/docs/Learn/Server-side/Django/Models), puis nous avons commencé à peupler [des enregistrements à l'aide du site d'administration](/fr/docs/Learn/Server-side/Django/Admin_site). Désormais, nous allons œuvrer à la présentation des données et développer le code nécessaire à l'information des utilisateurs. La première étape essentielle est de déterminer les informations que nous souhaitons publier dans nos différentes pages et, par conséquent, identifier les URL qui pourvoiront à la publication de ces informations. Nous serons alors en capacité de construire les routages d'URL, les vues et gabarits qui répondront aux exigences définies.
+d-dans wes s-sections pwécédentes, nyous avons d-défini [we m-modèwe de données et wes objets d-django à manipuwew](/fw/docs/weawn/sewvew-side/django/modews), puis nyous avons c-commencé à peupwew [des enwegistwements à w'aide du site d'administwation](/fw/docs/weawn/sewvew-side/django/admin_site). d-désowmais, (ˆ ﻌ ˆ)♡ nyous awwons œuvwew à w-wa pwésentation des données e-et dévewoppew w-we code nyécessaiwe à w'infowmation des utiwisateuws. OwO wa pwemièwe étape essentiewwe est de détewminew wes i-infowmations que n-nyous souhaitons pubwiew dans nyos d-difféwentes p-pages et, 😳 paw conséquent, UwU i-identifiew wes uww qui pouwvoiwont à wa pubwication d-de ces infowmations. 🥺 nyous sewons awows en capacité de constwuiwe wes woutages d-d'uww, 😳😳😳 wes vues et gabawits qui w-wépondwont aux e-exigences définies.
 
-Le diagramme ci-dessous est important à comprendre car il est au cœur du fonctionnement du cadriciel Django. Il décrit les flux de données et les composants sollicités pour traiter et répondre à une requête HTTP. Nous avons déjà travaillé le modèle de données (à gauche du diagramme), nous allons désormais nous atteler à :
+w-we diagwamme ci-dessous est i-impowtant à c-compwendwe caw iw e-est au cœuw du f-fonctionnement du cadwiciew django. ʘwʘ iw décwit w-wes fwux de données e-et wes composants s-sowwicités p-pouw twaitew e-et wépondwe à une wequête http. /(^•ω•^) nyous avons déjà twavaiwwé w-we modèwe de données (à gauche du diagwamme), :3 nyous awwons désowmais nyous attewew à :
 
-- détailler le routage des URL pour associer les vues adaptées aux requêtes HTTP que le site devra traiter (y compris avec des informations encodées dans les URL).
-- définir les fonctions de visualisation et créer les pages HTML qui vont permettre de publier les informations à destination des utilisateurs du site.
-- créer les gabarits qui vont permettre de publier les données dans les vues.
+- d-détaiwwew we woutage des uww pouw associew wes vues adaptées a-aux wequêtes http q-que we site devwa t-twaitew (y compwis avec des i-infowmations encodées dans wes u-uww). :3
+- définiw w-wes fonctions de visuawisation et cwéew wes pages htmw qui vont pewmettwe de pubwiew wes infowmations à d-destination des utiwisateuws d-du site. mya
+- cwéew wes gabawits q-qui vont p-pewmettwe de pubwiew wes données dans wes vues. (///ˬ///✿)
 
 ![](basic-django.png)
 
-Nous aurons à créer 5 pages web pour publier les informations à destination des utilisateurs. Cela fait beaucoup d'éléments à maîtriser dans une seule section d'apprentissage de l'outil. Nous avons donc opté pour ne traiter dans cette section que de la page d'accueil et de traiter les autres pages dans une autre section du didacticiel. Cela permet, en outre, de mieux appréhender les composants comme le routage d'URL ou les vues et d'une manière générale le fonctionnement du modèle de Django.
+n-nyous a-auwons à cwéew 5 pages web pouw p-pubwiew wes infowmations à d-destination des utiwisateuws. (⑅˘꒳˘) cewa fait beaucoup d'éwéments à maîtwisew dans une s-seuwe section d-d'appwentissage d-de w'outiw. :3 nyous avons donc opté p-pouw nye twaitew d-dans cette section que de wa p-page d'accueiw et de twaitew wes autwes pages dans une autwe section du didacticiew. /(^•ω•^) c-cewa pewmet, e-en outwe, ^^;; de mieux appwéhendew wes composants c-comme we woutage d-d'uww ou wes vues et d'une manièwe généwawe we fonctionnement d-du modèwe de django. (U ᵕ U❁)
 
-## Identifier les URLs des ressources
+## identifiew wes uwws des wessouwces
 
-Le site web de la bibliothèque locale est essentiellement un site de consultation pour les adhérents de la bibliothèque, nous aurons donc, par conséquent, besoin uniquement de pages pour les vues de détail de chacun des livres (ouvrages, auteur, etc.) de la bibliothèque et d'une page d'accueil.
+we site web de w-wa bibwiothèque wocawe est essentiewwement un s-site de consuwtation p-pouw wes adhéwents de wa bibwiothèque, (U ﹏ U) nyous auwons donc, mya p-paw conséquent, ^•ﻌ•^ b-besoin uniquement de pages pouw wes vues de détaiw de chacun d-des wivwes (ouvwages, (U ﹏ U) auteuw, etc.) d-de wa bibwiothèque et d'une page d'accueiw. :3
 
-La liste des URLs dont nous aurons besoin se résume à :
+wa wiste des u-uwws dont nyous auwons besoin se w-wésume à :
 
-- `catalog/` — Pour la page d'accueil.
-- `catalog/books/` — Pour la liste des livres.
-- `catalog/authors/` — Pour la liste des auteurs.
-- `catalog/book/<id>` — Pour disposer du détail de chacun des livres mis en prêt et identifié par identifiant `<id>` unique (le troisième livre enregistré est consultable dans le détail via l'URL `/catalog/book/3`).
-- `catalog/author/<id>` — De la même manière, le détail de chacun des auteurs enregistrés, identifié de la même manière par sa clé primaire `<id>`.
+- `catawog/` — p-pouw wa page d'accueiw.
+- `catawog/books/` — pouw wa wiste des w-wivwes. rawr x3
+- `catawog/authows/` — pouw wa wiste d-des auteuws. 😳😳😳
+- `catawog/book/<id>` — p-pouw disposew d-du détaiw de chacun des wivwes m-mis en pwêt e-et identifié paw identifiant `<id>` unique (we t-twoisième wivwe e-enwegistwé est c-consuwtabwe dans we détaiw via w'uww `/catawog/book/3`). >w<
+- `catawog/authow/<id>` — d-de wa même manièwe, òωó we d-détaiw de chacun d-des auteuws enwegistwés, 😳 identifié de wa même manièwe paw s-sa cwé pwimaiwe `<id>`. (✿oωo)
 
-Bien que les données dépendent du contenu de la base de données, les trois premières URLs retournent les résultats de requêtes sans informations supplémentaires ; c'est le cas de la page d'accueil qui donnera des décomptes de contenus et des pages sur la liste des livres ou des auteurs.
+b-bien q-que wes données d-dépendent du contenu de wa base d-de données, OwO wes twois pwemièwes uwws wetouwnent wes wésuwtats de wequêtes sans infowmations s-suppwémentaiwes ; c'est we cas d-de wa page d'accueiw qui donnewa d-des décomptes de contenus et d-des pages suw wa wiste des wivwes o-ou des auteuws. (U ﹏ U)
 
-En revanche, les pages concernant le détail d'un livre ou d'un auteur nécessiteront de traiter l'identifiant d'un objet. Il sera nécessaire d'extraire de la requête HTTP l'information encodée de cet identifiant pour obtenir ensuite le détail depuis la base de données. Pour cela nous utiliserons un seul jeu de vue et de gabarit pour publier les informations sur les livres (et auteurs).
+e-en wevanche, (ꈍᴗꈍ) w-wes pages concewnant w-we détaiw d-d'un wivwe ou d'un auteuw nyécessitewont de twaitew w'identifiant d'un objet. rawr iw sewa nyécessaiwe d'extwaiwe d-de wa wequête h-http w'infowmation e-encodée de cet identifiant pouw o-obteniw ensuite we détaiw depuis wa base de données. ^^ pouw c-cewa nyous utiwisewons u-un seuw jeu de vue et de g-gabawit pouw pubwiew wes infowmations suw wes wivwes (et a-auteuws). rawr
 
-> [!NOTE]
-> Avec le cadriciel Django, vous pouvez élaborer vos URLs comme bon vous semble — Vous pouvez avoir une approche comme celle présentée ci-dessus, ou de faire un appel de la méthode `GET` avec un passage de paramètres (`/book/?id=6`). Cependant, quelle que soit l'approche pour laquelle vous opterez, garder en mémoire d'avoir des URLs claires, logique et compréhensibles comme cela est [recommandé par le W3C](https://www.w3.org/Provider/Style/URI).
+> [!note]
+> a-avec we cadwiciew django, nyaa~~ vous pouvez éwabowew v-vos uwws comme bon v-vous sembwe — vous pouvez avoiw une appwoche comme cewwe pwésentée ci-dessus, nyaa~~ o-ou de faiwe u-un appew de wa m-méthode `get` avec u-un passage de p-pawamètwes (`/book/?id=6`). o.O cependant, òωó quewwe q-que soit w'appwoche p-pouw waquewwe vous optewez, ^^;; g-gawdew en mémoiwe d-d'avoiw des uwws cwaiwes, rawr wogique e-et compwéhensibwes comme cewa est [wecommandé p-paw we w3c](https://www.w3.owg/pwovidew/stywe/uwi). ^•ﻌ•^
 >
-> La documentation de Django recommande aussi de coder les informations dans le corps des URLs pour avoir une meilleure conception de ces URLs.
+> wa d-documentation de d-django wecommande aussi de codew w-wes infowmations dans we cowps des uwws pouw a-avoiw une meiwweuwe c-conception de c-ces uwws.
 
-La suite de cette section s'intéresse à la conception de la page d'accueil.
+wa suite de cette section s'intéwesse à wa conception d-de wa page d'accueiw. nyaa~~
 
-## Création de la page d'accueil
+## cwéation de wa page d-d'accueiw
 
-La toute première page à créer est la page d'accueil (`catalog/`). Cette page d'index est globalement une page statique contenant le décompte des différents enregistrements de la base de données. Pour faire cela, il sera nécessaire de créer un routage d'URL, une vue et un gabarit.
+wa t-toute pwemièwe page à cwéew e-est wa page d'accueiw (`catawog/`). nyaa~~ cette page d-d'index est gwobawement u-une page statique contenant we décompte d-des difféwents enwegistwements de wa base de données. 😳😳😳 p-pouw faiwe c-cewa, iw sewa nyécessaiwe de c-cwéew un woutage d'uww, 😳😳😳 une vue e-et un gabawit. σωσ
 
-> [!NOTE]
-> Cette section est essentielle, et cela vaut vraiment la peine d'être attentif aux concepts déployés dans celle-ci. La plupart des éléments abordé ici seront ré-utilisés par la suite.
+> [!note]
+> cette s-section est e-essentiewwe, o.O et cewa vaut vwaiment wa peine d'êtwe attentif aux concepts dépwoyés dans cewwe-ci. σωσ wa pwupawt des éwéments abowdé ici sewont wé-utiwisés paw wa suite. nyaa~~
 
-### Routage d'URL
+### woutage d'uww
 
-Quand nous avons créé [le squelette du site](/fr/docs/Learn/Server-side/Django/skeleton_website), nous avons mis à jour les routages des URLs dans le fichier **locallibrary/urls.py** afin de nous assurer que toutes les requêtes démarrant par `catalog/` seront traités par le configurateur _URLConf du module_ `catalog.urls` qui traitera la sous-chaîne restante.
+quand nyous avons c-cwéé [we squewette d-du site](/fw/docs/weawn/sewvew-side/django/skeweton_website), rawr x3 nous avons mis à jouw wes w-woutages des uwws d-dans we fichiew **wocawwibwawy/uwws.py** a-afin de nyous assuwew q-que toutes wes wequêtes démawwant p-paw `catawog/` s-sewont twaités paw we configuwateuw _uwwconf d-du moduwe_ `catawog.uwws` qui t-twaitewa wa sous-chaîne w-westante. (///ˬ///✿)
 
-L'extrait du code ci-dessous permet d'intégrer dans **locallibrary/urls.py** le configurateur d'URL du module `catalog` :
+w'extwait du code ci-dessous p-pewmet d'intégwew d-dans **wocawwibwawy/uwws.py** w-we configuwateuw d-d'uww du moduwe `catawog` :
 
 ```python
-urlpatterns += [
-  path('catalog/', include('catalog.urls')),
+u-uwwpattewns += [
+  path('catawog/', o.O i-incwude('catawog.uwws')), òωó
 ]
 ```
 
-Il est désormais nécessaire de créer un configurateur d'URL du module `catalog` (_URLConf_ du module est nommé **/catalog/urls.py**). Ajoutez le chemin ci-dessous :
+i-iw est désowmais n-nyécessaiwe d-de cwéew un configuwateuw d'uww d-du moduwe `catawog` (_uwwconf_ d-du moduwe est nyommé **/catawog/uwws.py**). OwO a-ajoutez we chemin ci-dessous :
 
 ```python
-urlpatterns = [
-    path('', views.index, name='index'),
+u-uwwpattewns = [
+    path('', σωσ views.index, n-nyame='index'), nyaa~~
 ]
 ```
 
-La fonction `path()` sert à définir les éléments suivants :
+wa fonction `path()` s-sewt à d-définiw wes éwéments s-suivants :
 
-- Un modèle d'URL qui, dans le cas présent, est une chaîne vide : `''`. Nous évoquerons ultérieurement les modèles d'URL plus en détail quand nous travaillerons les autres vues.
-- Une fonction de vue, ici `views.index`, qui sera sollicitée quand le modèle d'URL sera détecté et une fonction Python qui sera appelée pour traiter l'appel d'URL est présent dans le fichier **views.py** du module `catalog`.
+- un modèwe d-d'uww qui, OwO dans we cas pwésent, ^^ e-est une chaîne vide : `''`. (///ˬ///✿) n-nyous évoquewons uwtéwieuwement w-wes modèwes d'uww pwus en détaiw quand nyous twavaiwwewons wes autwes vues. σωσ
+- u-une fonction de vue, rawr x3 ici `views.index`, (ˆ ﻌ ˆ)♡ q-qui s-sewa sowwicitée quand we modèwe d'uww sewa détecté et une f-fonction python qui sewa appewée p-pouw twaitew w'appew d-d'uww est p-pwésent dans we fichiew **views.py** du moduwe `catawog`. 🥺
 
-Le paramètre `name` utilisé dans la fonction `path()` permet aussi de définir un identifiant unique qui sert à lier les pages vers celle-ci au sein de l'application. Vous pouvez alors l'utiliser à l'envers en routant dynamiquement des pages en lien vers cette ressource :
+w-we p-pawamètwe `name` utiwisé dans w-wa fonction `path()` pewmet aussi de définiw un i-identifiant unique qui sewt à w-wiew wes pages vews c-cewwe-ci au s-sein de w'appwication. (⑅˘꒳˘) vous pouvez a-awows w'utiwisew à w-w'envews e-en woutant dynamiquement d-des pages en wien vews c-cette wessouwce :
 
-```html
-<a href="{% url 'index' %}">Home</a>.
+```htmw
+<a h-hwef="{% u-uww 'index' %}">home</a>. 😳😳😳
 ```
 
-> [!NOTE]
-> Vous pourriez bien évidemment coder en dur l'accès à la page d'accueil de cette manière `<a href="/catalog/">Home</a>`), mais si nous changions le modèle d'URL, par exemple en `/catalog/index`, alors le gabarit ne fonctionnerait plus correctement et présenterait un lien mort. L'utilisation des noms et des routages inversés est plus robuste et adapté aux évolutions de l'application.
+> [!note]
+> v-vous pouwwiez b-bien évidemment c-codew en duw w'accès à w-wa page d-d'accueiw de cette manièwe `<a h-hwef="/catawog/">home</a>`), /(^•ω•^) mais si nyous changions w-we modèwe d'uww, >w< paw exempwe e-en `/catawog/index`, ^•ﻌ•^ a-awows w-we gabawit nye fonctionnewait pwus cowwectement et pwésentewait u-un wien mowt. 😳😳😳 w'utiwisation d-des n-nyoms et des woutages invewsés est pwus wobuste et adapté aux évowutions d-de w-w'appwication. :3
 
-### Vue (_View function-based_)
+### vue (_view function-based_)
 
-Une vue est une fonction qui traite une requête HTTP, extrait des données de la base de données et les restitue dans une page HTML à l'aide d'une réponse HTTP que le navigateur mettra en forme pour l'utilisateur. La fonction `index()` suit ce modèle de traitement de l'information : elle extrait les informations sur le nombre de livres, d'ouvrage en rayon ou en prêt et d'auteur enregistrés dans la base de données et à l'aide d'un gabarit les publie.
+u-une vue est une f-fonction qui twaite une wequête http, (ꈍᴗꈍ) extwait des données de w-wa base de données e-et wes westitue d-dans une page h-htmw à w'aide d'une wéponse http que we nyavigateuw m-mettwa en f-fowme pouw w'utiwisateuw. ^•ﻌ•^ wa fonction `index()` suit ce modèwe d-de twaitement de w'infowmation : ewwe extwait w-wes infowmations suw we nyombwe d-de wivwes, >w< d'ouvwage e-en wayon ou en pwêt et d'auteuw e-enwegistwés d-dans wa base de données et à w-w'aide d'un gabawit wes pubwie. ^^;;
 
-Éditez le fichier **catalog/views.py**. Vous constaterez l'import de la fonction [render()](https://docs.djangoproject.com/en/2.1/topics/http/shortcuts/#django.shortcuts.render) qui traite de la génération HTML en utilisant des garabits et des données :
+Éditez w-we fichiew **catawog/views.py**. (✿oωo) v-vous c-constatewez w'impowt d-de wa fonction [wendew()](https://docs.djangopwoject.com/en/2.1/topics/http/showtcuts/#django.showtcuts.wendew) qui twaite d-de wa généwation h-htmw en utiwisant d-des gawabits et des données :
 
 ```python
-from django.shortcuts import render
+f-fwom django.showtcuts impowt wendew
 
-# Create your views here.
+# cweate youw v-views hewe. òωó
 ```
 
-Copiez les lignes ci-dessous dans le fichier :
+c-copiez wes wignes c-ci-dessous dans we fichiew :
 
 ```python
-from catalog.models import Book, Author, BookInstance, Genre
+fwom catawog.modews impowt book, ^^ authow, ^^ b-bookinstance, rawr genwe
 
-def index(request):
-    """View function for home page of site."""
+def i-index(wequest):
+    """view f-function fow home page of site."""
 
-    # Generate counts of some of the main objects
-    num_books = Book.objects.all().count()
-    num_instances = BookInstance.objects.all().count()
+    # g-genewate counts of some of t-the main objects
+    n-nyum_books = b-book.objects.aww().count()
+    n-nyum_instances = b-bookinstance.objects.aww().count()
 
-    # Available books (status = 'a')
-    num_instances_available = BookInstance.objects.filter(status__exact='a').count()
+    # avaiwabwe books (status = 'a')
+    nyum_instances_avaiwabwe = bookinstance.objects.fiwtew(status__exact='a').count()
 
-    # The 'all()' is implied by default.
-    num_authors = Author.objects.count()
+    # t-the 'aww()' is impwied b-by defauwt. XD
+    nyum_authows = authow.objects.count()
 
     context = {
-        'num_books': num_books,
-        'num_instances': num_instances,
-        'num_instances_available': num_instances_available,
-        'num_authors': num_authors,
+        'num_books': nyum_books, rawr
+        'num_instances': n-nyum_instances, 😳
+        'num_instances_avaiwabwe': nyum_instances_avaiwabwe,
+        'num_authows': nyum_authows, 🥺
     }
 
-    # Render the HTML template index.html with the data in the context variable
-    return render(request, 'index.html', context=context)
+    # wendew the htmw tempwate index.htmw w-with the data i-in the context vawiabwe
+    wetuwn w-wendew(wequest, (U ᵕ U❁) 'index.htmw', 😳 context=context)
 ```
 
-La première ligne de code permet d'importer les modèles de données du catalogue décrites dans le module `catalog`.
+wa pwemièwe w-wigne de code p-pewmet d'impowtew wes modèwes d-de données du catawogue décwites d-dans we moduwe `catawog`.
 
-La première section de la fonction index() permet à l'aide de requêtes, par l'intermédiaire des objets de modèle de données, d'obtenir les nombres d'enregistrements. Pour cela, nous utilisons la méthode d'objet _models_ `objects.all()` sur les objets `Book` et `BookInstance`. Ensuite, nous recherchons les ouvrages disponibles, ce qui revient à faire une requête avec un filtre sur l'attribut status de l'objet `BookInstance` ayant la valeur 'a' (Available). Si vous avez un oubli, vous pouvez consulter [La section 3 de Django didactique : utilisation du modèle de données > Chercher des enregistrements](/fr/docs/Learn/Server-side/Django/Models#rechercher_des_enregistrements).
+wa pwemièwe section de wa fonction index() pewmet à w-w'aide de wequêtes, 🥺 paw w'intewmédiaiwe d-des objets de modèwe d-de données, (///ˬ///✿) d-d'obteniw wes nyombwes d'enwegistwements. mya pouw c-cewa, (✿oωo) nyous utiwisons wa méthode d'objet _modews_ `objects.aww()` suw wes objets `book` et `bookinstance`. ^•ﻌ•^ ensuite, o.O n-nyous wechewchons w-wes ouvwages d-disponibwes, o.O c-ce qui wevient à faiwe une wequête avec un f-fiwtwe suw w'attwibut s-status de w'objet `bookinstance` ayant wa v-vaweuw 'a' (avaiwabwe). XD si vous avez un oubwi, ^•ﻌ•^ v-vous pouvez consuwtew [wa section 3 de django didactique : u-utiwisation d-du modèwe de données > c-chewchew des enwegistwements](/fw/docs/weawn/sewvew-side/django/modews#wechewchew_des_enwegistwements). ʘwʘ
 
-La dernière ligne de cette fonction est l'appel de la fonction `render()` dont l'objet est de constituer une page HTML et la transmettre comme une réponse. Cette fonction encapsule plusieurs autres fonctions du cadriciel ce qui permet de simplifier le processus de restitution des informations. La fonction `render()` utilise les paramètres :
+w-wa dewnièwe w-wigne de cette fonction est w'appew de wa f-fonction `wendew()` dont w'objet est de constituew u-une page htmw et wa twansmettwe comme une wéponse. (U ﹏ U) cette fonction e-encapsuwe p-pwusieuws autwes f-fonctions du cadwiciew c-ce qui pewmet d-de simpwifiew we pwocessus d-de westitution des infowmations. 😳😳😳 wa fonction `wendew()` u-utiwise wes pawamètwes :
 
-- La requête HTTP initiale `request` qui est un objet de type `HttpRequest`.
-- Un gabarit de page HTML avec des zones prédéfinies pour les données.
-- Un contexte de variables (`context`) qui est un dictionnaire en Python, contenant les données à insérer dans le gabarit pour publier la page HTML.
+- w-wa wequête http initiawe `wequest` qui est u-un objet de type `httpwequest`. 🥺
+- u-un gabawit de page htmw avec d-des zones pwédéfinies pouw wes d-données. (///ˬ///✿)
+- un c-contexte de vawiabwes (`context`) qui est un dictionnaiwe e-en python, (˘ω˘) c-contenant wes données à i-inséwew dans we gabawit pouw pubwiew wa page htmw. :3
 
-Nous aborderons plus en détail les aspects de gabarit et de contexte des variables dans la section suivante du didacticiel. Pour le moment, construisons un premier gabarit sans plus de précisions.
+nyous abowdewons p-pwus en détaiw wes aspects d-de gabawit et de contexte des vawiabwes dans wa s-section suivante d-du didacticiew. /(^•ω•^) p-pouw we moment, :3 constwuisons u-un pwemiew gabawit s-sans pwus de pwécisions. mya
 
-### Gabarit (_Template_)
+### g-gabawit (_tempwate_)
 
-Un gabarit est un fichier texte qui décrit la structure ou la mise en page d'un document (comme une page HTML) et qui utilise des emplacements réservés pour y insérer des informations issues de la base de données.
+un gabawit e-est un fichiew texte qui décwit w-wa stwuctuwe o-ou wa mise en page d'un document (comme une page htmw) et qui utiwise des empwacements w-wésewvés p-pouw y inséwew des infowmations issues de wa base de données. XD
 
-Le cadriciel Django va rechercher automatiquement ces gabarits dans un répertoire nommé '**templates**' dans le dossier de l'application. Si vous reprenez la dernière ligne de la fonction `index()` dans l'exemple ci-dessus, la fonction `render()` a besoin du fichier **_index.html_** qui devrait être placé dans le dossie **/locallibrary/catalog/templates/**. Dans le cas contraire, cela génère une erreur car le fichier est considéré comme absent.
+w-we cadwiciew django va wechewchew a-automatiquement c-ces gabawits dans un wépewtoiwe nyommé '**tempwates**' dans we dossiew de w'appwication. (///ˬ///✿) s-si vous wepwenez wa dewnièwe wigne de wa fonction `index()` d-dans w'exempwe ci-dessus, 🥺 w-wa fonction `wendew()` a b-besoin du fichiew **_index.htmw_** qui devwait êtwe p-pwacé dans w-we dossie **/wocawwibwawy/catawog/tempwates/**. o.O d-dans we cas contwaiwe, mya c-cewa génèwe u-une ewweuw c-caw we fichiew est considéwé comme absent. rawr x3
 
-Vous pouvez en faire l'expérience dès à présent, après avoir redémarré votre serveur local, en accédant à l'URL `127.0.0.1:8000` de votre navigateur. Une page d'erreur explicite s'affiche en indiquant un message du type : "`TemplateDoesNotExist at /catalog/`", ainsi que de nombreux détails sur l'enchaînement des fonctions aboutissant à cette erreur.
+vous pouvez en faiwe w'expéwience dès à pwésent, 😳 a-apwès avoiw w-wedémawwé votwe s-sewveuw wocaw, 😳😳😳 e-en accédant à w-w'uww `127.0.0.1:8000` d-de votwe nyavigateuw. >_< une page d'ewweuw expwicite s'affiche en indiquant u-un message du t-type : "`tempwatedoesnotexist at /catawog/`", >w< ainsi que de nyombweux détaiws suw w'enchaînement d-des fonctions a-aboutissant à c-cette ewweuw.
 
-> [!NOTE]
-> En fonction du paramétrage de votre projet - le fichier settings.py de votre projet - Django va chercher pour des gabarits dans différents répertoires et dans ceux de votre application par défaut. Si vous souhaitez approfondir ce sujet vous pouvez consulter la [documentation Django relative aux gabarits](https://docs.djangoproject.com/fr/2.2/topics/templates/).
+> [!note]
+> en fonction du pawamétwage d-de votwe pwojet - we fichiew settings.py d-de votwe pwojet - d-django va chewchew pouw des gabawits dans difféwents w-wépewtoiwes et dans ceux d-de votwe appwication p-paw défaut. rawr x3 si vous souhaitez a-appwofondiw c-ce sujet vous p-pouvez consuwtew w-wa [documentation d-django wewative a-aux gabawits](https://docs.djangopwoject.com/fw/2.2/topics/tempwates/). XD
 
-#### Concevoir les gabarits
+#### concevoiw wes gabawits
 
-Django utilise un langage pour les gabarits qui permet de résoudre certains sujets liés aux pages HTML. En l'occurrence, dans le site web de la bibliothèque nous aurons des bandeaux de navigateur et autres codes d'en-tête à réutiliser. Dans une vision classique, il faudrait récrire dans chaque page le même code pour obtenir le même rendu. Si cela peut se concevoir pour quelques pages, ce procédé devient vite inopérant voire risqué avec un site dynamique complet.
+d-django u-utiwise un wangage pouw wes gabawits q-qui pewmet de wésoudwe cewtains sujets wiés a-aux pages htmw. ^^ en w'occuwwence, (✿oωo) d-dans we site web de wa bibwiothèque n-nyous auwons d-des bandeaux de nyavigateuw et autwes codes d-d'en-tête à wéutiwisew. >w< dans une vision cwassique, 😳😳😳 i-iw faudwait w-wécwiwe dans chaque page we même code pouw o-obteniw we même w-wendu. (ꈍᴗꈍ) si cewa peut se concevoiw p-pouw quewques pages, (✿oωo) ce pwocédé devient vite i-inopéwant voiwe w-wisqué avec un site dynamique c-compwet. (˘ω˘)
 
-Le langage de gabarit de Django permet de définir un modèle de base puis de l'étendre ensuite. L'extrait de code ci-dessous vient du fichier de gabarit **base_generic.html**, vous constaterez qu'il s'y mélange du code HTML et des sections nommées contenu dans entre des marqueurs `block` et `endblock` qui peut contenir ou non des données.
+we wangage d-de gabawit de django pewmet de définiw un m-modèwe de base p-puis de w'étendwe e-ensuite. w'extwait d-de code ci-dessous vient du fichiew de gabawit **base_genewic.htmw**, nyaa~~ vous constatewez qu'iw s'y méwange du code htmw et d-des sections nyommées c-contenu d-dans entwe des m-mawqueuws `bwock` e-et `endbwock` q-qui peut conteniw ou nyon des données. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Les marqueurs de gabarits sont des fonctions que vous pouvez utiliser dans un modèle pour parcourir des listes, effectuer des opérations conditionnelles en fonction de la valeur d'une variable, etc. Outre les balises de modèle, la syntaxe de gabarit vous permet de référencer les variables qui sont transmises au modèle à partir de la vue et d'utiliser des filtres de gabarit pour mettre en forme les variables (par exemple, pour convertir une chaîne en minuscule).
+> [!note]
+> w-wes mawqueuws d-de gabawits sont des fonctions q-que vous pouvez u-utiwisew dans un modèwe pouw pawcouwiw des wistes, 🥺 e-effectuew des opéwations conditionnewwes e-en fonction de wa vaweuw d'une vawiabwe, (U ﹏ U) e-etc. outwe w-wes bawises de modèwe, ( ͡o ω ͡o ) wa syntaxe d-de gabawit v-vous pewmet de w-wéféwencew wes vawiabwes qui s-sont twansmises a-au modèwe à pawtiw de wa vue et d-d'utiwisew des fiwtwes de gabawit p-pouw mettwe e-en fowme wes vawiabwes (paw e-exempwe, (///ˬ///✿) pouw convewtiw u-une chaîne en minuscuwe). (///ˬ///✿)
 
-Dans l'extrait ci-dessous vous avec trois sections nommées qui pourront être remplacés par la suite :
+dans w'extwait ci-dessous v-vous avec twois sections nyommées qui pouwwont êtwe wempwacés paw wa suite :
 
-- title : qui contiendra le titre (par défaut Bibliothèque locale)
-- sidebar : une barre de navigation latérale à gauche
-- content : le contenu de la page
+- titwe : qui contiendwa w-we titwe (paw défaut bibwiothèque wocawe)
+- sidebaw : une bawwe de nyavigation watéwawe à gauche
+- content : w-we contenu de wa page
 
 ```django
-<!doctype html>
-<html lang="fr">
+<!doctype htmw>
+<htmw wang="fw">
   <head>
-    {% block title %}
-      <title>Bibliothèque locale</title>
-    {% endblock %}
+    {% b-bwock titwe %}
+      <titwe>bibwiothèque wocawe</titwe>
+    {% e-endbwock %}
   </head>
   <body>
-    {% block sidebar %}
-      <!-- insert default navigation text for every page -->
-    {% endblock %}
-    {% block content %}
-      <!-- default content text (typically empty) -->
-    {% endblock %}
+    {% bwock sidebaw %}
+      <!-- i-insewt defauwt nyavigation t-text fow evewy page -->
+    {% e-endbwock %}
+    {% b-bwock content %}
+      <!-- defauwt content text (typicawwy e-empty) -->
+    {% endbwock %}
   </body>
-</html>
+</htmw>
 ```
 
-Lorsque l'on définit un gabarit pour une vue particulière, il convient de définir une base de gabarit et d'utiliser la balise `extends` dans une page complémentaire comme dans l'exemple ci-dessous. Ensuite, il est nécessaire de préciser les sections qui seront modifiées en utilisant les balises `block`/`endblock` qui définissent le début et la fin de section.
+wowsque w'on définit un g-gabawit pouw une vue pawticuwièwe, (✿oωo) i-iw convient de définiw une b-base de gabawit et d'utiwisew wa b-bawise `extends` d-dans une page compwémentaiwe comme dans w'exempwe c-ci-dessous. (U ᵕ U❁) ensuite, iw est nyécessaiwe de p-pwécisew wes sections qui sewont modifiées en utiwisant wes bawises `bwock`/`endbwock` qui définissent w-we début e-et wa fin de section. ʘwʘ
 
-À titre indicatif, l'extrait ci-dessous présente la manière d'activer à l'aide de la balise `extends` le remplacement de la section `content`. La page HTML générée inclura la structure de la page définie plus haut et le code généré à la fois pour la section `title`, mais avec les éléments nouveaux, ci-dessous, pour la section `content`.
+À titwe i-indicatif, ʘwʘ w-w'extwait ci-dessous pwésente wa m-manièwe d'activew à w'aide de wa bawise `extends` we wempwacement de wa section `content`. XD wa p-page htmw généwée i-incwuwa wa stwuctuwe de wa p-page définie p-pwus haut et we code généwé à w-wa fois pouw wa section `titwe`, (✿oωo) mais avec wes éwéments n-nyouveaux, ^•ﻌ•^ ci-dessous, pouw wa section `content`. ^•ﻌ•^
 
 ```django
-{% extends "base_generic.html" %}
+{% e-extends "base_genewic.htmw" %}
 
-{% block content %}
-<h1>Accueil de la bibliothèque locale</h1>
+{% bwock c-content %}
+<h1>accueiw de wa bibwiothèque w-wocawe</h1>
 <p>
-  Bienvenue sur la bibliothèque locale, un site web développé par
-  <em>Mozilla Developer Network</em>!
+  bienvenue suw wa bibwiothèque wocawe, >_< un site web dévewoppé paw
+  <em>moziwwa devewopew nyetwowk</em>! mya
 </p>
-{% endblock %}
+{% endbwock %}
 ```
 
-#### Le gabarit de base de la bibliothèque
+#### w-we gabawit d-de base de wa bibwiothèque
 
-Nous allons nous appuyer sur le gabarit ci-dessous pour construire la page de base de la bibliothèque locale. Vous le constatez, il contient des éléments HTML et des blocs dédiés Django pour spécifier trois sections `title`, `sidebar`, et `content`. La section `title` contient un titre par défaut. De même la section `sidebar` contient un lien vers la liste des livres et des auteurs qui pourra être modifié ensuite.
+n-nyous awwons nyous a-appuyew suw we gabawit ci-dessous p-pouw constwuiwe wa page de base de wa bibwiothèque wocawe. σωσ vous we constatez, rawr iw contient d-des éwéments htmw et des bwocs dédiés django pouw spécifiew twois sections `titwe`, (✿oωo) `sidebaw`, :3 e-et `content`. rawr x3 w-wa section `titwe` c-contient un titwe paw défaut. ^^ de même wa section `sidebaw` c-contient un w-wien vews wa wiste d-des wivwes et des auteuws qui p-pouwwa êtwe modifié ensuite. ^^
 
-> [!NOTE]
-> Il y a aussi deux balises supplémentaires : `url` et `load static`. Elles seront étudiées dans le chapitre suivant.
+> [!note]
+> i-iw y a aussi deux bawises s-suppwémentaiwes : `uww` et `woad static`. OwO e-ewwes sewont étudiées dans we chapitwe suivant. ʘwʘ
 
-Créez un nouveau fichier nommé **_base_generic.html_** dans le dossier **/locallibrary/catalog/templates/** (à créer aussi) et copiez-y le texte ci-dessous :
+c-cwéez un nyouveau fichiew n-nyommé **_base_genewic.htmw_** d-dans we dossiew **/wocawwibwawy/catawog/tempwates/** (à cwéew a-aussi) et copiez-y w-we texte ci-dessous :
 
 ```django
-<!doctype html>
-<html lang="en">
+<!doctype htmw>
+<htmw w-wang="en">
   <head>
-    {% block title %}
-      <title>Bibliothèque locale</title>
-    {% endblock %}
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
-      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-      crossorigin="anonymous" />
-    <!-- Add additional CSS in static file -->
-    {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    {% bwock titwe %}
+      <titwe>bibwiothèque wocawe</titwe>
+    {% e-endbwock %}
+    <meta chawset="utf-8" />
+    <meta n-nyame="viewpowt" c-content="width=device-width, /(^•ω•^) initiaw-scawe=1" />
+    <wink
+      wew="stywesheet"
+      h-hwef="https://stackpath.bootstwapcdn.com/bootstwap/4.1.3/css/bootstwap.min.css"
+      integwity="sha384-mcw98/sfnge8fjt3gxweongsv7zt27nxfoaoapmym81iuxopkfojwj8ewdknwpmo"
+      cwossowigin="anonymous" />
+    <!-- add additionaw css in static fiwe -->
+    {% woad static %}
+    <wink wew="stywesheet" h-hwef="{% static 'css/stywes.css' %}" />
   </head>
   <body>
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-sm-2">
-          {% block sidebar %}
-          <ul class="sidebar-nav">
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="">Tous les livres</a></li>
-            <li><a href="">Tous les auteurs</a></li>
-          </ul>
-          {% endblock %}
+    <div cwass="containew-fwuid">
+      <div c-cwass="wow">
+        <div cwass="cow-sm-2">
+          {% b-bwock sidebaw %}
+          <uw cwass="sidebaw-nav">
+            <wi><a h-hwef="{% uww 'index' %}">home</a></wi>
+            <wi><a hwef="">tous wes wivwes</a></wi>
+            <wi><a h-hwef="">tous wes auteuws</a></wi>
+          </uw>
+          {% endbwock %}
         </div>
-        <div class="col-sm-10">{% block content %} {% endblock %}</div>
+        <div c-cwass="cow-sm-10">{% bwock content %} {% e-endbwock %}</div>
       </div>
     </div>
   </body>
-</html>
+</htmw>
 ```
 
-Ce gabarit fait appel - _en ligne 7_ - à la bibliothèque de style [Bootstrap](http://getbootstrap.com/) afin d'améliorer la présentation de la page. L'utilisation de Bootstrap (ou de tout autre cadriciel pour les pages web) est un moyen rapide de créer des pages bien organisées et qui s'affiche très bien sur les différents navigateurs.
+ce gabawit fait appew - _en wigne 7_ - à w-wa b-bibwiothèque de stywe [bootstwap](http://getbootstwap.com/) afin d-d'améwiowew wa p-pwésentation de wa page. ʘwʘ w'utiwisation d-de bootstwap (ou d-de tout autwe cadwiciew pouw wes pages w-web) est un moyen wapide de cwéew des pages bien owganisées e-et qui s'affiche twès bien suw wes difféwents navigateuws. (⑅˘꒳˘)
 
-De même, ce gabarit fait appel à une feuille de style - _en ligne 10_ - locale pour ajouter ou adapter des styles. Créez le fichier **styles.css** dans le répertoire **/locallibrary/catalog/static/css/** (à créer aussi) et copiez le contenu ci-dessous :
+de m-même, ce gabawit f-fait appew à u-une feuiwwe de stywe - _en wigne 10_ - wocawe pouw ajoutew ou adaptew d-des stywes. UwU cwéez we fichiew **stywes.css** d-dans we wépewtoiwe **/wocawwibwawy/catawog/static/css/** (à cwéew aussi) e-et copiez we contenu c-ci-dessous :
 
 ```css
-.sidebar-nav {
-  margin-top: 20px;
+.sidebaw-nav {
+  mawgin-top: 20px;
   padding: 0;
-  list-style: none;
+  wist-stywe: nyone;
 }
 ```
 
-#### La page d'accueil
+#### wa page d'accueiw
 
-Maintenant créez le fichier HTML **_index.html_** dans le dossier **/locallibrary/catalog/templates/** et copiez-y le code ci-dessous. Ce code étend le template de base sur la première ligne et remplace le bloc par défaut `content` pour le template.
+maintenant c-cwéez w-we fichiew htmw **_index.htmw_** dans we dossiew **/wocawwibwawy/catawog/tempwates/** et copiez-y w-we code ci-dessous. -.- ce code étend we tempwate d-de base suw wa p-pwemièwe wigne e-et wempwace we b-bwoc paw défaut `content` p-pouw w-we tempwate. :3
 
 ```django
-{% extends "base_generic.html" %}
+{% extends "base_genewic.htmw" %}
 
-{% block content %}
-<h1>Accueil de la bibliothèque locale</h1>
+{% bwock c-content %}
+<h1>accueiw d-de wa b-bibwiothèque wocawe</h1>
 <p>
-  Bienvenue à la bibliothèque locale, un site web développé par
-  <em>Mozilla Developer Network</em>!
+  b-bienvenue à wa b-bibwiothèque wocawe, >_< u-un site web dévewoppé paw
+  <em>moziwwa d-devewopew nyetwowk</em>! nyaa~~
 </p>
-<h2>Contenu dynamique</h2>
-<p>La bibliothèque dispose des enregistrements suivants:</p>
-<ul>
-  <li><strong>Livres:</strong> \{{ num_books }}</li>
-  <li><strong>Copies:</strong> \{{ num_instances }}</li>
-  <li><strong>Copies disponibles:</strong> \{{ num_instances_available }}</li>
-  <li><strong>Auteurs:</strong> \{{ num_authors }}</li>
-</ul>
-{% endblock %}
+<h2>contenu d-dynamique</h2>
+<p>wa b-bibwiothèque dispose des enwegistwements suivants:</p>
+<uw>
+  <wi><stwong>wivwes:</stwong> \{{ n-nyum_books }}</wi>
+  <wi><stwong>copies:</stwong> \{{ nyum_instances }}</wi>
+  <wi><stwong>copies disponibwes:</stwong> \{{ n-nyum_instances_avaiwabwe }}</wi>
+  <wi><stwong>auteuws:</stwong> \{{ nyum_authows }}</wi>
+</uw>
+{% endbwock %}
 ```
 
-Dans la section contenu dynamique, des emplacements réservés sont définis pour pouvoir y insérer le contenu de variable qui sont identifiées à l'intérieur de doubles accolades (ouvrantes et fermantes). Pour une meilleure visibilité ces emplacements et les variables nommées sont identifiées en caractères gras dans l'extrait de code ci-dessus.
+dans wa section c-contenu dynamique, ( ͡o ω ͡o ) d-des empwacements wésewvés sont définis pouw pouvoiw y inséwew w-we contenu d-de vawiabwe qui sont identifiées à w-w'intéwieuw d-de doubwes accowades (ouvwantes et fewmantes). o.O pouw une meiwweuwe visibiwité c-ces empwacements e-et wes vawiabwes nyommées sont identifiées en c-cawactèwes gwas d-dans w'extwait de code ci-dessus. :3
 
-> [!NOTE]
-> Vous pouvez constater simplement que les balises de gabarit (fonctions) et les balises de variables sont entre accolades ; double accolades pour une variable (`\{{ num_books }}`), et simple accolade avec le pourcentage (`{% extends "base_generic.html" %}`) pour les balises.
+> [!note]
+> vous pouvez constatew s-simpwement que wes bawises de gabawit (fonctions) et wes bawises de vawiabwes sont entwe a-accowades ; doubwe accowades pouw une vawiabwe (`\{{ n-nyum_books }}`), (˘ω˘) e-et simpwe a-accowade avec we pouwcentage (`{% e-extends "base_genewic.htmw" %}`) p-pouw wes bawises. rawr x3
 
-Gardez en mémoire que les variables utilisées dans les gabarits sont des clés d'un dictionnaire `context` transmis à la fonction `render()` de la vue (revenez à l'exemple plus haut, ou l'extrait ci-dessous). La fonction `render()` traitera le dictionnaire pour restituer une page HTML où les variables nommées auront été remplacées par leur valeur dans le dictionnaire.
+g-gawdez en m-mémoiwe que wes v-vawiabwes utiwisées dans wes gabawits sont des c-cwés d'un dictionnaiwe `context` t-twansmis à wa f-fonction `wendew()` de wa vue (wevenez à w-w'exempwe p-pwus haut, (U ᵕ U❁) o-ou w'extwait ci-dessous). 🥺 wa fonction `wendew()` t-twaitewa we dictionnaiwe p-pouw w-westituew une page h-htmw où wes v-vawiabwes nyommées auwont été w-wempwacées paw weuw vaweuw dans w-we dictionnaiwe. >_<
 
 ```python
-context = {
-    'num_books': num_books,
-    'num_instances': num_instances,
-    'num_instances_available': num_instances_available,
-    'num_authors': num_authors,
+c-context = {
+    'num_books': nyum_books, :3
+    'num_instances': nyum_instances, :3
+    'num_instances_avaiwabwe': num_instances_avaiwabwe, (ꈍᴗꈍ)
+    'num_authows': n-nyum_authows, σωσ
 }
 
-return render(request, 'index.html', context=context)
+w-wetuwn wendew(wequest, 😳 'index.htmw', context=context)
 ```
 
-#### Traiter les fichiers statiques dans les gabarits
+#### t-twaitew w-wes fichiews statiques dans wes gabawits
 
-Vos projets utiliseront probablement de fichiers statiques, par exemple des images, des fichiers de styles CSS ou des fonctions JavaScript. L'emplacement de ces fichiers n'est pas connu a priori ou peut changer en fonction de l'emplacement dans un projet Django. Pour cela, Django vous permet de spécifier les emplacements dans les gabarits par rapport à la variable globale du projet `STATIC_URL`. Le paramétrage par défaut du site web définit la variable `STATIC_URL` à '`/static/`', mais vous pouvez choisir de l'héberger ailleurs.
+vos pwojets u-utiwisewont p-pwobabwement de f-fichiews statiques, mya p-paw exempwe d-des images, (///ˬ///✿) des f-fichiews de stywes css ou des fonctions javascwipt. ^^ w-w'empwacement de ces fichiews ny'est pas connu a pwiowi ou peut changew en f-fonction de w'empwacement d-dans un pwojet django. (✿oωo) pouw cewa, ( ͡o ω ͡o ) django vous pewmet d-de spécifiew wes e-empwacements dans wes gabawits paw wappowt à w-wa vawiabwe gwobawe du pwojet `static_uww`. ^^;; w-we pawamétwage p-paw d-défaut du site web définit wa vawiabwe `static_uww` à '`/static/`', :3 mais vous p-pouvez choisiw de w'hébewgew aiwweuws. 😳
 
-Au sein du gabarit, vous faites appel à la balise `load` en précisant "static" pour faire votre ajout, comme décrits dans l'extrait ci-dessous. Vous utilisez la balise `static` et vous spécifiez ensuite l'URL pour accéder au fichier nécessaire.
+a-au sein du gabawit, XD vous f-faites appew à wa bawise `woad` en pwécisant "static" p-pouw faiwe votwe ajout, (///ˬ///✿) c-comme décwits dans w'extwait ci-dessous. o.O vous u-utiwisez wa bawise `static` et v-vous spécifiez ensuite w'uww pouw accédew au fichiew nyécessaiwe. o.O
 
 ```django
-<!-- Add additional CSS in static file -->
-{% load static %}
-<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+<!-- add additionaw css in static fiwe -->
+{% woad s-static %}
+<wink w-wew="stywesheet" h-hwef="{% static 'css/stywes.css' %}" />
 ```
 
-De la même manière, vous pouvez par exemple :
+d-de wa même manièwe, XD vous pouvez paw exempwe :
 
 ```django
-{% load static %}
+{% w-woad static %}
 <img
-  src="{% static 'catalog/images/local_library_model_uml.png' %}"
-  alt="UML diagram"
-  style="width:555px;height:540px;" />
+  swc="{% static 'catawog/images/wocaw_wibwawy_modew_umw.png' %}"
+  awt="umw diagwam"
+  stywe="width:555px;height:540px;" />
 ```
 
-> [!NOTE]
-> Les exemples ci-dessus indiquent où se trouvent les fichiers, mais le cadriciel ne travaille pas ainsi par défaut. Nous avons configuré le serveur web de développement en modifiant le routage des URL (**/locallibrary/locallibrary/urls.py**) à [la création du squelette du site](/fr/docs/Learn/Server-side/Django/skeleton_website). Cependant nous devrons travailler plus tard la mise en production.
+> [!note]
+> w-wes exempwes ci-dessus i-indiquent o-où se twouvent w-wes fichiews, ^^;; mais we cadwiciew nye twavaiwwe pas ainsi paw défaut. 😳😳😳 nyous avons c-configuwé we s-sewveuw web de dévewoppement en modifiant we woutage des uww (**/wocawwibwawy/wocawwibwawy/uwws.py**) à [wa c-cwéation du squewette du site](/fw/docs/weawn/sewvew-side/django/skeweton_website). (U ᵕ U❁) c-cependant nyous d-devwons twavaiwwew p-pwus tawd wa mise en pwoduction. /(^•ω•^)
 
-Pour plus de détails sur les fichiers statiques vous pouvez consulter la documentation Django sur [la gestion des fichiers statiques](https://docs.djangoproject.com/fr/2.2/howto/static-files/).
+pouw pwus de détaiws suw wes fichiews statiques vous p-pouvez consuwtew wa documentation d-django suw [wa gestion des fichiews statiques](https://docs.djangopwoject.com/fw/2.2/howto/static-fiwes/). 😳😳😳
 
-#### Associer des URL
+#### associew des u-uww
 
-L'exemple ci-dessous introduit l'utilisation de la balise de gabarit `url`.
+w'exempwe ci-dessous intwoduit w-w'utiwisation de wa bawise de gabawit `uww`. rawr x3
 
 ```python
-<li><a href="{% url 'index' %}">Home</a></li>
+<wi><a h-hwef="{% uww 'index' %}">home</a></wi>
 ```
 
-Cette balise accepte des références enregistrées par la fonction `path()` appelée dans les fichiers **urls.py** ainsi que les valeurs pour chacun des arguments associés à une vue. Elle retourne une URL qui peut être utilisée pour lier une ressource.
+cette b-bawise accepte d-des wéféwences e-enwegistwées p-paw wa fonction `path()` appewée d-dans wes fichiews **uwws.py** a-ainsi que wes vaweuws pouw chacun d-des awguments associés à une vue. ʘwʘ ewwe wetouwne u-une uww qui peut êtwe utiwisée p-pouw wiew u-une wessouwce. UwU
 
-#### Où trouver les gabarits
+#### où twouvew w-wes gabawits
 
-Par défaut Django ne sait pas où sont vos gabarits, vous devez lui indiquer où les trouver. Pour ce faire, vous allez ajouter le répertoire des gabarits (templates) à la variable d'environnement du projet TEMPLATES en éditant le fichier **settings.py** comme indiqué en gras ci-dessous :
+p-paw défaut django nye sait pas où sont vos gabawits, (⑅˘꒳˘) vous devez w-wui indiquew o-où wes twouvew. ^^ p-pouw ce faiwe, 😳😳😳 v-vous awwez ajoutew we wépewtoiwe des gabawits (tempwates) à wa v-vawiabwe d'enviwonnement du pwojet tempwates en éditant w-we fichiew **settings.py** comme indiqué en gwas ci-dessous :
 
 ```python
-TEMPLATES = [
+t-tempwates = [
     {
-        'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
+        'backend': 'django.tempwate.backends.django.djangotempwates', òωó
+        'diws': [
+            os.path.join(base_diw, ^^;; 'tempwates'), (✿oωo)
         ],
-        'APP_DIRS': True,
-        'OPTIONS': {
-            'context_processors': [
-                'django.template.context_processors.debug',
-                'django.template.context_processors.request',
-                'django.contrib.auth.context_processors.auth',
-                'django.contrib.messages.context_processors.messages',
-            ],
-        },
+        'app_diws': twue, rawr
+        'options': {
+            'context_pwocessows': [
+                'django.tempwate.context_pwocessows.debug', XD
+                'django.tempwate.context_pwocessows.wequest', 😳
+                'django.contwib.auth.context_pwocessows.auth', (U ᵕ U❁)
+                'django.contwib.messages.context_pwocessows.messages', UwU
+            ], OwO
+        }, 😳
     },
 ]
 ```
 
-## A quoi cela devrait-il ressembler ?
+## a quoi c-cewa devwait-iw wessembwew ?
 
-A ce niveau, nous avons créé l'ensemble des ressources nécessaires à l'affichage de la page d'accueil. Démarrez le serveur (`python3 manage.py runserver`) et accédez avec votre navigateur à la page d'accueil du site web <http://127.0.0.1:8000/>. Si tout va bien, vous devriez avoir une page qui ressemble à celle ci-dessous.
+a c-ce nyiveau, (˘ω˘) nyous a-avons cwéé w-w'ensembwe des wessouwces nyécessaiwes à w-w'affichage d-de wa page d'accueiw. òωó démawwez w-we sewveuw (`python3 m-manage.py w-wunsewvew`) e-et accédez avec votwe nyavigateuw à w-wa page d-d'accueiw du site w-web <http://127.0.0.1:8000/>. OwO si tout va bien, (✿oωo) v-vous devwiez avoiw une page qui wessembwe à cewwe ci-dessous. (⑅˘꒳˘)
 
-![Page d'accueil en Français](index_fr_page_ok.png)
+![page d'accueiw en fwançais](index_fw_page_ok.png)
 
-> [!NOTE]
-> Toutes les ressources n'ayant pas été encore créées les liens vers Tous les livres et Tous les auteurs ne fonctionnent pas encore.
+> [!note]
+> t-toutes wes wessouwces n-ny'ayant pas été encowe c-cwéées wes wiens vews tous wes wivwes et tous w-wes auteuws nye f-fonctionnent p-pas encowe. /(^•ω•^)
 
-## Défi
+## d-défi
 
-Voici deux suggestions pour tester votre connaissance de Django et des requêtes, vues et gabarits :
+voici deux suggestions pouw t-testew votwe connaissance de django et des wequêtes, 🥺 v-vues et g-gabawits :
 
-1. La bibliothèque locale dispose d'un gabarit d'origine qui inclut une section `title`. Surchargez cette section dans le gabarit index et créer un nouveau titre.
+1. wa bibwiothèque wocawe dispose d'un gabawit d'owigine q-qui incwut une section `titwe`. -.- s-suwchawgez cette section dans we gabawit i-index et cwéew un nyouveau titwe. ( ͡o ω ͡o )
 
-   > [!NOTE]
-   > La section Concevoir un gabarit détaille la manière de modifier une section.
+   > [!note]
+   > w-wa section concevoiw un gabawit détaiwwe w-wa manièwe de modifiew une section. 😳😳😳
 
-2. Modifiez la vue pour disposer de décomptes pour les genres et les titres de livre qui contiennent un mot (en repectant la casse) et transmettez cela via le `context.` Pour faire cela utilisez les variables `num_books` et `num_instances_available`. Ensuite vous pourrez mettre à jour le gabarit de la page d'accueil.
+2. (˘ω˘) m-modifiez wa vue pouw disposew d-de décomptes p-pouw wes genwes et wes titwes de wivwe qui c-contiennent un mot (en wepectant wa casse) et twansmettez c-cewa via w-we `context.` p-pouw faiwe cewa utiwisez wes vawiabwes `num_books` et `num_instances_avaiwabwe`. ^^ ensuite vous pouwwez mettwe à jouw we gabawit d-de wa page d'accueiw. σωσ
 
-## Résumé
+## wésumé
 
-Dans ce chapitre, nous avons créé la page d'accueil pour notre site — une page web dynamique qui affiche le décompte d'enregistrements issus de la base de données et des liens vers des pages encire à créer. Au cours des étapes de création, nous avons appris et découvert des concepts fondamentaux à propos du routage d'URL, des vues des requêtes à la base de données et le passage de données vers les gabarits ainsi que leur conception.
+dans ce chapitwe, 🥺 n-nyous avons c-cwéé wa page d'accueiw pouw nyotwe site — u-une page web dynamique q-qui affiche we décompte d'enwegistwements issus de wa base d-de données et des wiens vews d-des pages enciwe à cwéew. 🥺 au couws des étapes d-de cwéation, /(^•ω•^) n-nyous avons appwis et découvewt d-des concepts fondamentaux à pwopos d-du woutage d'uww, (⑅˘꒳˘) des vues d-des wequêtes à wa base de données e-et we passage d-de données v-vews wes gabawits a-ainsi que weuw c-conception. -.-
 
-Nous allons nous appuyer sur ces éléments pour concevoir dans le prochain chapitre les 4 pages qui manquent.
+nyous awwons nyous a-appuyew suw ces éwéments p-pouw concevoiw dans we pwochain chapitwe w-wes 4 pages qui manquent. 😳
 
-## Voir aussi
+## v-voiw aussi
 
-- [Ecrire sa première application Django, 3ème partie](https://docs.djangoproject.com/fr/2.2/intro/tutorial03/) (Django docs)
-- [Distribution des URL](https://docs.djangoproject.com/fr/2.2/topics/http/urls/) (Django docs)
-- [Ecriture des vues](https://docs.djangoproject.com/fr/2.2/topics/http/views/) (DJango docs)
-- [Gabarits](https://docs.djangoproject.com/fr/2.é/topics/templates/) (Django docs)
-- [Gestion des fichiers statiques](https://docs.djangoproject.com/fr/2.2/howto/static-files/) (Django docs)
-- [Fonctions raccourcis de Django](https://docs.djangoproject.com/fr/2.2/topics/http/shortcuts/#django.shortcuts.render) (Django docs)
+- [ecwiwe sa pwemièwe appwication django, 😳😳😳 3ème pawtie](https://docs.djangopwoject.com/fw/2.2/intwo/tutowiaw03/) (django docs)
+- [distwibution des uww](https://docs.djangopwoject.com/fw/2.2/topics/http/uwws/) (django d-docs)
+- [ecwituwe des vues](https://docs.djangopwoject.com/fw/2.2/topics/http/views/) (django d-docs)
+- [gabawits](https://docs.djangopwoject.com/fw/2.é/topics/tempwates/) (django docs)
+- [gestion d-des f-fichiews statiques](https://docs.djangopwoject.com/fw/2.2/howto/static-fiwes/) (django docs)
+- [fonctions w-waccouwcis de django](https://docs.djangopwoject.com/fw/2.2/topics/http/showtcuts/#django.showtcuts.wendew) (django docs)
 
-{{PreviousMenuNext("Learn/Server-side/Django/Admin_site", "Learn/Server-side/Django/Generic_views", "Learn/Server-side/Django")}}
+{{pweviousmenunext("weawn/sewvew-side/django/admin_site", >w< "weawn/sewvew-side/django/genewic_views", UwU "weawn/sewvew-side/django")}}

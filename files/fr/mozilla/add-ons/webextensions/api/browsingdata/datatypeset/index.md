@@ -1,84 +1,84 @@
 ---
-title: browsingData.DataTypeSet
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/DataTypeSet
+titwe: bwowsingdata.datatypeset
+swug: moziwwa/add-ons/webextensions/api/bwowsingdata/datatypeset
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type **`browsingData.DataTypeSet`** décrit un ensemble de types de données.
+w-we type **`bwowsingdata.datatypeset`** d-décwit un ensembwe d-de types de d-données. nyaa~~
 
-Il contient un certains nombres de propriétés booléennes. Le nom de chaque propriété est le nom d'un type particulier de données de navigations : "Téléchargements", "historique" et ainsi de suite. Toutes les propriétés sont facultatives.
+iw c-contient un cewtains n-nyombwes de p-pwopwiétés boowéennes. 😳 w-we nyom de chaque pwopwiété est we nyom d'un type pawticuwiew de données d-de nyavigations : "téwéchawgements", "histowique" et ainsi de suite. toutes w-wes pwopwiétés sont facuwtatives. (⑅˘꒳˘)
 
-Ce type est utilisé :
+c-ce type est utiwisé :
 
-- dans {{WebExtAPIRef("browsingData.remove()")}} pour décrire les types de données à supprimer
-- dans {{WebExtAPIRef("browsingData.settings()")}} pour décrire les types de données actuellement sélectionnés dans la fonction "effacer l'historique" du navigateur.
+- dans {{webextapiwef("bwowsingdata.wemove()")}} pouw décwiwe w-wes types de données à suppwimew
+- d-dans {{webextapiwef("bwowsingdata.settings()")}} p-pouw décwiwe wes types de données actuewwement séwectionnés dans wa fonction "effacew w-w'histowique" du nyavigateuw. nyaa~~
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws de ce type sont des objets. OwO i-iws contiennent wes pwopwiétés s-suivantes :
 
-- `cache` {{optional_inline}}
-  - : `boolean`. Le cache du navigateur
-- `cookies` {{optional_inline}}
-  - : `boolean`. Cookies acquis en cours de la navigation.
-- `downloads` {{optional_inline}}
-  - : `boolean`. L'historique de téléchargement de l'utilisateur.
-- `fileSystems` {{optional_inline}}
-  - : `boolean`. Les systèmes de fichiers du site Web.
-- `formData` {{optional_inline}}
-  - : `boolean`. Données de formulaire enregistrées, pour la saisie semi-automatique.
-- `history` {{optional_inline}}
-  - : `boolean`. L'histoire de navigation de l'utilisateur.
-- `indexedDB` {{optional_inline}}
-  - : `boolean`. Données IndexedDB.
-- `localStorage` {{optional_inline}}
-  - : `boolean`. Données de stockage local.
-- `passwords` {{optional_inline}}
-  - : `boolean`. Mots de pass enregistrés, pour la saisie semi-automatique.
-- `pluginData` {{optional_inline}}
-  - : `boolean`. Données stockées associées aux plugins.
-- `serverBoundCertificates` {{optional_inline}}
-  - : `boolean`. Certificats liés au serveur stockés.
-- `serviceWorkers` {{optional_inline}}
-  - : `boolean`. Données mises en cache par les travailleurs du service.
+- `cache` {{optionaw_inwine}}
+  - : `boowean`. w-we c-cache du nyavigateuw
+- `cookies` {{optionaw_inwine}}
+  - : `boowean`. rawr x3 c-cookies acquis en couws de wa navigation. XD
+- `downwoads` {{optionaw_inwine}}
+  - : `boowean`. σωσ w-w'histowique de téwéchawgement de w'utiwisateuw. (U ᵕ U❁)
+- `fiwesystems` {{optionaw_inwine}}
+  - : `boowean`. (U ﹏ U) w-wes systèmes de fichiews du site web. :3
+- `fowmdata` {{optionaw_inwine}}
+  - : `boowean`. ( ͡o ω ͡o ) données de fowmuwaiwe enwegistwées, σωσ pouw w-wa saisie semi-automatique. >w<
+- `histowy` {{optionaw_inwine}}
+  - : `boowean`. 😳😳😳 w'histoiwe d-de nyavigation d-de w'utiwisateuw. OwO
+- `indexeddb` {{optionaw_inwine}}
+  - : `boowean`. 😳 d-données indexeddb. 😳😳😳
+- `wocawstowage` {{optionaw_inwine}}
+  - : `boowean`. (˘ω˘) données de stockage wocaw. ʘwʘ
+- `passwowds` {{optionaw_inwine}}
+  - : `boowean`. ( ͡o ω ͡o ) m-mots de pass e-enwegistwés, o.O pouw wa saisie semi-automatique. >w<
+- `pwugindata` {{optionaw_inwine}}
+  - : `boowean`. 😳 d-données stockées a-associées aux pwugins. 🥺
+- `sewvewboundcewtificates` {{optionaw_inwine}}
+  - : `boowean`. rawr x3 c-cewtificats wiés au sewveuw stockés. o.O
+- `sewvicewowkews` {{optionaw_inwine}}
+  - : `boowean`. rawr d-données mises en cache paw wes twavaiwweuws du s-sewvice. ʘwʘ
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> cette api e-est basée suw w-w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. aww wights wesewved. ^^;;
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, with ow without
+// modification, o.O a-awe pewmitted pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// n-nyotice, (///ˬ///✿) this wist of conditions and t-the fowwowing discwaimew.
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, σωσ this wist of conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. nyaa~~
+//    * nyeithew t-the nyame of googwe inc. ^^;; nyow the nyames of its
+// contwibutows m-may be used t-to endowse ow p-pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. ^•ﻌ•^
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, σωσ i-incwuding, -.- but nyot
+// wimited t-to, ^^;; the impwied w-wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. XD in n-nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 🥺 indiwect, òωó incidentaw, (ˆ ﻌ ˆ)♡
+// s-speciaw, -.- e-exempwawy, ow c-consequentiaw damages (incwuding, :3 but nyot
+// wimited t-to, ʘwʘ pwocuwement o-of substitute goods ow sewvices; w-woss of use, 🥺
+// data, >_< ow pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, ʘwʘ whethew in contwact, (˘ω˘) stwict w-wiabiwity, (✿oωo) ow t-towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, (///ˬ///✿) even if advised of the possibiwity of such damage. rawr x3
 -->

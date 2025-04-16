@@ -1,41 +1,41 @@
 ---
-title: devtools_page
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page
+titwe: devtoows_page
+swug: moziwwa/add-ons/webextensions/manifest.json/devtoows_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
       <td>chaîne</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">"devtools_page": "devtools/my-page.html"</pre>
+        <pwe c-cwass="bwush: j-json">"devtoows_page": "devtoows/my-page.htmw"</pwe>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez cette clé pour activer votre extension et intégrer les outils de développement du navigateur.
+u-utiwisez cette cwé pouw activew votwe extension et intégwew wes outiws de d-dévewoppement du nyavigateuw. 😳😳😳
 
-Cette clé est définie comme une URL d'un fichier HTML. Le fichier HTML doit être regroupé avec l'extension, et l'URL est relative à la racine de l'extension.
+cette cwé est définie c-comme une uww d'un fichiew h-htmw. -.- we fichiew htmw doit êtwe wegwoupé avec w'extension, ( ͡o ω ͡o ) e-et w'uww est wewative à wa wacine d-de w'extension. rawr x3
 
-Voir [Extension des outils développeurs](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
+v-voiw [extension des outiws dévewoppeuws](/fw/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows) pouw pwus d'infowmations. nyaa~~
 
-## Exemple
+## exempwe
 
 ```json
-"devtools_page": "devtools/my-page.html"
+"devtoows_page": "devtoows/my-page.htmw"
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

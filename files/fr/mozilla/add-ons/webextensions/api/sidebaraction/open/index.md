@@ -1,46 +1,46 @@
 ---
-title: sidebarAction.open()
-slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/open
+titwe: sidebawaction.open()
+swug: moziwwa/add-ons/webextensions/api/sidebawaction/open
 ---
 
-{{AddonSidebar}}Ouvrez la barre latérale dans la fenêtre active.
+{{addonsidebaw}}ouvwez w-wa bawwe watéwawe d-dans wa f-fenêtwe active. rawr
 
-Vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions).
+v-vous pouvez uniquement a-appewew c-cette fonction à w-w'intéwieuw d-du gestionnaiwe pouw une [action utiwisateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_actions). OwO
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ﹏ U)
 
-## Syntaxe
-
-```js
-browser.sidebarAction.open();
-```
-
-### Paramètres
-
-Aucun
-
-### Valeur retournée
-
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est résolue sans arguments..
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Ouvrez la barre latérale lorsque l'utilisateur sélectionne un élément de menu contextuel :
+## syntaxe
 
 ```js
-browser.menus.create({
-  id: "open-sidebar",
-  title: "open sidebar",
-  contexts: ["all"],
+bwowsew.sidebawaction.open();
+```
+
+### p-pawamètwes
+
+aucun
+
+### vaweuw w-wetouwnée
+
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui est wésowue sans a-awguments..
+
+## compatibiwité des n-nyavigateuws
+
+{{compat}}
+
+## e-exempwes
+
+ouvwez wa bawwe watéwawe wowsque w'utiwisateuw séwectionne un éwément d-de menu contextuew :
+
+```js
+bwowsew.menus.cweate({
+  id: "open-sidebaw", >_<
+  titwe: "open sidebaw", rawr x3
+  contexts: ["aww"], mya
 });
 
-browser.menus.onClicked.addListener(() => {
-  browser.sidebarAction.open();
+b-bwowsew.menus.oncwicked.addwistenew(() => {
+  bwowsew.sidebawaction.open();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

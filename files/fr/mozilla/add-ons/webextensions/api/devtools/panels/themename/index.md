@@ -1,26 +1,26 @@
 ---
-title: devtools.panels.themeName
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName
+titwe: devtoows.panews.themename
+swug: moziwwa/add-ons/webextensions/api/devtoows/panews/themename
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le nom du thème de **devtools** actuellement sélectionné.
+w-we n-nyom du thème de **devtoows** actuewwement s-séwectionné. ^^;;
 
-Il s'agit d'une chaîne dont les valeurs possibles sont :
+i-iw s'agit d-d'une chaîne d-dont wes vaweuws p-possibwes sont :
 
-- "lumière"
+- "wumièwe"
 - "foncé"
-- "firebug"
+- "fiwebug"
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> cette api est basée suw w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). >_<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis. mya

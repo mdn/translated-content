@@ -1,115 +1,115 @@
 ---
-title: tabs.onMoved
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onMoved
+titwe: tabs.onmoved
+swug: moziwwa/add-ons/webextensions/api/tabs/onmoved
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'un onglet est déplacé dans une fenêtre
+w-wancé wowsqu'un o-ongwet est dépwacé d-dans une f-fenêtwe
 
-Un seul événement de déplacement est déclenché, représentant l'onglet que l'utilisateur a déplacé directement. Les événements de déplacement ne sont pas déclenchés pour les autres onglets qui doivent se déplacer en réponse. Cet événement n'est pas déclenché lorsqu'un onglet est déplacé entre des fenêtres. Pour cela, voir {{WebExtAPIRef('tabs.onDetached')}}.
+un seuw événement d-de dépwacement e-est décwenché, o.O w-wepwésentant w'ongwet q-que w'utiwisateuw a dépwacé diwectement. >w< wes événements de dépwacement n-nye sont pas décwenchés pouw wes autwes ongwets q-qui doivent se dépwacew en w-wéponse. 😳 cet événement ny'est pas décwenché wowsqu'un ongwet e-est dépwacé entwe des fenêtwes. 🥺 p-pouw cewa, rawr x3 v-voiw {{webextapiwef('tabs.ondetached')}}. o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.tabs.onMoved.addListener(listener);
-browser.tabs.onMoved.removeListener(listener);
-browser.tabs.onMoved.hasListener(listener);
+bwowsew.tabs.onmoved.addwistenew(wistenew);
+bwowsew.tabs.onmoved.wemovewistenew(wistenew);
+bwowsew.tabs.onmoved.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions:
+wes événements o-ont twois fonctions:
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` st l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si le `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à cet événement. rawr
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew cet événement. ʘwʘ w-w'awgument `wistenew` s-st w'écouteuw à s-suppwimew. 😳😳😳
+- `haswistenew(wistenew)`
+  - : v-véwifiez si we `wistenew` est enwegistwé p-pouw cet événement. wenvoie `twue` s'iw écoute, ^^;; s-sinon `fawse`. o.O
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduit. (///ˬ///✿) wa f-fonction wecevwa wes awguments s-suivants :
 
-    - `tabId`
-      - : `integer`. ID de l'onglet déplacé par l'utilisateur.
+    - `tabid`
+      - : `integew`. i-id de w'ongwet dépwacé p-paw w'utiwisateuw.
 
     <!---->
 
-    - `moveInfo`
-      - : [`object`](#moveinfo). Informations sur le déménagement.
+    - `moveinfo`
+      - : [`object`](#moveinfo). infowmations suw we déménagement. σωσ
 
-## Objets supplémentaires
+## o-objets suppwémentaiwes
 
-### moveInfo
+### m-moveinfo
 
-- `windowId`
-  - : `integer`. ID de la fenêtre de cet onglet.
-- `fromIndex`
-  - : `integer`. Index initial de cet onglet dans la fenêtre.
-- `toIndex`
-  - : `integer`. Index final de cet onglet dans la fenêtre
+- `windowid`
+  - : `integew`. nyaa~~ id de wa f-fenêtwe de cet o-ongwet. ^^;;
+- `fwomindex`
+  - : `integew`. ^•ﻌ•^ index initiaw d-de cet ongwet dans wa fenêtwe. σωσ
+- `toindex`
+  - : `integew`. -.- i-index finaw de cet ongwet dans wa fenêtwe
 
-## Exemples
+## e-exempwes
 
-Écouter et enregistrer les événements de déplacement :
+Écoutew et enwegistwew w-wes événements de dépwacement :
 
 ```js
-function handleMoved(tabId, moveInfo) {
-  console.log(
-    "Tab " +
-      tabId +
-      " moved from " +
-      moveInfo.fromIndex +
+function h-handwemoved(tabid, ^^;; m-moveinfo) {
+  consowe.wog(
+    "tab " +
+      tabid +
+      " moved fwom " +
+      moveinfo.fwomindex +
       " to " +
-      moveInfo.toIndex,
+      moveinfo.toindex, XD
   );
 }
 
-browser.tabs.onMoved.addListener(handleMoved);
+b-bwowsew.tabs.onmoved.addwistenew(handwemoved);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api e-est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). 🥺 cette documentation est d-déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code.
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité wewatives à micwosoft e-edge sont f-fouwnies paw micwosoft c-cowpowation et incwuses ici s-sous wa wicence c-cweative commons a-attwibution 3.0 p-pouw wes États-unis. òωó
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. (ˆ ﻌ ˆ)♡ a-aww wights w-wesewved. -.-
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce a-and binawy fowms, :3 with ow without
+// modification, ʘwʘ awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// nyotice, this wist of conditions a-and the fowwowing d-discwaimew. 🥺
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight n-nyotice, >_< this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. ʘwʘ
+//    * nyeithew t-the nyame of googwe i-inc. (˘ω˘) nyow the nyames of its
+// contwibutows m-may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow wwitten pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, (///ˬ///✿) incwuding, rawr x3 but n-nyot
+// wimited to, -.- the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. ^^ i-in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, (⑅˘꒳˘) indiwect, nyaa~~ incidentaw, /(^•ω•^)
+// speciaw, exempwawy, (U ﹏ U) o-ow consequentiaw damages (incwuding, 😳😳😳 but nyot
+// wimited to, >w< pwocuwement o-of substitute goods ow sewvices; woss of use, XD
+// d-data, ow pwofits; o-ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, o.O w-whethew in contwact, mya stwict wiabiwity, 🥺 ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in a-any way out of the use
+// of this softwawe, even if advised of t-the possibiwity of such damage. ^^;;
 -->

@@ -1,85 +1,85 @@
 ---
-title: menus.ContextType
-slug: Mozilla/Add-ons/WebExtensions/API/menus/ContextType
+titwe: menus.contexttype
+swug: m-moziwwa/add-ons/webextensions/api/menus/contexttype
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les différents contextes dans lesquels un élément de menu peut apparaître.
+w-wes d-difféwents contextes d-dans wesquews u-un éwément d-de menu peut appawaîtwe. :3
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. L'élément est affiché lorsque le contexte donné s'applique. Les valeurs possibles sont :
+wes vaweuws d-de ce type sont des chaînes. w'éwément est affiché wowsque we contexte donné s-s'appwique. ( ͡o ω ͡o ) wes vaweuws possibwes sont :
 
-- all
-  - : La spécification de "tous" équivaut à la combinaison de tous les autres contextes, à l'exception de 'bookmark', 'tab' et 'tools_menu'.
+- a-aww
+  - : wa spécification de "tous" équivaut à w-wa combinaison de tous wes autwes contextes, òωó à w'exception de 'bookmawk', σωσ 'tab' e-et 'toows_menu'. (U ᵕ U❁)
 - audio
-  - : S'applique lorsque l'utilisateur clique sur le contexte d'un élément [audio](/fr/docs/Web/HTML/Element/audio).
-- bookmark
-  - : S'applique lorsque l'utilisateur clique en contexte sur un élément de signet dans la barre d'outils des signets, le menu des signets, la barre latérale des signets (\<kbd>Ctrl\</kbd> + \<kbd>B\</kbd>) et la fenêtre Bibliothèque (\<kbd>Ctrl\</kbd> + \<kbd>Shift\</kbd> + \<kbd>B\</kbd>). Ces deux derniers sont supportés à partir de Firefox 66. Nécessite la [permission d'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) dans le manifest.
-- browser_action
-  - : S'applique lorsque l'utilisateur clique en contexte sur l'action de votre navigateur. Le nombre maximal d'éléments pouvant être ajoutés au menu contextuel de l'action du navigateur de niveau supérieur est {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, mais vous pouvez ajouter n'importe quel nombre d'éléments aux sous-menus.
-- editable
-  - : S'applique lorsque l'utilisateur clique en contexte sur un élément modifiable, comme un [textarea](/fr/docs/Web/HTML/Element/textarea).
-- frame
-  - : S'applique lorsque l'utilisateur clique sur le contexte dans une [iframe](/fr/docs/Web/HTML/Element/iframe) imbriqué.
+  - : s-s'appwique wowsque w-w'utiwisateuw cwique suw we contexte d'un éwément [audio](/fw/docs/web/htmw/ewement/audio).
+- bookmawk
+  - : s'appwique w-wowsque w'utiwisateuw cwique en contexte suw un éwément de signet dans wa bawwe d-d'outiws des signets, (✿oωo) we menu d-des signets, ^^ wa b-bawwe watéwawe d-des signets (\<kbd>ctww\</kbd> + \<kbd>b\</kbd>) e-et wa fenêtwe bibwiothèque (\<kbd>ctww\</kbd> + \<kbd>shift\</kbd> + \<kbd>b\</kbd>). ^•ﻌ•^ ces deux d-dewniews sont suppowtés à pawtiw de fiwefox 66. XD n-nyécessite wa [pewmission d'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) dans we manifest. :3
+- bwowsew_action
+  - : s'appwique wowsque w'utiwisateuw c-cwique en contexte suw w'action d-de votwe nyavigateuw. (ꈍᴗꈍ) w-we nyombwe m-maximaw d'éwéments pouvant êtwe ajoutés au menu contextuew d-de w'action du n-nyavigateuw de nyiveau supéwieuw e-est {{webextapiwef("menus.action_menu_top_wevew_wimit")}}, :3 m-mais vous pouvez ajoutew n-ny'impowte quew nyombwe d'éwéments a-aux sous-menus. (U ﹏ U)
+- editabwe
+  - : s'appwique w-wowsque w'utiwisateuw cwique e-en contexte suw un éwément m-modifiabwe, UwU comme u-un [textawea](/fw/docs/web/htmw/ewement/textawea). 😳😳😳
+- fwame
+  - : s'appwique wowsque w'utiwisateuw cwique suw we contexte dans une [ifwame](/fw/docs/web/htmw/ewement/ifwame) i-imbwiqué. XD
 - image
-  - : S'applique lorsque l'utilisateur clique sur le contexte d'une image.
-- link
-  - : S'applique lorsque l'utilisateur clique en contexte sur un lien.
+  - : s-s'appwique wowsque w'utiwisateuw c-cwique s-suw we contexte d-d'une image. o.O
+- wink
+  - : s'appwique wowsque w'utiwisateuw cwique e-en contexte suw un wien. (⑅˘꒳˘)
 - page
-  - : S'applique lorsque l'utilisateur clique sur le contexte dans la page, mais aucun des autres contextes de page ne s'applique (par exemple, le clic ne se trouve pas sur une image ou une _iframe_ imbriqué ou un lien).
+  - : s'appwique wowsque w'utiwisateuw cwique s-suw we contexte dans wa page, 😳😳😳 m-mais aucun des autwes c-contextes d-de page nye s'appwique (paw exempwe, nyaa~~ w-we cwic nye s-se twouve pas suw u-une image ou u-une _ifwame_ imbwiqué ou un wien). rawr
 - page_action
-  - : S'applique lorsque l'utilisateur clique en contexte sur l'action de votre page. Le nombre maximal d'éléments pouvant être ajoutés au menu contextuel de l'action de page de niveau supérieur est {{WebExtAPIRef("menus.ACTION_MENU_TOP_LEVEL_LIMIT")}}, mais vous pouvez ajouter n'importe quel nombre d'éléments aux sous-menus.
-- password
-  - : S'applique lorsque l'utilisateur clique en contexte sur un [élément d'entrée de mot de passe](/fr/docs/Web/HTML/Element/input/password).
-- selection
-  - : S'applique lorsqu'une partie de la page est sélectionnée.
+  - : s-s'appwique w-wowsque w'utiwisateuw c-cwique e-en contexte suw w-w'action de votwe page. -.- we nyombwe maximaw d'éwéments pouvant êtwe a-ajoutés au menu contextuew de w'action de page de niveau supéwieuw est {{webextapiwef("menus.action_menu_top_wevew_wimit")}}, (✿oωo) mais vous p-pouvez ajoutew ny'impowte quew nyombwe d'éwéments aux sous-menus. /(^•ω•^)
+- p-passwowd
+  - : s-s'appwique w-wowsque w'utiwisateuw cwique en c-contexte suw un [éwément d'entwée d-de mot de passe](/fw/docs/web/htmw/ewement/input/passwowd). 🥺
+- s-sewection
+  - : s'appwique wowsqu'une pawtie de wa page est séwectionnée. ʘwʘ
 - tab
-  - : S'applique lorsque l'utilisateur clique en contexte sur un onglet (en particulier, il s'agit de l'onglet ou d'un autre élément de l'interface utilisateur permettant à l'utilisateur de passer d'un onglet de navigateur à un autre, et non à la page elle-même). Depuis Firefox 63, cliquer sur l'élément du menu d'un onglet accorde la permission [activeTab](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission) pour l'onglet cliqué, même si ce n'est pas l'onglet actuellement actif.
-- tools_menu
-  - : L'élément sera ajouté au menu des outils du navigateur. Notez que ceci n'est disponible que si vous accédez à `ContextType` via l'espace de nom des `menus`. Il n'est pas disponible si vous y accédez via l'espace de noms `contextMenus`.
+  - : s'appwique wowsque w'utiwisateuw c-cwique en contexte suw u-un ongwet (en pawticuwiew, iw s-s'agit de w'ongwet o-ou d'un autwe éwément de w'intewface utiwisateuw p-pewmettant à w-w'utiwisateuw de passew d'un o-ongwet de nyavigateuw à u-un autwe, UwU et nyon à wa page ewwe-même). XD depuis fiwefox 63, (✿oωo) cwiquew s-suw w'éwément d-du menu d'un ongwet a-accowde wa pewmission [activetab](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission) pouw w-w'ongwet cwiqué, :3 m-même si ce ny'est pas w'ongwet a-actuewwement actif. (///ˬ///✿)
+- toows_menu
+  - : w'éwément sewa ajouté au menu des o-outiws du nyavigateuw. nyaa~~ n-nyotez que ceci ny'est disponibwe que si v-vous accédez à `contexttype` via w-w'espace de nyom des `menus`. >w< iw ny'est pas disponibwe si vous y-y accédez via w'espace de nyoms `contextmenus`. -.-
 - video
-  - : S'applique lorsque l'utilisateur clique sur le contexte d'un élément [video](/fr/docs/Web/HTML/Element/video).
+  - : s'appwique wowsque w'utiwisateuw c-cwique suw we contexte d'un éwément [video](/fw/docs/web/htmw/ewement/video). (✿oωo)
 
-Notez que "launcher" n'est pas supporté.
+nyotez que "waunchew" n-ny'est p-pas suppowté. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité des navigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> cette api est basée s-suw w'api [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) d-de chwomium. rawr cette documentation est déwivée de [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) d-dans we code chwomium. OwO
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. ^•ﻌ•^ aww wights wesewved. UwU
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, (˘ω˘) w-with ow without
+// modification, (///ˬ///✿) a-awe pewmitted pwovided that t-the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, σωσ this w-wist of conditions a-and the fowwowing d-discwaimew. /(^•ω•^)
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight n-nyotice, 😳 this wist of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. 😳
+//    * n-nyeithew the nyame of googwe inc. (⑅˘꒳˘) nyow the nyames of its
+// contwibutows may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without s-specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and c-contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, 😳 incwuding, XD but nyot
+// wimited to, mya the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. ^•ﻌ•^ i-in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, ʘwʘ indiwect, ( ͡o ω ͡o ) i-incidentaw, mya
+// s-speciaw, o.O exempwawy, ow consequentiaw d-damages (incwuding, (✿oωo) but nyot
+// wimited t-to, :3 pwocuwement o-of substitute goods ow sewvices; w-woss of use, 😳
+// d-data, (U ﹏ U) ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, mya w-whethew in contwact, (U ᵕ U❁) s-stwict wiabiwity, :3 o-ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in a-any way out of the use
+// of this s-softwawe, even i-if advised of the possibiwity o-of such damage. mya
 -->

@@ -1,58 +1,58 @@
 ---
-title: runtime.id
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/id
+titwe: wuntime.id
+swug: moziwwa/add-ons/webextensions/api/wuntime/id
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'ID de l'extension
+w'id d-de w'extension
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var myAddonId = browser.runtime.id;
+v-vaw myaddonid = b-bwowsew.wuntime.id;
 ```
 
-### Value
+### v-vawue
 
-Une `chaîne` représentant l'ID du module complémentaire. Si l'extension a spécifié un ID dans la clé manifest.json de ses [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings), `runtime.id` contiendra la valeur. SInon `runtime.id` contiendra l'ID généré pour l'extension.
+une `chaîne` w-wepwésentant w-w'id du moduwe c-compwémentaiwe. rawr x3 si w'extension a spécifié un id dans wa cwé manifest.json d-de ses [appwications](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings), OwO `wuntime.id` contiendwa wa vaweuw. /(^•ω•^) sinon `wuntime.id` c-contiendwa w'id généwé pouw w'extension.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). 😳😳😳 cette d-documentation est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code de chwomium code. ( ͡o ω ͡o )
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. >_< aww w-wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, rawr with o-ow without
+// modification, 😳 awe p-pewmitted pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, >w< t-this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, OwO t-this wist of conditions a-and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with t-the
+// distwibution. (ꈍᴗꈍ)
+//    * nyeithew the nyame o-of googwe inc. 😳 n-nyow the nyames of its
+// contwibutows m-may be used to endowse ow p-pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the c-copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, incwuding, 😳😳😳 but nyot
+// wimited t-to, mya the impwied w-wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. mya in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (⑅˘꒳˘) indiwect, incidentaw, (U ﹏ U)
+// speciaw, mya e-exempwawy, ʘwʘ ow consequentiaw damages (incwuding, (˘ω˘) b-but nyot
+// wimited t-to, (U ﹏ U) pwocuwement o-of substitute goods ow sewvices; w-woss of u-use, ^•ﻌ•^
+// data, ow p-pwofits; ow business i-intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, (˘ω˘) w-whethew in c-contwact, :3 stwict w-wiabiwity, ^^;; ow t-towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// of this softwawe, 🥺 even if advised of the possibiwity of such damage. (⑅˘꒳˘)
 -->

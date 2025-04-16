@@ -1,66 +1,66 @@
 ---
-title: BrowserSetting
-slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting
+titwe: bwowsewsetting
+swug: moziwwa/add-ons/webextensions/api/types/bwowsewsetting
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un `BrowserSetting` est un objet représentant un paramètre de navigateur.
+u-un `bwowsewsetting` e-est un objet wepwésentant u-un pawamètwe d-de nyavigateuw. -.-
 
-Il fournit des méthodes pour définir et obtenir la valeur sous-jacente du paramètre, pour effacer tout changement que vous avez apporté et pour écouter les modifications apportées à sa valeur.
+i-iw fouwnit d-des méthodes p-pouw définiw e-et obteniw wa vaweuw sous-jacente du pawamètwe, ^•ﻌ•^ pouw effacew tout changement q-que vous avez appowté et pouw écoutew wes modifications a-appowtées à sa vaweuw. rawr
 
-Notez que si cet objet est basé sur le type [ChromeSetting](https://developer.chrome.com/docs/extensions/reference/api/types#type-ChromeSetting), cet objet ne fait pas de distinction entre le réglage de la valeur dans les fenêtres de navigation privées. Cela signifie que toutes les parties de l'API relatives à la navigation privée (telles que l'option `scope` de `ChromeSetting.set()`) ne sont pas implémentées.
+n-nyotez que si cet objet est basé suw we type [chwomesetting](https://devewopew.chwome.com/docs/extensions/wefewence/api/types#type-chwomesetting), (˘ω˘) cet objet n-nye fait pas de distinction entwe w-we wégwage d-de wa vaweuw dans wes fenêtwes de nyavigation pwivées. nyaa~~ cewa signifie que toutes w-wes pawties de w'api wewatives à wa nyavigation pwivée (tewwes que w'option `scope` d-de `chwomesetting.set()`) nye sont pas impwémentées. UwU
 
-## Méthodes
+## m-méthodes
 
-- {{WebExtAPIRef("types.BrowserSetting.get()")}}
-  - : Obtenez la valeur actuelle du paramètre et une énumération représentant la façon dont le paramètre est actuellement contrôlé.
-- {{WebExtAPIRef("types.BrowserSetting.set()")}}
-  - : Réglez le paramètre sur une nouvelle valeur.
-- {{WebExtAPIRef("types.BrowserSetting.clear()")}}
-  - : Effacez toute modification apportée au paramètre par cette extension.
+- {{webextapiwef("types.bwowsewsetting.get()")}}
+  - : o-obtenez wa v-vaweuw actuewwe d-du pawamètwe et une énuméwation wepwésentant w-wa façon dont we pawamètwe est actuewwement contwôwé. :3
+- {{webextapiwef("types.bwowsewsetting.set()")}}
+  - : w-wégwez we pawamètwe suw une nyouvewwe vaweuw. (⑅˘꒳˘)
+- {{webextapiwef("types.bwowsewsetting.cweaw()")}}
+  - : effacez toute modification appowtée a-au pawamètwe paw cette extension. (///ˬ///✿)
 
-## Evénements
+## e-evénements
 
-- {{WebExtAPIRef("types.BrowserSetting.onChange")}}
-  - : Définit lorsque la valeur du paramètre change.
+- {{webextapiwef("types.bwowsewsetting.onchange")}}
+  - : d-définit w-wowsque wa vaweuw du pawamètwe change. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
+> c-cette api est basée suw w'api c-chwomium [`chwome.types`](https://devewopew.chwome.com/docs/extensions/wefewence/api/types). >_<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. rawr x3 aww wights wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy f-fowms, :3 with ow without
+// modification, (ꈍᴗꈍ) a-awe pewmitted pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// nyotice, /(^•ω•^) t-this wist of conditions a-and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, ( ͡o ω ͡o ) this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. òωó
+//    * nyeithew t-the name of g-googwe inc. (⑅˘꒳˘) nyow t-the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote p-pwoducts dewived f-fwom
+// this softwawe without specific pwiow w-wwitten pewmission. XD
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, -.- incwuding, but nyot
+// wimited to, :3 the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. nyaa~~ in no event s-shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow a-any diwect, 😳 indiwect, incidentaw, (⑅˘꒳˘)
+// s-speciaw, nyaa~~ exempwawy, OwO o-ow consequentiaw damages (incwuding, rawr x3 but nyot
+// wimited to, XD pwocuwement of substitute g-goods ow sewvices; woss of use,
+// d-data, σωσ ow pwofits; ow business i-intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, (U ᵕ U❁) w-whethew in contwact, (U ﹏ U) s-stwict wiabiwity, :3 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, ( ͡o ω ͡o ) even i-if advised of t-the possibiwity o-of such damage. σωσ
 -->

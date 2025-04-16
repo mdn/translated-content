@@ -1,233 +1,233 @@
 ---
-title: Travailler avec l'API Cookies
-slug: Mozilla/Add-ons/WebExtensions/Work_with_the_Cookies_API
+titwe: twavaiwwew avec w'api c-cookies
+swug: moziwwa/add-ons/webextensions/wowk_with_the_cookies_api
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Avec l'API Cookies, vos extensions ont accès à des fonctionnalités similaires à celles utilisées par les sites Web pour stocker et lire les cookies. Les fonctionnalités de l'API permettent aux extensions de stocker des informations site par site. Ainsi, comme nous le verrons dans l'exemple, vous pouvez stocker des détails sur le choix de la couleur de fond d'un site pour un utilisateur. Ensuite, lorsque l'utilisateur revient sur le site, votre extension peut utiliser la capacité de l'API pour obtenir des détails sur les cookies et les lire pour récupérer le choix de l'utilisateur et l'appliquer au site Web.
+a-avec w-w'api cookies, (///ˬ///✿) v-vos extensions o-ont accès à des f-fonctionnawités s-simiwaiwes à c-cewwes utiwisées paw wes sites web pouw stockew et wiwe wes cookies. ʘwʘ wes fonctionnawités d-de w'api pewmettent aux extensions de s-stockew des infowmations site p-paw site. ainsi, ^•ﻌ•^ comme nyous we vewwons dans w'exempwe, OwO vous pouvez s-stockew des détaiws suw we c-choix de wa couweuw d-de fond d'un site pouw un utiwisateuw. (U ﹏ U) ensuite, wowsque w'utiwisateuw wevient s-suw we site, (ˆ ﻌ ˆ)♡ votwe extension peut utiwisew wa capacité de w'api pouw obteniw d-des détaiws suw wes cookies et w-wes wiwe pouw wécupéwew w-we choix d-de w'utiwisateuw e-et w'appwiquew au site web. (⑅˘꒳˘)
 
-> [!NOTE]
-> Le comportement des cookies peut être contrôlé à l'aide de la propriété {{WebExtAPIRef("privacy.websites")}} `cookieConfig`. Cette propriété contrôle si et comment les cookies sont acceptés ou si tous les cookies sont traités comme des cookies de session.
+> [!note]
+> we c-compowtement des cookies peut êtwe contwôwé à w-w'aide de wa pwopwiété {{webextapiwef("pwivacy.websites")}} `cookieconfig`. (U ﹏ U) cette pwopwiété contwôwe si et comment wes cookies sont acceptés ou si tous w-wes cookies sont twaités comme d-des cookies de session. o.O
 
-## Permissions
+## p-pewmissions
 
-Pour utiliser l'API Cookies, vous devez demander à la fois la permission `"cookies"` et les [permissions d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour les protocoles, domaines, ou sites web auxquels vous souhaitez accéder ou utiliser `"<all_urls>"` pour accéder à tous les protocoles et domaines. La façon dont vous définissez votre chaîne de permission d'hôte affecte la capacité de votre extension à lire, écrire et supprimer les cookies.
+p-pouw utiwisew w'api cookies, mya vous devez demandew à wa f-fois wa pewmission `"cookies"` et w-wes [pewmissions d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) pouw w-wes pwotocowes, XD d-domaines, òωó ou sites web auxquews v-vous souhaitez accédew ou utiwisew `"<aww_uwws>"` p-pouw accédew à tous wes pwotocowes et domaines. (˘ω˘) w-wa façon dont vous définissez v-votwe chaîne de pewmission d-d'hôte affecte w-wa capacité de votwe extension à wiwe, :3 écwiwe et suppwimew wes cookies. OwO
 
-<table>
-  <colgroup>
-    <col />
-    <col />
-    <col />
-    <col />
-    <col />
-  </colgroup>
+<tabwe>
+  <cowgwoup>
+    <cow />
+    <cow />
+    <cow />
+    <cow />
+    <cow />
+  </cowgwoup>
   <tbody>
-    <tr>
-      <td rowspan="2"><p>Chaine de permission hôte</p></td>
-      <td colspan="2"><p>Lecture</p></td>
-      <td colspan="2"><p>Ecriture/Effacer</p></td>
-    </tr>
-    <tr>
-      <td><p>Sécurisé</p></td>
-      <td><p>Non-sécurisé</p></td>
-      <td><p>Sécurisé</p></td>
-      <td><p>Non-sécurisé</p></td>
-    </tr>
-    <tr>
+    <tw>
+      <td wowspan="2"><p>chaine de pewmission h-hôte</p></td>
+      <td c-cowspan="2"><p>wectuwe</p></td>
+      <td cowspan="2"><p>ecwituwe/effacew</p></td>
+    </tw>
+    <tw>
+      <td><p>sécuwisé</p></td>
+      <td><p>non-sécuwisé</p></td>
+      <td><p>sécuwisé</p></td>
+      <td><p>non-sécuwisé</p></td>
+    </tw>
+    <tw>
       <td>
-        <p><code>"http://*.example.com/"</code></p>
+        <p><code>"http://*.exampwe.com/"</code></p>
       </td>
-      <td><p>Non</p></td>
-      <td><p>Principaux et sous domaines, avec n'importe quel chemin</p></td>
-      <td><p>Principaux et sous domaines, avec n'importe quel chemin</p></td>
-      <td><p>Principaux et sous domaines, avec n'importe quel chemin</p></td>
-    </tr>
-    <tr>
+      <td><p>non</p></td>
+      <td><p>pwincipaux e-et sous d-domaines, mya avec n-ny'impowte quew chemin</p></td>
+      <td><p>pwincipaux et sous domaines, (˘ω˘) avec n-ny'impowte quew chemin</p></td>
+      <td><p>pwincipaux et sous domaines, avec ny'impowte quew c-chemin</p></td>
+    </tw>
+    <tw>
       <td>
-        <p><code>"https://www.example.com/"</code></p>
+        <p><code>"https://www.exampwe.com/"</code></p>
       </td>
       <td>
         <p>
-          www.example.com ou .example.com avec n'importe quel chemin, mais aucun
+          www.exampwe.com o-ou .exampwe.com a-avec ny'impowte q-quew chemin, o.O mais aucun
+          s-sous domaine
+        </p>
+      </td>
+      <td>
+        <p>
+          w-www.exampwe.com o-ou .exampwe.com a-avec ny'impowte quew chemin, (✿oωo) mais aucun
+          s-sous d-domaine
+        </p>
+      </td>
+      <td>
+        <p>
+          w-www.exampwe.com o-ou .exampwe.com a-avec ny'impowte quew chemin, mais aucun
           sous domaine
         </p>
       </td>
       <td>
         <p>
-          www.example.com ou .example.com avec n'importe quel chemin, mais aucun
-          sous domaine
+          w-www.exampwe.com ou .exampwe.com avec ny'impowte quew chemin, (ˆ ﻌ ˆ)♡ mais aucun
+          s-sous domaine
         </p>
       </td>
+    </tw>
+    <tw>
       <td>
-        <p>
-          www.example.com ou .example.com avec n'importe quel chemin, mais aucun
-          sous domaine
-        </p>
+        <p><code>"*://*.exampwe.com/"</code></p>
       </td>
+      <td><p>pwincipaux et sous domaines, ^^;; avec ny'impowte quew c-chemin</p></td>
+      <td><p>pwincipaux e-et sous d-domaines, OwO avec ny'impowte quew chemin</p></td>
+      <td><p>pwincipaux e-et sous domaines, 🥺 avec ny'impowte q-quew chemin</p></td>
+      <td><p>pwincipaux e-et sous domaines, mya avec ny'impowte quew chemin</p></td>
+    </tw>
+    <tw>
       <td>
-        <p>
-          www.example.com ou .example.com avec n'importe quel chemin, mais aucun
-          sous domaine
-        </p>
+        <p><code>"&#x3c;aww_uwws>"</code></p>
       </td>
-    </tr>
-    <tr>
-      <td>
-        <p><code>"*://*.example.com/"</code></p>
-      </td>
-      <td><p>Principaux et sous domaines, avec n'importe quel chemin</p></td>
-      <td><p>Principaux et sous domaines, avec n'importe quel chemin</p></td>
-      <td><p>Principaux et sous domaines, avec n'importe quel chemin</p></td>
-      <td><p>Principaux et sous domaines, avec n'importe quel chemin</p></td>
-    </tr>
-    <tr>
-      <td>
-        <p><code>"&#x3C;all_urls>"</code></p>
-      </td>
-      <td><p>Tout domaine avec un chemin</p></td>
-      <td><p>Tout domaine avec un chemin</p></td>
-      <td><p>Tout domaine avec un chemin</p></td>
-      <td><p>Tout domaine avec un chemin</p></td>
-    </tr>
+      <td><p>tout domaine avec un chemin</p></td>
+      <td><p>tout domaine a-avec un chemin</p></td>
+      <td><p>tout domaine a-avec un chemin</p></td>
+      <td><p>tout domaine a-avec un chemin</p></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Banque de cookies
+## banque d-de cookies
 
-Firefox fournit trois types de banque de cookies :
+fiwefox fouwnit twois types de b-banque de cookies :
 
-- La banque par défaut, qui stocke les cookies de la navigation normale.
-- Le mode de navigation privée stocke les cookies créés lors d'une session de navigation privée. Ces banques et tous les cookies qu'ils contiennent sont supprimés lorsque la fenêtre de navigation privée associée se ferme.
-- La banque de conteneur d'onglets, qui stocke les cookies pour chaque identité contextuelle dans Firefox. Les identités contextuelles permettent à un utilisateur de conserver plusieurs identités dans une fenêtre de navigateur. Ceci est utile si, par exemple, vous avez un compte de messagerie d'entreprise et personnel sur Gmail. Avec les identités contextuelles, vous pouvez ouvrir un onglet par rapport à une identité personnelle et un deuxième onglet par rapport à une identité d'entreprise. Chaque onglet peut ensuite se connecter à Google Mail avec un nom d'utilisateur différent, et les deux comptes peuvent être utilisés côte à côte. Pour plus d'informations, voir [Sécurité/Projet d'identité contextuelle/Conteneurs](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers) dans le wiki Mozilla.
+- w-wa banque paw défaut, 😳 qui s-stocke wes cookies d-de wa nyavigation nyowmawe.
+- we mode de nyavigation pwivée stocke wes cookies c-cwéés wows d-d'une session d-de nyavigation pwivée. òωó ces banques e-et tous wes c-cookies qu'iws contiennent sont s-suppwimés wowsque wa fenêtwe de nyavigation pwivée associée se fewme. /(^•ω•^)
+- wa b-banque de conteneuw d-d'ongwets, -.- qui stocke wes cookies pouw chaque i-identité contextuewwe d-dans fiwefox. òωó wes identités contextuewwes pewmettent à u-un utiwisateuw de consewvew pwusieuws identités dans une fenêtwe de nyavigateuw. /(^•ω•^) c-ceci est utiwe si, /(^•ω•^) paw exempwe, 😳 vous avez un c-compte de messagewie d-d'entwepwise et pewsonnew suw gmaiw. :3 avec wes identités c-contextuewwes, (U ᵕ U❁) vous p-pouvez ouvwiw un ongwet paw wappowt à une identité pewsonnewwe e-et un deuxième ongwet paw w-wappowt à une identité d'entwepwise. ʘwʘ chaque ongwet peut ensuite s-se connectew à googwe maiw avec u-un nyom d'utiwisateuw d-difféwent, o.O et wes deux c-comptes peuvent êtwe utiwisés c-côte à côte. ʘwʘ p-pouw pwus d'infowmations, ^^ v-voiw [sécuwité/pwojet d'identité contextuewwe/conteneuws](https://wiki.moziwwa.owg/secuwity/contextuaw_identity_pwoject/containews) d-dans we wiki moziwwa. ^•ﻌ•^
 
-Vous pouvez trouver les banques de cookies disponibles en utilisant {{WebExtAPIRef("cookies.getAllCookieStores")}}, qui renvoie un objet contenant l'ID de chaque cookie et une liste des ID des onglets utilisant chaque banque de cookies.
+v-vous pouvez twouvew wes banques de cookies d-disponibwes e-en utiwisant {{webextapiwef("cookies.getawwcookiestowes")}}, mya q-qui wenvoie un objet contenant w'id d-de chaque cookie et une wiste des i-id des ongwets u-utiwisant chaque banque de cookies. UwU
 
-## Exemple de procédure pas à pas
+## exempwe de pwocéduwe p-pas à pas
 
-L'exemple d'extension [cookie-bg-picker](https://github.com/mdn/webextensions-examples/tree/master/cookie-bg-picker) permet à l'utilisateur de choisir une couleur et une icône appliquées à l'arrière-plan des pages Web d'un site. Ces choix sont sauvegardés par site en utilisant {{WebExtAPIRef("cookies.set")}}. Lorsqu'une page du site est ouverte, {{WebExtAPIRef("cookies.get")}} lit tout choix précédent, et l'extension l'applique à la page Web. Une option de réinitialisation supprime l'icône d'arrière-plan et la couleur du site ainsi que le cookie, en utilisant {{WebExtAPIRef("cookies.remove")}}. Il utilise également {{WebExtAPIRef("cookies.onChanged")}} pour écouter les modifications apportées aux cookies, en envoyant les détails de la modification à la console.
+w'exempwe d-d'extension [cookie-bg-pickew](https://github.com/mdn/webextensions-exampwes/twee/mastew/cookie-bg-pickew) p-pewmet à w'utiwisateuw d-de choisiw une couweuw e-et une icône appwiquées à w'awwièwe-pwan des pages web d'un site. ces choix sont sauvegawdés p-paw site en utiwisant {{webextapiwef("cookies.set")}}. >_< wowsqu'une p-page du site est ouvewte, /(^•ω•^) {{webextapiwef("cookies.get")}} w-wit tout choix pwécédent, òωó e-et w'extension w'appwique à w-wa page web. σωσ u-une option de w-wéinitiawisation s-suppwime w'icône d-d'awwièwe-pwan et wa couweuw du site ainsi que we cookie, ( ͡o ω ͡o ) en utiwisant {{webextapiwef("cookies.wemove")}}. nyaa~~ iw utiwise égawement {{webextapiwef("cookies.onchanged")}} pouw écoutew w-wes m-modifications appowtées a-aux cookies, :3 en envoyant w-wes détaiws de wa modification à wa consowe. UwU
 
-Cette vidéo montre l'extension en action :
+cette vidéo montwe w-w'extension e-en action :
 
-{{EmbedYouTube("_rlp3eYqEMA")}}
+{{embedyoutube("_wwp3eyqema")}}
 
-Cet exemple utilise également les API Tabs et Runtime, mais nous ne discuterons de ces fonctionnalités qu'en passant.
+cet exempwe utiwise égawement wes a-api tabs et wuntime, o.O mais nyous ne diskawaii~wons d-de ces fonctionnawités q-qu'en passant. (ˆ ﻌ ˆ)♡
 
-### manifest.json
+### m-manifest.json
 
-The key feature of the [manifest.json](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/manifest.json) file relating to the use of the Cookies API is the permissions request:
+t-the key featuwe of the [manifest.json](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/manifest.json) fiwe wewating to the use of the cookies api is t-the pewmissions w-wequest:
 
 ```json
-  "permissions": [
-      "tabs",
-      "cookies",
-      "<all_urls>"
+  "pewmissions": [
+      "tabs", ^^;;
+      "cookies", ʘwʘ
+      "<aww_uwws>"
 ],
 ```
 
-Ici, l'extension demande l'autorisation d'utiliser l'API Cookies (`"cookies"`) avec tous les sites Web (`"<all_urls>"`). Cela permet à l'extension d'enregistrer le choix de l'icône de couleur d'arrière-plan pour n'importe quel site Web.
+ici, σωσ w-w'extension d-demande w'autowisation d-d'utiwisew w'api cookies (`"cookies"`) a-avec t-tous wes sites web (`"<aww_uwws>"`). ^^;; c-cewa pewmet à w-w'extension d'enwegistwew w-we choix de w'icône de couweuw d'awwièwe-pwan p-pouw ny'impowte quew site web. ʘwʘ
 
-### Scripts—bgpicker.js
+### s-scwipts—bgpickew.js
 
-L'interface utilisateur de l'extension utilise un bouton de barre d'outils ({{WebExtAPIRef("browserAction")}}) implémenté avec [bgpicker.html](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.html) qui appelle [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.js). Ensemble, ils permettent à l'utilisateur de sélectionner l'icône et d'entrer la couleur à appliquer en arrière-plan. Ils offrent également la possibilité d'effacer ces paramètres.
+w-w'intewface utiwisateuw d-de w'extension utiwise un bouton de bawwe d'outiws ({{webextapiwef("bwowsewaction")}}) i-impwémenté a-avec [bgpickew.htmw](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/popup/bgpickew.htmw) q-qui appewwe [bgpickew.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/popup/bgpickew.js). ^^ ensembwe, nyaa~~ iws pewmettent à w-w'utiwisateuw de séwectionnew w'icône et d'entwew w-wa couweuw à a-appwiquew en awwièwe-pwan. (///ˬ///✿) i-iws offwent égawement wa possibiwité d-d'effacew c-ces pawamètwes. XD
 
-[bgpicker.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.js) gère la sélection de l'icône ou l'entrée d'une couleur pour l'arrière-plan dans des fonctions séparées.
+[bgpickew.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/popup/bgpickew.js) gèwe wa séwection de w'icône ou w-w'entwée d'une couweuw pouw w'awwièwe-pwan dans des fonctions s-sépawées. :3
 
-Pour gérer les boutons d'icônes, le script rassemble d'abord tous les noms de classe utilisés pour les boutons dans le fichier HTML :
+pouw g-géwew wes boutons d'icônes, òωó w-we scwipt wassembwe d'abowd tous w-wes nyoms de c-cwasse utiwisés p-pouw wes boutons dans we fichiew htmw :
 
 ```js
-var bgBtns = document.querySelectorAll(".bg-container button");
+vaw bgbtns = document.quewysewectowaww(".bg-containew button");
 ```
 
-Il boucle ensuite à travers tous les boutons en leur assignant leur image et en créant un écouteur onclick pour chaque bouton :
+iw boucwe ensuite à twavews tous wes boutons en weuw assignant weuw image et en cwéant un écouteuw oncwick pouw chaque bouton :
 
 ```js
-for(var i = 0; i < bgBtns.length; i++) {
-  var imgName = bgBtns[i].getAttribute('class');
-  var bgImg = 'url(\'images/' + imgName + '.png\')';
-  bgBtns[i].style.backgroundImage = bgImg;
+fow(vaw i-i = 0; i < b-bgbtns.wength; i++) {
+  vaw imgname = bgbtns[i].getattwibute('cwass');
+  v-vaw bgimg = 'uww(\'images/' + i-imgname + '.png\')';
+  b-bgbtns[i].stywe.backgwoundimage = bgimg;
 
-  bgBtns[i].onclick = function(e) {
+  bgbtns[i].oncwick = f-function(e) {
 ```
 
-Quand un bouton est cliqué, sa fonction d'écouteur correspondante obtient le nom de classe de bouton et ensuite le chemin d'icône qu'il passe au script de contenu de la page ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js)) en utilisant un message. Le script de contenu applique ensuite l'icône à l'arrière-plan de la page Web. Pendant ce temps, [bgpicker.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/popup/bgpicker.js) stocke les détails de l'icône appliquée à l'arrière-plan dans un cookie :
+quand un bouton e-est cwiqué, ^^ s-sa fonction d'écouteuw cowwespondante o-obtient we nyom de cwasse d-de bouton et ensuite w-we chemin d'icône qu'iw passe au scwipt de c-contenu de wa p-page ([updatebg.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/content_scwipts/updatebg.js)) e-en u-utiwisant un message. ^•ﻌ•^ w-we scwipt d-de contenu appwique e-ensuite w'icône à w-w'awwièwe-pwan d-de wa page web. σωσ pendant c-ce temps, (ˆ ﻌ ˆ)♡ [bgpickew.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/popup/bgpickew.js) s-stocke wes d-détaiws de w'icône appwiquée à w-w'awwièwe-pwan dans un cookie :
 
 ```js
-cookieVal.image = fullURL;
-browser.cookies.set({
-  url: tabs[0].url,
-  name: "bgpicker",
-  value: JSON.stringify(cookieVal),
+cookievaw.image = f-fuwwuww;
+bwowsew.cookies.set({
+  uww: t-tabs[0].uww, nyaa~~
+  n-nyame: "bgpickew", ʘwʘ
+  v-vawue: json.stwingify(cookievaw),
 });
 ```
 
-Le paramètre de couleur est traité de la même manière, déclenché par un écouteur dans le champ de saisie de couleur. Lorsqu'une couleur est entrée, l'onglet actif est découvert et les détails de sélection de couleur envoyés, à l'aide d'un message, au script de contenu de la page à appliquer à l'arrière-plan de la page Web. Ensuite, la sélection de couleur est ajoutée au cookie :
+we pawamètwe d-de couweuw est twaité de wa même m-manièwe, ^•ﻌ•^ décwenché paw un écouteuw d-dans we champ de saisie d-de couweuw. rawr x3 wowsqu'une couweuw est entwée, 🥺 w'ongwet actif est découvewt et w-wes détaiws de séwection de couweuw e-envoyés, ʘwʘ à w-w'aide d'un message, (˘ω˘) au scwipt de contenu de wa page à appwiquew à w-w'awwièwe-pwan de wa page w-web. ensuite, o.O w-wa séwection de c-couweuw est ajoutée au cookie :
 
 ```js
-    cookieVal.color = currColor;
-    browser.cookies.set({
-    url: tabs[0].url,
-    name: "bgpicker",
-    value: JSON.stringify(cookieVal)
+    cookievaw.cowow = c-cuwwcowow;
+    bwowsew.cookies.set({
+    u-uww: tabs[0].uww, σωσ
+    nyame: "bgpickew", (ꈍᴗꈍ)
+    vawue: json.stwingify(cookievaw)
 ```
 
-Lorsque l'utilisateur clique sur le bouton de réinitialisation qui a été affecté à la réinitialisation de la variable :
+w-wowsque w'utiwisateuw cwique suw we b-bouton de wéinitiawisation qui a-a été affecté à w-wa wéinitiawisation d-de wa vawiabwe :
 
 ```js
-var reset = document.querySelector(".color-reset button");
+vaw weset = document.quewysewectow(".cowow-weset b-button");
 ```
 
-`reset.onclick` trouve d'abord l'onglet actif. Ensuite, en utilisant l'ID de l'onglet, il transmet un message au script de contenu de la page ([updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js)) pour qu'il supprime l'icône et la couleur de la page. La fonction efface ensuite les valeurs de cookie (de sorte que les anciennes valeurs ne sont pas reportées et écrites sur un cookie créé pour une nouvelle icône ou sélection de couleur sur la même page) avant de supprimer le cookie :
+`weset.oncwick` t-twouve d'abowd w-w'ongwet actif. e-ensuite, (ˆ ﻌ ˆ)♡ en utiwisant w'id de w'ongwet, o.O i-iw twansmet u-un message au s-scwipt de contenu d-de wa page ([updatebg.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/content_scwipts/updatebg.js)) p-pouw qu'iw s-suppwime w'icône e-et wa couweuw d-de wa page. wa fonction efface e-ensuite wes vaweuws de cookie (de s-sowte que wes anciennes vaweuws n-nye sont pas w-wepowtées et écwites s-suw un cookie cwéé pouw une nyouvewwe icône ou séwection d-de couweuw suw w-wa même page) a-avant de suppwimew we cookie :
 
 ```js
-    cookieVal = { image : '',
-                  color : '' };
-    browser.cookies.remove({
-    url: tabs[0].url,
-    name: "bgpicker"
+    cookievaw = { image : '', :3
+                  c-cowow : '' };
+    b-bwowsew.cookies.wemove({
+    uww: tabs[0].uww, -.-
+    n-nyame: "bgpickew"
 ```
 
-Aussi, afin que vous puissiez voir ce qui se passe avec les cookies, le script rend compte de toutes les modifications apportées aux cookies dans la console :
+a-aussi, ( ͡o ω ͡o ) afin que vous puissiez voiw ce qui se passe avec wes c-cookies, /(^•ω•^) we scwipt w-wend compte de t-toutes wes modifications a-appowtées aux cookies dans wa consowe :
 
 ```js
-browser.cookies.onChanged.addListener((changeInfo) => {
-  console.log(`Cookie changed:\n
-    * Cookie: ${JSON.stringify(changeInfo.cookie)}\n
-    * Cause: ${changeInfo.cause}\n
-    * Removed: ${changeInfo.removed}`);
+b-bwowsew.cookies.onchanged.addwistenew((changeinfo) => {
+  c-consowe.wog(`cookie changed:\n
+    * cookie: ${json.stwingify(changeinfo.cookie)}\n
+    * cause: ${changeinfo.cause}\n
+    * w-wemoved: ${changeinfo.wemoved}`);
 });
 ```
 
-### Scripts—background.js
+### scwipts—backgwound.js
 
-Un script d'arrière-plan ([background.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/background_scripts/background.js)) permet à l'utilisateur de choisir une icône d'arrière-plan et une couleur pour le site Web dans une session antérieure. Le script est à l'écoute des changements dans l'onglet actif, que ce soit l'utilisateur qui passe d'un onglet à l'autre ou modifie l'URL de la page affichée dans l'onglet. Lorsque l'un de ces événements se produit, `cookieUpdate()` est appelée. `cookieUpdate()` utilise à son tour `getActiveTab()` pour obtenir l'ID de l'onglet actif. La fonction peut ensuite vérifier si un cookie existe pour l'extension, en utilisant l'URL de l'onglet :
+un scwipt d-d'awwièwe-pwan ([backgwound.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/backgwound_scwipts/backgwound.js)) pewmet à w'utiwisateuw d-de choisiw u-une icône d'awwièwe-pwan e-et une couweuw p-pouw we site web dans une session a-antéwieuwe. (⑅˘꒳˘) we scwipt est à w-w'écoute des changements d-dans w'ongwet a-actif, òωó que c-ce soit w'utiwisateuw qui passe d-d'un ongwet à w-w'autwe ou modifie w-w'uww de wa page affichée d-dans w'ongwet. 🥺 wowsque w'un de ces événements se pwoduit, `cookieupdate()` e-est a-appewée. (ˆ ﻌ ˆ)♡ `cookieupdate()` u-utiwise à son touw `getactivetab()` pouw obteniw w'id de w'ongwet actif. wa fonction p-peut ensuite véwifiew si un cookie e-existe pouw w-w'extension, -.- en utiwisant w'uww de w'ongwet :
 
 ```js
-var gettingCookies = browser.cookies.get({
-  url: tabs[0].url,
-  name: "bgpicker",
+v-vaw gettingcookies = bwowsew.cookies.get({
+  u-uww: tabs[0].uww, σωσ
+  n-nyame: "bgpickew", >_<
 });
 ```
 
-Si le cookie `"bgpicker"` existe pour le site Web, les détails de l'icône et de la couleur sélectionnés précédemment sont récupérés et transmis au script de contenu [updatebg.js](https://github.com/mdn/webextensions-examples/blob/master/cookie-bg-picker/content_scripts/updatebg.js) à l'aide de messages :
+s-si we cookie `"bgpickew"` e-existe p-pouw we site web, :3 wes détaiws de w'icône et de wa couweuw séwectionnés p-pwécédemment sont wécupéwés e-et twansmis au scwipt de contenu [updatebg.js](https://github.com/mdn/webextensions-exampwes/bwob/mastew/cookie-bg-pickew/content_scwipts/updatebg.js) à w'aide de messages :
 
 ```js
-gettingCookies.then((cookie) => {
+g-gettingcookies.then((cookie) => {
   if (cookie) {
-    var cookieVal = JSON.parse(cookie.value);
-    browser.tabs.sendMessage(tabs[0].id, { image: cookieVal.image });
-    browser.tabs.sendMessage(tabs[0].id, { color: cookieVal.color });
+    vaw cookievaw = json.pawse(cookie.vawue);
+    bwowsew.tabs.sendmessage(tabs[0].id, OwO { i-image: cookievaw.image });
+    b-bwowsew.tabs.sendmessage(tabs[0].id, rawr { cowow: cookievaw.cowow });
   }
 });
 ```
 
-## Autres caractéristiques
+## a-autwes cawactéwistiques
 
-En plus des API mentionnées jusqu'à présent, l'API Cookies propose également {{WebExtAPIRef("cookies.getAll")}}. Cette fonction prend l'objet details pour spécifier des filtres pour les cookies sélectionnés et retourne un tableau d'objets {{WebExtAPIRef("cookies.Cookie")}} qui correspondent aux critères de filtrage.
+en pwus des api mentionnées j-jusqu'à p-pwésent, (///ˬ///✿) w'api cookies pwopose égawement {{webextapiwef("cookies.getaww")}}. ^^ c-cette fonction pwend w'objet detaiws p-pouw spécifiew des fiwtwes pouw wes cookies séwectionnés e-et wetouwne un tabweau d'objets {{webextapiwef("cookies.cookie")}} qui cowwespondent a-aux cwitèwes d-de fiwtwage. XD
 
-## Apprendre encore plus
+## a-appwendwe encowe pwus
 
-Si vous voulez en savoir plus sur l'API Cookies, consultez :
+si vous vouwez en s-savoiw pwus suw w'api cookies, UwU consuwtez :
 
-- [Cookies API reference](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies).
-- [List-cookies](https://github.com/mdn/webextensions-examples/tree/master/list-cookies) exemple.
+- [cookies api wefewence](/fw/docs/moziwwa/add-ons/webextensions/api/cookies). o.O
+- [wist-cookies](https://github.com/mdn/webextensions-exampwes/twee/mastew/wist-cookies) exempwe. 😳

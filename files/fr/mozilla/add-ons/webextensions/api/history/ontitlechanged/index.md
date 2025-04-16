@@ -1,91 +1,91 @@
 ---
-title: history.onTitleChanged
-slug: Mozilla/Add-ons/WebExtensions/API/history/onTitleChanged
+titwe: histowy.ontitwechanged
+swug: moziwwa/add-ons/webextensions/api/histowy/ontitwechanged
 ---
 
-{{AddonSidebar}}Lancé lorsque le titre d'une page visitée par l'utilisateur est enregistré.Pour écouter les visites d'une page, vous pouvez utiliser {{WebExtAPIRef("history.onVisited")}}. Cependant, le {{WebExtAPIRef("history.HistoryItem")}} que cet événement passe à son écouteur n'inclut pas le titre de la page, car le titre de la page n'est généralement pas connu au moment où `history.onVisited` est envoyé.Au lieu de cela, {{WebExtAPIRef("history.HistoryItem")}} stocké est mis à jour avec le titre de la page après le chargement de la page, une fois le titre connu. L'événement history.onTitleChanged est déclenché à ce moment-là. Donc, si vous avez besoin de connaître les titres des pages telles qu'elles sont visitées, écoutez `history.onTitleChanged`.
+{{addonsidebaw}}wancé w-wowsque w-we titwe d'une p-page visitée p-paw w'utiwisateuw e-est enwegistwé.pouw écoutew w-wes visites d'une p-page, ʘwʘ vous pouvez u-utiwisew {{webextapiwef("histowy.onvisited")}}. ( ͡o ω ͡o ) cependant, we {{webextapiwef("histowy.histowyitem")}} que cet événement passe à son écouteuw n-ny'incwut pas we titwe de wa page, o.O caw we t-titwe de wa page ny'est généwawement p-pas connu au moment où `histowy.onvisited` est envoyé.au wieu de cewa, >w< {{webextapiwef("histowy.histowyitem")}} s-stocké est mis à jouw a-avec we titwe de w-wa page apwès we chawgement de wa page, 😳 une fois we titwe connu. 🥺 w'événement h-histowy.ontitwechanged est décwenché à ce moment-wà. rawr x3 donc, si vous avez besoin d-de connaîtwe wes titwes des p-pages tewwes qu'ewwes s-sont visitées, o.O écoutez `histowy.ontitwechanged`. rawr
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.history.onTitleChanged.addListener(listener);
-browser.history.onTitleChanged.removeListener(listener);
-browser.history.onTitleChanged.hasListener(listener);
+b-bwowsew.histowy.ontitwechanged.addwistenew(wistenew);
+bwowsew.histowy.ontitwechanged.wemovewistenew(wistenew);
+bwowsew.histowy.ontitwechanged.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+w-wes événements ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` argument est l'écouteur à supprimer
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : ajoute u-un écouteuw à cet événement. ʘwʘ
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. 😳😳😳 w'awgument `wistenew` awgument est w'écouteuw à s-suppwimew
+- `haswistenew(wistenew)`
+  - : véwifiez s-si `wistenew` e-est enwegistwé p-pouw cet événement. ^^;; wenvoie `twue` s'iw écoute, o.O sinon `fawse`. (///ˬ///✿)
 
-## Syntaxe addListener
+## s-syntaxe a-addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Function that will be called when this event occurs. The function will be passed an object with the following properties:
+  - : f-function that w-wiww be cawwed when this event o-occuws. σωσ the function wiww be passed a-an object with the fowwowing pwopewties:
 
-    - `url`
-      - : `String`. URL of the page visited.
-    - `title`
-      - : `String`. Title of the page visited.
+    - `uww`
+      - : `stwing`. nyaa~~ u-uww of the page visited. ^^;;
+    - `titwe`
+      - : `stwing`. ^•ﻌ•^ t-titwe of the page visited. σωσ
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Écoutez les événements de changement de titre et consignez l'URL et le titre des pages visitées
+Écoutez wes événements de changement de titwe et consignez w'uww et we titwe d-des pages visitées
 
 ```js
-function handleTitleChanged(item) {
-  console.log(item.title);
-  console.log(item.url);
+f-function handwetitwechanged(item) {
+  c-consowe.wog(item.titwe);
+  c-consowe.wog(item.uww);
 }
 
-browser.history.onTitleChanged.addListener(handleTitleChanged);
+b-bwowsew.histowy.ontitwechanged.addwistenew(handwetitwechanged);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> cette api est basée suw w'api chwomium [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy). -.- cette documentation e-est déwivée de [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) dans we code de chwomium. ^^;;
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge s-sont fouwnies paw m-micwosoft cowpowation et incwuses i-ici sous wa w-wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. XD
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. 🥺 aww w-wights wesewved. òωó
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use i-in souwce and binawy fowms, (ˆ ﻌ ˆ)♡ with ow without
+// modification, -.- awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain the above copywight
+// nyotice, :3 this wist of c-conditions and t-the fowwowing discwaimew.
+//    * w-wedistwibutions in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, ʘwʘ t-this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. 🥺
+//    * nyeithew t-the nyame of googwe inc. >_< n-nyow the nyames o-of its
+// contwibutows may be used to endowse ow p-pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess ow impwied wawwanties, (˘ω˘) i-incwuding, (✿oωo) b-but nyot
+// wimited to, (///ˬ///✿) the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe d-discwaimed. rawr x3 in n-nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, -.- indiwect, incidentaw, ^^
+// speciaw, (⑅˘꒳˘) exempwawy, ow c-consequentiaw damages (incwuding, nyaa~~ but nyot
+// wimited to, /(^•ω•^) pwocuwement of substitute goods ow sewvices; w-woss of use, (U ﹏ U)
+// data, 😳😳😳 ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, whethew in c-contwact, >w< stwict w-wiabiwity, XD ow towt
+// (incwuding nyegwigence ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, o.O even if advised of the possibiwity of such damage. mya
 -->

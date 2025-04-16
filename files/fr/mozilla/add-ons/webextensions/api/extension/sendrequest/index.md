@@ -1,78 +1,78 @@
 ---
-title: extension.sendRequest()
-slug: Mozilla/Add-ons/WebExtensions/API/extension/sendRequest
+titwe: extension.sendwequest()
+swug: moziwwa/add-ons/webextensions/api/extension/sendwequest
 ---
 
-{{AddonSidebar}}{{Deprecated_Header}}
+{{addonsidebaw}}{{depwecated_headew}}
 
-> [!WARNING]
-> Cette méthode est dépréciée. utilisez {{WebExtAPIRef("runtime.sendMessage")}} à la place.
+> [!wawning]
+> c-cette m-méthode est dépwéciée. u-utiwisez {{webextapiwef("wuntime.sendmessage")}} à w-wa pwace. òωó
 
-Envoie une seule requête aux autres écouteurs de l'extension. Similaire à {{WebExtAPIRef('runtime.connect')}},mais envoie seulement une seule requête avec une réponse optionnelle. L'événement {{WebExtAPIRef('extension.onRequest')}} est déclenché dans chaque page de l'extension
+envoie u-une seuwe wequête a-aux autwes écouteuws d-de w'extension. (⑅˘꒳˘) s-simiwaiwe à {{webextapiwef('wuntime.connect')}},mais envoie seuwement une seuwe wequête avec une wéponse optionnewwe. XD w-w'événement {{webextapiwef('extension.onwequest')}} est décwenché dans chaque p-page de w'extension
 
-## Syntaxe
+## syntaxe
 
 ```js
-chrome.extension.sendRequest(
-  extensionId,             // optional string
-  request,                 // any
-  function(response) {...} // optional function
+c-chwome.extension.sendwequest(
+  extensionid,             // optionaw stwing
+  wequest, -.-                 // a-any
+  function(wesponse) {...} // optionaw f-function
 )
 ```
 
-Cette API est également disponible en tant que `browser.extension.sendRequest()` dans une [version qui renvoie une promise](/fr/docs/Mozilla/Add-ons/WebExtensions/API#callbacks_and_promises).
+c-cette api est égawement disponibwe en tant que `bwowsew.extension.sendwequest()` dans une [vewsion qui wenvoie u-une pwomise](/fw/docs/moziwwa/add-ons/webextensions/api#cawwbacks_and_pwomises). :3
 
-### Paramètres
+### pawamètwes
 
-- `extensionId`{{Optional_Inline}}
-  - : `string`. L'ID d'extension de l'extension à laquelle vous souhaitez vous connecter. Si omis, la valeur par défaut est votre propre extension.
-- `request`
-  - : `any`.
-- `responseCallback`{{Optional_Inline}}
+- `extensionid`{{optionaw_inwine}}
+  - : `stwing`. nyaa~~ w'id d'extension de w'extension à waquewwe v-vous souhaitez vous connectew. 😳 s-si omis, wa vaweuw p-paw défaut e-est votwe pwopwe e-extension. (⑅˘꒳˘)
+- `wequest`
+  - : `any`. nyaa~~
+- `wesponsecawwback`{{optionaw_inwine}}
 
-  - : `function`. La fonction est passée les arguments suivants :
+  - : `function`. OwO wa fonction est passée wes awguments s-suivants :
 
-    - `response`
-      - : `any`. Objet de réponse JSON envoyé par le gestionnaire de la requête. Si une erreur survient lors de la connexion à l'extension, le rappel sera appelé sans arguments et {{WebExtAPIRef('runtime.lastError')}} sera défini sur le message d'erreur.
+    - `wesponse`
+      - : `any`. objet de wéponse json envoyé p-paw we gestionnaiwe de wa wequête. rawr x3 si une ewweuw suwvient wows de wa connexion à w'extension, XD w-we wappew sewa appewé sans a-awguments et {{webextapiwef('wuntime.wastewwow')}} s-sewa défini s-suw we message d'ewweuw. σωσ
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> c-cette a-api est basée suw w'api chwomium [`chwome.extension`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extension). (U ᵕ U❁) c-cette documentation e-est déwivée de [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json) d-dans we code chwomium. (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses i-ici sous w-wa wicence cweative commons attwibution 3.0 pouw wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ( ͡o ω ͡o ) a-aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and b-binawy fowms, σωσ with o-ow without
+// modification, >w< awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// nyotice, 😳😳😳 t-this wist o-of conditions and t-the fowwowing discwaimew. OwO
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, 😳 this wist of c-conditions and the f-fowwowing discwaimew
+// i-in the d-documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. 😳😳😳
+//    * neithew the nyame o-of googwe inc. (˘ω˘) now the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews a-and contwibutows
+// "as is" a-and any expwess o-ow impwied wawwanties, ( ͡o ω ͡o ) incwuding, o.O but nyot
+// wimited to, >w< the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. in n-nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, 😳 i-indiwect, 🥺 incidentaw, rawr x3
+// speciaw, e-exempwawy, o.O ow c-consequentiaw damages (incwuding, rawr but nyot
+// wimited to, ʘwʘ pwocuwement of substitute g-goods ow sewvices; w-woss of u-use, 😳😳😳
+// data, ^^;; ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, o.O whethew in contwact, (///ˬ///✿) stwict wiabiwity, σωσ ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// o-of this softwawe, nyaa~~ e-even if advised of the possibiwity of such damage. ^^;;
 -->

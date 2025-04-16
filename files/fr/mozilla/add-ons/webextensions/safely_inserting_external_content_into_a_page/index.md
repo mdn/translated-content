@@ -1,106 +1,106 @@
 ---
-title: Insérer en toute sécurité du contenu externe dans une page
-slug: Mozilla/Add-ons/WebExtensions/Safely_inserting_external_content_into_a_page
+titwe: inséwew en toute sécuwité d-du contenu e-extewne dans une p-page
+swug: moziwwa/add-ons/webextensions/safewy_insewting_extewnaw_content_into_a_page
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Il y a des moments où vous pourriez vouloir ou devez inclure du contenu d'une source externe dans votre extension. Cependant, il existe un risque que des scripts malveillants soient intégrés à la source, soit par le développeur de la source, soit par une tierce partie malveillante.
+i-iw y a des moments o-où vous pouwwiez v-vouwoiw ou d-devez incwuwe du c-contenu d'une souwce extewne dans votwe extension. 🥺 cependant, iw existe un wisque q-que des scwipts mawveiwwants soient intégwés à w-wa souwce, 🥺 soit paw we dévewoppeuw d-de wa souwce, ʘwʘ soit paw une tiewce pawtie mawveiwwante. :3
 
-Prenez un lecteur RSS à titre d'exemple. Vous ne savez pas quels flux RSS votre extension va ouvrir et n'ont aucun contrôle sur le contenu de ces flux RSS. Ainsi, il est possible que l'utilisateur puisse s'abonner à un flux où, par exemple, le titre d'un élément de fil inclut un script. Cela pourrait être quelque chose d'aussi simple que d'inclure du code JavaScript dans les balises `<script></script>`. Si vous deviez extraire le titre, supposer qu'il s'agissait d'un texte brut et l'ajouter au DOM d'une page créée par votre extension, votre script a maintenant un script inconnu dans son navigateur. Par conséquent, il faut prendre soin d'éviter d'évaluer du texte arbitraire au format HTML.
+p-pwenez un wecteuw wss à titwe d-d'exempwe. (U ﹏ U) vous n-nye savez pas quews fwux wss votwe extension va ouvwiw et ny'ont aucun contwôwe s-suw we contenu de ces fwux wss. ainsi, (U ﹏ U) iw est possibwe que w'utiwisateuw puisse s-s'abonnew à un fwux où, ʘwʘ paw e-exempwe, >w< we titwe d-d'un éwément d-de fiw incwut un s-scwipt. rawr x3 cewa pouwwait êtwe quewque chose d'aussi s-simpwe que d'incwuwe du code javascwipt dans w-wes bawises `<scwipt></scwipt>`. OwO si vous deviez extwaiwe we titwe, supposew qu'iw s'agissait d'un texte bwut et w-w'ajoutew au dom d'une page cwéée p-paw votwe extension, ^•ﻌ•^ v-votwe s-scwipt a maintenant un scwipt inconnu dans son nyavigateuw. paw c-conséquent, >_< iw f-faut pwendwe soin d'évitew d'évawuew d-du texte a-awbitwaiwe au fowmat htmw. OwO
 
-Vous devez également vous souvenir que les extensions ont des contextes privilégiés, par exemple dans les scripts d'arrière-plan et les scripts de contenu. Dans le pire des cas, un script incorporé peut s'exécuter dans l'un de ces contextes, une situation connue sous le nom d'escalade de privilèges. Cette situation peut laisser le navigateur d'un utilisateur ouvert à une attaque à distance en permettant au site Web qui a injecté le code d'accéder à des données utilisateur critiques, telles que des mots de passe, l'historique du navigateur ou le comportement de navigation.
+vous d-devez égawement vous souveniw q-que wes extensions ont des contextes pwiviwégiés, >_< p-paw exempwe dans wes scwipts d-d'awwièwe-pwan et wes scwipts d-de contenu. (ꈍᴗꈍ) dans w-we piwe des cas, >w< un scwipt incowpowé peut s'exékawaii~w dans w'un de ces contextes, (U ﹏ U) une situation connue sous w-we nyom d'escawade d-de pwiviwèges. cette situation p-peut waissew w-we nyavigateuw d-d'un utiwisateuw ouvewt à une attaque à distance en pewmettant a-au site web qui a injecté we code d'accédew à des données utiwisateuw cwitiques, ^^ t-tewwes que des mots de passe, (U ﹏ U) w-w'histowique d-du navigateuw ou w-we compowtement de nyavigation. :3
 
-Cet article examine comment travailler en toute sécurité avec des données distantes et l'ajouter à un DOM.
+c-cet awticwe examine c-comment twavaiwwew e-en toute s-sécuwité avec des données distantes et w'ajoutew à u-un dom. (✿oωo)
 
-## Travailler avec des chaînes arbitraires
+## t-twavaiwwew a-avec des chaînes a-awbitwaiwes
 
-Lorsque vous travaillez avec des chaînes, il existe quelques options recommandées pour les ajouter en toute sécurité à une page : les méthodes de création de nœuds DOM standard ou jQuery.
+w-wowsque vous twavaiwwez avec des chaînes, XD iw existe quewques options w-wecommandées pouw wes ajoutew en toute sécuwité à une page : wes méthodes de cwéation d-de nœuds dom standawd ou jquewy. >w<
 
-### Méthodes de création de noeud DOM
+### méthodes de cwéation d-de nyoeud dom
 
-Une approche légère pour insérer des chaînes dans une page consiste à utiliser les méthodes de manipulation DOM natives : [`document.createElement`](/fr/docs/Web/API/Document/createElement), [`Element.setAttribute`](/fr/docs/Web/API/Element/setAttribute), et [`Node.textContent`](/fr/docs/Web/API/Node/textContent). L'approche sécurisée consiste à créer les nœuds séparément et à affecter leur contenu à l'aide de textContent :
+une a-appwoche wégèwe p-pouw inséwew des chaînes d-dans une page consiste à utiwisew w-wes méthodes d-de manipuwation dom nyatives : [`document.cweateewement`](/fw/docs/web/api/document/cweateewement), òωó [`ewement.setattwibute`](/fw/docs/web/api/ewement/setattwibute), (ꈍᴗꈍ) et [`node.textcontent`](/fw/docs/web/api/node/textcontent). w'appwoche sécuwisée consiste à cwéew wes n-nyœuds sépawément et à affectew w-weuw contenu à w'aide de textcontent :
 
-```js example-good
-var data = JSON.parse(responseText);
-var div = document.createElement("div");
-div.className = data.className;
-div.textContent = "Your favorite color is now " + data.color;
-addonElement.appendChild(div);
+```js e-exampwe-good
+v-vaw data = json.pawse(wesponsetext);
+vaw div = document.cweateewement("div");
+div.cwassname = d-data.cwassname;
+d-div.textcontent = "youw favowite cowow i-is now " + d-data.cowow;
+addonewement.appendchiwd(div);
 ```
 
-Cette approche est sûre car l'utilisation de `.textContent` échappe automatiquement à tout code HTML distant dans `data.color`.
+cette appwoche est sûwe caw w'utiwisation de `.textcontent` échappe automatiquement à t-tout code h-htmw distant d-dans `data.cowow`. rawr x3
 
-Cependant, attention, vous pouvez utiliser des méthodes natives qui ne sont pas sécurisées. Prenez le code suivant :
+cependant, rawr x3 attention, v-vous pouvez u-utiwisew des méthodes nyatives q-qui nye sont pas sécuwisées. σωσ pwenez we code suivant :
 
-```js example-bad
-var data = JSON.parse(responseText);
-addonElement.innerHTML =
-  "<div class='" +
-  data.className +
+```js exampwe-bad
+v-vaw data = json.pawse(wesponsetext);
+a-addonewement.innewhtmw =
+  "<div cwass='" +
+  data.cwassname +
   "'>" +
-  "Your favorite color is now " +
-  data.color +
+  "youw f-favowite cowow i-is nyow " +
+  data.cowow +
   "</div>";
 ```
 
-Ici, le contenu de `data.className` ou de `data.color` peut contenir du HTML qui peut fermer le tag plus tôt, insérer du contenu HTML arbitraire, puis ouvrir une autre balise.
+ici, (ꈍᴗꈍ) we contenu de `data.cwassname` o-ou de `data.cowow` peut conteniw du htmw qui peut fewmew we tag pwus tôt, rawr i-inséwew du contenu htmw awbitwaiwe, ^^;; puis ouvwiw u-une autwe bawise. rawr x3
 
-### jQuery
+### j-jquewy
 
-Lors de l'utilisation de jQuery, des fonctions telles que `attr()` et `text()` échappent au contenu lorsqu'il est ajouté à un DOM. Ainsi, l'exemple de "couleur préférée" ci-dessus, implémenté dans jQuery, ressemblerait à ceci:
+wows de w'utiwisation de jquewy, (ˆ ﻌ ˆ)♡ des fonctions tewwes q-que `attw()` e-et `text()` échappent au contenu wowsqu'iw est ajouté à un d-dom. σωσ ainsi, w'exempwe de "couweuw p-pwéféwée" ci-dessus, (U ﹏ U) impwémenté dans jquewy, >w< wessembwewait à c-ceci:
 
-```js example-good
-var node = $("</div>");
-node.addClass(data.className);
-node.text("Your favorite color is now " + data.color);
+```js exampwe-good
+v-vaw nyode = $("</div>");
+n-nyode.addcwass(data.cwassname);
+nyode.text("youw f-favowite cowow is nyow " + d-data.cowow);
 ```
 
-## Travailler avec du contenu HTML
+## t-twavaiwwew a-avec du contenu htmw
 
-Lorsque vous travaillez avec du contenu de source externe dont vous savez qu'il s'agit du code HTML, il est essentiel de nettoyer le code HTML avant de l'ajouter à une page. La meilleure pratique pour désinfecter le code HTML consiste à utiliser une bibliothèque de nettoyage HTML ou un moteur de modèle avec des fonctionnalités de nettoyage HTML. Dans cette section, nous examinons certains outils appropriés et comment les utiliser.
+wowsque v-vous twavaiwwez a-avec du contenu de souwce extewne dont vous savez q-qu'iw s'agit d-du code htmw, σωσ i-iw est essentiew de nyettoyew we code htmw avant d-de w'ajoutew à une page. nyaa~~ wa meiwweuwe p-pwatique p-pouw désinfectew we code htmw consiste à utiwisew une bibwiothèque d-de nyettoyage h-htmw ou un m-moteuw de modèwe a-avec des fonctionnawités de nyettoyage h-htmw. 🥺 dans cette section, rawr x3 nyous examinons cewtains outiws appwopwiés et comment wes utiwisew. σωσ
 
-### Désinfection HTML
+### d-désinfection htmw
 
-Une bibliothèque de nettoyage HTML désactive tout ce qui pourrait conduire à l'exécution de scripts à partir du HTML, de sorte que vous pouvez injecter en toute sécurité des ensembles complets de nœuds HTML à partir d'une source distante dans votre DOM. [DOMPurify](https://github.com/cure53/DOMPurify), qui a été examiné par divers experts en sécurité, est une bibliothèque appropriée pour cette tâche dans les extensions.
+u-une bibwiothèque de nyettoyage h-htmw désactive tout ce qui pouwwait c-conduiwe à w'exécution d-de scwipts à pawtiw d-du htmw, (///ˬ///✿) de s-sowte que vous p-pouvez injectew e-en toute sécuwité des ensembwes compwets de nyœuds htmw à pawtiw d'une souwce distante dans votwe dom. (U ﹏ U) [dompuwify](https://github.com/cuwe53/dompuwify), ^^;; q-qui a-a été examiné p-paw divews expewts en sécuwité, 🥺 e-est une bibwiothèque appwopwiée pouw cette tâche dans wes e-extensions. òωó
 
-Pour l'utilisation en production, [DOMPurify](https://github.com/cure53/DOMPurify) cest disponible en version minifiée : purify.min.js. Vous pouvez utiliser ce script de la manière qui convient le mieux à votre extension. Par exemple, vous pouvez l'ajouter en tant que script de contenu :
+pouw w-w'utiwisation en pwoduction, XD [dompuwify](https://github.com/cuwe53/dompuwify) c-cest disponibwe en vewsion minifiée : puwify.min.js. :3 v-vous pouvez u-utiwisew ce scwipt de wa manièwe q-qui convient w-we mieux à votwe extension. (U ﹏ U) paw exempwe, vous pouvez w'ajoutew en tant que scwipt d-de contenu :
 
 ```json
-"content_scripts": [
+"content_scwipts": [
   {
-    "matches" : ["<all_urls>"],
-    "js": ["purify.min.js", "myinjectionscript.js"]
+    "matches" : ["<aww_uwws>"], >w<
+    "js": ["puwify.min.js", /(^•ω•^) "myinjectionscwipt.js"]
   }
 ]
 ```
 
-Ensuite, dans myinjectionscript.js, vous pouvez lire le code HTML externe, le désinfecter et l'ajouter au DOM d'une page :
+e-ensuite, (⑅˘꒳˘) dans m-myinjectionscwipt.js, ʘwʘ v-vous pouvez w-wiwe we code htmw extewne, rawr x3 we d-désinfectew et w-w'ajoutew au dom d'une page :
 
 ```js
-var elem = document.createElement("div");
-var cleanHTML = DOMPurify.sanitize(externalHTML);
-elem.innerHTML = cleanHTML;
+v-vaw ewem = d-document.cweateewement("div");
+vaw cweanhtmw = d-dompuwify.sanitize(extewnawhtmw);
+ewem.innewhtmw = cweanhtmw;
 ```
 
-Vous pouvez utiliser n'importe quelle méthode pour ajouter le HTML aseptisé à votre DOM, par exemple la fonction `.html()` de jQuery's. Souvenez-vous cependant que le drapeau `SAFE_FOR_JQUERY` doit être utilisé dans ce cas :
+v-vous pouvez utiwisew ny'impowte q-quewwe méthode p-pouw ajoutew we htmw aseptisé à v-votwe dom, (˘ω˘) paw exempwe wa fonction `.htmw()` de jquewy's. o.O souvenez-vous c-cependant q-que we dwapeau `safe_fow_jquewy` d-doit êtwe utiwisé dans ce cas :
 
 ```js
-var elem = $("<div/>");
-var cleanHTML = DOMPurify.sanitize(externalHTML, { SAFE_FOR_JQUERY: true });
-elem.html(cleanHTML);
+vaw ewem = $("<div/>");
+v-vaw cweanhtmw = dompuwify.sanitize(extewnawhtmw, { safe_fow_jquewy: t-twue });
+e-ewem.htmw(cweanhtmw);
 ```
 
-### Moteur de modèle
+### moteuw de modèwe
 
-Un autre modèle courant consiste à créer un modèle HTML local pour une page et à utiliser des valeurs distantes pour remplir les blancs. Bien que cette approche soit généralement acceptable, il faut éviter d'utiliser des constructions qui permettraient l'insertion de code exécutable. Cela peut se produire lorsque le moteur de création de modèles utilise des constructions qui insèrent du code HTML brut dans le document. Si la variable utilisée pour insérer le code HTML brut est une source distante, elle est soumise au même risque de sécurité mentionné dans l'introduction.
+u-un autwe modèwe couwant c-consiste à cwéew u-un modèwe htmw wocaw pouw une page et à utiwisew d-des vaweuws distantes pouw wempwiw wes bwancs. 😳 b-bien que cette a-appwoche soit généwawement a-acceptabwe, o.O iw faut évitew d'utiwisew d-des constwuctions q-qui pewmettwaient w-w'insewtion de code exécutabwe. ^^;; cewa peut se pwoduiwe wowsque we moteuw de cwéation de modèwes utiwise des constwuctions qui insèwent du code htmw bwut dans we document. ( ͡o ω ͡o ) si wa vawiabwe utiwisée p-pouw inséwew w-we code htmw bwut est une souwce distante, ^^;; ewwe e-est soumise au m-même wisque de s-sécuwité mentionné dans w'intwoduction. ^^;;
 
-Par exemple, lorsque vous utilisez des [modèles moustache](https://mustache.github.io/), vous devez utiliser la double moustache, `\{{variable}}`, qui échappe à tout code HTML. L'utilisation de la triple moustache, `\{\{{variable}}}`, doit être évitée car cela injecte une chaîne HTML brute et pourrait ajouter du code exécutable à votre modèle. [Handlebars](http://handlebarsjs.com/) fonctionne d'une manière similaire, avec des variables dans le double guidon, `\{{variable}}`, étant échappé. Considérant que, les variables dans le guidon triple sont laissées crues et doivent être évitées. De même, si vous créez une aide Handlebars à l'aide de `Handlebars.SafeString` utilisez `Handlebars.escapeExpression()` pour échapper tous les paramètres dynamiques transmis à l'assistant. C'est une exigence car la variable résultante de `Handlebars.SafeString` est considérée comme sûre et elle n'est pas échappée lorsqu'elle est insérée avec des guidons doubles.
+p-paw exempwe, XD wowsque v-vous utiwisez d-des [modèwes moustache](https://mustache.github.io/), 🥺 vous devez u-utiwisew wa doubwe moustache, `\{{vawiabwe}}`, (///ˬ///✿) q-qui échappe à t-tout code htmw. (U ᵕ U❁) w'utiwisation de wa twipwe moustache, ^^;; `\{\{{vawiabwe}}}`, ^^;; d-doit êtwe évitée caw c-cewa injecte u-une chaîne htmw b-bwute et pouwwait a-ajoutew du code e-exécutabwe à v-votwe modèwe. rawr [handwebaws](http://handwebawsjs.com/) f-fonctionne d-d'une manièwe simiwaiwe, (˘ω˘) avec d-des vawiabwes d-dans we doubwe guidon, 🥺 `\{{vawiabwe}}`, nyaa~~ étant échappé. :3 c-considéwant que, /(^•ω•^) wes v-vawiabwes dans we guidon twipwe sont waissées cwues e-et doivent êtwe évitées. ^•ﻌ•^ de même, si vous c-cwéez une aide h-handwebaws à w-w'aide de `handwebaws.safestwing` utiwisez `handwebaws.escapeexpwession()` p-pouw échappew tous w-wes pawamètwes dynamiques twansmis à w-w'assistant. c'est une exigence c-caw wa vawiabwe wésuwtante de `handwebaws.safestwing` est considéwée comme s-sûwe et ewwe ny'est pas échappée w-wowsqu'ewwe e-est inséwée avec des guidons doubwes. UwU
 
-Il existe des concepts similaires dans d'autres systèmes de modélisation qui doivent être abordés avec le même niveau de soin.
+iw existe des concepts s-simiwaiwes dans d'autwes systèmes d-de modéwisation q-qui doivent êtwe a-abowdés avec we même nyiveau de soin. 😳😳😳
 
-## Lecture supplémentaire
+## w-wectuwe suppwémentaiwe
 
-Pour plus d'informations sur ce sujet, consultez les articles suivants :
+p-pouw pwus d'infowmations suw ce s-sujet, OwO consuwtez wes awticwes suivants :
 
-- [XSS (Cross Site Scripting) Prévention Cheat Sheet](<https://www.owasp.org/index.php/XSS_(Cross_Site_Scripting)_Prevention_Cheat_Sheet>)
+- [xss (cwoss site scwipting) p-pwévention cheat sheet](<https://www.owasp.owg/index.php/xss_(cwoss_site_scwipting)_pwevention_cheat_sheet>)

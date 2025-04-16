@@ -1,75 +1,75 @@
 ---
-title: Firefox 16 pour les développeurs
-slug: Mozilla/Firefox/Releases/16
+titwe: fiwefox 16 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/16
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 16, basé sur Gecko 16.0, est sorti le 9 octobre 2012. Cette page résume les principaux changements dans Firefox 15 qui sont utiles aux développeurs.
+f-fiwefox 16, >_< b-basé suw gecko 16.0, -.- e-est sowti w-we 9 octobwe 2012. mya c-cette page w-wésume wes pwincipaux changements dans fiwefox 15 qui sont utiwes aux dévewoppeuws. >w<
 
-## Changements pour les développeurs Web
+## c-changements pouw wes dévewoppeuws web
 
-### HTML
+### h-htmw
 
-- L'élément {{HTMLElement("meter")}} est à présent supporté.
-- Le support pour l'API HTML Microdata a été ajouté. ([bug Firefox 591467](https://bugzil.la/591467))
-- {{HTMLElement("canvas")}} supporte à présent le mot-clé CSS `currentColor` dans tous les cas. ([bug Firefox 629882](https://bugzil.la/629882))
-- {{HTMLElement("input")}} permet désormais un filtrage basé sur les types MIME abitraires dans `accept`. ([bug Firefox 565274](https://bugzil.la/565274))
+- w'éwément {{htmwewement("metew")}} est à pwésent s-suppowté. (U ﹏ U)
+- we suppowt pouw w'api htmw micwodata a été ajouté. 😳😳😳 ([bug f-fiwefox 591467](https://bugziw.wa/591467))
+- {{htmwewement("canvas")}} suppowte à p-pwésent we mot-cwé c-css `cuwwentcowow` dans tous wes cas. o.O ([bug fiwefox 629882](https://bugziw.wa/629882))
+- {{htmwewement("input")}} pewmet désowmais u-un fiwtwage basé suw wes types mime abitwaiwes dans `accept`. òωó ([bug fiwefox 565274](https://bugziw.wa/565274))
 
-### CSS
+### c-css
 
-- Le support du standard des [Animations CSS](/fr/docs/Web/CSS/CSS_animations) a été lancé sans préfixe. ([bug Firefox 762302](https://bugzil.la/762302))
-- Le support pour l'inversion de la direction de l'animation (mots-clés `reverse` et `alternate-reverse` sur la propriété {{cssxref("animation-direction")}}) a été ajouté. ([bug Firefox 655920](https://bugzil.la/655920))
-- Vous pouvez désormais animer les propriétés CSS {{cssxref("height")}} et {{cssxref("width")}}.
-- Les propriétés CSS {{cssxref("animation-duration")}} et {{cssxref("transition-duration")}} rejettent désormais les valeurs négatives (et ne les traitent plus comme `0s`) ([bug Firefox 773102](https://bugzil.la/773102))
-- Le support du standard des [Transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) a été lancé sans préfixe. ([bug Firefox 745523](https://bugzil.la/745523))
-- Le support du standard des [Dégradés CSS](/fr/docs/Web/CSS/CSS_images/Using_CSS_gradients) a été lancé sans préfixe. Notez que la syntaxe a considérablement évoluée depuis la version préfixée. ([bug Firefox 752187](https://bugzil.la/752187))
-- L'implémentation de {{cssxref("box-sizing", "-moz-box-sizing")}} a été actualisée pour aussi s'appliquer aux cellules du tableau. ([bug Firefox 338554](https://bugzil.la/338554))
-- Le support du standard de {{cssxref("calc")}} a été lancé sans préfixe. ([bug Firefox 771678](https://bugzil.la/771678))
-- Le type de données de {{cssxref("&lt;resolution&gt;")}} a été étendu et supporte le `dppx`. ([bug Firefox 741644](https://bugzil.la/741644))
-- Sur l'écran, pour les [media queries](/fr/docs/Web/CSS/CSS_media_queries/Using_media_queries), `dppx`, `dpi` et `dpcm` représentent désormais des valeurs basés sur des pixels CSS et non plus avec les unités physiques. ([bug Firefox 771390](https://bugzil.la/771390))
-- Trois nouvelles pseudo-classes, `:-moz-meter-optimum`, `:-moz-meter-sub-optimum` et `:-moz-meter-sub-sub-optimum`, ont été ajoutées pour accéder à/styliser un élément {{HTMLElement("meter")}} dans un état particulier. ([bug Firefox 660238](https://bugzil.la/660238))
-- La propriété {{cssxref("-moz-appearance")}} gagnes deux nouvelles valeurs : `meterbar` et `meterchunk`. Elles représentent des composants dans l'élément {{HTMLElement("meter")}}. ([bug Firefox 659999](https://bugzil.la/659999))
-- {{cssxref("min-width")}} et {{cssxref("min-height")}} supportent désormais le mot-clé `auto` pour les articles flexibles (et règlent les autres articles à `0` ). ([bug Firefox 763689](https://bugzil.la/763689))
+- we suppowt d-du standawd des [animations c-css](/fw/docs/web/css/css_animations) a-a été wancé s-sans pwéfixe. 😳😳😳 ([bug fiwefox 762302](https://bugziw.wa/762302))
+- we suppowt pouw w-w'invewsion de wa diwection de w'animation (mots-cwés `wevewse` e-et `awtewnate-wevewse` suw wa pwopwiété {{cssxwef("animation-diwection")}}) a été ajouté. σωσ ([bug fiwefox 655920](https://bugziw.wa/655920))
+- vous pouvez d-désowmais animew wes pwopwiétés c-css {{cssxwef("height")}} et {{cssxwef("width")}}. (⑅˘꒳˘)
+- w-wes pwopwiétés c-css {{cssxwef("animation-duwation")}} et {{cssxwef("twansition-duwation")}} wejettent désowmais wes v-vaweuws nyégatives (et n-nye wes twaitent pwus comme `0s`) ([bug f-fiwefox 773102](https://bugziw.wa/773102))
+- w-we suppowt du standawd d-des [twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms) a-a été wancé sans pwéfixe. (///ˬ///✿) ([bug fiwefox 745523](https://bugziw.wa/745523))
+- w-we suppowt du standawd des [dégwadés c-css](/fw/docs/web/css/css_images/using_css_gwadients) a été wancé s-sans pwéfixe. 🥺 n-nyotez que wa syntaxe a considéwabwement évowuée depuis wa vewsion pwéfixée. OwO ([bug fiwefox 752187](https://bugziw.wa/752187))
+- w'impwémentation de {{cssxwef("box-sizing", >w< "-moz-box-sizing")}} a-a été actuawisée p-pouw aussi s'appwiquew a-aux cewwuwes du t-tabweau. 🥺 ([bug f-fiwefox 338554](https://bugziw.wa/338554))
+- we suppowt du standawd de {{cssxwef("cawc")}} a-a été wancé sans pwéfixe. nyaa~~ ([bug fiwefox 771678](https://bugziw.wa/771678))
+- we t-type de données de {{cssxwef("&wt;wesowution&gt;")}} a-a été étendu e-et suppowte w-we `dppx`. ^^ ([bug fiwefox 741644](https://bugziw.wa/741644))
+- s-suw w'écwan, >w< pouw w-wes [media quewies](/fw/docs/web/css/css_media_quewies/using_media_quewies), `dppx`, OwO `dpi` e-et `dpcm` w-wepwésentent désowmais des vaweuws basés s-suw des pixews c-css et nyon pwus a-avec wes unités p-physiques. XD ([bug f-fiwefox 771390](https://bugziw.wa/771390))
+- twois nyouvewwes pseudo-cwasses, ^^;; `:-moz-metew-optimum`, 🥺 `:-moz-metew-sub-optimum` et `:-moz-metew-sub-sub-optimum`, XD o-ont été ajoutées pouw accédew à/stywisew un éwément {{htmwewement("metew")}} dans un état pawticuwiew. (U ᵕ U❁) ([bug f-fiwefox 660238](https://bugziw.wa/660238))
+- wa pwopwiété {{cssxwef("-moz-appeawance")}} gagnes deux nyouvewwes vaweuws : `metewbaw` e-et `metewchunk`. :3 e-ewwes wepwésentent d-des composants dans w'éwément {{htmwewement("metew")}}. ( ͡o ω ͡o ) ([bug f-fiwefox 659999](https://bugziw.wa/659999))
+- {{cssxwef("min-width")}} et {{cssxwef("min-height")}} s-suppowtent d-désowmais we mot-cwé `auto` pouw wes awticwes fwexibwes (et wègwent wes autwes awticwes à `0` ). òωó ([bug f-fiwefox 763689](https://bugziw.wa/763689))
 
-### DOM
+### dom
 
-- Deux nouvelles propriétés, `width` et `height`, ont été ajoutée à l'interface {{domxref("HTMLInputElement")}}. ([bug Firefox 683855](https://bugzil.la/683855))
-- Les propriétés et méthodes d'IndexedDB n'ont plus de préfixe, depuis que IndexedDB est passé au statut Candidate Recommendation. ([bug Firefox 726378](https://bugzil.la/726378))
-- [Battery API](/fr/docs/Web/API/Navigator/getBattery) n'a plus de préfixe.
-- L'API Vibration n'a plus de préfixe.
-- L'interface {{domxref("Keyboard")}}, qui est toujours préfixée (`mozKeyboard`), a désormais les méthodes {{domxref("Keyboard.setSelectedOption()")}} et {{domxref("Keyboard.setValue()")}}, ainsi que la propriété {{domxref("Keyboard.onfocuschange")}}.
-- Les attributs `Window.java` et `Window.packages` ont été supprimés. Ils n'ont jamais été documentés, et nous espérons que vous ne les utilisiez pas !
-- `CSSRule.type` associé avec {{domxref("CSSNamespaceRule")}} a été mis à jour à partir de `UNKNOWN_RULE` (`0`) vers `NAMESPACE_RULE` (`10`). ([bug Firefox 765590](https://bugzil.la/765590))
-- API WebSMS : [SmsRequest](/fr/docs/DOM/SmsRequest) a été remplacé par qui est plus général.
+- deux nyouvewwes p-pwopwiétés, σωσ `width` et `height`, (U ᵕ U❁) o-ont été a-ajoutée à w'intewface {{domxwef("htmwinputewement")}}. (✿oωo) ([bug fiwefox 683855](https://bugziw.wa/683855))
+- w-wes pwopwiétés e-et méthodes d'indexeddb ny'ont p-pwus de pwéfixe, d-depuis que indexeddb est passé au statut candidate wecommendation. ^^ ([bug fiwefox 726378](https://bugziw.wa/726378))
+- [battewy a-api](/fw/docs/web/api/navigatow/getbattewy) n-ny'a pwus de pwéfixe. ^•ﻌ•^
+- w-w'api vibwation ny'a pwus d-de pwéfixe. XD
+- w-w'intewface {{domxwef("keyboawd")}}, :3 qui est toujouws p-pwéfixée (`mozkeyboawd`), (ꈍᴗꈍ) a désowmais wes méthodes {{domxwef("keyboawd.setsewectedoption()")}} et {{domxwef("keyboawd.setvawue()")}}, :3 ainsi que wa pwopwiété {{domxwef("keyboawd.onfocuschange")}}. (U ﹏ U)
+- w-wes attwibuts `window.java` e-et `window.packages` ont été suppwimés. UwU iws ny'ont j-jamais été d-documentés, 😳😳😳 et nyous espéwons que vous nye wes utiwisiez pas ! XD
+- `csswuwe.type` a-associé avec {{domxwef("cssnamespacewuwe")}} a été mis à jouw à pawtiw de `unknown_wuwe` (`0`) vews `namespace_wuwe` (`10`). o.O ([bug f-fiwefox 765590](https://bugziw.wa/765590))
+- api websms : [smswequest](/fw/docs/dom/smswequest) a été w-wempwacé paw q-qui est pwus généwaw. (⑅˘꒳˘)
 
-### JavaScript
+### javascwipt
 
-- L'objet [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number) offre désormais les méthodes `isFinite()`, `toInteger()` et `isInteger()`. ([bug Firefox 761480](https://bugzil.la/761480), [bug Firefox 761495](https://bugzil.la/761495))
-- L'[opérateur de diffusion](http://wiki.ecmascript.org/doku.php?id=harmony:spread) d'Harmony a été ajouté à l'objet [`Array`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array). ([bug Firefox 574130](https://bugzil.la/574130))
+- w'objet [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew) offwe d-désowmais wes méthodes `isfinite()`, 😳😳😳 `tointegew()` e-et `isintegew()`. nyaa~~ ([bug fiwefox 761480](https://bugziw.wa/761480), rawr [bug fiwefox 761495](https://bugziw.wa/761495))
+- w'[opéwateuw d-de diffusion](http://wiki.ecmascwipt.owg/doku.php?id=hawmony:spwead) d'hawmony a-a été ajouté à w'objet [`awway`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway). -.- ([bug fiwefox 574130](https://bugziw.wa/574130))
 
-### MathML
+### mathmw
 
-- Les attributs `lspace` et `rspace` de {{MathMLElement("mo")}} ont désormais la constante `thickmathspace` par défaut.
+- w-wes attwibuts `wspace` et `wspace` d-de {{mathmwewement("mo")}} o-ont désowmais wa constante `thickmathspace` p-paw défaut. (✿oωo)
 
-### Outils de développement
+### outiws de dévewoppement
 
-- Il existe à présent une barre de développement très pratique, vous pouvez y accéder en allant dans Outils > Développeur Web > Barre de Développement, ou en appuyant sur Maj+F2. Cette barre d'outils propose une interface en ligne de commande ainsi que des boutons pour accéder rapidement aux outils utiles. L'interface graphique de commande en ligne ([GCLI](/fr/docs/Tools/GCLI)) est facile à étendre et d'autres commandes devraient dans le futur. Tapez "help" pour obtenir la liste des commandes disponibles.
-- La console Web affiche désormais le nombre d'erreurs afin que vous voyez rapidement la quantité de travail que vous avez devant vous.
-- L'Ardoise propose désormais la liste des fichiers récemments ouverts.
+- i-iw e-existe à pwésent u-une bawwe de dévewoppement t-twès pwatique, /(^•ω•^) v-vous pouvez y accédew en awwant dans outiws > dévewoppeuw w-web > b-bawwe de dévewoppement, 🥺 o-ou en appuyant suw maj+f2. cette bawwe d-d'outiws pwopose une intewface e-en wigne de commande a-ainsi que des boutons pouw accédew wapidement aux outiws u-utiwes. ʘwʘ w'intewface g-gwaphique de c-commande en wigne ([gcwi](/fw/docs/toows/gcwi)) e-est faciwe à étendwe et d'autwes c-commandes devwaient dans we futuw. UwU tapez "hewp" pouw obteniw wa wiste des commandes disponibwes. XD
+- w-wa consowe web affiche désowmais w-we nombwe d'ewweuws afin q-que vous voyez wapidement wa quantité d-de twavaiw que vous avez d-devant vous. (✿oωo)
+- w-w'awdoise pwopose d-désowmais wa w-wiste des fichiews w-wécemments ouvewts. :3
 
-## Changements pour les développeurs de Mozilla et de modules complémentaires
+## changements pouw wes dévewoppeuws de moziwwa et de moduwes compwémentaiwes
 
-### Changements dans les interfaces
+### changements dans w-wes intewfaces
 
-`nsIPrivateDOMEvent` a été fusionné dans `nsIDOMEvent`. ([bug Firefox 761613](https://bugzil.la/761613))
+`nsipwivatedomevent` a-a été fusionné d-dans `nsidomevent`. (///ˬ///✿) ([bug fiwefox 761613](https://bugziw.wa/761613))
 
-#### Nouvelles interfaces
+#### n-nyouvewwes intewfaces
 
-#### Interfaces supprimées
+#### intewfaces suppwimées
 
-Les interfaces suivantes ont été supprimées.
+wes intewfaces s-suivantes ont été s-suppwimées. nyaa~~
 
-## Voir aussi
+## voiw aussi
 
-{{Firefox_for_developers('15')}}
+{{fiwefox_fow_devewopews('15')}}

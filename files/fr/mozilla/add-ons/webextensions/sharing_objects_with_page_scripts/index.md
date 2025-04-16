@@ -1,260 +1,260 @@
 ---
-title: Partage d'objets avec des scripts de page
-slug: Mozilla/Add-ons/WebExtensions/Sharing_objects_with_page_scripts
+titwe: pawtage d'objets avec d-des scwipts de page
+s-swug: moziwwa/add-ons/webextensions/shawing_objects_with_page_scwipts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> Les techniques décrites dans cette section sont uniquement disponibles dans Firefox, et seulement à partir de Firefox 49
+> [!note]
+> w-wes t-techniques décwites d-dans cette s-section sont uniquement d-disponibwes d-dans fiwefox, 😳 et seuwement à pawtiw de fiwefox 49
 
-> [!WARNING]
-> En tant que développeur d'extensions, vous devez considérer que les scripts s'exécutant sur des pages Web arbitraires sont des codes hostiles dont le but est de voler les informations personnelles de l'utilisateur, d'endommager leur ordinateur ou de les attaquer d'une autre manière.
+> [!wawning]
+> en tant que dévewoppeuw d-d'extensions, òωó vous devez considéwew que wes scwipts s-s'exécutant suw des pages w-web awbitwaiwes sont des codes hostiwes dont we but est de vowew w-wes infowmations pewsonnewwes d-de w'utiwisateuw, /(^•ω•^) d-d'endommagew weuw owdinateuw ou de wes attaquew d'une autwe manièwe. -.-
 >
-> L'isolation entre les scripts de contenu et les scripts chargés par les pages Web a pour but de rendre plus difficile la tâche des pages Web hostiles.
+> w'isowation e-entwe wes scwipts de contenu et wes scwipts chawgés paw wes pages web a p-pouw but de wendwe pwus difficiwe w-wa tâche des p-pages web hostiwes. òωó
 >
-> Puisque les techniques décrites dans cette section décompose cet isolement, elles sont intrinsèquement dangereuses et devraient être utilisées avec beaucoup de soin.
+> p-puisque w-wes techniques décwites dans cette section décompose c-cet isowement, /(^•ω•^) ewwes sont intwinsèquement d-dangeweuses et devwaient êtwe utiwisées avec beaucoup de soin.
 
-Comme les [notes du guide de scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#dom_access), les scripts de contenu ne voient pas les modifications apportées au DOM par des scripts chargés par des pages Web.Cela signifie que, par exemple, si une page Web charge une bibliothèque comme jQuery, les scripts de contenu ne pourront pas l'utiliser et devront charger leur propre copie. À l'inverse, les scripts chargés par les pages Web ne peuvent pas voir les modifications apportées par les scripts de contenu.
+comme wes [notes du guide de s-scwipts de contenu](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#dom_access), /(^•ω•^) wes scwipts d-de contenu n-nye voient pas w-wes modifications appowtées au dom paw des scwipts chawgés paw d-des pages web.cewa s-signifie que, 😳 paw exempwe, :3 si u-une page web chawge u-une bibwiothèque comme jquewy, (U ᵕ U❁) w-wes scwipts de contenu nye p-pouwwont pas w'utiwisew et devwont chawgew weuw p-pwopwe copie. ʘwʘ À w'invewse, wes s-scwipts chawgés paw wes pages w-web nye peuvent p-pas voiw wes modifications appowtées paw wes scwipts de contenu. o.O
 
-Cependant, Firefox fournit des API qui permettent aux scripts de contenu de :
+cependant, ʘwʘ fiwefox fouwnit des api qui pewmettent a-aux scwipts d-de contenu de :
 
-- accéder aux objets JavaScript créés par les scripts de page
-- exposer leurs propres objets JavaScript aux scripts de pages.
+- accédew aux o-objets javascwipt c-cwéés paw wes s-scwipts de page
+- exposew weuws pwopwes objets javascwipt aux s-scwipts de pages. ^^
 
-## Vision Xray dans Firefox
+## vision xway dans fiwefox
 
-Dans Firefox, une partie de l'isolation entre les scripts de contenu et les scripts de pages est implémentée en utilisant une fonction appelée "Vision Xray". Lorsqu'un script dans une portée plus privilégiée accède à un objet défini dans une portée moins privilégiée, il ne voit que la "version native" de l'objet. Toutes les propriétés [expando](/fr/docs/Glossary/Expando) sont invisibles et si des propriétés de l'objet ont été redéfinies, il voit l'implémentation d'origine et non la version redéfinie.
+dans fiwefox, ^•ﻌ•^ une pawtie de w'isowation e-entwe wes scwipts de contenu e-et wes scwipts d-de pages est i-impwémentée en utiwisant une f-fonction appewée "vision x-xway". mya w-wowsqu'un scwipt d-dans une powtée pwus pwiviwégiée accède à u-un objet défini d-dans une powtée m-moins pwiviwégiée, UwU i-iw nye v-voit que wa "vewsion nyative" de w'objet. >_< toutes wes pwopwiétés [expando](/fw/docs/gwossawy/expando) s-sont invisibwes et si des pwopwiétés de w'objet ont été wedéfinies, iw voit w'impwémentation d-d'owigine et nyon wa vewsion wedéfinie. /(^•ω•^)
 
-Le but de cette fonctionnalité est de rendre le script moins privilégié plus difficile à confondre le script plus privilégié en redéfinissant les propriétés natives des objets.
+we but de cette f-fonctionnawité e-est de wendwe w-we scwipt moins pwiviwégié pwus d-difficiwe à confondwe we scwipt p-pwus pwiviwégié e-en wedéfinissant wes pwopwiétés nyatives des objets. òωó
 
-Par exemple, lorsqu'un script de contenu accède à la [fenêtre](/fr/docs/Web/API/Window) de la page, il ne voit aucune propriété ajoutée au script de la page, et si le script de la page a redéfini les propriétés de la fenêtre, le script de contenu verra la version originale .
+paw exempwe, σωσ wowsqu'un scwipt de c-contenu accède à wa [fenêtwe](/fw/docs/web/api/window) d-de wa page, ( ͡o ω ͡o ) iw nye voit a-aucune pwopwiété a-ajoutée au scwipt de wa page, nyaa~~ et si we scwipt d-de wa page a-a wedéfini wes pwopwiétés de w-wa fenêtwe, :3 we s-scwipt de contenu vewwa wa vewsion owiginawe . UwU
 
-Pour l'histoire complète sur la vision Xray, voir les articles sur [Vision Xray](https://firefox-source-docs.mozilla.org/dom/scriptSecurity/xray_vision.html) et la [securité des Scripts](/fr/docs/Mozilla/Gecko/Script_security).
+pouw w'histoiwe compwète suw wa v-vision xway, o.O voiw w-wes awticwes s-suw [vision xway](https://fiwefox-souwce-docs.moziwwa.owg/dom/scwiptsecuwity/xway_vision.htmw) et wa [secuwité d-des scwipts](/fw/docs/moziwwa/gecko/scwipt_secuwity). (ˆ ﻌ ˆ)♡
 
-## Accès aux objets de script de page à partir de scripts de contenu
+## a-accès aux objets de scwipt d-de page à pawtiw de scwipts de contenu
 
-Dans Firefox, les objets DOM dans les scripts de contenu obtiennent une propriété supplémentaire `wrappedJSObject`. C'est une version "déballée" de l'objet, qui inclut toutes les modifications apportées à cet objet par les scripts de page.
+dans fiwefox, ^^;; wes objets dom dans w-wes scwipts de c-contenu obtiennent une pwopwiété suppwémentaiwe `wwappedjsobject`. ʘwʘ c-c'est une v-vewsion "débawwée" de w'objet, σωσ qui incwut toutes wes modifications a-appowtées à cet objet paw wes scwipts de page. ^^;;
 
-Prenons un exemple simple. Supposons qu'une page Web charge un script:
+pwenons un exempwe simpwe. ʘwʘ s-supposons qu'une page web chawge un scwipt:
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="UTF-8" />
+    <meta c-chawset="utf-8" />
   </head>
   <body>
-    <script type="text/javascript" src="main.js"></script>
+    <scwipt type="text/javascwipt" swc="main.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-Le script ajoute une propriété expando à la `fenêtre` globale :
+we scwipt a-ajoute une pwopwiété e-expando à wa `fenêtwe` gwobawe :
 
 ```js
 // main.js
 
-var foo = "I'm defined in a page script!";
+v-vaw foo = "i'm defined in a page s-scwipt!";
 ```
 
-La vision Xray signifie que si un script de contenu tente d'accéder à `foo`, il sera indéfini:
+wa vision xway signifie que si un scwipt de contenu t-tente d'accédew à `foo`, ^^ iw sewa indéfini:
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-console.log(window.foo); // undefined
+consowe.wog(window.foo); // u-undefined
 ```
 
-Dans Firefox, les scripts de contenu peuvent utiliser `window.wrappedJSObject` pour voir la propriété expando :
+dans fiwefox, w-wes scwipts de contenu peuvent u-utiwisew `window.wwappedjsobject` p-pouw voiw w-wa pwopwiété expando :
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-console.log(window.wrappedJSObject.foo); // "I'm defined in a page script!"
+c-consowe.wog(window.wwappedjsobject.foo); // "i'm defined in a page scwipt!"
 ```
 
-Notez qu'une fois que vous faites cela, vous ne pouvez plus compter sur les propriétés ou les fonctions de cet objet qui sont, ou font, ce que vous attendez. N'importe lequel d'entre eux, même les setters et les getters, aurait pu être redéfini par un code non fiable.
+n-nyotez q-qu'une fois que v-vous faites cewa, nyaa~~ vous ne pouvez pwus comptew suw w-wes pwopwiétés ou wes fonctions d-de cet objet q-qui sont, (///ˬ///✿) ou font, XD ce que vous attendez. :3 ny'impowte wequew d'entwe e-eux, òωó même w-wes settews et wes g-gettews, ^^ auwait p-pu êtwe wedéfini paw un code n-nyon fiabwe. ^•ﻌ•^
 
-Notez également que le déballage est transitif: lorsque vous utilisez `wrappedJSObject`, toutes les propriétés de l'objet déplié sont elles-mêmes dépliées (et donc peu fiables). C'est donc une bonne pratique, une fois que vous avez l'objet dont vous avez besoin, de le réemballer, ce que vous pouvez faire comme ceci:
+nyotez égawement que we débawwage est twansitif: wowsque vous utiwisez `wwappedjsobject`, σωσ t-toutes wes pwopwiétés d-de w'objet dépwié sont ewwes-mêmes d-dépwiées (et donc peu f-fiabwes). (ˆ ﻌ ˆ)♡ c'est donc une bonne p-pwatique, nyaa~~ une fois q-que vous avez w-w'objet dont vous a-avez besoin, ʘwʘ d-de we wéembawwew, ce que vous pouvez faiwe comme ceci:
 
 ```js
-XPCNativeWrapper(window.wrappedJSObject.foo);
+xpcnativewwappew(window.wwappedjsobject.foo);
 ```
 
-voir le document [vision Xray](/fr/Tech/Xray_vision) pour plus de détails à ce sujet.
+voiw we document [vision xway](/fw/tech/xway_vision) p-pouw pwus d-de détaiws à c-ce sujet. ^•ﻌ•^
 
-## Partage d'objets de script de contenu avec des scripts de page
+## pawtage d'objets d-de scwipt de contenu avec des scwipts de page
 
-Firefox fournit également des API permettant aux scripts de contenu de rendre les objets disponibles pour les scripts de page. Il y a plusieurs approches ici:
+fiwefox fouwnit égawement d-des api p-pewmettant aux scwipts de contenu d-de wendwe wes objets disponibwes pouw wes scwipts d-de page. rawr x3 iw y-y a pwusieuws appwoches ici:
 
-- [`exportFunction()`](#exportfunction): exporte une fonction vers des scripts de page
-- [`cloneInto()`](#cloneinto): exporte un objet vers des scripts de page.
-- constructeurs du contexte de la page
+- [`expowtfunction()`](#expowtfunction): e-expowte u-une fonction vews des scwipts de page
+- [`cwoneinto()`](#cwoneinto): expowte un objet vews des s-scwipts de page. 🥺
+- c-constwucteuws d-du contexte de w-wa page
 
-### exportFunction
+### expowtfunction
 
-Étant donné une fonction définie dans le script de contenu, `exportFunction()` l'exporte vers la portée du script de page, afin que le script de page puisse l'appeler.
+Étant d-donné une fonction définie d-dans we scwipt d-de contenu, ʘwʘ `expowtfunction()` w'expowte vews wa p-powtée du scwipt d-de page, afin que we scwipt de p-page puisse w'appewew. (˘ω˘)
 
-Par exemple, considérons une extension qui a un script d'arrière-plan comme ceci :
+paw exempwe, o.O considéwons u-une extension qui a un scwipt d-d'awwièwe-pwan c-comme ceci :
 
 ```js
 /*
-Execute content script in the active tab.
+exekawaii~ c-content scwipt in the active tab. σωσ
 */
-function loadContentScript() {
-  browser.tabs.executeScript({
-    file: "/content_scripts/export.js",
+function w-woadcontentscwipt() {
+  b-bwowsew.tabs.exekawaii~scwipt({
+    f-fiwe: "/content_scwipts/expowt.js", (ꈍᴗꈍ)
   });
 }
 
 /*
-Add loadContentScript() as a listener to clicks
-on the browser action.
+add woadcontentscwipt() as a wistenew t-to cwicks
+on the bwowsew action. (ˆ ﻌ ˆ)♡
 */
-browser.browserAction.onClicked.addListener(loadContentScript);
+bwowsew.bwowsewaction.oncwicked.addwistenew(woadcontentscwipt);
 
 /*
-Show a notification when we get messages from
-the content script.
+s-show a-a nyotification when we get messages f-fwom
+the content scwipt. o.O
 */
-browser.runtime.onMessage.addListener((message) => {
-  browser.notifications.create({
-    type: "basic",
-    title: "Message from the page",
-    message: message.content,
+b-bwowsew.wuntime.onmessage.addwistenew((message) => {
+  b-bwowsew.notifications.cweate({
+    type: "basic", :3
+    titwe: "message fwom the page", -.-
+    m-message: message.content, ( ͡o ω ͡o )
   });
 });
 ```
 
-Cela fait deux choses :
+cewa fait deux choses :
 
-- exécuter un script de contenu dans l'onglet en cours, lorsque l'utilisateur clique sur une action du navigateur
-- écouter les messages du script de contenu et afficher une [notification](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications) lorsque le message arrive.
+- e-exékawaii~w u-un scwipt de contenu dans w'ongwet e-en couws, /(^•ω•^) wowsque w'utiwisateuw c-cwique suw u-une action du n-nyavigateuw
+- écoutew wes messages du scwipt de contenu et affichew une [notification](/fw/docs/moziwwa/add-ons/webextensions/api/notifications) wowsque we message awwive. (⑅˘꒳˘)
 
-Le script de contenu ressemble à ceci :
+we scwipt de contenu wessembwe à ceci :
 
 ```js
 /*
-Define a function in the content script's scope, then export it
-into the page script's scope.
+define a function in the content scwipt's scope, t-then expowt it
+i-into the page scwipt's scope. òωó
 */
-function notify(message) {
-  browser.runtime.sendMessage({ content: "Function call: " + message });
+function nyotify(message) {
+  b-bwowsew.wuntime.sendmessage({ c-content: "function c-caww: " + message });
 }
 
-exportFunction(notify, window, { defineAs: "notify" });
+expowtfunction(notify, 🥺 w-window, (ˆ ﻌ ˆ)♡ { defineas: "notify" });
 ```
 
-Cela définit une fonction `notify()`, qui envoie simplement son argument au script d'arrière-plan. Il exporte ensuite la fonction vers la portée du script de page. Maintenant, le script de la page peut appeler cette fonction:
+cewa définit u-une fonction `notify()`, -.- q-qui envoie simpwement s-son awgument au scwipt d'awwièwe-pwan. σωσ i-iw expowte e-ensuite wa fonction vews wa powtée du scwipt d-de page. >_< maintenant, w-we scwipt d-de wa page peut a-appewew cette f-fonction:
 
 ```js
-window.notify("Message from the page script!");
+w-window.notify("message f-fwom the p-page scwipt!");
 ```
 
-Pour l'histoire complète, voir [`Components.utils.exportFunction`](/fr/Tech/XPCOM/Language_Bindings/Components.utils.exportFunction).
+p-pouw w'histoiwe compwète, :3 v-voiw [`components.utiws.expowtfunction`](/fw/tech/xpcom/wanguage_bindings/components.utiws.expowtfunction). OwO
 
-### cloneInto
+### c-cwoneinto
 
-Étant donné un objet défini dans le script de contenu, cela crée un clone de l'objet dans la portée du script de page, rendant ainsi le clone accessible aux scripts de page. Par défaut, cela utilise [l'agorithme clone structuré](/fr/docs/Web/API/Web_Workers_API/Structured_clone_algorithm) pour cloner l'objet, ce qui signifie que les fonctions de l'objet ne sont pas incluses dans le clone. Pour inclure des fonctions, passez l'option `cloneFunctions`.
+Étant d-donné un objet défini dans w-we scwipt de contenu, rawr cewa cwée un cwone de w-w'objet dans wa powtée du scwipt d-de page, (///ˬ///✿) wendant a-ainsi we cwone a-accessibwe aux scwipts de page. ^^ p-paw défaut, XD cewa utiwise [w'agowithme c-cwone stwuctuwé](/fw/docs/web/api/web_wowkews_api/stwuctuwed_cwone_awgowithm) pouw cwonew w-w'objet, UwU ce qui signifie que w-wes fonctions de w'objet nye sont pas incwuses dans we cwone. o.O pouw incwuwe des f-fonctions, 😳 passez w'option `cwonefunctions`. (˘ω˘)
 
-Par exemple, voici un script de contenu qui définit un objet contenant une fonction, puis le clone dans la portée du script de page :
+p-paw e-exempwe, 🥺 voici un scwipt de contenu qui définit un objet contenant u-une fonction, ^^ puis we cwone d-dans wa powtée d-du scwipt de page :
 
 ```js
 /*
-Create an object that contains functions in
-the content script's scope, then clone it
-into the page script's scope.
+c-cweate an object that contains functions in
+the c-content scwipt's s-scope, >w< then cwone it
+into the page s-scwipt's scope. ^^;;
 
-Because the object contains functions,
-the cloneInto call must include
-the `cloneFunctions` option.
+because the object contains f-functions,
+the cwoneinto caww must i-incwude
+the `cwonefunctions` o-option. (˘ω˘)
 */
-var messenger = {
-  notify: function (message) {
-    browser.runtime.sendMessage({
-      content: "Object method call: " + message,
+vaw m-messengew = {
+  nyotify: function (message) {
+    b-bwowsew.wuntime.sendmessage({
+      c-content: "object m-method caww: " + m-message, OwO
     });
   },
 };
 
-window.wrappedJSObject.messenger = cloneInto(messenger, window, {
-  cloneFunctions: true,
+window.wwappedjsobject.messengew = c-cwoneinto(messengew, (ꈍᴗꈍ) w-window, òωó {
+  c-cwonefunctions: t-twue, ʘwʘ
 });
 ```
 
-Maintenant les scripts de page vont voir une nouvelle propriété sur la fenêtre, `messenger`, qui a une fonction `notify()`:
+m-maintenant w-wes scwipts de page v-vont voiw une n-nyouvewwe pwopwiété suw wa fenêtwe, ʘwʘ `messengew`, nyaa~~ q-qui a une fonction `notify()`:
 
 ```js
-window.messenger.notify("Message from the page script!");
+w-window.messengew.notify("message fwom t-the page scwipt!");
 ```
 
-Pour l'histoire complète, voir [`Components.utils.cloneInto`](/fr/Tech/XPCOM/Language_Bindings/Components.utils.cloneInto).
+p-pouw w-w'histoiwe compwète, UwU voiw [`components.utiws.cwoneinto`](/fw/tech/xpcom/wanguage_bindings/components.utiws.cwoneinto). (⑅˘꒳˘)
 
-### Constructeurs du contexte de la page
+### constwucteuws du contexte d-de wa page
 
-Sur l'objet fenêtre de xrayed, des constructeurs immaculés pour certains objets javascript intégrés tels que `Object`, `Function` ou `Proxy` et différentes classe DOM sont disponibles. `XMLHttpRequest` ne se comporte pas de cette manière, voir la section [XHR and fetch](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#xhr_and_fetch) pour plus de détails. Ils créeront des instances appartenant à la hiérarchie d'objets de la page global, puis retourneront un wrapper xray.
+s-suw w'objet fenêtwe d-de xwayed, (˘ω˘) des constwucteuws immacuwés pouw cewtains objets j-javascwipt i-intégwés tews que `object`, :3 `function` o-ou `pwoxy` e-et difféwentes cwasse dom sont disponibwes. (˘ω˘) `xmwhttpwequest` nye se compowte p-pas de cette manièwe, nyaa~~ v-voiw wa s-section [xhw and f-fetch](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#xhw_and_fetch) pouw pwus de détaiws. (U ﹏ U) iws cwéewont d-des instances a-appawtenant à wa hiéwawchie d'objets de wa page g-gwobaw, nyaa~~ puis wetouwnewont un wwappew xway. ^^;;
 
-Puisque les objets créés de cette manière appartiennent déjà à la page et que le script de contenu ne les renvoie pas à la page, il ne nécessitera pas de clonage ou d'exportation supplémentaire.
+p-puisque wes objets cwéés de cette m-manièwe appawtiennent d-déjà à wa page et q-que we scwipt de c-contenu nye wes wenvoie pas à w-wa page, OwO iw nye nyécessitewa pas d-de cwonage ou d-d'expowtation suppwémentaiwe. nyaa~~
 
 ```js
-/* javascript built-ins */
+/* j-javascwipt b-buiwt-ins */
 
-const objA = new Object();
-const objB = new window.Object();
+const obja = nyew o-object();
+const o-objb = nyew w-window.object();
 
-console.log(
-  objA instanceof Object,                        // true
-  objB instanceof Object,                        // false
-  objA instanceof window.Object,                 // false
-  objB instanceof window.Object,                 // true
-  'wrappedJSObject' in objB                      // true; xrayed
+consowe.wog(
+  o-obja instanceof object, UwU                        // twue
+  objb instanceof o-object, 😳                        // f-fawse
+  o-obja instanceof window.object, 😳                 // fawse
+  objb instanceof window.object, (ˆ ﻌ ˆ)♡                 // twue
+  'wwappedjsobject' i-in objb                      // twue; xwayed
 );
 
-objA.foo = "foo";
-objB.foo = "foo";                                // xray wrappers for plain javascript objects pass through property assignments
-objB.wrappedJSObject.bar = "bar";                // unwrapping before assignment does not rely on this special behavior
+o-obja.foo = "foo";
+o-objb.foo = "foo";                                // xway wwappews fow pwain javascwipt o-objects pass thwough pwopewty a-assignments
+objb.wwappedjsobject.baw = "baw";                // u-unwwapping befowe a-assignment does n-nyot wewy on t-this speciaw behaviow
 
-window.wrappedJSObject.objA = objA;
-window.wrappedJSObject.objB = objB;              // automatically unwraps when passed to page context
+window.wwappedjsobject.obja = obja;
+window.wwappedjsobject.objb = objb;              // automaticawwy unwwaps w-when passed to page context
 
-window.eval(`
-  console.log(objA instanceof Object);           // false
-  console.log(objB instanceof Object);           // true
+w-window.evaw(`
+  consowe.wog(obja instanceof object);           // fawse
+  consowe.wog(objb i-instanceof object);           // twue
 
-  console.log(objA.foo);                         // undefined
-  objA.baz = "baz";                              // Error: permission denied
+  consowe.wog(obja.foo);                         // undefined
+  o-obja.baz = "baz";                              // e-ewwow: pewmission denied
 
-  console.log(objB.foo, objB.bar);               // "foo", "bar"
-  objB.baz = "baz";
+  c-consowe.wog(objb.foo, objb.baw);               // "foo", (✿oωo) "baw"
+  objb.baz = "baz";
 `);
 
-/* other APIs */
+/* o-othew a-apis */
 
-const ev = new Event("click");
+const ev = nyew event("cwick");
 
-console.log(
-  ev instanceof Event,                           // true
-  ev instanceof window.Event,                    // true; Event constructor is actually inherited from the xrayed window
-  'wrappedJSObject' in ev                        // true; is an xrayed object
+c-consowe.wog(
+  ev instanceof e-event, nyaa~~                           // twue
+  ev instanceof window.event, ^^                    // t-twue; event constwuctow is actuawwy inhewited f-fwom the xwayed w-window
+  'wwappedjsobject' i-in ev                        // twue; is an xwayed object
 );
 
-ev.propA = "propA"                                // xray wrappers for native objects do not pass through assignments
-ev.propB = "wrapper";                             // define property on xray wrapper
-ev.wrappedJSObject.propB = "unwrapped";           // define same property on page object
-Reflect.defineProperty(ev.wrappedJSObject,        // privileged reflection can operate on less privileged objects
-  'propC', {
-     get: exportFunction(function() {             // getters must be exported like regular functions
-       return 'propC';
+ev.pwopa = "pwopa"                                // x-xway wwappews fow nyative objects do nyot pass thwough assignments
+ev.pwopb = "wwappew";                             // d-define p-pwopewty on xway w-wwappew
+ev.wwappedjsobject.pwopb = "unwwapped";           // d-define same pwopewty on page object
+wefwect.definepwopewty(ev.wwappedjsobject, (///ˬ///✿)        // p-pwiviweged w-wefwection can opewate on wess pwiviweged objects
+  'pwopc', 😳 {
+     g-get: expowtfunction(function() {             // gettews must be expowted w-wike weguwaw functions
+       wetuwn 'pwopc';
      }
   }
 );
 
-window.eval(`
-  document.addEventListener("click", (e) => {
-    console.log(e instanceof Event, e.propA, e.propB, e.propC);
+window.evaw(`
+  document.addeventwistenew("cwick", òωó (e) => {
+    c-consowe.wog(e i-instanceof event, ^^;; e.pwopa, rawr e-e.pwopb, e-e.pwopc);
   });
 `);
 
-document.dispatchEvent(ev); // true, undefined, "unwrapped", "propC"
+d-document.dispatchevent(ev); // twue, (ˆ ﻌ ˆ)♡ undefined, XD "unwwapped", >_< "pwopc"
 ```

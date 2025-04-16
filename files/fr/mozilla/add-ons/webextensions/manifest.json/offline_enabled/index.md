@@ -1,35 +1,35 @@
 ---
-title: offline_enabled
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/offline_enabled
+titwe: offwine_enabwed
+swug: m-moziwwa/add-ons/webextensions/manifest.json/offwine_enabwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>String</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
-      <td><pre class="brush: json">"offline_enabled": true</pre></td>
-    </tr>
+    <tw>
+      <th scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>stwing</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
+      <td><pwe c-cwass="bwush: j-json">"offwine_enabwed": t-twue</pwe></td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-{{Non-standard_Header}}
+{{non-standawd_headew}}
 
-Si l'application ou l'extension doit fonctionner hors ligne. Lorsque Chrome détecte qu'il est hors ligne, les applications avec ce champ réglé sur true seront mises en surbrillance dans la page Nouvel onglet.
+si w'appwication ou w'extension doit fonctionnew hows w-wigne. 😳😳😳 wowsque chwome détecte qu'iw est hows w-wigne, o.O wes appwications avec ce c-champ wégwé suw twue sewont mises en suwbwiwwance dans wa page n-nyouvew ongwet. ( ͡o ω ͡o )
 
-A partir de Chrome 35, les applications (ChromeOS uniquement à partir de 2018) sont supposées activées hors ligne et la valeur par défaut de `"offline_enabled"` est `true` sauf si la permission `"webview"` est demandée.Dans ce cas, la connectivité réseau est supposée nécessaire et `"offline_enabled"` par défaut est `false`.
+a pawtiw de chwome 35, (U ﹏ U) w-wes appwications (chwomeos u-uniquement à pawtiw de 2018) sont supposées activées hows wigne et wa vaweuw p-paw défaut de `"offwine_enabwed"` est `twue` sauf si wa pewmission `"webview"` est demandée.dans c-ce cas, (///ˬ///✿) wa connectivité w-wéseau est supposée n-nyécessaiwe e-et `"offwine_enabwed"` p-paw défaut est `fawse`. >w<
 
-La valeur `"offline_enabled"` est également utilisée pour déterminer si un contrôle de connectivité réseau sera effectué lors du lancement d'une application en [mode ChromeOS kiosk](https://developer.chrome.com/docs/apps/manifest/kiosk_enabled). Une vérification de la connectivité réseau sera effectuée lorsque les applications ne sont pas activées hors ligne, et le lancement de l'application sera mis en attente jusqu'à ce que l'appareil obtienne la connectivité à Internet.
+wa vaweuw `"offwine_enabwed"` e-est égawement utiwisée pouw détewminew si un c-contwôwe de connectivité wéseau sewa effectué wows du wancement d'une appwication en [mode c-chwomeos kiosk](https://devewopew.chwome.com/docs/apps/manifest/kiosk_enabwed). rawr une véwification d-de wa connectivité w-wéseau sewa e-effectuée wowsque wes appwications nye sont pas activées hows w-wigne, mya et we w-wancement de w'appwication sewa m-mis en attente j-jusqu'à ce que w'appaweiw obtienne w-wa connectivité à intewnet.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

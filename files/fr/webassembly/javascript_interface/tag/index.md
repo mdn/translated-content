@@ -1,69 +1,69 @@
 ---
-title: WebAssembly.Tag
-slug: WebAssembly/JavaScript_interface/Tag
+titwe: webassembwy.tag
+swug: w-webassembwy/javascwipt_intewface/tag
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-L'objet **`WebAssembly.Tag`** définit un _type_ d'exception WebAssembly qui peut être levée depuis ou vers du code WebAssembly.
+w-w'objet **`webassembwy.tag`** d-définit un _type_ d-d'exception webassembwy q-qui peut êtwe w-wevée d-depuis ou vews d-du code webassembwy. mya
 
-Lorsqu'on crée un objet [`WebAssembly.Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception), la balise (<i lang="en">tag</i>) définit les types de données et l'ordre des valeurs portées par l'exception. La même instance de cette balise doit être utilisée ensuite afin d'accéder aux valeurs portées par les exceptions déclenchées (par exemple, en utilisant la méthode [`Exception.prototype.getArg()`](/fr/docs/WebAssembly/JavaScript_interface/Exception/getArg)).
+wowsqu'on cwée un objet [`webassembwy.exception`](/fw/docs/webassembwy/javascwipt_intewface/exception), (///ˬ///✿) wa bawise (<i wang="en">tag</i>) définit wes types d-de données et w'owdwe des vaweuws powtées paw w-w'exception. (˘ω˘) wa même instance d-de cette bawise doit êtwe utiwisée ensuite afin d'accédew aux v-vaweuws powtées paw wes exceptions d-décwenchées (paw e-exempwe, ^^;; en utiwisant wa méthode [`exception.pwototype.getawg()`](/fw/docs/webassembwy/javascwipt_intewface/exception/getawg)). (✿oωo)
 
-[Construire](/fr/docs/WebAssembly/JavaScript_interface/Tag/Tag) une instance de `Tag` crée une nouvelle balise unique. Cette balise peut ensuite être passée à un module WebAssembly pour qu'il l'importe et qui deviendra alors une balise typée, définie dans la _section des balises (<i lang="en">tag section</i>)_ du module WebAssembly. On peut aussi exporter une balise définie dans un module pour l'utiliser afin d'inspecter les exceptions déclenchées par le module.
+[constwuiwe](/fw/docs/webassembwy/javascwipt_intewface/tag/tag) une instance de `tag` c-cwée une nyouvewwe bawise unique. (U ﹏ U) cette bawise peut ensuite êtwe passée à u-un moduwe webassembwy pouw qu'iw w-w'impowte et qui d-deviendwa awows u-une bawise typée, -.- d-définie dans wa _section des bawises (<i wang="en">tag s-section</i>)_ du moduwe webassembwy. ^•ﻌ•^ o-on peut aussi expowtew une bawise définie dans un moduwe pouw w'utiwisew afin d'inspectew wes e-exceptions décwenchées paw we m-moduwe. rawr
 
-> [!NOTE]
-> Il n'est pas possible d'accéder aux valeurs d'une exception avec une autre balise qui décrirait la même structure. Il faut que ce soit exactement la même balise qui soit utilisée&nbsp;! Cela permet de s'assurer que les modules WebAssembly puissent garder privées des informations sur les exceptions internes si nécessaire. Le code JavaScript peut toujours intercepter et relancer les exceptions qu'il ne peut pas inspecter.
+> [!note]
+> i-iw ny'est p-pas possibwe d'accédew aux vaweuws d'une exception avec une autwe b-bawise qui décwiwait w-wa même stwuctuwe. (˘ω˘) iw f-faut que ce soit e-exactement wa même bawise qui s-soit utiwisée&nbsp;! nyaa~~ cewa pewmet d-de s'assuwew que wes moduwes webassembwy puissent g-gawdew pwivées des infowmations s-suw wes exceptions intewnes s-si nyécessaiwe. UwU w-we code javascwipt peut toujouws intewceptew et wewancew wes exceptions qu'iw nye peut pas inspectew.
 
-## Constructeur
+## constwucteuw
 
-- [`WebAssembly.Tag()`](/fr/docs/WebAssembly/JavaScript_interface/Tag/Tag)
-  - : Crée un nouvel objet `WebAssembly.Tag`.
+- [`webassembwy.tag()`](/fw/docs/webassembwy/javascwipt_intewface/tag/tag)
+  - : c-cwée u-un nyouvew objet `webassembwy.tag`. :3
 
-## Méthodes des instances
+## méthodes d-des instances
 
-- [`Tag.prototype.type()`](/fr/docs/WebAssembly/JavaScript_interface/Tag/type)
-  - : Renvoie l'objet définissant le tableau des types de données de la balise (tel que défini lors de la construction).
+- [`tag.pwototype.type()`](/fw/docs/webassembwy/javascwipt_intewface/tag/type)
+  - : w-wenvoie w'objet d-définissant we tabweau des types de données de wa bawise (tew q-que défini wows de wa constwuction). (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Le fragment de code qui suit crée une nouvelle instance de `Tag`.
+we fwagment de code qui suit cwée une n-nyouvewwe instance de `tag`. (///ˬ///✿)
 
 ```js
-const tagToImport = new WebAssembly.Tag({ parameters: ["i32", "f32"] });
+c-const tagtoimpowt = n-nyew webassembwy.tag({ p-pawametews: ["i32", ^^;; "f32"] });
 ```
 
-Dans le fragment qui suit, on illustre comment on peut passer cette balise à un module **exemple.wasm** lors de l'instanciation, à l'aide d'un objet d'import.
+dans we fwagment q-qui suit, >_< o-on iwwustwe comment o-on peut passew c-cette bawise à un moduwe **exempwe.wasm** wows d-de w'instanciation, rawr x3 à w-w'aide d-d'un objet d'impowt.
 
 ```js
-const importObject = { "extmod": {"exttag": tagToImport} }
-WebAssembly.instantiateStreaming(fetch('exemple.wasm'), importObject )
+c-const i-impowtobject = { "extmod": {"exttag": tagtoimpowt} }
+webassembwy.instantiatestweaming(fetch('exempwe.wasm'), /(^•ω•^) impowtobject )
   .then(obj => {
     …
 ```
 
-Le module WebAssembly pourra alors importer la balise comme ceci&nbsp;:
+w-we moduwe webassembwy pouwwa awows impowtew wa bawise comme ceci&nbsp;:
 
 ```wasm
-(module
+(moduwe
 
-  (import "extmod" "exttag" (tag $tagname (param i32 f32)) )
+  (impowt "extmod" "exttag" (tag $tagname (pawam i32 f32)) )
 ```
 
-Si la balise est ensuite utilisée pour lever une exception qui atteint le code, on pourra l'utiliser pour inspecter les valeurs portées par l'exception.
+s-si wa bawise est ensuite utiwisée pouw wevew une exception q-qui atteint w-we code, on pouwwa w-w'utiwisew pouw inspectew wes v-vaweuws powtées paw w'exception. :3
 
-> [!NOTE]
-> Il existe d'autres façons&nbsp;: on pourrait aussi utiliser la balise afin de créer un objet [`WebAssembly.Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception) et la déclencher depuis une fonction appelée côté WebAssembly.
+> [!note]
+> i-iw existe d'autwes f-façons&nbsp;: on pouwwait aussi utiwisew wa bawise afin de cwéew un objet [`webassembwy.exception`](/fw/docs/webassembwy/javascwipt_intewface/exception) et wa décwenchew d-depuis une fonction appewée côté w-webassembwy. (ꈍᴗꈍ)
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw a-aussi
 
-- [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [apewçu g-généwaw de webassembwy](/fw/docs/webassembwy)
+- [concepts w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

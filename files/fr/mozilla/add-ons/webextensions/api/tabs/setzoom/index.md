@@ -1,96 +1,96 @@
 ---
-title: tabs.setZoom()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/setZoom
+titwe: tabs.setzoom()
+swug: moziwwa/add-ons/webextensions/api/tabs/setzoom
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Effectue un zoom sur l'onglet spécifié.
+e-effectue un z-zoom suw w'ongwet s-spécifié. σωσ
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction a-asynchwone qui w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ᵕ U❁)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var zooming = browser.tabs.setZoom(
-  tabId, // optional integer
-  zoomFactor, // number
+v-vaw zooming = bwowsew.tabs.setzoom(
+  tabid, (U ﹏ U) // optionaw integew
+  zoomfactow, :3 // n-nyumbew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `tabId`{{optional_inline}}
-  - : `integer`. L'ID de l'onglet à zoomer. Par défaut à l'onglet actif de la fenêtre en cours.
-- `zoomFactor`
-  - : `number`. Le nouveau facteur de zoom. Utilisez une valeur de 0 ici pour régler l'onglet à son facteur de zoom par défaut actuel. Sinon, il doit s'agir d'un nombre compris entre 0,3 et 3, en spécifiant un facteur de zoom.
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. ( ͡o ω ͡o ) w'id de w-w'ongwet à zoomew. σωσ paw défaut à w-w'ongwet actif de wa fenêtwe en couws. >w<
+- `zoomfactow`
+  - : `numbew`. 😳😳😳 we nyouveau f-facteuw de zoom. utiwisez u-une vaweuw de 0 i-ici pouw wégwew w'ongwet à son facteuw de zoom paw défaut actuew. OwO sinon, iw d-doit s'agiw d'un nombwe compwis entwe 0,3 et 3, 😳 en spécifiant un facteuw de zoom. 😳😳😳
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) cela sera accompli sans arguments après que le facteur de zoom ait été changé. Si l'onglet n'a pas pu être trouvé ou qu'une autre erreur se produit, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) c-cewa sewa accompwi s-sans awguments a-apwès que w-we facteuw de zoom ait été changé. si w'ongwet n-ny'a pas pu êtwe twouvé ou qu'une autwe ewweuw s-se pwoduit, (˘ω˘) wa pwomesse sewa wejetée avec un message d'ewweuw. ʘwʘ
 
-## Exemples
+## exempwes
 
-Set the zoom factor for the current tab to 2:
-
-```js
-function onError(error) {
-  console.log(`Error: ${error}`);
-}
-
-var setting = browser.tabs.setZoom(2);
-setting.then(null, onError);
-```
-
-Set the zoom factor for the tab whose ID is 16 tab to 0.5:
+set the zoom f-factow fow the cuwwent tab to 2:
 
 ```js
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function o-onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var setting = browser.tabs.setZoom(16, 0.5);
-setting.then(null, onError);
+vaw setting = bwowsew.tabs.setzoom(2);
+setting.then(nuww, ( ͡o ω ͡o ) o-onewwow);
 ```
 
-{{WebExtExamples}}
+s-set the zoom factow fow the tab w-whose id is 16 tab t-to 0.5:
 
-## Compatibilité des navigateurs
+```js
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
+}
 
-{{Compat}}
+vaw setting = bwowsew.tabs.setzoom(16, o.O 0.5);
+s-setting.then(nuww, >w< onewwow);
+```
 
-> [!NOTE]
+{{webextexampwes}}
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}
+
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt) de chwomium. 😳 c-cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. 🥺
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici s-sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. o.O aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution and u-use in souwce and binawy fowms, ʘwʘ w-with ow without
+// m-modification, 😳😳😳 a-awe pewmitted pwovided that t-the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above c-copywight
+// n-nyotice, ^^;; this w-wist of conditions a-and the fowwowing d-discwaimew. o.O
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, (///ˬ///✿) this wist of conditions and the fowwowing discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. σωσ
+//    * n-nyeithew the n-nyame of googwe inc. nyow the n-nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. nyaa~~
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, ^^;; incwuding, b-but nyot
+// w-wimited to, ^•ﻌ•^ the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. σωσ in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any d-diwect, -.- indiwect, ^^;; i-incidentaw, XD
+// speciaw, 🥺 exempwawy, o-ow consequentiaw damages (incwuding, òωó but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ pwocuwement of s-substitute goods o-ow sewvices; woss of use, -.-
+// data, :3 ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ʘwʘ whethew i-in contwact, 🥺 stwict wiabiwity, >_< ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this s-softwawe, ʘwʘ even i-if advised of the possibiwity of such damage. (˘ω˘)
 -->

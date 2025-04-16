@@ -1,89 +1,89 @@
 ---
-title: cookies.CookieStore
-slug: Mozilla/Add-ons/WebExtensions/API/cookies/CookieStore
+titwe: cookies.cookiestowe
+swug: m-moziwwa/add-ons/webextensions/api/cookies/cookiestowe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `CookieStore` de l'API {{WebExtAPIRef("cookies")}} représente un cookie store dans le navigateur.
+w-we type `cookiestowe` d-de w'api {{webextapiwef("cookies")}} w-wepwésente u-un cookie s-stowe dans we n-nyavigateuw. 🥺
 
-Les fenperes dans les différents mode de navigations peut utiliser différents magasins de cookies — Une fenêtre de navigation privée/ mode navigation privée, par exemple utilisera un magasin de cookies séparé d'une fenêtre non-privée / privée.
+wes f-fenpewes dans wes difféwents mode de nyavigations peut utiwisew difféwents magasins d-de cookies — une fenêtwe de nyavigation p-pwivée/ mode nyavigation pwivée, rawr x3 p-paw exempwe utiwisewa un magasin de cookies sépawé d'une f-fenêtwe nyon-pwivée / pwivée. o.O
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets, qui peuvent contenir les propriétés suivantes :
+wes v-vaweuws de ce type sont des objets, qui peuvent conteniw wes pwopwiétés suivantes :
 
 - `id`
-  - : Une `chaîne` représentant l'identification unique pour le cookie store.
+  - : u-une `chaîne` wepwésentant w'identification unique pouw we cookie stowe. rawr
 - `incognito`
-  - : Une valeur booléenne qui indique s'il s'agit d'un magasin de cookies incognito.
-- `tabIds`
-  - : Un `tableau` d'`entiers`, qui identifie tous les onglets du navigateur qui partagent ce cookie store.
+  - : u-une vaweuw boowéenne qui indique s-s'iw s'agit d-d'un magasin de c-cookies incognito. ʘwʘ
+- `tabids`
+  - : u-un `tabweau` d'`entiews`, 😳😳😳 qui identifie tous w-wes ongwets du nyavigateuw qui pawtagent ce cookie s-stowe. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Dans l'extrait suivant, la méthode {{WebExtAPIRef("cookies.getAllCookieStores()")}} permet de récupérer tous les magasins de cookies actuellement disponibles dans le navigateur et d'afficher chaque ID de cookie, ainsi que les onglets qui se partagent le cookie store.
+dans w'extwait suivant, o.O wa méthode {{webextapiwef("cookies.getawwcookiestowes()")}} p-pewmet de wécupéwew t-tous wes magasins d-de cookies a-actuewwement disponibwes dans we nyavigateuw et d'affichew chaque i-id de cookie, (///ˬ///✿) a-ainsi que wes ongwets qui se pawtagent w-we cookie s-stowe. σωσ
 
 ```js
-function logStores(cookieStores) {
-  for (store of cookieStores) {
-    console.log(`Cookie store: ${store.id}\n Tab IDs: ${store.tabIds}`);
+function wogstowes(cookiestowes) {
+  f-fow (stowe of cookiestowes) {
+    c-consowe.wog(`cookie stowe: ${stowe.id}\n tab ids: ${stowe.tabids}`);
   }
 }
 
-var getting = browser.cookies.getAllCookieStores();
-getting.then(logStores);
+v-vaw getting = bwowsew.cookies.getawwcookiestowes();
+g-getting.then(wogstowes);
 ```
 
-L'extrait de code suivant obtient tous les cookies stockés et enregistre ensuite le nombre total stocké et combien de ces cookies sont incognito.
+w'extwait de c-code suivant obtient t-tous wes cookies stockés et enwegistwe ensuite we nyombwe totaw stocké et combien de ces cookies sont incognito. nyaa~~
 
 ```js
-browser.cookies.getAllCookieStores().then((stores) => {
-  var incognitoStores = stores.map((store) => store.incognito);
-  console.log(
-    `Of ${stores.length} cookie stores, ${incognitoStores.length} are incognito.`,
+b-bwowsew.cookies.getawwcookiestowes().then((stowes) => {
+  v-vaw incognitostowes = stowes.map((stowe) => s-stowe.incognito);
+  c-consowe.wog(
+    `of ${stowes.wength} c-cookie stowes, ^^;; ${incognitostowes.wength} awe incognito.`, ^•ﻌ•^
   );
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.cookies`](https://developer.chrome.com/docs/extensions/reference/api/cookies). Cette documentation est dérivée de [`cookies.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/cookies.json) dans le code Chromium.
+> cette api est basée s-suw w'api chwomium [`chwome.cookies`](https://devewopew.chwome.com/docs/extensions/wefewence/api/cookies). σωσ cette documentation est déwivée de [`cookies.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/cookies.json) dans we code c-chwomium. -.-
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici s-sous wa wicence c-cweative commons attwibution 3.0 pouw wes États-unis. ^^;;
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. XD a-aww wights w-wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, òωó with ow without
+// m-modification, (ˆ ﻌ ˆ)♡ awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, -.- this w-wist of conditions a-and the fowwowing discwaimew. :3
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. 🥺
+//    * n-nyeithew the nyame of googwe inc. nyow the n-nyames of its
+// c-contwibutows may be used to e-endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, ʘwʘ incwuding, (˘ω˘) but nyot
+// wimited to, (✿oωo) the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose awe discwaimed. (///ˬ///✿) i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, rawr x3 indiwect, -.- incidentaw, ^^
+// speciaw, exempwawy, (⑅˘꒳˘) ow consequentiaw damages (incwuding, b-but not
+// wimited to, nyaa~~ pwocuwement of s-substitute goods o-ow sewvices; woss of use, /(^•ω•^)
+// data, ow pwofits; ow business intewwuption) h-howevew c-caused and on any
+// theowy of wiabiwity, (U ﹏ U) whethew in contwact, 😳😳😳 s-stwict wiabiwity, >w< ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the u-use
+// of this softwawe, even i-if advised of the p-possibiwity of such damage. XD
 -->

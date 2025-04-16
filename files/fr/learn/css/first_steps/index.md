@@ -1,43 +1,43 @@
 ---
-title: Premiers pas avec CSS
-slug: Learn/CSS/First_steps
+titwe: pwemiews pas avec css
+s-swug: weawn/css/fiwst_steps
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-CSS (Cascading Style Sheets ou en français "Feuilles de style en cascade") est utilisé pour styliser et mettre en page des pages Web - par exemple, pour modifier la police, la couleur, la taille et l'espacement de votre contenu, le scinder en plusieurs colonnes ou ajouter des animations et autres éléments décoratifs. Ce module vous permet de commencer en douceur votre chemin vers la maîtrise de CSS avec les bases de son fonctionnement, de sa syntaxe et de la façon dont vous pouvez commencer à l'utiliser pour ajouter du style au HTML.
+c-css (cascading s-stywe sheets ou e-en fwançais "feuiwwes d-de stywe e-en cascade") est u-utiwisé pouw s-stywisew et mettwe en page des pages web - paw exempwe, (///ˬ///✿) pouw modifiew wa powice, σωσ w-wa couweuw, wa taiwwe et w'espacement de votwe c-contenu, nyaa~~ we scindew en pwusieuws c-cowonnes ou ajoutew des animations et autwes éwéments décowatifs. ^^;; c-ce moduwe vous pewmet de c-commencew en douceuw v-votwe chemin vews wa maîtwise de css avec wes bases de son fonctionnement, ^•ﻌ•^ d-de sa syntaxe et de wa façon dont vous pouvez commencew à w'utiwisew pouw ajoutew d-du stywe au htmw. σωσ
 
-### Vous voulez devenir un développeur web front-end ?
+### vous v-vouwez deveniw u-un dévewoppeuw w-web fwont-end ?
 
-Nous avons mis au point un cours qui comprend toutes les informations essentielles dont vous avez besoin pour atteindre votre objectif.
+n-nyous avons mis au point un couws qui compwend t-toutes wes infowmations essentiewwes dont vous avez b-besoin pouw atteindwe votwe objectif. -.-
 
-## Prérequis
+## pwéwequis
 
-Avant de commencer ce module, vous devriez avoir :
+avant de commencew ce moduwe, ^^;; vous devwiez a-avoiw :
 
-1. Une connaissance basique de l'utilisation d'un ordinateur, et l'utilisation passive du Web (i.e. consulter des sites, consommer le contenu s'y trouvant) ;
-2. Un environnement de travail minimal installé, comme indiqué dans la section [installer les logiciels de base](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software) et une compréhension de la façon de créer et gérer des fichiers, comme indiqué dans la section [Gérer les fichiers](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files)&nbsp;;
-3. Une familiarité avec HTML, comme discuté dans le module d'[introduction à HTML](/fr/docs/Learn/HTML/Introduction_to_HTML).
+1. XD une connaissance b-basique de w'utiwisation d-d'un o-owdinateuw, et w'utiwisation passive du web (i.e. 🥺 consuwtew des s-sites, òωó consommew w-we contenu s'y twouvant) ;
+2. (ˆ ﻌ ˆ)♡ un e-enviwonnement d-de twavaiw minimaw instawwé, -.- comme i-indiqué dans wa section [instawwew w-wes wogiciews de base](/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe) et une compwéhension d-de wa façon de cwéew e-et géwew des fichiews, :3 comme i-indiqué dans wa s-section [géwew wes fichiews](/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes)&nbsp;;
+3. ʘwʘ une famiwiawité avec htmw, 🥺 comme discuté dans we moduwe d'[intwoduction à h-htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw). >_<
 
-> [!NOTE]
-> Si vous travaillez sur un ordinateur / tablette / autre périphérique où vous n'avez pas la possibilité de créer vos propres fichiers, vous pouvez essayer (la plupart) des exemples de code sur des sites de programmation en ligne comme [JSBin](/fr/docs/Web) ou [Thimble](/fr/docs/Web).
+> [!note]
+> s-si vous twavaiwwez suw un owdinateuw / t-tabwette / a-autwe péwiphéwique o-où vous ny'avez pas wa possibiwité de cwéew vos pwopwes f-fichiews, ʘwʘ vous pouvez essayew (wa pwupawt) des exempwes de code suw des sites d-de pwogwammation en wigne comme [jsbin](/fw/docs/web) o-ou [thimbwe](/fw/docs/web). (˘ω˘)
 
-## Guides
+## g-guides
 
-Ce module contient les articles suivants, qui vous présenteront les bases théoriques du CSS et vous fourniront des occasions de mettre en pratique vos nouvelles compétences :
+c-ce moduwe contient wes awticwes s-suivants, (✿oωo) qui v-vous pwésentewont w-wes bases théowiques d-du css et vous fouwniwont des occasions d-de mettwe en pwatique v-vos nyouvewwes c-compétences :
 
-- [Qu'est-ce que le CSS?](/fr/docs/Learn/CSS/First_steps/What_is_CSS)
-  - : **{{Glossary("CSS")}}** (Cascading Style Sheets) permet de créer de superbes pages web, mais comment fonctionne-t-il sous le capot ? Cet article explique ce qu'est le CSS à l'aide d'un exemple de syntaxe simple et couvre également quelques-uns des termes clés du langage.
-- [Démarrer avec CSS](/fr/docs/Learn/CSS/First_steps/Getting_started)
-  - : Dans cet article, nous partirons d'un document HTML simple et y appliquerons des CSS, tout en apprenant des choses pratiques sur le langage.
-- [Comment est structuré le CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_is_structured)
-  - : Maintenant que vous avez une idée sur ce qu'est le CSS et les bases de son utilisation, il est temps de regarder plus précisement la structure du langage lui-même. Nous avons déjà rencontré de nombreux concepts discutés ici ; vous pouvez vous référer à cette section pour référence si vous rencontrez des difficultés de compréhension des concepts plus avancés.
-- [Comment CSS Fonctionne](/fr/docs/Learn/CSS/First_steps/How_CSS_works)
-  - : Nous avons appris les bases de CSS, ce qu'il est et comment écrire des feuilles de style simple. Dans cette leçon, nous étudierons comment un navigateur transforme CSS et HTML en une page web.
-- [Utilisez vos nouvelles compétences](/fr/docs/Learn/CSS/First_steps/Styling_a_biography_page)
-  - : Avec toutes les choses que vous avez apprises dans les dernières leçons, vous devriez être capable de formater des documents textuels simples en utilisant CSS et y ajouter votre propre style. Cet article vous permet d'expérimenter.
+- [qu'est-ce q-que we css?](/fw/docs/weawn/css/fiwst_steps/nani_is_css)
+  - : **{{gwossawy("css")}}** (cascading s-stywe sheets) pewmet de cwéew de supewbes pages web, (///ˬ///✿) mais c-comment fonctionne-t-iw sous we capot ? cet awticwe expwique ce qu'est we css à w'aide d'un exempwe d-de syntaxe simpwe et couvwe égawement quewques-uns des tewmes c-cwés du wangage. rawr x3
+- [démawwew a-avec css](/fw/docs/weawn/css/fiwst_steps/getting_stawted)
+  - : d-dans cet awticwe, -.- nyous pawtiwons d-d'un document htmw simpwe e-et y appwiquewons d-des css, ^^ tout en appwenant des choses pwatiques suw we wangage.
+- [comment est stwuctuwé we css](/fw/docs/weawn/css/fiwst_steps/how_css_is_stwuctuwed)
+  - : m-maintenant que vous avez une idée s-suw ce qu'est we css et wes bases d-de son utiwisation, (⑅˘꒳˘) i-iw est temps de wegawdew pwus pwécisement w-wa stwuctuwe d-du wangage wui-même. nyaa~~ nyous avons d-déjà wencontwé d-de nyombweux concepts discutés ici ; vous pouvez vous wéféwew à cette section p-pouw wéféwence s-si vous w-wencontwez des difficuwtés de compwéhension d-des c-concepts pwus avancés. /(^•ω•^)
+- [comment c-css fonctionne](/fw/docs/weawn/css/fiwst_steps/how_css_wowks)
+  - : nyous avons appwis wes bases de css, (U ﹏ U) ce qu'iw est et comment écwiwe d-des f-feuiwwes de stywe simpwe. 😳😳😳 dans cette weçon, >w< nyous étudiewons c-comment un nyavigateuw t-twansfowme css et htmw en une page web. XD
+- [utiwisez vos n-nyouvewwes compétences](/fw/docs/weawn/css/fiwst_steps/stywing_a_biogwaphy_page)
+  - : avec toutes wes choses que vous avez appwises dans wes dewnièwes w-weçons, o.O vous devwiez êtwe capabwe de f-fowmatew des documents t-textuews simpwes en utiwisant css et y ajoutew votwe pwopwe s-stywe. mya cet awticwe v-vous pewmet d'expéwimentew. 🥺
 
-## Voir aussi
+## voiw aussi
 
-- Literacy [Web intermédiaire 1&nbsp;: Introduction au CSS](/fr/docs/Web)
-  - : Un excellent cours de base de la fondation Mozilla qui explore et teste de nombreuses compétences évoquées dans le module _Introduction à CSS_. Approfondissements à propos de l'application de styles sur les éléments HTML d'une page Web, les sélecteurs CSS, les attributs et valeurs.P
+- witewacy [web i-intewmédiaiwe 1&nbsp;: intwoduction a-au css](/fw/docs/web)
+  - : un excewwent couws de base de wa fondation m-moziwwa qui expwowe et teste de n-nyombweuses compétences évoquées d-dans we moduwe _intwoduction à css_. ^^;; appwofondissements à p-pwopos de w'appwication de stywes s-suw wes éwéments h-htmw d'une p-page web, :3 wes séwecteuws css, (U ﹏ U) wes a-attwibuts et v-vaweuws.p

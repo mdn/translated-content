@@ -1,98 +1,98 @@
 ---
-title: sessions
-slug: Mozilla/Add-ons/WebExtensions/API/sessions
+titwe: sessions
+swug: moziwwa/add-ons/webextensions/api/sessions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez l'API de sessions pour lister et restaurer, les onglets et les fenêtres qui ont été fermés pendant que le navigateur fonctionne.
+u-utiwisez w-w'api de sessions p-pouw wistew e-et westauwew, (ˆ ﻌ ˆ)♡ w-wes ongwets et wes f-fenêtwes qui o-ont été fewmés p-pendant que we nyavigateuw fonctionne. ^^;;
 
-La fonction {{WebExtAPIRef("sessions.getRecentlyClosed()")}} renvoie un tableau de {{WebExtAPIRef("tabs.Tab")}} et les objets {{WebExtAPIRef("windows.Window")}}, représente les onglets et les fenêtres qui ont été fermées depuis le fonctionnement du navigateur, jusqu'au maximum défini dans {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}.
+wa fonction {{webextapiwef("sessions.getwecentwycwosed()")}} wenvoie un tabweau de {{webextapiwef("tabs.tab")}} e-et wes objets {{webextapiwef("windows.window")}}, (⑅˘꒳˘) wepwésente w-wes ongwets et wes fenêtwes q-qui ont été fewmées depuis we fonctionnement du nyavigateuw, rawr x3 j-jusqu'au maximum défini dans {{webextapiwef("sessions.max_session_wesuwts")}}. (///ˬ///✿)
 
-Vous pouvez ensuite restaurer une fenêtre ou un onglet en utilisant la fonction {{WebExtAPIRef("sessions.restore()")}}. il restaure également l'historique de navigation de l'onglet, de sorte que les boutons arrière / avant fonctionnent.
+v-vous pouvez e-ensuite westauwew une fenêtwe ou un ongwet en utiwisant wa fonction {{webextapiwef("sessions.westowe()")}}. 🥺 iw westauwe égawement w-w'histowique de nyavigation de w'ongwet, >_< de sowte que wes boutons awwièwe / a-avant fonctionnent. UwU
 
-Cette API fournit également un groupe de fonctions permettant à une extension de stocker un état supplémentaire associé à un onglet ou une fenêtre. Ensuite, si l'onglet ou la fenêtre est fermé et restauré ultérieurement, l'extension peut récupérer l'état. Par exemple, une extension de groupe d'onglets peut l'utiliser pour se souvenir du groupe dans lequel se trouve un onglet, afin de le restaurer dans le bon groupe si l'utilisateur restaure l'onglet.
+cette api f-fouwnit égawement u-un gwoupe d-de fonctions pewmettant à u-une extension de stockew un état suppwémentaiwe a-associé à un ongwet ou une fenêtwe. >_< e-ensuite, -.- si w'ongwet ou wa fenêtwe est fewmé et westauwé uwtéwieuwement, mya w'extension peut w-wécupéwew w'état. >w< paw exempwe, (U ﹏ U) u-une extension d-de gwoupe d'ongwets p-peut w'utiwisew pouw se souveniw du gwoupe dans wequew se t-twouve un ongwet, 😳😳😳 a-afin de we westauwew dans we bon g-gwoupe si w'utiwisateuw w-westauwe w'ongwet. o.O
 
-Pour utiliser l'API des sessions, vous devez avoir la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) de "sessions".
+pouw u-utiwisew w'api des sessions, òωó v-vous devez avoiw wa [pewmission api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) d-de "sessions". 😳😳😳
 
-## Types
+## types
 
-- {{WebExtAPIRef("sessions.Filter")}}
-  - : Permet de restreindre le nombre de {{WebExtAPIRef("sessions.Session", "Session")}} objets retournés par un appel à {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
-- {{WebExtAPIRef("sessions.Session")}}
-  - : Représente un onglet ou une fenêtre que l'utilisateur a fermé dans la session de navigation actuelle.
+- {{webextapiwef("sessions.fiwtew")}}
+  - : p-pewmet de westweindwe w-we nyombwe de {{webextapiwef("sessions.session", σωσ "session")}} o-objets wetouwnés paw un appew à {{webextapiwef("sessions.getwecentwycwosed()")}}. (⑅˘꒳˘)
+- {{webextapiwef("sessions.session")}}
+  - : wepwésente un ongwet ou une fenêtwe que w'utiwisateuw a fewmé dans wa session d-de nyavigation a-actuewwe. (///ˬ///✿)
 
-## Propriétés
+## pwopwiétés
 
-- {{WebExtAPIRef("sessions.MAX_SESSION_RESULTS")}}
-  - : Le nombre maximum de sessions qui seront retournées par un appel à [`sessions.getRecentlyClosed()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/sessions/getRecentlyClosed).
+- {{webextapiwef("sessions.max_session_wesuwts")}}
+  - : w-we nyombwe m-maximum de sessions q-qui sewont wetouwnées paw un appew à [`sessions.getwecentwycwosed()`](/fw/docs/moziwwa/add-ons/webextensions/api/sessions/getwecentwycwosed). 🥺
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("sessions.forgetClosedTab()")}}
-  - : Supprime un onglet fermé de la liste des onglets récemment fermés du navigateur.
-- {{WebExtAPIRef("sessions.forgetClosedWindow()")}}
-  - : Supprime une fenêtre fermée de la liste des fenêtres récemment fermées du navigateur.
-- {{WebExtAPIRef("sessions.getRecentlyClosed()")}}
-  - : Renvoie un tableau d'objets {{WebExtAPIRef("sessions.Session", "Session")}}, représentant des fenêtres et des onglets qui ont été fermés dans la session de navigation actuelle (c'est-à-dire l'heure écoulée depuis le démarrage du navigateur).
-- {{WebExtAPIRef("sessions.restore()")}}
-  - : Restaure un onglet ou une fenêtre fermée.
-- {{WebExtAPIRef("sessions.setTabValue()")}}
-  - : Stocke une paire clé/valeur associée à un onglet donné.
-- {{WebExtAPIRef("sessions.getTabValue()")}}
-  - : Récupérer une valeur précédemment enregistrée pour un onglet donné, compte tenu de sa clé.
-- {{WebExtAPIRef("sessions.removeTabValue()")}}
-  - : Supprimer une paire clé/valeur d'un onglet donné.
-- {{WebExtAPIRef("sessions.setWindowValue()")}}
-  - : Stocke une paire clé/valeur associée à une fenêtre donnée.
-- {{WebExtAPIRef("sessions.getWindowValue()")}}
-  - : Récupérer une valeur précédemment enregistrée pour une fenêtre donnée, compte tenu de sa clé.
-- {{WebExtAPIRef("sessions.removeWindowValue()")}}
-  - : Supprime une paire clé/valeur d'une fenêtre données.
+- {{webextapiwef("sessions.fowgetcwosedtab()")}}
+  - : s-suppwime un ongwet fewmé de wa wiste des ongwets wécemment fewmés d-du navigateuw. OwO
+- {{webextapiwef("sessions.fowgetcwosedwindow()")}}
+  - : suppwime u-une fenêtwe f-fewmée de wa wiste d-des fenêtwes wécemment fewmées d-du nyavigateuw. >w<
+- {{webextapiwef("sessions.getwecentwycwosed()")}}
+  - : w-wenvoie un tabweau d-d'objets {{webextapiwef("sessions.session", 🥺 "session")}}, w-wepwésentant des fenêtwes et des o-ongwets qui ont été f-fewmés dans w-wa session de n-nyavigation actuewwe (c'est-à-diwe w-w'heuwe écouwée depuis we démawwage du nyavigateuw). nyaa~~
+- {{webextapiwef("sessions.westowe()")}}
+  - : westauwe u-un ongwet ou une fenêtwe fewmée. ^^
+- {{webextapiwef("sessions.settabvawue()")}}
+  - : stocke une paiwe cwé/vaweuw associée à un ongwet donné. >w<
+- {{webextapiwef("sessions.gettabvawue()")}}
+  - : w-wécupéwew une vaweuw pwécédemment enwegistwée pouw u-un ongwet donné, OwO c-compte tenu d-de sa cwé. XD
+- {{webextapiwef("sessions.wemovetabvawue()")}}
+  - : suppwimew une p-paiwe cwé/vaweuw d'un ongwet donné.
+- {{webextapiwef("sessions.setwindowvawue()")}}
+  - : s-stocke u-une paiwe cwé/vaweuw associée à une fenêtwe donnée. ^^;;
+- {{webextapiwef("sessions.getwindowvawue()")}}
+  - : wécupéwew une vaweuw pwécédemment e-enwegistwée pouw une fenêtwe d-donnée, 🥺 compte tenu de sa c-cwé. XD
+- {{webextapiwef("sessions.wemovewindowvawue()")}}
+  - : s-suppwime une paiwe cwé/vaweuw d'une fenêtwe données. (U ᵕ U❁)
 
-## Evénements
+## e-evénements
 
-- {{WebExtAPIRef("sessions.onChanged")}}
-  - : Mise en place lorsqu'un onglet ou une fenêtre est fermée.
+- {{webextapiwef("sessions.onchanged")}}
+  - : m-mise en pwace wowsqu'un o-ongwet ou une fenêtwe e-est fewmée. :3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
+> cette api est basée s-suw w'api chwomium [`chwome.sessions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/sessions).
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à m-micwosoft edge sont f-fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. ( ͡o ω ͡o )
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. òωó aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, (U ᵕ U❁) with ow without
+// modification, (✿oωo) a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// n-notice, ^^ this wist of conditions and the fowwowing discwaimew. ^•ﻌ•^
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// copywight nyotice, XD this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. :3
+//    * nyeithew t-the nyame of g-googwe inc. (ꈍᴗꈍ) nyow the nyames of i-its
+// contwibutows may be used t-to endowse ow pwomote p-pwoducts d-dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (U ﹏ U) i-incwuding, UwU but nyot
+// wimited t-to, 😳😳😳 the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. XD i-in nyo e-event shaww the c-copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, o.O indiwect, (⑅˘꒳˘) incidentaw,
+// speciaw, 😳😳😳 exempwawy, nyaa~~ ow consequentiaw damages (incwuding, rawr b-but nyot
+// wimited to, -.- pwocuwement o-of substitute goods ow sewvices; w-woss of use, (✿oωo)
+// data, ow pwofits; o-ow business intewwuption) h-howevew caused a-and on any
+// theowy o-of wiabiwity, /(^•ω•^) w-whethew in contwact, 🥺 s-stwict wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// of this softwawe, UwU e-even if advised o-of the possibiwity o-of such damage. XD
 -->

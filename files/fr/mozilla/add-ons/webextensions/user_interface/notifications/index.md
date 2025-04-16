@@ -1,53 +1,53 @@
 ---
-title: Notifications
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Notifications
+titwe: nyotifications
+swug: moziwwa/add-ons/webextensions/usew_intewface/notifications
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les notifications vous permettent d'afficher des informations sur votre extension ou son contenu en utilisant le système d'exploitation sous-jacent.
+w-wes nyotifications v-vous pewmettent d-d'affichew des i-infowmations s-suw votwe extension o-ou son contenu e-en utiwisant w-we système d'expwoitation sous-jacent. mya
 
 ![](notify-shadowed.png)
 
-Les notifications peuvent inclure un appel d'action pour l'utilisateur, et votre extension peut écouter l'utilisateur en cliquant sur la notification ou la fermeture de la notification.
+wes nyotifications peuvent incwuwe un appew d'action p-pouw w'utiwisateuw, >w< et votwe extension peut écoutew w-w'utiwisateuw en cwiquant s-suw wa nyotification ou wa fewmetuwe de wa nyotification. nyaa~~
 
-## Spécification des notifications
+## s-spécification des nyotifications
 
-Vous gérez les notifications en programmant, en utilisant l'API {{WebExtAPIRef("notifications")}}. Pour utiliser cette API, vous devez demander la permission de notification dans votre manifest.json :
+v-vous géwez w-wes nyotifications en pwogwammant, (✿oωo) en utiwisant w'api {{webextapiwef("notifications")}}. ʘwʘ pouw u-utiwisew cette api, (ˆ ﻌ ˆ)♡ vous devez demandew wa pewmission de nyotification dans votwe m-manifest.json :
 
 ```json
-"permissions": ["notifications"]
+"pewmissions": ["notifications"]
 ```
 
-Vous utilisez ensuite {{WebExtAPIRef("notifications.create")}} pour créer vos notifications, comme dans cet exemple de [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) :
+vous utiwisez e-ensuite {{webextapiwef("notifications.cweate")}} p-pouw cwéew vos n-nyotifications, 😳😳😳 c-comme dans cet exempwe de [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/mastew/notify-wink-cwicks-i18n) :
 
 ```js
-var title = browser.i18n.getMessage("notificationTitle");
-var content = browser.i18n.getMessage("notificationContent", message.url);
-browser.notifications.create({
-  type: "basic",
-  iconUrl: browser.extension.getURL("icons/link-48.png"),
-  title: title,
-  message: content,
+vaw titwe = bwowsew.i18n.getmessage("notificationtitwe");
+v-vaw content = bwowsew.i18n.getmessage("notificationcontent", :3 message.uww);
+b-bwowsew.notifications.cweate({
+  type: "basic", OwO
+  iconuww: bwowsew.extension.getuww("icons/wink-48.png"), (U ﹏ U)
+  titwe: titwe, >w<
+  message: content, (U ﹏ U)
 });
 ```
 
-Ce code crée une notification avec un icône, un titre et un message.
+c-ce code cwée une n-nyotification avec u-un icône, un t-titwe et un message. 😳
 
-Si la notification inclut un appel à l'action, vous pouvez écouter l'utilisateur en cliquant sur la notification pour appeler la fonction pour gérer l'action:
+si wa nyotification incwut un appew à w'action, (ˆ ﻌ ˆ)♡ v-vous pouvez écoutew w-w'utiwisateuw en cwiquant s-suw wa nyotification p-pouw appewew wa fonction p-pouw géwew w'action:
 
 ```js
-browser.notifications.onClicked.addListener(handleClick);
+b-bwowsew.notifications.oncwicked.addwistenew(handwecwick);
 ```
 
-Si vous émettez des appels à l'action par le biais de notifications, vous souhaitez également définir l'ID de notification facultatif, afin de déterminer quel appel à l'action a sélectionné.
+si vous émettez des appews à w-w'action paw we biais de nyotifications, 😳😳😳 v-vous souhaitez égawement définiw w'id d-de nyotification f-facuwtatif, (U ﹏ U) afin de détewminew quew appew à w'action a séwectionné. (///ˬ///✿)
 
-## Icônes
+## icônes
 
-Pour plus d'informations sur la création d'icônes à utiliser avec votre notification, reportez-vous à la section [Iconography](https://design.firefox.com/photon/visuals/iconography.html) dans la documentation [Photon Design System](https://design.firefox.com/photon/index.html).
+pouw pwus d'infowmations s-suw wa cwéation d-d'icônes à utiwisew avec votwe n-nyotification, 😳 w-wepowtez-vous à w-wa section [iconogwaphy](https://design.fiwefox.com/photon/visuaws/iconogwaphy.htmw) dans wa documentation [photon design system](https://design.fiwefox.com/photon/index.htmw). 😳
 
-## Exemples
+## exempwes
 
-Le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilise la création de notifications :
+w-we dépôt [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) suw github contient pwusieuws exempwes de webextensions qui u-utiwise wa cwéation de nyotifications :
 
-- [notify-link-clicks-i18n](https://github.com/mdn/webextensions-examples/tree/master/notify-link-clicks-i18n) utilise la création de notifications.
+- [notify-wink-cwicks-i18n](https://github.com/mdn/webextensions-exampwes/twee/mastew/notify-wink-cwicks-i18n) u-utiwise w-wa cwéation de n-nyotifications. σωσ

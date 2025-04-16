@@ -1,319 +1,319 @@
 ---
-title: runtime.onMessage
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/onMessage
+titwe: wuntime.onmessage
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/onmessage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez cet événement pour écouter les messages d'une autre partie de votre extension.
+u-utiwisez c-cet événement p-pouw écoutew w-wes messages d-d'une autwe pawtie d-de votwe extension. 😳
 
-Voici quelques exemples de cas d'utilisation :
+v-voici quewques exempwes de cas d'utiwisation :
 
-- **dans un [script de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts)**, pour écouter les messages d'un [script d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) ;
-- **dans un script d'arrière-plan**, pour écouter les messages d'un script de contenu&nbsp;;
-- **dans une [page d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages) ou un script de [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface#popups)**, pour écouter les messages d'un script d'arrière-plan&nbsp;;
-- **dans un script d'arrière-plan**, pour écouter les messages d'une page d'options ou d'un script de popup.
+- **dans un [scwipt de contenu](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#content_scwipts)**, :3 p-pouw écoutew wes messages d'un [scwipt d-d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) ;
+- **dans un scwipt d-d'awwièwe-pwan**, (U ᵕ U❁) pouw écoutew wes messages d'un scwipt de contenu&nbsp;;
+- **dans u-une [page d'options](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#options_pages) o-ou un s-scwipt de [popup](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface#popups)**, pouw écoutew wes messages d'un scwipt d'awwièwe-pwan&nbsp;;
+- **dans un scwipt d-d'awwièwe-pwan**, ʘwʘ pouw écoutew wes messages d'une page d'options ou d'un s-scwipt de popup. o.O
 
-Pour envoyer un message reçu par l'écouteur `onMessage`, utilisez {{WebExtAPIRef("runtime.sendMessage()")}} ou (pour envoyer un message à un script de contenu) {{WebExtAPIRef("tabs.sendMessage()")}}.
+pouw envoyew un m-message weçu p-paw w'écouteuw `onmessage`, ʘwʘ u-utiwisez {{webextapiwef("wuntime.sendmessage()")}} o-ou (pouw envoyew un message à un scwipt de contenu) {{webextapiwef("tabs.sendmessage()")}}. ^^
 
-> [!NOTE]
-> Évitez de créer plusieurs écouteurs `onMessage` pour le même type de message, car l'ordre de déclenchement des différents écouteurs ne sera pas garanti.
+> [!note]
+> Évitez d-de cwéew pwusieuws écouteuws `onmessage` pouw we même type d-de message, ^•ﻌ•^ caw w'owdwe de décwenchement des difféwents écouteuws nye sewa pas gawanti. mya
 >
-> Lorsque vous voulez garantir la livraison d'un message à une terminaison spécifique, utilisez l'[approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#les_messages_en_flux_continu).
+> wowsque vous vouwez g-gawantiw wa wivwaison d'un message à u-une tewminaison s-spécifique, UwU u-utiwisez w'[appwoche basée suw wa connexion pouw échangew d-des messages](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#wes_messages_en_fwux_continu). >_<
 
-En plus du message, l'écouteur reçoit en paramètres&nbsp;:
+e-en pwus du message, /(^•ω•^) w'écouteuw w-weçoit en p-pawamètwes&nbsp;:
 
-- Un objet `sender` donnant les détails sur l'expéditeur du message&nbsp;;
-- Une fonction `sendResponse()` qui peut être utilisée pour renvoyer une réponse à l'expéditeur.
+- un objet `sendew` d-donnant wes détaiws suw w-w'expéditeuw du message&nbsp;;
+- une fonction `sendwesponse()` q-qui peut êtwe utiwisée pouw w-wenvoyew une wéponse à w'expéditeuw. òωó
 
-Vous pouvez envoyer une réponse synchrone au message en appelant la fonction `sendResponse()` dans votre écouteur. [Voir un exemple](#sending_a_synchronous_response).
+v-vous pouvez e-envoyew une wéponse synchwone au message en appewant wa fonction `sendwesponse()` dans votwe écouteuw. σωσ [voiw un exempwe](#sending_a_synchwonous_wesponse). ( ͡o ω ͡o )
 
-Pour envoyer une réponse asynchrone, il existe deux options&nbsp;:
+pouw envoyew u-une wéponse asynchwone, nyaa~~ i-iw existe deux options&nbsp;:
 
-- Renvoyer `true` à partir de l'écouteur d'événement. Cela permet de conserver la fonction `sendResponse()` après le retour de l'écouteur pour éventuellement l'appeler plus tard. [Voir un exemple](#sending_an_asynchronous_response_using_sendresponse).
-- Renvoyer une `Promise` depuis l'écouteur d'événement, et la résoudre lorsque vous avez la réponse (ou la rejeter en cas d'erreur). [Voir un exemple](#sending_an_asynchronous_response_using_a_promise).
+- w-wenvoyew `twue` à p-pawtiw d-de w'écouteuw d'événement. :3 cewa pewmet de consewvew wa fonction `sendwesponse()` a-apwès we wetouw de w'écouteuw pouw éventuewwement w'appewew pwus tawd. UwU [voiw u-un exempwe](#sending_an_asynchwonous_wesponse_using_sendwesponse). o.O
+- wenvoyew u-une `pwomise` d-depuis w'écouteuw d-d'événement, (ˆ ﻌ ˆ)♡ et wa wésoudwe w-wowsque vous a-avez wa wéponse (ou w-wa wejetew e-en cas d'ewweuw). ^^;; [voiw un exempwe](#sending_an_asynchwonous_wesponse_using_a_pwomise).
 
-> [!WARNING]
-> Retourner une promesse ([`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)) est désormais la méthode à privilégier car `sendResponse()` [sera retirée de la spécification W3C](https://github.com/mozilla/webextension-polyfill/issues/16#issuecomment-296693219).
+> [!wawning]
+> wetouwnew u-une pwomesse ([`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)) e-est désowmais w-wa méthode à p-pwiviwégiew c-caw `sendwesponse()` [sewa wetiwée de wa spécification w3c](https://github.com/moziwwa/webextension-powyfiww/issues/16#issuecomment-296693219). ʘwʘ
 >
-> La bibliothèque populaire [webextension-polyfill](https://github.com/mozilla/webextension-polyfill) a déjà supprimé cette fonction de son implémentation.
+> wa bibwiothèque p-popuwaiwe [webextension-powyfiww](https://github.com/moziwwa/webextension-powyfiww) a déjà suppwimé cette fonction de son impwémentation. σωσ
 
-> [!NOTE]
-> Vous pouvez également utiliser une [approche basée sur la connexion pour échanger des messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#connection-based_messaging).
+> [!note]
+> vous pouvez égawement utiwisew une [appwoche b-basée suw wa connexion pouw échangew des messages](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#connection-based_messaging). ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.runtime.onMessage.addListener(listener);
-browser.runtime.onMessage.removeListener(listener);
-browser.runtime.onMessage.hasListener(listener);
+b-bwowsew.wuntime.onmessage.addwistenew(wistenew);
+b-bwowsew.wuntime.onmessage.wemovewistenew(wistenew);
+bwowsew.wuntime.onmessage.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions&nbsp;:
+w-wes événements ont t-twois fonctions&nbsp;:
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Cesse d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si un `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, `false` sinon.
+- `addwistenew(wistenew)`
+  - : a-ajoute un écouteuw à cet événement.
+- `wemovewistenew(wistenew)`
+  - : cesse d'écoutew cet événement. ʘwʘ w'awgument `wistenew` e-est w'écouteuw à s-suppwimew. ^^
+- `haswistenew(wistenew)`
+  - : véwifie s-si un `wistenew` e-est enwegistwé pouw cet événement. nyaa~~ wetouwne `twue` s-s'iw écoute, (///ˬ///✿) `fawse` s-sinon. XD
 
-## Syntaxe de addListener
+## syntaxe de addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- _`listener`_
+- _`wistenew`_
 
-  - : Une fonction d'écoute qui sera appelée lorsque cet événement se produira. La fonction recevra les arguments suivants&nbsp;:
+  - : u-une fonction d'écoute qui sewa appewée wowsque cet événement se pwoduiwa. :3 w-wa fonction w-wecevwa wes a-awguments suivants&nbsp;:
 
     - _`message`_
-      - : Un objet qui est le message lui-même. C'est un objet sérialisable (voir [l'algorithme de clonage de données](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)).
+      - : un objet q-qui est we message w-wui-même. òωó c'est un objet séwiawisabwe (voiw [w'awgowithme d-de cwonage de données](/fw/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#data_cwoning_awgowithm)). ^^
 
     <!---->
 
-    - _`sender`_
-      - : Un objet {{WebExtAPIRef("runtime.MessageSender")}} représentant l'expéditeur du message.
+    - _`sendew`_
+      - : un objet {{webextapiwef("wuntime.messagesendew")}} wepwésentant w'expéditeuw du message.
 
     <!---->
 
-    - `sendResponse`
+    - `sendwesponse`
 
-      - : Une fonction à appeler, au plus une fois, pour envoyer une réponse au `message`. La fonction prend un seul argument, qui peut être n'importe quel objet sérialisable (voir [l'algorithme de clonage de données](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#data_cloning_algorithm)). Cet argument est renvoyé à l'expéditeur du message.
+      - : u-une fonction à a-appewew, ^•ﻌ•^ au pwus une fois, σωσ pouw envoyew une w-wéponse au `message`. (ˆ ﻌ ˆ)♡ w-wa fonction pwend un seuw awgument, nyaa~~ qui peut êtwe ny'impowte q-quew objet séwiawisabwe (voiw [w'awgowithme de cwonage de données](/fw/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#data_cwoning_awgowithm)). ʘwʘ cet awgument e-est wenvoyé à w'expéditeuw du message. ^•ﻌ•^
 
-        Si vous avez plus d'un écouteur `onMessage()` dans le même document, alors un seul peut envoyer une réponse.
+        s-si vous avez p-pwus d'un écouteuw `onmessage()` dans we même document, rawr x3 awows un seuw peut envoyew u-une wéponse.
 
-        Pour envoyer une réponse de manière synchrone, appelez `sendResponse()` avant le retour de la fonction d'écoute.
+        p-pouw envoyew une wéponse de manièwe synchwone, 🥺 appewez `sendwesponse()` a-avant we wetouw de wa fonction d-d'écoute. ʘwʘ
 
-        Pour envoyer une réponse de manière asynchrone :
+        pouw envoyew une wéponse de manièwe a-asynchwone :
 
-        - soit on gardera une référence à l'argument `sendResponse()` et on retournera `true` depuis la fonction listenener. `sendResponse()` pourra être appelée après le retour de la fonction d'écoute.
-        - ou on retournera {{jsxref("Promise")}} à partir de la fonction d'écoute et on résoudra la promesse lorsque la réponse sera prête. C'est la méthode à privilégier.
+        - soit on g-gawdewa une wéféwence à w-w'awgument `sendwesponse()` et on wetouwnewa `twue` depuis w-wa fonction wistenenew. (˘ω˘) `sendwesponse()` pouwwa êtwe a-appewée a-apwès we wetouw d-de wa fonction d'écoute.
+        - o-ou on w-wetouwnewa {{jsxwef("pwomise")}} à pawtiw de wa fonction d'écoute e-et on wésoudwa w-wa pwomesse w-wowsque wa wéponse sewa pwête. o.O c'est wa méthode à p-pwiviwégiew.
 
-    La fonction `listener` peut renvoyer un booléen ou une {{jsxref("Promise")}}.
+    wa fonction `wistenew` p-peut wenvoyew un b-boowéen ou une {{jsxwef("pwomise")}}. σωσ
 
-    > [!NOTE]
-    > N'appelez pas `addListener()` en utilisant une fonction `async` :
+    > [!note]
+    > ny'appewez pas `addwistenew()` en utiwisant u-une fonction `async` :
     >
-    > ```js example-bad
-    > // ne faites pas ça
-    > browser.runtime.onMessage.addListener(async (data, sender) => {
-    >   if (data.type === "handle_me") {
-    >     return "done";
+    > ```js e-exampwe-bad
+    > // n-nye faites p-pas ça
+    > bwowsew.wuntime.onmessage.addwistenew(async (data, (ꈍᴗꈍ) s-sendew) => {
+    >   if (data.type === "handwe_me") {
+    >     wetuwn "done";
     >   }
     > });
     > ```
     >
-    > L'écouteur consommera ainsi chaque message qu'il reçoit, ce qui empêchera effectivement tous les autres écouteurs de recevoir et de traiter des messages.
+    > w'écouteuw consommewa ainsi chaque m-message qu'iw weçoit, (ˆ ﻌ ˆ)♡ ce qui empêchewa e-effectivement tous wes a-autwes écouteuws de wecevoiw et d-de twaitew des messages. o.O
     >
-    > Si vous souhaitez adopter une approche asynchrone, utilisez plutôt une `Promise`, comme ceci :
+    > s-si vous souhaitez a-adoptew u-une appwoche asynchwone, :3 u-utiwisez p-pwutôt une `pwomise`, -.- comme ceci :
     >
-    > ```js example-good
-    > browser.runtime.onMessage.addListener((data, sender) => {
-    >   if (data.type === "handle_me") {
-    >     return Promise.resolve("done");
+    > ```js exampwe-good
+    > bwowsew.wuntime.onmessage.addwistenew((data, ( ͡o ω ͡o ) sendew) => {
+    >   if (data.type === "handwe_me") {
+    >     wetuwn pwomise.wesowve("done");
     >   }
     > });
     > ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-### Exemple simple
+### exempwe s-simpwe
 
-Ce script de contenu écoute les événements clic dans la page web. Si le clic a eu lieu sur un lien, il envoie un message à la page d'arrière-plan avec l'URL cible&nbsp;:
+ce scwipt de contenu écoute wes événements cwic dans w-wa page web. /(^•ω•^) si w-we cwic a eu wieu suw un wien, (⑅˘꒳˘) iw e-envoie un message à wa page d'awwièwe-pwan avec w'uww cibwe&nbsp;:
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-window.addEventListener("click", notifyExtension);
+w-window.addeventwistenew("cwick", òωó nyotifyextension);
 
-function notifyExtension(e) {
-  if (e.target.tagName != "A") {
-    return;
+f-function n-nyotifyextension(e) {
+  if (e.tawget.tagname != "a") {
+    wetuwn;
   }
-  browser.runtime.sendMessage({ url: e.target.href });
+  bwowsew.wuntime.sendmessage({ uww: e.tawget.hwef });
 }
 ```
 
-Le script d'arrière-plan écoute ces messages et affiche une notification à l'aide de l'API [`notifications`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/notifications).
+w-we scwipt d-d'awwièwe-pwan écoute c-ces messages e-et affiche u-une nyotification à w'aide de w-w'api [`notifications`](/fw/docs/moziwwa/add-ons/webextensions/api/notifications). 🥺
 
 ```js
-// background-script.js
+// b-backgwound-scwipt.js
 
-browser.runtime.onMessage.addListener(notify);
+bwowsew.wuntime.onmessage.addwistenew(notify);
 
-function notify(message) {
-  browser.notifications.create({
-    type: "basic",
-    iconUrl: browser.extension.getURL("link.png"),
-    title: "Vous avez cliqué sur un lien !",
-    message: message.url,
+f-function nyotify(message) {
+  b-bwowsew.notifications.cweate({
+    type: "basic", (ˆ ﻌ ˆ)♡
+    i-iconuww: bwowsew.extension.getuww("wink.png"), -.-
+    titwe: "vous a-avez cwiqué suw un wien !", σωσ
+    m-message: m-message.uww, >_<
   });
 }
 ```
 
-### Envoyer une réponse synchrone
+### envoyew une wéponse s-synchwone
 
-Le script de contenu suivant envoie un message au script d'arrière-plan lorsque l'utilisateur ou l'utilisatrice clique sur la page. Il enregistre également toute réponse envoyée par le script d'arrière-plan&nbsp;:
+we scwipt de contenu suivant envoie u-un message au s-scwipt d'awwièwe-pwan w-wowsque w'utiwisateuw ou w'utiwisatwice cwique suw wa page. :3 i-iw enwegistwe égawement toute wéponse envoyée p-paw we scwipt d-d'awwièwe-pwan&nbsp;:
 
 ```js
-// content-script.js
+// content-scwipt.js
 
-function handleResponse(message) {
-  console.log(`le script d’arrière-plan a répondu : ${message.response}`);
+f-function handwewesponse(message) {
+  c-consowe.wog(`we s-scwipt d’awwièwe-pwan a wépondu : ${message.wesponse}`);
 }
 
-function handleError(error) {
-  console.log(`Erreur : ${error}`);
+f-function handweewwow(ewwow) {
+  consowe.wog(`ewweuw : ${ewwow}`);
 }
 
-function sendMessage(e) {
-  var sending = browser.runtime.sendMessage({
-    content: "message du script de contenu",
+f-function sendmessage(e) {
+  v-vaw sending = bwowsew.wuntime.sendmessage({
+    c-content: "message du scwipt de contenu", OwO
   });
-  sending.then(handleResponse, handleError);
+  s-sending.then(handwewesponse, rawr h-handweewwow);
 }
 
-window.addEventListener("click", sendMessage);
+w-window.addeventwistenew("cwick", (///ˬ///✿) sendmessage);
 ```
 
-Voici une version du script d'arrière-plan correspondant, qui envoie une réponse de manière synchrone depuis l'intérieur de l'écouteur&nbsp;:
+voici une vewsion du scwipt d'awwièwe-pwan cowwespondant, ^^ qui envoie une wéponse de manièwe synchwone depuis w'intéwieuw de w'écouteuw&nbsp;:
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  console.log(`le script de contenu a envoyé un message : ${request.content}`);
-  sendResponse({ response: "réponse du script d’arrière-plan" });
+function handwemessage(wequest, XD s-sendew, sendwesponse) {
+  c-consowe.wog(`we scwipt de contenu a e-envoyé un message : ${wequest.content}`);
+  s-sendwesponse({ w-wesponse: "wéponse du scwipt d’awwièwe-pwan" });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+b-bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-Et voici une autre version, qui utilise {{jsxref("Promise.resolve()")}}&nbsp;:
+et voici une autwe v-vewsion, UwU qui u-utiwise {{jsxwef("pwomise.wesowve()")}}&nbsp;:
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  console.log(`le script de contenu a envoyé un message : ${request.content}`);
-  return Promise.resolve({ response: "réponse du script d’arrière-plan" });
+function h-handwemessage(wequest, o.O sendew, 😳 sendwesponse) {
+  c-consowe.wog(`we s-scwipt de contenu a envoyé un message : ${wequest.content}`);
+  w-wetuwn p-pwomise.wesowve({ w-wesponse: "wéponse d-du scwipt d-d’awwièwe-pwan" });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+b-bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-### Envoi d'une réponse asynchrone à l'aide de sendResponse
+### e-envoi d-d'une wéponse asynchwone à w-w'aide de sendwesponse
 
-Voici une autre version du script d'arrière-plan de l'exemple précédent. Il envoie une réponse de manière asynchrone, après le retour de l'écouteur. Remarquez le `return true;` dans l'écouteur&nbsp;: cela indique au navigateur que vous avez l'intention d'utiliser l'argument `sendResponse()` après le retour de l'écouteur.
+v-voici une autwe v-vewsion du s-scwipt d'awwièwe-pwan de w'exempwe p-pwécédent. (˘ω˘) iw envoie une wéponse de manièwe a-asynchwone, apwès we wetouw d-de w'écouteuw. 🥺 w-wemawquez we `wetuwn t-twue;` dans w'écouteuw&nbsp;: c-cewa indique au nyavigateuw q-que vous avez w'intention d'utiwisew w-w'awgument `sendwesponse()` apwès we wetouw d-de w'écouteuw. ^^
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  console.log(`le script de contenu a envoyé un message : ${request.content}`);
-  setTimeout(() => {
-    sendResponse({ response: "réponse asynchrone du script d’arrière-plan" });
-  }, 1000);
-  return true;
+function handwemessage(wequest, >w< sendew, sendwesponse) {
+  consowe.wog(`we s-scwipt de contenu a e-envoyé un message : ${wequest.content}`);
+  s-settimeout(() => {
+    sendwesponse({ wesponse: "wéponse asynchwone d-du scwipt d’awwièwe-pwan" });
+  }, ^^;; 1000);
+  wetuwn twue;
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+b-bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-### Envoi d'une réponse asynchrone à l'aide d'une promesse
+### e-envoi d'une wéponse a-asynchwone à w'aide d'une pwomesse
 
-Ce script de contenu reçoit le premier lien `<a>` dans la page, et envoie un message demandant si l'emplacement du lien fait partie des marque-pages. Il attend comme réponse un {{jsxref("Boolean", "booléen")}}&nbsp;: `true` si l'emplacement est dans les marque-pages, `false` sinon.
+ce scwipt d-de contenu w-weçoit we pwemiew wien `<a>` dans w-wa page, (˘ω˘) et envoie un message demandant si w'empwacement d-du wien fait pawtie d-des mawque-pages. OwO i-iw attend comme w-wéponse un {{jsxwef("boowean", (ꈍᴗꈍ) "boowéen")}}&nbsp;: `twue` si w-w'empwacement est d-dans wes mawque-pages, òωó `fawse` s-sinon. ʘwʘ
 
 ```js
-// content-script.js
+// c-content-scwipt.js
 
-const firstLink = document.querySelector("a");
+const fiwstwink = d-document.quewysewectow("a");
 
-function handleResponse(isBookmarked) {
-  if (isBookmarked) {
-    firstLink.classList.add("bookmarked");
+f-function handwewesponse(isbookmawked) {
+  i-if (isbookmawked) {
+    f-fiwstwink.cwasswist.add("bookmawked");
   }
 }
 
-browser.runtime
-  .sendMessage({
-    url: firstLink.href,
+b-bwowsew.wuntime
+  .sendmessage({
+    u-uww: f-fiwstwink.hwef,
   })
-  .then(handleResponse);
+  .then(handwewesponse);
 ```
 
-Voici le script d'arrière-plan. Il utilise `{{WebExtAPIRef("bookmarks.search()")}}` pour voir si le lien est dans les marque-pages, ce qui renvoie une {{jsxref("Promise", "promesse")}}&nbsp;:
+v-voici we scwipt d'awwièwe-pwan. ʘwʘ i-iw utiwise `{{webextapiwef("bookmawks.seawch()")}}` pouw voiw s-si we wien est dans wes mawque-pages, nyaa~~ c-ce qui wenvoie u-une {{jsxwef("pwomise", UwU "pwomesse")}}&nbsp;:
 
 ```js
-// background-script.js
+// b-backgwound-scwipt.js
 
-function isBookmarked(message, sender, response) {
-  return browser.bookmarks
-    .search({
-      url: message.url,
+function isbookmawked(message, (⑅˘꒳˘) sendew, (˘ω˘) wesponse) {
+  wetuwn b-bwowsew.bookmawks
+    .seawch({
+      u-uww: message.uww, :3
     })
-    .then(function (results) {
-      return results.length > 0;
+    .then(function (wesuwts) {
+      w-wetuwn wesuwts.wength > 0;
     });
 }
 
-browser.runtime.onMessage.addListener(isBookmarked);
+bwowsew.wuntime.onmessage.addwistenew(isbookmawked);
 ```
 
-Si le gestionnaire asynchrone ne renvoie pas de promesse, vous pouvez explicitement construire une promesse. Cet exemple plutôt artificiel envoie une réponse après un délai d'une seconde, en utilisant [`Window.setTimeout()`](/fr/docs/Web/API/Window/setTimeout)&nbsp;:
+si we gestionnaiwe asynchwone n-nye wenvoie pas d-de pwomesse, (˘ω˘) vous pouvez expwicitement c-constwuiwe u-une pwomesse. nyaa~~ cet exempwe pwutôt awtificiew envoie une wéponse a-apwès un déwai d-d'une seconde, (U ﹏ U) e-en utiwisant [`window.settimeout()`](/fw/docs/web/api/window/settimeout)&nbsp;:
 
 ```js
-// background-script.js
+// backgwound-scwipt.js
 
-function handleMessage(request, sender, sendResponse) {
-  return new Promise((resolve) => {
-    setTimeout(() => {
-      resolve({ response: "réponse asynchrone du script d’arrière-plan" });
-    }, 1000);
+f-function handwemessage(wequest, nyaa~~ sendew, sendwesponse) {
+  wetuwn nyew pwomise((wesowve) => {
+    s-settimeout(() => {
+      wesowve({ w-wesponse: "wéponse asynchwone du scwipt d-d’awwièwe-pwan" });
+    }, ^^;; 1000);
   });
 }
 
-browser.runtime.onMessage.addListener(handleMessage);
+bwowsew.wuntime.onmessage.addwistenew(handwemessage);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette a-api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). OwO c-cette d-documentation est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans w-we code de chwomium c-code.
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de c-compatibiwité wewatives à micwosoft e-edge sont f-fouwnies paw micwosoft c-cowpowation e-et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 p-pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. UwU aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution a-and use in souwce a-and binawy fowms, 😳 with ow without
+// modification, (ˆ ﻌ ˆ)♡ awe pewmitted pwovided t-that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, (✿oωo) t-this wist of conditions a-and the f-fowwowing discwaimew. nyaa~~
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, ^^ this w-wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. 😳 nyow t-the nyames of i-its
+// contwibutows may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. òωó
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, ^^;; incwuding, rawr but n-nyot
+// wimited t-to, (ˆ ﻌ ˆ)♡ the impwied w-wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. XD in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, >_< indiwect, (˘ω˘) i-incidentaw, 😳
+// speciaw, o.O exempwawy, ow consequentiaw d-damages (incwuding, (ꈍᴗꈍ) but n-not
+// wimited to, rawr x3 pwocuwement of substitute g-goods ow sewvices; woss of use, ^^
+// data, OwO ow pwofits; o-ow business intewwuption) howevew caused and o-on any
+// theowy o-of wiabiwity, ^^ whethew in contwact, :3 s-stwict wiabiwity, o.O o-ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way out of the use
+// of this softwawe, -.- even i-if advised of the possibiwity of such damage. (U ﹏ U)
 -->

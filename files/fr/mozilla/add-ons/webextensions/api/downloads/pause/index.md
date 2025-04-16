@@ -1,83 +1,83 @@
 ---
-title: downloads.pause()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/pause
+titwe: downwoads.pause()
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/pause
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`pause()`** de l'API {{WebExtAPIRef("downloads")}} interrompt un téléchargement.
+w-wa fonction **`pause()`** d-de w'api {{webextapiwef("downwoads")}} i-intewwompt u-un téwéchawgement. (˘ω˘)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est u-une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). nyaa~~
 
-## Syntaxe
+## syntaxe
 
 ```js
-var pausing = browser.downloads.pause(
-  downloadId, // integer
+vaw pausing = bwowsew.downwoads.pause(
+  d-downwoadid, UwU // integew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `downloadId`
-  - : Un `integer` représetant l'`id` du téléchargement à mettre en pause.
+- `downwoadid`
+  - : u-un `integew` wepwésetant w'`id` d-du téwéchawgement à mettwe en pause. :3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si l'appel a réussi, le téléchargement sera mis en pause et la promesse sera satisfaite sans aucun argument. Si l'appel échoue, la promesse sera rejetée avec un message d'erreur. L'appel échouera si le téléchargement n'est pas actif: par exemple, parce qu'il a fini le téléchargement.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘) si w'appew a wéussi, (///ˬ///✿) w-we téwéchawgement s-sewa mis en pause et wa pwomesse sewa satisfaite sans aucun awgument. ^^;; si w-w'appew échoue, >_< wa pwomesse sewa wejetée avec un message d'ewweuw. rawr x3 w'appew échouewa s-si we téwéchawgement ny'est pas actif: p-paw exempwe, /(^•ω•^) pawce q-qu'iw a fini w-we téwéchawgement. :3
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
 ```js
-function onPaused() {
-  console.log(`Paused download`);
+f-function onpaused() {
+  consowe.wog(`paused d-downwoad`);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var pausing = browser.downloads.pause(downloadId);
-pausing.then(onPaused, onError);
+vaw pausing = bwowsew.downwoads.pause(downwoadid);
+pausing.then(onpaused, (ꈍᴗꈍ) onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> c-cette api est basée suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. aww wights wesewved. ( ͡o ω ͡o )
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and b-binawy fowms, òωó with ow without
+// m-modification, (⑅˘꒳˘) awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain t-the above c-copywight
+// nyotice, XD this wist o-of conditions and t-the fowwowing d-discwaimew. -.-
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, :3 this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. nyaa~~
+//    * nyeithew the nyame o-of googwe inc. 😳 n-nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten p-pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, nyaa~~ incwuding, OwO but nyot
+// wimited to, rawr x3 the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe d-discwaimed. XD in n-nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, σωσ i-indiwect, (U ᵕ U❁) incidentaw, (U ﹏ U)
+// speciaw, :3 exempwawy, ow consequentiaw damages (incwuding, ( ͡o ω ͡o ) but not
+// w-wimited to, σωσ pwocuwement of substitute g-goods ow sewvices; woss of u-use, >w<
+// data, 😳😳😳 ow p-pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, OwO whethew in c-contwact, 😳 stwict w-wiabiwity, 😳😳😳 ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, (˘ω˘) e-even if advised of the possibiwity o-of such d-damage.

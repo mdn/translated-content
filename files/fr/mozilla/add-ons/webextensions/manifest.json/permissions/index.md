@@ -1,183 +1,183 @@
 ---
-title: permissions
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/permissions
+titwe: pewmissions
+swug: moziwwa/add-ons/webextensions/manifest.json/pewmissions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Tableau</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>tabweau</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"permissions": [
-  "*://developer.mozilla.org/*",
-  "webRequest"
-]</pre
+        <pwe cwass="bwush: j-json">
+"pewmissions": [
+  "*://devewopew.moziwwa.owg/*", (˘ω˘)
+  "webwequest"
+]</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé `permissions` pour demander des pouvoirs spéciaux pour votre extension. Cette clé est un ensemble de chaînes, et chaque chaîne est une demande d'autorisation.
+u-utiwisez wa cwé `pewmissions` p-pouw demandew des pouvoiws spéciaux pouw votwe extension. UwU cette cwé est un ensembwe d-de chaînes, >_< et chaque chaîne est une demande d-d'autowisation. σωσ
 
-Si vous demandez des autorisations avec cette clé, le navigateur peut informer l'utilisateur, au moment de l'installation, que l'extension demande certains privilèges, et lui demande de confirmer qu'il est d'accord. Le navigateur peut également permettre à l'utilisateur d'inspecter les privilèges d'une extension après l'installation.
+si vous demandez d-des autowisations avec cette cwé, we nyavigateuw peut infowmew w-w'utiwisateuw, 🥺 au moment d-de w'instawwation, 🥺 q-que w'extension demande cewtains pwiviwèges, ʘwʘ et wui demande de confiwmew qu'iw e-est d'accowd. :3 we nyavigateuw peut égawement pewmettwe à w'utiwisateuw d'inspectew w-wes pwiviwèges d'une extension a-apwès w'instawwation.
 
-Comme la demande d'octroi de privilèges peut avoir un impact sur la volonté des utilisateurs d'installer votre extension, la demande de privilèges mérite une attention particulière. Par exemple, vous voulez éviter de demander des permissions inutiles et vous voudrez peut-être fournir des informations sur la raison pour laquelle vous demandez des permissions dans la description du magasin de votre extension. Vous trouverez plus d'informations sur les questions que vous devez prendre en compte dans l'article [Demander les bonnes permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/Request_the_right_permissions).
+comme w-wa demande d-d'octwoi de pwiviwèges p-peut avoiw un impact suw wa vowonté des u-utiwisateuws d'instawwew votwe extension, (U ﹏ U) wa demande d-de pwiviwèges méwite une attention pawticuwièwe. (U ﹏ U) paw exempwe, ʘwʘ vous vouwez évitew de demandew d-des pewmissions inutiwes e-et vous voudwez p-peut-êtwe fouwniw d-des infowmations suw wa waison pouw waquewwe vous demandez des p-pewmissions dans w-wa descwiption du magasin de v-votwe extension. >w< v-vous twouvewez pwus d'infowmations s-suw wes questions que vous devez p-pwendwe en compte dans w'awticwe [demandew wes bonnes pewmissions](/fw/docs/moziwwa/add-ons/webextensions/wequest_the_wight_pewmissions). rawr x3
 
-La clé peut contenir trois types d'autorisations:
+w-wa cwé peut conteniw twois types d-d'autowisations:
 
-- Les permissions d'hôte
-- Les permissions API
-- La permission activeTab
+- wes pewmissions d-d'hôte
+- w-wes pewmissions api
+- wa pewmission activetab
 
-## Les permissions d'hôte
+## wes pewmissions d'hôte
 
-Les permissions d'hôte sont spécifiées comme [modèles de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns), et chaque modèle identifie un groupe d'URL pour lequel l'extension demande des privilèges supplémentaires. Par exemple, une autorisation d'hôte pourrait être `"*://developer.mozilla.org/*"`.
+wes pewmissions d'hôte sont spécifiées c-comme [modèwes d-de cowwespondance](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns), OwO et chaque modèwe i-identifie un gwoupe d-d'uww pouw w-wequew w'extension demande des pwiviwèges suppwémentaiwes. paw e-exempwe, ^•ﻌ•^ une autowisation d'hôte pouwwait êtwe `"*://devewopew.moziwwa.owg/*"`. >_<
 
-Les privilèges supplémentaires incluent :
+wes pwiviwèges suppwémentaiwes i-incwuent :
 
-- [XMLHttpRequest](/fr/docs/Web/API/XMLHttpRequest) et l'accès [fetch](/fr/docs/Web/API/Fetch_API) à ces origines sans restrictions d'origine croisée (même pour les demandes faites à partir de scripts de contenu)
-- La possibilité d'injecter des scripts par programme (à l'aide de [tabs.executeScript](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript)) dans les pages issues de ces origines
-- La possibilité de recevoir des événements de l'API [webRequest](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest) pour ces hôtes
-- La possibilité d'accéder aux cookies de cet hôte à l'aide de l'API [cookies](/fr/docs/Mozilla/Add-ons/WebExtensions/API/cookies), tant que la permission de cet API est également incluse.
-- Contourne la protection de suivi si l'hôte est un domaine complet sans caractères génériques. Ne fonctionne pas avec \<all_urls>.
+- [xmwhttpwequest](/fw/docs/web/api/xmwhttpwequest) et w'accès [fetch](/fw/docs/web/api/fetch_api) à c-ces owigines s-sans westwictions d-d'owigine cwoisée (même p-pouw wes demandes f-faites à pawtiw d-de scwipts d-de contenu)
+- wa possibiwité d'injectew des scwipts p-paw pwogwamme (à w-w'aide de [tabs.exekawaii~scwipt](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt)) d-dans w-wes pages issues d-de ces owigines
+- wa possibiwité de wecevoiw des événements d-de w'api [webwequest](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest) pouw ces hôtes
+- wa possibiwité d'accédew aux cookies de cet hôte à w-w'aide de w'api [cookies](/fw/docs/moziwwa/add-ons/webextensions/api/cookies), OwO tant que wa pewmission de c-cet api est égawement i-incwuse. >_<
+- c-contouwne wa pwotection de suivi s-si w'hôte est un domaine compwet s-sans cawactèwes g-généwiques. (ꈍᴗꈍ) nye fonctionne pas avec \<aww_uwws>. >w<
 
-Dans Firefox, à partir de la version 56, les extensions reçoivent automatiquement les permissions d'hôte pour leur propre origine, qui se présentent sous la forme :
+dans fiwefox, (U ﹏ U) à pawtiw de wa vewsion 56, ^^ w-wes extensions weçoivent automatiquement w-wes pewmissions d'hôte p-pouw weuw p-pwopwe owigine, (U ﹏ U) qui se pwésentent sous wa fowme :
 
 ```
-moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+m-moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 
-Où `60a20a9b-1ad4-af49-9b6c-c64c98c37920` est l'ID interne de l'extension. L'extension peut obtenir cette URL par programmation en appelant [extension.getURL()](/fr/docs/Mozilla/Add-ons/WebExtensions/API/extension/getURL):
+o-où `60a20a9b-1ad4-af49-9b6c-c64c98c37920` est w-w'id intewne de w-w'extension. :3 w'extension peut obteniw cette uww paw pwogwammation en appewant [extension.getuww()](/fw/docs/moziwwa/add-ons/webextensions/api/extension/getuww):
 
 ```js
-browser.extension.getURL("");
-// moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
+b-bwowsew.extension.getuww("");
+// m-moz-extension://60a20a9b-1ad4-af49-9b6c-c64c98c37920/
 ```
 
-## Les permissions API
+## w-wes pewmissions api
 
-Les autorisations API sont spécifiées comme des mots-clés, et chaque mot clé nomme une [API WebExtension](/fr/docs/Web) que l'extension souhaite utiliser.
+wes a-autowisations a-api sont spécifiées comme des m-mots-cwés, (✿oωo) et chaque mot cwé nyomme une [api webextension](/fw/docs/web) que w'extension souhaite u-utiwisew. XD
 
-Les mots clés suivants sont actuellement disponibles:
+wes m-mots cwés suivants sont actuewwement disponibwes:
 
-- `activeTab`
-- `alarms`
-- `background`
-- `bookmarks`
-- `browserSettings`
-- `browsingData`
-- `clipboardRead`
-- `clipboardWrite`
-- `contentSettings`
-- `contextMenus`
-- `contextualIdentities`
+- `activetab`
+- `awawms`
+- `backgwound`
+- `bookmawks`
+- `bwowsewsettings`
+- `bwowsingdata`
+- `cwipboawdwead`
+- `cwipboawdwwite`
+- `contentsettings`
+- `contextmenus`
+- `contextuawidentities`
 - `cookies`
-- `debugger`
+- `debuggew`
 - `dns`
-- `downloads`
-- `downloads.open`
+- `downwoads`
+- `downwoads.open`
 - `find`
-- `geolocation`
-- `history`
+- `geowocation`
+- `histowy`
 - `identity`
-- `idle`
+- `idwe`
 - `management`
 - `menus`
-- `menus.overrideContext`
-- `nativeMessaging`
+- `menus.ovewwidecontext`
+- `nativemessaging`
 - `notifications`
-- `pageCapture`
+- `pagecaptuwe`
 - `pkcs11`
-- `privacy`
-- `proxy`
-- `search`
+- `pwivacy`
+- `pwoxy`
+- `seawch`
 - `sessions`
-- `storage`
-- `tabHide`
+- `stowage`
+- `tabhide`
 - `tabs`
 - `theme`
-- `topSites`
-- `unlimitedStorage`
-- `webNavigation`
-- `webRequest`
-- `webRequestBlocking`
+- `topsites`
+- `unwimitedstowage`
+- `webnavigation`
+- `webwequest`
+- `webwequestbwocking`
 
-Dans la plupart des cas, la permission accorde uniquement l'accès à l'API, avec les exceptions suivantes :
+d-dans wa p-pwupawt des cas, >w< wa pewmission accowde uniquement w'accès à w-w'api, òωó avec wes exceptions suivantes :
 
-- `tabs` vous permet d'accéder aux [parties privilégiées des API de l'onglet](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs) : `Tab.url`, `Tab.title`, et `Tab.faviconUrl`. Dans Firefox, vous avez également besoin de `tabs` si vous souhaitez inclure `url` dans le paramètre `queryInfo` dans [`tabs.query()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/query). Le reste de l'API `tabs` peut être utilisé sans demander aucune permission.
-- `webRequestBlocking` vous permet d'utiliser l'argument "blocage", afin que vous puissiez [modifier et annuler les requêtes](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest).
-- `downloads.open` vous permet d'utiliser l'API {{WebExtAPIRef("downloads.open()")}}.
-- `tabHide` vous permet d'utiliser l'API {{WebExtAPIRef("tabs.hide()")}}.
+- `tabs` vous pewmet d'accédew aux [pawties pwiviwégiées d-des api de w'ongwet](/fw/docs/moziwwa/add-ons/webextensions/api/tabs) : `tab.uww`, (ꈍᴗꈍ) `tab.titwe`, rawr x3 et `tab.faviconuww`. rawr x3 dans fiwefox, σωσ v-vous avez égawement b-besoin de `tabs` si vous souhaitez incwuwe `uww` dans w-we pawamètwe `quewyinfo` d-dans [`tabs.quewy()`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/quewy). (ꈍᴗꈍ) we weste de w'api `tabs` peut êtwe utiwisé s-sans demandew aucune pewmission. rawr
+- `webwequestbwocking` vous p-pewmet d'utiwisew w'awgument "bwocage", ^^;; afin que vous puissiez [modifiew e-et annuwew wes wequêtes](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest). rawr x3
+- `downwoads.open` v-vous pewmet d'utiwisew w-w'api {{webextapiwef("downwoads.open()")}}. (ˆ ﻌ ˆ)♡
+- `tabhide` vous pewmet d'utiwisew w-w'api {{webextapiwef("tabs.hide()")}}. σωσ
 
-## Permission activeTab
+## pewmission activetab
 
-Cette autorisation est spécifiée comme " `activeTab` " (_onglet actif_). Si une extension possède la permission `activeTab` , lorsque l'utilisateur interagit avec l'extension, celle-ci reçoit des privilèges supplémentaires uniquement pour l'onglet actif.
+c-cette autowisation e-est s-spécifiée comme " `activetab` " (_ongwet actif_). (U ﹏ U) s-si une extension p-possède wa pewmission `activetab` , >w< wowsque w-w'utiwisateuw i-intewagit avec w'extension, σωσ c-cewwe-ci weçoit des pwiviwèges suppwémentaiwes u-uniquement pouw w'ongwet a-actif. nyaa~~
 
-"L'interaction utilisateur" comprend :
+"w'intewaction u-utiwisateuw" compwend :
 
-- L'utilisateur clique sur l'action du navigateur de l'extension ou sur l'action de la page
-- L'utilisateur sélectionne un élément de son menu contextuel
-- L'utilisateur active un raccourci clavier défini par l'extension
+- w'utiwisateuw cwique suw w-w'action du nyavigateuw d-de w'extension o-ou suw w-w'action de wa page
+- w'utiwisateuw s-séwectionne un éwément de son menu contextuew
+- w'utiwisateuw active un waccouwci cwaview d-défini paw w'extension
 
-Les privilèges supplémentaires sont les suivants :
+wes pwiviwèges s-suppwémentaiwes sont w-wes suivants :
 
-- La capacité d'injecter du JavaScript ou du CSS dans l'onglet par programme, en utilisant [`browser.tabs.executeScript`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/executeScript) et [`browser.tabs.insertCSS`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS)
-- L'accès aux parties privilégiées des onglets de l'API pour l'onglet actuel : Tab.url, Tab.title et Tab.faviconUrl.
+- wa capacité d'injectew d-du javascwipt ou du css d-dans w'ongwet p-paw pwogwamme, 🥺 en u-utiwisant [`bwowsew.tabs.exekawaii~scwipt`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/exekawaii~scwipt) e-et [`bwowsew.tabs.insewtcss`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss)
+- w-w'accès aux pawties pwiviwégiées des ongwets de w'api pouw w'ongwet actuew : tab.uww, tab.titwe et t-tab.faviconuww. rawr x3
 
-L'objectif de cette permission est de permettre aux extensions de réaliser une utilisation courante, sans avoir à leur accorder de permissions très puissantes. Beaucoup d'extensions veulent "faire quelque chose à la page courante quand l'utilisateur le demande". Par exemple, considérez une extension qui veut exécuter un script dans la page courante quand l'utilisateur clique sur une action de navigateur. Si la permission `activeTab` n'existait pas, l'extension devrait demander une permission d'hôte \<all_urls>. Mais cela donnerait à l'extension plus de puissance que nécessaire : elle pourrait désormais exécuter des scripts dans n'importe quel onglet, à tout moment, plutôt que simplement dans l'onglet actif et juste en réponse à une action de l'utilisateur.
+w-w'objectif de c-cette pewmission est de pewmettwe a-aux extensions de wéawisew une utiwisation couwante, σωσ sans avoiw à w-weuw accowdew d-de pewmissions twès puissantes. (///ˬ///✿) b-beaucoup d'extensions veuwent "faiwe quewque c-chose à wa page c-couwante quand w'utiwisateuw w-we demande". (U ﹏ U) paw e-exempwe, ^^;; considéwez une extension qui veut exékawaii~w un scwipt dans wa page c-couwante quand w-w'utiwisateuw cwique s-suw une action d-de nyavigateuw. 🥺 s-si wa pewmission `activetab` ny'existait pas, òωó w-w'extension devwait d-demandew une pewmission d'hôte \<aww_uwws>. XD m-mais cewa donnewait à w-w'extension pwus de puissance q-que nyécessaiwe : ewwe pouwwait désowmais e-exékawaii~w des scwipts dans n-ny'impowte quew o-ongwet, :3 à tout moment, (U ﹏ U) pwutôt q-que simpwement dans w'ongwet actif et juste en w-wéponse à une a-action de w'utiwisateuw. >w<
 
-Notez que vous ne pouvez accéder qu'à l'onglet ou aux données qui s'y trouvaient au moment de l'interaction de l'utilisateur (par exemple le clic). Lorsque l'onglet actif s'éloigne, par exemple en raison d'un chargement terminé ou d'un autre événement, l'autorisation ne vous donne plus accès à l'onglet.
+n-nyotez que vous nye pouvez accédew qu'à w'ongwet ou a-aux données qui s'y twouvaient au moment de w'intewaction d-de w'utiwisateuw (paw e-exempwe we cwic). /(^•ω•^) wowsque w'ongwet a-actif s'éwoigne, (⑅˘꒳˘) paw exempwe e-en waison d'un c-chawgement tewminé ou d'un autwe événement, ʘwʘ w'autowisation n-nye vous donne pwus accès à w'ongwet. rawr x3
 
-Habituellement, l'onglet qui est accordé à `activeTab` est juste l'onglet actuellement actif, sauf dans un cas. L'API [`menus`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/menus) permet à une extension de créer un élément de menu qui s'affiche lorsque le contexte utilisateur clique sur un onglet (c'est-à-dire sur l'élément de l'onglet qui permet à l'utilisateur de passer d'un onglet à un autre). Si l'utilisateur clique sur un tel élément, la permission `activeTab` est accordée pour l'onglet sur lequel l'utilisateur a cliqué, même s'il ne s'agit pas de l'onglet actuellement actif (A partir de Firefox 63, [bug Firefox 1446956](https://bugzil.la/1446956)).
+habituewwement, (˘ω˘) w-w'ongwet q-qui est accowdé à `activetab` est juste w'ongwet a-actuewwement actif, o.O sauf dans u-un cas. 😳 w'api [`menus`](/fw/docs/moziwwa/add-ons/webextensions/api/menus) p-pewmet à u-une extension de cwéew un éwément de menu qui s'affiche wowsque we contexte utiwisateuw cwique suw un ongwet (c'est-à-diwe suw w'éwément de w'ongwet qui pewmet à w'utiwisateuw de passew d'un ongwet à u-un autwe). o.O s-si w'utiwisateuw cwique suw un tew éwément, ^^;; w-wa pewmission `activetab` e-est accowdée p-pouw w'ongwet suw wequew w-w'utiwisateuw a cwiqué, ( ͡o ω ͡o ) même s-s'iw nye s'agit p-pas de w'ongwet actuewwement actif (a p-pawtiw de fiwefox 63, ^^;; [bug f-fiwefox 1446956](https://bugziw.wa/1446956)). ^^;;
 
-## Accès au presse-papiers
+## a-accès au pwesse-papiews
 
-Il existe deux permissions qui permettent aux extensions d'interagir avec le Presse-papiers :
+iw existe deux pewmissions q-qui pewmettent a-aux extensions d-d'intewagiw a-avec we pwesse-papiews :
 
-- `clipboardWrite`: écrivez dans le presse-papiers à l'aide de {{DOMxRef("Clipboard.write()")}}, {{DOMxRef("Clipboard.writeText()")}}, `document.execCommand("copy")` ou `document.execCommand("cut")`
-- `clipboardRead`: lisez le presse-papiers à l'aide de {{DOMxRef("Clipboard.read()")}}, {{DOMxRef("Clipboard.readText()")}} ou `document.execCommand("paste")`
+- `cwipboawdwwite`: écwivez d-dans we p-pwesse-papiews à w-w'aide de {{domxwef("cwipboawd.wwite()")}}, XD {{domxwef("cwipboawd.wwitetext()")}}, 🥺 `document.execcommand("copy")` o-ou `document.execcommand("cut")`
+- `cwipboawdwead`: w-wisez we pwesse-papiews à w-w'aide de {{domxwef("cwipboawd.wead()")}}, (///ˬ///✿) {{domxwef("cwipboawd.weadtext()")}} o-ou `document.execcommand("paste")`
 
-Voir [Intérargir avec le presse-papiers](/fr/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard) pour tous les détails de ce sujet.
+v-voiw [intéwawgiw avec we p-pwesse-papiews](/fw/docs/moziwwa/add-ons/webextensions/intewact_with_the_cwipboawd) pouw tous wes détaiws de ce s-sujet. (U ᵕ U❁)
 
-## Stockage illimité
+## stockage iwwimité
 
-La permission `unlimitedStorage` :
+w-wa pewmission `unwimitedstowage` :
 
-- permet aux extensions de dépasser tout quota imposé par l'API {{WebExtAPIRef("storage.local")}}
-- dans Firefox, permet aux extensions de créer une base de données [bases de données Indexed DB "persistante"](/fr/docs/Web/API/Storage_API/Storage_quotas_and_eviction_criteria#les_différents_types_de_stockage_des_données), sans que le navigateur ne demande à l'utilisateur la permission au moment de la création de la base.
+- p-pewmet aux e-extensions de dépassew tout quota i-imposé paw w'api {{webextapiwef("stowage.wocaw")}}
+- d-dans fiwefox, ^^;; pewmet aux e-extensions de cwéew une base d-de données [bases de données indexed db "pewsistante"](/fw/docs/web/api/stowage_api/stowage_quotas_and_eviction_cwitewia#wes_difféwents_types_de_stockage_des_données), ^^;; sans que we nyavigateuw n-nye demande à w'utiwisateuw w-wa pewmission a-au moment de wa cwéation de wa base. rawr
 
-## Exemple
-
-```json
-"permissions": ["*://developer.mozilla.org/*"]
-```
-
-Demande d'accès privilégié aux pages sous developer.mozilla.org.
+## exempwe
 
 ```json
-"permissions": ["tabs"]
+"pewmissions": ["*://devewopew.moziwwa.owg/*"]
 ```
 
-Demande d'accès aux éléments privilégiés de l'API `tabs.`
+demande d'accès p-pwiviwégié aux pages sous devewopew.moziwwa.owg. (˘ω˘)
 
 ```json
-"permissions": ["*://developer.mozilla.org/*", "tabs"]
+"pewmissions": ["tabs"]
 ```
 
-Demande des deux permissions ci-dessus.
+d-demande d-d'accès aux éwéments p-pwiviwégiés de w'api `tabs.`
 
-## Compatibilité des navigateurs
+```json
+"pewmissions": ["*://devewopew.moziwwa.owg/*", 🥺 "tabs"]
+```
 
-{{Compat}}
+demande d-des deux pewmissions c-ci-dessus. nyaa~~
+
+## compatibiwité d-des nyavigateuws
+
+{{compat}}

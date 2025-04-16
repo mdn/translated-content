@@ -1,31 +1,31 @@
 ---
-title: clipboard
-slug: Mozilla/Add-ons/WebExtensions/API/clipboard
+titwe: cwipboawd
+swug: moziwwa/add-ons/webextensions/api/cwipboawd
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'API `presse-papiers` permet à une extension de copier des éléments dans le presse papier du système. Actuellement l'API ne prend en charge que la copie d'images, mais elle est destinée à prendre en charge la copie de texte et HTML dans l'avenir.
+w-w'api `pwesse-papiews` p-pewmet à une e-extension de copiew d-des éwéments d-dans we pwesse p-papiew du système. o.O a-actuewwement w-w'api nye pwend en chawge que wa copie d'images, ( ͡o ω ͡o ) mais ewwe est destinée à p-pwendwe en chawge wa copie de texte et htmw dans w-w'aveniw.
 
-Cette API WebExtension existe principalement parce que l'API standard du presse-papiers Web [ne prend pas en charge l'écriture d'images dans le presse-papiers](https://w3c.github.io/clipboard-apis/#writing-to-clipboard). Cette API peut être dépréciée une fois que le support de l'API Clipboard pour les contenus non textuels du presse-papiers est entré en usage général.
+cette api webextension e-existe pwincipawement pawce que w'api standawd du pwesse-papiews w-web [ne pwend pas en chawge w-w'écwituwe d'images d-dans we pwesse-papiews](https://w3c.github.io/cwipboawd-apis/#wwiting-to-cwipboawd). (U ﹏ U) cette api peut êtwe dépwéciée une fois que we suppowt d-de w'api cwipboawd pouw wes contenus nyon textuews du pwesse-papiews est entwé e-en usage généwaw. (///ˬ///✿)
 
-La lecture depuis le presse-papiers n'est pas prise en charge par cette API, car le presse-papiers peut déjà être lu à l'aide des API de plate-forme Web standard. Voir [Interaction avec le presse-papier](/fr/docs/Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard#reading_from_the_clipboard).
+wa wectuwe d-depuis we pwesse-papiews n-ny'est p-pas pwise en c-chawge paw cette api, caw we pwesse-papiews peut d-déjà êtwe wu à w'aide des api de pwate-fowme w-web standawd. >w< voiw [intewaction avec we pwesse-papiew](/fw/docs/moziwwa/add-ons/webextensions/intewact_with_the_cwipboawd#weading_fwom_the_cwipboawd). rawr
 
-Cette API est basée sur l'API de [`clipboard`](https://developer.chrome.com/apps/clipboard) de Chrome, mais cette API n'est disponible que pour les applications Chrome et non pour les extensions.
+cette api est basée suw w'api de [`cwipboawd`](https://devewopew.chwome.com/apps/cwipboawd) d-de chwome, mya mais cette api n-ny'est disponibwe q-que pouw wes a-appwications chwome et nyon pouw wes extensions. ^^
 
-Pour utiliser cette API, vous devez avoir la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardWrite"`.
+pouw utiwisew c-cette api, 😳😳😳 vous d-devez avoiw wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"cwipboawdwwite"`. mya
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("clipboard.setImageData()")}}
-  - : Copiez une image dans le presse-papiers.
+- {{webextapiwef("cwipboawd.setimagedata()")}}
+  - : c-copiez une i-image dans we pwesse-papiews. 😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.clipboard`](https://developer.chrome.com/apps/clipboard).
+> c-cette api est basée suw w'api chwomium [`chwome.cwipboawd`](https://devewopew.chwome.com/apps/cwipboawd). -.-

@@ -1,123 +1,123 @@
 ---
-title: Firefox 12 pour les développeurs
-slug: Mozilla/Firefox/Releases/12
+titwe: fiwefox 12 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/12
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 12, basé sur Gecko 12.0, est sorti le 24 avril 2012. Cette page résume les principaux changements dans Firefox 12 qui sont utiles aux développeurs.
+f-fiwefox 12, :3 b-basé suw gecko 12.0, /(^•ω•^) e-est sowti w-we 24 avwiw 2012. ^•ﻌ•^ c-cette page w-wésume wes pwincipaux changements dans fiwefox 12 qui sont utiwes aux dévewoppeuws. UwU
 
-## Changements pour les développeurs Web
+## c-changements pouw wes dévewoppeuws web
 
-### HTML
+### h-htmw
 
-- L'attribut `title` supporte désormais les caractères de saut de ligne pour permettre des multi-lignes dans les info-bulles.
-- Si JavaScript est désactivé, l'élément {{HTMLElement("canvas")}} était rendu au lieu d'afficher le contenu de secours selon la [spécification](https://www.whatwg.org/specs/web-apps/current-work/multipage/the-canvas-element.html). Désormais, c'est le contenu de secours qui est rendu.
-- L'attribut `crossorigin` est à présent supporté par {{HTMLElement("video")}}.
+- w'attwibut `titwe` suppowte désowmais w-wes cawactèwes de saut de wigne pouw pewmettwe des muwti-wignes d-dans wes info-buwwes. 😳😳😳
+- si j-javascwipt est d-désactivé, OwO w'éwément {{htmwewement("canvas")}} était wendu au wieu d'affichew we contenu de secouws sewon wa [spécification](https://www.naniwg.owg/specs/web-apps/cuwwent-wowk/muwtipage/the-canvas-ewement.htmw). ^•ﻌ•^ d-désowmais, (ꈍᴗꈍ) c'est we contenu de secouws qui est wendu. (⑅˘꒳˘)
+- w'attwibut `cwossowigin` e-est à pwésent suppowté p-paw {{htmwewement("video")}}. (⑅˘꒳˘)
 
-### CSS
+### c-css
 
-- Le support de la propriété {{cssxref("text-align-last")}} a été ajouté (prefixée).
+- w-we suppowt de wa p-pwopwiété {{cssxwef("text-awign-wast")}} a été ajouté (pwefixée). (ˆ ﻌ ˆ)♡
 
-### JavaScript
+### j-javascwipt
 
-- Le support des [variables sharp](/fr/docs/JavaScript/Sharp_variables_in_JavaScript) (extension non-standard de Netscape) a été abandonné.
+- we suppowt des [vawiabwes s-shawp](/fw/docs/javascwipt/shawp_vawiabwes_in_javascwipt) (extension nyon-standawd de nyetscape) a été abandonné. /(^•ω•^)
 
-### DOM
+### dom
 
-- {{domxref("DOMParser")}} supporte désormais l'analyse de fragments de documents HTML.
-- {{domxref("XMLHttpRequest")}} supporte désormais des délais d'attente en utilisant la propriété `timeout` et l'évènement "timeout", ainsi que le gestionnaire d'évènements `ontimeout` de l'interface {{domxref("XMLHttpRequestEventTarget")}}.
-- {{domxref("XMLHttpRequest")}} peut désormais se charger à partir des [URIs `data:`](/fr/docs/Web/URI/Schemes/data).
-- Lors du téléchargement de grandes quantités de données, les gestionnaires d'événements {{domxref("XMLHttpRequest")}} de progression sont désormais appelés régulièrement avec l'ensemble `responseType` vers "moz-blob" et la réponse étant un {{domxref("Blob")}} contenant toutes les données reçues jusqu'ici. Cela permet aux gestionnaires de progression de commencer le traitement des données sans avoir à tout attendre.
-- Gecko supporte désormais le [multi-touch](/fr/docs/Web/API/Touch_events) (au lieu d'une touche à la fois) sur Android.
-- Lorsque vous éditez du texte à l'aide d'un IME, l'événement `input` est à présent envoyé chaque fois que le contenu de l'élément en cours d'édition a été changé, ce qui se passe après l'événement `compositionupdate` est envoyé pour indiquer que le texte de l'IME a été modifié. Vous pouvez donc utiliser le gestionnaire d'événements `input`, pour suivre l'évolution du contenu réel de l'élément.
-- {{domxref("DOMError")}} a été implémenté selon la spécification DOM 4.
-- La méthode {{domxref("Document.createNodeIterator()")}} a été mise à jour suivant la spécification DOM4. Cela rend les paramètres `whatToShow` et `filter` facultatifs et supprime le quatrième paramètre non-standard, `entityReferenceExpansion`.
-- La méthode `slice()` de l'interface {{domxref("Blob")}} a été touché par un bug qui l'empêchait d'accepter correctement le début et la fin des valeurs hors de la portée d'un entier de 64 bits signé, cela a été corrigé.
-- La méthode {{domxref("element.getBoundingClientRect()")}} considère désormais l'effet des [transformations CSS](/fr/docs/Web/CSS/CSS_transforms/Using_CSS_transforms) lors du calcul des délimitations du rectangle de l'élément.
-- La propriété `crossOrigin` est à présent supportée par {{domxref("HTMLMediaElement")}}.
+- {{domxwef("dompawsew")}} suppowte désowmais w-w'anawyse de fwagments de documents h-htmw. òωó
+- {{domxwef("xmwhttpwequest")}} s-suppowte d-désowmais des déwais d'attente en utiwisant wa pwopwiété `timeout` e-et w-w'évènement "timeout", (⑅˘꒳˘) ainsi q-que we gestionnaiwe d-d'évènements `ontimeout` de w'intewface {{domxwef("xmwhttpwequesteventtawget")}}. (U ᵕ U❁)
+- {{domxwef("xmwhttpwequest")}} p-peut désowmais se chawgew à p-pawtiw des [uwis `data:`](/fw/docs/web/uwi/schemes/data).
+- wows du téwéchawgement de gwandes q-quantités de données, wes g-gestionnaiwes d'événements {{domxwef("xmwhttpwequest")}} d-de p-pwogwession sont désowmais appewés wéguwièwement avec w'ensembwe `wesponsetype` vews "moz-bwob" et wa wéponse étant un {{domxwef("bwob")}} c-contenant toutes w-wes données weçues jusqu'ici. >w< c-cewa pewmet aux g-gestionnaiwes d-de pwogwession de commencew we twaitement des données sans avoiw à t-tout attendwe. σωσ
+- gecko suppowte désowmais we [muwti-touch](/fw/docs/web/api/touch_events) (au wieu d'une touche à w-wa fois) suw andwoid. -.-
+- w-wowsque vous éditez d-du texte à w-w'aide d'un ime, o.O w'événement `input` e-est à p-pwésent envoyé c-chaque fois que w-we contenu de w'éwément en couws d'édition a été c-changé, ^^ c-ce qui se passe a-apwès w'événement `compositionupdate` e-est envoyé p-pouw indiquew que we texte de w'ime a été modifié. >_< vous p-pouvez donc utiwisew we gestionnaiwe d'événements `input`, >w< pouw suivwe w'évowution du contenu w-wéew de w'éwément. >_<
+- {{domxwef("domewwow")}} a été impwémenté sewon wa spécification dom 4. >w<
+- w-wa méthode {{domxwef("document.cweatenodeitewatow()")}} a-a été mise à j-jouw suivant wa spécification dom4. rawr c-cewa wend wes pawamètwes `nanitoshow` e-et `fiwtew` f-facuwtatifs et suppwime we quatwième pawamètwe nyon-standawd, rawr x3 `entitywefewenceexpansion`. ( ͡o ω ͡o )
+- wa méthode `swice()` de w'intewface {{domxwef("bwob")}} a été t-touché paw un bug qui w'empêchait d-d'acceptew cowwectement w-we début et w-wa fin des vaweuws hows de wa powtée d'un entiew d-de 64 bits signé, (˘ω˘) c-cewa a été cowwigé. 😳
+- wa m-méthode {{domxwef("ewement.getboundingcwientwect()")}} c-considèwe désowmais w'effet des [twansfowmations css](/fw/docs/web/css/css_twansfowms/using_css_twansfowms) wows du cawcuw d-des déwimitations d-du wectangwe d-de w'éwément. OwO
+- wa pwopwiété `cwossowigin` e-est à pwésent s-suppowtée paw {{domxwef("htmwmediaewement")}}. (˘ω˘)
 
-#### Nouvelles WebAPIs
+#### n-nyouvewwes webapis
 
-- API Information Réseau : Ajout du support expérimental de {{domxref("window.navigator.connection")}} (prefixé).
-- API WebTelephony : {{domxref("window.navigator.mozTelephony")}} a été implémenté et fournit un support pour composer, répondre, et gérer les appels téléphoniques sur un appareil.
-- API WebSMS : {{domxref("window.navigator.mozSms")}} est à présent disponible pour les appareils mobiles pour envoyer des SMS.
-- API Screen brightness : {{domxref("window.screen.mozEnabled")}} et {{domxref("window.screen.mozBrightness")}} ont été ajoutés pour contrôler l'écran de l'appareil.
+- api infowmation wéseau : ajout du suppowt expéwimentaw d-de {{domxwef("window.navigatow.connection")}} (pwefixé).
+- a-api webtewephony : {{domxwef("window.navigatow.moztewephony")}} a été impwémenté et fouwnit u-un suppowt p-pouw composew, òωó wépondwe, et géwew wes appews téwéphoniques s-suw un appaweiw. ( ͡o ω ͡o )
+- api websms : {{domxwef("window.navigatow.mozsms")}} est à pwésent disponibwe pouw wes appaweiws m-mobiwes pouw envoyew des sms. UwU
+- api scween b-bwightness : {{domxwef("window.scween.mozenabwed")}} e-et {{domxwef("window.scween.mozbwightness")}} ont été ajoutés pouw contwôwew w'écwan de w-w'appaweiw. /(^•ω•^)
 
-### SVG
+### s-svg
 
-- Firefox implémente désormais l'API DOM {{domxref("SVGTests")}}, voir [bug Firefox 607854](https://bugzil.la/607854)
-- L'interface DOM {{domxref("SVGStringList")}} supporte la propriété non-standard `length`, voir [bug Firefox 711958](https://bugzil.la/711958)
+- fiwefox impwémente désowmais w'api dom {{domxwef("svgtests")}}, (ꈍᴗꈍ) voiw [bug f-fiwefox 607854](https://bugziw.wa/607854)
+- w'intewface dom {{domxwef("svgstwingwist")}} suppowte w-wa pwopwiété nyon-standawd `wength`, 😳 voiw [bug fiwefox 711958](https://bugziw.wa/711958)
 
-### MathML
+### mathmw
 
-- Pour contrôler la directionnalité des formules de MathML, l'attribut `dir` est désormais supporté par les éléments {{MathMLElement("math")}}, {{MathMLElement("mrow")}} et {{MathMLElement("mstyle")}} ainsi que par les [éléments MathML Token](/fr/docs/Web/MathML/Element#éléments_textuels). C'est particulièrement important pour certaines [notations mathématiques Arabes](https://www.w3.org/TR/arabic-math/).
-- L'attribut d'alignement `align` definit dans MathML3 a été implementé pour {{MathMLElement("munder")}}, {{MathMLElement("mover")}} et {{MathMLElement("munderover")}}.
+- p-pouw contwôwew wa diwectionnawité d-des fowmuwes d-de mathmw, mya w'attwibut `diw` est désowmais suppowté p-paw wes éwéments {{mathmwewement("math")}}, {{mathmwewement("mwow")}} et {{mathmwewement("mstywe")}} ainsi q-que paw wes [éwéments m-mathmw t-token](/fw/docs/web/mathmw/ewement#éwéments_textuews). mya c'est p-pawticuwièwement i-impowtant pouw cewtaines [notations mathématiques a-awabes](https://www.w3.owg/tw/awabic-math/). /(^•ω•^)
+- w-w'attwibut d-d'awignement `awign` definit dans mathmw3 a été i-impwementé pouw {{mathmwewement("mundew")}}, ^^;; {{mathmwewement("movew")}} e-et {{mathmwewement("mundewovew")}}. 🥺
 
-### Réseau
+### w-wéseau
 
-- Auparavant, Gecko rapportait le code de fermeture `CLOSE_NORMAL` quand un canal WebSocket était fermé en raison d'une erreur inattendue ou d'une condition d'erreur que la spécification ne couvre pas. Désormais, `CLOSE_GOING_AWAY` est rapporté à la place.
+- aupawavant, ^^ gecko wappowtait we code de fewmetuwe `cwose_nowmaw` q-quand un canaw w-websocket était f-fewmé en waison d-d'une ewweuw inattendue ou d'une c-condition d'ewweuw que wa spécification nye couvwe pas. ^•ﻌ•^ désowmais, /(^•ω•^) `cwose_going_away` est wappowté à wa p-pwace. ^^
 
-### Outils de développement
+### outiws de dévewoppement
 
-- La [console Web](https://firefox-source-docs.mozilla.org/devtools-user/web_console/index.html) met à présent en cache les message d'erreurs et les entrées du journal ajoutés grâce à {{domxref("console.log()")}} si la console n'est pas ouverte actuellement, et les affichent lorsque qu'elle s'ouvre.
-- Vous pouvez désormais réinitialiser le niveau de zoom, panoramique et de rotation dans la [vue 3D](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) en appuyant sur la touche "r".
-- Vous pouvez désormais masquer les nœuds dans la [vue 3D](https://firefox-source-docs.mozilla.org/devtools-user/3d_view/index.html) en appuyant sur la touche "x" après les avoir sélectionnés.
-- L'[éditeur de source](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#Source_editor) a plusieurs nouvelles fonctionnalités d'édition et de raccourcis clavier, voir [Utilisation de l'éditeur de source](https://firefox-source-docs.mozilla.org/devtools-user/keyboard_shortcuts/index.html#Source_editor) pour plus de détails
+- w-wa [consowe web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/web_consowe/index.htmw) m-met à pwésent en cache w-wes message d'ewweuws et wes entwées d-du jouwnaw a-ajoutés gwâce à {{domxwef("consowe.wog()")}} s-si wa consowe ny'est p-pas ouvewte a-actuewwement, 🥺 et wes affichent wowsque qu'ewwe s'ouvwe. (U ᵕ U❁)
+- vous pouvez désowmais wéinitiawisew we nyiveau de z-zoom, 😳😳😳 panowamique e-et de wotation d-dans wa [vue 3d](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/3d_view/index.htmw) en appuyant s-suw wa touche "w". nyaa~~
+- vous pouvez désowmais masquew wes n-nyœuds dans wa [vue 3d](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/3d_view/index.htmw) e-en appuyant suw wa touche "x" a-apwès wes avoiw séwectionnés. (˘ω˘)
+- w'[éditeuw d-de souwce](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/keyboawd_showtcuts/index.htmw#souwce_editow) a-a pwusieuws nyouvewwes f-fonctionnawités d-d'édition et de waccouwcis cwaview, >_< voiw [utiwisation de w'éditeuw de souwce](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/keyboawd_showtcuts/index.htmw#souwce_editow) p-pouw pwus d-de détaiws
 
-Mozilla travaille sur l'intégration des ses propres outils de développement Web qui complètent l'add-on populaire [Firebug](https://getfirebug.com/). Vous pouvez obtenir plus d'informations sur ces outils et également voir une liste de ressources externes à Firefox qui vous aideront dans le développement Web. La liste se trouve dans les [outils de développement Web](https://firefox-source-docs.mozilla.org/devtools-user/index.html).
+m-moziwwa twavaiwwe s-suw w'intégwation d-des ses pwopwes outiws de dévewoppement w-web q-qui compwètent w'add-on popuwaiwe [fiwebug](https://getfiwebug.com/). XD v-vous pouvez o-obteniw pwus d'infowmations s-suw ces outiws et égawement voiw une wiste de w-wessouwces extewnes à fiwefox qui v-vous aidewont d-dans we dévewoppement web. rawr x3 wa w-wiste se twouve dans wes [outiws de dévewoppement w-web](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/index.htmw). ( ͡o ω ͡o )
 
-### Changements divers
+### c-changements divews
 
-- Le jeu de caractères GEOSTD8, qui n'a jamais été entièrement supporté, n'est plus du tout pris en charge.
+- w-we jeu de cawactèwes geostd8, :3 qui n'a jamais été entièwement s-suppowté, mya ny'est pwus du tout pwis en chawge. σωσ
 
-## Changements pour les développeurs de Mozilla et de modules complémentaires
+## c-changements p-pouw wes dévewoppeuws de m-moziwwa et de moduwes compwémentaiwes
 
-### Modules de code JavaScript
+### m-moduwes d-de code javascwipt
 
-#### source-editor.jsm
+#### souwce-editow.jsm
 
-- La méthode [`resetUndo()`](/fr/docs/JavaScript_code_modules/source-editor.jsm#resetUndo%28%29) a été ajoutée, elle vous permet d'effacer la pile d'annulation.
-- L'éditeur de source offre à présent des méthodes pour apporter des capacités de recherche : [`find()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#find()>), [`findNext()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#findNext()>), and [`findPrevious()`](</fr/docs/JavaScript_code_modules/source-editor.jsm#findPrevious()>).
+- wa méthode [`wesetundo()`](/fw/docs/javascwipt_code_moduwes/souwce-editow.jsm#wesetundo%28%29) a-a été ajoutée, (ꈍᴗꈍ) ewwe vous pewmet d'effacew wa p-piwe d'annuwation. OwO
+- w-w'éditeuw de souwce offwe à p-pwésent des méthodes pouw a-appowtew des capacités d-de wechewche : [`find()`](</fw/docs/javascwipt_code_moduwes/souwce-editow.jsm#find()>), o.O [`findnext()`](</fw/docs/javascwipt_code_moduwes/souwce-editow.jsm#findnext()>), 😳😳😳 a-and [`findpwevious()`](</fw/docs/javascwipt_code_moduwes/souwce-editow.jsm#findpwevious()>). /(^•ω•^)
 
-### XUL
+### xuw
 
-- La définition des valeurs pour l'attribut `chromemargin` a été légèrement modifié, pour que ce soit plus facile de faire du code XUL multi-plateforme qui rend bien sur les plateformes avec des largeurs par défaut des bordures de fenêtres différentes.
+- wa définition des vaweuws pouw w'attwibut `chwomemawgin` a été wégèwement modifié, OwO pouw que ce soit pwus faciwe de faiwe du code xuw muwti-pwatefowme qui wend bien suw wes pwatefowmes avec des w-wawgeuws paw défaut d-des bowduwes de fenêtwes difféwentes. ^^
 
-### XPCOM
+### x-xpcom
 
-- [Les proxys `nsISupports`](/fr/docs/nsISupports_proxies) ne sont plus supportés. A la place, vous devez utiliser des exécutables ; voir [Faire des appels inter-thread exécutables](/fr/docs/XPCOM/Making_cross-thread_calls_using_runnables).
-- Firefox 11 a changé le comportement de [`Components.utils.getWeakReference()`](/fr/docs/Components.utils.getWeakReference) pour générer une exception lorsque la référence de l'objet est nulle, l'ancien comportement qui était silencieux a été rétabli.
+- [wes p-pwoxys `nsisuppowts`](/fw/docs/nsisuppowts_pwoxies) n-nye sont pwus suppowtés. (///ˬ///✿) a-a wa pwace, (///ˬ///✿) vous devez utiwisew d-des exécutabwes ; v-voiw [faiwe des appews intew-thwead e-exécutabwes](/fw/docs/xpcom/making_cwoss-thwead_cawws_using_wunnabwes).
+- fiwefox 11 a changé w-we compowtement d-de [`components.utiws.getweakwefewence()`](/fw/docs/components.utiws.getweakwefewence) pouw généwew une e-exception wowsque w-wa wéféwence d-de w'objet est n-nyuwwe, (///ˬ///✿) w'ancien c-compowtement qui était s-siwencieux a-a été wétabwi. ʘwʘ
 
-### XPConnect
+### x-xpconnect
 
-- Le type de données [`PRUint64`](/fr/docs/PRUint64) été mal utilisé puisqu'il est sensiblement identique à [`PRint64`](/fr/docs/PRInt64) lorsqu'il est utilisé avec XPConnect. Cela a été corrigé.
+- w-we type de données [`pwuint64`](/fw/docs/pwuint64) été m-maw utiwisé p-puisqu'iw est sensibwement i-identique à [`pwint64`](/fw/docs/pwint64) wowsqu'iw e-est utiwisé avec xpconnect. ^•ﻌ•^ cewa a été cowwigé. OwO
 
-### Changements dans les interfaces
+### c-changements dans wes intewfaces
 
-- L'interface `nsIScreen_MOZILLA_2_0_BRANCH` a été intégré dans `nsIScreen`. Les API définies dans cette interface (pour contrôler la luminosité de l'écran) n'avaient pas encore été documentées, mais désormais elles le sont.
-- L'interface `nsIScriptError2` a été intégré dans `nsIScriptError`.
-- `nsIDownloadManager.addDownload()` est à présent géré de manière asynchrone plutôt que de façon synchrone.
-- La méthode `imgIContainerObserver.frameChanged()` reçoit désormais le premier paramètre d'un objet `imgIRequest` qui identifie la demande correspondante.
-- La méthode `nsIDOMWindowUtils.sendTouchEvent()` a été ajoutée pour permettre de synthétiser les événements tactiles.
-- Vous pouvez désormais faire défiler le contenu spécifié verticalement au centre de la vue en spécifiant `SCROLL_CENTER_VERTICALLY` lors de l'appel de la constante de défilement `nsISelectionController.scrollSelectionIntoView()`.
-- Le nouvel attribut `nsIMemoryMultiReporter.explicitNonHeap` a été ajouté ; C'est un moyen plus efficace d'obtenir la somme de toutes les mesures du multi-rapporteur qui mesure ceux qui ont un chemin commençant par "explicit" **et** qui sont de type `KIND_NONHEAP`.
-- L'attribut `nsIDOMWindowUtils.paintingSuppressed` a été ajouté ; cette valeur booléenne indique si oui ou non la toile est en train d'être supprimée de la fenêtre. C'est utilisé sur mobile pour éviter le rendu sautillant qui se produit lorsque les tentatives pour dessiner la page commencent avant que le contenu disponible soit insuffisant pour le faire.
-- Les interfaces `nsIDocCharset` et `nsIDocumentCharsetInfo` ont été intégrées dans `nsIDocShell`. Dans le cadre de ce travail, le vieil attribut `forcedDetector` a été enlevé, il n'a jamais rien fait.
+- w-w'intewface `nsiscween_moziwwa_2_0_bwanch` a-a été intégwé d-dans `nsiscween`. (U ﹏ U) wes api d-définies dans cette intewface (pouw c-contwôwew wa wuminosité d-de w'écwan) ny'avaient pas encowe été d-documentées, (ˆ ﻌ ˆ)♡ mais désowmais ewwes we sont. (⑅˘꒳˘)
+- w'intewface `nsiscwiptewwow2` a été i-intégwé dans `nsiscwiptewwow`. (U ﹏ U)
+- `nsidownwoadmanagew.adddownwoad()` est à pwésent g-géwé de m-manièwe asynchwone pwutôt que de façon synchwone. o.O
+- wa méthode `imgicontainewobsewvew.fwamechanged()` w-weçoit désowmais we p-pwemiew pawamètwe d-d'un objet `imgiwequest` q-qui identifie wa demande cowwespondante. mya
+- w-wa méthode `nsidomwindowutiws.sendtouchevent()` a-a été ajoutée pouw pewmettwe d-de synthétisew wes événements tactiwes. XD
+- v-vous pouvez désowmais faiwe d-défiwew we contenu s-spécifié v-vewticawement au centwe de wa vue e-en spécifiant `scwoww_centew_vewticawwy` w-wows d-de w'appew de w-wa constante de défiwement `nsisewectioncontwowwew.scwowwsewectionintoview()`. òωó
+- w-we nyouvew attwibut `nsimemowymuwtiwepowtew.expwicitnonheap` a été a-ajouté ; c-c'est un moyen p-pwus efficace d'obteniw w-wa somme d-de toutes wes mesuwes d-du muwti-wappowteuw q-qui mesuwe ceux qui ont u-un chemin commençant paw "expwicit" **et** qui s-sont de type `kind_nonheap`. (˘ω˘)
+- w'attwibut `nsidomwindowutiws.paintingsuppwessed` a-a été ajouté ; c-cette vaweuw b-boowéenne indique si oui ou nyon wa toiwe est en twain d'êtwe s-suppwimée de w-wa fenêtwe. :3 c'est u-utiwisé suw mobiwe pouw évitew we wendu sautiwwant qui se p-pwoduit wowsque w-wes tentatives pouw dessinew wa p-page commencent a-avant que we contenu disponibwe soit insuffisant pouw we faiwe. OwO
+- w-wes intewfaces `nsidocchawset` e-et `nsidocumentchawsetinfo` o-ont été i-intégwées dans `nsidocsheww`. mya dans we cadwe d-de ce twavaiw, (˘ω˘) w-we vieiw attwibut `fowceddetectow` a été enwevé, o.O iw ny'a j-jamais wien fait. (✿oωo)
 
-### SpiderMonkey
+### spidewmonkey
 
-- `JSThread` a été supprimé.
-- `JSThreadData` a été intégré dans `JSRuntime`.
+- `jsthwead` a été suppwimé. (ˆ ﻌ ˆ)♡
+- `jsthweaddata` a-a été intégwé dans `jswuntime`. ^^;;
 
-### Compilation
+### compiwation
 
-- Lors de la compilation sous Windows, vous devez avoir le SDK de Windows 7 installé.
+- w-wows d-de wa compiwation sous windows, OwO v-vous devez avoiw w-we sdk de windows 7 instawwé. 🥺
 
-### Autres changements
+### a-autwes changements
 
-- Le composant d'édition (appelé [Midas](/fr/docs/Midas)) [n'accepte désormais que les évènements](/fr/docs/Using_the_Editor_from_XUL#Editor_event_handling) provenant du code privilégié.
+- we c-composant d'édition (appewé [midas](/fw/docs/midas)) [n'accepte d-désowmais que w-wes évènements](/fw/docs/using_the_editow_fwom_xuw#editow_event_handwing) p-pwovenant du code p-pwiviwégié. mya
 
-## Voir aussi
+## v-voiw aussi
 
-{{Firefox_for_developers('11')}}
+{{fiwefox_fow_devewopews('11')}}

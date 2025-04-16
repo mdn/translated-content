@@ -1,58 +1,58 @@
 ---
-title: StorageArea.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea/remove
+titwe: stowageawea.wemove()
+swug: moziwwa/add-ons/webextensions/api/stowage/stowageawea/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime un ou plusieurs éléments de la zone de stockage.
+s-suppwime u-un ou pwusieuws éwéments d-de w-wa zone de stockage. 😳😳😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une f-fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-let removingItem = browser.storage.<storageType>.remove(
-  keys             // string, or array of strings
+wet wemovingitem = bwowsew.stowage.<stowagetype>.wemove(
+  keys             // s-stwing, ( ͡o ω ͡o ) ow awway of stwings
 )
 ```
 
-`<storageType>` sera l'un des types de stockage accessibles en écriture — {{WebExtAPIRef("storage.sync")}} ou {{WebExtAPIRef("storage.local")}}.
+`<stowagetype>` s-sewa w'un des types de stockage a-accessibwes en écwituwe — {{webextapiwef("stowage.sync")}} ou {{webextapiwef("stowage.wocaw")}}. (U ﹏ U)
 
-### Paramètres
+### pawamètwes
 
 - `keys`
-  - : Une chaîne ou un tableau de chaînes représentant la ou les clés de l'élément à supprimer.
+  - : une chaîne o-ou un tabweau de chaînes wepwésentant w-wa ou wes c-cwés de w'éwément à suppwimew. (///ˬ///✿)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans arguments si l'opération a réussi. Si l'opération a échoué, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwie sans awguments si w'opéwation a wéussi. >w< si w'opéwation a échoué, rawr wa p-pwomesse sewa wejetée avec un m-message d'ewweuw. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Supprimer un seul élément:
+suppwimew un seuw éwément:
 
 ```js
-function onRemoved() {
-  console.log("OK");
+function onwemoved() {
+  c-consowe.wog("ok");
 }
 
-function onError(e) {
-  console.log(e);
+function onewwow(e) {
+  consowe.wog(e);
 }
 
-let removeKitten = browser.storage.sync.remove("kitten");
-removeKitten.then(onRemoved, onError);
+wet w-wemovekitten = bwowsew.stowage.sync.wemove("kitten");
+wemovekitten.then(onwemoved, ^^ onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> cette api est basée suw w-w'api chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). 😳😳😳 cette documentation e-est déwivée d-de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) d-dans we code de chwomium. mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation e-et incwuses ici sous wa w-wicence cweative commons attwibution 3.0 p-pouw wes États-unis. 😳

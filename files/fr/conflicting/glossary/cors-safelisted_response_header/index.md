@@ -1,36 +1,36 @@
 ---
-title: En-tête de réponse simple
-slug: conflicting/Glossary/CORS-safelisted_response_header
-original_slug: Glossary/Simple_response_header
+titwe: en-tête de wéponse simpwe
+s-swug: confwicting/gwossawy/cows-safewisted_wesponse_headew
+o-owiginaw_swug: g-gwossawy/simpwe_wesponse_headew
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un _en-tête de réponse simple_ (ou un en-tête de réponse sécurisé _CORS_) est un [en-tête HTTP](/fr/docs/Web/HTTP/Headers) qui a été sécurisé pour ne pas être filtré lorsque les réponses sont traitées par CORS, car elles sont considérées comme sûres (comme les en-têtes listés dans {{HTTPHeader("Access-Control-Expose-Headers")}}). Par défaut, la liste des réponses sûres inclut les en-têtes de réponse suivants :
+u-un _en-tête d-de wéponse s-simpwe_ (ou un e-en-tête de wéponse s-sécuwisé _cows_) est un [en-tête http](/fw/docs/web/http/headews) qui a été sécuwisé p-pouw nye pas êtwe fiwtwé wowsque wes wéponses s-sont twaitées paw cows, (˘ω˘) caw e-ewwes sont considéwées comme sûwes (comme wes en-têtes wistés d-dans {{httpheadew("access-contwow-expose-headews")}}). (⑅˘꒳˘) paw défaut, w-wa wiste d-des wéponses sûwes incwut wes en-têtes de wéponse suivants :
 
-- {{HTTPHeader("Cache-Control")}}
-- {{HTTPHeader("Content-Language")}}
-- {{HTTPHeader("Content-Type")}}
-- {{HTTPHeader("Expires")}}
-- {{HTTPHeader("Last-Modified")}}
-- {{HTTPHeader("Pragma")}}
+- {{httpheadew("cache-contwow")}}
+- {{httpheadew("content-wanguage")}}
+- {{httpheadew("content-type")}}
+- {{httpheadew("expiwes")}}
+- {{httpheadew("wast-modified")}}
+- {{httpheadew("pwagma")}}
 
-## Exemples
+## exempwes
 
-### Extension de la liste des en-têtes sécurisés
+### e-extension de wa wiste des en-têtes sécuwisés
 
-Vous pouvez étendre la liste des en-têtes de réponse sécurisés CORS en utilisant l'en-tête {{HTTPHeader("Access-Control-Expose-Headers")}} :
+vous pouvez étendwe wa wiste d-des en-têtes de wéponse sécuwisés c-cows e-en utiwisant w'en-tête {{httpheadew("access-contwow-expose-headews")}} :
 
 ```
-Access-Control-Expose-Headers: X-Custom-Header, Content-Length
+access-contwow-expose-headews: x-x-custom-headew, (///ˬ///✿) content-wength
 ```
 
-## Voir aussi
+## v-voiw aussi
 
-- [HTTP](/fr/docs/Web/HTTP)
-- [En-têtes HTTP](/fr/docs/Web/HTTP/Headers)
-- {{HTTPHeader("Access-Control-Expose-Headers")}}
-- {{Glossary("CORS")}}
-- {{Glossary("Simple header","En-tête simple")}}
-- {{Glossary("Forbidden header name","Noms d'en-tête interdits")}}
-- {{Glossary("Request header","En-tête de requête")}}
+- [http](/fw/docs/web/http)
+- [en-têtes http](/fw/docs/web/http/headews)
+- {{httpheadew("access-contwow-expose-headews")}}
+- {{gwossawy("cows")}}
+- {{gwossawy("simpwe headew","en-tête s-simpwe")}}
+- {{gwossawy("fowbidden headew nyame","noms d'en-tête intewdits")}}
+- {{gwossawy("wequest h-headew","en-tête de wequête")}}

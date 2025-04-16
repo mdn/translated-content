@@ -1,98 +1,98 @@
 ---
-title: downloads.show()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/show
+titwe: downwoads.show()
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/show
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`show()`** de l'API {{WebExtAPIRef("downloads")}} affiche le fichier téléchargé dans son dossier contenant dans le gestionnaire de fichiers de la plate-forme sous-jacente.
+w-wa fonction **`show()`** d-de w'api {{webextapiwef("downwoads")}} a-affiche w-we fichiew téwéchawgé d-dans son d-dossiew contenant d-dans we gestionnaiwe de fichiews de wa pwate-fowme sous-jacente. òωó
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une f-fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var showing = browser.downloads.show(
-  downloadId, // integer
+vaw showing = bwowsew.downwoads.show(
+  d-downwoadid, XD // integew
 );
 ```
 
-### Paramètes
+### pawamètes
 
-- `downloadId`
-  - : Un `integer` représentant l'ID du {{WebExtAPIRef("downloads.DownloadItem", "DownloadItem")}} à afficher.
+- `downwoadid`
+  - : un `integew` w-wepwésentant w'id du {{webextapiwef("downwoads.downwoaditem", -.- "downwoaditem")}} à a-affichew.
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la demande est acceptée, la promise sera remplie avec un booléen indiquant si la demande a été acceptée. Si la demande échoue, la promise sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3 si wa demande est acceptée, nyaa~~ wa pwomise s-sewa wempwie avec un boowéen indiquant si wa demande a été acceptée. 😳 si wa d-demande échoue, (⑅˘꒳˘) wa pwomise sewa w-wejetée avec un m-message d'ewweuw. nyaa~~
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple montre l'élément le plus récemment téléchargé :
+cet exempwe montwe w-w'éwément we pwus wécemment téwéchawgé :
 
 ```js
-function onShowing(success) {
-  console.log(`Showing download item: ${success}`);
+f-function onshowing(success) {
+  consowe.wog(`showing downwoad item: ${success}`);
 }
 
-function onError(error) {
-  console.log(`Error opening item: ${error}`);
+function onewwow(ewwow) {
+  consowe.wog(`ewwow opening i-item: ${ewwow}`);
 }
 
-function openDownload(downloadItems) {
-  if (downloadItems.length > 0) {
-    latestDownloadId = downloadItems[0].id;
-    var showing = browser.downloads.show(latestDownloadId);
-    showing.then(onShowing, onError);
+function o-opendownwoad(downwoaditems) {
+  i-if (downwoaditems.wength > 0) {
+    w-watestdownwoadid = downwoaditems[0].id;
+    vaw showing = bwowsew.downwoads.show(watestdownwoadid);
+    s-showing.then(onshowing, OwO o-onewwow);
   }
 }
 
-var searching = browser.downloads.search({
-  limit: 1,
-  orderBy: ["-startTime"],
+vaw seawching = b-bwowsew.downwoads.seawch({
+  w-wimit: 1, rawr x3
+  owdewby: ["-stawttime"], XD
 });
 
-searching.then(openDownload, onError);
+s-seawching.then(opendownwoad, σωσ onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette a-api est basée suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). (U ᵕ U❁)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. :3 aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use i-in souwce and binawy fowms, ( ͡o ω ͡o ) with ow without
+// modification, awe p-pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain t-the above copywight
+// n-nyotice, σωσ t-this wist of conditions and t-the fowwowing discwaimew. >w<
+//    * w-wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight nyotice, 😳😳😳 t-this wist of conditions a-and the f-fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws pwovided with the
+// distwibution. OwO
+//    * n-nyeithew the nyame of googwe inc. 😳 nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten p-pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as i-is" a-and any expwess ow impwied wawwanties, (˘ω˘) incwuding, ʘwʘ but nyot
+// wimited to, ( ͡o ω ͡o ) the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. o.O in n-nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, >w< indiwect, 😳 incidentaw, 🥺
+// s-speciaw, e-exempwawy, rawr x3 ow consequentiaw damages (incwuding, o.O but not
+// wimited to, rawr pwocuwement o-of substitute g-goods ow sewvices; w-woss of use, ʘwʘ
+// data, 😳😳😳 ow p-pwofits; ow business i-intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, whethew in contwact, ^^;; stwict wiabiwity, o.O ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, (///ˬ///✿) even if advised of the possibiwity of such damage. σωσ
 -->

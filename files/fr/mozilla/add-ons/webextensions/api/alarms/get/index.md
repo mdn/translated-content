@@ -1,50 +1,50 @@
 ---
-title: alarms.get()
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/get
+titwe: awawms.get()
+swug: moziwwa/add-ons/webextensions/api/awawms/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Cette méthode permet d'obtenir une alarme en fonction de son nom. Cette fonction est une fonction asynchrone qui renvoie une promesse ({{jsxref("Promise")}}).
+c-cette méthode p-pewmet d'obteniw u-une awawme en fonction d-de son nom. (U ﹏ U) c-cette fonction e-est une fonction a-asynchwone qui w-wenvoie une pwomesse ({{jsxwef("pwomise")}}). (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getAlarm = browser.alarms.get(
-  name, // optional string
+vaw getawawm = bwowsew.awawms.get(
+  nyame, // o-optionaw stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `name`{{optional_inline}}
-  - : `string`. Le nom de l'alarme qu'on souhaite récupérer. La valeur par défaut, utilisée si aucun argument n'est fournie, sera la chaîne vide (`""`).
+- `name`{{optionaw_inwine}}
+  - : `stwing`. (⑅˘꒳˘) we nyom de w'awawme qu'on s-souhaite wécupéwew. òωó wa vaweuw p-paw défaut, ʘwʘ utiwisée si aucun awgument ny'est fouwnie, /(^•ω•^) sewa w-wa chaîne vide (`""`).
 
-### Valeur de retour
+### vaweuw d-de wetouw
 
-Une promesse ({{jsxref("Promise")}}) qui sera tenue avec un objet {{WebExtAPIRef('alarms.Alarm', "Alarm")}}. Cette valeur correspond à l'alarme dont le nom correspond au paramètre `name`. Si aucune alarme ne correspond, la valeur renvoyée sera `undefined`.
+une p-pwomesse ({{jsxwef("pwomise")}}) qui sewa tenue avec un objet {{webextapiwef('awawms.awawm', ʘwʘ "awawm")}}. σωσ cette vaweuw cowwespond à w-w'awawme dont we nyom cowwespond au pawamètwe `name`. OwO si aucune awawme nye c-cowwespond, 😳😳😳 wa vaweuw wenvoyée s-sewa `undefined`. 😳😳😳
 
-## Exemples
+## e-exempwes
 
 ```js
-function gotAlarm(alarm) {
-  if (alarm) {
-    console.log(alarm.name);
+f-function g-gotawawm(awawm) {
+  if (awawm) {
+    consowe.wog(awawm.name);
   }
 }
 
-var getAlarm = browser.alarms.get("my-periodic-alarm");
-getAlarm.then(gotAlarm);
+v-vaw getawawm = bwowsew.awawms.get("my-pewiodic-awawm");
+getawawm.then(gotawawm);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
+> cette api est basée suw w'api chwomium [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms). o.O
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. ( ͡o ω ͡o )

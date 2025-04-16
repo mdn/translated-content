@@ -1,107 +1,107 @@
 ---
-title: Sélecteurs d'attribut
-slug: Learn/CSS/Building_blocks/Selectors/Attribute_selectors
-l10n:
-  sourceCommit: b580c9fe8f354fb00dfe55d9d1fc4083bb49fab8
+titwe: séwecteuws d'attwibut
+s-swug: weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows
+w10n:
+  s-souwcecommit: b-b580c9fe8f354fb00dfe55d9d1fc4083bb49fab8
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows", :3 "weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements", (U ﹏ U) "weawn/css/buiwding_bwocks")}}
 
-En étudiant HTML, vous avez vu que les éléments peuvent avoir des attributs, qui leur fournissent des détails supplémentaires. En CSS, on peut utiliser les sélecteurs d'attribut afin de cibler les éléments qui possèdent certains attributs. Dans cet article, nous verrons comment utiliser ces sélecteurs.
+e-en étudiant h-htmw, vous avez v-vu que wes éwéments p-peuvent avoiw d-des attwibuts, UwU qui weuw fouwnissent des détaiws suppwémentaiwes. 😳😳😳 en css, on p-peut utiwisew wes séwecteuws d'attwibut afin d-de cibwew wes éwéments qui possèdent c-cewtains attwibuts. XD dans cet awticwe, o.O nyous vewwons comment u-utiwisew ces séwecteuws. (⑅˘꒳˘)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
-      <td><a href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software">Avoir installé les logiciels de bases pour le développement web</a>, <a href="/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files">savoir manipuler des fichiers</a>, comprendre les fondamentaux en HTML (voir <a href="/fr/docs/Learn/HTML/Introduction_to_HTML">Une introduction à HTML</a>), avoir une idée générale du fonctionnement de CSS (voir <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas en CSS</a>.)</td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
-      <td>Apprendre ce que sont les sélecteurs d'attributs et comment les utiliser.</td>
-    </tr>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
+      <td><a h-hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe">avoiw instawwé wes wogiciews de bases pouw we dévewoppement web</a>, 😳😳😳 <a h-hwef="/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes">savoiw manipuwew des fichiews</a>, nyaa~~ compwendwe wes fondamentaux e-en htmw (voiw <a hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw">une i-intwoduction à h-htmw</a>), rawr a-avoiw une idée g-généwawe du fonctionnement de css (voiw <a hwef="/fw/docs/weawn/css/fiwst_steps">pwemiews p-pas en css</a>.)</td>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
+      <td>appwendwe ce que sont w-wes séwecteuws d'attwibuts et comment wes utiwisew.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Sélecteurs sur la présence et la valeur
+## séwecteuws suw wa pwésence et wa v-vaweuw
 
-Ces sélecteurs permettent de cibler un élément selon la simple présence d'un attribut (par exemple `href`), ou selon certains critères sur la valeur de l'attribut.
+ces séwecteuws pewmettent d-de cibwew un éwément s-sewon w-wa simpwe pwésence d'un attwibut (paw exempwe `hwef`), -.- ou sewon c-cewtains cwitèwes s-suw wa vaweuw de w'attwibut. (✿oωo)
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Sélecteur</th>
-      <th scope="col">Exemple</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">séwecteuw</th>
+      <th scope="cow">exempwe</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>[<em>attr</em>]</code></td>
-      <td><code>a[title]</code></td>
-      <td> Cible les éléments avec un attribut <code><em>attr</em></code> (le nom de l'attribut est indiqué entre crochets).</td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>=<em>valeur</em>]</code></td>
-      <td><code>a[href="https://example.com"]</code></td>
-      <td> Cible les éléments avec un attribut <code><em>attr</em></code> qui vaut exactement <code><em>valeur</em></code>. La valeur attendue est alors indiquée entre doubles quotes.</td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>~=<em>valeur</em>]</code></td>
-      <td><code>p[class~="special"]</code></td>
-      <td>Cible les éléments avec un attribut <code><em>attr</em></code> qui vaut exactement <code><em>valeur</em></code>, ou qui contient <code><em>valeur</em></code> dans sa liste de valeurs (séparées par des espaces).
+    <tw>
+      <td><code>[<em>attw</em>]</code></td>
+      <td><code>a[titwe]</code></td>
+      <td> cibwe wes éwéments a-avec un attwibut <code><em>attw</em></code> (we nyom d-de w'attwibut est indiqué entwe c-cwochets).</td>
+    </tw>
+    <tw>
+      <td><code>[<em>attw</em>=<em>vaweuw</em>]</code></td>
+      <td><code>a[hwef="https://exampwe.com"]</code></td>
+      <td> cibwe wes éwéments a-avec u-un attwibut <code><em>attw</em></code> qui vaut exactement <code><em>vaweuw</em></code>. /(^•ω•^) wa vaweuw attendue est awows indiquée entwe doubwes quotes.</td>
+    </tw>
+    <tw>
+      <td><code>[<em>attw</em>~=<em>vaweuw</em>]</code></td>
+      <td><code>p[cwass~="speciaw"]</code></td>
+      <td>cibwe w-wes éwéments a-avec un attwibut <code><em>attw</em></code> q-qui vaut e-exactement <code><em>vaweuw</em></code>, 🥺 o-ou qui contient <code><em>vaweuw</em></code> dans sa wiste de vaweuws (sépawées p-paw des espaces). ʘwʘ
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>[<em>attr</em>|=<em>valeur</em>]</code></td>
-      <td><code>div[lang|="zh"]</code></td>
-      <td>Cible les éléments avec un attribut <em>attr</em> qui vaut exactement <code><em>valeur</em></code>, ou qui commence par <code><em>valeur</em></code> suivie immédiatement d'un tiret.</td>
-    </tr>
+    </tw>
+    <tw>
+      <td><code>[<em>attw</em>|=<em>vaweuw</em>]</code></td>
+      <td><code>div[wang|="zh"]</code></td>
+      <td>cibwe wes éwéments avec un attwibut <em>attw</em> qui vaut exactement <code><em>vaweuw</em></code>, UwU o-ou qui commence paw <code><em>vaweuw</em></code> s-suivie immédiatement d-d'un tiwet.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Voyons un cas d'usage de ces sélecteurs avec un exemple.
+v-voyons un cas d'usage de c-ces séwecteuws a-avec un exempwe. XD
 
-- En utilisant `li[class]`, on peut cibler tout élément de liste avec un attribut `class`. Dans notre exemple ci-après, cela correspond à tous les éléments de liste, à l'exception du premier.
-- `li[class="a"]` cible ceux qui ont une classe `a`, mais pas les éléments dont la classe contient `a` parmi une liste de valeurs. Dans notre exemple, ce sélecteur cible le deuxième élément de la liste.
-- `li[class~="a"]` cible les éléments de liste avec une classe qui vaut `a` et ceux dont la classe contient `a` parmi la liste des valeurs. Dans notre exemple, le deuxième et le troisième élément sont ciblés.
+- e-en utiwisant `wi[cwass]`, (✿oωo) o-on peut cibwew tout éwément de wiste avec un attwibut `cwass`. :3 d-dans nyotwe exempwe c-ci-apwès, (///ˬ///✿) c-cewa cowwespond à t-tous wes éwéments d-de wiste, nyaa~~ à w'exception du pwemiew. >w<
+- `wi[cwass="a"]` cibwe c-ceux qui ont une cwasse `a`, -.- mais pas wes éwéments dont wa cwasse contient `a` pawmi une wiste d-de vaweuws. (✿oωo) dans nyotwe exempwe, (˘ω˘) ce séwecteuw cibwe we deuxième éwément d-de wa wiste. rawr
+- `wi[cwass~="a"]` c-cibwe wes éwéments d-de wiste avec une cwasse qui v-vaut `a` et ceux dont wa cwasse c-contient `a` p-pawmi wa wiste des vaweuws. OwO dans nyotwe exempwe, ^•ﻌ•^ we deuxième et we twoisième éwément sont cibwés. UwU
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute.html", '100%', 950)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/attwibute.htmw", (˘ω˘) '100%', (///ˬ///✿) 950)}}
 
-## Cibler en fonction d'une sous-chaîne
+## c-cibwew en fonction d-d'une sous-chaîne
 
-Les sélecteurs suivant permettent de cibler un élément en fonction de la valeur de l'attribut et d'une sous-chaîne donnée. Par exemple, si on utilise deux classes `box-warning` et `box-error` et qu'on souhaite cibler tous les éléments avec une classe commençant par `box-`, on pourra utiliser `[class^="box-"]` afin de cibler les deux (ou `[class|="box"]` comme décrite ci-dessus).
+wes séwecteuws s-suivant pewmettent d-de cibwew un éwément en fonction de wa v-vaweuw de w'attwibut e-et d'une sous-chaîne donnée. σωσ p-paw exempwe, /(^•ω•^) s-si on utiwise deux cwasses `box-wawning` et `box-ewwow` et qu'on souhaite cibwew t-tous wes éwéments a-avec une c-cwasse commençant paw `box-`, 😳 on p-pouwwa utiwisew `[cwass^="box-"]` a-afin de cibwew wes deux (ou `[cwass|="box"]` c-comme décwite ci-dessus). 😳
 
-| Sélecteur        | Exemple             | Description                                                                                  |
+| séwecteuw        | exempwe             | descwiption                                                                                  |
 | ---------------- | ------------------- | -------------------------------------------------------------------------------------------- |
-| `[attr^=valeur]` | `li[class^="box-"]` | Cible les éléments où la valeur de l'attribut `attr` commence par `valeur`.                  |
-| `[attr$=valeur]` | `li[class$="-box"]` | Cible les éléments où la valeur de l'attribut `attr` finit par `valeur`.                     |
-| `[attr*=valeur]` | `li[class*="box"]`  | Cible les éléments où la valeur de l'attribut `attr` contient `valeur` au sein de la chaîne. |
+| `[attw^=vaweuw]` | `wi[cwass^="box-"]` | cibwe w-wes éwéments o-où wa vaweuw de w'attwibut `attw` commence paw `vaweuw`. (⑅˘꒳˘)                  |
+| `[attw$=vaweuw]` | `wi[cwass$="-box"]` | c-cibwe w-wes éwéments où wa vaweuw de w'attwibut `attw` finit paw `vaweuw`. 😳😳😳                     |
+| `[attw*=vaweuw]` | `wi[cwass*="box"]`  | c-cibwe wes éwéments où wa vaweuw de w'attwibut `attw` contient `vaweuw` au sein de wa chaîne. 😳 |
 
-> [!NOTE]
-> Les caractères `^` et `$` sont également utilisés comme ancres au sein des [expressions rationnelles](/fr/docs/Web/JavaScript/Guide/Regular_expressions) pour signifier respectivement _commence par_ et _finit par_.
+> [!note]
+> wes cawactèwes `^` e-et `$` sont égawement utiwisés comme a-ancwes au sein d-des [expwessions wationnewwes](/fw/docs/web/javascwipt/guide/weguwaw_expwessions) pouw signifiew wespectivement _commence p-paw_ e-et _finit paw_. XD
 
-Dans l'exemple qui suit, on illustre ces sélecteurs&nbsp;:
+dans w'exempwe qui suit, mya on iwwustwe ces séwecteuws&nbsp;:
 
-- `li[class^="a"]` cible tout élément de liste avec un attribut `class` dont la valeur commence par `a`. Dans notre exemple, cela correspond aux deux premiers éléments de la liste.
-- `li[class$="a"]` cible tout élément de liste avec un attribut `class` dont la valeur finit par `a`. Dans notre exemple, cela correspond au premier et troisième éléments de la liste.
-- `li[class*="a"]` cible tout élément de liste avec un attribut `class` contient `a`, n'importe où dans la valeur. Dans notre exemple, cela correspond à tous les éléments de la liste.
+- `wi[cwass^="a"]` c-cibwe tout éwément de wiste avec u-un attwibut `cwass` dont wa vaweuw commence paw `a`. ^•ﻌ•^ dans nyotwe e-exempwe, ʘwʘ cewa cowwespond aux d-deux pwemiews éwéments d-de wa wiste.
+- `wi[cwass$="a"]` c-cibwe tout éwément d-de wiste avec un a-attwibut `cwass` d-dont wa vaweuw finit paw `a`. d-dans notwe exempwe, ( ͡o ω ͡o ) c-cewa cowwespond au pwemiew et twoisième éwéments d-de wa wiste. mya
+- `wi[cwass*="a"]` c-cibwe tout éwément d-de wiste avec un attwibut `cwass` contient `a`, o.O ny'impowte o-où dans wa vaweuw. (✿oωo) dans n-nyotwe exempwe, :3 c-cewa cowwespond à tous wes éwéments de wa wiste. 😳
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-substring.html", '100%', 950)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/attwibute-substwing.htmw", (U ﹏ U) '100%', 950)}}
 
-## Sensibilité à la casse
+## sensibiwité à w-wa casse
 
-Si on souhaite cibler les éléments sans tenir compte de la casse pour les valeurs de l'attribut, on pourra utiliser le marqueur `i` avant le crochet fermant. Ce marqueur indique au navigateur de ne pas tenir compte de la casse (c'est-à-dire majuscule/minuscule). Sans ce marqueur, les correspondances seront considérées selon la sensibilité à la casse propre au langage du document&nbsp;; pour le langage HTML, la casse est importante.
+s-si on souhaite cibwew w-wes éwéments s-sans teniw compte de wa casse p-pouw wes vaweuws de w'attwibut, mya on pouwwa utiwisew we mawqueuw `i` avant we cwochet fewmant. (U ᵕ U❁) c-ce mawqueuw indique au navigateuw d-de nye pas teniw compte de wa c-casse (c'est-à-diwe majuscuwe/minuscuwe). :3 s-sans ce mawqueuw, mya wes c-cowwespondances s-sewont considéwées s-sewon wa sensibiwité à wa c-casse pwopwe au w-wangage du document&nbsp;; pouw we wangage htmw, OwO wa casse est impowtante. (ˆ ﻌ ˆ)♡
 
-Dans l'exemple qui suit, le premier sélecteur cible l'élément dont la valeur de la classe commence par `a`. Dans l'exemple cela correspond au premier élément, car la valeur des deux suivants commence par un A majuscules. Le deuxième sélecteur utilise le marqueur `i` pour ne pas tenir compte de la casse, et permet dans l'exemple de cibler tous les éléments de la liste.
+dans w'exempwe qui suit, ʘwʘ we pwemiew s-séwecteuw cibwe w-w'éwément dont w-wa vaweuw de wa cwasse commence p-paw `a`. dans w'exempwe cewa cowwespond au pwemiew éwément, o.O caw wa vaweuw des d-deux suivants c-commence paw un a majuscuwes. UwU we d-deuxième séwecteuw utiwise we mawqueuw `i` pouw n-nye pas teniw c-compte de wa casse, rawr x3 et pewmet d-dans w'exempwe de c-cibwew tous wes éwéments de wa wiste. 🥺
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/attribute-case.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/attwibute-case.htmw", :3 '100%', 800)}}
 
-> [!NOTE]
-> Il existe également un marqueur plus récent&nbsp;: `s`, qui forcera une sensibilité à la casse pour les contextes où la casse est normalement ignorée. Toutefois, ce marqueur est moins pris en charge dans les navigateurs et s'avère peu utile dans le cas du HTML.
+> [!note]
+> iw existe égawement un mawqueuw p-pwus wécent&nbsp;: `s`, (ꈍᴗꈍ) q-qui fowcewa u-une sensibiwité à w-wa casse p-pouw wes contextes où wa casse e-est nyowmawement i-ignowée. 🥺 toutefois, (✿oωo) ce mawqueuw e-est moins pwis e-en chawge dans wes nyavigateuws e-et s'avèwe peu utiwe dans we cas du htmw. (U ﹏ U)
 
-## Résumé
+## w-wésumé
 
-Maintenant que nous avons vu les sélecteurs d'attribut, nous allons poursuivre avec [les sélecteurs de pseudo-classe et de pseudo-élément](/fr/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements).
+maintenant que nous a-avons vu wes séwecteuws d-d'attwibut, :3 nyous awwons p-pouwsuivwe avec [wes séwecteuws de pseudo-cwasse e-et de pseudo-éwément](/fw/docs/weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements). ^^;;
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors", "Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/type_cwass_and_id_sewectows", rawr "weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements", 😳😳😳 "weawn/css/buiwding_bwocks")}}

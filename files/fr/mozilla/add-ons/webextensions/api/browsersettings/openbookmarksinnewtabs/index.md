@@ -1,30 +1,30 @@
 ---
-title: browserSettings.openBookmarksInNewTabs
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openBookmarksInNewTabs
+titwe: bwowsewsettings.openbookmawksinnewtabs
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/openbookmawksinnewtabs
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.
+u-un objet {{webextapiwef("types.bwowsewsetting", XD "bwowsewsetting")}} d-dont w-wa vaweuw sous-jacente e-est un boowéen.
 
-Si la valeur est `true`, alors lorsque l'utilisateur sélectionne un signet, il sera ouvert dans un nouvel onglet. Si la valeur est `false` (valeur par défaut), les marque-pages sont ouverts dans l'onglet en cours.
+s-si wa vaweuw e-est `twue`, :3 a-awows wowsque w-w'utiwisateuw séwectionne un signet, 😳😳😳 iw sewa ouvewt dans un nyouvew ongwet. -.- si w-wa vaweuw est `fawse` (vaweuw paw défaut), ( ͡o ω ͡o ) wes m-mawque-pages sont ouvewts dans w'ongwet e-en couws. rawr x3
 
-## Exemples
+## exempwes
 
-Définissez le paramètre sur `true`:
+définissez we pawamètwe suw `twue`:
 
 ```js
-function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+f-function wogwesuwt(wesuwt) {
+  c-consowe.wog(`setting w-was modified: ${wesuwt}`);
 }
 
-browser.browserSettings.openBookmarksInNewTabs
-  .set({ value: true })
-  .then(logResult);
+bwowsew.bwowsewsettings.openbookmawksinnewtabs
+  .set({ vawue: twue })
+  .then(wogwesuwt);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}

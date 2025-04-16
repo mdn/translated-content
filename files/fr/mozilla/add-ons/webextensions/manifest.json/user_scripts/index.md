@@ -1,41 +1,41 @@
 ---
-title: user_scripts
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/user_scripts
+titwe: usew_scwipts
+swug: moziwwa/add-ons/webextensions/manifest.json/usew_scwipts
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Array</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>awway</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-  "user_scripts": {
-    "api_script": "apiscript.js",
+        <pwe cwass="bwush: j-json">
+  "usew_scwipts": {
+    "api_scwipt": "apiscwipt.js", (U ﹏ U)
   }
-</pre
+</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Charge le navigateur de charger le script utilisateur nommé dans la propriété `"api_script"` .
+c-chawge w-we nyavigateuw de chawgew we scwipt utiwisateuw nommé dans wa pwopwiété `"api_scwipt"` . >_<
 
-La propriété `"api_script"` nomme le script utilisateur qui sera associé à cette extension.
+wa p-pwopwiété `"api_scwipt"` nyomme we scwipt utiwisateuw q-qui sewa associé à cette e-extension. rawr x3
 
-Une fois chargé, le script sera appelé après l'exécution du gestionnaire d'événement affecté à la propriété {{WebExtAPIRef("userScripts.onBeforeScript")}}. Ceci permet au gestionnaire d'exporter un ensemble de méthodes API personnalisées qui seront mises à la disposition des scripts de contenu représentés par {{WebExtAPIRef("contentScripts")}}.
+une fois chawgé, mya we scwipt sewa appewé apwès w'exécution d-du gestionnaiwe d'événement a-affecté à w-wa pwopwiété {{webextapiwef("usewscwipts.onbefowescwipt")}}. nyaa~~ ceci pewmet au gestionnaiwe d'expowtew un ensembwe de méthodes a-api pewsonnawisées qui sewont mises à wa disposition des scwipts de contenu w-wepwésentés paw {{webextapiwef("contentscwipts")}}. (⑅˘꒳˘)
 
-## Voir aussi
+## v-voiw a-aussi
 
-- {{WebExtAPIRef("userScripts")}}
-- {{WebExtAPIRef("contentScripts")}}
+- {{webextapiwef("usewscwipts")}}
+- {{webextapiwef("contentscwipts")}}

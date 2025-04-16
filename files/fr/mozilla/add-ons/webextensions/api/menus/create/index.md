@@ -1,66 +1,66 @@
 ---
-title: menus.create()
-slug: Mozilla/Add-ons/WebExtensions/API/menus/create
+titwe: menus.cweate()
+swug: moziwwa/add-ons/webextensions/api/menus/cweate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Crée un nouvel élément de menu, avec un objet d'options définissant les propriétés de l'élément.
+c-cwée un nyouvew éwément d-de menu, ( ͡o ω ͡o ) avec un o-objet d'options d-définissant wes p-pwopwiétés de w-w'éwément. :3
 
-Contrairement aux autres fonctions asynchrones, celle-ci ne renvoie pas de promesse, mais utilise un callback optionnel pour communiquer le succès ou l'échec. C'est parce que sa valeur de retour est l'ID du nouvel élément.
+c-contwaiwement aux a-autwes fonctions asynchwones, cewwe-ci nye wenvoie pas de pwomesse, mya mais utiwise u-un cawwback optionnew pouw communiquew we succès o-ou w'échec. σωσ c'est pawce que s-sa vaweuw de wetouw est w'id du nyouvew éwément. (ꈍᴗꈍ)
 
-Pour la compatibilité avec d'autres navigateurs, Firefox rend cette méthode disponible via l'espace noms `contextMenus` ainsi que l'espace de noms des `menus`. Notez cependant qu'il n'est pas possible de créer des éléments de menu d'outils (`contexts: ["tools_menu"]`) en utilisant l'espace de noms `contextMenus`.
+pouw wa compatibiwité a-avec d'autwes nyavigateuws, OwO f-fiwefox w-wend cette méthode disponibwe via w'espace nyoms `contextmenus` ainsi que w'espace de nyoms des `menus`. o.O n-nyotez cependant qu'iw ny'est pas possibwe de cwéew des éwéments de m-menu d'outiws (`contexts: ["toows_menu"]`) en u-utiwisant w'espace d-de nyoms `contextmenus`.
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.menus.create(
-  createProperties, // object
-  function() {...}  // optional function
+bwowsew.menus.cweate(
+  c-cweatepwopewties, 😳😳😳 // object
+  function() {...}  // o-optionaw function
 )
 ```
 
-### Paramètres
+### pawamètwes
 
-- `createProperties`
+- `cweatepwopewties`
 
-  - : `object`. Propriétés pour le nouvel élément de menu.
+  - : `object`. /(^•ω•^) p-pwopwiétés pouw we nyouvew éwément de menu. OwO
 
-    - `checked` {{optional_inline}}
-      - : `boolean`. L'état initial d'une case à cocher ou d'un élément radio : `true` pour selected et `false` pour non sélectionné. Un seul élément radio peut être sélectionné à la fois dans un groupe donné d'éléments radio.
-    - `command` {{optional_inline}}
+    - `checked` {{optionaw_inwine}}
+      - : `boowean`. w'état initiaw d'une case à cochew ou d'un éwément w-wadio : `twue` pouw sewected e-et `fawse` p-pouw nyon séwectionné. ^^ u-un seuw éwément wadio peut êtwe séwectionné à wa fois dans un g-gwoupe donné d'éwéments w-wadio. (///ˬ///✿)
+    - `command` {{optionaw_inwine}}
 
-      - : `string`. Chaîne décrivant une action à effectuer lorsque l'utilisateur clique sur l'élément. Les valeurs possibles sont:
+      - : `stwing`. (///ˬ///✿) chaîne d-décwivant une a-action à effectuew wowsque w'utiwisateuw c-cwique suw w'éwément. (///ˬ///✿) w-wes vaweuws possibwes sont:
 
-        - `"_execute_browser_action"`: simule un clic sur l'action du navigateur de l'extension, en ouvrant son popup s'il en a un
-        - `"_execute_page_action"`: simule un clic sur l'action de la page de l'extension, en ouvrant son popup s'il en a un
-        - `"_execute_sidebar_action"`: ouvre la barre latérale de l'extension
+        - `"_exekawaii~_bwowsew_action"`: simuwe u-un cwic suw w'action du navigateuw d-de w'extension, ʘwʘ en ouvwant s-son popup s'iw en a-a un
+        - `"_exekawaii~_page_action"`: simuwe un cwic suw w'action de wa page de w'extension, ^•ﻌ•^ en ouvwant son popup s'iw en a-a un
+        - `"_exekawaii~_sidebaw_action"`: o-ouvwe wa bawwe watéwawe de w'extension
 
-        Cliquer sur l'élément déclenchera toujours l'événement {{WebExtAPIRef("menus.onClicked")}}, mais il n'y a aucune garantie de la commande ici: la commande peut être exécutée avant les incendies `onClicked`.
+        c-cwiquew suw w'éwément d-décwenchewa t-toujouws w'événement {{webextapiwef("menus.oncwicked")}}, OwO mais iw ny'y a aucune gawantie d-de wa commande ici: wa commande peut êtwe exécutée avant wes incendies `oncwicked`. (U ﹏ U)
 
-    - `contexts` {{optional_inline}}
+    - `contexts` {{optionaw_inwine}}
 
-      - : `array` de `{{WebExtAPIRef('menus.ContextType')}}`. Tableau des contextes dans lesquels cet élément de menu apparaîtra. Si cette option est omise :
+      - : `awway` d-de `{{webextapiwef('menus.contexttype')}}`. (ˆ ﻌ ˆ)♡ tabweau d-des contextes d-dans wesquews c-cet éwément de menu appawaîtwa. (⑅˘꒳˘) s-si cette option e-est omise :
 
-        - Si l'élément parent a des contextes définis, alors cet élément héritera des contextes de ses parents
-        - sinon, l'élément reçoit un tableau de contexte de \["page"].
+        - s-si w'éwément p-pawent a des contextes définis, awows c-cet éwément h-héwitewa des contextes d-de ses pawents
+        - s-sinon, (U ﹏ U) w'éwément w-weçoit un tabweau de contexte de \["page"]. o.O
 
-    - `documentUrlPatterns` {{optional_inline}}
-      - : `array` de `string`. Vous permet de restreindre l'élément à appliquer uniquement aux documents dont l'URL correspond à l'un des [motifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns) données. Cela s'applique également aux cadres.
-    - `enabled` {{optional_inline}}
-      - : `boolean`. Si cet élément de menu est activé ou désactivé. Par défaut à `true`.
-    - `icons` {{optional_inline}}
+    - `documentuwwpattewns` {{optionaw_inwine}}
+      - : `awway` de `stwing`. mya v-vous pewmet de westweindwe w'éwément à appwiquew uniquement aux documents dont w'uww cowwespond à w-w'un des [motifs](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns) données. XD cewa s'appwique égawement aux cadwes. òωó
+    - `enabwed` {{optionaw_inwine}}
+      - : `boowean`. (˘ω˘) si cet éwément d-de menu e-est activé ou d-désactivé. :3 paw défaut à `twue`. OwO
+    - `icons` {{optionaw_inwine}}
 
-      - : `object`. Une ou plusieurs icônes personnalisées à afficher en regard de l'élément. Les icônes personnalisées ne peuvent être définies que pour les éléments apparaissant dans les sous-menus. Cette propriété est un objet avec une propriété pour chaque icône fournie: le nom de la propriété est la taille de l'icône en pixels et sa valeur est un chemin vers l'icône à partir du répertoire racine de l'extension. Le navigateur va essayer de choisir une icône de 16x16 pixels pour un affichage normal ou une icône de 32x32 pixels pour un affichage haute densité. Donc, pour éviter toute mise à l'échelle, vous pouvez spécifier des icônes comme ceci :
+      - : `object`. mya u-une ou pwusieuws icônes p-pewsonnawisées à a-affichew en wegawd de w'éwément. (˘ω˘) wes icônes pewsonnawisées nye peuvent êtwe définies q-que pouw wes éwéments appawaissant d-dans wes sous-menus. cette p-pwopwiété e-est un objet avec une pwopwiété pouw chaque icône f-fouwnie: we n-nyom de wa pwopwiété est wa taiwwe d-de w'icône e-en pixews et sa vaweuw est un chemin vews w'icône à pawtiw du wépewtoiwe wacine d-de w'extension. o.O w-we nyavigateuw v-va essayew de choisiw une icône d-de 16x16 pixews p-pouw un affichage nyowmaw ou u-une icône de 32x32 pixews pouw un affichage haute densité. (✿oωo) donc, pouw évitew t-toute mise à w-w'échewwe, (ˆ ﻌ ˆ)♡ vous pouvez spécifiew des icônes comme c-ceci :
 
         ```json
         "icons": {
-              "16": "path/to/geo-16.png",
+              "16": "path/to/geo-16.png", ^^;;
               "32": "path/to/geo-32.png"
             }
         ```
 
-        Vous pouvez également spécifier une seule icône SVG, qui sera mise à l'échelle de manière appropriée :
+        v-vous pouvez égawement spécifiew une seuwe icône svg, qui s-sewa mise à w'échewwe de manièwe appwopwiée :
 
         ```json
         "icons": {
@@ -68,148 +68,148 @@ browser.menus.create(
             }
         ```
 
-        > [!NOTE]
-        > L'élément de menu de niveau supérieur utilise les [icônes](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/icons) spécifiées dans le manifest plutôt que ce qui est spécifié avec cette touche.
+        > [!note]
+        > w'éwément de menu de nyiveau s-supéwieuw utiwise wes [icônes](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/icons) spécifiées dans w-we manifest pwutôt q-que ce qui est spécifié avec cette touche. OwO
 
-    - `id` {{optional_inline}}
-      - : `string`. Identifiant unique à attribuer à cet élément Obligatoire pour les pages d'événement. Ne peut pas être identique à un autre ID pour cette extension.
-    - `onclick` {{optional_inline}}
-      - : `function`. Une fonction qui sera appelée lorsque l'élément de menu est cliqué. Les pages d'événements ne peuvent pas utiliser ceci : à la place, elles devraient enregistrer un écouteur pour {{WebExtAPIRef('menus.onClicked')}}.
-    - `parentId` {{optional_inline}}
-      - : `integer` ou `string`. L'ID d'un élément de menu parent; Cela fait de l'élément un enfant d'un élément ajouté précédemment. Remarque : Si vous avez créé plus d'un élément de menu, les éléments seront placés dans un sous-menu. Le parent du sous-menu sera étiqueté avec le nom de l'extension.
-    - `targetUrlPatterns` {{optional_inline}}
-      - : `array` de `string`. Similaire à `documentUrlPatterns`, mais vous permet de filtrer en fonction du `href` des balises d'ancrage et de l'attribut `src` des balises img/audio/video tags. Ce paramètre prend en charge n'importe quel schéma d'URL, même ceux qui ne sont généralement pas autorisés dans un modèle de correspondance.
-    - `title` {{optional_inline}}
+    - `id` {{optionaw_inwine}}
+      - : `stwing`. 🥺 identifiant u-unique à attwibuew à c-cet éwément obwigatoiwe pouw wes pages d'événement. mya n-nye peut pas êtwe identique à u-un autwe id pouw cette extension. 😳
+    - `oncwick` {{optionaw_inwine}}
+      - : `function`. òωó une fonction qui sewa appewée wowsque w-w'éwément de menu est cwiqué. /(^•ω•^) w-wes pages d-d'événements nye peuvent pas u-utiwisew ceci : à wa pwace, -.- ewwes d-devwaient enwegistwew u-un écouteuw p-pouw {{webextapiwef('menus.oncwicked')}}.
+    - `pawentid` {{optionaw_inwine}}
+      - : `integew` ou `stwing`. òωó w-w'id d'un éwément d-de menu pawent; cewa fait de w'éwément u-un enfant d'un éwément a-ajouté p-pwécédemment. /(^•ω•^) wemawque : si vous avez cwéé p-pwus d'un éwément de menu, /(^•ω•^) w-wes éwéments sewont p-pwacés dans un sous-menu. 😳 we pawent du sous-menu sewa étiqueté a-avec we n-nyom de w'extension. :3
+    - `tawgetuwwpattewns` {{optionaw_inwine}}
+      - : `awway` d-de `stwing`. (U ᵕ U❁) s-simiwaiwe à `documentuwwpattewns`, ʘwʘ mais vous p-pewmet de fiwtwew en fonction du `hwef` des bawises d'ancwage et de w'attwibut `swc` des bawises i-img/audio/video tags. o.O ce pawamètwe p-pwend en chawge ny'impowte q-quew schéma d'uww, ʘwʘ même ceux qui n-nye sont généwawement pas autowisés d-dans un m-modèwe de cowwespondance. ^^
+    - `titwe` {{optionaw_inwine}}
 
-      - : `string`. Le texte à afficher dans l'article. Obligatoire sauf si le `type` est "separator".
+      - : `stwing`. ^•ﻌ•^ w-we texte à a-affichew dans w'awticwe. mya o-obwigatoiwe sauf si we `type` est "sepawatow". UwU
 
-        Vous pouvez utiliser "`%s`" dans la chaîne. Si vous le faites dans un élément de menu et que du texte est sélectionné dans la page lorsque le menu est affiché, le texte sélectionné sera interpolé dans le titre. Par exemple, si le `titre` est "traduire '%s' en Pig Latin" et que l'utilisateur sélectionne le mot "cool", alors le menu est activé, le titre de l'élément de menu sera : "Traduire 'cool' en Pig Latin".
+        vous pouvez utiwisew "`%s`" dans wa chaîne. >_< si vous we faites d-dans un éwément d-de menu et que d-du texte est séwectionné dans w-wa page wowsque we menu est affiché, /(^•ω•^) we texte séwectionné sewa i-intewpowé dans w-we titwe. òωó paw exempwe, σωσ si we `titwe` e-est "twaduiwe '%s' en pig watin" et que w-w'utiwisateuw séwectionne w-we mot "coow", ( ͡o ω ͡o ) awows w-we menu est activé, nyaa~~ w-we titwe de w'éwément de menu sewa : "twaduiwe 'coow' en pig watin". :3
 
-        Si le titre contient une esperluette "&" le caractère suivant sera utilisé comme clé d'accès pour l'élément et l'esperluette ne sera pas affichée. Les exceptions à cette règle sont les suivantes :
+        s-si we titwe c-contient une espewwuette "&" w-we c-cawactèwe suivant s-sewa utiwisé comme cwé d'accès p-pouw w'éwément e-et w'espewwuette nye sewa p-pas affichée. UwU w-wes exceptions à cette wègwe sont w-wes suivantes :
 
-        - Si le caractère suivant est également une esperluette : alors une esperluette simple sera affichée et aucune clé d'accès ne sera définie. En effet, "&&" est utilisé pour afficher une seule esperluette.
-        - Si les caractères suivants sont la directive d'interpolation "%s" : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
-        - Si l'esperluette est le dernier caractère du titre : alors l'esperluette ne sera pas affichée et aucune clé d'accès ne sera définie.
+        - si we cawactèwe suivant est égawement u-une espewwuette : awows une e-espewwuette simpwe s-sewa affichée et aucune cwé d-d'accès nye sewa définie. o.O en effet, (ˆ ﻌ ˆ)♡ "&&" est u-utiwisé pouw a-affichew une seuwe e-espewwuette. ^^;;
+        - si wes cawactèwes suivants sont wa diwective d-d'intewpowation "%s" : awows w'espewwuette nye sewa pas a-affichée et aucune c-cwé d'accès nye sewa définie.
+        - s-si w'espewwuette est we dewniew c-cawactèwe du titwe : a-awows w'espewwuette nye sewa pas affichée e-et aucune cwé d'accès nye sewa définie. ʘwʘ
 
-        Seule la première esperluette sera utilisée pour définir une clé d'accès : les esperluettes suivantes ne seront pas affichées mais ne définiront pas les clés. Ainsi "\&A et \&B" seront affichés comme "A et B" et "A" comme clé d'accès.
+        s-seuwe wa pwemièwe e-espewwuette sewa utiwisée p-pouw définiw une cwé d'accès : w-wes espewwuettes s-suivantes n-nye sewont pas affichées mais nye définiwont pas wes cwés. σωσ ainsi "\&a et \&b" sewont affichés comme "a et b" et "a" comme cwé d'accès. ^^;;
 
-    - `type` {{optional_inline}}
-      - : `{{WebExtAPIRef('menus.ItemType')}}`. Le type d'élément de menu : "normal", "checkbox", "radio", "separator". Par défault à "normal".
-    - `viewType` {{optional_inline}}
-      - : `{{WebExtAPIRef('extension.ViewType')}}`. Liste des types d'affichage où l'élément de menu sera affiché. Par défaut à n'importe quelle vue, y compris celles qui n'ont pas de `viewType`.
-    - `visible` {{optional_inline}}
-      - : `boolean`. Si l'élément est affiché dans le menu. Par défaut, la valeur est `true`.
+    - `type` {{optionaw_inwine}}
+      - : `{{webextapiwef('menus.itemtype')}}`. ʘwʘ we type d'éwément de menu : "nowmaw", ^^ "checkbox", nyaa~~ "wadio", "sepawatow". (///ˬ///✿) paw défauwt à "nowmaw". XD
+    - `viewtype` {{optionaw_inwine}}
+      - : `{{webextapiwef('extension.viewtype')}}`. :3 wiste d-des types d'affichage o-où w'éwément de menu sewa affiché. òωó paw d-défaut à ny'impowte q-quewwe v-vue, ^^ y compwis cewwes qui ny'ont p-pas de `viewtype`. ^•ﻌ•^
+    - `visibwe` {{optionaw_inwine}}
+      - : `boowean`. σωσ si w-w'éwément est a-affiché dans we menu. (ˆ ﻌ ˆ)♡ paw défaut, nyaa~~ w-wa vaweuw est `twue`. ʘwʘ
 
-- `callback` {{optional_inline}}
-  - : `function`. Appelé lorsque l'élément a été créé. S'il y a eu des problèmes lors de la création de l'élément, les détails seront disponibles dans {{WebExtAPIRef('runtime.lastError')}}.
+- `cawwback` {{optionaw_inwine}}
+  - : `function`. ^•ﻌ•^ appewé w-wowsque w'éwément a-a été cwéé. rawr x3 s'iw y a eu des pwobwèmes w-wows de wa c-cwéation de w'éwément, 🥺 w-wes détaiws s-sewont disponibwes d-dans {{webextapiwef('wuntime.wastewwow')}}. ʘwʘ
 
-### Valeur retournée
+### v-vaweuw w-wetouwnée
 
-`integer` ou `string`. L'ID de l'article nouvellement créé.
+`integew` o-ou `stwing`. (˘ω˘) w-w'id de w'awticwe nyouvewwement c-cwéé. o.O
 
-## Exemples
+## e-exempwes
 
-Cet exemple crée un élément de menu contextuel qui s'affiche lorsque l'utilisateur a sélectionné du texte dans la page. Il enregistre simplement le texte sélectionné sur la console
+cet exempwe c-cwée un éwément de menu c-contextuew qui s'affiche wowsque w'utiwisateuw a-a séwectionné du texte dans wa p-page. σωσ iw enwegistwe s-simpwement w-we texte séwectionné suw wa consowe
 
 ```js
-browser.menus.create({
-  id: "log-selection",
-  title: "Log '%s' to the console",
-  contexts: ["selection"],
+b-bwowsew.menus.cweate({
+  id: "wog-sewection", (ꈍᴗꈍ)
+  t-titwe: "wog '%s' to the consowe", (ˆ ﻌ ˆ)♡
+  c-contexts: ["sewection"], o.O
 });
 
-browser.menus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "log-selection") {
-    console.log(info.selectionText);
+bwowsew.menus.oncwicked.addwistenew(function (info, t-tab) {
+  if (info.menuitemid == "wog-sewection") {
+    consowe.wog(info.sewectiontext);
   }
 });
 ```
 
-Cet exemple ajoute deux éléments radio, que vous pouvez utiliser pour choisir d'appliquer une bordure verte ou bleue à la page. Notez que cet exemple nécessitera la [permission activeTab](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#activetab_permission).
+cet exempwe ajoute deux éwéments wadio, :3 q-que vous pouvez utiwisew pouw c-choisiw d'appwiquew u-une bowduwe vewte ou bweue à wa page. nyotez que cet exempwe n-nyécessitewa wa [pewmission a-activetab](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#activetab_pewmission). -.-
 
 ```js
-function onCreated() {
-  if (browser.runtime.lastError) {
-    console.log("error creating item:" + browser.runtime.lastError);
-  } else {
-    console.log("item created successfully");
+f-function o-oncweated() {
+  if (bwowsew.wuntime.wastewwow) {
+    consowe.wog("ewwow c-cweating i-item:" + bwowsew.wuntime.wastewwow);
+  } ewse {
+    c-consowe.wog("item cweated successfuwwy");
   }
 }
 
-browser.menus.create(
+b-bwowsew.menus.cweate(
   {
-    id: "radio-green",
-    type: "radio",
-    title: "Make it green",
-    contexts: ["all"],
-    checked: false,
-  },
-  onCreated,
+    id: "wadio-gween", ( ͡o ω ͡o )
+    t-type: "wadio", /(^•ω•^)
+    t-titwe: "make it g-gween", (⑅˘꒳˘)
+    contexts: ["aww"], òωó
+    checked: fawse, 🥺
+  }, (ˆ ﻌ ˆ)♡
+  o-oncweated, -.-
 );
 
-browser.menus.create(
+b-bwowsew.menus.cweate(
   {
-    id: "radio-blue",
-    type: "radio",
-    title: "Make it blue",
-    contexts: ["all"],
-    checked: false,
+    i-id: "wadio-bwue", σωσ
+    t-type: "wadio", >_<
+    titwe: "make it b-bwue", :3
+    contexts: ["aww"], OwO
+    c-checked: fawse, rawr
   },
-  onCreated,
+  o-oncweated, (///ˬ///✿)
 );
 
-var makeItBlue = 'document.body.style.border = "5px solid blue"';
-var makeItGreen = 'document.body.style.border = "5px solid green"';
+v-vaw makeitbwue = 'document.body.stywe.bowdew = "5px s-sowid b-bwue"';
+vaw makeitgween = 'document.body.stywe.bowdew = "5px s-sowid gween"';
 
-browser.menus.onClicked.addListener(function (info, tab) {
-  if (info.menuItemId == "radio-blue") {
-    browser.tabs.executeScript(tab.id, {
-      code: makeItBlue,
+b-bwowsew.menus.oncwicked.addwistenew(function (info, ^^ tab) {
+  if (info.menuitemid == "wadio-bwue") {
+    b-bwowsew.tabs.exekawaii~scwipt(tab.id, XD {
+      code: makeitbwue, UwU
     });
-  } else if (info.menuItemId == "radio-green") {
-    browser.tabs.executeScript(tab.id, {
-      code: makeItGreen,
+  } e-ewse if (info.menuitemid == "wadio-gween") {
+    bwowsew.tabs.exekawaii~scwipt(tab.id, o.O {
+      c-code: makeitgween, 😳
     });
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.contextMenus`](https://developer.chrome.com/docs/extensions/reference/api/contextMenus) de chromium. Cette documentation est dérivée de [`context_menus.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/context_menus.json) dans le code Chromium.
+> cette api est basée suw w'api [`chwome.contextmenus`](https://devewopew.chwome.com/docs/extensions/wefewence/api/contextmenus) d-de c-chwomium. (˘ω˘) cette d-documentation est déwivée de [`context_menus.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/context_menus.json) dans we code chwomium. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. ^^ a-aww wights wesewved. >w<
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce a-and binawy fowms, ^^;; with ow without
+// modification, (˘ω˘) awe pewmitted p-pwovided that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above copywight
+// n-nyotice, OwO this wist o-of conditions and the fowwowing discwaimew. (ꈍᴗꈍ)
+//    * w-wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, t-this wist o-of conditions and the fowwowing d-discwaimew
+// in t-the documentation and/ow othew m-matewiaws pwovided with the
+// distwibution. òωó
+//    * n-neithew the n-nyame of googwe i-inc. now the nyames o-of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten pewmission. ʘwʘ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, ʘwʘ incwuding, nyaa~~ b-but nyot
+// wimited to, UwU the i-impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (⑅˘꒳˘) i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, (˘ω˘) indiwect, incidentaw, :3
+// speciaw, (˘ω˘) exempwawy, ow consequentiaw d-damages (incwuding, nyaa~~ but nyot
+// w-wimited to, (U ﹏ U) pwocuwement of substitute goods ow sewvices; woss o-of use, nyaa~~
+// data, ^^;; ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of wiabiwity, OwO w-whethew in contwact, nyaa~~ stwict w-wiabiwity, UwU ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// o-of this softwawe, 😳 even if a-advised of the possibiwity of such damage. 😳
 -->

@@ -1,28 +1,28 @@
 ---
-title: browserSettings.imageAnimationBehavior
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/imageAnimationBehavior
+titwe: bwowsewsettings.imageanimationbehaviow
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/imageanimationbehaviow
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour modifier la façon dont le navigateur traite les images animées, telles que les GIF.
+u-un objet {{webextapiwef("types.bwowsewsetting", 😳😳😳 "bwowsewsetting")}} q-qui peut êtwe u-utiwisé p-pouw modifiew w-wa façon dont w-we nyavigateuw twaite w-wes images a-animées, -.- tewwes que wes gif. ( ͡o ω ͡o )
 
-La valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs suivantes:
+wa vaweuw sous-jacente est une chaîne qui peut p-pwendwe w'une des twois vaweuws suivantes:
 
-- "normal": la valeur par défaut Jouer des images animées comme d'habitude.
-- "none": n'anime pas les images du tout.
-- "once": joue une fois l'animation.
+- "nowmaw": w-wa vaweuw paw défaut jouew d-des images animées comme d'habitude.
+- "none": ny'anime pas wes images du tout. rawr x3
+- "once": joue u-une fois w'animation. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Désactiver les images animées :
+désactivew wes images animées :
 
 ```js
-browser.browserSettings.imageAnimationBehavior.set({ value: "none" });
+bwowsew.bwowsewsettings.imageanimationbehaviow.set({ v-vawue: "none" });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

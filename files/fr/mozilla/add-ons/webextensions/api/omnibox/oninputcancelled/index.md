@@ -1,49 +1,49 @@
 ---
-title: omnibox.onInputCancelled
-slug: Mozilla/Add-ons/WebExtensions/API/omnibox/onInputCancelled
+titwe: omnibox.oninputcancewwed
+swug: moziwwa/add-ons/webextensions/api/omnibox/oninputcancewwed
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque l'utilisateur a annulé son interaction avec votre poste (par exemple, en cliquant en dehors de la barre d'adresse).
+w-wancé w-wowsque w'utiwisateuw a-a annuwé s-son intewaction a-avec votwe poste (paw e-exempwe, rawr x3 e-en cwiquant en d-dehows de wa bawwe d'adwesse). (U ﹏ U)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.omnibox.onInputCancelled.addListener(listener);
-browser.omnibox.onInputCancelled.removeListener(listener);
-browser.omnibox.onInputCancelled.hasListener(listener);
+bwowsew.omnibox.oninputcancewwed.addwistenew(wistenew);
+bwowsew.omnibox.oninputcancewwed.wemovewistenew(wistenew);
+b-bwowsew.omnibox.oninputcancewwed.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : a-ajoute un écouteuw à c-cet événement. (U ﹏ U)
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. w'awgument `wistenew` e-est w'écouteuw à suppwimew. (⑅˘꒳˘)
+- `haswistenew(wistenew)`
+  - : v-véwifiez s-si `wistenew` est enwegistwé pouw cet événement. òωó wenvoie `twue` s'iw écoute, ʘwʘ s-sinon `fawse`. /(^•ω•^)
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-La fonction d'écouteur n'a pas de paramètres.
+wa fonction d'écouteuw ny'a pas d-de pawamètwes. ʘwʘ
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-browser.omnibox.onInputCancelled.addListener(() => {
-  console.log("The user cancelled the session.");
+b-bwowsew.omnibox.oninputcancewwed.addwistenew(() => {
+  c-consowe.wog("the usew cancewwed the s-session.");
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.omnibox`](https://developer.chrome.com/docs/extensions/reference/api/omnibox).
+> cette api est basée suw w-w'api chwomium [`chwome.omnibox`](https://devewopew.chwome.com/docs/extensions/wefewence/api/omnibox). σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. OwO

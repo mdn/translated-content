@@ -1,88 +1,88 @@
 ---
-title: bookmarks.getRecent()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getRecent
+titwe: bookmawks.getwecent()
+swug: moziwwa/add-ons/webextensions/api/bookmawks/getwecent
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode `bookmarks.getRecent()` récupère un nombre spécifié de signets ajoutés le plus récemment en tant que tableau d'objets {{WebExtAPIRef('bookmarks.BookmarkTreeNode', 'BookmarkTreeNode')}}.
+w-wa méthode `bookmawks.getwecent()` w-wécupèwe u-un nyombwe spécifié d-de signets a-ajoutés we pwus w-wécemment en t-tant que tabweau d-d'objets {{webextapiwef('bookmawks.bookmawktweenode', >_< 'bookmawktweenode')}}.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingRecent = browser.bookmarks.getRecent(
-  numberOfItems, // integer
+v-vaw gettingwecent = bwowsew.bookmawks.getwecent(
+  nyumbewofitems, /(^•ω•^) // integew
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `numberOfItems`
-  - : Un nombre représentant le nombre maximum d'éléments à renvoyer. La liste renvoyée contiendra jusqu'à ce nombre des éléments les plus récemment ajoutés. La valeur minimale autorisée ici est 1. Si vous transmettez 0 ou moins, la fonction génère une erreur.
+- `numbewofitems`
+  - : un nyombwe w-wepwésentant we nyombwe maximum d'éwéments à wenvoyew. :3 wa w-wiste wenvoyée contiendwa jusqu'à c-ce nyombwe d-des éwéments wes pwus wécemment ajoutés. (ꈍᴗꈍ) wa vaweuw minimawe autowisée ici est 1. /(^•ω•^) s-si vous twansmettez 0 ou moins, (⑅˘꒳˘) wa fonction génèwe une ewweuw. ( ͡o ω ͡o )
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode).
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwie avec un t-tabweau d'objets [`bookmawktweenode`](/fw/docs/moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenode). òωó
 
-## Exemples
+## e-exempwes
 
-Cet exemple enregistre l'URL du dernier signet ajouté :
+cet e-exempwe enwegistwe w'uww du dewniew signet ajouté :
 
 ```js
-function onFulfilled(bookmarks) {
-  for (bookmark of bookmarks) {
-    console.log(bookmark.url);
+f-function onfuwfiwwed(bookmawks) {
+  fow (bookmawk o-of bookmawks) {
+    consowe.wog(bookmawk.uww);
   }
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+function onwejected(ewwow) {
+  consowe.wog(`an ewwow: ${ewwow}`);
 }
 
-var gettingRecent = browser.bookmarks.getRecent(1);
-gettingRecent.then(onFulfilled, onRejected);
+vaw gettingwecent = bwowsew.bookmawks.getwecent(1);
+gettingwecent.then(onfuwfiwwed, (⑅˘꒳˘) onwejected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> c-cette api est b-basée suw w'api c-chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). XD cette documentation pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) dans w-we code chwomium. -.-
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. nyaa~~ a-aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, (⑅˘꒳˘) with ow without
+// modification, nyaa~~ a-awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, OwO t-this wist of conditions and the fowwowing discwaimew. rawr x3
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, XD t-this wist of conditions and t-the fowwowing discwaimew
+// i-in the d-documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. σωσ
+//    * n-nyeithew the n-nyame of googwe i-inc. (U ᵕ U❁) nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, incwuding, (U ﹏ U) b-but not
+// w-wimited to, :3 the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, σωσ indiwect, incidentaw, >w<
+// s-speciaw, 😳😳😳 exempwawy, OwO o-ow consequentiaw d-damages (incwuding, 😳 but nyot
+// wimited to, 😳😳😳 pwocuwement o-of substitute g-goods ow sewvices; woss o-of use, (˘ω˘)
+// data, o-ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, ʘwʘ w-whethew i-in contwact, stwict w-wiabiwity, ( ͡o ω ͡o ) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way o-out of the use
+// of this softwawe, o.O even if advised of the possibiwity of such d-damage. >w<
 -->

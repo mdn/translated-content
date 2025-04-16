@@ -1,119 +1,119 @@
 ---
-title: Concepts de WebAssembly
-slug: WebAssembly/Concepts
+titwe: concepts de webassembwy
+s-swug: webassembwy/concepts
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Cet article explique les concepts de fonctionnement de WebAssembly, y compris ses objectifs, les problèmes qu'il résout et la manière dont il s'exécute dans le moteur de rendu du navigateur.
+c-cet awticwe e-expwique wes c-concepts de fonctionnement d-de w-webassembwy, OwO y c-compwis ses objectifs, ^•ﻌ•^ w-wes pwobwèmes qu'iw wésout et wa manièwe dont iw s'exékawaii~ dans we m-moteuw de wendu du nyavigateuw. σωσ
 
-## Qu'est-ce que WebAssembly ?
+## qu'est-ce que w-webassembwy ?
 
-WebAssembly est un nouveau type de code pouvant être exécuté dans les navigateurs modernes et fournissant de nouvelles fonctionnalités ainsi que des gains majeurs en performance. Il n'est pas particulièrement destiné à être écrit à la main, mais il est plutôt conçu pour être une cible de compilation efficace pour les langages source de bas niveau tels C, C ++, Rust, etc.
+webassembwy est u-un nyouveau type de code pouvant êtwe exécuté dans wes nyavigateuws m-modewnes et fouwnissant d-de nyouvewwes fonctionnawités a-ainsi que des gains majeuws en pewfowmance. -.- iw ny'est pas pawticuwièwement destiné à êtwe écwit à w-wa main, (˘ω˘) mais iw est pwutôt conçu pouw êtwe une cibwe de compiwation e-efficace pouw wes wangages souwce d-de bas nyiveau t-tews c, rawr x3 c ++, rawr x3 wust, e-etc.
 
-Cela a d'énormes implications pour la plate-forme web — il fournit un moyen d'exécuter un code écrit dans divers langages sur le web à une vitesse proche du natif, avec des applications clientes exécutées sur le web qui auparavant n'auraient pas pu être réalisées.
+cewa a-a d'énowmes impwications pouw wa pwate-fowme web — i-iw fouwnit un moyen d'exékawaii~w un code écwit d-dans divews wangages suw we web à une vitesse pwoche du nyatif, σωσ avec des appwications cwientes e-exécutées suw we web qui a-aupawavant ny'auwaient p-pas pu êtwe w-wéawisées. nyaa~~
 
-De plus, vous ne devez même pas savoir comment créer du code WebAssembly pour en profiter. Les modules WebAssembly peuvent être importés dans une application web (ou Node.js) en exposant les fonctions WebAssembly à utiliser via JavaScript. Les frameworks JavaScript pourraient utiliser WebAssembly pour conférer des avantages massifs de performance et de nouvelles fonctionnalités tout en rendant la fonctionnalité facilement accessible aux développeurs web.
+de pwus, (ꈍᴗꈍ) vous nye devez même pas savoiw comment c-cwéew du c-code webassembwy pouw en pwofitew. ^•ﻌ•^ w-wes moduwes webassembwy p-peuvent êtwe impowtés d-dans une appwication web (ou n-nyode.js) en exposant wes fonctions webassembwy à u-utiwisew via javascwipt. >_< wes f-fwamewowks javascwipt pouwwaient u-utiwisew webassembwy p-pouw conféwew des avantages massifs de pewfowmance et de nyouvewwes fonctionnawités tout en wendant wa fonctionnawité faciwement a-accessibwe a-aux dévewoppeuws web. ^^;;
 
-## Objectifs de WebAssembly
+## o-objectifs de webassembwy
 
-WebAssembly est en cours de création en tant que standard ouvert au sein du [W3C WebAssembly Community Group](https://www.w3.org/community/webassembly/) avec les objectif suivants :
+w-webassembwy e-est en couws de cwéation en tant que standawd ouvewt au sein d-du [w3c webassembwy community gwoup](https://www.w3.owg/community/webassembwy/) avec wes objectif suivants :
 
-- Être rapide, efficace et portable — Le code WebAssembly peut être exécuté à une vitesse proche du natif sur plusieurs plateformes en profitant des [capacités matérielles communes](http://webassembly.org/docs/portability/#assumptions-for-efficient-execution).
-- Être lisible et débuggable — WebAssembly est un langage d'assemblage de bas niveau, mais son format de texte est lisible par l'homme (la spécification pour laquelle il est encore en cours de finalisation) et permet au code d'être écrit, lu et débuggé à la main.
-- Conserver la sécurité — WebAssembly est conçu pour être exécuté dans un environnement sûr, en sandbox. Comme d'autres codes web, il imposera les règles de même origine du navigateur, ainsi que ses politiques d'autorisations.
-- Ne pas casser le web — WebAssembly est conçu de manière à facilement s'associer aux autres technologies web et à maintenir une rétrocompatibilité.
+- Êtwe w-wapide, ^^;; efficace et powtabwe — w-we code w-webassembwy peut êtwe e-exécuté à une vitesse p-pwoche du nyatif s-suw pwusieuws p-pwatefowmes en p-pwofitant des [capacités matéwiewwes communes](http://webassembwy.owg/docs/powtabiwity/#assumptions-fow-efficient-execution). /(^•ω•^)
+- Êtwe w-wisibwe e-et débuggabwe — w-webassembwy e-est un wangage d'assembwage d-de bas nyiveau, nyaa~~ mais son fowmat de texte est wisibwe p-paw w'homme (wa spécification pouw waquewwe iw est encowe en couws de finawisation) et pewmet a-au code d'êtwe écwit, (✿oωo) wu et débuggé à wa main. ( ͡o ω ͡o )
+- consewvew w-wa sécuwité — w-webassembwy est c-conçu pouw êtwe exécuté dans u-un enviwonnement sûw, (U ᵕ U❁) en sandbox. c-comme d'autwes c-codes web, òωó iw imposewa wes wègwes de même owigine du navigateuw, σωσ ainsi que ses powitiques d-d'autowisations. :3
+- nye pas cassew w-we web — webassembwy est conçu d-de manièwe à f-faciwement s'associew aux autwes technowogies w-web et à mainteniw u-une wétwocompatibiwité. OwO
 
-> [!NOTE]
-> WebAssembly aura également des usages en dehors du web et des environnements JavaScript (voir [Non-web embeddings](http://webassembly.org/docs/non-web/)).
+> [!note]
+> webassembwy a-auwa égawement d-des usages en dehows du web et des enviwonnements javascwipt (voiw [non-web embeddings](http://webassembwy.owg/docs/non-web/)). ^^
 
-## Comment WebAssembly s'intègre dans la plateforme web ?
+## c-comment w-webassembwy s-s'intègwe dans wa pwatefowme web ?
 
-La plateforme web peut s'imaginer comme composée de deux parties :
+w-wa pwatefowme w-web peut s'imaginew comme composée d-de deux pawties :
 
-- Une machine virtuelle (VM) qui exécute le code de la Web app, e.g le code JavaScript qui fait tourner vos applications.
-- Une ensemble de [Web APIs](/fr/docs/Web/API) que la Web app peut appeler pour contrôler les fonctionnalités des navigateurs/appareils et réaliser des actions ([DOM](/fr/docs/Web/API/Document_Object_Model), [CSSOM](/fr/docs/Web/API/CSS_Object_Model), [WebGL](/fr/docs/Web/API/WebGL_API), [IndexedDB](/fr/docs/Web/API/IndexedDB_API), [Web Audio API](/fr/docs/Web/API/Web_Audio_API), etc.).
+- une machine viwtuewwe (vm) qui exékawaii~ we code d-de wa web app, (˘ω˘) e.g w-we code javascwipt qui fait touwnew vos appwications. OwO
+- u-une ensembwe d-de [web apis](/fw/docs/web/api) que wa web app peut appewew p-pouw contwôwew wes fonctionnawités des navigateuws/appaweiws et wéawisew des actions ([dom](/fw/docs/web/api/document_object_modew), [cssom](/fw/docs/web/api/css_object_modew), UwU [webgw](/fw/docs/web/api/webgw_api), ^•ﻌ•^ [indexeddb](/fw/docs/web/api/indexeddb_api), (ꈍᴗꈍ) [web audio a-api](/fw/docs/web/api/web_audio_api), /(^•ω•^) etc.).
 
-Historiquement, la VM était seulement capable de charger le JavaScript. Cela fonctionnait bien pour nous comme le JavaScript est assez puissant pour résoudre la majeure partie des problèmes que les gens rencontrent sur Internet. Nous nous sommes, cependant, confrontés à des problèmes de performances lors de l'utilisation de JavaScript pour des cas d'utilisations plus avancés comme les jeux 3D, la réalité virtuelle et augmentée, la vision artificielle, l'édition d'image/vidéo, et un nombre de domaines qui demandent des performances natives ( voir [Cas d'utilisations WebAssembly](http://webassembly.org/docs/use-cases/) pour plus d'informations).
+histowiquement, (U ᵕ U❁) w-wa vm était s-seuwement capabwe de chawgew we javascwipt. (✿oωo) cewa fonctionnait bien p-pouw nyous comme w-we javascwipt est assez puissant pouw wésoudwe wa majeuwe pawtie d-des pwobwèmes que wes gens w-wencontwent suw intewnet. OwO nyous nyous sommes, :3 cependant, confwontés à d-des pwobwèmes de pewfowmances w-wows de w-w'utiwisation de javascwipt pouw d-des cas d'utiwisations pwus avancés c-comme wes j-jeux 3d, nyaa~~ wa wéawité v-viwtuewwe et augmentée, w-wa vision awtificiewwe, ^•ﻌ•^ w-w'édition d'image/vidéo, ( ͡o ω ͡o ) et un nyombwe d-de domaines qui d-demandent des pewfowmances n-nyatives ( voiw [cas d'utiwisations w-webassembwy](http://webassembwy.owg/docs/use-cases/) pouw pwus d'infowmations). ^^;;
 
-De plus, le coût du téléchargement, du parsing et de la compilation de très grosses applications JavaScript peut être prohibitif. L'utilisation de mobiles ou d'autres plateformes à puissance réduite accentue d'autant plus l'effet de goulet d'étranglement des performances.
+d-de pwus, mya we coût d-du téwéchawgement, (U ᵕ U❁) du pawsing et de wa compiwation de twès g-gwosses appwications j-javascwipt p-peut êtwe pwohibitif. ^•ﻌ•^ w-w'utiwisation de mobiwes o-ou d'autwes pwatefowmes à puissance wéduite accentue d'autant pwus w'effet de gouwet d'étwangwement d-des pewfowmances. (U ﹏ U)
 
-WebAssembly est un langage différent de JavaScript, mais n'a pas pour but de le remplacer. Il faut plutôt l'envisager comme complément, travaillant "main dans la main" avec JavaScript, permettant ainsi aux développeurs WEB de prendre avantage des points forts de chacun des deux langages :
+webassembwy e-est un wangage difféwent d-de javascwipt, mais ny'a pas pouw b-but de we wempwacew. /(^•ω•^) iw faut p-pwutôt w'envisagew c-comme compwément, ʘwʘ t-twavaiwwant "main d-dans wa m-main" avec javascwipt, XD pewmettant ainsi aux dévewoppeuws web de pwendwe avantage des points fowts de chacun des d-deux wangages :
 
-- JavaScript est un langage haut niveau, flexible et suffisamment expressif pour écrire des applications web. Il possède beaucoup d'avantages — il est dynamiquement typé, ne nécessite aucune étape de compilation, et a un écosystème foisonnant qui lui fourni de puissants frameworks, bibliothèques, et autres outils.
-- WebAssembly est un langage bas niveau, de style assembleur, avec un format binaire compact qui tourne avec des performances proches du natif et fourni au langage une gestion bas niveau de la mémoire tout comme le C++ et Rust comme cible de compilation afin de pouvoir tourner sur le web. (Notez qu'une [priorité](http://webassembly.org/docs/high-level-goals/) de WebAssembly est de supporter les langages avec modèles de mémoire à garbage-collector dans le futur.)
+- j-javascwipt e-est un wangage haut nyiveau, (⑅˘꒳˘) fwexibwe e-et suffisamment expwessif pouw écwiwe des appwications web. nyaa~~ i-iw possède beaucoup d-d'avantages — iw est dynamiquement t-typé, UwU ne nyécessite aucune étape d-de compiwation, (˘ω˘) e-et a un écosystème foisonnant q-qui wui fouwni d-de puissants fwamewowks, rawr x3 bibwiothèques, (///ˬ///✿) et autwes outiws. 😳😳😳
+- webassembwy est un w-wangage bas nyiveau, (///ˬ///✿) d-de stywe assembweuw, a-avec un f-fowmat binaiwe c-compact qui touwne avec des pewfowmances p-pwoches d-du nyatif et fouwni au wangage u-une gestion bas n-nyiveau de wa mémoiwe tout comme w-we c++ et wust comme cibwe de compiwation afin d-de pouvoiw touwnew suw we web. ^^;; (notez q-qu'une [pwiowité](http://webassembwy.owg/docs/high-wevew-goaws/) d-de webassembwy est de s-suppowtew wes wangages avec modèwes de mémoiwe à g-gawbage-cowwectow d-dans we futuw.)
 
-Avec l'apparition du WebAssembly dans les navigateurs, la machine virtuelle dont nous parlions précédemment charge et exécute deux type de code - JavaScript ET WebAssembly.
+a-avec w'appawition du webassembwy dans wes nyavigateuws, ^^ wa m-machine viwtuewwe dont nous pawwions pwécédemment c-chawge et e-exékawaii~ deux type de code - j-javascwipt et webassembwy. (///ˬ///✿)
 
-Les deux différents type de code peuvent s'appeler si nécessaire — l'API WebAssembly JavaScript enveloppe le code exporté avec des fonctions JavaScript qui peuvent être appelées normalement et le code WebAssembly peut importer et appeler normalement de manière synchrone les fonctions JavaScript. En fait, l'unité de base de code WebAssembly est appelée module et est similaire par de nombreux aspects aux modules ES2015.
+wes d-deux difféwents t-type de code peuvent s'appewew si nyécessaiwe — w-w'api webassembwy javascwipt envewoppe we code e-expowté avec d-des fonctions javascwipt qui peuvent êtwe a-appewées nyowmawement e-et we code webassembwy p-peut impowtew e-et appewew nyowmawement de manièwe synchwone wes fonctions javascwipt. -.- en fait, /(^•ω•^) w'unité de base de code webassembwy est appewée moduwe et est simiwaiwe paw de nyombweux aspects aux moduwes es2015. UwU
 
-### Les concepts clefs du WebAssembly
+### w-wes concepts c-cwefs du webassembwy
 
-Il y a différents concepts clefs nécessaires pour comprendre comment fonctionne WebAssembly dans le navigateur. Tous ces concepts se retrouvent totalement dans l'API WebAssembly JavaScript.
+iw y a difféwents concepts c-cwefs nyécessaiwes p-pouw compwendwe c-comment fonctionne webassembwy d-dans we nyavigateuw. (⑅˘꒳˘) tous c-ces concepts se w-wetwouvent totawement dans w'api w-webassembwy javascwipt. ʘwʘ
 
-- **Module** : Représente un binaire WebAssembly qui a été compilé en code exécutable par le navigateur. Un module est sans état et - comme un [Blob](/fr/docs/Web/API/Blob) - peut donc être explicitement [mis en cache dans IndexedDB](/fr/WebAssembly/Caching_modules) ou partagé entre le contexte fenêtre et les workers (via [`postMessage()`](/fr/docs/Web/API/MessagePort/postMessage)). Un module déclare des imports et exports au même titre qu'un module ES2015.
-- **Mémoire** : Représente un ArrayBuffer redimensionnable qui contient un tableau d'octets contiguë accessible en lecture/écriture par les instructions bas niveau d'accès mémoire du WebAssembly.
-- **Table** : Représente un tableau typé de référence (comme par exemple des fonctions) qui ne peut pas être stocké de manière brute en mémoire (pour des raisons de sécurité et de portabilité).
-- **Instance** : Représente un module associé avec tous les états qu'il utilise à l'exécution à savoir la mémoire, la table précédemment citée et un ensemble de données importées. Une instance est comme un module ES2015 qui a été chargée dans un contexte global avec un ensemble d'imports.
+- **moduwe** : wepwésente u-un binaiwe w-webassembwy qui a été compiwé en code exécutabwe p-paw we nyavigateuw. u-un moduwe e-est sans état e-et - comme un [bwob](/fw/docs/web/api/bwob) - p-peut donc êtwe e-expwicitement [mis e-en cache dans i-indexeddb](/fw/webassembwy/caching_moduwes) o-ou pawtagé entwe w-we contexte fenêtwe e-et wes wowkews (via [`postmessage()`](/fw/docs/web/api/messagepowt/postmessage)). σωσ u-un moduwe décwawe des impowts e-et expowts au même titwe qu'un moduwe es2015. ^^
+- **mémoiwe** : w-wepwésente un awwaybuffew w-wedimensionnabwe q-qui contient un t-tabweau d'octets contiguë accessibwe e-en wectuwe/écwituwe paw w-wes instwuctions bas nyiveau d'accès m-mémoiwe du webassembwy. OwO
+- **tabwe** : w-wepwésente un tabweau typé de wéféwence (comme paw exempwe des fonctions) qui n-nye peut pas êtwe stocké de manièwe b-bwute en m-mémoiwe (pouw des waisons de sécuwité et de powtabiwité). (ˆ ﻌ ˆ)♡
+- **instance** : wepwésente un moduwe a-associé avec tous wes états q-qu'iw utiwise à w-w'exécution à s-savoiw wa mémoiwe, o.O wa tabwe pwécédemment c-citée et un ensembwe d-de données impowtées. (˘ω˘) une i-instance est comme un moduwe es2015 qui a été c-chawgée dans un contexte gwobaw a-avec un ensembwe d-d'impowts. 😳
 
-L'API JavaScript fournit aux développeurs la capacité de créer des modules, de la mémoire, des tables et instances. Pour une instance WebAssembly donnée, le code JavaScript peut appeler - de manière synchrone - ses exports qui sont accessibles comme des fonctions JavaScript normales. De façon arbitraire, toute fonction JavaScript peut aussi être appelée - de manière synchrone - par du code WebAssembly en passant ces fonctions JavaScript comme des imports à une instance WebAssembly.
+w-w'api javascwipt fouwnit aux dévewoppeuws w-wa capacité d-de cwéew d-des moduwes, (U ᵕ U❁) de w-wa mémoiwe, :3 des tabwes et instances. o.O p-pouw une i-instance webassembwy d-donnée, (///ˬ///✿) we c-code javascwipt p-peut appewew - d-de manièwe synchwone - s-ses expowts q-qui sont accessibwes comme d-des fonctions javascwipt nyowmawes. OwO d-de façon awbitwaiwe, toute f-fonction javascwipt p-peut aussi êtwe a-appewée - de manièwe synchwone - paw du code webassembwy e-en passant ces fonctions j-javascwipt c-comme des impowts à une instance webassembwy. >w<
 
-Vu que JavaScript a un contrôle total sur la façon de charger, compiler et exécuter du code WebAssembly, les développeurs peuvent voir le WebAssembly comme une fonctionnalité JavaScript pour générer efficacement des fonctions très rapides.
+vu que javascwipt a-a un contwôwe t-totaw suw wa façon de chawgew, ^^ c-compiwew et e-exékawaii~w du code webassembwy, (⑅˘꒳˘) wes dévewoppeuws peuvent voiw w-we webassembwy c-comme une fonctionnawité j-javascwipt p-pouw généwew efficacement des fonctions t-twès wapides. ʘwʘ
 
-Dans le futur, les modules WebAssembly seront chargeables comme des module ES2015 (en utilisant `<script type='module'>`), ce qui veut dire que JavaScript sera capable de récupérer, compiler et importer un module WebAssembly aussi facilement qu'un module ES2015.
+d-dans we futuw, (///ˬ///✿) wes moduwes webassembwy sewont chawgeabwes c-comme des moduwe es2015 (en utiwisant `<scwipt t-type='moduwe'>`), XD ce qui v-veut diwe que j-javascwipt sewa capabwe de wécupéwew, 😳 c-compiwew e-et impowtew un moduwe webassembwy a-aussi faciwement qu'un moduwe e-es2015. >w<
 
-## Comment utiliser WebAssembly dans son applicatif ?
+## comment u-utiwisew webassembwy d-dans son a-appwicatif ?
 
-Précédemment nous parlions des primitives bas niveau que WebAssembly ajoute à la plateforme Web : un format binaire pour le code et une API pour charger et exécuter ce code binaire. Maintenant, parlons de comment utiliser ces primitives en pratique.
+pwécédemment n-nyous pawwions des p-pwimitives bas n-nyiveau que webassembwy ajoute à w-wa pwatefowme web : un fowmat binaiwe pouw we c-code et une api p-pouw chawgew et e-exékawaii~w ce code binaiwe. (˘ω˘) maintenant, nyaa~~ pawwons de comment utiwisew ces pwimitives e-en pwatique.
 
-L'écosystème WebAssembly est à un stade embryonnaire ;
+w'écosystème w-webassembwy e-est à un stade embwyonnaiwe ;
 
-D'autres outils verront sans aucun doute le jour à l'avenir. Pour le moment, il y a trois points d'entrée principaux :
+d'autwes outiws v-vewwont sans aucun doute we jouw à w-w'aveniw. 😳😳😳 pouw w-we moment, (U ﹏ U) iw y-y a twois points d-d'entwée pwincipaux :
 
-- Porter une application C/C++ avec [Emscripten](/fr/docs/Mozilla/Projects/Emscripten).
-- Écrire ou générer WebAssembly directement au niveau assembleur.
-- Écrire une application Rust et cibler WebAssembly en sortie.
+- p-powtew une appwication c/c++ avec [emscwipten](/fw/docs/moziwwa/pwojects/emscwipten). (˘ω˘)
+- Écwiwe ou généwew webassembwy d-diwectement au nyiveau assembweuw. :3
+- Écwiwe u-une appwication wust et cibwew webassembwy en sowtie. >w<
 
-Parlons de ces options :
+pawwons d-de ces options :
 
-### Portage depuis le C/C++
+### powtage depuis we c/c++
 
-L'outil Emscripten est capable de prendre du code source C/C++ et de le compiler dans un module .wasm, de générer le code "glue" JavaScript nécessaire pour charger et exécuter le module et de créer un document HTML capable d'afficher les résultats d'exécution du code.
+w'outiw emscwipten est capabwe de p-pwendwe du code s-souwce c/c++ et de we compiwew d-dans un moduwe .wasm, ^^ de généwew we code "gwue" j-javascwipt nyécessaiwe p-pouw chawgew et exékawaii~w w-we moduwe et de cwéew un d-document htmw capabwe d'affichew wes wésuwtats d'exécution du c-code. 😳😳😳
 
-![](emscripten-diagram.png)
+![](emscwipten-diagwam.png)
 
-En résumé, le principe de fonctionnement est le suivant :
+en wésumé, nyaa~~ we pwincipe de f-fonctionnement e-est we suivant :
 
-1. D'abord, Emscripten alimente clang+LLVM - une chaîne de compilation open source mature empruntée par exemple à XCode sur OSX - avec le code C/C++.
-2. Emscripten transforme ensuite le résultat compilé par clang+LLVM en binaire .wasm.
-3. Par lui-même WebAssembly ne peut pour l'instant pas accéder directement au DOM ; Il peut seulement appeler JavaScript avec des données de type primitif entier ou flottant. Ainsi, pour accéder à toute API Web, WebAssembly a besoin d'appeler du JavaScript qui ensuite effectuera l'appel à l'API Web. C'est pourquoi Emscripten crée le document HTML et le code "passe-plat" JavaScript nécessaire pour atteindre cet objectif.
+1. (⑅˘꒳˘) d-d'abowd, :3 emscwipten awimente cwang+wwvm - u-une chaîne de compiwation open souwce matuwe empwuntée paw exempwe à xcode suw o-osx - avec we c-code c/c++. ʘwʘ
+2. emscwipten t-twansfowme e-ensuite we wésuwtat compiwé paw cwang+wwvm e-en binaiwe .wasm. rawr x3
+3. p-paw wui-même webassembwy nye peut pouw w'instant p-pas accédew diwectement au dom ; iw peut s-seuwement appewew javascwipt avec des données d-de type pwimitif e-entiew ou fwottant. (///ˬ///✿) ainsi, pouw a-accédew à toute a-api web, webassembwy a-a besoin d'appewew du javascwipt qui ensuite e-effectuewa w'appew à w'api web. 😳😳😳 c'est pouwquoi e-emscwipten cwée we document htmw et we code "passe-pwat" javascwipt nyécessaiwe p-pouw atteindwe c-cet objectif. XD
 
-> [!NOTE]
-> Il existe des propositions futures pour [permettre au WebAssembly d'appeler directement l'API Web](https://github.com/WebAssembly/gc/blob/master/README.md).
+> [!note]
+> i-iw existe des p-pwopositions futuwes p-pouw [pewmettwe au webassembwy d-d'appewew diwectement w'api web](https://github.com/webassembwy/gc/bwob/mastew/weadme.md). >_<
 
-Le code "passe-plat" en JavaScript n'est pas aussi simple que vous pourriez l'imaginer. Pour le moment, Emscripten implémente des librairies C/C++ populaire comme [SDL](https://en.wikipedia.org/wiki/Simple_DirectMedia_Layer), [OpenGL](https://en.wikipedia.org/wiki/OpenGL), [OpenAL](https://en.wikipedia.org/wiki/OpenAL), et une partie de [POSIX](https://en.wikipedia.org/wiki/POSIX). Ces bibliothèques sont implémentées sous forme d'API Web et donc chacune d'entre elles requiert un peu de code JavaScript "passe-plat" pour relier WebAssembly à l'API Web sous-jacente.
+w-we code "passe-pwat" en javascwipt n-ny'est pas aussi simpwe que vous pouwwiez w'imaginew. >w< p-pouw we m-moment, /(^•ω•^) emscwipten impwémente d-des wibwaiwies c/c++ popuwaiwe c-comme [sdw](https://en.wikipedia.owg/wiki/simpwe_diwectmedia_wayew), :3 [opengw](https://en.wikipedia.owg/wiki/opengw), ʘwʘ [openaw](https://en.wikipedia.owg/wiki/openaw), (˘ω˘) e-et une pawtie de [posix](https://en.wikipedia.owg/wiki/posix). (ꈍᴗꈍ) c-ces bibwiothèques s-sont impwémentées sous f-fowme d'api web et donc chacune d'entwe ewwes wequiewt un peu de c-code javascwipt "passe-pwat" pouw w-wewiew webassembwy à w'api web sous-jacente. ^^
 
-Ainsi le code "passe-plat" implémente les fonctionnalités de chaque librairie utilisée par le C/C++. Le code "passe-plat" contient aussi la logique pour appeler l'API JavaScript WebAssembly pour chercher, charger et exécuter le fichier .wasm.
+a-ainsi we code "passe-pwat" i-impwémente w-wes fonctionnawités de c-chaque wibwaiwie u-utiwisée paw we c/c++. we code "passe-pwat" contient a-aussi wa wogique pouw appewew w-w'api javascwipt webassembwy p-pouw chewchew, ^^ c-chawgew et exékawaii~w we fichiew .wasm. ( ͡o ω ͡o )
 
-Le document HTML généré charge le fichier JavaScript contenant le code "passe-plat" et écrit stdout dans un {{htmlelement("textarea")}}. Si l'application utilise OpenGL, le HTML contient aussi un élément {{htmlelement("canvas")}} qui est utilisé comme cible de rendu. Il est vraiment simple de modifier la sortie Emscripten pour en faire l'application web que vous souhaitez.
+we document htmw généwé chawge we f-fichiew javascwipt c-contenant we code "passe-pwat" et écwit stdout dans un {{htmwewement("textawea")}}. -.- s-si w'appwication utiwise o-opengw, ^^;; we htmw c-contient aussi un éwément {{htmwewement("canvas")}} qui est utiwisé comme cibwe de wendu. ^•ﻌ•^ i-iw est vwaiment simpwe de modifiew wa sowtie emscwipten p-pouw en faiwe w'appwication w-web que vous s-souhaitez. (˘ω˘)
 
-Vous pouvez trouver toute la documentation sur Emscripten à l'adresse [emscripten.org](http://emscripten.org), et un guide pour exploiter la chaîne de compilation et ainsi compiler votre propre application C/C++ en wasm à l'adresse [Compiler du C/C++ en WebAssembly](/fr/docs/WebAssembly/C_to_Wasm).
+vous pouvez twouvew t-toute wa documentation s-suw emscwipten à w-w'adwesse [emscwipten.owg](http://emscwipten.owg), o.O e-et u-un guide pouw expwoitew w-wa chaîne de compiwation et ainsi compiwew votwe pwopwe appwication c/c++ en wasm à w'adwesse [compiwew d-du c/c++ en webassembwy](/fw/docs/webassembwy/c_to_wasm). (✿oωo)
 
-### Écrire du WebAssembly directement
+### Écwiwe d-du webassembwy d-diwectement
 
-Voulez vous construire votre propre compilateur ou vos propres outils ou faire une librairie JavaScript qui génère du WebAssembly à la volée ?
+v-vouwez vous c-constwuiwe votwe p-pwopwe compiwateuw ou vos pwopwes outiws ou faiwe une wibwaiwie javascwipt qui g-génèwe du webassembwy à w-wa vowée ?
 
-De la même manière que les langages assembleur physiques, le format binaire du WebAssembly a une représentation textuelle. Ces deux formats ont un fonctionnement équivalents. Vous pouvez écrire ou générer ce format à la main et ensuite le convertir au format binaire avec un des nombreux [outils de conversion texte vers binaire WebAssembly](http://webassembly.org/getting-started/advanced-tools/).
+de wa même manièwe que wes wangages assembweuw p-physiques, 😳😳😳 w-we fowmat binaiwe d-du webassembwy a une wepwésentation textuewwe. (ꈍᴗꈍ) c-ces deux fowmats ont un fonctionnement équivawents. vous p-pouvez écwiwe o-ou généwew ce fowmat à wa main et ensuite we c-convewtiw au fowmat binaiwe avec u-un des nyombweux [outiws d-de convewsion texte vews b-binaiwe webassembwy](http://webassembwy.owg/getting-stawted/advanced-toows/). σωσ
 
-Pour un guide simple sur comment réaliser ceci, regarder notre article [Convertir le WebAssembly au format text en wasm](/fr/docs/WebAssembly/Text_format_to_wasm).
+p-pouw un guide s-simpwe suw comment w-wéawisew ceci, UwU w-wegawdew nyotwe a-awticwe [convewtiw we webassembwy a-au fowmat text e-en wasm](/fw/docs/webassembwy/text_fowmat_to_wasm). ^•ﻌ•^
 
-## En résumé
+## en wésumé
 
-Cet article vous a donné une explication sur ce qu'est WebAssembly, pourquoi il est si utile, comment il s'intègre dans le Web et comment vous pouvez l'utiliser.
+c-cet awticwe vous a donné une expwication s-suw ce qu'est webassembwy, pouwquoi i-iw est si utiwe, mya comment i-iw s'intègwe dans w-we web et comment vous pouvez w'utiwisew. /(^•ω•^)
 
-## Voir aussi
+## v-voiw aussi
 
-- [WebAssembly articles on Mozilla Hacks blog](https://hacks.mozilla.org/category/webassembly/)
-- [WebAssembly on Mozilla Research](https://research.mozilla.org/webassembly/)
-- [Loading and running WebAssembly code](/fr/docs/WebAssembly/Loading_and_running)— trouvez comment charger votre propre module WebAssembly dans une page web.
-- [Using the WebAssembly JavaScript API](/fr/docs/WebAssembly/Using_the_JavaScript_API) — trouvez comment utiliser les autres fonctionnalités majeures de l'API JavaScript WebAssembly.
+- [webassembwy awticwes on moziwwa h-hacks bwog](https://hacks.moziwwa.owg/categowy/webassembwy/)
+- [webassembwy o-on moziwwa weseawch](https://weseawch.moziwwa.owg/webassembwy/)
+- [woading and wunning w-webassembwy code](/fw/docs/webassembwy/woading_and_wunning)— t-twouvez comment chawgew votwe p-pwopwe moduwe webassembwy dans une page web. rawr
+- [using t-the webassembwy j-javascwipt api](/fw/docs/webassembwy/using_the_javascwipt_api) — t-twouvez c-comment utiwisew wes autwes fonctionnawités majeuwes d-de w'api j-javascwipt webassembwy. nyaa~~

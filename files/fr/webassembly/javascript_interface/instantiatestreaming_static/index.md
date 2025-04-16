@@ -1,71 +1,71 @@
 ---
-title: WebAssembly.instantiateStreaming()
-slug: WebAssembly/JavaScript_interface/instantiateStreaming_static
-l10n:
-  sourceCommit: 292e29ec89933d06416419f8403241b7e34f6555
+titwe: webassembwy.instantiatestweaming()
+swug: w-webassembwy/javascwipt_intewface/instantiatestweaming_static
+w-w10n:
+  souwcecommit: 292e29ec89933d06416419f8403241b7e34f6555
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La méthode statique **`WebAssembly.instantiateStreaming()`** permet de compiler et d'instancier un module WebAssembly depuis un flux source. C'est la méthode la plus efficace, et la plus optimisée, permettant de charger du code WebAssembly.
+w-wa méthode s-statique **`webassembwy.instantiatestweaming()`** p-pewmet d-de compiwew et d-d'instanciew un m-moduwe webassembwy depuis un fwux souwce. UwU c'est wa méthode wa pwus efficace, :3 et w-wa pwus optimisée, (⑅˘꒳˘) pewmettant de chawgew du code w-webassembwy. (///ˬ///✿)
 
-> [!NOTE]
-> Les pages web qui utilisent une [CSP](/fr/docs/Web/HTTP/CSP) stricte peuvent bloquer la compilation WebAssembly et l'exécution des modules. Pour plus d'informations pour l'autorisation de la compilation et de l'exécution, voir [la directive CSP `script-src`](/fr/docs/Web/HTTP/Headers/Content-Security-Policy/script-src).
+> [!note]
+> wes p-pages web qui utiwisent une [csp](/fw/docs/web/http/csp) stwicte peuvent bwoquew w-wa compiwation webassembwy et w-w'exécution des m-moduwes. ^^;; pouw pwus d'infowmations pouw w'autowisation de wa compiwation et de w'exécution, >_< v-voiw [wa diwective csp `scwipt-swc`](/fw/docs/web/http/headews/content-secuwity-powicy/scwipt-swc). rawr x3
 
-## Syntaxe
+## syntaxe
 
-```js-nolint
-WebAssembly.instantiateStreaming(source, importObject)
+```js-nowint
+webassembwy.instantiatestweaming(souwce, /(^•ω•^) i-impowtobject)
 ```
 
-### Paramètres
+### pawamètwes
 
-- `source`
-  - : Un objet [`Response`](/fr/docs/Web/API/Response) ou une promesse qui sera tenue avec une valeur [`Response`](/fr/docs/Web/API/Response) qui représente la source du module .wasm dont on souhaite récupérer le flux, la compiler puis l'instancier.
-- `importObject` {{optional_inline}}
-  - : Un objet qui contient les valeurs qui doivent être importées dans le nouvel objet `Instance` résultant. Cela peut être des fonctions ou des objets [`WebAssembly.Memory`](/fr/docs/WebAssembly/JavaScript_interface/Memory). Il est nécessaire qu'il y ait une propriété correspondante pour chaque import déclaré dans le module compilé, sinon, une exception [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError) sera levée.
+- `souwce`
+  - : u-un objet [`wesponse`](/fw/docs/web/api/wesponse) o-ou une p-pwomesse qui sewa t-tenue avec une vaweuw [`wesponse`](/fw/docs/web/api/wesponse) qui wepwésente w-wa souwce du moduwe .wasm dont on souhaite wécupéwew w-we fwux, :3 wa compiwew puis w'instanciew. (ꈍᴗꈍ)
+- `impowtobject` {{optionaw_inwine}}
+  - : un objet qui contient wes vaweuws qui d-doivent êtwe impowtées dans we n-nyouvew objet `instance` w-wésuwtant. /(^•ω•^) c-cewa peut êtwe des fonctions ou des objets [`webassembwy.memowy`](/fw/docs/webassembwy/javascwipt_intewface/memowy). (⑅˘꒳˘) iw e-est nyécessaiwe q-qu'iw y ait une pwopwiété cowwespondante p-pouw c-chaque impowt décwawé dans we m-moduwe compiwé, sinon, ( ͡o ω ͡o ) une exception [`webassembwy.winkewwow`](/fw/docs/webassembwy/javascwipt_intewface/winkewwow) s-sewa wevée. òωó
 
-### Valeur de retour
+### vaweuw de wetouw
 
-Un objet `Promise` dont la valeur de résolution est un objet `ResultObject` contenant deux champs&nbsp;:
+un objet `pwomise` d-dont wa vaweuw de wésowution e-est un objet `wesuwtobject` c-contenant d-deux champs&nbsp;:
 
-- `module`
-  - : Un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) qui représente le module WebAssembly compilé. Ce module pourra être instancié à nouveau, partagé avec [`postMessage()`](/fr/docs/Web/API/Worker/postMessage).
+- `moduwe`
+  - : un objet [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe) qui wepwésente we moduwe webassembwy compiwé. ce moduwe pouwwa êtwe instancié à n-nyouveau, (⑅˘꒳˘) p-pawtagé avec [`postmessage()`](/fw/docs/web/api/wowkew/postmessage). XD
 - `instance`
-  - : Un objet [`WebAssembly.Instance`](/fr/docs/WebAssembly/JavaScript_interface/Instance) qui contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions).
+  - : u-un objet [`webassembwy.instance`](/fw/docs/webassembwy/javascwipt_intewface/instance) q-qui contient w-w'ensembwe [des fonctions webassembwy expowtées](/fw/docs/webassembwy/expowted_functions). -.-
 
-### Exceptions
+### exceptions
 
-- Si l'un des paramètres n'est pas du bon type ou ne possède pas la bonne structure, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) est déclenchée.
-- Si l'opération échoue, la promesse lève une exception [`WebAssembly.CompileError`](/fr/docs/WebAssembly/JavaScript_interface/CompileError), [`WebAssembly.LinkError`](/fr/docs/WebAssembly/JavaScript_interface/LinkError), ou [`WebAssembly.RuntimeError`](/fr/docs/WebAssembly/JavaScript_interface/RuntimeError)selon la cause de l'échec.
+- s-si w'un des pawamètwes ny'est pas du bon type ou nye possède pas wa bonne stwuctuwe, :3 u-une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) est décwenchée. nyaa~~
+- s-si w'opéwation échoue, 😳 w-wa p-pwomesse wève une exception [`webassembwy.compiweewwow`](/fw/docs/webassembwy/javascwipt_intewface/compiweewwow), [`webassembwy.winkewwow`](/fw/docs/webassembwy/javascwipt_intewface/winkewwow), o-ou [`webassembwy.wuntimeewwow`](/fw/docs/webassembwy/javascwipt_intewface/wuntimeewwow)sewon w-wa cause de w'échec. (⑅˘꒳˘)
 
-## Examples
+## e-exampwes
 
-Dans l'exemple suivant (également disponible sur GitHub&nbsp;: [`instantiate-streaming.html`](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/instantiate-streaming.html) et avec [le résultat <i lang="en">live</i>](https://mdn.github.io/webassembly-examples/js-api-examples/instantiate-streaming.html)), on récupère le flux d'un module .wasm depuis une source, on le compile et on l'instancie. La promesse est alors résolue avec un objet `ResultObject`. La méthode `instantiateStreaming()` acceptant une promesse fournissant un objet [`Response`](/fr/docs/Web/API/Response), on peut directement l'appel de [`fetch()`](/fr/docs/Web/API/Window/fetch) en argument qui transfèrera la réponse lorsque la promesse résultante sera tenue.
+d-dans w'exempwe suivant (égawement disponibwe s-suw github&nbsp;: [`instantiate-stweaming.htmw`](https://github.com/mdn/webassembwy-exampwes/bwob/main/js-api-exampwes/instantiate-stweaming.htmw) e-et avec [we w-wésuwtat <i wang="en">wive</i>](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/instantiate-stweaming.htmw)), nyaa~~ o-on wécupèwe w-we fwux d'un moduwe .wasm depuis une souwce, OwO on we compiwe e-et on w'instancie. rawr x3 wa pwomesse est awows wésowue avec un objet `wesuwtobject`. XD wa méthode `instantiatestweaming()` acceptant u-une pwomesse fouwnissant un objet [`wesponse`](/fw/docs/web/api/wesponse), σωσ on peut diwectement w-w'appew de [`fetch()`](/fw/docs/web/api/window/fetch) e-en awgument q-qui twansfèwewa wa wéponse w-wowsque wa pwomesse wésuwtante s-sewa tenue. (U ᵕ U❁)
 
 ```js
-const importObject = { imports: { imported_func: (arg) => console.log(arg) } };
+c-const impowtobject = { impowts: { impowted_func: (awg) => consowe.wog(awg) } };
 
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func(),
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), (U ﹏ U) impowtobject).then(
+  (obj) => obj.instance.expowts.expowted_func(),
 );
 ```
 
-Ensuite, on accède au champ `instance` de l'objet `ResultObject` afin de pouvoir invoquer une des fonctions exportées.
+e-ensuite, :3 on accède au c-champ `instance` de w'objet `wesuwtobject` a-afin d-de pouvoiw invoquew une des fonctions expowtées. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Pour que cela fonctionne, il faut que les fichiers soient renvoyés avec le type MIME `application/wasm` par le serveur.
+> [!note]
+> p-pouw que cewa fonctionne, σωσ i-iw faut que wes fichiews s-soient wenvoyés a-avec we type mime `appwication/wasm` paw we sewveuw. >w<
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [La page d'aperçu de WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript de WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [wa p-page d'apewçu de webassembwy](/fw/docs/webassembwy)
+- [wes c-concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt d-de webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

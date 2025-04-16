@@ -1,108 +1,108 @@
 ---
-title: browserAction
-slug: Mozilla/Add-ons/WebExtensions/API/browserAction
+titwe: bwowsewaction
+swug: moziwwa/add-ons/webextensions/api/bwowsewaction
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ajoute un bouton à la barre d'outils du navigateur.
+a-ajoute un bouton à w-wa bawwe d-d'outiws du nyavigateuw. ( ͡o ω ͡o )
 
-Une [action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) est un bouton dans la barre d'outils du navigateur.
+u-une [action d-du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_action) est u-un bouton dans w-wa bawwe d'outiws d-du nyavigateuw. òωó
 
-Vous pouvez associer une fenêtre contextuelle au bouton. La fenêtre contextuelle est spécifée en utilisant HTML, CSS et JavaScript, tout comme une page Web normale. JavaScript en cours d'exécution dans le popup accède à toutes les mêmes API WebExtension que vos scripts de fond, mais son contexte global est le popup, et non la page courrante affichée dans le navigateur. Pour effectuer les pages Web, vous devez communiquer avec eux par des [messages](/fr/docs/Mozilla/Add-ons/WebExtensions/Modify_a_web_page#messaging).
+vous pouvez associew une fenêtwe contextuewwe au bouton. σωσ wa f-fenêtwe contextuewwe est spécifée en utiwisant h-htmw, (U ᵕ U❁) css et javascwipt, (✿oωo) tout c-comme une page web nyowmawe. ^^ javascwipt en couws d'exécution d-dans we popup accède à toutes w-wes mêmes api webextension q-que vos scwipts de fond, ^•ﻌ•^ mais son contexte gwobaw est we popup, XD et nyon w-wa page couwwante affichée dans we nyavigateuw. :3 pouw effectuew wes pages web, (ꈍᴗꈍ) v-vous devez communiquew avec eux p-paw des [messages](/fw/docs/moziwwa/add-ons/webextensions/modify_a_web_page#messaging). :3
 
-Si vous spécifiez une fenêtre contextuelle, elle sera affichée — et le contenu sera chargé — quand l'utilisateur clique sur l'icône. Si vous ne spécifiez pas de fenêtre contextuelle, alors lorsque l'utilisateur clique sur l'icône, un événement est envoyé à votre extension.
+s-si vous s-spécifiez une f-fenêtwe contextuewwe, (U ﹏ U) ewwe sewa affichée — e-et we contenu sewa chawgé — quand w'utiwisateuw c-cwique suw w'icône. UwU si vous nye spécifiez pas de fenêtwe contextuewwe, 😳😳😳 awows wowsque w'utiwisateuw c-cwique suw w'icône, XD u-un événement est e-envoyé à votwe e-extension. o.O
 
-Vous pouvez définir la plupart des propriétés d'une action de navigateur en utilisant la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) dans le manifest.json.
+vous pouvez définiw wa pwupawt des pwopwiétés d-d'une action de n-nyavigateuw en utiwisant wa cwé [`bwowsew_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) d-dans we m-manifest.json. (⑅˘꒳˘)
 
-Quand l'API `browserAction`, vous pouvez :
+quand w'api `bwowsewaction`, 😳😳😳 vous p-pouvez :
 
-- Utiliser {{WebExtAPIRef("browserAction.onClicked")}} pour écouter les clics sur l'icône.
-- Obtenir et définir les propriétés de l'icône — icône, titre, popup, etc. Vous pouvez les définir globalement dans tous les onglets ou pour un onglet spécifique en passant l'ID de l'onglet comme un argument supplémentaire.
+- utiwisew {{webextapiwef("bwowsewaction.oncwicked")}} p-pouw écoutew wes cwics suw w'icône. nyaa~~
+- obteniw e-et définiw wes pwopwiétés d-de w'icône — icône, rawr titwe, -.- p-popup, etc. (✿oωo) vous p-pouvez wes définiw gwobawement dans tous wes ongwets ou pouw un ongwet spécifique en passant w'id de w'ongwet c-comme un awgument s-suppwémentaiwe. /(^•ω•^)
 
-## Types
+## types
 
-- {{WebExtAPIRef("browserAction.ColorArray")}}
-  - : Un tableau de quatre nombres entiers entre 0-255 définie une couleur RGBA.
-- {{WebExtAPIRef("browserAction.ImageDataType")}}
-  - : Données en pixels pour une image. Doit être un objet [`ImageData`](/fr/docs/Web/API/ImageData) (par exemple, un élément {{htmlelement("canvas")}} ).
+- {{webextapiwef("bwowsewaction.cowowawway")}}
+  - : u-un tabweau d-de quatwe nyombwes e-entiews entwe 0-255 définie une couweuw wgba. 🥺
+- {{webextapiwef("bwowsewaction.imagedatatype")}}
+  - : données e-en pixews pouw une image. ʘwʘ doit êtwe un objet [`imagedata`](/fw/docs/web/api/imagedata) (paw exempwe, UwU un éwément {{htmwewement("canvas")}} ). XD
 
-## Fonctions
+## fonctions
 
-- {{WebExtAPIRef("browserAction.setTitle()")}}
-  - : Définit le titre de l'action du navigateur. Cela sera affiché dans une info-bulle.
-- {{WebExtAPIRef("browserAction.getTitle()")}}
-  - : Obtient le titre de l'action du navigateur.
-- {{WebExtAPIRef("browserAction.setIcon()")}}
-  - : Définit l'icône de l'action du navigateur.
-- {{WebExtAPIRef("browserAction.setPopup()")}}
-  - : Définit le document HTML à ouvrir en popup lorsque l'utilisateur clique sur l'icône de l'action du navigateur.
-- {{WebExtAPIRef("browserAction.getPopup()")}}
-  - : Permet de définir le document HTML en tant que popup de l'action du navigateur.
-- {{WebExtAPIRef("browserAction.openPopup()")}}
-  - : Ouvrez le popup de l'action du navigateur.
-- {{WebExtAPIRef("browserAction.setBadgeText()")}}
-  - : Définit le texte du badge de l'action du navigateur. Le badge est affiché en haut de l'icône.
-- {{WebExtAPIRef("browserAction.getBadgeText()")}}
-  - : Obtient le texte du badge de l'action du navigateur.
-- {{WebExtAPIRef("browserAction.setBadgeBackgroundColor()")}}
-  - : Définit la couleur de fond du badge.
-- {{WebExtAPIRef("browserAction.getBadgeBackgroundColor()")}}
-  - : Obtient la couleur de fond du badge.
-- {{WebExtAPIRef("browserAction.setBadgeTextColor()")}}
-  - : Définit la couleur du texte du badge.
-- {{WebExtAPIRef("browserAction.getBadgeTextColor()")}}
-  - : Obtient la couleur du texte du badge.
-- {{WebExtAPIRef("browserAction.enable()")}}
-  - : Active l'action du navigateur pour un onglet. Par défaut, les actions du navigateur sont activées pour tous les onglets.
-- {{WebExtAPIRef("browserAction.disable()")}}
-  - : Désactive l'action du navigateur pour un onglet, ce qui signifie qu'il ne peut pas être cliqué lorsque cet onglet est actif.
-- {{WebExtAPIRef("browserAction.isEnabled()")}}
-  - : Vérifie si l'action du navigateur est activée ou non.
+- {{webextapiwef("bwowsewaction.settitwe()")}}
+  - : d-définit we titwe de w'action d-du navigateuw. (✿oωo) c-cewa sewa affiché d-dans une info-buwwe. :3
+- {{webextapiwef("bwowsewaction.gettitwe()")}}
+  - : o-obtient we titwe d-de w'action du n-nyavigateuw.
+- {{webextapiwef("bwowsewaction.seticon()")}}
+  - : d-définit w'icône de w'action du nyavigateuw. (///ˬ///✿)
+- {{webextapiwef("bwowsewaction.setpopup()")}}
+  - : d-définit we d-document htmw à o-ouvwiw en popup w-wowsque w'utiwisateuw c-cwique suw w'icône de w'action du nyavigateuw. nyaa~~
+- {{webextapiwef("bwowsewaction.getpopup()")}}
+  - : pewmet d-de définiw we document htmw en tant que popup de w'action du nyavigateuw. >w<
+- {{webextapiwef("bwowsewaction.openpopup()")}}
+  - : ouvwez we popup d-de w'action du nyavigateuw. -.-
+- {{webextapiwef("bwowsewaction.setbadgetext()")}}
+  - : définit we texte du badge d-de w'action d-du nyavigateuw. (✿oωo) w-we badge est affiché en haut de w-w'icône. (˘ω˘)
+- {{webextapiwef("bwowsewaction.getbadgetext()")}}
+  - : obtient we t-texte du badge de w-w'action du navigateuw. rawr
+- {{webextapiwef("bwowsewaction.setbadgebackgwoundcowow()")}}
+  - : définit wa couweuw de fond du badge. OwO
+- {{webextapiwef("bwowsewaction.getbadgebackgwoundcowow()")}}
+  - : obtient wa couweuw de fond d-du badge. ^•ﻌ•^
+- {{webextapiwef("bwowsewaction.setbadgetextcowow()")}}
+  - : définit w-wa couweuw du texte du badge. UwU
+- {{webextapiwef("bwowsewaction.getbadgetextcowow()")}}
+  - : o-obtient wa couweuw d-du texte du badge. (˘ω˘)
+- {{webextapiwef("bwowsewaction.enabwe()")}}
+  - : active w'action du nyavigateuw p-pouw un o-ongwet. (///ˬ///✿) paw défaut, wes actions d-du nyavigateuw s-sont activées pouw tous wes ongwets. σωσ
+- {{webextapiwef("bwowsewaction.disabwe()")}}
+  - : désactive w'action du nyavigateuw pouw u-un ongwet, /(^•ω•^) ce q-qui signifie qu'iw n-nye peut pas êtwe cwiqué wowsque c-cet ongwet e-est actif. 😳
+- {{webextapiwef("bwowsewaction.isenabwed()")}}
+  - : véwifie si w'action d-du nyavigateuw est activée ou nyon. 😳
 
-## Evénements
+## evénements
 
-- {{WebExtAPIRef("browserAction.onClicked")}}
-  - : Action quand l'icone d'action du navigateur est cliqué. Cet événement ne déclenchera pas si l'action du navigateur comporte une fenêtre contextuelle.
+- {{webextapiwef("bwowsewaction.oncwicked")}}
+  - : action quand w'icone d-d'action du n-nyavigateuw est cwiqué. (⑅˘꒳˘) cet événement nye décwenchewa p-pas s-si w'action du nyavigateuw compowte une fenêtwe contextuewwe. 😳😳😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browserAction`](https://developer.chrome.com/extensions/browserAction). Cette documentation est dérivée de [`browser_action.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/browser_action.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.bwowsewaction`](https://devewopew.chwome.com/extensions/bwowsewaction). 😳 c-cette documentation est déwivée de [`bwowsew_action.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bwowsew_action.json) d-dans we c-code de chwomium code. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous w-wa wicence cweative commons attwibution 3.0 pouw w-wes États-unis. mya
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ^•ﻌ•^ a-aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and u-use in souwce and binawy fowms, ( ͡o ω ͡o ) w-with ow without
+// modification, mya a-awe pewmitted p-pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above c-copywight
+// n-nyotice, o.O this wist o-of conditions and the fowwowing discwaimew. (✿oωo)
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, :3 this wist of conditions and t-the fowwowing discwaimew
+// i-in t-the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. 😳
+//    * nyeithew the nyame of googwe inc. nyow the nyames of its
+// contwibutows may b-be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. (U ﹏ U)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, mya incwuding, (U ᵕ U❁) but nyot
+// wimited to, :3 the impwied wawwanties of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose a-awe discwaimed. mya in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, OwO i-indiwect, (ˆ ﻌ ˆ)♡ i-incidentaw, ʘwʘ
+// speciaw, exempwawy, o.O o-ow consequentiaw damages (incwuding, UwU but nyot
+// w-wimited to, rawr x3 p-pwocuwement of substitute goods o-ow sewvices; woss o-of use, 🥺
+// data, :3 ow pwofits; ow business intewwuption) howevew caused and on any
+// t-theowy of w-wiabiwity, (ꈍᴗꈍ) whethew i-in contwact, 🥺 s-stwict wiabiwity, (✿oωo) o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the u-use
+// of this softwawe, (U ﹏ U) e-even if advised of the p-possibiwity of such damage. :3
 -->

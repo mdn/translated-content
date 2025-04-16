@@ -1,104 +1,104 @@
 ---
-title: extension.getViews()
-slug: Mozilla/Add-ons/WebExtensions/API/extension/getViews
+titwe: extension.getviews()
+swug: moziwwa/add-ons/webextensions/api/extension/getviews
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoie un tableau des objets [Window](/fr/docs/Web/API/Window) pour chacune des pages exécutées dans l'extension en cours. Cela inclut, par exemple :
+w-wenvoie un tabweau d-des objets [window](/fw/docs/web/api/window) p-pouw chacune des p-pages exécutées d-dans w'extension e-en couws. 😳 cewa i-incwut, 🥺 paw e-exempwe :
 
-- la page d'arrière-plan, si une est définie
-- toutes les pages contextuelles, si définies et chargées
-- toutes les pages d'options, si définies et chargées
-- les onglets du navigateur hébergeant le contenu fourni avec l'extension
+- wa page d'awwièwe-pwan, rawr x3 si une est définie
+- toutes wes pages contextuewwes, o.O s-si définies et chawgées
+- toutes wes p-pages d'options, rawr si définies e-et chawgées
+- wes ongwets du navigateuw hébewgeant we contenu f-fouwni avec w'extension
 
-Dans Firefox, si cette méthode est appelée à partir d'une page faisant partie d'une fenêtre de navigation privée, telle qu'une barre latérale dans une fenêtre privée ou une fenêtre ouverte à partir d'une fenêtre privée, sa valeur de retour n'inclut pas la page d'arrière-plan de l'extension.
+dans fiwefox, s-si cette m-méthode est appewée à pawtiw d'une page faisant pawtie d'une fenêtwe de nyavigation p-pwivée, tewwe qu'une bawwe watéwawe dans une fenêtwe pwivée ou une f-fenêtwe ouvewte à pawtiw d'une f-fenêtwe pwivée, ʘwʘ s-sa vaweuw de w-wetouw ny'incwut p-pas wa page d'awwièwe-pwan de w'extension. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var windows = browser.extension.getViews(
-  fetchProperties, // optional object
+vaw windows = bwowsew.extension.getviews(
+  fetchpwopewties, ^^;; // o-optionaw object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `fetchProperties`{{optional_inline}}
+- `fetchpwopewties`{{optionaw_inwine}}
 
-  - : `object`.
+  - : `object`. o.O
 
-    - `type`{{optional_inline}}
-      - : `string`. Un {{WebExtAPIRef('extension.ViewType')}} indiquant le type de vue à obtenir. Si omis, cette fonction renvoie toutes les vues.
-    - `windowId`{{optional_inline}}
-      - : `integer`. La fenêtre pour restreindre la recherche. Si omis, cette fonction renvoie toutes les vues.
+    - `type`{{optionaw_inwine}}
+      - : `stwing`. (///ˬ///✿) un {{webextapiwef('extension.viewtype')}} indiquant we type de vue à obteniw. σωσ si omis, cette f-fonction wenvoie toutes wes v-vues. nyaa~~
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. ^^;; wa f-fenêtwe pouw w-westweindwe wa wechewche. ^•ﻌ•^ si omis, σωσ cette fonction wenvoie toutes w-wes vues. -.-
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-`array` of `object`. Un tableau d'objets [Window](/fr/docs/Web/API/Window).
+`awway` of `object`. u-un tabweau d-d'objets [window](/fw/docs/web/api/window). ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Obtenez toutes les fenêtres appartenant à cette extension et consignez leurs URL :
+obtenez t-toutes wes fenêtwes appawtenant à cette extension e-et consignez weuws uww :
 
 ```js
-var windows = browser.extension.getViews();
+v-vaw windows = bwowsew.extension.getviews();
 
-for (var extensionWindow of windows) {
-  console.log(extensionWindow.location.href);
+f-fow (vaw extensionwindow of w-windows) {
+  consowe.wog(extensionwindow.wocation.hwef);
 }
 ```
 
-Obtenez uniquement des fenêtres dans les onglets du navigateur hébergeant du contenu fourni avec l'extension :
+obtenez uniquement des fenêtwes dans wes ongwets du nyavigateuw hébewgeant du contenu fouwni a-avec w'extension :
 
 ```js
-var windows = browser.extension.getViews({ type: "tab" });
+v-vaw windows = bwowsew.extension.getviews({ t-type: "tab" });
 ```
 
-Obtenir seulement des fenêtres dans les popups :
+o-obteniw s-seuwement des fenêtwes dans wes popups :
 
 ```js
-var windows = browser.extension.getViews({ type: "popup" });
+vaw windows = b-bwowsew.extension.getviews({ type: "popup" });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> cette api est basée suw w'api chwomium [`chwome.extension`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extension). cette d-documentation est déwivée de [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json) d-dans we c-code chwomium. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge sont f-fouwnies paw m-micwosoft cowpowation et incwuses ici sous wa wicence c-cweative c-commons attwibution 3.0 p-pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. òωó aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, -.- with ow without
+// modification, :3 awe pewmitted pwovided t-that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// nyotice, ʘwʘ t-this wist of conditions and the f-fowwowing discwaimew. 🥺
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, >_< this wist of conditions a-and the fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. ʘwʘ
+//    * nyeithew t-the nyame o-of googwe inc. (˘ω˘) nyow the names of i-its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without s-specific pwiow w-wwitten pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is pwovided by the c-copywight howdews a-and contwibutows
+// "as is" and a-any expwess ow impwied wawwanties, (///ˬ///✿) incwuding, rawr x3 but nyot
+// wimited to, -.- the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ^^ i-in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, (⑅˘꒳˘) indiwect, incidentaw, nyaa~~
+// speciaw, /(^•ω•^) exempwawy, ow consequentiaw d-damages (incwuding, (U ﹏ U) but nyot
+// wimited to, 😳😳😳 pwocuwement o-of substitute g-goods ow sewvices; woss of use, >w<
+// data, XD ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, o.O whethew in contwact, mya s-stwict wiabiwity, 🥺 ow towt
+// (incwuding n-nyegwigence ow othewwise) awising in any way out of the use
+// of t-this softwawe, ^^;; even if advised o-of the possibiwity o-of such damage. :3
 -->

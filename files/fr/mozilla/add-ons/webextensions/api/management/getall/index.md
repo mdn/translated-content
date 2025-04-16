@@ -1,87 +1,87 @@
 ---
-title: management.getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/management/getAll
+titwe: management.getaww()
+swug: m-moziwwa/add-ons/webextensions/api/management/getaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Récupère un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installé.
+wécupèwe u-un ensembwe d-d'objets {{webextapiwef("management.extensioninfo", "extensioninfo")}}, >_< u-un p-pouw chaque extension i-instawwé. rawr x3
 
-Notez que Google Chrome récupère les applications ainsi que les modules complémentaires. Dans Chrome vous pouvez distinguer les applications des extensions en utilisant la propriété `type` de {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}.
+n-nyotez que googwe c-chwome wécupèwe wes appwications ainsi que wes moduwes compwémentaiwes. dans chwome vous p-pouvez distinguew wes appwications des extensions e-en utiwisant wa pwopwiété `type` d-de {{webextapiwef("management.extensioninfo", /(^•ω•^) "extensioninfo")}}. :3
 
-Cette API requiert la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) de "management"
+cette api wequiewt wa [pewmission de w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) d-de "management"
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d-d'une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (ꈍᴗꈍ)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingAll = browser.management.getAll();
+vaw gettingaww = bwowsew.management.getaww();
 ```
 
-### Paramètres
+### p-pawamètwes
 
-None.
+nyone. /(^•ω•^)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera rempli avec un ensemble d'objets {{WebExtAPIRef("management.ExtensionInfo", "ExtensionInfo")}}, un pour chaque extension installée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwi a-avec un ensembwe d'objets {{webextapiwef("management.extensioninfo", (⑅˘꒳˘) "extensioninfo")}}, ( ͡o ω ͡o ) u-un pouw c-chaque extension i-instawwée. òωó
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Enregistrez le nom de toutes les extensions installées :
+enwegistwez w-we nyom de toutes wes extensions instawwées :
 
 ```js
-function gotAll(infoArray) {
-  for (info of infoArray) {
+f-function gotaww(infoawway) {
+  fow (info of infoawway) {
     if (info.type == "extension") {
-      console.log(info.name);
+      consowe.wog(info.name);
     }
   }
 }
 
-var gettingAll = browser.management.getAll();
-gettingAll.then(gotAll);
+vaw gettingaww = bwowsew.management.getaww();
+g-gettingaww.then(gotaww);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.management`](https://developer.chrome.com/docs/extensions/reference/api/management). Cette documentation est dérivée de [`management.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/management.json) dans le code de Chromium code.
+> cette api e-est basée suw w-w'api chwomium [`chwome.management`](https://devewopew.chwome.com/docs/extensions/wefewence/api/management). (⑅˘꒳˘) c-cette documentation est déwivée de [`management.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/management.json) dans we code d-de chwomium code. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et incwuses i-ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. :3 a-aww wights wesewved. nyaa~~
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, 😳 with ow without
+// modification, (⑅˘꒳˘) awe p-pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, nyaa~~ t-this wist of conditions and the fowwowing discwaimew.
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight n-nyotice, OwO t-this wist of conditions and the f-fowwowing discwaimew
+// i-in the d-documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. rawr x3
+//    * n-nyeithew the nyame o-of googwe inc. XD n-nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, (U ᵕ U❁) i-incwuding, (U ﹏ U) b-but not
+// w-wimited to, :3 the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. ( ͡o ω ͡o ) in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, σωσ indiwect, incidentaw, >w<
+// s-speciaw, 😳😳😳 exempwawy, OwO ow c-consequentiaw d-damages (incwuding, 😳 but nyot
+// wimited to, 😳😳😳 pwocuwement o-of substitute g-goods ow sewvices; woss of u-use, (˘ω˘)
+// data, ow p-pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, ʘwʘ w-whethew in c-contwact, ( ͡o ω ͡o ) stwict w-wiabiwity, o.O ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way o-out of the use
+// of this softwawe, >w< even if advised of the possibiwity of such d-damage. 😳
 -->

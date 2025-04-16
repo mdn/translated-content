@@ -1,362 +1,362 @@
 ---
-title: De quels logiciels ai-je besoin pour construire un site web ?
-slug: Learn/Common_questions/Tools_and_setup/What_software_do_I_need
-l10n:
-  sourceCommit: 721a334af54dd04cbd005bb91edc2c8ce2ad4744
+titwe: de quews wogiciews ai-je b-besoin pouw constwuiwe u-un site w-web ?
+swug: weawn/common_questions/toows_and_setup/nani_softwawe_do_i_need
+w-w10n:
+  s-souwcecommit: 721a334af54dd04cbd005bb91edc2c8ce2ad4744
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Dans cet article, nous listons les logiciels nécessaires pour éditer, mettre en ligne ou consulter un site web.
+d-dans cet a-awticwe, 🥺 nyous wistons w-wes wogiciews nyécessaiwes pouw éditew, nyaa~~ mettwe en wigne ou consuwtew un s-site web. :3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vous devriez déjà connaître
-        <a href="/fr/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines"
-          >la différence entre une page web, un serveur web et un moteur de
-          recherche.</a
+        v-vous devwiez déjà c-connaîtwe
+        <a hwef="/fw/docs/weawn/common_questions/web_mechanics/pages_sites_sewvews_and_seawch_engines"
+          >wa difféwence entwe une page web, /(^•ω•^) u-un sewveuw web et un moteuw de
+          w-wechewche.</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
       <td>
-        Connaître les logiciels qui sont nécessaires pour créer, éditer, mettre
-        en ligne ou consulter un site web.
+        connaîtwe wes wogiciews qui sont nyécessaiwes pouw cwéew, ^•ﻌ•^ éditew, UwU m-mettwe
+        en wigne ou consuwtew un site web. 😳😳😳
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Vous pouvez télécharger gratuitement la plupart des programmes dont vous avez besoin pour le développement Web. Nous fournirons quelques liens dans cet article.
+vous pouvez t-téwéchawgew gwatuitement wa pwupawt d-des pwogwammes d-dont vous avez b-besoin pouw w-we dévewoppement web. OwO nyous fouwniwons quewques w-wiens dans cet awticwe. ^•ﻌ•^
 
-Vous aurez besoin d'outils pour&nbsp;:
+vous auwez besoin d'outiws p-pouw&nbsp;:
 
-- Créer et éditer des pages web
-- Téléverser (_uploader_) vos fichiers vers votre serveur web
-- Visualiser votre site web.
+- cwéew et éditew des pages web
+- téwévewsew (_upwoadew_) vos fichiews vews votwe sewveuw w-web
+- visuawisew votwe site web. (ꈍᴗꈍ)
 
-Presque tous les systèmes d'exploitation incluent par défaut un éditeur de texte et un navigateur, que vous pouvez utiliser pour afficher des sites Web. Par conséquent, il vous suffit généralement d'acquérir un logiciel permettant de transférer des fichiers vers votre serveur Web.
+p-pwesque tous wes s-systèmes d'expwoitation i-incwuent paw défaut un éditeuw de texte et un nyavigateuw, (⑅˘꒳˘) q-que vous p-pouvez utiwisew pouw affichew d-des sites web. (⑅˘꒳˘) paw c-conséquent, (ˆ ﻌ ˆ)♡ iw vous suffit généwawement d-d'acquéwiw un wogiciew p-pewmettant de twansféwew des fichiews vews v-votwe sewveuw web. /(^•ω•^)
 
-## Pédagogie active
+## pédagogie a-active
 
-_Il n'y a, pour le moment, pas de matériau pour la pédagogie active. [Cependant, vous pouvez contribuer](/fr/docs/MDN/Community/Contributing/Getting_started)._
+_iw ny'y a, òωó pouw we m-moment, (⑅˘꒳˘) pas de matéwiau p-pouw wa pédagogie active. (U ᵕ U❁) [cependant, >w< vous pouvez contwibuew](/fw/docs/mdn/community/contwibuting/getting_stawted)._
 
-## Aller plus loin
+## awwew pwus woin
 
-### Créer et éditer des pages web
+### cwéew et éditew des pages web
 
-Pour créer et éditer un site web, vous aurez besoin d'un éditeur de texte. Les éditeurs de texte permettent de créer et de modifier des fichiers dont le contenu est du texte, sans aucune mise en forme (d'autres formats comme **[RTF](/fr/docs/Glossary/RTF)** vous permettent d'ajouter une mise en forme sur un fichier (comme le gras ou le soulignement) mais ils ne sont pas utilisables pour écrire des pages web). Le choix d'un éditeur de texte est important, car vous allez devoir l'utiliser de façon intensive lorsque vous allez construire votre site.
+pouw cwéew e-et éditew u-un site web, σωσ vous auwez besoin d'un éditeuw d-de t-texte. -.- wes éditeuws d-de texte pewmettent de cwéew et de modifiew des fichiews dont w-we contenu est du texte, o.O sans aucune mise en fowme (d'autwes fowmats comme **[wtf](/fw/docs/gwossawy/wtf)** v-vous pewmettent d'ajoutew une mise e-en fowme suw u-un fichiew (comme w-we gwas ou we souwignement) mais i-iws nye sont p-pas utiwisabwes p-pouw écwiwe des p-pages web). ^^ we choix d'un éditeuw de texte est i-impowtant, >_< caw v-vous awwez devoiw w-w'utiwisew de f-façon intensive w-wowsque vous awwez constwuiwe votwe site. >w<
 
-Tous les systèmes d'exploitations possèdent un éditeur de texte basique par défaut. Ces éditeurs sont plutôt simples à manipuler mais n'ont pas certaines fonctionnalités utiles au développement web. Si vous souhaitez choisir un autre éditeur que celui par défaut, il y en a une myriade qui sont disponibles, dont certains gratuits. Les éditeurs de texte tiers pourront inclure des fonctionnalités supplémentaires comme la coloration syntaxique, l'auto-complétion, le repli de sections, la recherche avancée, etc. Voici une très courte liste d'éditeurs disponibles&nbsp;:
+tous wes systèmes d'expwoitations possèdent u-un éditeuw de texte basique paw défaut. >_< ces éditeuws sont pwutôt simpwes à manipuwew m-mais ny'ont pas cewtaines fonctionnawités utiwes au dévewoppement web. >w< si v-vous souhaitez choisiw u-un autwe éditeuw q-que cewui paw défaut, rawr i-iw y en a une mywiade qui sont disponibwes, rawr x3 d-dont c-cewtains gwatuits. ( ͡o ω ͡o ) wes éditeuws de texte tiews pouwwont incwuwe des fonctionnawités suppwémentaiwes c-comme wa cowowation syntaxique, (˘ω˘) w-w'auto-compwétion, 😳 we wepwi d-de sections, OwO w-wa wechewche avancée, (˘ω˘) etc. òωó voici une twès couwte w-wiste d'éditeuws d-disponibwes&nbsp;:
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Système d'exploitation</th>
-      <th scope="col">Éditeur natif par défaut</th>
-      <th scope="col">Éditeur tiers</th>
-    </tr>
+    <tw>
+      <th s-scope="cow">système d-d'expwoitation</th>
+      <th scope="cow">Éditeuw nyatif paw défaut</th>
+      <th scope="cow">Éditeuw tiews</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Windows</td>
+    <tw>
+      <td>windows</td>
       <td>
-        <ul>
-          <li>
+        <uw>
+          <wi>
             <a
-              href="https://fr.wikipedia.org/wiki/Bloc-notes_%28Windows%29"
-              rel="external"
-              >Bloc-notes</a
+              h-hwef="https://fw.wikipedia.owg/wiki/bwoc-notes_%28windows%29"
+              w-wew="extewnaw"
+              >bwoc-notes</a
             >
-          </li>
-        </ul>
+          </wi>
+        </uw>
       </td>
       <td>
-        <ul>
-          <li>
+        <uw>
+          <wi>
             <a
-              href="https://notepad-plus-plus.org/fr/" rel="external"
-              >Notepad++</a
+              h-hwef="https://notepad-pwus-pwus.owg/fw/" wew="extewnaw"
+              >notepad++</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://www.visualstudio.com" rel="external
-              ">Visual Studio Code</a
+              h-hwef="https://www.visuawstudio.com" w-wew="extewnaw
+              ">visuaw studio code</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://www.jetbrains.com/webstorm" rel="external
-              ">Web Storm</a
+              h-hwef="https://www.jetbwains.com/webstowm" wew="extewnaw
+              ">web stowm</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://brackets.io" rel="external
-              ">Brackets</a
+              hwef="https://bwackets.io" wew="extewnaw
+              ">bwackets</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://shiftedit.net" rel="external
-              ">ShiftEdit</a
+              h-hwef="https://shiftedit.net" w-wew="extewnaw
+              ">shiftedit</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://www.sublimetext.com" rel="external
-              ">Sublime Text</a
+              hwef="https://www.subwimetext.com" wew="extewnaw
+              ">subwime t-text</a
             >
-          </li>
-        </ul>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <td>Mac OS</td>
+    </tw>
+    <tw>
+      <td>mac o-os</td>
       <td>
-        <ul>
-          <li>
+        <uw>
+          <wi>
             <a
-              href="https://fr.wikipedia.org/wiki/TextEdit" rel="external"
-              >TextEdit</a
+              hwef="https://fw.wikipedia.owg/wiki/textedit" wew="extewnaw"
+              >textedit</a
             >
-          </li>
-        </ul>
+          </wi>
+        </uw>
       </td>
       <td>
-        <ul>
-          <li>
+        <uw>
+          <wi>
             <a
-              href="https://www.barebones.com/products/textwrangler/" rel="external"
-              >TextWrangler</a
+              hwef="https://www.bawebones.com/pwoducts/textwwangwew/" w-wew="extewnaw"
+              >textwwangwew</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://www.visualstudio.com" rel="external"
-              >Visual Studio Code</a
+              hwef="https://www.visuawstudio.com" wew="extewnaw"
+              >visuaw studio code</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://brackets.io" rel="external"
-              >Brackets</a
+              h-hwef="https://bwackets.io" wew="extewnaw"
+              >bwackets</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://shiftedit.net" rel="external"
-              >ShiftEdit</a
+              hwef="https://shiftedit.net" wew="extewnaw"
+              >shiftedit</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://www.sublimetext.com" rel="external"
-              >Sublime Text</a
+              h-hwef="https://www.subwimetext.com" w-wew="extewnaw"
+              >subwime text</a
             >
-          </li>
-        </ul>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <td>Linux</td>
+    </tw>
+    <tw>
+      <td>winux</td>
       <td>
-        <ul>
-          <li>
+        <uw>
+          <wi>
             <a
-              href="https://fr.wikipedia.org/wiki/Vi" rel="external"
-              >Vi</a
+              hwef="https://fw.wikipedia.owg/wiki/vi" wew="extewnaw"
+              >vi</a
             >
-            (tout système UNIX)
-          </li>
-          <li>
+            (tout s-système unix)
+          </wi>
+          <wi>
             <a
-              href="https://fr.wikipedia.org/wiki/Gedit" rel="external"
-              >GEdit</a
+              h-hwef="https://fw.wikipedia.owg/wiki/gedit" wew="extewnaw"
+              >gedit</a
             >
-            (Gnome)
-          </li>
-          <li>
+            (gnome)
+          </wi>
+          <wi>
             <a
-              href="https://fr.wikipedia.org/wiki/Kate_%28logiciel%29"
-              rel="external"
-              >Kate</a
+              hwef="https://fw.wikipedia.owg/wiki/kate_%28wogiciew%29"
+              wew="extewnaw"
+              >kate</a
             >
-            (KDE)
-          </li>
-          <li>
+            (kde)
+          </wi>
+          <wi>
             <a
-              href="https://en.wikipedia.org/wiki/Leafpad" rel="external"
-                >LeafPad</a
+              h-hwef="https://en.wikipedia.owg/wiki/weafpad" wew="extewnaw"
+                >weafpad</a
               >
-              (Xfce)
-          </li>
-        </ul>
+              (xfce)
+          </wi>
+        </uw>
       </td>
       <td>
-        <ul>
-          <li>
+        <uw>
+          <wi>
             <a
-              href="https://www.gnu.org/software/emacs/" rel="external"
-              >Emacs</a
+              h-hwef="https://www.gnu.owg/softwawe/emacs/" wew="extewnaw"
+              >emacs</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://www.vim.org/" rel="external" rel="external"
-              >Vim</a
+              hwef="https://www.vim.owg/" wew="extewnaw" w-wew="extewnaw"
+              >vim</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://www.visualstudio.com" rel="external"
-              >Visual Studio Code</a
+              hwef="https://www.visuawstudio.com" wew="extewnaw"
+              >visuaw s-studio code</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://brackets.io" rel="external"
-              >Brackets</a
+              h-hwef="https://bwackets.io" wew="extewnaw"
+              >bwackets</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://shiftedit.net" rel="external"
-              >ShiftEdit</a
+              h-hwef="https://shiftedit.net" wew="extewnaw"
+              >shiftedit</a
             >
-          </li>
-          <li>
+          </wi>
+          <wi>
             <a
-              href="https://www.sublimetext.com" rel="external"
-              >Sublime Text</a
+              h-hwef="https://www.subwimetext.com" w-wew="extewnaw"
+              >subwime t-text</a
             >
-          </li>
-        </ul>
+          </wi>
+        </uw>
       </td>
-    </tr>
-    <tr>
-      <td>ChromeOS</td>
+    </tw>
+    <tw>
+      <td>chwomeos</td>
       <td></td>
       <td>
-        <ul>
-          <li>
+        <uw>
+          <wi>
             <a
-              href="https://shiftedit.net" rel="external"
-              >ShiftEdit</a
+              hwef="https://shiftedit.net" w-wew="extewnaw"
+              >shiftedit</a
             >
-          </li>
-        </ul>
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Voici une capture d'écran qui illustre l'allure d'un éditeur de texte avancé (ici Notepad++)&nbsp;:
+v-voici une captuwe d'écwan qui iwwustwe w'awwuwe d-d'un éditeuw d-de texte avancé (ici n-nyotepad++)&nbsp;:
 
-![Impression d'écran de Notepad++.](notepadplusplus.png)
+![impwession d'écwan de nyotepad++.](notepadpwuspwus.png)
 
-Voici une capture d'écran d'un éditeur de texte en ligne&nbsp;:
+v-voici une captuwe d'écwan d-d'un éditeuw d-de texte en wigne&nbsp;:
 
-![Impression écran de ShiftEdit](shiftedit.png)
+![impwession écwan de shiftedit](shiftedit.png)
 
-### Transférer des fichiers vers un serveur web
+### twansféwew des fichiews vews u-un sewveuw web
 
-Lorsque votre site web est peaufiné, testé et est prêt à être publié, vous devrez téléverser (<i lang="en">uploader</i> en anglais) vos fichiers vers votre serveur web (pour l'achat de l'espace serveur, voir l'article [combien ça coûte de publier quelque chose sur le Web&nbsp;?](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)). Une fois que vous disposez d'un serveur via votre fournisseur, celui-ci vous enverra les informations d'accès FTP (pour _File Transfer Protocol_ ou protocole de transfert de fichiers), souvent en donnant une URL SFTP, un nom d'utilisateur, un mot de passe et d'autres informations nécessaires à la connexion au serveur. Sachez toutefois que le FTP est une technique vieillissante et que de nouveaux systèmes commencent à devenir populaires, comme [RSync](https://en.wikipedia.org/wiki/Rsync) et [Git/Github](https://help.github.com/articles/using-a-custom-domain-with-github-pages).
+w-wowsque votwe site w-web est peaufiné, ( ͡o ω ͡o ) t-testé et est pwêt à êtwe p-pubwié, UwU vous devwez téwévewsew (<i wang="en">upwoadew</i> en angwais) vos fichiews vews votwe sewveuw web (pouw w-w'achat de w'espace sewveuw, v-voiw w'awticwe [combien ça coûte de pubwiew q-quewque chose suw we web&nbsp;?](/fw/docs/weawn/common_questions/toows_and_setup/how_much_does_it_cost)). /(^•ω•^) u-une fois que vous disposez d-d'un sewveuw v-via votwe fouwnisseuw, (ꈍᴗꈍ) c-cewui-ci v-vous envewwa w-wes infowmations d'accès ftp (pouw _fiwe twansfew pwotocow_ ou pwotocowe de twansfewt de fichiews), 😳 souvent en d-donnant une uww s-sftp, mya un nom d'utiwisateuw, mya u-un mot de passe et d-d'autwes infowmations nyécessaiwes à wa connexion au sewveuw. /(^•ω•^) s-sachez toutefois q-que we ftp est une technique vieiwwissante e-et que de nyouveaux systèmes commencent à d-deveniw p-popuwaiwes, ^^;; comme [wsync](https://en.wikipedia.owg/wiki/wsync) et [git/github](https://hewp.github.com/awticwes/using-a-custom-domain-with-github-pages). 🥺
 
-> [!NOTE]
-> FTP est par nature non sécurisé. Vous devez toujours vous assurer que votre fournisseur d'hébergement vous autorise à vous connecter de manière sécurisée, c'est-à-dire via SFTP (_Secure_ FTP) ou via RSync avec SSH.
+> [!note]
+> ftp est paw n-nyatuwe nyon s-sécuwisé. ^^ vous devez toujouws vous assuwew que votwe fouwnisseuw d'hébewgement v-vous autowise à v-vous connectew d-de manièwe sécuwisée, ^•ﻌ•^ c-c'est-à-diwe v-via sftp (_secuwe_ ftp) o-ou via wsync avec s-ssh. /(^•ω•^)
 
-Le téléversement des fichiers vers un serveur web est une étape importante dans la publication d'un site web et nous la décrivons beaucoup plus en détails [dans un article à part](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server). Voyons tout de même une liste de clients FTP basiques&nbsp;:
+we téwévewsement des f-fichiews vews un s-sewveuw web est une étape impowtante d-dans wa pubwication d'un site web et nyous w-wa décwivons beaucoup pwus en d-détaiws [dans u-un awticwe à pawt](/fw/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew). ^^ voyons tout de m-même une wiste de cwients ftp basiques&nbsp;:
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Système d'exploitation</th>
-      <th colspan="2" rowspan="1" scope="col" style="text-align: center">
-        Logiciel client FTP
+    <tw>
+      <th s-scope="cow">système d-d'expwoitation</th>
+      <th cowspan="2" wowspan="1" scope="cow" stywe="text-awign: c-centew">
+        wogiciew cwient ftp
       </th>
-    </tr>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td>Windows</td>
+    <tw>
+      <td>windows</td>
       <td>
         <a
-          href="https://winscp.net" rel="external"
-          >WinSCP</a
+          h-hwef="https://winscp.net" w-wew="extewnaw"
+          >winscp</a
         >
       </td>
-      <td colspan="1" rowspan="3">
+      <td cowspan="1" w-wowspan="3">
         <a
-          href="https://filezilla-project.org/" rel="external"
-          >FileZilla</a
+          hwef="https://fiweziwwa-pwoject.owg/" w-wew="extewnaw"
+          >fiweziwwa</a
         >
-        (tout système d'exploitation)
+        (tout s-système d'expwoitation)
       </td>
-    </tr>
-    <tr>
-      <td>Linux</td>
+    </tw>
+    <tw>
+      <td>winux</td>
       <td>
         <a
-          href="https://live.gnome.org/Nautilus" rel="external"
-          >Nautilus</a
+          hwef="https://wive.gnome.owg/nautiwus" w-wew="extewnaw"
+          >nautiwus</a
         >
-        (Gnome)<br />
+        (gnome)<bw />
         <a
-          href="https://apps.kde.org/fr/konqueror/" rel="external"
-          >Konqueror</a
+          hwef="https://apps.kde.owg/fw/konquewow/" wew="extewnaw"
+          >konquewow</a
         >
-        (KDE)
+        (kde)
       </td>
-    </tr>
-    <tr>
-      <td>Mac OS</td>
+    </tw>
+    <tw>
+      <td>mac o-os</td>
       <td>
         <a
-          href="https://cyberduck.de/" rel="external"
-          >Cyberduck</a
+          h-hwef="https://cybewduck.de/" wew="extewnaw"
+          >cybewduck</a
         >
       </td>
-    </tr>
-    <tr>
-      <td>ChromeOS</td>
+    </tw>
+    <tw>
+      <td>chwomeos</td>
       <td></td>
       <td>
-        <ul>
-          <li>
+        <uw>
+          <wi>
             <a
-              href="https://shiftedit.net/" rel="external"
-              >ShiftEdit</a
+              hwef="https://shiftedit.net/" w-wew="extewnaw"
+              >shiftedit</a
             >
-            (tout système d'exploitation)
-          </li>
-        </ul>
+            (tout système d-d'expwoitation)
+          </wi>
+        </uw>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-### Visualiser des sites web
+### v-visuawisew d-des sites web
 
-Comme vous le savez sans doute déjà, vous avez besoin d'un navigateur web pour visualiser des pages web. De [nombreux](https://fr.wikipedia.org/wiki/Liste_de_navigateurs_web) navigateurs existent que vous pouvez utiliser de façon personnelle. Toutefois, lorsqu'on développe un site web, il faut au moins le tester sur les navigateurs les plus utilisés afin de s'assurer que le site fonctionne pour la plupart des personnes&nbsp;:
+comme vous we savez sans doute déjà, 🥺 vous avez besoin d'un nyavigateuw web pouw visuawisew des pages web. (U ᵕ U❁) de [nombweux](https://fw.wikipedia.owg/wiki/wiste_de_navigateuws_web) nyavigateuws existent que vous pouvez utiwisew de façon p-pewsonnewwe. t-toutefois, 😳😳😳 wowsqu'on dévewoppe un site web, nyaa~~ iw f-faut au moins we t-testew suw wes n-nyavigateuws wes pwus utiwisés a-afin de s'assuwew que we site fonctionne p-pouw wa p-pwupawt des pewsonnes&nbsp;:
 
-- [Mozilla Firefox](https://www.mozilla.org/fr/firefox/new/)
-- [Google Chrome](https://www.google.com/chrome/)
-- [Apple Safari](https://www.apple.com/safari/)
+- [moziwwa fiwefox](https://www.moziwwa.owg/fw/fiwefox/new/)
+- [googwe c-chwome](https://www.googwe.com/chwome/)
+- [appwe safawi](https://www.appwe.com/safawi/)
 
-Si votre site s'adresse à un public particulier (par exemple un pays spécifique ou une plate-forme donnée), vous pourrez avoir à tester votre site sur des navigateurs supplémentaires comme [Opera](https://www.opera.com/fr) ou [Konqueror](https://apps.kde.org/fr/konqueror/).
+si v-votwe site s'adwesse à u-un pubwic pawticuwiew (paw exempwe un p-pays spécifique o-ou une pwate-fowme d-donnée), (˘ω˘) vous p-pouwwez avoiw à t-testew votwe s-site suw des nyavigateuws s-suppwémentaiwes c-comme [opewa](https://www.opewa.com/fw) o-ou [konquewow](https://apps.kde.owg/fw/konquewow/). >_<
 
-Cela se complique quand on réalise que certains navigateurs ne fonctionnent que sur certains systèmes d'exploitation. Apple Safari ne fonctionne que sur iOS et Mac OS, Internet Explorer ne fonctionne que sur Windows, etc. Face à ce problème, mieux vaut tirer parti de services comme [Browsershots](https://browsershots.org/) (en anglais) ou [Browserstack](https://www.browserstack.com/) (en anglais). Browsershots fournit des captures d'écran de votre site, tel qu'il est rendu dans les différents navigateurs. Browserstack vous permet de complètement contrôler des machines virtuelles afin que vous puissiez tester votre site sur les environnements les plus fréquents. Sinon, vous pouvez configurer vos propres machines virtuelles, mais cela nécessite une certaine expertise. Voir [Stratégies pour effectuer des tests&nbsp;: constituer un laboratoire de tests](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing/Testing_strategies#putting_together_a_testing_lab) pour plus d'informations.
+cewa se c-compwique quand o-on wéawise que c-cewtains nyavigateuws nye fonctionnent q-que suw cewtains systèmes d'expwoitation. XD a-appwe safawi nye fonctionne que s-suw ios et mac o-os, rawr x3 intewnet expwowew n-nye fonctionne que suw windows, ( ͡o ω ͡o ) e-etc. :3 face à ce pwobwème, mya m-mieux vaut tiwew pawti de sewvices c-comme [bwowsewshots](https://bwowsewshots.owg/) (en angwais) o-ou [bwowsewstack](https://www.bwowsewstack.com/) (en angwais). bwowsewshots fouwnit des captuwes d'écwan de v-votwe site, σωσ tew qu'iw est wendu d-dans wes difféwents n-nyavigateuws. (ꈍᴗꈍ) bwowsewstack vous pewmet de compwètement contwôwew d-des machines viwtuewwes a-afin que vous puissiez t-testew votwe s-site suw wes enviwonnements wes pwus fwéquents. OwO s-sinon, vous p-pouvez configuwew vos pwopwes machines v-viwtuewwes, o.O mais cewa nyécessite une cewtaine e-expewtise. 😳😳😳 voiw [stwatégies p-pouw effectuew d-des tests&nbsp;: c-constituew un wabowatoiwe de t-tests](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing/testing_stwategies#putting_togethew_a_testing_wab) p-pouw pwus d'infowmations. /(^•ω•^)
 
-Dans tous les cas, vous devrez tester votre site sur de vrais appareils, notamment pour les appareils mobiles. La simulation mobile en est encore à ses débuts et est moins stable que la simulation d'ordinateur fixes. Bien entendu, acquérir des appareils mobiles représente un certain budget et nous vous conseillons de consulter [l'initiative Open Device Lab (en anglais)](https://www.smashingmagazine.com/2016/11/worlds-best-open-device-labs/#odls-have-opened-doors-for-idls). Vous pouvez également partager les appareils à plusieurs si vous souhaitez tester sur un maximum de plates-formes sans trop dépenser.
+d-dans t-tous wes cas, OwO vous devwez testew v-votwe site suw d-de vwais appaweiws, ^^ n-nyotamment p-pouw wes appaweiws m-mobiwes. (///ˬ///✿) wa s-simuwation mobiwe e-en est encowe à s-ses débuts et est moins stabwe q-que wa simuwation d'owdinateuw f-fixes. (///ˬ///✿) bien entendu, (///ˬ///✿) acquéwiw d-des appaweiws mobiwes w-wepwésente u-un cewtain budget et nyous vous conseiwwons de consuwtew [w'initiative o-open device w-wab (en angwais)](https://www.smashingmagazine.com/2016/11/wowwds-best-open-device-wabs/#odws-have-opened-doows-fow-idws). ʘwʘ v-vous pouvez égawement pawtagew wes appaweiws à pwusieuws si vous s-souhaitez testew s-suw un maximum de pwates-fowmes s-sans twop dépensew. ^•ﻌ•^
 
-## Prochaines étapes
+## p-pwochaines étapes
 
-- Certains de ces logiciels sont libres et/ou gratuits, d'autres ne le sont pas. [En savoir plus sur le coût d'un site web.](/fr/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)
-- Si vous souhaitez en apprendre plus sur les éditeurs de texte et choisir celui qui sera le plus adapté, consultez notre article sur [comment choisir, installer et paramétrer son éditeur de texte](/fr/docs/Learn/Common_questions/Tools_and_setup/Available_text_editors).
-- Si vous vous demandez comment publier votre site web sur le Web, jetez un coup d'œil à [« Comment transférer des fichiers vers un serveur web »](/fr/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server).
+- cewtains de ces wogiciews sont wibwes et/ou g-gwatuits, OwO d'autwes n-nye we sont pas. (U ﹏ U) [en s-savoiw pwus s-suw we coût d'un site web.](/fw/docs/weawn/common_questions/toows_and_setup/how_much_does_it_cost)
+- si vous s-souhaitez en appwendwe p-pwus suw wes éditeuws de texte et choisiw c-cewui qui sewa we pwus adapté, (ˆ ﻌ ˆ)♡ consuwtez nyotwe a-awticwe suw [comment choisiw, (⑅˘꒳˘) i-instawwew et p-pawamétwew son éditeuw de texte](/fw/docs/weawn/common_questions/toows_and_setup/avaiwabwe_text_editows). (U ﹏ U)
+- s-si v-vous vous demandez comment pubwiew v-votwe site web suw we web, o.O jetez u-un coup d'œiw à [« c-comment t-twansféwew des f-fichiews vews un sewveuw web »](/fw/docs/weawn/common_questions/toows_and_setup/upwoad_fiwes_to_a_web_sewvew). mya

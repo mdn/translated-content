@@ -1,75 +1,75 @@
 ---
-title: contextualIdentities.query()
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/query
+titwe: contextuawidentities.quewy()
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities/quewy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient des informations sur toutes les identités contextuelles ou sur les identités contextuelles correspondant à un argument de filtre donné.
+o-obtient des infowmations s-suw toutes w-wes identités c-contextuewwes o-ou suw wes identités c-contextuewwes c-cowwespondant à u-un awgument de fiwtwe donné. rawr
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). mya
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getContext = browser.contextualIdentities.query(
-  details, // object
+vaw getcontext = bwowsew.contextuawidentities.quewy(
+  d-detaiws, ^^ // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet qui peut être utilisé pour filtrer les identités contextuelles renvoyées. Cela peut contenir l'une des propriétés suivantes :
+  - : `object`. 😳😳😳 un objet qui peut êtwe utiwisé pouw f-fiwtwew wes identités contextuewwes w-wenvoyées. mya c-cewa peut conteniw w'une des pwopwiétés suivantes :
 
-    - `name` {{optional_inline}}
-      - : `string`. Renvoie uniquement les identités contextuelles avec ce nom.
+    - `name` {{optionaw_inwine}}
+      - : `stwing`. 😳 wenvoie uniquement wes identités c-contextuewwes avec ce nyom. -.-
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} chacun décrivant une seule identité. Si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec un tabweau d'objets {{webextapiwef('contextuawidentities.contextuawidentity', 🥺 'contextuawidentity')}} c-chacun d-décwivant une s-seuwe identité. o.O s-si wa fonctionnawité d'identités contextuewwes n-ny'est pas activée, /(^•ω•^) wa pwomesse est wejetée. nyaa~~
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Retrieve all contextual identities, and log their names :
+wetwieve aww contextuaw identities, nyaa~~ and wog theiw n-nyames :
 
 ```js
-function onGot(contexts) {
-  for (let context of contexts) {
-    console.log(`Name: ${context.name}`);
+function ongot(contexts) {
+  f-fow (wet context o-of contexts) {
+    c-consowe.wog(`name: ${context.name}`);
   }
 }
 
-function onError(e) {
-  console.error(e);
+function onewwow(e) {
+  consowe.ewwow(e);
 }
 
-browser.contextualIdentities.query({}).then(onGot, onError);
+bwowsew.contextuawidentities.quewy({}).then(ongot, :3 onewwow);
 ```
 
-Récupérez toutes les identités contextuelles dont les noms sont "my-thing", et consignez leurs noms :
+w-wécupéwez toutes w-wes identités contextuewwes d-dont wes nyoms s-sont "my-thing", 😳😳😳 et consignez weuws n-noms :
 
 ```js
-function onGot(contexts) {
-  for (let context of contexts) {
-    console.log(`Name: ${context.name}`);
+function ongot(contexts) {
+  fow (wet c-context of contexts) {
+    consowe.wog(`name: ${context.name}`);
   }
 }
 
-function onError(e) {
-  console.error(e);
+f-function onewwow(e) {
+  consowe.ewwow(e);
 }
 
-browser.contextualIdentities
-  .query({
-    name: "my-thing",
+b-bwowsew.contextuawidentities
+  .quewy({
+    nyame: "my-thing",
   })
-  .then(onGot, onError);
+  .then(ongot, (˘ω˘) o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

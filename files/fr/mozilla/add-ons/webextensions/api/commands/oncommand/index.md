@@ -1,69 +1,69 @@
 ---
-title: onCommand
-slug: Mozilla/Add-ons/WebExtensions/API/commands/onCommand
+titwe: oncommand
+swug: moziwwa/add-ons/webextensions/api/commands/oncommand
 ---
 
-{{AddonSidebar}}Lancer quand une commande est exécutée à l'aide de son raccourci clavier associé.L'écouteur reçoit le nom de la commande. Cela correspond au nom donnée à la commande dans une [entrée manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+{{addonsidebaw}}wancew q-quand u-une commande est e-exécutée à w-w'aide de son waccouwci c-cwaview a-associé.w'écouteuw w-weçoit we n-nyom de wa commande. 😳😳😳 cewa cowwespond au nyom donnée à wa commande dans une [entwée m-manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands). 😳😳😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.commands.onCommand.addListener(listener);
-browser.commands.onCommand.removeListener(listener);
-browser.commands.onCommand.hasListener(listener);
+bwowsew.commands.oncommand.addwistenew(wistenew);
+b-bwowsew.commands.oncommand.wemovewistenew(wistenew);
+bwowsew.commands.oncommand.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à un événement.
-- `removeListener(listener)`
-  - : Arrêter d'écouter un événement. L'arguement `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement . Renvoie `true` s'il écoute, `false` sinon.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à u-un événement. o.O
+- `wemovewistenew(wistenew)`
+  - : awwêtew d-d'écoutew un événement. ( ͡o ω ͡o ) w-w'awguement `wistenew` est w'écouteuw à suppwimew. (U ﹏ U)
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` est enwegistwé p-pouw cet événement . (///ˬ///✿) wenvoie `twue` s'iw écoute, >w< `fawse` sinon. rawr
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètre
+### pawamètwe
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsqu'un utilisateur entre dans le raccourci de la commande. La fonction recevra les arguments suivants :
+  - : f-fonction qui sewa appewée w-wowsqu'un utiwisateuw e-entwe d-dans we waccouwci d-de wa commande. mya wa fonction wecevwa wes awguments s-suivants :
 
     - `name`
-      - : `string`. Nom de la commande. Cela correspond au nom donné à la commande dans son [entrée manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+      - : `stwing`. ^^ nom de wa commande. 😳😳😳 cewa cowwespond a-au nyom donné à wa commande dans son [entwée manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands).
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Etant donnée une entrée manifest.json comme ceci :
+etant donnée u-une entwée manifest.json c-comme c-ceci :
 
 ```json
 "commands": {
-  "toggle-feature": {
+  "toggwe-featuwe": {
     "suggested_key": {
-      "default": "Ctrl+Shift+Y"
-    },
-    "description": "Send a 'toggle-feature' event"
+      "defauwt": "ctww+shift+y"
+    }, mya
+    "descwiption": "send a 'toggwe-featuwe' event"
   }
 }
 ```
 
-Vous pouvez écouter cette commande particulière comme ceci :
+vous pouvez écoutew c-cette commande p-pawticuwièwe comme ceci :
 
 ```js
-browser.commands.onCommand.addListener(function (command) {
-  if (command == "toggle-feature") {
-    console.log("toggling the feature!");
+b-bwowsew.commands.oncommand.addwistenew(function (command) {
+  i-if (command == "toggwe-featuwe") {
+    consowe.wog("toggwing t-the featuwe!");
   }
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).
+> cette api est basée s-suw w'api chwomium [`chwome.commands`](https://devewopew.chwome.com/docs/extensions/wefewence/api/commands). 😳

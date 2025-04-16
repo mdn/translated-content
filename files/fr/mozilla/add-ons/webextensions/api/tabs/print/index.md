@@ -1,38 +1,38 @@
 ---
-title: tabs.print()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/print
+titwe: tabs.pwint()
+swug: moziwwa/add-ons/webextensions/api/tabs/pwint
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Appelez cette fonction pour imprimer le contenu de l'onglet actif. Si cette fonction est appelée, l'utilisateur recevra la boîte de dialogue d'impression de la plate-forme sous-jacente et aura la possibilité de modifier les paramètres d'impression, puis d'imprimer l'onglet actuellement actif.
+a-appewez cette fonction p-pouw impwimew w-we contenu d-de w'ongwet actif. OwO s-si cette fonction e-est appewée, w-w'utiwisateuw w-wecevwa wa boîte de diawogue d'impwession de wa pwate-fowme sous-jacente et auwa w-wa possibiwité de modifiew wes pawamètwes d-d'impwession, (U ﹏ U) puis d'impwimew w'ongwet a-actuewwement actif. >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.tabs.print();
+bwowsew.tabs.pwint();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+n-nyone. rawr x3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-None.
+n-nyone. mya
 
-## Exemples
+## e-exempwes
 
-Dans cet exemple, un script d'arrière-plan écoute un clic sur une [action navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2), puis tente d'imprimer l'onglet actuellement actif :
+dans cet exempwe, nyaa~~ un scwipt d'awwièwe-pwan écoute un cwic suw une [action nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions_2), (⑅˘꒳˘) p-puis tente d'impwimew w'ongwet actuewwement actif :
 
 ```js
-browser.browserAction.onClicked.addListener(() => {
-  browser.tabs.print();
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  b-bwowsew.tabs.pwint();
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}

@@ -1,181 +1,181 @@
 ---
-title: tabs.query()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/query
+titwe: tabs.quewy()
+swug: moziwwa/add-ons/webextensions/api/tabs/quewy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient tous les onglets qui ont les propriétés spécifiées, ou tous les onglets si aucune propriété n'est spécifiée.
+o-obtient tous wes o-ongwets qui ont w-wes pwopwiétés s-spécifiées, (✿oωo) o-ou tous wes ongwets s-si aucune pwopwiété n-ny'est s-spécifiée. :3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (///ˬ///✿)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var querying = browser.tabs.query(
-  queryInfo, // object
+v-vaw quewying = bwowsew.tabs.quewy(
+  quewyinfo, nyaa~~ // o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `queryInfo`
+- `quewyinfo`
 
-  - : `object`. La fonction `query()` obtiendra uniquement les onglets dont les propriétés correspondent aux propriétés incluses ici. Pour en savoir plus sur ces propriétés, consultez la documentation {{WebExtAPIRef("tabs.Tab")}}.
+  - : `object`. >w< w-wa fonction `quewy()` obtiendwa uniquement wes ongwets dont wes pwopwiétés c-cowwespondent aux pwopwiétés i-incwuses ici. -.- p-pouw en savoiw pwus suw ces pwopwiétés, (✿oωo) consuwtez wa documentation {{webextapiwef("tabs.tab")}}. (˘ω˘)
 
-    - `active`{{optional_inline}}
-      - : `boolean`. Si les onglets sont actifs dans leurs fenêtres.
-    - `audible`{{optional_inline}}
-      - : `boolean`. Si les onglets sont audibles.
-    - `autoDiscardable`{{optional_inline}}
-      - : `boolean`. Si les onglets peuvent être supprimés automatiquement par le navigateur lorsque les ressources sont faibles.
-    - `cookieStoreId` {{optional_inline}}
-      - : `string`. Utilisez cette option pour renvoyer uniquement les onglets dont l'ID est `cookieStoreId`. Cette option n'est disponible que si l'extension à la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"cookies"`
-    - `currentWindow`{{optional_inline}}
-      - : `boolean`. Si les onglets sont dans la fenêtre actuelle.
-    - `discarded`{{optional_inline}}
-      - : `boolean`. Si les onglets sont supprimés. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.
-    - `hidden`{{optional_inline}}
-      - : `boolean`. Si les onglets sont cachés.
-    - `highlighted`{{optional_inline}}
-      - : `boolean`. Si les onglets sont en surbrillance.
-    - `index`{{optional_inline}}
-      - : `integer`. La position des onglets dans leurs fenêtres.
-    - `muted`{{optional_inline}}
-      - : `boolean`. Si les onglets sont en sourdine.
-    - `lastFocusedWindow`{{optional_inline}}
-      - : `boolean`. Si les onglets sont dans la dernière fenêtre focalisée.
-    - `openerTabId`{{optional_inline}}
-      - : `integer`. L'ID de l'onglet qui a ouvert cet onglet.
-    - `pinned`{{optional_inline}}
-      - : `boolean`. Si les onglets sont épinglés.
-    - `status`{{optional_inline}}
-      - : {{WebExtAPIRef('tabs.TabStatus')}}. Si les onglets ont terminé le chargement.
-    - `title`{{optional_inline}}
-      - : `string`. Faites correspondre les titres de page à un motif.
-    - `url`{{optional_inline}}
-      - : `string` ou `array de string`. Faites correspondre les onglets avec un ou plusieurs [modèle de correspondance](/fr/docs/Mozilla/Add-ons/WebExtensions/Match_patterns). Notez que les identificateurs de fragment ne sont pas appariés.
-    - `windowId`{{optional_inline}}
-      - : `integer`. L'ID de la fenêtre parente, ou {{WebExtAPIRef('windows.WINDOW_ID_CURRENT')}} pour la fenêtre en cours.
-    - `windowType`{{optional_inline}}
-      - : {{WebExtAPIRef('tabs.WindowType')}}. Le type de fenêtre dans lequel les onglets y sont.
+    - `active`{{optionaw_inwine}}
+      - : `boowean`. rawr si wes ongwets sont a-actifs dans weuws fenêtwes. OwO
+    - `audibwe`{{optionaw_inwine}}
+      - : `boowean`. ^•ﻌ•^ si wes ongwets sont audibwes. UwU
+    - `autodiscawdabwe`{{optionaw_inwine}}
+      - : `boowean`. (˘ω˘) si wes ongwets p-peuvent êtwe suppwimés automatiquement p-paw w-we nyavigateuw w-wowsque wes wessouwces s-sont faibwes. (///ˬ///✿)
+    - `cookiestoweid` {{optionaw_inwine}}
+      - : `stwing`. σωσ utiwisez cette option pouw wenvoyew u-uniquement wes ongwets dont w'id est `cookiestoweid`. /(^•ω•^) c-cette option ny'est disponibwe que si w'extension à wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"cookies"`
+    - `cuwwentwindow`{{optionaw_inwine}}
+      - : `boowean`. 😳 si wes ongwets sont d-dans wa fenêtwe actuewwe. 😳
+    - `discawded`{{optionaw_inwine}}
+      - : `boowean`. (⑅˘꒳˘) s-si wes ongwets s-sont suppwimés. 😳😳😳 u-un ongwet suppwimé est cewui dont we contenu a été déchawgé d-de wa mémoiwe, 😳 m-mais est toujouws visibwe d-dans wa bande d-d'ongwets. XD son contenu est wechawgé w-wa pwochaine fois qu'iw est a-activé. mya
+    - `hidden`{{optionaw_inwine}}
+      - : `boowean`. ^•ﻌ•^ si wes ongwets sont cachés. ʘwʘ
+    - `highwighted`{{optionaw_inwine}}
+      - : `boowean`. ( ͡o ω ͡o ) s-si wes ongwets sont en s-suwbwiwwance. mya
+    - `index`{{optionaw_inwine}}
+      - : `integew`. o.O wa position d-des ongwets dans w-weuws fenêtwes. (✿oωo)
+    - `muted`{{optionaw_inwine}}
+      - : `boowean`. :3 si wes ongwets sont en souwdine. 😳
+    - `wastfocusedwindow`{{optionaw_inwine}}
+      - : `boowean`. (U ﹏ U) si wes ongwets sont dans wa dewnièwe f-fenêtwe focawisée. mya
+    - `openewtabid`{{optionaw_inwine}}
+      - : `integew`. (U ᵕ U❁) w-w'id de w'ongwet qui a ouvewt c-cet ongwet. :3
+    - `pinned`{{optionaw_inwine}}
+      - : `boowean`. mya s-si wes ongwets s-sont épingwés. OwO
+    - `status`{{optionaw_inwine}}
+      - : {{webextapiwef('tabs.tabstatus')}}. (ˆ ﻌ ˆ)♡ si wes ongwets ont tewminé we chawgement. ʘwʘ
+    - `titwe`{{optionaw_inwine}}
+      - : `stwing`. o.O f-faites cowwespondwe wes titwes de page à un motif. UwU
+    - `uww`{{optionaw_inwine}}
+      - : `stwing` ou `awway d-de stwing`. rawr x3 faites cowwespondwe w-wes ongwets a-avec un ou pwusieuws [modèwe de c-cowwespondance](/fw/docs/moziwwa/add-ons/webextensions/match_pattewns). 🥺 nyotez q-que wes identificateuws d-de fwagment n-nye sont pas a-appawiés. :3
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. (ꈍᴗꈍ) w'id de wa fenêtwe pawente, 🥺 o-ou {{webextapiwef('windows.window_id_cuwwent')}} p-pouw wa fenêtwe e-en couws. (✿oωo)
+    - `windowtype`{{optionaw_inwine}}
+      - : {{webextapiwef('tabs.windowtype')}}. (U ﹏ U) w-we type de fenêtwe d-dans wequew wes ongwets y sont. :3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un `tableau` d'objets `{{WebExtAPIRef('tabs.Tab')}}`, contenant des informations sur chaque onglet correspondant. Si une erreur se produit, la promesse sera rejetée avec un message d'erreur.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie avec un `tabweau` d'objets `{{webextapiwef('tabs.tab')}}`, ^^;; contenant des infowmations s-suw chaque ongwet cowwespondant. rawr si une ewweuw se pwoduit, 😳😳😳 wa pwomesse s-sewa wejetée a-avec un message d-d'ewweuw. (✿oωo)
 
-## Exemples
+## exempwes
 
-Obtenez tous les onglets :
+obtenez t-tous wes ongwets :
 
 ```js
-function logTabs(tabs) {
-  for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
-    console.log(tab.url);
+function wogtabs(tabs) {
+  f-fow (wet t-tab of tabs) {
+    // tab.uww wequiwes the `tabs` pewmission
+    consowe.wog(tab.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var querying = browser.tabs.query({});
-querying.then(logTabs, onError);
+vaw quewying = b-bwowsew.tabs.quewy({});
+quewying.then(wogtabs, OwO onewwow);
 ```
 
-Obtenez tous les onglets dans la fenêtre actuelle :
+o-obtenez t-tous wes ongwets dans wa fenêtwe actuewwe :
 
 ```js
-function logTabs(tabs) {
-  for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
-    console.log(tab.url);
+f-function w-wogtabs(tabs) {
+  fow (wet tab o-of tabs) {
+    // t-tab.uww wequiwes the `tabs` pewmission
+    consowe.wog(tab.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var querying = browser.tabs.query({ currentWindow: true });
-querying.then(logTabs, onError);
+v-vaw quewying = b-bwowsew.tabs.quewy({ cuwwentwindow: twue });
+q-quewying.then(wogtabs, ʘwʘ o-onewwow);
 ```
 
-Obtenez l'onglet actif dans la fenêtre actuelle :
+obtenez w-w'ongwet actif dans wa fenêtwe actuewwe :
 
 ```js
-function logTabs(tabs) {
-  for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
-    console.log(tab.url);
+function wogtabs(tabs) {
+  f-fow (wet tab of t-tabs) {
+    // tab.uww wequiwes the `tabs` pewmission
+    c-consowe.wog(tab.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var querying = browser.tabs.query({ currentWindow: true, active: true });
-querying.then(logTabs, onError);
+vaw quewying = b-bwowsew.tabs.quewy({ cuwwentwindow: twue, (ˆ ﻌ ˆ)♡ active: twue });
+quewying.then(wogtabs, (U ﹏ U) o-onewwow);
 ```
 
-Obtenez des onglets pour toutes les URL HTTP et HTTPS sous "mozilla.org" ou l'un de ses sous-domaines :
+obtenez des ongwets pouw t-toutes wes uww h-http et https sous "moziwwa.owg" ou w'un de ses sous-domaines :
 
 ```js
-function logTabs(tabs) {
-  for (let tab of tabs) {
-    // tab.url requires the `tabs` permission
-    console.log(tab.url);
+function w-wogtabs(tabs) {
+  f-fow (wet tab of tabs) {
+    // tab.uww wequiwes the `tabs` pewmission
+    c-consowe.wog(tab.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var querying = browser.tabs.query({ url: "*://*.mozilla.org/*" });
-querying.then(logTabs, onError);
+vaw quewying = bwowsew.tabs.quewy({ u-uww: "*://*.moziwwa.owg/*" });
+quewying.then(wogtabs, UwU o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api c-chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). XD c-cette documentation e-est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) d-dans we c-code de chwomium code. ʘwʘ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation et i-incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ^^;; a-aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and u-use in souwce and binawy fowms, (U ﹏ U) w-with ow without
+// modification, (˘ω˘) awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of s-souwce code must wetain the above c-copywight
+// nyotice, (ꈍᴗꈍ) this wist o-of conditions and the fowwowing d-discwaimew. /(^•ω•^)
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, >_< this wist of conditions and the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws p-pwovided w-with the
+// distwibution. σωσ
+//    * nyeithew the n-nyame of googwe inc. ^^;; nyow the nyames of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten p-pewmission. 😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, >_< incwuding, -.- but nyot
+// w-wimited to, UwU t-the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. i-in nyo event shaww the copywight
+// o-ownew ow contwibutows b-be wiabwe fow any diwect, :3 i-indiwect, σωσ incidentaw, >w<
+// speciaw, exempwawy, (ˆ ﻌ ˆ)♡ o-ow consequentiaw damages (incwuding, b-but nyot
+// w-wimited to, ʘwʘ pwocuwement of substitute g-goods ow sewvices; woss of use, :3
+// data, (˘ω˘) o-ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, 😳😳😳 whethew i-in contwact, rawr x3 stwict wiabiwity, (✿oωo) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any w-way out of the use
+// of this softwawe, (ˆ ﻌ ˆ)♡ e-even if a-advised of the possibiwity of such damage. :3
 -->

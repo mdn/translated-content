@@ -1,67 +1,67 @@
 ---
-title: runtime.PlatformOs
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/PlatformOs
+titwe: wuntime.pwatfowmos
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/pwatfowmos
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le système d'exploitation sur lequel le navigateur fonctionne.
+we s-système d'expwoitation s-suw wequew w-we nyavigateuw f-fonctionne. nyaa~~
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont:
+wes vaweuws d-de ce type s-sont des chaînes. :3 wes vaweuws possibwes sont:
 
 - `"mac"`
-  - : Le système d'exploitation est sous Mac OS X.
+  - : we système d'expwoitation est s-sous mac os x. ( ͡o ω ͡o )
 - `"win"`
-  - : Le système d'exploitation est sous Windows.
-- `"android"`
-  - : Le système d'exploitation est sous Android.
-- `"cros"`
-  - : Le système d'exploitation est sous ChromeOS.
-- `"linux"`
-  - : Le système d'exploitation est sous Linux.
+  - : we système d'expwoitation est sous w-windows.
+- `"andwoid"`
+  - : we système d'expwoitation e-est sous andwoid. mya
+- `"cwos"`
+  - : we système d'expwoitation e-est sous chwomeos. (///ˬ///✿)
+- `"winux"`
+  - : w-we s-système d'expwoitation est sous winux. (˘ω˘)
 - `"openbsd"`
-  - : Le système d'exploitation est sous Open/FreeBSD.
+  - : we système d'expwoitation e-est sous open/fweebsd. ^^;;
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est b-basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). (✿oωo) c-cette documentation e-est déwivée d-de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code de chwomium code. (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité wewatives à micwosoft edge s-sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. ^•ﻌ•^ aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy f-fowms, (˘ω˘) with ow without
+// m-modification, nyaa~~ awe p-pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain t-the above copywight
+// nyotice, UwU t-this wist of conditions and t-the fowwowing discwaimew. :3
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (⑅˘꒳˘) this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. (///ˬ///✿)
+//    * nyeithew the nyame of googwe inc. ^^;; nyow the nyames o-of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without specific p-pwiow wwitten p-pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by t-the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess ow impwied wawwanties, rawr x3 incwuding, /(^•ω•^) b-but nyot
+// w-wimited to, :3 the i-impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. (ꈍᴗꈍ) in n-nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, /(^•ω•^) indiwect, incidentaw, (⑅˘꒳˘)
+// s-speciaw, ( ͡o ω ͡o ) exempwawy, òωó ow consequentiaw damages (incwuding, (⑅˘꒳˘) b-but nyot
+// w-wimited to, XD pwocuwement o-of substitute goods ow sewvices; w-woss of use,
+// data, -.- ow p-pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, :3 whethew in contwact, nyaa~~ stwict w-wiabiwity, 😳 ow towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way o-out of the use
+// of this softwawe, (⑅˘꒳˘) even if advised o-of the possibiwity o-of such damage. nyaa~~
 -->

@@ -1,99 +1,99 @@
 ---
-title: downloads.open()
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/open
+titwe: downwoads.open()
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/open
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La fonction **`open()`** de l'API {{WebExtAPIRef("downloads")}} ouvre le fichier téléchargé avec son application associée. Un événement {{WebExtAPIRef("downloads.onChanged")}} se déclenche lorsque l'élément est ouvert pour la première fois.
+w-wa fonction **`open()`** d-de w'api {{webextapiwef("downwoads")}} o-ouvwe we f-fichiew téwéchawgé a-avec son a-appwication associée. :3 u-un événement {{webextapiwef("downwoads.onchanged")}} se décwenche wowsque w'éwément est ouvewt pouw wa pwemièwe fois. ( ͡o ω ͡o )
 
-Pour utiliser cette fonction dans votre extension, vous devez demander la [permission manifest](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "downloads.open", ainsi que la permission "downloads". En outre, vous pouvez uniquement appeler cette fonction à l'intérieur du gestionnaire pour une [action utilisateur](/fr/docs/Mozilla/Add-ons/WebExtensions/User_actions).
+p-pouw utiwisew cette fonction dans votwe extension, σωσ v-vous devez demandew wa [pewmission m-manifest](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "downwoads.open", >w< ainsi que wa pewmission "downwoads". 😳😳😳 en o-outwe, vous pouvez uniquement appewew c-cette fonction à w-w'intéwieuw du gestionnaiwe pouw une [action utiwisateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_actions). OwO
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳
 
-## Syntaxe
+## syntaxe
 
 ```js
-var opening = browser.downloads.open(
-  downloadId, // integer
+vaw opening = b-bwowsew.downwoads.open(
+  downwoadid, 😳😳😳 // i-integew
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `downloadId`
-  - : Un `integer` représentant l'`id` du {{WebExtAPIRef("downloads.DownloadItem")}} que vous voulez ouvrir.
+- `downwoadid`
+  - : u-un `integew` wepwésentant w-w'`id` du {{webextapiwef("downwoads.downwoaditem")}} que vous vouwez o-ouvwiw. (˘ω˘)
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si la demande a été acceptée, la promesse sera remplie sans arguments. Si la demande a échoué, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ s-si wa demande a été acceptée, ( ͡o ω ͡o ) wa pwomesse sewa wempwie sans awguments. o.O si wa demande a-a échoué, >w< wa pwomesse sewa w-wejetée avec un m-message d'ewweuw. 😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple ouvre l'élément le plus récemment téléchargé :
+cet exempwe ouvwe w-w'éwément we p-pwus wécemment téwéchawgé :
 
 ```js
-function onOpened() {
-  console.log(`Opened download item`);
+f-function o-onopened() {
+  consowe.wog(`opened d-downwoad item`);
 }
 
-function onError(error) {
-  console.log(`Error opening item: ${error}`);
+function o-onewwow(ewwow) {
+  consowe.wog(`ewwow opening i-item: ${ewwow}`);
 }
 
-function openDownload(downloadItems) {
-  if (downloadItems.length > 0) {
-    var opening = browser.downloads.open(downloadItems[0].id);
-    opening.then(onOpened, onError);
+function opendownwoad(downwoaditems) {
+  i-if (downwoaditems.wength > 0) {
+    vaw opening = b-bwowsew.downwoads.open(downwoaditems[0].id);
+    o-opening.then(onopened, onewwow);
   }
 }
 
-var searching = browser.downloads.search({
-  limit: 1,
-  orderBy: ["-startTime"],
+vaw seawching = bwowsew.downwoads.seawch({
+  wimit: 1, 🥺
+  owdewby: ["-stawttime"], rawr x3
 });
 
-searching.then(openDownload, onError);
+seawching.then(opendownwoad, o.O o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> c-cette api est basée s-suw w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads).
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à micwosoft edge sont fouwnies paw m-micwosoft cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. rawr
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. ʘwʘ aww w-wights wesewved. 😳😳😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use i-in souwce and binawy f-fowms, ^^;; with o-ow without
+// modification, o.O awe pewmitted pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, (///ˬ///✿) t-this wist of conditions and the fowwowing discwaimew. σωσ
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, nyaa~~ this wist of conditions and the f-fowwowing discwaimew
+// i-in the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution. ^^;;
+//    * nyeithew t-the nyame o-of googwe inc. ^•ﻌ•^ nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, σωσ i-incwuding, -.- but nyot
+// wimited to, ^^;; the impwied wawwanties of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. XD in n-nyo event shaww t-the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, 🥺 indiwect, òωó incidentaw, (ˆ ﻌ ˆ)♡
+// speciaw, exempwawy, -.- ow c-consequentiaw damages (incwuding, :3 b-but nyot
+// wimited to, ʘwʘ pwocuwement of substitute g-goods ow sewvices; w-woss of use, 🥺
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, >_< whethew in contwact, ʘwʘ stwict w-wiabiwity, (˘ω˘) ow towt
+// (incwuding nyegwigence ow o-othewwise) awising i-in any way out of the use
+// of this softwawe, (✿oωo) even if advised o-of the possibiwity o-of such damage. (///ˬ///✿)
 -->

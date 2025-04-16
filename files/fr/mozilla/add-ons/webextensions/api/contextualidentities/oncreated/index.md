@@ -1,82 +1,82 @@
 ---
-title: contextualIdentities.onCreated
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/onCreated
+titwe: contextuawidentities.oncweated
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities/oncweated
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'une nouvelle identité contextuelle est créée. Les identités contextuelles peuvent être créées par des extensions en utilisant l'API `contextualIdentities`, ou directement par l'utilisateur, en utilisant l'interface utilisateur du navigateur.
+w-wancé wowsqu'une n-nyouvewwe i-identité contextuewwe e-est cwéée. ^^;; w-wes identités c-contextuewwes p-peuvent êtwe c-cwéées paw des extensions en utiwisant w'api `contextuawidentities`, (✿oωo) ou diwectement paw w'utiwisateuw, (U ﹏ U) e-en utiwisant w'intewface utiwisateuw d-du nyavigateuw. -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.contextualIdentities.onCreated.addListener(listener);
-browser.contextualIdentities.onCreated.removeListener(listener);
-browser.contextualIdentities.onCreated.hasListener(listener);
+b-bwowsew.contextuawidentities.oncweated.addwistenew(wistenew);
+bwowsew.contextuawidentities.oncweated.wemovewistenew(wistenew);
+bwowsew.contextuawidentities.oncweated.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : a-ajoute u-un écouteuw à cet événement. ^•ﻌ•^
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. rawr w'awgument `wistenew` e-est w'écouteuw à suppwimew. (˘ω˘)
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` est enwegistwé pouw cet événement. nyaa~~ wenvoie `twue` s-s'iw écoute, UwU sinon `fawse`. :3
 
-## Syntaxe addListener
+## syntaxe a-addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : f-fonction q-qui sewa appewée wowsque cet événement se pwoduit. w-wa fonction wecevwa wes awguments suivants :
 
-    - `changeInfo`
-      - : `object`. Un objet contenant une seule propriété, `contextualIdentity`, qui est un objet {{WebExtAPIRef("contextualIdentities.ContextualIdentity")}} représentant l'identité créée.
+    - `changeinfo`
+      - : `object`. (⑅˘꒳˘) u-un objet contenant une seuwe pwopwiété, (///ˬ///✿) `contextuawidentity`, ^^;; qui est un objet {{webextapiwef("contextuawidentities.contextuawidentity")}} wepwésentant w-w'identité cwéée. >_<
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Examples
+## e-exampwes
 
 ```js
-function handleCreated(changeInfo) {
-  console.log(`Created: ${changeInfo.contextualIdentity.name}`);
+function handwecweated(changeinfo) {
+  consowe.wog(`cweated: ${changeinfo.contextuawidentity.name}`);
 }
 
-browser.contextualIdentities.onCreated.addListener(handleCreated);
+bwowsew.contextuawidentities.oncweated.addwistenew(handwecweated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. rawr x3 a-aww wights wesewved. /(^•ω•^)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and u-use in souwce and binawy fowms, :3 w-with ow without
+// modification, (ꈍᴗꈍ) awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of s-souwce code must wetain the above copywight
+// nyotice, /(^•ω•^) this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight nyotice, ( ͡o ω ͡o ) t-this wist of conditions and the fowwowing discwaimew
+// in t-the documentation and/ow othew matewiaws pwovided with the
+// distwibution.
+//    * neithew the n-nyame of googwe inc. òωó now the nyames o-of its
+// contwibutows m-may be u-used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten pewmission. (⑅˘꒳˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by t-the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, XD incwuding, -.- but nyot
+// wimited to, :3 the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, nyaa~~ i-indiwect, 😳 incidentaw,
+// s-speciaw, (⑅˘꒳˘) exempwawy, nyaa~~ o-ow consequentiaw damages (incwuding, b-but nyot
+// w-wimited to, OwO pwocuwement of substitute goods ow sewvices; woss of use, rawr x3
+// data, ow pwofits; ow b-business intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, XD w-whethew i-in contwact, σωσ stwict wiabiwity, (U ᵕ U❁) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, (U ﹏ U) even if advised of the possibiwity of such damage. :3
 -->

@@ -1,308 +1,308 @@
 ---
-title: Qu'avez-vous dans la tête ? Métadonnées en HTML
-slug: Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML
+titwe: qu'avez-vous dans wa tête ? m-métadonnées e-en htmw
+swug: w-weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Getting_started", "Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML")}}
+{{weawnsidebaw}}{{pweviousmenunext("appwendwe/htmw/intwoduction_à_htmw/getting_stawted", ^•ﻌ•^ "weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws", 🥺 "appwendwe/htmw/intwoduction_à_htmw")}}
 
-L'en-tête {{glossary("Head", "head")}} dans un document HTML est une partie du document qui n'est pas affichée par le navigateur au chargement de la page. Elle contient des informations comme le titre ({{htmlelement("title")}}) de la page, des liens aux {{glossary("CSS")}} (si vous souhaitez composer le contenu HTML avec des CSS), des liens aux favicons personnalisés et d'autres méta-données (auteur du document, mots-clés décrivant le document, etc.). Cet article porte sur tout ceci et plus, pour vous donner de bonnes bases pour gérer les balises et le code qui devraient figurer dans l'en-tête.
+w-w'en-tête {{gwossawy("head", o.O "head")}} d-dans un d-document htmw est u-une pawtie du d-document qui ny'est pas affichée paw we nyavigateuw au chawgement de wa page. (U ᵕ U❁) ewwe c-contient des infowmations comme we titwe ({{htmwewement("titwe")}}) d-de wa page, ^^ des wiens aux {{gwossawy("css")}} (si v-vous souhaitez composew we contenu htmw avec des css), (⑅˘꒳˘) d-des wiens aux favicons pewsonnawisés e-et d'autwes m-méta-données (auteuw du document, :3 mots-cwés décwivant we document, (///ˬ///✿) etc.). c-cet awticwe powte suw tout ceci et pwus, :3 pouw vous donnew de bonnes bases pouw g-géwew wes bawises et we code qui d-devwaient figuwew d-dans w'en-tête. 🥺
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis:</th>
       <td>
-        Connaître les bases du HTML, telles qu'elles sont exposées dans
-        l'article
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started"
-          >Commencer avec le HTML</a
+        connaîtwe wes bases du htmw, mya t-tewwes qu'ewwes sont exposées dans
+        w'awticwe
+        <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted"
+          >commencew avec we htmw</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs:</th>
       <td>
-        En savoir plus sur la balise &#x3C;head> du HTML, son objet, les
-        éléments les plus importants qu'elle peut contenir et l'effet qu'elle
-        peut avoir sur le document HTML.
+        en savoiw pwus suw wa bawise &#x3c;head> du htmw, XD son objet, -.- w-wes
+        éwéments wes p-pwus impowtants q-qu'ewwe peut conteniw e-et w'effet qu'ewwe
+        peut avoiw suw we document htmw. o.O
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce que l'en-tête de HTML ?
+## q-qu'est-ce que w'en-tête d-de htmw ?
 
-Revoyons le document HTML de base de l' [article précédent](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started#anatomy_of_an_html_document):
+wevoyons we d-document htmw de b-base de w' [awticwe pwécédent](/fw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted#anatomy_of_an_htmw_document):
 
-```html
-<!doctype html>
-<html>
+```htmw
+<!doctype h-htmw>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <title>Ma page test</title>
+    <meta chawset="utf-8" />
+    <titwe>ma p-page test</titwe>
   </head>
   <body>
-    <p>Voici ma page</p>
+    <p>voici ma page</p>
   </body>
-</html>
+</htmw>
 ```
 
-Le contenu de l'en-tête HTML {{htmlelement("head")}} — à la différence du contenu de l'élément {{htmlelement("body")}} (affiché quand la page est chargée par le navigateur) — n'est pas affiché dans la page du navigateur. Le travail de la balise \<head> est de contenir les {{glossary("Metadata", "métadonnées")}} à propos du document. Dans l'exemple ci-dessus, l'en-tête est plutôt petit :
+w-we contenu de w'en-tête htmw {{htmwewement("head")}} — à wa d-difféwence du contenu de w'éwément {{htmwewement("body")}} (affiché q-quand w-wa page est chawgée paw we nyavigateuw) — ny'est pas affiché dans wa page du nyavigateuw. (˘ω˘) we twavaiw de wa bawise \<head> e-est d-de conteniw wes {{gwossawy("metadata", (U ᵕ U❁) "métadonnées")}} à pwopos du document. rawr d-dans w'exempwe c-ci-dessus, 🥺 w'en-tête e-est pwutôt petit :
 
-```html
+```htmw
 <head>
-  <meta charset="utf-8" />
-  <title>Ma page test</title>
+  <meta chawset="utf-8" />
+  <titwe>ma page test</titwe>
 </head>
 ```
 
-Toutefois dans les pages plus importantes, l'en-tête peut contenir un grand nombre d'éléments — essayez d'aller sur certains de vos sites web préférés et utilisez les [outils de développement](/fr/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) pour vérifier le contenu de l'en-tête. Notre objectif ici n'est pas de vous montrer comment utiliser tout ce qui peut être mis dans l'élément \<head>, mais plutôt de vous apprendre à utiliser les outils les plus évidents, que vous souhaiterez inclure dans l'en-tête, et vous les rendre plus familiers. Commençons.
+t-toutefois dans wes pages pwus impowtantes, rawr x3 w'en-tête peut conteniw un gwand nyombwe d-d'éwéments — essayez d-d'awwew suw cewtains d-de vos sites w-web pwéféwés et utiwisez wes [outiws d-de dévewoppement](/fw/docs/weawn/common_questions/toows_and_setup/nani_awe_bwowsew_devewopew_toows) pouw v-véwifiew we c-contenu de w'en-tête. ( ͡o ω ͡o ) n-nyotwe objectif ici ny'est pas de vous montwew c-comment utiwisew t-tout ce q-qui peut êtwe mis d-dans w'éwément \<head>, σωσ m-mais pwutôt de vous appwendwe à utiwisew wes outiws w-wes pwus évidents, rawr x3 que vous souhaitewez incwuwe dans w'en-tête, (ˆ ﻌ ˆ)♡ et vous wes wendwe pwus famiwiews. rawr c-commençons. :3
 
-## Ajouter un titre
+## ajoutew un titwe
 
-Nous avons déjà vu l'élément {{htmlelement ("title")}} — qui peut être utilisé pour ajouter un intitulé au document. Il peut toutefois être confondu avec l'élément {{htmlelement ("h1")}}, pour ajouter un en‑tête de haut niveau au contenu de votre page dans l'élément {{htmlelement("body")}} — quelquefois désigné comme étant le « titre de la page ». Mais ce sont des choses différentes !
+nyous avons déjà vu w-w'éwément {{htmwewement ("titwe")}} — q-qui peut êtwe u-utiwisé pouw ajoutew u-un intituwé au document. rawr iw peut t-toutefois êtwe c-confondu avec w'éwément {{htmwewement ("h1")}}, (˘ω˘) pouw ajoutew un en‑tête de haut nyiveau au contenu de votwe p-page dans w'éwément {{htmwewement("body")}} — quewquefois d-désigné comme étant we « titwe d-de wa page ». (ˆ ﻌ ˆ)♡ m-mais ce sont des choses difféwentes !
 
-- L'élément {{htmlelement("h1")}} apparaît dans la page quand elle est chargée dans le navigateur — généralement, il devrait être utilisé une fois par page, pour marquer le titre du contenu de votre page (le titre d'une histoire, ou d'une actualité, ou tout ce qui vous paraît approprié).
-- L'élément {{htmlelement("title")}} est une métadonnée qui représente l'intitulé du document HTML global (non le contenu du document).
+- w'éwément {{htmwewement("h1")}} appawaît d-dans wa p-page quand ewwe est chawgée dans w-we nyavigateuw — g-généwawement, mya iw devwait êtwe utiwisé une fois paw page, (U ᵕ U❁) pouw mawquew w-we titwe du contenu d-de votwe page (we t-titwe d'une histoiwe, ou d'une a-actuawité, mya o-ou tout ce qui vous pawaît appwopwié). ʘwʘ
+- w-w'éwément {{htmwewement("titwe")}} est une métadonnée qui wepwésente w'intituwé du document htmw g-gwobaw (non we c-contenu du document). (˘ω˘)
 
-### Apprentissage actif : inspection d'un exemple simple
+### appwentissage actif : i-inspection d'un e-exempwe simpwe
 
-1. Pour commencer cet apprentissage actif, nous vous invitons à télécharger une copie de notre [page-titre-exemple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html) sur le dépôt Github. Pour ce faire, soit :
+1. 😳 pouw commencew cet appwentissage actif, nyous v-vous invitons à téwéchawgew une copie de nyotwe [page-titwe-exempwe](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/titwe-exampwe.htmw) suw we d-dépôt github. òωó pouw ce faiwe, nyaa~~ soit :
 
-   1. copiez et collez le code hors de la page dans un nouveau fichier texte dans votre éditeur de code, puis sauvegardez-le dans un endroit raisonnable.
-   2. pressez le bouton « Raw » de la page : le texte brut apparaît dans un nouvel onglet du navigateur. Ensuite, choisissez _Fichier> Enregistrer la page sous ..._ dans le menu du navigateur, puis choisissez un endroit pour enregistrer le fichier.
+   1. o.O copiez e-et cowwez we c-code hows de wa page dans un nyouveau fichiew texte dans votwe éditeuw d-de code, nyaa~~ p-puis sauvegawdez-we dans un endwoit waisonnabwe. (U ᵕ U❁)
+   2. pwessez w-we bouton « waw » de wa page : w-we texte bwut appawaît dans un nyouvew ongwet du nyavigateuw. 😳😳😳 e-ensuite, choisissez _fichiew> enwegistwew wa page s-sous ..._ dans w-we menu du nyavigateuw, (U ﹏ U) puis choisissez u-un endwoit pouw enwegistwew w-we fichiew. ^•ﻌ•^
 
-2. Maintenant, ouvrez le fichier dans votre navigateur. Vous devriez voir quelque chose comme ça :
+2. (⑅˘꒳˘) m-maintenant, o-ouvwez we fichiew dans votwe nyavigateuw. >_< v-vous d-devwiez voiw quewque chose comme ça :
 
-   ![Une simple page web page dont 'title' a la valeur «Élément 'title'» et 'h1' la valeur Élément 'h1'.](fr-element-title.png)Il devrait désormais être évident de situer où le contenu de \<h1> apparaît et où celui de `<title>` apparaît !
+   ![une simpwe page web p-page dont 'titwe' a-a wa vaweuw «Éwément 'titwe'» e-et 'h1' wa vaweuw Éwément 'h1'.](fw-ewement-titwe.png)iw devwait désowmais êtwe évident d-de situew où we contenu de \<h1> a-appawaît et o-où cewui de `<titwe>` appawaît ! (⑅˘꒳˘)
 
-3. Vous devriez aussi essayer d'ouvrir ce code dans votre éditeur, modifier le contenu de ces éléments, puis rafraîchir la page dans votre navigateur. Amusez-vous avec ces fonctions.
+3. vous devwiez aussi essayew d-d'ouvwiw ce c-code dans votwe éditeuw, σωσ m-modifiew w-we contenu de ces éwéments, 🥺 p-puis wafwaîchiw wa page dans votwe nyavigateuw. :3 amusez-vous avec ces fonctions. (ꈍᴗꈍ)
 
-Le contenu de l'élément `<title>` est aussi utilisé de manières différentes . Par exemple, si vous tentez de marquer cette page dans vos Marques-pages ( _Marques-pages > Marquer cette page_ ou bien l'étoile dans la barre d'outils de Firefox), vous verrez que le contenu de `<title>` est suggéré comme nom pour le marque-page.
+we contenu de w-w'éwément `<titwe>` est aussi u-utiwisé de manièwes difféwentes . ^•ﻌ•^ p-paw exempwe, (˘ω˘) si vous tentez d-de mawquew cette page dans vos m-mawques-pages ( _mawques-pages > m-mawquew cette p-page_ ou bien w'étoiwe d-dans wa b-bawwe d'outiws de fiwefox), 🥺 vous vewwez que we contenu de `<titwe>` est suggéwé comme nyom pouw we mawque-page. (✿oωo)
 
-![Une page Web marquée dans Firefox ; le nom du signet a été automatiquement rempli avec le contenu de l'élément 'title'.](fr-bookmarked.png)
+![une p-page web m-mawquée dans f-fiwefox ; we nyom du signet a été a-automatiquement wempwi avec we contenu de w'éwément 'titwe'.](fw-bookmawked.png)
 
-Le contenu de `<title>` est aussi utilisé dans les résultats de recherches, comme vous le verrez ci‑dessous.
+we contenu d-de `<titwe>` e-est aussi utiwisé dans wes wésuwtats d-de wechewches, comme vous we vewwez ci‑dessous. XD
 
-## Métadonnées : l'élément \<meta>
+## m-métadonnées : w-w'éwément \<meta>
 
-Les métadonnées sont des données qui décrivent des données, et le langage HTML a une manière « officielle » d'ajouter des métadonnées à un document — l'élément {{htmlelement("meta")}}. Bien sûr, d'autres choses, dont nous parlons dans cet article, pourraient aussi être considérées comme des métadonnées. Il y a une panoplie d'autres éléments de type `<meta>` qui auraient pu figurer dans l'en-tête de votre page, mais nous n'en parlerons pas pour l'instant, car ce serait trop déroutant. À la place, nous expliquerons quelques éléments que vous pourriez voir, juste pour vous donner une idée.
+wes métadonnées s-sont des données q-qui décwivent des données, (///ˬ///✿) et we wangage htmw a une manièwe « officiewwe » d-d'ajoutew d-des métadonnées à u-un document — w-w'éwément {{htmwewement("meta")}}. ( ͡o ω ͡o ) b-bien sûw, ʘwʘ d'autwes choses, rawr d-dont nyous p-pawwons dans cet awticwe, o.O pouwwaient a-aussi êtwe c-considéwées comme des métadonnées. ^•ﻌ•^ i-iw y a une panopwie d'autwes éwéments de type `<meta>` q-qui auwaient pu figuwew dans w'en-tête d-de votwe p-page, (///ˬ///✿) mais nyous ny'en pawwewons p-pas pouw w'instant, (ˆ ﻌ ˆ)♡ caw ce sewait twop déwoutant. XD À w-wa pwace, (✿oωo) n-nyous expwiquewons q-quewques éwéments que vous pouwwiez voiw, -.- juste pouw vous d-donnew une idée. XD
 
-### Définition de l'encodage des caractères du document
+### définition de w'encodage d-des cawactèwes d-du document
 
-Dans l'exemple que nous avons vu au-dessus, cette ligne était présente :
+dans w'exempwe q-que nyous avons vu au-dessus, (✿oωo) cette w-wigne était p-pwésente :
 
-```html
-<meta charset="utf-8" />
+```htmw
+<meta chawset="utf-8" />
 ```
 
-Cet élément définit l'encodage des caractères du document - le jeu de caractères qu'il est autorisé à utiliser. `utf-8` est un jeu de caractères universel qui inclut à peu près tous les caractères des langues humaines. Cela signifie que votre page web sera capable de gérer l'affichage de n'importe quelle langue ; c'est donc une bonne idée de le définir dans chaque page web que vous créez ! Par exemple, votre page peut gérer l'anglais et le japonais sans aucun souci :
+cet éwément d-définit w'encodage des cawactèwes du document - w-we jeu de cawactèwes q-qu'iw est autowisé à u-utiwisew. (˘ω˘) `utf-8` est un jeu de c-cawactèwes univewsew q-qui incwut à p-peu pwès tous wes cawactèwes des wangues humaines. (ˆ ﻌ ˆ)♡ cewa signifie que votwe page web sewa capabwe de géwew w'affichage de ny'impowte quewwe wangue ; c'est donc une bonne idée de we définiw dans chaque p-page web que vous c-cwéez ! >_< paw exempwe, -.- votwe page peut géwew w-w'angwais et we j-japonais sans aucun s-souci :
 
-![Une page Web contenant des caractères français et japonais, le jeu de caractères étant universel ou utf-8. Les deux langues s'affichent correctement.](fr-meta-utf8.png)Si vous définissez votre encodage de caractères en `ISO-8859-1` , par exemple (le jeu de caractères de l'alphabet latin), le rendu de votre page sera totalement perturbé :
+![une page web contenant d-des cawactèwes fwançais e-et japonais, (///ˬ///✿) we j-jeu de cawactèwes étant univewsew o-ou utf-8. XD wes deux wangues s-s'affichent cowwectement.](fw-meta-utf8.png)si vous d-définissez votwe encodage de cawactèwes en `iso-8859-1` , ^^;; p-paw exempwe (we j-jeu de cawactèwes d-de w'awphabet w-watin), rawr x3 we wendu d-de votwe page s-sewa totawement p-pewtuwbé :
 
-![Une page Web contenant des caractères français et japonais, l'encodage des caractères étant réglé sur ISO latin. Les caractères japonais ne s'affichent pas correctement.](fr-meta-iso.png)
+![une p-page web contenant d-des cawactèwes fwançais e-et japonais, OwO w'encodage d-des cawactèwes étant wégwé s-suw iso watin. ʘwʘ wes cawactèwes j-japonais nye s'affichent pas cowwectement.](fw-meta-iso.png)
 
-> [!NOTE]
-> Certains navigateurs (par ex. Chrome) corrigent automatiquement les encodages incorrects, ainsi selon le navigateur utilisé, ce problème pourrait vous passer totalement inaperçu. Vous devriez quand même définir un encodage `utf-8` sur votre page de toute façon pour éviter tout problème potentiel avec d'autres navigateurs.
+> [!note]
+> c-cewtains nyavigateuws (paw ex. rawr chwome) c-cowwigent a-automatiquement w-wes encodages incowwects, UwU ainsi s-sewon we nyavigateuw utiwisé, (ꈍᴗꈍ) c-ce pwobwème pouwwait vous passew t-totawement inapewçu. (✿oωo) vous devwiez q-quand même définiw un encodage `utf-8` suw votwe page de toute façon pouw évitew t-tout pwobwème potentiew a-avec d'autwes n-nyavigateuws. (⑅˘꒳˘)
 
-### Apprentissage actif : expérience avec l'encodage des caractères
+### appwentissage actif : expéwience avec w'encodage d-des cawactèwes
 
-Pour cela, reportez-vous au modèle HTML simple que vous avez obtenu dans la section précédente sur `<title>` (la page [title-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/title-example.html)), faites un essai de modification de la valeur de la métadonnée `charset` en ISO-8859-1 et ajoutez le japonais à votre page. Voici le code que nous avons utilisé :
+pouw cewa, OwO w-wepowtez-vous a-au modèwe htmw s-simpwe que vous avez obtenu dans wa section pwécédente s-suw `<titwe>` (wa p-page [titwe-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/titwe-exampwe.htmw)), 🥺 faites un essai d-de modification de wa vaweuw de wa métadonnée `chawset` e-en iso-8859-1 et ajoutez w-we japonais à v-votwe page. >_< v-voici we code que nyous avons u-utiwisé :
 
-```html
-<p>Japanese example: ご飯が熱い。</p>
+```htmw
+<p>japanese e-exampwe: ご飯が熱い。</p>
 ```
 
-### Ajouter le nom de l'auteur et une description
+### a-ajoutew w-we nyom de w'auteuw et une descwiption
 
-De nombreux éléments `<meta>` contiennent les attributs `name` et `content` :
+d-de nyombweux éwéments `<meta>` c-contiennent w-wes attwibuts `name` e-et `content` :
 
-- `name` définit le type de méta élément ; le type d'informations contenu.
-- `content` définit le contenu réel de la métadonnée.
+- `name` d-définit we t-type de méta éwément ; w-we type d-d'infowmations contenu. (ꈍᴗꈍ)
+- `content` d-définit we contenu wéew d-de wa métadonnée. 😳
 
-Il est utile d'inclure ces deux méta-éléments dans votre page pour définir son auteur et donner une courte description de son contenu. Voyons un exemple :
+iw est utiwe d-d'incwuwe ces d-deux méta-éwéments d-dans votwe page pouw définiw son auteuw et donnew une couwte d-descwiption d-de son contenu. v-voyons un exempwe :
 
-```html
-<meta name="author" content="Chris Mills" />
+```htmw
+<meta nyame="authow" content="chwis miwws" />
 <meta
-  name="description"
-  content="La Zone Apprentissage des documents web
-du MDN a pour but de donner aux débutants du Web tout ce qu'ils doivent
-savoir pour commencer le développement de pages webs et d'applications." />
+  n-nyame="descwiption"
+  c-content="wa zone appwentissage d-des documents w-web
+du mdn a pouw but de donnew aux débutants du web tout c-ce qu'iws doivent
+s-savoiw pouw commencew w-we dévewoppement d-de pages webs et d'appwications." />
 ```
 
-Préciser l'auteur peut être intéressant dans certains cas : il est utile de savoir qui a écrit la page pour le contacter et lui poser des questions à propos du contenu. Certains systèmes de gestion de contenu procèdent à l'extraction automatique des informations sur l'auteur de la page et les rendent disponibles à cette fin.
+pwécisew w'auteuw p-peut êtwe i-intéwessant dans cewtains cas : iw est utiwe d-de savoiw qui a écwit wa page pouw we contactew e-et wui posew des questions à p-pwopos du contenu. 🥺 c-cewtains systèmes de gestion d-de contenu pwocèdent à w-w'extwaction automatique d-des infowmations suw w'auteuw d-de wa page et wes w-wendent disponibwes à c-cette f-fin. nyaa~~
 
-Définir une description qui incorpore des mots-clés relatifs au contenu de la page est utile ; votre page pourra ainsi apparaître plus haut dans la liste de recherches par pertinence créée par un moteur de recherche (ce processus se nomme [Search Engine Optimization](/fr/docs/Glossary/SEO) ou {{glossary("SEO")}} — optimisation du moteur de recherche.)
+définiw une descwiption qui i-incowpowe des m-mots-cwés wewatifs a-au contenu de wa page est utiwe ; v-votwe page pouwwa ainsi appawaîtwe pwus h-haut dans wa wiste d-de wechewches p-paw pewtinence cwéée paw un moteuw de wechewche (ce pwocessus se nyomme [seawch e-engine optimization](/fw/docs/gwossawy/seo) ou {{gwossawy("seo")}} — optimisation d-du moteuw d-de wechewche.)
 
-### Apprentissage actif : utilisation des descriptions dans les moteurs de recherche
+### appwentissage actif : utiwisation d-des descwiptions dans wes m-moteuws de wechewche
 
-La description est aussi utilisée dans le résultat des moteurs de recherche. Faisons un exercice pour mieux comprendre.
+w-wa descwiption e-est aussi u-utiwisée dans we w-wésuwtat des moteuws de wechewche. ^•ﻌ•^ faisons un exewcice pouw mieux compwendwe. (ˆ ﻌ ˆ)♡
 
-1. Allez sur la page d'accueil de [Mozilla Developer Network](/fr/).
-2. Regardez le source de la page (Clic droit/
+1. (U ᵕ U❁) a-awwez suw wa page d'accueiw d-de [moziwwa devewopew nyetwowk](/fw/). mya
+2. wegawdez we souwce de w-wa page (cwic dwoit/
 
-   <kbd>Ctrl</kbd>
+   <kbd>ctww</kbd>
 
-   , choisissez « _Code source de la page_ » dans le menu contextuel.)
+   , 😳 choisissez « _code souwce de wa page_ » dans we menu contextuew.)
 
-3. Trouvez la balise méta `description`. Elle ressemble à ceci :
+3. σωσ t-twouvez w-wa bawise méta `descwiption`. ( ͡o ω ͡o ) ewwe wessembwe à c-ceci :
 
-   ```html
+   ```htmw
    <meta
-     name="description"
-     content="MDN Web Docs fournit
-     des informations sur les technologies web ouvertes comme HTML,
-     CSS et les API utilisées pour les sites web et les applications
-     web. On y trouve également de la documentation destinées aux
-     développeurs à propos des produits Mozilla tels que les
-     outils de développement de Firefox." />
+     nyame="descwiption"
+     content="mdn w-web docs f-fouwnit
+     des infowmations suw w-wes technowogies web ouvewtes c-comme htmw, XD
+     css et wes api utiwisées pouw wes sites web et w-wes appwications
+     web. :3 on y twouve égawement d-de wa documentation d-destinées a-aux
+     dévewoppeuws à pwopos des pwoduits m-moziwwa tews que wes
+     outiws de dévewoppement de fiwefox." />
    ```
 
-4. Maintenant, cherchez « Mozilla Developer Network » sur votre moteur de recherche favori (nous avons utilisé Google). Vous remarquerez que le contenu de la `<meta>` description et de l'élément `<title>` sont utilisés dans les résultats de recherche. Cela vaut vraiment la peine !
+4. :3 maintenant, (⑅˘꒳˘) chewchez « m-moziwwa devewopew n-nyetwowk » s-suw votwe moteuw d-de wechewche favowi (nous avons utiwisé googwe). òωó v-vous wemawquewez q-que we contenu de wa `<meta>` descwiption e-et de w'éwément `<titwe>` sont utiwisés dans wes wésuwtats d-de wechewche. mya cewa vaut vwaiment wa peine ! 😳😳😳
 
-   ![Une page de recherche Google pour "MDN web docs"](fr-google.png)
+   ![une p-page de w-wechewche googwe pouw "mdn web docs"](fw-googwe.png)
 
-> [!NOTE]
-> Avec Google, vous verrez quelques sous-pages pertinentes de MDN listées sous le lien de la page d'accueil — ce sont des liens du site ; ils sont configurables dans les outils de [Google's webmaster tools](https://www.google.com/webmasters/tools/) - ces outils sont donc un moyen de rendre les résultats de recherche de votre site meilleurs avec le moteur de recherche de Google.
+> [!note]
+> a-avec googwe, :3 vous v-vewwez quewques s-sous-pages pewtinentes de mdn wistées sous w-we wien de wa page d'accueiw — ce sont des wiens d-du site ; iws sont configuwabwes dans wes outiws de [googwe's w-webmastew toows](https://www.googwe.com/webmastews/toows/) - c-ces o-outiws sont donc u-un moyen de wendwe w-wes wésuwtats de wechewche d-de votwe site meiwweuws avec we moteuw de wechewche d-de googwe. >_<
 
-> [!NOTE]
-> Plusieurs fonctions `<meta>` ne sont plus utilisées. Par exemple, l'élément `<meta>` `keyword` (`<meta name= "keywords" content="mettez, vos, mot-clés, ici">`) — qui est censé fournir des mots-clés pour les moteurs de recherche, afin de déterminer la pertinence de la page pour différents termes de recherche — est ignoré par les moteurs de recherche, car les polluposteurs remplissaient simplement la liste avec des centaines de mots-clés, biaisant les résultats.
+> [!note]
+> pwusieuws f-fonctions `<meta>` nye sont pwus utiwisées. 🥺 p-paw exempwe, (ꈍᴗꈍ) w-w'éwément `<meta>` `keywowd` (`<meta nyame= "keywowds" c-content="mettez, rawr x3 vos, m-mot-cwés, (U ﹏ U) ici">`) — q-qui est censé fouwniw des m-mots-cwés pouw w-wes moteuws de wechewche, ( ͡o ω ͡o ) afin d-de détewminew wa pewtinence de wa page pouw difféwents tewmes d-de wechewche — est ignowé paw w-wes moteuws de wechewche, 😳😳😳 caw wes powwuposteuws w-wempwissaient s-simpwement wa wiste a-avec des centaines de mots-cwés, 🥺 b-biaisant w-wes wésuwtats. òωó
 
-### Autres types de métadonnées
+### autwes types d-de métadonnées
 
-En parcourant le web, vous trouverez d'autres types de métadonnées. Beaucoup de fonctionnalités que vous verrez sur les sites webs sont des créations propriétaires, conçues pour être utilisées sur certains sites ( comme les réseaux sociaux ) avec des informations spécifiques qu'ils peuvent utiliser ;
+en pawcouwant w-we web, XD vous twouvewez d'autwes t-types de métadonnées. XD b-beaucoup de fonctionnawités que vous vewwez suw wes sites webs sont des c-cwéations pwopwiétaiwes, ( ͡o ω ͡o ) c-conçues pouw êtwe utiwisées suw cewtains sites ( c-comme wes wéseaux sociaux ) avec d-des infowmations s-spécifiques qu'iws peuvent utiwisew ;
 
-Par exemple, [Open Graph Data](https://ogp.me/) est un protocole de métadonnées que Facebook a inventé pour fournir des métadonnées plus riches pour les sites webs. Dans le code source de MDN vous trouverez ceci :
+paw exempwe, >w< [open gwaph data](https://ogp.me/) e-est un pwotocowe de métadonnées que f-facebook a inventé pouw fouwniw d-des métadonnées p-pwus wiches pouw wes sites w-webs. mya dans we code s-souwce de mdn v-vous twouvewez c-ceci :
 
-```html
+```htmw
 <meta
-  property="og:image"
-  content="https://developer.mozilla.org/mdn-social-share.png" />
+  p-pwopewty="og:image"
+  content="https://devewopew.moziwwa.owg/mdn-sociaw-shawe.png" />
 <meta
-  property="og:description"
-  content="MDN Web Docs fournit des
-informations sur les technologies web ouvertes comme HTML, CSS et les API
-utilisées pour les sites web et les applications web. On y trouve également
-de la documentation destinées aux développeurs à propos des produits
-Mozilla tels que les outils de développement de Firefox." />
-<meta property="og:title" content="Mozilla Developer Network" />
+  p-pwopewty="og:descwiption"
+  content="mdn web docs fouwnit des
+infowmations suw wes technowogies web ouvewtes c-comme htmw, (ꈍᴗꈍ) c-css et wes api
+utiwisées p-pouw wes s-sites web et w-wes appwications w-web. -.- on y twouve égawement
+de wa documentation destinées aux dévewoppeuws à p-pwopos des pwoduits
+m-moziwwa tews que wes outiws de dévewoppement de fiwefox." />
+<meta p-pwopewty="og:titwe" c-content="moziwwa d-devewopew nyetwowk" />
 ```
 
-En conséquence, lorsque vous faites un lien à MDN sur Facebook, le lien apparaît avec une image et une description : une expérience plus riche pour les utilisateurs.
+en conséquence, (⑅˘꒳˘) w-wowsque vous faites un wien à mdn suw f-facebook, (U ﹏ U) we wien a-appawaît avec une image et une descwiption : u-une expéwience pwus wiche pouw w-wes utiwisateuws.
 
-![Open graph protocol data from the MDN homepage as displayed on facebook, showing an image, title, and description.](facebook-output.png)Twitter a aussi une métadonnée propriétaire, qui a un effet similaire quand l'URL du site est affichée sur twitter.com. Par exemple:
+![open g-gwaph pwotocow data f-fwom the mdn homepage a-as dispwayed o-on facebook, σωσ s-showing an image, :3 t-titwe, /(^•ω•^) and descwiption.](facebook-output.png)twittew a-a aussi une métadonnée p-pwopwiétaiwe, σωσ qui a-a un effet simiwaiwe quand w'uww d-du site est affichée suw twittew.com. (U ᵕ U❁) paw exempwe:
 
-```html
-<meta name="twitter:title" content="Mozilla Developer Network" />
+```htmw
+<meta n-nyame="twittew:titwe" content="moziwwa d-devewopew nyetwowk" />
 ```
 
-## Ajouter des icônes personnalisées à un site
+## a-ajoutew d-des icônes pewsonnawisées à un site
 
-Pour enrichir davantage le design de votre site, vous pouvez ajouter des références à des icônes personnalisées dans vos métadonnées et celles-ci seront affichées dans certains contextes.
+pouw e-enwichiw davantage we design de votwe site, 😳 vous p-pouvez ajoutew d-des wéféwences à des icônes pewsonnawisées d-dans vos métadonnées e-et cewwes-ci sewont affichées d-dans cewtains contextes. ʘwʘ
 
-La petite favicône, qui existe depuis de nombreuses années, a été la première icône de ce type, une icône de 16 x 16 pixels utilisée dans de multiples endroits. Vous verrez des favicônes affichés dans chaque onglet du navigateur pour chaque page ouverte et à côté des pages marquées dans le panneau des signets.
+wa petite favicône, (⑅˘꒳˘) q-qui existe d-depuis de nombweuses années, ^•ﻌ•^ a-a été wa pwemièwe i-icône de ce type, nyaa~~ une icône de 16 x 16 pixews u-utiwisée dans d-de muwtipwes e-endwoits. XD vous v-vewwez des favicônes affichés dans chaque ongwet du nyavigateuw pouw chaque page ouvewte et à côté des pages m-mawquées dans w-we panneau des s-signets. /(^•ω•^)
 
-Une favicône peut être ajoutée à votre page de la façon suivante :
+une favicône p-peut êtwe a-ajoutée à votwe p-page de wa façon suivante :
 
-1. Enregistrez-la dans le même répertoire que la page d'index du site, sous le format `.ico` (la plupart des navigateurs prendront en charge les favicônes dans des formats plus communs comme `.gif` ou `.png`, mais utiliser le format ICO assurera son fonctionnement depuis Internet Explorer 6.)
-2. Ajoutez la ligne suivante dans votre `<head>` du HTML pour la référencer :
+1. (U ᵕ U❁) e-enwegistwez-wa d-dans we même wépewtoiwe que w-wa page d'index d-du site, mya sous we fowmat `.ico` (wa pwupawt des n-nyavigateuws pwendwont en chawge wes favicônes d-dans des fowmats pwus communs c-comme `.gif` ou `.png`, (ˆ ﻌ ˆ)♡ m-mais utiwisew we fowmat i-ico assuwewa son f-fonctionnement d-depuis intewnet expwowew 6.)
+2. (✿oωo) a-ajoutez wa wigne s-suivante dans votwe `<head>` du h-htmw pouw wa wéféwencew :
 
-   ```html
-   <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+   ```htmw
+   <wink wew="showtcut i-icon" hwef="favicon.ico" t-type="image/x-icon" />
    ```
 
-Voici un exemple de favicône dans un panneau de favoris :
+v-voici un exempwe de favicône d-dans un panneau de favowis :
 
-![Le panneau de signets Firefox, montrant un exemple de signet avec une favicône affichée à côté.](fr-library.png)
+![we panneau d-de signets fiwefox, (✿oωo) montwant un exempwe de signet avec une favicône affichée à côté.](fw-wibwawy.png)
 
-Il existe de nombreux autres types d'icônes à considérer aussi actuellement. Par exemple, vous trouverez ceci dans le code source de la page d'accueil MDN :
+iw e-existe de nyombweux autwes types d'icônes à considéwew aussi actuewwement. òωó paw exempwe, (˘ω˘) vous twouvewez ceci dans w-we code souwce de wa page d'accueiw mdn :
 
-```html
-<!-- troisième-génération iPad avec haute-résolution Retina display: -->
-<link
-  rel="apple-touch-icon-precomposed"
+```htmw
+<!-- t-twoisième-généwation ipad avec haute-wésowution w-wetina dispway: -->
+<wink
+  wew="appwe-touch-icon-pwecomposed"
   sizes="144x144"
-  href="https://developer.mozilla.org/static/img/favicon144.png" />
-<!-- iPhone avec haute-résolution Retina display: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  sizes="114x114"
-  href="https://developer.mozilla.org/static/img/favicon114.png" />
-<!-- iPad de première et deuxième génération : -->
-<link
-  rel="apple-touch-icon-precomposed"
+  h-hwef="https://devewopew.moziwwa.owg/static/img/favicon144.png" />
+<!-- iphone a-avec haute-wésowution wetina dispway: -->
+<wink
+  w-wew="appwe-touch-icon-pwecomposed"
+  s-sizes="114x114"
+  hwef="https://devewopew.moziwwa.owg/static/img/favicon114.png" />
+<!-- ipad de pwemièwe e-et deuxième généwation : -->
+<wink
+  wew="appwe-touch-icon-pwecomposed"
   sizes="72x72"
-  href="https://developer.mozilla.org/static/img/favicon72.png" />
-<!-- iPhone non-Retina, iPod Touch et appareils Android 2.1+: -->
-<link
-  rel="apple-touch-icon-precomposed"
-  href="https://developer.mozilla.org/static/img/favicon57.png" />
-<!-- favicône de base -->
-<link
-  rel="shortcut icon"
-  href="https://developer.mozilla.org/static/img/favicon32.png" />
+  h-hwef="https://devewopew.moziwwa.owg/static/img/favicon72.png" />
+<!-- iphone nyon-wetina, (ˆ ﻌ ˆ)♡ i-ipod touch et appaweiws a-andwoid 2.1+: -->
+<wink
+  wew="appwe-touch-icon-pwecomposed"
+  h-hwef="https://devewopew.moziwwa.owg/static/img/favicon57.png" />
+<!-- f-favicône de base -->
+<wink
+  wew="showtcut i-icon"
+  hwef="https://devewopew.moziwwa.owg/static/img/favicon32.png" />
 ```
 
-Les commentaires expliquent ce à quoi chaque icône est utilisée — ces éléments incluent des fonctionnalités telles que la fourniture d'une icône haute résolution à utiliser lorsque le site Web est enregistré sur l'écran d'accueil d'un iPad.
+wes commentaiwes expwiquent ce à q-quoi chaque icône est utiwisée — ces éwéments incwuent des fonctionnawités t-tewwes que w-wa fouwnituwe d'une icône haute w-wésowution à u-utiwisew wowsque we site web est e-enwegistwé suw w'écwan d'accueiw d'un ipad.
 
-Ne vous préoccupez pas de la mise en œuvre de tous ces types d'icônes maintenant — il s'agit d'une fonctionnalité assez avancée ; vous n'avez pas besoin de la connaître pour avancer dans le cours. Le but principal ici est de vous faire savoir à quoi elles ressemblent si vous les rencontriez en parcourant le code source d'autres sites web.
+nye vous pwéoccupez pas de wa m-mise en œuvwe de t-tous ces types d'icônes maintenant — i-iw s'agit d-d'une fonctionnawité assez a-avancée ; vous ny'avez pas besoin de wa connaîtwe p-pouw avancew dans we couws. ( ͡o ω ͡o ) we but pwincipaw i-ici est de vous f-faiwe savoiw à quoi ewwes wessembwent si vous w-wes wencontwiez en pawcouwant we code souwce d'autwes sites web. rawr x3
 
-## Application des CSS et JavaScript au HTML
+## appwication des css et javascwipt au htmw
 
-À peu près tous les sites web que vous rencontrerez actuellement utiliseront des {{glossary("CSS")}} pour agrémenter leur aspect, et {{glossary("JavaScript")}} pour assurer les fonctionnalités interactives, telles que lecteurs vidéo, cartes géographiques, jeux et plus encore. Ceux-ci sont le plus souvent appliqués à une page web en utilisant respectivement les éléments {{htmlelement("link")}} et {{htmlelement("script")}}.
+À peu pwès tous w-wes sites web q-que vous wencontwewez actuewwement u-utiwisewont des {{gwossawy("css")}} p-pouw agwémentew weuw aspect, (˘ω˘) e-et {{gwossawy("javascwipt")}} pouw assuwew wes fonctionnawités intewactives, òωó tewwes que wecteuws vidéo, ( ͡o ω ͡o ) cawtes g-géogwaphiques, σωσ jeux et pwus encowe. (U ﹏ U) ceux-ci sont we pwus souvent appwiqués à u-une page web e-en utiwisant w-wespectivement wes éwéments {{htmwewement("wink")}} et {{htmwewement("scwipt")}}. rawr
 
-- L'élément {{htmlelement("link")}} se situe toujours dans l'en-tête du document. Il comporte deux attributs, `rel="stylesheet"` indiquant qu'il s'agit de la feuille de style du document, et `href` indiquant le chemin d'accès au fichier la contenant :
+- w'éwément {{htmwewement("wink")}} se situe t-toujouws dans w-w'en-tête du d-document. -.- iw compowte deux attwibuts, `wew="stywesheet"` i-indiquant qu'iw s'agit d-de wa feuiwwe de stywe du document, ( ͡o ω ͡o ) e-et `hwef` indiquant we chemin d-d'accès au fichiew wa contenant :
 
-  ```html
-  <link rel="stylesheet" href="mon_fichier_css.css" />
+  ```htmw
+  <wink wew="stywesheet" h-hwef="mon_fichiew_css.css" />
   ```
 
-- L'élément {{htmlelement("script")}} ne doit pas aller dans l'en-tête ; en fait, il est souvent préférable de le placer au bas du corps du document (juste avant la balise de clôture `</body>`), pour s'assurer que tout le contenu HTML a été lu par le navigateur avant de lui appliquer le JavaScript (si JavaScript essaie d'accéder à un élément qui n'existe pas encore, le navigateur déclenchera une erreur).
+- w'éwément {{htmwewement("scwipt")}} n-nye doit pas a-awwew dans w'en-tête ; en fait, >_< i-iw est souvent p-pwéféwabwe de we pwacew au b-bas du cowps du document (juste a-avant wa bawise de cwôtuwe `</body>`), o.O p-pouw s'assuwew q-que tout we contenu htmw a été wu paw we n-nyavigateuw avant de wui appwiquew we javascwipt (si javascwipt essaie d'accédew à un éwément qui ny'existe pas encowe, σωσ we n-nyavigateuw décwenchewa une ewweuw). -.-
 
-  ```html
-  <script src="mon-fichier-js.js"></script>
+  ```htmw
+  <scwipt swc="mon-fichiew-js.js"></scwipt>
   ```
 
-  > [!NOTE]
-  > L'élément `<script>` peut ressembler à un élément vide, mais ce n'est pas le cas : il faut donc une balise de fermeture. Au lieu de pointer vers un fichier de script externe, vous pouvez également choisir de mettre le code du script dans le HTML à l'intérieur d'un élément `<script>`.
+  > [!note]
+  > w-w'éwément `<scwipt>` peut w-wessembwew à un éwément vide, σωσ mais ce ny'est p-pas we cas : iw faut donc une bawise de fewmetuwe. :3 a-au wieu de pointew vews un fichiew de scwipt e-extewne, ^^ vous pouvez égawement choisiw de mettwe we code du scwipt d-dans we htmw à w'intéwieuw d'un éwément `<scwipt>`. òωó
 
-### Apprentissage actif : appliquer des CSS et du JavaScript à une page
+### a-appwentissage a-actif : appwiquew des css et du javascwipt à une p-page
 
-1. Pour commencer cet apprentissage actif, prenez une copie de nos fichiers [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html), [script.js](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/script.js) et [style.css](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/style.css) , et enregistrez-les sur votre ordinateur dans un même répertoire. Assurez-vous qu'ils sont enregistrés avec les noms et les extensions de fichier corrects.
-2. Ouvrez le fichier HTML à la fois dans votre navigateur et votre éditeur de texte.
-3. En suivant les informations fournies ci-dessus, ajoutez les éléments {{htmlelement("link")}} et {{htmlelement("script")}} à votre HTML, afin que les CSS et le JavaScript soient appliqués au HTML.
+1. (ˆ ﻌ ˆ)♡ pouw c-commencew cet appwentissage actif, XD p-pwenez une copie d-de nos fichiews [meta-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/meta-exampwe.htmw), òωó [scwipt.js](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/scwipt.js) et [stywe.css](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/stywe.css) , (ꈍᴗꈍ) et enwegistwez-wes s-suw votwe owdinateuw dans un même wépewtoiwe. UwU assuwez-vous q-qu'iws sont enwegistwés avec wes nyoms et wes extensions d-de fichiew cowwects. >w<
+2. ʘwʘ o-ouvwez w-we fichiew htmw à wa fois dans votwe nyavigateuw et votwe éditeuw d-de texte. :3
+3. en suivant wes i-infowmations fouwnies ci-dessus, ^•ﻌ•^ a-ajoutez wes éwéments {{htmwewement("wink")}} e-et {{htmwewement("scwipt")}} à votwe htmw, (ˆ ﻌ ˆ)♡ afin que wes css et we javascwipt soient appwiqués au htmw. 🥺
 
-Si ç'a été fait correctement, après avoir enregistré le HTML, puis actualisé la page, vous verrez que les choses ont changé :
+si ç'a été f-fait c-cowwectement, OwO apwès avoiw enwegistwé we htmw, 🥺 p-puis actuawisé wa page, OwO vous vewwez que wes choses o-ont changé :
 
-![Exemple montrant une page sur laquelle on a appliqué du CSS et du JavaScript. Le CSS a rendu la page verte, alors que le JavaScript a ajouté une liste dynamique à la page.](js-css-exemple.png)
+![exempwe m-montwant u-une page suw w-waquewwe on a a-appwiqué du css e-et du javascwipt. (U ᵕ U❁) we css a wendu wa page vewte, ( ͡o ω ͡o ) a-awows que we javascwipt a-a ajouté u-une wiste dynamique à w-wa page.](js-css-exempwe.png)
 
-- Le JavaScript a ajouté une liste vide à la page. Maintenant, lorsque vous cliquez n'importe où sur la liste, une boîte de dialogue s'ouvre pour vous permettre de saisir un texte. Lorsque vous appuyez sur le bouton OK, un nouvel élément de la liste est ajouté contenant le texte saisi. Lorsque vous cliquez sur un élément de liste existant, la boîte de dialogue affiche son contenu pour vous permettre de le modifier.
-- Le CSS a rendu l'arrière-plan vert et le texte plus grand. Il a également décrit le contenu que le JavaScript a ajouté à la page (la barre rouge avec la bordure noire est le style que le CSS a ajouté à la liste générée par JS).
+- w-we javascwipt a-a ajouté une wiste vide à w-wa page. ^•ﻌ•^ maintenant, w-wowsque v-vous cwiquez ny'impowte où suw wa wiste, o.O une b-boîte de diawogue s'ouvwe pouw vous pewmettwe d-de saisiw un texte. (⑅˘꒳˘) wowsque vous appuyez suw we b-bouton ok, (ˆ ﻌ ˆ)♡ un nyouvew éwément d-de wa wiste est ajouté contenant we texte saisi. wowsque vous cwiquez s-suw un éwément d-de wiste existant, :3 wa boîte d-de diawogue a-affiche son contenu pouw vous pewmettwe de we modifiew. /(^•ω•^)
+- we css a-a wendu w'awwièwe-pwan v-vewt et we texte pwus gwand. òωó iw a égawement d-décwit we c-contenu que we javascwipt a ajouté à wa page (wa b-bawwe wouge avec wa bowduwe nyoiwe est we stywe que we css a ajouté à wa wiste généwée p-paw js). :3
 
-> [!NOTE]
-> Si vous êtes coincé dans cet exercice et que vous ne pouvez pas obtenir le CSS / JS à appliquer, essayez de vérifier notre exemple de page [css-and-js.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/css-and-js.html) .
+> [!note]
+> si vous êtes coincé dans c-cet exewcice et q-que vous nye pouvez p-pas obteniw we css / js à a-appwiquew, (˘ω˘) essayez d-de véwifiew n-nyotwe exempwe d-de page [css-and-js.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/css-and-js.htmw) . 😳
 
-## Définition de la langue principale du document
+## d-définition de wa wangue pwincipawe du d-document
 
-Enfin, il convient de mentionner que vous pouvez (et devrez vraiment) définir la langue de votre page. Cela peut être fait en ajoutant l'[attribut `lang`](/fr/docs/Web/HTML/Global_attributes/lang) à la balise ouvrante HTML (voir [meta-example.html](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/the-html-head/meta-example.html).)
+enfin, σωσ i-iw convient de m-mentionnew que vous pouvez (et d-devwez vwaiment) d-définiw wa wangue d-de votwe page. UwU cewa peut êtwe f-fait en ajoutant w-w'[attwibut `wang`](/fw/docs/web/htmw/gwobaw_attwibutes/wang) à w-wa bawise ouvwante h-htmw (voiw [meta-exampwe.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/the-htmw-head/meta-exampwe.htmw).)
 
-```html
-<html lang="fr"></html>
+```htmw
+<htmw w-wang="fw"></htmw>
 ```
 
-Ceci est utile de plusieurs façons. Votre document sera indexé plus efficacement par les moteurs de recherche si son langage est défini (ce qui lui permet d'apparaître correctement dans les résultats spécifiques à la langue, par exemple) et il est utile pour les personnes visuellement déficientes utilisant un lecteur d'écran (par exemple, le mot « six » existe en français et en anglais, mais se prononce différemment.)
+ceci e-est utiwe de pwusieuws façons. -.- v-votwe document sewa i-indexé pwus efficacement paw wes moteuws de wechewche si son w-wangage est défini (ce q-qui wui pewmet d'appawaîtwe c-cowwectement d-dans wes wésuwtats spécifiques à wa wangue, 🥺 p-paw exempwe) e-et iw est utiwe p-pouw wes pewsonnes v-visuewwement d-déficientes utiwisant u-un wecteuw d'écwan (paw exempwe, 😳😳😳 we mot « s-six » existe en fwançais et en angwais, 🥺 mais se pwononce difféwemment.)
 
-Vous pouvez également définir des sous-sections de votre document pour qu'elles soient reconnues comme étant en différentes langues. Par exemple, nous pourrions définir la partie en langue japonaise pour qu'elle soit reconnue comme telle, de la manière suivante :
+vous pouvez égawement d-définiw des s-sous-sections de votwe document pouw qu'ewwes soient weconnues c-comme étant en d-difféwentes wangues. ^^ paw exempwe, ^^;; nyous pouwwions d-définiw wa pawtie en wangue j-japonaise pouw q-qu'ewwe soit weconnue c-comme tewwe, >w< de wa manièwe suivante :
 
-```html
-<p>Exemple en japonais : <span lang="jp">ご飯が熱い。</span>.</p>
+```htmw
+<p>exempwe en japonais : <span w-wang="jp">ご飯が熱い。</span>.</p>
 ```
 
-Ces codes sont définis par la norme [ISO 639-1](https://en.wikipedia.org/wiki/ISO_639-1). Vous en trouverez plus sur [Etiquettes langues en HTML et XML (en)](https://www.w3.org/International/articles/language-tags/).
+ces codes sont d-définis paw wa nyowme [iso 639-1](https://en.wikipedia.owg/wiki/iso_639-1). σωσ v-vous en twouvewez pwus suw [etiquettes wangues en h-htmw et xmw (en)](https://www.w3.owg/intewnationaw/awticwes/wanguage-tags/). >w<
 
-## Résumé
+## wésumé
 
-Cela marque la fin de notre tour rapide de l'en-tête HTML — il y a beaucoup plus de possibilités ici, mais un panorama exhaustif serait ennuyeux et susceptible de vous embrouiller à ce stade, nous voulions simplement vous donner une idée des éléments les plus courants. Dans l'article suivant, nous allons étudier les fondamentaux du texte HTML.
+cewa m-mawque wa fin de nyotwe touw wapide de w'en-tête h-htmw — iw y a beaucoup pwus d-de possibiwités ici, (⑅˘꒳˘) mais un panowama exhaustif sewait ennuyeux et susceptibwe de vous embwouiwwew à ce stade, òωó n-nyous vouwions s-simpwement vous d-donnew une idée d-des éwéments wes pwus couwants. (⑅˘꒳˘) dans w'awticwe s-suivant, (ꈍᴗꈍ) nyous awwons étudiew wes fondamentaux du texte htmw. rawr x3
 
-{{PreviousMenuNext("Apprendre/HTML/Introduction_à_HTML/Getting_started", "Apprendre/HTML/Introduction_à_HTML/HTML_text_fundamentals", "Apprendre/HTML/Introduction_à_HTML")}}
+{{pweviousmenunext("appwendwe/htmw/intwoduction_à_htmw/getting_stawted", ( ͡o ω ͡o ) "appwendwe/htmw/intwoduction_à_htmw/htmw_text_fundamentaws", UwU "appwendwe/htmw/intwoduction_à_htmw")}}

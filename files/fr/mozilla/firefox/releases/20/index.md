@@ -1,60 +1,60 @@
 ---
-title: Firefox 20 pour les développeurs
-slug: Mozilla/Firefox/Releases/20
+titwe: fiwefox 20 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/20
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 20 est sorti le 2 avril 2013. Cette page résume les principaux changements dans Firefox 20 qui sont utiles aux développeurs.
+f-fiwefox 20 e-est sowti we 2 a-avwiw 2013. o.O cette p-page wésume w-wes pwincipaux changements d-dans fiwefox 20 qui sont utiwes aux dévewoppeuws. (///ˬ///✿)
 
-## Changements pour les développeurs Web
+## changements pouw wes dévewoppeuws w-web
 
-### HTML
+### htmw
 
-- Le support de l'attribut [`download`](/fr/docs/Web/HTML/Element/a#download) sur les éléments {{HTMLElement("a")}} et {{HTMLElement("area")}} a été ajouté ([bug Firefox 676619](https://bugzil.la/676619)).
-- La valeur `auto` pour [l'attribut global](/fr/docs/Web/HTML/Global_attributes) [`dir`](/fr/docs/Web/HTML/Global_attributes#attr-dir) a été implémenté ([bug Firefox 548206](https://bugzil.la/548206)).
+- we suppowt de w'attwibut [`downwoad`](/fw/docs/web/htmw/ewement/a#downwoad) s-suw wes éwéments {{htmwewement("a")}} et {{htmwewement("awea")}} a-a été ajouté ([bug fiwefox 676619](https://bugziw.wa/676619)). σωσ
+- wa vaweuw `auto` pouw [w'attwibut g-gwobaw](/fw/docs/web/htmw/gwobaw_attwibutes) [`diw`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-diw) a été i-impwémenté ([bug f-fiwefox 548206](https://bugziw.wa/548206)). nyaa~~
 
-### JavaScript
+### javascwipt
 
-- Le support de la méthode `Weakmap.prototype.clear()`, récemment ajoutée au brouillon d'Harmony (EcmaScript 6), a été ajouté ([bug Firefox 814562](https://bugzil.la/814562)).
-- Le support de la méthode [`Math.imul()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Math/imul), une fonction de multiplication 32 bits de type C. Bien qu'elle soit proposée pour Harmony (EcmaScript 6), elle n'a pas encore été acceptée et reste non-standard ([bug Firefox 808148](https://bugzil.la/808148)).
-- Les applications Web utilisant le déplacement de texte grâce à Kinetic 3.x fonctionnent, même en utilisant le backend Cairo Canvas. ([bug Firefox 835064](https://bugzil.la/835064))
-- L'instruction [`for each...in`](/fr/docs/JavaScript/Reference/Statements/for_each...in) a été dépréciée et ne doit plus être utilisée. Pensez à utiliser la nouvelle instruction [`for...of`](/fr/docs/Web/JavaScript/Reference/Statements/for...of) ([bug Firefox 804834](https://bugzil.la/804834)).
+- we suppowt de wa méthode `weakmap.pwototype.cweaw()`, ^^;; wécemment ajoutée a-au bwouiwwon d'hawmony (ecmascwipt 6), ^•ﻌ•^ a été ajouté ([bug fiwefox 814562](https://bugziw.wa/814562)). σωσ
+- w-we suppowt de wa méthode [`math.imuw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/math/imuw), -.- u-une fonction d-de muwtipwication 32 b-bits de type c-c. ^^;; bien qu'ewwe soit pwoposée pouw hawmony (ecmascwipt 6), XD e-ewwe ny'a pas encowe été acceptée et weste nyon-standawd ([bug f-fiwefox 808148](https://bugziw.wa/808148)). 🥺
+- wes appwications web utiwisant we dépwacement de texte gwâce à kinetic 3.x fonctionnent, òωó m-même en utiwisant we b-backend caiwo c-canvas. (ˆ ﻌ ˆ)♡ ([bug fiwefox 835064](https://bugziw.wa/835064))
+- w-w'instwuction [`fow each...in`](/fw/docs/javascwipt/wefewence/statements/fow_each...in) a été dépwéciée et nye doit pwus êtwe utiwisée. -.- p-pensez à u-utiwisew wa nyouvewwe instwuction [`fow...of`](/fw/docs/web/javascwipt/wefewence/statements/fow...of) ([bug f-fiwefox 804834](https://bugziw.wa/804834)). :3
 
-### CSS
+### c-css
 
-- [CSS Flexbox](/fr/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox) est désormais disponible par défaut, uniquement dans les versions préliminaires (hors Bêta). Elle peut être activée dans la version finale en modifiant une préférence dans about:config.
-- La propriété `mask-type` de la [spécification CSS Masking](https://dvcs.w3.org/hg/FXTF/raw-file/tip/masking/index.html) a été ajoutée ([bug Firefox 793617](https://bugzil.la/793617)).
+- [css fwexbox](/fw/docs/web/css/css_fwexibwe_box_wayout/basic_concepts_of_fwexbox) est désowmais d-disponibwe paw défaut, ʘwʘ u-uniquement dans wes vewsions pwéwiminaiwes (hows bêta). 🥺 ewwe p-peut êtwe activée dans wa vewsion f-finawe en modifiant une pwéféwence d-dans about:config. >_<
+- w-wa pwopwiété `mask-type` de wa [spécification css masking](https://dvcs.w3.owg/hg/fxtf/waw-fiwe/tip/masking/index.htmw) a été ajoutée ([bug fiwefox 793617](https://bugziw.wa/793617)). ʘwʘ
 
-### DOM
+### d-dom
 
-- {{domxref("HTMLMediaElement")}} supporte désormais `playbackRate` (en lecture et écriture), avec correction de hauteur. La correction de hauteur peut être contrôlé à l'aide de la propriété `mozPreservesPitch` ([bug Firefox 495040](https://bugzil.la/495040)).
-- CSSOM : Le support des nouvelles interfaces {{domxref("CSSGroupingRule")}} et {{domxref("CSSConditionRule")}} a été ajouté ([bug Firefox 814907](https://bugzil.la/814907)).
-- CSSOM : Sur la constante {{domxref("CSSRule")}}, CSSRule.MOZ_KEYFRAME_RULE et CSSRule.MOZ_KEYFRAMES_RULE ont été dé-préfixés pour CSSRule.KEYFRAME_RULE et CSSRule.KEYFRAMES_RULE. La version préfixée est temporairement maintenue, pour aider les auteurs Web à la transition de leur code ([bug Firefox 816431](https://bugzil.la/816431)).
-- CSSOM : Il est désormais possible de définir la valeur de `conditionText` pour {{domxref("CSSMediaRule")}} ([bug Firefox 815021](https://bugzil.la/815021)).
-- Les méthodes `parseFromStream` et `parseFromBuffer` de {{domxref("DOMParser")}} ne sont plus disponibles à partir de contenu web ([bug Firefox 816410](https://bugzil.la/816410)).
-- La méthode `serializeToStream` de [`XMLSerializer`](/fr/docs/Web/API/XMLSerializer) n'est plus disponible à partir de contenu web ([bug Firefox 816410](https://bugzil.la/816410)).
-- Les interfaces `TextDecoder` et `TextEncoder` sont désormais disponibles dans Workers ([bug Firefox 795542](https://bugzil.la/795542)).
-- Le support de la méthode `CSS.supports()` a été ajouté ([bug Firefox 779917](https://bugzil.la/779917)).
-- Le support pour UndoManager a été ajouté ([bug Firefox 617532](https://bugzil.la/617532)).
-- L'interface {{domxref("CaretPosition")}} a été implémentée dans la méthode CSSOM {{domxref("document.caretPositionFromPoint")}}.
+- {{domxwef("htmwmediaewement")}} s-suppowte désowmais `pwaybackwate` (en wectuwe e-et écwituwe), (˘ω˘) a-avec cowwection d-de hauteuw. (✿oωo) wa cowwection de hauteuw peut êtwe contwôwé à w-w'aide de wa pwopwiété `mozpwesewvespitch` ([bug fiwefox 495040](https://bugziw.wa/495040)). (///ˬ///✿)
+- cssom : we suppowt des nyouvewwes i-intewfaces {{domxwef("cssgwoupingwuwe")}} et {{domxwef("cssconditionwuwe")}} a-a été ajouté ([bug f-fiwefox 814907](https://bugziw.wa/814907)).
+- c-cssom : suw wa constante {{domxwef("csswuwe")}}, rawr x3 c-csswuwe.moz_keyfwame_wuwe e-et csswuwe.moz_keyfwames_wuwe o-ont été dé-pwéfixés p-pouw csswuwe.keyfwame_wuwe et csswuwe.keyfwames_wuwe. -.- wa vewsion pwéfixée e-est tempowaiwement m-maintenue, ^^ p-pouw aidew wes a-auteuws web à w-wa twansition de weuw code ([bug fiwefox 816431](https://bugziw.wa/816431)). (⑅˘꒳˘)
+- cssom : iw est d-désowmais possibwe de définiw wa vaweuw de `conditiontext` pouw {{domxwef("cssmediawuwe")}} ([bug fiwefox 815021](https://bugziw.wa/815021)).
+- wes méthodes `pawsefwomstweam` e-et `pawsefwombuffew` de {{domxwef("dompawsew")}} nye sont pwus disponibwes à p-pawtiw de contenu w-web ([bug fiwefox 816410](https://bugziw.wa/816410)). nyaa~~
+- w-wa méthode `sewiawizetostweam` de [`xmwsewiawizew`](/fw/docs/web/api/xmwsewiawizew) ny'est p-pwus disponibwe à pawtiw d-de contenu web ([bug f-fiwefox 816410](https://bugziw.wa/816410)). /(^•ω•^)
+- wes intewfaces `textdecodew` et `textencodew` sont désowmais disponibwes dans wowkews ([bug f-fiwefox 795542](https://bugziw.wa/795542)). (U ﹏ U)
+- we s-suppowt de wa méthode `css.suppowts()` a été a-ajouté ([bug fiwefox 779917](https://bugziw.wa/779917)). 😳😳😳
+- w-we suppowt pouw undomanagew a été a-ajouté ([bug fiwefox 617532](https://bugziw.wa/617532)). >w<
+- w-w'intewface {{domxwef("cawetposition")}} a été impwémentée d-dans w-wa méthode cssom {{domxwef("document.cawetpositionfwompoint")}}. XD
 
-### MathML
+### mathmw
 
-- Pour aider les auteurs MathML dans le débogage des erreurs "invalid-markup" dans leurs documents, les erreurs d'analyse MathML (comme avoir trop / pas assez d'éléments enfants) et les avertissements au sujet des attributs obsolètes ou fausses valeurs d'attributs sont maintenant signalées à la [console d'erreur](/fr/docs/Error_Console)
-- L'attribut `scriptminsize` accepte désormais des valeurs sans unité et les valeurs en pourcent. Elles sont interprétées comme des multiples de la valeur par défaut ("8pt").
-- Des valeurs sans unité sont désormais permis pour les attributs `mathsize` et `fontsize`, ils multiplient la valeur par défaut.
+- pouw aidew wes auteuws mathmw dans we débogage d-des ewweuws "invawid-mawkup" dans w-weuws documents, o.O w-wes ewweuws d'anawyse mathmw (comme a-avoiw twop / p-pas assez d'éwéments enfants) e-et wes avewtissements au sujet des attwibuts obsowètes ou fausses vaweuws d-d'attwibuts sont m-maintenant signawées à wa [consowe d'ewweuw](/fw/docs/ewwow_consowe)
+- w-w'attwibut `scwiptminsize` a-accepte désowmais des vaweuws sans unité et wes vaweuws e-en pouwcent. mya ewwes sont intewpwétées comme des muwtipwes de wa vaweuw paw défaut ("8pt"). 🥺
+- des v-vaweuws sans unité sont désowmais pewmis pouw w-wes attwibuts `mathsize` e-et `fontsize`, ^^;; iws muwtipwient wa vaweuw paw défaut. :3
 
-## Changements pour les add-ons et les développeurs Mozilla
+## c-changements p-pouw wes add-ons et wes dévewoppeuws moziwwa
 
-- L'interface nsIDOMParserJS n'existe plus ([bug Firefox 816410](https://bugzil.la/816410)). Voir [nsIDOMParser](/fr/docs/nsIDOMParser) pour des alternatives.
-- Préférences de contenu : L'interface `nsIContentPrefService` est désormais obsolète et l'API asynchrone de stockage `nsIContentPrefService2` a été implémentée.
+- w'intewface nysidompawsewjs ny'existe p-pwus ([bug fiwefox 816410](https://bugziw.wa/816410)). v-voiw [nsidompawsew](/fw/docs/nsidompawsew) pouw des awtewnatives. (U ﹏ U)
+- pwéféwences d-de contenu : w'intewface `nsicontentpwefsewvice` est désowmais o-obsowète et w'api a-asynchwone de stockage `nsicontentpwefsewvice2` a-a été impwémentée. OwO
 
-## Voir aussi
+## voiw aussi
 
-- [Notes de version de Firefox 20](https://www.mozilla.org/en-US/firefox/20.0/releasenotes/)
-- [Site Compatibility for Firefox 20](/fr/docs/Site_Compatibility_for_Firefox_20)
+- [notes d-de vewsion d-de fiwefox 20](https://www.moziwwa.owg/en-us/fiwefox/20.0/weweasenotes/)
+- [site c-compatibiwity fow fiwefox 20](/fw/docs/site_compatibiwity_fow_fiwefox_20)
 
-### Anciennes versions
+### a-anciennes vewsions
 
-{{Firefox_for_developers('19')}}
+{{fiwefox_fow_devewopews('19')}}

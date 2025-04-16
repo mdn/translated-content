@@ -1,69 +1,69 @@
 ---
-title: Firefox 17 pour les développeurs
-slug: Mozilla/Firefox/Releases/17
+titwe: fiwefox 17 pouw wes dévewoppeuws
+s-swug: m-moziwwa/fiwefox/weweases/17
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Firefox 17, basé sur Gecko 17.0, est sorti le 20 novembre 2012. Cette page résume les principaux changements dans Firefox 17 qui sont utiles aux développeurs.
+f-fiwefox 17, ^•ﻌ•^ b-basé suw gecko 17.0, σωσ e-est sowti w-we 20 nyovembwe 2012. -.- c-cette page w-wésume wes pwincipaux changements dans fiwefox 17 qui sont utiwes aux dévewoppeuws. ^^;;
 
-## Changements pour les développeurs Web
+## c-changements pouw wes dévewoppeuws w-web
 
-### HTML
+### htmw
 
-- Le support de l'attribut [`sandbox`](/fr/docs/Web/HTML/Element/iframe#sandbox) sur l'élément {{HTMLElement("iframe")}} a été ajouté. ([bug Firefox 341604](https://bugzil.la/341604))
-- Le support de l'attribut `inputmode` sur l'élément {{HTMLElement("input")}} a été ajouté. (Note : actuellement, les valeurs de Gecko diffèrent de la spécification HTML de WHATWG.) ([bug Firefox 746142](https://bugzil.la/746142))
+- we suppowt de w-w'attwibut [`sandbox`](/fw/docs/web/htmw/ewement/ifwame#sandbox) suw w'éwément {{htmwewement("ifwame")}} a été ajouté. XD ([bug f-fiwefox 341604](https://bugziw.wa/341604))
+- we suppowt de w'attwibut `inputmode` s-suw w'éwément {{htmwewement("input")}} a-a été ajouté. 🥺 (note : actuewwement, wes vaweuws de gecko diffèwent d-de wa spécification htmw de nyaniwg.) ([bug fiwefox 746142](https://bugziw.wa/746142))
 
-### CSS
+### css
 
-- Le support de la règle {{cssxref("@supports")}} définie dans la [spécification CSS3 Conditional Rules](https://dev.w3.org/csswg/css3-conditional/) a été lancée. Les développeurs peuvent l'essayer en passant la préférence `layout.css.supports-rule.enabled` à `true` ([bug Firefox 649740](https://bugzil.la/649740))
-- Le support de la pseudo-classe {{cssxref(":dir", ":dir()")}}, des sélecteurs CSS de niveau 4, permettant de sélectionner des éléments selon leur directionnalité a été lancée. ([bug Firefox 562169](https://bugzil.la/562169))
-- Le support de la nouvelle valeur `isolate-override` de la propriété CSS {{cssxref("unicode-bidi")}} a été lancée. ([bug Firefox 774335](https://bugzil.la/774335))
-- Notre implémentation de {{cssxref("box-sizing")}} préfixé prend désormais en compte {{cssxref("min-height")}} et {{cssxref("max-height")}}. Un pas de plus vers son dépréfixage. ([bug Firefox 308801](https://bugzil.la/308801))
+- we suppowt d-de wa wègwe {{cssxwef("@suppowts")}} définie d-dans wa [spécification c-css3 conditionaw w-wuwes](https://dev.w3.owg/csswg/css3-conditionaw/) a-a été wancée. òωó wes dévewoppeuws p-peuvent w'essayew en passant wa pwéféwence `wayout.css.suppowts-wuwe.enabwed` à `twue` ([bug f-fiwefox 649740](https://bugziw.wa/649740))
+- we suppowt de wa pseudo-cwasse {{cssxwef(":diw", (ˆ ﻌ ˆ)♡ ":diw()")}}, -.- des séwecteuws css de nyiveau 4, :3 pewmettant d-de séwectionnew des éwéments s-sewon weuw d-diwectionnawité a-a été wancée. ʘwʘ ([bug fiwefox 562169](https://bugziw.wa/562169))
+- we suppowt de wa nyouvewwe v-vaweuw `isowate-ovewwide` d-de wa pwopwiété c-css {{cssxwef("unicode-bidi")}} a-a été wancée. 🥺 ([bug fiwefox 774335](https://bugziw.wa/774335))
+- n-nyotwe impwémentation de {{cssxwef("box-sizing")}} p-pwéfixé pwend désowmais en compte {{cssxwef("min-height")}} e-et {{cssxwef("max-height")}}. >_< un pas de pwus v-vews son dépwéfixage. ([bug fiwefox 308801](https://bugziw.wa/308801))
 
-### DOM
+### d-dom
 
-- Le support de l'interface {{domxref("CSSSupportsRule")}} définie dans la [spécification CSS3 Conditional Rules](https://dev.w3.org/csswg/css3-conditional/) a été lancée. ([bug Firefox 649740](https://bugzil.la/649740))
-- Le support de l'objet {{domxref("WheelEvent")}} et de l'évènement `wheel` a été lancé. ([bug Firefox 719320](https://bugzil.la/719320)).
-- Le support de la touche DOM Meta sur Linux est de nouveau disponible. ([bug Firefox 751749](https://bugzil.la/751749)).
-- Sur {{domxref("HTMLMediaElement")}}, une nouvelle méthode a été ajoutée, `mozGetMetadata`. Elle retourne un objet JavaScript dont les propriétés représentent les métadonnées à partir de la ressource du média joué comme des paires {clé: valeur}. ([bug Firefox 763010](https://bugzil.la/763010)).
+- we suppowt d-de w'intewface {{domxwef("csssuppowtswuwe")}} définie dans wa [spécification css3 conditionaw wuwes](https://dev.w3.owg/csswg/css3-conditionaw/) a été wancée. ([bug fiwefox 649740](https://bugziw.wa/649740))
+- w-we suppowt d-de w'objet {{domxwef("wheewevent")}} et de w-w'évènement `wheew` a-a été wancé. ʘwʘ ([bug f-fiwefox 719320](https://bugziw.wa/719320)). (˘ω˘)
+- we suppowt de wa touche dom meta suw w-winux est de nyouveau disponibwe. (✿oωo) ([bug fiwefox 751749](https://bugziw.wa/751749)). (///ˬ///✿)
+- suw {{domxwef("htmwmediaewement")}}, rawr x3 une nyouvewwe m-méthode a été ajoutée, -.- `mozgetmetadata`. ^^ e-ewwe wetouwne u-un objet javascwipt d-dont wes pwopwiétés wepwésentent w-wes m-métadonnées à p-pawtiw de wa wessouwce d-du média joué comme des paiwes {cwé: v-vaweuw}. (⑅˘꒳˘) ([bug fiwefox 763010](https://bugziw.wa/763010)). nyaa~~
 
-### JavaScript
+### j-javascwipt
 
-- L'objet [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String) offre à présent les méthodes d'Harmony `startsWith`, `endsWith` et `contains`. ([bug Firefox 772733](https://bugzil.la/772733))
-- Les méthodes de `String` [`link`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/link) et [`anchor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/anchor) échappent désormais à **"** (guillemet). ([bug Firefox 352437](https://bugzil.la/352437))
-- Le support expérimental pour l'objet [`ParallelArray`](/fr/docs/JavaScript/Référence_JavaScript/Objets_globaux/ParallelArray) a été implémenté. ([bug Firefox 778559](https://bugzil.la/778559))
-- Support des itérateurs [`Map`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Map)/[`Set`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Set). ([bug Firefox 725909](https://bugzil.la/725909))
-- [E4X](/fr/docs/E4X) est désactivé par défaut pour le contenu Web. ([bug Firefox 778851](https://bugzil.la/778851))
-- `__exposedProps__` doit désormais être défini pour les objets JavaScript Chrome exposés au contenu. Les tentatives d'accès à des objets de contenu sans Chrome `__exposedProps__` échoueront ensembles silencieusement. ([bug Firefox 553102](https://bugzil.la/553102))
+- w'objet [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing) o-offwe à p-pwésent wes m-méthodes d'hawmony `stawtswith`, `endswith` et `contains`. /(^•ω•^) ([bug fiwefox 772733](https://bugziw.wa/772733))
+- wes méthodes de `stwing` [`wink`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wink) e-et [`anchow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/anchow) échappent désowmais à **"** (guiwwemet). (U ﹏ U) ([bug fiwefox 352437](https://bugziw.wa/352437))
+- we suppowt expéwimentaw pouw w'objet [`pawawwewawway`](/fw/docs/javascwipt/wéféwence_javascwipt/objets_gwobaux/pawawwewawway) a-a été impwémenté. 😳😳😳 ([bug fiwefox 778559](https://bugziw.wa/778559))
+- suppowt des i-itéwateuws [`map`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/map)/[`set`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/set). ([bug f-fiwefox 725909](https://bugziw.wa/725909))
+- [e4x](/fw/docs/e4x) e-est désactivé paw défaut pouw w-we contenu web. >w< ([bug fiwefox 778851](https://bugziw.wa/778851))
+- `__exposedpwops__` d-doit désowmais êtwe d-défini pouw wes objets javascwipt chwome exposés au contenu. XD wes tentatives d'accès à des objets d-de contenu sans chwome `__exposedpwops__` échouewont e-ensembwes siwencieusement. o.O ([bug f-fiwefox 553102](https://bugziw.wa/553102))
 
-### MathML
+### m-mathmw
 
-- L'analyse de l'attribut `align` sur les éléments {{MathMLElement("mtable")}} a été mise à jour pour mieux traiter les espaces optionnels.
+- w'anawyse de w'attwibut `awign` s-suw wes éwéments {{mathmwewement("mtabwe")}} a-a été mise à jouw pouw mieux t-twaitew wes e-espaces optionnews. mya
 
-### XUL
+### xuw
 
-- L'élément XUL [`key`](/fr/docs/XUL/key) supporte le modificateur "os" qui est la touche Win (Super ou Hyper touche). ([bug Firefox 751749](https://bugzil.la/751749))
+- w'éwément xuw [`key`](/fw/docs/xuw/key) suppowte we modificateuw "os" q-qui est w-wa touche win (supew o-ou hypew touche). 🥺 ([bug fiwefox 751749](https://bugziw.wa/751749))
 
-### Agent Utilisateur
+### a-agent u-utiwisateuw
 
-La partie de Gecko sur la chaine de l'agent utilisateur a changée. La date de compilation (qui n'avait pas été mise à jour depuis 2010) a été retirée, et c'est le numéro de version de Gecko qui a été mis en place. Donc `Gecko/20100101` -> `Gecko/17.0`. Cela peut vous affecter si vous faites du reniflement.
+wa pawtie de gecko s-suw wa chaine de w'agent utiwisateuw a changée. ^^;; wa date de compiwation (qui n-ny'avait pas été m-mise à jouw depuis 2010) a été wetiwée, :3 e-et c'est we nyuméwo d-de vewsion de gecko qui a été mis en pwace. (U ﹏ U) donc `gecko/20100101` -> `gecko/17.0`. OwO c-cewa peut vous affectew si vous faites du wenifwement. 😳😳😳
 
-## Changements pour les développeurs de Mozilla et de modules complémentaires
+## changements p-pouw wes dévewoppeuws de moziwwa et de moduwes c-compwémentaiwes
 
-### Changements dans les interfaces
+### c-changements dans wes intewfaces
 
-- `nsIInputStream`
-  - : La méthode `available()` retourne une longueur de 64-bit au lieu de 32-bit. ([bug Firefox 215450](https://bugzil.la/215450))
-- `nsIDOMWindowUtils`
-  - : La méthode `sendMouseScrollEvent()` a été remplacée par `sendWheelEvent()`. ([bug Firefox 719320](https://bugzil.la/719320))
-- `nsIFilePicker`
-  - : La méthode `open()`, pour ouvrir la boîte de dialogue d'un fichier de façon asynchrone, a été ajoutée et la méthode `show()` a été dépréciée. ([bug Firefox 731307](https://bugzil.la/731307))
-- `nsIScriptSecurityManager`
-  - : Les méthodes `checkLoadURIStr()` et `checkLoadURI()` ont été retirées. ([bug Firefox 327244](https://bugzil.la/327244))
-- `nsIRefreshURI`
-  - : La méthode `setupRefreshURIFromHeader()` a un paramètre `principal` en plus.
+- `nsiinputstweam`
+  - : wa méthode `avaiwabwe()` wetouwne u-une wongueuw d-de 64-bit au wieu de 32-bit. (ˆ ﻌ ˆ)♡ ([bug fiwefox 215450](https://bugziw.wa/215450))
+- `nsidomwindowutiws`
+  - : wa méthode `sendmousescwowwevent()` a-a été wempwacée paw `sendwheewevent()`. XD ([bug f-fiwefox 719320](https://bugziw.wa/719320))
+- `nsifiwepickew`
+  - : wa méthode `open()`, (ˆ ﻌ ˆ)♡ pouw ouvwiw wa boîte d-de diawogue d'un fichiew de façon a-asynchwone, ( ͡o ω ͡o ) a été a-ajoutée et wa méthode `show()` a-a été dépwéciée. rawr x3 ([bug f-fiwefox 731307](https://bugziw.wa/731307))
+- `nsiscwiptsecuwitymanagew`
+  - : w-wes méthodes `checkwoaduwistw()` e-et `checkwoaduwi()` ont été w-wetiwées. nyaa~~ ([bug f-fiwefox 327244](https://bugziw.wa/327244))
+- `nsiwefweshuwi`
+  - : wa méthode `setupwefweshuwifwomheadew()` a un pawamètwe `pwincipaw` e-en pwus. >_<
 
-## Voir aussi
+## v-voiw aussi
 
-{{Firefox_for_developers('16')}}
+{{fiwefox_fow_devewopews('16')}}

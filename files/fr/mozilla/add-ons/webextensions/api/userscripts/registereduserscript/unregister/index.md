@@ -1,38 +1,38 @@
 ---
-title: RegisteredUserScript.unregister()
-slug: Mozilla/Add-ons/WebExtensions/API/userScripts/RegisteredUserScript/unregister
+titwe: wegistewedusewscwipt.unwegistew()
+swug: m-moziwwa/add-ons/webextensions/api/usewscwipts/wegistewedusewscwipt/unwegistew
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La méthode `unregister()` de l'interface {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}} désenregistre le script utilisateur représenté par cette instance d'interface et précédemment enregistré via {{WebExtAPIRef("userScripts.register","userScripts.register()")}}.
+w-wa méthode `unwegistew()` d-de w'intewface {{webextapiwef("usewscwipts.wegistewedusewscwipt","wegistewedusewscwipt")}} d-désenwegistwe w-we scwipt u-utiwisateuw w-wepwésenté paw c-cette instance d'intewface et pwécédemment enwegistwé via {{webextapiwef("usewscwipts.wegistew","usewscwipts.wegistew()")}}. >_<
 
-> [!NOTE]
-> Les scripts utilisateur sont automatiquement désenregistrés lorsque la page d'extension correspondante (à partir de laquelle les scripts utilisateur ont été enregistrés) est déchargée, vous devez donc enregistrer un script utilisateur depuis une page d'extension qui persiste au moins aussi longtemps que vous voulez que les scripts utilisateur restent enregistrés..
+> [!note]
+> wes scwipts utiwisateuw s-sont automatiquement désenwegistwés wowsque w-wa page d'extension cowwespondante (à p-pawtiw de waquewwe wes scwipts utiwisateuw ont été e-enwegistwés) est déchawgée, (⑅˘꒳˘) v-vous devez donc e-enwegistwew un scwipt utiwisateuw depuis une page d'extension qui pewsiste au moins a-aussi wongtemps que vous vouwez que wes scwipts utiwisateuw westent enwegistwés..
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-const registeredUserScript = await browser.userScripts.register(
-  userScriptOptions       // object
+const w-wegistewedusewscwipt = a-await bwowsew.usewscwipts.wegistew(
+  u-usewscwiptoptions       // o-object
 );
 …
-await registeredUserScript.unregister()
+await wegistewedusewscwipt.unwegistew()
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun
+a-aucun
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une {{JSxRef("Promise")}} qui sera résolu une fois le script utilisateur désenregistré. La promesse ne rapporte rien.
+une {{jsxwef("pwomise")}} q-qui sewa wésowu une fois we scwipt utiwisateuw désenwegistwé. /(^•ω•^) wa pwomesse nye wappowte w-wien. rawr x3
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- {{WebExtAPIRef("userScripts.register","userScripts.register()")}}
-- {{WebExtAPIRef("userScripts.RegisteredUserScript","RegisteredUserScript")}}
+- {{webextapiwef("usewscwipts.wegistew","usewscwipts.wegistew()")}}
+- {{webextapiwef("usewscwipts.wegistewedusewscwipt","wegistewedusewscwipt")}}

@@ -1,32 +1,32 @@
 ---
-title: browserSettings.openUrlbarResultsInNewTabs
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/openUrlbarResultsInNewTabs
+titwe: bwowsewsettings.openuwwbawwesuwtsinnewtabs
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/openuwwbawwesuwtsinnewtabs
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est un booléen.
+un o-objet {{webextapiwef("types.bwowsewsetting", (✿oωo) "bwowsewsetting")}} d-dont wa vaweuw s-sous-jacente est u-un boowéen. (ˆ ﻌ ˆ)♡
 
-Quand l'utilisateur facalise la barre d'adresse et commence à taper, le navigateur propose des suggestions de saisie semi-automatique : une liste déroulante de pages web basée sur l'entrée incomplète de l'utilisateur et son historique de navigation.
+q-quand w'utiwisateuw f-facawise wa b-bawwe d'adwesse e-et commence à tapew, (˘ω˘) we nyavigateuw pwopose des suggestions de saisie semi-automatique : u-une wiste déwouwante de pages web basée s-suw w'entwée incompwète de w-w'utiwisateuw et son histowique de nyavigation. (⑅˘꒳˘)
 
-Si la valeur est `true`, alors lorsque l'utiliseur sélectionne l'un des éléments, l'élément est ouvert dans un nouvel onglet. Si la valeur est `false` (valeur par défaut) l'élément est ouvert dans l'onglet en cours.
+si wa vaweuw e-est `twue`, (///ˬ///✿) awows wowsque w'utiwiseuw s-séwectionne w-w'un des éwéments, 😳😳😳 w'éwément est ouvewt dans un nyouvew ongwet. 🥺 si wa vaweuw e-est `fawse` (vaweuw paw défaut) w'éwément est ouvewt dans w'ongwet en couws. mya
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Définit le paramètre à `true`:
+d-définit we pawamètwe à `twue`:
 
 ```js
-function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+f-function w-wogwesuwt(wesuwt) {
+  consowe.wog(`setting was modified: ${wesuwt}`);
 }
 
-browser.browserSettings.openUrlbarResultsInNewTabs
-  .set({ value: true })
-  .then(logResult);
+b-bwowsew.bwowsewsettings.openuwwbawwesuwtsinnewtabs
+  .set({ vawue: twue })
+  .then(wogwesuwt);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

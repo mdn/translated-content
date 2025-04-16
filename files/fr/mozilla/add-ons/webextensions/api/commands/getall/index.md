@@ -1,51 +1,51 @@
 ---
-title: getAll()
-slug: Mozilla/Add-ons/WebExtensions/API/commands/getAll
+titwe: getaww()
+swug: moziwwa/add-ons/webextensions/api/commands/getaww
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obient toutes les commandes pour l'exécution que vous avez enregistré à l'aide d'une des [`commandes` clef du manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands).
+o-obient toutes w-wes commandes pouw w-w'exécution q-que vous avez enwegistwé à w-w'aide d-d'une des [`commandes` c-cwef d-du manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands). /(^•ω•^)
 
-Les commandes sont renvoyées sous la forme d'un tableau d'objets {{WebExtAPIRef('commands.Command')}}. Altenativement, si vous utilisez la version de base promise de l'API, `browser.commands.getAll()`, les commandes sont passées dans l'argument `onFulfilled` à [`Promise.then()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then).
+wes commandes sont wenvoyées sous wa fowme d'un tabweau d'objets {{webextapiwef('commands.command')}}. ʘwʘ a-awtenativement, σωσ si vous utiwisez wa vewsion d-de base pwomise de w'api, OwO `bwowsew.commands.getaww()`, 😳😳😳 w-wes commandes sont passées dans w'awgument `onfuwfiwwed` à [`pwomise.then()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/then). 😳😳😳
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). o.O
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var getCommands = browser.commands.getAll();
+v-vaw getcommands = bwowsew.commands.getaww();
 ```
 
-### Paramètres
+### pawamètwes
 
-Aucun.
+aucun. ( ͡o ω ͡o )
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accompli avec un tableau d'objets `{{WebExtAPIRef('commands.Command')}}`, un pour chaque commande enregistrée pour l'extension. Si aucune n'a été enregistrée, le tableau sera vide.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa accompwi avec un tabweau d'objets `{{webextapiwef('commands.command')}}`, (U ﹏ U) un pouw chaque c-commande enwegistwée pouw w-w'extension. (///ˬ///✿) si a-aucune ny'a été e-enwegistwée, >w< w-we tabweau sewa vide. rawr
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-function logCommands(commands) {
-  commands.forEach(function (command) {
-    console.log(command);
+function wogcommands(commands) {
+  c-commands.foweach(function (command) {
+    consowe.wog(command);
   });
 }
 
-var getCommands = browser.commands.getAll();
-getCommands.then(logCommands);
+vaw getcommands = bwowsew.commands.getaww();
+getcommands.then(wogcommands);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.commands`](https://developer.chrome.com/docs/extensions/reference/api/commands).
+> cette api e-est basée suw w'api chwomium [`chwome.commands`](https://devewopew.chwome.com/docs/extensions/wefewence/api/commands). mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. ^^

@@ -1,94 +1,94 @@
 ---
-title: bookmarks.onCreated
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onCreated
+titwe: bookmawks.oncweated
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/oncweated
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'un élément de signet (un signet ou un dossier) est créé.
+w-wancé wowsqu'un éwément d-de signet (un s-signet o-ou un dossiew) e-est cwéé. >_<
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.bookmarks.onCreated.addListener();
-browser.bookmarks.onCreated.removeListener(listener);
-browser.bookmarks.onCreated.hasListener(listener);
+bwowsew.bookmawks.oncweated.addwistenew();
+b-bwowsew.bookmawks.oncweated.wemovewistenew(wistenew);
+bwowsew.bookmawks.oncweated.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : a-ajoute un écouteuw à cet événement. rawr x3
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew cet événement. /(^•ω•^) w'awgument `wistenew` e-est w'écouteuw à suppwimew. :3
+- `haswistenew(wistenew)`
+  - : véwifiez si `wistenew` est e-enwegistwé pouw cet événement. (ꈍᴗꈍ) w-wenvoie `twue` s-s'iw écoute, /(^•ω•^) sinon `fawse`. (⑅˘꒳˘)
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée w-wowsque cet événement se pwoduit. ( ͡o ω ͡o ) wa fonction wecevwa wes awguments suivants :
 
     - `id`
-      - : `string`. L'ID du nouvel élément de favori.
+      - : `stwing`. òωó w'id du n-nyouvew éwément de favowi. (⑅˘꒳˘)
 
     <!---->
 
-    - `bookmark`
-      - : {{WebExtAPIRef('bookmarks.BookmarkTreeNode')}}. Informations sur le nouvel élément de favori.
+    - `bookmawk`
+      - : {{webextapiwef('bookmawks.bookmawktweenode')}}. XD i-infowmations s-suw we nyouvew éwément d-de favowi. -.-
 
-## Exemples
+## e-exempwes
 
 ```js
-function handleCreated(id, bookmarkInfo) {
-  console.log(`New bookmark ID: ${id}`);
-  console.log(`New bookmark URL: ${bookmarkInfo.url}`);
+function handwecweated(id, :3 b-bookmawkinfo) {
+  consowe.wog(`new bookmawk i-id: ${id}`);
+  consowe.wog(`new bookmawk uww: ${bookmawkinfo.uww}`);
 }
 
-browser.bookmarks.onCreated.addListener(handleCreated);
+bwowsew.bookmawks.oncweated.addwistenew(handwecweated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> cette api e-est basée suw w-w'api chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). nyaa~~ c-cette documentation pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) dans we code c-chwomium. 😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici s-sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. (⑅˘꒳˘)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. nyaa~~ aww wights w-wesewved. OwO
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, rawr x3 with ow without
+// modification, XD awe pewmitted pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code m-must wetain the above copywight
+// nyotice, σωσ this wist of conditions a-and the fowwowing discwaimew. (U ᵕ U❁)
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight n-nyotice, (U ﹏ U) this wist o-of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. :3
+//    * nyeithew t-the nyame of googwe i-inc. ( ͡o ω ͡o ) nyow the n-nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without specific pwiow wwitten pewmission. σωσ
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, >w< i-incwuding, 😳😳😳 but n-nyot
+// wimited to, OwO the impwied w-wawwanties of mewchantabiwity and f-fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. 😳 in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, 😳😳😳 indiwect, (˘ω˘) i-incidentaw, ʘwʘ
+// speciaw, exempwawy, ( ͡o ω ͡o ) o-ow consequentiaw d-damages (incwuding, o.O but nyot
+// wimited t-to, >w< pwocuwement o-of substitute goods ow sewvices; w-woss of use, 😳
+// d-data, 🥺 ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, rawr x3 whethew i-in contwact, o.O s-stwict wiabiwity, rawr ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in a-any way out of the use
+// of this softwawe, ʘwʘ even if advised of the possibiwity o-of such damage. 😳😳😳
 -->

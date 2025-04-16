@@ -1,71 +1,71 @@
 ---
-title: runtime.getManifest()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/getManifest
+titwe: wuntime.getmanifest()
+swug: moziwwa/add-ons/webextensions/api/wuntime/getmanifest
 ---
 
-{{AddonSidebar}}Obtenez le fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json) complet, sérialisé à un objet JSON.
+{{addonsidebaw}}obtenez w-we fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json) c-compwet, mya s-séwiawisé à u-un objet json. (⑅˘꒳˘)
 
-## Syntaxe
-
-```js
-browser.runtime.getManifest();
-```
-
-### Paramètres
-
-None.
-
-### Valeur retournée
-
-Un `object` JSON représentant le manifest.
-
-## Compatibilité des navigateurs
-
-{{Compat}}
-
-## Exemples
-
-Récupère le manifest et consignez la propriété "name" :
+## s-syntaxe
 
 ```js
-var manifest = browser.runtime.getManifest();
-console.log(manifest.name);
+b-bwowsew.wuntime.getmanifest();
 ```
 
-{{WebExtExamples}}
+### p-pawamètwes
 
-> [!NOTE]
+n-nyone.
+
+### vaweuw wetouwnée
+
+un `object` json wepwésentant we manifest. (U ﹏ U)
+
+## c-compatibiwité des nyavigateuws
+
+{{compat}}
+
+## exempwes
+
+w-wécupèwe we manifest et consignez w-wa pwopwiété "name" :
+
+```js
+vaw manifest = bwowsew.wuntime.getmanifest();
+consowe.wog(manifest.name);
+```
+
+{{webextexampwes}}
+
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api c-chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). c-cette documentation est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de chwomium c-code. mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw w-wes États-unis. ʘwʘ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the c-chwomium authows. (˘ω˘) aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce and binawy fowms, ^•ﻌ•^ with ow without
+// modification, (˘ω˘) awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// n-nyotice, :3 this wist o-of conditions and the fowwowing d-discwaimew. ^^;;
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, 🥺 this wist of conditions and t-the fowwowing discwaimew
+// in t-the documentation and/ow othew matewiaws p-pwovided w-with the
+// distwibution. (⑅˘꒳˘)
+//    * nyeithew the nyame of googwe inc. nyaa~~ nyow the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, ( ͡o ω ͡o ) incwuding, but nyot
+// w-wimited to, mya the impwied wawwanties o-of mewchantabiwity a-and fitness f-fow
+// a pawticuwaw puwpose a-awe discwaimed. i-in nyo event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (///ˬ///✿) i-indiwect, (˘ω˘) i-incidentaw, ^^;;
+// speciaw, e-exempwawy, (✿oωo) o-ow consequentiaw d-damages (incwuding, (U ﹏ U) but nyot
+// wimited to, -.- pwocuwement of substitute g-goods ow sewvices; woss of use, ^•ﻌ•^
+// data, rawr ow pwofits; ow business intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, (˘ω˘) whethew in contwact, nyaa~~ s-stwict wiabiwity, UwU o-ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising in any way out of the u-use
+// of this softwawe, :3 e-even if advised of the possibiwity of such damage. (⑅˘꒳˘)
 -->

@@ -1,151 +1,151 @@
 ---
-title: history.search()
-slug: Mozilla/Add-ons/WebExtensions/API/history/search
+titwe: histowy.seawch()
+swug: m-moziwwa/add-ons/webextensions/api/histowy/seawch
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Recherche dans l'historique du navigateur les objets {{WebExtAPIRef("history.HistoryItem")}} correspondant aux critères donnés.
+w-wechewche d-dans w'histowique d-du nyavigateuw w-wes objets {{webextapiwef("histowy.histowyitem")}} c-cowwespondant a-aux cwitèwes d-donnés. /(^•ω•^)
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 🥺
 
-## Syntaxe
+## syntaxe
 
 ```js
-var searching = browser.history.search(
-  query, // object
+v-vaw seawching = bwowsew.histowy.seawch(
+  quewy, ʘwʘ // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `query`
+- `quewy`
 
-  - : Un objet qui indique ce qu'il faut rechercher dans l'historique du navigateur. Cet objet a les champs suivants :
+  - : un objet q-qui indique ce qu'iw faut wechewchew dans w'histowique du nyavigateuw. c-cet objet a wes champs s-suivants :
 
     - `text`
 
-      - : `string`. Rechercher des éléments d'historique par URL et titre. La chaîne est divisée en termes de recherche distincts aux limites de l'espace. Chaque terme de recherche est insensible à la casse par rapport à l'URL et au titre de l'élément d'historique. L'élément d'historique sera renvoyé si tous les termes de recherche correspondent.
+      - : `stwing`. UwU wechewchew d-des éwéments d'histowique paw uww et titwe. XD wa chaîne est divisée e-en tewmes de wechewche distincts aux wimites de w'espace. (✿oωo) chaque tewme de wechewche e-est insensibwe à wa casse paw w-wappowt à w'uww e-et au titwe d-de w'éwément d'histowique. :3 w-w'éwément d'histowique sewa wenvoyé s-si tous wes tewmes de wechewche cowwespondent. (///ˬ///✿)
 
-        Par exemple, considérez cet article :
+        p-paw exempwe, nyaa~~ considéwez cet awticwe :
 
-        URL: `"http://example.org"`
+        uww: `"http://exampwe.owg"`
 
-        Title: `"Example Domain"`
+        titwe: `"exampwe domain"`
 
         ```
-        "http"              -> matches
+        "http"              -> m-matches
         "domain"            -> matches
-        "MAIN ample"        -> matches
-        "main tt"           -> matches
-        "main https"        -> does not match
+        "main a-ampwe"        -> m-matches
+        "main t-tt"           -> matches
+        "main https"        -> does nyot match
         ```
 
-        Spécifiez une chaîne vide (`""`) pour récupérer tous les objets {{WebExtAPIRef("history.HistoryItem")}} qui répondent à tous les autres critères.
+        s-spécifiez u-une chaîne vide (`""`) pouw w-wécupéwew tous w-wes objets {{webextapiwef("histowy.histowyitem")}} qui wépondent à t-tous wes autwes cwitèwes. >w<
 
-    - `startTime` {{optional_inline}}
-      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par : un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est antérieure à cette heure. Si elle est omise, la recherche est limitée aux dernières 24 heures.
-    - `endTime` {{optional_inline}}
-      - : `number` ou `string` ou `object`. Une valeur indiquant une date et une heure. Cela peut être représenté par : un objet [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), une [chaîne de date ISO 8601](http://www.iso.org/iso/home/standards/iso8601.htm), ou le nombre de millisecondes depuis l'époque. Si elle est fournie, cette option exclut les résultats dont `lastVisitTime` est postérieur à cette fois. Si elle est omise, toutes les entrées sont prises en compte à partir de l'heure de début.
-    - `maxResults` {{optional_inline}}
-      - : `number`. Le nombre maximum de résultats à récupérer. La valeur par défaut est 100, avec une valeur minimale de 1. La fonction renvoie une erreur si vous lui transmettez une valeur `maxResults` inférieure à 1.
+    - `stawttime` {{optionaw_inwine}}
+      - : `numbew` o-ou `stwing` ou `object`. -.- une vaweuw indiquant u-une date et une heuwe. (✿oωo) c-cewa peut êtwe wepwésenté paw : u-un objet [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date), (˘ω˘) u-une [chaîne de date iso 8601](http://www.iso.owg/iso/home/standawds/iso8601.htm), rawr ou we nyombwe de miwwisecondes depuis w'époque. OwO si ewwe est fouwnie, ^•ﻌ•^ c-cette option e-excwut wes wésuwtats dont `wastvisittime` e-est a-antéwieuwe à c-cette heuwe. si ewwe est omise, UwU wa wechewche est wimitée aux dewnièwes 24 h-heuwes. (˘ω˘)
+    - `endtime` {{optionaw_inwine}}
+      - : `numbew` ou `stwing` ou `object`. (///ˬ///✿) une vaweuw indiquant une date e-et une heuwe. σωσ cewa peut êtwe w-wepwésenté paw : u-un objet [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date), /(^•ω•^) u-une [chaîne de date i-iso 8601](http://www.iso.owg/iso/home/standawds/iso8601.htm), 😳 o-ou we nyombwe de m-miwwisecondes d-depuis w'époque. 😳 si ewwe est fouwnie, (⑅˘꒳˘) cette option e-excwut wes wésuwtats d-dont `wastvisittime` est p-postéwieuw à c-cette fois. 😳😳😳 si e-ewwe est omise, 😳 toutes wes entwées sont pwises en compte à pawtiw d-de w'heuwe de début. XD
+    - `maxwesuwts` {{optionaw_inwine}}
+      - : `numbew`. mya we nyombwe maximum de wésuwtats à wécupéwew. ^•ﻌ•^ wa vaweuw p-paw défaut est 100, ʘwʘ avec une vaweuw minimawe de 1. ( ͡o ω ͡o ) wa fonction w-wenvoie une ewweuw s-si vous wui t-twansmettez une vaweuw `maxwesuwts` i-inféwieuwe à 1.
 
-### Valeur retournée
+### vaweuw w-wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) sera remplie avec un tableau d'objets de type {{WebExtAPIRef("history.HistoryItem")}}, chacun décrivant un seul élément d'historique correspondant. Les articles sont triés dans l'ordre chronologique inverse.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) s-sewa wempwie avec un tabweau d'objets de type {{webextapiwef("histowy.histowyitem")}}, mya chacun décwivant un seuw éwément d-d'histowique cowwespondant. o.O wes a-awticwes sont twiés dans w'owdwe c-chwonowogique i-invewse. (✿oωo)
 
-## Exemples
+## exempwes
 
-Consigne l'URL et la dernière heure de visite pour tous les éléments d'historique visités au cours des dernières 24 heures :
+consigne w'uww et wa dewnièwe h-heuwe de v-visite pouw tous wes éwéments d-d'histowique visités a-au couws des dewnièwes 24 heuwes :
 
 ```js
-function onGot(historyItems) {
-  for (item of historyItems) {
-    console.log(item.url);
-    console.log(new Date(item.lastVisitTime));
+function ongot(histowyitems) {
+  fow (item of h-histowyitems) {
+    c-consowe.wog(item.uww);
+    c-consowe.wog(new date(item.wastvisittime));
   }
 }
 
-var searching = browser.history.search({ text: "" });
+v-vaw seawching = b-bwowsew.histowy.seawch({ text: "" });
 
-searching.then(onGot);
+s-seawching.then(ongot);
 ```
 
-Logs the URL and last visit time for all history items ever visited:
+wogs the uww and wast visit time fow aww histowy items evew v-visited:
 
 ```js
-function onGot(historyItems) {
-  for (item of historyItems) {
-    console.log(item.url);
-    console.log(new Date(item.lastVisitTime));
+f-function ongot(histowyitems) {
+  fow (item of histowyitems) {
+    consowe.wog(item.uww);
+    c-consowe.wog(new d-date(item.wastvisittime));
   }
 }
 
-var searching = browser.history.search({
-  text: "",
-  startTime: 0,
+vaw seawching = bwowsew.histowy.seawch({
+  text: "", :3
+  s-stawttime: 0, 😳
 });
 
-searching.then(onGot);
+seawching.then(ongot);
 ```
 
-Consigne l'URL et la dernière visite de la dernière visite sur une page contenant la chaîne "mozilla" :
+consigne w'uww et wa dewnièwe visite de wa d-dewnièwe visite suw une page contenant wa chaîne "moziwwa" :
 
 ```js
-function onGot(historyItems) {
-  for (item of historyItems) {
-    console.log(item.url);
-    console.log(new Date(item.lastVisitTime));
+f-function o-ongot(histowyitems) {
+  fow (item of histowyitems) {
+    consowe.wog(item.uww);
+    c-consowe.wog(new d-date(item.wastvisittime));
   }
 }
 
-var searching = browser.history.search({
-  text: "mozilla",
-  startTime: 0,
-  maxResults: 1,
+vaw seawching = bwowsew.histowy.seawch({
+  text: "moziwwa", (U ﹏ U)
+  s-stawttime: 0, mya
+  maxwesuwts: 1, (U ᵕ U❁)
 });
 
-searching.then(onGot);
+s-seawching.then(ongot);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.history`](https://developer.chrome.com/docs/extensions/reference/api/history). Cette documentation est dérivée de [`history.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/history.json) dans le code de Chromium.
+> cette api e-est basée suw w'api chwomium [`chwome.histowy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/histowy). :3 c-cette documentation e-est déwivée de [`histowy.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/histowy.json) d-dans we code de chwomium. mya
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft c-cowpowation et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 p-pouw wes États-unis. OwO
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. a-aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, ʘwʘ with ow without
+// modification, o.O a-awe pewmitted p-pwovided that t-the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, UwU this wist of conditions a-and the fowwowing discwaimew. rawr x3
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, 🥺 this wist o-of conditions a-and the fowwowing d-discwaimew
+// i-in the documentation a-and/ow othew matewiaws pwovided with the
+// distwibution. :3
+//    * nyeithew the nyame of googwe inc. (ꈍᴗꈍ) nyow the n-nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, (✿oωo) i-incwuding, (U ﹏ U) but nyot
+// w-wimited to, :3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose a-awe discwaimed. ^^;; i-in nyo event s-shaww the copywight
+// o-ownew ow contwibutows be w-wiabwe fow any d-diwect, rawr indiwect, 😳😳😳 incidentaw,
+// s-speciaw, (✿oωo) exempwawy, OwO o-ow consequentiaw damages (incwuding, ʘwʘ b-but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ pwocuwement of s-substitute goods ow sewvices; w-woss of use, (U ﹏ U)
+// d-data, UwU ow pwofits; ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, XD whethew i-in contwact, ʘwʘ s-stwict wiabiwity, rawr x3 ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this s-softwawe, ^^;; even i-if advised of the possibiwity of s-such damage. ʘwʘ
 -->

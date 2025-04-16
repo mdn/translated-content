@@ -1,65 +1,65 @@
 ---
-title: extension.setUpdateUrlData()
-slug: Mozilla/Add-ons/WebExtensions/API/extension/setUpdateUrlData
+titwe: extension.setupdateuwwdata()
+swug: moziwwa/add-ons/webextensions/api/extension/setupdateuwwdata
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit les paramètres de l'URL de mise à jour de l'extension. Cette valeur est ignorée pour les extensions hébergées dans le magasin du fournisseur du navigateur.
+d-définit wes pawamètwes d-de w'uww d-de mise à jouw d-de w'extension. (⑅˘꒳˘) c-cette vaweuw e-est ignowée pouw w-wes extensions h-hébewgées dans we magasin du fouwnisseuw du navigateuw. OwO
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.extension.setUpdateUrlData(
-  data, // string
+bwowsew.extension.setupdateuwwdata(
+  data, (ꈍᴗꈍ) // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `data`
-  - : `string`.
+  - : `stwing`. 😳
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.extension`](https://developer.chrome.com/docs/extensions/reference/api/extension). Cette documentation est dérivée de [`extension.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/extension.json) dans le code Chromium.
+> cette api e-est basée suw w'api chwomium [`chwome.extension`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extension). cette documentation est d-déwivée de [`extension.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/extension.json) dans we code c-chwomium. 😳😳😳
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. mya
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium a-authows. mya aww wights w-wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy f-fowms, (U ﹏ U) with ow without
+// modification, mya awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, t-this wist of conditions a-and the fowwowing discwaimew. ʘwʘ
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the above
+// copywight n-nyotice, (˘ω˘) this w-wist of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided with the
+// d-distwibution. (U ﹏ U)
+//    * nyeithew t-the nyame of googwe inc. ^•ﻌ•^ nyow t-the nyames of i-its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. (˘ω˘)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight h-howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, :3 i-incwuding, ^^;; but nyot
+// wimited to, 🥺 the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. (⑅˘꒳˘) i-in nyo e-event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow a-any diwect, nyaa~~ indiwect, :3 i-incidentaw, ( ͡o ω ͡o )
+// speciaw, mya exempwawy, ow consequentiaw d-damages (incwuding, (///ˬ///✿) but n-nyot
+// wimited t-to, (˘ω˘) pwocuwement o-of substitute g-goods ow sewvices; woss of use, ^^;;
+// data, (✿oωo) ow pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy of wiabiwity, (U ﹏ U) whethew in contwact, -.- stwict wiabiwity, ^•ﻌ•^ o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of t-this softwawe, rawr e-even if advised of the possibiwity o-of such damage. (˘ω˘)
 -->

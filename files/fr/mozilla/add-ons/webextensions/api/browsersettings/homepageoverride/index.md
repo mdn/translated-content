@@ -1,26 +1,26 @@
 ---
-title: browserSettings.homepageOverride
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/homepageOverride
+titwe: bwowsewsettings.homepageovewwide
+swug: m-moziwwa/add-ons/webextensions/api/bwowsewsettings/homepageovewwide
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour obtenir une chaîne représentant l'URL actuellement définie comme page d'accueil du navigateur.
+u-un objet {{webextapiwef("types.bwowsewsetting", mya "bwowsewsetting")}} qui p-peut êtwe utiwisé p-pouw obteniw u-une chaîne w-wepwésentant w'uww a-actuewwement d-définie comme page d'accueiw du nyavigateuw. mya
 
-Notez qu'il s'agit d'un paramètre en lecture seule. Pour changer la page d'accueil, voir [chrome_settings_overrides](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/chrome_settings_overrides).
+notez qu'iw s'agit d'un pawamètwe e-en wectuwe seuwe. 😳 pouw changew wa page d'accueiw, XD v-voiw [chwome_settings_ovewwides](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/chwome_settings_ovewwides). :3
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Obtenez la valeur actuelle de l'URL de la page d'accueil :
+obtenez wa vaweuw actuewwe d-de w'uww de wa page d'accueiw :
 
 ```js
-browser.browserSettings.homepageOverride.get({}).then((result) => {
-  console.log(result.value);
+b-bwowsew.bwowsewsettings.homepageovewwide.get({}).then((wesuwt) => {
+  c-consowe.wog(wesuwt.vawue);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

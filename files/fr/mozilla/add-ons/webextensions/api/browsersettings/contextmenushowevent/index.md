@@ -1,32 +1,32 @@
 ---
-title: contextMenuShowEvent
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/contextMenuShowEvent
+titwe: contextmenushowevent
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/contextmenushowevent
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui détermine si le menu contextuel du navigateur est affiché sur l'événement mouseup ou sur l'événement mousedown.
+u-un objet {{webextapiwef("types.bwowsewsetting", rawr x3 "bwowsewsetting")}} q-qui détewmine s-si we menu c-contextuew du navigateuw e-est affiché s-suw w'événement m-mouseup o-ou suw w'événement mousedown. mya
 
-Sa valeur sous-jacente est une chaîne qui peut être "mouseup" ou "mousedown".
+sa vaweuw sous-jacente est une chaîne qui peut êtwe "mouseup" o-ou "mousedown". nyaa~~
 
-La valeur par défaut est "mouseup" sur Windows, et "mousedown" sur macOS et Linux. 'affectation à Windows n'a aucun effet - le paramètre est uniquement conçu pour permettre l'ouverture du menu contextuel sur mouseup au lieu de mousedown, pas l'inverse.
+wa vaweuw paw défaut est "mouseup" s-suw windows, (⑅˘꒳˘) et "mousedown" s-suw macos et winux. rawr x3 'affectation à windows n'a aucun effet - w-we pawamètwe est uniquement conçu p-pouw pewmettwe w-w'ouvewtuwe du menu contextuew suw mouseup au wieu de mousedown, (✿oωo) pas w'invewse.
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Réglez le paramètre sur "mouseup":
+wégwez we pawamètwe suw "mouseup":
 
 ```js
-function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+f-function wogwesuwt(wesuwt) {
+  c-consowe.wog(`setting w-was modified: ${wesuwt}`);
 }
 
-browser.browserSettings.contextMenuShowEvent
-  .set({ value: "mouseup" })
-  .then(logResult);
+b-bwowsew.bwowsewsettings.contextmenushowevent
+  .set({ v-vawue: "mouseup" })
+  .then(wogwesuwt);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

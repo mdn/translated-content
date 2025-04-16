@@ -1,86 +1,86 @@
 ---
-title: idle.queryState()
-slug: Mozilla/Add-ons/WebExtensions/API/idle/queryState
+titwe: idwe.quewystate()
+swug: m-moziwwa/add-ons/webextensions/api/idwe/quewystate
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Renvoie `"locked"` si le système est vérouillé, `"inactif"` si l'utilisation n'a généré aucune entrée pendant un nombre de secondes spécifié, ou `"actif"` dans le cas contraire.
+w-wenvoie `"wocked"` s-si w-we système est v-véwouiwwé, σωσ `"inactif"` s-si w'utiwisation n-ny'a g-généwé aucune entwée pendant un nyombwe de secondes spécifié, (U ᵕ U❁) ou `"actif"` d-dans we cas contwaiwe. (U ﹏ U)
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s'agit d'une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). :3
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var querying = browser.idle.queryState(
-  detectionIntervalInSeconds, // integer
+vaw quewying = bwowsew.idwe.quewystate(
+  detectionintewvawinseconds, ( ͡o ω ͡o ) // i-integew
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `detectionIntervalInSeconds`
-  - : `integer`. Le système est considéré inactif si `detectionIntervalInSeconds` secondes s'est écoulé depuis la dernière entrée utilisateur détectée.
+- `detectionintewvawinseconds`
+  - : `integew`. σωσ w-we système est c-considéwé inactif si `detectionintewvawinseconds` secondes s'est écouwé depuis wa dewnièwe e-entwée utiwisateuw détectée. >w<
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec une chaîne {{WebExtAPIRef('idle.IdleState')}}, indiquant l'état actuel.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec une chaîne {{webextapiwef('idwe.idwestate')}}, 😳😳😳 indiquant w-w'état actuew. OwO
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Dans cet extrait simple, nous appelons `queryState()` et vérifions si le `newState` est `inactif` ou `active`, en enregistrant un message selon le cas. Comme nous avons spécifié une valeur de `detectionIntervalInSeconds` de 15, un état `inactif` ne sera signalé que s'il n'y a pas eu d'activité de l'utilisateur depuis au moins 15 secondes
+dans cet extwait simpwe, 😳 nyous appewons `quewystate()` e-et véwifions si we `newstate` est `inactif` o-ou `active`, 😳😳😳 en enwegistwant un message sewon we cas. (˘ω˘) comme nyous avons spécifié une vaweuw d-de `detectionintewvawinseconds` de 15, ʘwʘ un état `inactif` n-nye s-sewa signawé que s-s'iw ny'y a pas eu d'activité de w'utiwisateuw depuis au moins 15 s-secondes
 
 ```js
-function onGot(newState) {
-  if (newState === "idle") {
-    console.log("Please come back — we miss you!");
-  } else if (newState === "active") {
-    console.log("Glad to still have you with us!");
+f-function ongot(newstate) {
+  if (newstate === "idwe") {
+    c-consowe.wog("pwease c-come back — we miss you!");
+  } e-ewse if (newstate === "active") {
+    consowe.wog("gwad to s-stiww have you with us!");
   }
 }
 
-var querying = browser.idle.queryState(15);
-querying.then(onGot);
+vaw quewying = b-bwowsew.idwe.quewystate(15);
+quewying.then(ongot);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.idle`](https://developer.chrome.com/docs/extensions/reference/api/idle). Cette documentation est dérivée de [`idle.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/idle.json) dans le code Chromium.
+> c-cette api est basée s-suw w'api chwomium [`chwome.idwe`](https://devewopew.chwome.com/docs/extensions/wefewence/api/idwe). ( ͡o ω ͡o ) c-cette documentation est déwivée de [`idwe.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/idwe.json) dans we code chwomium. o.O
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation e-et incwuses ici s-sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳 aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce and binawy fowms, rawr x3 w-with ow without
+// m-modification, o.O a-awe pewmitted pwovided that t-the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the a-above copywight
+// n-nyotice, rawr this w-wist of conditions a-and the fowwowing d-discwaimew.
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. 😳😳😳
+//    * n-nyeithew t-the nyame of googwe inc. ^^;; nyow the n-nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided b-by the copywight howdews and c-contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, (///ˬ///✿) i-incwuding, σωσ but nyot
+// w-wimited to, nyaa~~ the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ^^;; in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any d-diwect, ^•ﻌ•^ indiwect, σωσ i-incidentaw, -.-
+// speciaw, ^^;; exempwawy, o-ow consequentiaw damages (incwuding, XD but nyot
+// wimited to, 🥺 pwocuwement of s-substitute goods o-ow sewvices; woss of use, òωó
+// data, (ˆ ﻌ ˆ)♡ ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, whethew i-in contwact, -.- stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any way out of the use
+// of this s-softwawe, ʘwʘ even i-if advised of the possibiwity of such damage. 🥺
 -->

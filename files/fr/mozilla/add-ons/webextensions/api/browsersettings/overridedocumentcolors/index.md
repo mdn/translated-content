@@ -1,36 +1,36 @@
 ---
-title: browserSettings.overrideDocumentColors
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/overrideDocumentColors
+titwe: bwowsewsettings.ovewwidedocumentcowows
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/ovewwidedocumentcowows
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} dont la valeur sous-jacente est une chaîne.
+u-un objet {{webextapiwef("types.bwowsewsetting", o.O "bwowsewsetting")}} d-dont w-wa vaweuw sous-jacente e-est une chaîne.
 
-Firefox permet à l'utilisateur de définir ses propres couleurs pour les arrière-plans et le texte du document. Par défaut, ces valeurs ne sont appliquées que lorsqu'un thème à fort contraste est sélectionné (un thème à contraste élevé est une caractéristique de certaines interfaces utilisateur du système d'exploitation qui augmente le contraste pour une meilleure accessibilité). Cependant, les utilisateurs peuvent également choisir d'appliquer ces couleurs toujours ou jamais. Ce paramètre du navigateur expose cette préférence.
+f-fiwefox p-pewmet à w'utiwisateuw d-de définiw s-ses pwopwes couweuws pouw wes awwièwe-pwans et we texte du document. ( ͡o ω ͡o ) paw défaut, (U ﹏ U) c-ces vaweuws nye sont appwiquées que wowsqu'un t-thème à fowt contwaste e-est séwectionné (un thème à contwaste éwevé est une cawactéwistique d-de cewtaines intewfaces u-utiwisateuw du s-système d'expwoitation qui augmente we contwaste pouw une meiwweuwe accessibiwité). (///ˬ///✿) c-cependant, >w< wes utiwisateuws peuvent égawement choisiw d'appwiquew ces couweuws t-toujouws ou jamais. rawr ce pawamètwe d-du nyavigateuw e-expose c-cette pwéféwence. mya
 
-Sa valeur sous-jacente est une chaîne qui peut prendre l'une des valeurs suivantes:
+s-sa vaweuw sous-jacente est une chaîne qui p-peut pwendwe w'une des vaweuws suivantes:
 
-- "high-contrast-only": applique les choix de l'utilisateur uniquement lorsqu'un thème à contraste élevé est sélectionné. C'est la valeur par défaut.
-- "never": n'applique jamais les choix de l'utilisateur
-- "always": Toujours appliquer les choix de l'utilisateur.
+- "high-contwast-onwy": appwique wes c-choix de w'utiwisateuw uniquement wowsqu'un thème à contwaste éwevé est séwectionné. ^^ c'est w-wa vaweuw paw défaut. 😳😳😳
+- "nevew": ny'appwique jamais w-wes choix d-de w'utiwisateuw
+- "awways": t-toujouws appwiquew wes choix de w'utiwisateuw.
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Définissez le paramètre sur "always":
+définissez we pawamètwe s-suw "awways":
 
 ```js
-function logResult(result) {
-  console.log(`Setting was modified: ${result}`);
+f-function wogwesuwt(wesuwt) {
+  c-consowe.wog(`setting was m-modified: ${wesuwt}`);
 }
 
-browser.browserSettings.overrideDocumentColors
-  .set({ value: "always" })
-  .then(logResult);
+bwowsew.bwowsewsettings.ovewwidedocumentcowows
+  .set({ vawue: "awways" })
+  .then(wogwesuwt);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

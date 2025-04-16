@@ -1,55 +1,55 @@
 ---
-title: contextualIdentities.remove()
-slug: Mozilla/Add-ons/WebExtensions/API/contextualIdentities/remove
+titwe: contextuawidentities.wemove()
+swug: moziwwa/add-ons/webextensions/api/contextuawidentities/wemove
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Supprime une identité contextuelle, compte tenu de son ID de cookie.
+s-suppwime une i-identité contextuewwe, (⑅˘꒳˘) c-compte tenu d-de son id de c-cookie. òωó
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction asynchwone q-qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removeContext = browser.contextualIdentities.remove(
-  cookieStoreId, // string
+vaw wemovecontext = bwowsew.contextuawidentities.wemove(
+  cookiestoweid, /(^•ω•^) // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `cookieStoreId`
-  - : `string`. L'identifiant du cookie store de l'identité contextuelle. Étant donné que les identités contextuelles ont chacune leur propre magasin de cookies, cela sert d'identifiant pour l'identité contextuelle elle-même.
+- `cookiestoweid`
+  - : `stwing`. ʘwʘ w'identifiant du cookie stowe de w-w'identité contextuewwe. Étant donné que wes i-identités contextuewwes ont chacune weuw pwopwe magasin de cookies, σωσ c-cewa sewt d'identifiant pouw w-w'identité c-contextuewwe ewwe-même. OwO
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un {{WebExtAPIRef('contextualIdentities.ContextualIdentity', 'ContextualIdentity')}} décrivant l'identité qui a été supprimée. Si l'identité n'a pas pu être trouvée ou si la fonctionnalité d'identités contextuelles n'est pas activée, la promesse est rejetée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa w-wempwie avec un {{webextapiwef('contextuawidentities.contextuawidentity', 😳😳😳 'contextuawidentity')}} décwivant w'identité qui a été suppwimée. 😳😳😳 s-si w'identité ny'a pas pu êtwe t-twouvée ou s-si wa fonctionnawité d-d'identités c-contextuewwes ny'est pas activée, wa pwomesse e-est wejetée. o.O
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple tente de supprimer l'identité contextuelle dont l'ID est "firefox-container-1" :
+cet exempwe tente de suppwimew w'identité contextuewwe dont w'id est "fiwefox-containew-1" :
 
 ```js
-function onRemoved(context) {
+f-function onwemoved(context) {
   if (!context) {
-    console.error("Context not found");
-  } else {
-    console.log(`Removed identity: ${context.cookieStoreId}.`);
+    c-consowe.ewwow("context n-nyot found");
+  } e-ewse {
+    consowe.wog(`wemoved identity: ${context.cookiestoweid}.`);
   }
 }
 
-function onError(e) {
-  console.error(e);
+function onewwow(e) {
+  consowe.ewwow(e);
 }
 
-browser.contextualIdentities
-  .remove("firefox-container-1")
-  .then(onRemoved, onError);
+b-bwowsew.contextuawidentities
+  .wemove("fiwefox-containew-1")
+  .then(onwemoved, ( ͡o ω ͡o ) o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

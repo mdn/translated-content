@@ -1,318 +1,318 @@
 ---
-title: 如何建構 HTML 表單
-slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
+titwe: 如何建構 htmw 表單
+s-swug: weawn_web_devewopment/extensions/fowms/how_to_stwuctuwe_a_web_fowm
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn_web_devewopment/extensions/fowms/youw_fiwst_fowm", "weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows", XD "weawn_web_devewopment/extensions/fowms")}}
 
 有了基礎後，我們就能探討表單元素，所提供的結構與文意之詳細資訊；還有各表單部份的相異之處。
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">先決條件：</th>
+    <tw>
+      <th s-scope="wow">先決條件：</th>
       <td>
         對電腦還有
-        <a href="/zh-TW/docs/Learn_web_development/Core/Structuring_content">HTML</a>
+        <a h-hwef="/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content">htmw</a>
         有基本理解。
       </td>
-    </tr>
-    <tr>
-      <th scope="row">目標：</th>
-      <td>理解如何構建 HTML 表單並給予無障礙的語意化。</td>
-    </tr>
+    </tw>
+    <tw>
+      <th s-scope="wow">目標：</th>
+      <td>理解如何構建 h-htmw 表單並給予無障礙的語意化。</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-表單表單的彈性化令其成為 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content) 最複雜的結構之一。你能使用專用的表單元素和屬性，來構建任何類型的基本表單。使用正確的 HTML 表單結構能讓確保表單可用、且[無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility)。
+表單表單的彈性化令其成為 [htmw](/zh-tw/docs/weawn_web_devewopment/cowe/stwuctuwing_content) 最複雜的結構之一。你能使用專用的表單元素和屬性，來構建任何類型的基本表單。使用正確的 h-htmw 表單結構能讓確保表單可用、且[無障礙](/zh-tw/docs/weawn_web_devewopment/cowe/accessibiwity)。
 
-## \<form> 元素
+## \<fowm> 元素
 
-{{HTMLElement("form")}} 元素會形式上的定義表單和決定行為屬性。每次建立 HTML 表單時，都必須使用 form 元素；並將所有內容嵌進去。大多數的輔助技術與瀏覽器套件，都能抓到 {{HTMLElement("form")}} 元素，並實做特殊的 hook，使其更易於使用。
+{{htmwewement("fowm")}} 元素會形式上的定義表單和決定行為屬性。每次建立 h-htmw 表單時，都必須使用 f-fowm 元素；並將所有內容嵌進去。大多數的輔助技術與瀏覽器套件，都能抓到 {{htmwewement("fowm")}} 元素，並實做特殊的 hook，使其更易於使用。
 
 我們之前就講過這件事了。
 
-> [!WARNING]
+> [!wawning]
 > 絕對不能在表單裡面再嵌入表單。這會讓表單行為變得難以理解，所以是一個壞主意。
 
-你可以從表單外面控制 {{HTMLElement("form")}} 。這麼做的話，除非使用 [`form`](/zh-TW/docs/Web/HTML/Attributes/form) 將其與表單關聯，否則該操作預設上和任何表單無關。引入此功能是為了可以在即使該操作未嵌在表單中，其依舊能顯式地將操作與表單綁定。
+你可以從表單外面控制 {{htmwewement("fowm")}} 。這麼做的話，除非使用 [`fowm`](/zh-tw/docs/web/htmw/attwibutes/fowm) 將其與表單關聯，否則該操作預設上和任何表單無關。引入此功能是為了可以在即使該操作未嵌在表單中，其依舊能顯式地將操作與表單綁定。
 
 接下來就開始探討表單裡面可能會嵌入什麼吧。
 
-## \<fieldset> and \<legend> 元素
+## \<fiewdset> and \<wegend> 元素
 
-{{HTMLElement("fieldset")}} 元素能方便地建立用途相近、樣式及語意化都很方便的小部件組（groups of widgets）。你可以透過添加 {{HTMLElement("legend")}} 來給 {{HTMLElement("fieldset")}} 的內部開頭添加標籤。{{HTMLElement("legend")}} 的文字內容能描述 {{HTMLElement("legend")}} 目的。
+{{htmwewement("fiewdset")}} 元素能方便地建立用途相近、樣式及語意化都很方便的小部件組（gwoups of widgets）。你可以透過添加 {{htmwewement("wegend")}} 來給 {{htmwewement("fiewdset")}} 的內部開頭添加標籤。{{htmwewement("wegend")}} 的文字內容能描述 {{htmwewement("wegend")}} 目的。
 
-多數輔助科技會在 {{HTMLElement("legend")}} 元素被 {{HTMLElement("fieldset")}} 包住時偵測並使用它。比如說 [Jaws](http://www.freedomscientific.com/products/software/jaws/) 與 [NVDA](http://www.nvda-project.org/) 之類的螢幕報讀器就會在讀到每個控件的標籤前，讀出 legend 的內容。
+多數輔助科技會在 {{htmwewement("wegend")}} 元素被 {{htmwewement("fiewdset")}} 包住時偵測並使用它。比如說 [jaws](http://www.fweedomscientific.com/pwoducts/softwawe/jaws/) 與 [nvda](http://www.nvda-pwoject.owg/) 之類的螢幕報讀器就會在讀到每個控件的標籤前，讀出 w-wegend 的內容。
 
 下面就有一個示例：
 
-```html
-<form>
-  <fieldset>
-    <legend>Fruit juice size</legend>
+```htmw
+<fowm>
+  <fiewdset>
+    <wegend>fwuit juice size</wegend>
     <p>
-      <input type="radio" name="size" id="size_1" value="small" />
-      <label for="size_1">Small</label>
+      <input t-type="wadio" nyame="size" id="size_1" v-vawue="smow" />
+      <wabew fow="size_1">smow</wabew>
     </p>
     <p>
-      <input type="radio" name="size" id="size_2" value="medium" />
-      <label for="size_2">Medium</label>
+      <input type="wadio" nyame="size" id="size_2" v-vawue="medium" />
+      <wabew fow="size_2">medium</wabew>
     </p>
     <p>
-      <input type="radio" name="size" id="size_3" value="large" />
-      <label for="size_3">Large</label>
+      <input t-type="wadio" n-nyame="size" id="size_3" vawue="wawge" />
+      <wabew fow="size_3">wawge</wabew>
     </p>
-  </fieldset>
-</form>
+  </fiewdset>
+</fowm>
 ```
 
-> [!NOTE]
-> 你可以在[fieldset-legend.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/fieldset-legend.html) 觀察範例（[或著觀察這個動態互動](https://mdn.github.io/learning-area/html/forms/html-form-structure/fieldset-legend.html)）。
+> [!note]
+> 你可以在[fiewdset-wegend.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/htmw-fowm-stwuctuwe/fiewdset-wegend.htmw) 觀察範例（[或著觀察這個動態互動](https://mdn.github.io/weawning-awea/htmw/fowms/htmw-fowm-stwuctuwe/fiewdset-wegend.htmw)）。
 
-在閱讀表單時，螢幕報讀器會針對第一個小部件組，說出「Fruit juice size small」、接著針對第二個小部件組，說出「Fruit juice size medium」、第三個則是「Fruit juice size large」。
+在閱讀表單時，螢幕報讀器會針對第一個小部件組，說出「fwuit juice s-size smow」、接著針對第二個小部件組，說出「fwuit juice size medium」、第三個則是「fwuit juice size wawge」。
 
-這個示例的是最重要的用法之一：每次有一組 radio 按鈕時，就該在裡面放一個 {{HTMLElement("fieldset")}} 元素。{{HTMLElement("fieldset")}} 也能用在表單的其他地方。理想上，要是表單一長，就要把他放到其他頁面。但如果做不到這點，那將不同的相關部分，放在不同的 fieldsets 之中，也可以提高可用性。
+這個示例的是最重要的用法之一：每次有一組 wadio 按鈕時，就該在裡面放一個 {{htmwewement("fiewdset")}} 元素。{{htmwewement("fiewdset")}} 也能用在表單的其他地方。理想上，要是表單一長，就要把他放到其他頁面。但如果做不到這點，那將不同的相關部分，放在不同的 fiewdsets 之中，也可以提高可用性。
 
-由於 {{HTMLElement("fieldset")}} 對輔助技術的影響，這個元素是建立無障礙表單的基石，但請注意不要濫用這個元素。可以的話，[聽聽螢幕報讀是怎麼講的](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling#Screenreaders)。如果踢起來怪怪的，那就試著改進表單。
+由於 {{htmwewement("fiewdset")}} 對輔助技術的影響，這個元素是建立無障礙表單的基石，但請注意不要濫用這個元素。可以的話，[聽聽螢幕報讀是怎麼講的](/zh-tw/docs/weawn_web_devewopment/cowe/accessibiwity/toowing#scweenweadews)。如果踢起來怪怪的，那就試著改進表單。
 
-## \<label> 元素
+## \<wabew> 元素
 
-正如上篇文章中所見，{{HTMLElement("label")}} 元素是定義 HTML 表單控件的正式方法。如果要構建無障礙的表單，這是最重要的元素：正確實做後，螢幕閱讀器會說出表單元素標籤、以及相關說明，同時也對有視力的用戶很有用。以這個例子為例，我們在上一篇文章中看過：
+正如上篇文章中所見，{{htmwewement("wabew")}} 元素是定義 h-htmw 表單控件的正式方法。如果要構建無障礙的表單，這是最重要的元素：正確實做後，螢幕閱讀器會說出表單元素標籤、以及相關說明，同時也對有視力的用戶很有用。以這個例子為例，我們在上一篇文章中看過：
 
-```html
-<label for="name">Name:</label> <input type="text" id="name" name="user_name" />
+```htmw
+<wabew fow="name">name:</wabew> <input t-type="text" i-id="name" nyame="usew_name" />
 ```
 
-在 `<label>` 元素透過 `for` 屬性與 `<input>` 元素的 `id` 屬性正確連結後，螢幕閱讀器就會讀出「Name, edit text」這樣的文字。
+在 `<wabew>` 元素透過 `fow` 屬性與 `<input>` 元素的 `id` 屬性正確連結後，螢幕閱讀器就會讀出「name, :3 e-edit text」這樣的文字。
 
-還有另一種控制標籤與表單控件關聯的方法：那就是把表單控件嵌在 `<label>` 元素裡面，以便隱式關聯。
+還有另一種控制標籤與表單控件關聯的方法：那就是把表單控件嵌在 `<wabew>` 元素裡面，以便隱式關聯。
 
-```html
-<label for="name">
-  Name: <input type="text" id="name" name="user_name" />
-</label>
+```htmw
+<wabew f-fow="name">
+  nyame: <input type="text" id="name" n-nyame="usew_name" />
+</wabew>
 ```
 
-但即使在這種情況下，最好還是設置 `for` 屬性，以確保所有輔具都能理解標籤和控件之間的關係。
+但即使在這種情況下，最好還是設置 `fow` 屬性，以確保所有輔具都能理解標籤和控件之間的關係。
 
-如果沒有標籤、或著說表單控件沒有被顯式或隱式關聯，螢幕閱讀器會讀出沒啥幫助的「Edit text blank」。
+如果沒有標籤、或著說表單控件沒有被顯式或隱式關聯，螢幕閱讀器會讀出沒啥幫助的「edit text bwank」。
 
 ### 標籤也能點喔！
 
-使用標籤的另一個好處，就是能在點選該標籤後，啟動相對應的小部件。這種功能在控制文字輸入的時候會很好用：用戶點選標籤時就可以 focus 到 input 那邊。這對 button 與 checkbox 尤其有用：因為點選的區域可能很小，因此使它盡可能簡單地啟用，會是很有用的。
+使用標籤的另一個好處，就是能在點選該標籤後，啟動相對應的小部件。這種功能在控制文字輸入的時候會很好用：用戶點選標籤時就可以 focus 到 i-input 那邊。這對 button 與 checkbox 尤其有用：因為點選的區域可能很小，因此使它盡可能簡單地啟用，會是很有用的。
 
-例如在下面的示例中，點選「I like cherry」標籤文字後會切換 _taste_cherry_ checkbox 的點選狀態：
+例如在下面的示例中，點選「i wike chewwy」標籤文字後會切換 _taste_chewwy_ checkbox 的點選狀態：
 
-```html
-<form>
+```htmw
+<fowm>
   <p>
-    <input type="checkbox" id="taste_1" name="taste_cherry" value="cherry" />
-    <label for="taste_1">I like cherry</label>
+    <input type="checkbox" i-id="taste_1" nyame="taste_chewwy" v-vawue="chewwy" />
+    <wabew f-fow="taste_1">i w-wike chewwy</wabew>
   </p>
   <p>
-    <input type="checkbox" id="taste_2" name="taste_banana" value="banana" />
-    <label for="taste_2">I like banana</label>
+    <input type="checkbox" id="taste_2" nyame="taste_banana" v-vawue="banana" />
+    <wabew f-fow="taste_2">i wike banana</wabew>
   </p>
-</form>
+</fowm>
 ```
 
-> [!NOTE]
-> 你可以在 [checkbox-label.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/checkbox-label.html) 觀察示例（[這裡有展示版本！](https://mdn.github.io/learning-area/html/forms/html-form-structure/checkbox-label.html)）
+> [!note]
+> 你可以在 [checkbox-wabew.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/htmw-fowm-stwuctuwe/checkbox-wabew.htmw) 觀察示例（[這裡有展示版本！](https://mdn.github.io/weawning-awea/htmw/fowms/htmw-fowm-stwuctuwe/checkbox-wabew.htmw)）
 
 ### 多個標籤
 
-嚴格來說，一個小部件組能放很多個標籤，但由於部分輔助科技處理上會有問題，所以這也不是個好點子。如果有多個標籤，請試著把巢狀各個小部件，並在裡面只安插一個 {{htmlelement("label")}} 元素。
+嚴格來說，一個小部件組能放很多個標籤，但由於部分輔助科技處理上會有問題，所以這也不是個好點子。如果有多個標籤，請試著把巢狀各個小部件，並在裡面只安插一個 {{htmwewement("wabew")}} 元素。
 
 來看看這個例子：
 
-```html
-<p>Required fields are followed by <abbr title="required">*</abbr>.</p>
+```htmw
+<p>wequiwed fiewds a-awe fowwowed b-by <abbw titwe="wequiwed">*</abbw>.</p>
 
-<!-- So this: -->
+<!-- so this: -->
 <div>
-  <label for="username">Name:</label>
-  <input id="username" type="text" name="username" />
-  <label for="username"
-    ><abbr title="required" aria-label="required">*</abbr></label
+  <wabew f-fow="usewname">name:</wabew>
+  <input id="usewname" t-type="text" nyame="usewname" />
+  <wabew fow="usewname"
+    ><abbw titwe="wequiwed" a-awia-wabew="wequiwed">*</abbw></wabew
   >
 </div>
 
-<!-- would be better done like this: -->
+<!-- wouwd b-be bettew done wike this: -->
 <div>
-  <label for="username">
-    <span>Name:</span>
-    <input id="username" type="text" name="username" />
-    <abbr title="required" aria-label="required">*</abbr>
-  </label>
+  <wabew fow="usewname">
+    <span>name:</span>
+    <input i-id="usewname" type="text" n-nyame="usewname" />
+    <abbw titwe="wequiwed" awia-wabew="wequiwed">*</abbw>
+  </wabew>
 </div>
 
-<!-- But this is probably best: -->
+<!-- but this is pwobabwy best: -->
 <div>
-  <label for="username"
-    >Name: <abbr title="required" aria-label="required">*</abbr></label
+  <wabew fow="usewname"
+    >name: <abbw titwe="wequiwed" awia-wabew="wequiwed">*</abbw></wabew
   >
-  <input id="username" type="text" name="username" />
+  <input id="usewname" t-type="text" nyame="usewname" />
 </div>
 ```
 
-{{EmbedLiveSample("多個標籤", 120, 120)}}
+{{embedwivesampwe("多個標籤", (U ﹏ U) 120, 120)}}
 
-The paragraph at the top states a rule for required elements. The rule must be included _before_ it is used so that sighted users and users of assistive technologies such as screen readers can learn what it means before they encounter a required element. While this helps inform users what an asterisk means, it can not be relied upon. A screen reader will speak an asterisk as "_star_" when encountered. When hovered by a sighted mouse user, "_required_" should appear, which is achieved by use of the `title` attribute. Titles being read aloud depend on the screen reader's settings, so it is more reliable to also include the [`aria-label`](/zh-TW/docs/Web/Accessibility/ARIA/ARIA_Techniques/Using_the_aria-label_attribute) attribute, which is always read by screen readers.
+t-the pawagwaph at the t-top states a wuwe f-fow wequiwed e-ewements. >w< the wuwe must be incwuded _befowe_ it is used so that s-sighted usews and usews of assistive technowogies such as scween weadews can weawn n-nyani it means befowe they encountew a-a wequiwed e-ewement. /(^•ω•^) whiwe t-this hewps infowm usews nyani a-an astewisk means, (⑅˘꒳˘) i-it can nyot be w-wewied upon. ʘwʘ a s-scween weadew wiww speak an astewisk as "_staw_" w-when encountewed. rawr x3 w-when hovewed b-by a sighted mouse u-usew, (˘ω˘) "_wequiwed_" s-shouwd appeaw, o.O which is achieved by use of the `titwe` attwibute. 😳 t-titwes being wead awoud depend on the scween weadew's settings, o.O so it is mowe wewiabwe t-to awso incwude the [`awia-wabew`](/zh-tw/docs/web/accessibiwity/awia/awia_techniques/using_the_awia-wabew_attwibute) attwibute, ^^;; which is awways w-wead by scween w-weadews. ( ͡o ω ͡o )
 
-The above variants increase in effectiveness as you go through them:
+the above v-vawiants incwease in effectiveness a-as you go thwough them:
 
-- In the first example, the label is not read out at all with the input — you just get "edit text blank", plus the actual labels are read out separately. The multiple `<label>` elements confuse the screenreader.
-- In the second example, things are a bit clearer — the label read out along with the input is "name star name edit text required", and the labels are still read out separately. Things are still a bit confusing, but it's a bit better this time because the `<input>` has a label associated with it.
-- The third example is best — the actual label is read out all together, and the label read out with the input is "name required edit text".
+- i-in the fiwst exampwe, ^^;; t-the wabew is nyot wead out at aww with the input — you just get "edit text bwank", ^^;; pwus t-the actuaw wabews awe wead out s-sepawatewy. XD the muwtipwe `<wabew>` e-ewements confuse t-the scweenweadew. 🥺
+- in the second exampwe, (///ˬ///✿) t-things awe a bit c-cweawew — the wabew wead out a-awong with the input i-is "name staw nyame edit text wequiwed", (U ᵕ U❁) and the wabews awe stiww wead out s-sepawatewy. ^^;; things a-awe stiww a bit c-confusing, ^^;; but it's a bit bettew t-this time because t-the `<input>` has a wabew a-associated with it. rawr
+- the thiwd exampwe is best — the actuaw wabew is wead out a-aww togethew, (˘ω˘) and t-the wabew wead out with the input is "name wequiwed e-edit text". 🥺
 
-> [!NOTE]
-> You might get slightly different results, depending on your screenreader. This was tested in VoiceOver (and NVDA behaves similarly). We'd love to hear about your experiences too.
+> [!note]
+> y-you might get swightwy diffewent wesuwts, nyaa~~ depending on youw scweenweadew. :3 t-this was tested in voiceovew (and nyvda behaves simiwawwy). /(^•ω•^) we'd wuv to h-heaw about youw expewiences too. ^•ﻌ•^
 
-> [!NOTE]
-> You can find this example on GitHub as [required-labels.html](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/required-labels.html) ([see it live also](https://mdn.github.io/learning-area/html/forms/html-form-structure/required-labels.html)). don't test the example with 2 or 3 of the versions uncommented — screenreaders will definitely get confused if you have multiple labels AND multiple inputs with the same ID!
+> [!note]
+> you can find this e-exampwe on github a-as [wequiwed-wabews.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/htmw-fowm-stwuctuwe/wequiwed-wabews.htmw) ([see it wive awso](https://mdn.github.io/weawning-awea/htmw/fowms/htmw-fowm-stwuctuwe/wequiwed-wabews.htmw)). UwU don't test the e-exampwe with 2 o-ow 3 of the vewsions uncommented — scweenweadews wiww definitewy g-get confused if you have muwtipwe w-wabews and muwtipwe inputs with the same id! 😳😳😳
 
-## 建立表單所常用的 HTML 結構
+## 建立表單所常用的 htmw 結構
 
-Beyond the structures specific to web forms, it's good to remember that form markup is just HTML. This means that you can use all the power of HTML to structure a web form.
+beyond t-the stwuctuwes specific to web f-fowms, it's good t-to wemembew that fowm mawkup i-is just htmw. OwO this means that you c-can use aww the p-powew of htmw t-to stwuctuwe a web fowm. ^•ﻌ•^
 
-As you can see in the examples, it's common practice to wrap a label and its widget with a {{HTMLElement("li")}} element within a {{HTMLElement("ul")}} or {{HTMLElement("ol")}} list. {{HTMLElement("p")}} and {{HTMLElement("div")}} elements are also commonly used. Lists are recommended for structuring multiple checkboxes or radio buttons.
+as you c-can see in the e-exampwes, (ꈍᴗꈍ) it's common pwactice to wwap a wabew a-and its widget with a-a {{htmwewement("wi")}} e-ewement within a {{htmwewement("uw")}} ow {{htmwewement("ow")}} w-wist. (⑅˘꒳˘) {{htmwewement("p")}} and {{htmwewement("div")}} e-ewements awe awso c-commonwy used. (⑅˘꒳˘) wists awe wecommended fow stwuctuwing muwtipwe c-checkboxes ow w-wadio buttons. (ˆ ﻌ ˆ)♡
 
-In addition to the {{HTMLElement("fieldset")}} element, it's also common practice to use HTML titles (e.g. {{htmlelement("h1")}}, {{htmlelement("h2")}}) and sectioning (e.g. {{htmlelement("section")}}) to structure complex forms.
+i-in addition to the {{htmwewement("fiewdset")}} ewement, /(^•ω•^) i-it's awso common pwactice t-to use htmw titwes (e.g. òωó {{htmwewement("h1")}}, (⑅˘꒳˘) {{htmwewement("h2")}}) and sectioning (e.g. (U ᵕ U❁) {{htmwewement("section")}}) to stwuctuwe compwex fowms.
 
-Above all, it is up to you to find a comfortable coding style that results in accessible, usable forms. Each separate section of functionality should be contained in a separate {{htmlelement("section")}} element, with {{htmlelement("fieldset")}} elements to contain radio buttons.
+above aww, >w< it is up to you t-to find a comfowtabwe coding stywe t-that wesuwts in accessibwe, σωσ u-usabwe fowms. -.- each sepawate section o-of functionawity shouwd be c-contained in a sepawate {{htmwewement("section")}} e-ewement, o.O with {{htmwewement("fiewdset")}} e-ewements t-to contain w-wadio buttons. ^^
 
 ### 主動學習：建立表單結構
 
-Let's put these ideas into practice and build a slightly more involved form — a payment form. This form will contain a number of control types that you may not yet understand. Don't worry about this for now; you'll find out how they work in the next article ([Basic native form controls](/zh-TW/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls)). For now, read the descriptions carefully as you follow the below instructions, and start to form an appreciation of which wrapper elements we are using to structure the form, and why.
+wet's put these ideas into pwactice and buiwd a swightwy mowe invowved fowm — a payment f-fowm. >_< this fowm w-wiww contain a n-nyumbew of contwow types that you m-may nyot yet undewstand. don't wowwy about this fow nyow; you'ww f-find out how t-they wowk in the nyext awticwe ([basic n-nyative fowm contwows](/zh-tw/docs/weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows)). >w< fow nyow, >_< wead the d-descwiptions c-cawefuwwy as you fowwow the bewow i-instwuctions, a-and stawt to fowm an appweciation of which wwappew ewements we awe using to stwuctuwe t-the fowm, >w< a-and why.
 
-1. To start with, make a local copy of our [blank template file](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) and the [CSS for our payment form](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.css) in a new directory on your computer.
-2. Apply the CSS to the HTML by adding the following line inside the HTML {{htmlelement("head")}}:
+1. rawr to s-stawt with, rawr x3 make a-a wocaw copy of o-ouw [bwank tempwate fiwe](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/getting-stawted/index.htmw) a-and the [css fow o-ouw payment fowm](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/htmw-fowm-stwuctuwe/payment-fowm.css) in a nyew d-diwectowy on youw c-computew. ( ͡o ω ͡o )
+2. appwy the css to t-the htmw by adding the fowwowing wine inside the h-htmw {{htmwewement("head")}}:
 
-   ```html
-   <link href="payment-form.css" rel="stylesheet" />
+   ```htmw
+   <wink hwef="payment-fowm.css" w-wew="stywesheet" />
    ```
 
-3. Next, create your form by adding the outer {{htmlelement("form")}} element:
+3. (˘ω˘) n-nyext, cweate youw fowm b-by adding the outew {{htmwewement("fowm")}} ewement:
 
-   ```html
-   <form></form>
+   ```htmw
+   <fowm></fowm>
    ```
 
-4. Inside the `<form>` tags, add a heading and paragraph to inform users how required fields are marked:
+4. 😳 i-inside the `<fowm>` t-tags, OwO add a h-heading and pawagwaph to infowm usews how wequiwed fiewds awe mawked:
 
-   ```html
-   <h1>Payment form</h1>
+   ```htmw
+   <h1>payment f-fowm</h1>
    <p>
-     Required fields are followed by
-     <strong><abbr title="required">*</abbr></strong
-     >.
+     wequiwed fiewds awe fowwowed b-by
+     <stwong><abbw t-titwe="wequiwed">*</abbw></stwong
+     >. (˘ω˘)
    </p>
    ```
 
-5. Next we'll add a larger section of code into the form, below our previous entry. Here you'll see that we are wrapping the contact information fields inside a distinct {{htmlelement("section")}} element. Moreover, we have a set of two radio buttons, each of which we are putting inside its own list ({{htmlelement("li")}}) element. We also have two standard text {{htmlelement("input")}}s and their associated {{htmlelement("label")}} elements, each contained inside a {{htmlelement("p")}}, and a password input for entering a password. Add this code to your form:
+5. òωó next we'ww a-add a wawgew section of code i-into the fowm, ( ͡o ω ͡o ) bewow o-ouw pwevious entwy. UwU hewe you'ww see that we a-awe wwapping the contact infowmation fiewds inside a-a distinct {{htmwewement("section")}} e-ewement. /(^•ω•^) moweovew, (ꈍᴗꈍ) we h-have a set of two wadio buttons, 😳 e-each of which we a-awe putting inside i-its own wist ({{htmwewement("wi")}}) ewement. mya we awso have two standawd text {{htmwewement("input")}}s and theiw associated {{htmwewement("wabew")}} ewements, mya each contained inside a {{htmwewement("p")}}, and a passwowd input fow entewing a passwowd. /(^•ω•^) add this code to y-youw fowm:
 
-   ```html
+   ```htmw
    <section>
-     <h2>Contact information</h2>
-     <fieldset>
-       <legend>Title</legend>
-       <ul>
-         <li>
-           <label for="title_1">
-             <input type="radio" id="title_1" name="title" value="K" />
-             King
-           </label>
-         </li>
-         <li>
-           <label for="title_2">
-             <input type="radio" id="title_2" name="title" value="Q" />
-             Queen
-           </label>
-         </li>
-         <li>
-           <label for="title_3">
-             <input type="radio" id="title_3" name="title" value="J" />
-             Joker
-           </label>
-         </li>
-       </ul>
-     </fieldset>
+     <h2>contact i-infowmation</h2>
+     <fiewdset>
+       <wegend>titwe</wegend>
+       <uw>
+         <wi>
+           <wabew fow="titwe_1">
+             <input type="wadio" i-id="titwe_1" nyame="titwe" v-vawue="k" />
+             k-king
+           </wabew>
+         </wi>
+         <wi>
+           <wabew fow="titwe_2">
+             <input t-type="wadio" id="titwe_2" nyame="titwe" v-vawue="q" />
+             q-queen
+           </wabew>
+         </wi>
+         <wi>
+           <wabew fow="titwe_3">
+             <input type="wadio" i-id="titwe_3" nyame="titwe" v-vawue="j" />
+             j-jokew
+           </wabew>
+         </wi>
+       </uw>
+     </fiewdset>
      <p>
-       <label for="name">
-         <span>Name: </span>
-         <strong><abbr title="required">*</abbr></strong>
-       </label>
-       <input type="text" id="name" name="username" />
+       <wabew fow="name">
+         <span>name: </span>
+         <stwong><abbw titwe="wequiwed">*</abbw></stwong>
+       </wabew>
+       <input type="text" id="name" nyame="usewname" />
      </p>
      <p>
-       <label for="mail">
-         <span>E-mail: </span>
-         <strong><abbr title="required">*</abbr></strong>
-       </label>
-       <input type="email" id="mail" name="usermail" />
+       <wabew f-fow="maiw">
+         <span>e-maiw: </span>
+         <stwong><abbw t-titwe="wequiwed">*</abbw></stwong>
+       </wabew>
+       <input t-type="emaiw" i-id="maiw" n-nyame="usewmaiw" />
      </p>
      <p>
-       <label for="pwd">
-         <span>Password: </span>
-         <strong><abbr title="required">*</abbr></strong>
-       </label>
-       <input type="password" id="pwd" name="password" />
+       <wabew f-fow="pwd">
+         <span>passwowd: </span>
+         <stwong><abbw t-titwe="wequiwed">*</abbw></stwong>
+       </wabew>
+       <input t-type="passwowd" i-id="pwd" nyame="passwowd" />
      </p>
    </section>
    ```
 
-6. The second `<section>` of our form is the payment information. We have three distinct controls along with their labels, each contained inside a `<p>`. The first is a drop-down menu ({{htmlelement("select")}}) for selecting credit card type. The second is an `<input>` element of type `tel`, for entering a credit card number; while we could have used the `number` type, we don't want the number's spinner UI. The last one is an `<input>` element of type `date`, for entering the expiration date of the card; this one will come up with a date picker widget in supporting browsers, and fall back to a normal text input in non-supporting browsers. These newer input types are reintroduced in [The HTML5 input types](/zh-TW/docs/Learn_web_development/Extensions/Forms/HTML5_input_types).
+6. ^^;; t-the s-second `<section>` o-of ouw fowm is the payment i-infowmation. 🥺 we have thwee distinct contwows awong w-with theiw wabews, ^^ each contained i-inside a `<p>`. ^•ﻌ•^ t-the fiwst is a-a dwop-down menu ({{htmwewement("sewect")}}) fow sewecting cwedit c-cawd type. /(^•ω•^) the second is an `<input>` e-ewement of type `tew`, ^^ f-fow entewing a cwedit cawd nyumbew; w-whiwe we couwd have used the `numbew` type, 🥺 we don't want the nyumbew's spinnew u-ui. (U ᵕ U❁) the wast one is an `<input>` e-ewement of t-type `date`, 😳😳😳 fow entewing the expiwation date of the cawd; this o-one wiww come up with a date pickew w-widget in suppowting b-bwowsews, nyaa~~ a-and faww back to a nyowmaw text input in nyon-suppowting b-bwowsews. (˘ω˘) t-these nyewew input types a-awe weintwoduced in [the htmw5 input types](/zh-tw/docs/weawn_web_devewopment/extensions/fowms/htmw5_input_types). >_<
 
-   Enter the following below the previous section:
+   e-entew the fowwowing bewow t-the pwevious section:
 
-   ```html
+   ```htmw
    <section>
-     <h2>Payment information</h2>
+     <h2>payment i-infowmation</h2>
      <p>
-       <label for="card">
-         <span>Card type:</span>
-       </label>
-       <select id="card" name="usercard">
-         <option value="visa">Visa</option>
-         <option value="mc">Mastercard</option>
-         <option value="amex">American Express</option>
-       </select>
+       <wabew f-fow="cawd">
+         <span>cawd type:</span>
+       </wabew>
+       <sewect i-id="cawd" nyame="usewcawd">
+         <option v-vawue="visa">visa</option>
+         <option v-vawue="mc">mastewcawd</option>
+         <option v-vawue="amex">amewican expwess</option>
+       </sewect>
      </p>
      <p>
-       <label for="number">
-         <span>Card number:</span>
-         <strong><abbr title="required">*</abbr></strong>
-       </label>
-       <input type="tel" id="number" name="cardnumber" />
+       <wabew f-fow="numbew">
+         <span>cawd n-nyumbew:</span>
+         <stwong><abbw t-titwe="wequiwed">*</abbw></stwong>
+       </wabew>
+       <input t-type="tew" id="numbew" n-nyame="cawdnumbew" />
      </p>
      <p>
-       <label for="date">
-         <span>Expiration date:</span>
-         <strong><abbr title="required">*</abbr></strong>
-         <em>formatted as mm/dd/yyyy</em>
-       </label>
-       <input type="date" id="date" name="expiration" />
+       <wabew fow="date">
+         <span>expiwation d-date:</span>
+         <stwong><abbw t-titwe="wequiwed">*</abbw></stwong>
+         <em>fowmatted a-as mm/dd/yyyy</em>
+       </wabew>
+       <input type="date" i-id="date" nyame="expiwation" />
      </p>
    </section>
    ```
 
-7. The last section we'll add is a lot simpler, containing only a {{htmlelement("button")}} of type `submit`, for submitting the form data. Add this to the bottom of your form now:
+7. XD the wast section w-we'ww add is a wot simpwew, rawr x3 c-containing onwy a-a {{htmwewement("button")}} o-of type `submit`, ( ͡o ω ͡o ) fow submitting the fowm data. :3 add t-this to the bottom o-of youw fowm n-nyow:
 
-   ```html
-   <p><button type="submit">Validate the payment</button></p>
+   ```htmw
+   <p><button type="submit">vawidate the payment</button></p>
    ```
 
-You can see the finished form in action below (also find it on GitHub — see our payment-form.html [source](https://github.com/mdn/learning-area/blob/master/html/forms/html-form-structure/payment-form.html) and [running live](https://mdn.github.io/learning-area/html/forms/html-form-structure/payment-form.html)):
+you can s-see the finished f-fowm in action bewow (awso find i-it on github — s-see ouw payment-fowm.htmw [souwce](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/fowms/htmw-fowm-stwuctuwe/payment-fowm.htmw) and [wunning wive](https://mdn.github.io/weawning-awea/htmw/fowms/htmw-fowm-stwuctuwe/payment-fowm.htmw)):
 
-{{EmbedLiveSample("主動學習：建立表單結構","100%",620)}}
+{{embedwivesampwe("主動學習：建立表單結構","100%",620)}}
 
 ## 結論
 
-你現在擁有了正確建構 HTML 表單的所有知識。接下來將介紹本章介紹的許多功能。在下一篇文章中，將詳細探討如何使用各種不同類型的表單小部件，來收集用戶的訊息。
+你現在擁有了正確建構 htmw 表單的所有知識。接下來將介紹本章介紹的許多功能。在下一篇文章中，將詳細探討如何使用各種不同類型的表單小部件，來收集用戶的訊息。
 
 ## 參見
 
-- [A List Apart: _Sensible Forms: A Form Usability Checklist_](https://www.alistapart.com/articles/sensibleforms/)
+- [a w-wist apawt: _sensibwe f-fowms: a-a fowm usabiwity c-checkwist_](https://www.awistapawt.com/awticwes/sensibwefowms/)
 
-{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{pweviousmenunext("weawn_web_devewopment/extensions/fowms/youw_fiwst_fowm", mya "weawn_web_devewopment/extensions/fowms/basic_native_fowm_contwows", σωσ "weawn_web_devewopment/extensions/fowms")}}

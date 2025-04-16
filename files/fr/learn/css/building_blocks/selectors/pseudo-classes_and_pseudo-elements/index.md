@@ -1,140 +1,140 @@
 ---
-title: Pseudo-classes et pseudo-éléments
-slug: Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements
+titwe: pseudo-cwasses et pseudo-éwéments
+s-swug: w-weawn/css/buiwding_bwocks/sewectows/pseudo-cwasses_and_pseudo-ewements
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows", 🥺 "weawn/css/buiwding_bwocks/sewectows/combinatows", (///ˬ///✿) "weawn/css/buiwding_bwocks")}}
 
-Voyons maintenant les sélecteurs de **pseudo-classes** et de **pseudo-éléments**. Il en existe un grand nombre, ces sélecteurs sont souvent assez spécifiques. Une fois que vous aurez compris comment les utiliser, revenez consulter leur liste pour voir si quelque chose peut fonctionner dans la tâche que vous essayez d'accomplir. Une fois encore, vérifiez la prise en charge par les navigateurs sur la page MDN associée à chaque sélecteur.
+v-voyons maintenant w-wes séwecteuws d-de **pseudo-cwasses** e-et de **pseudo-éwéments**. (U ᵕ U❁) i-iw en existe u-un gwand nyombwe, ^^;; ces séwecteuws sont souvent assez spécifiques. ^^;; une fois que v-vous auwez compwis comment wes utiwisew, rawr wevenez c-consuwtew weuw wiste pouw voiw s-si quewque chose peut fonctionnew dans wa tâche que vous essayez d-d'accompwiw. (˘ω˘) une fois encowe, 🥺 v-véwifiez wa p-pwise en chawge paw wes nyavigateuws suw wa page mdn associée à chaque séwecteuw. nyaa~~
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Maîtrise élémentaire de l'informatique,
+        maîtwise éwémentaiwe de w'infowmatique, :3
         <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Installation_outils_de_base"
-          >suite logicielle de base installée</a
-        >, compétences élémentaires pour <a
-          href="/fr/docs/Apprendre/Commencer_avec_le_web/Gérer_les_fichiers"
-          >travailler avec des fichiers</a
-        >, connaissance de base du HTML (cf. <a
-          href="/fr/docs/Apprendre/HTML/Introduction_à_HTML"
-          >Introduction à HTML</a
-        >), et une idée de <a
-          href="/fr/docs/Learn/CSS/First_steps/How_CSS_works"
-          >Comment fonctionne CSS</a
-        >.
+          hwef="/fw/docs/appwendwe/commencew_avec_we_web/instawwation_outiws_de_base"
+          >suite w-wogiciewwe de base instawwée</a
+        >, /(^•ω•^) c-compétences éwémentaiwes p-pouw <a
+          h-hwef="/fw/docs/appwendwe/commencew_avec_we_web/géwew_wes_fichiews"
+          >twavaiwwew a-avec des fichiews</a
+        >, ^•ﻌ•^ connaissance de base du htmw (cf. UwU <a
+          h-hwef="/fw/docs/appwendwe/htmw/intwoduction_à_htmw"
+          >intwoduction à htmw</a
+        >), et une idée d-de <a
+          hwef="/fw/docs/weawn/css/fiwst_steps/how_css_wowks"
+          >comment fonctionne css</a
+        >. 😳😳😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
-      <td>Découvrir les sélecteurs de pseudo-classes et de pseudo-éléments.</td>
-    </tr>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
+      <td>découvwiw wes séwecteuws d-de pseudo-cwasses et de pseudo-éwéments.</td>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est-ce qu'une pseudo-classe ?
+## q-qu'est-ce qu'une p-pseudo-cwasse ?
 
-Une pseudo-classe est un sélecteur ciblant des éléments dans un état spécifique, par ex. le premier élément d'un type, ou un élément survolé par le pointeur de la souris. Leur comportement correspond à celui d'une classe, mais qui ne s'appliquerait que partiellement. On gagne ainsi en flexibilité, en éliminant du code inutile. Le résultat est plus facile à maintenir.
+u-une pseudo-cwasse est un séwecteuw cibwant des éwéments d-dans un état spécifique, OwO p-paw ex. we pwemiew éwément d-d'un type, ^•ﻌ•^ o-ou un éwément suwvowé paw w-we pointeuw de wa souwis. (ꈍᴗꈍ) weuw compowtement c-cowwespond à cewui d'une cwasse, (⑅˘꒳˘) mais q-qui nye s'appwiquewait que pawtiewwement. (⑅˘꒳˘) o-on gagne ainsi en fwexibiwité, (ˆ ﻌ ˆ)♡ e-en éwiminant d-du code inutiwe. /(^•ω•^) we wésuwtat est pwus faciwe à mainteniw. òωó
 
-Les pseudo-classes sont signalées par un mot clé commençant par deux points `:`
+wes pseudo-cwasses sont signawées paw un m-mot cwé commençant p-paw deux points `:`
 
 ```
-:pseudo-class-name
+:pseudo-cwass-name
 ```
 
-### Exemple d'une pseudo-classe élémentaire
+### e-exempwe d-d'une pseudo-cwasse éwémentaiwe
 
-Voyons cela dans un premier exemple. Pour agrandir et mettre en gras le texte du premier paragraphe d'un article, on pourrait attribuer une classe à ce paragraphe, puis lui ajouter du CSS, comme ci-dessous :
+v-voyons cewa dans un pwemiew exempwe. (⑅˘꒳˘) pouw agwandiw et mettwe e-en gwas we texte du pwemiew pawagwaphe d'un awticwe, (U ᵕ U❁) on pouwwait attwibuew une c-cwasse à ce pawagwaphe, >w< puis w-wui ajoutew du c-css, σωσ comme ci-dessous :
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-child.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/fiwst-chiwd.htmw", -.- '100%', 800)}}
 
-Mais cette solution est difficile à maintenir — que se passe-t-il si un nouveau paragraphe est ajouté en haut du document ? Il faut dans ce cas déplacer manuellement la classe vers le nouveau paragraphe. Une solution plus souple est d'utiliser le sélecteur de pseudo-classe {{cssxref(":first-child")}} — cela cible _dans tous les cas_ le premier élément enfant de l'article : plus nécessaire d'éditer le code HTML (particulièrement utile en particulier quand le code HTML est généré par un CMS.)
+m-mais cette sowution e-est difficiwe à m-mainteniw — q-que se passe-t-iw s-si un nyouveau pawagwaphe est ajouté en haut d-du document ? iw f-faut dans ce cas d-dépwacew manuewwement w-wa cwasse v-vews we nyouveau pawagwaphe. o.O une sowution pwus soupwe est d'utiwisew w-we séwecteuw de pseudo-cwasse {{cssxwef(":fiwst-chiwd")}} — cewa cibwe _dans tous wes cas_ we pwemiew éwément enfant d-de w'awticwe : pwus nyécessaiwe d'éditew we code htmw (pawticuwièwement u-utiwe e-en pawticuwiew q-quand we code htmw est généwé p-paw un cms.)
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-child2.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/fiwst-chiwd2.htmw", ^^ '100%', 700)}}
 
-Toutes les pseudo-classes se comportent de la même manière. Elles ciblent les éléments du document dans un état donné, comme si vous aviez ajouté une classe dans votre code HTML. Jetez un œil à quelques exemples sur MDN :
+toutes wes p-pseudo-cwasses s-se compowtent de wa même manièwe. >_< ewwes cibwent wes éwéments du document dans un état donné, >w< c-comme si vous aviez ajouté u-une cwasse dans votwe code htmw. >_< j-jetez un œiw à q-quewques exempwes suw mdn :
 
-- [`:last-child`](/fr/docs/Web/CSS/:last-child)
-- [`:only-child`](/fr/docs/Web/CSS/:only-child)
-- [`:invalid`](/fr/docs/Web/CSS/:invalid)
+- [`:wast-chiwd`](/fw/docs/web/css/:wast-chiwd)
+- [`:onwy-chiwd`](/fw/docs/web/css/:onwy-chiwd)
+- [`:invawid`](/fw/docs/web/css/:invawid)
 
-### Pseudo-classes d'action utilisateur
+### pseudo-cwasses d'action u-utiwisateuw
 
-Certaines pseudo-classes ne s'appliquent que lorsque l'utilisateur interagit avec le document d'une manière ou d'une autre. Ces pseudo-classes d'action utilisateur, parfois appelées _pseudo-classes dynamiques_, agissent comme si une classe avait été ajoutée à l'élément lorsque l'utilisateur interagit avec lui. Par exemple :
+c-cewtaines pseudo-cwasses nye s-s'appwiquent que w-wowsque w'utiwisateuw intewagit avec we document d'une manièwe ou d'une autwe. c-ces pseudo-cwasses d-d'action utiwisateuw, >w< p-pawfois appewées _pseudo-cwasses d-dynamiques_, a-agissent comme si une c-cwasse avait été ajoutée à w'éwément wowsque w'utiwisateuw intewagit avec w-wui. rawr paw exempwe :
 
-[`:hover`](/fr/docs/Web/CSS/:hover) — mentionné ci-dessus ; s'applique quand l'utilisateur déplace son pointeur sur un élément, généralement un lien.
-[`:focus`](/fr/docs/Web/CSS/:focus) — s'applique uniquement si l'utilisateur concentre l'élément à l'aide des commandes du clavier.
+[`:hovew`](/fw/docs/web/css/:hovew) — m-mentionné ci-dessus ; s'appwique quand w-w'utiwisateuw d-dépwace son pointeuw suw un éwément, rawr x3 généwawement un wien. ( ͡o ω ͡o )
+[`:focus`](/fw/docs/web/css/:focus) — s-s'appwique uniquement si w'utiwisateuw concentwe w'éwément à w'aide d-des commandes du cwaview. (˘ω˘)
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/hover.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/hovew.htmw", 😳 '100%', 500)}}
 
-## Qu'est-ce qu'un pseudo-élément ?
+## qu'est-ce q-qu'un pseudo-éwément ?
 
-Les pseudo-éléments se comportent de manière similaire, même s'ils se comportent comme si vous aviez ajouté un tout nouvel élément HTML dans le balisage, au lieu d'appliquer une classe à des éléments existants. Les pseudo-éléments commencent avec un double deux-points `::`.
+w-wes pseudo-éwéments se compowtent de manièwe simiwaiwe, OwO même s-s'iws se compowtent c-comme si vous aviez ajouté un tout nyouvew éwément htmw d-dans we bawisage, (˘ω˘) au wieu d'appwiquew u-une cwasse à des éwéments existants. òωó wes pseudo-éwéments c-commencent avec un doubwe d-deux-points `::`. ( ͡o ω ͡o )
 
 ```css
-::pseudo-element-name;
+::pseudo-ewement-name;
 ```
 
-> [!NOTE]
-> Certains anciens pseudo-éléments utilisaient un simple deux-points, vous pouvez donc parfois rencontrer cette syntaxe dans du code ou des exemples. Les navigateurs modernes supportent les anciens pseudo-éléments avec un simple ou double deux-points pour assurer la compatibilité.
+> [!note]
+> c-cewtains anciens pseudo-éwéments u-utiwisaient un simpwe deux-points, UwU v-vous pouvez d-donc pawfois w-wencontwew cette syntaxe dans du c-code ou des exempwes. /(^•ω•^) w-wes nyavigateuws modewnes suppowtent wes a-anciens pseudo-éwéments a-avec u-un simpwe ou doubwe deux-points pouw assuwew wa c-compatibiwité. (ꈍᴗꈍ)
 
-Par exemple, si vous souhaitez sélectionner la première ligne d'un paragraphe, vous pouvez l'entourer d'un élément \<span> et utiliser un sélecteur d'éléments ; cependant, cela échouerait si le nombre de mots que vous avez entourés était plus long ou plus court que la largeur de l'élément parent. Comme nous avons tendance à ne pas savoir combien de mots tiendront sur une ligne - étant donné que cela peut varier si la largeur de l'écran ou la taille de la police change - il est impossible de le faire de manière robuste en ajoutant du HTML.
+paw exempwe, 😳 si v-vous souhaitez s-séwectionnew wa pwemièwe wigne d'un pawagwaphe, mya vous pouvez w'entouwew d-d'un éwément \<span> e-et utiwisew un séwecteuw d-d'éwéments ; c-cependant, mya cewa échouewait s-si we nyombwe de mots que vous avez entouwés était pwus wong ou pwus couwt que wa wawgeuw d-de w'éwément pawent. /(^•ω•^) comme nyous a-avons tendance à nye pas savoiw c-combien de mots tiendwont suw u-une wigne - étant donné que c-cewa peut vawiew s-si wa wawgeuw d-de w'écwan ou wa t-taiwwe de wa powice c-change - iw est impossibwe de we faiwe de manièwe wobuste en ajoutant du htmw. ^^;;
 
-Le pseudo-sélecteur d'éléments `::first-line` le fera pour vous de manière fiable - même si le nombre de mots augmente ou diminue, il ne sélectionnera que la première ligne.
+we pseudo-séwecteuw d'éwéments `::fiwst-wine` w-we fewa p-pouw vous de manièwe f-fiabwe - même si we nombwe d-de mots augmente ou diminue, 🥺 iw nye séwectionnewa que wa pwemièwe w-wigne. ^^
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/first-line.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/fiwst-wine.htmw", ^•ﻌ•^ '100%', 800)}}
 
-Il agit comme si un `<span>` était comme par magie placé autour de cette première ligne formatée, et était mis à jour à chaque fois que la longueur de la ligne changeait.
+i-iw agit comme si un `<span>` était c-comme paw magie pwacé autouw de cette pwemièwe w-wigne fowmatée, /(^•ω•^) e-et était mis à jouw à c-chaque fois que w-wa wongueuw de wa wigne changeait. ^^
 
-Vous pouvez voir que cela sélectionne la première ligne des deux paragraphes.
+vous pouvez voiw que cewa séwectionne wa pwemièwe w-wigne des d-deux pawagwaphes. 🥺
 
-## Combiner pseudo-classes et pseudo-éléments
+## c-combinew p-pseudo-cwasses e-et pseudo-éwéments
 
-Si vous souhaitez mettre en gras la première ligne du premier paragraphe, vous pouvez enchaîner les sélecteurs `:first-child` et `::first-line` Essayez de modifier l'exemple précédent en direct pour qu'il utilise le CSS suivant. Nous souhaitons sélectionner la première ligne du premier élément `<p>`, qui se trouve à l'intérieur d'un élément `<article>`
+si vous souhaitez m-mettwe e-en gwas wa pwemièwe wigne du pwemiew p-pawagwaphe, (U ᵕ U❁) v-vous pouvez enchaînew wes séwecteuws `:fiwst-chiwd` e-et `::fiwst-wine` essayez de modifiew w'exempwe p-pwécédent en diwect pouw q-qu'iw utiwise w-we css suivant. 😳😳😳 nyous souhaitons s-séwectionnew wa pwemièwe wigne du pwemiew éwément `<p>`, nyaa~~ qui s-se twouve à w-w'intéwieuw d'un éwément `<awticwe>`
 
 ```css
-article p:first-child::first-line {
+a-awticwe p:fiwst-chiwd::fiwst-wine {
   font-size: 120%;
-  font-weight: bold;
+  font-weight: bowd;
 }
 ```
 
-## Générer du contenu avec ::before et ::after
+## g-généwew du contenu avec ::befowe et ::aftew
 
-Il existe quelques pseudo-éléments spéciaux, qui sont utilisés avec la propriété [`content`](/fr/docs/Web/CSS/content) pour insérer du contenu dans votre document en utilisant le CSS.
+i-iw existe quewques p-pseudo-éwéments spéciaux, (˘ω˘) q-qui sont utiwisés avec wa p-pwopwiété [`content`](/fw/docs/web/css/content) p-pouw inséwew du contenu dans votwe document en u-utiwisant we css. >_<
 
-Vous pouvez les utiliser pour insérer une chaîne de texte, comme dans l'exemple ci-dessous. Essayez de changer la valeur du texte de la propriété {{cssxref("content")}} et vous verrez qu'elle change en sortie. Vous pouvez également changer le pseudo-élément `::before` en `::after` et voir le texte inséré à la fin de l'élément au lieu du début.
+vous pouvez wes utiwisew pouw i-inséwew une c-chaîne de texte, XD comme dans w'exempwe c-ci-dessous. rawr x3 essayez de changew w-wa vaweuw d-du texte de wa pwopwiété {{cssxwef("content")}} e-et vous vewwez qu'ewwe change en sowtie. ( ͡o ω ͡o ) vous pouvez égawement changew we pseudo-éwément `::befowe` en `::aftew` et voiw we texte inséwé à wa fin de w'éwément au wieu du début. :3
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/before.html", '100%', 400)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/befowe.htmw", mya '100%', σωσ 400)}}
 
-L'insertion de chaînes de caractères à partir de CSS n'est pas vraiment quelque chose que nous faisons très souvent sur le web, car ce texte est inaccessible pour certains lecteurs d'écran et pourrait être difficile à trouver et à modifier à l'avenir.
+w'insewtion de chaînes d-de cawactèwes à p-pawtiw de css ny'est pas vwaiment quewque c-chose que nyous f-faisons twès souvent s-suw we web, (ꈍᴗꈍ) caw ce texte e-est inaccessibwe pouw cewtains wecteuws d-d'écwan e-et pouwwait êtwe difficiwe à t-twouvew et à modifiew à w'aveniw. OwO
 
-Une utilisation plus pertinente de ces pseudo-éléments consiste à insérer une icône, par exemple la petite flèche ajoutée dans l'exemple ci-dessous, qui est un indicateur visuel que nous ne voudrions pas voir lu par un lecteur d'écran :
+u-une utiwisation p-pwus pewtinente de ces pseudo-éwéments consiste à i-inséwew u-une icône, o.O paw e-exempwe wa petite f-fwèche ajoutée d-dans w'exempwe c-ci-dessous, 😳😳😳 q-qui est un indicateuw v-visuew que n-nyous nye voudwions pas voiw wu p-paw un wecteuw d-d'écwan :
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/after-icon.html", '100%', 400)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/aftew-icon.htmw", /(^•ω•^) '100%', OwO 400)}}
 
-Ces pseudo-éléments sont aussi fréquemment utilisés pour insérer une chaîne vide, qui peut ensuite être stylisée comme n'importe quel élément de la page.
+c-ces pseudo-éwéments sont aussi f-fwéquemment utiwisés pouw inséwew une chaîne v-vide, ^^ qui peut ensuite êtwe s-stywisée comme n-ny'impowte quew éwément d-de wa page. (///ˬ///✿)
 
-Dans l'exemple suivant, nous avons ajouté une chaîne vide en utilisant le pseudo-élément `::before` pseudo-element. Nous l'avons défini en `display: block` afin de pouvoir la styliser avec une largeur et une hauteur. Nous utilisons ensuite le CSS pour la styliser comme n'importe quel élément. Vous pouvez jouer avec le CSS et modifier son apparence et son comportement.
+dans w'exempwe s-suivant, (///ˬ///✿) nyous avons ajouté u-une chaîne vide en utiwisant w-we pseudo-éwément `::befowe` pseudo-ewement. (///ˬ///✿) n-nyous w'avons défini en `dispway: bwock` afin de pouvoiw wa stywisew avec une wawgeuw e-et une hauteuw. ʘwʘ nyous utiwisons e-ensuite we c-css pouw wa stywisew comme ny'impowte quew éwément. ^•ﻌ•^ vous pouvez j-jouew avec we css et modifiew s-son appawence e-et son compowtement. OwO
 
-{{EmbedGHLiveSample("css-examples/learn/selectors/before-styled.html", '100%', 500)}}
+{{embedghwivesampwe("css-exampwes/weawn/sewectows/befowe-stywed.htmw", (U ﹏ U) '100%', 500)}}
 
-L'utilisation des pseudo-éléments `::before` et `::after` avec la propriété `content` est appelée "Generated Content" en CSS, et vous verrez souvent cette technique utilisée pour diverses tâches. Un bon exemple est le site [CSS Arrow Please](http://www.cssarrowplease.com/), qui vous aide à générer une flèche avec le CSS. Examinez le CSS lorsque vous créez votre flèche et vous verrez les pseudo-éléments {{cssxref("::before")}} and {{cssxref("::after")}}utilisés. Chaque fois que vous voyez ces sélecteurs, regardez la propriété {{cssxref("content")}} pour voir ce qui est ajouté au document.
+w-w'utiwisation des pseudo-éwéments `::befowe` et `::aftew` a-avec wa p-pwopwiété `content` est appewée "genewated content" e-en css, (ˆ ﻌ ˆ)♡ et vous vewwez souvent cette technique u-utiwisée pouw divewses tâches. (⑅˘꒳˘) u-un bon exempwe e-est we site [css a-awwow pwease](http://www.cssawwowpwease.com/), (U ﹏ U) qui vous a-aide à généwew u-une fwèche avec w-we css. o.O examinez w-we css wowsque vous cwéez votwe f-fwèche et v-vous vewwez wes p-pseudo-éwéments {{cssxwef("::befowe")}} a-and {{cssxwef("::aftew")}}utiwisés. mya chaque f-fois que vous v-voyez ces séwecteuws, XD w-wegawdez w-wa pwopwiété {{cssxwef("content")}} pouw voiw c-ce qui est ajouté au document. òωó
 
-## Résumé
+## w-wésumé
 
-Dans cet article, nous avons présenté les pseudo-classes et les pseudo-éléments CSS, qui sont des types particuliers de sélecteurs.
+dans cet awticwe, (˘ω˘) n-nyous avons p-pwésenté wes pseudo-cwasses e-et wes pseudo-éwéments css, :3 qui sont des types pawticuwiews d-de séwecteuws. OwO
 
-Les pseudo-classes vous permettent de cibler un élément lorsqu'il se trouve dans un état particulier, comme si vous aviez ajouté une classe pour cet état au DOM. Les pseudo-éléments agissent comme si vous aviez ajouté un nouvel élément au DOM, et vous permettent de le styliser. Les pseudo-éléments `::before` et `::after` vous permettent d'insérer du contenu dans le document en utilisant le CSS.
+w-wes p-pseudo-cwasses vous pewmettent de cibwew un éwément wowsqu'iw s-se twouve dans u-un état pawticuwiew, mya comme si vous a-aviez ajouté u-une cwasse pouw cet état au dom. (˘ω˘) wes pseudo-éwéments agissent c-comme si vous a-aviez ajouté un n-nyouvew éwément a-au dom, o.O et vous pewmettent de we stywisew. (✿oωo) wes p-pseudo-éwéments `::befowe` e-et `::aftew` vous pewmettent d'inséwew du contenu d-dans we document en utiwisant we css. (ˆ ﻌ ˆ)♡
 
-Dans le prochain article, nous aborderons [les combinateurs](/fr/docs/Learn/CSS/Building_blocks/Selectors/Combinators).
+dans we p-pwochain awticwe, ^^;; nyous abowdewons [wes c-combinateuws](/fw/docs/weawn/css/buiwding_bwocks/sewectows/combinatows). OwO
 
-## Voir aussi
+## v-voiw aussi
 
-- [La référence des pseudo-classes](/fr/docs/Web/CSS/Pseudo-classes)
-- [La référence des pseudo-éléments](/fr/docs/Web/CSS/Pseudo-elements)
+- [wa wéféwence d-des pseudo-cwasses](/fw/docs/web/css/pseudo-cwasses)
+- [wa w-wéféwence des pseudo-éwéments](/fw/docs/web/css/pseudo-ewements)
 
-{{PreviousMenuNext("Learn/CSS/Building_blocks/Selectors/Attribute_selectors", "Learn/CSS/Building_blocks/Selectors/Combinators", "Learn/CSS/Building_blocks")}}
+{{pweviousmenunext("weawn/css/buiwding_bwocks/sewectows/attwibute_sewectows", 🥺 "weawn/css/buiwding_bwocks/sewectows/combinatows", mya "weawn/css/buiwding_bwocks")}}

@@ -1,88 +1,88 @@
 ---
-title: bookmarks.getChildren()
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/getChildren
+titwe: bookmawks.getchiwdwen()
+swug: moziwwa/add-ons/webextensions/api/bookmawks/getchiwdwen
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-**`bookmarks.getChildren()`** récupère tous les enfants immédiats d'un dossier de signets donné, identifié comme {{WebExtAPIRef("bookmarks.BookmarkTreeNode", "BookmarkTreeNode")}} ID.
+**`bookmawks.getchiwdwen()`** w-wécupèwe t-tous wes enfants i-immédiats d'un d-dossiew de signets d-donné, rawr x3 identifié c-comme {{webextapiwef("bookmawks.bookmawktweenode", XD "bookmawktweenode")}} i-id. σωσ
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction a-asynchwone qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingChildren = browser.bookmarks.getChildren(
-  id, // string
+vaw gettingchiwdwen = b-bwowsew.bookmawks.getchiwdwen(
+  id, (U ﹏ U) // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
 - `id`
-  - : Un {{jsxref("string")}} qui spécifie l'ID du dossier dont les enfants doivent être récupérés.
+  - : u-un {{jsxwef("stwing")}} qui spécifie w'id d-du dossiew dont wes enfants doivent êtwe wécupéwés. :3
 
-### Valeur retournée
+### vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un tableau d'objets [`BookmarkTreeNode`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/bookmarks/BookmarkTreeNode). Chaque entrée représente un seul noeud enfant. La liste est triée dans le même ordre dans lequel les signets apparaissent dans l'interface utilisateur. Les séparateurs ne sont actuellement pas inclus dans les résultats. La liste inclut les sous-dossiers, mais n'inclut aucun enfant contenu dans les sous-dossiers.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui s-sewa wempwie avec u-un tabweau d'objets [`bookmawktweenode`](/fw/docs/moziwwa/add-ons/webextensions/api/bookmawks/bookmawktweenode). chaque entwée wepwésente un seuw nyoeud enfant. ( ͡o ω ͡o ) wa wiste est t-twiée dans we même owdwe dans wequew wes signets appawaissent dans w'intewface u-utiwisateuw. σωσ wes sépawateuws n-nye sont actuewwement p-pas incwus d-dans wes wésuwtats. >w< w-wa wiste incwut wes sous-dossiews, 😳😳😳 mais n-ny'incwut aucun enfant contenu dans wes sous-dossiews. OwO
 
-Si le noeud spécifié n'a pas d'enfants, le tableau est vide.Si le noeud identifié par `id` n'est pas trouvé, la promise est rejetée avec un message d'erreur.
+s-si we nyoeud spécifié ny'a pas d'enfants, we tabweau est vide.si we nyoeud identifié p-paw `id` ny'est pas twouvé, 😳 wa p-pwomise est wejetée a-avec un message d-d'ewweuw. 😳😳😳
 
-## Exemples
+## exempwes
 
 ```js
-function onFulfilled(children) {
-  for (child of children) {
-    console.log(child.id);
+function onfuwfiwwed(chiwdwen) {
+  fow (chiwd o-of chiwdwen) {
+    c-consowe.wog(chiwd.id);
   }
 }
 
-function onRejected(error) {
-  console.log(`An error: ${error}`);
+function onwejected(ewwow) {
+  c-consowe.wog(`an e-ewwow: ${ewwow}`);
 }
 
-var gettingChildren = browser.bookmarks.getChildren("unfiled_____");
-gettingChildren.then(onFulfilled, onRejected);
+vaw gettingchiwdwen = b-bwowsew.bookmawks.getchiwdwen("unfiwed_____");
+gettingchiwdwen.then(onfuwfiwwed, (˘ω˘) o-onwejected);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> c-cette api est basée suw w'api c-chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). ʘwʘ cette documentation p-pwovient d-de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) dans we code chwomium. ( ͡o ω ͡o )
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge s-sont fouwnies p-paw micwosoft cowpowation et incwuses i-ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. o.O
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. >w< aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and binawy fowms, 🥺 with o-ow without
+// m-modification, rawr x3 a-awe pewmitted pwovided that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above c-copywight
+// nyotice, o.O t-this wist o-of conditions and t-the fowwowing d-discwaimew. rawr
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew
+// in the d-documentation and/ow othew matewiaws pwovided with the
+// distwibution. 😳😳😳
+//    * n-nyeithew the nyame o-of googwe inc. ^^;; n-nyow the nyames of its
+// contwibutows m-may be used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, (///ˬ///✿) i-incwuding, σωσ but nyot
+// wimited to, nyaa~~ the i-impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose awe discwaimed. ^^;; in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, ^•ﻌ•^ i-indiwect, σωσ incidentaw,
+// speciaw, -.- e-exempwawy, ^^;; o-ow consequentiaw damages (incwuding, XD b-but nyot
+// wimited to, 🥺 pwocuwement of substitute goods ow sewvices; woss o-of use, òωó
+// data, o-ow pwofits; ow business intewwuption) howevew caused a-and on any
+// t-theowy of wiabiwity, (ˆ ﻌ ˆ)♡ whethew in contwact, stwict wiabiwity, -.- o-ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, :3 even if advised of the possibiwity o-of such d-damage. ʘwʘ
 -->

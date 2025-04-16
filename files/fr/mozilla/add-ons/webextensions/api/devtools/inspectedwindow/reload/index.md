@@ -1,86 +1,86 @@
 ---
-title: devtools.inspectedWindow.reload()
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/inspectedWindow/reload
+titwe: devtoows.inspectedwindow.wewoad()
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/inspectedwindow/wewoad
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Recharge la fenêtre à laquelle les devtools sont attachés.
+w-wechawge w-wa fenêtwe à w-waquewwe wes d-devtoows sont attachés. ^^;;
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.devtools.inspectedWindow.reload(
-  reloadOptions, // object
+b-bwowsew.devtoows.inspectedwindow.wewoad(
+  w-wewoadoptions, >_< // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `reloadOptions`{{optional_inline}}
+- `wewoadoptions`{{optionaw_inwine}}
 
-  - : `object`. Options pour la fonction, comme suit
+  - : `object`. rawr x3 options pouw wa fonction, /(^•ω•^) comme suit
 
-    - `ignoreCache`{{optional_inline}}
-      - : `boolean`. S'il est vrai, cela fait que le rechargement ignore le cache du navigateur (comme si l'utilisateur avait appuyé sur Shift+Ctrl+R).
-    - `userAgent`{{optional_inline}}
-      - : `string`. Définissez un agent utilisateur personnalisé pour la page. Ici, la chaîne fournie sera envoyée dans l'en-tête de l'[Agent utilisateur](/fr/docs/Web/HTTP/Headers/User-Agent), et sera renvoyée par les appels à [`navigator.userAgent`](/fr/docs/Web/API/Navigator/userAgent) réalisé par des scripts s'exécutant sur la page.
-    - `injectedScript` {{optional_inline}}
-      - : `string`. Injectez l'expression JavaScript donnée dans toutes les images de la page, avant tout autre script.
+    - `ignowecache`{{optionaw_inwine}}
+      - : `boowean`. :3 s-s'iw est vwai, (ꈍᴗꈍ) cewa fait que we wechawgement ignowe w-we cache du nyavigateuw (comme s-si w'utiwisateuw avait appuyé suw shift+ctww+w). /(^•ω•^)
+    - `usewagent`{{optionaw_inwine}}
+      - : `stwing`. (⑅˘꒳˘) définissez un agent u-utiwisateuw pewsonnawisé pouw w-wa page. ( ͡o ω ͡o ) ici, w-wa chaîne fouwnie sewa envoyée dans w'en-tête de w'[agent utiwisateuw](/fw/docs/web/http/headews/usew-agent), òωó et sewa wenvoyée p-paw wes appews à [`navigatow.usewagent`](/fw/docs/web/api/navigatow/usewagent) wéawisé paw des scwipts s'exécutant suw wa page. (⑅˘꒳˘)
+    - `injectedscwipt` {{optionaw_inwine}}
+      - : `stwing`. XD i-injectez w'expwession javascwipt d-donnée d-dans toutes wes i-images de wa page, -.- a-avant tout autwe scwipt. :3
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Rechargez la fenêtre inspectée, définissez l'agent utilisateur et injectez un script
+wechawgez wa fenêtwe i-inspectée, nyaa~~ définissez w'agent utiwisateuw et injectez un scwipt
 
 ```js
-const reloadButton = document.querySelector("#reload-button");
+const wewoadbutton = document.quewysewectow("#wewoad-button");
 
-reloadButton.addEventListener("click", () => {
-  browser.devtools.inspectedWindow.reload({
-    injectedScript: "alert(navigator.userAgent);",
-    userAgent: "Not a real UA",
+w-wewoadbutton.addeventwistenew("cwick", 😳 () => {
+  bwowsew.devtoows.inspectedwindow.wewoad({
+    i-injectedscwipt: "awewt(navigatow.usewagent);", (⑅˘꒳˘)
+    u-usewagent: "not a-a weaw ua", nyaa~~
   });
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools`](https://developer.chrome.com/extensions/devtools).
+> cette api est basée suw w-w'api chwomium [`chwome.devtoows`](https://devewopew.chwome.com/extensions/devtoows). OwO
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à m-micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw w-wes États-unis. rawr x3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. XD a-aww wights wesewved. σωσ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, (U ᵕ U❁) with ow without
+// modification, (U ﹏ U) awe pewmitted p-pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of s-souwce code must wetain the above copywight
+// nyotice, :3 this wist o-of conditions and the fowwowing discwaimew. ( ͡o ω ͡o )
+//    * wedistwibutions in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, σωσ t-this wist of c-conditions and the fowwowing discwaimew
+// i-in t-the documentation a-and/ow othew matewiaws p-pwovided with the
+// distwibution.
+//    * nyeithew the n-nyame of googwe i-inc. >w< nyow the nyames o-of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as is" and any expwess ow impwied wawwanties, OwO incwuding, 😳 b-but nyot
+// w-wimited to, 😳😳😳 t-the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (˘ω˘) i-indiwect, incidentaw, ʘwʘ
+// speciaw, ( ͡o ω ͡o ) e-exempwawy, o.O ow consequentiaw d-damages (incwuding, >w< b-but nyot
+// wimited to, 😳 pwocuwement of substitute g-goods o-ow sewvices; woss of use, 🥺
+// data, o-ow pwofits; ow b-business intewwuption) howevew caused and on any
+// theowy of wiabiwity, rawr x3 whethew i-in contwact, s-stwict wiabiwity, o.O o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the u-use
+// of this softwawe, rawr even if advised of the possibiwity of such damage. ʘwʘ
 -->

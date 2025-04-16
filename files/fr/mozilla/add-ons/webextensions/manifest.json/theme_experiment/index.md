@@ -1,178 +1,178 @@
 ---
-title: theme expérimentation
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/theme_experiment
+titwe: theme expéwimentation
+s-swug: moziwwa/add-ons/webextensions/manifest.json/theme_expewiment
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td><code>Object</code></td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td><code>object</code></td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"theme_experiment": {
-  "stylesheet": "style.css",
-  "colors": {
-    "popup_affordance": "--arrowpanel-dimmed"
-  },
+        <pwe c-cwass="bwush: j-json">
+"theme_expewiment": {
+  "stywesheet": "stywe.css", 😳😳😳
+  "cowows": {
+    "popup_affowdance": "--awwowpanew-dimmed"
+  }, (˘ω˘)
   "images": {
-    "theme_toolbar": "--toolbar-bgimage"
-  },
-  "properties": {
-    "toolbar_image_alignment":
-    "--toolbar-bgalignment"
+    "theme_toowbaw": "--toowbaw-bgimage"
+  }, ʘwʘ
+  "pwopewties": {
+    "toowbaw_image_awignment":
+    "--toowbaw-bgawignment"
   }
-}</pre
+}</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Cette clé permet de définir les propriétés de la clé expérimentale de [`theme`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme) pour l'interface Firefox. Ces expériences sont un précurseur pour proposer de nouvelles fonctionnalités thématiques à inclure dans Firefox. L'expérimentation se fait par:
+cette cwé pewmet de définiw wes pwopwiétés de wa cwé expéwimentawe d-de [`theme`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme) pouw w'intewface fiwefox. ( ͡o ω ͡o ) ces e-expéwiences sont un pwécuwseuw p-pouw pwoposew de nyouvewwes fonctionnawités thématiques à incwuwe d-dans fiwefox. o.O w'expéwimentation s-se fait paw:
 
-- créer une feuille de style qui définit les correspondances entre les sélecteurs CSS internes pour les éléments d'interface utilisateur Firefox et les variables CSS arbitraires. Les variables CSS sont ensuite mappées dans les objets `colors`, `images`, et `properties` avec les nouvelles propriétés de clé de `theme`.
-- (sans feuille de style) en utilisant `colors`, `images`, et `properties` pour mapper les sélecteurs CSS internes de Firefox, tels que `--arrowpanel-dimmed` vers les nouvelles propriétés de clé de `theme` key properties. Cette option limite l'expérimentation aux composants d'interface utilisateur associés à une variable CSS intégrée.
+- c-cwéew une feuiwwe de stywe qui définit wes cowwespondances entwe wes séwecteuws c-css intewnes pouw wes éwéments d'intewface utiwisateuw fiwefox et wes v-vawiabwes css awbitwaiwes. >w< wes v-vawiabwes css sont e-ensuite mappées d-dans wes objets `cowows`, 😳 `images`, e-et `pwopewties` avec wes nyouvewwes pwopwiétés d-de cwé de `theme`. 🥺
+- (sans feuiwwe de s-stywe) en utiwisant `cowows`, rawr x3 `images`, o.O et `pwopewties` pouw mappew wes séwecteuws css intewnes de fiwefox, rawr tews q-que `--awwowpanew-dimmed` vews w-wes nyouvewwes p-pwopwiétés de c-cwé de `theme` key pwopewties. ʘwʘ cette option wimite w'expéwimentation a-aux composants d-d'intewface utiwisateuw associés à u-une v-vawiabwe css intégwée. 😳😳😳
 
-Pour découvrir les sélecteurs CSS des éléments de l'interface utilisateur Firefox ou des variables CSS internes de Firefox, utilise la [boite à outils du navigateur](https://firefox-source-docs.mozilla.org/devtools-user/browser_toolbox/index.html).
+pouw découvwiw w-wes séwecteuws css des éwéments d-de w'intewface utiwisateuw fiwefox o-ou des vawiabwes css intewnes de f-fiwefox, ^^;; utiwise wa [boite à outiws d-du nyavigateuw](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/bwowsew_toowbox/index.htmw). o.O
 
-> [!NOTE]
-> Cette clé est uniquement disponible pour une utilisation dans les canaux Firefox Developer Edition et Firefox Nightly et nécessite l'activation de la préférence `extensions.legacy.enabled`.
+> [!note]
+> c-cette cwé est uniquement disponibwe pouw une utiwisation dans wes canaux fiwefox devewopew edition et fiwefox n-nyightwy et n-nyécessite w'activation de wa p-pwéféwence `extensions.wegacy.enabwed`. (///ˬ///✿)
 
-> [!WARNING]
-> Cette fonctionnalité est expérimentale et peut être sujette à modification.
+> [!wawning]
+> c-cette f-fonctionnawité est expéwimentawe et peut êtwe sujette à modification. σωσ
 
-## Syntaxe
+## s-syntaxe
 
-La clé theme_experiment est un objet qui prend les propriétés suivantes :
+wa cwé theme_expewiment est un objet qui pwend wes pwopwiétés suivantes :
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <thead>
-    <tr>
-      <th scope="col">Nom</th>
-      <th scope="col">Type</th>
-      <th scope="col">Description</th>
-    </tr>
+    <tw>
+      <th scope="cow">nom</th>
+      <th s-scope="cow">type</th>
+      <th s-scope="cow">descwiption</th>
+    </tw>
   </thead>
   <tbody>
-    <tr>
-      <td><code>stylesheet</code></td>
-      <td><code>String</code></td>
+    <tw>
+      <td><code>stywesheet</code></td>
+      <td><code>stwing</code></td>
       <td>
-        <p>Facultatif</p>
+        <p>facuwtatif</p>
         <p>
-          Nom d'une feuille de style fournissant le mappage des sélecteurs CSS
-          des éléments de l'interface Firefox aux variables CSS.
+          n-nyom d'une feuiwwe de s-stywe fouwnissant w-we mappage des s-séwecteuws css
+          d-des éwéments de w'intewface fiwefox a-aux vawiabwes css. nyaa~~
         </p>
       </td>
-    </tr>
-    <tr>
+    </tw>
+    <tw>
       <td><code>images</code></td>
-      <td><code>Object</code></td>
+      <td><code>object</code></td>
       <td>
-        <p>Facultatif</p>
+        <p>facuwtatif</p>
         <p>
-          Mappings des variables CSS (telles que définies dans Firefox ou par la
-          feuille de style définie dans la <code>stylesheet</code>) aux noms de
-          propriétés <code>images</code> à utiliser dans la clé
+          m-mappings des vawiabwes c-css (tewwes q-que définies d-dans fiwefox ou paw wa
+          feuiwwe de stywe définie dans w-wa <code>stywesheet</code>) aux nyoms de
+          pwopwiétés <code>images</code> à utiwisew dans wa cwé
           <code
             ><a
-              href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme"
+              h-hwef="/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme"
               >theme</a
             ></code
-          >.
+          >. ^^;;
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>colors</code></td>
-      <td><code>Object</code></td>
+    </tw>
+    <tw>
+      <td><code>cowows</code></td>
+      <td><code>object</code></td>
       <td>
-        <p>Facultatif</p>
+        <p>facuwtatif</p>
         <p>
-          Mappings des variables CSS (telles que définies dans Firefox ou par la
-          feuille de style définie dans la <code>stylesheet</code>) aux noms de
-          propriétés <code>colors</code> à utiliser dans la clé
+          mappings des vawiabwes css (tewwes que définies d-dans fiwefox o-ou paw wa
+          f-feuiwwe de stywe définie d-dans wa <code>stywesheet</code>) aux nyoms de
+          p-pwopwiétés <code>cowows</code> à u-utiwisew dans wa cwé
           <code
             ><a
-              href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme"
+              hwef="/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme"
               >theme</a
             ></code
-          >.
+          >. ^•ﻌ•^
         </p>
       </td>
-    </tr>
-    <tr>
-      <td><code>properties</code></td>
-      <td><code>Object</code></td>
+    </tw>
+    <tw>
+      <td><code>pwopewties</code></td>
+      <td><code>object</code></td>
       <td>
-        <p>Facultatif</p>
+        <p>facuwtatif</p>
         <p>
-          Mappings des variables CSS (telles que définies dans Firefox ou par la
-          feuille de style définie dans la <code>stylesheet</code>) aux noms de
-          propriétés <code>properties</code> à utiliser dans la clé
+          mappings des vawiabwes css (tewwes q-que définies dans fiwefox ou paw w-wa
+          feuiwwe de stywe d-définie dans wa <code>stywesheet</code>) a-aux nyoms de
+          pwopwiétés <code>pwopewties</code> à u-utiwisew d-dans wa cwé
           <code
             ><a
-              href="/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme"
+              hwef="/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme"
               >theme</a
             ></code
-          >.
+          >. σωσ
         </p>
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Exemples
+## e-exempwes
 
-Ces exemples utilisent une feuille de style appelée `style.css` pour permettre de définir une couleur pour le bouton de recharge du navigateur dans la clé [`theme`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/theme).
+ces e-exempwes utiwisent une feuiwwe de stywe appewée `stywe.css` pouw pewmettwe de d-définiw une couweuw p-pouw we bouton d-de wechawge du nyavigateuw dans w-wa cwé [`theme`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/theme). -.-
 
-La feuille de style définit :
+w-wa feuiwwe de stywe définit :
 
 ```css
-#reload-button {
-  fill: var(--reload-button-color);
+#wewoad-button {
+  f-fiww: vaw(--wewoad-button-cowow);
 }
 ```
 
-où `#reload-button` est le sélecteur CSS interne de Firefox pour le bouton reload et `--reload-button-color` est un nom arbitraire..
+où `#wewoad-button` est we séwecteuw css i-intewne de fiwefox p-pouw we bouton wewoad et `--wewoad-button-cowow` est un nyom a-awbitwaiwe..
 
-Dans le fichier `manifest.json`, `--reload-button-color` est alors mappé au nom à utiliser dans la propriété `theme` `colors` :
+d-dans we fichiew `manifest.json`, ^^;; `--wewoad-button-cowow` est awows mappé au nyom à utiwisew dans w-wa pwopwiété `theme` `cowows` :
 
 ```json
-"theme_experiment": {
-  "stylesheet": "style.css",
-  "colors": {
-    "reload_button": "--reload-button-color"
+"theme_expewiment": {
+  "stywesheet": "stywe.css", XD
+  "cowows": {
+    "wewoad_button": "--wewoad-button-cowow"
   }
 }
 ```
 
-L'argument `reload_button` est alors utilisé de la même manière que n'importe quelle autre propriété de `theme` .
+w'awgument `wewoad_button` est awows utiwisé de wa même manièwe que ny'impowte q-quewwe autwe pwopwiété de `theme` . 🥺
 
 ```json
 "theme": {
-  "colors": {
-    "reload_button": "orange"
+  "cowows": {
+    "wewoad_button": "owange"
   }
 }
 ```
 
-Ceci a pour effet de rendre l'icône de recharge orange.
+c-ceci a p-pouw effet de wendwe w'icône de wechawge owange. òωó
 
-![](theme_experiment.png)
+![](theme_expewiment.png)
 
-Cette propriété peut également être utilisée dans `browser.theme.update()`. `images` et `properties` travaillent de la même manière que `colors`.
+cette pwopwiété p-peut égawement êtwe u-utiwisée dans `bwowsew.theme.update()`. (ˆ ﻌ ˆ)♡ `images` et `pwopewties` twavaiwwent d-de wa même manièwe que `cowows`. -.-
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}

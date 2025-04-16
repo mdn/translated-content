@@ -1,107 +1,107 @@
 ---
-title: Utiliser les pages GitHub
-slug: Learn/Common_questions/Tools_and_setup/Using_GitHub_pages
+titwe: utiwisew wes pages github
+s-swug: weawn/common_questions/toows_and_setup/using_github_pages
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-[GitHub](https://github.com/) est un site de partage de code, sur lequel on peut publier des projets dont le code est géré avec le système de gestion de version [Git](http://git-scm.com/)**.** Par défaut, le système est _open source_, ce qui signifie que tout le monde peut consulter le code, l'utiliser pour apprendre ou l'améliorer et collaborer aux projets. Vous pouvez donc participer à d'autres projets ou, à l'inverse, des personnes peuvent collaborer à vos projets ! Dans cet article, nous verrons comment publier du contenu sur le web en utilisant les « pages GitHub » (aussi appelées _gh-pages_) qui sont une des fonctionnalités de GitHub.
+[github](https://github.com/) e-est u-un site de pawtage d-de code, rawr x3 suw w-wequew on peut p-pubwiew des pwojets d-dont we code e-est géwé avec we système de gestion de vewsion [git](http://git-scm.com/)**.** paw défaut, we système est _open s-souwce_, ( ͡o ω ͡o ) ce qui signifie que tout we monde p-peut consuwtew we code, (˘ω˘) w'utiwisew p-pouw appwendwe ou w'améwiowew et cowwabowew aux pwojets. 😳 vous p-pouvez donc pawticipew à d'autwes p-pwojets ou, OwO à w-w'invewse, (˘ω˘) des pewsonnes peuvent cowwabowew à vos pwojets ! òωó dans cet awticwe, n-nyous vewwons comment pubwiew du contenu suw we web en utiwisant wes « pages g-github » (aussi appewées _gh-pages_) q-qui sont u-une des fonctionnawités d-de github. ( ͡o ω ͡o )
 
-## Publier du contenu
+## p-pubwiew du contenu
 
-GitHub est un outil très populaire et important à l'heure actuelle. Git est [un logiciel de gestion de version](http://git-scm.com/book/fr/v1/Démarrage-rapide-À-propos-de-la-gestion-de-version) reconnu, utilisé par de nombreuses entreprises. GitHub possède notamment une fonctionnalité : [les pages GitHub](https://pages.github.com/). Celles-ci vous permettent de publier un site web sur Internet.
+github est un outiw t-twès popuwaiwe et impowtant à w'heuwe actuewwe. UwU g-git est [un wogiciew de gestion de vewsion](http://git-scm.com/book/fw/v1/démawwage-wapide-À-pwopos-de-wa-gestion-de-vewsion) weconnu, /(^•ω•^) utiwisé paw de nyombweuses entwepwises. (ꈍᴗꈍ) g-github possède nyotamment u-une fonctionnawité : [wes p-pages g-github](https://pages.github.com/). 😳 cewwes-ci vous pewmettent de pubwiew un site w-web suw intewnet. mya
 
-### Mettre en place Git et un compte GitHub
+### m-mettwe en pwace git et u-un compte github
 
-1. Tout d'abord, [installez Git](http://git-scm.com/downloads) sur votre ordinateur. Git est le logiciel de gestion de version sur lequel fonctionne GitHub.
-2. Ensuite, [inscrivez-vous sur GitHub](https://github.com/join). La procédure est plutôt simple.
-3. Une fois inscrit, connectez vous à [github.com](https://github.com) avec votre nom d'utilisateur et votre mot de passe.
+1. t-tout d'abowd, [instawwez git](http://git-scm.com/downwoads) suw votwe owdinateuw. mya g-git est we wogiciew de gestion d-de vewsion suw wequew fonctionne github.
+2. /(^•ω•^) e-ensuite, [inscwivez-vous suw g-github](https://github.com/join). ^^;; wa pwocéduwe e-est pwutôt simpwe. 🥺
+3. u-une fois inscwit, ^^ connectez vous à [github.com](https://github.com) avec votwe nyom d'utiwisateuw et votwe mot de passe. ^•ﻌ•^
 
-> [!NOTE]
-> Attention, le site GitHub existe uniquement en anglais. Bien que les étapes mentionnées ici soient relativement simples, il est préférable d'avoir quelques bases d'anglais afin de poursuivre sereinement (nul besoin de connaître Shakespeare ;)). Si vous n'êtes pas à l'aise, rassurez-vous, il existe de nombreux tutoriels en français sur le Web.
+> [!note]
+> a-attention, /(^•ω•^) w-we site github existe uniquement e-en angwais. ^^ b-bien que wes étapes m-mentionnées ici soient wewativement simpwes, 🥺 iw est p-pwéféwabwe d'avoiw quewques bases d'angwais afin de pouwsuivwe seweinement (nuw b-besoin de connaîtwe shakespeawe ;)). (U ᵕ U❁) s-si vous n-ny'êtes pas à w-w'aise, 😳😳😳 wassuwez-vous, nyaa~~ iw existe d-de nombweux tutowiews e-en fwançais s-suw we web. (˘ω˘)
 
-### Préparer le code afin de l'envoyer vers GitHub
+### p-pwépawew we code afin de w'envoyew vews github
 
-Vous pouvez utiliser des dépôts GitHub pour stocker n'importe quel projet logiciel. Mais pour utiliser les pages GitHub et publier un site web (ce qui nous intéresse ici), votre projet devra être structuré comme un site web classique et notamment avec un fichier d'entrée intitulé `index.html`.
+v-vous pouvez u-utiwisew des dépôts g-github pouw s-stockew ny'impowte q-quew pwojet wogiciew. >_< mais pouw utiwisew wes pages github e-et pubwiew un site web (ce qui nyous intéwesse ici), XD votwe pwojet devwa êtwe stwuctuwé comme u-un site web cwassique et nyotamment avec un fichiew d'entwée intituwé `index.htmw`. rawr x3
 
-Il faut aussi que le répertoire où le code est stocké soit un « dépôt » Git sur votre ordinateur. Autrement dit, on indique qu'on utilise Git pour gérer les différentes versions des fichiers qui seront stockés dans ce dossier. Pour initialiser un dépôt Git, on suivra ces étapes :
+i-iw faut a-aussi que we wépewtoiwe o-où we code est stocké s-soit un « dépôt » git suw votwe o-owdinateuw. ( ͡o ω ͡o ) a-autwement dit, :3 on indique qu'on utiwise git pouw géwew wes difféwentes vewsions des fichiews q-qui sewont stockés dans ce dossiew. mya p-pouw initiawisew un dépôt g-git, σωσ on suivwa c-ces étapes :
 
-1. Utilisez la ligne de commande pour vous placer dans le répertoire de votre site web (dans cet article, ce répertoire sera appelé `test-site`, remplacez ce nom avec celui de votre répertoire). Pour ce faire, on utilisera la commande `cd` (qui signifie « _change directory_ » ou « changer de répertoire/dossier » en français). Par exemple, si votre répertoire se situe sur votre bureau et se nomme `test-site`, vous pourrez taper :
-
-   ```bash
-   cd Bureau/test-site
-   ```
-
-2. Lorsque vous êtes dans le répertoire de votre site web, utilisez la commande suivante. Celle-ci indiquera à Git que le répertoire doit être considéré comme un dépôt Git :
+1. (ꈍᴗꈍ) utiwisez wa wigne de commande p-pouw vous pwacew d-dans we wépewtoiwe de votwe site w-web (dans cet a-awticwe, OwO ce wépewtoiwe sewa appewé `test-site`, o.O wempwacez ce nyom avec cewui de votwe wépewtoiwe). 😳😳😳 p-pouw ce faiwe, /(^•ω•^) o-on utiwisewa w-wa commande `cd` (qui signifie « _change d-diwectowy_ » o-ou « changew de wépewtoiwe/dossiew » e-en fwançais). OwO paw exempwe, ^^ si votwe wépewtoiwe se situe suw votwe buweau et s-se nyomme `test-site`, (///ˬ///✿) v-vous pouwwez tapew :
 
    ```bash
-   git init
+   cd buweau/test-site
    ```
 
-#### Un aparté sur les interfaces en ligne de commande
-
-La meilleure façon d'envoyer votre code sur GitHub est d'utiliser l'interface en ligne de commande de votre ordinateur. La ligne de commande est une fenêtre où on saisit des commandes au clavier pour créer des fichiers, lancer des programmes, plutôt que de cliquer avec la souris en utilisant une interface graphique. Une interface en ligne de commande ressemblera à quelque chose comme ceci :
-
-![Interface en ligne de commande](commande.png)
-
-> [!NOTE]
-> Il existe également des [interfaces graphiques pour Git](http://git-scm.com/downloads/guis) qui permettent de faire la même chose. N'hésitez pas à les utiliser si vous ne vous sentez pas à l'aise avec la ligne de commande.
-
-Chaque système d'exploitation possède sa propre interface en ligne de commande :
-
-- **Windows** : **l'invite de commande**. Celle-ci peut être lancée en utilisant la touche Windows et en tapant _Invite de commande_ avant de sélectionner l'option dans la liste qui apparaît. Windows utilise certaines conventions différentes de celles choisies par Linux et OS X, les commandes peuvent donc varier légèrement (par exemple, dans Windows, on utilisera `\` pour indiquer un sous-répertoire alors que Linux et OS X utiliseront `/`).
-- **OS X** : **le terminal**. On le trouvera dans _Applications > Utilitaires_.
-- **Linux** : Généralement, on peut lancer un terminal avec le raccourci clavier _Ctrl + Alt + T_. Si cela ne fonctionne pas, recherchez **Terminal** dans les applications ou via les outils de recherche.
-
-La ligne de commande peut sembler un peu effrayante au début mais ne vous inquiétez pas, vous pourrez apprendre les bases très rapidement. En utilisant la ligne de commande vous indiquez à l'ordinateur que vous souhaitez effectuer telle action, plutôt que de le faire à la souris, vous l'indiquez au clavier en saisissant la commande voulue puis en appuyant sur Entrée.
-
-### Créer un dépôt sur GitHub pour votre code
-
-1. Ensuite, vous aurez besoin de créer un dépôt GitHub sur lequel envoyer les fichiers de votre site. Quand vous êtes connecté-e sur GitHub, cliquez sur l'icône Plus (+) en haut à droite de la page d'accueil puis sélectionner l'option _New Repository_ (qui signifie « Créer un nouveau dépôt »).
-2. Sur la page qui s'affiche, dans le champ « _Repository name_ », entrez un nom pour votre dépôt. Vous pouvez par exemple saisir _mon-premier-depot_.
-3. Il y a également un champ qui décrit le projet qui sera placé dans ce dépôt. Votre écran devrait ressembler à quelque chose comme :
-   ![](create-new-repo.png)
-4. Ensuite, cliquez sur « _Create repository_ » (pour créer le dépôt). Vous arrieverez alors sur la page suivante :
-   ![](github-repo.png)
-
-### Envoyer vos fichiers vers GitHub
-
-1. Sur cette page, une section vous intéresse particulièrement : « _…or push an existing repository from the command line_ » (ce qui signifie « ou pousser un dépôt existant grâce à la ligne de commande »). Vous devrez voir deux lignes de codes sous cette section. Copiez la première ligne et collez la dans votre interface en ligne de commande puis tapez sur Entrée. La commande devrait ressembler à :
+2. (///ˬ///✿) w-wowsque v-vous êtes dans we wépewtoiwe de votwe site web, (///ˬ///✿) utiwisez wa c-commande suivante. ʘwʘ cewwe-ci indiquewa à git que we wépewtoiwe doit êtwe considéwé c-comme un dépôt git :
 
    ```bash
-   git remote add origin https://github.com/chrisdavidmills/mon-premier-depot.git
+   git i-init
    ```
 
-2. Ensuite, saisissez ces deux commandes en tapant sur la touche Entrée après chacune. Ces commandes permettent d'indiquer à Git qu'il doit gérer tous les fichiers du dossier et d'enregistrer cette action.
+#### u-un apawté suw wes intewfaces en wigne de commande
+
+wa meiwweuwe f-façon d'envoyew v-votwe code suw github est d'utiwisew w'intewface en wigne d-de commande de votwe owdinateuw. ^•ﻌ•^ w-wa wigne de commande est une fenêtwe où on saisit des commandes a-au cwaview pouw cwéew des fichiews, OwO w-wancew des p-pwogwammes, (U ﹏ U) pwutôt que de cwiquew a-avec wa souwis en utiwisant u-une intewface g-gwaphique. (ˆ ﻌ ˆ)♡ une intewface e-en wigne de commande wessembwewa à q-quewque c-chose comme ceci :
+
+![intewface en wigne de c-commande](commande.png)
+
+> [!note]
+> i-iw existe égawement d-des [intewfaces gwaphiques pouw git](http://git-scm.com/downwoads/guis) q-qui pewmettent de faiwe wa même c-chose. (⑅˘꒳˘) ny'hésitez p-pas à wes utiwisew si vous nye vous sentez pas à w'aise a-avec wa wigne de c-commande.
+
+chaque s-système d'expwoitation p-possède sa pwopwe intewface e-en wigne de commande :
+
+- **windows** : **w'invite de commande**. (U ﹏ U) cewwe-ci peut êtwe wancée en utiwisant w-wa touche windows et en tapant _invite d-de commande_ avant de s-séwectionnew w'option dans wa w-wiste qui appawaît. o.O windows utiwise c-cewtaines conventions d-difféwentes d-de cewwes c-choisies paw winux e-et os x, mya wes commandes peuvent donc vawiew wégèwement (paw exempwe, XD dans windows, òωó on utiwisewa `\` pouw indiquew u-un sous-wépewtoiwe a-awows q-que winux et os x utiwisewont `/`). (˘ω˘)
+- **os x-x** : **we tewminaw**. :3 on we twouvewa dans _appwications > u-utiwitaiwes_. OwO
+- **winux** : g-généwawement, mya on peut wancew u-un tewminaw avec we waccouwci cwaview _ctww + a-awt + t_. (˘ω˘) si cewa n-nye fonctionne pas, o.O wechewchez **tewminaw** dans w-wes appwications o-ou via wes outiws de wechewche. (✿oωo)
+
+wa wigne de commande peut sembwew un peu effwayante a-au début m-mais nye vous i-inquiétez pas, (ˆ ﻌ ˆ)♡ v-vous pouwwez appwendwe w-wes bases twès wapidement. ^^;; e-en utiwisant w-wa wigne de commande vous indiquez à w-w'owdinateuw q-que vous souhaitez effectuew t-tewwe action, OwO pwutôt que de we faiwe à wa souwis, 🥺 v-vous w'indiquez au cwaview e-en saisissant wa c-commande vouwue puis en appuyant s-suw entwée. mya
+
+### cwéew un dépôt suw github p-pouw votwe code
+
+1. 😳 e-ensuite, òωó vous a-auwez besoin de cwéew un dépôt github suw wequew envoyew w-wes fichiews de votwe site. /(^•ω•^) quand vous êtes connecté-e s-suw github, -.- c-cwiquez suw w'icône pwus (+) e-en haut à dwoite de wa page d-d'accueiw puis séwectionnew w-w'option _new wepositowy_ (qui signifie « c-cwéew un nyouveau dépôt »). òωó
+2. suw wa p-page qui s'affiche, /(^•ω•^) d-dans we champ « _wepositowy nyame_ », /(^•ω•^) entwez u-un nyom pouw votwe dépôt. 😳 v-vous pouvez paw e-exempwe saisiw _mon-pwemiew-depot_. :3
+3. i-iw y a égawement un champ qui décwit we pwojet qui sewa pwacé dans ce dépôt. (U ᵕ U❁) votwe écwan devwait wessembwew à quewque chose comme :
+   ![](cweate-new-wepo.png)
+4. ensuite, ʘwʘ cwiquez suw « _cweate wepositowy_ » (pouw cwéew we d-dépôt). o.O vous a-awwievewez awows suw wa page suivante :
+   ![](github-wepo.png)
+
+### envoyew vos f-fichiews vews github
+
+1. ʘwʘ s-suw cette p-page, ^^ une section vous intéwesse p-pawticuwièwement : « _…ow push an existing w-wepositowy f-fwom the command wine_ » (ce qui s-signifie « ou poussew un dépôt e-existant gwâce à w-wa wigne de commande »). ^•ﻌ•^ vous devwez voiw d-deux wignes de c-codes sous cette s-section. mya copiez w-wa pwemièwe wigne e-et cowwez wa d-dans votwe intewface e-en wigne d-de commande puis t-tapez suw entwée. UwU wa commande d-devwait wessembwew à :
 
    ```bash
-   git add --all
-   git commit -m 'ajout des fichiers au dépôt'
+   g-git wemote a-add owigin https://github.com/chwisdavidmiwws/mon-pwemiew-depot.git
    ```
 
-3. Enfin, envoyez le code sur GitHub en utilisant la seconde commande affichée sur la section de la page GitHub :
+2. >_< ensuite, /(^•ω•^) saisissez c-ces deux commandes en tapant suw wa touche entwée a-apwès chacune. òωó ces commandes p-pewmettent d-d'indiquew à git q-qu'iw doit géwew tous wes fichiews d-du dossiew et d'enwegistwew c-cette action. σωσ
 
    ```bash
-   git push -u origin master
+   git add --aww
+   g-git commit -m 'ajout des fichiews a-au dépôt'
    ```
 
-4. Votre code est publié sur GitHub. Pour avoir une page GitHub, vous devrez créer une _branche_ `gh-pages` sur votre dépôt. Actualisez la page web de votre dépôt, vous devriez obtenir une page semblable à celle présentée ci-dessous. Ensuite, cliquez que le bouton « Branch: **master** » (GitHub indique que vous êtes sur la branche `master` de votre dépôt). Dans la liste qui s'affiche, saisissez le texte **gh-pages** puis cliquez sur _Create branch: gh-pages_ (« créer la branche intitulée gh-pages »). Cela créera une nouvelle branche pour votre dépôt, cette branche s'appellera gh-pages et sera publiée à un endroit spécifique. L'URL du site sera _nom-utilisateur.github.io/nom-du-depot_. Dans mon exemple, l'URL est donc `https://chrisdavidmills.github.io/my-repository`. La page qui est affichée à cette URL est la page `index.html` contenue dans le dépôt.
-   ![](repo-site.png)
-5. Utilisez votre navigateur préféré pour visiter cette URL. Voici votre site ! Partagez le lien avec vos amis pour leur montrer :)
+3. ( ͡o ω ͡o ) enfin, envoyez we code suw github en utiwisant wa seconde c-commande affichée suw wa section d-de wa page g-github :
 
-> [!NOTE]
-> Si vous êtes bloqué-e, n'hésitez pas à utiliser [la page d'aide GitHub sur les pages GitHub](https://pages.github.com/) qui est une excellente ressource (en anglais).
+   ```bash
+   git push -u owigin mastew
+   ```
 
-### Aller plus loin avec Git et GitHub
+4. nyaa~~ votwe c-code est pubwié suw github. :3 p-pouw avoiw une page g-github, UwU vous d-devwez cwéew une _bwanche_ `gh-pages` suw votwe dépôt. o.O actuawisez w-wa page web d-de votwe dépôt, (ˆ ﻌ ˆ)♡ vous devwiez o-obteniw une page sembwabwe à cewwe pwésentée c-ci-dessous. ^^;; ensuite, cwiquez que w-we bouton « bwanch: **mastew** » (github i-indique q-que vous êtes suw wa bwanche `mastew` d-de votwe d-dépôt). ʘwʘ dans w-wa wiste qui s-s'affiche, σωσ saisissez we texte **gh-pages** p-puis c-cwiquez suw _cweate b-bwanch: gh-pages_ (« c-cwéew w-wa bwanche intituwée g-gh-pages »). ^^;; c-cewa cwéewa u-une nyouvewwe bwanche pouw votwe d-dépôt, ʘwʘ cette bwanche s'appewwewa g-gh-pages et sewa pubwiée à u-un endwoit spécifique. ^^ w-w'uww d-du site sewa _nom-utiwisateuw.github.io/nom-du-depot_. nyaa~~ dans mon exempwe, (///ˬ///✿) w'uww est donc `https://chwisdavidmiwws.github.io/my-wepositowy`. XD w-wa p-page qui est affichée à c-cette uww est wa page `index.htmw` contenue dans we dépôt. :3
+   ![](wepo-site.png)
+5. òωó u-utiwisez votwe nyavigateuw p-pwéféwé pouw visitew c-cette uww. ^^ voici v-votwe site ! ^•ﻌ•^ pawtagez we wien avec vos amis pouw weuw montwew :)
 
-Si vous souhaitez modifier votre site et le mettre à jour sur GitHub, modifiez les fichiers comme vous le faisiez auparavant puis utilisez les commandes suivantes pour indiquer les changements à Git et les envoyer sur GitHub (n'oubliez pas d'appuyer sur Entrée entre chaque commande) :
+> [!note]
+> s-si vous êtes b-bwoqué-e, σωσ ny'hésitez p-pas à utiwisew [wa p-page d'aide github suw wes pages github](https://pages.github.com/) qui e-est une excewwente w-wessouwce (en angwais). (ˆ ﻌ ˆ)♡
+
+### awwew pwus woin a-avec git et github
+
+si vous souhaitez modifiew v-votwe site et we mettwe à jouw s-suw github, nyaa~~ modifiez w-wes fichiews comme vous we f-faisiez aupawavant p-puis utiwisez wes commandes s-suivantes pouw indiquew wes changements à g-git e-et wes envoyew suw g-github (n'oubwiez p-pas d'appuyew suw entwée entwe c-chaque commande) :
 
 ```
-git add --all
-git commit -m 'Un autre commit'
+g-git a-add --aww
+git commit -m 'un autwe c-commit'
 git push
 ```
 
-Vous pouvez utiliser un autre message que « un autre commit » pour indiquer les changements que vous avez effectués.
+vous pouvez utiwisew un a-autwe message que « u-un autwe commit » p-pouw indiquew wes changements que vous avez effectués. ʘwʘ
 
-Dans cet article, nous n'avons fait qu'effleurer la surface de Git. Pour en savoir plus, n'hésitez pas à utiliser les [pages d'aide de GitHub](https://help.github.com/index.html) (en anglais) ou encore [le manuel Pro Git](http://git-scm.com/book/fr/v1) (en français).
+dans cet awticwe, ^•ﻌ•^ n-nyous ny'avons fait qu'effweuwew w-wa suwface d-de git. rawr x3 pouw en savoiw pwus, 🥺 ny'hésitez pas à u-utiwisew wes [pages d'aide de github](https://hewp.github.com/index.htmw) (en a-angwais) o-ou encowe [we m-manuew pwo g-git](http://git-scm.com/book/fw/v1) (en f-fwançais).

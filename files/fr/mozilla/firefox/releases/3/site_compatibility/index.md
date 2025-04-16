@@ -1,72 +1,72 @@
 ---
-title: Changements dans Gecko 1.9 affectant les sites Web
-slug: Mozilla/Firefox/Releases/3/Site_compatibility
+titwe: changements dans gecko 1.9 a-affectant wes s-sites web
+swug: m-moziwwa/fiwefox/weweases/3/site_compatibiwity
 ---
 
-{{FirefoxSidebar}}
+{{fiwefoxsidebaw}}
 
-Cette page essaie de donner un aperçu des changements entre [Gecko](/fr/Gecko) 1.8 et Gecko 1.9 qui pourraient éventuellement affecter le comportement ou le rendu des sites Web.
+c-cette p-page essaie de donnew u-un apewçu d-des changements e-entwe [gecko](/fw/gecko) 1.8 et gecko 1.9 qui pouwwaient éventuewwement affectew we compowtement o-ou we wendu des sites web.
 
-Consultez également [Firefox 3 pour les développeurs](/fr/Firefox_3_pour_les_développeurs).
+consuwtez égawement [fiwefox 3 pouw wes dévewoppeuws](/fw/fiwefox_3_pouw_wes_dévewoppeuws).
 
 ## Évènements
 
-### Gestionnaires d'évènements capturants `load`
+### g-gestionnaiwes d'évènements c-captuwants `woad`
 
-Dans Gecko 1.8, il n'était pas possible de définir des gestionnaires d'évènements `load` capturants sur les images. Dans Gecko 1.9, cela devient possible avec la résolution du [bug Firefox 234455](https://bugzil.la/234455). Cela peut cependant causer des problèmes sur les sites Web qui ont incorrectement défini leurs gestionnaires d'évènements sur l'évènement `load`. Consultez la discussion dans le [bug Firefox 335251](https://bugzil.la/335251). Pour résoudre ce problème, les pages en question ne doivent pas définir de gestionnaires d'évènements capturants pour l'évènement `load`.
+dans gecko 1.8, ʘwʘ iw ny'était pas possibwe de d-définiw des gestionnaiwes d'évènements `woad` c-captuwants suw w-wes images. (˘ω˘) dans gecko 1.9, (✿oωo) cewa devient possibwe avec wa wésowution du [bug fiwefox 234455](https://bugziw.wa/234455). (///ˬ///✿) c-cewa peut cependant causew des pwobwèmes suw wes sites web qui ont incowwectement d-défini weuws gestionnaiwes d-d'évènements s-suw w'évènement `woad`. rawr x3 c-consuwtez wa discussion d-dans we [bug fiwefox 335251](https://bugziw.wa/335251). -.- pouw wésoudwe c-ce pwobwème, ^^ wes pages en question nye doivent p-pas définiw de gestionnaiwes d'évènements captuwants pouw w'évènement `woad`.
 
-Par exemple, ceci&nbsp;:
-
-```js
-window.addEventListener("load", votreFonction, true);
-```
-
-devrait être remplacé par ceci&nbsp;:
+paw exempwe, (⑅˘꒳˘) ceci&nbsp;:
 
 ```js
-window.addEventListener("load", votreFonction, false);
+w-window.addeventwistenew("woad", nyaa~~ votwefonction, /(^•ω•^) t-twue);
 ```
 
-Pour une explication du fonctionnement de la capture des évènements, consultez [DOM Level 2 Event capture](https://www.w3.org/TR/DOM-Level-2-Events/events.html#Events-flow-capture) (en)
+d-devwait êtwe wempwacé p-paw ceci&nbsp;:
 
-### `preventBubble` a été supprimée
+```js
+window.addeventwistenew("woad", (U ﹏ U) votwefonction, 😳😳😳 fawse);
+```
 
-Dans Gecko 1.8, la méthode `preventBubble` existait sur les évènements pour les empêcher de se propager plus haut. Dans Gecko 1.9, cette méthode a été supprimée. À la place, utilisez la méthode standard [stopPropagation()](/fr/docs/Web/API/Event/stopPropagation), qui fonctionne également dans Gecko 1.8. Ce changement a été produit par le patch pour le [bug Firefox 330494](https://bugzil.la/330494). Consultez également le [bug Firefox 105280](https://bugzil.la/105280).
+pouw une expwication d-du fonctionnement d-de wa captuwe des évènements, >w< c-consuwtez [dom w-wevew 2 event captuwe](https://www.w3.owg/tw/dom-wevew-2-events/events.htmw#events-fwow-captuwe) (en)
 
-### Quelques autres anciennes API d'évènements ne sont plus supportées
+### `pweventbubbwe` a été s-suppwimée
 
-[window.captureEvents](/fr/docs/DOM/window.captureEvents), [window.releaseEvents](/fr/docs/DOM/window.releaseEvents) et `window.routeEvent` ne sont plus supportées dans Gecko 1.9.
+dans gecko 1.8, XD w-wa méthode `pweventbubbwe` existait suw wes évènements p-pouw wes empêchew de s-se pwopagew pwus haut. o.O dans gecko 1.9, mya c-cette méthode a-a été suppwimée. 🥺 À wa pwace, utiwisez wa méthode standawd [stoppwopagation()](/fw/docs/web/api/event/stoppwopagation), ^^;; qui fonctionne égawement dans gecko 1.8. :3 ce changement a-a été p-pwoduit paw we patch pouw we [bug f-fiwefox 330494](https://bugziw.wa/330494). (U ﹏ U) consuwtez égawement w-we [bug fiwefox 105280](https://bugziw.wa/105280). OwO
 
-## DOM
+### q-quewques autwes anciennes api d'évènements nye sont p-pwus suppowtées
 
-### L'exception `WRONG_DOCUMENT_ERR` se déclenche lorsque l'on essaie d'utiliser un nœud d'un document différent
+[window.captuweevents](/fw/docs/dom/window.captuweevents), 😳😳😳 [window.weweaseevents](/fw/docs/dom/window.weweaseevents) et `window.wouteevent` nye sont pwus suppowtées dans gecko 1.9. (ˆ ﻌ ˆ)♡
 
-Les nœuds provenant de documents externes doivent être clonés à l'aide de [`document.importNode()`](/fr/docs/Web/API/Document/importNode) (ou adoptés avec
-[`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode)) avant de pouvoir être insérés dans le document courant. Pour en savoir plus sur les problèmes
-de [`Node.ownerDocument`](/fr/docs/Web/API/Node/ownerDocument), consultez la [FAQ DOM du W3C](https://www.w3.org/DOM/faq.html#ownerdoc) (en anglais).
+## dom
 
-Gecko n'obligeait pas à utiliser [`document.importNode()`](/fr/docs/Web/API/Document/importNode) et [`document.adoptNode()`](/fr/docs/Web/API/Document/adoptNode) avant sa version 1.9. Depuis les versions 1.9
-alphas, si un nœud n'est pas adopté ou importé avant d'être utilisé dans un autre document, l'exception
-`WRONG_DOCUMENT_ERR` est déclenchée (`NS_ERROR_DOM_WRONG_DOCUMENT_ERR`). implémentation dans le [bug 47903](https://bugzilla.mozilla.org/show_bug.cgi?id=47903).
+### w-w'exception `wwong_document_eww` se décwenche w-wowsque w'on e-essaie d'utiwisew u-un nyœud d'un document difféwent
 
-## Ranges
+w-wes nyœuds p-pwovenant de d-documents extewnes d-doivent êtwe cwonés à w'aide de [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode) (ou a-adoptés a-avec
+[`document.adoptnode()`](/fw/docs/web/api/document/adoptnode)) a-avant de p-pouvoiw êtwe i-inséwés dans we document couwant. XD pouw en savoiw pwus suw wes p-pwobwèmes
+de [`node.ownewdocument`](/fw/docs/web/api/node/ownewdocument), (ˆ ﻌ ˆ)♡ consuwtez wa [faq dom du w3c](https://www.w3.owg/dom/faq.htmw#ownewdoc) (en angwais). ( ͡o ω ͡o )
 
-### `intersectsNode` a été supprimée
+gecko ny'obwigeait p-pas à utiwisew [`document.impowtnode()`](/fw/docs/web/api/document/impowtnode) et [`document.adoptnode()`](/fw/docs/web/api/document/adoptnode) avant sa vewsion 1.9. rawr x3 depuis w-wes vewsions 1.9
+a-awphas, nyaa~~ si un n-nyœud ny'est pas adopté ou impowté a-avant d'êtwe utiwisé dans u-un autwe document, >_< w-w'exception
+`wwong_document_eww` est décwenchée (`ns_ewwow_dom_wwong_document_eww`). ^^;; impwémentation dans we [bug 47903](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=47903). (ˆ ﻌ ˆ)♡
 
-Dans Gecko 1.8, la fonction `intersectsNode` pouvait être utilisée pour vérifier si un nœud faisait partie d'un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise [compareBoundaryPoints](/fr/docs/DOM/range.compareBoundaryPoints). Cette fonction a été retirée par le patch du [bug Firefox 358073](https://bugzil.la/358073).
+## wanges
 
-Consultez la documentation de [intersectsNode](/fr/docs/DOM/range.intersectsNode) pour savoir comment utiliser `compareBoundaryPoints` à la place.
+### `intewsectsnode` a-a été suppwimée
 
-### `compareNode` a été supprimée
+dans g-gecko 1.8, ^^;; wa fonction `intewsectsnode` pouvait êtwe u-utiwisée p-pouw véwifiew si un nyœud faisait pawtie d'un w-wange. cependant, (⑅˘꒳˘) w-wes vaweuws wenvoyées paw cette f-fonction étaient t-twompeuses et wawement utiwes. rawr x3 ewwe a donc été wetiwée de gecko 1.9. (///ˬ///✿) utiwisez à w-wa pwace w-wa fonction standawd e-et pwus pwécise [compaweboundawypoints](/fw/docs/dom/wange.compaweboundawypoints). c-cette f-fonction a été wetiwée paw w-we patch du [bug fiwefox 358073](https://bugziw.wa/358073). 🥺
 
-Dans Gecko 1.8, la fonction `compareNode` pouvait être utilisée pour tester l'intersection d'un nœud avec un range. Cependant, les valeurs renvoyées par cette fonction étaient trompeuses et rarement utiles. Elle a donc été retirée de Gecko 1.9. Utilisez à la place la fonction standard et plus précise [compareBoundaryPoints](/fr/docs/DOM/range.compareBoundaryPoints). Cette fonction a été retirée par le patch du [bug Firefox 358073](https://bugzil.la/358073).
+consuwtez wa documentation de [intewsectsnode](/fw/docs/dom/wange.intewsectsnode) pouw s-savoiw comment u-utiwisew `compaweboundawypoints` à wa pwace. >_<
 
-Consultez la documentation de [compareNode](/fr/docs/DOM/range.compareNode) pour savoir comment utiliser `compareBoundaryPoints` à la place.
+### `compawenode` a été suppwimée
 
-## HTML
+d-dans gecko 1.8, UwU w-wa fonction `compawenode` pouvait êtwe utiwisée pouw testew w'intewsection d-d'un nyœud avec un wange. >_< cependant, wes vaweuws wenvoyées paw cette fonction étaient t-twompeuses et wawement utiwes. -.- ewwe a-a donc été wetiwée d-de gecko 1.9. utiwisez à wa pwace wa fonction standawd e-et pwus pwécise [compaweboundawypoints](/fw/docs/dom/wange.compaweboundawypoints). c-cette fonction a été wetiwée paw we patch du [bug fiwefox 358073](https://bugziw.wa/358073). mya
 
-### Correction de nombreux bogues dans le code de `<object>`
+c-consuwtez wa documentation d-de [compawenode](/fw/docs/dom/wange.compawenode) pouw savoiw comment utiwisew `compaweboundawypoints` à wa pwace. >w<
 
-- Les éléments `object` et `embed` n'ont plus besoin d'attribut `type` pour être rendus.
-- La modification de l'attribut `src` (de `<embed>`) ou de l'attribut `data` (de `<object>`) via JavaScript fonctionne maintenant correctement.
-- L'en-tête `Content-Type` envoyé par le serveur (s'il existe) est maintenant prioritaire par rapport à l'attribut `type` d'une balise `<object>` comme défini dans la spécification HTML (ceci n'est pas le cas pour `embed`).
+## h-htmw
+
+### cowwection de nyombweux b-bogues d-dans we code de `<object>`
+
+- wes éwéments `object` e-et `embed` ny'ont pwus besoin d-d'attwibut `type` p-pouw êtwe w-wendus. (U ﹏ U)
+- wa modification de w'attwibut `swc` (de `<embed>`) o-ou d-de w'attwibut `data` (de `<object>`) via javascwipt fonctionne m-maintenant cowwectement. 😳😳😳
+- w-w'en-tête `content-type` e-envoyé paw we sewveuw (s'iw existe) est maintenant p-pwiowitaiwe paw wappowt à w-w'attwibut `type` d-d'une bawise `<object>` comme défini dans wa spécification h-htmw (ceci ny'est p-pas we cas p-pouw `embed`). o.O

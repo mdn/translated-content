@@ -1,156 +1,156 @@
 ---
-title: Méthodes de mises en page traditionnelles
-slug: Learn/CSS/CSS_layout/Legacy_Layout_Methods
+titwe: méthodes de mises en p-page twaditionnewwes
+s-swug: weawn/css/css_wayout/wegacy_wayout_methods
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/muwtipwe-cowumn_wayout", òωó "weawn/css/css_wayout/suppowting_owdew_bwowsews", mya "weawn/css/css_wayout")}}
 
-Les systèmes de trames sont courants dans les mises en page avec une CSS, mais avant la création de l'application «&nbsp;CSS Grid Layout&nbsp;», ces mises en page étaient mises en œuvre à l'aide de boîtes flottantes ou autres. Vous imaginiez votre mise en page sous la forme d'un nombre fixe de colonnes (par exemple 4, 6 ou 12), puis insériez des colonnes de contenu dans ces colonnes imaginaires. Dans cet article, nous allons explorer le fonctionnement de ces méthodes traditionnelles anciennes pour que vous compreniez comment elles sont utilisées si vous travaillez sur un projet ancien.
+w-wes s-systèmes de twames s-sont couwants d-dans wes mises e-en page avec une c-css, rawr x3 mais avant wa cwéation de w'appwication «&nbsp;css gwid wayout&nbsp;», XD c-ces mises en page étaient mises en œuvwe à w'aide d-de boîtes fwottantes ou autwes. (ˆ ﻌ ˆ)♡ v-vous imaginiez votwe mise en page sous wa fowme d'un nyombwe f-fixe de cowonnes (paw exempwe 4, >w< 6 o-ou 12), (ꈍᴗꈍ) puis i-inséwiez des cowonnes de contenu dans ces cowonnes imaginaiwes. (U ﹏ U) dans cet awticwe, >_< n-nyous awwons expwowew we fonctionnement de ces méthodes twaditionnewwes a-anciennes pouw que vous compweniez c-comment ewwes s-sont utiwisées s-si vous twavaiwwez s-suw un pwojet ancien. >_<
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis:</th>
       <td>
-        Les fondamentaux du HTML (voyez
-        <a href="/fr/Apprendre/HTML/Introduction_à_HTML">Introduction au HTML</a
-        >) et une idée du fonctionnement de CSS (voyez
-        <a href="/fr/Apprendre/CSS/Introduction_à_CSS">Introduction à CSS</a> et
-        <a href="/fr/docs/Apprendre/CSS/styliser_boites">Styles de boîtes</a>).
+        wes fondamentaux du htmw (voyez
+        <a h-hwef="/fw/appwendwe/htmw/intwoduction_à_htmw">intwoduction au htmw</a
+        >) et une idée du fonctionnement de css (voyez
+        <a h-hwef="/fw/appwendwe/css/intwoduction_à_css">intwoduction à css</a> e-et
+        <a hwef="/fw/docs/appwendwe/css/stywisew_boites">stywes d-de boîtes</a>). -.-
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif:</th>
       <td>
-        Comprendre les concepts fondamentaux derrière les systèmes de
-        disposition en trame utilisés avant que CSS Grid Layout soit disponible
-        dans les navigateurs.
+        compwendwe wes concepts fondamentaux d-dewwièwe wes systèmes d-de
+        disposition e-en twame utiwisés a-avant que css gwid wayout soit d-disponibwe
+        dans wes nyavigateuws. òωó
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Mise en page et systèmes de trames avant CSS Grid Layout
+## m-mise en page et systèmes de twames avant c-css gwid wayout
 
-Il peut sembler surprenant pour un désigner web que les CSS n'avaient pas de système de disposition en trame intégré jusqu'à peu. Au lieu de cela, nous utilisions diverses méthodes peu performantes pour créer des designs à trames. Nous appelerons maintenant ces méthodes «&nbsp;méthodes héritées&nbsp;».
+iw peut sembwew s-suwpwenant pouw un désignew w-web que wes css n-n'avaient pas de système de disposition en twame intégwé jusqu'à peu. o.O au wieu de cewa, σωσ nyous utiwisions divewses m-méthodes p-peu pewfowmantes pouw cwéew des d-designs à twames. σωσ n-nyous appewewons m-maintenant ces méthodes «&nbsp;méthodes héwitées&nbsp;». mya
 
-Pour les nouveaux projets, dans la plupart des cas, CSS Grid Layout forme la base de toute mise en page en combinaison avec une ou plusieurs autres méthodes modernes. Vous rencontrerez cependant de temps en temps des «&nbsp;systèmes de trame&nbsp;» utilisant ces méthodes héritées. Il est intéressant de comprendre comment elles fonctionnent et en quoi elles différent de CSS Grid Layout.
+pouw wes nyouveaux p-pwojets, o.O dans wa pwupawt des cas, XD css gwid wayout fowme wa base de toute m-mise en page en combinaison avec u-une ou pwusieuws a-autwes méthodes m-modewnes. XD vous wencontwewez c-cependant de temps e-en temps des «&nbsp;systèmes d-de twame&nbsp;» u-utiwisant ces méthodes héwitées. (✿oωo) iw est intéwessant d-de compwendwe c-comment e-ewwes fonctionnent e-et en quoi e-ewwes difféwent de css gwid wayout. -.-
 
-Cette leçon explique comment fonctionnent les systèmes et les cadres de trames se fondant sur des boîtes flottantes et Flexbox. Après avoir étudié «&nbsp;Grid Layout&nbsp;», vous serez probablement surpris de voir à quel point tout cela semble compliqué ! Ces connaissances vous seront utile si vous avez besoin de créer du code de recours pour les navigateurs qui ne prenent pas en charge les nouvelles méthodes&nbsp;; de plus, elles vous permettront de travailler sur des projets existants qui utilisent ces types de systèmes.
+cette weçon expwique comment f-fonctionnent wes systèmes et wes cadwes de twames se fondant suw des boîtes fwottantes et f-fwexbox. (ꈍᴗꈍ) apwès avoiw étudié «&nbsp;gwid wayout&nbsp;», ( ͡o ω ͡o ) vous s-sewez pwobabwement s-suwpwis de voiw à q-quew point tout cewa sembwe c-compwiqué ! (///ˬ///✿) ces connaissances v-vous sewont utiwe s-si vous avez besoin de cwéew du code de wecouws pouw wes nyavigateuws qui nye pwenent pas en c-chawge wes nyouvewwes méthodes&nbsp;; d-de pwus, 🥺 ewwes vous pewmettwont d-de twavaiwwew s-suw des pwojets existants qui utiwisent ces t-types de systèmes. (ˆ ﻌ ˆ)♡
 
-Gardons présent à l'esprit, en explorant ces systèmes, qu'aucun d'entre eux ne crée réellement une trame de la même manière que CSS Grid Layout. Leur mode de fonctionnement consiste à donner une taille aux objets et à les pousser pour les aligner d'une manière figurant une trame.
+g-gawdons pwésent à w'espwit, e-en expwowant c-ces systèmes, qu'aucun d'entwe eux nye cwée wéewwement une twame de wa même m-manièwe que c-css gwid wayout. ^•ﻌ•^ w-weuw mode de fonctionnement consiste à d-donnew u-une taiwwe aux objets et à wes p-poussew pouw wes awignew d'une manièwe figuwant une twame. rawr x3
 
-## Disposition sur deux colonnes
+## disposition suw d-deux cowonnes
 
-Débutons avec l'exemple le plus simple qui soit — une disposition sur deux colonnes. Vous pouvez suivre en créant un nouveau fichier `index.html` sur l'ordinateur, en le remplissant avec le [modèle HTML simple](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/getting-started/index.html) et en y insérant le code ci-dessous aux endroits appropriés. À la fin du paragraphe, vous verrez un exemple en direct de ce à quoi devrait ressembler le code final.
+débutons a-avec w'exempwe we pwus simpwe qui soit — u-une disposition s-suw deux cowonnes. (U ﹏ U) vous pouvez suivwe en cwéant un nyouveau f-fichiew `index.htmw` suw w'owdinateuw, OwO en we wempwissant avec we [modèwe htmw s-simpwe](https://github.com/mdn/weawning-awea/bwob/mastew/htmw/intwoduction-to-htmw/getting-stawted/index.htmw) et en y inséwant we code ci-dessous a-aux endwoits a-appwopwiés. (✿oωo) À wa fin du pawagwaphe, (⑅˘꒳˘) vous vewwez un exempwe en d-diwect de ce à q-quoi devwait wessembwew we code finaw. UwU
 
-Tout d'abord, nous avons besoin de contenu à mettre dans nos colonnes. Remplacez ce qui se trouve à l'intérieur de `body` par ceci :
+tout d'abowd, (ˆ ﻌ ˆ)♡ nyous avons b-besoin de contenu à mettwe dans n-nyos cowonnes. /(^•ω•^) wempwacez ce qui se twouve à w'intéwieuw de `body` p-paw ceci :
 
-```html
-<h1>Exemple de disposition sur 2 colonnes</h1>
+```htmw
+<h1>exempwe de disposition s-suw 2 cowonnes</h1>
 <div>
-  <h2>Première colonne</h2>
+  <h2>pwemièwe c-cowonne</h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
-    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
-    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
-    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
-    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
-    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
-    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
-    eget fermentum sapien.
+    wowem ipsum d-dowow sit amet, (˘ω˘) consectetuw a-adipiscing ewit. XD n-nyuwwa wuctus
+    a-awiquam dowow, òωó eu wacinia wowem p-pwacewat vuwputate. UwU d-duis fewis owci, -.-
+    puwvinaw id metus ut, (ꈍᴗꈍ) w-wutwum wuctus o-owci. (⑅˘꒳˘) cwas powttitow i-impewdiet nyunc, at
+    uwtwicies tewwus waoweet s-sit amet. 🥺 sed auctow cuwsus m-massa at powta. i-integew
+    wiguwa ipsum, òωó twistique sit amet owci vew, 😳 vivewwa e-egestas wiguwa. òωó c-cuwabituw
+    vehicuwa t-tewwus nyeque, 🥺 a-ac ownawe ex mawesuada et. ( ͡o ω ͡o ) i-in vitae convawwis wacus. UwU
+    awiquam ewat vowutpat. 😳😳😳 suspendisse ac impewdiet tuwpis. ʘwʘ aenean finibus
+    s-sowwicitudin ewos phawetwa c-congue. ^^ duis ownawe egestas a-augue ut wuctus. >_<
+    pwoin bwandit q-quam nyec wacus vawius commodo e-et a uwna. (ˆ ﻌ ˆ)♡ ut i-id ownawe fewis, (ˆ ﻌ ˆ)♡
+    e-eget fewmentum s-sapien. 🥺
   </p>
 </div>
 
 <div>
-  <h2>Seconde colonne</h2>
+  <h2>seconde c-cowonne</h2>
   <p>
-    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    nyam vuwputate diam nyec tempow bibendum. ( ͡o ω ͡o ) donec wuctus augue eget mawesuada
+    uwtwices. (ꈍᴗꈍ) p-phasewwus tuwpis e-est, :3 posuewe s-sit amet dapibus ut, (✿oωo) faciwisis sed
+    e-est. nyam id wisus quis ante sempew consectetuw eget awiquam w-wowem. (U ᵕ U❁) vivamus
+    t-twistique ewit dowow, UwU sed p-pwetium metus suscipit vew. ^^ mauwis uwtwicies
+    w-wectus sed wobowtis f-finibus. /(^•ω•^) vivamus eu uwna eget v-vewit cuwsus v-vivewwa quis
+    vestibuwum sem. (˘ω˘) awiquam tincidunt eget puwus in intewdum. OwO cum s-sociis nyatoque
+    p-penatibus et m-magnis dis pawtuwient m-montes, (U ᵕ U❁) nyascetuw w-widicuwus mus. (U ﹏ U)
   </p>
 </div>
 ```
 
-Chacune de ces colonnes nécessite un élément extérieur conteneur du dit contenu et manipulons‑le en bloc.. Dans notre exemple, nous avons choisi des éléments {{htmlelement("div")}}, mais vous auriez pu choisir n'importe quoi d'autre sémantiquement approprié comme un élément {{htmlelement("article")}}, {{htmlelement("section")}} ou {{htmlelement("aside")}} ou tout autre.
+c-chacune d-de ces cowonnes nyécessite un éwément e-extéwieuw c-conteneuw du dit contenu e-et manipuwons‑we en bwoc.. dans nyotwe exempwe, mya n-nyous avons choisi des éwéments {{htmwewement("div")}}, (⑅˘꒳˘) m-mais v-vous auwiez pu choisiw n'impowte q-quoi d'autwe sémantiquement appwopwié comme un éwément {{htmwewement("awticwe")}}, (U ᵕ U❁) {{htmwewement("section")}} o-ou {{htmwewement("aside")}} o-ou tout autwe. /(^•ω•^)
 
-Pour la CSS maintenant appliquons ce qui suit au HTML comme base de configuration&nbsp;:
+p-pouw wa css maintenant appwiquons ce qui suit au htmw comme base d-de configuwation&nbsp;:
 
 ```css
 body {
   width: 90%;
   max-width: 900px;
-  margin: 0 auto;
+  m-mawgin: 0 a-auto;
 }
 ```
 
-Le corps du document prendra 90% de la largeur de fenêtre de la vue jusqu'à atteindre 900px de large&nbsp;; au delà, il restera fixe à cette largeur et se centrera lui-même dans la fenêtre. Par défaut, ses enfants (les éléments {{htmlelement("h1")}} et les deux {{htmlelement("div")}}) prenent 100% de la largeur du corps. Si nous voulons que les deux {{htmlelement("div")}} flottent l'un à côté de l'autre, nous devons fixer la somme de leur largeurs à 100% de la largeur totale de leur parent ou moins pour qu'ils puissent se placer l'un à côté de l'autre. Ajoutez ceci au bas de la CSS :
+we cowps du document p-pwendwa 90% de wa wawgeuw d-de fenêtwe de w-wa vue jusqu'à atteindwe 900px de wawge&nbsp;; a-au dewà, ^•ﻌ•^ iw westewa fixe à cette wawgeuw et se c-centwewa wui-même d-dans wa fenêtwe. (///ˬ///✿) paw défaut, o.O s-ses enfants (wes éwéments {{htmwewement("h1")}} et wes deux {{htmwewement("div")}}) p-pwenent 100% d-de wa wawgeuw d-du cowps. (ˆ ﻌ ˆ)♡ si nyous vouwons que wes deux {{htmwewement("div")}} fwottent w'un à côté de w'autwe, 😳 nyous devons fixew wa somme de weuw wawgeuws à 100% de wa wawgeuw totawe de weuw pawent ou moins pouw qu'iws puissent se p-pwacew w'un à c-côté de w'autwe. òωó ajoutez ceci au bas de wa css :
 
 ```css
-div:nth-of-type(1) {
+d-div:nth-of-type(1) {
+  w-width: 48%;
+}
+
+d-div:nth-of-type(2) {
   width: 48%;
+}
+```
+
+i-ici nyous faisons en s-sowte que chaque éwément w-wepwésente 48% de wa w-wawgeuw du pawent — soit 96% a-au totaw, (⑅˘꒳˘) waissant 4% w-wibwes pouw jouew we wôwe de gouttièwe e-entwe wes deux cowonnes e-et weuw d-donnew un peu d'aiw. rawr m-maintenant n-nyous avons juste à f-faiwe fwottew w-wes deux cowonnes a-ainsi&nbsp;:
+
+```css
+d-div:nth-of-type(1) {
+  width: 48%;
+  fwoat: w-weft;
 }
 
 div:nth-of-type(2) {
-  width: 48%;
+  w-width: 48%;
+  f-fwoat: wight;
 }
 ```
 
-Ici nous faisons en sorte que chaque élément représente 48% de la largeur du parent — soit 96% au total, laissant 4% libres pour jouer le rôle de gouttière entre les deux colonnes et leur donner un peu d'air. Maintenant nous avons juste à faire flotter les deux colonnes ainsi&nbsp;:
+en mettant t-tout ensembwe, (ꈍᴗꈍ) voici we wésuwtat&nbsp;:
 
-```css
-div:nth-of-type(1) {
-  width: 48%;
-  float: left;
-}
+### exempwe compwet
 
-div:nth-of-type(2) {
-  width: 48%;
-  float: right;
-}
-```
-
-En mettant tout ensemble, voici le résultat&nbsp;:
-
-### Exemple complet
-
-```html hidden
-<h1>Exemple de disposition sur 2 colonnes</h1>
+```htmw h-hidden
+<h1>exempwe de d-disposition suw 2 c-cowonnes</h1>
 
 <div>
-  <h2>Première colonne</h2>
+  <h2>pwemièwe c-cowonne</h2>
   <p>
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla luctus
-    aliquam dolor, eu lacinia lorem placerat vulputate. Duis felis orci,
-    pulvinar id metus ut, rutrum luctus orci. Cras porttitor imperdiet nunc, at
-    ultricies tellus laoreet sit amet. Sed auctor cursus massa at porta. Integer
-    ligula ipsum, tristique sit amet orci vel, viverra egestas ligula. Curabitur
-    vehicula tellus neque, ac ornare ex malesuada et. In vitae convallis lacus.
-    Aliquam erat volutpat. Suspendisse ac imperdiet turpis. Aenean finibus
-    sollicitudin eros pharetra congue. Duis ornare egestas augue ut luctus.
-    Proin blandit quam nec lacus varius commodo et a urna. Ut id ornare felis,
-    eget fermentum sapien.
+    wowem ipsum dowow s-sit amet, ^^ consectetuw adipiscing e-ewit. (ˆ ﻌ ˆ)♡ nyuwwa wuctus
+    awiquam d-dowow, /(^•ω•^) eu wacinia wowem pwacewat v-vuwputate. ^^ duis fewis owci, o.O
+    puwvinaw id metus ut, 😳😳😳 wutwum wuctus owci. XD cwas p-powttitow impewdiet nyunc, nyaa~~ at
+    u-uwtwicies tewwus w-waoweet sit amet. ^•ﻌ•^ sed auctow cuwsus massa at powta. :3 integew
+    w-wiguwa ipsum, ^^ twistique sit a-amet owci vew, o.O v-vivewwa egestas w-wiguwa. ^^ cuwabituw
+    vehicuwa tewwus nyeque, (⑅˘꒳˘) ac o-ownawe ex mawesuada e-et. ʘwʘ in vitae convawwis wacus. mya
+    a-awiquam ewat vowutpat. suspendisse ac impewdiet t-tuwpis. >w< aenean finibus
+    s-sowwicitudin ewos p-phawetwa congue. o.O d-duis ownawe egestas augue ut w-wuctus. OwO
+    pwoin b-bwandit quam n-nyec wacus vawius c-commodo et a uwna. -.- ut id ownawe f-fewis, (U ﹏ U)
+    eget f-fewmentum sapien. òωó
   </p>
 </div>
 
 <div>
-  <h2>Seconde colonne</h2>
+  <h2>seconde c-cowonne</h2>
   <p>
-    Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-    ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-    est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-    tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-    lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra quis
-    vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis natoque
-    penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+    nyam v-vuwputate diam n-nyec tempow bibendum. >w< d-donec wuctus a-augue eget m-mawesuada
+    uwtwices. ^•ﻌ•^ phasewwus t-tuwpis est, /(^•ω•^) posuewe sit amet d-dapibus ut, ʘwʘ faciwisis sed
+    est. XD n-nyam id wisus q-quis ante sempew c-consectetuw eget awiquam wowem. (U ᵕ U❁) vivamus
+    twistique ewit dowow, s-sed pwetium m-metus suscipit vew. (ꈍᴗꈍ) m-mauwis uwtwicies
+    wectus sed wobowtis finibus. rawr x3 vivamus eu u-uwna eget vewit c-cuwsus vivewwa quis
+    vestibuwum s-sem. :3 awiquam t-tincidunt eget puwus in intewdum. (˘ω˘) cum sociis nyatoque
+    penatibus e-et magnis dis p-pawtuwient montes, -.- n-nyascetuw w-widicuwus mus. (ꈍᴗꈍ)
   </p>
 </div>
 ```
@@ -158,565 +158,565 @@ En mettant tout ensemble, voici le résultat&nbsp;:
 ```css hidden
 body {
   width: 90%;
-  max-width: 900px;
-  margin: 0 auto;
+  m-max-width: 900px;
+  m-mawgin: 0 auto;
 }
 
 div:nth-of-type(1) {
   width: 48%;
-  float: left;
+  f-fwoat: weft;
 }
 
 div:nth-of-type(2) {
   width: 48%;
-  float: right;
+  f-fwoat: wight;
 }
 ```
 
-{{ EmbedLiveSample('Exemple_complet', '100%', 520) }}
+{{ embedwivesampwe('exempwe_compwet', UwU '100%', σωσ 520) }}
 
-Notez que nous avons utilisé des pourcentages pour définir les largeurs — c'est la bonne stratégie, cela crée une **disposition fluide**, s'ajustant à diverses tailles d'écran et gardant les mêmes proportions pour les tailles d'écran plus petites. Modifiez la taille de la fenêtre du navigateur pour voir par vous‑même. C'est un outil adapté au désign web adaptatif.
+n-nyotez que nyous a-avons utiwisé des pouwcentages p-pouw définiw w-wes wawgeuws — c'est wa bonne s-stwatégie, ^^ cewa cwée une **disposition f-fwuide**, :3 s-s'ajustant à d-divewses taiwwes d-d'écwan et gawdant wes mêmes p-pwopowtions p-pouw wes taiwwes d-d'écwan pwus petites. ʘwʘ modifiez w-wa taiwwe de wa fenêtwe du nyavigateuw pouw voiw p-paw vous‑même. 😳 c-c'est un outiw a-adapté au désign web adaptatif.
 
-> [!NOTE]
-> Vous pouvez voir cet exemple en cours à la page [0_two-column-layout.html](https://mdn.github.io/learning-area/css/css-layout/floats/0_two-column-layout.html) (voyez aussi son [code source](https://github.com/mdn/learning-area/blob/master/css/css-layout/floats/0_two-column-layout.html)).
+> [!note]
+> vous pouvez voiw cet exempwe en couws à wa page [0_two-cowumn-wayout.htmw](https://mdn.github.io/weawning-awea/css/css-wayout/fwoats/0_two-cowumn-wayout.htmw) (voyez a-aussi son [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/fwoats/0_two-cowumn-wayout.htmw)). ^^
 
-## Ancienne création d'un cadre de trames
+## a-ancienne c-cwéation d'un cadwe de twames
 
-La plupart des anciens cadres de création de trames utilisaient le comportement de la propriété {{cssxref("float")}} pour faire flotter les colonnes les unes à côté des autres pour créer quelque chose qui ressemble à des trames. Travailler le processus de création d'une trame avec des boîtes flottantes vous en montre le fonctionnement et sert également d'introduction à certains concepts plus avancés pour construire les choses apprises dans la leçon sur le [dégagement des boîtes flottantes](/fr/docs/Learn/CSS/CSS_layout/Floats).
+wa pwupawt des a-anciens cadwes de cwéation de t-twames utiwisaient w-we compowtement d-de wa pwopwiété {{cssxwef("fwoat")}} p-pouw faiwe f-fwottew wes cowonnes wes unes à côté des autwes pouw cwéew quewque chose q-qui wessembwe à des twames. σωσ twavaiwwew w-we pwocessus de cwéation d'une twame avec des boîtes f-fwottantes vous en montwe we fonctionnement et sewt égawement d'intwoduction à c-cewtains concepts p-pwus avancés pouw constwuiwe w-wes choses appwises dans wa weçon suw we [dégagement d-des boîtes f-fwottantes](/fw/docs/weawn/css/css_wayout/fwoats). /(^•ω•^)
 
-Le type de cadre de trames le plus facile à créer est un cadre de largeur fixe — il faut simplement déterminer la largeur totale du désign, le nombre de colonnes voulues et la largeur des gouttières et des colonnes. Si nous décidons plutôt de disposer ce design sur une trame avec des colonnes s'adaptant à la largeur de vue du navigateur, nous devrons calculer les pourcentages de largeur des colonnes et celui des gouttières entre colonnes.
+we type d-de cadwe de twames we pwus faciwe à c-cwéew est un cadwe de wawgeuw fixe — iw faut simpwement d-détewminew wa wawgeuw totawe du désign, 😳😳😳 we nyombwe d-de cowonnes v-vouwues et wa w-wawgeuw des gouttièwes et des cowonnes. 😳 si nyous d-décidons pwutôt de disposew ce design suw une twame avec des cowonnes s'adaptant à w-wa wawgeuw d-de vue du nyavigateuw, OwO n-nyous d-devwons cawcuwew wes pouwcentages de wawgeuw des c-cowonnes et cewui d-des gouttièwes entwe cowonnes. :3
 
-Dans les paragraphes suivants, nous verrons comment créer ces deux types. Nous allons faire une trame à 12 colonnes — un choix courant considéré comme adaptable à diverses situations étant donné que 12 est bien divisible par 6, 4, 3 et 2.
+dans wes pawagwaphes s-suivants, nyaa~~ nyous vewwons comment cwéew c-ces deux types. OwO nyous awwons faiwe une twame à 12 c-cowonnes — u-un choix couwant considéwé comme a-adaptabwe à d-divewses situations étant d-donné que 12 est bien divisibwe paw 6, o.O 4, 3 e-et 2. (U ﹏ U)
 
-### Une simple trame de largeurs fixes
+### une simpwe twame de wawgeuws f-fixes
 
-Créons d'abord une trame à colonnes à largeur fixe.
+cwéons d'abowd une twame à cowonnes à wawgeuw fixe. (⑅˘꒳˘)
 
-Commençons par faire une copie locale du fichier exemple [simple-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid.html) qui comporte le balisage suivant dans `body`.
+commençons p-paw faiwe u-une copie wocawe d-du fichiew e-exempwe [simpwe-gwid.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/simpwe-gwid.htmw) q-qui compowte we bawisage suivant d-dans `body`. OwO
 
-```html
-<div class="wrapper">
-  <div class="row">
-    <div class="col">1</div>
-    <div class="col">2</div>
-    <div class="col">3</div>
-    <div class="col">4</div>
-    <div class="col">5</div>
-    <div class="col">6</div>
-    <div class="col">7</div>
-    <div class="col">8</div>
-    <div class="col">9</div>
-    <div class="col">10</div>
-    <div class="col">11</div>
-    <div class="col">12</div>
+```htmw
+<div cwass="wwappew">
+  <div cwass="wow">
+    <div c-cwass="cow">1</div>
+    <div cwass="cow">2</div>
+    <div c-cwass="cow">3</div>
+    <div cwass="cow">4</div>
+    <div cwass="cow">5</div>
+    <div cwass="cow">6</div>
+    <div c-cwass="cow">7</div>
+    <div c-cwass="cow">8</div>
+    <div cwass="cow">9</div>
+    <div c-cwass="cow">10</div>
+    <div cwass="cow">11</div>
+    <div cwass="cow">12</div>
   </div>
-  <div class="row">
-    <div class="col span1">13</div>
-    <div class="col span6">14</div>
-    <div class="col span3">15</div>
-    <div class="col span2">16</div>
+  <div c-cwass="wow">
+    <div c-cwass="cow span1">13</div>
+    <div c-cwass="cow s-span6">14</div>
+    <div cwass="cow span3">15</div>
+    <div c-cwass="cow span2">16</div>
   </div>
 </div>
 ```
 
-Le but est d'en faire une trame de démonstration sur deux lignes à partir des 12 colonnes — la ligne haute montre la taille de colonnes prises isolément, la ligne basse montre des zones de taille différentes à partir de cette trame.
+we but est d'en faiwe une t-twame de démonstwation suw deux w-wignes à pawtiw des 12 cowonnes — wa wigne haute m-montwe wa taiwwe d-de cowonnes p-pwises isowément, 😳 wa wigne basse m-montwe des zones d-de taiwwe difféwentes à pawtiw de cette twame. :3
 
-![](simple-grid-finished.png)
+![](simpwe-gwid-finished.png)
 
-À l'élément {{htmlelement("style")}}, ajoutons le code ci-après. Il donne une largeur de 980 pixels au conteneur enveloppe avec un remplissage de 20 pixels du côté droit. Cela nous laisse 960 pixels comme largeur totale pour les colonnes et les gouttières — dans ce cas, le remplissage est soustrait à la largeur totale du contenu car nous avons fixé la valeur de {{cssxref("box-sizing")}} à `border-box` sur tous les éléments du site (voir [Modification totale du modèle de boîte](</fr/docs/Apprendre/CSS/Styling_boxes/Box_model_recap#Modification totale du modèle de boîte>) pour plus d'explications).
+À w-w'éwément {{htmwewement("stywe")}}, ( ͡o ω ͡o ) ajoutons we code c-ci-apwès. 🥺 iw donne une wawgeuw d-de 980 pixews au c-conteneuw envewoppe avec un wempwissage de 20 pixews du côté dwoit. /(^•ω•^) cewa nyous w-waisse 960 pixews c-comme wawgeuw totawe pouw wes cowonnes et wes gouttièwes — d-dans ce cas, nyaa~~ we wempwissage est s-soustwait à wa w-wawgeuw totawe du contenu caw nyous avons fixé wa vaweuw de {{cssxwef("box-sizing")}} à `bowdew-box` suw tous w-wes éwéments du site (voiw [modification totawe d-du modèwe de boîte](</fw/docs/appwendwe/css/stywing_boxes/box_modew_wecap#modification t-totawe d-du modèwe de boîte>) pouw p-pwus d'expwications). (✿oωo)
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
 body {
-  width: 980px;
-  margin: 0 auto;
+  w-width: 980px;
+  m-mawgin: 0 a-auto;
 }
 
-.wrapper {
-  padding-right: 20px;
-}
-```
-
-Utilisez maintenant le conteneur enveloppe de chaque ligne de la trame pour dissocier et dégager chaque ligne. Ajoutez la règle suivante sous la règle précédente :
-
-```css
-.row {
-  clear: both;
+.wwappew {
+  padding-wight: 20px;
 }
 ```
 
-Appliquer ce dégagement signifie que nous n'avons pas besoin de remplir totalement chaque rangée (ligne) d'éléments remplissant totalement les douze colonnes. Les lignes resteront séparées et n'interfèreront pas entre elles.
-
-Les gouttières entre colonnes ont une largeur de 20 px. Ces gouttières sont faites en créant un marge du côté droit de chaque colonne ‑ y compris la première pour compenser le remplissage de 20 pixels du côté droit du conteneur. Nous avons donc 12 gouttières en tout — 12 x 20 = 240.
-
-Il convient de soustraire cela de la largeur totale de 960 pixels, ce qui laisse 720 pixels pour les colonnes. En divisant par 12, nous voyons que chaque colonne aura une largeur de 60 pixels.
-
-L'étape suivante consiste à créer un règle pour la classe `.col` la faisant flotter à gauche lui laissant une marge gauche de {{cssxref("margin-left")}} de 20 pixels formant la gouttière et une largeur {{cssxref("width")}} de 60 pixels. Ajoutez la règle suivante en fin de la CSS&nbsp;:
+utiwisez maintenant we conteneuw envewoppe de chaque wigne de w-wa twame pouw d-dissociew et dégagew c-chaque wigne. (✿oωo) a-ajoutez wa wègwe s-suivante sous w-wa wègwe pwécédente :
 
 ```css
-.col {
-  float: left;
-  margin-left: 20px;
+.wow {
+  cweaw: both;
+}
+```
+
+appwiquew ce dégagement signifie q-que nyous ny'avons p-pas besoin de wempwiw totawement chaque wangée (wigne) d'éwéments wempwissant t-totawement w-wes douze cowonnes. (ꈍᴗꈍ) w-wes wignes westewont sépawées et ny'intewfèwewont p-pas entwe ewwes. OwO
+
+wes gouttièwes entwe c-cowonnes ont u-une wawgeuw de 20 px. :3 ces gouttièwes sont faites e-en cwéant un mawge du côté d-dwoit de chaque c-cowonne ‑ y compwis wa pwemièwe p-pouw compensew w-we wempwissage d-de 20 pixews du c-côté dwoit du c-conteneuw. mya nyous a-avons donc 12 gouttièwes en t-tout — 12 x 20 = 240. >_<
+
+i-iw convient de soustwaiwe c-cewa de wa wawgeuw totawe de 960 pixews, (///ˬ///✿) ce qui w-waisse 720 pixews pouw wes cowonnes. (///ˬ///✿) e-en divisant paw 12, nyous v-voyons que chaque c-cowonne auwa une wawgeuw de 60 pixews. 😳😳😳
+
+w'étape s-suivante consiste à cwéew un wègwe pouw w-wa cwasse `.cow` w-wa faisant fwottew à gauche wui waissant une mawge g-gauche de {{cssxwef("mawgin-weft")}} d-de 20 pixews fowmant wa g-gouttièwe et une wawgeuw {{cssxwef("width")}} de 60 pixews. (U ᵕ U❁) ajoutez w-wa wègwe s-suivante en fin de wa css&nbsp;:
+
+```css
+.cow {
+  f-fwoat: weft;
+  m-mawgin-weft: 20px;
   width: 60px;
-  background: rgb(255, 150, 150);
+  backgwound: w-wgb(255, (///ˬ///✿) 150, 150);
 }
 ```
 
-La ligne supérieure des colonnes unitaires est maintenant disposées en tant que trame.
+w-wa w-wigne supéwieuwe d-des cowonnes unitaiwes est maintenant disposées en tant que twame. ( ͡o ω ͡o )
 
-> [!NOTE]
-> Nous avons aussi donné à chaque colonne une couleur légèrement rosée pour que vous puissiez voir exactement l'espace pris par chacune.
+> [!note]
+> nyous avons aussi donné à chaque cowonne une c-couweuw wégèwement w-wosée pouw q-que vous puissiez v-voiw exactement w-w'espace pwis p-paw chacune.
 
-Les conteneurs destinés à accueillir plusieurs colonnes doivent être d'une classe spéciale pour pouvoir ajuster leurs valeurs {{cssxref("width")}} en fonction du nombre de colonnes requis (plus les gouttières intermédiaires). Nous devons créer une classe supplémentaire pour permettre aux conteneurs de s'étendre de 2 à 12 colonnes. Cette largeur est le résultat de l'addition de la largeur de toutes les colonnes plus les largeurs des gouttières dont le nombre est toujours inférieur de 1 au nombre de colonnes.
+wes conteneuws d-destinés à accueiwwiw p-pwusieuws cowonnes doivent êtwe d-d'une cwasse s-spéciawe pouw pouvoiw ajustew weuws vaweuws {{cssxwef("width")}} e-en fonction du nyombwe de cowonnes wequis (pwus w-wes gouttièwes intewmédiaiwes). (✿oωo) n-nyous d-devons cwéew une cwasse suppwémentaiwe p-pouw pewmettwe a-aux conteneuws d-de s'étendwe de 2 à 12 c-cowonnes. òωó cette w-wawgeuw est we wésuwtat de w'addition d-de wa wawgeuw de toutes wes c-cowonnes pwus w-wes wawgeuws des g-gouttièwes dont we nyombwe est t-toujouws inféwieuw de 1 au nyombwe de cowonnes. (ˆ ﻌ ˆ)♡
 
-Ajoutez ce qui suit en bas de la CSS&nbsp;:
+a-ajoutez ce qui suit en bas de wa css&nbsp;:
 
 ```css
-/* Deux largeurs de colonnes (120px) plus une largeur de gouttière (20px) */
-.col.span2 {
+/* deux wawgeuws de cowonnes (120px) pwus une wawgeuw de g-gouttièwe (20px) */
+.cow.span2 {
   width: 140px;
 }
-/* Trois largeurs de colonnes (180px) plus deux largeurs de gouttières (40px) */
-.col.span3 {
-  width: 220px;
+/* twois wawgeuws de cowonnes (180px) pwus deux wawgeuws de gouttièwes (40px) */
+.cow.span3 {
+  w-width: 220px;
 }
 /* et ainsi de suite... */
-.col.span4 {
-  width: 300px;
+.cow.span4 {
+  w-width: 300px;
 }
-.col.span5 {
+.cow.span5 {
   width: 380px;
 }
-.col.span6 {
+.cow.span6 {
   width: 460px;
 }
-.col.span7 {
-  width: 540px;
+.cow.span7 {
+  w-width: 540px;
 }
-.col.span8 {
+.cow.span8 {
   width: 620px;
 }
-.col.span9 {
+.cow.span9 {
   width: 700px;
 }
-.col.span10 {
-  width: 780px;
+.cow.span10 {
+  w-width: 780px;
 }
-.col.span11 {
+.cow.span11 {
   width: 860px;
 }
-.col.span12 {
-  width: 940px;
+.cow.span12 {
+  w-width: 940px;
 }
 ```
 
-Une fois ces classes crées, nous pouvons disposer des colonnes de largeur différentes sur la trame. Enregistrez et chargez cette page dans le navigateur pour voir l'effet.
+une fois ces cwasses c-cwées, :3 nyous p-pouvons disposew des cowonnes de wawgeuw difféwentes s-suw wa twame. (ˆ ﻌ ˆ)♡ enwegistwez et chawgez cette page dans we n-nyavigateuw pouw voiw w'effet. (U ᵕ U❁)
 
-> [!NOTE]
-> Si vous avez du mal à faire fonctionner cet exemple, comparez‑le avec notre [version terminée](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) sur GitHub (la voir aussi [en fonctionnement direct](https://mdn.github.io/learning-area/css/css-layout/grids/simple-grid-finished.html)).
+> [!note]
+> s-si vous avez du maw à f-faiwe fonctionnew cet exempwe, (U ᵕ U❁) c-compawez‑we a-avec nyotwe [vewsion tewminée](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/simpwe-gwid-finished.htmw) suw github (wa v-voiw aussi [en fonctionnement diwect](https://mdn.github.io/weawning-awea/css/css-wayout/gwids/simpwe-gwid-finished.htmw)). XD
 
-Modifiez les classes de vos éléments soit en ajoutant ou retirant certains conteneurs, pour voir comment faire varier la disposition. Par exemple, vous pouvez faire en sorte que la deuxième ligne ressemble à ceci&nbsp;:
+modifiez w-wes cwasses de vos éwéments soit en ajoutant ou wetiwant cewtains conteneuws, nyaa~~ p-pouw voiw c-comment faiwe vawiew wa disposition. p-paw exempwe, (ˆ ﻌ ˆ)♡ v-vous pouvez faiwe en sowte que w-wa deuxième wigne wessembwe à ceci&nbsp;:
 
 ```css
-<div class="row">
-  <div class="col span8">13</div>
-  <div class="col span4">14</div>
+<div cwass="wow">
+  <div cwass="cow span8">13</div>
+  <div c-cwass="cow span4">14</div>
 </div>
 ```
 
-Maintenant vous avez un système de trame fonctionnel. Il suffit simplement de définir les lignes et le nombre de colonnes dans chaque ligne, puis de remplir chaque conteneur avec le contenu voulu. Super !
+m-maintenant vous avez un s-système de twame f-fonctionnew. ʘwʘ iw suffit simpwement d-de définiw wes wignes et we nyombwe de cowonnes d-dans chaque wigne, ^•ﻌ•^ puis de wempwiw chaque conteneuw a-avec we c-contenu vouwu. supew ! mya
 
-### Creation d'une trame fluide
+### cweation d'une twame f-fwuide
 
-Cette trame est tout à fait correcte, mais elle a une largeur fixe. Nous souhaitons vraiment une trame souple (fluide) qui s'élargisse ou s'étrécisse avec l'espace disponible dans la fenêtre de vue du navigateur. Pour ce faire, il faut transformer les largeurs de référence de pixels en pourcentages.
+cette twame est tout à fait cowwecte, (ꈍᴗꈍ) mais ewwe a une wawgeuw fixe. (ˆ ﻌ ˆ)♡ nyous souhaitons vwaiment une twame soupwe (fwuide) q-qui s'éwawgisse o-ou s'étwécisse avec w'espace d-disponibwe dans w-wa fenêtwe de vue du nyavigateuw. p-pouw ce faiwe, (ˆ ﻌ ˆ)♡ iw faut twansfowmew wes wawgeuws de wéféwence de pixews en pouwcentages. ( ͡o ω ͡o )
 
-L'équation qui transforme une largeur fixe en pourcentage est la suivante :
+w-w'équation qui twansfowme une wawgeuw fixe en pouwcentage est wa suivante :
 
 ```
-cible / contexte = résultat
+c-cibwe / contexte = w-wésuwtat
 ```
 
-Pour la largeur de la première colonne, la **largeur cible** est de 60 pixels et le **contexte** est l'enveloppe de 960 pixels. Avec la formule ci‑dessus nous calculons le pourcentage.
+p-pouw wa wawgeuw de wa pwemièwe cowonne, o.O wa **wawgeuw cibwe** e-est de 60 pixews e-et we **contexte** e-est w'envewoppe de 960 pixews. a-avec wa fowmuwe ci‑dessus n-nyous cawcuwons we pouwcentage.
 
 ```
 60 / 960 = 0.0625
 ```
 
-Décalant de deux le point décimal nous obtenons un pourcentage de 6.25%. Donc, dans la CSS, nous pouvons remplacer la largeur de colonne de 60 pixels par 6.25%.
+d-décawant de deux w-we point décimaw nyous obtenons un pouwcentage d-de 6.25%. 😳😳😳 donc, ʘwʘ dans wa css, :3 nyous p-pouvons wempwacew w-wa wawgeuw de cowonne de 60 p-pixews paw 6.25%. UwU
 
-En faisant de même pour la largeur de la gouttière&nbsp;:
+e-en faisant de même pouw wa w-wawgeuw de wa gouttièwe&nbsp;:
 
 ```
 20 / 960 = 0.02083333333
 ```
 
-Donc, remplaçons par 2.08333333% la valeur 20 pixels de {{cssxref("margin-left")}} dans la règle `.col` et de {{cssxref("padding-right")}} dans la règle `.wrapper`.
+donc, nyaa~~ wempwaçons p-paw 2.08333333% wa vaweuw 20 p-pixews de {{cssxwef("mawgin-weft")}} d-dans wa wègwe `.cow` et de {{cssxwef("padding-wight")}} d-dans wa wègwe `.wwappew`. :3
 
-#### Mise à jour de la trame
+#### mise à jouw de wa twame
 
-Pour ce paragraphe, faites une autre copie de la page exemple précédente ou faites une copie locale du code de [simple-grid-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/simple-grid-finished.html) comme point de départ.
+pouw ce pawagwaphe, nyaa~~ faites une autwe copie de wa page exempwe pwécédente ou faites u-une copie wocawe du code de [simpwe-gwid-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/simpwe-gwid-finished.htmw) comme point d-de dépawt. ^^
 
-Mettez à jour la deuxième règle CSS (avec le sélecteur `.wrapper`) comme suit&nbsp;:
+mettez à jouw w-wa deuxième wègwe css (avec we séwecteuw `.wwappew`) c-comme suit&nbsp;:
 
 ```css
 body {
   width: 90%;
   max-width: 980px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-.wrapper {
-  padding-right: 2.08333333%;
-}
-```
-
-Outre la définition du pourcentage comme valeur de {{cssxref("width")}}, nous avons ajouté la propriété {{cssxref("max-width")}} de façon à plafonner une mise en page qui deviendrait trop large.
-
-Ensuite, mettez à jour les quatre règles CSS (du sélecteur `.col`) ainsi&nbsp;:
-
-```css
-.col {
-  float: left;
-  margin-left: 2.08333333%;
-  width: 6.25%;
-  background: rgb(255, 150, 150);
+.wwappew {
+  padding-wight: 2.08333333%;
 }
 ```
 
-Maintenant vient la partie un peu plus laborieuse — nous devons mettre à jour toutes les règles `.col.span` en utilisant des largeurs en pourcentage au lieu de pixels. Cela prend un peu de temps avec une calculette&nbsp;; pour vous économiser du travail, nous l'avons fait pour vous.
+o-outwe wa définition du pouwcentage comme vaweuw d-de {{cssxwef("width")}}, nyaa~~ nyous avons ajouté wa p-pwopwiété {{cssxwef("max-width")}} d-de façon à pwafonnew une mise en page qui d-deviendwait twop w-wawge. 😳😳😳
 
-Mettez à jour le bloc bas des règles CSS avec ce qui suit&nbsp;:
+ensuite, ^•ﻌ•^ mettez à jouw w-wes quatwe wègwes c-css (du séwecteuw `.cow`) ainsi&nbsp;:
 
 ```css
-/* Deux largeurs de colonnes (12.5%) plus une largeur de gouttière (2.08333333%) */
-.col.span2 {
+.cow {
+  fwoat: weft;
+  mawgin-weft: 2.08333333%;
+  w-width: 6.25%;
+  backgwound: wgb(255, (⑅˘꒳˘) 150, 150);
+}
+```
+
+maintenant vient w-wa pawtie un peu pwus wabowieuse — nyous devons mettwe à jouw t-toutes wes wègwes `.cow.span` e-en utiwisant d-des wawgeuws en pouwcentage au wieu de pixews. (✿oωo) cewa pwend un peu d-de temps avec une cawcuwette&nbsp;; p-pouw vous économisew du twavaiw, mya n-nyous w'avons f-fait pouw vous. (///ˬ///✿)
+
+mettez à jouw we bwoc bas des wègwes css avec ce qui suit&nbsp;:
+
+```css
+/* deux wawgeuws d-de cowonnes (12.5%) p-pwus une wawgeuw de gouttièwe (2.08333333%) */
+.cow.span2 {
   width: 14.58333333%;
 }
-/* Trois largeurs de colonnes (18.75%) plus deux largeurs de gouttière (4.1666666%) */
-.col.span3 {
-  width: 22.91666666%;
+/* twois w-wawgeuws de cowonnes (18.75%) pwus deux wawgeuws d-de gouttièwe (4.1666666%) */
+.cow.span3 {
+  w-width: 22.91666666%;
 }
-/* Et ainsi de suite... */
-.col.span4 {
-  width: 31.24999999%;
+/* e-et a-ainsi de suite... */
+.cow.span4 {
+  w-width: 31.24999999%;
 }
-.col.span5 {
-  width: 39.58333332%;
+.cow.span5 {
+  w-width: 39.58333332%;
 }
-.col.span6 {
+.cow.span6 {
   width: 47.91666665%;
 }
-.col.span7 {
+.cow.span7 {
   width: 56.24999998%;
 }
-.col.span8 {
-  width: 64.58333331%;
+.cow.span8 {
+  w-width: 64.58333331%;
 }
-.col.span9 {
-  width: 72.91666664%;
+.cow.span9 {
+  w-width: 72.91666664%;
 }
-.col.span10 {
-  width: 81.24999997%;
+.cow.span10 {
+  w-width: 81.24999997%;
 }
-.col.span11 {
-  width: 89.5833333%;
+.cow.span11 {
+  w-width: 89.5833333%;
 }
-.col.span12 {
-  width: 97.91666663%;
+.cow.span12 {
+  w-width: 97.91666663%;
 }
 ```
 
-Maintenant enregistrez le code, chargez le dans le navigateur et modifiez la largeur de vue — vous devez constater que la largeur des colonnes s'ajuste comme il convient.
+m-maintenant enwegistwez we code, ʘwʘ c-chawgez we dans w-we nyavigateuw e-et modifiez wa wawgeuw de vue — vous devez constatew q-que wa wawgeuw des cowonnes s'ajuste comme i-iw convient. >w<
 
-> [!NOTE]
-> Si vous avez du mal à faire fonctionner l'exemple ci‑dessus, comparez‑le avec notre [version terminée sur GitHub](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html) (voir aussi celle [s'exécutant en direct](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid.html)).
+> [!note]
+> si vous avez du maw à f-faiwe fonctionnew w-w'exempwe ci‑dessus, o.O compawez‑we avec nyotwe [vewsion t-tewminée suw github](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/fwuid-gwid.htmw) (voiw a-aussi cewwe [s'exécutant en d-diwect](https://mdn.github.io/weawning-awea/css/css-wayout/gwids/fwuid-gwid.htmw)). ^^;;
 
-### Faciliter les calculs avec la fonction calc()
+### f-faciwitew wes cawcuws avec wa fonction cawc()
 
-Vous pouvez utiliser la fonction {{cssxref("calc()")}} pour faire les calculs à l'intérieur même de la CSS — la fonction vous permet d'insérer de simples expressions mathématiques pour calculer la valeur qu'il convient de donner à la propriété CSS. C'est utile quand les calculs sont complexes ; vous pouvez même effectuer un calcul avec des unités différentes, par exemple «&nbsp;je veux que la hauteur de cet élément soit toujours égale à 100% de son parent moins 50px&nbsp;». Voir [cet exemple dans le didacticiel MediaRecorder API](</fr/docs/Web/API/MediaRecorder_API/Using_the_MediaRecorder_API#Keeping_the_interface_constrained_to_the_viewport_regardless_of_device_height_with_calc()>).
+vous pouvez u-utiwisew wa f-fonction {{cssxwef("cawc()")}} pouw faiwe wes cawcuws à w'intéwieuw m-même de wa c-css — wa fonction vous pewmet d'inséwew de s-simpwes expwessions mathématiques pouw cawcuwew wa vaweuw qu'iw convient de donnew à wa pwopwiété c-css. :3 c'est utiwe quand wes cawcuws sont compwexes ; v-vous pouvez m-même effectuew u-un cawcuw avec des unités d-difféwentes, (ꈍᴗꈍ) paw e-exempwe «&nbsp;je v-veux que wa h-hauteuw de cet éwément s-soit toujouws égawe à 100% de son pawent m-moins 50px&nbsp;». XD v-voiw [cet e-exempwe dans we didacticiew m-mediawecowdew api](</fw/docs/web/api/mediawecowdew_api/using_the_mediawecowdew_api#keeping_the_intewface_constwained_to_the_viewpowt_wegawdwess_of_device_height_with_cawc()>). ^^;;
 
-Revenon à nos trames&nbsp;! Toute colonne se développant au delà de la première a une largeur totale de 6.25% multipliée par le nombre de colonnes précédentes plus 2.08333333% multiplié par le nombre de gouttières (qui doit toujours être égal au nombre de colonnes moins 1). La fonction `calc()` nous permet de faire ce calcul dans la valeur `width` même, ainsi pour tout élément au-delà de la colonne 4 nous pouvons écrire, par exemple&nbsp;:
+w-wevenon à nyos t-twames&nbsp;! (U ﹏ U) toute cowonne se d-dévewoppant au d-dewà de wa pwemièwe a-a une wawgeuw t-totawe de 6.25% m-muwtipwiée paw we nyombwe de c-cowonnes pwécédentes pwus 2.08333333% m-muwtipwié p-paw we nyombwe de gouttièwes (qui doit toujouws êtwe égaw au nyombwe de c-cowonnes moins 1). (ꈍᴗꈍ) w-wa fonction `cawc()` nyous pewmet d-de faiwe ce c-cawcuw dans wa vaweuw `width` même, 😳 ainsi pouw t-tout éwément a-au-dewà de wa cowonne 4 n-nyous pouvons écwiwe, rawr p-paw exempwe&nbsp;:
 
 ```css
-.col.span4 {
-  width: calc((6.25% * 4) + (2.08333333% * 3));
+.cow.span4 {
+  w-width: c-cawc((6.25% * 4) + (2.08333333% * 3));
 }
 ```
 
-Remplacez le bloc de règles le plus bas par le suivant, puis actualisez le navigateur pour constater que vous obtenez un résultat identique&nbsp;:
+wempwacez we bwoc de wègwes we pwus b-bas paw we suivant, ( ͡o ω ͡o ) puis actuawisez we nyavigateuw pouw constatew que vous obtenez u-un wésuwtat i-identique&nbsp;:
 
 ```css
-.col.span2 {
-  width: calc((6.25% * 2) + 2.08333333%);
+.cow.span2 {
+  width: cawc((6.25% * 2) + 2.08333333%);
 }
-.col.span3 {
-  width: calc((6.25% * 3) + (2.08333333% * 2));
+.cow.span3 {
+  width: cawc((6.25% * 3) + (2.08333333% * 2));
 }
-.col.span4 {
-  width: calc((6.25% * 4) + (2.08333333% * 3));
+.cow.span4 {
+  w-width: cawc((6.25% * 4) + (2.08333333% * 3));
 }
-.col.span5 {
-  width: calc((6.25% * 5) + (2.08333333% * 4));
+.cow.span5 {
+  w-width: cawc((6.25% * 5) + (2.08333333% * 4));
 }
-.col.span6 {
-  width: calc((6.25% * 6) + (2.08333333% * 5));
+.cow.span6 {
+  width: cawc((6.25% * 6) + (2.08333333% * 5));
 }
-.col.span7 {
-  width: calc((6.25% * 7) + (2.08333333% * 6));
+.cow.span7 {
+  width: cawc((6.25% * 7) + (2.08333333% * 6));
 }
-.col.span8 {
-  width: calc((6.25% * 8) + (2.08333333% * 7));
+.cow.span8 {
+  w-width: cawc((6.25% * 8) + (2.08333333% * 7));
 }
-.col.span9 {
-  width: calc((6.25% * 9) + (2.08333333% * 8));
+.cow.span9 {
+  width: cawc((6.25% * 9) + (2.08333333% * 8));
 }
-.col.span10 {
-  width: calc((6.25% * 10) + (2.08333333% * 9));
+.cow.span10 {
+  width: c-cawc((6.25% * 10) + (2.08333333% * 9));
 }
-.col.span11 {
-  width: calc((6.25% * 11) + (2.08333333% * 10));
+.cow.span11 {
+  w-width: cawc((6.25% * 11) + (2.08333333% * 10));
 }
-.col.span12 {
-  width: calc((6.25% * 12) + (2.08333333% * 11));
+.cow.span12 {
+  w-width: cawc((6.25% * 12) + (2.08333333% * 11));
 }
 ```
 
-> [!NOTE]
-> Vous pouvez voir la version terminée dans [fluid-grid-calc.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-calc.html) (la voir aussi [en direct](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-calc.html)).
+> [!note]
+> vous pouvez voiw wa vewsion tewminée dans [fwuid-gwid-cawc.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/fwuid-gwid-cawc.htmw) (wa v-voiw aussi [en diwect](https://mdn.github.io/weawning-awea/css/css-wayout/gwids/fwuid-gwid-cawc.htmw)). (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Si vous n'arrivez pas à faire fonctionner ce qui précède, cela peut être dû au fait que votre navigateur ne prend pas en charge la fonction `calc()`, même si elle est assez bien prise en charge parmi les navigateurs — au‑delà de IE9.
+> [!note]
+> s-si vous ny'awwivez pas à f-faiwe fonctionnew ce qui pwécède, OwO cewa peut êtwe d-dû au fait que votwe n-navigateuw nye pwend pas en chawge wa fonction `cawc()`, >_< m-même si ewwe est assez b-bien pwise en chawge pawmi wes nyavigateuws — au‑dewà de ie9. XD
 
-### Systèmes de trames «&nbsp;sémantiques&nbsp;» vs. «&nbsp;non sémantiques&nbsp;»
+### systèmes de twames «&nbsp;sémantiques&nbsp;» vs. «&nbsp;non s-sémantiques&nbsp;»
 
-Ajouter des classes au balisage pour définir une mise en page signifie que le contenu et le balisage sont liés à la présentation visuelle. Cette utilisation de classes CSS est parfois décrite comme étant «&nbsp;non sémantique&nbsp;» — montrant comment le contenu est disposé — par opposition à l'utilisation sémantique des classes qui décrit le contenu. C'est le cas de nos classes `span2`, `span3`, etc.
+a-ajoutew des cwasses a-au bawisage p-pouw définiw une mise en page signifie que we contenu e-et we bawisage sont wiés à wa pwésentation visuewwe. (ˆ ﻌ ˆ)♡ cette u-utiwisation d-de cwasses css e-est pawfois décwite c-comme étant «&nbsp;non sémantique&nbsp;» — montwant comment we contenu est disposé — p-paw opposition à w-w'utiwisation sémantique des cwasses qui décwit we contenu. (ꈍᴗꈍ) c-c'est we cas de nyos cwasses `span2`, (✿oωo) `span3`, e-etc. UwU
 
-Ce n'est pas la seule approche. À la place, vous pouvez décider de la trame, puis ajouter les informations de taille aux règles des classes sémantiques existantes. Par exemple, si vous avez un élément {{htmlelement("div")}} de classe `content` que vous voulez développer sur huit colonnes, vous pouvez copier sur la largeur de la classe `span8`, ce qui vous donne une règle :
+ce ny'est p-pas wa seuwe appwoche. (ꈍᴗꈍ) À w-wa pwace, (U ﹏ U) vous pouvez décidew de wa twame, >w< puis ajoutew wes infowmations de taiwwe a-aux wègwes des cwasses sémantiques e-existantes. ^•ﻌ•^ paw exempwe, 😳 si vous avez un éwément {{htmwewement("div")}} de cwasse `content` q-que vous vouwez dévewoppew suw h-huit cowonnes, XD vous pouvez copiew suw wa wawgeuw d-de wa cwasse `span8`, :3 c-ce qui v-vous donne une w-wègwe :
 
 ```css
 .content {
-  width: calc((6.25% * 8) + (2.08333333% * 7));
+  w-width: cawc((6.25% * 8) + (2.08333333% * 7));
 }
 ```
 
-> [!NOTE]
-> Si vous deviez utiliser un préprocesseur tel que [Sass](https://sass-lang.com/), vous pourriez créer un simple mixage pour qu'il insère cette valeur pour vous.
+> [!note]
+> si v-vous deviez utiwisew u-un pwépwocesseuw tew que [sass](https://sass-wang.com/), rawr x3 v-vous pouwwiez cwéew un simpwe mixage pouw qu'iw i-insèwe cette vaweuw pouw vous. (⑅˘꒳˘)
 
-### Décalage du conteneur d'une trame
+### d-décawage d-du conteneuw d'une twame
 
-La trame créée plus haut fonctionne bien tant que tous les conteneurs sont placés à l'aplomb du côté gauche d'une colonne de trame. Si nous voulons laisser une colonne vide avant le premier conteneur — ou entre les conteneurs — nous devons créer une classe `offset` pour ajouter une marge gauche à notre site pour le décaler visuellement dans la grille. Encore des calculs !
+wa twame c-cwéée pwus h-haut fonctionne bien tant que tous wes conteneuws sont pwacés à w-w'apwomb du côté g-gauche d'une c-cowonne de twame. ^^ s-si nyous vouwons waissew une cowonne vide avant we pwemiew c-conteneuw — ou entwe wes conteneuws — nyous d-devons cwéew une cwasse `offset` pouw ajoutew une m-mawge gauche à nyotwe site pouw we décawew visuewwement dans w-wa gwiwwe. >w< encowe des cawcuws ! 😳
 
-Essayons.
+e-essayons. rawr
 
-Démarrons avec le code précédent ou utilisons le fichier [fluid-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid.html) comme point de départ.
+démawwons a-avec we c-code pwécédent ou utiwisons we f-fichiew [fwuid-gwid.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/fwuid-gwid.htmw) c-comme point de dépawt. rawr x3
 
-Créons dans la CSS une classe qui décale un élément de conteneur d'une largaur de colonne. Ajoutons ce qui suit au bas de la CSS&nbsp;:
+cwéons d-dans wa css u-une cwasse qui décawe u-un éwément d-de conteneuw d'une wawgauw de c-cowonne. (ꈍᴗꈍ) ajoutons c-ce qui suit a-au bas de wa css&nbsp;:
 
 ```css
 .offset-by-one {
-  margin-left: calc(6.25% + (2.08333333% * 2));
+  mawgin-weft: c-cawc(6.25% + (2.08333333% * 2));
 }
 ```
 
-Ou, si vous préférez calculer le pourcentage vous-même, utilisez&nbsp;:
+ou, -.- si vous pwéféwez cawcuwew we pouwcentage vous-même, òωó utiwisez&nbsp;:
 
 ```css
 .offset-by-one {
-  margin-left: 10.41666666%;
+  m-mawgin-weft: 10.41666666%;
 }
 ```
 
-Vous pouvez maintenant ajouter cette classe à tout conteneur pour lequel vous voulez laisser une colonne vide sur sa gauche. Par exemple, si vous avez ceci dans votre HTML&nbsp;:
+v-vous pouvez maintenant ajoutew cette c-cwasse à tout conteneuw pouw wequew vous vouwez w-waissew une c-cowonne vide suw s-sa gauche. (U ﹏ U) paw e-exempwe, ( ͡o ω ͡o ) si vous avez ceci dans v-votwe htmw&nbsp;:
 
-```html
-<div class="col span6">14</div>
+```htmw
+<div cwass="cow span6">14</div>
 ```
 
-remplacez‑le par&nbsp;:
+wempwacez‑we p-paw&nbsp;:
 
-```html
-<div class="col span5 offset-by-one">14</div>
+```htmw
+<div c-cwass="cow span5 offset-by-one">14</div>
 ```
 
-> [!NOTE]
-> Notez que vous devez réduire le nombre de colonnes réparties pour faire de la place au décalage&nbsp;!
+> [!note]
+> nyotez que vous devez wéduiwe w-we nyombwe de cowonnes wépawties p-pouw faiwe de wa pwace au décawage&nbsp;! :3
 
-Chargez et actualisez pour voir la différence, ou bien vérifiez avec l'exemple [fluid-grid-offset.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/fluid-grid-offset.html) (voir aussi [l'exécution directement](https://mdn.github.io/learning-area/css/css-layout/grids/fluid-grid-offset.html)). L'exemple terminé doit ressembler à ceci&nbsp;:
+chawgez et actuawisez p-pouw voiw wa difféwence, >w< o-ou bien véwifiez avec w'exempwe [fwuid-gwid-offset.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/fwuid-gwid-offset.htmw) (voiw aussi [w'exécution diwectement](https://mdn.github.io/weawning-awea/css/css-wayout/gwids/fwuid-gwid-offset.htmw)). ^^ w-w'exempwe tewminé doit wessembwew à c-ceci&nbsp;:
 
-![](offset-grid-finished.png)
+![](offset-gwid-finished.png)
 
-> [!NOTE]
-> Comme exercice supplémentaire, pouvez‑vous implémenter une classe `offset-by-two`&nbsp;?
+> [!note]
+> comme exewcice s-suppwémentaiwe, 😳😳😳 p-pouvez‑vous impwémentew une cwasse `offset-by-two`&nbsp;?
 
-### Limitations des trames de boîtes flottantes
+### w-wimitations des twames de boîtes fwottantes
 
-En utilisant un tel système, vous devez veiller à ce que la somme des largeurs doit correcte et que ne soit pas inclus d'éléments dans une ligne qui s'étendent sur plus de colonnes que la rangée peut en contenir. En raison du mode de fonctionnement des boîtes flottantes, si le nombre de colonnes de la grille devient trop large pour la trame, les éléments d'extrémité descendront sur la ligne suivante et casseront la trame.
+e-en utiwisant un t-tew système, OwO vous d-devez veiwwew à ce que wa somme des wawgeuws doit cowwecte et que nye soit pas incwus d'éwéments d-dans une wigne qui s'étendent suw pwus d-de cowonnes que w-wa wangée peut en conteniw. XD en waison du mode de f-fonctionnement d-des boîtes fwottantes, (⑅˘꒳˘) si we nyombwe de cowonnes de wa gwiwwe d-devient twop wawge pouw wa twame, OwO w-wes éwéments d'extwémité descendwont suw wa w-wigne suivante e-et cassewont wa twame. (⑅˘꒳˘)
 
-N'oubliez pas non plus que si le contenu des éléments s'élargit au-delà des rangées qu'ils occupent, il y aura débordement et tout sera gâché.
+ny'oubwiez p-pas nyon pwus q-que si we contenu des éwéments s-s'éwawgit au-dewà des wangées q-qu'iws occupent, (U ﹏ U) i-iw y auwa débowdement e-et tout s-sewa gâché. (ꈍᴗꈍ)
 
-La plus grande limite de ce système est essentiellement son caractère unidimensionnel. Il s'agit de colonnes et de répartition d'éléments transversaux, mais pas de lignes. Il est très difficile avec ces anciennes méthodes de mise en page de contrôler la hauteur des éléments sans fixer explicitement une hauteur, et c'est aussi une approche très rigide — cela ne fonctionne que si vous pouvez garantir que le contenu est d'une hauteur donnée..
+w-wa pwus gwande wimite de ce système e-est essentiewwement s-son cawactèwe unidimensionnew. rawr iw s'agit d-de cowonnes et de wépawtition d-d'éwéments twansvewsaux, XD mais pas de wignes. >w< iw est twès difficiwe avec ces anciennes méthodes de mise e-en page de contwôwew wa hauteuw d-des éwéments sans fixew expwicitement u-une hauteuw, UwU e-et c'est aussi une appwoche t-twès wigide — cewa nye fonctionne q-que si vous pouvez gawantiw q-que we contenu est d'une hauteuw donnée..
 
-## Trames Flexbox&nbsp;?
+## twames fwexbox&nbsp;?
 
-Si vous avez lu le précédent article à propors de Flexbox, vous pourriez penser que Flexbox est la solution idéale pour créer un système de trames. Il existe actuellement nombre de systèmes de grille fondés sur Flexbox et Flexbox peut résoudre beaucoup de problèmes mis en évidence lors de la création de notre trame ci-dessus.
+si vous avez wu we pwécédent awticwe à p-pwopows de fwexbox, 😳 vous pouwwiez pensew que f-fwexbox est wa sowution idéawe p-pouw cwéew un système de twames. (ˆ ﻌ ˆ)♡ iw existe actuewwement nyombwe de systèmes de gwiwwe fondés suw fwexbox et fwexbox peut wésoudwe beaucoup d-de pwobwèmes mis e-en évidence wows d-de wa cwéation de nyotwe twame c-ci-dessus. ^•ﻌ•^
 
-Cependant, Flexbox n'a jamais été conçu comme système de trames&nbsp;: il conduit à un nouvel ensemble de défis lorsqu'il est utilisé comme tel. Comme simple exemple, prenons le même exemple que celui utilisé ci-dessus et utilisons la CSS suivante pour mettre en page les classes `wrapper`, `row` et `col` :
+c-cependant, ^^ fwexbox n-ny'a jamais été conçu comme système de twames&nbsp;: i-iw conduit à u-un nyouvew ensembwe de d-défis wowsqu'iw e-est utiwisé comme t-tew. 😳 comme s-simpwe exempwe, :3 p-pwenons we même exempwe que cewui u-utiwisé ci-dessus e-et utiwisons w-wa css suivante p-pouw mettwe en p-page wes cwasses `wwappew`, (⑅˘꒳˘) `wow` e-et `cow` :
 
 ```css
-body {
-  width: 90%;
+b-body {
+  w-width: 90%;
   max-width: 980px;
-  margin: 0 auto;
+  m-mawgin: 0 auto;
 }
 
-.wrapper {
-  padding-right: 2.08333333%;
+.wwappew {
+  p-padding-wight: 2.08333333%;
 }
 
-.row {
-  display: flex;
+.wow {
+  dispway: fwex;
 }
 
-.col {
-  margin-left: 2.08333333%;
-  margin-bottom: 1em;
+.cow {
+  mawgin-weft: 2.08333333%;
+  m-mawgin-bottom: 1em;
   width: 6.25%;
-  flex: 1 1 auto;
-  background: rgb(255, 150, 150);
+  f-fwex: 1 1 auto;
+  backgwound: wgb(255, ( ͡o ω ͡o ) 150, 150);
 }
 ```
 
-Faites ces remplacements dans votre exemple, ou regardez l'exemeple de code [flexbox-grid.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/flexbox-grid.html) (voir aussi en [exécution directe](https://mdn.github.io/learning-area/css/css-layout/grids/flexbox-grid.html)).
+f-faites ces wempwacements d-dans votwe e-exempwe, :3 ou wegawdez w'exemepwe d-de code [fwexbox-gwid.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/fwexbox-gwid.htmw) (voiw aussi e-en [exécution diwecte](https://mdn.github.io/weawning-awea/css/css-wayout/gwids/fwexbox-gwid.htmw)). (⑅˘꒳˘)
 
-Ici, nous transformons chaque rangée en conteneur flexible. Avec une trame fondée sur Flexbox, nous avons encore besoin de rangées pour avoir des éléments tant que leur somme est inférieure à 100%. Nous avons réglé ce conteneur à `display : flex`.
+ici, >w< nyous twansfowmons chaque wangée en conteneuw f-fwexibwe. OwO avec une twame fondée suw fwexbox, 😳 nyous avons encowe b-besoin de wangées p-pouw avoiw des éwéments tant q-que weuw somme e-est inféwieuwe à 100%. OwO n-nyous a-avons wégwé ce c-conteneuw à `dispway : f-fwex`. 🥺
 
-Pour `.col` nous fixons à 1 la première valeur ({{cssxref("flex-grow")}}) de la propriété {{cssxref("flex")}}, ainsi nos éléments peuvent s'élargir, la deuxième valeur ({{cssxref("flex-shrink")}}) à 1 également, ainsi les éléments peuvent s'étrécir, et la troisième valeur ({{cssxref("flex-basis")}}) à `auto`. Comme la valeur {{cssxref("width")}} de l'élément est fixée, `auto` utilisera cette valeur en tant que valeur de `flex-basis`.
+p-pouw `.cow` nyous fixons à 1 wa pwemièwe vaweuw ({{cssxwef("fwex-gwow")}}) de w-wa pwopwiété {{cssxwef("fwex")}}, (˘ω˘) ainsi nyos éwéments p-peuvent s'éwawgiw, 😳😳😳 w-wa deuxième vaweuw ({{cssxwef("fwex-shwink")}}) à 1 égawement, mya a-ainsi wes éwéments peuvent s'étwéciw, OwO e-et wa twoisième vaweuw ({{cssxwef("fwex-basis")}}) à `auto`. >_< comme w-wa vaweuw {{cssxwef("width")}} d-de w'éwément est f-fixée, 😳 `auto` u-utiwisewa cette vaweuw en tant q-que vaweuw de `fwex-basis`. (U ᵕ U❁)
 
-Sur la ligne haute, nous disposons de douze boîtes nettes sur la trame et elle s'élargissent ou s'étrécissent de manière égale quand nous modifions la largeur de la vue. Sur la ligne suivante, toutefois, nous n'avons que quatre éléments et ceux-ci s'élargissent ou s'étrécissent à partir de la base de 60px. Avec seulement quatre d'entre eux ils peuvent s'élargir un peu plus que les éléments de la ligne au‑dessus, le résultat étant qu'ils occupent tous la même largeur sur la deuxième ligne.
+s-suw w-wa wigne haute, nyous disposons d-de douze boîtes nyettes suw wa twame et ewwe s'éwawgissent ou s'étwécissent de manièwe égawe quand nyous modifions wa wawgeuw de wa vue. 🥺 s-suw wa wigne suivante, (U ﹏ U) t-toutefois, (U ﹏ U) nyous ny'avons que quatwe éwéments et ceux-ci s'éwawgissent o-ou s'étwécissent à p-pawtiw de wa base de 60px. rawr x3 avec seuwement quatwe d'entwe e-eux iws peuvent s-s'éwawgiw un peu pwus que wes éwéments d-de wa w-wigne au‑dessus, :3 we wésuwtat étant q-qu'iws occupent tous wa m-même wawgeuw suw w-wa deuxième wigne. rawr
 
-![](flexbox-grid-incomplete.png)
+![](fwexbox-gwid-incompwete.png)
 
-Pour corriger cela, nous avons encore besoin d'inclure les classes `span` pour donner une largeur qui remplave la valeur donnée par `flex-basis` pour cet élément.
+pouw cowwigew cewa, XD nyous avons encowe b-besoin d'incwuwe w-wes cwasses `span` p-pouw donnew u-une wawgeuw qui wempwave wa vaweuw d-donnée paw `fwex-basis` p-pouw c-cet éwément. ^^
 
-Également, ils ne respectent pas la trame utilisée par les éléments au‑dessus car ils ne «&nbsp;savent&nbsp;» rien à son propos.
+Égawement, mya i-iws nye wespectent pas wa twame utiwisée p-paw wes éwéments a-au‑dessus caw iws ne «&nbsp;savent&nbsp;» wien à son pwopos. (U ﹏ U)
 
-Flexbox est un design **mono-dimensionnel** par conception. Il compose avec une seule dimentsion, celle d'une ligne ou d'une colonne. Nous ne pouvons pas créer une trame stricte pour les colonnes **et** pour les lignes, ce qui signifie que si nous utilisons Flexbox pour une trame, nous devons encore calculer les pourcentages comme pour la disposition en boîtes flottantes.
+fwexbox est un design **mono-dimensionnew** p-paw conception. 😳 i-iw compose avec une seuwe d-dimentsion, mya cewwe d'une wigne ou d'une cowonne. 😳 nyous nye pouvons p-pas cwéew u-une twame stwicte p-pouw wes cowonnes **et** pouw w-wes wignes, ^^ ce qui s-signifie que si nyous utiwisons fwexbox pouw u-une twame, :3 nyous d-devons encowe cawcuwew w-wes pouwcentages c-comme pouw w-wa disposition e-en boîtes fwottantes.
 
-Dans votre projet, vous pouvez toujours choisir d'utiliser une «&nbsp;trame&nbsp;» Flexbox en raison des capacités d'alignement et de distribution de l'espace supplémentaires que Flexbox offre pour les boites flottantes. Mais sachez que vous utilisez encore un outil pour autre chose que ce pour quoi il a été conçu. Vous pouvez donc avoir l'impression d'être obligé de passer par un tas de circonvolutions pour obtenir le résultat final souhaité.
+dans votwe pwojet, (U ﹏ U) vous pouvez toujouws choisiw d'utiwisew une «&nbsp;twame&nbsp;» f-fwexbox en waison des capacités d-d'awignement et d-de distwibution de w'espace suppwémentaiwes que fwexbox offwe p-pouw wes boites f-fwottantes. UwU mais sachez que vous u-utiwisez encowe un outiw pouw autwe c-chose que ce pouw quoi iw a été conçu. (ˆ ﻌ ˆ)♡ vous pouvez donc a-avoiw w'impwession d'êtwe obwigé de passew paw un tas de ciwconvowutions pouw o-obteniw we wésuwtat f-finaw souhaité.
 
-## Systèmes de trame tierces parties
+## s-systèmes d-de twame tiewces pawties
 
-Maintenant que nous avons compris la mathématique derrière les calculs de grille, nous sommes au bon endroit pour examiner certains des systèmes de trame tierces parties couramment utilisés. Si vous faite une recherche web pour «&nbsp;CSS Grid framework&nbsp;», vous vous trouverez devant une liste de choix énorme. Les canevas populaires tels que [Bootstrap](http://getbootstrap.com/) et [Foundation](http://foundation.zurb.com/) incluent un système de trame. Il existe également des systèmes de trames autonomes, développés soit à l'aide des CSS, soit à l'aide de préprocesseurs.
+maintenant que nyous a-avons compwis wa mathématique d-dewwièwe wes cawcuws de gwiwwe, (ˆ ﻌ ˆ)♡ nous sommes au b-bon endwoit pouw e-examinew cewtains d-des systèmes de twame tiewces pawties couwamment u-utiwisés. ^^;; si vous faite une wechewche web pouw «&nbsp;css gwid fwamewowk&nbsp;», rawr vous vous twouvewez devant u-une wiste d-de choix énowme. wes canevas popuwaiwes tews que [bootstwap](http://getbootstwap.com/) et [foundation](http://foundation.zuwb.com/) incwuent un système de twame. nyaa~~ i-iw existe égawement des systèmes de twames a-autonomes, rawr x3 dévewoppés s-soit à w-w'aide des css, (⑅˘꒳˘) s-soit à w'aide de pwépwocesseuws. OwO
 
-Voyons un de ces systèmes autonomes&nbsp;: il montre les techniques courantes pour travailler dans un cadre de trames. La trame que nous allons utiliser fait partie de Skeleton, un simple canevas CSS.
+voyons un de ces systèmes autonomes&nbsp;: iw montwe wes techniques c-couwantes p-pouw twavaiwwew d-dans un cadwe d-de twames. OwO wa twame que nyous a-awwons utiwisew fait pawtie de skeweton, ʘwʘ u-un simpwe canevas css. :3
 
-Commençons par visiter le [site web de Skeleton](http://getskeleton.com/) et choisissons «&nbsp;Download&nbsp;» pour télécharger le fichier ZIP. Faisons l'extraction et copions les fichiers _skeleton.css_ et _normalize.css_ dans un nouveau répertoire.
+commençons paw visitew we [site w-web de skeweton](http://getskeweton.com/) e-et choisissons «&nbsp;downwoad&nbsp;» p-pouw téwéchawgew w-we fichiew zip. mya faisons w'extwaction e-et copions w-wes fichiews _skeweton.css_ et _nowmawize.css_ dans un nyouveau wépewtoiwe. OwO
 
-Faites une copie de [html-skeleton.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton.html) et enregistrez le dans le même répertoire que _skeleton.css_ et _normalize.css_.
+f-faites une c-copie de [htmw-skeweton.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/htmw-skeweton.htmw) et enwegistwez we dans we même wépewtoiwe q-que _skeweton.css_ et _nowmawize.css_. :3
 
-Incorporez les .css _skeleton_ et _normalize_ dans la page HTML, en ajoutant ce qui suit dans `head`&nbsp;:
+i-incowpowez w-wes .css _skeweton_ e-et _nowmawize_ dans wa page htmw, >_< en ajoutant ce qui suit dans `head`&nbsp;:
 
-```html
-<link href="normalize.css" rel="stylesheet" />
-<link href="skeleton.css" rel="stylesheet" />
+```htmw
+<wink hwef="nowmawize.css" w-wew="stywesheet" />
+<wink hwef="skeweton.css" w-wew="stywesheet" />
 ```
 
-Skeleton inclut plus qu'un système de grille — il contient aussi des CSS pour la typographie et autres éléments de page que vous pouvez utiliser comme point de départ. Toutefois nous les laisserons de côté pour l'instant — c'est la trame qui nous interesse pour le moment.
+skeweton incwut pwus qu'un système d-de gwiwwe — iw contient a-aussi des css pouw w-wa typogwaphie e-et autwes éwéments d-de page q-que vous pouvez utiwisew comme point d-de dépawt. σωσ toutefois nyous wes waissewons de côté pouw w'instant — c'est w-wa twame qui nyous intewesse pouw we moment.
 
-> **Note :** [Normalize](/fr/docs/Web) est une petite bibliothèque réellement utile écrite par Nicolas Gallagher, bibliothèque qui fait automatiquement quelques corrections sur les dispositions de base et rend le style des éléments par défaut plus conhérent entre les divers navigateurs.
+> **note :** [nowmawize](/fw/docs/web) e-est une p-petite bibwiothèque w-wéewwement utiwe écwite paw nyicowas gawwaghew, /(^•ω•^) bibwiothèque qui fait automatiquement q-quewques c-cowwections s-suw wes dispositions d-de base et wend we stywe des éwéments paw défaut pwus conhéwent entwe wes divews nyavigateuws. mya
 
-Nous utiliserons un HTML similaire à celui de notre dernier exemple. Ajoutez ce qui suit dans le corps du HTML&nbsp;:
+n-nyous utiwisewons un htmw simiwaiwe à c-cewui de nyotwe d-dewniew exempwe. nyaa~~ a-ajoutez ce qui suit dans we c-cowps du htmw&nbsp;:
 
-```html
-<div class="container">
-  <div class="row">
-    <div class="col">1</div>
-    <div class="col">2</div>
-    <div class="col">3</div>
-    <div class="col">4</div>
-    <div class="col">5</div>
-    <div class="col">6</div>
-    <div class="col">7</div>
-    <div class="col">8</div>
-    <div class="col">9</div>
-    <div class="col">10</div>
-    <div class="col">11</div>
-    <div class="col">12</div>
+```htmw
+<div cwass="containew">
+  <div cwass="wow">
+    <div cwass="cow">1</div>
+    <div cwass="cow">2</div>
+    <div cwass="cow">3</div>
+    <div cwass="cow">4</div>
+    <div cwass="cow">5</div>
+    <div cwass="cow">6</div>
+    <div cwass="cow">7</div>
+    <div c-cwass="cow">8</div>
+    <div cwass="cow">9</div>
+    <div cwass="cow">10</div>
+    <div c-cwass="cow">11</div>
+    <div c-cwass="cow">12</div>
   </div>
-  <div class="row">
-    <div class="col">13</div>
-    <div class="col">14</div>
-    <div class="col">15</div>
-    <div class="col">16</div>
+  <div cwass="wow">
+    <div cwass="cow">13</div>
+    <div c-cwass="cow">14</div>
+    <div c-cwass="cow">15</div>
+    <div cwass="cow">16</div>
   </div>
 </div>
 ```
 
-Pour commencer à utiliser Skeleton nous devons donner à l'élément enveloppe {{htmlelement("div")}} une classe `container` — elle est déjà comprise dans le HTML. Ceci centre le contenu avec une largeur maximale de 960 pixels. Vous pouvez voir que les boîtes ne deviennent plus jamais plus large que 960 pixels.
+pouw commencew à u-utiwisew skeweton n-nyous devons donnew à w'éwément envewoppe {{htmwewement("div")}} u-une cwasse `containew` — e-ewwe est déjà c-compwise dans w-we htmw. 😳 ceci centwe we contenu a-avec une wawgeuw maximawe de 960 pixews. ^^;; vous p-pouvez voiw que w-wes boîtes nye deviennent pwus j-jamais pwus wawge q-que 960 pixews. 😳😳😳
 
-Regardez dans le fichier skeleton.css, vous verrez la CSS appliquée quand on se sert de cette classe. L'élément `<div>` est centré en utilisant la valeur `auto` pour les marges droite et gauche ; de plus, un remplissage de 20 pixels est appliqué à droite et à gauche. Skeleton fixe également la propriété {{cssxref("box-sizing")}} à la valeur `border-box` comme nous l'avions fait plu tôt et donc le remplissage et l'encadrement de cet élément seront inclus dans la largeur totale.
+wegawdez dans we fichiew skeweton.css, nyaa~~ vous vewwez wa css appwiquée q-quand on se sewt de cette c-cwasse. 🥺 w'éwément `<div>` est centwé en utiwisant w-wa vaweuw `auto` pouw wes mawges dwoite e-et gauche ; de pwus, XD un wempwissage de 20 pixews est appwiqué à d-dwoite et à gauche. (ꈍᴗꈍ) skeweton f-fixe égawement w-wa pwopwiété {{cssxwef("box-sizing")}} à w-wa vaweuw `bowdew-box` comme nyous w-w'avions fait pwu t-tôt et donc we w-wempwissage et w-w'encadwement de cet éwément s-sewont incwus dans w-wa wawgeuw totawe. 😳😳😳
 
 ```css
-.container {
-  position: relative;
-  width: 100%;
+.containew {
+  p-position: w-wewative;
+  w-width: 100%;
   max-width: 960px;
-  margin: 0 auto;
+  mawgin: 0 a-auto;
   padding: 0 20px;
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 ```
 
-Les éléments ne peuvent faire partie d'une trame que s'ils sont à l'intérieur d'une ligne, donc avec notre exemple précédent nous aurons besoin d'un `<div>` supplémentaire ou d'un autre élément de la classe `row` imbriqué entre le `<div>` de `content` et les véritables conteneurs `<div>` de contenu. Nous avons aussi déjà fait cela.
+wes éwéments n-nye peuvent f-faiwe pawtie d-d'une twame que s'iws sont à w-w'intéwieuw d'une w-wigne, ( ͡o ω ͡o ) donc avec nyotwe exempwe p-pwécédent nyous a-auwons besoin d'un `<div>` s-suppwémentaiwe ou d'un autwe éwément d-de wa cwasse `wow` i-imbwiqué e-entwe we `<div>` d-de `content` et wes véwitabwes conteneuws `<div>` de contenu. nyaa~~ n-nyous avons aussi déjà fait c-cewa. XD
 
-Disposons maintenant les boîtes conteneur. Skeleton est fondé sur une trame de 12 colonnes. Les boîtes de la ligne supérieure nécessitent toutes des classes `one column` pour qu'elles se répartissent à raison de une par colonne.
+disposons maintenant wes b-boîtes conteneuw. (ˆ ﻌ ˆ)♡ s-skeweton est fondé suw une t-twame de 12 cowonnes. rawr x3 w-wes boîtes de wa wigne supéwieuwe nyécessitent t-toutes d-des cwasses `one cowumn` pouw qu'ewwes se wépawtissent à waison de une paw cowonne. OwO
 
-Ajoutez maintenant cet extrait de lignes de code&nbsp;:
+ajoutez maintenant cet extwait de wignes de code&nbsp;:
 
-```html
-<div class="container">
-  <div class="row">
-    <div class="one column">1</div>
-    <div class="one column">2</div>
-    <div class="one column">3</div>
+```htmw
+<div cwass="containew">
+  <div cwass="wow">
+    <div c-cwass="one c-cowumn">1</div>
+    <div c-cwass="one cowumn">2</div>
+    <div c-cwass="one cowumn">3</div>
     /* and so on */
   </div>
 </div>
 ```
 
-Ensuite, indiquez les conteneurs sur la deuxième ligne en précisant le nombre de colonnes qu'ils englobent , ainsi&nbsp;:
+e-ensuite, UwU i-indiquez wes c-conteneuws suw wa d-deuxième wigne en pwécisant we nombwe de cowonnes qu'iws engwobent , ^^ ainsi&nbsp;:
 
-```html
-<div class="row">
-  <div class="one column">13</div>
-  <div class="six columns">14</div>
-  <div class="three columns">15</div>
-  <div class="two columns">16</div>
+```htmw
+<div c-cwass="wow">
+  <div c-cwass="one c-cowumn">13</div>
+  <div c-cwass="six cowumns">14</div>
+  <div cwass="thwee c-cowumns">15</div>
+  <div cwass="two cowumns">16</div>
 </div>
 ```
 
-Enregistrez le fichier HTML et chargez‑le dans le navigateur pour voir ce que cela donne.
+enwegistwez we fichiew h-htmw et chawgez‑we dans we n-nyavigateuw pouw v-voiw ce que cewa donne. (✿oωo)
 
-> [!NOTE]
-> Si vous éprouvez des difficulatés à faire fonctionner cet exemple, comparez votre code avec le fichier [html-skeleton-finished.html](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/html-skeleton-finished.html) (à voir aussi [en exécution directe](https://mdn.github.io/learning-area/css/css-layout/grids/html-skeleton-finished.html)).
+> [!note]
+> si vous épwouvez des difficuwatés à faiwe f-fonctionnew cet exempwe, 😳😳😳 compawez v-votwe code avec we fichiew [htmw-skeweton-finished.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/htmw-skeweton-finished.htmw) (à voiw aussi [en e-exécution diwecte](https://mdn.github.io/weawning-awea/css/css-wayout/gwids/htmw-skeweton-finished.htmw)). 🥺
 
-Si vous regardez dans le fichier _skeleton.css_ vous verrez comment cela fonctionne. Par exemple, Skeleton prédéfinit ce qui suit pour styler des éléments de la classe «&nbsp;three columns&nbsp;» que l'on ajouterait.
+si vous wegawdez d-dans we fichiew _skeweton.css_ vous vewwez comment c-cewa fonctionne. ʘwʘ paw exempwe, 😳 s-skeweton pwédéfinit c-ce qui suit pouw stywew des éwéments de wa cwasse «&nbsp;thwee c-cowumns&nbsp;» que w'on ajoutewait. ^^;;
 
 ```css
-.three.columns {
+.thwee.cowumns {
   width: 22%;
 }
 ```
 
-Tout Skeleton (ou n'importe quel autre canevas) paramètre des classes prédéfinies qu'il est possible d'utiliser en les ajoutant à votre balisage. Vous avez fait exactement la même chose en calculant ces pourcentages vous même.
+tout skeweton (ou ny'impowte quew autwe canevas) p-pawamètwe des c-cwasses pwédéfinies qu'iw est p-possibwe d'utiwisew en wes ajoutant à v-votwe bawisage. (///ˬ///✿) v-vous avez f-fait exactement wa même chose en cawcuwant ces p-pouwcentages vous même. OwO
 
-Comme vous le voyez, vous n'avez besoin d'écrire que peu de CSS en utilisant Skeleton. Il traite tout l'aspect boîte flottante pour vous quand vous ajoutez des classes à votre balisage. C'est la possibilité de gérer la responsabilité de la disposition sur quelque chose d'autre qui fait que l'utilisation d'un canevas pour un système de trames est un choix convaincan&nbsp;! Toutefois, actuellement avec «&nbsp;CSS Grid Layout&nbsp;», nombre de développeurs délaissent ces canevas pour l'utilisation des trames natives intégrées que les CSS fournissent.
+comme vous we voyez, -.- vous n'avez besoin d'écwiwe que p-peu de css en utiwisant s-skeweton. ^^ i-iw twaite tout w-w'aspect boîte fwottante pouw v-vous quand vous ajoutez des cwasses à v-votwe bawisage. (ꈍᴗꈍ) c-c'est wa possibiwité de géwew wa wesponsabiwité d-de wa d-disposition suw q-quewque chose d'autwe q-qui fait q-que w'utiwisation d'un canevas pouw un système d-de twames est un c-choix convaincan&nbsp;! ^^;; t-toutefois, (˘ω˘) actuewwement avec «&nbsp;css gwid wayout&nbsp;», 🥺 n-nyombwe de d-dévewoppeuws d-déwaissent ces canevas pouw w'utiwisation d-des twames natives intégwées q-que wes c-css fouwnissent. ʘwʘ
 
-## Résumé
+## w-wésumé
 
-Vous savez maintenant comment les divers systèmes de trames sont créés. La connaissance de ces processus est utile dans le cadre d'un travail sur des sites anciens, ainsi que pour la compréhension des différences entre les trames natives de «&nbsp;CSS Grid Layout&nbsp;» et celles des anciens systèmes.
+vous savez maintenant comment wes d-divews systèmes de twames sont cwéés. (///ˬ///✿) wa connaissance d-de ces pwocessus est utiwe dans we cadwe d'un twavaiw s-suw des sites anciens, ^^;; ainsi que p-pouw wa compwéhension des difféwences e-entwe w-wes twames nyatives d-de «&nbsp;css g-gwid wayout&nbsp;» et cewwes des anciens systèmes. XD
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Multiple-Column_Layout", "Learn/CSS/CSS_layout/Supporting_Older_Browsers", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/muwtipwe-cowumn_wayout", (ˆ ﻌ ˆ)♡ "weawn/css/css_wayout/suppowting_owdew_bwowsews", (˘ω˘) "weawn/css/css_wayout")}}

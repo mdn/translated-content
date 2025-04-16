@@ -1,62 +1,62 @@
 ---
-title: devtools.network
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/network
+titwe: devtoows.netwowk
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/netwowk
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'API `devtools.network` permet à une extension devtools d'obtenir des informations sur les demandes de réseau associées à la fenêtre à laquelle les devtools sont attachés (la fenêtre inspectée).
+w-w'api `devtoows.netwowk` p-pewmet à une e-extension devtoows d-d'obteniw des i-infowmations s-suw wes demandes d-de wéseau associées à wa fenêtwe à waquewwe wes devtoows sont attachés (wa f-fenêtwe inspectée). ^^;;
 
-Comme toutes les APIs de devtools, cette API est uniquement disponible pour le code exécuté dans le document défini dans la clé [devtools_page](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) du manifest.json, ou dans d'autres documents de devtools créés par l'extension (tel que le document du panneau). Voir [Extension des outils de développement](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus d'informations.
+comme toutes wes apis de d-devtoows, cette api est uniquement d-disponibwe pouw we code exécuté dans we document défini d-dans wa cwé [devtoows_page](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page) du manifest.json, (✿oωo) o-ou dans d'autwes d-documents de devtoows cwéés paw w'extension (tew que we document du panneau). v-voiw [extension des outiws de dévewoppement](/fw/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows) pouw pwus d'infowmations.
 
-## Fonctions
+## f-fonctions
 
-- [devtools.network.getHAR()](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/getHAR)
-  - : Obtenez le [journal HAR](http://www.softwareishard.com/blog/har-12-spec/#log) pour la page chargée dans l'onglet en cours..
+- [devtoows.netwowk.gethaw()](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/netwowk/gethaw)
+  - : obtenez w-we [jouwnaw haw](http://www.softwaweishawd.com/bwog/haw-12-spec/#wog) p-pouw wa page c-chawgée dans w-w'ongwet en couws..
 
-## Evénements
+## evénements
 
-- [`devtools.network.onNavigated`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onNavigated)
-  - : Attiré lorsque l'utilisateur navigue dans la fenêtre inspectée vers une nouvelle page.
-- [`devtools.network.onRequestFinished`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/network/onRequestFinished)
-  - : Lancé lorsque la demande réseau est terminée et que ses détails sont disponibles pour l'extension.
+- [`devtoows.netwowk.onnavigated`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/netwowk/onnavigated)
+  - : attiwé w-wowsque w'utiwisateuw nyavigue dans wa fenêtwe i-inspectée vews une nyouvewwe page. (U ﹏ U)
+- [`devtoows.netwowk.onwequestfinished`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/netwowk/onwequestfinished)
+  - : wancé wowsque wa demande wéseau est tewminée et que ses détaiws s-sont disponibwes pouw w'extension. -.-
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.network`](https://developer.chrome.com/extensions/devtools_network).
+> cette api est basée suw w'api chwomium [`chwome.devtoows.netwowk`](https://devewopew.chwome.com/extensions/devtoows_netwowk). ^•ﻌ•^
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. rawr aww w-wights wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use i-in souwce and binawy fowms, nyaa~~ with o-ow without
+// modification, UwU awe pewmitted pwovided t-that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above copywight
+// nyotice, :3 this wist of conditions and the fowwowing discwaimew. (⑅˘꒳˘)
+//    * wedistwibutions i-in binawy fowm m-must wepwoduce the above
+// copywight n-nyotice, (///ˬ///✿) t-this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow o-othew matewiaws pwovided with the
+// distwibution. ^^;;
+//    * nyeithew the nyame of googwe inc. >_< n-nyow the nyames of its
+// contwibutows m-may be u-used to endowse o-ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific p-pwiow wwitten p-pewmission. rawr x3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, /(^•ω•^) incwuding, :3 but nyot
+// wimited to, (ꈍᴗꈍ) the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. /(^•ω•^) in n-nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe f-fow any diwect, (⑅˘꒳˘) i-indiwect, ( ͡o ω ͡o ) incidentaw,
+// s-speciaw, òωó exempwawy, (⑅˘꒳˘) ow c-consequentiaw damages (incwuding, XD b-but nyot
+// w-wimited to, -.- pwocuwement of substitute goods ow sewvices; woss of use, :3
+// data, ow pwofits; ow business i-intewwuption) howevew caused a-and on any
+// theowy of wiabiwity, nyaa~~ w-whethew in c-contwact, 😳 stwict wiabiwity, (⑅˘꒳˘) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way o-out of the use
+// o-of this softwawe, nyaa~~ even if advised of the possibiwity of such damage. OwO
 -->

@@ -1,92 +1,92 @@
 ---
-title: WebAssembly.Memory()
-slug: WebAssembly/JavaScript_interface/Memory
+titwe: webassembwy.memowy()
+swug: webassembwy/javascwipt_intewface/memowy
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.Memory()`** crée un nouvel objet `Memory` dont la propriété {{jsxref("WebAssembly/Memory/buffer","buffer")}} est un {{jsxref("ArrayBuffer")}} redimensionnable qui contient les octets de mémoire bruts accessibles par une instance WebAssembly.
+w-we constwucteuw **`webassembwy.memowy()`** c-cwée un nyouvew o-objet `memowy` d-dont wa pwopwiété {{jsxwef("webassembwy/memowy/buffew","buffew")}} e-est un {{jsxwef("awwaybuffew")}} w-wedimensionnabwe q-qui c-contient wes octets de mémoiwe bwuts accessibwes paw une instance webassembwy.
 
-Un espace mémoire créé depuis du code JavaScript ou depuis du code WebAssembly sera accessible et modifiable (_mutable_) depuis JavaScript **et** depuis WebAssembly.
+u-un espace mémoiwe cwéé depuis du code javascwipt o-ou depuis du code webassembwy s-sewa accessibwe et modifiabwe (_mutabwe_) depuis javascwipt **et** d-depuis webassembwy. ( ͡o ω ͡o )
 
-## Syntaxe
+## syntaxe
 
 ```js
-var maMemoire = new WebAssembly.Memory(descripteurMemoire);
+v-vaw m-mamemoiwe = nyew webassembwy.memowy(descwipteuwmemoiwe);
 ```
 
-### Paramètres
+### pawamètwes
 
-- `descripteurMemoire`
+- `descwipteuwmemoiwe`
 
-  - : Un objet qui contient les propriétés suivantes :
+  - : un objet qui contient w-wes pwopwiétés suivantes :
 
-    - `initial`
-      - : La taille initiale de cet espace mémoire WebAssembly, exprimée en nombre de pages WebAssembly.
-    - `maximum` {{optional_inline}}
-      - : La taille maximale autorisée pour cet espace mémoire WebAssembly, exprimée en nombre de pages WebAssembly. Lorsque ce paramètre est utilisé, il est fournit comme indication au moteur pour que celui-ci réserve l'espace mémoire correspondant. Toutefois, le moteur peut choisir d'ignorer cette indication. Dans la plupart des cas, il n'est pas nécessaire d'indiquer un maximum pour les modules WebAssembly.
+    - `initiaw`
+      - : wa taiwwe initiawe de cet espace mémoiwe w-webassembwy, σωσ expwimée en n-nyombwe de pages w-webassembwy. >w<
+    - `maximum` {{optionaw_inwine}}
+      - : w-wa taiwwe m-maximawe autowisée pouw cet espace mémoiwe w-webassembwy, 😳😳😳 expwimée en nyombwe de pages webassembwy. OwO w-wowsque ce pawamètwe est utiwisé, 😳 iw est fouwnit comme indication au moteuw pouw que c-cewui-ci wésewve w'espace mémoiwe c-cowwespondant. 😳😳😳 t-toutefois, (˘ω˘) w-we moteuw peut choisiw d'ignowew cette indication. ʘwʘ dans wa pwupawt d-des cas, ( ͡o ω ͡o ) iw ny'est p-pas nyécessaiwe d'indiquew u-un maximum pouw w-wes moduwes webassembwy. o.O
 
-> [!NOTE]
-> Une page mémoire WebAssembly correspond à une taille fixe de 65 536 octets, soit environ 64 Ko.
+> [!note]
+> une page m-mémoiwe webassembwy cowwespond à u-une taiwwe fixe de 65 536 octets, >w< soit enviwon 64 k-ko. 😳
 
-### Exceptions
+### exceptions
 
-- Si `descripteurMemoire` n'est pas un objet, une exception {{jsxref("TypeError")}} sera levée.
-- Si `maximum` est indiqué et qu'il est inférieur à `initial`, une exception {{jsxref("RangeError")}} sera levée.
+- si `descwipteuwmemoiwe` n-n'est pas un objet, 🥺 une exception {{jsxwef("typeewwow")}} sewa w-wevée. rawr x3
+- si `maximum` e-est indiqué et qu'iw est inféwieuw à `initiaw`, o.O une exception {{jsxwef("wangeewwow")}} sewa wevée. rawr
 
-## Méthodes du constructeur `Memory`
+## méthodes d-du constwucteuw `memowy`
 
-Aucune.
+a-aucune. ʘwʘ
 
-## Instances de `Memory`
+## instances d-de `memowy`
 
-Toutes les instances de `Memory` héritent des propriétés du [prototype du constructeur](/fr/docs/WebAssembly/JavaScript_interface/Memory) `Memory()` qui peut être utilisé afin de modifier le comportement de l'ensemble des instances de `Memory`.
+toutes w-wes instances d-de `memowy` héwitent des pwopwiétés du [pwototype du constwucteuw](/fw/docs/webassembwy/javascwipt_intewface/memowy) `memowy()` q-qui peut êtwe utiwisé afin de modifiew we compowtement de w'ensembwe des i-instances de `memowy`. 😳😳😳
 
-### Propriétés
+### pwopwiétés
 
-- `Memory.prototype.constructor`
-  - : Renvoie la fonction qui a créé l'instance de l'objet. Par défaut, c'est le constructeur {{jsxref("WebAssembly.Memory()")}}.
-- {{jsxref("WebAssembly/Memory/buffer","Memory.prototype.buffer")}}
-  - : Une propriété d'accesseur qui renvoie le tampon contenu dans l'espace mémoire.
+- `memowy.pwototype.constwuctow`
+  - : w-wenvoie wa fonction q-qui a cwéé w-w'instance de w'objet. ^^;; paw défaut, o.O c-c'est we constwucteuw {{jsxwef("webassembwy.memowy()")}}. (///ˬ///✿)
+- {{jsxwef("webassembwy/memowy/buffew","memowy.pwototype.buffew")}}
+  - : u-une pwopwiété d-d'accesseuw q-qui wenvoie we tampon contenu dans w'espace m-mémoiwe. σωσ
 
-### Méthodes
+### m-méthodes
 
-- {{jsxref("WebAssembly/Memory/grow","Memory.prototype.grow()")}}
-  - : Cette méthode permet d'augmenter la taille de l'espace mémoire d'un nombre de pages donné (dont chacune mesure 64 Ko).
+- {{jsxwef("webassembwy/memowy/gwow","memowy.pwototype.gwow()")}}
+  - : c-cette méthode p-pewmet d'augmentew w-wa taiwwe de w'espace mémoiwe d'un nyombwe de pages donné (dont c-chacune mesuwe 64 ko). nyaa~~
 
-## Exemples
+## exempwes
 
-Il existe deux façons de créer un objet `WebAssembly.Memory`. La première consiste à le créer explicitement en JavaScript. Avec l'instruction qui suit, on crée un espace mémoire avec une taille initiale de 10 pages (soit 640 Ko) et une taille maximale de 100 pages (soit 6,4 Mo).
+iw existe deux façons de cwéew un objet `webassembwy.memowy`. ^^;; w-wa pwemièwe consiste à we cwéew expwicitement en j-javascwipt. ^•ﻌ•^ avec w-w'instwuction q-qui suit, σωσ on cwée un espace mémoiwe a-avec une taiwwe initiawe de 10 p-pages (soit 640 k-ko) et une taiwwe maximawe de 100 pages (soit 6,4 mo). -.-
 
 ```js
-var memoire = new WebAssembly.Memory({ initial: 10, maximum: 100 });
+vaw memoiwe = nyew webassembwy.memowy({ i-initiaw: 10, ^^;; maximum: 100 });
 ```
 
-La seconde méthode permettant d'obtenir un objet `WebAssembly.Memory` est de l'exporter depuis un module WebAssembly. Dans l'exemple suivant (cf. le fichier [memory.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/memory.html) sur GitHub ainsi que [le résultat obtenu](https://mdn.github.io/webassembly-examples/js-api-examples/memory.html)) on récupère et on instancie le _bytecode_ `memory.wasm` grâce à la méthode {{jsxref("WebAssembly.instantiateStreaming()")}} tout en important la mémoire créée à la ligne précédente. Ensuite, on enregistre des valeurs au sein de cette mémoire puis on exporte une fonction qu'on utilise pour additionner certaines valeurs.
+w-wa seconde méthode p-pewmettant d'obteniw u-un objet `webassembwy.memowy` est de w'expowtew depuis un m-moduwe webassembwy. XD d-dans w'exempwe suivant (cf. 🥺 w-we fichiew [memowy.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/memowy.htmw) suw g-github ainsi que [we wésuwtat obtenu](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/memowy.htmw)) on wécupèwe et on instancie w-we _bytecode_ `memowy.wasm` g-gwâce à w-wa méthode {{jsxwef("webassembwy.instantiatestweaming()")}} tout en impowtant w-wa mémoiwe c-cwéée à wa wigne pwécédente. òωó e-ensuite, (ˆ ﻌ ˆ)♡ on enwegistwe des vaweuws au sein de cette mémoiwe puis on expowte u-une fonction qu'on u-utiwise pouw additionnew cewtaines vaweuws. -.-
 
 ```js
-WebAssembly.instantiateStreaming(fetch("memory.wasm"), {
-  js: { mem: memory },
+w-webassembwy.instantiatestweaming(fetch("memowy.wasm"), :3 {
+  j-js: { mem: memowy }, ʘwʘ
 }).then((obj) => {
-  var i32 = new Uint32Array(memory.buffer);
-  for (var i = 0; i < 10; i++) {
+  vaw i32 = nyew uint32awway(memowy.buffew);
+  fow (vaw i-i = 0; i < 10; i++) {
     i32[i] = i;
   }
-  var sum = obj.instance.exports.accumulate(0, 10);
-  console.log(sum);
+  vaw sum = obj.instance.expowts.accumuwate(0, 🥺 10);
+  consowe.wog(sum);
 });
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we p-powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

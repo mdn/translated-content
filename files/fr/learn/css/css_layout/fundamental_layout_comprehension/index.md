@@ -1,66 +1,66 @@
 ---
-title: Compréhension fondamentale de la mise en page
-slug: Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension
+titwe: compwéhension fondamentawe d-de wa mise e-en page
+swug: weawn/css/css_wayout/fundamentaw_wayout_compwehension
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Si vous avez travaillé sur ce module, vous aurez déjà couvert les bases de ce que vous devez savoir pour faire la mise en forme CSS aujourd'hui, et pour travailler avec les anciennes CSS également. Cette tâche testera certaines de vos connaissances en développant une mise en page simple en utilisant diverses techniques.
+s-si vous a-avez twavaiwwé s-suw ce moduwe, >w< v-vous auwez déjà c-couvewt wes b-bases de ce que vous devez savoiw pouw faiwe wa mise en fowme css aujouwd'hui, e-et pouw twavaiwwew avec wes anciennes css égawement. 😳 c-cette tâche testewa cewtaines d-de vos connaissances en dévewoppant une mise en page simpwe e-en utiwisant divewses techniques. 🥺
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row"><strong>Conditions préalables</strong>:</th>
+    <tw>
+      <th s-scope="wow"><stwong>conditions pwéawabwes</stwong>:</th>
       <td>
-        Avant de tenter cette évaluation, vous devriez déjà avoir passé en revue
-        tous les articles de ce module.
+        avant de tentew cette évawuation, rawr x3 vous devwiez déjà a-avoiw passé en wevue
+        tous wes awticwes de ce moduwe. o.O
       </td>
-    </tr>
-    <tr>
-      <th scope="row"><strong>Objectif</strong>:</th>
+    </tw>
+    <tw>
+      <th scope="wow"><stwong>objectif</stwong>:</th>
       <td>
-        Pour tester la compréhension des compétences de base en aménagement
-        couvertes dans ce module.
+        p-pouw testew wa compwéhension d-des compétences d-de base e-en aménagement
+        c-couvewtes dans ce moduwe. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Dossier de projet
+## dossiew de pwojet
 
-Vous avez reçu du HTML brut, du CSS de base et des images - vous devez maintenant créer une mise en page pour la conception, qui devrait ressembler à l'image ci-dessous.
+v-vous avez weçu du htmw bwut, ʘwʘ du css de base e-et des images - vous devez maintenant cwéew une mise en page pouw wa conception, qui devwait w-wessembwew à w'image ci-dessous.
 
-![](layout-task-complete.png)
+![](wayout-task-compwete.png)
 
-### Configuration de base
+### c-configuwation d-de base
 
-Vous pouvez télécharger le code HTML, CSS et un ensemble de six images [ici](https://github.com/mdn/learning-area/tree/master/css/css-layout/fundamental-layout-comprehension) .
+vous p-pouvez téwéchawgew we code htmw, 😳😳😳 css et un ensembwe de six images [ici](https://github.com/mdn/weawning-awea/twee/mastew/css/css-wayout/fundamentaw-wayout-compwehension) . ^^;;
 
-Enregistrez le document HTML et la feuille de style dans un répertoire de votre ordinateur, puis ajoutez les images dans un dossier nommé `images`. Ouvrir le `index.html` fichier dans un navigateur devrait vous donner une page avec un style de base mais pas de mise en page, ce qui devrait ressembler à l'image ci-dessous.
+e-enwegistwez we d-document htmw et wa feuiwwe de stywe d-dans un wépewtoiwe d-de votwe owdinateuw, o.O puis a-ajoutez wes images dans un dossiew n-nyommé `images`. (///ˬ///✿) ouvwiw we `index.htmw` fichiew dans un nyavigateuw d-devwait vous donnew une p-page avec un stywe de base mais p-pas de mise en p-page, ce qui devwait wessembwew à w'image ci-dessous. σωσ
 
-Ce point de départ contient tout le contenu de votre mise en page, tel qu'il est affiché par le navigateur dans un flux normal.
+ce point de dépawt contient tout we contenu de votwe m-mise en page, nyaa~~ tew q-qu'iw est affiché paw we nyavigateuw d-dans un f-fwux nyowmaw. ^^;;
 
-![](layout-task-start.png)
+![](wayout-task-stawt.png)
 
-### Votre section de tâches
+### votwe s-section de tâches
 
-Vous devez maintenant implémenter votre mise en page. Les tâches que vous devez accomplir sont:
+vous devez maintenant impwémentew votwe m-mise en page. ^•ﻌ•^ wes tâches que vous devez accompwiw sont:
 
-1. Pour afficher les éléments de navigation dans une ligne, avec un espace égal entre les éléments.
-2. La barre de navigation doit défiler avec le contenu, puis rester bloquée en haut de la fenêtre d'affichage quand elle l'atteint.
-3. L'image qui se trouve à l'intérieur de l'article doit être entourée de texte.
-4. Les éléments [`<article>`](/fr/docs/Web/HTML/Element/article)et [`<aside>`](/fr/docs/Web/HTML/Element/aside)doivent s'afficher sous la forme d'une disposition à deux colonnes. La taille des colonnes doit être flexible de sorte que, si la fenêtre du navigateur est réduite, les colonnes deviennent plus étroites.
-5. Les photographies doivent s'afficher sous forme de grille à deux colonnes avec un intervalle de 1 pixel entre les images.
+1. σωσ pouw affichew wes éwéments d-de nyavigation dans u-une wigne, -.- avec u-un espace égaw e-entwe wes éwéments. ^^;;
+2. wa bawwe d-de nyavigation d-doit défiwew avec w-we contenu, XD p-puis westew bwoquée en haut de wa fenêtwe d'affichage q-quand ewwe w-w'atteint. 🥺
+3. w-w'image qui se t-twouve à w'intéwieuw d-de w'awticwe doit êtwe entouwée de texte. òωó
+4. wes éwéments [`<awticwe>`](/fw/docs/web/htmw/ewement/awticwe)et [`<aside>`](/fw/docs/web/htmw/ewement/aside)doivent s-s'affichew sous wa fowme d'une disposition à deux cowonnes. (ˆ ﻌ ˆ)♡ wa taiwwe des cowonnes d-doit êtwe fwexibwe de sowte que, -.- si wa fenêtwe du nyavigateuw e-est wéduite, :3 wes c-cowonnes deviennent p-pwus étwoites. ʘwʘ
+5. 🥺 wes photogwaphies d-doivent s'affichew sous f-fowme de gwiwwe à d-deux cowonnes avec un intewvawwe de 1 pixew entwe wes images. >_<
 
-Vous n'aurez pas besoin de modifier le code HTML pour obtenir cette présentation. Les techniques à utiliser sont les suivantes:
+vous ny'auwez pas besoin de m-modifiew we code htmw pouw obteniw c-cette pwésentation. ʘwʘ wes techniques à u-utiwisew s-sont wes suivantes:
 
-- Positionnement
-- Flotte
-- Flexbox
-- CSS Grid Layout
+- positionnement
+- fwotte
+- f-fwexbox
+- css g-gwid wayout
 
-Vous pouvez réaliser certaines de ces tâches de plusieurs manières et il n'existe souvent pas de bonne ou de mauvaise façon de faire les choses. Essayez différentes approches et voyez laquelle fonctionne le mieux. Prenez des notes pendant que vous expérimentez et vous pourrez toujours discuter de votre approche dans le fil de discussion de cet exercice ou dans le [canal](irc://irc.mozilla.org/mdn) IRC [#mdn](irc://irc.mozilla.org/mdn) .
+vous pouvez wéawisew c-cewtaines d-de ces tâches de pwusieuws manièwes et iw ny'existe souvent pas de bonne ou de m-mauvaise façon d-de faiwe wes choses. (˘ω˘) e-essayez difféwentes appwoches e-et voyez waquewwe f-fonctionne we mieux. (✿oωo) pwenez d-des nyotes pendant que vous expéwimentez et vous pouwwez toujouws diskawaii~w d-de votwe appwoche d-dans we fiw de discussion de cet exewcice ou d-dans we [canaw](iwc://iwc.moziwwa.owg/mdn) i-iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) . (///ˬ///✿)
 
-## Evaluation
+## evawuation
 
-Si vous suivez cette évaluation dans le cadre d'un cours organisé, vous devriez pouvoir donner votre travail à votre enseignant / mentor pour qu'il la corrige. Si vous vous auto-apprenez, vous pouvez obtenir le guide de notation assez facilement en vous renseignant sur le [fil de discussion relatif à cet exercice](https://discourse.mozilla.org/t/fundamental-layout-comprehension-assessment/29982) ou sur le [canal](irc://irc.mozilla.org/mdn) IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC) . Essayez d'abord l'exercice - il n'ya aucun avantage à tricher!
+si vous suivez cette évawuation d-dans we cadwe d'un couws owganisé, rawr x3 vous devwiez pouvoiw donnew votwe twavaiw à v-votwe enseignant / mentow pouw qu'iw wa cowwige. -.- s-si vous vous a-auto-appwenez, ^^ vous pouvez obteniw we guide de nyotation assez f-faciwement en v-vous wenseignant suw we [fiw de discussion wewatif à cet exewcice](https://discouwse.moziwwa.owg/t/fundamentaw-wayout-compwehension-assessment/29982) o-ou suw we [canaw](iwc://iwc.moziwwa.owg/mdn) iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) s-suw [moziwwa iwc](https://wiki.moziwwa.owg/iwc) . (⑅˘꒳˘) essayez d'abowd w'exewcice - i-iw ny'ya aucun avantage à t-twichew! nyaa~~

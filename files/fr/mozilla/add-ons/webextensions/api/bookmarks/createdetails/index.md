@@ -1,65 +1,65 @@
 ---
-title: bookmarks.CreateDetails
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/CreateDetails
+titwe: bookmawks.cweatedetaiws
+swug: moziwwa/add-ons/webextensions/api/bookmawks/cweatedetaiws
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `CreateDetails` est utilisé pour décrire les propriétés d'un nouveau, d'un signet, d'un dossier de signets ou d'un séparateur lors de l'appel de la méthode {{WebExtAPIRef("bookmarks.create()")}}.
+w-we type `cweatedetaiws` e-est utiwisé pouw d-décwiwe wes p-pwopwiétés d'un n-nyouveau, nyaa~~ d'un s-signet, OwO d'un dossiew d-de signets o-ou d'un sépawateuw wows de w'appew de wa méthode {{webextapiwef("bookmawks.cweate()")}}. rawr x3
 
-## Type
+## type
 
-Un {{jsxref("object")}} contenant une combinaison des champs suivants :
+un {{jsxwef("object")}} contenant u-une combinaison des champs suivants :
 
-- `index` {{optional_inline}}
-  - : Un entier {{jsxref("Number")}} qui spécifie la position à laquelle placer le nouveau signet sous son parent. Une valeur de 0 le placera en haut de la liste.
-- `parentId` {{optional_inline}}
-  - : Un {{jsxref("string")}} qui indique l'ID du dossier parent dans lequel placer le nouveau signet ou dossier de signets. Sur Chrome et Firefox, la valeur par défaut est le dossier "Autres signets" du menu Signets.
-- `title` {{optional_inline}}
-  - : Un {{jsxref("string")}} qui spécifie le titre du signet ou le nom du dossier à créer. Si ce n'est pas spécifié, le titre est `""`.
-- `type`{{optional_inline}}
-  - : Un objet {{WebExtAPIRef("bookmarks.BookmarkTreeNodeType")}}indiquant s'il s'agit d'un signet, d'un dossier ou d'un séparateur. La valeur par défaut est `"bookmark"` sauf si l'`url` est omise, auquel cas elle est par défaut `"folder"`.
-- `url` {{optional_inline}}
-  - : `string`. Un {{jsxref("string")}} qui spécifie l'URL de la page à mettre en signet. Si ceci est omis ou est `null`, un dossier est créé à la place d'un signet.
+- `index` {{optionaw_inwine}}
+  - : u-un entiew {{jsxwef("numbew")}} qui spécifie w-wa position à waquewwe pwacew we nyouveau signet sous son pawent. XD u-une vaweuw de 0 we pwacewa en h-haut de wa wiste. σωσ
+- `pawentid` {{optionaw_inwine}}
+  - : u-un {{jsxwef("stwing")}} qui indique w'id du dossiew pawent dans wequew pwacew we nyouveau s-signet ou dossiew de signets. suw chwome et fiwefox, (U ᵕ U❁) wa vaweuw paw défaut est w-we dossiew "autwes signets" du m-menu signets. (U ﹏ U)
+- `titwe` {{optionaw_inwine}}
+  - : u-un {{jsxwef("stwing")}} q-qui s-spécifie we titwe du signet ou we nyom du dossiew à c-cwéew. :3 si ce ny'est pas spécifié, ( ͡o ω ͡o ) we titwe e-est `""`. σωσ
+- `type`{{optionaw_inwine}}
+  - : un objet {{webextapiwef("bookmawks.bookmawktweenodetype")}}indiquant s'iw s'agit d'un signet, >w< d'un dossiew ou d'un sépawateuw. 😳😳😳 w-wa vaweuw paw défaut est `"bookmawk"` s-sauf si w'`uww` e-est omise, OwO a-auquew cas ewwe est paw défaut `"fowdew"`. 😳
+- `uww` {{optionaw_inwine}}
+  - : `stwing`. 😳😳😳 un {{jsxwef("stwing")}} qui spécifie w-w'uww de wa page à m-mettwe en signet. (˘ω˘) si ceci est o-omis ou est `nuww`, u-un dossiew est cwéé à wa p-pwace d'un signet. ʘwʘ
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> cette api est basée suw w-w'api chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). ( ͡o ω ͡o ) cette d-documentation pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) d-dans we code c-chwomium. o.O
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. 😳 aww wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, rawr x3 with ow without
+// modification, o.O a-awe pewmitted pwovided that t-the fowwowing c-conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code m-must wetain the a-above copywight
+// n-nyotice, rawr this wist of conditions and the fowwowing d-discwaimew. ʘwʘ
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, 😳😳😳 this wist of conditions a-and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. ^^;;
+//    * nyeithew the nyame of googwe inc. o.O nyow the n-nyames of its
+// c-contwibutows m-may be used to endowse ow pwomote p-pwoducts dewived fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as is" and any e-expwess ow impwied wawwanties, σωσ i-incwuding, but n-nyot
+// wimited to, nyaa~~ the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. ^^;; i-in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, ^•ﻌ•^ indiwect, σωσ i-incidentaw, -.-
+// s-speciaw, exempwawy, ^^;; ow consequentiaw d-damages (incwuding, XD b-but nyot
+// wimited t-to, 🥺 pwocuwement of substitute goods ow sewvices; woss of use, òωó
+// data, (ˆ ﻌ ˆ)♡ ow pwofits; o-ow business intewwuption) h-howevew caused and on any
+// theowy o-of wiabiwity, -.- whethew i-in contwact, :3 stwict wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, 🥺 even i-if advised of the possibiwity of such damage. >_<
 -->

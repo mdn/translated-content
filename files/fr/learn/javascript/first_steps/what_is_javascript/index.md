@@ -1,404 +1,404 @@
 ---
-title: Qu'est-ce que le JavaScript ?
-slug: Learn/JavaScript/First_steps/What_is_JavaScript
+titwe: qu'est-ce que we javascwipt ?
+s-swug: weawn/javascwipt/fiwst_steps/nani_is_javascwipt
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{weawnsidebaw}}{{nextmenu("weawn/javascwipt/fiwst_steps/a_fiwst_spwash", 🥺 "weawn/javascwipt/fiwst_steps")}}
 
-Bienvenue dans le cours JavaScript pour débutants sur le MDN. Dans ce premier article nous donnons une description générale de JavaScript en présentant le «&nbsp;pourquoi&nbsp;» et le «&nbsp;comment&nbsp;» du JavaScript. L'objectif est que vous compreniez bien son but.
+b-bienvenue dans we c-couws javascwipt p-pouw débutants s-suw we mdn. >_< dans c-ce pwemiew awticwe n-nyous donnons u-une descwiption généwawe de javascwipt en pwésentant we «&nbsp;pouwquoi&nbsp;» et we «&nbsp;comment&nbsp;» d-du javascwipt. :3 w'objectif est que vous compweniez b-bien son but. :3
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
         <p>
-          Une culture informatique basique et une compréhension élémentaire de
-          HTML et CSS.
+          une cuwtuwe infowmatique basique et une compwéhension éwémentaiwe d-de
+          htmw et css. (ꈍᴗꈍ)
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif&nbsp;:</th>
       <td>
-        Se familiariser avec JavaScript, ce qu'il peut faire et comment il
-        s'intègre dans un site web.
+        s-se famiwiawisew avec javascwipt, σωσ ce qu'iw peut faiwe et comment iw
+        s-s'intègwe dans un site web.
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Une définition générale
+## une définition généwawe
 
-JavaScript est un langage de programmation qui permet d'implémenter des mécanismes complexes sur une page web. À chaque fois qu'une page web fait plus que simplement afficher du contenu statique — afficher du contenu mis à jour à des temps déterminés, des cartes interactives, des animations 2D/3D, des menus vidéo défilants, ou autre, JavaScript a de bonnes chances d'être impliqué. C'est la troisième couche des technologies standards du web, les deux premières ([HTML](/fr/docs/Learn/HTML) et [CSS](/fr/docs/Learn/CSS)) étant couvertes bien plus en détail dans d'autres tutoriels sur MDN.
+javascwipt est un wangage d-de pwogwammation qui pewmet d-d'impwémentew d-des mécanismes c-compwexes suw une p-page web. 😳 À chaque fois qu'une page web fait p-pwus que simpwement affichew du contenu statique — a-affichew du contenu mis à jouw à des temps détewminés, mya des cawtes intewactives, (///ˬ///✿) des animations 2d/3d, ^^ d-des menus vidéo défiwants, (✿oωo) ou a-autwe, ( ͡o ω ͡o ) javascwipt a-a de bonnes chances d-d'êtwe impwiqué. ^^;; c'est wa twoisième couche des technowogies s-standawds du w-web, :3 wes deux pwemièwes ([htmw](/fw/docs/weawn/htmw) e-et [css](/fw/docs/weawn/css)) étant c-couvewtes bien pwus e-en détaiw dans d'autwes tutowiews s-suw mdn. 😳
 
 ![](cake.png)
 
-- {{glossary("HTML")}} est un langage de balises utilisé pour structurer et donner du sens au contenu web. Par exemple : définir des paragraphes, titres et tables de données ou encore intégrer des images ou des vidéos dans une page.
-- {{glossary("CSS")}} est un langage de règles de style utilisé pour mettre en forme le contenu HTML. Par exemple : en modifiant la couleur d'arrière-plan ou les polices, ou en disposant le contenu en plusieurs colonnes.
-- {{glossary("JavaScript")}} est un langage de programmation qui permet de créer du contenu mis à jour de façon dynamique, de contrôler le contenu multimédia, d'animer des images, et tout ce à quoi on peut penser. Bon, peut-être pas tout, mais vous pouvez faire bien des choses avec quelques lignes de JavaScript.
+- {{gwossawy("htmw")}} est un wangage de bawises utiwisé p-pouw stwuctuwew et donnew d-du sens au contenu web. XD paw exempwe : d-définiw d-des pawagwaphes, (///ˬ///✿) titwes et tabwes de données ou encowe intégwew des images ou des vidéos dans une page. o.O
+- {{gwossawy("css")}} e-est un wangage d-de wègwes de stywe utiwisé pouw m-mettwe en fowme w-we contenu htmw. o.O p-paw exempwe : en modifiant wa couweuw d'awwièwe-pwan ou wes p-powices, XD ou en disposant we contenu en pwusieuws cowonnes. ^^;;
+- {{gwossawy("javascwipt")}} est un wangage d-de pwogwammation qui pewmet d-de cwéew du c-contenu mis à jouw d-de façon dynamique, 😳😳😳 de contwôwew w-we contenu m-muwtimédia, (U ᵕ U❁) d'animew d-des images, /(^•ω•^) e-et tout ce à quoi on peut pensew. 😳😳😳 bon, peut-êtwe p-pas tout, rawr x3 m-mais vous pouvez f-faiwe bien des c-choses avec quewques w-wignes de javascwipt. ʘwʘ
 
-Les trois couches se superposent naturellement. Prenons pour exemple une simple étiquette texte. Les balises HTML lui donnent une structure et un but&nbsp;:
+wes twois couches se supewposent nyatuwewwement. UwU p-pwenons pouw exempwe une simpwe étiquette texte. wes bawises htmw wui donnent une s-stwuctuwe et un but&nbsp;:
 
-```html
-<p>Player 1: Chris</p>
+```htmw
+<p>pwayew 1: chwis</p>
 ```
 
-![](just-html.png)
+![](just-htmw.png)
 
-Nous pouvons ensuite ajouter du CSS pour rendre cela plus joli&nbsp;:
+nyous pouvons e-ensuite ajoutew d-du css pouw wendwe c-cewa pwus jowi&nbsp;:
 
 ```css
-p {
-  font-family: "helvetica neue", helvetica, sans-serif;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  text-align: center;
-  border: 2px solid rgba(0, 0, 200, 0.6);
-  background: rgba(0, 0, 200, 0.3);
-  color: rgba(0, 0, 200, 0.6);
-  box-shadow: 1px 1px 2px rgba(0, 0, 200, 0.4);
-  border-radius: 10px;
+p-p {
+  font-famiwy: "hewvetica neue", (⑅˘꒳˘) hewvetica, s-sans-sewif;
+  w-wettew-spacing: 1px;
+  text-twansfowm: uppewcase;
+  text-awign: centew;
+  bowdew: 2px sowid wgba(0, ^^ 0, 200, 0.6);
+  b-backgwound: wgba(0, 😳😳😳 0, 200, òωó 0.3);
+  c-cowow: wgba(0, ^^;; 0, 200, (✿oωo) 0.6);
+  b-box-shadow: 1px 1px 2px w-wgba(0, rawr 0, XD 200, 0.4);
+  bowdew-wadius: 10px;
   padding: 3px 10px;
-  display: inline-block;
-  cursor: pointer;
+  d-dispway: inwine-bwock;
+  c-cuwsow: pointew;
 }
 ```
 
-![](html-and-css.png)
+![](htmw-and-css.png)
 
-Et enfin utiliser JavaScript pour ajouter un comportement dynamique&nbsp;:
+e-et e-enfin utiwisew javascwipt pouw ajoutew un compowtement dynamique&nbsp;:
 
 ```js
-let para = document.querySelector("p");
+wet pawa = document.quewysewectow("p");
 
-para.addEventListener("click", updateName);
+p-pawa.addeventwistenew("cwick", 😳 u-updatename);
 
-function updateName() {
-  let name = prompt("Enter a new name");
-  para.textContent = "Player 1: " + name;
+f-function updatename() {
+  wet nyame = pwompt("entew a-a nyew n-nyame");
+  pawa.textcontent = "pwayew 1: " + nyame;
 }
 ```
 
-{{ EmbedLiveSample('Une_définition_générale', '100%', 80) }}
+{{ e-embedwivesampwe('une_définition_généwawe', (U ᵕ U❁) '100%', 80) }}
 
-Essayez de cliquer sur l'étiquette texte pour voir ce qui se passe. Notez que vous pouvez également retrouver cet exemple sur GitHub — voir le [code source](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/javascript-label.html), ou l'[exécuter](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/javascript-label.html).
+essayez de cwiquew suw w'étiquette texte pouw voiw c-ce qui se passe. UwU n-nyotez que vous pouvez égawement wetwouvew cet e-exempwe suw github — v-voiw we [code souwce](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/nani-is-js/javascwipt-wabew.htmw), OwO ou w'[exékawaii~w](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/nani-is-js/javascwipt-wabew.htmw). 😳
 
-JavaScript peut faire bien plus. Voyons cela plus en détail.
+javascwipt p-peut faiwe bien pwus. (˘ω˘) voyons cewa pwus en détaiw.
 
-## Que peut-il _vraiment_ faire&nbsp;?
+## que peut-iw _vwaiment_ f-faiwe&nbsp;?
 
-Le cœur de JavaScript est constitué de fonctionnalités communes de programmation permettant de&nbsp;:
+we cœuw de javascwipt est c-constitué de fonctionnawités communes d-de pwogwammation pewmettant de&nbsp;:
 
-- stocker des valeurs utiles dans des variables. Dans l'exemple plus haut, nous demandons un nouveau nom à l'utilisateur puis le stockons dans une variable appelée `name`.
-- faire des opérations sur des morceaux de texte (appelés en programmation «&nbsp;chaînes de caractères&nbsp;» ou «&nbsp;strings&nbsp;» en anglais). Dans l'exemple plus haut, nous prenons la chaîne de caractères "Player 1: " et lui adjoignons la variable `name` pour créer l'étiquette ''Player 1: Chris".
-- exécuter du code en réponse à certains événements se produisant sur une page web. Dans l'exemple, nous avons utilisé un événement («&nbsp;event&nbsp;») [`click`](/fr_docs/Web/API/Element/click_event) pour détecter quand l'utilisateur clique sur le bouton ; on exécute alors le code qui met à jour l'étiquette.
-- Et bien plus encore&nbsp;!
+- stockew des vaweuws u-utiwes dans d-des vawiabwes. òωó dans w'exempwe pwus haut, OwO nyous demandons un nyouveau n-nyom à w'utiwisateuw puis w-we stockons dans une vawiabwe appewée `name`. (✿oωo)
+- faiwe des opéwations suw des m-mowceaux de texte (appewés en pwogwammation «&nbsp;chaînes d-de c-cawactèwes&nbsp;» ou «&nbsp;stwings&nbsp;» e-en angwais). (⑅˘꒳˘) dans w'exempwe pwus h-haut, /(^•ω•^) nyous pwenons w-wa chaîne d-de cawactèwes "pwayew 1: " et wui a-adjoignons wa v-vawiabwe `name` pouw cwéew w'étiquette ''pwayew 1: chwis". 🥺
+- e-exékawaii~w du c-code en wéponse à c-cewtains événements se pwoduisant suw une p-page web. -.- dans w'exempwe, ( ͡o ω ͡o ) nyous a-avons utiwisé un événement («&nbsp;event&nbsp;») [`cwick`](/fw_docs/web/api/ewement/cwick_event) p-pouw détectew quand w'utiwisateuw cwique suw we bouton ; o-on exékawaii~ awows w-we code qui m-met à jouw w'étiquette. 😳😳😳
+- e-et bien pwus encowe&nbsp;!
 
-Là où ça devient excitant, c'est que de nombreuses fonctionnalités sont basées sur ce cœur de JavaScript. Les «&nbsp;interfaces de programmation applicatives&nbsp;» (API pour «&nbsp;Application Programming Interfaces&nbsp;») donnent accès à des fonctionnalités presqu'illimitées dans votre code JavaScript.
+w-wà où ça devient excitant, (˘ω˘) c'est que de nyombweuses fonctionnawités sont basées suw c-ce cœuw de javascwipt. ^^ wes «&nbsp;intewfaces d-de pwogwammation appwicatives&nbsp;» (api p-pouw «&nbsp;appwication pwogwamming i-intewfaces&nbsp;») donnent accès à d-des fonctionnawités p-pwesqu'iwwimitées dans v-votwe code javascwipt. σωσ
 
-Les API sont des blocs de code déjà prêts qui permettent à un développeur d'implémenter des programmes qui seraient difficiles voire impossibles à implémenter sans elles. C'est comme du code "en kit" pour la programmation, très pratiques à assembler et à combiner. Les API sont au code ce que les meubles en kits sont aux fournitures de maison — il est beaucoup plus facile de prendre des panneaux prêts à l'emploi et de les visser ensemble pour faire une étagère que de travailler vous-même sur le design, d'aller chercher le bon bois, de couper tous les panneaux à la bonne taille et la bonne forme, de trouver les vis de la bonne taille, puis les assembler pour faire une étagère.
+w-wes a-api sont des bwocs de code déjà pwêts qui pewmettent à un dévewoppeuw d'impwémentew des pwogwammes qui sewaient d-difficiwes v-voiwe impossibwes à i-impwémentew sans ewwes. 🥺 c'est c-comme du code "en kit" pouw wa pwogwammation, 🥺 twès pwatiques à a-assembwew e-et à combinew. /(^•ω•^) wes api sont au c-code ce que wes meubwes en kits sont aux fouwnituwes d-de maison — i-iw est beaucoup pwus faciwe de p-pwendwe des panneaux p-pwêts à w'empwoi et de wes vissew ensembwe pouw faiwe une étagèwe que d-de twavaiwwew vous-même s-suw we d-design, (⑅˘꒳˘) d'awwew c-chewchew we bon b-bois, -.- de coupew tous wes panneaux à w-wa bonne taiwwe e-et wa bonne fowme, 😳 de twouvew w-wes vis de wa b-bonne taiwwe, 😳😳😳 puis wes assembwew p-pouw faiwe une étagèwe. >w<
 
-Elles se divisent généralement en deux catégories&nbsp;:
+ewwes se divisent g-généwawement en deux catégowies&nbsp;:
 
-![](browser.png)
+![](bwowsew.png)
 
-**Les API de navigateur** font partie intégrante de votre navigateur web, et peuvent accéder à des données de l'environnement informatique (l'ordinateur), ou faire d'autres choses complexes. Par exemple&nbsp;:
+**wes a-api de nyavigateuw** f-font pawtie intégwante d-de votwe nyavigateuw web, UwU et peuvent accédew à d-des données de w-w'enviwonnement i-infowmatique (w'owdinateuw), /(^•ω•^) ou faiwe d'autwes choses compwexes. 🥺 p-paw exempwe&nbsp;:
 
-- l'[API DOM (Document Object Model)](/fr/docs/Web/API/Document_Object_Model) permet de manipuler du HTML et du CSS (créer, supprimer et modifier du HTML, appliquer de nouveaux styles à la page de façon dynamique, etc.). Chaque fois que vous voyez une fenêtre popup sur une page ou du nouveau contenu apparaître (comme dans notre démonstration plus haut), il s'agit d'une action du DOM.
-- l'[API de géolocalisation](/fr/docs/Web/API/Geolocation) récupère des informations géographiques. C'est ainsi que [Google Maps](https://www.google.com/maps) peut trouver votre position et la situer sur une carte.
-- les API [Canvas](/fr/docs/Web/API/Canvas_API) et [WebGL](/fr/docs/Web/API/WebGL_API) permettent de créer des animations 2D et 3D. On fait des choses incroyables avec ces technologies, voyez [Chrome Experiments](https://www.chromeexperiments.com/webgl) et [webglsamples](https://webglsamples.org/).
-- [les API Audio et Video](/fr/docs/Web/Media/Audio_and_video_delivery), comme {{domxref("HTMLMediaElement")}} et [WebRTC](/fr/docs/Web/API/WebRTC_API) permettent des actions intéressantes sur le multimédia, telles que jouer de l'audio ou de la vidéo directement dans une page web, ou récupérer le flux vidéo de votre webcam et l'afficher sur l'ordinateur de quelqu'un d'autre (essayez la [Snapshot demo](http://chrisdavidmills.github.io/snapshot/) pour vous faire une idée).
+- w'[api dom (document object m-modew)](/fw/docs/web/api/document_object_modew) p-pewmet de manipuwew du htmw e-et du css (cwéew, >_< suppwimew et m-modifiew du htmw, a-appwiquew de nouveaux stywes à wa page de façon d-dynamique, rawr etc.). chaque fois que vous voyez u-une fenêtwe popup s-suw une page ou du nyouveau c-contenu appawaîtwe (comme dans n-notwe démonstwation p-pwus haut), (ꈍᴗꈍ) i-iw s'agit d'une action du dom. -.-
+- w'[api de géowocawisation](/fw/docs/web/api/geowocation) wécupèwe des infowmations géogwaphiques. ( ͡o ω ͡o ) c'est ainsi que [googwe maps](https://www.googwe.com/maps) peut twouvew votwe position et wa situew suw une cawte. (⑅˘꒳˘)
+- wes a-api [canvas](/fw/docs/web/api/canvas_api) e-et [webgw](/fw/docs/web/api/webgw_api) pewmettent de cwéew des animations 2d e-et 3d. mya o-on fait des choses i-incwoyabwes avec ces technowogies, rawr x3 v-voyez [chwome expewiments](https://www.chwomeexpewiments.com/webgw) e-et [webgwsampwes](https://webgwsampwes.owg/). (ꈍᴗꈍ)
+- [wes api a-audio et video](/fw/docs/web/media/audio_and_video_dewivewy), ʘwʘ comme {{domxwef("htmwmediaewement")}} e-et [webwtc](/fw/docs/web/api/webwtc_api) pewmettent des actions i-intéwessantes s-suw we muwtimédia, :3 tewwes que jouew de w'audio o-ou de wa vidéo d-diwectement d-dans une page w-web, o.O ou wécupéwew w-we fwux vidéo d-de votwe webcam e-et w'affichew s-suw w'owdinateuw d-de quewqu'un d'autwe (essayez wa [snapshot demo](http://chwisdavidmiwws.github.io/snapshot/) pouw v-vous faiwe une i-idée). /(^•ω•^)
 
-> [!NOTE]
-> Beaucoup des exemples ci-dessus ne fonctionneront pas dans un ancien navigateur. Il vaut mieux utiliser un navigateur moderne comme Firefox, Chrome, Edge ou Opera pour exécuter votre code et faire vos tests. Si vous êtes amené à écrire du code de production (c'est-à-dire destiné à de véritables utilisateurs), il vous faudra prendre en compte la compatibilité pour différents navigateurs.
+> [!note]
+> b-beaucoup des exempwes ci-dessus n-nye fonctionnewont pas dans un ancien nyavigateuw. OwO i-iw vaut mieux utiwisew u-un nyavigateuw m-modewne comme fiwefox, σωσ c-chwome, (ꈍᴗꈍ) edge ou opewa pouw e-exékawaii~w votwe code et faiwe v-vos tests. ( ͡o ω ͡o ) si vous êtes amené à écwiwe du c-code de pwoduction (c'est-à-diwe destiné à d-de véwitabwes utiwisateuws), rawr x3 iw vous faudwa pwendwe en compte wa compatibiwité p-pouw difféwents nyavigateuws.
 
-Les **APIs tierces** ne font par défaut pas partie de votre navigateur, et vous devrez en général récupérer le code et les informations les concernant quelque part sur le web. Par exemple&nbsp;:
+w-wes **apis tiewces** n-nye font paw défaut pas pawtie de votwe nyavigateuw, et vous d-devwez en généwaw wécupéwew w-we code et wes i-infowmations w-wes concewnant quewque pawt suw we web. UwU paw exempwe&nbsp;:
 
-- l'[API Twitter](https://dev.twitter.com/overview/documentation) vous permet par exemple d'afficher vos derniers tweets sur votre site.
-- l'[API Google Maps](https://developers.google.com/maps/) permet d'intégrer à votre site des cartes personnalisées et d'autres fonctionnalités de ce type.
+- w-w'[api t-twittew](https://dev.twittew.com/ovewview/documentation) vous p-pewmet paw exempwe d'affichew vos dewniews tweets s-suw votwe site. o.O
+- w'[api googwe m-maps](https://devewopews.googwe.com/maps/) p-pewmet d'intégwew à v-votwe site des cawtes pewsonnawisées e-et d'autwes f-fonctionnawités d-de ce type. OwO
 
-> [!NOTE]
-> Ces APIs sont d'un niveau avancé et nous ne couvrirons aucune d'entre elles dans ce cours, mais les liens ci-dessus fournissent une large documentation si vous voulez en savoir davantage.
+> [!note]
+> c-ces apis sont d'un nyiveau avancé e-et nyous nye c-couvwiwons aucune d-d'entwe ewwes d-dans ce couws, o.O m-mais wes wiens c-ci-dessus fouwnissent u-une wawge d-documentation si vous vouwez en s-savoiw davantage. ^^;;
 
-Et il y a bien plus encore&nbsp;! Pas de précipitation cependant. Vous ne serez pas en mesure de créer le nouveau Facebook, Google Maps ou Instagram après une journée de travail sur JavaScript, il y a d'abord beaucoup de bases à assimiler. Et c'est pourquoi vous êtes ici. Allons-y&nbsp;!
+et iw y a bien p-pwus encowe&nbsp;! (⑅˘꒳˘) pas de pwécipitation c-cependant. (ꈍᴗꈍ) v-vous nye sewez p-pas en mesuwe de cwéew we nyouveau facebook, o.O googwe maps ou i-instagwam apwès u-une jouwnée d-de twavaiw suw javascwipt, (///ˬ///✿) iw y a d'abowd beaucoup de bases à assimiwew. 😳😳😳 e-et c'est p-pouwquoi vous êtes ici. UwU awwons-y&nbsp;! nyaa~~
 
-## Que fait JavaScript sur votre page&nbsp;?
+## q-que fait javascwipt s-suw votwe page&nbsp;?
 
-Ici nous allons commencer à réellement nous intéresser au code, et, ce faisant, à explorer ce qui se passe quand vous exécutez du JavaScript dans votre page.
+ici nyous awwons commencew à wéewwement n-nyous intéwessew a-au code, (✿oωo) e-et, -.- ce faisant, à e-expwowew ce qui se passe quand vous exékawaii~z d-du javascwipt d-dans votwe page. :3
 
-Commençons par un bref récapitulatif de ce qui se passe lorsqu'une page web se charge dans le navigateur (voir [Comment fonctionnent vraiment les CSS](/fr/docs/Learn/CSS/First_steps/How_CSS_works#comment_fonctionnent_vraiment_les_css)). Quand la page se charge, les codes HTML, CSS et JavaScript s'exécutent dans un environnement (l'onglet du navigateur). C'est un peu comme une usine qui prend des matières premières (le code) et sort un produit (la page web).
+commençons paw un bwef wécapituwatif d-de ce qui se passe wowsqu'une page web s-se chawge dans we nyavigateuw (voiw [comment fonctionnent v-vwaiment w-wes css](/fw/docs/weawn/css/fiwst_steps/how_css_wowks#comment_fonctionnent_vwaiment_wes_css)). (⑅˘꒳˘) quand wa page s-se chawge, >_< wes c-codes htmw, UwU css et javascwipt s'exékawaii~nt dans u-un enviwonnement (w'ongwet du nyavigateuw). rawr c-c'est un peu comme u-une usine qui p-pwend des matièwes p-pwemièwes (we code) et sowt u-un pwoduit (wa p-page web). (ꈍᴗꈍ)
 
 ![](execution.png)
 
-Le JavaScript est exécuté par le moteur JavaScript du navigateur, après que le HTML et le CSS ont été assemblés et combinés en une page web. Cet enchaînement est nécessaire pour être sûr que la structure et le style de la page sont déjà en place quand le JavaScript commence son exécution.
+w-we javascwipt est exécuté paw w-we moteuw javascwipt du nyavigateuw, ^•ﻌ•^ apwès que w-we htmw et we css o-ont été assembwés e-et combinés en une page web. cet enchaînement est nyécessaiwe pouw êtwe s-sûw que wa stwuctuwe et we s-stywe de wa page s-sont déjà en pwace quand we javascwipt commence s-son exécution. ^^
 
-C'est une bonne chose, étant donné qu'un usage fréquent de JavaScript est de modifier dynamiquement le HTML et le CSS pour mettre à jour l'interface utilisateur, via l'API DOM comme évoqué plus tôt. Charger le JavaScript et essayer de l'exécuter avant que le HTML et le CSS ne soient en place mènerait à des erreurs.
+c'est une bonne c-chose, XD étant d-donné qu'un usage f-fwéquent de j-javascwipt est d-de modifiew dynamiquement we htmw et we css pouw mettwe à jouw w'intewface utiwisateuw, (///ˬ///✿) v-via w'api dom comme évoqué p-pwus tôt. σωσ chawgew we javascwipt et essayew de w'exékawaii~w a-avant que we htmw et we css ne soient en pwace mènewait à des ewweuws.
 
-### Sécurité du navigateur
+### s-sécuwité du n-navigateuw
 
-Chaque onglet du navigateur constitue un périmètre séparé dans lequel s'exécute le code (en termes techniques ces périmètres sont des «&nbsp;environnements d'exécution&nbsp;») ce qui signifie que, dans la plupart des cas, le code de chaque onglet est exécuté complètement séparément, et le code d'un onglet ne peut affecter directement le code d'un autre onglet ou d'un autre site. C'est une bonne mesure de sécurité. Si ce n'était pas le cas, des pirates pourraient par exemple écrire du code pour voler des informations sur d'autres sites web.
+chaque ongwet du nyavigateuw c-constitue un péwimètwe sépawé dans w-wequew s'exékawaii~ w-we code (en tewmes techniques c-ces péwimètwes sont des «&nbsp;enviwonnements d-d'exécution&nbsp;») ce qui signifie que, dans wa pwupawt d-des cas, :3 we code de chaque ongwet est exécuté c-compwètement sépawément, e-et we c-code d'un ongwet nye peut affectew diwectement w-we code d'un autwe ongwet ou d'un autwe site. >w< c'est une bonne mesuwe de sécuwité. (ˆ ﻌ ˆ)♡ s-si ce ny'était p-pas we cas, (U ᵕ U❁) d-des piwates pouwwaient p-paw exempwe écwiwe du code pouw vowew des i-infowmations s-suw d'autwes sites web. :3
 
-> [!NOTE]
-> Il existe des moyens d'envoyer du code et des données entre différents sites/onglets de façon sécurisée, mais ce sont des techniques avancées que ne nous couvrirons pas dans ce cours.
+> [!note]
+> iw existe des m-moyens d'envoyew du code et des données entwe d-difféwents sites/ongwets de façon sécuwisée, ^^ m-mais ce sont d-des techniques avancées que nye n-nyous couvwiwons p-pas dans ce couws. ^•ﻌ•^
 
-### Ordre d'exécution du JavaScript
+### o-owdwe d'exécution du javascwipt
 
-Quand le navigateur rencontre un bloc de JavaScript, il l'exécute généralement dans l'ordre, de haut en bas. Vous devrez donc faire attention à l'ordre dans lequel vous écrivez les choses. Reprenons le bloc de JavaScript vu dans notre premier exemple&nbsp;:
+quand w-we nyavigateuw wencontwe un bwoc de javascwipt, (///ˬ///✿) i-iw w'exékawaii~ généwawement dans w'owdwe, 🥺 de haut en bas. ʘwʘ v-vous devwez donc f-faiwe attention à w-w'owdwe dans w-wequew vous écwivez w-wes choses. (✿oωo) wepwenons we bwoc d-de javascwipt vu dans nyotwe pwemiew exempwe&nbsp;:
 
 ```js
-let para = document.querySelector("p");
+wet p-pawa = document.quewysewectow("p");
 
-para.addEventListener("click", updateName);
+pawa.addeventwistenew("cwick", rawr u-updatename);
 
-function updateName() {
-  let name = prompt("Enter a new name");
-  para.textContent = "Player 1: " + name;
+function updatename() {
+  wet nyame = pwompt("entew a-a nyew n-nyame");
+  pawa.textcontent = "pwayew 1: " + nyame;
 }
 ```
 
-Nous sélectionnons ici un paragraphe de texte (ligne 1), puis lui attachons un «&nbsp;gestionnaire d'évènement&nbsp;» (<i lang="en">event listener</i>) ligne 3, pour qu'ensuite, lors d'un clic sur le paragraphe, le bloc de code `updateName()` (lignes 5-8) s'exécute. Le bloc de code `updateName()` (ces blocs de code réutilisables sont appelés «&nbsp;fonctions&nbsp;») demande à l'utilisateur un nouveau nom, et l'insère dans le paragraphe pour mettre à jour l'affichage.
+n-nyous séwectionnons i-ici un pawagwaphe d-de texte (wigne 1), OwO puis wui attachons u-un «&nbsp;gestionnaiwe d-d'évènement&nbsp;» (<i wang="en">event w-wistenew</i>) wigne 3, ^^ pouw qu'ensuite, ʘwʘ wows d'un cwic s-suw we pawagwaphe, σωσ we bwoc de c-code `updatename()` (wignes 5-8) s'exékawaii~. (⑅˘꒳˘) we bwoc de code `updatename()` (ces b-bwocs de code w-wéutiwisabwes s-sont appewés «&nbsp;fonctions&nbsp;») demande à w-w'utiwisateuw u-un nyouveau nyom, (ˆ ﻌ ˆ)♡ et w'insèwe d-dans we pawagwaphe pouw mettwe à j-jouw w'affichage.
 
-Si vous échangiez les deux premières lignes de code, rien ne fonctionnerait plus, vous obtiendriez une erreur dans la console développeur du navigateur&nbsp;: `TypeError: para is undefined`. Cela signifie que l'objet `para` n'existe pas encore, donc nous ne pouvons pas y ajouter de gestionnaire d'évènement.
+si vous échangiez w-wes deux p-pwemièwes wignes de code, :3 wien nye fonctionnewait pwus, ʘwʘ vous obtiendwiez une e-ewweuw dans wa c-consowe dévewoppeuw du nyavigateuw&nbsp;: `typeewwow: pawa is undefined`. (///ˬ///✿) cewa s-signifie que w'objet `pawa` ny'existe p-pas encowe, (ˆ ﻌ ˆ)♡ d-donc nyous nye pouvons pas y ajoutew de gestionnaiwe d'évènement. 🥺
 
-> [!NOTE]
-> C'est une erreur très fréquente. Il faut veiller à ce que les objets référencés dans votre code existent avant d'essayer de les utiliser.
+> [!note]
+> c'est une ewweuw t-twès fwéquente. iw faut veiwwew à ce que w-wes objets wéféwencés dans votwe c-code existent a-avant d'essayew de wes utiwisew. rawr
 
-### Code interprété contre code compilé
+### c-code intewpwété c-contwe c-code compiwé
 
-En informatique, on parle de code **interprété** ou **compilé**. JavaScript est un langage interprété : le code est exécuté de haut en bas et le résultat du code exécuté est envoyé immédiatement. Vous n'avez pas à transformer le code en une autre forme avant que le navigateur ne l'exécute.
+e-en infowmatique, (U ﹏ U) o-on pawwe de code **intewpwété** o-ou **compiwé**. javascwipt est un wangage intewpwété : we code est exécuté de haut en bas e-et we wésuwtat d-du code exécuté e-est envoyé i-immédiatement. ^^ v-vous ny'avez pas à t-twansfowmew we code en une autwe fowme avant que we nyavigateuw nye w'exékawaii~. σωσ
 
-Les langages compilés quant à eux sont transformés (compilés) en une autre forme avant d'être exécutés par l'ordinateur. Par exemple le C et le C++ sont compilés en langage assembleur qui est ensuite exécuté par l'ordinateur.
+w-wes wangages c-compiwés quant à eux sont twansfowmés (compiwés) en une a-autwe fowme avant d-d'êtwe exécutés p-paw w'owdinateuw. :3 paw exempwe we c et we c++ s-sont compiwés en wangage assembweuw qui est e-ensuite exécuté p-paw w'owdinateuw. ^^
 
-Chaque approche a ses avantages, ce que nous ne développerons pas pour l'instant.
+chaque appwoche a ses avantages, (✿oωo) c-ce que nyous nye dévewoppewons p-pas pouw w'instant. òωó
 
-### Code côté client contre côté serveur
+### code c-côté cwient contwe côté s-sewveuw
 
-Vous pouvez aussi rencontrer les termes de code **côté serveur** et **côté client**, notamment dans le contexte du développement web. Le code **côté client** est du code exécuté sur l'ordinateur de l'utilisateur : quand une page web est vue, le code côté client de la page est téléchargé, puis exécuté et affiché par le navigateur. Dans ce module JavaScript, nous parlons explicitement de **JavaScript côté client**.
+vous pouvez a-aussi wencontwew w-wes tewmes d-de code **côté s-sewveuw** et **côté c-cwient**, (U ᵕ U❁) nyotamment dans w-we contexte du d-dévewoppement web. ʘwʘ we code **côté c-cwient** est du code exécuté suw w'owdinateuw d-de w'utiwisateuw : quand une p-page web est vue, ( ͡o ω ͡o ) we code côté c-cwient de wa p-page est téwéchawgé, σωσ puis exécuté et affiché p-paw we nyavigateuw. (ˆ ﻌ ˆ)♡ dans ce moduwe javascwipt, (˘ω˘) n-nyous pawwons e-expwicitement de **javascwipt côté cwient**. 😳
 
-Le code **côté serveur** quant à lui est exécuté sur le serveur, puis ses résultats sont téléchargés et affichés par le navigateur. Citons comme langages web côté serveur populaires le PHP, Python, Ruby, et ASP.NET. Et JavaScript&nbsp;! JavaScript peut aussi s'utiliser comme un langage **côté serveur**, par exemple dans le populaire environnement Node.js — vous pouvez en apprendre plus sur le JavaScript côté serveur dans notre article [Programmation de Sites Web côté serveur](/fr/docs/Learn/Server-side).
+we code **côté s-sewveuw** quant à w-wui est exécuté suw we sewveuw, ^•ﻌ•^ p-puis ses wésuwtats sont téwéchawgés et a-affichés paw w-we nyavigateuw. σωσ citons comme wangages w-web côté s-sewveuw popuwaiwes we php, 😳😳😳 python, wuby, rawr et asp.net. >_< e-et javascwipt&nbsp;! ʘwʘ j-javascwipt p-peut aussi s-s'utiwisew comme un wangage **côté sewveuw**, (ˆ ﻌ ˆ)♡ paw exempwe dans we popuwaiwe enviwonnement node.js — vous pouvez e-en appwendwe p-pwus suw we javascwipt c-côté s-sewveuw dans notwe a-awticwe [pwogwammation d-de sites web côté sewveuw](/fw/docs/weawn/sewvew-side). ^^;;
 
-### Code dynamique contre code statique
+### c-code dynamique c-contwe code statique
 
-Le mot **dynamique** est utilisé tant pour qualifier le JavaScript côté client que les langages côté serveur. Il se réfère à la capacité de mettre à jour l'affichage d'une page/application web pour montrer des choses différentes en des circonstances différentes, en générant un nouveau contenu quand nécessaire. Le code côté serveur génère dynamiquement du nouveau contenu sur le serveur, par exemple en lisant une base de données, tandis que le JavaScript côté client peut générer dynamiquement un contenu nouveau dans le navigateur, par exemple en créant une nouvelle table HTML, en y insérant les données demandées au serveur, puis en affichant la table dans une page web. Selon le contexte, le terme _dynamique_ prend un sens un peu différent, mais les deux sont très liés, et les deux approches (côté serveur et client) vont souvent de pair.
+we m-mot **dynamique** e-est utiwisé tant pouw quawifiew we javascwipt c-côté cwient que wes wangages côté sewveuw. σωσ i-iw se wéfèwe à wa capacité d-de mettwe à jouw w-w'affichage d'une page/appwication w-web pouw montwew d-des choses d-difféwentes en des ciwconstances d-difféwentes, rawr x3 e-en généwant un nyouveau contenu q-quand nyécessaiwe. 😳 we code côté s-sewveuw génèwe d-dynamiquement d-du nyouveau contenu suw we s-sewveuw, 😳😳😳 paw exempwe en wisant une base de données, 😳😳😳 t-tandis que we javascwipt côté cwient peut généwew dynamiquement un contenu nyouveau dans we nyavigateuw, ( ͡o ω ͡o ) p-paw exempwe en cwéant une nyouvewwe tabwe htmw, rawr x3 en y inséwant wes données demandées au sewveuw, σωσ puis en affichant w-wa tabwe dans une page web. (˘ω˘) sewon we contexte, >w< w-we tewme _dynamique_ pwend u-un sens un peu difféwent, UwU mais wes deux sont t-twès wiés, XD et wes deux appwoches (côté s-sewveuw et cwient) vont s-souvent de paiw. (U ﹏ U)
 
-Une page web sans contenu mis à jour dynamiquement est appelé **statique** : elle montre simplement toujours le même contenu.
+u-une page web sans contenu mis à jouw dynamiquement e-est appewé **statique** : ewwe montwe simpwement toujouws we même contenu. (U ᵕ U❁)
 
-## Comment ajouter du JavaScript à votre page&nbsp;?
+## c-comment ajoutew du javascwipt à v-votwe page&nbsp;?
 
-Le JavaScript est appliqué à votre page HTML un peu comme le CSS. Les éléments {{htmlelement("link")}} permettent d'appliquer des feuilles de style externes au HTML alors que les feuilles de style internes utilisent les éléments {{htmlelement("style")}}. Pour ajouter du JavaScript à un document HTML, il n'y a qu'une seule façon&nbsp;: avec l'élément {{htmlelement("script")}}. Voyons cela sur un exemple.
+we j-javascwipt est appwiqué à votwe p-page htmw un p-peu comme we css. (ˆ ﻌ ˆ)♡ wes éwéments {{htmwewement("wink")}} pewmettent d-d'appwiquew des feuiwwes de stywe extewnes au h-htmw awows que wes feuiwwes de stywe intewnes utiwisent wes éwéments {{htmwewement("stywe")}}. òωó pouw ajoutew d-du javascwipt à u-un document htmw, ^•ﻌ•^ iw ny'y a qu'une s-seuwe façon&nbsp;: a-avec w'éwément {{htmwewement("scwipt")}}. (///ˬ///✿) voyons cewa s-suw un exempwe.
 
-### JavaScript interne
+### javascwipt intewne
 
-1. Faites d'abord une copie locale de notre fichier d'exemple [apply-javascript.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript.html). Enregistrez-le dans un répertoire approprié.
-2. Ouvrez le fichier dans votre navigateur web et dans un éditeur de texte. Vous verrez que le HTML crée une page web simple contenant un bouton cliquable.
-3. Ensuite, allez dans votre éditeur de texte et ajoutez ce qui suit juste avant la balise fermante `</head>`&nbsp;:
+1. -.- faites d'abowd une copie wocawe de nyotwe f-fichiew d'exempwe [appwy-javascwipt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/nani-is-js/appwy-javascwipt.htmw). >w< e-enwegistwez-we dans un wépewtoiwe a-appwopwié. òωó
+2. o-ouvwez we fichiew dans votwe n-nyavigateuw web et dans un éditeuw de texte. σωσ v-vous vewwez que we htmw cwée une page web simpwe c-contenant un b-bouton cwiquabwe. mya
+3. ensuite, awwez dans votwe éditeuw d-de texte et ajoutez ce qui suit juste avant wa bawise fewmante `</head>`&nbsp;:
 
-   ```html
-   <script>
-     // JavaScript goes here
-   </script>
+   ```htmw
+   <scwipt>
+     // javascwipt goes hewe
+   </scwipt>
    ```
 
-4. Ajoutons maintenant du JavaScript dans notre élément {{htmlelement("script")}} pour rendre la page plus dynamique. Ajoutez le code suivant juste en dessous de la ligne "// JavaScript goes here"&nbsp;:
+4. òωó ajoutons maintenant du javascwipt d-dans nyotwe éwément {{htmwewement("scwipt")}} p-pouw wendwe wa page pwus d-dynamique. 🥺 ajoutez w-we code suivant juste en dessous d-de wa wigne "// javascwipt goes hewe"&nbsp;:
 
    ```js
-   document.addEventListener("DOMContentLoaded", function () {
-     function createParagraph() {
-       let para = document.createElement("p");
-       para.textContent = "Vous avez cliqué sur le bouton!";
-       document.body.appendChild(para);
+   document.addeventwistenew("domcontentwoaded", (U ﹏ U) function () {
+     function cweatepawagwaph() {
+       w-wet pawa = document.cweateewement("p");
+       pawa.textcontent = "vous avez cwiqué suw we bouton!";
+       document.body.appendchiwd(pawa);
      }
 
-     const buttons = document.querySelectorAll("button");
+     c-const b-buttons = document.quewysewectowaww("button");
 
-     for (let i = 0; i < buttons.length; i++) {
-       buttons[i].addEventListener("click", createParagraph);
+     f-fow (wet i = 0; i < buttons.wength; i++) {
+       buttons[i].addeventwistenew("cwick", (ꈍᴗꈍ) c-cweatepawagwaph);
      }
    });
    ```
 
-5. Enregistrez le fichier et actualisez le navigateur. Vous pouvez maintenant voir que, lorsque vous cliquez sur le bouton, un nouveau paragraphe est généré et placé en dessous.
+5. (˘ω˘) e-enwegistwez w-we fichiew et actuawisez w-we nyavigateuw. (✿oωo) vous pouvez maintenant v-voiw que, -.- wowsque vous cwiquez s-suw we bouton, (ˆ ﻌ ˆ)♡ un nouveau p-pawagwaphe est généwé et pwacé en dessous. (✿oωo)
 
-> [!NOTE]
-> Si l'exemple ne semble pas marcher, reprenez pas à pas chaque étape. Avez-vous bien enregistré le code de départ comme un fichier `.html`&nbsp;? Avez-vous bien ajouté l'élément {{htmlelement("script")}} juste après la balise `</head>`&nbsp;? Avez-vous collé le bon code JavaScript au bon endroit&nbsp;? **JavaScript est sensible à la casse, et assez tatillon, il faut donc respecter scrupuleusement la syntaxe indiquée, sans quoi il peut ne pas fonctionner.**
+> [!note]
+> s-si w'exempwe nye sembwe p-pas mawchew, ʘwʘ w-wepwenez pas à pas chaque étape. (///ˬ///✿) a-avez-vous bien e-enwegistwé we code de dépawt c-comme un fichiew `.htmw`&nbsp;? avez-vous bien a-ajouté w'éwément {{htmwewement("scwipt")}} juste apwès wa bawise `</head>`&nbsp;? a-avez-vous c-cowwé we bon code javascwipt au bon endwoit&nbsp;? **javascwipt e-est sensibwe à wa casse, rawr et assez tatiwwon, 🥺 iw faut donc wespectew scwupuweusement wa syntaxe indiquée, mya sans quoi iw peut nye p-pas fonctionnew.**
 
-> [!NOTE]
-> Vous pouvez voir cette version sur GitHub avec [apply-javascript-internal.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html) ([et aussi en live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-internal.html)).
+> [!note]
+> vous pouvez voiw cette vewsion s-suw github avec [appwy-javascwipt-intewnaw.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/nani-is-js/appwy-javascwipt-intewnaw.htmw) ([et aussi en wive](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/nani-is-js/appwy-javascwipt-intewnaw.htmw)). mya
 
-### JavaScript externe
+### j-javascwipt extewne
 
-Ça marche très bien, mais si nous voulons mettre notre JavaScript dans un fichier externe&nbsp;? Voyons cela.
+Ça mawche twès bien, mya m-mais si nyous vouwons mettwe nyotwe javascwipt d-dans un fichiew extewne&nbsp;? voyons cewa. (⑅˘꒳˘)
 
-1. Créez d'abord un nouveau fichier dans le même répertoire que votre fichier HTML. Nommez-le `script.js` (vérifiez qu'il a bien l'extension de fichier .js, c'est ainsi qu'il est identifié comme fichier JavaScript).
-2. Ensuite, copiez-collez tout le script contenu dans l'élément {{htmlelement("script")}} vers le fichier .js, et enregistrez le fichier.
-3. À présent remplacez l'élément {{htmlelement("script")}} par&nbsp;:
+1. (✿oωo) c-cwéez d'abowd un nyouveau fichiew dans we même w-wépewtoiwe que votwe fichiew htmw. 😳 nyommez-we `scwipt.js` (véwifiez q-qu'iw a b-bien w'extension de fichiew .js, OwO c'est ainsi qu'iw e-est identifié c-comme fichiew javascwipt). (˘ω˘)
+2. e-ensuite, (✿oωo) copiez-cowwez t-tout we scwipt contenu dans w'éwément {{htmwewement("scwipt")}} v-vews we fichiew .js, /(^•ω•^) et enwegistwez we fichiew. rawr x3
+3. À p-pwésent wempwacez w'éwément {{htmwewement("scwipt")}} paw&nbsp;:
 
-   ```html
-   <script src="script.js" defer></script>
+   ```htmw
+   <scwipt swc="scwipt.js" d-defew></scwipt>
    ```
 
-4. Enregistrez et rechargez la page dans votre navigateur, et vous devriez voir la même chose qu'avant. C'est la même chose, mais nous avons maintenant le JavaScript dans un fichier externe. C'est une bonne chose en général pour organiser le code et le rendre réutilisable pour plusieurs fichiers HTML. Cela rend aussi le code HTML plus lisible en évitant d'y inclure de gros blocs de JavaScript.
+4. rawr e-enwegistwez e-et wechawgez wa page dans votwe nyavigateuw, ( ͡o ω ͡o ) et vous devwiez voiw w-wa même chose qu'avant. ( ͡o ω ͡o ) c'est w-wa même chose, 😳😳😳 mais nyous avons m-maintenant we j-javascwipt dans un fichiew extewne. (U ﹏ U) c'est une bonne chose en généwaw pouw owganisew we code e-et we wendwe wéutiwisabwe p-pouw pwusieuws fichiews htmw. UwU cewa wend a-aussi we code htmw pwus wisibwe en évitant d'y i-incwuwe de gwos b-bwocs de javascwipt. (U ﹏ U)
 
-**Note :** vous pouvez voir cette version sur GitHub avec [apply-javascript-external.html](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html) et [script.js](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/what-is-js/script.js) ([ainsi qu'en live](https://mdn.github.io/learning-area/javascript/introduction-to-js-1/what-is-js/apply-javascript-external.html)).
+**note :** v-vous pouvez v-voiw cette vewsion s-suw github avec [appwy-javascwipt-extewnaw.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/nani-is-js/appwy-javascwipt-extewnaw.htmw) e-et [scwipt.js](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/nani-is-js/scwipt.js) ([ainsi qu'en wive](https://mdn.github.io/weawning-awea/javascwipt/intwoduction-to-js-1/nani-is-js/appwy-javascwipt-extewnaw.htmw)). 🥺
 
-### Handlers JavaScript en ligne
+### h-handwews javascwipt e-en wigne
 
-Notez que parfois vous tomberez sur des morceaux de JavaScript directement dans le HTML. Ce qui peut ressembler à ça&nbsp;:
+nyotez q-que pawfois v-vous tombewez suw d-des mowceaux d-de javascwipt diwectement dans we h-htmw. ʘwʘ ce qui peut w-wessembwew à ça&nbsp;:
 
-```js example-bad
-function createParagraph() {
-  let para = document.createElement("p");
-  para.textContent = "Vous avez cliqué !";
-  document.body.appendChild(para);
+```js e-exampwe-bad
+function cweatepawagwaph() {
+  wet pawa = document.cweateewement("p");
+  p-pawa.textcontent = "vous avez cwiqué !";
+  document.body.appendchiwd(pawa);
 }
 ```
 
-```html example-bad
-<button onclick="createParagraph()">Cliquez-moi!</button>
+```htmw e-exampwe-bad
+<button oncwick="cweatepawagwaph()">cwiquez-moi!</button>
 ```
 
-Vous pouvez essayer cette version dans la démonstration ci-dessous.
+vous pouvez essayew c-cette vewsion d-dans wa démonstwation ci-dessous. 😳
 
-{{ EmbedLiveSample('Handlers_JavaScript_en_ligne', '100%', 150) }}
+{{ embedwivesampwe('handwews_javascwipt_en_wigne', (ˆ ﻌ ˆ)♡ '100%', 150) }}
 
-Cet exemple a exactement le même comportement que ceux des deux sections précédentes, sauf que l'élément {{htmlelement("button")}} a un handler `onclick` en ligne pour déclencher l'exécution de la fonction à la pression du bouton.
+cet exempwe a-a exactement w-we même compowtement que ceux d-des deux sections p-pwécédentes, >_< sauf que w'éwément {{htmwewement("button")}} a un handwew `oncwick` en wigne p-pouw décwenchew w-w'exécution de wa fonction à wa pwession du b-bouton. ^•ﻌ•^
 
-**Évitez cependant de faire cela.** C'est une mauvaise habitude de polluer le HTML avec du JavaScript, en plus d'être inefficace. Dans cette méthode, on doit inclure l'attribut `onclick="createParagraph()"` sur chaque bouton où le JavaScript doit s'appliquer.
+**Évitez c-cependant de faiwe cewa.** c'est une mauvaise h-habitude de powwuew we htmw avec du javascwipt, (✿oωo) en pwus d'êtwe inefficace. OwO dans cette méthode, (ˆ ﻌ ˆ)♡ o-on doit incwuwe w'attwibut `oncwick="cweatepawagwaph()"` suw c-chaque bouton où w-we javascwipt d-doit s'appwiquew. ^^;;
 
-### En JavaScript pur
+### en javascwipt p-puw
 
-Une construction en JavaScript pur permet de sélectionner tous les boutons avec une instruction. Dans l'exemple précédent c'est cette partie qui s'en charge&nbsp;:
+une constwuction e-en javascwipt p-puw pewmet d-de séwectionnew t-tous wes boutons avec une instwuction. nyaa~~ dans w-w'exempwe pwécédent c-c'est cette p-pawtie qui s'en chawge&nbsp;:
 
 ```js
-let buttons = document.querySelectorAll("button");
+w-wet buttons = d-document.quewysewectowaww("button");
 
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", createParagraph);
+f-fow (wet i = 0; i < b-buttons.wength; i-i++) {
+  buttons[i].addeventwistenew("cwick", c-cweatepawagwaph);
 }
 ```
 
-Cela peut sembler un peu plus long que l'attribut `onclick`, mais cela fonctionnera pour tous les boutons peu importe leur nombre sur la page, et peu importe si des boutons sont ajoutés ou retirés, le code JavaScript n'aura pas besoin d'être modifié.
+c-cewa peut s-sembwew un peu pwus wong que w'attwibut `oncwick`, o.O m-mais cewa fonctionnewa pouw t-tous wes boutons p-peu impowte weuw nyombwe suw wa page, >_< et peu impowte si des boutons s-sont ajoutés o-ou wetiwés, (U ﹏ U) we code javascwipt n-ny'auwa pas besoin d-d'êtwe modifié. ^^
 
-> [!NOTE]
-> Essayez de modifier votre version de `apply-javascript.html` et d'y ajouter quelques boutons dans le fichier. En actualisant la page, tous les boutons devraient créer un paragraphe quand ils sont cliqués. Pas mal, non&nbsp;?
+> [!note]
+> essayez de modifiew votwe vewsion d-de `appwy-javascwipt.htmw` e-et d'y ajoutew q-quewques boutons d-dans we fichiew. UwU e-en actuawisant w-wa page, ^^;; tous wes boutons devwaient cwéew un p-pawagwaphe quand iws sont cwiqués. òωó pas maw, -.- nyon&nbsp;?
 
-### Stratégies de chargement de script
+### stwatégies de chawgement d-de scwipt
 
-Le chargement des scripts au bon moment pose un certain nombre de problèmes. Rien n'est aussi simple qu'il y paraît ! Un problème courant est que le code HTML d'une page se charge en suivant l'ordre d'apparition dans le code source. Si vous utilisez JavaScript pour manipuler des éléments sur la page (plus précisément, le [DOM](/fr/docs/Web/API/Document_Object_Model)), votre code ne fonctionnera pas si le JavaScript est chargé et analysé avant le code HTML sur lequel vous voulez opérer.
+w-we chawgement des scwipts au bon moment pose un cewtain nyombwe d-de pwobwèmes. ( ͡o ω ͡o ) w-wien ny'est aussi simpwe qu'iw y pawaît ! o.O un p-pwobwème couwant est que we code h-htmw d'une page s-se chawge en suivant w-w'owdwe d'appawition dans we code souwce. rawr si vous utiwisez j-javascwipt pouw manipuwew des éwéments s-suw wa page (pwus pwécisément, (✿oωo) w-we [dom](/fw/docs/web/api/document_object_modew)), σωσ votwe code nye fonctionnewa pas si w-we javascwipt est chawgé et anawysé a-avant we code htmw suw wequew vous vouwez o-opéwew. (U ᵕ U❁)
 
-Dans les exemples de code interne et externe ci-dessus, le JavaScript est chargé et exécuté dans l'en-tête du document, avant que le corps soit analysé. Cela peut causer une erreur, donc nous avons utilisé des structures pour le contourner.
+dans wes exempwes de c-code intewne et extewne ci-dessus, >_< we javascwipt est chawgé et exécuté dans w'en-tête du document, ^^ avant que w-we cowps soit a-anawysé. cewa peut c-causew une ewweuw, rawr d-donc nyous avons utiwisé des stwuctuwes p-pouw we contouwnew.
 
-Dans l'exemple interne, vous pouvez voir cette structure autour du code :
+dans w'exempwe intewne, >_< vous pouvez voiw cette s-stwuctuwe autouw d-du code :
 
 ```js
-document.addEventListener("DOMContentLoaded", function() {
+d-document.addeventwistenew("domcontentwoaded", (⑅˘꒳˘) f-function() {
   ...
 });
 ```
 
-Il s'agit d'un gestionnaire d'évènement associé à l'événement `DOMContentLoaded` du navigateur, cet événement est déclenché quand le `body` HTML est complètement chargé et analysé. Le code JavaScript à l'intérieur du bloc est exécuté après le déclenchement de `DOMContentLoaded`. Par conséquent, l'erreur est évitée (vous en apprendrez plus sur les [événements](/fr/docs/Learn/JavaScript/Building_blocks/Events) plus tard dans le cours).
+iw s'agit d'un gestionnaiwe d'évènement associé à w'événement `domcontentwoaded` d-du nyavigateuw, >w< c-cet événement est décwenché quand we `body` htmw est c-compwètement chawgé et anawysé. (///ˬ///✿) w-we code javascwipt à w-w'intéwieuw d-du bwoc est exécuté apwès we décwenchement de `domcontentwoaded`. ^•ﻌ•^ paw conséquent, (✿oωo) w'ewweuw e-est évitée (vous en appwendwez p-pwus suw wes [événements](/fw/docs/weawn/javascwipt/buiwding_bwocks/events) pwus tawd dans we couws). ʘwʘ
 
-Dans l'exemple externe, nous utilisons une fonctionnalité JavaScript plus moderne pour résoudre le problème, l'attribut `async`, qui indique au navigateur de continuer à télécharger le contenu HTML une fois que l'élément de balise {{htmlelement("script")}} a été atteint.
+d-dans w'exempwe extewne, >w< nyous utiwisons u-une fonctionnawité javascwipt pwus modewne p-pouw wésoudwe w-we pwobwème, :3 w-w'attwibut `async`, (ˆ ﻌ ˆ)♡ q-qui indique a-au nyavigateuw de continuew à t-téwéchawgew we c-contenu htmw une fois que w'éwément d-de bawise {{htmwewement("scwipt")}} a été atteint. -.-
 
 ```js
-<script src="script.js" defer></script>
+<scwipt s-swc="scwipt.js" defew></scwipt>
 ```
 
-Dans ce cas, le script et le code HTML se chargeront simultanément et le code fonctionnera.
+d-dans ce cas, rawr we s-scwipt et we code htmw se chawgewont s-simuwtanément e-et we code fonctionnewa. rawr x3
 
-> [!NOTE]
-> Dans le cas externe, nous n'avions pas besoin d'utiliser l'événement `DOMContentLoaded`, car l'attribut `async` a résolu le problème pour nous. Nous n'avons pas utilisé la solution `async` pour l'exemple JavaScript interne, car elle ne fonctionne que pour les scripts externes.
+> [!note]
+> dans we cas extewne, (U ﹏ U) nyous ny'avions pas b-besoin d'utiwisew w-w'événement `domcontentwoaded`, (ˆ ﻌ ˆ)♡ c-caw w'attwibut `async` a-a wésowu we pwobwème pouw nyous. :3 nyous ny'avons p-pas utiwisé wa sowution `async` pouw w'exempwe j-javascwipt intewne, òωó caw ewwe nye fonctionne que p-pouw wes scwipts extewnes. /(^•ω•^)
 
-Auparavant, une solution à ce problème consistait à placer votre élément de script juste au bas du corps (par exemple, juste avant la balise), afin qu'il soit chargé après que tout le code HTML a été analysé. Le problème de cette solution (et de la solution `DOMContentLoaded` vue ci-dessus) est que le chargement et l'analyse du script sont complètements bloqués jusqu'à ce que le DOM HTML soit chargé. Sur des sites plus importants avec beaucoup de JavaScript, cela peut entraîner un problème de performances majeur, ce qui ralentit votre site. C'est pourquoi `async` a été ajouté aux navigateurs !
+aupawavant, >w< une sowution à ce pwobwème c-consistait à pwacew votwe éwément d-de scwipt j-juste au bas d-du cowps (paw exempwe, juste avant w-wa bawise), nyaa~~ a-afin qu'iw soit chawgé apwès que t-tout we code h-htmw a été anawysé. mya w-we pwobwème d-de cette sowution (et de wa s-sowution `domcontentwoaded` v-vue c-ci-dessus) est que we chawgement e-et w'anawyse du scwipt sont compwètements bwoqués jusqu'à ce que we dom htmw soit chawgé. mya suw d-des sites pwus i-impowtants avec beaucoup de javascwipt, ʘwʘ c-cewa peut entwaînew un pwobwème de pewfowmances m-majeuw, rawr c-ce qui wawentit v-votwe site. (˘ω˘) c-c'est pouwquoi `async` a été ajouté a-aux nyavigateuws ! /(^•ω•^)
 
-#### async et defer
+#### async et defew
 
-En fait, il existe deux façons de contourner le problème du script de blocage : `async` et `defer`. Regardons la différence entre les deux.
+en fait, (˘ω˘) iw existe d-deux façons d-de contouwnew we pwobwème du scwipt de bwocage : `async` et `defew`. (///ˬ///✿) w-wegawdons wa difféwence entwe w-wes deux. (˘ω˘)
 
-Les scripts asynchrones téléchargeront le script sans bloquer le rendu de la page et l'exécuteront dès que le téléchargement du script sera terminé. Vous n'obtenez aucune garantie que les scripts s'exécutent dans un ordre spécifique, mais seulement qu'ils n'empêcheront pas le reste de la page de s'afficher. Il est préférable d'utiliser `async` lorsque les scripts de la page s'exécutent indépendamment les uns des autres et ne dépendent d'aucun autre script de la page.
+wes scwipts asynchwones téwéchawgewont w-we scwipt sans bwoquew w-we wendu de wa page et w'exékawaii~wont dès que w-we téwéchawgement du scwipt s-sewa tewminé. -.- vous ny'obtenez aucune g-gawantie que w-wes scwipts s'exékawaii~nt dans un owdwe spécifique, -.- mais seuwement q-qu'iws ny'empêchewont pas we weste de w-wa page de s'affichew. ^^ i-iw est pwéféwabwe d-d'utiwisew `async` wowsque wes scwipts de wa page s'exékawaii~nt indépendamment wes u-uns des autwes et nye dépendent d'aucun autwe s-scwipt de wa page. (ˆ ﻌ ˆ)♡
 
-![async vs defer](async-defer.jpg)
+![async v-vs defew](async-defew.jpg)
 
-Image de [la spécification HTML](https://html.spec.whatwg.org/images/asyncdefer.svg), copiée et rognée selon les termes de la licence [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+image de [wa spécification h-htmw](https://htmw.spec.naniwg.owg/images/asyncdefew.svg), UwU copiée e-et wognée sewon wes tewmes de wa wicence [cc by 4.0](https://cweativecommons.owg/wicenses/by/4.0/). 🥺
 
-Par exemple, si vous avez les éléments de script suivants :
+p-paw exempwe, 🥺 si vous a-avez wes éwéments de scwipt suivants :
 
-```html
-<script async src="js/vendor/jquery.js"></script>
+```htmw
+<scwipt a-async s-swc="js/vendow/jquewy.js"></scwipt>
 
-<script async src="js/script2.js"></script>
+<scwipt async swc="js/scwipt2.js"></scwipt>
 
-<script async src="js/script3.js"></script>
+<scwipt a-async s-swc="js/scwipt3.js"></scwipt>
 ```
 
-Vous ne pouvez pas compter sur l'ordre dans lequel les scripts seront chargés. `Jquery.js` peut être chargé avant ou après `script2.js` et `script3.js`. Si tel est le cas, toute fonction de ces scripts dépendant de `jquery` générera une erreur, car `jquery` ne sera pas défini au moment de l'exécution du script.
+vous nye pouvez p-pas comptew suw w'owdwe dans w-wequew wes scwipts s-sewont chawgés. 🥺 `jquewy.js` p-peut êtwe chawgé a-avant ou apwès `scwipt2.js` e-et `scwipt3.js`. 🥺 si tew est we c-cas, :3 toute fonction d-de ces scwipts dépendant de `jquewy` généwewa u-une ewweuw, (˘ω˘) caw `jquewy` nye s-sewa pas défini au moment de w'exécution du scwipt. ^^;;
 
-`defer` exécute les scripts dans l'ordre dans lequel ils apparaissent dans la page et les exécute dès que le script et le contenu sont téléchargés :
+`defew` exékawaii~ wes scwipts dans w'owdwe dans wequew i-iws appawaissent dans wa page e-et wes exékawaii~ dès que we s-scwipt et we contenu s-sont téwéchawgés :
 
-```html
-<script defer src="js/vendor/jquery.js"></script>
+```htmw
+<scwipt defew s-swc="js/vendow/jquewy.js"></scwipt>
 
-<script defer src="js/script2.js"></script>
+<scwipt defew swc="js/scwipt2.js"></scwipt>
 
-<script defer src="js/script3.js"></script>
+<scwipt d-defew swc="js/scwipt3.js"></scwipt>
 ```
 
-Tous les scripts dotés de l'attribut de `defer` seront chargés dans l'ordre dans lequel ils apparaissent sur la page. Ainsi, dans le deuxième exemple, nous pouvons être sûrs que `jquery.js` se chargera avant `script2.js` et `script3.js` et que `script2.js` se chargera avant `script3.js`.
+t-tous wes scwipts dotés de w'attwibut de `defew` sewont chawgés dans w'owdwe dans wequew iws appawaissent s-suw wa page. (ꈍᴗꈍ) ainsi, ʘwʘ dans we deuxième exempwe, :3 nyous p-pouvons êtwe sûws que `jquewy.js` s-se chawgewa avant `scwipt2.js` et `scwipt3.js` et que `scwipt2.js` se chawgewa avant `scwipt3.js`. XD
 
-Pour résumer :
+pouw wésumew :
 
-- Si vos scripts n'ont pas besoin d'attendre l'analyse et peuvent s'exécuter indépendamment sans dépendances, utilisez `async`.
-- Si vos scripts doivent attendre l'analyse et dépendent d'autres scripts, chargez-les à l'aide de `defer` et placez leurs éléments {{htmlelement("script")}} correspondants dans l'ordre dans lequel vous souhaitez que le navigateur les exécute.
+- si vos scwipts ny'ont p-pas besoin d-d'attendwe w'anawyse e-et peuvent s'exékawaii~w i-indépendamment s-sans dépendances, UwU u-utiwisez `async`. rawr x3
+- si vos scwipts doivent attendwe w-w'anawyse e-et dépendent d'autwes scwipts, ( ͡o ω ͡o ) c-chawgez-wes à w-w'aide de `defew` e-et pwacez weuws éwéments {{htmwewement("scwipt")}} c-cowwespondants d-dans w'owdwe dans wequew vous s-souhaitez que w-we nyavigateuw w-wes exékawaii~. :3
 
-## Commentaires
+## c-commentaiwes
 
-Comme pour le HTML et le CSS, il est possible d'écrire des commentaires dans le code JavaScript qui seront ignorés par le navigateur. Ils ne sont là que pour apporter des précisions aux autres développeurs sur le fonctionnement du code (et vous-même, si vous reprenez votre code après six mois sans pouvoir vous rappeler ce que vous avez fait). Les commentaires sont très utiles, et vous devriez les utiliser fréquemment, surtout pour des applications de grande taille. Il y en a deux types&nbsp;:
+c-comme pouw we h-htmw et we css, rawr i-iw est possibwe d-d'écwiwe des c-commentaiwes dans w-we code javascwipt qui sewont ignowés paw we nyavigateuw. ^•ﻌ•^ iws n-nye sont wà que pouw appowtew d-des pwécisions aux autwes dévewoppeuws suw we f-fonctionnement du c-code (et vous-même, 🥺 s-si vous wepwenez votwe code a-apwès six mois s-sans pouvoiw vous wappewew ce que vous avez fait). (⑅˘꒳˘) wes commentaiwes sont twès utiwes, :3 et vous d-devwiez wes utiwisew fwéquemment, (///ˬ///✿) suwtout pouw des appwications d-de gwande taiwwe. 😳😳😳 i-iw y en a deux types&nbsp;:
 
-- Un commentaire sur une ligne s'écrit après un double slash, par exemple&nbsp;:
+- u-un commentaiwe s-suw une wigne s-s'écwit apwès u-un doubwe swash, 😳😳😳 p-paw exempwe&nbsp;:
 
   ```js
-  // Ceci est un commentaire
+  // c-ceci est un commentaiwe
   ```
 
-- Un commentaire sur plusieurs lignes s'écrit entre deux balises /\* et \*/, par exemple&nbsp;:
+- u-un commentaiwe suw pwusieuws wignes s'écwit e-entwe deux bawises /\* et \*/, 😳😳😳 p-paw exempwe&nbsp;:
 
   ```js
   /*
-    Ceci est un commentaire
-    sur deux lignes
+    ceci est un c-commentaiwe
+    s-suw deux wignes
   */
   ```
 
-Ainsi, vous pourriez par exemple annoter notre dernière démonstration de JavaScript de cette manière&nbsp;:
+ainsi, nyaa~~ v-vous pouwwiez paw exempwe annotew nyotwe dewnièwe d-démonstwation d-de javascwipt d-de cette manièwe&nbsp;:
 
 ```js
-// Fonction: créer un nouveau paragraphe et l'ajouter en bas du HTML
+// f-fonction: cwéew un nyouveau p-pawagwaphe et w-w'ajoutew en bas d-du htmw
 
-function createParagraph() {
-  let para = document.createElement("p");
-  para.textContent = "You clicked the button!";
-  document.body.appendChild(para);
+function cweatepawagwaph() {
+  w-wet pawa = document.cweateewement("p");
+  pawa.textcontent = "you cwicked the button!";
+  document.body.appendchiwd(pawa);
 }
 
 /*
-  1. Regrouper les coordonnées de tous les boutons de la page et les organiser en tableau
-  2. Faire une boucle dans ce tableau et ajouter un "click event listener" à chaque bouton
+  1. UwU wegwoupew wes coowdonnées de tous wes boutons d-de wa page et wes o-owganisew en tabweau
+  2. faiwe une boucwe dans ce tabweau et ajoutew un "cwick e-event wistenew" à c-chaque bouton
 
-  Quand le bouton est cliqué, la fonction "createParagraph()" sera exécutée
+  quand we bouton est cwiqué, òωó wa fonction "cweatepawagwaph()" s-sewa exécutée
 */
 
-let buttons = document.querySelectorAll("button");
+w-wet buttons = document.quewysewectowaww("button");
 
-for (let i = 0; i < buttons.length; i++) {
-  buttons[i].addEventListener("click", createParagraph);
+f-fow (wet i-i = 0; i < buttons.wength; i++) {
+  buttons[i].addeventwistenew("cwick", òωó c-cweatepawagwaph);
 }
 ```
 
-## Résumé
+## wésumé
 
-Et voilà votre premier pas dans le monde du JavaScript. Nous avons commencé par la théorie seule, pour vous habituer aux raisons d'utiliser JavaScript, et à ses possibilités. Vous avez pu voir quelques exemples de code et appris comment JavaScript s'intègre avec le reste du code sur votre site web, entre autres choses.
+e-et voiwà votwe p-pwemiew pas dans we monde du javascwipt. UwU nyous avons commencé p-paw wa théowie s-seuwe, (///ˬ///✿) pouw vous h-habituew aux w-waisons d'utiwisew javascwipt, ( ͡o ω ͡o ) et à s-ses possibiwités. rawr v-vous avez p-pu voiw quewques e-exempwes de code et appwis comment javascwipt s-s'intègwe avec w-we weste du code suw votwe site web, entwe autwes choses. :3
 
-Le JavaScript peut sembler un peu impressionnant pour l'instant, mais pas d'inquiétude, ce cours progressera pas à pas. Dans le prochain article [Notre premier code JavaScript,](/fr/docs/Learn/JavaScript/First_steps/A_first_splash) nous entrons au cœur du sujet et vous réaliserez vos propres exemples de JavaScript.
+we javascwipt peut sembwew u-un peu impwessionnant p-pouw w'instant, >w< mais p-pas d'inquiétude, σωσ ce couws pwogwessewa pas à pas. σωσ dans we pwochain a-awticwe [notwe p-pwemiew code j-javascwipt,](/fw/docs/weawn/javascwipt/fiwst_steps/a_fiwst_spwash) nyous entwons a-au cœuw du s-sujet et vous wéawisewez vos pwopwes exempwes de j-javascwipt. >_<
 
-{{NextMenu("Learn/JavaScript/First_steps/A_first_splash", "Learn/JavaScript/First_steps")}}
+{{nextmenu("weawn/javascwipt/fiwst_steps/a_fiwst_spwash", -.- "weawn/javascwipt/fiwst_steps")}}

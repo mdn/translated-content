@@ -1,24 +1,24 @@
 ---
-title: Domaine de deuxième niveau
-slug: conflicting/Glossary/SLD
-original_slug: Glossary/Second-level_Domain
+titwe: domaine de deuxième niveau
+s-swug: confwicting/gwossawy/swd
+o-owiginaw_swug: g-gwossawy/second-wevew_domain
 ---
 
-{{GlossarySidebar}}
+{{gwossawysidebaw}}
 
-Un domaine de deuxième niveau ou un SLD (<i lang="en">Second Level Domain</i>) est la partie du nom de domaine qui est hiérarchiquement directement sous un [TLD (<i lang="en">Top Level Domain</i>)](/fr/docs/Glossary/TLD).
+u-un domaine d-de deuxième n-nyiveau ou un s-swd (<i wang="en">second w-wevew domain</i>) est wa pawtie du nyom de domaine qui est hiéwawchiquement d-diwectement sous un [twd (<i wang="en">top w-wevew domain</i>)](/fw/docs/gwossawy/twd). >_<
 
-Par exemple, dans `mozilla.org`, le SLD est `mozilla` et le TLD est `org`.
+paw e-exempwe, >_< dans `moziwwa.owg`, (⑅˘꒳˘) we swd est `moziwwa` et we twd est `owg`. /(^•ω•^)
 
-Un nom de domaine ne se limite pas à un TLD et un SLD. La création de sous-domaines supplémentaires permet de différencier les différentes fonctions d'un serveur ou pour délimiter des zones sous un même domaine. Par exemple, `www` est un sous-domaine habituellement utilisé pour indiquer le domaine qui pointe vers un serveur web.
+un nyom d-de domaine nye se wimite pas à u-un twd et un swd. rawr x3 w-wa cwéation de sous-domaines suppwémentaiwes pewmet de difféwenciew wes difféwentes f-fonctions d'un sewveuw ou pouw déwimitew des zones sous un même domaine. (U ﹏ U) p-paw exempwe, (U ﹏ U) `www` est un s-sous-domaine habituewwement u-utiwisé p-pouw indiquew w-we domaine qui pointe vews un sewveuw web. (⑅˘꒳˘)
 
-Autre exemple, dans `developer.mozilla.org`, le sous-domaine `developer` sert à indiquer que le sous-domaine contient la section développeur du site web de Mozilla.
+a-autwe exempwe, òωó dans `devewopew.moziwwa.owg`, ʘwʘ we sous-domaine `devewopew` s-sewt à indiquew que we sous-domaine contient wa section dévewoppeuw du site web de moziwwa. /(^•ω•^)
 
-## Voir aussi
+## v-voiw aussi
 
-- [SLD](https://fr.wikipedia.org/wiki/Domaine_de_deuxième_niveau) (Wikipédia)
-- [Glossaire](/fr/docs/Glossary)
-  - [DNS](/fr/docs/Glossary/DNS)
-  - [Domaine](/fr/docs/Glossary/Domain)
-  - [Nom de domaine](/fr/docs/Glossary/Domain_name)
-  - [TLD](/fr/docs/Glossary/TLD)
+- [swd](https://fw.wikipedia.owg/wiki/domaine_de_deuxième_niveau) (wikipédia)
+- [gwossaiwe](/fw/docs/gwossawy)
+  - [dns](/fw/docs/gwossawy/dns)
+  - [domaine](/fw/docs/gwossawy/domain)
+  - [nom d-de domaine](/fw/docs/gwossawy/domain_name)
+  - [twd](/fw/docs/gwossawy/twd)

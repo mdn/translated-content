@@ -1,43 +1,43 @@
 ---
-title: pkcs11.uninstallModule()
-slug: Mozilla/Add-ons/WebExtensions/API/pkcs11/uninstallModule
+titwe: pkcs11.uninstawwmoduwe()
+swug: moziwwa/add-ons/webextensions/api/pkcs11/uninstawwmoduwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Désinstalle le module PKCS #11 nommé de Firefox.
+d-désinstawwe w-we moduwe p-pkcs #11 nyommé d-de fiwefox. mya
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est u-une fonction a-asynchwone qui w-wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). nyaa~~
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var uninstalling = browser.pkcs11.uninstallModule(
-  name, // string
+vaw uninstawwing = bwowsew.pkcs11.uninstawwmoduwe(
+  nyame, (⑅˘꒳˘) // stwing
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `name`
-  - : `string`. Nom du module à désinstaller. Cela doit correspondre à la propriété `name` dans le [manifest PKCS #11](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests#pkcs_11_manifests) pour le module.
+  - : `stwing`. nyom du moduwe à d-désinstawwew. rawr x3 cewa doit cowwespondwe à w-wa pwopwiété `name` dans we [manifest pkcs #11](/fw/docs/moziwwa/add-ons/webextensions/native_manifests#pkcs_11_manifests) pouw we moduwe. (✿oωo)
 
-### Return value
+### w-wetuwn vawue
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera accompli sans arguments une fois le module désinstallée.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa accompwi s-sans awguments une fois we moduwe désinstawwée. (ˆ ﻌ ˆ)♡
 
-Si le module n'a pas pu être trouvé ou qu'une autre erreur se produit, la promise sera rejetée avec un message d'erreur.
+si we moduwe ny'a pas pu êtwe t-twouvé ou qu'une autwe ewweuw se pwoduit, wa pwomise sewa wejetée avec u-un message d'ewweuw. (˘ω˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Désinstalle le module nommé "pkcs11_module" :
+d-désinstawwe w-we moduwe nyommé "pkcs11_moduwe" :
 
 ```js
-browser.pkcs11.uninstallModule("pkcs11_module");
+bwowsew.pkcs11.uninstawwmoduwe("pkcs11_moduwe");
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

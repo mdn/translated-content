@@ -1,63 +1,63 @@
 ---
-title: extensionTypes
-slug: Mozilla/Add-ons/WebExtensions/API/extensionTypes
+titwe: extensiontypes
+swug: moziwwa/add-ons/webextensions/api/extensiontypes
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Certains types communs utilisés dans d'autres APIs WebExtensions.
+c-cewtains t-types communs utiwisés d-dans d'autwes a-apis webextensions. ^•ﻌ•^
 
-## Types
+## t-types
 
-- {{WebExtAPIRef("extensionTypes.ImageDetails")}}
-  - : Détails sur le format et la qualité de l'image.
-- {{WebExtAPIRef("extensionTypes.ImageFormat")}}
-  - : Le format d'une image.
-- {{WebExtAPIRef("extensionTypes.ImageDetails")}}
-  - : Injecte des détails dans une page
-- {{WebExtAPIRef("extensionTypes.RunAt")}}
-  - : Le plus tot que le Javascript ou le CSS est injecté dans l'onglet.
-- `extensionTypes.CSSOrigin`
-  - : Indique si une feuille de style CSS injectée par [`tabs.insertCSS`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/insertCSS) doit être traitée comme une feuille de style "auteur" ou "utilisateur".
+- {{webextapiwef("extensiontypes.imagedetaiws")}}
+  - : d-détaiws s-suw we fowmat e-et wa quawité de w'image. (˘ω˘)
+- {{webextapiwef("extensiontypes.imagefowmat")}}
+  - : we fowmat d'une image. :3
+- {{webextapiwef("extensiontypes.imagedetaiws")}}
+  - : injecte des d-détaiws dans une page
+- {{webextapiwef("extensiontypes.wunat")}}
+  - : we pwus t-tot que we javascwipt ou we css e-est injecté dans w'ongwet. ^^;;
+- `extensiontypes.cssowigin`
+  - : indique si une feuiwwe de stywe c-css injectée paw [`tabs.insewtcss`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/insewtcss) doit êtwe twaitée c-comme une feuiwwe d-de stywe "auteuw" ou "utiwisateuw". 🥺
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basé sur l'API Chromium [`chrome.extensionTypes`](https://developer.chrome.com/docs/extensions/reference/api/extensionTypes) . Cette documentation provient de [`extension_types.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/extension_types.json) dans le code de Chromium.
+> c-cette api est basé suw w'api chwomium [`chwome.extensiontypes`](https://devewopew.chwome.com/docs/extensions/wefewence/api/extensiontypes) . (⑅˘꒳˘) cette documentation pwovient de [`extension_types.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/extension_types.json) d-dans we code de chwomium. nyaa~~
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> w-wes d-données de compatibiwité m-micwosoft e-edge sont fouwnies paw micwosoft cowpowation e-et sont incwuses ici sous wa wicence cweative c-commons attwibution 3.0 united states. :3
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. ( ͡o ω ͡o ) aww wights wesewved. mya
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce a-and binawy fowms, (///ˬ///✿) w-with ow without
+// m-modification, (˘ω˘) awe pewmitted pwovided that the fowwowing conditions a-awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above copywight
+// n-nyotice, ^^;; this wist of conditions a-and the fowwowing discwaimew. (✿oωo)
+//    * wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, (U ﹏ U) t-this wist o-of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. -.-
+//    * n-nyeithew the name of googwe i-inc. ^•ﻌ•^ nyow the n-nyames of its
+// c-contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe without specific pwiow wwitten pewmission. rawr
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied wawwanties, (˘ω˘) incwuding, nyaa~~ b-but nyot
+// w-wimited to, UwU t-the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a p-pawticuwaw puwpose a-awe discwaimed. :3 i-in no event shaww t-the copywight
+// o-ownew ow contwibutows be wiabwe fow any diwect, (⑅˘꒳˘) indiwect, i-incidentaw, (///ˬ///✿)
+// speciaw, ^^;; exempwawy, >_< ow consequentiaw damages (incwuding, rawr x3 but nyot
+// wimited to, p-pwocuwement of substitute goods ow sewvices; woss of use, /(^•ω•^)
+// data, :3 o-ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, (ꈍᴗꈍ) whethew i-in contwact, /(^•ω•^) s-stwict wiabiwity, ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the u-use
+// of this softwawe, (⑅˘꒳˘) even if a-advised of the possibiwity of such d-damage.
 -->

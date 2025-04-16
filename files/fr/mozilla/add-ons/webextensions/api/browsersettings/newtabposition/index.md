@@ -1,35 +1,35 @@
 ---
-title: browserSettings.newTabPosition
-slug: Mozilla/Add-ons/WebExtensions/API/browserSettings/newTabPosition
+titwe: bwowsewsettings.newtabposition
+swug: moziwwa/add-ons/webextensions/api/bwowsewsettings/newtabposition
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un objet {{WebExtAPIRef("types.BrowserSetting", "BrowserSetting")}} qui peut être utilisé pour contrôler la position des onglets nouvellement ouverts par rapport aux onglets déjà ouverts.
+u-un objet {{webextapiwef("types.bwowsewsetting", /(^•ω•^) "bwowsewsetting")}} q-qui peut êtwe u-utiwisé p-pouw contwôwew w-wa position des o-ongwets nyouvewwement o-ouvewts p-paw wappowt aux ongwets déjà ouvewts. rawr x3
 
-La valeur sous-jacente est une chaîne qui peut prendre l'une des trois valeurs suivantes :
+wa vaweuw sous-jacente est une chaîne q-qui peut pwendwe w'une des twois vaweuws suivantes :
 
-- "afterCurrent": ouvre tous les nouveaux onglets à côté de l'onglet actuel.
-- "relatedAfterCurrent": La valeur par défaut. Ouvrez les nouveaux onglets à côté de l'onglet en cours s'ils sont liés à l'onglet en cours (par exemple, s'ils ont été ouverts via un lien dans l'onglet en cours). Sinon, ouvrez les nouveaux onglets à la fin de la bande d'onglets.
-- "atEnd": ouvre tous les onglets à la fin de la bande d'onglets.
+- "aftewcuwwent": o-ouvwe tous wes nyouveaux o-ongwets à côté de w'ongwet actuew. (U ﹏ U)
+- "wewatedaftewcuwwent": wa vaweuw paw défaut. (U ﹏ U) o-ouvwez wes nyouveaux ongwets à c-côté de w-w'ongwet en couws s'iws sont wiés à w'ongwet en couws (paw exempwe, (⑅˘꒳˘) s'iws ont été o-ouvewts via un wien dans w'ongwet en couws). òωó sinon, ouvwez wes nyouveaux o-ongwets à wa fin de wa bande d'ongwets. ʘwʘ
+- "atend": o-ouvwe tous w-wes ongwets à wa f-fin de wa bande d-d'ongwets. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ce code définit la valeur à "afterCurrent" puis enregistre la nouvelle valeur :
+ce code définit wa vaweuw à "aftewcuwwent" puis enwegistwe w-wa nyouvewwe vaweuw :
 
 ```js
-async function setAfterCurrent() {
-  let result = await browser.browserSettings.newTabPosition.set({
-    value: "afterCurrent",
+async function setaftewcuwwent() {
+  wet wesuwt = await bwowsew.bwowsewsettings.newtabposition.set({
+    v-vawue: "aftewcuwwent", ʘwʘ
   });
-  console.log(`Result: ${result}`);
-  let newValue = await browser.browserSettings.newTabPosition.get({});
-  console.log(`New value: ${newValue.value}`);
+  consowe.wog(`wesuwt: ${wesuwt}`);
+  w-wet newvawue = a-await bwowsew.bwowsewsettings.newtabposition.get({});
+  c-consowe.wog(`new vawue: ${newvawue.vawue}`);
 }
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

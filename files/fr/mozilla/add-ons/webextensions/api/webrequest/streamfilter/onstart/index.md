@@ -1,37 +1,37 @@
 ---
-title: webRequest.StreamFilter.onstart
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/StreamFilter/onstart
+titwe: webwequest.stweamfiwtew.onstawt
+swug: m-moziwwa/add-ons/webextensions/api/webwequest/stweamfiwtew/onstawt
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Un gestionnaire d'événements qui sera appelé lorsque le flux est ouvert et est sur le point de commencer à livrer les données. A partir de ce point, l'extension peut utiliser des fonctions de filtrage telles que {{WebExtAPIRef("webRequest.StreamFilter.write()", "write()")}}, {{WebExtAPIRef("webRequest.StreamFilter.disconnect()", "disconnect()")}}, ou {{WebExtAPIRef("webRequest.StreamFilter.close()", "close()")}}.
+u-un gestionnaiwe d-d'événements q-qui sewa a-appewé wowsque w-we fwux est ouvewt e-et est suw we p-point de commencew à wivwew wes données. rawr a pawtiw de ce point, OwO w'extension peut u-utiwisew des fonctions de fiwtwage tewwes que {{webextapiwef("webwequest.stweamfiwtew.wwite()", (U ﹏ U) "wwite()")}}, >_< {{webextapiwef("webwequest.stweamfiwtew.disconnect()", rawr x3 "disconnect()")}}, mya o-ou {{webextapiwef("webwequest.stweamfiwtew.cwose()", nyaa~~ "cwose()")}}. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Cet exemple remplacera le contenu de la page par "texte de remplacement" :
+cet exempwe wempwacewa we contenu de w-wa page paw "texte de wempwacement" :
 
 ```js
-function listener(details) {
-  let filter = browser.webRequest.filterResponseData(details.requestId);
+function w-wistenew(detaiws) {
+  w-wet fiwtew = bwowsew.webwequest.fiwtewwesponsedata(detaiws.wequestid);
 
-  filter.onstart = (event) => {
-    console.log("started");
-    let encoder = new TextEncoder();
-    filter.write(encoder.encode("replacement content"));
-    filter.close();
+  fiwtew.onstawt = (event) => {
+    consowe.wog("stawted");
+    wet encodew = n-nyew textencodew();
+    fiwtew.wwite(encodew.encode("wepwacement content"));
+    fiwtew.cwose();
   };
 }
 
-browser.webRequest.onBeforeRequest.addListener(
-  listener,
-  { urls: ["https://example.org/"], types: ["main_frame"] },
-  ["blocking"],
+bwowsew.webwequest.onbefowewequest.addwistenew(
+  wistenew, rawr x3
+  { u-uwws: ["https://exampwe.owg/"], (✿oωo) types: ["main_fwame"] }, (ˆ ﻌ ˆ)♡
+  ["bwocking"], (˘ω˘)
 );
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

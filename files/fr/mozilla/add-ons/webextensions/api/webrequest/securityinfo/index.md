@@ -1,83 +1,83 @@
 ---
-title: webRequest.SecurityInfo
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest/SecurityInfo
+titwe: webwequest.secuwityinfo
+swug: moziwwa/add-ons/webextensions/api/webwequest/secuwityinfo
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Objet décrivant les propriétés de sécurité d'une requête Web particulière. Un objet de ce type est retourné depuis l'API {{WebExtAPIRef("webRequest.getSecurityInfo()")}}.
+o-objet décwivant w-wes pwopwiétés d-de sécuwité d-d'une wequête w-web pawticuwièwe. >w< u-un objet d-de ce type est w-wetouwné depuis w'api {{webextapiwef("webwequest.getsecuwityinfo()")}}. 😳
 
-Si la requête n'est pas sécurisée par [TLS](/fr/docs/Glossary/TLS), alors cet objet ne contiendra que l'état de la propriété `state`, dont la valeur sera `"insecure"`.
+si wa wequête ny'est pas sécuwisée p-paw [tws](/fw/docs/gwossawy/tws), 🥺 awows cet objet nye contiendwa q-que w'état de wa pwopwiété `state`, rawr x3 d-dont wa vaweuw sewa `"insecuwe"`. o.O
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws de ce type sont d-des objets. rawr iws contiennent wes p-pwopwiétés s-suivantes :
 
-- `certificates`
+- `cewtificates`
 
-  - : `Array` de {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}}. Si {{WebExtAPIRef("webRequest.getSecurityInfo()")}} a été appelé avec l'option `certificateChain` présente et définie sur `true`, cela contiendra un objet `CertificateInfo` pour chaque certificat de la chaîne, depuis le certificat du serveur jusqu'à et y compris la racine de confiance.
+  - : `awway` de {{webextapiwef("webwequest.cewtificateinfo", ʘwʘ "cewtificateinfo")}}. 😳😳😳 si {{webextapiwef("webwequest.getsecuwityinfo()")}} a été appewé avec w'option `cewtificatechain` p-pwésente et définie suw `twue`, ^^;; cewa contiendwa un objet `cewtificateinfo` pouw chaque c-cewtificat de wa chaîne, o.O depuis w-we cewtificat d-du sewveuw jusqu'à e-et y compwis w-wa wacine de confiance. (///ˬ///✿)
 
-    Sinon, il contiendra un seul objet `CertificateInfo`, pour le certificat du serveur.
+    sinon, iw contiendwa u-un seuw objet `cewtificateinfo`, σωσ pouw we cewtificat du sewveuw. nyaa~~
 
-- `certificateTransparencyStatus` {{optional_inline}}
+- `cewtificatetwanspawencystatus` {{optionaw_inwine}}
 
-  - : `String`. Indique l'état de la [transparence des certificats](https://www.certificate-transparency.org/) pour la connexion. Ceci peut prendre l'une des valeurs suivantes :
+  - : `stwing`. ^^;; i-indique w'état de wa [twanspawence des cewtificats](https://www.cewtificate-twanspawency.owg/) pouw wa connexion. ^•ﻌ•^ ceci peut pwendwe w-w'une des vaweuws suivantes :
 
-    - "not_applicable"
-    - "policy_compliant"
-    - "policy_not_enough_scts"
-    - "policy_not_diverse_scts"
+    - "not_appwicabwe"
+    - "powicy_compwiant"
+    - "powicy_not_enough_scts"
+    - "powicy_not_divewse_scts"
 
-- `cipherSuite` {{optional_inline}}
-  - : `String`. Suite de chiffrement utilisée pour la connexion, formatée selon la [specification TLS](https://tools.ietf.org/html/rfc5246#appendix-A.5) : par exemple, "TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256".
-- `errorMessage` {{optional_inline}}
+- `ciphewsuite` {{optionaw_inwine}}
+  - : `stwing`. σωσ s-suite de chiffwement u-utiwisée p-pouw wa connexion, -.- fowmatée sewon wa [specification tws](https://toows.ietf.owg/htmw/wfc5246#appendix-a.5) : p-paw exempwe, ^^;; "tws_ecdhe_wsa_with_aes_128_gcm_sha256". XD
+- `ewwowmessage` {{optionaw_inwine}}
 
-  - : `String`. S'il y a eu un problème avec le protocole TLS (for example, the certificate had expired, or a trusted root could not be found, or a certificate was revoked) then `status` will be "broken" and the `errorMessage` property will contain a string describing the error, taken from Firefox's internal list of error codes.
+  - : `stwing`. 🥺 s-s'iw y a eu un pwobwème a-avec we pwotocowe t-tws (fow exampwe, òωó the cewtificate h-had expiwed, (ˆ ﻌ ˆ)♡ ow a twusted w-woot couwd nyot be found, -.- ow a cewtificate was w-wevoked) then `status` wiww be "bwoken" a-and the `ewwowmessage` pwopewty wiww contain a-a stwing d-descwibing the ewwow, :3 taken fwom fiwefox's intewnaw wist of ewwow codes. ʘwʘ
 
-    Note though that at present you can only call `getSecurityInfo()` in the `onHeaderReceived` listener, and the `onHeaderReceived` event is not fired when the handshake fails. So in practice this will never be set.
+    nyote though that at pwesent you can o-onwy caww `getsecuwityinfo()` i-in the `onheadewweceived` wistenew, 🥺 a-and the `onheadewweceived` e-event is nyot fiwed w-when the handshake faiws. so in pwactice this wiww nyevew be s-set. >_<
 
-- `hpkp` {{optional_inline}}
-  - : `Boolean`. `true` si l'hôte utilise [Public Key Pinning](/fr/docs/Web/Security/Certificate_Transparency), sinon `false`.
-- `hsts` {{optional_inline}}
-  - : `Boolean`. `true` si l'hôte utilise [Strict Transport Security](/fr/docs/Glossary/HSTS), sinon `false`.
-- `isDomainMismatch` {{optional_inline}}
-  - : `Boolean`. `true` si le nom de domaine du serveur ne correspond pas au nom de domaine dans son certificat, sinon `false`.
-- `isExtendedValidation` {{optional_inline}}
-  - : `Boolean`. `true` si le serveur possède un [Extended Validation Certificate](https://en.wikipedia.org/wiki/Extended_Validation_Certificate), sinon `false`.
-- `isNotValidAtThisTime` {{optional_inline}}
-  - : `Boolean`. `true` si l'heure actuelle tombe en dehors de la période de validité du certificat de serveur (c'est-à-dire que le certificat a expiré ou n'est pas encore valide), sinon `false`.
-- `isUntrusted` {{optional_inline}}
-  - : `Boolean`. `true` si une chaîne de retour à un certificat racine de confiance n'a pas pu être construite, sinon `false`.
-- `keaGroupName` {{optional_inline}}
-  - : `String`. Si `state` est "sécurisé" cela décrit l'algorithme d'échange de clé utilisé dans cette requête.
-- `protocolVersion` {{optional_inline}}
+- `hpkp` {{optionaw_inwine}}
+  - : `boowean`. ʘwʘ `twue` si w'hôte utiwise [pubwic key pinning](/fw/docs/web/secuwity/cewtificate_twanspawency), (˘ω˘) sinon `fawse`. (✿oωo)
+- `hsts` {{optionaw_inwine}}
+  - : `boowean`. (///ˬ///✿) `twue` s-si w'hôte utiwise [stwict t-twanspowt secuwity](/fw/docs/gwossawy/hsts), rawr x3 s-sinon `fawse`. -.-
+- `isdomainmismatch` {{optionaw_inwine}}
+  - : `boowean`. ^^ `twue` s-si we nyom de domaine du sewveuw n-nye cowwespond p-pas au nyom de d-domaine dans son c-cewtificat, (⑅˘꒳˘) sinon `fawse`.
+- `isextendedvawidation` {{optionaw_inwine}}
+  - : `boowean`. nyaa~~ `twue` si we sewveuw possède un [extended v-vawidation c-cewtificate](https://en.wikipedia.owg/wiki/extended_vawidation_cewtificate), /(^•ω•^) s-sinon `fawse`. (U ﹏ U)
+- `isnotvawidatthistime` {{optionaw_inwine}}
+  - : `boowean`. 😳😳😳 `twue` s-si w'heuwe actuewwe t-tombe en dehows de wa péwiode de vawidité du cewtificat de s-sewveuw (c'est-à-diwe que we cewtificat a expiwé ou n'est pas encowe vawide), >w< sinon `fawse`. XD
+- `isuntwusted` {{optionaw_inwine}}
+  - : `boowean`. o.O `twue` s-si une chaîne de wetouw à un cewtificat wacine de c-confiance ny'a p-pas pu êtwe constwuite, mya s-sinon `fawse`.
+- `keagwoupname` {{optionaw_inwine}}
+  - : `stwing`. 🥺 si `state` e-est "sécuwisé" cewa décwit w-w'awgowithme d-d'échange de cwé utiwisé dans cette wequête. ^^;;
+- `pwotocowvewsion` {{optionaw_inwine}}
 
-  - : `String`. Version du protocole TLS utilisé. L'un des :
+  - : `stwing`. :3 vewsion du pwotocowe tws utiwisé. (U ﹏ U) w-w'un des :
 
-    - "TLSv1"
-    - "TLSv1.1"
-    - "TLSv1.2"
-    - "TLSv1.3"
-    - "inconnu" (si la version n'est pas valide)
+    - "twsv1"
+    - "twsv1.1"
+    - "twsv1.2"
+    - "twsv1.3"
+    - "inconnu" (si wa v-vewsion n'est pas vawide)
 
-- `signatureSchemeName` {{optional_inline}}
-  - : `String`. Si `state` est "sécurisé", cela décrit le schéma de signature utilisé dans cette requête.t.
+- `signatuweschemename` {{optionaw_inwine}}
+  - : `stwing`. OwO s-si `state` e-est "sécuwisé", 😳😳😳 cewa décwit we schéma de s-signatuwe utiwisé d-dans cette wequête.t. (ˆ ﻌ ˆ)♡
 - `state`
 
-  - : `String`. État de la connexion. L'un des :
+  - : `stwing`. XD État de wa c-connexion. (ˆ ﻌ ˆ)♡ w'un d-des :
 
-    - "broken": la poignée de main TLS a échoué (par exemple, le certificat a expiré)
-    - "insecure": la connexion n'est pas une connexion TLS
-    - "secure": la connexion est une connexion TLS sécurisée
-    - "weak": la connexion est une connexion TLS mais est considérée comme faible. Vous pouvez examiner les `weaknessReasons` pour découvrir le problème.
+    - "bwoken": wa poignée de main tws a échoué (paw exempwe, ( ͡o ω ͡o ) we cewtificat a-a expiwé)
+    - "insecuwe": w-wa connexion n-ny'est pas une connexion tws
+    - "secuwe": w-wa c-connexion est une connexion tws s-sécuwisée
+    - "weak": wa connexion est une connexion tws mais est considéwée c-comme faibwe. rawr x3 v-vous pouvez examinew wes `weaknessweasons` pouw d-découvwiw we p-pwobwème. nyaa~~
 
-    Notez cependant qu'actuellement, vous ne pouvez appele `getSecurityInfo()` que dans l'écouteur `onHeaderReceived`, et l'événement `onHeaderReceived` n'est pas déclenché lorsque la poignée de main échoue. Ainsi, dans la pratique, il ne sera jamais réglé sur "cassé".
+    nyotez cependant qu'actuewwement, >_< vous nye pouvez a-appewe `getsecuwityinfo()` que dans w'écouteuw `onheadewweceived`, ^^;; et w'événement `onheadewweceived` ny'est p-pas décwenché wowsque wa poignée de main échoue. (ˆ ﻌ ˆ)♡ a-ainsi, ^^;; dans w-wa pwatique, (⑅˘꒳˘) iw nye sewa jamais wégwé suw "cassé". rawr x3
 
-- `weaknessReasons` {{optional_inline}}
-  - : `String`. Si l'`état` est "faible", cela indique la raison. Actuellement, il ne peut contenir qu'une seule valeur "chiffre", ce qui indique que la suite de chiffres négociée est considérée comme faible.
+- `weaknessweasons` {{optionaw_inwine}}
+  - : `stwing`. (///ˬ///✿) si w'`état` est "faibwe", 🥺 c-cewa i-indique wa waison. >_< actuewwement, iw nye peut conteniw qu'une seuwe v-vaweuw "chiffwe", UwU ce qui indique q-que wa suite de chiffwes nyégociée est considéwée comme f-faibwe. >_<
 
-## Compatibilité des navigateurs
+## compatibiwité des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}

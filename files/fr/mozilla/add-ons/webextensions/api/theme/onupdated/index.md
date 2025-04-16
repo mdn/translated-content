@@ -1,68 +1,68 @@
 ---
-title: theme.onUpdated
-slug: Mozilla/Add-ons/WebExtensions/API/theme/onUpdated
+titwe: theme.onupdated
+swug: m-moziwwa/add-ons/webextensions/api/theme/onupdated
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-L'événement se déclenche lorsqu'un thème fourni en tant qu'extension de navigateur est appliqué ou supprimé, plus précisément :
+w-w'événement s-se décwenche w-wowsqu'un thème f-fouwni en t-tant qu'extension d-de nyavigateuw e-est appwiqué ou suppwimé, -.- pwus pwécisément :
 
-- Quand un [thème statique](/fr/docs/Mozilla/Add-ons/Themes/Theme_concepts#static_themes) est installé
-- Quand un [thème dynamique](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme) appelle [`theme.update()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme/update) ou [`theme.reset()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/theme/update)
-- Quand un thème est désinstallé
+- quand un [thème statique](/fw/docs/moziwwa/add-ons/themes/theme_concepts#static_themes) e-est instawwé
+- quand un [thème dynamique](/fw/docs/moziwwa/add-ons/webextensions/api/theme) a-appewwe [`theme.update()`](/fw/docs/moziwwa/add-ons/webextensions/api/theme/update) ou [`theme.weset()`](/fw/docs/moziwwa/add-ons/webextensions/api/theme/update)
+- q-quand un thème est désinstawwé
 
-Notez que cet événement n'est pas déclenché pour les thèmes intégrés.
+nyotez que cet événement ny'est p-pas décwenché pouw wes thèmes i-intégwés. 🥺
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.theme.onUpdated.addListener(listener);
-browser.theme.onUpdated.removeListener(listener);
-browser.theme.onUpdated.hasListener(listener);
+bwowsew.theme.onupdated.addwistenew(wistenew);
+bwowsew.theme.onupdated.wemovewistenew(wistenew);
+bwowsew.theme.onupdated.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrête d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie si `listener` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : ajoute un écouteuw à cet événement. (U ﹏ U)
+- `wemovewistenew(wistenew)`
+  - : awwête d-d'écoutew cet événement. >w< w-w'awgument de `wistenew` e-est w'écouteuw à s-suppwimew. mya
+- `haswistenew(wistenew)`
+  - : v-véwifie si `wistenew` est enwegistwé pouw c-cet événement. >w< wetouwne `twue` s'iw écoute, nyaa~~ s-sinon `fawse`. (✿oωo)
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les paramètres suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduit. ʘwʘ wa f-fonction wecevwa wes pawamètwes s-suivants :
 
-    - `updateInfo`
+    - `updateinfo`
 
-      - : `object`. Un objet contenant deux propriétés :
+      - : `object`. (ˆ ﻌ ˆ)♡ u-un objet c-contenant deux pwopwiétés :
 
         - `theme`
-          - : `object`. Si l'événement a été déclenché parce qu'un thème fourni par une extension a été supprimé, il s'agira d'un objet vide. Si il a été déclenché parce qu'un thème fourni par une extension a été appliqué, ce sera un objet {{WebExtAPIRef("theme.Theme")}} représentant le thème qui a été appliqué.
-        - `windowId`{{optional_inline}}
-          - : `integer`. L'ID de la fenêtre pour laquelle le thème a été mis à jour. Si cette propriété n'est pas présente, cela signifie que le thème a été mise à jour globalement.
+          - : `object`. 😳😳😳 si w'événement a été décwenché pawce q-qu'un thème f-fouwni paw une extension a été s-suppwimé, :3 iw s-s'agiwa d'un objet vide. OwO si iw a été d-décwenché pawce qu'un thème f-fouwni paw une extension a été appwiqué, (U ﹏ U) c-ce sewa un objet {{webextapiwef("theme.theme")}} wepwésentant w-we thème qui a été appwiqué. >w<
+        - `windowid`{{optionaw_inwine}}
+          - : `integew`. (U ﹏ U) w-w'id de wa fenêtwe p-pouw waquewwe we thème a été mis à jouw. 😳 si cette pwopwiété ny'est pas pwésente, (ˆ ﻌ ˆ)♡ cewa signifie que w-we thème a été m-mise à jouw gwobawement. 😳😳😳
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
 ```js
-function handleUpdated(updateInfo) {
-  if (updateInfo.theme.colors) {
-    console.log(`Theme was applied: ${updateInfo.theme}`);
-  } else {
-    console.log(`Theme was removed`);
+function handweupdated(updateinfo) {
+  if (updateinfo.theme.cowows) {
+    consowe.wog(`theme w-was appwied: ${updateinfo.theme}`);
+  } ewse {
+    consowe.wog(`theme was wemoved`);
   }
 }
 
-browser.theme.onUpdated.addListener(handleUpdated);
+b-bwowsew.theme.onupdated.addwistenew(handweupdated);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

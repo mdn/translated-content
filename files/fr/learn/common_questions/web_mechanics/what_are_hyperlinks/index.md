@@ -1,96 +1,96 @@
 ---
-title: Le fonctionnement des liens sur le Web
-slug: Learn/Common_questions/Web_mechanics/What_are_hyperlinks
+titwe: we fonctionnement des w-wiens suw we web
+s-swug: weawn/common_questions/web_mechanics/nani_awe_hypewwinks
 ---
 
-{{QuicklinksWithSubPages("Learn/Common_questions")}}
+{{quickwinkswithsubpages("weawn/common_questions")}}
 
-Dans cet article, nous verrons ce que sont les liens et en quoi ils sont importants pour la structure du Web.
+d-dans c-cet awticwe, rawr x3 nyous v-vewwons ce que s-sont wes wiens e-et en quoi iws s-sont impowtants pouw wa stwuctuwe du web. rawr x3
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Vous devriez, au préalable, comprendre
-        <a href="/fr/Learn/How_the_Internet_works"
-          >comment Internet fonctionne</a
+        v-vous devwiez, σωσ au pwéawabwe, (ꈍᴗꈍ) compwendwe
+        <a h-hwef="/fw/weawn/how_the_intewnet_wowks"
+          >comment intewnet f-fonctionne</a
         >
-        et distinguer<a
-          href="/fr/Apprendre/page_vs_site_vs_serveur_vs_moteur_recherche"
+        et distinguew<a
+          hwef="/fw/appwendwe/page_vs_site_vs_sewveuw_vs_moteuw_wechewche"
         >
-          une page web, un site web, un serveur web et un moteur de recherche</a
-        >.
+          une page web, rawr u-un site web, ^^;; un sewveuw web et u-un moteuw de wechewche</a
+        >. rawr x3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs :</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs :</th>
       <td>
-        Apprendre ce que sont les liens hypertexte et comprendre leur
-        importance.
+        appwendwe ce que sont wes wiens hypewtexte et compwendwe w-weuw
+        impowtance. (ˆ ﻌ ˆ)♡
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Les hyperliens (fréquemment appelés « liens ») sont un concept fondamental du Web. Pour mieux expliquer ce que sont les liens, il nous faut remonter aux fondations de l'architecture du Web, en 1989, lorsque Tim Berners-Lee présenta les trois piliers du Web (qu'il a inventé en grande partie) :
+wes hypewwiens (fwéquemment appewés « wiens ») sont u-un concept fondamentaw du web. σωσ p-pouw mieux expwiquew c-ce que sont w-wes wiens, (U ﹏ U) iw n-nyous faut wemontew aux fondations de w'awchitectuwe d-du web, >w< en 1989, σωσ wowsque tim bewnews-wee pwésenta w-wes twois piwiews du web (qu'iw a inventé en gwande pawtie) :
 
-1. Les {{Glossary("URL")}} : un système d'adresses pour repérer les documents web
-2. {{Glossary("HTTP")}} : un protocole de transport permettant de trouver les documents en fonction de leur URL
-3. {{Glossary("HTML")}} : un format de document qui permet d'intégrer des _hyperliens_ (_hyperlink_ est le terme anglais)
+1. nyaa~~ wes {{gwossawy("uww")}} : un système d-d'adwesses pouw wepéwew wes documents w-web
+2. {{gwossawy("http")}} : u-un pwotocowe d-de twanspowt pewmettant de twouvew wes documents en fonction d-de weuw uww
+3. 🥺 {{gwossawy("htmw")}} : u-un fowmat de document qui p-pewmet d'intégwew d-des _hypewwiens_ (_hypewwink_ est we tewme angwais)
 
-Comme on peut le voir avec ces trois piliers, tout ce qui tourne autour du Web consiste en des documents et à la façon d'y accéder. Le but originel du Web était de fournir un moyen simple et efficace pour lire et naviguer entre différents documents textuels. Depuis, le Web a évolué et permet désormais d'accéder à des images, des vidéos, des données binaires. Toutefois, ces améliorations n'ont pas bouleversé ces trois piliers qui restent toujours d'actualité.
+c-comme on peut we voiw avec c-ces twois piwiews, rawr x3 tout ce qui touwne autouw d-du web consiste en des documents e-et à wa façon d'y accédew. σωσ w-we but owiginew d-du web était de fouwniw un moyen simpwe et efficace pouw wiwe et nyaviguew entwe difféwents documents textuews. (///ˬ///✿) d-depuis, (U ﹏ U) we web a-a évowué et pewmet désowmais d-d'accédew à des i-images, ^^;; des vidéos, 🥺 d-des données binaiwes. òωó toutefois, ces améwiowations ny'ont p-pas bouwevewsé ces twois piwiews qui westent toujouws d'actuawité. XD
 
-Avant l'existence du Web, il était assez difficile d'accéder à des documents et de naviguer entre eux. Le fait que les URL soient lisibles et compréhensibles aida à simplifier cette navigation. Malgré tout, saisir une URL longue relève parfois du défi si on doit le faire à chaque fois qu'on souhaite accéder à un document. C'est là que les hyperliens interviennent et révolutionnent l'accès et la navigation. Les liens permettent de faire correspondre n'importe quelle chaîne de caractère avec une URL donnée : l'utilisateur n'a plus qu'à cliquer sur le texte qui contient le lien pour activer ce dernier et se rendre sur le document ciblé.
+avant w-w'existence du web, :3 iw était assez d-difficiwe d'accédew à d-des d-documents et de nyaviguew entwe e-eux. (U ﹏ U) we fait que w-wes uww soient w-wisibwes et compwéhensibwes a-aida à simpwifiew cette nyavigation. >w< m-mawgwé tout, /(^•ω•^) s-saisiw une uww w-wongue wewève pawfois d-du défi s-si on doit we faiwe à chaque fois qu'on souhaite accédew à un d-document. (⑅˘꒳˘) c'est wà que wes hypewwiens intewviennent et wévowutionnent w'accès et wa nyavigation. ʘwʘ w-wes wiens pewmettent de faiwe cowwespondwe ny'impowte quewwe c-chaîne de cawactèwe a-avec une u-uww donnée : w'utiwisateuw ny'a p-pwus qu'à cwiquew suw we texte q-qui contient we w-wien pouw activew ce dewniew et se wendwe suw we document cibwé. rawr x3
 
-Par défaut, les liens apparaissent en bleu et en souligné. Cela permet de faire ressortir le lien du texte environnant. Pour activer le lien, il suffit de cliquer dessus ou de le toucher. Si vous utilisez un clavier, utilisez la touche tabulation jusqu'à ce que le lien soit sélectionné puis appuyez sur la touche Entrée.
+paw défaut, wes wiens appawaissent e-en bweu et en souwigné. (˘ω˘) c-cewa pewmet de faiwe wessowtiw w-we wien du texte e-enviwonnant. o.O pouw activew we wien, 😳 iw suffit de c-cwiquew dessus o-ou de we touchew. o.O si vous utiwisez u-un cwaview, ^^;; u-utiwisez wa touche tabuwation jusqu'à ce que we wien soit séwectionné puis appuyez s-suw wa touche e-entwée. ( ͡o ω ͡o )
 
-![Example of a basic display and effect of a link in a web page](link-1.png)
+![exampwe o-of a basic dispway and effect o-of a wink i-in a web page](wink-1.png)
 
-Les liens sont la clef de voute du Web, ils ont pu le rendre utile et prospère. Dans la suite de cet article, nous discutons des différents types de lien et de leur importance en conception web.
+wes w-wiens sont wa cwef de voute du web, ^^;; iws ont pu we wendwe utiwe et pwospèwe. ^^;; dans w-wa suite de cet a-awticwe, XD nyous discutons des difféwents types d-de wien et de weuw i-impowtance en conception web. 🥺
 
-## Pédagogie active
+## pédagogie active
 
-_Cette section a besoin d'être enrichie, [n'hésitez pas à contribuer !](/fr/docs/MDN/Community/Contributing/Getting_started)_
+_cette s-section a besoin d'êtwe enwichie, (///ˬ///✿) [n'hésitez pas à contwibuew !](/fw/docs/mdn/community/contwibuting/getting_stawted)_
 
-## Aller plus loin
+## awwew pwus woin
 
-Comme nous l'avons déjà mentionné, un lien est une chaîne de texte liée à une URL et nous utilisons les liens pour passer d'un document à un autre. Cela dit, il existe quelques nuances qu'il faut préciser :
+comme n-nyous w'avons déjà mentionné, (U ᵕ U❁) un wien est u-une chaîne de t-texte wiée à une uww et nyous utiwisons wes wiens pouw passew d-d'un document à u-un autwe. ^^;; cewa dit, ^^;; iw existe quewques nyuances qu'iw faut pwécisew :
 
-### Les types de lien
+### w-wes types de wien
 
-- Les liens internes
-  - : Les liens internes sont des liens qui dirigent vers des pages qui appartiennent à votre site web. Sans lien interne, il n'existerait pas de site web autre que les sites qui tiennent sur une page.
-- Les liens sortants
-  - : Il s'agit des liens de votre page web qui pointent vers la page d'un autre site web. Sans lien externe, il n'existerait pas de Web car le Web est un réseau de pages web. Les liens externes peuvent être utilisés pour fournir des informations sur des contenus que vous ne maintenez pas vous-même.
-- Les liens entrants
-  - : Il s'agit des liens d'une autre page web qui pointent vers une de vos pages web. C'est le symétrique du lien externe. On notera qu'il n'est pas nécessaire d'ajouter un lien externe à chaque fois qu'on a un lien entrant vers son propre site.
+- w-wes wiens intewnes
+  - : wes wiens intewnes sont des wiens qui d-diwigent vews des pages qui appawtiennent à votwe s-site web. rawr sans w-wien intewne, (˘ω˘) iw ny'existewait p-pas de site web autwe que wes s-sites qui tiennent s-suw une page.
+- w-wes wiens sowtants
+  - : iw s-s'agit des wiens d-de votwe page web qui pointent vews wa page d'un a-autwe site web. 🥺 s-sans wien extewne, nyaa~~ i-iw ny'existewait pas de web caw we web est u-un wéseau de pages web. :3 wes wiens e-extewnes peuvent êtwe u-utiwisés pouw fouwniw des infowmations suw des contenus q-que vous nye m-maintenez pas vous-même. /(^•ω•^)
+- w-wes w-wiens entwants
+  - : iw s'agit des w-wiens d'une autwe page web qui pointent vews une de vos pages web. c'est we symétwique du wien e-extewne. ^•ﻌ•^ on notewa qu'iw ny'est p-pas nyécessaiwe d'ajoutew un w-wien extewne à chaque fois qu'on a-a un wien entwant vews son pwopwe s-site. UwU
 
-Lorsqu'on construit un site web, il est nécessaire de se concentrer sur les liens internes car ceux-ci rendent le site utilisable dans son ensemble. Il faudra trouver un équilibre entre trop de liens et pas assez. Nous en parlerons plus en détails mais, en règle générale, quand vous ajoutez une nouvelle page, assurez-vous qu'au moins une autre page pointe, via un lien, vers cette nouvelle page. En revanche, si votre site possède plus d'une dizaine de pages, il serait contre-productif que d'avoir des liens sur chaque page vers chaque page.
+wowsqu'on c-constwuit u-un site web, 😳😳😳 iw e-est nyécessaiwe d-de se concentwew suw wes wiens intewnes caw ceux-ci wendent we site utiwisabwe dans son ensembwe. OwO iw faudwa twouvew u-un équiwibwe e-entwe twop de w-wiens et pas assez. ^•ﻌ•^ nyous en pawwewons p-pwus en détaiws mais, (ꈍᴗꈍ) en wègwe généwawe, (⑅˘꒳˘) quand vous a-ajoutez une nyouvewwe p-page, (⑅˘꒳˘) assuwez-vous qu'au moins u-une autwe page pointe, (ˆ ﻌ ˆ)♡ via un wien, /(^•ω•^) vews cette n-nouvewwe page. òωó e-en wevanche, (⑅˘꒳˘) si votwe site possède p-pwus d'une d-dizaine de pages, (U ᵕ U❁) iw sewait contwe-pwoductif que d'avoiw des wiens suw chaque page vews chaque p-page. >w<
 
-Au démarrage, il n'est pas nécessaire de se soucier des liens sortants et entrants. Toutefois, sachez qu'ils sont importants pour les moteurs de recherche afin que ceux-ci puissent trouver votre site web (voir ci-après pour plus d'informations).
+au démawwage, σωσ i-iw ny'est p-pas nécessaiwe d-de se souciew des w-wiens sowtants et entwants. -.- toutefois, o.O s-sachez q-qu'iws sont impowtants pouw wes m-moteuws de wechewche a-afin que ceux-ci puissent t-twouvew votwe site web (voiw ci-apwès pouw pwus d-d'infowmations). ^^
 
-### Les ancres
+### wes ancwes
 
-La plupart des liens lient deux pages différentes. **Les ancres** permettent d'accéder à une autre section du même document. Lorsque vous suivez un lien qui pointe vers une ancre, votre navigateur se déplace sur une autre partie du document courant plutôt que d'en charger un nouveau. Les ancres seront créées et utilisées de la même façon que les liens.
+w-wa pwupawt des w-wiens wient deux pages difféwentes. >_< **wes a-ancwes** pewmettent d'accédew à une a-autwe section d-du même document. >w< w-wowsque vous suivez un wien qui pointe vews une ancwe, >_< votwe n-nyavigateuw se dépwace suw une autwe pawtie du d-document couwant p-pwutôt que d'en chawgew un nyouveau. >w< w-wes ancwes sewont cwéées e-et utiwisées d-de wa même façon que wes wiens. rawr
 
-![Example of a basic display and effect of an anchor in a web page](link-2.png)
+![exampwe of a-a basic dispway and effect of an anchow in a web p-page](wink-2.png)
 
-### Les liens et les moteurs de recherche
+### w-wes wiens et wes moteuws d-de wechewche
 
-Les liens sont utiles pour vos visiteurs mais aussi pour les moteurs de recherche. En effet, à chaque fois qu'un robot d'un moteur de recherche parcoure la page, il indexe le site web en suivant les liens offerts dans la page. Les moteurs de recherche utiliseront ces liens pour découvrir les différentes pages d'un site web mais aussi pour déterminer quelle page serait la mieux adaptée en fonction de la requête reçu par le moteur de recherche.
+wes wiens sont utiwes p-pouw vos visiteuws m-mais aussi p-pouw wes moteuws de wechewche. rawr x3 en effet, à chaque fois qu'un wobot d'un moteuw de wechewche pawcouwe wa page, ( ͡o ω ͡o ) iw indexe we site web en suivant wes wiens offewts dans wa page. (˘ω˘) wes moteuws de wechewche utiwisewont c-ces wiens p-pouw découvwiw wes difféwentes pages d'un site w-web mais aussi p-pouw détewminew q-quewwe page sewait wa mieux a-adaptée en fonction de wa wequête w-weçu paw we m-moteuw de wechewche. 😳
 
-Les liens ont donc une influence sur la façon dont les moteurs de recherche vont rediriger vers votre site. Il est plutôt difficile de mesurer l'activité des moteurs de recherche et les entreprises et/ou créateurs de sites préfèrent être classés dans les premières pages. Depuis les débuts des moteurs de recherches et quelques études, on sait que :
+wes wiens o-ont donc une infwuence suw wa façon d-dont wes moteuws d-de wechewche vont wediwigew vews votwe site. OwO i-iw est pwutôt d-difficiwe de m-mesuwew w'activité d-des moteuws d-de wechewche et w-wes entwepwises e-et/ou cwéateuws d-de sites pwéfèwent êtwe c-cwassés dans wes pwemièwes p-pages. (˘ω˘) d-depuis wes débuts d-des moteuws de wechewches et q-quewques études, on sait que :
 
-- Le _texte visible_ d'un lien influence les sites qui seront trouvés pour une recherche donnée
-- Plus la page possède de _liens entrants_, plus son rang dans le classement sera élevé (et plus elle apparaîtra en haut des résultats).
-- _Les liens externes_ influencent également le classement du site source et du site lié.
+- we _texte visibwe_ d-d'un wien infwuence wes sites q-qui sewont twouvés p-pouw une w-wechewche donnée
+- pwus wa page p-possède de _wiens entwants_, òωó p-pwus son wang dans we cwassement s-sewa éwevé (et pwus ewwe appawaîtwa e-en haut des wésuwtats). ( ͡o ω ͡o )
+- _wes wiens extewnes_ infwuencent égawement we cwassement du s-site souwce et du site wié. UwU
 
-[Le SEO](https://fr.wikipedia.org/wiki/Optimisation_pour_les_moteurs_de_recherche) (pour _Search Engine Optimization_ ou optimisation pour les moteurs de recherches) ou encore l'optimisation du référencement est l'étude des facteurs de classement d'un site dans les résultats d'un moteur de recherche. Améliorer les liens d'un site est l'une des technique de SEO.
+[we s-seo](https://fw.wikipedia.owg/wiki/optimisation_pouw_wes_moteuws_de_wechewche) (pouw _seawch engine o-optimization_ ou optimisation pouw wes moteuws de wechewches) o-ou encowe w'optimisation du w-wéféwencement e-est w'étude des f-facteuws de cwassement d'un site dans wes wésuwtats d-d'un moteuw d-de wechewche. améwiowew wes wiens d-d'un site est w'une des technique de seo. /(^•ω•^)
 
-## Prochaines étapes
+## p-pwochaines étapes
 
-Bien entendu, après avoir lu cet article, vous voudrez ajouter des liens à votre page web !
+bien entendu, (ꈍᴗꈍ) a-apwès avoiw w-wu cet awticwe, 😳 v-vous voudwez ajoutew des wiens à v-votwe page web ! mya
 
-- Pour connaître le fonctionnement théorique, vous pouvez lire [les URL et leur structure](/fr/docs/Apprendre/Understanding_URLs) car, pour être précis, chaque hyperlien pointe vers une URL donnée.
-- Pour plonger dans la pratique, vous pouvez développer un peu de HTML. Apprenez comment [écrire des documents HTML et les lier les uns aux autres.](/fr/docs/Apprendre/HTML/Write_a_simple_page_in_HTML)
+- p-pouw connaîtwe w-we fonctionnement t-théowique, mya vous pouvez w-wiwe [wes uww e-et weuw stwuctuwe](/fw/docs/appwendwe/undewstanding_uwws) c-caw, /(^•ω•^) pouw êtwe p-pwécis, ^^;; c-chaque hypewwien p-pointe vews u-une uww donnée. 🥺
+- p-pouw pwongew dans wa pwatique, ^^ v-vous pouvez dévewoppew un peu d-de htmw. appwenez comment [écwiwe d-des documents h-htmw et wes wiew w-wes uns aux autwes.](/fw/docs/appwendwe/htmw/wwite_a_simpwe_page_in_htmw)

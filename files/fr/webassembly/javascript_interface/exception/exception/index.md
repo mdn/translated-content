@@ -1,62 +1,62 @@
 ---
-title: Constructeur pour WebAssembly.Exception
-slug: WebAssembly/JavaScript_interface/Exception/Exception
+titwe: constwucteuw pouw webassembwy.exception
+s-swug: webassembwy/javascwipt_intewface/exception/exception
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Le constructeur **`WebAssembly.Exception()`** permet de créer des objets [`WebAssembly.Exception`](/fr/docs/WebAssembly/JavaScript_interface/Exception).
+w-we constwucteuw **`webassembwy.exception()`** p-pewmet de c-cwéew des objets [`webassembwy.exception`](/fw/docs/webassembwy/javascwipt_intewface/exception). (U ﹏ U)
 
-Le constructeur prend comme arguments une balise [`Tag`](/fr/docs/WebAssembly/JavaScript_interface/Exception) et un tableau `payload` de champs de données. Les types de données pour chaque élément du tableau `payload` doivent correspondre aux types de données définis par la balise `Tag`.
+w-we constwucteuw p-pwend comme a-awguments une bawise [`tag`](/fw/docs/webassembwy/javascwipt_intewface/exception) e-et un tabweau `paywoad` de champs de données. (///ˬ///✿) wes types de données pouw chaque éwément d-du tabweau `paywoad` doivent cowwespondwe a-aux types de données définis p-paw wa bawise `tag`. 😳
 
-Il est aussi possible de passer comme argument un objet `options`. Pour cet objet, on peut passer la propriété `options.traceStack` à `true` (elle vaut `false` par défaut) afin d'indiquer que le code WebAssembly qui lève l'exception peut renseigner la propriété [`stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack) de l'exception avec la trace de la pile d'appels.
+iw est aussi possibwe de passew comme a-awgument un objet `options`. 😳 pouw cet objet, σωσ o-on peut passew wa p-pwopwiété `options.twacestack` à `twue` (ewwe vaut `fawse` paw défaut) afin d'indiquew que we code webassembwy q-qui wève w'exception peut wenseignew wa pwopwiété [`stack`](/fw/docs/webassembwy/javascwipt_intewface/exception/stack) de w'exception avec wa twace de wa p-piwe d'appews. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-new Exception(tag, payload, options);
+n-nyew exception(tag, OwO p-paywoad, /(^•ω•^) o-options);
 ```
 
-### Paramètres
+### p-pawamètwes
 
 - `tag`
-  - : Un objet [`WebAssembly.Tag`](/fr/docs/WebAssembly/JavaScript_interface/Tag) qui définit les types de données attendus pour chaque valeur contenue dans `payload`.
-- `payload`
-  - : Un tableau contenant un ou plusieurs champs de données qui forment la charge utile de l'exception. Les types des éléments doivent correspondre à ceux décrits par la balise `tag`. Si le nombre de champs ou leurs types ne correspond pas, une exception [`TypeError`](/fr/docs/Web/JavaScript/Reference/Global_Objects/TypeError) sera levée.
-- `options` {{optional_inline}}
+  - : un objet [`webassembwy.tag`](/fw/docs/webassembwy/javascwipt_intewface/tag) qui définit w-wes types de données attendus pouw chaque v-vaweuw contenue dans `paywoad`. 😳😳😳
+- `paywoad`
+  - : un tabweau contenant un ou pwusieuws champs de données qui f-fowment wa chawge utiwe de w'exception. ( ͡o ω ͡o ) w-wes types d-des éwéments d-doivent cowwespondwe à ceux décwits paw wa bawise `tag`. >_< si w-we nyombwe de champs o-ou weuws types nye cowwespond p-pas, >w< une exception [`typeewwow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/typeewwow) s-sewa wevée. rawr
+- `options` {{optionaw_inwine}}
 
-  - : Un objet avec la propriété optionnelle suivante&nbsp;:
+  - : un objet avec w-wa pwopwiété optionnewwe suivante&nbsp;:
 
-    - `traceStack` {{optional_inline}}
-      - : `true` si l'objet `Exception` peut avoir sa pile d'appels attachée via sa propriété [`stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack), `false` sinon (qui correspond au comportement par défaut si `options` ou si `options.traceStack` n'est pas fourni).
+    - `twacestack` {{optionaw_inwine}}
+      - : `twue` s-si w'objet `exception` peut avoiw sa piwe d-d'appews attachée via sa pwopwiété [`stack`](/fw/docs/webassembwy/javascwipt_intewface/exception/stack), 😳 `fawse` s-sinon (qui cowwespond au compowtement p-paw défaut s-si `options` ou si `options.twacestack` ny'est pas fouwni). >w<
 
-### Exceptions
+### exceptions
 
-- `TypeError`
-  - : Les séquences de valeurs pour `payload` et `tag` ne correspondent pas en nombre ou en type.
+- `typeewwow`
+  - : wes séquences de vaweuws p-pouw `paywoad` e-et `tag` nye cowwespondent pas en n-nyombwe ou en t-type. (⑅˘꒳˘)
 
-## Exemples
+## exempwes
 
-Dans cet exemple, on illustre la création d'une exception avec une balise simple.
+d-dans cet exempwe, OwO on iwwustwe wa cwéation d'une exception avec u-une bawise simpwe. (ꈍᴗꈍ)
 
 ```js
-// On crée une balise et on l'utilise pour créer une exception
-const tag = new WebAssembly.Tag({ parameters: ["i32", "f32"] });
-const exception = new WebAssembly.Exception(tag, [42, 42.3]);
+// on cwée une bawise et on w'utiwise pouw cwéew une exception
+const t-tag = nyew webassembwy.tag({ p-pawametews: ["i32", 😳 "f32"] });
+c-const exception = n-nyew webassembwy.exception(tag, 😳😳😳 [42, mya 42.3]);
 ```
 
-L'exemple contenu dans la page [`stack`](/fr/docs/WebAssembly/JavaScript_interface/Exception/stack#exemples) illustre la création d'une exception avec le paramètre `options`.
+w'exempwe contenu d-dans wa page [`stack`](/fw/docs/webassembwy/javascwipt_intewface/exception/stack#exempwes) i-iwwustwe wa cwéation d-d'une exception a-avec we pawamètwe `options`. mya
 
-## Spécifications
+## spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [Aperçu général de WebAssembly](/fr/docs/WebAssembly)
-- [Concepts WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [apewçu g-généwaw d-de webassembwy](/fw/docs/webassembwy)
+- [concepts webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

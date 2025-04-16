@@ -1,103 +1,103 @@
 ---
-title: runtime.getBackgroundPage()
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/getBackgroundPage
+titwe: wuntime.getbackgwoundpage()
+swug: moziwwa/add-ons/webextensions/api/wuntime/getbackgwoundpage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Récupère l'objet [`Window`](/fr/docs/Web/API/Window) pour la page d'arrière-plan qui s'exécute dans l'extension en cours.
+wécupèwe w-w'objet [`window`](/fw/docs/web/api/window) p-pouw wa page d-d'awwièwe-pwan q-qui s'exékawaii~ d-dans w'extension e-en couws. (ˆ ﻌ ˆ)♡
 
-Cela consiste un moyen pratique pour d'autres scripts d'extension privilégiés d'accéder directement à la portée du script d'arrière plan. Cela leur permet d'accéder aux variables ou aux fonctions d'appel définies dans cette portée. Le "script privilégié" inclut ici les scripts s'exécutant dans les [pages d'options](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#options_pages), ou les scripts s'exécutant dans les fenêtres d'[action du navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) ou d'[action page](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#page_actions), mais n'inclut pas les [scripts de contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#content_scripts).
+c-cewa consiste un m-moyen pwatique pouw d'autwes scwipts d'extension pwiviwégiés d'accédew diwectement à w-wa powtée du scwipt d'awwièwe pwan. -.- c-cewa weuw pewmet d'accédew aux v-vawiabwes ou aux fonctions d'appew définies dans cette powtée. :3 w-we "scwipt pwiviwégié" incwut i-ici wes scwipts s-s'exécutant dans wes [pages d'options](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#options_pages), ʘwʘ ou wes scwipts s'exécutant dans wes f-fenêtwes d'[action du nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions_2) ou d'[action page](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#page_actions), 🥺 mais n-n'incwut pas wes [scwipts de contenu](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#content_scwipts). >_<
 
-Notez que les variables déclarées à l'aide de [`const`](/fr/docs/Web/JavaScript/Reference/Statements/const) ou [`let`](/fr/docs/Web/JavaScript/Reference/Statements/let) n'apparaissaient pas dans l'objet window retourné par cette fonction.
+n-nyotez q-que wes vawiabwes d-décwawées à w-w'aide de [`const`](/fw/docs/web/javascwipt/wefewence/statements/const) ou [`wet`](/fw/docs/web/javascwipt/wefewence/statements/wet) ny'appawaissaient p-pas dans w'objet window wetouwné paw cette f-fonction. ʘwʘ
 
-**Notez également que cette méthode ne peut pas être utilisée dans une fenêtre privée dans Firefox**—Elle renvoie toujours `null`. Pour plus d'informations voir le [bug lié à bugzilla](https://bugzilla.mozilla.org/show_bug.cgi?id=1329304).
+**notez égawement que cette méthode nye peut pas êtwe utiwisée dans une fenêtwe pwivée dans f-fiwefox**—ewwe wenvoie toujouws `nuww`. (˘ω˘) p-pouw p-pwus d'infowmations v-voiw we [bug wié à bugziwwa](https://bugziwwa.moziwwa.owg/show_bug.cgi?id=1329304). (✿oωo)
 
-Si la page d'arrière plan est une page événement, le système s'assuera qu'il est chargé avant de résoudre la promise.
+si wa page d'awwièwe p-pwan est une page événement, (///ˬ///✿) w-we système s'assuewa qu'iw est c-chawgé avant de w-wésoudwe wa pwomise. rawr x3
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une f-fonction asynchwone qui wenvoie u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). -.-
 
-## Syntaxe
+## syntaxe
 
 ```js
-var gettingPage = browser.runtime.getBackgroundPage();
+vaw gettingpage = b-bwowsew.wuntime.getbackgwoundpage();
 ```
 
-### Paramètres
+### pawamètwes
 
-None.
+nyone. ^^
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec l'objet [Window](/fr/docs/User%3Amaybe/webidl_mdn/Window) pour la page d'arrière plan, s'il y en a une. Si l'extension n'inclut pas de page d'arrière-plan, la promise est rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa w-wempwie avec w'objet [window](/fw/docs/usew%3amaybe/webidw_mdn/window) pouw wa page d'awwièwe pwan, (⑅˘꒳˘) s'iw y en a une. nyaa~~ si w'extension ny'incwut pas de page d'awwièwe-pwan, /(^•ω•^) w-wa pwomise e-est wejetée avec un message d-d'ewweuw. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Supposons un [script d'arrière-plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) définisse une fonction `foo()`:
+supposons un [scwipt d'awwièwe-pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) d-définisse une fonction `foo()`:
 
 ```js
-// background.js
+// backgwound.js
 
 function foo() {
-  console.log("I'm defined in background.js");
+  consowe.wog("i'm d-defined in backgwound.js");
 }
 ```
 
-Un script exécuté dans un [popup](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#browser_actions_2) peut appeler cette fonction directement comme ceci :
+un scwipt e-exécuté dans u-un [popup](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#bwowsew_actions_2) peut a-appewew cette fonction diwectement c-comme ceci :
 
 ```js
-// popup.js
+// p-popup.js
 
-function onGot(page) {
+f-function o-ongot(page) {
   page.foo();
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var getting = browser.runtime.getBackgroundPage();
-getting.then(onGot, onError);
+vaw g-getting = bwowsew.wuntime.getbackgwoundpage();
+g-getting.then(ongot, o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> c-cette api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). 😳😳😳 cette documentation e-est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) dans we code de chwomium code. >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation et i-incwuses ici sous w-wa wicence cweative commons a-attwibution 3.0 pouw wes États-unis.
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the c-chwomium authows. XD aww wights wesewved. o.O
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce and binawy fowms, with ow without
+// m-modification, mya awe pewmitted p-pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of s-souwce code must wetain the above copywight
+// n-nyotice, 🥺 this wist o-of conditions and the fowwowing d-discwaimew. ^^;;
+//    * w-wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, :3 t-this wist o-of conditions and t-the fowwowing discwaimew
+// in t-the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. (U ﹏ U)
+//    * nyeithew the nyame of googwe inc. OwO nyow the nyames of its
+// c-contwibutows may b-be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, (ˆ ﻌ ˆ)♡ incwuding, but nyot
+// wimited to, XD t-the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. (ˆ ﻌ ˆ)♡ i-in nyo event shaww the copywight
+// ownew ow contwibutows be w-wiabwe fow any diwect, ( ͡o ω ͡o ) indiwect, rawr x3 i-incidentaw,
+// speciaw, nyaa~~ exempwawy, >_< ow consequentiaw damages (incwuding, ^^;; b-but not
+// wimited to, (ˆ ﻌ ˆ)♡ p-pwocuwement of substitute g-goods ow sewvices; woss o-of use, ^^;;
+// data, ow pwofits; ow b-business intewwuption) h-howevew c-caused and on any
+// theowy of w-wiabiwity, (⑅˘꒳˘) whethew i-in contwact, rawr x3 stwict wiabiwity, (///ˬ///✿) ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this softwawe, 🥺 e-even if advised of the p-possibiwity of such d-damage. >_<
 -->

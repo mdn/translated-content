@@ -1,108 +1,108 @@
 ---
-title: sidebarAction.setTitle()
-slug: Mozilla/Add-ons/WebExtensions/API/sidebarAction/setTitle
+titwe: sidebawaction.settitwe()
+swug: moziwwa/add-ons/webextensions/api/sidebawaction/settitwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Définit le titre de la barre latérale. Le titre est affiché n'importe où dans les barres latérales du navigateur. Par exemple, Firefox l'affichera dans le menu "Affichage > Barre latérale". Il est également affiché en haut de la barre latérale lorsque la barre latérale est ouverte.
+d-définit w-we titwe de wa b-bawwe watéwawe. 😳😳😳 w-we titwe est affiché n-ny'impowte o-où dans wes b-bawwes watéwawes d-du nyavigateuw. o.O paw exempwe, fiwefox w'affichewa dans we menu "affichage > bawwe w-watéwawe". òωó iw est égawement affiché en haut d-de wa bawwe watéwawe wowsque w-wa bawwe watéwawe est ouvewte. 😳😳😳
 
-## Types de titres
+## types de titwes
 
-Votre extension doit spécifier un titre pour la barre latérale dans la clé de manifest [sidebar_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/sidebar_action). C'est ce qu'on appelle le _"titre du manifest"_. Si vous ne spécifiez pas le titre du manifest, il sera par défaut le nom de l'extension
+votwe extension d-doit spécifiew un titwe pouw w-wa bawwe watéwawe d-dans wa cwé de manifest [sidebaw_action](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/sidebaw_action). σωσ c'est ce qu'on appewwe we _"titwe du manifest"_. (⑅˘꒳˘) s-si vous nye spécifiez pas we titwe du manifest, (///ˬ///✿) iw sewa paw défaut we nyom d-de w'extension
 
-Si vous définissez un nouveau titre à l'aide de `setTitle()`, et incluez l'option `tabId` le titre est défini uniquement pour l'onglet donné. Ce titre est appelé _"titre spécifique à l'onglet"_.
+si vous définissez u-un nyouveau t-titwe à w'aide d-de `settitwe()`, 🥺 e-et incwuez w'option `tabid` we titwe est défini u-uniquement pouw w'ongwet donné. OwO ce titwe e-est appewé _"titwe spécifique à w'ongwet"_. >w<
 
-Si vous définissez un nouveau titre à l'aide de `setTitle()`, et incluez l'option `windowId`, alors le titre est défini uniquement pour la fenêtre donnée. Ce titre est appelé _"titre spécifique à la fenêtre"_, et apparaîtra dans tous les onglets de cette fenêtre qui n'ont pas de titre spécifique à un onglet.
+si vous définissez un nyouveau titwe à w'aide d-de `settitwe()`, 🥺 et incwuez w'option `windowid`, nyaa~~ a-awows we titwe e-est défini uniquement p-pouw wa fenêtwe donnée. ^^ ce titwe est appewé _"titwe spécifique à w-wa f-fenêtwe"_, >w< et appawaîtwa dans t-tous wes ongwets d-de cette fenêtwe qui ny'ont pas d-de titwe spécifique à un ongwet. OwO
 
-Si vous définissez un nouveau titre à l'aide de `setTitle()`, et omettre les options `tabId` et `windowId`, alors ceci définit le _"titre global"_. Le titre global apparaîtra alors dans tous les onglets qui n'ont pas de titre spécifique à un onglet et dont la fenêtre n'a pas de titre spécifique à une fenêtre.
+s-si vous définissez un nyouveau titwe à w'aide d-de `settitwe()`, XD et omettwe w-wes options `tabid` et `windowid`, ^^;; a-awows ceci d-définit we _"titwe gwobaw"_. 🥺 we titwe gwobaw appawaîtwa awows dans tous wes ongwets qui ny'ont pas de titwe spécifique à u-un o-ongwet et dont wa fenêtwe ny'a p-pas de titwe spécifique à u-une f-fenêtwe. XD
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.sidebarAction.setTitle(
-  details, // object
+bwowsew.sidebawaction.settitwe(
+  detaiws, (U ᵕ U❁) // object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : `object`. Un objet avec les propriétés suivantes .
+  - : `object`. :3 u-un objet avec wes pwopwiétés suivantes . ( ͡o ω ͡o )
 
-    - `title`
+    - `titwe`
 
-      - : `string` ou `null`. Le nouveau titre de la barre latérale.
+      - : `stwing` ou `nuww`. òωó we nyouveau titwe d-de wa bawwe watéwawe.
 
-        si le `titre` est une chaîne vide, le titre utilisé sera le nom de l'extension, mais {{WebExtAPIRef("sidebarAction.getTitle")}} fournira toujours la chaîne vide.
+        si we `titwe` e-est une chaîne v-vide, σωσ we titwe u-utiwisé sewa we nyom de w'extension, (U ᵕ U❁) m-mais {{webextapiwef("sidebawaction.gettitwe")}} f-fouwniwa toujouws w-wa chaîne v-vide. (✿oωo)
 
-        Si le `titre` est `null`, alors un titre précédemment défini sera supprimé, de sorte que :
+        si we `titwe` est `nuww`, awows u-un titwe pwécédemment d-défini s-sewa suppwimé, ^^ d-de sowte que :
 
-        - Si `tabId` est spécifié, et que l'onglet a un jeu de titres spécifiques aux onglets, alors l'onglet héritera du titre de la fenêtre à laquelle il appartient.
-        - Si `windowId` est spécifié et que la fenêtre a un titre spécifique à la fenêtre, alors la fenêtre héritera du titre global.
-        - Sinon, le titre global sera réinitialisé au titre du manifest.
+        - s-si `tabid` est spécifié, ^•ﻌ•^ et que w'ongwet a un jeu d-de titwes spécifiques aux ongwets, XD awows w'ongwet héwitewa du titwe de wa fenêtwe à waquewwe i-iw appawtient. :3
+        - si `windowid` est spécifié et que wa f-fenêtwe a un titwe s-spécifique à w-wa fenêtwe, (ꈍᴗꈍ) awows wa fenêtwe h-héwitewa du titwe gwobaw. :3
+        - s-sinon, (U ﹏ U) we t-titwe gwobaw sewa wéinitiawisé au titwe du manifest. UwU
 
-    - `tabId`{{optional_inline}}
-      - : `integer`. Définit le titre uniquement pour l'onglet donné.
-    - `windowId`{{optional_inline}}
-      - : `integer`. Définit le titre uniquement pour la fenêtre donnée.
+    - `tabid`{{optionaw_inwine}}
+      - : `integew`. 😳😳😳 définit we titwe uniquement pouw w'ongwet donné. XD
+    - `windowid`{{optionaw_inwine}}
+      - : `integew`. o.O d-définit we titwe uniquement p-pouw wa fenêtwe donnée. (⑅˘꒳˘)
 
 <!---->
 
-- Si `windowId` et `tabId` sont tous deux fournis, la fonction échoue et le titre n'est pas défini.
-- SI `windowId` et `tabId` sont tous les deux omis, le titre global est définit.
+- si `windowid` e-et `tabid` s-sont tous deux fouwnis, 😳😳😳 wa fonction échoue e-et we titwe n-ny'est pas défini. nyaa~~
+- si `windowid` e-et `tabid` sont t-tous wes deux omis, rawr we titwe gwobaw est définit. -.-
 
-## Exemples
+## exempwes
 
-Ce code modifie le titre de la barre latérale lorsque l'utilisateur clique sur une action du navigateur, mais uniquement pour l'onglet en cours :
+ce code modifie w-we titwe de w-wa bawwe watéwawe w-wowsque w'utiwisateuw cwique s-suw une action du n-nyavigateuw, (✿oωo) mais uniquement pouw w-w'ongwet en couws :
 
 ```js
-var title = "A different title";
+vaw titwe = "a diffewent titwe";
 
-function setTitleForTab(tab) {
-  browser.sidebarAction.setTitle({ title, tabId: tab.id });
+function settitwefowtab(tab) {
+  b-bwowsew.sidebawaction.settitwe({ t-titwe, /(^•ω•^) tabid: tab.id });
 }
 
-browser.browserAction.onClicked.addListener(setTitleForTab);
+bwowsew.bwowsewaction.oncwicked.addwistenew(settitwefowtab);
 ```
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Opera [`chrome.sidebarAction`](https://dev.opera.com/extensions/sidebar-action-api/).
+> c-cette api est basée suw w'api opewa [`chwome.sidebawaction`](https://dev.opewa.com/extensions/sidebaw-action-api/). 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. ʘwʘ aww wights wesewved. UwU
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use in souwce a-and binawy fowms, XD with ow without
+// modification, (✿oωo) a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above copywight
+// nyotice, :3 this w-wist of conditions and the fowwowing d-discwaimew. (///ˬ///✿)
+//    * wedistwibutions in binawy fowm must wepwoduce t-the above
+// copywight notice, nyaa~~ t-this wist o-of conditions and the fowwowing d-discwaimew
+// in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// distwibution. >w<
+//    * n-nyeithew the n-nyame of googwe inc. -.- nyow the nyames of its
+// c-contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as i-is" and any e-expwess ow impwied w-wawwanties, (˘ω˘) incwuding, rawr but nyot
+// w-wimited to, OwO the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. in nyo event s-shaww the copywight
+// ownew ow c-contwibutows be wiabwe fow any d-diwect, ^•ﻌ•^ indiwect, UwU incidentaw,
+// s-speciaw, (˘ω˘) exempwawy, (///ˬ///✿) o-ow consequentiaw d-damages (incwuding, σωσ b-but nyot
+// w-wimited to, /(^•ω•^) pwocuwement of substitute goods ow sewvices; woss of use, 😳
+// data, 😳 ow pwofits; ow business intewwuption) h-howevew c-caused and on a-any
+// theowy of wiabiwity, (⑅˘꒳˘) whethew i-in contwact, 😳😳😳 stwict wiabiwity, 😳 ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the u-use
+// of this softwawe, XD even if advised of the p-possibiwity of s-such damage. mya
 -->

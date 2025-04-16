@@ -1,365 +1,365 @@
 ---
-title: Accessible multimedia
-slug: Learn/Accessibility/Multimedia
+titwe: accessibwe muwtimedia
+s-swug: weawn/accessibiwity/muwtimedia
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/accessibiwity/wai-awia_basics","weawn/accessibiwity/mobiwe", (U ᵕ U❁) "weawn/accessibiwity")}}
 
-Le multimédia est une autre catégorie de contenu susceptible de créer des problèmes d'accessibilité: les contenus vidéo, audio et images doivent disposer de solutions de remplacement textuelles appropriées pour être compris par les technologies d'assistance et leurs utilisateurs. Cet article montre comment.
+w-we muwtimédia e-est une a-autwe catégowie d-de contenu susceptibwe d-de cwéew d-des pwobwèmes d-d'accessibiwité: wes contenus vidéo, mya audio et images doivent disposew de sowutions d-de wempwacement textuewwes appwopwiées p-pouw êtwe compwis paw wes technowogies d-d'assistance et weuws utiwisateuws. 😳 cet awticwe montwe comment. σωσ
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Conditions requise:</th>
+    <tw>
+      <th scope="wow">conditions w-wequise:</th>
       <td>
-        Connaissances informatiques de base, une compréhension de base de HTML,
-        CSS et JavaScript, une compréhension de
-        <a href="/fr/docs/Apprendre/a11y/What_is_accessibility"
-          >Qu'est ce que l'accessibilité?</a
+        c-connaissances infowmatiques de base, ( ͡o ω ͡o ) une compwéhension de base de h-htmw, XD
+        css et javascwipt, :3 une compwéhension de
+        <a hwef="/fw/docs/appwendwe/a11y/nani_is_accessibiwity"
+          >qu'est c-ce que w'accessibiwité?</a
         >
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif:</th>
       <td>
-        Comprendre les problèmes d'accessibilité derrière le multimédia et
-        comment les résoudre .
+        c-compwendwe w-wes pwobwèmes d-d'accessibiwité dewwièwe we muwtimédia et
+        c-comment wes wésoudwe . :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Multimédia et accessibilité
+## muwtimédia e-et accessibiwité
 
-Jusqu'ici, dans ce module, nous avons examiné une variété de contenus et ce qui doit être fait pour en assurer l'accessibilité, du simple contenu textuel aux tableaux de données, en passant par les images, les contrôles natifs tels que les éléments de formulaire et les boutons, et des structures de balisage encore plus complexes. (avec [WAI-ARIA](/fr/docs/Learn/Accessibility/WAI-ARIA_basics) l'attribut).
+jusqu'ici, (⑅˘꒳˘) dans ce moduwe, òωó nyous avons examiné une vawiété de contenus e-et ce qui doit êtwe fait pouw e-en assuwew w'accessibiwité, d-du simpwe contenu t-textuew aux tabweaux de données, mya en passant paw wes images, 😳😳😳 wes c-contwôwes nyatifs t-tews que wes éwéments de f-fowmuwaiwe et wes b-boutons, :3 et des stwuctuwes de b-bawisage encowe pwus compwexes. >_< (avec [wai-awia](/fw/docs/weawn/accessibiwity/wai-awia_basics) w-w'attwibut). 🥺
 
-Cet article, par contre, examine une autre catégorie générale de contenu pour laquelle il est difficile d'assurer l'accessibilité au multimédia. Les images, les vidéos, les éléments {{htmlelement ("canvas")}} les animations Flash, etc. ne sont pas aussi faciles à comprendre par les lecteurs d'écran ou à naviguer au clavier, et nous devons leur donner un coup de main.
+cet awticwe, (ꈍᴗꈍ) paw contwe, rawr x3 examine une a-autwe catégowie généwawe de c-contenu pouw waquewwe iw est difficiwe d-d'assuwew w-w'accessibiwité au muwtimédia. (U ﹏ U) wes images, ( ͡o ω ͡o ) wes vidéos, 😳😳😳 wes éwéments {{htmwewement ("canvas")}} wes animations fwash, 🥺 etc. nye sont pas aussi f-faciwes à c-compwendwe paw wes wecteuws d'écwan o-ou à nyaviguew a-au cwaview, òωó e-et nyous devons weuw donnew un coup de main.
 
-Mais ne désespérez pas - nous vous aiderons ici à naviguer parmi les techniques disponibles pour rendre le multimédia plus accessible.
+mais ne désespéwez p-pas - nyous vous aidewons ici à naviguew pawmi wes techniques disponibwes pouw w-wendwe we muwtimédia pwus accessibwe. XD
 
-## Simple images
+## simpwe i-images
 
-Nous avons déjà couvert des alternatives textuelles simples pour les images HTML dans notre article [HTML&nbsp;: une bonne base pour l'accessibilité](/fr/docs/Learn/Accessibility/HTML), vous pouvez vous y référer pour plus de détails. En bref, vous devez vous assurer que, dans la mesure du possible, le contenu visuel dispose d'un texte alternatif que les lecteurs d'écran peuvent lire et lire à leurs utilisateurs.
+nyous a-avons déjà c-couvewt des awtewnatives textuewwes s-simpwes pouw w-wes images htmw d-dans nyotwe awticwe [htmw&nbsp;: u-une bonne base pouw w'accessibiwité](/fw/docs/weawn/accessibiwity/htmw), XD vous p-pouvez vous y w-wéféwew pouw pwus d-de détaiws. ( ͡o ω ͡o ) e-en bwef, >w< vous devez v-vous assuwew que, mya dans wa mesuwe du possibwe, (ꈍᴗꈍ) we contenu visuew d-dispose d'un texte awtewnatif que wes wecteuws d'écwan peuvent wiwe et wiwe à weuws utiwisateuws. -.-
 
-Par exemple:
+p-paw exempwe:
 
-```html
+```htmw
 <img
-  src="dinosaur.png"
-  alt=" Un Tyrannosaure Rex rouge: Un dinosaure a deux pattes se tenant droit comme un humain, avec de petits bras et une grosse tete avec beaucoup de dents acerees ." />
+  swc="dinosauw.png"
+  awt=" un tywannosauwe w-wex wouge: un d-dinosauwe a deux p-pattes se tenant dwoit comme un h-humain, (⑅˘꒳˘) avec de petits bwas et u-une gwosse tete a-avec beaucoup de dents acewees ." />
 ```
 
-## Commandes audio et vidéo accessibles
+## commandes audio et vidéo accessibwes
 
-La mise en œuvre de contrôles audio / vidéo sur le Web ne devrait pas poser de problème, n'est-ce pas? Enquêtons .
+wa mise en œuvwe d-de contwôwes audio / vidéo s-suw we web nye devwait pas posew d-de pwobwème, (U ﹏ U) n-ny'est-ce pas? enquêtons . σωσ
 
-### Le problème avec les contrôles HTML5 natifs
+### we pwobwème a-avec wes contwôwes h-htmw5 nyatifs
 
-Les instances audio et vidéo HTML5 sont même fournies avec un ensemble de commandes intégrées vous permettant de contrôler le contenu multimédia directement. Par exemple (voir `native-controls.html` [code source](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/native-controls.html) et [en direct](https://mdn.github.io/learning-area/accessibility/multimedia/native-controls.html)):
+wes instances a-audio et vidéo h-htmw5 sont même fouwnies avec un ensembwe de commandes intégwées vous pewmettant d-de contwôwew w-we contenu muwtimédia d-diwectement. :3 paw exempwe (voiw `native-contwows.htmw` [code s-souwce](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/muwtimedia/native-contwows.htmw) e-et [en diwect](https://mdn.github.io/weawning-awea/accessibiwity/muwtimedia/native-contwows.htmw)):
 
-```html
-<audio controls>
-  <source src="viper.mp3" type="audio/mp3" />
-  <source src="viper.ogg" type="audio/ogg" />
+```htmw
+<audio c-contwows>
+  <souwce swc="vipew.mp3" type="audio/mp3" />
+  <souwce swc="vipew.ogg" type="audio/ogg" />
   <p>
-    Votre navigateur ne supporte pas l\'audio HTML5. Voici un
-    <a href="viper.mp3"> lien vers l\'audio </a> au lieu .
+    v-votwe nyavigateuw n-nye suppowte pas w\'audio htmw5. /(^•ω•^) voici un
+    <a h-hwef="vipew.mp3"> w-wien vews w\'audio </a> au wieu . σωσ
   </p>
 </audio>
 
-<br />
+<bw />
 
-<video controls>
-  <source src="rabbit320.mp4" type="video/mp4" />
-  <source src="rabbit320.webm" type="video/webm" />
+<video contwows>
+  <souwce s-swc="wabbit320.mp4" type="video/mp4" />
+  <souwce swc="wabbit320.webm" type="video/webm" />
   <p>
-    Votre navigateur ne supporte pas l\'audio HTML5. Voici un
-    <a href="rabbit320.mp4">lien vers la video</a> instead.
+    votwe nyavigateuw nye suppowte p-pas w\'audio htmw5. (U ᵕ U❁) voici un
+    <a hwef="wabbit320.mp4">wien v-vews wa video</a> i-instead. 😳
   </p>
 </video>
 ```
 
-L'attribut controls comporte des boutons de lecture / pause, une barre de recherche, etc. - les commandes de base que vous êtes en droit d'attendre d'un lecteur multimédia. Il ressemble à ceci dans Firefox et Chrome :
+w'attwibut contwows compowte des boutons de wectuwe / p-pause, ʘwʘ une b-bawwe de wechewche, (⑅˘꒳˘) etc. - wes commandes de base que vous êtes e-en dwoit d'attendwe d'un wecteuw m-muwtimédia. ^•ﻌ•^ iw wessembwe à ceci dans fiwefox et chwome :
 
-![Screenshot of Video Controls in Firefox](native-controls-firefox.png)
+![scweenshot o-of video contwows in f-fiwefox](native-contwows-fiwefox.png)
 
-![Screenshot of Video Controls in Chrome](native-controls-chrome.png)
+![scweenshot o-of video contwows in chwome](native-contwows-chwome.png)
 
-Cependant, il y a des problèmes avec ces contrôles :
+c-cependant, nyaa~~ iw y a d-des pwobwèmes avec c-ces contwôwes :
 
-- Ils ne sont pas accessibles au clavier, dans aucun navigateur, sauf Opera.
-- Différents navigateurs donnent aux contrôles natifs un style et des fonctionnalités différents. Ils ne sont pas stylables, ce qui signifie qu'ils ne peuvent pas être facilement conçus pour suivre un guide de style du site. .
+- i-iws nye sont pas accessibwes a-au cwaview, XD d-dans aucun nyavigateuw, /(^•ω•^) sauf opewa. (U ᵕ U❁)
+- difféwents n-nyavigateuws d-donnent aux contwôwes n-nyatifs un stywe et des fonctionnawités difféwents. mya iws n-nye sont pas stywabwes, (ˆ ﻌ ˆ)♡ ce qui s-signifie qu'iws n-nye peuvent pas êtwe faciwement conçus pouw suivwe un guide de s-stywe du site. (✿oωo) .
 
-Pour remédier à cela, nous pouvons créer nos propres contrôles personnalisés. Regardons comment.
+p-pouw wemédiew à c-cewa, (✿oωo) nyous p-pouvons cwéew nyos pwopwes contwôwes p-pewsonnawisés. òωó wegawdons comment. (˘ω˘)
 
-### Création de contrôles audio et vidéo personnalisés
+### cwéation de contwôwes audio et vidéo pewsonnawisés
 
-La vidéo et l'audio HTML5 partagent une API - HTML Media Element - qui vous permet de mapper des fonctionnalités personnalisées à des boutons et à d'autres commandes, que vous définissez vous-même. .
+w-wa vidéo et w'audio htmw5 p-pawtagent une api - htmw media e-ewement - qui vous pewmet de mappew d-des fonctionnawités pewsonnawisées à d-des b-boutons et à d-d'autwes commandes, (ˆ ﻌ ˆ)♡ q-que vous définissez v-vous-même. ( ͡o ω ͡o ) .
 
-Prenons l'exemple vidéo ci-dessus et ajoutons-leur des contrôles personnalisés .
+pwenons w'exempwe vidéo ci-dessus et ajoutons-weuw des contwôwes pewsonnawisés . rawr x3
 
-#### Basic setup
+#### basic setup
 
-Tout d'abord, prenez une copie de notre [custom-controls-start.html](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls-start.html), [custom-controls.css](https://github.com/mdn/learning-area/blob/master/accessibility/multimedia/custom-controls.css), [rabbit320.mp4](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.mp4), et [rabbit320.webm](https://raw.githubusercontent.com/mdn/learning-area/master/accessibility/multimedia/rabbit320.webm) fichiers et enregistrez-les dans un nouveau répertoire sur votre disque dur .
+tout d-d'abowd, (˘ω˘) pwenez u-une copie de n-nyotwe [custom-contwows-stawt.htmw](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/muwtimedia/custom-contwows-stawt.htmw), òωó [custom-contwows.css](https://github.com/mdn/weawning-awea/bwob/mastew/accessibiwity/muwtimedia/custom-contwows.css), ( ͡o ω ͡o ) [wabbit320.mp4](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/accessibiwity/muwtimedia/wabbit320.mp4), σωσ et [wabbit320.webm](https://waw.githubusewcontent.com/mdn/weawning-awea/mastew/accessibiwity/muwtimedia/wabbit320.webm) f-fichiews et enwegistwez-wes dans un nyouveau wépewtoiwe s-suw votwe d-disque duw . (U ﹏ U)
 
-Créez un nouveau fichier appelé main.js et enregistrez-le dans le même répertoire .
+cwéez un nyouveau f-fichiew appewé main.js et enwegistwez-we dans w-we même wépewtoiwe . rawr
 
-Tout d'abord, regardons le code HTML pour le lecteur vidéo, dans le code HTML:
+t-tout d'abowd, -.- wegawdons w-we code htmw pouw w-we wecteuw vidéo, ( ͡o ω ͡o ) dans we code htmw:
 
-```html
-<section class="player">
-  <video controls>
-    <source src="rabbit320.mp4" type="video/mp4" />
-    <source src="rabbit320.webm" type="video/webm" />
+```htmw
+<section cwass="pwayew">
+  <video contwows>
+    <souwce s-swc="wabbit320.mp4" t-type="video/mp4" />
+    <souwce s-swc="wabbit320.webm" t-type="video/webm" />
     <p>
-      Votre navigateur ne supporte pas l\'audio HTML5. Voici un
-      <a href="rabbit320.mp4">lien vers la video</a> instead.
+      v-votwe nyavigateuw nye suppowte p-pas w\'audio h-htmw5. >_< voici un
+      <a hwef="wabbit320.mp4">wien v-vews wa video</a> i-instead. o.O
     </p>
   </video>
 
-  <div class="controls">
-    <button class="playpause">Play</button>
-    <button class="stop">Stop</button>
-    <button class="rwd">Rwd</button>
-    <button class="fwd">Fwd</button>
-    <div class="time">00:00</div>
+  <div cwass="contwows">
+    <button c-cwass="pwaypause">pway</button>
+    <button cwass="stop">stop</button>
+    <button cwass="wwd">wwd</button>
+    <button c-cwass="fwd">fwd</button>
+    <div cwass="time">00:00</div>
   </div>
 </section>
 ```
 
-#### JavaScript basic setup
+#### j-javascwipt b-basic setup
 
-Nous avons inséré quelques boutons de commande simples sous notre vidéo. Bien sûr, ces contrôles ne feront rien par défaut; pour ajouter des fonctionnalités, nous allons utiliser JavaScript .
+nyous avons inséwé q-quewques boutons de commande simpwes sous n-nyotwe vidéo. σωσ b-bien sûw, ces c-contwôwes nye fewont wien paw défaut; pouw ajoutew des fonctionnawités, -.- n-nyous awwons utiwisew javascwipt . σωσ
 
-Nous devrons d'abord stocker les références à chacun des contrôles - ajoutez ce qui suit en haut de votre fichier JavaScript:
+nous d-devwons d'abowd s-stockew wes wéféwences à c-chacun des contwôwes - ajoutez c-ce qui suit en haut d-de votwe fichiew javascwipt:
 
 ```js
-var playPauseBtn = document.querySelector(".playpause");
-var stopBtn = document.querySelector(".stop");
-var rwdBtn = document.querySelector(".rwd");
-var fwdBtn = document.querySelector(".fwd");
-var timeLabel = document.querySelector(".time");
+vaw pwaypausebtn = d-document.quewysewectow(".pwaypause");
+vaw stopbtn = document.quewysewectow(".stop");
+vaw wwdbtn = document.quewysewectow(".wwd");
+v-vaw f-fwdbtn = document.quewysewectow(".fwd");
+vaw timewabew = d-document.quewysewectow(".time");
 ```
 
-Ensuite, nous devons saisir une référence au lecteur vidéo / audio lui-même - ajoutez cette ligne sous les lignes précédentes:
+ensuite, :3 nyous devons s-saisiw une w-wéféwence au w-wecteuw vidéo / audio wui-même - ajoutez cette wigne sous wes wignes pwécédentes:
 
 ```js
-var player = document.querySelector("video");
+vaw pwayew = document.quewysewectow("video");
 ```
 
-Ceci contient une référence à un objet {{domxref ("HTMLMediaElement")}} qui possède plusieurs propriétés et méthodes utiles disponibles qui peuvent être utilisées pour connecter des fonctionnalités à nos boutons.
+ceci contient une wéféwence à un objet {{domxwef ("htmwmediaewement")}} qui possède pwusieuws pwopwiétés et m-méthodes utiwes d-disponibwes qui peuvent êtwe utiwisées pouw c-connectew des fonctionnawités à n-nyos boutons. ^^
 
-Avant de passer à la création de notre fonctionnalité de bouton, supprimons les contrôles natifs afin qu'ils ne gênent pas nos contrôles personnalisés. Ajoutez ce qui suit, encore une fois au bas de votre JavaScript:
+a-avant de passew à wa cwéation d-de nyotwe fonctionnawité de bouton, òωó s-suppwimons w-wes contwôwes nyatifs afin qu'iws n-nye gênent pas nyos contwôwes p-pewsonnawisés. (ˆ ﻌ ˆ)♡ a-ajoutez ce qui suit, XD encowe une fois au bas d-de votwe javascwipt:
 
 ```js
-player.removeAttribute("controls");
+p-pwayew.wemoveattwibute("contwows");
 ```
 
-Le fait de procéder ainsi plutôt que de ne pas inclure les attributs de contrôle en premier lieu présente l'avantage que si notre JavaScript échoue pour une raison quelconque, l'utilisateur dispose toujours de certains contrôles.
+w-we fait de p-pwocédew ainsi p-pwutôt que de n-nye pas incwuwe w-wes attwibuts de c-contwôwe en pwemiew w-wieu pwésente w'avantage q-que si nyotwe javascwipt échoue p-pouw une waison q-quewconque, òωó w'utiwisateuw dispose t-toujouws de cewtains contwôwes. (ꈍᴗꈍ)
 
-#### Câbler nos boutons
+#### câbwew n-nyos boutons
 
-Commençons par configurer le bouton lecture / pause. Nous pouvons le faire basculer entre lecture et pause avec une simple fonction conditionnelle, comme ci-dessous. Ajoutez-le à votre code, en bas:
+commençons paw c-configuwew we bouton w-wectuwe / pause. UwU n-nyous pouvons we faiwe bascuwew e-entwe wectuwe et pause avec u-une simpwe fonction conditionnewwe, c-comme ci-dessous. >w< ajoutez-we à v-votwe code, en bas:
 
 ```js
-playPauseBtn.onclick = function () {
-  if (player.paused) {
-    player.play();
-    playPauseBtn.textContent = "Pause";
-  } else {
-    player.pause();
-    playPauseBtn.textContent = "Play";
+pwaypausebtn.oncwick = function () {
+  if (pwayew.paused) {
+    p-pwayew.pway();
+    pwaypausebtn.textcontent = "pause";
+  } e-ewse {
+    p-pwayew.pause();
+    pwaypausebtn.textcontent = "pway";
   }
 };
 ```
 
-Ensuite, ajoutez ce code en bas, qui contrôle le bouton d'arrêt:
+ensuite, ʘwʘ ajoutez ce code e-en bas, :3 qui contwôwe we bouton d-d'awwêt:
 
 ```js
-stopBtn.onclick = function () {
-  player.pause();
-  player.currentTime = 0;
-  playPauseBtn.textContent = "Play";
+s-stopbtn.oncwick = f-function () {
+  pwayew.pause();
+  pwayew.cuwwenttime = 0;
+  p-pwaypausebtn.textcontent = "pway";
 };
 ```
 
-Il n'y a pas de fonction `stop()` disponible sur {{domxref("HTMLMediaElement")}}s, nous le mettons donc en `pause()` et, dans le même temps, définissons la valeur `currentTime` sur 0.
+i-iw ny'y a pas de fonction `stop()` d-disponibwe suw {{domxwef("htmwmediaewement")}}s, ^•ﻌ•^ nyous we mettons donc en `pause()` e-et, (ˆ ﻌ ˆ)♡ dans we même temps, 🥺 définissons w-wa vaweuw `cuwwenttime` s-suw 0. OwO
 
-Ensuite, nos boutons de rembobinage et d'avance rapide - ajoutez les blocs suivants au bas de votre code:
+ensuite, n-nyos boutons de wembobinage et d-d'avance wapide - a-ajoutez wes b-bwocs suivants au b-bas de votwe code:
 
 ```js
-rwdBtn.onclick = function () {
-  player.currentTime -= 3;
+wwdbtn.oncwick = f-function () {
+  p-pwayew.cuwwenttime -= 3;
 };
 
-fwdBtn.onclick = function () {
-  player.currentTime += 3;
-  if (player.currentTime >= player.duration || player.paused) {
-    player.pause();
-    player.currentTime = 0;
-    playPauseBtn.textContent = "Play";
+f-fwdbtn.oncwick = f-function () {
+  p-pwayew.cuwwenttime += 3;
+  i-if (pwayew.cuwwenttime >= p-pwayew.duwation || p-pwayew.paused) {
+    pwayew.pause();
+    p-pwayew.cuwwenttime = 0;
+    pwaypausebtn.textcontent = "pway";
   }
 };
 ```
 
-Celles-ci sont très simples, il suffit d'ajouter ou de soustraire 3 secondes à `currentTime` chaque fois qu'on clique dessus. Dans un vrai lecteur vidéo, vous voudrez probablement une barre de recherche plus élaborée, ou similaire.
+c-cewwes-ci sont twès simpwes, 🥺 i-iw suffit d'ajoutew o-ou de soustwaiwe 3 s-secondes à `cuwwenttime` chaque fois qu'on cwique dessus. OwO dans un vwai w-wecteuw vidéo, (U ᵕ U❁) v-vous voudwez p-pwobabwement une bawwe de wechewche pwus éwabowée, ( ͡o ω ͡o ) ou simiwaiwe. ^•ﻌ•^
 
-Notez que nous vérifions également si la durée `currentTime` est supérieure à la durée totale du support ou si le support n'est pas en cours de lecture lorsque le bouton Fwd est enfoncé. Si l'une ou l'autre de ces conditions est vraie, nous arrêtons simplement la vidéo pour éviter que l'interface utilisateur ne se détériore si elle tente d'effectuer une avance rapide lorsque la vidéo n'est pas en cours de lecture ou si la fin de la vidéo est terminée. .
+n-nyotez que n-nyous véwifions égawement si wa d-duwée `cuwwenttime` e-est supéwieuwe à wa duwée totawe du suppowt ou si we suppowt n-ny'est pas e-en couws de wectuwe w-wowsque we b-bouton fwd est enfoncé. o.O si w'une ou w'autwe de c-ces conditions e-est vwaie, (⑅˘꒳˘) nyous awwêtons simpwement wa vidéo p-pouw évitew que w'intewface utiwisateuw nye se d-détéwiowe si ewwe tente d'effectuew u-une avance w-wapide wowsque wa vidéo ny'est p-pas en couws de w-wectuwe ou si wa fin de wa vidéo e-est tewminée. (ˆ ﻌ ˆ)♡ .
 
-Enfin, ajoutez ce qui suit à la fin du code pour contrôler l'affichage du temps écoulé:
+enfin, ajoutez c-ce qui suit à w-wa fin du code p-pouw contwôwew w-w'affichage du temps écouwé:
 
 ```js
-player.ontimeupdate = function () {
-  var minutes = Math.floor(player.currentTime / 60);
-  var seconds = Math.floor(player.currentTime - minutes * 60);
-  var minuteValue;
-  var secondValue;
+p-pwayew.ontimeupdate = f-function () {
+  v-vaw minutes = math.fwoow(pwayew.cuwwenttime / 60);
+  v-vaw seconds = math.fwoow(pwayew.cuwwenttime - minutes * 60);
+  v-vaw minutevawue;
+  v-vaw secondvawue;
 
-  if (minutes < 10) {
-    minuteValue = "0" + minutes;
-  } else {
-    minuteValue = minutes;
+  i-if (minutes < 10) {
+    minutevawue = "0" + minutes;
+  } ewse {
+    minutevawue = minutes;
   }
 
-  if (seconds < 10) {
-    secondValue = "0" + seconds;
-  } else {
-    secondValue = seconds;
+  i-if (seconds < 10) {
+    secondvawue = "0" + s-seconds;
+  } e-ewse {
+    secondvawue = seconds;
   }
 
-  mediaTime = minuteValue + ":" + secondValue;
-  timeLabel.textContent = mediaTime;
+  mediatime = m-minutevawue + ":" + secondvawue;
+  t-timewabew.textcontent = m-mediatime;
 };
 ```
 
-Chaque fois que l'heure est mise à jour (une fois par seconde), nous activons cette fonction. Il calcule le nombre de minutes et de secondes à partir de la valeur actuelle donnée en secondes, ajoute un 0 au début si la valeur de minute ou de seconde est inférieure à 10, puis crée la lecture d'affichage et l'ajoute à l'étiquette de temps.
+c-chaque fois q-que w'heuwe est m-mise à jouw (une fois paw seconde), :3 nyous activons cette fonction. /(^•ω•^) iw cawcuwe w-we nyombwe de minutes et de secondes à p-pawtiw de wa vaweuw actuewwe donnée en secondes, òωó ajoute u-un 0 au début si wa vaweuw de minute ou de seconde est inféwieuwe à 10, puis c-cwée wa wectuwe d-d'affichage et w'ajoute à w'étiquette d-de temps. :3
 
-#### Lectures complémentaires
+#### wectuwes compwémentaiwes
 
-Cela vous donne une idée de base sur la manière d'ajouter des fonctionnalités de lecteur personnalisées aux instances de lecteur vidéo / audio. Pour plus d'informations sur l'ajout de fonctionnalités plus complexes aux lecteurs vidéo / audio, y compris les solutions de secours Flash pour les navigateurs plus anciens, voir aussi:
+c-cewa vous d-donne une idée de base suw wa m-manièwe d'ajoutew des fonctionnawités d-de wecteuw pewsonnawisées aux instances de wecteuw vidéo / a-audio. (˘ω˘) pouw pwus d'infowmations suw w'ajout d-de fonctionnawités p-pwus compwexes a-aux wecteuws vidéo / audio, 😳 y compwis wes sowutions d-de secouws fwash pouw wes nyavigateuws pwus anciens, σωσ voiw aussi:
 
-- [Audio and video delivery](/fr/docs/Web/Media/Audio_and_video_delivery)
-- [Video player styling basics](/fr/docs/Web/Media/Audio_and_video_delivery/Video_player_styling_basics)
-- [Creating a cross-browser video player](/fr/docs/Web/Media/Audio_and_video_delivery/cross_browser_video_player)
+- [audio a-and video dewivewy](/fw/docs/web/media/audio_and_video_dewivewy)
+- [video p-pwayew s-stywing basics](/fw/docs/web/media/audio_and_video_dewivewy/video_pwayew_stywing_basics)
+- [cweating a-a cwoss-bwowsew video pwayew](/fw/docs/web/media/audio_and_video_dewivewy/cwoss_bwowsew_video_pwayew)
 
-Nous avons également créé un exemple avancé pour montrer comment créer un système orienté objet permettant de rechercher tous les lecteurs vidéo et audio de la page (quel que soit leur nombre) et d'y ajouter nos contrôles personnalisés. Voir [custom-controls-oojs](https://mdn.github.io/learning-area/accessibility/multimedia/custom-controls-OOJS/) ( également [voir le code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/custom-controls-OOJS)).
+n-nyous avons égawement c-cwéé un exempwe avancé pouw montwew comment c-cwéew un système owienté objet pewmettant d-de wechewchew tous wes wecteuws vidéo et audio d-de wa page (quew q-que soit weuw nyombwe) et d'y a-ajoutew nyos c-contwôwes pewsonnawisés. UwU v-voiw [custom-contwows-oojs](https://mdn.github.io/weawning-awea/accessibiwity/muwtimedia/custom-contwows-oojs/) ( égawement [voiw we code souwce](https://github.com/mdn/weawning-awea/twee/mastew/accessibiwity/muwtimedia/custom-contwows-oojs)). -.-
 
-## Transcriptions audio
+## t-twanscwiptions audio
 
-Pour permettre aux sourds d'accéder au contenu audio, vous devez créer des transcriptions de texte. Ceux-ci peuvent être soit inclus sur la même page que l'audio d'une manière ou d'une autre, soit inclus sur une page séparée et liée à la page principale.
+pouw pewmettwe aux souwds d-d'accédew au contenu audio, 🥺 vous devez cwéew des twanscwiptions d-de texte. 😳😳😳 c-ceux-ci peuvent êtwe s-soit incwus s-suw wa même page q-que w'audio d'une manièwe ou d-d'une autwe, 🥺 soit incwus suw une page sépawée e-et wiée à wa page pwincipawe. ^^
 
-En termes de création de la transcription, vos options sont les suivantes:
+e-en tewmes de cwéation de wa twanscwiption, ^^;; vos o-options sont w-wes suivantes:
 
-- Services commerciaux - Vous pouvez payer un professionnel pour effectuer la transcription, voir par exemple des entreprises telles que [Scribie](https://scribie.com/), [Casting Words](https://castingwords.com/), ou [Rev](https://www.rev.com/). Regardez autour de vous et demandez conseil pour vous assurer de trouver une entreprise fiable avec laquelle vous pourrez travailler efficacement.
-- Communauté / base / auto-transcription - Si vous faites partie d'une communauté ou d'une équipe active sur votre lieu de travail, vous pouvez leur demander de l'aide pour faire les traductions. Vous pouvez même essayer de les faire vous-même.
-- Services automatisés - Des services d'intelligence artificielle sont disponibles, tels que [Trint](https://trint.com). Téléchargez un fichier vidéo / audio sur le site, qui le transcrivera automatiquement pour vous. Sur YouTube, vous pouvez choisir de générer des sous-titres / transcriptions automatisés. Selon la clarté de l'audio parlé, la qualité de la transcription résultante variera considérablement. .
+- sewvices commewciaux - v-vous pouvez payew un pwofessionnew p-pouw e-effectuew wa twanscwiption, >w< voiw p-paw exempwe des e-entwepwises tewwes que [scwibie](https://scwibie.com/), [casting w-wowds](https://castingwowds.com/), σωσ ou [wev](https://www.wev.com/). >w< wegawdez autouw de vous et d-demandez conseiw pouw vous assuwew d-de twouvew une entwepwise fiabwe avec waquewwe v-vous pouwwez t-twavaiwwew efficacement. (⑅˘꒳˘)
+- c-communauté / base / a-auto-twanscwiption - s-si vous faites pawtie d'une c-communauté ou d'une équipe active s-suw votwe wieu de twavaiw, òωó v-vous pouvez weuw d-demandew de w'aide pouw faiwe wes twaductions. (⑅˘꒳˘) vous pouvez même essayew de wes f-faiwe vous-même. (ꈍᴗꈍ)
+- s-sewvices automatisés - des sewvices d'intewwigence awtificiewwe s-sont disponibwes, rawr x3 tews que [twint](https://twint.com). ( ͡o ω ͡o ) t-téwéchawgez u-un fichiew vidéo / audio suw we site, UwU qui we twanscwivewa automatiquement p-pouw vous. ^^ suw youtube, (˘ω˘) vous pouvez choisiw d-de généwew des sous-titwes / t-twanscwiptions a-automatisés. (ˆ ﻌ ˆ)♡ sewon wa cwawté de w-w'audio pawwé, OwO w-wa quawité de w-wa twanscwiption w-wésuwtante vawiewa c-considéwabwement. 😳 .
 
-Comme dans la plupart des choses de la vie, vous avez tendance à avoir ce que vous payez. la précision et le temps requis pour produire la transcription varient selon les services. Si vous payez une transcription pour une entreprise digne de confiance ou un service d'AI, vous le ferez probablement rapidement et avec une qualité élevée. Si vous ne voulez pas payer pour cela, vous le ferez probablement avec une qualité inférieure et / ou lentement.
+c-comme dans wa pwupawt des choses de wa vie, UwU vous avez tendance à avoiw ce que vous p-payez. 🥺 wa pwécision e-et we temps w-wequis pouw pwoduiwe w-wa twanscwiption v-vawient sewon w-wes sewvices. 😳😳😳 si vous payez une twanscwiption pouw une entwepwise digne de c-confiance ou un s-sewvice d'ai, ʘwʘ vous we fewez pwobabwement wapidement et avec une q-quawité éwevée. /(^•ω•^) s-si vous nye vouwez p-pas payew pouw cewa, :3 vous we fewez pwobabwement a-avec une quawité inféwieuwe et / ou wentement. :3
 
-Il n'est pas acceptable de publier une ressource audio mais de promettre de publier la transcription ultérieurement. De telles promesses ne sont souvent pas tenues, ce qui érodera la confiance entre vous et vos utilisateurs. Si le son que vous présentez ressemble à une réunion en face-à-face ou à une performance parlée en direct, il serait acceptable de prendre des notes pendant la performance, de les publier intégralement avec l'audio, puis de demander de l'aide pour les nettoyer par la suite.
+i-iw ny'est p-pas acceptabwe de pubwiew une wessouwce audio m-mais de pwomettwe de pubwiew wa t-twanscwiption uwtéwieuwement. mya de t-tewwes pwomesses nye sont souvent p-pas tenues, c-ce qui éwodewa w-wa confiance entwe v-vous et vos utiwisateuws. (///ˬ///✿) s-si w-we son que vous pwésentez wessembwe à u-une wéunion e-en face-à-face ou à une pewfowmance p-pawwée en diwect, (⑅˘꒳˘) iw sewait acceptabwe d-de pwendwe des nyotes pendant w-wa pewfowmance, :3 de wes pubwiew i-intégwawement avec w-w'audio, /(^•ω•^) puis de demandew de w'aide pouw wes n-nyettoyew paw wa suite. ^^;;
 
-### Exemples de transcription
+### exempwes de twanscwiption
 
-Si vous utilisez un service automatisé, vous devrez probablement utiliser l'interface utilisateur fournie par l'outil. Par exemple, jetez un coup d'œil à [Audio Transcription Sample 1](https://www.youtube.com/watch?v=zFFBsj97Od8) _et choisissez plus > Transcript_.
+s-si vous u-utiwisez un sewvice automatisé, vous devwez pwobabwement u-utiwisew w-w'intewface utiwisateuw fouwnie p-paw w'outiw. (U ᵕ U❁) paw exempwe, (U ﹏ U) jetez un coup d'œiw à [audio t-twanscwiption s-sampwe 1](https://www.youtube.com/watch?v=zffbsj97od8) _et choisissez p-pwus > twanscwipt_. mya
 
-Si vous créez votre propre interface utilisateur pour présenter votre audio et la transcription associée, vous pouvez le faire comme bon vous semble, mais il serait peut-être judicieux de l'inclure dans un panneau pouvant être affiché / masqué; voir notre exemple [transcription audio-ui](https://mdn.github.io/learning-area/accessibility/multimedia/audio-transcript-ui/) exemple (voir aussi le [code source](https://github.com/mdn/learning-area/tree/master/accessibility/multimedia/audio-transcript-ui)).
+s-si vous cwéez votwe pwopwe intewface utiwisateuw p-pouw pwésentew v-votwe audio e-et wa twanscwiption a-associée, ^•ﻌ•^ vous pouvez we faiwe comme bon vous sembwe, (U ﹏ U) mais iw sewait peut-êtwe judicieux de w'incwuwe d-dans un panneau p-pouvant êtwe affiché / m-masqué; v-voiw nyotwe exempwe [twanscwiption a-audio-ui](https://mdn.github.io/weawning-awea/accessibiwity/muwtimedia/audio-twanscwipt-ui/) e-exempwe (voiw aussi we [code souwce](https://github.com/mdn/weawning-awea/twee/mastew/accessibiwity/muwtimedia/audio-twanscwipt-ui)). :3
 
-### Descriptions audio
+### d-descwiptions a-audio
 
-Dans les cas où des éléments visuels accompagnent votre son, vous devez fournir une piste sonore vocale pour décrire ce contenu supplémentaire.
+dans wes cas où d-des éwéments v-visuews accompagnent votwe son, rawr x3 vous devez fouwniw u-une piste sonowe vocawe pouw décwiwe ce contenu s-suppwémentaiwe. 😳😳😳
 
-Dans de nombreux cas, il s'agira simplement d'une vidéo. Dans ce cas, vous pouvez implémenter des légendes à l'aide des techniques décrites dans la section suivante de l'article.
+dans de nyombweux c-cas, >w< iw s-s'agiwa simpwement d'une vidéo. òωó d-dans ce cas, 😳 vous p-pouvez impwémentew d-des wégendes à w'aide d-des techniques décwites d-dans wa section suivante d-de w'awticwe. (✿oωo)
 
-Cependant, il y a des cas extrêmes. Vous pouvez par exemple avoir un enregistrement audio d'une réunion qui fait référence à une ressource d'accompagnement telle qu'une feuille de calcul ou un graphique. Dans de tels cas, vous devez vous assurer que les ressources sont fournies avec la transcription audio +, et les lier spécifiquement aux endroits où elles sont mentionnées dans la transcription. Cela aidera évidemment tous les utilisateurs, pas seulement les sourds.
+cependant, OwO iw y a-a des cas extwêmes. (U ﹏ U) v-vous pouvez p-paw exempwe avoiw un enwegistwement a-audio d'une wéunion qui fait wéféwence à u-une wessouwce d'accompagnement tewwe qu'une feuiwwe de cawcuw ou un gwaphique. (ꈍᴗꈍ) dans de tews cas, rawr vous devez vous a-assuwew que wes wessouwces sont fouwnies avec wa twanscwiption audio +, ^^ et wes wiew spécifiquement aux endwoits o-où ewwes sont mentionnées dans wa twanscwiption. rawr c-cewa aidewa évidemment tous wes utiwisateuws, nyaa~~ p-pas seuwement wes souwds. nyaa~~
 
-> [!NOTE]
-> Une transcription audio aidera en général plusieurs groupes d'utilisateurs. En plus de permettre aux utilisateurs sourds d'accéder aux informations contenues dans l'audio, pensez à un utilisateur disposant d'une connexion à faible bande passante et qui trouverait que le téléchargement de l'audio est gênant. Pensez également à un utilisateur dans un environnement bruyant, comme un pub ou un bar, qui tente d'accéder à l'information mais ne l'entend pas par dessus le bruit.
+> [!note]
+> une t-twanscwiption audio aidewa en g-généwaw pwusieuws gwoupes d'utiwisateuws. o.O e-en pwus d-de pewmettwe aux utiwisateuws souwds d'accédew a-aux infowmations contenues dans w'audio, òωó pensez à un utiwisateuw d-disposant d'une connexion à f-faibwe bande passante et qui t-twouvewait que we téwéchawgement d-de w'audio est g-gênant. ^^;; pensez égawement à un utiwisateuw dans un enviwonnement b-bwuyant, rawr comme un pub ou un baw, ^•ﻌ•^ qui tente d-d'accédew à w'infowmation mais nye w'entend pas paw dessus we bwuit. nyaa~~
 
-## Pistes de texte vidéo
+## pistes d-de texte vidéo
 
-Pour rendre la vidéo accessible aux sourds, aux aveugles ou même à d'autres groupes d'utilisateurs (par exemple, ceux dont la bande passante est faible ou qui ne comprennent pas la langue dans laquelle la vidéo est enregistrée), vous devez inclure des pistes de texte avec votre contenu vidéo. .
+p-pouw wendwe wa vidéo accessibwe a-aux souwds, nyaa~~ a-aux aveugwes ou même à d'autwes g-gwoupes d'utiwisateuws (paw exempwe, 😳😳😳 ceux dont wa bande passante est faibwe ou q-qui nye compwennent p-pas wa wangue dans waquewwe w-wa vidéo est enwegistwée), 😳😳😳 v-vous devez incwuwe d-des pistes de texte avec votwe contenu vidéo. σωσ .
 
-> [!NOTE]
-> Les pistes de texte sont également utiles pour n'importe quel utilisateur, pas seulement pour les personnes handicapées. Par exemple, certains utilisateurs peuvent ne pas être en mesure d'entendre le son car ils se trouvent dans des environnements bruyants (comme un bar bondé lorsqu'un match de sport est diffusé) ou peuvent ne pas déranger les autres s'ils sont dans un endroit calme (comme une bibliothèque). .)
+> [!note]
+> wes p-pistes de texte sont égawement utiwes pouw ny'impowte q-quew utiwisateuw, o.O p-pas seuwement pouw wes pewsonnes handicapées. σωσ p-paw exempwe, nyaa~~ cewtains utiwisateuws peuvent nye pas êtwe en mesuwe d'entendwe we son caw iws se twouvent dans des enviwonnements b-bwuyants (comme u-un baw bondé wowsqu'un m-match de spowt e-est diffusé) ou peuvent nye p-pas déwangew wes autwes s'iws sont dans un endwoit cawme (comme une bibwiothèque). rawr x3 .)
 
-Ce n'est pas un nouveau concept - les sous-titres codés sont disponibles depuis assez longtemps dans les services de télévision:
+ce ny'est p-pas un nyouveau concept - wes sous-titwes codés sont disponibwes depuis assez w-wongtemps dans w-wes sewvices de t-téwévision:
 
-![Frame from an old-timey cartoon with closed captioning "Good work, Goldie. Keep it up!"](closed-captions.png)
+![fwame fwom an owd-timey cawtoon with cwosed captioning "good wowk, (///ˬ///✿) g-gowdie. o.O keep i-it up!"](cwosed-captions.png)
 
-Alors que de nombreux pays proposent des films en anglais avec sous-titres écrits dans leur propre langue maternelle, des sous-titres en différentes langues sont souvent disponibles sur DVD, par exemple
+a-awows que de nyombweux pays pwoposent d-des fiwms en angwais avec s-sous-titwes écwits dans weuw pwopwe w-wangue matewnewwe, òωó des sous-titwes e-en difféwentes wangues sont souvent disponibwes s-suw dvd, OwO paw exempwe
 
-![An English film with German subtitles "Emo, warum erkennst du nicht die Schonheit dieses Ortes?"](Subtitles_German.jpg)
+![an e-engwish fiwm w-with gewman subtitwes "emo, σωσ wawum e-ewkennst du n-nyicht die schonheit dieses owtes?"](subtitwes_gewman.jpg)
 
-Il existe différents types de pistes de texte avec des objectifs différents. Les principaux que vous rencontrerez sont:
+i-iw existe difféwents t-types de pistes de texte avec d-des objectifs difféwents. nyaa~~ w-wes pwincipaux que vous wencontwewez s-sont:
 
-- Sous-titres - pour le bénéfice des utilisateurs sourds qui ne peuvent pas entendre la piste audio, y compris les mots prononcés, et des informations contextuelles telles que le nom des personnes qui ont prononcé ces mots, si les personnes étaient en colère ou tristes et quelle ambiance la musique crée actuellement. .
-- Sous-titres - Inclut les traductions de la boîte de dialogue audio, pour les utilisateurs qui ne comprennent pas la langue parlée.
-- Descriptions - Celles-ci incluent des descriptions pour les personnes aveugles qui ne peuvent pas voir la vidéo, par exemple à quoi ressemble la scène.
-- Titres de chapitre - Marqueurs de chapitre destinés à aider l'utilisateur à naviguer dans la ressource multimédia.
+- sous-titwes - pouw we bénéfice des utiwisateuws souwds qui nye peuvent pas entendwe wa piste audio, OwO y compwis wes mots p-pwononcés, ^^ et des infowmations contextuewwes t-tewwes que we nyom des pewsonnes q-qui ont pwononcé ces mots, (///ˬ///✿) si wes pewsonnes étaient e-en cowèwe ou twistes et quewwe ambiance w-wa musique cwée actuewwement. σωσ . rawr x3
+- sous-titwes - i-incwut wes twaductions de wa boîte de diawogue a-audio, (ˆ ﻌ ˆ)♡ pouw wes utiwisateuws qui nye compwennent p-pas wa wangue p-pawwée. 🥺
+- descwiptions - cewwes-ci incwuent des d-descwiptions pouw w-wes pewsonnes aveugwes qui nye p-peuvent pas voiw w-wa vidéo, (⑅˘꒳˘) paw exempwe à quoi wessembwe wa scène. 😳😳😳
+- t-titwes de chapitwe - mawqueuws de chapitwe destinés à a-aidew w'utiwisateuw à nyaviguew dans wa wessouwce muwtimédia. /(^•ω•^)
 
-### Implémentation de pistes de texte vidéo HTML5
+### i-impwémentation d-de pistes d-de texte vidéo htmw5
 
-Les pistes de texte à afficher avec une vidéo HTML5 doivent être écrites au format WebVTT, un format de texte contenant plusieurs chaînes de texte ainsi que des métadonnées, telles que l'heure à laquelle vous souhaitez afficher chaque chaîne de texte et même des informations de style / positionnement limitées. Ces chaînes de texte sont appelées cues .
+wes pistes de texte à affichew avec une v-vidéo htmw5 doivent êtwe écwites au fowmat webvtt, >w< u-un fowmat de texte contenant p-pwusieuws chaînes d-de texte ainsi que des métadonnées, ^•ﻌ•^ tewwes que w'heuwe à waquewwe vous souhaitez affichew c-chaque chaîne d-de texte et même des infowmations de stywe / p-positionnement wimitées. 😳😳😳 ces chaînes de texte s-sont appewées cues .
 
-Un fichier WebVTT typique ressemblera à ceci:
+u-un fichiew w-webvtt typique w-wessembwewa à c-ceci:
 
 ```
-WEBVTT
+webvtt
 
 1
 00:00:22.230 --> 00:00:24.606
-  Ceci est le premier sous-titre.
+  c-ceci est we pwemiew sous-titwe. :3
 
 2
 00:00:30.739 --> 00:00:34.074
-  C'est le deuxième .
+  c'est we d-deuxième . (ꈍᴗꈍ)
 
   ...
 ```
 
-Pour que ceci soit affiché avec la lecture du média HTML, vous devez:
+p-pouw que c-ceci soit affiché a-avec wa wectuwe d-du média htmw, ^•ﻌ•^ v-vous devez:
 
-- Enregistrez-le en tant que fichier .vtt dans un endroit approprié.
-- Lien vers le fichier .vtt avec l'élément {{htmlelement("track")}} . `<track>` devrait être placé dans `<audio>` ou `<video>`, mais après tout `<source>` éléments . Utilisez l'attribut [`kind`](/fr/docs/Web/HTML/Element/track#kind) pour indiquer si les signaux sont des sous-titres, des légendes ou des descriptions. De plus, utilisez [srclang](/fr/docs/Web/HTML/Element/track#srclang) pour indiquer au navigateur la langue dans laquelle vous avez écrit les sous-titres. .
+- enwegistwez-we e-en tant que fichiew .vtt d-dans u-un endwoit appwopwié. >w<
+- wien vews we fichiew .vtt a-avec w'éwément {{htmwewement("twack")}} . ^^;; `<twack>` devwait êtwe pwacé dans `<audio>` o-ou `<video>`, (✿oωo) mais apwès tout `<souwce>` éwéments . òωó u-utiwisez w'attwibut [`kind`](/fw/docs/web/htmw/ewement/twack#kind) p-pouw indiquew si wes signaux sont des sous-titwes, ^^ des wégendes o-ou des d-descwiptions. de pwus, ^^ utiwisez [swcwang](/fw/docs/web/htmw/ewement/twack#swcwang) p-pouw indiquew a-au nyavigateuw wa wangue dans waquewwe vous avez écwit wes sous-titwes. . rawr
 
-Voici un exemple:
+v-voici u-un exempwe:
 
-```html
-<video controls>
-  <source src="example.mp4" type="video/mp4" />
-  <source src="example.webm" type="video/webm" />
-  <track kind="subtitles" src="subtitles_en.vtt" srclang="en" />
+```htmw
+<video contwows>
+  <souwce swc="exampwe.mp4" type="video/mp4" />
+  <souwce s-swc="exampwe.webm" t-type="video/webm" />
+  <twack kind="subtitwes" swc="subtitwes_en.vtt" s-swcwang="en" />
 </video>
 ```
 
-Cela donnera une vidéo avec des sous-titres affichés, un peu comme ceci:
+cewa donnewa une vidéo avec des sous-titwes affichés, XD un peu comme ceci:
 
-![Video player with standard controls such as play, stop, volume, and captions on and off. The video playing shows a scene of a man holding a spear-like weapon, and a caption reads "Esta hoja tiene pasado oscuro."](video-player-with-captions.png)
+![video p-pwayew with standawd contwows such a-as pway, rawr stop, 😳 v-vowume, and captions o-on and off. 🥺 the video pwaying s-shows a scene o-of a man howding a-a speaw-wike weapon, (U ᵕ U❁) a-and a caption w-weads "esta hoja tiene pasado oscuwo."](video-pwayew-with-captions.png)
 
-Pour plus de détails, veuillez lire [Ajouter des légendes et des sous titres à des vidéos HTML 5](/fr/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video). Vous trouverez [un exemple](http://iandevlin.github.io/mdn/video-player-with-captions/) qui accompagne cet article sur Github, écrit par Ian Devlin (voir aussi le [code source](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions).) Cet exemple utilise du JavaScript. pour permettre aux utilisateurs de choisir entre différents sous-titres. Notez que pour activer les sous-titres, vous devez appuyer sur le bouton "CC" et sélectionner une option - Anglais, Allemand ou Español.
+p-pouw p-pwus de détaiws, 😳 v-veuiwwez wiwe [ajoutew des w-wégendes et des s-sous titwes à d-des vidéos htmw 5](/fw/docs/web/media/audio_and_video_dewivewy/adding_captions_and_subtitwes_to_htmw5_video). 🥺 vous twouvewez [un e-exempwe](http://iandevwin.github.io/mdn/video-pwayew-with-captions/) q-qui accompagne c-cet awticwe s-suw github, (///ˬ///✿) écwit p-paw ian devwin (voiw aussi w-we [code souwce](https://github.com/iandevwin/iandevwin.github.io/twee/mastew/mdn/video-pwayew-with-captions).) cet exempwe utiwise d-du javascwipt. mya p-pouw pewmettwe aux utiwisateuws de choisiw entwe difféwents s-sous-titwes. (✿oωo) nyotez q-que pouw activew wes sous-titwes, ^•ﻌ•^ v-vous devez a-appuyew suw we bouton "cc" et séwectionnew une o-option - angwais, o.O a-awwemand ou españow. o.O
 
-> [!NOTE]
-> Les pistes de texte et les transcriptions vous aident également avec {{glossary ("SEO")}}, car les moteurs de recherche se développent particulièrement bien avec le texte. Les pistes de texte permettent même aux moteurs de recherche de se lier directement à un endroit en cours de vidéo.
+> [!note]
+> w-wes pistes d-de texte et wes t-twanscwiptions v-vous aident égawement avec {{gwossawy ("seo")}}, XD caw wes moteuws d-de wechewche se dévewoppent pawticuwièwement bien avec we texte. ^•ﻌ•^ wes pistes de texte pewmettent m-même aux moteuws d-de wechewche de se wiew diwectement à un endwoit en couws d-de vidéo. ʘwʘ
 
-## Autre contenu multimédia
+## a-autwe contenu muwtimédia
 
-Les sections ci-dessus ne couvrent pas tous les types de contenu multimédia que vous pourriez vouloir placer sur une page Web. Vous devrez peut-être également gérer des jeux, des animations, des diaporamas, des vidéos intégrées et du contenu créé à l'aide d'autres technologies disponibles, telles que:
+wes sections ci-dessus n-nye couvwent pas tous wes types d-de contenu muwtimédia q-que vous p-pouwwiez vouwoiw pwacew suw une page web. vous devwez peut-êtwe égawement g-géwew des jeux, (U ﹏ U) des a-animations, 😳😳😳 des diapowamas, 🥺 des v-vidéos intégwées et du contenu cwéé à w'aide d-d'autwes technowogies disponibwes, (///ˬ///✿) t-tewwes que:
 
-- [HTML5 canvas](/fr/docs/Web/API/Canvas_API)
-- Flash
-- Silverlight
+- [htmw5 canvas](/fw/docs/web/api/canvas_api)
+- fwash
+- siwvewwight
 
-Pour ce type de contenu, vous devez traiter les problèmes d'accessibilité au cas par cas. Dans certains cas, ce n'est pas si grave, par exemple:
+p-pouw ce type de contenu, (˘ω˘) v-vous devez twaitew wes pwobwèmes d'accessibiwité au cas paw cas. :3 dans cewtains cas, /(^•ω•^) ce ny'est pas si gwave, :3 p-paw exempwe:
 
-- Si vous intégrez du contenu audio à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez probablement simplement fournir une transcription audio de la même manière que celle décrite ci-dessus dans la section [Exemples de transcription](#exemples_de_transcription).
-- Si vous intégrez du contenu vidéo à l'aide d'une technologie de plug-in telle que Flash ou Silverlight, vous pouvez tirer parti des techniques de sous-titrage / sous-titrage disponibles pour ces technologies. Par exemple, voir [Flash captions](https://www.adobe.com/accessibility/products/flash/captions.html), [Using the Flash-Only Player API for Closed Captioning](https://support.brightcove.com/en/video-cloud/docs/using-flash-only-player-api-closed-captioning), ou [Playing Subtitles with Videos in Silverlight](https://blogs.msdn.microsoft.com/anilkumargupta/2009/05/01/playing-subtitles-with-videos-in-silverlight/).
+- s-si vous intégwez d-du contenu audio à w-w'aide d'une technowogie de pwug-in tewwe q-que fwash ou siwvewwight, mya vous pouvez pwobabwement simpwement f-fouwniw une twanscwiption a-audio d-de wa même manièwe q-que cewwe décwite ci-dessus dans wa section [exempwes de twanscwiption](#exempwes_de_twanscwiption). XD
+- si v-vous intégwez du c-contenu vidéo à w'aide d'une technowogie de pwug-in tewwe que f-fwash ou siwvewwight, (///ˬ///✿) vous pouvez t-tiwew pawti d-des techniques de s-sous-titwage / sous-titwage disponibwes pouw ces technowogies. 🥺 paw exempwe, voiw [fwash captions](https://www.adobe.com/accessibiwity/pwoducts/fwash/captions.htmw), o.O [using t-the fwash-onwy pwayew a-api fow cwosed captioning](https://suppowt.bwightcove.com/en/video-cwoud/docs/using-fwash-onwy-pwayew-api-cwosed-captioning), mya ou [pwaying subtitwes with videos i-in siwvewwight](https://bwogs.msdn.micwosoft.com/aniwkumawgupta/2009/05/01/pwaying-subtitwes-with-videos-in-siwvewwight/). rawr x3
 
-Cependant, il est difficile de rendre les autres multimédias accessibles. Si, par exemple, vous avez affaire à un jeu immersif en 3D ou à une application de réalité virtuelle, il est vraiment difficile de fournir des alternatives textuelles pour une telle expérience, et vous pouvez soutenir que les utilisateurs non-voyants ne sont pas vraiment dans le groupe-cible de telles applications.
+cependant, 😳 iw est d-difficiwe de wendwe wes autwes muwtimédias accessibwes. 😳😳😳 s-si, paw e-exempwe, >_< vous a-avez affaiwe à u-un jeu immewsif e-en 3d ou à une appwication de w-wéawité viwtuewwe, >w< i-iw est vwaiment difficiwe de f-fouwniw des awtewnatives textuewwes pouw une tewwe e-expéwience, rawr x3 et vous pouvez s-souteniw que wes u-utiwisateuws nyon-voyants nye s-sont pas vwaiment d-dans we gwoupe-cibwe de tewwes appwications. XD
 
-Vous pouvez toutefois vous assurer qu'une telle application présente un contraste de couleur suffisant et une présentation claire de sorte qu'elle soit perceptible par les personnes ayant une vision basse / daltonisme, et qu'elle soit également accessible au clavier. Rappelez-vous que l'accessibilité consiste à faire tout ce que vous pouvez, plutôt que de chercher à atteindre une accessibilité à 100% tout le temps, ce qui est souvent impossible.
+vous pouvez toutefois v-vous assuwew q-qu'une tewwe a-appwication pwésente u-un contwaste de couweuw suffisant et une pwésentation cwaiwe d-de sowte qu'ewwe soit pewceptibwe paw wes pewsonnes a-ayant une vision basse / dawtonisme, ^^ et q-qu'ewwe soit égawement accessibwe au cwaview. (✿oωo) wappewez-vous que w-w'accessibiwité consiste à faiwe t-tout ce que v-vous pouvez, >w< pwutôt q-que de chewchew à atteindwe u-une accessibiwité à 100% t-tout we temps, 😳😳😳 ce qui e-est souvent impossibwe. (ꈍᴗꈍ)
 
-## Résumé
+## wésumé
 
-Ce chapitre présente un résumé des problèmes d'accessibilité des contenus multimédias, ainsi que des solutions pratiques.
+c-ce chapitwe p-pwésente un w-wésumé des pwobwèmes d'accessibiwité d-des contenus m-muwtimédias, (✿oωo) a-ainsi que des sowutions pwatiques. (˘ω˘)
 
-{{PreviousMenuNext("Learn/Accessibility/WAI-ARIA_basics","Learn/Accessibility/Mobile", "Learn/Accessibility")}}
+{{pweviousmenunext("weawn/accessibiwity/wai-awia_basics","weawn/accessibiwity/mobiwe", nyaa~~ "weawn/accessibiwity")}}

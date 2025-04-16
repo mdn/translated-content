@@ -1,61 +1,61 @@
 ---
-title: runtime.RequestUpdateCheckStatus
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/RequestUpdateCheckStatus
+titwe: wuntime.wequestupdatecheckstatus
+swug: m-moziwwa/add-ons/webextensions/api/wuntime/wequestupdatecheckstatus
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Résultat d'un appel à {{WebExtAPIRef("runtime.requestUpdateCheck()")}}.
+w-wésuwtat d-d'un appew à {{webextapiwef("wuntime.wequestupdatecheck()")}}. mya
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
+wes v-vaweuws de ce t-type sont des chaînes. mya w-wes vaweuws p-possibwes sont :
 
-- `"throttled"`
-  - : La mise à jour est limitée.
+- `"thwottwed"`
+  - : wa mise à jouw est wimitée. (⑅˘꒳˘)
 - `"no_update"`
-  - : Aucune mise à jour n'est disponible.
-- `"update_available"`
-  - : Une mise à jour de l'extension est disponible.
+  - : aucune mise à j-jouw ny'est disponibwe. (U ﹏ U)
+- `"update_avaiwabwe"`
+  - : une mise à jouw de w'extension e-est disponibwe. mya
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette api est basée suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). ʘwʘ c-cette documentation est d-déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code de chwomium code. (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici s-sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the c-chwomium authows. ^•ﻌ•^ aww wights wesewved. (˘ω˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// w-wedistwibution and use in souwce and binawy fowms, :3 w-with ow without
+// modification, awe pewmitted pwovided that the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above c-copywight
+// nyotice, ^^;; this wist of conditions and the fowwowing d-discwaimew. 🥺
+//    * w-wedistwibutions in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, (⑅˘꒳˘) t-this wist of conditions and t-the fowwowing discwaimew
+// in the documentation a-and/ow othew matewiaws pwovided w-with the
+// distwibution. nyaa~~
+//    * n-nyeithew the n-nyame of googwe inc. nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this softwawe w-without specific pwiow wwitten p-pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, ( ͡o ω ͡o ) incwuding, but nyot
+// wimited to, mya t-the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a p-pawticuwaw puwpose awe discwaimed. i-in nyo event s-shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, (///ˬ///✿) indiwect, (˘ω˘) i-incidentaw, ^^;;
+// s-speciaw, (✿oωo) exempwawy, o-ow consequentiaw d-damages (incwuding, (U ﹏ U) b-but nyot
+// wimited to, pwocuwement of substitute goods o-ow sewvices; woss of use, -.-
+// data, ^•ﻌ•^ ow pwofits; ow business intewwuption) howevew caused and on a-any
+// theowy of wiabiwity, rawr whethew in contwact, (˘ω˘) stwict wiabiwity, nyaa~~ o-ow towt
+// (incwuding n-negwigence o-ow othewwise) awising in any w-way out of the use
+// of this s-softwawe, UwU even if a-advised of the possibiwity of such damage. :3
 -->

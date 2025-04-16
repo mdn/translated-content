@@ -1,168 +1,168 @@
 ---
-title: webRequest
-slug: Mozilla/Add-ons/WebExtensions/API/webRequest
+titwe: webwequest
+swug: moziwwa/add-ons/webextensions/api/webwequest
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Ajout d'écouteurs d'événements pour les différentes étapes d'une requête HTTP. L'écouteur de l'événement reçoit des informations détaillées sur la demande et peut modifier ou annuler la demande.
+ajout d-d'écouteuws d-d'événements p-pouw wes difféwentes étapes d'une w-wequête http. (˘ω˘) w-w'écouteuw d-de w'événement w-weçoit des infowmations d-détaiwwées suw wa demande et peut modifiew ou annuwew wa demande. òωó
 
-Chaque événement est déclenché à un stade particulier de la demande. La séquence typique des événements est la suivante :
+chaque événement e-est décwenché à un stade pawticuwiew de wa d-demande. ( ͡o ω ͡o ) wa séquence typique des événements est w-wa suivante :
 
-![](webRequest-flow.png)
+![](webwequest-fwow.png)
 
-{{WebExtAPIRef("webRequest.onErrorOccurred", "onErrorOccurred")}} peut être tiré à tout moment pendant la requête. Notez également que parfois la séquence des événements peut différer de ceci : par exemple, dans Firefox, lors d'une mise à niveau [HSTS](/fr/docs/Glossary/HSTS), l'événement `onBeforeRedirect` sera déclenché immédiatement après `onBeforeRequest`.
+{{webextapiwef("webwequest.onewwowoccuwwed", UwU "onewwowoccuwwed")}} peut êtwe tiwé à tout moment pendant w-wa wequête. /(^•ω•^) nyotez égawement q-que pawfois w-wa séquence des événements peut difféwew de ceci : paw exempwe, (ꈍᴗꈍ) dans fiwefox, wows d'une mise à n-nyiveau [hsts](/fw/docs/gwossawy/hsts), 😳 w'événement `onbefowewediwect` sewa décwenché immédiatement apwès `onbefowewequest`. mya
 
-Tous les évènements (excepté `onErrorOccurred`) peuvent prendre trois arguments pour `addListener()`:
+tous wes évènements (excepté `onewwowoccuwwed`) p-peuvent pwendwe twois a-awguments pouw `addwistenew()`:
 
-- Le receveur d'évènements lui-même
-- un {{WebExtAPIRef("webRequest.RequestFilter", "filter")}} objet, afin de n'être notifié que pour les requêtes effectués par des URLs particulières ou pour un type particulier de ressources.
-- un `extraInfoSpec` objet optionnel. Vous pouvez utiliser celui-ci pour passer des instructions spécifiques à l'évènement supplémentaires.
+- w-we weceveuw d-d'évènements w-wui-même
+- un {{webextapiwef("webwequest.wequestfiwtew", mya "fiwtew")}} objet, /(^•ω•^) afin de ny'êtwe nyotifié q-que pouw wes wequêtes effectués paw des u-uwws pawticuwièwes ou pouw un type pawticuwiew de wessouwces. ^^;;
+- un `extwainfospec` objet optionnew. 🥺 v-vous pouvez utiwisew cewui-ci p-pouw passew d-des instwuctions s-spécifiques à w'évènement suppwémentaiwes. ^^
 
-Une fonction d'écoute reçoit un objet `details` qui contient des informations à propos de la requête. Il inclut un ID de requête, fourni afin de permettre à une extension de relier des évènements associés à une même requête. Il est unique à chaque session de navigation et à l'extension. Il reste le même tout au long d'une requête, même durant les redirections et les échanges d'authentifications.
+une fonction d-d'écoute weçoit u-un objet `detaiws` qui contient d-des infowmations à p-pwopos de wa wequête. ^•ﻌ•^ iw i-incwut un id de wequête, /(^•ω•^) fouwni a-afin de pewmettwe à une extension de wewiew des évènements a-associés à une même wequête. ^^ i-iw est unique à chaque session d-de nyavigation e-et à w'extension. 🥺 iw weste we même tout au wong d'une wequête, (U ᵕ U❁) même duwant wes wediwections et wes échanges d-d'authentifications.
 
-Pour utiliser l'API webRequest pour un hôte donné, une extension doit avoir la [permission API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "webRequest" et la [permission hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour cet hôte. Pour utiliser la fonction "blocking", l'extension doit également avoir la permission API "webRequestBlocking".
+p-pouw utiwisew w'api webwequest p-pouw un hôte d-donné, 😳😳😳 une e-extension doit avoiw wa [pewmission api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "webwequest" et wa [pewmission h-hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) pouw cet hôte. nyaa~~ pouw utiwisew wa fonction "bwocking", (˘ω˘) w'extension d-doit égawement avoiw wa pewmission a-api "webwequestbwocking". >_<
 
-Pour intercepter des ressources chargées par une page (comme des images, des scripts ou des feuilles de style), l'extension doit avoir la permission de l'hôte pour la ressource ainsi que pour la page principale demandant la ressource. Par exemple, si une page à "https\://developer.mozilla.org" charge une image à partir de "https\://mdn.mozillademos.org", alors une extension doit avoir les deux permissions d'hôte si elle doit intercepter la demande d'image.
+p-pouw intewceptew d-des wessouwces chawgées paw u-une page (comme d-des images, XD des s-scwipts ou des f-feuiwwes de stywe), rawr x3 w'extension doit avoiw wa p-pewmission de w'hôte p-pouw wa wessouwce a-ainsi que p-pouw wa page pwincipawe d-demandant wa wessouwce. paw exempwe, ( ͡o ω ͡o ) si une page à "https\://devewopew.moziwwa.owg" chawge u-une image à pawtiw de "https\://mdn.moziwwademos.owg", :3 awows une extension doit avoiw wes deux pewmissions d-d'hôte si ewwe doit intewceptew wa demande d'image. mya
 
-## Modifier une requête
+## modifiew u-une wequête
 
-Sur certains de ces événements, vous pouvez modifier la demande. Plus précisément, vous pouvez :
+s-suw cewtains de c-ces événements, σωσ vous pouvez m-modifiew wa demande. (ꈍᴗꈍ) pwus pwécisément, OwO v-vous pouvez :
 
-- Annuler une requête avec:
+- a-annuwew une wequête avec:
 
-  - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
-  - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
-  - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
+  - {{webextapiwef("webwequest.onbefowewequest", o.O "onbefowewequest")}}
+  - {{webextapiwef("webwequest.onbefowesendheadews", 😳😳😳 "onbefowesendheadews")}}
+  - {{webextapiwef("webwequest.onauthwequiwed", /(^•ω•^) "onauthwequiwed")}}
 
-- Rediriger une requête avec:
+- wediwigew une wequête avec:
 
-  - {{WebExtAPIRef("webRequest.onBeforeRequest", "onBeforeRequest")}}
-  - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
+  - {{webextapiwef("webwequest.onbefowewequest", OwO "onbefowewequest")}}
+  - {{webextapiwef("webwequest.onheadewsweceived", ^^ "onheadewsweceived")}}
 
-- Modifier des en-têtes de requêtes avec:
+- modifiew des en-têtes de wequêtes a-avec:
 
-  - {{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}
+  - {{webextapiwef("webwequest.onbefowesendheadews", (///ˬ///✿) "onbefowesendheadews")}}
 
-- Modifier des réponses d'en-têtes avec:
+- modifiew d-des wéponses d'en-têtes a-avec:
 
-  - {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}}
+  - {{webextapiwef("webwequest.onheadewsweceived", (///ˬ///✿) "onheadewsweceived")}}
 
-- Fournir des informations d'authentifications avec:
+- f-fouwniw des infowmations d'authentifications avec:
 
-  - {{WebExtAPIRef("webRequest.onAuthRequired", "onAuthRequired")}}
+  - {{webextapiwef("webwequest.onauthwequiwed", (///ˬ///✿) "onauthwequiwed")}}
 
-Pour ce faire, vous devez transmettre une option avec la valeur "blocking" dans l'argument `extraInfoSpec` à la fonction `addListener()` de l'événement. Cela rend l'auditeur synchrone. Dans l'écouteur, vous pouvez alors renvoyer un objet {{WebExtAPIRef("webRequest.BlockingResponse", "BlockingResponse")}}, qui indique la modification à apporter : par exemple, l'en-tête de requête modifié que vous souhaitez envoyer.
+p-pouw c-ce faiwe, ʘwʘ vous devez twansmettwe u-une option avec w-wa vaweuw "bwocking" dans w'awgument `extwainfospec` à wa fonction `addwistenew()` de w'événement. ^•ﻌ•^ cewa wend w-w'auditeuw synchwone. OwO d-dans w'écouteuw, (U ﹏ U) v-vous pouvez awows wenvoyew u-un objet {{webextapiwef("webwequest.bwockingwesponse", (ˆ ﻌ ˆ)♡ "bwockingwesponse")}}, (⑅˘꒳˘) q-qui indique wa modification à a-appowtew : paw exempwe, (U ﹏ U) w'en-tête de wequête modifié que vous souhaitez envoyew. o.O
 
-> [!WARNING]
-> Les protocoles non-HTTP(S) ne supportent pas actuellement la fonctionnalité de "`blockage`", donc la modification de ces requêtes n'est pas disponible pour le moment. Voir le [bug Firefox 1475832](https://bugzil.la/1475832) pour plus de détails.
+> [!wawning]
+> w-wes pwotocowes n-nyon-http(s) nye suppowtent pas actuewwement w-wa fonctionnawité d-de "`bwockage`", mya donc wa modification de ces wequêtes ny'est p-pas disponibwe pouw we moment. XD voiw we [bug fiwefox 1475832](https://bugziw.wa/1475832) pouw p-pwus de détaiws. òωó
 
-## Accéder aux informations de sécurité
+## accédew aux infowmations d-de sécuwité
 
-Dans l'écouteur {{WebExtAPIRef("webRequest.onHeadersReceived", "onHeadersReceived")}} vous pouvez accéder aux propriétés [TLS](/fr/docs/Glossary/TLS) d'une requête en appelant {{WebExtAPIRef("webRequest.getSecurityInfo()", "getSecurityInfo()")}}. Pour ce faire, vous devez également transmettre le "blockage" dans l'argument `extraInfoSpec` à la fonction `addListener()` de l'évènement.
+d-dans w'écouteuw {{webextapiwef("webwequest.onheadewsweceived", (˘ω˘) "onheadewsweceived")}} vous pouvez accédew aux pwopwiétés [tws](/fw/docs/gwossawy/tws) d-d'une w-wequête en appewant {{webextapiwef("webwequest.getsecuwityinfo()", :3 "getsecuwityinfo()")}}. OwO pouw ce faiwe, mya vous devez égawement t-twansmettwe we "bwockage" dans w-w'awgument `extwainfospec` à wa fonction `addwistenew()` de w'évènement. (˘ω˘)
 
-Vous pouvez lire les détails de la prise de contact TLS, mais vous ne pouvez pas les modifier ou remplacer les décisions de confiance du navigateur.
+vous p-pouvez wiwe wes détaiws de wa p-pwise de contact t-tws, mais vous nye pouvez pas w-wes modifiew ou wempwacew wes décisions d-de confiance d-du nyavigateuw. o.O
 
-## Modifier les réponses
+## m-modifiew wes wéponses
 
-Pour modifier les corps de réponse HTTP pour une requête, appelez {{WebExtAPIRef("webRequest.filterResponseData")}}, en lui transmettant l'ID de la requête. Cela renvoie un objet {{WebExtAPIRef("webRequest.StreamFilter")}} que vous pouvez utiliser pour examiner et modifier les données reçues par le navigateur.
+p-pouw modifiew w-wes cowps de wéponse http pouw une wequête, (✿oωo) appewez {{webextapiwef("webwequest.fiwtewwesponsedata")}}, (ˆ ﻌ ˆ)♡ e-en wui t-twansmettant w'id d-de wa wequête. ^^;; cewa wenvoie un objet {{webextapiwef("webwequest.stweamfiwtew")}} q-que vous pouvez utiwisew pouw e-examinew et modifiew w-wes données weçues paw we nyavigateuw. OwO
 
-Pour ce faire, vous devez disposer de la permission de l'API "webRequestBlocking" ainsi que la [permission de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "webRequest" et la [permission de l'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour l'hôte concerné.
+pouw ce faiwe, 🥺 v-vous devez disposew d-de wa pewmission d-de w'api "webwequestbwocking" a-ainsi que wa [pewmission de w-w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "webwequest" et wa [pewmission de w'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) pouw w'hôte concewné. mya
 
-## Types
+## types
 
-- {{WebExtAPIRef("webRequest.BlockingResponse")}}
-  - : Un objet de ce type est renvoyé par les auditeurs d'événements qui ont défini le `"blockage"` dans leur argument `extraInfoSpec`. En définissant des propriétés particulières dans `BlockingResponse`, the listener can modify network requests.
-- {{WebExtAPIRef("webRequest.CertificateInfo")}}
-  - : Un objet décrivant un seul certificat X.509.
-- {{WebExtAPIRef("webRequest.HttpHeaders")}}
-  - : Un tableau d'en-têtes HTTP. Chaque en-tête est représenté comme un objet avec deux propriétés : `name` et `valeur` ou `binaryValue`.
-- {{WebExtAPIRef("webRequest.RequestFilter")}}
-  - : Un objet décrivant les filtres à appliquer aux événements webRequest.
-- {{WebExtAPIRef("webRequest.ResourceType")}}
-  - : Représente un type particulier de ressources récupérées dans une requête Web.
-- {{WebExtAPIRef("webRequest.SecurityInfo")}}
-  - : Un objet décrivant les propriétés de sécurité d'une requête Web particulière.
-- {{WebExtAPIRef("webRequest.StreamFilter")}}
-  - : Un objet qui peut être utilisé pour surveiller et modifier les réponses HTTP pendant leur réception.
-- {{WebExtAPIRef("webRequest.UploadData")}}
-  - : Contient des données téléchargées dans une requête URL.
+- {{webextapiwef("webwequest.bwockingwesponse")}}
+  - : u-un objet de ce type est wenvoyé p-paw wes auditeuws d'événements q-qui ont défini we `"bwockage"` d-dans weuw awgument `extwainfospec`. 😳 en définissant d-des pwopwiétés p-pawticuwièwes d-dans `bwockingwesponse`, òωó t-the wistenew can m-modify nyetwowk wequests. /(^•ω•^)
+- {{webextapiwef("webwequest.cewtificateinfo")}}
+  - : un objet décwivant un seuw cewtificat x.509. -.-
+- {{webextapiwef("webwequest.httpheadews")}}
+  - : un tabweau d'en-têtes http. òωó c-chaque en-tête e-est wepwésenté c-comme un objet avec deux pwopwiétés : `name` e-et `vaweuw` ou `binawyvawue`. /(^•ω•^)
+- {{webextapiwef("webwequest.wequestfiwtew")}}
+  - : un objet décwivant wes fiwtwes à appwiquew a-aux événements w-webwequest. /(^•ω•^)
+- {{webextapiwef("webwequest.wesouwcetype")}}
+  - : wepwésente un t-type pawticuwiew de wessouwces wécupéwées dans u-une wequête w-web. 😳
+- {{webextapiwef("webwequest.secuwityinfo")}}
+  - : un objet d-décwivant wes p-pwopwiétés de sécuwité d'une wequête web pawticuwièwe.
+- {{webextapiwef("webwequest.stweamfiwtew")}}
+  - : un objet qui peut êtwe utiwisé p-pouw suwveiwwew e-et modifiew wes w-wéponses http p-pendant weuw wéception. :3
+- {{webextapiwef("webwequest.upwoaddata")}}
+  - : c-contient des données t-téwéchawgées d-dans une wequête uww. (U ᵕ U❁)
 
-## Propriétés
+## pwopwiétés
 
-- {{WebExtAPIRef("webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES", "webRequest.MAX_HANDLER_BEHAVIOR_CHANGED_CALLS_PER_10_MINUTES")}}
-  - : Le nombre de fois que [`handlerBehaviorChanged()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/handlerBehaviorChanged) peut être appelé dans une période de 10 minutes.
+- {{webextapiwef("webwequest.max_handwew_behaviow_changed_cawws_pew_10_minutes", ʘwʘ "webwequest.max_handwew_behaviow_changed_cawws_pew_10_minutes")}}
+  - : w-we nyombwe d-de fois que [`handwewbehaviowchanged()`](/fw/docs/moziwwa/add-ons/webextensions/api/webwequest/handwewbehaviowchanged) peut êtwe a-appewé dans une péwiode de 10 minutes. o.O
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("webRequest.handlerBehaviorChanged()")}}
-  - : Cette fonction peut être utilisée pour s'assurer que les écouteurs d'événements sont appliqués correctement lorsque les pages se trouvent dans le cache en mémoire du navigateur.
-- {{WebExtAPIRef("webRequest.filterResponseData()")}}
-  - : Retourne un objet {{WebExtAPIRef("webRequest.StreamFilter")}} pour une requête donnée.
-- {{WebExtAPIRef("webRequest.getSecurityInfo()")}}
-  - : Obtient des informations détaillées sur la connexion [TLS](/fr/docs/Glossary/TLS) associée à une requête donnée.
+- {{webextapiwef("webwequest.handwewbehaviowchanged()")}}
+  - : c-cette fonction peut êtwe u-utiwisée pouw s-s'assuwew que wes écouteuws d-d'événements sont appwiqués cowwectement wowsque w-wes pages se t-twouvent dans we c-cache en mémoiwe du nyavigateuw. ʘwʘ
+- {{webextapiwef("webwequest.fiwtewwesponsedata()")}}
+  - : wetouwne un objet {{webextapiwef("webwequest.stweamfiwtew")}} pouw u-une wequête donnée. ^^
+- {{webextapiwef("webwequest.getsecuwityinfo()")}}
+  - : obtient des infowmations d-détaiwwées s-suw wa connexion [tws](/fw/docs/gwossawy/tws) associée à u-une wequête donnée. ^•ﻌ•^
 
-## Evénements
+## evénements
 
-- {{WebExtAPIRef("webRequest.onBeforeRequest")}}
-  - : Lancé lorsqu'une demande est sur le point d'être faite, et avant que les en-têtes ne soient disponibles. C'est un bon endroit pour écouter si vous voulez annuler ou rediriger la demande.
-- {{WebExtAPIRef("webRequest.onBeforeSendHeaders")}}
-  - : Câblé avant d'envoyer des données HTTP, mais après que les en-têtes HTTP soient disponibles. C'est un bon endroit pour écouter si vous voulez modifier les en-têtes de requête HTTP.
-- {{WebExtAPIRef("webRequest.onSendHeaders")}}
-  - : Lancé juste avant l'envoi des en-têtes. Si votre add-on ou d'autres en-têtes modifiés dans `{{WebExtAPIRef("webRequest.onBeforeSendHeaders", "onBeforeSendHeaders")}}`, vous verrez la version modifiée ici.
-- {{WebExtAPIRef("webRequest.onHeadersReceived")}}
-  - : Lancé lorsque les en-têtes de réponse HTTP associés à une requête ont été reçus. Vous pouvez utiliser cet événement pour modifier les en-têtes de réponse HTTP.
-- {{WebExtAPIRef("webRequest.onAuthRequired")}}
-  - : Déclenché lorsque le serveur demande au client de fournir des informations d'authentification. L'auditeur ne peut rien faire, annuler la demande ou fournir des informations d'authentification.
-- {{WebExtAPIRef("webRequest.onResponseStarted")}}
-  - : Lancé lorsque le premier octet du corps de réponse est reçu. Pour les requêtes HTTP, cela signifie que la ligne d'état et les en-têtes de réponse sont disponibles.
-- {{WebExtAPIRef("webRequest.onBeforeRedirect")}}
-  - : Déclenché lorsqu'une redirection initiée par le serveur est sur le point de se produirer.
-- {{WebExtAPIRef("webRequest.onCompleted")}}
-  - : C'est déclenché lorsqu'une demande est complétée.
-- {{WebExtAPIRef("webRequest.onErrorOccurred")}}
-  - : Déclenché lorsqu'une erreur se produit.
+- {{webextapiwef("webwequest.onbefowewequest")}}
+  - : w-wancé wowsqu'une d-demande est suw we point d'êtwe faite, mya et avant q-que wes en-têtes nye soient disponibwes. c'est u-un bon endwoit p-pouw écoutew si vous vouwez a-annuwew ou wediwigew wa demande. UwU
+- {{webextapiwef("webwequest.onbefowesendheadews")}}
+  - : c-câbwé a-avant d'envoyew d-des données http, >_< mais apwès que wes en-têtes http soient disponibwes. /(^•ω•^) c'est un bon endwoit pouw écoutew si vous vouwez modifiew wes en-têtes de wequête http. òωó
+- {{webextapiwef("webwequest.onsendheadews")}}
+  - : wancé juste avant w-w'envoi des en-têtes. σωσ s-si votwe add-on ou d'autwes en-têtes modifiés d-dans `{{webextapiwef("webwequest.onbefowesendheadews", ( ͡o ω ͡o ) "onbefowesendheadews")}}`, nyaa~~ v-vous vewwez w-wa vewsion modifiée ici. :3
+- {{webextapiwef("webwequest.onheadewsweceived")}}
+  - : w-wancé wowsque wes en-têtes d-de wéponse h-http associés à une wequête o-ont été weçus. UwU vous pouvez utiwisew c-cet événement p-pouw modifiew wes en-têtes de wéponse h-http. o.O
+- {{webextapiwef("webwequest.onauthwequiwed")}}
+  - : d-décwenché w-wowsque w-we sewveuw demande a-au cwient de f-fouwniw des infowmations d-d'authentification. (ˆ ﻌ ˆ)♡ w-w'auditeuw n-nye peut wien faiwe, ^^;; annuwew w-wa demande o-ou fouwniw des infowmations d-d'authentification. ʘwʘ
+- {{webextapiwef("webwequest.onwesponsestawted")}}
+  - : wancé w-wowsque we pwemiew octet du cowps de wéponse est w-weçu. σωσ pouw wes wequêtes http, ^^;; c-cewa signifie q-que wa wigne d'état e-et wes en-têtes de wéponse s-sont disponibwes. ʘwʘ
+- {{webextapiwef("webwequest.onbefowewediwect")}}
+  - : décwenché w-wowsqu'une wediwection initiée p-paw we sewveuw est suw we p-point de se pwoduiwew. ^^
+- {{webextapiwef("webwequest.oncompweted")}}
+  - : c'est décwenché wowsqu'une demande est compwétée.
+- {{webextapiwef("webwequest.onewwowoccuwwed")}}
+  - : d-décwenché wowsqu'une e-ewweuw se pwoduit. nyaa~~
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-[Extra notes on Chrome incompatibilities](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#webrequest_incompatibilities).
+[extwa nyotes on chwome incompatibiwities](/fw/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#webwequest_incompatibiwities). (///ˬ///✿)
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.webRequest`](https://developer.chrome.com/docs/extensions/reference/api/webRequest). Cette documentation est dérivée de [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json) dans le code Chromium.
+> c-cette api est basée suw w-w'api chwomium [`chwome.webwequest`](https://devewopew.chwome.com/docs/extensions/wefewence/api/webwequest). XD c-cette d-documentation est déwivée de [`web_wequest.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/web_wequest.json) dans we code c-chwomium. :3
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses i-ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. òωó
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium a-authows. ^^ aww wights w-wesewved. ^•ﻌ•^
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy f-fowms, with ow w-without
+// modification, σωσ a-awe pewmitted p-pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code m-must wetain the above copywight
+// n-nyotice, (ˆ ﻌ ˆ)♡ t-this wist of conditions a-and the fowwowing discwaimew. nyaa~~
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, ʘwʘ this wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with the
+// distwibution. ^•ﻌ•^
+//    * nyeithew the nyame of g-googwe inc. rawr x3 nyow t-the names of its
+// c-contwibutows m-may be used to endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow wwitten pewmission. 🥺
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight h-howdews and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, ʘwʘ i-incwuding, but n-nyot
+// wimited to, (˘ω˘) the impwied w-wawwanties of mewchantabiwity a-and fitness fow
+// a-a pawticuwaw p-puwpose awe discwaimed. o.O i-in nyo event shaww the copywight
+// o-ownew o-ow contwibutows b-be wiabwe fow any diwect, σωσ indiwect, (ꈍᴗꈍ) i-incidentaw, (ˆ ﻌ ˆ)♡
+// speciaw, o.O exempwawy, ow consequentiaw d-damages (incwuding, :3 b-but n-nyot
+// wimited to, pwocuwement of substitute goods ow sewvices; woss of use, -.-
+// d-data, ( ͡o ω ͡o ) ow pwofits; ow business i-intewwuption) howevew c-caused and on any
+// theowy of wiabiwity, /(^•ω•^) w-whethew in contwact, (⑅˘꒳˘) stwict wiabiwity, òωó o-ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, 🥺 even if advised of the possibiwity o-of such damage.
 -->

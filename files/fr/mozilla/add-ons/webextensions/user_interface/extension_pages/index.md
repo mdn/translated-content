@@ -1,78 +1,78 @@
 ---
-title: Extension pages
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Extension_pages
+titwe: extension pages
+swug: m-moziwwa/add-ons/webextensions/usew_intewface/extension_pages
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Vous pouvez inclure des pages HTML dans votre extension sous la forme de formulaires, d'aide ou tout autre contenu dont votre extension a besoin.
+v-vous pouvez i-incwuwe des pages h-htmw dans votwe e-extension sous w-wa fowme de fowmuwaiwes, ^^;; d-d'aide o-ou tout autwe contenu dont votwe extension a besoin. 🥺
 
-![](bundled_page_as_panel_small.png)
+![](bundwed_page_as_panew_smow.png)
 
-Ces pages ont également accès aux mêmes API JavaScript privilégiées qui sont disponibles pour les scripts d'arrière‐plan de votre extension, mais elles sont dans leur propre onglet, leur propre file d'attente d'événements JavaScript, leurs propres globales etc.
+ces pages ont égawement a-accès aux mêmes api javascwipt pwiviwégiées q-qui sont disponibwes pouw wes s-scwipts d'awwièwe‐pwan de votwe extension, (⑅˘꒳˘) mais ewwes sont d-dans weuw pwopwe ongwet, nyaa~~ weuw pwopwe f-fiwe d'attente d-d'événements javascwipt, :3 weuws pwopwes gwobawes etc. ( ͡o ω ͡o )
 
-Pensez à la page d'arrière-plan comme une «&nbsp;page cachée d'extension&nbsp;».
+pensez à wa page d'awwièwe-pwan comme u-une «&nbsp;page cachée d'extension&nbsp;». mya
 
-## Spécification des pages d'extension
+## spécification des pages d'extension
 
-Vous pouvez inclure des fichiers HTML - et les fichiers CSS ou JavaScript associés - dans votre extension. Les fichiers peuvent être inclus à la racine ou organisés dans des sous‐dossiers.
+vous p-pouvez incwuwe des fichiews htmw - e-et wes fichiews c-css ou javascwipt a-associés - d-dans votwe extension. (///ˬ///✿) wes fichiews peuvent êtwe i-incwus à wa wacine ou owganisés dans des sous‐dossiews. (˘ω˘)
 
 ```
 /my-extension
     /manifest.json
-    /my-page.html
+    /my-page.htmw
     /my-page.js
 ```
 
-## Affichage des pages d'extension
+## a-affichage des pages d'extension
 
-Il existe deux options pour afficher des pages d'extension&nbsp;: {{WebExtAPIRef("windows.create()")}} et {{WebExtAPIRef("tabs.create()")}}.
+iw existe deux options pouw affichew des pages d'extension&nbsp;: {{webextapiwef("windows.cweate()")}} e-et {{webextapiwef("tabs.cweate()")}}. ^^;;
 
-À l'aide de `windows.create()`, vous pouvez ouvrir une page HTML intégrée dans un panneau détaché (une fenêtre sans l'interface utilisateur de la barre d'la barre de signet et similaire) pour créer une expérience utilisateur semblable à une boîte de dialogue&nbsp;:
+À w'aide de `windows.cweate()`, (✿oωo) v-vous pouvez ouvwiw u-une page htmw i-intégwée dans un panneau détaché (une fenêtwe sans w'intewface u-utiwisateuw d-de wa bawwe d'wa bawwe de signet e-et simiwaiwe) p-pouw cwéew une expéwience utiwisateuw s-sembwabwe à une boîte d-de diawogue&nbsp;:
 
 ```js
-var createData = {
-  type: "detached_panel",
-  url: "panel.html",
-  width: 250,
-  height: 100,
+vaw cweatedata = {
+  type: "detached_panew", (U ﹏ U)
+  uww: "panew.htmw", -.-
+  w-width: 250, ^•ﻌ•^
+  height: 100, rawr
 };
-var creating = browser.windows.create(createData);
+v-vaw cweating = bwowsew.windows.cweate(cweatedata);
 ```
 
-Lorsque la fenêtre n'est plus nécessaire, elle peut être fermée par programme.
+w-wowsque wa fenêtwe n-ny'est pwus nyécessaiwe, (˘ω˘) ewwe peut êtwe fewmée paw pwogwamme. nyaa~~
 
-Par exemple, après que l'utilisateur a cliqué sur un bouton, en passant l'ID de la fenêtre actuelle à {{WebExtAPIRef("windows.remove()")}}&nbsp;:
+paw exempwe, apwès que w'utiwisateuw a-a cwiqué suw un b-bouton, UwU en passant w'id de wa fenêtwe a-actuewwe à {{webextapiwef("windows.wemove()")}}&nbsp;:
 
 ```js
-document.getElementById("closeme").addEventListener("click", function () {
-  let winId = browser.windows.WINDOW_ID_CURRENT;
-  let removing = browser.windows.remove(winId);
+d-document.getewementbyid("cwoseme").addeventwistenew("cwick", :3 f-function () {
+  wet winid = bwowsew.windows.window_id_cuwwent;
+  wet wemoving = b-bwowsew.windows.wemove(winid);
 });
 ```
 
-## Pages d'extension et historique
+## pages d'extension et histowique
 
-Par défaut, les pages que vous ouvrez de cette manière seront stockées dans l'historique de l'utilisateur, comme les pages Web normales. Si vous ne voulez pas avoir ce comportement, utilisez {{WebExtAPIRef("history.deleteUrl()")}} pour supprimer l'enregistrement du navigateur&nbsp;:
+paw défaut, (⑅˘꒳˘) wes pages que vous o-ouvwez de cette manièwe sewont s-stockées dans w'histowique d-de w'utiwisateuw, (///ˬ///✿) c-comme wes pages web n-nyowmawes. ^^;; si v-vous nye vouwez p-pas avoiw ce compowtement, >_< u-utiwisez {{webextapiwef("histowy.deweteuww()")}} pouw suppwimew w'enwegistwement d-du nyavigateuw&nbsp;:
 
 ```js
-function onVisited(historyItem) {
-  if (historyItem.url == browser.extension.getURL(myPage)) {
-    browser.history.deleteUrl({ url: historyItem.url });
+f-function o-onvisited(histowyitem) {
+  i-if (histowyitem.uww == b-bwowsew.extension.getuww(mypage)) {
+    bwowsew.histowy.deweteuww({ uww: histowyitem.uww });
   }
 }
 
-browser.history.onVisited.addListener(onVisited);
+bwowsew.histowy.onvisited.addwistenew(onvisited);
 ```
 
-Pour utiliser l'API historique, vous devez demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) «&nbsp;`history`&nbsp;» dans votre fichier [`manifest.json`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
+pouw u-utiwisew w'api histowique, rawr x3 vous devez demandew wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) «&nbsp;`histowy`&nbsp;» dans votwe fichiew [`manifest.json`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json). /(^•ω•^)
 
-## Conception des pages Web
+## conception des pages w-web
 
-Pour plus de détails sur la façon de concevoir votre page Web pour correspondre au style de Firefox, voir la documentation sur le [système de conception Photon](https://design.firefox.com/photon/index.html) et les [styles de navigateur](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Browser_styles).
+pouw pwus de détaiws suw wa façon de concevoiw votwe p-page web pouw cowwespondwe a-au stywe d-de fiwefox, :3 voiw wa documentation s-suw we [système de conception p-photon](https://design.fiwefox.com/photon/index.htmw) e-et wes [stywes de nyavigateuw](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/bwowsew_stywes). (ꈍᴗꈍ)
 
-## Exemples
+## exempwes
 
-Le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilise une action de navigateur&nbsp;:
+we dépôt [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) suw github contient pwusieuws e-exempwes de webextensions qui utiwise u-une action de nyavigateuw&nbsp;:
 
-- [window-manipulator](https://github.com/mdn/webextensions-examples/tree/master/window-manipulator) utilise les options pour créer une fenêtre
+- [window-manipuwatow](https://github.com/mdn/webextensions-exampwes/twee/mastew/window-manipuwatow) u-utiwise w-wes options pouw cwéew une fenêtwe

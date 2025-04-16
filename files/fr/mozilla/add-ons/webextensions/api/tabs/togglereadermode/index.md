@@ -1,68 +1,68 @@
 ---
-title: tabs.toggleReaderMode()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode
+titwe: tabs.toggweweadewmode()
+swug: moziwwa/add-ons/webextensions/api/tabs/toggweweadewmode
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Bascule en mode Lecteur pour l'onglet donné.
+b-bascuwe en m-mode wecteuw pouw w-w'ongwet donné. >w<
 
-Cette fonction permet de basculer en mode Lecteur pour l'onglet donné. Il prend un identifiant de tabulation en tant que paramètre: s'il est omis, l'onglet actuellement actif est basculé.
+c-cette fonction p-pewmet de bascuwew e-en mode w-wecteuw pouw w'ongwet d-donné. rawr iw pwend un identifiant de tabuwation en tant que pawamètwe: s'iw e-est omis, 😳 w'ongwet actuewwement actif est bascuwé. >w<
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c-c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (⑅˘꒳˘)
 
-Le mode Lecteur, également connu sous le nom de Reader View, est une fonction de navigateur qui permet à l'utilisateur de se concentrer plus facilement sur un article en :
+we mode wecteuw, OwO égawement c-connu sous we nyom de weadew v-view, (ꈍᴗꈍ) est une f-fonction de nyavigateuw qui pewmet à w'utiwisateuw de se concentwew pwus faciwement s-suw un awticwe en :
 
-- masquage d'éléments de page non essentiels, tels que des encadrés, des bas de page et des annonces
-- changer la taille du texte de la page, le contraste et la disposition pour une meilleure lisibilité.
+- masquage d'éwéments de page nyon essentiews, 😳 tews q-que des encadwés, 😳😳😳 des bas de p-page et des annonces
+- c-changew w-wa taiwwe du texte d-de wa page, mya we contwaste et wa disposition pouw u-une meiwweuwe wisibiwité. mya
 
-Le mode Lecteur est utile spécifiquement pour les articles: c'est-à-dire, les pages qui ont un corps de texte comme caractéristique principale. Les pages qui n'ont pas d'article identifiable ne peuvent pas être affichées en mode Lecteur. Pour savoir si une page est un article, vérifiez la propriété `isArticle` de {{WebExtAPIRef("tabs.Tab")}}.
+we mode wecteuw est u-utiwe spécifiquement pouw wes awticwes: c'est-à-diwe, (⑅˘꒳˘) wes pages qui ont un cowps de texte comme c-cawactéwistique pwincipawe. w-wes pages qui n-ny'ont pas d'awticwe i-identifiabwe nye peuvent pas êtwe affichées en mode wecteuw. (U ﹏ U) p-pouw savoiw s-si une page est un awticwe, mya véwifiez w-wa pwopwiété `isawticwe` d-de {{webextapiwef("tabs.tab")}}. ʘwʘ
 
-Pour savoir si un onglet est déjà en mode Lecteur, vérifiez la propriété `isInReaderMode` de {{WebExtAPIRef("tabs.Tab")}}. Pour suivre les onglets entrant ou sortant du mode Lecteur, vous devez suivre l'état actuel de tous les onglets et vérifier quand `isInReaderMode` change :
+pouw savoiw si u-un ongwet est déjà en mode wecteuw, (˘ω˘) v-véwifiez wa pwopwiété `isinweadewmode` de {{webextapiwef("tabs.tab")}}. (U ﹏ U) p-pouw suivwe wes ongwets entwant o-ou sowtant du mode wecteuw, ^•ﻌ•^ vous d-devez suivwe w-w'état actuew de tous wes ongwets et véwifiew quand `isinweadewmode` change :
 
 ```js
-function handleUpdated(tabId, changeInfo, tabInfo) {
-  if (changeInfo.status === "complete") {
-    console.log(`Tab ${tabId} reader mode: ${tabInfo.isInReaderMode}`);
+function handweupdated(tabid, (˘ω˘) c-changeinfo, :3 t-tabinfo) {
+  if (changeinfo.status === "compwete") {
+    consowe.wog(`tab ${tabid} w-weadew mode: ${tabinfo.isinweadewmode}`);
   }
 }
 
-browser.tabs.onUpdated.addListener(handleUpdated);
+b-bwowsew.tabs.onupdated.addwistenew(handweupdated);
 ```
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-var toggling = browser.tabs.toggleReaderMode(
-  tabId, // optional integer
+vaw toggwing = bwowsew.tabs.toggweweadewmode(
+  tabid, ^^;; // optionaw integew
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId`{{optional_inline}}
-  - : `integer`. L'ID de l'onglet à afficher en mode Lecteur. Par défaut à l'onglet sélectionné de la fenêtre en cours.
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. 🥺 w'id de w'ongwet à affichew en mode wecteuw. (⑅˘꒳˘) paw défaut à w'ongwet s-séwectionné de wa fenêtwe e-en couws. nyaa~~
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque l'onglet a été mis à jour. Si une erreur se produit (par exemple, parce que la page n'était pas un article), la promesse sera rejetée avec un message d'erreur..
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie s-sans awgument w-wowsque w'ongwet a-a été mis à j-jouw. :3 si une ewweuw se pwoduit (paw exempwe, ( ͡o ω ͡o ) pawce q-que wa page ny'était p-pas un a-awticwe), mya wa pwomesse s-sewa wejetée a-avec un message d'ewweuw..
 
-## Exemples
+## exempwes
 
-Ce code bascule chaque nouvelle page en mode lecteur, si cette page est éligible pour cela :
+ce code bascuwe chaque n-nyouvewwe page en mode wecteuw, (///ˬ///✿) si cette page est éwigibwe pouw cewa :
 
 ```js
-function switchToReaderMode(tabId, changeInfo, tabInfo) {
-  if (changeInfo.isArticle) {
-    browser.tabs.toggleReaderMode(tabId);
+function switchtoweadewmode(tabid, (˘ω˘) c-changeinfo, ^^;; tabinfo) {
+  if (changeinfo.isawticwe) {
+    bwowsew.tabs.toggweweadewmode(tabid);
   }
 }
 
-browser.tabs.onUpdated.addListener(switchToReaderMode);
+bwowsew.tabs.onupdated.addwistenew(switchtoweadewmode);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}

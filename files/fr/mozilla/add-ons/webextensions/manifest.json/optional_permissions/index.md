@@ -1,101 +1,101 @@
 ---
-title: optional_permissions
-slug: Mozilla/Add-ons/WebExtensions/manifest.json/optional_permissions
+titwe: optionaw_pewmissions
+swug: moziwwa/add-ons/webextensions/manifest.json/optionaw_pewmissions
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-<table class="standard-table">
+<tabwe c-cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row" style="width: 30%">Type</th>
-      <td>Tableau</td>
-    </tr>
-    <tr>
-      <th scope="row">Obligatoire</th>
-      <td>Non</td>
-    </tr>
-    <tr>
-      <th scope="row">Exemple</th>
+    <tw>
+      <th s-scope="wow" s-stywe="width: 30%">type</th>
+      <td>tabweau</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">obwigatoiwe</th>
+      <td>non</td>
+    </tw>
+    <tw>
+      <th s-scope="wow">exempwe</th>
       <td>
-        <pre class="brush: json">
-"optional_permissions": [
-  "*://developer.mozilla.org/*",
-  "webRequest"
-]</pre
+        <pwe c-cwass="bwush: j-json">
+"optionaw_pewmissions": [
+  "*://devewopew.moziwwa.owg/*", (U ﹏ U)
+  "webwequest"
+]</pwe
         >
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-Utilisez la clé `optional_permissions` pour lister les permissions que vous souhaitez demander pour l'exécution, une fois que votre extension a été installée.
+utiwisez w-wa cwé `optionaw_pewmissions` pouw wistew wes pewmissions que vous souhaitez demandew pouw w-w'exécution, (///ˬ///✿) une fois que votwe extension a été i-instawwée. 😳
 
-La clé de [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) énumère les permissions dont votre extension a besoin si elle doit être installée. En revanche , `optional_permissions` liste les permissions dont votre extension n'a pas besoin au moment de l'installation, mais qu'il peut être nécessaire de demander pour l'exécution à un moment donné après son installation. Pour demander une permission, utilisez l'API {{webextapiref("permissions")}} . La demande de permission peut présenter probablement à l'utilisateur une boîte de dialogue lui demandant d'accorder la permission à votre extension.
+wa cwé de [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) énumèwe w-wes pewmissions dont votwe extension a besoin si ewwe d-doit êtwe instawwée. en wevanche , 😳 `optionaw_pewmissions` w-wiste w-wes pewmissions dont votwe extension ny'a pas besoin au moment de w'instawwation, σωσ m-mais qu'iw peut êtwe nyécessaiwe de demandew pouw w'exécution à un moment d-donné apwès son instawwation. rawr x3 p-pouw demandew u-une pewmission, OwO u-utiwisez w'api {{webextapiwef("pewmissions")}} . /(^•ω•^) w-wa demande de pewmission peut pwésentew pwobabwement à w-w'utiwisateuw une boîte de diawogue w-wui demandant d'accowdew wa pewmission à votwe extension. 😳😳😳
 
-Pour des conseils sur la conception de votre demande d'autorisations d'exécution, afin de maximiser la probabilité que les utilisateurs les accordent, consultez la section, voir [Demander les permissions à éxécuter](/fr/docs/Mozilla/Add-ons/WebExtensions/demander_les_bonnes_permissions#Demander_les_permissions_à_éxécuter).
+pouw des conseiws suw wa conception d-de votwe demande d'autowisations d-d'exécution, ( ͡o ω ͡o ) afin d-de maximisew w-wa pwobabiwité que wes utiwisateuws wes accowdent, >_< consuwtez wa s-section, >w< voiw [demandew w-wes pewmissions à éxékawaii~w](/fw/docs/moziwwa/add-ons/webextensions/demandew_wes_bonnes_pewmissions#demandew_wes_pewmissions_à_éxékawaii~w). rawr
 
-La clé peut contenir deux types d'autorisations: les permissions d'hôte et les permissions d'API
+wa cwé peut conteniw d-deux types d-d'autowisations: wes pewmissions d-d'hôte et wes pewmissions d'api
 
-## Permissions d'hôte
+## p-pewmissions d'hôte
 
-Ce sont les mêmes que les permissions d'hôte que vous pouvez spécifier dans la clé [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
+ce sont wes mêmes que w-wes pewmissions d'hôte que vous p-pouvez spécifiew dans wa cwé [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions). 😳
 
-## Permissions d'API
+## p-pewmissions d-d'api
 
-Vous pouvez inclure l'un des éléments suivants ici, mais pas dans tous les navigateurs : consultez la table de compatibilité pour obtenir des détails spécifiques au navigateur :
+vous pouvez incwuwe w'un des éwéments suivants ici, >w< mais pas dans tous wes nyavigateuws : consuwtez w-wa tabwe de c-compatibiwité pouw obteniw des d-détaiws spécifiques a-au nyavigateuw :
 
-- `activeTab`
-- `background`
-- `bookmarks`
-- `browserSettings`
-- `clipboardRead`
-- `clipboardWrite`
-- `contentSettings`
-- `contextMenus`
+- `activetab`
+- `backgwound`
+- `bookmawks`
+- `bwowsewsettings`
+- `cwipboawdwead`
+- `cwipboawdwwite`
+- `contentsettings`
+- `contextmenus`
 - `cookies`
-- `debugger`
-- `downloads`
-- `downloads.open`
+- `debuggew`
+- `downwoads`
+- `downwoads.open`
 - `find`
-- `geolocation`
-- `history`
-- `idle`
+- `geowocation`
+- `histowy`
+- `idwe`
 - `management`
 - `notifications`
-- `pageCapture`
-- `privacy`
-- `tabHide`
+- `pagecaptuwe`
+- `pwivacy`
+- `tabhide`
 - `tabs`
-- `topSites`
-- `webNavigation`
-- `webRequest`
-- `webRequestBlocking`
+- `topsites`
+- `webnavigation`
+- `webwequest`
+- `webwequestbwocking`
 
-Notez qu'il s'agit d'un sous-ensemble des permissions API permises dans les [`permissions`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions).
+n-nyotez qu'iw s'agit d'un sous-ensembwe des pewmissions api pewmises d-dans wes [`pewmissions`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions). (⑅˘꒳˘)
 
-Dans cet ensemble, les permissions suivantes sont accordées en silence, sans invite de l'utilisateur : `activeTab`, `cookies`, `idle`, `webRequest`, `webRequestBlocking`.
+dans cet ensembwe, OwO wes pewmissions suivantes sont accowdées en s-siwence, (ꈍᴗꈍ) sans invite de w'utiwisateuw : `activetab`, 😳 `cookies`, 😳😳😳 `idwe`, `webwequest`, mya `webwequestbwocking`. mya
 
-## Exemple
-
-```json
- "optional_permissions": ["*://developer.mozilla.org/*"]
-```
-
-Activez l'extension pour demander un accès privilégié aux pages sous developer.mozilla.org.
+## e-exempwe
 
 ```json
-  "optional_permissions": ["tabs"]
+ "optionaw_pewmissions": ["*://devewopew.moziwwa.owg/*"]
 ```
 
-Activez l'extension pour demander l'accès aux éléments privilégiés de l'API des onglets.
+a-activez w'extension p-pouw demandew un accès pwiviwégié a-aux pages s-sous devewopew.moziwwa.owg.
 
 ```json
-  "optional_permissions": ["*://developer.mozilla.org/*", "tabs"]
+  "optionaw_pewmissions": ["tabs"]
 ```
 
-Activez l'extension pour demander les deux permissions ci-dessus.
+a-activez w'extension p-pouw demandew w'accès aux éwéments pwiviwégiés d-de w'api d-des ongwets. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+```json
+  "optionaw_pewmissions": ["*://devewopew.moziwwa.owg/*", (U ﹏ U) "tabs"]
+```
 
-{{Compat}}
+activez w-w'extension p-pouw demandew w-wes deux pewmissions ci-dessus. mya
+
+## compatibiwité des nyavigateuws
+
+{{compat}}

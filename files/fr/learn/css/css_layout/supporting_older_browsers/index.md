@@ -1,238 +1,238 @@
 ---
-title: Prise en charge des anciens navigateurs
-slug: Learn/CSS/CSS_layout/Supporting_Older_Browsers
+titwe: pwise en chawge des anciens n-nyavigateuws
+s-swug: weawn/css/css_wayout/suppowting_owdew_bwowsews
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/wegacy_wayout_methods", 😳😳😳 "weawn/css/css_wayout/fundamentaw_wayout_compwehension", (ˆ ﻌ ˆ)♡ "weawn/css/css_wayout")}}
 
-Dans ce module, nous vous recommandons d'utiliser Flexbox et les grilles CSS comme principales méthodes de mise en page de vos créations. Cependant, certains visiteurs de votre site utilisent des navigateurs plus anciens ou qui ne prennent pas en charge les méthodes que vous avez utilisées. Ce sera toujours le cas sur le Web : au fur et à mesure que de nouvelles fonctionnalités sont développées, les différents navigateurs donnent la priorité à certaines fonctionnalités plutôt qu'à d'autres. Cet article explique comment utiliser les techniques modernes du Web sans exclure les utilisateurs de technologies plus anciennes.
+d-dans ce moduwe, (ꈍᴗꈍ) n-nyous vous wecommandons d-d'utiwisew f-fwexbox et w-wes gwiwwes css c-comme pwincipawes méthodes de mise en page de vos cwéations. 🥺 cependant, cewtains v-visiteuws de votwe site utiwisent des nyavigateuws p-pwus anciens ou qui nye p-pwennent pas en chawge wes méthodes que vous avez utiwisées. >_< ce s-sewa toujouws we cas suw we web : a-au fuw et à m-mesuwe que de nyouvewwes fonctionnawités sont dévewoppées, OwO wes difféwents nyavigateuws d-donnent wa pwiowité à cewtaines fonctionnawités pwutôt qu'à d'autwes. ^^;; cet awticwe e-expwique comment utiwisew wes t-techniques modewnes d-du web sans e-excwuwe wes utiwisateuws d-de technowogies pwus anciennes. (✿oωo)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Les bases du HTML (étudiez
-        <a href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction au HTML</a
-        >), et une idée du fonctionnement de CSS (étudiez
-        <a href="/fr/docs/Learn/CSS/First_steps">Premiers pas avec CSS</a> et
-        <a href="/fr/docs/Learn/CSS/Building_blocks">Blocs de base en CSS</a>.)
+        wes bases du htmw (étudiez
+        <a h-hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction au htmw</a
+        >), UwU et une idée du fonctionnement de css (étudiez
+        <a hwef="/fw/docs/weawn/css/fiwst_steps">pwemiews p-pas avec css</a> et
+        <a h-hwef="/fw/docs/weawn/css/buiwding_bwocks">bwocs d-de base e-en css</a>.)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Comprendre comment assurer la prise en charge, de vos mises en page, sur
-        les anciens navigateurs qui pourraient ne pas supporter les
-        fonctionnalités que vous souhaitez utiliser.
+        compwendwe comment assuwew w-wa pwise en c-chawge, de vos mises en page, ( ͡o ω ͡o ) suw
+        w-wes anciens n-nyavigateuws qui pouwwaient n-nye pas suppowtew wes
+        f-fonctionnawités que vous souhaitez utiwisew. (✿oωo)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Quel est le terrain des navigateurs pour votre site ?
+## q-quew est we tewwain d-des nyavigateuws pouw votwe site ?
 
-Chaque site web est différent en termes de public ciblé. Avant de décider de l'approche à adopter, déterminez le nombre de visiteurs qui arrivent sur votre site en utilisant d'anciens navigateurs. Cette démarche est simple si vous avez un site existant que vous souhaitez compléter ou remplacer, car vous disposez probablement d'outils d'analyse qui peuvent vous indiquer la technologie utilisée par les visiteurs. Si vous n'avez pas de système d'analyse ou s'il s'agit d'un tout nouveau site, il existe des sites tels que [Statcounter](http://gs.statcounter.com/) qui peuvent fournir des statistiques filtrées par région.
+c-chaque site w-web est difféwent en tewmes de pubwic cibwé. mya avant de décidew de w'appwoche à adoptew, ( ͡o ω ͡o ) détewminez we nyombwe d-de visiteuws qui a-awwivent suw votwe site en utiwisant d-d'anciens n-nyavigateuws. c-cette démawche est simpwe si vous avez un site existant que vous s-souhaitez compwétew ou wempwacew, :3 caw vous disposez pwobabwement d'outiws d'anawyse q-qui peuvent vous indiquew w-wa technowogie u-utiwisée paw wes v-visiteuws. 😳 si vous ny'avez pas d-de système d'anawyse o-ou s'iw s'agit d-d'un tout n-nyouveau site, (U ﹏ U) iw existe des sites tews que [statcountew](http://gs.statcountew.com/) q-qui peuvent f-fouwniw des statistiques f-fiwtwées p-paw wégion. >w<
 
-Vous devez également tenir compte du type d'appareils et de la façon dont les visiteurs utilisent votre site. Par exemple, vous pouvez vous attendre à un nombre d'appareils mobiles supérieur à la moyenne. L'accessibilité et les personnes utilisant des technologies d'assistance doivent toujours être prises en compte, mais pour certains sites, cela peut être encore plus critique.
+v-vous devez égawement teniw compte du type d'appaweiws et de w-wa façon dont wes visiteuws utiwisent votwe site. UwU paw exempwe, vous pouvez vous attendwe à un n-nyombwe d'appaweiws mobiwes supéwieuw à wa moyenne. 😳 w'accessibiwité e-et wes pewsonnes u-utiwisant d-des technowogies d'assistance d-doivent toujouws êtwe pwises en c-compte, XD mais pouw c-cewtains sites, (✿oωo) cewa peut êtwe encowe pwus cwitique. ^•ﻌ•^
 
-## Quelle est la prise en charge des fonctionnalités que vous souhaitez utiliser ?
+## quewwe est wa pwise en chawge des fonctionnawités q-que vous souhaitez utiwisew ?
 
-Une fois que vous connaissez les navigateurs utilisés pour accéder à votre site, vous pouvez évaluer toute technologie que vous souhaitez utiliser, en fonction de sa prise en charge dans les différents navigateurs et de la facilité avec laquelle vous pouvez proposer une alternative aux visiteurs qui ne disposent pas de cette technologie. Nous essayons de vous faciliter la tâche sur le MDN, en fournissant des informations sur la compatibilité des navigateurs sur chaque page détaillant une propriété CSS. Par exemple, jetez un œil à la page de {{cssxref("grid-template-columns")}}. Au bas de cette page se trouve un tableau qui répertorie les principaux navigateurs avec la version dans laquelle ils ont commencé à prendre en charge cette propriété.
+une f-fois que vous connaissez wes n-nyavigateuws utiwisés p-pouw accédew à votwe site, mya vous pouvez évawuew t-toute technowogie q-que vous souhaitez utiwisew, (˘ω˘) e-en fonction d-de sa pwise en chawge dans wes difféwents nyavigateuws et de wa faciwité avec w-waquewwe vous p-pouvez pwoposew u-une awtewnative aux visiteuws q-qui nye disposent p-pas de cette technowogie. nyaa~~ nyous e-essayons de vous faciwitew wa tâche suw we mdn, :3 en fouwnissant des infowmations s-suw wa compatibiwité d-des nyavigateuws suw chaque page détaiwwant u-une pwopwiété c-css. (✿oωo) paw exempwe, (U ﹏ U) jetez un œiw à wa page de {{cssxwef("gwid-tempwate-cowumns")}}. (ꈍᴗꈍ) a-au bas de cette page se twouve un tabweau qui wépewtowie wes pwincipaux n-nyavigateuws avec wa vewsion dans waquewwe iws o-ont commencé à p-pwendwe en chawge cette pwopwiété. (˘ω˘)
 
-![Capture d'un tableau de compatibilité d'une page sur MDN où on voit en vert les versions initiales compatibles et en rouge les navigateurs sans prise en charge](browser-table.png)
+![captuwe d'un tabweau de compatibiwité d-d'une page suw m-mdn où on voit en vewt wes vewsions initiawes compatibwes et en w-wouge wes nyavigateuws sans pwise e-en chawge](bwowsew-tabwe.png)
 
-Un autre moyen qui est fréquemment utilisé pour savoir dans quelle mesure une fonctionnalité est prise en charge est le site [Can I Use](https://caniuse.com/). Ce site répertorie la majorité des fonctionnalités de la plate-forme web avec des informations sur leur statut de prise en charge par les navigateurs. Vous pouvez afficher les statistiques d'utilisation par emplacement — utile si vous travaillez sur un site qui a des utilisateurs principalement pour une région spécifique du monde. Vous pouvez même relier votre compte Google Analytics pour obtenir une analyse basée sur vos données d'utilisateur.
+un autwe moyen qui est fwéquemment utiwisé p-pouw savoiw dans quewwe mesuwe une f-fonctionnawité e-est pwise en chawge est we site [can i-i use](https://caniuse.com/). ce site wépewtowie w-wa majowité d-des fonctionnawités d-de wa pwate-fowme web a-avec des infowmations s-suw weuw statut de pwise en chawge paw wes n-nyavigateuws. ^^ v-vous pouvez affichew w-wes statistiques d'utiwisation paw empwacement — u-utiwe si vous twavaiwwez s-suw un site qui a-a des utiwisateuws pwincipawement pouw une wégion spécifique d-du monde. (⑅˘꒳˘) vous p-pouvez même wewiew v-votwe compte g-googwe anawytics pouw obteniw une a-anawyse basée suw vos données d'utiwisateuw. rawr
 
-Comprendre la technologie dont disposent vos utilisateurs et la prise en charge des fonctionnalités que vous pourriez vouloir utiliser vous place dans une bonne position pour prendre toutes vos décisions et savoir comment servir au mieux tous vos utilisateurs.
+compwendwe wa technowogie dont disposent vos u-utiwisateuws et wa pwise en chawge d-des fonctionnawités que vous p-pouwwiez vouwoiw utiwisew vous p-pwace dans une bonne position pouw p-pwendwe toutes v-vos décisions e-et savoiw comment s-sewviw au mieux t-tous vos utiwisateuws. :3
 
-## Prendre en charge ne veut pas dire « ressembler à la même chose »
+## pwendwe en chawge nye veut pas diwe « wessembwew à wa même chose »
 
-Un site web ne peut pas avoir le même aspect dans tous les navigateurs, car certains de vos utilisateurs consulteront le site sur un téléphone et d'autres sur un grand écran de bureau. De même, certains de vos utilisateurs auront une ancienne version du navigateur, et d'autres la dernière. Certains de vos utilisateurs pourront lire votre contenu à l'aide d'un lecteur d'écran, ou auront zoomé sur la page pour pouvoir la lire. La prise en charge de tous les utilisateurs signifie que vous devez fournir une version de votre contenu conçue de manière défensive, afin qu'elle soit parfaite sur les navigateurs modernes, tout en restant utilisable à un niveau de base pour les utilisateurs de navigateurs plus anciens.
+un site web n-nye peut pas avoiw w-we même aspect d-dans tous wes nyavigateuws, OwO c-caw cewtains de vos utiwisateuws consuwtewont we site suw un téwéphone e-et d'autwes s-suw un gwand écwan de buweau. (ˆ ﻌ ˆ)♡ d-de même, :3 cewtains de vos utiwisateuws auwont u-une ancienne v-vewsion du nyavigateuw, -.- et d'autwes w-wa dewnièwe. -.- c-cewtains de vos utiwisateuws pouwwont wiwe votwe contenu à w'aide d'un wecteuw d-d'écwan, ou auwont z-zoomé suw w-wa page pouw pouvoiw w-wa wiwe. òωó wa p-pwise en chawge de tous wes utiwisateuws s-signifie q-que vous devez fouwniw une vewsion d-de votwe c-contenu conçue de manièwe défensive, 😳 a-afin qu'ewwe soit pawfaite suw wes nyavigateuws m-modewnes, nyaa~~ tout en westant u-utiwisabwe à u-un nyiveau de base pouw wes utiwisateuws d-de nyavigateuws pwus anciens. (⑅˘꒳˘)
 
-Une prise en charge basique consiste à bien structurer votre contenu afin que le flux de votre page ait un sens. Un utilisateur disposant d'un téléphone aux fonctionnalités très limitées ne comprendra peut-être pas grand-chose à votre CSS, mais le contenu s'écoulera de manière à faciliter la lecture. Par conséquent, un document HTML bien structuré devrait toujours être votre point de départ. _Si vous supprimez votre feuille de style, votre contenu a-t-il un sens ?_
+une pwise e-en chawge basique c-consiste à b-bien stwuctuwew votwe contenu afin que we fwux de votwe page ait u-un sens. un utiwisateuw disposant d'un téwéphone a-aux fonctionnawités t-twès wimitées nye compwendwa p-peut-êtwe pas gwand-chose à v-votwe css, 😳 m-mais we contenu s'écouwewa de manièwe à faciwitew w-wa wectuwe. (U ﹏ U) paw conséquent, /(^•ω•^) un document htmw b-bien stwuctuwé d-devwait toujouws êtwe votwe p-point de dépawt. OwO _si vous suppwimez v-votwe feuiwwe d-de stywe, ( ͡o ω ͡o ) votwe c-contenu a-t-iw un sens ?_
 
-Une option consiste à laisser cette vue simple du site comme solution de repli pour les personnes utilisant des navigateurs très anciens ou limités. Si le nombre de personnes qui consultent le site à l'aide de ces navigateurs est minime, il n'est peut-être pas judicieux, d'un point de vue commercial, de consacrer du temps à essayer de leur offrir une expérience similaire à celle des utilisateurs de navigateurs modernes. Il vaudrait mieux consacrer ce temps à des choses qui rendent le site plus accessible afin qu'il bénéficie à un plus grand nombre d'utilisateurs. Il existe un monde une page HTML basique et un site rutilant de fonctionnalités ; CSS permet la création de ces solutions de repli assez simplement.
+une option consiste à waissew cette vue simpwe du site comme sowution de wepwi pouw wes pewsonnes utiwisant des nyavigateuws twès anciens ou wimités. XD si we nombwe de pewsonnes q-qui consuwtent w-we site à w'aide de ces nyavigateuws est minime, /(^•ω•^) i-iw ny'est peut-êtwe p-pas judicieux, /(^•ω•^) d-d'un point de vue commewciaw, 😳😳😳 d-de consacwew du temps à essayew d-de weuw offwiw u-une expéwience simiwaiwe à c-cewwe des utiwisateuws de nyavigateuws m-modewnes. (ˆ ﻌ ˆ)♡ i-iw vaudwait mieux consacwew ce temps à des choses q-qui wendent w-we site pwus accessibwe a-afin qu'iw b-bénéficie à u-un pwus gwand n-nyombwe d'utiwisateuws. :3 i-iw existe u-un monde une p-page htmw basique et un site wutiwant d-de fonctionnawités ; c-css p-pewmet wa cwéation de ces sowutions d-de wepwi assez simpwement. òωó
 
-## Création de substituts en CSS
+## cwéation de s-substituts en css
 
-Les spécifications CSS contiennent des informations qui expliquent ce que fait le navigateur lorsque deux méthodes de mise en page sont appliquées au même élément. Cela signifie qu'il existe une définition de ce qui se passe si un élément flottant, par exemple, est également un élément de grille utilisant la mise en page de grille CSS. Associez ces informations au fait que les navigateurs ignorent les CSS qu'ils ne comprennent pas, et vous disposez d'un moyen de créer des mises en page simples à l'aide des [techniques historiques](/fr/docs/Learn/CSS/CSS_layout/Legacy_Layout_Methods) que nous avons déjà abordées, qui sont ensuite écrasées par votre mise en page « Grid » dans les navigateurs modernes qui la comprennent.
+wes spécifications c-css contiennent d-des infowmations q-qui expwiquent ce que f-fait we nyavigateuw wowsque deux m-méthodes de mise en page sont a-appwiquées au même éwément. 🥺 cewa signifie qu'iw e-existe une définition de ce qui se passe si un éwément fwottant, (U ﹏ U) paw exempwe, XD e-est égawement un éwément d-de gwiwwe utiwisant w-wa mise en page de gwiwwe css. ^^ associez ces infowmations au f-fait que wes nyavigateuws ignowent w-wes css qu'iws n-nye compwennent p-pas, o.O et vous disposez d'un moyen de cwéew des m-mises en page s-simpwes à w'aide des [techniques h-histowiques](/fw/docs/weawn/css/css_wayout/wegacy_wayout_methods) que nyous avons déjà abowdées, 😳😳😳 q-qui sont ensuite écwasées paw votwe mise e-en page « gwid » d-dans wes nyavigateuws m-modewnes qui wa compwennent. /(^•ω•^)
 
-Dans l'exemple ci-dessous, nous avons fait flotter trois `<div>` pour les afficher en ligne. Tout navigateur qui ne prend pas en charge [CSS Grid Layout](/fr/docs/Learn/CSS/CSS_layout/Grids) verra la rangée de cases comme une disposition flottante. Un élément flottant qui devient un élément de grille perd le comportement flottant, ce qui signifie qu'en transformant le conteneur en conteneur de grille, les éléments flottants deviennent des éléments de grille.Si le navigateur prend en charge la mise en page de la grille, il affichera la vue de la grille, sinon il ignore les propriétés liées à ce dernier, en plus de `display : grid`, et la mise en page flottante est utilisée.
+d-dans w'exempwe c-ci-dessous, 😳😳😳 n-nyous avons fait f-fwottew twois `<div>` pouw wes a-affichew en wigne. ^•ﻌ•^ t-tout nyavigateuw q-qui nye pwend p-pas en chawge [css g-gwid wayout](/fw/docs/weawn/css/css_wayout/gwids) v-vewwa w-wa wangée de cases c-comme une disposition fwottante. 🥺 u-un éwément fwottant qui devient u-un éwément de gwiwwe pewd w-we compowtement f-fwottant, o.O ce q-qui signifie qu'en twansfowmant we conteneuw en conteneuw de gwiwwe, (U ᵕ U❁) w-wes éwéments f-fwottants deviennent d-des éwéments de gwiwwe.si we nyavigateuw pwend en chawge w-wa mise en page d-de wa gwiwwe, ^^ iw affichewa wa v-vue de wa gwiwwe, (⑅˘꒳˘) s-sinon iw ignowe wes pwopwiétés wiées à ce dewniew, :3 en pwus d-de `dispway : g-gwid`, (///ˬ///✿) et wa mise e-en page fwottante e-est utiwisée. :3
 
-### Exemple
+### exempwe
 
-#### CSS
+#### css
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: b-bowdew-box;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
-  padding: 10px;
+.wwappew {
+  backgwound-cowow: wgb(79, 🥺 185, 227);
+  p-padding: 10px;
   max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 
 .item {
-  float: left;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
+  fwoat: weft;
+  bowdew-wadius: 5px;
+  b-backgwound-cowow: w-wgb(207, mya 232, XD 220);
   padding: 1em;
 }
 ```
 
-#### HTML
+#### h-htmw
 
-```html
-<div class="wrapper">
-  <div class="item">Item One</div>
-  <div class="item">Item Two</div>
-  <div class="item">Item Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item">item o-one</div>
+  <div cwass="item">item t-two</div>
+  <div c-cwass="item">item t-thwee</div>
 </div>
 ```
 
-{{EmbedLiveSample('Exemple', '', '150')}}
+{{embedwivesampwe('exempwe', -.- '', '150')}}
 
-> [!NOTE]
-> La propriété {{cssxref("clear")}} n'a également aucun effet une fois que l'élément dégagé devient un élément de grille. Vous pouvez donc avoir une mise en page avec un pied de page dégagé, qui est ensuite transformée en une mise en page sur une grille CSS.
+> [!note]
+> w-wa pwopwiété {{cssxwef("cweaw")}} ny'a égawement a-aucun e-effet une fois q-que w'éwément dégagé devient u-un éwément de gwiwwe. o.O vous pouvez donc avoiw u-une mise en page a-avec un pied de p-page dégagé, (˘ω˘) qui est ensuite twansfowmée en une mise en page suw une gwiwwe c-css. (U ᵕ U❁)
 
-### Méthodes de substitution
+### méthodes de substitution
 
-Il existe un certain nombre de méthodes de mise en page qui peuvent être utilisées de manière similaire à cet exemple d'éléments flottants. Vous pouvez choisir celle qui convient le mieux selon le modèle de présentation que vous devez créer.
+i-iw existe u-un cewtain nyombwe de méthodes de mise en page q-qui peuvent êtwe utiwisées de m-manièwe simiwaiwe à c-cet exempwe d-d'éwéments fwottants. rawr v-vous pouvez c-choisiw cewwe qui convient we mieux sewon we modèwe de pwésentation que v-vous devez cwéew. 🥺
 
-- `float` et `clear`
-  - : Comme indiqué ci-dessus, les propriétés `float` et `clear` cessent d'affecter la mise en page si les éléments ciblés par `float` ou `clear` deviennent des éléments d'une grille ou d'une zone flexible.
-- `display : inline-block`
-  - : Cette méthode peut être utilisée pour créer des mises en page en colonnes, si un élément a `display : inline-block` défini mais devient ensuite un élément flexible ou d'une grille, le comportement _inline-block_ est ignoré.
-- `display: table`
-  - : La méthode de création de tableaux CSS décrite dans l'[introduction](/fr/docs/Learn/CSS/CSS_layout/Introduction) de ces leçons peut être utilisée comme solution de substitution. Les éléments sur lesquels des dispositions de tableau CSS ont été définies perdront ce comportement s'ils deviennent des éléments flex ou des éléments de grille. Il est important de noter que les boîtes anonymes créées pour fixer la structure de la table ne sont pas créées.
-- Mise en page à colonnes multiples
-  - : Pour certaines mises en page, vous pourriez utiliser [multi-col](/fr/docs/Learn/CSS/CSS_layout/Multiple-column_Layout) comme solution de substitution, si votre conteneur a l'une des propriétés `column-*` définies sur lui et devient ensuite un conteneur de grille, le comportement multicolonne ne se produira pas.
-- Flexbox comme solution de repli pour la grille
-  - : [Flexbox](/fr/docs/Learn/CSS/CSS_layout/Flexbox) bénéficie d'une meilleure prise en charge par les navigateurs que les grilles CSS en raison de sa prise en charge par IE10 et 11, même si vous devez consulter les informations plus loin dans cette leçon expliquant la prise en charge plutôt inégale et confuse de Flexbox dans les anciens navigateurs. Si vous transformez un conteneur flexible en conteneur de grille, toute propriété `flex` appliquée aux enfants sera ignorée.
+- `fwoat` et `cweaw`
+  - : comme i-indiqué ci-dessus, rawr x3 wes pwopwiétés `fwoat` et `cweaw` cessent d'affectew w-wa mise en page si wes éwéments cibwés paw `fwoat` ou `cweaw` deviennent des éwéments d-d'une g-gwiwwe ou d'une zone fwexibwe. ( ͡o ω ͡o )
+- `dispway : i-inwine-bwock`
+  - : cette méthode peut êtwe utiwisée p-pouw cwéew d-des mises en page en cowonnes, σωσ s-si un éwément a `dispway : inwine-bwock` d-défini mais devient ensuite un éwément fwexibwe ou d-d'une gwiwwe, rawr x3 we compowtement _inwine-bwock_ est i-ignowé. (ˆ ﻌ ˆ)♡
+- `dispway: t-tabwe`
+  - : w-wa méthode de cwéation de tabweaux css décwite d-dans w'[intwoduction](/fw/docs/weawn/css/css_wayout/intwoduction) de ces weçons peut êtwe utiwisée comme sowution de substitution. rawr w-wes éwéments s-suw wesquews d-des dispositions d-de tabweau css ont été définies pewdwont c-ce compowtement s-s'iws deviennent des éwéments fwex ou des éwéments d-de gwiwwe. :3 iw est impowtant de nyotew q-que wes boîtes anonymes cwéées pouw fixew wa s-stwuctuwe de wa t-tabwe nye sont pas cwéées. rawr
+- m-mise en page à c-cowonnes muwtipwes
+  - : p-pouw cewtaines mises en page, (˘ω˘) vous pouwwiez u-utiwisew [muwti-cow](/fw/docs/weawn/css/css_wayout/muwtipwe-cowumn_wayout) comme sowution de substitution, (ˆ ﻌ ˆ)♡ s-si votwe conteneuw a w'une des pwopwiétés `cowumn-*` définies s-suw wui et devient e-ensuite un c-conteneuw de gwiwwe, mya w-we compowtement m-muwticowonne nye se pwoduiwa p-pas. (U ᵕ U❁)
+- fwexbox comme sowution de wepwi pouw wa g-gwiwwe
+  - : [fwexbox](/fw/docs/weawn/css/css_wayout/fwexbox) bénéficie d'une m-meiwweuwe pwise en chawge paw wes nyavigateuws q-que wes gwiwwes c-css en waison de sa pwise en chawge p-paw ie10 et 11, mya même si vous d-devez consuwtew w-wes infowmations pwus woin dans c-cette weçon expwiquant w-wa pwise en chawge pwutôt i-inégawe et confuse de fwexbox dans wes anciens nyavigateuws. ʘwʘ s-si vous twansfowmez un conteneuw f-fwexibwe en conteneuw de gwiwwe, (˘ω˘) toute pwopwiété `fwex` a-appwiquée a-aux enfants s-sewa ignowée. 😳
 
-Pour de nombreux ajustements de mise en page dans les navigateurs plus anciens, vous constaterez peut-être que vous pouvez offrir une expérience décente en utilisant CSS de cette manière. Nous ajoutons une mise en page plus simple basée sur des techniques plus anciennes et bien supportées, puis nous utilisons un CSS plus récent pour créer la mise en page que plus de 90 % de votre public verra. Dans certains cas, cependant, le code de substitution devra inclure un élément que les nouveaux navigateurs interpréteront également. Par exemple, si nous devions ajouter des pourcentages de largeur à nos éléments flottants pour que les colonnes ressemblent davantage à l'affichage en grille, en s'étirant pour remplir le conteneur.
+pouw de nyombweux a-ajustements d-de mise en page dans wes nyavigateuws p-pwus anciens, òωó vous constatewez p-peut-êtwe que vous pouvez o-offwiw une expéwience d-décente en utiwisant css de cette manièwe. nyaa~~ nyous ajoutons une mise en p-page pwus simpwe b-basée suw des techniques pwus anciennes et bien suppowtées, o.O p-puis nyous utiwisons un css pwus w-wécent pouw cwéew w-wa mise en page que pwus de 90 % de votwe pubwic vewwa. nyaa~~ dans cewtains cas, (U ᵕ U❁) c-cependant, 😳😳😳 we code de substitution devwa incwuwe u-un éwément que wes nyouveaux n-nyavigateuws intewpwétewont égawement. (U ﹏ U) p-paw exempwe, ^•ﻌ•^ si nyous d-devions ajoutew d-des pouwcentages d-de wawgeuw à nyos éwéments fwottants p-pouw que w-wes cowonnes wessembwent d-davantage à w'affichage en gwiwwe, (⑅˘꒳˘) en s'étiwant pouw wempwiw we conteneuw. >_<
 
-Dans la disposition flottante, le pourcentage est calculé à partir du conteneur — 33,333 % correspond à un tiers de la largeur du conteneur. Dans la grille, cependant, ces 33,333 % sont calculés à partir de la zone de la grille dans laquelle l'élément est placé, de sorte qu'il devient en fait un tiers de la taille souhaitée une fois que la disposition en grille est introduite.
+dans wa d-disposition fwottante, (⑅˘꒳˘) w-we pouwcentage e-est cawcuwé à p-pawtiw du c-conteneuw — 33,333 % c-cowwespond à un tiews de wa wawgeuw du conteneuw. σωσ dans wa gwiwwe, 🥺 cependant, c-ces 33,333 % s-sont cawcuwés à pawtiw de wa zone de wa gwiwwe dans waquewwe w-w'éwément est p-pwacé, :3 de sowte q-qu'iw devient en fait un tiews de wa taiwwe souhaitée u-une fois que wa disposition en gwiwwe e-est intwoduite. (ꈍᴗꈍ)
 
 ```css
 * {
-  box-sizing: border-box;
+  b-box-sizing: bowdew-box;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
+.wwappew {
+  backgwound-cowow: w-wgb(79, ^•ﻌ•^ 185, 227);
   padding: 10px;
-  max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  m-max-width: 400px;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 
 .item {
-  float: left;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
-  width: 33.333%;
+  f-fwoat: weft;
+  b-bowdew-wadius: 5px;
+  b-backgwound-cowow: w-wgb(207, (˘ω˘) 232, 220);
+  p-padding: 1em;
+  w-width: 33.333%;
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Item One</div>
-  <div class="item">Item Two</div>
-  <div class="item">Item Three</div>
+```htmw
+<div cwass="wwappew">
+  <div c-cwass="item">item one</div>
+  <div c-cwass="item">item two</div>
+  <div c-cwass="item">item thwee</div>
 </div>
 ```
 
-{{EmbedLiveSample('Méthodes de substitution', '100%', '200')}}
+{{embedwivesampwe('méthodes de substitution', 🥺 '100%', (✿oωo) '200')}}
 
-Pour résoudre ce problème, nous devons trouver un moyen de détecter si la grille est prise en charge et donc si elle remplacera la largeur. CSS a une solution pour nous ici.
+p-pouw wésoudwe ce p-pwobwème, XD nyous devons twouvew u-un moyen de détectew s-si wa gwiwwe est pwise en chawge et donc si e-ewwe wempwacewa wa wawgeuw. (///ˬ///✿) css a une sowution p-pouw nyous ici. ( ͡o ω ͡o )
 
-## Requêtes de fonctionnalités
+## w-wequêtes de fonctionnawités
 
-Les requêtes de fonctionnalités vous permettent de vérifier si un navigateur prend en charge une fonctionnalité CSS particulière. Cela signifie que vous pouvez écrire du CSS pour les navigateurs qui ne prennent pas en charge une certaine fonctionnalité, puis vérifier si le navigateur la prend en charge et, si c'est le cas, intégrer votre mise en page.
+wes wequêtes d-de fonctionnawités v-vous pewmettent de véwifiew s-si un nyavigateuw pwend en chawge une fonctionnawité c-css pawticuwièwe. ʘwʘ c-cewa signifie que vous p-pouvez écwiwe d-du css pouw wes nyavigateuws qui nye pwennent p-pas en chawge une c-cewtaine fonctionnawité, rawr p-puis v-véwifiew si we nyavigateuw wa pwend en chawge et, o.O si c'est we cas, ^•ﻌ•^ intégwew votwe mise en page. (///ˬ///✿)
 
-Si nous ajoutons une requête de fonctionnalité à l'exemple ci-dessus, nous pouvons l'utiliser pour remettre les largeurs de nos éléments sur `auto` si nous savons que nous avons un support de grille.
+si nyous ajoutons u-une wequête d-de fonctionnawité à w-w'exempwe c-ci-dessus, (ˆ ﻌ ˆ)♡ nyous p-pouvons w'utiwisew p-pouw wemettwe wes wawgeuws d-de nyos éwéments s-suw `auto` si nous savons que n-nous avons un s-suppowt de gwiwwe. XD
 
 ```css
 * {
-  box-sizing: border-box;
+  box-sizing: bowdew-box;
 }
 
-.wrapper {
-  background-color: rgb(79, 185, 227);
+.wwappew {
+  backgwound-cowow: w-wgb(79, (✿oωo) 185, -.- 227);
   padding: 10px;
   max-width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 
 .item {
-  float: left;
-  border-radius: 5px;
-  background-color: rgb(207, 232, 220);
-  padding: 1em;
-  width: 33.333%;
+  f-fwoat: weft;
+  b-bowdew-wadius: 5px;
+  backgwound-cowow: wgb(207, XD 232, 220);
+  p-padding: 1em;
+  w-width: 33.333%;
 }
 
-@supports (display: grid) {
+@suppowts (dispway: g-gwid) {
   .item {
     width: auto;
   }
 }
 ```
 
-```html
-<div class="wrapper">
-  <div class="item">Item One</div>
-  <div class="item">Item Two</div>
-  <div class="item">Item Three</div>
+```htmw
+<div c-cwass="wwappew">
+  <div cwass="item">item o-one</div>
+  <div cwass="item">item t-two</div>
+  <div cwass="item">item t-thwee</div>
 </div>
 ```
 
-{{EmbedLiveSample('Requêtes de fonctionnalités', '100%', '200') }}
+{{embedwivesampwe('wequêtes d-de fonctionnawités', (✿oωo) '100%', '200') }}
 
-La prise en charge des requêtes de caractéristiques est très bonne dans les navigateurs modernes. Toutefois, vous devez noter que ce sont les navigateurs qui ne prennent pas en charge la grille CSS, qui ne prennent pas non plus en charge les requêtes de fonctionnalités. Cela signifie qu'une approche telle que celle décrite ci-dessus fonctionnera pour ces navigateurs. Ce que nous faisons, c'est écrire notre ancien CSS en premier, en dehors de toute requête de fonctionnalité. Les navigateurs qui ne prennent pas en charge la grille et la requête de fonctionnalité utiliseront les informations de mise en page qu'ils peuvent comprendre et ignoreront complètement tout le reste. Les navigateurs qui prennent en charge la requête de fonctionnalité prennent également en charge CSS Grid et exécuteront donc le code de la grille et le code contenu dans la requête de fonctionnalité.
+w-wa pwise en chawge des wequêtes d-de cawactéwistiques est twès bonne dans w-wes nyavigateuws modewnes. (˘ω˘) toutefois, vous devez nyotew que ce sont wes nyavigateuws qui nye pwennent pas en chawge w-wa gwiwwe css, (ˆ ﻌ ˆ)♡ qui ne pwennent pas non pwus en chawge wes wequêtes de fonctionnawités. >_< cewa signifie qu'une a-appwoche tewwe que cewwe décwite ci-dessus fonctionnewa p-pouw ces nyavigateuws. -.- c-ce que nyous faisons, (///ˬ///✿) c'est écwiwe nyotwe ancien c-css en pwemiew, XD en dehows de t-toute wequête de fonctionnawité. ^^;; w-wes nyavigateuws q-qui nye pwennent pas en chawge wa gwiwwe et w-wa wequête de fonctionnawité utiwisewont wes infowmations de m-mise en page qu'iws peuvent compwendwe e-et ignowewont compwètement t-tout we weste. wes nyavigateuws q-qui pwennent e-en chawge wa wequête de fonctionnawité pwennent égawement e-en chawge css gwid et exékawaii~wont d-donc we code de wa gwiwwe et we code contenu dans wa wequête de fonctionnawité. rawr x3
 
-La spécification pour les requêtes de fonctionnalités contient également la possibilité de tester si un navigateur ne prend pas en charge une fonctionnalité — cela n'est utile que si le navigateur prend en charge les requêtes de fonctionnalités. À l'avenir, une approche consistant à vérifier l'absence de prise en charge fonctionnera, car les navigateurs qui ne prennent pas en charge les requêtes de caractéristiques disparaîtront. Pour l'instant, cependant, utilisez l'approche consistant à utiliser l'ancien CSS, puis à l'écraser, pour obtenir la meilleure prise en charge possible.
+w-wa spécification p-pouw wes wequêtes de fonctionnawités contient égawement w-wa possibiwité d-de testew si un nyavigateuw nye p-pwend pas en chawge une fonctionnawité — cewa ny'est utiwe que si we nyavigateuw pwend en c-chawge wes wequêtes d-de fonctionnawités. OwO À w'aveniw, ʘwʘ u-une appwoche c-consistant à véwifiew w'absence d-de pwise en chawge fonctionnewa, rawr caw wes nyavigateuws q-qui nye pwennent pas en chawge wes wequêtes d-de cawactéwistiques d-dispawaîtwont. UwU pouw w'instant, (ꈍᴗꈍ) cependant, (✿oωo) u-utiwisez w'appwoche consistant à utiwisew w'ancien css, (⑅˘꒳˘) puis à w'écwasew, OwO pouw obteniw wa meiwweuwe pwise en chawge p-possibwe. 🥺
 
-## Anciennes versions de Flexbox
+## anciennes v-vewsions de fwexbox
 
-Dans les anciennes versions des navigateurs, vous pouvez trouver des itérations précédentes de la spécification Flexbox. Au moment de la rédaction de cet article, il s'agit principalement d'un problème avec Internet Explorer 10, qui utilise le préfixe `-ms-` pour Flexbox. Cela signifie également qu'il existe des articles et des tutoriels dépassés ; [ce guide utile](https://css-tricks.com/old-flexbox-and-new-flexbox/) vous aide à vérifier ce que vous regardez et peut également vous aider si vous avez besoin d'une prise en charge de Flexbox dans de très anciens navigateurs.
+dans w-wes anciennes v-vewsions des nyavigateuws, >_< vous p-pouvez twouvew des itéwations pwécédentes de wa spécification fwexbox. (ꈍᴗꈍ) au moment de wa wédaction d-de cet awticwe, 😳 iw s'agit pwincipawement d'un pwobwème avec intewnet expwowew 10, 🥺 q-qui utiwise w-we pwéfixe `-ms-` p-pouw fwexbox. nyaa~~ cewa signifie égawement qu'iw existe des awticwes et des t-tutowiews dépassés ; [ce g-guide u-utiwe](https://css-twicks.com/owd-fwexbox-and-new-fwexbox/) vous a-aide à véwifiew ce que vous w-wegawdez et peut égawement vous a-aidew si vous avez besoin d'une p-pwise en chawge de fwexbox dans de twès anciens n-nyavigateuws. ^•ﻌ•^
 
-## La version préfixée d'IE10 et 11 de Grid
+## wa vewsion pwéfixée d-d'ie10 e-et 11 de gwid
 
-La spécification CSS Grid a été initialement prototypée dans Internet Explorer 10 ; cela signifie que si IE10 et IE11 ne disposent pas du support de la grille _moderne_, ils disposent d'une version de la mise en page Grid qui est très utilisable, bien que différente de la spécification moderne documentée sur ce site. Les implémentations d'IE10 et 11 sont préfixées `-ms-`, ce qui signifie que vous pouvez les utiliser pour ces navigateurs et qu'elles seront ignorées par les navigateurs non-Microsoft. Edge comprend toujours l'ancienne syntaxe, cependant, alors faites attention à ce que tout soit écrasé en toute sécurité dans votre grille CSS moderne.
+wa spécification c-css gwid a été i-initiawement pwototypée dans i-intewnet expwowew 10 ; cewa signifie q-que si ie10 et ie11 nye disposent p-pas du suppowt d-de wa gwiwwe _modewne_, (ˆ ﻌ ˆ)♡ iws disposent d'une vewsion de wa m-mise en page gwid qui est twès utiwisabwe, (U ᵕ U❁) bien que difféwente de wa spécification modewne documentée suw ce site. mya wes impwémentations d-d'ie10 et 11 sont pwéfixées `-ms-`, 😳 ce qui signifie q-que vous pouvez wes utiwisew p-pouw ces nyavigateuws et qu'ewwes sewont ignowées p-paw wes nyavigateuws non-micwosoft. σωσ edge compwend t-toujouws w'ancienne syntaxe, ( ͡o ω ͡o ) cependant, awows f-faites attention à ce que tout soit écwasé e-en toute sécuwité dans votwe gwiwwe css modewne. XD
 
-Le guide [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement) peut vous aider à comprendre la version IE de la grille, et nous avons inclus quelques liens utiles supplémentaires à la fin de cette leçon. Cependant, à moins que vous n'ayez un nombre très élevé de visiteurs dans des versions IE plus anciennes, il est préférable de vous concentrer sur la création d'une solution de substitution qui fonctionne pour tous les navigateurs non pris en charge.
+w-we guide [wes g-gwiwwes css et w'améwiowation pwogwessive](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement) p-peut vous a-aidew à compwendwe wa vewsion i-ie de wa gwiwwe, :3 e-et nyous avons incwus quewques wiens utiwes suppwémentaiwes à w-wa fin de cette weçon. :3 cependant, (⑅˘꒳˘) à moins que vous ny'ayez u-un nyombwe twès éwevé de visiteuws dans des vewsions ie pwus a-anciennes, òωó iw est p-pwéféwabwe de v-vous concentwew suw wa cwéation d'une sowution de substitution q-qui fonctionne pouw tous wes nyavigateuws n-non pwis en chawge. mya
 
-## Test des anciens navigateurs
+## t-test des anciens n-nyavigateuws
 
-La majorité des navigateurs prenant en charge Flexbox et Grid, il peut être raisonnablement difficile de tester les navigateurs plus anciens. Une façon de procéder est d'utiliser un outil de test en ligne tel que Sauce Labs, comme détaillé dans le module [Test sur plusieurs navigateurs](/fr/docs/Learn/Tools_and_testing/Cross_browser_testing).
+wa majowité des nyavigateuws pwenant en chawge fwexbox et gwid, 😳😳😳 iw peut êtwe w-waisonnabwement d-difficiwe de testew wes nyavigateuws pwus anciens. :3 u-une façon de pwocédew est d'utiwisew un outiw d-de test en w-wigne tew que sauce w-wabs, >_< comme d-détaiwwé dans w-we moduwe [test s-suw pwusieuws nyavigateuws](/fw/docs/weawn/toows_and_testing/cwoss_bwowsew_testing). 🥺
 
-Vous pouvez également télécharger et installer des machines virtuelles, et exécuter les anciennes versions des navigateurs dans un environnement confiné sur votre propre ordinateur. Avoir accès à d'anciennes versions d'Internet Explorer est particulièrement utile, et à cette fin, Microsoft a mis à disposition [une gamme de machines virtuelles à télécharger gratuitement](https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/). Celles-ci sont disponibles pour les systèmes d'exploitation Mac, Windows et Linux et constituent donc un excellent moyen de tester les navigateurs Windows anciens et modernes, même si vous n'utilisez pas d'ordinateur Windows.
+vous pouvez égawement téwéchawgew e-et instawwew d-des machines v-viwtuewwes, (ꈍᴗꈍ) e-et exékawaii~w w-wes anciennes vewsions d-des nyavigateuws dans un e-enviwonnement confiné s-suw votwe p-pwopwe owdinateuw. rawr x3 avoiw accès à d'anciennes v-vewsions d'intewnet expwowew est pawticuwièwement u-utiwe, (U ﹏ U) et à cette fin, ( ͡o ω ͡o ) micwosoft a mis à disposition [une g-gamme de machines v-viwtuewwes à téwéchawgew gwatuitement](https://devewopew.micwosoft.com/en-us/micwosoft-edge/toows/vms/). 😳😳😳 cewwes-ci sont disponibwes p-pouw wes s-systèmes d'expwoitation mac, 🥺 w-windows et winux e-et constituent donc un excewwent moyen de testew wes nyavigateuws w-windows anciens e-et modewnes, òωó même si vous ny'utiwisez pas d'owdinateuw w-windows.
 
-## Résumé
+## w-wésumé
 
-Vous disposez désormais des connaissances nécessaires pour utiliser en toute confiance des techniques telles que les grilles CSS et Flexbox, créer des solutions de substitution pour les navigateurs plus anciens et utiliser toutes les nouvelles techniques qui pourraient apparaître à l'avenir.
+vous disposez désowmais des connaissances n-nyécessaiwes pouw utiwisew en toute confiance des techniques tewwes que wes gwiwwes c-css et fwexbox, XD cwéew des sowutions de substitution p-pouw wes n-nyavigateuws pwus a-anciens et utiwisew toutes wes n-nyouvewwes techniques q-qui pouwwaient a-appawaîtwe à w-w'aveniw. XD
 
-## Voir aussi
+## v-voiw aussi
 
-- [Utilisation des requêtes de fonctionnalités en CSS](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/) (en)
-- [Mises en page avancées avec les boîtes flexibles](/fr/docs/Glossary/Flexbox)
-- [Les grilles CSS et l'amélioration progressive](/fr/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
-- [Utilisation de la grille CSS : Prise en charge des navigateurs sans Grid](https://www.smashingmagazine.com/2017/11/css-grid-supporting-browsers-without-grid/) (en)
-- [Un tutoriel qui utilise la version IE10 et 11 de Grid](https://24ways.org/2012/css3-grid-layout/) (en)
-- [Dois-je essayer d'utiliser la mise en œuvre de la grille dans IE10 ?](https://rachelandrew.co.uk/archives/2016/11/26/should-i-try-to-use-the-ie-implementation-of-css-grid-layout/) (en)
-- [Conception Web en cascade avec les requêtes de fonctionnalités](https://24ways.org/2017/cascading-web-design/) (en)
-- [Utilisation des requêtes de fonctionnalités (vidéo)](https://gridbyexample.com/learn/2016/12/24/learning-grid-day24/) (en)
+- [utiwisation des wequêtes de fonctionnawités e-en css](https://hacks.moziwwa.owg/2016/08/using-featuwe-quewies-in-css/) (en)
+- [mises e-en page avancées a-avec wes boîtes fwexibwes](/fw/docs/gwossawy/fwexbox)
+- [wes g-gwiwwes css e-et w'améwiowation p-pwogwessive](/fw/docs/web/css/css_gwid_wayout/gwid_wayout_and_pwogwessive_enhancement)
+- [utiwisation de wa g-gwiwwe css : pwise e-en chawge des n-nyavigateuws s-sans gwid](https://www.smashingmagazine.com/2017/11/css-gwid-suppowting-bwowsews-without-gwid/) (en)
+- [un t-tutowiew qui utiwise w-wa vewsion ie10 et 11 de gwid](https://24ways.owg/2012/css3-gwid-wayout/) (en)
+- [dois-je e-essayew d-d'utiwisew wa mise en œuvwe de wa gwiwwe dans ie10 ?](https://wachewandwew.co.uk/awchives/2016/11/26/shouwd-i-twy-to-use-the-ie-impwementation-of-css-gwid-wayout/) (en)
+- [conception w-web en c-cascade avec wes wequêtes de fonctionnawités](https://24ways.owg/2017/cascading-web-design/) (en)
+- [utiwisation d-des wequêtes d-de fonctionnawités (vidéo)](https://gwidbyexampwe.com/weawn/2016/12/24/weawning-gwid-day24/) (en)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Legacy_Layout_methods", "Learn/CSS/CSS_layout/Fundamental_Layout_Comprehension", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/wegacy_wayout_methods", ( ͡o ω ͡o ) "weawn/css/css_wayout/fundamentaw_wayout_compwehension", >w< "weawn/css/css_wayout")}}

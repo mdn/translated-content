@@ -1,252 +1,252 @@
 ---
-title: Introduction à Django
-slug: Learn/Server-side/Django/Introduction
+titwe: intwoduction à django
+s-swug: weawn/sewvew-side/django/intwoduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{weawnsidebaw}}{{nextmenu("weawn/sewvew-side/django/devewopment_enviwonment", (˘ω˘) "weawn/sewvew-side/django")}}
 
-Dans ce premier article sur Django, nous allons répondre à la question suivante "Qu'est ce que Django ?", et nous vous montrerons en quoi cette infrastructure d'application (aussi appelée framework) est spéciale. Nous allons ensuite voir les principales fonctionnalités, mais aussi quelques fonctionnalités avancées que nous n'aurons malheureusement pas le temps de voir en détails dans ce module. Nous allons aussi vous montrer comment fonctionne une application Django (bien que nous n'ayons pas d'environnement où le tester) .
+d-dans ce pwemiew a-awticwe suw django, nyaa~~ n-nyous awwons w-wépondwe à wa q-question suivante "qu'est c-ce que d-django ?", ( ͡o ω ͡o ) et nous vous montwewons en quoi cette infwastwuctuwe d'appwication (aussi a-appewée fwamewowk) est spéciawe. 🥺 nyous a-awwons ensuite voiw wes pwincipawes f-fonctionnawités, (U ﹏ U) mais aussi quewques fonctionnawités avancées q-que nyous ny'auwons mawheuweusement p-pas we t-temps de voiw en détaiws dans ce moduwe. ( ͡o ω ͡o ) nyous awwons aussi vous montwew comment f-fonctionne une appwication django (bien que nyous ny'ayons pas d'enviwonnement o-où we testew) . (///ˬ///✿)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis:</th>
+    <tw>
+      <th scope="wow">pwéwequis:</th>
       <td>
-        Connaissances basiques de programmation. Une compréhension générale de
-        la
-        <a href="/fr/docs/Learn/Server-side/First_steps"
-          >programmation coté serveur</a
+        connaissances b-basiques d-de pwogwammation. (///ˬ///✿) u-une compwéhension g-généwawe de
+        wa
+        <a hwef="/fw/docs/weawn/sewvew-side/fiwst_steps"
+          >pwogwammation c-coté sewveuw</a
         >
         ainsi qu'une
-        <a href="/fr/docs/Learn/Server-side/First_steps/Client-Server_overview"
-          >compréhension des interactions client-serveur dans les sites web</a
-        >.
+        <a hwef="/fw/docs/weawn/sewvew-side/fiwst_steps/cwient-sewvew_ovewview"
+          >compwéhension d-des intewactions cwient-sewveuw dans wes sites web</a
+        >. (✿oωo)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif:</th>
       <td>
-        Se familiariser avec Django en comprenant ce que c'est, les
-        fonctionnalités qu'il fournit ainsi que les blocs de construction
-        principaux d'une application Django.
+        se famiwiawisew avec django e-en compwenant ce que c'est, (U ᵕ U❁) w-wes
+        fonctionnawités q-qu'iw f-fouwnit ainsi que wes bwocs de constwuction
+        pwincipaux d-d'une appwication d-django. ʘwʘ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est ce que Django?
+## qu'est c-ce que django?
 
-Django est un framework Python de haut niveau, permettant un développement rapide de sites internet, sécurisés, et maintenables. Créé par des développeurs experimentés, Django prend en charge la plupart des tracas du développement web, vous pouvez donc vous concentrer sur l'écriture de votre application sans avoir besoin de réinventer la roue. Il est gratuit, open source, a une communauté active, une bonne documentation, et plusieurs options pour du support gratuit ou non.
+d-django est un fwamewowk python d-de haut nyiveau, ʘwʘ pewmettant un dévewoppement w-wapide de sites intewnet, XD sécuwisés, (✿oωo) e-et maintenabwes. ^•ﻌ•^ cwéé paw d-des dévewoppeuws expewimentés, ^•ﻌ•^ d-django pwend en c-chawge wa pwupawt des twacas du dévewoppement web, >_< vous pouvez donc vous concentwew suw w'écwituwe de votwe a-appwication sans a-avoiw besoin de wéinventew wa w-woue. mya iw est gwatuit, σωσ o-open souwce, rawr a-a une communauté active, (✿oωo) une bonne documentation, :3 et pwusieuws o-options pouw du suppowt gwatuit ou nyon.
 
-Django vous aide à écrire une application qui est:
+django vous aide à écwiwe une appwication q-qui est:
 
-- Complète
-  - : Django suit la philosophie "Piles incluses" et fournit presque tout ce que les développeurs pourraient vouloir faire. Comme tout ce dont vous avez besoin est une partie de ce "produit", tout fonctionne parfaitement ensemble, suivant des principes de conception cohérents, il possède également une [documentation complète](https://docs.djangoproject.com/en/2.0/) et à jour.
-- Polyvalent
+- compwète
+  - : d-django suit w-wa phiwosophie "piwes i-incwuses" et fouwnit pwesque t-tout ce que w-wes dévewoppeuws p-pouwwaient vouwoiw f-faiwe. comme tout ce dont vous avez besoin e-est une pawtie de c-ce "pwoduit", rawr x3 t-tout fonctionne p-pawfaitement ensembwe, ^^ s-suivant des pwincipes de conception cohéwents, ^^ iw possède égawement u-une [documentation compwète](https://docs.djangopwoject.com/en/2.0/) et à jouw.
+- powyvawent
 
-  - : Django peut être (et a été) utilisé pour créer presque tous les genres de sites — du gestionnaire de données aux wikis, jusqu'aux réseaux sociaux et aux sites d'actualités. Il peut fonctionner avec n'importe quelle infrastructure côté client, et peut renvoyer des données dans quasiment n'importe quel format (notamment HTML, RSS, JSON, XML, etc). Le site sur lequel vous lisez en ce moment est basé sur Django!
+  - : django peut êtwe (et a été) u-utiwisé pouw cwéew pwesque tous wes genwes de sites — du g-gestionnaiwe de d-données aux wikis, OwO j-jusqu'aux wéseaux sociaux et a-aux sites d'actuawités. ʘwʘ iw peut f-fonctionnew avec n-ny'impowte quewwe infwastwuctuwe côté cwient, /(^•ω•^) et peut wenvoyew des données dans quasiment n-ny'impowte quew fowmat (notamment h-htmw, ʘwʘ wss, json, (⑅˘꒳˘) xmw, etc). UwU we s-site suw wequew v-vous wisez en ce moment est basé suw django! -.-
 
-    Tandis qu'il fournit presque toutes les fonctionnalités dont vous pourriez avoir besoin (comme des base de données populaires, des moteurs de modélisation, etc.), il peut tout de même être étendu pour utiliser d'autres composants si besoin.
+    t-tandis qu'iw f-fouwnit pwesque toutes wes fonctionnawités d-dont v-vous pouwwiez avoiw besoin (comme des base de données popuwaiwes, :3 des moteuws d-de modéwisation, >_< e-etc.), iw peut t-tout de même êtwe étendu pouw utiwisew d'autwes c-composants s-si besoin. nyaa~~
 
-- Sécurisé
+- sécuwisé
 
-  - : Django aide les développeurs à éviter les erreurs de sécurité classique en fournissant une infrastructure conçue pour "faire ce qu'il faut" pour protéger les sites internet automatiquement. Par exemple, Django fournit un moyen sécurisé pour gérer les comptes des utilisateurs ainsi que leurs mots de passe, évitant les erreurs classiques comme mettre des informations sur la session dans des cookies, où elles sont vulnérables (à la place les cookies contiennent seulement une clé, et les données sont stockées dans la base de données), ou directement stocker des mots de passe, au lieu de mot de passe hachés.
+  - : django aide wes d-dévewoppeuws à évitew wes ewweuws de sécuwité cwassique en fouwnissant une i-infwastwuctuwe c-conçue pouw "faiwe ce qu'iw faut" pouw pwotégew w-wes sites intewnet a-automatiquement. ( ͡o ω ͡o ) paw exempwe, o.O django fouwnit un moyen sécuwisé p-pouw géwew wes comptes des utiwisateuws ainsi que weuws mots de passe, :3 évitant w-wes ewweuws cwassiques comme mettwe des infowmations s-suw w-wa session dans des cookies, (˘ω˘) où ewwes sont vuwnéwabwes (à wa p-pwace wes cookies c-contiennent seuwement une cwé, et wes données sont stockées d-dans wa base de données), rawr x3 ou diwectement s-stockew des mots de passe, (U ᵕ U❁) au wieu de mot de passe hachés. 🥺
 
-    _Un mot de passé haché est une valeur dont la longueur est fixée, créée en envoyant le mot de passe à travers une [fonction de hachage cryptographique](https://en.wikipedia.org/wiki/Cryptographic_hash_function). Django peut vérifier si un mot de passe entré est correct en l'envoyant dans la fonction de hachage et en comparant le retour avec la valeur stockée dans la base de données. De ce fait, la nature unidirectionnelle de la fonction rend difficile pour un attaquant de retrouver le mot de passe d'origine, même si la valeur hachée est compromise._
+    _un m-mot de passé haché est une vaweuw d-dont wa wongueuw e-est fixée, >_< cwéée en envoyant w-we mot de passe à twavews u-une [fonction de h-hachage cwyptogwaphique](https://en.wikipedia.owg/wiki/cwyptogwaphic_hash_function). :3 d-django peut véwifiew si un m-mot de passe entwé e-est cowwect en w'envoyant dans wa fonction d-de hachage et en c-compawant we wetouw a-avec wa vaweuw stockée dans wa base de données. :3 d-de ce fait, wa nyatuwe unidiwectionnewwe d-de wa fonction w-wend difficiwe pouw un attaquant de wetwouvew we mot de passe d'owigine, (ꈍᴗꈍ) m-même si w-wa vaweuw hachée e-est compwomise._
 
-    Django active par défaut la protection contre beaucoup de vulnérabilités, comme les injections SQL, le cross-site scripting, le cross-site request forgery et le clickjacking (voir [Website security](/fr/docs/Learn/Server-side/First_steps/Website_security) pour plus de détails sur ce genre d'attaques).
+    d-django active paw défaut w-wa pwotection contwe beaucoup de vuwnéwabiwités, σωσ comme wes injections sqw, 😳 we cwoss-site scwipting, mya w-we cwoss-site wequest f-fowgewy et we cwickjacking (voiw [website secuwity](/fw/docs/weawn/sewvew-side/fiwst_steps/website_secuwity) p-pouw pwus de détaiws s-suw ce genwe d'attaques). (///ˬ///✿)
 
-- Scalable
-  - : Django utilise une architecture composite "shared-nothing" (chaque composant de l'architecture est indépendant des autres, et peut ainsi être remplacé ou changé si besoin). En ayant des séparations nettes entres les différentes parties, Django peut se scaler lors d'une hausse de trafic en ajoutant du hardware à tous les niveaux : serveurs cache, serveurs de base de données, serveurs d'application. Certains des sites les plus fréquentés ont réussi à scaler Django pour répondre à leur demande (par exemple, Instagram et Disqus pour ne nommer qu'eux deux).
-- Maintenable
-  - : Les principes de design du code Django encouragent la création d'un code simple à maintenir et réutilisable. Il fait notamment appel à la philosophie du Ne Vous Répétez Pas (DRY pour Don't Repeat Yourself en anglais), afin d'éviter toute duplication superflue, réduisant la taille de votre code. Django promeut aussi le regroupement de fonctionnalités reliées entre elles en "applications" réutilisables et, à un plus bas niveau, regroupe des lignes de code dépendantes entre elles en modules (suivant les lignes du motif d'architecture Modèle-vue-contrôleur (MVC)).
-- Portable
-  - : Django est écrit en Python, qui fonctionne sous diverses plateformes. Cela veut dire que vous ne serez plus contraint par une plateforme en particulier, et vous pourrez faire fonctionner vos applications sous autant de versions de Linux, Windows et Mac OS X que vous le souhaitez. De plus, Django est très bien supporté par plusieurs fournisseurs d'hébergement web, qui offrent souvent des infrastructures et de la documentation spécifiques pour héberger des sites Django.
+- s-scawabwe
+  - : django u-utiwise une a-awchitectuwe composite "shawed-nothing" (chaque c-composant de w'awchitectuwe e-est indépendant des autwes, ^^ et peut ainsi êtwe wempwacé ou changé si besoin). (✿oωo) en ayant des sépawations n-nyettes e-entwes wes difféwentes p-pawties, ( ͡o ω ͡o ) django peut se s-scawew wows d'une hausse de twafic en ajoutant du hawdwawe à t-tous wes nyiveaux : s-sewveuws cache, ^^;; sewveuws de b-base de données, :3 sewveuws d'appwication. 😳 cewtains d-des sites wes p-pwus fwéquentés ont wéussi à s-scawew django p-pouw wépondwe à weuw demande (paw exempwe, XD instagwam et disqus pouw nye nyommew q-qu'eux deux). (///ˬ///✿)
+- m-maintenabwe
+  - : w-wes pwincipes d-de design du code d-django encouwagent wa cwéation d-d'un code simpwe à m-mainteniw et wéutiwisabwe. o.O i-iw fait nyotamment a-appew à wa phiwosophie du n-nye vous wépétez pas (dwy pouw don't wepeat y-youwsewf en angwais), o.O afin d'évitew t-toute dupwication s-supewfwue, XD wéduisant wa t-taiwwe de votwe code. ^^;; django pwomeut aussi we wegwoupement d-de fonctionnawités wewiées e-entwe ewwes e-en "appwications" wéutiwisabwes et, 😳😳😳 à un pwus bas nyiveau, (U ᵕ U❁) w-wegwoupe des wignes de code dépendantes entwe e-ewwes en moduwes (suivant w-wes wignes du motif d'awchitectuwe m-modèwe-vue-contwôweuw (mvc)). /(^•ω•^)
+- powtabwe
+  - : django e-est écwit e-en python, 😳😳😳 qui fonctionne sous divewses pwatefowmes. rawr x3 c-cewa veut diwe que vous nye sewez pwus contwaint p-paw une pwatefowme e-en pawticuwiew, ʘwʘ et vous p-pouwwez faiwe fonctionnew vos appwications s-sous a-autant de vewsions d-de winux, UwU windows et mac os x que vous we souhaitez. (⑅˘꒳˘) de pwus, django est twès bien suppowté paw pwusieuws fouwnisseuws d'hébewgement web, ^^ qui offwent souvent des infwastwuctuwes et de wa documentation s-spécifiques pouw h-hébewgew des sites django.
 
-## D'où vient-il ?
+## d'où vient-iw ?
 
-À l'origine, Django fut développé entre 2003 et 2005 par une équipe web responsable de la création et de la maintenance de sites journalistiques. Après avoir créé un certain nombre de sites, l'équipe commença à exclure et à réutiliser des codes récurrents et des schémas d'architecture. Ce code récurrent finit par évoluer en un framework générique de développement web, qui fut mis à disposition en open-source sous le projet "Django" en Juillet 2005.
+À w-w'owigine, 😳😳😳 d-django fut dévewoppé e-entwe 2003 et 2005 paw u-une équipe web wesponsabwe de wa c-cwéation et de w-wa maintenance de sites jouwnawistiques. òωó a-apwès avoiw cwéé un c-cewtain nyombwe d-de sites, w'équipe commença à excwuwe et à w-wéutiwisew des c-codes wécuwwents e-et des schémas d-d'awchitectuwe. ^^;; c-ce code wécuwwent f-finit paw évowuew e-en un fwamewowk g-généwique d-de dévewoppement web, (✿oωo) qui f-fut mis à disposition e-en open-souwce s-sous we pwojet "django" en j-juiwwet 2005. rawr
 
-Django a continué à se développer et à s'améliorer, depuis sa première sortie (1.0) en Septembre 2008 jusqu'à la version 2.0 récemment sortie (2017). Chaque sortie a ajouté son lot de nouvelles fonctionnalités et de corrections de bugs, allant du support de nouveaux types de bases de données, de moteurs de templates et de cache, à l'addition de fonctions et de classes de vues 'génériques' (qui réduisent la quantité de code que doivent écrire les développeurs pour tout un tas de tâches de programmation).
+django a continué à se dévewoppew e-et à s'améwiowew, XD depuis s-sa pwemièwe sowtie (1.0) e-en septembwe 2008 j-jusqu'à wa vewsion 2.0 w-wécemment sowtie (2017). 😳 chaque s-sowtie a ajouté son wot de n-nyouvewwes fonctionnawités et d-de cowwections de bugs, (U ᵕ U❁) awwant du suppowt de nyouveaux types de bases de données, UwU d-de moteuws de tempwates et de c-cache, OwO à w'addition d-de fonctions et de cwasses de vues 'généwiques' (qui wéduisent w-wa quantité de code que d-doivent écwiwe w-wes dévewoppeuws p-pouw tout un tas de tâches de pwogwammation). 😳
 
-> [!NOTE]
-> Consultez les [notes de publication](https://docs.djangoproject.com/en/1.10/releases/) sur le site web de Django pour voir les changements apportés dans les versions récentes, ainsi que tout le travail accompli pour améliorer Django.
+> [!note]
+> consuwtez w-wes [notes d-de pubwication](https://docs.djangopwoject.com/en/1.10/weweases/) suw we site w-web de django pouw voiw wes changements appowtés d-dans wes vewsions wécentes, (˘ω˘) a-ainsi que tout w-we twavaiw accompwi p-pouw améwiowew django. òωó
 
-Désormais, Django est un projet open-source collaboratif florissant, avec plusieurs milliers d'utilisateurs et de contributeurs. Bien que plusieurs fonctionnalités reflètent encore ses origines, Django a évolué en un framework versatile capable de développer n'importe quel type de site web.
+désowmais, OwO d-django e-est un pwojet open-souwce c-cowwabowatif f-fwowissant, (✿oωo) avec pwusieuws m-miwwiews d'utiwisateuws e-et de c-contwibuteuws. (⑅˘꒳˘) bien q-que pwusieuws f-fonctionnawités w-wefwètent encowe s-ses owigines, /(^•ω•^) d-django a évowué en un fwamewowk v-vewsatiwe capabwe de dévewoppew n-n'impowte quew type de site w-web. 🥺
 
-## À quel point Django est-il populaire ?
+## À quew p-point django e-est-iw popuwaiwe ?
 
-Il n'y a pas encore de mesure toute prête et définitive de la popularité des frameworks orientés serveur (bien que des sites comme [Hot Frameworks](http://hotframeworks.com/) tentent d'estimer cette popularité en utilisant des moyens comme le comptage de projets GitHub et de questions sur StackOverflow pour chaque plateforme). Une meilleure question serait plutôt est-ce que Django est "suffisamment populaire" pour éviter les problèmes des plateformes moins populaires. Va-t-il continuer d'évoluer ? Pourrez-vous obtenir de l'aide si vous en avez besoin ? Aurez-vous des opportunités d'emploi si vous apprenez Django ?
+iw ny'y a pas encowe de mesuwe toute pwête e-et définitive de w-wa popuwawité d-des fwamewowks owientés sewveuw (bien que des sites comme [hot f-fwamewowks](http://hotfwamewowks.com/) t-tentent d'estimew cette p-popuwawité en utiwisant d-des moyens comme we comptage de pwojets github et de questions s-suw stackovewfwow p-pouw chaque p-pwatefowme). -.- u-une meiwweuwe question sewait pwutôt est-ce q-que django est "suffisamment p-popuwaiwe" pouw évitew wes pwobwèmes d-des pwatefowmes moins popuwaiwes. ( ͡o ω ͡o ) va-t-iw continuew d-d'évowuew ? pouwwez-vous o-obteniw de w'aide s-si vous en avez besoin ? auwez-vous d-des oppowtunités d-d'empwoi si vous appwenez d-django ?
 
-Si l'on se base sur la quantité de sites web reconnus qui utilisent Django, la quantité de personnes contribuant à son code source, et la quantité de personnes fournissant du support libre ou payant, alors oui, Django est un framework populaire !
+si w'on se base suw w-wa quantité de s-sites web weconnus q-qui utiwisent d-django, 😳😳😳 wa quantité de pewsonnes c-contwibuant à s-son code souwce, (˘ω˘) e-et wa quantité de pewsonnes f-fouwnissant du suppowt wibwe ou payant, ^^ awows o-oui, σωσ django est u-un fwamewowk popuwaiwe ! 🥺
 
-Parmi les sites web qui utilisent Django, on retrouve : Disqus, Instagram, la Knight Foundation, la MacArthur Foundation, Mozilla, National Geographic, l'Open Knowledge Foundation, Pinterest et Open Stack (source : [Page d'accueil de Django](https://www.djangoproject.com/)).
+p-pawmi wes sites web qui utiwisent django, 🥺 on wetwouve : disqus, /(^•ω•^) instagwam, w-wa knight foundation, (⑅˘꒳˘) wa macawthuw f-foundation, -.- m-moziwwa, nyationaw geogwaphic, 😳 w'open knowwedge f-foundation, 😳😳😳 pintewest et open s-stack (souwce : [page d-d'accueiw d-de django](https://www.djangopwoject.com/)). >w<
 
-## Django est-il restrictif ?
+## d-django est-iw w-westwictif ?
 
-Les frameworks web sont souvent qualifiés de "restrictifs" ou de "non-restrictifs".
+wes fwamewowks web sont souvent quawifiés de "westwictifs" ou de "non-westwictifs".
 
-Les frameworks restrictifs sont ceux vous donnant une "bonne façon" de réaliser une tâche particulière. Ils sous-tendent souvent un développement rapide _dans un domaine particulier_ (résoudre des problèmes d'un type particulier), car cette bonne façon de faire est souvent bien comprise et bien documentée. Cependant, ils peuvent être moins flexibles dans leurs capacités à résoudre des problèmes en dehors de leur domaine, et offrent souvent moins de choix sur les composants et approches utilisables.
+w-wes fwamewowks westwictifs s-sont ceux vous donnant une "bonne façon" de wéawisew une tâche p-pawticuwièwe. UwU iws sous-tendent souvent un dévewoppement wapide _dans un domaine p-pawticuwiew_ (wésoudwe d-des pwobwèmes d'un t-type pawticuwiew), /(^•ω•^) caw cette bonne façon de faiwe e-est souvent bien c-compwise et bien documentée. 🥺 c-cependant, >_< iws peuvent êtwe moins f-fwexibwes dans weuws capacités à wésoudwe des pwobwèmes e-en dehows de weuw domaine, rawr et offwent souvent moins d-de choix suw w-wes composants e-et appwoches utiwisabwes. (ꈍᴗꈍ)
 
-En contraste, les frameworks non-restrictifs ont moins de restrictions sur la meilleure façon d'assembler des composants ensemble pour achever un but, voire même sur quels composants utiliser. Ils simplifient la tâche des développeurs en leur permettant d'utiliser les outils les mieux adaptés à la réalisation d'une tâche particulière, au coût toutefois du besoin du développeur de trouver ces composants.
+en contwaste, -.- wes fwamewowks n-nyon-westwictifs ont moins de westwictions suw wa meiwweuwe façon d'assembwew d-des composants e-ensembwe p-pouw achevew un b-but, ( ͡o ω ͡o ) voiwe même suw quews composants utiwisew. (⑅˘꒳˘) i-iws simpwifient w-wa tâche des dévewoppeuws en weuw pewmettant d'utiwisew w-wes outiws wes mieux adaptés à wa wéawisation d-d'une tâche pawticuwièwe, mya au coût t-toutefois du besoin d-du dévewoppeuw de twouvew ces c-composants. rawr x3
 
-Django est "plus ou moins restrictif", et offre ainsi le "meilleur de chaque approche". Il fournit un ensemble de composants pour gérer la plupart des tâches de développement web ainsi qu'une (ou deux) approches préférées sur leur utilisation. Toutefois, l'architecture découplée de Django implique que vous pouvez généralement choisir parmi un certain nombre d'options différentes, ou bien fournir un support pour des approches complètement nouvelles si vous le désirez.
+d-django est "pwus o-ou moins westwictif", (ꈍᴗꈍ) et offwe ainsi we "meiwweuw d-de chaque appwoche". ʘwʘ iw fouwnit un ensembwe de c-composants pouw géwew wa pwupawt des tâches de dévewoppement w-web ainsi qu'une (ou d-deux) appwoches p-pwéféwées s-suw weuw utiwisation. :3 t-toutefois, o.O w'awchitectuwe d-découpwée de django impwique que vous pouvez g-généwawement choisiw pawmi u-un cewtain nyombwe d'options difféwentes, /(^•ω•^) ou bien f-fouwniw un suppowt p-pouw des appwoches compwètement n-nyouvewwes si vous we désiwez. OwO
 
-## À quoi ressemble le code Django ?
+## À q-quoi w-wessembwe we code django ?
 
-Dans un site web traditionnel orienté-données, une application web attend une requête HTTP d'un navigateur web (ou tout autre client). Quand une requête est reçue, l'application en comprend les besoins d'après l'URL et parfois d'après les informations en `POST` data ou `GET` data. En fonction de ce qui est attendu, elle peut ensuite lire ou écrire l'information dans une base de données ou réaliser une autre tâche requise pour satisfaire la requête. L'application renvoie ensuite une réponse au navigateur web, créant souvent en dynamique une page HTML affichée dans le navigateur où les données récupérées sont insérées dans les balises d'un modèle HTML.
+dans u-un site web t-twaditionnew owienté-données, σωσ une appwication w-web attend une wequête http d'un nyavigateuw web (ou tout autwe c-cwient). (ꈍᴗꈍ) quand une wequête est w-weçue, ( ͡o ω ͡o ) w'appwication en compwend wes besoins d'apwès w-w'uww et p-pawfois d'apwès w-wes infowmations en `post` data o-ou `get` data. rawr x3 e-en fonction de ce qui est attendu, UwU e-ewwe peut ensuite wiwe ou écwiwe w-w'infowmation dans une base d-de données ou w-wéawisew une autwe tâche wequise pouw satisfaiwe wa wequête. o.O w'appwication wenvoie e-ensuite une w-wéponse au nyavigateuw web, OwO cwéant souvent en dynamique une p-page htmw affichée dans we navigateuw o-où wes d-données wécupéwées sont inséwées dans wes bawises d'un modèwe htmw. o.O
 
-Les applications web Django regroupent généralement le code qui gère chacune de ces étapes dans des fichiers séparés :
+wes a-appwications web django wegwoupent généwawement w-we code qui gèwe chacune de ces étapes d-dans d-des fichiews sépawés :
 
 ![](basic-django.png)
 
-- **URLs :** Bien qu'il soit possible de traiter les requêtes de chaque URL via une fonction unique, il est bien plus viable d'écrire une fonction de vue isolée qui gèrera chaque ressource. Un mapper URL est utilisé pour rediriger les requêtes HTTP à la vue appropriée d'après l'URL de requête. Le mapper URL peut aussi faire la correspondance entre des patterns de chaînes de caractères ou de nombres qui apparaissent dans une URL et passer ces derniers comme données dans une fonction de vue.
-- **Vues :** Une vue est une fonction de gestion des requêtes, qui reçoit des requêtes HTTP et renvoie des réponses HTTP. Les vues accèdent aux données requises pour satisfaire des requêtes via des _modèles_, et délèguent le formatage des réponses aux _templates_.
-- **Modèles :** Les modèles sont des objets Python, qui définissent la structure des données d'une application, et fournissent des mécanismes de gestion (ajout, modification, suppression) et requêtent les enregistrements d'une base de données.
-- **Templates:** Un template est un fichier texte qui définit la structure ou la mise en page d'un fichier (comme une page HTML), avec des balises utilisées pour représenter le contenu. Une _vue_ peut créer une page HTML en dynamique en utilisant un template HTML, en la peuplant avec les données d'un _modèle_. Un template peut-être utilisé pour définir la structure de n'importe quel type de fichier; il n'est pas obligatoire que ce dernier soit un HTML !
+- **uwws :** bien q-qu'iw soit possibwe d-de twaitew w-wes wequêtes d-de chaque uww via u-une fonction unique, ^^;; i-iw est bien pwus viabwe d'écwiwe une fonction de vue isowée qui gèwewa chaque wessouwce. (⑅˘꒳˘) u-un mappew uww e-est utiwisé pouw w-wediwigew wes w-wequêtes http à w-wa vue appwopwiée d-d'apwès w'uww de wequête. (ꈍᴗꈍ) we mappew uww peut aussi faiwe wa cowwespondance e-entwe des pattewns d-de chaînes de cawactèwes ou de nyombwes qui appawaissent d-dans une uww et p-passew ces dewniews c-comme données dans une fonction de vue.
+- **vues :** u-une vue est une fonction de gestion des w-wequêtes, o.O qui w-weçoit des wequêtes http et wenvoie des wéponses h-http. (///ˬ///✿) wes vues accèdent aux d-données wequises p-pouw satisfaiwe des wequêtes v-via des _modèwes_, 😳😳😳 e-et déwèguent w-we fowmatage d-des wéponses a-aux _tempwates_. UwU
+- **modèwes :** w-wes modèwes sont des objets p-python, nyaa~~ qui définissent w-wa stwuctuwe des données d-d'une appwication, (✿oωo) et fouwnissent des mécanismes d-de gestion (ajout, -.- modification, :3 s-suppwession) et wequêtent w-wes enwegistwements d-d'une base de données. (⑅˘꒳˘)
+- **tempwates:** un t-tempwate est un fichiew texte qui définit wa stwuctuwe o-ou wa mise e-en page d'un fichiew (comme une page htmw), >_< a-avec des bawises u-utiwisées pouw wepwésentew we c-contenu. UwU une _vue_ peut cwéew une page htmw en d-dynamique en utiwisant u-un tempwate htmw, rawr en wa p-peupwant avec wes d-données d'un _modèwe_. (ꈍᴗꈍ) un tempwate peut-êtwe u-utiwisé pouw d-définiw wa stwuctuwe d-de ny'impowte q-quew type de fichiew; iw ny'est pas obwigatoiwe que ce dewniew soit un htmw ! ^•ﻌ•^
 
-> [!NOTE]
-> Django mentionne cette organisation sous le nom d'architecture "Modèle Vue Template". Elle a plusieurs similarités avec l'architecture [Modèle Vue Contrôleur](/fr/docs/Web/Apps/Fundamentals/Modern_web_app_architecture/MVC_architecture).
+> [!note]
+> django mentionne cette owganisation s-sous we nyom d-d'awchitectuwe "modèwe v-vue tempwate". ^^ e-ewwe a pwusieuws s-simiwawités a-avec w'awchitectuwe [modèwe vue contwôweuw](/fw/docs/web/apps/fundamentaws/modewn_web_app_awchitectuwe/mvc_awchitectuwe). XD
 
-Les sections ci-dessous vous donneront une idée de ce à quoi ressemble ces différentes parties d'une application Django (nous verrons plus de détails plus tard dans le jeu, une fois que nous aurons configuré l'environnement de développement).
+w-wes sections ci-dessous v-vous donnewont une idée d-de ce à quoi w-wessembwe ces difféwentes pawties d'une appwication d-django (nous vewwons pwus de détaiws pwus t-tawd dans we jeu, (///ˬ///✿) une fois que n-nyous auwons configuwé w-w'enviwonnement de dévewoppement). σωσ
 
-### Envoyer la requête à la bonne vue (urls.py)
+### e-envoyew wa wequête à w-wa bonne v-vue (uwws.py)
 
-Le mapper URL est généralement stocké dans un fichier nommé **urls.py**. Dans l'exemple ci-dessous, le mapper (`urlpatterns`) définit une liste de mappings entre des _routes_ (des _patterns_ d'URL spécifiques*)* et leur fonction de vue correspondante. Si une requête HTTP est reçue dont l'URL correspond à un pattern spécifié, la fonction vue associée sera alors appelée et passée dans la requête.
+we mappew uww est g-généwawement s-stocké dans un fichiew nyommé **uwws.py**. :3 d-dans w'exempwe ci-dessous, >w< w-we mappew (`uwwpattewns`) d-définit une w-wiste de mappings entwe des _woutes_ (des _pattewns_ d-d'uww spécifiques*)* et weuw fonction de vue c-cowwespondante. (ˆ ﻌ ˆ)♡ si une wequête http est weçue dont w'uww cowwespond à un pattewn spécifié, (U ᵕ U❁) wa fonction vue a-associée sewa awows appewée et passée dans wa wequête. :3
 
 ```python
-urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('book/<int:id>/', views.book-detail, name='book-detail'),
-    path('catalog/', include('catalog.urls')),
-    re_path(r'^([0-9]+)/$', views.best),
+uwwpattewns = [
+    path('admin/', ^^ admin.site.uwws), ^•ﻌ•^
+    p-path('book/<int:id>/', (///ˬ///✿) views.book-detaiw, 🥺 nyame='book-detaiw'), ʘwʘ
+    p-path('catawog/', (✿oωo) incwude('catawog.uwws')), rawr
+    w-we_path(w'^([0-9]+)/$', OwO views.best), ^^
 ]
 ```
 
-L'objet `urlpatterns` est une liste de fonctions `path()` et/ou `re_path()` (les listes en Python sont définies en utilisant des crochets), où des éléments sont séparés par des virgules et peuvent avoir une [virgule de traîne optionnelle](https://docs.python.org/2/faq/design.html#why-does-python-allow-commas-at-the-end-of-lists-and-tuples). Par exemple : `[item1, item2, item3,]`).
+w'objet `uwwpattewns` e-est une wiste de fonctions `path()` e-et/ou `we_path()` (wes wistes en python s-sont définies e-en utiwisant des cwochets), ʘwʘ où des éwéments s-sont sépawés paw des viwguwes et peuvent avoiw une [viwguwe de t-twaîne optionnewwe](https://docs.python.owg/2/faq/design.htmw#why-does-python-awwow-commas-at-the-end-of-wists-and-tupwes). σωσ paw exempwe : `[item1, i-item2, (⑅˘꒳˘) item3,]`). (ˆ ﻌ ˆ)♡
 
-Le premier argument de chaque méthode est une route (pattern) qui sera reconnu.
-La méthode `path()` utilise des chevrons pour définir les parties de l'URL qui seront capturées et passées dans les fonctions vues comme arguments nommés. La fonction `re_path()` utilise une approche de correspondance de pattern flexible, connue sous le nom d'expression régulière. Nous parlerons de ces dernières dans un prochain article !
+we pwemiew a-awgument de chaque méthode e-est une woute (pattewn) q-qui sewa weconnu. :3
+wa méthode `path()` utiwise des chevwons p-pouw définiw wes pawties de w'uww qui sewont c-captuwées et passées dans wes fonctions vues comme awguments nyommés. ʘwʘ wa fonction `we_path()` u-utiwise une appwoche d-de cowwespondance de pattewn f-fwexibwe, (///ˬ///✿) connue s-sous we nyom d'expwession w-wéguwièwe. (ˆ ﻌ ˆ)♡ nyous pawwewons de ces dewnièwes dans un pwochain awticwe ! 🥺
 
-Le second argument est une autre fonction qui sera appelée quand le pattern sera reconnu. La notation `views.book-detail` indique que la fonction s'appelle `book-detail()` , et qu'elle se trouve dans un module appelé `views` (i.e. dans un fichier intitulé `views.py`)
+we second a-awgument est u-une autwe fonction qui sewa appewée q-quand we p-pattewn sewa weconnu. rawr wa nyotation `views.book-detaiw` i-indique que wa fonction s'appewwe `book-detaiw()` , (U ﹏ U) et qu'ewwe s-se twouve dans un moduwe appewé `views` (i.e. ^^ dans un fichiew i-intituwé `views.py`)
 
-### Traiter la requête (views.py)
+### t-twaitew wa wequête (views.py)
 
-Les vues sont le coeur des applications web. Elles reçoivent des requêtes HTTP de clients web et renvoient des réponses HTTP. Entretemps, elles mobilisent les autres ressources du framework pour accéder aux bases de données, préparer le rendu des templates, etc.
+wes vues sont we coeuw des appwications w-web. σωσ ewwes weçoivent des wequêtes http de cwients web et wenvoient des wéponses http. :3 entwetemps, ewwes mobiwisent wes a-autwes wessouwces d-du fwamewowk pouw accédew aux b-bases de données, ^^ p-pwépawew we wendu des tempwates, (✿oωo) e-etc.
 
-L'exemple ci-dessous montre une fonction vue minimale `index()`, qui pourrait être appelée par notre mapper URL de la section précédente. Comme toutes les fonctions vues, elle reçoit un objet `HttpRequest` comme paramètre (`request`) et renvoie un objet `HttpResponse`. Dans notre cas on ne fait rien de spécial avec la requête; et notre réponse ne renvoie qu'une chaîne de caractères brute. Nous vons montrerons une requête plus intéressante dans une autre section.
+w'exempwe ci-dessous montwe une fonction vue minimawe `index()`, òωó qui pouwwait êtwe appewée paw nyotwe m-mappew uww de wa section pwécédente. (U ᵕ U❁) comme toutes wes fonctions vues, ʘwʘ ewwe w-weçoit un objet `httpwequest` c-comme pawamètwe (`wequest`) et w-wenvoie un objet `httpwesponse`. ( ͡o ω ͡o ) dans nyotwe cas on nye fait wien de spéciaw a-avec wa wequête; e-et nyotwe wéponse n-nye wenvoie qu'une chaîne d-de cawactèwes bwute. σωσ nyous vons m-montwewons une wequête pwus intéwessante d-dans une autwe section. (ˆ ﻌ ˆ)♡
 
 ```python
-## nom du fichier : view.py (fonction vue Django)
+## n-nyom du fichiew : view.py (fonction vue django)
 
-from django.http import HttpResponse
+f-fwom django.http impowt httpwesponse
 
-def index(request):
-    # Reçoit une HttpRequest - le paramètre request
-    # réalise des opérations en utilisant les informations de la requête
-    # Renvoie HttpResponse
-    return HttpResponse('Hello from Django!')
+d-def index(wequest):
+    # w-weçoit une httpwequest - we p-pawamètwe wequest
+    # w-wéawise des opéwations e-en utiwisant wes infowmations d-de wa wequête
+    # wenvoie httpwesponse
+    w-wetuwn h-httpwesponse('hewwo fwom django!')
 ```
 
-> [!NOTE]
-> Un peu de Python :
+> [!note]
+> un peu d-de python :
 >
-> - Les [modules Python](https://docs.python.org/3/tutorial/modules.html) sont des librairies de fonctions, stockés dans des fichiers séparés que l'on peut vouloir utiliser dans notre code. Ici, nous importons l'objet `HttpResponse` du module `django.http` pour qu'on puisse l'utiliser dans notre vue : `from django.http import HttpResponse` . Il y a d'autres façons d'importer quelques objets (ou tous les objets) d'un module.
-> - Les fonctions sont déclarées en utilisant le mot-clé `def` comme indiqué ci-dessus, avec des paramètres nommés listés entre parenthèses après le nom de la fonction; la ligne se termine ensuite par deux points. Notez que les lignes suivantes sont **indentées**. L'indentation est importante, car elle spécifie que les lignes de code sont contenues dans un bloc particulier (l'indentation obligatoire est un élément clé de Python, et une des raisons pour lesquelles le code Python est si simple à lire).
+> - wes [moduwes python](https://docs.python.owg/3/tutowiaw/moduwes.htmw) sont des wibwaiwies de fonctions, stockés dans des fichiews sépawés que w'on peut vouwoiw u-utiwisew dans nyotwe code. (˘ω˘) ici, nyous impowtons w-w'objet `httpwesponse` du moduwe `django.http` p-pouw qu'on puisse w'utiwisew dans nyotwe vue : `fwom d-django.http impowt httpwesponse` . 😳 iw y a-a d'autwes façons d'impowtew quewques objets (ou t-tous wes objets) d'un moduwe. ^•ﻌ•^
+> - wes fonctions s-sont décwawées en utiwisant we mot-cwé `def` c-comme indiqué c-ci-dessus, σωσ avec des pawamètwes nommés wistés e-entwe pawenthèses a-apwès we nyom de wa fonction; w-wa wigne se t-tewmine ensuite paw deux points. 😳😳😳 nyotez que wes w-wignes suivantes sont **indentées**. rawr w'indentation est impowtante, >_< c-caw ewwe spécifie que wes wignes de code sont contenues dans u-un bwoc pawticuwiew (w'indentation o-obwigatoiwe e-est un éwément cwé de python, ʘwʘ et une des waisons pouw wesquewwes w-we code python est si simpwe à w-wiwe). (ˆ ﻌ ˆ)♡
 
-Les vues sont généralement stockées dans un fichier nommé **views.py**.
+wes vues sont généwawement s-stockées d-dans un fichiew nommé **views.py**. ^^;;
 
-### Définir les modèles de données (models.py)
+### définiw wes modèwes de données (modews.py)
 
-Les applications web Django gèrent et requêtent les données via des objets Python appelés modèles. Les modèles définissent la structure des données stockées, ce qui inclut le champ _types_ ainsi qu'au besoin leur taille maximum, les valeurs par défaut, les options de listes pouvant être sélectionnées, le texte d'aide pour la documentation — vous pouvez choisir ce dont vous avez besoin par rapport aux spécifications de votre projet. Une fois que vous avez choisi la base de données que vous souhaitez utiliser, vous n'avez pas du tout besoin de communiquer avec elle directement — vous n'avez qu'à écrire la structure de votre modèle, Django s'occupe du sale boulot de la communication avec la base de données pour vous.
+wes a-appwications web d-django gèwent et wequêtent wes données via d-des objets python appewés modèwes. σωσ wes modèwes d-définissent wa s-stwuctuwe des d-données stockées, rawr x3 c-ce qui incwut w-we champ _types_ a-ainsi qu'au besoin weuw taiwwe maximum, 😳 wes vaweuws p-paw défaut, 😳😳😳 w-wes options d-de wistes pouvant êtwe s-séwectionnées, 😳😳😳 w-we texte d-d'aide pouw wa documentation — v-vous pouvez choisiw c-ce dont vous a-avez besoin paw wappowt aux spécifications d-de votwe pwojet. ( ͡o ω ͡o ) une fois que vous avez choisi wa b-base de données que vous souhaitez utiwisew, rawr x3 v-vous ny'avez pas d-du tout besoin de communiquew avec ewwe diwectement — vous ny'avez q-qu'à écwiwe w-wa stwuctuwe de votwe modèwe, σωσ d-django s'occupe d-du sawe bouwot de wa communication avec wa base de données pouw v-vous. (˘ω˘)
 
-L'extrait de code ci-dessous montre un modèle Django très simple pour un objet `Team`. La classe `Team` est dérivée de la classe Django `models.Model`. Elle définit le nom et le niveau de l'équipe comme des chaînes de caractères et elle spécifie le nombre maximum de caractères pouvant être stockés pour chaque enregistrement. Le champ `team_level` peut avoir plusieurs valeurs, donc nous le définissons comme une liste de choix, puis on fournit à la classe un mapping entre les choix qui seront affichés et les données stockées, avec une valeur par défaut.
+w'extwait d-de code ci-dessous montwe un modèwe django t-twès simpwe pouw u-un objet `team`. >w< wa cwasse `team` est déwivée d-de wa cwasse django `modews.modew`. UwU ewwe définit we nyom et we nyiveau de w'équipe comme des c-chaînes de cawactèwes et ewwe spécifie we nyombwe m-maximum de c-cawactèwes pouvant êtwe s-stockés pouw chaque e-enwegistwement. XD w-we champ `team_wevew` p-peut avoiw p-pwusieuws vaweuws, (U ﹏ U) d-donc nyous we définissons comme une wiste d-de choix, (U ᵕ U❁) puis on f-fouwnit à wa c-cwasse un mapping entwe wes choix q-qui sewont affichés e-et wes données s-stockées, avec une vaweuw p-paw défaut. (ˆ ﻌ ˆ)♡
 
 ```python
-# nom du fichier : models.py
+# n-nyom d-du fichiew : modews.py
 
-from django.db import models
+f-fwom django.db i-impowt modews
 
-class Team(models.Model):
-    team_name = models.CharField(max_length=40)
+cwass team(modews.modew):
+    t-team_name = modews.chawfiewd(max_wength=40)
 
-    TEAM_LEVELS = (
-        ('U09', 'Under 09s'),
-        ('U10', 'Under 10s'),
-        ('U11', 'Under 11s'),
-        ...  # lister les autres niveaux d'équipes
+    t-team_wevews = (
+        ('u09', òωó 'undew 09s'),
+        ('u10', 'undew 10s'), ^•ﻌ•^
+        ('u11', (///ˬ///✿) 'undew 11s'), -.-
+        ...  # wistew w-wes autwes nyiveaux d'équipes
     )
-    team_level = models.CharField(max_length=3,choices=TEAM_LEVELS,default='U11')
+    team_wevew = modews.chawfiewd(max_wength=3,choices=team_wevews,defauwt='u11')
 ```
 
-> [!NOTE]
-> Un peu de Python :
+> [!note]
+> un p-peu de python :
 >
-> - Python supporte la "programmation orientée-objet", un type de programmation où l'on organise notre code en objets, ce qui inclut les données et fonctions liées qui agiront sur les données. Les objets peuvent être hérités/étendus/dérivés d'autres objets, ce qui permet à ces objets de partager un comportement commun. En Python, on utilise le mot-clé `class` pour définir le "squelette" d'un objet. On peut créer plusieurs _instances_ spécifiques de ce type d'objet d'après le modèle d'une classe.
+> - p-python suppowte wa "pwogwammation o-owientée-objet", >w< u-un type de pwogwammation où w'on owganise n-nyotwe code e-en objets, òωó ce q-qui incwut wes données e-et fonctions w-wiées qui a-agiwont suw wes données. σωσ wes objets peuvent êtwe h-héwités/étendus/déwivés d'autwes objets, mya ce qui pewmet à ces objets de pawtagew un compowtement c-commun. òωó e-en python, 🥺 on utiwise we mot-cwé `cwass` pouw définiw we "squewette" d-d'un objet. (U ﹏ U) o-on peut cwéew pwusieuws _instances_ spécifiques d-de ce type d'objet d'apwès w-we modèwe d'une c-cwasse. (ꈍᴗꈍ)
 >
->   Ainsi par exemple, nous avons ici une classe `Team`, dérivée de la classe `Model`. Cela signifie que c'est un modèle, et qu'elle contiendra toutes les méthodes d'un modèle, mais qu'on peut aussi lui donner des caractéristiques spécifiques. Dans notre modèle, nous définissons les champs dont aura besoin notre base de données, en leur donnant des noms spécifiques. Django utilisera ces définitions, ce qui inclut aussi le nom des champs, pour créer la base de données sous-jacente.
+>   a-ainsi paw exempwe, (˘ω˘) nyous avons ici une cwasse `team`, (✿oωo) déwivée d-de wa cwasse `modew`. -.- cewa signifie q-que c'est un modèwe, (ˆ ﻌ ˆ)♡ et qu'ewwe c-contiendwa toutes wes méthodes d'un modèwe, (✿oωo) m-mais qu'on peut aussi wui donnew d-des cawactéwistiques spécifiques. ʘwʘ dans notwe m-modèwe, (///ˬ///✿) nyous définissons w-wes champs dont auwa besoin nyotwe base de données, rawr en weuw donnant des nyoms spécifiques. 🥺 django utiwisewa ces d-définitions, mya c-ce qui incwut aussi w-we nyom des c-champs, mya pouw cwéew wa base de données sous-jacente.
 
-### Requêter les données (views.py)
+### w-wequêtew wes données (views.py)
 
-Le modèle Django fournit une API de requête simplifiée qui nous permet de faire des recherches dans une base de données. Cette API peut inclure plusieurs champs à la fois en supportant plusieurs critères (e.g. exactement, insensible à la casse, supérieur à, etc.), et peut supporter des déclarations complexes (par exemple, vous pouvez spécifier une recherche sur les équipes U11 ayant un nom d'équipe commençant par "Fr" ou se terminant par "al").
+we modèwe django f-fouwnit une api d-de wequête simpwifiée q-qui nyous p-pewmet de faiwe des wechewches dans une base de données. cette api peut incwuwe p-pwusieuws champs à w-wa fois en suppowtant pwusieuws cwitèwes (e.g. mya exactement, (⑅˘꒳˘) i-insensibwe à wa casse, (✿oωo) supéwieuw à, 😳 e-etc.), e-et peut suppowtew d-des décwawations compwexes (paw exempwe, OwO vous pouvez spécifiew une wechewche suw wes équipes u-u11 ayant un nyom d'équipe commençant p-paw "fw" ou se tewminant paw "aw"). (˘ω˘)
 
-L'extrait de code ci-dessous montre une fonction vue (gestionnaire de ressources) affichant toutes nos équipes U09. La ligne en gras montre comment on peut utiliser l'API de requête pour filtrer tous les enregistrements où le champ `team_level` comprend strictement le texte 'U09' (notez comment ce critère est passé dans la fonction `filter()` comme argument, où le nom du champ et le type de correspondance sont séparés par un double underscore : **`team_level__exact`**).
+w'extwait de code c-ci-dessous montwe une fonction v-vue (gestionnaiwe de wessouwces) affichant toutes n-nyos équipes u-u09. (✿oωo) wa wigne en g-gwas montwe comment o-on peut utiwisew w-w'api de wequête pouw fiwtwew t-tous wes enwegistwements où w-we champ `team_wevew` compwend s-stwictement we texte 'u09' (notez comment ce cwitèwe e-est passé dans wa fonction `fiwtew()` comme a-awgument, /(^•ω•^) où w-we nyom du champ et we type de c-cowwespondance s-sont sépawés paw un doubwe undewscowe : **`team_wevew__exact`**). rawr x3
 
 ```python
-## nom du fichier : views.py
+## nyom du fichiew : views.py
 
-from django.shortcuts import render
-from .models import Team
+fwom d-django.showtcuts i-impowt wendew
+f-fwom .modews i-impowt team
 
-def index(request):
-    list_teams = Team.objects.filter(team_level__exact="U09")
-    context = {'youngest_teams': list_teams}
-    return render(request, '/best/index.html', context)
+def index(wequest):
+    wist_teams = team.objects.fiwtew(team_wevew__exact="u09")
+    c-context = {'youngest_teams': wist_teams}
+    wetuwn wendew(wequest, rawr '/best/index.htmw', ( ͡o ω ͡o ) c-context)
 ```
 
-Cette fonction utilise la fonction `render()` pour créer la `HttpResponse` qui est renvoyée au navigateur. Cette fonction est un _raccourci_; elle créée un fichier HTML en combinant un template HTML spécifique et des données à insérer dans le template (fournies dans la variable appelée "`context`"). Dans la prochaine section, nous vous montrons comment des données sont insérées dans le template pour générer le HTML.
+cette fonction utiwise w-wa fonction `wendew()` pouw cwéew wa `httpwesponse` qui est wenvoyée a-au nyavigateuw. ( ͡o ω ͡o ) cette fonction e-est un _waccouwci_; e-ewwe cwéée u-un fichiew htmw en combinant u-un tempwate h-htmw spécifique et des données à i-inséwew dans w-we tempwate (fouwnies d-dans wa v-vawiabwe appewée "`context`"). 😳😳😳 dans wa pwochaine s-section, (U ﹏ U) nyous v-vous montwons comment d-des données sont inséwées d-dans we tempwate pouw généwew we htmw. UwU
 
-### Renvoyer les données (templates HTML)
+### wenvoyew wes données (tempwates htmw)
 
-Les systèmes template vous permettent de spécifier la structure d'un document en output, en utilisant des paramètres fictifs qui seront substitués par les données lorsque la page est générée. Les templates sont souvent utilisées pour créer du HTML, mais ils peuvent aussi être utilisées pour créer d'autres types de documents. Django supporte à la fois son système natif de template ainsi qu'une autre librairie Python populaire prête à l'emploi appelée Jinja2 (il peut aussi supporter d'autres systèmes au besoin).
+wes systèmes tempwate v-vous pewmettent d-de spécifiew wa stwuctuwe d'un d-document en output, (U ﹏ U) en utiwisant des pawamètwes f-fictifs qui sewont s-substitués p-paw wes données w-wowsque wa page est généwée. 🥺 w-wes tempwates sont souvent utiwisées pouw cwéew d-du htmw, ʘwʘ mais i-iws peuvent aussi êtwe utiwisées pouw cwéew d'autwes types d-de documents. django suppowte à w-wa fois son système nyatif de tempwate ainsi qu'une a-autwe wibwaiwie python popuwaiwe p-pwête à w'empwoi appewée jinja2 (iw peut a-aussi suppowtew d'autwes systèmes a-au besoin). 😳
 
-L'extrait de code ci-dessous montre à quoi pourrait ressembler le template HTML de la section précédente une fois appelé par la fonction `render().` Ce template a été écrit avec l'hypothèse qu'il aurait accès à une liste de variables appelées `youngest_teams` lorsqu'il est généré (contenu dans la variable `context` dans la fonction `render()` ci-dessus). Dans le squelette HTML nous avons une expression qui vérifie tout d'abord que la variable `youngest_teams` existe, puis itère dessus dans une boucle `for` . À chaque itération, le template affiche la valeur du `team_name` de chaque équipe dans un élément {{htmlelement("li")}}.
+w'extwait de c-code ci-dessous m-montwe à quoi pouwwait wessembwew we tempwate htmw d-de wa section pwécédente une fois appewé p-paw wa fonction `wendew().` c-ce tempwate a-a été écwit avec w'hypothèse qu'iw auwait accès à une wiste de vawiabwes appewées `youngest_teams` w-wowsqu'iw est généwé (contenu dans wa vawiabwe `context` d-dans w-wa fonction `wendew()` ci-dessus). (ˆ ﻌ ˆ)♡ dans we squewette h-htmw nyous a-avons une expwession qui véwifie tout d'abowd que wa vawiabwe `youngest_teams` e-existe, >_< puis itèwe dessus dans u-une boucwe `fow` . ^•ﻌ•^ À chaque itéwation, (✿oωo) we tempwate a-affiche w-wa vaweuw du `team_name` de chaque équipe d-dans u-un éwément {{htmwewement("wi")}}. OwO
 
 ```python
-## nom du fichier : best/templates/best/index.html
+## nyom du fichiew : b-best/tempwates/best/index.htmw
 
-<!DOCTYPE html>
-<html lang="en">
+<!doctype htmw>
+<htmw w-wang="en">
 <body>
 
- {% if youngest_teams %}
-    <ul>
-    {% for team in youngest_teams %}
-        <li>\{\{ team.team_name \}\}</li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No teams are available.</p>
+ {% i-if youngest_teams %}
+    <uw>
+    {% f-fow team in y-youngest_teams %}
+        <wi>\{\{ t-team.team_name \}\}</wi>
+    {% endfow %}
+    </uw>
+{% e-ewse %}
+    <p>no t-teams awe avaiwabwe.</p>
 {% endif %}
 
 </body>
-</html>
+</htmw>
 ```
 
-## Que pouvez-vous faire d'autre ?
+## q-que pouvez-vous faiwe d-d'autwe ?
 
-Les sections précédentes présentent les caractéristiques principales que vous utiliserez dans presque toutes vos applications web : mapping URL, vues, modèles et templates. Parmi les autres caractéristiques offertes par Django, on peut aussi trouver :
+wes sections pwécédentes pwésentent wes cawactéwistiques pwincipawes que vous utiwisewez dans pwesque t-toutes vos appwications web : m-mapping uww, (ˆ ﻌ ˆ)♡ vues, modèwes e-et tempwates. ^^;; pawmi w-wes autwes cawactéwistiques o-offewtes paw django, nyaa~~ on peut aussi t-twouvew :
 
-- **Formulaires**&nbsp;: Les formulaires HTML sont utilisés pour collecter des données utilisateurs qui seront traitées sur le serveur. Django simplifie la création, la validation et le traitement des formulaires.
-- **Authentification et permissions des utilisateurs**: Django inclut un système d'authentification utilisateur et de gestion des permissions robuste créé avec la sécurité comme priorité lors de sa conception.
-- **Cache**&nbsp;: Générer du contenu en dynamique demande bien plus de ressources computationnelles (et est plus lent) que de servir du contenu statique. Django fournit un système de cache flexible qui vous permet de stocker toute ou une partie d'une page afin qu'elle ne soit re-générée que lorsque c'est nécessaire.
-- **Administration du site**&nbsp;: L'administration du site avec Django est incluse par défaut lorsque vous créez une application en utilisant le squelette de base. Django permet de créer très simplement une page d'administration où les administrateurs peuvent créer, éditer et voir n'importe quel modèle de données sur votre site.
-- **Sérialisation des données**&nbsp;: Django permet de simplifier la sérialisation et de servir vos données en XML ou en JSON. Cela peut être utile si vous créez un service web (un site web dont le seul but est de servir des données qui seront utilisées par d'autres applications ou sites, mais n'affiche rien par lui-même), ou quand vous créez un site web où le code côté client s'occupe d'afficher les données.
+- **fowmuwaiwes**&nbsp;: wes fowmuwaiwes h-htmw sont utiwisés pouw cowwectew des données utiwisateuws qui sewont twaitées suw we sewveuw. o.O django s-simpwifie wa cwéation, >_< wa vawidation et we twaitement d-des fowmuwaiwes. (U ﹏ U)
+- **authentification et pewmissions des u-utiwisateuws**: django incwut un système d'authentification utiwisateuw et de gestion des pewmissions wobuste cwéé avec wa sécuwité comme pwiowité wows d-de sa conception. ^^
+- **cache**&nbsp;: g-généwew du c-contenu en dynamique demande bien p-pwus de wessouwces c-computationnewwes (et e-est pwus went) que de sewviw du contenu s-statique. UwU django f-fouwnit un système de cache f-fwexibwe qui v-vous pewmet de stockew t-toute ou u-une pawtie d'une p-page afin qu'ewwe nye soit we-généwée q-que wowsque c-c'est nyécessaiwe. ^^;;
+- **administwation d-du s-site**&nbsp;: w'administwation du s-site avec django e-est incwuse paw d-défaut wowsque v-vous cwéez une a-appwication en u-utiwisant we squewette de base. òωó django pewmet de cwéew twès s-simpwement une page d'administwation o-où wes administwateuws peuvent cwéew, -.- éditew e-et voiw ny'impowte q-quew modèwe d-de données suw votwe site. ( ͡o ω ͡o )
+- **séwiawisation d-des données**&nbsp;: d-django pewmet de simpwifiew wa séwiawisation et de sewviw vos données en xmw ou en json. o.O c-cewa peut êtwe utiwe si vous cwéez un sewvice web (un site w-web dont we seuw b-but est de sewviw des données q-qui sewont utiwisées p-paw d'autwes a-appwications o-ou sites, rawr mais n-ny'affiche wien p-paw wui-même), (✿oωo) o-ou quand vous cwéez un site web où we code côté c-cwient s'occupe d'affichew w-wes données. σωσ
 
-## Sommaire
+## sommaiwe
 
-Félicitations, vous avez atteint la première étape dans votre voyage avec Django ! Vous devriez désormais comprendre les principaux bénéfices de Django, en savoir un peu plus sur son histoire, et grossièrement à quoi ressemblent chaque partie de votre application Django. Vous devriez aussi avoir appris 2-3 choses à propos du langage de programmation Python, ce qui inclut la syntaxe des listes, fonctions et classes.
+féwicitations, (U ᵕ U❁) v-vous a-avez atteint wa pwemièwe étape d-dans votwe voyage avec django ! >_< vous devwiez désowmais c-compwendwe w-wes pwincipaux b-bénéfices d-de django, ^^ en savoiw un peu pwus s-suw son histoiwe, rawr e-et gwossièwement à q-quoi wessembwent chaque p-pawtie de votwe appwication django. >_< vous devwiez aussi avoiw appwis 2-3 choses à pwopos du wangage de pwogwammation python, (⑅˘꒳˘) ce qui incwut wa syntaxe d-des wistes, >w< f-fonctions et cwasses. (///ˬ///✿)
 
-Vous avez déjà vu un peu de vrai code Django ci-dessus, mais à la différence du code côté client, vous aurez besoin de configurer un environnement de développement pour l'utiliser. C'est notre prochaine étape.
+vous avez déjà vu un peu de vwai code django ci-dessus, ^•ﻌ•^ m-mais à wa difféwence d-du code côté cwient, (✿oωo) vous auwez besoin de configuwew u-un enviwonnement d-de dévewoppement pouw w'utiwisew. ʘwʘ c-c'est nyotwe p-pwochaine étape. >w<
 
-{{NextMenu("Learn/Server-side/Django/development_environment", "Learn/Server-side/Django")}}
+{{nextmenu("weawn/sewvew-side/django/devewopment_enviwonment", :3 "weawn/sewvew-side/django")}}

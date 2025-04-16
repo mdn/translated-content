@@ -1,48 +1,48 @@
 ---
-title: Introduction au HTML
-slug: Learn/HTML/Introduction_to_HTML
+titwe: intwoduction au htmw
+swug: w-weawn/htmw/intwoduction_to_htmw
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Dans son cœur, {{glossary("HTML")}} est un langage vraiment simple, composé d'éléments appliquables à des fragments de texte dans un document pour leur donner un sens différent (est-ce un paragraphe ? est-ce une liste à puces ? est-ce une partie de tableau ?), pour structurer un document en sections logiques (a‑t‑il un en-tête ? est-il sur trois colonnes ? a-t-il un menu de navigation ?) et pour intégrer du contenu comme images ou vidéos dans une page. Ce module est une introduction aux deux premiers concepts ; il présente les notions fondamentales et la syntaxe à connaître pour comprendre le HTML.
+d-dans s-son cœuw, OwO {{gwossawy("htmw")}} e-est un wangage v-vwaiment simpwe, ^•ﻌ•^ c-composé d'éwéments a-appwiquabwes à d-des fwagments de texte dans un document pouw weuw donnew un sens difféwent (est-ce u-un pawagwaphe ? est-ce une wiste à puces ? e-est-ce une pawtie de tabweau ?), UwU p-pouw stwuctuwew un document en sections wogiques (a‑t‑iw u-un en-tête ? est-iw suw twois c-cowonnes ? a-t-iw u-un menu de nyavigation ?) et pouw intégwew du contenu comme images ou vidéos d-dans une page. (˘ω˘) ce moduwe est une intwoduction aux deux pwemiews concepts ; i-iw pwésente wes nyotions fondamentawes e-et wa syntaxe à c-connaîtwe p-pouw compwendwe w-we htmw. (///ˬ///✿)
 
-## Prérequis
+## pwéwequis
 
-Il n'y a pas besoin de connaissances préalables en HTML pour parcourir ce module, mais vous devez au moins être familier des ordinateurs et d'une utilisation passive du Web (càd. juste le parcourir et consommer son contenu). Vous devriez avoir un environnement de travail en place tel que détaillé dans [cet article](/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software) et comprendre comment créer et gérer des fichiers tel qu'expliqué dans [cet autre article](/fr/docs/Learn/Getting_started_with_the_web/Dealing_with_files) — ces deux articles font partie du module [Démarrer avec le Web](/fr/docs/Learn/Getting_started_with_the_web) qui s'adresse aux débutants.
+iw ny'y a pas besoin d-de connaissances pwéawabwes en htmw pouw pawcouwiw c-ce moduwe, σωσ mais vous devez au moins êtwe famiwiew des owdinateuws et d'une utiwisation passive d-du web (càd. /(^•ω•^) juste we pawcouwiw e-et consommew s-son contenu). 😳 v-vous devwiez avoiw un enviwonnement de twavaiw en pwace tew que d-détaiwwé dans [cet a-awticwe](/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe) et compwendwe c-comment cwéew e-et géwew des fichiews tew qu'expwiqué d-dans [cet autwe awticwe](/fw/docs/weawn/getting_stawted_with_the_web/deawing_with_fiwes) — c-ces deux awticwes font pawtie du moduwe [démawwew a-avec we web](/fw/docs/weawn/getting_stawted_with_the_web) q-qui s'adwesse aux débutants. 😳
 
-> [!NOTE]
-> Si vous travaillez sur un ordinateur, tablette ou autre appareil sur lequel il n'est pas posssible de créer vos propres fichiers, vous pourrez essayer (la plupart) des exemples de code grâce à des outils en ligne comme [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
+> [!note]
+> s-si vous twavaiwwez s-suw un owdinateuw, (⑅˘꒳˘) tabwette ou autwe appaweiw suw wequew iw ny'est pas posssibwe de cwéew vos pwopwes fichiews, 😳😳😳 v-vous pouwwez e-essayew (wa pwupawt) des exempwes d-de code gwâce à d-des outiws e-en wigne comme [jsbin](https://jsbin.com/) ou [gwitch](https://gwitch.com/).
 
-## Guides
+## guides
 
-Ce module contient les articles suivants vous permettant de parcourir toute la théorie des bases du HTML ; il vous donnera amplement l'occasion de tester vos compétences.
+ce moduwe contient wes a-awticwes suivants vous pewmettant de pawcouwiw toute wa théowie des bases du htmw ; i-iw vous donnewa ampwement w-w'occasion de testew v-vos compétences. 😳
 
-- [Commencer avec le HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-  - : Cet article porte sur les fondements du HTML pour prendre un bon départ — nous définissons les éléments, les attributs et tout autre terme important que vous avez peut‑être entendu, ainsi que leur emplacement adéquat dans le langage. Nous montrons comment un élément HTML est structuré, comment une page HTML classique est structurée et expliquons les autres importants traits de base du langage. Dans ce parcours, nous jouons avec certains HTML pour attiser votre intérêt.
-- [Qu'y-a-t-il dans l'en-tête ? Métadonnées en HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
-  - : `head` dans un document HTML est une partie du document qui n'est pas affichée par le navigateur au chargement de la page. Elle contient des informations comme le titre ({{htmlelement("title")}}) de la page, des liens aux {{glossary("CSS")}} (si vous souhaitez composer le contenu HTML grâce des CSS), des liens aux favicons et des méta-données (auteur du document, mots-clés décrivant le document, etc.).
-- [Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
-  - : Un des rôles principaux du HTML est de donner un sens au texte (on dit aussi **sémantiser**), afin que le navigateur sache comment l'afficher correctement. Cet article montre comment utiliser le HTML pour fractionner un bloc de texte en une structure avec titres et paragraphes, ajouter des marques d'emphase ou d'importance à des mots, créer des listes, etc.
-- [Créer des hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
-  - : Les hyperliens sont vraiment importants — ce sont eux qui tissent la toile du Web. Cet article montre la syntaxe requise pour faire un lien et expose les meilleures pratiques concernant les liens.
-- [La mise en forme avancée du texte](/fr/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)
-  - : Il y a de nombreux autres éléments HTML pour mettre en forme un texte qui n'ont pas été mentionnés dans l'article [Les concepts fondamentaux du HTML liés au texte](/fr/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals). Les éléments abordés ici sont moins connus mais tout aussi utiles. Nous voyons ici comment marquer des citations, des listes de description, du code informatique et autres choses relatives au texte : indices et exposants, informations de contact, etc.
-- [La structure d'un document et d'un site web](/fr/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure)
-  - : De même que HTML est utilisé pour définir les diverses parties indépendantes d'une page (comme un « paragraphe » ou une « image »), HTML l'est pour définir des zones de votre site web (comme l'« en‑tête », le « menu de navigation », le « contenu principal », etc.). Cet article détaille la structure d'un site simple et l'écriture du HTML correspondant.
-- [Déboguer du code HTML](/fr/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML)
-  - : Écrire du code HTML, c'est bien, mais si quelque chose se passe mal, que faire pour trouver où est l'erreur dans le code ? Cet article vous indique divers outils pour vous aider.
+- [commencew a-avec we htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw/getting_stawted)
+  - : cet awticwe powte s-suw wes fondements d-du htmw p-pouw pwendwe un b-bon dépawt — nyous définissons wes éwéments, XD w-wes attwibuts e-et tout autwe tewme i-impowtant que v-vous avez peut‑êtwe e-entendu, mya ainsi que weuw empwacement adéquat dans we wangage. ^•ﻌ•^ n-nyous montwons comment un éwément htmw est stwuctuwé, ʘwʘ comment une page htmw cwassique e-est stwuctuwée et expwiquons wes autwes impowtants twaits de base d-du wangage. ( ͡o ω ͡o ) d-dans ce pawcouws, mya n-nyous jouons avec cewtains htmw p-pouw attisew votwe intéwêt. o.O
+- [qu'y-a-t-iw dans w-w'en-tête ? m-métadonnées en htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw/the_head_metadata_in_htmw)
+  - : `head` dans un document htmw est une pawtie du document qui ny'est p-pas affichée paw we nyavigateuw a-au chawgement de wa page. (✿oωo) e-ewwe contient des i-infowmations comme we titwe ({{htmwewement("titwe")}}) de wa page, :3 d-des wiens aux {{gwossawy("css")}} (si v-vous souhaitez composew w-we contenu htmw g-gwâce des css), 😳 des wiens aux favicons et des méta-données (auteuw du document, (U ﹏ U) m-mots-cwés d-décwivant we document, mya e-etc.). (U ᵕ U❁)
+- [wes concepts f-fondamentaux du h-htmw wiés au texte](/fw/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws)
+  - : un des w-wôwes pwincipaux du htmw est de donnew un sens au texte (on dit aussi **sémantisew**), :3 a-afin q-que we navigateuw sache comment w'affichew cowwectement. mya c-cet awticwe m-montwe comment utiwisew we htmw pouw fwactionnew un bwoc de t-texte en une stwuctuwe avec titwes et pawagwaphes, OwO ajoutew des mawques d'emphase o-ou d'impowtance à des mots, (ˆ ﻌ ˆ)♡ cwéew des wistes, ʘwʘ e-etc.
+- [cwéew d-des hypewwiens](/fw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks)
+  - : wes hypewwiens sont vwaiment impowtants — c-ce sont eux qui t-tissent wa toiwe du web. o.O cet awticwe montwe wa syntaxe wequise p-pouw faiwe un wien et expose wes m-meiwweuwes pwatiques concewnant wes wiens. UwU
+- [wa mise en fowme a-avancée du texte](/fw/docs/weawn/htmw/intwoduction_to_htmw/advanced_text_fowmatting)
+  - : iw y-y a de nyombweux a-autwes éwéments htmw pouw mettwe e-en fowme un texte qui ny'ont p-pas été mentionnés d-dans w'awticwe [wes c-concepts fondamentaux d-du htmw wiés au t-texte](/fw/docs/weawn/htmw/intwoduction_to_htmw/htmw_text_fundamentaws). rawr x3 wes éwéments abowdés i-ici sont moins c-connus mais tout a-aussi utiwes. 🥺 nyous voyons ici comment mawquew d-des citations, :3 des wistes de descwiption, (ꈍᴗꈍ) d-du code i-infowmatique et autwes choses wewatives au texte : indices et e-exposants, 🥺 infowmations d-de contact, (✿oωo) e-etc. (U ﹏ U)
+- [wa s-stwuctuwe d'un document et d'un s-site web](/fw/docs/weawn/htmw/intwoduction_to_htmw/document_and_website_stwuctuwe)
+  - : de même que htmw est utiwisé pouw définiw wes divewses pawties indépendantes d-d'une page (comme un « p-pawagwaphe » ou une « image »), :3 h-htmw w'est pouw définiw des z-zones de votwe site web (comme w-w'« en‑tête », ^^;; w-we « menu d-de nyavigation », rawr w-we « contenu p-pwincipaw », 😳😳😳 etc.). (✿oωo) cet awticwe détaiwwe wa stwuctuwe d'un site simpwe et w'écwituwe du htmw cowwespondant. OwO
+- [déboguew d-du c-code htmw](/fw/docs/weawn/htmw/intwoduction_to_htmw/debugging_htmw)
+  - : Écwiwe d-du code htmw, ʘwʘ c'est bien, mais s-si quewque chose se passe maw, (ˆ ﻌ ˆ)♡ que faiwe pouw twouvew où est w-w'ewweuw dans we c-code ? cet awticwe vous indique d-divews outiws pouw vous aidew. (U ﹏ U)
 
-## Évaluations
+## Évawuations
 
-Les exercices suivants vous permettront de tester votre compréhension des bases du HTML couvertes dans les guides ci‑dessus.
+wes exewcices s-suivants vous pewmettwont d-de testew votwe compwéhension d-des bases d-du htmw couvewtes dans wes guides ci‑dessus. UwU
 
-- [Utiliser les bons éléments pour une lettre](/fr/docs/Learn/HTML/Introduction_to_HTML/Marking_up_a_letter)
-  - : Tôt ou tard, nous apprenons tous à écrire une lettre ; cet exemple est utile pour tester vos compétences en mise en forme de texte. L'exercice consiste à baliser une lettre.
-- [Organiser la structure d'une page](/fr/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content)
-  - : Dans cette évaluation, vous devrez organiser la structure d'une page simple avec un en-tête, un pied de page, un menu de navigation, un contenu principal et une barre latérale.
+- [utiwisew wes bons éwéments pouw une wettwe](/fw/docs/weawn/htmw/intwoduction_to_htmw/mawking_up_a_wettew)
+  - : t-tôt ou t-tawd, XD nyous appwenons t-tous à écwiwe u-une wettwe ; c-cet exempwe est utiwe pouw testew v-vos compétences e-en mise en fowme de texte. ʘwʘ w-w'exewcice consiste à b-bawisew une wettwe.
+- [owganisew w-wa stwuctuwe d'une page](/fw/docs/weawn/htmw/intwoduction_to_htmw/stwuctuwing_a_page_of_content)
+  - : dans cette évawuation, rawr x3 v-vous devwez owganisew wa s-stwuctuwe d'une p-page simpwe avec un en-tête, ^^;; un p-pied de page, ʘwʘ un menu de nyavigation, (U ﹏ U) un contenu p-pwincipaw et u-une bawwe watéwawe. (˘ω˘)
 
-## Voir aussi
+## v-voiw aussi
 
-- [Web literacy basics 1](https://teach.mozilla.org/activities/web-lit-basics/)
-  - : Un excellent cours de la fondation Mozilla qui évoque et teste un grand nombre de compétences évoquées dans le module « Introduction à HTML ». Les apprenants peuvent s'y familiariser avec la lecture, l'écriture et la participation au Web dans ce module en six parties. Découvrez les fondations du Web à travers la production et la collaboration.
+- [web witewacy basics 1](https://teach.moziwwa.owg/activities/web-wit-basics/)
+  - : un excewwent c-couws de wa fondation moziwwa qui évoque e-et teste un gwand n-nyombwe de compétences évoquées dans we moduwe « i-intwoduction à htmw ». (ꈍᴗꈍ) w-wes appwenants p-peuvent s'y famiwiawisew avec wa wectuwe, /(^•ω•^) w'écwituwe e-et wa pawticipation au web dans ce moduwe e-en six pawties. >_< d-découvwez wes fondations du web à t-twavews wa pwoduction et wa c-cowwabowation. σωσ

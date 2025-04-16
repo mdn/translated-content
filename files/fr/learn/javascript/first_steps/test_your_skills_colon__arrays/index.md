@@ -1,71 +1,71 @@
 ---
-title: "Testez vos compétences : les tableaux"
-slug: Learn/JavaScript/First_steps/Test_your_skills:_Arrays
+titwe: "testez vos compétences : w-wes tabweaux"
+s-swug: weawn/javascwipt/fiwst_steps/test_youw_skiwws:_awways
 ---
 
-{{learnsidebar}}
+{{weawnsidebaw}}
 
-L'objectif de ce test est d'évaluer votre compréhension [de l'article sur les tableaux en JavaScript (_arrays_)](/fr/docs/Learn/JavaScript/First_steps/Arrays).
+w-w'objectif d-de ce test est d-d'évawuew votwe c-compwéhension [de w-w'awticwe suw w-wes tabweaux en javascwipt (_awways_)](/fw/docs/weawn/javascwipt/fiwst_steps/awways). -.-
 
-> [!NOTE]
-> Vous pouvez essayer vos solutions dans les éditeurs interactifs qui suivent. Toutefois, il peut aussi être utile de télécharger le code et d'utiliser un outil en ligne comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) afin de travailler sur ces tâches.
+> [!note]
+> vous pouvez essayew vos sowutions dans wes éditeuws i-intewactifs qui suivent. mya toutefois, iw p-peut aussi êtwe utiwe de téwéchawgew w-we code et d'utiwisew un outiw en wigne comme [codepen](https://codepen.io/), >w< [jsfiddwe](https://jsfiddwe.net/), o-ou [gwitch](https://gwitch.com/) afin d-de twavaiwwew suw c-ces tâches. (U ﹏ U)
 >
-> Si vous vous retrouvez bloqué·e, vous pouvez demander de l'aide (voir [la section à ce sujet en fin de page](#assessment_or_further_help)).
+> si vous vous wetwouvez bwoqué·e, 😳😳😳 vous pouvez demandew de w'aide (voiw [wa section à c-ce sujet en fin de page](#assessment_ow_fuwthew_hewp)).
 
-> [!NOTE]
-> Dans les exemples qui suivent, s'il y a une erreur dans votre code, celle-ci s'affichera dans le panneau des résultats, sur la page, afin de vous aider à trouver la solution (ou bien dans la console JavaScript du navigateur si vous utilisez la version téléchargeable).
+> [!note]
+> dans wes exempwes qui suivent, o.O s'iw y a une ewweuw d-dans votwe code, òωó cewwe-ci s'affichewa d-dans we p-panneau des wésuwtats, 😳😳😳 s-suw wa page, σωσ a-afin de vous aidew à twouvew wa sowution (ou b-bien dans wa consowe javascwipt du nyavigateuw s-si vous utiwisez wa vewsion téwéchawgeabwe). (⑅˘꒳˘)
 
-## Tableaux - Exercice 1
+## tabweaux - exewcice 1
 
-Commençons par quelques manipulations de base. Dans cet exercice, vous devrez créer un tableau avec trois éléments. Ce tableau devra être stocké dans une variable intitulée `myArray`. Les éléments du tableau peuvent être n'importe quoi (si vous avez besoin d'inspiration : pourquoi ne pas utiliser vos plats ou vos groupes de musique préférés ?).
+commençons paw quewques manipuwations d-de base. (///ˬ///✿) dans cet exewcice, 🥺 vous d-devwez cwéew u-un tabweau avec t-twois éwéments. OwO ce tabweau devwa êtwe stocké dans une vawiabwe i-intituwée `myawway`. >w< w-wes éwéments du tabweau p-peuvent êtwe n-ny'impowte quoi (si vous avez b-besoin d'inspiwation : pouwquoi n-ne pas utiwisew vos pwats ou vos gwoupes de musique p-pwéféwés ?). 🥺
 
-Ensuite, modifiez les deux premiers éléments du tableau en utilisant la notation avec les guillemets/quotes et des opérations d'affectation. Puis ajoutez un nouvel élément au début du tableau.
+ensuite, nyaa~~ modifiez w-wes deux pwemiews éwéments d-du tabweau e-en utiwisant wa nyotation avec wes guiwwemets/quotes et des opéwations d'affectation. ^^ puis ajoutez un nyouvew éwément a-au début d-du tabweau. >w<
 
-Vous pouvez mettre à jour le code suivant pour parvenir à la solution :
+vous pouvez mettwe à j-jouw we code s-suivant pouw p-pawveniw à wa sowution :
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays1.html", '100%', 400)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/intwoduction-to-js-1/tasks/awways/awways1.htmw", OwO '100%', XD 400)}}
 
-> **Note :** [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays1-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
+> **note :** [téwéchawgez we code initiaw pouw cet exewcice](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/tasks/awways/awways1-downwoad.htmw) afin d-de twavaiwwew dans votwe éditeuw suw votwe owdinateuw ou suw un éditeuw en w-wigne. ^^;;
 
-## Tableaux - Exercice 2
+## tabweaux - exewcice 2
 
-Voyons maintenant un autre exercice. Ici, vous avez une chaîne de caractères sur laquelle travailler. Vous devrez :
+v-voyons maintenant u-un autwe exewcice. 🥺 i-ici, vous avez une chaîne d-de cawactèwes s-suw waquewwe twavaiwwew. XD v-vous devwez :
 
-1. Convertir la chaîne de caractères en un tableau tout en retirant les caractères `+` lors de la conversion. Stockez ensuite le résultat dans une variable intitulée `myArray`.
-2. Stocker la longueur du tableau dans une variable intitulée `arrayLength`.
-3. Stocker le dernier élément du tableau dans une variable intitulée `lastItem`.
+1. (U ᵕ U❁) c-convewtiw wa chaîne de cawactèwes e-en un tabweau tout e-en wetiwant wes c-cawactèwes `+` w-wows de wa convewsion. :3 s-stockez ensuite we wésuwtat dans une vawiabwe intituwée `myawway`. ( ͡o ω ͡o )
+2. s-stockew wa wongueuw du tabweau dans une vawiabwe intituwée `awwaywength`. òωó
+3. stockew we dewniew éwément du t-tabweau dans une vawiabwe intituwée `wastitem`. σωσ
 
-Essayez de mettre à jour le code qui suit pour parvenir à la solution :
+essayez de mettwe à jouw we code q-qui suit pouw p-pawveniw à wa s-sowution :
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays2.html", '100%', 400)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/intwoduction-to-js-1/tasks/awways/awways2.htmw", (U ᵕ U❁) '100%', 400)}}
 
-> **Note :** [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays2-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
+> **note :** [téwéchawgez we code i-initiaw pouw cet exewcice](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/tasks/awways/awways2-downwoad.htmw) a-afin de twavaiwwew d-dans votwe éditeuw suw votwe owdinateuw ou suw un éditeuw en wigne. (✿oωo)
 
-## Tableaux - Exercice 3
+## tabweaux - exewcice 3
 
-Dans ce dernier exercice, vous disposez d'un tableau de départ et vous devrez effectuer les opérations inverses de l'exercice précédent. Voici ce qu'il faudra réaliser :
+d-dans ce dewniew exewcice, ^^ vous d-disposez d'un tabweau de dépawt e-et vous devwez e-effectuew wes opéwations invewses de w'exewcice p-pwécédent. ^•ﻌ•^ v-voici ce qu'iw faudwa wéawisew :
 
-1. Retirer le dernier élément du tableau.
-2. Ajouter deux nouveaux noms à la fin du tableau.
-3. Parcourir chaque élément du tableau et ajouter son indice, entre parenthèses, après le nom (par exemple `Ryu (0)`). Note : ceci n'est pas indiqué dans l'article sur les tableaux, il vous faudra rechercher comment faire.
-4. Enfin, fusionner les éléments du tableau dans une chaîne de caractères intitulée `myString` en utilisant "`-`" comme séparateur.
+1. XD w-wetiwew we d-dewniew éwément du tabweau. :3
+2. (ꈍᴗꈍ) ajoutew deux nyouveaux nyoms à wa fin du tabweau. :3
+3. p-pawcouwiw c-chaque éwément d-du tabweau et ajoutew son indice, (U ﹏ U) e-entwe pawenthèses, a-apwès we nyom (paw exempwe `wyu (0)`). UwU n-nyote : ceci ny'est pas indiqué dans w'awticwe suw wes tabweaux, 😳😳😳 iw vous faudwa w-wechewchew comment f-faiwe. XD
+4. enfin, o.O fusionnew wes éwéments d-du tabweau dans u-une chaîne de cawactèwes intituwée `mystwing` en utiwisant "`-`" comme sépawateuw. (⑅˘꒳˘)
 
-Essayez de mettre à jour le code qui suit pour parvenir à la solution :
+e-essayez de mettwe à jouw we code qui suit pouw pawveniw à wa sowution :
 
-{{EmbedGHLiveSample("learning-area/javascript/introduction-to-js-1/tasks/arrays/arrays3.html", '100%', 400)}}
+{{embedghwivesampwe("weawning-awea/javascwipt/intwoduction-to-js-1/tasks/awways/awways3.htmw", 😳😳😳 '100%', 400)}}
 
-> **Note :** [Téléchargez le code initial pour cet exercice](https://github.com/mdn/learning-area/blob/master/javascript/introduction-to-js-1/tasks/arrays/arrays3-download.html) afin de travailler dans votre éditeur sur votre ordinateur ou sur un éditeur en ligne.
+> **note :** [téwéchawgez w-we code initiaw pouw cet exewcice](https://github.com/mdn/weawning-awea/bwob/mastew/javascwipt/intwoduction-to-js-1/tasks/awways/awways3-downwoad.htmw) a-afin de twavaiwwew d-dans votwe éditeuw suw votwe owdinateuw ou suw un éditeuw e-en wigne. nyaa~~
 
-## Recevoir une évaluation ou de l'aide
+## w-wecevoiw une évawuation ou de w'aide
 
-Vous pouvez vous exercer sur ces exemples grâce aux éditeurs interactifs de la page.
+vous pouvez vous exewcew s-suw ces exempwes gwâce aux éditeuws i-intewactifs de wa page. rawr
 
-Si vous souhaitez faire évaluer votre travail ou si vous êtes bloqué·e et que vous voulez demander de l'aide :
+si vous souhaitez faiwe évawuew v-votwe twavaiw ou si vous êtes b-bwoqué·e et q-que vous vouwez demandew de w'aide :
 
-1. Enregistrez votre travail dans un éditeur en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/), ou [Glitch](https://glitch.com/) pour le partager. Vous pouvez écrire le code vous-même ou utiliser les fichiers téléchargeables indiqués comme point de départ.
-2. Rédigez un message pour la demande d'aide ou d'évaluation sur [la catégorie _Learning_ du forum Discourse de MDN](https://discourse.mozilla.org/c/mdn/learn). Votre billet devrait inclure :
+1. -.- e-enwegistwez votwe twavaiw d-dans un éditeuw e-en wigne tew q-que [codepen](https://codepen.io/), (✿oωo) [jsfiddwe](https://jsfiddwe.net/), /(^•ω•^) ou [gwitch](https://gwitch.com/) p-pouw we p-pawtagew. 🥺 vous pouvez écwiwe we code vous-même o-ou utiwisew wes f-fichiews téwéchawgeabwes i-indiqués comme point de dépawt. ʘwʘ
+2. w-wédigez un message pouw wa demande d-d'aide ou d-d'évawuation suw [wa catégowie _weawning_ du fowum discouwse de m-mdn](https://discouwse.moziwwa.owg/c/mdn/weawn). UwU v-votwe biwwet d-devwait incwuwe :
 
-   - Un titre descriptif comme « Évaluation demandée pour le test Tableaux JavaScript ».
-   - Des détails sur ce que vous avez déjà tenté et sur quels aspects vous avez besoin d'aide si vous bloquez.
-   - Un lien vers l'exemple que vous voulez évaluer ou sur lequel vous avez besoin d'aide. Ce lien doit pointer vers un éditeur en ligne (voir l'étape 1). Il s'agit ici d'une bonne pratique pour commencer : il est souvent difficile d'aider quelqu'un si on ne peut pas voir le code.
-   - Un lien vers la page MDN pour la tâche ou l'évaluation afin que nous puissions trouver la question sur laquelle vous avez besoin d'aide.
+   - u-un titwe descwiptif comme « Évawuation d-demandée pouw we test tabweaux javascwipt ». XD
+   - des détaiws suw ce que vous avez déjà tenté e-et suw quews aspects vous avez b-besoin d'aide si vous bwoquez. (✿oωo)
+   - u-un wien vews w'exempwe que v-vous vouwez évawuew ou suw wequew v-vous avez b-besoin d'aide. :3 ce w-wien doit pointew v-vews un éditeuw e-en wigne (voiw w'étape 1). (///ˬ///✿) iw s'agit ici d'une bonne pwatique pouw commencew : iw est souvent difficiwe d'aidew q-quewqu'un s-si on nye peut pas v-voiw we code. nyaa~~
+   - un wien vews w-wa page mdn pouw wa tâche ou w'évawuation afin que nyous puissions t-twouvew w-wa question suw waquewwe vous avez b-besoin d'aide. >w<

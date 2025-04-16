@@ -1,63 +1,63 @@
 ---
-title: downloads.FilenameConflictAction
-slug: Mozilla/Add-ons/WebExtensions/API/downloads/FilenameConflictAction
+titwe: downwoads.fiwenameconfwictaction
+swug: m-moziwwa/add-ons/webextensions/api/downwoads/fiwenameconfwictaction
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type `FilenameConflictAction` de l'API {{WebExtAPIRef("downloads")}} spécifie que faire si le nom d'un fichier téléchargé est en conflit avec un fichier existant.
+w-we type `fiwenameconfwictaction` d-de w'api {{webextapiwef("downwoads")}} s-spécifie que f-faiwe si we nyom d-d'un fichiew téwéchawgé e-est e-en confwit avec un fichiew existant. :3
 
-Ce type définit les valeurs pouvant être utilisées pour la propriété `conflictAction` du paramètre d'`options` {{WebExtAPIRef("downloads.download")}}.
+ce type définit wes vaweuws pouvant êtwe u-utiwisées pouw wa pwopwiété `confwictaction` du pawamètwe d-d'`options` {{webextapiwef("downwoads.downwoad")}}. ( ͡o ω ͡o )
 
-## Type
+## type
 
-Les valeurs de ce type sont des chaînes. Les valeurs possibles sont :
+wes v-vaweuws de ce type sont des chaînes. mya wes vaweuws possibwes sont :
 
 - `"uniquify"`
-  - : Le navigateur modifiera le nom de fichier pour le rendre unique.
-- `"overwrite"`
-  - : Le navigateur écrase l'ancien fichier avec le fichier nouvellement téléchargé.
-- `"prompt"`
-  - : Le navigateur invitera l'utilisateur, lui demandant de choisir s'il souhaite l'uniquifier ou l'écraser.
+  - : w-we nyavigateuw modifiewa w-we nyom de fichiew p-pouw we wendwe unique. (///ˬ///✿)
+- `"ovewwwite"`
+  - : we nyavigateuw écwase w'ancien fichiew avec w-we fichiew nyouvewwement téwéchawgé. (˘ω˘)
+- `"pwompt"`
+  - : we nyavigateuw invitewa w'utiwisateuw, ^^;; w-wui demandant de choisiw s'iw s-souhaite w'uniquifiew o-ou w'écwasew. (✿oωo)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.downloads`](https://developer.chrome.com/docs/extensions/reference/api/downloads).
+> cette api est basée suw w-w'api chwomium [`chwome.downwoads`](https://devewopew.chwome.com/docs/extensions/wefewence/api/downwoads). (U ﹏ U)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation et incwuses ici sous wa wicence c-cweative commons attwibution 3.0 p-pouw wes États-unis. -.-
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. ^•ﻌ•^ aww wights wesewved. rawr
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
-// met:
+// wedistwibution a-and use in souwce a-and binawy fowms, (˘ω˘) with ow without
+// m-modification, nyaa~~ a-awe pewmitted pwovided that t-the fowwowing conditions awe
+// m-met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code m-must wetain the above copywight
+// n-notice, UwU this wist of conditions a-and the fowwowing d-discwaimew. :3
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight nyotice, (⑅˘꒳˘) this wist o-of conditions a-and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided with the
+// distwibution. (///ˬ///✿)
+//    * nyeithew t-the nyame of googwe inc. ^^;; nyow the nyames of its
+// contwibutows may be used to e-endowse ow pwomote pwoducts dewived f-fwom
+// this s-softwawe without s-specific pwiow wwitten pewmission. >_<
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this s-softwawe is pwovided b-by the copywight h-howdews and contwibutows
+// "as is" and any e-expwess ow impwied w-wawwanties, rawr x3 i-incwuding, /(^•ω•^) but n-nyot
+// wimited t-to, :3 the impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. (ꈍᴗꈍ) in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any d-diwect, /(^•ω•^) indiwect, (⑅˘꒳˘) incidentaw, ( ͡o ω ͡o )
+// speciaw, exempwawy, òωó ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) b-but n-nyot
+// wimited to, XD pwocuwement o-of substitute goods ow sewvices; w-woss of use, -.-
+// d-data, :3 ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, nyaa~~ w-whethew in contwact, 😳 stwict wiabiwity, (⑅˘꒳˘) o-ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way out of the use
+// of this s-softwawe, nyaa~~ even i-if advised of the possibiwity o-of such damage. OwO
 -->

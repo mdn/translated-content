@@ -1,88 +1,88 @@
 ---
-title: browsingData.removeLocalStorage()
-slug: Mozilla/Add-ons/WebExtensions/API/browsingData/removeLocalStorage
+titwe: bwowsingdata.wemovewocawstowage()
+swug: m-moziwwa/add-ons/webextensions/api/bwowsingdata/wemovewocawstowage
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Efface tout le [stockage local](/fr/docs/Web/API/Window/localStorage) créé par des sites Web.
+e-efface t-tout we [stockage w-wocaw](/fw/docs/web/api/window/wocawstowage) c-cwéé paw des s-sites web. (⑅˘꒳˘)
 
-Vous pouvez utiliser le paramètre `removalOptions`, qui est un objet {{WebExtAPIRef("browsingData.RemovalOptions")}} pour :
+vous p-pouvez utiwisew w-we pawamètwe `wemovawoptions`, ( ͡o ω ͡o ) qui est un objet {{webextapiwef("bwowsingdata.wemovawoptions")}} pouw :
 
-- Effacer uniquement les objets de stockage locaux créés après un délai donné
-- Controler si vous souhaitez effacer uniquement les objets de stockage locaux créés par des pages Web normales ou supprimer des objets créés par des applications et des extensions hébergées.
+- effacew uniquement wes objets de stockage w-wocaux cwéés apwès un déwai donné
+- contwowew s-si vous souhaitez effacew u-uniquement wes objets de stockage wocaux cwéés paw des pages w-web nyowmawes ou suppwimew des o-objets cwéés p-paw des appwications et des extensions hébewgées.
 
-C'est une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+c'est une fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). òωó
 
-## Syntaxe
+## syntaxe
 
 ```js
-var removing = browser.browsingData.removeLocalStorage(
-  removalOptions, // RemovalOptions object
+vaw wemoving = bwowsew.bwowsingdata.wemovewocawstowage(
+  wemovawoptions, (⑅˘꒳˘) // w-wemovawoptions object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `removalOptions`
-  - : `object`. Un objet {{WebExtAPIRef("browsingData.RemovalOptions")}}, qui peut etre utilisé pour effacer uniquement les objets de stockage locaux créés par des pages Web normales ou pour effacer des objets créés par des applications et des extensions hébergées.
+- `wemovawoptions`
+  - : `object`. XD u-un objet {{webextapiwef("bwowsingdata.wemovawoptions")}}, -.- q-qui peut etwe u-utiwisé pouw effacew uniquement wes objets d-de stockage wocaux cwéés paw des pages web nyowmawes o-ou pouw effacew des objets cwéés paw des appwications et des extensions hébewgées. :3
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie sans argument lorsque la suppression est terminée. Si une erreur se produit, la promise sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie s-sans awgument wowsque w-wa suppwession est tewminée. nyaa~~ si une ewweuw se pwoduit, 😳 wa p-pwomise sewa wejetée a-avec un message d'ewweuw. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Supprime tout le stockage local :
+s-suppwime tout we stockage wocaw :
 
 ```js
-function onRemoved() {
-  console.log("removed");
+f-function onwemoved() {
+  consowe.wog("wemoved");
 }
 
-function onError(error) {
-  console.error(error);
+f-function onewwow(ewwow) {
+  c-consowe.ewwow(ewwow);
 }
 
-browser.browsingData.removeLocalStorage({}).then(onRemoved, onError);
+bwowsew.bwowsingdata.wemovewocawstowage({}).then(onwemoved, nyaa~~ o-onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.browsingData`](https://developer.chrome.com/docs/extensions/reference/api/browsingData).
+> cette a-api est basée suw w'api chwomium [`chwome.bwowsingdata`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bwowsingdata). OwO
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. rawr x3 aww wights wesewved. XD
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy fowms, σωσ with ow without
+// m-modification, (U ᵕ U❁) a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, (U ﹏ U) this w-wist of conditions and the fowwowing d-discwaimew. :3
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// c-copywight n-nyotice, ( ͡o ω ͡o ) this wist o-of conditions and the fowwowing discwaimew
+// i-in the documentation a-and/ow othew m-matewiaws pwovided w-with the
+// d-distwibution. σωσ
+//    * nyeithew the name of googwe inc. >w< nyow the n-nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// this s-softwawe without specific pwiow wwitten pewmission. 😳😳😳
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe i-is pwovided b-by the copywight h-howdews and contwibutows
+// "as i-is" and any expwess ow impwied w-wawwanties, OwO i-incwuding, 😳 but nyot
+// wimited to, 😳😳😳 the impwied wawwanties of mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. (˘ω˘) i-in no event shaww the copywight
+// o-ownew ow c-contwibutows be wiabwe fow any diwect, ʘwʘ indiwect, ( ͡o ω ͡o ) i-incidentaw, o.O
+// s-speciaw, >w< exempwawy, ow consequentiaw d-damages (incwuding, 😳 b-but nyot
+// wimited to, pwocuwement of substitute goods ow sewvices; woss o-of use, 🥺
+// data, rawr x3 o-ow pwofits; o-ow business intewwuption) howevew c-caused and on a-any
+// theowy of wiabiwity, o.O whethew i-in contwact, rawr stwict wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence ow othewwise) a-awising in any w-way out of the use
+// of this softwawe, 😳😳😳 even i-if advised of the p-possibiwity of such damage.
 -->

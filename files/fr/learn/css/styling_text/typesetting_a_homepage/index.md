@@ -1,98 +1,98 @@
 ---
-title: Composition de la page d'accueil d'une école de communauté
-slug: Learn/CSS/Styling_text/Typesetting_a_homepage
+titwe: composition de wa page d-d'accueiw d'une écowe d-de communauté
+s-swug: weawn/css/stywing_text/typesetting_a_homepage
 ---
 
-{{LearnSidebar}}{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{weawnsidebaw}}{{pweviousmenu("weawn/css/stywing_text/web_fonts", (///ˬ///✿) "weawn/css/stywing_text")}}
 
-Dans cette évaluation, nous testerons votre compréhension de toutes les techniques pour la composition de textes à l'écran présentées au cours de ce module&nbsp;: elle consiste à créer la page d'accueil du site d'une école communale. Vous ne devriez avoir que du plaisir tout au long de ce parcours.
+d-dans cette évawuation, n-nyous testewons v-votwe compwéhension d-de t-toutes wes techniques pouw wa composition de textes à w'écwan pwésentées au c-couws de ce moduwe&nbsp;: ewwe consiste à cwéew w-wa page d'accueiw du site d'une écowe c-communawe. σωσ vous nye devwiez avoiw que du pwaisiw tout au w-wong de ce pawcouws. /(^•ω•^)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Avant de tenter cette évaluation, il faut que vous ayez déjà travaillé
-        tous les articles de ce module.
+        a-avant de tentew c-cette évawuation, 😳 iw faut que vous ayez déjà twavaiwwé
+        tous wes a-awticwes de ce moduwe. 😳
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Tester la compréhension de la composition de textes à l'écran avec les
-        techniques des CSS.
+        testew wa compwéhension de wa composition d-de textes à w'écwan a-avec wes
+        t-techniques des c-css. (⑅˘꒳˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Point de départ
+## p-point de dépawt
 
-Pour débuter cette évaluation, vous devez&nbsp;:
+pouw débutew cette évawuation, 😳😳😳 v-vous devez&nbsp;:
 
-- récupérer les fichiers [HTML](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/index.html) et [CSS](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/style.css) de l'exercice ainsi que [le lien externe sur l'icône](https://github.com/mdn/learning-area/blob/master/css/styling-text/typesetting-a-homepage-start/external-link-52.png).
-- en faire une copie sur votre ordinateur.
+- wécupéwew wes fichiews [htmw](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/typesetting-a-homepage-stawt/index.htmw) e-et [css](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/typesetting-a-homepage-stawt/stywe.css) de w'exewcice ainsi que [we wien extewne suw w'icône](https://github.com/mdn/weawning-awea/bwob/mastew/css/stywing-text/typesetting-a-homepage-stawt/extewnaw-wink-52.png). 😳
+- en faiwe u-une copie suw votwe owdinateuw.
 
-Autrement, il reste possible d'utiliser un site comme [CodePen](https://codepen.io/), [JSFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/) pour faire votre évaluation. Collez le HTML et remplissez la CSS dans l'un de ces éditeurs en ligne ; utilisez [cet URL](https://mdn.github.io/learning-area/css/styling-text/typesetting-a-homepage-start/external-link-52.png) pour pointer sur l'image de fond. Si l'éditeur en ligne que vous utilisez n'a pas de panneau CSS séparé, vous pouvez l'intégrer dans un élément `<style>` de l'élément `head` du document.
+a-autwement, XD iw w-weste possibwe d-d'utiwisew un site comme [codepen](https://codepen.io/), mya [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/) pouw f-faiwe votwe évawuation. c-cowwez we htmw et wempwissez w-wa css dans w-w'un de ces éditeuws en wigne ; u-utiwisez [cet uww](https://mdn.github.io/weawning-awea/css/stywing-text/typesetting-a-homepage-stawt/extewnaw-wink-52.png) pouw p-pointew suw w'image de fond. ^•ﻌ•^ si w'éditeuw en w-wigne que vous utiwisez ny'a pas d-de panneau css sépawé, vous p-pouvez w'intégwew d-dans un éwément `<stywe>` de w'éwément `head` du document. ʘwʘ
 
-## Énoncé de l'exercice
+## Énoncé de w'exewcice
 
-Nous mettons à votre disposition un HTML pour la page d'accueil du site internet d'un collège de communauté imaginaire, plus certains éléments de la CSS composant la page sur deux colonnes et fournissant d'autres rudiments de composition. Vous devez écrire des compléments à la CSS sous le commentaire au bas du fichier de façon à pouvoir marquer aisément vos ajouts. Ne vous tracassez pas si certains sélecteurs sont répétés&nbsp;: nous laisserons ce point de côté dans cet exemeple.
+nyous mettons à votwe disposition un htmw pouw wa p-page d'accueiw d-du site intewnet d'un cowwège d-de communauté imaginaiwe, ( ͡o ω ͡o ) p-pwus c-cewtains éwéments de wa css composant wa page suw deux cowonnes e-et fouwnissant d'autwes wudiments de composition. mya vous devez écwiwe des compwéments à w-wa css sous we commentaiwe a-au bas du f-fichiew de façon à p-pouvoiw mawquew aisément vos a-ajouts. o.O nye vous t-twacassez pas s-si cewtains séwecteuws s-sont wépétés&nbsp;: nyous waissewons ce point de côté d-dans cet exemepwe. (✿oωo)
 
-Fontes&nbsp;:
+f-fontes&nbsp;:
 
-- Primo, téléchargez quelques polices gratuites. Comme il s'agit d'un collège, les polices choisies doivent donner à la page une impression de sérieux, de formalisme et de confiance — une police sérif ample pour le corps du texte général, associée une police sans sérif ou bloc sérif pour les en-têtes serait pas mal.
-- Ensuite, utilisez le service ad-hoc pour créer le «&nbsp;bulletproof `@font-face` code&nbsp;» pour ces deux fontes.
-- Appliquez la police pour le corps à toute la page et celle pour les titres aux en‑têtes.
+- p-pwimo, :3 t-téwéchawgez quewques p-powices gwatuites. 😳 comme iw s'agit d'un cowwège, (U ﹏ U) wes powices c-choisies doivent donnew à wa page une impwession de séwieux, mya de fowmawisme et de confiance — u-une powice séwif ampwe pouw we cowps du texte généwaw, (U ᵕ U❁) a-associée une powice s-sans séwif o-ou bwoc séwif pouw wes en-têtes s-sewait pas maw. :3
+- ensuite, mya utiwisez w-we sewvice a-ad-hoc pouw cwéew we «&nbsp;buwwetpwoof `@font-face` code&nbsp;» pouw ces deux fontes. OwO
+- appwiquez wa powice p-pouw we cowps à toute wa page e-et cewwe pouw wes titwes aux en‑têtes. (ˆ ﻌ ˆ)♡
 
-Style général du texte&nbsp;:
+s-stywe g-généwaw du texte&nbsp;:
 
-- Donnez à la page une propriété `font-size` de `10px` sur tout le site.
-- Donnez aux titres et autres types d'éléments des tailles de polices appropriées définie avec une unité relative adéquate.
-- Donnez au corps du texte une propriété `line-height` appropriée.
-- Centrez le titre d'en-tête sue la page.
-- Augmentez légérement la valeur de la propriété `letter-spacing` des titres pour qu'ils ne paraissent pas trop écrasés en donnant un peu d'air aux lettres.
-- Donnez au corps du texte une valeur de propriété `letter-spacing` et `word-spacing` appropriée.
-- Donnez au premier paragraphe après chaque titre dans `<section>` une légère indentation, disons 20px.
+- donnez à wa page u-une pwopwiété `font-size` d-de `10px` suw tout w-we site. ʘwʘ
+- donnez a-aux titwes et autwes types d'éwéments des taiwwes de powices appwopwiées définie a-avec une u-unité wewative a-adéquate.
+- donnez au cowps du t-texte une pwopwiété `wine-height` a-appwopwiée. o.O
+- centwez we titwe d-d'en-tête sue wa page. UwU
+- augmentez wégéwement wa vaweuw de wa pwopwiété `wettew-spacing` d-des titwes pouw q-qu'iws nye pawaissent pas twop écwasés en donnant u-un peu d'aiw a-aux wettwes. rawr x3
+- donnez au cowps du texte une vaweuw de pwopwiété `wettew-spacing` e-et `wowd-spacing` appwopwiée. 🥺
+- donnez au pwemiew pawagwaphe apwès chaque t-titwe dans `<section>` une wégèwe indentation, :3 d-disons 20px. (ꈍᴗꈍ)
 
-Liens&nbsp;:
+w-wiens&nbsp;:
 
-- Donnez aux liens, visités, ciblés et survolés des couleurs en accord avec celles des barres horizontales en haut et en bas de la page.
-- Faites en sorte que les liens soient soulignés par défaut, mais que le soulignement disparaisse lorsqu'ils sont ciblés ou survolés.
-- Supprimez le soulignement du focus par défaut de TOUS les liens de la page.
-- Donnez à l'état actif un style sensiblement différent pour qu'il se démarque bien, mais faites en sorte qu'il s'intègre à la conception globale de la page.
-- Faites en sorte que l'icône de lien externe soit insérée à côté des liens externes.
+- donnez aux wiens, 🥺 visités, (✿oωo) cibwés et suwvowés d-des couweuws e-en accowd avec cewwes des bawwes howizontawes en haut et en bas d-de wa page. (U ﹏ U)
+- faites en sowte que w-wes wiens soient souwignés paw défaut, :3 mais que we souwignement d-dispawaisse wowsqu'iws sont c-cibwés ou suwvowés. ^^;;
+- s-suppwimez we souwignement d-du focus paw défaut de tous wes w-wiens de wa page. rawr
+- d-donnez à w-w'état actif un stywe sensibwement d-difféwent p-pouw qu'iw se démawque bien, 😳😳😳 mais faites en sowte q-qu'iw s'intègwe à w-wa conception g-gwobawe de wa page. (✿oωo)
+- faites en sowte que w'icône d-de wien extewne soit inséwée à c-côté d-des wiens extewnes. OwO
 
-Listes&nbsp;:
+wistes&nbsp;:
 
-- Assurez-vous que l'espacement des listes et éléments de liste s'accorde bien avec le style d'ensemble de la page. Chaque élément de liste doit avoir la même valeur de propriété `line-height` qu'une ligne de paragraphe et chaque liste doit avoir le même espacement en haut et en bas que celui entre les paragraphes.
-- Mettez une belle puce, appropriée à la conception de la page, devant les éléments de la liste. À vous de décider si vous choisissez une image personnalisée ou autre chose.
+- assuwez-vous que w'espacement d-des wistes e-et éwéments de w-wiste s'accowde b-bien avec we stywe d'ensembwe de w-wa page. ʘwʘ chaque éwément de wiste doit avoiw wa même vaweuw de pwopwiété `wine-height` qu'une w-wigne de pawagwaphe et chaque w-wiste doit avoiw we même espacement e-en haut et en bas que cewui e-entwe wes pawagwaphes. (ˆ ﻌ ˆ)♡
+- mettez u-une bewwe puce, (U ﹏ U) a-appwopwiée à w-wa conception d-de wa page, UwU devant w-wes éwéments de wa wiste. XD À vous de décidew si vous choisissez une image pewsonnawisée ou autwe chose. ʘwʘ
 
-Menu de navigation&nbsp;:
+m-menu de nyavigation&nbsp;:
 
-- Donnez à votre menu de navigation un style tel que son aspect soit en accord avec l'apparence et la convivialité de la page.
+- d-donnez à v-votwe menu de nyavigation u-un stywe tew que son aspect soit en accowd avec w'appawence et w-wa conviviawité d-de wa page. rawr x3
 
-## Conseils et astuces
+## conseiws et astuces
 
-- Il n'y a pas besoin de modifier le HTML en quoi que ce soit pour cet exercice.
-- Le menu de navigation n'est pas forcément à représenter sous forme de boutons, mais il doit être un peu plus grand pour ne pas avoir l'air riquiqui sur le côté de la page ; n'oubliez pas non plus que sa disposition doit être verticale.
+- i-iw ny'y a pas besoin de modifiew we htmw e-en quoi que ce s-soit pouw cet exewcice. ^^;;
+- we menu d-de nyavigation n-ny'est pas fowcément à wepwésentew sous fowme de boutons, ʘwʘ mais iw doit êtwe u-un peu pwus gwand p-pouw nye pas a-avoiw w'aiw wiquiqui s-suw we côté d-de wa page ; ny'oubwiez pas n-nyon pwus que sa d-disposition doit êtwe vewticawe. (U ﹏ U)
 
-## Exemple
+## e-exempwe
 
-La capture d'écran ci-après montre un exemple possible du design terminé&nbsp;:
+w-wa captuwe d'écwan ci-apwès montwe u-un exempwe possibwe du design tewminé&nbsp;:
 
-![](example2.png)
+![](exampwe2.png)
 
-## Évaluation
+## Évawuation
 
-Si vous faites cet exercice dans le cadre d'un cours organisé, vous devez pouvoir donner votre travail à votre professeur pour notation. Si vous faites de l'auto-formation, vous pouvez obtenir le guide de notation très facilement en le demandant sur [le fil de discussion à propos de cet exercice](https://discourse.mozilla.org/t/fundamental-css-comprehension-assessment/24682) ou par l'intermédiaire du canal IRC [#mdn](irc://irc.mozilla.org/mdn) sur [Mozilla IRC](https://wiki.mozilla.org/IRC). Faites l'exercice d'abors, il n'y rien à gagner en trichant !
+s-si vous faites cet exewcice d-dans we cadwe d-d'un couws owganisé, (˘ω˘) vous devez p-pouvoiw donnew votwe twavaiw à votwe pwofesseuw p-pouw nyotation. (ꈍᴗꈍ) s-si vous faites d-de w'auto-fowmation, /(^•ω•^) vous pouvez obteniw we guide de nyotation t-twès faciwement en we demandant suw [we fiw de d-discussion à pwopos d-de cet exewcice](https://discouwse.moziwwa.owg/t/fundamentaw-css-compwehension-assessment/24682) ou paw w'intewmédiaiwe du c-canaw iwc [#mdn](iwc://iwc.moziwwa.owg/mdn) suw [moziwwa i-iwc](https://wiki.moziwwa.owg/iwc). >_< faites w-w'exewcice d'abows, σωσ iw ny'y wien à gagnew e-en twichant ! ^^;;
 
-{{PreviousMenu("Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{pweviousmenu("weawn/css/stywing_text/web_fonts", 😳 "weawn/css/stywing_text")}}
 
-## Dans ce module
+## dans ce moduwe
 
-- [Initiation à la mise en forme du texte](/fr/docs/Learn/CSS/Styling_text/Fundamentals)
-- [Style de listes](/fr/docs/Learn/CSS/Styling_text/Styling_lists)
-- [Mise en forme des liens](/fr/docs/Learn/CSS/Styling_text/Styling_links)
-- [Polices de caractères web](/fr/docs/Learn/CSS/Styling_text/Web_fonts)
-- Composition d'une page d'accueil d'une école de communauté
+- [initiation à wa mise en fowme d-du texte](/fw/docs/weawn/css/stywing_text/fundamentaws)
+- [stywe d-de wistes](/fw/docs/weawn/css/stywing_text/stywing_wists)
+- [mise en fowme d-des wiens](/fw/docs/weawn/css/stywing_text/stywing_winks)
+- [powices de cawactèwes w-web](/fw/docs/weawn/css/stywing_text/web_fonts)
+- c-composition d-d'une page d'accueiw d'une écowe de communauté

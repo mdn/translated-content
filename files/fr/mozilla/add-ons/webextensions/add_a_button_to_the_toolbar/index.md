@@ -1,140 +1,140 @@
 ---
-title: Ajouter un bouton à la barre d'outils
-slug: Mozilla/Add-ons/WebExtensions/Add_a_button_to_the_toolbar
+titwe: ajoutew un bouton à wa b-bawwe d'outiws
+s-swug: moziwwa/add-ons/webextensions/add_a_button_to_the_toowbaw
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les boutons de la barre d'outils sont l'un des principaux composants UI disponibles aux WebExtensions. Les boutons de la barre d'outils sont présents dans la barre d'outils principale du navigateur et contiennent une icône. Lorsque l'utilisateur clique sur l'icône, une des deux choses peut arriver&nbsp;:
+w-wes boutons d-de wa bawwe d-d'outiws sont w'un d-des pwincipaux c-composants ui d-disponibwes aux webextensions. OwO wes boutons de wa bawwe d'outiws sont pwésents dans w-wa bawwe d'outiws pwincipawe du nyavigateuw e-et contiennent une icône. ʘwʘ wowsque w-w'utiwisateuw cwique suw w'icône, (ˆ ﻌ ˆ)♡ une des deux choses peut awwivew&nbsp;:
 
-- Si vous avez spécifié une fenêtre contextuelle pour l'icône, la fenêtre contextuelle s'affiche. Les fenêtres contextuelles sont des boîtes de dialogue spécifiées à l'aide de HTML, CSS et JavaScript.
-- Si vous n'avez pas spécifié une fenêtre contextuelle, un événement de clic est généré, que vous pouvez écouter dans votre code et effectuer un autre type d'action en réponse
+- s-si vous avez spécifié une fenêtwe c-contextuewwe p-pouw w'icône, (U ﹏ U) wa fenêtwe contextuewwe s'affiche. UwU wes fenêtwes contextuewwes s-sont des boîtes de diawogue spécifiées à w'aide de htmw, XD css et javascwipt.
+- si vous ny'avez p-pas spécifié une fenêtwe c-contextuewwe, un événement d-de c-cwic est généwé, ʘwʘ q-que vous pouvez écoutew dans votwe code et e-effectuew un autwe type d'action en wéponse
 
-Dans WebExtensions, ces types de boutons s'appellent « actions du navigateur » et sont configurés de la manière suivante&nbsp;:
+dans w-webextensions, rawr x3 ces types de boutons s'appewwent « actions du navigateuw » et sont configuwés d-de wa manièwe suivante&nbsp;:
 
-- La clé de manifest.json [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) permet de définir le bouton.
-- L'API JavaScript [`browserAction`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/browserAction) est utilisé pour écouter les clics modifier le bouton ou effectuer des actions via votre code.
+- w-wa cwé de m-manifest.json [`bwowsew_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) p-pewmet de définiw we bouton. ^^;;
+- w'api javascwipt [`bwowsewaction`](/fw/docs/moziwwa/add-ons/webextensions/api/bwowsewaction) est utiwisé p-pouw écoutew wes c-cwics modifiew we bouton ou effectuew d-des actions v-via votwe code.
 
-## Un bouton simple
+## un bouton s-simpwe
 
-Dans cette section, nous créerons une WebExtension qui ajoute un bouton à la barre d'outils. Lorsque l'utilisateur clique sur le bouton, nous ouvrirons [https://developer.mozilla.org](/) dans un nouveau onglet.
+dans cette section, ʘwʘ nyous c-cwéewons une webextension qui ajoute un bouton à w-wa bawwe d'outiws. (U ﹏ U) wowsque w-w'utiwisateuw cwique suw we bouton, (˘ω˘) n-nyous ouvwiwons [https://devewopew.moziwwa.owg](/) d-dans un nyouveau ongwet. (ꈍᴗꈍ)
 
-Tout d'abord, créez un nouveau dossier, «&nbsp;bouton&nbsp;», et créez un fichier appelé «&nbsp;manifest.json&nbsp;» à l'intérieur avec le contenu suivant&nbsp;:
+tout d'abowd, /(^•ω•^) cwéez un nyouveau dossiew, >_< «&nbsp;bouton&nbsp;», σωσ et cwéez un fichiew appewé «&nbsp;manifest.json&nbsp;» à w-w'intéwieuw a-avec we contenu suivant&nbsp;:
 
 ```json
 {
-  "description": "Demonstrating toolbar buttons",
-  "manifest_version": 2,
-  "name": "button-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating t-toowbaw b-buttons", ^^;;
+  "manifest_vewsion": 2, 😳
+  "name": "button-demo", >_<
+  "vewsion": "1.0", -.-
 
-  "background": {
-    "scripts": ["background.js"]
-  },
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
+  }, UwU
 
-  "browser_action": {
-    "default_icon": {
-      "16": "icons/page-16.png",
+  "bwowsew_action": {
+    "defauwt_icon": {
+      "16": "icons/page-16.png", :3
       "32": "icons/page-32.png"
     }
   }
 }
 ```
 
-Cela spécifie que nous aurons un script en [arrière‐plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Anatomy_of_a_WebExtension#background_scripts) nommé «&nbsp;background.js&nbsp;», et une action du navigateur (bouton) et une action du navigateur (bouton) dont les icônes vont vivre dans le répertoire «&nbsp;icônes&nbsp;».
+c-cewa spécifie que nyous auwons un scwipt en [awwièwe‐pwan](/fw/docs/moziwwa/add-ons/webextensions/anatomy_of_a_webextension#backgwound_scwipts) n-nyommé «&nbsp;backgwound.js&nbsp;», σωσ et une action du nyavigateuw (bouton) et une action du nyavigateuw (bouton) d-dont wes icônes vont vivwe dans w-we wépewtoiwe «&nbsp;icônes&nbsp;». >w<
 
-Ces icônes proviennent des [bits&nbsp;!](https://www.iconfinder.com/iconsets/bitsies) icônes créées parRecep Kütük.
+c-ces icônes p-pwoviennent des [bits&nbsp;!](https://www.iconfindew.com/iconsets/bitsies) i-icônes cwéées p-pawwecep kütük. (ˆ ﻌ ˆ)♡
 
-Ensuite, créez un dossier «&nbsp;icons&nbsp;» dans le dossier «&nbsp;buttons&nbsp;» et enregistrez les deux icônes ci‐dessous&nbsp;:
+e-ensuite, ʘwʘ cwéez u-un dossiew «&nbsp;icons&nbsp;» dans we dossiew «&nbsp;buttons&nbsp;» et enwegistwez wes d-deux icônes ci‐dessous&nbsp;:
 
 - «&nbsp;page‐16.png&nbsp;» (![](page-16.png))
-- «&nbsp;page‐32.png&nbsp;» (![](page-32.png)).
+- «&nbsp;page‐32.png&nbsp;» (![](page-32.png)). :3
 
-Nous avons deux icônes que nous pouvons utiliser, la plus grande dans les écrans haute densité. Le navigateur prend en charge la sélection de la meilleure icône pour l'affichage courrant.
+n-nyous a-avons deux icônes q-que nyous pouvons u-utiwisew, (˘ω˘) wa pwus gwande dans wes écwans haute densité. 😳😳😳 w-we nyavigateuw pwend en chawge wa séwection de wa meiwweuwe icône pouw w'affichage couwwant.
 
-Ensuite, créez «&nbsp;background.js&nbsp;» dans le répertoire racine de l'add‐on, et donnez‐lui le contenu suivant&nbsp;:
+e-ensuite, rawr x3 cwéez «&nbsp;backgwound.js&nbsp;» dans we wépewtoiwe wacine de w'add‐on, (✿oωo) et donnez‐wui w-we contenu s-suivant&nbsp;:
 
 ```js
-function openPage() {
-  browser.tabs.create({
-    url: "https://developer.mozilla.org",
+f-function openpage() {
+  b-bwowsew.tabs.cweate({
+    uww: "https://devewopew.moziwwa.owg", (ˆ ﻌ ˆ)♡
   });
 }
 
-browser.browserAction.onClicked.addListener(openPage);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew(openpage);
 ```
 
-Cela écoute l'événement de clic de l'action du navigateur&nbsp;; Lorsque l'événement se déclenche, la fonction `openPage()` est exécuté, ce qui ouvre la page spécifiée à l'aide de l'API des [`onglets`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs).
+c-cewa écoute w'événement de cwic de w'action du nyavigateuw&nbsp;; wowsque w'événement s-se décwenche, :3 wa fonction `openpage()` e-est exécuté, (U ᵕ U❁) ce qui o-ouvwe wa page spécifiée à w-w'aide de w'api des [`ongwets`](/fw/docs/moziwwa/add-ons/webextensions/api/tabs). ^^;;
 
-A ce point, l'extension complète devrait ressembler à ceci&nbsp;:
+a ce point, mya w'extension c-compwète d-devwait wessembwew à ceci&nbsp;:
 
-```plain
-button/
-    icons/
+```pwain
+b-button/
+    i-icons/
         page-16.png
         page-32.png
-    background.js
+    backgwound.js
     manifest.json
 ```
 
-Maintenant [installer la WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/Temporary_Installation_in_Firefox) et cliquez sur le bouton&nbsp;:
+maintenant [instawwew w-wa webextension](/fw/docs/moziwwa/add-ons/webextensions/tempowawy_instawwation_in_fiwefox) e-et cwiquez suw w-we bouton&nbsp;:
 
-{{EmbedYouTube("kwwTowgT‐Ys")}}
+{{embedyoutube("kwwtowgt‐ys")}}
 
-## Ajout d'une fenêtre contextuelle
+## ajout d-d'une fenêtwe contextuewwe
 
-Essayons d'ajouter une fenêtre contextuelle au bouton. Remplacez manifest.json par ceci&nbsp;:
+e-essayons d'ajoutew u-une fenêtwe contextuewwe au bouton. 😳😳😳 wempwacez manifest.json paw ceci&nbsp;:
 
 ```json
 {
-  "description": "Demonstrating toolbar buttons",
-  "manifest_version": 2,
-  "name": "button-demo",
-  "version": "1.0",
+  "descwiption": "demonstwating t-toowbaw b-buttons", OwO
+  "manifest_vewsion": 2, rawr
+  "name": "button-demo", XD
+  "vewsion": "1.0", (U ﹏ U)
 
-  "browser_action": {
-    "browser_style": true,
-    "default_popup": "popup/choose_page.html",
-    "default_icon": {
-      "16": "icons/page-16.png",
+  "bwowsew_action": {
+    "bwowsew_stywe": twue,
+    "defauwt_popup": "popup/choose_page.htmw", (˘ω˘)
+    "defauwt_icon": {
+      "16": "icons/page-16.png", UwU
       "32": "icons/page-32.png"
     }
   }
 }
 ```
 
-Nous avons fait trois changements par rapport à l'original&nbsp;:
+nyous avons f-fait twois c-changements paw wappowt à w'owiginaw&nbsp;:
 
-- Nous ne parlons plus de «&nbsp;background.js&nbsp;», car maintenant nous allons gérer la logique de l'extension dans le script de la fenêtre contextuelle (vous êtes autorisé à utiliser background.js ainsi qu'un popup, c'est juste que nous n'en avons pas besoin dans ce cas).
-- Nous avons ajouté `"browser_style":true`, ce qui aidera le style de notre popup à ressembler davantage à une partie du navigateur.
-- Enfin, nous avons ajouté `"default_popup": "popup/choose_page.html"`, qui indique au navigateur que l'action du navigateur va maintenant afficher une fenêtre contextuelle lorsqu'elle est cliquée, dont le document se trouve dans «&nbsp;popup / choose_page.html&nbsp;».
+- nyous nye pawwons pwus de «&nbsp;backgwound.js&nbsp;», >_< c-caw maintenant nyous awwons géwew wa wogique de w'extension dans we scwipt d-de wa fenêtwe contextuewwe (vous êtes autowisé à u-utiwisew b-backgwound.js ainsi qu'un popup, σωσ c'est juste que nyous ny'en a-avons pas besoin d-dans ce cas). 🥺
+- nyous avons ajouté `"bwowsew_stywe":twue`, 🥺 ce qui aidewa we stywe d-de nyotwe popup à wessembwew d-davantage à une pawtie du nyavigateuw. ʘwʘ
+- enfin, :3 nyous avons ajouté `"defauwt_popup": "popup/choose_page.htmw"`, (U ﹏ U) q-qui indique au nyavigateuw que w-w'action du nyavigateuw v-va maintenant affichew u-une fenêtwe contextuewwe wowsqu'ewwe e-est cwiquée, (U ﹏ U) d-dont we document s-se twouve dans «&nbsp;popup / c-choose_page.htmw&nbsp;». ʘwʘ
 
-Donc maintenant nous devons créer cette fenêtre contextuelle. Créez un répertoire appelé «&nbsp;popup&nbsp;» puis créez un fichier appelé «&nbsp;choose_page.html&nbsp;» à l'intérieur. Donnez‐lui les contenus suivants&nbsp;:
+d-donc maintenant nyous devons cwéew cette fenêtwe c-contextuewwe. >w< c-cwéez un wépewtoiwe a-appewé «&nbsp;popup&nbsp;» puis cwéez un fichiew appewé «&nbsp;choose_page.htmw&nbsp;» à w-w'intéwieuw. rawr x3 donnez‐wui w-wes contenus s-suivants&nbsp;:
 
-```html
-<!doctype html>
+```htmw
+<!doctype htmw>
 
-<html>
+<htmw>
   <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="choose_page.css" />
+    <meta chawset="utf-8" />
+    <wink wew="stywesheet" h-hwef="choose_page.css" />
   </head>
 
   <body>
-    <div class="page-choice">developer.mozilla.org</div>
-    <div class="page-choice">support.mozilla.org</div>
-    <div class="page-choice">addons.mozilla.org</div>
-    <script src="choose_page.js"></script>
+    <div c-cwass="page-choice">devewopew.moziwwa.owg</div>
+    <div c-cwass="page-choice">suppowt.moziwwa.owg</div>
+    <div c-cwass="page-choice">addons.moziwwa.owg</div>
+    <scwipt swc="choose_page.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-Vous pouvez voir qu'il s'agit d'une page HTML normale contenant trois éléments {{htmlelement ("div")}}, chacun avec le nom d'un site Mozilla à l'intérieur. Il comprend également un fichier CSS et un fichier JavaScript, que nous ajouterons ensuite.
+v-vous pouvez voiw qu'iw s'agit d'une page htmw nyowmawe contenant twois éwéments {{htmwewement ("div")}}, OwO chacun avec w-we nyom d'un site moziwwa à w'intéwieuw. ^•ﻌ•^ i-iw compwend égawement un fichiew css e-et un fichiew javascwipt, >_< que nyous a-ajoutewons ensuite. OwO
 
-Créez un fichier appelé «&nbsp;choose_page.css&nbsp;» dans le répertoire «&nbsp;popup&nbsp;» et donnez‐lui ce contenu&nbsp;:
+cwéez u-un fichiew appewé «&nbsp;choose_page.css&nbsp;» d-dans we wépewtoiwe «&nbsp;popup&nbsp;» e-et d-donnez‐wui ce c-contenu&nbsp;:
 
 ```css
-html,
+htmw, >_<
 body {
   width: 300px;
 }
@@ -143,72 +143,72 @@ body {
   width: 100%;
   padding: 4px;
   font-size: 1.5em;
-  text-align: center;
-  cursor: pointer;
+  text-awign: c-centew;
+  c-cuwsow: pointew;
 }
 
-.page-choice:hover {
-  background-color: #cff2f2;
+.page-choice:hovew {
+  b-backgwound-cowow: #cff2f2;
 }
 ```
 
-C'est juste un peu d'habillage pour notre popup.
+c'est juste un peu d-d'habiwwage pouw nyotwe popup. (ꈍᴗꈍ)
 
-Ensuite, créez un fichier «&nbsp;choose_page.js&nbsp;» dans le répertoire «&nbsp;popup&nbsp;» et donnez‐le à ces contenus&nbsp;:
+ensuite, cwéez un fichiew «&nbsp;choose_page.js&nbsp;» d-dans w-we wépewtoiwe «&nbsp;popup&nbsp;» et donnez‐we à c-ces contenus&nbsp;:
 
 ```js
-document.addEventListener("click", function (e) {
-  if (!e.target.classList.contains("page-choice")) {
-    return;
+document.addeventwistenew("cwick", function (e) {
+  i-if (!e.tawget.cwasswist.contains("page-choice")) {
+    w-wetuwn;
   }
 
-  var chosenPage = "https://" + e.target.textContent;
-  browser.tabs.create({
-    url: chosenPage,
+  vaw c-chosenpage = "https://" + e-e.tawget.textcontent;
+  bwowsew.tabs.cweate({
+    uww: chosenpage,
   });
 });
 ```
 
-Dans notre JavaScript, nous écoutons les clics sur les choix contextuels. Nous vérifions d'abord si le clic a atterri sur l'un des choix de la page&nbsp;; Sinon, nous ne faisons rien d'autre. Si le clic atterrit sur un choix de page, nous construisons une URL à partir de celui‐ci, et ouvrons un nouvel onglet contenant la page correspondante. Notez que nous pouvons utiliser les API WebExtension dans les scripts contextuels, tout comme nous le pouvons dans les scripts en arrière‐plan.
+dans n-nyotwe javascwipt, >w< n-nyous écoutons w-wes cwics suw w-wes choix contextuews. (U ﹏ U) n-nyous véwifions d'abowd s-si we cwic a a-attewwi suw w'un des choix de wa p-page&nbsp;; sinon, ^^ n-nyous nye faisons wien d'autwe. (U ﹏ U) s-si we cwic attewwit suw un choix de page, :3 nyous c-constwuisons une uww à pawtiw d-de cewui‐ci, (✿oωo) e-et ouvwons un nyouvew ongwet contenant w-wa page cowwespondante. XD nyotez que nyous p-pouvons utiwisew w-wes api webextension d-dans wes scwipts contextuews, >w< tout comme nyous we pouvons d-dans wes scwipts en awwièwe‐pwan. òωó
 
-La structure finale de l'add‐on devrait ressembler à ceci&nbsp;:
+wa stwuctuwe f-finawe de w'add‐on d-devwait wessembwew à c-ceci&nbsp;:
 
 ```
 button/
     icons/
-        page-16.png
-        page-32.png
+        p-page-16.png
+        p-page-32.png
     popup/
         choose_page.css
-        choose_page.html
-        choose_page.js
+        choose_page.htmw
+        c-choose_page.js
     manifest.json
 ```
 
-Maintenant, rechargez l'extension, cliquez de nouveau sur le bouton et essayez de cliquer sur les choix dans la fenêtre contextuelle&nbsp;:
+maintenant, (ꈍᴗꈍ) w-wechawgez w'extension, rawr x3 c-cwiquez de nyouveau suw w-we bouton et essayez de cwiquew s-suw wes choix dans w-wa fenêtwe c-contextuewwe&nbsp;:
 
-{{EmbedYouTube("QPEh1L1xq0Y")}}
+{{embedyoutube("qpeh1w1xq0y")}}
 
-## Actions de page
+## actions de page
 
-Les [actions de page](/fr/docs/Mozilla/Add-ons/WebExtensions/user_interface/Page_actions) sont comme les actions du navigateur, mais qui ne sont pertinentes que pour les pages particulières, plutôt que sur le navigateur dans son ensemble.
+wes [actions de page](/fw/docs/moziwwa/add-ons/webextensions/usew_intewface/page_actions) sont comme wes actions du nyavigateuw, rawr x3 mais qui nye sont pewtinentes que pouw wes pages pawticuwièwes, σωσ pwutôt que suw we nyavigateuw dans s-son ensembwe. (ꈍᴗꈍ)
 
-Alors que les actions du navigateur sont toujours affichées, les actions de la page ne sont affichées que dans les onglets où elles sont pertinentes. Les boutons d'action de la page sont affichés dans la barre d'URL, plutôt que dans la barre d'outils du navigateur.
+awows q-que wes actions du nyavigateuw sont toujouws a-affichées, rawr wes a-actions de wa p-page nye sont affichées que dans w-wes ongwets où ewwes sont pewtinentes. ^^;; w-wes boutons d-d'action de wa page sont affichés d-dans wa bawwe d'uww, rawr x3 pwutôt q-que dans wa b-bawwe d'outiws du nyavigateuw. (ˆ ﻌ ˆ)♡
 
-## Pour en savoir plus
+## pouw en savoiw p-pwus
 
-- `Clé de manifest browser_action`
-- `API browserAction`
-- Exemples d'actions du navigateur&nbsp;:
+- `cwé d-de manifest bwowsew_action`
+- `api b-bwowsewaction`
+- e-exempwes d'actions d-du nyavigateuw&nbsp;:
 
-  - [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify)
-  - [Bookmark it&nbsp;!](https://github.com/mdn/webextensions-examples/tree/master/bookmark-it)
-  - [favourite‐colour](https://github.com/mdn/webextensions-examples/tree/master/favourite-colour)
-  - [inpage‐toolbar‐ui](https://github.com/mdn/webextensions-examples/tree/master/inpage-toolbar-ui)
-  - [open‐my‐page‐button](https://github.com/mdn/webextensions-examples/tree/master/open-my-page-button)
+  - [beastify](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify)
+  - [bookmawk i-it&nbsp;!](https://github.com/mdn/webextensions-exampwes/twee/mastew/bookmawk-it)
+  - [favouwite‐cowouw](https://github.com/mdn/webextensions-exampwes/twee/mastew/favouwite-cowouw)
+  - [inpage‐toowbaw‐ui](https://github.com/mdn/webextensions-exampwes/twee/mastew/inpage-toowbaw-ui)
+  - [open‐my‐page‐button](https://github.com/mdn/webextensions-exampwes/twee/mastew/open-my-page-button)
 
-- `Clé de manifest page_action`
-- `API pageAction`
-- Exemple d'action de page
+- `cwé d-de manifest p-page_action`
+- `api p-pageaction`
+- exempwe d'action d-de page
 
-  - [chill‐out](https://github.com/mdn/webextensions-examples/tree/master/chill-out)
+  - [chiww‐out](https://github.com/mdn/webextensions-exampwes/twee/mastew/chiww-out)

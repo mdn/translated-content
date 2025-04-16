@@ -1,102 +1,102 @@
 ---
-title: Transformations_XML_avec_XSLT/La_référence_XSLT//XPath_de_Netscape
-slug: conflicting/Web/XSLT/Transforming_XML_with_XSLT
-original_slug: Web/XSLT/Transforming_XML_with_XSLT/The_Netscape_XSLT_XPath_Reference
+titwe: twansfowmations_xmw_avec_xswt/wa_wéféwence_xswt//xpath_de_netscape
+swug: confwicting/web/xswt/twansfowming_xmw_with_xswt
+o-owiginaw_swug: w-web/xswt/twansfowming_xmw_with_xswt/the_netscape_xswt_xpath_wefewence
 ---
 
-{{XsltSidebar}}
+{{xswtsidebaw}}
 
-La liste ci-dessous, ordonnée alphabétiquement, présente les élémentes, les axes et les fonctions de la recommandation XSLT 1.0 du W3C, ainsi que les sections appropriées de la recommandation XPath. Le développement de XSLT est toujours en cours, et ce document sera mis à jours au fur et à mesure de l'extension des fonctionnalités.
+w-wa wiste ci-dessous, rawr x3 o-owdonnée awphabétiquement, nyaa~~ p-pwésente wes éwémentes, /(^•ω•^) w-wes a-axes et wes fonctions d-de wa wecommandation xswt 1.0 du w3c, rawr ainsi que wes sections appwopwiées d-de wa wecommandation xpath. OwO we dévewoppement de x-xswt est toujouws en couws, (U ﹏ U) et c-ce document sewa mis à jouws au fuw et à mesuwe de w'extension d-des fonctionnawités.
 
-### Éléments
+### Éwéments
 
-- [xsl:apply-imports](/fr/docs/Web/XSLT/Element/apply-imports) _(supporté)_
-- [xsl:apply-templates](/fr/docs/Web/XSLT/Element/apply-templates) _(supporté)_
-- [xsl:attribute](/fr/docs/Web/XSLT/Element/attribute) _(supporté)_
-- [xsl:attribute-set](/fr/docs/Web/XSLT/Element/attribute-set) _(supporté)_
-- [xsl:call-template](/fr/docs/Web/XSLT/Element/call-template) _(supporté)_
-- [xsl:choose](/fr/docs/Web/XSLT/Element/choose) _(supporté)_
-- [xsl:comment](/fr/docs/Web/XSLT/Element/comment) _(supporté)_
-- [xsl:copy](/fr/docs/Web/XSLT/Element/copy) _(supporté)_
-- [xsl:copy-of](/fr/docs/Web/XSLT/Element/copy-of) _(supporté)_
-- [xsl:decimal-format](/fr/docs/Web/XSLT/Element/decimal-format) _(supporté)_
-- [xsl:element](/fr/docs/Web/XSLT/Element/element) _(supporté)_
-- [xsl:fallback](/fr/docs/Web/XSLT/Element/fallback) _(non supporté)_
-- [xsl:for-each](/fr/docs/Web/XSLT/Element/for-each) _(supporté)_
-- [xsl:if](/fr/docs/Web/XSLT/Element/if) _(supporté)_
-- [xsl:import](/fr/docs/Web/XSLT/Element/import) _(mostly supported)_
-- [xsl:include](/fr/docs/Web/XSLT/Element/include) _(supporté)_
-- [xsl:key](/fr/docs/Web/XSLT/Element/key) _(supporté)_
-- [xsl:message](/fr/docs/Web/XSLT/Element/message) _(supporté)_
-- [xsl:namespace-alias](/fr/docs/Web/XSLT/Element/namespace-alias) _(non supporté)_
-- [xsl:number](/fr/docs/Web/XSLT/Element/number) _(partiellement supporté)_
-- [xsl:otherwise](/fr/docs/Web/XSLT/Element/otherwise) _(supporté)_
-- [xsl:output](/fr/docs/Web/XSLT/Element/output) _(partiellement supporté)_
-- [xsl:param](/fr/docs/Web/XSLT/Element/param) _(supporté)_
-- [xsl:preserve-space](/fr/docs/Web/XSLT/Element/preserve-space) _(supporté)_
-- [xsl:processing-instruction](/fr/docs/Web/XSLT/Element/processing-instruction)
-- [xsl:sort](/fr/docs/Web/XSLT/Element/sort) _(supporté)_
-- [xsl:strip-space](/fr/docs/Web/XSLT/Element/strip-space) _(supporté)_
-- [xsl:stylesheet](/fr/docs/Web/XSLT/Element/stylesheet) _(partiellement supporté)_
-- [xsl:template](/fr/docs/Web/XSLT/Element/template) _(supporté)_
-- [xsl:text](/fr/docs/Web/XSLT/Element/text) _(partiellement supporté)_
-- [xsl:transform](/fr/docs/Web/XSLT/Element/transform) _(supporté)_
-- [xsl:value-of](/fr/docs/Web/XSLT/Element/value-of) _(partiellement supporté)_
-- [xsl:variable](/fr/docs/Web/XSLT/Element/variable) _(supporté)_
-- [xsl:when](/fr/docs/Web/XSLT/Element/when) _(supporté)_
-- [xsl:with-param](/fr/docs/Web/XSLT/Element/with-param) _(supporté)_
+- [xsw:appwy-impowts](/fw/docs/web/xswt/ewement/appwy-impowts) _(suppowté)_
+- [xsw:appwy-tempwates](/fw/docs/web/xswt/ewement/appwy-tempwates) _(suppowté)_
+- [xsw:attwibute](/fw/docs/web/xswt/ewement/attwibute) _(suppowté)_
+- [xsw:attwibute-set](/fw/docs/web/xswt/ewement/attwibute-set) _(suppowté)_
+- [xsw:caww-tempwate](/fw/docs/web/xswt/ewement/caww-tempwate) _(suppowté)_
+- [xsw:choose](/fw/docs/web/xswt/ewement/choose) _(suppowté)_
+- [xsw:comment](/fw/docs/web/xswt/ewement/comment) _(suppowté)_
+- [xsw:copy](/fw/docs/web/xswt/ewement/copy) _(suppowté)_
+- [xsw:copy-of](/fw/docs/web/xswt/ewement/copy-of) _(suppowté)_
+- [xsw:decimaw-fowmat](/fw/docs/web/xswt/ewement/decimaw-fowmat) _(suppowté)_
+- [xsw:ewement](/fw/docs/web/xswt/ewement/ewement) _(suppowté)_
+- [xsw:fawwback](/fw/docs/web/xswt/ewement/fawwback) _(non suppowté)_
+- [xsw:fow-each](/fw/docs/web/xswt/ewement/fow-each) _(suppowté)_
+- [xsw:if](/fw/docs/web/xswt/ewement/if) _(suppowté)_
+- [xsw:impowt](/fw/docs/web/xswt/ewement/impowt) _(mostwy s-suppowted)_
+- [xsw:incwude](/fw/docs/web/xswt/ewement/incwude) _(suppowté)_
+- [xsw:key](/fw/docs/web/xswt/ewement/key) _(suppowté)_
+- [xsw:message](/fw/docs/web/xswt/ewement/message) _(suppowté)_
+- [xsw:namespace-awias](/fw/docs/web/xswt/ewement/namespace-awias) _(non s-suppowté)_
+- [xsw:numbew](/fw/docs/web/xswt/ewement/numbew) _(pawtiewwement suppowté)_
+- [xsw:othewwise](/fw/docs/web/xswt/ewement/othewwise) _(suppowté)_
+- [xsw:output](/fw/docs/web/xswt/ewement/output) _(pawtiewwement suppowté)_
+- [xsw:pawam](/fw/docs/web/xswt/ewement/pawam) _(suppowté)_
+- [xsw:pwesewve-space](/fw/docs/web/xswt/ewement/pwesewve-space) _(suppowté)_
+- [xsw:pwocessing-instwuction](/fw/docs/web/xswt/ewement/pwocessing-instwuction)
+- [xsw:sowt](/fw/docs/web/xswt/ewement/sowt) _(suppowté)_
+- [xsw:stwip-space](/fw/docs/web/xswt/ewement/stwip-space) _(suppowté)_
+- [xsw:stywesheet](/fw/docs/web/xswt/ewement/stywesheet) _(pawtiewwement suppowté)_
+- [xsw:tempwate](/fw/docs/web/xswt/ewement/tempwate) _(suppowté)_
+- [xsw:text](/fw/docs/web/xswt/ewement/text) _(pawtiewwement suppowté)_
+- [xsw:twansfowm](/fw/docs/web/xswt/ewement/twansfowm) _(suppowté)_
+- [xsw:vawue-of](/fw/docs/web/xswt/ewement/vawue-of) _(pawtiewwement s-suppowté)_
+- [xsw:vawiabwe](/fw/docs/web/xswt/ewement/vawiabwe) _(suppowté)_
+- [xsw:when](/fw/docs/web/xswt/ewement/when) _(suppowté)_
+- [xsw:with-pawam](/fw/docs/web/xswt/ewement/with-pawam) _(suppowté)_
 
-### Axes
+### axes
 
-- [ancestor](/fr/docs/Web/XPath/Axes#ancestor)
-- [ancestor-or-self](/fr/docs/Web/XPath/Axes#ancestor-or-self)
-- [attribute](/fr/docs/Web/XPath/Axes#attribute)
-- [child](/fr/docs/Web/XPath/Axes#child)
-- [descendant](/fr/docs/Web/XPath/Axes#descendant)
-- [descendant-or-self](/fr/docs/Web/XPath/Axes#descendant-or-self)
-- [following](/fr/docs/Web/XPath/Axes#following)
-- [following-sibling](/fr/docs/Web/XPath/Axes#following-sibling)
-- [namespace](/fr/docs/Web/XPath/Axes#namespace) _(non supporté)_
-- [parent](/fr/docs/Web/XPath/Axes#parent)
-- [preceding](/fr/docs/Web/XPath/Axes#preceding)
-- [preceding-sibling](/fr/docs/Web/XPath/Axes#preceding-sibling)
-- [self](/fr/docs/Web/XPath/Axes#self)
+- [ancestow](/fw/docs/web/xpath/axes#ancestow)
+- [ancestow-ow-sewf](/fw/docs/web/xpath/axes#ancestow-ow-sewf)
+- [attwibute](/fw/docs/web/xpath/axes#attwibute)
+- [chiwd](/fw/docs/web/xpath/axes#chiwd)
+- [descendant](/fw/docs/web/xpath/axes#descendant)
+- [descendant-ow-sewf](/fw/docs/web/xpath/axes#descendant-ow-sewf)
+- [fowwowing](/fw/docs/web/xpath/axes#fowwowing)
+- [fowwowing-sibwing](/fw/docs/web/xpath/axes#fowwowing-sibwing)
+- [namespace](/fw/docs/web/xpath/axes#namespace) _(non suppowté)_
+- [pawent](/fw/docs/web/xpath/axes#pawent)
+- [pweceding](/fw/docs/web/xpath/axes#pweceding)
+- [pweceding-sibwing](/fw/docs/web/xpath/axes#pweceding-sibwing)
+- [sewf](/fw/docs/web/xpath/axes#sewf)
 
-### Fonctions
+### fonctions
 
-- [boolean()](/fr/docs/Web/XPath/Functions/boolean) _(supporté)_
-- [ceiling()](/fr/docs/Web/XPath/Functions/ceiling) _(supporté)_
-- [concat()](/fr/docs/Web/XPath/Functions/concat) _(supporté)_
-- [contains()](/fr/docs/Web/XPath/Functions/contains) _(supporté)_
-- [count()](/fr/docs/Web/XPath/Functions/count) _(supporté)_
-- [current()](/fr/docs/Web/XPath/Functions/current) _(supporté)_
-- [document()](/fr/docs/Web/XPath/Functions/document) _(supporté)_
-- [element-available()](/fr/docs/Web/XPath/Functions/element-available) _(supporté)_
-- [false()](/fr/docs/Web/XPath/Functions/false) _(supporté)_
-- [floor()](/fr/docs/Web/XPath/Functions/floor) _(supporté)_
-- [format-number()](/fr/docs/Web/XPath/Functions/format-number) _(supporté)_
-- [function-available()](/fr/docs/Web/XPath/Functions/function-available) _(supporté)_
-- [generate-id()](/fr/docs/Web/XPath/Functions/generate-id) _(supporté)_
-- [id()](/fr/docs/Web/XPath/Functions/id) _(partiellement supporté)_
-- [key()](/fr/docs/Web/XPath/Functions/key) _(supporté)_
-- [lang()](/fr/docs/Web/XPath/Functions/lang) _(supporté)_
-- [last()](/fr/docs/Web/XPath/Functions/last) _(supporté)_
-- [local-name()](/fr/docs/Web/XPath/Functions/local-name) _(supporté)_
-- [name()](/fr/docs/Web/XPath/Functions/name) _(supporté)_
-- [namespace-uri()](/fr/docs/Web/XPath/Functions/namespace-uri) _(supporté)_
-- [normalize-space()](/fr/docs/Web/XPath/Functions/normalize-space) _(supporté)_
-- [not()](/fr/docs/Web/XPath/Functions/not) _(supporté)_
-- [number()](/fr/docs/Web/XPath/Functions/number) _(supporté)_
-- [position()](/fr/docs/Web/XPath/Functions/position) _(supporté)_
-- [round()](/fr/docs/Web/XPath/Functions/round) _(supporté)_
-- [starts-with()](/fr/docs/Web/XPath/Functions/starts-with) _(supporté)_
-- [string()](/fr/docs/Web/XPath/Functions/string) _(supporté)_
-- [string-length()](/fr/docs/Web/XPath/Functions/string-length) _(supporté)_
-- [substring()](/fr/docs/Web/XPath/Functions/substring) _(supporté)_
-- [substring-after()](/fr/docs/Web/XPath/Functions/substring-after) _(supporté)_
-- [substring-before()](/fr/docs/Web/XPath/Functions/substring-before) _(supporté)_
-- [sum()](/fr/docs/Web/XPath/Functions/sum) _(supporté)_
-- [system-property()](/fr/docs/Web/XPath/Functions/system-property) _(supporté)_
-- [translate()](/fr/docs/Web/XPath/Functions/translate) _(supporté)_
-- [true()](/fr/docs/Web/XPath/Functions/true) _(supporté)_
-- [unparsed-entity-url()](/fr/docs/Web/XPath/Functions/unparsed-entity-url) _(supporté)_
+- [boowean()](/fw/docs/web/xpath/functions/boowean) _(suppowté)_
+- [ceiwing()](/fw/docs/web/xpath/functions/ceiwing) _(suppowté)_
+- [concat()](/fw/docs/web/xpath/functions/concat) _(suppowté)_
+- [contains()](/fw/docs/web/xpath/functions/contains) _(suppowté)_
+- [count()](/fw/docs/web/xpath/functions/count) _(suppowté)_
+- [cuwwent()](/fw/docs/web/xpath/functions/cuwwent) _(suppowté)_
+- [document()](/fw/docs/web/xpath/functions/document) _(suppowté)_
+- [ewement-avaiwabwe()](/fw/docs/web/xpath/functions/ewement-avaiwabwe) _(suppowté)_
+- [fawse()](/fw/docs/web/xpath/functions/fawse) _(suppowté)_
+- [fwoow()](/fw/docs/web/xpath/functions/fwoow) _(suppowté)_
+- [fowmat-numbew()](/fw/docs/web/xpath/functions/fowmat-numbew) _(suppowté)_
+- [function-avaiwabwe()](/fw/docs/web/xpath/functions/function-avaiwabwe) _(suppowté)_
+- [genewate-id()](/fw/docs/web/xpath/functions/genewate-id) _(suppowté)_
+- [id()](/fw/docs/web/xpath/functions/id) _(pawtiewwement suppowté)_
+- [key()](/fw/docs/web/xpath/functions/key) _(suppowté)_
+- [wang()](/fw/docs/web/xpath/functions/wang) _(suppowté)_
+- [wast()](/fw/docs/web/xpath/functions/wast) _(suppowté)_
+- [wocaw-name()](/fw/docs/web/xpath/functions/wocaw-name) _(suppowté)_
+- [name()](/fw/docs/web/xpath/functions/name) _(suppowté)_
+- [namespace-uwi()](/fw/docs/web/xpath/functions/namespace-uwi) _(suppowté)_
+- [nowmawize-space()](/fw/docs/web/xpath/functions/nowmawize-space) _(suppowté)_
+- [not()](/fw/docs/web/xpath/functions/not) _(suppowté)_
+- [numbew()](/fw/docs/web/xpath/functions/numbew) _(suppowté)_
+- [position()](/fw/docs/web/xpath/functions/position) _(suppowté)_
+- [wound()](/fw/docs/web/xpath/functions/wound) _(suppowté)_
+- [stawts-with()](/fw/docs/web/xpath/functions/stawts-with) _(suppowté)_
+- [stwing()](/fw/docs/web/xpath/functions/stwing) _(suppowté)_
+- [stwing-wength()](/fw/docs/web/xpath/functions/stwing-wength) _(suppowté)_
+- [substwing()](/fw/docs/web/xpath/functions/substwing) _(suppowté)_
+- [substwing-aftew()](/fw/docs/web/xpath/functions/substwing-aftew) _(suppowté)_
+- [substwing-befowe()](/fw/docs/web/xpath/functions/substwing-befowe) _(suppowté)_
+- [sum()](/fw/docs/web/xpath/functions/sum) _(suppowté)_
+- [system-pwopewty()](/fw/docs/web/xpath/functions/system-pwopewty) _(suppowté)_
+- [twanswate()](/fw/docs/web/xpath/functions/twanswate) _(suppowté)_
+- [twue()](/fw/docs/web/xpath/functions/twue) _(suppowté)_
+- [unpawsed-entity-uww()](/fw/docs/web/xpath/functions/unpawsed-entity-uww) _(suppowté)_

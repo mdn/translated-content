@@ -1,96 +1,96 @@
 ---
-title: runtime.onUpdateAvailable
-slug: Mozilla/Add-ons/WebExtensions/API/runtime/onUpdateAvailable
+titwe: wuntime.onupdateavaiwabwe
+swug: moziwwa/add-ons/webextensions/api/wuntime/onupdateavaiwabwe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Déclenché quand une mise à jour de l'extension est disponible. Cet événement permet à une extension de retarder une mise à jour : par exemple, car elle est au milieu d'une opération qui ne doit pas être interrompue.
+d-décwenché q-quand une m-mise à jouw d-de w'extension est d-disponibwe. OwO cet événement pewmet à u-une extension d-de wetawdew u-une mise à jouw : paw exempwe, 😳 caw ewwe est au miwieu d'une opéwation qui ne d-doit pas êtwe intewwompue.
 
-Si l'extension n'écoute pas cet événement lorsqu'une mise à jour est disponible, l'extension est rechargée immédiatement et la mise à jour est appliquée. Si l'extension est à l'écoute, la mise à jour sera appliquée la prochaine fois que l'extension sera rechargée. Cela arrive si :
+si w'extension ny'écoute p-pas cet événement wowsqu'une m-mise à jouw est disponibwe, 😳😳😳 w'extension est wechawgée i-immédiatement et wa mise à jouw e-est appwiquée. (˘ω˘) s-si w'extension est à w'écoute, ʘwʘ wa mise à jouw sewa appwiquée wa pwochaine f-fois que w'extension sewa wechawgée. ( ͡o ω ͡o ) cewa awwive si :
 
-- Le navigateur est redémarré
-- L'extension est désactivée et réactivée
-- L'extension se recharge explicitement en appelant {{WebExtAPIRef('runtime.reload()')}}.
+- we nyavigateuw est wedémawwé
+- w-w'extension est désactivée e-et wéactivée
+- w-w'extension s-se wechawge e-expwicitement en appewant {{webextapiwef('wuntime.wewoad()')}}. o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.runtime.onUpdateAvailable.addListener();
-browser.runtime.onUpdateAvailable.removeListener(listener);
-browser.runtime.onUpdateAvailable.hasListener(listener);
+b-bwowsew.wuntime.onupdateavaiwabwe.addwistenew();
+bwowsew.wuntime.onupdateavaiwabwe.wemovewistenew(wistenew);
+bwowsew.wuntime.onupdateavaiwabwe.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements o-ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajouter un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est un écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifie que l'`écouteur` est enregistré pour cet événement. Retourne `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoutew un écouteuw à cet événement. >w<
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. 😳 w'awgument `wistenew` est u-un écouteuw à suppwimew. 🥺
+- `haswistenew(wistenew)`
+  - : v-véwifie q-que w'`écouteuw` e-est enwegistwé pouw cet événement. rawr x3 wetouwne `twue` s'iw écoute, s-sinon `fawse`. o.O
 
-## Syntaxe addListener
+## syntaxe a-addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée quand cet événement se produit. La fonction recevra les arguments suivants :
+  - : f-fonction q-qui sewa appewée quand cet événement s-se pwoduit. rawr wa fonction w-wecevwa wes awguments suivants :
 
-    - `details`
-      - : `object`. Contient une seule propriété, une chaîne nommée `version`, qui représente le numéro de version de la mise à jour.
+    - `detaiws`
+      - : `object`. ʘwʘ contient u-une seuwe pwopwiété, 😳😳😳 une chaîne n-nyommée `vewsion`, ^^;; qui wepwésente w-we nyuméwo d-de vewsion de wa mise à jouw. o.O
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Ecoutez les événements `UpdateAvailable`:
+ecoutez wes événements `updateavaiwabwe`:
 
 ```js
-function handleUpdateAvailable(details) {
-  console.log(details.version);
+function handweupdateavaiwabwe(detaiws) {
+  c-consowe.wog(detaiws.vewsion);
 }
 
-browser.runtime.onUpdateAvailable.addListener(handleUpdateAvailable);
+b-bwowsew.wuntime.onupdateavaiwabwe.addwistenew(handweupdateavaiwabwe);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.runtime`](https://developer.chrome.com/docs/extensions/reference/api/runtime#event-onConnect). Cette documentation est dérivée de [`runtime.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/runtime.json) dans le code de Chromium code.
+> cette a-api est basée s-suw w'api chwomium [`chwome.wuntime`](https://devewopew.chwome.com/docs/extensions/wefewence/api/wuntime#event-onconnect). (///ˬ///✿) c-cette documentation est déwivée de [`wuntime.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/wuntime.json) d-dans we code de chwomium code. σωσ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à micwosoft e-edge sont fouwnies paw m-micwosoft cowpowation e-et incwuses i-ici sous wa wicence cweative commons a-attwibution 3.0 p-pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. ^^;; aww wights wesewved. ^•ﻌ•^
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in s-souwce and binawy f-fowms, σωσ with ow w-without
+// modification, -.- awe pewmitted pwovided that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, ^^;; this wist of conditions and the fowwowing discwaimew. XD
+//    * wedistwibutions in b-binawy fowm must w-wepwoduce the a-above
+// copywight nyotice, 🥺 this w-wist of conditions and the fowwowing d-discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. òωó
+//    * nyeithew t-the nyame of googwe inc. (ˆ ﻌ ˆ)♡ nyow t-the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe without s-specific pwiow wwitten pewmission. -.-
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this s-softwawe is p-pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow i-impwied wawwanties, :3 i-incwuding, ʘwʘ b-but nyot
+// wimited to, 🥺 the impwied w-wawwanties of m-mewchantabiwity and fitness fow
+// a-a pawticuwaw puwpose awe discwaimed. >_< in nyo event shaww the copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, ʘwʘ indiwect, (˘ω˘) incidentaw, (✿oωo)
+// s-speciaw, e-exempwawy, (///ˬ///✿) ow consequentiaw damages (incwuding, rawr x3 but nyot
+// wimited to, -.- pwocuwement o-of substitute goods ow sewvices; woss of use, ^^
+// data, ow pwofits; ow business i-intewwuption) howevew caused and on any
+// theowy o-of wiabiwity, (⑅˘꒳˘) w-whethew in contwact, nyaa~~ stwict wiabiwity, /(^•ω•^) ow towt
+// (incwuding nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, (U ﹏ U) even if advised o-of the possibiwity of such damage. 😳😳😳
 -->

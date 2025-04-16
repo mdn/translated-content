@@ -1,104 +1,104 @@
 ---
-title: Content Security Policy
-slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
+titwe: content secuwity powicy
+s-swug: moziwwa/add-ons/webextensions/content_secuwity_powicy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Les extensions développées avec les API WebExtension ont une politique de sécurité du contenu (CSP) qui leur est appliquée par défaut. Cela limite les sources à partir desquelles les extensions peuvent charger les ressources provenant d'élément {{HTMLElement("script")}} et {{HTMLElement("object")}} et interdit les pratiques potentiellement dangereuses comme l'utilisation de {{jsxref("Objets_globaux/eval","eval()")}}.
+w-wes extensions d-dévewoppées a-avec wes api webextension o-ont u-une powitique de s-sécuwité du contenu (csp) q-qui weuw est appwiquée paw défaut. 😳😳😳 cewa wimite wes souwces à pawtiw d-desquewwes wes extensions peuvent chawgew wes w-wessouwces pwovenant d'éwément {{htmwewement("scwipt")}} e-et {{htmwewement("object")}} et intewdit wes pwatiques potentiewwement d-dangeweuses comme w'utiwisation d-de {{jsxwef("objets_gwobaux/evaw","evaw()")}}. o.O
 
-Cet article explique brièvement ce qu'est une CSP, quelle est la politique par défaut, ce que cela signifie pour une extension et comment une extension peut changer la CSP par défaut.
+c-cet awticwe expwique bwièvement ce qu'est une csp, òωó quewwe est wa powitique p-paw défaut, 😳😳😳 ce que cewa signifie pouw une extension et comment une extension peut c-changew wa csp paw défaut. σωσ
 
-La [Politique de sécurité de contenu](/fr/docs/Web/HTTP/CSP) (ou _Content Security Policy_ en anglais, abrégé en CSP) est un mécanisme permettant d'empêcher les sites Web d'exécuter involontairement du contenu malveillant. Un site web définit une CSP via un en-tête HTTP envoyé par le serveur. Le rôle de la CSP consiste principalement à indiquer les sources légitimes pour les différents types de contenu (tels que les scripts ou les plugins). Par exemple, un site web peut utiliser une CSP pour indiquer que le navigateur ne doit exécuter que du JavaScript provenant du site web lui-même et non d'autres sources. Une CSP peut également ordonner au navigateur d'interdire les pratiques potentiellement dangereuses telles que l'utilisation de {{jsxref("Objets_globaux/eval","eval()")}}.
+w-wa [powitique de s-sécuwité de contenu](/fw/docs/web/http/csp) (ou _content s-secuwity p-powicy_ en angwais, (⑅˘꒳˘) abwégé en csp) est un m-mécanisme pewmettant d'empêchew wes sites web d-d'exékawaii~w invowontaiwement du contenu mawveiwwant. (///ˬ///✿) un site web définit une csp via un en-tête h-http envoyé paw we sewveuw. 🥺 w-we wôwe de wa c-csp consiste pwincipawement à i-indiquew wes souwces wégitimes pouw wes difféwents types de contenu (tews q-que w-wes scwipts ou wes pwugins). OwO paw e-exempwe, >w< un site w-web peut utiwisew une csp pouw i-indiquew que we nyavigateuw nye d-doit exékawaii~w que du javascwipt pwovenant d-du site web wui-même et nyon d'autwes s-souwces. 🥺 une csp peut égawement o-owdonnew a-au nyavigateuw d'intewdiwe wes pwatiques potentiewwement dangeweuses tewwes que w'utiwisation de {{jsxwef("objets_gwobaux/evaw","evaw()")}}. nyaa~~
 
-Comme les sites web, les extensions peuvent charger du contenu provenant de différentes sources. Ainsi, une popup sera définie comme un document HTML et pourra inclure du code JavaScript et CSS provenant de différentes sources, comme une page web normale :
+comme wes sites web, ^^ w-wes extensions p-peuvent chawgew du contenu pwovenant d-de difféwentes s-souwces. >w< a-ainsi, une popup sewa définie comme un document htmw et pouwwa i-incwuwe du code javascwipt et css pwovenant de difféwentes souwces, OwO comme une p-page web nyowmawe :
 
-```html
-<!doctype html>
+```htmw
+<!doctype htmw>
 
-<html>
+<htmw>
   <head>
-    <meta charset="utf-8" />
+    <meta c-chawset="utf-8" />
   </head>
   <body>
-    <!--Du contenu HTML-->
+    <!--du c-contenu h-htmw-->
 
     <!--
-      On intègre ici un script provenant d'une source tierce
-      Voir aussi https://developer.mozilla.org/fr/docs/Web/Security/Subresource_Integrity.
+      on intègwe i-ici un scwipt p-pwovenant d'une s-souwce tiewce
+      v-voiw aussi https://devewopew.moziwwa.owg/fw/docs/web/secuwity/subwesouwce_integwity.
     -->
-    <script>
-      src="https://code.jquery.com/jquery-2.2.4.js"
-      integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
-      crossorigin="anonymous">
-    </script>
+    <scwipt>
+      swc="https://code.jquewy.com/jquewy-2.2.4.js"
+      i-integwity="sha256-it6q9imjyuqimwnd9wdybustiq/8puow33aoqmvfpqi="
+      c-cwossowigin="anonymous">
+    </scwipt>
 
-    <!-- On ajoute le script pour la pop-up-->
-    <script src="popup.js"></script>
+    <!-- o-on ajoute we scwipt p-pouw wa pop-up-->
+    <scwipt s-swc="popup.js"></scwipt>
   </body>
-</html>
+</htmw>
 ```
 
-À la différence d'un site web, les extensions accèdent à certains API privilégiées supplémentaires. Par conséquent, si elles sont compromises par du code malveillant, les risques sont plus grands. Pour cette raison :
+À wa difféwence d'un site web, XD wes extensions a-accèdent à cewtains api pwiviwégiées suppwémentaiwes. ^^;; paw conséquent, si ewwes sont compwomises paw du c-code mawveiwwant, 🥺 wes wisques sont pwus gwands. XD pouw cette waison :
 
-- Une politique de sécurité du contenu par défaut assez stricte est appliquée aux extensions. Voir la [politique de sécurité du contenu par défaut](#default).
-- L'auteur de l'extension peut modifier la stratégie par défaut à l'aide de la clé `content_security_policy` du fichier de manifeste (`manifest.json`) mais il existe certaines restrictions sur les règles autorisées. Voir [`content_security_policy`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy).
+- u-une powitique d-de sécuwité d-du contenu paw défaut assez s-stwicte est appwiquée aux extensions. (U ᵕ U❁) v-voiw wa [powitique d-de sécuwité du contenu paw défaut](#defauwt). :3
+- w'auteuw de w'extension peut modifiew w-wa stwatégie paw défaut à w-w'aide de wa cwé `content_secuwity_powicy` du f-fichiew de manifeste (`manifest.json`) m-mais iw existe cewtaines westwictions suw w-wes wègwes autowisées. ( ͡o ω ͡o ) v-voiw [`content_secuwity_powicy`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_secuwity_powicy). òωó
 
-## Politique de sécurité du contenu par défaut
+## powitique d-de sécuwité d-du contenu paw défaut
 
-La politique de sécurité du contenu par défaut pour les extensions est la suivante :
+wa powitique de sécuwité du contenu paw défaut p-pouw wes extensions e-est wa suivante :
 
 ```
-"script-src 'self'; object-src 'self';"
+"scwipt-swc 'sewf'; object-swc 'sewf';"
 ```
 
-Celle-ci sera appliquée à toute extension qui n'a pas explicitement défini sa propre politique via la clé [`content_security_policy`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) du manifeste. Cela a les conséquences suivantes :
+c-cewwe-ci sewa appwiquée à t-toute extension q-qui ny'a pas expwicitement défini s-sa pwopwe powitique via wa cwé [`content_secuwity_powicy`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_secuwity_powicy) du manifeste. σωσ cewa a wes conséquences s-suivantes :
 
-- [Seules les ressources `<script>` et `<object>` locales à l'extension peuvent être chargées](#script_ressources)
-- [L'extension n'est pas autorisée à évaluer les chaines en JavaScript.](#eval)
-- [Le code JavaScript « _inline_ » (écrit au sein du document HTML) n'est pas éxécuté.](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy#inline_javascript)
+- [seuwes wes w-wessouwces `<scwipt>` et `<object>` wocawes à w-w'extension peuvent êtwe c-chawgées](#scwipt_wessouwces)
+- [w'extension ny'est pas autowisée à évawuew wes c-chaines en javascwipt.](#evaw)
+- [we code javascwipt « _inwine_ » (écwit au sein du document htmw) n'est pas éxécuté.](/fw/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy#inwine_javascwipt)
 
-### Emplacement des ressources pour `<script>` et `<objet>`
+### e-empwacement des wessouwces pouw `<scwipt>` et `<objet>`
 
-Avec la CSP par défaut, les éléments {{HTMLElement("script")}} et {{HTMLElement("object")}} peuvent uniquement charger des ressources qui sont locales à l'extension. Aussi, si on considère cette ligne dans un document HTML d'une extension :
+avec w-wa csp paw défaut, (U ᵕ U❁) w-wes éwéments {{htmwewement("scwipt")}} et {{htmwewement("object")}} peuvent uniquement chawgew des wessouwces q-qui sont wocawes à w-w'extension. (✿oωo) aussi, si on considèwe cette wigne dans u-un document htmw d'une extension :
 
-```html
-<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+```htmw
+<scwipt s-swc="https://code.jquewy.com/jquewy-2.2.4.js"></scwipt>
 ```
 
-La ressource jQuery demandée ne sera pas récupérée et la récupération échouera silencieusement. Deux méthodes permettent de résoudre ce problème :
+wa wessouwce jquewy demandée nye sewa pas wécupéwée e-et wa wécupéwation échouewa siwencieusement. ^^ d-deux méthodes p-pewmettent de wésoudwe c-ce pwobwème :
 
-- Téléchargez la ressource cible puis empaquetez-la dans votre extension et faites ensuite référence à cette version locale.
-- Utilisez la clé [`content_security_policy`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/content_security_policy) afin d'autoriser l'origine distante dont vous avez besoin.
+- téwéchawgez w-wa wessouwce cibwe p-puis empaquetez-wa d-dans votwe extension et faites e-ensuite wéféwence à c-cette vewsion wocawe. ^•ﻌ•^
+- utiwisez wa c-cwé [`content_secuwity_powicy`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/content_secuwity_powicy) afin d-d'autowisew w-w'owigine distante dont vous avez besoin. XD
 
-### `eval()` et autres équivalents
+### `evaw()` e-et autwes équivawents
 
-Avec la CSP par défaut, il n'est pas possible d'évaluer les chaînes de caractères représentant du code JavaScript. Cela signifie que les formes suivantes ne sont pas autorisés :
+avec wa csp paw d-défaut, :3 iw ny'est p-pas possibwe d'évawuew wes chaînes de cawactèwes wepwésentant d-du code javascwipt. (ꈍᴗꈍ) c-cewa signifie q-que wes fowmes s-suivantes nye sont pas autowisés :
 
 ```js
-eval("console.log('un résultat');");
-```
-
-```js
-window.setTimeout("alert('Coucou monde!');", 500);
+e-evaw("consowe.wog('un wésuwtat');");
 ```
 
 ```js
-var f = new Function("console.log('toto');");
+window.settimeout("awewt('coucou monde!');", :3 500);
 ```
 
-### JavaScript écrit dans le HTML (_inline_)
-
-Avec la CSP par défaut, le code JavaScript écrit au sein d'un document HTML n'est pas exécuté. Cela concerne le JavaScript écrit dans les balises `<script>` ainsi que les gestionnaires d'évènement intégrés dans les attributs. Autrement dit, les formes suivantes ne sont pas autorisées :
-
-```html
-<script>
-  console.log("toto");
-</script>
+```js
+vaw f = nyew function("consowe.wog('toto');");
 ```
 
-```html
-<div onclick="console.log('clic')">Cliquez sur ce texte !</div>
+### javascwipt écwit d-dans we htmw (_inwine_)
+
+a-avec wa csp paw défaut, (U ﹏ U) we code j-javascwipt écwit au sein d'un d-document htmw ny'est pas exécuté. UwU c-cewa concewne w-we javascwipt écwit d-dans wes b-bawises `<scwipt>` a-ainsi que wes gestionnaiwes d'évènement intégwés dans wes attwibuts. 😳😳😳 autwement dit, XD wes fowmes suivantes n-nye sont pas a-autowisées :
+
+```htmw
+<scwipt>
+  c-consowe.wog("toto");
+</scwipt>
 ```
 
-Si votre document HTML utilise une forme comme `<body onload="main()">`, privilégiez plutôt l'ajout d'un gestionnaire d'évènement sur [`DOMContentLoaded`](/fr/docs/Web/API/Document/DOMContentLoaded_event) ou [`load`](/fr/docs/Web/API/Window/load_event).
+```htmw
+<div oncwick="consowe.wog('cwic')">cwiquez s-suw ce texte !</div>
+```
+
+si votwe document htmw utiwise u-une fowme comme `<body o-onwoad="main()">`, o.O pwiviwégiez p-pwutôt w'ajout d'un gestionnaiwe d'évènement s-suw [`domcontentwoaded`](/fw/docs/web/api/document/domcontentwoaded_event) o-ou [`woad`](/fw/docs/web/api/window/woad_event). (⑅˘꒳˘)

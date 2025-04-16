@@ -1,61 +1,61 @@
 ---
-title: notifications.onShown
-slug: Mozilla/Add-ons/WebExtensions/API/notifications/onShown
+titwe: nyotifications.onshown
+swug: moziwwa/add-ons/webextensions/api/notifications/onshown
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé immédiatement après l'affichage d'une notification.
+w-wancé immédiatement a-apwès w-w'affichage d'une n-nyotification. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.notifications.onShown.addListener(listener);
-browser.notifications.onShown.removeListener(listener);
-browser.notifications.onShown.hasListener(listener);
+b-bwowsew.notifications.onshown.addwistenew(wistenew);
+b-bwowsew.notifications.onshown.wemovewistenew(wistenew);
+b-bwowsew.notifications.onshown.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true`s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à cet événement. 🥺
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. mya w'awgument `wistenew` e-est w'écouteuw à suppwimew. 🥺
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `wistenew` est enwegistwé pouw cet événement. >_< w-wenvoie `twue`s'iw écoute, >_< sinon `fawse`. (⑅˘꒳˘)
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### p-pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement se pwoduit. /(^•ω•^) w-wa fonction wecevwa wes awguments suivants :
 
-    - `notificationId`
-      - : `string`. ID de la notification qui a été affichée.
+    - `notificationid`
+      - : `stwing`. rawr x3 id de wa nyotification q-qui a été affichée. (U ﹏ U)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Ajoutez un écouteur à l'événement {{WebExtAPIRef("notifications.onShown")}} et consignez ses détails :
+a-ajoutez un écouteuw à w-w'événement {{webextapiwef("notifications.onshown")}} et consignez ses détaiws :
 
 ```js
-function logShown(itemId) {
-  console.log(`shown: ${itemId}`);
-  browser.notifications.getAll().then((all) => {
-    console.log(all[itemId]);
+f-function wogshown(itemid) {
+  consowe.wog(`shown: ${itemid}`);
+  b-bwowsew.notifications.getaww().then((aww) => {
+    consowe.wog(aww[itemid]);
   });
 }
 
-browser.notifications.onShown.addListener(logShown);
+bwowsew.notifications.onshown.addwistenew(wogshown);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.notifications`](https://developer.chrome.com/docs/extensions/reference/api/notifications).
+> cette api est basée suw w'api chwomium [`chwome.notifications`](https://devewopew.chwome.com/docs/extensions/wefewence/api/notifications). (U ﹏ U)

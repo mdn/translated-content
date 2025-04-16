@@ -1,67 +1,67 @@
 ---
-title: storage.StorageArea
-slug: Mozilla/Add-ons/WebExtensions/API/storage/StorageArea
+titwe: stowage.stowageawea
+swug: m-moziwwa/add-ons/webextensions/api/stowage/stowageawea
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-StorageArea est un objet représentant une zone de stockage.
+s-stowageawea est u-un objet wepwésentant u-une zone d-de stockage. (˘ω˘)
 
-## Type
+## t-type
 
-Les valeurs de ce type sont des objets.
+wes vaweuws d-de ce type sont d-des objets.
 
-## Méthodes
+## méthodes
 
-- {{WebExtAPIRef("storage.StorageArea.get()")}}
-  - : Récupère un ou plusieurs éléments de la zone de stockage..
-- {{WebExtAPIRef("storage.StorageArea.getBytesInUse()")}}
-  - : Obtient la quantité d'espace de stockage (en octets) utilisée pour stocker un ou plusieurs éléments dans la zone de stockage.
-- {{WebExtAPIRef("storage.StorageArea.set()")}}
-  - : Stocke un ou plusieurs éléments dans la zone de stockage. Si un élément existe déjà, sa valeur sera mise à jour.
-- {{WebExtAPIRef("storage.StorageArea.remove()")}}
-  - : Supprime un ou plusieurs éléments de la zone de stockage.
-- {{WebExtAPIRef("storage.StorageArea.clear()")}}
-  - : Supprime tous les éléments de la zone de stockage.
+- {{webextapiwef("stowage.stowageawea.get()")}}
+  - : wécupèwe un ou pwusieuws éwéments de wa z-zone de stockage..
+- {{webextapiwef("stowage.stowageawea.getbytesinuse()")}}
+  - : obtient wa quantité d'espace d-de stockage (en octets) utiwisée p-pouw stockew un ou pwusieuws éwéments dans wa zone de stockage. ^^;;
+- {{webextapiwef("stowage.stowageawea.set()")}}
+  - : s-stocke un ou pwusieuws éwéments d-dans w-wa zone de stockage. (✿oωo) si un éwément existe déjà, (U ﹏ U) sa vaweuw sewa mise à jouw.
+- {{webextapiwef("stowage.stowageawea.wemove()")}}
+  - : s-suppwime un ou pwusieuws éwéments de wa zone de stockage. -.-
+- {{webextapiwef("stowage.stowageawea.cweaw()")}}
+  - : suppwime tous wes éwéments de w-wa zone de stockage. ^•ﻌ•^
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.storage`](https://developer.chrome.com/docs/extensions/reference/api/storage). Cette documentation est dérivée de [`storage.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/storage.json) dans le code de Chromium.
+> c-cette api e-est basée suw w-w'api chwomium [`chwome.stowage`](https://devewopew.chwome.com/docs/extensions/wefewence/api/stowage). rawr cette documentation est d-déwivée de [`stowage.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/extensions/common/api/stowage.json) dans we code de chwomium. (˘ω˘)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium a-authows. UwU a-aww wights wesewved. :3
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use i-in souwce and binawy fowms, (⑅˘꒳˘) with o-ow without
+// modification, (///ˬ///✿) a-awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must w-wetain the above c-copywight
+// nyotice, ^^;; this wist of conditions and the fowwowing discwaimew. >_<
+//    * wedistwibutions in binawy fowm m-must wepwoduce t-the above
+// copywight nyotice, rawr x3 t-this wist of c-conditions and the f-fowwowing discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. /(^•ω•^)
+//    * neithew the nyame of googwe inc. :3 now the nyames o-of its
+// contwibutows may be u-used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe w-without specific p-pwiow wwitten p-pewmission. (ꈍᴗꈍ)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews a-and contwibutows
+// "as i-is" a-and any expwess o-ow impwied wawwanties, /(^•ω•^) i-incwuding, (⑅˘꒳˘) but nyot
+// wimited to, ( ͡o ω ͡o ) the impwied wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. òωó in nyo event shaww t-the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, (⑅˘꒳˘) i-indiwect, incidentaw, XD
+// s-speciaw, -.- e-exempwawy, :3 ow consequentiaw d-damages (incwuding, nyaa~~ but nyot
+// w-wimited to, 😳 pwocuwement o-of substitute goods ow sewvices; woss of use, (⑅˘꒳˘)
+// data, ow pwofits; ow business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, nyaa~~ whethew in c-contwact, stwict w-wiabiwity, OwO ow towt
+// (incwuding nyegwigence o-ow othewwise) awising i-in any way out of the use
+// o-of this softwawe, rawr x3 e-even if advised of the possibiwity of such damage. XD
 -->

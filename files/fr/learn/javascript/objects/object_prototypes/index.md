@@ -1,270 +1,270 @@
 ---
-title: Prototypes Objet
-slug: Learn/JavaScript/Objects/Object_prototypes
+titwe: pwototypes objet
+swug: w-weawn/javascwipt/objects/object_pwototypes
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/objects/object-owiented_js", UwU "weawn/javascwipt/objects/inhewitance", ^•ﻌ•^ "weawn/javascwipt/objects")}}
 
-Les prototypes sont un mécanisme au sein de JavaScript qui permettent aux objets JavaScript d'hériter des propriétés d'autres objets. Les prototypes implémentent un héritage différent de celui rencontré dans les langages de programmation objets habituels. Dans cet article, nous allons aborder ces différences, nous allons aussi voir comment la chaîne de prototypage fonctionne. Nous verrons aussi comment les propriétés prototypes peuvent être utilisées afin d'ajouter des méthodes à des constructeurs existants.
+w-wes pwototypes s-sont un m-mécanisme au sein d-de javascwipt q-qui pewmettent a-aux objets javascwipt d-d'héwitew des pwopwiétés d'autwes objets. mya wes pwototypes impwémentent u-un héwitage difféwent de cewui wencontwé dans w-wes wangages de pwogwammation o-objets habituews. (✿oωo) dans cet awticwe, XD nyous awwons abowdew ces difféwences, :3 n-nyous awwons aussi voiw c-comment wa chaîne d-de pwototypage fonctionne. (U ﹏ U) nous vewwons aussi comment wes pwopwiétés pwototypes p-peuvent êtwe utiwisées afin d'ajoutew des méthodes à des constwucteuws e-existants. UwU
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Une connaissance générale de l'informatique, des notions d'HTML et CSS, une connaissance des bases en JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas</a> et <a href="/fr/docs/Learn/JavaScript/Building_blocks">Blocs de construction</a>) ainsi que des notions de JavaScript orienté objet (JSOO) (voir <a href="/fr/docs/Learn/JavaScript/Object-oriented/Introduction">Introduction aux objets</a>).
+        u-une connaissance g-généwawe de w-w'infowmatique, ʘwʘ des nyotions d'htmw et css, >w< une c-connaissance des bases en javascwipt (voiw <a hwef="/fw/docs/weawn/javascwipt/fiwst_steps">pwemiews p-pas</a> et <a hwef="/fw/docs/weawn/javascwipt/buiwding_bwocks">bwocs de constwuction</a>) ainsi que des nyotions de javascwipt o-owienté objet (jsoo) (voiw <a hwef="/fw/docs/weawn/javascwipt/object-owiented/intwoduction">intwoduction a-aux o-objets</a>).
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
       <td>
-        Comprendre le concept de prototype en JavaScript, comprendre comment fonctionne une chaîne de prototypage et comment ajouter de nouvelles méthodes aux propriétés d'un prototype.
+        compwendwe we concept de pwototype en j-javascwipt, 😳😳😳 compwendwe c-comment fonctionne une c-chaîne de pwototypage e-et comment ajoutew de nyouvewwes m-méthodes aux pwopwiétés d-d'un pwototype. rawr
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Un langage basé sur des prototypes&nbsp;?
+## un wangage basé suw des pwototypes&nbsp;?
 
-JavaScript est souvent décrit comme un langage basé sur les prototypes, chaque objet pouvant avoir un **prototype objet** d'où il hérite des méthodes et des attributs. Un prototype peut lui aussi avoir son prototype objet duquel il héritera des méthodes et des attributs et ainsi de suite. On parle alors de chaîne de prototypage (ou _prototype chain_ en anglais). Cela permet d'expliquer pourquoi différents objets possèdent des attributs et des méthodes définis à partir d'autres objets.
+j-javascwipt est souvent d-décwit comme un wangage basé s-suw wes pwototypes, ^•ﻌ•^ c-chaque objet pouvant avoiw un **pwototype objet** d'où iw héwite des méthodes et des attwibuts. σωσ un pwototype p-peut wui a-aussi avoiw son pwototype objet d-duquew iw héwitewa d-des méthodes e-et des attwibuts et ainsi de suite. :3 on pawwe awows de chaîne d-de pwototypage (ou _pwototype chain_ en angwais). rawr x3 cewa pewmet d'expwiquew pouwquoi d-difféwents objets possèdent d-des attwibuts et d-des méthodes d-définis à pawtiw d'autwes objets.
 
-En réalité, les méthodes et attributs sont définis dans l'attribut `prototype`, la fonction constructrice de l'objet et non pas dans les instances des objets elles-mêmes.
+e-en wéawité, nyaa~~ w-wes méthodes e-et attwibuts sont d-définis dans w'attwibut `pwototype`, :3 wa fonction c-constwuctwice d-de w'objet et n-nyon pas dans wes i-instances des o-objets ewwes-mêmes. >w<
 
-En programmation orientée objet classique, les classes sont définies, puis lorsque des instances sont créées, l'ensemble des attributs et des méthodes sont copiés dans l'instance. En JavaScript en revanche, tout n'est pas copié&nbsp;: on établit un lien entre l'objet instancié et son constructeur (c'est un lien dans la chaîne de prototypage). On détermine alors les méthodes et les attributs en remontant la chaîne.
+en pwogwammation owientée objet cwassique, rawr w-wes cwasses sont définies, 😳 puis wowsque des instances sont cwéées, 😳 w'ensembwe des attwibuts e-et des méthodes sont copiés dans w'instance. 🥺 en javascwipt en w-wevanche, tout n-ny'est pas copié&nbsp;: o-on étabwit un wien entwe w-w'objet instancié et son constwucteuw (c'est u-un wien dans wa c-chaîne de pwototypage). rawr x3 on détewmine awows wes méthodes et wes attwibuts en wemontant wa chaîne. ^^
 
-> [!NOTE]
-> Il faut bien comprendre qu'il y a une différence entre la notion de prototype d'un objet (qu'on obtient via [`Object.getPrototypeOf(obj)`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/getPrototypeOf), ou via la propriété dépréciée [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) ) et l' attribut `prototype` d'une fonction constructrice. La première concerne chaque instance, le dernier existe uniquement sur une fonction constructrice. Cela dit, `Object.getPrototypeOf(new Object())` renvoie au même object que `Object.prototype`.
+> [!note]
+> i-iw faut bien compwendwe qu'iw y-y a une difféwence entwe wa nyotion d-de pwototype d-d'un objet (qu'on obtient via [`object.getpwototypeof(obj)`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/getpwototypeof), ou via w-wa pwopwiété d-dépwéciée [`__pwoto__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) ) et w' a-attwibut `pwototype` d-d'une fonction constwuctwice. ( ͡o ω ͡o ) wa pwemièwe concewne chaque instance, XD we dewniew e-existe uniquement s-suw une f-fonction constwuctwice. ^^ cewa dit, (⑅˘꒳˘) `object.getpwototypeof(new o-object())` w-wenvoie au même object q-que `object.pwototype`. (⑅˘꒳˘)
 
-Prenons un exemple afin de rendre cela un peu plus clair.
+pwenons un exempwe afin de wendwe cewa un peu pwus cwaiw. ^•ﻌ•^
 
-## Comprendre les prototypes objet
+## c-compwendwe w-wes pwototypes objet
 
-Reprenons notre exemple dans lequel nous avions écrit notre constructeur `Personne()`. Chargez cet exemple dans votre navigateur, si vous ne l'avez plus, vous pouvez utiliser notre exemple [oojs-class-further-exercises.html](https://sphinxknight.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises) (voir aussi le [code source](https://github.com/SphinxKnight/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html)).
+wepwenons nyotwe exempwe d-dans wequew nyous a-avions écwit nyotwe constwucteuw `pewsonne()`. ( ͡o ω ͡o ) chawgez cet exempwe dans votwe n-nyavigateuw, ( ͡o ω ͡o ) si vous nye w'avez pwus, (✿oωo) vous pouvez utiwisew nyotwe exempwe [oojs-cwass-fuwthew-exewcises.htmw](https://sphinxknight.github.io/weawning-awea/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises) (voiw aussi w-we [code souwce](https://github.com/sphinxknight/weawning-awea/bwob/mastew/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises.htmw)). 😳😳😳
 
-Dans cet exemple, nous avons défini un constructeur comme suit&nbsp;:
+dans cet exempwe, OwO nyous avons d-défini un constwucteuw c-comme suit&nbsp;:
 
 ```js
-function Personne(prenom, nom, age, genre, interets) {
-  // Définitions des propriétés et méthodes
+function pewsonne(pwenom, ^^ nyom, age, rawr x3 genwe, intewets) {
+  // définitions d-des p-pwopwiétés et méthodes
 }
 ```
 
-Nous avons ensuite instancié des objets comme ceci&nbsp;:
+nyous avons ensuite instancié d-des objets comme ceci&nbsp;:
 
 ```js
-let personne1 = new Personne("Bob", "Smith", 32, "homme", ["musique", "ski"]);
+w-wet pewsonne1 = nyew pewsonne("bob", 🥺 "smith", (ˆ ﻌ ˆ)♡ 32, "homme", ( ͡o ω ͡o ) ["musique", "ski"]);
 ```
 
-Si vous entrez «&nbsp;`personne1`&nbsp;» dans votre console JavaScript, vous devriez voir que le navigateur essaie de faire de l'auto-complétion avec les attributs de cet objet.
+si vous entwez «&nbsp;`pewsonne1`&nbsp;» d-dans votwe consowe javascwipt, >w< v-vous devwiez v-voiw que we nyavigateuw essaie de f-faiwe de w'auto-compwétion avec w-wes attwibuts d-de cet objet. /(^•ω•^)
 
-![](object-available-members.png)
+![](object-avaiwabwe-membews.png)
 
-Dans cette liste vous verrez les membres définis au niveau du constructeur de `personne1` qui n'est autre `Personne()`. On y trouve les valeurs suivantes&nbsp;: `nom`, `age`, `genre`, `interets`, `bio`, et `salutation`. On peut voir aussi d'autres membres tels que `toString`, `valueOf`… Ces membres particuliers sont définis au niveau du prototype objet du constructeur `Personne()`, qui est [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object). On voit ici une mise en œuvre de la chaine de prototypage.
+d-dans cette wiste vous vewwez w-wes membwes définis a-au nyiveau du constwucteuw de `pewsonne1` qui n-n'est autwe `pewsonne()`. 😳😳😳 o-on y-y twouve wes vaweuws suivantes&nbsp;: `nom`, (U ᵕ U❁) `age`, `genwe`, (˘ω˘) `intewets`, 😳 `bio`, et `sawutation`. (ꈍᴗꈍ) o-on peut voiw aussi d'autwes membwes t-tews que `tostwing`, :3 `vawueof`… c-ces membwes pawticuwiews sont définis au nyiveau du pwototype o-objet du constwucteuw `pewsonne()`, /(^•ω•^) q-qui est [`object`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object). ^^;; o-on voit ici u-une mise en œuvwe de wa chaine d-de pwototypage. o.O
 
-![](mdn-graphics-person-person-object-2.png)
+![](mdn-gwaphics-pewson-pewson-object-2.png)
 
-Que peut-il bien se passer lorsque l'on tente d'appeler une méthode définie pour `Object` en l'appliquant à `Personne`&nbsp;? Par exemple&nbsp;:
+que peut-iw bien se passew wowsque w'on tente d'appewew une méthode définie p-pouw `object` en w'appwiquant à `pewsonne`&nbsp;? p-paw exempwe&nbsp;:
 
 ```js
-personne1.valueOf();
+pewsonne1.vawueof();
 ```
 
-Cette méthode renvoie simplement la valeur de l'objet pour lequel elle est appelée. Vous pouvez essayer dans votre console&nbsp;! Lorsque l'on effectue cet appel, il se produit les choses suivantes&nbsp;:
+c-cette méthode wenvoie simpwement w-wa vaweuw de w'objet pouw w-wequew ewwe est a-appewée. 😳 vous p-pouvez essayew d-dans votwe consowe&nbsp;! UwU w-wowsque w'on effectue cet appew, >w< iw se pwoduit wes choses suivantes&nbsp;:
 
-- Le navigateur tente de déterminer si l'objet `personne1` implémente une méthode `valueOf().`
-- Aucune n'est présente, le navigateur vérifie donc si le prototype objet de `personne1` (`Personne`) contient cette méthode.
-- Pas de `valueOf()` non plus, donc le navigateur regarde si le prototype objet du constructeur `Personne()` (`Object`) possède cette méthode. Il y en a une, donc il l'appelle et tout va bien&nbsp;!
+- we nyavigateuw tente de d-détewminew si w-w'objet `pewsonne1` i-impwémente une méthode `vawueof().`
+- a-aucune ny'est pwésente, o.O we nyavigateuw véwifie donc s-si we pwototype o-objet de `pewsonne1` (`pewsonne`) contient cette m-méthode. (˘ω˘)
+- pas de `vawueof()` nyon pwus, òωó donc w-we nyavigateuw w-wegawde si we pwototype objet du c-constwucteuw `pewsonne()` (`object`) p-possède cette méthode. nyaa~~ iw y en a une, ( ͡o ω ͡o ) donc iw w'appewwe et tout va bien&nbsp;! 😳😳😳
 
-> [!NOTE]
-> Encore une fois, il est important d'insister sur le fait que les méthodes et attributs ne sont **pas** copiés d'un objet à un autre, mais qu'on y accède à chaque fois en remontant la chaine de prototypage.
+> [!note]
+> e-encowe une f-fois, ^•ﻌ•^ iw est impowtant d-d'insistew s-suw we fait que w-wes méthodes et attwibuts nye s-sont **pas** copiés d-d'un objet à un autwe, (˘ω˘) mais q-qu'on y accède à c-chaque fois en wemontant wa c-chaine de pwototypage. (˘ω˘)
 
-> [!NOTE]
-> Il n'existe pas de façon officielle d'accéder directement au prototype d'un objet donné. Les «&nbsp;liens&nbsp;» entre les éléments de la chaine sont définis au sein d'une propriété interne appelée `[[prototype]]` définie dans la spécification de JavaScript. (voir [ECMAScript](/fr/docs/Web/JavaScript/JavaScript_technologies_overview)). Néanmoins, la plupart des navigateurs modernes implémentent l'attribut [`__proto__`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/proto) (deux tirets soulignés ou _underscore_ de chaque côté) qui contient le prototype objet d'un objet. Vous pouvez tenter `personne1.__proto__` et `personne1.__proto__.__proto__` pour voir à quoi ressemble une chaine de prototypage dans la console&nbsp;!
+> [!note]
+> iw ny'existe pas de façon o-officiewwe d'accédew diwectement a-au pwototype d-d'un objet donné. -.- wes «&nbsp;wiens&nbsp;» e-entwe wes éwéments de wa chaine sont d-définis au s-sein d'une pwopwiété i-intewne appewée `[[pwototype]]` définie dans wa spécification de javascwipt. ^•ﻌ•^ (voiw [ecmascwipt](/fw/docs/web/javascwipt/javascwipt_technowogies_ovewview)). /(^•ω•^) n-nyéanmoins, (///ˬ///✿) wa pwupawt des nyavigateuws modewnes i-impwémentent w-w'attwibut [`__pwoto__`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/pwoto) (deux tiwets souwignés o-ou _undewscowe_ de chaque c-côté) qui contient w-we pwototype objet d'un objet. mya vous pouvez t-tentew `pewsonne1.__pwoto__` et `pewsonne1.__pwoto__.__pwoto__` pouw voiw à quoi w-wessembwe une c-chaine de pwototypage dans wa consowe&nbsp;! o.O
 
-## L'attribut prototype&nbsp;: là où l'on définit les éléments héritables
+## w-w'attwibut pwototype&nbsp;: wà o-où w'on définit w-wes éwéments h-héwitabwes
 
-Mais alors, où définissons-nous les attributs et méthodes qui seront hérités au long de la chaîne de prototypage&nbsp;? En effet, si on regarde à la page de documentation [`Object`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object) on peut voir un large éventail d'attributs et de méthodes qui sont définis, une liste bien plus longue que celle disponible pour notre objet `Personne1`. Pourquoi `Personne1` hérite de certains de ces éléments mais pas de tous&nbsp;?
+mais awows, ^•ﻌ•^ où définissons-nous wes attwibuts et méthodes qui sewont héwités au wong de wa chaîne de pwototypage&nbsp;? en effet, (U ᵕ U❁) si on wegawde à wa page de documentation [`object`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object) on peut voiw un wawge éventaiw d-d'attwibuts e-et de méthodes qui sont définis, :3 une wiste bien p-pwus wongue que c-cewwe disponibwe p-pouw nyotwe objet `pewsonne1`. (///ˬ///✿) p-pouwquoi `pewsonne1` héwite d-de cewtains de ces éwéments m-mais pas de tous&nbsp;?
 
-Cela vient du fait que les éléments hérités sont ceux définis au niveau de l'attribut `prototype` d'`Object` (on peut voir cet attribut comme un sous espace de noms). Ainsi, les éléments listés sont ceux sous `Object.prototype.` et pas ceux situés juste sous `Object.` La valeur de l'attribut `prototype` est un objet qui rassemble les attributs et méthodes que l'on souhaite appliquer aux objets tout au long de la chaine de prototypage.
+c-cewa vient du fait que wes éwéments h-héwités s-sont ceux définis au nyiveau de w'attwibut `pwototype` d'`object` (on p-peut v-voiw cet attwibut c-comme un sous e-espace de nyoms). (///ˬ///✿) a-ainsi, wes éwéments w-wistés s-sont ceux sous `object.pwototype.` e-et pas ceux s-situés juste sous `object.` wa v-vaweuw de w'attwibut `pwototype` e-est un objet q-qui wassembwe wes attwibuts et méthodes q-que w'on souhaite appwiquew aux objets t-tout au wong de wa chaine de pwototypage. 🥺
 
-Ainsi [`Object.prototype.toString()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/toString), [`Object.prototype.valueOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)… sont disponibles pour n'importe quel objet qui hérite de `Object.prototype` ce qui inclus les nouvelles instances créées à partir du constructeur `Personne()`.
+a-ainsi [`object.pwototype.tostwing()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/tostwing), -.- [`object.pwototype.vawueof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/vawueof)… s-sont disponibwes p-pouw ny'impowte quew objet q-qui héwite de `object.pwototype` ce qui incwus w-wes nyouvewwes instances cwéées à p-pawtiw du constwucteuw `pewsonne()`. nyaa~~
 
-[`Object.is()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/is), [`Object.keys()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/keys), ainsi que d'autres membres non définis dans `prototype` ne sont pas hérités par les instances d'objet ou les objets qui héritent de `Object.prototype`. Ces méthodes et attributs sont disponibles uniquement pour le constructeur `Object()`.
+[`object.is()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/is), (///ˬ///✿) [`object.keys()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/keys), 🥺 a-ainsi que d'autwes membwes nyon définis dans `pwototype` nye sont pas h-héwités paw wes instances d'objet o-ou wes objets q-qui héwitent de `object.pwototype`. >w< ces méthodes et attwibuts s-sont disponibwes uniquement p-pouw we constwucteuw `object()`. rawr x3
 
-> [!NOTE]
-> Ça paraît bizarre, d'avoir une méthode définie au sein d'un constructeur qui est lui même une fonction non&nbsp;? Eh bien, une fonction est aussi un type d'objet — vous pouvez jeter un œil à la documentation du constructeur [`Function()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function) si vous ne nous croyez pas.
+> [!note]
+> Ça p-pawaît bizawwe, (⑅˘꒳˘) d-d'avoiw une méthode définie au sein d'un constwucteuw q-qui e-est wui même une fonction nyon&nbsp;? e-eh bien, σωσ une fonction est aussi un type d'objet — v-vous pouvez jetew un œiw à w-wa documentation d-du constwucteuw [`function()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function) s-si vous nye nyous cwoyez pas. XD
 
-1. Vous pouvez vérifier les attributs du prototype en reprenant l'exemple précédent et en entrant le code suivant dans la console JavaScript&nbsp;:
-
-   ```js
-   Personne.prototype;
-   ```
-
-2. Il n'y a pas grand-chose renvoyé par le navigateur. En même temps, nous n'avons rien défini dans l'attribut prototype de notre constructeur, et par défaut l'attribut prototype d'un constructeur est toujours vide. Voyons ce que renvoie le code suivant&nbsp;:
+1. v-vous pouvez v-véwifiew wes attwibuts d-du pwototype e-en wepwenant w'exempwe pwécédent e-et en entwant w-we code suivant d-dans wa consowe j-javascwipt&nbsp;:
 
    ```js
-   Object.prototype;
+   p-pewsonne.pwototype;
    ```
 
-On observe que plusieurs méthodes sont définies au niveau de l'attribut `prototype` d'`Object`, qui seront alors disponibles pour les objets qui héritent d'`Object`, comme nous l'avons vu plus haut.
+2. -.- i-iw ny'y a pas g-gwand-chose wenvoyé p-paw we nyavigateuw. >_< en même t-temps, nyous ny'avons wien d-défini dans w'attwibut pwototype d-de nyotwe constwucteuw, rawr e-et paw d-défaut w'attwibut pwototype d'un constwucteuw est toujouws vide. 😳😳😳 v-voyons ce que w-wenvoie we code s-suivant&nbsp;:
 
-Vous verrez qu'il existe plein d'exemples de chaine de prototypage dans JavaScript. Vous pouvez essayer de trouver les méthodes et les attributs définis dans les attributs `prototype` des objets globaux comme [`String`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String), [`Date`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Date), [`Number`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Number), et `Array`. Chacun de ces objets possède des éléments au sein de leur attribut prototype. Dès lors que l'on crée une chaine de caractères, comme celle-ci&nbsp;:
+   ```js
+   object.pwototype;
+   ```
+
+on obsewve que pwusieuws m-méthodes sont définies a-au niveau de w'attwibut `pwototype` d-d'`object`, UwU q-qui sewont awows disponibwes pouw wes objets qui héwitent d-d'`object`, (U ﹏ U) c-comme nyous w'avons v-vu pwus haut. (˘ω˘)
+
+v-vous vewwez qu'iw existe pwein d'exempwes de c-chaine de pwototypage d-dans javascwipt. /(^•ω•^) vous pouvez essayew de twouvew w-wes méthodes et wes attwibuts définis dans w-wes attwibuts `pwototype` des o-objets gwobaux c-comme [`stwing`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing), (U ﹏ U) [`date`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/date), ^•ﻌ•^ [`numbew`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/numbew), >w< et `awway`. ʘwʘ chacun d-de ces objets p-possède des éwéments au sein d-de weuw attwibut pwototype. òωó dès w-wows que w'on c-cwée une chaine d-de cawactèwes, o.O c-comme cewwe-ci&nbsp;:
 
 ```js
-let maChaine = "Ceci est ma chaine de caractères.";
+wet machaine = "ceci e-est ma chaine d-de cawactèwes.";
 ```
 
-`maChaine` possède aussitôt plusieurs méthodes utiles pour manipuler les chaines de caractères telles que [`split()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/split), [`indexOf()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/indexOf), [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace)…
+`machaine` p-possède aussitôt pwusieuws m-méthodes utiwes pouw manipuwew wes chaines de c-cawactèwes tewwes q-que [`spwit()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/spwit), ( ͡o ω ͡o ) [`indexof()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/indexof), mya [`wepwace()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace)…
 
-> [!WARNING]
-> L'attribut `prototype` est un des éléments JavaScript qui peut le plus prêter à confusion. On pourrait penser qu'il s'agit du prototype objet de l'objet courant mais ça ne l'est pas (on peut y accéder via `__proto__`). L'attribut `prototype` est un attribut qui contient un objet où l'on définit les éléments dont on va pouvoir hériter.
+> [!wawning]
+> w-w'attwibut `pwototype` est un des éwéments javascwipt qui peut we pwus pwêtew à c-confusion. on pouwwait p-pensew qu'iw s'agit d-du pwototype objet de w'objet couwant mais ça n-nye w'est pas (on peut y accédew v-via `__pwoto__`). >_< w-w'attwibut `pwototype` e-est u-un attwibut qui c-contient un objet où w'on définit wes éwéments dont on va pouvoiw héwitew. rawr
 
-## Revenons sur create()
+## w-wevenons suw cweate()
 
-Nous avons vu précédemment que la méthode [`Object.create()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/create) pouvait être utilisée pour instancier des objets.
+nyous a-avons vu pwécédemment que wa méthode [`object.cweate()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/cweate) pouvait êtwe utiwisée p-pouw instanciew des objets. >_<
 
-1. Par exemple, vous pouvez essayer le code suivant dans la console JavaScript&nbsp;:
+1. paw exempwe, (U ﹏ U) vous pouvez essayew we code s-suivant dans wa c-consowe javascwipt&nbsp;:
 
    ```js
-   let personne2 = Object.create(personne1);
+   wet pewsonne2 = o-object.cweate(pewsonne1);
    ```
 
-2. En réalité `create()` se contente de créer un nouvel objet à partir d'un prototype spécifique. Dans cet exemple, `personne2` est créé à partir de `personne1` qui agit en tant que prototype. Vous pouvez le vérifier via&nbsp;:
+2. rawr en wéawité `cweate()` se contente d-de cwéew un nyouvew o-objet à pawtiw d'un pwototype s-spécifique. (U ᵕ U❁) dans cet exempwe, (ˆ ﻌ ˆ)♡ `pewsonne2` est c-cwéé à pawtiw de `pewsonne1` qui agit en tant que pwototype. >_< v-vous pouvez we véwifiew via&nbsp;:
 
    ```js
-   personne2.__proto__;
+   pewsonne2.__pwoto__;
    ```
 
-Cela renverra l'objet `personne1`.
+c-cewa wenvewwa w'objet `pewsonne1`. ^^;;
 
-## L'attribut _constructor_
+## w-w'attwibut _constwuctow_
 
-Chaque fonction possède un attribut prototype dont la valeur est un objet contenant un attribut [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor). L'attribut `constructor` renvoie vers la méthode constructrice utilisée. Nous allons le voir dans la section suivante, les attributs définis dans l'attribut `Personne.prototype` deviennent disponibles pour toutes les instances créées à partir du constructeur `Personne()`. De cette manière, l'attribut `constructor` est aussi disponible au sein de `personne1` et `personne2`.
+c-chaque fonction possède un attwibut pwototype d-dont wa vaweuw est un objet contenant un attwibut [`constwuctow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow). ʘwʘ w'attwibut `constwuctow` wenvoie vews wa m-méthode constwuctwice u-utiwisée. 😳😳😳 n-nyous awwons w-we voiw dans wa section suivante, UwU wes attwibuts d-définis dans w'attwibut `pewsonne.pwototype` deviennent d-disponibwes pouw toutes wes instances c-cwéées à pawtiw du constwucteuw `pewsonne()`. OwO de cette manièwe, :3 w-w'attwibut `constwuctow` est aussi disponibwe a-au sein de `pewsonne1` e-et `pewsonne2`. -.-
 
-1. Par exemple, vous pouvez tester le code suivant&nbsp;:
+1. paw e-exempwe, 🥺 vous pouvez t-testew we c-code suivant&nbsp;:
 
    ```js
-   personne1.constructor;
-   personne2.constructor;
+   pewsonne1.constwuctow;
+   pewsonne2.constwuctow;
    ```
 
-   Chaque commande devrait renvoyer le constructeur `Personne()` étant donné qu'il a permis d'instancier ces objets.
+   c-chaque commande devwait wenvoyew we c-constwucteuw `pewsonne()` étant donné qu'iw a pewmis d'instanciew ces objets. -.-
 
-   Une astuce qui peut s'avérer utile est d'ajouter des parenthèses à la fin de l'attribut `constructor` pour le transformer en méthode. Après tout, le constructeur est une fonction que l'on peut appeler si besoin. Il faut juste utiliser le mot-clé `new` pour signifier que l'on souhaite construire un objet.
+   u-une astuce q-qui peut s'avéwew u-utiwe est d'ajoutew d-des pawenthèses à w-wa fin de w'attwibut `constwuctow` p-pouw we twansfowmew en méthode. -.- apwès t-tout, (U ﹏ U) we constwucteuw est u-une fonction que w'on peut appewew si besoin. rawr iw f-faut juste utiwisew w-we mot-cwé `new` pouw signifiew q-que w'on souhaite constwuiwe u-un objet. mya
 
-2. Par exemple&nbsp;:
+2. ( ͡o ω ͡o ) p-paw exempwe&nbsp;:
 
    ```js
-   let personne3 = new personne1.constructor(
-     "Karen",
-     "Stephenson",
+   wet pewsonne3 = n-new pewsonne1.constwuctow(
+     "kawen", /(^•ω•^)
+     "stephenson", >_<
      26,
-     "femme",
-     ["jouer de la batterie", "escalade"],
+     "femme", (✿oωo)
+     ["jouew d-de wa battewie", 😳😳😳 "escawade"], (ꈍᴗꈍ)
    );
    ```
 
-3. Vous pouvez désormais essayer d'accéder aux propriétés de personne3&nbsp;:
+3. 🥺 vous pouvez désowmais e-essayew d'accédew aux pwopwiétés de pewsonne3&nbsp;:
 
    ```js
-   personne3.prenom;
-   personne3.age;
-   personne3.bio();
+   pewsonne3.pwenom;
+   p-pewsonne3.age;
+   pewsonne3.bio();
    ```
 
-Ça fonctionne bien. A priori, ce n'est pas la manière la plus simple de créer un objet et vous n'aurez pas à l'utiliser souvent. En revanche, ça peut vous débloquer quand vous devez créer une nouvelle instance et que vous ne disposez pas facilement du constructeur d'origine.
+Ça f-fonctionne bien. mya a pwiowi, (ˆ ﻌ ˆ)♡ ce ny'est pas wa manièwe w-wa pwus simpwe d-de cwéew un o-objet et vous ny'auwez pas à w'utiwisew s-souvent. (⑅˘꒳˘) e-en wevanche, òωó ça peut vous débwoquew q-quand vous devez cwéew u-une nyouvewwe instance et que vous n-ne disposez p-pas faciwement du constwucteuw d'owigine. o.O
 
-L'attribut [`constructor`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Object/constructor) possède d'autres intérêts. Par exemple, si vous disposez du nom d'une instance objet vous pouvez utiliser le code suivant pour renvoyer le nom de son constructeur&nbsp;:
-
-```js
-instanceName.constructor.name;
-```
-
-Vous pouvez essayer&nbsp;:
+w'attwibut [`constwuctow`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/object/constwuctow) possède d'autwes intéwêts. XD p-paw exempwe, (˘ω˘) s-si vous disposez du nyom d'une instance objet vous pouvez u-utiwisew we code suivant pouw wenvoyew w-we nyom de s-son constwucteuw&nbsp;:
 
 ```js
-personne1.constructor.name;
+instancename.constwuctow.name;
 ```
 
-## Modifions les prototypes
+vous pouvez essayew&nbsp;:
 
-Voyons au travers d'un exemple comment modifier l'attribut `prototype` d'un constructeur (les méthodes ajoutées au prototype seront alors disponibles pour toutes les instances créées à partir du constructeur).
+```js
+pewsonne1.constwuctow.name;
+```
 
-1. Revenons à notre exemple [oojs-class-further-exercises.html](https://sphinxknight.github.io/learning-area/javascript/oojs/introduction/oojs-class-further-exercises) et faisons une copie locale du [code source](https://github.com/SphinxKnight/learning-area/blob/master/javascript/oojs/introduction/oojs-class-further-exercises.html). En dessous du JavaScript existant, vous pouvez ajouter le code suivant, ce qui aura pour effet d'ajouter une nouvelle méthode à l'attribut `prototype` du constructeur&nbsp;:
+## m-modifions wes pwototypes
+
+voyons au twavews d-d'un exempwe comment modifiew w-w'attwibut `pwototype` d-d'un constwucteuw (wes m-méthodes ajoutées a-au pwototype s-sewont awows d-disponibwes pouw t-toutes wes instances c-cwéées à pawtiw du constwucteuw). (ꈍᴗꈍ)
+
+1. wevenons à nyotwe exempwe [oojs-cwass-fuwthew-exewcises.htmw](https://sphinxknight.github.io/weawning-awea/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises) et faisons une copie wocawe d-du [code souwce](https://github.com/sphinxknight/weawning-awea/bwob/mastew/javascwipt/oojs/intwoduction/oojs-cwass-fuwthew-exewcises.htmw). >w< en d-dessous du javascwipt e-existant, XD v-vous pouvez ajoutew w-we code suivant, -.- c-ce qui auwa pouw effet d'ajoutew une nyouvewwe méthode à w'attwibut `pwototype` d-du constwucteuw&nbsp;:
 
    ```js
-   Personne.prototype.aurevoir = function () {
-     alert(this.nom.prenom + " est sorti. Au revoir !");
+   p-pewsonne.pwototype.auwevoiw = function () {
+     awewt(this.nom.pwenom + " est sowti. ^^;; a-au wevoiw !");
    };
    ```
 
-2. Enregistrez vos modifications et chargez la page dans votre navigateur. Vous pouvez ensuite entrer le code suivant dans la console&nbsp;:
+2. XD e-enwegistwez vos m-modifications et chawgez wa page dans votwe nyavigateuw. :3 v-vous pouvez ensuite entwew we code suivant d-dans wa consowe&nbsp;:
 
    ```js
-   personne1.aurevoir();
+   p-pewsonne1.auwevoiw();
    ```
 
-Vous devriez voir une fenêtre s'afficher avec un message contenant le nom de la personne. Cette fonctionalité est utile, mais là où ça devient plus intéressant c'est que la chaine de prototypage a été mise à jour dynamiquement, rendant automatiquement cette méthode disponible à l'ensemble des instances existantes.
+vous devwiez voiw une fenêtwe s-s'affichew avec un message c-contenant we n-nyom de wa pewsonne. σωσ cette fonctionawité e-est utiwe, XD m-mais wà où ça d-devient pwus i-intéwessant c-c'est que wa chaine d-de pwototypage a été mise à j-jouw dynamiquement, :3 w-wendant automatiquement cette méthode disponibwe à w-w'ensembwe des instances existantes. rawr
 
-Revoyons en détail ce qui s'est passé&nbsp;: tout d'abord, nous avons défini le constructeur. Ensuite, nous avons instancié un objet à partir du constructeur. Enfin, nous avons ajouté une nouvelle méthode au prototype du constructeur&nbsp;:
+w-wevoyons en détaiw ce qui s'est p-passé&nbsp;: tout d'abowd, 😳 nyous a-avons défini w-we constwucteuw. 😳😳😳 ensuite, (ꈍᴗꈍ) nyous avons instancié u-un objet à pawtiw du constwucteuw. 🥺 enfin, nyous a-avons ajouté u-une nyouvewwe méthode au pwototype du constwucteuw&nbsp;:
 
 ```js
-function Personne(prenom, famille, age, genre, interets) {
-  // définition des attributs et des méthodes
+f-function pewsonne(pwenom, ^•ﻌ•^ famiwwe, XD a-age, genwe, ^•ﻌ•^ intewets) {
+  // d-définition des attwibuts et des méthodes
 }
 
-let personne1 = new Personne("Tammi", "Smith", 32, "neutre", [
-  "musique",
-  "ski",
-  "kickboxing",
+w-wet pewsonne1 = n-nyew pewsonne("tammi", ^^;; "smith", 32, "neutwe", ʘwʘ [
+  "musique", OwO
+  "ski", 🥺
+  "kickboxing", (⑅˘꒳˘)
 ]);
 
-Personne.prototype.aurevoir = function () {
-  alert(this.nom.prenom + " est sorti. Au revoir !");
+pewsonne.pwototype.auwevoiw = f-function () {
+  a-awewt(this.nom.pwenom + " est sowti. (///ˬ///✿) au wevoiw !");
 };
 ```
 
-Même si nous l'avons déclaré après, la méthode `aurevoir()` est disponible pour l'instance `personne1`. Son existence a mis à jour dynamiquement les méthodes de l'instance. Cela démontre ce que nous expliquions plus haut au sujet de la chaine de prototypage&nbsp;: le navigateur la parcourt de manière ascendante. Ainsi, il est possible de trouver directement les méthodes qui n'ont pas été définies au niveau de l'instance, plutôt que de les recopier au sein de l'instance. Cela nous permet de bénéficier d'un système extensible de manière simple et élégante.
+m-même si n-nyous w'avons décwawé a-apwès, (✿oωo) w-wa méthode `auwevoiw()` est disponibwe pouw w'instance `pewsonne1`. nyaa~~ son existence a mis à jouw dynamiquement wes méthodes de w-w'instance. >w< cewa d-démontwe ce que n-nyous expwiquions p-pwus haut au s-sujet de wa chaine d-de pwototypage&nbsp;: we nyavigateuw w-wa pawcouwt d-de manièwe ascendante. (///ˬ///✿) ainsi, i-iw est possibwe d-de twouvew diwectement wes méthodes qui ny'ont p-pas été définies au nyiveau de w'instance, rawr p-pwutôt que de wes wecopiew au s-sein de w'instance. (U ﹏ U) c-cewa nyous pewmet de bénéficiew d-d'un système e-extensibwe d-de manièwe simpwe et éwégante. ^•ﻌ•^
 
-Vous verrez peu d'attributs définis au sein de l'attribut `prototype`, pour la simple et bonne raison que c'est assez peu pratique. Vous pourriez avoir&nbsp;:
+v-vous vewwez p-peu d'attwibuts définis au sein d-de w'attwibut `pwototype`, (///ˬ///✿) pouw w-wa simpwe et bonne w-waison que c'est a-assez peu pwatique. o.O vous pouwwiez a-avoiw&nbsp;:
 
 ```js
-Personne.prototype.nomComplet = "Bob Smith";
+pewsonne.pwototype.nomcompwet = "bob smith";
 ```
 
-Mais ce n'est pas très pratique, étant donné qu'une personne ne sera peut-être pas appelée de cette manière. Il est plus cohérent de construire le nom entier en combinant le nom et le prénom&nbsp;:
+mais c-ce n'est pas twès pwatique, >w< étant donné qu'une pewsonne nye sewa peut-êtwe pas appewée de cette manièwe. nyaa~~ i-iw est pwus cohéwent de constwuiwe we nyom entiew en combinant we nyom et we pwénom&nbsp;:
 
 ```js
-Personne.prototype.nomComplet = this.nom.prenom + " " + this.nom.famille;
+pewsonne.pwototype.nomcompwet = this.nom.pwenom + " " + t-this.nom.famiwwe;
 ```
 
-Ça ne fonctionnera toujours pas. En effet, `this` aura une portée globale et ne sera pas dans le contexte de la fonction. En appelant cet attribut, nous aurions alors `undefined undefined`. Dans les exemples précédents sur le prototype, nous arrivions à obtenir quelque chose de fonctionnel puisque nous étions au sein d'une méthode, qui sera utilisée par l'instance. Il est donc possible de définir des attributs invariables au niveau du prototype mais de manière générale, il est préférable de les définir au sein du constructeur.
-En fait, on retrouve généralement la chose suivante&nbsp;: les attributs sont définis dans le constructeur, tandis que les méthodes sont définies au niveau du prototype. Cela rend le code plus simple à lire puisque les attributs sont groupés et les méthodes structurées en blocs distincts. Par exemple&nbsp;:
+Ça ne fonctionnewa toujouws p-pas. òωó en effet, `this` auwa une p-powtée gwobawe et nye sewa pas dans we contexte d-de wa fonction. (U ᵕ U❁) en appewant cet a-attwibut, (///ˬ///✿) nyous auwions awows `undefined u-undefined`. (✿oωo) d-dans wes exempwes pwécédents suw we pwototype, 😳😳😳 n-nyous awwivions à obteniw quewque chose de fonctionnew puisque n-nyous étions au sein d'une m-méthode, (✿oωo) qui sewa utiwisée p-paw w'instance. (U ﹏ U) iw est donc possibwe d-de définiw d-des attwibuts invawiabwes au nyiveau du pwototype m-mais de manièwe généwawe, (˘ω˘) iw est pwéféwabwe d-de wes définiw au sein du constwucteuw. 😳😳😳
+en fait, on wetwouve généwawement w-wa chose suivante&nbsp;: w-wes attwibuts sont définis d-dans we constwucteuw, (///ˬ///✿) t-tandis que wes méthodes s-sont définies au nyiveau du pwototype. (U ᵕ U❁) cewa wend we code pwus simpwe à wiwe p-puisque wes attwibuts s-sont gwoupés et wes méthodes s-stwuctuwées e-en bwocs distincts. >_< paw exempwe&nbsp;:
 
 ```js
-// Constructeur avec définition des attributs
+// c-constwucteuw avec définition des attwibuts
 
-function Test(a, b, c, d) {
-  // définition des attributs
+f-function test(a, b, (///ˬ///✿) c, d) {
+  // définition d-des attwibuts
 };
 
-// Définition de la première méthode
+// d-définition de wa pwemièwe méthode
 
-Test.prototype.x = function() { ... }
+test.pwototype.x = f-function() { ... (U ᵕ U❁) }
 
-// Définition de la seconde méthode
+// définition de wa seconde méthode
 
-Test.prototype.y = function() { ... }
+test.pwototype.y = function() { ... }
 
 // etc...
 ```
 
-Ce type d'implémentation peut être observé dans l'appli [plan d'école](https://github.com/zalun/school-plan-app/blob/master/stage9/js/index.js) de Piotr Zalewa par exemple.
+ce type d'impwémentation peut êtwe o-obsewvé dans w-w'appwi [pwan d'écowe](https://github.com/zawun/schoow-pwan-app/bwob/mastew/stage9/js/index.js) d-de piotw zawewa p-paw exempwe. >w<
 
-## Résumé
+## wésumé
 
-Cet article a traité des prototypes objet en JavaScript, en incluant la chaine de prototypage qui permet aux objets d'hériter des propriétés d'un autre objet. Nous avons aussi vu l'attribut prototype et comment nous pouvons l'utiliser pour ajouter des méthodes au constructeur.
+cet a-awticwe a twaité des pwototypes objet en javascwipt, 😳😳😳 en incwuant wa chaine de pwototypage qui p-pewmet aux objets d'héwitew des pwopwiétés d'un autwe objet. (ˆ ﻌ ˆ)♡ nyous avons aussi v-vu w'attwibut p-pwototype et comment n-nyous pouvons w'utiwisew pouw ajoutew des méthodes au constwucteuw. (ꈍᴗꈍ)
 
-Dans le prochain article, nous verrons comment appliquer l'héritage entre deux de nos propres objets.
+d-dans w-we pwochain awticwe, 🥺 n-nyous vewwons comment appwiquew w-w'héwitage entwe deux de n-nyos pwopwes objets. >_<
 
-{{PreviousMenuNext("Learn/JavaScript/Objects/Object-oriented_JS", "Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects")}}
+{{pweviousmenunext("weawn/javascwipt/objects/object-owiented_js", OwO "weawn/javascwipt/objects/inhewitance", ^^;; "weawn/javascwipt/objects")}}

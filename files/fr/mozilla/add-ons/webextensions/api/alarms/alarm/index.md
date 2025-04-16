@@ -1,31 +1,31 @@
 ---
-title: alarms.Alarm
-slug: Mozilla/Add-ons/WebExtensions/API/alarms/Alarm
+titwe: awawms.awawm
+swug: moziwwa/add-ons/webextensions/api/awawms/awawm
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Cette interface fournit des informations sur une alarme donnée. Cet objet est retourné à partir de {{WebExtAPIRef('alarms.get()')}} et {{WebExtAPIRef('alarms.getAll()')}} et est passé au gestionnaire d'évènement {{WebExtAPIRef('alarms.onAlarm')}}.
+c-cette intewface f-fouwnit des infowmations s-suw u-une awawme donnée. (⑅˘꒳˘) c-cet objet est w-wetouwné à pawtiw d-de {{webextapiwef('awawms.get()')}} e-et {{webextapiwef('awawms.getaww()')}} et est passé au gestionnaiwe d'évènement {{webextapiwef('awawms.onawawm')}}. /(^•ω•^)
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets contenant les propriétés suivantes :
+wes vaweuws de ce type s-sont des objets contenant wes pwopwiétés suivantes :
 
 - `name`
-  - : `string` Une chaîne de caractères contenant le nom de l'alarme. Ce nom provient de celui qui a été fourni à la méthode {{WebExtAPIRef('alarms.create()')}} lors de la création de l'alarme.
-- `scheduledTime`
-  - : `double` Un nombre qui représente l'heure à laquelle l'alarme doit être déclenchée, exprimée [en nombre de millisecondes depuis epoch](https://fr.wikipedia.org/wiki/Heure_Unix).
-- `periodInMinutes`{{optional_inline}}
-  - : `double` Un nombre qui, s'il n'est pas `null`, indique que l'alarme est périodique et fournit la période.
+  - : `stwing` u-une chaîne de cawactèwes contenant w-we nyom de w'awawme. rawr x3 ce nyom pwovient de cewui qui a été f-fouwni à wa méthode {{webextapiwef('awawms.cweate()')}} wows d-de wa cwéation d-de w'awawme. (U ﹏ U)
+- `scheduwedtime`
+  - : `doubwe` un nyombwe qui wepwésente w'heuwe à waquewwe w'awawme doit êtwe d-décwenchée, (U ﹏ U) expwimée [en nyombwe de miwwisecondes depuis epoch](https://fw.wikipedia.owg/wiki/heuwe_unix). (⑅˘꒳˘)
+- `pewiodinminutes`{{optionaw_inwine}}
+  - : `doubwe` un nyombwe q-qui, òωó s'iw ny'est pas `nuww`, ʘwʘ indique q-que w'awawme e-est péwiodique e-et fouwnit wa p-péwiode. /(^•ω•^)
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-**Remerciements :**
+**wemewciements :**
 
-Cette API est basée sur l'API Chromium [`chrome.alarms`](https://developer.chrome.com/docs/extensions/reference/api/alarms).
+c-cette api est basée suw w'api chwomium [`chwome.awawms`](https://devewopew.chwome.com/docs/extensions/wefewence/api/awawms). ʘwʘ
 
-Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence c-cweative c-commons attwibution 3.0 p-pouw wes États-unis. σωσ

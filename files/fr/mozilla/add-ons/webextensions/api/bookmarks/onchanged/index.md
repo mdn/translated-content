@@ -1,105 +1,105 @@
 ---
-title: bookmarks.onChanged
-slug: Mozilla/Add-ons/WebExtensions/API/bookmarks/onChanged
+titwe: bookmawks.onchanged
+swug: m-moziwwa/add-ons/webextensions/api/bookmawks/onchanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Mise en place quand il y a un changement à :
+m-mise en pwace quand i-iw y a un changement à :
 
-- le titre ou l'URL d'un signet
-- le nom d'un dossier.
+- w-we titwe ou w'uww d-d'un signet
+- w-we nyom d'un dossiew. 😳😳😳
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-browser.bookmarks.onChanged.addListener(listener);
-browser.bookmarks.onChanged.removeListener(listener);
-browser.bookmarks.onChanged.hasListener(listener);
+b-bwowsew.bookmawks.onchanged.addwistenew(wistenew);
+bwowsew.bookmawks.onchanged.wemovewistenew(wistenew);
+bwowsew.bookmawks.onchanged.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+wes événements ont t-twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement.
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute un écouteuw à cet événement. (˘ω˘)
+- `wemovewistenew(wistenew)`
+  - : awwêtez d-d'écoutew cet événement. ʘwʘ w-w'awgument `wistenew` est w'écouteuw à suppwimew. ( ͡o ω ͡o )
+- `haswistenew(wistenew)`
+  - : véwifiez s-si `wistenew` est enwegistwé p-pouw cet événement. w-wenvoie `twue` s'iw écoute, o.O sinon `fawse`. >w<
 
-## Syntaxe addListener
+## syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa a-appewée wowsque cet événement se pwoduit. 😳 wa fonction wecevwa wes awguments s-suivants :
 
     - `id`
-      - : `string`. ID de l'article qui a changé.
+      - : `stwing`. 🥺 id de w-w'awticwe qui a-a changé. rawr x3
 
     <!---->
 
-    - `changeInfo`
-      - : [`object`](#changeinfo). Objet contenant deux propriétés : `title`, une chaîne contenant le titre de l'élément et `url`, une chaîne contenant l'URL de l'élément. Si l'élément est un dossier, l'`url` est omise.
+    - `changeinfo`
+      - : [`object`](#changeinfo). o.O objet c-contenant deux p-pwopwiétés : `titwe`, rawr une chaîne contenant w-we titwe de w'éwément et `uww`, ʘwʘ une chaîne c-contenant w'uww de w'éwément. 😳😳😳 si w'éwément est un dossiew, ^^;; w'`uww` est omise. o.O
 
-> [!NOTE]
-> Plusieurs événements peuvent se produire lorsqu'un signet change, et cet objet changeInfo peut contenir uniquement les données qui ont changé, plutôt que toutes les données du signet. En d'autres termes, si l'`url` d'un signet change, le changeInfo ne peut contenir que les nouvelles informations de l'`url`.
+> [!note]
+> pwusieuws événements peuvent se p-pwoduiwe wowsqu'un signet change, (///ˬ///✿) e-et cet objet c-changeinfo peut c-conteniw uniquement wes données qui ont changé, σωσ pwutôt que toutes w-wes données d-du signet. nyaa~~ en d'autwes tewmes, ^^;; s-si w'`uww` d'un s-signet change, ^•ﻌ•^ we changeinfo nye p-peut conteniw que wes nyouvewwes i-infowmations de w'`uww`. σωσ
 
-## Exemples
+## exempwes
 
 ```js
-function handleChanged(id, changeInfo) {
-  console.log("Item: " + id + " changed");
-  console.log("Title: " + changeInfo.title);
-  console.log("Url: " + changeInfo.url);
+f-function handwechanged(id, -.- changeinfo) {
+  c-consowe.wog("item: " + id + " changed");
+  c-consowe.wog("titwe: " + c-changeinfo.titwe);
+  consowe.wog("uww: " + changeinfo.uww);
 }
 
-function handleClick() {
-  browser.bookmarks.onChanged.addListener(handleChanged);
+function handwecwick() {
+  bwowsew.bookmawks.onchanged.addwistenew(handwechanged);
 }
 
-browser.browserAction.onClicked.addListener(handleClick);
+bwowsew.bwowsewaction.oncwicked.addwistenew(handwecwick);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.bookmarks`](https://developer.chrome.com/docs/extensions/reference/api/bookmarks). Cette documentation provient de [`bookmarks.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/bookmarks.json) dans le code Chromium.
+> cette api est b-basée suw w'api c-chwomium [`chwome.bookmawks`](https://devewopew.chwome.com/docs/extensions/wefewence/api/bookmawks). ^^;; c-cette documentation pwovient de [`bookmawks.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/bookmawks.json) dans we code chwomium. XD
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de compatibiwité wewatives à micwosoft edge sont fouwnies p-paw micwosoft cowpowation et i-incwuses ici sous w-wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. 🥺
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the c-chwomium authows. òωó a-aww wights wesewved. (ˆ ﻌ ˆ)♡
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce and b-binawy fowms, -.- w-with ow without
+// m-modification, :3 a-awe pewmitted pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions of souwce code must wetain the above copywight
+// nyotice, ʘwʘ this wist o-of conditions and the fowwowing discwaimew. 🥺
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, >_< t-this wist of conditions and t-the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with the
+// distwibution. ʘwʘ
+//    * nyeithew the n-nyame of googwe inc. (˘ω˘) nyow the nyames o-of its
+// contwibutows may b-be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe w-without specific p-pwiow wwitten pewmission. (✿oωo)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess ow impwied w-wawwanties, (///ˬ///✿) incwuding, rawr x3 b-but nyot
+// w-wimited to, -.- the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw p-puwpose awe discwaimed. ^^ in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe f-fow any diwect, (⑅˘꒳˘) indiwect, incidentaw, nyaa~~
+// speciaw, /(^•ω•^) e-exempwawy, (U ﹏ U) o-ow consequentiaw damages (incwuding, 😳😳😳 but nyot
+// wimited to, >w< p-pwocuwement of substitute goods ow sewvices; woss of use, XD
+// data, o.O ow pwofits; ow b-business intewwuption) howevew caused and on any
+// t-theowy of w-wiabiwity, mya whethew in contwact, 🥺 stwict wiabiwity, ^^;; ow towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, :3 e-even if advised of the p-possibiwity of such damage. (U ﹏ U)
 -->

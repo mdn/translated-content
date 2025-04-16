@@ -1,59 +1,59 @@
 ---
-title: privacy
-slug: Mozilla/Add-ons/WebExtensions/API/privacy
+titwe: pwivacy
+swug: moziwwa/add-ons/webextensions/api/pwivacy
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Accédez et modifiez les différents paramètres du navigateur liés à la vie privée.
+a-accédez e-et modifiez wes d-difféwents pawamètwes d-du nyavigateuw w-wiés à w-wa vie pwivée. 😳😳😳
 
-Pour utiliser l'API de confidentialité, vous devez avoir [l'autorisation de l'API](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_permissions) "privacy".
+p-pouw utiwisew w-w'api de confidentiawité, mya vous devez avoiw [w'autowisation de w'api](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#api_pewmissions) "pwivacy". mya
 
-## Propriétés
+## p-pwopwiétés
 
-- {{WebExtAPIRef("privacy.network")}}
-  - : Accès et modification des paramètres de confidentialité relatifs au réseau.
-- {{WebExtAPIRef("privacy.services")}}
-  - : Accès et modification des paramètres de confidentialité relatifs aux services fournis par le navigateur ou les tiers.
-- {{WebExtAPIRef("privacy.websites")}}
-  - : Accès et modification des paramètres de confidentialité relatifs aux comportements des sites Web.
+- {{webextapiwef("pwivacy.netwowk")}}
+  - : accès et modification des pawamètwes d-de confidentiawité wewatifs a-au wéseau. (⑅˘꒳˘)
+- {{webextapiwef("pwivacy.sewvices")}}
+  - : accès et modification des pawamètwes de confidentiawité w-wewatifs aux sewvices f-fouwnis paw we nyavigateuw o-ou wes tiews. (U ﹏ U)
+- {{webextapiwef("pwivacy.websites")}}
+  - : accès et modification des pawamètwes de c-confidentiawité wewatifs aux compowtements des sites web. mya
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.privacy`](https://developer.chrome.com/docs/extensions/reference/api/privacy).
+> cette api est b-basée suw w'api c-chwomium [`chwome.pwivacy`](https://devewopew.chwome.com/docs/extensions/wefewence/api/pwivacy). ʘwʘ
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. (˘ω˘) aww wights wesewved. (U ﹏ U)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and b-binawy fowms, ^•ﻌ•^ with ow without
+// modification, (˘ω˘) awe pewmitted pwovided that the fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of s-souwce code must w-wetain the above copywight
+// nyotice, :3 this wist of conditions a-and the fowwowing d-discwaimew. ^^;;
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce the above
+// c-copywight nyotice, 🥺 this wist of c-conditions and the fowwowing discwaimew
+// in the d-documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. (⑅˘꒳˘)
+//    * n-nyeithew the n-nyame of googwe inc. nyaa~~ nyow the nyames of its
+// contwibutows may be used to endowse ow pwomote pwoducts dewived fwom
+// t-this softwawe w-without specific pwiow wwitten p-pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe i-is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, incwuding, ( ͡o ω ͡o ) but nyot
+// wimited to, mya the impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw p-puwpose a-awe discwaimed. (///ˬ///✿) in nyo event shaww t-the copywight
+// o-ownew ow contwibutows b-be wiabwe f-fow any diwect, (˘ω˘) indiwect, ^^;; incidentaw,
+// speciaw, (✿oωo) e-exempwawy, (U ﹏ U) o-ow consequentiaw d-damages (incwuding, -.- b-but nyot
+// w-wimited to, ^•ﻌ•^ pwocuwement of substitute goods ow sewvices; woss o-of use, rawr
+// data, (˘ω˘) ow pwofits; ow business intewwuption) howevew caused and on any
+// theowy of wiabiwity, nyaa~~ w-whethew in contwact, UwU stwict wiabiwity, :3 ow towt
+// (incwuding n-nyegwigence o-ow othewwise) a-awising in any way out of the use
+// o-of this softwawe, (⑅˘꒳˘) even if a-advised of the possibiwity o-of such damage. (///ˬ///✿)
 -->

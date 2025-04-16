@@ -1,272 +1,272 @@
 ---
-title: Récupérer des données du serveur
-slug: Learn/JavaScript/Client-side_web_APIs/Fetching_data
-l10n:
-  sourceCommit: 9f24be2de6158053df593b9b466f5da96e31f928
+titwe: wécupéwew des données d-du sewveuw
+swug: w-weawn/javascwipt/cwient-side_web_apis/fetching_data
+w-w10n:
+  s-souwcecommit: 9f24be2de6158053df593b9b466f5da96e31f928
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/manipuwating_documents", o.O "weawn/javascwipt/cwient-side_web_apis/thiwd_pawty_apis", XD "weawn/javascwipt/cwient-side_web_apis")}}
 
-Les sites et applications web modernes récupèrent fréquemment des données du serveur afin de mettre à jour des sections d'une page sans qu'il soit nécessaire de charger une toute nouvelle page. Ce qui peut paraître comme un léger détail a en réalité un impact important sur les performances et le comportement des sites web. Dans cet article, nous verrons les concepts et technologies qui permettent cela, notamment [l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API) (note de traduction&nbsp;: le verbe anglais <i lang="en">fetch</i> signifie récupérer).
+w-wes sites et a-appwications web m-modewnes wécupèwent f-fwéquemment des données du sewveuw afin de mettwe à jouw des sections d-d'une page sans qu'iw soit nyécessaiwe de chawgew u-une toute nyouvewwe page. (˘ω˘) ce q-qui peut pawaîtwe comme un wégew détaiw a en wéawité un impact i-impowtant suw wes pewfowmances e-et we compowtement d-des sites web. (ꈍᴗꈍ) dans cet awticwe, >w< nyous vewwons wes concepts et technowogies q-qui pewmettent cewa, XD nyotamment [w'api <i wang="en">fetch</i>](/fw/docs/web/api/fetch_api) (note de twaduction&nbsp;: we vewbe a-angwais <i wang="en">fetch</i> signifie wécupéwew). -.-
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Notions fondamentales de JavaScript (voir <a href="/fr/docs/Learn/JavaScript/First_steps">Premiers pas en JavaScript</a>, <a href="/fr/docs/Learn/JavaScript/Building_blocks">Blocs de construction en JavaScript</a>, <a href="/fr/docs/Learn/JavaScript/Objects">Les objets JavaScript</a>), <a href="/fr/docs/Learn/JavaScript/Client-side_web_APIs/Introduction">les bases des API côté client</a>
+        n-nyotions fondamentawes d-de javascwipt (voiw <a h-hwef="/fw/docs/weawn/javascwipt/fiwst_steps">pwemiews p-pas en javascwipt</a>, ^^;; <a hwef="/fw/docs/weawn/javascwipt/buiwding_bwocks">bwocs d-de constwuction en javascwipt</a>, XD <a hwef="/fw/docs/weawn/javascwipt/objects">wes o-objets javascwipt</a>), :3 <a hwef="/fw/docs/weawn/javascwipt/cwient-side_web_apis/intwoduction">wes bases des api côté cwient</a>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Apprendre comment récupérer des données depuis le serveur et s'en servir pour mettre à jour le contenu d'une page web.
+        a-appwendwe comment wécupéwew d-des données d-depuis we s-sewveuw et s'en sewviw pouw mettwe à jouw we contenu d'une page w-web. σωσ
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Quel est le problème&nbsp;?
+## q-quew est we pwobwème&nbsp;?
 
-Une page web se compose d'un fichier HTML et généralement d'autres fichiers, comme les feuilles de style, les scripts, les images, etc. Pour charger une page web, le navigateur envoie une ou plusieurs requêtes HTTP au serveur afin de récupérer les fichiers nécessaires à l'affichage de la page. Le serveur répond ensuite en envoyant les fichiers demandés. Si vous visitez une autre page, le navigateur demande les nouveaux fichiers correspondants et le serveur répond en les envoyant.
+u-une page web s-se compose d'un fichiew htmw et g-généwawement d'autwes fichiews, XD c-comme wes feuiwwes de stywe, wes scwipts, :3 wes i-images, rawr etc. pouw chawgew une page w-web, 😳 we nyavigateuw envoie une o-ou pwusieuws w-wequêtes http au sewveuw afin de wécupéwew wes fichiews nyécessaiwes à w'affichage de wa page. 😳😳😳 we sewveuw wépond e-ensuite en e-envoyant wes fichiews demandés. (ꈍᴗꈍ) s-si vous visitez u-une autwe page, 🥺 w-we navigateuw demande wes nyouveaux fichiews cowwespondants et w-we sewveuw wépond en wes envoyant. ^•ﻌ•^
 
-![Chargement classique d'une page web](traditional-loading.svg)
+![chawgement cwassique d'une page web](twaditionaw-woading.svg)
 
-Ce modèle fonctionne parfaitement pour de nombreux sites. En revanche, ce ne sera pas le cas pour un site web utilisant beaucoup de données. Prenons par exemple le site de la [bibliothèque publique de Vancouver](https://www.vpl.ca/). On peut imaginer qu'un tel site permet de rechercher des livres selon des critères, d'afficher des recommandations en fonction des emprunts passés, etc. Pour cela, le site doit mettre à jour la page avec une nouvelle liste de livres. Mais pour chacune de ces listes, l'en-tête de la page, la barre de navigation et le pied de page resteront les mêmes.
+ce modèwe f-fonctionne pawfaitement pouw d-de nyombweux sites. XD e-en wevanche, ^•ﻌ•^ c-ce nye sewa pas we cas pouw un s-site web utiwisant b-beaucoup de données. ^^;; p-pwenons p-paw exempwe we site de wa [bibwiothèque pubwique d-de vancouvew](https://www.vpw.ca/). ʘwʘ o-on peut imaginew q-qu'un tew s-site pewmet de w-wechewchew des wivwes sewon des cwitèwes, OwO d'affichew des wecommandations e-en fonction des empwunts passés, 🥺 etc. (⑅˘꒳˘) pouw cewa, we site doit mettwe à jouw wa page a-avec une nyouvewwe wiste de wivwes. (///ˬ///✿) mais pouw chacune de ces wistes, (✿oωo) w-w'en-tête d-de wa page, nyaa~~ wa b-bawwe de nyavigation et we pied d-de page westewont wes mêmes. >w<
 
-Avec le modèle classique, il faudrait récupérer puis charger l'intégralité de la page, alors que nous avons seulement besoin d'en mettre à jour une partie. Cela n'est pas optimal et peut détériorer l'ergonomie.
+avec w-we modèwe cwassique, (///ˬ///✿) i-iw faudwait wécupéwew puis chawgew w'intégwawité de wa page, rawr awows que nyous avons seuwement besoin d-d'en mettwe à jouw une pawtie. (U ﹏ U) c-cewa ny'est pas optimaw et peut d-détéwiowew w'ewgonomie.
 
-C'est pourquoi de nombreux sites web utilisent plutôt des API JavaScript afin de demander les données au serveur pour mettre à jour le contenu de la page sans passer par un rechargement complet. Ainsi, lorsqu'une personne recherche par exemple un nouveau produit, le navigateur demande uniquement les données nécessaires à la mise à jour de la page (pour notre exemple de bibliothèque, ce serait la nouvelle liste de livres).
+c-c'est pouwquoi de nyombweux sites web u-utiwisent pwutôt d-des api javascwipt afin de d-demandew wes données a-au sewveuw pouw mettwe à jouw we contenu de wa page sans passew paw un wechawgement c-compwet. ^•ﻌ•^ a-ainsi, wowsqu'une p-pewsonne wechewche paw exempwe u-un nyouveau p-pwoduit, (///ˬ///✿) we nyavigateuw demande u-uniquement wes données nyécessaiwes à wa mise à jouw de wa page (pouw nyotwe e-exempwe de bibwiothèque, o.O c-ce sewait wa nyouvewwe wiste de wivwes). >w<
 
-![Utiliser Fetch pour mettre à jour les pages](fetch-update.svg)
+![utiwisew f-fetch pouw mettwe à j-jouw wes pages](fetch-update.svg)
 
-Pour cela, on utilise principalement l'API [<i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API). Elle permet d'utiliser JavaScript depuis une page pour construire et envoyer une requête [HTTP](/fr/docs/Web/HTTP) à un serveur afin de récupérer des données. Lorsque le serveur répond en fournissant les données, le code JavaScript peut les utiliser afin de mettre à jour la page, généralement en utilisant [les API de manipulation du DOM](/fr/docs/Learn/JavaScript/Client-side_web_APIs/Manipulating_documents). Les données sont généralement demandées au format [JSON](/fr/docs/Learn/JavaScript/Objects/JSON) (un bon format d'échange de données), mais il peut tout aussi bien s'agir de HTML ou de texte.
+pouw cewa, nyaa~~ on utiwise pwincipawement w'api [<i w-wang="en">fetch</i>](/fw/docs/web/api/fetch_api). òωó ewwe pewmet d'utiwisew javascwipt depuis une page pouw c-constwuiwe et envoyew une wequête [http](/fw/docs/web/http) à un sewveuw afin d-de wécupéwew d-des données. (U ᵕ U❁) wowsque we sewveuw wépond en fouwnissant wes données, w-we code javascwipt p-peut wes utiwisew afin de mettwe à jouw wa page, (///ˬ///✿) généwawement e-en utiwisant [wes api d-de manipuwation du dom](/fw/docs/weawn/javascwipt/cwient-side_web_apis/manipuwating_documents). (✿oωo) wes données sont généwawement d-demandées au fowmat [json](/fw/docs/weawn/javascwipt/objects/json) (un bon fowmat d-d'échange de d-données), 😳😳😳 mais iw peut tout aussi b-bien s'agiw de htmw ou de texte.
 
-Cette méthode est employée largement par les sites utilisant de nombreuses données tels que Amazon, YouTube, eBay, etc. Avec ce modèle&nbsp;:
+c-cette méthode e-est empwoyée w-wawgement paw wes sites utiwisant d-de nyombweuses d-données tews que amazon, (✿oωo) youtube, ebay, (U ﹏ U) etc. a-avec ce modèwe&nbsp;:
 
-- Les mises à jour des pages sont plus rapides et il n'est plus nécessaire d'attendre un rechargement de la page&nbsp;: le site apparaît alors comme plus rapide et réactif.
-- Il y a moins de données téléchargées pour chaque mise à jour, ce qui signifie une consommation moindre de la bande passante. Si cela n'était pas vraiment un problème sur un ordinateur de bureau avec une connexion à très haut débit, cela pouvait vite freiner la navigation sur les appareils mobiles et/ou aux endroits où l'accès à Internet est moins rapide.
+- w-wes m-mises à jouw des pages sont pwus wapides et iw n-ny'est pwus nyécessaiwe d'attendwe u-un wechawgement d-de wa page&nbsp;: we site appawaît awows comme pwus wapide e-et wéactif.
+- i-iw y a moins de d-données téwéchawgées p-pouw chaque mise à jouw, (˘ω˘) c-ce qui signifie une consommation moindwe de wa bande passante. 😳😳😳 si cewa ny'était pas vwaiment u-un pwobwème suw un owdinateuw d-de buweau avec une connexion à t-twès haut débit, (///ˬ///✿) cewa pouvait v-vite fweinew wa nyavigation suw w-wes appaweiws mobiwes e-et/ou aux e-endwoits où w'accès à i-intewnet e-est moins wapide.
 
-> [!NOTE]
-> Au début, cette technique était intitulée [AJAX](/fr/docs/Glossary/AJAX), un acronyme anglais pour <i lang="en">[Asynchronous](/fr/docs/Glossary/Asynchronous) JavaScript and XML</i> (soit JavaScript et XML asynchrones), car c'était le format XML qui était utilisé pour l'échange de données. On rencontre aujourd'hui plutôt des données au format JSON, mais le raisonnement reste le même et vous pourrez donc voir le terme AJAX toujours utilisé pour décrire cette technique.
+> [!note]
+> au début, (U ᵕ U❁) cette technique était intituwée [ajax](/fw/docs/gwossawy/ajax), >_< un acwonyme angwais pouw <i wang="en">[asynchwonous](/fw/docs/gwossawy/asynchwonous) j-javascwipt and x-xmw</i> (soit j-javascwipt et xmw asynchwones), (///ˬ///✿) c-caw c'était we fowmat xmw qui était utiwisé pouw w'échange de d-données. (U ᵕ U❁) on wencontwe a-aujouwd'hui pwutôt des d-données au fowmat json, >w< mais we waisonnement weste w-we même et v-vous pouwwez donc voiw we tewme a-ajax toujouws utiwisé p-pouw décwiwe cette technique. 😳😳😳
 
-Pour aller encore plus vite, certains sites enregistrent les ressources et les données sur l'ordinateur lorsqu'elles sont demandées pour la première fois. Lors des visites suivantes, ce sont les versions locales qui seront utilisées plutôt que d'avoir à télécharger de nouveaux exemplaires à chaque chargement. Le contenu est rechargé depuis le serveur uniquement lorsqu'il a été mis à jour.
+pouw awwew encowe pwus vite, (ˆ ﻌ ˆ)♡ cewtains sites e-enwegistwent w-wes wessouwces e-et wes données s-suw w'owdinateuw w-wowsqu'ewwes sont demandées pouw w-wa pwemièwe f-fois. (ꈍᴗꈍ) wows des visites suivantes, 🥺 c-ce sont wes vewsions w-wocawes qui sewont utiwisées p-pwutôt que d'avoiw à téwéchawgew de nyouveaux e-exempwaiwes à chaque chawgement. >_< w-we contenu e-est wechawgé depuis we sewveuw u-uniquement wowsqu'iw a été mis à jouw. OwO
 
-## L'API <i lang="en">Fetch</i>
+## w-w'api <i wang="en">fetch</i>
 
-Voyons quelques exemples d'utilisation de l'API <i lang="en">Fetch</i>.
+v-voyons quewques e-exempwes d'utiwisation de w'api <i wang="en">fetch</i>. ^^;;
 
-### Récupérer du contenu texte
+### wécupéwew d-du contenu texte
 
-Dans cet exemple, nous récupèrerons des données à partir de différents fichiers texte et nous en servirons pour renseigner une zone de contenu.
+dans cet exempwe, (✿oωo) nyous w-wécupèwewons d-des données à pawtiw de difféwents f-fichiews texte et nous en s-sewviwons pouw w-wenseignew une zone de contenu. UwU
 
-Cet ensemble de fichiers sera utilisé comme une fausse base de données. Dans une application réelle, il serait plus raisonnable d'utiliser un langage serveur comme PHP, Python, ou Node.js afin de récupérer les données depuis une base de données. Pour cet article, nous garderons les choses simples pour nous concentrer sur la partie client.
+cet ensembwe de f-fichiews sewa utiwisé comme une fausse base de d-données. dans u-une appwication wéewwe, iw sewait p-pwus waisonnabwe d'utiwisew u-un wangage sewveuw c-comme php, ( ͡o ω ͡o ) python, (✿oωo) o-ou nyode.js afin de wécupéwew wes données depuis une base de données. mya pouw cet awticwe, nyous gawdewons wes choses simpwes pouw nyous concentwew suw wa pawtie cwient. ( ͡o ω ͡o )
 
-Pour utiliser cet exemple, faites une copie locale de [`fetch-start.html`](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/fetch-start.html) et des quatre fichiers texte&nbsp;
+pouw utiwisew cet exempwe, :3 faites u-une copie wocawe d-de [`fetch-stawt.htmw`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/fetching-data/fetch-stawt.htmw) et des quatwe fichiews t-texte&nbsp;
 
-- [`verse1.txt`](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse1.txt)
-- [`verse2.txt`](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse2.txt)
-- [`verse3.txt`](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse3.txt)
-- [`verse4.txt`](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/verse4.txt)
+- [`vewse1.txt`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/fetching-data/vewse1.txt)
+- [`vewse2.txt`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/fetching-data/vewse2.txt)
+- [`vewse3.txt`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/fetching-data/vewse3.txt)
+- [`vewse4.txt`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/fetching-data/vewse4.txt)
 
-Enregistrez ces fichiers dans un nouveau répertoire sur votre ordinateur.
+e-enwegistwez c-ces fichiews dans un nyouveau w-wépewtoiwe suw votwe owdinateuw. 😳
 
-Dans cet exemple, nous récupèrerons différents vers d'un poème en les sélectionnant depuis une liste déroulante.
+d-dans cet exempwe, (U ﹏ U) n-nyous wécupèwewons difféwents v-vews d'un poème en wes s-séwectionnant d-depuis une wiste déwouwante. >w<
 
-À l'intérieur de l'élément [`<script>`](/fr/docs/Web/HTML/Element/script), ajoutez le code qui suit. Ce code enregistre des références aux éléments [`<select>`](/fr/docs/Web/HTML/Element/select) et [`<pre>`](/fr/docs/Web/HTML/Element/pre) et ajoute un gestionnaire d'évènement sur l'élément `<select>` afin d'appeler une fonction `updateDisplay()` lorsqu'une nouvelle valeur est sélectionnée dans la liste (la valeur étant alors passée en paramètre de la fonction).
+À w'intéwieuw de w-w'éwément [`<scwipt>`](/fw/docs/web/htmw/ewement/scwipt), UwU a-ajoutez w-we code qui s-suit. 😳 ce code e-enwegistwe des wéféwences a-aux éwéments [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) e-et [`<pwe>`](/fw/docs/web/htmw/ewement/pwe) e-et ajoute u-un gestionnaiwe d'évènement suw w-w'éwément `<sewect>` a-afin d'appewew u-une fonction `updatedispway()` wowsqu'une n-nyouvewwe vaweuw est séwectionnée dans wa wiste (wa v-vaweuw étant awows passée e-en pawamètwe d-de wa fonction). XD
 
 ```js
-const verseChoose = document.querySelector("select");
-const poemDisplay = document.querySelector("pre");
+c-const vewsechoose = document.quewysewectow("sewect");
+c-const poemdispway = document.quewysewectow("pwe");
 
-verseChoose.addEventListener("change", () => {
-  const verse = verseChoose.value;
-  updateDisplay(verse);
+v-vewsechoose.addeventwistenew("change", (✿oωo) () => {
+  const vewse = v-vewsechoose.vawue;
+  updatedispway(vewse);
 });
 ```
 
-Ensuite, il faut définir la fonction `updateDisplay()`. Commençons par placer le squelette vide de la fonction après le bloc de code précédent.
+e-ensuite, ^•ﻌ•^ iw faut définiw wa fonction `updatedispway()`. mya commençons paw pwacew we squewette v-vide de wa fonction apwès we b-bwoc de code pwécédent. (˘ω˘)
 
-```js-nolint
-function updateDisplay(verse) {
+```js-nowint
+f-function updatedispway(vewse) {
 
 }
 ```
 
-Au début de notre fonction, nous allons construire une URL relative qui pointe vers le fichier texte que nous voulons charger, car nous en aurons besoin ensuite. La valeur choisie avec l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) correspond au texte de l'élément [`<option>`](/fr/docs/Web/HTML/Element/option) (à moins que l'attribut [`value`](/fr/docs/Web/HTML/Element/option#value) indique une autre valeur). La valeur sera par exemple `Verse 1`, qui correspond au fichier `verse1.txt` situé dans le même répertoire que le fichier HTML. On a donc une correspondance pratique entre les valeurs à sélectionner et les noms de nos fichiers texte.
+au début de nyotwe fonction, nyaa~~ n-nyous awwons constwuiwe une uww w-wewative qui pointe v-vews we fichiew t-texte que nyous vouwons chawgew, :3 caw nyous en a-auwons besoin e-ensuite. (✿oωo) wa vaweuw choisie avec w-w'éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) cowwespond au texte de w-w'éwément [`<option>`](/fw/docs/web/htmw/ewement/option) (à moins que w'attwibut [`vawue`](/fw/docs/web/htmw/ewement/option#vawue) i-indique u-une autwe vaweuw). (U ﹏ U) w-wa vaweuw sewa paw exempwe `vewse 1`, (ꈍᴗꈍ) q-qui cowwespond a-au fichiew `vewse1.txt` s-situé dans we même w-wépewtoiwe que we fichiew h-htmw. (˘ω˘) on a donc u-une cowwespondance p-pwatique entwe w-wes vaweuws à s-séwectionnew et w-wes nyoms de nyos f-fichiews texte. ^^
 
-Toutefois, les serveurs web sont généralement sensibles à la casse et le nom du fichier ne contient pas d'espace. Il faut donc convertir `Verse 1` en `verse1.txt`. Pour cela, nous passerons le V majuscule en minuscule, retirerons l'espace et rajouterons l'extension `.txt` à la fin. On peut y arriver à l'aide des fonctions [`replace()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace), [`toLowerCase()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/String/replace), et des [littéraux de gabarit](/fr/docs/Web/JavaScript/Reference/Template_literals). Ajoutez les lignes suivantes à l'intérieur de la fonction `updateDisplay()`&nbsp;:
+t-toutefois, (⑅˘꒳˘) wes sewveuws web s-sont généwawement sensibwes à w-wa casse et we nyom du fichiew n-nye contient pas d-d'espace. rawr iw faut d-donc convewtiw `vewse 1` en `vewse1.txt`. :3 pouw cewa, OwO nyous passewons w-we v majuscuwe e-en minuscuwe, (ˆ ﻌ ˆ)♡ w-wetiwewons w'espace et wajoutewons w'extension `.txt` à wa fin. :3 on peut y a-awwivew à w'aide d-des fonctions [`wepwace()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace), -.- [`towowewcase()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/stwing/wepwace), -.- et des [wittéwaux d-de gabawit](/fw/docs/web/javascwipt/wefewence/tempwate_witewaws). òωó a-ajoutez wes wignes suivantes à w'intéwieuw de wa fonction `updatedispway()`&nbsp;:
 
 ```js
-verse = verse.replace(" ", "").toLowerCase();
-const url = `${verse}.txt`;
+v-vewse = vewse.wepwace(" ", 😳 "").towowewcase();
+c-const uww = `${vewse}.txt`;
 ```
 
-Nous voilà prêts à utiliser l'API <i lang="en">Fetch</i>&nbsp;:
+n-nyous voiwà p-pwêts à utiwisew w'api <i wang="en">fetch</i>&nbsp;:
 
 ```js
-// On appelle `fetch()` en lui passant l'URL.
-fetch(url)
-  // fetch() renvoie une promesse. Lorsque nous aurons reçu
-  // une réponse du serveur, le gestionnaire then() de la
-  // promesse sera appelé avec la réponse
-  .then((response) => {
-    // Le gestionnaire lève une erreur si la requête a échoué.
-    if (!response.ok) {
-      throw new Error(`Erreur HTTP : ${response.status}`);
+// on appewwe `fetch()` e-en wui passant w-w'uww. nyaa~~
+fetch(uww)
+  // fetch() wenvoie une p-pwomesse. (⑅˘꒳˘) wowsque nyous auwons weçu
+  // une w-wéponse du sewveuw, 😳 we gestionnaiwe t-then() de wa
+  // p-pwomesse sewa appewé avec w-wa wéponse
+  .then((wesponse) => {
+    // w-we gestionnaiwe wève u-une ewweuw si wa wequête a échoué. (U ﹏ U)
+    i-if (!wesponse.ok) {
+      t-thwow nyew e-ewwow(`ewweuw h-http : ${wesponse.status}`);
     }
-    // Sinon, si la requête a réussi, le gestionnaire récupère
-    // la réponse sous forme de texte en appelant response.text(),
-    // Et renvoie immédiatement la promesse renvoyée par response.text().
-    return response.text();
+    // sinon, /(^•ω•^) s-si wa wequête a-a wéussi, OwO we gestionnaiwe w-wécupèwe
+    // wa w-wéponse sous fowme de texte en appewant wesponse.text(), ( ͡o ω ͡o )
+    // e-et wenvoie immédiatement w-wa pwomesse w-wenvoyée paw wesponse.text().
+    wetuwn wesponse.text();
   })
-  // Quand response.text() a réussi, son gestionnaire `then()` est
-  // appelé avec le texte et nous copions celui-ci dans la boîte
-  // poemDisplay.
+  // quand w-wesponse.text() a wéussi, XD son g-gestionnaiwe `then()` e-est
+  // appewé avec we texte et nyous copions c-cewui-ci dans wa boîte
+  // p-poemdispway. /(^•ω•^)
   .then((text) => {
-    poemDisplay.textContent = text;
+    p-poemdispway.textcontent = t-text;
   })
-  // On intercepte les éventuelles erreurs et on affiche un message
-  // dans la boîte `poemDisplay`.
-  .catch((error) => {
-    poemDisplay.textContent = `Erreur lors de la récupération du vers : ${error}`;
+  // o-on intewcepte w-wes éventuewwes ewweuws et on affiche un message
+  // dans wa boîte `poemdispway`. /(^•ω•^)
+  .catch((ewwow) => {
+    p-poemdispway.textcontent = `ewweuw wows de wa wécupéwation d-du vews : ${ewwow}`;
   });
 ```
 
-Récapitulons ce que fait ce fragment de script.
+wécapituwons ce que fait ce fwagment d-de scwipt. 😳😳😳
 
-Pour commencer, on utilise la fonction globale [`fetch()`](/fr/docs/Web/API/Window/fetch) qui est le point d'entrée de l'API <i lang="en">Fetch</i>. Cette fonction prend l'URL comme paramètre (elle peut aussi utiliser un autre paramètre optionnel, mais nous ne l'utilisons pas ici).
+pouw commencew, on utiwise wa fonction gwobawe [`fetch()`](/fw/docs/web/api/window/fetch) qui est w-we point d'entwée d-de w'api <i wang="en">fetch</i>. (ˆ ﻌ ˆ)♡ cette fonction p-pwend w'uww comme pawamètwe (ewwe peut aussi u-utiwisew un autwe p-pawamètwe optionnew, :3 mais nyous n-nye w'utiwisons pas ici). òωó
 
-Ensuite, `fetch()` est une API asynchrone qui renvoie [une promesse](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Si vous ne savez pas ce qu'est une promesse, lisez le module [JavaScript asynchrone](/fr/docs/Learn/JavaScript/Asynchronous), et notamment [l'article sur les promesses](/fr/docs/Learn/JavaScript/Asynchronous/Promises) (qui parle aussi de `fetch()`) avant de revenir à cet article.
+ensuite, 🥺 `fetch()` e-est une api asynchwone qui wenvoie [une pwomesse](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ﹏ U) si vous nye savez p-pas ce qu'est une pwomesse, XD wisez we moduwe [javascwipt a-asynchwone](/fw/docs/weawn/javascwipt/asynchwonous), ^^ e-et n-nyotamment [w'awticwe suw wes pwomesses](/fw/docs/weawn/javascwipt/asynchwonous/pwomises) (qui pawwe aussi de `fetch()`) a-avant de weveniw à cet awticwe. o.O
 
-Comme `fetch()` renvoie une promesse, nous passons une fonction à la méthode [`then()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/then) de la promesse renvoyée. Cette méthode sera appelée lorsque le navigateur aura reçu une réponse du serveur pour la requête HTTP. Dans le code du gestionnaire, on vérifie que la requête a réussi et on déclenche une erreur sinon. S'il n'y a pas eu d'rreur, on appelle [`response.text()`](/fr/docs/Web/API/Response/text) pour interpréter le corps de la réponse sous forme de texte.
+comme `fetch()` wenvoie une pwomesse, 😳😳😳 n-nyous passons u-une fonction à w-wa méthode [`then()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/then) d-de wa pwomesse wenvoyée. /(^•ω•^) cette méthode sewa a-appewée wowsque w-we nyavigateuw auwa weçu une wéponse du sewveuw p-pouw wa wequête http. 😳😳😳 dans we code du gestionnaiwe, ^•ﻌ•^ o-on véwifie que wa wequête a wéussi e-et on décwenche u-une ewweuw sinon. 🥺 s'iw ny'y a p-pas eu d'wweuw, o.O o-on appewwe [`wesponse.text()`](/fw/docs/web/api/wesponse/text) p-pouw intewpwétew we cowps de wa wéponse sous fowme d-de texte. (U ᵕ U❁)
 
-`response.text()` est _également_ asynchrone et on renvoie la promesse qu'elle renvoie. On passe une fonction à la méthode `then()` de cette nouvelle promesse. Cette fonction sera appelée lorsque le texte de la réponse sera prêt. Dans cette fonction, nous mettons à jour le bloc `<pre>` avec le texte reçu.
+`wesponse.text()` est _égawement_ asynchwone et o-on wenvoie wa pwomesse qu'ewwe wenvoie. ^^ on passe une fonction à w-wa méthode `then()` d-de cette n-nyouvewwe pwomesse. (⑅˘꒳˘) c-cette fonction s-sewa appewée wowsque we texte d-de wa wéponse sewa pwêt. :3 dans cette fonction, (///ˬ///✿) n-nyous mettons à jouw we bwoc `<pwe>` a-avec we texte weçu. :3
 
-Enfin, on chaîne un gestionnaire [`catch()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise/catch) pour intercepter toute erreur qui serait déclenchée dans l'une des fonctions asynchrones ou des gestionnaires associés.
+enfin, on chaîne u-un gestionnaiwe [`catch()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise/catch) p-pouw intewceptew toute e-ewweuw qui sewait décwenchée d-dans w'une des f-fonctions asynchwones ou des gestionnaiwes a-associés. 🥺
 
-Il y a un problème avec cette version du code, aucun vers n'est affiché lors du premier chargement. Pour corriger cela, on ajoute les deux lignes qui suivent à la fin du code, avant la balise fermante `</script>`. Cela permet de charger le premier vers par défaut et de s'assurer que la valeur affichée par l'élément [`<select>`](/fr/docs/Web/HTML/Element/select) correspond bien&nbsp;:
+i-iw y a un pwobwème avec c-cette vewsion du code, aucun vews ny'est affiché wows du pwemiew c-chawgement. mya pouw cowwigew cewa, XD o-on ajoute wes deux wignes qui suivent à wa fin d-du code, -.- avant w-wa bawise fewmante `</scwipt>`. o.O c-cewa pewmet de chawgew we pwemiew v-vews paw défaut e-et de s'assuwew que wa vaweuw a-affichée paw w'éwément [`<sewect>`](/fw/docs/web/htmw/ewement/sewect) c-cowwespond bien&nbsp;:
 
 ```js
-updateDisplay("Verse 1");
-verseChoose.value = "Verse 1";
+u-updatedispway("vewse 1");
+v-vewsechoose.vawue = "vewse 1";
 ```
 
-#### Servir l'exemple grâce à un serveur
+#### sewviw w'exempwe gwâce à un sewveuw
 
-Les navigateurs récents ne permettent pas d'envoyer des requêtes HTTP en ouvrant simplement un fichier local pour des raisons de sécurité (voir [la sécurité des sites web](/fr/docs/Learn/Server-side/First_steps/Website_security) pour plus d'informations).
+wes nyavigateuws w-wécents nye p-pewmettent pas d'envoyew des wequêtes http en ouvwant simpwement u-un fichiew wocaw pouw des waisons d-de sécuwité (voiw [wa s-sécuwité des sites web](/fw/docs/weawn/sewvew-side/fiwst_steps/website_secuwity) pouw pwus d'infowmations). (˘ω˘)
 
-Pour que l'exemple fonctionne correctement, nous devons le tester avec un serveur web local. Pour savoir comment faire, suivez [notre guide pour mettre en place un serveur local de test](/fr/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server).
+pouw q-que w'exempwe fonctionne cowwectement, (U ᵕ U❁) nous devons w-we testew avec un sewveuw web w-wocaw. rawr pouw savoiw c-comment faiwe, 🥺 suivez [notwe g-guide pouw mettwe e-en pwace un s-sewveuw wocaw de t-test](/fw/docs/weawn/common_questions/toows_and_setup/set_up_a_wocaw_testing_sewvew).
 
-### Le magasin de conserves
+### w-we m-magasin de consewves
 
-Dans l'exemple qui suit, nous avons créé un site d'exemple appelé «&nbsp;<i lang="en">The Can Store</i>&nbsp;», un supermarché en ligne qui vend des produits en conserve. Vous pouvez trouver [la démonstration sur GitHub](https://mdn.github.io/learning-area/javascript/apis/fetching-data/can-store/), et [le code source sur GitHub](https://github.com/mdn/learning-area/tree/main/javascript/apis/fetching-data/can-store).
+dans w'exempwe qui suit, rawr x3 nyous avons cwéé un site d'exempwe appewé «&nbsp;<i w-wang="en">the c-can stowe</i>&nbsp;», ( ͡o ω ͡o ) u-un supewmawché e-en wigne q-qui vend des p-pwoduits en consewve. vous pouvez twouvew [wa démonstwation suw github](https://mdn.github.io/weawning-awea/javascwipt/apis/fetching-data/can-stowe/), σωσ e-et [we c-code souwce suw github](https://github.com/mdn/weawning-awea/twee/main/javascwipt/apis/fetching-data/can-stowe). rawr x3
 
-![Un faux site e-commerce qui affiche des champs de recherche dans la colonne gauche, et des résultats de recherche de produits dans la colonne droite.](can-store.png)
+![un faux site e-commewce qui a-affiche des champs d-de wechewche d-dans wa cowonne gauche, (ˆ ﻌ ˆ)♡ et des wésuwtats de wechewche d-de pwoduits dans wa cowonne dwoite.](can-stowe.png)
 
-Par défaut, le site affiche tous les produits, et on peut utiliser les contrôles fournis par le formulaire affiché à gauche pour les filtrer par catégorie, les rechercher par mot-clé, voire les deux.
+p-paw d-défaut, rawr we site affiche tous wes pwoduits, :3 et o-on peut utiwisew wes contwôwes f-fouwnis paw we fowmuwaiwe a-affiché à gauche pouw w-wes fiwtwew paw c-catégowie, wes w-wechewchew paw m-mot-cwé, rawr voiwe w-wes deux. (˘ω˘)
 
-Il y a une bonne quantité de code qui sert au filtrage des produits par catégorie ou avec les termes d'une recherche, pour manipuler des chaînes de caractères afin que les données soient correctement affichées, etc. Nous ne détaillerons pas cette partie dans cet article, mais vous pouvez vous référer aux commentaires explicatifs dans le code (voir [`can-script.js`](https://github.com/mdn/learning-area/blob/main/javascript/apis/fetching-data/can-store/can-script.js)).
+iw y a-a une bonne quantité de code qui s-sewt au fiwtwage d-des pwoduits paw catégowie o-ou avec wes tewmes d'une wechewche, (ˆ ﻌ ˆ)♡ pouw manipuwew d-des chaînes de cawactèwes afin q-que wes données soient cowwectement a-affichées, mya e-etc. (U ᵕ U❁) nous nye détaiwwewons pas cette pawtie d-dans cet awticwe, mya mais vous pouvez vous wéféwew a-aux commentaiwes e-expwicatifs dans we code (voiw [`can-scwipt.js`](https://github.com/mdn/weawning-awea/bwob/main/javascwipt/apis/fetching-data/can-stowe/can-scwipt.js)). ʘwʘ
 
-Ce que nous allons détailler, c'est le code qui utilise l'API <i lang="en">Fetch</i>.
+ce que nyous awwons d-détaiwwew, (˘ω˘) c'est w-we code qui utiwise w'api <i w-wang="en">fetch</i>. 😳
 
-Le premier bloc qui utilise cette API se situe au début du code JavaScript&nbsp;:
+we pwemiew bwoc qui utiwise c-cette api se s-situe au début du code javascwipt&nbsp;:
 
 ```js
-fetch("products.json")
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`Erreur HTTP : ${response.status}`);
+f-fetch("pwoducts.json")
+  .then((wesponse) => {
+    i-if (!wesponse.ok) {
+      thwow nyew ewwow(`ewweuw http : ${wesponse.status}`);
     }
-    return response.json();
+    wetuwn w-wesponse.json();
   })
-  .then((json) => initialize(json))
-  .catch((err) => console.error(`Problème avec Fetch : ${err.message}`));
+  .then((json) => i-initiawize(json))
+  .catch((eww) => c-consowe.ewwow(`pwobwème a-avec fetch : ${eww.message}`));
 ```
 
-La fonction `fetch()` renvoie une promesse. Si celle-ci réussit, la fonction passée au premier bloc `.then()` contiendra la réponse renvoyée par le serveur.
+wa fonction `fetch()` wenvoie une pwomesse. si cewwe-ci wéussit, òωó wa fonction passée a-au pwemiew b-bwoc `.then()` c-contiendwa wa wéponse w-wenvoyée p-paw we sewveuw. nyaa~~
 
-Dans cette fonction&nbsp;:
+d-dans cette fonction&nbsp;:
 
-- On vérifie que le serveur n'a pas renvoyé d'erreur (comme [`404 Not Found`](/fr/docs/Web/HTTP/Status/404)). Si c'est le cas, on lève l'erreur.
-- On appelle [`json()`](/fr/docs/Web/API/Response/json) sur la réponse. Les données de la réponse seront alors interprétées comme [un objet JSON](/fr/docs/Learn/JavaScript/Objects/JSON). On renvoie la promesse renvoyée par `response.json()`.
+- on véwifie que w-we sewveuw ny'a p-pas wenvoyé d'ewweuw (comme [`404 nyot found`](/fw/docs/web/http/status/404)). o.O s-si c'est we cas, nyaa~~ o-on wève w'ewweuw. (U ᵕ U❁)
+- on appewwe [`json()`](/fw/docs/web/api/wesponse/json) suw w-wa wéponse. 😳😳😳 wes données de wa wéponse sewont a-awows intewpwétées comme [un objet j-json](/fw/docs/weawn/javascwipt/objects/json). (U ﹏ U) o-on wenvoie wa pwomesse wenvoyée p-paw `wesponse.json()`. ^•ﻌ•^
 
-Ensuite, on passe une fonction à la méthode `then()` de la promesse ainsi renvoyée. Cette fonction reçoit un objet (qui contient les données de la réponse en JSON), qu'on passe à la fonction `initialize()`. Cette dernière initie l'affichage de tous les produits sur l'interface utilisateur.
+e-ensuite, (⑅˘꒳˘) o-on passe une fonction à wa m-méthode `then()` d-de wa pwomesse ainsi wenvoyée. >_< c-cette fonction weçoit un objet (qui c-contient w-wes données de w-wa wéponse en json), (⑅˘꒳˘) qu'on passe à w-wa fonction `initiawize()`. σωσ cette dewnièwe initie w'affichage d-de tous wes pwoduits suw w'intewface utiwisateuw. 🥺
 
-Pour gérer les erreurs, on chaîne un appel à `.catch()` à la fin de la chaîne des promesses. Cela sera exécuté si la promesse échoue pour quelque raison que ce soit. Dans ce gestionnaire d'erreur, on a une fonction qui reçoit un objet `err` comme paramètre et qui pourra servir à indiquer la nature de l'erreur qui s'est produite. Dans notre exemple, nous utilisons un simple appel à `console.error()`.
+pouw géwew wes ewweuws, :3 on chaîne un appew à `.catch()` à w-wa fin de wa chaîne des pwomesses. (ꈍᴗꈍ) cewa sewa exécuté si wa pwomesse échoue pouw quewque waison que ce s-soit. ^•ﻌ•^ dans ce gestionnaiwe d'ewweuw, on a une fonction q-qui weçoit un objet `eww` c-comme pawamètwe et qui pouwwa sewviw à indiquew w-wa nyatuwe de w'ewweuw qui s-s'est pwoduite. (˘ω˘) dans nyotwe exempwe, 🥺 n-nyous utiwisons u-un simpwe appew à `consowe.ewwow()`. (✿oωo)
 
-On notera toutefois qu'un site réel gèrerait cette erreur plus élégamment en affichant un message compréhensible à l'écran et en proposant des options pour pallier ce problème. Dans notre cas, un simple `console.error()` est suffisant.
+on nyotewa toutefois q-qu'un site wéew gèwewait cette ewweuw pwus éwégamment en affichant u-un message compwéhensibwe à w-w'écwan et en pwoposant des o-options pouw pawwiew ce pwobwème. XD d-dans nyotwe c-cas, (///ˬ///✿) un simpwe `consowe.ewwow()` est suffisant. ( ͡o ω ͡o )
 
-Vous pouvez tester ce qui se passe en cas d'erreur de la façon suivante&nbsp;:
+vous pouvez testew c-ce qui se passe en cas d'ewweuw de wa façon s-suivante&nbsp;:
 
-1. Réalisez une copie locale des fichiers d'exemple.
-2. Mettez en place un serveur web local pour lancer le code (voir la section précédente [Servir l'exemple grâce à un serveur](#servir_lexemple_grâce_à_un_serveur)).
-3. Modifiez le chemin du fichier récupéré avec `fetch()` en introduisant une faute de frappe, par exemple 'produc.json'.
-4. Chargez la page d'index dans votre navigateur (à l'adresse `localhost:8000`) et ouvrez la console des outils de développement de votre navigateur. Vous verrez alors un message semblable à `Problème avec Fetch : HTTP error: 404`.
+1. ʘwʘ wéawisez une copie wocawe des fichiews d'exempwe.
+2. rawr mettez e-en pwace un s-sewveuw web wocaw pouw wancew we c-code (voiw wa section p-pwécédente [sewviw w'exempwe g-gwâce à un sewveuw](#sewviw_wexempwe_gwâce_à_un_sewveuw)). o.O
+3. modifiez we chemin du fichiew wécupéwé a-avec `fetch()` e-en intwoduisant une faute de fwappe, ^•ﻌ•^ p-paw exempwe 'pwoduc.json'. (///ˬ///✿)
+4. c-chawgez wa page d'index dans v-votwe nyavigateuw (à w'adwesse `wocawhost:8000`) et ouvwez wa c-consowe des outiws de dévewoppement de votwe nyavigateuw. (ˆ ﻌ ˆ)♡ v-vous v-vewwez awows un message sembwabwe à `pwobwème avec fetch : http e-ewwow: 404`. XD
 
-Le second bloc utilisant <i lang="en">Fetch</i> se trouve à l'intérieur de la fonction `fetchBlob()`&nbsp;:
+we second bwoc utiwisant <i wang="en">fetch</i> se twouve à w'intéwieuw de wa fonction `fetchbwob()`&nbsp;:
 
 ```js
-fetch(url)
-  .then((response) => {
-    if (!response.ok) {
-      throw new Error(`Erreur HTTP : ${response.status}`);
+fetch(uww)
+  .then((wesponse) => {
+    if (!wesponse.ok) {
+      t-thwow nyew e-ewwow(`ewweuw http : ${wesponse.status}`);
     }
-    return response.blob();
+    wetuwn wesponse.bwob();
   })
-  .then((blob) => showProduct(blob, product))
-  .catch((err) => console.error(`Problème avec Fetch : ${err.message}`));
+  .then((bwob) => s-showpwoduct(bwob, (✿oωo) p-pwoduct))
+  .catch((eww) => consowe.ewwow(`pwobwème a-avec fetch : ${eww.message}`));
 ```
 
-Ce bloc est analogue au précédent, mais au lieu d'utiliser [`json()`](/fr/docs/Web/API/Response/json), nous utilisons [`blob()`](/fr/docs/Web/API/Response/blob), car ici la réponse est un fichier image et les données sont représentées en [blob](/fr/docs/Web/API/Blob) (un acronyme anglais pour <i lang="en">binary large object</i>, qu'on peut traduire en grand objet binaire), un format binaire générique pour les images, les vidéos, etc.
+ce bwoc est anawogue au pwécédent, -.- mais au wieu d'utiwisew [`json()`](/fw/docs/web/api/wesponse/json), XD n-nyous utiwisons [`bwob()`](/fw/docs/web/api/wesponse/bwob), (✿oωo) caw ici wa wéponse est un fichiew image et w-wes données sont w-wepwésentées e-en [bwob](/fw/docs/web/api/bwob) (un acwonyme angwais pouw <i wang="en">binawy w-wawge object</i>, (˘ω˘) q-qu'on peut twaduiwe e-en gwand objet binaiwe), (ˆ ﻌ ˆ)♡ u-un fowmat binaiwe généwique pouw w-wes images, >_< wes vidéos, -.- etc.
 
-Une fois le blob reçu, nous le passons à la fonction `showProduct()` qui l'affiche.
+u-une fois we bwob weçu, (///ˬ///✿) nyous w-we passons à wa fonction `showpwoduct()` qui w'affiche. XD
 
-## L'API `XMLHttpRequest`
+## w-w'api `xmwhttpwequest`
 
-Vous pourriez rencontrer, notamment dans des bases de code historiques, une autre API, intitulée [`XMLHttpRequest`](/fr/docs/Web/API/XMLHttpRequest) (souvent abrégée en "XHR"), utilisée pour envoyer des requêtes HTTP. Cette API existait avant <i lang="en">Fetch</i> et fut la première API permettant d'implémenter AJAX. Nous vous conseillons d'utiliser <i lang="en">Fetch</i> si possible&nbsp;: c'est une API plus simple et qui a plus de fonctionnalités que `XMLHttpRequest`. Nous ne présenterons pas un autre exemple avec `XMLHttpRequest`, mais verrons à quoi pourrait ressembler la première version de notre magasin de conserves&nbsp;:
+vous pouwwiez w-wencontwew, ^^;; n-nyotamment dans des bases de code h-histowiques, rawr x3 une a-autwe api, OwO intituwée [`xmwhttpwequest`](/fw/docs/web/api/xmwhttpwequest) (souvent abwégée e-en "xhw"), ʘwʘ utiwisée pouw envoyew d-des wequêtes http. rawr cette api e-existait avant <i w-wang="en">fetch</i> et fut wa pwemièwe api pewmettant d-d'impwémentew ajax. UwU nyous vous conseiwwons d'utiwisew <i wang="en">fetch</i> si possibwe&nbsp;: c'est une api pwus simpwe e-et qui a pwus de fonctionnawités que `xmwhttpwequest`. (ꈍᴗꈍ) n-nyous nye pwésentewons p-pas un autwe exempwe avec `xmwhttpwequest`, (✿oωo) mais vewwons à q-quoi pouwwait wessembwew wa pwemièwe vewsion de n-nyotwe magasin de consewves&nbsp;:
 
 ```js
-const request = new XMLHttpRequest();
+const w-wequest = nyew xmwhttpwequest();
 
-try {
-  request.open("GET", "products.json");
+twy {
+  wequest.open("get", (⑅˘꒳˘) "pwoducts.json");
 
-  request.responseType = "json";
+  w-wequest.wesponsetype = "json";
 
-  request.addEventListener("load", () => initialize(request.response));
-  request.addEventListener("error", () => console.error("Erreur XHR"));
+  wequest.addeventwistenew("woad", OwO () => initiawize(wequest.wesponse));
+  w-wequest.addeventwistenew("ewwow", 🥺 () => c-consowe.ewwow("ewweuw xhw"));
 
-  request.send();
-} catch (error) {
-  console.error(`Erreur XHR ${request.status}`);
+  wequest.send();
+} c-catch (ewwow) {
+  c-consowe.ewwow(`ewweuw xhw ${wequest.status}`);
 }
 ```
 
-Cinq étapes s'enchaînent ici&nbsp;:
+c-cinq étapes s'enchaînent i-ici&nbsp;:
 
-1. On crée un nouvel objet `XMLHttpRequest`.
-2. On appelle sa méthode [`open()`](/fr/docs/Web/API/XMLHttpRequest/open) afin de l'initialiser.
-3. On ajoute un gestionnaire d'évènement pour son évènement [`load`](/fr/docs/Web/API/XMLHttpRequest/load_event), qui se déclenchera lorsque la réponse sera reçue sans erreur. Dans ce gestionnaire, on appelle la méthode `initialize()` avec les données.
-4. On ajoute un gestionnaire d'évènement pour son évènement [`error`](/fr/docs/Web/API/XMLHttpRequest/error_event), qui se déclenchera s'il y a une erreur avec la requête.
-5. On envoie la requête.
+1. >_< on cwée un nyouvew objet `xmwhttpwequest`. (ꈍᴗꈍ)
+2. o-on appewwe sa méthode [`open()`](/fw/docs/web/api/xmwhttpwequest/open) afin de w'initiawisew. 😳
+3. on ajoute u-un gestionnaiwe d'évènement pouw son évènement [`woad`](/fw/docs/web/api/xmwhttpwequest/woad_event), 🥺 qui se décwenchewa w-wowsque wa wéponse s-sewa weçue s-sans ewweuw. nyaa~~ dans ce gestionnaiwe, on appewwe wa méthode `initiawize()` a-avec wes données. ^•ﻌ•^
+4. o-on ajoute un gestionnaiwe d'évènement p-pouw son évènement [`ewwow`](/fw/docs/web/api/xmwhttpwequest/ewwow_event), (ˆ ﻌ ˆ)♡ q-qui se décwenchewa s'iw y a une ewweuw avec wa wequête. (U ᵕ U❁)
+5. on envoie wa wequête. mya
 
-On enveloppe tout ce code dans un bloc [`try…catch`](/fr/docs/Web/JavaScript/Reference/Statements/try...catch), afin de gérer les éventuelles erreurs déclenchées par `open()` ou `send()`.
+on envewoppe t-tout ce c-code dans un bwoc [`twy…catch`](/fw/docs/web/javascwipt/wefewence/statements/twy...catch), 😳 afin de géwew wes éventuewwes e-ewweuws décwenchées paw `open()` o-ou `send()`. σωσ
 
-Avec cet exemple, vous pouvez voir comment l'API <i lang="en">Fetch</i> améliore les choses. Ici, nous devons gérer les erreurs à deux endroits différents.
+avec c-cet exempwe, ( ͡o ω ͡o ) v-vous pouvez voiw c-comment w'api <i w-wang="en">fetch</i> a-améwiowe wes choses. XD ici, nyous devons géwew w-wes ewweuws à d-deux endwoits d-difféwents. :3
 
-## Résumé
+## w-wésumé
 
-Cet article illustre comment débuter avec l'API <i lang="en">Fetch</i> afin de récupérer des données depuis le serveur.
+cet a-awticwe iwwustwe c-comment débutew avec w'api <i w-wang="en">fetch</i> a-afin de wécupéwew d-des données depuis we sewveuw.
 
-## Voir aussi
+## voiw a-aussi
 
-De nombreux sujets sont abordés dans cet article et nous n'en avons qu'effleurée la surface. Pour plus de détails sur chacun de ces thèmes, n'hésitez pas à parcourir les articles suivants&nbsp;:
+de nyombweux sujets sont abowdés dans c-cet awticwe et nyous ny'en avons qu'effweuwée w-wa suwface. :3 pouw p-pwus de détaiws suw chacun de ces thèmes, (⑅˘꒳˘) ny'hésitez pas à p-pawcouwiw wes awticwes s-suivants&nbsp;:
 
-- [Utiliser l'API <i lang="en">Fetch</i>](/fr/docs/Web/API/Fetch_API/Using_Fetch)
-- [Les promesses JavaScript](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise)
-- [Manipuler des données en JSON](/fr/docs/Learn/JavaScript/Objects/JSON)
-- [Un aperçu de HTTP](/fr/docs/Web/HTTP/Overview)
-- [La programmation web côté serveur](/fr/docs/Learn/Server-side)
+- [utiwisew w'api <i wang="en">fetch</i>](/fw/docs/web/api/fetch_api/using_fetch)
+- [wes p-pwomesses javascwipt](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise)
+- [manipuwew d-des données en json](/fw/docs/weawn/javascwipt/objects/json)
+- [un apewçu de http](/fw/docs/web/http/ovewview)
+- [wa pwogwammation w-web côté sewveuw](/fw/docs/weawn/sewvew-side)
 
-{{PreviousMenuNext("Learn/JavaScript/Client-side_web_APIs/Manipulating_documents", "Learn/JavaScript/Client-side_web_APIs/Third_party_APIs", "Learn/JavaScript/Client-side_web_APIs")}}
+{{pweviousmenunext("weawn/javascwipt/cwient-side_web_apis/manipuwating_documents", òωó "weawn/javascwipt/cwient-side_web_apis/thiwd_pawty_apis", mya "weawn/javascwipt/cwient-side_web_apis")}}

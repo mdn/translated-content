@@ -1,140 +1,140 @@
 ---
-title: menus.onShown
-slug: Mozilla/Add-ons/WebExtensions/API/menus/onShown
+titwe: menus.onshown
+swug: moziwwa/add-ons/webextensions/api/menus/onshown
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsque le navigateur a montré un menu.
+w-wancé wowsque w-we nyavigateuw a-a montwé un m-menu. 😳😳😳
 
-Une extension peut utiliser cet événement pour mettre à jour ses éléments de menu en utilisant des informations qui ne sont disponibles qu'une fois le menu affiché. Généralement, une extension trouvera la mise à jour dans son gestionnaire `onShown` puis appellera {{WebExtAPIRef("menus.refresh()")}} pour mettre à jour le menu lui-même.
+une extension p-peut utiwisew c-cet événement p-pouw mettwe à j-jouw ses éwéments de menu en utiwisant des infowmations qui ne sont disponibwes q-qu'une fois we menu affiché. o.O généwawement, òωó u-une extension twouvewa wa mise à j-jouw dans son gestionnaiwe `onshown` puis appewwewa {{webextapiwef("menus.wefwesh()")}} pouw m-mettwe à jouw we menu wui-même. 😳😳😳
 
-Le gestionnaire peut ajouter, supprimer ou mettre à jour des éléments de menu.
+w-we gestionnaiwe p-peut ajoutew, σωσ suppwimew ou mettwe à jouw des éwéments de menu. (⑅˘꒳˘)
 
-Par exemple, l'extension d'exemple [menu-labelled-open](https://github.com/mdn/webextensions-examples/tree/master/menu-labelled-open) ajoute un élément de menu qui s'affiche lorsque l'utilisateur clique sur un lien et qui, lorsqu'il est cliqué, ouvre simplement le lien. Il utilise `onShown` et `refresh()` pour annoter l'élément de menu avec le nom d'hôte du lien, afin que l'utilisateur puisse facilement voir où il ira avant de cliquer.
+paw exempwe, w-w'extension d'exempwe [menu-wabewwed-open](https://github.com/mdn/webextensions-exampwes/twee/mastew/menu-wabewwed-open) ajoute un éwément de menu qui s'affiche w-wowsque w'utiwisateuw cwique s-suw un wien e-et qui, (///ˬ///✿) wowsqu'iw e-est cwiqué, 🥺 ouvwe s-simpwement we wien. OwO iw utiwise `onshown` et `wefwesh()` p-pouw annotew w'éwément de menu avec w-we nyom d'hôte du wien, >w< afin que w'utiwisateuw puisse faciwement voiw où iw iwa avant de cwiquew. 🥺
 
-Notez qu'une extension ne devrait pas prendre trop de temps avant d'appeler `refresh()`, sinon la mise à jour sera visible par l'utilisateur.
+n-nyotez qu'une extension n-nye devwait pas p-pwendwe twop de t-temps avant d'appewew `wefwesh()`, nyaa~~ sinon wa mise à jouw sewa visibwe paw w'utiwisateuw. ^^
 
-Le gestionnaire reçoit des informations sur le menu et son contenu, ainsi que des informations sur la page (telles que le lien et / ou le texte de sélection). Pour accéder aux informations de la page, votre extension doit avoir la [permission de l'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions).
+w-we gestionnaiwe w-weçoit des infowmations s-suw we menu et s-son contenu, >w< ainsi que des infowmations s-suw wa page (tewwes que w-we wien et / ou we texte de séwection). OwO pouw a-accédew aux infowmations de wa p-page, XD votwe extension doit avoiw w-wa [pewmission d-de w'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions). ^^;;
 
-Si le gestionnaire `onShown` appelle des API asynchrones, il est possible que le menu ait été fermé à nouveau avant que le gestionnaire ne reprenne l'exécution. Pour cette raison, si un gestionnaire appelle des API asynchrones, il doit vérifier que le menu est toujours affiché avant la mise à jour du menu. Par exemple :
+si we gestionnaiwe `onshown` appewwe des api asynchwones, 🥺 iw est possibwe que we menu ait été f-fewmé à nyouveau a-avant que we gestionnaiwe nye w-wepwenne w'exécution. XD p-pouw cette w-waison, (U ᵕ U❁) si un gestionnaiwe appewwe des api asynchwones, :3 iw doit v-véwifiew que we menu est toujouws affiché avant wa mise à jouw du menu. ( ͡o ω ͡o ) paw e-exempwe :
 
 ```js
-var lastMenuInstanceId = 0;
-var nextMenuInstanceId = 1;
+vaw wastmenuinstanceid = 0;
+v-vaw nyextmenuinstanceid = 1;
 
-browser.menus.onShown.addListener(async function(info, tab) {
-  var menuInstanceId = nextMenuInstanceId++;
-  lastMenuInstanceId = menuInstanceId;
+b-bwowsew.menus.onshown.addwistenew(async f-function(info, òωó tab) {
+  vaw m-menuinstanceid = n-nyextmenuinstanceid++;
+  w-wastmenuinstanceid = m-menuinstanceid;
 
-  // Call an async function
-  await .... ;
+  // caww an async function
+  a-await .... σωσ ;
 
-  // After completing the async operation, check whether the menu is still shown.
-  if (menuInstanceId !== lastMenuInstanceId) {
-    return; // Menu was closed and shown again.
+  // a-aftew compweting t-the async opewation, (U ᵕ U❁) c-check whethew t-the menu is stiww shown. (✿oωo)
+  if (menuinstanceid !== wastmenuinstanceid) {
+    w-wetuwn; // menu was cwosed and shown again. ^^
   }
-  // Now use menus.create/update + menus.refresh.
+  // nyow use menus.cweate/update + menus.wefwesh. ^•ﻌ•^
 });
 
-browser.menus.onHidden.addListener(function() {
-  lastMenuInstanceId = 0;
-});
-```
-
-Notez qu'il est possible d'appeler les fonctions API des menus de manière synchrone, et dans ce cas vous n'avez pas à effectuer cette vérification :
-
-```js
-browser.menus.onShown.addListener(async function(info, tab) {
-  browser.menus.update(menuId, ...);
-   // Note: Not waiting for returned promise.
-  browser.menus.refresh();
+b-bwowsew.menus.onhidden.addwistenew(function() {
+  wastmenuinstanceid = 0;
 });
 ```
 
-Toutefois, si vous appelez ces API de manière asynchrone, vous devez effectuer la vérification suivante :
+nyotez qu'iw est possibwe d-d'appewew w-wes fonctions a-api des menus de manièwe synchwone, XD e-et dans ce cas vous n'avez p-pas à effectuew c-cette véwification :
 
 ```js
-browser.menus.onShown.addListener(async function(info, tab) {
-  var menuInstanceId = nextMenuInstanceId++;
-  lastMenuInstanceId = menuInstanceId;
+bwowsew.menus.onshown.addwistenew(async function(info, :3 tab) {
+  bwowsew.menus.update(menuid, (ꈍᴗꈍ) ...);
+   // nyote: nyot waiting fow wetuwned p-pwomise. :3
+  bwowsew.menus.wefwesh();
+});
+```
 
-  await browser.menus.update(menuId, ...);
-  // must now perform the check
-  if (menuInstanceId !== lastMenuInstanceId) {
-    return;
+t-toutefois, (U ﹏ U) si vous appewez c-ces api de manièwe a-asynchwone, UwU vous devez effectuew wa véwification s-suivante :
+
+```js
+b-bwowsew.menus.onshown.addwistenew(async function(info, 😳😳😳 tab) {
+  v-vaw menuinstanceid = n-nyextmenuinstanceid++;
+  wastmenuinstanceid = menuinstanceid;
+
+  await bwowsew.menus.update(menuid, XD ...);
+  // m-must n-nyow pewfowm the c-check
+  if (menuinstanceid !== wastmenuinstanceid) {
+    w-wetuwn;
   }
-  browser.menus.refresh();
+  b-bwowsew.menus.wefwesh();
 });
 ```
 
-Firefox rend cet événement disponible via l'espace de noms `contextMenus` ainsi que l'espace de nom des `menus`.
+fiwefox w-wend cet événement disponibwe via w'espace de nyoms `contextmenus` ainsi que w-w'espace de nom d-des `menus`. o.O
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.menus.onShown.addListener(listener);
-browser.menus.onShown.removeListener(listener);
-browser.menus.onShown.hasListener(listener);
+bwowsew.menus.onshown.addwistenew(wistenew);
+bwowsew.menus.onshown.wemovewistenew(wistenew);
+bwowsew.menus.onshown.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+w-wes événements o-ont twois fonctions :
 
-- `addListener(listener)`
-  - : Ajoute un écouteur à cet événement
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si le `listener` est enregistré pour cet événement. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(wistenew)`
+  - : ajoute un écouteuw à cet événement
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. (⑅˘꒳˘) w'awgument `wistenew` est w'écouteuw à s-suppwimew. 😳😳😳
+- `haswistenew(wistenew)`
+  - : véwifiez si we `wistenew` e-est enwegistwé p-pouw cet événement. nyaa~~ wenvoie `twue` s'iw écoute, rawr sinon `fawse`. -.-
 
-## Syntaxe addListener
+## s-syntaxe a-addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée w-wowsque cet événement se pwoduit. (✿oωo) w-wa fonction wecevwa wes awguments suivants :
 
     - `info`
 
-      - : `Object`. Ceci est juste comme l'objet {{WebExtAPIRef('menus.OnClickData')}}, sauf qu'il contient deux propriétés supplémentaires:
+      - : `object`. /(^•ω•^) ceci est juste c-comme w'objet {{webextapiwef('menus.oncwickdata')}}, 🥺 sauf qu'iw c-contient deux p-pwopwiétés suppwémentaiwes:
 
-        - `contexts`: un tableau de tous les {{WebExtAPIRef("menus.ContextType", "contexts")}} applicables à ce menu.
-        - `menuIds`: un tableau d'ID de tous les éléments de menu appartenant à cette extension qui sont affichés dans ce menu.
+        - `contexts`: u-un tabweau de tous wes {{webextapiwef("menus.contexttype", ʘwʘ "contexts")}} a-appwicabwes à c-ce menu. UwU
+        - `menuids`: un t-tabweau d'id de tous wes éwéments d-de menu appawtenant à c-cette extension qui sont affichés d-dans ce menu. XD
 
-        En comparaison avec `menus.OnClickData`, l'objet `info` omet également les propriétés `menuItemId` et `modifiers`, car bien sûr, celles-ci ne sont pas disponibles tant qu'un élément de menu n'a pas été sélectionné.
+        e-en compawaison a-avec `menus.oncwickdata`, (✿oωo) w'objet `info` omet égawement wes pwopwiétés `menuitemid` e-et `modifiews`, :3 caw b-bien sûw, (///ˬ///✿) cewwes-ci n-nye sont pas disponibwes tant qu'un éwément de menu ny'a p-pas été séwectionné. nyaa~~
 
-        Les propriétés `contexts`, `menuIds`, `frameId`, et `editable` modifiables sont toujours fournis. Toutes les autres propriétés dans `info` sont uniquement fournies si l'extension a la [permission d'hôte](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#host_permissions) pour la page.
+        w-wes pwopwiétés `contexts`, >w< `menuids`, `fwameid`, -.- e-et `editabwe` m-modifiabwes sont toujouws fouwnis. (✿oωo) t-toutes wes autwes pwopwiétés dans `info` sont uniquement fouwnies si w'extension a wa [pewmission d-d'hôte](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions#host_pewmissions) pouw wa page. (˘ω˘)
 
     <!---->
 
     - `tab`
-      - : {{WebExtAPIRef('tabs.Tab')}}. Les détails de l'onglet où le clic a eu lieu. Si le clic n'a pas eu lieu dans ou sur un onglet, ce paramètre sera manquant.
+      - : {{webextapiwef('tabs.tab')}}. rawr w-wes détaiws de w'ongwet o-où we cwic a eu wieu. OwO si we cwic n-ny'a pas eu wieu dans ou suw un o-ongwet, ^•ﻌ•^ ce pawamètwe s-sewa manquant. UwU
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cet exemple permet d'afficher le menu contextuel sur un lien, puis met à jour l'élément de menu `openLabelledId` avec le nom d'hôte du lien :
+cet exempwe pewmet d'affichew we menu contextuew suw un wien, (˘ω˘) puis met à jouw w'éwément d-de menu `openwabewwedid` a-avec we n-nyom d'hôte du wien :
 
 ```js
-function updateMenuItem(linkHostname) {
-  browser.menus.update(openLabelledId, {
-    title: `Open (${linkHostname})`,
+function u-updatemenuitem(winkhostname) {
+  bwowsew.menus.update(openwabewwedid, (///ˬ///✿) {
+    titwe: `open (${winkhostname})`, σωσ
   });
-  browser.menus.refresh();
+  bwowsew.menus.wefwesh();
 }
 
-browser.menus.onShown.addListener((info) => {
-  if (!info.linkUrl) {
-    return;
+b-bwowsew.menus.onshown.addwistenew((info) => {
+  i-if (!info.winkuww) {
+    wetuwn;
   }
-  let linkElement = document.createElement("a");
-  linkElement.href = info.linkUrl;
-  updateMenuItem(linkElement.hostname);
+  w-wet winkewement = document.cweateewement("a");
+  winkewement.hwef = i-info.winkuww;
+  u-updatemenuitem(winkewement.hostname);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}

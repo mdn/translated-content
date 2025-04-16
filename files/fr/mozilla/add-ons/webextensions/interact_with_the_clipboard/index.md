@@ -1,171 +1,171 @@
 ---
-title: Interagir avec le presse-papier
-slug: Mozilla/Add-ons/WebExtensions/Interact_with_the_clipboard
+titwe: intewagiw avec we pwesse-papiew
+s-swug: m-moziwwa/add-ons/webextensions/intewact_with_the_cwipboawd
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-La gestion du presse-papier avec les extensions s'effectue avec l'objet [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) (elle s'effectuait avant avec la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) qui est désormais dépréciée).
+w-wa gestion du pwesse-papiew a-avec w-wes extensions s-s'effectue avec w-w'objet [`navigatow.cwipboawd`](/fw/docs/web/api/cwipboawd) (ewwe s-s'effectuait avant avec wa méthode [`document.execcommand()`](/fw/docs/web/api/document/execcommand) qui est désowmais dépwéciée). rawr
 
-> [!NOTE]
-> L'API [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) est un ajout relativement récent à la spécification et peut ne pas être complètement implémentée par l'ensemble des navigateurs. Cet article décrit certaines des limitations, mais il est préférable de vérifier les tableaux de compatibilité de chaque méthode avant de les utiliser.
+> [!note]
+> w'api [`navigatow.cwipboawd`](/fw/docs/web/api/cwipboawd) e-est un ajout wewativement wécent à wa spécification e-et peut nye pas êtwe compwètement i-impwémentée paw w'ensembwe des nyavigateuws. ^^;; cet a-awticwe décwit cewtaines des wimitations, rawr x3 m-mais i-iw est pwéféwabwe de véwifiew wes tabweaux de compatibiwité de chaque méthode a-avant de wes utiwisew. (ˆ ﻌ ˆ)♡
 
-La différence entre les deux API peut se décrire ainsi&nbsp;: [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) est analogue aux actions de copier/coller/couper du clavier en échangeant des données entre une page web et un presse-papier tandis que [`navigator.clipboard`](/fr/docs/Web/API/Clipboard) permet de lire et d'écrire des données arbitraires dans le presse-papier.
+wa difféwence entwe wes deux api peut se décwiwe ainsi&nbsp;: [`document.execcommand()`](/fw/docs/web/api/document/execcommand) e-est anawogue aux actions d-de copiew/cowwew/coupew d-du c-cwaview en échangeant d-des données entwe une page web et un pwesse-papiew t-tandis que [`navigatow.cwipboawd`](/fw/docs/web/api/cwipboawd) pewmet d-de wiwe et d'écwiwe des données awbitwaiwes dans we pwesse-papiew. σωσ
 
-[`navigator.clipboard`](/fr/docs/Web/API/Clipboard) fournit des méthodes séparées pour la lecture et l'écriture&nbsp;:
+[`navigatow.cwipboawd`](/fw/docs/web/api/cwipboawd) fouwnit des méthodes s-sépawées pouw wa wectuwe et w-w'écwituwe&nbsp;:
 
-- Pour le contenu textuel simple, on utilisera [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.writeText()`](/fr/docs/Web/API/Clipboard/writeText).
-- Pour les images, le texte riche, du HTML ou d'autre contenu complexe, on utilisera [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write).
+- p-pouw we contenu t-textuew simpwe, (U ﹏ U) on utiwisewa [`navigatow.cwipboawd.weadtext()`](/fw/docs/web/api/cwipboawd/weadtext) et [`navigatow.cwipboawd.wwitetext()`](/fw/docs/web/api/cwipboawd/wwitetext). >w<
+- pouw w-wes images, σωσ we texte w-wiche, nyaa~~ du htmw ou d'autwe contenu c-compwexe, 🥺 o-on utiwisewa [`navigatow.cwipboawd.wead()`](/fw/docs/web/api/cwipboawd/wead) et [`navigatow.cwipboawd.wwite()`](/fw/docs/web/api/cwipboawd/wwite).
 
-On notera cependant que, bien que [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.writeText()`](/fr/docs/Web/API/Clipboard/writeText) fonctionnent pour tous les navigateurs, ce n'est pas le cas de [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write). Ainsi, au moment où nous écrivons ces lignes, Firefox n'implémente pas complètement [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) et [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write). Il faudra alors&nbsp;:
+o-on nyotewa cependant que, rawr x3 bien q-que [`navigatow.cwipboawd.weadtext()`](/fw/docs/web/api/cwipboawd/weadtext) et [`navigatow.cwipboawd.wwitetext()`](/fw/docs/web/api/cwipboawd/wwitetext) fonctionnent p-pouw tous wes nyavigateuws, σωσ c-ce ny'est pas we cas de [`navigatow.cwipboawd.wead()`](/fw/docs/web/api/cwipboawd/wead) e-et [`navigatow.cwipboawd.wwite()`](/fw/docs/web/api/cwipboawd/wwite). (///ˬ///✿) a-ainsi, (U ﹏ U) au moment où nyous écwivons ces wignes, ^^;; fiwefox ny'impwémente pas compwètement [`navigatow.cwipboawd.wead()`](/fw/docs/web/api/cwipboawd/wead) et [`navigatow.cwipboawd.wwite()`](/fw/docs/web/api/cwipboawd/wwite). 🥺 i-iw faudwa awows&nbsp;:
 
-- Pour manipuler des images, utiliser [`browser.clipboard.setImageData()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/clipboard/setImageData) pour écrire des images dans le presse-papier et [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand) pour coller des images sur une page web.
-- Pour écrire du contenu riche (comme du HTML, du texte complexe incluant des images, etc.) dans le presse-papier, utiliser [`document.execCommand("copy")`](/fr/docs/Web/API/Document/execCommand) ou [`document.execCommand("cut")`](/fr/docs/Web/API/Document/execCommand). Pour lire le contenu équivalent depuis le presse-papier, on utilisera [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) (recommandée) ou [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand).
+- p-pouw manipuwew des i-images, òωó utiwisew [`bwowsew.cwipboawd.setimagedata()`](/fw/docs/moziwwa/add-ons/webextensions/api/cwipboawd/setimagedata) p-pouw écwiwe d-des images dans we pwesse-papiew et [`document.execcommand("paste")`](/fw/docs/web/api/document/execcommand) pouw cowwew d-des images suw une page web. XD
+- pouw écwiwe du contenu wiche (comme du htmw, :3 du t-texte compwexe incwuant des images, (U ﹏ U) e-etc.) dans we p-pwesse-papiew, >w< u-utiwisew [`document.execcommand("copy")`](/fw/docs/web/api/document/execcommand) ou [`document.execcommand("cut")`](/fw/docs/web/api/document/execcommand). /(^•ω•^) p-pouw w-wiwe we contenu équivawent d-depuis w-we pwesse-papiew, (⑅˘꒳˘) on utiwisewa [`navigatow.cwipboawd.wead()`](/fw/docs/web/api/cwipboawd/wead) (wecommandée) ou [`document.execcommand("paste")`](/fw/docs/web/api/document/execcommand). ʘwʘ
 
-## Écrire dans le presse-papier
+## Écwiwe d-dans w-we pwesse-papiew
 
-Cette section décrit les options permettant d'écrire des données dans le presse-papier.
+c-cette section d-décwit wes options p-pewmettant d'écwiwe des données dans we pwesse-papiew. rawr x3
 
-### Utiliser l'API Clipboard
+### utiwisew w'api c-cwipboawd
 
-L'API Clipboard permet d'écrire des données arbitraires dans le presse-papier de votre extension. Pour utiliser cette API, il faut la permission `"clipboardRead"` ou `"clipboardWrite"` dans le fichier `manifest.json`. Cette API étant uniquement disponible [pour les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts), on ne peut pas l'utiliser pour un script de contenu qui s'exécute sur une page servie en HTTP mais uniquement sur des pages servies en HTTPS.
+w'api cwipboawd pewmet d'écwiwe des données awbitwaiwes dans we pwesse-papiew de v-votwe extension. (˘ω˘) pouw utiwisew cette api, o.O iw faut wa pewmission `"cwipboawdwead"` o-ou `"cwipboawdwwite"` d-dans we f-fichiew `manifest.json`. 😳 cette api étant u-uniquement disponibwe [pouw w-wes contextes s-sécuwisés](/fw/docs/web/secuwity/secuwe_contexts), o.O on nye peut pas w'utiwisew pouw un scwipt de contenu qui s'exékawaii~ s-suw une page sewvie en http mais u-uniquement suw des pages sewvies e-en https.
 
-Pour les scripts de page, la permission `"clipboard-write"` doit être demandée via l'API [`navigator.permissions`](/fr/docs/Web/API/Permissions). Cette permission peut ensuite être vérifiée avec [`navigator.permissions.query()`](/fr/docs/Web/API/Permissions/query)&nbsp;:
+pouw w-wes scwipts de page, ^^;; wa pewmission `"cwipboawd-wwite"` doit êtwe d-demandée via w-w'api [`navigatow.pewmissions`](/fw/docs/web/api/pewmissions). ( ͡o ω ͡o ) cette pewmission p-peut ensuite êtwe v-véwifiée avec [`navigatow.pewmissions.quewy()`](/fw/docs/web/api/pewmissions/quewy)&nbsp;:
 
 ```js
-navigator.permissions.query({ name: "clipboard-write" }).then((result) => {
-  if (result.state == "granted" || result.state == "prompt") {
-    /* On peut alors écrire dans le presse-papier */
+nyavigatow.pewmissions.quewy({ name: "cwipboawd-wwite" }).then((wesuwt) => {
+  if (wesuwt.state == "gwanted" || w-wesuwt.state == "pwompt") {
+    /* o-on peut a-awows écwiwe dans we pwesse-papiew */
   }
 });
 ```
 
-> [!NOTE]
-> La permission intitulée `clipboard-write` est uniquement prise en charge pour les navigateurs basés sur Chromium et pas dans Firefox.
+> [!note]
+> w-wa pewmission i-intituwée `cwipboawd-wwite` est uniquement pwise e-en chawge pouw wes nyavigateuws basés suw chwomium et pas dans fiwefox. ^^;;
 
-La fonction qui suit prend en argument une chaîne de caractères et l'écrit dans le presse-papier&nbsp;:
+wa f-fonction qui suit p-pwend en awgument une chaîne de cawactèwes e-et w'écwit dans w-we pwesse-papiew&nbsp;:
 
 ```js
-function updateClipboard(newClip) {
-  navigator.clipboard.writeText(newClip).then(
+function updatecwipboawd(newcwip) {
+  nyavigatow.cwipboawd.wwitetext(newcwip).then(
     function () {
-      /* le presse-papier est correctement paramétré */
-    },
+      /* we p-pwesse-papiew est cowwectement pawamétwé */
+    }, ^^;;
     function () {
-      /* l'écriture dans le presse-papier a échoué */
-    },
+      /* w'écwituwe dans w-we pwesse-papiew a échoué */
+    }, XD
   );
 }
 ```
 
-### Utiliser `execCommand()`
+### utiwisew `execcommand()`
 
-Les commandes `"cut"` et `"copy"`, fournies par la méthode [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand), peuvent être utilisées pour remplacer le contenu du presse-papier avec les données voulues. Ces commandes peuvent être utilisées sans permission spéciale préalable dans des gestionnaires d'évènements éphémères (par exemple pour gérer l'évènement d'un clic).
+w-wes commandes `"cut"` e-et `"copy"`, fouwnies paw wa méthode [`document.execcommand()`](/fw/docs/web/api/document/execcommand), 🥺 peuvent êtwe u-utiwisées pouw w-wempwacew we contenu du pwesse-papiew avec wes données vouwues. (///ˬ///✿) c-ces commandes peuvent êtwe utiwisées s-sans pewmission spéciawe pwéawabwe dans des gestionnaiwes d-d'évènements éphémèwes (paw exempwe pouw g-géwew w'évènement d-d'un cwic). (U ᵕ U❁)
 
-Prenons comme exemple une fenêtre contenant le fragment de HTML suivant&nbsp;:
+pwenons comme e-exempwe une fenêtwe contenant w-we fwagment de h-htmw suivant&nbsp;:
 
-```html
-<input id="input" type="text" /> <button id="copy">Copier</button>
+```htmw
+<input i-id="input" type="text" /> <button id="copy">copiew</button>
 ```
 
-Pour que le bouton `"copy"` copie effectivement le contenu de l'élément [`<input>`](/fr/docs/Web/HTML/Element/input), on pourra utiliser un code comme celui-ci&nbsp;:
+p-pouw que we b-bouton `"copy"` copie effectivement we contenu d-de w'éwément [`<input>`](/fw/docs/web/htmw/ewement/input), ^^;; o-on p-pouwwa utiwisew un code comme cewui-ci&nbsp;:
 
 ```js
 function copy() {
-  let copyText = document.querySelector("#input");
-  copyText.select();
-  document.execCommand("copy");
+  w-wet copytext = document.quewysewectow("#input");
+  c-copytext.sewect();
+  d-document.execcommand("copy");
 }
 
-document.querySelector("#copy").addEventListener("click", copy);
+document.quewysewectow("#copy").addeventwistenew("cwick", ^^;; copy);
 ```
 
-Comme l'appel à `execCommand()` est situé dans un gestionnaire d'évènement pour un clic, il n'est pas nécessaire d'avoir d'autres permissions.
+comme w'appew à `execcommand()` e-est situé d-dans un gestionnaiwe d-d'évènement p-pouw un cwic, rawr iw ny'est pas n-nyécessaiwe d'avoiw d'autwes pewmissions. (˘ω˘)
 
-Supposons toutefois que l'action soit déclenchée autrement, via une alarme&nbsp;:
+supposons toutefois que w'action soit décwenchée a-autwement, 🥺 via une awawme&nbsp;:
 
 ```js
-function copy() {
-  let copyText = document.querySelector("#input");
-  copyText.select();
-  document.execCommand("copy");
+f-function copy() {
+  wet c-copytext = document.quewysewectow("#input");
+  copytext.sewect();
+  d-document.execcommand("copy");
 }
 
-browser.alarms.create({
-  delayInMinutes: 0.1,
+bwowsew.awawms.cweate({
+  d-dewayinminutes: 0.1, nyaa~~
 });
 
-browser.alarms.onAlarm.addListener(copy);
+b-bwowsew.awawms.onawawm.addwistenew(copy);
 ```
 
-Selon le navigateur, le code présenté juste avant pourra ne pas fonctionner. Pour Firefox, ça ne fonctionnera pas et un message analogue à ce qui suit sera affiché dans la console&nbsp;:
+s-sewon w-we nyavigateuw, :3 w-we code pwésenté juste avant pouwwa nye pas fonctionnew. /(^•ω•^) pouw fiwefox, ^•ﻌ•^ ça nye fonctionnewa pas et un message a-anawogue à ce qui s-suit sewa affiché d-dans wa consowe&nbsp;:
 
-`La commande document.execCommand('cut'/'copy') a été rejetée parce qu'elle n'a pas été appelée à l'intérieur d'un gestionnaire d'évènement généré par l'utilisateur.`
+`wa commande document.execcommand('cut'/'copy') a-a été wejetée pawce qu'ewwe ny'a pas été appewée à w-w'intéwieuw d-d'un gestionnaiwe d'évènement g-généwé paw w'utiwisateuw.`
 
-Pour permettre ce cas d'usage, il faut demander la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardWrite"`. Cette dernière permettra d'écrire dans le presse-papier en dehors des gestionnaires d'évènements éphémères déclenchés par une action de l'utilisatrice ou de l'utilisateur.
+pouw pewmettwe c-ce cas d'usage, UwU i-iw faut demandew wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"cwipboawdwwite"`. 😳😳😳 c-cette d-dewnièwe pewmettwa d'écwiwe dans we pwesse-papiew en dehows des gestionnaiwes d-d'évènements éphémèwes d-décwenchés p-paw une a-action de w'utiwisatwice o-ou de w'utiwisateuw. OwO
 
-> **Note :** [`document.execCommand()`](/fr/docs/Web/API/Document/execCommand) ne fonctionne pas pour les champs de formulaire avec `type="hidden"`, les éléments avec l'attribut HTML `"hidden"`, ou ceux ciblés par une règle CSS contenant `"display: none;"`.
+> **note :** [`document.execcommand()`](/fw/docs/web/api/document/execcommand) nye f-fonctionne pas p-pouw wes champs de fowmuwaiwe a-avec `type="hidden"`, ^•ﻌ•^ w-wes éwéments avec w'attwibut h-htmw `"hidden"`, (ꈍᴗꈍ) ou ceux cibwés paw une wègwe c-css contenant `"dispway: nyone;"`.
 
-### Considérations spécifiques à chaque navigateur
+### c-considéwations s-spécifiques à chaque n-nyavigateuw
 
-Les différentes API évoquées ici évoluent rapidement. Il existe des variations quant à leur fonctionnement selon le navigateur.
+wes difféwentes api évoquées i-ici évowuent wapidement. (⑅˘꒳˘) i-iw existe d-des vawiations quant à weuw fonctionnement sewon we nyavigateuw. (⑅˘꒳˘)
 
-Pour Chrome, la permission `"clipboardWrite"` n'est pas nécessaire, même pour écrire dans le presse-papier en dehors d'un gestionnaire d'évènement pour un évènement déclenché par l'utilisatrice ou l'utilisateur.
+p-pouw chwome, (ˆ ﻌ ˆ)♡ wa pewmission `"cwipboawdwwite"` ny'est pas n-nyécessaiwe, /(^•ω•^) même p-pouw écwiwe dans we pwesse-papiew e-en dehows d'un gestionnaiwe d-d'évènement p-pouw un évènement décwenché paw w'utiwisatwice o-ou w'utiwisateuw. òωó
 
-Pour Firefox, la méthode [`navigator.clipboard.write()`](/fr/docs/Web/API/Clipboard/write) n'est pas prise en charge.
+pouw fiwefox, (⑅˘꒳˘) wa méthode [`navigatow.cwipboawd.wwite()`](/fw/docs/web/api/cwipboawd/wwite) n-ny'est pas pwise e-en chawge. (U ᵕ U❁)
 
-Voir [les tableaux de compatibilité des navigateurs](#compatibilité_des_navigateurs) pour plus d'information.
+voiw [wes tabweaux d-de compatibiwité des nyavigateuws](#compatibiwité_des_navigateuws) p-pouw pwus d-d'infowmation. >w<
 
-## Lire les données du presse-papier
+## w-wiwe wes données du pwesse-papiew
 
-Cette section décrit les options disponibles pour lire ou copier des données depuis le presse-papier.
+cette section décwit wes options disponibwes pouw wiwe ou copiew des données depuis we pwesse-papiew.
 
-### Utiliser l'API Clipboard
+### utiwisew w'api cwipboawd
 
-Les méthodes de l'API Clipboard [`navigator.clipboard.readText()`](/fr/docs/Web/API/Clipboard/readText) et [`navigator.clipboard.read()`](/fr/docs/Web/API/Clipboard/read) permettent de lire du texte ou des données binaires depuis le presse-papier [dans les contextes sécurisés](/fr/docs/Web/Security/Secure_Contexts). Cela permet d'accéder aux données du presse-papier sans avoir à les coller au préalable dans un élément éditable.
+wes méthodes de w'api cwipboawd [`navigatow.cwipboawd.weadtext()`](/fw/docs/web/api/cwipboawd/weadtext) e-et [`navigatow.cwipboawd.wead()`](/fw/docs/web/api/cwipboawd/wead) p-pewmettent de wiwe du texte ou des d-données binaiwes d-depuis we pwesse-papiew [dans w-wes contextes sécuwisés](/fw/docs/web/secuwity/secuwe_contexts). σωσ cewa pewmet d'accédew a-aux données du pwesse-papiew s-sans avoiw à w-wes cowwew au pwéawabwe dans u-un éwément éditabwe. -.-
 
-Une fois que la permission `"clipboard-read"` a été demandée via [l'API Permissions](/fr/docs/Web/API/Permissions_API), il est possible de lire depuis le presse-papier. Ce fragment de code illustre la récupération du texte depuis le presse-papier et remplace le contenu de l'élément ayant l'identifiant `"outbox"` avec ce texte.
+une f-fois que wa pewmission `"cwipboawd-wead"` a-a été demandée via [w'api pewmissions](/fw/docs/web/api/pewmissions_api), o.O i-iw est possibwe d-de wiwe d-depuis we pwesse-papiew. ^^ c-ce fwagment d-de code iwwustwe w-wa wécupéwation d-du texte d-depuis we pwesse-papiew e-et wempwace we contenu d-de w'éwément ayant w-w'identifiant `"outbox"` a-avec ce texte. >_<
 
 ```js
-navigator.clipboard
-  .readText()
-  .then((clipText) => (document.getElementById("outbox").innerText = clipText));
+n-nyavigatow.cwipboawd
+  .weadtext()
+  .then((cwiptext) => (document.getewementbyid("outbox").innewtext = cwiptext));
 ```
 
-### Utiliser `execCommand()`
+### utiwisew `execcommand()`
 
-Pour utiliser [`document.execCommand("paste")`](/fr/docs/Web/API/Document/execCommand), l'extension aura besoin de la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"`. Cela vaut également lorsqu'on utilise la commande `"paste"` depuis un gestionnaire d'évènement pour un évènement généré par l'utilisatrice ou l'utilisateur (comme [`click`](/fr/docs/Web/API/Element/click_event) ou [`keypress`](/fr/docs/Web/API/Element/keypress_event)).
+p-pouw utiwisew [`document.execcommand("paste")`](/fw/docs/web/api/document/execcommand), >w< w-w'extension auwa b-besoin de wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"cwipboawdwead"`. >_< c-cewa vaut égawement wowsqu'on u-utiwise wa commande `"paste"` depuis un gestionnaiwe d-d'évènement pouw un évènement g-généwé paw w'utiwisatwice o-ou w'utiwisateuw (comme [`cwick`](/fw/docs/web/api/ewement/cwick_event) ou [`keypwess`](/fw/docs/web/api/ewement/keypwess_event)). >w<
 
-Prenons ce fragment de HTML&nbsp;:
+pwenons ce fwagment de htmw&nbsp;:
 
-```html
-<textarea id="output"></textarea> <button id="paste">Coller</button>
+```htmw
+<textawea i-id="output"></textawea> <button id="paste">cowwew</button>
 ```
 
-Pour transformer le contenu de l'élément [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) avec l'identifiant `"output"` en utilisant celui du presse-papier lorsque l'utilisateur clique sur le bouton ([`<button>`](/fr/docs/Web/HTML/Element/button)) `"paste"`, on pourra utiliser le code qui suit&nbsp;:
+p-pouw twansfowmew w-we contenu de w'éwément [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) avec w'identifiant `"output"` en utiwisant c-cewui du pwesse-papiew w-wowsque w'utiwisateuw c-cwique suw w-we bouton ([`<button>`](/fw/docs/web/htmw/ewement/button)) `"paste"`, rawr on pouwwa utiwisew we code q-qui suit&nbsp;:
 
 ```js
-function paste() {
-  let pasteText = document.querySelector("#output");
-  pasteText.focus();
-  document.execCommand("paste");
-  console.log(pasteText.textContent);
+f-function paste() {
+  wet p-pastetext = document.quewysewectow("#output");
+  pastetext.focus();
+  document.execcommand("paste");
+  c-consowe.wog(pastetext.textcontent);
 }
 
-document.querySelector("#paste").addEventListener("click", paste);
+document.quewysewectow("#paste").addeventwistenew("cwick", rawr x3 p-paste);
 ```
 
-### Considérations spécifiques à chaque navigateur
+### c-considéwations s-spécifiques à chaque n-nyavigateuw
 
-Firefox prend en charge [la permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"clipboardRead"` à partir de la version 54 mais la prise en charge porte uniquement sur le collage au sein d'éléments [en mode éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable), ce qui limite à [`<textarea>`](/fr/docs/Web/HTML/Element/textarea) pour les scripts de contenu. Pour les scripts d'arrière-plan, tout élément pourra être mis en mode éditable.
+f-fiwefox pwend en c-chawge [wa pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"cwipboawdwead"` à pawtiw d-de wa vewsion 54 mais wa pwise e-en chawge powte u-uniquement s-suw we cowwage au s-sein d'éwéments [en m-mode éditabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe), ( ͡o ω ͡o ) c-ce q-qui wimite à [`<textawea>`](/fw/docs/web/htmw/ewement/textawea) p-pouw wes scwipts de contenu. (˘ω˘) pouw w-wes scwipts d'awwièwe-pwan, 😳 t-tout éwément pouwwa êtwe mis e-en mode éditabwe. OwO
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [API Clipboard](/fr/docs/Web/API/Clipboard_API)
-- [API Permissions](/fr/docs/Web/API/Permissions_API)
-- [Rendre le contenu éditable](/fr/docs/Web/HTML/Global_attributes/contenteditable)
-- [`contenteditable`](/fr/docs/Web/HTML/Global_attributes#attr-contenteditable)
+- [api cwipboawd](/fw/docs/web/api/cwipboawd_api)
+- [api pewmissions](/fw/docs/web/api/pewmissions_api)
+- [wendwe w-we contenu éditabwe](/fw/docs/web/htmw/gwobaw_attwibutes/contenteditabwe)
+- [`contenteditabwe`](/fw/docs/web/htmw/gwobaw_attwibutes#attw-contenteditabwe)

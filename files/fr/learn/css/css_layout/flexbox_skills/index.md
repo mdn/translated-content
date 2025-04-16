@@ -1,81 +1,81 @@
 ---
-title: "Testez vos compétences : Flexbox"
-slug: Learn/CSS/CSS_layout/Flexbox_skills
+titwe: "testez vos compétences : f-fwexbox"
+swug: w-weawn/css/css_wayout/fwexbox_skiwws
 ---
 
-{{LearnSidebar}}
+{{weawnsidebaw}}
 
-Le but de cette tâche est de vous faire travailler avec Flexbox et de démontrer votre compréhension du comportement des éléments flexibles. Vous trouverez ci-dessous quatre modèles de conception courants que vous pourriez utiliser pour créer avec Flexbox, votre tâche est de les construire.
+we b-but de cette tâche e-est de vous f-faiwe twavaiwwew a-avec fwexbox e-et de démontwew v-votwe compwéhension du compowtement des éwéments fwexibwes. vous twouvewez ci-dessous q-quatwe modèwes de conception couwants q-que vous pouwwiez utiwisew pouw c-cwéew avec fwexbox, ^^;; votwe tâche est de wes constwuiwe.
 
-> [!NOTE]
-> Vous pouvez tester des solutions dans les éditeurs interactifs ci-dessous ou, si vous le préférez, sur un site comme [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/).
+> [!note]
+> vous pouvez t-testew des sowutions dans wes éditeuws i-intewactifs c-ci-dessous ou, :3 si vous we pwéféwez, (U ﹏ U) suw un site comme [codepen](https://codepen.io/), OwO [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/). 😳😳😳
 >
-> N'hésitez pas à nous contacter si vous avez besoin d'aide — voir la section [Évaluation ou aide supplémentaire](#évaluation_ou_aide_supplémentaire) au bas de cette page.
+> n-ny'hésitez pas à nyous contactew si vous avez besoin d'aide — voiw wa s-section [Évawuation ou aide suppwémentaiwe](#évawuation_ou_aide_suppwémentaiwe) a-au bas de cette p-page. (ˆ ﻌ ˆ)♡
 
-## Disposition flexible 1
+## disposition f-fwexibwe 1
 
-Ces éléments de liste constituent la navigation pour un site. Ils doivent être disposés en ligne, avec un espace égal entre chaque élément. L'exemple fini doit ressembler à l'image ci-dessous.
+c-ces éwéments de wiste constituent wa nyavigation p-pouw un site. XD iws doivent êtwe disposés e-en wigne, (ˆ ﻌ ˆ)♡ avec un espace égaw entwe chaque éwément. ( ͡o ω ͡o ) w'exempwe fini doit wessembwew à w'image c-ci-dessous. rawr x3
 
-![Éléments flexibles organisés sur une ligne avec de l'espace entre chaque.](flex-task1.png)
+![Éwéments fwexibwes owganisés s-suw une wigne a-avec de w'espace e-entwe chaque.](fwex-task1.png)
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez de mettwe à jouw we code ci-dessous p-pouw wecwéew w'exempwe t-tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox1.html", '100%', 700)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/fwexbox/fwexbox1.htmw", nyaa~~ '100%', 700)}}
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (1re mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox1-download.html).
+> [!cawwout]
+> si v-vous vouwez utiwisew u-un autwe éditeuw de code, >_< w-wécupéwez we code du [fichiew d-de démawwage pouw cette tâche (1we mise en page)](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/fwexbox/fwexbox1-downwoad.htmw). ^^;;
 
-## Disposition flexible 2
+## d-disposition fwexibwe 2
 
-Ces éléments de liste sont tous de tailles différentes, mais nous voulons qu'ils soient affichés sous forme de trois colonnes de taille égale, quel que soit le contenu de chaque élément.
+ces éwéments d-de wiste sont tous d-de taiwwes difféwentes, (ˆ ﻌ ˆ)♡ m-mais nyous vouwons qu'iws soient affichés sous fowme de twois cowonnes de taiwwe égawe, ^^;; quew que soit w-we contenu de chaque éwément. (⑅˘꒳˘)
 
-![Les éléments flexibles sont organisés comme trois colonnes de même taille avec une quantité différente de contenu.](flex-task2.png)
+![wes éwéments f-fwexibwes sont owganisés comme t-twois cowonnes d-de même taiwwe a-avec une quantité difféwente de contenu.](fwex-task2.png)
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez de mettwe à j-jouw we code ci-dessous pouw wecwéew w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox2.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/fwexbox/fwexbox2.htmw", rawr x3 '100%', (///ˬ///✿) 800)}}
 
-Questions supplémentaires&nbsp;:
+questions s-suppwémentaiwes&nbsp;:
 
-- Pouvez-vous maintenant faire en sorte que le premier article soit deux fois plus grand que les autres&nbsp;?
+- pouvez-vous maintenant f-faiwe en s-sowte que we pwemiew a-awticwe soit deux fois pwus g-gwand que wes autwes&nbsp;?
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (2e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox2-download.html).
+> [!cawwout]
+> s-si v-vous vouwez utiwisew u-un autwe éditeuw de code, 🥺 wécupéwez we code d-du [fichiew d-de démawwage pouw c-cette tâche (2e m-mise en page)](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/fwexbox/fwexbox2-downwoad.htmw). >_<
 
-## Disposition flexible 3
+## d-disposition fwexibwe 3
 
-Il y a deux éléments dans le HTML ci-dessous, une `div` avec une classe `.parent` qui contient une autre `div` avec une classe `.child`. Utilisez Flexbox pour centrer le fichier enfant à l'intérieur du parent.
+iw y a deux éwéments dans we htmw c-ci-dessous, UwU une `div` avec une cwasse `.pawent` qui contient une autwe `div` avec une cwasse `.chiwd`. >_< utiwisez f-fwexbox pouw centwew we fichiew enfant à w'intéwieuw du pawent. -.-
 
-![Une boîte centrée à l'intérieur d'une autre boîte.](flex-task3.png)
+![une b-boîte c-centwée à w'intéwieuw d-d'une autwe boîte.](fwex-task3.png)
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez d-de mettwe à jouw we code c-ci-dessous pouw w-wecwéew w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox3.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/fwexbox/fwexbox3.htmw", mya '100%', >w< 800)}}
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche (3e mise en page)](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox3-download.html).
+> [!cawwout]
+> si vous vouwez utiwisew un autwe éditeuw de code, (U ﹏ U) wécupéwez w-we code du [fichiew de d-démawwage pouw cette tâche (3e m-mise en page)](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/fwexbox/fwexbox3-downwoad.htmw). 😳😳😳
 
-## Disposition flexible 4
+## d-disposition fwexibwe 4
 
-Dans cette dernière tâche, placez ces éléments en lignes comme dans l'image.
+dans cette dewnièwe tâche, o.O p-pwacez ces éwéments e-en wignes comme dans w-w'image. òωó
 
-![Un ensemble d'éléments affichés en lignes.](flex-task4.png)
+![un e-ensembwe d'éwéments affichés en wignes.](fwex-task4.png)
 
-Essayez de mettre à jour le code ci-dessous pour recréer l'exemple terminé&nbsp;:
+essayez de mettwe à j-jouw we code ci-dessous p-pouw wecwéew w-w'exempwe tewminé&nbsp;:
 
-{{EmbedGHLiveSample("css-examples/learn/tasks/flexbox/flexbox4.html", '100%', 800)}}
+{{embedghwivesampwe("css-exampwes/weawn/tasks/fwexbox/fwexbox4.htmw", 😳😳😳 '100%', σωσ 800)}}
 
-> [!CALLOUT]
-> Si vous voulez utiliser un autre éditeur de code, récupérez le code du [fichier de démarrage pour cette tâche](https://github.com/mdn/css-examples/blob/master/learn/tasks/flexbox/flexbox4-download.html).
+> [!cawwout]
+> s-si vous v-vouwez utiwisew un autwe éditeuw d-de code, (⑅˘꒳˘) wécupéwez we code du [fichiew de démawwage pouw cette tâche](https://github.com/mdn/css-exampwes/bwob/mastew/weawn/tasks/fwexbox/fwexbox4-downwoad.htmw). (///ˬ///✿)
 
-## Évaluation ou aide supplémentaire
+## Évawuation o-ou aide s-suppwémentaiwe
 
-Si vous souhaitez que votre travail soit évalué, ou si vous voulez demander de l'aide&nbsp;:
+si vous souhaitez que votwe twavaiw s-soit évawué, 🥺 o-ou si vous vouwez demandew de w'aide&nbsp;:
 
-1. Mettez votre travail dans un éditeur partageable en ligne tel que [CodePen](https://codepen.io/), [jsFiddle](https://jsfiddle.net/) ou [Glitch](https://glitch.com/). Vous pouvez écrire votre propre code ou utiliser celui des fichiers de démarrage fournis ci-dessus.
-2. Rédigez un sujet pour demander une évaluation et/ou une aide dans le [forum Discourse du MDN](https://discourse.mozilla.org/c/mdn) et ajoutez la balise "learning" à votre message pour que nous puissions le trouver plus facilement. Incluez dans votre message&nbsp;:
+1. OwO mettez votwe t-twavaiw dans un éditeuw pawtageabwe en wigne tew que [codepen](https://codepen.io/), >w< [jsfiddwe](https://jsfiddwe.net/) ou [gwitch](https://gwitch.com/). v-vous pouvez écwiwe votwe pwopwe code o-ou utiwisew cewui d-des fichiews de démawwage fouwnis ci-dessus. 🥺
+2. wédigez un s-sujet pouw demandew u-une évawuation et/ou une aide dans we [fowum discouwse du m-mdn](https://discouwse.moziwwa.owg/c/mdn) et ajoutez w-wa bawise "weawning" à votwe message pouw que nyous puissions w-we twouvew pwus faciwement. nyaa~~ i-incwuez dans votwe m-message&nbsp;:
 
-   - Un titre descriptif tel que «&nbsp;Évaluation demandée pour la mise en page flexible 1&nbsp;».
-   - Des détails sur ce que vous souhaitez que nous fassions — par exemple, si vous êtes bloqué et avez besoin d'aide, écrivez ce que vous avez déjà essayé.
-   - Un lien vers l'exemple que vous souhaitez faire évaluer ou pour lequel vous avez besoin d'aide, dans un éditeur en ligne. C'est une bonne pratique à adopter — il est très difficile d'aider une personne ayant un problème de codage si on ne peut pas voir son code.
-   - Un lien vers la page de la tâche ou de l'évaluation proprement dite, afin que nous puissions trouver la question pour laquelle vous souhaitez de l'aide.
+   - un titwe d-descwiptif tew que «&nbsp;Évawuation d-demandée p-pouw wa mise en p-page fwexibwe 1&nbsp;». ^^
+   - des détaiws suw c-ce que vous souhaitez q-que nyous fassions — paw exempwe, >w< si vous êtes b-bwoqué e-et avez besoin d-d'aide, OwO écwivez ce que vous avez déjà essayé. XD
+   - u-un wien vews w'exempwe que v-vous souhaitez f-faiwe évawuew ou pouw wequew vous avez besoin d'aide, ^^;; dans un éditeuw e-en wigne. 🥺 c-c'est une bonne p-pwatique à adoptew — i-iw est twès difficiwe d-d'aidew une pewsonne ayant un pwobwème de codage si on nye peut pas voiw son code.
+   - un wien v-vews wa page de wa tâche ou d-de w'évawuation pwopwement dite, a-afin que nyous puissions twouvew w-wa question pouw waquewwe vous s-souhaitez de w'aide. XD

@@ -1,91 +1,91 @@
 ---
-title: windows.onFocusChanged
-slug: Mozilla/Add-ons/WebExtensions/API/windows/onFocusChanged
+titwe: windows.onfocuschanged
+swug: moziwwa/add-ons/webextensions/api/windows/onfocuschanged
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Attiré lorsque la fenêtre actuellement change. Sera {{WebExtAPIRef('windows.WINDOW_ID_NONE')}} si toutes les fenêtres du navigateur ont perdu le focus.
+a-attiwé wowsque w-wa fenêtwe a-actuewwement c-change. sewa {{webextapiwef('windows.window_id_none')}} s-si toutes w-wes fenêtwes d-du nyavigateuw ont p-pewdu we focus. /(^•ω•^)
 
-> [!NOTE]
-> Sur certains gestionnaires de fenêtres Linux, WINDOW_ID_NONE sera toujours envoyé immédiatement avant un passage d'une fenêtre de navigateur à l'autre.
+> [!note]
+> suw cewtains gestionnaiwes de fenêtwes winux, :3 window_id_none sewa t-toujouws envoyé immédiatement avant un passage d-d'une fenêtwe de nyavigateuw à w-w'autwe. (ꈍᴗꈍ)
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.windows.onFocusChanged.addListener(listener);
-browser.windows.onFocusChanged.removeListener(listener);
-browser.windows.onFocusChanged.hasListener(listener);
+bwowsew.windows.onfocuschanged.addwistenew(wistenew);
+bwowsew.windows.onfocuschanged.wemovewistenew(wistenew);
+b-bwowsew.windows.onfocuschanged.haswistenew(wistenew);
 ```
 
-Les événements ont trois événements :
+wes événements o-ont t-twois événements :
 
-- `addListener(callback)`
-  - : Ajoute un auditeur à cet événement
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de l'auditeur est l'auditeur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si un auditeur est enregistré pour cet événement. Renvoie **vrai** si elle écoute, **faux** sinon..
+- `addwistenew(cawwback)`
+  - : ajoute un auditeuw à cet événement
+- `wemovewistenew(wistenew)`
+  - : awwêtez d'écoutew cet événement. w-w'awgument de w'auditeuw est w'auditeuw à suppwimew. /(^•ω•^)
+- `haswistenew(wistenew)`
+  - : véwifiez si un auditeuw e-est enwegistwé pouw cet événement. (⑅˘꒳˘) w-wenvoie **vwai** s-si ewwe écoute, ( ͡o ω ͡o ) **faux** s-sinon..
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lors de l'événement. La fonction passera les arguments suivants :
+  - : fonction q-qui sewa appewée wows de w'événement. òωó wa fonction p-passewa wes awguments suivants :
 
-    - `windowId`
-      - : `integer`. ID de la fenêtre nouvellement localisée.
+    - `windowid`
+      - : `integew`. (⑅˘꒳˘) id de wa fenêtwe nyouvewwement wocawisée. XD
 
-## Compatibilité des navigateurs
+## compatibiwité des n-nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## exempwes
 
-Changements de mise au point du journal :
+changements d-de mise au p-point du jouwnaw :
 
 ```js
-browser.windows.onFocusChanged.addListener((windowId) => {
-  console.log("Newly focused window: " + windowId);
+b-bwowsew.windows.onfocuschanged.addwistenew((windowid) => {
+  consowe.wog("newwy focused window: " + windowid);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> c-cette api est b-basée suw w'api de chwomnium [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows). -.- c-cette documentation p-pwovient de [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) d-dans we code de chwomium. :3
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> w-wes données de compatibiwité micwosoft e-edge sont fouwnies paw micwosoft c-cowpowation et sont incwuses i-ici sous wa wicence c-cweative commons attwibution 3.0 united states. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. 😳 aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and u-use in souwce a-and binawy fowms, nyaa~~ with ow without
+// m-modification, OwO a-awe pewmitted p-pwovided that the fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must w-wetain the above copywight
+// nyotice, rawr x3 this wist of conditions and the fowwowing d-discwaimew. XD
+//    * wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight nyotice, σωσ t-this wist o-of conditions and t-the fowwowing d-discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided w-with the
+// distwibution. (U ᵕ U❁)
+//    * n-neithew the n-nyame of googwe i-inc. (U ﹏ U) now the nyames of its
+// contwibutows may be used to endowse o-ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission.
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as i-is" and any expwess o-ow impwied w-wawwanties, :3 incwuding, but nyot
+// w-wimited to, ( ͡o ω ͡o ) the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. σωσ in nyo event shaww the copywight
+// o-ownew ow contwibutows be wiabwe f-fow any diwect, >w< indiwect, 😳😳😳 incidentaw,
+// s-speciaw, OwO e-exempwawy, 😳 ow consequentiaw damages (incwuding, 😳😳😳 b-but nyot
+// w-wimited to, (˘ω˘) pwocuwement of substitute g-goods ow s-sewvices; woss of use, ʘwʘ
+// data, ow pwofits; ow business intewwuption) howevew c-caused and on any
+// t-theowy of wiabiwity, ( ͡o ω ͡o ) w-whethew in contwact, o.O stwict w-wiabiwity, >w< o-ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in any way out of the use
+// of this softwawe, 😳 even if a-advised of the possibiwity o-of such damage. 🥺
 -->

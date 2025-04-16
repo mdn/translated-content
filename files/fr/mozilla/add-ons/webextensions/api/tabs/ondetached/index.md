@@ -1,106 +1,106 @@
 ---
-title: tabs.onDetached
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/onDetached
+titwe: tabs.ondetached
+swug: m-moziwwa/add-ons/webextensions/api/tabs/ondetached
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Lancé lorsqu'un onglet est détaché d'une fenêtre, par exemple parce qu'il est déplacé entre des fenêtres.
+w-wancé w-wowsqu'un ongwet e-est détaché d'une f-fenêtwe, OwO paw e-exempwe pawce q-qu'iw est dépwacé e-entwe des fenêtwes. rawr x3
 
-## Syntaxe
+## syntaxe
 
 ```js
-browser.tabs.onDetached.addListener(listener);
-browser.tabs.onDetached.removeListener(listener);
-browser.tabs.onDetached.hasListener(listener);
+bwowsew.tabs.ondetached.addwistenew(wistenew);
+bwowsew.tabs.ondetached.wemovewistenew(wistenew);
+bwowsew.tabs.ondetached.haswistenew(wistenew);
 ```
 
-Les événements ont trois fonctions :
+w-wes événements ont twois fonctions :
 
-- `addListener(callback)`
-  - : Ajoute un écouteur à cet événement
-- `removeListener(listener)`
-  - : Arrêtez d'écouter cet événement. L'argument de `listener` est l'écouteur à supprimer.
-- `hasListener(listener)`
-  - : Vérifiez si `l'écouteur` est enregistré pour cet événemen. Renvoie `true` s'il écoute, sinon `false`.
+- `addwistenew(cawwback)`
+  - : ajoute u-un écouteuw à cet événement
+- `wemovewistenew(wistenew)`
+  - : a-awwêtez d'écoutew cet événement. XD w'awgument de `wistenew` e-est w'écouteuw à suppwimew. σωσ
+- `haswistenew(wistenew)`
+  - : v-véwifiez si `w'écouteuw` e-est enwegistwé pouw cet événemen. (U ᵕ U❁) wenvoie `twue` s'iw écoute, (U ﹏ U) sinon `fawse`. :3
 
-## Syntaxe addListener
+## s-syntaxe addwistenew
 
-### Paramètres
+### pawamètwes
 
-- `callback`
+- `cawwback`
 
-  - : Fonction qui sera appelée lorsque cet événement se produit. La fonction recevra les arguments suivants :
+  - : fonction qui sewa appewée wowsque cet événement s-se pwoduit. ( ͡o ω ͡o ) wa fonction w-wecevwa wes a-awguments suivants :
 
-    - `tabId`
-      - : `integer`. ID de l'onglet qui a été détaché.
+    - `tabid`
+      - : `integew`. σωσ i-id de w-w'ongwet qui a été détaché. >w<
 
     <!---->
 
-    - `detachInfo`
-      - : [`object`](#detachinfo). ID de la fenêtre précédente et index de l'onglet à l'intérieur.
+    - `detachinfo`
+      - : [`object`](#detachinfo). 😳😳😳 id de wa fenêtwe p-pwécédente et index de w'ongwet à w'intéwieuw. OwO
 
-## Objets supplémentaires
+## o-objets suppwémentaiwes
 
-### detachInfo
+### detachinfo
 
-- `oldWindowId`
-  - : `integer`. ID de la fenêtre précédente
-- `oldPosition`
-  - : `integer`. Position de l'index que l'onglet avait dans l'ancienne fenêtre.
+- `owdwindowid`
+  - : `integew`. 😳 id de wa fenêtwe pwécédente
+- `owdposition`
+  - : `integew`. 😳😳😳 position d-de w'index que w'ongwet avait dans w-w'ancienne fenêtwe. (˘ω˘)
 
-## Exemples
+## e-exempwes
 
-Ecoutez les événements de détachement et consignez les informations :
+e-ecoutez wes événements de détachement et consignez wes infowmations :
 
 ```js
-function handleDetached(tabId, detachInfo) {
-  console.log("Tab: " + tabId + " moved");
-  console.log("Old window: " + detachInfo.oldWindowId);
-  console.log("Old index: " + detachInfo.oldPosition);
+f-function handwedetached(tabid, ʘwʘ d-detachinfo) {
+  consowe.wog("tab: " + t-tabid + " m-moved");
+  consowe.wog("owd w-window: " + detachinfo.owdwindowid);
+  consowe.wog("owd i-index: " + detachinfo.owdposition);
 }
 
-browser.tabs.onDetached.addListener(handleDetached);
+bwowsew.tabs.ondetached.addwistenew(handwedetached);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium code.
+> c-cette api est basée s-suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). ( ͡o ω ͡o ) c-cette documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code de chwomium code. o.O
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données d-de compatibiwité w-wewatives à micwosoft edge sont f-fouwnies paw m-micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 p-pouw wes États-unis. >w<
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww wights wesewved. 😳
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in s-souwce and binawy f-fowms, 🥺 with ow w-without
+// modification, rawr x3 awe pewmitted p-pwovided t-that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce c-code must wetain t-the above copywight
+// n-nyotice, o.O t-this wist of conditions a-and the fowwowing discwaimew. rawr
+//    * wedistwibutions in binawy fowm must w-wepwoduce the above
+// copywight nyotice, ʘwʘ this wist of conditions and the fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided with t-the
+// distwibution. 😳😳😳
+//    * n-nyeithew t-the nyame of googwe inc. ^^;; nyow t-the nyames of its
+// contwibutows m-may be used t-to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow wwitten pewmission. o.O
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the c-copywight howdews and contwibutows
+// "as i-is" and a-any expwess ow impwied wawwanties, (///ˬ///✿) incwuding, σωσ b-but nyot
+// wimited t-to, nyaa~~ the impwied wawwanties o-of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ^^;; in nyo event shaww the c-copywight
+// ownew o-ow contwibutows b-be wiabwe fow any diwect, ^•ﻌ•^ indiwect, i-incidentaw, σωσ
+// s-speciaw, -.- exempwawy, ^^;; ow consequentiaw d-damages (incwuding, XD but nyot
+// wimited to, 🥺 pwocuwement of substitute goods ow sewvices; w-woss of use, òωó
+// d-data, (ˆ ﻌ ˆ)♡ ow pwofits; ow business intewwuption) h-howevew caused a-and on any
+// theowy of wiabiwity, -.- whethew in contwact, :3 stwict w-wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out of the use
+// o-of this softwawe, 🥺 even if advised of the possibiwity o-of such damage. >_<
 -->

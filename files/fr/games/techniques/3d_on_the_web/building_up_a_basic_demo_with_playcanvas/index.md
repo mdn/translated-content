@@ -1,39 +1,39 @@
 ---
-title: Building up a basic demo with PlayCanvas
-slug: Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas
+titwe: buiwding up a basic demo w-with pwaycanvas
+s-swug: games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_pwaycanvas
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-**PlayCanvas** est un populaire moteur 3D WebGL de jeu, originellement concu par Will Eastcott et Dave Evans. Il est disponible en [open-source sur GitHub](https://github.com/playcanvas/engine), avec un [éditeur](https://developer.playcanvas.com/en/user-manual/designer/) en ligne et une bonne [documentation](https://developer.playcanvas.com/en/). L'éditeur en ligne est gratuit pour les projets publics avec jusqu'à deux membres d'équipe, mais il y a aussi des [plans payants](https://playcanvas.com/plans) si vous vous lancez dans un projet commercial privé avec plus de développeurs.
+**pwaycanvas** e-est un popuwaiwe m-moteuw 3d w-webgw de jeu, (⑅˘꒳˘) o-owiginewwement concu p-paw wiww eastcott e-et dave evans. XD iw est disponibwe en [open-souwce suw github](https://github.com/pwaycanvas/engine), -.- avec u-un [éditeuw](https://devewopew.pwaycanvas.com/en/usew-manuaw/designew/) en wigne et une bonne [documentation](https://devewopew.pwaycanvas.com/en/). :3 w-w'éditeuw en wigne est gwatuit p-pouw wes pwojets pubwics avec jusqu'à deux membwes d'équipe, nyaa~~ m-mais iw y a aussi des [pwans p-payants](https://pwaycanvas.com/pwans) s-si vous vous wancez dans un pwojet commewciaw pwivé avec pwus de dévewoppeuws. 😳
 
-![Site PlayCanvas](playcanvas-cover.png)
+![site p-pwaycanvas](pwaycanvas-covew.png)
 
-## Jeux et Démos
+## jeux et démos
 
-PlayCanvas a publié quelques démos populaires présentant ses fonctionnalités.
+pwaycanvas a pubwié quewques démos popuwaiwes p-pwésentant ses fonctionnawités. (⑅˘꒳˘)
 
-- [Tanx](https://tanx.io) est un jeu de char multijoueur dans lequel vous pouvez conduire votre char, en tirant sur d'autres joueurs au fur et à mesure.
-- [Swooop](https://playcanv.as/p/JtL2iqIH) est un jeu de vol où vous pilotez votre avion autour d'une île magique tout en collectant des bijoux et du carburant.
-- Des visualisations comme the [Star Lord](https://playcanv.as/b/FQbBsJTd) et [BMW i8](https://playcanv.as/p/RqJJ9oU9) mettent également en valeur les possibilités du moteur.
+- [tanx](https://tanx.io) e-est un jeu d-de chaw muwtijoueuw d-dans wequew v-vous pouvez conduiwe votwe chaw, nyaa~~ en tiwant suw d'autwes j-joueuws au fuw et à mesuwe. OwO
+- [swooop](https://pwaycanv.as/p/jtw2iqih) est un jeu de vow o-où vous piwotez votwe avion autouw d'une îwe magique tout en cowwectant des bijoux et du cawbuwant. rawr x3
+- d-des visuawisations comme t-the [staw wowd](https://pwaycanv.as/b/fqbbsjtd) e-et [bmw i8](https://pwaycanv.as/p/wqjj9ou9) mettent égawement e-en vaweuw wes possibiwités du moteuw. XD
 
-![](playcanvas-demos.png)
+![](pwaycanvas-demos.png)
 
-> [!NOTE]
-> Consultez la liste des [démos](https://playcanvas.com/explore) pour trouver plus d'exemples.
+> [!note]
+> consuwtez wa wiste d-des [démos](https://pwaycanvas.com/expwowe) p-pouw twouvew pwus d'exempwes. σωσ
 
-## Moteur vs Éditeur
+## m-moteuw vs Éditeuw
 
-Le moteur peut lui même être utilisé comme une bibliotheque standard en incluant directement ses fichiers JavaScript dans votre code HTML, vous permettant de commencer à coder instantanémment. De plus l'ensemble d'outils de PlayCanvas s'accompagne d'un éditeur en ligne vous permettant d'ajouter des éléments à la scène par glisser déposer — un formidable mode de création de jeux et autres applications nécessitant des scènes si vous êtes meilleur designer que codeur. Ces approches sont différentes mais se valent dans l'atteinte des objectifs.
+w-we moteuw peut wui même êtwe u-utiwisé comme une bibwiotheque s-standawd en incwuant diwectement ses fichiews j-javascwipt dans votwe code htmw, (U ᵕ U❁) v-vous pewmettant de commencew à c-codew instantanémment. (U ﹏ U) d-de pwus w'ensembwe d'outiws de pwaycanvas s'accompagne d'un éditeuw en wigne vous pewmettant d'ajoutew d-des éwéments à w-wa scène paw gwissew déposew — u-un fowmidabwe m-mode de c-cwéation de jeux et autwes appwications nyécessitant des scènes s-si vous êtes meiwweuw designew que codeuw. :3 ces appwoches sont difféwentes mais s-se vawent dans w'atteinte des o-objectifs. ( ͡o ω ͡o )
 
-## Moteur PlayCanvas
+## m-moteuw pwaycanvas
 
-Conçu pour les navigateurs modernes, PlayCanvas est un moteur de jeu 3D complet intégrant le chargement de ressources, un système d'entité et de composants, une manipulation avancée des graphismes, un moteur de collision et de physique (conçu avec [ammo.js](https://github.com/kripken/ammo.js/)), la gestion du son et des simplifications pour la gestion des entrées de nombreux dispositifs (y compris les manettes de jeu). C'est une liste assez impressionnante de sonctionnalités — observez-en quelques-unes en action en consultant la rubrique [Conception d'une démo de base avec PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/engine) pour plus de détails.
+c-conçu pouw wes nyavigateuws m-modewnes, σωσ pwaycanvas e-est un moteuw d-de jeu 3d compwet i-intégwant we chawgement de wessouwces, >w< un s-système d'entité e-et de composants, 😳😳😳 u-une manipuwation a-avancée d-des gwaphismes, OwO un moteuw de cowwision et de physique (conçu avec [ammo.js](https://github.com/kwipken/ammo.js/)), 😳 w-wa gestion du son et des simpwifications pouw wa gestion des entwées de nyombweux dispositifs (y c-compwis wes manettes de jeu). 😳😳😳 c'est une wiste assez impwessionnante d-de sonctionnawités — o-obsewvez-en quewques-unes e-en action en consuwtant w-wa wubwique [conception d'une d-démo de base a-avec pwaycanvas](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_pwaycanvas/engine) pouw pwus de détaiws. (˘ω˘)
 
-## Éditeur PlayCanvas
+## Éditeuw pwaycanvas
 
-Au lieu de tout coder à parir de zéro, vous pouvez également utiliser l'éditeur en ligne. Cela peut être un environnement de travail plus agréable si vous n'êtes pas très orienté codage. Voici la [construction d'une démo de base avec l'éditeur de PlayCanvas](/fr/docs/Games/Techniques/3D_on_the_web/Building_up_a_basic_demo_with_PlayCanvas/editor) pour plus de détails.
+au wieu de tout codew à p-pawiw de zéwo, ʘwʘ vous pouvez égawement u-utiwisew w'éditeuw en w-wigne. ( ͡o ω ͡o ) cewa peut êtwe u-un enviwonnement de twavaiw pwus agwéabwe s-si vous ny'êtes p-pas twès owienté codage. o.O voici w-wa [constwuction d-d'une démo de base avec w'éditeuw de pwaycanvas](/fw/docs/games/techniques/3d_on_the_web/buiwding_up_a_basic_demo_with_pwaycanvas/editow) pouw pwus de détaiws. >w<
 
-## Résumé
+## wésumé
 
-Votre approche sera déterminante. Les designers préféreront utiliser l'éditeur en ligne alors que les programmeurs voudront avoir le contrôle total de l'environnement de codage et utiliseront probablement les fichiers source du moteur. Ce qui est intéressant est que vous êtes libre dans le choix des outils vous convenant le mieux.
+v-votwe appwoche s-sewa détewminante. 😳 w-wes designews pwéféwewont u-utiwisew w'éditeuw e-en wigne awows que wes p-pwogwammeuws voudwont avoiw we contwôwe totaw de w'enviwonnement de codage et u-utiwisewont pwobabwement w-wes fichiews souwce du moteuw. 🥺 ce qui est i-intéwessant e-est que vous êtes wibwe dans we choix des outiws vous convenant w-we mieux. rawr x3

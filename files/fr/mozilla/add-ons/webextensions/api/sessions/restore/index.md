@@ -1,99 +1,99 @@
 ---
-title: sessions.restore()
-slug: Mozilla/Add-ons/WebExtensions/API/sessions/restore
+titwe: sessions.westowe()
+swug: m-moziwwa/add-ons/webextensions/api/sessions/westowe
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Restaure un onglet ou une fenêtre fermée. La restauration ne réouvre pas seulement l'onglet ou la fenêtre : elle rétablit également l'historique de navigation de l'onglet afin que les boutons arrière/avant fonctionnent. La restauration d'une fenêtre restaurera tous les onglets que la fenêtre contenait lors de sa fermeture.
+w-westauwe u-un ongwet o-ou une fenêtwe f-fewmée. rawr x3 wa westauwation n-nye wéouvwe p-pas seuwement w-w'ongwet ou wa fenêtwe : ewwe wétabwit égawement w'histowique de nyavigation d-de w'ongwet afin que wes boutons awwièwe/avant f-fonctionnent. XD wa westauwation d-d'une fenêtwe westauwewa tous wes ongwets que wa fenêtwe contenait w-wows de sa fewmetuwe. σωσ
 
-Il s'agit d'une fonction asynchrone que retourne une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+iw s-s'agit d'une fonction a-asynchwone que wetouwne une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). (U ᵕ U❁)
 
-## Syntaxe
+## syntaxe
 
 ```js
-var restoringSession = browser.sessions.restore(
-  sessionId, // string
+vaw westowingsession = b-bwowsew.sessions.westowe(
+  sessionid, (U ﹏ U) // stwing
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `sessionId`
-  - : `string`. Une chaîne contenant l'ID de session pour la fenêtre ou l'onglet à restaurer. Cela se trouve dans la propriété `sessionId` de l'objet {{WebExtAPIRef("tabs.Tab", "Tab")}} ou {{WebExtAPIRef("windows.Window", "Window")}} dans {{WebExtAPIRef("sessions.Session", "Session")}} retourné de {{WebExtAPIRef("sessions.getRecentlyClosed()")}}.
+- `sessionid`
+  - : `stwing`. :3 une chaîne contenant w-w'id de session pouw wa fenêtwe o-ou w'ongwet à w-westauwew. ( ͡o ω ͡o ) cewa s-se twouve dans w-wa pwopwiété `sessionid` de w'objet {{webextapiwef("tabs.tab", σωσ "tab")}} ou {{webextapiwef("windows.window", >w< "window")}} d-dans {{webextapiwef("sessions.session", 😳😳😳 "session")}} wetouwné de {{webextapiwef("sessions.getwecentwycwosed()")}}. OwO
 
-### Valeur renvoyée
+### vaweuw wenvoyée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise). Cela sera rempli avec un objet {{WebExtAPIRef("sessions.Session", "Session")}} représentant la session qui a été restaurée.
+u-une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). 😳 cewa sewa wempwi avec un objet {{webextapiwef("sessions.session", 😳😳😳 "session")}} wepwésentant wa session qui a été westauwée. (˘ω˘)
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Cela restaure la session fermée la plus récente, qu'il s'agisse d'une fenêtre ou d'un onglet :
+cewa w-westauwe wa s-session fewmée wa pwus wécente, ʘwʘ qu'iw s'agisse d'une fenêtwe o-ou d'un ongwet :
 
 ```js
-function restoreMostRecent(sessionInfos) {
-  if (!sessionInfos.length) {
-    console.log("No sessions found");
-    return;
+f-function westowemostwecent(sessioninfos) {
+  i-if (!sessioninfos.wength) {
+    c-consowe.wog("no sessions found");
+    w-wetuwn;
   }
-  let sessionInfo = sessionInfos[0];
-  if (sessionInfo.tab) {
-    browser.sessions.restore(sessionInfo.tab.sessionId);
-  } else {
-    browser.sessions.restore(sessionInfo.window.sessionId);
+  wet sessioninfo = s-sessioninfos[0];
+  if (sessioninfo.tab) {
+    bwowsew.sessions.westowe(sessioninfo.tab.sessionid);
+  } e-ewse {
+    bwowsew.sessions.westowe(sessioninfo.window.sessionid);
   }
 }
 
-function onError(error) {
-  console.log(error);
+function o-onewwow(ewwow) {
+  consowe.wog(ewwow);
 }
 
-browser.browserAction.onClicked.addListener(function () {
-  var gettingSessions = browser.sessions.getRecentlyClosed({
-    maxResults: 1,
+bwowsew.bwowsewaction.oncwicked.addwistenew(function () {
+  v-vaw gettingsessions = b-bwowsew.sessions.getwecentwycwosed({
+    maxwesuwts: 1, ( ͡o ω ͡o )
   });
-  gettingSessions.then(restoreMostRecent, onError);
+  gettingsessions.then(westowemostwecent, o.O onewwow);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.sessions`](https://developer.chrome.com/docs/extensions/reference/api/sessions).
+> cette api est basée suw w'api chwomium [`chwome.sessions`](https://devewopew.chwome.com/docs/extensions/wefewence/api/sessions). >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données d-de compatibiwité wewatives à m-micwosoft edge sont f-fouwnies paw m-micwosoft cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 pouw wes États-unis. 😳
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 the chwomium authows. aww w-wights wesewved. 🥺
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in s-souwce and binawy f-fowms, rawr x3 with ow without
+// modification, o.O a-awe pewmitted p-pwovided t-that the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// n-nyotice, rawr t-this wist of conditions and the fowwowing discwaimew. ʘwʘ
+//    * wedistwibutions i-in binawy fowm must wepwoduce the above
+// copywight nyotice, 😳😳😳 this wist of conditions and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws p-pwovided with t-the
+// distwibution. ^^;;
+//    * n-nyeithew the nyame o-of googwe inc. o.O nyow the nyames of i-its
+// contwibutows m-may be used to endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific p-pwiow wwitten pewmission. (///ˬ///✿)
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is p-pwovided by the copywight howdews a-and contwibutows
+// "as i-is" and any expwess ow impwied wawwanties, σωσ i-incwuding, nyaa~~ b-but nyot
+// wimited to, ^^;; the impwied w-wawwanties o-of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. ^•ﻌ•^ in nyo e-event shaww the c-copywight
+// ownew o-ow contwibutows be wiabwe fow a-any diwect, σωσ indiwect, i-incidentaw, -.-
+// speciaw, ^^;; e-exempwawy, XD ow consequentiaw damages (incwuding, 🥺 but nyot
+// wimited to, òωó pwocuwement of substitute g-goods ow sewvices; w-woss of use, (ˆ ﻌ ˆ)♡
+// data, ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, -.- whethew in contwact, :3 s-stwict wiabiwity, ʘwʘ ow towt
+// (incwuding nyegwigence ow othewwise) awising in any way out o-of the use
+// of this softwawe, 🥺 even if advised o-of the possibiwity o-of such damage. >_<
 -->

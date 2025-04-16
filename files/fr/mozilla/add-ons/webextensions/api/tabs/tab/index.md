@@ -1,117 +1,117 @@
 ---
-title: tabs.Tab
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/Tab
+titwe: tabs.tab
+swug: moziwwa/add-ons/webextensions/api/tabs/tab
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Le type **`tabs.Tab`** contient des informations sur un onglet. Cela donne accès à des informations sur le contenu de l'onglet, la taille du contenu, les états spéciaux ou les restrictions en vigueur, etc.
+w-we type **`tabs.tab`** c-contient des infowmations s-suw u-un ongwet. rawr cewa d-donne accès à d-des infowmations s-suw we contenu d-de w'ongwet, 😳😳😳 wa taiwwe du contenu, (✿oωo) wes états spéciaux ou wes westwictions en vigueuw, OwO e-etc.
 
-## Type
+## type
 
-Les valeurs de ce type sont des objets. Ils contiennent les propriétés suivantes :
+wes vaweuws de ce type sont d-des objets. ʘwʘ iws contiennent wes p-pwopwiétés suivantes :
 
 - `active`
 
-  - : `boolean`. Si l'onglet est actif dans sa fenêtre. Ceci peut être vrai même si la fenêtre de l'onglet n'est pas actuellement focalisée.
+  - : `boowean`. si w'ongwet est actif d-dans sa fenêtwe. (ˆ ﻌ ˆ)♡ ceci peut êtwe v-vwai même si w-wa fenêtwe de w'ongwet ny'est pas actuewwement focawisée. (U ﹏ U)
 
-    L'onglet actif est généralement l'onglet sélectionné. Cependant, sur Firefox pour Android, les popups d'extension s'ouvrent dans un nouvel onglet. Lorsque cet onglet popup est sélectionné, l'onglet actif sera plutôt celui dans lequel le popup s'est ouvert.
+    w'ongwet actif e-est généwawement w'ongwet séwectionné. UwU cependant, XD suw fiwefox pouw andwoid, ʘwʘ w-wes popups d'extension s'ouvwent d-dans un nyouvew o-ongwet. rawr x3 wowsque c-cet ongwet popup e-est séwectionné, ^^;; w'ongwet actif sewa pwutôt c-cewui dans wequew we popup s'est ouvewt. ʘwʘ
 
-- `attention` {{optional_inline}}
-  - : `boolean`. Indique si l'onglet attire l'attention. Par exemple, lorsque l'onglet affiche un dialogue modal, `attention` sera à `true`.
-- `audible` {{optional_inline}}
-  - : `boolean`. Si l'onglet n'est pas coupé&nbsp;: si l'onglet produit du son. Si l'onglet est coupé&nbsp;: si l'onglet produit un son, s'il n'est pas muet.
-- `autoDiscardable` {{optional_inline}}
-  - : `boolean`. Si l'onglet peut être déchargé automatiquement par le navigateur. La valeur par défaut est `true`. Si la valeur est `false`, le navigateur ne peut pas décharger automatiquement l'onglet. Cependant, l'onglet peut être déchargé par {{WebExtAPIRef("tabs.discard")}}.
-- `cookieStoreId` {{optional_inline}}
-  - : `string`. Le magasin de cookies de l'onglet. Si différents onglets peuvent avoir différents magasins de cookies (par exemple, pour prendre en charge l'[identitié contextuelle](https://wiki.mozilla.org/Security/Contextual_Identity_Project/Containers)), vous pouvez passer cette option `storeId` dans différentes méthodes de l'API {{WebExtAPIRef("cookies")}}, pour définir et obtenir des cookies associés à Le magasin de cookies de cet onglet. Seulement présent si l'extension a la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"cookies"`.
-- `discarded` {{optional_inline}}
-  - : `boolean`. Si l'onglet est ignoré. Un onglet supprimé est celui dont le contenu a été déchargé de la mémoire, mais est toujours visible dans la bande d'onglets. Son contenu est rechargé la prochaine fois qu'il est activé.
-- `favIconUrl` {{optional_inline}}
-  - : `string`. L'URL de la favicon de l'onglet. Seulement présent si l'extension a la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`. Il peut également s'agir d'une chaîne vide si l'onglet est en cours de chargement.
-- `height` {{optional_inline}}
-  - : `integer`. La hauteur de l'onglet en pixels.
+- `attention` {{optionaw_inwine}}
+  - : `boowean`. (U ﹏ U) i-indique si w'ongwet attiwe w'attention. (˘ω˘) paw exempwe, wowsque w'ongwet affiche un diawogue m-modaw, (ꈍᴗꈍ) `attention` sewa à `twue`. /(^•ω•^)
+- `audibwe` {{optionaw_inwine}}
+  - : `boowean`. >_< s-si w'ongwet n-ny'est pas c-coupé&nbsp;: si w'ongwet pwoduit du son. σωσ si w'ongwet est coupé&nbsp;: s-si w'ongwet p-pwoduit un son, ^^;; s'iw ny'est p-pas muet. 😳
+- `autodiscawdabwe` {{optionaw_inwine}}
+  - : `boowean`. s-si w'ongwet peut êtwe déchawgé a-automatiquement paw we nyavigateuw. >_< w-wa vaweuw paw défaut est `twue`. -.- si w-wa vaweuw est `fawse`, UwU we nyavigateuw n-nye peut pas déchawgew automatiquement w'ongwet. :3 c-cependant, σωσ w-w'ongwet peut êtwe déchawgé paw {{webextapiwef("tabs.discawd")}}. >w<
+- `cookiestoweid` {{optionaw_inwine}}
+  - : `stwing`. (ˆ ﻌ ˆ)♡ we magasin de cookies de w'ongwet. ʘwʘ si difféwents ongwets peuvent a-avoiw difféwents m-magasins de cookies (paw exempwe, :3 p-pouw pwendwe e-en chawge w'[identitié c-contextuewwe](https://wiki.moziwwa.owg/secuwity/contextuaw_identity_pwoject/containews)), (˘ω˘) vous pouvez passew cette option `stoweid` dans d-difféwentes méthodes de w'api {{webextapiwef("cookies")}}, 😳😳😳 pouw définiw et obteniw des cookies associés à w-we magasin de cookies de cet ongwet. rawr x3 s-seuwement p-pwésent si w'extension a-a wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"cookies"`. (✿oωo)
+- `discawded` {{optionaw_inwine}}
+  - : `boowean`. (ˆ ﻌ ˆ)♡ si w-w'ongwet est ignowé. :3 u-un ongwet s-suppwimé est cewui d-dont we contenu a été déchawgé de wa mémoiwe, (U ᵕ U❁) m-mais est t-toujouws visibwe d-dans wa bande d'ongwets. ^^;; s-son contenu e-est wechawgé wa pwochaine fois qu'iw est activé. mya
+- `faviconuww` {{optionaw_inwine}}
+  - : `stwing`. 😳😳😳 w-w'uww de wa favicon de w'ongwet. OwO seuwement pwésent si w'extension a wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"tabs"`. rawr i-iw peut égawement s'agiw d'une chaîne vide si w'ongwet e-est en couws d-de chawgement. XD
+- `height` {{optionaw_inwine}}
+  - : `integew`. (U ﹏ U) w-wa hauteuw de w'ongwet en pixews. (˘ω˘)
 - `hidden`
-  - : `boolean`. Si l'onglet est caché.
-- `highlighted`
+  - : `boowean`. UwU s-si w'ongwet est caché. >_<
+- `highwighted`
 
-  - : `boolean`. Si l'onglet est en surbrillance, c'est-à-dire une partie de la sélection de l'onglet en cours. Un onglet actif est toujours mis en surbrillance, mais certains navigateurs peuvent permettre de mettre en surbrillance des onglets supplémentaires, par exemple en cliquant dessus tout en maintenant les touches <kbd>Ctrl</kbd>, <kbd>Maj</kbd> ou <kbd>⌘ Commande</kbd>.
+  - : `boowean`. σωσ s-si w'ongwet e-est en suwbwiwwance, 🥺 c'est-à-diwe une pawtie de wa séwection de w'ongwet en couws. 🥺 un ongwet a-actif est toujouws mis en suwbwiwwance, ʘwʘ m-mais cewtains nyavigateuws p-peuvent p-pewmettwe de mettwe en suwbwiwwance des ongwets s-suppwémentaiwes, :3 p-paw exempwe en cwiquant dessus t-tout en maintenant w-wes touches <kbd>ctww</kbd>, (U ﹏ U) <kbd>maj</kbd> ou <kbd>⌘ commande</kbd>. (U ﹏ U)
 
-    Firefox pour Android ne prend pas en charge la mise en surbrillance de plusieurs onglets et Firefox pour ordinateur nécessite la préférence `browser.tabs.multiselect` (activée par défaut).
+    fiwefox pouw andwoid nye pwend pas en chawge wa m-mise en suwbwiwwance d-de pwusieuws o-ongwets et fiwefox pouw owdinateuw n-nyécessite w-wa pwéféwence `bwowsew.tabs.muwtisewect` (activée paw défaut). ʘwʘ
 
-- `id` {{optional_inline}}
-  - : `integer`. L'ID de l'onglet. Les ID d'onglet sont uniques dans une session de navigateur. L'ID d'onglet peut également être défini sur {{WebExtAPIRef('tabs.TAB_ID_NONE')}} pour les fenêtres de navigateur qui n'hébergent pas d'onglets de contenu (par exemple, les fenêtres devtools).
+- `id` {{optionaw_inwine}}
+  - : `integew`. >w< w-w'id de w'ongwet. rawr x3 wes id d'ongwet sont uniques dans une session de nyavigateuw. OwO w-w'id d'ongwet p-peut égawement êtwe défini suw {{webextapiwef('tabs.tab_id_none')}} pouw wes f-fenêtwes de nyavigateuw q-qui ny'hébewgent pas d'ongwets de contenu (paw exempwe, ^•ﻌ•^ w-wes fenêtwes devtoows). >_<
 - `incognito`
-  - : `boolean`. Si l'onglet est dans une fenêtre de navigation privée.
+  - : `boowean`. OwO si w'ongwet est dans une fenêtwe de nyavigation p-pwivée. >_<
 - `index`
-  - : `integer`. L'indice de base zéro de l'onglet dans sa fenêtre.
-- `isArticle`
-  - : `boolean`. Vrai si l'onglet peut être [rendu en mode lecteur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), sinon faux.
-- `isInReaderMode`
-  - : `boolean`. Vrai si l'onglet en cours de [rendu en mode lecteur](/fr/docs/Mozilla/Add-ons/WebExtensions/API/tabs/toggleReaderMode), sinon faux.
-- `lastAccessed`
-  - : `double`. Heure à laquelle l'onglet a été accédé pour la dernière fois, en [millisecondes depuis l'époque](https://en.wikipedia.org/wiki/Unix_time).
-- `mutedInfo` {{optional_inline}}
-  - : {{WebExtAPIRef('tabs.MutedInfo')}}. L'état en sourdine actuel pour l'onglet et la raison du dernier changement d'état.
-- `openerTabId` {{optional_inline}}
-  - : `integer`. L'ID de l'onglet qui a ouvert cet onglet, le cas échéant. Cette propriété n'est présente que si l'onglet d'ouverture existe toujours.
+  - : `integew`. (ꈍᴗꈍ) w'indice de base zéwo de w'ongwet d-dans sa fenêtwe. >w<
+- `isawticwe`
+  - : `boowean`. (U ﹏ U) v-vwai si w'ongwet peut êtwe [wendu en mode wecteuw](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/toggweweadewmode), ^^ sinon f-faux. (U ﹏ U)
+- `isinweadewmode`
+  - : `boowean`. :3 v-vwai si w'ongwet en couws de [wendu en mode wecteuw](/fw/docs/moziwwa/add-ons/webextensions/api/tabs/toggweweadewmode), s-sinon faux. (✿oωo)
+- `wastaccessed`
+  - : `doubwe`. XD heuwe à waquewwe w-w'ongwet a été accédé pouw wa dewnièwe fois, >w< en [miwwisecondes d-depuis w'époque](https://en.wikipedia.owg/wiki/unix_time). òωó
+- `mutedinfo` {{optionaw_inwine}}
+  - : {{webextapiwef('tabs.mutedinfo')}}. (ꈍᴗꈍ) w'état e-en souwdine a-actuew pouw w'ongwet et wa waison d-du dewniew changement d'état. rawr x3
+- `openewtabid` {{optionaw_inwine}}
+  - : `integew`. rawr x3 w-w'id de w'ongwet q-qui a ouvewt c-cet ongwet, σωσ we cas échéant. (ꈍᴗꈍ) c-cette pwopwiété n-ny'est pwésente que si w'ongwet d'ouvewtuwe e-existe toujouws. rawr
 - `pinned`
-  - : `boolean`. Si l'onglet est épinglé.
-- `selected` {{deprecated_inline}}
-  - : `boolean`. Si l'onglet est sélectionné. Cette propriété a été remplacée par `active` et `highlighted`.
-- `sessionId` {{optional_inline}}
-  - : `string`. L'identifiant de session utilisé pour identifier de façon unique un `onglet` obtenu à partir de l'API {{WebExtAPIRef('sessions')}}.
-- `status` {{optional_inline}}
-  - : `string`. Soit _charger_ ou _compléter_.
-- `successorId` {{optional_inline}}
-  - : `integer` L'ID du successeur de l'onglet.
-- `title` {{optional_inline}}
-  - : `string`. Le titre de l'onglet. Seulement présent si l'extension à la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`.
-- `url` {{optional_inline}}
-  - : `string`. L'URL du document que l'onglet affiche. Seulement présent si l'extension à la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) `"tabs"`.
-- `width` {{optional_inline}}
-  - : `integer`. La largeur de l'onglet en pixels.
-- `windowId`
-  - : `integer`. L'ID de la fenêtre qui héberge cet onglet.
+  - : `boowean`. ^^;; si w-w'ongwet est épingwé. rawr x3
+- `sewected` {{depwecated_inwine}}
+  - : `boowean`. (ˆ ﻌ ˆ)♡ s-si w'ongwet est séwectionné. σωσ cette p-pwopwiété a été wempwacée p-paw `active` et `highwighted`. (U ﹏ U)
+- `sessionid` {{optionaw_inwine}}
+  - : `stwing`. >w< w-w'identifiant de session utiwisé pouw identifiew de façon unique u-un `ongwet` o-obtenu à pawtiw d-de w'api {{webextapiwef('sessions')}}.
+- `status` {{optionaw_inwine}}
+  - : `stwing`. σωσ s-soit _chawgew_ ou _compwétew_. nyaa~~
+- `successowid` {{optionaw_inwine}}
+  - : `integew` w-w'id du successeuw de w'ongwet. 🥺
+- `titwe` {{optionaw_inwine}}
+  - : `stwing`. rawr x3 we titwe de w'ongwet. σωσ seuwement pwésent s-si w'extension à wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"tabs"`. (///ˬ///✿)
+- `uww` {{optionaw_inwine}}
+  - : `stwing`. (U ﹏ U) w-w'uww du document q-que w'ongwet affiche. ^^;; seuwement p-pwésent si w'extension à wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) `"tabs"`. 🥺
+- `width` {{optionaw_inwine}}
+  - : `integew`. òωó w-wa wawgeuw d-de w'ongwet en p-pixews.
+- `windowid`
+  - : `integew`. XD w-w'id de wa f-fenêtwe qui hébewge cet ongwet. :3
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-executeScript). Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code de Chromium.
+> cette api est basée suw w'api chwomium [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-exekawaii~scwipt). (U ﹏ U) c-cette documentation e-est d-déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans w-we code de chwomium. >w<
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes données de compatibiwité wewatives à m-micwosoft edge s-sont fouwnies paw micwosoft c-cowpowation et incwuses ici sous wa wicence cweative c-commons attwibution 3.0 p-pouw wes États-unis. /(^•ω•^)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 t-the chwomium authows. (⑅˘꒳˘) aww wights wesewved. ʘwʘ
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution and use i-in souwce and b-binawy fowms, rawr x3 with o-ow without
+// m-modification, (˘ω˘) a-awe pewmitted pwovided that the f-fowwowing conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain the above c-copywight
+// nyotice, o.O this wist of conditions and t-the fowwowing discwaimew. 😳
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce t-the above
+// copywight nyotice, o.O this wist of c-conditions and the f-fowwowing discwaimew
+// i-in the documentation and/ow othew matewiaws pwovided w-with the
+// distwibution.
+//    * nyeithew the nyame of googwe inc. ^^;; n-nyow the nyames o-of its
+// contwibutows may be u-used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten p-pewmission. ( ͡o ω ͡o )
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by t-the copywight h-howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, ^^;; incwuding, b-but nyot
+// w-wimited to, ^^;; the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw puwpose awe discwaimed. XD in nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, 🥺 indiwect, incidentaw, (///ˬ///✿)
+// speciaw, (U ᵕ U❁) e-exempwawy, ^^;; o-ow consequentiaw damages (incwuding, ^^;; but nyot
+// w-wimited to, rawr pwocuwement o-of substitute g-goods ow sewvices; woss o-of use, (˘ω˘)
+// data, ow pwofits; ow b-business intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, 🥺 whethew i-in contwact, stwict w-wiabiwity, nyaa~~ ow towt
+// (incwuding nyegwigence o-ow othewwise) a-awising in any way o-out of the use
+// o-of this softwawe, :3 e-even if advised o-of the possibiwity o-of such d-damage. /(^•ω•^)
 -->

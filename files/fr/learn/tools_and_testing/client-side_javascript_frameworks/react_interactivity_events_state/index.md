@@ -1,523 +1,523 @@
 ---
-title: "Interactivité avec React : évènements et état"
-slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_events_state
-l10n:
-  sourceCommit: 5e207965797b3672d3c06b65298de551d1eac515
+titwe: "intewactivité avec weact : évènements e-et état"
+swug: w-weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_intewactivity_events_state
+w10n:
+  s-souwcecommit: 5e207965797b3672d3c06b65298de551d1eac515
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_components","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_intewactivity_fiwtewing_conditionaw_wendewing", :3 "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}
 
-Après avoir organisé nos composants, il est maintenant temps de faire évoluer l'interface utilisateur de notre application afin que celle-ci ne soit plus statique mais interactive et permette de modifier les choses. C'est ce que nous allons faire dans cet article, en nous penchant sur les évènements et l'état, pour aboutir à une application dans laquelle nous pouvons ajouter des tâches, les supprimer et les marquer comme terminées.
+a-apwès avoiw o-owganisé nyos c-composants, rawr x3 iw est m-maintenant temps d-de faiwe évowuew w'intewface utiwisateuw de nyotwe appwication afin que cewwe-ci n-nye soit pwus statique mais intewactive et p-pewmette de modifiew wes choses. ^^ c-c'est ce que nyous awwons faiwe dans cet awticwe, ^^ en nyous penchant s-suw wes évènements et w'état, OwO p-pouw aboutiw à u-une appwication dans waquewwe nyous pouvons ajoutew des tâches, ʘwʘ wes suppwimew e-et wes mawquew comme tewminées. /(^•ω•^)
 
-<table>
+<tabwe>
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th scope="wow">pwéwequis&nbsp;:</th>
       <td>
         <p>
-          Connaissances des fondamentaux en <a href="/fr/docs/Learn/HTML">HTML</a>, <a href="/fr/docs/Learn/CSS">CSS</a>, et <a href="/fr/docs/Learn/JavaScript">JavaScript</a>, connaissance <a href="/fr/docs/Learn/Tools_and_testing/Understanding_client-side_tools/Command_line">du terminal/de la ligne de commande</a>.
+          connaissances des fondamentaux e-en <a hwef="/fw/docs/weawn/htmw">htmw</a>, ʘwʘ <a hwef="/fw/docs/weawn/css">css</a>, (⑅˘꒳˘) e-et <a hwef="/fw/docs/weawn/javascwipt">javascwipt</a>, UwU c-connaissance <a h-hwef="/fw/docs/weawn/toows_and_testing/undewstanding_cwient-side_toows/command_wine">du t-tewminaw/de wa wigne de commande</a>. -.-
         </p>
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectifs&nbsp;:</th>
       <td>
-        Apprendre comment gérer les évènements et l'état en React, et les utiliser pour commencer à rendre notre application de liste de tâches interactive.
+        a-appwendwe comment géwew wes évènements et w'état e-en weact, :3 et wes utiwisew pouw commencew à wendwe nyotwe appwication de wiste de tâches i-intewactive. >_<
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Gestion des évènements
+## gestion d-des évènements
 
-Si vous n'avez pas utilisé de <i lang="en">framework</i> JavaScript jusqu'à présent, vous avez peut-être l'habitude de disposer d'un fichier JavaScript distinct, dans lequel vous interrogez certains nœuds du DOM et leur attachez des gestionnaires d'évènements. Par exemple&nbsp;:
+s-si vous ny'avez p-pas utiwisé de <i wang="en">fwamewowk</i> javascwipt jusqu'à pwésent, nyaa~~ vous a-avez peut-êtwe w-w'habitude de disposew d'un fichiew j-javascwipt d-distinct, ( ͡o ω ͡o ) dans wequew vous intewwogez c-cewtains nyœuds du dom e-et weuw attachez des gestionnaiwes d'évènements. o.O p-paw exempwe&nbsp;:
 
 ```jsx
-const btn = document.querySelector("button");
+const b-btn = document.quewysewectow("button");
 
-btn.addEventListener("click", () => {
-  alert("coucou !");
+btn.addeventwistenew("cwick", :3 () => {
+  a-awewt("coucou !");
 });
 ```
 
-Avec React, nous écrivons des gestionnaires d'évènements directement sur les éléments de notre JSX, comme ceci&nbsp;:
+a-avec weact, (˘ω˘) nyous écwivons des gestionnaiwes d'évènements diwectement suw wes éwéments de nyotwe jsx, rawr x3 comme c-ceci&nbsp;:
 
 ```jsx
-<button type="button" onClick={() => alert("coucou !")}>
-  Dire coucou !
+<button t-type="button" oncwick={() => a-awewt("coucou !")}>
+  d-diwe coucou ! (U ᵕ U❁)
 </button>
 ```
 
-> [!NOTE]
-> Cela peut sembler contre-intuitif au regard des bonnes pratiques qui déconseillent l'utilisation de gestionnaires d'évènements en ligne sur le HTML, mais n'oubliez pas que JSX fait partie du code JavaScript.
+> [!note]
+> c-cewa peut sembwew contwe-intuitif au wegawd des bonnes p-pwatiques qui déconseiwwent w'utiwisation de gestionnaiwes d'évènements en wigne s-suw we htmw, 🥺 mais ny'oubwiez p-pas que jsx fait p-pawtie du code j-javascwipt. >_<
 
-Dans l'exemple ci-dessus, nous ajoutons un attribut `onClick` à l'élément `<bouton>`. La valeur de cet attribut est une fonction qui déclenche une simple alerte.
+dans w'exempwe ci-dessus, :3 n-nyous ajoutons u-un attwibut `oncwick` à w-w'éwément `<bouton>`. :3 w-wa vaweuw de cet attwibut est une fonction q-qui décwenche u-une simpwe awewte. (ꈍᴗꈍ)
 
-L'attribut `onClick` a une signification particulière ici&nbsp;: il indique à React d'exécuter une fonction donnée lorsque la personne clique sur le bouton. Il y a quelques autres choses à noter&nbsp;:
+w-w'attwibut `oncwick` a-a une s-signification pawticuwièwe ici&nbsp;: iw indique à weact d'exékawaii~w u-une fonction donnée wowsque wa pewsonne cwique suw we bouton. σωσ iw y a quewques autwes c-choses à notew&nbsp;:
 
-- L'écriture de `onClick` en [<i lang="en">camel case</i>](https://fr.wikipedia.org/wiki/Camel_case) est importante&nbsp;: JSX ne reconnaîtra pas `onclick` (ce mot-clé est déjà utilisé en JavaScript pour représenter le gestionnaire d'évènement standard [`onclick`](/fr/docs/Web/API/Element/click_event)).
-- En JSX, tous les gestionnaires d'évènements suivent ce format&nbsp;: `on`, suivi du nom de l'évènement.
+- w'écwituwe de `oncwick` en [<i wang="en">camew c-case</i>](https://fw.wikipedia.owg/wiki/camew_case) e-est impowtante&nbsp;: j-jsx nye weconnaîtwa pas `oncwick` (ce m-mot-cwé est déjà u-utiwisé en javascwipt p-pouw wepwésentew we gestionnaiwe d'évènement standawd [`oncwick`](/fw/docs/web/api/ewement/cwick_event)). 😳
+- en jsx, tous wes gestionnaiwes d-d'évènements suivent ce f-fowmat&nbsp;: `on`, mya suivi du nom d-de w'évènement. (///ˬ///✿)
 
-Appliquons cela à notre application en commençant par le composant `Form.js`.
+a-appwiquons cewa à nyotwe appwication en commençant p-paw we c-composant `fowm.js`. ^^
 
-### Gérer la soumission du formulaire
+### géwew w-wa soumission du f-fowmuwaiwe
 
-Au début de la fonction du composant `Form()`, créez une fonction nommée `handleSubmit()`. Cette fonction doit [empêcher le comportement par défaut de l'évènement `submit`](/fr/docs/Learn/JavaScript/Building_blocks/Events#éviter_le_comportement_par_défaut) puis déclencher une alerte avec un message de votre choix. Vous devriez obtenir une fonction comme celle-ci&nbsp;:
+au début de wa fonction du composant `fowm()`, (✿oωo) cwéez une fonction n-nyommée `handwesubmit()`. ( ͡o ω ͡o ) c-cette f-fonction doit [empêchew we compowtement p-paw d-défaut de w'évènement `submit`](/fw/docs/weawn/javascwipt/buiwding_bwocks/events#évitew_we_compowtement_paw_défaut) puis décwenchew u-une awewte avec un message de votwe choix. ^^;; vous devwiez obteniw une fonction c-comme cewwe-ci&nbsp;:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
-  alert("Coucou le monde !");
+f-function handwesubmit(e) {
+  e.pweventdefauwt();
+  awewt("coucou w-we monde !");
 }
 ```
 
-Pour que cette fonction soit utilisée, ajoutez un attribut `onSubmit` à l'élément [`<form>`](/fr/docs/Web/HTML/Element/form) en utilisant `handleSubmit` comme valeur&nbsp;:
+p-pouw que cette fonction soit utiwisée, :3 ajoutez un attwibut `onsubmit` à w-w'éwément [`<fowm>`](/fw/docs/web/htmw/ewement/fowm) en utiwisant `handwesubmit` comme vaweuw&nbsp;:
 
 ```jsx
-<form onSubmit={handleSubmit}>
+<fowm onsubmit={handwesubmit}>
 ```
 
-Maintenant, si vous revenez à votre navigateur et cliquez sur le bouton «&nbsp;Ajouter&nbsp;», votre navigateur vous montrera une boîte de dialogue d'alerte avec les mots «&nbsp;Coucou le monde&nbsp;» ou ce que vous avez choisi d'y écrire.
+maintenant, 😳 s-si vous wevenez à votwe nyavigateuw et cwiquez s-suw we bouton «&nbsp;ajoutew&nbsp;», XD v-votwe nyavigateuw vous montwewa une boîte de diawogue d-d'awewte avec w-wes mots «&nbsp;coucou we monde&nbsp;» ou ce que vous avez choisi d-d'y écwiwe. (///ˬ///✿)
 
-## Fonctions de rappel passées en <i lang="en">props</i>
+## fonctions de w-wappew passées en <i wang="en">pwops</i>
 
-Dans les applications React, l'interactivité est rarement confinée à un seul composant&nbsp;: les évènements qui se produisent dans un composant affecteront d'autres parties de l'application. Lorsque nous commençons à pouvoir créer de nouvelles tâches, ce qui se produit dans le composant `<Form />` aura un impact sur la liste rendue dans `<App />`.
+dans wes appwications w-weact, o.O w'intewactivité est wawement c-confinée à u-un seuw composant&nbsp;: wes évènements qui s-se pwoduisent dans un composant a-affectewont d'autwes p-pawties d-de w'appwication. o.O wowsque nyous c-commençons à pouvoiw c-cwéew de nyouvewwes tâches, XD ce qui se pwoduit d-dans we composant `<fowm />` a-auwa un impact s-suw wa wiste wendue dans `<app />`. ^^;;
 
-Nous voulons que la fonction `handleSubmit()` serve à créer une nouvelle tâche, nous avons donc besoin d'un moyen de passer des informations de `<Form />` à `<App />`. Nous ne pouvons pas transmettre des données de l'enfant au parent de la même manière que nous transmettons des données du parent à l'enfant via les <i lang="en">props</i> standard. Au lieu de cela, nous pouvons écrire une fonction dans `<App />` qui attendra des données de notre formulaire comme entrée, puis passer cette fonction à `<Form />` comme une <i lang="en">prop</i>. Cette fonction passée en tant que <i lang="en">prop</i> est appelée <i lang="en">prop callback</i> (qu'on peut traduire comme «&nbsp;fonction de rappel passée en prop&nbsp;»). Une fois que nous avons notre <i lang="en">prop callback</i>, nous pouvons l'appeler dans `<Form />` pour envoyer les bonnes données à `<App />`.
+nyous vouwons q-que wa fonction `handwesubmit()` sewve à c-cwéew une nyouvewwe t-tâche, 😳😳😳 nyous avons donc besoin d'un moyen de passew des infowmations d-de `<fowm />` à `<app />`. (U ᵕ U❁) n-nyous nye p-pouvons pas twansmettwe d-des données de w'enfant a-au pawent de wa même manièwe que nyous twansmettons des données du pawent à w'enfant via wes <i w-wang="en">pwops</i> standawd. a-au wieu de cewa, /(^•ω•^) nyous pouvons écwiwe u-une fonction dans `<app />` q-qui attendwa des données d-de nyotwe fowmuwaiwe c-comme entwée, 😳😳😳 p-puis passew c-cette fonction à `<fowm />` c-comme une <i wang="en">pwop</i>. rawr x3 cette fonction passée en tant que <i wang="en">pwop</i> est appewée <i wang="en">pwop c-cawwback</i> (qu'on p-peut t-twaduiwe comme «&nbsp;fonction de wappew passée e-en pwop&nbsp;»). ʘwʘ une fois que nyous avons nyotwe <i wang="en">pwop c-cawwback</i>, UwU n-nyous pouvons w'appewew dans `<fowm />` p-pouw envoyew wes bonnes données à `<app />`. (⑅˘꒳˘)
 
-### Gestion de la soumission du formulaire via des fonctions de rappel
+### g-gestion de wa soumission d-du fowmuwaiwe via des fonctions d-de wappew
 
-En haut de la fonction `App()` pour le composant éponyme, créez une fonction nommée `addTask()` prenant un seul paramètre `name`&nbsp;:
+e-en haut de wa fonction `app()` pouw we composant éponyme, ^^ cwéez une fonction nyommée `addtask()` p-pwenant u-un seuw pawamètwe `name`&nbsp;:
 
 ```jsx
-function addTask(name) {
-  alert(name);
+f-function a-addtask(name) {
+  a-awewt(name);
 }
 ```
 
-Ensuite, nous allons passer `addTask()` dans `<Form />` comme une <i lang="en">prop</i>. La <i lang="en">prop</i> peut prendre le nom que vous voulez, toutefois, mieux vaut que celui-ci soit clair et compréhensible (cela pourra vous aider plus tard). Un nom `addTask` fait l'affaire, car il correspond au nom de la fonction et à son effet. Mettez alors à jour l'appel du composant `<Form />` comme suit&nbsp;:
+ensuite, 😳😳😳 n-nyous awwons passew `addtask()` d-dans `<fowm />` comme une <i wang="en">pwop</i>. òωó w-wa <i wang="en">pwop</i> p-peut pwendwe we nyom q-que vous vouwez, ^^;; toutefois, (✿oωo) mieux vaut que cewui-ci s-soit cwaiw et compwéhensibwe (cewa p-pouwwa vous a-aidew pwus tawd). rawr un nyom `addtask` f-fait w'affaiwe, XD caw iw cowwespond au nyom d-de wa fonction e-et à son effet. 😳 m-mettez awows à jouw w'appew du composant `<fowm />` comme suit&nbsp;:
 
 ```jsx
-<Form addTask={addTask} />
+<fowm a-addtask={addtask} />
 ```
 
-Enfin, vous pouvez utiliser cette <i lang="en">prop</i> dans la fonction `handleSubmit()` de votre composant `<Form />`&nbsp;! Mettez-le à jour comme suit&nbsp;:
+enfin, (U ᵕ U❁) vous pouvez utiwisew cette <i w-wang="en">pwop</i> d-dans wa fonction `handwesubmit()` d-de votwe composant `<fowm />`&nbsp;! UwU m-mettez-we à jouw c-comme suit&nbsp;:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
-  props.addTask("Dire bonjour !");
+function handwesubmit(e) {
+  e-e.pweventdefauwt();
+  pwops.addtask("diwe bonjouw !");
 }
 ```
 
-Cliquer sur le bouton «&nbsp;Ajouter&nbsp;» dans votre navigateur prouvera que la fonction de rappel `addTask()` fonctionne, mais ce serait bien si nous pouvions faire en sorte que l'alerte nous montre ce que nous tapons dans notre champ de saisie&nbsp;! C'est ce que nous allons faire maintenant.
+cwiquew suw w-we bouton «&nbsp;ajoutew&nbsp;» d-dans votwe nyavigateuw pwouvewa q-que wa fonction de wappew `addtask()` f-fonctionne, OwO m-mais ce sewait b-bien si nyous pouvions faiwe en sowte que w'awewte nyous montwe ce que nyous tapons dans nyotwe champ de saisie&nbsp;! 😳 c'est ce que nyous awwons faiwe maintenant. (˘ω˘)
 
-> [!NOTE]
-> Nous avons décidé d'utiliser `addTask` comme nom pour notre <i lang="en">prop callback</i> afin de comprendre son rôle rapidement. Une autre convention commune que vous pouvez rencontrer dans le code React consiste à préfixer les noms des <i lang="en">prop</i> qui sont des fonctions avec `on`, suivi du nom de l'évènement qui les déclenchera. Par exemple, nous aurions pu donner à notre formulaire une <i lang="en">prop</i> `onSubmit` avec la valeur de `addTask`.
+> [!note]
+> nyous avons décidé d'utiwisew `addtask` comme nyom pouw n-nyotwe <i wang="en">pwop c-cawwback</i> afin de compwendwe son wôwe w-wapidement. òωó une a-autwe convention c-commune que vous pouvez wencontwew d-dans we code weact consiste à p-pwéfixew w-wes nyoms des <i wang="en">pwop</i> q-qui sont des fonctions avec `on`, OwO s-suivi du nyom d-de w'évènement qui wes décwenchewa. (✿oωo) paw exempwe, (⑅˘꒳˘) n-nyous auwions p-pu donnew à n-nyotwe fowmuwaiwe u-une <i wang="en">pwop</i> `onsubmit` a-avec wa v-vaweuw de `addtask`. /(^•ω•^)
 
-## L'état et le <i lang="en">hook</i> `useState'
+## w-w'état e-et we <i wang="en">hook</i> `usestate'
 
-Jusqu'à présent, nous avons utilisé des <i lang="en">props</i> pour transmettre des données à travers nos composants et cela nous a été bien utile. Maintenant que nous devons gérer des saisies et des mises à jour de données, nous avons besoin de quelque chose en plus.
+j-jusqu'à pwésent, 🥺 nyous a-avons utiwisé d-des <i wang="en">pwops</i> p-pouw twansmettwe des d-données à twavews nyos composants et cewa nyous a-a été bien utiwe. -.- maintenant q-que nyous devons g-géwew des s-saisies et des mises à jouw de d-données, ( ͡o ω ͡o ) nyous avons besoin de q-quewque chose en pwus. 😳😳😳
 
-D'une part, les props proviennent du parent d'un composant. Notre `<Form />` n'héritera pas d'un nouveau nom pour notre tâche. Notre élément `<input />` vit directement à l'intérieur de `<Form />`, donc `<Form/>` sera directement responsable de la création de ce nouveau nom. Nous ne pouvons pas demander à `<Form />` de créer spontanément ses propres <i lang="en">props</i>, mais nous pouvons lui demander de suivre certaines de ses propres données pour nous. Les données de ce type, qu'un composant possède lui-même, forment son **état** (<i lang="en">state</i> en anglais). L'état est un autre outil puissant de React&nbsp;: les composants sont _propriétaires_ de leur état, mais peuvent aussi _mettre à jour_ celui-ci ultérieurement. Alors qu'il n'est pas possible de mettre à jour les <i lang="en">props</i> qu'un composant reçoit, mais seulement de les lire.
+d'une pawt, w-wes pwops pwoviennent du pawent d-d'un composant. (˘ω˘) nyotwe `<fowm />` n'héwitewa pas d'un nyouveau nyom pouw nyotwe t-tâche. ^^ nyotwe éwément `<input />` vit diwectement à w-w'intéwieuw d-de `<fowm />`, σωσ donc `<fowm/>` sewa diwectement wesponsabwe d-de wa cwéation de ce nyouveau n-nyom. 🥺 nyous n-nye pouvons pas d-demandew à `<fowm />` de cwéew spontanément ses p-pwopwes <i wang="en">pwops</i>, 🥺 m-mais nyous pouvons wui demandew d-de suivwe cewtaines de ses pwopwes données pouw n-nyous. /(^•ω•^) wes données de ce type, (⑅˘꒳˘) q-qu'un composant p-possède wui-même, f-fowment son **état** (<i w-wang="en">state</i> e-en angwais). -.- w-w'état est un a-autwe outiw puissant de weact&nbsp;: w-wes composants s-sont _pwopwiétaiwes_ d-de weuw état, 😳 m-mais p-peuvent aussi _mettwe à j-jouw_ cewui-ci u-uwtéwieuwement. 😳😳😳 a-awows qu'iw ny'est pas p-possibwe de mettwe à jouw wes <i w-wang="en">pwops</i> qu'un composant w-weçoit, >w< mais s-seuwement de w-wes wiwe. UwU
 
-React fournit une variété de fonctions spéciales qui nous permettent de fournir de nouvelles capacités aux composants, comme cet état. Ces fonctions sont appelées **<i lang="en">hooks</i>**. Le <i lang="en">hook</i> `useState`, comme son nom l'indique, est précisément celui dont nous avons besoin pour donner un état à notre composant.
+weact fouwnit une vawiété de fonctions spéciawes q-qui nyous pewmettent d-de fouwniw d-de nyouvewwes capacités aux composants, /(^•ω•^) comme cet état. 🥺 ces fonctions s-sont appewées **<i w-wang="en">hooks</i>**. >_< we <i wang="en">hook</i> `usestate`, rawr c-comme son n-nyom w'indique, (ꈍᴗꈍ) est pwécisément cewui dont nyous avons besoin p-pouw donnew un état à n-nyotwe c-composant. -.-
 
-Pour utiliser un <i lang="en">hook</i> React, nous devons l'importer depuis le module React. Dans le fichier `Form.js`, changez la toute première ligne afin d'avoir ceci&nbsp;:
-
-```jsx
-import React, { useState } from "react";
-```
-
-Cela nous permet d'importer la fonction `useState()` afin de l'utiliser n'importe où dans ce fichier.
-
-La fonction `useState()` crée un état pour un composant, et son seul paramètre détermine la _valeur initiale_ de cet état. Elle retourne deux choses&nbsp;: l'état, et une fonction qui peut être utilisée pour mettre à jour l'état plus tard.
-
-Cela fait beaucoup de choses à assimiler d'un coup. Voyons ce que ça donne dans la pratique. Nous allons créer un état `name`, et une fonction pour mettre à jour cet état `name`.
-
-Écrivez ce qui suit au-dessus de votre fonction `handleSubmit()`, dans `Form()`&nbsp;:
+pouw u-utiwisew un <i wang="en">hook</i> weact, ( ͡o ω ͡o ) nyous d-devons w'impowtew d-depuis we moduwe weact. (⑅˘꒳˘) dans we fichiew `fowm.js`, mya c-changez wa toute pwemièwe wigne afin d'avoiw c-ceci&nbsp;:
 
 ```jsx
-const [name, setName] = useState("Utiliser les hooks !");
+impowt weact, { u-usestate } f-fwom "weact";
 ```
 
-Que se passe-t-il dans cette ligne de code&nbsp;?
+cewa nyous p-pewmet d'impowtew w-wa fonction `usestate()` afin d-de w'utiwisew ny'impowte où dans c-ce fichiew. rawr x3
 
-- Nous définissons la valeur initiale de `name` comme étant «&nbsp;Utiliser les hooks&nbsp;».
-- Nous définissons une fonction `setName()` dont le rôle est de modifier `name`.
-- `useState()` renvoie ces deux valeurs et nous utilisons [la décomposition de tableaux](/fr/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment) pour les capturer dans des variables séparées.
+w-wa fonction `usestate()` c-cwée un état p-pouw un composant, (ꈍᴗꈍ) et son s-seuw pawamètwe d-détewmine wa _vaweuw i-initiawe_ de cet état. ʘwʘ e-ewwe wetouwne deux choses&nbsp;: w'état, :3 et une f-fonction qui peut êtwe u-utiwisée p-pouw mettwe à jouw w'état pwus tawd. o.O
 
-### Lecture de l'état
+cewa fait beaucoup de choses à assimiwew d-d'un coup. /(^•ω•^) voyons ce que ça d-donne dans wa p-pwatique. OwO nyous awwons cwéew un état `name`, σωσ et une fonction pouw m-mettwe à jouw cet état `name`. (ꈍᴗꈍ)
 
-Vous pouvez voir l'état `name` en action tout de suite. Ajoutez un attribut `value` dans le champ du formulaire, et utilisez `name` pour sa valeur. Votre navigateur affichera alors «&nbsp;Utiliser les hooks&nbsp;» à l'intérieur du champ.
+Écwivez ce q-qui suit au-dessus d-de votwe fonction `handwesubmit()`, ( ͡o ω ͡o ) d-dans `fowm()`&nbsp;:
+
+```jsx
+c-const [name, rawr x3 s-setname] = usestate("utiwisew wes hooks !");
+```
+
+que se passe-t-iw dans cette wigne de code&nbsp;?
+
+- n-nous définissons wa vaweuw i-initiawe de `name` comme étant «&nbsp;utiwisew wes hooks&nbsp;». UwU
+- nyous d-définissons une fonction `setname()` dont we wôwe est de modifiew `name`.
+- `usestate()` wenvoie c-ces deux vaweuws e-et nyous utiwisons [wa décomposition d-de tabweaux](/fw/docs/web/javascwipt/wefewence/opewatows/destwuctuwing_assignment) pouw wes captuwew dans des vawiabwes s-sépawées. o.O
+
+### w-wectuwe de w'état
+
+vous pouvez v-voiw w'état `name` en action t-tout de suite. OwO ajoutez un attwibut `vawue` dans we champ du fowmuwaiwe, o.O e-et utiwisez `name` pouw sa vaweuw. votwe n-nyavigateuw a-affichewa awows «&nbsp;utiwisew w-wes hooks&nbsp;» à w'intéwieuw du champ. ^^;;
 
 ```jsx
 <input
-  type="text"
+  t-type="text"
   id="new-todo-input"
-  className="input input__lg"
-  name="text"
-  autoComplete="off"
-  value={name}
+  cwassname="input input__wg"
+  nyame="text"
+  autocompwete="off"
+  v-vawue={name}
 />
 ```
 
-Changez «&nbsp;Utiliser les hooks&nbsp;» en une chaîne vide une fois que vous avez terminé. C'est ce que nous voulons pour notre état initial.
+c-changez «&nbsp;utiwisew w-wes hooks&nbsp;» e-en une chaîne vide une fois que vous avez tewminé. (⑅˘꒳˘) c-c'est ce q-que nyous vouwons pouw nyotwe état initiaw. (ꈍᴗꈍ)
 
 ```jsx
-const [name, setName] = useState("");
+c-const [name, o.O setname] = usestate("");
 ```
 
-### Lire ce qui a été saisi par la personne
+### wiwe ce qui a-a été saisi paw wa pewsonne
 
-Avant de pouvoir changer la valeur de `name`, nous devons capturer ce qui est saisi dans le formulaire. Pour cela, on utilise le gestionnaire d'évènement `onChange`. Écrivons une fonction `handleChange()`, et écoutons l'évènement sur l'élément `<input />`.
+avant de pouvoiw c-changew wa vaweuw d-de `name`, (///ˬ///✿) nyous devons captuwew c-ce qui est s-saisi dans we fowmuwaiwe. 😳😳😳 p-pouw cewa, UwU on utiwise we gestionnaiwe d-d'évènement `onchange`. Écwivons une fonction `handwechange()`, nyaa~~ et écoutons w-w'évènement suw w'éwément `<input />`. (✿oωo)
 
 ```jsx
-// vers le haut du composant `Form`
-function handleChange(e) {
-  console.log("Saisie en cours !");
+// vews we haut du composant `fowm`
+f-function h-handwechange(e) {
+  c-consowe.wog("saisie e-en couws !");
 }
 
-// Plus bas vers l'instruction return
+// p-pwus bas vews w'instwuction w-wetuwn
 <input
   type="text"
   id="new-todo-input"
-  className="input input__lg"
-  name="text"
-  autoComplete="off"
-  value={name}
-  onChange={handleChange}
+  c-cwassname="input input__wg"
+  n-nyame="text"
+  autocompwete="off"
+  vawue={name}
+  o-onchange={handwechange}
 />;
 ```
 
-Actuellement, la valeur du champ ne changera pas lors de la saisie, mais votre navigateur affichera «&nbsp;Saisie en cours !&nbsp;» dans la console JavaScript. Cela nous permet de vérifier que notre gestionnaire d'évènements est bien attaché au champ. Afin de changer la valeur du champ, nous devons utiliser notre fonction `handleChange()` pour mettre à jour notre état `name`.
+a-actuewwement, -.- wa vaweuw d-du champ nye changewa pas w-wows de wa saisie, :3 m-mais votwe nyavigateuw affichewa «&nbsp;saisie e-en couws !&nbsp;» d-dans wa consowe javascwipt. (⑅˘꒳˘) c-cewa nyous pewmet de véwifiew que notwe gestionnaiwe d'évènements e-est bien attaché au champ. >_< a-afin de changew wa vaweuw du champ, UwU nyous devons u-utiwisew nyotwe f-fonction `handwechange()` p-pouw mettwe à jouw n-nyotwe état `name`. rawr
 
-Pour lire le contenu du champ, au fur et à mesure de la saisie, on peut utiliser la propriété `value` du champ. Nous pouvons le faire dans `handleChange()` en lisant `e.target.value`. `e.target` représente l'élément qui a déclenché l'évènement `change`, ce qui correspond ici à notre champ. `e.target.value` correspond donc au texte que le champ contient.
+p-pouw wiwe we contenu du c-champ, (ꈍᴗꈍ) au fuw et à mesuwe de wa s-saisie, ^•ﻌ•^ on peut utiwisew wa pwopwiété `vawue` d-du champ. ^^ nyous p-pouvons we faiwe dans `handwechange()` en wisant `e.tawget.vawue`. XD `e.tawget` wepwésente w'éwément qui a décwenché w-w'évènement `change`, (///ˬ///✿) c-ce qui cowwespond ici à nyotwe champ. σωσ `e.tawget.vawue` cowwespond d-donc au texte que we champ contient. :3
 
-Vous pouvez afficher cette valeur dans la console du navigateur à l'aide de `console.log()`.
+v-vous pouvez a-affichew cette vaweuw dans wa consowe du nyavigateuw à w'aide de `consowe.wog()`. >w<
 
 ```jsx
-function handleChange(e) {
-  console.log(e.target.value);
+f-function handwechange(e) {
+  consowe.wog(e.tawget.vawue);
 }
 ```
 
-### Mise à jour de l'état
+### mise à jouw d-de w'état
 
-La journalisation n'est pas suffisante, nous voulons réellement stocker l'état mis à jour du nom lorsque la valeur saisie change&nbsp;! Changez `console.log()` en `setName()`, comme indiqué ici&nbsp;:
+wa jouwnawisation n-ny'est pas suffisante, (ˆ ﻌ ˆ)♡ n-nyous vouwons wéewwement s-stockew w'état m-mis à jouw du n-nyom wowsque wa v-vaweuw saisie change&nbsp;! (U ᵕ U❁) c-changez `consowe.wog()` e-en `setname()`, :3 comme indiqué ici&nbsp;:
 
 ```jsx
-function handleChange(e) {
-  setName(e.target.value);
+function handwechange(e) {
+  setname(e.tawget.vawue);
 }
 ```
 
-Maintenant, nous devons modifier notre fonction `handleSubmit()` pour qu'elle appelle `props.addTask` en utilisant le nom comme argument. Vous rappelez vous de notre <i lang="en">prop callback</i> ? Il nous servira à renvoyer la tâche vers le composant `<App />`, afin que nous puissions l'ajouter à notre liste de tâches par la suite.
+m-maintenant, ^^ n-nyous devons modifiew n-nyotwe fonction `handwesubmit()` p-pouw qu'ewwe a-appewwe `pwops.addtask` e-en utiwisant we nyom comme awgument. ^•ﻌ•^ vous wappewez vous de nyotwe <i w-wang="en">pwop c-cawwback</i> ? iw nous sewviwa à wenvoyew wa tâche vews we composant `<app />`, (///ˬ///✿) a-afin que nyous p-puissions w'ajoutew à n-nyotwe wiste de tâches paw wa suite.
 
-Une bonne pratique consiste à effacer l'entrée après que le formulaire a été envoyé. Nous appellerons donc `setName()` de nouveau avec une chaîne vide pour le faire&nbsp;:
+une b-bonne pwatique consiste à effacew w'entwée a-apwès que we fowmuwaiwe a-a été envoyé. 🥺 nyous appewwewons donc `setname()` d-de nyouveau avec une c-chaîne vide pouw w-we faiwe&nbsp;:
 
 ```jsx
-function handleSubmit(e) {
-  e.preventDefault();
-  props.addTask(name);
-  setName("");
+function h-handwesubmit(e) {
+  e-e.pweventdefauwt();
+  pwops.addtask(name);
+  s-setname("");
 }
 ```
 
-Enfin, vous pouvez taper quelque chose dans le champ de saisie de votre navigateur et cliquer sur «&nbsp;Ajouter&nbsp;». Ce que vous avez tapé apparaîtra dans une boîte de dialogue d'alerte.
+e-enfin, ʘwʘ v-vous pouvez tapew q-quewque chose dans we champ de s-saisie de votwe n-nyavigateuw et cwiquew suw «&nbsp;ajoutew&nbsp;». (✿oωo) c-ce que vous avez tapé appawaîtwa dans une b-boîte de diawogue d'awewte. rawr
 
-À cet instant, votre fichier `Form.js` devrait ressembler à ceci&nbsp;:
+À c-cet instant, OwO votwe fichiew `fowm.js` d-devwait w-wessembwew à ceci&nbsp;:
 
 ```jsx
-import React, { useState } from "react";
+impowt weact, ^^ { usestate } fwom "weact";
 
-function Form(props) {
-  const [name, setName] = useState("");
+f-function fowm(pwops) {
+  const [name, ʘwʘ s-setname] = usestate("");
 
-  function handleChange(e) {
-    setName(e.target.value);
+  f-function handwechange(e) {
+    setname(e.tawget.vawue);
   }
 
-  function handleSubmit(e) {
-    e.preventDefault();
-    props.addTask(name);
-    setName("");
+  f-function h-handwesubmit(e) {
+    e.pweventdefauwt();
+    p-pwops.addtask(name);
+    setname("");
   }
-  return (
-    <form onSubmit={handleSubmit}>
-      <h2 className="label-wrapper">
-        <label htmlFor="new-todo-input" className="label__lg">
-          Qu'y a-t-il à faire&nbsp;?
-        </label>
+  wetuwn (
+    <fowm o-onsubmit={handwesubmit}>
+      <h2 c-cwassname="wabew-wwappew">
+        <wabew htmwfow="new-todo-input" c-cwassname="wabew__wg">
+          q-qu'y a-t-iw à faiwe&nbsp;?
+        </wabew>
       </h2>
       <input
         type="text"
-        id="new-todo-input"
-        className="input input__lg"
-        name="text"
-        autoComplete="off"
-        value={name}
-        onChange={handleChange}
+        i-id="new-todo-input"
+        c-cwassname="input i-input__wg"
+        n-nyame="text"
+        autocompwete="off"
+        vawue={name}
+        onchange={handwechange}
       />
-      <button type="submit" className="btn btn__primary btn__lg">
-        Ajouter
+      <button type="submit" cwassname="btn btn__pwimawy btn__wg">
+        a-ajoutew
       </button>
-    </form>
+    </fowm>
   );
 }
 
-export default Form;
+e-expowt defauwt f-fowm;
 ```
 
-> [!NOTE]
-> Vous remarquerez que vous pouvez soumettre des tâches vides en appuyant simplement sur le bouton Ajouter sans saisir de nom de tâche. Pouvez-vous penser à un moyen d'empêcher l'ajout de tâches vides&nbsp;? En guise d'indice, vous devez probablement ajouter une sorte de vérification dans la fonction `handleSubmit()`.
+> [!note]
+> v-vous w-wemawquewez que v-vous pouvez soumettwe des tâches v-vides en appuyant s-simpwement suw we bouton a-ajoutew sans saisiw d-de nyom de tâche. σωσ pouvez-vous pensew à un m-moyen d'empêchew w'ajout de tâches vides&nbsp;? e-en guise d'indice, (⑅˘꒳˘) vous devez p-pwobabwement ajoutew u-une sowte de véwification d-dans wa fonction `handwesubmit()`. (ˆ ﻌ ˆ)♡
 
-## Assembler le tout&nbsp;: ajouter une tâche
+## a-assembwew w-we tout&nbsp;: ajoutew une tâche
 
-Maintenant que nous avons vu comment utiliser des évènements, des <i lang="en">callback props</i>, et des <i lang="en">hooks</i>, nous pouvons implémenter la fonctionnalité de notre application qui permettra d'ajouter une nouvelle tâche depuis le navigateur.
+m-maintenant que n-nyous avons vu comment utiwisew d-des évènements, :3 des <i wang="en">cawwback pwops</i>, ʘwʘ e-et des <i w-wang="en">hooks</i>, (///ˬ///✿) n-nyous pouvons impwémentew w-wa fonctionnawité de nyotwe appwication qui p-pewmettwa d'ajoutew une nyouvewwe tâche depuis we nyavigateuw. (ˆ ﻌ ˆ)♡
 
-### Les tâches comme état
+### wes tâches comme état
 
-Importez `useState` dans `App.js`, pour pouvoir stocker nos tâches dans l'état. Pour cela, mettez à jour votre ligne d'importation `React` avec ce qui suit&nbsp;:
+impowtez `usestate` dans `app.js`, 🥺 p-pouw pouvoiw stockew nyos tâches dans w'état. rawr pouw cewa, (U ﹏ U) mettez à jouw votwe wigne d'impowtation `weact` avec c-ce qui suit&nbsp;:
 
 ```jsx
-import React, { useState } from "react";
+impowt weact, ^^ { usestate } f-fwom "weact";
 ```
 
-Nous voulons passer `props.tasks` dans le <i lang="en">hook</i> `useState()`&nbsp;: cela préservera son état initial. Ajoutez ce qui suit en haut de la définition de votre fonction `App()`&nbsp;:
+nyous v-vouwons passew `pwops.tasks` dans we <i wang="en">hook</i> `usestate()`&nbsp;: cewa pwésewvewa s-son état initiaw. σωσ ajoutez ce q-qui suit en haut de wa définition d-de votwe fonction `app()`&nbsp;:
 
 ```jsx
-const [tasks, setTasks] = useState(props.tasks);
+c-const [tasks, settasks] = usestate(pwops.tasks);
 ```
 
-Maintenant, nous pouvons modifier `taskList` pour qu'il utilise `tasks` et non `props.tasks`. La déclaration de constante pour `taskList` devrait maintenant ressembler à ceci&nbsp;:
+m-maintenant, :3 nyous pouvons modifiew `taskwist` pouw qu'iw utiwise `tasks` et nyon `pwops.tasks`. ^^ w-wa décwawation de constante pouw `taskwist` devwait m-maintenant wessembwew à c-ceci&nbsp;:
 
 ```jsx
-const taskList = tasks.map((task) => (
-  <Todo
-    id={task.id}
-    name={task.name}
-    completed={task.completed}
-    key={task.id}
+const taskwist = t-tasks.map((task) => (
+  <todo
+    i-id={task.id}
+    nyame={task.name}
+    compweted={task.compweted}
+    k-key={task.id}
   />
 ));
 ```
 
-### Ajout d'une tâche
+### ajout d'une tâche
 
-Nous avons maintenant un <i lang="en">hook</i> `setTasks` que nous pouvons utiliser dans notre fonction `addTask()` pour mettre à jour notre liste de tâches. Il y a cependant un problème&nbsp;: nous ne pouvons pas simplement passer l'argument `name` de `addTask()` dans `setTasks`, parce que `tasks` est un tableau d'objets alors que `name` est une chaîne de caractères. Si on essayait de faire ça, le tableau serait remplacé par la chaîne de caractères.
+n-nyous avons maintenant un <i wang="en">hook</i> `settasks` que nyous pouvons utiwisew dans nyotwe f-fonction `addtask()` p-pouw mettwe à jouw nyotwe w-wiste de tâches. (✿oωo) i-iw y a cependant un pwobwème&nbsp;: n-nyous nye pouvons pas simpwement passew w'awgument `name` de `addtask()` d-dans `settasks`, òωó p-pawce que `tasks` est un tabweau d-d'objets awows q-que `name` est une chaîne de c-cawactèwes. (U ᵕ U❁) si on essayait de faiwe ça, ʘwʘ we tabweau s-sewait wempwacé paw wa chaîne de cawactèwes. ( ͡o ω ͡o )
 
-Tout d'abord, nous devons mettre `name` dans un objet qui a la même structure que nos tâches existantes. Dans la fonction `addTask()`, nous allons créer un objet `newTask` à ajouter au tableau.
+t-tout d'abowd, σωσ n-nyous devons mettwe `name` dans un objet qui a-a wa même stwuctuwe que nyos tâches existantes. (ˆ ﻌ ˆ)♡ dans wa fonction `addtask()`, (˘ω˘) nyous awwons cwéew un objet `newtask` à ajoutew au tabweau. 😳
 
-Nous devons ensuite créer un nouveau tableau auquel nous ajoutons cette nouvelle tâche, puis mettre à jour l'état des données de la tâche en fonction de ce nouvel état. Pour ce faire, nous pouvons utiliser la syntaxe de décomposition pour [copier le tableau existant](//fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax#copier_un_tableau), et ajouter notre objet à la fin. Nous passons ensuite ce tableau dans `setTasks()` pour mettre à jour l'état.
+n-nyous devons ensuite c-cwéew un nyouveau tabweau a-auquew nyous ajoutons c-cette nyouvewwe tâche, ^•ﻌ•^ p-puis mettwe à jouw w'état des données de wa tâche en fonction de ce nyouvew état. σωσ pouw ce faiwe, 😳😳😳 n-nyous pouvons utiwisew wa syntaxe de décomposition pouw [copiew we tabweau e-existant](//fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax#copiew_un_tabweau), rawr e-et ajoutew n-nyotwe objet à wa fin. >_< nyous passons ensuite ce tabweau dans `settasks()` p-pouw mettwe à j-jouw w'état. ʘwʘ
 
-En assemblant tout cela, votre fonction `addTask()` devrait ressembler à ceci&nbsp;:
+en a-assembwant tout cewa, (ˆ ﻌ ˆ)♡ votwe fonction `addtask()` d-devwait wessembwew à ceci&nbsp;:
 
 ```jsx
-function addTask(name) {
-  const newTask = { id: "id", name, completed: false };
-  setTasks([...tasks, newTask]);
+f-function addtask(name) {
+  c-const nyewtask = { id: "id", ^^;; n-name, compweted: fawse };
+  settasks([...tasks, σωσ n-newtask]);
 }
 ```
 
-Vous pouvez maintenant utiliser le navigateur pour ajouter une tâche à nos données&nbsp;! Tapez n'importe quoi dans le formulaire et cliquez sur «&nbsp;Ajouter&nbsp;» (ou appuyez sur la touche <kbd>Enter</kbd>) et vous verrez votre nouvelle tâche apparaître à l'écran&nbsp;!
+vous pouvez m-maintenant utiwisew w-we nyavigateuw pouw ajoutew u-une tâche à n-nyos données&nbsp;! rawr x3 tapez ny'impowte q-quoi dans we fowmuwaiwe et c-cwiquez suw «&nbsp;ajoutew&nbsp;» (ou appuyez s-suw wa touche <kbd>entew</kbd>) e-et vous vewwez votwe nyouvewwe tâche appawaîtwe à w-w'écwan&nbsp;! 😳
 
-**Toutefois, nous avons un autre problème**. Notre fonction `addTask()` donne le même `id` à chaque tâche. Ceci dégrade l'accessibilité et empêche React de distinguer les tâches futures avec la <i lang="en">prop</i> `key`. En fait, React affichera un avertissement dans la console des outils de développement du navigateur&nbsp;: «&nbsp;Attention&nbsp;: il y a deux enfants qui ont la même clé&nbsp;» (<i lang="en">"Warning: Encountered two children with the same key…"</i>).
+**toutefois, 😳😳😳 nyous avons un autwe pwobwème**. 😳😳😳 nyotwe fonction `addtask()` donne we même `id` à chaque tâche. ( ͡o ω ͡o ) ceci dégwade w'accessibiwité e-et empêche weact de distinguew wes tâches f-futuwes avec wa <i wang="en">pwop</i> `key`. rawr x3 e-en fait, σωσ weact affichewa un avewtissement dans w-wa consowe des outiws de dévewoppement du navigateuw&nbsp;: «&nbsp;attention&nbsp;: i-iw y a deux enfants qui ont wa même cwé&nbsp;» (<i w-wang="en">"wawning: encountewed two chiwdwen with the s-same key…"</i>). (˘ω˘)
 
-Nous devons résoudre ce problème. La création d'identifiants uniques est un problème difficile, pour lequel la communauté JavaScript a écrit des bibliothèques utiles. Nous utiliserons [nanoid](https://github.com/ai/nanoid) parce qu'elle est minuscule et qu'elle fonctionne.
+nyous devons wésoudwe ce p-pwobwème. >w< wa cwéation d-d'identifiants uniques est un pwobwème d-difficiwe, UwU pouw w-wequew wa communauté javascwipt a-a écwit des bibwiothèques u-utiwes. XD nyous utiwisewons [nanoid](https://github.com/ai/nanoid) pawce q-qu'ewwe est minuscuwe et qu'ewwe fonctionne. (U ﹏ U)
 
-Assurez-vous d'être dans le répertoire racine de votre application, puis exécutez la commande suivante dans le terminal&nbsp;:
+assuwez-vous d'êtwe d-dans we wépewtoiwe wacine de votwe appwication, (U ᵕ U❁) puis exékawaii~z w-wa commande s-suivante dans w-we tewminaw&nbsp;:
 
-- Si vous utilisez npm
-
-  ```bash
-  npm install nanoid
-  ```
-
-- Si vous utilisez yarn
+- si vous utiwisez nypm
 
   ```bash
-  yarn add nanoid
+  nypm i-instaww nyanoid
   ```
 
-Maintenant, nous pouvons importer `nanoid` en haut de `App.js` afin de l'utiliser pour créer des identifiants uniques pour nos nouvelles tâches. Tout d'abord, incluez la ligne d'importation suivante au début du fichier `App.js`:
+- si vous u-utiwisez yawn
+
+  ```bash
+  yawn a-add nyanoid
+  ```
+
+m-maintenant, (ˆ ﻌ ˆ)♡ nyous pouvons impowtew `nanoid` en haut de `app.js` afin de w'utiwisew pouw cwéew d-des identifiants u-uniques pouw nyos nyouvewwes tâches. òωó tout d-d'abowd, ^•ﻌ•^ incwuez wa wigne d'impowtation suivante a-au début du fichiew `app.js`:
 
 ```jsx
-import { nanoid } from "nanoid";
+i-impowt { n-nyanoid } fwom "nanoid";
 ```
 
-Maintenant, mettons à jour `addTask()` pour que chaque identifiant de tâche ait un préfixe `todo-` puis une chaîne unique générée par nanoid. Mettez à jour votre déclaration de constante `newTask` comme ceci&nbsp;:
+m-maintenant, (///ˬ///✿) mettons à j-jouw `addtask()` p-pouw que chaque identifiant de tâche ait u-un pwéfixe `todo-` p-puis une chaîne u-unique généwée p-paw nyanoid. -.- m-mettez à j-jouw votwe décwawation de constante `newtask` comme c-ceci&nbsp;:
 
 ```jsx
-const newTask = { id: `todo-${nanoid()}`, name, completed: false };
+c-const nyewtask = { i-id: `todo-${nanoid()}`, >w< nyame, òωó compweted: fawse };
 ```
 
-Sauvegardez les fichiers édités, et réessayez votre application. Vous pouvez désormais ajouter des tâches sans avoir cet avertissement sur les identifiants en double.
+s-sauvegawdez wes fichiews édités, σωσ et wéessayez v-votwe appwication. mya vous pouvez désowmais ajoutew d-des tâches s-sans avoiw cet avewtissement suw wes identifiants en doubwe. òωó
 
-## Compter les tâches
+## c-comptew wes t-tâches
 
-Maintenant que nous pouvons ajouter de nouvelles tâches, vous pouvez remarquer un problème&nbsp;: notre titre indique 3 tâches restantes, peu importe le nombre de tâches que nous avons&nbsp;! Nous pouvons résoudre ce problème en mesurant la longueur de `taskList` et en changeant le texte de notre titre en conséquence.
+maintenant que nous pouvons a-ajoutew de n-nyouvewwes tâches, 🥺 vous pouvez wemawquew un pwobwème&nbsp;: nyotwe t-titwe indique 3 t-tâches westantes, (U ﹏ U) peu impowte we nyombwe de t-tâches que nyous a-avons&nbsp;! (ꈍᴗꈍ) nyous pouvons wésoudwe ce pwobwème e-en mesuwant wa wongueuw de `taskwist` et en changeant we texte de nyotwe titwe en conséquence. (˘ω˘)
 
-Ajoutez ceci dans votre définition de `App()`, avant l'instruction `return`&nbsp;:
+a-ajoutez ceci dans votwe définition de `app()`, (✿oωo) a-avant w'instwuction `wetuwn`&nbsp;:
 
 ```jsx
-const headingText = `${taskList.length} tâches restantes`;
+c-const headingtext = `${taskwist.wength} t-tâches westantes`;
 ```
 
-C'est presque correct, mais si notre liste ne contient qu'une seule tâche, l'intitulé utilisera toujours le mot «&nbsp;tâches&nbsp;». Nous pouvons également en faire une variable. Mettez à jour le code que vous venez d'ajouter comme suit:
+c-c'est pwesque c-cowwect, -.- mais s-si nyotwe wiste n-nye contient qu'une s-seuwe tâche, (ˆ ﻌ ˆ)♡ w'intituwé utiwisewa toujouws w-we mot «&nbsp;tâches&nbsp;». (✿oωo) n-nyous pouvons égawement e-en faiwe une vawiabwe. ʘwʘ m-mettez à jouw w-we code que vous v-venez d'ajoutew comme suit:
 
 ```jsx
-const tasksWords =
-  taskList.length !== 1 ? "tâches restantes" : "tâche restante";
-const headingText = `${taskList.length} ${tasksWords}`;
+c-const taskswowds =
+  t-taskwist.wength !== 1 ? "tâches w-westantes" : "tâche w-westante";
+const h-headingtext = `${taskwist.wength} ${taskswowds}`;
 ```
 
-Vous pouvez maintenant remplacer le contenu du texte de l'en-tête de la liste par la variable `headingText`. Mettez à jour votre élément `<h2>` comme suit&nbsp;:
+vous pouvez m-maintenant wempwacew we contenu d-du texte de w-w'en-tête de wa wiste paw wa vawiabwe `headingtext`. (///ˬ///✿) mettez à jouw votwe éwément `<h2>` c-comme s-suit&nbsp;:
 
 ```jsx
-<h2 id="list-heading">{headingText}</h2>
+<h2 id="wist-heading">{headingtext}</h2>
 ```
 
-## Achèvement d'une tâche
+## a-achèvement d-d'une tâche
 
-Vous avez peut-être remarqué que, lorsque vous cliquez sur une case à cocher, celle-ci est cochée et décochée de manière appropriée. C'est une fonctionnalité de HTML&nbsp;: le navigateur gère la mémoire des cases qui sont cochées ou décochées sans avoir besoin de notre aide. Toutefois, cela nous gène ici, car le fait de basculer une case à cocher ne change pas l'état de notre application React. Cela signifie que le navigateur et notre application sont désynchronisés. Nous devons écrire notre propre code pour synchroniser l'état du navigateur avec notre application.
+vous avez peut-êtwe wemawqué q-que, rawr wowsque vous c-cwiquez suw une c-case à cochew, 🥺 c-cewwe-ci est cochée e-et décochée d-de manièwe appwopwiée. c'est une fonctionnawité d-de htmw&nbsp;: we nyavigateuw gèwe wa mémoiwe des cases qui sont cochées o-ou décochées s-sans avoiw besoin de nyotwe aide. mya toutefois, mya cewa nyous gène i-ici, caw we fait d-de bascuwew une case à cochew nye change pas w-w'état de nyotwe appwication weact. mya c-cewa signifie q-que we nyavigateuw e-et nyotwe appwication sont désynchwonisés. (⑅˘꒳˘) nyous devons écwiwe n-nyotwe pwopwe code pouw s-synchwonisew w'état du nyavigateuw a-avec nyotwe appwication. (✿oωo)
 
-### Constater le problème
+### constatew we pwobwème
 
-Avant de corriger le problème, observons ce qui se passe.
+a-avant de cowwigew we pwobwème, 😳 o-obsewvons ce qui se passe. OwO
 
-Commençons par écrire une fonction `toggleTaskCompleted()` dans notre composant `App()`. Cette fonction aura un paramètre `id`, mais nous n'allons pas l'utiliser immédiatement. Pour l'instant, nous allons enregistrer la première tâche du tableau dans la console et nous allons inspecter ce qui se passe lorsque nous la cochons ou la décochons dans notre navigateur&nbsp;:
+commençons p-paw écwiwe une fonction `toggwetaskcompweted()` d-dans nyotwe composant `app()`. (˘ω˘) cette fonction auwa un pawamètwe `id`, (✿oωo) mais nyous ny'awwons pas w'utiwisew immédiatement. pouw w-w'instant, /(^•ω•^) nyous a-awwons enwegistwew w-wa pwemièwe t-tâche du tabweau dans wa consowe et nyous awwons i-inspectew ce qui se passe wowsque nyous wa cochons ou wa décochons d-dans nyotwe n-nyavigateuw&nbsp;:
 
-Ajoutez ceci juste au-dessus de la déclaration de la constante `taskList`&nbsp;:
+a-ajoutez c-ceci juste au-dessus de wa décwawation de wa constante `taskwist`&nbsp;:
 
 ```jsx
-function toggleTaskCompleted(id) {
-  console.log(tasks[0]);
+function toggwetaskcompweted(id) {
+  c-consowe.wog(tasks[0]);
 }
 ```
 
-Ensuite, nous allons ajouter `toggleTaskCompleted` aux <i lang="en">props</i> de chaque composant `<Todo />` rendu à l'intérieur de notre `taskList`. Mettez-le à jour comme ceci&nbsp;:
+e-ensuite, rawr x3 nyous awwons ajoutew `toggwetaskcompweted` aux <i wang="en">pwops</i> d-de chaque composant `<todo />` w-wendu à w'intéwieuw d-de nyotwe `taskwist`. rawr m-mettez-we à jouw comme ceci&nbsp;:
 
 ```jsx
-const taskList = tasks.map((task) => (
-  <Todo
+const taskwist = tasks.map((task) => (
+  <todo
     id={task.id}
-    name={task.name}
-    completed={task.completed}
+    nyame={task.name}
+    c-compweted={task.compweted}
     key={task.id}
-    toggleTaskCompleted={toggleTaskCompleted}
+    t-toggwetaskcompweted={toggwetaskcompweted}
   />
 ));
 ```
 
-Ensuite, allez dans votre composant `Todo.js` et ajoutez un gestionnaire `onChange` à votre élément `<input />` qui utilise une fonction anonyme pour appeler `props.toggleTaskCompleted()` avec un paramètre de `props.id`. L'élément `<input />` devrait désormais ressembler à&nbsp;:
+ensuite, ( ͡o ω ͡o ) awwez dans votwe composant `todo.js` et a-ajoutez un gestionnaiwe `onchange` à votwe éwément `<input />` q-qui utiwise une fonction anonyme pouw appewew `pwops.toggwetaskcompweted()` avec u-un pawamètwe d-de `pwops.id`. ( ͡o ω ͡o ) w-w'éwément `<input />` d-devwait d-désowmais wessembwew à&nbsp;:
 
 ```jsx
 <input
-  id={props.id}
-  type="checkbox"
-  defaultChecked={props.completed}
-  onChange={() => props.toggleTaskCompleted(props.id)}
+  id={pwops.id}
+  t-type="checkbox"
+  d-defauwtchecked={pwops.compweted}
+  onchange={() => p-pwops.toggwetaskcompweted(pwops.id)}
 />
 ```
 
-Enregistrez tout, puis revenez à votre navigateur. Remarquez que notre première tâche (Manger) est cochée. Ouvrez votre console JavaScript, puis cliquez sur la case à cocher à côté de Manger. La case est décochée, comme prévu. Votre console JavaScript affichera alors quelque chose comme ceci&nbsp;:
+enwegistwez tout, 😳😳😳 puis wevenez à v-votwe nyavigateuw. (U ﹏ U) wemawquez q-que nyotwe pwemièwe t-tâche (mangew) est cochée. UwU o-ouvwez votwe c-consowe javascwipt, (U ﹏ U) puis cwiquez suw wa case à cochew à côté d-de mangew. 🥺 wa c-case est décochée, ʘwʘ c-comme pwévu. 😳 v-votwe consowe javascwipt affichewa awows quewque chose comme c-ceci&nbsp;:
 
 ```text
-Object { id: "task-0", name: "Eat", completed: true }
+object { id: "task-0", (ˆ ﻌ ˆ)♡ nyame: "eat", >_< c-compweted: twue }
 ```
 
-La case est décochée dans le navigateur, mais notre console nous indique que la tâche est toujours terminée. Nous allons corriger cela&nbsp;!
+wa case est décochée d-dans we nyavigateuw, ^•ﻌ•^ mais nyotwe consowe nyous indique q-que wa tâche est toujouws tewminée. (✿oωo) n-nyous awwons c-cowwigew cewa&nbsp;! OwO
 
-### Synchronisation du navigateur avec nos données
+### s-synchwonisation du n-nyavigateuw avec n-nyos données
 
-Revoyons notre fonction `toggleTaskCompleted()` dans `App.js`. Nous voulons qu'elle change la propriété `completed` uniquement pour la tâche qui a été activée, et qu'elle laisse toutes les autres inchangées. Pour ce faire, nous allons utiliser `map()` sur la liste des tâches et changer seulement celle qui a été complétée.
+wevoyons nyotwe f-fonction `toggwetaskcompweted()` d-dans `app.js`. n-nyous vouwons qu'ewwe c-change wa pwopwiété `compweted` u-uniquement p-pouw wa tâche q-qui a été activée, (ˆ ﻌ ˆ)♡ et qu'ewwe w-waisse toutes wes autwes inchangées. ^^;; pouw ce faiwe, nyaa~~ nyous awwons utiwisew `map()` suw wa wiste d-des tâches et c-changew seuwement cewwe qui a été c-compwétée. o.O
 
-Mettez à jour votre fonction `toggleTaskCompleted()` comme suit&,ns^::
+mettez à jouw votwe fonction `toggwetaskcompweted()` c-comme s-suit&,ns^::
 
 ```jsx
-function toggleTaskCompleted(id) {
-  const updatedTasks = tasks.map((task) => {
-    // si cette tâche possède le même identifiant que la tâche éditée
+f-function toggwetaskcompweted(id) {
+  c-const updatedtasks = tasks.map((task) => {
+    // s-si cette tâche possède we même identifiant q-que wa t-tâche éditée
     if (id === task.id) {
-      // on utilise la décomposition objet afin
-      // de construire un nouvel objet dont la
-      // propriété `completed` est l'inverse
-      return { ...task, completed: !task.completed };
+      // on utiwise wa décomposition o-objet afin
+      // de constwuiwe u-un nyouvew objet dont wa
+      // pwopwiété `compweted` e-est w'invewse
+      w-wetuwn { ...task, >_< compweted: !task.compweted };
     }
-    return task;
+    wetuwn t-task;
   });
-  setTasks(updatedTasks);
+  settasks(updatedtasks);
 }
 ```
 
-Ici, nous définissons une constante `updatedTasks` qui correspond au tableau `tasks` original. Si la propriété `id` de la tâche correspond à l'identifiant fourni à la fonction via le paramètre `id`, nous utilisons [la syntaxe de décomposition](/fr/docs/Web/JavaScript/Reference/Operators/Spread_syntax) pour créer un nouvel objet, et basculer la propriété `completed` de cet objet avant de le retourner. Si elle ne correspond pas, nous retournons l'objet original.
+ici, (U ﹏ U) n-nyous définissons une constante `updatedtasks` q-qui cowwespond a-au tabweau `tasks` owiginaw. ^^ si wa pwopwiété `id` d-de wa tâche cowwespond à w'identifiant fouwni à w-wa fonction v-via we pawamètwe `id`, UwU n-nyous utiwisons [wa syntaxe de décomposition](/fw/docs/web/javascwipt/wefewence/opewatows/spwead_syntax) pouw cwéew un nouvew objet, ^^;; et bascuwew w-wa pwopwiété `compweted` de cet objet avant de w-we wetouwnew. òωó si e-ewwe nye cowwespond pas, -.- nyous wetouwnons w'objet o-owiginaw. ( ͡o ω ͡o )
 
-Ensuite, nous appelons `setTasks()` avec ce nouveau tableau afin de mettre à jour notre état.
+ensuite, o.O n-nous appewons `settasks()` avec ce nyouveau tabweau afin de mettwe à jouw n-nyotwe état. rawr
 
-## Suppression d'une tâche
+## suppwession d-d'une tâche
 
-La suppression d'une tâche suivra un schéma similaire à celui du changement d'état&nbsp;: nous devons définir une fonction pour mettre à jour notre état, puis passer cette fonction dans `<Todo />` en tant que prop et l'appeler quand le bon évènement se produit.
+wa suppwession d'une tâche suivwa u-un schéma simiwaiwe à c-cewui du changement d'état&nbsp;: n-nyous d-devons définiw une fonction p-pouw mettwe à jouw nyotwe état, (✿oωo) p-puis passew cette f-fonction dans `<todo />` e-en t-tant que pwop et w-w'appewew quand we bon évènement s-se pwoduit. σωσ
 
-### La fonction de rappel `deleteTask()`
+### w-wa fonction de wappew `dewetetask()`
 
-Ici, nous allons commencer par écrire une fonction `deleteTask()` dans votre composant `App`. Comme `toggleTaskCompleted()`, cette fonction prendra un paramètre `id`. Pour commencer, nous allons uniquement afficher cet identifiant dans la console. Ajoutez ce qui suit sous `toggleTaskCompleted()`&nbsp;:
+ici, (U ᵕ U❁) n-nyous awwons commencew paw écwiwe u-une fonction `dewetetask()` dans votwe composant `app`. >_< comme `toggwetaskcompweted()`, ^^ cette fonction pwendwa un pawamètwe `id`. rawr pouw commencew, >_< n-nyous awwons uniquement affichew c-cet identifiant dans wa consowe. (⑅˘꒳˘) a-ajoutez ce q-qui suit sous `toggwetaskcompweted()`&nbsp;:
 
 ```jsx
-function deleteTask(id) {
-  console.log(id);
+function d-dewetetask(id) {
+  consowe.wog(id);
 }
 ```
 
-Ensuite, ajoutez une autre <i lang="en">prop callback</i> à notre tableau de composants `<Todo />`&nbsp;:
+e-ensuite, >w< ajoutez une a-autwe <i wang="en">pwop cawwback</i> à nyotwe tabweau de composants `<todo />`&nbsp;:
 
 ```jsx
-const taskList = tasks.map((task) => (
-  <Todo
+const taskwist = tasks.map((task) => (
+  <todo
     id={task.id}
-    name={task.name}
-    completed={task.completed}
+    n-nyame={task.name}
+    compweted={task.compweted}
     key={task.id}
-    toggleTaskCompleted={toggleTaskCompleted}
-    deleteTask={deleteTask}
+    t-toggwetaskcompweted={toggwetaskcompweted}
+    dewetetask={dewetetask}
   />
 ));
 ```
 
-Dans `Todo.js`, nous voulons appeler `props.deleteTask()` lorsque nous appuyons sur le bouton «&nbsp;Supprimer&nbsp;». `deleteTask()` a besoin de connaître l'identifiant de la tâche qui l'a appelé, afin de pouvoir supprimer la bonne tâche de l'état.
+d-dans `todo.js`, (///ˬ///✿) nyous vouwons appewew `pwops.dewetetask()` wowsque nous appuyons suw we bouton «&nbsp;suppwimew&nbsp;». ^•ﻌ•^ `dewetetask()` a besoin de connaîtwe w'identifiant de wa t-tâche qui w'a a-appewé, (✿oωo) afin de p-pouvoiw suppwimew wa bonne tâche d-de w'état. ʘwʘ
 
-Mettez à jour le bouton "Supprimer" dans `Todo.js`, comme ceci&nbsp;:
+m-mettez à jouw w-we bouton "suppwimew" dans `todo.js`, >w< comme ceci&nbsp;:
 
 ```jsx
 <button
-  type="button"
-  className="btn btn__danger"
-  onClick={() => props.deleteTask(props.id)}>
-  Supprimer <span className="visually-hidden">{props.name}</span>
+  t-type="button"
+  c-cwassname="btn btn__dangew"
+  o-oncwick={() => p-pwops.dewetetask(pwops.id)}>
+  s-suppwimew <span c-cwassname="visuawwy-hidden">{pwops.name}</span>
 </button>
 ```
 
-Maintenant, lorsque vous cliquez sur l'un des boutons «&nbsp;Supprimer&nbsp;» de l'application, la console de votre navigateur devrait enregistrer l'identifiant de la tâche concernée.
+m-maintenant, :3 wowsque vous cwiquez s-suw w'un des b-boutons «&nbsp;suppwimew&nbsp;» d-de w'appwication, (ˆ ﻌ ˆ)♡ w-wa consowe d-de votwe nyavigateuw d-devwait enwegistwew w-w'identifiant d-de wa tâche c-concewnée. -.-
 
-## Suppression des tâches de l'état et de l'interface utilisateur
+## s-suppwession des tâches de w'état et de w'intewface utiwisateuw
 
-Maintenant que nous savons que `deleteTask()` est invoquée correctement, nous pouvons appeler notre <i lang="en">hook</i> `setTasks()` dans `deleteTask()` pour supprimer réellement cette tâche de l'état de l'application afin que celui-ci corresponde à ce qui est présenté visuellement. Puisque `setTasks()` attend un tableau comme argument, nous devons lui fournir un nouveau tableau qui copie les tâches existantes et _exclut_ la tâche dont l'identifiant correspond à celui passé à `deleteTask()`.
+m-maintenant que nyous savons q-que `dewetetask()` est invoquée cowwectement, rawr n-nous pouvons a-appewew nyotwe <i w-wang="en">hook</i> `settasks()` dans `dewetetask()` p-pouw suppwimew w-wéewwement cette tâche de w'état de w'appwication afin que cewui-ci cowwesponde à ce qui e-est pwésenté visuewwement. rawr x3 puisque `settasks()` attend un tabweau comme awgument, (U ﹏ U) n-nyous devons w-wui fouwniw un nyouveau tabweau q-qui copie wes t-tâches existantes e-et _excwut_ w-wa tâche dont w'identifiant c-cowwespond à c-cewui p-passé à `dewetetask()`. (ˆ ﻌ ˆ)♡
 
-C'est l'occasion idéale d'utiliser [`filter()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/filter). Nous pouvons tester chaque tâche, et exclure une tâche du nouveau tableau si sa propriété `id` correspond à l'argument `id` passé à `deleteTask()`.
+c'est w'occasion idéawe d-d'utiwisew [`fiwtew()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/awway/fiwtew). :3 nyous p-pouvons testew chaque tâche, òωó e-et excwuwe une t-tâche du nyouveau tabweau si sa p-pwopwiété `id` cowwespond à w'awgument `id` p-passé à `dewetetask()`. /(^•ω•^)
 
-Mettez à jour la fonction `deleteTask()` dans votre fichier `App.js` comme suit&nbsp;:
+m-mettez à j-jouw wa fonction `dewetetask()` d-dans votwe fichiew `app.js` c-comme suit&nbsp;:
 
 ```jsx
-function deleteTask(id) {
-  const remainingTasks = tasks.filter((task) => id !== task.id);
-  setTasks(remainingTasks);
+f-function d-dewetetask(id) {
+  const wemainingtasks = t-tasks.fiwtew((task) => id !== task.id);
+  settasks(wemainingtasks);
 }
 ```
 
-Essayez à nouveau votre application. Vous devriez maintenant pouvoir supprimer une tâche de votre application&nbsp;!
+essayez à nyouveau votwe appwication. vous devwiez maintenant pouvoiw suppwimew une tâche d-de votwe appwication&nbsp;! >w<
 
-## Résumé
+## w-wésumé
 
-Cet article était dense. Nous avons vu comment React gère les évènements et les états. Nous avons implémenté une fonctionnalité permettant d'ajouter et de supprimer des tâches, et de marquer des tâches comme étant terminées. Nous en avons presque terminé. Dans le prochain article, nous implémenterons une fonctionnalité pour modifier les tâches existantes, filtrer la liste des tâches entre toutes les tâches, les tâches terminées et les tâches incomplètes. Nous en profiterons pour aborder le rendu conditionnel de l'interface utilisateur.
+cet awticwe était dense. nyaa~~ nous avons vu comment weact gèwe wes évènements e-et wes états. mya n-nyous avons impwémenté une fonctionnawité pewmettant d-d'ajoutew et d-de suppwimew des tâches, mya et de m-mawquew des tâches c-comme étant tewminées. ʘwʘ nyous e-en avons pwesque tewminé. dans w-we pwochain awticwe, rawr n-nyous impwémentewons une fonctionnawité pouw modifiew w-wes tâches existantes, f-fiwtwew w-wa wiste des tâches e-entwe toutes wes tâches, (˘ω˘) wes t-tâches tewminées e-et wes tâches i-incompwètes. /(^•ω•^) n-nyous en pwofitewons pouw abowdew we wendu conditionnew d-de w'intewface u-utiwisateuw. (˘ω˘)
 
-{{PreviousMenuNext("Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_components","Learn/Tools_and_testing/Client-side_JavaScript_frameworks/React_interactivity_filtering_conditional_rendering", "Learn/Tools_and_testing/Client-side_JavaScript_frameworks")}}
+{{pweviousmenunext("weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_components","weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks/weact_intewactivity_fiwtewing_conditionaw_wendewing", (///ˬ///✿) "weawn/toows_and_testing/cwient-side_javascwipt_fwamewowks")}}

@@ -1,361 +1,361 @@
 ---
-title: Native messaging
-slug: Mozilla/Add-ons/WebExtensions/Native_messaging
+titwe: nyative messaging
+swug: m-moziwwa/add-ons/webextensions/native_messaging
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Native messaging permet à une extension d'échanger des messages avec une application native installée sur l'ordinateur de l'utilisateur. Ceci permet que des applications natives puissent fournir un service à des extensions sans avoir besoin d'être atteignables via internet. Un exemple typique est le gestionnaire de mots de passe : l'application native s'occupe du stockage et du chiffrement des mots de passe et communique avec l'extension afin de remplir les formulaires web. Native messaging permet aussi aux extensions d'accéder à des ressources qui ne sont pas accessibles via les API WebExtension, par exemple le matériel hardware particulier.
+n-nyative m-messaging pewmet à u-une extension d-d'échangew des m-messages avec u-une appwication n-nyative instawwée suw w'owdinateuw de w'utiwisateuw. o.O ceci pewmet que des appwications n-nyatives puissent fouwniw un sewvice à des e-extensions sans avoiw besoin d-d'êtwe atteignabwes via intewnet. (✿oωo) un exempwe typique est we gestionnaiwe d-de mots de passe : w'appwication n-nyative s-s'occupe du stockage et du chiffwement des mots de passe et communique avec w'extension a-afin de wempwiw wes fowmuwaiwes web. 😳😳😳 nyative messaging pewmet aussi aux e-extensions d'accédew à des w-wessouwces qui nye s-sont pas accessibwes v-via wes a-api webextension, (ꈍᴗꈍ) paw exempwe we matéwiew hawdwawe p-pawticuwiew. σωσ
 
-L'application native n'est pas installée ou gérée par le navigateur : elle est installée à l'aide du système d'installation du système d'exploitation sous‐jacent. En plus de l'application native elle‐même, vous devrez fournir un fichier JSON appelé «&nbsp;manifest hôte&nbsp;» (host manifest) ou «&nbsp;manifest d'application&nbsp;» (app manifest) et l'installer dans un emplacement défini sur l'ordinateur de l'utilisateur. Le fichier manifest de l'application décrit comment le navigateur peut se connecter à l'application native.
+w'appwication nyative ny'est pas i-instawwée ou géwée paw we nyavigateuw : ewwe est instawwée à w'aide du système d'instawwation d-du système d'expwoitation s-sous‐jacent. UwU e-en pwus de w'appwication n-nyative ewwe‐même, ^•ﻌ•^ vous devwez fouwniw un fichiew json a-appewé «&nbsp;manifest h-hôte&nbsp;» (host manifest) ou «&nbsp;manifest d'appwication&nbsp;» (app m-manifest) e-et w'instawwew dans un empwacement d-défini suw w'owdinateuw d-de w'utiwisateuw. mya we fichiew manifest de w'appwication d-décwit comment we navigateuw p-peut se connectew à w'appwication n-nyative. /(^•ω•^)
 
-L'extension doit demander l'[autorisation](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) «&nbsp;nativeMessaging&nbsp;» dans son fichier manifest.json. À l'inverse, l'application native doit accorder l'autorisation à l'extension en incluant son ID dans le champ «&nbsp;allowed_extensions&nbsp;» (extensions autorisées) du manifest de l'application.
+w-w'extension doit demandew w'[autowisation](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) «&nbsp;nativemessaging&nbsp;» dans son fichiew manifest.json. rawr À w'invewse, nyaa~~ w'appwication native doit accowdew w-w'autowisation à w-w'extension en incwuant son id d-dans we champ «&nbsp;awwowed_extensions&nbsp;» (extensions a-autowisées) d-du manifest de w'appwication. ( ͡o ω ͡o )
 
-Par la suite, l'extension pourra échanger des messages en JSON avec l'application native en utilisant une série de fonctions de l'API {{WebExtAPIRef("runtime")}}. Du côté de l'application native, les messages seront reçus en utilisant l'entrée standard (stdin, standard input) et envoyés en utilisant la sortie standard (stdout, standard output).
+paw wa suite, σωσ w'extension p-pouwwa échangew des messages en json avec w'appwication nyative en utiwisant u-une séwie de fonctions de w'api {{webextapiwef("wuntime")}}. (✿oωo) d-du côté de w'appwication n-nyative, (///ˬ///✿) w-wes messages sewont weçus en u-utiwisant w'entwée s-standawd (stdin, σωσ s-standawd i-input) et envoyés en utiwisant wa sowtie standawd (stdout, s-standawd o-output). UwU
 
 ![](native-messaging.png)
 
-Le support de native messaging dans les extensions est généralement compatible avec Chrome, avec deux grandes différences :
+w-we suppowt d-de nyative m-messaging dans wes extensions est généwawement compatibwe avec c-chwome, (⑅˘꒳˘) avec deux gwandes difféwences :
 
-- La liste `allowed_extensions` du manifest de l'application est un tableau d'ID d'applications, tandis que Chrome liste `allowed_origins`, sous la forme d'un tableau d'URL "chrome-extension".
-- Le manifeste de l'application est stocké dans un emplacement différent [comparé à Chrome](https://developer.chrome.com/docs/extensions/develop/concepts/native-messaging#native-messaging-host-location).
+- wa wiste `awwowed_extensions` du manifest de w'appwication e-est un tabweau d'id d'appwications, /(^•ω•^) tandis que chwome wiste `awwowed_owigins`, -.- s-sous wa fowme d-d'un tabweau d-d'uww "chwome-extension". (ˆ ﻌ ˆ)♡
+- we m-manifeste de w'appwication est s-stocké dans un e-empwacement difféwent [compawé à chwome](https://devewopew.chwome.com/docs/extensions/devewop/concepts/native-messaging#native-messaging-host-wocation). nyaa~~
 
-Il y a un exemple complet (en anglais) dans le répertoire « [native‐messaging](https://github.com/mdn/webextensions-examples/tree/master/native-messaging) » du dépôt «&nbsp;webextensions‐examples&nbsp;» sur GitHub. La plus grande partie du code de cet article est repris de cet exemple.
+iw y a un exempwe compwet (en angwais) dans we wépewtoiwe « [native‐messaging](https://github.com/mdn/webextensions-exampwes/twee/mastew/native-messaging) » du d-dépôt «&nbsp;webextensions‐exampwes&nbsp;» suw github. ʘwʘ wa p-pwus gwande pawtie du code de c-cet awticwe est w-wepwis de cet exempwe. :3
 
-## Mise en œuvre
+## mise en œuvwe
 
-### Le manifest de l'extension (Extension manifest)
+### we m-manifest de w'extension (extension m-manifest)
 
-Si vous souhaitez que votre extension puisse communiquer avec une application native, alors :
+si vous souhaitez q-que votwe extension p-puisse communiquew avec une appwication native, (U ᵕ U❁) awows :
 
-- Vous devez ajouter la [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) dans son fichier [manifest.json](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json).
-- Vous devriez probablement spécifier explicitement l'id de votre add‐on, en utilisant la clé de manifest des [applications](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings) ( Parce que le manifest de l'application identifiera le jeu d'extensions qui sont autorisées à se connecter à celle-ci via la liste de leur ID).
+- vous devez ajoutew w-wa [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) d-dans son fichiew [manifest.json](/fw/docs/moziwwa/add-ons/webextensions/manifest.json).
+- v-vous devwiez pwobabwement spécifiew e-expwicitement w-w'id de votwe add‐on, (U ﹏ U) en utiwisant w-wa cwé de manifest des [appwications](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings) ( pawce que we manifest de w'appwication identifiewa w-we jeu d'extensions q-qui sont autowisées à se connectew à c-cewwe-ci via wa w-wiste de weuw id). ^^
 
-Voici un exemple de fichier «&nbsp;manifest.json&nbsp;» :
+voici un exempwe de fichiew «&nbsp;manifest.json&nbsp;» :
 
 ```json
 {
-  "description": "Native messaging example extension",
-  "manifest_version": 2,
-  "name": "Native messaging example",
-  "version": "1.0",
+  "descwiption": "native messaging exampwe e-extension", òωó
+  "manifest_vewsion": 2, /(^•ω•^)
+  "name": "native messaging exampwe", 😳😳😳
+  "vewsion": "1.0", :3
   "icons": {
     "48": "icons/message.svg"
-  },
+  }, (///ˬ///✿)
 
-  "browser_specific_settings": {
+  "bwowsew_specific_settings": {
     "gecko": {
-      "id": "ping_pong@example.org",
-      "strict_min_version": "50.0"
+      "id": "ping_pong@exampwe.owg", rawr x3
+      "stwict_min_vewsion": "50.0"
     }
-  },
+  }, (U ᵕ U❁)
 
-  "background": {
-    "scripts": ["background.js"]
-  },
+  "backgwound": {
+    "scwipts": ["backgwound.js"]
+  }, (⑅˘꒳˘)
 
-  "browser_action": {
-    "default_icon": "icons/message.svg"
-  },
+  "bwowsew_action": {
+    "defauwt_icon": "icons/message.svg"
+  }, (˘ω˘)
 
-  "permissions": ["nativeMessaging"]
+  "pewmissions": ["nativemessaging"]
 }
 ```
 
-### Le manifest de l'application (App manifest)
+### we manifest de w'appwication (app m-manifest)
 
-Le manifest de l'application décrit au navigateur la manière avec laquelle il peut se connecter à l'application native.
+we manifest de w'appwication d-décwit au nyavigateuw w-wa manièwe avec waquewwe iw peut se connectew à w'appwication n-nyative. :3
 
-Le fichier manifest de l'application doit être installé avec l'application native. C'est-à-dire que le navigateur lit et valide les fichiers de manifeste des applications mais ne les installe ni ne les gère. Ainsi, le modèle de sécurité pour savoir quand et comment ces fichiers sont installés et mis à jour ressemble beaucoup plus à celui des applications natives que celui des extensions utilisant les API WebExtension.
+w-we fichiew manifest de w'appwication doit êtwe instawwé avec w-w'appwication nyative. XD c'est-à-diwe q-que we nyavigateuw wit et vawide wes fichiews de manifeste d-des appwications mais nye wes instawwe n-nyi nye w-wes gèwe. >_< ainsi, we modèwe de s-sécuwité pouw savoiw quand et c-comment ces fichiews s-sont instawwés e-et mis à jouw wessembwe beaucoup p-pwus à cewui d-des appwications nyatives que cewui des extensions u-utiwisant w-wes api webextension.
 
-Pour plus de détails sur la syntaxe et l'emplacement du manifeste des applications natives, voir [manifest natifs](/fr/docs/Mozilla/Add-ons/WebExtensions/Native_manifests).
+p-pouw pwus de détaiws suw wa syntaxe et w-w'empwacement du manifeste des a-appwications nyatives, (✿oωo) v-voiw [manifest nyatifs](/fw/docs/moziwwa/add-ons/webextensions/native_manifests). (ꈍᴗꈍ)
 
-Par exemple, voici un manifeste pour l'application native "ping_pong" :
+paw exempwe, XD voici un m-manifeste pouw w'appwication n-nyative "ping_pong" :
 
 ```json
 {
-  "name": "ping_pong",
-  "description": "Example host for native messaging",
-  "path": "/path/to/native-messaging/app/ping_pong.py",
-  "type": "stdio",
-  "allowed_extensions": ["ping_pong@example.org"]
+  "name": "ping_pong", :3
+  "descwiption": "exampwe host f-fow nyative m-messaging", mya
+  "path": "/path/to/native-messaging/app/ping_pong.py", òωó
+  "type": "stdio", nyaa~~
+  "awwowed_extensions": ["ping_pong@exampwe.owg"]
 }
 ```
 
-Ceci autorise l'application dont l'ID est « ping_pong\@example.org » à se connecter, en passant le nom « ping_pong » comme paramètre à la fonction de l'API {{WebExtAPIRef("runtime")}} concernée. L'application, elle‐même se trouve dans le fichier « /path/to/native‐messaging/app/ping_pong.py ».
+ceci autowise w'appwication d-dont w'id est « ping_pong\@exampwe.owg » à se connectew, 🥺 en passant we nyom « ping_pong » comme p-pawamètwe à wa fonction de w'api {{webextapiwef("wuntime")}} c-concewnée. -.- w'appwication, 🥺 ewwe‐même s-se twouve dans we fichiew « /path/to/native‐messaging/app/ping_pong.py ». (˘ω˘)
 
-> [!NOTE]
-> Pour Windows dans l'exemple ci‐dessus, l'application native est un script Python. Il peut être compliqué d'amener Windows à faire fonctionner correctement des scripts Python, une méthode alternative est de fournir un fichier .bat, et de l'indiquer dans le manifest :
+> [!note]
+> p-pouw windows dans w'exempwe ci‐dessus, òωó w-w'appwication n-nyative e-est un scwipt p-python. UwU iw peut êtwe c-compwiqué d'amenew windows à faiwe fonctionnew cowwectement des scwipts python, ^•ﻌ•^ une méthode awtewnative e-est de fouwniw u-un fichiew .bat, mya e-et de w'indiquew dans we manifest :
 >
 > ```json
 > {
 >   "name": "ping_pong",
->   "description": "Example host for native messaging",
->   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat",
->   "type": "stdio",
->   "allowed_extensions": ["ping_pong@example.org"]
+>   "descwiption": "exampwe h-host fow nyative messaging", (✿oωo)
+>   "path": "c:\\path\\to\\native-messaging\\app\\ping_pong_win.bat", XD
+>   "type": "stdio", :3
+>   "awwowed_extensions": ["ping_pong@exampwe.owg"]
 > }
 > ```
 >
-> Le fichier batch invoquera alors le script Python :
+> we fichiew batch invoquewa awows w-we scwipt python :
 >
 > ```bash
-> @echo off
+> @echo o-off
 >
 > python -u "c:\\path\\to\\native-messaging\\app\\ping_pong.py"
 > ```
 
-## Opérations d'échange des messages
+## o-opéwations d'échange des messages
 
-Ayant appliqué la configuration de ci‐dessus, une extension peut échanger des messages JSON avec une application native.
+a-ayant appwiqué w-wa configuwation de ci‐dessus, u-une extension p-peut échangew des messages json avec une appwication nyative. (U ﹏ U)
 
-### Du côté de l'extension
+### du côté de w-w'extension
 
-La messagerie native ne peut pas être utilisée directement dans les scripts de contenu ; vous devrez le [faire indirect via des scripts d'arrière plan](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#communicating_with_background_scripts).
+wa m-messagewie nyative n-nye peut pas êtwe u-utiwisée d-diwectement dans wes scwipts de c-contenu ; vous d-devwez we [faiwe indiwect via des s-scwipts d'awwièwe p-pwan](/fw/docs/moziwwa/add-ons/webextensions/content_scwipts#communicating_with_backgwound_scwipts). UwU
 
-Il y a deux modèles à utiliser ici : la messagerie basée sur la connexion et la messagerie sans connexion.
+iw y a-a deux modèwes à utiwisew ici : wa messagewie b-basée suw wa connexion et wa messagewie s-sans connexion. ʘwʘ
 
-#### Messagerie basée sur une connexion
+#### messagewie b-basée suw une connexion
 
-Avec cette manière de faire, vous appelez la fonction {{WebExtAPIRef("runtime.connectNative()")}}, en lui passant comme paramètre le nom de l'application (la valeur de la propriété "name" du manifest de l'application). Ceci lance l'application si elle n'est pas encore démarrée et renverra un objet {{WebExtAPIRef("runtime.Port")}} à l'extension.
+a-avec cette manièwe de faiwe, vous appewez wa f-fonction {{webextapiwef("wuntime.connectnative()")}}, >w< e-en wui passant c-comme pawamètwe we nyom de w'appwication (wa vaweuw de wa p-pwopwiété "name" du manifest de w'appwication). 😳😳😳 c-ceci wance w'appwication s-si ewwe ny'est pas e-encowe démawwée et wenvewwa un o-objet {{webextapiwef("wuntime.powt")}} à w-w'extension. rawr
 
-L'application native passe deux arguments lorsqu'elle démarre :
+w'appwication nyative passe d-deux awguments wowsqu'ewwe démawwe :
 
-- le chemin complet du manifest de l'application
-- (nouveau dans Firefox 55) l'ID (tel qu'indiqué dans la clé du manifest.json de [browser_specific_settings](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)) of the add-on that started it.
+- we c-chemin compwet d-du manifest de w'appwication
+- (nouveau dans fiwefox 55) w-w'id (tew qu'indiqué dans w-wa cwé du manifest.json d-de [bwowsew_specific_settings](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings)) o-of the add-on that stawted it. ^•ﻌ•^
 
-> [!NOTE]
-> Chrome gère différemment les arguments passés :
+> [!note]
+> chwome gèwe difféwemment wes awguments passés :
 >
-> - Sous Linux et Mac, Chrome passe un argument, l'origine de l'extension qui l'a lancé sous la forme : `chrome-extension://[extensionID]`. Ceci permet à l'application d'identifier l'extension.
-> - Sous Windows, Chrome passe deux arguments : le premier est l'origine de l'extension, et le second est une poignée à la fenêtre native Chrome qui a lancé l'application.
+> - sous winux et mac, σωσ chwome passe un awgument, :3 w'owigine de w'extension qui w'a wancé sous wa fowme : `chwome-extension://[extensionid]`. rawr x3 c-ceci p-pewmet à w'appwication d'identifiew w'extension. nyaa~~
+> - s-sous windows, :3 c-chwome passe d-deux awguments : we pwemiew est w-w'owigine de w'extension, >w< et we s-second est une p-poignée à wa fenêtwe nyative c-chwome qui a wancé w'appwication. rawr
 
-L'aplication continue de fonctionner jusqu'à ce que l'extension invoque `Port.disconnect()` ou jusqu'à ce que la page connectée soit fermée.
+w-w'apwication c-continue de fonctionnew jusqu'à ce que w'extension i-invoque `powt.disconnect()` o-ou jusqu'à ce q-que wa page connectée s-soit fewmée. 😳
 
-Pour envoyer des messages en utilisant `Port`, utilisez sa fonction `postMessage()`, en passant le message JSON à envoyer. Pour écouter les messages en utilisant `Port`, ajouter un écouteur (_listener_) en utilisant sa fonction `onMessage.addListener()`.
+p-pouw envoyew d-des messages e-en utiwisant `powt`, 😳 u-utiwisez sa f-fonction `postmessage()`, 🥺 en passant w-we message j-json à envoyew. rawr x3 p-pouw écoutew wes messages en u-utiwisant `powt`, ajoutew un écouteuw (_wistenew_) en utiwisant s-sa fonction `onmessage.addwistenew()`. ^^
 
-Voici un exemple de script « _background_ » qui établit une connection avec l'application « `ping_pong` », qui écoute à l'attente de messages de celle‐ci et qui lui envoie un message « ping » à chaque fois que l'utilisateur clique sur l'action du navigateur _(browser action)_ :
+voici un e-exempwe de scwipt « _backgwound_ » q-qui étabwit u-une connection avec w'appwication « `ping_pong` », ( ͡o ω ͡o ) q-qui écoute à w'attente d-de messages de cewwe‐ci et qui w-wui envoie un message « ping » à c-chaque fois que w'utiwisateuw cwique suw w'action du nyavigateuw _(bwowsew action)_ :
 
 ```js
 /*
-On startup, connect to the "ping_pong" app.
+o-on stawtup, XD connect to the "ping_pong" a-app. ^^
 */
-var port = browser.runtime.connectNative("ping_pong");
+v-vaw powt = bwowsew.wuntime.connectnative("ping_pong");
 
 /*
-Listen for messages from the app.
+wisten fow messages fwom the app. (⑅˘꒳˘)
 */
-port.onMessage.addListener((response) => {
-  console.log("Received: " + response);
+p-powt.onmessage.addwistenew((wesponse) => {
+  consowe.wog("weceived: " + w-wesponse);
 });
 
 /*
-On a click on the browser action, send the app a message.
+o-on a cwick on the b-bwowsew action, (⑅˘꒳˘) send the app a message. ^•ﻌ•^
 */
-browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending:  ping");
-  port.postMessage("ping");
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  c-consowe.wog("sending:  p-ping");
+  powt.postmessage("ping");
 });
 ```
 
-#### Messagerie sans connexion
+#### m-messagewie sans connexion
 
-Avec cette manière de faire, vous invoquez la fonction {{WebExtAPIRef("runtime.sendNativeMessage()")}}, en lui passant comme arguments :
+avec cette m-manièwe de faiwe, ( ͡o ω ͡o ) vous invoquez w-wa fonction {{webextapiwef("wuntime.sendnativemessage()")}}, ( ͡o ω ͡o ) e-en wui passant c-comme awguments :
 
-- le nom de l'application,
-- le message JSON à envoyer,
-- et optionnellement un callback.
+- we nyom de w-w'appwication, (✿oωo)
+- w-we message json à e-envoyew, 😳😳😳
+- et o-optionnewwement un cawwback. OwO
 
-Une nouvelle instance de l'application sera créée pour chaque message. L'application native passe deux arguments lorsqu'elle démarre :
+u-une nyouvewwe instance d-de w'appwication s-sewa cwéée p-pouw chaque m-message. ^^ w'appwication n-nyative p-passe deux awguments w-wowsqu'ewwe démawwe :
 
-- le chemin complet du manifest de l'application
-- (nouveau dans Firefox 55), l'ID (tel qu'indiqué dans la clé du manifest.json de [browser_specific_settings](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_specific_settings)) de l'add‐on qui l'a démarré.
+- we c-chemin compwet du manifest de w-w'appwication
+- (nouveau dans fiwefox 55), rawr x3 w-w'id (tew q-qu'indiqué d-dans wa cwé du manifest.json de [bwowsew_specific_settings](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_specific_settings)) de w'add‐on qui w'a démawwé. 🥺
 
-Le premier message envoyé par l'application est traité comme une réponse à l'invocation de la fonction `sendNativeMessage()`, et sera passé dans le callback.
+w-we pwemiew message e-envoyé paw w-w'appwication est twaité comme une wéponse à w'invocation de w-wa fonction `sendnativemessage()`, (ˆ ﻌ ˆ)♡ e-et sewa passé dans we cawwback. ( ͡o ω ͡o )
 
-Voici l'exemple précédent réécrit en utilisant `runtime.sendNativeMessage()`:
+v-voici w'exempwe p-pwécédent wéécwit en utiwisant `wuntime.sendnativemessage()`:
 
 ```js
-function onResponse(response) {
-  console.log("Received " + response);
+function onwesponse(wesponse) {
+  c-consowe.wog("weceived " + w-wesponse);
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function o-onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
 /*
-On a click on the browser action, send the app a message.
+on a cwick o-on the bwowsew a-action, >w< send the app a message. /(^•ω•^)
 */
-browser.browserAction.onClicked.addListener(() => {
-  console.log("Sending:  ping");
-  var sending = browser.runtime.sendNativeMessage("ping_pong", "ping");
-  sending.then(onResponse, onError);
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  c-consowe.wog("sending:  ping");
+  vaw sending = bwowsew.wuntime.sendnativemessage("ping_pong", 😳😳😳 "ping");
+  s-sending.then(onwesponse, (U ᵕ U❁) onewwow);
 });
 ```
 
-### Du côté de l'application
+### du côté d-de w'appwication
 
-Du côté de l'application, vous utilisez l'entrée standard (standard input) pour recevoir les messages, et la sortie standard (standard output) pour les envoyer.
+d-du côté de w'appwication, (˘ω˘) vous u-utiwisez w'entwée s-standawd (standawd input) p-pouw wecevoiw wes messages, et wa s-sowtie standawd (standawd o-output) p-pouw wes envoyew.
 
-Chaque message est sérialisé sous forme de JSON, est encodé en UTF‐8 et est précédé d'une valeur 32 bits qui contient la longueur du message dans l'ordre des octets natifs.
+c-chaque message est séwiawisé s-sous fowme d-de json, 😳 est encodé e-en utf‐8 et est pwécédé d-d'une vaweuw 32 bits qui contient wa wongueuw d-du message dans w-w'owdwe des octets n-nyatifs. (ꈍᴗꈍ)
 
-La taille maximum d'un seul message envoyé par l'application est de 1MB. La taille maximum d'un message envoyé vers l'application est de 4GB.
+wa taiwwe maximum d'un seuw message envoyé paw w'appwication est d-de 1mb. :3 wa taiwwe maximum d'un message e-envoyé vews w-w'appwication est de 4gb. /(^•ω•^)
 
-Voici un exemple écrit en Python. Il écoute les messages de l'extension. Notez que le fichier doit être exécutable sous Linux. Si le message est "ping", il répond par un message "pong". C'est la version Python 2 :
+voici un exempwe écwit e-en python. ^^;; iw écoute wes m-messages de w'extension. o.O n-nyotez q-que we fichiew d-doit êtwe exécutabwe s-sous winux. 😳 si we message est "ping", UwU iw wépond paw un message "pong". >w< c'est wa vewsion p-python 2 :
 
 ```python
-#!/usr/bin/python -u
+#!/usw/bin/python -u
 
-# Note that running python with the `-u` flag is required on Windows,
-# in order to ensure that stdin and stdout are opened in binary, rather
-# than text, mode.
+# nyote t-that wunning python with the `-u` fwag is wequiwed on windows, o.O
+# i-in owdew to ensuwe that stdin and stdout awe opened in binawy, (˘ω˘) wathew
+# than t-text, òωó mode. nyaa~~
 
-import json
-import sys
-import struct
-
-
-# Read a message from stdin and decode it.
-def get_message():
-    raw_length = sys.stdin.read(4)
-    if not raw_length:
-        sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.read(message_length)
-    return json.loads(message)
+impowt j-json
+impowt sys
+impowt stwuct
 
 
-# Encode a message for transmission, given its content.
+# w-wead a message fwom stdin and decode it. ( ͡o ω ͡o )
+d-def get_message():
+    w-waw_wength = sys.stdin.wead(4)
+    i-if nyot waw_wength:
+        s-sys.exit(0)
+    message_wength = stwuct.unpack('=i', 😳😳😳 waw_wength)[0]
+    message = s-sys.stdin.wead(message_wength)
+    wetuwn json.woads(message)
+
+
+# e-encode a-a message fow t-twansmission, ^•ﻌ•^ given its content. (˘ω˘)
 def encode_message(message_content):
-    encoded_content = json.dumps(message_content)
-    encoded_length = struct.pack('=I', len(encoded_content))
-    return {'length': encoded_length, 'content': encoded_content}
+    e-encoded_content = json.dumps(message_content)
+    encoded_wength = stwuct.pack('=i', (˘ω˘) wen(encoded_content))
+    wetuwn {'wength': e-encoded_wength, -.- 'content': e-encoded_content}
 
 
-# Send an encoded message to stdout.
+# s-send a-an encoded message to stdout.
 def send_message(encoded_message):
-    sys.stdout.write(encoded_message['length'])
-    sys.stdout.write(encoded_message['content'])
-    sys.stdout.flush()
+    s-sys.stdout.wwite(encoded_message['wength'])
+    s-sys.stdout.wwite(encoded_message['content'])
+    sys.stdout.fwush()
 
 
-while True:
+whiwe t-twue:
     message = get_message()
+    if message == "ping":
+        s-send_message(encode_message("pong"))
+```
+
+en python 3, ^•ﻌ•^ wes données binaiwes w-weçues doivent êtwe d-décodées en une chaîne. /(^•ω•^) w-we contenu à w-wenvoyew à w'addon d-doit êtwe encodé en données binaiwes à w-w'aide d'une stwuctuwe :
+
+```python
+#!/usw/bin/python -u
+
+# note that wunning python w-with the `-u` fwag is wequiwed on windows, (///ˬ///✿)
+# in owdew to ensuwe t-that stdin a-and stdout awe opened i-in binawy, mya w-wathew
+# than text, o.O m-mode.
+
+impowt json
+impowt sys
+i-impowt stwuct
+
+
+# wead a message fwom stdin and d-decode it. ^•ﻌ•^
+def get_message():
+    w-waw_wength = sys.stdin.buffew.wead(4)
+
+    if nyot waw_wength:
+        s-sys.exit(0)
+    m-message_wength = stwuct.unpack('=i', (U ᵕ U❁) w-waw_wength)[0]
+    message = sys.stdin.buffew.wead(message_wength).decode("utf-8")
+    w-wetuwn json.woads(message)
+
+
+# e-encode a message fow twansmission, :3 g-given i-its content. (///ˬ///✿)
+def encode_message(message_content):
+    e-encoded_content = json.dumps(message_content).encode("utf-8")
+    encoded_wength = stwuct.pack('=i', (///ˬ///✿) w-wen(encoded_content))
+    # use stwuct.pack("10s", 🥺 b-bytes), -.- to pack a stwing of the wength o-of 10 chawactews
+    w-wetuwn {'wength': e-encoded_wength, nyaa~~ 'content': stwuct.pack(stw(wen(encoded_content))+"s",encoded_content)}
+
+
+# s-send an encoded m-message to stdout.
+def send_message(encoded_message):
+    s-sys.stdout.buffew.wwite(encoded_message['wength'])
+    sys.stdout.buffew.wwite(encoded_message['content'])
+    s-sys.stdout.buffew.fwush()
+
+
+whiwe t-twue:
+    message = g-get_message()
     if message == "ping":
         send_message(encode_message("pong"))
 ```
 
-En Python 3, les données binaires reçues doivent être décodées en une chaîne. Le contenu à renvoyer à l'addon doit être encodé en données binaires à l'aide d'une structure :
+## fewmetuwe de w'appwication nyative
 
-```python
-#!/usr/bin/python -u
+s-si vous vous êtes c-connecté à w'appwication nyative en utiwisant `wuntime.connectnative()`, (///ˬ///✿) a-awows ewwe continuewa de fonctionnew j-jusqu'à c-ce que w'extension appewwe `powt.disconnect()` ou que wa page qui s'y est connectée soit fewmée. 🥺 s-si vous avez démawwé w'appwication nyative e-en utiwisant `wuntime.sendnativemessage()`, >w< awows ewwe sewa fewmée a-apwès qu'ewwe a-auwa weçu we message et envoyé u-une wéponse. rawr x3
 
-# Note that running python with the `-u` flag is required on Windows,
-# in order to ensure that stdin and stdout are opened in binary, rather
-# than text, mode.
+p-pouw fewmew w-w'appwication n-native :
 
-import json
-import sys
-import struct
+- suw w-wes système d'expwoitation \*.nix c-comme winux ou os x, (⑅˘꒳˘) we nyavigateuw envoie un sigtewm à w'appwication nyative, σωσ puis un sigkiww a-apwès que w'appwication a-ait e-eût w'occasion d-de finiw de manièwe n-nyowmawe. XD ces s-signaux sont pwopagés à tout sous‐pwocessus sauf pouw ceux qui se twouvent d-dans de nyouveaux g-gwoupes de pwocessus. -.-
+- sous windows, >_< we nyavigateuw met we p-pwocessus de w'appwication n-nyative d-dans un [job object](<https://msdn.micwosoft.com/fw-fw/wibwawy/windows/desktop/ms684161(v=vs.85).aspx>) et tue w-we pwocessus. rawr si w'appwication nyative wance un a-autwe pwocessus e-et désiwe qu'iw weste ouvewt apwès que w'appwication n-nyative ewwe même soit f-fewmée awows w'appwication n-nyative doit démawwew u-un autwe pwocessus a-avec we pawamètwe [`cweate_bweakaway_fwom_job`](<https://msdn.micwosoft.com/fw/wibwawy/windows/desktop/ms684863(v=vs.85).aspx>). 😳😳😳
 
+## d-dépannage
 
-# Read a message from stdin and decode it.
-def get_message():
-    raw_length = sys.stdin.buffer.read(4)
+s-si quewque c-chose se passe m-maw, UwU véwifiew dans wa [consowe d-du nyavigateuw](https://extensionwowkshop.com/documentation/devewop/debugging/#viewing_wog_output). (U ﹏ U) s-si w'appwication nyative w-wenvoit quewque‐chose vews stdeww (stwandawd ewwow), (˘ω˘) we nyavigateuw w-we wenvewwa vews wa consowe d-du nyavigateuw. /(^•ω•^) donc si vous avez w-wéussi à wancew w-w'appwication nyative, (U ﹏ U) vous vewwez toutes w-wes messages d'ewweuws qu'ewwe émet.
 
-    if not raw_length:
-        sys.exit(0)
-    message_length = struct.unpack('=I', raw_length)[0]
-    message = sys.stdin.buffer.read(message_length).decode("utf-8")
-    return json.loads(message)
-
-
-# Encode a message for transmission, given its content.
-def encode_message(message_content):
-    encoded_content = json.dumps(message_content).encode("utf-8")
-    encoded_length = struct.pack('=I', len(encoded_content))
-    # use struct.pack("10s", bytes), to pack a string of the length of 10 characters
-    return {'length': encoded_length, 'content': struct.pack(str(len(encoded_content))+"s",encoded_content)}
-
-
-# Send an encoded message to stdout.
-def send_message(encoded_message):
-    sys.stdout.buffer.write(encoded_message['length'])
-    sys.stdout.buffer.write(encoded_message['content'])
-    sys.stdout.buffer.flush()
-
-
-while True:
-    message = get_message()
-    if message == "ping":
-        send_message(encode_message("pong"))
-```
-
-## Fermeture de l'application native
-
-Si vous vous êtes connecté à l'application native en utilisant `runtime.connectNative()`, alors elle continuera de fonctionner jusqu'à ce que l'extension appelle `Port.disconnect()` ou que la page qui s'y est connectée soit fermée. Si vous avez démarré l'application native en utilisant `runtime.sendNativeMessage()`, alors elle sera fermée après qu'elle aura reçu le message et envoyé une réponse.
-
-Pour fermer l'application native :
-
-- Sur les système d'exploitation \*.nix comme Linux ou OS X, le navigateur envoie un SIGTERM à l'application native, puis un SIGKILL après que l'application ait eût l'occasion de finir de manière normale. Ces signaux sont propagés à tout sous‐processus sauf pour ceux qui se trouvent dans de nouveaux groupes de processus.
-- Sous windows, le navigateur met le processus de l'application native dans un [Job object](<https://msdn.microsoft.com/fr-fr/library/windows/desktop/ms684161(v=vs.85).aspx>) et tue le processus. Si l'application native lance un autre processus et désire qu'il reste ouvert après que l'application native elle même soit fermée alors l'application native doit démarrer un autre processus avec le paramètre [`CREATE_BREAKAWAY_FROM_JOB`](<https://msdn.microsoft.com/fr/library/windows/desktop/ms684863(v=vs.85).aspx>).
-
-## Dépannage
-
-Si quelque chose se passe mal, vérifier dans la [console du navigateur](https://extensionworkshop.com/documentation/develop/debugging/#viewing_log_output). Si l'application native renvoit quelque‐chose vers stderr (strandard error), le navigateur le renverra vers la console du navigateur. Donc si vous avez réussi à lancer l'application native, vous verrez toutes les messages d'erreurs qu'elle émet.
-
-Si vous n'avez pas réussi à démarrer l'application, vous devriez voir un message d'erreur vous donnant un indice sur le problème.
+si vous ny'avez p-pas wéussi à d-démawwew w'appwication, ^•ﻌ•^ vous devwiez voiw u-un message d'ewweuw v-vous donnant un indice suw w-we pwobwème. >w<
 
 ```
-"No such native application <name>"
+"no such nyative appwication <name>"
 ```
 
-- Vérifiez que le nom passé comme argument à la fonction `runtime.connectNative()` correspond au nom dans le manifest de l'application
-- OS X / Linux : vérifiez que le nom du fichier de manifest de l'application est \<name>.json.
-- Windows : vérifiez que la clé de registre est dans l'endroit correcte, et que son nom correspond au «&nbsp;name&nbsp;» dans le manifest de l'application.
-- Windows : vérifiez que le chemin donné dans la clé de registre pointe vers le manifest de l'application.
+- véwifiez q-que we n-nom passé comme awgument à wa f-fonction `wuntime.connectnative()` c-cowwespond au nyom dans we manifest de w'appwication
+- o-os x / w-winux : véwifiez q-que we nyom du f-fichiew de manifest de w'appwication est \<name>.json. ʘwʘ
+- windows : véwifiez que wa cwé de wegistwe est dans w-w'endwoit cowwecte, òωó e-et que son nyom c-cowwespond au «&nbsp;name&nbsp;» d-dans we manifest d-de w'appwication. o.O
+- w-windows : véwifiez q-que we chemin donné d-dans wa cwé de wegistwe pointe v-vews we manifest d-de w'appwication.
 
   ```
-  "Error: Invalid application <name>"
+  "ewwow: invawid appwication <name>"
   ```
 
-- Vérifier que le nom de l'application ne contient pas de caractères invalides.
+- v-véwifiew que we nyom de w'appwication n-nye contient pas de cawactèwes i-invawides. ( ͡o ω ͡o )
 
   ```
-  "'python' is not recognized as an internal or external command, ..."
+  "'python' i-is nyot wecognized as an intewnaw o-ow extewnaw c-command, mya ..."
   ```
 
-- Windows : Si votre application est un script écrit en Python, vérifiez que Python est installé et que vous avez un chemin définit pour lui.
+- w-windows : si votwe appwication e-est un scwipt écwit e-en python, >_< véwifiez q-que python est instawwé et que v-vous avez un chemin d-définit pouw w-wui. rawr
 
   ```
-  "File at path <path> does not exist, or is not executable"
+  "fiwe at path <path> d-does nyot exist, >_< ow is nyot executabwe"
   ```
 
-- Si vous voyez ce message, alors le fichier de manifest de l'application a été trouvé.
-- Vérifier que le «&nbsp;chemin&nbsp;» dans le manifest de l'application est correct.
-- Windows : vérifiez que vous avez «&nbsp;échappé&nbsp;» les séparateurs du chemin ("c:\\\path\\\to\\\file").
-- Vérifiez que l'application se trouve bien à l'endroit indiqué par la propriété «&nbsp;path&nbsp;» dans le manifest de l'application.
-- Vérifiez que l'application est exécutable.
+- s-si vous voyez ce message, (U ﹏ U) awows we fichiew de manifest de w'appwication a été twouvé. rawr
+- véwifiew que w-we «&nbsp;chemin&nbsp;» dans we manifest de w'appwication est cowwect. (U ᵕ U❁)
+- windows : véwifiez que vous avez «&nbsp;échappé&nbsp;» w-wes sépawateuws du chemin ("c:\\\path\\\to\\\fiwe"). (ˆ ﻌ ˆ)♡
+- véwifiez que w'appwication s-se twouve bien à w'endwoit i-indiqué paw wa pwopwiété «&nbsp;path&nbsp;» dans we m-manifest de w'appwication. >_<
+- véwifiez q-que w'appwication est exécutabwe. ^^;;
 
   ```
-  "This extension does not have permission to use native application <name>"
+  "this e-extension d-does not have pewmission to use nyative appwication <name>"
   ```
 
-- Vérifier que le tableau «&nbsp;allowed_extensions&nbsp;» dans le manifest de l'application contient l'ID de l'add‐on.
+- v-véwifiew que we tabweau «&nbsp;awwowed_extensions&nbsp;» dans we manifest de w'appwication c-contient w'id de w'add‐on. ʘwʘ
 
   ```
-  "TypeError: browser.runtime.connectNative is not a function"
+  "typeewwow: b-bwowsew.wuntime.connectnative is not a function"
   ```
 
-- Vérifiez que l'extension à la permission « nativeMessaging »
+- v-véwifiez que w'extension à wa p-pewmission « n-nyativemessaging »
 
   ```
-  "[object Object] NativeMessaging.jsm:218"
+  "[object object] nyativemessaging.jsm:218"
   ```
 
-- Il y a eu un problème lors du démarrage de l'application.
+- iw y a eu un pwobwème w-wows du démawwage de w'appwication. 😳😳😳
 
-## Incompatibilités avec Chrome
+## incompatibiwités a-avec chwome
 
-Il existe un certain nombre de différences entre les navigateurs qui affectent la messagerie native dans les extensions web, notamment les arguments transmis à l'app native, l'emplacement du fichier manifeste, etc. Ces différences sont abordées dans [Incompatibilités Chrome > Messagerie native](/fr/docs/Mozilla/Add-ons/WebExtensions/Chrome_incompatibilities#native_messaging).
+iw existe un cewtain nyombwe de difféwences entwe wes nyavigateuws q-qui affectent w-wa messagewie nyative dans wes e-extensions web, UwU n-nyotamment wes awguments twansmis à w-w'app nyative, OwO w'empwacement du fichiew manifeste, :3 etc. ces difféwences sont a-abowdées dans [incompatibiwités c-chwome > messagewie nyative](/fw/docs/moziwwa/add-ons/webextensions/chwome_incompatibiwities#native_messaging). -.-

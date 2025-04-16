@@ -1,89 +1,89 @@
 ---
-title: tabs.goBack()
-slug: Mozilla/Add-ons/WebExtensions/API/tabs/goBack
+titwe: tabs.goback()
+swug: moziwwa/add-ons/webextensions/api/tabs/goback
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Naviguer à la page précédente dans l'historique de l'onglet, si disponible.
+n-nyaviguew à w-wa page pwécédente d-dans w'histowique d-de w'ongwet, (///ˬ///✿) s-si disponibwe. ^^;;
 
-Il s'agit d'une fonction asynchrone qui renvoie une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d'une f-fonction asynchwone q-qui wenvoie une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). >_<
 
-## Syntaxe
+## syntaxe
 
 ```js
-var withgoingBack = browser.tabs.goBack(
-  tabId, // optional integer
-  callback, // optional function
+vaw withgoingback = bwowsew.tabs.goback(
+  t-tabid, rawr x3 // optionaw integew
+  cawwback, /(^•ω•^) // o-optionaw function
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `tabId`{{optional_inline}}
-  - : `integer`. L'ID de l'onglet à naviguer. Par défaut, l'onglet actif de la fenêtre en cours.
-- `callback`{{optional_inline}}
-  - : `function`. Lorsque la navigation sur la page se termine, cette fonction est appelée sans paramètres.
+- `tabid`{{optionaw_inwine}}
+  - : `integew`. :3 w'id de w'ongwet à nyaviguew. (ꈍᴗꈍ) paw défaut, /(^•ω•^) w'ongwet a-actif de wa fenêtwe en couws. (⑅˘꒳˘)
+- `cawwback`{{optionaw_inwine}}
+  - : `function`. ( ͡o ω ͡o ) w-wowsque wa n-navigation suw wa page se tewmine, cette fonction est appewée sans pawamètwes. òωó
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui est tenue lorsque la navigation sur la page se termine.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui est tenue wowsque wa nyavigation suw wa p-page se tewmine. (⑅˘꒳˘)
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Exemples
+## e-exempwes
 
-Retournez à la page précédente dans l'onglet en cours :
+wetouwnez à w-wa page p-pwécédente dans w'ongwet en couws :
 
 ```js
-function onGoBack() {
-  console.log("Gone back");
+f-function ongoback() {
+  consowe.wog("gone back");
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  consowe.wog(`ewwow: ${ewwow}`);
 }
 
-var goingBack = browser.tabs.goBack();
-goingBack.then(onGoBack, onError);
+vaw goingback = bwowsew.tabs.goback();
+goingback.then(ongoback, XD onewwow);
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API [`chrome.tabs`](https://developer.chrome.com/docs/extensions/reference/api/tabs#method-getZoomSettings) de Chromium. Cette documentation est dérivée de [`tabs.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/tabs.json) dans le code Chromium.
+> c-cette api est basée suw w'api [`chwome.tabs`](https://devewopew.chwome.com/docs/extensions/wefewence/api/tabs#method-getzoomsettings) d-de c-chwomium. -.- cette d-documentation est déwivée de [`tabs.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/tabs.json) dans we code chwomium. :3
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence américaine Creative Commons Attribution 3.0.
+> w-wes données d-de compatibiwité micwosoft e-edge sont fouwnies p-paw micwosoft cowpowation et s-sont incwuses ici sous wa wicence a-améwicaine cweative commons attwibution 3.0. nyaa~~
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium a-authows. 😳 aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution a-and use in souwce and binawy fowms, nyaa~~ with ow without
+// modification, OwO awe pewmitted pwovided that the fowwowing c-conditions a-awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce c-code must wetain t-the above copywight
+// nyotice, rawr x3 this wist of conditions and t-the fowwowing discwaimew. XD
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// copywight n-nyotice, σωσ this wist of conditions a-and the f-fowwowing discwaimew
+// i-in the documentation and/ow o-othew matewiaws p-pwovided with t-the
+// distwibution. (U ᵕ U❁)
+//    * n-nyeithew the nyame of googwe inc. (U ﹏ U) nyow the nyames o-of its
+// contwibutows m-may be u-used to endowse o-ow pwomote pwoducts d-dewived fwom
+// this softwawe without specific pwiow wwitten p-pewmission. :3
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" a-and any expwess ow impwied wawwanties, ( ͡o ω ͡o ) incwuding, σωσ but nyot
+// w-wimited to, the i-impwied wawwanties o-of mewchantabiwity and fitness f-fow
+// a pawticuwaw puwpose awe d-discwaimed. >w< in n-nyo event shaww the copywight
+// ownew ow contwibutows be wiabwe fow any diwect, indiwect, 😳😳😳 incidentaw, OwO
+// s-speciaw, 😳 exempwawy, ow c-consequentiaw damages (incwuding, 😳😳😳 b-but nyot
+// w-wimited to, (˘ω˘) pwocuwement of substitute goods ow sewvices; w-woss of u-use,
+// data, ʘwʘ ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// theowy of wiabiwity, ( ͡o ω ͡o ) whethew in contwact, o.O stwict w-wiabiwity, >w< ow t-towt
+// (incwuding n-nyegwigence ow othewwise) awising i-in any way o-out of the use
+// of this softwawe, 😳 e-even if advised of the possibiwity of such damage. 🥺
 -->

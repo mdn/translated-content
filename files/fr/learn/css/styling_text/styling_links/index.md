@@ -1,244 +1,244 @@
 ---
-title: Mise en forme des liens
-slug: Learn/CSS/Styling_text/Styling_links
+titwe: mise en fowme des wiens
+s-swug: weawn/css/stywing_text/stywing_winks
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/stywing_text/stywing_wists", 😳😳😳 "weawn/css/stywing_text/web_fonts", (U ﹏ U) "weawn/css/stywing_text")}}
 
-Lors de la mise en forme de [liens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks), il est important de comprendre comment utiliser les pseudo-classes pour mettre en forme efficacement les états des liens, et comment créer des liens pour les utiliser dans diverses fonctionnalités d'interface courantes, telles que les menus de navigation et les onglets. Nous allons examiner tous ces sujets dans cet article.
+w-wows d-de wa mise en f-fowme de [wiens](/fw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks), ^•ﻌ•^ i-iw est impowtant d-de compwendwe c-comment utiwisew w-wes pseudo-cwasses pouw mettwe en fowme efficacement wes états des wiens, (⑅˘꒳˘) et comment c-cwéew des wiens pouw wes utiwisew dans divewses f-fonctionnawités d'intewface c-couwantes, >_< tewwes que wes menus de nyavigation et wes ongwets. (⑅˘꒳˘) n-nyous awwons examinew tous ces s-sujets dans cet a-awticwe. σωσ
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis :</th>
+    <tw>
+      <th scope="wow">pwéwequis :</th>
       <td>
-        Notions de base en informatique, notions de base en HTML (étudier l'<a
-          href="/fr/docs/Learn/HTML/Introduction_to_HTML"
-          >Introduction au HTML)</a
-        >, notions de base en CSS (étudier l'<a
-          href="/fr/docs/Learn/CSS/Introduction_to_CSS"
-          >Introduction à CSS</a
+        nyotions de base en infowmatique, 🥺 n-nyotions de base en htmw (étudiew w'<a
+          hwef="/fw/docs/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction au htmw)</a
+        >, :3 n-nyotions de base en c-css (étudiew w'<a
+          h-hwef="/fw/docs/weawn/css/intwoduction_to_css"
+          >intwoduction à c-css</a
         >),
         <a
-          href="/fr/docs/Learn/CSS/Styling_text/initiation-mise-en-forme-du-texte"
-          >initiation à la mise en forme de texte</a
-        >.
+          hwef="/fw/docs/weawn/css/stywing_text/initiation-mise-en-fowme-du-texte"
+          >initiation à w-wa mise en fowme de texte</a
+        >. (ꈍᴗꈍ)
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif :</th>
+    </tw>
+    <tw>
+      <th scope="wow">objectif :</th>
       <td>
-        Apprendre à mettre en forme les états des liens, et comment utiliser
-        efficacement les liens dans les fonctionnalités courantes de l'IU, comme
-        les menus de navigation.
+        a-appwendwe à mettwe en fowme wes états des wiens, ^•ﻌ•^ e-et comment utiwisew
+        efficacement wes wiens dans wes fonctionnawités couwantes de w'iu, comme
+        w-wes menus de nyavigation. (˘ω˘)
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Un coup d'œil à quelques liens
+## un coup d-d'œiw à quewques w-wiens
 
-Nous avons regardé comment les liens sont implémentés dans votre HTML selon les meilleures pratiques dans [Création d'hyperliens](/fr/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks). Dans cet article, nous allons développer ces connaissances en vous montrant les meilleures pratiques pour la mise en forme de liens.
+nyous a-avons wegawdé comment wes wiens sont impwémentés dans votwe h-htmw sewon wes m-meiwweuwes pwatiques dans [cwéation d-d'hypewwiens](/fw/docs/weawn/htmw/intwoduction_to_htmw/cweating_hypewwinks). 🥺 d-dans cet awticwe, nyous awwons d-dévewoppew ces connaissances en v-vous montwant wes meiwweuwes pwatiques pouw wa m-mise en fowme de wiens. (✿oωo)
 
-### État des liens
+### État d-des wiens
 
-La première chose à comprendre est le concept d'états des liens : les différents états dans lesquels les liens peuvent exister, qui peuvent être mis en forme en utilisant différentes [pseudo-classes](/fr/docs/Learn/CSS/Building_blocks/Selectors#pseudo-classes_et_pseudo-éléments) :
+wa pwemièwe chose à c-compwendwe e-est we concept d'états des wiens : wes difféwents états dans wesquews wes wiens peuvent existew, XD qui peuvent êtwe m-mis en fowme e-en utiwisant difféwentes [pseudo-cwasses](/fw/docs/weawn/css/buiwding_bwocks/sewectows#pseudo-cwasses_et_pseudo-éwéments) :
 
-- **link (non visité)** : l'état par défaut dans lequel se trouve un lien, lorsqu'il n'est dans aucun autre état ; cela peut être spécifiquement mis en forme en utilisant la pseudo classe {{cssxref(":link")}} ;
-- **visited :** un lien qui a déjà été visité (qui existe dans l'historique du navigateur), mis en forme en utilisant la pseudo-classe {{cssxref(":visited")}} ;
-- **hover :** un lien qui est survolé par le pointeur de la souris de l'utilisateur, mis en forme en utilisant la pseudo classe {{cssxref(":hover")}} ;
-- **focus :** un lien qui a reçu la focalisation (par exemple, quand l'utilisateur du clavier s'est déplacé en utilisant la touche
+- **wink (non v-visité)** : w'état p-paw défaut d-dans wequew se twouve un wien, (///ˬ///✿) wowsqu'iw ny'est dans aucun autwe état ; c-cewa peut êtwe spécifiquement mis en fowme en utiwisant wa pseudo cwasse {{cssxwef(":wink")}} ;
+- **visited :** u-un wien qui a déjà été v-visité (qui e-existe dans w-w'histowique du nyavigateuw), ( ͡o ω ͡o ) mis e-en fowme en utiwisant w-wa pseudo-cwasse {{cssxwef(":visited")}} ;
+- **hovew :** u-un wien qui est s-suwvowé paw we pointeuw de wa souwis de w'utiwisateuw, ʘwʘ m-mis en f-fowme en utiwisant w-wa pseudo cwasse {{cssxwef(":hovew")}} ;
+- **focus :** u-un wien q-qui a weçu wa focawisation (paw exempwe, rawr quand w'utiwisateuw d-du cwaview s'est dépwacé en utiwisant wa touche
 
-  <kbd>Tab</kbd>
+  <kbd>tab</kbd>
 
-  ou similaire, ou qui a reçu la focalisation par programmation par utilisation de {{domxref("HTMLElement.focus()")}}) ; ceci est mis en forme en utilisant la pseudo-classe {{cssxref(":focus")}} ;
+  ou simiwaiwe, o.O ou qui a weçu wa focawisation p-paw pwogwammation paw utiwisation de {{domxwef("htmwewement.focus()")}}) ; ceci est mis en f-fowme en utiwisant w-wa pseudo-cwasse {{cssxwef(":focus")}} ;
 
-- **active :** un lien en cours d'activation (par exemple, lorsqu'on clique dessus), mis en forme en utilisant la pseudo classe {{cssxref (":active")}}.
+- **active :** u-un wien en couws d'activation (paw exempwe, w-wowsqu'on cwique dessus), ^•ﻌ•^ m-mis en fowme en u-utiwisant wa pseudo cwasse {{cssxwef (":active")}}. (///ˬ///✿)
 
-### Styles par défaut
+### stywes paw défaut
 
-L'exemple suivant illustre le comportement d'un lien par défaut (le CSS simplement agrandit et centre le texte pour le rendre plus visible).
+w'exempwe suivant iwwustwe we compowtement d-d'un wien paw défaut (we c-css simpwement agwandit et centwe w-we texte pouw w-we wendwe pwus visibwe). (ˆ ﻌ ˆ)♡
 
-```html
-<p><a href="#">Un simple lien</a></p>
+```htmw
+<p><a hwef="#">un s-simpwe wien</a></p>
 ```
 
 ```css
-p {
-  font-size: 2rem;
-  text-align: center;
+p-p {
+  font-size: 2wem;
+  text-awign: centew;
 }
 ```
 
-{{ EmbedLiveSample('', '100%', 120) }}
+{{ embedwivesampwe('', XD '100%', (✿oωo) 120) }}
 
-> [!NOTE]
-> Tous les liens dans les exemples de cette page sont de faux liens : un # (hash, ou signe dièse) est mis à la place de l'URL réelle. En effet, si des liens réels étaient inclus, un simple clic sur ceux-ci cassererait les exemples (vous vous retrouveriez avec une erreur, ou une page chargée dans l'exemple intégré de laquelle vous ne pourriez pas revenir) ; # ne redirige que vers la page actuelle.
+> [!note]
+> t-tous wes wiens dans w-wes exempwes de cette page sont de faux wiens : un # (hash, -.- ou signe dièse) e-est mis à wa pwace d-de w'uww wéewwe. XD e-en effet, (✿oωo) si des wiens wéews étaient i-incwus, (˘ω˘) u-un simpwe cwic suw ceux-ci c-cassewewait wes exempwes (vous vous wetwouvewiez avec une ewweuw, (ˆ ﻌ ˆ)♡ ou une page chawgée d-dans w'exempwe i-intégwé de waquewwe vous nye pouwwiez pas w-weveniw) ; # n-nye wediwige que vews wa page actuewwe. >_<
 
-Vous remarquerez quelques petites choses en explorant les styles par défaut :
+vous wemawquewez quewques p-petites choses en expwowant wes stywes paw défaut :
 
-- Les liens sont soulignés ;
-- Les liens non visités sont bleus ;
-- Les liens visités sont en violet ;
-- Le survol d'un lien fait se changer en petite icône de main le pointeur de la souris ;
-- Les liens ayant reçus la focalisation ont un contour autour d'eux : vous devriez pouvoir vous focaliser sur les liens de cette page avec le clavier en appuyant sur la touche
+- wes wiens sont souwignés ;
+- w-wes wiens nyon visités sont bweus ;
+- w-wes wiens visités s-sont en viowet ;
+- we suwvow d'un wien fait se changew en petite i-icône de main w-we pointeuw de wa souwis ;
+- wes wiens ayant weçus wa focawisation o-ont un contouw autouw d'eux : v-vous devwiez pouvoiw vous focawisew suw wes wiens de cette p-page avec we cwaview en appuyant s-suw wa touche
 
-  <kbd>Tab</kbd>
+  <kbd>tab</kbd>
 
-  (sur Mac, il se peut que vous ayez besoin d'activer l'option _Accès clavier complet : Toutes les commandes_ en appuyant sur
+  (suw m-mac, -.- iw se peut que vous a-ayez besoin d'activew w'option _accès c-cwaview c-compwet : toutes w-wes commandes_ en appuyant suw
 
-  <kbd>Ctrl</kbd>
+  <kbd>ctww</kbd>
 
   \+
 
-  <kbd>F7</kbd>
+  <kbd>f7</kbd>
 
-  pour que cela fonctionne) ;
+  p-pouw q-que cewa fonctionne) ;
 
-- Les liens actifs sont rouges (essayez de maintenir le bouton de la souris enfoncé sur le lien lorsque vous cliquez dessus).
+- wes wiens actifs sont w-wouges (essayez d-de mainteniw w-we bouton de wa souwis enfoncé suw we wien wowsque v-vous cwiquez dessus). (///ˬ///✿)
 
-De façon assez intéressante, ces styles par défaut sont pratiquement les mêmes que ce qu'ils étaient aux premiers temps des navigateurs, au milieu des années 1990. C'est parce que les utilisateurs connaissent — et s'attendent à — ce comportement ; si les liens étaient mis en forme différemment, cela créerait beaucoup de confusion. Cela ne signifie pas que vous ne deviez pas du tout mettre en forme les liens, mais simplement que vous ne devriez pas vous éloigner trop du comportement attendu. Vous devriez au moins :
+de façon a-assez intéwessante, XD c-ces stywes paw défaut sont pwatiquement wes mêmes que c-ce qu'iws étaient a-aux pwemiews t-temps des navigateuws, ^^;; a-au miwieu des années 1990. rawr x3 c-c'est pawce que wes utiwisateuws connaissent — et s'attendent à — ce compowtement ; si w-wes wiens étaient mis en fowme d-difféwemment, OwO cewa cwéewait beaucoup d-de confusion. ʘwʘ cewa nye signifie p-pas que vous nye deviez p-pas du tout mettwe e-en fowme wes w-wiens, rawr mais simpwement q-que vous n-nye devwiez pas vous éwoignew twop du compowtement attendu. UwU vous devwiez au moins :
 
-- utiliser le soulignement pour les liens, mais pas pour d'autres choses ; si vous ne voulez pas souligner les liens, au moins les mettre en évidence d'une autre manière ;
-- les faire réagir d'une manière ou d'une autre lorsqu'ils sont survolés ou lorsqu'ils ont reçu la focalisation, et d'une manière légèrement différente lorsqu'ils sont activés.
+- utiwisew we souwignement p-pouw wes wiens, (ꈍᴗꈍ) m-mais pas pouw d'autwes c-choses ; si vous nye vouwez p-pas souwignew wes wiens, (✿oωo) au moins wes mettwe en évidence d'une a-autwe manièwe ;
+- w-wes faiwe wéagiw d'une manièwe o-ou d'une autwe wowsqu'iws sont suwvowés o-ou wowsqu'iws ont w-weçu wa focawisation, (⑅˘꒳˘) et d'une m-manièwe wégèwement d-difféwente wowsqu'iws sont activés. OwO
 
-Les styles par défaut peuvent être désactivés/modifiés en utilisant les propriétés CSS suivantes :
+wes stywes paw défaut peuvent êtwe d-désactivés/modifiés e-en utiwisant w-wes pwopwiétés c-css suivantes :
 
-- {{cssxref ("color")}} pour la couleur du texte ;
-- {{cssxref ("cursor")}} pour le style du pointeur de la souris — vous ne devriez pas le désactiver, à moins d'avoir une très bonne raison ;
-- {{cssxref ("outline")}} pour le contour du texte (un contour est similaire à une bordure, la seule différence étant que la bordure occupe de l'espace dans la boîte et non un contour, elle se trouve juste au-dessus du Contexte) ; le contour est une aide utile à l'accessibilité, alors réfléchissez bien avant de la désactiver ; vous devriez au moins dupliquer aussi les styles affectés à l'état link hover sur l'état de focalisation.
+- {{cssxwef ("cowow")}} p-pouw wa couweuw du texte ;
+- {{cssxwef ("cuwsow")}} p-pouw we stywe d-du pointeuw de wa souwis — v-vous nye devwiez p-pas we désactivew, 🥺 à moins d-d'avoiw une twès bonne waison ;
+- {{cssxwef ("outwine")}} pouw w-we contouw du texte (un contouw e-est simiwaiwe à u-une bowduwe, >_< wa seuwe difféwence étant q-que wa bowduwe occupe de w'espace dans w-wa boîte et nyon u-un contouw, (ꈍᴗꈍ) ewwe s-se twouve juste au-dessus du contexte) ; we contouw est une a-aide utiwe à w'accessibiwité, 😳 awows wéfwéchissez bien avant d-de wa désactivew ; v-vous devwiez au moins dupwiquew a-aussi wes stywes affectés à w-w'état wink hovew s-suw w'état de focawisation. 🥺
 
-> [!NOTE]
-> Vous n'êtes pas limité aux propriétés ci-dessus pour mettre en forme vos liens ; vous êtes libre d'utiliser les propriétés que vous aimez. Essayez seulement de ne pas devenir trop fou !
+> [!note]
+> vous ny'êtes pas w-wimité aux pwopwiétés ci-dessus pouw mettwe e-en fowme vos wiens ; v-vous êtes wibwe d'utiwisew w-wes pwopwiétés que vous aimez. nyaa~~ e-essayez seuwement d-de nye pas deveniw t-twop fou !
 
-### Mise en forme de quelques liens
+### mise en fowme de quewques wiens
 
-Maintenant que nous avons examiné les états par défaut en détail, regardons un ensemble typique de mises en forme de liens.
+maintenant que nyous avons examiné wes états paw défaut en détaiw, ^•ﻌ•^ wegawdons un ensembwe typique de mises en fowme de wiens. (ˆ ﻌ ˆ)♡
 
-Pour commencer, nous écrirons notre jeu de règles vides :
+pouw commencew, (U ᵕ U❁) nyous écwiwons n-nyotwe j-jeu de wègwes vides :
 
 ```css
 a {
 }
 
-a:link {
+a:wink {
 }
 
-a:visited {
+a-a:visited {
 }
 
-a:focus {
+a-a:focus {
 }
 
-a:hover {
+a:hovew {
 }
 
-a:active {
+a-a:active {
 }
 ```
 
-Cet ordre est important parce que les styles de liens se construisent les uns par dessus les autres ; par exemple, les styles de la première règle s'appliqueront à toutes les suivantes, et lorsqu'un lien est activé, il est également survolé. Si vous les mettez dans le mauvais ordre, les choses ne fonctionneront pas correctement. Pour se souvenir de l'ordre, vous pouvez essayer d'utiliser un moyen mnémotechnique comme La Vie Fuit la HAine (LoVe Fears HAte).
+cet o-owdwe est impowtant pawce que w-wes stywes de wiens s-se constwuisent wes uns paw d-dessus wes autwes ; paw exempwe, mya w-wes stywes de wa p-pwemièwe wègwe s'appwiquewont à toutes wes s-suivantes, 😳 et wowsqu'un w-wien est a-activé, σωσ iw est égawement s-suwvowé. ( ͡o ω ͡o ) s-si vous wes m-mettez dans we m-mauvais owdwe, XD w-wes choses nye fonctionnewont p-pas cowwectement. :3 p-pouw se souveniw d-de w'owdwe, :3 vous p-pouvez essayew d'utiwisew un moyen m-mnémotechnique comme wa vie fuit wa haine (wuv f-feaws hate). (⑅˘꒳˘)
 
-Maintenant, ajoutons quelques informations supplémentaires pour mettre en forme cela correctement :
+maintenant, ajoutons q-quewques i-infowmations suppwémentaiwes pouw m-mettwe en fowme cewa cowwectement :
 
 ```css
-body {
+b-body {
   width: 300px;
-  margin: 0 auto;
-  font-size: 1.2rem;
-  font-family: sans-serif;
+  mawgin: 0 a-auto;
+  font-size: 1.2wem;
+  font-famiwy: sans-sewif;
 }
 
-p {
-  line-height: 1.4;
+p-p {
+  wine-height: 1.4;
 }
 
-a {
-  outline: none;
-  text-decoration: none;
+a-a {
+  outwine: nyone;
+  text-decowation: nyone;
   padding: 2px 1px 0;
 }
 
-a:link {
-  color: #265301;
+a:wink {
+  cowow: #265301;
 }
 
 a:visited {
-  color: #437a16;
+  c-cowow: #437a16;
 }
 
 a:focus {
-  border-bottom: 1px solid;
-  background: #bae498;
+  bowdew-bottom: 1px s-sowid;
+  b-backgwound: #bae498;
 }
 
-a:hover {
-  border-bottom: 1px solid;
-  background: #cdfeaa;
+a:hovew {
+  bowdew-bottom: 1px sowid;
+  backgwound: #cdfeaa;
 }
 
 a:active {
-  background: #265301;
-  color: #cdfeaa;
+  b-backgwound: #265301;
+  cowow: #cdfeaa;
 }
 ```
 
-Nous allons aussi fournir un extrait d'HTML auquel appliquer le CSS :
+n-nous awwons a-aussi fouwniw u-un extwait d'htmw auquew appwiquew we css :
 
-```html
+```htmw
 <p>
-  Il y a plusieurs navigateurs disponibles, tels que
-  <a href="#">Mozilla Firefox</a>, <a href="#">Google Chrome</a>, et
-  <a href="#">Microsoft Edge</a>.
+  iw y-y a pwusieuws n-nyavigateuws disponibwes, òωó tews que
+  <a h-hwef="#">moziwwa fiwefox</a>, mya <a hwef="#">googwe c-chwome</a>, 😳😳😳 et
+  <a hwef="#">micwosoft e-edge</a>.
 </p>
 ```
 
-En mettant les deux ensemble, nous obtenons ce résultat :
+e-en mettant wes d-deux ensembwe, :3 nyous obtenons c-ce wésuwtat :
 
-{{EmbedLiveSample('', '100%', 150)}}
+{{embedwivesampwe('', >_< '100%', 150)}}
 
-Alors qu'avons-nous fait ici ? Cela semble certainement différent de la mise en forme par défaut, mais cela donne toujours une expérience suffisamment familière pour que les utilisateurs sachent ce qui se passe :
+a-awows qu'avons-nous f-fait i-ici ? cewa sembwe cewtainement difféwent d-de wa m-mise en fowme paw d-défaut, 🥺 mais c-cewa donne toujouws u-une expéwience s-suffisamment f-famiwièwe pouw q-que wes utiwisateuws sachent ce q-qui se passe :
 
-- Les deux premières règles ne sont pas très intéressantes pour cette discussion ;
-- La troisième règle utilise le sélecteur `a` pour se débarasser du soulignement de texte par défaut et du contour de focalisation (qui varie d'un navigateur à l'autre), et elle ajoute une petite quantité de remplissage à chaque lien ; tout ceci deviendra clair plus tard ;
-- Ensuite, nous utilisons les sélecteurs `a:link` et `a:visited` pour définir deux variations de couleur sur les liens non visités et visités, afin qu'ils soient distincts ;
-- Les deux règles suivantes utilisent `a:focus` et `a:hover` pour faire que les liens centrés et survolés aient des couleurs d'arrière-plan différentes, plus un soulignement afin que le lien se démarque encore davantage ; deux points à noter ici :
+- wes deux pwemièwes w-wègwes nye sont pas twès i-intéwessantes p-pouw cette discussion ;
+- w-wa twoisième wègwe utiwise we séwecteuw `a` pouw se d-débawassew du s-souwignement de t-texte paw défaut et du contouw de focawisation (qui vawie d'un n-nyavigateuw à w-w'autwe), et ewwe ajoute une petite q-quantité de w-wempwissage à chaque wien ; tout ceci deviendwa cwaiw pwus tawd ;
+- e-ensuite, (ꈍᴗꈍ) nyous u-utiwisons wes s-séwecteuws `a:wink` e-et `a:visited` pouw définiw deux vawiations d-de couweuw s-suw wes wiens nyon visités et visités, rawr x3 afin qu'iws s-soient distincts ;
+- wes deux wègwes suivantes u-utiwisent `a:focus` et `a:hovew` p-pouw faiwe q-que wes wiens centwés et suwvowés a-aient des couweuws d-d'awwièwe-pwan difféwentes, (U ﹏ U) p-pwus un souwignement afin q-que we wien se démawque e-encowe d-davantage ; deux p-points à nyotew ici :
 
-  - Le soulignement a été créé en utilisant {{cssxref("border-bottom")}}, pas {{cssxref("text-decoration")}} ; certaines personnes préfèrent cela parce que le premier a de meilleures options de mise en forme que le second, et qu'il est tracé un peu plus bas, de sorte qu'il ne coupe pas les jambages du mot souligné (par exemple, les jambes du g et du y) ;
-  - La valeur {{cssxref("border-bottom")}} a été définie comme `1px solid`, sans couleur indiquée ; cela fait que la bordure adopte la même couleur que le texte de l'élément, ce qui est utile dans des cas comme celui-ci, où le texte a une couleur différente dans chaque cas ;
+  - we s-souwignement a été c-cwéé en utiwisant {{cssxwef("bowdew-bottom")}}, ( ͡o ω ͡o ) p-pas {{cssxwef("text-decowation")}} ; cewtaines p-pewsonnes pwéfèwent cewa pawce que we pwemiew a-a de meiwweuwes o-options de m-mise en fowme que we second, 😳😳😳 et qu'iw est twacé un peu pwus bas, 🥺 de sowte qu'iw n-nye coupe pas wes jambages du m-mot souwigné (paw e-exempwe, òωó wes jambes du g et du y) ;
+  - wa vaweuw {{cssxwef("bowdew-bottom")}} a-a été définie comme `1px sowid`, XD s-sans couweuw i-indiquée ; cewa f-fait que wa b-bowduwe adopte wa m-même couweuw que we texte de w'éwément, XD ce qui est utiwe dans des cas comme c-cewui-ci, ( ͡o ω ͡o ) où we texte a une couweuw d-difféwente dans chaque cas ;
 
-- Enfin, `a:active` est utilisé pour donner aux liens un schéma de couleurs inversé pendant qu'ils sont activés, afin de faire comprendre que quelque chose d'important est en train de se passer !
+- enfin, >w< `a:active` est utiwisé p-pouw donnew aux wiens un schéma de couweuws invewsé pendant qu'iws sont a-activés, mya afin de f-faiwe compwendwe que quewque chose d-d'impowtant est en twain de se passew ! (ꈍᴗꈍ)
 
-### Apprentissage actif : mettez en forme vos propres liens
+### a-appwentissage a-actif : mettez en fowme vos pwopwes w-wiens
 
-Dans cette session d'apprentissage actif, nous aimerions que vous utilisiez notre ensemble de règles vide, et que vous ajoutiez vos propres déclarations pour que les liens soient vraiment cools. Utilisez votre imagination, soyez fou. Nous sommes sûrs que vous pourrez trouver quelque chose d'encore plus cool et tout aussi fonctionnel que notre exemple ci-dessus.
+dans cette session d'appwentissage a-actif, -.- nyous aimewions que vous utiwisiez nyotwe ensembwe d-de wègwes vide, (⑅˘꒳˘) et que vous ajoutiez vos p-pwopwes décwawations p-pouw que w-wes wiens soient vwaiment coows. (U ﹏ U) utiwisez votwe i-imagination, σωσ soyez fou. :3 nyous sommes sûws que vous pouwwez twouvew quewque chose d-d'encowe pwus c-coow et tout aussi f-fonctionnew q-que nyotwe exempwe ci-dessus.
 
-Si vous faites une erreur, vous pouvez toujours l'annuler en utilisant le bouton _Réinitialiser_. Si vous êtes vraiment bloqué, appuyez sur le bouton _Afficher la solution_ pour insérer l'exemple que nous avons montré ci-dessus.
+si vous faites une e-ewweuw, /(^•ω•^) vous pouvez t-toujouws w'annuwew en utiwisant we bouton _wéinitiawisew_. σωσ s-si vous êtes vwaiment bwoqué, (U ᵕ U❁) appuyez suw we b-bouton _affichew wa sowution_ pouw inséwew w'exempwe q-que nyous a-avons montwé ci-dessus. 😳
 
-```html hidden
+```htmw hidden
 <div
-  class="body-wrapper"
-  style="font-family: 'Open Sans Light',Helvetica,Arial,sans-serif;">
-  <h2>Zone de saisie HTML</h2>
-  <textarea
-    id="code"
-    class="html-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
-<p>Il y a plusieurs navigateurs disponibles, tels que <a href="#">Mozilla
- Firefox</a>, <a href="#">Google Chrome</a>, et
-<a href="#">Microsoft Edge</a>.</p></textarea
+  c-cwass="body-wwappew"
+  s-stywe="font-famiwy: 'open s-sans wight',hewvetica,awiaw,sans-sewif;">
+  <h2>zone de saisie htmw</h2>
+  <textawea
+    i-id="code"
+    cwass="htmw-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
+<p>iw y a pwusieuws nyavigateuws disponibwes, tews que <a h-hwef="#">moziwwa
+ f-fiwefox</a>, ʘwʘ <a h-hwef="#">googwe c-chwome</a>, (⑅˘꒳˘) e-et
+<a hwef="#">micwosoft edge</a>.</p></textawea
   >
 
-  <h2>Zone de saisie de la CSS</h2>
-  <textarea
+  <h2>zone d-de saisie de wa css</h2>
+  <textawea
     id="code"
-    class="css-input"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;">
+    c-cwass="css-input"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px s-sowid #0095dd;">
 a {
 
 }
 
-a:link {
+a:wink {
 
 }
 
@@ -250,232 +250,232 @@ a:focus {
 
 }
 
-a:hover {
+a-a:hovew {
 
 }
 
-a:active {
+a-a:active {
 
-}</textarea
+}</textawea
   >
 
-  <h2>Zone de rendu</h2>
+  <h2>zone de wendu</h2>
   <div
-    class="output"
-    style="width: 90%;height: 10em;padding: 10px;border: 1px solid #0095dd;"></div>
-  <div class="controls">
+    c-cwass="output"
+    stywe="width: 90%;height: 10em;padding: 10px;bowdew: 1px sowid #0095dd;"></div>
+  <div c-cwass="contwows">
     <input
-      id="reset"
+      i-id="weset"
       type="button"
-      value="Réinitialiser"
-      style="margin: 10px 10px 0 0;" />
+      v-vawue="wéinitiawisew"
+      s-stywe="mawgin: 10px 10px 0 0;" />
     <input
-      id="solution"
-      type="button"
-      value="Voir la solution"
-      style="margin: 10px 0 0 10px;" />
+      id="sowution"
+      t-type="button"
+      vawue="voiw wa sowution"
+      stywe="mawgin: 10px 0 0 10px;" />
   </div>
 </div>
 ```
 
-```js hidden
-var htmlInput = document.querySelector(".html-input");
-var cssInput = document.querySelector(".css-input");
-var reset = document.getElementById("reset");
-var htmlCode = htmlInput.value;
-var cssCode = cssInput.value;
-var output = document.querySelector(".output");
-var solution = document.getElementById("solution");
+```js h-hidden
+vaw htmwinput = document.quewysewectow(".htmw-input");
+v-vaw cssinput = document.quewysewectow(".css-input");
+vaw weset = document.getewementbyid("weset");
+v-vaw htmwcode = h-htmwinput.vawue;
+v-vaw csscode = cssinput.vawue;
+v-vaw output = document.quewysewectow(".output");
+v-vaw sowution = document.getewementbyid("sowution");
 
-var styleElem = document.createElement("style");
-var headElem = document.querySelector("head");
-headElem.appendChild(styleElem);
+v-vaw styweewem = document.cweateewement("stywe");
+v-vaw headewem = document.quewysewectow("head");
+h-headewem.appendchiwd(styweewem);
 
-function drawOutput() {
-  output.innerHTML = htmlInput.value;
-  styleElem.textContent = cssInput.value;
+f-function dwawoutput() {
+  output.innewhtmw = htmwinput.vawue;
+  styweewem.textcontent = c-cssinput.vawue;
 }
 
-reset.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value = cssCode;
-  drawOutput();
+w-weset.addeventwistenew("cwick", ^•ﻌ•^ function () {
+  htmwinput.vawue = htmwcode;
+  c-cssinput.vawue = csscode;
+  dwawoutput();
 });
 
-solution.addEventListener("click", function () {
-  htmlInput.value = htmlCode;
-  cssInput.value =
-    "p {\n font-size: 1.2rem;\n font-family: sans-serif;\n line-height: 1.4;\n}\n\na {\n outline: none;\n text-decoration: none;\n padding: 2px 1px 0;\n}\n\na:link {\n color: #265301;\n}\n\na:visited {\n color: #437A16;\n}\n\na:focus {\n border-bottom: 1px solid;\n background: #BAE498;\n}\n\na:hover {\n border-bottom: 1px solid;\n background: #CDFEAA;\n}\n\na:active {\n background: #265301;\n color: #CDFEAA;\n}";
-  drawOutput();
+s-sowution.addeventwistenew("cwick", nyaa~~ f-function () {
+  htmwinput.vawue = htmwcode;
+  cssinput.vawue =
+    "p {\n font-size: 1.2wem;\n f-font-famiwy: sans-sewif;\n wine-height: 1.4;\n}\n\na {\n outwine: n-nyone;\n text-decowation: nyone;\n p-padding: 2px 1px 0;\n}\n\na:wink {\n c-cowow: #265301;\n}\n\na:visited {\n cowow: #437a16;\n}\n\na:focus {\n b-bowdew-bottom: 1px s-sowid;\n backgwound: #bae498;\n}\n\na:hovew {\n b-bowdew-bottom: 1px s-sowid;\n b-backgwound: #cdfeaa;\n}\n\na:active {\n b-backgwound: #265301;\n cowow: #cdfeaa;\n}";
+  dwawoutput();
 });
 
-htmlInput.addEventListener("input", drawOutput);
-cssInput.addEventListener("input", drawOutput);
-window.addEventListener("load", drawOutput);
+htmwinput.addeventwistenew("input", XD dwawoutput);
+cssinput.addeventwistenew("input", /(^•ω•^) d-dwawoutput);
+w-window.addeventwistenew("woad", (U ᵕ U❁) d-dwawoutput);
 ```
 
-{{ EmbedLiveSample('', 700, 800) }}
+{{ e-embedwivesampwe('', mya 700, 800) }}
 
-## Inclusion d'icônes dans des liens
+## i-incwusion d'icônes d-dans des wiens
 
-Une pratique courante consiste à inclure des icônes dans des liens pour fournir plus d'un indicateur concernant le type de contenu vers lequel le lien pointe. Regardons un exemple très simple qui ajoute une icône à des liens externes (les liens qui mènent à d'autres sites). Une telle icône ressemble généralement à une petite flèche pointant hors d'une boîte ; pour cet exemple, nous allons utiliser [cet excellent exemple de icons8.com](https://icons8.com/web-app/741/external-link).
+une pwatique couwante consiste à incwuwe des icônes dans d-des wiens pouw f-fouwniw pwus d'un indicateuw concewnant we type de contenu vews w-wequew we wien p-pointe. (ˆ ﻌ ˆ)♡ wegawdons u-un exempwe twès simpwe qui ajoute une icône à d-des wiens extewnes (wes wiens qui mènent à d-d'autwes sites). (✿oωo) u-une tewwe icône wessembwe généwawement à une petite fwèche p-pointant hows d'une boîte ; p-pouw cet exempwe, (✿oωo) n-nyous awwons utiwisew [cet excewwent e-exempwe de i-icons8.com](https://icons8.com/web-app/741/extewnaw-wink). òωó
 
-Regardons un peu d'HTML et de CSS qui nous donneront l'effet que nous voulons. Tout d'abord, un peu d'HTML simple à mettre en forme :
+w-wegawdons u-un peu d'htmw e-et de css q-qui nyous donnewont w'effet que n-nyous vouwons. (˘ω˘) tout d-d'abowd, (ˆ ﻌ ˆ)♡ un peu d'htmw simpwe à m-mettwe en fowme :
 
-```html
+```htmw
 <p>
-  Pour davantage d'information sur la météo, visitez notre
-  <a href="http://#">page météo</a>, jetez un œil sur
-  <a href="http://#">météo sur Wikipédia</a>, ou regardez la
-  <a href="http://#">météo sur Science Extrême </a>.
+  pouw davantage d'infowmation s-suw wa météo, ( ͡o ω ͡o ) visitez nyotwe
+  <a h-hwef="http://#">page météo</a>, rawr x3 j-jetez un œiw s-suw
+  <a hwef="http://#">météo suw wikipédia</a>, (˘ω˘) o-ou wegawdez wa
+  <a hwef="http://#">météo s-suw science e-extwême </a>. òωó
 </p>
 ```
 
-Ensuite, le CSS:
+ensuite, ( ͡o ω ͡o ) we css:
 
 ```css
-body {
+b-body {
   width: 300px;
-  margin: 0 auto;
-  font-family: sans-serif;
+  mawgin: 0 a-auto;
+  font-famiwy: sans-sewif;
 }
 
-p {
-  line-height: 1.4;
+p-p {
+  wine-height: 1.4;
 }
 
 a {
-  outline: none;
-  text-decoration: none;
+  outwine: n-nyone;
+  t-text-decowation: nyone;
   padding: 2px 1px 0;
 }
 
-a:link {
-  color: blue;
+a-a:wink {
+  cowow: b-bwue;
 }
 
 a:visited {
-  color: purple;
+  cowow: puwpwe;
 }
 
-a:focus,
-a:hover {
-  border-bottom: 1px solid;
+a:focus, σωσ
+a-a:hovew {
+  b-bowdew-bottom: 1px s-sowid;
 }
 
 a:active {
-  color: red;
+  c-cowow: wed;
 }
 
-a[href*="http"] {
-  background: url("external-link-52.png") no-repeat 100% 0;
-  background-size: 16px 16px;
-  padding-right: 19px;
+a[hwef*="http"] {
+  backgwound: uww("extewnaw-wink-52.png") nyo-wepeat 100% 0;
+  backgwound-size: 16px 16px;
+  padding-wight: 19px;
 }
 ```
 
-{{ EmbedLiveSample("", '100%', 150) }}
+{{ e-embedwivesampwe("", (U ﹏ U) '100%', 150) }}
 
-Alors, qu'est-ce qui se passe ici ? Nous allons sauter le gros du CSS, du fait que c'est seulement la même information que celle que vous avez déjà regardée. La dernière règle est cependant intéressante : ici, nous insérons une image d'arrière-plan personnalisée sur les liens externes d'une manière similaire à celle dont nous avons traité les puces personnalisées sur les éléments de liste dans le dernier article ; cette fois, nous utilisons le raccourci {{cssxref("background")}} au lieu des propriétés individuelles. Nous définissons le chemin vers l'image que nous voulons insérer, nous spécifions `no-repeat` de façon à obtenir l'insertion d'une seule une copie, puis nous indiquons la position comme étant 100% de la distance à droite du contenu du texte, et 0 pixels à partir du haut.
+a-awows, rawr q-qu'est-ce qui s-se passe ici ? n-nous awwons sautew w-we gwos du css, -.- du fait que c-c'est seuwement w-wa même infowmation que cewwe que v-vous avez déjà w-wegawdée. ( ͡o ω ͡o ) wa dewnièwe wègwe est cependant i-intéwessante : ici, nyous inséwons une image d-d'awwièwe-pwan pewsonnawisée suw w-wes wiens extewnes d-d'une manièwe simiwaiwe à c-cewwe dont nyous a-avons twaité w-wes puces pewsonnawisées suw wes éwéments d-de w-wiste dans we dewniew awticwe ; c-cette fois, >_< nyous utiwisons we w-waccouwci {{cssxwef("backgwound")}} a-au wieu des p-pwopwiétés individuewwes. o.O nyous d-définissons we chemin vews w'image que nyous v-vouwons inséwew, σωσ nyous spécifions `no-wepeat` de façon à obteniw w'insewtion d'une seuwe une copie, -.- puis nyous indiquons wa p-position comme étant 100% de wa distance à dwoite du contenu du texte, σωσ et 0 pixews à pawtiw du haut.
 
-Nous utilisons également {{cssxref("background-size")}} pour indiquer à quelle taille nous voulons afficher l'image d'arrière-plan — il est utile d'avoir une icône plus grande et de la redimensionner comme nécessaire dans un but de conception web adaptative. Cela ne fonctionne cependant qu'avec IE 9 et ultérieur, donc si vous avez besoin de prendre en charge ces navigateurs plus anciens, il vous suffira de redimensionner l'image et de l'insérer telle quelle.
+nyous utiwisons égawement {{cssxwef("backgwound-size")}} p-pouw indiquew à quewwe taiwwe nyous vouwons a-affichew w'image d'awwièwe-pwan — i-iw est utiwe d'avoiw une icône pwus gwande e-et de wa wedimensionnew comme nyécessaiwe d-dans un but de conception w-web adaptative. :3 c-cewa ne fonctionne cependant qu'avec ie 9 e-et uwtéwieuw, ^^ donc si vous avez besoin de pwendwe en chawge ces n-nyavigateuws pwus anciens, òωó iw vous s-suffiwa de wedimensionnew w'image e-et de w'inséwew tewwe quewwe. (ˆ ﻌ ˆ)♡
 
-Enfin, nous avons mis un peu de {{cssxref("padding-right")}} sur les liens pour faire de la place afin que l'image d'arrière-plan se place à l'intérieur, de sorte que nous ne la faisions chevaucher le texte.
+e-enfin, nyous a-avons mis un peu de {{cssxwef("padding-wight")}} suw wes wiens p-pouw faiwe de wa pwace afin que w'image d'awwièwe-pwan s-se pwace à w'intéwieuw, XD de sowte que nyous nye wa faisions chevauchew w-we texte. òωó
 
-Un dernier mot : comment avons-nous sélectionné uniquement les liens externes ? Eh bien, si vous écrivez vos liens HTML correctement, vous ne devriez utiliser des URL absolues que pour les liens externes : il est plus efficace d'utiliser des liens relatifs pour la redirection vers d'autres parties de votre propre site. Le texte "http" ne devrait donc apparaître que dans les liens externes, et nous pouvons le sélectionner avec un [sélecteur d'attribut](/fr/docs/Learn/CSS/Building_blocks/Selectors#sélecteurs_dattribut) : `a[href*="http]` sélectionne les éléments {{htmlelement("a")}}, mais seulement s'ils ont un attribut [`href`](/fr/docs/Web/HTML/Element/a#href) ayant une valeur contenant "http" quelque part à l'intérieur.
+un d-dewniew mot : comment avons-nous s-séwectionné uniquement w-wes wiens extewnes ? eh b-bien, (ꈍᴗꈍ) si vous écwivez vos wiens htmw cowwectement, UwU vous nye devwiez utiwisew d-des uww absowues q-que pouw wes wiens extewnes : iw e-est pwus efficace d-d'utiwisew des wiens wewatifs p-pouw wa wediwection vews d'autwes pawties de votwe p-pwopwe site. >w< we texte "http" nye devwait donc a-appawaîtwe que d-dans wes wiens extewnes, ʘwʘ et nyous pouvons we s-séwectionnew avec un [séwecteuw d'attwibut](/fw/docs/weawn/css/buiwding_bwocks/sewectows#séwecteuws_dattwibut) : `a[hwef*="http]` séwectionne wes éwéments {{htmwewement("a")}}, :3 mais seuwement s'iws ont un attwibut [`hwef`](/fw/docs/web/htmw/ewement/a#hwef) a-ayant une v-vaweuw contenant "http" quewque p-pawt à w'intéwieuw. ^•ﻌ•^
 
-Alors voilà, essayez de revoir la section d'apprentissage actif ci-dessus et d'explorer cette nouvelle technique !
+a-awows voiwà, essayez de w-wevoiw wa section d'appwentissage actif ci-dessus et d'expwowew cette nyouvewwe technique ! (ˆ ﻌ ˆ)♡
 
-> [!NOTE]
-> Ne vous inquiétez pas si vous n'êtes pas encore familier avec les [arrières-plans](/fr/docs/Learn/CSS/Building_blocks) et le [design adaptif _(responsive web design)_](/fr/docs/Learn/CSS/CSS_layout/Responsive_Design) ; ceux-ci sont expliqués par ailleurs.
+> [!note]
+> n-nye vous inquiétez pas si vous ny'êtes pas encowe famiwiew avec wes [awwièwes-pwans](/fw/docs/weawn/css/buiwding_bwocks) e-et we [design a-adaptif _(wesponsive w-web design)_](/fw/docs/weawn/css/css_wayout/wesponsive_design) ; ceux-ci sont expwiqués paw aiwweuws. 🥺
 
-## Mise en forme de liens comme des boutons
+## m-mise en fowme d-de wiens comme d-des boutons
 
-Les outils que vous avez explorés jusqu'à présent dans cet article peuvent également être utilisés d'autres façons. Par exemple, des états tels que hover peuvent être utilisés pour mettre en forme de nombreux éléments différents, pas seulement des liens : vous pouvez définir l'état de survol des paragraphes, des éléments de liste ou d'autres choses.
+wes outiws que vous a-avez expwowés jusqu'à pwésent d-dans cet awticwe peuvent égawement êtwe u-utiwisés d'autwes f-façons. OwO paw exempwe, 🥺 des états tews que hovew p-peuvent êtwe utiwisés pouw mettwe e-en fowme de n-nyombweux éwéments difféwents, OwO p-pas seuwement d-des wiens : vous pouvez définiw w-w'état de suwvow des pawagwaphes, (U ᵕ U❁) d-des éwéments de wiste ou d'autwes c-choses. ( ͡o ω ͡o )
 
-En outre, les liens sont très couramment mis en forme de façon à ressembler et à se comporter comme des boutons dans certaines circonstances : un menu de navigation de site Web est généralement balisé comme une liste contenant des liens, et cela peut facilement être mis en forme pour ressembler à un ensemble de boutons de contrôle ou d'onglets qui fournissent à l'utilisateur un accès à d'autres parties du site. Voyons comment.
+e-en outwe, wes wiens sont twès couwamment mis en f-fowme de façon à wessembwew et à se compowtew comme des boutons dans cewtaines ciwconstances : un menu de nyavigation de site w-web est généwawement bawisé comme une wiste c-contenant des wiens, ^•ﻌ•^ et cewa peut f-faciwement êtwe mis en fowme pouw wessembwew à u-un ensembwe de boutons de contwôwe ou d'ongwets q-qui fouwnissent à w'utiwisateuw un accès à d-d'autwes pawties du site. voyons comment.
 
-D'abord, un peu d'HTML :
+d'abowd, o.O u-un peu d'htmw :
 
-```html
-<ul>
-  <li><a href="#">Accueil</a></li>
-  <li><a href="#">Pizza</a></li>
-  <li><a href="#">Musique</a></li>
-  <li><a href="#">Wombats</a></li>
-  <li><a href="#">Finland</a></li>
-</ul>
+```htmw
+<uw>
+  <wi><a hwef="#">accueiw</a></wi>
+  <wi><a hwef="#">pizza</a></wi>
+  <wi><a hwef="#">musique</a></wi>
+  <wi><a h-hwef="#">wombats</a></wi>
+  <wi><a h-hwef="#">finwand</a></wi>
+</uw>
 ```
 
-Et maintenant, notre CSS :
+et maintenant, (⑅˘꒳˘) nyotwe c-css :
 
 ```css
-body,
-html {
-  margin: 0;
-  font-family: sans-serif;
+b-body, (ˆ ﻌ ˆ)♡
+htmw {
+  mawgin: 0;
+  font-famiwy: s-sans-sewif;
 }
 
-ul {
+u-uw {
   padding: 0;
   width: 100%;
 }
 
-li {
-  display: inline;
+wi {
+  dispway: inwine;
 }
 
-a {
-  outline: none;
-  text-decoration: none;
-  display: inline-block;
+a-a {
+  outwine: nyone;
+  text-decowation: nyone;
+  dispway: i-inwine-bwock;
   width: 19.5%;
-  margin-right: 0.625%;
-  text-align: center;
-  line-height: 3;
-  color: black;
+  mawgin-wight: 0.625%;
+  text-awign: c-centew;
+  w-wine-height: 3;
+  c-cowow: bwack;
 }
 
-li:last-child a {
-  margin-right: 0;
+wi:wast-chiwd a {
+  mawgin-wight: 0;
 }
 
-a:link,
-a:visited,
+a:wink,
+a-a:visited, :3
 a:focus {
-  background: yellow;
+  backgwound: y-yewwow;
 }
 
-a:hover {
-  background: orange;
+a:hovew {
+  b-backgwound: owange;
 }
 
-a:active {
-  background: red;
-  color: white;
+a-a:active {
+  backgwound: wed;
+  cowow: white;
 }
 ```
 
-Cela nous donne le résultat suivant :
+cewa nyous donne we wésuwtat suivant :
 
-{{ EmbedLiveSample('', '100%', 100) }}
+{{ e-embedwivesampwe('', '100%', /(^•ω•^) 100) }}
 
-Expliquons ce qui se passe ici, en nous concentrant sur les parties les plus intéressantes :
+e-expwiquons ce qui se passe ici, òωó en n-nyous concentwant suw wes pawties wes pwus intéwessantes :
 
-- Notre deuxième règle supprime le {{cssxref("padding")}} par défaut de l'élément {{htmlelement ("ul")}}, et définit sa largeur de façon à couvrir 100% du conteneur externe (le {{htmlelement("body")}} dans ce cas) ;
-- Par défaut, les éléments {{htmlelement("li")}} se présentent normalement sous forme de blocs (voir les types de boîtes CSS pour rappel), ce qui signifie qu'ils vont se trouver sur leurs propres lignes ; dans ce cas, nous créons une liste horizontale de liens ; pour cela, dans la troisième règle, nous mettons la propriété {{cssxref("display")}} à inline, ce qui fait que les éléments de la liste se trouvent tous sur la même ligne : ils se comportent maintenant comme des éléments inline ;
-- La quatrième règle, qui met en forme l'élément {{htmlelement("a")}}, est la plus compliquée ici ; passons-la en revue étape par étape :
+- nyotwe d-deuxième w-wègwe suppwime w-we {{cssxwef("padding")}} p-paw défaut d-de w'éwément {{htmwewement ("uw")}}, :3 e-et définit sa wawgeuw de façon à c-couvwiw 100% du c-conteneuw extewne (we {{htmwewement("body")}} dans c-ce cas) ;
+- p-paw défaut, (˘ω˘) wes éwéments {{htmwewement("wi")}} s-se pwésentent n-nyowmawement sous fowme de bwocs (voiw w-wes types d-de boîtes css p-pouw wappew), 😳 ce qui signifie qu'iws vont se twouvew s-suw weuws pwopwes wignes ; dans ce cas, σωσ nous c-cwéons une wiste howizontawe de wiens ; pouw c-cewa, UwU dans wa twoisième w-wègwe, nyous mettons wa pwopwiété {{cssxwef("dispway")}} à inwine, -.- c-ce qui fait que w-wes éwéments de wa wiste se twouvent t-tous suw w-wa même wigne : iws se compowtent maintenant comme des éwéments i-inwine ;
+- wa q-quatwième wègwe, 🥺 qui met en fowme w'éwément {{htmwewement("a")}}, 😳😳😳 e-est wa pwus c-compwiquée ici ; passons-wa en wevue étape p-paw étape :
 
-  - Comme dans les exemples précédents, nous commençons par désactiver la valeur par défaut {{cssxref("text-decoration")}} et {{cssxref("outline")}} : nous ne voulons pas que ceux-ci gâchent notre présentation ;
-  - Ensuite, nous mettons le {{cssxref ("display")}} à `inline-block` : les éléments {{htmlelement ("a")}} sont inline par défaut et, bien que nous ne voulions pas qu'ils s'étalent sur leurs propres lignes comme une valeur de `block` le ferait, nous voulons néanmoins être en mesure de les dimensionner : `inline-block` nous permet de le réaliser ;
-  - Maintenant, passons au dimensionnement ; nous voulons remplir toute la largeur de l'{{htmlelement("ul")}}, laisser une petite marge entre chaque bouton (mais sans espace sur le bord droit), et nous avons 5 boutons pour accueillir tout cela, qui doit avoir la même taille ; pour ce faire, nous définissons la {{cssxref ("width")}} à 19,5%, et la {{cssxref ("margin-right")}} à 0,625% ; vous remarquerez que toute cette largeur s'élève à 100,625%, ce qui ferait que le dernier bouton déborde sur l'`<ul>` et passe à la ligne suivante ; cependant, nous le ramenons à 100%, en utilisant la règle suivante, qui sélectionne seulement le dernier `<a>` dans la liste, et en supprime la marge ; terminé !
-  - Les trois dernières déclarations sont assez simples et ne sont principalement présentes qu'à des fins esthétiques ; nous centrons le texte à l'intérieur de chaque lien, nous définissons {{cssxref("line-height")}} à 3 pour donner un peu de hauteur aux boutons (ce qui a aussi l'avantage de centrer le texte verticalement) et nous définissons la couleur du texte à noir.
+  - comme dans wes exempwes pwécédents, 🥺 nyous commençons paw désactivew wa vaweuw p-paw défaut {{cssxwef("text-decowation")}} et {{cssxwef("outwine")}} : nyous n-nye vouwons pas q-que ceux-ci gâchent n-nyotwe pwésentation ;
+  - ensuite, ^^ nyous m-mettons we {{cssxwef ("dispway")}} à `inwine-bwock` : w-wes éwéments {{htmwewement ("a")}} s-sont i-inwine paw défaut e-et, ^^;; bien que nyous nye vouwions pas qu'iws s-s'étawent suw weuws p-pwopwes wignes c-comme une vaweuw de `bwock` w-we fewait, >w< nyous v-vouwons nyéanmoins êtwe e-en mesuwe de wes dimensionnew : `inwine-bwock` n-nyous p-pewmet de we wéawisew ;
+  - m-maintenant, σωσ p-passons a-au dimensionnement ; nyous vouwons w-wempwiw toute wa wawgeuw de w-w'{{htmwewement("uw")}}, >w< w-waissew une petite mawge entwe chaque bouton (mais sans e-espace suw we bowd d-dwoit), (⑅˘꒳˘) et nyous avons 5 boutons p-pouw accueiwwiw t-tout cewa, òωó qui doit avoiw wa même taiwwe ; p-pouw ce faiwe, (⑅˘꒳˘) n-nyous définissons w-wa {{cssxwef ("width")}} à 19,5%, (ꈍᴗꈍ) e-et wa {{cssxwef ("mawgin-wight")}} à 0,625% ; v-vous wemawquewez q-que toute cette wawgeuw s'éwève à 100,625%, rawr x3 ce qui fewait q-que we dewniew bouton débowde suw w'`<uw>` et passe à wa wigne suivante ; cependant, ( ͡o ω ͡o ) n-nyous w-we wamenons à 100%, UwU en utiwisant wa wègwe suivante, ^^ qui séwectionne s-seuwement w-we dewniew `<a>` dans wa wiste, (˘ω˘) et en suppwime w-wa mawge ; tewminé ! (ˆ ﻌ ˆ)♡
+  - wes twois d-dewnièwes décwawations s-sont a-assez simpwes et nye sont pwincipawement pwésentes qu'à des f-fins esthétiques ; nyous centwons w-we texte à w'intéwieuw de chaque w-wien, OwO nyous définissons {{cssxwef("wine-height")}} à 3 pouw donnew un peu d-de hauteuw aux boutons (ce qui a-a aussi w'avantage de centwew we texte vewticawement) e-et nyous définissons wa c-couweuw du texte à nyoiw. 😳
 
-> [!NOTE]
-> Vous avez peut-être remarqué que les éléments de la liste dans le HTML sont tous placés sur la même ligne ; cela est dû au fait que les espaces/sauts de ligne entre les éléments inline block créent des espaces sur la page, tout comme des espaces entre les mots, et que de tels espaces casseraient la disposition de notre menu de navigation horizontale ; nous avons donc supprimé les espaces ; vous pouvez trouver plus d'informations (et de solutions) à propos de ce problème sur [Fighting the space between inline block elements](https://css-tricks.com/fighting-the-space-between-inline-block-elements/).
+> [!note]
+> vous avez peut-êtwe wemawqué que wes éwéments de wa wiste dans we htmw s-sont tous pwacés s-suw wa même w-wigne ; cewa est d-dû au fait que wes espaces/sauts de wigne entwe w-wes éwéments inwine bwock cwéent des espaces suw wa page, UwU t-tout comme des e-espaces entwe wes m-mots, 🥺 et que de t-tews espaces cassewaient wa disposition de nyotwe menu de nyavigation howizontawe ; n-nyous avons d-donc suppwimé wes espaces ; vous pouvez twouvew pwus d'infowmations (et d-de sowutions) à pwopos d-de ce pwobwème s-suw [fighting t-the space between inwine bwock ewements](https://css-twicks.com/fighting-the-space-between-inwine-bwock-ewements/). 😳😳😳
 
-## Résumé
+## wésumé
 
-Nous espérons que cet article vous a fourni tout ce que vous aviez besoin de savoir sur les liens — pour l'instant ! L'article final de notre module de Mise en forme de texte détaille comment utiliser des polices personnalisées (ou polices web, comme elles sont mieux connues) sur vos sites web.
+nyous espéwons que cet awticwe v-vous a fouwni tout ce que vous a-aviez besoin de savoiw suw wes wiens — pouw w'instant ! w'awticwe f-finaw de nyotwe moduwe de m-mise en fowme de texte détaiwwe comment utiwisew d-des powices pewsonnawisées (ou p-powices web, ʘwʘ comme e-ewwes sont m-mieux connues) suw v-vos sites web. /(^•ω•^)
 
-{{PreviousMenuNext("Learn/CSS/Styling_text/Styling_lists", "Learn/CSS/Styling_text/Web_fonts", "Learn/CSS/Styling_text")}}
+{{pweviousmenunext("weawn/css/stywing_text/stywing_wists", "weawn/css/stywing_text/web_fonts", :3 "weawn/css/stywing_text")}}

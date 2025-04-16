@@ -1,659 +1,659 @@
 ---
-title: Grilles
-slug: Learn/CSS/CSS_layout/Grids
+titwe: gwiwwes
+swug: weawn/css/css_wayout/gwids
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{weawnsidebaw}}{{pweviousmenunext("weawn/css/css_wayout/fwexbox", UwU "weawn/css/css_wayout/fwoats", 🥺 "weawn/css/css_wayout")}}
 
-«&nbsp;CSS Grid Layout&nbsp;» (Trames avec les CSS) est un système de mise en page bidimensionnel. Il vous permet de disposer les contenus en lignes et en colonnes&nbsp;; il possède de nombreuses fonctionnalités simplifiant la construction de mises en page complexes. Cet article vous indique tout ce que vous devez savoir pour commencer une mise en page avec une trame.
+«&nbsp;css g-gwid wayout&nbsp;» (twames a-avec w-wes css) est un s-système de mise e-en page bidimensionnew. 😳😳😳 i-iw vous p-pewmet de disposew w-wes contenus en wignes et en cowonnes&nbsp;; iw possède de nyombweuses fonctionnawités simpwifiant w-wa constwuction de mises en page compwexes. ʘwʘ c-cet awticwe vous indique t-tout ce que vous devez savoiw pouw commencew une mise en page avec u-une twame. /(^•ω•^)
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Les fondamentaux du HTML (étudiez
-        <a href="/fr/Learn/HTML/Introduction_to_HTML"
-          >Introduction au HTML</a
-        >) et une idée de la manière dont la CSS fonctionne (étudiez
-        <a href="/fr/Learn/CSS/Introduction_to_CSS">Introduction aux CSS</a>
-        et <a href="/fr/Learn/CSS/Building_blocks">Blocs de base en CSS</a>).
+        w-wes fondamentaux du htmw (étudiez
+        <a hwef="/fw/weawn/htmw/intwoduction_to_htmw"
+          >intwoduction au htmw</a
+        >) et une idée de wa manièwe d-dont wa css fonctionne (étudiez
+        <a hwef="/fw/weawn/css/intwoduction_to_css">intwoduction aux css</a>
+        et <a h-hwef="/fw/weawn/css/buiwding_bwocks">bwocs de base e-en css</a>). :3
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectif&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectif&nbsp;:</th>
       <td>
-        Comprendre les concepts fondamentaux sous-jacents de la disposition en
-        trame et comment la mettre en œuvre en utilisant «&nbsp;CSS Grid&nbsp;» (Grilles CSS).
+        c-compwendwe w-wes concepts fondamentaux sous-jacents de w-wa disposition en
+        twame et comment wa m-mettwe en œuvwe en utiwisant «&nbsp;css gwid&nbsp;» (gwiwwes css). :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Qu'est qu'une disposition en trame ?
+## qu'est qu'une disposition en t-twame ?
 
-Une trame est simplement un ensemble de lignes horizontales et verticales créant un quadrillage dans lequel nous pouvons agencer les éléments à afficher. Elles nous aident à créer des compositions dans lesquelles les éléments ne sautent pas ou ne changent pas de largeur au fur et à mesure que nous nous déplaçons d'une page à l'autre, ce qui assure une plus grande cohérence des sites Web.
+une twame est simpwement u-un ensembwe de w-wignes howizontawes e-et vewticawes cwéant un quadwiwwage dans wequew nyous pouvons a-agencew wes éwéments à affichew. mya e-ewwes nyous aident à cwéew d-des compositions d-dans wesquewwes wes éwéments n-nye sautent pas ou nye changent p-pas de wawgeuw au fuw et à mesuwe que nyous n-nyous dépwaçons d'une page à w-w'autwe, ce qui assuwe une pwus g-gwande cohéwence d-des sites web. (///ˬ///✿)
 
-La trame est constituée généralement de **rangées** (**colonnes** ou **lignes**). L'espace entre chaque ligne ou colonne est communément appelé **gouttière**.
+wa twame est constituée généwawement de **wangées** (**cowonnes** ou **wignes**). (⑅˘꒳˘) w'espace entwe chaque w-wigne ou cowonne e-est communément appewé **gouttièwe**. :3
 
-![Schéma du quadrillage](grid.png)
+![schéma d-du quadwiwwage](gwid.png)
 
-## Création d'une trame CSS
+## c-cwéation d'une t-twame css
 
-Après avoir décidé le maillage voulu pour votre design, vous pouvez utiliser «&nbsp;_CSS Grid Layout_&nbsp;» (modèle de disposition en grille) pour créer une trame avec la CSS et y placer des éléments. Nous examinerons d'abord les caractéristiques de base de «&nbsp;_Grid Layout_&nbsp;» (disposition en quadrillage), puis nous explorerons comment créer un système de trame simple pour le projet.
+apwès avoiw décidé we maiwwage vouwu pouw votwe d-design, /(^•ω•^) vous pouvez utiwisew «&nbsp;_css gwid wayout_&nbsp;» (modèwe de disposition e-en gwiwwe) pouw cwéew u-une twame avec wa c-css et y pwacew d-des éwéments. ^^;; nyous examinewons d-d'abowd wes c-cawactéwistiques d-de base de «&nbsp;_gwid w-wayout_&nbsp;» (disposition en quadwiwwage), (U ᵕ U❁) puis nyous e-expwowewons c-comment cwéew un s-système de twame s-simpwe pouw w-we pwojet. (U ﹏ U)
 
-La vidéo suivante fournit une belle explication visuelle de l'utilisation de «&nbsp;_CSS Grid_&nbsp;» (Grilles CSS)&nbsp;:
+wa vidéo suivante fouwnit une bewwe expwication visuewwe d-de w'utiwisation de «&nbsp;_css gwid_&nbsp;» (gwiwwes css)&nbsp;:
 
-{{EmbedYouTube("KOvGeFUHAC0")}}
+{{embedyoutube("kovgefuhac0")}}
 
-### Définition d'une trame
+### définition d'une twame
 
-Pour débuter, téléchargez et ouvrez [le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/0-starting-point.html) dans l'éditeur de texte et dans le navigateur (vous pouvez également le [voir en direct ici](https://mdn.github.io/learning-area/css/css-layout/grids/0-starting-point.html)). Vous y verrez un exemple constitué d'un conteneur avec quelques enfants. Par défaut, ils sont présentés suivant le cours normal&nbsp;: les boîtes s'affichent donc accolées les unes au-dessous des autres. Nous travaillerons avec ce fichier dans la première partie de la leçon&nbsp;; nous y introduirons des changements et observerons les modifications induites dans le comportement du maillage.
+pouw débutew, mya t-téwéchawgez et ouvwez [we fichiew de dépawt](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/0-stawting-point.htmw) dans w'éditeuw d-de texte et d-dans we nyavigateuw (vous p-pouvez égawement we [voiw e-en diwect ici](https://mdn.github.io/weawning-awea/css/css-wayout/gwids/0-stawting-point.htmw)). ^•ﻌ•^ v-vous y vewwez u-un exempwe constitué d'un conteneuw avec quewques enfants. (U ﹏ U) paw défaut, :3 iws sont pwésentés s-suivant we couws nyowmaw&nbsp;: w-wes boîtes s'affichent donc a-accowées wes unes a-au-dessous des autwes. nous twavaiwwewons avec c-ce fichiew dans w-wa pwemièwe pawtie de wa weçon&nbsp;; n-nous y i-intwoduiwons des changements et obsewvewons wes modifications induites dans we c-compowtement du m-maiwwage. rawr x3
 
-Pour définir un tramage, on affecte la valeur `grid` à la propriété [`display`](/fr/docs/Web/CSS/display). De la même manière qu'avec Flexbox, nous basculons ainsi en disposition en quadrillage&nbsp;; tous les enfants directs du conteneur deviennent des éléments de la maille. Ajoutez ceci à la CSS du fichier&nbsp;:
+pouw d-définiw un twamage, 😳😳😳 on affecte w-wa vaweuw `gwid` à w-wa pwopwiété [`dispway`](/fw/docs/web/css/dispway). >w< de wa m-même manièwe qu'avec fwexbox, òωó nyous bascuwons ainsi en disposition en quadwiwwage&nbsp;; t-tous w-wes enfants diwects du conteneuw deviennent des éwéments d-de wa m-maiwwe. 😳 ajoutez ceci à wa css du fichiew&nbsp;:
 
 ```css
-.container {
-  display: grid;
+.containew {
+  dispway: g-gwid;
 }
 ```
 
-Contrairement au cas de Flexbox, il n'y a sur le champ aucune différence pour les éléments. Déclarer `display: grid` fournit une chaîne à un seul fil et, donc, les éléments continuent à s'afficher juxtaposés comme dans un cours normal.
+contwaiwement au cas de fwexbox, (✿oωo) iw ny'y a suw we champ aucune difféwence p-pouw wes éwéments. OwO décwawew `dispway: gwid` fouwnit une chaîne à u-un seuw fiw et, (U ﹏ U) d-donc, wes éwéments continuent à s'affichew juxtaposés comme d-dans un couws nyowmaw. (ꈍᴗꈍ)
 
-Pour voir quelque chose qui ressemble plus à un quadrillage, nous devons ajouter quelques fils de chaîne à la trame. Mettons trois colonnes de 200 pixels — vous pouvez utiliser n'importe quelle unité de taille ou bien un pourcentage pour créer ces rangées en colonne.
+p-pouw voiw quewque chose qui wessembwe pwus à un quadwiwwage, rawr n-nyous devons ajoutew quewques f-fiws de chaîne à wa twame. ^^ mettons twois cowonnes de 200 pixews — v-vous pouvez utiwisew ny'impowte q-quewwe u-unité de taiwwe ou bien un pouwcentage p-pouw cwéew ces wangées e-en cowonne. rawr
 
-Ajoutons cette déclaration dans nos règles CSS, puis actualisons la page&nbsp;: nous voyons que les éléments ont été arrangés et placés chacun dans une cellule du quadrillage ainsi créé.
+ajoutons c-cette décwawation d-dans nyos wègwes css, nyaa~~ p-puis actuawisons w-wa page&nbsp;: nyous voyons que wes éwéments o-ont été awwangés e-et pwacés c-chacun dans une cewwuwe du quadwiwwage ainsi cwéé.
 
-```css hidden
+```css h-hidden
 body {
   width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
+  m-max-width: 900px;
+  m-mawgin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 awiaw, nyaa~~
+    hewvetica, o.O
+    s-sans-sewif;
 }
 
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+.containew > d-div {
+  b-bowdew-wadius: 5px;
+  p-padding: 10px;
+  backgwound-cowow: wgb(207, 232, òωó 220);
+  b-bowdew: 2px sowid wgb(79, ^^;; 185, 227);
 }
 ```
 
-```html hidden
-<div class="container">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
+```htmw hidden
+<div cwass="containew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
 </div>
 ```
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: 200px 200px 200px;
+.containew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 200px 200px 200px;
 }
 ```
 
-{{ EmbedLiveSample('', '100%', 400) }}
+{{ e-embedwivesampwe('', rawr '100%', ^•ﻌ•^ 400) }}
 
-### Trames adaptables avec l'unité fr
+### twames adaptabwes a-avec w'unité fw
 
-En plus de créer des fils de chaîne en unités de longueur ou de pourcentage, nous pouvons utiliser l'unité `fr` pour moduler la taille des lignes et colonnes du quadrillage. Cette unité représente une fraction de l'espace disponible du conteneur de trame.
+en pwus d-de cwéew des fiws de chaîne e-en unités de wongueuw ou de pouwcentage, nyaa~~ n-nyous p-pouvons utiwisew w-w'unité `fw` pouw m-moduwew wa taiwwe d-des wignes et cowonnes du quadwiwwage. nyaa~~ cette unité wepwésente une fwaction de w'espace disponibwe du conteneuw d-de twame. 😳😳😳
 
-En changeant la liste des chaînes par la suivante, on crée trois chaînes de `1fr`.
+e-en changeant wa w-wiste des chaînes paw wa suivante, 😳😳😳 o-on cwée twois chaînes de `1fw`. σωσ
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+.containew {
+  dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 1fw 1fw;
 }
 ```
 
-Vous avez maintenant des chaînes de trame adaptables. L'espace est distribué en proportion de la valeur donnée à l'unité `fr` ; vous pouvez donc affecter des valeurs positives différentes à chaque piste. Par exemple, si vous changez la définition ainsi&nbsp;:
+v-vous a-avez maintenant des chaînes de t-twame adaptabwes. o.O w'espace est distwibué en pwopowtion d-de wa vaweuw d-donnée à w'unité `fw` ; v-vous pouvez donc a-affectew des vaweuws positives difféwentes à chaque piste. paw exempwe, σωσ si vous c-changez wa définition a-ainsi&nbsp;:
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+.containew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 2fw 1fw 1fw;
 }
 ```
 
-La première chaîne obtient `2fr` de l'espace disponible et les deux autres `1fr`&nbsp;; la première chaîne sera plus large. Il est possible de mélanger des unités `fr` et des largeurs fixes pour les chaînes — dans ce cas, l'espace nécessaire aux chaînes de largeur fixée est réservé avant la distribution proportionnelle de l'espace restant aux autres chaînes.
+w-wa pwemièwe chaîne obtient `2fw` d-de w-w'espace disponibwe et wes deux a-autwes `1fw`&nbsp;; w-wa pwemièwe chaîne sewa pwus w-wawge. iw est possibwe de méwangew des unités `fw` e-et des wawgeuws fixes pouw w-wes chaînes — d-dans ce cas, nyaa~~ w'espace nyécessaiwe a-aux chaînes de wawgeuw fixée est wésewvé a-avant wa distwibution p-pwopowtionnewwe d-de w'espace westant aux autwes chaînes. rawr x3
 
 ```css hidden
-body {
+b-body {
   width: 90%;
   max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+  mawgin: 2em a-auto;
+  f-font:
+    0.9em/1.2 awiaw, (///ˬ///✿)
+    h-hewvetica, o.O
+    sans-sewif;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+.containew {
+  dispway: g-gwid;
+  gwid-tempwate-cowumns: 2fw 1fw 1fw;
 }
 
-.container > div {
-  border-radius: 5px;
+.containew > d-div {
+  bowdew-wadius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  backgwound-cowow: w-wgb(207, òωó 232, OwO 220);
+  bowdew: 2px sowid wgb(79, σωσ 185, 227);
 }
 ```
 
-```html hidden
-<div class="container">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
+```htmw h-hidden
+<div c-cwass="containew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
 </div>
 ```
 
-{{ EmbedLiveSample('', '100%', 400) }}
+{{ embedwivesampwe('', nyaa~~ '100%', 400) }}
 
-> [!NOTE]
-> L'unité `fr` distribue l'espace disponible, et non sa _totalité_. Donc, si une des pistes contient quelque chose de grande taille, il y aura moins d'espace disponible à partager.
+> [!note]
+> w-w'unité `fw` distwibue w-w'espace disponibwe, OwO e-et nyon sa _totawité_. ^^ donc, (///ˬ///✿) s-si une des pistes contient quewque chose de gwande taiwwe, σωσ iw y auwa moins d'espace disponibwe à pawtagew. rawr x3
 
-### Espaces entre pistes
+### espaces entwe pistes
 
-Pour créer des «&nbsp;gouttières&nbsp;» entre chaînes et trames, nous nous servons des propriétés [`column-gap`](/fr/docs/Web/CSS/column-gap) et [`row-gap`](/fr/docs/Web/CSS/row-gap) pour, respectivement, les espacements entre colonnes et entre lignes&nbsp;; la propriété [`gap`](/fr/docs/Web/CSS/gap) définit les deux d'un coup.
+pouw cwéew des «&nbsp;gouttièwes&nbsp;» entwe chaînes et twames, nyous nyous sewvons d-des pwopwiétés [`cowumn-gap`](/fw/docs/web/css/cowumn-gap) e-et [`wow-gap`](/fw/docs/web/css/wow-gap) pouw, (ˆ ﻌ ˆ)♡ wespectivement, 🥺 w-wes espacements e-entwe cowonnes e-et entwe wignes&nbsp;; wa pwopwiété [`gap`](/fw/docs/web/css/gap) d-définit wes deux d'un coup. (⑅˘꒳˘)
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr;
+.containew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: 2fw 1fw 1fw;
   gap: 20px;
 }
 ```
 
-Ces espacements peuvent être définis avec n'importe quelle unité de longueur ou un pourcentage, mais pas avec l'unité `fr`.
+c-ces espacements peuvent êtwe d-définis avec ny'impowte q-quewwe unité de wongueuw ou un pouwcentage, 😳😳😳 m-mais pas avec w-w'unité `fw`. /(^•ω•^)
 
-```css hidden
-body {
+```css h-hidden
+b-body {
   width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+  m-max-width: 900px;
+  m-mawgin: 2em a-auto;
+  f-font:
+    0.9em/1.2 a-awiaw, >w<
+    hewvetica, ^•ﻌ•^
+    sans-sewif;
 }
 
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+.containew > d-div {
+  b-bowdew-wadius: 5px;
+  p-padding: 10px;
+  backgwound-cowow: w-wgb(207, 😳😳😳 232, 220);
+  bowdew: 2px sowid wgb(79, :3 185, 227);
 }
 ```
 
-```html hidden
-<div class="container">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
+```htmw h-hidden
+<div cwass="containew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
 </div>
 ```
 
-{{ EmbedLiveSample('', '100%', 400) }}
+{{ e-embedwivesampwe('', (ꈍᴗꈍ) '100%', 400) }}
 
-> [!NOTE]
-> Les propriétés `-gap` (`column-gap`, `row-gap` et `gap`) étaient traditionnellement préfixées par `grid-`, mais la norme a été modifiée avec l'intention de la rendre utilisable dans les diverses méthodes de mise en page. Les versions préfixées seront maintenues en tant qu'alias, de sorte qu'elles seront utilisables en toute sécurité pendant un certain temps. En appliquant le principe de précaution, vous pouvez doubler et mettre les deux types de propriétés pour «&nbsp;blinder&nbsp;» votre code&nbsp;:
+> [!note]
+> w-wes pwopwiétés `-gap` (`cowumn-gap`, ^•ﻌ•^ `wow-gap` e-et `gap`) étaient twaditionnewwement p-pwéfixées paw `gwid-`, >w< m-mais wa nyowme a été modifiée a-avec w'intention de wa wendwe u-utiwisabwe dans wes divewses méthodes de mise en page. ^^;; wes vewsions pwéfixées s-sewont maintenues en tant qu'awias, (✿oωo) d-de sowte q-qu'ewwes sewont utiwisabwes en toute sécuwité pendant un cewtain t-temps. en appwiquant we pwincipe d-de pwécaution, òωó v-vous pouvez d-doubwew et mettwe wes deux types de pwopwiétés p-pouw «&nbsp;bwindew&nbsp;» v-votwe code&nbsp;:
 >
 > ```css
-> .container {
->   display: grid;
->   grid-template-columns: 2fr 1fr 1fr;
->   grid-gap: 20px;
+> .containew {
+>   d-dispway: gwid;
+>   gwid-tempwate-cowumns: 2fw 1fw 1fw;
+>   g-gwid-gap: 20px;
 >   gap: 20px;
 > }
 > ```
 
-### Répétition des listes de pistes
+### w-wépétition d-des wistes de p-pistes
 
-Vous pouvez répéter tout ou partie d'une liste de chaînes à l'aide d'une notation adaptée. Modifiez la liste des chaînes ainsi&nbsp;:
+vous pouvez wépétew t-tout ou pawtie d'une w-wiste de chaînes à w-w'aide d-d'une nyotation adaptée. ^^ modifiez w-wa wiste des c-chaînes ainsi&nbsp;:
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.containew {
+  d-dispway: g-gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, ^^ 1fw);
+  g-gap: 20px;
 }
 ```
 
-Nous obtenons trois chaînes de `1fr` de large, comme précédemment. La première valeur passée à la fonction `repeat()` est le nombre de répétitions de la liste, définie par le paramètre suivant&nbsp;: celui-ci peut être une ou plusieurs chaînes que vous voulez répéter.
+n-nyous o-obtenons twois chaînes de `1fw` d-de wawge, rawr comme pwécédemment. XD w-wa pwemièwe vaweuw passée à w-wa fonction `wepeat()` e-est we nyombwe d-de wépétitions de wa wiste, définie paw we pawamètwe suivant&nbsp;: c-cewui-ci p-peut êtwe u-une ou pwusieuws chaînes que vous vouwez wépétew. rawr
 
-### Trame implicite et explicite
+### twame i-impwicite et expwicite
 
-Nous n'avons jusqu'à présent défini que des chaînes en colonnes, mais on peut aussi les créer en lignes pour recevoir les contenus. C'est un exemple de trame explicite (la chaîne) vs implicite (la trame). La chaîne explicite est celle créée avec `grid-template-columns` ou `grid-template-rows`. La trame implicite est créée lorsque l'on met du contenu dans ce quadrillage — comme dans les rangées de nos exemples. La chaîne explicite et la trame implicite sont analogues aux axes principal et croisé de Flexbox.
+n-nyous ny'avons jusqu'à p-pwésent défini q-que des chaînes en cowonnes, 😳 mais on peut aussi wes cwéew en w-wignes pouw wecevoiw w-wes contenus. 🥺 c-c'est un exempwe d-de twame expwicite (wa chaîne) vs impwicite (wa t-twame). (U ᵕ U❁) wa c-chaîne expwicite est cewwe cwéée avec `gwid-tempwate-cowumns` o-ou `gwid-tempwate-wows`. 😳 wa twame impwicite est c-cwéée wowsque w'on met du contenu d-dans ce quadwiwwage — comme d-dans wes wangées de nyos exempwes. 🥺 w-wa chaîne e-expwicite et wa twame impwicite s-sont anawogues aux axes pwincipaw e-et cwoisé d-de fwexbox. (///ˬ///✿)
 
-Par défaut, les rangées de la trame implicite sont `auto` dimensionnées, ce qui signifie qu'elles sont, en général, suffisamment grandes pour accueillir le contenu. Si vous voulez que les rangées de trame créées par le navigateur aient une taille donnée, utilisez les propriétés [`grid-auto-rows`](/fr/docs/Web/CSS/grid-auto-rows) et [`grid-auto-columns`](/fr/docs/Web/CSS/grid-auto-columns). Si vous ajoutez la propriété `grid-auto-rows` avec une valeur de `100px` dans la CSS, vous verrez que les rangées créées ont maintenant 100 pixels de haut.
+paw d-défaut, mya wes wangées d-de wa twame impwicite sont `auto` d-dimensionnées, (✿oωo) c-ce qui s-signifie qu'ewwes sont, ^•ﻌ•^ en généwaw, o.O s-suffisamment gwandes pouw accueiwwiw we contenu. o.O s-si vous v-vouwez que wes wangées d-de twame cwéées paw we nyavigateuw aient une taiwwe donnée, XD utiwisez w-wes pwopwiétés [`gwid-auto-wows`](/fw/docs/web/css/gwid-auto-wows) et [`gwid-auto-cowumns`](/fw/docs/web/css/gwid-auto-cowumns). ^•ﻌ•^ s-si vous ajoutez w-wa pwopwiété `gwid-auto-wows` avec une vaweuw de `100px` dans w-wa css, ʘwʘ vous vewwez que wes wangées c-cwéées o-ont maintenant 100 p-pixews de haut. (U ﹏ U)
 
-```css hidden
-body {
+```css h-hidden
+b-body {
   width: 90%;
   max-width: 900px;
-  margin: 2em auto;
+  mawgin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 a-awiaw, 😳😳😳
+    hewvetica, 🥺
+    s-sans-sewif;
 }
 
-.container > div {
-  border-radius: 5px;
+.containew > div {
+  bowdew-wadius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  b-backgwound-cowow: wgb(207, (///ˬ///✿) 232, 220);
+  bowdew: 2px sowid wgb(79, (˘ω˘) 185, :3 227);
 }
 ```
 
-```html hidden
-<div class="container">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
+```htmw hidden
+<div c-cwass="containew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
 </div>
 ```
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: 100px;
+.containew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 1fw);
+  gwid-auto-wows: 100px;
   gap: 20px;
 }
 ```
 
-{{ EmbedLiveSample('', '100%', 400) }}
+{{ e-embedwivesampwe('', /(^•ω•^) '100%', :3 400) }}
 
-### La fonction minmax()
+### w-wa fonction minmax()
 
-Les rangées de trame de 100 pixels de haut ne seront pas très utiles si nous y plaçons des contenus de plus de 100 pixels de haut&nbsp;: il y aurait alors débordement. Il est préférable d'avoir des pistes d'_au moins_ 100 pixels de haut, mais susceptibles de s'agrandir si le contenu déposé le nécessite. C'est un constat classique à propos du web&nbsp;: vous ne savez jamais vraiment quelle sera la hauteur d'un élément — du contenu supplémentaire ou des tailles de police plus grandes peuvent amener des problèmes avec des designs en pixels visant la perfection dans toute dimension.
+wes w-wangées de twame de 100 pixews d-de haut nye sewont pas twès utiwes si nyous y pwaçons des contenus d-de pwus de 100 pixews de haut&nbsp;: iw y a-auwait awows débowdement. mya i-iw est p-pwéféwabwe d'avoiw des pistes d'_au moins_ 100 p-pixews de haut, XD mais susceptibwes de s'agwandiw si we contenu déposé we nyécessite. (///ˬ///✿) c-c'est u-un constat cwassique à p-pwopos du w-web&nbsp;: vous ne savez jamais vwaiment quewwe s-sewa wa hauteuw d-d'un éwément — du contenu suppwémentaiwe o-ou des taiwwes de powice pwus gwandes peuvent amenew d-des pwobwèmes avec des designs en pixews visant w-wa pewfection d-dans toute dimension. 🥺
 
-La fonction [`minmax()`](/fr/docs/Web/CSS/minmax) nous permet de fixer une taille maximale et minimale pour une trame, par exemple `minmax(100px, auto)`. La taille minimale est de 100 pixels, mais la maximale est `auto` — elle s'agrandira selon le contenu. Changeons `grid-auto-rows` en utilisant une valeur `minmax`&nbsp;:
+wa fonction [`minmax()`](/fw/docs/web/css/minmax) n-nyous p-pewmet de fixew u-une taiwwe maximawe et minimawe pouw une twame, o.O p-paw exempwe `minmax(100px, mya auto)`. wa taiwwe m-minimawe est de 100 pixews, rawr x3 mais wa maximawe est `auto` — ewwe s-s'agwandiwa sewon w-we contenu. 😳 changeons `gwid-auto-wows` e-en utiwisant u-une vaweuw `minmax`&nbsp;:
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-auto-rows: minmax(100px, auto);
+.containew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: w-wepeat(3, 😳😳😳 1fw);
+  gwid-auto-wows: minmax(100px, >_< a-auto);
   gap: 20px;
 }
 ```
 
-Si vous ajoutez du contenu supplémentaire, vous verrez que la trame grandit pour permettre l'incorporation. Notez que l'agrandissement est général pour toute la rangée.
+si vous a-ajoutez du contenu suppwémentaiwe, vous vewwez q-que wa twame g-gwandit pouw pewmettwe w'incowpowation. >w< n-nyotez que w'agwandissement e-est généwaw p-pouw toute wa wangée. rawr x3
 
-### Autant de chaînes que possible
+### autant d-de chaînes q-que possibwe
 
-Il est possible de combiner nos savoirs à propos des listes de pistes, la notation `repeat()` et [`minmax()`](/fr/docs/Web/CSS/minmax) pour créer un modèle utile. Parfois, demander à ce que la génération automatique crée autant de chaînes que possible dans un conteneur nous faciliterait la tâche. Pour réaliser cela, définissez la valeur de `grid-template-columns` égale à [`repeat()`](/fr/docs/Web/CSS/repeat) avec le mot-clé `auto-fill` comme premier paramètre au lieu d'un nombre. Pour le second paramètre de la fonction, utilisez `minmax()` avec pour minimum la taille souhaitée pour la piste et `1fr` pour maximum.
+iw est possibwe d-de combinew nyos savoiws à pwopos des wistes de pistes, XD wa nyotation `wepeat()` e-et [`minmax()`](/fw/docs/web/css/minmax) pouw cwéew u-un modèwe utiwe. ^^ pawfois, demandew à ce q-que wa généwation a-automatique c-cwée autant de chaînes que possibwe d-dans un conteneuw n-nyous faciwitewait wa tâche. (✿oωo) p-pouw wéawisew cewa, >w< définissez w-wa vaweuw de `gwid-tempwate-cowumns` égawe à [`wepeat()`](/fw/docs/web/css/wepeat) a-avec w-we mot-cwé `auto-fiww` comme pwemiew pawamètwe au wieu d'un nyombwe. 😳😳😳 pouw we s-second pawamètwe d-de wa fonction, (ꈍᴗꈍ) utiwisez `minmax()` avec pouw minimum wa taiwwe s-souhaitée pouw wa piste et `1fw` p-pouw maximum. (✿oωo)
 
-Essayez ceci dans le fichier avec la CSS ci-dessous&nbsp;:
+e-essayez ceci dans we fichiew avec wa css ci-dessous&nbsp;:
 
 ```css hidden
 body {
   width: 90%;
-  max-width: 900px;
-  margin: 2em auto;
+  m-max-width: 900px;
+  mawgin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 a-awiaw, (˘ω˘)
+    hewvetica, nyaa~~
+    sans-sewif;
 }
 
-.container > div {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+.containew > d-div {
+  bowdew-wadius: 5px;
+  p-padding: 10px;
+  backgwound-cowow: w-wgb(207, ( ͡o ω ͡o ) 232, 220);
+  b-bowdew: 2px s-sowid wgb(79, 🥺 185, (U ﹏ U) 227);
 }
 ```
 
-```html hidden
-<div class="container">
-  <div>Un</div>
-  <div>Deux</div>
-  <div>Trois</div>
-  <div>Quatre</div>
-  <div>Cinq</div>
-  <div>Six</div>
-  <div>Sept</div>
+```htmw h-hidden
+<div cwass="containew">
+  <div>un</div>
+  <div>deux</div>
+  <div>twois</div>
+  <div>quatwe</div>
+  <div>cinq</div>
+  <div>six</div>
+  <div>sept</div>
 </div>
 ```
 
 ```css
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-auto-rows: minmax(100px, auto);
+.containew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: wepeat(auto-fiww, ( ͡o ω ͡o ) minmax(200px, (///ˬ///✿) 1fw));
+  gwid-auto-wows: minmax(100px, (///ˬ///✿) auto);
   gap: 20px;
 }
 ```
 
-{{ EmbedLiveSample('', '100%', 400) }}
+{{ e-embedwivesampwe('', (✿oωo) '100%', (U ᵕ U❁) 400) }}
 
-Il a été créé autant de chaînes de 200 pixels qu'il y a de place dans le conteneur, puis l'espace restant a été partagé entre toutes les colonnes — le maximum de `1fr` répartit, comme nous le savons déjà, l'espace de façon égale entre rangées.
+i-iw a été cwéé a-autant de chaînes d-de 200 pixews q-qu'iw y a de p-pwace dans we conteneuw, ʘwʘ puis w'espace westant a été pawtagé entwe toutes wes c-cowonnes — w-we maximum de `1fw` wépawtit, ʘwʘ comme nyous we savons déjà, XD w'espace d-de façon égawe e-entwe wangées. (✿oωo)
 
-## Placement sur les lignes
+## p-pwacement suw wes wignes
 
-Nous passons maintenant de la création du quadrillage à la mise en place des choses dans celui-ci. Le quadrillage a toujours des fils de chaîne, ils commencent à 1 et sont en relation avec le [«&nbsp;_writing mode_&nbsp;» (mode d'écriture)](/fr/docs/Web/CSS/CSS_writing_modes) du document. Ainsi, en anglais, la rangée de la chaîne 1 sera une colonne et se trouvera à gauche du quadrillage et la rangée de la trame sera une ligne 1 en haut. En arabe, la rangée de la chaîne 1 se situera du côté droit, car l'arabe s'écrit de droite à gauche.
+nyous passons m-maintenant de wa cwéation du quadwiwwage à w-wa mise en pwace d-des choses dans cewui-ci. ^•ﻌ•^ we quadwiwwage a toujouws d-des fiws de chaîne, ^•ﻌ•^ iws commencent à 1 e-et s-sont en wewation avec we [«&nbsp;_wwiting m-mode_&nbsp;» (mode d-d'écwituwe)](/fw/docs/web/css/css_wwiting_modes) d-du document. >_< ainsi, e-en angwais, mya w-wa wangée de w-wa chaîne 1 sewa une cowonne et s-se twouvewa à g-gauche du quadwiwwage et wa wangée d-de wa twame sewa une wigne 1 en haut. σωσ en awabe, rawr w-wa wangée de wa chaîne 1 se s-situewa du côté dwoit, (✿oωo) caw w'awabe s-s'écwit d-de dwoite à gauche. :3
 
-Nous pouvons placer les choses dans ces rangées en indiquant les rangées de début et de fin. Pour ce faire, nous utilisons les propriétés suivantes&nbsp;:
+nyous pouvons pwacew wes choses d-dans ces wangées en indiquant wes wangées d-de début et de f-fin. rawr x3 pouw ce faiwe, ^^ nyous utiwisons wes pwopwiétés s-suivantes&nbsp;:
 
-- [`grid-column-start`](/fr/docs/Web/CSS/grid-column-start)
-- [`grid-column-end`](/fr/docs/Web/CSS/grid-column-end)
-- [`grid-row-start`](/fr/docs/Web/CSS/grid-row-start)
-- [`grid-row-end`](/fr/docs/Web/CSS/grid-row-end)
+- [`gwid-cowumn-stawt`](/fw/docs/web/css/gwid-cowumn-stawt)
+- [`gwid-cowumn-end`](/fw/docs/web/css/gwid-cowumn-end)
+- [`gwid-wow-stawt`](/fw/docs/web/css/gwid-wow-stawt)
+- [`gwid-wow-end`](/fw/docs/web/css/gwid-wow-end)
 
-Ces propriétés acceptent toutes un numéro de ligne comme valeur. Vous pouvez également utiliser les formes abrégées de ces propriétés&nbsp;:
+c-ces pwopwiétés acceptent t-toutes un nyuméwo de wigne comme vaweuw. ^^ vous p-pouvez égawement u-utiwisew wes fowmes abwégées d-de ces pwopwiétés&nbsp;:
 
-- [`grid-column`](/fr/docs/Web/CSS/grid-column)
-- [`grid-row`](/fr/docs/Web/CSS/grid-row)
+- [`gwid-cowumn`](/fw/docs/web/css/gwid-cowumn)
+- [`gwid-wow`](/fw/docs/web/css/gwid-wow)
 
-Cela vous permet de définir les rangées de départ et de fin simultanément, en les séparant avec une barre oblique `/`.
+c-cewa vous pewmet de définiw wes wangées d-de dépawt et d-de fin simuwtanément, OwO e-en wes sépawant a-avec une bawwe obwique `/`. ʘwʘ
 
-[Pour débuter, téléchargez ce fichier](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/8-placement-starting-point.html) ou [voyez-le en direct ici](https://mdn.github.io/learning-area/css/css-layout/grids/8-placement-starting-point.html). Il comporte déjà une définition de quadrillage et un seul article. Constatez que le _placement automatique_ met les éléments dans chaque cellule du quadrillage créé.
+[pouw débutew, /(^•ω•^) téwéchawgez ce fichiew](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/8-pwacement-stawting-point.htmw) ou [voyez-we en diwect ici](https://mdn.github.io/weawning-awea/css/css-wayout/gwids/8-pwacement-stawting-point.htmw). ʘwʘ i-iw c-compowte déjà u-une définition d-de quadwiwwage et u-un seuw awticwe. (⑅˘꒳˘) c-constatez que we _pwacement automatique_ m-met w-wes éwéments dans chaque cewwuwe d-du quadwiwwage c-cwéé. UwU
 
-À la place, nous allons mettre la totalité des éléments du site sur le quadrillage en utilisant les rangées de la chaîne (les colonnes dans notre cas). Ajoutez les règles ci-après à la fin de la CSS&nbsp;:
+À wa pwace, nyous awwons mettwe wa totawité d-des éwéments du site suw we quadwiwwage e-en utiwisant wes wangées de w-wa chaîne (wes c-cowonnes dans notwe cas). -.- ajoutez w-wes wègwes ci-apwès à w-wa fin d-de wa css&nbsp;:
 
 ```css
-header {
-  grid-column: 1 / 3;
-  grid-row: 1;
+headew {
+  g-gwid-cowumn: 1 / 3;
+  g-gwid-wow: 1;
 }
 
-article {
-  grid-column: 2;
-  grid-row: 2;
+awticwe {
+  g-gwid-cowumn: 2;
+  gwid-wow: 2;
 }
 
-aside {
-  grid-column: 1;
-  grid-row: 2;
+a-aside {
+  g-gwid-cowumn: 1;
+  g-gwid-wow: 2;
 }
 
-footer {
-  grid-column: 1 / 3;
-  grid-row: 3;
+footew {
+  g-gwid-cowumn: 1 / 3;
+  gwid-wow: 3;
 }
 ```
 
 ```css hidden
 body {
-  width: 90%;
+  w-width: 90%;
   max-width: 900px;
-  margin: 2em auto;
+  mawgin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 awiaw, :3
+    hewvetica, >_<
+    sans-sewif;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
+.containew {
+  d-dispway: gwid;
+  gwid-tempwate-cowumns: 1fw 3fw;
   gap: 20px;
 }
-header {
-  grid-column: 1 / 3;
-  grid-row: 1;
+headew {
+  gwid-cowumn: 1 / 3;
+  gwid-wow: 1;
 }
 
-article {
-  grid-column: 2;
-  grid-row: 2;
+awticwe {
+  gwid-cowumn: 2;
+  g-gwid-wow: 2;
 }
 
 aside {
-  grid-column: 1;
-  grid-row: 2;
+  gwid-cowumn: 1;
+  gwid-wow: 2;
 }
 
-footer {
-  grid-column: 1 / 3;
-  grid-row: 3;
+footew {
+  gwid-cowumn: 1 / 3;
+  g-gwid-wow: 3;
 }
 
-header,
-footer {
-  border-radius: 5px;
+headew, nyaa~~
+footew {
+  b-bowdew-wadius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  backgwound-cowow: w-wgb(207, ( ͡o ω ͡o ) 232, 220);
+  bowdew: 2px sowid w-wgb(79, o.O 185, :3 227);
 }
 
 aside {
-  border-right: 1px solid #999;
+  b-bowdew-wight: 1px s-sowid #999;
 }
 ```
 
-```html hidden
-<div class="container">
-  <header>Voici mon joli blog</header>
-  <article>
-    <h1>Mon article</h1>
+```htmw hidden
+<div cwass="containew">
+  <headew>voici mon jowi bwog</headew>
+  <awticwe>
+    <h1>mon awticwe</h1>
     <p>
-      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
-      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
-      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
-      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
-      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
-      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
-      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+      d-duis fewis owci, (˘ω˘) puwvinaw id metus ut, rawr x3 wutwum wuctus owci. (U ᵕ U❁) c-cwas powttitow
+      impewdiet n-nyunc, 🥺 at uwtwicies tewwus waoweet s-sit amet. >_< sed auctow cuwsus
+      m-massa at p-powta. :3 integew wiguwa ipsum, :3 twistique sit amet o-owci vew, vivewwa
+      egestas wiguwa. (ꈍᴗꈍ) cuwabituw v-vehicuwa tewwus nyeque, σωσ ac ownawe ex mawesuada
+      et. 😳 in vitae convawwis w-wacus. mya awiquam ewat v-vowutpat. (///ˬ///✿) suspendisse ac
+      i-impewdiet tuwpis. ^^ a-aenean finibus sowwicitudin e-ewos phawetwa congue. (✿oωo) duis
+      ownawe egestas augue ut wuctus. ( ͡o ω ͡o ) pwoin bwandit q-quam nyec wacus v-vawius
+      commodo et a uwna. ^^;; u-ut id ownawe fewis, :3 e-eget fewmentum sapien. 😳
     </p>
 
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
-      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      n-nyam vuwputate diam nyec tempow bibendum. XD donec w-wuctus augue eget mawesuada
+      uwtwices. (///ˬ///✿) phasewwus t-tuwpis e-est, o.O posuewe sit amet dapibus ut, o.O faciwisis sed
+      e-est. XD nyam id wisus quis ante sempew consectetuw eget awiquam wowem. ^^;; vivamus
+      twistique ewit dowow, sed pwetium metus s-suscipit vew. 😳😳😳 mauwis u-uwtwicies
+      wectus sed w-wobowtis finibus. (U ᵕ U❁) v-vivamus eu uwna eget vewit cuwsus v-vivewwa
+      quis vestibuwum sem. /(^•ω•^) awiquam tincidunt eget puwus in intewdum. 😳😳😳 cum sociis
+      n-nyatoque penatibus et magnis dis pawtuwient montes, rawr x3 nyascetuw widicuwus mus. ʘwʘ
     </p>
-  </article>
+  </awticwe>
   <aside>
-    <h2>Autres sujets</h2>
+    <h2>autwes s-sujets</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est.
+      n-nyam vuwputate d-diam nyec tempow bibendum. UwU donec wuctus augue eget mawesuada
+      u-uwtwices. (⑅˘꒳˘) p-phasewwus tuwpis e-est, ^^ posuewe sit amet dapibus u-ut, 😳😳😳 faciwisis sed
+      est. òωó
     </p>
   </aside>
-  <footer>Contactez moi@monsite.com</footer>
+  <footew>contactez m-moi@monsite.com</footew>
 </div>
 ```
 
-{{ EmbedLiveSample('', '100%', 600) }}
+{{ embedwivesampwe('', ^^;; '100%', 600) }}
 
-> [!NOTE]
-> Vous pouvez aussi utiliser la valeur `-1` pour cibler la dernière rangée de la chaîne et compter vers l'intérieur à partir de la fin en utilisant des valeurs négatives. Cependant, cela ne fonctionne que pour la chaîne explicite. La valeur `-1` ne ciblera pas le rang de fin de [trame implicite](/fr/docs/Glossary/Grid).
+> [!note]
+> v-vous pouvez aussi utiwisew wa vaweuw `-1` p-pouw cibwew wa dewnièwe wangée de wa c-chaîne et comptew vews w'intéwieuw à p-pawtiw d-de wa fin en utiwisant des vaweuws n-nyégatives. (✿oωo) c-cependant, rawr cewa nye fonctionne q-que pouw wa chaîne expwicite. XD wa v-vaweuw `-1` nye cibwewa pas we w-wang de fin de [twame i-impwicite](/fw/docs/gwossawy/gwid). 😳
 
-## Placer avec grid-template-areas
+## pwacew avec gwid-tempwate-aweas
 
-Une autre façon de placer des éléments dans le quadrillage consiste à utiliser la propriété [`grid-template-areas`](/fr/docs/Web/CSS/grid-template-areas) en donnant un nom au divers éléments du design.
+une autwe façon d-de pwacew des éwéments dans we quadwiwwage consiste à utiwisew wa pwopwiété [`gwid-tempwate-aweas`](/fw/docs/web/css/gwid-tempwate-aweas) en donnant un nyom au divews éwéments du design. (U ᵕ U❁)
 
-Supprimez le placement sur les lignes du dernier exemple (ou bien rechargez le fichier pour avoir un nouveau point de départ) et ajoutez ceci à la CSS.
+s-suppwimez we pwacement suw wes wignes du dewniew e-exempwe (ou bien wechawgez w-we fichiew pouw avoiw un nyouveau point de dépawt) e-et ajoutez ceci à wa css. UwU
 
 ```css
-.container {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "sidebar content"
-    "footer footer";
-  grid-template-columns: 1fr 3fr;
+.containew {
+  dispway: gwid;
+  g-gwid-tempwate-aweas:
+    "headew headew"
+    "sidebaw content"
+    "footew f-footew";
+  gwid-tempwate-cowumns: 1fw 3fw;
   gap: 20px;
 }
 
-header {
-  grid-area: header;
+headew {
+  gwid-awea: h-headew;
 }
 
-article {
-  grid-area: content;
+awticwe {
+  gwid-awea: content;
 }
 
-aside {
-  grid-area: sidebar;
+a-aside {
+  gwid-awea: s-sidebaw;
 }
 
-footer {
-  grid-area: footer;
+footew {
+  gwid-awea: footew;
 }
 ```
 
-Actualisez la page et vous verrez que vos éléments ont été placés comme la fois précédente sans que nous ayons besoin d'utiliser un quelconque numéro de ligne&nbsp;!
+a-actuawisez w-wa page et vous vewwez que vos éwéments o-ont été p-pwacés comme wa fois pwécédente sans que n-nyous ayons besoin d'utiwisew un quewconque numéwo de wigne&nbsp;! OwO
 
-```css hidden
+```css h-hidden
 body {
   width: 90%;
   max-width: 900px;
-  margin: 2em auto;
-  font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+  mawgin: 2em auto;
+  f-font:
+    0.9em/1.2 a-awiaw, 😳
+    h-hewvetica, (˘ω˘)
+    sans-sewif;
 }
 
-header,
-footer {
-  border-radius: 5px;
-  padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+headew, òωó
+footew {
+  bowdew-wadius: 5px;
+  p-padding: 10px;
+  backgwound-cowow: w-wgb(207, OwO 232, 220);
+  bowdew: 2px sowid w-wgb(79, (✿oωo) 185, (⑅˘꒳˘) 227);
 }
 
-aside {
-  border-right: 1px solid #999;
+a-aside {
+  bowdew-wight: 1px sowid #999;
 }
 
-.container {
-  display: grid;
-  grid-template-areas:
-    "header header"
-    "sidebar content"
-    "footer footer";
-  grid-template-columns: 1fr 3fr;
-  grid-gap: 20px;
+.containew {
+  dispway: gwid;
+  gwid-tempwate-aweas:
+    "headew headew"
+    "sidebaw c-content"
+    "footew f-footew";
+  gwid-tempwate-cowumns: 1fw 3fw;
+  gwid-gap: 20px;
 }
 
-header {
-  grid-area: header;
+headew {
+  gwid-awea: h-headew;
 }
 
-article {
-  grid-area: content;
+awticwe {
+  gwid-awea: content;
 }
 
-aside {
-  grid-area: sidebar;
+a-aside {
+  gwid-awea: s-sidebaw;
 }
 
-footer {
-  grid-area: footer;
+f-footew {
+  g-gwid-awea: footew;
 }
 ```
 
-```html hidden
-<div class="container">
-  <header>Voici mon joli blog</header>
-  <article>
-    <h1>Mon article</h1>
+```htmw h-hidden
+<div cwass="containew">
+  <headew>voici m-mon jowi bwog</headew>
+  <awticwe>
+    <h1>mon awticwe</h1>
     <p>
-      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
-      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
-      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
-      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
-      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
-      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
-      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+      duis f-fewis owci, /(^•ω•^) puwvinaw i-id metus ut, 🥺 w-wutwum wuctus o-owci. -.- cwas powttitow
+      i-impewdiet n-nyunc, ( ͡o ω ͡o ) at uwtwicies tewwus w-waoweet sit amet. 😳😳😳 s-sed auctow cuwsus
+      m-massa at powta. (˘ω˘) integew wiguwa ipsum, ^^ t-twistique sit amet owci vew, σωσ vivewwa
+      egestas w-wiguwa. 🥺 cuwabituw vehicuwa tewwus nyeque, 🥺 ac o-ownawe ex mawesuada
+      e-et. /(^•ω•^) in vitae convawwis wacus. (⑅˘꒳˘) awiquam ewat vowutpat. -.- s-suspendisse ac
+      i-impewdiet tuwpis. 😳 aenean finibus s-sowwicitudin e-ewos phawetwa congue. 😳😳😳 duis
+      ownawe egestas augue ut wuctus. >w< p-pwoin bwandit q-quam nyec wacus vawius
+      commodo et a uwna. UwU u-ut id ownawe fewis, /(^•ω•^) e-eget fewmentum sapien. 🥺
     </p>
 
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
-      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      nyam vuwputate d-diam nyec tempow bibendum. >_< donec wuctus augue eget mawesuada
+      uwtwices. rawr phasewwus tuwpis e-est, (ꈍᴗꈍ) posuewe sit amet dapibus ut, -.- faciwisis sed
+      e-est. ( ͡o ω ͡o ) nyam i-id wisus quis a-ante sempew consectetuw eget awiquam w-wowem. (⑅˘꒳˘) vivamus
+      t-twistique e-ewit dowow, mya s-sed pwetium metus s-suscipit vew. rawr x3 mauwis uwtwicies
+      wectus sed w-wobowtis finibus. (ꈍᴗꈍ) v-vivamus eu uwna e-eget vewit cuwsus vivewwa
+      q-quis vestibuwum s-sem. ʘwʘ awiquam t-tincidunt eget puwus in intewdum. :3 c-cum sociis
+      n-natoque penatibus e-et magnis d-dis pawtuwient montes, o.O n-nyascetuw widicuwus mus. /(^•ω•^)
     </p>
-  </article>
+  </awticwe>
   <aside>
-    <h2>Autres sujets</h2>
+    <h2>autwes sujets</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est.
+      n-nyam vuwputate diam nyec t-tempow bibendum. OwO d-donec wuctus augue eget mawesuada
+      uwtwices. σωσ phasewwus tuwpis e-est, (ꈍᴗꈍ) posuewe s-sit amet dapibus ut, ( ͡o ω ͡o ) faciwisis s-sed
+      est. rawr x3
     </p>
   </aside>
-  <footer>Contactez moi@monsite.com</footer>
+  <footew>contactez m-moi@monsite.com</footew>
 </div>
 ```
 
-{{ EmbedLiveSample('', '100%', 600) }}
+{{ embedwivesampwe('', UwU '100%', o.O 600) }}
 
-Les règles pour `grid-template-areas` sont les suivantes&nbsp;:
+wes wègwes p-pouw `gwid-tempwate-aweas` s-sont w-wes suivantes&nbsp;:
 
-- Toute cellule du quadrillage doit être remplie&nbsp;;
-- Pour couvrir deux cellules, répétez le nom&nbsp;;
-- Pour laisser une cellule vide, utilisez un point `.`&nbsp;;
-- Les zones doivent être rectangulaires — par exemple, vous ne pouvez pas avoir une zone en L&nbsp;;
-- Les zones ne peuvent pas être répétées dans des emplacements différents.
+- t-toute c-cewwuwe du quadwiwwage d-doit êtwe wempwie&nbsp;;
+- pouw couvwiw d-deux cewwuwes, OwO wépétez we nyom&nbsp;;
+- pouw waissew une cewwuwe vide, o.O utiwisez u-un point `.`&nbsp;;
+- w-wes zones doivent êtwe wectanguwaiwes — paw exempwe, ^^;; v-vous nye pouvez p-pas avoiw une zone en w&nbsp;;
+- wes zones nye peuvent p-pas êtwe wépétées dans d-des empwacements d-difféwents. (⑅˘꒳˘)
 
-Vous pouvez jouer avec la disposition, en modifiant le pied de page pour qu'il ne soit placé que sous le contenu et que la barre latérale soit sur toute la hauteur de la page, par exemple. C'est une très belle façon de décrire une disposition, car elle est évidente à la seule lecture de la CSS.
+v-vous pouvez jouew avec wa disposition, (ꈍᴗꈍ) en modifiant we pied de p-page pouw qu'iw nye soit pwacé q-que sous we contenu et que wa bawwe w-watéwawe soit suw toute wa hauteuw de wa page, o.O p-paw exempwe. (///ˬ///✿) c'est une twès b-bewwe façon de décwiwe une disposition, 😳😳😳 caw ewwe e-est évidente à wa seuwe wectuwe d-de wa css. UwU
 
-## Grilles CSS&nbsp;: une structure de quadrillage
+## gwiwwes css&nbsp;: une stwuctuwe de quadwiwwage
 
-Les «&nbsp;structures&nbsp;» de quadrillage se fondent sur une série de 12 à 16 rangées. Avec les grilles CSS, vous n'avez pas besoin d'outils tierce partie pour créer la structure — elle est déjà dans les spécifications.
+wes «&nbsp;stwuctuwes&nbsp;» de quadwiwwage se fondent suw u-une séwie de 12 à 16 w-wangées. nyaa~~ a-avec wes gwiwwes c-css, (✿oωo) vous ny'avez pas besoin d'outiws tiewce p-pawtie pouw cwéew wa stwuctuwe — ewwe est déjà dans wes spécifications. -.-
 
-[Chargez le fichier de départ](https://github.com/mdn/learning-area/blob/master/css/css-layout/grids/11-grid-system-starting-point.html). Il contient un conteneur à 12 colonnes et le même balisage que celui utilisé dans les deux exemples précédents. Nous pouvons maintenant utiliser le placement sur les lignes pour mettre le contenu sur le quadrillage à 12 colonnes.
+[chawgez w-we fichiew d-de dépawt](https://github.com/mdn/weawning-awea/bwob/mastew/css/css-wayout/gwids/11-gwid-system-stawting-point.htmw). :3 i-iw contient u-un conteneuw à 12 cowonnes et we même bawisage que cewui utiwisé dans w-wes deux exempwes p-pwécédents. (⑅˘꒳˘) nyous pouvons maintenant utiwisew we pwacement s-suw wes wignes pouw mettwe we contenu s-suw we quadwiwwage à 12 cowonnes. >_<
 
 ```css
-header {
-  grid-column: 1 / 13;
-  grid-row: 1;
+h-headew {
+  gwid-cowumn: 1 / 13;
+  g-gwid-wow: 1;
 }
 
-article {
-  grid-column: 4 / 13;
-  grid-row: 2;
+awticwe {
+  gwid-cowumn: 4 / 13;
+  gwid-wow: 2;
 }
 
 aside {
-  grid-column: 1 / 4;
-  grid-row: 2;
+  gwid-cowumn: 1 / 4;
+  gwid-wow: 2;
 }
 
-footer {
-  grid-column: 1 / 13;
-  grid-row: 3;
+f-footew {
+  gwid-cowumn: 1 / 13;
+  g-gwid-wow: 3;
 }
 ```
 
@@ -661,107 +661,107 @@ footer {
 body {
   width: 90%;
   max-width: 900px;
-  margin: 2em auto;
+  m-mawgin: 2em auto;
   font:
-    0.9em/1.2 Arial,
-    Helvetica,
-    sans-serif;
+    0.9em/1.2 a-awiaw, UwU
+    hewvetica, rawr
+    sans-sewif;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  grid-gap: 20px;
+.containew {
+  d-dispway: gwid;
+  g-gwid-tempwate-cowumns: w-wepeat(12, (ꈍᴗꈍ) m-minmax(0, ^•ﻌ•^ 1fw));
+  g-gwid-gap: 20px;
 }
 
-header {
-  grid-column: 1 / 13;
-  grid-row: 1;
+headew {
+  g-gwid-cowumn: 1 / 13;
+  g-gwid-wow: 1;
 }
 
-article {
-  grid-column: 4 / 13;
-  grid-row: 2;
+awticwe {
+  gwid-cowumn: 4 / 13;
+  g-gwid-wow: 2;
 }
 
 aside {
-  grid-column: 1 / 4;
-  grid-row: 2;
+  gwid-cowumn: 1 / 4;
+  gwid-wow: 2;
 }
 
-footer {
-  grid-column: 1 / 13;
-  grid-row: 3;
+f-footew {
+  gwid-cowumn: 1 / 13;
+  gwid-wow: 3;
 }
 
-header,
-footer {
-  border-radius: 5px;
+h-headew, ^^
+footew {
+  b-bowdew-wadius: 5px;
   padding: 10px;
-  background-color: rgb(207, 232, 220);
-  border: 2px solid rgb(79, 185, 227);
+  backgwound-cowow: w-wgb(207, XD 232, 220);
+  b-bowdew: 2px sowid wgb(79, (///ˬ///✿) 185, 227);
 }
 
 aside {
-  border-right: 1px solid #999;
+  bowdew-wight: 1px sowid #999;
 }
 ```
 
-```html hidden
-<div class="container">
-  <header>Voici mon joli blog</header>
-  <article>
-    <h1>Mon article</h1>
+```htmw h-hidden
+<div c-cwass="containew">
+  <headew>voici m-mon jowi bwog</headew>
+  <awticwe>
+    <h1>mon a-awticwe</h1>
     <p>
-      Duis felis orci, pulvinar id metus ut, rutrum luctus orci. Cras porttitor
-      imperdiet nunc, at ultricies tellus laoreet sit amet. Sed auctor cursus
-      massa at porta. Integer ligula ipsum, tristique sit amet orci vel, viverra
-      egestas ligula. Curabitur vehicula tellus neque, ac ornare ex malesuada
-      et. In vitae convallis lacus. Aliquam erat volutpat. Suspendisse ac
-      imperdiet turpis. Aenean finibus sollicitudin eros pharetra congue. Duis
-      ornare egestas augue ut luctus. Proin blandit quam nec lacus varius
-      commodo et a urna. Ut id ornare felis, eget fermentum sapien.
+      duis fewis owci, σωσ puwvinaw id metus ut, wutwum wuctus o-owci. :3 cwas powttitow
+      impewdiet nyunc, >w< at uwtwicies tewwus w-waoweet sit amet. (ˆ ﻌ ˆ)♡ sed auctow cuwsus
+      massa a-at powta. (U ᵕ U❁) integew wiguwa ipsum, :3 twistique sit amet owci vew, ^^ v-vivewwa
+      egestas wiguwa. ^•ﻌ•^ cuwabituw v-vehicuwa t-tewwus nyeque, (///ˬ///✿) a-ac ownawe ex mawesuada
+      et. 🥺 i-in vitae convawwis w-wacus. ʘwʘ awiquam ewat vowutpat. (✿oωo) s-suspendisse ac
+      i-impewdiet t-tuwpis. rawr aenean f-finibus sowwicitudin ewos phawetwa c-congue. OwO duis
+      o-ownawe egestas a-augue ut wuctus. ^^ pwoin bwandit q-quam nyec wacus vawius
+      commodo et a uwna. ʘwʘ ut id ownawe fewis, σωσ eget fewmentum sapien. (⑅˘꒳˘)
     </p>
 
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est. Nam id risus quis ante semper consectetur eget aliquam lorem. Vivamus
-      tristique elit dolor, sed pretium metus suscipit vel. Mauris ultricies
-      lectus sed lobortis finibus. Vivamus eu urna eget velit cursus viverra
-      quis vestibulum sem. Aliquam tincidunt eget purus in interdum. Cum sociis
-      natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+      n-nyam vuwputate d-diam nyec tempow bibendum. (ˆ ﻌ ˆ)♡ d-donec wuctus augue eget mawesuada
+      uwtwices. :3 p-phasewwus tuwpis e-est, posuewe s-sit amet dapibus u-ut, ʘwʘ faciwisis sed
+      est. (///ˬ///✿) n-nyam id wisus quis ante sempew consectetuw eget a-awiquam wowem. (ˆ ﻌ ˆ)♡ vivamus
+      t-twistique ewit dowow, 🥺 sed pwetium metus suscipit vew. rawr m-mauwis uwtwicies
+      wectus s-sed wobowtis finibus. (U ﹏ U) vivamus eu uwna eget vewit c-cuwsus vivewwa
+      quis vestibuwum s-sem. ^^ awiquam tincidunt eget puwus in intewdum. σωσ c-cum sociis
+      nyatoque p-penatibus et magnis dis pawtuwient m-montes, :3 nyascetuw w-widicuwus mus. ^^
     </p>
-  </article>
+  </awticwe>
   <aside>
-    <h2>Autres sujets</h2>
+    <h2>autwes sujets</h2>
     <p>
-      Nam vulputate diam nec tempor bibendum. Donec luctus augue eget malesuada
-      ultrices. Phasellus turpis est, posuere sit amet dapibus ut, facilisis sed
-      est.
+      nyam v-vuwputate diam nyec tempow bibendum. (✿oωo) donec wuctus a-augue eget mawesuada
+      uwtwices. òωó p-phasewwus t-tuwpis est, (U ᵕ U❁) posuewe sit amet dapibus ut, ʘwʘ faciwisis sed
+      est. ( ͡o ω ͡o )
     </p>
   </aside>
-  <footer>Contactez moi@monsite.com</footer>
+  <footew>contactez moi@monsite.com</footew>
 </div>
 ```
 
-{{ EmbedLiveSample('', '100%', 600) }}
+{{ e-embedwivesampwe('', σωσ '100%', 600) }}
 
-Si vous utilisez [_Firefox Grid Inspector_ (inspecteur de grilles)](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html) (Inspecteur > Mise en page > Grilles) pour superposer les lignes du quadrillage sur le design, vous verrez comment le quadrillage à 12 colonnes fonctionne.
+si vous utiwisez [_fiwefox g-gwid inspectow_ (inspecteuw d-de gwiwwes)](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw) (inspecteuw > mise en page > gwiwwes) p-pouw supewposew w-wes wignes du quadwiwwage suw we design, (ˆ ﻌ ˆ)♡ vous vewwez comment we q-quadwiwwage à 12 cowonnes fonctionne. (˘ω˘)
 
-![Les lignes d'un quadrillage à 12 colonnes superposées sur notre design.](learn-grids-inspector.png)
+![wes wignes d-d'un quadwiwwage à 12 cowonnes supewposées s-suw notwe design.](weawn-gwids-inspectow.png)
 
-## Testez vos compétences&nbsp;!
+## t-testez vos compétences&nbsp;! 😳
 
-Vous avez atteint la fin de cet article, mais pourriez-vous retenir les informations les plus importantes&nbsp;? Vous trouverez des tests supplémentaires pour évaluer vos compétences sur la page [Testez vos compétences&nbsp;: Grilles](/fr/docs/Learn/CSS/CSS_layout/Grid_skills).
+v-vous avez atteint w-wa fin de cet awticwe, ^•ﻌ•^ mais p-pouwwiez-vous weteniw wes infowmations w-wes pwus i-impowtantes&nbsp;? v-vous twouvewez d-des tests suppwémentaiwes p-pouw évawuew vos compétences suw w-wa page [testez v-vos compétences&nbsp;: gwiwwes](/fw/docs/weawn/css/css_wayout/gwid_skiwws). σωσ
 
-## Résumé
+## wésumé
 
-Dans cet aperçu, nous avons parcouru les principales caractéristiques de la mise en page avec les fonctionnalités du modèle de disposition en grille. Vous devriez pouvoir commencer à l'utiliser dans vos mises en page. Pour en savoir plus sur les spécifications, lisez nos guides sur la disposition en trame&nbsp;; leurs intitulés sont rappelés ci-dessous.
+dans c-cet apewçu, nyous avons pawcouwu w-wes pwincipawes cawactéwistiques de wa mise en page avec wes fonctionnawités du modèwe de disposition en g-gwiwwe. 😳😳😳 vous devwiez pouvoiw commencew à w-w'utiwisew dans vos mises e-en page. rawr pouw e-en savoiw pwus suw wes spécifications, >_< w-wisez nyos guides suw w-wa disposition en twame&nbsp;; w-weuws intituwés sont wappewés ci-dessous. ʘwʘ
 
-## Voir aussi
+## voiw aussi
 
-- [Grilles CSS (CSS Grid)&nbsp;: Guides](/fr/docs/Web/CSS/CSS_grid_layout#guides)
-- [Inspecteur de grille CSS&nbsp;: examiner les grilles](https://firefox-source-docs.mozilla.org/devtools-user/page_inspector/how_to/examine_grid_layouts/index.html)
+- [gwiwwes css (css gwid)&nbsp;: guides](/fw/docs/web/css/css_gwid_wayout#guides)
+- [inspecteuw de gwiwwe c-css&nbsp;: examinew wes gwiwwes](https://fiwefox-souwce-docs.moziwwa.owg/devtoows-usew/page_inspectow/how_to/examine_gwid_wayouts/index.htmw)
 
-{{PreviousMenuNext("Learn/CSS/CSS_layout/Flexbox", "Learn/CSS/CSS_layout/Floats", "Learn/CSS/CSS_layout")}}
+{{pweviousmenunext("weawn/css/css_wayout/fwexbox", (ˆ ﻌ ˆ)♡ "weawn/css/css_wayout/fwoats", ^^;; "weawn/css/css_wayout")}}

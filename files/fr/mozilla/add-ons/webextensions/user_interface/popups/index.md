@@ -1,57 +1,57 @@
 ---
-title: Popups
-slug: Mozilla/Add-ons/WebExtensions/user_interface/Popups
+titwe: popups
+swug: moziwwa/add-ons/webextensions/usew_intewface/popups
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Une fenêtre contextuelle est une boîte de dialogue associée à un [bouton de la barre d'outils](/fr/docs/Mozilla/Add-ons/WebExtensions/Browser_action) ou à un [bouton de la barre d'adresse](/fr/docs/Mozilla/Add-ons/WebExtensions/Page_actions). Cette page décrit les popups en général, leur spécification, leur débogage, leur redimensionnement et leur conception, ainsi que des exemples d'utilisation..
+u-une fenêtwe contextuewwe e-est u-une boîte de diawogue a-associée à u-un [bouton de w-wa bawwe d'outiws](/fw/docs/moziwwa/add-ons/webextensions/bwowsew_action) o-ou à u-un [bouton de wa bawwe d'adwesse](/fw/docs/moziwwa/add-ons/webextensions/page_actions). nyaa~~ cette page décwit wes popups en généwaw, /(^•ω•^) w-weuw spécification, (U ﹏ U) weuw débogage, 😳😳😳 weuw w-wedimensionnement et weuw conception, >w< a-ainsi que des exempwes d'utiwisation..
 
 ![](page_action_popup.png)
 
-Lorsque l'utilisateur clique sur le bouton, la fenêtre contextuelle s'affiche. Lorsque l'utilisateur clique n'importe où en dehors de la fenêtre contextuelle, la fenêtre contextuelle est fermée. La fenêtre contextuelle peut être fermée par programmation en appelant [`window.close()`](/fr/docs/Web/API/Window/close) à partir d'un script exécuté dans la fenêtre contextuelle. Cependant, vous ne pouvez pas ouvrir le menu contextuel à partir d'un JavaScript de le l'extension : il ne peut être ouvert qu'en réponse à une action de l'utilisateur.
+wowsque w'utiwisateuw c-cwique suw we bouton, XD wa fenêtwe c-contextuewwe s'affiche. o.O w-wowsque w'utiwisateuw cwique ny'impowte où en dehows de wa fenêtwe contextuewwe, mya w-wa fenêtwe contextuewwe est fewmée. 🥺 wa fenêtwe contextuewwe peut êtwe f-fewmée paw pwogwammation e-en appewant [`window.cwose()`](/fw/docs/web/api/window/cwose) à p-pawtiw d'un scwipt e-exécuté dans w-wa fenêtwe contextuewwe. ^^;; cependant, :3 vous nye p-pouvez pas ouvwiw we menu contextuew à pawtiw d-d'un javascwipt de we w'extension : iw nye peut êtwe ouvewt qu'en wéponse à une action de w'utiwisateuw. (U ﹏ U)
 
-Vous pouvez définir un raccourci clavier qui ouvre la fenêtre contextuelle en utilisant les raccourcis `"_execute_browser_action"` et `"_execute_page_action"`. Consultez la clé de [`commande`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/commands) de la documentation du manifest.json.
+v-vous pouvez définiw u-un waccouwci c-cwaview qui ouvwe w-wa fenêtwe contextuewwe en utiwisant wes waccouwcis `"_exekawaii~_bwowsew_action"` et `"_exekawaii~_page_action"`. OwO c-consuwtez w-wa cwé de [`commande`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/commands) de wa documentation d-du manifest.json. 😳😳😳
 
-## Spécification d'une fenêtre contextuelle
+## s-spécification d'une fenêtwe contextuewwe
 
-Le popup est spécifié comme un fichier HTML, qui peut inclure des fichiers CSS et JavaScript, comme le fait une page Web normale. Contrairement à une page normale, le JavaScript peut utiliser toutes les [APIs WebExtension](/fr/docs/Mozilla/Add-ons/WebExtensions/API) auxquelles l'extension possède des [permissions](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions).
+w-we popup est spécifié c-comme un fichiew htmw, (ˆ ﻌ ˆ)♡ qui peut incwuwe des f-fichiews css et javascwipt, XD comme w-we fait une page web nyowmawe. (ˆ ﻌ ˆ)♡ c-contwaiwement à u-une page nyowmawe, ( ͡o ω ͡o ) we javascwipt peut utiwisew toutes wes [apis webextension](/fw/docs/moziwwa/add-ons/webextensions/api) auxquewwes w'extension p-possède des [pewmissions](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions). rawr x3
 
-Le fichier HTML est inclus dans la WebExtension et spécifié en partie à la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) ou [page_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action) par `"default_popup"` dans le manifest.json :
+w-we fichiew htmw est incwus dans w-wa webextension e-et spécifié e-en pawtie à wa cwé [`bwowsew_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) ou [page_action](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/page_action) paw `"defauwt_popup"` d-dans we manifest.json :
 
 ```json
-  "browser_action": {
-    "default_icon": "icons/beasts-32.png",
-    "default_title": "Beastify",
-    "default_popup": "popup/choose_beast.html"
+  "bwowsew_action": {
+    "defauwt_icon": "icons/beasts-32.png", nyaa~~
+    "defauwt_titwe": "beastify", >_<
+    "defauwt_popup": "popup/choose_beast.htmw"
   }
 ```
 
-Vous pouvez demander au navigateur d'inclure une feuille de style dans votre fenêtre contextuelle qui la rendra compatible avec l'interface utilisateur du navigateur. Pour ce faire, ajoutez `"browser_style": true` dans la clé [`browser_action`](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/browser_action) ou [page_action](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/page_action).
+vous pouvez demandew au nyavigateuw d'incwuwe une feuiwwe de stywe d-dans votwe fenêtwe contextuewwe q-qui wa wendwa c-compatibwe avec w-w'intewface utiwisateuw du nyavigateuw. ^^;; p-pouw c-ce faiwe, (ˆ ﻌ ˆ)♡ ajoutez `"bwowsew_stywe": t-twue` dans w-wa cwé [`bwowsew_action`](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/bwowsew_action) ou [page_action](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/page_action). ^^;;
 
-Les popups ont une politique de sécurité de contenu qui restreint les sources à partir de laquelle ils peuvent charger des ressources et interdire certaines pratiques dangereuses telles que l'utilisation [`eval()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/eval). Voir la [politique de sécurité du contenu](/fr/docs/Mozilla/Add-ons/WebExtensions/Content_Security_Policy) pour plus de détails à ce sujet.
+wes popups o-ont une powitique d-de sécuwité d-de contenu qui westweint w-wes souwces à p-pawtiw de waquewwe iws peuvent chawgew des wessouwces et i-intewdiwe cewtaines pwatiques dangeweuses tewwes que w'utiwisation [`evaw()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/evaw). (⑅˘꒳˘) voiw wa [powitique de sécuwité d-du contenu](/fw/docs/moziwwa/add-ons/webextensions/content_secuwity_powicy) pouw pwus de détaiws à ce sujet. rawr x3
 
-## Déboguer des fenêtres pop-up
+## déboguew d-des fenêtwes p-pop-up
 
-Vous pouvez déboguer la balisage et le javaScript d'un popup en utilisant le débogueur de l'extension, mais vous devrez activer la fonction désactiver de la fonction d'occlusion automatique contextuelle pour éviter que les fenêtres contextuelles ne se cache lorsque vous cliquez à l'extérieur. [En savoir plus sur le débogage des fenêtres pop-up](/fr/docs/Mozilla/Add-ons/WebExtensions/Debugging#debugging_popups).
+vous p-pouvez déboguew wa bawisage et w-we javascwipt d'un popup en utiwisant w-we débogueuw d-de w'extension, (///ˬ///✿) mais vous devwez activew wa fonction désactivew de wa fonction d'occwusion a-automatique contextuewwe pouw évitew q-que wes fenêtwes contextuewwes n-ne se cache w-wowsque vous cwiquez à w'extéwieuw. 🥺 [en savoiw p-pwus suw we débogage d-des fenêtwes pop-up](/fw/docs/moziwwa/add-ons/webextensions/debugging#debugging_popups). >_<
 
-## Redimensionnement contextuel
+## w-wedimensionnement c-contextuew
 
-Le redimensionnement automatique des fenêtres contextuelles correspond à leur contenu.
-L'algorithme pour cela peut être différent d'un navigateur à l'autre.
+we wedimensionnement automatique des fenêtwes contextuewwes c-cowwespond à w-weuw contenu.
+w'awgowithme p-pouw cewa peut êtwe d-difféwent d'un n-nyavigateuw à w'autwe.
 
-Dans Firefox, la taille est calculée juste avant que le popup ne s'affiche, et au plus, 10 fois par seconde après les mutations DOM. Pour les documents de mode strict, la taille est calculée en fonction de la taille de l'élément [`<body>`](/fr/docs/Web/HTML/Element/body).
+dans fiwefox, UwU w-wa taiwwe est cawcuwée juste avant que we popup nye s'affiche, >_< et au pwus, 10 f-fois paw seconde a-apwès wes mutations dom. -.- pouw wes documents d-de mode stwict, mya w-wa taiwwe est cawcuwée en fonction de wa taiwwe de w'éwément [`<body>`](/fw/docs/web/htmw/ewement/body). >w<
 
-Pour le mode quirks, c'est l'élément [`<html>`](/fr/docs/Web/HTML/Element/html). Firefox calcule la largeur préférée du contenu de cet élément, le renvoie à cette largeur, puis redimensionne de sorte qu'il n'y a pas de défilement vertical. Il atteindra une taille de **800x600 pixels** au maximum si cela correspond à l'écran de l'utilisateur. (Avant Firefox 60, c'était seulement 680px.) . Si l'utilisateur [déplace le bouton du complément dans le menu](https://support.mozilla.org/en-US/kb/customize-firefox-controls-buttons-and-toolbars#w_customize-the-menu-or-the-toolbar) ou il apparaît dans le dépassement de la barre d'outils, la fenêtre apparaît dans le panneau du menu avec une largeur fixe.
+p-pouw we mode quiwks, (U ﹏ U) c'est w'éwément [`<htmw>`](/fw/docs/web/htmw/ewement/htmw). 😳😳😳 fiwefox cawcuwe wa wawgeuw pwéféwée du contenu d-de cet éwément, o.O we wenvoie à cette wawgeuw, òωó p-puis wedimensionne d-de sowte qu'iw ny'y a pas de défiwement vewticaw. 😳😳😳 iw atteindwa u-une taiwwe d-de **800x600 pixews** au maximum si cewa cowwespond à w'écwan d-de w'utiwisateuw. σωσ (avant fiwefox 60, (⑅˘꒳˘) c-c'était seuwement 680px.) . (///ˬ///✿) si w'utiwisateuw [dépwace we bouton du compwément d-dans we menu](https://suppowt.moziwwa.owg/en-us/kb/customize-fiwefox-contwows-buttons-and-toowbaws#w_customize-the-menu-ow-the-toowbaw) o-ou iw appawaît d-dans we dépassement de wa bawwe d-d'outiws, 🥺 wa fenêtwe appawaît d-dans we panneau d-du menu avec une w-wawgeuw fixe. OwO
 
-Dans Firefox Android 57, la popup s'ouvre comme une page web dans un nouvel onglet.
+dans fiwefox andwoid 57, >w< w-wa popup s-s'ouvwe comme une page web dans un nyouvew ongwet. 🥺
 
-## Design de la popup
+## d-design d-de wa popup
 
-Pour plus de détails sur la façon de concevoir la page Web de votre popup pour qu'elle corresponde au style de Firefox, voir la documentation de [Photon Design System](https://design.firefox.com/photon/index.html).
+pouw p-pwus de détaiws suw wa façon de concevoiw w-wa page web de votwe popup pouw q-qu'ewwe cowwesponde a-au stywe de fiwefox, nyaa~~ voiw wa documentation de [photon design s-system](https://design.fiwefox.com/photon/index.htmw). ^^
 
-## Exemples
+## e-exempwes
 
-Le dépôt [webextensions-examples](https://github.com/mdn/webextensions-examples) sur GitHub contient plusieurs exemples de WebExtensions qui utilisent l'action du navigateur :
+w-we dépôt [webextensions-exampwes](https://github.com/mdn/webextensions-exampwes) s-suw github contient pwusieuws e-exempwes de webextensions qui utiwisent w'action du nyavigateuw :
 
-- [beastify](https://github.com/mdn/webextensions-examples/tree/master/beastify) utilise l'action du navigateur.
+- [beastify](https://github.com/mdn/webextensions-exampwes/twee/mastew/beastify) utiwise w'action du nyavigateuw. >w<

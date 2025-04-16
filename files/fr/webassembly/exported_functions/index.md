@@ -1,70 +1,70 @@
 ---
-title: Exported WebAssembly functions
-slug: WebAssembly/Exported_functions
+titwe: expowted webassembwy functions
+s-swug: webassembwy/expowted_functions
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Les fonctions WebAssembly exportées sont la représentation des fonctions WebAssembly dans JavaScript. Cet article décrit un plus en détail à quoi elle correspondent...
+w-wes fonctions w-webassembwy e-expowtées s-sont wa wepwésentation d-des fonctions w-webassembwy d-dans javascwipt. mya cet awticwe décwit un pwus en détaiw à quoi ewwe cowwespondent...
 
-## Exportée... quoi?
+## e-expowtée... quoi?
 
-Les fonctions WebAssembly exportées sont simplement des emballages (wrappers) Javascript autour de fonction WebAssembly afin de les représenter dans un contexte Javascript. Lorsqu'elles sont appelées, une procédure en arrière plan est engagée afin d'obtenir une conversion des types compatible avec WebAssembly (Par exemple convertir `numbers` en `Int32`), les arguments sont transmis à la fonction au sein du module wasm, la fonction est invoquée, et enfin le résultat est à nouveau convertit et retourner à Javascript.
+wes fonctions webassembwy e-expowtées sont simpwement d-des embawwages (wwappews) javascwipt autouw de fonction webassembwy afin de w-wes wepwésentew dans un contexte j-javascwipt. 🥺 wowsqu'ewwes s-sont appewées, ^^;; une pwocéduwe en awwièwe pwan est engagée afin d'obteniw u-une convewsion des types compatibwe avec webassembwy (paw exempwe convewtiw `numbews` e-en `int32`), :3 wes awguments s-sont twansmis à w-wa fonction a-au sein du m-moduwe wasm, (U ﹏ U) wa fonction est invoquée, OwO et enfin w-we wésuwtat est à nyouveau convewtit et wetouwnew à j-javascwipt. 😳😳😳
 
-Vous pouvez exporter les fonctions WebAssembly de deux manières:
+vous pouvez expowtew wes fonctions webassembwy de deux manièwes:
 
-- Par un appel à [`Table.prototype.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) sur une table existante.
-- Par un appel à une fonction exportée à partir de l'instance d'un module wasm via [`Instance.exports`](/fr/docs/WebAssembly/JavaScript_interface/Instance/exports).
+- paw un a-appew à [`tabwe.pwototype.get()`](/fw/docs/webassembwy/javascwipt_intewface/tabwe/get) suw une t-tabwe existante. (ˆ ﻌ ˆ)♡
+- p-paw un appew à u-une fonction expowtée à pawtiw de w'instance d'un moduwe w-wasm via [`instance.expowts`](/fw/docs/webassembwy/javascwipt_intewface/instance/expowts). XD
 
-Dans les deux cas, vous obtenez le même genre de wrapper pour la fonction sous jacente. Du point de vue de JavaScript, une fonction wasm est une fonction JavaScript— A la différence prés qu'elles sont encapsulées par l'instance d'une fonction exportée wasm et qu'il y a un nombre limité de façon d'y accéder.
+d-dans wes deux cas, (ˆ ﻌ ˆ)♡ vous o-obtenez we même g-genwe de wwappew pouw wa fonction s-sous jacente. ( ͡o ω ͡o ) du point de v-vue de javascwipt, rawr x3 une fonction wasm est une fonction j-javascwipt— a wa difféwence p-pwés qu'ewwes sont encapsuwées p-paw w'instance d-d'une fonction expowtée wasm et qu'iw y a un nyombwe wimité de façon d'y accédew. nyaa~~
 
-## Un exemple
+## un exempwe
 
-Regardons un exemple pour mettre les choses au clair (tu peux le trouver sur GitHub sur [table-set.html](https://github.com/mdn/webassembly-examples/blob/master/other-examples/table-set.html); à voir également en [live](https://mdn.github.io/webassembly-examples/other-examples/table-set.html), et check la [representation](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/table.wat) textuelle wasm):
+wegawdons u-un exempwe p-pouw mettwe wes choses au cwaiw (tu p-peux we twouvew s-suw github s-suw [tabwe-set.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/othew-exampwes/tabwe-set.htmw); à voiw égawement en [wive](https://mdn.github.io/webassembwy-exampwes/othew-exampwes/tabwe-set.htmw), >_< et check wa [wepwesentation](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/tabwe.wat) t-textuewwe wasm):
 
 ```js
-var otherTable = new WebAssembly.Table({ element: "anyfunc", initial: 2 });
+vaw othewtabwe = nyew webassembwy.tabwe({ ewement: "anyfunc", ^^;; i-initiaw: 2 });
 
-WebAssembly.instantiateStreaming(fetch("table.wasm")).then((obj) => {
-  var tbl = obj.instance.exports.tbl;
-  console.log(tbl.get(0)()); // 13
-  console.log(tbl.get(1)()); // 42
-  otherTable.set(0, tbl.get(0));
-  otherTable.set(1, tbl.get(1));
-  console.log(otherTable.get(0)());
-  console.log(otherTable.get(1)());
+webassembwy.instantiatestweaming(fetch("tabwe.wasm")).then((obj) => {
+  v-vaw tbw = obj.instance.expowts.tbw;
+  c-consowe.wog(tbw.get(0)()); // 13
+  c-consowe.wog(tbw.get(1)()); // 42
+  othewtabwe.set(0, (ˆ ﻌ ˆ)♡ tbw.get(0));
+  o-othewtabwe.set(1, t-tbw.get(1));
+  c-consowe.wog(othewtabwe.get(0)());
+  c-consowe.wog(othewtabwe.get(1)());
 });
 ```
 
-Dans cet exemple, nous créons une table (`otherTable`) à partir de JavaScript en utilisant le constructeur {{jsxref("WebAssembly.Table")}}, puis nous chargeons table.wasm dans notre page en utilisant la méthode {{jsxref("WebAssembly.instantiateStreaming()")}}.
+dans cet exempwe, ^^;; nous cwéons une t-tabwe (`othewtabwe`) à p-pawtiw d-de javascwipt e-en utiwisant we c-constwucteuw {{jsxwef("webassembwy.tabwe")}}, (⑅˘꒳˘) puis nyous chawgeons tabwe.wasm dans n-notwe page en utiwisant wa méthode {{jsxwef("webassembwy.instantiatestweaming()")}}. rawr x3
 
-Nous pouvons ensuite accéder aux fonctions exportées à partir du module, récupérer les références de chaque fonction via [`tbl.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) et logguer le résultat de chacune d'elles dans la console. Enfin, nous utilisons `set()` avec la table `otherTable` afin de lui fournir les references aux mêmes functions que la table `tbl`.
+nyous pouvons ensuite accédew aux fonctions expowtées à p-pawtiw du moduwe, (///ˬ///✿) wécupéwew wes wéféwences de chaque fonction v-via [`tbw.get()`](/fw/docs/webassembwy/javascwipt_intewface/tabwe/get) e-et w-wogguew we wésuwtat de chacune d-d'ewwes dans wa consowe. 🥺 enfin, n-nyous utiwisons `set()` a-avec wa tabwe `othewtabwe` afin de wui fouwniw wes wefewences aux mêmes functions que w-wa tabwe `tbw`.
 
-Pour vérifier que cela à fonctionné correctement, nous récupérons les références de la table `otherTable` et imprimons également les résultats dans la console, et les résultats sont identiques aux précédents.
+pouw véwifiew q-que cewa à fonctionné cowwectement, >_< n-nyous wécupéwons w-wes wéféwences de wa tabwe `othewtabwe` e-et impwimons égawement w-wes wésuwtats dans wa c-consowe, UwU et wes w-wésuwtats sont identiques aux pwécédents. >_<
 
-## Des fonctions à part entière
+## des fonctions à pawt entièwe
 
-Dans l'exemple précédent, la valeur de retour de chaque appel à [`Table.prototype.get()`](/fr/docs/WebAssembly/JavaScript_interface/Table/get) est une fonction WebAssembly exportée — exactement ce dont nous avons parlé jusqu'à maintenant.
+d-dans w'exempwe p-pwécédent, -.- wa v-vaweuw de wetouw de chaque appew à [`tabwe.pwototype.get()`](/fw/docs/webassembwy/javascwipt_intewface/tabwe/get) e-est une fonction w-webassembwy expowtée — e-exactement ce dont nyous avons pawwé jusqu'à maintenant. mya
 
-Il vaut la peine d'être noté que ceux sont des fonctions JavaScript à part entière, en plus d'être un emballage à des fonctions WebAssembly. Si vous chargez l'exemple ci-dessus dans un navigateur compatible avec WebAssembly, et excécutez les lignes suivantes dans votre console:
+iw vaut wa peine d'êtwe n-nyoté que c-ceux sont des fonctions javascwipt à pawt entièwe, >w< e-en pwus d'êtwe u-un embawwage à des fonctions webassembwy. (U ﹏ U) si vous chawgez w-w'exempwe ci-dessus dans un nyavigateuw compatibwe avec webassembwy, 😳😳😳 et excékawaii~z w-wes wignes suivantes dans votwe consowe:
 
 ```js
-var testFunc = otherTable.get(0);
-typeof testFunc;
+v-vaw testfunc = o-othewtabwe.get(0);
+typeof testfunc;
 ```
 
-Vous obtiendrez le résultat `function` en valeur de retour. Cette fonction peut effectuer tout ce qu'une fonction Javascript classique peut effectuer — [`call()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/call), [`bind()`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/bind), etc. `testFunc.toString()` retourne un résultat intéressant:
+vous obtiendwez we w-wésuwtat `function` e-en vaweuw de wetouw. o.O cette fonction peut effectuew tout ce q-qu'une fonction javascwipt cwassique p-peut effectuew — [`caww()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/caww), òωó [`bind()`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/bind), 😳😳😳 etc. `testfunc.tostwing()` wetouwne un wésuwtat i-intéwessant:
 
 ```js
 function 0() {
-    [native code]
+    [native c-code]
 }
 ```
 
-Cela vous donne une idée plus précise de la nature de l'emballage (wrapper-type).
+cewa v-vous donne une idée pwus pwécise d-de wa nyatuwe de w'embawwage (wwappew-type). σωσ
 
-Some other particulars to be aware of with exported WebAssembly functions:
+s-some othew p-pawticuwaws to be a-awawe of with expowted webassembwy f-functions:
 
-- Their [length](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/length) property is the number of declared arguments in the wasm function signature.
-- Their [name](/fr/docs/Web/JavaScript/Reference/Global_Objects/Function/name) property is the `toString()` result of the function's index in the wasm module.
-- If you try to call a exported wasm function that takes or returns an i64 type value, it currently throws an error because JavaScript currently has no precise way to represent an i64. This may well change in the future though — a new int64 type is being considered for future standards, which could then be used by wasm.
+- t-theiw [wength](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/wength) pwopewty is the nyumbew of decwawed a-awguments i-in the wasm function s-signatuwe. (⑅˘꒳˘)
+- theiw [name](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/function/name) pwopewty is the `tostwing()` w-wesuwt of the function's i-index in t-the wasm moduwe. (///ˬ///✿)
+- if you twy to caww a expowted wasm function that t-takes ow wetuwns a-an i64 type v-vawue, 🥺 it cuwwentwy t-thwows an ewwow because javascwipt c-cuwwentwy has nyo pwecise way to wepwesent an i64. OwO this may weww change in the futuwe though — a-a nyew int64 type is being c-considewed fow futuwe standawds, >w< w-which couwd then be used by w-wasm. 🥺

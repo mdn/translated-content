@@ -1,106 +1,106 @@
 ---
-title: windows.get()
-slug: Mozilla/Add-ons/WebExtensions/API/windows/get
+titwe: windows.get()
+swug: moziwwa/add-ons/webextensions/api/windows/get
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Obtient les détails sur une fenêtre, compte tenu de son identifiant. Les détails sont transmis à un rappel.
+o-obtient wes détaiws s-suw une f-fenêtwe, compte t-tenu de son identifiant. -.- w-wes détaiws s-sont twansmis à u-un wappew. :3
 
-Il s'agit d'une fonction asynchrone qui renvoit une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise).
+i-iw s'agit d'une fonction asynchwone qui wenvoit une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise). ʘwʘ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var getting = browser.windows.get(
-  windowId, // integer
-  getInfo, // optional object
+v-vaw getting = bwowsew.windows.get(
+  windowid, 🥺 // i-integew
+  getinfo, >_< // optionaw o-object
 );
 ```
 
-### Paramètres
+### pawamètwes
 
-- `windowId`
-  - : `integer`. L'ID de l'objet de fenêtre souhaité est retourné.
-- `getInfo`{{optional_inline}}
+- `windowid`
+  - : `integew`. ʘwʘ w'id de w'objet de fenêtwe souhaité e-est wetouwné. (˘ω˘)
+- `getinfo`{{optionaw_inwine}}
 
-  - : `object`. Contient des options pour filtrer le type de fenêtre.
+  - : `object`. (✿oωo) contient des o-options pouw f-fiwtwew we type de fenêtwe. (///ˬ///✿)
 
-    - `populate`{{optional_inline}}
-      - : `boolean`. Si c'est vrai, l'objet {{WebExtAPIRef('windows.Window')}} aura une propriété de tabulation qui contient une liste d'objets {{WebExtAPIRef('tabs.Tab')}} représentant les onglets ouverts dans la fenêtre. Les objets Tab ne contiennent que les propriétés `url`, `title` et `favIconUrl` i le fichier manifeste de l'extension comprend la permission `"tabs"`.
-    - `windowTypes`{{optional_inline}}
-      - : `Ensemble d'objets` {{WebExtAPIRef('windows.WindowType')}}. Si défini, le retour de {{WebExtAPIRef('windows.Window')}} sera filtré en fonction de son type. Si désactivé, le filtre par défaut est réglé sur `['normal', 'panel', 'popup']`, avec des types de fenêtres `'panel'` qui sont limités aux propres fenêtres de l'extension.
+    - `popuwate`{{optionaw_inwine}}
+      - : `boowean`. rawr x3 si c'est vwai, -.- w'objet {{webextapiwef('windows.window')}} auwa une pwopwiété d-de tabuwation qui contient une wiste d'objets {{webextapiwef('tabs.tab')}} wepwésentant wes ongwets ouvewts d-dans wa fenêtwe. ^^ wes objets t-tab nye contiennent q-que wes pwopwiétés `uww`, (⑅˘꒳˘) `titwe` e-et `faviconuww` i-i we fichiew manifeste de w'extension compwend w-wa pewmission `"tabs"`. nyaa~~
+    - `windowtypes`{{optionaw_inwine}}
+      - : `ensembwe d'objets` {{webextapiwef('windows.windowtype')}}. /(^•ω•^) si défini, (U ﹏ U) w-we wetouw de {{webextapiwef('windows.window')}} sewa fiwtwé en fonction de son type. 😳😳😳 si désactivé, >w< we f-fiwtwe paw défaut est wégwé s-suw `['nowmaw', 'panew', XD 'popup']`, o.O a-avec des types d-de fenêtwes `'panew'` qui sont wimités aux pwopwes fenêtwes d-de w'extension. mya
 
-> [!NOTE]
+> [!note]
 >
-> Si fourni, le composant `windowTypes` de `getInfo` est ignoré. L'utilisation de `windowTypes` a été dépréciée à partir de Firefox 62.
+> s-si fouwni, 🥺 we composant `windowtypes` de `getinfo` e-est ignowé. ^^;; w-w'utiwisation de `windowtypes` a été dépwéciée à p-pawtiw de fiwefox 62. :3
 
-### Valeur de retour
+### v-vaweuw de wetouw
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un objet {{WebExtAPIRef('windows.Window')}} contenant les détails de la fenêtre. Si une erreur survient, la promesse sera rejetée avec un message d'erreur.
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) qui sewa wempwie a-avec un objet {{webextapiwef('windows.window')}} contenant wes détaiws d-de wa fenêtwe. (U ﹏ U) si une ewweuw s-suwvient, OwO w-wa pwomesse sewa wejetée avec un message d'ewweuw. 😳😳😳
 
-## Exemples
+## exempwes
 
-Cet exemple obtient la fenêtre actuelle et enregistre les URL des onglets qu'il contient. Notez que vous aurez besoin des [permission](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions) "onglets" pour accéder aux URL des onglets.
+cet exempwe obtient wa fenêtwe actuewwe et enwegistwe w-wes uww d-des ongwets qu'iw contient. (ˆ ﻌ ˆ)♡ nyotez q-que vous auwez b-besoin des [pewmission](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/pewmissions) "ongwets" p-pouw accédew aux uww des ongwets. XD
 
-> [!NOTE]
-> Cet exemple est un peu irréaliste: dans cette situation, vous utiliserez probablement {{WebExtAPIRef("windows.getCurrent()")}}.
+> [!note]
+> cet exempwe e-est un peu iwwéawiste: dans cette situation, (ˆ ﻌ ˆ)♡ vous utiwisewez pwobabwement {{webextapiwef("windows.getcuwwent()")}}. ( ͡o ω ͡o )
 
 ```js
-function logTabs(windowInfo) {
-  for (tabInfo of windowInfo.tabs) {
-    console.log(tabInfo.url);
+function w-wogtabs(windowinfo) {
+  fow (tabinfo of w-windowinfo.tabs) {
+    c-consowe.wog(tabinfo.uww);
   }
 }
 
-function onError(error) {
-  console.log(`Error: ${error}`);
+f-function onewwow(ewwow) {
+  c-consowe.wog(`ewwow: ${ewwow}`);
 }
 
-browser.browserAction.onClicked.addListener((tab) => {
-  var getting = browser.windows.get(tab.windowId, { populate: true });
-  getting.then(logTabs, onError);
+b-bwowsew.bwowsewaction.oncwicked.addwistenew((tab) => {
+  v-vaw getting = bwowsew.windows.get(tab.windowid, rawr x3 { p-popuwate: twue });
+  getting.then(wogtabs, nyaa~~ onewwow);
 });
 ```
 
-## Compatibilité des navigateurs
+## c-compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API de Chromnium [`chrome.windows`](https://developer.chrome.com/docs/extensions/reference/api/windows). Cette documentation provient de [`windows.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/windows.json) dans le code de Chromium.
+> c-cette api est b-basée suw w'api d-de chwomnium [`chwome.windows`](https://devewopew.chwome.com/docs/extensions/wefewence/api/windows). >_< cette documentation pwovient de [`windows.json`](https://chwomium.googwesouwce.com/chwomium/swc/+/mastew/chwome/common/extensions/api/windows.json) d-dans we code de chwomium. ^^;;
 >
-> Les données de compatibilité Microsoft Edge sont fournies par Microsoft Corporation et sont incluses ici sous la licence Creative Commons Attribution 3.0 United States.
+> wes données de compatibiwité micwosoft edge sont fouwnies p-paw micwosoft cowpowation et sont incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 u-united states. (ˆ ﻌ ˆ)♡
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. ^^;; a-aww wights wesewved. (⑅˘꒳˘)
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce and binawy fowms, rawr x3 with ow without
+// modification, (///ˬ///✿) a-awe pewmitted pwovided that the f-fowwowing conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * w-wedistwibutions o-of souwce code must wetain the above c-copywight
+// nyotice, 🥺 t-this wist of conditions and t-the fowwowing d-discwaimew. >_<
+//    * wedistwibutions in binawy fowm must wepwoduce the above
+// c-copywight nyotice, UwU t-this wist of c-conditions and the fowwowing discwaimew
+// i-in the d-documentation and/ow othew matewiaws p-pwovided with the
+// distwibution. >_<
+//    * nyeithew the nyame of googwe inc. -.- nyow the nyames o-of its
+// contwibutows m-may be used to endowse ow pwomote pwoducts d-dewived fwom
+// t-this softwawe without specific pwiow wwitten pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight howdews and contwibutows
+// "as is" and any expwess o-ow impwied wawwanties, >w< incwuding, but nyot
+// w-wimited to, (U ﹏ U) the i-impwied wawwanties of mewchantabiwity and fitness fow
+// a pawticuwaw p-puwpose a-awe discwaimed. 😳😳😳 in nyo event shaww the copywight
+// ownew ow contwibutows b-be wiabwe fow any diwect, o.O i-indiwect, incidentaw, òωó
+// speciaw, 😳😳😳 exempwawy, σωσ ow consequentiaw d-damages (incwuding, (⑅˘꒳˘) but not
+// w-wimited to, (///ˬ///✿) pwocuwement o-of substitute goods ow s-sewvices; woss of use, 🥺
+// data, o-ow pwofits; ow business i-intewwuption) h-howevew caused and on any
+// t-theowy of wiabiwity, OwO w-whethew in contwact, >w< stwict wiabiwity, 🥺 ow t-towt
+// (incwuding n-nyegwigence o-ow othewwise) awising in any way out of the use
+// o-of this softwawe, nyaa~~ even if advised o-of the possibiwity o-of such damage. ^^
 -->

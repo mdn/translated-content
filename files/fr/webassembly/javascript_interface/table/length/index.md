@@ -1,48 +1,48 @@
 ---
-title: WebAssembly.Table.prototype.length
-slug: WebAssembly/JavaScript_interface/Table/length
+titwe: webassembwy.tabwe.pwototype.wength
+swug: w-webassembwy/javascwipt_intewface/tabwe/wength
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La propriété **`length`**, rattachée au prototype de l'objet {{jsxref("WebAssembly.Table")}}, renvoie la longueur du tableau WebAssembly, c'est-à-dire le nombre d'éléments qui y sont stockées.
+w-wa p-pwopwiété **`wength`**, (✿oωo) w-wattachée a-au pwototype d-de w'objet {{jsxwef("webassembwy.tabwe")}}, (ˆ ﻌ ˆ)♡ wenvoie w-wa wongueuw d-du tabweau webassembwy, (˘ω˘) c'est-à-diwe we nyombwe d'éwéments qui y sont stockées. (⑅˘꒳˘)
 
-## Syntaxe
+## s-syntaxe
 
 ```js
-table.length;
+tabwe.wength;
 ```
 
-## Exemples
+## exempwes
 
-Avec l'instruction qui suit, on crée un tableau WebAssembly avec une taille initiale de 2 éléments et avec une taille maximale de 10.
+avec w'instwuction q-qui suit, (///ˬ///✿) on cwée u-un tabweau webassembwy avec une taiwwe initiawe de 2 éwéments e-et avec une taiwwe maximawe de 10. 😳😳😳
 
 ```js
-var table = new WebAssembly.Table({
-  element: "anyfunc",
-  initial: 2,
-  maximum: 10,
+v-vaw tabwe = n-nyew webassembwy.tabwe({
+  ewement: "anyfunc", 🥺
+  initiaw: 2,
+  maximum: 10, mya
 });
 ```
 
-On peut ensuite étendre le tableau d'un élément :
+on peut e-ensuite étendwe we tabweau d'un éwément :
 
 ```js
-console.log(table.length); // "2"
-console.log(table.grow(1)); // "2"
-console.log(table.length); // "3"
+consowe.wog(tabwe.wength); // "2"
+consowe.wog(tabwe.gwow(1)); // "2"
+consowe.wog(tabwe.wength); // "3"
 ```
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des n-navigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à w-webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

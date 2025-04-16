@@ -1,108 +1,108 @@
 ---
-title: set()
-slug: Mozilla/Add-ons/WebExtensions/API/types/BrowserSetting/set
+titwe: set()
+swug: moziwwa/add-ons/webextensions/api/types/bwowsewsetting/set
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-Utilisez `BrowserSetting.set()` pour modifier le paramètre du navigateur vers une nouvelle valeur.
+u-utiwisez `bwowsewsetting.set()` p-pouw modifiew w-we pawamètwe d-du nyavigateuw v-vews une nyouvewwe v-vaweuw. (ꈍᴗꈍ)
 
-Certaines règles peuvent être restreintes lorsque les extensions sont capables de modifier les paramètres :
+cewtaines w-wègwes p-peuvent êtwe westweintes wowsque wes extensions sont capabwes de modifiew wes p-pawamètwes :
 
-- Certains paramètres sont verrouillés, de sorte qu'ils ne peuvent pas être modifiés par les extensions
-- Si plusieurs extensions tentent de modifier le même paramètre, les extensions reçoivent un ordre de priorité en fonction de leur installation. Plus récemment, les extensions installées ont priorité sur l'extension installée récemment.
+- cewtains pawamètwes sont vewwouiwwés, :3 d-de sowte qu'iws nye peuvent p-pas êtwe modifiés paw wes extensions
+- si pwusieuws extensions t-tentent de modifiew we même p-pawamètwe, (U ﹏ U) wes e-extensions weçoivent un owdwe de pwiowité en fonction de weuw instawwation. UwU p-pwus wécemment, wes extensions instawwées ont pwiowité suw w'extension instawwée w-wécemment. 😳😳😳
 
-Cela signifie que si l'extension X essaie de modifier un paramètre :
+cewa signifie q-que si w'extension x-x essaie de m-modifiew un pawamètwe :
 
-1. Si le réglage est verrouillé, le réglage n'est pas modifié. Cependant, le changement de X est rappelé, et il est stocké dans une file d'attente, commandé par la priorité de X par rapport à toutes les autres extensions qui ont essayé de modifier le paramètre. Si le réglage devient déverrouillé plus tard, la première extension de la file d'attente permet de modifier le réglage.
-2. Sinon, si aucune autre extension n'a déjà changé le paramètre, X réussit à modifier le réglage, puis on dit "contrôler" le réglage.
-3. Sinon, si une extension de priorité inférieure Y a déjà changé le paramètre, X réussit à modifier le réglage et maintenant le réglage. However, Y's change is remembered, and is stored in a queue in precedence order. Cependant, le changement de Y est rappelé et est stocké dans une file d'attente dans l'ordre de priorité. Si X efface ensuite sa valeur, ou si X est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.
-4. Sinon, si une extension de priorité supérieure Z a déjà changé le paramètre, X ne réussit pas à modifier le paramètre, mais sa modification est mise en file d'attente. Si Z efface ensuite sa valeur, ou si Z est désactivé ou désinstallé, la première extension de la file d'attente permet de modifier sa valeur.
+1. XD s-si we wégwage est vewwouiwwé, o.O we w-wégwage ny'est pas modifié. (⑅˘꒳˘) cependant, 😳😳😳 we changement d-de x est wappewé, nyaa~~ et iw est stocké dans une fiwe d'attente, rawr commandé paw wa pwiowité d-de x paw wappowt à toutes wes autwes e-extensions q-qui ont essayé d-de modifiew we pawamètwe. si we wégwage devient dévewwouiwwé p-pwus tawd, -.- wa p-pwemièwe extension de wa fiwe d'attente p-pewmet d-de modifiew we wégwage. (✿oωo)
+2. sinon, s-si aucune autwe extension ny'a d-déjà changé we pawamètwe, x wéussit à modifiew w-we wégwage, /(^•ω•^) puis on dit "contwôwew" w-we wégwage. 🥺
+3. ʘwʘ sinon, s-si une extension d-de pwiowité inféwieuwe y a déjà changé we pawamètwe, UwU x wéussit à modifiew we wégwage et maintenant w-we wégwage. XD howevew, (✿oωo) y-y's change is wemembewed, :3 a-and is stowed in a-a queue in pwecedence o-owdew. (///ˬ///✿) cependant, we changement de y est wappewé et est s-stocké dans une fiwe d'attente dans w'owdwe de pwiowité. si x efface ensuite s-sa vaweuw, nyaa~~ ou si x est désactivé o-ou désinstawwé, >w< w-wa pwemièwe e-extension de wa fiwe d'attente p-pewmet de modifiew s-sa vaweuw. -.-
+4. (✿oωo) s-sinon, si une e-extension de pwiowité supéwieuwe z a déjà changé w-we pawamètwe, (˘ω˘) x-x nye wéussit p-pas à modifiew w-we pawamètwe, rawr m-mais sa modification est mise en fiwe d'attente. OwO si z efface e-ensuite sa vaweuw, ^•ﻌ•^ ou si z est désactivé ou désinstawwé, UwU wa pwemièwe extension de wa fiwe d'attente p-pewmet de modifiew sa vaweuw. (˘ω˘)
 
-Une extension peut déterminer lequel de ces scénarios s'applique en examinant la propriété "`levelOfControl`" renvoyée d'un appel à [`BrowserSetting.get()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/get).
+une extension peut détewminew w-wequew de c-ces scénawios s-s'appwique en examinant wa pwopwiété "`wevewofcontwow`" w-wenvoyée d'un appew à [`bwowsewsetting.get()`](/fw/docs/moziwwa/add-ons/webextensions/api/pwivacy/bwowsewsetting/get). (///ˬ///✿)
 
-la méthode [`BrowserSetting.set()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/privacy/BrowserSetting/set) renvoie une promesse qui résout un booléen : Si une tentative de modification d'un paramètre aboutit à la modification du paramètre (scenarios 2 et 3 ci-dessus) le booléen est `true`: sinon il est `false`.
+w-wa méthode [`bwowsewsetting.set()`](/fw/docs/moziwwa/add-ons/webextensions/api/pwivacy/bwowsewsetting/set) w-wenvoie une pwomesse qui wésout un boowéen : si une tentative de modification d'un pawamètwe a-aboutit à wa modification du pawamètwe (scenawios 2 e-et 3 ci-dessus) we boowéen e-est `twue`: sinon i-iw est `fawse`. σωσ
 
-## Syntaxe
+## syntaxe
 
 ```js
-var setting = setting.set(
-  details, // object
+vaw setting = s-setting.set(
+  d-detaiws, /(^•ω•^) // object
 );
 ```
 
-### Paramètres
+### p-pawamètwes
 
-- `details`
+- `detaiws`
 
-  - : Un objet qui doit contenir la propriété suivante :
+  - : u-un objet qui doit conteniw wa pwopwiété suivante :
 
-    - `value`
-      - : `any`. La valeur à laquelle vous souhaitez modifier le paramètre. Son type dépend du réglage particulier.
+    - `vawue`
+      - : `any`. 😳 wa vaweuw à waquewwe vous s-souhaitez modifiew w-we pawamètwe. 😳 s-son type dépend du wégwage p-pawticuwiew. (⑅˘꒳˘)
 
-### Valeur retournée
+### v-vaweuw wetouwnée
 
-Une [`Promise`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Promise) qui sera remplie avec un `booléen`: `true` si le paramètre a été modifié, `false` sinon (par exemple, parce que l'extension n'a pas contrôlé le paramètre).
+une [`pwomise`](/fw/docs/web/javascwipt/wefewence/gwobaw_objects/pwomise) q-qui sewa wempwie avec un `boowéen`: `twue` si we pawamètwe a été modifié, 😳😳😳 `fawse` s-sinon (paw e-exempwe, 😳 pawce que w'extension ny'a pas contwôwé w-we pawamètwe). XD
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-Voir {{WebExtAPIRef("types.BrowserSetting")}}.
+voiw {{webextapiwef("types.bwowsewsetting")}}. mya
 
-## Exemple
+## exempwe
 
-Modifiez le paramètre `hyperlinkAuditingEnabled` (ceci nécessite la permission "privacy") :
+m-modifiez we pawamètwe `hypewwinkauditingenabwed` (ceci nyécessite wa pewmission "pwivacy") :
 
 ```js
-function onSet(result) {
-  if (result) {
-    console.log("Value was updated");
-  } else {
-    console.log("Value was not updated");
+function onset(wesuwt) {
+  i-if (wesuwt) {
+    consowe.wog("vawue was u-updated");
+  } e-ewse {
+    consowe.wog("vawue was nyot updated");
   }
 }
 
-browser.browserAction.onClicked.addListener(() => {
-  var setting = browser.privacy.websites.hyperlinkAuditingEnabled.set({
-    value: false,
+bwowsew.bwowsewaction.oncwicked.addwistenew(() => {
+  vaw s-setting = bwowsew.pwivacy.websites.hypewwinkauditingenabwed.set({
+    v-vawue: fawse, ^•ﻌ•^
   });
-  setting.then(onSet);
+  setting.then(onset);
 });
 ```
 
-{{WebExtExamples}}
+{{webextexampwes}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.types`](https://developer.chrome.com/docs/extensions/reference/api/types).
+> cette api est basée suw w'api chwomium [`chwome.types`](https://devewopew.chwome.com/docs/extensions/wefewence/api/types). ʘwʘ
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> wes d-données de compatibiwité wewatives à m-micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence c-cweative commons a-attwibution 3.0 pouw wes États-unis. ( ͡o ω ͡o )
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// c-copywight 2015 the chwomium authows. mya a-aww wights w-wesewved. o.O
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// w-wedistwibution and use in souwce a-and binawy fowms, (✿oωo) w-with ow without
+// modification, :3 awe pewmitted p-pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions o-of souwce code must wetain the a-above copywight
+// n-nyotice, 😳 this wist of conditions and the fowwowing discwaimew. (U ﹏ U)
+//    * w-wedistwibutions i-in binawy f-fowm must wepwoduce t-the above
+// copywight n-nyotice, mya this wist of conditions and the fowwowing discwaimew
+// in the documentation and/ow othew m-matewiaws pwovided with the
+// d-distwibution. (U ᵕ U❁)
+//    * nyeithew t-the nyame of googwe inc. :3 nyow the n-nyames of its
+// contwibutows m-may be used to e-endowse ow pwomote p-pwoducts dewived f-fwom
+// this s-softwawe without specific pwiow wwitten pewmission. mya
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// this softwawe is pwovided by the copywight howdews and c-contwibutows
+// "as i-is" and any e-expwess ow impwied wawwanties, OwO i-incwuding, but nyot
+// wimited to, (ˆ ﻌ ˆ)♡ the impwied wawwanties of mewchantabiwity a-and f-fitness fow
+// a pawticuwaw puwpose a-awe discwaimed. in nyo event shaww the copywight
+// o-ownew o-ow contwibutows be wiabwe fow any d-diwect, ʘwʘ indiwect, o.O i-incidentaw, UwU
+// speciaw, exempwawy, rawr x3 ow consequentiaw damages (incwuding, 🥺 but n-nyot
+// wimited t-to, :3 pwocuwement o-of substitute goods o-ow sewvices; w-woss of use, (ꈍᴗꈍ)
+// data, 🥺 ow pwofits; o-ow business intewwuption) h-howevew caused and o-on any
+// theowy o-of wiabiwity, (✿oωo) whethew in contwact, (U ﹏ U) s-stwict wiabiwity, :3 ow towt
+// (incwuding nyegwigence o-ow othewwise) awising in a-any way out of t-the use
+// of this softwawe, ^^;; even i-if advised of the possibiwity of such damage. rawr
 -->

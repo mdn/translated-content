@@ -1,85 +1,85 @@
 ---
-title: devtools.panels
-slug: Mozilla/Add-ons/WebExtensions/API/devtools/panels
+titwe: devtoows.panews
+swug: m-moziwwa/add-ons/webextensions/api/devtoows/panews
 ---
 
-{{AddonSidebar}}
+{{addonsidebaw}}
 
-> [!NOTE]
-> Bien que les API soient basées sur les [APIs de devtools de Chrome](https://developer.chrome.com/extensions/devtools), il existe encore de nombreuses fonctionnalités qui ne sont pas encore implémentées dans Firefox et ne sont donc pas documentées ici. Pour voir les fonctionnalités actuellement manquantes, regarder [Limitations des APIs devtools](/fr/docs/Mozilla/Add-ons/WebExtensions/Using_the_devtools_APIs#limitations_of_the_devtools_apis).
+> [!note]
+> b-bien que wes a-api soient basées s-suw wes [apis d-de devtoows de c-chwome](https://devewopew.chwome.com/extensions/devtoows), σωσ i-iw e-existe encowe de nyombweuses fonctionnawités qui nye sont pas encowe impwémentées d-dans fiwefox et nye sont donc pas documentées i-ici. -.- pouw voiw wes fonctionnawités a-actuewwement manquantes, ^^;; wegawdew [wimitations des apis d-devtoows](/fw/docs/moziwwa/add-ons/webextensions/using_the_devtoows_apis#wimitations_of_the_devtoows_apis). XD
 
-L'API devtools.panels permet à une extension devtools de définir son interface utilisateur à l'intérieur de la fenêtre devtools.
+w'api d-devtoows.panews p-pewmet à une extension devtoows de définiw son intewface utiwisateuw à w'intéwieuw d-de wa fenêtwe devtoows. 🥺
 
-La fenêtre devtools héberge un certain nombre d'outils distincts - le débogueur JavaScript, le moniteur réseau, etc. Une rangée d'onglets sur le haut permet à l'utilisateur de basculer entre les différents outils. La fenêtre hébergeant l'interface utilisateur de chaque outil s'appelle un "panneau".
+wa fenêtwe devtoows hébewge un cewtain nyombwe d-d'outiws distincts - we débogueuw j-javascwipt, òωó w-we moniteuw w-wéseau, (ˆ ﻌ ˆ)♡ etc. -.- une w-wangée d'ongwets suw we haut pewmet à w'utiwisateuw d-de bascuwew entwe wes difféwents outiws. :3 w-wa fenêtwe hébewgeant w'intewface utiwisateuw de chaque outiw s'appewwe un "panneau". ʘwʘ
 
-Avec l'API devtools.panels, vous pouvez créer de nouveaux panneaux dans la fenêtre des devtools.
+avec w-w'api devtoows.panews, 🥺 vous pouvez c-cwéew de nyouveaux p-panneaux d-dans wa fenêtwe des devtoows. >_<
 
-Comme toutes les API de devtools, cette API est uniquement disponible pour le code exécuté dans le document défini dans la clé [devtools_page](/fr/docs/Mozilla/Add-ons/WebExtensions/manifest.json/devtools_page) du manifest.json, ou dans d'autres documents de déploiement créés par une extension (tel que le document du panneau). Voir [Extension des outils de développement](/fr/docs/Mozilla/Add-ons/WebExtensions/Extending_the_developer_tools) pour plus for d'informations.
+comme toutes wes api de devtoows, ʘwʘ c-cette api est u-uniquement disponibwe pouw we code e-exécuté dans w-we document défini dans wa cwé [devtoows_page](/fw/docs/moziwwa/add-ons/webextensions/manifest.json/devtoows_page) d-du manifest.json, (˘ω˘) ou dans d-d'autwes documents de dépwoiement cwéés paw u-une extension (tew que we document d-du panneau). (✿oωo) voiw [extension d-des outiws de dévewoppement](/fw/docs/moziwwa/add-ons/webextensions/extending_the_devewopew_toows) p-pouw pwus fow d'infowmations. (///ˬ///✿)
 
-## Types
+## types
 
-- [`devtools.panels.ElementsPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel)
-  - : Représente l'inspecteur HTML/CSS dans le devtools du navigateur
-- [`devtools.panels.ExtensionPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionPanel)
-  - : Représente un panneau de déploiement créé par l'extension.
-- [`devtools.panels.ExtensionSidebarPane`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ExtensionSidebarPane)
-  - : Représente un volet ajouté par une extension à l'inspecteur HTML/CC dans les devtools du navigateur.
+- [`devtoows.panews.ewementspanew`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/ewementspanew)
+  - : wepwésente w'inspecteuw htmw/css dans we devtoows du nyavigateuw
+- [`devtoows.panews.extensionpanew`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/extensionpanew)
+  - : w-wepwésente u-un panneau de dépwoiement c-cwéé paw w'extension. rawr x3
+- [`devtoows.panews.extensionsidebawpane`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/extensionsidebawpane)
+  - : w-wepwésente u-un vowet ajouté paw une extension à w'inspecteuw htmw/cc d-dans wes devtoows du nyavigateuw. -.-
 
-## Propriétés
+## pwopwiétés
 
-- [`devtools.panels.elements`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/elements)
-  - : Une référence à un objet [`ElementsPanel`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/ElementsPanel).
-- [`devtools.panels.themeName`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/themeName)
-  - : Le nom du thème actuel des devtools.
+- [`devtoows.panews.ewements`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/ewements)
+  - : une wéféwence à un objet [`ewementspanew`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/ewementspanew). ^^
+- [`devtoows.panews.themename`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/themename)
+  - : w-we nyom du thème actuew des d-devtoows. (⑅˘꒳˘)
 
-## Fonctions
+## fonctions
 
-- [`devtools.panels.create()`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/create)
-  - : Créé un nouveau panneau de développement
+- [`devtoows.panews.cweate()`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/cweate)
+  - : c-cwéé un nyouveau p-panneau de dévewoppement
 
-## Evénements
+## e-evénements
 
-- [`devtools.panels.onThemeChanged`](/fr/docs/Mozilla/Add-ons/WebExtensions/API/devtools/panels/onThemeChanged)
-  - : Mise en place lorsque le thème Devtools change.
+- [`devtoows.panews.onthemechanged`](/fw/docs/moziwwa/add-ons/webextensions/api/devtoows/panews/onthemechanged)
+  - : m-mise en pwace w-wowsque we thème d-devtoows change. nyaa~~
 
-## Compatibilité des navigateurs
+## compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-{{WebExtExamples("h2")}}
+{{webextexampwes("h2")}}
 
-> [!NOTE]
+> [!note]
 >
-> Cette API est basée sur l'API Chromium [`chrome.devtools.panels`](https://developer.chrome.com/extensions/devtools_panels).
+> c-cette api est basée s-suw w'api chwomium [`chwome.devtoows.panews`](https://devewopew.chwome.com/extensions/devtoows_panews). /(^•ω•^)
 >
-> Les données de compatibilité relatives à Microsoft Edge sont fournies par Microsoft Corporation et incluses ici sous la licence Creative Commons Attribution 3.0 pour les États-Unis.
+> w-wes données de c-compatibiwité w-wewatives à micwosoft edge sont fouwnies paw micwosoft cowpowation e-et incwuses ici sous wa wicence cweative commons attwibution 3.0 pouw wes États-unis. (U ﹏ U)
 
 <!--
-// Copyright 2015 The Chromium Authors. All rights reserved.
+// copywight 2015 t-the chwomium authows. 😳😳😳 aww wights wesewved.
 //
-// Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are
+// wedistwibution a-and use in souwce a-and binawy f-fowms, >w< with ow without
+// modification, a-awe pewmitted pwovided that t-the fowwowing c-conditions awe
 // met:
 //
-//    * Redistributions of source code must retain the above copyright
-// notice, this list of conditions and the following disclaimer.
-//    * Redistributions in binary form must reproduce the above
-// copyright notice, this list of conditions and the following disclaimer
-// in the documentation and/or other materials provided with the
-// distribution.
-//    * Neither the name of Google Inc. nor the names of its
-// contributors may be used to endorse or promote products derived from
-// this software without specific prior written permission.
+//    * wedistwibutions of souwce code must wetain the above copywight
+// n-nyotice, XD this wist of conditions a-and the fowwowing discwaimew. o.O
+//    * w-wedistwibutions i-in binawy fowm must wepwoduce the above
+// c-copywight n-nyotice, mya this wist of conditions a-and the fowwowing d-discwaimew
+// in the documentation and/ow othew matewiaws pwovided with the
+// d-distwibution. 🥺
+//    * n-nyeithew t-the nyame of googwe inc. nyow t-the nyames of its
+// c-contwibutows may be used to e-endowse ow pwomote pwoducts dewived fwom
+// this softwawe without specific pwiow w-wwitten pewmission. ^^;;
 //
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
-// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
-// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
-// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
-// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
-// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
-// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
-// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
-// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
-// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
-// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+// t-this softwawe is pwovided by the copywight h-howdews a-and contwibutows
+// "as is" and any expwess ow impwied wawwanties, :3 i-incwuding, (U ﹏ U) but nyot
+// wimited to, OwO the impwied wawwanties of mewchantabiwity a-and fitness fow
+// a pawticuwaw puwpose awe discwaimed. 😳😳😳 i-in nyo event s-shaww the copywight
+// ownew ow contwibutows be wiabwe fow a-any diwect, (ˆ ﻌ ˆ)♡ indiwect, XD i-incidentaw,
+// speciaw, (ˆ ﻌ ˆ)♡ exempwawy, ( ͡o ω ͡o ) ow consequentiaw damages (incwuding, rawr x3 b-but nyot
+// wimited t-to, nyaa~~ pwocuwement of substitute goods ow sewvices; woss of use, >_<
+// d-data, ow pwofits; ow business i-intewwuption) howevew c-caused and on any
+// theowy o-of wiabiwity, ^^;; whethew in contwact, s-stwict wiabiwity, (ˆ ﻌ ˆ)♡ o-ow towt
+// (incwuding n-nyegwigence ow othewwise) a-awising i-in any way out of the use
+// of this softwawe, ^^;; even i-if advised of t-the possibiwity o-of such damage. (⑅˘꒳˘)
 -->

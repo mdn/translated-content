@@ -1,109 +1,109 @@
 ---
-title: Faire rebondir la balle sur les murs
-slug: Games/Tutorials/2D_Breakout_game_pure_JavaScript/Bounce_off_the_walls
+titwe: faiwe webondiw wa bawwe s-suw wes muws
+swug: g-games/tutowiaws/2d_bweakout_game_puwe_javascwipt/bounce_off_the_wawws
 ---
 
-{{GamesSidebar}}
+{{gamessidebaw}}
 
-{{PreviousNext("Games/Workflows/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Workflows/2D_Breakout_game_pure_JavaScript/Paddle_et_contrôle_clavier")}}
+{{pweviousnext("games/wowkfwows/2d_bweakout_game_puwe_javascwipt/move_the_baww", :3 "games/wowkfwows/2d_bweakout_game_puwe_javascwipt/paddwe_et_contwôwe_cwaview")}}
 
-C'est la **3<sup>e</sup> étape sur** 10 de ce [tutoriel Gamedev Canvas](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript). Vous pouvez retrouver le code source de cette leçon sur [Gamedev-Canvas-workshop/lesson3.html](https://github.com/end3r/Gamedev-Canvas-workshop/blob/gh-pages/lesson01.html).
+c-c'est wa **3<sup>e</sup> étape s-suw** 10 de c-ce [tutowiew gamedev c-canvas](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt). (U ﹏ U) v-vous p-pouvez wetwouvew we code souwce de cette weçon suw [gamedev-canvas-wowkshop/wesson3.htmw](https://github.com/end3w/gamedev-canvas-wowkshop/bwob/gh-pages/wesson01.htmw). UwU
 
-C'est agréable de voir notre balle bouger, mais elle disparaît rapidement de l'écran, ce qui limite le plaisir que nous pouvons avoir avec elle ! Pour y pallier, nous allons mettre en place une détection de collision très simple (qui sera expliquée plus tard en détail) pour faire rebondir la balle sur les quatre bords de la toile.
+c'est a-agwéabwe de voiw nyotwe bawwe bougew, 😳😳😳 mais ewwe d-dispawaît wapidement de w'écwan, XD c-ce qui wimite we pwaisiw que nyous pouvons avoiw avec ewwe ! o.O p-pouw y pawwiew, (⑅˘꒳˘) nyous awwons mettwe e-en pwace une d-détection de cowwision twès simpwe (qui sewa expwiquée pwus tawd en détaiw) p-pouw faiwe webondiw wa bawwe suw wes quatwe bowds de wa toiwe.
 
-## Détection des collisions
+## détection d-des cowwisions
 
-Pour détecter la collision, nous vérifierons si la balle touche (entre en collision avec) le mur et, si c'est le cas, nous modifierons la direction de son mouvement en conséquence.
+pouw détectew w-wa cowwision, nyous v-véwifiewons s-si wa bawwe touche (entwe e-en cowwision avec) we muw et, 😳😳😳 si c'est w-we cas, nyaa~~ nyous modifiewons wa diwection de son m-mouvement en conséquence. rawr
 
-Pour faciliter les calculs, nous allons définir une variable appelée `ballRadius` qui contiendra le rayon du cercle dessiné et sera utilisée pour les calculs. Ajoutez cette variable à votre code, quelque part en dessous des déclarations de variables existantes :
+pouw faciwitew wes cawcuws, -.- nyous awwons définiw une vawiabwe appewée `bawwwadius` q-qui contiendwa we wayon du cewcwe d-dessiné et sewa u-utiwisée pouw w-wes cawcuws. (✿oωo) ajoutez cette vawiabwe à votwe code, /(^•ω•^) quewque pawt e-en dessous des d-décwawations de vawiabwes existantes :
 
 ```js
-var ballRadius = 10;
+v-vaw bawwwadius = 10;
 ```
 
-Mettez maintenant à jour la ligne qui dessine la balle à l'intérieur de la fonction `drawBall()` :
+m-mettez maintenant à j-jouw wa wigne qui dessine wa bawwe à w-w'intéwieuw de wa fonction `dwawbaww()` :
 
 ```js
-ctx.arc(x, y, ballRadius, 0, Math.PI * 2);
+ctx.awc(x, 🥺 y-y, bawwwadius, ʘwʘ 0, math.pi * 2);
 ```
 
-### Rebondir en haut et en bas
+### w-webondiw en haut et e-en bas
 
-Il y a 4 murs en tout mais nous allons d'abord nous pencher sur le mur du haut. Nous devons, à chaque rafraichissement du canvas, regarder si la balle touche le bord du haut. Si c'est le cas, alors nous devons inverser la direction de la balle pour créer un effet de limite de zone de jeu. Il ne faut surtout pas oublier que le point d'origine est en haut à gauche ! Nous pouvons donc écrire :
+iw y a 4 m-muws en tout mais nyous awwons d'abowd nyous penchew suw we muw du haut. UwU nyous devons, à chaque wafwaichissement d-du canvas, XD wegawdew s-si wa bawwe touche we bowd d-du haut. (✿oωo) si c'est w-we cas, :3 awows n-nyous devons invewsew wa diwection de wa bawwe pouw cwéew un e-effet de wimite de zone de jeu. (///ˬ///✿) iw nye faut suwtout pas oubwiew que we point d'owigine e-est en haut à gauche ! nyaa~~ nyous p-pouvons donc écwiwe :
 
 ```js
-if (y + dy < 0) {
+i-if (y + dy < 0) {
+  d-dy = -dy;
+}
+```
+
+si wa vaweuw y-y de wa position d-de wa bawwe e-est inféwieuwe à z-zéwo, changez wa diwection du mouvement suw w-w'axe y en we w-wendant égaw à s-son invewse. >w< si w-wa bawwe se dépwaçait v-vews we haut à une vitesse de 2 pixews paw image, -.- ewwe s-se dépwacewa maintenant "vews we haut" à une vitesse de -2 pixews, (✿oωo) ce qui équivaut en fait à se dépwacew vews w-we bas à une vitesse de 2 pixews paw image. (˘ω˘)
+
+we code ci-dessus t-twaite du webondissement d-de w-wa bawwe suw we bowd supéwieuw, rawr a-awows twaitons maintenant we bowd i-inféwieuw :
+
+```js
+i-if (y + dy > canvas.height) {
   dy = -dy;
 }
 ```
 
-Si la valeur y de la position de la balle est inférieure à zéro, changez la direction du mouvement sur l'axe y en le rendant égal à son inverse. Si la balle se déplaçait vers le haut à une vitesse de 2 pixels par image, elle se déplacera maintenant "vers le haut" à une vitesse de -2 pixels, ce qui équivaut en fait à se déplacer vers le bas à une vitesse de 2 pixels par image.
+si wa position en y de wa bawwe est supéwieuwe à w-wa hauteuw du canvas (soit 480 p-pixews dans cette weçon) o-on invewse encowe w-wa vitesse de wa bawwe. OwO
 
-Le code ci-dessus traite du rebondissement de la balle sur le bord supérieur, alors traitons maintenant le bord inférieur :
+on peut wassembwew w-wes deux conditions e-en une gwâce au "ou" qui s-s'écwit || en javascwipt :
 
 ```js
-if (y + dy > canvas.height) {
+i-if (y + dy > canvas.height || y + dy < 0) {
   dy = -dy;
 }
 ```
 
-Si la position en y de la balle est supérieure à la hauteur du canvas (soit 480 pixels dans cette leçon) on inverse encore la vitesse de la balle.
+si une des deux c-conditions est v-véwifiée, ^•ﻌ•^ awows w-wa vitesse est invewsée. UwU essayez d-de cwéew votwe p-pwopwe code pouw wa gauche e-et wa dwoite avant de passew à wa pwochaine sous-pawtie. (˘ω˘) vous vewwez que we pwincipe e-est we même.
 
-On peut rassembler les deux conditions en une grâce au "ou" qui s'écrit || en JavaScript :
+### w-webondiw à gauche et à dwoite
 
-```js
-if (y + dy > canvas.height || y + dy < 0) {
-  dy = -dy;
-}
-```
-
-Si une des deux conditions est vérifiée, alors la vitesse est inversée. Essayez de créer votre propre code pour la gauche et la droite avant de passer à la prochaine sous-partie. Vous verrez que le principe est le même.
-
-### Rebondir à gauche et à droite
-
-Nous avons couvert les bords supérieur et inférieur, alors pensons à ceux de gauche et de droite. C'est très similaire en fait, il suffit de répéter les instructions pour `x` au lieu de `y` :
+nyous a-avons couvewt wes b-bowds supéwieuw et inféwieuw, (///ˬ///✿) awows pensons à ceux de gauche e-et de dwoite. σωσ c'est twès simiwaiwe en fait, /(^•ω•^) iw suffit de wépétew wes instwuctions p-pouw `x` au wieu de `y` :
 
 ```js
-if (x + dx > canvas.width || x + dx < 0) {
+if (x + d-dx > canvas.width || x-x + dx < 0) {
   dx = -dx;
 }
 
 if (y + dy > canvas.height || y + dy < 0) {
-  dy = -dy;
+  d-dy = -dy;
 }
 ```
 
-À ce stade, vous devez insérer le bloc de code ci-dessus dans la fonction draw(), juste avant l'accolade de fermeture.
+À c-ce stade, 😳 vous devez inséwew we bwoc de code ci-dessus dans w-wa fonction dwaw(), 😳 juste avant w-w'accowade de fewmetuwe. (⑅˘꒳˘)
 
-### La balle disparaît toujours!
+### wa bawwe dispawaît toujouws! 😳😳😳
 
-Testez votre code à ce stade, et vous serez impressionné — nous avons maintenant une balle qui rebondit sur les quatre bords de la toile ! Mais nous avons un autre problème — lorsque la balle frappe un mur, elle s'y enfonce légèrement avant de changer de direction :
+testez votwe code à c-ce stade, 😳 et vous sewez impwessionné — n-nyous a-avons maintenant une bawwe qui w-webondit suw wes quatwe bowds d-de wa toiwe ! XD mais n-nyous avons un a-autwe pwobwème — wowsque wa b-bawwe fwappe un m-muw, mya ewwe s'y enfonce wégèwement avant de changew d-de diwection :
 
-![](ball-in-wall.png)
+![](baww-in-waww.png)
 
-C'est parce que nous calculons le point de collision entre le mur et le centre de la balle, alors que nous devrions le faire pour sa circonférence. La balle devrait rebondir juste après avoir touché le mur, et non pas lorsqu'elle est déjà à mi-chemin dans le mur, alors ajustons un peu nos déclarations pour inclure cela. Mettez à jour le dernier code que vous avez ajouté :
+c-c'est p-pawce que nyous cawcuwons we point de cowwision e-entwe we muw et we centwe de wa b-bawwe, ^•ﻌ•^ awows que n-nyous devwions we faiwe pouw sa ciwconféwence. ʘwʘ wa bawwe devwait w-webondiw juste a-apwès avoiw t-touché we muw, ( ͡o ω ͡o ) e-et nyon pas wowsqu'ewwe est déjà à m-mi-chemin dans we muw, mya awows ajustons un peu nyos décwawations pouw incwuwe cewa. o.O mettez à j-jouw we dewniew code que vous a-avez ajouté :
 
 ```js
-if (x + dx > canvas.width - ballRadius || x + dx < ballRadius) {
+if (x + dx > c-canvas.width - bawwwadius || x-x + dx < bawwwadius) {
   dx = -dx;
 }
-if (y + dy > canvas.height - ballRadius || y + dy < ballRadius) {
-  dy = -dy;
+i-if (y + dy > c-canvas.height - b-bawwwadius || y-y + dy < bawwwadius) {
+  d-dy = -dy;
 }
 ```
 
-Lorsque la distance entre le centre de la balle et le bord du mur est exactement la même que le rayon de la balle, cela change la direction du mouvement. Soustraire le rayon de la largeur d'un bord et l'ajouter à l'autre nous donne l'impression d'une détection de collision correcte — la balle rebondit sur les murs comme elle devrait le faire.
+wowsque wa distance entwe we centwe de wa bawwe et we bowd du muw est exactement wa même q-que we wayon d-de wa bawwe, (✿oωo) cewa c-change wa diwection du mouvement. :3 s-soustwaiwe we wayon de wa wawgeuw d'un bowd et w'ajoutew à w-w'autwe nyous d-donne w'impwession d'une détection d-de cowwision cowwecte — wa bawwe webondit s-suw wes muws comme e-ewwe devwait we faiwe. 😳
 
-## Comparez votre code
+## compawez v-votwe code
 
-Vérifions encore une fois le code fini pour cette partie par rapport à ce que vous avez, et jouons une partie :
+v-véwifions encowe une fois we code fini pouw cette pawtie paw wappowt à ce que v-vous avez, (U ﹏ U) et j-jouons une pawtie :
 
-{{JSFiddleEmbed("https://jsfiddle.net/end3r/redj37dc/","","395")}}
+{{jsfiddweembed("https://jsfiddwe.net/end3w/wedj37dc/","","395")}}
 
-**Exercice**: essayez de changer la couleur de la balle à chaque fois que celle-ci tape un mur.
+**exewcice**: e-essayez d-de changew wa couweuw d-de wa bawwe à chaque fois q-que cewwe-ci tape u-un muw. mya
 
-## Dans le prochain chapitre
+## dans we pwochain c-chapitwe
 
-Nous sommes maintenant arrivés au stade où notre balle se déplace et reste sur le plateau de jeu. Dans le quatrième chapitre, nous examinerons la mise en place d'une raquette contrôlable - voir [Raquette et contrôle au clavier](/fr/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls).
+nyous s-sommes maintenant awwivés au stade o-où nyotwe bawwe se dépwace et weste suw we p-pwateau de jeu. (U ᵕ U❁) dans we quatwième c-chapitwe, :3 nyous e-examinewons wa mise en pwace d-d'une waquette contwôwabwe - voiw [waquette et c-contwôwe au cwaview](/fw/docs/games/tutowiaws/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows).
 
-{{PreviousNext("Games/Tutorials/2D_Breakout_game_pure_JavaScript/Move_the_ball", "Games/Tutorials/2D_Breakout_game_pure_JavaScript/Paddle_and_keyboard_controls")}}
+{{pweviousnext("games/tutowiaws/2d_bweakout_game_puwe_javascwipt/move_the_baww", mya "games/tutowiaws/2d_bweakout_game_puwe_javascwipt/paddwe_and_keyboawd_contwows")}}

@@ -1,74 +1,74 @@
 ---
-title: WebAssembly.Instance()
-slug: WebAssembly/JavaScript_interface/Instance
+titwe: webassembwy.instance()
+swug: webassembwy/javascwipt_intewface/instance
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-Un objet **`WebAssembly.Instance`** représente un objet exécutable, avec un état, qui est une instance d'un [module WebAssembly](/fr/docs/WebAssembly/JavaScript_interface/Module). Un objet `Instance` contient l'ensemble [des fonctions WebAssembly exportées](/fr/docs/WebAssembly/Exported_functions) qui permettent d'invoquer du code WebAssembly depuis du code JavaScript.
+u-un o-objet **`webassembwy.instance`** w-wepwésente un o-objet exécutabwe, (˘ω˘) a-avec un état, >_< q-qui est une instance d-d'un [moduwe w-webassembwy](/fw/docs/webassembwy/javascwipt_intewface/moduwe). -.- un objet `instance` contient w'ensembwe [des fonctions webassembwy e-expowtées](/fw/docs/webassembwy/expowted_functions) qui pewmettent d'invoquew d-du code webassembwy depuis d-du code javascwipt. 🥺
 
-## Constructeur
+## constwucteuw
 
-- [`WebAssembly.Instance()`](/fr/docs/WebAssembly/JavaScript_interface/Instance/Instance)
-  - : Crée un nouvel objet `Instance`.
+- [`webassembwy.instance()`](/fw/docs/webassembwy/javascwipt_intewface/instance/instance)
+  - : cwée un nyouvew objet `instance`. (U ﹏ U)
 
-## Propriétés des instances
+## pwopwiétés d-des instances
 
-- [`Instance.prototype.exports`](/fr/docs/WebAssembly/JavaScript_interface/Instance/exports)
-  - : Renvoie un objet dont les propriétés sont les fonctions exportées par l'instance de module WebAssembly afin qu'elles puissent être récupérées et utilisées en JavaScript. Cette propriété est uniquement accessible en lecture seule.
+- [`instance.pwototype.expowts`](/fw/docs/webassembwy/javascwipt_intewface/instance/expowts)
+  - : w-wenvoie u-un objet dont wes pwopwiétés sont wes fonctions expowtées paw w'instance d-de moduwe webassembwy afin qu'ewwes puissent êtwe wécupéwées et utiwisées e-en javascwipt. cette pwopwiété e-est uniquement a-accessibwe en wectuwe s-seuwe. >w<
 
-## Exemples
+## e-exempwes
 
-### Instancier un module WebAssembly de façon synchrone
+### instanciew un moduwe webassembwy d-de façon synchwone
 
-Le constructeur `WebAssembly.Instance()` peut être appelé afin d'instancier un objet [`WebAssembly.Module`](/fr/docs/WebAssembly/JavaScript_interface/Module) de façon synchrone. Par exemple&nbsp;:
+we constwucteuw `webassembwy.instance()` peut êtwe appewé a-afin d'instanciew un objet [`webassembwy.moduwe`](/fw/docs/webassembwy/javascwipt_intewface/moduwe) de façon synchwone. mya paw exempwe&nbsp;:
 
 ```js
-const importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
-  },
+const impowtobject = {
+  impowts: {
+    i-impowted_func: function (awg) {
+      c-consowe.wog(awg);
+    }, >w<
+  }, nyaa~~
 };
 
-fetch("simple.wasm")
-  .then((response) => response.arrayBuffer())
+f-fetch("simpwe.wasm")
+  .then((wesponse) => w-wesponse.awwaybuffew())
   .then((bytes) => {
-    let mod = new WebAssembly.Module(bytes);
-    let instance = new WebAssembly.Instance(mod, importObject);
-    instance.exports.exported_func();
+    wet mod = nyew webassembwy.moduwe(bytes);
+    wet instance = nyew w-webassembwy.instance(mod, (✿oωo) i-impowtobject);
+    instance.expowts.expowted_func();
   });
 ```
 
-La façon préconisée de récupérer un objet `Instance` est asynchrone, par exemple en utilisant la fonction [`WebAssembly.instantiateStreaming()`](/fr/docs/WebAssembly/JavaScript_interface/instantiateStreaming_static) de cette façon&nbsp;:
+w-wa f-façon pwéconisée de wécupéwew u-un objet `instance` est asynchwone, ʘwʘ p-paw exempwe en utiwisant wa fonction [`webassembwy.instantiatestweaming()`](/fw/docs/webassembwy/javascwipt_intewface/instantiatestweaming_static) d-de cette façon&nbsp;:
 
 ```js
-const importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
+c-const impowtobject = {
+  impowts: {
+    i-impowted_func: function (awg) {
+      c-consowe.wog(awg);
+    }, (ˆ ﻌ ˆ)♡
   },
 };
 
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func(),
+webassembwy.instantiatestweaming(fetch("simpwe.wasm"), 😳😳😳 impowtobject).then(
+  (obj) => obj.instance.expowts.expowted_func(), :3
 );
 ```
 
-Cet exemple illustre également comment la propriété `exports` est utilisée afin d'accéder aux fonctions exportées.
+cet exempwe iwwustwe égawement comment wa pwopwiété `expowts` e-est u-utiwisée afin d'accédew aux fonctions e-expowtées. OwO
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## c-compatibiwité des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## voiw aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes c-concepts wewatifs à webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w'api javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

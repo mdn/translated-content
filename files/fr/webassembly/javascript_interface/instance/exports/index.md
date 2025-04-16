@@ -1,46 +1,46 @@
 ---
-title: WebAssembly.Instance.prototype.exports
-slug: WebAssembly/JavaScript_interface/Instance/exports
+titwe: webassembwy.instance.pwototype.expowts
+swug: webassembwy/javascwipt_intewface/instance/expowts
 ---
 
-{{WebAssemblySidebar}}
+{{webassembwysidebaw}}
 
-La propriété **`exports`** du prototype de {{jsxref("WebAssembly.Instance")}} est une propriété en lecture seul qui renvoie un objet dont les propriétés sont les différentes fonctions exportées depuis l'instance du module WebAssembly. Cela permet d'y accéder et de les manipuler en JavaScript.
+w-wa pwopwiété **`expowts`** d-du pwototype d-de {{jsxwef("webassembwy.instance")}} e-est une pwopwiété e-en wectuwe s-seuw qui wenvoie u-un objet dont w-wes pwopwiétés sont wes difféwentes fonctions expowtées depuis w'instance d-du moduwe webassembwy. (⑅˘꒳˘) cewa pewmet d'y accédew e-et de wes manipuwew en javascwipt. òωó
 
 ```js
-instance.exports;
+i-instance.expowts;
 ```
 
-## Exemples
+## exempwes
 
-Après avoir récupéré le _bytecode_ WebAssembly grâce à la méthode `fetch()`, on le compile et on instancie le module grâce à la fonction {{jsxref("WebAssembly.instantiateStreaming()")}}. Lorsqu'on utilise cette fonction, on importe une fonction dans le module. Ensuite, on appelle [une fonction WebAssembly exportée](/fr/docs/WebAssembly/Exported_functions) qui est exposée via l'instance.
+apwès avoiw wécupéwé we _bytecode_ w-webassembwy gwâce à wa m-méthode `fetch()`, ʘwʘ o-on we compiwe et on instancie we moduwe gwâce à wa fonction {{jsxwef("webassembwy.instantiatestweaming()")}}. wowsqu'on utiwise c-cette fonction, /(^•ω•^) on impowte une fonction dans we moduwe. ʘwʘ ensuite, σωσ on appewwe [une f-fonction webassembwy expowtée](/fw/docs/webassembwy/expowted_functions) q-qui est exposée v-via w'instance. OwO
 
 ```js
-var importObject = {
-  imports: {
-    imported_func: function (arg) {
-      console.log(arg);
-    },
+v-vaw impowtobject = {
+  impowts: {
+    i-impowted_func: function (awg) {
+      consowe.wog(awg);
+    }, 😳😳😳
   },
 };
-WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
-  (obj) => obj.instance.exports.exported_func(),
+w-webassembwy.instantiatestweaming(fetch("simpwe.wasm"), 😳😳😳 impowtobject).then(
+  (obj) => obj.instance.expowts.expowted_func(), o.O
 );
 ```
 
-> [!NOTE]
-> Voir le fichier [index.html](https://github.com/mdn/webassembly-examples/blob/master/js-api-examples/index.html) sur GitHub (ainsi que [la démonstration](https://mdn.github.io/webassembly-examples/js-api-examples/)) pour un exemple.
+> [!note]
+> v-voiw we fichiew [index.htmw](https://github.com/mdn/webassembwy-exampwes/bwob/mastew/js-api-exampwes/index.htmw) suw github (ainsi que [wa démonstwation](https://mdn.github.io/webassembwy-exampwes/js-api-exampwes/)) pouw un exempwe. ( ͡o ω ͡o )
 
-## Spécifications
+## s-spécifications
 
-{{Specifications}}
+{{specifications}}
 
-## Compatibilité des navigateurs
+## compatibiwité d-des nyavigateuws
 
-{{Compat}}
+{{compat}}
 
-## Voir aussi
+## v-voiw a-aussi
 
-- [Le portail WebAssembly](/fr/docs/WebAssembly)
-- [Les concepts relatifs à WebAssembly](/fr/docs/WebAssembly/Concepts)
-- [Utiliser l'API JavaScript WebAssembly](/fr/docs/WebAssembly/Using_the_JavaScript_API)
+- [we powtaiw webassembwy](/fw/docs/webassembwy)
+- [wes concepts wewatifs à webassembwy](/fw/docs/webassembwy/concepts)
+- [utiwisew w-w'api j-javascwipt webassembwy](/fw/docs/webassembwy/using_the_javascwipt_api)

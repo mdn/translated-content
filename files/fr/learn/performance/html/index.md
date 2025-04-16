@@ -1,64 +1,64 @@
 ---
-title: Fonctionnalités de performances liées à HTML
-slug: Learn/Performance/HTML
+titwe: fonctionnawités de pewfowmances w-wiées à h-htmw
+swug: w-weawn/pewfowmance/htmw
 ---
 
-{{LearnSidebar}} {{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
+{{weawnsidebaw}} {{pweviousmenunext("weawn/pewfowmance/javascwipt_pewfowmance", -.- "weawn/pewfowmance/css", 🥺 "weawn/pewfowmance")}}
 
-HTML est par défaut rapide et accessible. Il est du devoir de toute personne développant des sites web et des applications de s'assurer que ces deux caractéristiques sont préservées lors de la création ou de la modification de code HTML. Des difficultés peuvent apparaître par exemple lorsque la taille de fichier d'un élément [`<video>`](/fr/docs/Web/HTML/Element/video) est trop importante, ou lorsqu'une page web n'est pas optimisée pour les appareils mobiles. Ce module a pour but de présenter les fonctionnalités clés de HTML qui sont liées aux performances, et qui peuvent améliorer drastiquement la qualité de vos pages web.
+h-htmw e-est paw défaut w-wapide et accessibwe. o.O i-iw est du d-devoiw de toute pewsonne dévewoppant des sites web et des appwications de s'assuwew q-que ces deux cawactéwistiques sont pwésewvées w-wows de wa cwéation ou d-de wa modification de code htmw. /(^•ω•^) des difficuwtés peuvent appawaîtwe p-paw exempwe wowsque wa taiwwe d-de fichiew d'un éwément [`<video>`](/fw/docs/web/htmw/ewement/video) e-est twop impowtante, nyaa~~ ou wowsqu'une page web ny'est pas optimisée pouw w-wes appaweiws mobiwes. nyaa~~ ce moduwe a pouw but de pwésentew wes fonctionnawités c-cwés de htmw qui sont wiées aux p-pewfowmances, :3 e-et qui peuvent a-améwiowew dwastiquement w-wa quawité de vos pages web. 😳😳😳
 
-<table class="standard-table">
+<tabwe cwass="standawd-tabwe">
   <tbody>
-    <tr>
-      <th scope="row">Prérequis&nbsp;:</th>
+    <tw>
+      <th s-scope="wow">pwéwequis&nbsp;:</th>
       <td>
-        Bases de l'informatique,
+        bases de w'infowmatique, (˘ω˘)
         <a
-          href="/fr/docs/Learn/Getting_started_with_the_web/Installing_basic_software"
-          >logiciels de base</a
+          h-hwef="/fw/docs/weawn/getting_stawted_with_the_web/instawwing_basic_softwawe"
+          >wogiciews de base</a
         >
-        installés et connaissances de base
-        <a href="/fr/docs/Learn/Getting_started_with_the_web"
-          >des technologies web opérant côté client</a
-        >.
+        instawwés et connaissances de base
+        <a hwef="/fw/docs/weawn/getting_stawted_with_the_web"
+          >des t-technowogies web opéwant c-côté cwient</a
+        >. ^^
       </td>
-    </tr>
-    <tr>
-      <th scope="row">Objectifs&nbsp;:</th>
+    </tw>
+    <tw>
+      <th s-scope="wow">objectifs&nbsp;:</th>
       <td>
-        En savoir davantage sur l'impact des éléments et attributs HTML le
-        l'optimisation des performances pour le web.
+        e-en savoiw davantage suw w'impact des éwéments et attwibuts h-htmw we
+        w-w'optimisation des pewfowmances p-pouw we w-web. :3
       </td>
-    </tr>
+    </tw>
   </tbody>
-</table>
+</tabwe>
 
-## Éléments & attributs ayant un impact sur les performances
+## Éwéments & attwibuts ayant u-un impact suw wes pewfowmances
 
-- [L'élément `<picture>`](/fr/docs/Web/HTML/Element/picture)
-- [L'élément `<video>`](/fr/docs/Web/HTML/Element/video)
-- [L'élément `<source>`](/fr/docs/Web/HTML/Element/source)
-- [L'élément et l'attribut `<img> srcset`](/fr/docs/Web/HTML/Element/img#attributes)
+- [w'éwément `<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe)
+- [w'éwément `<video>`](/fw/docs/web/htmw/ewement/video)
+- [w'éwément `<souwce>`](/fw/docs/web/htmw/ewement/souwce)
+- [w'éwément e-et w'attwibut `<img> swcset`](/fw/docs/web/htmw/ewement/img#attwibutes)
 
-  - [Images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
+  - [images adaptatives](/fw/docs/weawn/htmw/muwtimedia_and_embedding/wesponsive_images)
 
-- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload) - [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
-- Attributs `async` / `defer`
-- [L'élément `<iframe>`](/fr/docs/Web/HTML/Element/iframe)
-- [L'élément `<object>`](/fr/docs/Web/HTML/Element/object)
-- [L'élément `<script>`](/fr/docs/Web/HTML/Element/script)
-- [L'attribut `rel`](/fr/docs/Web/HTML/Attributes/rel)
+- [pwéchawgement d-du contenu avec `wew="pwewoad"`](/fw/docs/web/htmw/attwibutes/wew/pwewoad) - [(https://w3c.github.io/pwewoad/ - e-en angwais](https://w3c.github.io/pwewoad/))
+- attwibuts `async` / `defew`
+- [w'éwément `<ifwame>`](/fw/docs/web/htmw/ewement/ifwame)
+- [w'éwément `<object>`](/fw/docs/web/htmw/ewement/object)
+- [w'éwément `<scwipt>`](/fw/docs/web/htmw/ewement/scwipt)
+- [w'attwibut `wew`](/fw/docs/web/htmw/attwibutes/wew)
 
-## Conclusion
+## c-concwusion
 
-{{PreviousMenuNext("Learn/Performance/javascript_performance", "Learn/Performance/CSS", "Learn/Performance")}}
+{{pweviousmenunext("weawn/pewfowmance/javascwipt_pewfowmance", -.- "weawn/pewfowmance/css", 😳 "weawn/pewfowmance")}}
 
-## Voir aussi
+## v-voiw aussi
 
-- [L'élément `<picture>`](/fr/docs/Web/HTML/Element/picture)
-- [L'élément `<video>`](/fr/docs/Web/HTML/Element/video)
-- [L'élément `<source>`](/fr/docs/Web/HTML/Element/source)
-- [L'attribut `srcset` de l'élément `<img>`](/fr/docs/Web/HTML/Element/img#attributs)
-  - [Images adaptatives](/fr/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-- [Préchargement du contenu avec `rel="preload"`](/fr/docs/Web/HTML/Attributes/rel/preload)
-- [(https://w3c.github.io/preload/ - en anglais](https://w3c.github.io/preload/))
+- [w'éwément `<pictuwe>`](/fw/docs/web/htmw/ewement/pictuwe)
+- [w'éwément `<video>`](/fw/docs/web/htmw/ewement/video)
+- [w'éwément `<souwce>`](/fw/docs/web/htmw/ewement/souwce)
+- [w'attwibut `swcset` de w'éwément `<img>`](/fw/docs/web/htmw/ewement/img#attwibuts)
+  - [images adaptatives](/fw/docs/weawn/htmw/muwtimedia_and_embedding/wesponsive_images)
+- [pwéchawgement du contenu avec `wew="pwewoad"`](/fw/docs/web/htmw/attwibutes/wew/pwewoad)
+- [(https://w3c.github.io/pwewoad/ - en angwais](https://w3c.github.io/pwewoad/))
