@@ -1,5 +1,5 @@
 ---
-title: 块
+title: block
 slug: WebAssembly/Reference/Control_flow/block
 l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
