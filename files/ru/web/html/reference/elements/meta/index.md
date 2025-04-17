@@ -7,20 +7,20 @@ slug: Web/HTML/Reference/Elements/meta
 
 HTML-элемент **`<meta>`** представляет такие {{Glossary("Metadata","метаданные")}}, которые не могут быть представлены другими HTML-метатегами, такими как {{HTMLElement("base")}}, {{HTMLElement("link")}}, {{HTMLElement("script")}}, {{HTMLElement("style")}} или {{HTMLElement("title")}}.
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | Мета данные. Если задан [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop) атрибут: [flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content). |
-| ---------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | Отсутствует - это {{Glossary("empty element","пустой элемент")}}.                                                                                                                                                                         |
-| Пропуск тегов                                              | Так как это пустой элемент, то открывающий тег должен присутствовать, а закрывающий - отсутствовать.                                                                                                                                      |
-| Допустимые родители                                        | `<meta charset>`, `<meta http-equiv>`: {{HTMLElement("head")}} элемент. Если [`http-equiv`](#http-equiv) это не заявленная декларация, то может быть внутри элемента {{HTMLElement("noscript")}} или {{HTMLElement("head")}}.             |
-| Допустимые ARIA-роли                                       | Отсутствуют                                                                                                                                                                                                                               |
-| DOM-интерфейс                                              | {{domxref("HTMLMetaElement")}}                                                                                                                                                                                                            |
+| [Категории контента](/ru/docs/Web/HTML/Guides/Content_categories) | Мета данные. Если задан [`itemprop`](/ru/docs/Web/HTML/Reference/Global_attributes#itemprop) атрибут: [flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content). |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                             | Отсутствует - это {{Glossary("empty element","пустой элемент")}}.                                                                                                                                                                                                 |
+| Пропуск тегов                                                     | Так как это пустой элемент, то открывающий тег должен присутствовать, а закрывающий - отсутствовать.                                                                                                                                                              |
+| Допустимые родители                                               | `<meta charset>`, `<meta http-equiv>`: {{HTMLElement("head")}} элемент. Если [`http-equiv`](#http-equiv) это не заявленная декларация, то может быть внутри элемента {{HTMLElement("noscript")}} или {{HTMLElement("head")}}.                                     |
+| Допустимые ARIA-роли                                              | Отсутствуют                                                                                                                                                                                                                                                       |
+| DOM-интерфейс                                                     | {{domxref("HTMLMetaElement")}}                                                                                                                                                                                                                                    |
 
 ## Атрибуты
 
-Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент включает в себя [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 > [!NOTE]
-> Атрибут [`name`](#name) имеет особое значение для элемента `<meta>` и атрибут [`itemprop`](/ru/docs/Web/HTML/Global_attributes#itemprop) не должен быть задан в `<meta>` элементе в котором уже определены какие-либо [`name`](#name), [`http-equiv`](#http-equiv) или [`charset`](#charset) атрибуты.
+> Атрибут [`name`](#name) имеет особое значение для элемента `<meta>` и атрибут [`itemprop`](/ru/docs/Web/HTML/Reference/Global_attributes#itemprop) не должен быть задан в `<meta>` элементе в котором уже определены какие-либо [`name`](#name), [`http-equiv`](#http-equiv) или [`charset`](#charset) атрибуты.
 
 - `charset`
 
@@ -71,7 +71,7 @@ HTML-элемент **`<meta>`** представляет такие {{Glossary(
         > Только HTML документ может использовать контент-тип, так что большинство из них являются неиспользуемыми, поэтому они являются устаревшими и заменяются [`charset`](#charset) атрибутом.
 
     - `"default-style"`
-      - : Специализация этой прагмы - предпочтительный стиль таблиц, используемый на странице. [`content`](#content) атрибут должен содержать заголовок {{HTMLElement("link")}} элемента который [`href`](/ru/docs/Web/HTML/Element/link#href) связывает атрибут с CSS таблцей стилей, или заголовок {{HTMLElement("style")}} элемента, который содержит [CSS](/ru/docs/Web/CSS) таблицу стилей.
+      - : Специализация этой прагмы - предпочтительный стиль таблиц, используемый на странице. [`content`](#content) атрибут должен содержать заголовок {{HTMLElement("link")}} элемента который [`href`](/ru/docs/Web/HTML/Reference/Elements/link#href) связывает атрибут с CSS таблцей стилей, или заголовок {{HTMLElement("style")}} элемента, который содержит [CSS](/ru/docs/Web/CSS) таблицу стилей.
     - `"refresh"`
       - : Эта прагма определяет:
         - Количество секунд перезагрузки таблицы, если [`content`](#content) атрибут содержит только целое положительное число;

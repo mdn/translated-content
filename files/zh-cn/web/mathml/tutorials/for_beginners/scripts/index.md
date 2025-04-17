@@ -79,7 +79,7 @@ slug: Web/MathML/Tutorials/For_beginners/Scripts
 - 上下标内的文本会缩小显示。
 
 > [!NOTE]
-> MathML 元素 `<msub>` 和 `<msup>` 与 HTML 元素 [`<sub>`](/zh-CN/docs/Web/HTML/Element/sub) 和 [`<sup>`](/zh-CN/docs/Web/HTML/Element/sup) 不同。它们允许开发者将任意的 MathML 子树作为附加符号，而不仅仅是文本。
+> MathML 元素 `<msub>` 和 `<msup>` 与 HTML 元素 [`<sub>`](/zh-CN/docs/Web/HTML/Reference/Elements/sub) 和 [`<sup>`](/zh-CN/docs/Web/HTML/Reference/Elements/sup) 不同。它们允许开发者将任意的 MathML 子树作为附加符号，而不仅仅是文本。
 
 ## 正下标和正上标
 

@@ -141,5 +141,5 @@ hello world
 ## 参见
 
 - [Attribute selectors](/zh-CN/docs/Web/CSS/Attribute_selectors)
-- [HTML `data-*` attributes](/zh-CN/docs/Web/HTML/Global_attributes/data-*)
+- [HTML `data-*` attributes](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)
 - [SVG `data-*` attributes](/zh-CN/docs/Web/SVG/Reference/Attribute/data-*)

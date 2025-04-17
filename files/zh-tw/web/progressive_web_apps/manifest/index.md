@@ -58,7 +58,7 @@ Web 應用程式清單包含一個單一的 JSON 物件，其中頂層鍵稱為*
 
 `.webmanifest` 副檔名在規範的[媒體類型註冊](https://w3c.github.io/manifest/#media-type-registration)部分中指定（清單檔案的回應應返回 `Content-Type: application/manifest+json`）。瀏覽器通常支援具有其他適當副檔名的清單，如 `.json`（`Content-Type: application/json`）。
 
-如果清單需要憑證來獲取，則必須將 [`crossorigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) 屬性設置為 `use-credentials`，即使清單檔案與當前頁面在同一來源中也是如此。
+如果清單需要憑證來獲取，則必須將 [`crossorigin`](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin) 屬性設置為 `use-credentials`，即使清單檔案與當前頁面在同一來源中也是如此。
 
 ```html
 <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials" />

@@ -1,6 +1,9 @@
 ---
 title: HTML リファレンス
+short-title: リファレンス
 slug: Web/HTML/Reference
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}

@@ -37,9 +37,9 @@ slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 
 Описание параметров:
 
-- [`src`](/ru/docs/Web/HTML/Element/video#src)
+- [`src`](/ru/docs/Web/HTML/Reference/Elements/video#src)
   - : Точно так же, как для элемента {{htmlelement("img")}} , атрибут `src` (source — источник) содержит путь к видео, которое вы хотите внедрить. Он работает точно так же.
-- [`controls`](/ru/docs/Web/HTML/Element/video#controls)
+- [`controls`](/ru/docs/Web/HTML/Reference/Elements/video#controls)
   - : Пользователи должны иметь возможность контролировать воспроизведение видео и аудио (особенно это важно для людей, которые больны [эпилепсией](https://ru.wikipedia.org/wiki/%D0%AD%D0%BF%D0%B8%D0%BB%D0%B5%D0%BF%D1%81%D0%B8%D1%8F)). Вы должны либо использовать атрибут `controls`, чтобы использовать встроенный в браузер интерфейс управления или создать собственный интерфейс, используя соответствующие [JavaScript API](/ru/docs/Web/API/HTMLMediaElement). Как минимум, интерфейс должен включать способ запуска и остановки медиа-носителя и регулировки громкости.
 - Параграф внутри тегов `<video>`
   - : Это называют **резервный контент** — он будет отображаться, если браузер, показывающий страницу, не поддерживает элемент `<video>`, позволяя нам обеспечить поддержку для старых версий браузеров. Это может быть все, что вы захотите; в нашем примере мы предоставили прямую ссылку на видеофайл, поэтому пользователь может хотя бы получить к нему доступ, независимо от того, какой браузер он используют.
@@ -129,17 +129,17 @@ slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
 
 **![A video player showing a poster image before it plays. The poster image says HTML5 video example, OMG hell yeah!](extra-video-features.png)**Новые параметры:
 
-- **[`width`](/ru/docs/Web/HTML/Element/video#width) and [`height`](/ru/docs/Web/HTML/Element/video#height)**
+- **[`width`](/ru/docs/Web/HTML/Reference/Elements/video#width) and [`height`](/ru/docs/Web/HTML/Reference/Elements/video#height)**
   - : Вы можете контролировать размер видео либо с помощью этих атрибутов, либо с помощью {{Glossary("CSS")}}. В обоих случаях видео поддерживают собственное соотношение ширины и высоты — известное как соотношение сторон. Если соотношение сторон не поддерживается установленными вами размерами, видео будет увеличиваться, чтобы заполнить пространство по горизонтали, а заполненному пространству по умолчанию будет задан сплошной цвет фона.
-- **[`autoplay`](/ru/docs/Web/HTML/Element/video#autoplay)**
+- **[`autoplay`](/ru/docs/Web/HTML/Reference/Elements/video#autoplay)**
   - : Этот атрибут позволяет сразу начать воспроизведение звука или видео, пока остальная часть страницы загружается. Вам не рекомендуется использовать автовоспроизведение видео (или аудио) на ваших сайтах, потому что пользователи могут найти это действительно раздражающим.
-- **[`loop`](/ru/docs/Web/HTML/Element/video#loop)**
+- **[`loop`](/ru/docs/Web/HTML/Reference/Elements/video#loop)**
   - : Этот атрибут позволяет воспроизводить видео (или аудио) снова, когда он заканчивается. Это также может раздражать, поэтому используйте тогда, когда это действительно необходимо.
-- **[`muted`](/ru/docs/Web/HTML/Element/video#muted)**
+- **[`muted`](/ru/docs/Web/HTML/Reference/Elements/video#muted)**
   - : Этот атрибут заставляет проигрыватель воспроизводить звук, отключённый по умолчанию.
-- **[`poster`](/ru/docs/Web/HTML/Element/video#poster)**
+- **[`poster`](/ru/docs/Web/HTML/Reference/Elements/video#poster)**
   - : Этот атрибут принимает в качестве значения URL-адрес изображения, который будет отображаться до воспроизведения видео. Он предназначен для заставки к видео или рекламы.
-- **[`preload`](/ru/docs/Web/HTML/Element/video#preload)**
+- **[`preload`](/ru/docs/Web/HTML/Reference/Elements/video#preload)**
 
   - : этот атрибут используется в элементе для буферизации больших файлов. Он может принимать одно из трёх значений:
 
@@ -219,7 +219,7 @@ WEBVTT
 Чтобы отобразить это вместе с воспроизведением мультимедиа HTML, вам необходимо:
 
 1. Сохраните его как `.vtt`- файл, в разумном месте.
-2. Ссылка на файл `.vtt` с элементом {{htmlelement ("track")}}. `<track>` должен быть помещён в `<audio>` или `<video>`, но после элементов `<source>`. Используйте атрибут [`kind`](/ru/docs/Web/HTML/Element/track#kind), чтобы указать, являются ли реплики `субтитрами`, `титрами` или `описаниями`. Кроме того, используйте [`srclang`](/ru/docs/Web/HTML/Element/track#srclang), чтобы сообщить браузеру, на каком языке вы записывали субтитры.
+2. Ссылка на файл `.vtt` с элементом {{htmlelement ("track")}}. `<track>` должен быть помещён в `<audio>` или `<video>`, но после элементов `<source>`. Используйте атрибут [`kind`](/ru/docs/Web/HTML/Reference/Elements/track#kind), чтобы указать, являются ли реплики `субтитрами`, `титрами` или `описаниями`. Кроме того, используйте [`srclang`](/ru/docs/Web/HTML/Reference/Elements/track#srclang), чтобы сообщить браузеру, на каком языке вы записывали субтитры.
 
 Вот пример:
 

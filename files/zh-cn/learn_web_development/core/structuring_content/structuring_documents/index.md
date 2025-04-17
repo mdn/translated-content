@@ -136,7 +136,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 ## HTML 布局元素细节
 
-理解所有 HTML 区段元素具体含义是很有益处的，这一点将随着个人 web 开发经验的逐渐丰富日趋显现。更多细节请查阅 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)。现在，你只需要理解以下主要元素的意义：
+理解所有 HTML 区段元素具体含义是很有益处的，这一点将随着个人 web 开发经验的逐渐丰富日趋显现。更多细节请查阅 [HTML 元素参考](/zh-CN/docs/Web/HTML/Reference/Elements)。现在，你只需要理解以下主要元素的意义：
 
 - {{HTMLElement('main')}} 存放每个页面独有的内容。每个页面上只能用一次 `<main>`，且直接位于 {{HTMLElement('body')}} 中。最好不要把它嵌套进其他元素。
 - {{HTMLElement('article')}} 包围的内容即一篇文章，与页面其他部分无关（比如一篇博文）。
@@ -148,7 +148,7 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 ### 无语义元素
 
-有时你会发现，对于一些要组织的项目或要包装的内容，现有的语义元素均不能很好对应。有时候你可能只想将一组元素作为一个单独的实体来修饰来响应单一的用 {{glossary("CSS")}} 或 {{glossary("JavaScript")}}。为了应对这种情况，HTML 提供了 {{HTMLElement("div")}} 和 {{HTMLElement("span")}} 元素。应配合使用 [`class`](/zh-CN/docs/Web/HTML/Global_attributes#class) 属性提供一些标签，使这些元素能易于查询。
+有时你会发现，对于一些要组织的项目或要包装的内容，现有的语义元素均不能很好对应。有时候你可能只想将一组元素作为一个单独的实体来修饰来响应单一的用 {{glossary("CSS")}} 或 {{glossary("JavaScript")}}。为了应对这种情况，HTML 提供了 {{HTMLElement("div")}} 和 {{HTMLElement("span")}} 元素。应配合使用 [`class`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#class) 属性提供一些标签，使这些元素能易于查询。
 
 {{HTMLElement("span")}} 是一个内联的（inline）无语义元素，最好只用于无法找到更好的语义元素来包含内容时，或者不想增加特定的含义时。例如：
 
@@ -249,6 +249,6 @@ HTML 代码中可根据功能来为区段添加标记。可使用元素来无歧
 
 ## 参见
 
-- [使用 HTML 区段和大纲](/zh-CN/docs/Web/HTML/Element/Heading_Elements)：HTML 语义元素和大纲算法进阶指南。
+- [使用 HTML 区段和大纲](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)：HTML 语义元素和大纲算法进阶指南。
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}

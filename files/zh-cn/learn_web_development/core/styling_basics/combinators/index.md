@@ -180,7 +180,7 @@ ul > li[class="a"] {
 
 ## 技能测试！
 
-我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks)。
+我们已经在这篇文章里讲了许多内容，不过你能记住最重要的信息吗？你可以找些更深入的测试，在继续下去之前，验证你是否已经获取了这些信息——见[技能测试：选择器](/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors)。
 
 ## 继续学习
 

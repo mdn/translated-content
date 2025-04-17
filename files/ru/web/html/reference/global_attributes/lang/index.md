@@ -5,7 +5,7 @@ slug: Web/HTML/Reference/Global_attributes/lang
 
 {{HTMLSidebar("Global_attributes")}}
 
-[Глобальный атрибут](/ru/docs/Web/HTML/Global_attributes) `lang` позволяет установить язык элемента, то есть тот язык, на котором написаны нередактируемые элементы, или язык, на котором пользователем должны быть написаны редактируемые элементы. Атрибут содержит единственный «языковой тег» (`language tag`) в формате, определённом в {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
+[Глобальный атрибут](/ru/docs/Web/HTML/Reference/Global_attributes) `lang` позволяет установить язык элемента, то есть тот язык, на котором написаны нередактируемые элементы, или язык, на котором пользователем должны быть написаны редактируемые элементы. Атрибут содержит единственный «языковой тег» (`language tag`) в формате, определённом в {{RFC(5646, "Tags for Identifying Languages (also known as BCP 47)")}}.
 
 > [!NOTE]
 > По умолчанию значение `lang` равно пустой строке, что означает, что язык неизвестен. Поэтому рекомендуется всегда указывать соответствующее значение для этого атрибута.
@@ -36,7 +36,7 @@ p::before {
 
 Если значение атрибута — _пустая строка_ (`lang=""`), язык устанавливается, как _неизвестный_. Если тег языка недействителен согласно BCP47, он устанавливается, как _недействительный_.
 
-Даже если указан атрибут **lang**, то он может не учитываться, поскольку атрибут [**xml:lang**](/ru/docs/Web/HTML/Global_attributes#lang) имеет более высокий приоритет.
+Даже если указан атрибут **lang**, то он может не учитываться, поскольку атрибут [**xml:lang**](/ru/docs/Web/HTML/Reference/Global_attributes#lang) имеет более высокий приоритет.
 
 Для псевдокласса CSS {{cssxref(":lang")}}, два недопустимых названия языка будут разными, если их имена различны. Хотя, `:lang(es)` соответствует обоим `lang="es-ES"` и `lang="es-419"`, но `:lang(xyzzy)` не соответствует `lang="xyzzy-Zorp!"`.
 
@@ -61,6 +61,6 @@ p::before {
 
 ## Смотрите также
 
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes)
 - [HTTP заголовок `Content-Language`](/ru/docs/Web/HTTP/Reference/Headers/Content-Language)
-- HTML [`translate`](/ru/docs/Web/HTML/Global_attributes#translate) attribute
+- HTML [`translate`](/ru/docs/Web/HTML/Reference/Global_attributes#translate) attribute

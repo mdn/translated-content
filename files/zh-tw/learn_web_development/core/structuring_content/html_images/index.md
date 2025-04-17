@@ -5,7 +5,7 @@ slug: Learn_web_development/Core/Structuring_content/HTML_images
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_a_page_of_content", "Learn_web_development/Core/Structuring_content/HTML_video_and_audio", "Learn_web_development/Core/Structuring_content")}}
 
-最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/zh-TW/docs/Web/HTML/Element/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
+最初的網頁最初的發展階段，只是文字。而只有文字想當然爾令網頁讀起來十分的枯燥乏味。然而幸運的是沒有多久，將圖片（以及其他更有趣的內容類型）嵌入網頁的功能就誕生了。 在多媒體嵌入網頁的學習中，從 [element embeds an image into the document.">`<img>`](/zh-TW/docs/Web/HTML/Reference/Elements/img)元素開始是相對適當，因為該元素用於在網頁中嵌入簡單的圖像。 在本文中，我們將研究如何深入使用它，包括在網頁中嵌入簡單圖像的基礎知識，使用\<figure>增加標題說明以做註釋，以及詳細說明它與 CSS 背景圖片的關係。
 
 <table>
   <tbody>
@@ -343,7 +343,7 @@ A better solution, is to use the HTML5 {{htmlelement("figure")}} and {{htmleleme
 The {{htmlelement("figcaption")}} element tells browsers, and assistive technology that the caption describes the other content of the {{htmlelement("figure")}} element.
 
 > [!NOTE]
-> From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Element/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
+> From an accessibility viewpoint, captions and [`alt`](/zh-TW/docs/Web/HTML/Reference/Elements/img#alt) text have distinct roles. Captions benefit even people who can see the image, whereas [`alt`](/zh-TW/docs/Web/HTML/Reference/Elements/img#alt) text provides the same functionality as an absent image. Therefore, captions and `alt` text shouldn't just say the same thing, because they both appear when the image is gone. Try turning images off in your browser and see how it looks.
 
 A figure doesn't have to be an image. It is an independent unit of content that:
 

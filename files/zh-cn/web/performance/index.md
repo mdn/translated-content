@@ -118,11 +118,11 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
 
 ### HTML
 
-- [`<picture>`](/zh-CN/docs/Web/HTML/Element/picture) 元素
-- [`<video>`](/zh-CN/docs/Web/HTML/Element/video) 元素
-- [`<source>`](/zh-CN/docs/Web/HTML/Element/source) 元素
-- 响应式图像的 [`<img> srcset`](/zh-CN/docs/Web/HTML/Element/img#属性) 属性
-- 用于通过 HTML 预加载内容的 [`rel="preload"`](/zh-CN/docs/Web/HTML/Attributes/rel/preload) 属性
+- [`<picture>`](/zh-CN/docs/Web/HTML/Reference/Elements/picture) 元素
+- [`<video>`](/zh-CN/docs/Web/HTML/Reference/Elements/video) 元素
+- [`<source>`](/zh-CN/docs/Web/HTML/Reference/Elements/source) 元素
+- 响应式图像的 [`<img> srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#属性) 属性
+- 用于通过 HTML 预加载内容的 [`rel="preload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preload) 属性
 
 ### CSS
 
@@ -137,13 +137,13 @@ MDN [Web 性能学习专区](/zh-CN/docs/Learn_web_development/Extensions/Perfor
 ### HTTP
 
 - [Content-encoding](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Encoding)
-- 通过 [dns-prefetch](/zh-CN/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)、[preconnect](/zh-CN/docs/Web/HTML/Attributes/rel/preconnect)、[prefetch](/zh-CN/docs/Glossary/Prefetch) 和 prerender 进行资源提示
+- 通过 [dns-prefetch](/zh-CN/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)、[preconnect](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/preconnect)、[prefetch](/zh-CN/docs/Glossary/Prefetch) 和 prerender 进行资源提示
 - [HTTP/2](/zh-CN/docs/Web/HTTP/Guides/Messages#http2_messages)
 - [客户端提示](/zh-CN/docs/Web/HTTP/Guides/Client_hints)
 
 ## 参见
 
-- [响应式图像](/zh-CN/docs/Web/HTML/Responsive_images) HTML 指南
+- [响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images) HTML 指南
 - [Web Worker API](/zh-CN/docs/Web/API/Web_Workers_API)，包括[使用 Service Worker](/zh-CN/docs/Web/API/Service_Worker_API/Using_Service_Workers) 和[使用 Web Worker](/zh-CN/docs/Web/API/Web_Workers_API/Using_web_workers)
 - [离线与后台操作](/zh-CN/docs/Web/Progressive_web_apps/Guides/Offline_and_background_operation)
 - [缓存](/zh-CN/docs/Web/HTTP/Guides/Caching)

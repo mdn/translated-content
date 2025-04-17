@@ -37,17 +37,17 @@ bdo {
 
 Текстовые символы рисуются от заданной точки в указанном направлении; индивидуальная ориентация символов не меняется (к примеру, символы не зеркалятся).
 
-| [Категории контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content.      |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимый контент                                         | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                                |
-| Закрывающий тег                                            | Нет, открывающий и закрывающий теги обязательны.                                                                                                                          |
-| Допустимые родители                                        | Все элементы, принимающие [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content),                                                                      |
-| Допустимые ARIA-роли                                       | Любые                                                                                                                                                                     |
-| DOM-интерфейс                                              | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/ru/docs/Web/API/HTMLSpanElement) для этого элемента. |
+| [Категории контента](/ru/docs/Web/HTML/Guides/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), [фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content), palpable content. |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимый контент                                                | [Фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                                                                  |
+| Закрывающий тег                                                   | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                   |
+| Допустимые родители                                               | Все элементы, принимающие [фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content),                                                                        |
+| Допустимые ARIA-роли                                              | Любые                                                                                                                                                                              |
+| DOM-интерфейс                                                     | {{domxref("HTMLElement")}} до Gecko 1.9.2 (Firefox 4) включительно, Firefox реализует интерфейс [`HTMLSpanElement`](/ru/docs/Web/API/HTMLSpanElement) для этого элемента.          |
 
 ## Атрибуты
 
-Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - `dir`
   - : Направление, в котором должен отображаться текст внутри элемента. Возможные значения:

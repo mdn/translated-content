@@ -44,7 +44,7 @@ _此接口还继承了其父接口 {{domxref("Event")}} 的属性。_
 
 ## 示例
 
-假设脚本创建了一个 [`MessageChannel`](/zh-CN/docs/Web/API/MessageChannel)，并使用以下代码将其中一个端口发送到不同的浏览上下文，比如另一个 [`<iframe>`](/zh-CN/docs/Web/HTML/Element/iframe)：
+假设脚本创建了一个 [`MessageChannel`](/zh-CN/docs/Web/API/MessageChannel)，并使用以下代码将其中一个端口发送到不同的浏览上下文，比如另一个 [`<iframe>`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe)：
 
 ```js
 const channel = new MessageChannel();

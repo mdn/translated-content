@@ -232,13 +232,13 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 - [`border: none`](/zh-CN/docs/Web/CSS/border)
   - : 如果使用此属性，`<iframe>` 将不会显示周围的边框。否则，默认情况下，浏览器会显示 `<iframe>` 的边框（通常我们不希望显示边框）。
-- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Element/iframe#allowfullscreen)
+- [`allowfullscreen`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#allowfullscreen)
   - : 如果设置，则可以通过[全屏 API](/zh-CN/docs/Web/API/Fullscreen_API) 将 `<iframe>` 置于全屏模式（稍微超出本文的范围）。
-- [`src`](/zh-CN/docs/Web/HTML/Element/iframe#src)
+- [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#src)
   - : 该属性与 {{htmlelement("video")}}/{{htmlelement("img")}} 中的同名属性一样，包含指向要嵌入的文档的 URL。
-- [`width`](/zh-CN/docs/Web/HTML/Element/iframe#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/iframe#height)
+- [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#width) 和 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#height)
   - : 这些属性指定 iframe 的宽度和高度。
-- [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox)
+- [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox)
   - : 该属性比起支持其他 `<iframe>` 特性，需要更新的浏览器才能工作（例如 IE 10 及更高版本），该属性可以提高安全性设置；我们将在下一节中更加详细地谈到。
 
 > [!NOTE]
@@ -279,7 +279,7 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
 
 未沙盒化的内容可以执行 JavaScript、提交表单、弹出窗口等。默认情况下，你应该使用没有参数的 `sandbox` 属性来强制执行所有可用的限制，如我们前面的示例所示。
 
-如果绝对需要某些权限，你可以（在 `sandbox=""` 属性值内）逐个添加它们——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Element/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
+如果绝对需要某些权限，你可以（在 `sandbox=""` 属性值内）逐个添加它们——请参阅 [`sandbox`](/zh-CN/docs/Web/HTML/Reference/Elements/iframe#sandbox) 所有可用选项的参考条目。其中重要的一点是，你*永远不*应该同时添加 `allow-scripts` 和 `allow-same-origin` 到你的 `sandbox` 属性中——在这种情况下，嵌入的内容可以绕过阻止站点执行脚本的[同源安全策略](/zh-CN/docs/Glossary/Same-origin_policy)，并使用 JavaScript 完全关闭沙盒。
 
 > [!NOTE]
 > 如果攻击者可以欺骗人们直接访问恶意内容（在 `iframe` 之外），则沙盒无法提供保护。如果某些内容可能是恶意的（例如，用户生成的内容），请保证其是从不同的{{glossary("domain", "域")}}向你的主站点提供的。
@@ -312,25 +312,25 @@ Refused to display 'https://developer.mozilla.org/' in a frame because it set 'X
   <tbody>
     <tr>
       <td>嵌入内容的 {{glossary("URL")}}</td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/embed#src"><code>src</code></a></td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/object#data"><code>data</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#src"><code>src</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#data"><code>data</code></a></td>
     </tr>
     <tr>
       <td>
         嵌入内容的<em>准确</em>{{glossary("MIME type", '媒体类型')}}
       </td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/embed#type"><code>type</code></a></td>
-      <td><a href="/zh-CN/docs/Web/HTML/Element/object#type"><code>type</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#type"><code>type</code></a></td>
+      <td><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#type"><code>type</code></a></td>
     </tr>
     <tr>
       <td>
         由插件控制的盒子高度和宽度（以 CSS 像素为单位）
       </td>
       <td>
-         <a href="/zh-CN/docs/Web/HTML/Element/embed#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Element/embed#width"><code>width</code></a>
+         <a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Reference/Elements/embed#width"><code>width</code></a>
       </td>
       <td>
-         <a href="/zh-CN/docs/Web/HTML/Element/object#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Element/object#width"><code>width</code></a>
+         <a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#height"><code>height</code></a><br /><a href="/zh-CN/docs/Web/HTML/Reference/Elements/object#width"><code>width</code></a>
       </td>
     </tr>
     <tr>

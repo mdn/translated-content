@@ -14,7 +14,7 @@ l10n:
 例えば、 macOS では、ユーザーエージェントは[登録済みの置き換えテキストや句読点](https://support.apple.com/ja-jp/guide/mac-help/mh35735/mac)を使用することがあります。
 他の端末やブラウザーでは、異なる手法が使用される場合があります。
 
-このプロパティは、HTML のグローバル属性である [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) の値を反映します。
+このプロパティは、HTML のグローバル属性である [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect) の値を反映します。
 
 ## 値
 
@@ -28,7 +28,7 @@ l10n:
 
 #### HTML
 
-HTML マークアップは、トグルボタンと {{htmlelement("input")}} 要素の [`type="search"`](/ja/docs/Web/HTML/Element/input/search) 型を定義します。
+HTML マークアップは、トグルボタンと {{htmlelement("input")}} 要素の [`type="search"`](/ja/docs/Web/HTML/Reference/Elements/input/search) 型を定義します。
 自動修正に対応している場合は、既定で有効になっていることに注意してください。
 
 ```html
@@ -106,4 +106,4 @@ if (`autocorrect` in HTMLElement.prototype) {
 
 ## 関連情報
 
-- [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) HTML グローバル属性
+- [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) HTML グローバル属性
