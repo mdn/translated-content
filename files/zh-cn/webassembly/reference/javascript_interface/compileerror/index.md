@@ -36,7 +36,7 @@ l10n:
 
 ## 示例
 
-## 创建一个新的 CompileError 实例
+### 创建一个新的 CompileError 实例
 
 下面的片段创建一个新的 `CompileError` 实例，并将其详细信息打印到控制台：
 
