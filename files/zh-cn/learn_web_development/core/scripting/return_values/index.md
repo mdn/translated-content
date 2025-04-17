@@ -1,11 +1,13 @@
 ---
 title: 函数返回值
 slug: Learn_web_development/Core/Scripting/Return_values
+l10n:
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting")}}
+{{PreviousMenuNext("Learn_web_development/Core/Scripting/Build_your_own_function","Learn_web_development/Core/Scripting/Events","Learn_web_development/Core/Scripting")}}
 
-函数返回值 - 是本章中最后一个基础概念，让我们一起来瞧瞧.。有些函数在执行完毕后不会返回一个有用的值，但有些会，重要的是理解返回的是什么，怎样在你的代码中使用这些值，我们将在下面讨论这些。
+函数返回值是本章中最后一个基础概念。有些函数在执行完毕后不会返回一个有用的值，但有些会，重要的是理解返回的是什么，怎样在你的代码中使用这些值，我们将在下面讨论这些。
 
 <table>
   <tbody>
@@ -13,47 +15,49 @@ slug: Learn_web_development/Core/Scripting/Return_values
       <th scope="row">前提：</th>
       <td>
         <p>
-          基础的计算机知识，懂得基础的 HTML 和 CSS,
-          <a href="/zh-CN/docs/Learn_web_development/Core/Scripting">JavaScript </a
-          >第一步学习，函数-<a
-            href="/zh-CN/docs/Learn_web_development/Core/Scripting/Functions"
-          >
-          </a
-          >可重用的代码块。
+          了解 <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content">HTML</a> 和 <a href="/zh-CN/docs/Learn_web_development/Core/Styling_basics">CSS 基础</a>，熟悉上一课所介绍的 JavaScript 函数基础。
         </p>
       </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
-      <td>理解什么函数的返回值 , 和如何使用它们</td>
+      <th scope="row">学习成果：</th>
+      <td>
+        <ul>
+          <li>什么是返回值。</li>
+          <li>如何在已有函数中使用返回值。</li>
+          <li>在自己的函数中加入返回值。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
 
 ## 什么是返回值？
 
-返回值意如其名，是指函数执行完毕后返回的值。你已经多次遇见过返回值，尽管你可能没有明确的考虑过他们。让我们回顾一个熟悉的例子（来自本系列之前的[一篇文章](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions#浏览器内置函数)）：
+**返回值**意如其名，是指函数执行完毕后返回的值。你已经多次遇见过返回值，尽管你可能没有明确的考虑过他们。
+
+让我们回顾一个熟悉的例子（来自本系列[之前的一篇文章](/zh-CN/docs/Learn_web_development/Core/Scripting/Functions#浏览器内置函数)）：
 
 ```js
-const myText = "我是一个字符串";
-const newString = myText.replace("字符串", "香肠");
+const myText = "天气很冷";
+const newString = myText.replace("冷", "热");
 console.log(newString);
 // replace() 字符串函数接受源字符串和目标字符串，
 // 将源字符串替换为目标字符串，并返回新形成的字符串
 ```
 
-我们对 `myText` 字符串调用 [replace()](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数，并接收两个参数：
+我们对 `myText` 字符串调用 [`replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数，并接收两个参数：
 
-- 要查找的字符串（`"字符串"`）。
-- 用于替换的字符串（`"香肠"`）。
+- 要查找的子字符串（`"冷"`）。
+- 用于替换的字符串（`"热"`）。
 
 当这个函数完成（完成运行）后，它返回一个值，这个值是一个新的字符串，它具有替换的功能。在上面的代码中，我们保存这个返回值，以作为 `newString` 变量的内容。
 
 如果你查看 MDN 文档中 [`replace()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace) 函数的页面，你会看到叫做[返回值](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/String/replace#返回值)的章节。理解函数的返回值非常关键，因此我们尽可能在文档中提供此类信息。
 
-一些函数不返回任何值 (在我们的参考页中，这类函数的返回值在文档中标记为空值 `void` 或未定义值 `undefined` 。).例如，前一篇文章中编写的 [displayMessage() function](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) , 函数在被调用时不会返回特定值，它仅负责在屏幕上显示一个弹窗。
+一些函数不返回任何值（在我们的参考页中，这类函数的返回值在文档中标记为空值 `void` 或未定义值 `undefined`）。例如，前一篇文章中编写的 [`displayMessage()`](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-stage-4.html#L50) 函数在被调用时不会返回特定值，它仅负责在屏幕上显示一个弹窗。
 
-一般来说，返回值用于函数作为计算的中间步骤。假设您需要得到一个最终结果，而该结果依赖于某些需要通过函数计算的值。函数计算完成后，可以通过返回值将结果存储在变量中，供后续计算使用。
+一般来说，返回值用于函数作为计算的中间步骤。假设你需要得到一个最终结果，而该结果依赖于某些需要通过函数计算的值。函数计算完成后，可以通过返回值将结果存储在变量中，供后续计算使用。
 
 ### 在自定义的函数中使用返回值
 
@@ -62,16 +66,16 @@ console.log(newString);
 ```js
 function draw() {
   ctx.clearRect(0, 0, WIDTH, HEIGHT);
-  for (var i = 0; i < 100; i++) {
+  for (let i = 0; i < 100; i++) {
     ctx.beginPath();
-    ctx.fillStyle = "rgba(255,0,0,0.5)";
+    ctx.fillStyle = "rgb(255 0 0 / 50%)";
     ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
     ctx.fill();
   }
 }
 ```
 
-在每次循环中，`random()` 函数被调用了三次，分别生成圆圈的 x 坐标、y 坐标和半径的随机值。`random()` 函数接收一个整数参数，并返回一个介于 `0` 到该参数的随机整数：
+在每次循环中，`random()` 函数被调用了三次，分别生成圆圈的 _x 坐标_、*y 坐标*和*半径*的随机值。`random()` 函数接收一个整数参数，并返回一个介于 `0` 到该参数的随机整数：
 
 ```js
 function randomNumber(number) {
@@ -83,7 +87,7 @@ function randomNumber(number) {
 
 ```js
 function randomNumber(number) {
-  var result = Math.floor(Math.random() * number);
+  const result = Math.floor(Math.random() * number);
   return result;
 }
 ```
@@ -104,7 +108,7 @@ ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
 ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 ```
 
-该行代码中，首先会调用（random(WIDTH)、random(HEIGHT)、random(50)）函数，每个函数的返回值会作为对应位置的参数值被传入 ctx.arc() 方法并执行绘图操作。
+首先运行该行的函数调用，并将其返回值替换为函数调用，然后再执行该行本身。
 
 ## 主动学习：我们自己的返回值函数
 
@@ -137,35 +141,25 @@ ctx.arc(500, 200, 35, 0, 2 * Math.PI);
 3. 在现有函数下方，添加以下事件处理程序，实现打印文本输入框中数字信息的功能：
 
    ```js
-   input.onchange = function () {
-     var num = input.value;
+   input.addEventListener("change", () => {
+     const num = parseFloat(input.value);
      if (isNaN(num)) {
        para.textContent = "You need to enter a number!";
      } else {
-       para.textContent =
-         num +
-         " squared is " +
-         squared(num) +
-         ". " +
-         num +
-         " cubed is " +
-         cubed(num) +
-         ". " +
-         num +
-         " factorial is " +
-         factorial(num) +
-         ".";
+       para.textContent = `${num} squared is ${squared(num)}. `;
+       para.textContent += `${num} cubed is ${cubed(num)}. `;
+       para.textContent += `${num} factorial is ${factorial(num)}. `;
      }
-   };
+   });
    ```
 
-通过监听 change 事件，当文本输入框的值发生变化并提交时（例如输入值后，通过按 <kbd>Tab</kbd> 或 <kbd>Return</kbd> 移出输入焦点），该匿名函数会执行。函数运行时，输入框的值会被存入常量 num。
+4. 保存代码，在浏览器中加载并测试。
 
-if 语句在输入值非数字时显示错误信息。条件判断使用 isNaN(num) 检测 —— 若返回 true 表示 num 不是数字。isNaN() 函数专门用于检测值是否为非数字。
+下面是对上述步骤 3 中的 `addEventListener` 函数的一些解释：
 
-若条件返回 false，则 num 是有效数字，函数会在段落元素中输出该数字的平方、立方和阶乘值。这些值通过调用 squared()、cubed() 和 factorial() 函数计算得出。。
-
-4.保存代码，在浏览器中加载并测试。
+- 通过为 `change` 事件添加监听器，当文本输入框的值发生变化并提交时（例如输入值后，通过按 <kbd>Tab</kbd> 或 <kbd>Return</kbd> 移出输入焦点），该匿名函数会执行。函数运行时，输入框的值会被存入常量 num。
+- if 语句在输入值非数字时显示错误信息。条件判断使用 `isNaN(num)` 检测是否为 `true`。[`isNaN()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/isNaN) 检查 `num` 值是否不为数字 —— 如果不为数字，则返回 `true`，否则返回 `false`。
+- 若条件返回 `false`，则 `num` 是有效数字，函数会在段落元素中输出该数字的平方、立方和阶乘值。这些值通过调用 `squared()`、`cubed()` 和 `factorial()` 函数计算得出。
 
 > [!NOTE]
 > 若示例运行失败，可对比 [GitHub 上的完成版](https://github.com/mdn/learning-area/blob/main/javascript/building-blocks/functions/function-library-finished.html)（或查看[实时演示](https://mdn.github.io/learning-area/javascript/building-blocks/functions/function-library-finished.html)），也可联系我们寻求帮助。
@@ -176,13 +170,12 @@ if 语句在输入值非数字时显示错误信息。条件判断使用 isNaN(n
 
 附加函数编写建议：
 
-学习其他函数的错误处理示例。建议验证必要参数，并为可选参数提供默认值，以减少程序报错。
-
-考虑创建函数库。随着编程经验积累，你会重复使用某些功能。建立自己的工具函数库是高效的选择，可轻松移植到新项目或直接应用于 HTML 页面。
+- 学习其他函数的错误处理示例。建议验证必要参数，并为可选参数提供默认值，以减少程序报错。
+- 考虑创建*函数库*。随着编程经验积累，你会重复使用某些功能。建立自己的工具函数库是高效的选择，可轻松移植到新项目或直接应用于 HTML 页面。
 
 ## 技能测试
 
-本文已结束，你是否掌握了核心知识？可通过[函数测试](https://en-us/docs/Learn_web_development/Core/Scripting/Test_your_skills:_Functions)检验成果。
+本文已结束，你是否掌握了核心知识？可通过[函数测试](/zh-CN/docs/Learn_web_development/Core/Scripting/Test_your_skills/Functions)检验成果。
 
 ## 总结
 
