@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Array")}} 實例的 **`filter()`** 方法會建立一個給定陣列部分的[淺複製](/zh-TW/docs/Glossary/Shallow_copy)，僅保留通過所提供函式測試的元素。
+{{jsxref("Array")}} 實例的 **`filter()`** 方法會建立一個給定陣列部分的[淺複製](/zh-TW/docs/Glossary/Shallow_copy)，過濾掉未通過所提供函式所實作測試的給定陣列元素。
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.filter()", "shorter")}}
 
@@ -20,7 +20,7 @@ console.log(result);
 // 預期輸出：陣列 ["exuberant", "destruction", "present"]
 ```
 
-## 形式語法
+## 語法
 
 ```js-nolint
 filter(callbackFn)
@@ -195,7 +195,7 @@ console.log(Array.prototype.filter.call(arrayLike, (x) => x <= "b"));
 
 ## 參見
 
-- [`core-js` 中 `Array.prototype.filter` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [`core-js` 中 `Array.prototype.filter` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [`Array.prototype.filter` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.filter)
 - [索引集合](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array")}}
