@@ -68,7 +68,7 @@ const importObject = {
   // 常规导入
   m: {
     log: console.log,
-  },  
+  },
 };
 
 const compileOptions = {
