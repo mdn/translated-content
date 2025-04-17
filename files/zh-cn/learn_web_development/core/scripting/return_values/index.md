@@ -41,7 +41,7 @@ l10n:
 ```js
 const myText = "天气很冷";
 const newString = myText.replace("冷", "热");
-console.log(newString);
+console.log(newString); // 应输出“天气很热”
 // replace() 字符串函数接受源字符串和目标字符串，
 // 将源字符串替换为目标字符串，并返回新形成的字符串
 ```
