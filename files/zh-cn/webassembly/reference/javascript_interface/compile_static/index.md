@@ -59,7 +59,7 @@ fetch("simple.wasm")
 
 ### 启用 JavaScript 内置功能和全局字符串导入
 
-这个例子在用 `compile()` 编译模块时，启用 JavaScript 内置功能和导入的全局字符串常量，然后用 [`instantiate()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) 将其实例化，接着运行导出的 `main()` 函数（其向控制台打印 `"hello world!"`）。[查看其在线版本](https://mdn.github.io/webassembly-examples/js-builtin-examples/compile/)。
+这个例子在用 `compile()` 编译模块时，启用 JavaScript 字符串内置功能和导入的全局字符串常量，然后用 [`instantiate()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) 将其实例化，接着运行导出的 `main()` 函数（其向控制台打印 `"hello world!"`）。[查看其在线版本](https://mdn.github.io/webassembly-examples/js-builtin-examples/compile/)。
 
 ```js
 const importObject = {
