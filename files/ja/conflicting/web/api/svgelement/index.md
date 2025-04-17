@@ -1,6 +1,7 @@
 ---
 title: SVGFontElement
-slug: Web/API/SVGFontElement
+slug: conflicting/Web/API/SVGElement
+original_slug: Web/API/SVGFontElement
 ---
 
 {{APIRef("SVG")}}{{deprecated_header}}

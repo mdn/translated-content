@@ -1,6 +1,7 @@
 ---
 title: SVGCursorElement
-slug: Web/API/SVGCursorElement
+slug: conflicting/Web/API/SVGElement_5d789c1c30d522109c7dd1911dc896e35490a1565d8005e53149ebba074941a9
+original_slug: Web/API/SVGCursorElement
 l10n:
   sourceCommit: 226ac33eb70ed5411dd2d68bd602c80cafd780b6
 ---

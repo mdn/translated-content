@@ -1,7 +1,7 @@
 ---
 title: <cursor>
-slug: Web/SVG/Reference/Element/cursor
-original_slug: Web/SVG/Element/cursor
+slug: conflicting/Web/CSS/cursor
+original_slug: Web/SVG/Reference/Element/cursor
 l10n:
   sourceCommit: 2e5fc06de139c56873a20ec4bc3bf5600ea3cbef
 ---

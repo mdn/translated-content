@@ -1,7 +1,7 @@
 ---
 title: 概要
-slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
-original_slug: Web/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
+slug: conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT
+original_slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview
 l10n:
   sourceCommit: b74462b088bf7ee06f27038728a7f6ea39630ca3
 ---

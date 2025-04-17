@@ -1,7 +1,7 @@
 ---
 title: 参考文献
-slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
-original_slug: Web/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
+slug: conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_1af10c5c37196c51dbca9c7afe2a2c49d05656401a85bc9790e8390612e730dd
+original_slug: Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading
 l10n:
   sourceCommit: e03b13c7e157ec7b7bb02a6c7c4854b862195905
 ---

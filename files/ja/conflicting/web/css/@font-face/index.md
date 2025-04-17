@@ -1,7 +1,7 @@
 ---
 title: <tref>
-slug: Web/SVG/Reference/Element/tref
-original_slug: Web/SVG/Element/tref
+slug: conflicting/Web/CSS/@font-face
+original_slug: Web/SVG/Reference/Element/tref
 l10n:
   sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
 ---
