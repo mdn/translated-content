@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Array")}} 實例的 **`entries()`** 方法會回傳一個新的[陣列迭代器](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Iterator)物件，其中包含陣列中每個索引的鍵／值對。
+{{jsxref("Array")}} 實例的 **`entries()`** 方法會回傳一個新的[_陣列迭代器_](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Iterator)物件，其中包含陣列中每個索引的鍵／值對。
 
 {{InteractiveExample("JavaScript Demo: Array.prototype.entries()")}}
 
@@ -59,7 +59,7 @@ for (const [index, element] of a.entries()) {
 // 2 'c'
 ```
 
-### 使用 `for...of` 迴圈
+### 使用 for...of 迴圈
 
 ```js
 const array = ["a", "b", "c"];
@@ -86,7 +86,7 @@ for (const element of [, "a"].entries()) {
 // [1, 'a']
 ```
 
-### 在非陣列物件上調用 `entries()`
+### 在非陣列物件上調用 entries()
 
 `entries()` 方法會讀取 `this` 的 `length` 屬性，並存取所有鍵為非負整數且小於 `length` 的屬性。
 
@@ -96,7 +96,7 @@ const arrayLike = {
   0: "a",
   1: "b",
   2: "c",
-  3: "d", // `entries()` 會忽略此屬性，因為 length 為 3
+  3: "d", // entries() 會忽略此屬性，因為 length 為 3
 };
 for (const entry of Array.prototype.entries.call(arrayLike)) {
   console.log(entry);
@@ -116,8 +116,8 @@ for (const entry of Array.prototype.entries.call(arrayLike)) {
 
 ## 參見
 
-- [`core-js` 中 `Array.prototype.entries` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-array)
-- [`Array.prototype.entries` 的 `es-shims` Polyfill](https://www.npmjs.com/package/array.prototype.entries)
+- [`core-js` 中 `Array.prototype.entries` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [`Array.prototype.entries` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.entries)
 - [索引集合](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.keys()")}}
