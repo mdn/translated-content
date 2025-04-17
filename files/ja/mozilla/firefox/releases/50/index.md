@@ -113,7 +113,7 @@ l10n:
 
 - {{domxref("PannerNode")}} インターフェイスで、オーディオソースの位置 ({{domxref("PannerNode.positionX")}}、{{domxref("PannerNode.positionY")}}、{{domxref("PannerNode.positionZ")}}) や方向性 ({{domxref("PannerNode.orientationX")}}、{{domxref("PannerNode.orientationY")}}、{{domxref("PannerNode.orientationZ")}}) に関する 3D 直交座標系のプロパティをサポートしました。
 - 一般的な [無限インパルス応答](https://ja.wikipedia.org/wiki/無限インパルス応答) (IIR) フィルターを生成する、{{domxref("IIRFilterNode")}} インターフェイスを実装しました。
-- {{domxref("setInterval()")}} および {{domxref("setTimeout()")}} で作成したタイマーをバッググラウンドのタブで抑制する機能は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("AudioContext")}} がアクティブで音声を再生しているときに実施しないようになりました。これは、タイミングに敏感な音声再生 (タイマーを使用して個々の音を生成する音楽プレイヤーなど) をバックグラウンドで行う際の問題を避ける助けになります ([Firefox バグ 1181073](https://bugzil.la/1181073))。
+- {{domxref("Window.setInterval", "setInterval()")}} および {{domxref("Window.setTimeout", "setTimeout()")}} で作成したタイマーをバッググラウンドのタブで抑制する機能は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("AudioContext")}} がアクティブで音声を再生しているときに実施しないようになりました。これは、タイミングに敏感な音声再生 (タイマーを使用して個々の音を生成する音楽プレイヤーなど) をバックグラウンドで行う際の問題を避ける助けになります ([Firefox バグ 1181073](https://bugzil.la/1181073))。
 
 ### Audio/Video
 
