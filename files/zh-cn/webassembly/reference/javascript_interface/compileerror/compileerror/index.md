@@ -5,9 +5,7 @@ l10n:
   sourceCommit: df9d06402163f77fc3e2d327ab63f9dd4af15b38
 ---
 
-The **`WebAssembly.CompileError()`** constructor creates a new
-WebAssembly `CompileError` object, which indicates an error during
-WebAssembly decoding or validation.
+**`WebAssembly.CompileError()`** 构造函数创建一个新的 WebAssembly `CompileError` 对象，用于表示 WebAssembly 解码或验证期间出现的错误。
 
 ## 语法
 
@@ -22,35 +20,34 @@ new WebAssembly.CompileError(message, fileName, lineNumber)
 ### 参数
 
 - `message` {{optional_inline}}
-  - : Human-readable description of the error.
+  - : 人类可读的错误描述。
 - `options` {{optional_inline}}
-  - : An object that has the following properties:
+  - : 一个拥有下列属性的对象：
     - `cause` {{optional_inline}}
-      - : A property indicating the specific cause of the error.
-        When catching and re-throwing an error with a more-specific or useful error message, this property can be used to pass the original error.
+      - : 表示特定错误原因的属性。
+        在捕获并用更特定或有用的错误消息重新抛出错误时，可以使用这个属性传递原始错误。
 - `fileName` {{optional_inline}} {{non-standard_inline}}
-  - : The name of the file containing the code that caused the exception.
+  - : 导致异常的代码所在的文件的名字。
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
-  - : The line number of the code that caused the exception.
+  - : 导致异常的代码所在的行的行号。
 
 ## 示例
 
 ### 创建一个新的 CompileError 实例
 
-The following snippet creates a new `CompileError` instance, and logs its
-details to the console:
+下面的片段创建一个新的 `CompileError` 实例，并将其详细信息打印到控制台：
 
 ```js
 try {
-  throw new WebAssembly.CompileError("Hello", "someFile", 10);
+  throw new WebAssembly.CompileError("你好", "某个文件", 10);
 } catch (e) {
   console.log(e instanceof CompileError); // true
-  console.log(e.message); // "Hello"
+  console.log(e.message); // "你好"
   console.log(e.name); // "CompileError"
-  console.log(e.fileName); // "someFile"
+  console.log(e.fileName); // "某个文件"
   console.log(e.lineNumber); // 10
   console.log(e.columnNumber); // 0
-  console.log(e.stack); // returns the location where the code was run
+  console.log(e.stack); // 返回运行代码的位置
 }
 ```
 
@@ -64,6 +61,6 @@ try {
 
 ## 参见
 
-- [WebAssembly](/en-US/docs/WebAssembly) overview page
-- [WebAssembly concepts](/en-US/docs/WebAssembly/Guides/Concepts)
-- [Using the WebAssembly JavaScript API](/en-US/docs/WebAssembly/Guides/Using_the_JavaScript_API)
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
+- [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
