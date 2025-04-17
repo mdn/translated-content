@@ -17,7 +17,7 @@ const words = ["spray", "elite", "exuberant", "destruction", "present"];
 const result = words.filter((word) => word.length > 6);
 
 console.log(result);
-// 預期輸出：陣列 ["exuberant", "destruction", "present"]
+// 預期輸出：Array ["exuberant", "destruction", "present"]
 ```
 
 ## 語法
