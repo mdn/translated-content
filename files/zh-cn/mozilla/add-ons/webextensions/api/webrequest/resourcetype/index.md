@@ -18,7 +18,7 @@ l10n:
 - `beacon`
   - : 通过 [Beacon API](/zh-CN/docs/Web/API/Beacon_API) 发送的请求。
 - `csp_report`
-  - : 当检测到违反策略时，发送到 {{HTTPHeader("Content-Security-Policy")}} 标头中 {{CSP("report-uri")}} 指定的地址的请求。
+  - : 当检测到违反策略的尝试时，发送到 {{HTTPHeader("Content-Security-Policy")}} 标头中给定的 {{CSP("report-uri")}} 的请求。
 - `font`
   - : 通过 {{cssxref("@font-face")}} CSS 规则加载的 Web 字体。
 - `image`
@@ -33,7 +33,7 @@ l10n:
 
   - : 由 {{HTMLElement("object")}} 或 {{HTMLElement("embed")}} 元素加载的资源。
 
-    没有专门的 `object_subrequest` 类型的浏览器（参见下方的浏览器兼容性）也将插件发送的后续请求标记为 `object`。
+    没有专用的 `object_subrequest` 类型的浏览器（参见下方的浏览器兼容性）也将插件发送的后续请求标记为 `object`。
 
 - `object_subrequest`
   - : 插件发送的请求。
@@ -41,7 +41,7 @@ l10n:
 
   - : 当点击超链接时，发送到超链接的 [`ping`](/zh-CN/docs/Web/HTML/Reference/Elements/a#ping) 属性中指定的 URL 的请求。
 
-    没有专用 `beacon` 类型的浏览器（参见下方的浏览器兼容性）也将通过 Beacon API 发送的请求标记为 `ping`。
+    没有专用的 `beacon` 类型的浏览器（参见下方的浏览器兼容性）也将通过 Beacon API 发送的请求标记为 `ping`。
 
 - `script`
   - : 由 {{HTMLElement("script")}} 元素加载或在 [Worker](/zh-CN/docs/Web/API/Web_Workers_API) 中运行的代码。
