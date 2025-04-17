@@ -1,6 +1,6 @@
 ---
 title: "Проверьте ваши навыки: Селекторы"
-slug: Learn_web_development/Core/Styling_basics/Basic_selectors/Selectors_Tasks
+slug: Learn_web_development/Core/Styling_basics/Test_your_skills/Selectors
 ---
 
 {{LearnSidebar}}

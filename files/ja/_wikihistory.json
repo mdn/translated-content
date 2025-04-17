@@ -18316,13 +18316,6 @@
       "piyo-ko"
     ]
   },
-  "Web/API/SVGFontElement": {
-    "modified": "2020-10-15T21:19:56.994Z",
-    "contributors": [
-      "YujiSoftware",
-      "ethertank"
-    ]
-  },
   "Web/API/SVGGraphicsElement": {
     "modified": "2020-10-15T22:28:06.095Z",
     "contributors": [
@@ -22060,17 +22053,6 @@
       "Marsf",
       "Mgjbot",
       "Hfjapancom"
-    ]
-  },
-  "Web/API/Window/showModalDialog": {
-    "modified": "2019-08-18T18:14:25.207Z",
-    "contributors": [
-      "yyss",
-      "teoli",
-      "khalid32",
-      "ethertank",
-      "Shoot",
-      "Potappo"
     ]
   },
   "Web/API/Window/sizeToContent": {
@@ -41947,12 +41929,6 @@
       "kscarfone"
     ]
   },
-  "Web/SVG/Reference/Attribute/accent-height": {
-    "modified": "2020-10-15T22:28:50.166Z",
-    "contributors": [
-      "n-oshiro"
-    ]
-  },
   "Web/SVG/Reference/Attribute/alignment-baseline": {
     "modified": "2020-10-16T10:40:10.316Z",
     "contributors": [
@@ -43207,20 +43183,6 @@
       "ethertank"
     ]
   },
-  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview": {
-    "modified": "2019-03-18T20:50:34.881Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
-  "Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading": {
-    "modified": "2019-03-18T20:50:35.199Z",
-    "contributors": [
-      "mfuji09",
-      "silverskyvicto"
-    ]
-  },
   "Web/XML/XSLT/Reference/Element": {
     "modified": "2019-11-30T15:35:09.776Z",
     "contributors": [
@@ -44130,6 +44092,17 @@
       "mfuji09"
     ]
   },
+  "conflicting/Web/API/HTMLDialogElement/showModal": {
+    "modified": "2019-08-18T18:14:25.207Z",
+    "contributors": [
+      "yyss",
+      "teoli",
+      "khalid32",
+      "ethertank",
+      "Shoot",
+      "Potappo"
+    ]
+  },
   "conflicting/Web/API/HTMLElement/drag_event_b6e067958f5eb7e5b6c19e73c98fc256": {
     "modified": "2020-10-15T22:07:20.059Z",
     "contributors": [
@@ -44189,6 +44162,13 @@
     "modified": "2020-10-15T22:18:26.930Z",
     "contributors": [
       "Wind1808"
+    ]
+  },
+  "conflicting/Web/API/SVGElement": {
+    "modified": "2020-10-15T21:19:56.994Z",
+    "contributors": [
+      "YujiSoftware",
+      "ethertank"
     ]
   },
   "conflicting/Web/API/ServiceWorker/error_event": {
@@ -44341,6 +44321,12 @@
       "cosmology233"
     ]
   },
+  "conflicting/Web/SVG/Reference/Attribute": {
+    "modified": "2020-10-15T22:28:50.166Z",
+    "contributors": [
+      "n-oshiro"
+    ]
+  },
   "conflicting/Web/Security/Certificate_Transparency": {
     "modified": "2020-10-15T21:36:10.884Z",
     "contributors": [
@@ -44348,6 +44334,20 @@
       "silverskyvicto",
       "hashedhyphen",
       "clariroid"
+    ]
+  },
+  "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT": {
+    "modified": "2019-03-18T20:50:34.881Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
+    ]
+  },
+  "conflicting/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT_1af10c5c37196c51dbca9c7afe2a2c49d05656401a85bc9790e8390612e730dd": {
+    "modified": "2019-03-18T20:50:35.199Z",
+    "contributors": [
+      "mfuji09",
+      "silverskyvicto"
     ]
   },
   "orphaned/Code_snippets/Toolbar": {

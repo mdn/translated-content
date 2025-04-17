@@ -1,9 +1,8 @@
 ---
 title: "CSP: form-action"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/form-action
-original_slug: Web/HTTP/Headers/Content-Security-Policy/form-action
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -38,15 +37,21 @@ Content-Security-Policy: form-action <source>;
 Content-Security-Policy: form-action <source> <source>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-`<source>` には、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+- `'none'`
+  - : フォームの送信は行われません。単一引用符は必須です。
+- `<source-expression-list>`
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と[数々の他のディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+  - : ソース表現の値を空白で区切ったリストです。フォームの送信は、、指定されたソース表現のいずれかと URL が一致した場合に行われます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## 例
 
-### Meta タグの設定
+### meta タグの設定
 
 ```html
 <meta http-equiv="Content-Security-Policy" content="form-action 'none'" />
@@ -62,7 +67,7 @@ Content-Security-Policy: form-action <source> <source>;
 
 ### Nginx の設定
 
-```
+```nginx
 add_header Content-Security-Policy "form-action 'none';"
 ```
 
