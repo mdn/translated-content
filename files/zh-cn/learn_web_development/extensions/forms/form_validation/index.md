@@ -66,7 +66,7 @@ slug: Learn_web_development/Extensions/Forms/Form_validation
 
 ## 使用内置表单数据校验
 
-[HTML5](/zh-CN/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/HTML/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
+[HTML5](/zh-CN/docs/HTML/HTML5) 一个特别有用的新功能就是，可以在不写一行脚本代码的情况下，即对用户的输入进行数据校验，这都是通过表单元素的[校验属性](/zh-CN/docs/Web/HTML/Guides/Constraint_validation)实现的，这些属性可以让你定义一些规则，用于限定用户的输入，比如某个输入框是否必须输入，或者某个输入框的字符串的最小最大长度限制，或者某个输入框必须输入一个数字、邮箱地址等；还有数据必须匹配的模式。如果表单中输入的数据都符合这些限定规则，那么表示这个表单校验通过，否则则认为校验未通过。
 
 当一个元素校验通过时：
 
@@ -108,7 +108,7 @@ input:valid {
 
 ### required 属性
 
-最简单的 HTML5 校验功能是 [`required`](/zh-CN/docs/Web/HTML/Element/input#required)属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。
+最简单的 HTML5 校验功能是 [`required`](/zh-CN/docs/Web/HTML/Reference/Elements/input#required)属性 — 如果要使输入成为必需的，则可以使用此属性标记元素。当设置此属性时，如果输入为空，该表单将不会提交（并将显示错误消息），输入也将被视为无效。
 
 添加一个 `required` 属性到你的 input 元素，如下所示：
 
@@ -138,7 +138,7 @@ input:valid {
 
 ### 使用正则表达式校验
 
-另一个常用的校验功能是 [`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其他的用途。
+另一个常用的校验功能是 [`pattern`](/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern) 属性，以 [Regular Expression](/zh-CN/docs/Web/JavaScript/Guide/Regular_expressions) 作为 value 值。正则表达式 (regex) 是一个可以用来匹配文本字符串中字符的组合的模式，所以它们是理想的表单校验器，也可以支持 JavaScript 中许多其他的用途。
 
 正则表达式相当复杂，我们不打算在本文中详尽地教你。
 
@@ -194,16 +194,16 @@ input:valid {
 在这个基础上，尝试把`pattern` 属性内部的表达式改变成上面的几个例子，然后看看这些表达式如何影响你可以输入的值以使输入值有效。尝试写一些你自己设计的，看看它如何工作。尽量让他们与水果有关这样你的例子才会有意义。
 
 > [!NOTE]
-> 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Element/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
+> 一些 {{HTMLElement("input")}} 元素类型不需要[`pattern`](/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern) 属性进行校验。指定特定 `email` 类型 就会使用匹配电子邮件格式的正则表达式来校验 (如果有 [`multiple`](/zh-CN/docs/Web/HTML/Reference/Elements/input#multiple) 属性请用逗号来分割多个邮箱). 进一步来说，字段 `url` 类型则会自动校验输入的是否为一个合法的链接。
 
 > [!NOTE]
-> 该 {{HTMLElement("textarea")}} 元素不支持[`pattern`](/zh-CN/docs/Web/HTML/Element/input#pattern) 属性。
+> 该 {{HTMLElement("textarea")}} 元素不支持[`pattern`](/zh-CN/docs/Web/HTML/Reference/Elements/input#pattern) 属性。
 
 ### 限制输入的长度
 
-所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用[`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 属性来限制长度。如果输入的字段长度小于 [`minlength`](/zh-CN/docs/Web/HTML/Element/input#minlength) 的值或大于 [`maxlength`](/zh-CN/docs/Web/HTML/Element/input#maxlength) 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。
+所有文本框 ({{HTMLElement("input")}} 或 {{HTMLElement("textarea")}}) 都可以使用[`minlength`](/zh-CN/docs/Web/HTML/Reference/Elements/input#minlength) 和 [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Elements/input#maxlength) 属性来限制长度。如果输入的字段长度小于 [`minlength`](/zh-CN/docs/Web/HTML/Reference/Elements/input#minlength) 的值或大于 [`maxlength`](/zh-CN/docs/Web/HTML/Reference/Elements/input#maxlength) 值则无效。浏览器通常不会让用户在文本字段中键入比预期更长的值，不过更精细的设置总归是更好的。
 
-在数字条目中 (i.e. `<input type="number">`), 该 [`min`](/zh-CN/docs/Web/HTML/Element/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性同样提供校验约束。如果字段的值小于[`min`](/zh-CN/docs/Web/HTML/Element/input#min) 属性的值或大于 [`max`](/zh-CN/docs/Web/HTML/Element/input#max) 属性的值，该字段则无效。
+在数字条目中 (i.e. `<input type="number">`), 该 [`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 和 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性同样提供校验约束。如果字段的值小于[`min`](/zh-CN/docs/Web/HTML/Reference/Elements/input#min) 属性的值或大于 [`max`](/zh-CN/docs/Web/HTML/Reference/Elements/input#max) 属性的值，该字段则无效。
 
 让我来看看另外一个例子。创建一个 [fruit-start.html](https://github.com/mdn/learning-area/blob/main/html/forms/form-validation/fruit-start.html) 文件副本。
 
@@ -246,7 +246,7 @@ div {
 
 {{EmbedLiveSample("限制输入的长度", "100%", 70)}}
 
-> **备注：** `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个[`step`](/zh-CN/docs/Web/HTML/Element/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
+> **备注：** `<input type="number">` (或者其他类型，像 `range`) 也可以获取到一个[`step`](/zh-CN/docs/Web/HTML/Reference/Elements/input#step) 属性，指定了值在增减过程固定改变的值 (如向上增加和向下减少的按钮).
 
 ### 完整的例子
 
@@ -472,7 +472,7 @@ email.addEventListener("input", function (event) {
 </form>
 ```
 
-这个简单的表单使用 [`novalidate`](/zh-CN/docs/Web/HTML/Element/form#novalidate) 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，你仍然可以自己做，并相应地设置表单的样式。
+这个简单的表单使用 [`novalidate`](/zh-CN/docs/Web/HTML/Reference/Elements/form#novalidate) 属性关闭浏览器的自动校验；这允许我们使用脚本控制表单校验。但是，这并不禁止对约束校验 API 的支持或是以下 CSS 伪类：{{cssxref(":valid")}}、{{cssxref(":invalid")}}、{{cssxref(":in-range")}} 、{{cssxref(":out-of-range")}} 的应用。这意味着，即使浏览器在发送数据之前没有自动检查表单的有效性，你仍然可以自己做，并相应地设置表单的样式。
 
 [`aria-live`](/zh-CN/docs/Web/Accessibility/ARIA/Guides/Live_regions) 属性确保我们的自定义错误信息将呈现给所有人，包括使用屏幕阅读器等辅助技术的人。
 

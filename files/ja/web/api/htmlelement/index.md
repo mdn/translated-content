@@ -29,7 +29,7 @@ _親である {{DOMxRef("Element")}} から継承したプロパティもあり�
   - : 論理値で、HTML の [`autofocus`](/ja/docs/Web/HTML/Reference/Elements/select#autofocus) グローバル属性を反映し、ページが読み込まれたとき、または {{htmlelement("dialog")}} 要素やポップオーバー属性が設定されている要素内の要素に指定した場合、ダイアログやポップオーバーが表示されたときに、コントロールにフォーカスを当てるかどうかを示します。
 - {{domxref("HTMLElement.autocorrect")}}
   - : ユーザーが入力したテキストを自動的に修正すべきかどうかを表します。
-    これは HTML の [`autocorrect`](/ja/docs/Web/HTML/Global_attributes/autocorrect) グローバル属性を反映します。
+    これは HTML の [`autocorrect`](/ja/docs/Web/HTML/Reference/Global_attributes/autocorrect) グローバル属性を反映します。
 - {{DOMxRef("HTMLElement.contentEditable")}}
   - : 文字列で、 `true` の場合は要素が編集可能、`false` の場合は編集不可であることを表します。
 - {{DOMxRef("HTMLElement.dataset")}} {{ReadOnlyInline}}

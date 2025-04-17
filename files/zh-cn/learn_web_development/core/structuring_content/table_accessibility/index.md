@@ -42,7 +42,7 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 标题就放在 `<table>` 标签的下面。
 
 > [!NOTE]
-> 同样，[`summary`](/zh-CN/docs/Web/HTML/Element/table#summary) 属性也可以在 `<table>` 元素中使用，用来提供一段描述，可以被屏幕阅读设备阅读。但是我们推荐使用 `<caption>` 元素来代替，因为 `summary` 已经废弃了，且不能被视力正常的用户阅读（它不会出现在页面上）。
+> 同样，[`summary`](/zh-CN/docs/Web/HTML/Reference/Elements/table#summary) 属性也可以在 `<table>` 元素中使用，用来提供一段描述，可以被屏幕阅读设备阅读。但是我们推荐使用 `<caption>` 元素来代替，因为 `summary` 已经废弃了，且不能被视力正常的用户阅读（它不会出现在页面上）。
 
 ### 动手练习：添加一个标题
 
@@ -77,7 +77,7 @@ slug: Learn_web_development/Core/Structuring_content/Table_accessibility
 2. 尝试在浏览器中打开它，你会发现看起来不错，但是它可以被改善得更好。“SUM”行包含了已经使用的金额的总和，不过它出现在了错误的位置，以及代码中还遗失了一些细节。
 3. 将明显的标题行改为使用 `<thead>` 元素，“SUM”行使用 `<tfoot>` 元素，剩余的内容使用 `<tbody>` 元素。
 4. 先保存，再刷新。你会看到，添加了 `<tfoot>` 元素后，“SUM”行跑到了表格的底部。
-5. 接着，添加一个 [`colspan`](/zh-CN/docs/Web/HTML/Element/td#colspan) 属性，使“SUM”单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
+5. 接着，添加一个 [`colspan`](/zh-CN/docs/Web/HTML/Reference/Elements/td#colspan) 属性，使“SUM”单元格占 4 个单元格的位置，所以实际数字是显示在“Cost”列的底部。
 6. 让我们为表格添加一些简单的额外属性，能够让你理解这些属性是如何帮助更好地让表格应用 CSS 的。在你的 HTML 文件的 head 标签部分，你会看到一个空的 {{htmlelement("style")}} 元素。在 style 元素中添加下列 CSS 代码：
 
    ```css
@@ -232,7 +232,7 @@ th {
 
 ### scope 属性
 
-本篇文章的一个新话题是 [`scope`](/zh-CN/docs/Web/HTML/Element/th#scope) 属性，可以添加在 `<th>` 元素中，以告诉屏幕阅读器该表头的类型——它是所在行的表头，还是所在列的表头。回想一下我们前面的消费记录例子，你可以像这样明确地把表头定义为所在列的头部：
+本篇文章的一个新话题是 [`scope`](/zh-CN/docs/Web/HTML/Reference/Elements/th#scope) 属性，可以添加在 `<th>` 元素中，以告诉屏幕阅读器该表头的类型——它是所在行的表头，还是所在列的表头。回想一下我们前面的消费记录例子，你可以像这样明确地把表头定义为所在列的头部：
 
 ```html
 <thead>
@@ -295,7 +295,7 @@ th {
 
 ### id 和 headers 属性
 
-如果要替代 `scope` 属性，可以使用 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 和 [`headers`](/zh-CN/docs/Web/HTML/Element/td#headers) 属性来创建标题与单元格之间的联系。
+如果要替代 `scope` 属性，可以使用 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 和 [`headers`](/zh-CN/docs/Web/HTML/Reference/Elements/td#headers) 属性来创建标题与单元格之间的联系。
 
 `headers` 属性包含一个空格分隔的无序字符串列表，每个字符串对应 `<th>` 元素的唯一 `id`，这些 `<th>` 元素为数据单元格（`<td>` 元素）或另一个标题单元格（`<th>` 元素）提供标题。
 

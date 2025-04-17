@@ -17,7 +17,7 @@ l10n:
 - {{domxref("SharedWorkerGlobalScope")}} （共有ワーカー向け）
 - {{domxref("ServiceWorkerGlobalScope")}} （[サービスワーカー](/ja/docs/Web/API/Service_Worker_API)向け）
 
-すべてのワーカーとメインスレッドで共通の関数には（`WindowOrWorkerGlobalScope` にあるもの）には、 {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("clearTimeout()")}}, {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("setInterval()")}}, {{domxref("setTimeout()")}} などがあります。
+すべてのワーカーとメインスレッドで共通の関数には（`WindowOrWorkerGlobalScope` にあるもの）には、 {{domxref("atob", "atob()")}}, {{domxref("btoa", "btoa()")}}, {{domxref("clearInterval", "clearInterval()")}}, {{domxref("Window.clearTimeout", "clearTimeout()")}}, {{domxref("Window.dump()", "dump()")}} {{non-standard_inline}}, {{domxref("Window.setInterval", "setInterval()")}}, {{domxref("Window.setTimeout", "setTimeout()")}} などがあります。
 
 以下の機能は、ワーカーで**のみ**使用することができます。
 

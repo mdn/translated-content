@@ -53,4 +53,4 @@ Content-Security-Policy: img-src https:
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("upgrade-insecure-requests")}}
-- [混合コンテンツ](/ja/docs/Web/Security/Mixed_content)
+- [混在コンテンツ](/ja/docs/Web/Security/Mixed_content)

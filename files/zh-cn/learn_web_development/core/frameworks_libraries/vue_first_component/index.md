@@ -59,7 +59,7 @@ export default {};
 </script>
 ```
 
-现在我们可以开始为 `ToDoItem` 添加实际内容了。Vue 模板目前只允许一个根元素——一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个 [`<div>`](/zh-CN/docs/Web/HTML/Element/div)。
+现在我们可以开始为 `ToDoItem` 添加实际内容了。Vue 模板目前只允许一个根元素——一个元素需要包裹模板内的所有内容（Vue 3 发布后会改变这种情况）。我们将为该根元素使用一个 [`<div>`](/zh-CN/docs/Web/HTML/Reference/Elements/div)。
 
 1. 现在在你的组件模板中添加一个空的 `<div>`。
 2. 在那个 `<div>` 里面，让我们添加一个 `checkbox` 和一个对应的 `label`。给复选框添加一个 `id`，并添加一个 `for` 属性，将复选框映射到标签上，如下所示：
@@ -103,7 +103,7 @@ export default {
 
 要在应用程序中实际展示 `ToDoItem` 组件，你需要在 `<template>` 模板内添加一个 `<to-do-item></to-do-item>` 元素。请注意，组件文件名及其在 JavaScript 中的表示方式总是用帕斯卡形式（例如 `ToDoList`），而等价的自定义元素总是用{{Glossary("kebab_case", "烤串命名法")}}（例如 `<to-do-list>`）。如果[直接在 DOM 中](https://cn.vuejs.org/guide/essentials/component-basics#dom-template-parsing-caveats)编写 Vue 模板，则有必要使用这种大小写样式。
 
-1. 在 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements) 下面，创建一个无序列表（[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)），其中包含一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Element/li)）。
+1. 在 [`<h1>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements) 下面，创建一个无序列表（[`<ul>`](/zh-CN/docs/Web/HTML/Reference/Elements/ul)），其中包含一个列表项（[`<li>`](/zh-CN/docs/Web/HTML/Reference/Elements/li)）。
 2. 在列表项里面添加 `<to-do-item></to-do-item>`。
 
 你的 `App.vue` 的 `<template> `内容现在应该是这样的：
@@ -212,7 +212,7 @@ found in
 
 如果你改变 传递到在你的 App 组件中访问的 `<to-do-item></to-do-item>` 的 `label` prop 值，你应该会看到该值被更新。这很 ok。我们现在有了一个 checkbox，一个可更新的 label 标签。然而，我们目前没有对 "done" prop 做任何事情——我们可以在 UI 中选中 checkbox，但在应用程序中，我们没有实际记录 todo item 是否已完成。
 
-为了实现它，我们将组件的 `done` prop 与 [`<input>`](/zh-CN/docs/Web/HTML/Element/input) 标签的 `checked` 属性作绑定。这样就可以记录复选框是否被选中。但是，props 是一种单向数据绑定，组件永远不该改变自己的 props 的值，这点很重要。坚守这点的原因有很多。其一是，组件修改 props 会造成程序调试困难。如果一个值被传递进多个子组件，将很难定位这个值是在哪里被修改的。此外，修改 props 会造成组件重新渲染。所以，一个组件里突变的 props 会触发组件重新渲染，这可能会反过来再次触发 props 突变。
+为了实现它，我们将组件的 `done` prop 与 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input) 标签的 `checked` 属性作绑定。这样就可以记录复选框是否被选中。但是，props 是一种单向数据绑定，组件永远不该改变自己的 props 的值，这点很重要。坚守这点的原因有很多。其一是，组件修改 props 会造成程序调试困难。如果一个值被传递进多个子组件，将很难定位这个值是在哪里被修改的。此外，修改 props 会造成组件重新渲染。所以，一个组件里突变的 props 会触发组件重新渲染，这可能会反过来再次触发 props 突变。
 
 要变通解决此问题，我们可以使用 Vue 的`data` 属性来管理 `done` 的状态。`data` 属性是你可以用来在组件中管理本地状态，它与 `props` 属性一同位于组件对象中并具有以下结构：
 

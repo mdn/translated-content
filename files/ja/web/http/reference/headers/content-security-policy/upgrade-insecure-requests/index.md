@@ -81,4 +81,4 @@ Content-Security-Policy-Report-Only: default-src https:; report-uri /endpoint
 - {{HTTPHeader("Upgrade-Insecure-Requests")}} ヘッダー
 - {{HTTPHeader("Strict-Transport-Security")}} ({{Glossary("HSTS")}}) ヘッダー
 - {{CSP("block-all-mixed-content")}}
-- [混合コンテンツ](/ja/docs/Web/Security/Mixed_content)
+- [混在コンテンツ](/ja/docs/Web/Security/Mixed_content)

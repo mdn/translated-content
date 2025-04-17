@@ -90,7 +90,7 @@ l10n:
   - : 如果你希望玩家能使用遊戲把手或其他遊戲設備進行遊戲，這是必要的 API。
 - [HTML](/zh-TW/docs/Web/HTML) 和 [CSS](/zh-TW/docs/Web/CSS)
   - : 這兩項技術可以幫助你構建、設計和佈局遊戲的用戶界面。其中 HTML 的 {{HTMLElement("canvas")}} 元素是進行 2D 圖形處理的一種方法。
-- [HTML audio](/zh-TW/docs/Web/HTML/Element/audio)
+- [HTML audio](/zh-TW/docs/Web/HTML/Reference/Elements/audio)
   - : {{HTMLElement("audio")}} 元素可讓你輕鬆播放簡單的音效和音樂。如果有更高的需求，請參考 [Web 音頻 API](/zh-TW/docs/Web/API/Web_Audio_API) 以獲取更強大的音頻處理能力！
 - [IndexedDB](/zh-TW/docs/Web/API/IndexedDB_API)
   - : 一個強大的數據存儲 API，可以在用戶的設備上存儲遊戲數據（例如遊戲狀態等）從而避免每次都需要下載資料。這也能幫助你的遊戲在用戶無法連接網路時（例如長時間飛行時）仍能正常運行。

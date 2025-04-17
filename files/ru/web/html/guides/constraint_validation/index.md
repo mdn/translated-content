@@ -16,19 +16,19 @@ slug: Web/HTML/Guides/Constraint_validation
 
 В HTML5 базовые ограничения объявляются двумя способами:
 
-- Задавать семантически наиболее подходящие значения для атрибута [`type`](/ru/docs/Web/HTML/Element/input#type) элемента {{ HTMLElement("input") }}. Например, типа `email` автоматически создаёт ограничение, которое проверяет, является ли значение валидным email-адресом.
+- Задавать семантически наиболее подходящие значения для атрибута [`type`](/ru/docs/Web/HTML/Reference/Elements/input#type) элемента {{ HTMLElement("input") }}. Например, типа `email` автоматически создаёт ограничение, которое проверяет, является ли значение валидным email-адресом.
 - Использовать атрибуты валидации, позволяющие достаточно просто задать ограничения без помощи JavaScript.
 
 ### Семантические типы input
 
-Внутренние ограничения атрибута [`type`](/ru/docs/Web/HTML/Element/input#type):
+Внутренние ограничения атрибута [`type`](/ru/docs/Web/HTML/Reference/Elements/input#type):
 
 | Тип input                                                       | Описание ограничения                                                                                                                                                     | Связанное нарушение                                                                   |
 | --------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------------------------------------- |
 | [`<input type="URL">`](/ru/docs/Web/HTML/Element/input/url)     | Значение должно быть [URL-адресом](/ru/docs/Learn_web_development/Howto/Web_mechanics/What_is_a_URL), как указано в [URL Living Standard](https://url.spec.whatwg.org/). | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
 | [`<input type="email">`](/ru/docs/Web/HTML/Element/input/email) | Значение должно быть синтаксически правильным email-адресом, который обычно имеет формат `username@hostname.tld`.                                                        | Нарушение ограничения **[TypeMismatch](/ru/docs/Web/API/ValidityState/typeMismatch)** |
 
-Для обоих этих типов input, если установлен атрибут [`multiple`](/ru/docs/Web/HTML/Element/input#multiple) допускается ввод нескольких разделённых запятыми значений. Если какое-то из значений не удовлетворяет условию, описанному выше, срабатывает нарушение ограничения **Type mismatch**.
+Для обоих этих типов input, если установлен атрибут [`multiple`](/ru/docs/Web/HTML/Reference/Elements/input#multiple) допускается ввод нескольких разделённых запятыми значений. Если какое-то из значений не удовлетворяет условию, описанному выше, срабатывает нарушение ограничения **Type mismatch**.
 
 Обратите внимание, что большинство типов input не имеют внутренних ограничений, так как некоторые из них недоступны для валидации ограничений или имеют алгоритм, по умолчанию преобразующий неправильные значения в правильные.
 
@@ -282,7 +282,7 @@ slug: Web/HTML/Guides/Constraint_validation
 
 Вызов метода `checkValidity()` называется _статической_ валидацией ограничений, а вызов метода `reportValidity()` или отправка формы называется _интерактивной_ валидацией ограничений.
 
-> **Примечание:**- Если элементу {{ HTMLElement("form") }} задан атрибут [`novalidate`](/ru/docs/Web/HTML/Element/form#novalidate), интерактивная валидация ограничений не произойдёт.
+> **Примечание:**- Если элементу {{ HTMLElement("form") }} задан атрибут [`novalidate`](/ru/docs/Web/HTML/Reference/Elements/form#novalidate), интерактивная валидация ограничений не произойдёт.
 >
 > - Вызов метода `submit()` интерфейса [`HTMLFormElement`](/ru/docs/Web/API/HTMLFormElement) не запускает валидацию ограничений. Другими словами, этот метод отправляет данные формы на сервер, даже если ограничения нарушены. Вместо него вызовите метод `click()` кнопки отправки формы.
 
@@ -428,7 +428,7 @@ window.onload = function () {
 
 #### CSS-псевдоклассы :required и :optional
 
-[Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут [`required`](/ru/docs/Web/HTML/Global_attributes#required)
+[Псевдоклассы](/ru/docs/Web/CSS/Pseudo-classes) {{cssxref(':required')}} и {{cssxref(':optional')}} позволяют писать селекторы, соответствующие элементам формы, которые имеют или не имеют атрибут [`required`](/ru/docs/Web/HTML/Reference/Global_attributes#required)
 
 #### CSS-псевдокласс :placeholder-shown
 

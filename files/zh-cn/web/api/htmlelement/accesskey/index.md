@@ -21,4 +21,4 @@ l10n:
 
 ## 参见
 
-- [HTML 全局属性：accesskey](/zh-CN/docs/Web/HTML/Global_attributes/accesskey)
+- [HTML 全局属性：accesskey](/zh-CN/docs/Web/HTML/Reference/Global_attributes/accesskey)

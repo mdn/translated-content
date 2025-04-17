@@ -118,7 +118,7 @@ SVG 除了前面描述的以外还有其他优点：
 
 ### 问题排查和跨浏览器支持
 
-对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，你可以用 `src` 属性引用 PNG 或 JPG，并使用 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性（只有较新的浏览器才能识别）来引用 SVG。在这种情况下，仅支持 SVG 的浏览器会加载 SVG——较旧的浏览器将加载 PNG：
+对于不支持 SVG（IE 8 及更低版本，Android 2.3 及更低版本）的浏览器，你可以用 `src` 属性引用 PNG 或 JPG，并使用 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性（只有较新的浏览器才能识别）来引用 SVG。在这种情况下，仅支持 SVG 的浏览器会加载 SVG——较旧的浏览器将加载 PNG：
 
 ```html
 <img src="equilateral.png" alt="等边三角形" srcset="equilateral.svg" />
@@ -322,7 +322,7 @@ textarea.onkeyup = function () {
 
 本文提供了矢量图形和 SVG 的简单教程，让你了解他们的作用，以及如何在网页中引入 SVG。本文并非学习 SVG 的完整教程，只是一个指南，让你在 Web 上遇到 SVG 时知道它是什么。所以不要因为觉得你不是一个 SVG 专家而担心。如果你想了解更多它的工作原理，我们在下面列出了一些可能会帮助你的链接。
 
-在本模块的最后一篇文章中，我们将详细探索[响应式图像](/zh-CN/docs/Web/HTML/Responsive_images)，查看 HTML 提供的可以让图像更好地跨设备适配的工具。
+在本模块的最后一篇文章中，我们将详细探索[响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)，查看 HTML 提供的可以让图像更好地跨设备适配的工具。
 
 ## 参见
 

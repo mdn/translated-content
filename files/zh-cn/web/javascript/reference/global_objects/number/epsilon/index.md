@@ -84,7 +84,7 @@ const z = 2000.3;
 console.log(equal(x + y, z, 2000 * Number.EPSILON)); // true
 ```
 
-除了数量级之外，考虑输入的*精度*也非常重要。例如，如果数字是从表单输入收集的，并且输入值只能以 `0.1` 的步长调整（即 [`<input type="number" step="0.1">`](/zh-CN/docs/Web/HTML/Attributes/step)），通常可以允许更大的容差，例如 `0.01`，因为数据的精度只有 `0.1`。
+除了数量级之外，考虑输入的*精度*也非常重要。例如，如果数字是从表单输入收集的，并且输入值只能以 `0.1` 的步长调整（即 [`<input type="number" step="0.1">`](/zh-CN/docs/Web/HTML/Reference/Attributes/step)），通常可以允许更大的容差，例如 `0.01`，因为数据的精度只有 `0.1`。
 
 > [!NOTE]
 > 重点是：不要简单地将 `Number.EPSILON` 作为相等性测试的阈值。使用适合要比较的数字的数量级和精度的阈值。

@@ -78,7 +78,7 @@ visibility: unset;
 - `visible`
   - : 元素框可见。
 - `hidden`
-  - : 元素框不可见（不绘制），但仍然影响常规的布局。如果将其子元素的 `visibility` 设置为 `visible`，则该子元素依然可见。元素无法获得焦点（例如通过 [tab 索引](/zh-CN/docs/Web/HTML/Global_attributes/tabindex)进行键盘导航）。
+  - : 元素框不可见（不绘制），但仍然影响常规的布局。如果将其子元素的 `visibility` 设置为 `visible`，则该子元素依然可见。元素无法获得焦点（例如通过 [tab 索引](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex)进行键盘导航）。
 - `collapse`
 
   - : `collapse` 关键字对于不同的元素有不同的效果：

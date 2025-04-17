@@ -24,7 +24,7 @@ slug: Web/SVG/Guides/Applying_SVG_effects_to_HTML_content
 </style>
 ```
 
-В приведённом выше примере все параграфы маскируются с помощью [SVG](/ru/docs/Web/SVG/Element/mask) [`<mask>`](/ru/docs/Web/SVG/Element/mask) с [ID](/ru/docs/Web/HTML/Global_attributes/id) `my-mask`.
+В приведённом выше примере все параграфы маскируются с помощью [SVG](/ru/docs/Web/SVG/Element/mask) [`<mask>`](/ru/docs/Web/SVG/Element/mask) с [ID](/ru/docs/Web/HTML/Reference/Global_attributes/id) `my-mask`.
 
 ### Пример: маскировка
 

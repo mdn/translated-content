@@ -99,7 +99,7 @@ Access-Control-Allow-Origin: *
 ```
 
 > [!NOTE]
-> 有关 `crossorigin` 属性的更多信息，见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Attributes/crossorigin)。
+> 有关 `crossorigin` 属性的更多信息，见 [CORS 设置属性](/zh-CN/docs/Web/HTML/Reference/Attributes/crossorigin)。
 
 ## 浏览器如何处理 SRI
 

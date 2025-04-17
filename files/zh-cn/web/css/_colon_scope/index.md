@@ -151,7 +151,7 @@ document.getElementById("results").innerHTML = Array.prototype.map
 
 #### 结果
 
-`context` 的作用域是 [`id`](/zh-CN/docs/Web/HTML/Global_attributes#id) 为 `context` 的元素。所选元素是此上下文的直接子元素——`element-1` 和 `element-2`——但不包括它们的后代。
+`context` 的作用域是 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#id) 为 `context` 的元素。所选元素是此上下文的直接子元素——`element-1` 和 `element-2`——但不包括它们的后代。
 
 {{EmbedLiveSample('在 JavaScript 中使用 :scope')}}
 

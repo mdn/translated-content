@@ -152,9 +152,9 @@ import { name as squareName, draw } from "./shapes/square.js";
 import { name as circleName } from "https://example.com/shapes/circle.js";
 ```
 
-[导入映射](/zh-CN/docs/Web/HTML/Element/script/type/importmap)允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
+[导入映射](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap)允许开发者在导入模块时指定几乎任何文本，映射提供了一个相应的值，当模块 URL 被解析时将替换文本。
 
-例如，下面导入映射中的 `imports` 键定义了一个“模块标识符映射”JSON 对象，其中属性名称可以用作模块标识符，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Element/base) 将相对 URL 解析为绝对 URL。
+例如，下面导入映射中的 `imports` 键定义了一个“模块标识符映射”JSON 对象，其中属性名称可以用作模块标识符，当浏览器解析模块 URL 时，相应的值将被替换。这些值必须是绝对或相对 URL。使用文档包含导入映射的[基础 URL](/zh-CN/docs/Web/HTML/Reference/Elements/base) 将相对 URL 解析为绝对 URL。
 
 ```html
 <script type="importmap">
@@ -170,7 +170,7 @@ import { name as circleName } from "https://example.com/shapes/circle.js";
 </script>
 ```
 
-导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Element/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Element/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在 worker 或 worklet 上下文中应用导入映射。
+导入映射是在一个 `<script>` 元素中定义的 [JSON 对象](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap#导入映射_json_表示)，`type` 属性设置为 [`importmap`](/zh-CN/docs/Web/HTML/Reference/Elements/script/type/importmap)。文档中只能有一个导入映射，因为它用于解析静态和动态导入的模块，所以必须在导入模块的任何 `<script>` 元素之前声明。请注意，导入映射仅适用于文档——规范不涵盖如何在 worker 或 worklet 上下文中应用导入映射。
 
 通过这个映射，你现在可以使用上面的属性名称作为模块标识符。如果模块标识符尾部没有斜杠，那么整个模块标识符将被匹配和替换。例如，下面我们匹配裸模块名称，并将一个 URL 重定向到另一个路径。
 
@@ -342,7 +342,7 @@ document.adoptedStyleSheets = [styles];
 
 现在我们只需要将 `main.js` 模块应用到我们的 HTML 页面。这与将常规脚本应用到页面非常相似，但有一些显著的区别。
 
-首先，你需要在 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素中包含 `type="module"`，以声明此脚本为模块。要导入 `main.js` 脚本，我们使用以下代码：
+首先，你需要在 [`<script>`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 元素中包含 `type="module"`，以声明此脚本为模块。要导入 `main.js` 脚本，我们使用以下代码：
 
 ```html
 <script type="module" src="main.js"></script>
@@ -370,13 +370,13 @@ document.adoptedStyleSheets = [styles];
 通常，你应该在单独的文件中定义所有模块。内联声明在 HTML 中的模块只能导入其他模块，但它们导出的任何内容将无法被其他模块访问（因为它们没有 URL）。
 
 > [!NOTE]
-> 可以通过在 [`<link>`](/zh-CN/docs/Web/HTML/Element/link) 元素中指定 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Attributes/rel/modulepreload) 来预加载模块及其依赖项。这可以显著减少使用模块时的加载时间。
+> 可以通过在 [`<link>`](/zh-CN/docs/Web/HTML/Reference/Elements/link) 元素中指定 [`rel="modulepreload"`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel/modulepreload) 来预加载模块及其依赖项。这可以显著减少使用模块时的加载时间。
 
 ## 模块与经典脚本的其他不同
 
 - 你需要注意本地测试——如果你通过本地加载 HTML 文件（比如一个 `file://` 路径的文件），你将会遇到 CORS 错误，因为 JavaScript 模块安全性需要。你需要通过一个服务器来测试。
 - 另请注意，你可能会从模块内部定义的脚本部分获得与标准脚本中不同的行为。这是因为模块自动使用{{jsxref("Strict_mode", "严格模式", "", 1)}}。
-- 加载一个模块脚本时不需要使用 `defer` 属性（参见 [`<script>` 属性](/zh-CN/docs/Web/HTML/Element/script#属性)）模块会自动延迟加载。
+- 加载一个模块脚本时不需要使用 `defer` 属性（参见 [`<script>` 属性](/zh-CN/docs/Web/HTML/Reference/Elements/script#属性)）模块会自动延迟加载。
 - 最后一点但同样重要的是，你需要理解模块功能的导入范围——它们仅限于被导入的脚本文件，无法在全局范围内访问。因此，这些功能只能在导入它们的脚本文件中使用，无法通过 JavaScript 控制台直接访问。例如，在开发者工具中你仍然可以看到语法错误，但可能无法像预期那样使用调试方法。
 
 模块定义的变量是模块范围内的，除非明确附加到全局对象。另一方面，全局定义的变量在模块内是可用的。例如，给定以下代码：

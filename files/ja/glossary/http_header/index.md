@@ -65,7 +65,7 @@ X-Cache-Info: cached
   - {{Glossary("Response header", "レスポンスヘッダー")}}
   - {{Glossary("Representation header", "表現ヘッダー")}}
   - {{Glossary("Fetch metadata request header", "フェッチメタデータリクエストヘッダー")}}
-  - {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+  - {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
   - {{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}
   - {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}
   - {{Glossary("CORS-safelisted response header", "CORS セーフリストレスポンスヘッダー")}}

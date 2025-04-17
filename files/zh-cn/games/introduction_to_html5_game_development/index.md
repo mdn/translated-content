@@ -33,7 +33,7 @@ slug: Games/Introduction_to_HTML5_Game_Development
   - : 使用游戏手柄或其他游戏控制器。
 - [HTML](/zh-CN/docs/Web/HTML) and [CSS](/zh-CN/docs/Web/CSS)
   - : 构建，样式和布局游戏的用户界面。
-- [HTML audio](/zh-CN/docs/Web/HTML/Element/audio)
+- [HTML audio](/zh-CN/docs/Web/HTML/Reference/Elements/audio)
   - : 轻松播放简单的音效和音乐。
 - [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)
   - : 将用户数据存储在他们自己的计算机或设备上。

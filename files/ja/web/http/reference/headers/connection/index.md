@@ -21,7 +21,7 @@ original_slug: Web/HTTP/Headers/Connection
       </td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>yes</td>
     </tr>
   </tbody>

@@ -1,16 +1,15 @@
 ---
 title: boolean
 slug: Web/XML/XPath/Reference/Functions/boolean
-original_slug: Web/XPath/Reference/Functions/boolean
+l10n:
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}{{ XsltRef() }}
 
 `boolean` 関数は式を評価し、 true または false を返します。
 
 ## 構文
 
-```
+```js-nolint
 boolean( expression )
 ```
 
@@ -30,9 +29,9 @@ boolean( expression )
 - 文字列は、空文字列ならば false と評価されます。そうでなければ true と評価されます。
 - 4 つの基本型以外の型のオブジェクトは、その型に応じた方法で論理値に変換されます。
 
-## 定義
+## 仕様書
 
-[XPath 1.0 4.3](https://www.w3.org/TR/xpath#function-boolean)
+[XPath 1.0 4.3](https://www.w3.org/TR/1999/REC-xpath-19991116/#function-boolean)
 
 ## Gecko の対応
 
