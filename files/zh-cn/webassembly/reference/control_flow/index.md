@@ -8,9 +8,9 @@ l10n:
 WebAssembly 控制流指令。
 
 - [`block`](/zh-CN/docs/WebAssembly/Reference/Control_flow/block)
-  - : 创建一个块标签，后面可以用 [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br) 跳出该块。
+  - : 创建一个后面可以用 [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br) 跳出的标签。
 - [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br)
-  - : 跳出/跳到循环标签、块标签或 if 标签。
+  - : 跳转到循环（loop）标签、块（block）标签或 if 标签。
 - [`call`](/zh-CN/docs/WebAssembly/Reference/Control_flow/call)
   - : 调用一个函数。
 - [`drop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/Drop)
@@ -20,7 +20,7 @@ WebAssembly 控制流指令。
 - [`if...else`](/zh-CN/docs/WebAssembly/Reference/Control_flow/if...else)
   - : 如果栈上的最后一项为真（非零），则执行一条语句。
 - [`loop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/loop)
-  - : 创建一个循环标签，后面可以用 [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br) 跳到该循环。
+  - : 创建一个后面可以用 [`br`](/zh-CN/docs/WebAssembly/Reference/Control_flow/br) 跳转到的标签。
 - [`nop`](/zh-CN/docs/WebAssembly/Reference/Control_flow/nop)
   - : 什么也不做。
 - [`return`](/zh-CN/docs/WebAssembly/Reference/Control_flow/return)
