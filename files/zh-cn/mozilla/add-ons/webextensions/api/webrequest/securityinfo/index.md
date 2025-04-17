@@ -9,7 +9,7 @@ l10n:
 
 描述特定 Web 请求安全属性的对象。此类型的对象由 {{WebExtAPIRef("webRequest.getSecurityInfo()")}} API 返回。
 
-如果请求未使用 [TLS](/zh-CN/docs/Glossary/TLS) 加密，则此对象将只包含取值为“insecure”的 `state` 属性。
+如果请求未使用 [TLS](/zh-CN/docs/Glossary/TLS) 加密，则此对象将只包含取值为 `"insecure"` 的 `state` 属性。
 
 ## 类型
 
@@ -17,7 +17,7 @@ l10n:
 
 - `certificates`
 
-  - : {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} 的数组（`Array`）。如果调用 {{WebExtAPIRef("webRequest.getSecurityInfo()")}} 时传入了值为 `true` 的 `certificateChain`，则此数组将包含证书链中所有证书（从服务器证书到信任根证书）的 `CertificateInfo` 对象。
+  - : {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} 的数组（`Array`）。如果调用 {{WebExtAPIRef("webRequest.getSecurityInfo()")}} 时传入了值为 `true` 的 `certificateChain` 选项，则此数组将包含证书链中所有证书（从服务器证书到信任根证书）的 `CertificateInfo` 对象。
 
     否则，它将仅包含服务器证书的 `CertificateInfo` 对象。
 
@@ -39,7 +39,7 @@ l10n:
     需要注意，你现在只能在 `onHeaderReceived` 监听器中调用 `getSecurityInfo()`，并且在握手失败时不会触发 `onHeaderReceived` 事件。因此在现实中该属性将不会被设置。
 
 - `hsts` {{optional_inline}}
-  - : `Boolean`。如果主机使用[严格传输安全性](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security)则为 `true`，否则为 `false`。
+  - : `Boolean`。如果主机使用[严格传输安全](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security)则为 `true`，否则为 `false`。
 - `isDomainMismatch` {{optional_inline}}
   - : `Boolean`。如果服务器的域名与其证书中的域名不匹配则为 `true`，否则为 `false`。
 - `isExtendedValidation` {{optional_inline}}
