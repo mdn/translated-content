@@ -24,7 +24,7 @@ l10n:
 - `image`
   - : 被渲染为图片的资源（除了在那些支持 `imageset` 属性的浏览器中通过该属性加载的图片资源。参见下方的浏览器兼容性）。
 - `imageset`
-  - : 由 {{HTMLElement("picture")}} 元素加载的图像或在 `<img>` 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Element/img#srcset) 属性中指定的图像。
+  - : 由 {{HTMLElement("picture")}} 元素加载的图像或在 `<img>` 元素的 [`srcset`](/zh-CN/docs/Web/HTML/Reference/Elements/img#srcset) 属性中指定的图像。
 - `main_frame`
   - : 加载到标签页中的顶级文档。
 - `media`
@@ -39,7 +39,7 @@ l10n:
   - : 插件发送的请求。
 - `ping`
 
-  - : 当点击超链接时，发送到超链接的 [`ping`](/zh-CN/docs/Web/HTML/Element/a#ping) 属性中指定的 URL 的请求。
+  - : 当点击超链接时，发送到超链接的 [`ping`](/zh-CN/docs/Web/HTML/Reference/Elements/a#ping) 属性中指定的 URL 的请求。
 
     没有专用 `beacon` 类型的浏览器（参见下方的浏览器兼容性）也将通过 Beacon API 发送的请求标记为 `ping`。
 
@@ -72,3 +72,33 @@ l10n:
 
 > [!NOTE]
 > 此 API 基于 Chromium 的 [`chrome.webRequest`](https://developer.chrome.google.cn/docs/extensions/reference/api/webRequest#type-ResourceType) API。该文档衍生自 Chromium 代码中的 [`web_request.json`](https://chromium.googlesource.com/chromium/src/+/master/extensions/common/api/web_request.json)。
+
+<!--
+// Copyright 2015 The Chromium Authors. All rights reserved.
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are
+// met:
+//
+//    * Redistributions of source code must retain the above copyright
+// notice, this list of conditions and the following disclaimer.
+//    * Redistributions in binary form must reproduce the above
+// copyright notice, this list of conditions and the following disclaimer
+// in the documentation and/or other materials provided with the
+// distribution.
+//    * Neither the name of Google Inc. nor the names of its
+// contributors may be used to endorse or promote products derived from
+// this software without specific prior written permission.
+//
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+// A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+// OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+// SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+// LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+// DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+// THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+// (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+// OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
