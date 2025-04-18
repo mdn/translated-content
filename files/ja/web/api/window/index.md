@@ -180,9 +180,9 @@ _このインターフェイスは {{domxref("EventTarget")}} インターフェ
 - {{domxref("Window.cancelIdleCallback()")}}
   - : {{domxref("Window.requestIdleCallback")}} によって過去にスケジューリングされたコールバックをキャンセルできます。
 - {{domxref("clearInterval", "Window.clearInterval()")}}
-  - : {{domxref("setInterval()")}} で繰り返し実行されるよう設定された命令をキャンセルします。
+  - : {{domxref("Window.setInterval", "setInterval()")}} で繰り返し実行されるよう設定された命令をキャンセルします。
 - {{domxref("clearTimeout()", "Window.clearTimeout()")}}
-  - : {{domxref("setTimeout()")}} で遅延実行するよう設定した命令をキャンセルします。
+  - : {{domxref("Window.setTimeout", "setTimeout()")}} で遅延実行するよう設定した命令をキャンセルします。
 - {{domxref("Window.close()")}}
   - : 現在のウィンドウを閉じます。
 - {{domxref("Window.confirm()")}}

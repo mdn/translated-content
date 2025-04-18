@@ -1,19 +1,20 @@
 ---
 title: "CSP: block-all-mixed-content"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/block-all-mixed-content
-original_slug: Web/HTTP/Headers/Content-Security-Policy/block-all-mixed-content
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}{{deprecated_header}}
 
 > [!WARNING]
-> このディレクティブは、仕様上、廃止されたものとしてマークされています。すべての混合コンテンツは、自動アップグレードできない場合、ブロックされるようになりました。
+> このディレクティブは、仕様上、廃止されたものとして位置づけられています。
+> このディレクティブは、以前は「オプションでブロック可能な」混在コンテンツを安全でない方法で取得し、表示することを防ぐために使用されていました。
+> ブロックされないコンテンツは、常に保護された接続にアップグレードするようになったので、このディレクティブは必要ありません。
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) **`block-all-mixed-content`** ディレクティブは、ページが HTTPS を使用しているときに HTTP で資産を読み込むことを防ぎます。
 
-能動的および受動的の両方を含む、すべての[混合コンテンツ](/ja/docs/Web/Security/Mixed_content)リソースのリクエストがブロックされます。これは {{HTMLElement("iframe")}} の文書にも適用され、ページ全体で混合コンテンツがないことを保証します。
+すべての[混在コンテンツ](/ja/docs/Web/Security/Mixed_content)のリソースのリクエストは、ブロック可能であるものやアップグレード可能であるものを含め、ブロックされます。これは {{HTMLElement("iframe")}} の文書にも適用され、ページ全体で混在コンテンツがないことを保証します。
 
 > **メモ:** {{CSP("upgrade-insecure-requests")}} ディレクティブが `block-all-mixed-content` の前に評価されます。
 > 前者が設定されていれば、後者は何もしません。どちらかのディレクティブを設定してください。 HTTP にリダイレクトした後で HTTPS を強制することができない古いブラウザーで HTTPS を強制させたくない限り、両方の効果はありません。
@@ -42,7 +43,7 @@ Content-Security-Policy: img-src https:
 ## 仕様書
 
 現在のどの仕様にも属していません。
-古い仕様書である [Mixed Content Level 1](https://www.w3.org/TR/mixed-content/#block-all-mixed-content) で定義されていたものです。
+古い仕様書である [Mixed Content Level 1](https://www.w3.org/TR/2015/CR-mixed-content-20150317/#strict-opt-in) で定義されていたものです。
 
 ## ブラウザーの互換性
 
@@ -52,4 +53,4 @@ Content-Security-Policy: img-src https:
 
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("upgrade-insecure-requests")}}
-- [混合コンテンツ](/ja/docs/Web/Security/Mixed_content)
+- [混在コンテンツ](/ja/docs/Web/Security/Mixed_content)

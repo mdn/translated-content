@@ -86,7 +86,7 @@ Firefox 55 は、米国時間 2017 年 8 月 8 日にリリースされました
 #### Workers
 
 - ワーカーおよび共有ワーカーを、識別用の `name` プロパティをつけて作成できるようになりました。{{domxref("Worker.Worker", "Worker()")}} および {{domxref("SharedWorker.SharedWorker", "SharedWorker()")}} コンストラクター、{{domxref("DedicatedWorkerGlobalScope")}} および {{domxref("SharedWorkerGlobalScope")}} インターフェイスをご覧ください ([Firefox バグ 1364297](https://bugzil.la/1364297))。
-- {{domxref("setTimeout()")}} および {{domxref("setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。[トラッキングスクリプトのタイムアウトを制限する](/ja/docs/Web/API/Window/setTimeout#トラッキングスクリプトのタイムアウトを制限する)をご覧ください ([Firefox バグ 1355311](https://bugzil.la/1355311))。
+- {{domxref("Window.setTimeout", "setTimeout()")}} および {{domxref("Window.setInterval", "setInterval()")}} が、バックグラウンドのタブでトラッキングスクリプトに対して最小間隔の調整を課すようになりました。[トラッキングスクリプトのタイムアウトを制限する](/ja/docs/Web/API/Window/setTimeout#トラッキングスクリプトのタイムアウトを制限する)をご覧ください ([Firefox バグ 1355311](https://bugzil.la/1355311))。
 
 #### Service Workers/Push
 
