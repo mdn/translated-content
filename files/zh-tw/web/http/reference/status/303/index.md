@@ -7,7 +7,7 @@ l10n:
 
 {{HTTPSidebar}}
 
-HTTP **`303 See Other`** [重新導向回應](/zh-tw/docs/Web/HTTP/Reference/Status#重新導向訊息) 狀態碼表示瀏覽器應該根據 {{HTTPHeader("Location")}} 標頭中的 URL 進行重新導向，而不是連結到所請求的資源本身。
+HTTP **`303 See Other`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息) 狀態碼表示瀏覽器應該根據 {{HTTPHeader("Location")}} 標頭中的 URL 進行重新導向，而不是連結到所請求的資源本身。
 
 這個回應碼通常作為 {{HTTPMethod("PUT")}} 或 {{HTTPMethod("POST")}} 方法的結果發送回來，讓用戶端可以取得確認頁面，或查看真實世界物件的表示（參見 [HTTP range-14](https://en.wikipedia.org/wiki/HTTPRange-14)）。用於取得重新導向資源的方法總是 {{HTTPMethod("GET")}}。
 
@@ -47,7 +47,7 @@ Content-Length: 0
 
 ## 參見
 
-- [HTTP 中的重新導向](/zh-tw/docs/Web/HTTP/Guides/Redirections)
-- [HTTP 回應狀態碼](/zh-tw/docs/Web/HTTP/Reference/Status)
+- [HTTP 中的重新導向](/zh-TW/docs/Web/HTTP/Guides/Redirections)
+- [HTTP 回應狀態碼](/zh-TW/docs/Web/HTTP/Reference/Status)
 - {{HTTPStatus("302", "302 Found")}}，臨時重新導向
 - {{HTTPStatus("307", "307 Temporary Redirect")}}，臨時重新導向，請求方法不會被修改
