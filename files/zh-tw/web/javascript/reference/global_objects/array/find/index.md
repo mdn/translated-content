@@ -35,15 +35,15 @@ find(callbackFn, thisArg)
 
 ### 參數
 
-- `callbackFn`  
+- `callbackFn`
   : 會對陣列中的每個元素執行的函式。此函式應回傳 [truthy](/zh-TW/docs/Glossary/Truthy) 值以指出找到符合條件的元素，否則應回傳 [falsy](/zh-TW/docs/Glossary/Falsy) 值。此函式會傳入以下引數：
-  - `element`  
+  - `element`
     : 目前正在處理的元素。
-  - `index`  
+  - `index`
     : 目前正在處理的元素的索引。
-  - `array`  
+  - `array`
     : 呼叫 `find()` 的陣列。
-- `thisArg` {{optional_inline}}  
+- `thisArg` {{optional_inline}}
   : 執行 `callbackFn` 時用作 `this` 的值。請參見[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 回傳值
