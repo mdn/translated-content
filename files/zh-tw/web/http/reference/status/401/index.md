@@ -28,7 +28,7 @@ GET /admin HTTP/1.1
 Host: example.com
 ```
 
-伺服器回應 401 訊息並帶有 {{HTTPHeader("WWW-Authenticate")}} 標頭，表示該請求必須經過驗證，且允許使用 `Bearer` 認證（即存取權杖）來進行驗證：
+伺服器回應 401 訊息並帶有 {{HTTPHeader("WWW-Authenticate")}} 標頭，表示該請求必須經過驗證，且 `Bearer` 認證（即存取權杖）是允許使用的[驗證方案](/zh-TW/docs/Web/HTTP/Guides/Authentication#驗證方案)：
 
 ```http
 HTTP/1.1 401 Unauthorized
