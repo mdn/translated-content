@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
 ---
 
-**`end`** 用于终止 `block`，`loop`，`if` 或 `else`。在其他例子中，我们使用的是不需要 `end` 的 s 表达式，因此你不会在哪些例子中找到它。然而，了解它仍是有用的，因为浏览器的开发者工具是这样显示的。
+**`end`** 用于终止 `block`、`loop`、`if` 或 `else`。在其他示例中，我们使用的是不需要 `end` 的 s 表达式，因此你不会在哪些示例中找到它。然而，了解它仍是有用的，因为浏览器的开发者工具是这样显示的。
 
 {{InteractiveExample("Wat Demo: end", "tabbed-taller")}}
 
