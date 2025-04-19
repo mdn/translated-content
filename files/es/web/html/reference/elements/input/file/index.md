@@ -34,7 +34,7 @@ label {
 
 ## Valor
 
-El atributo [`value`](/es/docs/Web/HTML/Element/input#value) de un _input_ de archivo contiene una cadena que representa la ruta a los archivos seleccionados. Si aún no se ha seleccionado ningún archivo, el valor es una cadena vacía (`""`). Cuando el usuario selecciona múltiples archivos, el `value` representa el primer archivo en la lista de archivos seleccionados. Los otros archivos pueden ser identificados utilizando la [propiedad HTMLInputElement.files del _input_](/es/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
+El atributo [`value`](/es/docs/Web/HTML/Reference/Elements/input#value) de un _input_ de archivo contiene una cadena que representa la ruta a los archivos seleccionados. Si aún no se ha seleccionado ningún archivo, el valor es una cadena vacía (`""`). Cuando el usuario selecciona múltiples archivos, el `value` representa el primer archivo en la lista de archivos seleccionados. Los otros archivos pueden ser identificados utilizando la [propiedad HTMLInputElement.files del _input_](/es/docs/Web/API/File_API/Using_files_from_web_applications#getting_information_about_selected_files).
 
 > [!NOTE]
 > El valor es [siempre el nombre del archivo con el prefijo `C:\fakepath\`](https://html.spec.whatwg.org/multipage/input.html#fakepath-srsly), que no es la ruta real del archivo. Esto es para prevenir que software malicioso adivine la estructura de archivos del usuario.
@@ -45,7 +45,7 @@ Además de los atributos comunes compartidos por todos los elementos {{HTMLEleme
 
 ### accept
 
-El valor del atributo [`accept`](/es/docs/Web/HTML/Attributes/accept) es una cadena que define los tipos de archivos que el _input_ de archivo debería aceptar. Esta cadena es una lista separada por comas de **[especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos)**. Debido a que un tipo de archivo dado puede ser identificado de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesitas archivos de un formato dado.
+El valor del atributo [`accept`](/es/docs/Web/HTML/Reference/Attributes/accept) es una cadena que define los tipos de archivos que el _input_ de archivo debería aceptar. Esta cadena es una lista separada por comas de **[especificadores de tipo de archivo únicos](#especificadores_de_tipo_de_archivo_únicos)**. Debido a que un tipo de archivo dado puede ser identificado de más de una manera, es útil proporcionar un conjunto completo de especificadores de tipo cuando necesitas archivos de un formato dado.
 
 Por ejemplo, hay varias maneras de identificar archivos de Microsoft Word, por lo que un sitio que acepte archivos de Word podría usar un `<input>` como este:
 
@@ -58,13 +58,13 @@ Por ejemplo, hay varias maneras de identificar archivos de Microsoft Word, por l
 
 ### capture
 
-El valor del atributo [`capture`](/es/docs/Web/HTML/Attributes/capture) es una cadena que especifica qué cámara utilizar para capturar datos de imagen o video, si el atributo [`accept`](/es/docs/Web/HTML/Attributes/accept) indica que el _input_ debe ser de uno de esos tipos. Un valor de `user` indica que se debe usar la cámara y/o micrófono orientados hacia el usuario. Un valor de `environment` especifica que se debe usar la cámara y/o micrófono orientados hacia el entorno. Si este atributo falta, el {{Glossary("user agent","agente de usuario")}} es libre de decidir por sí mismo qué hacer. Si el modo de orientación solicitado no está disponible, el agente de usuario puede volver a su modo predeterminado preferido.
+El valor del atributo [`capture`](/es/docs/Web/HTML/Attributes/capture) es una cadena que especifica qué cámara utilizar para capturar datos de imagen o video, si el atributo [`accept`](/es/docs/Web/HTML/Reference/Attributes/accept) indica que el _input_ debe ser de uno de esos tipos. Un valor de `user` indica que se debe usar la cámara y/o micrófono orientados hacia el usuario. Un valor de `environment` especifica que se debe usar la cámara y/o micrófono orientados hacia el entorno. Si este atributo falta, el {{Glossary("user agent","agente de usuario")}} es libre de decidir por sí mismo qué hacer. Si el modo de orientación solicitado no está disponible, el agente de usuario puede volver a su modo predeterminado preferido.
 
 > [!NOTE] > `capture` era anteriormente un atributo booleano que, si estaba presente, solicitaba que se usará el dispositivo de captura de medios del dispositivo (como la cámara o el micrófono) en lugar de solicitar una entrada de archivo.
 
 ### multiple
 
-Cuando se especifica el atributo booleano [`multiple`](/es/docs/Web/HTML/Attributes/multiple), el _input_ de archivo permite al usuario seleccionar más de un archivo.
+Cuando se especifica el atributo booleano [`multiple`](/es/docs/Web/HTML/Reference/Attributes/multiple), el _input_ de archivo permite al usuario seleccionar más de un archivo.
 
 ## Atributos no estándar
 
@@ -346,7 +346,7 @@ Cada vez que se invoca la función `updateImageDisplay()`, nosotros:
 - Si lo es, nosotros:
 
   - Imprimimos su nombre y tamaño en un elemento de lista dentro del `<div>` de previsualización (obtenido de `file.name` y `file.size`). La función personalizada `returnFileSize()` devuelve una versión bien formateada del tamaño en bytes/KB/MB (por defecto, el navegador informa el tamaño en bytes absolutos).
-  - Generamos una vista previa en miniatura de la imagen llamando a {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Luego, insertamos la imagen en el elemento de lista también creando un nuevo `<img>` y estableciendo su [`src`](/es/docs/Web/HTML/Element/img#src) en la miniatura.
+  - Generamos una vista previa en miniatura de la imagen llamando a {{domxref("URL/createObjectURL_static", "URL.createObjectURL(file)")}}. Luego, insertamos la imagen en el elemento de lista también creando un nuevo `<img>` y estableciendo su [`src`](/es/docs/Web/HTML/Reference/Elements/img#src) en la miniatura.
 
 - Si el tipo de archivo es inválido, mostramos un mensaje dentro de un elemento de lista diciendo al usuario que necesita seleccionar un tipo de archivo diferente.
 

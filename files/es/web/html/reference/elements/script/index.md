@@ -12,7 +12,7 @@ El elemento **`<script>`** [HTML](/es/docs/Web/HTML) se utiliza para incrustar c
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `async`
 
@@ -61,9 +61,9 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
   - : Este atributo indica explícitamente que ciertas operaciones deben bloquearse al obtener el script. Las operaciones que se deben bloquear deben ser una lista separada por espacios de tokens de bloqueo enumerados a continuación.
     - `render`: Se bloquea el renderizado del contenido en la pantalla.
 
-- [`crossorigin`](/es/docs/Web/HTML/Attributes/crossorigin)
+- [`crossorigin`](/es/docs/Web/HTML/Reference/Attributes/crossorigin)
 
-  - : Los elementos `script` normales pasan información mínima al {{domxref('Window.error_event', 'window.onerror')}} para scripts que no superan las comprobaciones estándar de {{Glossary("CORS")}}. Para permitir el registro de errores en sitios que utilizan un dominio separado para medios estáticos, usa este atributo. Consulta [Atributos de configuración CORS](/es/docs/Web/HTML/Attributes/crossorigin) para una explicación más descriptiva de sus argumentos válidos.
+  - : Los elementos `script` normales pasan información mínima al {{domxref('Window.error_event', 'window.onerror')}} para scripts que no superan las comprobaciones estándar de {{Glossary("CORS")}}. Para permitir el registro de errores en sitios que utilizan un dominio separado para medios estáticos, usa este atributo. Consulta [Atributos de configuración CORS](/es/docs/Web/HTML/Reference/Attributes/crossorigin) para una explicación más descriptiva de sus argumentos válidos.
 
 - `defer`
 

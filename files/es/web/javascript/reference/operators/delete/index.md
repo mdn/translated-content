@@ -57,7 +57,7 @@ Arroja un {{jsxref("TypeError")}} en [modo estricto](/es/docs/Web/JavaScript/Ref
 
 Al contrario de lo que se podría pensar (tal vez debido a otros lenguajes de programación como
 [delete in C++](https://docs.microsoft.com/en-us/cpp/cpp/delete-operator-cpp?view=msvc-170)), el operador `delete` no tiene **nada** que ver con liberar memoria.
-La gestión de memoria se hace de manera indirecta eliminando referencias. Véase la página [gestión de memoria](/es/docs/Web/JavaScript/Memory_management) para más detalles.
+La gestión de memoria se hace de manera indirecta eliminando referencias. Véase la página [gestión de memoria](/es/docs/Web/JavaScript/Guide/Memory_management) para más detalles.
 
 El operador **`delete`** remueve una propiedad dada de un objeto.
 En caso de que la eliminación sea exitosa, retornará `true`, en otro caso

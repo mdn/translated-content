@@ -85,7 +85,7 @@ video::cue {
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `default`
   - : Este atributo indica que la pista debe habilitarse a menos que las preferencias del usuario indiquen que otra pista es más apropiada. Esto solo se puede usar en un elemento `track` por elemento multimedia.
@@ -120,7 +120,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
 - `label`
   - : Un título legible por el usuario de la pista de texto que utiliza el navegador cuando enumera las pistas de texto disponibles.
 - `src`
-  - : Dirección de la pista (archivo `.vtt`). Debe ser una URL válida. Este atributo debe especificarse y su valor de URL debe tener el mismo origen que el documento, a menos que el elemento principal {{HTMLElement("audio")}} o {{HTMLElement("video")}} del elemento `track` tenga un atributo de [origen cruzado](/es/docs/Web/HTML/Attributes/crossorigin).
+  - : Dirección de la pista (archivo `.vtt`). Debe ser una URL válida. Este atributo debe especificarse y su valor de URL debe tener el mismo origen que el documento, a menos que el elemento principal {{HTMLElement("audio")}} o {{HTMLElement("video")}} del elemento `track` tenga un atributo de [origen cruzado](/es/docs/Web/HTML/Reference/Attributes/crossorigin).
 - `srclang`
   - : Idioma del texto de la pista. Debe ser una etiqueta de idioma [BCP 47](https://r12a.github.io/app-subtags/) válida. Si el atributo `kind` se establece en `subtitles`, se debe definir `srclang`.
 

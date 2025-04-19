@@ -18,9 +18,9 @@ original_slug: Web/HTML/Element/frameset
 
     **Crea una caja**: .
 
-    **Puede y debe contener**: Uno o más elementos [frameset](/es/docs/Web/HTML/Element/frameset) y [frame](/es/docs/Web/HTML/Element/frame). además puede contener un elemento [noframes](/es/docs/Web/HTML/Element/noframes).
+    **Puede y debe contener**: Uno o más elementos [frameset](/es/docs/Web/HTML/Reference/Elements/frameset) y [frame](/es/docs/Web/HTML/Reference/Elements/frame). además puede contener un elemento [noframes](/es/docs/Web/HTML/Reference/Elements/noframes).
 
-    **Debe ser contenido por**: Elementos [html](/es/docs/Web/HTML/Element/html)
+    **Debe ser contenido por**: Elementos [html](/es/docs/Web/HTML/Reference/Elements/html)
 
 #### Atributos
 

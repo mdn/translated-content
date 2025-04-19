@@ -18,7 +18,7 @@ original_slug: Web/HTML/Element/noframes
 
     En un documento transicional **puede contener**: texto y/o cero o más elementos [en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque) o [en línea](/es/docs/HTML/Elemento/Tipos_de_elementos#en_l.c3.adnea).
 
-    En un documento de marcos **puede y debe contener**: Un elementos [body](/es/docs/Web/HTML/Element/body) y no puede contener [noframes](/es/docs/Web/HTML/Element/noframes).
+    En un documento de marcos **puede y debe contener**: Un elementos [body](/es/docs/Web/HTML/Reference/Elements/body) y no puede contener [noframes](/es/docs/Web/HTML/Reference/Elements/noframes).
 
 #### Atributos
 

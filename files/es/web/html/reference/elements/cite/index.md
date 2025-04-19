@@ -217,7 +217,7 @@ En los navegadores basados en Mozilla (y en otros) el contenido de cite es mostr
 
 ### Notas
 
-- Está bastante estendido el mal uso de este elemento, mucha gente lo usa para marcar el texto de las citas en vez del autor, para marcar el texto están los elementos [q](/es/docs/Web/HTML/Element/q) (en línea) y [blockquote](/es/docs/Web/HTML/Element/blockquote) (en bloque).
+- Está bastante estendido el mal uso de este elemento, mucha gente lo usa para marcar el texto de las citas en vez del autor, para marcar el texto están los elementos [q](/es/docs/Web/HTML/Reference/Elements/q) (en línea) y [blockquote](/es/docs/Web/HTML/Reference/Elements/blockquote) (en bloque).
 
 ### Referencia
 

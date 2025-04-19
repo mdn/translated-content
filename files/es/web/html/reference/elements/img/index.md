@@ -77,14 +77,14 @@ Este elemento incluye atributos globales.
 
 - `crossorigin`
 
-  - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/CORS_enabled_image) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
+  - : Este atributo enumerado indica si la búsqueda de la imagen debe ser por CORS o no. [Imagen hablidata CORS](/es/docs/Web/HTML/How_to/CORS_enabled_image) puede ser usada en el elemento {{HTMLElement("canvas")}} sin ser pintada. Los valores permitidos son:
 
     - `"anonymous"`
       - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada. Sin embargo, no fueron enviadas credenciales "_(i.e., no cookie, no X.509 certificate, and no HTTP Basic authentication is sent)_". Sí el servidor no emite credenciales al sitio de origen (no ajustando el `Access-Control-Allow-Origin:` HTTP header), la imagen será pintada y su uso restringido.
     - `"use-credentials"`
       - : Una petición cross-origin (i.e., with `Origin:` HTTP header) es realizada con credenciales (i.e., a cookie, a certificate, and HTTP Basic authentication is performed). Sí el servidor no emite credenciales al sitio de origen (a través del `Access-Control-Allow-Credentials:` HTTP header), la imagen será pintada y su uso restringido.
 
-    Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/Web/HTML/Attributes/crossorigin) para más información.
+    Cuando no existe, el recurso es buscado sin petición CORS (i.e., `sin enviar el Origen:` HTTP header) , previniendo el uso no pintado del elemento {{HTMLElement('canvas')}}. Si es inválido, se maneja como si se hubiese usado **anonymous**. Ver [atributos de configuración CORS](/es/docs/Web/HTML/Reference/Attributes/crossorigin) para más información.
 
 - `height`
   - : La altura de la imagen en píxeles CSS en HTML5 o píxeles o como porcentaje en HTML4.
@@ -95,7 +95,7 @@ Este elemento incluye atributos globales.
   - : Este atributo boleano indica que la imagen es parte del mapa del lado del servidor. Así que, se envían las coordenadas precisas de un clic.
 
     > [!NOTE]
-    > Este atributo está permitido solo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo [`href`](/es/docs/Web/HTML/Element/a#href) válido.
+    > Este atributo está permitido solo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} con un atributo [`href`](/es/docs/Web/HTML/Reference/Elements/a#href) válido.
 
 - `longdesc`
   - : La URL como descripción de una imagen mostrada, complementa al texto de `alt`.
@@ -142,7 +142,7 @@ Este elemento incluye atributos globales.
   - : El ancho de la imagen en píxeles CSS en HTML5, o píxeles o porcentaje en HTML4.
 - `usemap`
 
-  - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/Web/HTML/Element/map) asociado a un elemento.
+  - : La URL parcial (empezando con '#') de un [mapa de imagea](/es/docs/Web/HTML/Reference/Elements/map) asociado a un elemento.
 
     > [!NOTE]
     > No puedes usar este atributo si el elemento `<img>` es descendiente de un elemento {{htmlelement("a")}} o {{HTMLElement("button")}}.
