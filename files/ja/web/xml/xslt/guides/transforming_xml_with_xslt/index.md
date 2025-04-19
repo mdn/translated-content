@@ -10,7 +10,7 @@ l10n:
 
 ## 概要
 
-[概要](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/An_Overview)
+[概要](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
 
 コンテンツとプレゼンテーションの分離は、[XML](/ja/docs/Web/XML) の重要な設計の特徴です。 XML 文書の構造は、このデータが最終的にどのように表現されるべきかを示す必要性に妨げられることなく、コンテンツ自体の個々の側面間の重要な関係を反映し、明確にするように設計されています。このインテリジェントな構造化は、より多くのデータ移行を自動化し、ネットワークでリンクされた異機種間で配置する際に具体的な意味を持ちます。
 
@@ -123,15 +123,15 @@ l10n:
 
 ## 参考文献
 
-[参考文献](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading)
+[参考文献](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT)
 
-- [書籍](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#書籍)
-- [デジタル](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#デジタル)
+- [書籍](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#書籍)
+- [デジタル](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#デジタル)
 
-  - [ウェブサイト](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#ウェブサイト)
-  - [記事](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#記事)
-  - [チュートリアル／例](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#チュートリアル／例)
-  - [その他](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT/For_Further_Reading#その他)
+  - [ウェブサイト](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#ウェブサイト)
+  - [記事](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#記事)
+  - [チュートリアル／例](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#チュートリアル／例)
+  - [その他](/ja/docs/Web/XML/XSLT/Guides/Transforming_XML_with_XSLT#その他)
 
 ## 原典情報
 
