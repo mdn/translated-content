@@ -1929,6 +1929,7 @@
 /es/docs/Web/API/Window/applicationCache	/es/docs/orphaned/Web/API/Window/applicationCache
 /es/docs/Web/API/Window/console	/es/docs/conflicting/Web/API/console
 /es/docs/Web/API/Window/dialogArguments	/es/docs/orphaned/Web/API/Window/dialogArguments
+/es/docs/Web/API/Window/showModalDialog	/es/docs/Web/API/HTMLDialogElement/showModal
 /es/docs/Web/API/WindowBase64.atob	/es/docs/Web/API/Window/atob
 /es/docs/Web/API/WindowBase64/Base64_codificando_y_decodificando	/es/docs/Glossary/Base64
 /es/docs/Web/API/WindowBase64/atob	/es/docs/Web/API/Window/atob
@@ -3375,8 +3376,8 @@
 /es/docs/Web/SVG/Element/animate	/es/docs/Web/SVG/Reference/Element/animate
 /es/docs/Web/SVG/Element/circle	/es/docs/Web/SVG/Reference/Element/circle
 /es/docs/Web/SVG/Element/g	/es/docs/Web/SVG/Reference/Element/g
-/es/docs/Web/SVG/Element/glifo	/es/docs/Web/SVG/Reference/Element/glyph
-/es/docs/Web/SVG/Element/glyph	/es/docs/Web/SVG/Reference/Element/glyph
+/es/docs/Web/SVG/Element/glifo	/es/docs/conflicting/Web/CSS/@font-face
+/es/docs/Web/SVG/Element/glyph	/es/docs/conflicting/Web/CSS/@font-face
 /es/docs/Web/SVG/Element/rect	/es/docs/Web/SVG/Reference/Element/rect
 /es/docs/Web/SVG/Element/script	/es/docs/Web/SVG/Reference/Element/script
 /es/docs/Web/SVG/Element/style	/es/docs/Web/SVG/Reference/Element/style
@@ -3385,6 +3386,7 @@
 /es/docs/Web/SVG/Element/use	/es/docs/Web/SVG/Reference/Element/use
 /es/docs/Web/SVG/Element/view	/es/docs/Web/SVG/Reference/Element/view
 /es/docs/Web/SVG/Index	/es/docs/Web/SVG
+/es/docs/Web/SVG/Reference/Element/glyph	/es/docs/conflicting/Web/CSS/@font-face
 /es/docs/Web/SVG/Tutorial	/es/docs/Web/SVG/Tutorials/SVG_from_scratch
 /es/docs/Web/SVG/Tutorial/Getting_Started	/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Getting_started
 /es/docs/Web/SVG/Tutorial/Introducción	/es/docs/Web/SVG/Tutorials/SVG_from_scratch/Introduction

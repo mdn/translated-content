@@ -5968,6 +5968,14 @@
       "djrm"
     ]
   },
+  "Web/API/HTMLDialogElement/showModal": {
+    "modified": "2019-03-18T20:58:55.311Z",
+    "contributors": [
+      "SphinxKnight",
+      "BubuAnabelas",
+      "Grijander81"
+    ]
+  },
   "Web/API/HTMLDivElement": {
     "modified": "2019-03-23T22:03:41.348Z",
     "contributors": [
@@ -8039,14 +8047,6 @@
       "fscholz",
       "AshfaqHossain",
       "VictorArias"
-    ]
-  },
-  "Web/API/Window/showModalDialog": {
-    "modified": "2019-03-18T20:58:55.311Z",
-    "contributors": [
-      "SphinxKnight",
-      "BubuAnabelas",
-      "Grijander81"
     ]
   },
   "Web/API/Window/statusbar": {
@@ -18376,13 +18376,6 @@
       "FrankzWolf"
     ]
   },
-  "Web/SVG/Reference/Element/glyph": {
-    "modified": "2019-03-23T22:53:24.929Z",
-    "contributors": [
-      "Sebastianz",
-      "saeioul"
-    ]
-  },
   "Web/SVG/Reference/Element/rect": {
     "modified": "2019-03-23T23:02:06.920Z",
     "contributors": [
@@ -19792,6 +19785,13 @@
     "contributors": [
       "teoli",
       "pekechis"
+    ]
+  },
+  "conflicting/Web/CSS/@font-face": {
+    "modified": "2019-03-23T22:53:24.929Z",
+    "contributors": [
+      "Sebastianz",
+      "saeioul"
     ]
   },
   "conflicting/Web/CSS/@viewport": {
