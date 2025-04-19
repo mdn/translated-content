@@ -2,7 +2,7 @@
 title: RGB
 slug: Glossary/RGB
 l10n:
-  source-commit: ceb303e16d56ac69c25ed2e72c258212714ab15a
+  sourceCommit: ceb303e16d56ac69c25ed2e72c258212714ab15a
 ---
 
 {{GlossarySidebar}}
