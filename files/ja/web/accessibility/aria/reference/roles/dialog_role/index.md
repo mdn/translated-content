@@ -135,7 +135,7 @@ original_slug: Web/Accessibility/ARIA/Roles/dialog_role
 
 ## 関連情報
 
-- [ARIA: alertdialog ロール](/ja/docs/Web/Accessibility/ARIA/Roles/Alertdiialog_Role)
+- [ARIA: alertdialog ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Alertdiialog_Role)
 - [alertdialog ロールの使用](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

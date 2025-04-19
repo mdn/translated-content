@@ -166,7 +166,7 @@ dfn {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/term_role"><code>term</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role"><code>term</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

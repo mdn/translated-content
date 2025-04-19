@@ -6,13 +6,13 @@ l10n:
   sourceCommit: f6d04a43eadf5ab26a3488942dfb318b58234eb5
 ---
 
-`term` ロールは、オプションで対応する [`definition`](/ja/docs/Web/Accessibility/ARIA/Roles/definition_role) を持つ単語やフレーズに使用することができます。
+`term` ロールは、オプションで対応する [`definition`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role) を持つ単語やフレーズに使用することができます。
 
 ## 解説
 
-`term` ロールは、オプションで対応する [`definition`](/ja/docs/Web/Accessibility/ARIA/Roles/definition_role) を持つ単語やフレーズに使用することができます。 HTML の {{HTMLElement('dfn')}} 要素や定義リスト（{{HTMLElement('dl')}}）内の定義項（{{HTMLElement('dt')}}）要素と意味づけは同じです。
+`term` ロールは、オプションで対応する [`definition`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role) を持つ単語やフレーズに使用することができます。 HTML の {{HTMLElement('dfn')}} 要素や定義リスト（{{HTMLElement('dl')}}）内の定義項（{{HTMLElement('dt')}}）要素と意味づけは同じです。
 
-`term` ロールは、作成者によって定義が提供された、またはユーザーによって提供されることが期待されている単語または語句を明示的に識別するために使用します。既存の定義、または定義を入力するフォームやフォームコントロールがある場合、作者は [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-details) を設定し、関連の要素を指すようにすべきです (SHOULD)。
+`term` ロールは、作成者によって定義が提供された、またはユーザーによって提供されることが期待されている単語または語句を明示的に識別するために使用します。既存の定義、または定義を入力するフォームやフォームコントロールがある場合、作者は [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) を設定し、関連の要素を指すようにすべきです (SHOULD)。
 
 `role="term"` をリンクのような対話的要素に使用しないでください。支援技術ユーザーが要素と対話するのを妨害する可能性があるからです。また、用語そのものがアクセシビリティ名なので、 [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) や [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は使用しないでください。
 
@@ -86,7 +86,7 @@ l10n:
 
 ## 関連情報
 
-- [ARIA: `definition` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/definition_role).
+- [ARIA: `definition` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/definition_role).
 - HTML の {{HTMLElement('dfn')}} 要素
 
 <section id="Quick_links">
