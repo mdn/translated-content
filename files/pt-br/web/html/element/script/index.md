@@ -72,7 +72,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
     Veja [Browser compatibility](#browser_compatibility) para notas no suporte do navegador. Veja também [Scripts assíncronos para asm.js](/pt-BR/docs/Games/Techniques/Async_scripts).
 
 - `crossorigin`
-  - : Elementos `script` passam o mínimo de informação para {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do [CORS](/pt-BR/docs/Web/HTTP/CORS). Para permitir logs de erro para sites que usam domínios diferentes para arquivos estáticos, use esse atributo. Veja [CORS settings attributes](/pt-BR/docs/Web/HTML/Attributes/crossorigin) para uma explicação mais detalhada dos argumentos válidos.
+  - : Elementos `script` passam o mínimo de informação para {{domxref('GlobalEventHandlers.onerror', 'window.onerror')}} em scripts que não passem na checagem do [CORS](/pt-BR/docs/Web/HTTP/Guides/CORS). Para permitir logs de erro para sites que usam domínios diferentes para arquivos estáticos, use esse atributo. Veja [CORS settings attributes](/pt-BR/docs/Web/HTML/Attributes/crossorigin) para uma explicação mais detalhada dos argumentos válidos.
 - `defer`
 
   - : Esse atributo Boleano é usado para indicar ao navegador que o script deve ser executado depois que o documento tenha sido parseado, mas antes de disparar o evento [`DOMContentLoaded`](/pt-BR/docs/Web/API/Document/DOMContentLoaded_event)
@@ -96,7 +96,7 @@ Esse elemento inclui os [atributos globais](/pt-BR/docs/Web/HTML/Global_attribut
 
   - : Indicates the type of script represented. The value of this attribute will be in one of the following categories:
 
-    - **Omitted or a JavaScript MIME type:** For HTML5-complient browsers this indicates the script is JavaScript. HTML5 spec urges authors to omit the attribute rather than provided a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/pt-BR/docs/Web/HTTP/MIME_types).
+    - **Omitted or a JavaScript MIME type:** For HTML5-complient browsers this indicates the script is JavaScript. HTML5 spec urges authors to omit the attribute rather than provided a redundant MIME type. In earlier browsers, this identified the scripting language of the embedded or imported (via the `src` attribute) code. JavaScript MIME types are [listed in the specification](/pt-BR/docs/Web/HTTP/Guides/MIME_types).
     - **`module`:** For HTML5-complient browsers the code is treated as a JavaScript module. Processing of the script contents are not affected by the `charset` and `defer` attributes. For information on using `module`, see [ES6 in Depth: Modules](https://hacks.mozilla.org/2015/08/es6-in-depth-modules/). {{experimental_inline}}
     - **Any other value or MIME type:** Embedded content is treated as a data block which won't be processed by the browser. The `src` attribute will be ignored.
 

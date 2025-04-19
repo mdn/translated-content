@@ -51,7 +51,7 @@ Neste ponto, vamos consultar o console do desenvolvedor para ver se identificamo
 
 ## Consertando erros de sintaxe
 
-Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
+Anteriormente no curso, nós fizemos você digitar alguns comandos simples de JavaScript no [console JavaScript](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/What_are_browser_developer_tools) (se você não se lembra como, abra o link anterior). O que é ainda mais útil é o fato do console lhe mostrar mensagens de erro sempre que existir algo errado na sintaxe dentro do JavaScript enviado ao motor de JavaScript do navegador. Agora vamos à caça.
 
 1. Vá até a aba onde você tem aberto o arquivo `jogo-numero-erros.html` e abra o console JavaScript. Você deverá ver uma mensagem de erro sendo exibida:
    ![](nao-e-uma-funcao.png)

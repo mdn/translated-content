@@ -146,7 +146,7 @@ As seções a seguir explicam algumas das coisas comuns que você verá ao traba
 
 Primeiro, considere o padrão do exemplo do Express [Olá Mundo](http://expressjs.com/pt-br/starter/hello-world.html) (discutiremos cada trecho do código nas seções abaixo e nas seções a seguir).
 
-> **Nota:** **Dica:** Se você tiver o Node e o Express já instalados (ou se você os instalar como mostrado no [próximo artigo](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment), você pode salvar este código em um arquivo chamado **app.js** e executá-lo em um prompt, ao digitar o comando `node app.js`.
+> **Nota:** **Dica:** Se você tiver o Node e o Express já instalados (ou se você os instalar como mostrado no [próximo artigo](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment), você pode salvar este código em um arquivo chamado **app.js** e executá-lo em um prompt, ao digitar o comando `node app.js`.
 
 ```js
 var express = require("express");
@@ -518,11 +518,11 @@ Claro que Express é deliberadamente uma estrutura de aplicativos web muito leve
 
 ## Próximos módulos
 
-- [Introdução Express/Node](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Introduction) - Módulo Atual
-- [Configurando um ambiente de desenvolvimento Node (Express)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/development_environment)
-- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website)
-- [Express Tutorial Part 2: Criando um esqueleto de website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
-- [Express Tutorial Part 3: Utilizando Banco de Dados (com Mongoose)](/pt-BR/docs/Learn/Server-side/Express_Nodejs/mongoose)
+- [Introdução Express/Node](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Introduction) - Módulo Atual
+- [Configurando um ambiente de desenvolvimento Node (Express)](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/development_environment)
+- [Express Tutorial: The Local Library website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website)
+- [Express Tutorial Part 2: Criando um esqueleto de website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website)
+- [Express Tutorial Part 3: Utilizando Banco de Dados (com Mongoose)](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/mongoose)
 - [Express Tutorial Part 4: Rotas e Controladores](/pt-BR/docs/Learn/Server-side/Express_Nodejs/routes)
 - [Express Tutorial Part 5: Displaying library data](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Displaying_data)
 - [Express Tutorial Part 6: Trabalhando com formulários](/pt-BR/docs/Learn/Server-side/Express_Nodejs/forms)

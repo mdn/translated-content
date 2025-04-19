@@ -19,7 +19,7 @@ Onde
 
 - `elementList` é uma lista não-viva de objetos [element](/pt-BR/docs/Web/API/Element).
 - `baseElement` é um objeto [elemento](/pt-BR/docs/Web/API/Element).
-- `selectors` é um grupo de [seletores](/pt-BR/docs/Learn/CSS/Building_blocks/Selectors) que serão procurados.
+- `selectors` é um grupo de [seletores](/pt-BR/docs/Learn_web_development/Core/Styling_basics/Basic_selectors) que serão procurados.
 
 ## Exemplos
 

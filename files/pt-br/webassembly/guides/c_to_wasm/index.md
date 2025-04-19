@@ -61,7 +61,7 @@ Neste ponto em seu diretório de origem, você deve ter:
 Agora tudo o que resta é você carregar o resultado `hello.html` em um navegador que suporte WebAssembly. Ele é ativado por padrão no Firefox 52, Chrome 57, Edge 57, Opera 44.
 
 > [!NOTE]
-> Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt-BR/docs/Learn/Common_questions/Tools_and_setup/set_up_a_local_testing_server) Para maiores informações.
+> Se você tentar abrir o arquivo HTML gerado (`hello.html`) diretamente de seu disco rígido local (por exemplo, `file://your_path/hello.html`), você terminará com uma mensagem de erro ao longo das linhas de `both async and sync fetching of the wasm failed.` Você precisa executar seu arquivo HTML por meio de um servidor HTTP (`http://`) — consulte [Como você configura um servidor de teste local](/pt-BR/docs/Learn_web_development/Howto/Tools_and_setup/set_up_a_local_testing_server) Para maiores informações.
 
 Se tudo funcionou como planejado, você deverá ver a saída "Hello world" no console do Emscripten aparecendo na página da Web e no console JavaScript do seu navegador. Parabéns, você acabou de compilar C para WebAssembly e executá-lo em seu navegador!
 ![image](helloworld.png)

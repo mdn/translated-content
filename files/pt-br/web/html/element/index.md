@@ -180,7 +180,7 @@ Estes elementos são usados para se criar e manipular dados em tabelas.
 
 ## Formulários
 
-HTML provê de vários elementos que podem ser usados juntos para criar formulários que o usuário pode preencher e mandar para o website ou aplicativo. Há muito mais informação no [guia de formulários HTML](/pt-BR/docs/Learn/Forms).
+HTML provê de vários elementos que podem ser usados juntos para criar formulários que o usuário pode preencher e mandar para o website ou aplicativo. Há muito mais informação no [guia de formulários HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms).
 
 | Element                     | Description                                                                                                                                                                                                                                                                                                                                                         |
 | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

@@ -61,7 +61,7 @@ Mesmo com mais complexidade introduzida no HTTP/2.0 por encapsular mensagens HTT
 
 ### HTTP é extensível
 
-Introduzidos no HTTP/1.0, os [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) fazem com que este protocolo seja fácil para estender e usá-lo para experimentos. Novas funcionalidades podem até ser introduzidas pelo simples acordo entre um cliente e um servidor sobre a nova semântica de um cabeçalho.
+Introduzidos no HTTP/1.0, os [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Reference/Headers) fazem com que este protocolo seja fácil para estender e usá-lo para experimentos. Novas funcionalidades podem até ser introduzidas pelo simples acordo entre um cliente e um servidor sobre a nova semântica de um cabeçalho.
 
 ### HTTP não tem estado, mas tem sessões
 
@@ -83,12 +83,12 @@ A natureza extensível do HTTP tem permitido mais controle e funcionalidade para
 
 Aqui está uma lista de funcionalidades comuns, controláveis com HTTP:
 
-- _[Cache](/pt-BR/docs/Web/HTTP/Caching)_
+- _[Cache](/pt-BR/docs/Web/HTTP/Guides/Caching)_
   A forma como documentos são cacheados pode ser controlada pelo HTTP. O servidor pode instruir _proxies_ e clientes, sobre o que cachear e por quanto tempo. O cliente pode instruir _proxies_ de cache intermediários a ignorar o documento armazenado.
 - _Relaxamento das restrições na origem_
   Para prevenir bisbilhoteiros e outros invasores de privacidade, os navegadores reforçam estritamente a separação dos sites Web. Somente páginas de **mesma origem** podem acessar todas as informações de uma página Web. Apesar dessa restrição ser um fardo grande aos servidores, os cabeçalhos HTTP podem relaxar essa separação estrita no lado dos servidores, permitindo que um documento seja composto por várias fontes de informação em outros domínios (e pode até ter razões específicas de segurança para se fazer isso), como um tecido de retalhos.
 - _Autenticação_
-  Algumas páginas podem ser protegidas para que apenas usuários específicos possam acessá-la. Autenticação básica pode ser fornecida pelo HTTP, usando tanto o cabeçalho {{HTTPHeader("WWW-Authenticate")}} e similares, quanto configurando uma sessão específica usando [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies).
+  Algumas páginas podem ser protegidas para que apenas usuários específicos possam acessá-la. Autenticação básica pode ser fornecida pelo HTTP, usando tanto o cabeçalho {{HTTPHeader("WWW-Authenticate")}} e similares, quanto configurando uma sessão específica usando [cookies HTTP](/pt-BR/docs/Web/HTTP/Guides/Cookies).
 - _[Proxy e tunelamento](/pt-BR/docs/Web/HTTP/Proxy_servers_and_tunneling)_
   Servidores e/ou clientes estão frequentemente localizados em _intranets_ e escondem seu verdadeiro endereço IP aos outros. Requisições HTTP recorrem aos _proxies_ para contornar essa barreira na rede. Mas nem todos os _proxies_ são _proxies_ HTTP. O [protocolo SOCKS](https://pt.wikipedia.org/wiki/SOCKS), por exemplo, opera em um nível mais baixo. Outros protocolos, como ftp, podem ser tratados por esses _proxies_.
 - _Sessões_
@@ -140,10 +140,10 @@ Exemplo de uma requisição HTTP:
 
 As requisições consistem dos seguintes elementos:
 
-- Um [método](/pt-BR/docs/Web/HTTP/Methods) HTTP, geralmente é um verbo como {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("PUT")}}, etc, ou um substantivo como {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} que define qual operação o cliente quer fazer. Tipicamente, um cliente quer pegar um recurso (usando {{HTTPMethod("GET")}}) ou publicar dados de um [formulário HTML](/pt-BR/docs/Learn/Forms) (usando {{HTTPMethod("POST")}}), embora mais operações podem ser necessárias em outros casos.
+- Um [método](/pt-BR/docs/Web/HTTP/Reference/Methods) HTTP, geralmente é um verbo como {{HTTPMethod("GET")}}, {{HTTPMethod("POST")}}, {{HTTPMethod("DELETE")}}, {{HTTPMethod("PUT")}}, etc, ou um substantivo como {{HTTPMethod("OPTIONS")}} ou {{HTTPMethod("HEAD")}} que define qual operação o cliente quer fazer. Tipicamente, um cliente quer pegar um recurso (usando {{HTTPMethod("GET")}}) ou publicar dados de um [formulário HTML](/pt-BR/docs/Learn_web_development/Extensions/Forms) (usando {{HTTPMethod("POST")}}), embora mais operações podem ser necessárias em outros casos.
 - O caminho do recurso a ser buscado; a URL do recurso sem os elementos que são de contexto, por exemplo sem o protocolo {{glossary("protocol")}} (`http://`), o domínio {{glossary("domain")}} (aqui como `developer.mozilla.org`), ou a porta {{glossary("port")}} TCP (aqui indicada pelo `80` que é ocultado por ser o número da porta padrão)
 - A versão do protocolo HTTP.
-- [Cabeçalhos](/pt-BR/docs/Web/HTTP/Headers) opcionais que contém informações adicionais para os servidores.
+- [Cabeçalhos](/pt-BR/docs/Web/HTTP/Reference/Headers) opcionais que contém informações adicionais para os servidores.
 - Ou um corpo de dados, para alguns métodos como `POST`, similares aos corpos das respostas, que contém o recurso requisitado.
 
 ### Respostas
@@ -155,9 +155,9 @@ Exemplo de resposta HTTP:
 Respostas consistem dos seguintes elementos:
 
 - A versão do protocolo HTTP que elas seguem.
-- Um [código de status](/pt-BR/docs/Web/HTTP/Status), indicando se a requisição foi bem sucedida, ou não, e por quê.
+- Um [código de status](/pt-BR/docs/Web/HTTP/Reference/Status), indicando se a requisição foi bem sucedida, ou não, e por quê.
 - Uma mensagem de status, uma pequena descrição informal sobre o código de status.
-- [Cabeçalhos](/pt-BR/docs/Web/HTTP/Headers) HTTP, como aqueles das requisições.
+- [Cabeçalhos](/pt-BR/docs/Web/HTTP/Reference/Headers) HTTP, como aqueles das requisições.
 - Opcionalmente, um corpo com dados do recurso requisitado.
 
 ## APIs baseadas no HTTP

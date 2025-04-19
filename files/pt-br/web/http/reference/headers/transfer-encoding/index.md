@@ -10,7 +10,7 @@ O cabeçalho **`Transfer-Encoding`** especifica a forma de codificação usada p
 
 > **Nota:** [HTTP/2](https://wikipedia.org/wiki/HTTP/2) não suporta o mecanismo de codificação de trasferência fragmentada do HTTP 1.1, já que ele provém o próprio, e mais eficiente, mecanismo para _streaming_ de dados.
 
-`Transfer-Encoding` é um cabeçalho salto-por-salto (_[hop-by-hop header](/pt-BR/docs/Web/HTTP/Headers#hbh)_), que é aplicado a uma mensagem entre dois nós, não ao recurso em si. Cada segmento da conexão multi-nós pode usar diferentes valores `Transfer-Encoding`. Se você quer comprimir dados através da conexão inteira, use o cabeçalho {{HTTPHeader("Content-Encoding")}} ao invés disso.
+`Transfer-Encoding` é um cabeçalho salto-por-salto (_[hop-by-hop header](/pt-BR/docs/Web/HTTP/Reference/Headers#hbh)_), que é aplicado a uma mensagem entre dois nós, não ao recurso em si. Cada segmento da conexão multi-nós pode usar diferentes valores `Transfer-Encoding`. Se você quer comprimir dados através da conexão inteira, use o cabeçalho {{HTTPHeader("Content-Encoding")}} ao invés disso.
 
 Quando presente em uma resposta para uma requisição {{HTTPMethod("HEAD")}} que não tem corpo, ele indica o valor que seria aplicado a mensagem {{HTTPMethod("GET")}} correspondente.
 

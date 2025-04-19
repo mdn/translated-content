@@ -17,5 +17,5 @@ No {{Glossary("JavaScript")}}, **Number** é um tipo de dado numérico no [doubl
 
 ### Technical reference
 
-- The JavaScript data structure: [Number](/pt-BR/docs/Web/JavaScript/Data_structures#number_type)
+- The JavaScript data structure: [Number](/pt-BR/docs/Web/JavaScript/Guide/Data_structures#number_type)
 - The JavaScript global object {{jsxref("Number")}}

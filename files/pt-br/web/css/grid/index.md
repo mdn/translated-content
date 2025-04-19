@@ -3,7 +3,7 @@ title: grid
 slug: Web/CSS/grid
 ---
 
-A propriedade **`grid`** do CSS é uma [abreviação](/pt-BR/docs/Web/CSS/Shorthand_properties) das propriedades que definem todas as propriedades da grade explícita ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, e {{cssxref("grid-template-areas")}}), e todas as propriedades implícitas da grade ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, e {{cssxref("grid-auto-flow")}}), em uma única declaração.
+A propriedade **`grid`** do CSS é uma [abreviação](/pt-BR/docs/Web/CSS/CSS_cascade/Shorthand_properties) das propriedades que definem todas as propriedades da grade explícita ({{cssxref("grid-template-rows")}}, {{cssxref("grid-template-columns")}}, e {{cssxref("grid-template-areas")}}), e todas as propriedades implícitas da grade ({{cssxref("grid-auto-rows")}}, {{cssxref("grid-auto-columns")}}, e {{cssxref("grid-auto-flow")}}), em uma única declaração.
 
 {{InteractiveExample("CSS Demo: grid")}}
 

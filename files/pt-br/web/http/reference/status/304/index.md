@@ -31,7 +31,7 @@ A resposta equivalente {{HTTPStatus("200")}} `OK` teria incluso os cabeçalhos {
 
 ## Notas de Compatibilidade
 
-- O comportamento do navegador difere se em conexões persistentes a resposta erroneamente incluir um corpo. Leia [204 No Content](/pt-BR/docs/Web/HTTP/Status/204) para mais detalhes.
+- O comportamento do navegador difere se em conexões persistentes a resposta erroneamente incluir um corpo. Leia [204 No Content](/pt-BR/docs/Web/HTTP/Reference/Status/204) para mais detalhes.
 
 ## Veja também
 
