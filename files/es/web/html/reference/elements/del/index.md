@@ -132,4 +132,4 @@ Se visualiza así:
 
 ### Comentarios
 
-El elemento [del](/es/docs/Web/HTML/Element/del) del tiene un opuesto, el elemento [ins](/es/docs/Web/HTML/Element/ins). [del](/es/docs/Web/HTML/Element/del), marca las partes descartadas e [ins](/es/docs/Web/HTML/Element/ins) las insertadas.
+El elemento [del](/es/docs/Web/HTML/Reference/Elements/del) del tiene un opuesto, el elemento [ins](/es/docs/Web/HTML/Reference/Elements/ins). [del](/es/docs/Web/HTML/Reference/Elements/del), marca las partes descartadas e [ins](/es/docs/Web/HTML/Reference/Elements/ins) las insertadas.

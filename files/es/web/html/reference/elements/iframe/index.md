@@ -87,7 +87,7 @@ Cada elemento `<iframe>` tiene su propio [historial de sesión](/es/docs/Web/API
 
 ## Atributos
 
-Este elemento admite [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento admite [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - En el atributo `target` de los elementos {{HTMLElement("a")}}, {{HTMLElement("form")}} y {{HTMLElement("base")}}.
 - En el atributo `formtarget` de los elementos {{HTMLElement("input")}} y {{HTMLElement("button")}}

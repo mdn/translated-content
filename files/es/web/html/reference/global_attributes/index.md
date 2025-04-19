@@ -8,7 +8,7 @@ original_slug: Web/HTML/Global_attributes
 
 Los **atributos globales** son atributos comunes a todos los elementos HTML; se pueden usar en todos los elementos, aunque es posible que no tengan ningún efecto en algunos elementos.
 
-Los atributos globales se pueden especificar en todos los [elementos HTML](/es/docs/Web/HTML/Element), _incluso aquellos no especificados en el estándar_. Eso significa que cualquier elemento no estándar debe permitir estos atributos, aunque el uso de esos elementos significa que el documento ya no es compatible con HTML5. Por ejemplo, los navegadores compatibles con HTML5 ocultan el contenido marcado como `<foo hidden>...</foo>`, aunque `<foo>` no sea un elemento HTML válido.
+Los atributos globales se pueden especificar en todos los [elementos HTML](/es/docs/Web/HTML/Reference/Elements), _incluso aquellos no especificados en el estándar_. Eso significa que cualquier elemento no estándar debe permitir estos atributos, aunque el uso de esos elementos significa que el documento ya no es compatible con HTML5. Por ejemplo, los navegadores compatibles con HTML5 ocultan el contenido marcado como `<foo hidden>...</foo>`, aunque `<foo>` no sea un elemento HTML válido.
 
 Además de los atributos globales HTML básicos, también existen los siguientes atributos globales:
 
@@ -78,7 +78,7 @@ Además de los atributos globales HTML básicos, también existen los siguientes
 - **`[part](/es/docs/Web/HTML/Global_attributes/part)`**
   - : Una lista separada por espacios de los nombres de las partes del elemento. Los nombres de las partes permiten que CSS seleccione y aplique estilo a elementos específicos en la sombra de un árbol mediante el pseudoelemento {{CSSxRef("::part")}}.
 - **`[slot](/es/docs/Web/HTML/Global_attributes/slot)`**
-  - : Asigna un espacio en la sombra de un árbol [DOM de sombra](/es/docs/Web/API/Web_components/Using_shadow_DOM) a un elemento: Un elemento con un atributo `slot` es asignado al espacio creado por el elemento {{HTMLElement("slot")}} cuyo valor del atributo [`name`](/es/docs/Web/HTML/Element/slot#name) coincide con el valor del atributo `slot`.
+  - : Asigna un espacio en la sombra de un árbol [DOM de sombra](/es/docs/Web/API/Web_components/Using_shadow_DOM) a un elemento: Un elemento con un atributo `slot` es asignado al espacio creado por el elemento {{HTMLElement("slot")}} cuyo valor del atributo [`name`](/es/docs/Web/HTML/Reference/Elements/slot#name) coincide con el valor del atributo `slot`.
 - **`[spellcheck](/es/docs/Web/HTML/Global_attributes/spellcheck)`**
   - : Un atributo enumerado define si se puede verificar el elemento para detectar errores ortográficos. Puede tener los siguientes valores:
     - `true`, el cual indica que, si es posible, el elemento se debe revisar para detectar errores ortográficos;

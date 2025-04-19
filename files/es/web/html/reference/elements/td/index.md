@@ -12,16 +12,16 @@ El elemento [HTML](/es/docs/Web/HTML) _Celda de tabla_ (**`<td>`**) define la ce
 
 ## Contexto de uso
 
-| [Categorías de contenido](/es/docs/Web/HTML/Content_categories) | Ninguna.                                                                                                                                                                                                               |
-| --------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Contenido permitido                                             | Contenido dinámico.                                                                                                                                                                                                    |
-| Omision de Etiquetas                                            | La etiqueta de inicio es obligatoria. La etiqueta final puede ser omitida, si esta inmediatamente seguida por un elemento {{HTMLElement("th")}} o un {{HTMLElement("td")}} o si no hay más datos en el elemento padre. |
-| Elementos padre permitidos                                      | Un elemento {{HTMLElement("tr")}}.                                                                                                                                                                                     |
-| Documento normativo                                             | [HTML5, section 4.9.9](https://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element) ([HTML4.01, section 11.2.6](https://www.w3.org/TR/REC-html40/struct/tables.html#h-11.2.6))       |
+| [Categorías de contenido](/es/docs/Web/HTML/Guides/Content_categories) | Ninguna.                                                                                                                                                                                                               |
+| ---------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Contenido permitido                                                    | Contenido dinámico.                                                                                                                                                                                                    |
+| Omision de Etiquetas                                                   | La etiqueta de inicio es obligatoria. La etiqueta final puede ser omitida, si esta inmediatamente seguida por un elemento {{HTMLElement("th")}} o un {{HTMLElement("td")}} o si no hay más datos en el elemento padre. |
+| Elementos padre permitidos                                             | Un elemento {{HTMLElement("tr")}}.                                                                                                                                                                                     |
+| Documento normativo                                                    | [HTML5, section 4.9.9](https://www.whatwg.org/specs/web-apps/current-work/multipage/tabular-data.html#the-td-element) ([HTML4.01, section 11.2.6](https://www.w3.org/TR/REC-html40/struct/tables.html#h-11.2.6))       |
 
 ## Atributos
 
-Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `abbr` {{deprecated_inline}}
 
@@ -78,7 +78,7 @@ Este elemento incluye los [atributos globales](/es/docs/Web/HTML/Global_attribut
   - : Este atributo se utiliza para establecer el carácter para alinear las celdas de una columna . Los valores típicos de esto incluyen un punto (. ) al intentar alinear los números o valores monetarios . Si [`align`](#align) no está ajustado a char, este atributo se ignora.
 
     > [!NOTE]
-    > No usar este atributo ya que está obsoleto (y no soportado) en las últimas versiones estándares). Para lograr el mismo que el [`char`](/es/docs/Web/HTML/Element/thead#char), en CSS3, puedes usar el character set usando el atributo [`char`](/es/docs/Web/HTML/Element/th#char) como el valor de la propiedad {{cssxref("text-align")}}.
+    > No usar este atributo ya que está obsoleto (y no soportado) en las últimas versiones estándares). Para lograr el mismo que el [`char`](/es/docs/Web/HTML/Element/thead#char), en CSS3, puedes usar el character set usando el atributo [`char`](/es/docs/Web/HTML/Reference/Elements/th#char) como el valor de la propiedad {{cssxref("text-align")}}.
 
 - `charoff` {{Deprecated_inline}} in HTML4.01 {{deprecated_inline}} in HTML5
 

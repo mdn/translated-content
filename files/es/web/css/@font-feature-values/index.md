@@ -7,7 +7,7 @@ slug: Web/CSS/@font-feature-values
 
 ## Resumen
 
-La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) **`@font-feature-values`** permite a los autores usar un nombre común de {{cssxref("font-variant-alternates")}} para características activadas de distintas formas en OpenType. Permite simplificar el código CSS cuando se usan distintas fuentes.
+La [regla-at](/es/docs/Web/CSS/CSS_syntax/At-rule) [CSS](/es/docs/Web/CSS) **`@font-feature-values`** permite a los autores usar un nombre común de {{cssxref("font-variant-alternates")}} para características activadas de distintas formas en OpenType. Permite simplificar el código CSS cuando se usan distintas fuentes.
 
 ```css
 @font-feature-values Font One {
@@ -31,7 +31,7 @@ La [regla-at](/es/docs/Web/CSS/At-rule) [CSS](/es/docs/Web/CSS) **`@font-feature
 } /* Independiente de la fuente */
 ```
 
-La regla-at `@font-feature-values` debe ser usada en la parte superior de la hoja de estilos, pero también dentro de [Grupos de reglas condicionales](/es/docs/Web/CSS/At-rule#grupos_de_reglas_condicionales).
+La regla-at `@font-feature-values` debe ser usada en la parte superior de la hoja de estilos, pero también dentro de [Grupos de reglas condicionales](/es/docs/Web/CSS/CSS_syntax/At-rule#grupos_de_reglas_condicionales).
 
 ## Sintaxis
 

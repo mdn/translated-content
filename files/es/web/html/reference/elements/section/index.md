@@ -40,7 +40,7 @@ h2 {
 
 ## Atributos
 
-Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Este elemento solo incluye los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 ## Notas de uso
 
@@ -210,6 +210,6 @@ Dependiendo del contenido, incluir un encabezado también podría ser bueno para
 ## Véase también
 
 - Otros elementos relacionados con secciones: {{HTMLElement("body")}}, {{HTMLElement("nav")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}}, {{HTMLElement("Heading_Elements", "h1")}}, {{HTMLElement("Heading_Elements", "h2")}}, {{HTMLElement("Heading_Elements", "h3")}}, {{HTMLElement("Heading_Elements", "h4")}}, {{HTMLElement("Heading_Elements", "h5")}}, {{HTMLElement("Heading_Elements", "h6")}}, {{HTMLElement("hgroup")}}, {{HTMLElement("header")}}, {{HTMLElement("footer")}}, {{HTMLElement("address")}}
-- [Usar secciones y esquemas de HTML](/es/docs/Web/HTML/Element/Heading_Elements)
+- [Usar secciones y esquemas de HTML](/es/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ARIA: Rol de región](/es/docs/Web/Accessibility/ARIA/Roles/region_role)
 - [Por qué deberías elegir article de HTML5 en lugar de section](https://www.smashingmagazine.com/2020/01/html5-article-section/), por Bruce Lawson

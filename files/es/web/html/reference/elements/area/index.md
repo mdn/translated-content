@@ -59,7 +59,7 @@ img {
 
 ## Atributos
 
-Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 
 - `alt`
   - : Una línea de texto alternativo que se muestra en los navegadores o en lectores de pantalla, si no se muestra la imagen.
@@ -81,7 +81,7 @@ Los atributos de este elemento incluyen los [atributos globales](/es/docs/Web/HT
 
 - `download`
   - : Este atributo indica que el autor pretende que el hipervínculo sea usado para descargar un recurso.
-    Véase {{HTMLElement("a")}} para una descripción completa del atributo [`download`](/es/docs/Web/HTML/Element/a#download).
+    Véase {{HTMLElement("a")}} para una descripción completa del atributo [`download`](/es/docs/Web/HTML/Reference/Elements/a#download).
 - `href`
   - : Se utiliza para incluir un hipervínculo para el área.
     Su valor debe ser un URL valido.

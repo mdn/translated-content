@@ -6,9 +6,9 @@ original_slug: Web/HTML/Global_attributes/itemid
 
 {{HTMLSidebar("Global_attributes")}}
 
-El [atributo global](/es/docs/Web/HTML/Global_attributes) **`itemid`** proporciona microdatos en forma de un identificador global único de un elemento.
+El [atributo global](/es/docs/Web/HTML/Reference/Global_attributes) **`itemid`** proporciona microdatos en forma de un identificador global único de un elemento.
 
-Un atributo `itemid` solo se puede especificar para un elemento que tiene atributos [`itemscope`](/es/docs/Web/HTML/Global_attributes/itemscope) e [`itemtype`](/es/docs/Web/HTML/Global_attributes/itemtype). Además, `itemid` solo se puede especificar en elementos que poseen un atributo `itemscope` cuyo `itemtype` correspondiente se refiere o define un vocabulario que admite identificadores globales.
+Un atributo `itemid` solo se puede especificar para un elemento que tiene atributos [`itemscope`](/es/docs/Web/HTML/Reference/Global_attributes/itemscope) e [`itemtype`](/es/docs/Web/HTML/Global_attributes/itemtype). Además, `itemid` solo se puede especificar en elementos que poseen un atributo `itemscope` cuyo `itemtype` correspondiente se refiere o define un vocabulario que admite identificadores globales.
 
 El significado exacto de un identificador global de `itemtype` lo proporciona la definición de ese identificador dentro del vocabulario especificado. El vocabulario define si pueden coexistir varios elementos con el mismo identificador global y, de ser así, cómo se manejan los elementos con el mismo identificador.
 
@@ -80,10 +80,10 @@ Este ejemplo utiliza atributos de microdatos para representar los siguientes dat
 
 ## Véase también
 
-- Todos los [atributos globales](/es/docs/Web/HTML/Global_attributes).
+- Todos los [atributos globales](/es/docs/Web/HTML/Reference/Global_attributes).
 - Otros atributos globales relacionados con los microdatos:
 
-  - [`itemprop`](/es/docs/Web/HTML/Global_attributes/itemprop)
-  - [`itemref`](/es/docs/Web/HTML/Global_attributes/itemref)
-  - [`itemscope`](/es/docs/Web/HTML/Global_attributes/itemscope)
+  - [`itemprop`](/es/docs/Web/HTML/Reference/Global_attributes/itemprop)
+  - [`itemref`](/es/docs/Web/HTML/Reference/Global_attributes/itemref)
+  - [`itemscope`](/es/docs/Web/HTML/Reference/Global_attributes/itemscope)
   - [`itemtype`](/es/docs/Web/HTML/Global_attributes/itemtype)

@@ -16,7 +16,7 @@ original_slug: Web/HTML/Element/dir
 
     **Está definido como**: [Elemento DESAPROBADO](/es/docs/HTML/Elemento/Tipos_de_elementos#desaprobado).
 
-    **Puede contener**: uno o más elementos [li](/es/docs/Web/HTML/Element/li)
+    **Puede contener**: uno o más elementos [li](/es/docs/Web/HTML/Reference/Elements/li)
 
     **NO puede contener**: [Elementos en bloque](/es/docs/HTML/Elemento/Tipos_de_elementos#en_bloque)
 

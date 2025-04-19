@@ -157,7 +157,7 @@ Puedes reemplazarlo con:
 
 ### Simplificando selectores de secciones
 
-La pseudoclase `:is()` es particularmente útil cuando se trata de [secciones y encabezados](/es/docs/Web/HTML/Element/Heading_Elements) HTML. Dado que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} y {{HTMLElement("nav")}} comúnmente están anidados juntos, sin `:is()`, diseñarlos para que coincidan entre sí puede ser complicado.
+La pseudoclase `:is()` es particularmente útil cuando se trata de [secciones y encabezados](/es/docs/Web/HTML/Reference/Elements/Heading_Elements) HTML. Dado que {{HTMLElement("section")}}, {{HTMLElement("article")}}, {{HTMLElement("aside")}} y {{HTMLElement("nav")}} comúnmente están anidados juntos, sin `:is()`, diseñarlos para que coincidan entre sí puede ser complicado.
 
 Por ejemplo, sin `:is()`, diseñar todos los elementos {{HTMLElement("Heading_Elements", "h1")}} en diferentes niveles podría ser muy complicado:
 

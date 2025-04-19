@@ -84,7 +84,7 @@ Document directives govern the properties of a document or [worker](/es/docs/Web
 - {{CSP("plugin-types")}}
   - : Restricts the set of plugins that can be embedded into a document by limiting the types of resources which can be loaded.
 - {{CSP("sandbox")}}
-  - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/es/docs/Web/HTML/Element/iframe#sandbox) attribute.
+  - : Enables a sandbox for the requested resource similar to the {{HTMLElement("iframe")}} [`sandbox`](/es/docs/Web/HTML/Reference/Elements/iframe#sandbox) attribute.
 - {{CSP("disown-opener")}} {{deprecated_inline}}
   - : Ensures a resource will disown its opener when navigated to.
 

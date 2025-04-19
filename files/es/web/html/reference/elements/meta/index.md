@@ -18,7 +18,7 @@ original_slug: Web/HTML/Element/meta
 
     **Puede contener**: Nada.
 
-    **Puede ser contenido por**: Elementos [head](/es/docs/Web/HTML/Element/head)
+    **Puede ser contenido por**: Elementos [head](/es/docs/Web/HTML/Reference/Elements/head)
 
 #### Atributos
 
