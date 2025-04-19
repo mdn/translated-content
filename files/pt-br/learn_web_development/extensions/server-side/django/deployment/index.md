@@ -95,7 +95,7 @@ Muitos provedores também têm uma camada "básica" que fornece níveis mais út
 
 ## Preparando seu site para publicação
 
-O [esqueleto do site do Django](/pt-BR/docs/Learn/Server-side/Django/skeleton_website) criado usando as ferramentas django-admin e manage.py é configurado para tornar o desenvolvimento mais fácil. Muitas das configurações do projeto Django (especificadas em settings.py) devem ser diferentes para produção, por motivos de segurança ou desempenho.
+O [esqueleto do site do Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) criado usando as ferramentas django-admin e manage.py é configurado para tornar o desenvolvimento mais fácil. Muitas das configurações do projeto Django (especificadas em settings.py) devem ser diferentes para produção, por motivos de segurança ou desempenho.
 
 > **Nota:** **Dica:** É comum ter um arquivo **settings.py** separado para produção e importar configurações confidenciais de um arquivo separado ou de uma variável de ambiente. Este arquivo deve ser protegido, mesmo se o resto do código-fonte estiver disponível em um repositório público.
 
@@ -311,7 +311,7 @@ The "`web:`" tells Heroku that this is a web dyno and can be sent HTTP traffic. 
 
 While we won't need _Gunicorn_ to serve our LocalLibrary application during development, we'll install it so that it becomes part of our [requirements](#requirements) for Heroku to set up on the remote server.
 
-Install _Gunicorn_ locally on the command line using _pip_ (which we installed when [setting up the development environment](/pt-BR/docs/Learn/Server-side/Django/development_environment)):
+Install _Gunicorn_ locally on the command line using _pip_ (which we installed when [setting up the development environment](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/development_environment)):
 
 > [!NOTE]
 > Note: Make sure that you're in your Python virtual environment (use the `workon [name-of-virtual-environment]` command) before you install _Gunicorn_ and further modules with _pip_, or you might experience problems with importing these modules in your **/locallibrary/settings.py** file in the later sections.
@@ -378,7 +378,7 @@ To make it easy to host static files separately from the Django web application,
 
 The relevant setting variables are:
 
-- `STATIC_URL`: This is the base URL location from which static files will be served, for example on a CDN. This is used for the static template variable that is accessed in our base template (see [Django Tutorial Part 5: Creating our home page](/pt-BR/docs/Learn/Server-side/Django/Home_page)).
+- `STATIC_URL`: This is the base URL location from which static files will be served, for example on a CDN. This is used for the static template variable that is accessed in our base template (see [Django Tutorial Part 5: Creating our home page](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Home_page)).
 - `STATIC_ROOT`: This is the absolute path to a directory where Django's "collectstatic" tool will gather any static files referenced in our templates. Once collected, these can then be uploaded as a group to wherever the files are to be hosted.
 - `STATICFILES_DIRS`: This lists additional directories that Django's collectstatic tool should search for static files.
 

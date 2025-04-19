@@ -47,4 +47,4 @@ Se o formulário também possui campos [opcionais](/pt-BR/docs/Web/CSS/:optional
 ## Veja também
 
 - Outras pseudo-classe relacionadas a validação: {{ cssxref(":optional") }}, {{ cssxref(":invalid") }}, {{ cssxref(":valid") }}
-- [Validação de dados de formulário](/pt-BR/docs/Learn/Forms/Form_validation)
+- [Validação de dados de formulário](/pt-BR/docs/Learn_web_development/Extensions/Forms/Form_validation)

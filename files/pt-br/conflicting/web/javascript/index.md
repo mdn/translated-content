@@ -13,7 +13,7 @@ JavaScript roda no _client side_ da web, o que pode ser usado para projetar / pr
 
 Diferente do que é dito popularmente, **JavaScript _não é_ "Java Interpretado"**. Em poucas palavras, JavaScript é uma linguagem de scripting dinâmica que suporta a construção de objetos [baseada em protótipos](/pt-BR/docs/conflicting/Web/JavaScript/Inheritance_and_the_prototype_chain#class-based_vs._prototype-based_languages). A sintaxe básica é intencionalmente similar tanto a Java quanto a C++, com o intuito de diminuir o número de conceitos exigidos para se aprender a linguagem. Estruturas da linguagem, como `if`, `for, while`, `switch` e `try ... catch` funcionam da mesma maneira do que nestas linguagens (ou quase.)
 
-JavaScript pode funcionar tanto como uma linguagem [procedural](https://en.wikipedia.org/wiki/Procedural_programming) como uma linguagem [orientada a objetos](/pt-BR/docs/Learn/JavaScript/Objects). Objetos são criados programaticamente em JavaScript, onde métodos e propriedades são anexados a objetos vazios **em tempo de execução**, ao invés das definições sintáticas de classe normalmente encontradas em linguagens compiladas como C++ e Java. Assim que um objeto é construído, ele pode ser usado como um esquema (ou protótipo) para se criar objetos similares.
+JavaScript pode funcionar tanto como uma linguagem [procedural](https://en.wikipedia.org/wiki/Procedural_programming) como uma linguagem [orientada a objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects). Objetos são criados programaticamente em JavaScript, onde métodos e propriedades são anexados a objetos vazios **em tempo de execução**, ao invés das definições sintáticas de classe normalmente encontradas em linguagens compiladas como C++ e Java. Assim que um objeto é construído, ele pode ser usado como um esquema (ou protótipo) para se criar objetos similares.
 
 As capacidades dinâmicas de JavaScript incluem a construção de objetos em tempo de execução, listas variáveis de parâmetros, variáveis de funções, criação dinâmica de scripts (através da função [`eval`](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/eval)), introspecção de objetos (através da estrutura `for ... in`), e recuperação de código fonte (programas escritos em JavaScript podem descompilar funções de volta a seus textos originais).
 
@@ -44,7 +44,7 @@ Outra aplicação comum para JavaScript é usa-lo como uma linguagem de scriptin
   - : Informações pertinentes à implementação de JavaScript em Java (Rhino).
 - [Recursos da linguagem](/pt-BR/docs/conflicting/Web/JavaScript/JavaScript_technologies_overview)
   - : Indicações para os padrões publicados de JavaScript.
-- [Uma reintrodução ao JavaScript](/pt-BR/docs/Web/JavaScript/Language_overview)
+- [Uma reintrodução ao JavaScript](/pt-BR/docs/Web/JavaScript/Guide/Language_overview)
   - : [O guia de JavaScript](/pt-BR/docs/Web/JavaScript/Guide) e a [referência para JavaScript](/pt-BR/docs/Web/JavaScript/Reference).
 
 JavaScript® é uma marca ou marca registrada pertencente à Oracle nos E.U.A. e outros países.

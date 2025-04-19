@@ -58,6 +58,6 @@ Para cada objeto no array retornado, existe uma string `status`. Se o status for
 
 - [Promessas](/pt-BR/docs/Archive/Add-ons/Techniques/Promises)
 - [Usando promessas](/pt-BR/docs/Web/JavaScript/Guide/Using_promises)
-- [Programando assincronamente de maneira elegante usando promessas](/pt-BR/docs/Learn/JavaScript/Asynchronous/Promises)
+- [Programando assincronamente de maneira elegante usando promessas](/pt-BR/docs/Learn_web_development/Extensions/Async_JS/Promises)
 - {{jsxref("Promise")}}
 - {{jsxref("Promise.all()")}}

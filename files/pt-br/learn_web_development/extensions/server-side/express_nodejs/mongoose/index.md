@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Express_Nodejs/mongoose
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Express_Nodejs/skeleton_website", "Learn/Server-side/Express_Nodejs/routes", "Learn/Server-side/Express_Nodejs")}}
 
-Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos Node/Express. Depois demonstra como podemos usar o [Mongoose](http://mongoosejs.com/) para prover acesso ao banco de dados para o website [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website). Explica como object schema e modelos são declarados, os principais tipos de campos e validações básicas. Também demonstra brevemente algumas das muitas maneiras em que se pode acessar os dados do modelo.
+Este artigo introduz brevemente bancos de dados e como usá-los com aplicativos Node/Express. Depois demonstra como podemos usar o [Mongoose](http://mongoosejs.com/) para prover acesso ao banco de dados para o website [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website). Explica como object schema e modelos são declarados, os principais tipos de campos e validações básicas. Também demonstra brevemente algumas das muitas maneiras em que se pode acessar os dados do modelo.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -78,7 +78,7 @@ Esse ODM (Object Data Model) e banco de dados combinados são extremamente popul
 
 > **Nota:** **Dica:** Você não precisa conhecer o MongoDB antes de usar o Mongoose, apesar de que partes da [documentação do Mongoose](http://mongoosejs.com/docs/guide.html) _são mais fáceis_ de entender se você já está familiarizado com o MongoDB.
 
-O resto desse tutorial mostra como definir e acessar os modelos e schemas no Mongoose para o nosso website da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Express_Nodejs/Tutorial_local_library_website).
+O resto desse tutorial mostra como definir e acessar os modelos e schemas no Mongoose para o nosso website da [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/Tutorial_local_library_website).
 
 ## Projetando os modelos da aplicação LocalLibrary
 
@@ -584,7 +584,7 @@ You have now created the database, and have an URL (with username and password) 
 
 ## Instalando Mongoose
 
-Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/pt-BR/docs/Learn/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
+Open a command prompt and navigate to the directory where you created your [skeleton Local Library website](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Express_Nodejs/skeleton_website). Enter the following command to install Mongoose (and its dependencies) and add it to your **package.json** file, unless you have already done so when reading the [Mongoose Primer](#installing_mongoose_and_mongodb) above.
 
 ```bash
 npm install mongoose
