@@ -129,7 +129,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
     - `fingerprinting` 和 `fingerprinting_content`：请求涉及指纹识别（“发现指纹的来源”）。
       - `fingerprinting` 表示域名属于指纹识别和跟踪类别（如广告商构建用户画像）。
       - `fingerprinting_content` 表示域名仅属指纹识别类别（如支付提供商用于反欺诈）。
-    - `cryptomining` 和 `cryptomining_content`：与指纹识别类别类似，但用于加密货币资源。
+    - `cryptomining` 和 `cryptomining_content`：与指纹识别类别类似，但用于加密货币挖矿资源。
     - `tracking`、`tracking_ad`、`tracking_analytics`、`tracking_social` 和 `tracking_content`：请求涉及跟踪。`tracking` 表示通用跟踪，而 `ad`、`analytics`、`social` 和 `content` 后缀表示跟踪器的具体类型。
     - `emailtracking` 和 `emailtracking_content`：请求涉及跟踪电子邮件。
     - `any_basic_tracking`：元标志，组合跟踪和指纹识别标志（不含 `tracking_content` 和 `fingerprinting_content`）。
@@ -147,7 +147,7 @@ browser.webRequest.onErrorOccurred.hasListener(listener)
     - `NS_ERROR_BLOCKED_URI` 表示被阻止的 URI。
     - `NS_ERROR_HARMFUL_URI` 表示有害 URI。
     - `NS_ERROR_FINGERPRINTING` 表示指纹识别 URI。
-    - `NS_ERROR_CRYPTOMINING_URI` 表示加密货币 URI。
+    - `NS_ERROR_CRYPTOMINING_URI` 表示加密货币挖矿 URI。
     - `NS_ERROR_SOCIALTRACKING_URI` 表示社交跟踪 URI。
 
 ## 浏览器兼容性
