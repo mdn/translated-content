@@ -1,21 +1,21 @@
 ---
-title: "Feature-Policy: web-share"
+title: "Permissions-Policy: web-share"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/web-share
 original_slug: Web/HTTP/Headers/Permissions-Policy/web-share
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-HTTP の {{HTTPHeader('Feature-Policy')}} ヘッダーにおける `web-share` ディレクティブは、減殺の文書が Web Share API の {{domxref("Navigator.share","Navigator.share()")}} メソッドを使用して、テキスト、リンク、画像、その他のコンテンツをユーザーが選択した任意の宛先にシェアすることを許可するかどうかを制御します。
+HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `web-share` ディレクティブは、減殺の文書が Web Share API の {{domxref("Navigator.share","Navigator.share()")}} メソッドを使用して、テキスト、リンク、画像、その他のコンテンツをユーザーが選択した任意の宛先にシェアすることを許可するかどうかを制御します。
 
 ## 構文
 
 ```
-Feature-Policy: web-share <allowlist>;
+Permissions-Policy: web-share <allowlist>;
 ```
 
 - \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Feature-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+  - : この機能を許可するオリジンのリストです。 [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
 
 ## 既定のポリシー
 
@@ -33,6 +33,6 @@ Feature-Policy: web-share <allowlist>;
 
 ## 関連情報
 
-- {{HTTPHeader('Feature-Policy')}} ヘッダー
+- {{HTTPHeader("Permissions-Policy")}} ヘッダー
 - [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
 - [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
