@@ -22,7 +22,7 @@ WebAssembly.compileStreaming(source, compileOptions)
 ### 参数
 
 - `source`
-  - : 一个 [`Response`](/zh-CN/docs/Web/API/Response) 对象或者一个能兑现它的 promise，该对象代表的是你想流式以及编译的底层源码。
+  - : 一个 [`Response`](/zh-CN/docs/Web/API/Response) 对象或者一个能兑现它的 promise，该对象代表的是你想流式编译的底层源码。
 - `compileOptions` {{optional_inline}}
   - : 一个对象，包含的是编译选项。属性包括：
     - `builtins` {{optional_inline}}
@@ -57,7 +57,7 @@ WebAssembly.compileStreaming(fetch("simple.wasm"))
   .then((instance) => instance.exports.exported_func());
 ```
 
-接着用 [`WebAssembly.instantiate()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static)对得到的模块实例进行实例化，然后激活导出的函数。
+接着用 [`WebAssembly.instantiate()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) 对得到的模块实例进行实例化，然后激活导出的函数。
 
 ### 启用 JavaScript 内置功能和全局字符串导入
 
