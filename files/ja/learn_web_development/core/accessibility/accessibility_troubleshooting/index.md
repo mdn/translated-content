@@ -1,11 +1,10 @@
 ---
 title: "評価: アクセシビリティのトラブルシューティング"
+short-title: "評価: アクセシビリティのデバッグ"
 slug: Learn_web_development/Core/Accessibility/Accessibility_troubleshooting
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Mobile","Learn_web_development/Core/Design_for_developers", "Learn_web_development/Core/Accessibility")}}
 

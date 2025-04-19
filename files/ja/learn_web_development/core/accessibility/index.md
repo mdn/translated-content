@@ -1,12 +1,10 @@
 ---
-title: アクセシビリティ
+title: ウェブのアクセシビリティ
+short-title: アクセシビリティ
 slug: Learn_web_development/Core/Accessibility
-original_slug: Learn/Accessibility
 l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
-
-{{LearnSidebar}}
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
 
@@ -23,7 +21,7 @@ l10n:
 
 - [アクセシビリティとは](/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
   - : この記事では実際アクセシビリティとは何かについてよく観察するモジュールから開始します — これには考慮が必要な人のグループや、いろいろな人がウェブとやり取りするのになぜ、どんなツールを使うのかや、アクセシビリティをウェブ開発の作業フローに取り組む方法が含まれます。
-- [Accessibility tooling and assistive technology](/ja/docs/Learn_web_development/Core/Accessibility/Tooling)
+- [アクセシビリティツールと支援技術](/ja/docs/Learn_web_development/Core/Accessibility/Tooling)
   - : 次に、アクセシビリティツールに目を向け、アクセシビリティの課題解決を手伝っていただくために使用できるツールの種類や、ウェブを閲覧する際に障碍者が使用する支援技術に関する情報を指定します。 これらのツールは、次の記事でも使用します。
 - [HTML: アクセシビリティの良き基本](/ja/docs/Learn_web_development/Core/Accessibility/HTML)
   - : ウェブコンテンツをアクセシビリティ高くすることの多くの部分は、どんなときも正しい HTML 要素を正しい目的で使うことです。 この記事ではアクセシビリティを最大化するためにどう HTML が使われるかの詳細を見ていきます。
@@ -40,8 +38,6 @@ l10n:
 
 ## 関連情報
 
-- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
-  - : [Scrimba](https://scrimba.com?via=mdn) の _Learn Accessible Web Design_ コースでは、対話型のコーディング課題を解き、現実のウェブサイトを修正することで、アクセシビリティの高い HTML の書き方を学びます。
 - [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)
   - : Marcy Sutton によるすばらしい動画チュートリアル。
 - [Deque University resources](https://dequeuniversity.com/resources/)
@@ -50,5 +46,7 @@ l10n:
   - : ガイド、チェックリスト、ツールなどを含む。
 - [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/)
   - : ウェブアクセシビリティ評価ツールの一覧を含む。
+- [Learn Accessible Web Design](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN カリキュラムパートナー_</sup>
+  - : [Scrimba](https://scrimba.com?via=mdn) の _Learn Accessible Web Design_ コースでは、対話型のコーディング課題を解き、現実のウェブサイトを修正することで、アクセシビリティの高い HTML の書き方を学びます。
 
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}

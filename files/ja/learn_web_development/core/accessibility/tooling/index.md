@@ -1,13 +1,12 @@
 ---
 title: アクセシビリティツールと支援技術
+short-title: アクセシビリティツール
 slug: Learn_web_development/Core/Accessibility/Tooling
 l10n:
-  sourceCommit: a92e10b293358bc796c43d5872a8981fd988a005
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
 
-{{LearnSidebar}}
-
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
 
 > [!NOTE]
 > この記事のコンテンツは現在不完全です。申し訳ありません！私たちは MDN ウェブ開発の学習の章の改善に努めており、間もなく、 ("TODO") とマークされた場所も完了する予定です。
@@ -70,7 +69,7 @@ l10n:
 
 - [Firefox Accessibility Inspector](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html)
 - [ANDI bookmarklet](https://www.ssa.gov/accessibility/andi/help/install.html)
-- [Google Lighthouse accessibility audits](https://developer.chrome.com/docs/lighthouse/accessibility/)
+- [Google Lighthouse accessibility audits](https://developer.chrome.com/docs/lighthouse/accessibility/scoring)
 
 > [!NOTE]
 > このようなツールは、アクセシビリティの問題を全て自分で解決するのに十分ではありません。 全体像を把握するには、これらの組み合わせ、知識と経験、ユーザーテストなどが必要です。
@@ -371,7 +370,7 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 
 1. HTML が意味論的にできるだけ正しいことを確認してください。 [監査ツール](#監査ツール)を使用して、[それを検証する](/ja/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML#html_の検証)ことからスタートするといいでしょう。
 2. CSS がオフになっているときにコンテンツが意味をなすことを確認してください。
-3. 機能がキーボードからアクセス可能であることを確認してください（詳しくは [UI コントロール](/ja/docs/Learn_web_development/Core/Accessibility/HTML#ui_コントロール)を参照）。 Tab、Return/Enter などを使ってテストします。
+3. 機能がキーボードからアクセス可能であることを確認してください（詳しくは[可能であれば意味のある UI コントロールを使用する](/ja/docs/Learn_web_development/Core/Accessibility/HTML#可能であれば意味のある_ui_コントロールを使う)を参照）。 Tab、Return/Enter などを使ってテストします。
 4. テキスト以外のコンテンツに[代替テキスト](/ja/docs/Learn_web_development/Core/Accessibility/HTML#代替テキスト)があることを確認してください。 [監査ツール](#監査ツール)はそのような問題を捉えるのに適しています。
 5. 適切なチェックツールを使用して、サイトの[カラーコントラスト](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#色とカラーコントラスト)が許容範囲内であることを確認してください。
 6. [隠されたコンテンツ](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#ものごとを隠す)がスクリーンリーダーに見えるようにしてください。
@@ -387,4 +386,4 @@ NVDA にはたくさんのキーボードコマンドがありますので、こ
 
 次の記事では、アクセシブルな HTML の書き方を見ていきます。
 
-{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_Accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/What_is_accessibility","Learn_web_development/Core/Accessibility/HTML", "Learn_web_development/Core/Accessibility")}}
