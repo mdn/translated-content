@@ -21,7 +21,7 @@ HTTP **`302 Found`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#
 
 ```http
 302 Found
-````
+```
 
 ## 範例
 
