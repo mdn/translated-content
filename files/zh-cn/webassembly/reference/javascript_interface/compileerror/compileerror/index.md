@@ -24,8 +24,7 @@ new WebAssembly.CompileError(message, fileName, lineNumber)
 - `options` {{optional_inline}}
   - : 一个拥有下列属性的对象：
     - `cause` {{optional_inline}}
-      - : 表示特定错误原因的属性。
-        在捕获并用更特定或有用的错误消息重新抛出错误时，可以使用这个属性传递原始错误。
+      - : 表示特定错误原因的属性。在捕获并用更特定或有用的错误消息重新抛出错误时，可以使用这个属性传递原始错误。
 - `fileName` {{optional_inline}} {{non-standard_inline}}
   - : 导致异常的代码所在的文件的名字。
 - `lineNumber` {{optional_inline}} {{non-standard_inline}}
