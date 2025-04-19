@@ -1,9 +1,8 @@
 ---
 title: <input type="file">
 slug: Web/HTML/Reference/Elements/input/file
-original_slug: Web/HTML/Element/input/file
 l10n:
-  sourceCommit: 27bceead8e9b1fe9c92df0fa5e418f81bd5b9fdf
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -461,7 +460,7 @@ button.addEventListener("click", (e) => {
     </tr>
     <tr>
       <td><strong>対応する共通属性</strong></td>
-      <td><a href="/ja/docs/Web/HTML/Element/input#required"><code>required</code></a></td>
+      <td><a href="/ja/docs/Web/HTML/Reference/Elements/input#required"><code>required</code></a></td>
     </tr>
     <tr>
       <td><strong>追加の属性</strong></td>

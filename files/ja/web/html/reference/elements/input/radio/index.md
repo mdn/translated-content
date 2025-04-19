@@ -1,9 +1,8 @@
 ---
 title: <input type="radio">
 slug: Web/HTML/Reference/Elements/input/radio
-original_slug: Web/HTML/Element/input/radio
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -339,7 +338,7 @@ button:active {
         <code><a href="#checked">checked</a></code
         >, <code><a href="#value">value</a></code>,
         <code
-          ><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code
+          ><a href="/ja/docs/Web/HTML/Reference/Attributes/required">required</a></code
         >
       </td>
     </tr>
@@ -360,7 +359,7 @@ button:active {
      <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role">radio</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role">radio</a></code>
       </td>
     </tr>
   </tbody>

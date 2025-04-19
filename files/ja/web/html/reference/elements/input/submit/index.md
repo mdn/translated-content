@@ -1,9 +1,8 @@
 ---
 title: <input type="submit">
 slug: Web/HTML/Reference/Elements/input/submit
-original_slug: Web/HTML/Element/input/submit
 l10n:
-  sourceCommit: 4f7251afb63ef9a40ba5c2c5a5ede2030062df19
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -62,7 +61,7 @@ l10n:
 文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) を上書きします。許可されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("GET")}} リクエストを用いてサーバーに送信されます。このメソッドは {{Glossary("ASCII")}} 文字のみを含む単純なフォームでうまく動作し、副作用はありません。これが既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で指定された URL に疑問符 ("?") を追加し、 `formenctype` または [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性で指定された方法でエンコードされたフォームのデータが続くものになります。この URL は HTTP の {{HTTPMethod("GET")}} リクエストを用いてサーバーに送信されます。このメソッドは {{Glossary("ASCII")}} 文字のみを含むフォームでうまく動作し、副作用はありません。これが既定値です。
 - `post`
   - : フォームのデータは、 `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) で指定された URL に HTTP の {{HTTPMethod("POST")}} メソッドを用いて送信されるリクエストの本文に含められます。このメソッドは複雑なデータやファイルの添付に対応しています。
 - `dialog`
@@ -185,8 +184,8 @@ l10n:
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> および
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -203,7 +202,7 @@ l10n:
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>

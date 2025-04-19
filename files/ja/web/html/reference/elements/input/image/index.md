@@ -1,9 +1,8 @@
 ---
 title: <input type="image">
 slug: Web/HTML/Reference/Elements/input/image
-original_slug: Web/HTML/Element/input/image
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -13,10 +12,10 @@ l10n:
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;image&quot;&gt;", "tabbed-standard")}}
 
 ```html interactive-example
-<p>Sign in to your account:</p>
+<p>アカウントにログインしてください:</p>
 
 <div>
-  <label for="userId">User ID</label>
+  <label for="userId">ユーザー ID</label>
   <input type="text" id="userId" name="userId" />
 </div>
 
@@ -86,7 +85,7 @@ input[type="image"] {
 文字列で、フォームのデータを送信するときに使用する HTTP メソッドを示します。この値は所有者であるフォームの [`method`](/ja/docs/Web/HTML/Reference/Elements/form#method) を上書きします。許されている値は次の通りです。
 
 - `get`
-  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("GET")}} リクエストでサーバーに送信されます。この方法は、 {{Glossary("ASCII")}} 文字のみを含み、副作用のない単純なフォームに対してよく機能します。これは既定値です。
+  - : URL は `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で与えられた URL で始まり、クエスチョンマーク ("?") 文字を付加し、次に `formenctype` またはフォームの [`enctype`](/ja/docs/Web/HTML/Reference/Elements/form#enctype) 属性の記述に従ってコード化したフォームデータを付加して作成されます。この URL は、 HTTP の {{HTTPMethod("GET")}} リクエストでサーバーに送信されます。この方法は、 {{Glossary("ASCII")}} 文字のみを含み、副作用のないフォームに対してよく機能します。これは既定値です。
 - `post`
   - : フォームのデータは `formaction` または [`action`](/ja/docs/Web/HTML/Reference/Elements/form#action) 属性で指定された URL に HTTP の {{HTTPMethod("POST")}} リクエストで送信される本文に含まれます。このメソッドは、複雑なデータやファイルの添付に対応しています。
 - `dialog`
@@ -139,7 +138,7 @@ input[type="image"] {
 
 ## image 入力の使用
 
-`<input type="image">` 要素は[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)（CSS レイヤーによって内容が生成されたり、直接管理されたりしない要素）で、大部分は通常の {{htmlelement("img")}} 要素と同じ動きをしますが、[送信ボタン](/ja/docs/Web/HTML/Reference/Elements/input/submit)の機能を持っています。
+`<input type="image">` 要素は{{ glossary("replaced elements", "置換要素")}}（CSS レイヤーによって内容が生成されたり、直接管理されたりしない要素）で、大部分は通常の {{htmlelement("img")}} 要素と同じ動きをしますが、[送信ボタン](/ja/docs/Web/HTML/Reference/Elements/input/submit)の機能を持っています。
 
 ### 基本的な input 入力の機能
 
@@ -328,15 +327,15 @@ label {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#alt"><code>alt</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#src"><code>src</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#width"><code>width</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#height"><code>height</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formaction"><code>formaction</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formenctype"><code>formenctype</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formmethod</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formmethod"><code>formnovalidate</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#formtarget"><code>formtarget</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#alt"><code>alt</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#src"><code>src</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#width"><code>width</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#height"><code>height</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#formaction"><code>formaction</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#formenctype"><code>formenctype</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#formmethod"><code>formmethod</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#formmethod"><code>formnovalidate</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#formtarget"><code>formtarget</code></a>
       </td>
     </tr>
     <tr>
@@ -353,7 +352,7 @@ label {
     </tr>
      <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>
