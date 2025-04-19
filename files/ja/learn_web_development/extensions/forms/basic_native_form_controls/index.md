@@ -364,7 +364,7 @@ http://foo.com?pos.x=123&pos.y=456
     <tr>
       <td>
         <code
-          ><a href="/ja/docs/Web/HTML/Attributes/disabled">disabled</a></code
+          ><a href="/ja/docs/Web/HTML/Reference/Attributes/disabled">disabled</a></code
         >
       </td>
       <td>false</td>
