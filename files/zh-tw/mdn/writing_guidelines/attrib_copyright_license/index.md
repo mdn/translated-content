@@ -1,8 +1,8 @@
 ---
 title: 署名與著作權授權
 slug: MDN/Writing_guidelines/Attrib_copyright_license
-page-type: mdn-writing-guide
-sidebar: mdnsidebar
+l10n:
+  sourceCommit: 24b4a3d9e5488d5c5600cf8eb278484d47bca07e
 ---
 
 MDN Web Docs 內容免費提供，並採用各種開源授權條款。
