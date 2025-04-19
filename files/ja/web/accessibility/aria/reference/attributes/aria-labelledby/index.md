@@ -94,21 +94,21 @@ l10n:
 
 `aria-labelledby`属性は以下の場所では対応していません。
 
-- [`code`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`caption`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`deletion`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`emphasis`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`code`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`caption`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`deletion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`emphasis`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`generic`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role)
-- [`insertion`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`mark`](/ja/docs/Web/Accessibility/ARIA/Roles/mark_role)
-- [`paragraph`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`insertion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`mark`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/mark_role)
+- [`paragraph`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 - [`presentation`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) / [`none`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role)
-- [`strong`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`subscript`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`superscript`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
-- [`suggestion`](/ja/docs/Web/Accessibility/ARIA/Roles/suggestion_role)
+- [`strong`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`subscript`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`superscript`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
+- [`suggestion`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/suggestion_role)
 - [`term`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/term_role)
-- [`time`](/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles)
+- [`time`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles)
 
 ## 仕様書
 

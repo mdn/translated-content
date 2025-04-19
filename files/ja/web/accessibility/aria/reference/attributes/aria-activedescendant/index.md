@@ -6,7 +6,7 @@ l10n:
   sourceCommit: f6310f5cf34dfe4b5c0a45494a83b0a5ef9a6571
 ---
 
-`aria-activedescendant` 属性は、[`composite`](/ja/docs/Web/Accessibility/ARIA/Roles/composite_role) ウィジェット、[`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)、[`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)、[`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)、[`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)にフォーカスが当たっている時、現在アクティブな要素を特定します。
+`aria-activedescendant` 属性は、[`composite`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) ウィジェット、[`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)、[`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)、[`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)にフォーカスが当たっている時、現在アクティブな要素を特定します。
 
 ## 解説
 
@@ -14,11 +14,11 @@ l10n:
 
 `aria-activedescendant` を使用すると、ブラウザーは、コンテナー要素またはコンテナー要素を制御する入力要素にDOMフォーカスを維持します。しかし、ユーザーエージェントは、 `aria-activedescendant` によって参照される要素にフォーカスがあるかのように、デスクトップのフォーカスイベントと状態を支援技術に伝えます。
 
-この属性は、[`composite`](/ja/docs/Web/Accessibility/ARIA/Roles/composite_role) ウィジェット、[`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)、[`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)、[`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)、[`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)の役割を持ち、 `id` が属性値として参照される要素にのみ関連します。
+この属性は、[`composite`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role) ウィジェット、[`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)、[`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)、[`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)の役割を持ち、 `id` が属性値として参照される要素にのみ関連します。
 
 属性は、どの要素がフォーカスを持つかという情報を支援技術に提供することを管理しますが、実際にフォーカスを作成することはありません。フォーカスの変更と属性値の管理は JavaScript で行います。その属性値を管理することに加えて、フォーカスが当たったときに、現在アクティブな子孫が表示され、視界に入る（または視界にスクロールする）ことを確認してください。
 
-DOM のフォーカスのある要素に `aria-activedescendant` の値を設定するには、確実に自分自身で参照する要素、 DOM にフォーカスのある要素の子孫か、 [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-owns) 属性で示す論理的な子孫を参照します。
+DOM のフォーカスのある要素に `aria-activedescendant` の値を設定するには、確実に自分自身で参照する要素、 DOM にフォーカスのある要素の子孫か、 [`aria-owns`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-owns) 属性で示す論理的な子孫を参照します。
 
 DOM フォーカスのある要素がコンボボックス、テキストボックス、検索ボックスの場合、 `aria-activedescendant` に対応している要素を参照するために [`aria-controls`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-controls) を含めてください。
 
@@ -39,8 +39,8 @@ DOM フォーカスのある要素がコンボボックス、テキストボッ�
 以下の役割を持つ要素の属性としてのみ関連します。
 
 - [`application`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role)
-- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
-- [`composite`](/ja/docs/Web/Accessibility/ARIA/Roles/composite_role)
+- [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
+- [`composite`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/composite_role)
 - [`group`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role)
 - [`textbox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role)
 

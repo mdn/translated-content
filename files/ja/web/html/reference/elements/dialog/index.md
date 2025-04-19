@@ -45,7 +45,7 @@ HTML の `<dialog>` 要素は、モーダルダイアログボックスと非モ
 
 ダイアログは他の要素を使用して作成することができますが、ネイティブの `<dialog>` 要素は、同様の目的で他の要素を使用する場合は再現しなければならないユーザビリティとアクセシビリティ機能を提供します。独自のダイアログ実装を作成する場合は、すべての期待される既定の動作に対応しており、適切なラベル付けの推奨事項に従うことを保証してください。
 
-`<dialog>` 要素は、ARIA の [role="dialog"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 属性を使用した独自ダイアログと同じような形で、ブラウザーが提供します。`<dialog>` 要素が `showModal()` メソッドで呼び出された場合、暗黙のうちに [aria-modal="true"](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal) となり、一方 `<dialog>` が `show()` メソッド、または `open` 属性を使用して表示されたり `<dialog>` の既定の `display` を変更した場合は `[aria-modal="false"]` として表示されます。モーダルダイアログを実装する際には、`<dialog>` とそのコンテンツ以外は [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性を使って不活性化する必要があります。`<dialog>` を `HTMLDialogElement.showModal()` メソッドで使用した場合、この動作はブラウザーが提供します。
+`<dialog>` 要素は、ARIA の [role="dialog"](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role) 属性を使用した独自ダイアログと同じような形で、ブラウザーが提供します。`<dialog>` 要素が `showModal()` メソッドで呼び出された場合、暗黙のうちに [aria-modal="true"](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) となり、一方 `<dialog>` が `show()` メソッド、または `open` 属性を使用して表示されたり `<dialog>` の既定の `display` を変更した場合は `[aria-modal="false"]` として表示されます。モーダルダイアログを実装する際には、`<dialog>` とそのコンテンツ以外は [`inert`](/ja/docs/Web/HTML/Reference/Global_attributes/inert) 属性を使って不活性化する必要があります。`<dialog>` を `HTMLDialogElement.showModal()` メソッドで使用した場合、この動作はブラウザーが提供します。
 
 ## 例
 
@@ -542,12 +542,12 @@ closeBtn.addEventListener("click", () => {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/dialog_role">dialog</a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/dialog_role">dialog</a>
       </td>
     </tr>
     <tr>
       <th scope="row">許可された ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/alertdialog_role"><code>alertdialog</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alertdialog_role"><code>alertdialog</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

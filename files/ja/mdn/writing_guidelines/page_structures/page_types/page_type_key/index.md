@@ -53,8 +53,8 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/Accessibility](/ja/docs/Web/Accessibility) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページには `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `aria-role`: ARIA [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)。例えば [`section`](/ja/docs/Web/Accessibility/ARIA/Roles/section_role) など。
-- `aria-attribute`: ARIA [属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)。例えば [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-sort) など。
+- `aria-role`: ARIA [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)。例えば [`section`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/section_role) など。
+- `aria-attribute`: ARIA [属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)。例えば [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) など。
 
 ### CSS のページ型
 

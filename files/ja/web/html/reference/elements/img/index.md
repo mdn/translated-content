@@ -432,14 +432,14 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
           <li>
             空ではない <code>alt</code> がある場合や <code>alt</code> 属性がない場合:
             <code
-              ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/img_role"
+              ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/img_role"
                 ><code>img</code></a
               ></code
             >
           </li>
           <li>
             空の <code>alt</code> 属性がある場合:
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"
               ><code>presentation</code></a
             >
           </li>
@@ -456,7 +456,7 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
               <li>
                 <code
                   ><a
-                    href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"
+                    href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"
                     >button</a
                   ></code
                 >
@@ -464,41 +464,41 @@ SVG は、異なるサイズでも正確に描画する必要がある画像に�
               <li>
                 <code
                   ><a
-                    href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role"
+                    href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"
                     >checkbox</a
                   ></code
                 >
               </li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/progressbar_role"><code>progressbar</code></a></li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role"><code>scrollbar</code></a></li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role"><code>progressbar</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role"><code>scrollbar</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
               <li>
                 <code
                   ><a
-                    href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role"
+                    href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"
                     >switch</a
                   ></code
                 >
               </li>
               <li>
                 <code
-                  ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"
+                  ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"
                     >tab</a
                   ></code
                 >
               </li>
-              <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+              <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
             </ul>
           </li>
           <li>
-            空の <code>alt</code> 属性がある場合、 <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
-            または <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>
+            空の <code>alt</code> 属性がある場合、 <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
+            または <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>
           </li>
           <li>
             <code>alt</code> 属性がない場合、許可されている <code>role</code> なし
