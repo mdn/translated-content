@@ -1,20 +1,17 @@
 ---
-title: PI パラメーター
+title: PI の引数
 slug: Web/XML/XSLT/Guides/PI_Parameters
-original_slug: Web/XSLT/Guides/PI_Parameters
 l10n:
-  sourceCommit: 9f325923caffac2d0239773d4562303fd02ea30a
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 ### 概要
 
-XSLT は実行時にパラメーターをスタイルシートに渡すという概念に対応しています。これにより当面は JavaScript で {{domxref("XSLTProcessor")}} を使用することが可能です。しかし、 `<?xml-stylesheet?>` 処理命令 (PI) を使用するときは、パラメーターを提供する方法がありませんでした。
+XSLT は実行時に引数をスタイルシートに渡すという概念に対応しています。これにより当面は JavaScript で {{domxref("XSLTProcessor")}} を使用することが可能です。しかし、 `<?xml-stylesheet?>` 処理命令 (PI) を使用するときは、引数を提供する方法がありませんでした。
 
 これを解決するために 2 つの新しい PI 、つまり `<?xslt-param?>` および `<?xslt-param-namespace?>` が [Firefox 2](/ja/docs/Mozilla/Firefox/Releases/2)（詳細については[対応バージョン](#対応バージョン)を参照）で実装されています。どちらの PI にも、`xml-stylesheet` PI と同じ方法で「擬似属性」を含めることができます。
 
-次のドキュメントは "color" と "size" の 2 つのパラメーターをスタイルシート "style.xsl" に渡します。
+次のドキュメントは "color" と "size" の 2 つの引数をスタイルシート "style.xsl" に渡します。
 
 ```xml
 <?xslt-param name="color" value="blue"?>
@@ -30,26 +27,26 @@ XSLT は実行時にパラメーターをスタイルシートに渡すという
 
 `xslt-param` と `xslt-param-namespace` PI の両方はドキュメントのプロローグ、つまり最初の要素タグの前になければなりません。プロローグ内のすべての PI は、`xml-stylesheet` PI の前後に発生する必要があります。
 
-複数の `xml-stylesheet` PI がある場合、パラメーターはすべてのスタイルシートに適用され、その結果すべてのスタイルシートが XSLT 仕様に従って単一のスタイルシートにインポートされます。複数の `xml-stylesheet` XSLT PI は現在 Firefox では対応していません。
+複数の `xml-stylesheet` PI がある場合、引数はすべてのスタイルシートに適用され、その結果すべてのスタイルシートが XSLT 仕様に従って単一のスタイルシートにインポートされます。複数の `xml-stylesheet` XSLT PI は現在 Firefox では対応していません。
 
 #### xslt-param
 
 `xslt-param` PI は 4 つの属性をサポートしています。
 
 - `name`
-  - : パラメーター名のローカル名部分。属性の構文チェックは行われませんが、有効な [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) でない場合は、スタイルシートのどのパラメーターにも一致しません。
+  - : 引数名のローカル名部分。属性の構文チェックは行われませんが、有効な [NCName](https://www.w3.org/TR/REC-xml-names/#NT-NCName) でない場合は、スタイルシートのどの引数にも一致しません。
 - `namespace`
-  - : パラメーター名の名前空間。属性の構文チェックは行われません。
+  - : 引数名の名前空間。属性の構文チェックは行われません。
 - `value`
-  - : パラメーターの文字列値を格納します。属性の値はパラメーターの値として使用されます。データ型は常に最適です。
+  - : 引数の文字列値を格納します。属性の値は引数の値として使用されます。データ型は常に最適です。
 - `select`
-  - : パラメーターの [XPath](/ja/docs/Web/XML/XPath) 式。属性の値は XPath 式として解析されます。式を評価した結果はパラメーターの値として使用されます。
+  - : 引数の [XPath](/ja/docs/Web/XML/XPath) 式。属性の値は XPath 式として解析されます。式を評価した結果は引数の値として使用されます。
 
 `name` 属性がないか空の場合、PI は無視されます。
 
 `namespace` 属性がないか空の場合、null 名前空間が使用されます。
 
-スタイルシートに存在しない (またはスタイルシート内の変数である) パラメーター名を指定するのはエラーではありません。PI は単に無視されます。
+スタイルシートに存在しない (またはスタイルシート内の変数である) 引数名を指定するのはエラーではありません。PI は単に無視されます。
 
 `value` と `select` の両方が存在する場合、または `value` も `select` も存在しない場合、PI は無視されます。
 
@@ -57,25 +54,25 @@ XSLT は実行時にパラメーターをスタイルシートに渡すという
 
 ##### 例
 
-パラメーター 'color' を文字列 'red' に設定します。
+引数 'color' を文字列 'red' に設定します。
 
 ```xml
 <?xslt-param name="color" value="red"?>
 ```
 
-パラメーター 'columns' を 2 に設定します。
+引数 'columns' を 2 に設定します。
 
 ```xml
 <?xslt-param name="columns" select="2"?>
 ```
 
-パラメーター 'books' を null 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
+引数 'books' を null 名前空間のすべての `<book>` 要素を含むノード集合に設定します。
 
 ```xml
 <?xslt-param name="books" select="//book"?>
 ```
 
-パラメーター 'show-toc' を真偽値 `true` に設定します。
+引数 'show-toc' を真偽値 `true` に設定します。
 
 ```xml
 <?xslt-param name="show-toc" select="true()"?>
@@ -113,7 +110,7 @@ XSLT は実行時にパラメーターをスタイルシートに渡すという
 
 ##### 例
 
-パラメーター 'books' を 'http\://www\.example.org/myNamespace' 名前空間のすべての `<book>` 要素を含むノードセットに設定します。
+引数 'books' を `http://www.example.org/myNamespace` 名前空間のすべての `<book>` 要素を含むノード集合に設定します。
 
 ```xml
 <?xslt-param-namespace prefix="my" namespace="http://www.example.org/myNamespace"?>
@@ -128,4 +125,4 @@ Firefox 2.0.0.1 以降で対応しています。**value** 属性は Firefox 2 �
 
 式に XSLT 関数を許可する必要がありますか？ `document()` は役に立ちそうですが、`generate-id()` が同じ文書に対して同じ文字列を生成しなければならない不変条件を維持するのは難しいようです。
 
-XSLT スタイルシートで URL パラメーターをクエリーするとどうなりますか？ 例えば、それらを指定された \<xsl:param>に渡します。
+XSLT スタイルシートで URL 引数をクエリーするとどうなりますか？ 例えば、それらを指定された \<xsl:param> に渡します。
