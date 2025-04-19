@@ -2,7 +2,7 @@
 title: 標準後設資料名稱
 slug: Web/HTML/Reference/Elements/meta/name
 l10n:
-  sourceCommit: b8ed1dc2ae2ff1b6f44f389ac9756fed78b03f0e
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -18,7 +18,7 @@ HTML 規範定義了以下標準後設資料名稱：
   > [!NOTE]
   >
   > - 瀏覽器可能使用此名稱來識別應用程式。它與 {{HTMLElement("title")}} 元素不同，後者通常包含應用程式名稱，但也可能包含文件名稱或狀態等訊息。
-  > - 簡單的網頁不應該定義 `application-name`。
+  > - 個人網頁不應該定義 `application-name`。
 
 - `author`：文件作者的名稱。
 - `description`：頁面內容的簡短且準確的摘要。搜尋引擎如 [Google](https://developers.google.com/search/docs/appearance/snippet#meta-descriptions) 可能使用此欄位來控制網頁在搜尋結果中的顯示。

@@ -2,14 +2,14 @@
 title: for...of
 slug: Web/JavaScript/Reference/Statements/for...of
 l10n:
-  sourceCommit: 2982fcbb31c65f324a80fd9cec516a81d4793cd4
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{jsSidebar("Statements")}}
 
 **`for...of`** 語法執行一個迴圈，該迴圈操作來自[可迭代物件](/zh-TW/docs/Web/JavaScript/Reference/Iteration_protocols#可迭代協議)的值序列。可迭代物件包括內置物件實例，例如 {{jsxref("Array")}}、{{jsxref("String")}}、{{jsxref("TypedArray")}}、{{jsxref("Map")}}、{{jsxref("Set")}}、{{domxref("NodeList")}}（以及其他 DOM 集合），還包括 {{jsxref("Functions/arguments", "arguments")}} 物件、由[生成器函數](/zh-TW/docs/Web/JavaScript/Reference/Statements/function*)生成的[生成器](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Generator)，以及用戶定義的可迭代物件。
 
-{{InteractiveExample("JavaScript Demo: Statement - For...Of")}}
+{{InteractiveExample("JavaScript Demo: for...of statement")}}
 
 ```js interactive-example
 const array1 = ["a", "b", "c"];
@@ -18,9 +18,9 @@ for (const element of array1) {
   console.log(element);
 }
 
-// Expected output: "a"
-// Expected output: "b"
-// Expected output: "c"
+// 預期輸出："a"
+// 預期輸出："b"
+// 預期輸出："c"
 ```
 
 ## 語法
