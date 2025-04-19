@@ -96,7 +96,7 @@ l10n:
 ("https://example.com" "https://*.example.com")
 ```
 
-> **メモ:** `"https://*.example.com"` は `"https://example.com"` と一致しませ
+> **メモ:** `"https://*.example.com"` は `"https://example.com"` と一致しません。
 
 許可リストの例です。
 
