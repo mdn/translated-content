@@ -1,9 +1,8 @@
 ---
 title: "Reason: invalid token 'xyz' in CORS header 'Access-Control-Allow-Headers'"
 slug: Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
-original_slug: Web/HTTP/Guides/CORS/Errors/CORSInvalidAllowHeader
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
