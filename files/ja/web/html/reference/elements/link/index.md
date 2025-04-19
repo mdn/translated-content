@@ -411,7 +411,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><code>href</code> 属性つきの <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></td>
+      <td><code>href</code> 属性つきの <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

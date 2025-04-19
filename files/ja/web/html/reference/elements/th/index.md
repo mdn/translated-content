@@ -207,7 +207,7 @@ caption {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role"><code>columnheader</code></a> または <a href="/ja/docs/Web/Accessibility/ARIA/Roles/rowheader_role"><code>rowheader</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role"><code>columnheader</code></a> または <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/rowheader_role"><code>rowheader</code></a>
       </td>
     </tr>
     <tr>

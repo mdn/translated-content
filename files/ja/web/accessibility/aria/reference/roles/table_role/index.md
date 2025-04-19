@@ -74,7 +74,7 @@ ARIA の表を作成するには、`role="table"` をコンテナー要素に追
 
 ### 必要な JavaScript 機能
 
-無し。 ソート可能な列については、 [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/Columnheader_Role) ロールを参照してください。
+無し。 ソート可能な列については、 [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Columnheader_Role) ロールを参照してください。
 
 > [!NOTE]
 > ARIA の最初のルールは、要素を再定義し、ARIA のロール、ステート、プロパティを**追加して**アクセス可能にするのではなく、すでに組み込まれている意味論と挙動を持つネイティブな機能を使用できることです。 可能な限り、ARIA の `table` ロールの代わりに HTML の {{htmlelement("table")}} 要素を使用してください。

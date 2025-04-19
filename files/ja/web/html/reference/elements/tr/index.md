@@ -614,7 +614,7 @@ tbody > tr > td:last-of-type {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Row_Role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Row_Role"
             >row</a
           ></code
         >

@@ -88,8 +88,8 @@ l10n:
 ## 関連情報
 
 - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)
-- [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal)
-- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+- [`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal)
+- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
 - HTML [`hidden`](/ja/docs/Web/HTML/Reference/Global_attributes/hidden) 属性
 - CSS {{CSSXref('display')}} プロパティ
 - CSS {{CSSXref('visibility')}} プロパティ
