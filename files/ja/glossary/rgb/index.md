@@ -16,7 +16,7 @@ source-commit: ceb303e16d56ac69c25ed2e72c258212714ab15a
 
 `sRGB` は[いくつかある RGB 色空間](/ja/docs/Glossary/Color_space#rgb_color_spaces)のうちの1つにすぎ゛ません。 他の RGB 色空間, たとえば _Adobe RGB_ 色空間は _sRGB_ 色空間よりも広範囲の{{glossary("gamut","色域")}} を表現することができます。 _sRGB_ と _Adobe RGB_ では、座標の取り方が異なります。
 
-色の RGB 要素を記述するのには多くの方法があります。 {{Glossary("CSS")}} でも、様々な表現方法が用意されています: 24 ビット整数の [16 進](/ja/docs/Web/CSS/hex-color) 表記 (たとえば、 `#add8e6` は水色) または  [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 関数を使った記法で 3つのパーセンテージ、または`0` から `255` までの値 (たとえば, `rgb(46 139 87)` は緑)を用いる方法もあります。 CSS は [`color()`](/ja/docs/Web/CSS/color_value/color) 関数では `srgb`、 `srgb-linear`、 `a98-rgb`、 `prophoto-rgb` 色空間もサポートします。
+色の RGB 要素を記述するのには多くの方法があります。 {{Glossary("CSS")}} でも、様々な表現方法が用意されています: 24 ビット整数の [16 進](/ja/docs/Web/CSS/hex-color) 表記 (たとえば、 `#add8e6` は水色) または [`rgb()`](/ja/docs/Web/CSS/color_value/rgb) 関数を使った記法で 3つのパーセンテージ、または`0` から `255` までの値 (たとえば, `rgb(46 139 87)` は緑)を用いる方法もあります。 CSS は [`color()`](/ja/docs/Web/CSS/color_value/color) 関数では `srgb`、 `srgb-linear`、 `a98-rgb`、 `prophoto-rgb` 色空間もサポートします。
 
 RGB は`sRGB` {{glossary("color space","色空間")}} を表現できる唯一のカラーモデルではありません。 [`HSL`](/ja/docs/Web/CSS/color_value/hsl) (_hue-saturation-lightness_; _色相-彩度-明度_) または [`HWB`](/ja/docs/Web/CSS/color_value/hwb) (_hue-whiteness-blackness_; _色相-白色度-黒色度_) 色空間のような円筒座標系もまた、ウェブの `sRGB` 色を表現するのに使われます。
 
