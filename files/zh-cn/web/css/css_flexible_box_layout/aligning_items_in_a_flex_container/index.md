@@ -200,7 +200,7 @@ flex items 的高度全都变成一样的原因是 `align-items` 属性的初始
 - `align-content: flex-start`
 - `align-content: flex-end`
 - `align-content: start`
-- `align-content: fend`
+- `align-content: end`
 - `align-content: center`
 - `align-content: space-between`
 - `align-content: space-around`
