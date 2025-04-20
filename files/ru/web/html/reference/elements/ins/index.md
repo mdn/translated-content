@@ -57,17 +57,17 @@ p {
 }
 ```
 
-| [Содержимое категорий](/ru/docs/Web/HTML/Content_categories) | [Фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content) or [содержимое потока](/ru/docs/Web/HTML/Content_categories#flow_content). |
-| ------------------------------------------------------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                        | [Прозрачный](/ru/docs/Web/HTML/Content_categories#transparent_content_model).                                                                        |
-| Пропуск тегов                                                | Нет, открывающий и закрывающий теги обязательны.                                                                                                     |
-| Допустимые родители                                          | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                          |
-| Допустимые ARIA-роли                                         | Любые                                                                                                                                                |
-| DOM-интерфейс                                                | {{domxref("HTMLModElement")}}                                                                                                                        |
+| [Содержимое категорий](/ru/docs/Web/HTML/Guides/Content_categories) | [Фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content) or [содержимое потока](/ru/docs/Web/HTML/Guides/Content_categories#flow_content). |
+| ------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Допустимое содержимое                                               | [Прозрачный](/ru/docs/Web/HTML/Guides/Content_categories#transparent_content_model).                                                                               |
+| Пропуск тегов                                                       | Нет, открывающий и закрывающий теги обязательны.                                                                                                                   |
+| Допустимые родители                                                 | Любой элемент, который принимает [фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                 |
+| Допустимые ARIA-роли                                                | Любые                                                                                                                                                              |
+| DOM-интерфейс                                                       | {{domxref("HTMLModElement")}}                                                                                                                                      |
 
 ## Атрибуты
 
-Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент включает [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - `cite`
   - : Этот атрибут определяет URI ресурса, который объясняет изменения, такие как ссылка на протоколы заседаний или билет в системном поиске и устранении неисправностей.

@@ -9,16 +9,16 @@ slug: Web/HTML/Reference/Elements/input
 
 **Элемент** **HTML `<input>`** используется для создания интерактивных элементов управления в веб-формах для получения данных от пользователя; в зависимости от устройства и {{Glossary("user agent")}}, доступен широкий выбор типов входных данных и виджетов управления. Из-за огромного количества возможных сочетаний типов ввода и атрибутов это один из самых мощных и сложных элементов HTML.
 
-- _[Content categories](/ru/docs/Web/HTML/Content_categories)_ [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), listed, submittable, resettable, form-associated element, [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).
+- _[Content categories](/ru/docs/Web/HTML/Guides/Content_categories)_ [Flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), listed, submittable, resettable, form-associated element, [phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).
   If the [`type`](#type) has not the `hidden` value, labellable element, palpable content.
 - _Permitted content_ None, it is an {{Glossary("empty element")}}.
 - _Tag omission_ Must have a start tag and must not have an end tag.
-- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).
+- _Permitted parent elements_ Any element that accepts [phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).
 - _DOM interface_ {{domxref("HTMLInputElement")}}
 
 ## Атрибуты
 
-Этот элемент содержит [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент содержит [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - Расширение файла, начинающееся с символа точки (U+002E). Наприм., '.jpg, .png, .doc)
 - Валидный тип MIME без расширения
@@ -76,7 +76,7 @@ slug: Web/HTML/Reference/Elements/input
 - `autocomplete`
   - : Этот атрибут указывает, разрешено ли автоматическое заполнение поля браузером. Разрешено по умолчанию, даже если не указано. Данный атрибут игнорируется, если атрибут **type** равен `hidden, password,` `checkbox`, `radio`, `file`, или **type** кнопка (`button`, `submit`, `reset`, `image`). Возможные значения:
     - `off`: Пользователь должен каждый раз полностью вводить значение в поле или документ предусматривает свой собственный метод автозаполнения; браузер не делает автоматического заполнения записи.
-    - `on`: Браузер автоматически заканчивает значение поля, основываясь на значениях, которые вводились пользователем ранее.Если не атрибут **autocomplete** не указан в `<input>`, тогда браузер использует атрибут **autocomplete** формы, которая является родительской для данной формы. The form owner is either the `form` element that this `<input>` element is a descendant of or the form element whose **id** is specified by the **form** attribute of the input element. For more information, see the [`autocomplete`](/ru/docs/Web/HTML/Element/form#autocomplete) attribute in {{HTMLElement("form")}}.
+    - `on`: Браузер автоматически заканчивает значение поля, основываясь на значениях, которые вводились пользователем ранее.Если не атрибут **autocomplete** не указан в `<input>`, тогда браузер использует атрибут **autocomplete** формы, которая является родительской для данной формы. The form owner is either the `form` element that this `<input>` element is a descendant of or the form element whose **id** is specified by the **form** attribute of the input element. For more information, see the [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/form#autocomplete) attribute in {{HTMLElement("form")}}.
 - `autofocus`
   - : This Boolean attribute lets you specify that a form control should have input focus when the page loads, unless the user overrides it, for example by typing in a different control. Only one form element in a document can have the **autofocus** attribute, which is a Boolean. It cannot be applied if the **type** attribute is set to `hidden` (that is, you cannot automatically set focus to a hidden control).
 - `autosave`
@@ -88,20 +88,20 @@ slug: Web/HTML/Reference/Elements/input
 - `form`
   - : The form element that the input element is associated with (its _form owner_). The value of the attribute must be an **id** of a {{HTMLElement("form")}} element in the same document. If this attribute is not specified, this `<input>` element must be a descendant of a {{HTMLElement("form")}} element. This attribute enables you to place `<input>` elements anywhere within a document, not just as descendants of their form elements. An input can only be associated with one form.
 - `formaction`
-  - : The URI of a program that processes the information submitted by the input element, if it is a submit button or image. If specified, it overrides the [`action`](/ru/docs/Web/HTML/Element/form#action) attribute of the element's form owner.
+  - : The URI of a program that processes the information submitted by the input element, if it is a submit button or image. If specified, it overrides the [`action`](/ru/docs/Web/HTML/Reference/Elements/form#action) attribute of the element's form owner.
 - `formenctype`
   - : If the input element is a submit button or image, this attribute specifies the type of content that is used to submit the form to the server. Possible values are:
     - `application/x-www-form-urlencoded`: The default value if the attribute is not specified.
     - `multipart/form-data`: Use this value if you are using an {{HTMLElement("input")}} element with the [`type`](#type) attribute set to `file`.
-    - `text/plain` If this attribute is specified, it overrides the [`enctype`](/ru/docs/Web/HTML/Element/form#enctype) attribute of the element's form owner.
+    - `text/plain` If this attribute is specified, it overrides the [`enctype`](/ru/docs/Web/HTML/Reference/Elements/form#enctype) attribute of the element's form owner.
 - `formmethod`
   - : If the input element is a submit button or image, this attribute specifies the HTTP method that the browser uses to submit the form. Possible values are:
     - `post`: The data from the form is included in the body of the form and is sent to the server.
-    - `get`: The data from the form are appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.If specified, this attribute overrides the [`method`](/ru/docs/Web/HTML/Element/form#method) attribute of the element's form owner.
+    - `get`: The data from the form are appended to the **form** attribute URI, with a '?' as a separator, and the resulting URI is sent to the server. Use this method when the form has no side-effects and contains only ASCII characters.If specified, this attribute overrides the [`method`](/ru/docs/Web/HTML/Reference/Elements/form#method) attribute of the element's form owner.
 - `formnovalidate`
-  - : If the input element is a submit button or image, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/ru/docs/Web/HTML/Element/form#novalidate) attribute of the element's form owner.
+  - : If the input element is a submit button or image, this Boolean attribute specifies that the form is not to be validated when it is submitted. If this attribute is specified, it overrides the [`novalidate`](/ru/docs/Web/HTML/Reference/Elements/form#novalidate) attribute of the element's form owner.
 - `formtarget`
-  - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/ru/docs/Web/HTML/Element/form#target) attribute of the elements's form owner. The following keywords have special meanings:
+  - : If the input element is a submit button or image, this attribute is a name or keyword indicating where to display the response that is received after submitting the form. This is a name of, or keyword for, a _browsing context_ (for example, tab, window, or inline frame). If this attribute is specified, it overrides the [`target`](/ru/docs/Web/HTML/Reference/Elements/form#target) attribute of the elements's form owner. The following keywords have special meanings:
     - `_self`: Load the response into the same browsing context as the current one. This value is the default if the attribute is not specified.
     - `_blank`: Load the response into a new unnamed browsing context.
     - `_parent`: Load the response into the parent browsing context of the current one. If there is no parent, this option behaves the same way as `_self`.

@@ -202,7 +202,7 @@ img {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <a href="/ja/docs/Web/HTML/Element/area#href"><code>href</code></a> 属性がある場合は
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role">link</a></code>、そうでなければ<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role">link</a></code>、そうでなければ<a href="https://www.w3.org/TR/html-aria/#dfn-no-corresponding-role">対応するロールなし</a>
       </td>
     </tr>
     <tr>

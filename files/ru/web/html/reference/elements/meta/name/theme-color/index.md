@@ -7,7 +7,7 @@ l10n:
 
 {{HTMLSidebar}}
 
-Значение **`theme-color`** атрибута [`name`](/ru/docs/Web/HTML/Element/meta#name) элемента {{htmlelement("meta")}} указывает на рекомендуемый цвет, который пользовательские агенты должны использовать для настройки отображения страницы или окружающего пользовательского интерфейса. Атрибут [`content`](/ru/docs/Web/HTML/Element/meta#content), если указан, должен содержать допустимое значение CSS {{cssxref("&lt;color&gt;")}}.
+Значение **`theme-color`** атрибута [`name`](/ru/docs/Web/HTML/Reference/Elements/meta#name) элемента {{htmlelement("meta")}} указывает на рекомендуемый цвет, который пользовательские агенты должны использовать для настройки отображения страницы или окружающего пользовательского интерфейса. Атрибут [`content`](/ru/docs/Web/HTML/Reference/Elements/meta#content), если указан, должен содержать допустимое значение CSS {{cssxref("&lt;color&gt;")}}.
 
 ## Примеры
 
@@ -21,7 +21,7 @@ l10n:
 
 _Источник изображения: [Icons & Browser Colors](https://web.dev/articles/icons-and-browser-colors), создано и предоставлено Google, используется в соответствии с условиями, описанными в [лицензии Creative Commons 4.0 Attribution License](https://creativecommons.org/licenses/by/4.0/)._
 
-Можно указать тип медиа или медиа-запрос в атрибуте [`media`](/ru/docs/Web/HTML/Element/meta#media), тогда цвет будет установлен только в том случае, если условие выполнено. Например:
+Можно указать тип медиа или медиа-запрос в атрибуте [`media`](/ru/docs/Web/HTML/Reference/Elements/meta#media), тогда цвет будет установлен только в том случае, если условие выполнено. Например:
 
 ```html
 <meta name="theme-color" media="(prefers-color-scheme: light)" content="cyan" />

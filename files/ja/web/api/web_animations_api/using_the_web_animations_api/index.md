@@ -86,7 +86,7 @@ const aliceTiming = {
 
 CSS にこける同等の値の表し方とは異なる形で表現されていることにお気づきでしょう。
 
-- 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように、ウェブアニメーション API はミリ秒でしか値を取りません。
+- 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("Window.setTimeout", "setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように、ウェブアニメーション API はミリ秒でしか値を取りません。
 - もう 1 つは `iteration-count` ではなく `iterations` ということです。
 
 > [!NOTE]
