@@ -48,7 +48,7 @@ l10n:
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Generic_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Generic_role"
             >generic</a
           ></code
         >

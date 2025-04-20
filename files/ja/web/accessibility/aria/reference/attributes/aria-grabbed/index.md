@@ -18,7 +18,7 @@ l10n:
 
 `aria-grabbed="true"` を設定すると、要素がドラッグのために選択されていることを示しす。 `aria-grabbed="false"` を設定すると、要素がドラッグ＆ドロップ処理でつかまれる可能性があるが、現在はつかまれていないことを示します。
 
-`aria-grabbed` が `true` に設定されている場合、すべてのドロップ対象要素の [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect) 属性は、ドロップされたときにつかまれた要素に発生する機能（効果）の種類で更新されなければなりません。要素がつかまれた状態にない場合、すべてのドロップ対象の `aria-dropeffect` 属性を元に戻してください。
+`aria-grabbed` が `true` に設定されている場合、すべてのドロップ対象要素の [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect) 属性は、ドロップされたときにつかまれた要素に発生する機能（効果）の種類で更新されなければなりません。要素がつかまれた状態にない場合、すべてのドロップ対象の `aria-dropeffect` 属性を元に戻してください。
 
 `aria-grabbed` プロパティは WAI-ARIA の将来のバージョンで新しい機能に置き換わることが予定されており、非推奨です。
 
@@ -44,7 +44,7 @@ l10n:
 
 ## 関連情報
 
-- [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-dropeffect)
+- [`aria-dropeffect`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-dropeffect)
 - [HTML の `draggable` グローバル属性](/ja/docs/Web/HTML/Reference/Global_attributes/draggable)
 - HTML の[ドラッグ＆ドロップ API](/ja/docs/Web/API/HTML_Drag_and_Drop_API)
 - {{domxref('dataTransfer')}}
