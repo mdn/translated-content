@@ -11,7 +11,7 @@ slug: Learn_web_development/Core/Accessibility/What_is_accessibility
   <tbody>
     <tr>
       <th scope="row">Необходимые знания:</th>
-	      <td>Базовая компьютерная грамотность, базовое понимание <a href="/ru/docs/Learn_web_development/Core/Structuring_content">HTML</a> и <a href="/ru/Learn_web_development/Core/Styling_basics">CSS</a>.</td>
+        <td>Базовая компьютерная грамотность, базовое понимание <a href="/ru/docs/Learn_web_development/Core/Structuring_content">HTML</a> и <a href="/ru/Learn_web_development/Core/Styling_basics">CSS</a>.</td>
     </tr>
     <tr>
       <th scope="row">Результаты обучения:</th>
