@@ -2,9 +2,8 @@
 title: "Highlight: entries() メソッド"
 short-title: entries()
 slug: Web/API/Highlight/entries
-page-type: web-api-instance-method
-browser-compat: api.Highlight.entries
-spec-urls: https://tc39.es/ecma262/multipage/keyed-collections.html#sec-set.prototype.entries
+l10n:
+  sourceCommit: 47ed48a36b456f8ea9ab6aaa5969c55d2912edcb
 ---
 
 {{APIRef("CSS Custom Highlight API")}}

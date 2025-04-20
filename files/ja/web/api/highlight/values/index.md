@@ -10,8 +10,7 @@ l10n:
 
 **`values()`** は {{domxref("Highlight")}} インターフェイスのメソッドで、`Highlight` オブジェクト内のすべての `Range` オブジェクトの値を挿入順に含む新しい[イテレーター](/ja/docs/Web/JavaScript/Guide/Iterators_and_generators)オブジェクトを返します。
 
-> [!NOTE]
-> **`keys()`** メソッドはこのメソッドの別名です。 `Highlight` 要素の **values** とまったく同じ動作をし、同じものを返します。
+> **メモ:** **`keys()`** メソッドはこのメソッドの別名です。 `Highlight` 要素の **values** とまったく同じ動作をし、同じものを返します。
 
 `Highlight` は {{jsxref("Set")}} 風オブジェクトですので、これは {{jsxref("Set.values()")}} を使うのと似ています。
 
