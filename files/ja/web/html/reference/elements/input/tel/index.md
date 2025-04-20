@@ -1,9 +1,8 @@
 ---
 title: <input type="tel">
 slug: Web/HTML/Reference/Elements/input/tel
-original_slug: Web/HTML/Element/input/tel
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -493,14 +492,14 @@ input:valid + span::after {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#maxlength"><code>maxlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#minlength"><code>minlength</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#pattern"><code>pattern</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#size"><code>size</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#maxlength"><code>maxlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#minlength"><code>minlength</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#pattern"><code>pattern</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#size"><code>size</code></a>
       </td>
     </tr>
     <tr>
@@ -526,8 +525,8 @@ input:valid + span::after {
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td><code>list</code> 属性がある場合:
-                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code></td>
-      <td><code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code></td>
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code></td>
+      <td><code>list</code> 属性がない場合: <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code></td>
     </tr>
   </tbody>
 </table>

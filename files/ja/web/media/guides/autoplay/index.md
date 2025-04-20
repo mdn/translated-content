@@ -182,7 +182,7 @@ let playAttempt = setInterval(() => {
 
 ## autoplay 機能ポリシー
 
-上記のブラウザー側での自動再生機能の管理および制御に加えて、ウェブサーバーは自動再生が機能することを許可する意欲を表現することもできます。 {{Glossary("HTTP")}} の {{HTTPHeader("Feature-Policy")}} ヘッダーの [`autoplay`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/autoplay) ディレクティブは、メディアの自動再生に使用できるドメインがあれば、それを制御するために使用されます。 既定では、`autoplay` 機能ポリシー (feature policy) は `'self'`（_単一引用符を含む_）に設定されています。 これは、文書と同じドメインでホストされているときに自動再生が許可されることを示します。
+上記のブラウザー側での自動再生機能の管理および制御に加えて、ウェブサーバーは自動再生が機能することを許可する意欲を表現することもできます。 {{Glossary("HTTP")}} の {{HTTPHeader("Permissions-Policy")}} ヘッダーの [`autoplay`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/autoplay) ディレクティブは、メディアの自動再生に使用できるドメインがあれば、それを制御するために使用されます。 既定では、`autoplay` 機能ポリシー (feature policy) は `'self'`（_単一引用符を含む_）に設定されています。 これは、文書と同じドメインでホストされているときに自動再生が許可されることを示します。
 
 また、`'none'` を指定して自動再生を完全に無効にしたり、`'*'` を指定してすべてのドメインからの自動再生を許可したり、メディアを自動的に再生できる 1 つ以上の特定のオリジンを指定できます。 これらのオリジンはスペース文字で区切ります。
 
@@ -193,10 +193,10 @@ let playAttempt = setInterval(() => {
 
 ### 例: 文書のドメインからの自動再生のみを許可する
 
-{{HTTPHeader("Feature-Policy")}} ヘッダーを使用して、文書の{{Glossary("origin","オリジン")}}からのメディアの自動再生のみを許可するには次のようにします。
+{{HTTPHeader("Permissions-Policy")}} ヘッダーを使用して、文書の{{Glossary("origin","オリジン")}}からのメディアの自動再生のみを許可するには次のようにします。
 
 ```http
-Feature-Policy: autoplay 'self'
+Permissions-Policy: autoplay 'self'
 ```
 
 {{HTMLElement("iframe")}} に対して同じことを行うには次のようにします。
@@ -207,10 +207,10 @@ Feature-Policy: autoplay 'self'
 
 ### 例: 自動再生と全画面モードの許可
 
-前の例に[全画面 API](/ja/docs/Web/API/Fullscreen_API) (Fullscreen API) のパーミッションを追加すると、ドメインに関係なく全画面のアクセスが許可されている場合、次のような `Feature-Policy` ヘッダーになります。 必要に応じてドメイン制限を追加できます。
+前の例に[全画面 API](/ja/docs/Web/API/Fullscreen_API) (Fullscreen API) のパーミッションを追加すると、ドメインに関係なく全画面のアクセスが許可されている場合、次のような `Permissions-Policy` ヘッダーになります。 必要に応じてドメイン制限を追加できます。
 
 ```http
-Feature-Policy: autoplay 'self'; fullscreen
+Permissions-Policy: autoplay 'self'; fullscreen
 ```
 
 `<iframe>` 要素の `allow` プロパティを使って同じパーミッションを設定すると、次のようになります。
@@ -221,10 +221,10 @@ Feature-Policy: autoplay 'self'; fullscreen
 
 ### 例: 特定のソースからの自動再生を許可する
 
-文書（または `<iframe>`）の独自ドメインと `https://example.media` の両方からメディアを再生できるようにする `Feature-Policy` ヘッダーは、次のようになります。
+文書（または `<iframe>`）の独自ドメインと `https://example.media` の両方からメディアを再生できるようにする `Permissions-Policy` ヘッダーは、次のようになります。
 
 ```http
-Feature-Policy: autoplay 'self' https://example.media
+Permissions-Policy: autoplay 'self' https://example.media
 ```
 
 次のように {{HTMLElement("iframe")}} を記述して、この自動再生ポリシーをそれ自体に適用する必要があり、すべての子フレームをこのように記述することを指定することができます。
@@ -243,7 +243,7 @@ Feature-Policy: autoplay 'self' https://example.media
 `autoplay` 機能ポリシーを `'none'` に設定すると、文書または `<iframe>` とすべてのネストされたフレームに対して自動再生が完全に無効になります。 HTTP ヘッダーは次のとおりです。
 
 ```http
-Feature-Policy: autoplay 'none'
+Permissions-Policy: autoplay 'none'
 ```
 
 `<iframe>` の `allow` 属性を使う場合は、次のようになります。
