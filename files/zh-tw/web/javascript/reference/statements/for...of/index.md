@@ -176,7 +176,7 @@ foo(1, 2, 3);
 
 ### 迭代 NodeList
 
-下面的範例透過迭代一個 [`NodeList`](/zh-TW/docs/Web/API/NodeList) DOM 集合，為位於 [`<article>`](/zh-TW/docs/Web/HTML/Element/article) 元素下的段落添加 `read` 類別。
+下面的範例透過迭代一個 [`NodeList`](/zh-TW/docs/Web/API/NodeList) DOM 集合，為位於 [`<article>`](/zh-TW/docs/Web/HTML/Reference/Elements/article) 元素下的段落添加 `read` 類別。
 
 ```js
 const articleParagraphs = document.querySelectorAll("article > p");

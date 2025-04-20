@@ -86,7 +86,7 @@ const aliceTiming = {
 
 CSS にこける同等の値の表し方とは異なる形で表現されていることにお気づきでしょう。
 
-- 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように、ウェブアニメーション API はミリ秒でしか値を取りません。
+- 1 つ目は間隔時間はミリ秒単位で表現されています。3 秒という指定ではなく、3000 ミリ秒です。{{domxref("Window.setTimeout", "setTimeout()")}} や {{domxref("Window.requestAnimationFrame()")}} と同じように、ウェブアニメーション API はミリ秒でしか値を取りません。
 - もう 1 つは `iteration-count` ではなく `iterations` ということです。
 
 > [!NOTE]
@@ -242,7 +242,7 @@ document.addEventListener("touchstart", goFaster);
 - アニメーションがアクティブなままであり、ブラウザーがその状態を維持しなければならないため、アニメーションが終了してもアニメーションがリソースを消費し続けます。なお、これは[満了したアニメーションの自動削除](#満了したアニメーションの自動削除)をすることでいくらか緩和されます。
 - アニメーションで適用されたスタイルは、指定されたスタイルより[カスケードにおいて高い優先度](/ja/docs/Web/CSS/CSS_cascade/Cascade#カスケード順)を持つため、必要に応じて上書きすることが困難になる場合があります。
 
-より良い方法は、{{domxref("Animation.commitStyles()")}} メソッドを使うことです。これはこのアニメーションの現在のスタイルを、対象要素の [`style`](/ja/docs/Web/HTML/Global_attributes/style) 属性に書き込むので、その後は通常にスタイル設定しなおすことができます。
+より良い方法は、{{domxref("Animation.commitStyles()")}} メソッドを使うことです。これはこのアニメーションの現在のスタイルを、対象要素の [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) 属性に書き込むので、その後は通常にスタイル設定しなおすことができます。
 
 ## 満了したアニメーションの自動削除
 

@@ -10,7 +10,7 @@ l10n:
 
 **`type`** は {{domxref("HTMLButtonElement")}} インターフェイスのメソッドで、この {{HTMLElement("button")}} 要素の動作の種類を示す文字列です。
 
-これは {{HTMLElement("button")}} 要素の [`type`](/ja/docs/Web/HTML/Element/button#type) 属性を反映しています。
+これは {{HTMLElement("button")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/button#type) 属性を反映しています。
 
 ## 値
 

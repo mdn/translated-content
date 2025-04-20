@@ -13,7 +13,7 @@ l10n:
 
 ### HTML
 
-- `<base>` 要素の [`target`](/ja/docs/Web/HTML/Element/base#target) で ASCII の改行、タブ、`<` の文字が禁止されて、それらが存在する場合は値を `_blank` に変更します。これは、閉じていない `target` 属性を使用するダングリングマークアップインジェクション攻撃を防止します ([Firefox bug 1835157](https://bugzil.la/1835157))。
+- `<base>` 要素の [`target`](/ja/docs/Web/HTML/Reference/Elements/base#target) で ASCII の改行、タブ、`<` の文字が禁止されて、それらが存在する場合は値を `_blank` に変更します。これは、閉じていない `target` 属性を使用するダングリングマークアップインジェクション攻撃を防止します ([Firefox bug 1835157](https://bugzil.la/1835157))。
 
 ### CSS
 

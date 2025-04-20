@@ -18,4 +18,4 @@ slug: Web/API/DOMStringMap
 ## 参见
 
 - {{domxref("HTMLElement.dataset")}} / {{domxref("SVGElement.dataset")}}
-- [全局属性——`data-*`](/zh-CN/docs/Web/HTML/Global_attributes/data-*)
+- [全局属性——`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)

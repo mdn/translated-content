@@ -13,7 +13,7 @@ l10n:
 
 ### 開発者ツール
 
-- [アクセシビリティ調査ツール](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) が、要素の ARIA ロールを正しく表示しない不具合を修正しました。これは、[landmark ロール](/ja/docs/Web/Accessibility/ARIA/Roles/landmark_role) の表示に影響します。
+- [アクセシビリティ調査ツール](https://firefox-source-docs.mozilla.org/devtools-user/accessibility_inspector/index.html) が、要素の ARIA ロールを正しく表示しない不具合を修正しました。これは、[landmark ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/landmark_role) の表示に影響します。
   ARIA にマッピングできないロールは、Gecko の内部ロール名を使用します ([Firefox bug 1572512](https://bugzil.la/1572512))。
 
 ### HTML

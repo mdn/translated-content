@@ -68,5 +68,5 @@ l10n:
 
 ## 関連情報
 
-- [HTML `readonly` 属性](/ja/docs/Web/HTML/Attributes/readonly)
+- [HTML `readonly` 属性](/ja/docs/Web/HTML/Reference/Attributes/readonly)
 - [`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled)

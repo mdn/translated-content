@@ -47,8 +47,6 @@ background-repeat: space repeat;
 }
 ```
 
-La fuente de este ejemplo interactivo es de GitHub. Si estás interesado en contribuir a los ejemplos interactivos, por favor accee a <https://github.com/mdn/interactive-examples> y envíanos una solicitud para colaborar.
-
 ```css
 /* One-value syntax */
 background-repeat: repeat-x;

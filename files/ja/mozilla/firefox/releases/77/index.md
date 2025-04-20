@@ -28,7 +28,7 @@ slug: Mozilla/Firefox/Releases/77
 
 ### HTML
 
-- {{HTMLElement("option")}} 要素の内容物が空であるときに、[label 属性の値](/ja/docs/Web/HTML/Element/option#browser_compatibility) を表示するようになりました ([Firefox バグ 40545](https://bugzil.la/40545))。
+- {{HTMLElement("option")}} 要素の内容物が空であるときに、[label 属性の値](/ja/docs/Web/HTML/Reference/Elements/option#browser_compatibility) を表示するようになりました ([Firefox バグ 40545](https://bugzil.la/40545))。
 
 ### SVG
 

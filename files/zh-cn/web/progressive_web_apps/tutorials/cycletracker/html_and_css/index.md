@@ -66,7 +66,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 弁言（preamble），可以
 <!doctype html>
 ```
 
-根 {{HTMLelement("html")}} 标签将所有内容包裹在具有 [`lang`](/zh-CN/docs/Web/HTML/Global_attributes/lang) 属性的标签中，该属性定义了页面的主要语言。
+根 {{HTMLelement("html")}} 标签将所有内容包裹在具有 [`lang`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/lang) 属性的标签中，该属性定义了页面的主要语言。
 
 ```html
 <!doctype html>
@@ -79,7 +79,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 弁言（preamble），可以
 
 {{HTMLelement("head")}} 包含了关于网页应用程序的不能被读者看到的机器可读信息，除了 `<title>` 之外，它显示在浏览器标签的标题中。
 
-`<head>` 包含了所有的[元数据](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)。你的 `<head>` 中的前两项信息应该总是字符集定义，它定义了[字符编码](/zh-CN/docs/Glossary/Character_encoding)，和 [viewport](/zh-CN/docs/Web/HTML/Viewport_meta_tag) {{HTMLelement("meta")}} 标签，它可以确保页面以视口的宽度渲染，而不会在非常小的屏幕上被缩小。
+`<head>` 包含了所有的[元数据](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Webpage_metadata)。你的 `<head>` 中的前两项信息应该总是字符集定义，它定义了[字符编码](/zh-CN/docs/Glossary/Character_encoding)，和 [viewport](/zh-CN/docs/Web/HTML/Guides/Viewport_meta_element) {{HTMLelement("meta")}} 标签，它可以确保页面以视口的宽度渲染，而不会在非常小的屏幕上被缩小。
 
 ```html
 <head>
@@ -104,7 +104,7 @@ HTML 的第一行是一个 {{glossary("doctype")}} 弁言（preamble），可以
 <link rel="stylesheet" href="style.css" />
 ```
 
-HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`rel`](/zh-CN/docs/Web/HTML/Attributes/rel) 属性有超过 25 个定义的值——还有许多规范中没有定义的值。最常见的值 `rel="stylesheet"` 导入外部资源作为样式表。
+HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`rel`](/zh-CN/docs/Web/HTML/Reference/Attributes/rel) 属性有超过 25 个定义的值——还有许多规范中没有定义的值。最常见的值 `rel="stylesheet"` 导入外部资源作为样式表。
 
 在后面的小节中，当我们包括 [manifest 文件的链接](/zh-CN/docs/Web/Progressive_web_apps/Tutorials/CycleTracker/Manifest_file#adding_the_manifest_to_the_app) 时，我们将重新回顾 `<link>` 元素及其 `rel` 属性。
 
@@ -112,7 +112,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 
 {{HTMLelement("body")}} 元素包含了我们想要在用户访问该网站时显示的所有内容。
 
-在 `<body>` 中，我们包含了以应用程序的名称为一级标题的 [`<h1>`](/zh-CN/docs/Web/HTML/Element/Heading_Elements)以及一个 {{HTMLelement("form")}}。
+在 `<body>` 中，我们包含了以应用程序的名称为一级标题的 [`<h1>`](/zh-CN/docs/Web/HTML/Reference/Elements/Heading_Elements)以及一个 {{HTMLelement("form")}}。
 
 ```html
 <body>
@@ -133,9 +133,9 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 </form>
 ```
 
-日期选择器是类型为 {{HTMLElement("input/date", "date")}} 的 {{HTMLElement("input")}} 元素。我们包含 [`required`](/zh-CN/docs/Web/HTML/Attributes/required) 属性，通过防止用户意外提交不完整的表单，来减少用户错误。
+日期选择器是类型为 {{HTMLElement("input/date", "date")}} 的 {{HTMLElement("input")}} 元素。我们包含 [`required`](/zh-CN/docs/Web/HTML/Reference/Attributes/required) 属性，通过防止用户意外提交不完整的表单，来减少用户错误。
 
-为了将 `<label>` 与表单控件相关联，每个 `<input>` 都有一个 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性，它与相关联的 {{HTMLelement("label")}} 的 [`for`](/zh-CN/docs/Web/HTML/Attributes/for) 属性匹配。相关的标签为每个 `<input>` 提供了一个{{glossary("accessible name", "无障碍")}}。
+为了将 `<label>` 与表单控件相关联，每个 `<input>` 都有一个 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性，它与相关联的 {{HTMLelement("label")}} 的 [`for`](/zh-CN/docs/Web/HTML/Reference/Attributes/for) 属性匹配。相关的标签为每个 `<input>` 提供了一个{{glossary("accessible name", "无障碍")}}。
 
 ```html
 <label for="start-date">Start date</label>
@@ -191,7 +191,7 @@ HTML `<link>` 元素用于指定当前文档与外部资源之间的关系。[`r
 
 ### JavaScript 链接
 
-在关闭 `</body>` 之前，我们包含一个指向将要编写的 `app.js` JavaScript 文件的链接。我们包含 [`defer`](/zh-CN/docs/Web/HTML/Element/script#defer) 属性来延迟加载这个脚本，并确保在文档的 HTML 被解析后执行 JavaScript。
+在关闭 `</body>` 之前，我们包含一个指向将要编写的 `app.js` JavaScript 文件的链接。我们包含 [`defer`](/zh-CN/docs/Web/HTML/Reference/Elements/script#defer) 属性来延迟加载这个脚本，并确保在文档的 HTML 被解析后执行 JavaScript。
 
 ```html
 <script src="app.js" defer></script>

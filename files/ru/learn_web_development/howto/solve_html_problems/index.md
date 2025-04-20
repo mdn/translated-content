@@ -91,7 +91,7 @@ HTML определяет лишь структуру документа. Для
 
 ### Продвинутые изображения и мультимедиа images & multimedia
 
-- [How to add responsive image to a webpage](/ru/docs/Web/HTML/Responsive_images)
+- [How to add responsive image to a webpage](/ru/docs/Web/HTML/Guides/Responsive_images)
 - [How to add vector image to a webpage](/ru/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
 - [How to add a hit map on top of an image](/ru/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image)
 

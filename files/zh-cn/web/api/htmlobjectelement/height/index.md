@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-{{domxref("HTMLObjectElement")}} 接口的 **`height`** 属性返回一个反映 [`height`](/zh-CN/docs/Web/HTML/Element/object#height) HTML 属性的字符串，其以 CSS 像素为单位指定资源的显示高度。
+{{domxref("HTMLObjectElement")}} 接口的 **`height`** 属性返回一个反映 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/object#height) HTML 属性的字符串，其以 CSS 像素为单位指定资源的显示高度。
 
 ## 值
 

@@ -28,7 +28,7 @@ HTTP の **`Content-Type`** は{{Glossary("representation header","表現ヘッ�
       <td>{{Glossary("Representation header", "表現ヘッダー")}}</td>
     </tr>
     <tr>
-      <th scope="row">{{Glossary("Forbidden header name", "禁止ヘッダー名")}}</th>
+      <th scope="row">{{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}</th>
       <td>いいえ</td>
     </tr>
     <tr>

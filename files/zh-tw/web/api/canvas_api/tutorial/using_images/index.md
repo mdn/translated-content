@@ -41,7 +41,7 @@ slug: Web/API/Canvas_API/Tutorial/Using_images
 
 ### 使用來自其他網域的影像
 
-Using the [`crossOrigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin) attribute on an 透過{{HTMLElement("HTMLImageElement")}}的[`crossOrigin`](/zh-TW/docs/Web/HTML/Attributes/crossorigin)屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布([taint the canvas](/zh-TW/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f))。
+Using the [`crossOrigin`](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin) attribute on an 透過{{HTMLElement("HTMLImageElement")}}的[`crossOrigin`](/zh-TW/docs/Web/HTML/Reference/Attributes/crossorigin)屬性, 我們可以要求從另一個網域載入影像來使用，若是寄存網域(thehosting domain)准許跨網路存取該影像，那麼我們便可以使用它而不用污染(taint)我們的畫布，反之，使用該影像會污染畫布([taint the canvas](/zh-TW/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f))。
 
 ### 使用其他畫布元素
 

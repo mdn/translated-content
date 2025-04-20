@@ -13,7 +13,7 @@ l10n:
 
 イベントには様々な型があり、イベントによっては基本の `Event` インターフェイスを基にした他のインターフェイスを使用することもあります。 `Event` 自体は、すべてのイベントで共通のプロパティやメソッドを持っています。
 
-多くの DOM 要素は、これらのイベントを受け入れる（または「待ち受けする」）ように設定することができ、それに応じてコードを実行してイベントを処理する（または「取り扱う」）ことができます。イベントハンドラーはふつう、様々な [HTML 要素](/ja/docs/Web/HTML/Element)（`<button>`, `<div>`, `<span>`, など）に [`EventTarget.addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用して結び付けられ（または「装着され」）、これが一般に古い HTML の[イベントハンドラー属性](/ja/docs/Web/HTML/Global_attributes)を使用する方法を置き換えています。さらに、このようなハンドラーは正しく追加されたら、必要に応じて [`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) を使用して切り離すことができます。
+多くの DOM 要素は、これらのイベントを受け入れる（または「待ち受けする」）ように設定することができ、それに応じてコードを実行してイベントを処理する（または「取り扱う」）ことができます。イベントハンドラーはふつう、様々な [HTML 要素](/ja/docs/Web/HTML/Reference/Elements)（`<button>`, `<div>`, `<span>`, など）に [`EventTarget.addEventListener()`](/ja/docs/Web/API/EventTarget/addEventListener) を使用して結び付けられ（または「装着され」）、これが一般に古い HTML の[イベントハンドラー属性](/ja/docs/Web/HTML/Reference/Global_attributes)を使用する方法を置き換えています。さらに、このようなハンドラーは正しく追加されたら、必要に応じて [`removeEventListener()`](/ja/docs/Web/API/EventTarget/removeEventListener) を使用して切り離すことができます。
 
 > [!NOTE]
 > 1 つの要素が、まったく同じイベントに対して複数のハンドラーを持つこともできます。特に、別々の独立したコードモジュールが、それぞれ独立した目的のためにハンドラーを装着する場合（例えば、広告モジュールと統計モジュールの両方がビデオ視聴を監視しているウェブページ）です。

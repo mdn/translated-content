@@ -11,21 +11,21 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 
 ### HTML
 
-- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement) に `crossOrigin` プロパティが追加され、また [`<img>`](/ja/docs/Web/HTML/Element/img) 要素に [`crossorigin`](/ja/docs/Web/HTML/Element/img#attr-crossorigin) 属性が追加されました。(参考: [バグ 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299))
+- [`HTMLImageElement`](/ja/docs/Web/API/HTMLImageElement) に `crossOrigin` プロパティが追加され、また [`<img>`](/ja/docs/Web/HTML/Reference/Elements/img) 要素に [`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#attr-crossorigin) 属性が追加されました。(参考: [バグ 664299](https://bugzilla.mozilla.org/show_bug.cgi?id=664299))
 - [`HTMLSelectElement.add()`](</ja/docs/Web/API/HTMLSelectElement#add()>) メソッドの引数に、インデックスが追加されました。インデックスが指す要素の前に、新たな項目が挿入されます。このメソッドはこれまで、項目のみがサポートされていました。(参考: [バグ 666200](https://bugzilla.mozilla.org/show_bug.cgi?id=666200))
 - `HTMLIsIndexElement` コンストラクターが削除されました。Firefox 4 以前から、どの要素もこのインターフェイスをインプリメントしていませんでした。
 - HTML5 のコンテキストメニュー機能 (contextmenu 属性) がサポートされました。この機能によって、要素固有のメニュー項目をネイティブのコンテキストメニューに追加できます。(この機能は HTML5 仕様の変更を待っている関係で、現時点では試験実装という扱いです。参考: [バグ 617528](https://bugzilla.mozilla.org/show_bug.cgi?id=617528 'FIXED: implement the HTML5 "context menu" feature (contextmenu attribute)'))
 - すべての要素に [`accesskeylabel`](/ja/docs/Web/HTML/Global_attributes/accesskeylabel) 属性がサポートされました。
-- [`<input>`](/ja/docs/Web/HTML/Element/input) と [`<textarea>`](/ja/docs/Web/HTML/Element/textarea) に `selectionDirection` アトリビュートが追加されました。また、`setSelectionRange()` メソッドが選択方向を指定できるようになりました。
+- [`<input>`](/ja/docs/Web/HTML/Reference/Elements/input) と [`<textarea>`](/ja/docs/Web/HTML/Reference/Elements/textarea) に `selectionDirection` アトリビュートが追加されました。また、`setSelectionRange()` メソッドが選択方向を指定できるようになりました。
 - `tabindex` 属性でフォーカス可能になった要素にフォーカスしたとき、ほとんどの要素でフォーカスリングが描画されるようになりました。
 
 ### DOM
 
 - [`insertAdjacentHTML`](/ja/docs/Web/API/Element/insertAdjacentHTML) メソッドが実装されました。
 - [`BlobBuilder`](/ja/docs/Web/API/Blob) に `getFile()` メソッドが追加されました。このメソッドは blob の内容をファイルとして返します。
-- 入れ子になった [`<label>`](/ja/docs/Web/HTML/Element/label) のイベントハンドリングが修正されました。
+- 入れ子になった [`<label>`](/ja/docs/Web/HTML/Reference/Elements/label) のイベントハンドリングが修正されました。
 - ウィンドウ間での [`window.postMessage()`](/ja/docs/Web/API/Window/postMessage) に [`File`](/ja/docs/Web/API/File) と [`FileList`](/ja/docs/Web/API/FileList) が使えるようになりました。
-- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回開業して抜け出す際、段落が挿入されるようになりました。(これまでは[`<br>`](/ja/docs/Web/HTML/Element/br)でしたが、これからは[`<p>`](/ja/docs/Web/HTML/Element/p)が挿入されます。)
+- [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、見出しで改行した際、もしくはリスト編集モードから 2 回開業して抜け出す際、段落が挿入されるようになりました。(これまでは[`<br>`](/ja/docs/Web/HTML/Reference/Elements/br)でしたが、これからは[`<p>`](/ja/docs/Web/HTML/Reference/Elements/p)が挿入されます。)
 - [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域において、1 行目に均等割付を与えたときに適切な処理を妨げるバグを修正しました。
 - [`element.contenteditable`](/ja/docs/Web/API/Element/contenteditable) な領域の最初で delete もしくは backspace を押した際に、前のブロックに影響するバグを修正しました。
 - [`document.getSelection()`](/ja/docs/Web/API/Document/getSelection "DOM の getSelection() メソッドは、 Window インターフェイス及び Document インターフェイスで利用可能です。
@@ -33,7 +33,7 @@ Firefox 8 は 2011 年 11 月 8 日にリリースされました。このペー
 - HTML5 の `selectionDirection` プロパティが実装されました。編集可能テキストで選択した方向を指定できます。
 - [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement) の `seekable` プロパティが実装されました。このプロパティは [`TimeRanges`](/ja/docs/Web/API/TimeRanges) を返します。
 - [`HTMLMediaElement`](/ja/docs/Web/API/HTMLMediaElement)`.preload` 属性が適切な _enumerated value_ を反映するようになりました。
-- [`crossOrigin` プロパティ](/ja/docs/Web/HTML/Attributes/crossorigin) に不正な値が使われた場合は "Anonymous" と扱われるようになりました。
+- [`crossOrigin` プロパティ](/ja/docs/Web/HTML/Reference/Attributes/crossorigin) に不正な値が使われた場合は "Anonymous" と扱われるようになりました。
 - [`window.navigator.cookieEnabled`](/ja/docs/Web/API/Window/navigator/cookieEnabled) が、サイトごとの設定で Cookie の設定が上書きされている場合においても正しい情報を返すようになりました。
 
 ### JavaScript

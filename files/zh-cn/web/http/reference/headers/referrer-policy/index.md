@@ -129,7 +129,7 @@ Referrer-Policy: no-referrer, strict-origin-when-cross-origin
 - [HTTP referer on Wikipedia](https://zh.wikipedia.org/wiki/HTTP_referer)
 - 其他设定页面引用策略的方式：
 
-  - A {{HTMLElement("meta")}} element with a [name of `referrer`](/zh-CN/docs/Web/HTML/Element/meta#attr-name).
+  - A {{HTMLElement("meta")}} element with a [name of `referrer`](/zh-CN/docs/Web/HTML/Reference/Elements/meta#attr-name).
   - A `referrerpolicy` attribute on an {{HTMLElement("a")}}, {{HTMLElement("area")}}, {{HTMLElement("img")}}, {{HTMLElement("iframe")}}, or {{HTMLElement("link")}} element.
   - The `noreferrer` link relation on an a, area, or link element (`rel="noreferrer"`).
   - When using [Fetch](/zh-CN/docs/Web/API/Fetch_API): {{domxref("Request.referrerPolicy")}}

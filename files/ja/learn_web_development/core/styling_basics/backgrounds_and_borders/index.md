@@ -557,7 +557,7 @@ h2 {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 背景と境界線](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders)を見てください。
 
 ## まとめ
 

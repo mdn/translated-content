@@ -28,7 +28,7 @@ original_slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 
 各ページには、{{htmlelement("footer")}} 要素を使用するか、または `role="contentinfo"` を宣言することによって作成されたコンテンツ情報 (`contentinfo`) ランドマークが 1 つだけ含まれているべきです。 {{htmlelement("iframe")}} 要素を介して埋め込まれたコンテンツに存在するコンテンツ情報 (`contentinfo`) ランドマークは、この制限に含まれません。
 
-> **メモ:** {{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきで、念のため VoiceOver の[既知の問題をテスト](/ja/docs/Web/HTML/Element/footer#accessibility_concerns)してください。
+> **メモ:** {{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます。 開発者は、ARIA を使用するよりも正しい意味論の HTML 要素を常に使用するべきで、念のため VoiceOver の[既知の問題をテスト](/ja/docs/Web/HTML/Reference/Elements/footer#accessibility_concerns)してください。
 
 ## 例
 
@@ -66,7 +66,7 @@ original_slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 
 #### 巨大フッター
 
-文書のフッターの中に追加の {{htmlelement("footer")}} 要素やコンテンツ情報 (`contentinfo`) ランドマークをネストしないでください。 代わりに、他の[コンテンツセクショニング要素](/ja/docs/Web/HTML/Element#content_sectioning)を使用してください。
+文書のフッターの中に追加の {{htmlelement("footer")}} 要素やコンテンツ情報 (`contentinfo`) ランドマークをネストしないでください。 代わりに、他の[コンテンツセクショニング要素](/ja/docs/Web/HTML/Reference/Elements#content_sectioning)を使用してください。
 
 ### ランドマークのラベル付け
 
@@ -106,7 +106,7 @@ original_slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 
 ### 好ましい HTML
 
-{{htmlelement("body")}} 要素の直接の子孫である場合、{{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます (VoiceOver の[既知の問題](/ja/docs/Web/HTML/Element/footer#accessibility_concerns)は別として)。 可能であれば、代わりに `<footer>` を使用することをお勧めします。 `<article>`、`<aside>`、`<main>`、`<nav>`、`<section>` 内にネストされた `<footer>` 要素は、コンテンツ情報 (`contentinfo`) とはみなされないことに注意してください。
+{{htmlelement("body")}} 要素の直接の子孫である場合、{{htmlelement("footer")}} 要素を使用すると、自動的にセクションがコンテンツ情報 (`contentinfo`) ロールを持つことを伝えます (VoiceOver の[既知の問題](/ja/docs/Web/HTML/Reference/Elements/footer#accessibility_concerns)は別として)。 可能であれば、代わりに `<footer>` を使用することをお勧めします。 `<article>`、`<aside>`、`<main>`、`<nav>`、`<section>` 内にネストされた `<footer>` 要素は、コンテンツ情報 (`contentinfo`) とはみなされないことに注意してください。
 
 ### 追加された利点
 
@@ -124,7 +124,7 @@ original_slug: Web/Accessibility/ARIA/Roles/contentinfo_role
 
 - {{htmlelement("footer")}}: フッター要素
 - [contentinfo (role): Accessible Rich Internet Applications (WAI-ARIA) 1.1](https://www.w3.org/TR/wai-aria/#contentinfo)
-- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Element/Heading_Elements)
+- [HTML のセクションとアウトラインの使用](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)
 - [ランドマークロール: ARIA を使用する: ロール、ステート、プロパティ](/ja/docs/Web/Accessibility/ARIA/Guides/Techniques#landmark_roles)
 - [Using WAI-ARIA Landmarks – 2013 | The Paciello Group](https://developer.paciellogroup.com/blog/2013/02/using-wai-aria-landmarks-2013/)
 - [Accessible Landmarks | scottohara.me](https://www.scottohara.me/blog/2018/03/03/landmarks.html)

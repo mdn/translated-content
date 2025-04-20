@@ -54,7 +54,7 @@ slug: Learn_web_development/Core/Frameworks_libraries/Vue_methods_events_models
    </script>
    ```
 
-3. 新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 [`<form>`](/zh-CN/docs/Web/HTML/Element/form)，它里面包含一个 [`<label>`](/zh-CN/docs/Web/HTML/Element/label)、一个 [`<input>`](/zh-CN/docs/Web/HTML/Element/input)、一个 [`<button>`](/zh-CN/docs/Web/HTML/Element/button)。更新后的模版如下：
+3. 新建一个 HTML 表单来允许我们输入新的待办项并把它提交到 app。我们需要一个 [`<form>`](/zh-CN/docs/Web/HTML/Reference/Elements/form)，它里面包含一个 [`<label>`](/zh-CN/docs/Web/HTML/Reference/Elements/label)、一个 [`<input>`](/zh-CN/docs/Web/HTML/Reference/Elements/input)、一个 [`<button>`](/zh-CN/docs/Web/HTML/Reference/Elements/button)。更新后的模版如下：
 
    ```html
    <template>

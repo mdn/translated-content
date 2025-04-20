@@ -246,7 +246,7 @@ the last one.
 
 如果你使用屏幕阅读器阅读更现代的结构示例，则会看到布局标记不再会妨碍内容的读取。它在代码大小方面也更加精简和小巧，这意味着代码更容易维护，并且用户下载的带宽更少（特别适合慢速连接的用户）。
 
-创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅[此内容部分](/zh-CN/docs/Web/HTML/Element#content_sectioning)）——你只能使用嵌套的 {{htmlelement("div")}} 元素创建布局，但最好使用适当的分段元素包裹你的主导航（{{htmlelement("nav")}}），`footer`（{{htmlelement("footer")}}），重复内容单元（{{htmlelement("article")}}）等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/)，了解屏幕阅读器的支持是什么样的原理）。
+创建布局时的另一个考虑因素是使用 HTML5 语义元素，如上例所示（请参阅[此内容部分](/zh-CN/docs/Web/HTML/Reference/Elements#content_sectioning)）——你只能使用嵌套的 {{htmlelement("div")}} 元素创建布局，但最好使用适当的分段元素包裹你的主导航（{{htmlelement("nav")}}），`footer`（{{htmlelement("footer")}}），重复内容单元（{{htmlelement("article")}}）等。这些为屏幕阅读器（和其他工具）提供额外的语义，为用户提供有关他们正在浏览的内容的额外信息（请参阅[屏幕阅读器支持的新的 HTML5 章节元素](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/)，了解屏幕阅读器的支持是什么样的原理）。
 
 > [!NOTE]
 > 除了你的内容具有良好的语义和有吸引力的布局之外，它的源代码顺序应该是合理的 - 你可以随时将它放在你想要使用 CSS 的位置，但是你应该先从源代码开始，如此这样，屏幕阅读器读取给他们的内容将会非常便于理解。
@@ -331,7 +331,7 @@ UI 控件无障碍的一个关键方面是，默认情况下，浏览器允许�
 <div data-message="This is from the third button" tabindex="0">And me!</div>
 ```
 
-基本上，[`tabindex`](/zh-CN/docs/Web/HTML/Global_attributes#tabindex) 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。这里 `tabindex` 有另外两个选项：
+基本上，[`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#tabindex) 属性主要用于允许 tabbable 元素具有自定义 Tab 键顺序（以正数顺序指定），而不是仅按其默认源顺序进行标记。这几乎总是一个糟糕的主意，因为它可能会造成重大混乱。例如，如果布局以与源代码非常不同的视觉顺序显示事物，而且你想让事情更符合逻辑。这里 `tabindex` 有另外两个选项：
 
 - `tabindex="0"` — 如上所述，该值允许 通常不可放置的元素（tabbable elements）变为可放置的。这是 tabindex 最有用的地方。
 - `tabindex="-1"` — 这允许 通常不可放置的元素（tabbable elements）以编程的方式接收焦点，例如，通过 JavaScript，或作为链接的目标。
@@ -488,7 +488,7 @@ Fill in your name: <input type="text" id="name" name="name" />
 需要考虑的一件事是，你的图片是否在你的内容中有意义，或者它们纯粹是为了视觉装饰，所以没有意义。如果它们是装饰性的，最好将它们包含在页面中作为 CSS 背景图像。
 
 > [!NOTE]
-> 请阅读 [HTML 中的图片](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images) 和 [响应式图片](/zh-CN/docs/Web/HTML/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
+> 请阅读 [HTML 中的图片](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images) 和 [响应式图片](/zh-CN/docs/Web/HTML/Guides/Responsive_images) 以获得更多关于图片实施和最佳做法的信息。
 
 如果你确实想要提供额外的上下文信息，则应该将其放在图像周围的文本中，或放置在“标题” `title` 属性中，如上所示。在这种情况下，大多数屏幕阅读器会读出替代文本，标题属性和文件名。此外，鼠标滑过时，浏览器会将 `title` 的内容作为工具提示的形式显示出来。
 

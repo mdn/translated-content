@@ -53,8 +53,8 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/Accessibility](/ja/docs/Web/Accessibility) の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページには `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `aria-role`: ARIA [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)。例えば [`section`](/ja/docs/Web/Accessibility/ARIA/Roles/section_role) など。
-- `aria-attribute`: ARIA [属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)。例えば [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-sort) など。
+- `aria-role`: ARIA [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles)。例えば [`section`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/section_role) など。
+- `aria-attribute`: ARIA [属性](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes)。例えば [`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) など。
 
 ### CSS のページ型
 
@@ -85,9 +85,9 @@ JavaScript や CSS など、サイトの主要な領域にはそれぞれドメ�
 
 この節では、[Web/HTML](/ja/docs/Web/HTML)の下にあるページの `page-type` の値を掲載しています。ツリーのその部分にあるすべてのページは `page-type` がなければならず、その値は下記の一覧か[汎用ページ型](#汎用ページ型)の値のいずれかでなければなりません。
 
-- `html-attribute`: HTML 属性。例えば [`autocomplete`](/ja/docs/Web/HTML/Attributes/autocomplete) など。
-- `html-attribute-value`: HTML 属性の単一の値。例えば [`dns-prefetch`](/ja/docs/Web/HTML/Attributes/rel/dns-prefetch) など。
-- `html-element`: HTML 要素。例えば [`<button>`](/ja/docs/Web/HTML/Element/button) など。
+- `html-attribute`: HTML 属性。例えば [`autocomplete`](/ja/docs/Web/HTML/Reference/Attributes/autocomplete) など。
+- `html-attribute-value`: HTML 属性の単一の値。例えば [`dns-prefetch`](/ja/docs/Web/HTML/Reference/Attributes/rel/dns-prefetch) など。
+- `html-element`: HTML 要素。例えば [`<button>`](/ja/docs/Web/HTML/Reference/Elements/button) など。
 
 ### HTTP のページ型
 

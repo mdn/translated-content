@@ -41,7 +41,7 @@ API リファレンス: [downloads API](/ja/docs/Mozilla/Add-ons/WebExtensions/A
 
 例: [Imagify](https://github.com/mdn/webextensions-examples/tree/master/imagify)
 ガイド: [Using files from web applications](/ja/docs/Web/API/File_API/Using_files_from_web_applications)
-API リファレンス: [HTML input element](/ja/docs/Web/HTML/Element/input/file) | [DOM File API](/ja/docs/Web/API/File)
+API リファレンス: [HTML input element](/ja/docs/Web/HTML/Reference/Elements/input/file) | [DOM File API](/ja/docs/Web/API/File)
 
 > [!NOTE]
 > 選択したフォルダーの全ファイルにアクセスや処理したい場合、`<input type="file" webkitdirectory="true"/>` を使ってフォルダーを選択して、そこにある全ファイルを返すようにできます。

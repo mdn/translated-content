@@ -198,7 +198,7 @@ HTML の選択要素や、1 項目しか選択できない場合はラジオボ�
 - リストがフォーカスされていない場合、作成者は選択に異なるスタイリングを使用することをお勧めします。 例えば、アクティブでない選択は、より明るい背景色で表示されることが多いです。
 - リストボックスが別のウィジェットの一部でない場合は、`aria-labelledby` プロパティが設定されているべきです。
 - 1 つ以上のエントリーがリストボックスの DOM の子でない場合、追加の `aria-*` プロパティを設定する必要があります ([ARIA のベストプラクティス](https://www.w3.org/TR/wai-aria-practices/#listbox_div) (英語) を参照) 。
-- リストボックスを展開 ([expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)) する正当な理由がある場合は、コンボボックス ([`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)) ロールの方がより適切かもしれません。
+- リストボックスを展開 ([expand](https://www.w3.org/TR/wai-aria-1.1/#aria-expanded)) する正当な理由がある場合は、コンボボックス ([`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)) ロールの方がより適切かもしれません。
 
 ## 仕様書
 
@@ -210,10 +210,10 @@ TBD
 
 ## 関連情報
 
-- [HTML `<select>` 要素](/ja/docs/Web/HTML/Element/select)
-- [HTML `<label>` 要素](/ja/docs/Web/HTML/Element/label)
-- [HTML `<option>` 要素](/ja/docs/Web/HTML/Element/option)
-- [ARIA: `combobox` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)
+- [HTML `<select>` 要素](/ja/docs/Web/HTML/Reference/Elements/select)
+- [HTML `<label>` 要素](/ja/docs/Web/HTML/Reference/Elements/label)
+- [HTML `<option>` 要素](/ja/docs/Web/HTML/Reference/Elements/option)
+- [ARIA: `combobox` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)
 - [ARIA: `option` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role)
 - [ARIA: `list` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/list_role)
 - [ARIA: `listitem` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listitem_role)

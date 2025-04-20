@@ -166,6 +166,6 @@ label.switch {
 ## 関連情報
 
 - [ARIA: checkbox ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role)
-- [`<input type="checkbox">`](/ja/docs/Web/HTML/Element/input/checkbox)
+- [`<input type="checkbox">`](/ja/docs/Web/HTML/Reference/Elements/input/checkbox)
 
 1. [**WAI-ARIA ロール**](/ja/docs/Web/Accessibility/ARIA/Reference/Roles){{ListSubpagesForSidebar("/ja/docs/Web/Accessibility/ARIA/Roles")}}

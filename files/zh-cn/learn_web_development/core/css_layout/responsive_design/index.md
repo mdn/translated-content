@@ -199,7 +199,7 @@ img {
 
 你也可以给用于不同尺寸的图像做“艺术指导”，为不同的屏幕尺寸提供不同的图像裁切或者完全不同的图像。
 
-你可以在 MDN 这里的学习 HTML 一节中找到详细的[响应式图像指南](/zh-CN/docs/Web/HTML/Responsive_images)。
+你可以在 MDN 这里的学习 HTML 一节中找到详细的[响应式图像指南](/zh-CN/docs/Web/HTML/Guides/Responsive_images)。
 
 ## 响应式排版
 

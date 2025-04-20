@@ -1,17 +1,17 @@
 ---
 title: "CSP: connect-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/connect-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/connect-src
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}}
 
 HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`connect-src`** ディレクティブは、スクリプトインターフェイスを使用して読み込むことができる URL を制限します。以下の API が制限の対象となります。
 
-- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Element/a#ping) 属性
-- {{domxref("fetch()")}}
+- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Reference/Elements/a#ping) 属性
+- {{domxref("Window/fetch", "fetch()")}}
+- {{domxref("Window/fetchLater", "fetchLater()")}} {{experimental_inline}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}
@@ -40,18 +40,22 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`connect
 
 ## 構文
 
-connect-src ポリシーには、1 つ以上のソースが許可されています。
-
 ```http
-Content-Security-Policy: connect-src <source>;
-Content-Security-Policy: connect-src <source> <source>;
+Content-Security-Policy: connect-src 'none';
+Content-Security-Policy: connect-src <source-expression-list>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## 例
 
@@ -63,16 +67,18 @@ Content-Security-Policy: connect-src <source> <source>;
 Content-Security-Policy: connect-src https://example.com/
 ```
 
-以下のコネクションはブロックされ、読み込まれません。
+以下の接続はブロックされ、読み込まれません。
 
 ```html
 <a ping="https://not-example.com">
   <script>
+    const response = fetch("https://not-example.com/");
+
     const xhr = new XMLHttpRequest();
     xhr.open("GET", "https://not-example.com/");
     xhr.send();
 
-    const ws = new WebSocket("https://not-example.com/");
+    const ws = new WebSocket("wss://not-example.com/");
 
     const es = new EventSource("https://not-example.com/");
 
@@ -91,15 +97,11 @@ Content-Security-Policy: connect-src https://example.com/
 
 {{Compat}}
 
-### 互換性のメモ
-
-- Firefox 23 以前では、`xhr-src` が `connect-src` ディレクティブの代わりに、{{domxref("XMLHttpRequest")}} を制限するだけのために使用されていました。
-
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Element/a#ping)ement/a#ping) 属性
-- {{domxref("fetch()")}}
+- {{HTMLElement("a")}} の [`ping`](/ja/docs/Web/HTML/Reference/Elements/a#ping) 属性
+- {{domxref("Window/fetch", "fetch()")}}
 - {{domxref("XMLHttpRequest")}}
 - {{domxref("WebSocket")}}
 - {{domxref("EventSource")}}

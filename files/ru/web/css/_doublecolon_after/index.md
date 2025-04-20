@@ -90,7 +90,7 @@ a::after {
 
 ### Подсказки
 
-Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Global_attributes/data-*) `data-descr` для создания _подсказки_ на чистом CSS.
+Следующий пример показывает использование [псевдоэлемента](/ru/docs/Web/CSS/Pseudo-elements) `::after` в сочетании с CSS-выражением [`attr()`](/ru/docs/Web/CSS/attr) и [пользовательского `data-*` атрибута](/ru/docs/Web/HTML/Reference/Global_attributes/data-*) `data-descr` для создания _подсказки_ на чистом CSS.
 
 #### HTML
 

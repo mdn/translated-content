@@ -92,7 +92,7 @@ async function writeFile(fileHandle, contents) {
 </ol>
 ```
 
-文本输入字段和写入文本按钮最初通过 [`disabled`](/zh-CN/docs/Web/HTML/Attributes/disabled) 属性设置为禁用——直到用户选择要写入的文件时，它们才应被使用。
+文本输入字段和写入文本按钮最初通过 [`disabled`](/zh-CN/docs/Web/HTML/Reference/Attributes/disabled) 属性设置为禁用——直到用户选择要写入的文件时，它们才应被使用。
 
 ```css hidden
 li {

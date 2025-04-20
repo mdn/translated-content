@@ -89,7 +89,7 @@ const state = [
 ];
 ```
 
-如何向用户展示其中一个任务？我们想将每个任务表示为一个列表项——无序列表元素（[`<ul>`](/zh-CN/docs/Web/HTML/Element/ul)）中的一个 HTML [`<li>`](/zh-CN/docs/Web/HTML/Element/li) 元素。我们该如何实现？可以像下面这样：
+如何向用户展示其中一个任务？我们想将每个任务表示为一个列表项——无序列表元素（[`<ul>`](/zh-CN/docs/Web/HTML/Reference/Elements/ul)）中的一个 HTML [`<li>`](/zh-CN/docs/Web/HTML/Reference/Elements/li) 元素。我们该如何实现？可以像下面这样：
 
 ```js
 function buildTodoItemEl(id, name) {

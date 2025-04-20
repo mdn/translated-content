@@ -16,9 +16,9 @@ l10n:
 
 スピンボタンは多くの場合、現在の値を表示するテキストフィールド、増加ボタン、減少ボタンの 3 つの部品を保有しています。増加と減少の機能は矢印キーでキーボードアクセスするため、通常テキストフィールドだけがフォーカス可能な部品です。通常、テキストフィールドではユーザーが値を直接編集することもできます。
 
-[`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を含めてスピンボタンのフォーカスを有効にすることに加えて、キーボードとポインター端末に対応しなければなりません。キーボードユーザーのために、矢印キーのような方向キーに対応する必要があります。ポインティングデバイスのために、増加ボタンと減少ボタンがクリックされたときに値を変更することに対応していなければなりません。下記の[キーボード操作](#キーボード操作)を参照してください。
+[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を含めてスピンボタンのフォーカスを有効にすることに加えて、キーボードとポインター端末に対応しなければなりません。キーボードユーザーのために、矢印キーのような方向キーに対応する必要があります。ポインティングデバイスのために、増加ボタンと減少ボタンがクリックされたときに値を変更することに対応していなければなりません。下記の[キーボード操作](#キーボード操作)を参照してください。
 
-> **メモ:** `spinbutton` ロールを使用するよりも、 [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) 要素や、その他の日付や時刻の入力要素など、 `role="spinbutton"` の意味を暗黙に含むものを使用することを推奨します。ユーザーエージェントはこれらの入力要素に対して、既定された増加、減少、範囲制限機能を提供するスタイル化されたウィジェットを提供します。意味づけのない要素を使用する場合、ネイティブの意味づけ要素のすべての機能を ARIA 属性、JavaScript、CSS で再作成する必要があります。
+> **メモ:** `spinbutton` ロールを使用するよりも、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) 要素や、その他の日付や時刻の入力要素など、 `role="spinbutton"` の意味を暗黙に含むものを使用することを推奨します。ユーザーエージェントはこれらの入力要素に対して、既定された増加、減少、範囲制限機能を提供するスタイル化されたウィジェットを提供します。意味づけのない要素を使用する場合、ネイティブの意味づけ要素のすべての機能を ARIA 属性、JavaScript、CSS で再作成する必要があります。
 
 ### ARIA range ウィジェットのオプション
 
@@ -26,9 +26,9 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 [`progressbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role) ロールは HTML の {{HTMLElement('progress')}} 要素に似ており、読み取り専用の範囲を表します。これは、単一の方向で進行する、タスクの進捗状況を表します。たとえば、ファイルアップロードの進捗バーで、完了時に 100% に到達するようなものです。
 
-[`meter`](/ja/docs/Web/Accessibility/ARIA/Roles/meter_role) ロールは、 HTML の {{HTMLElement('meter')}} 要素に似ており、読み取り専用のゲージです。コンピューターのバッテリーインジケータや自動車のガソリンゲージのように、既知の範囲内の何かの量を示します。
+[`meter`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role) ロールは、 HTML の {{HTMLElement('meter')}} 要素に似ており、読み取り専用のゲージです。コンピューターのバッテリーインジケータや自動車のガソリンゲージのように、既知の範囲内の何かの量を示します。
 
-`slider` ロールは HTML の `input` の `range` 型の [`<input type="range">`](/ja/docs/Web/HTML/Element/input/range) に似ており、読み書き可能な範囲入力です。スライダーによって、ユーザーはあらかじめ定義された最小値と最大値の間の値を選択することができます。ユーザーは、水平または垂直のスライダーに沿ってスライダーのつまみを移動することで値を選択します。
+`slider` ロールは HTML の `input` の `range` 型の [`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range) に似ており、読み書き可能な範囲入力です。スライダーによって、ユーザーはあらかじめ定義された最小値と最大値の間の値を選択することができます。ユーザーは、水平または垂直のスライダーに沿ってスライダーのつまみを移動することで値を選択します。
 
 これら 3 つの範囲はすべて同じ ARIA の状態とプロパティを持ちますが、 `spinbutton` ロールは唯一の読み書き可能な範囲です。それはユーザーが操作することで値が変わる唯一のものです。そのため、フォーカスを受け取ることができなければなりません。さらに、キーボード操作、マウスクリック、タッチ操作に対応していなければなりません。
 
@@ -38,21 +38,21 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 #### 共通の属性
 
-[`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 属性は最小値を設定します。省略した場合や数値でない場合、既定値は `0` です。
+[`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) 属性は最小値を設定します。省略した場合や数値でない場合、既定値は `0` です。
 
-[`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性は最大値を定義します。これが無いか、数値でない場合、既定値は `100` です。
+[`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性は最大値を定義します。これが無いか、数値でない場合、既定値は `100` です。
 
-[`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は `spinbutton` と `meter` では必須であり、 `progressbar` ではオプションです。
+[`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性の値は最小値と最大値の間でなければなりません。この属性は `spinbutton` と `meter` では必須であり、 `progressbar` ではオプションです。
 
-`spinbutton` では、 [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) のような意味づけ HTML 要素を使用していない限り、値が更新された場合、 `aria-valuenow` の値もプログラムで更新する必要があります。
+`spinbutton` では、 [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) のような意味づけ HTML 要素を使用していない限り、値が更新された場合、 `aria-valuenow` の値もプログラムで更新する必要があります。
 
-オプションの [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性は、 `aria-valuenow` の数値がスピンボタンの意図する値を反映していない場合に記載します。オプションの最小値、最大値、現在の値は数値でなければなりません。これらの数値が表す値が数値でない場合、 `aria-valuetext` 属性に数値を定義する文字列を設定sるう必要があります。例えば、 T シャツのサイズのスピンボタンを使用する場合、 `aria-valuenow` 属性が増加するにつれて、 `XX-Small` から `XX-Large` にシフトする必要があります。
+オプションの [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) 属性は、 `aria-valuenow` の数値がスピンボタンの意図する値を反映していない場合に記載します。オプションの最小値、最大値、現在の値は数値でなければなりません。これらの数値が表す値が数値でない場合、 `aria-valuetext` 属性に数値を定義する文字列を設定sるう必要があります。例えば、 T シャツのサイズのスピンボタンを使用する場合、 `aria-valuenow` 属性が増加するにつれて、 `XX-Small` から `XX-Large` にシフトする必要があります。
 
 `aria-valuetext` の値は、値や `aria-valuenow` が更新されたときに更新しなければなりません。 ARIA 属性は意味づけ HTML 要素に対応しています。 `<input>` に相当する HTML 属性はありませんが、任意の {{htmlelement('input')}} 型に `aria-valuetext` を含めることができます。 `aria-valuetext` がスピンボタンにとって重要な機能である場合、代わりに {{HTMLElement('select')}} と {{HTMLElement('option')}} 要素を使用することを考慮してください。
 
 アクセシブル名は**必須**です。スピンボタンの役割が HTML の {{HTMLElement('input')}} 要素に適用されている場合、アクセシブル名は関連する {{HTMLElement('label')}} から決まります。それ以外の場合は、表示するラベルが存在する場合は [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) を、表示するラベルが存在しない場合は [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) を使用してください。
 
-スピンボタンを作成するために HTML の {{HTMLElement('input')}} 要素を使用しない場合、スピンボタンをフォーカス可能にするために [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) 属性を記載してください。 `spinbutton` の役割はユーザーと対話するため、フォーカスを受け取ることが要求されます。フォーカスはスピンボタンの入力に置くべきで、スピンボタンの値を増加したり減少したりする関連ボタンには置かないでください。
+スピンボタンを作成するために HTML の {{HTMLElement('input')}} 要素を使用しない場合、スピンボタンをフォーカス可能にするために [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性を記載してください。 `spinbutton` の役割はユーザーと対話するため、フォーカスを受け取ることが要求されます。フォーカスはスピンボタンの入力に置くべきで、スピンボタンの値を増加したり減少したりする関連ボタンには置かないでください。
 
 ### 子孫はボタンまたはテキストに制限
 
@@ -60,19 +60,19 @@ ARIA は、プログレスバー、メーター、スライダー、スピンボ
 
 ## 関連するロール、状態、プロパティ
 
-- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) （必須）
+- [`aria-valuenow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) （必須）
 
   - : スピンボタンの現在の値を示す、 `aria-valuemin` と `aria-valuemax` の間の実数値を設定します。存在しない場合、既定値はありません。
 
-- [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext)
+- [`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext)
 
   - : 支援技術は `aria-valuenow` の値を通常は数字で表示します。 `aria-valuenow` が正確な値でない場合は、 `aria-valuetext` を使用して、スピンボタンにより分かりやすい値を提供してください。
 
-- [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin)
+- [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin)
 
   - : 最小値を表し、 `aria-valuemax` より小さい実数値を設定します。存在しない場合、既定値はありません。
 
-- [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax)
+- [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax)
 
   - : 最大値を表し、 `aria-valuemin` より大きな実数値に設定します。存在しない場合、既定値はありません。
 
@@ -141,7 +141,7 @@ HTML の `<input type="number">` は暗黙的に `spinbutton` の `role` を持�
 
 ### 意味づけ HTML の推奨
 
-`spinbutton` の役割ではなく、ネイティブの {{HTMLElement("input")}} 要素である `number` 型の [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number) を使用することをお勧めします。
+`spinbutton` の役割ではなく、ネイティブの {{HTMLElement("input")}} 要素である `number` 型の [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number) を使用することをお勧めします。
 
 ## 仕様書
 
@@ -149,13 +149,13 @@ HTML の `<input type="number">` は暗黙的に `spinbutton` の `role` を持�
 
 ## 関連情報
 
-- [`<input type="number">`](/ja/docs/Web/HTML/Element/input/number)
-- [`<input type="date">`](/ja/docs/Web/HTML/Element/input/date)
-- [`<input type="time">`](/ja/docs/Web/HTML/Element/input/time)
+- [`<input type="number">`](/ja/docs/Web/HTML/Reference/Elements/input/number)
+- [`<input type="date">`](/ja/docs/Web/HTML/Reference/Elements/input/date)
+- [`<input type="time">`](/ja/docs/Web/HTML/Reference/Elements/input/time)
 - その他の範囲ウィジェット:
-  - [`meter`](/ja/docs/Web/Accessibility/ARIA/Roles/meter_role)
-  - [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role)
-  - [`separator`](/ja/docs/Web/Accessibility/ARIA/Roles/separator_role) （フォーカス可能であれば）
+  - [`meter`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/meter_role)
+  - [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role)
+  - [`separator`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role) （フォーカス可能であれば）
   - [`progressbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/progressbar_role)
   - [`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)
 - 動作例:

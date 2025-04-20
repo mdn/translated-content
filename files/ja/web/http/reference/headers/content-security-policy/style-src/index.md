@@ -1,9 +1,8 @@
 ---
 title: "CSP: style-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -31,18 +30,29 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-s
 
 ## 構文
 
-`style-src` ポリシーには、 1 つまたは複数のソースが許可されています。
-
 ```http
-Content-Security-Policy: style-src <source>;
-Content-Security-Policy: style-src <source> <source>;
+Content-Security-Policy: style-src 'none';
+Content-Security-Policy: style-src <source-expression-list>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
+    - [`'unsafe-inline'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-inline)
+    - [`'unsafe-hashes'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes)
+    - [`'nonce-<nonce_value>'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#nonce-nonce_value)
+    - [`'<hash_algorithm>-<hash_value>'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#hash_algorithm-hash_value)
+    - [`'report-sample'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample)
+
+    なお、仕様書では有効なソース表現値として [`'unsafe-eval'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-eval) も記載されています。これは、さまざまなインターフェイスにおける `insertRule()` メソッドや `cssText` セッター、例えば {{domxref("CSSStyleSheet.insertRule()")}} や{{domxref("CSSStyleDeclaration.cssText")}} など、 CSS 文字列を解析および挿入する CSSOM のメソッドを許可するためです。しかし、現在、これらのメソッドをブロックするブラウザーはないため、 `unsafe-eval` を適用する必要はありません。
 
 ## 例
 
@@ -102,9 +112,9 @@ document.querySelector("div").style.display = "none";
 > [!NOTE]
 > インラインスタイルとインラインスクリプトを禁止することは、 CSP が提供する最大のセキュリティ上の利点の一つです。しかし、どうしても使用しなければならない場合は、それらを許可する仕組みがいくつかあります。
 
-インラインスタイルを許可するために、 `'unsafe-inline'` を指定するか、インラインブロックに一致するノンスソースまたはハッシュソースを指定することができます。
+インラインスタイルを許可するには、`'unsafe-inline'`、ノンスhソース、ハッシュソースのいずれかを一致するインラインブロックに指定できます。次のコンテンツセキュリティポリシーに従うことで、 {{HTMLElement("style")}} 要素や、あらゆる要素の `style` 属性のようなインラインスタイルが許可されます。
 
-```bash
+```http
 Content-Security-Policy: style-src 'unsafe-inline';
 ```
 
@@ -120,7 +130,9 @@ Content-Security-Policy: style-src 'unsafe-inline';
 <div style="display:none">Foo</div>
 ```
 
-ノンスソースを使用して、特定のインラインスタイルのみ許可することができます。
+特定のインラインスタイルブロックのみを許可するには、 nonce-source を使用することができます。
+（暗号的に安全なランダムトークンジェネレータを使用して）ランダムな nonce 値を生成し、それをポリシーに含める必要があります。
+この nonce 値は、 HTTP リクエストごとに一意である必要があるため、動的に生成する必要があることに注意することが重要です。
 
 ```http
 Content-Security-Policy: style-src 'nonce-2726c7f26c'
@@ -136,7 +148,7 @@ Content-Security-Policy: style-src 'nonce-2726c7f26c'
 </style>
 ```
 
-他にも、インラインスタイルからハッシュを生成することができます。 CSP では sha256, sha384, sha512 に対応しています。ハッシュの**バイナリー**形式は base64 でエンコードされていなければなりません。文字列のハッシュは `openssl` プログラムを使ってコマンドラインから取得することができます。
+他にも、インラインスタイルからハッシュを生成することができます。 CSP では sha256、sha384、sha512 に対応しています。ハッシュの**バイナリー**形式は base64 でエンコードされていなければなりません。文字列のハッシュは `openssl` プログラムを使ってコマンドラインから取得することができます。
 
 ```bash
 echo -n "#inline-style { background: red; }" | openssl dgst -sha256 -binary | openssl enc -base64
@@ -158,14 +170,6 @@ Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6t
 </style>
 ```
 
-### 安全ではない style 式
-
-`'unsafe-eval'` ソース式は、文字列からスタイル宣言を生成するいくつかのスタイルメソッドを制御します。もし `'unsafe-eval'` が `style-src` ディレクティブで指定されていなかった場合、以下のメソッドはブロックされて何の効果も現れません。
-
-- {{domxref("CSSStyleSheet.insertRule()")}}
-- {{domxref("CSSGroupingRule.insertRule()")}}
-- {{domxref("CSSStyleDeclaration.cssText")}}
-
 ## 仕様書
 
 {{Specifications}}
@@ -179,7 +183,7 @@ Content-Security-Policy: style-src 'sha256-ozBpjL6dxO8fsS4u6fwG1dFDACYvpNxYeBA6t
 - {{HTTPHeader("Content-Security-Policy")}}
 - {{CSP("style-src-elem")}}
 - {{CSP("style-src-attr")}}
-- {{HTTPHeader("Link")}} header
+- {{HTTPHeader("Link")}} ヘッダー
 - {{HTMLElement("style")}}, {{HTMLElement("link")}}
 - {{cssxref("@import")}}
 - {{domxref("CSSStyleSheet.insertRule()")}}

@@ -16,33 +16,33 @@ l10n:
 _親インターフェイスである {{DOMxRef("HTMLElement")}} から継承したプロパティもあります。_
 
 - {{domxref("HTMLTextAreaElement.autocomplete", "autocomplete")}}
-  - : 文字列で、この要素の [`autocomplete`](/ja/docs/Web/HTML/Element/textarea#autocomplete) 属性を表しいます。
+  - : 文字列で、この要素の [`autocomplete`](/ja/docs/Web/HTML/Reference/Elements/textarea#autocomplete) 属性を表しいます。
 - {{domxref("HTMLTextAreaElement.cols", "cols")}}
-  - : 数値で、この要素の [`cols`](/ja/docs/Web/HTML/Element/textarea#cols) 属性を表します。これはテキストエリアの表示上の幅を示します。
+  - : 数値で、この要素の [`cols`](/ja/docs/Web/HTML/Reference/Elements/textarea#cols) 属性を表します。これはテキストエリアの表示上の幅を示します。
 - {{domxref("HTMLTextAreaElement.defaultValue", "defaultValue")}}
   - : 文字列で、このコントロールの既定値を表します。 {{domxref("Node.textContent")}} プロパティのように動作します。
 - {{domxref("HTMLTextAreaElement.dirName", "dirName")}}
   - : 文字列で、この要素の書字方向を表します。
 - {{domxref("HTMLTextAreaElement.disabled", "disabled")}}
-  - : 論理値で、この要素の [`disabled`](/ja/docs/Web/HTML/Element/textarea#disabled) 属性を表します。これは、このコントロールが操作できない状態を示します。
+  - : 論理値で、この要素の [`disabled`](/ja/docs/Web/HTML/Reference/Elements/textarea#disabled) 属性を表します。これは、このコントロールが操作できない状態を示します。
 - {{domxref("HTMLTextAreaElement.form", "form")}} {{ReadOnlyInline}}
-  - : 親フォーム要素への参照を返します。この要素がフォーム要素配下にない場合、任意の {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Global_attributes/id) 属性もしくは `null` 値になります。
+  - : 親フォーム要素への参照を返します。この要素がフォーム要素配下にない場合、任意の {{HTMLElement("form")}} 要素の [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) 属性もしくは `null` 値になります。
 - {{domxref("HTMLTextAreaElement.labels", "labels")}} {{ReadOnlyInline}}
   - : この要素に関連付けられた {{HTMLElement("label")}} 要素の {{domxref("NodeList")}} を返します。
 - {{domxref("HTMLTextAreaElement.maxLength", "maxLength")}}
-  - : 数値で、この要素の [`maxlength`](/ja/docs/Web/HTML/Element/textarea#maxlength) 属性を表します。これはユーザーが入力できる最大文字数を示します。この制約は値が変更されたときのみ評価されます。
+  - : 数値で、この要素の [`maxlength`](/ja/docs/Web/HTML/Reference/Elements/textarea#maxlength) 属性を表します。これはユーザーが入力できる最大文字数を示します。この制約は値が変更されたときのみ評価されます。
 - {{domxref("HTMLTextAreaElement.minLength", "minLength")}}
-  - : 数値で、この要素の [`minlength`](/ja/docs/Web/HTML/Element/textarea#minlength) 属性を表します。これはユーザーが入力できる最小文字数を示します。この制約は値が変更されたときのみ評価されます。
+  - : 数値で、この要素の [`minlength`](/ja/docs/Web/HTML/Reference/Elements/textarea#minlength) 属性を表します。これはユーザーが入力できる最小文字数を示します。この制約は値が変更されたときのみ評価されます。
 - {{domxref("HTMLTextAreaElement.name", "name")}}
-  - : 文字列で、この要素の [`name`](/ja/docs/Web/HTML/Element/textarea#name) 属性を表します。このコントロールの名前が入ります。
+  - : 文字列で、この要素の [`name`](/ja/docs/Web/HTML/Reference/Elements/textarea#name) 属性を表します。このコントロールの名前が入ります。
 - {{domxref("HTMLTextAreaElement.placeholder", "placeholder")}}
-  - : 文字列で、この要素の [`placeholder`](/ja/docs/Web/HTML/Element/textarea#placeholder) 属性を表します。これは利用者がこのコントロールに入力するに当たっての助言が入ります。
+  - : 文字列で、この要素の [`placeholder`](/ja/docs/Web/HTML/Reference/Elements/textarea#placeholder) 属性を表します。これは利用者がこのコントロールに入力するに当たっての助言が入ります。
 - {{domxref("HTMLTextAreaElement.readOnly", "readOnly")}}
-  - : 論理値で、この要素の [`readonly`](/ja/docs/Web/HTML/Element/textarea#readonly) 属性を表します。ユーザーがこのコントロールの値を変更できないことを示します。
+  - : 論理値で、この要素の [`readonly`](/ja/docs/Web/HTML/Reference/Elements/textarea#readonly) 属性を表します。ユーザーがこのコントロールの値を変更できないことを示します。
 - {{domxref("HTMLTextAreaElement.required", "required")}}
-  - : 論理値で、この要素の [`required`](/ja/docs/Web/HTML/Element/textarea#required) 属性を表します。これはユーザーがフォームを送信する前に値を指定しなければならないことを示します。
+  - : 論理値で、この要素の [`required`](/ja/docs/Web/HTML/Reference/Elements/textarea#required) 属性を表します。これはユーザーがフォームを送信する前に値を指定しなければならないことを示します。
 - {{domxref("HTMLTextAreaElement.rows", "rows")}}
-  - : 数値で、この要素の [`rows`](/ja/docs/Web/HTML/Element/textarea#rows) 属性を表します。このコントロールに表示できるテキストの行数を示します。
+  - : 数値で、この要素の [`rows`](/ja/docs/Web/HTML/Reference/Elements/textarea#rows) 属性を表します。このコントロールに表示できるテキストの行数を示します。
 - {{domxref("HTMLTextAreaElement.selectionDirection", "selectionDirection")}}
   - : 文字列で、選択が行われた方向を表します。これは選択が現在のロケールで先頭から末尾の方向に行われた場合は `forward`、逆方向ならば `backward` です。方向が不明であれば `none` になることもあります。
 - {{domxref("HTMLTextAreaElement.selectionEnd", "selectionEnd")}}
@@ -62,7 +62,7 @@ _親インターフェイスである {{DOMxRef("HTMLElement")}} から継承し
 - {{domxref("HTMLTextAreaElement.willValidate", "willValidate")}} {{ReadOnlyInline}}
   - : この要素が制約検証の対象となるかどうかを返します。何か制約検証を妨げる条件があれば `false` となります。これには `readOnly` や `disabled` プロパティの値が `true` である場合も含みます。
 - {{domxref("HTMLTextAreaElement.wrap", "wrap")}}
-  - : 文字列で、 [`wrap`](/ja/docs/Web/HTML/Element/textarea#wrap) 属性を表します。このコントロールでのテキストの折り返し方法を示します。
+  - : 文字列で、 [`wrap`](/ja/docs/Web/HTML/Reference/Elements/textarea#wrap) 属性を表します。このコントロールでのテキストの折り返し方法を示します。
 
 ## インスタンスメソッド
 

@@ -33,7 +33,7 @@ HTML5 の {{Glossary("Doctype", "doctype")}} を使ってください。
 
 ### 文書の言語
 
-{{htmlelement("html")}} 要素に [`lang`](/ja/docs/Web/HTML/Global_attributes/lang) 属性を使い、文書の言語を設定してください。
+{{htmlelement("html")}} 要素に [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性を使い、文書の言語を設定してください。
 
 ```html example-good
 <html lang="ja"></html>
@@ -59,7 +59,7 @@ HTML5 の {{Glossary("Doctype", "doctype")}} を使ってください。
 <meta name="viewport" content="width=device-width" />
 ```
 
-詳しくは [viewport メタタグを使用してモバイルブラウザーでのレイアウトを制御する](/ja/docs/Web/HTML/Viewport_meta_tag)をご覧ください。
+詳しくは [viewport メタタグを使用してモバイルブラウザーでのレイアウトを制御する](/ja/docs/Web/HTML/Guides/Viewport_meta_element)をご覧ください。
 
 ## 属性
 
