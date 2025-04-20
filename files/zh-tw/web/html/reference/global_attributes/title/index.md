@@ -13,7 +13,8 @@ l10n:
 
 ```html interactive-example
 <p>
-  對 <code>iframe</code> 使用 <code>title</code> 屬性，以清楚地向螢幕閱讀器說明 <code>iframe</code> 的內容。
+  對 <code>iframe</code> 使用 <code>title</code> 屬性，以清楚地向螢幕閱讀器說明
+  <code>iframe</code> 的內容。
 </p>
 
 <iframe
