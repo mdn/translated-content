@@ -33,13 +33,13 @@ x + y
 
 ## 描述
 
-`+` 運算子被重載用於兩種不同的操作：數值加法與字串串接。在運算時，它會先[將兩個運算元轉換為原始型別](/zh-TW/docs/Web/JavaScript/Guide/Data_structures#原始型別轉換)。接著，會檢查這兩個運算元的型別：
+`+` 運算子被重載用於兩種不同的操作：數值加法與字串串接。在運算時，它會先[將兩個運算元強制轉換為原始型別](/zh-TW/docs/Web/JavaScript/Guide/Data_structures#強制轉換原始型別)。接著，會檢查這兩個運算元的型別：
 
-- 如果其中一方是字串，另一個運算元也會[轉換為字串](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)，然後進行串接。
+- 如果其中一方是字串，另一個運算元也會[轉換為字串](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String#字串強制轉換)，然後進行串接。
 - 如果兩者都是 [BigInt](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt)，則執行 BigInt 加法。如果一方是 BigInt 但另一方不是，則會拋出 {{jsxref("TypeError")}}。
-- 否則，兩邊都會[轉換為數字](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)，然後執行數值加法。
+- 否則，兩邊都會[轉換為數字](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字強制轉換)，然後執行數值加法。
 
-字串串接常被認為等同於[模板字面值](/zh-TW/docs/Web/JavaScript/Reference/Template_literals)或 [`String.prototype.concat()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/concat)，但並非如此。加法會將運算式強制轉換為*原始型別*，此過程會優先呼叫 [`valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)；而模板字面值與 `concat()` 則會將運算式轉換為*字串*，優先呼叫 [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)。如果運算式有 [`[Symbol.toPrimitive]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，字串串接時會以「default」作為提示呼叫，而模板字面值則使用「string」。這對於具有不同字串與 primitive 表示的物件很重要，例如 [Temporal](https://github.com/tc39/proposal-temporal)，其 `valueOf()` 方法會拋出例外。
+字串串接常被認為等同於[模板字面值](/zh-TW/docs/Web/JavaScript/Reference/Template_literals)或 [`String.prototype.concat()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String/concat)，但並非如此。加法會將運算式強制轉換為*原始型別*，此過程會優先呼叫 [`valueOf()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/valueOf)；而模板字面值與 `concat()` 則會將運算式強制轉換為*字串*，優先呼叫 [`toString()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Object/toString)。如果運算式有 [`[Symbol.toPrimitive]()`](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toPrimitive) 方法，字串串接時會以「default」作為提示呼叫，而模板字面值則使用「string」。這對於具有不同字串與 primitive 表示的物件很重要，例如 [Temporal](https://github.com/tc39/proposal-temporal)，其 `valueOf()` 方法會拋出例外。
 
 ```js
 const t = Temporal.Now.instant();
@@ -48,7 +48,7 @@ const t = Temporal.Now.instant();
 "".concat(t); // '2022-07-31T04:48:56.113918308Z'
 ```
 
-建議你不要使用 `"" + x` 來進行[字串轉換](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String#string_coercion)。
+建議你不要使用 `"" + x` 來進行[字串強制轉換](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/String#字串強制轉換)。
 
 ## 範例
 
@@ -79,7 +79,7 @@ false + false; // 0
 "1" + 2n; // TypeError：不能混用 BigInt 與其他型別，請使用明確轉換
 ```
 
-若要將 BigInt 與非 BigInt 進行加法，請轉換任一運算元：
+若要將 BigInt 與非 BigInt 進行加法，請強制轉換任一運算元：
 
 ```js
 1n + BigInt(2); // 3n
@@ -107,12 +107,12 @@ Number(1n) + 2; // 3
 
 ## 參見
 
-- [減法（-）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
-- [除法（/）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division)
-- [乘法（*）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
-- [取餘數（%）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
-- [次方（**）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
-- [遞增（++）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Increment)
-- [遞減（--）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
-- [一元負號（-）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [一元加號（+）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [減法（`-`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Subtraction)
+- [除法（`/`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Division)
+- [乘法（`*`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Multiplication)
+- [取餘數（`%`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Remainder)
+- [次方（`**`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Exponentiation)
+- [遞增（`++`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Increment)
+- [遞減（`--`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
+- [一元負號（`-`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)
+- [一元加號（`+`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)
