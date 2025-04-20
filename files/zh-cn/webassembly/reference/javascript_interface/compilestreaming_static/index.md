@@ -5,12 +5,10 @@ l10n:
   sourceCommit: 702cd9e4d2834e13aea345943efc8d0c03d92ec9
 ---
 
-**`WebAssembly.compileStreaming()`** 静态方法直接将流式传输的底层源码编译为一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
-如果在实例化模块之前必须要对其进行编译，那么这个函数就是有用的（否则，应该使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 函数）。
+**`WebAssembly.compileStreaming()`** 静态方法直接将流式传输的底层源码编译为一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。如果在实例化模块之前必须要对其进行编译，那么这个函数就是有用的（否则，应该使用 [`WebAssembly.instantiateStreaming()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 函数）。
 
 > [!NOTE]
-> 有严格[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)的网页可能会阻止 WebAssembly 编译和执行模块。
-> 与允许 WebAssembly 编译和执行有关的额外信息，参见 [script-src CSP](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)。
+> 有严格[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)的网页可能会阻止 WebAssembly 编译和执行模块。有关允许编译和执行 WebAssembly 的更多信息，参见 [script-src CSP](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)。
 
 ## 语法
 
@@ -32,14 +30,14 @@ WebAssembly.compileStreaming(source, compileOptions)
 
 ### 返回值
 
-一个 `Promise`，解析为能够表示已编译模块的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
+一个 `Promise`，兑现为能够表示已编译模块的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
 
 ### 异常
 
-- 如果 `source` 不是一个 [`Response`](/zh-CN/docs/Web/API/Response) 或者能解析为 `Response` 的 `Promise`，则返回用 {{jsxref("TypeError")}} 拒绝的 promise。
-- 如果编译失败，则返回用 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError) 拒绝的 promise。
-- 如果 `source` 是个被拒绝的 `Promise`，则返回用该错误拒绝的 promise。
-- 如果 `source` 的 `Result` 有一个错误（例如，错误的 MIME 类型），则返回用该错误拒绝的 promise。
+- 如果 `source` 不是一个 [`Response`](/zh-CN/docs/Web/API/Response) 或者能兑现为 `Response` 的 `Promise`，则返回以 {{jsxref("TypeError")}} 拒绝的 promise。
+- 如果编译失败，则返回以 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError) 拒绝的 promise。
+- 如果 `source` 是个被拒绝的 `Promise`，则返回以该错误拒绝的 promise。
+- 如果 `source` 的 `Result` 有一个错误（例如，错误的 MIME 类型），则返回以该错误拒绝的 promise。
 
 ## 示例
 
