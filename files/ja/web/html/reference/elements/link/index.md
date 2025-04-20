@@ -117,7 +117,7 @@ l10n:
             <p>fetch, XHR</p>
             <div class="notecard note">
               <p>
-                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
+                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Reference/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
               </p>
             </div>
           </td>
@@ -128,7 +128,7 @@ l10n:
             <p>CSS @font-face</p>
             <div class="notecard note">
               <p>
-                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
+                <strong>Note:</strong> この値では <code>&#x3C;link></code> に crossorigin 属性をつける必要があります。<a href="/ja/docs/Web/HTML/Reference/Attributes/rel/preload#cors_を使用した取得">CORS を使用した取得</a>を 参照してください。
               </p>
             </div>
           </td>
@@ -411,7 +411,7 @@ l10n:
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><code>href</code> 属性つきの <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a></td>
+      <td><code>href</code> 属性つきの <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

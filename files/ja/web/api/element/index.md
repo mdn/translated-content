@@ -94,7 +94,7 @@ _`Element` は、親インターフェイスである {{DOMxRef("Node")}}、お�
 _`Element` インターフェイスには、以下のプロパティもあります。_
 
 - {{domxref("Element.ariaAtomic")}}
-  - : 文字列で、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性を反映し、 [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性で定義された変更通知に基づいて、支援技術が変更された領域のすべてを提示するか、一部のみを提示するかを示します。
+  - : 文字列で、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) 属性を反映し、 [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性で定義された変更通知に基づいて、支援技術が変更された領域のすべてを提示するか、一部のみを提示するかを示します。
 - {{domxref("Element.ariaAutoComplete")}}
   - : 文字列で、[`aria-autocomplete`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-autocomplete) 属性を反映し、コンボボックス、検索ボックス、テキストボックスでテキストを入力する際に、ユーザーの意図した値の 1 つ以上の予測を表示するかどうか、予測が行われた場合にはどのように表示するかを指定します。
 - {{domxref("Element.ariaBrailleLabel")}}
@@ -116,17 +116,17 @@ _`Element` インターフェイスには、以下のプロパティもありま
 - {{domxref("Element.ariaCurrent")}}
   - : 文字列で、[`aria-current`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current) 属性を反映し、コンテナーまたは関連要素のセット内の現在の項目を表す要素を示します。
 - {{domxref("Element.ariaDescription")}}
-  - : 文字列で、[`aria-description`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-description) 属性を反映し、現在の要素を説明または注釈する文字列値を定義します。
+  - : 文字列で、[`aria-description`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-description) 属性を反映し、現在の要素を説明または注釈する文字列値を定義します。
 - {{domxref("Element.ariaDisabled")}}
   - : 文字列で、[`aria-disabled`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-disabled) 属性を反映し、この要素が知覚可能であるが無効であるため、編集やその他の操作ができないことを示します。
 - {{domxref("Element.ariaExpanded")}}
-  - : 文字列で、[`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded) 属性を反映し、この要素が所有または制御するグループ化要素が展開されているか畳まれているかを示します。
+  - : 文字列で、[`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) 属性を反映し、この要素が所有または制御するグループ化要素が展開されているか畳まれているかを示します。
 - {{domxref("Element.ariaHasPopup")}}
-  - : 文字列で、[`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) 属性を反映し、この要素によって引き起こされるメニューやダイアログのような対話型のポップアップ要素の有無と種類を示します。
+  - : 文字列で、[`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) 属性を反映し、この要素によって引き起こされるメニューやダイアログのような対話型のポップアップ要素の有無と種類を示します。
 - {{domxref("Element.ariaHidden")}}
   - : 文字列で、[`aria-hidden`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-hidden) 属性を反映し、この要素がアクセシビリティ API に公開されているかどうかを示します。
 - {{domxref("Element.ariaKeyShortcuts")}}
-  - : 文字列で、[`aria-keyshortcuts`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-keyshortcuts) 属性を反映し、要素を活性化したりフォーカスを与えたりするために作者が実装したキーボードショートカットを示します。
+  - : 文字列で、[`aria-keyshortcuts`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-keyshortcuts) 属性を反映し、要素を活性化したりフォーカスを与えたりするために作者が実装したキーボードショートカットを示します。
 - {{domxref("Element.ariaLabel")}}
   - : 文字列で、[`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性を反映し、現在の要素をラベル付けする文字列値を定義します。
 - {{domxref("Element.ariaLevel")}}
@@ -134,49 +134,49 @@ _`Element` インターフェイスには、以下のプロパティもありま
 - {{domxref("Element.ariaLive")}}
   - : 文字列で、[`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性を反映し、この要素が更新されること、ユーザーエージェント、支援技術、ユーザーがライブ領域から期待できる更新の種類を記述します。
 - {{domxref("Element.ariaModal")}}
-  - : 文字列で、[`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-modal) 属性を反映し、要素が表示されたときにモーダルであるかどうかを示します。
+  - : 文字列で、[`aria-modal`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-modal) 属性を反映し、要素が表示されたときにモーダルであるかどうかを示します。
 - {{domxref("Element.ariaMultiline")}}
   - : 文字列で、[`aria-multiline`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiline) 属性を反映し、テキストボックスが複数行の入力を受け入れるか、一行のみを受け入れるかを示します。
 - {{domxref("Element.ariaMultiSelectable")}}
-  - : 文字列で、[`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-multiselectable) 属性を反映し、ユーザーが現在の選択可能な子孫から複数の項目を選択できることを示します。
+  - : 文字列で、[`aria-multiselectable`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-multiselectable) 属性を反映し、ユーザーが現在の選択可能な子孫から複数の項目を選択できることを示します。
 - {{domxref("Element.ariaOrientation")}}
-  - : 文字列で、[`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-orientation) 属性を反映し、要素の方向が水平、垂直、または不明/曖昧であることを示す。
+  - : 文字列で、[`aria-orientation`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-orientation) 属性を反映し、要素の方向が水平、垂直、または不明/曖昧であることを示す。
 - {{domxref("Element.ariaPlaceholder")}}
-  - : 文字列で、[`aria-placeholder`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-placeholder) 属性を反映し、コントロールに値がない場合にユーザーのデータ入力を支援するための短いヒントを定義します。
+  - : 文字列で、[`aria-placeholder`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-placeholder) 属性を反映し、コントロールに値がない場合にユーザーのデータ入力を支援するための短いヒントを定義します。
 - {{domxref("Element.ariaPosInSet")}}
-  - : 文字列で、[`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-posinset) 属性を反映し、リストアイテムまたはツリーアイテムの現在のセットにおける要素の数または位置を定義します。
+  - : 文字列で、[`aria-posinset`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-posinset) 属性を反映し、リストアイテムまたはツリーアイテムの現在のセットにおける要素の数または位置を定義します。
 - {{domxref("Element.ariaPressed")}}
-  - : 文字列で、[`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性を反映し、トグルボタンの現在の「押された」状態を示します。
+  - : 文字列で、[`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) 属性を反映し、トグルボタンの現在の「押された」状態を示します。
 - {{domxref("Element.ariaReadOnly")}}
-  - : 文字列で、[`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-readonly) 属性を反映し、要素が編集不可能であることを示すが、それ以外は操作可能であることを示します。
+  - : 文字列で、[`aria-readonly`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-readonly) 属性を反映し、要素が編集不可能であることを示すが、それ以外は操作可能であることを示します。
 - {{domxref("Element.ariaRelevant")}} {{Non-standard_Inline}}
-  - : 文字列で、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) 属性を反映し、ライブリージョン内のアクセシビリティツリーが変更された場合に、ユーザーエージェントがどのような通知を行うかを示します。これは、 `aria-live` リージョン内のどのような変更が関連性があり、アナウンスされるべきかを記述するために使用されます。
+  - : 文字列で、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) 属性を反映し、ライブリージョン内のアクセシビリティツリーが変更された場合に、ユーザーエージェントがどのような通知を行うかを示します。これは、 `aria-live` リージョン内のどのような変更が関連性があり、アナウンスされるべきかを記述するために使用されます。
 - {{domxref("Element.ariaRequired")}}
-  - : 文字列で、[`aria-required`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required) 属性を反映し、フォームを送信する前に要素にユーザーの入力が必要であることを示します。
+  - : 文字列で、[`aria-required`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) 属性を反映し、フォームを送信する前に要素にユーザーの入力が必要であることを示します。
 - {{domxref("Element.ariaRoleDescription")}}
-  - : 文字列で、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) 属性を反映し、要素の役割について、人間が読める、著者がローカライズした説明を定義します。
+  - : 文字列で、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) 属性を反映し、要素の役割について、人間が読める、著者がローカライズした説明を定義します。
 - {{domxref("Element.ariaRowCount")}}
-  - : 文字列で、[`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowcount) 属性を反映し、テーブル、グリッド、ツリーグリッドの行の総数を定義します。
+  - : 文字列で、[`aria-rowcount`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowcount) 属性を反映し、テーブル、グリッド、ツリーグリッドの行の総数を定義します。
 - {{domxref("Element.ariaRowIndex")}}
-  - : 文字列で、[`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindex) 属性を反映し、テーブル、グリッド、ツリーグリッド内の行の総数に対する要素の行インデックスまたは位置を定義します。
+  - : 文字列で、[`aria-rowindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindex) 属性を反映し、テーブル、グリッド、ツリーグリッド内の行の総数に対する要素の行インデックスまたは位置を定義します。
 - {{domxref("Element.ariaRowIndexText")}}
-  - : 文字列で、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowindextext) 属性を反映し、aria-rowindex の代替となる人間に読み取り可能なテキストを定義します。
+  - : 文字列で、[`aria-rowindextext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowindextext) 属性を反映し、aria-rowindex の代替となる人間に読み取り可能なテキストを定義します。
 - {{domxref("Element.ariaRowSpan")}}
-  - : 文字列で、[`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-rowspan) 属性を反映し、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがカバーする行数を定義します。
+  - : 文字列で、[`aria-rowspan`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-rowspan) 属性を反映し、テーブル、グリッド、ツリーグリッド内のセルまたはグリッドセルがカバーする行数を定義します。
 - {{domxref("Element.ariaSelected")}}
-  - : 文字列で、[`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected) 属性を反映し、選択状態を持つ要素の現在の「選択された」状態を示します。
+  - : 文字列で、[`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected) 属性を反映し、選択状態を持つ要素の現在の「選択された」状態を示します。
 - {{domxref("Element.ariaSetSize")}}
-  - : 文字列で、[`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-setsize) 属性を反映し、現在のリストアイテムまたはツリーアイテムのセットのアイテム数を定義します。
+  - : 文字列で、[`aria-setsize`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-setsize) 属性を反映し、現在のリストアイテムまたはツリーアイテムのセットのアイテム数を定義します。
 - {{domxref("Element.ariaSort")}}
-  - : 文字列で、[`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-sort) 属性を反映し、テーブルやグリッドのアイテムが昇順または降順でソートされるかどうかを示します。
+  - : 文字列で、[`aria-sort`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-sort) 属性を反映し、テーブルやグリッドのアイテムが昇順または降順でソートされるかどうかを示します。
 - {{domxref("Element.ariaValueMax")}}
-  - : 文字列で、[`aria-valueMax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) 属性を反映し、 range ウィジェットの最大許容値を定義します。
+  - : 文字列で、[`aria-valueMax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) 属性を反映し、 range ウィジェットの最大許容値を定義します。
 - {{domxref("Element.ariaValueMin")}}
-  - : 文字列で、[`aria-valueMin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) 属性を反映し、 range ウィジェットに許容される最小値を定義します。
+  - : 文字列で、[`aria-valueMin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) 属性を反映し、 range ウィジェットに許容される最小値を定義します。
 - {{domxref("Element.ariaValueNow")}}
-  - : 文字列で、[`aria-valueNow`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuenow) 属性を反映し、 range ウィジェットの現在の値を定義します。
+  - : 文字列で、[`aria-valueNow`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuenow) 属性を反映し、 range ウィジェットの現在の値を定義します。
 - {{domxref("Element.ariaValueText")}}
-  - : 文字列で、[`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuetext) 属性を反映し、 range ウィジェットの aria-valuenow の代替となる人間が読めるテキストを定義します。
+  - : 文字列で、[`aria-valuetext`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuetext) 属性を反映し、 range ウィジェットの aria-valuenow の代替となる人間が読めるテキストを定義します。
 
 ## インスタンスメソッド
 

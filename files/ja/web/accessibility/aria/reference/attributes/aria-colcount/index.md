@@ -8,7 +8,7 @@ l10n:
 
 {{AccessibilitySidebar}}
 
-`aria-colcount` 属性は、[`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) や [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)、[`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role) において [DOM](/ja/docs/Glossary/DOM) に全ての列が表示されていない場合に、列の総数を定義します。
+`aria-colcount` 属性は、[`table`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/table_role) や [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)、[`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role) において [DOM](/ja/docs/Glossary/DOM) に全ての列が表示されていない場合に、列の総数を定義します。
 
 ## 解説
 
@@ -18,7 +18,7 @@ l10n:
 
 `aria-colcount` を列数が分かっている場合に使用するときは、各列に [`aria-colindex`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-colindex) を用いてラベルを付けることも忘れないでください。また、列が連続している場合（中断のない元の順序の列のグループである場合）は、各行にラベルを付けるようにしてください。
 
-次の例は、6 列のグリッドを示しています。そのうち 1、2、5、6 列目がユーザーに表示されています。表を構成する列の合計数は、`aria-colcount="6"` として表自体に設定されています。列は連続していないため、すべての [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) （この場合は [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Roles/columnheader_role) および [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) の要素）に `aria-colindex` 属性が設定されています。
+次の例は、6 列のグリッドを示しています。そのうち 1、2、5、6 列目がユーザーに表示されています。表を構成する列の合計数は、`aria-colcount="6"` として表自体に設定されています。列は連続していないため、すべての [`cell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/cell_role) （この場合は [`columnheader`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/columnheader_role) および [`gridcell`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/gridcell_role) の要素）に `aria-colindex` 属性が設定されています。
 
 ```html
 <div role="grid" aria-colcount="6">
@@ -80,7 +80,7 @@ ARIA の使用に関する第一のルールは、「要素を再利用して AR
 継承先のロール:
 
 - [`grid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/grid_role)
-- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Roles/treegrid_role)
+- [`treegrid`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treegrid_role)
 
 ## 仕様書
 

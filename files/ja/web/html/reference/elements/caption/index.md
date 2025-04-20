@@ -202,7 +202,7 @@ td {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/structural_roles#structural_roles_with_html_equivalents">caption</a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/structural_roles#structural_roles_with_html_equivalents">caption</a>
       </td>
     </tr>
     <tr>
