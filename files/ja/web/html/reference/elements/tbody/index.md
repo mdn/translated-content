@@ -110,7 +110,7 @@ td {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Rowgroup_Role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Rowgroup_Role"
             >rowgroup</a
           ></code
         >

@@ -148,7 +148,7 @@ nav {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/navigation_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/navigation_role"
             >navigation</a
           ></code
         >

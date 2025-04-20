@@ -9,17 +9,17 @@ HTML-элемент **`<kbd>`** указывает на то, что текст 
 
 `<kbd>` можно использовать в различных комбинациях с {{HTMLElement("samp")}} (Sample Output) элементом для отображения различных форм ввода с клавиатуры или ввода, базирующегося на визуальных сигналах.
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content), palpable content. |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Permitted content                                          | [Phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                                                      |
-| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                |
-| Permitted parents                                          | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                                             |
-| Permitted ARIA roles                                       | Any                                                                                                                                                             |
-| DOM interface                                              | {{domxref("HTMLElement")}}                                                                                                                                      |
+| [Content categories](/ru/docs/Web/HTML/Guides/Content_categories) | [Flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), [phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content), palpable content. |
+| ----------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Permitted content                                                 | [Phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                                                             |
+| Tag omission                                                      | Нет, открывающий и закрывающий теги обязательны.                                                                                                                              |
+| Permitted parents                                                 | Any element that accepts [phrasing content](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                                                    |
+| Permitted ARIA roles                                              | Any                                                                                                                                                                           |
+| DOM interface                                                     | {{domxref("HTMLElement")}}                                                                                                                                                    |
 
 ## Атрибуты
 
-Этот элемент использует только [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент использует только [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 ## Usage notes
 

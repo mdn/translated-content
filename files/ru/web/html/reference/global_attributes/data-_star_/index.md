@@ -90,6 +90,6 @@ li:hover:after {
 
 ## Смотрите также
 
-- All [global attributes](/ru/docs/Web/HTML/Global_attributes).
+- All [global attributes](/ru/docs/Web/HTML/Reference/Global_attributes).
 - The {{domxref("HTMLElement.dataset")}} property that allows to access and modify these values.
 - [Using data attributes](/ru/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)

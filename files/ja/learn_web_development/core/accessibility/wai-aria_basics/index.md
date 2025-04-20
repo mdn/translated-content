@@ -843,7 +843,7 @@ function showQuote() {
 ```
 
 - [`role="alert"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role) は、適用先の要素を自動的にライブリージョンにします。 すると、その要素に対する変更は読み上げられます。 また、その要素が警告メッセージ（重要であり、時間 / コンテキストの影響を受ける情報）なのだ、と意味論的に特定しています。 かつ、ユーザーに警告を伝える、よりアクセシビリティに優れたより良い方法も表現しています（[`alert()`](/ja/docs/Web/API/Window/alert) の呼び出しのようなモーダルダイアログには、いくつものアクセシビリティの問題があります。 WebAIM による [ポップアップウィンドウ](https://webaim.org/techniques/javascript/other#popups)（英語）を参照）。
-- [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) の `all` という値は、エラーリストに対して何らかの変更がなされた際には（つまり、エラーが追加または削除された際には）エラーリストの中身を読み上げるよう、スクリーンリーダーに命令するものです。これは有用です。 なぜなら、ユーザーは、リストに何が追加され、リストから何が削除されたのかを知りたいだけでなく、何のエラーが残っているのかを知りたいでしょうから。
+- [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) の `all` という値は、エラーリストに対して何らかの変更がなされた際には（つまり、エラーが追加または削除された際には）エラーリストの中身を読み上げるよう、スクリーンリーダーに命令するものです。これは有用です。 なぜなら、ユーザーは、リストに何が追加され、リストから何が削除されたのかを知りたいだけでなく、何のエラーが残っているのかを知りたいでしょうから。
 
 ARIA を使用して、更に先へ踏み込むこともできるでしょうし、なんらかの検査の手助けを更に提供することもできるでしょう。 そもそもフィールドが必須かどうかを示すことや、年齢がどの範囲にあるべきかを示すこと、などはいかがでしょうか？
 
@@ -855,7 +855,7 @@ ARIA を使用して、更に先へ踏み込むこともできるでしょうし
    <p>アスタリスク（*）が付いているフィールドは必須です。</p>
    ```
 
-4. これは視覚的に意味をなしますが、スクリーンリーダーのユーザーにとっては、理解するのがそれほど容易ではありません。 さいわい、WAI-ARIA には、フォーム入力欄を埋める必要があることをユーザーに伝えるべきだとスクリーンリーダーにヒントを与えるための、[`aria-required`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-required) 属性があります。 `<input>` 要素を次のように更新してください。
+4. これは視覚的に意味をなしますが、スクリーンリーダーのユーザーにとっては、理解するのがそれほど容易ではありません。 さいわい、WAI-ARIA には、フォーム入力欄を埋める必要があることをユーザーに伝えるべきだとスクリーンリーダーにヒントを与えるための、[`aria-required`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-required) 属性があります。 `<input>` 要素を次のように更新してください。
 
    ```html
    <input type="text" name="name" id="name" aria-required="true" />
@@ -864,7 +864,7 @@ ARIA を使用して、更に先へ踏み込むこともできるでしょうし
    ```
 
 5. この例をここで保存してスクリーンリーダーでテストしてみれば、「Enter your name star, required, edit text（名前を入れてください　星、必須、テキストを編集）」のようなものを聞くことになるはずです。
-6. 年齢の値がどうあるべきかについて、スクリーンリーダーのユーザーと晴眼者のユーザーに知らせるのも、有用かもしれません。 これはツールチップとして提示されることがよくあり、あるいは、フォームのフィールド内部のプレースホルダーとして提示されることも、多分あります。 最小値と最大値を指定するための [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemin) プロパティと [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-valuemax) プロパティを、WAI-ARIA は確かに含んではいますが、これらのプロパティは、今のところそれほどちゃんとサポートされてはいないようです。 よりちゃんとサポートされている機能は、HTML の `placeholder` 属性です。 これは、何の値も入力されていないときに入力欄の中に表示されるメッセージを含むことができ、多くのスクリーンリーダーにより読み上げられます。 数値入力欄を次のように更新してください。
+6. 年齢の値がどうあるべきかについて、スクリーンリーダーのユーザーと晴眼者のユーザーに知らせるのも、有用かもしれません。 これはツールチップとして提示されることがよくあり、あるいは、フォームのフィールド内部のプレースホルダーとして提示されることも、多分あります。 最小値と最大値を指定するための [`aria-valuemin`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemin) プロパティと [`aria-valuemax`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-valuemax) プロパティを、WAI-ARIA は確かに含んではいますが、これらのプロパティは、今のところそれほどちゃんとサポートされてはいないようです。 よりちゃんとサポートされている機能は、HTML の `placeholder` 属性です。 これは、何の値も入力されていないときに入力欄の中に表示されるメッセージを含むことができ、多くのスクリーンリーダーにより読み上げられます。 数値入力欄を次のように更新してください。
 
    ```html
    <label for="age">Your age:</label>
@@ -935,7 +935,7 @@ WAI-ARIA ロールを用いてこれを修正できます。 [`fake-div-buttons.
 
 #### 複雑なウィジェットを通じてユーザーを案内する
 
-他にも、標準的な HTML で利用可能なものを超える一般的な UI 機能として、意味的でない要素構造を特定できる [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) が多数存在します。例えば [`combobox`](/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role)、[`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)、[`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)、[`tree`](/ja/docs/Web/Accessibility/ARIA/Roles/tree_role) などです。[Deque 大学コードライブラリー](https://dequeuniversity.com/library/)（英語）では、このようなコントロールをどのようにアクセシブルにできるかを示す有用な例を見ることができます。
+他にも、標準的な HTML で利用可能なものを超える一般的な UI 機能として、意味的でない要素構造を特定できる [ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) が多数存在します。例えば [`combobox`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role)、[`slider`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role)、[`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)、[`tree`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tree_role) などです。[Deque 大学コードライブラリー](https://dequeuniversity.com/library/)（英語）では、このようなコントロールをどのようにアクセシブルにできるかを示す有用な例を見ることができます。
 
 わたしたち自身の事例を検討しましょう。 単純で、絶対的位置指定をした、タブ付きのインターフェイス（CSS と JavaScript のアクセシビリティの記事の、[ものごとを隠す](/ja/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript#ものごとを隠す) を参照）へと戻りましょう。 これは、[タブ付きの情報ボックスの例](/ja/docs/Learn_web_development/Core/CSS_layout/Practical_positioning_examples#タブ付き情報ボックス)で見つかります。
 
@@ -1211,9 +1211,9 @@ window.addEventListener("load", function () {
 
 ARIA 機能は次のように使われます。
 
-- 新たなロール — [`tablist`](/ja/docs/Web/Accessibility/ARIA/Roles/tablist_role)、[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)、[`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Roles/tabpanel_role)
+- 新たなロール — [`tablist`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tablist_role)、[`tab`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role)、[`tabpanel`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tabpanel_role)
   - : これらは、タブのコンテナー、タブ自体、対応するタブパネルなど、タブ付きインターフェイスの重要な領域を識別します。
-- [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-selected)
+- [`aria-selected`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-selected)
   - : 今どのタブが選択されているのかを定めます。 別のタブがユーザーにより選択されると、その別のタブ上のこの属性の値が、 JavaScript を介して更新されます。
 - `tabindex="-1"`
   - : `tabindex="-1"` は、その要素をタブ順序から除外します。 ユーザーがキーボードやマウスでタブを制御できるようにするために JavaScript を使用しているため、ユーザーがタブキーを使用してボタンに移動できないようにする必要があります。

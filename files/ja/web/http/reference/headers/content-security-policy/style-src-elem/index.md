@@ -1,9 +1,8 @@
 ---
 title: "CSP: style-src-elem"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/style-src-elem
-original_slug: Web/HTTP/Headers/Content-Security-Policy/style-src-elem
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -23,9 +22,10 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-s
       <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
     </tr>
     <tr>
-      <th scope="row">フォールバック</th>
+      <th scope="row">{{CSP("default-src")}} の代替</th>
       <td>
         <p>
+          あり。
           このディレクティブがない場合、ユーザーエージェントは {{CSP("style-src")}} を探し、両方ともなかった場合は、<code>default-src</code> で代替されます。
         </p>
       </td>
@@ -35,25 +35,25 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`style-s
 
 ## 構文
 
-1 つ以上のソースが `style-src-elem` ポリシーで指定できます。
-
 ```http
-Content-Security-Policy: style-src-elem <source>;
-Content-Security-Policy: style-src-elem <source> <source>;
+Content-Security-Policy: style-src-elem 'none';
+Content-Security-Policy: style-src-elem <source-expression-list>;
 ```
 
-`style-src-elem` は {{CSP("style-src")}} との組み合わせで使用されます。
+このディレクティブは、次のいずれかの値を指定することができます。
+
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
+
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、[フェッチディレクティブの構文](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#フェッチディレクティブの構文)に掲載されているソース表現のうち、 [`'unsafe-hashes'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes) 以外のいずれかが適用できます。
+
+`style-src-elem` は {{CSP("style-src")}} との組み合わせで使用できます。
 
 ```http
 Content-Security-Policy: style-src <source>;
 Content-Security-Policy: style-src-elem <source>;
 ```
-
-### ソース
-
-`<source>` には、[CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース) に掲載されている値のいずれかが使用できます。
-
-この同じ値の集合は、すべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#relevant_directives)）で使用できるということに注意してください。
 
 ## 例
 
