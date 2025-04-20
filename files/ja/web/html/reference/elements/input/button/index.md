@@ -1,14 +1,13 @@
 ---
 title: <input type="button">
 slug: Web/HTML/Reference/Elements/input/button
-original_slug: Web/HTML/Element/input/button
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
 
-{{HTMLElement("input")}} 要素の **`button`** 型は、単純なプッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{domxref("Element/click_event", "click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
+{{HTMLElement("input")}} 要素の **`button`** 型は、プッシュボタンとして描画され、イベントハンドラー関数 (ふつうは {{domxref("Element/click_event", "click")}} イベント) を割り当てることで、ウェブページのあらゆる場所でカスタム機能を制御するようにプログラムすることができます。
 
 {{InteractiveExample("HTML Demo: &lt;input type=&quot;button&quot;&gt;", "tabbed-shorter")}}
 
@@ -217,7 +216,7 @@ function disableButton() {
 
 ## 例
 
-以下の例では、 {{htmlelement("canvas")}} 要素といくらかの CSS と JavaScript を使用して作成した、とても簡単なお絵かきアプリを紹介します。 (簡略化のため CSS を省略します)。上部の 2 つのコントロールで、色と描画するペンの大きさを選択できます。ボタンは、クリックすると、キャンバスを消去する関数を呼び出します。
+以下の例では、 {{htmlelement("canvas")}} 要素といくらかの CSS と JavaScript を使用して作成した、とても基本的なお絵かきアプリを紹介します。 (簡略化のため CSS を省略します)。上部の 2 つのコントロールで、色と描画するペンの大きさを選択できます。ボタンは、クリックすると、キャンバスを消去する関数を呼び出します。
 
 ```html
 <div class="toolbar">
@@ -354,8 +353,8 @@ draw();
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#type"><code>type</code></a> および
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#type"><code>type</code></a> および
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>
       </td>
     </tr>
     <tr>
@@ -372,7 +371,7 @@ draw();
     </tr>
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></td>
     </tr>
   </tbody>
 </table>
