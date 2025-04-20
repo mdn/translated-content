@@ -2,10 +2,8 @@
 title: アクセシブルなマルチメディア
 slug: Learn_web_development/Core/Accessibility/Multimedia
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: 48d220a8cffdfd5f088f8ca89724a9a92e34d8c0
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/WAI-ARIA_basics","Learn_web_development/Core/Accessibility/Mobile", "Learn_web_development/Core/Accessibility")}}
 
@@ -15,7 +13,7 @@ l10n:
   <tbody>
     <tr>
       <th scope="row">前提知識:</th>
-      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> の知識、<a href="/ja/docs/Learn_web_development/Core/Accessibility/What_is_accessibility">基本的なアクセシビリティの概念の理解</a>。</td>
+      <td><a href="/ja/docs/Learn_web_development/Core/Structuring_content">HTML</a>、<a href="/ja/docs/Learn_web_development/Core/Styling_basics">CSS</a> の知識、このモジュールのこれまでのレッスンで学んだアクセシビリティのベストプラクティス。</td>
     </tr>
     <tr>
       <th scope="row">学習成果:</th>

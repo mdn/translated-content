@@ -1,5 +1,5 @@
 ---
-title: "Feature-Policy: camera"
+title: "Permissions-Policy: camera"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/camera
 l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d

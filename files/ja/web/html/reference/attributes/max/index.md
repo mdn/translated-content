@@ -133,7 +133,7 @@ l10n:
 
 - [`step`](/ja/docs/Web/HTML/Reference/Attributes/step)
 - [`min`](/ja/docs/Web/HTML/Reference/Attributes/min)
-- 他の meter の属性: [`low`](/ja/docs/Web/HTML/Attributes/low), [`high`](/ja/docs/Web/HTML/Attributes/high), [`optimum`](/ja/docs/Web/HTML/Attributes/optimum)
+- 他の meter の属性: [`low`](/ja/docs/Web/HTML/Reference/Attributes/low), [`high`](/ja/docs/Web/HTML/Reference/Attributes/high), [`optimum`](/ja/docs/Web/HTML/Reference/Attributes/optimum)
 - [制約検証](/ja/docs/Web/HTML/Guides/Constraint_validation)
 - [制約検証 API](/ja/docs/Learn_web_development/Extensions/Forms/Form_validation)
 - {{domxref('validityState.rangeOverflow')}}
