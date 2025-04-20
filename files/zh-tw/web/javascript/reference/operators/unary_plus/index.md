@@ -44,7 +44,7 @@ console.log(+"hello");
 
 雖然一元負號（`-`）也可以轉換非數字型別，但一元正號是將某個值轉換為數字最快且最推薦的方式，因為它不會對數字執行其他操作。
 
-一元正號執行的步驟與大多數內建方法預期數字時所使用的[數字轉換](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)完全相同。它可以轉換整數和浮點數的字串表示，以及非字串值 `true`、`false` 和 `null`。支援十進位和十六進位（以 `0x` 為前綴）的整數格式。也支援負數（但十六進位不支援負數）。如果無法解析特定值，則會回傳 {{jsxref("NaN")}}。與其他算術運算子不同，其他運算子可同時處理數字和 [BigInt](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt)，但對 BigInt 值使用 `+` 運算子會拋出 {{jsxref("TypeError")}}。
+一元正號執行的步驟與大多數內建方法預期數字時所使用的[數字轉換](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#number_coercion)完全相同。它可以轉換整數和浮點數的字串表示，以及非字串值 `true`、`false` 和 `null`。支援十進位和十六進位（以 `0x` 為前綴）的整數格式。也支援負數（但十六進位不支援負數）。如果無法解析特定值，則會回傳 {{jsxref("NaN")}}。與其他可同時處理數字與 [BigInt](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/BigInt) 的算術運算子不同，對 BigInt 值使用 `+` 運算子會拋出 {{jsxref("TypeError")}}。
 
 ## 範例
 
