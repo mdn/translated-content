@@ -1,0 +1,36 @@
+---
+title: <font-face-uri>
+slug: conflicting/Web/CSS/@font-face_a2b2a2f1b36681b53150e0f8f5aa8466b9b48c5104ebac3731fdbae5fa74d45e
+original_slug: Web/SVG/Reference/Element/font-face-uri
+l10n:
+  sourceCommit: 3a1ef2abc8233835f0b0cc73afaf36e44edaf4a1
+---
+
+{{deprecated_header}}
+
+**`<font-face-uri>`** [SVG](/zh-CN/docs/Web/SVG) 元素指向当前字体的远程定义。
+
+## 使用上下文
+
+{{svginfo}}
+
+## 属性
+
+- {{SVGAttr("xlink:href")}} {{deprecated_inline}}
+
+## DOM 接口
+
+此元素实现了 {{domxref("SVGFontFaceUriElement")}} 接口。
+
+## 规范
+
+{{Specifications}}
+
+## 浏览器兼容性
+
+{{Compat}}
+
+## 参见
+
+- {{SVGElement("font-face-src")}}
+- [SVG 教程：SVG 字体](/zh-CN/docs/Web/SVG/Tutorials/SVG_from_scratch/Using_fonts)
