@@ -98,8 +98,7 @@ example.js:41 getArg 0：42
 
 在 JavaScript 中使用 `catch` 块捕获异常。我们可以看见它是 `WebAssembly.Exception` 类型，但是如果我们没有正确的标签的话，我们就什么也做不了。
 
-
-然而，因为我们有一个标签，于是使用 [`Exception.prototype.is()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/is) 检查它是否是正确的那个，又因为它是正确的，于是调用 [`Exception.prototype.getArg()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg)  读取 "42" 的值。
+然而，因为我们有一个标签，于是使用 [`Exception.prototype.is()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/is) 检查它是否是正确的那个，又因为它是正确的，于是调用 [`Exception.prototype.getArg()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg) 读取 "42" 的值。
 
 ## 规范
 
