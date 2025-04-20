@@ -18,7 +18,7 @@ ARIA は主に意味づけを表現するために使用されますが、支援
 
 要素に `presentation` ロールが付いた場合と同様に、`role="generic"` を持つ要素は、[`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live) 属性のように、その子孫にアクセス可能なステートやプロパティを制限付きで提供することができます。しかし、 `presentation` ロールを持つ要素とは異なり、 `generic` 要素はアクセシビリティ API で公開されるので、支援する技術はレイアウトや境界などの特定のプロパティを収集することができます。
 
-一般的なロールは名前がないので、[`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性は禁止されています。ロールは一般的なので、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-roledescription) と [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) 属性も禁止されています。
+一般的なロールは名前がないので、[`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) と [`aria-label`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性は禁止されています。ロールは一般的なので、[`aria-roledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-roledescription) と [`aria-brailleroledescription`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-brailleroledescription) 属性も禁止されています。
 
 > **メモ:** `role="generic"` を持つ要素は、アクセシブル名やロールの記述を持つべきではありません。
 

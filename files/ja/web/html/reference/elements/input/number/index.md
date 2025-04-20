@@ -1,9 +1,8 @@
 ---
 title: <input type="number">
 slug: Web/HTML/Reference/Elements/input/number
-original_slug: Web/HTML/Element/input/number
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -164,7 +163,7 @@ list 属性の値は、同じ文書内にある {{HTMLElement("datalist")}} 要�
 
 ### 小数が使用できるようにする
 
-数値入力の問題の一つが、既定で刻みが 1 になっていることです。小数を含む数値（たとえば "1.0"）を入力しようとすると、無効な値とみなされるでしょう。小数が必要な値を入力させたい場合は、これを `step` の値に反映させる必要があります（例えば `step="0.01"` で小数第 2 位まで許可します）。基本的な例を示します。
+数値入力に関する課題の一つは、既定ではステップのサイズが 1 であることです。小数点以下の値を持つ数値を入力しようとすると（"1.1" など）、それは不正な数値とみなされます。 "1.0" のような値は、数値的には整数と同等であるため、有効であるとみなされます。小数を含む値を入力したい場合は、 `step` 値にこれを反映する必要があります（例えば、 `step="0.01"` で小数点以下 2 桁まで許可）。基本的な例を以下に示します。
 
 ```html
 <input type="number" placeholder="1.0" step="0.01" min="0" max="10" />
@@ -441,17 +440,17 @@ switchBtn.addEventListener("click", () => {
     <tr>
       <td><strong>対応している共通属性</strong></td>
       <td>
-         <a href="/ja/docs/Web/HTML/Element/input#autocomplete"><code>autocomplete</code></a>,
-         <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-         <a href="/ja/docs/Web/HTML/Element/input#placeholder"><code>placeholder</code></a>,
-         <a href="/ja/docs/Web/HTML/Element/input#readonly"><code>readonly</code></a>
+         <a href="/ja/docs/Web/HTML/Reference/Elements/input#autocomplete"><code>autocomplete</code></a>,
+         <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+         <a href="/ja/docs/Web/HTML/Reference/Elements/input#placeholder"><code>placeholder</code></a>,
+         <a href="/ja/docs/Web/HTML/Reference/Elements/input#readonly"><code>readonly</code></a>
       </td>
     </tr>
     <tr>
       <td><strong>IDL 属性</strong></td>
       <td>
-        <a href="/ja/docs/Web/HTML/Element/input#list"><code>list</code></a>,
-        <a href="/ja/docs/Web/HTML/Element/input#value"><code>value</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#list"><code>list</code></a>,
+        <a href="/ja/docs/Web/HTML/Reference/Elements/input#value"><code>value</code></a>,
         <code>valueAsNumber</code>
       </td>
     </tr>
@@ -470,7 +469,7 @@ switchBtn.addEventListener("click", () => {
     <tr>
       <td><strong>暗黙の ARIA ロール</strong></td>
       <td>
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role">spinbutton</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role">spinbutton</a></code>
       </td>
     </tr>
   </tbody>

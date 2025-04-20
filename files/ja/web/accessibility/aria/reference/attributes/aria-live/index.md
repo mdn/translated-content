@@ -30,7 +30,7 @@ l10n:
 
 アクセシビリティ API が上記のライブリージョンへの変更を認識すると、属性の値に基づいてそのライブリージョンのコンテンツをアナウンスします。要素にはフォーカスが与えられ**ません**。
 
-ライブリージョンのコンテンツをすべて読み込ませたい場合は、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) を使用してください。ユーザーに再読み込みが必要な更新の部分だけを定義するには、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant) を使用してください。更新中にアナウンスを行わないようにするには、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) を使用してください。
+ライブリージョンのコンテンツをすべて読み込ませたい場合は、[`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic) を使用してください。ユーザーに再読み込みが必要な更新の部分だけを定義するには、[`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant) を使用してください。更新中にアナウンスを行わないようにするには、[`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) を使用してください。
 
 ### `aria-live` 値の選び方
 
@@ -86,6 +86,6 @@ l10n:
 ## 関連情報
 
 - [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)
-- [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+- [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 - [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy)
 - [`alert` role](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/alert_role)

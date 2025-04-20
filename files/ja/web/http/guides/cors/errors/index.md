@@ -1,16 +1,15 @@
 ---
 title: CORS のエラー
 slug: Web/HTTP/Guides/CORS/Errors
-original_slug: Web/HTTP/Guides/CORS/Errors
 l10n:
-  sourceCommit: 592f6ec42e54981b6573b58ec0343c9aa8cbbda8
+  sourceCommit: 25250cc6891257af95351169ec07e004df8540d0
 ---
 
 {{HTTPSidebar}}
 
 [オリジン間リソース共有](/ja/docs/Web/HTTP/Guides/CORS) (Cross-Origin Resource Sharing) ({{Glossary("CORS")}}) は、サーバーが[同一オリジンポリシー](/ja/docs/Web/Security/Same-origin_policy)を緩和することができる標準規格です。例えば、サイトが埋め込み可能なサービスを提供する場合、このような制約を緩和する必要があるかもしれません。このような CORS の構成の設定は必ずしも簡単ではなく、いくらか冒険的です。これらのページでは、よくある CORS のエラーメッセージと解決方法を調査します。
 
-CORS 構成が正しく設定されていないと、ブラウザーのコンソールには `"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at $somesite"` のようなエラーを表示して、リクエストが CORS のセキュリティ規則を侵害しているためにブロックされたことを示します。これは必ずしも設定ミスとは限りません。実際には、ユーザーのウェブアプリケーションおよびリモートの外部サービスからのリクエストが、意図的に許可されていない場合もあります。ただし、エンドポイントが使用可能である場合、成功するためにはデバッグが必要です。
+CORS 構成が正しく設定されていないと、ブラウザーのコンソールには `"Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at [some site]"` のようなエラーを表示して、リクエストが CORS のセキュリティ規則を侵害しているためにブロックされたことを示します。これは必ずしも設定ミスとは限りません。実際には、ユーザーのウェブアプリケーションおよびリモートの外部サービスからのリクエストが、意図的に許可されていない場合もあります。ただし、エンドポイントが使用可能である場合、成功するためにはデバッグが必要です。
 
 ## 問題の識別
 
@@ -34,7 +33,7 @@ additional information here).
 
 ## CORS のエラーメッセージ
 
-Firefox のコンソールは、 CORS のためにリクエストが失敗した場合はコンソールにメッセージを表示します。エラーテキストには、何が失敗したのかの分析が追加された「reason」の部分があります。 reason のメッセージは以下の通りです。メッセージをクリックすると、エラーをより詳細に説明し、可能な解決方法を提供する記事を開くことができます。
+Firefox のコンソールは、 CORS のためにリクエストが失敗した場合はコンソールにメッセージを表示します。エラーテキストには、何が失敗したのかの分析が追加された "reason" の部分があります。 reason のメッセージは以下の通りです。メッセージをクリックすると、エラーをより詳細に説明し、可能な解決方法を提供する記事を開くことができます。
 
 - [Reason: CORS disabled](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSDisabled)
 - [Reason: CORS request did not succeed](/ja/docs/Web/HTTP/Guides/CORS/Errors/CORSDidNotSucceed)
@@ -59,4 +58,3 @@ Firefox のコンソールは、 CORS のためにリクエストが失敗した
 - [サーバー側 CORS 設定](/ja/docs/Web/HTTP/Guides/CORS)
 - [CORS 有効化の画像](/ja/docs/Web/HTML/How_to/CORS_enabled_image)
 - [CORS の設定属性](/ja/docs/Web/HTML/Reference/Attributes/crossorigin)
-- <https://www.test-cors.org> – CORS リクエストの試験ページ
