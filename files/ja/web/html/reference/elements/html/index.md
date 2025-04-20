@@ -39,7 +39,7 @@ l10n:
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/Document_role"
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Document_role"
           >document</a
         >
       </td>

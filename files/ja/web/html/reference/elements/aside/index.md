@@ -124,7 +124,7 @@ aside > p {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Complementary_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Complementary_role"
             >complementary</a
           ></code
         >
@@ -133,9 +133,9 @@ aside > p {
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/feed_role"><code>feed</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/note_role"><code>note</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/region_role"><code>region</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/search_role"><code>search</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/feed_role"><code>feed</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/note_role"><code>note</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/region_role"><code>region</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/search_role"><code>search</code></a>
       </td>
     </tr>
     <tr>

@@ -509,7 +509,7 @@ AddType video/webm .webm
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/application_role"><code>application</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/application_role"><code>application</code></a></td>
     </tr>
     <tr>
       <th scope="row">DOM インターフェイス</th>

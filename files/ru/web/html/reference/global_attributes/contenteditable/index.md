@@ -6,7 +6,7 @@ slug: Web/HTML/Reference/Global_attributes/contenteditable
 {{HTMLSidebar("Global_attributes")}}
 
 (Mozilla / 5.0 (Windows NT 6.3, WOW64; rv: 29.0) Gecko / 20100101 Firefox / 29.0)
-Атрибут **`contenteditable`** [global attribute](/ru/docs/Web/HTML/Global_attributes) - это перечисляемый атрибут, указывающий, должен ли элемент редактироваться пользователем. Если это так, браузер изменит свой виджет, чтобы разрешить редактирование. Атрибут должен принимать одно из следующих значений:
+Атрибут **`contenteditable`** [global attribute](/ru/docs/Web/HTML/Reference/Global_attributes) - это перечисляемый атрибут, указывающий, должен ли элемент редактироваться пользователем. Если это так, браузер изменит свой виджет, чтобы разрешить редактирование. Атрибут должен принимать одно из следующих значений:
 
 - true или _пустую строку_, которое показывает, что элемент должен быть редактируемым;
 - false, которое показывает, что элемент должен быть нередактируемым.
@@ -28,6 +28,6 @@ slug: Web/HTML/Reference/Global_attributes/contenteditable
 
 ## Смотрите также
 
-- [Создание контента для редактирования](/ru/docs/Web/HTML/Global_attributes/contenteditable)
-- Все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes)
+- [Создание контента для редактирования](/ru/docs/Web/HTML/Reference/Global_attributes/contenteditable)
+- Все [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes)
 - {{domxref("HTMLElement.contentEditable")}} и {{domxref("HTMLElement.isContentEditable")}}

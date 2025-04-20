@@ -7,7 +7,7 @@ slug: Web/CSS/:optional
 
 ## Описание
 
-CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:optional` находит любые {{ HTMLElement("input") }} элементы, у которых не установлен атрибут [`required`](/ru/docs/Web/HTML/Element/input#required). Он позволяет формам легко отмечать необязательные поля, и давать им соответствующие стили.
+CSS [псевдокласс](/ru/docs/Web/CSS/Pseudo-classes) `:optional` находит любые {{ HTMLElement("input") }} элементы, у которых не установлен атрибут [`required`](/ru/docs/Web/HTML/Reference/Elements/input#required). Он позволяет формам легко отмечать необязательные поля, и давать им соответствующие стили.
 
 Чтобы задать особый внешний вид обязательным полям формы можно использовать псевдокласс {{ cssxref(":required") }}.
 

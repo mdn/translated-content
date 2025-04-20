@@ -305,8 +305,8 @@ select {
       <td>
         <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
         <code>size</code> 属性が<strong>ない</strong>ならば
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role">combobox</a></code>、それ以外の場合は
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/listbox_role">listbox</a></code>
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role">combobox</a></code>、それ以外の場合は
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/listbox_role">listbox</a></code>
       </td>
     </tr>
     <tr>
@@ -314,7 +314,7 @@ select {
       <td>
         <code>multiple</code> 属性が<strong>なく</strong>、 1 よりも大きい
         <code>size</code> 属性が<strong>ない</strong>ならば
-        <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menu_role">menu</a></code>、それ以外の場合は許可されている
+        <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menu_role">menu</a></code>、それ以外の場合は許可されている
         <code>role</code> はなし
       </td>
     </tr>

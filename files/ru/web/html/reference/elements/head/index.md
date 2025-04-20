@@ -7,13 +7,13 @@ l10n:
 
 {{HTMLSidebar}}
 
-[HTML](/ru/docs/Web/HTML)-элемент **`<head>`** содержит машиночитаемую информацию ({{glossary("metadata", "метаданные")}}) о документе, например его [заголовок](/ru/docs/Web/HTML/Element/title), [скрипты](/ru/docs/Web/HTML/Element/script) и [таблицы стилей](/ru/docs/Web/HTML/Element/style). В HTML-документе может быть только один элемент `<head>`.
+[HTML](/ru/docs/Web/HTML)-элемент **`<head>`** содержит машиночитаемую информацию ({{glossary("metadata", "метаданные")}}) о документе, например его [заголовок](/ru/docs/Web/HTML/Reference/Elements/title), [скрипты](/ru/docs/Web/HTML/Reference/Elements/script) и [таблицы стилей](/ru/docs/Web/HTML/Reference/Elements/style). В HTML-документе может быть только один элемент `<head>`.
 
 > **Примечание:** `<head>` в основном содержит информацию для машинной обработки, а не для восприятия человеком. Про информацию в человекочитаемом виде, такую как заголовки верхнего уровня и список авторов, смотрите в элементе {{HTMLElement("header")}}.
 
 ## Атрибуты
 
-Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - `profile` {{deprecated_inline}}
   - : {{glossary("URI")}} одного или нескольких профилей метаданных, разделённые {{Glossary("whitespace", "пробелами")}}.

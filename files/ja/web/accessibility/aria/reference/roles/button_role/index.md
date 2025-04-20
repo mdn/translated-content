@@ -12,7 +12,7 @@ l10n:
 
 button ロールは、スクリーンリーダーなどの支援技術に対して、要素をボタンとして識別するものです。ボタンは、フォームを送信する、ダイアログを開く、アクションを取り消す、新しいレコードを挿入する、情報を表示するなどのコマンドを実行するために使用されるウィジェットです。 `role="button"` を追加すると、その要素がボタンであることを支援技術に指示しますが、ボタンの機能は提供しません。代わりに {{HTMLElement("button")}} または {{HTMLElement("input")}} に `type="button"` を付けたものを使用してください。
 
-`button` ロールは [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性との組み合わせで、[トグルボタンを生成](#トグルボタン)するために使用することができます。
+`button` ロールは [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) 属性との組み合わせで、[トグルボタンを生成](#トグルボタン)するために使用することができます。
 
 ```html
 <div id="saveChanges" tabindex="0" role="button" aria-pressed="false">Save</div>
@@ -28,9 +28,9 @@ button ロールは、スクリーンリーダーなどの支援技術に対し�
 
 通常のボタンウィジェットに加えて、ボタン以外の要素を使用してトグルボタンまたはメニューボタンを作成する場合は、`role="button"` を含める必要があります。
 
-トグルボタンは、オフ (押されていない) またはオン (押されている) のいずれかが可能な 2 つの状態のボタンです。 [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性の `true` または `false` の値で、ボタンをトグルボタンとして認識します。
+トグルボタンは、オフ (押されていない) またはオン (押されている) のいずれかが可能な 2 つの状態のボタンです。 [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) 属性の `true` または `false` の値で、ボタンをトグルボタンとして認識します。
 
-メニューボタンは、メニューを制御するボタンであり、 [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-haspopup) プロパティ属性に `menu` または `true` が設定されています。
+メニューボタンは、メニューを制御するボタンであり、 [`aria-haspopup`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-haspopup) プロパティ属性に `menu` または `true` が設定されています。
 
 ### すべての子孫が表示用途になる
 
@@ -56,9 +56,9 @@ button ロールは、スクリーンリーダーなどの支援技術に対し�
 
 ### 関連する WAI-ARIA のロール、ステート、プロパティ
 
-- [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed)
+- [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed)
   - : ボタンをトグルボタンとして定義します。 `aria-pressed` の値は、ボタンの状態を表します。 値には、ボタンが現在押されていない場合は `aria-pressed="false"`、ボタンが現在押されていることを示す `aria-pressed="true"`、ボタンが部分的に押されていると見なされる場合は `aria-pressed="mixed"` が含まれます。 属性が省略されているか、デフォルト値の `aria-pressed="undefined"` に設定されている場合、要素は押されている状態をサポートしません。
-- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-expanded)
+- [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded)
   - : ボタンが他の要素のグループ化を制御している場合、`aria-expanded` 状態は、制御されているグループ化が現在展開されているか折りたたまれているかを示します。 ボタンに `aria-expanded="false"` が設定されている場合、グループ化は現在展開されていません。 ボタンに `aria-expanded="true"` が設定されている場合、現在展開されています。 ボタンに `aria-expanded="undefined"` が設定されているか、属性が省略されている場合、展開不可能です。
 
 ### 基本的なボタン
@@ -67,7 +67,7 @@ button ロールは、スクリーンリーダーなどの支援技術に対し�
 
 ### トグルボタン
 
-トグルボタンには通常、押された状態と押されていない状態の 2 つの状態があります。 3 番目の混合 (mixed) 状態は、他のトグルボタンやチェックボックスなど、すべてが同じ値を共有するわけではない他の要素を制御するトグルボタンで使用できます。 要素がトグルボタンであるかどうかは、 (要素がネイティブなボタン要素でない場合に) ボタン (`button`) ロールに加えて [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-pressed) 属性で示すことができます。
+トグルボタンには通常、押された状態と押されていない状態の 2 つの状態があります。 3 番目の混合 (mixed) 状態は、他のトグルボタンやチェックボックスなど、すべてが同じ値を共有するわけではない他の要素を制御するトグルボタンで使用できます。 要素がトグルボタンであるかどうかは、 (要素がネイティブなボタン要素でない場合に) ボタン (`button`) ロールに加えて [`aria-pressed`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-pressed) 属性で示すことができます。
 
 - `aria-pressed` が使用されていない場合、または "undefined" 状態に設定されている場合、ボタンはトグルボタンではありません。
 - `aria-pressed="false"` が使用されている場合、ボタンは現在押されていないトグルボタンです。

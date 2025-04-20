@@ -1,28 +1,32 @@
 ---
 title: "Permissions-Policy: autoplay"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/autoplay
-original_slug: Web/HTTP/Headers/Permissions-Policy/autoplay
+l10n:
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
-HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `autoplay` ディレクティブは、現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスによってメディアの自動再生をリクエストすることを許可するかどうかを制御します。このポリシーが有効であれば、 {{domxref("HTMLMediaElement.play()")}} から返却された {{jsxref("Promise")}} が {{domxref("DOMException")}} で拒否されます。 {{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素の [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/audio#autoplay) 属性は無視されます。
+HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `autoplay` ディレクティブは、現在の文書で {{domxref("HTMLMediaElement")}} インターフェイスによってメディアの自動再生をリクエストすることを許可するかどうかを制御します。
 
-自動再生や自動再生ブロックの詳細については、 [メディアおよび Web Audio API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay) の記事を参照してください。
+仕様上、ポリシーによってこの機能の使用がブロックされており、ユーザのジェスチャーもなかった場合、 {{domxref("HTMLMediaElement.play()")}} が返す {{jsxref("Promise")}} は {{domxref("DOMException")}} で拒否されます。
+{{HTMLElement("audio")}} および {{HTMLElement("video")}} 要素の [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/audio#autoplay) 属性は無視されます。
+
+> [!NOTE]
+> 自動再生や自動再生ブロックの詳細については、 [メディアおよびウェブオーディオ API の自動再生ガイド](/ja/docs/Web/Media/Guides/Autoplay) の記事を参照してください。
 
 ## 構文
 
-```
-Permissions-Policy: autoplay <allowlist>;
+```http
+Permissions-Policy: autoplay=<allowlist>;
 ```
 
-- \<allowlist>
-  - : この機能を許可するオリジンのリストです。 [`Permissions-Policy`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#%E6%A7%8B%E6%96%87) を参照してください。
+- `<allowlist>`
+  - : この機能を許可するオリジンのリストです。 [`Permissions-Policy` > 構文](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy#構文)を参照してください。
 
 ## 既定のポリシー
 
-[Google Chrome](https://www.chromestatus.com/feature/5100524789563392) における既定値は
-`'self'` です。
+`autoplay` の既定の許可リストは `self` です。
 
 ## 仕様書
 
@@ -35,5 +39,4 @@ Permissions-Policy: autoplay <allowlist>;
 ## 関連情報
 
 - {{HTTPHeader("Permissions-Policy")}} ヘッダー
-- [機能ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)
-- [機能ポリシーの使用](/ja/docs/Web/HTTP/Guides/Feature_Policy/Using_Feature_Policy)
+- [権限ポリシー](/ja/docs/Web/HTTP/Guides/Permissions_Policy)

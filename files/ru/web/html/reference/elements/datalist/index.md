@@ -5,7 +5,7 @@ slug: Web/HTML/Reference/Elements/datalist
 
 {{HTMLSidebar}}
 
-**HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом [`list`](/ru/docs/Web/HTML/Element/input#list).
+**HTML-элемент `<datalist>`** содержит набор опций ({{HTMLElement("option")}}), доступных для выбора. Выбранное значение будет установлено для элемента {{HTMLElement("input")}}, с атрибутом [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list).
 
 {{InteractiveExample("HTML Demo: &lt;datalist&gt;", "tabbed-standard")}}
 
@@ -29,17 +29,17 @@ label {
 }
 ```
 
-| [Категория контента](/ru/docs/Web/HTML/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Content_categories#потоковый_контент), [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content). |
-| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Допустимое содержимое                                      | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                         |
-| Пропуск тегов                                              | Нет, открывающий и закрывающий теги обязательны.                                                                                                        |
-| Допустимые родители                                        | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/HTML/Content_categories#phrasing_content).                                       |
-| Допустимые ARIA-роли                                       | Нет                                                                                                                                                     |
-| DOM-интерфейс                                              | {{domxref("HTMLDataListElement")}}                                                                                                                      |
+| [Категория контента](/ru/docs/Web/HTML/Guides/Content_categories) | [Потоковый контент](/ru/docs/Web/HTML/Guides/Content_categories#потоковый_контент), [фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content). |
+| ----------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Допустимое содержимое                                             | Либо фразовый контент, либо ноль или более элементов {{HTMLElement("option")}}.                                                                                       |
+| Пропуск тегов                                                     | Нет, открывающий и закрывающий теги обязательны.                                                                                                                      |
+| Допустимые родители                                               | Любой элемент, который может содержать [фразовый контент](/ru/docs/Web/HTML/Guides/Content_categories#phrasing_content).                                              |
+| Допустимые ARIA-роли                                              | Нет                                                                                                                                                                   |
+| DOM-интерфейс                                                     | {{domxref("HTMLDataListElement")}}                                                                                                                                    |
 
 ## Атрибуты
 
-С данным элементом можно использовать все [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+С данным элементом можно использовать все [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 ## Примеры
 
@@ -74,5 +74,5 @@ label {
 
 ## Смотрите также
 
-- Элемент {{HTMLElement("input")}} , в особенности его атрибут [`list`](/ru/docs/Web/HTML/Element/input#list);
+- Элемент {{HTMLElement("input")}} , в особенности его атрибут [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list);
 - Элемент {{HTMLElement("option")}}.

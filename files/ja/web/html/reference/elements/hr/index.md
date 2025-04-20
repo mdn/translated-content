@@ -112,12 +112,12 @@ hr::after {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a> または <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a> または <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>
       </td>
     </tr>
     <tr>

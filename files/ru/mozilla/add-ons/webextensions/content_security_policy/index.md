@@ -5,7 +5,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 {{AddonSidebar}}
 
-Политика защиты содержимого (англ. Content Security Policy) автоматически применяется ко всем расширениям, разработанным с использованием WebExtension API. Она ограничивает источники, из которых расширение может загружать [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы, и препятствует потенциально опасным практикам, например использованию [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval).
+Политика защиты содержимого (англ. Content Security Policy) автоматически применяется ко всем расширениям, разработанным с использованием WebExtension API. Она ограничивает источники, из которых расширение может загружать [\<script>](/ru/docs/Web/HTML/Reference/Elements/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы, и препятствует потенциально опасным практикам, например использованию [`eval()`](/ru/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
 Статья в краткой форме объясняет значимость этой политики, каковы её изначальные правила, как они влияют на расширение, и как расширение может изменять эти правила.
 
@@ -61,7 +61,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 ### Расположение script и object ресурсов
 
-Используя изначальную политику защиты содержимого, вы можете загружать только локальные к расширению [\<script>](/ru/docs/Web/HTML/Element/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы. Например, рассмотрите эту строку из документа расширения:
+Используя изначальную политику защиты содержимого, вы можете загружать только локальные к расширению [\<script>](/ru/docs/Web/HTML/Reference/Elements/script) и [\<object>](/ru/docs/Web/HTML/Element/object) ресурсы. Например, рассмотрите эту строку из документа расширения:
 
 ```html
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>

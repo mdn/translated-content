@@ -517,9 +517,9 @@ document
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a> （<code>href</code> 属性がある場合）、
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a> （<code>href</code> 属性がある場合）、
         それ以外は
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/generic_role"><code>generic</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/generic_role"><code>generic</code></a>
       </td>
     </tr>
     <tr>
@@ -527,16 +527,16 @@ document
       <td>
         <p><code>href</code> 属性がある場合</p>
         <ul>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a></li>
-          <li><a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a></li>
+          <li><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a></li>
         </ul>
         <p><code>href</code> 属性がない場合</p>
         <ul>
