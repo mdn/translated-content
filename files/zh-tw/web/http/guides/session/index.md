@@ -2,7 +2,7 @@
 title: 典型的 HTTP 會話
 slug: Web/HTTP/Guides/Session
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: cb8143261f5cd54788285574ab0c427ba3f01a04
 ---
 
 {{HTTPSidebar}}
@@ -99,11 +99,11 @@ Age: 7
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>A simple webpage</title>
+  <title>基本網頁</title>
 </head>
 <body>
-  <h1>Simple HTML webpage</h1>
-  <p>Hello, world!</p>
+  <h1>基本 HTML 網頁</h1>
+  <p>哈囉，世界！</p>
 </body>
 </html>
 ```
