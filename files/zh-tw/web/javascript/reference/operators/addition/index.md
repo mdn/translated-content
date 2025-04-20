@@ -115,4 +115,4 @@ Number(1n) + 2; // 3
 - [遞增（`++`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Increment)
 - [遞減（`--`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Decrement)
 - [一元負號（`-`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_negation)
-- [一元加號（`+`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)
+- [一元正號（`+`）](/zh-TW/docs/Web/JavaScript/Reference/Operators/Unary_plus)
