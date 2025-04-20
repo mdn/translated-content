@@ -9,7 +9,7 @@ l10n:
 
 **一元正號（`+`）** 運算子會放在運算元前面，並回傳其運算元，但如果運算元不是數字，則會嘗試[將其轉換為數字](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Number#數字強制轉換)。
 
-{{InteractiveExample("JavaScript 範例：一元正號（+）運算子", "taller")}}
+{{InteractiveExample("JavaScript Demo: Unary plus (+) operator", "taller")}}
 
 ```js interactive-example
 const x = 1;
