@@ -1,9 +1,10 @@
 ---
 title: 중요 렌더링 경로
 slug: Web/Performance/Critical_rendering_path
+sidebar: performancesidebar
+l10n:
+  sourceCommit: 31ff21cf5f083a3258fc04267d54b1fb72224ff6
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 중요 렌더링 경로 (_Critical Rendering Path_)는 브라우저가 HTML, CSS, Javascript를 화면에 픽셀로 변화하는 일련의 단계를 말하며 이를 최적화하는 것은 렌더링 성능을 향상시킵니다. 중요 렌더링 경로는 [Document Object Model](/ko/docs/Web/API/Document_Object_Model) (DOM), [CSS Object Model](/ko/docs/Web/API/CSS_Object_Model) (CSSOM), 렌더 트리 그리고 레이아웃을 포함합니다.
 
