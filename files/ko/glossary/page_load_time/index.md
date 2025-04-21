@@ -19,6 +19,6 @@ let pageloadtime = time.loadEventStart - time.navigationStart;
 
 ## 같이 보기
 
-- [탐색 및 리소스 타이밍](/ko/docs/Web/Performance/Navigation_and_resource_timings)
+- [탐색 및 리소스 타이밍](/ko/docs/Web/Performance/Guides/Navigation_and_resource_timings)
 - {{domxref("PerformanceNavigationTiming")}}
 - {{domxref("PerformanceResourceTiming")}},

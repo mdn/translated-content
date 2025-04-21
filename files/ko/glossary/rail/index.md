@@ -20,4 +20,4 @@ l10n:
 
 ## 같이 보기
 
-- [권장 웹 성능 타이밍: 얼마나 길면 너무 길까요](/ko/docs/Web/Performance/How_long_is_too_long)
+- [권장 웹 성능 타이밍: 얼마나 길면 너무 길까요](/ko/docs/Web/Performance/Guides/How_long_is_too_long)

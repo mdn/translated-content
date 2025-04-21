@@ -11,6 +11,6 @@ l10n:
 
 ## 같이 보기
 
-- [실제 사용자 모니터링 vs 종합 모니터링](/ko/docs/Web/Performance/Rum-vs-Synthetic)
+- [실제 사용자 모니터링 vs 종합 모니터링](/ko/docs/Web/Performance/Guides/Rum-vs-Synthetic)
 - [종합 모니터링](/ko/docs/Glossary/Synthetic_monitoring)
 - [비콘(Beacon)](/ko/docs/Glossary/Beacon)

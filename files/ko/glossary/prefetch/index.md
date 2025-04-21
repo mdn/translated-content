@@ -51,4 +51,4 @@ l10n:
 - [프리로드](/ko/docs/Web/HTML/Attributes/rel/preload)
 - [dns 프리페치](/ko/docs/Web/HTML/Attributes/rel/dns-prefetch)
 - [페이지 예측](/ko/docs/Glossary/Page_prediction)
-- [지연 로딩](/ko/docs/Web/Performance/Lazy_loading)
+- [지연 로딩](/ko/docs/Web/Performance/Guides/Lazy_loading)

@@ -103,7 +103,7 @@ ACK이 수신되면 혼잡 윈도우(CWND)의 값이 두 배로 증가하여 서
 
 ### DOM 트리 구축(Building the DOM tree)
 
-[중요한 렌더링 경로](/ko/docs/Web/Performance/Critical_rendering_path)를 다섯 가지 단계로 설명합니다.
+[중요한 렌더링 경로](/ko/docs/Web/Performance/Guides/Critical_rendering_path)를 다섯 가지 단계로 설명합니다.
 
 첫 단계는 HTML을 처리하여 DOM 트리를 만드는 것입니다. HTML 구문 분석은 [토큰화](/ko/docs/Web/API/DOMTokenList)와 트리 생성을 포함합니다. HTML 토큰은 시작 및 종료 태그 그리고 속성 이름 및 값을 포함합니다. 만약 문서가 잘 구성되어 있다면 구문 분석은 명확하고 빠르게 이루어집니다. 구문 분석기는 토큰화된 입력을 분석하여 DOM 트리를 만듭니다.
 
