@@ -2,7 +2,7 @@
 title: CSS 行內排版
 slug: Web/CSS/CSS_inline_layout
 l10n:
-  sourceCommit: c037c6870bb89d81ccd9204809b06c92677c3a9a
+  sourceCommit: 113279ab09692d869866519106e25cba8a20abb8
 ---
 
 {{CSSRef}}
@@ -32,6 +32,11 @@ l10n:
 
 - {{glossary("baseline/typography", "基線")}}
 - {{glossary("leading", "行距")}}
+
+## 指南
+
+- [行內格式化內容](/zh-TW/docs/Web/CSS/CSS_inline_layout/Inline_formatting_context)
+- : 說明行內格式化內容。
 
 ## 相關概念
 
