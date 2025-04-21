@@ -1,6 +1,8 @@
 ---
 title: Battery Status API
 slug: Web/API/Battery_Status_API
+l10n:
+  sourceCommit: be8f7f155a48e11b30c240f8731afb1845f85378
 ---
 
 {{DefaultAPISidebar("Battery API")}}{{securecontext_header}}
