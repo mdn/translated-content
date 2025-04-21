@@ -42,11 +42,8 @@ slug: Web/SVG/Reference/Attribute/style
 - [Text content elements](/zh-CN/docs/Web/SVG/Reference/Element#textcontent) »
 - {{ SVGElement("clipPath") }}
 - {{ SVGElement("filter") }}
-- {{ SVGElement("font") }}
 - {{ SVGElement("foreignObject") }}
-- {{ SVGElement("glyphRef") }}
 - {{ SVGElement("stop") }}
-- {{ SVGElement("glyph") }}
 
 ## 规范
 

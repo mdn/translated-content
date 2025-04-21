@@ -13,14 +13,10 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ### A
 
-- {{SVGAttr("accent-height")}}
 - {{SVGAttr("accumulate")}}
 - {{SVGAttr("additive")}}
 - {{SVGAttr("alignment-baseline")}}
-- {{SVGAttr("alphabetic")}}
 - {{SVGAttr("amplitude")}}
-- {{SVGAttr("arabic-form")}}
-- {{SVGAttr("ascent")}}
 - {{SVGAttr("attributeName")}}
 - {{SVGAttr("attributeType")}}
 - {{SVGAttr("azimuth")}}
@@ -30,7 +26,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("baseFrequency")}}
 - {{SVGAttr("baseline-shift")}}
 - {{SVGAttr("baseProfile")}}
-- {{SVGAttr("bbox")}}
 - {{SVGAttr("begin")}}
 - {{SVGAttr("bias")}}
 - {{SVGAttr("by")}}
@@ -38,7 +33,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 ### C
 
 - {{SVGAttr("calcMode")}}
-- {{SVGAttr("cap-height")}}
 - {{SVGAttr("class")}}
 - {{SVGAttr("clip")}}
 - {{SVGAttr("clipPathUnits")}}
@@ -58,7 +52,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 - {{SVGAttr("d")}}
 - {{SVGAttr("decelerate")}}
-- {{SVGAttr("descent")}}
 - {{SVGAttr("diffuseConstant")}}
 - {{SVGAttr("direction")}}
 - {{SVGAttr("display")}}
@@ -99,28 +92,20 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ### G
 
-- {{SVGAttr("g1")}}
-- {{SVGAttr("g2")}}
-- {{SVGAttr("glyph-name")}}
 - {{SVGAttr("glyph-orientation-horizontal")}}
 - {{SVGAttr("glyph-orientation-vertical")}}
-- {{SVGAttr("glyphRef")}}
 - {{SVGAttr("gradientTransform")}}
 - {{SVGAttr("gradientUnits")}}
 
 ### H
 
-- {{SVGAttr("hanging")}}
 - {{SVGAttr("height")}}
 - {{SVGAttr("href")}}
 - {{SVGAttr("hreflang")}}
-- {{SVGAttr("horiz-adv-x")}}
-- {{SVGAttr("horiz-origin-x")}}
 
 ### I
 
 - {{SVGAttr("id")}}
-- {{SVGAttr("ideographic")}}
 - {{SVGAttr("image-rendering")}}
 - {{SVGAttr("in")}}
 - {{SVGAttr("in2")}}
@@ -128,7 +113,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ### K
 
-- {{SVGAttr("k")}}
 - {{SVGAttr("k1")}}
 - {{SVGAttr("k2")}}
 - {{SVGAttr("k3")}}
@@ -160,7 +144,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("mask")}}
 - {{SVGAttr("maskContentUnits")}}
 - {{SVGAttr("maskUnits")}}
-- {{SVGAttr("mathematical")}}
 - {{SVGAttr("max")}}
 - {{SVGAttr("media")}}
 - {{SVGAttr("method")}}
@@ -169,7 +152,6 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ### N
 
-- {{SVGAttr("name")}}
 - {{SVGAttr("numOctaves")}}
 
 ### O
@@ -179,15 +161,11 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("operator")}}
 - {{SVGAttr("order")}}
 - {{SVGAttr("orient")}}
-- {{SVGAttr("orientation")}}
 - {{SVGAttr("origin")}}
 - {{SVGAttr("overflow")}}
-- {{SVGAttr("overline-position")}}
-- {{SVGAttr("overline-thickness")}}
 
 ### P
 
-- {{SVGAttr("panose-1")}}
 - {{SVGAttr("paint-order")}}
 - {{SVGAttr("path")}}
 - {{SVGAttr("pathLength")}}
@@ -236,14 +214,9 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 - {{SVGAttr("spreadMethod")}}
 - {{SVGAttr("startOffset")}}
 - {{SVGAttr("stdDeviation")}}
-- {{SVGAttr("stemh")}}
-- {{SVGAttr("stemv")}}
 - {{SVGAttr("stitchTiles")}}
 - {{SVGAttr("stop-color")}}
 - {{SVGAttr("stop-opacity")}}
-- {{SVGAttr("strikethrough-position")}}
-- {{SVGAttr("strikethrough-thickness")}}
-- {{SVGAttr("string")}}
 - {{SVGAttr("stroke")}}
 - {{SVGAttr("stroke-dasharray")}}
 - {{SVGAttr("stroke-dashoffset")}}
@@ -274,41 +247,24 @@ SVG 元素可以通过属性来修改，这些属性指定有关如何处理或�
 
 ### U
 
-- {{SVGAttr("u1")}}
-- {{SVGAttr("u2")}}
-- {{SVGAttr("underline-position")}}
-- {{SVGAttr("underline-thickness")}}
-- {{SVGAttr("unicode")}}
 - {{SVGAttr("unicode-bidi")}}
-- {{SVGAttr("unicode-range")}}
-- {{SVGAttr("units-per-em")}}
 
 ### V
 
-- {{SVGAttr("v-alphabetic")}}
-- {{SVGAttr("v-hanging")}}
-- {{SVGAttr("v-ideographic")}}
-- {{SVGAttr("v-mathematical")}}
-- {{SVGAttr("values")}}
 - {{SVGAttr("vector-effect")}}
 - {{SVGAttr("version")}}
-- {{SVGAttr("vert-adv-y")}}
-- {{SVGAttr("vert-origin-x")}}
-- {{SVGAttr("vert-origin-y")}}
 - {{SVGAttr("viewBox")}}
 - {{SVGAttr("visibility")}}
 
 ### W
 
 - {{SVGAttr("width")}}
-- {{SVGAttr("widths")}}
 - {{SVGAttr("word-spacing")}}
 - {{SVGAttr("writing-mode")}}
 
 ### X
 
 - {{SVGAttr("x")}}
-- {{SVGAttr("x-height")}}
 - {{SVGAttr("x1")}}
 - {{SVGAttr("x2")}}
 - {{SVGAttr("xChannelSelector")}}
