@@ -96,7 +96,7 @@ Vary: Accept-Encoding,Cookie
 Age: 7
 
 <!doctype html>
-<html lang="en">
+<html lang="zh-Hant">
 <head>
   <meta charset="utf-8">
   <title>基本網頁</title>

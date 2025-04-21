@@ -97,7 +97,7 @@ function f(a = go()) {
   }
 }
 
-f(); // ReferenceError：go 未定義
+f(); // ReferenceError: go is not defined
 ```
 
 此函式將輸出*參數* `a` 的值，因為變數 `var a` 只被提升（hoist）至函式主體所建立的作用域頂端，而非參數清單所建立的父作用域，因此 `b` 無法存取該變數的值。
