@@ -31,13 +31,13 @@ l10n:
 > [!NOTE]
 > 在 {{domxref("AbortSignal")}} 參考中有更多範例。
 
-在以下範例中，我們嘗試使用 [Fetch API](/zh-TW/docs/Web/API/Fetch_API) 下載一個視訊。
+在以下範例中，我們嘗試使用 [Fetch API](/zh-TW/docs/Web/API/Fetch_API) 下載一個影片。
 
 我們首先使用 {{domxref("AbortController.AbortController","AbortController()")}} 建構子建立一個控制器，然後使用 {{domxref("AbortController.signal")}} 屬性獲取其關聯的 {{domxref("AbortSignal")}} 物件。
 
 當 [fetch 請求](/zh-TW/docs/Web/API/Window/fetch)被啟動時，我們將 `AbortSignal` 作為選項的一部分（如下的 `{signal}`）傳遞到請求的選項物件中。這將信號和控制器與 fetch 請求關聯起來，並允許我們通過調用 {{domxref("AbortController.abort()")}} 來中止它，如以下第二個事件監聽器所示。
 
-當 `abort()` 被調用時，`fetch()` 的 Promise 會以名為 `AbortError` 的 `DOMException` 被拒絕。
+當 `abort()` 被調用時，`fetch()` 的承諾會以名為 `AbortError` 的 `DOMException` 被拒絕。
 
 ```js
 let controller;
