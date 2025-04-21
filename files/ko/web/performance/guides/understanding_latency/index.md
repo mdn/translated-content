@@ -1,9 +1,7 @@
 ---
 title: 대기 시간(Latency) 이해하기
-slug: Web/Performance/Understanding_latency
+slug: Web/Performance/Guides/Understanding_latency
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 **대기 시간(Latency)** 이란 하나의 데이터 패킷이 출발지에서 도착지까지 가는 데 걸리는 시간을 뜻합니다. 성능 최적화에 있어서 대기 시간의 원인을 줄이는 것과 연결 상태가 좋지 않은 사용자를 고려하여 대기 시간이 긴 환경에서 사이트 성능을 테스트하는 것은 중요합니다. 이 글에서 대기 시간이 무엇인지, 대기 시간이 성능에 어떤 영향을 주는지, 이를 어떻게 측정하고 어떤 방법으로 줄일 수 있을지에 관해 설명합니다.
 

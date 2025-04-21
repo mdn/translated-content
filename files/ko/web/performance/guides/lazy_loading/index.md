@@ -1,11 +1,9 @@
 ---
 title: 지연 로딩
-slug: Web/Performance/Lazy_loading
+slug: Web/Performance/Guides/Lazy_loading
 l10n:
   sourceCommit: 0c45d0d3ec3e3eeb80fcf2101a30704dae7c8ee9
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 **지연 로딩**은 리소스를 논 블로킹(중요하지 않음)으로 식별하여 필요할 때만 로드하는 전략입니다. 이는 [중요 렌더링 경로](/ko/docs/Web/Performance/Critical_rendering_path)의 길이를 단축하는 방법으로, 페이지 로드 시간을 감소시킬 수 있습니다.
 

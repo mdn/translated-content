@@ -1,11 +1,9 @@
 ---
 title: 성능 예산
-slug: Web/Performance/Performance_budgets
+slug: Web/Performance/Guides/Performance_budgets
 l10n:
   sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
-
-{{QuickLinksWithSubPages("Web/Performance")}}
 
 성능 예산은 성능 저하를 방지하기 위한 제한입니다. 이는 특정 파일, 확장자, 페이지에서 로드되는 모든 파일, [Time to Interactive](/ko/docs/Glossary/Time_to_interactive) 같은 특정 지표, Time to Hero Element 같은 사용자 정의 지표, 또는 일정 기간 동안의 걸친 임계값에 적용할 수 있습니다.
 

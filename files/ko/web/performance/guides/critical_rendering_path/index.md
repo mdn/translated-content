@@ -1,7 +1,6 @@
 ---
 title: 중요 렌더링 경로
-slug: Web/Performance/Critical_rendering_path
-sidebar: performancesidebar
+slug: Web/Performance/Guides/Critical_rendering_path
 l10n:
   sourceCommit: 31ff21cf5f083a3258fc04267d54b1fb72224ff6
 ---
