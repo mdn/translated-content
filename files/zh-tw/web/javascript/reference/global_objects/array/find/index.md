@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-{{jsxref("Array")}} 實例的 **`find()`** 方法會回傳在提供的陣列中，第一個通過所提供測試函式的元素。如果沒有任何值通過測試函式，則回傳 {{jsxref("undefined")}}。
+{{jsxref("Array")}} 實例的 **`find()`** 方法會回傳在提供的陣列中第一個通過所提供測試函式的元素。如果沒有任何值通過測試函式，則回傳 {{jsxref("undefined")}}。
 
 - 如果你需要取得該元素在陣列中的**索引**，請使用 {{jsxref("Array/findIndex", "findIndex()")}}。
 - 如果你需要找出某個**特定值的索引**，請使用 {{jsxref("Array/indexOf", "indexOf()")}}。（這與 {{jsxref("Array/findIndex", "findIndex()")}} 類似，但它是透過值的相等性來檢查每個元素，而非使用測試函式。）
@@ -36,15 +36,15 @@ find(callbackFn, thisArg)
 ### 參數
 
 - `callbackFn`
-  : 會對陣列中的每個元素執行的函式。此函式應回傳 [truthy](/zh-TW/docs/Glossary/Truthy) 值以指出找到符合條件的元素，否則應回傳 [falsy](/zh-TW/docs/Glossary/Falsy) 值。此函式會傳入以下引數：
+  - : 會對陣列中的每個元素執行的函式。此函式應回傳[真](/zh-TW/docs/Glossary/Truthy)值以指出找到符合條件的元素，否則應回傳[假](/zh-TW/docs/Glossary/Falsy)值。此函式被呼叫時可以傳入以下引數：
   - `element`
-    : 目前正在處理的元素。
+    - : 陣列中目前正在處理的元素。
   - `index`
-    : 目前正在處理的元素的索引。
+    - : 陣列中目前正在處理的元素的索引。
   - `array`
-    : 呼叫 `find()` 的陣列。
+    - : 呼叫 `find()` 的陣列。
 - `thisArg` {{optional_inline}}
-  : 執行 `callbackFn` 時用作 `this` 的值。請參見[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
+  - : 執行 `callbackFn` 時用作 `this` 的值。請參見[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。
 
 ### 回傳值
 
@@ -52,9 +52,9 @@ find(callbackFn, thisArg)
 
 ## 描述
 
-`find()` 方法是一個[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它會以索引遞增順序對陣列中的每個元素執行一次所提供的 `callbackFn` 函式，直到 `callbackFn` 回傳一個 [truthy](/zh-TW/docs/Glossary/Truthy) 值。此時，`find()` 會回傳該元素並停止迭代陣列。若 `callbackFn` 未曾回傳 truthy 值，則 `find()` 會回傳 {{jsxref("undefined")}}。請參閱[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)部分以深入了解這些方法的運作方式。
+`find()` 方法是一個[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)。它會以索引遞增順序對陣列中的每個元素執行一次所提供的 `callbackFn` 函式，直到 `callbackFn` 回傳一個[真](/zh-TW/docs/Glossary/Truthy)值。此時，`find()` 會回傳該元素並停止迭代陣列。若 `callbackFn` 未曾回傳真值，則 `find()` 會回傳 {{jsxref("undefined")}}。請參閱[迭代方法](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#迭代方法)部分以深入了解這些方法的運作方式。
 
-`callbackFn` 會針對陣列中**每個索引**執行一次，不僅限於已被賦值的索引。[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏陣列)中的空槽會視為 `undefined`，行為將會相同。
+`callbackFn` 會針對陣列中*每個*索引執行一次，不僅限於已被賦值的索引。[稀疏陣列](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections#稀疏陣列)中的空槽會視為 `undefined`，行為將會相同。
 
 `find()` 方法是[通用的](/zh-TW/docs/Web/JavaScript/Reference/Global_Objects/Array#通用陣列方法)。它只要求 `this` 具有 `length` 屬性以及整數鍵屬性即可。
 
@@ -129,7 +129,7 @@ console.log(firstTrough); // 1
 
 ### 在稀疏陣列中使用 find()
 
-稀疏陣列中的空槽**仍會被訪問**，其行為與 `undefined` 相同。
+稀疏陣列中的空槽*仍會*被訪問，並被視為與 `undefined` 相同。
 
 ```js
 // 宣告在索引 2、3、4 處無元素的陣列
@@ -193,9 +193,9 @@ console.log(Array.prototype.find.call(arrayLike, (x) => !Number.isInteger(x)));
 
 ## 參見
 
-- [在 `core-js` 中 `Array.prototype.find` 的 Polyfill](https://github.com/zloirock/core-js#ecmascript-array)
+- [在 `core-js` 中 `Array.prototype.find` 的 polyfill](https://github.com/zloirock/core-js#ecmascript-array)
 - [`Array.prototype.find` 的 es-shims polyfill](https://www.npmjs.com/package/array.prototype.find)
-- [索引集合](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections)教學
+- [索引集合](/zh-TW/docs/Web/JavaScript/Guide/Indexed_collections)指南
 - {{jsxref("Array")}}
 - {{jsxref("Array.prototype.findIndex()")}}
 - {{jsxref("Array.prototype.findLast()")}}
