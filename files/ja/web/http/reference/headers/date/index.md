@@ -8,7 +8,7 @@ original_slug: Web/HTTP/Headers/Date
 
 **`Date`** は HTTP の一般ヘッダーで、メッセージが発信された日時が含まれています。
 
-> **警告:** `Date` は fetch 仕様書において[禁止ヘッダー名](https://fetch.spec.whatwg.org/#forbidden-header-name)に挙げられています。 - そのため、このコードは `Date` ヘッダーを送信しません。
+> **警告:** `Date` は fetch 仕様書において[禁止リクエストヘッダー](https://fetch.spec.whatwg.org/#forbidden-header-name)に挙げられています。 - そのため、このコードは `Date` ヘッダーを送信しません。
 >
 > ```js
 > fetch("https://httpbin.org/get", {
@@ -28,7 +28,7 @@ original_slug: Web/HTTP/Headers/Date
     </tr>
     <tr>
       <th scope="row">
-        {{Glossary("Forbidden header name", "禁止ヘッダー名")}}
+        {{Glossary("Forbidden request header", "禁止リクエストヘッダー")}}
       </th>
       <td>はい</td>
     </tr>

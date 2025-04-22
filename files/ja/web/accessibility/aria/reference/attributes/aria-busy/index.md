@@ -72,5 +72,5 @@ console.log(el.ariaBusy); // true
 
 - [ARIA ライブリージョン](/ja/docs/Web/Accessibility/ARIA/Guides/Live_regions)
 - [`aria-live`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-live)
-- [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-relevant)
+- [`aria-relevant`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-relevant)
 - [`aria-atomic`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-atomic)

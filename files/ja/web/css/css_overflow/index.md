@@ -65,7 +65,7 @@ l10n:
 - {{cssxref("scroll-snap-type")}} プロパティ
 - {{cssxref("text-overflow")}} プロパティ
 - {{CSSxRef("::-webkit-scrollbar")}} 擬似要素
-- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Roles/scrollbar_role) ARIA ロール
+- [`scrollbar`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/scrollbar_role) ARIA ロール
 - Element の {{domxref("Element.scroll", "scroll()")}} メソッド
 - Element の {{domxref("Element.scrollBy", "scrollBy()")}} メソッド
 - Element の {{domxref("Element.scrollIntoView", "scrollIntoView()")}} メソッド

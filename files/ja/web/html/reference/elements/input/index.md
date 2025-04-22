@@ -1,9 +1,8 @@
 ---
 title: "<input>: HTML 入力要素"
 slug: Web/HTML/Reference/Elements/input
-original_slug: Web/HTML/Element/input
 l10n:
-  sourceCommit: 41f2977624562dde84c0ef5956a80ee2575c80f0
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -561,7 +560,10 @@ label {
 
 - `popovertarget`
 
-  - : `<input type="button">` をポップオーバー制御ボタンにします。制御するポップオーバー要素の ID を値として取ります。詳細は{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} のランディングページを参照してください。
+  - : `<input type="button">` をポップオーバー制御ボタンにします。制御するポップオーバー要素の ID を値として取ります。詳細は{{domxref("Popover API", "ポップオーバー API", "", "nocode")}} のランディングページを参照してください。 `popovertarget` 属性を使用してポップオーバーとその呼び出しボタンを関連付けると、さらに 2 つの有益な効果があります。
+
+    - ブラウザーは、ポップオーバーと呼び出し元の間に、暗黙的な [`aria-details`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-details) および [`aria-expanded`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-expanded) の関係を生成し、ポップオーバーを表示させる際には、キーボードフォーカスナビゲーションの論理的な位置にポップオーバーを配置します。これにより、キーボードや支援技術 (AT) のユーザーにとって、ポップオーバーがよりアクセスしやすくなります（[ポップオーバーのアクセシビリティ機能](/ja/docs/Web/API/Popover_API/Using#popover_accessibility_features)も参照してください）。
+    - ブラウザーは、 2 つの間に暗黙的なアンカー参照を作成し、 [CSS アンカー位置指定](/ja/docs/Web/CSS/CSS_anchor_positioning)を使用して、ポップオーバーをそのコントローラーに対して相対的に配置することをとても便利にします。詳細は、[ポップオーバーのアンカー位置指定](/ja/docs/Web/API/Popover_API/Using#popover_anchor_positioning)を参照してください。
 
 - `popovertargetaction`
 
@@ -657,7 +659,7 @@ label {
     <tr>
       <td><code>mozactionhint</code> {{deprecated_inline}}</td>
       <td>
-        <p>文字列で、ユーザーがフィールドの編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押したときに実行されるアクションの種類を示す文字列です。仮想キーボード上で、そのキーに対応する適切なラベルを決定するために使用されます。 <strong>この属性は非推奨になりましたので、代わりに <a href="/ja/docs/Web/HTML/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> を使用してください。</strong></p>
+        <p>文字列で、ユーザーがフィールドの編集中に <kbd>Enter</kbd> キーや <kbd>Return</kbd> キーを押したときに実行されるアクションの種類を示す文字列です。仮想キーボード上で、そのキーに対応する適切なラベルを決定するために使用されます。 <strong>この属性は非推奨になりましたので、代わりに <a href="/ja/docs/Web/HTML/Reference/Global_attributes/enterkeyhint"><code>enterkeyhint</code></a> を使用してください。</strong></p>
       </td>
     </tr>
     <tr>
@@ -848,7 +850,7 @@ label {
     <tr>
       <td>{{Cssxref(":open")}}</td>
       <td>
-        ユーザーが値を選択するピッカーを表示する <code>&lt;input&gt;</code> 要素（<a href="/ja/docs/Web/HTML/Element/input/color"><code>&lt;input type="color"&gt;</code></a> など）のみで、要素が開いている状態、すなわちピッカーが表示されている状態の場合。
+        ユーザーが値を選択するピッカーを表示する <code>&lt;input&gt;</code> 要素（<a href="/ja/docs/Web/HTML/Reference/Elements/input/color"><code>&lt;input type="color"&gt;</code></a> など）のみで、要素が開いている状態、すなわちピッカーが表示されている状態の場合。
       </td>
     </tr>
   </tbody>
@@ -947,7 +949,7 @@ input.custom {
 
 ### object-position と object-fit
 
-`<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）（には、[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
+`<input>` 要素は特定の場合（多くはテキスト以外の入力や特殊なインターフェイス）（には、{{ glossary("replaced elements", "置換要素")}}になることがあります。その場合、CSS の {{cssxref("object-position")}} および {{cssxref("object-fit")}} プロパティを使って、要素の枠内での大きさと位置を調整することができます。
 
 ### スタイル設定
 
@@ -1018,7 +1020,7 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 <input type="time" min="20:00" max="08:00" name="overnight" />
 ```
 
-決まった属性と値の組み合わせが、{{domxref('ValidityState')}} の決まったエラーを発生させます。
+決まった属性と値の組み合わせが、{{domxref('validityState')}} の決まったエラーを発生させます。
 
 <table class="no-markdown">
   <caption>
@@ -1034,56 +1036,56 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
   <tbody>
     <tr>
       <td><a href="#max"><code>max</code></a></td>
-      <td>{{domxref('ValidityState.rangeOverflow')}}</td>
+      <td>{{domxref('validityState.rangeOverflow')}}</td>
       <td>
         値が <code>max</code> 属性で定義された最大値よりも大きい場合に発生する
       </td>
     </tr>
     <tr>
       <td><a href="#maxlength"><code>maxlength</code></a></td>
-      <td>{{domxref('ValidityState.tooLong')}}</td>
+      <td>{{domxref('validityState.tooLong')}}</td>
       <td>
         <code>maxlength</code> プロパティで許可された値よりも文字数が多い場合に発生する
       </td>
     </tr>
     <tr>
       <td><a href="#min"><code>min</code></a></td>
-      <td>{{domxref('ValidityState.rangeUnderflow')}}</td>
+      <td>{{domxref('validityState.rangeUnderflow')}}</td>
       <td>
         値が <code>min</code> 属性で定義された最小値よりも小さい場合には発生する
       </td>
     </tr>
     <tr>
       <td><a href="#minlength"><code>minlength</code></a></td>
-      <td>{{domxref('ValidityState.tooShort')}}</td>
+      <td>{{domxref('validityState.tooShort')}}</td>
       <td>
         <code>minlength</code> プロパティで必要とされる値よりも文字数が少ない場合に発生する
       </td>
     </tr>
     <tr>
       <td><a href="#pattern"><code>pattern</code></a></td>
-      <td>{{domxref('ValidityState.patternMismatch')}}</td>
+      <td>{{domxref('validityState.patternMismatch')}}</td>
       <td>
         pattern 属性に有効な正規表現が設定されており、<code>value</code> がそれに一致しない場合に発生する。
       </td>
     </tr>
     <tr>
       <td><a href="#required"><code>required</code></a></td>
-      <td>{{domxref('ValidityState.valueMissing')}}</td>
+      <td>{{domxref('validityState.valueMissing')}}</td>
       <td>
         <code>required</code> 属性があるにもかかわらず、値が <code>null</code> であるか、ラジオボタンやチェックボックスがチェックされていない場合に発生する。
       </td>
     </tr>
     <tr>
       <td><a href="#step"><code>step</code></a></td>
-      <td>{{domxref('ValidityState.stepMismatch')}}</td>
+      <td>{{domxref('validityState.stepMismatch')}}</td>
       <td>
         値が step の増分に一致していない。増分の既定値は <code>1</code> であるため、<code>type="number"</code> で step が指定されていない場合は整数のみが有効になります。<code>step="any"</code> ではこのエラーは発生しません。
       </td>
     </tr>
     <tr>
       <td><a href="#type"><code>type</code></a></td>
-      <td>{{domxref('ValidityState.typeMismatch')}}</td>
+      <td>{{domxref('validityState.typeMismatch')}}</td>
       <td>
         値が正しい型ではない場合、例えばメールアドレスに <code>@</code> が含まれていない場合や、URL にプロトコルが含まれていない場合に発生します。
       </td>
@@ -1097,17 +1099,17 @@ HTML の要素に色を追加することの関する詳しい情報は、次の
 
 上記の表で説明したエラーに加え、`validityState` インターフェイスには `badInput`, `valid`, `customError` の論理型の読み取り専用プロパティがあります。検証オブジェクトに含まれるのは次の通りです。
 
-- {{domxref('ValidityState.valueMissing')}}
-- {{domxref('ValidityState.typeMismatch')}}
-- {{domxref('ValidityState.patternMismatch')}}
-- {{domxref('ValidityState.tooLong')}}
-- {{domxref('ValidityState.tooShort')}}
-- {{domxref('ValidityState.rangeUnderflow')}}
-- {{domxref('ValidityState.rangeOverflow')}}
-- {{domxref('ValidityState.stepMismatch')}}
-- {{domxref('ValidityState.badInput')}}
-- {{domxref('ValidityState', 'validityState.valid')}}
-- {{domxref('ValidityState', 'validityState.customError')}}
+- {{domxref('validityState.valueMissing')}}
+- {{domxref('validityState.typeMismatch')}}
+- {{domxref('validityState.patternMismatch')}}
+- {{domxref('validityState.tooLong')}}
+- {{domxref('validityState.tooShort')}}
+- {{domxref('validityState.rangeUnderflow')}}
+- {{domxref('validityState.rangeOverflow')}}
+- {{domxref('validityState.stepMismatch')}}
+- {{domxref('validityState.badInput')}}
+- {{domxref('validityState', 'validityState.valid')}}
+- {{domxref('validityState', 'validityState.customError')}}
 
 これらの論理型プロパティではそれぞれ、`true` の値で指定された観点の検証に合格しなかった可能性があることを示しますが、`valid` プロパティは例外で、その要素の値がすべての検証に合格したときに `true` になります。
 
@@ -1219,10 +1221,10 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories">コンテツカテゴリー</a>
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories">コンテツカテゴリー</a>
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ">フローコンテンツ</a>、リスト化、サブミット可能、リセット可能、フォーム関連要素、<a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>。<a href="#type"><code>type</code></a> の値が <code>hidden</code> でない場合はラベル付け可能要素、知覚可能コンテンツ。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ">フローコンテンツ</a>、リスト化、サブミット可能、リセット可能、フォーム関連要素、<a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>。<a href="#type"><code>type</code></a> の値が <code>hidden</code> でない場合はラベル付け可能要素、知覚可能コンテンツ。
       </td>
     </tr>
     <tr>
@@ -1236,7 +1238,7 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ">記述コンテンツ</a>を受け入れるすべての要素。
       </td>
     </tr>
     <tr>
@@ -1245,61 +1247,61 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
         <ul>
           <li>
             <code>type=button</code>:
-            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
           </li>
           <li>
             <code>type=checkbox</code>:
-            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role">checkbox</a></code>
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role">checkbox</a></code>
           </li>
           <li>
             <code>type=email</code>
             <ul>
               <li>
                 <code>list</code> 属性なし:
-                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
           <li>
             <code>type=image</code>:
-            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
           </li>
           <li>
-            <code>type=number</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role"><code>spinbutton</code></a>
+            <code>type=number</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
-          <li><code>type=radio</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a></li>
-          <li><code>type=range</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/slider_role"><code>slider</code></a></li>
+          <li><code>type=radio</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a></li>
+          <li><code>type=range</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/slider_role"><code>slider</code></a></li>
           <li>
             <code>type=reset</code>:
-            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
           </li>
           <li>
             <code>type=search</code>
             <ul>
               <li>
-                <code>list</code> 属性なし: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>
+                <code>list</code> 属性なし: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role"><code>searchbox</code></a>
               </li>
               <li>
-                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
           <li>
             <code>type=submit</code>:
-            <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role">button</a></code>
+            <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role">button</a></code>
           </li>
           <li>
             <code>type=tel</code>
             <ul>
               <li>
                 <code>list</code> 属性なし:
-                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1308,10 +1310,10 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
             <ul>
               <li>
                 <code>list</code> 属性なし:
-                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1320,10 +1322,10 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
             <ul>
               <li>
                 <code>list</code> 属性なし:
-                <code><a href="/ja/docs/Web/Accessibility/ARIA/Roles/textbox_role">textbox</a></code>
+                <code><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/textbox_role">textbox</a></code>
               </li>
               <li>
-                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>
+                <code>list</code> 属性あり: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>
               </li>
             </ul>
           </li>
@@ -1339,34 +1341,34 @@ Firefox は（少なくとも `type="number"` において）ユーザーの入�
       <td>
         <ul>
           <li>
-            <code>type=button</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/checkbox_role"><code>checkbox</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>
+            <code>type=button</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/checkbox_role"><code>checkbox</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>
           </li>
           <li>
-            <code>type=checkbox</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/button_role"><code>button</code></a> ただし <code>aria-pressed</code>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a> と共に使用された場合
+            <code>type=checkbox</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role"><code>button</code></a> ただし <code>aria-pressed</code>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a> と共に使用された場合
           </li>
           <li>
-            <code>type=image</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/link_role"><code>link</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/switch_role"><code>switch</code></a>
+            <code>type=image</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/link_role"><code>link</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/switch_role"><code>switch</code></a>
           </li>
           <li>
-            <code>type=radio</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>
+            <code>type=radio</code>: <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>
           </li>
           <li>
             <code>type=text</code> で <code>list</code> 属性なし:
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/combobox_role"><code>combobox</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/searchbox_role"><code>searchbox</code></a>,
-            <a href="/ja/docs/Web/Accessibility/ARIA/Roles/spinbutton_role"><code>spinbutton</code></a>
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/combobox_role"><code>combobox</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/searchbox_role"><code>searchbox</code></a>,
+            <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/spinbutton_role"><code>spinbutton</code></a>
           </li>
           <li>
             <code>type=color|date|datetime-local|email|file|hidden|</code>

@@ -111,7 +111,7 @@ l10n:
 
 - FLAC コンテナーおよび Ogg コンテナーの FLAC ([FLAC コーデック](https://xiph.org/flac/index.html)) をサポートしました ([Firefox バグ 1195723](https://bugzil.la/1195723))。サポートする FLAC の MIME タイプは、`audio/flac` および `audio/x-flac` です。Ogg コンテナーの FLAC でサポートする MIME タイプは、`audio/ogg; codecs=flac` および `video/ogg; codecs=flac` です。
 - MP4 で FLAC をサポートしました (MSE の有無にかかわらず) ([Firefox バグ 1303888](https://bugzil.la/1303888))。
-- Firefox 50 で、{{domxref("setInterval()")}} および {{domxref("setTimeout()")}} で作成したタイマーをバッググラウンドのタブで抑制する機能は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("AudioContext")}} がアクティブで音声を再生しているときに実施しないようになりました。しかし、これはタイミングに敏感な音声再生 (タイマーを使用して個々の音を生成する音楽プレイヤーなど) が正しく動作しない問題を、すべての状況では解決できませんでした。このため、Firefox 51 では音声を再生していない場合でも {{domxref("AudioContext")}} が存在するバックグラウンドタブで抑制しないようになりました。
+- Firefox 50 で、{{domxref("Window.setInterval", "setInterval()")}} および {{domxref("Window.setTimeout", "setTimeout()")}} で作成したタイマーをバッググラウンドのタブで抑制する機能は、[ウェブオーディオ API](/ja/docs/Web/API/Web_Audio_API) の {{domxref("AudioContext")}} がアクティブで音声を再生しているときに実施しないようになりました。しかし、これはタイミングに敏感な音声再生 (タイマーを使用して個々の音を生成する音楽プレイヤーなど) が正しく動作しない問題を、すべての状況では解決できませんでした。このため、Firefox 51 では音声を再生していない場合でも {{domxref("AudioContext")}} が存在するバックグラウンドタブで抑制しないようになりました。
 
 ### DOM
 

@@ -262,7 +262,7 @@ details > p {
     </tr>
     <tr>
       <th scope="row">暗黙的な ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/group_role"><code>group</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/group_role"><code>group</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
