@@ -34,8 +34,8 @@ WebAssembly.compile(bufferSource, compileOptions)
 
 ### 异常
 
-- 如果 `bufferSource` 不是一个[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}}，则返回用 {{jsxref("TypeError")}} 拒绝的 promise。
-- 如果编译失败，则返回用 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError) 拒绝的 promise。
+- 如果 `bufferSource` 不是一个[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}}，则 promise 将会以 {{jsxref("TypeError")}} 拒绝。
+- 如果编译失败，则 promise 将会以 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError) 拒绝。
 
 ## 示例
 
