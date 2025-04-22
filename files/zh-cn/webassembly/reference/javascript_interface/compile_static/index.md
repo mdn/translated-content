@@ -5,12 +5,10 @@ l10n:
   sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
-**`WebAssembly.compile()`** 静态方法将 WebAssembly 二进制代码编译为一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
-如果在实例化模块之前必须要对其进行编译，那么这个函数就是有用的（否则，应该使用 [`WebAssembly.instantiate()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) 函数）。
+**`WebAssembly.compile()`** 静态方法将 WebAssembly 二进制代码编译为一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。如果在实例化模块之前必须要对其进行编译，那么这个函数很有帮助（否则，应该使用 [`WebAssembly.instantiate()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiate_static) 函数）。
 
 > [!NOTE]
-> 有严格[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)的网页可能会阻止 WebAssembly 编译和执行模块。
-> 与允许 WebAssembly 编译和执行有关的额外信息，参见 [script-src CSP](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)。
+> 有严格[内容安全策略（CSP）](/zh-CN/docs/Web/HTTP/Guides/CSP)的网页可能会阻止 WebAssembly 编译和执行模块。与允许 WebAssembly 编译和执行有关的额外信息，参见 [script-src CSP](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Security-Policy/script-src)。
 
 ## 语法
 
@@ -22,9 +20,9 @@ WebAssembly.compile(bufferSource, compileOptions)
 ### 参数
 
 - `bufferSource`
-  - : 一个[类型数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}}，包含的是你想编译的 Wasm 模块的二进制代码。
+  - : 一个[类型化数组](/zh-CN/docs/Web/JavaScript/Guide/Typed_arrays)或 {{jsxref("ArrayBuffer")}}，包含你想编译的 Wasm 模块的二进制代码。
 - `compileOptions` {{optional_inline}}
-  - : 一个对象，包含的是编译选项。属性包括：
+  - : 一个编译选项的对象。属性包括：
     - `builtins` {{optional_inline}}
       - : 一个由一个或多个字符串组成的数组，用于在编译的 Wasm 模块中启用 [JavaScript 内置功能](/zh-CN/docs/WebAssembly/Guides/JavaScript_builtins)。字符串定义你想启用的内置功能。当前，唯一可用的值是 `"js-string"`，启用的是 JavaScript 字符串内置功能。
     - `importedStringConstants` {{optional_inline}}
@@ -32,7 +30,7 @@ WebAssembly.compile(bufferSource, compileOptions)
 
 ### 返回值
 
-一个 `Promise`，解析为能够表示已编译模块的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
+一个 `Promise`，兑现为表示已编译模块的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象。
 
 ### 异常
 
