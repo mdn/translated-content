@@ -16,7 +16,7 @@ MDN Web Docs 內容免費提供，並採用各種開源授權條款。
 > [!NOTE]
 > MDN Web Docs 的內容由 Mozilla 內部與外部的作者共同撰寫。除非另有說明，否則內容皆以 [Creative Commons Attribution-ShareAlike license](https://creativecommons.org/licenses/by-sa/2.5/)（CC-BY-SA）第 2.5 版或任何後續版本授權。
 
-你再使用這裡的內容時，必須以相同的授權條款（CC-BY-SA v2.5 或任何後續版本）發布。當你再使用 MDN Web Docs 的內容時，必須確保[提供著作者標示](https://creativecommons.org/licenses/by/2.5/deed.en#ref-appropriate-credit)，並註明「Mozilla Contributors」。良好的標示方式為**文件標題**，並加上超連結（線上）或網址（印刷品）指向所引用內容的特定頁面，並簡要說明你所做的修改。例如，若要對本頁內容提供著作者標示，你可以寫：
+你再使用這裡的內容時，必須以相同的授權條款（CC-BY-SA v2.5 或任何後續版本）發布。當你再使用 MDN Web Docs 的內容時，必須確保[提供著作者標示](https://creativecommons.org/licenses/by/2.5/deed.en#ref-appropriate-credit)，並註明「Mozilla Contributors」。良好的標示方式為文件**標題**，並加上超連結（線上）或網址（印刷品）指向所引用內容的特定頁面，並簡要說明你所做的修改。例如，若要對本頁內容提供著作者標示，你可以寫：
 
 > [「著作者標示與著作權授權」](/zh-TW/docs/MDN/Writing_guidelines/Attrib_copyright_license) by Mozilla Contributors，依 [CC-BY-SA 2.5](https://creativecommons.org/licenses/by-sa/2.5/) 授權。
 
