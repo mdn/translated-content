@@ -10,7 +10,7 @@ l10n:
 {{domxref("Blob")}} 介面的 **`type`** 唯讀屬性回傳檔案的 {{Glossary("MIME type", "MIME 類型")}}。
 
 > [!NOTE]
-> 根據目前的實作，瀏覽器實際上不會讀取檔案的位元流來判斷其媒體類型，而是根據檔案的副檔名來推測。例如，將 PNG 圖片檔案重新命名為 .txt，會回傳「*text/plain*」而非「*image/png*」。此外，`blob.type` 通常僅對常見的檔案類型（如圖片、HTML 文件、音訊和視訊）可靠。不常見的副檔名會回傳空字串。用戶端的組態（例如 Windows 登錄檔）可能導致即使是常見類型也會回傳非預期的值。**建議開發者不要僅依賴此屬性作為驗證的唯一依據。**
+> 根據目前的實作，瀏覽器實際上不會讀取檔案的位元流來判斷其媒體類型，而是根據檔案的副檔名來推測。例如，將 PNG 圖片檔案重新命名為 .txt，會回傳「_text/plain_」而非「_image/png_」。此外，`blob.type` 通常僅對常見的檔案類型（如圖片、HTML 文件、音訊和視訊）可靠。不常見的副檔名會回傳空字串。用戶端的組態（例如 Windows 登錄檔）可能導致即使是常見類型也會回傳非預期的值。**建議開發者不要僅依賴此屬性作為驗證的唯一依據。**
 
 ## 值
 
@@ -54,9 +54,7 @@ input.addEventListener("change", (event) => {
   const allAllowed = Array.from(files).every((file) =>
     allowedFileTypes.includes(file.type),
   );
-  output.innerText = allAllowed
-    ? "所有檔案均符合！"
-    : "請僅選擇圖片檔案。";
+  output.innerText = allAllowed ? "所有檔案均符合！" : "請僅選擇圖片檔案。";
 });
 ```
 
