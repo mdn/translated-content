@@ -5,7 +5,7 @@ l10n:
   sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
 ---
 
-**`nop`** 代表 no-operation，就是字面意思什么也不做。
+**`nop`** 代表没有操作（no-operation）。就是字面意思什么也不做。
 
 {{InteractiveExample("Wat Demo: nop", "tabbed-shorter")}}
 
