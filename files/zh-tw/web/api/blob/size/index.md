@@ -20,8 +20,7 @@ l10n:
 ### HTML
 
 ```html
-<input type="file" id="input" multiple />
-<output id="output">選擇檔案…</output>
+<input type="file" id="input" multiple /> <output id="output">選擇檔案…</output>
 ```
 
 ```css hidden
