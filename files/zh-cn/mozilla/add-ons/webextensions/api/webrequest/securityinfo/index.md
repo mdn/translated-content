@@ -39,7 +39,7 @@ l10n:
     需要注意，你现在只能在 `onHeaderReceived` 监听器中调用 `getSecurityInfo()`，并且在握手失败时不会触发 `onHeaderReceived` 事件。因此在现实中该属性将不会被设置。
 
 - `hsts` {{optional_inline}}
-  - : `Boolean`。如果主机使用[严格传输安全](/zh-CN/docs/Web/HTTP/Headers/Strict-Transport-Security)则为 `true`，否则为 `false`。
+  - : `Boolean`。如果主机使用[严格传输安全](/zh-CN/docs/Web/HTTP/Reference/Headers/Strict-Transport-Security)则为 `true`，否则为 `false`。
 - `isDomainMismatch` {{optional_inline}}
   - : `Boolean`。如果服务器的域名与其证书中的域名不匹配则为 `true`，否则为 `false`。
 - `isExtendedValidation` {{optional_inline}}
