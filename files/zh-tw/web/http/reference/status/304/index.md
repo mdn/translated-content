@@ -9,7 +9,7 @@ l10n:
 
 HTTP **`304 Not Modified`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#重新導向訊息)狀態碼表示不需要重新傳送請求的資源。
 
-此狀態碼會在請求為[條件的](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests) {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} 請求，且帶有 {{HTTPHeader("If-None-Match")}} 或 {{HTTPHeader("If-Modified-Since")}} 標頭，且條件判斷為「false」時傳送。這代表用戶端快取的資源仍然有效，如果條件為「true」則伺服器會回傳 {{HTTPStatus("200", "200 OK")}} 回應與資源。請參考 [HTTP 快取](/zh-TW/docs/Web/HTTP/Guides/Caching)以取得更多資訊。
+此狀態碼會在請求為帶有 {{HTTPHeader("If-None-Match")}} 或 {{HTTPHeader("If-Modified-Since")}} 標頭的 {{HTTPMethod("GET")}} 或 {{HTTPMethod("HEAD")}} [條件](/zh-TW/docs/Web/HTTP/Guides/Conditional_requests)請求，且條件判斷為「false」時傳送。這代表用戶端快取的資源仍然有效，如果條件為「true」則伺服器會回傳 {{HTTPStatus("200", "200 OK")}} 回應與資源。請參考 [HTTP 快取](/zh-TW/docs/Web/HTTP/Guides/Caching)以取得更多資訊。
 
 此回應不得包含主體，且必須包含與等同 {{HTTPStatus("200")}} 回應相同的標頭，例如：
 
@@ -35,7 +35,7 @@ HTTP **`304 Not Modified`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/
 
 下方範例展示使用 [curl](https://curl.se/) 搭配條件請求標頭的 {{HTTPMethod("GET")}} 請求。`--http1.1` 參數用於強制使用 HTTP/1.1 協定以便閱讀。
 
-第一個請求使用 `If-Modified-Since` 條件，日期設為未來的 2050 年 11 月 21 日。這個條件必然為「false」，因為資源不可能在未來的時間之後被更新：
+第一個請求使用 `If-Modified-Since` 條件，日期設為未來的 2050 年 11 月 21 日。這個條件必然為「false」，因為資源不可能在尚未發生的時間之後被更新：
 
 ```bash
 curl --http1.1 -I --header 'If-Modified-Since: Tue, 21 Nov 2050 08:00:00 GMT' \
@@ -83,7 +83,7 @@ Accept: */*
 If-None-Match: "b20a0973b226eeea30362acb81f9e0b3"
 ```
 
-由於 etag 值在請求時相符，條件判斷失敗，因此會回傳 `304` 回應：
+由於 `etag` 值在請求時相符，條件判斷失敗，因此會回傳 `304` 回應：
 
 ```http
 HTTP/1.1 304 Not Modified
