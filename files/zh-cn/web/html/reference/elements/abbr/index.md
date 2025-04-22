@@ -2,7 +2,7 @@
 title: <abbr>：缩写元素
 slug: Web/HTML/Reference/Elements/abbr
 l10n:
-  sourceCommit: fdd3ac5598c3ddceb71e59949b003936ae99f647
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -17,10 +17,10 @@ l10n:
 
 ```html interactive-example
 <p>
-  You can use <abbr>CSS</abbr> (Cascading Style Sheets) to style your
-  <abbr>HTML</abbr> (HyperText Markup Language). Using style sheets, you can
-  keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content
-  layer separate. This is called "separation of concerns."
+  你可以使用 <abbr>CSS</abbr>（层叠样式表）来为
+  <abbr>HTML</abbr>（超文本标记语言）添加样式。通过样式表，你可以将
+  <abbr>CSS</abbr> 表现层与
+  <abbr>HTML</abbr> 内容层分离，这种设计模式称为"关注点分离"。
 </p>
 ```
 
@@ -57,6 +57,24 @@ abbr {
 此元素存在的目的纯粹是为了方便作者，并且默认情况下都会将其以行向（{{cssxref('display')}}`: inline`）显示，然而，各个浏览器对其的默认样式可能存在差异：
 
 某些浏览器会在该元素内容下添加虚线下划线，另一些浏览器会将内容转换为小型大写字母，并添加虚线下划线。还有些浏览器则可能仅将其视为普通的 {{HTMLElement("span")}} 元素对待，不作特殊样式处理。可以通过 CSS 属性 {{cssxref('text-decoration')}} 和 {{cssxref('font-variant')}} 来控制它的样式。
+
+### 无障碍考虑
+
+在页面中首次使用某个首字母缩略词或缩写时将其完整拼写出来，有助于读者理解，特别是在涉及技术性或行业术语的内容中。
+
+只有当正文中无法展开缩略词或首字母缩略词时，才包含 `title` 属性。如果声称的单词或短语与屏幕上显示的内容存在差异，特别是当涉及到读者可能特别不熟悉的行业术语，可能会造成混淆。
+
+#### HTML
+
+```html
+<p>JavaScript 对象表示法（<abbr>JSON</abbr>）是一种轻量级的数据交换格式。</p>
+```
+
+#### 结果
+
+{{EmbedLiveSample("无障碍考虑")}}
+
+这对于不熟悉文中的术语或概念的人、初学者以及有认知障碍的人来说尤其有用。
 
 ## 示例
 
@@ -131,24 +149,6 @@ abbr {
 #### 结果
 
 {{EmbedLiveSample("定义缩略语", 600, 120)}}
-
-### 无障碍考虑
-
-在页面中首次使用某个首字母缩略词或缩写时将其完整拼写出来，有助于读者理解，特别是在涉及技术性或行业术语的内容中。
-
-只有当正文中无法展开缩略词或首字母缩略词时，才包含 `title` 属性。如果声称的单词或短语与屏幕上显示的内容存在差异，特别是当涉及到读者可能特别不熟悉的行业术语，可能会造成混淆。
-
-#### HTML
-
-```html
-<p>JavaScript 对象表示法（<abbr>JSON</abbr>）是一种轻量级的数据交换格式。</p>
-```
-
-#### 结果
-
-{{EmbedLiveSample("无障碍考虑")}}
-
-这对于不熟悉文中的术语或概念的人、初学者以及有认知障碍的人来说尤其有用。
 
 ## 技术概要
 
