@@ -21,18 +21,18 @@ l10n:
 - {{jsxref("Error.prototype.cause", "WebAssembly.CompileError.prototype.cause")}}
   - : 错误原因。继承自 {{jsxref("Error")}}。
 - {{jsxref("Error.prototype.fileName", "WebAssembly.CompileError.prototype.fileName")}} {{non-standard_inline}}
-  - : 引发这个错误的文件的路径。继承自 {{jsxref("Error")}}。
+  - : 引发此错误的文件的路径。继承自 {{jsxref("Error")}}。
 - {{jsxref("Error.prototype.lineNumber", "WebAssembly.CompileError.prototype.lineNumber")}} {{non-standard_inline}}
-  - : 引发这个错误的行在该文件中的行号。继承自 {{jsxref("Error")}}。
+  - : 引发此错误的代码所在的文件的行号。继承自 {{jsxref("Error")}}。
 - {{jsxref("Error.prototype.columnNumber", "WebAssembly.CompileError.prototype.columnNumber")}} {{non-standard_inline}}
-  - : 引发这个错误的列在该行中的列号。继承自 {{jsxref("Error")}}。
+  - : 引发此错误的代码在文件中所在行的列号。继承自 {{jsxref("Error")}}。
 - {{jsxref("Error.prototype.stack", "WebAssembly.CompileError.prototype.stack")}} {{non-standard_inline}}
-  - : 栈追踪。继承自 {{jsxref("Error")}}。
+  - : 堆栈跟踪。继承自 {{jsxref("Error")}}。
 
 ## 实例方法
 
 - {{jsxref("Error.prototype.toString", "WebAssembly.CompileError.prototype.toString()")}}
-  - : 返回一个能够表示指定的 `Error` 对象的字符串。继承自 {{jsxref("Error")}}。
+  - : 返回一个表示指定的 `Error` 对象的字符串。继承自 {{jsxref("Error")}}。
 
 ## 示例
 
