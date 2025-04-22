@@ -61,7 +61,9 @@ const blob = new Blob([JSON.stringify(obj, null, 2)], {
 
 ```html live-sample___url-from-array
 <p>
-  此範例創建了一個包含 ASCII 碼（從空格字元到字母 Z）的型別化陣列，然後將其轉換為物件 URL。創建了一個連結以開啟該物件 URL。點擊連結以查看解碼後的物件 URL。
+  此範例創建了一個包含 ASCII 碼（從空格字元到字母
+  Z）的型別化陣列，然後將其轉換為物件 URL。創建了一個連結以開啟該物件
+  URL。點擊連結以查看解碼後的物件 URL。
 </p>
 ```
 
