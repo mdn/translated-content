@@ -101,4 +101,4 @@ API に対応していないブラウザーでもアプリが確実に動作す�
 - [ファイルシステム API](/ja/docs/Web/API/File_System_API)
 - [ファイル API](/ja/docs/Web/API/File_API)
 - [Let installed web applications be file handlers](https://developer.chrome.com/docs/capabilities/web-apis/file-handling) (developer.chrome.com, 2022)
-- [Handle files in Progressive Web Apps](https://learn.microsoft.com/en-us/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) (learn.microsoft.com, 2023)
+- [PWA 内のファイルを処理する](https://learn.microsoft.com/ja-jp/microsoft-edge/progressive-web-apps-chromium/how-to/handle-files) (learn.microsoft.com, 2023)
