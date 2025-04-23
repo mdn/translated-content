@@ -1,16 +1,15 @@
 ---
 title: "Permissions-Policy: picture-in-picture"
 slug: Web/HTTP/Reference/Headers/Permissions-Policy/picture-in-picture
-original_slug: Web/HTTP/Headers/Permissions-Policy/picture-in-picture
 l10n:
-  sourceCommit: 0880a90f3811475d78bc4b2c344eb4146f25f66c
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}} {{SeeCompatTable}}
 
 HTTP の {{HTTPHeader("Permissions-Policy")}} ヘッダーにおける `picture-in-picture` ディレクティブは、現在の文書で動画を{{domxref("Picture-in-Picture API", "ピクチャインピクチャ", "", "nocode")}}モードで再生することを許可するかどうかを制御します。
 
-特に、この機能の使用をブロックするようポリシーが定義されていた場合、 {{domxref("HTMLVideoElement.requestPictureInPicture()")}} を呼び出すと {{domxref("DOMException")}} 例外が `SecurityError` 型で発生します。
+仕様上、定義されたポリシーによりこの機能の使用がブロックされた場合、 {{domxref("HTMLVideoElement.requestPictureInPicture()")}} を呼び出すと {{domxref("DOMException")}} 例外が `SecurityError` 型で発生します。
 
 ## 構文
 
