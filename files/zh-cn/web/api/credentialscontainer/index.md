@@ -20,7 +20,7 @@ l10n:
 - {{domxref("CredentialsContainer.get()")}}
   - : 返回一个 {{jsxref("Promise")}}，根据提供的参数解析为匹配的 {{domxref("Credential")}} 实例。
 - {{domxref("CredentialsContainer.preventSilentAccess()")}}
-  - : 设置一个标志位用于指定是否允许当前源在后续访问时自动登录，随后返回一个空的 {{jsxref("Promise")}}。例如，当用户从网站注销后调用此方法，可确保其在下次访问时不会自动登录。该方法的早期规范版本曾命名为 `requireUserMediation()`。具体支持情况请参阅[Browser compatibility](#浏览器兼容性)。
+  - : 设置一个标志位用于指定是否允许当前源在后续访问时自动登录，随后返回一个空的 {{jsxref("Promise")}}。例如，当用户从网站注销后调用此方法，可确保其在下次访问时不会自动登录。该方法的早期规范版本曾命名为 `requireUserMediation()`。具体支持情况请参阅[浏览器兼容性](#浏览器兼容性)。
 - {{domxref("CredentialsContainer.store()")}}
   - : 将用户的一组凭证存储到指定的 {{domxref("Credential")}} 实例中，并通过 {{jsxref("Promise")}} 返回该实例。
 
