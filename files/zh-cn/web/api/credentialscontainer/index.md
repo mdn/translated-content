@@ -16,7 +16,7 @@ l10n:
 ## 实例方法
 
 - {{domxref("CredentialsContainer.create()")}}
-  - : 返回一个 {{jsxref("Promise")}}，根据提供的参数解析为一个新的 {{domxref("Credential")}} 实例；如果无法创建 `Credential` 对象，则解析为 `null`。在特殊情况下，该{{jsxref("Promise")}} 可能会被拒绝。
+  - : 返回一个 {{jsxref("Promise")}}，根据提供的参数解析为一个新的 {{domxref("Credential")}} 实例；如果无法创建 `Credential` 对象，则解析为 `null`。在特殊情况下，该 {{jsxref("Promise")}} 可能会被拒绝。
 - {{domxref("CredentialsContainer.get()")}}
   - : 返回一个 {{jsxref("Promise")}}，根据提供的参数解析为匹配的 {{domxref("Credential")}} 实例。
 - {{domxref("CredentialsContainer.preventSilentAccess()")}}
