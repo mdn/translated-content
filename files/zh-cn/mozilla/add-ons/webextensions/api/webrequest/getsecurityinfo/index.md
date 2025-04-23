@@ -2,14 +2,14 @@
 title: webRequest.getSecurityInfo()
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/getSecurityInfo
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: 8de26f8083cd83e41328147240d94b4da902e987
 ---
 
 {{AddonSidebar}}
 
 使用此函数获取与特定请求相关的 [TLS](/zh-CN/docs/Glossary/TLS) 连接的详细信息。
 
-你需要将请求的 `requestId` 和一些可选的额外参数传递给此函数。它返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为一个 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象。
+你需要将相关请求的 `requestId` 和一些可选的额外参数传递给此函数。它返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，其会兑现为一个 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象。
 
 此函数只能从 {{WebExtAPIRef("webRequest.onHeadersReceived")}} 监听器内部调用。`requestId` 可以在传递给监听器的 `details` 对象中找到。
 
@@ -35,7 +35,7 @@ let gettingInfo = browser.webRequest.getSecurityInfo(
     - `certificateChain` {{optional_inline}}
       - : `boolean`。如果为 `true`，返回的 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo")}} 对象将包含完整的证书链和信任根证书。如果为 `false` 则仅包含服务器证书。默认为 `false`。
     - `rawDER` {{optional_inline}}
-      - : `boolean`。如果为 `true`，则 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} 属性中的每个 {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} 都将包含一个 `rawDER` 属性，其取值为 DER 编码的组成证书数据的 ASN.1。
+      - : `boolean`。如果为 `true`，则 {{WebExtAPIRef("webRequest.SecurityInfo", "SecurityInfo.certificates")}} 属性中的每个 {{WebExtAPIRef("webRequest.CertificateInfo", "CertificateInfo")}} 都将包含一个 `rawDER` 属性。其包含 DER 编码的组成证书数据的 ASN.1。
 
 ### 返回值
 
