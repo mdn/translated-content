@@ -11,7 +11,7 @@ l10n:
 
 [构造函数](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/Exception)接受一个 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)、一个由值组成的数组和一个 `options` 对象作为参数。标签唯一地定义了异常的*类型*，包括异常的参数的顺序和参数的数据类型。访问抛出的异常的参数所用的标签要求和用于创建 `Exception` 的标签相同。提供了用于测试异常是否和特定的标签匹配的方法，也提供了通过索引获取特定值的方法（如果异常匹配上指定的标签的话）。
 
-当关联的标签共享时，JavaScript 和其他客户端代码仅能访问 WebAssembly 异常值，反之亦然（你不能仅使用恰好定义了相同数据类型的其他标签）。没有匹配的标签，也可以捕获以及重新抛出异常，但是不能对其进行审查。
+当关联的标签共享时，JavaScript 和其他客户端代码仅能访问 WebAssembly 异常值，反之亦然（你不能仅使用恰好定义了相同数据类型的其他标签）。没有匹配的标签，也可以捕获以及重新抛出异常，但是不能对其进行检查。
 
 为了让异常抛出更快，从 WebAssembly 抛出的异常通常不包括栈追踪。需要提供栈追踪的 WebAssembly 代码必须在调用创建异常的 Javascript 函数时，在构造函数中传递 `options.traceStack=true` 参数。然后构造函数会返回一个栈追踪附着到 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性的异常。
 
@@ -36,13 +36,13 @@ l10n:
 
 ## 示例
 
-这个例子展示如何定义一个标签并将其导入到模块，然后用它抛出一个在 JavaScript 中被捕获的异常。
+这个示例展示如何定义一个标签并将其导入到模块，然后用它抛出一个在 JavaScript 中被捕获的异常。
 
 思考下面的 WebAssembly 代码，假设其被编译为 **example.wasm** 文件。
 
 - 模块导入一个标签，内部引用为 `$tagname` 并有一个单独的 `i32` 参数。tag 期望使用模块 `extmod` 和标签 `exttag` 传递标签。
 - `$throwException` 函数使用 `throw` 指令抛出一个异常，接收 `$tagname` 和标签的参数。
-- 模块导出一个抛出异常值 "42" 的函数 `run()`。
+- 模块导出一个抛出异常值为“42”的函数 `run()`。
 
 ```wat
 (module
@@ -55,7 +55,7 @@ l10n:
     throw $tagname
   )
 
-  ;; 导出调用 $throwException 的函数 "run"
+  ;; 导出调用 $throwException 的函数“run”
   (func (export "run")
     i32.const 42
     call $throwException
@@ -84,21 +84,21 @@ WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
   .catch((e) => {
     console.error(e);
     // 检查我们是否有该异常对应的正确标签
-    // 如果有的话，使用 getArg() 审查其内容
+    // 如果有的话，使用 getArg() 检查其内容
     if (e.is(tagToImport)) {
-      console.log(`getArg 0：${e.getArg(tagToImport, 0)}`);
+      console.log(`getArg 0 : ${e.getArg(tagToImport, 0)}`);
     }
   });
 
 /* 日志输出
 example.js:40 WebAssembly.Exception: wasm exception
-example.js:41 getArg 0：42
+example.js:41 getArg 0 : 42
 */
 ```
 
 在 JavaScript 中使用 `catch` 块捕获异常。我们可以看见它是 `WebAssembly.Exception` 类型，但是如果我们没有正确的标签的话，我们就什么也做不了。
 
-然而，因为我们有一个标签，于是使用 [`Exception.prototype.is()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/is) 检查它是否是正确的那个，又因为它是正确的，于是调用 [`Exception.prototype.getArg()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg) 读取 "42" 的值。
+然而，因为我们有一个标签，于是使用 [`Exception.prototype.is()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/is) 检查它是否是正确的那个，又因为它是正确的，于是调用 [`Exception.prototype.getArg()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/getArg) 读取值“42”。
 
 ## 规范
 
@@ -110,6 +110,6 @@ example.js:41 getArg 0：42
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
