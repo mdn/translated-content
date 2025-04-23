@@ -31,7 +31,7 @@ confirm(message)
 
 ### 操作前确认
 
-以下示例展示了如何检查确认对话框的返回值。当用户点击确定按钮，我们调用 {{domxref("window.open()")}}；而如果用户点击取消，我们在 {{htmlelement("pre")}} 元素中打印一些文本。
+以下示例展示了如何检查确认对话框的返回值。当用户点击确定按钮，我们则调用 {{domxref("window.open()")}}；而如果用户点击取消，我们则在 {{htmlelement("pre")}} 元素中打印一些文本。
 
 ```html live-sample___confirm
 <button id="windowButton">打开新的标签页</button>
