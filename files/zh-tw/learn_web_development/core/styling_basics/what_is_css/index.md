@@ -44,10 +44,6 @@ slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 5. 當規則都套用完畢後，開始按照網頁結構布局(layout)轉譯樹。
 6. 網頁被呈現在螢幕上，這個步驟稱為繪製(painting)。
 
-下面是此流程的示意圖。
-
-![](rendering.svg)
-
 ## 關於 DOM
 
 DOM 有著一個樹狀結構，每個標記語言中的元素、屬性，以及文字片段都會是這個樹狀結構裡的{{Glossary("Node/DOM","節點")}}。每個節點與其他節點間的關係都有定義：若節點有子節點(child)，則自己是他們的父節點(parent)；若子節點為複數，則這些子節點稱彼此為兄弟/姊妹節點(sibling)。
