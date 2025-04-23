@@ -117,7 +117,12 @@ Firefox の場合: [about:debugging](https://firefox-source-docs.mozilla.org/dev
 
 ### テスト
 
+> [!NOTE]
+> デフォルトでは、[拡張機能はプライベートブラウジングでは動作しません](https://support.mozilla.org/ja/kb/extensions-private-browsing)。拡張機能をプライベートブラウジングでテストしたい場合は、 `about:addons` を開き、対象の拡張機能をクリックして、「プライベートウィンドウでの実行」を許可するラジオボタンを選択してください。
+
 それでは "mozilla.org" 配下のページを開いてみましょう。ページが赤い枠で囲まれていることを確認できるはずです。
+
+![mozilla.org に表示される赤い枠](border_on_mozilla_org.png)
 
 > [!NOTE]
 > ただ addons.mozilla.org では試さないで! このドメインでは現在、コンテンツスクリプトがブロックされています。
