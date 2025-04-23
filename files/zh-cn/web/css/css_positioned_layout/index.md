@@ -1,31 +1,55 @@
 ---
-title: CSS Positioning
+title: CSS 定位布局
 slug: Web/CSS/CSS_positioned_layout
+l10n:
+  sourceCommit: ec0ac22d16171cb72b7391f4727d43c4ffcbee5b
 ---
 
 {{CSSRef}}
 
-**CSS Positioning** 是一个 CSS 模块，用来定义如何将元素在页面中进行绝对定位和相对定位。
+**CSS 定位布局**模块定义了如何在网页上定位元素。
 
 ## 参考
 
-### CSS 属性
+### 属性
 
-- {{cssxref("bottom")}}
-- {{cssxref("clear")}}
-- {{cssxref("display")}}
-- {{cssxref("float")}}
-- {{cssxref("left")}}
-- {{cssxref("position")}}
-- {{cssxref("right")}}
 - {{cssxref("top")}}
-- {{cssxref("visibility")}}
+- {{cssxref("right")}}
+- {{cssxref("bottom")}}
+- {{cssxref("left")}}
+- {{cssxref("inset")}}
+- {{cssxref("inset-inline")}}
+- {{cssxref("inset-inline-start")}}
+- {{cssxref("inset-inline-end")}}
+- {{cssxref("inset-block")}}
+- {{cssxref("inset-block-start")}}
+- {{cssxref("inset-block-end")}}
+- {{cssxref("position")}}
 - {{cssxref("z-index")}}
+- {{cssxref("overlay")}}
 
-## 向导
+### 选择器
 
-- [理解 CSS z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
-  - : 通过几个例子来展现上下文叠加的概念以及解释 z-ordering 是如何工作的。
+- {{cssxref("::backdrop")}}
+
+## 指南
+
+- [理解 z-index](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Understanding_z-index)
+  - : 阐述了层叠上下文的概念，并通过多个示例说明 z 轴排序的工作原理。
+- [Stacking without the `z-index` property](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_without_z-index)
+  - : 未使用 `z-index` 时的层叠规则。
+- [浮动元素的层叠规则](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_floating_elements)
+  - : 浮动元素的层叠处理方式。
+- [使用 `z-index`](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Using_z-index)
+  - : 如何使用 `z-index` 修改默认层叠顺序。
+- [层叠上下文](/zh-CN/docs/Web/CSS/CSS_positioned_layout/Stacking_context)
+  - : CSS 层叠上下文（包括创建新层叠上下文的 CSS 特性及嵌套层叠上下文）。
+
+## 相关概念
+
+- {{cssxref("float")}}
+- {{cssxref("clear")}}
+- {{cssxref("transform")}}
 
 ## 规范
 
