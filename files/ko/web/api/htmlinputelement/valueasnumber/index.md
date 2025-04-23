@@ -2,8 +2,6 @@
 title: "HTMLInputElement: valueAsNumber 속성"
 short-title: valueAsNumber
 slug: Web/API/HTMLInputElement/valueAsNumber
-li0n:
-  sourceCommit: 3a5e079301779c589f35b35620b12a7a73c42fa2
 ---
 
 {{ APIRef("HTML DOM") }}
