@@ -5,8 +5,6 @@ l10n:
   sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
 
 取用 Web 內容，如公共服務、教育、電子商務網站和娛樂是一項人權。沒有人應該因為身心障礙、種族、地理位置或其他人類特質而被排除在外。這個單元討論了你應該學習的最佳實踐和技術，以使你的網站盡可能地無障礙。

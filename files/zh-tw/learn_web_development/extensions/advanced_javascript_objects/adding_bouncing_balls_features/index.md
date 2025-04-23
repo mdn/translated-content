@@ -3,8 +3,6 @@ title: 挑戰：為彈跳彩球添增其他功能
 slug: Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenu("Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice", "Learn_web_development/Extensions/Advanced_JavaScript_objects")}}
 
 在本文中，你將繼續使用前一篇文章的彈跳彩球展示程式，另外加入幾項有趣的新功能。

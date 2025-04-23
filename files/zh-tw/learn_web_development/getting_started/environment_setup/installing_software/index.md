@@ -5,8 +5,6 @@ l10n:
   sourceCommit: a53253307ade5c6e3eec896a5f2d799fdebe9ae8
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Getting_started/Environment_setup/Browsing_the_web", "Learn_web_development/Getting_started/Environment_setup")}}
 
 在本文中，我們將討論需要哪些軟體來進行簡單的 Web 開發，以及現在需要安裝哪些軟體，包括程式碼編輯器和一些現代 Web 瀏覽器。
