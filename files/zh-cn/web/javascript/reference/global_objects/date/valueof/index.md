@@ -7,7 +7,7 @@ l10n:
 
 {{JSRef}}
 
-**`valueOf()`** 方法是 {{jsxref("Date")}} 实例的方法，用于返回自[纪元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#the_epoch_timestamps_and_invalid_date)（即协调世界时 1970 年 1 月 1 日零点）以来的毫秒数。
+{{jsxref("Date")}} 实例的 **`valueOf()`** 方法用于返回自[纪元](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)（即协调世界时 1970 年 1 月 1 日零点）以来的毫秒数。
 
 {{InteractiveExample("JavaScript Demo: Date.prototype.valueOf()")}}
 
