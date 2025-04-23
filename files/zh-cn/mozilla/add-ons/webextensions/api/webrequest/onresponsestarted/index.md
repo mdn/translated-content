@@ -1,5 +1,5 @@
 ---
-标题: webRequest.onResponseStarted
+title: webRequest.onResponseStarted
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onResponseStarted
 l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
@@ -47,7 +47,7 @@ browser.webRequest.onResponseStarted.hasListener(listener)
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。一个过滤器，用于限制发送到此监听器的事件。
 - `extraInfoSpec` {{optional_inline}}
 
-  - : `array` of `string`。事件的额外选项。您可以仅传递一个值：
+  - : `array` of `string`。事件的额外选项。你可以仅传递一个值：
 
     - `"responseHeaders"`：在传递给监听器的 `details` 对象中包含 `responseHeaders`
 
@@ -104,7 +104,7 @@ browser.webRequest.onResponseStarted.hasListener(listener)
       - : `integer`。故障转移超时时间（以秒为单位）。如果代理连接失败，在此期间将不再使用代理。
 
 - `requestId`
-  - : `string`。请求的 ID。请求 ID 在浏览器会话中是唯一的，因此您可以使用它来关联与同一请求相关的不同事件。
+  - : `string`。请求的 ID。请求 ID 在浏览器会话中是唯一的，因此你可以使用它来关联与同一请求相关的不同事件。
 - `responseHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。与此响应一起接收的 HTTP 响应头。
 - `statusCode`
@@ -142,7 +142,7 @@ browser.webRequest.onResponseStarted.hasListener(listener)
     - `any_strict_tracking`：一个元标志，结合了所有跟踪和指纹识别标志。
     - `any_social_tracking`：一个元标志，结合了所有社交跟踪标志。
 
-    您可以在 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站上找到有关跟踪器类型的更多信息。`content` 后缀表示跟踪和提供内容的跟踪器。阻止它们可以保护用户，但可能导致网站中断或元素未显示。
+    你可以在 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站上找到有关跟踪器类型的更多信息。`content` 后缀表示跟踪和提供内容的跟踪器。阻止它们可以保护用户，但可能导致网站中断或元素未显示。
 
 ## 浏览器兼容性
 
