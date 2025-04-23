@@ -11,7 +11,7 @@ l10n:
 
 克隆一个节点会复制它的所有属性及其对应的值，包括内联事件监听器。它*不会*复制通过 [`addEventListener()`](/zh-CN/docs/Web/API/EventTarget/addEventListener) 添加的事件监听器，或赋值给元素属性的事件处理器（例如 `node.onclick = someFunction`）。此外，对于 {{HTMLElement("canvas")}} 元素，绘制的图像不会被复制。
 
-> **Warning:** `cloneNode()` 可能会导致文档中出现重复的元素 ID！
+> **警告：** `cloneNode()` 可能会导致文档中出现重复的元素 ID！
 >
 > 如果原始节点具有 `id` 属性，并且克隆节点将被放置在同一文档中，则应修改克隆节点的 ID 以确保其唯一性。
 >
