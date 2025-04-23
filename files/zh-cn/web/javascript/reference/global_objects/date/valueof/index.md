@@ -35,7 +35,7 @@ valueOf()
 
 ### 返回值
 
-一个数字，表示该日期的[时间戳](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)，单位为毫秒。如果该日期为[无效日期](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)，则返回 `NaN`。
+一个数字，表示该日期的[时间戳](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)，单位为毫秒。如果该日期[无效](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Date#纪元、时间戳和无效日期)，则返回 `NaN`。
 
 ## 描述
 
