@@ -1,5 +1,5 @@
 ---
-标题: webRequest.onBeforeSendHeaders
+title: webRequest.onBeforeSendHeaders
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onBeforeSendHeaders
 l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
@@ -7,17 +7,17 @@ l10n:
 
 {{AddonSidebar}}
 
-此事件在发送任何 HTTP 数据之前触发，但在所有 HTTP 头可用之后触发。如果您想修改 HTTP 请求头，这是一个很好的监听位置。
+此事件在发送任何 HTTP 数据之前触发，但在所有 HTTP 头可用之后触发。如果你想修改 HTTP 请求头，这是一个很好的监听位置。
 
 要将请求头与请求数据的其余部分一起传递到监听器中，请在 `extraInfoSpec` 数组中传递 `"requestHeaders"`。
 
-要同步修改头：在 `extraInfoSpec` 中传递 `"blocking"`，然后在您的事件监听器中，返回一个包含名为 `requestHeaders` 的属性的 [`BlockingResponse`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse)，其值是要发送的请求头集合。
+要同步修改头：在 `extraInfoSpec` 中传递 `"blocking"`，然后在你的事件监听器中，返回一个包含名为 `requestHeaders` 的属性的 [`BlockingResponse`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse)，其值是要发送的请求头集合。
 
-要异步修改头：在 `extraInfoSpec` 中传递 `"blocking"`，然后在您的事件监听器中，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，该 Promise 将解析为一个 `BlockingResponse`。
+要异步修改头：在 `extraInfoSpec` 中传递 `"blocking"`，然后在你的事件监听器中，返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，该 Promise 将解析为一个 `BlockingResponse`。
 
-如果您使用 `"blocking"`，则必须在 manifest.json 中拥有 ["webRequestBlocking" API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
+如果你使用 `"blocking"`，则必须在 manifest.json 中拥有 ["webRequestBlocking" API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
-在此可能会发生扩展冲突。如果两个扩展对同一请求监听 `onBeforeSendHeaders`，则第二个监听器将看到第一个监听器所做的修改，并能够撤销第一个监听器所做的任何更改。例如，如果第一个监听器添加了一个 `Cookie` 头，而第二个监听器删除了所有 `Cookie` 头，则第一个监听器的修改将丢失。如果您想查看实际发送的头，而不冒另一个扩展随后更改它们的风险，请使用 {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}，尽管您无法在此事件上修改头。
+在此可能会发生扩展冲突。如果两个扩展对同一请求监听 `onBeforeSendHeaders`，则第二个监听器将看到第一个监听器所做的修改，并能够撤销第一个监听器所做的任何更改。例如，如果第一个监听器添加了一个 `Cookie` 头，而第二个监听器删除了所有 `Cookie` 头，则第一个监听器的修改将丢失。如果你想查看实际发送的头，而不冒另一个扩展随后更改它们的风险，请使用 {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}，尽管你无法在此事件上修改头。
 
 并非所有实际发送的头都始终包含在 `requestHeaders` 中。特别是，与缓存相关的头（例如，`Cache-Control`、`If-Modified-Since`、`If-None-Match`）从不发送。此外，此处的行为可能因浏览器而异。
 
@@ -63,7 +63,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
   - : 事件触发时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : `object`。请求的详细信息。如果您在 `extraInfoSpec` 中包含了 `"requestHeaders"`，则包括请求头。有关更多信息，请参见 [details](#details_2) 部分。
+      - : `object`。请求的详细信息。如果你在 `extraInfoSpec` 中包含了 `"requestHeaders"`，则包括请求头。有关更多信息，请参见 [details](#details_2) 部分。
 
     返回：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了 `"blocking"`，则事件监听器应返回一个 `BlockingResponse` 对象，并可以设置其 `requestHeaders` 属性。
 
@@ -71,9 +71,9 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。一组限制发送到此监听器的事件的过滤器。
 - `extraInfoSpec` {{optional_inline}}
 
-  - : `array` of `string`。事件的额外选项。您可以传递以下任意值：
+  - : `array` of `string`。事件的额外选项。你可以传递以下任意值：
 
-    - `"blocking"`：使请求同步，因此您可以修改请求头
+    - `"blocking"`：使请求同步，因此你可以修改请求头
     - `"requestHeaders"`：在传递给监听器的 `details` 对象中包含请求头
 
 ## 其他对象
@@ -133,7 +133,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 - `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。将与此请求一起发送的 HTTP 请求头。
 - `requestId`
-  - : `string`。请求的 ID。请求 ID 在浏览器会话中是唯一的，因此您可以使用它们来关联与同一请求相关的不同事件。
+  - : `string`。请求的 ID。请求 ID 在浏览器会话中是唯一的，因此你可以使用它们来关联与同一请求相关的不同事件。
 - `tabId`
   - : `integer`。请求发生的选项卡的 ID。如果请求与选项卡无关，则设置为 -1。
 - `thirdParty`
@@ -165,7 +165,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
     - `any_strict_tracking`：一个元标志，结合所有跟踪和指纹识别标志。
     - `any_social_tracking`：一个元标志，结合所有社交跟踪标志。
 
-    您可以在 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站上找到有关跟踪器类型的更多信息。`content` 后缀表示跟踪和提供内容的跟踪器。阻止它们可以保护用户，但可能导致网站中断或元素未显示。
+    你可以在 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站上找到有关跟踪器类型的更多信息。`content` 后缀表示跟踪和提供内容的跟踪器。阻止它们可以保护用户，但可能导致网站中断或元素未显示。
 
 ## 浏览器兼容性
 
