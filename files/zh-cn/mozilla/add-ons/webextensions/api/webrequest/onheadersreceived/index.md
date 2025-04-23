@@ -1,5 +1,5 @@
 ---
-标题: webRequest.onHeadersReceived
+title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 l10n:
   sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
@@ -17,7 +17,7 @@ l10n:
 
 然而，`Content-Security-Policy` 头的处理方式不同；其值会被合并以应用所有指定的策略。但是，如果两个扩展程序设置了冲突的 CSP 值，CSP 服务会通过更严格的限制来解决冲突。例如，如果一个扩展程序设置了 `img-src: example.com`，另一个扩展程序设置了 `img-src: example.org`，结果将是 `img-src: 'none'`。合并的修改总是倾向于更严格的限制，尽管扩展程序可以移除原始的 CSP 头。
 
-如果您希望查看系统处理的头，而不必担心其他扩展程序会更改它们，请使用 {{WebExtAPIRef("webRequest.onResponseStarted")}}，尽管您无法在此事件上修改头。
+如果你希望查看系统处理的头，而不必担心其他扩展程序会更改它们，请使用 {{WebExtAPIRef("webRequest.onResponseStarted")}}，尽管你无法在此事件上修改头。
 
 ## 语法
 
@@ -49,7 +49,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
   - : 事件触发时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : [`object`](#details_2)。请求的详细信息。如果您在 `extraInfoSpec` 中包含了 "responseHeaders"，则会包含响应头。
+      - : [`object`](#details_2)。请求的详细信息。如果你在 `extraInfoSpec` 中包含了 "responseHeaders"，则会包含响应头。
 
     返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了 "blocking"，事件监听器将返回一个 `BlockingResponse` 对象，并可以设置其 `responseHeaders` 属性。在 Firefox 中，返回值可以是一个解析为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
@@ -57,9 +57,9 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。一组限制发送到此监听器的事件的过滤器。
 - `extraInfoSpec` {{optional_inline}}
 
-  - : `array` of `string`。事件的额外选项。您可以传递以下任意值：
+  - : `array` of `string`。事件的额外选项。你可以传递以下任意值：
 
-    - "blocking" 使请求同步，以便您可以修改请求和响应头
+    - "blocking" 使请求同步，以便你可以修改请求和响应头
     - "responseHeaders" 将响应头包含在传递给监听器的 `details` 对象中
 
 ## 附加对象
@@ -124,7 +124,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
       - : `integer`。故障切换超时时间（以秒为单位）。如果代理连接失败，在此期间将不再使用代理。
 
 - `requestId`
-  - : `string`。请求的 ID。请求 ID 在浏览器会话中是唯一的，因此您可以使用它来关联与同一请求相关的不同事件。
+  - : `string`。请求的 ID。请求 ID 在浏览器会话中是唯一的，因此你可以使用它来关联与同一请求相关的不同事件。
 - `responseHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。为此请求接收到的 HTTP 响应头。
 - `statusCode`
@@ -162,7 +162,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
     - `any_strict_tracking`：一个元标志，结合了所有跟踪和指纹识别标志。
     - `any_social_tracking`：一个元标志，结合了所有社交跟踪标志。
 
-    您可以在 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站上找到有关跟踪器类型的更多信息。`content` 后缀表示跟踪和提供内容的跟踪器。阻止它们可以保护用户，但可能导致网站中断或某些元素未显示。
+    你可以在 [disconnect.me](https://disconnect.me/trackerprotection#categories_of_trackers) 网站上找到有关跟踪器类型的更多信息。`content` 后缀表示跟踪和提供内容的跟踪器。阻止它们可以保护用户，但可能导致网站中断或某些元素未显示。
 
 ## 浏览器兼容性
 
