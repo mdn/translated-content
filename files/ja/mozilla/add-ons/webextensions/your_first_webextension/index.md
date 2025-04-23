@@ -129,7 +129,6 @@ Firefox の場合: [about:debugging](https://firefox-source-docs.mozilla.org/dev
 
 もう少し実験をします。コンテンツスクリプトを編集して、枠線の色を変更したり、ページのコンテンツに何か他の操作を加えてみましょう。コンテンツスクリプトを保存し、"about:debugging"の"再読み込み"ボタンをクリックして拡張機能ファイルを再読み込みすると、加えた変更がすぐに反映されているはずです。
 
-
 - [拡張機能の読み込みに関する詳細](/ja/docs/Mozilla/Add-ons/WebExtensions/Packaging_and_installation#loading_from_disk)
 
 ## パッケージ化と公開
