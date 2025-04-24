@@ -1,7 +1,7 @@
 ---
 title: HTML 早見表
-slug: Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet
-original_slug: Learn/HTML/Cheatsheet
+slug: Web/HTML/Guides/Cheatsheet
+original_slug: Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet
 l10n:
   sourceCommit: 62555a957b0436cc2af31310f120970e2d4af01d
 ---

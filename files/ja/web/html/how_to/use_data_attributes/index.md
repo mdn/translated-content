@@ -1,7 +1,7 @@
 ---
 title: データ属性の使用
-slug: Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
-original_slug: Learn/HTML/Howto/Use_data_attributes
+slug: Web/HTML/How_to/Use_data_attributes
+original_slug: Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
 l10n:
   sourceCommit: fd6deb4d52b44e8915b3aec2f637c05317044914
 ---

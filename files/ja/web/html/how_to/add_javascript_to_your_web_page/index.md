@@ -1,7 +1,7 @@
 ---
 title: ウェブページで JavaScript を使う
-slug: Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage
-original_slug: Learn/HTML/Howto/Use_JavaScript_within_a_webpage
+slug: Web/HTML/How_to/Add_JavaScript_to_your_web_page
+original_slug: Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---

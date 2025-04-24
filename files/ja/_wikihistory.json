@@ -5450,39 +5450,6 @@
       "Uemmra3"
     ]
   },
-  "Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image": {
-    "modified": "2020-07-16T22:22:43.123Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages": {
-    "modified": "2019-03-23T23:52:01.603Z",
-    "contributors": [
-      "Kafuka",
-      "Mgjbot"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML": {
-    "modified": "2020-07-16T22:22:42.111Z",
-    "contributors": [
-      "Wind1808"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage": {
-    "modified": "2020-07-16T22:22:40.307Z",
-    "contributors": [
-      "Uemmra3"
-    ]
-  },
-  "Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes": {
-    "modified": "2020-07-16T22:22:35.934Z",
-    "contributors": [
-      "Wind1808",
-      "mfuji09",
-      "amanoese"
-    ]
-  },
   "Learn_web_development/Howto/Solve_JavaScript_problems": {
     "modified": "2020-07-16T22:33:09.798Z",
     "contributors": [
@@ -29928,6 +29895,25 @@
       "mfuji09"
     ]
   },
+  "Web/HTML/How_to/Add_JavaScript_to_your_web_page": {
+    "modified": "2020-07-16T22:22:40.307Z",
+    "contributors": [
+      "Uemmra3"
+    ]
+  },
+  "Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image": {
+    "modified": "2020-07-16T22:22:43.123Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/HTML/How_to/Author_fast-loading_HTML_pages": {
+    "modified": "2019-03-23T23:52:01.603Z",
+    "contributors": [
+      "Kafuka",
+      "Mgjbot"
+    ]
+  },
   "Web/HTML/How_to/CORS_enabled_image": {
     "modified": "2020-12-04T05:50:44.102Z",
     "contributors": [
@@ -29937,6 +29923,20 @@
       "himrock922",
       "teoli",
       "myakura"
+    ]
+  },
+  "Web/HTML/How_to/Define_terms_with_HTML": {
+    "modified": "2020-07-16T22:22:42.111Z",
+    "contributors": [
+      "Wind1808"
+    ]
+  },
+  "Web/HTML/How_to/Use_data_attributes": {
+    "modified": "2020-07-16T22:22:35.934Z",
+    "contributors": [
+      "Wind1808",
+      "mfuji09",
+      "amanoese"
     ]
   },
   "Web/HTML/Reference": {
