@@ -2,7 +2,7 @@
 title: 对象模型视图
 slug: Web/CSS/CSSOM_view
 l10n:
-  sourceCommit: ae489e681a0e515be70bccd1a8708a820265a230
+  sourceCommit: 69fbf1cdb3cb8e2b3cb5ac21977ebf1b60cc0770
 ---
 
 {{CSSRef}}
