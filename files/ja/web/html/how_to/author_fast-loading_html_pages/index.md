@@ -1,12 +1,11 @@
 ---
-title: 読み込みが速い HTML ページを作成するための豆知識
+title: 読み込みが速い HTML ページを作成する
 slug: Web/HTML/How_to/Author_fast-loading_HTML_pages
-original_slug: Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
 l10n:
-  sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
+  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
+{{HTMLSidebar}}
 
 これらの豆知識は、一般の知識や実験に基づくものです。
 
@@ -40,7 +39,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 参考文献:
 
-- [Understanding CDNs](https://www.imperva.com/Learn_web_development/Extensions/Performance/what-is-cdn-how-it-works/)
+- [Understanding CDNs](https://www.imperva.com/learn/performance/what-is-cdn-how-it-works/)
 
 ### ドメイン検索の削減
 
@@ -121,7 +120,7 @@ CDN は地理的に分散したサーバーネットワークで、ユーザー�
 
 ### 画像を縮小して圧縮する
 
-画像が大きいと、ページの読み込みに時間がかかります。画像をページに追加する前に、圧縮することを検討してください。 [Compress Jpeg](https://compressjpeg.com/)、[Tiny PNG](https://tinypng.com)、その他多くのツールがオンラインで利用可能です。photoshop などのオフラインツールも使用できます。
+画像が大きいと、ページの読み込みに時間がかかります。画像をページに追加する前に、圧縮することを検討してください。 [Compress JPEG](https://compressjpeg.com/)、[Tiny PNG](https://tinypng.com)、その他多くのツールがオンラインで利用可能です。photoshop などのオフラインツールも使用できます。
 
 ### 画像や表のサイズ指定
 
@@ -190,6 +189,6 @@ table-layout: fixed;
 
 ## 関連リンク
 
-- 書籍: ["Speed Up Your Site" by Andy King](http://www.websiteoptimization.com/) (英語)
-- Yahoo! によるすばらしい完成された [ウェブサイト高速化のためのベストプラクティス](https://developer.yahoo.com/performance/rules.html) (英語)
-- パフォーマンス解析・最適化向けツール: [Google PageSpeed Tools](https://developers.google.com/speed/)
+- 書籍: ["Speed Up Your Site" by Andy King](https://www.websiteoptimization.com/) (英語)
+- [Learn performance](https://web.dev/learn/performance) (web.dev, 2023)
+- パフォーマンスを解析し最適化するためのツール: [Google PageSpeed Tools](https://developers.google.com/speed) および [PageSpeed Insights](https://pagespeed.web.dev/)
