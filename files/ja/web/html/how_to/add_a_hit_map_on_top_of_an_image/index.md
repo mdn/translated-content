@@ -1,7 +1,7 @@
 ---
 title: 画像の上にヒットマップを追加する
-slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
-original_slug: Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image
+slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+original_slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
 l10n:
   sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---

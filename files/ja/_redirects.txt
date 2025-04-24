@@ -2271,7 +2271,7 @@
 /ja/docs/Learn/Getting_started_with_the_web/What_will_your_website_look_like	/ja/docs/Learn_web_development/Getting_started/Your_first_website/What_will_your_website_look_like
 /ja/docs/Learn/Getting_started_with_the_web/ウェブサイトを公開する	/ja/docs/Learn_web_development/Getting_started/Your_first_website/Publishing_your_website
 /ja/docs/Learn/HTML	/ja/docs/Learn_web_development/Core/Structuring_content
-/ja/docs/Learn/HTML/Cheatsheet	/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet
+/ja/docs/Learn/HTML/Cheatsheet	/ja/docs/Web/HTML/Guides/Cheatsheet
 /ja/docs/Learn/HTML/Forms	/ja/docs/Learn_web_development/Extensions/Forms
 /ja/docs/Learn/HTML/Forms/Advanced_styling_for_HTML_forms	/ja/docs/Learn_web_development/Extensions/Forms/Advanced_form_styling
 /ja/docs/Learn/HTML/Forms/Data_form_validation	/ja/docs/Learn_web_development/Extensions/Forms/Form_validation
@@ -2296,11 +2296,11 @@
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form	/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /ja/docs/Learn/HTML/Forms/Your_first_HTML_form/Example	/ja/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /ja/docs/Learn/HTML/Howto	/ja/docs/Learn_web_development/Howto/Solve_HTML_problems
-/ja/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image	/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
-/ja/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
-/ja/docs/Learn/HTML/Howto/Define_terms_with_HTML	/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML
-/ja/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage	/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage
-/ja/docs/Learn/HTML/Howto/Use_data_attributes	/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
+/ja/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image	/ja/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+/ja/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/ja/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
+/ja/docs/Learn/HTML/Howto/Define_terms_with_HTML	/ja/docs/Web/HTML/How_to/Define_terms_with_HTML
+/ja/docs/Learn/HTML/Howto/Use_JavaScript_within_a_webpage	/ja/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
+/ja/docs/Learn/HTML/Howto/Use_data_attributes	/ja/docs/Web/HTML/How_to/Use_data_attributes
 /ja/docs/Learn/HTML/Introduction_to_HTML	/ja/docs/Learn_web_development/Core/Structuring_content
 /ja/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting	/ja/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
 /ja/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks	/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links
@@ -2494,6 +2494,12 @@
 /ja/docs/Learn_web_development/Core/Styling_basics/Values_tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values
 /ja/docs/Learn_web_development/Core/Styling_basics/Writing_Modes_Tasks	/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Writing_modes
 /ja/docs/Learn_web_development/Getting_started/Soft_skills/Job_interviews	/ja/docs/Learn_web_development/Getting_started/Soft_skills/Finding_a_job
+/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/ja/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/ja/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
+/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Cheatsheet	/ja/docs/Web/HTML/Guides/Cheatsheet
+/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML	/ja/docs/Web/HTML/How_to/Define_terms_with_HTML
+/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage	/ja/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page
+/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/ja/docs/Web/HTML/How_to/Use_data_attributes
 /ja/docs/Link_prefetching_FAQ	/ja/docs/Glossary/Prefetch
 /ja/docs/Localization	/ja/docs/Glossary/Localization
 /ja/docs/Localizing_extension_descriptions	/ja/docs/orphaned/Localizing_extension_descriptions
@@ -2752,7 +2758,7 @@
 /ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Resources	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/The_XSLT_JavaScript_Interface_in_Gecko/Setting_Parameters	/ja/docs/Web/API/XSLTProcessor
 /ja/docs/The_add-on_bar	/ja/docs/Mozilla/Firefox/Releases/4/The_add-on_bar
-/ja/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/ja/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
+/ja/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/ja/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /ja/docs/Toolkit_API/Official_References	/ja/docs/orphaned/Toolkit_API/Official_References
 /ja/docs/Toolkit_API:Official_References	/ja/docs/orphaned/Toolkit_API/Official_References
 /ja/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
