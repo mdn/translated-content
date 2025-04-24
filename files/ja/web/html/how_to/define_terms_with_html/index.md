@@ -1,12 +1,11 @@
 ---
 title: HTML で用語を定義する
 slug: Web/HTML/How_to/Define_terms_with_HTML
-original_slug: Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
+{{HTMLSidebar}}
 
 HTML は、インラインであろうと構造化された用語集であろうと、記述の意味を伝達するいくつかの方法を提供します。 この記事では、キーワードを定義する際に適切にマークアップする方法について説明します。
 
@@ -15,7 +14,7 @@ HTML は、インラインであろうと構造化された用語集であろう
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >基本的な HTML 文書の作成方法</a
         >に精通している必要があります。
       </td>
@@ -92,11 +91,11 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 説明された用語は、 {{htmlelement("dt")}} 要素内にあります。 対応する説明が直ちに続き、 1 つ以上の {{htmlelement("dd")}} 要素に含まれています。 説明リスト全体を {{htmlelement("dl")}} 要素で囲みます。
 
-### 簡単な例
+### シンプルな例
 
-ここでは簡単な例として、食べ物と飲み物の種類を説明します。
+ここではシンプルな例として、食べ物と飲み物の種類を説明します。
 
-```html-nolint
+```html-nolint live-sample___a_simple_example
 <dl>
   <dt>ジャンバラヤ</dt>
   <dd>
@@ -120,7 +119,7 @@ HTML は、インラインであろうと構造化された用語集であろう
 
 視覚ブラウザーには、前述のリストが次のように表示されます。
 
-{{EmbedLiveSample("簡単な例", 600, 180)}}
+{{EmbedLiveSample("A_simple_example", 600, 180)}}
 
 キーワードをより目立たせたいのであれば、太字にしてみるのもよいでしょう。 HTML は視覚的な媒体ではないことを忘れないでください。すべての視覚効果には {{glossary("CSS")}} が必要です。ここで必要なのは、 CSS の {{cssxref("font-weight")}} プロパティです。
 
@@ -132,7 +131,7 @@ dt {
 
 この結果、下記のような少し読みやすい結果が得られます。
 
-{{EmbedLiveSample("説明リストを作成する方法", 600, 180)}}
+{{EmbedLiveSample("How_to_build_a_description_list", 600, 180)}}
 
 ## より詳しく知る
 

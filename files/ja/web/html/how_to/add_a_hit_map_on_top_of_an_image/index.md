@@ -1,12 +1,11 @@
 ---
 title: 画像の上にヒットマップを追加する
 slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
-original_slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
 l10n:
-  sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
+  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
+{{HTMLSidebar}}
 
 ここでは、イメージマップを設定する方法と、最初に検討すべきいくつかの欠点を説明します。
 
@@ -16,7 +15,7 @@ l10n:
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >基本的な HTML 文書の作成方法</a
         >および<a
           href="/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images#ウェブページに画像を置くにはどうするのか"
@@ -42,7 +41,10 @@ l10n:
 
 以前は、イメージマップは一般的なナビゲーションデバイスでしたが、そのパフォーマンスとアクセシビリティの影響を徹底的に検討することが重要です。
 
-いくつかの理由から[テキストリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)（CSS でスタイル付けされたもの）がイメージマップよりも好ましい。 テキストリンクは軽量でメンテナンス可能で、多くの場合 SEO に優しく、アクセシビリティのニーズをサポートしています（スクリーンリーダー、テキストのみのブラウザー、翻訳サービスなど）。
+> [!WARNING]
+> 同じイメージマップを複数の画像で参照すると、予期しないブラウザーの動作を引き起こし、ユーザビリティやアクセシビリティを著しく低下させる可能性があります。例えば、 Safari および Chromium ベースのブラウザーで、ユーザーがキーボードを使用して再利用されたイメージマップを含む画像を移動すると、そのイメージマップを使用している後続の画像インスタンスは完全にスキップされます。 Firefox では、すべてのイメージマップが同時にキーボードフォーカスを取得し、ユーザーがキーボードを使用して画像を通過すると、次のフォーカスされる要素は最後の画像インスタンスの次の要素となり、2 つの画像間のすべてがスキップされます。
+
+[テキストリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links)（CSS でスタイル付けされたもの）がイメージマップよりも好ましいです。 テキストリンクは軽量でメンテナンス可能で、多くの場合 SEO に優しく、アクセシビリティのニーズをサポートしています（スクリーンリーダー、テキストのみのブラウザー、翻訳サービスなど）。
 
 ## イメージマップを正しく挿入する方法
 
@@ -76,20 +78,22 @@ l10n:
 
 - [`shape`](/ja/docs/Web/HTML/Reference/Elements/area#shape)
 
-  [`coords`](/ja/docs/Web/HTML/Reference/Elements/area#coords)
+  - : `shape` は、`circle`（円）、`rect`（四角形）、`poly`（ポリゴン）、`default`（デフォルト）の 4 つの値のいずれかをとります。 `shape` が `default` の `<area>` は画像全体から、あなたが定義した他のホットスポットを除いたものです。
+    定義した領域が重複している場合、ソースの順序によってどちらの領域が優先されるかが決まります。
+    選択した図形によって、`coords` で指定する必要がある座標情報が決まります。
 
-  - : `shape` は、`circle`（円）、`rect`（四角形）、`poly`（ポリゴン）、`default`（デフォルト）の 4 つの値のいずれかをとります。 （`default` の `<area>` は画像全体から、あなたが定義した他のホットスポットを除いたものです。） 選択した `shape` によって、`coords` で指定する必要がある座標情報が決まります。
+- [`coords`](/ja/docs/Web/HTML/Reference/Elements/area#coords)
+
+  - : 座標は CSS ピクセルで指定され、その値は選択した `shape` によって異なります。
 
     - 円の場合は、中心の x 座標と y 座標を指定し、その後に半径の長さを指定します。
     - 四角形の場合は、左上角と右下角の x/y 座標を指定します。
     - ポリゴンの場合は、各角の x/y 座標を指定します（したがって、 6 つ以上の値）。
 
-    座標は CSS ピクセルで与えます。
-
-    重なり合っている場合、ソースでの順序で選ばれます。
-
 - [`href`](/ja/docs/Web/HTML/Reference/Elements/area#href)
+
   - : リンク先のリソースの URL。 現在の領域をどこにもリンクさせたくない場合は、この属性を空白のままにしておくことができます（空白の円を描いている場合など）。
+
 - [`alt`](/ja/docs/Web/HTML/Reference/Elements/area#alt)
 
   - : リンクがどこにあるのか、それが何をするのかを人に伝える必須の属性。 `alt` テキストは、画像が利用できない場合にのみ表示されます。 [アクセス可能なリンクテキストを書くためのガイドライン](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#明確なリンク語を使う)を参照してください。
@@ -116,13 +120,11 @@ l10n:
 
 多くのブラウザーやデバイスでイメージマップを厳密にテストするまで、あなたは完了していません。 キーボードだけでリンクをたどってみてください。 画像をオフにしてみてください。
 
-イメージマップが約 240 px より広い場合は、ウェブサイトをレスポンシブにするためにさらに調整する必要があります。 座標が同じままでは、もはや画像と一致しないので、小さな画面の場合は画像のサイズを変更するだけでは不十分です。
-
-イメージマップを使用する必要がある場合は、Matt Stow の [jQuery プラグイン](https://github.com/stowball/jQuery-rwdImageMaps)（英語）を調べることができます。 また、Dudley Storey は、[イメージマップエフェクトとして SVG を使用する方法](http://thenewcode.com/696/Using-SVG-as-an-Alternative-To-Imagemaps)（英語）と、その後にビットマップ画像用に [SVG とラスターを組み合わせる方法](http://thenewcode.com/760/Create-A-Responsive-Imagemap-With-SVG)（英語）を示しています。
+イメージマップが約 240px より広い場合は、ウェブサイトをレスポンシブにするためにさらに調整する必要があります。 座標が同じままでは、もはや画像と一致しないので、小さな画面の場合は画像のサイズを変更するだけでは不十分です。
 
 ## もっと学ぶ
 
 - {{htmlelement("img")}}
 - {{htmlelement("map")}}
 - {{htmlelement("area")}}
-- [オンラインイメージマップエディター](https://maschek.hu/imagemap/imgmap/)（英語）
+- [オンラインイメージマップエディター](https://www.maschek.hu/imagemap/)（英語）

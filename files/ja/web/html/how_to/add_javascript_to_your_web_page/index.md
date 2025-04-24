@@ -1,21 +1,21 @@
 ---
-title: ウェブページで JavaScript を使う
+title: ウェブページに JavaScript を追加する
+short-title: JavaScript の追加
 slug: Web/HTML/How_to/Add_JavaScript_to_your_web_page
-original_slug: Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage
 l10n:
-  sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
+  sourceCommit: cd701f10306c8b0b9690532ff808df826818a04f
 ---
 
-{{QuickLinksWithSubpages("/ja/docs/Learn_web_development/Howto/Solve_HTML_problems")}}
+{{HTMLSidebar}}
 
-JavaScript を活用して、あなたのウェブページを次のレベルに引き上げましょう。この記事では、 HTML 文書から JavaScript を正しく起動する方法を学びます。
+JavaScript を活用して、ウェブページを次のレベルに引き上げましょう。この記事では、 HTML 文書から JavaScript を正しく起動する方法を学びます。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提条件:</th>
       <td>
-        <a href="/ja/docs/Learn/Getting_started_with_the_web"
+        <a href="/ja/docs/Learn_web_development/Getting_started/Your_first_website"
           >基本的な HTML 文書の作成</a
         >方法を習熟している必要があります。
       </td>
@@ -91,5 +91,5 @@ JavaScript を活用して、あなたのウェブページを次のレベルに
 
 - {{htmlelement("script")}}
 - {{htmlelement("noscript")}}
-- [James Edwards' introduction to using JavaScript accessibly](https://www.sitepoint.com/javascript-accessibility-101/)
+- [Writing JavaScript with Accessibility in Mind](https://www.sitepoint.com/writing-javascript-with-accessibility-in-mind/) (Manuel Matuzovic, 2017)
 - [Accessibility guidelines from W3C](https://www.w3.org/TR/WCAG20/)
