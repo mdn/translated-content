@@ -3,7 +3,6 @@ title: How CSS works
 slug: Learn_web_development/Core/Styling_basics/What_is_CSS
 ---
 
-{{LearnSidebar}}
 {{NextMenu("Learn_web_development/Core/Styling_basics/Getting_started", "Learn_web_development/Core/Styling_basics")}}
 
 我們已經學會基本 CSS 的用途與用法了，這堂課我們就來看看瀏覽器是如何將 CSS 和 HTML 變化成網頁的吧。
