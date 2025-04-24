@@ -33,7 +33,7 @@ abbr {
 
 ## 属性
 
-这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。在 `<abbr>` 元素中使用时，[`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#title) 属性具有特定的语义含义；它*必须*包含该缩写的完整可读描述或扩展描述。此文本通常会在鼠标光标悬停在元素上时由浏览器通过提示框展示出来。
+这个元素只包含[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)。在 `<abbr>` 元素中使用时，[`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性具有特定的语义含义；它*必须*包含该缩写的完整可读描述或扩展描述。此文本通常会在鼠标光标悬停在元素上时由浏览器通过提示框展示出来。
 
 你使用的每个 `<abbr>` 元素都是相互独立的；为一个元素提供 `title` 属性并不会自动将相同地扩展文本关联到具有相同内容文本的其他元素上。
 
@@ -43,7 +43,7 @@ abbr {
 
 确实并非要求所有缩写都必须使用 `<abbr>` 进行标记。然而，在某些情况下，这样做是有帮助的：
 
-- 当在文档内容中使用了缩写并且希望在正文流程之外提供一个扩展或定义时，应当使用带有适当 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#title) 属性的 `<abbr>` 标签。
+- 当在文档内容中使用了缩写并且希望在正文流程之外提供一个扩展或定义时，应当使用带有适当 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性的 `<abbr>` 标签。
 - 为了定义读者可能不熟悉的缩写，请使用 `<abbr>` 并提供内联文本来提供定义。仅当内联扩展或定义不可用时才包含 `title` 属性。
 - 当文本中出现的缩写需要从语义层面上加以标注时，`<abbr>` 元素非常有用。这可以用于样式或脚本目的。
 - 你可以将 `<abbr>` 和 {{HTMLElement("dfn")}} 元素来定义术语其对应的缩写或首字母缩略词。请参阅下面的[定义缩略语](#定义缩略语)。
@@ -112,7 +112,7 @@ abbr {
 
 ### 提供扩展解释
 
-你可以添加一个 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes#title) 属性来为缩写或首字母缩略词提供一个扩展解释或定义。
+你可以添加一个 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性来为缩写或首字母缩略词提供一个扩展解释或定义。
 
 #### HTML
 
