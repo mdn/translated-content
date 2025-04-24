@@ -23,7 +23,7 @@ Permissions-Policy: publickey-credentials-create=<allowlist>;
 
 ## 既定のポリシー
 
-publickey-credentials-create` の既定の許可リストは `self` です。
+`publickey-credentials-create` の既定の許可リストは `self` です。
 
 ## 仕様書
 
