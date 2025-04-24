@@ -196,7 +196,7 @@ const sharedDescription = url.searchParams.get("description");
 const sharedLink = url.searchParams.get("link");
 ```
 
-詳細については、 `share_target`  ウェブアプリのマニフェストメンバーページにある「[GET を使用して共有データを受信する](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#共有されたデータを_get_で受け取る)」の例をご覧ください。
+詳細については、 `share_target` ウェブアプリのマニフェストメンバーページにある「[GET を使用して共有データを受信する](/ja/docs/Web/Progressive_web_apps/Manifest/Reference/share_target#共有されたデータを_get_で受け取る)」の例をご覧ください。
 
 ### 共有されたファイルの処理
 
