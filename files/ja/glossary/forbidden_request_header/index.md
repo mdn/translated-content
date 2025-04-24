@@ -49,11 +49,9 @@ fetch("https://httpbin.org/get", {
 - `X-HTTP-Method-Override`、ただし禁止メソッド名を含む場合のみ
 - `X-Method-Override`、ただし禁止メソッド名を含む場合のみ
 
-> [!NOTE]
-> {{HTTPHeader("User-Agent")}} ヘッダーは禁止でしたが、そうではなくなりました。しかし、 Chrome はいまだに Fetch リクエストからこのヘッダーを削除します。（[Chromium bug 571722](https://crbug.com/571722) を参照）。
+> **メモ:** {{HTTPHeader("User-Agent")}} ヘッダーは禁止でしたが、そうではなくなりました。しかし、 Chrome はいまだに Fetch リクエストからこのヘッダーを削除します。（[Chromium bug 571722](https://crbug.com/571722) を参照）。
 
-> [!NOTE]
-> {{HTTPHeader("Referer")}} ヘッダーは、[仕様書](https://fetch.spec.whatwg.org/#forbidden-request-header)では禁止ヘッダーとしてリストアップされていますが、ユーザーエージェントがヘッダーを完全に制御できるわけではなく、ヘッダーはプログラムによって変更することができます。例えば、 [`fetch()`](/ja/docs/Web/API/Window/fetch) を使用する場合、 {{HTTPHeader("Referer")}} ヘッダーは、 [`referrer` オプション](/ja/docs/Web/API/RequestInit#referrer)を介してプログラムによって変更することができます。
+> **メモ:** {{HTTPHeader("Referer")}} ヘッダーは、[仕様書](https://fetch.spec.whatwg.org/#forbidden-request-header)では禁止ヘッダーとしてリストアップされていますが、ユーザーエージェントがヘッダーを完全に制御できるわけではなく、ヘッダーはプログラムによって変更することができます。例えば、 [`fetch()`](/ja/docs/Web/API/Window/fetch) を使用する場合、 {{HTTPHeader("Referer")}} ヘッダーは、 [`referrer` オプション](/ja/docs/Web/API/RequestInit#referrer)を介してプログラムによって変更することができます。
 
 ## 関連情報
 
