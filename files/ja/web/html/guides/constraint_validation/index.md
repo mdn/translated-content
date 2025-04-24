@@ -385,7 +385,7 @@ window.onload = () => {
 
 JavaScript は選択されたファイルを読み込み、 `File.size()` メソッドを使ってそのサイズを取得し、それを（ハードコードされた）制限値と比較し、違反があった場合は Constraint API を呼び出してブラウザーに通知します。
 
-```js
+```js-nolint
 function checkFileSize() {
   const fs = document.getElementById("fs");
   const files = fs.files;
