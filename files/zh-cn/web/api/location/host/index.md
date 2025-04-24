@@ -7,7 +7,7 @@ l10n:
 
 {{ApiRef("Location")}}
 
-{{domxref("Location")}} 接口的 **`host`** 属性是一个字符串，包含主机名（即 {{domxref("Location.hostname", "hostname")}}），如果 URL 的{{glossary("port", ""端口)}}非空，则会在主机名后追加一个 `":"` 和 {{domxref("Location.port", "port")}}。如果 URL 没有 `hostname`，则该属性的值为空字符串 `""`。
+{{domxref("Location")}} 接口的 **`host`** 属性是一个字符串，包含主机名（即 {{domxref("Location.hostname", "hostname")}}），如果 URL 的{{glossary("port", "端口")}}非空，则会在主机名后追加一个 `":"` 和 {{domxref("Location.port", "port")}}。如果 URL 没有 `hostname`，则该属性的值为空字符串 `""`。
 
 更多详细信息请参阅 {{domxref("URL.host")}}。
 
