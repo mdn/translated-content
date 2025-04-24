@@ -98,7 +98,7 @@ body :not(p) {
   text-decoration: underline;
 }
 
-/* <div> または <span> 要素ではない要素 */
+/* <div> または '.fancy' ではない要素 */
 body :not(div):not(.fancy) {
   font-weight: bold;
 }
