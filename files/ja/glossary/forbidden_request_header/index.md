@@ -1,43 +1,61 @@
 ---
-title: Forbidden header name (禁止ヘッダー名)
+title: Forbidden request header (禁止リクエストヘッダー)
 slug: Glossary/Forbidden_request_header
-original_slug: Glossary/Forbidden_header_name
+l10n:
+  sourceCommit: 1b88b4d62918f6f13d1155825e3881f52d90206e
 ---
 
 {{GlossarySidebar}}
 
 **禁止リクエストヘッダー**は、リクエストにおいてプログラム的に設定したり変更したりすることができない [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)の名前と値の組み合わせです。レスポンスで変更することが禁止されているヘッダーについては、{{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}を参照してください。
 
-このようなヘッダーを変更することは禁止されています。なぜなら、ユーザーエージェントがヘッダーを完全に制御できるからです。`Sec-` で始まる名前は、{{domxref("XMLHttpRequest")}} のような、開発者にヘッダーの制御を許可する [Fetch](/ja/docs/Web/API/Fetch_API) を使った {{glossary("API")}} から安全に新しいヘッダーを作成するために予約されています。
+このようなヘッダーを変更することは禁止されています。なぜなら、ユーザーエージェントがヘッダーを完全に制御できるからです。
+例えば、 {{HTTPHeader("Date")}} ヘッダーは禁止リクエストヘッダーであるため、このコードではメッセージの `Date` フィールドを設定することはできません。
 
-禁止ヘッダー名は `Proxy-` や `Sec-` で始まるもの、または以下の名前の 1 つです。
+```js example-bad
+fetch("https://httpbin.org/get", {
+  headers: {
+    Date: new Date().toUTCString(),
+  },
+});
+```
+
+`Sec-` で始まる名前は、 {{domxref("Window/fetch", "fetch()")}} などのヘッダーを開発者が制御できる {{glossary("API")}} から、新しいヘッダーを作成するために予約されています。
+禁止ヘッダーは次のいずれかです。
 
 - `Accept-Charset`
-- `Accept-Encoding`
-- `Access-Control-Request-Headers`
-- `Access-Control-Request-Method`
-- `Connection`
-- `Content-Length`
-- `Cookie`
-- `Cookie2`
-- `Date`
-- `DNT`
-- `Expect`
-- `Feature-Policy`
-- `Host`
-- `Keep-Alive`
-- `Origin`
-- `Proxy-`
-- `Sec-`
-- `Referer`
-- `TE`
-- `Trailer`
-- `Transfer-Encoding`
-- `Upgrade`
-- `Via`
+- {{HTTPHeader("Accept-Encoding")}}
+- {{HTTPHeader("Access-Control-Request-Headers")}}
+- {{HTTPHeader("Access-Control-Request-Method")}}
+- {{HTTPHeader("Connection")}}
+- {{HTTPHeader("Content-Length")}}
+- {{HTTPHeader("Cookie")}}
+- {{HTTPHeader("Date")}}
+- {{HTTPHeader("DNT")}}
+- {{HTTPHeader("Expect")}}
+- {{HTTPHeader("Host")}}
+- {{HTTPHeader("Keep-Alive")}}
+- {{HTTPHeader("Origin")}}
+- {{HTTPHeader("Permissions-Policy")}}
+- `Proxy-` で始まるヘッダー
+- `Sec-` で始まるヘッダー
+- {{HTTPHeader("Referer")}}
+- {{HTTPHeader("TE")}}
+- {{HTTPHeader("Trailer")}}
+- {{HTTPHeader("Transfer-Encoding")}}
+- {{HTTPHeader("Upgrade")}}
+- {{HTTPHeader("Via")}}
+- `X-HTTP-Method`、ただし禁止メソッド名 ({{HTTPMethod("CONNECT")}}, {{HTTPMethod("TRACE")}}, {{HTTPMethod("TRACK")}}) を含む場合のみ
+- `X-HTTP-Method-Override`、ただし禁止メソッド名を含む場合のみ
+- `X-Method-Override`、ただし禁止メソッド名を含む場合のみ
 
-> **メモ:** `User-Agent` ヘッダーは[仕様としては](https://fetch.spec.whatwg.org/#terminology-headers)禁止ではなくなりました (Firefox 43 で実装された forbidden header name list を参照)。 Fetch の [Headers](/ja/docs/Web/API/Headers) オブジェクトや、XHR の [setRequestHeader()](/ja/docs/Web/API/XMLHttpRequest#setRequestHeader%28%29) などでこのヘッダーを設定することが可能です。ただし、 Chrome は Fetch リクエストからこのヘッダーを暗黙的に削除します ([Chromium バグ 571722](https://bugs.chromium.org/p/chromium/issues/detail?id=571722) を参照)。
+> [!NOTE]
+> {{HTTPHeader("User-Agent")}} ヘッダーは禁止でしたが、そうではなくなりました。しかし、 Chrome はいまだに Fetch リクエストからこのヘッダーを削除します。（[Chromium bug 571722](https://crbug.com/571722) を参照）。
+
+> [!NOTE]
+> {{HTTPHeader("Referer")}} ヘッダーは、[仕様書](https://fetch.spec.whatwg.org/#forbidden-request-header)では禁止ヘッダーとしてリストアップされていますが、ユーザーエージェントがヘッダーを完全に制御できるわけではなく、ヘッダーはプログラムによって変更することができます。例えば、 [`fetch()`](/ja/docs/Web/API/Window/fetch) を使用する場合、 {{HTTPHeader("Referer")}} ヘッダーは、 [`referrer` オプション](/ja/docs/Web/API/RequestInit#referrer)を介してプログラムによって変更することができます。
 
 ## 関連情報
 
-{{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}} (用語集)
+- 用語集の用語:
+  - {{Glossary("Forbidden response header name", "禁止レスポンスヘッダー名")}}
