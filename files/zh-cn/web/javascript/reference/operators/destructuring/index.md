@@ -85,7 +85,7 @@ const { a, b, c } = obj;
 
 const obj = { prop1: x, prop2: y, prop3: z };
 const { prop1: x, prop2: y, prop3: z } = obj;
-// 等同于:
+// 等同于：
 // const x = obj.prop1, y = obj.prop2, z = obj.prop3;
 ```
 
