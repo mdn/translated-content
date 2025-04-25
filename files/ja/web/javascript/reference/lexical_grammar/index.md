@@ -2,7 +2,7 @@
 title: 字句文法
 slug: Web/JavaScript/Reference/Lexical_grammar
 l10n:
-  sourceCommit: 702cd9e4d234e13aea345943efc8d0c03d92ec9
+  sourceCommit: 3c13d9a0c239ed31ae861486393952bc03e0b5bd
 ---
 
 {{jsSidebar("More")}}
@@ -544,15 +544,15 @@ Unicode コードポイントエスケープは `\u{` に続いて 16 進数の�
 
 詳細について、[テンプレートリテラル](/ja/docs/Web/JavaScript/Reference/Template_literals)を参照してください。
 
-```js-nolint
-`string text`
+```js
+`string text`;
 
 `string text line 1
- string text line 2`
+ string text line 2`;
 
-`string text ${expression} string text`
+`string text ${expression} string text`;
 
-tag`string text ${expression} string text`
+tag`string text ${expression} string text`;
 ```
 
 ## 自動セミコロン挿入
