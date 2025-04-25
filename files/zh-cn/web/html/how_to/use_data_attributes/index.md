@@ -1,9 +1,9 @@
 ---
 title: 使用数据属性
-slug: Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
+slug: Web/HTML/How_to/Use_data_attributes
 ---
 
-{{LearnSidebar}}
+{{HTMLSidebar}}
 
 HTML 是具有扩展性的设计，它初衷是数据应与特定的元素相关联，但不需要任何定义。[data-\* 属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)允许我们在标准、语义化的 HTML 元素中存储额外的信息，而不需要使用类似于非标准属性或者 DOM 额外属性之类的技巧。
 
