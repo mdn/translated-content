@@ -80,7 +80,7 @@ const [a, b, c] = arr;
 ```js
 const obj = { a, b, c };
 const { a, b, c } = obj;
-// 等同于:
+// 等同于：
 // const a = obj.a, b = obj.b, c = obj.c;
 
 const obj = { prop1: x, prop2: y, prop3: z };
