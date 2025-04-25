@@ -53,7 +53,7 @@ function D() {}
 
 const o = new C();
 
-// true, 因为: Object.getPrototypeOf(o) === C.prototype
+// true, 因为：Object.getPrototypeOf(o) === C.prototype
 o instanceof C;
 
 // false, 因为 D.prototype 不在 o 的原型链上
