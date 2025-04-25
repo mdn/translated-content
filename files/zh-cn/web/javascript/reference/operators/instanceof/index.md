@@ -59,7 +59,7 @@ o instanceof C;
 // false, 因为 D.prototype 不在 o 的原型链上
 o instanceof D;
 
-o instanceof Object; // true, 原因如下:
+o instanceof Object; // true, 原因如下：
 C.prototype instanceof Object; // true
 
 // 重新赋值 `constructor.prototype`: 在实践中很罕见
