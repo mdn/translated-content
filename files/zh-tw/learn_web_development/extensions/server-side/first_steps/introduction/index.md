@@ -3,7 +3,7 @@ title: 伺服器端介紹
 slug: Learn_web_development/Extensions/Server-side/First_steps/Introduction
 ---
 
-{{LearnSidebar}}{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
+{{NextMenu("Learn_web_development/Extensions/Server-side/First_steps/Client-Server_overview", "Learn_web_development/Extensions/Server-side/First_steps")}}
 
 歡迎來到 MDN 伺服器端程式設計的初學者課程 ！在第一篇文章中，我們會用較為抽象的角度來探討 server-side programming，並且為你解答「這是什麼？」「這個和用戶端的程式有什麼不同？」以及「這個有什麼用？」 。在讀完這篇文章後，你將能明白如何透過 server-side coding 來為你的網站增添力量。
 

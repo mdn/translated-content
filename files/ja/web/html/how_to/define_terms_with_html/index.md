@@ -1,7 +1,7 @@
 ---
 title: HTML で用語を定義する
-slug: Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML
-original_slug: Learn/HTML/Howto/Define_terms_with_HTML
+slug: Web/HTML/How_to/Define_terms_with_HTML
+original_slug: Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML
 l10n:
   sourceCommit: 751d58669499de0c6ea0d5b356e0e1448418c5d3
 ---

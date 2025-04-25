@@ -1,7 +1,7 @@
 ---
 title: 読み込みが速い HTML ページを作成するための豆知識
-slug: Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
-original_slug: Learn/HTML/Howto/Author_fast-loading_HTML_pages
+slug: Web/HTML/How_to/Author_fast-loading_HTML_pages
+original_slug: Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
 l10n:
   sourceCommit: 8d766d1d1c60a2d6d2c95bd2aa9d0b297d9c70ac
 ---
