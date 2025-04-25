@@ -1,10 +1,9 @@
 ---
-title: Add a hit map on top of an image
+title: 在图像上层添加点击映射
 slug: Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
-original_slug: Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
 ---
 
-{{QuickLinksWithSubpages("/zh-CN/docs/Learn/HTML/Howto")}}
+{{HTMLSidebar}}
 
 现在我们将学习如何设置图像映射，先讨论他的缺点。
 

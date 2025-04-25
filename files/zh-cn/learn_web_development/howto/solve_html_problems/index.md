@@ -26,7 +26,7 @@ HTML 专门为文档提供语义信息，因此，HTML 能够解答关于如何�
 - [如何注释图片和图标](/zh-CN/docs/Learn_web_development/Core/Structuring_content/HTML_images#通过为图片搭配说明文字的方式来解说图片)
 - [如何注解缩略语并使其可理解](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#缩略语)
 - [如何为网页添加引述和引用](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#引用)
-- [如何用 HTML 定义术语](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Define_terms_with_HTML)
+- [如何用 HTML 定义术语](/zh-CN/docs/Web/HTML/How_to/Define_terms_with_HTML)
 
 ### 超链接
 
@@ -45,7 +45,7 @@ HTML 专门为文档提供语义信息，因此，HTML 能够解答关于如何�
 HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary("CSS")}} 或脚本使页面具有交互功能。
 
 - [如何在网页中使用 CSS](/zh-CN/docs/Learn_web_development/Core/Styling_basics/What_is_CSS#应用_css_到_dom)
-- [如何在网页中使用 JavaScript](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_JavaScript_within_a_webpage)
+- [如何在网页中使用 JavaScript](/zh-CN/docs/Web/HTML/How_to/Add_JavaScript_to_your_web_page)
 
 ### 嵌入内容
 
@@ -72,7 +72,7 @@ HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary(
 ### 数据表示
 
 - 如何用 HTML 表示数值和代码，参见[上标和下标](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#上标和下标)以及[展示计算机代码](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features#展示计算机代码)
-- [如何使用 data 属性](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- [如何使用 data 属性](/zh-CN/docs/Web/HTML/How_to/Use_data_attributes)
 
 ### 高级文本语义
 
@@ -83,7 +83,7 @@ HTML 仅仅建立了文档结构。为解决演示问题，可使用 {{glossary(
 
 - [如何为网页添加响应式图像](/zh-CN/docs/Web/HTML/Guides/Responsive_images)
 - [如何为网页添加矢量图像](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Including_vector_graphics_in_HTML)
-- [如何在图像上添加 hit map](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image)
+- [如何在图像上添加 hit map](/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image)
 
 ### 国际化
 
@@ -94,4 +94,4 @@ HTML 支持多语言，其提供了用于解决常见的国际化问题的工具
 
 ### 性能
 
-- [如何写一个加载速度很快的 HTML 页面](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages)
+- [如何写一个加载速度很快的 HTML 页面](/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages)
