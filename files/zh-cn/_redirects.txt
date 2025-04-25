@@ -1230,9 +1230,9 @@
 /zh-CN/docs/Learn/HTML/Forms/The_native_form_widgets	/zh-CN/docs/Learn_web_development/Extensions/Forms/Basic_native_form_controls
 /zh-CN/docs/Learn/HTML/Forms/Your_first_HTML_form	/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /zh-CN/docs/Learn/HTML/Howto	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems
-/zh-CN/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image
-/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
-/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
+/zh-CN/docs/Learn/HTML/Howto/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+/zh-CN/docs/Learn/HTML/Howto/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
+/zh-CN/docs/Learn/HTML/Howto/Use_data_attributes	/zh-CN/docs/Web/HTML/How_to/Use_data_attributes
 /zh-CN/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features
 /zh-CN/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Creating_links
 /zh-CN/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML	/zh-CN/docs/Learn_web_development/Core/Structuring_content/Debugging_HTML
@@ -1443,6 +1443,9 @@
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Tables_tasks	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Tables
 /zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills_backgrounds_and_borders	/zh-CN/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Backgrounds_and_borders
 /zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Learning_and_getting_help	/zh-CN/docs/Learn_web_development/Getting_started/Soft_skills/Research_and_learning
+/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Add_a_hit_map_on_top_of_an_image	/zh-CN/docs/Web/HTML/How_to/Add_a_hit_map_on_top_of_an_image
+/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
+/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes	/zh-CN/docs/Web/HTML/How_to/Use_data_attributes
 /zh-CN/docs/Localization	/zh-CN/docs/Glossary/Localization
 /zh-CN/docs/MDN/About	/zh-CN/docs/MDN/Writing_guidelines
 /zh-CN/docs/MDN/CSS	/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperties
@@ -1563,7 +1566,7 @@
 /zh-CN/docs/Server-sent_events/EventSource/onerror	/zh-CN/docs/Web/API/EventSource/error_event
 /zh-CN/docs/Server-sent_events/EventSource/onopen	/zh-CN/docs/Web/API/EventSource/open_event
 /zh-CN/docs/Server-sent_events/Using_server-sent_events	/zh-CN/docs/Web/API/Server-sent_events/Using_server-sent_events
-/zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
+/zh-CN/docs/Tips_for_Authoring_Fast-loading_HTML_Pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
 /zh-CN/docs/Tools	https://firefox-source-docs.mozilla.org/devtools-user/index.html
 /zh-CN/docs/Tools-840092-dup/Remote_Debugging	https://profiler.firefox.com/docs/
 /zh-CN/docs/Tools-840092-dup/Tools_Toolbox	https://firefox-source-docs.mozilla.org/devtools-user/tools_toolbox/index.html
@@ -2800,8 +2803,8 @@
 /zh-CN/docs/Web/Guide/HTML/Forms/Sending_forms_through_JavaScript	/zh-CN/docs/Learn_web_development/Extensions/Forms/Sending_forms_through_JavaScript
 /zh-CN/docs/Web/Guide/HTML/Forms/表单入门	/zh-CN/docs/Learn_web_development/Extensions/Forms/Your_first_form
 /zh-CN/docs/Web/Guide/HTML/Introduction	/zh-CN/docs/Learn_web_development/Core/Structuring_content
-/zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Author_fast-loading_HTML_pages
-/zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes
+/zh-CN/docs/Web/Guide/HTML/Tips_for_authoring_fast-loading_HTML_pages	/zh-CN/docs/Web/HTML/How_to/Author_fast-loading_HTML_pages
+/zh-CN/docs/Web/Guide/HTML/Using_data_attributes	/zh-CN/docs/Web/HTML/How_to/Use_data_attributes
 /zh-CN/docs/Web/Guide/Houdini	/zh-CN/docs/Web/API/Houdini_APIs
 /zh-CN/docs/Web/Guide/Introduction_to_Web_development	/zh-CN/docs/Learn_web_development
 /zh-CN/docs/Web/Guide/Mobile	/zh-CN/docs/Learn_web_development/Core/CSS_layout/Responsive_Design
