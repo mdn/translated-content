@@ -31,7 +31,7 @@ slug: Web/API/IDBCursor
 - {{domxref("IDBCursor.key")}} {{readonlyInline}}
   - : 返回记录中游标位置的有效主键。如果游标在区间之外，将会设置成 `undefined`。游标主键可以是任意的数据类型（data type）。
 - {{domxref("IDBCursor.primaryKey")}} {{readonlyInline}}
-  - : 返回游标当前有效的主键。如果游标当前正在被迭代或者已经在迭代在区间范围外，将会被设置成 `undefined` 。游标主键可以是任意的时间类型（data type）。
+  - : 返回游标当前有效的主键。如果游标当前正在被迭代或者已经在迭代在区间范围外，将会被设置成 `undefined` 。游标主键可以是任意的数据类型（data type）。
 
 ## 常量
 
