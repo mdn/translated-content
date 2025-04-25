@@ -40,7 +40,7 @@ object instanceof constructor
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `constructor` 不是一个对象，或 `constructor` 没有 [`[Symbol.hasInstance]()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 方法，并且 `constructor` 本身不是一个构造函数，且则抛出该异常。
+  - : 如果 `constructor` 不是一个对象，或 `constructor` 没有 [`[Symbol.hasInstance]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 方法，并且 `constructor` 本身不是一个构造函数，且则抛出该异常。
 
 ## 描述
 
