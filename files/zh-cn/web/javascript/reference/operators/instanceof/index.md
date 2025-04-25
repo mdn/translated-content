@@ -21,7 +21,7 @@ console.log(auto instanceof Car);
 // 预期输出：true
 
 console.log(auto instanceof Object);
-// 预期输出: true
+// 预期输出：true
 ```
 
 ## 语法
