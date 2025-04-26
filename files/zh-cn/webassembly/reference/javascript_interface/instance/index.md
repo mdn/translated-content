@@ -2,7 +2,7 @@
 title: WebAssembly.Instance
 slug: WebAssembly/Reference/JavaScript_interface/Instance
 l10n:
-  sourceCommit: d23f8c5c52bdfb6151476a2574e72d323d0d30f4
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
 **`WebAssembly.Instance`** 对象本身是有状态的，是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 的一个可执行实例。`Instance` 对象包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Guides/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
@@ -69,6 +69,6 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)

@@ -1,6 +1,8 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/Reference/JavaScript_interface/Global
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
 **`WebAssembly.Global`** 对象表示一个全局变量实例，可以被 JavaScript 和 importable/exportable 访问，跨越一个或多个 {{jsxref("WebAssembly.Module")}} 实例。他允许被多个模块动态连接。
@@ -82,7 +84,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
 - [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)
