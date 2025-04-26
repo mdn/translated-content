@@ -12,7 +12,6 @@ HTTP **`302 Found`** [重新導向回應](/zh-TW/docs/Web/HTTP/Reference/Status#
 收到此狀態的瀏覽器會自動請求 `Location` 標頭中的 URL 資源，將使用者重新導向到新的頁面。收到此回應的搜尋引擎不會將原始 URL 的連結歸屬到新的資源，這意味著沒有 {{Glossary("SEO")}} 價值會轉移到新的 URL。
 
 > [!NOTE]
->
 > 在 [Fetch 標準](https://fetch.spec.whatwg.org/#http-redirect-fetch)中，當使用者代理收到 `302` 作為對 {{HTTPMethod("POST")}} 請求的回應時，它會在隨後的重新導向請求中使用 {{HTTPMethod("GET")}} 方法，這是 HTTP [規範](#規範)所允許的。為避免使用者代理修改請求，應改用 {{HTTPStatus("307", "307 Temporary Redirect")}}，因為在 `307` 回應後更改方法是被禁止的。
 >
 > 在你想要將任何請求方法更改為 {{HTTPMethod("GET")}} 的情況下，請改用 {{HTTPStatus("303", "303 See Other")}}。當你想要對 {{HTTPMethod("PUT")}} 方法給出一個回應，但不是上傳的資源，而是一條確認訊息（例如：「你已成功上傳 XYZ」）時，這很有用。
