@@ -44,7 +44,7 @@ Firefox では、 [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title)
 - **推奨**（`rel="stylesheet" があり、 `title="…"` が指定されているもの）: 既定で適用されますが、代替スタイルシートが選択されると{{domxref("StyleSheet.disabled", "無効化", "", 1)}}されます。**推奨スタイルシートは一つしか存在できません**ので、異なる title 属性を持つスタイルシートを複数指定すると、いくつかが無視されます。
 - **代替**（`rel="alternate stylesheet"` があり、 `title="…"` が指定されているもの）: 既定では無効で、選択することができます。
 
-スタイルシートメニューが存在し、 {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} または {{HTMLElement("style")}} 要素の `title` 属性とともに参照された場合、そのタイトルがユーザーに与えられる選択肢のひとつとなります。同じ [`title`](/en-US/docs/Web/HTML/Reference/Global_attributes/title) でリンクされた別のスタイルシートも、同じ選択肢の一部として扱われます。 `title` 属性を付けずにリンクされたスタイルシートは常に適用されます。
+スタイルシートメニューが存在し、 {{HTMLElement("link", "&lt;link rel=\"stylesheet\"&gt;")}} または {{HTMLElement("style")}} 要素の `title` 属性とともに参照された場合、そのタイトルがユーザーに与えられる選択肢のひとつとなります。同じ [`title`](/ja/docs/Web/HTML/Reference/Global_attributes/title) でリンクされた別のスタイルシートも、同じ選択肢の一部として扱われます。 `title` 属性を付けずにリンクされたスタイルシートは常に適用されます。
 
 標準スタイルシートへリンクするには `rel="stylesheet"` を、代替スタイルシートへリンクするには `rel="alternate stylesheet"` を使用します。これにより、どのスタイルシートのタイトルを標準で選択すべきかがブラウザーに伝わり、代替スタイルシートに対応していないブラウザーでは標準の選択肢が適用されます。
 
