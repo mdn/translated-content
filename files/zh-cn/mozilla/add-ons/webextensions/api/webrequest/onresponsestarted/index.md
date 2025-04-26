@@ -106,13 +106,13 @@ browser.webRequest.onResponseStarted.hasListener(listener)
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
 - `responseHeaders` {{optional_inline}}
-  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求接收到的 HTTP 响应头。
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求接收到的 HTTP 响应标头。
 - `statusCode`
   - : `integer`。服务器返回的标准 HTTP 状态码。
 - `statusLine`
   - : `string`。响应的 HTTP 状态行。对于 HTTP/0.9 响应（即缺少状态行的响应），该属性值为字符串 'HTTP/0.9 200 OK'。
 - `tabId`
-  - : `integer`。请求发生的选项卡的 ID。如果请求与选项卡无关，则为 -1。
+  - : `integer`。请求发生的标签页的 ID。如果请求与标签页无关，则为 -1。
 - `thirdParty`
   - : `boolean`。指示请求及其内容窗口层次结构是否为第三方。
 - `timeStamp`
