@@ -3,7 +3,7 @@ title: JavaScript 性能优化
 slug: Learn_web_development/Extensions/Performance/JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Performance/video", "Learn_web_development/Extensions/Performance/HTML", "Learn_web_development/Extensions/Performance")}}
 
 考虑如何在你的网站上使用 JavaScript 以及如何减少它可能造成的性能问题是非常重要的。虽然图片和视频占了平均网站下载字节的 70% 以上，但是逐字节来看，JavaScript 对性能的负面影响更大——它会显著影响下载时间、渲染性能、CPU 和电池使用。本文介绍了一些优化 JavaScript 的技巧和方法，以提高你的网站的性能。
 

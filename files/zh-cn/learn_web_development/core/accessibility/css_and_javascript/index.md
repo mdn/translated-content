@@ -3,7 +3,7 @@ title: CSS 和 JavaScript 无障碍最佳实践
 slug: Learn_web_development/Core/Accessibility/CSS_and_JavaScript
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
+{{PreviousMenuNext("Learn_web_development/Core/Accessibility/HTML","Learn_web_development/Core/Accessibility/WAI-ARIA_basics", "Learn_web_development/Core/Accessibility")}}
 
 当 CSS 和 JavaScript 使用得当，很有可能改善 Web 访问体验，相反如果滥用的话，则会在极大程度上损害无障碍。本文概述了一些应该被考虑的 CSS 和 JavaScript 的最佳实践，这些实践保证了即使是复杂的内容也可以尽可能的容易被访问。
 

@@ -3,7 +3,7 @@ title: MathML 使用入门
 slug: Web/MathML/Tutorials/For_beginners/Getting_started
 ---
 
-{{LearnSidebar}}{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
+{{NextMenu("Web/MathML/Guides/Text_containers", "Web/MathML/Guides")}}
 
 在本文中，我们将使用一个简单的 HTML 文档，了解如何在其中添加 MathML 公式，并顺便介绍一些元素。
 
