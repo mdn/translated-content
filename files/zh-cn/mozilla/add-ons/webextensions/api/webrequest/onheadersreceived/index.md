@@ -71,12 +71,14 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 - `documentUrl`
   - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
 - `frameAncestors`
+
   - : 数组（`array`）。包含每个文档在框架层次结构（直到顶级文档）中的信息。数组的第一个元素包含关于请求文档的直接父文档的信息，而最后一个元素包含关于顶级文档的信息。如果加载的是顶级文档，则该数组为空。
 
     - url
       - : `string`。文档加载来源的 URL。
     - frameId
       - : `integer`。文档的 `frameId`。`details.frameAncestors[0].frameId` 与 `details.parentFrameId` 相同。
+
 - `frameId`
   - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
 - `fromCache`
@@ -123,6 +125,12 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
+- `responseHeaders` {{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求接收到的 HTTP 响应头。
+- `statusCode`
+  - : `integer`。服务器返回的标准 HTTP 状态码。
+- `statusLine`
+  - : `string`。响应的 HTTP 状态行。对于 HTTP/0.9 响应（即缺少状态行的响应），该属性值为字符串 'HTTP/0.9 200 OK'。
 - `tabId`
   - : `integer`。请求发生的选项卡的 ID。如果请求与选项卡无关，则为 -1。
 - `thirdParty`
