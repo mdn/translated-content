@@ -59,8 +59,8 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
   - : `string` 的数组（`array`）。事件的额外选项。你可以传递以下任意值：
 
-    - "blocking" 用于使请求同步，以便于修改请求和响应的标头
-    - "responseHeaders" 将响应标头包含在传递给监听器的 `details` 对象中
+    - `"blocking"` 用于使请求同步，以便于修改请求和响应的标头
+    - `"responseHeaders"` 将响应标头包含在传递给监听器的 `details` 对象中
 
 ## 附加对象
 
@@ -74,13 +74,13 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
   - : 数组（`array`）。包含每个文档在框架层次结构（直到顶级文档）中的信息。数组的第一个元素包含关于请求文档的直接父文档的信息，而最后一个元素包含关于顶级文档的信息。如果加载的是顶级文档，则该数组为空。
 
-    - url
+    - `url`
       - : `string`。文档加载来源的 URL。
-    - frameId
+    - `frameId`
       - : `integer`。文档的 `frameId`。`details.frameAncestors[0].frameId` 与 `details.parentFrameId` 相同。
 
 - `frameId`
-  - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
+  - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为表示该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页中唯一。
 - `fromCache`
   - : `boolean`。指示此响应是否从磁盘缓存获取。
 - `incognito`
@@ -109,12 +109,12 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
       - : `string`。代理服务器的类型，可能是以下值之一：
 
-        - "http": HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
-        - "https": 通过 TLS 连接到代理的 HTTP 代理
-        - "socks": SOCKS v5 代理
-        - "socks4": SOCKS v4 代理
-        - "direct": 无代理
-        - "unknown": 未知代理
+        - `"http"`：HTTP 代理（或使用 SSL CONNECT 的 HTTPS）
+        - `"https"`：通过 TLS 连接到代理的 HTTP 代理
+        - `"socks"`：SOCKS v5 代理
+        - `"socks4"`：SOCKS v4 代理
+        - `"direct"`：无代理
+        - `"unknown"`：未知代理
 
     - `username`
       - : `string`。代理服务的用户名。
