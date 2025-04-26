@@ -5,7 +5,7 @@ slug: Web/JavaScript/Reference/Operators/instanceof
 
 {{jsSidebar("Operators")}}
 
-**`instanceof`** 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。其返回值是一个布尔值。可以通过 [`Symbol.hasInstance`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 来自定义该操作符的行为。
+**`instanceof`** 运算符用于检测构造函数的 `prototype` 属性是否出现在某个实例对象的原型链上。其返回值是一个布尔值。可以通过 [`Symbol.hasInstance`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 来自定义该运算符的行为。
 
 {{InteractiveExample("JavaScript Demo: instanceof operator")}}
 
@@ -26,21 +26,21 @@ console.log(auto instanceof Object);
 
 ## 语法
 
-```plain
+```js-nolint
 object instanceof constructor
 ```
 
 ### 参数
 
 - `object`
-  - : 要测试的实例对象
+  - : 要测试的对象
 - `constructor`
   - : 测试对照的构造函数
 
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : 如果 `constructor` 不是一个对象，或 `constructor` 没有 [`[Symbol.hasInstance]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 方法，并且 `constructor` 本身不是一个构造函数，且则抛出该异常。
+  - : 如果 `constructor` 不是对象，或 `constructor` 没有 [`[Symbol.hasInstance]()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/hasInstance) 方法（那么它一定是一个函数），则抛出该异常。
 
 ## 描述
 
@@ -53,16 +53,16 @@ function D() {}
 
 const o = new C();
 
-// true, 因为：Object.getPrototypeOf(o) === C.prototype
+// true，因为：Object.getPrototypeOf(o) === C.prototype
 o instanceof C;
 
-// false, 因为 D.prototype 不在 o 的原型链上
+// false，因为 D.prototype 不在 o 的原型链上
 o instanceof D;
 
-o instanceof Object; // true, 原因如下：
+o instanceof Object; // true，原因如下：
 C.prototype instanceof Object; // true
 
-// 重新赋值 `constructor.prototype`: 在实践中很罕见
+// 重新赋值 `constructor.prototype`：在实践中很罕见
 C.prototype = {};
 const o2 = new C();
 
