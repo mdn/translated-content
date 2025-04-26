@@ -2,7 +2,7 @@
 title: webRequest.onHeadersReceived
 slug: Mozilla/Add-ons/WebExtensions/API/webRequest/onHeadersReceived
 l10n:
-  sourceCommit: b8a0743ca8b1e1b1b1a95cc93a4413c020f11262
+  sourceCommit: cc1fa2df9ceb4c58a4776451cd100a2109428691
 ---
 
 {{AddonSidebar}}
@@ -11,11 +11,11 @@ l10n:
 
 要将响应标头与请求数据的其余部分一起传递到监听器中，请向 `extraInfoSpec` 数组中传入“responseHeaders”。
 
-要使用“blocking”，则必须在 manifest.json 中具有[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
+要使用“blocking”，则必须在 manifest.json 中包括[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
 扩展可能会发出冲突的请求。如果两个扩展监听同一请求的 `onHeadersReceived` 并返回 `responseHeaders` 来设置原始响应中不存在的相同标头（例如 `Set-Cookie`），则只有一个更改会成功。
 
-然而，`Content-Security-Policy` 标头的处理方式不同；其值会被合并以应用所有指定的策略。但是，如果两个扩展程序设置了冲突的 CSP 值，CSP 服务会通过更严格的限制来解决冲突。例如，如果一个扩展程序设置了 `img-src: example.com`，另一个扩展程序设置了 `img-src: example.org`，结果将是 `img-src: 'none'`。合并的修改总是倾向于更严格的限制，尽管扩展可以移除原始的 CSP 标头。
+但是，`Content-Security-Policy` 标头的处理方式不同；其值会被合并以应用所有指定的策略。但是，如果两个扩展程序设置了冲突的 CSP 值，CSP 服务会通过更严格的限制来解决冲突。例如，如果一个扩展程序设置了 `img-src: example.com` 而另一个扩展程序设置了 `img-src: example.org`，则结果将是 `img-src: 'none'`。尽管扩展可以移除原始的 CSP 标头，合并的修改却总是倾向于更严格的限制。
 
 如果你希望查看系统处理后的标头且不希望考虑其他扩展可能会再度对其做出更改，请使用 {{WebExtAPIRef("webRequest.onResponseStarted")}}，尽管你无法在此事件上修改标头。
 
@@ -49,9 +49,9 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
   - : 当事件发生时调用的函数。该函数接收以下参数：
 
     - `details`
-      - : `object`。有关请求的详细信息。参见 [details](#details) 部分。如果你在 `extraInfoSpec` 中包含了 "responseHeaders"，则会包含响应头。
+      - : `object`。有关请求的详细信息。参见 [details](#details) 部分。如果你在 `extraInfoSpec` 中包含了 "responseHeaders"，则会包含响应标头。
 
-    返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了 "blocking"，事件监听器将返回一个 `BlockingResponse` 对象，并可以设置其 `responseHeaders` 属性。在 Firefox 中，返回值可以是一个解析为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
+    返回值：{{WebExtAPIRef('webRequest.BlockingResponse')}}。如果在 `extraInfoSpec` 参数中指定了“blocking”，事件监听器将返回一个 `BlockingResponse` 对象，并可以设置其 `responseHeaders` 属性。在 Firefox 中，返回值可以是一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 - `filter`
   - : {{WebExtAPIRef('webRequest.RequestFilter')}}。一组限制发送到此监听器的事件的过滤器。
@@ -59,8 +59,8 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 
   - : `string` 的数组（`array`）。事件的额外选项。你可以传递以下任意值：
 
-    - "blocking" 使请求同步，以便你可以修改请求和响应头
-    - "responseHeaders" 将响应头包含在传递给监听器的 `details` 对象中
+    - "blocking" 用于使请求同步，以便于修改请求和响应的标头
+    - "responseHeaders" 将响应标头包含在传递给监听器的 `details` 对象中
 
 ## 附加对象
 
@@ -70,8 +70,13 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
   - : `string`。若请求来自上下文身份中打开的标签页，则为此上下文身份的 cookie 存储 ID。参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
   - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
-- `error`
-  - : `string`。错误描述。此字符串是内部错误字符串，可能因浏览器而异，且不保证版本间的一致性。
+- `frameAncestors`
+  - : 数组（`array`）。包含每个文档在框架层次结构（直到顶级文档）中的信息。数组的第一个元素包含关于请求文档的直接父文档的信息，而最后一个元素包含关于顶级文档的信息。如果加载的是顶级文档，则该数组为空。
+
+    - url
+      - : `string`。文档加载来源的 URL。
+    - frameId
+      - : `integer`。文档的 `frameId`。`details.frameAncestors[0].frameId` 与 `details.parentFrameId` 相同。
 - `frameId`
   - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
 - `fromCache`
@@ -163,8 +168,7 @@ browser.webRequest.onHeadersReceived.hasListener(listener)
 let targetPage =
   "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
-// 将新标头添加到原始数组，
-// 并返回它。
+// 将新标头添加到原始数组，并返回所有标头。
 function setCookie(e) {
   const setMyCookie = {
     name: "Set-Cookie",
@@ -174,8 +178,7 @@ function setCookie(e) {
   return { responseHeaders: e.responseHeaders };
 }
 
-// 监听目标页面的 onHeaderReceived。
-// 设置“blocking”和“responseHeaders”。
+// 监听目标页面的 onHeaderReceived。设置“blocking”和“responseHeaders”。
 browser.webRequest.onHeadersReceived.addListener(
   setCookie,
   { urls: [targetPage] },
@@ -189,9 +192,7 @@ browser.webRequest.onHeadersReceived.addListener(
 const targetPage =
   "https://developer.mozilla.org/en-US/Firefox/Developer_Edition";
 
-// 返回一个设置计时器的 Promise。
-// 当计时器触发时，使用
-// 修改后的响应标头兑现 Promise。
+// 返回一个设置计时器的 Promise。当计时器触发时，使用修改后的响应标头兑现 Promise。
 function setCookieAsync(e) {
   const asyncSetCookie = new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -207,8 +208,7 @@ function setCookieAsync(e) {
   return asyncSetCookie;
 }
 
-// 监听目标页面的 onHeaderReceived。
-// 设置“blocking”和“responseHeaders”。
+// 监听目标页面的 onHeaderReceived。设置“blocking”和“responseHeaders”。
 browser.webRequest.onHeadersReceived.addListener(
   setCookieAsync,
   { urls: [targetPage] },
