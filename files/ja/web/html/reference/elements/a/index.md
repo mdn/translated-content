@@ -1,9 +1,8 @@
 ---
 title: "<a>: アンカー要素"
 slug: Web/HTML/Reference/Elements/a
-original_slug: Web/HTML/Element/a
 l10n:
-  sourceCommit: 1a48b6abdd27e168c78edcf04a7a9f6a8e0fdc15
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}
@@ -214,22 +213,31 @@ li {
 
 #### HTML 以外のリソースへのリンク
 
-```html
-<a href="2017-annual-report.ppt">2017 年次レポート (PowerPoint)</a>
-```
-
-リンクの動作を示すためにアイコンを使用する場合は、[alt テキスト](/ja/docs/Web/HTML/Reference/Elements/img#alt)を確実に入れてください。
+リンクの動作を示すためにアイコンを使用する場合は、 [`alt` テキスト](/ja/docs/Web/HTML/Reference/Elements/img#alt)を確実に入れてください。アイコンがない場合でも、 `alt` 属性のコンテンツによってリンクの動作が伝わりまます。
 
 ```html
-<a target="_blank" href="https://www.wikipedia.org">
-  Wikipedia
-  <img alt="(新しいタブで開く)" src="newtab.svg" />
-</a>
-
-<a href="2017-annual-report.ppt">
-  2017 年次レポート
-  <img alt="(PowerPoint ファイル)" src="ppt-icon.svg" />
-</a>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="new-tab.svg" width="14" alt="(新しいタブで開く)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="powerpoint.svg" width="14" alt="(PowerPoint ファイル)" />
+  </a>
+</p>
+<p>
+  <a href="https://www.wikipedia.org/" target="_blank">
+    Wikipedia
+    <img src="missing-icon.svg" width="14" alt="(新しいタブで開く)" />
+  </a>
+  <br />
+  <a href="2017-annual-report.ppt">
+    2017 annual report
+    <img src="missing-icon.svg" width="14" alt="(PowerPoint ファイル)" />
+  </a>
+</p>
 ```
 
 ##### 結果
@@ -277,7 +285,7 @@ li {
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 - [How-to: Use Skip Navigation links](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN / WCAG を理解する ― ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN WCAG を理解する、ガイドライン 2.4 の解説](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#ガイドライン_2.4_—_ナビゲート可能_ユーザーがナビゲートし、コンテンツを見つけ、どこにいるのかを判断するのに役立つ方法を提供する)
 - [Understanding Success Criterion 2.4.1](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### 大きさと近接性
@@ -321,7 +329,9 @@ li {
 ```html
 <a href="//example.com">スキーム相対 URL</a>
 <a href="/ja/docs/Web/HTML">オリジン相対 URL</a>
+<a href="p">ディレクトリー相対 URL</a>
 <a href="./p">ディレクトリー相対 URL</a>
+<a href="../p">親ディレクトリー相対 URL</a>
 ```
 
 ```css hidden
@@ -349,21 +359,21 @@ a {
 
 {{EmbedLiveSample('Linking to an element on the same page')}}
 
-> **メモ:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)。
+> **メモ:** `href="#top"` または空のフラグメント (`href="#"`) を使用すると、現在のページの先頭にリンクすることができると、 [HTML 仕様書で定義されています](https://html.spec.whatwg.org/multipage/browsing-the-web.html#scroll-to-the-fragment-identifier)（英語）。
 
 ### メールアドレスへのリンク
 
 メールプログラムを開いて新しいメッセージを送るようにするリンクを作成するには、 `mailto:` スキームを使用してください。
 
 ```html
-<a href="mailto:nowhere@mozilla.org">Send email to nowhere</a>
+<a href="mailto:nowhere@mozilla.org">nowhere へメールを送信</a>
 ```
 
 #### 結果
 
 {{EmbedLiveSample('Linking to an email address')}}
 
-件名や本文を含めるなど、`mailto` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#メールのリンク)または {{RFC(6068)}} をご覧ください。
+件名や本文を含めるなど、`mailto:` URL スキームの詳細については、[電子メールのリンク](/ja/docs/Learn_web_development/Core/Structuring_content/Creating_links#メールのリンク)または {{RFC(6068)}} をご覧ください。
 
 ### 電話番号へのリンク
 
@@ -379,7 +389,7 @@ a {
 `tel:` リンクは端末の能力によって様々な動作をします。
 
 - 携帯電話ではその番号に自動ダイヤルします。
-- 多くのオペレーティングシステムには、Skype や FaceTime のように電話をかけるプログラムがあります。
+- 多くのオペレーティングシステムには、 Skype や FaceTime のように電話をかけるプログラムがあります。
 - ウェブサイトは {{domxref("Navigator/registerProtocolHandler", "registerProtocolHandler")}} によって `web.skype.com` などを用いて電話を掛けることができます。
 - 他にも、連絡先の電話番号を保存したり、他の端末へ電話番号を送信したりする動作があります。
 
@@ -467,19 +477,19 @@ document
   <tbody>
     <tr>
       <th scope="row">
-        <a href="/ja/docs/Web/HTML/Content_categories"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories"
           >コンテンツカテゴリー</a
         >
       </th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >、
-        <a href="/ja/docs/Web/HTML/Content_categories#記述コンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#記述コンテンツ"
           >記述コンテンツ</a
         >、
         <a
-          href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         >、知覚可能コンテンツ。
       </td>
@@ -488,16 +498,16 @@ document
       <th scope="row">許可されている内容</th>
       <td>
         <a
-          href="/ja/docs/Web/HTML/Content_categories#透過的コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#透過的コンテンツ"
           >透過的コンテンツ</a
           >、ただし子孫に
         <a
-          href="/ja/docs/Web/HTML/Content_categories#対話型コンテンツ"
+          href="/ja/docs/Web/HTML/Guides/Content_categories#対話型コンテンツ"
           >対話型コンテンツ</a
         > または
         <code>&lt;a&gt;</code> 要素がないもの、および
         <a
-          href="/ja/docs/Web/HTML/Global_attributes/tabindex"
+          href="/ja/docs/Web/HTML/Reference/Global_attributes/tabindex"
           >tabindex</a
         > 属性が指定された子孫がないもの。
       </td>
@@ -509,7 +519,7 @@ document
     <tr>
       <th scope="row">許可されている親要素</th>
       <td>
-        <a href="/ja/docs/Web/HTML/Content_categories#フローコンテンツ"
+        <a href="/ja/docs/Web/HTML/Guides/Content_categories#フローコンテンツ"
           >フローコンテンツ</a
         >を受け入れるすべての要素、ただし他の <code>&lt;a&gt;</code> 要素でないもの。
       </td>
