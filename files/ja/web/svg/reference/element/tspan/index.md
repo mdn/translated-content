@@ -7,8 +7,7 @@ l10n:
 
 **`<tspan>`** は [SVG](/ja/docs/Web/SVG) の要素で、 {{SVGElement('text')}} 要素内にあるサブテキストやその他の `<tspan>` 要素を定義します。これにより、必要に応じてサブテキストのスタイルや位置を調整することができます。
 
-> [!NOTE]
-> `<tspan>` 要素は、既定では折り返されません。折り返すには、CSS の {{CSSXRef("white-space")}} プロパティを使用してスタイルを設定する必要があります。
+> **メモ:** `<tspan>` 要素は、既定では折り返されません。折り返すには、CSS の {{CSSXRef("white-space")}} プロパティを使用してスタイルを設定する必要があります。
 
 ## 例
 
@@ -46,16 +45,16 @@ svg {
 
 - {{SVGAttr("x")}}
   - : テキストのベースラインの開始点の X 座標です。
-    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _既定値: `0`; _アニメーション_: **可**
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("y")}}
   - : テキストのベースラインの開始点の Y 座標です。
-    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _既定値: `0`; _アニメーション_: **可**
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("dx")}}
   - : テキストの位置を直前のテキスト要素から水平方向にずらします。
     _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _既定値_: _none_; _アニメーション_: **可**
 - {{SVGAttr("dy")}}
   - : テキストの位置を直前のテキスト要素から垂直方向にずらします。
-    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _既定値: _none_; _アニメーション_: **可**
+    _値の型_: ([**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage)) のリスト; _既定値_: _none_; _アニメーション_: **可**
 - {{SVGAttr("rotate")}}
   - : それぞれの文字の向きを回転します。文字ごとに個別に回転させることができます。
     _値の型_: [**\<list-of-number>**](/ja/docs/Web/SVG/Guides/Content_type#list-of-ts); _既定値_: none; _アニメーション_: **可**
