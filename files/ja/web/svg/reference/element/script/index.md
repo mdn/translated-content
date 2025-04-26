@@ -59,7 +59,7 @@ l10n:
     _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
 - {{SVGAttr("type")}}
   - : この属性は使用するスクリプト言語の型を定義します。
-    _値の型_: [**`<media-type>`**](/en-US/docs/Glossary/MIME_type); _既定値_: `application/ecmascript`; _アニメーション_: **不可**
+    _値の型_: [**`<media-type>`**](/ja/docs/Glossary/MIME_type); _既定値_: `application/ecmascript`; _アニメーション_: **不可**
 - {{SVGAttr("xlink:href")}} {{deprecated_inline}}
   - : 読み込むスクリプトの {{Glossary("URL")}} です。
     _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
