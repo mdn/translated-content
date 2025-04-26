@@ -13,7 +13,7 @@ l10n:
 
 当关联的标签共享时，JavaScript 和其他客户端代码仅能访问 WebAssembly 异常值，反之亦然（你不能仅使用恰好定义了相同数据类型的其他标签）。没有匹配的标签，也可以捕获以及重新抛出异常，但是不能对其进行检查。
 
-为了让异常抛出更快，从 WebAssembly 抛出的异常通常不包括栈追踪。需要提供栈追踪的 WebAssembly 代码必须在调用创建异常的 Javascript 函数时，在构造函数中传递 `options.traceStack=true` 参数。然后构造函数会返回一个栈追踪附着到 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性的异常。
+为了让异常抛出更快，从 WebAssembly 抛出的异常通常不包括堆栈跟踪。需要提供堆栈跟踪的 WebAssembly 代码必须在调用创建异常的 Javascript 函数时，在构造函数中传递 `options.traceStack=true` 参数。然后构造函数会返回一个将堆栈跟踪附着到 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性的异常。
 
 ## 构造函数
 
@@ -32,7 +32,7 @@ l10n:
 ## 实例属性
 
 - [`Exception.prototype.stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) {{non-standard_inline}}
-  - : 返回异常的栈追踪，或者 `undefined`。
+  - : 返回异常的堆栈跟踪，或者 `undefined`。
 
 ## 示例
 
