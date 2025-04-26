@@ -171,7 +171,7 @@ const func3 = () => { foo() {} };
 // SyntaxError: Unexpected token '{'
 ```
 
-这是因为只有当箭头后面的标记不是左括号时，JavaScript 才会将箭头函数视为表达式体，因此括号（{}）内的代码会被解析为一系列语句，其中 `foo` 是[标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)，而不是对象文字中的键。
+这是因为只有当箭头后面的标记不是左括号时，JavaScript 才会将箭头函数视为表达式体，因此括号（{}）内的代码会被解析为一系列语句，其中 `foo` 是[标签](/zh-CN/docs/Web/JavaScript/Reference/Statements/label)，而不是对象字面量中的键。
 
 要解决这个问题，可以用括号将对象字面量包装起来：
 
