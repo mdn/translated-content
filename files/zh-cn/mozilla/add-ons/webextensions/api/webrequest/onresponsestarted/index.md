@@ -44,7 +44,7 @@ browser.webRequest.onResponseStarted.hasListener(listener)
       - : `object`。有关请求的详细信息。参见 [details](#details) 部分。
 
 - `filter`
-  - : {{WebExtAPIRef('webRequest.RequestFilter')}}。一个过滤器，用于限制发送到此监听器的事件。
+  - : {{WebExtAPIRef('webRequest.RequestFilter')}}。用于限制发送到此监听器的事件的过滤器。
 - `extraInfoSpec` {{optional_inline}}
 
   - : `string` 的数组（`array`）。事件的额外选项。你只可以传入一个值：
@@ -59,8 +59,6 @@ browser.webRequest.onResponseStarted.hasListener(listener)
   - : `string`。若请求来自上下文身份中打开的标签页，则为此上下文身份的 cookie 存储 ID。参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
   - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
-- `error`
-  - : `string`。错误描述。此字符串是内部错误字符串，可能因浏览器而异，且不保证版本间的一致性。
 - `frameId`
   - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
 - `fromCache`
@@ -107,6 +105,12 @@ browser.webRequest.onResponseStarted.hasListener(listener)
 
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
+- `responseHeaders` {{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求接收到的 HTTP 响应头。
+- `statusCode`
+  - : `integer`。服务器返回的标准 HTTP 状态码。
+- `statusLine`
+  - : `string`。响应的 HTTP 状态行。对于 HTTP/0.9 响应（即缺少状态行的响应），该属性值为字符串 'HTTP/0.9 200 OK'。
 - `tabId`
   - : `integer`。请求发生的选项卡的 ID。如果请求与选项卡无关，则为 -1。
 - `thirdParty`
@@ -150,7 +154,7 @@ browser.webRequest.onResponseStarted.hasListener(listener)
 let target = "https://developer.mozilla.org/*";
 
 /*
-e.g.
+例如：
 "https://developer.mozilla.org/en-US/Firefox/Releases"
 200
 HTTP/1.1 200 OK
