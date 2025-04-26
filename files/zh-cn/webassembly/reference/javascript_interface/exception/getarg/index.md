@@ -2,17 +2,15 @@
 title: WebAssembly.Exception.prototype.getArg()
 slug: WebAssembly/Reference/JavaScript_interface/Exception/getArg
 l10n:
-  sourceCommit: c0fc8c988385a0ce8ff63887f9a3263caf55a1f9
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-The **`getArg()`** prototype method of the [`Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) object can be used to get the value of a specified item in the exception's data arguments.
+[`Exception`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 对象的 **`getArg()`** 原型方法可以用于获取异常的数据参数中指定项的值。
 
-The method passes a [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) and will only succeed if the thrown `Exception` was created using the same tag, otherwise it will throw a `TypeError`.
-This ensures that the exception can only be read if the calling code has access to the tag.
-Tags that are neither imported into or exported from the WebAssembly code are internal, and their associated [`WebAssembly.Exception`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception) cannot be queried using this method!
+该方法传递一个 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)，如果抛出的 `Exception` 创建用的标签是同一个的话，才会成功，否则会抛出一个 `TypeError`。这确保该异常仅能在调用代码有标签的访问权限时被读取。即不是导入到 WebAssembly 代码也不是从 WebAssembly 代码导出的标签是内部的，与之关联的 [`WebAssembly.Exception`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 不能使用该方法进行查询！
 
 > [!NOTE]
-> It is not enough that the tag has an identical sequence of data types — it must have the same _identity_ (be the same tag) as was used to create the exception.
+> 数据类型顺序相同的标签是不够的——必须和异常创建时用的标签是相同的*身份*（同一个标签）。
 
 ## 语法
 
@@ -23,43 +21,41 @@ getArg(exceptionTag, index)
 ### 参数
 
 - `exceptionTag`
-  - : A [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) that must match the tag associated with this exception.
+  - : 一个 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)，必须与这个异常关联的标签相匹配。
 - `index`
-  - : The index of the value in the data arguments to return, 0-indexed.
+  - : 数据参数中要返回的值的索引，从 0 开始索引。
 
 ### 返回值
 
-The value of the argument at `index`.
+位于 `index` 处的参数的值。
 
 ### 异常
 
 - {{jsxref("TypeError")}}
-  - : The tags don't match; the exception was not created with the tag passed to the method.
+  - : 标签不匹配；异常不是用传给方法的标签创建的。
 - {{jsxref("RangeError")}}
-  - : The value of the `index` parameter is greater than or equal to the number of fields in the data.
+  - : `index` 参数的值大于等于数据中字段的数量。
 
 ## 示例
 
-In order to get the values of an exception, the tag must be "known" to the calling code;
-it may be either imported into or exported from the calling code.
+为了获得异常的值，调用代码必须“知道”标签；它可能是导入到调用代码也可能是从调用代码导出。
 
-### Getting exception value from imported tag
+### 从导入的标签获取异常值
 
-Consider the following WebAssembly code, which is assumed to be compiled to a file "example.wasm".
-This imports a tag, which it refers to internally as `$tagname`, and exports a method `run` that can be called by external code to throw an exception using the tag.
+思考下面的 WebAssembly 代码，假设其被编译为“example.wasm”。导入一个标签，内部引用为 `$tagname`，并导出一个可由外部代码调用的方法 `run`，该方法使用导入的标签抛出一个异常。
 
 ```wat
 (module
-  ;; import tag that will be referred to here as $tagname
+  ;; 导入的标签在这引用为 $tagname
   (import "extmod" "exttag" (tag $tagname (param i32)))
 
-  ;; $throwException function throws i32 param as a $tagname exception
+  ;; $throwException 函数将 i32 参数作为 $tagname 异常抛出
   (func $throwException (param i32)
     local.get 0
     throw $tagname
   )
 
-  ;; Exported function "run" that calls $throwException
+  ;; 导出调用 $throwException 的函数“run”
   (func (export "run")
     i32.const 1
     call $throwException
@@ -67,15 +63,14 @@ This imports a tag, which it refers to internally as `$tagname`, and exports a m
 )
 ```
 
-The code below calls [`WebAssembly.instantiateStreaming`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) to import the "example.wasm" file, passing in an "import object" (`importObject`) that includes a new [`WebAssembly.Tag`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Tag) named `tagToImport`.
-The import object defines an object with properties that match the `import` statement in the WebAssembly code.
+下面的代码调用 [`WebAssembly.instantiateStreaming`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/instantiateStreaming_static) 导入“example.wasm”文件，传入的“导入对象”（`importObject`）中包含一个新的、名为 `tagToImport` 的 [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag)。导入的对象用匹配 WebAssembly 代码中的 `import` 语句的属性定义一个对象。
 
-Once the file is instantiated, the code calls the exported WebAssembly `run()` method, which will immediately throw an exception.
+一旦实例化文件，代码就调用导出的 WebAssembly `run` 方法，该方法会立即抛出一个异常。
 
 ```js
 const tagToImport = new WebAssembly.Tag({ parameters: ["i32"] });
 
-// Note: the import object properties match the import statement in WebAssembly code!
+// 注意：导入对象属性要匹配 WebAssembly 代码中的 import 语句！
 const importObject = {
   extmod: {
     exttag: tagToImport,
@@ -91,23 +86,21 @@ WebAssembly.instantiateStreaming(fetch("example.wasm"), importObject)
     console.log(`getArg 0 : ${e.getArg(tagToImport, 0)}`);
   });
 
-/* Log output
+/* 日志输出
 example.js:40 WebAssembly.Exception: wasm exception
 example.js:41 getArg 0 : 1
 */
 ```
 
-The code catches the exception and uses `getArg()` to print the value at the first index.
-In this case, it is just "1".
+代码捕获异常并用 `getArg()` 打印位于第一个索引的值。在这个例子中，就是“1”。
 
-### Getting exception value from an exported tag
+### 从导出的标签获取异常值
 
-The process for using an exported tag is very similar to that shown in the previous section.
-Here is the same WebAssembly module, simply replacing the import with an export.
+使用导出的标签的过程与上一节中展示的非常相似。这里是同样的 WebAssembly 模块，用 export 简单替换了 import。
 
 ```wat
 (module
-  ;; Export tag giving it external name: "exptag"
+  ;; 给导出的标签一个外部名字：“exptag”
   (tag $tagname (export "exptag") (param i32))
 
   (func $throwException (param i32)
@@ -122,21 +115,20 @@ Here is the same WebAssembly module, simply replacing the import with an export.
 )
 ```
 
-The JavaScript is similar too. In this case, we have no imports, but instead we get the exported tag and use that to get the argument.
-To make it a little more "safe", here we also test that we have the right tag using the [`is()` method](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Exception/is).
+JavaScript 也是相似的。在这个例子中，我们没有导入，相反是有导出的标签并用它获取参数。为了更“安全”一些，这里我们也使用 [`is()` 方法](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/is)测试是否有正确的标签。
 
 ```js
 let tagExportedFromWasm;
 
 WebAssembly.instantiateStreaming(fetch("example.wasm"))
   .then((obj) => {
-    // Import the tag using its name from the WebAssembly module
+    // 使用 WebAssembly 模块中的名字导入标签
     tagExportedFromWasm = obj.instance.exports.exptag;
     console.log(obj.instance.exports.run());
   })
   .catch((e) => {
     console.error(e);
-    // If the tag is correct, get the value
+    // 如果标签是正确的，则获取值
     if (e.is(tagExportedFromWasm)) {
       console.log(`getArg 0 : ${e.getArg(tagExportedFromWasm, 0)}`);
     }
@@ -153,6 +145,6 @@ WebAssembly.instantiateStreaming(fetch("example.wasm"))
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
