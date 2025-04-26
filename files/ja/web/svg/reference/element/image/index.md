@@ -28,7 +28,7 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
     _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("width")}}
   - : 画像が描画される幅です。 HTML の `<img>` とは異なり、この属性は必須です。
-    _値の型_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `auto`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `auto`; _アニメーション_: **可**
 - {{SVGAttr("height")}}
   - : 画像が描画される高さです。 HTML の `<img>` とは異なり、この属性は必須です。
     _値の型_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `auto`; _アニメーション_: **可**
