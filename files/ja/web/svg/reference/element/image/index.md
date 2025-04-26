@@ -22,7 +22,7 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
 
 - {{SVGAttr("x")}}
   - : 原点から見た画像の水平位置です。
-    _値の型_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
+    _値の型_: [**\<length>**](/ja/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/ja/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
 - {{SVGAttr("y")}}
   - : 原点から見た画像の垂直位置です。
     _値の型_: [**\<length>**](/en-US/docs/Web/SVG/Guides/Content_type#length) | [**\<percentage>**](/en-US/docs/Web/SVG/Guides/Content_type#percentage); _既定値_: `0`; _アニメーション_: **可**
