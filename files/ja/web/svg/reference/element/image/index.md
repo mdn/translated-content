@@ -46,7 +46,7 @@ SVG ソフトウェアが対応する必要がある画像形式は {{glossary("
     _値の型_: `async | sync | auto`; _既定値_: `auto`; _アニメーション_: **可**
 - {{SVGAttr("xlink:href")}}{{deprecated_inline}}
   - : 画像ファイルの URL を指定します。
-    _値の型_: **[\<URL>](/en-US/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
+    _値の型_: **[\<URL>](/ja/docs/Web/SVG/Guides/Content_type#url)**; _既定値_: _none_; _アニメーション_: **不可**
 
 ## DOM インターフェイス
 
