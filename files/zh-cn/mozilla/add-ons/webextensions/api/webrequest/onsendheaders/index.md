@@ -104,7 +104,7 @@ browser.webRequest.onSendHeaders.hasListener(listener)
 - `requestHeaders` {{optional_inline}}
   - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求发送时携带的 HTTP 请求标头。
 - `tabId`
-  - : `integer`。请求发生的选项卡的 ID。如果请求与选项卡无关，则为 -1。
+  - : `integer`。请求发生的标签页的 ID。如果请求与标签页无关，则为 -1。
 - `thirdParty`
   - : `boolean`。指示请求及其内容窗口层次结构是否为第三方。
 - `timeStamp`
