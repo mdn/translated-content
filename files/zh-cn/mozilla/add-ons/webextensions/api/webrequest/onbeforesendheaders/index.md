@@ -11,22 +11,22 @@ l10n:
 
 要将请求标头与请求数据的其余部分一起传递到监听器中，请在 `extraInfoSpec` 数组中传递 `"requestHeaders"`。
 
-要同步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，然后在你的事件监听器中返回一个包含名为 `requestHeaders` 的属性的 [`BlockingResponse`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse)，其值是要发送的请求头集合。
+要同步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，这样在你的事件监听器中就会返回一个包含名为 `requestHeaders` 的属性的值是要发送的请求标头集合的 [`BlockingResponse`](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/API/webRequest/BlockingResponse)。
 
-要异步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，然后在你的事件监听器中返回一个 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)，该 Promise 将解析为一个 `BlockingResponse`。
+要异步修改标头：在 `extraInfoSpec` 中传递 `"blocking"`，这样在你的事件监听器中就会返回一个兑现为 `BlockingResponse` 的 [`Promise`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Promise)。
 
 如果你使用 `"blocking"`，则必须在 manifest.json 中拥有[“webRequestBlocking”API 权限](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/manifest.json/permissions#api_权限)。
 
 在此可能会发生扩展冲突。如果两个扩展对同一请求监听 `onBeforeSendHeaders`，则第二个监听器将看到第一个监听器所做的修改，并能够撤销第一个监听器所做的任何更改。例如，如果第一个监听器添加了一个 `Cookie` 标头，而第二个监听器删除了所有 `Cookie` 标头，则第一个监听器的修改将丢失。如果你想查看实际发送的标头而不希望考虑一个扩展可能会对其作出修改，请使用 {{WebExtAPIRef("webRequest.onSendHeaders", "onSendHeaders")}}，尽管你无法在此事件上修改标头。
 
-并非所有实际发送的标头都始终包含在 `requestHeaders` 中。特别是，与缓存相关的头（例如，`Cache-Control`、`If-Modified-Since`、`If-None-Match`）从不发送。此外，此处的行为可能因浏览器而异。
+并非所有实际发送的标头都始终包含在 `requestHeaders` 中。特别是与缓存相关的标头（例如，`Cache-Control`、`If-Modified-Since`、`If-None-Match`）从不发送。此外，此处的行为可能因浏览器而异。
 
 根据规范，标头名称不区分大小写。这意味着要匹配特定标头，监听器应在比较之前将名称转换为小写：
 
 ```js
 for (const header of e.requestHeaders) {
   if (header.name.toLowerCase() === desiredHeader) {
-    // process header
+    // 处理标头
   }
 }
 ```
@@ -73,8 +73,8 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 
   - : `string` 的数组（`array`）。事件的额外选项。你可以传递以下任意值：
 
-    - `"blocking"`：使请求同步，因此你可以修改请求标头
-    - `"requestHeaders"`：在传递给监听器的 `details` 对象中包含请求标头
+    - `"blocking"`：使请求同步，以便让你你修改请求标头。
+    - `"requestHeaders"`：在传递给监听器的 `details` 对象中包含请求标头。
 
 ## 附加对象
 
@@ -84,16 +84,16 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
   - : `string`。若请求来自上下文身份中打开的标签页，则为此上下文身份的 cookie 存储 ID。参见[使用上下文身份](/zh-CN/docs/Mozilla/Add-ons/WebExtensions/Work_with_contextual_identities)。
 - `documentUrl`
   - : `string`。资源所在的文档的 URL。例如，若页面“https\://example.com”包含图像或 iframe，则该图像或 iframe 的 `documentUrl` 将为“https\://example.com”。顶级文档的 `documentUrl` 为 undefined。
-- `error`
-  - : `string`。错误描述。此字符串是内部错误字符串，可能因浏览器而异，且不保证版本间的一致性。
+- `frameAncestors`
+  - : 数组（`array`）。包含每个文档在框架层次结构（直到顶级文档）中的信息。数组的第一个元素包含关于请求文档的直接父文档的信息，而最后一个元素包含关于顶级文档的信息。如果加载的是顶级文档，则该数组为空。
+    - `url`
+      - : `string`。文档加载来源的 URL。
+    - `frameId`
+      - : `integer`。文档的 `frameId`。`details.frameAncestors[0].frameId` 与 `details.parentFrameId` 相同。
 - `frameId`
   - : `integer`。发生在主框架中的请求的该属性为 0；在子框架中的请求则为代表该子框架的 ID 的正数。对于（子）框架的文档加载请求（`type` 为 `main_frame` 或 `sub_frame`），则 `frameId` 表示此框架的 ID 而非外部框架的 ID。框架 ID 在标签页内唯一。
-- `fromCache`
-  - : `boolean`。指示此响应是否从磁盘缓存获取。
 - `incognito`
   - : `boolean`。请求是否来自隐私浏览窗口。
-- `ip`
-  - : `string`。请求的目标服务器的 IP 地址，可能是 IPv6 字面量。
 - `method`
   - : `string`。标准 HTTP 方法，例如“GET”或“POST”。
 - `originUrl`
@@ -130,6 +130,8 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
     - `failoverTimeout`
       - : `integer`。故障转移超时时间（秒）。如果代理连接失败，则在此期间内将不再使用代理。
 
+- `requestHeaders` {{optional_inline}}
+  - : {{WebExtAPIRef('webRequest.HttpHeaders')}}。该请求发送时携带的 HTTP 请求标头。
 - `requestId`
   - : `string`。请求的 ID。请求 ID 在浏览器会话中唯一，因此可以使用它们来关联与同一请求相关的不同事件。
 - `tabId`
@@ -171,7 +173,7 @@ browser.webRequest.onBeforeSendHeaders.hasListener(listener)
 
 ## 示例
 
-此代码更改在访问 `https://httpbin.org/` 下的页面时的请求的 "User-Agent" 标头，以便浏览器将其自己标识为 Opera 12.16。
+此代码更改在访问 `https://httpbin.org/` 下的页面时的请求的“User-Agent”标头，这样浏览器就会将其自己标识为 Opera 12.16。
 
 ```js
 "use strict";
