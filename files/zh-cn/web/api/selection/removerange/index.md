@@ -27,7 +27,8 @@ removeRange(range)
 ## 示例
 
 ```js
-/* 在程序层面，可以选中多个范围。此操作将移除除第一个范围外的所有其他范围。*/
+/* 在程序层面，可以选中多个范围。
+ * 此操作将移除除第一个范围外的所有其他范围。*/
 const s = window.getSelection();
 if (s.rangeCount > 1) {
   for (let i = 1; i < s.rangeCount; i++) {
