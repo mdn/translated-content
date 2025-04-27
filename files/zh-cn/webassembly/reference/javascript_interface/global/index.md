@@ -55,13 +55,9 @@ const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
 WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
   ({ instance }) => {
-    assertEq(
-      "从 wasm 获取初始值", instance.exports.getGlobal(), 0,
-    );
+    assertEq("从 wasm 获取初始值", instance.exports.getGlobal(), 0,);
     global.value = 42;
-    assertEq(
-      "从 wasm 获取用 JS 更新的值", instance.exports.getGlobal(), 42,
-    );
+    assertEq("从 wasm 获取用 JS 更新的值", instance.exports.getGlobal(), 42,);
     instance.exports.incGlobal();
     assertEq("从 JS 获取用 wasm 更新的值", global.value, 43);
   },
