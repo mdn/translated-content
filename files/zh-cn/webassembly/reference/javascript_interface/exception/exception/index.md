@@ -1,5 +1,5 @@
 ---
-title: WebAssembly.Exception constructor
+title: WebAssembly.Exception 构造函数
 slug: WebAssembly/Reference/JavaScript_interface/Exception/Exception
 l10n:
   sourceCommit: df9d06402163f77fc3e2d327ab63f9dd4af15b38
@@ -9,7 +9,7 @@ l10n:
 
 构造函数接受一个 [`Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 参数和一个由数据字段组成的 `payload` 数组。每一个 payload 元素的数据类型必须匹配在 `Tag` 中指定的相应的数据类型。
 
-构造函数也可能接受一个 `options` 对象。`options.traceStack` 属性可以设置为 `true`（默认为 `false`），表明将一个 Wasm 栈追踪附着到异常的 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性上。
+构造函数也可以接受一个 `options` 对象。`options.traceStack` 属性可以设置为 `true`（默认为 `false`），表明将一个 Wasm 堆栈跟踪附着到异常的 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性上。
 
 ## 语法
 
@@ -21,13 +21,13 @@ new Exception(tag, payload, options)
 ### 参数
 
 - `tag`
-  - : [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag) 定义的是 `payload` 中每个值所期待的数据类型。
+  - : [`WebAssembly.Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Tag) 定义的是 `payload` 中每个值所被期待的数据类型。
 - `payload`
-  - : 一个由一个或多个数据字段组成的数组，构成异常的载荷。元素的数据类型必须和 `tag` 中对应元素的数据类型相匹配。如果载荷中的数据字段的数量不匹配，则抛出 {{jsxref("TypeError")}}异常。
+  - : 一个由一个或多个数据字段组成的数组，构成异常的载荷。元素的数据类型必须和 `tag` 中对应元素的数据类型相匹配。如果载荷中的数据字段的数量不匹配，则抛出 {{jsxref("TypeError")}} 异常。
 - `options` {{optional_inline}} {{non-standard_inline}}
   - : 一个对象，有下列的可选字段：
     - `traceStack` {{optional_inline}} {{non-standard_inline}}
-      - : 如果 `Exception` 有一个附着到 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性的栈追踪，则为 `true`，否者为 `false`。这个属性默认为 `false`（如果 `options` 或 `options.traceStack` 未提供的话）。
+      - : 如果 `Exception` 有一个附着到 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性的堆栈跟踪，则为 `true`，否者为 `false`。这个属性默认为 `false`（如果 `options` 或 `options.traceStack` 未提供的话）。
 
 ### 异常
 
