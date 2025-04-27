@@ -36,7 +36,7 @@ reportError(throwable)
 
 ## 예제
 
-Feature test for the method using:
+다음과 같이 메서드에 대한 기능 테스트를 수행합니다.
 
 ```js
 if (typeof window.reportError === "function") {
