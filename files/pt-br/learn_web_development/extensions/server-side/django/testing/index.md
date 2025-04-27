@@ -31,7 +31,7 @@ original_slug: Learn/Server-side/Django/Testing
 
 ## Visão Geral
 
-A [Local Library](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website) atualmente tem páginas para mostrar listas de todos livros e autores, visualização detalhada para itens `Book` e `Author`, uma página para renovar `BookInstance`s, e páginas para criar, atualizar e excluir itens `Author` (e também registros de `Book`, se você completou o desafio no [forms tutorial](/pt-BR/docs/Learn/Server-side/Django/Forms)). Mesmo com este site relativamente pequeno, navegar manualmente por cada página e verificar superficialmente se tudo funciona como esperado pode levar vários minutos. À medida que fizemos mudanças e aumentamos o site, o tempo necessário para verificar manualmente se tudo funciona "devidamente" só aumentará. Se continuássemos como estamos, eventuamente estaríamos gastando a maior parte do tempo testando, e muito pouco tempo aprimorando nosso código.
+A [Local Library](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website) atualmente tem páginas para mostrar listas de todos livros e autores, visualização detalhada para itens `Book` e `Author`, uma página para renovar `BookInstance`s, e páginas para criar, atualizar e excluir itens `Author` (e também registros de `Book`, se você completou o desafio no [forms tutorial](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Forms)). Mesmo com este site relativamente pequeno, navegar manualmente por cada página e verificar superficialmente se tudo funciona como esperado pode levar vários minutos. À medida que fizemos mudanças e aumentamos o site, o tempo necessário para verificar manualmente se tudo funciona "devidamente" só aumentará. Se continuássemos como estamos, eventuamente estaríamos gastando a maior parte do tempo testando, e muito pouco tempo aprimorando nosso código.
 
 Testes automatizados podem realmente ajudar com este problema! Os benefícios óbvios são que eles podem ser executados muito mais rápido que testes manuais, podem testar com um nível mais baixo de detalhes, e testa exatamente a mesma funcionalidade (testadores humanos não são nem de longe tão confiáveis!). Por serem rápidos, testes automatizados podem ser executados mais regularmente, e se um teste falhar, eles apontam exatamente para onde o código não está funcionando como esperado .
 
@@ -129,7 +129,7 @@ catalog/
 Crie uma estrutura de arquivos como mostrado acima em seu projeto _LocalLibrary_. O **\_\_init\_\_.py** deve ser um arquivo vazio (isso informa ao Python que o diretório é um pacote). Você pode criar os três arquivos de teste copiando e renomeando o arquivo de teste do "esqueleto" **/catalog/tests.py**.
 
 > [!NOTE]
-> O arquivo de teste **/catalog/tests.py** do "esqueleto", foi criado automaticamente quando nós [construimos o "esqueleto" do website Django](/pt-BR/docs/Learn/Server-side/Django/skeleton_website). É perfeitamente "legal" colocar todos seus testes dentro dele, mas se você testar devidamente, você acabará rapidamente com um arquivo de teste muito grande e incontrolável.
+> O arquivo de teste **/catalog/tests.py** do "esqueleto", foi criado automaticamente quando nós [construimos o "esqueleto" do website Django](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website). É perfeitamente "legal" colocar todos seus testes dentro dele, mas se você testar devidamente, você acabará rapidamente com um arquivo de teste muito grande e incontrolável.
 >
 > Exclua o arquivo do "esqueleto", pois não precisamos dele.
 

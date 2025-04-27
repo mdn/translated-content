@@ -10,7 +10,7 @@ O resumo de cada [definição de propriedade do CSS](/pt-BR/docs/Web/CSS/Referen
 
 ## Propriedades herdadas
 
-Quando nenhum valor de uma **propriedade herdada** foi especificado em um elemento, o elemento obtém o [valor computado](/pt-BR/docs/Web/CSS/computed_value) desta propriedade em seu elemento pai. Apenas o elemento raiz do documento obtém o [valor inicial](/pt-BR/docs/Web/CSS/initial_value) dado no resumo da propriedade.
+Quando nenhum valor de uma **propriedade herdada** foi especificado em um elemento, o elemento obtém o [valor computado](/pt-BR/docs/Web/CSS/CSS_cascade/computed_value) desta propriedade em seu elemento pai. Apenas o elemento raiz do documento obtém o [valor inicial](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value) dado no resumo da propriedade.
 
 Um exemplo típico de uma propriedade herdada é a propriedade {{ Cssxref("color") }}. Dadas as seguintes regras de estilo:
 
@@ -30,7 +30,7 @@ As palavras "texto enfatizado" vão aparecer em verde, já que o elemento `em` h
 
 ## Propriedades não herdadas
 
-Quando nenhum valor para uma **propriedade não herdada** (algumas vezes chamada de **reset property** em código Mozilla) é especificado em um elemento, o elemento obtém o [valor inicial](/pt-BR/docs/Web/CSS/initial_value) desta propriedade (como especificado no resumo da propriedade).
+Quando nenhum valor para uma **propriedade não herdada** (algumas vezes chamada de **reset property** em código Mozilla) é especificado em um elemento, o elemento obtém o [valor inicial](/pt-BR/docs/Web/CSS/CSS_cascade/initial_value) desta propriedade (como especificado no resumo da propriedade).
 
 Um exemplo típico de uma propriedade não herdada é a propriedade {{ Cssxref("border") }}. Dadas as seguintes regras de estilo:
 

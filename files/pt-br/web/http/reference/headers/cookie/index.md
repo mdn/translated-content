@@ -6,7 +6,7 @@ original_slug: Web/HTTP/Headers/Cookie
 
 {{HTTPSidebar}}
 
-O cabeçalho de requisição HTTP **`Cookie`** contém [cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies) armazenados anteriormente que foram enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
+O cabeçalho de requisição HTTP **`Cookie`** contém [cookies HTTP](/pt-BR/docs/Web/HTTP/Guides/Cookies) armazenados anteriormente que foram enviados pelo servidor com o cabeçalho {{HTTPHeader("Set-Cookie")}}.
 
 O cabeçalho `Cookie` é opicional e pode ser omitido se, por exemplo, as configurações de privacidade do navegador bloqueiam _cookies_.
 

@@ -38,7 +38,7 @@ WWW-Authenticate: Basic realm="Acesso intermediário ao site"
 
 ## Veja também
 
-- [HTTP authentication](/pt-BR/docs/Web/HTTP/Authentication)
+- [HTTP authentication](/pt-BR/docs/Web/HTTP/Guides/Authentication)
 - {{HTTPHeader("WWW-Authenticate")}}
 - {{HTTPHeader("Authorization")}}
 - {{HTTPHeader("Proxy-Authorization")}}

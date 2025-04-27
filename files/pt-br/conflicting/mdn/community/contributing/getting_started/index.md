@@ -52,7 +52,7 @@ Se você não fizer isto, você ainda vai ser capaz de contribuir para o MDN, ma
 
 ## Preparando-se para trabalhar em um repo específico
 
-Existem inúmeros repos diferentes que você pode ter que atualizar conforme você trabalha em tarefas diferentes do MDN (veja [Onde está tudo no MDN? Um guia para nossos repositórios](/pt-BR/docs/MDN/Community/Contributing/Our_repositories)), mas existem alguns passos que você deve seguir em todos os repos que você trabalhar, para fazer as coisas serem mais fáceis e consistentes.
+Existem inúmeros repos diferentes que você pode ter que atualizar conforme você trabalha em tarefas diferentes do MDN (veja [Onde está tudo no MDN? Um guia para nossos repositórios](/pt-BR/docs/orphaned/MDN/Community/Contributing/Our_repositories)), mas existem alguns passos que você deve seguir em todos os repos que você trabalhar, para fazer as coisas serem mais fáceis e consistentes.
 
 ### Bifurcando e clonando
 
@@ -259,7 +259,7 @@ Isto parece certo. Nós estamos na branch "test-branch", e nós ainda não fizem
 
 ## Adicionando, commitando e subindo
 
-Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/MDN/Community/Contributing) para mais orientações.
+Neste ponto você já está preparado para fazer alterações no repo que você está trabalhando — para corrigir um bug no MDN ou qualquer coisa que você esteja fazendo. No geral, vamos pular esta parte, já que esse não é o objetivo do tutorial. Se você quiser corrigir um problema real no MDN, vá e escolha um bug para corrigir da nossa [lista de issues de conteúdo](https://github.com/mdn/content/issues/), ou leia [Contribuindo para o MDN](/pt-BR/docs/conflicting/MDN/Community) para mais orientações.
 
 Se você só quer seguir este tutorial com o propósito de ter um exemplo, vamos fazer algo simples.
 

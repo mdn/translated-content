@@ -21,9 +21,9 @@ Neste ponto, vimos os fundamentos do CSS, como estilizar o texto e como estiliza
 
 Antes de iniciar este módulo, você já deve:
 
-1. Ter familiaridade básica com HTML, conforme discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn/HTML/Introduction_to_HTML).
-2. Esteja familiarizado com os fundamentos do CSS, conforme discutido em [Introdução ao CSS](/pt-BR/docs/Learn/CSS/First_steps).
-3. Entenda como [estilizar caixas](/pt-BR/docs/Learn/CSS/Building_blocks).
+1. Ter familiaridade básica com HTML, conforme discutido no módulo [Introdução ao HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content).
+2. Esteja familiarizado com os fundamentos do CSS, conforme discutido em [Introdução ao CSS](/pt-BR/docs/Learn_web_development/Core/Styling_basics).
+3. Entenda como [estilizar caixas](/pt-BR/docs/conflicting/Learn_web_development/Core/Styling_basics_fa344166552fbe2c038b1254d9d96dc0de5d79eb64d0ca3e5784a17f79fd0333).
 
 > [!NOTE]
 > Se você estiver trabalhando em um computador/tablet/outro dispositivo em que não tenha a capacidade de criar seus próprios arquivos, experimente (a maioria) os exemplos de código em um programa de codificação on-line, como como [JSBin](https://jsbin.com/) ou [Glitch](https://glitch.com/).
@@ -32,11 +32,11 @@ Antes de iniciar este módulo, você já deve:
 
 Esses artigos fornecerão instruções sobre as ferramentas e técnicas de layout fundamentais disponíveis em CSS. No final das lições, há uma avaliação para ajudá-lo a verificar sua compreensão dos métodos de layout ao criar uma página da web.
 
-- [Introdução ao layout CSS](/pt-BR/docs/Learn/CSS/CSS_layout/Introduction)
+- [Introdução ao layout CSS](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Introduction)
   - : Este artigo irá recapitular alguns dos recursos de layout CSS que já abordamos em módulos anteriores — como valores {{cssxref("display")}} diferentes — e apresentar alguns dos conceitos que abordaremos ao longo deste módulo.
-- [Fluxo normal](/pt-BR/docs/Learn/CSS/CSS_layout/Normal_Flow)
+- [Fluxo normal](/pt-BR/docs/conflicting/Learn_web_development/Core/CSS_layout/Introduction)
   - : Os elementos nas páginas da Web se apresentam de acordo com o _fluxo normal_ - até que façamos algo para mudar isso. Este artigo explica os fundamentos do fluxo normal como base para aprender como alterá-lo.
-- [Flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox)
+- [Flexbox](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Flexbox)
   - : [Flexbox](/pt-BR/docs/Web/CSS/CSS_Flexible_Box_Layout/Typical_Use_Cases_of_Flexbox) é um método de layout unidimensional para dispor itens em linhas ou colunas. Os itens se flexionam para preencher espaço adicional e encolhem para caber em espaços menores. Este artigo explica todos os fundamentos. Depois de estudar este guia, você pode [testar suas habilidades em flexbox](/pt-BR/docs/Learn/CSS/CSS_layout/Flexbox_skills) para verificar sua compreensão antes de prosseguir.
 - [Grids](/pt-BR/docs/Learn/CSS/CSS_layout/Grids)
   - : CSS Grid Layout é um sistema de layout bidimensional para a web. Ele permite que você organize o conteúdo em linhas e colunas e tem muitos recursos que facilitam a criação de layouts complexos. Este artigo fornecerá tudo o que você precisa saber para começar com o layout de página e [testar suas habilidades de grade](/pt-BR/docs/Learn/CSS/CSS_layout/Grid_skills) antes de prosseguir.
@@ -44,9 +44,9 @@ Esses artigos fornecerão instruções sobre as ferramentas e técnicas de layou
   - : Originalmente para imagens flutuantes dentro de blocos de texto, a propriedade {{cssxref("float")}} tornou-se uma das ferramentas mais usadas para criar layouts de múltiplas colunas em páginas da web. Com o advento do Flexbox e do Grid, ele voltou ao seu propósito original, como explica este artigo.
 - [Posicionamento](/pt-BR/docs/Learn/CSS/CSS_layout/Positioning)
   - : O posicionamento permite retirar elementos do fluxo normal do layout do documento e fazer com que se comportem de maneira diferente, por exemplo, posicionando-se uns sobre os outros ou permanecendo sempre no mesmo lugar dentro da janela de visualização do navegador. Este artigo explica os diferentes valores {{cssxref("position")}} e como usá-los.
-- [Layout de várias colunas](/pt-BR/docs/Learn/CSS/CSS_layout/Multiple-column_Layout)
+- [Layout de várias colunas](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Multiple-column_Layout)
   - : A especificação de layout de várias colunas fornece um método de disposição de conteúdo em colunas, como você pode ver em um jornal. Este artigo explica como usar esse recurso.
-- [Design responsivo](/pt-BR/docs/Learn/CSS/CSS_layout/Responsive_Design)
+- [Design responsivo](/pt-BR/docs/Learn_web_development/Core/CSS_layout/Responsive_Design)
   - : À medida que tamanhos de tela mais diversos apareceram em dispositivos habilitados para a Web, surgiu o conceito de web design responsivo (RWD): um conjunto de práticas que permite que as páginas da Web alterem seu layout e aparência para se adequar a diferentes larguras de tela, resoluções etc. É uma ideia que mudou a forma como projetamos para uma web multidispositivo, e neste artigo vamos te ajudar a entender as principais técnicas que você precisa saber para dominá-la.
 - [Guia do iniciante para consultas de mídia](/pt-BR/docs/Learn/CSS/CSS_layout/Media_queries)
   - : A **CSS Media Query** oferece uma maneira de aplicar CSS somente quando o navegador e o ambiente do dispositivo correspondem a uma regra que você especifica, por exemplo, "a janela de visualização é maior que 480 pixels". Consultas de mídia são uma parte fundamental do web design responsivo porque permitem criar diferentes layouts dependendo do tamanho da viewport. Eles também podem ser usados para detectar outros recursos do ambiente em que seu site está sendo executado, por exemplo, se o usuário está usando uma tela sensível ao toque em vez de um mouse. Nesta lição, você aprenderá primeiro sobre a sintaxe usada em consultas de mídia e, em seguida, as usará em um exemplo interativo que mostra como um design simples pode se tornar responsivo.
