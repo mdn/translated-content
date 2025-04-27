@@ -2,7 +2,7 @@
 title: clip
 slug: Web/CSS/clip
 l10n:
-  sourceCommit: 4e508e2f543c0d77c9c04f406ebc8e9db7e965be
+  sourceCommit: 758ddcdfb06f53955fa3c05dd32e7e4e53fd3009
 ---
 
 {{CSSRef}}{{Deprecated_Header}}
@@ -31,11 +31,14 @@ clip: unset;
 
 ### 值
 
-- {{cssxref("shape")}}
+- `rect()`
 
-  - : 一個矩形 {{cssxref("shape")}}，格式為 `rect(<top>, <right>, <bottom>, <left>)`。`<top>` 和 `<bottom>` 值是從盒子*內部上邊框邊緣*的偏移，而 `<right>` 和 `<left>` 是從*內部左邊框邊緣*的偏移，即填充區域的範圍。
+  - : 使用 `rect()` 函式定義的矩形，其語法形式為為 `rect(<top>, <right>, <bottom>, <left>)`。`<top>` 和 `<bottom>` 值是從盒子*內部上邊框邊緣*的偏移，而 `<right>` 和 `<left>` 是從*內部左邊框邊緣*的偏移，即填充區域的範圍。
 
     `<top>`、`<right>`、`<bottom>` 和 `<left>` 的值可以是 {{cssxref("&lt;length&gt;")}} 或 `auto`。若任何邊的值為 `auto`，元素將會被裁切至該邊的*內部邊框邊緣*。
+
+> [!NOTE]
+> 在已棄用的 `clip` 屬性中所使用的 `rect()` {{cssxref("shape")}} 函式，與用來定義 CSS {{cssxref("basic-shape")}} 的 {{cssxref("basic-shape/rect","rect()")}} 函式是不同的。
 
 - `auto`
   - : 元素不裁切（預設值）。這不同於 `rect(auto, auto, auto, auto)`，後者裁切至元素的內部邊框邊緣。
@@ -104,12 +107,8 @@ clip: unset;
 
 ## 參見
 
-- 此屬性已被棄用，請改用 {{cssxref("clip-path")}}。
-- 相關的 CSS 屬性：
-  - {{cssxref("text-overflow")}}
-  - {{cssxref("white-space")}}
-  - {{cssxref("overflow-x")}}
-  - {{cssxref("overflow-y")}}
-  - {{cssxref("overflow")}}
-  - {{cssxref("display")}}
-  - {{cssxref("position")}}
+- {{cssxref("clip-path")}}
+- {{cssxref("position")}}
+- {{cssxref("mask")}}
+- {{cssxref("shape-image-threshold")}}
+- {{cssxref("shape-outside")}}

@@ -2,7 +2,7 @@
 title: HTML 參考
 slug: Web/HTML/Reference
 l10n:
-  sourceCommit: cf331ccff0dd88648dc9fe22a14f9aaa595ec4bf
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar}}

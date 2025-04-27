@@ -3,7 +3,7 @@ title: 图像、媒体和表单元素
 slug: Learn_web_development/Core/Styling_basics/Images_media_forms
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Overflow", "Learn_web_development/Core/Styling_basics/Tables", "Learn_web_development/Core/Styling_basics")}}
 
 在这节课里，我们来看一下，CSS 是如何处理某些特殊元素的。图像、其他媒体和表格元素的表现和普通的盒子有些不同，这取决于你使用 CSS 格式化它们的能力。理解什么可能做到，什么不可能做到能够省些力气，本节课将会聚焦于一些你需要知道的主要的事情上。
 

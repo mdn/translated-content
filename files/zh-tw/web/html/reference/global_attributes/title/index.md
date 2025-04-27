@@ -2,7 +2,7 @@
 title: title
 slug: Web/HTML/Reference/Global_attributes/title
 l10n:
-  sourceCommit: e04d8d2766c468f149445c0bf438d09f9b2d188c
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTMLSidebar("Global_attributes")}}
@@ -13,8 +13,8 @@ l10n:
 
 ```html interactive-example
 <p>
-  Use the <code>title</code> attribute on an <code>iframe</code> to clearly
-  identify the content of the <code>iframe</code> to screen readers.
+  對 <code>iframe</code> 使用 <code>title</code> 屬性，以清楚地向螢幕閱讀器說明
+  <code>iframe</code> 的內容。
 </p>
 
 <iframe

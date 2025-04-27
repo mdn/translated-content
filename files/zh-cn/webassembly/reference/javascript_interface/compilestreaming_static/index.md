@@ -34,10 +34,10 @@ WebAssembly.compileStreaming(source, compileOptions)
 
 ### 异常
 
-- 如果 `source` 不是一个 [`Response`](/zh-CN/docs/Web/API/Response) 或者能兑现为 `Response` 的 `Promise`，则返回以 {{jsxref("TypeError")}} 拒绝的 promise。
-- 如果编译失败，则返回以 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError) 拒绝的 promise。
-- 如果 `source` 是个被拒绝的 `Promise`，则返回以该错误拒绝的 promise。
-- 如果 `source` 的 `Result` 有一个错误（例如，错误的 MIME 类型），则返回以该错误拒绝的 promise。
+- 如果 `source` 不是一个 [`Response`](/zh-CN/docs/Web/API/Response) 或者能兑现为 `Response` 的 `Promise`，则 promise 将会以 {{jsxref("TypeError")}} 拒绝。
+- 如果编译失败，则 promise 将会以 [`WebAssembly.CompileError`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/CompileError) 拒绝。
+- 如果 `source` 是个被拒绝的 `Promise`，则 promise 将会以该错误拒绝。
+- 如果 `source` 的 `Result` 有一个错误（例如，错误的 MIME 类型），则 promise 将会以该错误拒绝。
 
 ## 示例
 

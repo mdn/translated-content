@@ -3,8 +3,6 @@ title: 技能测试：网格布局
 slug: Learn_web_development/Core/CSS_layout/Test_your_skills/Grid
 ---
 
-{{LearnSidebar}}
-
 此任务的目的是让你使用 CSS 网格布局，并测试你是否了解网格和网格项的行为方式。你将会完成三个包括不同的元素小任务。
 
 > [!NOTE]
