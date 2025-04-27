@@ -1,7 +1,6 @@
 ---
 title: ウェブサーバーとは
 slug: Learn_web_development/Howto/Web_mechanics/What_is_a_web_server
-original_slug: Learn/Common_questions/Web_mechanics/What_is_a_web_server
 l10n:
   sourceCommit: bb026bcb88b7f45374d602301b7b0db5a49ff303
 ---
@@ -15,7 +14,7 @@ l10n:
     <tr>
       <th scope="row">前提知識:</th>
       <td>
-        すでに<a href="/ja/docs/Learn/Common_questions/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>、<a href="/ja/docs/Learn/Common_questions/Web_mechanics/Pages_sites_servers_and_search_engines">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>について知っておく必要があります。
+        すでに<a href="/ja/docs/Learn_web_development/Howto/Web_mechanics/How_does_the_Internet_work">インターネットはどのように動くのか</a>、<a href="/ja/docs/Learn_web_development/Getting_started/Environment_setup/Browsing_the_web">ウェブページ、ウェブサイト、ウェブサーバー、検索エンジンの違い</a>について知っておく必要があります。
       </td>
     </tr>
     <tr>
@@ -34,7 +33,7 @@ l10n:
 1. ハードウェアの観点では、ウェブサーバーとは、ウェブサーバーソフトウェアとウェブサイトのコンポーネントファイル (例えば、 HTML 文書、画像、 CSS スタイルシート、 JavaScript ファイル) を格納しているコンピューターのことです。インターネットに接続され、ウェブに接続された他の端末と物理的なデータ交換に対応しています。
 2. ソフトウェアの観点では、ウェブサーバーとは、ホストにあるファイルに対する、ウェブユーザーのアクセスを制御する、いくつかの部品の集まりです。最小限の部品は HTTP サーバーです。HTTP サーバーは {{Glossary("URL")}} （ウェブアドレス）および {{Glossary("HTTP")}} （ブラウザーがウェブページを閲覧するためのプロトコル）を理解するソフトウェアのことです。格納しているウェブサイトのドメイン名（`mozilla.org` など）を通してアクセスすることができ、コンテンツをエンドユーザーの端末に配信します。
 
-最も基本的な水準では、ブラウザーはウェブサーバーが保持しているファイルが必要になったらいつでも、 HTTP でファイルをリクエストします。リクエストが正しいウェブサーバー（ハードウェア）に届くと、**HTTP サーバー**（ソフトウェア）がリクエストを受け付け、リクエストされた文書を探し（ない場合は [404](/ja/docs/Web/HTTP/Status/404) レスポンスが返される）、ブラウザーに HTTP を通して送り返します。
+最も基本的な水準では、ブラウザーはウェブサーバーが保持しているファイルが必要になったらいつでも、 HTTP でファイルをリクエストします。リクエストが正しいウェブサーバー（ハードウェア）に届くと、**HTTP サーバー**（ソフトウェア）がリクエストを受け付け、リクエストされた文書を探し（ない場合は [404](/ja/docs/Web/HTTP/Reference/Status/404) レスポンスが返される）、ブラウザーに HTTP を通して送り返します。
 
 ![HTTP を通したクライアント/サーバー接続の基本的な説明](web-server.svg)
 
@@ -61,9 +60,9 @@ l10n:
 - 専用ウェブサーバーは、いつでも IP アドレスが同じです。これは**専用 IP アドレス**と呼ばれています。（すべての{{Glossary("ISP", "プロバイダー")}}が家庭用の回線に固定 IP アドレスを提供しているとは限りません。）
 - 専用ウェブサーバーは、通常、サードパーティによって管理されています。
 
-これらすべての理由から、良いホスティングのプロバイダーを探すことは、ウェブサイトを構築する上で重要な部分です。様々なサービス会社が提供するものを探し、ニーズや予算に合う一つを選択しましょう（無料のものから月当たり数千ドルまでのサービスがあります）。詳しくは[この記事](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost#ホスティング)にあります。
+これらすべての理由から、良いホスティングのプロバイダーを探すことは、ウェブサイトを構築する上で重要な部分です。様々なサービス会社が提供するものを探し、ニーズや予算に合う一つを選択しましょう（無料のものから月当たり数千ドルまでのサービスがあります）。詳しくは[この記事](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost#ホスティング)にあります。
 
-ウェブのホスティングサービスを契約したら、後は[ウェブサーバーにファイルをアップロードする](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)だけです。
+ウェブのホスティングサービスを契約したら、後は[ウェブサーバーにファイルをアップロードする](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)だけです。
 
 ### HTTP による通信
 
@@ -88,7 +87,7 @@ HTTP はクライアントとサーバーがどのように通信するかにつ
 2. もしあれば、ウェブサーバーはブラウザーにファイルを送り返します。なければ、アプリケーションサーバーが必要なファイルを作成します。
 3. どちらの処理もできない場合、ウェブサーバーは {{HTTPStatus("404", "404 Not Found")}} としてよく知られているエラーメッセージをブラウザーに返します。
    404 エラーはよく起こるので、多くのウェブデザイナーが 404 エラーページのデザインに時間を割いています。
-   [![MDN 404ページはこのようなエラーページの例です](mdn-404.jpg)](/ja/docs/Web/HTTP/Status/404)
+   [![MDN 404ページはこのようなエラーページの例です](mdn-404.jpg)](/ja/docs/Web/HTTP/Reference/Status/404)
 
 ### 動的コンテンツと静的コンテンツ
 
@@ -101,12 +100,12 @@ HTTP はクライアントとサーバーがどのように通信するかにつ
 ほとんどのウェブサイト開発者は、ゼロからアプリケーションサーバーを作成する必要はないでしょう。既製のソリューションがたくさんあり、その多くは高度に設定可能だからです。
 しかし、独自のサーバーを作成する必要がある場合、おそらくサーバーフレームワークを使用し、既存のコードとライブラリーを活用し、用途に合うように必要な部分だけを拡張することを望むでしょう。
 完全にゼロからサーバーを開発する必要があるのは、比較的少数の開発者だけです。例えば、組み込みシステムでリソースの厳しい制約を満たすためなどです。
-サーバーの構築を試してみたい場合は、[サーバーサイドウェブサイトプログラミング](/ja/docs/Learn/Server-side)の学習パスのリソースに目を通してください。
+サーバーの構築を試してみたい場合は、[サーバーサイドウェブサイトプログラミング](/ja/docs/Learn_web_development/Extensions/Server-side)の学習パスのリソースに目を通してください。
 
 ## 次のステップ
 
 ウェブサーバーのことがよく分かったら、次のステップに進みましょう。
 
-- [ウェブ上で何かをするためにどれくらいコストがかかるか](/ja/docs/Learn/Common_questions/Tools_and_setup/How_much_does_it_cost)を知る
-- [ウェブサイトを作成するのに必要な様々なソフトウェア](/ja/docs/Learn/Common_questions/Tools_and_setup/What_software_do_I_need)についてもっと学ぶ
-- [ファイルをウェブサーバーにアップロードするには](/ja/docs/Learn/Common_questions/Tools_and_setup/Upload_files_to_a_web_server)のような、実践的な記事を読む
+- [ウェブ上で何かをするためにどれくらいコストがかかるか](/ja/docs/Learn_web_development/Howto/Tools_and_setup/How_much_does_it_cost)を知る
+- [ウェブサイトを作成するのに必要な様々なソフトウェア](/ja/docs/Learn_web_development/Howto/Tools_and_setup/What_software_do_I_need)についてもっと学ぶ
+- [ファイルをウェブサーバーにアップロードするには](/ja/docs/Learn_web_development/Howto/Tools_and_setup/Upload_files_to_a_web_server)のような、実践的な記事を読む

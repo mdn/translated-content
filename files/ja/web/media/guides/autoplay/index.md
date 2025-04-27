@@ -57,7 +57,7 @@ audioElement.play();
 
 ### autoplay 属性
 
-コンテンツを自動的に再生する最も簡単な方法は、 [`autoplay`](/ja/docs/Web/HTML/Element/audio#autoplay) 属性を{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素に追加することです。 これにより、要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティが `true` に設定され、`autoplay` が `true` の場合、次のことが発生した後、メディアはできるだけ早く自動的に再生を開始します。
+コンテンツを自動的に再生する最も簡単な方法は、 [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/audio#autoplay) 属性を{{HTMLElement("audio")}} 要素または {{HTMLElement("video")}} 要素に追加することです。 これにより、要素の {{domxref("HTMLMediaElement.autoplay", "autoplay")}} プロパティが `true` に設定され、`autoplay` が `true` の場合、次のことが発生した後、メディアはできるだけ早く自動的に再生を開始します。
 
 - ページは自動再生機能を使用することを許可されている
 - 要素はページの読み込み中に作成された
@@ -75,7 +75,7 @@ audioElement.play();
 
 #### 例 2: 自動再生の失敗を検出する
 
-重要なことを自動再生に頼っている場合、または自動再生の失敗が何らかの形でアプリに影響を与える場合は、自動再生が開始されなかったことを知りたいと思うでしょう。 残念ながら、[`autoplay`](/ja/docs/Web/HTML/Element/audio#autoplay) 属性の場合、自動再生が正常に開始されたかどうかを認識するのは困難です。 自動再生が失敗したときに起動されるイベントはありません。 また、設定可能な例外やコールバック、あるいは自動再生が機能したかどうかを示すフラグもメディア要素にありません。 本当にできることは、いくつかの値を調べて、自動再生が機能したかどうかについて山を張ることだけです。
+重要なことを自動再生に頼っている場合、または自動再生の失敗が何らかの形でアプリに影響を与える場合は、自動再生が開始されなかったことを知りたいと思うでしょう。 残念ながら、[`autoplay`](/ja/docs/Web/HTML/Reference/Elements/audio#autoplay) 属性の場合、自動再生が正常に開始されたかどうかを認識するのは困難です。 自動再生が失敗したときに起動されるイベントはありません。 また、設定可能な例外やコールバック、あるいは自動再生が機能したかどうかを示すフラグもメディア要素にありません。 本当にできることは、いくつかの値を調べて、自動再生が機能したかどうかについて山を張ることだけです。
 
 見方を変えることができるのであれば、メディアの再生がうまくいかなかったときではなく、メディアの再生がうまくいったことを知ることに頼ることをお勧めします。 メディア要素で {{domxref("HTMLMediaElement/play_event", "play")}} イベントが発生するのを待ち受けすることで、これを簡単に行うことができます。
 
@@ -87,7 +87,7 @@ audioElement.play();
 <video src="myvideo.mp4" autoplay onplay="handleFirstPlay(event)"></video>
 ```
 
-ここでは、 {{HTMLElement("video")}} 要素に [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay) 属性が設定されており、 {{domxref("HTMLMediaElement.play_event", "onplay")}} イベントハンドラーが設定されています。イベントは `handleFirstPlay()` と呼ばれる関数によって処理され、この関数は入力として `play` イベントを受け取ります。
+ここでは、 {{HTMLElement("video")}} 要素に [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/video#autoplay) 属性が設定されており、 {{domxref("HTMLMediaElement.play_event", "onplay")}} イベントハンドラーが設定されています。イベントは `handleFirstPlay()` と呼ばれる関数によって処理され、この関数は入力として `play` イベントを受け取ります。
 
 `handleFirstPlay()` は次のようになります。
 
@@ -182,21 +182,21 @@ let playAttempt = setInterval(() => {
 
 ## autoplay 機能ポリシー
 
-上記のブラウザー側での自動再生機能の管理および制御に加えて、ウェブサーバーは自動再生が機能することを許可する意欲を表現することもできます。 {{Glossary("HTTP")}} の {{HTTPHeader("Feature-Policy")}} ヘッダーの [`autoplay`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/autoplay) ディレクティブは、メディアの自動再生に使用できるドメインがあれば、それを制御するために使用されます。 既定では、`autoplay` 機能ポリシー (feature policy) は `'self'`（_単一引用符を含む_）に設定されています。 これは、文書と同じドメインでホストされているときに自動再生が許可されることを示します。
+上記のブラウザー側での自動再生機能の管理および制御に加えて、ウェブサーバーは自動再生が機能することを許可する意欲を表現することもできます。 {{Glossary("HTTP")}} の {{HTTPHeader("Permissions-Policy")}} ヘッダーの [`autoplay`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/autoplay) ディレクティブは、メディアの自動再生に使用できるドメインがあれば、それを制御するために使用されます。 既定では、`autoplay` 機能ポリシー (feature policy) は `'self'`（_単一引用符を含む_）に設定されています。 これは、文書と同じドメインでホストされているときに自動再生が許可されることを示します。
 
 また、`'none'` を指定して自動再生を完全に無効にしたり、`'*'` を指定してすべてのドメインからの自動再生を許可したり、メディアを自動的に再生できる 1 つ以上の特定のオリジンを指定できます。 これらのオリジンはスペース文字で区切ります。
 
 > [!NOTE]
-> 指定された機能ポリシーは、そのフレームとその中にネストされているすべてのフレームに新しい機能ポリシーを設定する [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) が含まれていない限り、文書とその中にネストされているすべての {{HTMLElement("iframe")}} に適用されます。
+> 指定された機能ポリシーは、そのフレームとその中にネストされているすべてのフレームに新しい機能ポリシーを設定する [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) が含まれていない限り、文書とその中にネストされているすべての {{HTMLElement("iframe")}} に適用されます。
 
-`<iframe>` の [`allow`](/ja/docs/Web/HTML/Element/iframe#allow) 属性を使用してそのフレームとそのネストされたフレームの機能ポリシーを指定するときは、値 `'src'` を指定して、フレームの [`src`](/ja/docs/Web/HTML/Element/iframe#src) 属性で指定されたものと同じドメインからのメディアの自動再生のみを許可できます。
+`<iframe>` の [`allow`](/ja/docs/Web/HTML/Reference/Elements/iframe#allow) 属性を使用してそのフレームとそのネストされたフレームの機能ポリシーを指定するときは、値 `'src'` を指定して、フレームの [`src`](/ja/docs/Web/HTML/Reference/Elements/iframe#src) 属性で指定されたものと同じドメインからのメディアの自動再生のみを許可できます。
 
 ### 例: 文書のドメインからの自動再生のみを許可する
 
-{{HTTPHeader("Feature-Policy")}} ヘッダーを使用して、文書の{{Glossary("origin","オリジン")}}からのメディアの自動再生のみを許可するには次のようにします。
+{{HTTPHeader("Permissions-Policy")}} ヘッダーを使用して、文書の{{Glossary("origin","オリジン")}}からのメディアの自動再生のみを許可するには次のようにします。
 
 ```http
-Feature-Policy: autoplay 'self'
+Permissions-Policy: autoplay 'self'
 ```
 
 {{HTMLElement("iframe")}} に対して同じことを行うには次のようにします。
@@ -207,10 +207,10 @@ Feature-Policy: autoplay 'self'
 
 ### 例: 自動再生と全画面モードの許可
 
-前の例に[全画面 API](/ja/docs/Web/API/Fullscreen_API) (Fullscreen API) のパーミッションを追加すると、ドメインに関係なく全画面のアクセスが許可されている場合、次のような `Feature-Policy` ヘッダーになります。 必要に応じてドメイン制限を追加できます。
+前の例に[全画面 API](/ja/docs/Web/API/Fullscreen_API) (Fullscreen API) のパーミッションを追加すると、ドメインに関係なく全画面のアクセスが許可されている場合、次のような `Permissions-Policy` ヘッダーになります。 必要に応じてドメイン制限を追加できます。
 
 ```http
-Feature-Policy: autoplay 'self'; fullscreen
+Permissions-Policy: autoplay 'self'; fullscreen
 ```
 
 `<iframe>` 要素の `allow` プロパティを使って同じパーミッションを設定すると、次のようになります。
@@ -221,10 +221,10 @@ Feature-Policy: autoplay 'self'; fullscreen
 
 ### 例: 特定のソースからの自動再生を許可する
 
-文書（または `<iframe>`）の独自ドメインと `https://example.media` の両方からメディアを再生できるようにする `Feature-Policy` ヘッダーは、次のようになります。
+文書（または `<iframe>`）の独自ドメインと `https://example.media` の両方からメディアを再生できるようにする `Permissions-Policy` ヘッダーは、次のようになります。
 
 ```http
-Feature-Policy: autoplay 'self' https://example.media
+Permissions-Policy: autoplay 'self' https://example.media
 ```
 
 次のように {{HTMLElement("iframe")}} を記述して、この自動再生ポリシーをそれ自体に適用する必要があり、すべての子フレームをこのように記述することを指定することができます。
@@ -243,7 +243,7 @@ Feature-Policy: autoplay 'self' https://example.media
 `autoplay` 機能ポリシーを `'none'` に設定すると、文書または `<iframe>` とすべてのネストされたフレームに対して自動再生が完全に無効になります。 HTTP ヘッダーは次のとおりです。
 
 ```http
-Feature-Policy: autoplay 'none'
+Permissions-Policy: autoplay 'none'
 ```
 
 `<iframe>` の `allow` 属性を使う場合は、次のようになります。
@@ -269,7 +269,7 @@ Feature-Policy: autoplay 'none'
   muted></video>
 ```
 
-この動画要素は、ユーザーコントロール（通常は再生/一時停止、動画のタイムラインのスクラブ、音量調整、およびミュート）を含むように構成されています。 また、[`muted`](/ja/docs/Web/HTML/Element/video#muted) 属性が含まれているため、動画は自動再生されますが、音声はミュートされています。 ただし、ユーザーはコントロールのミュート解除ボタンをクリックして音声を再度有効にすることができます。
+この動画要素は、ユーザーコントロール（通常は再生/一時停止、動画のタイムラインのスクラブ、音量調整、およびミュート）を含むように構成されています。 また、[`muted`](/ja/docs/Web/HTML/Reference/Elements/video#muted) 属性が含まれているため、動画は自動再生されますが、音声はミュートされています。 ただし、ユーザーはコントロールのミュート解除ボタンをクリックして音声を再度有効にすることができます。
 
 ## ブラウザー設定オプション
 
@@ -295,6 +295,6 @@ Feature-Policy: autoplay 'none'
 ## 関連情報
 
 - [ウェブメディア技術](/ja/docs/Web/Media)
-- [動画と音声のコンテンツ](/ja/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content)（学習ガイド）
+- [動画と音声のコンテンツ](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_video_and_audio)（学習ガイド）
 - [ウェブオーディオ API の使用](/ja/docs/Web/API/Web_Audio_API/Using_Web_Audio_API)
 - [クロスブラウザー音声の基本](/ja/docs/Web/Media/Audio_and_video_delivery/Cross-browser_audio_basics)

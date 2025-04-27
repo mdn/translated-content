@@ -35,7 +35,7 @@ l10n:
 
 ### HTTP
 
-- 现已支持新的 `Content-Encoding` HTTP 标头的指令 [`zstd`](/zh-CN/docs/Web/HTTP/Headers/Content-Encoding#zstd)，允许解码服务器发送的、使用 {{glossary("Zstandard compression", "Zstandard 压缩")}}算法编码的内容（[Firefox bug 1871963](https://bugzil.la/1871963)）。
+- 现已支持新的 `Content-Encoding` HTTP 标头的指令 [`zstd`](/zh-CN/docs/Web/HTTP/Reference/Headers/Content-Encoding#zstd)，允许解码服务器发送的、使用 {{glossary("Zstandard compression", "Zstandard 压缩")}}算法编码的内容（[Firefox bug 1871963](https://bugzil.la/1871963)）。
 
 ### API
 
@@ -61,7 +61,7 @@ l10n:
 
 #### 移除
 
-- 现已从 [`HTMLMarqueeElement`](/zh-CN/docs/Web/API/HTMLMarqueeElement) 中删除字幕事件 [`bounce`](/zh-CN/docs/Web/API/HTMLMarqueeElement#bounce)、[`finish`](/zh-CN/docs/Web/API/HTMLMarqueeElement#finish) 和 [`start`](/zh-CN/docs/Web/API/HTMLMarqueeElement#start)，同时删除的还有在 [`<marquee>` HTML 元素](/zh-CN/docs/Web/HTML/Element/marquee)上定义的相应的[事件处理器属性](/zh-CN/docs/Web/HTML/Element/marquee#事件处理器)（[Firefox bug 1689705](https://bugzil.la/1689705)）。
+- 现已从 [`HTMLMarqueeElement`](/zh-CN/docs/Web/API/HTMLMarqueeElement) 中删除字幕事件 [`bounce`](/zh-CN/docs/Web/API/HTMLMarqueeElement#bounce)、[`finish`](/zh-CN/docs/Web/API/HTMLMarqueeElement#finish) 和 [`start`](/zh-CN/docs/Web/API/HTMLMarqueeElement#start)，同时删除的还有在 [`<marquee>` HTML 元素](/zh-CN/docs/Web/HTML/Reference/Elements/marquee)上定义的相应的[事件处理器属性](/zh-CN/docs/Web/HTML/Reference/Elements/marquee#事件处理器)（[Firefox bug 1689705](https://bugzil.la/1689705)）。
 
 ### WebDriver 一致性（WebDriver BiDi、Marionette）
 

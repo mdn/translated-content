@@ -1,12 +1,11 @@
 ---
 title: 如何构建 HTML 表单
 slug: Learn_web_development/Extensions/Forms/How_to_structure_a_web_form
-original_slug: Learn/Forms/How_to_structure_a_web_form
 l10n:
   sourceCommit: b76266228bd0900aa1256902c7858971156a58c9
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Your_first_form", "Learn_web_development/Extensions/Forms/Basic_native_form_controls", "Learn_web_development/Extensions/Forms")}}
 
 在介绍了基本知识后，我们现在来详细了解用于为表单的不同部分提供结构和意义的元素。
 
@@ -39,7 +38,7 @@ l10n:
 > [!WARNING]
 > 严禁在一个表单内嵌套另一个表单。嵌套会导致表单出现不可预测的行为。
 
-在 {{HTMLElement("form")}} 元素之外也可以使用表单控件，但是如果你这样做了，那么除非使用 [`form`](/zh-CN/docs/Web/HTML/Element/input#form) 属性将其与表单关联，否则该控件与任何表单都没有任何关系。引入该特性是为了显式地将控件与表单绑定，即使控件没有嵌套在表单中。
+在 {{HTMLElement("form")}} 元素之外也可以使用表单控件，但是如果你这样做了，那么除非使用 [`form`](/zh-CN/docs/Web/HTML/Reference/Elements/input#form) 属性将其与表单关联，否则该控件与任何表单都没有任何关系。引入该特性是为了显式地将控件与表单绑定，即使控件没有嵌套在表单中。
 
 下面我们来介绍一下嵌套在表单中的结构元素。
 
@@ -158,7 +157,7 @@ l10n:
 
 {{EmbedLiveSample("多个标签", 120, 120)}}
 
-顶部的段落定义了必填元素的规则。该规则必须在使用之前列入，以便视力正常的用户和屏幕阅读器等辅助技术的用户在遇到必填元素之前就能了解其含义。虽然这有助于告知用户星号的含义，但不能依赖它。屏幕阅读器在遇到星号时会将其说成“_星号_”。当视力正常的鼠标用户悬停鼠标时，应显示“_必须_”，这可以通过使用 `title` 属性来实现。标题是否被朗读取决于屏幕阅读器的设置，因此同时包含 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Attributes/aria-label) 属性更为可靠，屏幕阅读器始终会读取该属性。
+顶部的段落定义了必填元素的规则。该规则必须在使用之前列入，以便视力正常的用户和屏幕阅读器等辅助技术的用户在遇到必填元素之前就能了解其含义。虽然这有助于告知用户星号的含义，但不能依赖它。屏幕阅读器在遇到星号时会将其说成“_星号_”。当视力正常的鼠标用户悬停鼠标时，应显示“_必须_”，这可以通过使用 `title` 属性来实现。标题是否被朗读取决于屏幕阅读器的设置，因此同时包含 [`aria-label`](/zh-CN/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-label) 属性更为可靠，屏幕阅读器始终会读取该属性。
 
 上述变体的效果会随着时间的推移而增强：
 

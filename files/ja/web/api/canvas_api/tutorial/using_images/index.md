@@ -47,7 +47,7 @@ l10n:
 
 ### ほかのドメインにある画像の使用
 
-[`crossorigin`](/ja/docs/Web/HTML/Element/img#crossorigin) 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
+[`crossorigin`](/ja/docs/Web/HTML/Reference/Elements/img#crossorigin) 属性を{{HTMLElement("img")}} 要素に使用すると（{{domxref("HTMLImageElement.crossOrigin")}} プロパティを反映）、`drawImage()` を呼び出してほかのドメインから画像を読み込む許可を求めることができます。ホスティングしているドメインが画像のドメイン間のアクセスを許可している場合は、キャンバスを汚染せずに画像を使用できます。そうでない場合は、画像を使用すると[キャンバスを汚染します](/ja/docs/Web/HTML/How_to/CORS_enabled_image#what_is_a_.22tainted.22_canvas.3f)。
 
 ### ほかの canvas 要素の使用
 
@@ -80,7 +80,7 @@ img.src = "myImage.png"; // ソースのパスを設定
 
 ### data: URL で画像を埋め込む
 
-画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/URI/Schemes/data) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
+画像を埋め込む別の方法が、[data: URL](/ja/docs/Web/URI/Reference/Schemes/data) です。 data URL によって、画像を Base64 でエンコードした文字列として、コード内で完全に定義できます。
 
 ```js
 const img = new Image(); // 新たな img 要素を作成

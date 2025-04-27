@@ -9,7 +9,49 @@ l10n:
 
 **`:modal`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、操作が解除されるまで、それ以外の要素とのすべての操作を除外する状態にある要素と一致します。 `:modal` 擬似クラスを使用して、複数の要素を同時に選択することができますが、アクティブになり、入力を受け付けることができるのはそのうちの 1 つのみです。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-modal.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :modal", "tabbed-shorter")}}
+
+```css interactive-example
+button {
+  display: block;
+  margin: auto;
+  width: 10rem;
+  height: 2rem;
+}
+
+:modal {
+  background-color: beige;
+  border: 2px solid burlywood;
+  border-radius: 5px;
+}
+
+p {
+  color: black;
+}
+```
+
+```html interactive-example
+<p>Would you like to see a new random number?</p>
+<button id="showNumber">Show me</button>
+
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>Lucky number is: <strong id="number"></strong></p>
+    <button>Close dialog</button>
+  </form>
+</dialog>
+```
+
+```js interactive-example
+const showNumber = document.getElementById("showNumber");
+const favDialog = document.getElementById("favDialog");
+const number = document.getElementById("number");
+
+showNumber.addEventListener("click", () => {
+  number.innerText = Math.floor(Math.random() * 1000);
+  favDialog.showModal();
+});
+```
 
 ## 構文
 
@@ -23,14 +65,14 @@ l10n:
 
 ページの他の部分をユーザーが操作できないようにし、 `:modal` 擬似クラスによって選択される要素の例としては、例えば以下のようなものが含まれます。
 
-- [`dialog`](/ja/docs/Web/HTML/Element/dialog) 要素が `showModal()` API で開かれたとき。
+- [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素が `showModal()` API で開かれたとき。
 - `requestFullscreen()` API で開かれたときに [`:fullscreen`](/ja/docs/Web/CSS/:fullscreen) 擬似クラスで選択される要素。
 
 ## 例
 
 ### モーダルダイアログのスタイル設定
 
-この例では、「詳細を更新」ボタンがアクティブ化された際に開くモーダルダイアログにスタイル設定を行なっています。この例は、 {{HTMLElement("dialog")}} 要素の[例](/ja/docs/Web/HTML/Element/dialog#ダイアログからの返値を扱い)を基に構築されています。
+この例では、「詳細を更新」ボタンがアクティブ化された際に開くモーダルダイアログにスタイル設定を行なっています。この例は、 {{HTMLElement("dialog")}} 要素の[例](/ja/docs/Web/HTML/Reference/Elements/dialog#ダイアログからの返値を扱い)を基に構築されています。
 
 ```html-nolint hidden live-sample___styling_a_modal_dialog
 <!-- フォームを含む基本的なモーダルダイアログ -->
@@ -116,6 +158,6 @@ favDialog.addEventListener("close", () => {
 
 ## 関連情報
 
-- [`dialog`](/ja/docs/Web/HTML/Element/dialog) 要素
+- [`dialog`](/ja/docs/Web/HTML/Reference/Elements/dialog) 要素
 - 他の要素表示状態擬似クラス: {{CSSxRef(":fullscreen")}} および {{CSSxRef(":picture-in-picture")}}
 - [擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)の一覧

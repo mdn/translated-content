@@ -148,7 +148,7 @@ CSS가 분석되고 CSSOM이 생성되는 동안, 프리 스캐너 덕에 Javasc
 
 #### 접근성 트리 구축(Building the Accessibility Tree)
 
-브라우저는 [접근성](/ko/docs/Learn/Accessibility) 트리를 만듭니다. 보조 장치는 이 트리를 이용해 내용을 분석하고 해석합니다. 접근성 객체 모델(AOM)은 DOM의 의미 버전입니다. 브라우저는 DOM이 업데이트 될 때 접근성 트리도 업데이트 합니다. 접근성 트리는 보조 기술 자체적으로 수정될 수는 없습니다.
+브라우저는 [접근성](/ko/docs/Learn_web_development/Core/Accessibility) 트리를 만듭니다. 보조 장치는 이 트리를 이용해 내용을 분석하고 해석합니다. 접근성 객체 모델(AOM)은 DOM의 의미 버전입니다. 브라우저는 DOM이 업데이트 될 때 접근성 트리도 업데이트 합니다. 접근성 트리는 보조 기술 자체적으로 수정될 수는 없습니다.
 
 AOM이 만들어지기 전까지, [화면 리더기](/ko/docs/Web/Accessibility/ARIA/ARIA_Screen_Reader_Implementors_Guide)는 컨텐츠에 접근할 수 없습니다.
 

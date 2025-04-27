@@ -5,11 +5,11 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 {{AddonSidebar}}
 
-使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的 [\<script>](/zh-CN/docs/Web/HTML/Element/script) 和 [\<object>](/zh-CN/docs/Web/HTML/Element/object) 的资源来源，并且禁止了潜在的不安全用法如 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval).
+使用 WebExtension API 开发的插件默认应用了内容安全策略 (Content Security Policy, 缩写 CSP)。这限制了可以加载的 [\<script>](/zh-CN/docs/Web/HTML/Reference/Elements/script) 和 [\<object>](/zh-CN/docs/Web/HTML/Reference/Elements/object) 的资源来源，并且禁止了潜在的不安全用法如 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval).
 
 这篇文章简单地解释了 CSP 是什么，默认的策略是什么，这对插件来说意味着什么，以及插件如何改变默认 CSP。
 
-[Content Security Policy](/zh-CN/docs/Web/HTTP/CSP)（CSP）是一种避免网站意外执行包含有恶意的内容的机制。网站通过使用服务端发送的 HTTP 标头指定 CSP。CSP 主要关注指定各种内容的合法来源，如脚本和嵌入式插件。例如，网站可以使用它来告诉浏览器应该只执行来自网站自身的 JavaScript，而不应该执行其他来源的脚本。CSP 还可以指导浏览器禁止潜在危险行为，如 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval)的使用。
+[Content Security Policy](/zh-CN/docs/Web/HTTP/Guides/CSP)（CSP）是一种避免网站意外执行包含有恶意的内容的机制。网站通过使用服务端发送的 HTTP 标头指定 CSP。CSP 主要关注指定各种内容的合法来源，如脚本和嵌入式插件。例如，网站可以使用它来告诉浏览器应该只执行来自网站自身的 JavaScript，而不应该执行其他来源的脚本。CSP 还可以指导浏览器禁止潜在危险行为，如 [`eval()`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/eval)的使用。
 
 和网页一样，插件可以加载其他来源的内容。例如浏览器的弹出窗口可以指定为一个 HTML 文档，它同样可以包含不同来源的 JavaScript 和 CSS，就像一个普通的网页一样。
 
@@ -60,7 +60,7 @@ slug: Mozilla/Add-ons/WebExtensions/Content_Security_Policy
 
 ### script 和 object 资源的位置
 
-在默认 CSP 下你只能加载相对插件来说本地的 [\<script>](/zh-CN/docs/Web/HTML/Element/script) 和 [\<object>](/zh-CN/docs/Web/HTML/Element/object) 资源。例如假设插件文档中存在这样一条语句：
+在默认 CSP 下你只能加载相对插件来说本地的 [\<script>](/zh-CN/docs/Web/HTML/Reference/Elements/script) 和 [\<object>](/zh-CN/docs/Web/HTML/Reference/Elements/object) 资源。例如假设插件文档中存在这样一条语句：
 
 ```html
 <script src="https://code.jquery.com/jquery-2.2.4.js"></script>

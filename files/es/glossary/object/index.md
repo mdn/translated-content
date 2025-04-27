@@ -10,4 +10,4 @@ El [Object](/es/docs/Web/JavaScript/Reference/Global_Objects/Object) se refiere 
 ## Aprender más
 
 - {{jsxref("Object")}} en la [Referencia de JavaScript](/es/docs/Web/JavaScript/Reference)
-- [Estructura de datos Object en JavaScript](/es/docs/Web/JavaScript/Data_structures#objects)
+- [Estructura de datos Object en JavaScript](/es/docs/Web/JavaScript/Guide/Data_structures#objects)

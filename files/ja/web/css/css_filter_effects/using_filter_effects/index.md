@@ -74,7 +74,7 @@ img:focus {
 }
 ```
 
-キーボードユーザーがタブ順序を変更せずにフォーカスできるように、 {{HTMLElement("img")}} 要素では [`tabindex`](/ja/docs/Web/HTML/Global_attributes/tabindex) を `0` に設定します。なぜなら、 `<img>` は操作可能な要素ではないからです。
+キーボードユーザーがタブ順序を変更せずにフォーカスできるように、 {{HTMLElement("img")}} 要素では [`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) を `0` に設定します。なぜなら、 `<img>` は操作可能な要素ではないからです。
 
 ```css hidden
 img {
@@ -226,7 +226,7 @@ h1 {
 
 ## SVG フィルターの使用
 
-10 種類の定義済み {{cssxref("filter-function")}} に加えて、 CSS フィルター効果は `url()` に対応しており、引数には [SVG フィルター](/ja/docs/Web/SVG/Element/filter)を指定します。この引数は、内部または外部の SVG ファイルに埋め込むことができます。
+10 種類の定義済み {{cssxref("filter-function")}} に加えて、 CSS フィルター効果は `url()` に対応しており、引数には [SVG フィルター](/ja/docs/Web/SVG/Reference/Element/filter)を指定します。この引数は、内部または外部の SVG ファイルに埋め込むことができます。
 
 単一の SVG を使用して、それぞれに `id` を持つ複数のフィルターを定義することができます。
 
@@ -259,7 +259,7 @@ filter: url("https://example.com/svg/filters.svg#blur3");
 
 どちらの場合も、ぼかし半径の値は、 CSS では {{cssxref("&lt;length&gt;")}} として、また SVG ではピクセル数相当の {{cssxref("&lt;number&gt;")}} として指定され、ガウス関数に対する標準偏差の値を定義します。言い換えれば、画面に表示されるピクセルの内側へ溶け込むピクセル数を定義します。値が大きいほど、ぼかしが強くなります。
 
-[`<filter>`](/ja/docs/Web/SVG/Element/filter) の {{SVGAttr("stdDeviation")}} 属性は、最大 2 つの値を受け入れ、より複雑なぼかし値を作成することができます。同等のぼかしを作成するには、 `stdDeviation` に 1 つの値を記載します。
+[`<filter>`](/ja/docs/Web/SVG/Reference/Element/filter) の {{SVGAttr("stdDeviation")}} 属性は、最大 2 つの値を受け入れ、より複雑なぼかし値を作成することができます。同等のぼかしを作成するには、 `stdDeviation` に 1 つの値を記載します。
 
 ```html hidden
 <table cellpadding="5">
@@ -305,7 +305,7 @@ filter: url("https://example.com/svg/filters.svg#blur3");
 </svg>
 ```
 
-SVG の `url()` フィルター値は、SVG の [`<image>`](/ja/docs/Web/SVG/Element/image) 要素の [`filter`](/ja/docs/Web/SVG/Attribute/filter) 属性の値として、または CSS　の `filter` および `backdrop-filter` プロパティの数値の一部として含めることができます。
+SVG の `url()` フィルター値は、SVG の [`<image>`](/ja/docs/Web/SVG/Reference/Element/image) 要素の [`filter`](/ja/docs/Web/SVG/Reference/Attribute/filter) 属性の値として、または CSS　の `filter` および `backdrop-filter` プロパティの数値の一部として含めることができます。
 
 ```css
 .filter {
@@ -324,4 +324,4 @@ SVG の `url()` フィルター値は、SVG の [`<image>`](/ja/docs/Web/SVG/Ele
 - {{cssxref("background-blend-mode")}}, {{cssxref("mix-blend-mode")}}
 - [CSS フィルター効果](/ja/docs/Web/CSS/CSS_filter_effects)
 - SVG の {{SVGElement("filter")}} 要素、 SVG の {{SVGAttr("filter")}} 属性 '[SVG](/ja/docs/Web/SVG))
-- [Applying SVG effects to HTML content](/ja/docs/Web/SVG/Applying_SVG_effects_to_HTML_content)
+- [Applying SVG effects to HTML content](/ja/docs/Web/SVG/Guides/Applying_SVG_effects_to_HTML_content)

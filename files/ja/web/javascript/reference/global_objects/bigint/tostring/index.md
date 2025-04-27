@@ -65,7 +65,7 @@ toString(radix);
 
 ### `BigInt` における負の 0
 
-整数に負の 0 が存在しないのと同様に、`BigInt` には負の 0 がありません。 `-0.0` は JavaScript の [`Number`](/ja/docs/Web/JavaScript/Data_structures#数値型) 型にのみ現れる、IEEE 浮動小数点数の概念です。
+整数に負の 0 が存在しないのと同様に、`BigInt` には負の 0 がありません。 `-0.0` は JavaScript の [`Number`](/ja/docs/Web/JavaScript/Guide/Data_structures#数値型) 型にのみ現れる、IEEE 浮動小数点数の概念です。
 
 ```js
 (-0n).toString(); // '0'

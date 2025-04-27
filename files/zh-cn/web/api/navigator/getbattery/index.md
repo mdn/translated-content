@@ -2,7 +2,7 @@
 title: Navigator：getBattery() 方法
 slug: Web/API/Navigator/getBattery
 l10n:
-  sourceCommit: cfb7587e3e3122630ad6cbd94d834ecadbe0a746
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{ApiRef("Battery API")}}{{securecontext_header}}
@@ -31,7 +31,7 @@ getBattery()
 ### 异常
 
 - `NotAllowedError` {{domxref("DOMException")}}
-  - : 对该特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)阻止。
+  - : 对该特性的使用被[权限策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)阻止。
 - `SecurityError`
   - : 用户代理不会向不安全上下文暴露电池信息，而此方法在不安全的上下文中被调用了。
 

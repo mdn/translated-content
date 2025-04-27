@@ -786,7 +786,7 @@ async function readFile(filename) {
 
 사실, 단일 스레드 모델은 Non-Blocking IO로 인해 Node.js를 서버 측 프로그래밍에 널리 선택하게 하여, 많은 수의 데이터베이스 또는 파일 시스템 요청을 매우 효율적으로 처리할 수 있게 합니다. 그러나, 순수한 JavaScript인 CPU 바인딩(계산 집약적) 작업은 여전히 메인 스레드를 차단합니다. 실제 병렬화를 달성하려면 [workers](/ko/docs/Web/API/Web_Workers_API/Using_web_workers)를 사용해야 할 수도 있습니다.
 
-비동기 프로그래밍에 대해 자세히 알아보려면, [promises 사용](/ko/docs/Web/JavaScript/Guide/Using_promises)에 대해 읽어보거나 [비동기 JavaScript](/ko/docs/Learn/JavaScript/Asynchronous) 자습서를 읽어보세요.
+비동기 프로그래밍에 대해 자세히 알아보려면, [promises 사용](/ko/docs/Web/JavaScript/Guide/Using_promises)에 대해 읽어보거나 [비동기 JavaScript](/ko/docs/Learn_web_development/Extensions/Async_JS) 자습서를 읽어보세요.
 
 ## 모듈
 

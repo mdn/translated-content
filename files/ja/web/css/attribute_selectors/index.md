@@ -61,7 +61,7 @@ a[class~="logo"] {
 ### 値
 
 - `<attr>`
-  - : {{cssxref("ident")}}、つまり属性の引用符なしの名前です。これは、有効な言語固有の属性（SVG、HTML、XML など）、[`data-*` 属性](/ja/docs/Web/HTML/Global_attributes/data-*)、または作成者が作成した属性のいずれかです。
+  - : {{cssxref("ident")}}、つまり属性の引用符なしの名前です。これは、有効な言語固有の属性（SVG、HTML、XML など）、[`data-*` 属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)、または作成者が作成した属性のいずれかです。
 - `<value>`
   - : 属性値を表す {{cssxref("ident")}} または {{cssxref("string")}} です。値に空白文字や特殊文字が含まれている場合は、引用符で囲む必要があります。
 - `s` or `i`
@@ -71,7 +71,7 @@ a[class~="logo"] {
 
 属性名と値の 大文字小文字の区別は文書言語に依存します。 HTML では、属性名は大文字と小文字を区別せず、仕様で定義された{{glossary("enumerated", "列挙")}}値も区別しません。[大文字小文字を区別しない HTML 属性値](https://html.spec.whatwg.org/multipage/semantics-other.html#case-sensitivity-of-selectors)は HTML 仕様書に掲載されています。これらの属性では、値が不正なのか、設定する要素の属性が不正なのかに関わらず、セレクターの属性値は大文字と小文字を区別しません。
 
-[`class`](/ja/docs/Web/HTML/Global_attributes/class)、[`id`](/ja/docs/Web/HTML/Global_attributes/id)、[`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) 属性のように、属性値が大文字小文字を区別する場合、属性セレクターによる値の照合時は大文字小文字を区別します。[`role`](/ja/docs/Web/Accessibility/ARIA/Roles) や [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Attributes) 属性のように、 HTML 仕様書の外で定義する属性も、大文字小文字を区別します。通常、大文字小文字を区別する属性セレクターは、大文字小文字を区別しない修飾子 (`i`) を含めることで区別しないようにすることができます。
+[`class`](/ja/docs/Web/HTML/Reference/Global_attributes/class)、[`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id)、[`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) 属性のように、属性値が大文字小文字を区別する場合、属性セレクターによる値の照合時は大文字小文字を区別します。[`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) や [`aria-*`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes) 属性のように、 HTML 仕様書の外で定義する属性も、大文字小文字を区別します。通常、大文字小文字を区別する属性セレクターは、大文字小文字を区別しない修飾子 (`i`) を含めることで区別しないようにすることができます。
 
 ## 例
 
@@ -188,7 +188,7 @@ div[data-lang="zh-Hant-TW"] {
 
 ### HTML 順序付きリスト
 
-HTML 仕様書では、 [`type`](/ja/docs/Web/HTML/Element/input#type) 属性は主に {{HTMLElement("input")}} 要素で使用されるため、大文字小文字の区別なく照合することを要求しています。
+HTML 仕様書では、 [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) 属性は主に {{HTMLElement("input")}} 要素で使用されるため、大文字小文字の区別なく照合することを要求しています。
 ユーザーエージェントが修飾子に対応していない場合、セレクターは一致しないので注意してください。
 
 #### CSS

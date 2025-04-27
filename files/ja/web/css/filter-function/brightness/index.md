@@ -9,7 +9,33 @@ l10n:
 
 **`brightness()`** は [CSS](/ja/docs/Web/CSS) の関数で、入力画像に線形乗算を適用し、明るくしたり暗くしたりします。その結果は {{cssxref("&lt;filter-function&gt;")}} です。
 
-{{EmbedInteractiveExample("pages/css/function-brightness.html")}}
+{{InteractiveExample("CSS Demo: brightness()")}}
+
+```css interactive-example-choice
+filter: brightness(1);
+```
+
+```css interactive-example-choice
+filter: brightness(1.75);
+```
+
+```css interactive-example-choice
+filter: brightness(50%);
+```
+
+```css interactive-example-choice
+filter: brightness(0);
+```
+
+```html interactive-example
+<section id="default-example">
+  <img
+    class="transition-all"
+    id="example-element"
+    src="/shared-assets/images/examples/firefox-logo.svg"
+    width="200" />
+</section>
+```
 
 ## 構文
 
@@ -126,7 +152,7 @@ p {
 
 ### url() と SVG の brightness フィルターを用いた brightness の適用
 
-SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、その後、 [`id`](/ja/docs/Web/HTML/Global_attributes/id) で参照することができます。 `<filter>` 要素の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。
+SVG の {{SVGElement("filter")}} 要素は、カスタムフィルター効果を定義するために使用でき、その後、 [`id`](/ja/docs/Web/HTML/Reference/Global_attributes/id) で参照することができます。 `<filter>` 要素の {{SVGElement("feComponentTransfer")}} プリミティブは、ピクセルレベルでの色変換を可能にします。
 
 例えば、適用したコンテンツを 25% （つまり、元の明るさの 75%）暗くするフィルターを作成するには、 `slope` 属性を `0.75` に設定します。次に、 `id` でフィルターを参照します。
 

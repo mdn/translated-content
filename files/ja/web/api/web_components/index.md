@@ -64,7 +64,7 @@ l10n:
 
   - : 以下の拡張機能が定義されています。
 
-    - [`is`](/ja/docs/Web/HTML/Global_attributes#is) グローバル HTML 属性
+    - [`is`](/ja/docs/Web/HTML/Reference/Global_attributes/is) グローバル HTML 属性
       - : 標準の HTML 要素が、カスタム組み込み要素のように振る舞うべきかを指定できます。
     - {{domxref("Document.createElement()")}} メソッドの "is" オプション
       - : カスタム組み込み要素のように振る舞う標準の HTML 要素のインスタンスを作成できます。
@@ -90,7 +90,7 @@ l10n:
   - : カスタム要素に関連する擬似要素です。
 
     - {{cssxref("::part")}}
-      - : [シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内にある要素で、一致する [`part`](/ja/docs/Web/HTML/Global_attributes#part) 属性を持つものを表します。
+      - : [シャドウツリー](/ja/docs/Web/API/Web_components/Using_shadow_DOM)内にある要素で、一致する [`part`](/ja/docs/Web/HTML/Reference/Global_attributes/part) 属性を持つものを表します。
 
 ### シャドウ DOM
 
@@ -125,7 +125,7 @@ l10n:
   - : HTML の断片を含みますが、最初に文書を読み込んだときにはレンダリングされず、実行時に　JavaScript を使って表示することができます。関連する DOM インターフェイスは {{domxref("HTMLTemplateElement")}} です。
 - {{htmlelement("slot")}}
   - : ウェブコンポーネント内のプレースホルダーで、独自のマークアップで埋めることができます。これにより、別の DOM ツリーを生成し、それらを一緒に表示することができます。関連する DOM インターフェイスは {{domxref("HTMLSlotElement")}} です。
-- [`slot`](/ja/docs/Web/HTML/Global_attributes/slot) グローバル HTML 属性
+- [`slot`](/ja/docs/Web/HTML/Reference/Global_attributes/slot) グローバル HTML 属性
   - : シャドウ DOM のシャドウツリーにあるスロットを要素に割り当てます。
 - {{domxref("Element.assignedSlot")}}
   - : 読み取り専用の属性で、この要素が挿入される {{htmlelement("slot")}} の参照を返します。

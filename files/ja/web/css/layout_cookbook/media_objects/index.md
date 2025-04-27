@@ -56,7 +56,7 @@ slug: Web/CSS/Layout_cookbook/Media_objects
 ## MDN の関連資料
 
 - [CSS グリッドレイアウト](/ja/docs/Web/CSS/CSS_grid_layout)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
 - [グリッドテンプレート領域](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)
 - [fit-content](/ja/docs/Web/CSS/fit-content)
 - [grid-template-areas](/ja/docs/Web/CSS/CSS_grid_layout/Grid_template_areas)

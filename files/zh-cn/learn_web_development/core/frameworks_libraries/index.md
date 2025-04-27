@@ -1,10 +1,7 @@
 ---
 title: 理解客户端 JavaScript 框架
 slug: Learn_web_development/Core/Frameworks_libraries
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks
 ---
-
-{{LearnSidebar}}
 
 JavaScript 框架是现代前端 web 开发的重要部分，为开发人员提供了构建可伸缩、交互式 web 应用程序的经过测试的工具。许多现代公司使用框架作为工具的标准部分，因此许多前端开发工作现在需要框架经验。
 

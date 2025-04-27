@@ -26,5 +26,5 @@ l10n:
 ## 参见
 
 - 维基百科上的[接口描述语言](https://zh.wikipedia.org/wiki/接口描述语言)
-- [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
+- [HTML 属性参考](/zh-CN/docs/Web/HTML/Reference/Attributes)
 - [接口定义语言](https://people.eecs.berkeley.edu/~messer/netappc/Supplements/10-idl.pdf)

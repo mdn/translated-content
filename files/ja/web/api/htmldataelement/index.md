@@ -16,7 +16,7 @@ l10n:
 _親である {{domxref("HTMLElement")}} から継承しているプロパティがあります。_
 
 - {{domxref("HTMLDataElement.value")}}
-  - : HTML の [`value`](/ja/docs/Web/HTML/Element/data#value) 属性を反映する、要素の機械可読な値が入った文字列です。
+  - : HTML の [`value`](/ja/docs/Web/HTML/Reference/Elements/data#value) 属性を反映する、要素の機械可読な値が入った文字列です。
 
 ## メソッド
 

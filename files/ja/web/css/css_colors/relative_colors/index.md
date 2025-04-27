@@ -27,7 +27,7 @@ color(from origin-color colorspace channel1 channel2 channel3 / alpha)
 相対色は、絶対色と同じ[色関数](/ja/docs/Web/CSS/CSS_colors#関数)を使用しますが、異なる引数で作成します。
 
 1. 基本的な色関数（上記で _`color-function()`_ で表したもの）である [`rgb()`](/ja/docs/Web/CSS/color_value/rgb), [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) などを用います。どの関数を使用するかは、作成する相対色（**出力色**）に使用する色モデルによって異なります。
-2. 相対色の元の色（上記で _`origin-color`_ で表したもの）は、 `from` キーワードに続けて渡します。これはあらゆる有効な {{cssxref("&lt;color&gt;")}} を指定することができ、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)に入った色値、システムカラー、`currentColor` のほか、別の相対色を使用することもできます。
+2. 相対色の元の色（上記で _`origin-color`_ で表したもの）は、 `from` キーワードに続けて渡します。これはあらゆる有効な {{cssxref("&lt;color&gt;")}} を指定することができ、 [CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)に入った色値、システムカラー、`currentColor` のほか、別の相対色を使用することもできます。
 3. [`color()`](/ja/docs/Web/CSS/color_value/color) 関数の場合、出力色の _[`colorspace`](/ja/docs/Web/CSS/color_value/color#colorspace)_（色空間）を指定します。
 4. 各チャンネルに個別の出力値を指定します。出力色は、元の色（上記の _`channel1`_、_`channel2`_、_`channel3`_ のプレースホルダーで表したもの）の後に定義します。ここで定義するチャンネルは、相対色に使用する[色関数](/ja/docs/Web/CSS/CSS_colors#関数)によって異なります。例えば、 [`hsl()`](/ja/docs/Web/CSS/color_value/hsl) を使用している場合は、色相、彩度、明度の値を定義する必要があります。各チャンネルの値は、新しい値、元の値と同じ値、または元の色チャンネルの値に関連する値とすることができます。
 5. オプションとして、出力色のアルファチャンネル値 (`alpha`) をスラッシュ (`/`) の後に定義することができます。アルファチャンネル値 (`alpha`) が明示的に指定されていない場合、アルファチャンネル値は元の色の既定値となります（絶対的な色値の場合の 100% ではありません）。
@@ -174,7 +174,7 @@ rgb(from red r g b / alpha)
 
 ## カスタムプロパティの使用
 
-相対色を作成する際に、元の色と出力される色チャンネル値の定義の両方で、[CSS カスタムプロパティ](/ja/docs/Web/CSS/Using_CSS_custom_properties)で定義された値を使用することができます。 例えば、次の例をご覧ください。
+相対色を作成する際に、元の色と出力される色チャンネル値の定義の両方で、[CSS カスタムプロパティ](/ja/docs/Web/CSS/CSS_cascading_variables/Using_CSS_custom_properties)で定義された値を使用することができます。 例えば、次の例をご覧ください。
 
 下記の CSS では、 2 つのカスタムプロパティを定義しています。
 
@@ -232,7 +232,7 @@ rgb(from red r g b / alpha)
 
 ## 数学関数の使用
 
-出力される色チャンネルの値を計算するには、 CSS の[数学関数](/ja/docs/Web/CSS/CSS_Functions#数学関数)、例えば {{cssxref("calc")}} などを使用することができます。例を見ていきましょう。
+出力される色チャンネルの値を計算するには、 CSS の[数学関数](/ja/docs/Web/CSS/CSS_Values_and_Units/CSS_Value_Functions#数学関数)、例えば {{cssxref("calc")}} などを使用することができます。例を見ていきましょう。
 
 次の CSS は、異なる背景色を持つ 3 つの {{htmlelement("div")}} 要素のスタイルを指定しています。中央の要素には変更されていない `--base-color` が指定され、左右の要素には、その `--base-color` の明度を上げたもの、下げたものがそれぞれ指定されています。これらのバリエーションは相対色を使用して定義されています。 `--base-color` は `lch()` 関数に渡され、 `calc()` 関数を使用して、望みの効果を得るために出力色の明度チャンネルを変更しています。明るくする色には明度チャンネルに 20% を加算し、暗くする色には 20% を減算しています。
 
@@ -319,9 +319,9 @@ rgb(from red r g b / alpha)
 
 参考として、以下に HTML の全文を掲載します。最も興味深い部分は次の通りです。
 
-- `--base-color` カスタムプロパティは、`container` の ID を持つ {{htmlelement("div")}} 要素にインラインスタイル ([`style`](/ja/docs/Web/HTML/Global_attributes/style)) として設定されています。JavaScript で簡単に値を更新できるように、この場所に置いています。初期値として `#ff0000` (`red`) を設定し、例を読み込んだ際に、この値に基づく色パレットを表示するようにしています。なお、通常はこの値を {{htmlelement("html")}} 要素に設定すると思いますが、MDN のライブサンプルではレンダリング時に削除されてしまいます。
-- ベース色のピッカーは、 [`<input type="color">`](/ja/docs/Web/HTML/Element/input/color) コントロールを使用して作成されます。このコントロールに新しい値が設定されると、 JavaScript で `--base-color` カスタムプロパティにこの値が設定され、新しい色パレットが生成されます。表示される色はすべて、 `--base-color` をベースにした相対色です。
-- 一連の [`<input type="radio">`](/ja/docs/Web/HTML/Element/input/radio) コントロールにより、生成する色パレットの種類を選択することができます。ここで新しい値が選択されると、JavaScript を使用して、選択されたパレットを表す新しいクラスを `container` の `<div>` に設定します。 CSS では、子の `<div>` （`.comp :nth-child(1)` など）を対象とするために子孫セレクターを使用します。これにより、正しい色を適用し、使用されていない `<div>` ノードを非表示にすることができます。
+- `--base-color` カスタムプロパティは、`container` の ID を持つ {{htmlelement("div")}} 要素にインラインスタイル ([`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style)) として設定されています。JavaScript で簡単に値を更新できるように、この場所に置いています。初期値として `#ff0000` (`red`) を設定し、例を読み込んだ際に、この値に基づく色パレットを表示するようにしています。なお、通常はこの値を {{htmlelement("html")}} 要素に設定すると思いますが、MDN のライブサンプルではレンダリング時に削除されてしまいます。
+- ベース色のピッカーは、 [`<input type="color">`](/ja/docs/Web/HTML/Reference/Elements/input/color) コントロールを使用して作成されます。このコントロールに新しい値が設定されると、 JavaScript で `--base-color` カスタムプロパティにこの値が設定され、新しい色パレットが生成されます。表示される色はすべて、 `--base-color` をベースにした相対色です。
+- 一連の [`<input type="radio">`](/ja/docs/Web/HTML/Reference/Elements/input/radio) コントロールにより、生成する色パレットの種類を選択することができます。ここで新しい値が選択されると、JavaScript を使用して、選択されたパレットを表す新しいクラスを `container` の `<div>` に設定します。 CSS では、子の `<div>` （`.comp :nth-child(1)` など）を対象とするために子孫セレクターを使用します。これにより、正しい色を適用し、使用されていない `<div>` ノードを非表示にすることができます。
 - `container` の `<div>` は、生成されたパレットの色を表示する子の `<div>` を含んでいます。初期クラスとして `comp` が設定されていることに注意してください。これにより、ページが最初に読み込まれた際に補色の配色が表示されるようになります。
 
 ```html
@@ -605,7 +605,7 @@ function setBaseColor(e) {
 
 ### ライブの UI 配色更新ツール
 
-この例は、見出しとテキストを含むカードに、ちょっとした工夫を加えたものがあります。カードの下記にはスライダー ([`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)) コントロールがあります。値が変更されると、JavaScript を使用して、 `--hue` カスタムプロパティ値を新しいスライダー値に設定します。
+この例は、見出しとテキストを含むカードに、ちょっとした工夫を加えたものがあります。カードの下記にはスライダー ([`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)) コントロールがあります。値が変更されると、JavaScript を使用して、 `--hue` カスタムプロパティ値を新しいスライダー値に設定します。
 
 これにより、 UI 全体の配色が調整されます。
 
@@ -617,8 +617,8 @@ function setBaseColor(e) {
 例えば、下記に HTML を示します。
 
 - {{htmlelement("main")}} 要素は、残りのコンテンツを格納する外側のラッパーとして機能し、カードとフォームを 1 つの単位として、 `<main>` 要素の中に垂直方向と水平方向の中央揃えで配置することを可能にします。
-- この {{htmlelement("section")}} 要素には、カードのコンテンツを定義する [`<h1>`](/ja/docs/Web/HTML/Element/Heading_Elements) 要素と {{htmlelement("p")}} 要素が設定されています。
-- {{htmlelement("form")}} 要素には範囲 ([`<input type="range">`](/ja/docs/Web/HTML/Element/input/range)) コントロールとそのラベル ({{htmlelement("label")}}) があります。
+- この {{htmlelement("section")}} 要素には、カードのコンテンツを定義する [`<h1>`](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements) 要素と {{htmlelement("p")}} 要素が設定されています。
+- {{htmlelement("form")}} 要素には範囲 ([`<input type="range">`](/ja/docs/Web/HTML/Reference/Elements/input/range)) コントロールとそのラベル ({{htmlelement("label")}}) があります。
 
 ```html
 <main>

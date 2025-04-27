@@ -129,7 +129,7 @@ inner.length; // 0
 
 - [셀렉터를 사용해 DOM 엘리먼트 찾기](/ko/docs/Web/API/Document_Object_Model/Locating_DOM_elements_using_selectors)
 - CSS 가이드의 [속성 셀렉터](/ko/docs/Web/CSS/Attribute_selectors)
-- MDN 학습 영역의 [속성 셀렉터](/ko/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
+- MDN 학습 영역의 [속성 셀렉터](/ko/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
 - {{domxref("Element.querySelector()")}} 와 {{domxref("Element.querySelectorAll()")}}
 - {{domxref("Document.querySelector()")}}
 - {{domxref("DocumentFragment.querySelector()")}} 와 {{domxref("DocumentFragment.querySelectorAll()")}}

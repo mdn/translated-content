@@ -7,7 +7,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`HTMLAreaElement.relList`** 読み取り専用プロパティは、[`rel`](/ja/docs/Web/HTML/Attributes/rel) 属性を反映しています。これは生きた {{domxref("DOMTokenList")}} で、 {{HTMLElement("area")}} 要素で表されるリソースと現在の文書との間の関係を示すリンク種別のセットが入ります。
+**`HTMLAreaElement.relList`** 読み取り専用プロパティは、[`rel`](/ja/docs/Web/HTML/Reference/Attributes/rel) 属性を反映しています。これは生きた {{domxref("DOMTokenList")}} で、 {{HTMLElement("area")}} 要素で表されるリソースと現在の文書との間の関係を示すリンク種別のセットが入ります。
 
 このプロパティ自体は読み取り専用です。 つまり、 {{domxref("DOMTokenList")}} を別のものに置き換えることはできませんが、その内容は変更できます。
 

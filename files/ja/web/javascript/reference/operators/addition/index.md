@@ -33,7 +33,7 @@ x + y
 
 ## 解説
 
-演算子 `+` は数値の加算と文字列の連結という 2 つの異なる操作のためにオーバーロードされています。評価するとき、まず[両方のオペランドをプリミティブに変換します](/ja/docs/Web/JavaScript/Data_structures#プリミティブ変換)。その後、 2 つのオペランドの型がテストされます。
+演算子 `+` は数値の加算と文字列の連結という 2 つの異なる操作のためにオーバーロードされています。評価するとき、まず[両方のオペランドをプリミティブに変換します](/ja/docs/Web/JavaScript/Guide/Data_structures#プリミティブ変換)。その後、 2 つのオペランドの型がテストされます。
 
 - 一方が文字列の場合、もう一方のオペランドも[文字列に変換](/ja/docs/Web/JavaScript/Reference/Global_Objects/String#文字列変換)され、連結されます。
 - もし両方が[長整数](/ja/docs/Web/JavaScript/Reference/Global_Objects/BigInt)であれば、長整数同士の加算が行われます。一方が長整数で、もう一方が長整数でない場合、{{jsxref("TypeError")}} 例外が発生します。

@@ -8,7 +8,7 @@ l10n:
 
 {{APIRef("HTML DOM")}}
 
-**`formAction`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このコントロールを含むフォームが送信された際にサーバー上で実行されるプログラムの URL です。これは、この `<button>` の [`formaction`](/ja/docs/Web/HTML/Element/input#formaction) 属性の値を反映します。
+**`formAction`** は {{domxref("HTMLButtonElement")}} インターフェイスのプロパティで、このコントロールを含むフォームが送信された際にサーバー上で実行されるプログラムの URL です。これは、この `<button>` の [`formaction`](/ja/docs/Web/HTML/Reference/Elements/input#formaction) 属性の値を反映します。
 
 この値はフォームがこのボタンから送信された場合、 {{domxref("HTMLFormElement")}} インターフェイスの {{domxref("HTMLFormElement.action", "action")}} プロパティの値を上書きします。このプロパティは受け取ったり設定したりすることができます。
 
@@ -36,4 +36,4 @@ btnEl.formAction = "/cgi-bin/publish";
 - {{domxref("HTMLButtonElement.formMethod")}}
 - {{domxref("HTMLButtonElement.formNoValidate")}}
 - {{domxref("HTMLButtonElement.formTarget")}}
-- [フォームデータの送信](/ja/docs/Learn/Forms/Sending_and_retrieving_form_data)
+- [フォームデータの送信](/ja/docs/Learn_web_development/Extensions/Forms/Sending_and_retrieving_form_data)

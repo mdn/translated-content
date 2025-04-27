@@ -148,7 +148,7 @@ label {
 
 ## 결합자
 
-[CSS 결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators) 역시 `&` 중첩 선택자가 사용되거나 사용되지 않을 수 있습니다.
+[CSS 결합자](/ko/docs/Learn_web_development/Core/Styling_basics/Combinators) 역시 `&` 중첩 선택자가 사용되거나 사용되지 않을 수 있습니다.
 
 ### 예제
 
@@ -401,7 +401,7 @@ h2 {
 }
 ```
 
-> **경고** 이것은 CSS 중첩에서는 불가능한 일입니다. [결합자](/ko/docs/Learn/CSS/Building_blocks/Selectors/Combinators)가 사용되지 않는다면 중첩 선택자는 [타입 선택자](/ko/docs/Web/CSS/Type_selectors) 처럼 취급됩니다. 문자열 연쇄를 허용하면 이는 끊기게 됩니다.
+> **경고** 이것은 CSS 중첩에서는 불가능한 일입니다. [결합자](/ko/docs/Learn_web_development/Core/Styling_basics/Combinators)가 사용되지 않는다면 중첩 선택자는 [타입 선택자](/ko/docs/Web/CSS/Type_selectors) 처럼 취급됩니다. 문자열 연쇄를 허용하면 이는 끊기게 됩니다.
 
 [걸합 선택자](/ko/docs/Web/CSS/CSS_selectors/Selector_structure#compound_selector) 에서는, 타입 선택자가 가장 처음으로 위치해야 합니다. ([타입 선택자](/ko/docs/Web/CSS/Type_selectors)인) `&Element` 를 사용하는 것은 CSS 선택자 뿐만 아니라, 전체 선택자 블록을 무효로 만듭니다. 타입 선택자가 가장 먼저 위치함에 따라 결합 선택자는 `Element&` 로 작성되어야만 합니다.
 

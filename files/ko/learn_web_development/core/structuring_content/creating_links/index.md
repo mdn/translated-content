@@ -63,7 +63,7 @@ l10n:
 
 ### Block level 링크들
 
-이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/ko/docs/Learn/HTML/Introduction_to_HTML/Getting_started#block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, 다음 코드 스니펫과 같이 `{{htmlelement("a")}}` 요소로 이미지를 감싸면 됩니다.
+이전에 얘기했듯이, 여러분은 어떤 내용이든 link로 바꿀 수 있습니다. [block level 요소들](/ko/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax#block_versus_inline_elements) 이라고 할지라도요. 만약 링크로 바꾸고 싶은 이미지가 있다면, 다음 코드 스니펫과 같이 `{{htmlelement("a")}}` 요소로 이미지를 감싸면 됩니다.
 
 ```html
 <a href="https://developer.mozilla.org/en-US/">
@@ -361,6 +361,6 @@ Document fragments(문서 조각)를 참조하여 현재 문서의 다른 부분
 
 ## 요약
 
-이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 이 과정의 링크로 돌아올 것입니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급의 다른 기능들을 살펴보도록 하겠습니다. 다음에 알아볼 내용은 [Advanced text formatting](/ko/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)입니다.
+이제 링크는 여기까지입니다. 어쨌든! 스타일링을 시작하면 나중에 이 과정의 링크로 돌아올 것입니다. 다음 HTML에서는 텍스트 의미론(Text Semantics)으로 돌아가서 유용하게 사용할 수 있는 고급의 다른 기능들을 살펴보도록 하겠습니다. 다음에 알아볼 내용은 [Advanced text formatting](/ko/docs/Learn_web_development/Core/Structuring_content/Advanced_text_features)입니다.
 
 {{PreviousMenuNext("Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals", "Learn/HTML/Introduction_to_HTML/Advanced_text_formatting", "Learn/HTML/Introduction_to_HTML")}}

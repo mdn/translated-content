@@ -7,7 +7,27 @@ slug: Web/CSS/::marker
 
 **`::marker`** [CSS](/zh-CN/docs/Web/CSS) [伪元素](/zh-CN/docs/Web/CSS/Pseudo-elements)匹配列表的标记框（通常为一个符号或数字）。它作用在任何设置了 [`display: list-item`](/zh-CN/docs/Web/CSS/display) 的元素或伪元素上，例如 {{HTMLElement("li")}} 和 {{HTMLElement("summary")}} 元素。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-marker.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::marker", "tabbed-shorter")}}
+
+```css interactive-example
+li::marker {
+  content: "✝ ";
+  font-size: 1.2em;
+}
+```
+
+```html interactive-example
+<p>Group known as Mercury Seven:</p>
+<ul>
+  <li>Malcolm Scott Carpenter</li>
+  <li>Leroy Gordon (Gordo) Cooper Jr.</li>
+  <li>John Herschel Glenn Jr.</li>
+  <li>Virgil Ivan (Gus) Grissom</li>
+  <li>Walter Marty (Wally) Schirra Jr.</li>
+  <li>Alan Bartlett Shepard Jr.</li>
+  <li>Donald Kent (Deke) Slayton</li>
+</ul>
+```
 
 ## 允许的属性值
 

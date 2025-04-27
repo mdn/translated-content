@@ -1,232 +1,38 @@
 ---
 title: 文本格式进阶
 slug: Learn_web_development/Core/Structuring_content/Advanced_text_features
-original_slug: Learn/HTML/Introduction_to_HTML/Advanced_text_formatting
+l10n:
+  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}
 
-HTML 中有许多其他元素可以用于格式化文本，我们没有在 [HTML 文字处理基础](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs)中提到它们。本文中所描述的元素虽然少有人知，但仍然值得去学习（尽管仍然不是完整的列表）。在这里你将了解标记引用、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。
+HTML 中有许多可以用于定义文本语义的其他元素，我们没有在[强调和重要性](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Emphasis_and_importance)中提到它们。本文中所介绍的元素虽然少有人知，但仍然值得去学习（而且本文不是一份完整的列表）。在这里你将学习标记引用、描述列表、计算机代码和其他相关文本、下标和上标、联系信息等。
 
 <table>
   <tbody>
     <tr>
       <th scope="row">前提：</th>
       <td>
-        熟悉 HTML 基础（包含在
-        <a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax"
-          >开始学习 HTML</a
-        >
-        中）、HTML 文本格式（包含在
-        <a
-          href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs"
-          >HTML 文字处理基础</a
-        >中）。
+        熟悉 HTML 基础，如<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Basic_HTML_syntax">基础 HTML 语法</a
+        >所述。文本级语义，例如<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs">标题和段落</a
+        >和<a href="/zh-CN/docs/Learn_web_development/Core/Structuring_content/Lists">列表</a>。
       </td>
     </tr>
     <tr>
-      <th scope="row">目标：</th>
-      <td>学习一些不常见的 HTML 元素标记来使用高级语义功能。</td>
+      <th scope="row">学习成果：</th>
+      <td>
+        <ul>
+          <li>引用。</li>
+          <li>缩写和首字母缩略词。</li>
+          <li>地址。</li>
+          <li>时间和日期。</li>
+          <li>上标和下标。</li>
+        </ul>
+      </td>
     </tr>
   </tbody>
 </table>
-
-## 描述列表
-
-在 HTML 文本处理基础中，我们讨论了如何在 HTML 中[标记基本的列表](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Headings_and_paragraphs#列表)，并且提到了你偶尔会遇到的第三种列表类型——**描述列表**（description list）。这种列表的目的是标记一组项目及其相关描述，例如术语和定义，或者是问题和答案等。让我们看一组术语和定义的示例：
-
-```plain
-内心独白
-戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
-语言独白
-戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
-旁白
-戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
-```
-
-描述列表使用与其他列表类型不同的闭合标签——{{htmlelement("dl")}}；此外，每一项都用 {{htmlelement("dt")}}（description term）元素闭合。每个描述都用 {{htmlelement("dd")}}（description definition）元素闭合。
-
-### 描述列表示例
-
-让我们来完成下面的标记例子：
-
-```html
-<dl>
-  <dt>内心独白</dt>
-  <dd>
-    戏剧中，某个角色对自己的内心活动或感受进行念白表演，这些台词只面向观众，而其他角色不会听到。
-  </dd>
-  <dt>语言独白</dt>
-  <dd>
-    戏剧中，某个角色把自己的想法直接进行念白表演，观众和其他角色都可以听到。
-  </dd>
-  <dt>旁白</dt>
-  <dd>
-    戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
-  </dd>
-</dl>
-```
-
-浏览器的默认样式会在描述列表的术语及其定义之间产生缩进。
-
-{{EmbedLiveSample('描述列表示例', '100%', '285px')}}
-
-### 单个术语的多个描述
-
-请注意：一个术语可以同时有多个描述，比如说：
-
-```html
-<dl>
-  <dt>旁白</dt>
-  <dd>
-    戏剧中，为渲染幽默或戏剧性效果而进行的场景之外的补充注释念白，只面向观众，内容一般都是角色的感受、想法、以及一些背景信息等。
-  </dd>
-  <dd>
-    写作中，指与当前主题相关的一段内容，通常不适于直接置于内容主线中，因此置于附近的其他位置（通常位于主线内容旁边一个文本框内）。
-  </dd>
-</dl>
-```
-
-{{EmbedLiveSample('单个术语的多个定义', '100%', '193px')}}
-
-### 主动学习：标记一组定义
-
-现在是时候尝试一下描述列表了。在*输入*区域的原始文本里添加相应的元素，使得它在*输出*区域是以描述列表的形式出现。如果你喜欢，你也可以使用你自己的描述术语和描述。
-
-如果你做错了，你可以随时点击*重置*按钮。如果实在进行不下去，可以点击*显示答案*。
-
-```html hidden
-<h2>实时输出</h2>
-
-<div class="output" style="min-height: 50px;"></div>
-
-<h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
-</p>
-<textarea id="code" class="input" style="min-height: 100px; width: 95%">
-培根
-整个世界的粘合剂。
-鸡蛋
-一块蛋糕的粘合剂。
-咖啡
-一种浅棕色的饮料。
-可以在清晨带来活力。
-</textarea>
-
-<div class="playable-buttons">
-  <input id="reset" type="button" value="重置" />
-  <input id="solution" type="button" value="显示答案" />
-</div>
-```
-
-```css hidden
-html {
-  font-family: sans-serif;
-}
-
-h2 {
-  font-size: 16px;
-}
-
-.a11y-label {
-  margin: 0;
-  text-align: right;
-  font-size: 0.7rem;
-  width: 98%;
-}
-
-body {
-  margin: 10px;
-  background: #f5f9fa;
-}
-```
-
-```js hidden
-const textarea = document.getElementById("code");
-const reset = document.getElementById("reset");
-const solution = document.getElementById("solution");
-const output = document.querySelector(".output");
-const code = textarea.value;
-let userEntry = textarea.value;
-
-function updateCode() {
-  output.innerHTML = textarea.value;
-}
-
-const htmlSolution =
-  "<dl>\n <dt>培根</dt>\n <dd>整个世界的粘合剂。</dd>\n <dt>鸡蛋</dt>\n <dd>一块蛋糕的粘合剂。</dd>\n <dt>咖啡</dt>\n <dd>一种浅棕色的饮料。</dd>\n <dd>可以在清晨带来活力。</dd>\n </dl>";
-let solutionEntry = htmlSolution;
-
-reset.addEventListener("click", () => {
-  textarea.value = code;
-  userEntry = textarea.value;
-  solutionEntry = htmlSolution;
-  solution.value = "显示答案";
-  updateCode();
-});
-
-solution.addEventListener("click", () => {
-  if (solution.value === "显示答案") {
-    textarea.value = solutionEntry;
-    solution.value = "隐藏答案";
-  } else {
-    textarea.value = userEntry;
-    solution.value = "显示答案";
-  }
-  updateCode();
-});
-
-textarea.addEventListener("input", updateCode);
-window.addEventListener("load", updateCode);
-
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
-
-textarea.onkeydown = (e) => {
-  if (e.code === "Tab") {
-    e.preventDefault();
-    insertAtCaret("\t");
-  }
-
-  if (e.code === "Escape") {
-    textarea.blur();
-  }
-};
-
-function insertAtCaret(text) {
-  const scrollPos = textarea.scrollTop;
-  let caretPos = textarea.selectionStart;
-
-  const front = textarea.value.substring(0, caretPos);
-  const back = textarea.value.substring(
-    textarea.selectionEnd,
-    textarea.value.length,
-  );
-  textarea.value = front + text + back;
-  caretPos += text.length;
-  textarea.selectionStart = caretPos;
-  textarea.selectionEnd = caretPos;
-  textarea.focus();
-  textarea.scrollTop = scrollPos;
-}
-
-// Update the saved userCode every time the user updates the text area code
-
-textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
-    userEntry = textarea.value;
-  } else {
-    solutionEntry = textarea.value;
-  }
-
-  updateCode();
-};
-```
-
-{{ EmbedLiveSample('主动学习：标记一组定义', 700, 350) }}
 
 ## 引用
 
@@ -234,31 +40,31 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 ### 块引用
 
-如果一个块级内容（一个段落、多个段落、一个列表等）从其他地方被引用，你应该把它用 {{htmlelement("blockquote")}} 元素包裹起来表示，并且在 [`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性里用 URL 来指向引用的资源。例如，下面的示例代码就是引用的 MDN 的 `<blockquote>` 元素页面：
+如果其他地方引用一个块级内容（一个段落、多个段落、一个列表等），你应该把它用 {{htmlelement("blockquote")}} 元素包裹起来表示，并且在 [`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性里用 URL 来指向引用的资源。例如，下面的示例代码就是引用的 MDN 的 `<blockquote>` 元素页面：
 
 ```html
 <p>
-  The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-  <em>HTML Block Quotation Element</em>) indicates that the enclosed text is an
-  extended quotation.
+  <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em
+    >HTML 块级引用元素</em
+  >）表示所附文本为扩展引用。
 </p>
 ```
 
 要把这些转换为块引用，我们要这样做：
 
 ```html
-<p>Here is a blockquote:</p>
+<p>这是块引用：</p>
 <blockquote
   cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>
-    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em
+      >HTML 块级引用元素</em
+    >）表示所附文本为扩展引用。
   </p>
 </blockquote>
 ```
 
-浏览器的默认样式会将其呈现为缩进的段落，作为引用的指示；引号上面的段落是为了证明这一点。
+浏览器的默认样式会将其渲染为缩进的段落，以表明这是一个引用；引用上面的段落是为了证明这一点。
 
 {{EmbedLiveSample('块引用', '100%', '200px')}}
 
@@ -268,9 +74,9 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 ```html
 <p>
-  The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
-    >intended for short quotations that don't require paragraph breaks.</q
+  引用元素 <code>&lt;q&gt;</code> 是<q
+    cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
+    >用于不需要段落分隔的短引用。</q
   >
 </p>
 ```
@@ -281,34 +87,24 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 
 ### 引文
 
-[`cite`](/zh-CN/docs/Web/HTML/Element/blockquote#cite) 属性的内容看起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
+[`cite`](/zh-CN/docs/Web/HTML/Reference/Elements/blockquote#cite) 属性的内容听起来很有用，但不幸的是，浏览器、屏幕阅读器并没有充分利用它。如果不使用 JavaScript 或 CSS 编写自己的解决方案，就没有办法让浏览器显示 `cite` 的内容。如果你想在页面上提供引文的来源，你需要在文本中通过链接或其他适当的方式来提供它。
 
 这里有 {{htmlelement("cite")}} 元素，但它是为了包含所引用资源的标题（如书名）。然而，你没有理由不把 `<cite>` 内的文字以某种方式链接到引用源。
 
-```html
+```html-nolint
 <p>
-  According to the
-  <a href="/zh-CN/docs/Web/HTML/Element/blockquote">
-    <cite>MDN blockquote page</cite></a
-  >:
+  根据<a href="/zh-CN/docs/Web/HTML/Element/blockquote"><cite>MDN 块引用页</cite></a>：
 </p>
 
 <blockquote
   cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/blockquote">
   <p>
-    The <strong>HTML <code>&lt;blockquote&gt;</code> Element</strong> (or
-    <em>HTML Block Quotation Element</em>) indicates that the enclosed text is
-    an extended quotation.
+    <strong>HTML <code>&lt;blockquote&gt;</code> 元素</strong>（或<em>HTML 块级引用元素</em>）表示所附文本为扩展引用。
   </p>
 </blockquote>
 
 <p>
-  The quote element — <code>&lt;q&gt;</code> — is
-  <q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q"
-    >intended for short quotations that don't require paragraph breaks.</q
-  >
-  — <a href="/zh-CN/docs/Web/HTML/Element/q"> <cite>MDN q page</cite></a
-  >.
+  引用元素 <code>&lt;q&gt;</code> 是<q cite="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/q">用于不需要段落分隔的短引用。</q>——<a href="/zh-CN/docs/Web/HTML/Element/q"> <cite>MDN q 页面</cite></a>
 </p>
 ```
 
@@ -337,9 +133,7 @@ HTML 也有用于标记引用的特性，至于使用哪个元素标记，取决
 <div class="output" style="min-height: 50px;"></div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
-</p>
+<p class="a11y-label">按 ESC 退出编辑区域（按 Tab 可插入制表符）。</p>
 <textarea id="code" class="input" style="min-height: 150px; width: 95%">
 <p>你好！欢迎访问我的激励网页！孔子曰：</p>
 <p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
@@ -385,13 +179,10 @@ let userEntry = textarea.value;
 function updateCode() {
   output.innerHTML = textarea.value;
 }
-const htmlSolution = `<p>你好！欢迎访问我的激励网页！<a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>孔子</cite></a>曰：</p>
-<blockquote cite="https://zh.wikipedia.org/zh-hans/孔子">
-  <p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>
-</blockquote>
-<p>要保持乐观，<q cite="http://example.com/affirmationsforpositivethinking">不要说泄气的话</q>。（源自 <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>。）</p>`;
 
+const htmlSolution = `<p>你好！欢迎访问我的激励网页！<a href="http://www.brainyquote.com/quotes/authors/c/confucius.html"><cite>孔子</cite></a>曰：</p>\n\n<blockquote cite="https://zh.wikipedia.org/zh-hans/孔子">\n<p>譬如为山，未成一篑，止，吾止也。譬如平地，虽覆一篑，进，吾往也。</p>\n</blockquote>\n\n<p>要保持乐观，<q cite="http://example.com/affirmationsforpositivethinking">不要说泄气的话</q>。（源自 <a href="http://example.com/affirmationsforpositivethinking"><cite>Affirmations for Positive Thinking</cite></a>。）</p>`;
 let solutionEntry = htmlSolution;
+
 reset.addEventListener("click", () => {
   textarea.value = code;
   userEntry = textarea.value;
@@ -414,8 +205,7 @@ solution.addEventListener("click", () => {
 textarea.addEventListener("input", updateCode);
 window.addEventListener("load", updateCode);
 
-// stop tab key tabbing out of textarea and
-// make it write a tab at the caret position instead
+// 停止使用 Tab 键跳出文本区域，而是让其在光标位置插入一个制表符
 
 textarea.onkeydown = (e) => {
   if (e.code === "Tab") {
@@ -445,11 +235,10 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 每次用户更新文本区域代码，更新存储的 userCode
 textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
+  // 我们只想在用户代码显示时保存状态，而不是答案，以免答案覆盖用户代码。
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -459,24 +248,20 @@ textarea.onkeyup = () => {
 };
 ```
 
-{{ EmbedLiveSample('主动学习：是谁说的？', 700, 450) }}
+{{EmbedLiveSample('主动学习：是谁说的？', 700, 450)}}
 
 ## 缩略语
 
 另一个你在 Web 上看到的相当常见的元素是 {{htmlelement("abbr")}}——它常被用来包裹一个缩略语或缩写，并且提供缩写的解释。当包括这两种情况时，在第一次使用时提供纯文本的完整扩展，同时用 `<abbr>` 来标记缩写。这为用户代理提供了如何公布/显示内容的提示，同时告知所有用户该缩写的含义。
 
-如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 [`title`](/zh-CN/docs/Web/HTML/Global_attributes#title) 属性的值：
+如果为缩写提供扩展信息的意义不大，而且该缩写或首字母缩写是一个相当简短的术语，则应提供该术语的完整扩展，作为 [`title`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/title) 属性的值：
 
 ### 缩略语示例
 
 让我们一起看一个示例。
 
 ```html
-<p>
-  我们使用
-  <abbr title="超文本标记语言（Hyper text Markup Language）">HTML</abbr>
-  来组织网页文档。
-</p>
+<p>我们使用 <abbr>HTML</abbr> 超文本标记语言来组织网页文档。</p>
 
 <p>
   第 33 届<abbr title="夏季奥林匹克运动会">奥运会</abbr>已于 2024 年 7
@@ -489,7 +274,7 @@ textarea.onkeyup = () => {
 {{EmbedLiveSample('缩略语示例', '100%', '150')}}
 
 > [!NOTE]
-> 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML spec 中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
+> 在之前版本的 html 中还包含对另一个元素 {{htmlelement("acronym")}} 的支持，但是它已经从 HTML 标准中移除，因为可以只使用 `<abbr>` 元素代表缩略语。不应再使用 `<acronym>`。
 
 ### 主动学习：标记一个缩略语
 
@@ -500,9 +285,7 @@ textarea.onkeyup = () => {
 <div class="output" style="min-height: 50px;"></div>
 
 <h2>可编辑代码</h2>
-<p class="a11y-label">
-  按 ESC 退出编辑区域，按 Tab 可插入制表符 <code>'\t'</code>
-</p>
+<p class="a11y-label">按 ESC 退出编辑区域（按 Tab 可插入制表符）</p>
 <textarea id="code" class="input" style="min-height: 50px; width: 95%">
 <p>美国国家航空航天局 NASA 做了一些动人心弦的事情。</p>
 </textarea>
@@ -604,11 +387,10 @@ function insertAtCaret(text) {
   textarea.scrollTop = scrollPos;
 }
 
-// Update the saved userCode every time the user updates the text area code
+// 每次用户更新文本区域代码，更新存储的 userCode
 textarea.onkeyup = () => {
-  // We only want to save the state when the user code is being shown,
-  // not the solution, so that solution is not saved over the user code
-  if (solution.value === "Show solution") {
+  // 我们只想在用户代码显示时保存状态，而不是答案，以免答案覆盖用户代码。
+  if (solution.value === "显示答案") {
     userEntry = textarea.value;
   } else {
     solutionEntry = textarea.value;
@@ -618,7 +400,7 @@ textarea.onkeyup = () => {
 };
 ```
 
-{{ EmbedLiveSample('主动学习：标记一个缩略语', 700, 300) }}
+{{EmbedLiveSample('主动学习：标记一个缩略语', 700, 300)}}
 
 ## 标记联系方式
 
@@ -658,9 +440,10 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 
 ## 上标和下标
 
-当你使用日期、化学方程式、和数学方程式时会偶尔使用上标和下标，以确保它们的正确含义。{{htmlelement("sup")}} 和 {{htmlelement("sub")}} 元素可以解决这样的问题。例如：
+当你使用日期、化学方程式和数学方程式时会偶尔使用上标和下标，以确保它们的正确含义。{{htmlelement("sup")}} 和 {{htmlelement("sub")}} 元素可以解决这样的问题。例如：
 
 ```html
+<p>我的生日是在 2021 年 5 月 25 日（译者注：英文原文为 25<sup>th</sup>）</p>
 <p>
   咖啡因的化学方程式是 C<sub>8</sub>H<sub>10</sub>N<sub>4</sub>O<sub>2</sub>。
 </p>
@@ -669,19 +452,19 @@ HTML 有个用于标记联系方式的元素——{{htmlelement("address")}}。�
 
 这些代码输出的结果是：
 
-{{ EmbedLiveSample('上标和下标', '100%', 160) }}
+{{EmbedLiveSample('上标和下标', '100%', 160)}}
 
 ## 展示计算机代码
 
 有大量的 HTML 元素可以来标记计算机代码：
 
 - {{htmlelement("code")}}：用于标记计算机通用代码。
-- {{htmlelement("pre")}}：用于保留空白字符（通常用于代码块）——如果文本中使用了缩进或多余的空白，浏览器将忽略它，你将不会在呈现的页面上看到它。但是，如果你将文本包含在 `<pre></pre>` 标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。
+- {{htmlelement("pre")}}：用于保留空白字符（通常用于代码块）——如果文本中使用了缩进或多余的空白，浏览器将忽略它，你将不会在渲染的页面上看到它。但是，如果你将文本包含在 `<pre></pre>` 标签中，那么空白将会以与你在文本编辑器中看到的相同的方式渲染出来。
 - {{htmlelement("var")}}：用于标记具体变量名。
 - {{htmlelement("kbd")}}：用于标记输入电脑的键盘（或其他类型）输入。
 - {{htmlelement("samp")}}：用于标记计算机程序的输出。
 
-让我们看看一些例子。你应该尝试运行一下（尝试运行一下 [other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html) 样例文件的拷贝）：
+让我们看看这些元素的示例以及它们如何被用来表示计算机代码。如果你想要完整文件，可以看一下 [other-semantics.html](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/advanced-text-formatting/other-semantics.html) 这个示例文件。你可以下载文件并在浏览器打开查看，以下是代码的一个片段：
 
 ```html
 <pre><code>const para = document.querySelector('p');
@@ -692,7 +475,7 @@ para.onclick = function() {
 
 <p>
   请不要使用 <code>&lt;font&gt;</code> 、
-  <code>&lt;center&gt;</code> 等表象元素。
+  <code>&lt;center&gt;</code> 等表现元素。
 </p>
 
 <p>在上述的 JavaScript 示例中，<var>para</var> 表示一个段落元素。</p>
@@ -706,7 +489,7 @@ para.onclick = function() {
 
 上面的代码显示效果如下：
 
-{{ EmbedLiveSample('展示计算机代码','100%',300) }}
+{{EmbedLiveSample('展示计算机代码','100%',350)}}
 
 ## 标记时间和日期
 
@@ -726,8 +509,8 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 - 20/06/16
 - 06/20/16
 - The 20th of next month
-- 20e Janvier 2016
-- 2016 年 1 月 20 日
+- <span lang="fr">20e Janvier 2016</span>
+- <span lang="ja">2016 年 1 月 20 日</span>
 - 等等
 
 <!-- markdownlint-enable MD033 -->
@@ -763,6 +546,6 @@ HTML 还支持将时间和日期标记为可供机器识别的格式的 {{htmlel
 
 ## 总结
 
-到这里你就完成了 HTML 语义文本元素的学习。但要记住，你在本课程中学到的并不是 HTML 文本元素的详细列表——我们想要尽量覆盖主要的、通用的、常见的，或者至少是有趣的部分。如果你想找到更多的 HTML 元素，可以看一看我们的 [HTML 元素参考](/zh-CN/docs/Web/HTML/Element)（从[内联文本语义](/zh-CN/docs/Web/HTML/Element#内联文本语义)部分开始会是一个好的选择）。在下一篇文章中我们将会学习用来[组织 HTML 文档不同部分的 HTML 元素](/zh-CN/docs/Learn_web_development/Core/Structuring_content/Structuring_documents)。
+到这里标志着对不太常见的 HTML 文本语义的学习告一段落。你在本课程中所看到的内容并不是 HTML 文本元素的完整列表——我们只是想涵盖一些基本要素，以及一些你在实际中会较常见到的元素。接下来，我们将学习链接，这是网络最重要的功能之一。
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Structuring_documents", "Learn_web_development/Core/Structuring_content/Creating_links", "Learn_web_development/Core/Structuring_content")}}

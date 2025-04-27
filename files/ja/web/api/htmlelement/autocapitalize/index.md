@@ -11,11 +11,11 @@ l10n:
 **`autocapitalize`** は {{domxref("HTMLElement")}} インターフェイスのプロパティで、ユーザー入力に対する要素の大文字化動作を表します。すべての HTML 要素で利用可能ですが、すべての要素に影響するわけでははなく、次の要素でに影響します。
 
 - {{htmlelement("input")}} および {{htmlelement("textarea")}} 要素。
-- [`contenteditable`](/ja/docs/Web/HTML/Global_attributes/contenteditable) が設定された任意の要素。
+- [`contenteditable`](/ja/docs/Web/HTML/Reference/Global_attributes/contenteditable) が設定された任意の要素。
 
 `autocapitalize` は物理的なキーボードで入力するときの動作には影響しません。モバイル端末の仮想キーボードや音声入力など、他の入力メカニズムの動作に影響します。例えば、各文の最初の文字を自動的に大文字にすることで、データ入力を素早く簡単にすることができます。
 
-これは、HTML の [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes/autocapitalize) グローバル属性の値を反映します。
+これは、HTML の [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) グローバル属性の値を反映します。
 
 ## 値
 
@@ -72,4 +72,4 @@ controller.addEventListener("input", (e) => {
 
 ## 関連情報
 
-- HTML の [`autocapitalize`](/ja/docs/Web/HTML/Global_attributes#autocapitalize) グローバル属性
+- HTML の [`autocapitalize`](/ja/docs/Web/HTML/Reference/Global_attributes/autocapitalize) グローバル属性

@@ -9,9 +9,9 @@ La Web abierta presenta increíbles oportunidades para los desarrolladores. Para
 
 - [Referencia para desarrolladores web](/es/docs/Web)
   - : Una lista de todas las referencias para tecnologías web, incluidas las de HTML, CSS, etc.
-- [Guía para desarrolladores web](/es/docs/Web/Guide)
+- [Guía para desarrolladores web](/es/docs/MDN/Guides)
   - : La Guía para desarrolladores web ofrece contenido práctico útil que te ayudará a utilizar las tecnologías web para hacer lo que quieres o necesitas hacer.
-- [Tutoriales para desarrolladores web](/es/docs/Web/Tutorials)
+- [Tutoriales para desarrolladores web](/es/docs/MDN/Tutorials)
   - : Una lista de tutoriales que te guiarán paso a paso a través del aprendizaje de las APIs, tecnologías o amplias áreas temáticas.
 - [Desarrollar aplicaciones web](/es/docs/Web/Progressive_web_apps)
   - : Documentación para desarrolladores de aplicaciones web; Las aplicaciones web son verdaderas aplicaciones de una sola escritura y se implementan en cualquier lugar para dispositivos móviles, de escritorio y Firefox OS.

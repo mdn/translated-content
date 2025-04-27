@@ -65,9 +65,9 @@ l10n:
 
 機能は次のとおりです。
 
-- [`src`](/ja/docs/Web/HTML/Element/video#src)
+- [`src`](/ja/docs/Web/HTML/Reference/Elements/video#src)
   - : {{htmlelement("img")}} 要素と同じように、`src` （ソース）属性には、埋め込みたい動画へのパスが含まれています。これは、まったく同じように動作します。
-- [`controls`](/ja/docs/Web/HTML/Element/video#controls)
+- [`controls`](/ja/docs/Web/HTML/Reference/Elements/video#controls)
   - : ユーザーは、動画や音声の再生を制御できる必要があります（特に[てんかん](https://ja.wikipedia.org/wiki/%E3%81%A6%E3%82%93%E3%81%8B%E3%82%93#%E7%96%AB%E5%AD%A6)を患っている人にとっては重要です）。`controls` 属性を使用してブラウザー独自のコントロールインターフェイスを組み込むか、適切な [JavaScript API](/ja/docs/Web/API/HTMLMediaElement) を使用してインターフェイスを構築する必要があります。少なくとも、インターフェイスにはメディアの開始と停止、および音量の調整が含まれている必要があります。
 - `<video>` タグ内の段落
   - : これは**代替コンテンツ**と呼ばれ、ページにアクセスしているブラウザーが `<video>` 要素に対応していない場合に表示され、古いブラウザーのための代替手段を提供することができるようになります。この場合、動画ファイルへの直接リンクを提供していますので、ユーザーは使用するブラウザーに関係なく、少なくとも何らかの方法で動画にアクセスすることができます。
@@ -84,13 +84,13 @@ l10n:
 
 #### メディアファイルの内容
 
-まず、用語をすばやく見てみましょう。MP3、MP4、WebM などの形式は **[コンテナー形式](/ja/docs/Web/Media/Formats/Containers)** と呼ばれています。それらは、音声トラック、映像トラック（動画の場合）、および提示されるメディアを記述するメタデータなど、歌または動画全体を構成する様々な部分を含みます。
+まず、用語をすばやく見てみましょう。MP3、MP4、WebM などの形式は **[コンテナー形式](/ja/docs/Web/Media/Guides/Formats/Containers)** と呼ばれています。それらは、音声トラック、映像トラック（動画の場合）、および提示されるメディアを記述するメタデータなど、歌または動画全体を構成する様々な部分を含みます。
 
 ある WebM ファイルに、メイン映像トラックと別アングルのトラック、英語とスペイン語の音声、英語のコメンタリートラックの音声がある映画が含まれている場合、下図のような概念で考えることができます。また、長編映画の字幕、映画のスペイン語字幕、コメンタリーの英語字幕を含むテキストトラックも記載されています。
 
 ![メディアファイルの中身をトラック単位で概念化した図。](containersandtracks.png)
 
-コンテナー内の音声トラックと映像トラックは、そのメディアをエンコードするために使用されるコーデックに適した形式のデータを保持します。音声トラックと映像トラックでは、異なる形式が使用されます。それぞれの音声トラックは [音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs) を使用してエンコードされ、一方映像トラックは、 （おそらく予想通り） [映像コーデック](/ja/docs/Web/Media/Formats/Video_codecs)を使用してエンコードされます。前にお話ししたように、さまざまなブラウザーでは、多様な動画と音声の形式、および多様なコンテナー形式（MP3、MP4、WebM など、さまざまな種類の動画と音声を順番に入力することができる形式）に対応しています。
+コンテナー内の音声トラックと映像トラックは、そのメディアをエンコードするために使用されるコーデックに適した形式のデータを保持します。音声トラックと映像トラックでは、異なる形式が使用されます。それぞれの音声トラックは [音声コーデック](/ja/docs/Web/Media/Formats/Audio_codecs) を使用してエンコードされ、一方映像トラックは、 （おそらく予想通り） [映像コーデック](/ja/docs/Web/Media/Guides/Formats/Video_codecs)を使用してエンコードされます。前にお話ししたように、さまざまなブラウザーでは、多様な動画と音声の形式、および多様なコンテナー形式（MP3、MP4、WebM など、さまざまな種類の動画と音声を順番に入力することができる形式）に対応しています。
 
 例えば、
 
@@ -115,7 +115,7 @@ l10n:
 
 ブラウザーの対応するコンテナーファイル形式がそれぞれ異なるだけでなく、コーデックの選択もそれぞれ異なるため、事態は少し複雑になります。ウェブサイトや アプリがユーザーのブラウザーで動作する可能性を最大限に高めるには、使用する それぞれのメディアファイルを複数の形式で提供する必要があるかもしれません。自分のサイトとユーザーのブラウザーで共通の形式がない場合、メディアは再生されません。
 
-アプリのメディアを、リーチしたいブラウザー、プラットフォーム、機器のあらゆる組み合わせで表示できるようにすることは複雑なため、コーデックとコンテナーの最適な組み合わせを選ぶことは、複雑な作業になる可能性があります。ニーズに合ったコンテナーファイル形式の選択については、[正しいコンテナーの選択](/ja/docs/Web/Media/Formats/Containers#正しいコンテナーの選択)を参照してください。同様に、コンテンツや対象となる視聴者に合わせて最初に使用するメディアコーデックの選択については、[映像コーデックの選択](/ja/docs/Web/Media/Formats/Video_codecs#choosing_a_video_codec)や[音声コーデックの選択](/ja/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec)が参考になります。
+アプリのメディアを、リーチしたいブラウザー、プラットフォーム、機器のあらゆる組み合わせで表示できるようにすることは複雑なため、コーデックとコンテナーの最適な組み合わせを選ぶことは、複雑な作業になる可能性があります。ニーズに合ったコンテナーファイル形式の選択については、[正しいコンテナーの選択](/ja/docs/Web/Media/Guides/Formats/Containers#正しいコンテナーの選択)を参照してください。同様に、コンテンツや対象となる視聴者に合わせて最初に使用するメディアコーデックの選択については、[映像コーデックの選択](/ja/docs/Web/Media/Guides/Formats/Video_codecs#choosing_a_video_codec)や[音声コーデックの選択](/ja/docs/Web/Media/Formats/Audio_codecs#choosing_an_audio_codec)が参考になります。
 
 もう一つ覚えておいていただきたいのは、モバイル用のブラウザーは、デスクトップ版と同じ形式をすべて対応しているわけではない場合があるのと同様、デスクトップ版で対応していない形式にも追加で対応している場合があるということです。さらに、デスクトップとモバイルのブラウザーは、メディア再生の処理をオフロードするように設計されている場合があります（すべてのメディアに対して、または内部で処理できない特定の型に対してのみ、オフロードする）。つまり、メディアへの対応は、ユーザーがインストールしているソフトウェアに部分的に依存しているのです。
 
@@ -136,9 +136,9 @@ l10n:
 
 ここでは実際の {{HTMLElement("video")}} タグから `src` 属性を取り出し、独自のソースを指す別々の {{htmlelement("source")}} 要素を追加しました。この場合、ブラウザーは {{HTMLElement("source")}} 要素を走査し、対応するコーデックがある最初の要素を再生します。 WebM や MP4 のソースを含めれば、最近のほとんどのプラットフォームやブラウザーで動画を再生できるはずです。
 
-それぞれの `<source>` 要素には [`type`](/ja/docs/Web/HTML/Element/source#type) 属性もあります。これはオプションですが、記載しておくことをお勧めします。 `type` 属性には `<source>` で指定したファイルの {{glossary("MIME type","MIME タイプ")}}が含まれており、ブラウザーは `type` を使用して、理解できない動画をすぐにスキップすることができます。もし `type` が記載されていなければ、ブラウザーは各ファイルを読み込んで、動作するものが見つかるまで再生しようとしますが、これは明らかに時間がかかり、リソースを不必要に使用することになります。
+それぞれの `<source>` 要素には [`type`](/ja/docs/Web/HTML/Reference/Elements/source#type) 属性もあります。これはオプションですが、記載しておくことをお勧めします。 `type` 属性には `<source>` で指定したファイルの {{glossary("MIME type","MIME タイプ")}}が含まれており、ブラウザーは `type` を使用して、理解できない動画をすぐにスキップすることができます。もし `type` が記載されていなければ、ブラウザーは各ファイルを読み込んで、動作するものが見つかるまで再生しようとしますが、これは明らかに時間がかかり、リソースを不必要に使用することになります。
 
-[対応しているメディア形式のガイド](/ja/docs/Web/Media/Formats)を参照すると、必要とする最適なコンテナーやコーデックの選択に役に立ち、それぞれを指定するための MIME タイプを調べることができます。
+[対応しているメディア形式のガイド](/ja/docs/Web/Media/Guides/Formats)を参照すると、必要とする最適なコンテナーやコーデックの選択に役に立ち、それぞれを指定するための MIME タイプを調べることができます。
 
 ### その他の \<video> 機能
 
@@ -171,17 +171,17 @@ HTML 動画に含めることができる他の多くの機能があります。
 
 新しい機能は次のとおりです。
 
-- [`width`](/ja/docs/Web/HTML/Element/video#width) と [`height`](/ja/docs/Web/HTML/Element/video#height)
+- [`width`](/ja/docs/Web/HTML/Reference/Elements/video#width) と [`height`](/ja/docs/Web/HTML/Reference/Elements/video#height)
   - : これらの属性または {{Glossary("CSS")}} を使用して動画サイズを制御することができます。どちらの場合も、動画は元の縦横比 (**アスペクト比**) を維持します。アスペクト比が設定したサイズによって維持されない場合、動画は水平方向にスペースを埋めるように拡大し、デフォルトでは満たされていないスペースには無地の背景色が与えられます。
-- [`autoplay`](/ja/docs/Web/HTML/Element/video#autoplay)
+- [`autoplay`](/ja/docs/Web/HTML/Reference/Elements/video#autoplay)
   - : この属性は、ページの残りの部分が読み込まれている間に音声または動画の再生をすぐに開始します。ユーザーに実際に迷惑をかけることがあるので、サイトで動画 (または音声) を自動再生することはお勧めしません。
-- [`loop`](/ja/docs/Web/HTML/Element/video#loop)
+- [`loop`](/ja/docs/Web/HTML/Reference/Elements/video#loop)
   - : この属性は、動画 (または音声) が終了するたびに再生を開始させます。これは迷惑になることもありますので、本当に必要な場合にのみ使用してください。
-- [`muted`](/ja/docs/Web/HTML/Element/video#muted)
+- [`muted`](/ja/docs/Web/HTML/Reference/Elements/video#muted)
   - : この属性を使用すると、デフォルトで音声をオフにしてメディアを再生します。
-- [`poster`](/ja/docs/Web/HTML/Element/video#poster)
+- [`poster`](/ja/docs/Web/HTML/Reference/Elements/video#poster)
   - : この属性は、動画の再生前に表示される画像の URL を値としてとります。これは、スプラッシュ画面または広告画面に使用するためのものです。
-- [`preload`](/ja/docs/Web/HTML/Element/video#preload)
+- [`preload`](/ja/docs/Web/HTML/Reference/Elements/video#preload)
 
   - : この属性は、大きなファイルをバッファリングする要素で使用されます。3 つの値のいずれかを取ることができます。
 
@@ -264,7 +264,7 @@ WEBVTT
 これを HTML メディアの再生と一緒に表示するには、以下を行う必要があります。
 
 1. 適切な場所に `.vtt` ファイルとして保存します。
-2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Element/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Element/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/ja/docs/Web/HTML/Element/track#label) を追加して、読み手が検索している言語を識別しやすくします。
+2. {{htmlelement("track")}} 要素で `.vtt` ファイルにリンクします。`<track>` は `<audio>` または `<video>` 内に配置する必要がありますが、すべての `<source>` 要素の後に配置する必要があります。[`kind`](/ja/docs/Web/HTML/Reference/Elements/track#kind) 属性を使用して、キューが `subtitles`、`captions`、または `descriptions` のいずれであるかを指定します。さらに、[`srclang`](/ja/docs/Web/HTML/Reference/Elements/track#srclang) 属性を使用して、字幕が書かれた言語をブラウザーに伝えます。最後に、[`label`](/ja/docs/Web/HTML/Reference/Elements/track#label) を追加して、読み手が検索している言語を識別しやすくします。
 
 こちらが例です。
 
@@ -280,7 +280,7 @@ WEBVTT
 
 ![再生、停止、音量、キャプションのオン/オフなどのスタンドコントロールを備えたビデオプレーヤー。 動画の再生には、槍のような武器を持つ男のシーンが表示され、キャプションには "Esta hoja tiene pasado oscuro." と表示されます。](video-player-with-captions.png)
 
-詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Media/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](https://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
+詳しくは、[HTML 動画にキャプションと字幕を追加する](/ja/docs/Web/Media/Guides/Audio_and_video_delivery/Adding_captions_and_subtitles_to_HTML5_video)をご覧ください。Github には Ian Devlin によって書かれた[この記事の例](https://iandevlin.github.io/mdn/video-player-with-captions/)があります ([ソースコード](https://github.com/iandevlin/iandevlin.github.io/tree/master/mdn/video-player-with-captions)も参照してください)。この例では、JavaScript を使用してさまざまな字幕を選択できるようにしています。字幕をオンにするには、\[CC] ボタンを押して、英語、ドイツ語、スペイン語のオプションを選択する必要があります。
 
 > [!NOTE]
 > テキストトラックは検索エンジンが特にテキスト上で成功するため、 {{glossary("SEO")}} にも役立ちます。テキストトラックを使用すると、検索エンジンは動画の途中地点に直接リンクすることもできます。
@@ -296,7 +296,7 @@ WEBVTT
 1. 音声と動画のファイルをコンピューターの新しいディレクトリーに保存します。
 2. 同じディレクトリーに `index.html` と呼ばれる新しい HTML ファイルを作成します。
 3. ページに {{HTMLElement("audio")}} 要素と {{HTMLElement("video")}} 要素を追加します。それらにデフォルトのブラウザーコントロールを表示させます。
-4. 両方の要素に {{HTMLElement("source")}} 要素を付けて、ブラウザーが最もよくサポートするフォーマットを見つけて読み込むようにします。これらは [`type`](/ja/docs/Web/HTML/Element/source#type) 属性を含むべきです。
+4. 両方の要素に {{HTMLElement("source")}} 要素を付けて、ブラウザーが最もよくサポートするフォーマットを見つけて読み込むようにします。これらは [`type`](/ja/docs/Web/HTML/Reference/Elements/source#type) 属性を含むべきです。
 5. `<video>` 要素に、動画が再生される前に表示されるポスターを指定します。自分のポスターのグラフィックを作成して楽しんでください。
 
 さらに、テキストトラックを研究し、動画にキャプションを追加する方法をうまくいくようにすることもできます。

@@ -1,12 +1,11 @@
 ---
 title: 视频和音频 API
 slug: Learn_web_development/Extensions/Client-side_APIs/Video_and_audio_APIs
-original_slug: Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs
 l10n:
   sourceCommit: d6a792e3adce2c8b29a73a3b407e786091363980
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Client-side_APIs/Introduction", "Learn_web_development/Extensions/Client-side_APIs/Drawing_graphics", "Learn_web_development/Extensions/Client-side_APIs")}}
 
 HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video")}}、{{htmlelement("audio")}}。这些元素通过自带的 API 来控制视频或音频的播放，定位进度等。本文将向你展示如何执行一些常见的任务，如创建自定义播放控件。
 
@@ -52,7 +51,7 @@ HTML 提供了用于在文档中嵌入富媒体的元素：{{htmlelement("video"
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats.html", '100%', 380)}}
 
-你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的 [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls) 属性：它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
+你可以点击上面的文章链接来查看相关 HTML 元素的所有特性；但在这篇文章中，主要目的是学习我们最感兴趣的 [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/video#controls) 属性：它会启用默认的播放设置。如果没有指定该属性，则播放器中不会显示相关控件：
 
 {{EmbedGHLiveSample("learning-area/html/multimedia-and-embedding/video-and-audio-content/multiple-video-formats-no-controls.html", '100%', 380)}}
 
@@ -166,7 +165,7 @@ button:before {
 接下来，我们使用这些内容来显示每个按钮上的图标：
 
 - 我们使用 {{cssxref("::before")}} 选择器在每个 {{htmlelement("button")}} 元素之前显示内容。
-- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes) 的内容是一个大写的“P”。
+- 我们使用 {{cssxref("content")}} 属性将各情况下要显示的内容设置为 [`data-icon`](/zh-CN/docs/Web/HTML/How_to/Use_data_attributes) 属性的内容。例如在播放按钮的情况下，[`data-icon`](/zh-CN/docs/Web/HTML/How_to/Use_data_attributes) 的内容是一个大写的“P”。
 - 我们使用 {{cssxref("font-family")}} 将自定义 Web 字体应用于我们的按钮上。在该字体中“P”对应的是“播放”图标，因此播放按钮上显示“播放”图标。
 
 图标字体非常酷有很多原因：可以减少 HTTP 请求，因为你不再需要将这些图标作为图像文件一一下载；具有出色的可扩展性；可以使用文本属性来设置它们的样式，例如 {{cssxref("color")}} 和 {{cssxref("text-shadow")}}。

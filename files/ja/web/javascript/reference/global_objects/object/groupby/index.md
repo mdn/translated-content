@@ -14,7 +14,25 @@ l10n:
 
 このメソッドは、グループ名が文字列で表現できる場合に使用します。任意の値をキーとして要素をグループ化する必要がある場合は、代わりに {{jsxref("Map.groupBy()")}} を使用してください。
 
-<!-- {{EmbedInteractiveExample("pages/js/object-groupby.html")}} -->
+{{InteractiveExample("JavaScript Demo: Object.groupBy()", "taller")}}
+
+```js interactive-example
+const inventory = [
+  { name: "asparagus", type: "vegetables", quantity: 9 },
+  { name: "bananas", type: "fruit", quantity: 5 },
+  { name: "goat", type: "meat", quantity: 23 },
+  { name: "cherries", type: "fruit", quantity: 12 },
+  { name: "fish", type: "meat", quantity: 22 },
+];
+
+const restock = { restock: true };
+const sufficient = { restock: false };
+const result = Object.groupBy(inventory, ({ quantity }) =>
+  quantity < 6 ? "restock" : "sufficient",
+);
+console.log(result.restock);
+// [{ name: "bananas", type: "fruit", quantity: 5 }]
+```
 
 ## 構文
 
@@ -81,7 +99,7 @@ const result = Object.groupBy(inventory, ({ type }) => type);
 */
 ```
 
-このアロー関数は、呼び出されるたびに配列のそれぞれの要素の 型 を返すだけです。 関数の引数 { type } は、[関数の引数に対するオブジェクトの分割構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。 これは、引数として渡されたオブジェクトの `type` プロパティを展開し、関数本体の `type` という名前の変数に代入します。 これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
+このアロー関数は、呼び出されるたびに配列のそれぞれの要素の 型 を返すだけです。 関数の引数 { type } は、[関数の引数に対するオブジェクトの分割構文](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring#関数の引数として渡されたオブジェクトからのプロパティの展開)の基本例であることに注意してください。 これは、引数として渡されたオブジェクトの `type` プロパティを展開し、関数本体の `type` という名前の変数に代入します。 これは、関数内の要素に関連する値にアクセスするためのとても簡潔な方法です。
 
 また、要素の 1 つまたは複数のプロパティの値から推測されるグループを作成することもできます。 以下は、`quantity` フィールドの値に基づいて、項目を `ok` または `restock` グループに入れる、とても似たような例です。
 

@@ -28,7 +28,7 @@ On peut toujours mettre en forme les liens visités mais quelques limites s'appl
 - {{cssxref("outline-color")}},
 - Les composantes de couleur liées aux attributs SVG {{SVGAttr("fill")}} et {{SVGAttr("stroke")}}.
 
-De plus, même pour ces propriétés, il n'est pas possible de modifier la transparence entre les liens qui ont été visités et les autres (comme on pourrait le faire par ailleurs avec [`rgba()`](<https://developer.mozilla.org/fr/docs/Web/CSS/Type_color#rgb()_et_rgba()>) ou [`hsla()`](</fr/docs/Web/CSS/Type_color#hsl()_et_hsla()>) ou avec le mot-clé [`transparent`](/fr/docs/Web/CSS/color_value#le_mot-clé_transparent)).
+De plus, même pour ces propriétés, il n'est pas possible de modifier la transparence entre les liens qui ont été visités et les autres (comme on pourrait le faire par ailleurs avec [`rgba()`](</fr/docs/Web/CSS/color_value#rgb()_et_rgba()>) ou [`hsla()`](</fr/docs/Web/CSS/color_value#hsl()_et_hsla()>) ou avec le mot-clé [`transparent`](/fr/docs/Web/CSS/color_value#le_mot-clé_transparent)).
 
 Voici un exemple de mise en forme prenant en compte ces restrictions :
 

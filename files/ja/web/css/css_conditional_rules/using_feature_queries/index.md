@@ -5,13 +5,13 @@ slug: Web/CSS/CSS_conditional_rules/Using_feature_queries
 
 {{CSSRef}}
 
-**機能クエリー**は、 CSS の [@supports](/ja/docs/Web/CSS/@supports) アットルールを使って作成され、ウェブ開発者がある機能に対応しているかどうかを検査し、その検査結果に基づいて実行する CSS を提供する方法として有益です。このガイドでは、機能クエリを使用してプログレッシブエンハンスメントを実装する方法を学びます。
+**機能クエリー**は、 CSS の [@supports](/ja/docs/Web/CSS/@supports) アットルールを使って作成され、ウェブ開発者がある機能に対応しているかどうかを検査し、その検査結果に基づいて実行する CSS を提供する方法として有益です。このガイドでは、機能クエリーを使用してプログレッシブエンハンスメントを実装する方法を学びます。
 
 ## 構文
 
 CSS の機能クエリーは [CSS 条件付きルールモジュール](https://drafts.csswg.org/css-conditional-3/)の一部で、ここにはメディアクエリーの [@media](/ja/docs/Web/CSS/@media) ルールも含まれてます。機能クエリーを使用すると、メディアクエリーと同様の動作をすることが分かると思います。違いは、メディアクエリーではウェブページが動作している環境について何かを検査するのに対し、機能クエリーでは CSS 機能に対するブラウザーの対応状況を検査する点です。
 
-機能クエリは `@supports` ルールと、それに続く検査したいプロパティ名と値から構成されます。 `display` のようなプロパティ名だけでは検査できません。ルールにはプロパティ名と値が必要です。
+機能クエリーは `@supports` ルールと、それに続く検査したいプロパティ名と値から構成されます。 `display` のようなプロパティ名だけでは検査できません。ルールにはプロパティ名と値が必要です。
 
 ```css
 @supports (property: value) {
@@ -83,7 +83,7 @@ CSS の機能クエリーは [CSS 条件付きルールモジュール](https://
 
 {{EmbedGHLiveSample("css-examples/feature-queries/step1.html", '100%', 900)}}
 
-ブラウザーは CSS のプロパティや値を理解できない場合、それを無視します。そこで、 CSS グリッドを使ってレイアウトを強化することから始めるとよいでしょう。グリッドに対応していないブラウザーは、 `display` プロパティの `grid` の値を無視します。浮動アイテムがグリッドアイテムになると、浮動は取り除かれます。詳細は、[古いブラウザーの対応](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)を参照してください。そのため、グリッド版は浮動のものを上書きすればよいのです。
+ブラウザーは CSS のプロパティや値を理解できない場合、それを無視します。そこで、 CSS グリッドを使ってレイアウトを強化することから始めるとよいでしょう。グリッドに対応していないブラウザーは、 `display` プロパティの `grid` の値を無視します。浮動アイテムがグリッドアイテムになると、浮動は取り除かれます。詳細は、[古いブラウザーの対応](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)を参照してください。そのため、グリッド版は浮動のものを上書きすればよいのです。
 
 しかし、浮動されたアイテムを 3 列で表示するために使用した `width` プロパティが原因で問題が発生しました。これは、現在、浮動の場合のようにコンテナーの幅ではなく、カラムトラックの幅としてグリッドに解釈されます。
 
@@ -108,6 +108,6 @@ CSS の機能クエリーは [CSS 条件付きルールモジュール](https://
 ### 関連情報
 
 - [@supports](/ja/docs/Web/CSS/@supports) ルール
-- レイアウトの学習: [古いブラウザーの対応](/ja/docs/Learn/CSS/CSS_layout/Supporting_Older_Browsers)
-- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout/Grid_layout_and_progressive_enhancement)
+- レイアウトの学習: [古いブラウザーの対応](/ja/docs/Learn_web_development/Core/CSS_layout/Supporting_Older_Browsers)
+- [CSS グリッドレイアウトとプログレッシブエンハンスメント](/ja/docs/Web/CSS/CSS_grid_layout)
 - [CSS での機能クエリーの使用](https://hacks.mozilla.org/2016/08/using-feature-queries-in-css/)

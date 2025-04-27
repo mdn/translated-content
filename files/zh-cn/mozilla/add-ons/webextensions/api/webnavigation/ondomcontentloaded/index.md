@@ -20,7 +20,7 @@ browser.webNavigation.onDOMContentLoaded.removeListener(listener)
 browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 ```
 
-事件有三个方法：
+事件包含三个函数：
 
 - `addListener(callback)`
   - : 为此事件添加监听方法。
@@ -54,7 +54,7 @@ browser.webNavigation.onDOMContentLoaded.hasListener(listener)
 - `processId`
   - : `integer`。渲染此选项卡的进程的 ID。
 - `frameId`
-  - : `integer`。发生导航的框架。0 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Element/iframe) 中。正值表示导航发生在嵌套的 iframe 中。对于给定的标签页和进程，框架 ID 是唯一的。
+  - : `integer`。发生导航的框架。0 表示导航发生在标签页的顶级浏览上下文中，而不是嵌套的 [iframe](/zh-CN/docs/Web/HTML/Reference/Elements/iframe) 中。正值表示导航发生在嵌套的 iframe 中。对于给定的标签页和进程，框架 ID 是唯一的。
 - `timeStamp`
   - : `number`。启动 `DOMContentLoaded` 的时间，单位为[自纪元起的毫秒数](https://zh.wikipedia.org/wiki/UNIX时间)。
 
@@ -84,7 +84,7 @@ browser.webNavigation.onDOMContentLoaded.addListener(
 {{WebExtExamples}}
 
 > [!NOTE]
-> 本 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.google.cn/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API。本文档源自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
+> 此 API 基于 Chromium 的 [`chrome.webNavigation`](https://developer.chrome.google.cn/docs/extensions/reference/api/webNavigation#event-onBeforeNavigate) API。该文档衍生自 Chromium 代码中的 [`web_navigation.json`](https://chromium.googlesource.com/chromium/src/+/master/chrome/common/extensions/api/web_navigation.json)。
 
 <!--
 // Copyright 2015 The Chromium Authors. All rights reserved.

@@ -1,7 +1,6 @@
 ---
 title: OpenSearch 描述格式
 slug: Web/XML/Guides/OpenSearch
-original_slug: Web/OpenSearch
 l10n:
   sourceCommit: 5309f49a300166809b098f1b7604d563f3332af2
 ---
@@ -44,7 +43,7 @@ OpenSearch 描述文件能[自动发现搜索插件](#自动发现搜索插件)�
 
   - : 搜索引擎图标的 URL。在可能的情况下，包含一个 16x16 的 `image/x-icon` 类型的图标（例如 `/favicon.ico`），以及一个 64x64 的 `image/jpeg` 或 `image/png` 类型的图标。
 
-    URL 也可以使用 [`data:` URL 方案](/zh-CN/docs/Web/URI/Schemes/data)。（你可以在 [`data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) 直接从图标文件生成 `data:` URL。）
+    URL 也可以使用 [`data:` URL 方案](/zh-CN/docs/Web/URI/Reference/Schemes/data)。（你可以在 [`data:` URL kitchen](https://software.hixie.ch/utilities/cgi/data/data) 直接从图标文件生成 `data:` URL。）
 
     ```xml
     <Image height="16" width="16" type="image/x-icon">https://example.com/favicon.ico</Image>

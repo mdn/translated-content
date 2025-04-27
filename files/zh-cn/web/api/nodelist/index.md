@@ -77,7 +77,7 @@ Array.prototype.forEach.call(list, function (checkbox) {
 
 ## 英文原版中已删除的内容
 
-> 译者注：也许它已独立成了一篇单独的技术文章。如果有找到这样的文章，请将其链接添加至本页末的“参见”处，并删除本节内容。如果没有“参见”，请添加它为二级标题（`<h2>`），`<h2>` 的 [`id`](/zh-CN/docs/Web/HTML/Global_attributes/id) 属性为“See_also”或“参见”。
+> 译者注：也许它已独立成了一篇单独的技术文章。如果有找到这样的文章，请将其链接添加至本页末的“参见”处，并删除本节内容。如果没有“参见”，请添加它为二级标题（`<h2>`），`<h2>` 的 [`id`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/id) 属性为“See_also”或“参见”。
 
 ### 为什么 NodeList 不是数组？
 

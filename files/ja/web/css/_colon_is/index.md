@@ -12,7 +12,50 @@ l10n:
 > [!NOTE]
 > 元々は `:matches()` （と `:any()`）という名前でしたが、[CSSWG issue #3258](https://github.com/w3c/csswg-drafts/issues/3258) で `:is()` に改名されました。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-is.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :is", "tabbed-shorter")}}
+
+```css interactive-example
+ol {
+  list-style-type: upper-alpha;
+  color: darkblue;
+}
+
+/* stylelint-disable-next-line selector-pseudo-class-no-unknown */
+:is(ol, ul, menu:unsupported) :is(ol, ul) {
+  color: green;
+}
+
+:is(ol, ul) :is(ol, ul) ol {
+  list-style-type: lower-greek;
+  color: chocolate;
+}
+```
+
+```html interactive-example
+<ol>
+  <li>Saturn</li>
+  <li>
+    <ul>
+      <li>Mimas</li>
+      <li>Enceladus</li>
+      <li>
+        <ol>
+          <li>Voyager</li>
+          <li>Cassini</li>
+        </ol>
+      </li>
+      <li>Tethys</li>
+    </ul>
+  </li>
+  <li>Uranus</li>
+  <li>
+    <ol>
+      <li>Titania</li>
+      <li>Oberon</li>
+    </ol>
+  </li>
+</ol>
+```
 
 擬似要素は `:is()` のセレクターリストでは無効です。
 
@@ -114,7 +157,7 @@ dir dir dir {
 
 ### section セレクターの簡略化
 
-`:is()` 擬似クラスは、 HTML の[セクションと見出し](/ja/docs/Web/HTML/Element/Heading_Elements)を扱うときに特に便利です。 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}} は互いによく入れ子になりますので、 `:is()` がないと、 1 つ 1 つを選択してスタイルを適用するのが難しくなります。
+`:is()` 擬似クラスは、 HTML の[セクションと見出し](/ja/docs/Web/HTML/Reference/Elements/Heading_Elements)を扱うときに特に便利です。 {{HTMLElement("section")}}、{{HTMLElement("article")}}、{{HTMLElement("aside")}}、{{HTMLElement("nav")}} は互いによく入れ子になりますので、 `:is()` がないと、 1 つ 1 つを選択してスタイルを適用するのが難しくなります。
 
 例えば、 `:is()` を使わずに、異なる深さの {{HTMLElement("Heading_Elements", "h1")}} 要素にスタイルを適用すると、とても複雑になります。
 
@@ -225,6 +268,6 @@ some-element::after {
 
 ## 関連情報
 
-- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/Specificity)が 0 です。
+- {{CSSxRef(":where", ":where()")}} - `:is()` と同様ですが、[詳細度](/ja/docs/Web/CSS/CSS_cascade/Specificity)が 0 です。
 - [セレクターリスト](/ja/docs/Web/CSS/Selector_list)
 - [ウェブコンポーネント](/ja/docs/Web/API/Web_components)

@@ -1,53 +1,51 @@
 ---
-title: 無障礙網頁
+title: 無障礙
 slug: Learn_web_development/Core/Accessibility
-original_slug: Learn/Accessibility
+l10n:
+  sourceCommit: 07d0f18e4b2ad43185bcc98ce99b7080c6411b2a
 ---
 
-{{LearnSidebar}}
+{{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}
 
-如果要當 web 開發者，學會 HTML、CSS、JavaScript 是很重要的。不過除此之外，你還要學得更多：你需要**負責任地**運用這些技術，才能讓所有讀者都能使用你的網頁。要達成這點，本模塊將展示一般最佳實做（在 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting) 有示範）、[跨瀏覽器測試](/zh-TW/docs/Learn_web_development/Extensions/Testing)、還有其他啟動的要點。
-
-## 概觀
-
-When someone describes a site as "accessible," they mean that any user can use all its features and content, regardless of how the user accesses the web — even and especially users with physical or mental impairments.
-
-- Sites should be accessible to keyboard, mouse, and touch screen users, and any other way users access the web, including screen readers and voice assistants like Alexa and Google Home.
-- Applications should be understandable and usable by people regardless of auditory, visual, physical, or cognitive abilities.
-- Sites should also not cause harm: web features like motion can cause migraines or epileptic seizures.
-
-**By default, HTML is accessible, if used correctly.** Web accessibility involves ensuring that content remains accessible, regardless of who and how the web is accessed.
+取用 Web 內容，如公共服務、教育、電子商務網站和娛樂是一項人權。沒有人應該因為身心障礙、種族、地理位置或其他人類特質而被排除在外。這個單元討論了你應該學習的最佳實踐和技術，以使你的網站盡可能地無障礙。
 
 ## 先決條件
 
-要理解本模塊的概念，最少理解 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics)、[JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting) 是個好主意。如果在學習相關技術時學習會更好。
+在開始學習這個單元之前，你應該要先熟悉 [HTML](/zh-TW/docs/Learn_web_development/Core/Structuring_content)、[CSS](/zh-TW/docs/Learn_web_development/Core/Styling_basics) 和 [JavaScript](/zh-TW/docs/Learn_web_development/Core/Scripting)。
 
 > [!NOTE]
-> 如果使用的設備無法讓你建立自己的文件，可以試著在 [JSBin](https://jsbin.com/) 或 [Glitch](https://glitch.com/) 這種程式撰寫網站，執行大多數範例。
+> 如果你使用的電腦/平板/其他裝置無法建立自己的檔案，你可以在線上程式編輯工具如 [JS Bin](https://jsbin.com/) 或 [Glitch](https://glitch.com/)。
 
-## 教學
+## 教學和挑戰
 
-- [何謂無障礙網頁？](/zh-TW/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
-  - : 這篇文章針對何謂無障礙網頁，起了一個好開頭。這模塊包含了要考慮哪些族群以及理由、不同族群會用什麼工具和 Web 互動、還有怎麼把無障礙網頁導入 Web 開發工作流程。
-- [HTML：無障礙網頁的好開始](/zh-TW/docs/Learn_web_development/Core/Accessibility/HTML)
-  - : 只要確保在任何時候，正確的 HTML 元素都用於正確的目的，就能消除各種網頁的障礙。這篇文章詳述 HTML 如何確保網頁無障礙。
-- [充分實踐 CSS 與 JavaScript 的無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
-  - : 如果 CSS 與 JavaScript 使用得當，將可以為無障礙網頁提供助力……反過來的話，就會嚴重影響無障礙體驗。這篇文章詳述如何在內容複雜的情況下，確保能充分實踐 CSS 與 JavaScript 的無障礙。
+- [什麼是無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility/What_is_accessibility)
+  - : 這篇文章以深入探討無障礙是什麼作為本單元的開始——這包括我們需要考慮哪些群體以及為什麼，不同人使用哪些工具與 Web 互動，以及我們如何將無障礙融入我們的 Web 開發工作流程。
+- [無障礙工具與輔助技術](/zh-TW/docs/Learn_web_development/Core/Accessibility/Tooling)
+  - : 接下來我們將注意力轉向無障礙工具，提供有關你可以用來幫助解決無障礙問題的各種工具資訊，以及身心障礙者在瀏覽 Web 時使用的輔助技術。你將在後續文章中使用這些工具。
+- [HTML：無障礙的良好基礎](/zh-TW/docs/Learn_web_development/Core/Accessibility/HTML)
+  - : 大量的 Web 內容只要確保始終為正確的目的使用正確的 HTML 元素，就能實現無障礙。這篇文章詳細探討了如何使用 HTML 來確保最大程度的無障礙。
+- [CSS 與 JavaScript 無障礙最佳實踐](/zh-TW/docs/Learn_web_development/Core/Accessibility/CSS_and_JavaScript)
+  - : CSS 與 JavaScript，當正確使用時，也有潛力創造無障礙的 Web 體驗，但如果誤用則可能嚴重損害無障礙性。這篇文章概述了一些 CSS 與 JavaScript 的最佳實踐，應該考慮這些實踐以確保即使是複雜的內容也盡可能地無障礙。
 - [WAI-ARIA 基礎](/zh-TW/docs/Learn_web_development/Core/Accessibility/WAI-ARIA_basics)
-  - : 從之前的文章來看，有時製作要涉及到非語意的 HTML 還有動態 JavaScript 更新技術……等，會令複雜的 UI 控制變得很困難。WAI-ARIA 正是為了解決此一問題而生。它對瀏覽器和輔助技術添加進一步的語意，讓用戶能知道發生了什麼事。我們將介紹如何在基本層面使用此技術，以提昇無障礙。
+  - : 承接上一篇文章，有時候製作包含非語義化 HTML 和動態 JavaScript 更新內容的複雜 UI 控制項可能會很困難。WAI-ARIA 是一種可以透過加入瀏覽器和輔助技術，能夠識別並使用的額外語義的技術，它可以幫助解決這類問題，讓使用者了解正在發生的事情。在這裡我們將展示如何在基礎層面上使用它來改善無障礙性。
 - [無障礙多媒體](/zh-TW/docs/Learn_web_development/Core/Accessibility/Multimedia)
-  - : 會導致無障礙網頁出問題的另一個根源是多媒體：影片、聲音、圖片等內容，需要有合適的文字替代，以便輔助技術和它的用戶能夠理解。我們將在這篇文章中闡明作法。
-- [行動無障礙網頁](/zh-TW/docs/Learn_web_development/Core/Accessibility/Mobile)
-  - : 隨著行動設備訪問漸受歡迎、還有像是 iOS 與 Android 這般熱門平台，已經具備完善的輔助工具，考慮到如何在這些平台上實踐無障礙網頁，就變得十分重要。這篇文章將討論行動裝置特有的無障礙網頁相關議題。
-
-## 評估
-
-- [無障礙網頁偵錯](/zh-TW/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting)
-  - : 要評估本模塊，我們會提出一些簡單的網站，你需要偵測有哪些無障礙的問題並修復之。
+  - : 另一類可能造成無障礙問題的內容是多媒體——影片、音訊和圖像內容需要提供適當的文字替代方案，以便輔助技術及其使用者能夠理解。這篇文章將展示如何做到這一點。
+- [行動無障礙](/zh-TW/docs/Learn_web_development/Core/Accessibility/Mobile)
+  - : 由於行動裝置上的 Web 存取如此普及，且像 iOS 和 Android 這樣的主流平台擁有完善的無障礙工具，考慮你的 Web 內容在這些平台上的無障礙性是很重要的。這篇文章探討了行動裝置特有的無障礙考量。
+- [無障礙技術排除](/zh-TW/docs/Learn_web_development/Core/Accessibility/Accessibility_troubleshooting) <sup>挑戰</sup>
+  - : 在這個挑戰中，我們向你展示一個有幾個無障礙問題的簡單網站，你需要診斷並修復這些問題。
 
 ## 參見
 
-- [Start Building Accessible Web Applications Today](https://egghead.io/courses/start-building-accessible-web-applications-today)：Marcy Sutton 所作的一套優秀教學影片。
-- [Deque University resources](https://dequeuniversity.com/resources/)：包含程式碼範例、螢幕閱讀器參考、或是其他有用的資源。
-- [WebAIM resources](https://webaim.org/resources/)：有教學、便覽、工具……等。
-- [Web Accessibility Evaluation Tools List](https://www.w3.org/WAI/ER/tools/) - includes a list of web accessibility evaluation tools.
+- [立即開始建立無障礙 Web 應用程式](https://egghead.io/courses/start-building-accessible-web-applications-today)
+  - : Marcy Sutton 的一系列優秀影片教學
+- [Deque University 資源](https://dequeuniversity.com/resources/)
+  - : 包含程式碼範例、螢幕閱讀器參考資料和其他有用資源。
+- [WebAIM 資源](https://webaim.org/resources/)
+  - : 包含指南、檢查清單、工具等等。
+- [Web 無障礙評估工具列表](https://www.w3.org/WAI/ER/tools/)
+  - : 包含 Web 無障礙評估工具列表。
+- [學習無障礙 Web 設計](https://v2.scrimba.com/learn-accessible-web-design-c031?via=mdn) <sup>_MDN 學習夥伴_</sup>
+  - : [Scrimba](https://scrimba.com?via=mdn) 的*學習無障礙 Web 設計*課程教你如何透過解決互動式挑戰和修復真實世界的網站來撰寫無障礙 HTML。
+
+{{NextMenu("Learn_web_development/Core/Accessibility/What_is_accessibility", "Learn_web_development/Core")}}

@@ -13,7 +13,7 @@ l10n:
 
 `sidebarAction` API 与 {{WebExtAPIRef("browserAction")}} API 非常相似。
 
-sidebarAction API 是基于 Opera 的 [sidebarAction API](https://help.opera.com/en/extensions/sidebar-action-api/)。但是请注意，以下特性尚不支持：`setBadgeText()`、`getBadgeText()`、`setBadgeBackgroundColor()`、`getBadgeBackgroundColor()`、`onFocus`、`onBlur`。
+sidebarAction API 基于 Opera 的 [sidebarAction API](https://help.opera.com/en/extensions/sidebar-action-api/)。但是请注意，以下特性尚不支持：`setBadgeText()`、`getBadgeText()`、`setBadgeBackgroundColor()`、`getBadgeBackgroundColor()`、`onFocus`、`onBlur`。
 
 ## 类型
 

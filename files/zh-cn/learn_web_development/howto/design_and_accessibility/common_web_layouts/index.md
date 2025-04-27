@@ -1,7 +1,6 @@
 ---
 title: 常见 web 布局都包含什么？
 slug: Learn_web_development/Howto/Design_and_accessibility/Common_web_layouts
-original_slug: Learn/Common_questions/Design_and_accessibility/Common_web_layouts
 ---
 
 {{QuicklinksWithSubPages("/zh-CN/docs/Learn/Common_questions")}}
@@ -60,7 +59,7 @@ original_slug: Learn/Common_questions/Design_and_accessibility/Common_web_layout
 
 ## 深入学习
 
-_目前还没有可以深入学习的文章。[何不考虑发一篇？](/zh-CN/docs/MDN/Community/Contributing/Getting_started)。_
+_目前还没有可以深入学习的文章。[何不考虑发一篇？](/zh-CN/docs/MDN/Community/Getting_started)。_
 
 ## 深入了解
 

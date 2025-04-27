@@ -9,7 +9,29 @@ l10n:
 
 **`:hover`** は [CSS](/ja/docs/Web/CSS) の[擬似クラス](/ja/docs/Web/CSS/Pseudo-classes)で、ユーザーがポインティングデバイスで要素に反応したものの、アクティブ化する必要がないものを選択します。普通はユーザーがカーソル（マウスポインター）を要素の上にかざしたときにそうなります。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-class-hover.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: :hover", "tabbed-shorter")}}
+
+```css interactive-example
+.joinBtn {
+  width: 10em;
+  height: 5ex;
+  background-color: gold;
+  border: 2px solid firebrick;
+  border-radius: 10px;
+  font-weight: bold;
+  color: black;
+  cursor: pointer;
+}
+
+.joinBtn:hover {
+  background-color: bisque;
+}
+```
+
+```html interactive-example
+<p>Would you like to join our quest?</p>
+<button class="joinBtn">Confirm</button>
+```
 
 `:hover` 擬似クラスによって定義されたスタイルは、少なくとも同等の仕様を持つリンク関連の擬似クラス ({{ cssxref(":link") }}、{{ cssxref(":visited") }}、{{ cssxref(":active") }}) によって上書きされます。適切にリンクにスタイルを適用するには、 `:hover` の規則を `:link` と `:visited` の後、 `:active` の前に置き、 _LVHA 順_: `:link` — `:visited` — `:hover` — `:active` で定義されるようにしてください。
 

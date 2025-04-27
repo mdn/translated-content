@@ -1,10 +1,9 @@
 ---
 title: 使用 Vue 模板引用进行焦点管理
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_refs_focus_management
-original_slug: Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Vue_refs_focus_management
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering","Learn_web_development/Core/Frameworks_libraries/Vue_resources", "Learn_web_development/Core/Frameworks_libraries")}}
+{{PreviousMenuNext("Learn_web_development/Core/Frameworks_libraries/Vue_conditional_rendering","Learn_web_development/Core/Frameworks_libraries/Vue_resources", "Learn_web_development/Core/Frameworks_libraries")}}
 
 使用 Vue 所做的事情快要结束了。最后一个需要讲述的内容是焦点管理，换句话说，也是如何提升我们应用的键盘无障碍性。我们将看看如何使用 **Vue 模板引用**来处理这个问题——这是一个进阶功能，允许你直接访问虚拟 DOM 之下的底层 DOM 节点，或者从一个组件直接访问一个子组件的内部 DOM 结构。
 
@@ -207,7 +206,7 @@ mounted() {
 <h2 id="list-summary" ref="listSummary" tabindex="-1">\{{listSummary}}</h2>
 ```
 
-> **备注：** [`tabindex`](/zh-CN/docs/Web/HTML/Global_attributes/tabindex) 是一个真正强大的工具，可以处理某些无障碍问题。然而，应该谨慎地使用它。过度使用 `tabindex="-1"` 会给各种用户带来问题，所以只在需要的地方使用它。你也几乎不应该使用 `tabindex` > = `0`，因为它可能给用户带来问题，因为它可能使 DOM 流和标签顺序不匹配，和/或在标签顺序中添加非交互式元素。这可能会让用户感到困惑，特别是那些使用屏幕阅读器和其他辅助技术的用户。
+> **备注：** [`tabindex`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/tabindex) 是一个真正强大的工具，可以处理某些无障碍问题。然而，应该谨慎地使用它。过度使用 `tabindex="-1"` 会给各种用户带来问题，所以只在需要的地方使用它。你也几乎不应该使用 `tabindex` > = `0`，因为它可能给用户带来问题，因为它可能使 DOM 流和标签顺序不匹配，和/或在标签顺序中添加非交互式元素。这可能会让用户感到困惑，特别是那些使用屏幕阅读器和其他辅助技术的用户。
 
 现在我们有了一个 `ref`，并且让浏览器知道我们可以通过编程聚焦到 `<h2>` 上，我们需要对它设置焦点。在 `deleteToDo()` 的结尾，使用 `listSummary` 引用来设置焦点在 `<h2>`。由于 `<h2>` 总是在应用程序中渲染出来，你不必刻意使用生命周期方法的 `$nextTick` 来处理焦点。
 

@@ -18,7 +18,7 @@ _{{DOMxRef("Element")}} インターフェイスから継承したプロパテ�
 - {{DOMxRef("SVGElement.attributeStyleMap")}} {{ReadOnlyInline}}
   - : {{DOMxRef("StylePropertyMap")}} で、要素の {{SVGAttr("style")}} 属性の宣言を表します。
 - {{DOMxRef("SVGElement.dataset")}} {{ReadOnlyInline}}
-  - : {{DOMxRef("DOMStringMap")}} オブジェクトで、要素に添付された[カスタムデータ属性](/ja/docs/Learn/HTML/Howto/Use_data_attributes)に対応する、名前つきデータ属性のキーと値の組のリストを提供します。これらの組は SVG でも {{SVGAttr("data-*")}} の形で定義することができ、 `*` が、その組のキー名です。これは、HTML の {{DOMxRef("HTMLElement.dataset")}} 属性および HTML の [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) グローバル属性と同様に動作します。
+  - : {{DOMxRef("DOMStringMap")}} オブジェクトで、要素に添付された[カスタムデータ属性](/ja/docs/Web/HTML/How_to/Use_data_attributes)に対応する、名前つきデータ属性のキーと値の組のリストを提供します。これらの組は SVG でも {{SVGAttr("data-*")}} の形で定義することができ、 `*` が、その組のキー名です。これは、HTML の {{DOMxRef("HTMLElement.dataset")}} 属性および HTML の [`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) グローバル属性と同様に動作します。
 - {{DOMxRef("SVGElement.className")}} {{Deprecated_Inline}} {{ReadOnlyInline}}
   - : {{DOMxRef("SVGAnimatedString")}} で、指定された要素上の {{SVGAttr("class")}} 属性の値を反映します。 `class` が存在しない場合は空文字列になります。この属性は非推奨であり、この仕様の将来のバージョンでは削除されるかもしれません。代わりに {{DOMxRef("Element.classList")}} を使用することをお勧めします。
 - {{DOMxRef("SVGElement.nonce")}}
@@ -63,6 +63,6 @@ _このインターフェイスにはメソッドがありませんが、 {{DOMx
 
 ## 関連情報
 
-- HTML [`data-*`](/ja/docs/Web/HTML/Global_attributes/data-*) 属性
+- HTML [`data-*`](/ja/docs/Web/HTML/Reference/Global_attributes/data-*) 属性
 - SVG {{SVGAttr("data-*")}} 属性
-- [HTML におけるカスタムデータ属性の使用](/ja/docs/Learn/HTML/Howto/Use_data_attributes)
+- [HTML におけるカスタムデータ属性の使用](/ja/docs/Web/HTML/How_to/Use_data_attributes)

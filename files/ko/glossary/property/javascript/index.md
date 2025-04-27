@@ -37,6 +37,6 @@ const obj = {
 ## 같이 보기
 
 - [속성 (프로그래밍)](<https://en.wikipedia.org/wiki/Property_(programming)>) on Wikipedia
-- [객체 지향 JavaScript 소개](/ko/docs/Learn/JavaScript/Objects)
+- [객체 지향 JavaScript 소개](/ko/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects)
 - [객체 속성](/ko/docs/Web/JavaScript/Data_structures#properties)
 - [속성의 열거 가능성 및 소유권](/ko/docs/Web/JavaScript/Enumerability_and_ownership_of_properties)

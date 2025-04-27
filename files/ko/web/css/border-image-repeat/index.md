@@ -7,7 +7,50 @@ slug: Web/CSS/border-image-repeat
 
 **`border-image-repeat`** [CSS](/ko/docs/Web/CSS) 속성은 원본 이미지의 [모서리 영역](/ko/docs/Web/CSS/border-image-slice#edge_region)을 요소의 [테두리 이미지](/ko/docs/Web/CSS/border-image) 크기에 맞춰 조절할 때 사용할 방법을 지정합니다.
 
-{{EmbedInteractiveExample("pages/css/border-image-repeat.html")}}
+{{InteractiveExample("CSS Demo: border-image-repeat")}}
+
+```css interactive-example-choice
+border-image-repeat: stretch;
+```
+
+```css interactive-example-choice
+border-image-repeat: repeat;
+```
+
+```css interactive-example-choice
+border-image-repeat: round;
+```
+
+```css interactive-example-choice
+border-image-repeat: space;
+```
+
+```css interactive-example-choice
+border-image-repeat: round stretch;
+```
+
+```html interactive-example
+<section id="default-example">
+  <div id="example-element">This is a box with a border around it.</div>
+</section>
+```
+
+```css interactive-example
+#example-element {
+  width: 80%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  background: #fff3d4;
+  color: #000;
+  border: 30px solid;
+  border-image: url("/shared-assets/images/examples/border-diamonds.png") 30
+    round;
+  font-size: 1.2em;
+}
+```
 
 ## 구문
 

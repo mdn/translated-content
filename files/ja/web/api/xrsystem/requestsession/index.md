@@ -87,7 +87,7 @@ requestSession(mode, options)
 
 ## セキュリティ
 
-いくつかのセッション機能と様々な参照空間には、ユーザーの同意を要求したり、 {{HTTPHeader("Permissions-Policy")}} を要求するなど、最小限のセキュリティとプライバシーの要件があります。 [`xr-spatial-tracking`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/xr-spatial-tracking) ディレクティブを設定する必要があります。詳しくは[権限とセキュリティ](/ja/docs/Web/API/WebXR_Device_API/Permissions_and_security)も参照してください。
+いくつかのセッション機能と様々な参照空間には、ユーザーの同意を要求したり、 {{HTTPHeader("Permissions-Policy")}} を要求するなど、最小限のセキュリティとプライバシーの要件があります。 [`xr-spatial-tracking`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/xr-spatial-tracking) ディレクティブを設定する必要があります。詳しくは[権限とセキュリティ](/ja/docs/Web/API/WebXR_Device_API/Permissions_and_security)も参照してください。
 
 | セッション機能  | ユーザー同意の要件               | 権限ポリシーの要件    |
 | --------------- | -------------------------------- | --------------------- |

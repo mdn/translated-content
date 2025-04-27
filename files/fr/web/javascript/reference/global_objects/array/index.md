@@ -274,7 +274,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 
 ## Propriétés statiques
 
-- [`get Array[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@species)
+- [`get Array[@@species]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.species)
   - : La fonction de construction utilisée pour créer les objets dérivés.
 
 ## Méthodes statiques
@@ -290,7 +290,7 @@ Les propriétés et les éléments retournés depuis cette correspondance sont l
 
 - [`Array.prototype.length`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/length)
   - : La propriété de longueur pour le constructeur `Array`, elle vaut 1.
-- [`Array.prototype[@@unscopables]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/@@unscopables)
+- [`Array.prototype[@@unscopables]`](/fr/docs/Web/JavaScript/Reference/Global_Objects/Array/Symbol.unscopables)
   - : Un symbole contenant les noms des propriétés à exclure d'une portée de liaison avec [`with`](/fr/docs/Web/JavaScript/Reference/Statements/with).
 
 ## Méthodes des instances

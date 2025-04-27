@@ -7,7 +7,36 @@ slug: Web/CSS/::backdrop
 
 [CSS](/ja/docs/Web/CSS) の **`::backdrop`** [擬似要素](/ja/docs/Web/CSS/Pseudo-elements)は、何らかの要素が全画面モード ({{glossary("top layer")}}) で表示される直下に直接表示される {{Glossary("viewport")}} の寸法のボックスです。
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-backdrop.html", "tabbed-shorter")}}
+{{InteractiveExample("CSS Demo: ::backdrop", "tabbed-shorter")}}
+
+```css interactive-example
+button {
+  font-size: 1.2rem;
+  padding: 5px 15px;
+}
+
+dialog::backdrop {
+  background-color: salmon;
+}
+```
+
+```html interactive-example
+<button id="showDialogBtn">Show a dialog</button>
+
+<dialog id="favDialog">
+  <form method="dialog">
+    <p>The background shown outside of this dialog is a backdrop.</p>
+    <button id="confirmBtn">Close the dialog</button>
+  </form>
+</dialog>
+```
+
+```js interactive-example
+const showDialogBtn = document.getElementById("showDialogBtn");
+const favDialog = document.getElementById("favDialog");
+
+showDialogBtn.addEventListener("click", () => favDialog.showModal());
+```
 
 ## 構文
 
@@ -122,5 +151,5 @@ closeButton.addEventListener("click", () => {
 - {{cssxref(":fullscreen")}} 疑似クラス
 - {{HTMLElement("dialog")}} HTML 要素
 - [全画面 API](/ja/docs/Web/API/Fullscreen_API)
-- [`popover`](/ja/docs/Web/HTML/Global_attributes/popover) HTML グローバル属性
+- [`popover`](/ja/docs/Web/HTML/Reference/Global_attributes/popover) HTML グローバル属性
 - [ポップオーバー API](/ja/docs/Web/API/Popover_API)

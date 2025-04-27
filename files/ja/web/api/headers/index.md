@@ -7,12 +7,12 @@ l10n:
 
 {{APIRef("Fetch API")}} {{AvailableInWorkers}}
 
-**`Headers`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、 [HTTP リクエスト／レスポンス](/ja/docs/Web/HTTP/Headers)ヘッダー上のさまざまなアクションを実行します。アクションとしては、リクエストヘッダーのリストに対するヘッダーの取得、設定、追加、削除などがあります。
+**`Headers`** は[フェッチ API](/ja/docs/Web/API/Fetch_API) のインターフェイスで、 [HTTP リクエスト／レスポンス](/ja/docs/Web/HTTP/Reference/Headers)ヘッダー上のさまざまなアクションを実行します。アクションとしては、リクエストヘッダーのリストに対するヘッダーの取得、設定、追加、削除などがあります。
 
 `Headers` オブジェクトは {{domxref("Request.headers")}} および {{domxref("Response.headers")}} プロパティから受け取ることができ、新しい `Headers` オブジェクトは {{domxref("Headers.Headers", "Headers()")}} コンストラクターで作成することができます。
 
 > [!NOTE]
-> 利用可能なヘッダーについての詳細は、 [HTTP ヘッダー](/ja/docs/Web/HTTP/Headers)のリファレンスをお読みください。
+> 利用可能なヘッダーについての詳細は、 [HTTP ヘッダー](/ja/docs/Web/HTTP/Reference/Headers)のリファレンスをお読みください。
 
 ## 解説
 
@@ -27,10 +27,10 @@ l10n:
 - {{domxref("Headers.Headers","Headers()")}} コンストラクターで作成されたヘッダーについては、変更の制限はありません。
 - {{domxref("Request")}} オブジェクトのヘッダーについては次の通りです。
   - そのリクエストの {{domxref("Request.mode","mode")}} が `no-cors` である場合、すべての {{Glossary("CORS-safelisted request header", "CORS セーフリストリクエストヘッダー")}}の名前と値が変更できます。
-  - そうでない場合、すべての {{Glossary("forbidden header name", "禁止ヘッダーでないヘッダー")}}の名前と値が変更できます。
+  - そうでない場合、すべての {{Glossary("Forbidden request header", "禁止ヘッダーでないヘッダー")}}の名前と値が変更できます。
 - {{domxref("Response")}} オブジェクトのヘッダーについては次の通りです。
   - そのレスポンスが {{domxref("Response.error_static", "Response.error()")}} または {{domxref("Response.redirect_static", "Response.redirect()")}} から作成されたか、 {{domxref("Window/fetch", "fetch()")}} 呼び出しから取得されたものであるヘッダーは不変であり、変更することはできません。
-  - そうでない場合、そのレスポンスが {{domxref("Response.Response","Response()")}} または {{domxref("Response.json_static","Response.json()")}} で作成されたものであれば、すべての {{Glossary("forbidden header name", "禁止ヘッダーでないレスポンスヘッダー")}}の名前と値が変更できます。
+  - そうでない場合、そのレスポンスが {{domxref("Response.Response","Response()")}} または {{domxref("Response.json_static","Response.json()")}} で作成されたものであれば、すべての {{Glossary("Forbidden request header", "禁止ヘッダーでないレスポンスヘッダー")}}の名前と値が変更できます。
 
 Headers のすべてのメソッドは、[有効な HTTP ヘッダー名](https://fetch.spec.whatwg.org/#concept-header-name)ではない名前を参照として渡そうとすると、 {{jsxref("TypeError")}} が発生します。そのヘッダーが不変である場合は、変更操作で `TypeError` が発生します。それ以外の失敗は、すべて暗黙に失敗します。
 
@@ -102,5 +102,5 @@ myHeaders.get("Content-Type"); // 'text/xml' が返される
 ## 関連項目
 
 - [サービスワーカー API](/ja/docs/Web/API/Service_Worker_API)
-- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/CORS)
+- [HTTP アクセス制御 (CORS)](/ja/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/ja/docs/Web/HTTP)

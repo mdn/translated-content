@@ -8,7 +8,7 @@ l10n:
 
 {{DefaultAPISidebar("DOM")}}
 
-**`ariaBusy`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が変更されているかどうかを示す [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-busy) 属性の値を反映します。支援技術は、ユーザーに公開する前に変更が完了するまで待ちたい場合があります。
+**`ariaBusy`** は {{domxref("Element")}} インターフェイスのプロパティで、要素が変更されているかどうかを示す [`aria-busy`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-busy) 属性の値を反映します。支援技術は、ユーザーに公開する前に変更が完了するまで待ちたい場合があります。
 
 ## 値
 

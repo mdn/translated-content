@@ -34,6 +34,6 @@ var decodedData = window.atob(encodedData); // decode the string
 ## See also
 
 - [Base64 encoding and decoding](/es/docs/Glossary/Base64)
-- [`data` URIs](/es/docs/Web/URI/Schemes/data)
+- [`data` URIs](/es/docs/Web/URI/Reference/Schemes/data)
 - {{domxref("window.btoa()")}}
 - [Components.utils.importGlobalProperties](/es/docs/Components.utils.importGlobalProperties)

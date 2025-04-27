@@ -5,9 +5,46 @@ slug: Web/HTML/Element/button
 
 {{HTMLSidebar}}
 
-**HTML `<button>` 요소**는 클릭 가능한 버튼을 나타냅니다. 버튼은 [양식](/ko/docs/Learn/Forms) 내부는 물론 간단한 표준 버튼 기능이 필요한 곳이라면 문서 어디에나 배치할 수 있습니다. 기본값의 HTML 버튼은 {{glossary("user agent", "사용자 에이전트")}}의 호스트 플랫폼과 비슷한 디자인을 따라가지만, 외형은 [CSS](/ko/docs/Web/CSS)로 변경할 수 있습니다.
+**HTML `<button>` 요소**는 클릭 가능한 버튼을 나타냅니다. 버튼은 [양식](/ko/docs/Learn_web_development/Extensions/Forms) 내부는 물론 간단한 표준 버튼 기능이 필요한 곳이라면 문서 어디에나 배치할 수 있습니다. 기본값의 HTML 버튼은 {{glossary("user agent", "사용자 에이전트")}}의 호스트 플랫폼과 비슷한 디자인을 따라가지만, 외형은 [CSS](/ko/docs/Web/CSS)로 변경할 수 있습니다.
 
-{{EmbedInteractiveExample("pages/tabbed/button.html", "tabbed-shorter")}}
+{{InteractiveExample("HTML Demo: &lt;button&gt;", "tabbed-shorter")}}
+
+```html interactive-example
+<button class="favorite styled" type="button">Add to favorites</button>
+```
+
+```css interactive-example
+.styled {
+  border: 0;
+  line-height: 2.5;
+  padding: 0 20px;
+  font-size: 1rem;
+  text-align: center;
+  color: #fff;
+  text-shadow: 1px 1px 1px #000;
+  border-radius: 10px;
+  background-color: rgba(220, 0, 0, 1);
+  background-image: linear-gradient(
+    to top left,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.2) 30%,
+    rgba(0, 0, 0, 0)
+  );
+  box-shadow:
+    inset 2px 2px 3px rgba(255, 255, 255, 0.6),
+    inset -2px -2px 3px rgba(0, 0, 0, 0.6);
+}
+
+.styled:hover {
+  background-color: rgba(255, 0, 0, 1);
+}
+
+.styled:active {
+  box-shadow:
+    inset -2px -2px 3px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 3px rgba(0, 0, 0, 0.6);
+}
+```
 
 <table class="properties">
   <tbody>
@@ -172,7 +209,7 @@ slug: Web/HTML/Element/button
 
 ### 아이콘 버튼
 
-아이콘만 사용해 기능을 표현하는 버튼은 접근 가능한 이름을 갖지 않습니다. 접근 가능한 이름은 스크린 리더 등 접근성 보조 기술이 문서를 분석하고 [접근성 트리](/ko/docs/Learn/Accessibility/What_is_accessibility#accessibility_apis)를 생성할 때 사용할 수 있는 프로그램 훅을 제공합니다. 그 후 보조 기술이 페이지 콘텐츠를 탐색하고 조작할 때 접근성 트리를 사용합니다.
+아이콘만 사용해 기능을 표현하는 버튼은 접근 가능한 이름을 갖지 않습니다. 접근 가능한 이름은 스크린 리더 등 접근성 보조 기술이 문서를 분석하고 [접근성 트리](/ko/docs/Learn_web_development/Core/Accessibility/What_is_accessibility#accessibility_apis)를 생성할 때 사용할 수 있는 프로그램 훅을 제공합니다. 그 후 보조 기술이 페이지 콘텐츠를 탐색하고 조작할 때 접근성 트리를 사용합니다.
 
 아이콘 버튼에 접근 가능한 이름을 부여하려면, `<button>` 요소의 기능을 간략히 묘사하는 텍스트를 안에 포함하세요.
 

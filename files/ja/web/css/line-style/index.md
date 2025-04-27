@@ -208,7 +208,7 @@ p + p {
 
 #### HTML
 
-この例では、複数の {{HTMLElement( "div" )}} 要素を使用し、それぞれ異なる `border-color` をインラインの [`style`](/ja/docs/Web/HTML/Global_attributes/style) として設定しています。
+この例では、複数の {{HTMLElement( "div" )}} 要素を使用し、それぞれ異なる `border-color` をインラインの [`style`](/ja/docs/Web/HTML/Reference/Global_attributes/style) として設定しています。
 
 ```html-nolint hidden
 <section>

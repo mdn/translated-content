@@ -11,7 +11,7 @@ l10n:
 **`enumerateDevices()`** は {{domxref("MediaDevices")}} インターフェイスのメソッドで、マイクやカメラ、ヘッドセットなど、現在利用可能なメディア入出力機器の一覧を要求します。
 返されたプロミス ({{jsxref("Promise")}}) は、機器を記述した {{domxref("MediaDeviceInfo")}} の配列で解決されます。
 
-特定の機器へのアクセスは、[権限ポリシー](/ja/docs/Web/HTTP/Headers/Permissions-Policy)によって制限されます。返される機器の一覧では、対応する権限が付与されていない機器は省略されます。[`microphone`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/microphone), [`camera`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/camera), [`speaker-selection`](/ja/docs/Web/HTTP/Headers/Permissions-Policy/speaker-selection) （出力機器の場合）などです。
+特定の機器へのアクセスは、[権限ポリシー](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy)によって制限されます。返される機器の一覧では、対応する権限が付与されていない機器は省略されます。[`microphone`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/microphone), [`camera`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/camera), [`speaker-selection`](/ja/docs/Web/HTTP/Reference/Headers/Permissions-Policy/speaker-selection) （出力機器の場合）などです。
 また、[権限 API](/ja/docs/Web/API/Permissions_API) によって、特定の既定ではない機器へのアクセスも制限され、ユーザーが明示的な許可を与えていない端末はリストから省略されます。
 
 ## 構文
@@ -40,7 +40,7 @@ enumerateDevices()
 
 API へのアクセスは、以下の制約を受けます。
 
-- このメソッドは、[安全なコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
+- このメソッドは、[保護されたコンテキスト](/ja/docs/Web/Security/Secure_Contexts)で呼び出す必要があります。
 - 文書は完全にアクティブで、その可視性が「可視」である必要があります。
 
 ## 例

@@ -7,7 +7,42 @@ slug: Web/CSS/quotes
 
 **`quotes`** は [CSS](/ja/docs/Web/CSS) のプロパティで、 [`content`](/ja/docs/Web/CSS/content) プロパティの `open-quotes` や `close-quotes` を使用して追加された引用符をどのように表示するかを設定します。
 
-{{EmbedInteractiveExample("pages/css/quotes.html")}}
+{{InteractiveExample("CSS Demo: quotes")}}
+
+```css interactive-example-choice
+quotes: none;
+```
+
+```css interactive-example-choice
+quotes: initial;
+```
+
+```css interactive-example-choice
+quotes: "'" "'";
+```
+
+```css interactive-example-choice
+quotes: "„" "“" "‚" "‘";
+```
+
+```css interactive-example-choice
+quotes: "«" "»" "‹" "›";
+```
+
+```html interactive-example
+<section id="default-example">
+  <q id="example-element"
+    >Show us the wonder-working <q>Brothers,</q> let them come out publicly—and
+    we will believe in them!</q
+  >
+</section>
+```
+
+```css interactive-example
+q {
+  font-size: 1.2rem;
+}
+```
 
 ## 構文
 
@@ -32,7 +67,7 @@ quotes: unset;
 - `none`
   - : {{cssxref("content")}} プロパティの `open-quote` および `close-quote` の値で引用符を生成しません。
 - `auto`
-  - : 選択された要素に設定された言語の値（すなわち、 [`lang`](/ja/docs/Web/HTML/Global_attributes#lang) 属性）で使用される適切な引用符が使用されます。
+  - : 選択された要素に設定された言語の値（すなわち、 [`lang`](/ja/docs/Web/HTML/Reference/Global_attributes/lang) 属性）で使用される適切な引用符が使用されます。
 - `[<string> <string>]+`
   - : `open-quote` および `close-quote` を表す {{cssxref("&lt;string&gt;")}} の 1 つ以上の組。最初の組は、引用符を表示する要素が入れ子になった際の、最上層のものの引用符を表します。以下、順次下位レベルの引用符に対応します。
 

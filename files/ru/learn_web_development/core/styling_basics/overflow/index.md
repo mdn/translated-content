@@ -7,9 +7,9 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 В этом уроке мы рассмотрим другую важную концепцию в CSS — **переполнение**. Переполнение это то, что случается когда слишком много контента содержится внутри блока. В этом гайде вы изучите что это и как этим управлять.
 
-| Необходимые условия: | Базовая компьютерная грамотность, [Установка базового ПО](/ru/docs/Learn/Getting_started_with_the_web/Installing_basic_software), базовые знания [работы с файлами](/ru/docs/Learn/Getting_started_with_the_web/Dealing_with_files), основы HTML ([Введение в HTML](/ru/docs/Learn/HTML/Introduction_to_HTML)), и общее представление о том, как работает CSS (study [Введение в CSS](/ru/docs/Learn/CSS/First_steps).) |
-| -------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Цель:                | Понять, что такое переполнение и как с ним работать.                                                                                                                                                                                                                                                                                                                                                                    |
+| Необходимые условия: | Базовая компьютерная грамотность, [Установка базового ПО](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Installing_software), базовые знания [работы с файлами](/ru/docs/Learn_web_development/Getting_started/Environment_setup/Dealing_with_files), основы HTML ([Введение в HTML](/ru/docs/conflicting/Learn_web_development/Core/Structuring_content)), и общее представление о том, как работает CSS (study [Введение в CSS](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics).) |
+| -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Цель:                | Понять, что такое переполнение и как с ним работать.                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 
 ## Что такое переполнение?
 
@@ -53,7 +53,7 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-y.html", '100%', 600)}}
 
-Вы также можете установить прокрутку по оси x с помощью {{cssxref("overflow-x")}}, но это не рекомендуемый способ отображения длинных слов! Если у вас есть длинное слово в маленьком поле, вы можете использовать свойства {{cssxref("word-break")}} или {{cssxref("overflow-wrap")}}. Кроме того, некоторые методы, описанные в разделе [Изменение размеров в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS), могут помочь вам создавать блоки, которые лучше масштабируются с различным объемом содержимого.
+Вы также можете установить прокрутку по оси x с помощью {{cssxref("overflow-x")}}, но это не рекомендуемый способ отображения длинных слов! Если у вас есть длинное слово в маленьком поле, вы можете использовать свойства {{cssxref("word-break")}} или {{cssxref("overflow-wrap")}}. Кроме того, некоторые методы, описанные в разделе [Изменение размеров в CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Sizing), могут помочь вам создавать блоки, которые лучше масштабируются с различным объемом содержимого.
 
 {{EmbedGHLiveSample("css-examples/learn/overflow/scroll-x.html", '100%', 500)}}
 
@@ -74,7 +74,7 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 ## Нежелательное переполнение в веб-разработке
 
-Современные методы раскладки (описанные в разделе [CSS раскладка](/ru/docs/Learn/CSS/CSS_layout)) справляются с переполнением очень хорошо вне зависимости от того, сколько контента будет на веб-странице.
+Современные методы раскладки (описанные в разделе [CSS раскладка](/ru/docs/Learn_web_development/Core/CSS_layout)) справляются с переполнением очень хорошо вне зависимости от того, сколько контента будет на веб-странице.
 
 Это не всегда было нормой. В прошлом некоторые сайты были построены с блоками фиксированной высоты для выравнивания нижних границ блоков. Тем не менее эти блоки могли не иметь ничего общего между собой. Это была хрупкая конструкция. В устаревших приложениях вы можете встретить блок, в котором содержимое перекрывает другое содержимое на странице. Теперь вы понимаете, что это происходит из-за переполнения. В идеале вы должны провести рефакторинг разметки, чтобы не полагаться на блоки с фиксированной высотой.
 
@@ -92,21 +92,21 @@ slug: Learn_web_development/Core/Styling_basics/Overflow
 
 ## In this module
 
-1. [Каскад и наследование](/ru/docs/Learn/CSS/Building_blocks/Cascade_and_inheritance)
-2. [Селекторы CSS](/ru/docs/Learn/CSS/Building_blocks/Selectors)
+1. [Каскад и наследование](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_conflicts)
+2. [Селекторы CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Basic_selectors)
 
-   - [Селекторы типа, класса и ID](/ru/docs/Learn/CSS/Building_blocks/Selectors/Type_Class_and_ID_Selectors)
-   - [Селекторы атрибута](/ru/docs/Learn/CSS/Building_blocks/Selectors/Attribute_selectors)
-   - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Pseudo-classes_and_pseudo-elements)
-   - [Комбинаторы](/ru/docs/Learn/CSS/Building_blocks/Selectors/Combinators)
+   - [Селекторы типа, класса и ID](/ru/docs/conflicting/Learn_web_development/Core/Styling_basics/Basic_selectors)
+   - [Селекторы атрибута](/ru/docs/Learn_web_development/Core/Styling_basics/Attribute_selectors)
+   - [Псевдоклассы и псевдоэлементы](/ru/docs/Learn_web_development/Core/Styling_basics/Pseudo_classes_and_elements)
+   - [Комбинаторы](/ru/docs/Learn_web_development/Core/Styling_basics/Combinators)
 
-3. [Блочная модель(The box model)](/ru/docs/Learn/CSS/Building_blocks/The_box_model)
-4. [Фон и границы](/ru/docs/Learn/CSS/Building_blocks/Backgrounds_and_borders)
-5. [Обработка разных направлений текста](/ru/docs/Learn/CSS/Building_blocks/Handling_different_text_directions)
-6. [Переполнение содержимого](/ru/docs/Learn/CSS/Building_blocks/Overflowing_content)
-7. [Значения и единицы измерения](/ru/docs/Learn/CSS/Building_blocks/Values_and_units)
-8. [Размеры в CSS](/ru/docs/Learn/CSS/Building_blocks/Sizing_items_in_CSS)
-9. [Элементы изображений, форм и медиа-элементы](/ru/docs/Learn/CSS/Building_blocks/Images_media_form_elements)
-10. [Стилизация таблиц](/ru/docs/Learn/CSS/Building_blocks/Styling_tables)
-11. [Отладка CSS](/ru/docs/Learn/CSS/Building_blocks/Debugging_CSS)
+3. [Блочная модель(The box model)](/ru/docs/Learn_web_development/Core/Styling_basics/Box_model)
+4. [Фон и границы](/ru/docs/Learn_web_development/Core/Styling_basics/Backgrounds_and_borders)
+5. [Обработка разных направлений текста](/ru/docs/Learn_web_development/Core/Styling_basics/Handling_different_text_directions)
+6. [Переполнение содержимого](/ru/docs/Learn_web_development/Core/Styling_basics/Overflow)
+7. [Значения и единицы измерения](/ru/docs/Learn_web_development/Core/Styling_basics/Values_and_units)
+8. [Размеры в CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Sizing)
+9. [Элементы изображений, форм и медиа-элементы](/ru/docs/Learn_web_development/Core/Styling_basics/Images_media_forms)
+10. [Стилизация таблиц](/ru/docs/Learn_web_development/Core/Styling_basics/Tables)
+11. [Отладка CSS](/ru/docs/Learn_web_development/Core/Styling_basics/Debugging_CSS)
 12. [Организация вашей CSS](/ru/docs/Learn/CSS/Building_blocks/Organizing)

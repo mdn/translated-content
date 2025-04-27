@@ -14,9 +14,42 @@ a::after {
 }
 ```
 
-{{EmbedInteractiveExample("pages/tabbed/pseudo-element-after.html", "tabbed-standard")}}
+{{InteractiveExample("CSS Demo: ::after", "tabbed-standard")}}
 
-> **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/Replaced_element)には適用されません。
+```css interactive-example
+a::after {
+  content: " (" attr(href) ")";
+}
+
+.dead-link {
+  text-decoration: line-through;
+}
+
+.dead-link::after {
+  content: url("/shared-assets/images/examples/warning.svg");
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+}
+```
+
+```html interactive-example
+<p>
+  The sailfish is named for its sail-like dorsal fin and is widely considered
+  the fastest fish in the ocean.
+  <a href="https://en.wikipedia.org/wiki/Sailfish"
+    >You can read more about it here</a
+  >.
+</p>
+
+<p>
+  The red lionfish is a predatory scorpionfish that lives on coral reefs of the
+  Indo-Pacific Ocean and more recently in the western Atlantic.
+  <a href="" class="dead-link">You can read more about it here</a>.
+</p>
+```
+
+> **メモ:** `::before` および `::after` によって作成される擬似要素は[要素の整形ボックスに含まれるため](https://www.w3.org/TR/CSS2/generate.html#before-after-content)、 {{htmlelement("img")}} や {{htmlelement("br")}} のような[置換要素](/ja/docs/Web/CSS/CSS_images/Replaced_element_properties)には適用されません。
 
 ## 構文
 
@@ -88,9 +121,9 @@ a::after {
 
 ### ツールチップ
 
-この例は、 `::after` を CSS の [`attr()`](/ja/docs/Web/CSS/attr) 関数と `data-descr` [カスタムデータ属性](/ja/docs/Web/HTML/Global_attributes/data-*)との組み合わせで使用し、ツールチップを作成しています。 JavaScript は必要ありません。
+この例は、 `::after` を CSS の [`attr()`](/ja/docs/Web/CSS/attr) 関数と `data-descr` [カスタムデータ属性](/ja/docs/Web/HTML/Reference/Global_attributes/data-*)との組み合わせで使用し、ツールチップを作成しています。 JavaScript は必要ありません。
 
-また、このテクニックを使ってキーボードユーザーに対応することもできます。 `tabindex` に `0` を追加して、それぞれの `span` をキーボードフォーカス可能にし、CSS の `:focus` セレクターを使用することでキーボードフォーカスを可能にします。これは `::before` と `::after` がいかに柔軟であるかを示しています。しかし、最もアクセスしやすいようにするには、他の方法（例えば [details および summary](/ja/docs/Web/HTML/Element/details) 要素で作成した詳細折りたたみウィジェットがより適していると思われます。
+また、このテクニックを使ってキーボードユーザーに対応することもできます。 `tabindex` に `0` を追加して、それぞれの `span` をキーボードフォーカス可能にし、CSS の `:focus` セレクターを使用することでキーボードフォーカスを可能にします。これは `::before` と `::after` がいかに柔軟であるかを示しています。しかし、最もアクセスしやすいようにするには、他の方法（例えば [details および summary](/ja/docs/Web/HTML/Reference/Elements/details) 要素で作成した詳細折りたたみウィジェットがより適していると思われます。
 
 #### HTML
 

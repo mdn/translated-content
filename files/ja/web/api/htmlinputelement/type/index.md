@@ -10,13 +10,13 @@ l10n:
 
 **`type`** は {{domxref("HTMLInputElement")}} インターフェイスのプロパティで、 {{HTMLElement("input")}} 要素を入力する際に許可されるデータの型（数値、日付、メールアドレスなど）を示します。ブラウザーは適切なウィジェットを選択し、ユーザーが有効な値を入力できるように振る舞います。
 
-これは {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Element/input#type) を反映します。
+これは {{HTMLElement("input")}} 要素の [`type`](/ja/docs/Web/HTML/Reference/Elements/input#type) を反映します。
 
 ## 値
 
 型を表す文字列です。
 
-取りうる値の一覧はこの属性の[入力型](/ja/docs/Web/HTML/Element/input#input_types)の節にあります。
+取りうる値の一覧はこの属性の[入力型](/ja/docs/Web/HTML/Reference/Elements/input#input_types)の節にあります。
 
 ## 例
 

@@ -40,8 +40,8 @@ console.log(attr.value); // 打印 `修改过的占位符`
 
 ## 参见
 
-- [HTML 属性参考](/zh-CN/docs/Web/HTML/Attributes)
-- 关于 HTML 的[全局属性](/zh-CN/docs/Web/HTML/Global_attributes)的信息
+- [HTML 属性参考](/zh-CN/docs/Web/HTML/Reference/Attributes)
+- 关于 HTML 的[全局属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes)的信息
 - [W3C XML 推荐标准](https://www.w3.org/TR/xml#sec-starttags)中的 XML StartTag 属性推荐标准
 - 相关术语：
   - {{Glossary("Element", "元素")}}

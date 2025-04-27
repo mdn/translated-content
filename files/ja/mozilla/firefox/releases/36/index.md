@@ -33,7 +33,7 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 - {{cssxref("text-decoration")}} プロパティを、短縮プロパティに変更しました ([Firefox バグ 1039488](https://bugzil.la/1039488))。
 - {{cssxref("object-fit")}} プロパティおよび {{cssxref("object-position")}} プロパティをサポートしました ([Firefox バグ 624647](https://bugzil.la/624647))。
 - {{cssxref("display")}} プロパティの値 `contents` を実験的に実装しました。デフォルトで無効に設定しています ([Firefox バグ 907396](https://bugzil.la/907396))。
-- [Quirks モード](/ja/docs/Web/HTML/Quirks_Mode_and_Standards_Mode)で、[`:active` および `:hover` の Quirk](/ja/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) の適用対象を削減しました。リンクにのみ、および要素内に擬似要素や他の擬似クラスがない場合や擬似クラスの要素の一部ではない場合に限り適用されます ([Firefox バグ 783213](https://bugzil.la/783213))。
+- [Quirks モード](/ja/docs/Web/HTML/Guides/Quirks_mode_and_standards_mode)で、[`:active` および `:hover` の Quirk](/ja/docs/Mozilla_Quirks_Mode_Behavior#Miscellaneous_.26_Style) の適用対象を削減しました。リンクにのみ、および要素内に擬似要素や他の擬似クラスがない場合や擬似クラスの要素の一部ではない場合に限り適用されます ([Firefox バグ 783213](https://bugzil.la/783213))。
 - {{cssxref("isolation")}} プロパティを実装しました ([Firefox バグ 1077872](https://bugzil.la/1077872))。
 - CSS の {{cssxref("&lt;gradient&gt;")}} が乗算済み色に適用されるようになり、仕様書や他ブラウザーと合致しました。また、途中に予期しない灰色が現れないようになりました ([Firefox バグ 591600](https://bugzil.la/591600))。
 - {{cssxref("&lt;gradient&gt;")}} に、補間法のヒントを与える構文を追加しました ([Firefox バグ 1074056](https://bugzil.la/1074056))。
@@ -41,8 +41,8 @@ Firefox 36 は、米国時間 2015 年 2 月 24 日にリリースされまし�
 
 ### HTML
 
-- [`<meta name="referrer">`](/ja/docs/Web/HTML/Element/meta) をサポートしました ([Firefox バグ 704320](https://bugzil.la/704320))。
-- Firefox では {{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Element/input#accept) 属性で指定したフィルターが未知の値、すなわち未知の MIME タイプや不正な形式の値でない限り、常にデフォルトで選択されるようになりました。以前は `image/*`、`video/*`、`audio/*` が指定された場合に限り、デフォルトで選択されていました ([Firefox バグ 826185](https://bugzil.la/826185))。
+- [`<meta name="referrer">`](/ja/docs/Web/HTML/Reference/Elements/meta) をサポートしました ([Firefox バグ 704320](https://bugzil.la/704320))。
+- Firefox では {{HTMLElement("input")}} 要素の [`accept`](/ja/docs/Web/HTML/Reference/Elements/input#accept) 属性で指定したフィルターが未知の値、すなわち未知の MIME タイプや不正な形式の値でない限り、常にデフォルトで選択されるようになりました。以前は `image/*`、`video/*`、`audio/*` が指定された場合に限り、デフォルトで選択されていました ([Firefox バグ 826185](https://bugzil.la/826185))。
 
 ### JavaScript
 
@@ -111,8 +111,8 @@ _変更なし。_
 
 - RC4 は安全でないとみなすようになり、すべての UI インジケータがそのように対応します。また SSLv3 は Firefox 34 からデフォルトで無効になっていますが、何が起きているかをユーザーが理解しやすくなるように UI を変更しました ([Firefox バグ 1093595](https://bugzil.la/1093595))。
 - TLS の初期ハンドシェイクで RC4 を提示しないようになりました ([Firefox バグ 1088915](https://bugzil.la/1088915))。
-- CSP 1.1 の [`form-action`](/ja/docs/Web/HTTP/Headers/Content-Security-Policy#form-action) ディレクティブをサポートしました ([Firefox バグ 529697](https://bugzil.la/529697))。
-- Firefox のオプションで、[Do not track](/ja/docs/Web/HTTP/Headers/DNT) の設定ウィジェットを有効/無効の切り替えに戻しました ([Firefox バグ 1071747](https://bugzil.la/1071747))。
+- CSP 1.1 の [`form-action`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#form-action) ディレクティブをサポートしました ([Firefox バグ 529697](https://bugzil.la/529697))。
+- Firefox のオプションで、[Do not track](/ja/docs/Web/HTTP/Reference/Headers/DNT) の設定ウィジェットを有効/無効の切り替えに戻しました ([Firefox バグ 1071747](https://bugzil.la/1071747))。
 
 ## アドオン開発者と Mozilla 開発者向けの変更点
 
@@ -149,7 +149,7 @@ _変更なし。_
 - `TYPE_FETCH`
   - : {{domxref("Window/fetch", "fetch()")}} メソッドによって開始された、コンテンツの読み込みリクエストを示す。
 - `TYPE_IMAGESET`
-  - : {{HTMLElement("img")}} ([`srcset`](/ja/docs/Web/HTML/Element/img#srcset) 属性または {{HTMLElement("picture")}} 要素を読み込むリクエストを示す。
+  - : {{HTMLElement("img")}} ([`srcset`](/ja/docs/Web/HTML/Reference/Elements/img#srcset) 属性または {{HTMLElement("picture")}} 要素を読み込むリクエストを示す。
 
 ### XUL
 

@@ -1,11 +1,10 @@
 ---
 title: "HTML: アクセシビリティの良き基本"
+short-title: アクセシブルな HTML
 slug: Learn_web_development/Core/Accessibility/HTML
 l10n:
-  sourceCommit: 5b20f5f4265f988f80f513db0e4b35c7e0cd70dc
+  sourceCommit: b2c8dcdae36907a87d1d1b9393ca4a35ebc765d6
 ---
-
-{{LearnSidebar}}
 
 {{PreviousMenuNext("Learn_web_development/Core/Accessibility/Tooling","Learn_web_development/Core/Accessibility/CSS_and_JavaScript", "Learn_web_development/Core/Accessibility")}}
 
@@ -34,7 +33,7 @@ l10n:
 
 ## HTML とアクセシビリティ
 
-HTML について学習を進めるのにつれて — 資料をたくさん読んだり、たくさんの例を見たりするのにつれて — 共通の主題を繰り返し見続けることになるでしょう。つまり、意味的な（セマンティックな）HTML を使うことの重要性という主題です（これは、POSH すなわち Plain Old Semantic HTML（簡潔な昔ながらの意味的 HTML）と呼ばれることがあります）。これが意味することは、できる限り、ふさわしい HTML 要素をふさわしい目的に使う、ということです。
+HTML について学習を進めるにつれて — 資料をたくさん読んだり、たくさんの例を見たりするのにつれて — 共通の主題を繰り返し見続けることになるでしょう。つまり、意味的な（セマンティックな）HTML を使うことの重要性という主題です（これは、POSH すなわち Plain Old Semantic HTML（簡潔な昔ながらの意味的 HTML）と呼ばれることがあります）。これが意味することは、できる限り、ふさわしい HTML 要素をふさわしい目的に使う、ということです。
 
 これが何故それほど重要なのか、不思議に思うかもしれません。何しろ、CSS と JavaScript の組み合わせを使って、ほぼすべての HTML 要素を、どのような仕方であれ望みどおりに振る舞わせることができるわけですから。たとえば、サイト上で動画を再生するためのコントロールボタンを、次のようにマークアップすることもできます。
 
@@ -62,15 +61,15 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 
 良いセマンティクスの重要性について、そして、ふさわしい役割にふさわしい HTML 要素を使うべきである理由については、すでに述べました。このことは無視してはなりません。なぜなら、適切に扱わないとアクセシビリティがひどく損なわれてしまう主な箇所のうちの一つだからです。
 
-ウェブ上のどこかで、実は、人々は HTML のマークアップに関してとても変なことをしています。HTML の悪用のうちには、まだ完全に忘れ去られたわけではない過去の遺物的な慣行によるものもあり、ただ単純な無知によるものもあります。いずれにせよ、そうした駄目なコードは置き換えるべきです。
+ウェブ上では、人々は HTML マークアップに関して非常に奇妙なことをすることがあります。 HTML の誤用は、まだなくならない古い慣習が原因であることが多いですが、時には作成者がよく知らないために起こることもあります。 いずれにせよ、静的な HTML ページでも、[サーバー側](/ja/docs/Learn_web_development/Extensions/Server-side)のコードや React のような[クライアント側の JavaScript フレームワーク](/ja/docs/Learn_web_development/Core/Frameworks_libraries)から動的に生成される HTML でも、可能な限り悪いコードを良い意味づけマークアップに置き換えるべきです。
 
-ときには、駄目なマークアップを取り去れる状況にいるとは限りません。自分で完全に制御しきれるわけではない、ある種のサーバーサイドフレームワークによって、生成されたページかもしれません。あるいは、自分のページ上に、自分が管理していない（広告バナーのような）第三者のコンテンツを含むかもしれません。
+時には、質の悪いマークアップを削除できない状況に置かれることがあります。ページが、制御できないサーバー側コードやウェブ/フレームワーク部分に依存していたり、ページにサードパーティのコンテンツ（広告バナーなど）が入る可能性がある場合などです。
 
 しかし、目標は「全てか無か」というものではありません。自分ができる改善のことごとくが、アクセシビリティの理念に役立つことでしょう。
 
-### テキストコンテンツ
+### よく構造化されたテキストコンテンツを使う
 
-スクリーンリーダーのユーザーが得られる最良のアクセシビリティ支援の一つは、見出しや段落やリストなどの適切なコンテンツ構造です。きちんと意味を備えた例は、以下のようなものになるでしょう。
+スクリーンリーダーのユーザーが得られる最良のアクセシビリティ支援の一つは、見出しや段落やリストなどの適切なテキスト構造です。きちんと意味を備えた例は、以下のようなものになるでしょう。
 
 ```html-nolint example-good
 <h1>見出し</h1>
@@ -133,89 +132,19 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 
 アクセシビリティ以外の他の問題もあります。たとえば、 CSS を使ってコンテンツにスタイルをつけることや、あるいは、JavaScript でコンテンツを操作することが、より難しくなるのです。なぜなら、セレクターとして使える要素がないからです。
 
-#### 明確な言葉を使う
+### 明確な言葉を使う
 
 使っている言い回しもアクセシビリティに影響を与えることがあります。一般に、過度に複雑ではない、明確な言葉を使うべきです。また、不必要な専門用語（ジャーゴン）や俗語を使わないようにしましょう。これは、認知的な障碍またはその他の障碍を抱える人たちの助けとなるだけではありません。母語以外で書かれたテキストの読者や、年少者の助けにもなりますし、実際のところあらゆる人の助けになります。それに加えて、スクリーンリーダーによって明確に読み上げられない言い回しや文字を使うことを避けるように努めるべきです。たとえば、以下のようなことです。
 
 - やめられるものなら、ダッシュを使わないようにしましょう。「5–7」と書く代わりに「5 から 7」と書きましょう。
 - 略語を展開しましょう。"Jan" と書く代わりに "January" と書きましょう。
-- 少なくとも 1、2 回は、頭文字語を展開しましょう。そして [`<abbr>`](/ja/docs/Web/HTML/Element/abbr) を使用して説明しましょう。
+- 少なくとも 1、2 回は、頭文字語を展開しましょう。そして [`<abbr>`](/ja/docs/Web/HTML/Reference/Elements/abbr) を使用して説明しましょう。
 
-### ページレイアウト
+### ページセクションを論理的に構成する
 
-古き悪しき時代には、HTML 表を使って（つまり、ヘッダー、フッター、サイドバー、主要コンテンツの列、などなどを含む、別々の表セルを使って）、ページレイアウトを作成していたものです。これは良い考えではありません。なぜなら、スクリーンリーダーが、こんがらがった読み上げを発する可能性が高いからです。特に、レイアウトが複雑で多くの入れ子になった表がある場合には、そうなりがちです。
+適切な[区分化要素](/ja/docs/Web/HTML/Reference/Elements#content_sectioning)を使用してウェブページを構造化する必要があります。例えば、ナビゲーション ({{htmlelement("nav")}})、フッター ({{htmlelement("footer")}})、繰り返しコンテンツ単位 ({{htmlelement("article")}}) などです。これらは、スクリーンリーダー（および他のツール）に追加の意味論を指定し、ユーザーがナビゲートしているコンテンツに関する追加の手がかりを提供します。
 
-[table-layout.html](https://mdn.github.io/learning-area/accessibility/html/table-layout.html) の例を試してみてください。これは、以下のような感じになっています。
-
-```html
-<table width="1200">
-  <!-- 主要な見出しの行 -->
-  <tr id="heading">
-    <td colspan="6">
-      <h1 align="center">Header</h1>
-    </td>
-  </tr>
-  <!-- ナビゲーションメニューの行 -->
-  <tr id="nav" bgcolor="#ffffff">
-    <td width="200">
-      <a href="#" align="center">Home</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Our team</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Projects</a>
-    </td>
-    <td width="200">
-      <a href="#" align="center">Contact</a>
-    </td>
-    <td width="300">
-      <form width="300">
-        <label
-          >Search
-          <input
-            type="search"
-            name="q"
-            placeholder="Search query"
-            width="300" />
-        </label>
-      </form>
-    </td>
-    <td width="100">
-      <button width="100">Go!</button>
-    </td>
-  </tr>
-  <!-- 間隔をあけるための詰め物の行 -->
-  <tr id="spacer" height="10">
-    <td></td>
-  </tr>
-  <!-- 主要なコンテンツと余談の行 -->
-  <tr id="main">
-    <td id="content" colspan="4">
-      <!-- 主要なコンテンツがここに来る -->
-    </td>
-    <td id="aside" colspan="2" valign="top">
-      <h2>Related</h2>
-
-      <!-- 余談的コンテンツがここに来る -->
-    </td>
-  </tr>
-  <!-- 間隔をあけるための詰め物の行 -->
-  <tr id="spacer" height="10">
-    <td></td>
-  </tr>
-  <!-- フッターの行 -->
-  <tr id="footer">
-    <td colspan="6">
-      <p>©Copyright 1996 by nobody. All rights reversed.</p>
-    </td>
-  </tr>
-</table>
-```
-
-スクリーンリーダーを使用してこれを操作しようとすると、おそらく見るべき表があることを指示します（ただし、スクリーンリーダーによっては、表のレイアウトとデータ表の違いを推測することができます）。その後、（使用している画面のリーダーによりますが）オブジェクトとしての表の中に降りて、その機能を別個に見てから、再び表の外に出て、コンテンツをナビゲートしなければならない可能性があります。
-
-表レイアウトは過去の遺物です。CSSの対応がブラウザーに普及していなかったころは意味がありましたが、今ではスクリーンリーダーのユーザーを混乱させるだけです。さらに、表のソースコードにはより多くのマークアップが必要なため、柔軟性に欠け、メンテナンスが難しくなります。これらの主張は、以前の使い勝手と[より現代的なウェブサイト構造の例](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/)を比較することで確認できます。このような例は、次のようになります。
+例えば、現行のコンテンツ構造は、以下のようなものになるでしょう。
 
 ```html
 <header>
@@ -249,14 +178,11 @@ HTML の `<button>` は、ある種の適切なスタイルが（おそらくそ
 </footer>
 ```
 
-より現代的な構造の例をスクリーンリーダーで試してみると、レイアウトのマークアップがもはやコンテンツの読み上げを妨げたり、混乱を引き起こしたりしていないことに気づくでしょう。また、コードサイズもはるかにスリムで小さくなっているため、コードのメンテナンスが容易で、ユーザーがダウンロードする帯域幅も少なくて済み、低速接続のユーザーにとって特に有益です。
+[完全な例はこちら](https://mdn.github.io/learning-area/html/introduction-to-html/document_and_website_structure/)で見つかります。
 
-レイアウトを作る際に考慮すべきもう一つの事柄は、上記の例に見られるように HTML の意味的要素を用いることです（[コンテンツ区分](/ja/docs/Web/HTML/Element#コンテンツ区分)を参照）。入れ子になった {{htmlelement("div")}} 要素だけを使ってレイアウトを作ることもできますが、適切な区分要素を使って、主要なナビゲーション ({{htmlelement("nav")}}) やフッター ({{htmlelement("footer")}}) や繰り返し現れるコンテンツ単位 ({{htmlelement("article")}}) などを囲う方が良いのです。これらの区分け要素は、いまナビゲートしている最中のコンテンツについての追加的な手がかりをユーザーに与えられるように、スクリーンリーダー（および他のツール）に追加的な意味（セマンティクス）を提供してくれます（スクリーンリーダーの対応とはどのようなものなのかについての考え方に関しては、[Screen Reader Support for new HTML5 Section Elements](https://www.accessibilityoz.com/2020/02/html5-sectioning-elements-and-screen-readers/) を参照）。
+優れた意味づけと魅力的なレイアウトに加え、コンテンツは、そのソースの順序が論理的に意味をなしていなければなりません。後で CSS を使って常に好きな場所に配置することはできますが、最初にソースの順序を正しくしておくことで、スクリーンリーダーで読み上げられる内容が意味のあるものとなるのです。
 
-> [!NOTE]
-> 優れた意味づけと魅力的なレイアウトに加え、コンテンツは、そのソースの順序が論理的に意味をなしていなければなりません。後で CSS を使って常に好きな場所に配置することはできますが、最初にソースの順序を正しくしておくことで、スクリーンリーダーで読み上げられる内容が意味のあるものとなるのです。
-
-### UI コントロール
+### 可能であれば意味のある UI コントロールを使う
 
 UI コントロールとは、ウェブ文書内のユーザーが対話する主要な部分を意味します。最も一般的なのは、ボタン、リンク、およびフォームコントロールです。この節では、このようなコントロールを作成する際に注意すべき基本的なアクセシビリティの懸念について見ていきます。WAI-ARIAとマルチメディアに関するこの後の記事では、UIアクセシビリティの他の側面について見ていきます。
 
@@ -313,7 +239,7 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 
 これは、リンクやボタンやフォーム要素やラベルを適切に用いることを意味しています（フォームコントロール用の {{htmlelement("label")}} 要素を含みます）。
 
-しかし、やはり人々は HTML で何かと変なことをするものです。例えば、{{htmlelement("div")}} を使用してマークアップされたボタンなどを時々見かけますね。
+しかし、これも HTML では時々奇妙なことが起こるケースの 1 つです。例えば、{{htmlelement("div")}} を使用してマークアップされたボタンなどを時々見かけますね。
 
 ```html-nolint example-bad
 <div data-message="This is from the first button">クリックしてください</div>
@@ -321,7 +247,7 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 <div data-message="This is from the third button">こちらも！</div>
 ```
 
-しかし、このようなコードを使用することはお勧めできません。{{htmlelement("button")}} 要素を使用した場合に得られるはずだった、ネイティブのキーボードアクセシビリティを直ちに失い、さらにボタンが取得する既定の CSS スタイル設定も得られません。ボタン以外の要素をボタンに使用する必要がある場合は、[`button` ロール](/ja/docs/Web/Accessibility/ARIA/Roles/button_role)を使用し、キーボードとマウスボタンの対応を含む、すべての既定のボタン動作を実装してください。
+しかし、このようなコードを使用することはお勧めできません。{{htmlelement("button")}} 要素を使用した場合に得られるはずだった、ネイティブのキーボードアクセシビリティを直ちに失い、さらにボタンが取得する既定の CSS スタイル設定も得られません。ボタン以外の要素をボタンに使用する必要がある場合は、[`button` ロール](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/button_role)を使用し、キーボードとマウスボタンの対応を含む、すべての既定のボタン動作を実装してください。
 
 #### キーボードアクセシビリティを呼び戻すように盛り込む
 
@@ -339,12 +265,12 @@ UI コントロールのアクセシビリティに対する一つの重要な�
 </div>
 ```
 
-基本的に、[`tabindex`](/ja/docs/Web/HTML/Global_attributes#tabindex) 属性は、タブ移動可能な要素に、単に既定のソース順でタブ処理されるのではなく、独自のタブ順序（正の値の順序で指定されます）を持たせるためのものです。これは大きな混乱を発生させる可能性があるため、常に悪い考えです。本当に必要な場合にのみ使用してください。例えば、レイアウトがソースコードとはまったく異なる形で視覚的に物を示していて、より論理的に作業させたい場合などです。`tabindex` のオプションは、他にも 2 種類あります。
+基本的に、[`tabindex`](/ja/docs/Web/HTML/Reference/Global_attributes/tabindex) 属性は、タブ移動可能な要素に、単に既定のソース順でタブ処理されるのではなく、独自のタブ順序（正の値の順序で指定されます）を持たせるためのものです。これは大きな混乱を発生させる可能性があるため、常に悪い考えです。本当に必要な場合にのみ使用してください。例えば、レイアウトがソースコードとはまったく異なる形で視覚的に物を示していて、より論理的に作業させたい場合などです。`tabindex` のオプションは、他にも 2 種類あります。
 
 - `tabindex="0"` — 上記のとおり、この値によって、普通ならタブキーでの移動が可能ではない要素が、タブキーでの移動が可能となります。これは、`tabindex` の一番有益な値です。
 - `tabindex="-1"` — これによって、普通ならタブキーでの移動が可能ではない要素が、（たとえば JavaScript を介して）プログラム的にフォーカスを得たり、あるいはリンクのターゲットとしてフォーカスを得たりすることが可能となります。
 
-上記のような追加作業によって、タブキーでボタンに移動できるようにはなりますが、<kbd>Enter</kbd> / <kbd>リターン</kbd>キーを介してボタンをアクティブにすることはできるようになりません。それを可能とするには、以下のようなちょっとした JavaScript のごまかしを追加せねばなりません。
+上記のような追加作業によって、タブキーでボタンに移動できるようにはなりますが、<kbd>Enter</kbd> / <kbd>リターン</kbd>キーを介してボタンをアクティブにすることはできるようになりません。それを可能とするには、以下のようなちょっとした JavaScript を追加しなければなりません。
 
 ```js
 document.onkeydown = (e) => {
@@ -359,7 +285,7 @@ document.onkeydown = (e) => {
 
 これでは、機能を作り直すのに余計な手間がかかります。それに、他にも問題があるはずです。**そもそも、単にふさわしい要素をふさわしい役割に使うべきなのです。**
 
-#### 意味の通るテキストラベル
+#### 意味の通るテキストラベルを使う
 
 UI コントロールのテキストラベルはあらゆるユーザーにとって大変有益ですが、そうしたラベルを適切なものにしておくことは、とりわけ、障碍のあるユーザーにとって重要です。
 
@@ -500,7 +426,7 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 考慮すべきことのひとつは、画像がコンテンツの中で意味をもっているのか、それとも純粋に視覚的な装飾であり、意味をもたないのか、ということです。もし装飾用であれば、`alt` 属性の値として空のテキストを書くか（[空の alt 属性](#空の_alt_属性)を参照）、CSS の背景画像としてページに記載するだけにした方がよいでしょう。
 
 > [!NOTE]
-> 画像の実装とベストプラクティスについての更なる多くの情報については、[HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)と[レスポンシブ画像](/ja/docs/Web/HTML/Responsive_images)をお読みください。
+> 画像の実装とベストプラクティスについての更なる多くの情報については、[HTML の画像](/ja/docs/Learn_web_development/Core/Structuring_content/HTML_images)と[レスポンシブ画像](/ja/docs/Web/HTML/Guides/Responsive_images)をお読みください。
 > また、さまざまな状況で画像にalt属性を使用する方法を学ぶために、代替の決定木を調べることもできます。また、 [alt の決定木](https://www.w3.org/WAI/tutorials/images/decision-tree/)を調べるために、さまざまな状況で画像に alt 属性を使用する方法を学ぶこともできます。
 
 文脈のある追加的な情報をどうしても提示したい場合、その情報は、画像の周囲のテキストの中か、あるいは、上記のように `title` 属性の内部に入れるべきです。この場合、ほとんどのスクリーンリーダーは、alt テキストと、title 属性と、ファイル名とを読み上げるでしょう。さらに、マウスオーバーしたときには、ブラウザーが title テキストをツールチップとして表示します。
@@ -517,7 +443,7 @@ UI コントロールのテキストラベルはあらゆるユーザーにと�
 
 この場合、`alt` 属性をまったく使っていません。その代わり、画像についての説明を通常のテキスト段落として提示し、その段落に `id` を与え、そして、その `id` を参照するための `aria-labelledby` 属性を用いました。こうすると、スクリーンリーダーに、その段落をその画像についての代替テキスト / ラベルとして使わせることになります。これは、複数の画像に対して同じテキストをラベルとして使いたい場合に、とりわけ有用です（これは、`alt` ではできません）。
 
-> **メモ:** [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
+> **メモ:** [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) は [WAI-ARIA](https://www.w3.org/TR/wai-aria-1.1/) 仕様の一部です。これのおかげで開発者は、必要な箇所においてスクリーンリーダーのアクセシビリティを高めるために、自分のマークアップに追加的な意味（セマンティクス）を足すことができます。
 
 ### figure と figcaption
 
@@ -535,7 +461,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 </figure>
 ```
 
-スクリーンリーダーによる図のキャプションとその図の関連付けの対応はまちまちですが、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-labelledby) や [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Attributes/aria-describedby) は、もしキャプションがなければその関連を作成してくれるものです。とは言え、この要素構造は CSS スタイル設定に有益であり、加えてソース中の画像の横に説明文を配置する方法を提供します。
+スクリーンリーダーによる図のキャプションとその図の関連付けの対応はまちまちですが、 [`aria-labelledby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-labelledby) や [`aria-describedby`](/ja/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-describedby) は、もしキャプションがなければその関連を作成してくれるものです。とは言え、この要素構造は CSS スタイル設定に有益であり、加えてソース中の画像の横に説明文を配置する方法を提供します。
 
 ### 空の alt 属性
 
@@ -548,20 +474,20 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 ページのデザインに画像が含まれることがありますが、その主な目的は視覚的な装飾です。上のサンプルコードでは、画像の `alt` 属性が空であることにお気づきでしょう。これは、スクリーンリーダーに画像を認識させるためですが、画像を説明しようとはしません（代わりに、「画像」または同様の表現をするだけです）。
 
-`alt` を含めないようにする代わりに空の `alt` を用いる理由は、`alt` が与えられていない場合には多くのスクリーンリーダーが画像の URL を丸々全部発声するからです。上記の例において画像は、その画像が結びつけられている見出しに対する視覚的装飾として機能しています。このような場合、および、画像が単に装飾にすぎず中身の価値がない場合には、空の `alt` を `img` 要素に入れるべきです。別の選択肢は、[`role="presentation"`](/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role) という ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Roles) 属性を使うことです。こうすることによっても、スクリーンリーダーに代替テキスト（`alt` テキスト）を読み上げるのをやめさせることができます。
+`alt` を含めないようにする代わりに空の `alt` を用いる理由は、`alt` が与えられていない場合には多くのスクリーンリーダーが画像の URL を丸々全部発声するからです。上記の例において画像は、その画像が結びつけられている見出しに対する視覚的装飾として機能しています。このような場合、および、画像が単に装飾にすぎず中身の価値がない場合には、空の `alt` を `img` 要素に入れるべきです。もう一つの選択肢は、 ARIA の [`role`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles) 属性を使うことで [`role="presentation"`](/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role) とすることです。こうすることによっても、スクリーンリーダーに代替テキストを読み上げるのをやめさせることができます。
 
 > [!NOTE]
 > もし可能なら、単なる修飾であるような画像を表示するのには CSS を使うべきです。
 
 ## リンクについての追加事項
 
-リンク（[`<a>`](/ja/docs/Web/HTML/Element/a) 要素と `href` 属性）は、その使用方法によってアクセシビリティを向上させたり、害したりする可能性があります。既定では、リンクは外観上アクセシビリティが確保されています。リンクにより、ユーザーが文書内の様々なセクションにすばやく移動できるようにすることで、アクセシビリティが向上します。また、アクセシブルなスタイル設定が削除されたり、JavaScript で予期しない動作をさせられたりすると、アクセシビリティに害を与えることもあります。
+リンク（[`<a>`](/ja/docs/Web/HTML/Reference/Elements/a) 要素と `href` 属性）は、その使用方法によってアクセシビリティを向上させたり、害したりする可能性があります。既定では、リンクは外観上アクセシビリティが確保されています。リンクにより、ユーザーが文書内の様々なセクションにすばやく移動できるようにすることで、アクセシビリティが向上します。また、アクセシブルなスタイル設定が削除されたり、JavaScript で予期しない動作をさせられたりすると、アクセシビリティに害を与えることもあります。
 
 ### リンクのスタイル付け
 
 既定では、リンクは色と [text-decoration](/ja/docs/Web/CSS/text-decoration) の両方で他のテキストと視覚的に異なります。既定ではリンクは青で下線、閲覧済みでは紫で下線、キーボードフォーカスを受けると [focus-ring](/ja/docs/Web/CSS/:focus) が付きます。
 
-色は、リンクとそうでないコンテンツを判別する唯一の方法として使用すべきではありません。リンクテキストの色は、すべてのテキストと同様に、背景色と大きく異なっていなければなりません（[a 4.5:1 contrast](/ja/docs/Web/Accessibility/Understanding_WCAG/Perceivable/Color_contrast)）。さらにリンクは、リンクしていないテキストと視覚的に大きく異なる必要があり、リンクテキストと周囲のテキスト、既定値、訪問済み、フォーカス/アクティブの各状態間のコントラストは最低 3:1、それらすべての状態と背景色のコントラストは 4.5:1 が要求されています。
+色は、リンクとそうでないコンテンツを判別する唯一の方法として使用すべきではありません。リンクテキストの色は、すべてのテキストと同様に、背景色と大きく異なっていなければなりません（[a 4.5:1 contrast](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Perceivable/Color_contrast)）。さらにリンクは、リンクしていないテキストと視覚的に大きく異なる必要があり、リンクテキストと周囲のテキスト、既定値、訪問済み、フォーカス/アクティブの各状態間のコントラストは最低 3:1、それらすべての状態と背景色のコントラストは 4.5:1 が要求されています。
 
 ### `onclick` イベント
 
@@ -591,10 +517,10 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 >
 ```
 
-このようなリンクの動作を示すために、テキストの代わりにアイコンを使用する場合は、[代替テキスト](/ja/docs/Web/HTML/Element/img#alt)を必ず含めてください。
+このようなリンクの動作を示すために、テキストの代わりにアイコンを使用する場合は、[代替テキスト](/ja/docs/Web/HTML/Reference/Elements/img#alt)を必ず含めてください。
 
 - [WebAIM: Links and Hypertext - Hypertext Links](https://webaim.org/techniques/hypertext/hypertext_links)
-- [MDN WCAG を理解する、ガイドライン 3.2 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
+- [MDN WCAG を理解する、ガイドライン 3.2 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Understandable#guideline_3.2_—_predictable_make_web_pages_appear_and_operate_in_predictable_ways)
 - [G200: Opening new windows and tabs from a link only when necessary | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G200.html)
 - [G201: Giving users advanced warning when opening a new window | W3C Techniques for WCAG 2.0](https://www.w3.org/TR/WCAG20-TECHS/G201.html)
 
@@ -606,7 +532,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 - [WebAIM: "Skip Navigation" Links](https://webaim.org/techniques/skipnav/)
 - [How–to: Use Skip Navigation links - The A11Y Project](https://www.a11yproject.com/posts/skip-nav-links/)
-- [MDN WCAG を理解する、ガイドライン 2.4 の説明](/ja/docs/Web/Accessibility/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
+- [MDN WCAG を理解する、ガイドライン 2.4 の説明](/ja/docs/Web/Accessibility/Guides/Understanding_WCAG/Operable#guideline_2.4_%e2%80%94_navigable_provide_ways_to_help_users_navigate_find_content_and_determine_where_they_are)
 - [Understanding Success Criterion 2.4.1 | W3C Understanding WCAG 2.0](https://www.w3.org/TR/UNDERSTANDING-WCAG20/navigation-mechanisms-skip.html)
 
 ### 近接性
@@ -619,7 +545,7 @@ HTML には、{{htmlelement("figure")}} と {{htmlelement("figcaption")}} とい
 
 ## スキルをテストしましょう
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: HTML アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills:_HTML_accessibility) を参照して、この情報を覚えているかどうかを確認しましょう。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？先に進む前に、[スキルテスト: HTML アクセシビリティ](/ja/docs/Learn_web_development/Core/Accessibility/Test_your_skills/HTML) を参照して、この情報を覚えているかどうかを確認しましょう。
 
 ## 要約
 

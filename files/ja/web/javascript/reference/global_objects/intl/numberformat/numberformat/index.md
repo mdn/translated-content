@@ -36,8 +36,6 @@ console.log(
 // Expected output: "1,23,000"
 ```
 
-<!-- このデモのソースファイルは GitHub リポジトリに格納されています。デモプロジェクトに協力したい場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
-
 ## 構文
 
 ```js
@@ -48,8 +46,7 @@ new Intl.NumberFormat([locales[, options]])
 
 - `locales` {{optional_inline}}
 
-  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列。 `locales` 引数の一般的な形式と解釈については、 {{jsxref("Global_Objects/Intl", "Intl",
-    "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。次の Unicode 拡張キーが許可されています。
+  - : BCP 47 言語タグを持つ文字列、またはそのような文字列の配列。 `locales` 引数の一般的な形式と解釈については、 {{jsxref("Global_Objects/Intl", "Intl", "#ロケールの識別とネゴシエーション", 1)}} のページを参照してください。次の Unicode 拡張キーが許可されています。
 
     - `nu`
       - : 使用される数値システムです。指定可能な値には "`adlm`", "`ahom`", "`arab`", "`arabext`", "`bali`", "`beng`", "`bhks`", "`brah`", "`cakm`", "`cham`", "`deva`", "`diak`", "`fullwide`", "`gong`", "`gonm`", "`gujr`", "`guru`", "`hanidec`", "`hmng`", "`hmnp`", "`java`", "`kali`", "`khmr`", "`knda`", "`lana`", "`lanatham`", "`laoo`", "`latn`", "`lepc`", "`limb`", "`mathbold`", "`mathdbl`", "`mathmono`", "`mathsanb`", "`mathsans`", "`mlym`", "`modi`", "`mong`", "`mroo`", "`mtei`", "`mymr`", "`mymrshan`", "`mymrtlng`", "`newa`", "`nkoo`", "`olck`", "`orya`", "`osma`", "`rohg`", "`saur`", "`segment`", "`shrd`", "`sind`", "`sinh`", "`sora`", "`sund`", "`takr`", "`talu`", "`tamldec`", "`telu`", "`thai`", "`tibt`", "`tirh`", "`vaii`", "`wara`", "`wcho`" があります。 [標準 Unicode 命数法一覧](/ja/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/numberingSystem) を参照してください。

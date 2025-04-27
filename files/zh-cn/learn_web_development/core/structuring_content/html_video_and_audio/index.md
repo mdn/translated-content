@@ -1,12 +1,11 @@
 ---
 title: 视频和音频内容
 slug: Learn_web_development/Core/Structuring_content/HTML_video_and_audio
-original_slug: Learn/HTML/Multimedia_and_embedding/Video_and_audio_content
 l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/HTML_images", "Learn_web_development/Core/Structuring_content/Mozilla_splash_page", "Learn_web_development/Core/Structuring_content")}}
 
 现在我们已经可以轻松地为网页添加简单的图像，下一步我们开始为 HTML 文档添加音频和视频播放器。在这篇文章中，我们会使用 {{htmlelement("video")}} 和 {{htmlelement("audio")}} 元素来完成这件事；然后我们还会了解如何为视频添加标题/字幕。
 
@@ -62,9 +61,9 @@ l10n:
 
 值得注意的特性有：
 
-- [`src`](/zh-CN/docs/Web/HTML/Element/video#src)
+- [`src`](/zh-CN/docs/Web/HTML/Reference/Elements/video#src)
   - : 同 {{htmlelement("img")}} 元素的使用方式相同，`src`（来源）属性指向你想要嵌入到网页中的视频资源，它们的运作方式完全相同。
-- [`controls`](/zh-CN/docs/Web/HTML/Element/video#controls)
+- [`controls`](/zh-CN/docs/Web/HTML/Reference/Elements/video#controls)
   - : 用户应当能够控制视频和音频的播放（这对于患有[癫痫](https://zh.wikipedia.org/wiki/癫痫#病因)的人来说尤为重要）。你必须使用 `controls` 属性来让视频或音频包含浏览器自带的控制界面，或者使用适当的 [JavaScript API](/zh-CN/docs/Web/API/HTMLMediaElement) 构建自己的界面。至少，界面必须包括启动和停止媒体以及调整音量的方法。
 - `<video>` 元素内的段落
   - : 这个叫做**后备内容**，当浏览器不支持 `<video>` 元素的时候，就会显示这段内容，借此我们能够对旧的浏览器提供回退。你可以添加任何后备内容，在这个例子中我们提供了一个指向这个视频文件的链接，从而使用户至少可以访问到这个文件，而不会局限于浏览器的支持。
@@ -128,7 +127,7 @@ l10n:
 
 在这里我们将 `src` 属性从 `<video>` 元素中移除，转而将它放在几个单独的 {{htmlelement("source")}} 元素当中，这些元素分别指向各自的资源。在本例当中，浏览器会检查 {{HTMLElement("source")}} 元素，并且播放第一个与其自身 codec 相匹配的媒体。WebM 和 MP4 这两种格式在目前已经足够，只要视频支持这两种格式，那么其在大多数平台和浏览器上都能正确播放。
 
-每个 `<source>` 元素都含有 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，这个属性是可选的，但是建议你添加这个属性——它包含了 `<source>` 指定的 {{glossary("MIME type","MIME 类型")}}，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。如果你没有添加 `type` 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，但是这样会消耗掉大量的时间和资源。
+每个 `<source>` 元素都含有 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/source#type) 属性，这个属性是可选的，但是建议你添加这个属性——它包含了 `<source>` 指定的 {{glossary("MIME type","MIME 类型")}}，同时浏览器也会通过检查这个属性来迅速的跳过那些不支持的格式。如果你没有添加 `type` 属性，浏览器会尝试加载每一个文件，直到找到一个能正确播放的格式，但是这样会消耗掉大量的时间和资源。
 
 请参考我们的[媒体类型和格式指南](/zh-CN/docs/Web/Media/Guides/Formats)，以选择最适合你的需求的容器和编解码器，同时查找合适的 MIME 类型以指定每种媒体类型。
 
@@ -158,17 +157,17 @@ l10n:
 
 特性包括：
 
-- [`width`](/zh-CN/docs/Web/HTML/Element/video#width) 和 [`height`](/zh-CN/docs/Web/HTML/Element/video#height)
+- [`width`](/zh-CN/docs/Web/HTML/Reference/Elements/video#width) 和 [`height`](/zh-CN/docs/Web/HTML/Reference/Elements/video#height)
   - : 你可以用属性控制视频的尺寸，也可以用 {{Glossary("CSS")}} 来控制视频尺寸。无论使用哪种方式，视频都会保持它原始的长宽比——也叫做**纵横比**。如果你设置的尺寸没有保持视频原始长宽比，那么视频边框将会拉伸，而未被视频内容填充的部分，将会显示默认的背景颜色。
-- [`autoplay`](/zh-CN/docs/Web/HTML/Element/video#autoplay)
+- [`autoplay`](/zh-CN/docs/Web/HTML/Reference/Elements/video#autoplay)
   - : 这个属性会使音频和视频内容立即播放，即使页面的其他部分还没有加载完全。建议不要在你的网站上自动播放视频（或音频），因为用户可能会反感。
-- [`loop`](/zh-CN/docs/Web/HTML/Element/video#loop)
+- [`loop`](/zh-CN/docs/Web/HTML/Reference/Elements/video#loop)
   - : 这个属性可以让视频（或者音频）文件在结束时再次开始播放。这个也可能很恼人，同样不建议使用，除非有必要。
-- [`muted`](/zh-CN/docs/Web/HTML/Element/video#muted)
+- [`muted`](/zh-CN/docs/Web/HTML/Reference/Elements/video#muted)
   - : 这个属性会导致媒体播放时，默认关闭声音。
-- [`poster`](/zh-CN/docs/Web/HTML/Element/video#poster)
+- [`poster`](/zh-CN/docs/Web/HTML/Reference/Elements/video#poster)
   - : 这个属性指向了一个图像的 URL，这个图像会在视频播放前显示。通常用于粗略的预览或者广告。
-- [`preload`](/zh-CN/docs/Web/HTML/Element/video#preload)
+- [`preload`](/zh-CN/docs/Web/HTML/Reference/Elements/video#preload)
 
   - : 这个属性被用来缓冲较大的文件，有三个值可选：
 
@@ -246,7 +245,7 @@ WEBVTT
 要让其与 HTML 媒体一起显示，你需要做如下工作：
 
 1. 将其保存为 `.vtt` 文件，放在服务器可以提供服务的地方（见下文），例如和 HTML 文件放在同一文件夹。
-2. 用 {{htmlelement("track")}} 标签链接 `.vtt` 文件，`<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Element/track#kind) 属性来指明是 `subtitles`、`captions` 还是 `descriptions`。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Element/track#srclang) 来告诉浏览器你是用什么语言来编写的 subtitles。最后，添加 [`label`](/zh-CN/docs/Web/HTML/Element/track#label)，以帮助读者在查找时识别语言。
+2. 用 {{htmlelement("track")}} 标签链接 `.vtt` 文件，`<track>` 标签需放在 `<audio>` 或 `<video>` 标签当中，同时需要放在所有 `<source>` 标签之后。使用 [`kind`](/zh-CN/docs/Web/HTML/Reference/Elements/track#kind) 属性来指明是 `subtitles`、`captions` 还是 `descriptions`。然后，使用 [`srclang`](/zh-CN/docs/Web/HTML/Reference/Elements/track#srclang) 来告诉浏览器你是用什么语言来编写的 subtitles。最后，添加 [`label`](/zh-CN/docs/Web/HTML/Reference/Elements/track#label)，以帮助读者在查找时识别语言。
 
 如下是例子：
 
@@ -278,7 +277,7 @@ WEBVTT
 1. 将你的音频和视频文件保存在你电脑上的一个新目录中。
 2. 在相同的路径下，创建一个新的 HTML 文件，命名为 `index.html`。
 3. 在页面上添加 {{HTMLElement("audio")}} 和 {{HTMLElement("video")}} 元素；让它们显示浏览器默认的控件。
-4. 在当中添加 {{HTMLElement("source")}} 标签，并添加 [`type`](/zh-CN/docs/Web/HTML/Element/source#type) 属性，以便于浏览器能够找到其能够支持的格式并加载它。
+4. 在当中添加 {{HTMLElement("source")}} 标签，并添加 [`type`](/zh-CN/docs/Web/HTML/Reference/Elements/source#type) 属性，以便于浏览器能够找到其能够支持的格式并加载它。
 5. 在 `<video>` 元素中添加 `poster` 属性，这会在视频播放之前显示。尽情创作属于自己的海报图形吧。
 
 另外，你可以尝试研究一下文本音轨，试着为你的视频添加一些字幕。

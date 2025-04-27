@@ -9,7 +9,7 @@ l10n:
 {{APIRef("HTML DOM")}} {{Deprecated_Header}}
 
 **`HTMLStyleElement.type`** プロパティは、現在のスタイルの種類を返します。
-この値は [HTML の `<style>` 要素の `type` 属性](/ja/docs/Web/HTML/Element/style#type)の値を反映します。
+この値は [HTML の `<style>` 要素の `type` 属性](/ja/docs/Web/HTML/Reference/Elements/style#type)の値を反映します。
 
 作者はこのプロパティを使用したり、値に頼ったりしてはいけません。
 

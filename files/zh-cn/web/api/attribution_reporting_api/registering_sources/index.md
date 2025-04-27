@@ -47,7 +47,7 @@ l10n:
      在这种情况下，唯一必需的字段是 `destination`，它指定 1–3 个触发器预期触发的站点。它们用于在与触发器交互时将归因触发器与来源进行匹配。上述指定的其他字段如下：
 
      - `"source_event_id"`：一个表示归因来源的 ID 的字符串，可以用于在归因来源被交互时将其映射到其他信息，或在报告端点（见[生成报告 > 基本流程](/zh-CN/docs/Web/API/Attribution_Reporting_API/Generating_reports#基本流程)获取端点信息）聚合信息。
-     - `"trigger_data"`：一个 32 位无符号整数数组，表示可能匹配此来源的不同触发事件的数据。例如，“用户将商品添加到购物车”或“用户注册了邮件列表”可以是触发站点上发生的事件，这些事件可以匹配此来源并表示广告主试图衡量的某种转化。它们必须与[触发器](/zh-CN/docs/Web/HTTP/Headers/Attribution-Reporting-Register-Trigger#trigger_data)中指定的 `"trigger_data"` 匹配，以便进行事件级归因。
+     - `"trigger_data"`：一个 32 位无符号整数数组，表示可能匹配此来源的不同触发事件的数据。例如，“用户将商品添加到购物车”或“用户注册了邮件列表”可以是触发站点上发生的事件，这些事件可以匹配此来源并表示广告主试图衡量的某种转化。它们必须与[触发器](/zh-CN/docs/Web/HTTP/Reference/Headers/Attribution-Reporting-Register-Trigger#trigger_data)中指定的 `"trigger_data"` 匹配，以便进行事件级归因。
        > [!NOTE]
        > 用于表示每个事件的值，以及数组中的元素数量，都是完全任意的，由作为开发者的你定义。数组中可以包含未使用的值，但必须存在值，以便浏览器在触发器注册时将其归因于来源。
      - `"trigger_data_matching"`：一个字符串，指定如何将触发器的 `"trigger_data"` 与来源的 `"trigger_data"` 匹配。`"exact"` 是你几乎总是会使用的值，它匹配精确值。

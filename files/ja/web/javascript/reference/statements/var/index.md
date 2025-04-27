@@ -40,7 +40,7 @@ var name1 = value1, name2, /* …, */ nameN = valueN;
 - `valueN` {{optional_inline}}
   - : その変数の初期値です。有効な式なら何でも取ることができます。既定値は `undefined` です。
 
-あるいは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment)を使用して変数を宣言することもできます。
+あるいは、[分割代入](/ja/docs/Web/JavaScript/Reference/Operators/Destructuring)を使用して変数を宣言することもできます。
 
 ```js
 var { bar } = foo; // where foo = { bar:10, baz:12 };

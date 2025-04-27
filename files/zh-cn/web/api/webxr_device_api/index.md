@@ -72,7 +72,7 @@ WebXR Device API 受到一系列许可与安全性的控制。这些控制不涉
 
 #### VR 的沉浸式（immersive）
 
-首先，如果域名不支持请求有权限打开沉浸模式，那么 `immersive-vr` 模式就会被拒绝。这个权限管理来自`xr-spatial-tracking` [特征策略](/zh-CN/docs/Web/HTTP/Permissions_Policy)。
+首先，如果域名不支持请求有权限打开沉浸模式，那么 `immersive-vr` 模式就会被拒绝。这个权限管理来自`xr-spatial-tracking` [特征策略](/zh-CN/docs/Web/HTTP/Guides/Permissions_Policy)。
 
 一旦有权限了，申请开启 `immersive-vr` 模式的请求还需要再检查以下三点，全部满足才能开启：
 
