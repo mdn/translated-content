@@ -3,7 +3,7 @@ title: "Window: reportError() method"
 short-title: reportError()
 slug: Web/API/Window/reportError
 l10n:
-  sourceCommit: v
+  sourceCommit: a44e9fc017ec15af0b8e0c0101ea895b9cb30522
 ---
 
 {{APIRef("DOM")}}
