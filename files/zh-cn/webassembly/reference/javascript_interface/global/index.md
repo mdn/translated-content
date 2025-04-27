@@ -14,12 +14,12 @@ l10n:
 
 ## Global 实例
 
-所有的 `Global` 实例继承自 `Global()` 构造函数的原型对象——修改它会影响所有 `Global` 实例。
+所有的 `Global` 实例继承自 `Global()` 构造函数的原型对象——修改它会影响所有的 `Global` 实例。
 
 ### 实例属性
 
 - `Global.prototype.constructor`
-  - : 返回创建这个对象的实例的函数。默认是 [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global) 构造函数。
+  - : 返回创建这个对象的实例的函数。默认是 [`WebAssembly.Global()`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Global/Global) 构造函数。
 - `Global.prototype[Symbol.toStringTag]`
   - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串值“WebAssembly.Global”。
 - `Global.prototype.value`
@@ -36,7 +36,7 @@ l10n:
 
 下面的例子展示的是用 `WebAssembly.Global()` 构造函数创建一个新的 global 实例。它被定义为可变的 `i32` 类型，值为 0。
 
-然后改变 global 的值，首先用`Global.value` 属性设置为 `42`，然后用从 `global.wasm` 导出的函数 `incGlobal()` 设置为 43(它将参数的值加 1 并返回)。
+然后改变 global 的值，首先用 `Global.value` 属性设置为 `42`，然后用从 `global.wasm` 导出的函数 `incGlobal()` 设置为 43(它将接收到的参数的值加 1 并返回)。
 
 ```js
 const output = document.getElementById("output");
