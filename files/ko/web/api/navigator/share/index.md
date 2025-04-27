@@ -10,7 +10,7 @@ l10n:
 
 {{domxref("Navigator")}} 인터페이스의 **`share()`** 메서드는 디바이스의 기본 공유 메커니즘을 호출하여 텍스트, URL 또는 파일 등의 데이터를 공유합니다. 사용 가능한 공유 대상은 장치에 따라 다르지만 클립보드, 연락처 및 이메일 애플리케이션, 웹사이트, 블루투스 등이 포함될 수 있습니다.
 
-이 메서드는 {{jsxref("Promise")}}를 `undefined`로 resolve 합니다. Windows에서는 이는 공유 팝업이 실행될 때 발생하며, Android에서는 데이터가 공유 대상에 성공적으로 전달될 때 Promise가 resolve 됩니다.
+이 메서드는 `undefined`로 완료되는 {{jsxref("Promise")}}를 반환합니다. Windows에서는 이는 공유 팝업이 열릴 때 Promis가 완료되고, Android에서는 데이터가 성공적으로 공유 대상에 전달된 후 완료됩니다.
 
 [Web Share API](/ko/docs/Web/API/Web_Share_API)는 [web-share](/ko/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) permission policy에 의해 보호됩니다.
 권한이 지원되지만 허용되지 않은 경우 `share()` 메서드는 예외를 던집니다.
