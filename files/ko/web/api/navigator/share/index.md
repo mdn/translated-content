@@ -1,5 +1,5 @@
 ---
-title: Navigator : share() 메서드
+title: "Navigator : share() 메서드"
 short-title: share()
 slug: Web/API/Navigator/share
 l10n:
