@@ -1,9 +1,11 @@
 ---
 title: WebAssembly.Global
 slug: WebAssembly/Reference/JavaScript_interface/Global
+l10n:
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-**`WebAssembly.Global`** 对象表示一个全局变量实例，可以被 JavaScript 和 importable/exportable 访问，跨越一个或多个 {{jsxref("WebAssembly.Module")}} 实例。他允许被多个模块动态连接。
+**`WebAssembly.Global`** 对象表示一个全局变量实例，可以从 JavaScript 访问，也可以从一个或多个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 实例的导入/导出访问。这允许动态链接多个模块。
 
 ## 构造函数
 
@@ -12,14 +14,14 @@ slug: WebAssembly/Reference/JavaScript_interface/Global
 
 ## Global 实例
 
-所有的 `Global` 实例继承自 `Global()` 构造函数的原型对象——修改会影响 所有 `Global` 实例。
+所有的 `Global` 实例继承自 `Global()` 构造函数的原型对象——修改它会影响所有 `Global` 实例。
 
 ### 实例属性
 
 - `Global.prototype.constructor`
-  - : 返回创建对象实例的函数。缺省为构造函数为 {{jsxref("WebAssembly.Global()")}}
+  - : 返回创建这个对象的实例的函数。默认是 [`WebAssembly.Global()`](/en-US/docs/WebAssembly/Reference/JavaScript_interface/Global/Global) 构造函数。
 - `Global.prototype[Symbol.toStringTag]`
-  - : 属性 [Symbol.toStringTag](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 初始值为字符串“WebAssembly.Global”。
+  - : [`[Symbol.toStringTag]`](/zh-CN/docs/Web/JavaScript/Reference/Global_Objects/Symbol/toStringTag) 属性的初始值为字符串值“WebAssembly.Global”。
 - `Global.prototype.value`
   - : 全局变量包含的值——可以直接用于设置和获取全局变量的值。
 
@@ -30,47 +32,48 @@ slug: WebAssembly/Reference/JavaScript_interface/Global
 
 ## 示例
 
-### 创建 Global 实例
+### 创建一个新的 Global 实例
 
-以下例子展示了使用 `WebAssembly.Global()` 构造函数创建一个新的实例。它定义为可修饰的类型为`i32`，值为 0。
+下面的例子展示的是用 `WebAssembly.Global()` 构造函数创建一个新的 global 实例。它被定义为可变的 `i32` 类型，值为 0。
 
-global 的值发生改变，首先设置`Global.value` 为 42，然后使用导出函数 `incGlobal()` 增加为 43. 导出函数在 `global.wasm` 模块中 (它将参数的值加一并返回).
+然后改变 global 的值，首先用`Global.value` 属性设置为 `42`，然后用从 `global.wasm` 导出的函数 `incGlobal()` 设置为 43(它将参数的值加 1 并返回)。
 
 ```js
 const output = document.getElementById("output");
 
 function assertEq(msg, got, expected) {
-  output.innerHTML += `Testing ${msg}: `;
-  if (got !== expected)
-    output.innerHTML += `FAIL!<br>Got: ${got}<br>Expected: ${expected}<br>`;
-  else output.innerHTML += `SUCCESS! Got: ${got}<br>`;
+  const result =
+    got === expected
+      ? `成功！获得：${got}\n`
+      : `失败！\n获得：${got}\n期望的是：${expected}\n`;
+  output.innerText += `测试${msg}：${result}`;
 }
 
-assertEq("WebAssembly.Global exists", typeof WebAssembly.Global, "function");
+assertEq("WebAssembly.Global 存在", typeof WebAssembly.Global, "function");
 
 const global = new WebAssembly.Global({ value: "i32", mutable: true }, 0);
 
 WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
   ({ instance }) => {
     assertEq(
-      "getting initial value from wasm",
+      "从 wasm 获取初始值",
       instance.exports.getGlobal(),
       0,
     );
     global.value = 42;
     assertEq(
-      "getting JS-updated value from wasm",
+      "从 wasm 获取用 JS 更新的值",
       instance.exports.getGlobal(),
       42,
     );
     instance.exports.incGlobal();
-    assertEq("getting wasm-updated value from JS", global.value, 43);
+    assertEq("从 JS 获取用 wasm 更新的值", global.value, 43);
   },
 );
 ```
 
 > [!NOTE]
-> 你可以查看 [GitHub 上运行的实时](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)示例；也可以查看[源代码](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html)。
+> 你可以查看[在 GitHub 上实时运行的](https://mdn.github.io/webassembly-examples/js-api-examples/global.html)示例；也可以查看[源代码](https://github.com/mdn/webassembly-examples/blob/main/js-api-examples/global.html)。
 
 ## 规范
 
@@ -82,7 +85,7 @@ WebAssembly.instantiateStreaming(fetch("global.wasm"), { js: { global } }).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
-- [Import/Export mutable globals proposal](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)
+- [导入/导出可变的全局变量提案](https://github.com/WebAssembly/mutable-global/blob/master/proposals/mutable-global/Overview.md)
