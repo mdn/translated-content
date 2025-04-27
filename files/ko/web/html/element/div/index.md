@@ -39,7 +39,7 @@ l10n:
 }
 ```
 
-"순수한" 컨테이너로서 `<div>` 요소는 본래 아무런 의미를 갖지 않습니다. 대신, 콘텐츠를 그룹화해서 [`class`](/ko/docs/Web/HTML/Reference/Global_attributes/class)나 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes/id) 속성을 사용해 쉽게 스타일을 지정하거나, [`lang`](/ko/docs/Web/HTML/Reference/Global_attributes/lang) 속성을 사용해 문서의 일부가 다른 언어로 작성되었음을 표시하는 등의 용도로 사용됩니다. 
+"순수한" 컨테이너로서 `<div>` 요소는 본래 아무런 의미를 갖지 않습니다. 대신, 콘텐츠를 그룹화해서 [`class`](/ko/docs/Web/HTML/Reference/Global_attributes/class)나 [`id`](/ko/docs/Web/HTML/Reference/Global_attributes/id) 속성을 사용해 쉽게 스타일을 지정하거나, [`lang`](/ko/docs/Web/HTML/Reference/Global_attributes/lang) 속성을 사용해 문서의 일부가 다른 언어로 작성되었음을 표시하는 등의 용도로 사용됩니다.
 
 ## 특성
 
