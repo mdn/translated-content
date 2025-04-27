@@ -50,7 +50,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
   <tbody>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/pattern">pattern</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/pattern">pattern</a></code>
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
@@ -68,7 +68,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/ja/docs/Web/HTML/Attributes/min">min</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/min">min</a></code>
       </td>
       <td><code>range</code>, <code>number</code></td>
       <td>有効な数値</td>
@@ -90,7 +90,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td rowspan="3">
-        <code><a href="/ja/docs/Web/HTML/Attributes/max">max</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/max">max</a></code>
       </td>
       <td><code>range</code>, <code>number</code></td>
       <td>有効な数値</td>
@@ -112,7 +112,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/required">required</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/required">required</a></code>
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
@@ -133,7 +133,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td rowspan="5">
-        <code><a href="/ja/docs/Web/HTML/Attributes/step">step</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/step">step</a></code>
       </td>
       <td><code>date</code></td>
       <td>日の整数値</td>
@@ -165,7 +165,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td>
-        <code><a href="/ja/docs/Web/HTML/Attributes/minlength">minlength</a></code>
+        <code><a href="/ja/docs/Web/HTML/Reference/Attributes/minlength">minlength</a></code>
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,
@@ -183,7 +183,7 @@ HTML5 では、基本的な制約は 2 通りの方法で定義されます。
     </tr>
     <tr>
       <td>
-        <a href="/ja/docs/Web/HTML/Attributes/maxlength"><code>maxlength</code></a>
+        <a href="/ja/docs/Web/HTML/Reference/Attributes/maxlength"><code>maxlength</code></a>
       </td>
       <td>
         <code>text</code>, <code>search</code>, <code>url</code>,

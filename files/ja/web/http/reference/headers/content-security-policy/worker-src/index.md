@@ -1,9 +1,8 @@
 ---
 title: "CSP: worker-src"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/worker-src
-original_slug: Web/HTTP/Headers/Content-Security-Policy/worker-src
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -21,7 +20,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`worker-
       <td>{{Glossary("Fetch directive", "フェッチディレクティブ")}}</td>
     </tr>
     <tr>
-      <th scope="row">フォールバック</th>
+      <th scope="row">代替</th>
       <td>
         <p>
           このディレクティブがない場合、ユーザーエージェントはワーカーの実行を制御するとき、まず {{CSP("child-src")}} ディレクティブを探し、次に {{CSP("script-src")}} ディレクティブ、そして最後に {{CSP("default-src")}} ディレクティブを探します。
@@ -33,18 +32,24 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`worker-
 
 ## 構文
 
-`worker-src` ポリシーには 1 つ以上のソースを指定することができます。
-
 ```http
-Content-Security-Policy: worker-src <source>;
-Content-Security-Policy: worker-src <source> <source>;
+Content-Security-Policy: worker-src 'none';
+Content-Security-Policy: worker-src <source-expression-list>;
 ```
 
 ### ソース
 
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
+このディレクティブは、次のいずれかの値を指定することができます。
 
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と [他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
+
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## 例
 
@@ -77,5 +82,5 @@ Content-Security-Policy: worker-src https://example.com/
 ## 関連情報
 
 - {{HTTPHeader("Content-Security-Policy")}}
-- [ウェブワーカーでの CSP](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#content_security_policy)
+- [ウェブワーカーでの CSP](/ja/docs/Web/API/Web_Workers_API/Using_web_workers#コンテンツセキュリティポリシー)
 - {{domxref("Worker")}}, {{domxref("SharedWorker")}}, {{domxref("ServiceWorker")}}

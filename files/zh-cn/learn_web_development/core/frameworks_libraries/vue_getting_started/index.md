@@ -3,8 +3,6 @@ title: 开始使用 Vue
 slug: Learn_web_development/Core/Frameworks_libraries/Vue_getting_started
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Core/Frameworks_libraries/Vue_first_component", "Learn_web_development/Core/Frameworks_libraries")}}
 
 现在让我们介绍 Vue，我们的第三个框架。在本文中，我们将了解一点 Vue 的背景知识，了解如何安装它并创建一个新项目，研究整个项目和单个组件的高级结构，了解如何在本地运行项目，并为开始构建示例做好准备。
@@ -48,7 +46,7 @@ Vue 是一个现代 JavaScript 框架提供了有用的设施渐进增强——�
 
 ## 安装 Vue
 
-要在现有站点中使用 Vue，可以通过 [`<script>`](/zh-CN/docs/Web/HTML/Element/script) 元素在页面中使用。这使你可以开始在现有站点上使用 Vue，这就是 Vue 引以为傲的渐进式框架的原因。当使用 JQuery 这样的库将现有项目迁移到 Vue 时，这是一个很好的选择。通过这种方法，你可以使用 Vue 的许多核心功能，例如属性、自定义组件和数据管理。
+要在现有站点中使用 Vue，可以通过 [`<script>`](/zh-CN/docs/Web/HTML/Reference/Elements/script) 元素在页面中使用。这使你可以开始在现有站点上使用 Vue，这就是 Vue 引以为傲的渐进式框架的原因。当使用 JQuery 这样的库将现有项目迁移到 Vue 时，这是一个很好的选择。通过这种方法，你可以使用 Vue 的许多核心功能，例如属性、自定义组件和数据管理。
 
 - 开发环境版本（未经优化，但包含了对开发有帮助的控制台警告）
 
@@ -194,7 +192,7 @@ import TheWelcome from "./components/TheWelcome.vue";
 
 ## 做一些改动
 
-对应用作出第一步改动——删除 Vue logo。打开 `App.vue` 文件，在 template 部分删除 [`<img>`](/zh-CN/docs/Web/HTML/Element/img) 元素。
+对应用作出第一步改动——删除 Vue logo。打开 `App.vue` 文件，在 template 部分删除 [`<img>`](/zh-CN/docs/Web/HTML/Reference/Elements/img) 元素。
 
 ```vue
 <img

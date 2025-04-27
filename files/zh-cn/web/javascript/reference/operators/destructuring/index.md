@@ -61,7 +61,7 @@ let a, b, a1, b1, c, d, rest, pop, push;
 
 ## 描述
 
-对象和数组字面量表达式提供了一种简单的方法来创建*特别的*数据包。
+对象和数组字面量表达式提供了一种简单的方法来创建*临时的*数据包。
 
 ```js
 const arr = [a, b, c];
@@ -70,27 +70,32 @@ const arr = [a, b, c];
 解构使用类似的语法，但在赋值的左侧定义了要从原变量中取出哪些值。
 
 ```js
-const x = [1, 2, 3, 4, 5];
-const [y, z] = x;
-console.log(y); // 1
-console.log(z); // 2
+const arr = [1, 2, 3];
+const [a, b, c] = arr;
+// a = 1, b = 2, c = 3
 ```
 
 同样，你可以在赋值语句的左侧解构对象。
 
 ```js
-const obj = { a: 1, b: 2 };
-const { a, b } = obj;
-// is equivalent to:
-// const a = obj.a;
-// const b = obj.b;
+const obj = { a, b, c };
+const { a, b, c } = obj;
+// 等同于：
+// const a = obj.a, b = obj.b, c = obj.c;
+
+const obj = { prop1: x, prop2: y, prop3: z };
+const { prop1: x, prop2: y, prop3: z } = obj;
+// 等同于：
+// const x = obj.prop1, y = obj.prop2, z = obj.prop3;
 ```
 
 这种功能类似于 Perl 和 Python 等语言中存在的特性。
 
+有关数组或对象解构的特定功能，请参阅下面的各个[示例](#示例)。
+
 ### 绑定与赋值
 
-对于对象和数组的解构，有两种解构模式：*绑定模式*和*赋值模式*，它们的语法略有不同。
+对于对象和数组的解构，有两种解构模式：*{{Glossary("binding", "绑定")}}模式*和*赋值模式*，它们的语法略有不同。
 
 在绑定模式中，模式以声明关键字（`var`、`let` 或 `const`）开始。然后，每个单独的属性必须绑定到一个变量或进一步解构。
 
@@ -100,7 +105,7 @@ const {
   a,
   b: { c: d },
 } = obj;
-// Two variables are bound: `a` and `d`
+// 变量 `a` 和 `d` 被绑定
 ```
 
 所有变量共享相同的声明，因此，如果你希望某些变量可重新分配，而其他变量是只读的，则可能需要解构两次——一次使用 `let`，一次使用 `const`。
@@ -113,17 +118,23 @@ let {
 } = obj; // d 可被重新赋值
 ```
 
+你也可以在其他许多为你绑定变量的语法中，使用绑定解构模式。这些包括：
+
+- [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in)、[`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 和 [`for await...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for-await...of) 循环中的循环变量，
+- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)参数，
+- [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 绑定变量。
+
 在赋值模式中，模式不以关键字开头。每个解构属性都被赋值给一个赋值目标——这个赋值目标可以事先用 `var` 或 `let` 声明，也可以是另一个对象的属性——一般来说，可以是任何可以出现在赋值表达式左侧的东西。
 
 ```js
 const numbers = [];
 const obj = { a: 1, b: 2 };
 ({ a: numbers[0], b: numbers[1] } = obj);
-// The properties `a` and `b` are assigned to properties of `numbers`
+// 属性 `a` 和 `b` 被赋值给了 `numbers` 的属性
 ```
 
 > [!NOTE]
-> 当使用对象文字解构而不带声明时，在赋值语句周围必须添加括号 `( ... )`。
+> 当使用对象字面量解构而不带声明时，在赋值语句周围必须添加括号 `( ... )`。
 >
 > `{ a, b } = { a: 1, b: 2 }` 不是有效的独立语法，因为左侧的 `{a, b}` 被视为块而不是对象字面量。但是，`({ a, b } = { a: 1, b: 2 })` 是有效的，`const { a, b } = { a: 1， b: 2 }` 也是有效的。
 >
@@ -131,38 +142,41 @@ const obj = { a: 1, b: 2 };
 
 请注意，上述代码在等效的*绑定模式*中不是有效的语法：
 
-```js example-bad
+```js-nolint example-bad
 const numbers = [];
 const obj = { a: 1, b: 2 };
 const { a: numbers[0], b: numbers[1] } = obj;
 
-// This is equivalent to:
+// 等同于：
 //   const numbers[0] = obj.a;
 //   const numbers[1] = obj.b;
-// Which definitely is not valid.
+// 无效代码
 ```
+
+你只能在[赋值](/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment)运算符的左侧使用赋值模式。不能与复合赋值运算符如 `+=` 或 `*=` 一起使用。
 
 ### 默认值
 
-每个解构属性都可以有一个*默认值*。当属性不存在或值为 `undefined` 时，将使用默认值。如果属性的值为 `null`，则不使用它。
+每个解构属性都可以有一个*默认值*。当属性不存在或值为 `undefined` 时，将使用默认值。如果属性的值为 `null`，则不使用默认值。
 
 ```js
-const [a = 1] = []; // a is 1
-const { b = 2 } = { b: undefined }; // b is 2
-const { c = 2 } = { c: null }; // c is null
+const [a = 1] = []; // a 是 1
+const { b = 2 } = { b: undefined }; // b 是 2
+const { c = 2 } = { c: null }; // c 是 null
 ```
 
-默认值可以是任何表达式。仅在必要时对其进行评估。
+默认值可以是任何表达式。仅在必要时对其进行求值。
 
 ```js
 const { b = console.log("hey") } = { b: 2 };
-// Does not log anything, because `b` is defined and there's no need
-// to evaluate the default value.
+// 不会输出任何东西，因为 `b` 的值已经被定义，所以不需要求默认值。
 ```
 
-### 剩余属性
+### 剩余属性和剩余元素
 
-你可以使用剩余属性（`...rest`）结束解构模式。此模式会将对象或数组的所有剩余属性存储到新的对象或数组中。
+你可以使用剩余属性（`...rest`）结束解构模式。对数组解构时，此模式会将数组的剩余元素存储到新的名为 `rest`（或在代码中指定的其他名字）的数组中。对对象解构时，此模式会将对象剩余的可枚举属性存储到新的名为 `rest` 的对象中。
+
+更正式的说，`...rest` 语法在数组解构中被称作“剩余元素”，在对象解构中被称作“剩余属性”，但我们通常统称其为“剩余属性”。
 
 ```js
 const { a, ...others } = { a: 1, b: 2, c: 3 };
@@ -178,18 +192,8 @@ console.log(others2); // [2, 3]
 const [a, ...b,] = [1, 2, 3];
 
 // SyntaxError: rest element may not have a trailing comma
-// Always consider using rest operator as the last element
+// 始终考虑将剩余运算符作为最后一个元素
 ```
-
-### 使用其他语法解构模式
-
-在许多语法中，语言为你绑定变量，你也可以使用解构模式。其中包括：
-
-- [`for...in`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...in) 和 [`for...of`](/zh-CN/docs/Web/JavaScript/Reference/Statements/for...of) 循环中的循环变量；
-- [函数](/zh-CN/docs/Web/JavaScript/Reference/Functions)参数；
-- [`catch`](/zh-CN/docs/Web/JavaScript/Reference/Statements/try...catch) 绑定变量。
-
-有关特定于数组或对象解构的功能，请参阅下面的各个示例。
 
 ## 示例
 
@@ -640,8 +644,9 @@ const obj = {
   },
 };
 const { self, prot } = obj;
-// self "123"
-// prot "456" (Access to the prototype chain)
+
+console.log(self); // "123"
+console.log(prot); // "456"
 ```
 
 ## 规范

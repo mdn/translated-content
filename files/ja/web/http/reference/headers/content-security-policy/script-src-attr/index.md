@@ -1,9 +1,8 @@
 ---
 title: "CSP: script-src-attr"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/script-src-attr
-original_slug: Web/HTTP/Headers/Content-Security-Policy/script-src-attr
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -36,25 +35,29 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} (CSP) における **`script-
 
 ## 構文
 
-`script-src-attr` ポリシーでは、1 つまたは複数のソースを許可することができます。
-
 ```http
-Content-Security-Policy: script-src-attr <source>;
-Content-Security-Policy: script-src-attr <source> <source>;
+Content-Security-Policy: script-src-attr 'none';
+Content-Security-Policy: script-src-attr <source-expression-list>;
 ```
 
-`script-src-attr` は {{CSP("script-src")}} と一緒に使用することができ、インラインハンドラーのチェックのために、このディレクティブを上書きすることができます。
+このディレクティブは、次のいずれかの値を指定することができます。
+
+- `'none'`
+  - : この種類のリソースは読み込まれません。単一引用符は必須です。
+- `<source-expression-list>`
+
+  - : ソース表現の値を空白で区切ったリストです。この種類のリソースは、指定されたソース表現のいずれかと一致した場合に読み込まれます。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`'unsafe-hashes'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-hashes)
+    - [`'unsafe-inline'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#unsafe-inline)
+    - [`'report-sample'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#report-sample)
+
+`script-src-attr` は {{CSP("script-src")}} と組み合わせて使用することができ、インラインハンドラーを調べるときにはそのディレクティブを上書きします。
 
 ```http
 Content-Security-Policy: script-src <source>;
 Content-Security-Policy: script-src-attr <source>;
 ```
-
-### ソース
-
-`<source>` は、 [CSP ソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)にあるいずれかの値を取ることができます。
-
-なお、この同じ値のセットはすべての{{Glossary("fetch directive", "フェッチディレクティブ")}}（と[他の多くのディレクティブ](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#関連ディレクティブ)）で使用できます。
 
 ## 例
 

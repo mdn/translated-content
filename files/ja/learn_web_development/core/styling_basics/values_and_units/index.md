@@ -826,7 +826,7 @@ CSS関数について知っておくことは有益なことです。普通の C
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Values_tasks)を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: 値と単位](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Values)を見てください。
 
 ## まとめ
 

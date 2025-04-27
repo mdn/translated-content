@@ -5,7 +5,7 @@ slug: Web/SVG/Reference/Element/a
 
 使用 SVG 的锚元素 (\<a>) 定义一个超链接。
 
-由于这个元素和 [HTML 的 \<a> 标签](/zh-CN/docs/Web/HTML/Element/a) 使用了相同的标签名，当使用 CSS 或 `querySelector` 选择"a"时，可能应用到错误的元素上。可以尝试使用 [`@namespace`规则](/zh-CN/docs/Web/CSS/@namespace) 来区分两者
+由于这个元素和 [HTML 的 \<a> 标签](/zh-CN/docs/Web/HTML/Reference/Elements/a) 使用了相同的标签名，当使用 CSS 或 `querySelector` 选择"a"时，可能应用到错误的元素上。可以尝试使用 [`@namespace`规则](/zh-CN/docs/Web/CSS/@namespace) 来区分两者
 
 ## 使用上下文
 

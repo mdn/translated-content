@@ -3,7 +3,7 @@ title: MathML 文本容器
 slug: Web/MathML/Tutorials/For_beginners/Text_containers
 ---
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners")}}
 
 现在，我们将重点介绍 MathML 的文本容器（变量、数字、运算符等），它们是 MathML 公式的构建模块。
 
@@ -472,4 +472,4 @@ document.getElementById("clearOutput").addEventListener("click", () => {
 - [`<mo>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mo)
 - [`<mtext>` 元素](/zh-CN/docs/Web/MathML/Reference/Element/mtext)
 
-{{PreviousMenuNext("Web/MathML/Guides/Getting_started", "Web/MathML/Guides/Fractions_and_roots", "Web/MathML/Guides")}}
+{{PreviousMenuNext("Web/MathML/Tutorials/For_beginners/Getting_started", "Web/MathML/Tutorials/For_beginners/Fractions_and_roots", "Web/MathML/Tutorials/For_beginners")}}

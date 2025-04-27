@@ -3,7 +3,7 @@ title: 在 CSS 中调整大小
 slug: Learn_web_development/Core/Styling_basics/Sizing
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
+{{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Values_and_units", "Learn_web_development/Core/Styling_basics/Backgrounds_and_borders", "Learn_web_development/Core/Styling_basics")}}
 
 在前面的课程中你已经看到了几种使用 CSS 为页面中元素设定尺寸的方法。在我们设计网页的时候，需要理解这些不同方法之间的差异。在本课程中，我们将总结设定元素尺寸的方法，并定义几个术语，这些内容将会在未来对你有所帮助。
 
@@ -263,7 +263,7 @@ body {
 这个技术是用来让图片**可响应**的，所以在更小的设备上浏览的时候，它们会合适地缩放。你无论怎样都不应该用这个技术先载入大原始尺寸的图片，再对它们在浏览器中进行缩放。图像应该合适地调整尺寸，以使它们不会比预计中展示时所需要的最大尺寸大。下载过大的图像会造成你的网站变慢，如果用户使用按量收费的网络连接，会让用户花更多钱。
 
 > [!NOTE]
-> 了解更多关于[响应式图片技术](/zh-CN/docs/Web/HTML/Responsive_images)的事情。
+> 了解更多关于[响应式图片技术](/zh-CN/docs/Web/HTML/Guides/Responsive_images)的事情。
 
 ## 视口单位
 

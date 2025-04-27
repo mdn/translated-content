@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 4bddde3e2b86234eb4594809082873fc5bf00ee3
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Forms/Styling_web_forms", "Learn_web_development/Extensions/Forms/UI_pseudo-classes", "Learn_web_development/Extensions/Forms")}}
 
 在本文中，我们将介绍如何使用 CSS 来为较难样式化的表单控件类型添加样式，即“糟糕的（bad）”和“丑陋的（ugly）”类型。正如我们在[上一篇文章](/zh-CN/docs/Learn_web_development/Extensions/Forms/Styling_web_forms)中所看到的，文本字段和按钮的样式完全可以轻松实现；现在我们将深入研究问题较多的样式。
 
@@ -32,15 +32,15 @@ l10n:
 **糟糕的**：有些元素的样式更难设计，需要更复杂的 CSS 或更特殊的技巧：
 
 - 复选框和单选框
-- [`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search)
+- [`<input type="search">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/search)
 
 **丑陋的**：有些元素无法使用 CSS 进行彻底样式化。这些元素包括：
 
 - 创建下拉部件时涉及的元素，包括 {{HTMLElement("select")}}、{{HTMLElement("option")}}、{{HTMLElement("optgroup")}} 和 {{HTMLElement("datalist")}}。
-- [`<input type="color">`](/zh-CN/docs/Web/HTML/Element/input/color)
-- 与日期有关的控件，如 [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)
-- [`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range)
-- [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file)
+- [`<input type="color">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/color)
+- 与日期有关的控件，如 [`<input type="datetime-local">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local)
+- [`<input type="range">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/range)
+- [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file)
 - {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}}
 
 我们先来谈谈 [`appearance`](/zh-CN/docs/Web/CSS/appearance) 属性，它对于使上述所有内容更具风格化相当有用。
@@ -96,7 +96,7 @@ input {
 
 ### 驯服搜索框
 
-[`<input type="search">`](/zh-CN/docs/Web/HTML/Element/input/search) 基本上只是一个文本输入框，那么为什么 `appearance: none;` 在这里有用呢？答案是 Safari 搜索框有一些样式限制，例如不能随意调整其 `height` 或 `font-size`。
+[`<input type="search">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/search) 基本上只是一个文本输入框，那么为什么 `appearance: none;` 在这里有用呢？答案是 Safari 搜索框有一些样式限制，例如不能随意调整其 `height` 或 `font-size`。
 
 可以使用我们的朋友 `appearance: none;`，禁用默认外观来解决这个问题：
 
@@ -244,7 +244,7 @@ input[type="checkbox"]:disabled {
 
 ## 对于“丑陋”的元素可以做些什么？
 
-现在，让我们把目光转向“丑陋”的控件——那些很难彻底添加样式的控件。简而言之，这些控件包括下拉框、[`color`](/zh-CN/docs/Web/HTML/Element/input/color) 和 [`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local) 等复杂控件类型，以及 {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}} 等面向反馈的控件。
+现在，让我们把目光转向“丑陋”的控件——那些很难彻底添加样式的控件。简而言之，这些控件包括下拉框、[`color`](/zh-CN/docs/Web/HTML/Reference/Elements/input/color) 和 [`datetime-local`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local) 等复杂控件类型，以及 {{HTMLElement("progress")}} 和 {{HTMLElement("meter")}} 等面向反馈的控件。
 
 问题所在是，这些元素在不同浏览器中的默认外观大相径庭，虽然你可以通过某些方式对它们进行样式化，但它们内部的某些部分实际上是无法样式化的。
 
@@ -322,7 +322,7 @@ button {
 > [!NOTE]
 > 如果你想同时在多个浏览器上测试这些示例，可以[在此找到实时演示](https://mdn.github.io/learning-area/html/forms/styling-examples/ugly-controls.html)（也可以[在此查看源代码](https://github.com/mdn/learning-area/blob/main/html/forms/styling-examples/ugly-controls.html)）。
 >
-> 另外请注意，我们在页面中添加了一些 JavaScript，用于在控件本身下方列出文件选择器选择的文件。这是 [`<input type="file">`](/zh-CN/docs/Web/HTML/Element/input/file#示例) 参考页面上示例的简化版本。
+> 另外请注意，我们在页面中添加了一些 JavaScript，用于在控件本身下方列出文件选择器选择的文件。这是 [`<input type="file">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/file#示例) 参考页面上示例的简化版本。
 
 正如你所看到的，我们在让这些控件在现代浏览器中保持一致方面做得相当不错。
 
@@ -420,16 +420,16 @@ select {
 
 ### 日期输入类型
 
-日期/时间输入类型（[`datetime-local`](/zh-CN/docs/Web/HTML/Element/input/datetime-local)、[`time`](/zh-CN/docs/Web/HTML/Element/input/time)、[`week`](/zh-CN/docs/Web/HTML/Element/input/week)、[`month`](/zh-CN/docs/Web/HTML/Element/input/month)）都有相同的主要相关问题。实际的包含框与任何文本输入一样容易设计样式，我们在此演示中使用的样式看起来很好。
+日期/时间输入类型（[`datetime-local`](/zh-CN/docs/Web/HTML/Reference/Elements/input/datetime-local)、[`time`](/zh-CN/docs/Web/HTML/Reference/Elements/input/time)、[`week`](/zh-CN/docs/Web/HTML/Reference/Elements/input/week)、[`month`](/zh-CN/docs/Web/HTML/Reference/Elements/input/month)）都有相同的主要相关问题。实际的包含框与任何文本输入一样容易设计样式，我们在此演示中使用的样式看起来很好。
 
 但是，该控件的内部部分（例如，用于选择日期的弹出日历、用于递增/递减值的旋转器）完全不可样式化，而且无法使用`"appearance: none;` 将其删除。如果你真的需要完全控制样式，必须使用某种库来生成自定义控件，或者创建自己的控件。
 
 > [!NOTE]
-> 值得一提的还有 [`<input type="number">`](/zh-CN/docs/Web/HTML/Element/input/number) ——它也有一个可以用来递增/递减数值的控制按钮，因此也可能存在同样的问题。不过，`number` 类型收集的数据比较简单，使用 `tel` 输入类型就可以了，它的外观与 `text` 相似，但会在使用触摸键盘的设备上显示数字键盘。
+> 值得一提的还有 [`<input type="number">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/number) ——它也有一个可以用来递增/递减数值的控制按钮，因此也可能存在同样的问题。不过，`number` 类型收集的数据比较简单，使用 `tel` 输入类型就可以了，它的外观与 `text` 相似，但会在使用触摸键盘的设备上显示数字键盘。
 
 ### Range 输入类型
 
-[`<input type="range">`](/zh-CN/docs/Web/HTML/Element/input/range) 的样式很烦人。你可以使用类似下面的方法完全移除默认的滑块轨道，代之以自定义样式（在本例中为细长的红色轨迹）：
+[`<input type="range">`](/zh-CN/docs/Web/HTML/Reference/Elements/input/range) 的样式很烦人。你可以使用类似下面的方法完全移除默认的滑块轨道，代之以自定义样式（在本例中为细长的红色轨迹）：
 
 ```css
 input[type="range"] {
@@ -501,7 +501,7 @@ label[for="file"]:active {
 
 ### 计量表和进度条
 
-[`<meter>`](/zh-CN/docs/Web/HTML/Element/meter) 和 [`<progress>`](/zh-CN/docs/Web/HTML/Element/progress) 可能是最糟糕的。正如你在前面的示例中看到的，我们可以相对准确地将它们设置为所需的宽度。但除此之外，就很难对它们进行任何样式设置了。它们不能在不同浏览器之间一致地处理高度设置，你可以给背景上色，但不能给前景栏上色，而且对它们设置 `appearance: none` 只会让情况更糟，而不会更好。
+[`<meter>`](/zh-CN/docs/Web/HTML/Reference/Elements/meter) 和 [`<progress>`](/zh-CN/docs/Web/HTML/Reference/Elements/progress) 可能是最糟糕的。正如你在前面的示例中看到的，我们可以相对准确地将它们设置为所需的宽度。但除此之外，就很难对它们进行任何样式设置了。它们不能在不同浏览器之间一致地处理高度设置，你可以给背景上色，但不能给前景栏上色，而且对它们设置 `appearance: none` 只会让情况更糟，而不会更好。
 
 如果想控制样式，为这些功能创建自己的自定义解决方案，或使用第三方解决方案（如 [progressbar.js](https://kimmobrunfeldt.github.io/progressbar.js/#examples)）会更方便。
 

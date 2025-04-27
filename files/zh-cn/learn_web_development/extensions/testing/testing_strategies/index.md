@@ -5,7 +5,7 @@ l10n:
   sourceCommit: 54c4741354cf49b4dd62e1bb3d8ab13181b210f0
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
+{{PreviousMenuNext("Learn_web_development/Extensions/Testing/Introduction","Learn_web_development/Extensions/Testing/HTML_and_CSS", "Learn_web_development/Extensions/Testing")}}
 
 本文解释如何进行跨浏览器测试：如何选择要测试的浏览器和设备、如何实际测试这些浏览器和设备，以及如何借助用户群体进行测试。
 

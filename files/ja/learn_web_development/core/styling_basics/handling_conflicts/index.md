@@ -505,7 +505,7 @@ p {
 
 ## スキルテスト
 
-この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を覚えているか検証するテストがあります。[スキルテスト: カスケード](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks)を見てください。
+この記事の最後まで達しましたが、最も大事な情報を覚えていますか？次に移動する前に、この情報を覚えているか検証するテストがあります。[スキルテスト: カスケード](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade)を見てください。
 
 ## まとめ
 

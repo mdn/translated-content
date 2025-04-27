@@ -1,16 +1,13 @@
 ---
 title: <xsl:key>
 slug: Web/XML/XSLT/Reference/Element/key
-original_slug: Web/XSLT/Reference/Element/key
 l10n:
-  sourceCommit: 91bf979a73463798a0c4bb9045d2d86180cd0a1d
+  sourceCommit: 3e1b5277c6451e7d27ab628f23fb9702947a7a7b
 ---
-
-{{XsltSidebar}}
 
 `<xsl:key>` 要素は、`key( )` 関数を使用してスタイルシートの他の場所で使用できる名前付きキーを宣言します。
 
-### 構文
+## 構文
 
 ```xml
 <xsl:key name=NAME match=EXPRESSION
@@ -38,6 +35,6 @@ l10n:
 
 XSLT, section 12.2.
 
-### Gecko のサポート
+## Gecko の対応
 
-サポート済み
+対応済み。

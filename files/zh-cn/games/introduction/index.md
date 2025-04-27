@@ -104,7 +104,7 @@ l10n:
   - : 如果你想你的用户能够使用游戏手柄或其他游戏控制器来控制游戏，你需要这个 API。
 - [HTML](/zh-CN/docs/Web/HTML) 和 [CSS](/zh-CN/docs/Web/CSS)
   - : 二者合璧，可以构建、设计并对你的游戏界面进行布局。HTML 有一个提供 2D 图形的元素，即 {{HTMLElement("canvas")}}。
-- [HTML audio](/zh-CN/docs/Web/HTML/Element/audio)
+- [HTML audio](/zh-CN/docs/Web/HTML/Reference/Elements/audio)
   - : {{HTMLElement("audio")}} 元素可以用来播放一些简单的音效和音乐。如果你想要更多的参与，可以学习 [Web 音频 API](/zh-CN/docs/Web/API/Web_Audio_API) 来深入了解音频处理的力量！
 - [IndexedDB](/zh-CN/docs/Web/API/IndexedDB_API)
   - : 一个强大的数据存储 API，用来在电脑或者设备上保存用户自己的数据。这是用来保存游戏的状态和其他最近的信息的好方法，这样在需要的时候不用每次重新下载。也可以用来让你的游戏在用户没有连接到网络的情况下也能继续玩（例如在飞机上的数小时）。

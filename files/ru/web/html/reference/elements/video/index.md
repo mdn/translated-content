@@ -14,15 +14,15 @@ slug: Web/HTML/Reference/Elements/video
 - Допустимое содержимое. Если элемент имеет атрибут [`src`](#src): 0 или более элементов {{HTMLElement("track")}}, за которым следует прозрачный контент, который не содержит элементов мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}
   Иначе: 0 или более элементов {{HTMLElement("source")}}, за которыми следует 0 или более элементов {{HTMLElement("track")}}, затем прозрачным содержимым, которое не содержит элементы мультимедиа: {{HTMLElement("audio")}} или {{HTMLElement("video")}}.
 
-| [Content categories](/ru/docs/Web/HTML/Content_categories) | [Flow content](/ru/docs/Web/HTML/Content_categories#flow_content), содержание фраз, встроенный контент. Если имеет атрибут [`controls`](#controls): становится интерактивным элементом с осязаемым содержанием. |
-| ---------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Tag omission                                               | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                |
-| Допустимые родительские элементы                           | Любой элемент, который принимает встроенный контент.                                                                                                                                                            |
-| DOM интерфейс                                              | {{domxref("HTMLVideoElement")}}                                                                                                                                                                                 |
+| [Content categories](/ru/docs/Web/HTML/Guides/Content_categories) | [Flow content](/ru/docs/Web/HTML/Guides/Content_categories#flow_content), содержание фраз, встроенный контент. Если имеет атрибут [`controls`](#controls): становится интерактивным элементом с осязаемым содержанием. |
+| ----------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Tag omission                                                      | Нет, открывающий и закрывающий теги обязательны.                                                                                                                                                                       |
+| Допустимые родительские элементы                                  | Любой элемент, который принимает встроенный контент.                                                                                                                                                                   |
+| DOM интерфейс                                                     | {{domxref("HTMLVideoElement")}}                                                                                                                                                                                        |
 
 ## Атрибуты
 
-Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Global_attributes).
+Как и все HTML-элементы, этот элемент поддерживает [глобальные атрибуты](/ru/docs/Web/HTML/Reference/Global_attributes).
 
 - `autoplay`
   - : Логический атрибут; если указан, то видео начнёт воспроизводится автоматически, как только это будет возможно сделать без остановки, чтобы закончить загрузку данных.
@@ -35,11 +35,11 @@ slug: Web/HTML/Reference/Elements/video
 - `controls`
   - : Если этот атрибут присутствует, тогда браузер отобразит элементы управления, чтобы позволить пользователю управлять воспроизведением видео, регулировать громкость, осуществлять перемотку, а также ставить на паузу и возобновление воспроизведение.
 - `crossorigin`
-  - : This enumerated attribute indicates whether to use CORS to fetch the related image. [CORS-enabled resources](/ru/docs/Web/HTML/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
+  - : This enumerated attribute indicates whether to use CORS to fetch the related image. [CORS-enabled resources](/ru/docs/Web/HTML/How_to/CORS_enabled_image) can be reused in the {{HTMLElement("canvas")}} element without being _tainted_. The allowed values are:
     - anonymous
       - : Sends a cross-origin request without a credential. In other words, it sends the `Origin:` HTTP header without a cookie, X.509 certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (by not setting the `Access-Control-Allow-Origin:` HTTP header), the image will be _tainted_, and its usage restricted.
     - use-credentials
-      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/ru/docs/Web/HTML/Attributes/crossorigin) for additional information.
+      - : Sends a cross-origin request with a credential. In other words, it sends the `Origin:` HTTP header with a cookie, a certificate, or performing HTTP Basic authentication. If the server does not give credentials to the origin site (through `Access-Control-Allow-Credentials:` HTTP header), the image will be _tainted_ and its usage restricted.When not present, the resource is fetched without a CORS request (i.e. without sending the `Origin:` HTTP header), preventing its non-tainted used in {{HTMLElement('canvas')}} elements. If invalid, it is handled as if the enumerated keyword **anonymous** was used. See [CORS settings attributes](/ru/docs/Web/HTML/Reference/Attributes/crossorigin) for additional information.
 - `height`
   - : Высота области отображения видео в пикселях.
 - `loop`

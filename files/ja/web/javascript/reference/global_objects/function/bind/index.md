@@ -2,7 +2,7 @@
 title: Function.prototype.bind()
 slug: Web/JavaScript/Reference/Global_Objects/Function/bind
 l10n:
-  sourceCommit: 9c402dca732167ee04196c5e1785eaacbf4bb5f6
+  sourceCommit: 9645d14f12d9b93da98daaf25a443bb6cac3f2a6
 ---
 
 {{JSRef}}

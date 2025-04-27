@@ -3,8 +3,6 @@ title: 挑战：创建精美的信纸
 slug: Learn_web_development/Core/Styling_basics/Fancy_letterheaded_paper
 ---
 
-{{LearnSidebar}}
-
 {{PreviousMenuNext("Learn_web_development/Core/Styling_basics/Fundamental_CSS_comprehension", "Learn_web_development/Core/Styling_basics/Cool-looking_box", "Learn_web_development/Core/Styling_basics")}}
 
 如果你想给人留下好印象，把信写在一张精美的信纸上会是个不错的开始，在这个评估里我们希望你能创建一个在线模版来达到这样的效果。

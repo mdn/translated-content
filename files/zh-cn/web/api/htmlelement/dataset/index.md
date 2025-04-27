@@ -5,7 +5,7 @@ slug: Web/API/HTMLElement/dataset
 
 {{APIRef("HTML DOM")}}
 
-{{DOMxRef("HTMLElement")}} 接口的只读属性 **`dataset`** 提供了对元素上[自定义数据属性](/zh-CN/docs/Web/HTML/Global_attributes/data-*)（`data-*`）读/写访问。它暴露了一个字符串映射（{{domxref("DOMStringMap")}}），其中包含每个 `data-*` 属性条目。
+{{DOMxRef("HTMLElement")}} 接口的只读属性 **`dataset`** 提供了对元素上[自定义数据属性](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*)（`data-*`）读/写访问。它暴露了一个字符串映射（{{domxref("DOMStringMap")}}），其中包含每个 `data-*` 属性条目。
 
 > **备注：** `dataset` 属性本身可以被读取，但是不能直接写入。相反，所有写入都必须是写入 `dataset` 的单个属性，而 dataset 又表示这些数据的属性。
 
@@ -16,7 +16,7 @@ slug: Web/API/HTMLElement/dataset
 - 在 JavaScript
   - : 自定义 data 属性的属性名与没有 `data-` 前缀的 HTML 属性相同，并且在移除单个破折号（`-`）后，大写之后的字母以获得属性的“驼峰”命名。
 
-除了以下属性，你还可以在我们的文章[_使用 data 属性_](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)中找到使用 HTML 数据属性的操作指南。
+除了以下属性，你还可以在我们的文章[_使用 data 属性_](/zh-CN/docs/Web/HTML/How_to/Use_data_attributes)中找到使用 HTML 数据属性的操作指南。
 
 ### 名称转换
 
@@ -97,6 +97,6 @@ if (!("someDataAttr" in el.dataset)) {
 
 ## 参见
 
-- 全局属性的 HTML [`data-*`](/zh-CN/docs/Web/HTML/Global_attributes/data-*) 类。
-- [使用 data 属性](/zh-CN/docs/Learn_web_development/Howto/Solve_HTML_problems/Use_data_attributes)
+- 全局属性的 HTML [`data-*`](/zh-CN/docs/Web/HTML/Reference/Global_attributes/data-*) 类。
+- [使用 data 属性](/zh-CN/docs/Web/HTML/How_to/Use_data_attributes)
 - {{DOMxRef("Element.getAttribute()")}} 和 {{DOMxRef("Element.setAttribute()")}}

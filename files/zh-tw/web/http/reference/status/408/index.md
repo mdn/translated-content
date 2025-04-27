@@ -2,7 +2,7 @@
 title: 408 Request Timeout
 slug: Web/HTTP/Reference/Status/408
 l10n:
-  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{HTTPSidebar}}
@@ -26,7 +26,7 @@ HTTP **`408 Request Timeout`** [用戶端錯誤回應](/zh-TW/docs/Web/HTTP/Refe
 
 ### 表單提交的超時
 
-以下範例顯示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Element/input/file) 元素使用圖片並且表單以 `method="post"` 提交時，用戶端可能發送的內容：
+以下範例顯示了當 [`<input type="file">`](/zh-TW/docs/Web/HTML/Reference/Elements/input/file) 元素使用圖片並且表單以 `method="post"` 提交時，用戶端可能發送的內容：
 
 ```http
 POST /upload HTTP/1.1

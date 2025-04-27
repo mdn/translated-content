@@ -24,8 +24,6 @@ console.log(
 // Expected output: Array ["a", "ä", "Z", "z"]
 ```
 
-<!--このデモのソースファイルは GitHub リポジトリーに格納されています。デモプロジェクトに協力していただける場合は、 https://github.com/mdn/interactive-examples をクローンしてプルリクエストを送信してください。 -->
-
 ## コンストラクター
 
 - {{jsxref("Intl/Collator/Collator", "Intl.Collator()")}}

@@ -16,7 +16,6 @@ l10n:
 你可以将此属性与以下 SVG 元素一起使用：
 
 - {{SVGElement("textPath")}}
-- {{SVGElement("tref")}}
 - {{SVGElement("tspan")}}
 
 ## 使用说明

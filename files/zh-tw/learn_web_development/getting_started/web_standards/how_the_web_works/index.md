@@ -3,8 +3,6 @@ title: 網路如何運作
 slug: Learn_web_development/Getting_started/Web_standards/How_the_web_works
 ---
 
-{{LearnSidebar}}
-
 {{NextMenu("Learn_web_development/Getting_started/Web_standards/The_Web_standards_model", "Learn_web_development/Getting_started/Web_standards")}}
 
 _〈網路如何運作〉將簡單介紹_，當你透過電腦或手機瀏覽器瀏覽網頁時，究竟發生什麼事。

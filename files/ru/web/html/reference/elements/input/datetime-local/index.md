@@ -51,16 +51,16 @@ label {
 
 ![](datetime-local-picker-edge2.png)
 
-| **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                                          |
-| ------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| **события**                     | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event).                                                                                                                    |
-| **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Element/input#autocomplete), [`list`](/ru/docs/Web/HTML/Element/input#list), [`readonly`](/ru/docs/Web/HTML/Element/input#readonly), and [`step`](/ru/docs/Web/HTML/Element/input#step). |
-| **IDL attributes**              | `list`, `value`, `valueAsNumber`.                                                                                                                                                                                           |
-| **методы**                      | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.                                                             |
+| **[Value](#value)**             | A {{domxref("DOMString")}} representing a date and time, or empty.                                                                                                                                                                                                      |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **события**                     | [`change`](/ru/docs/Web/API/HTMLElement/change_event) и [`input`](/ru/docs/Web/API/Element/input_event).                                                                                                                                                                |
+| **Supported Common Attributes** | [`autocomplete`](/ru/docs/Web/HTML/Reference/Elements/input#autocomplete), [`list`](/ru/docs/Web/HTML/Reference/Elements/input#list), [`readonly`](/ru/docs/Web/HTML/Reference/Elements/input#readonly), and [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step). |
+| **IDL attributes**              | `list`, `value`, `valueAsNumber`.                                                                                                                                                                                                                                       |
+| **методы**                      | {{domxref("HTMLInputElement.select", "select()")}}, {{domxref("HTMLInputElement.stepDown", "stepDown()")}}, {{domxref("HTMLInputElement.stepUp", "stepUp()")}}.                                                                                                         |
 
 ## Значение
 
-{{domxref("DOMString")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри [`value`](/ru/docs/Web/HTML/Element/input#value) атрибута, как:
+{{domxref("DOMString")}} представление значения даты, введённой во входные данные. Вы можете установить значение по умолчанию для ввода, включая дату внутри [`value`](/ru/docs/Web/HTML/Reference/Elements/input#value) атрибута, как:
 
 ```html
 <label for="party">Enter a date and time for your party booking:</label>
@@ -106,7 +106,7 @@ dateControl.value = "2017-06-01T08:30";
 
 ### Установка максимума и минимума даты и времени
 
-Вы можете использовать [`min`](/ru/docs/Web/HTML/Element/input#min) и [`max`](/ru/docs/Web/HTML/Element/input#max) атрибуты чтобы ограничить дату/время, которое может выбрать пользователь. В примере ниже мы устанавливает минимальные дату и время в `2017-06-01T08:30` и максимальные в `2017-06-30T16:30`:
+Вы можете использовать [`min`](/ru/docs/Web/HTML/Reference/Elements/input#min) и [`max`](/ru/docs/Web/HTML/Reference/Elements/input#max) атрибуты чтобы ограничить дату/время, которое может выбрать пользователь. В примере ниже мы устанавливает минимальные дату и время в `2017-06-01T08:30` и максимальные в `2017-06-30T16:30`:
 
 ```html
 <form>
@@ -128,17 +128,17 @@ dateControl.value = "2017-06-01T08:30";
 - В зависимости от того, какой браузер вы используете, вы можете заметить, что время вне заданного диапазона не доступно к выбору (e.g. Edge), или доступно к выбору(e.g. Chrome) но невалидно (see [Validation](#validation)).
 
 > [!NOTE]
-> Существует возможность использовать [`step`](/ru/docs/Web/HTML/Element/input#step) атрибут для того, чтобы установить количество дней, которые будут пропущены каждый раз, когда дата увеличивается (например, если вы хотите сделать доступными для выбора только Субботы). Однако, на момент написание этой статьи это нет эффективной реализации этой функции.
+> Существует возможность использовать [`step`](/ru/docs/Web/HTML/Reference/Elements/input#step) атрибут для того, чтобы установить количество дней, которые будут пропущены каждый раз, когда дата увеличивается (например, если вы хотите сделать доступными для выбора только Субботы). Однако, на момент написание этой статьи это нет эффективной реализации этой функции.
 
 ### Controlling input size
 
-`<input type="datetime-local">` doesn't support form sizing attributes such as [`size`](/ru/docs/Web/HTML/Element/input#size). You'll have to resort to [CSS](/ru/docs/Web/CSS) for sizing needs.
+`<input type="datetime-local">` doesn't support form sizing attributes such as [`size`](/ru/docs/Web/HTML/Reference/Elements/input#size). You'll have to resort to [CSS](/ru/docs/Web/CSS) for sizing needs.
 
 ### Setting timezones
 
-One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/ru/docs/Web/HTML/Element/input/datetime-local) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
+One thing the `datetime-local` input type doesn't provide is a way to set the timezone/locale of the datetime. This was available in the [`datetime`](/ru/docs/Web/HTML/Reference/Elements/input/datetime-local) input type, but this type is now obsolete, having been removed from the spec. The main reasons why this was removed are a lack of implementation in browsers, and concerns over the user interface/experience. It is easier to just have a control (or controls) for setting the date/time and then deal with the locale in a separate control.
 
-For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/ru/docs/Web/HTML/Element/input/hidden) input type. For example:
+For example, if you are creating a system where the user is likely to already be logged in, with their locale already set, you could provide the timezone in a [`hidden`](/ru/docs/Web/HTML/Reference/Elements/input/hidden) input type. For example:
 
 ```html
 <input type="hidden" id="timezone" name="timezone" value="-08:00" />
@@ -168,7 +168,7 @@ In either case, the timedate and timezone values would be submitted to the serve
 
 By default, `<input type="datetime-local">` does not apply any validation to entered values. The UI implementations generally don't let you enter anything that isn't a datetime — which is helpful — but you can still fill in no value and submit, or enter an invalid datetime (e.g. the 32th of April).
 
-You can use [`min`](/ru/docs/Web/HTML/Element/input#min) and [`max`](/ru/docs/Web/HTML/Element/input#max) to restrict the available dates (see anch("Setting maximum and minimum dates")), and in addition use the [`required`](/ru/docs/Web/HTML/Element/input#required) attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
+You can use [`min`](/ru/docs/Web/HTML/Reference/Elements/input#min) and [`max`](/ru/docs/Web/HTML/Reference/Elements/input#max) to restrict the available dates (see anch("Setting maximum and minimum dates")), and in addition use the [`required`](/ru/docs/Web/HTML/Reference/Elements/input#required) attribute to make filling in the date mandatory. As a result, supporting browsers will display an error if you try to submit a date that is outside the set bounds, or an empty date field.
 
 Let's look at an example — here we've set minimum and maximum datetimes, and also made the field required:
 
@@ -248,7 +248,7 @@ The second problem is the most serious — as we mentioned earlier, with a `date
 - `mm-dd-yyyy hh:mm` (24 hour clock)
 - etc.
 
-One way around this is to put a [`pattern`](/ru/docs/Web/HTML/Element/input#pattern) attribute on your `datetime-local` input. Even though the `datetime-local` input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:
+One way around this is to put a [`pattern`](/ru/docs/Web/HTML/Reference/Elements/input#pattern) attribute on your `datetime-local` input. Even though the `datetime-local` input doesn't use it, the text input fallback will. For example, try viewing the following demo in a non-supporting browser:
 
 ```html
 <form>

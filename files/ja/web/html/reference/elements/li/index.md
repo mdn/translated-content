@@ -140,7 +140,7 @@ p {
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
         <code
-          ><a href="/ja/docs/Web/Accessibility/ARIA/Roles/Listitem_role"
+          ><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/Listitem_role"
             >listitem</a
           ></code
         >
@@ -153,12 +153,12 @@ p {
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitem_role"><code>menuitem</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/radio_role"><code>radio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/separator_role"><code>separator</code></a>,
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Roles/treeitem_role"><code>treeitem</code></a>
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitem_role"><code>menuitem</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemcheckbox_role"><code>menuitemcheckbox</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/menuitemradio_role"><code>menuitemradio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/radio_role"><code>radio</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/separator_role"><code>separator</code></a>,
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>, <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/treeitem_role"><code>treeitem</code></a>
       </td>
     </tr>
     <tr>

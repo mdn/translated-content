@@ -94,7 +94,7 @@ select {
     </tr>
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
-      <td><a href="/ja/docs/Web/Accessibility/ARIA/Roles/option_role"><code>option</code></a></td>
+      <td><a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/option_role"><code>option</code></a></td>
     </tr>
     <tr>
       <th scope="row">許可されている ARIA ロール</th>

@@ -544,7 +544,7 @@ div {
 
 ## スキルテスト
 
-この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: カスケードの課題 2](/ja/docs/Learn_web_development/Core/Styling_basics/Cascade_tasks#課題_2) を見てください。
+この記事の終わりまで来ましたが、最も重要な情報を覚えていますか？次に進む前に、この情報を覚えているかどうかを確認するためのテストがいくつかあります。[スキルテスト: カスケードの課題 2](/ja/docs/Learn_web_development/Core/Styling_basics/Test_your_skills/Cascade#課題_2) を見てください。
 
 ## まとめ
 

@@ -1,9 +1,8 @@
 ---
 title: "CSP: base-uri"
 slug: Web/HTTP/Reference/Headers/Content-Security-Policy/base-uri
-original_slug: Web/HTTP/Headers/Content-Security-Policy/base-uri
 l10n:
-  sourceCommit: 45c7ae13178203b4ee58842efbe2a27deab274a6
+  sourceCommit: 4d929bb0a021c7130d5a71a4bf505bcb8070378d
 ---
 
 {{HTTPSidebar}}
@@ -18,7 +17,7 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`base-uri`** ディレ�
     </tr>
     <tr>
       <th scope="row">ディレクティブ種別</th>
-      <td>{{Glossary("Document directive")}}</td>
+      <td>{{Glossary("Document directive","文書ディレクティブ")}}</td>
     </tr>
     <tr>
       <th scope="row">{{CSP("default-src")}} による代替</th>
@@ -29,18 +28,22 @@ HTTP の {{HTTPHeader("Content-Security-Policy")}} の **`base-uri`** ディレ�
 
 ## 構文
 
-1 つまたは複数の*ソース*を base-uri ポリシーに使用することができます。
-
 ```http
-Content-Security-Policy: base-uri <source>;
-Content-Security-Policy: base-uri <source> <source>;
+Content-Security-Policy: base-uri 'none';
+Content-Security-Policy: base-uri <source-expression-list>;
 ```
 
-### ソース
+このディレクティブは、次のいずれかの値を指定することができます。
 
-このディレクティブは、他の CSP ディレクティブと同じように、引数のソース値のほとんどを使用します。 [CSP のソース値](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#ソース)。
+- `'none'`
+  - : `<base>` 要素を使用してベース URI を設定することはできません。 単一引用符は必須です。
+- `<source-expression-list>`
 
-なお、 `base-uri` ではいくつかの値、たとえば `'unsafe-inline'` や `'strict-dynamic'` などのキーワードは意味がありません。
+  - : ソース表現の値を空白で区切ったリストです。 `<base>` 要素は、その値が指定されたソース表現のいずれかと一致した場合、ベース URI を設定します。このディレクティブでは、以下のソース表現の値が適用できます。
+
+    - [`<host-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#host-source)
+    - [`<scheme-source>`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#scheme-source)
+    - [`'self'`](/ja/docs/Web/HTTP/Reference/Headers/Content-Security-Policy#self)
 
 ## 例
 
@@ -52,7 +55,7 @@ Content-Security-Policy: base-uri <source> <source>;
 
 ### Apache の設定
 
-```
+```apacheconf
 <IfModule mod_headers.c>
 Header set Content-Security-Policy "base-uri 'self'";
 </IfModule>
@@ -60,7 +63,7 @@ Header set Content-Security-Policy "base-uri 'self'";
 
 ### Nginx の設定
 
-```
+```nginx
 add_header Content-Security-Policy "base-uri 'self';"
 ```
 

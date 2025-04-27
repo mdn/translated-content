@@ -243,7 +243,7 @@ h4 {
     <tr>
       <th scope="row">暗黙の ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/heading_role"
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/heading_role"
           >heading</a
         >
       </td>
@@ -251,8 +251,8 @@ h4 {
     <tr>
       <th scope="row">許可されている ARIA ロール</th>
       <td>
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/tab_role"><code>tab</code></a>、<a href="/ja/docs/Web/Accessibility/ARIA/Roles/presentation_role"><code>presentation</code></a>、
-        <a href="/ja/docs/Web/Accessibility/ARIA/Roles/none_role"><code>none</code></a> の何れか
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/tab_role"><code>tab</code></a>、<a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/presentation_role"><code>presentation</code></a>、
+        <a href="/ja/docs/Web/Accessibility/ARIA/Reference/Roles/none_role"><code>none</code></a> の何れか
       </td>
     </tr>
     <tr>

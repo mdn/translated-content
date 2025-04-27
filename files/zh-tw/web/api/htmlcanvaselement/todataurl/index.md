@@ -2,7 +2,7 @@
 title: HTMLCanvasElement：toDataURL() 方法
 slug: Web/API/HTMLCanvasElement/toDataURL
 l10n:
-  sourceCommit: 7c2a91a8cf4d9889096019679e4319400e971b41
+  sourceCommit: e9b6cd1b7fa8612257b72b2a85a96dd7d45c0200
 ---
 
 {{APIRef("Canvas API")}}
@@ -36,7 +36,7 @@ toDataURL(type, quality)
 
 包含請求的[數據 URL](/zh-TW/docs/Web/URI/Reference/Schemes/data) 的字串。
 
-如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Element/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
+如果畫布的高度或寬度為 `0`，或超過[畫布的最大尺寸](/zh-TW/docs/Web/HTML/Reference/Elements/canvas#最大畫布尺寸)，將返回字串 `"data:,"`。
 
 ### 例外
 

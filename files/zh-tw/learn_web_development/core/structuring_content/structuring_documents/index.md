@@ -3,7 +3,7 @@ title: Document and website structure
 slug: Learn_web_development/Core/Structuring_content/Structuring_documents
 ---
 
-{{LearnSidebar}}{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
+{{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
 
 {{glossary("HTML")}} 不僅能夠定義網頁的單獨部分（例如「段落」或「圖片」），還可以使用區塊級元素（例如「標題欄」、「導覽選單」、「主內容列」）來定義網站中的複合區域。本文將探討如何規劃基本的網站結構，並根據規劃的結構來編寫 HTML。
 
@@ -189,7 +189,7 @@ Take some time to look over the code and understand it — the comments inside t
 
 ## HTML layout elements in more detail
 
-It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our [HTML element reference](/zh-TW/docs/Web/HTML/Element). For now, these are the main definitions that you should try to understand:
+It's good to understand the overall meaning of all the HTML sectioning elements in detail — this is something you'll work on gradually as you start to get more experience with web development. You can find a lot of detail by reading our [HTML element reference](/zh-TW/docs/Web/HTML/Reference/Elements). For now, these are the main definitions that you should try to understand:
 
 - {{HTMLElement('main')}} is for content _unique to this page._ Use `<main>` only _once_ per page, and put it directly inside {{HTMLElement('body')}}. Ideally this shouldn't be nested within other elements.
 - {{HTMLElement('article')}} encloses a block of related content that makes sense on its own without the rest of the page (e.g., a single blog post).
@@ -201,7 +201,7 @@ It's good to understand the overall meaning of all the HTML sectioning elements 
 
 ### Non-semantic wrappers
 
-Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable [`class`](/zh-TW/docs/Web/HTML/Global_attributes#class) attribute, to provide some kind of label for them so they can be easily targeted.
+Sometimes you'll come across a situation where you can't find an ideal semantic element to group some items together or wrap some content. Sometimes you might want to just group a set of elements together to affect them all as a single entity with some {{glossary("CSS")}} or {{glossary("JavaScript")}}. For cases like these, HTML provides the {{HTMLElement("div")}} and {{HTMLElement("span")}} elements. You should use these preferably with a suitable [`class`](/zh-TW/docs/Web/HTML/Reference/Global_attributes#class) attribute, to provide some kind of label for them so they can be easily targeted.
 
 {{HTMLElement("span")}} is an inline non-semantic element, which you should only use if you can't think of a better semantic text element to wrap your content, or don't want to add any specific meaning. For example:
 
@@ -313,6 +313,6 @@ At this point you should have a better idea about how to structure a web page/si
 
 ## See also
 
-- [Using HTML sections and outlines](/zh-TW/docs/Web/HTML/Element/Heading_Elements): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
+- [Using HTML sections and outlines](/zh-TW/docs/Web/HTML/Reference/Elements/Heading_Elements): Advanced guide to HTML5 semantic elements and the HTML5 outline algorithm.
 
 {{PreviousMenuNext("Learn_web_development/Core/Structuring_content/Lists", "Learn_web_development/Core/Structuring_content/Advanced_text_features", "Learn_web_development/Core/Structuring_content")}}
