@@ -13,7 +13,7 @@ l10n:
 이 메서드는 `undefined`로 완료되는 {{jsxref("Promise")}}를 반환합니다. Windows에서는 이는 공유 팝업이 열릴 때 Promis가 완료되고, Android에서는 데이터가 성공적으로 공유 대상에 전달된 후 완료됩니다.
 
 [Web Share API](/ko/docs/Web/API/Web_Share_API)는 [web-share](/ko/docs/Web/HTTP/Reference/Headers/Permissions-Policy/web-share) permission policy에 의해 제어됩니다.
-권한이 지원되지만 허용되지 않은 경우 `share()` 메서드는 예외를 던집니다.
+`share()` 메서드는 권한이 지원되지만 허용되지 않은 경우 예외를 발생시킬 수 있습니다.
 
 ## 구문
 
