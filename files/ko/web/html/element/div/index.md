@@ -53,7 +53,7 @@ l10n:
 
 ## 접근성
 
-`<div>` 요소는 [암시적으로 `generic`의 역할](https://www.w3.org/TR/wai-aria-1.2/#generic)을 가지며, none이 아닙니다. 이로 인해 특정 역할을 가진 자식 요소가 있어야 제대로 동작하는 일부 ARIA 조합 선언에서는 영향을 줄 수 있습니다. 
+`<div>` 요소는 [암시적으로 `generic`의 역할](https://www.w3.org/TR/wai-aria-1.2/#generic)을 가지며, none이 아닙니다. 이로 인해 특정 역할을 가진 자식 요소가 있어야 제대로 동작하는 일부 ARIA 조합 선언에서는 영향을 줄 수 있습니다.
 
 ## 예제
 
