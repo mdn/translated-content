@@ -43,7 +43,7 @@ navigator.share(data)
 
 ### 반환 값
 
-`undefined`를 resolve하거나, 아래 [예외](#예외)를 reject하는 {{jsxref("Promise")}}.
+`undefined`로 완료하거나, 아래 [예외](#예외)중 하나로 거부될 수 있는 {{jsxref("Promise")}}를 반환합니다.
 
 ### 예외
 
