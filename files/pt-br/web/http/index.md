@@ -11,13 +11,13 @@ slug: Web/HTTP
 
 Aprenda como usar HTTP com guias e tutoriais.
 
-- [Visão geral do HTTP](/pt-BR/docs/Web/HTTP/Overview)
+- [Visão geral do HTTP](/pt-BR/docs/Web/HTTP/Guides/Overview)
   - : Apresenta os recursos básicos do protocolo cliente-servidor: o que pode fazer e quais seus usos.
-- [Cache HTTP](/pt-BR/docs/Web/HTTP/Caching)
+- [Cache HTTP](/pt-BR/docs/Web/HTTP/Guides/Caching)
   - : O Cache é muito importante para websites rápidos. Este artigo descreve diferentes métodos de cache e como utilizar os cabeçalhos HTTP para controlá-los.
-- [Cookies HTTP](/pt-BR/docs/Web/HTTP/Cookies)
+- [Cookies HTTP](/pt-BR/docs/Web/HTTP/Guides/Cookies)
   - : O funcionamento dos cookies é definido pela [RFC 6265](https://tools.ietf.org/html/rfc6265). Ao receber uma requisição HTTP, o servidor pode enviar um cabeçalho `Set-Cookie` com a resposta. Depois, o cliente retorna o valor do cookie a cada requisição ao mesmo servidor na forma de um cabeçalho `Cookie` HTTP. O cookie também pode ser configurado para expirar em um determinado tempo ou permanecer restrito a um domínio ou endereço específicos.
-- [Controle de Acesso HTTP (CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [Controle de Acesso HTTP (CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS)
   - : **As requisições CORS** são requisições HTTP de recursos de domínios diferentes do domínio que está fazendo a requisição. um exemplo é um site A (SiteA.com) realizando uma requisição de uma imagem por meio de um elemento _img_ para um site B (SiteB.com/img.png). Hoje em dia encontramos o CORS em grande maioria das páginas webs, carregando scripts, imagens, folhas de estilos, etc.
 - [Dicas de cliente HTTP](/pt-BR/docs/Web/HTTP/Client_hints)
   - : **Dicas do cliente** são um conjunto de cabeçalhos de resposta que um servidor pode usar para solicitar proativamente informações de um cliente sobre o dispositivo, a rede, o usuário e as preferências específicas do agente do usuário.
@@ -26,26 +26,26 @@ Aprenda como usar HTTP com guias e tutoriais.
   - : Uma breve descrição das mudanças que ocorreram no HTTP em versões mais antigas para o moderno HTTP/2 em diante.
 - [Diretrizes de segurança da Web da Mozilla](https://infosec.mozilla.org/guidelines/web_security)
   - : uma coleção de dicas para ajudar as equipes operacionais na criação de aplicativos Web seguros.
-- [Mensagens HTTP](/pt-BR/docs/Web/HTTP/Messages)
+- [Mensagens HTTP](/pt-BR/docs/Web/HTTP/Guides/Messages)
   - : Descreve os tipos e a estrutura das diferentes mensagens do HTTP/1.x e HTTP/2.
-- [Uma sessão típica em HTTP](/pt-BR/docs/Web/HTTP/Session)
+- [Uma sessão típica em HTTP](/pt-BR/docs/Web/HTTP/Guides/Session)
   - : Mostra e explica o fluxo de uma sessão HTTP normal.
-- [Gerenciamento de conexões em HTTP/1.x](/pt-BR/docs/Web/HTTP/Connection_management_in_HTTP_1.x)
+- [Gerenciamento de conexões em HTTP/1.x](/pt-BR/docs/Web/HTTP/Guides/Connection_management_in_HTTP_1.x)
   - : Descreve os três modelos de conexão disponíveis no HTTP/1.x, seus pontos fortes e fracos.
-- [Controlando a pré-busca de DNS](/pt-BR/docs/Web/HTTP/Headers/X-DNS-Prefetch-Control)
+- [Controlando a pré-busca de DNS](/pt-BR/docs/Web/HTTP/Reference/Headers/X-DNS-Prefetch-Control)
   - : O Firefox e outros navegadores atuais utilizam a **pré-busca de** **DNS**, ou seja, o navegador faz a busca do nome do domínio nos links contidos numa página antes que o recurso seja requisitado, como por exemplo imagens, scripts e folhas de estilo. Isto tudo ocorre em segundo plano, para que quando o recurso necessite ser carregado, o endereço DNS já esteja resolvido. Isto diminui a latência quando, por exemplo, um usuário clica em um link.
 
 ## Referências
 
 Navegue por uma detalhada documentação de referências em HTTP.
 
-- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers)
+- [Cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Reference/Headers)
   - : As mensagens de cabeçalho HTTP são utilizadas para realizar a descrição de algum recurso ou comportamento do cliente ou servidor. Propriedades personalizadas nos cabeçalhos utilizam o prefixo 'X-' ; Outras no [registro IANA](https://www.iana.org/assignments/message-headers/message-headers.xhtml#perm-headers), cujo conteúdo original foi definido na [RFC 4229](https://tools.ietf.org/html/rfc4229). IANA também mantém o [registro de novas propostas para mensagens de cabeçalhos HTTP](https://www.iana.org/assignments/message-headers/prov-headers.html).
-- [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
+- [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods)
   - : As mais diferentes requisições podem ser utilizadas pelos métodos de requisições HTTP: {{HTTPMethod("GET")}} e {{HTTPMethod("POST")}}, mas também algumas requisições menos comuns pelos métodos {{HTTPMethod("OPTIONS")}}, {{HTTPMethod("DELETE")}} ou {{HTTPMethod("TRACE")}}.
-- [Respostas de códigos de status em HTTP](/pt-BR/docs/Web/HTTP/Status)
+- [Respostas de códigos de status em HTTP](/pt-BR/docs/Web/HTTP/Reference/Status)
   - : Os códigos de status do HTTP indicam quando uma requisição foi completada. Códigos de status são agrupados em cinco classes: Informações, respostas, respostas de sucesso, redirecionamentos, erros de cliente e erros de servidor.
-- [Diretivas CSP](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy)
+- [Diretivas CSP](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Security-Policy)
   - : Os campos de cabeçalho de resposta {{HTTPHeader("Content-Security-Policy")}} permitem que os administradores do site controlem os recursos que o agente do usuário pode carregar para uma determinada página. Com algumas exceções, as políticas envolvem principalmente a especificação de origens de servidor e endpoints de script.
 
 ## Ferramentas & recursos

@@ -773,7 +773,7 @@ Se a tabela não puder ser separada, use uma combinação de [`id`](/pt-BR/docs/
 
 ## Veja também
 
-- [Tutorial de tabela de dados HTML](/pt-BR/docs/Learn/HTML/Tables)
+- [Tutorial de tabela de dados HTML](/pt-BR/docs/Learn_web_development/Core/Structuring_content/HTML_table_basics)
 - Propriedades CSS que podem ser especialmente úteis para estilizar o elemento `<table>`:
 
   - {{cssxref("width")}} para controlar a largura da tabela;

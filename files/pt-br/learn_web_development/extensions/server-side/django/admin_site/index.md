@@ -6,7 +6,7 @@ original_slug: Learn/Server-side/Django/Admin_site
 
 {{LearnSidebar}}{{PreviousMenuNext("Learn/Server-side/Django/Models", "Learn/Server-side/Django/Home_page", "Learn/Server-side/Django")}}
 
-Agora que criamos modelos para o site da [LocalLibrary](/pt-BR/docs/Learn/Server-side/Django/Tutorial_local_library_website), usaremos o site do Django Admin para adicionar alguns dados de livros "reais". Primeiro, mostraremos como registrar os modelos no site de administração, depois mostraremos como fazer login e criar alguns dados. No final do artigo, mostraremos algumas maneiras de melhorar ainda mais a apresentação do site Admin.
+Agora que criamos modelos para o site da [LocalLibrary](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Tutorial_local_library_website), usaremos o site do Django Admin para adicionar alguns dados de livros "reais". Primeiro, mostraremos como registrar os modelos no site de administração, depois mostraremos como fazer login e criar alguns dados. No final do artigo, mostraremos algumas maneiras de melhorar ainda mais a apresentação do site Admin.
 
 <table class="learn-box standard-table">
   <tbody>
@@ -33,7 +33,7 @@ Agora que criamos modelos para o site da [LocalLibrary](/pt-BR/docs/Learn/Server
 
 O aplicativo de administração do Django pode usar seus modelos para criar automaticamente uma área de site que você possa usar para criar, visualizar, atualizar e excluir registros. Isso pode poupar muito tempo durante o desenvolvimento, tornando muito fácil testar seus modelos e ter uma ideia de se você tem os dados corretos. O aplicativo administrativo também pode ser útil para gerenciar dados em produção, dependendo do tipo de site. O projeto Django o recomenda apenas para gerenciamento interno de dados (ou seja, apenas para uso por administradores ou pessoas internas à sua organização), pois a abordagem centrada no modelo não é necessariamente a melhor interface possível para todos os usuários e expõe muitos detalhes desnecessários sobre os modelos.
 
-Toda a configuração necessária para incluir o aplicativo admin em seu site foi feita automaticamente quando você criou o [esqueleto do projeto](/pt-BR/docs/Learn/Server-side/Django/skeleton_website) (para obter informações sobre as dependências reais necessárias, consulte a [documentação do Django aqui](https://docs.djangoproject.com/pt-br/2.1/ref/contrib/admin/)). Como resultado, tudo o que você precisa fazer para adicionar seus modelos ao aplicativo administrativo é registrá-los. No final deste artigo, forneceremos uma breve demonstração de como você pode configurar ainda mais a área de administração para exibir melhor nossos dados de modelo.
+Toda a configuração necessária para incluir o aplicativo admin em seu site foi feita automaticamente quando você criou o [esqueleto do projeto](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/skeleton_website) (para obter informações sobre as dependências reais necessárias, consulte a [documentação do Django aqui](https://docs.djangoproject.com/pt-br/2.1/ref/contrib/admin/)). Como resultado, tudo o que você precisa fazer para adicionar seus modelos ao aplicativo administrativo é registrá-los. No final deste artigo, forneceremos uma breve demonstração de como você pode configurar ainda mais a área de administração para exibir melhor nossos dados de modelo.
 
 Depois de registrar os modelos, mostraremos como criar um novo "superusuário", acessar o site e criar alguns livros, autores, instâncias de livros e gêneros. Isso será útil para testar as visualizações e os modelos que começaremos a criar no próximo tutorial.
 
@@ -59,7 +59,7 @@ admin.site.register(BookInstance)
 ```
 
 > [!NOTE]
-> Nota: Se você aceitou o desafio de criar um modelo para representar a linguagem natural de um livro ([consulte o artigo do tutorial de modelos](/pt-BR/docs/Learn/Server-side/Django/Models)), importe-o e registre-o também!
+> Nota: Se você aceitou o desafio de criar um modelo para representar a linguagem natural de um livro ([consulte o artigo do tutorial de modelos](/pt-BR/docs/Learn_web_development/Extensions/Server-side/Django/Models)), importe-o e registre-o também!
 
 Essa é a maneira mais simples de registrar um modelo ou modelos no site. O site de administração é altamente personalizável e falaremos mais sobre as outras maneiras de registrar seus modelos mais abaixo.
 

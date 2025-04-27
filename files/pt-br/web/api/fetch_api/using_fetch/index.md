@@ -10,7 +10,7 @@ Este tipo de funcionalidade era obtida anteriormente utilizando {{domxref("XMLHt
 Note que a especificação `fetch()` difere de `jQuery.ajax()`, principalmente, de três formas:
 
 - A Promise retornada do `fetch()` **não rejeitará o status do erro HTTP,** mesmo que a resposta seja um HTTP 404 ou 500. Em vez disso, ela irá resolver normalmente (com o status `ok` definido como falso), e só irá rejeitar se houver falha na rede ou se algo impedir a requisição de ser completada.
-- `fetch()` **não receberá cookies cross-site;** você não pode estabelecer uma conexão cross-site usando fetch. Cabeçalhos [`Set-Cookie`](/pt-BR/docs/Web/HTTP/Headers/Set-Cookie) de outros sites são ignorados silenciosamente.
+- `fetch()` **não receberá cookies cross-site;** você não pode estabelecer uma conexão cross-site usando fetch. Cabeçalhos [`Set-Cookie`](/pt-BR/docs/Web/HTTP/Reference/Headers/Set-Cookie) de outros sites são ignorados silenciosamente.
 - `fetch()` **não enviará cookies**, a não ser que seja definida a opção _credentials_ do [parâmetro init](/pt-BR/docs/Web/API/Window/fetch#parâmetros). (Desde [25 de agosto de 2017](https://github.com/whatwg/fetch/pull/585). A especificação alterou as políticas padrão de credenciais para `same-origin`. O Firefox mudou desde 61.0b13.)
 
 ## Situação do suporte por navegadores
@@ -60,7 +60,7 @@ Esta é apenas uma resposta HTTP, não a imagem em sí. Para extrairmos a imagem
 
 Um `objectURL` é criado na extração de {{domxref("Blob")}}, que então é inserido no {{domxref("img")}}.
 
-Requisições Fetch são controladas pela directiva `connect-src` do [Content Security Policy](/pt-BR/docs/Web/HTTP/Headers/Content-Security-Policy) ao invés da directiva do recurso retornado.
+Requisições Fetch são controladas pela directiva `connect-src` do [Content Security Policy](/pt-BR/docs/Web/HTTP/Reference/Headers/Content-Security-Policy) ao invés da directiva do recurso retornado.
 
 ### Fornecendo opções de request
 
@@ -300,7 +300,7 @@ Both request and response (and by extension the `fetch()` function), will try to
 {{Compat}}
 
 - [ServiceWorker API](/pt-BR/docs/Web/API/Service_Worker_API)
-- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/CORS)
+- [HTTP access control (CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS)
 - [HTTP](/pt-BR/docs/Web/HTTP)
 - [Fetch polyfill](https://github.com/github/fetch)
 - [Fetch examples on Github](https://github.com/mdn/fetch-examples/)

@@ -35,4 +35,4 @@ Date: Wed, 21 Oct 2015 07:28:00 GMT
 
 ## Veja também
 
-- [HTTP autenticação](/pt-BR/docs/Web/HTTP/Authentication)
+- [HTTP autenticação](/pt-BR/docs/Web/HTTP/Guides/Authentication)

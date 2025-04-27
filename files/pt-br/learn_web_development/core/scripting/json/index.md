@@ -96,7 +96,7 @@ Conforme descrito acima, um JSON é uma string cujo formato se parece muito com 
 }
 ```
 
-Se nós carregássemos esse objeto em um programa JavaScript, analisado em uma variável chamada `superHeroes` por exemplo, poderíamos então acessar os dados dentro dele usando a mesma notação dot / bracket que observamos no artigo básico do objeto [JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Basics). Por exemplo:
+Se nós carregássemos esse objeto em um programa JavaScript, analisado em uma variável chamada `superHeroes` por exemplo, poderíamos então acessar os dados dentro dele usando a mesma notação dot / bracket que observamos no artigo básico do objeto [JavaScript](/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics). Por exemplo:
 
 ```js
 superHeroes.homeTown;
@@ -206,7 +206,7 @@ Para obter o JSON, vamos usar uma API chamada {{domxref("XMLHttpRequest")}} (ger
 
    Isso leva pelo menos dois parâmetros — existem outros parâmetros opcionais disponíveis. Nós só precisamos dos dois obrigatórios para este exemplo simples:
 
-   - O método HTTP a ser usado ao fazer a solicitação de rede. Neste caso, [`GET`](/pt-BR/docs/Web/HTTP/Methods/GET) é bom, pois estamos apenas recuperando alguns dados simples.
+   - O método HTTP a ser usado ao fazer a solicitação de rede. Neste caso, [`GET`](/pt-BR/docs/Web/HTTP/Reference/Methods/GET) é bom, pois estamos apenas recuperando alguns dados simples.
    - O URL para fazer a solicitação — esta é a URL do arquivo JSON que armazenamos anteriormente.
 
 4. Em seguida, adicione as duas linhas a seguir — aqui estamos definindo o [`responseType`](/pt-BR/docs/Web/API/XMLHttpRequest/responseType) como JSON, para que o XHR saiba que o servidor retornará o JSON e que isso deve ser convertido nos bastidores em um objeto JavaScript. Em seguida, enviamos a solicitação com o método [`send()`](/pt-BR/docs/Web/API/XMLHttpRequest/send):
@@ -290,7 +290,7 @@ function showHeroes(jsonObj) {
 
 Para começar, armazenamos a propriedade `members` do objeto JavaScript em uma nova variável. Esta matriz contém vários objetos que contêm as informações para cada herói.
 
-Em seguida, usamos um [loop for](/pt-BR/docs/Learn/JavaScript/Building_blocks/Looping_code#the_standard_for_loop) para percorrer cada objeto na matriz. Para cada um, nós:
+Em seguida, usamos um [loop for](/pt-BR/docs/Learn_web_development/Core/Scripting/Loops#the_standard_for_loop) para percorrer cada objeto na matriz. Para cada um, nós:
 
 1. Criamos vários novos elementos: um `<article>`, um `<h2>`, três `<p>`s, e um `<ul>`.
 2. Definimos o \<h2> para conter o `name` do herói atual.
@@ -303,7 +303,7 @@ Em seguida, usamos um [loop for](/pt-BR/docs/Learn/JavaScript/Building_blocks/Lo
 > Se você está com problemas pegue um exemplo para trabalhar, tente nosso código fonte [heroes-finished.html](https://github.com/mdn/learning-area/blob/master/javascript/oojs/json/heroes-finished.html) (veja isso [ao vivo](https://mdn.github.io/learning-area/javascript/oojs/json/heroes-finished.html) também.)
 
 > [!NOTE]
-> Se você está tendo problemas para seguir a notação ponto / colchete que estamos usando para acessar o objeto JavaScript, pode ajudar a abrir o arquivo [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) em outra guia ou em seu editor de texto, e consultá-lo enquanto observa nosso JavaScript. Você também pode consultar o artigo sobre conceitos [O básico de objetos JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Basics) para obter mais informações sobre a notação de pontos e colchetes.
+> Se você está tendo problemas para seguir a notação ponto / colchete que estamos usando para acessar o objeto JavaScript, pode ajudar a abrir o arquivo [superheroes.json](https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json) em outra guia ou em seu editor de texto, e consultá-lo enquanto observa nosso JavaScript. Você também pode consultar o artigo sobre conceitos [O básico de objetos JavaScript](/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics) para obter mais informações sobre a notação de pontos e colchetes.
 
 ## Conversão entre objetos e texto
 
@@ -353,17 +353,17 @@ Neste artigo, fornecemos um guia simples para usar o JSON em seus programas, inc
 - [Objeto JSON página de refência](/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/JSON)
 - [Objeto XMLHttpRequest página de refência](/pt-BR/docs/Web/API/XMLHttpRequest)
 - [Usando XMLHttpRequest](/pt-BR/docs/Web/API/XMLHttpRequest_API/Using_XMLHttpRequest)
-- [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Methods)
+- [Métodos de requisição HTTP](/pt-BR/docs/Web/HTTP/Reference/Methods)
 - [Site oficial JSON com o link para o padrão ECMA](http://json.org)
 
 {{PreviousMenuNext("Learn/JavaScript/Objects/Inheritance", "Learn/JavaScript/Objects/Object_building_practice", "Learn/JavaScript/Objects")}}
 
 ## Nesse módulo
 
-- [O básico de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Basics)
+- [O básico de objetos](/pt-BR/docs/Learn_web_development/Core/Scripting/Object_basics)
 - [Orientação a objetos em JavaScript para iniciantes](/pt-BR/docs/conflicting/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Protótipos de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_prototypes)
-- [Herança em JavaScript](/pt-BR/docs/Learn/JavaScript/Objects/Classes_in_JavaScript)
-- [Trabalhando com dados em JSON](/pt-BR/docs/Learn/JavaScript/Objects/JSON)
-- [Prática de construção de objetos](/pt-BR/docs/Learn/JavaScript/Objects/Object_building_practice)
-- [Adicionando melhorias para nossa demo bolas saltitantes](/pt-BR/docs/Learn/JavaScript/Objects/Adding_bouncing_balls_features)
+- [Protótipos de objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_prototypes)
+- [Herança em JavaScript](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Classes_in_JavaScript)
+- [Trabalhando com dados em JSON](/pt-BR/docs/Learn_web_development/Core/Scripting/JSON)
+- [Prática de construção de objetos](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Object_building_practice)
+- [Adicionando melhorias para nossa demo bolas saltitantes](/pt-BR/docs/Learn_web_development/Extensions/Advanced_JavaScript_objects/Adding_bouncing_balls_features)

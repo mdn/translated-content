@@ -56,5 +56,5 @@ Object.getOwnPropertySymbols(obj) // [ Symbol(), Symbol() ]
 ### General knowledge
 
 - [Symbol (programming)](<https://en.wikipedia.org/wiki/Symbol_(programming)>) on Wikipedia
-- [JavaScript data types and data structures](/pt-BR/docs/Web/JavaScript/Data_structures)
+- [JavaScript data types and data structures](/pt-BR/docs/Web/JavaScript/Guide/Data_structures)
 - [Symbols in ECMAScript 6](http://2ality.com/2014/12/es6-symbols.html)

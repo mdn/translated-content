@@ -20,7 +20,7 @@ O mecânismo CORS suporta requisições seguras do tipo _cross-origin e_ transfe
 
 Todos, realmente.
 
-Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/pt-BR/docs/Web/HTTP/CORS), pode ser uma leitura complementar.
+Este artigo destina-se a administradores da Web, desenvolvedores de servidores e desenvolvedores front-end. Os navegadores modernos lidam com os componentes do lado cliente em compartilhamento entre origens, incluindo cabeçalhos e aplicação de políticas. Mas esse novo padrão significa que os servidores precisam lidar com novos cabeçalhos de requisição e resposta. Outro artigo para desenvolvedores de servidores que discutem [compartilhamento _cross-origin_ a partir de uma perspectiva de servidor (com fragmentos de código PHP)](/pt-BR/docs/Web/HTTP/Guides/CORS), pode ser uma leitura complementar.
 
 ## Quais solicitações usam o CORS?
 
@@ -35,7 +35,7 @@ Este artigo é uma discussão geral sobre _Cross-Origin Resource Sharing_ (Compa
 
 ## Visão Geral
 
-O padrão _Cross-Origin Resource Sharing_ trabalha adicionando novos [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Headers) que permitem que os servidores descrevam um conjunto de origens que possuem permissão a ler uma informação usando o navegador. Além disso, para métodos de requisição HTTP que podem causar efeitos colaterais nos dados do servidor (em particular, para métodos HTTP diferentes de {{HTTPMethod("GET")}} ou para uso de {{HTTPMethod("POST")}} com certos [MIME types](/pt-BR/docs/Web/HTTP/MIME_types)), a especificação exige que navegadores "pré-enviem" a requisição, solicitando os métodos suportados pelo servidor com um método de requisição HTTP {{HTTPMethod("OPTIONS")}} e, após a "aprovação", o servidor envia a requisição verdadeira com o método de requisição HTTP correto. Servidores também podem notificar clientes se "credenciais" (incluindo [Cookies](/pt-BR/docs/Web/HTTP/Cookies) e dados de autenticação HTTP) devem ser enviadas com as requisições.
+O padrão _Cross-Origin Resource Sharing_ trabalha adicionando novos [cabeçalhos HTTP](/pt-BR/docs/Web/HTTP/Reference/Headers) que permitem que os servidores descrevam um conjunto de origens que possuem permissão a ler uma informação usando o navegador. Além disso, para métodos de requisição HTTP que podem causar efeitos colaterais nos dados do servidor (em particular, para métodos HTTP diferentes de {{HTTPMethod("GET")}} ou para uso de {{HTTPMethod("POST")}} com certos [MIME types](/pt-BR/docs/Web/HTTP/Guides/MIME_types)), a especificação exige que navegadores "pré-enviem" a requisição, solicitando os métodos suportados pelo servidor com um método de requisição HTTP {{HTTPMethod("OPTIONS")}} e, após a "aprovação", o servidor envia a requisição verdadeira com o método de requisição HTTP correto. Servidores também podem notificar clientes se "credenciais" (incluindo [Cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies) e dados de autenticação HTTP) devem ser enviadas com as requisições.
 
 Falhas no CORS resultam em erros, mas por questões de segurança, detalhes sobre erros não estão disponíveis no código JavaScript. O código tem apenas conhecimento de que ocorreu um erro. A única maneira para determinar especificamente o que ocorreu de errado é procurar no console do navegador por mais detalhes.
 
@@ -47,11 +47,11 @@ Aqui, apresentamos três cenários que ilustram como _Cross-Origin Resource Shar
 
 Os snippets JavaScript inclusos nessas seções (e instâncias executáveis de código do lado servidor que tratam corretamente essas requisições entre origens) podem ser encontrados "em ação" aqui: <http://arunranga.com/examples/access-control/>, e irão funcionar em navegadores que suportam `XMLHttpRequest` entre origens.
 
-Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do servidor (incluindo snippets de código PHP) pode ser encontrada no artigo [Server-Side Access Control (CORS)](/pt-BR/docs/Web/HTTP/CORS).
+Uma discussão sobre _Cross-Origin Resource Sharing_ a partir da perspectiva do servidor (incluindo snippets de código PHP) pode ser encontrada no artigo [Server-Side Access Control (CORS)](/pt-BR/docs/Web/HTTP/Guides/CORS).
 
 ### Requisições simples
 
-Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/CORS#preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação [Fetch](https://fetch.spec.whatwg.org/) (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/CORS#preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
+Algumas requisições não acionam um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Guides/CORS#preflighted_requests). Essas são denominadas neste artigo como "requisições simples" (_simple request_), embora a especificação [Fetch](https://fetch.spec.whatwg.org/) (que define CORS) não utilize esse termo. Uma requisição que não aciona um [pré-envio CORS](/pt-BR/docs/Web/HTTP/Guides/CORS#preflighted_requests) — denominada "requisição simples" — é uma que **atende todas as seguintes condições**:
 
 - Os únicos métodos permitidos são:
 
@@ -137,7 +137,7 @@ Observe que, agora, nenhum dominio além de `http://foo.example` (identificado n
 
 ### Requisições com pré-envio
 
-Ao contrário de ["requisições simples" (discutido acima)](/pt-BR/docs/Web/HTTP/CORS#simple_requests), requisições com "pré-envio" (_Preflighted requests_) primeiramente enviam uma requisição HTTP através do método {{HTTPMethod("OPTIONS")}} para obter um recurso em outro domínio, a fim de determinar se de fato a requisição atual é segura para envio. Requisições entre sites possuem pré-envio, já que podem interferir em dados do usuário.
+Ao contrário de ["requisições simples" (discutido acima)](/pt-BR/docs/Web/HTTP/Guides/CORS#simple_requests), requisições com "pré-envio" (_Preflighted requests_) primeiramente enviam uma requisição HTTP através do método {{HTTPMethod("OPTIONS")}} para obter um recurso em outro domínio, a fim de determinar se de fato a requisição atual é segura para envio. Requisições entre sites possuem pré-envio, já que podem interferir em dados do usuário.
 
 Em particular, uma requisição tem um pré-envio **se qualquer das seguintes condições** for verdadeira:
 
@@ -290,7 +290,7 @@ O servidor responde com `Access-Control-Allow-Methods` e diz que `POST`, `GET`, 
 
 O servidor envia também `Access-Control-Allow-Headers` com um valor de "`X-PINGOTHER, Content-Type`", confirmando estes são cabeçalhos permitidos a serem usados com a requisição efetiva. Assim como `Access-Control-Allow-Methods`, `Access-Control-Allow-Headers` é uma lista de cabeçalhos aceitáveis, separados por vírgula.
 
-Por fim, {{HTTPHeader("Access-Control-Max-Age")}} traz o valor em segundos de quão longo pode ser mantida em cache a resposta da requisição pré-envio sem o envio de outra requisição pré-envio. Neste caso, 86400 segundos são 24 horas. Note que cada browser tem um [valor interno máximo](/pt-BR/docs/Web/HTTP/Headers/Access-Control-Max-Age) que toma precedência quado `Access-Control-Max-Age` for maior.
+Por fim, {{HTTPHeader("Access-Control-Max-Age")}} traz o valor em segundos de quão longo pode ser mantida em cache a resposta da requisição pré-envio sem o envio de outra requisição pré-envio. Neste caso, 86400 segundos são 24 horas. Note que cada browser tem um [valor interno máximo](/pt-BR/docs/Web/HTTP/Reference/Headers/Access-Control-Max-Age) que toma precedência quado `Access-Control-Max-Age` for maior.
 
 #### Requisições com pré-envio e redirecionamento
 
@@ -316,7 +316,7 @@ However, if the request is one that triggers a preflight due to the presence of 
 
 ### Requisições com credenciais
 
-The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/pt-BR/docs/Web/HTTP/Cookies) and HTTP Authentication information. By default, in cross-site {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) invocations, browsers will **not** send credentials. A specific flag has to be set on the {{domxref("XMLHttpRequest")}} object or the {{domxref("Request")}} constructor when it is invoked.
+The most interesting capability exposed by both {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) and CORS is the ability to make "credentialed" requests that are aware of [HTTP cookies](/pt-BR/docs/Web/HTTP/Guides/Cookies) and HTTP Authentication information. By default, in cross-site {{domxref("XMLHttpRequest")}} or [Fetch](/pt-BR/docs/Web/API/Fetch_API) invocations, browsers will **not** send credentials. A specific flag has to be set on the {{domxref("XMLHttpRequest")}} object or the {{domxref("Request")}} constructor when it is invoked.
 
 In this example, content originally loaded from `http://foo.example` makes a simple GET request to a resource on `http://bar.other` which sets Cookies. Content on foo.example might contain JavaScript like this:
 
@@ -518,7 +518,7 @@ Examples of this usage can be [found above](#preflighted_requests).
 - [Using CORS - HTML5 Rocks](https://www.html5rocks.com/en/tutorials/cors/)
 - [Code Samples Showing `XMLHttpRequest` and Cross-Origin Resource Sharing](https://arunranga.com/examples/access-control/)
 - [Client-Side & Server-Side (Java) sample for Cross-Origin Resource Sharing (CORS)](https://github.com/jackblackevo/cors-jsonp-sample)
-- [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/pt-BR/docs/Web/HTTP/CORS)
+- [Cross-Origin Resource Sharing From a Server-Side Perspective (PHP, etc.)](/pt-BR/docs/Web/HTTP/Guides/CORS)
 - [Stack Overflow answer with "how to" info for dealing with common problems](https://stackoverflow.com/questions/43871637/no-access-control-allow-origin-header-is-present-on-the-requested-resource-whe/43881141#43881141):
 
   - How to avoid the CORS preflight
