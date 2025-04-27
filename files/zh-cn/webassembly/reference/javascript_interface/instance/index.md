@@ -2,10 +2,10 @@
 title: WebAssembly.Instance
 slug: WebAssembly/Reference/JavaScript_interface/Instance
 l10n:
-  sourceCommit: d23f8c5c52bdfb6151476a2574e72d323d0d30f4
+  sourceCommit: 006c05b688814b45a01ad965bbe4ebfc15513e74
 ---
 
-**`WebAssembly.Instance`** 对象本身是有状态的，是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 的一个可执行实例。`Instance` 对象包含所有的 [WebAssembly 导出函数](/zh-CN/docs/WebAssembly/Guides/Exported_functions)，允许从 JavaScript 调用 WebAssembly 代码。
+**`WebAssembly.Instance`** 对象是 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 的一个有状态、可执行的实例。`Instance` 对象包含所有的、允许从 JavaScript 调用 WebAssembly 代码的[导出的 WebAssembly 函数](/zh-CN/docs/WebAssembly/Guides/Exported_functions)。
 
 ## 构造函数
 
@@ -15,17 +15,17 @@ l10n:
 ## 实例属性
 
 - [`exports`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Instance/exports)
-  - : 返回一个包含此 WebAssembly 模块实例所导出的全部成员对象，以便 JavaScript 访问和使用这些成员，这个对象是只读的。
+  - : 返回一个将所有从 WebAssembly 模块实例导出的函数作为成员的对象，让 JavaScript 能访问以及使用这些函数。这个对象是只读的。
 
 ## 示例
 
-### 同步实例化 WebAssembly 模块
+### 同步地实例化一个 WebAssembly 模块
 
-`WebAssembly.Instance()` 构造函数以同步方式实例化一个 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象，例如：
+可以调用 `WebAssembly.Instance()` 同步地实例化一个指定的 [`WebAssembly.Module`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Module) 对象，例如：
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },
@@ -45,7 +45,7 @@ fetch("simple.wasm")
 
 ```js
 const importObject = {
-  imports: {
+  my_namespace: {
     imported_func(arg) {
       console.log(arg);
     },
@@ -69,6 +69,6 @@ WebAssembly.instantiateStreaming(fetch("simple.wasm"), importObject).then(
 
 ## 参见
 
-- [WebAssembly](/zh-CN/docs/WebAssembly) 概览页
+- [WebAssembly](/zh-CN/docs/WebAssembly) 概览
 - [WebAssembly 概念](/zh-CN/docs/WebAssembly/Guides/Concepts)
 - [使用 WebAssembly JavaScript API](/zh-CN/docs/WebAssembly/Guides/Using_the_JavaScript_API)
