@@ -38,4 +38,3 @@ l10n:
 - [Command line crash course](/ko/docs/Learn_web_development/Getting_started/Environment_setup/Command_line)
   - : 이 글에서는 터미널에 대한 소개와 필수 명령어, 명령어를 같이 연결하는 방법, 명령줄 인터페이스(CLI) 도구를 추가하는 방법을 제공합니다.
 
-## 같이 보기
