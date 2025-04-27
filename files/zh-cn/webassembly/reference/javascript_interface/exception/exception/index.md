@@ -9,7 +9,7 @@ l10n:
 
 构造函数接受一个 [`Tag`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception) 参数和一个由数据字段组成的 `payload` 数组。每一个 payload 元素的数据类型必须匹配在 `Tag` 中指定的相应的数据类型。
 
-构造函数也可以接受一个 `options` 对象。`options.traceStack` 属性可以设置为 `true`（默认为 `false`），表明将一个 Wasm 堆栈跟踪附着到异常的 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性上。
+构造函数也可以接受一个 `options` 对象。`options.traceStack` 属性可以设置为 `true`（默认为 `false`），表明可能将一个 Wasm 堆栈跟踪附着到异常的 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性上。
 
 ## 语法
 
@@ -27,7 +27,7 @@ new Exception(tag, payload, options)
 - `options` {{optional_inline}} {{non-standard_inline}}
   - : 一个对象，有下列的可选字段：
     - `traceStack` {{optional_inline}} {{non-standard_inline}}
-      - : 如果 `Exception` 有一个附着到 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性的堆栈跟踪，则为 `true`，否者为 `false`。这个属性默认为 `false`（如果 `options` 或 `options.traceStack` 未提供的话）。
+      - : 设置为 `true` 表明 `Exception` 可能有一个附着到 [`stack`](/zh-CN/docs/WebAssembly/Reference/JavaScript_interface/Exception/stack) 属性的堆栈跟踪，否者设置为 `false`。这个属性默认为 `false`（如果 `options` 或 `options.traceStack` 未提供的话）。
 
 ### 异常
 
